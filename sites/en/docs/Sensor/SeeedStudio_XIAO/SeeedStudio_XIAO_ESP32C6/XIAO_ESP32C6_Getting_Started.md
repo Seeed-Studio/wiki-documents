@@ -14,7 +14,7 @@ last_update:
   date: 08/05/2024
   author: Spencer
 createdAt: '2024-03-29'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -137,20 +137,13 @@ export const Highlight = ({children, color}) => (
 
 ## Hardware overview
 
-<table align="center">
- <tr>
-     <th>XIAO ESP32C6 indication diagram</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_556525_Slxs4ARdyuXRrJK-_1711096256?w=9854&h=3367&type=image/png" style={{width:700, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>XIAO ESP32C6 Pin List</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_318648_dMoXitoaQiq2N3-a_1711678067?w=1486&h=1228" style={{width:1000, height:'auto'}}/></div></td>
- </tr>
-</table>
+### Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAO_ESP32-C6_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAO_ESP32-C6_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip RF Switch
 
@@ -176,7 +169,7 @@ void setup() {
 
 :::
 
-## **Pin Map**
+## Pin Map
 
 | XIAO Pin                 | Function   | Chip Pin  | Alternate Functions | Description                          |
 | :---------------------: | :-------: | :-------: | :----------------: | :---------------------------------- |

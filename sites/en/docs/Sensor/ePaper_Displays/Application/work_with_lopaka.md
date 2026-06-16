@@ -3,12 +3,12 @@ description: This article mainly describes how to use the Lopaka website to crea
 title: Work with Lopaka
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /reterminal_e10xx_with_lopaka
-sidebar_position: 5
+sidebar_position: 7
 last_update:
   date: 9/12/2025
   author: Martin
 createdAt: '2025-09-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-06-03'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_lopaka/
 ---
 

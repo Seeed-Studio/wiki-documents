@@ -1,6 +1,6 @@
 ---
 description: Voice Assistant System for Home Assitant
-title: Voice Assistant System for Home Assitant
+title: Voice Assistant System for Home Assitant reSpeaker Lite
 keywords:
   - ESP32S3
   - XIAO

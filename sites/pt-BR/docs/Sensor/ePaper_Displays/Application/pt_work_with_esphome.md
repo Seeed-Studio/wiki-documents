@@ -11,10 +11,13 @@ keywords:
   - TRMNL
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /epaper_work_with_esphome
-sidebar_position: 1
+sidebar_position: 2
 last_update:
   date: 04/28/2026
   author: dimo
+createdAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/pt-br/epaper_work_with_esphome/
+updatedAt: '2026-06-03'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -33,7 +36,7 @@ Para um **passo a passo completo "gravar → conectar → primeiro dashboard"**,
 
 ## Hardware compatível
 
-Todo produto Seeed ePaper na [página principal do hub](/pt-br/seeed_epaper_displays) que tenha a coluna **ESPHome** marcada pode seguir este fluxo de trabalho:
+Todo produto Seeed ePaper na [página principal](/pt-br/seeed_epaper_displays) que tenha a coluna **ESPHome** marcada pode seguir este fluxo de trabalho:
 
 <div class="table-center">
   <table align="center">
@@ -45,7 +48,7 @@ Todo produto Seeed ePaper na [página principal do hub](/pt-br/seeed_epaper_disp
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
       <td>XIAO ESP32-S3</td>
-      <td><a href="/pt-br/reterminal_e10xx_with_esphome">Básico</a> · <a href="/pt-br/reterminal_e10xx_with_esphome_advanced">Avançado (periféricos)</a></td>
+      <td><a href="/pt-br/reterminal_e10xx_with_esphome">Display</a> · <a href="/pt-br/reterminal_e10xx_with_esphome_advanced">E/S e energia</a> · <a href="/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone">RTC, SD e microfone</a></td>
     </tr>
     <tr>
       <td><strong>Placa controladora EE04</strong></td>
@@ -66,7 +69,7 @@ Todo produto Seeed ePaper na [página principal do hub](/pt-br/seeed_epaper_disp
 </div>
 
 :::tip
-Procurando pelos **dashboards em nuvem TRMNL** (sem YAML, baseados em plug-ins) em vez disso? Veja [Trabalhar com TRMNL](/pt-br/reterminal_e10xx_trmnl). Procurando pelo **HMI visual sem código da Seeed**? Veja [Trabalhar com SenseCraft HMI](/pt-br/EE04_with_hmi).
+Procurando pelos **dashboards em nuvem TRMNL** (sem YAML, baseados em plug-ins)? Veja [Trabalhar com TRMNL](/pt-br/reterminal_e10xx_trmnl). Procurando pelo **HMI visual sem código da Seeed**? Veja [Trabalhar com SenseCraft HMI](/pt-br/EE04_with_hmi).
 :::
 
 ## Por que ESPHome em ePaper?
@@ -74,7 +77,7 @@ Procurando pelos **dashboards em nuvem TRMNL** (sem YAML, baseados em plug-ins) 
 - **Eficiência energética** — o ePaper só consome energia quando a tela está sendo atualizada, então a combinação (ESP32 + deep-sleep do ESPHome + ePaper) pode funcionar por semanas/meses com bateria.
 - **Legível à luz do dia** — diferente do LCD, o display é legível sob luz solar; ótimo para painéis de Home Assistant montados na parede.
 - **Cidadão nativo do HA** — depois que o dispositivo aparece no Home Assistant, cada entidade (clima, calendário, sensor, pessoa, clima) está a um template Jinja de distância de estar na parede.
-- **Local em primeiro lugar** — sem nuvem, sem aprisionamento ao fornecedor. Tudo roda na sua LAN.
+- **Local em primeiro lugar** — sem nuvem, sem aprisionamento a fornecedor. Tudo roda na sua LAN.
 
 ## Etapa 1: Escolha um caminho de gravação
 
@@ -83,12 +86,12 @@ O firmware ESPHome pode ser carregado no dispositivo de duas maneiras. A escolha
 <Tabs groupId="esphome-flash-path">
 <TabItem value="web-installer" label="Caminho A: ESPHome Web Installer (recomendado para usuários iniciantes)" default>
 
-Um firmware ZIP pré-compilado é hospedado pela Seeed e gravado no seu dispositivo através do navegador via WebSerial.
+Um arquivo ZIP de firmware pré-compilado é hospedado pela Seeed e gravado no seu dispositivo através do navegador via WebSerial.
 
-1. Conecte o dispositivo ao computador com um cabo USB-C.
+1. Conecte o dispositivo ao seu computador com um cabo USB-C.
 2. Abra a página de gravação específica do produto (linkada a partir do cookbook do seu produto) no **Chrome** ou **Edge**.
 3. Clique em **Connect**, escolha a porta serial e depois clique em **Install**.
-4. Após a gravação, o dispositivo inicia em um portal cativo Wi-Fi (`ESPHome-XXXX`). Conecte-se, configure o Wi-Fi e o dispositivo aparecerá no Home Assistant via integração ESPHome.
+4. Após a gravação, o dispositivo inicia em um portal cativo de Wi-Fi (`ESPHome-XXXX`). Conecte-se, configure o Wi-Fi e o dispositivo aparecerá no Home Assistant via integração ESPHome.
 
 Este caminho não exige **nenhuma edição de YAML**. Você pode posteriormente "adotar" o dispositivo no dashboard do ESPHome se quiser começar a personalizá-lo.
 
@@ -104,7 +107,7 @@ Fluxo de trabalho:
 
 1. No dashboard do ESPHome, clique em **+ New device** → insira um nome → escolha a variante correta de ESP (ESP32-S3 / ESP32-C3 / etc. — o cookbook do seu produto dirá qual).
 2. O dashboard gera um `<device-name>.yaml` inicial. Substitua o corpo dele pelo YAML específico do produto a partir do seu cookbook (veja a Etapa 2 abaixo para o formato).
-3. Clique em **Install** → **Conecte ao computador que está executando o ESPHome** para a primeira gravação; as gravações seguintes são sem fio via OTA.
+3. Clique em **Install** → **Conecte ao computador que está executando o ESPHome** para a primeira gravação; as gravações subsequentes são sem fio via OTA.
 4. O dispositivo entra automaticamente na integração ESPHome no Home Assistant.
 
 </TabItem>
@@ -184,15 +187,16 @@ Quando o firmware inicia e entra na sua rede Wi-Fi, o Home Assistant descobre o 
 3. Clique em **Configure**, cole a chave de criptografia da API (de `secrets.yaml`) e envie.
 4. O dispositivo + todas as suas entidades (sensors, binary_sensors, o display) agora estão disponíveis no HA.
 
-Agora você pode arrastar as entidades para um dashboard Lovelace ou — muito mais interessante em ePaper — usar o bloco `display.lambda` para renderizar qualquer entidade do HA diretamente na tela através do componente [`homeassistant`](https://esphome.io/components/homeassistant.html).
+Agora você pode arrastar as entidades para um dashboard Lovelace ou — muito mais interessante em ePaper — usar o bloco `display.lambda` para renderizar qualquer entidade do HA diretamente na tela via o componente [`homeassistant`](https://esphome.io/components/homeassistant.html).
 
 ## Para onde ir em seguida — Cookbooks
 
 Esta página intencionalmente para no boilerplate. O YAML específico do produto, exemplos de periféricos e receitas ponta a ponta ficam no cookbook de cada produto:
 
-- **[reTerminal E Series — ESPHome Básico](/pt-br/reterminal_e10xx_with_esphome)** — primeiro dashboard, configuração de Wi-Fi, firmware ZIP pré-compilado para E1001/E1002/E1003/E1004.
-- **[reTerminal E Series — ESPHome Avançado](/pt-br/reterminal_e10xx_with_esphome_advanced)** — botões, buzzer, monitoramento de bateria, sensor SHT4x, deep sleep, dashboards com múltiplas páginas.
-- **[Placa controladora EE04 — ESPHome](/pt-br/EE04_with_esphome_advanced)** — integração completa com Home Assistant no XIAO ESP32-S3 + EE04 + sua escolha de tela ePaper.
+- **[reTerminal E Series — ESPHome Display](/pt-br/reterminal_e10xx_with_esphome)** — primeiro dashboard, configuração de Wi-Fi, arquivo ZIP de firmware pré-compilado e exemplos de desenho em ePaper para E1001/E1002/E1003/E1004.
+- **[reTerminal E Series — ESPHome I/O, Battery & Power](/pt-br/reterminal_e10xx_with_esphome_advanced)** — botões, buzzer, LED onboard, monitoramento de bateria, sensor SHT4x, deep sleep e dashboards com múltiplas páginas.
+- **[reTerminal E1001 / E1002 — ESPHome RTC, SD & Microphone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone)** — sincronização de hora com PCF8563 RTC, pinos de alimentação/detecção do cartão microSD e configuração do microfone PDM onboard.
+- **[Placa controladora EE04 — ESPHome](/pt-br/EE04_with_esphome_advanced)** — integração completa com o Home Assistant no XIAO ESP32-S3 + EE04 + sua escolha de tela ePaper.
 - **[Painel ePaper XIAO 7,5" — ESPHome](/pt-br/xiao_075inch_epaper_panel_esphome)** — dashboard mínimo com ESP32-C3.
 - **[Kit DIY TRMNL 7,5" — ESPHome](/pt-br/ogdiy_kit_works_with_esphome)** — usando o hardware do kit com ESPHome em vez da plataforma em nuvem TRMNL.
 
@@ -209,18 +213,18 @@ Quando novos produtos ePaper forem lançados, o cookbook correspondente será ad
 ### O dispositivo não aparece no Home Assistant
 
 - Verifique se o dispositivo entrou na rede Wi-Fi (confira os logs do dashboard ESPHome).
-- Certifique-se de que `api:` está presente no YAML e que a chave de criptografia no HA corresponde à de `secrets.yaml`.
+- Certifique-se de que `api:` está presente no YAML e de que a chave de criptografia no HA corresponde à de `secrets.yaml`.
 - Adicione a integração manualmente: **Settings → Devices & services → Add Integration → ESPHome**, depois insira o IP do dispositivo.
 
 ### A bateria descarrega mais rápido do que o esperado
 
-O ePaper só economiza energia quando o restante do SoC também está em modo de suspensão. Adicione um bloco `deep_sleep` (veja o cookbook Avançado do seu produto) e reduza o `update_interval`.
+O ePaper só economiza energia quando o restante do SoC também está em modo de suspensão. Adicione um bloco `deep_sleep` (veja o cookbook de E/S, bateria e baixo consumo do seu produto) e reduza o `update_interval`.
 
-Para uma depuração mais profunda em um produto específico, consulte o cookbook para aquele hardware.
+Para uma solução de problemas mais aprofundada em um produto específico, consulte o cookbook para esse hardware.
 
-## Suporte técnico e discussão sobre produtos
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

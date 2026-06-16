@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-05-07 17:28:36 (北京时间)
-// 多语言页面: 2270 个
+// 生成时间: 2026-06-16 14:53:06 (北京时间)
+// 多语言页面: 2335 个
 
 (function() {
   'use strict';
@@ -835,6 +835,13 @@
     "ja",
     "pt"
   ],
+  "/jetson_spi_getting_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Lumeo-Jetson-Getting-Started": [
     "cn",
     "en",
@@ -1073,6 +1080,13 @@
     "ja",
     "pt"
   ],
+  "/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/ai_robotics_control_soarm_by_openclaw_on_jetson_thor": [
     "cn",
     "en",
@@ -1123,6 +1137,20 @@
     "pt"
   ],
   "/ai_robotics_reachy_fleet_dance": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_graspnet_visual_grasping": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/voice_control_rebot_arm": [
     "cn",
     "en",
     "es",
@@ -1332,7 +1360,21 @@
     "ja",
     "pt"
   ],
+  "/how_to_use_camera_imx219": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack72_deep_dive": [
     "cn",
     "en",
     "es",
@@ -1347,6 +1389,13 @@
     "pt"
   ],
   "/make_diy_bsp_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer": [
     "cn",
     "en",
     "es",
@@ -1402,6 +1451,76 @@
     "ja",
     "pt"
   ],
+  "/jetson_developtool_app_market": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_connect_device": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_device_management": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_flash_firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_installation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_remote_development": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_skills": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_supported_devices": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/update_orin_nano_developer_kit_to_super_kit": [
     "cn",
     "en",
@@ -1431,6 +1550,13 @@
     "pt"
   ],
   "/Mini_AI_Computer_T906": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_jetson_bundle": [
     "cn",
     "en",
     "es",
@@ -1473,6 +1599,13 @@
     "pt"
   ],
   "/rtl8852be_wireless_module_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
     "cn",
     "en",
     "es",
@@ -1654,7 +1787,21 @@
     "ja",
     "pt"
   ],
+  "/recomputer_robotics_j50_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/ai_robotics_recomputer_rugged_j40_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_antenna_installation": [
     "cn",
     "en",
     "es",
@@ -3187,6 +3334,13 @@
     "ja",
     "pt"
   ],
+  "/ai_voice_assitant_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/ai_parking_slot_monitoring_demo_with_recamera": [
     "cn",
     "en",
@@ -3236,7 +3390,21 @@
     "ja",
     "pt"
   ],
+  "/recamera_qrcode_udp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_source_localization_of_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rtsp_to_webrtc_with_recamera": [
     "cn",
     "en",
     "es",
@@ -3251,6 +3419,20 @@
     "pt"
   ],
   "/use_the_motion-sensing_function_of_recamera_to_play_games": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/using_stream_deck_to_control_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_benchmarking": [
     "cn",
     "en",
     "es",
@@ -3335,6 +3517,13 @@
     "pt"
   ],
   "/recamera_hq_poe_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_getting_started": [
     "cn",
     "en",
     "es",
@@ -3852,6 +4041,20 @@
     "ja",
     "pt"
   ],
+  "/wio-s3_wireless_module_command_list": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio-s3_wireless_module_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Wio-WM1110_Dev_Kit_Hardware_Overview": [
     "cn",
     "en",
@@ -4140,6 +4343,13 @@
     "pt"
   ],
   "/meshtastic_kit_wio_tracker_1110": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_tracker_l1_3d_enclosure": [
     "cn",
     "en",
     "es",
@@ -4979,6 +5189,13 @@
     "ja",
     "pt"
   ],
+  "/bulk_configuration_chirpstack": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/flash_opensource_firmware_to_m2_gateway": [
     "cn",
     "en",
@@ -5175,6 +5392,20 @@
     "ja",
     "pt"
   ],
+  "/atom_s": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/atom_x": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor": [
     "cn",
     "en",
@@ -5246,222 +5477,273 @@
     "pt"
   ],
   "/reachymini_agents": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_apps": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_daemon": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_media": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_motion": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_reachymini": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_api_rest-api": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_tools": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_utils": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_examples_custom_media_manager": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_goto_interpolation_playground": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_imu": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_joy_controller": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_look_at": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_minimal_demo": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_mini_head_position_gui": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_reachy_compliant_demo": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_recorded_moves": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_rerun_viewer": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_sequence": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_sound_doa": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_sound_play": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_sound_record": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_take_picture": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_intro": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_development_workflow": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_get_started": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_hardware": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_install_daemon_from_branch": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_media_advanced_controls": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_reflash_the_rpi_iso": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_reset": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_usage": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_lite_get_started": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_lite_hardware": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_lite_media_advanced_controls": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_lite_usage": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_lite_wizard": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_simulation_get_started": [
+    "cn",
     "en",
     "es",
     "ja",
@@ -5469,75 +5751,118 @@
   ],
   "/reachymini_getting_started": [
     "cn",
-    "en"
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_sdk_apps": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
   ],
   "/reachymini_sdk_core-concept": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_gstreamer-installation": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_installation": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_integration": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_javascript-sdk": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_media-architecture": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_python-sdk": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_quickstart": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_readme": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_troubleshooting_change_mic_fpc_cable": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_troubleshooting_motors_diagnosis": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_troubleshooting_roadmap": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_troubleshooting_spherical_joints_maintenance": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_troubleshooting": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_vibe-code-with-your-agent": [
+    "cn",
     "en",
     "es",
     "ja",
@@ -5572,6 +5897,13 @@
     "pt"
   ],
   "/rebot_arm_b601_dm_ros2_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_b601_rs_getting_started": [
     "cn",
     "en",
     "es",
@@ -7712,6 +8044,13 @@
     "ja",
     "pt"
   ],
+  "/epaper_work_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/EE04_with_hmi": [
     "cn",
     "en",
@@ -7817,6 +8156,20 @@
     "ja",
     "pt"
   ],
+  "/reterminal_e10xx_with_arduino_peripherals": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_arduino_peripherals_2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/reterminal_e10xx_with_esphome": [
     "cn",
     "en",
@@ -7825,6 +8178,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_esphome_rtc_sd_microphone": [
     "cn",
     "en",
     "es",
@@ -10644,6 +11004,20 @@
     "ja",
     "pt"
   ],
+  "/respeaker_flex_xiao_doa_vad": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_gpio_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_i2s": [
     "cn",
     "en",
@@ -10665,6 +11039,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_flex_soarm": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_picovoice_nlu_keyword_spotting": [
     "cn",
     "en",
@@ -10679,7 +11060,56 @@
     "ja",
     "pt"
   ],
+  "/control_rebot_arm_using_voice_with_respeaker_flex": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_ros2_voice_pipeline": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_volume_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_http_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_mqtt_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_record_playback": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_udp_streaming": [
     "cn",
     "en",
     "es",
@@ -10932,6 +11362,20 @@
     "pt"
   ],
   "/respeaker_xvf3800_ros2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_ros2_voice_pipeline": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_sensecraft": [
     "cn",
     "en",
     "es",
@@ -11891,6 +12335,69 @@
     "pt"
   ],
   "/xiao_nrf54l15_zigbee": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_epaper_and_sdcard": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_bluetooth_lowpower": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_matter": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_nfc": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_onboard": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_low_power": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_ncs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_pin_multiplexing": [
     "cn",
     "en",
     "es",

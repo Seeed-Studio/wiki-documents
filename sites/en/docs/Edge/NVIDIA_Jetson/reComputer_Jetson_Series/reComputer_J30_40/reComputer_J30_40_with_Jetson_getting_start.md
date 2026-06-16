@@ -10,7 +10,7 @@ last_update:
   date: 6/29/2023
   author: Lakshantha
 createdAt: '2024-04-08'
-updatedAt: '2026-04-20'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/reComputer_J30_40_with_Jetson_getting_start/
 ---
 
@@ -18,21 +18,28 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Getting start with reComputer J30/40
 
+## Introduction
+
 <div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/-KAyUHzRxHc" title="Unboxing &amp; Plug in reComputer J4012 - Powered by NVIDIA Jetson Orin NX" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<br />
 
-## Introduction
 reComputer J30/40 built with Jetson Orin is a powerful and compact intelligent edge box to bring up to 100TOPS modern AI performance to the edge. While combining the NVIDIA Ampere™ GPU architecture with 64-bit operating capability.
 
 The full system includes one NVIDIA Jetson Orin production module, a heatsink, and a power adapter. reComputer J30/40 is preinstalled with Jetpack 5.1.3, simplifies development, and fits for deployment for edge AI solution providers working in video analytics, object detection, natural language processing, medical imaging, and robotics across industries of smart cities, security, industrial automation, smart factories.
 
 If you are looking for the version without power adapter, please check out [reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html).
+
+:::note
+Available customization options: logo branding, packaging, and firmware flashing.
+:::
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
+</div>
 
 ## Features
 

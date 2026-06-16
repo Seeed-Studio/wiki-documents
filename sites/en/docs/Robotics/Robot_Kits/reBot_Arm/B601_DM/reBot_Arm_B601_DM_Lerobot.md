@@ -17,7 +17,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-04-09'
-updatedAt: '2026-04-28'
+updatedAt: '2026-04-30'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 ---
 
@@ -135,27 +135,13 @@ cd ~/rebot_lerobot
 git clone https://github.com/Seeed-Projects/lerobot.git
 ```
 
-### 3. Clone Function Packages
-
-Clone two dependent function packages to the rebot_lerobot directory:
+### 3. Create Conda Environment and Install LeRobot
 
 :::tip
 For detailed functions of the function packages, please refer to:
 - [lerobot-teleoperator-rebot-arm-102](https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102)
 - [lerobot-robot-seeed-b601](https://github.com/Seeed-Projects/lerobot-robot-seeed-b601)
 :::
-
-```bash
-cd ~/rebot_lerobot
-
-# Clone rebot 102 leader function package
-git clone https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102.git
-
-# Clone rebot b601 follower function package
-git clone https://github.com/Seeed-Projects/lerobot-robot-seeed-b601.git
-```
-
-### 4. Create Conda Environment and Install LeRobot
 
 The lerobot repository already has a pyproject.toml. Create a conda environment and install all dependencies.
 
@@ -171,9 +157,9 @@ conda activate lerobot
 # Install lerobot main project (editable mode)
 pip install -e ./lerobot
 
-# Add local dependency packages (editable install)
-pip install -e ./lerobot-teleoperator-rebot-arm-102
-pip install -e ./lerobot-robot-seeed-b601
+# Add dependency packages
+pip install lerobot-teleoperator-rebot-arm-102
+pip install lerobot-robot-seeed-b601
 pip install motorbridge
 ```
 
@@ -335,8 +321,7 @@ lerobot-teleoperate \
     --robot.can_adapter=damiao \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
-    --teleop.id=rebot_arm_102_leader \
-    --teleop.joint_directions='{"shoulder_pan":-1,"shoulder_lift":-1,"elbow_flex":1,"wrist_flex":1,"wrist_yaw":1,"wrist_roll":-1,"gripper":-4}'
+    --teleop.id=rebot_arm_102_leader
 ```
 
 ## Add Cameras

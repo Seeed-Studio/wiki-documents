@@ -1,9 +1,9 @@
 ---
 description: reComputer Super 入門ガイド
-title: reComputer Super を使い始める
+title: reComputer Super の始め方
 keywords:
   - reComputer Super
-  - reComputer Super 入門ガイド
+  - reComputer Super Getting Started
   - Super
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /recomputer_jetson_super_getting_started
@@ -12,58 +12,62 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-04-09'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/ja/recomputer_jetson_super_getting_started/
 ---
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# reComputer Super を使い始める
-
-reComputer Super シリーズは reComputer Classic を強化し、AI 性能を最大 1.7 倍、157 TOPS まで引き上げます。Jetson Orin Nano（11410311、11410312）および Jetson Orin NX（11410313、11410314）を搭載したモデルを備えています。
-開発と量産の両方を想定して設計されており、M.2 Key E/M、デュアル RJ45 Ethernet、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI、CAN など豊富なインターフェースを備えています。Jetpack 6.2 と Linux OS BSP をプリインストールしているため、すぐに市場投入が可能です。
-また、NVIDIA、Hugging Face、ONNX、PyTorch、ROS2/1 など、幅広い LLM および Physical AI フレームワークをエッジでシームレスにサポートし、これらのマルチモーダル機能をロボティクスアプリケーションと統合することで、Physical AI 開発をさらに充実させます。
+# reComputer Super の始め方
 
 <div align="center">
   <img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png"/>  
 </div>
 
+reComputer Super シリーズは reComputer Classic を強化し、AI パフォーマンスを最大 1.7 倍、157 TOPS まで引き上げます。Jetson Orin Nano（11410311, 11410312）および Jetson Orin NX（11410313, 11410314）を搭載したモデルを備えています。
+開発と量産の両方を想定して設計されており、M.2 Key E/M、デュアル RJ45 Ethernet、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI、CAN など豊富なインターフェースを備えています。Jetpack 6.2 と Linux OS BSP をプリインストールしているため、すぐに市場投入が可能です。
+また、NVIDIA、Hugging Face、ONNX、PyTorch、ROS2/1 など、幅広い LLM および Physical AI フレームワークをエッジでシームレスにサポートし、これらのマルチモーダル機能をロボティクスアプリケーションと統合することで、Physical AI 開発をさらに充実させます。
+
+:::note
+カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
+</div>
 
 ## 主な特長  
 
 ### 🚀 ​**パフォーマンス向上**  
 
-- reComputer Classic と比べて ​**1.7 倍の AI 性能向上** を実現し、​**157 TOPS** を提供  
-- ​**Jetson Orin Nano**（モデル: 11410311、11410312）および ​**Jetson Orin NX**（モデル: 11410313、11410314）を搭載  
+- reComputer Classic と比べて ​**1.7 倍の AI パフォーマンス向上**、​**157 TOPS** を実現  
+- ​**Jetson Orin Nano**（モデル: 11410311, 11410312）および ​**Jetson Orin NX**（モデル: 11410313, 11410314）を搭載  
 
 ### 🔌 ​**豊富な接続性とインターフェース**  
 
 - 拡張性のための ​**M.2 Key E/M** + ​**Mini-PCIe**  
-- 高速ネットワーキング向けの ​**デュアル RJ45 Ethernet** ポート  
+- 高速ネットワーキング向け ​**デュアル RJ45 Ethernet** ポート  
 - ​**4x USB 3.2**、​**HDMI 2.1**、​**4x CSI**（Camera Serial Interface）  
-- 産業用 / ロボティクス用途向けの ​**CAN バス** をサポート  
+- 産業用/ロボティクス用途向けの ​**CAN バス** をサポート  
 
 ### 🛠️ ​**開発および量産にすぐ使える設計**  
 
 - ​**Jetpack 6.2** と ​**Linux OS BSP** をプリインストールし、開封後すぐにデプロイ可能  
-- 次のフレームワークとシームレスにエッジ AI を統合：  
+- 次のフレームワークとシームレスに連携したエッジ AI を実現：  
   - ​**NVIDIA**、​**Hugging Face**、​**ONNX**、​**PyTorch**  
   - ロボティクスアプリケーション向け ​**ROS2/1**  
 - ​**マルチモーダル AI** および ​**Physical AI** 開発をサポート  
 
-### 🤖 ​**エッジ AI & ロボティクス最適化**  
+### 🤖 ​**エッジ AI & ロボティクス向けに最適化**  
 
-- ​**LLM（Large Language Model）** の機能と ​**Physical AI** をエッジで統合  
+- エッジにおいて ​**LLM（大規模言語モデル）** の機能と ​**Physical AI** を統合  
 - ロボティクス、産業オートメーション、リアルタイム AI 推論に最適  
 - 事前構成済みソフトウェアスタックにより ​**市場投入までの時間** を短縮  
 
 :::tip
 
-### ⚠️ 電源およびアクセサリに関するガイドライン  
+### ⚠️ 電源とアクセサリに関するガイドライン  
 
 #### 1. ​**電源アダプタ**  
 
@@ -117,13 +121,13 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan={2}>6 コア Arm® Cortex®-A78AE v8.2 64 ビット CPU<br />1.5MB L2 + 4MB L3</td>
-      <td>6 コア Arm® Cortex®-A78AE v8.2 64 ビット CPU 1.5MB L2 + 4MB L3</td>
-      <td>8 コア Arm® Cortex®-A78AE v8.2 64 ビット CPU 2MB L2 + 4MB L3</td>
+      <td colSpan={2}>6 コア Arm® Cortex®-A78AE v8.2 64-bit CPU<br />1.5MB L2 + 4MB L3</td>
+      <td>6 コア Arm® Cortex®-A78AE v8.2 64-bit CPU 1.5MB L2 + 4MB L3</td>
+      <td>8 コア Arm® Cortex®-A78AE v8.2 64-bit CPU 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>CPU 最大周波数</td>
-      <td colSpan={2}>1.7 GHz（MAXN_SUPER）</td>
+      <td colSpan={2}>1.7 GHz (MAXN_SUPER)</td>
       <td colSpan={2}>2 GHz</td>
     </tr>
     <tr>
@@ -141,20 +145,20 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
     </tr>
     <tr>
       <td>ビデオエンコーダ</td>
-      <td colSpan={2}>1～2 個の CPU コアで 1080p30 をサポート</td>
-      <td colSpan={2}>1x 4K60（H.265） | 3x 4K30（H.265）<br />6x 1080p60（H.265） | 12x 1080p30（H.265）</td>
+      <td colSpan={2}>1～2 コアの CPU により 1080p30 をサポート</td>
+      <td colSpan={2}>1x 4K60 (H.265) | 3x 4K30 (H.265)<br />6x 1080p60 (H.265) | 12x 1080p30 (H.265)</td>
     </tr>
     <tr>
       <td>ビデオデコーダ</td>
-      <td colSpan={2}>1x 4K60（H.265）<br />2x 4K30（H.265）<br />5x 1080p60（H.265）<br />11x 1080p30（H.265）</td>
-      <td colSpan={2}>1x 8K30（H.265）<br />2x 4K60（H.265）<br />4x 4K30（H.265）<br />9x 1080p60（H.265）<br />18x 1080p30（H.265）</td>
+      <td colSpan={2}>1x 4K60 (H.265)<br />2x 4K30 (H.265)<br />5x 1080p60 (H.265)<br />11x 1080p30 (H.265)</td>
+      <td colSpan={2}>1x 8K30 (H.265)<br />2x 4K60 (H.265)<br />4x 4K30 (H.265)<br />9x 1080p60 (H.265)<br />18x 1080p30 (H.265)</td>
     </tr>
     <tr>
       <td>CSI</td>
-      <td colSpan={5}>最大 4 台のカメラ<br />(バーチャルチャネル経由で 8 台)<br />8 レーン MIPI CSI-2<br />D-PHY 2.1（最大 20Gbps）</td>
+      <td colSpan={5}>最大 4 台のカメラ<br />(仮想チャネル経由で 8 台)<br />8 レーン MIPI CSI-2<br />D-PHY 2.1（最大 20Gbps）</td>
     </tr>
     <tr>
-      <td>メカニカル</td>
+      <td>機構</td>
       <td colSpan={5}>69.6mm x 45mm<br />260 ピン SO-DIMM コネクタ</td>
     </tr>
     <tr>
@@ -180,15 +184,15 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
     <tr>
       <td rowSpan={11}>I/O</td>
       <td >USB</td>
-      <td colSpan={3}>4x USB 3.2 Type-A（5Gbps）；<br />1x USB 2.0 Type-C（デバイスモード / デバッグ）；</td>
+      <td colSpan={3}>4x USB 3.2 Type-A (5Gbps); <br />1x USB 2.0 Type-C (デバイスモード/デバッグ);</td>
     </tr>
     <tr>
       <td>カメラ</td>
-      <td colSpan={3}>4x mipi CSI（2 レーン 15 ピン）</td>
+      <td colSpan={3}>4x mipi CSI(2-lane 15-Pin)</td>
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan={3}>1 x CAN（4 ピンヘッダ）</td>
+      <td colSpan={3}>1 x CAN(4-Pin ヘッダ)</td>
     </tr>
     <tr>
       <td>ディスプレイ</td>
@@ -196,23 +200,23 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
     </tr>
     <tr>
       <td>ファン</td>
-      <td colSpan={3}>1x 4 ピンファンコネクタ（5V PWM）；<br />1x 4 ピンファンコネクタ（12V PWM）；</td>
+      <td colSpan={3}>1x 4 ピンファンコネクタ (5V PWM); <br />1x 4 ピンファンコネクタ (12V PWM);</td>
     </tr>
     <tr>
       <td>拡張ポート</td>
-      <td colSpan={3}>1x 40 ピン拡張ヘッダ；<br />1x 12 ピン制御および UART ヘッダ；</td>
+      <td colSpan={3}>1x 40 ピン拡張ヘッダ;<br />1x 12 ピン制御および UART ヘッダ;</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={3}>1x RTC 2 ピン；<br />1x RTC ソケット</td>
+      <td colSpan={3}>1x RTC 2-pin;<br />1x RTC ソケット</td>
     </tr>
     <tr>
       <td>LED</td>
-      <td colSpan={3}>2x LED（PWR および ACT）</td>
+      <td colSpan={3}>2x LED(PWR および ACT)</td>
     </tr>
     <tr>
       <td>ピンホールボタン</td>
-      <td colSpan={3}>1x PWR；<br />1x RESET；</td>
+      <td colSpan={3}>1x PWR;<br />1x RESET;</td>
     </tr>
     <tr>
       <td>DIP スイッチ</td>
@@ -248,7 +252,7 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
     </tr>
     <tr>
       <td>認証</td>
-      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, 振動試験（GB/T 2423）</td>
+      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, 振動試験(GB/T 2423)</td>
     </tr>
   </tbody>
 </table>
@@ -272,13 +276,13 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
 :::info
 
 仮想マシンではなく、物理的な Ubuntu ホストデバイスを使用することを推奨します。
-ホストマシンを準備するために、以下の表を参照してください。
+ホストマシンを準備する際は、以下の表を参照してください。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> JetPack バージョン </td>
-        <td class="dbon" colspan="3"> Ubuntu バージョン（ホストコンピュータ） </td>
+        <td  rowspan="2"> JetPack Version </td>
+        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -296,9 +300,9 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
 
 :::
 
-### Jetpack イメージを準備する
+### Jetpack イメージの準備
 
-ここでは、使用している Jetson モジュールに対応したシステムイメージを Ubuntu PC にダウンロードする必要があります。
+ここでは、使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードする必要があります。
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -306,8 +310,7 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
     <tr>
       <th>Jetpack バージョン</th>
       <th>Jetson モジュール</th>
-      <th> GMSL </th>
-      <th>ダウンロードリンク 1</th>
+      <th>Download Link1</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -315,25 +318,21 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
     <tr>
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">Download</a></td>
       <td>7a1f2085f50d77e5d86d3f01ccdc1255<br />c90a7c7d22a6ab7e4c4e3263e3148670</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCkqeSMa1GUQ57Y0K-pz0GtAYgobLanXDHP_d-rJIAzkcY?e=VqEnca">Download</a></td>
       <td>d26cbf4e16b9d5879e4b737754f65bb0<br />ea485b98760a1aa0657e07054efd8877</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAuSOue4x97QKJGLUkBabdzAamlCy6twJd68P69GlaTzws?e=hw82Sw">Download</a></td>
       <td>55a559dc6736650d45c2d787265c7e2c<br />36cd2d7f233ae58b00364aec7d82455c</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm">Download</a></td>
       <td>51f816d57dedd6e2305acd0ae8e0ffdc<br />19aec7319e351b7a70489f7eab8d69c6</td>
     </tr>
@@ -403,7 +402,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-フラッシュ処理が成功すると、次のような出力が表示されます
+フラッシュ処理が正常に完了すると、次のような出力が表示されます
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
@@ -411,26 +410,26 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 フラッシュコマンドの実行には 2〜10 分かかる場合があります。
 :::
 
-**Step 3:** HDMI ケーブルでモニターを接続し、reComputer Super システムの初期設定を完了します：
+**Step 3:** HDMI ケーブルでモニターを接続し、reComputer Super システムの初期化設定を完了します：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-ご自身のニーズに応じて **System Configuration** を完了してください。
+ニーズに応じて **System Configuration** を完了してください。
 :::
 
 
 ## リソース
 
-- [reComputer Robotics J401 キャリアボード データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
+- [reComputer Super データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
 - [回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
 - [3D ファイル](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
 - [メカニカルドキュメント - reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
 - [メカニカルドキュメント - reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
 - [Seeed Nvidia Jetson 導入事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson ワンページ資料](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Seeed Jetson ワンペーパー](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
@@ -441,7 +440,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

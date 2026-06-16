@@ -1,23 +1,23 @@
 ---
-description: Comprende los conceptos y la arquitectura fundamentales de Reachy Mini, incluyendo el diseño cliente-servidor, sistemas de coordenadas, límites de seguridad y modos de motor para un desarrollo de aplicaciones robusto.
+description: Documentación de conceptos fundamentales y arquitectura de Reachy Mini que abarca sistemas de coordenadas, límites de seguridad, modos de motor y arquitectura de software.
 title: Conceptos Fundamentales y Arquitectura
 slug: /reachymini_sdk_core-concept
 keywords:
-  - architecture
-  - coordinate systems
-  - safety limits
-  - motor modes
-  - client-server
-  - daemon
-  - sdk
+  - conceptos fundamentales
+  - arquitectura
+  - sistemas de coordenadas
+  - límites de seguridad
+  - modos de motor
+  - marco de la cabeza
+  - marco del mundo
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/es/reachymini_sdk_core-concept/
 ---
 
@@ -31,7 +31,7 @@ Reachy Mini utiliza una arquitectura de **Cliente-Servidor**:
 
 1.  **El Daemon (Servidor):**
     * Se ejecuta en el ordenador conectado al robot (o a la simulación).
-    * Gestiona el I/O de hardware (USB/Serial), las comprobaciones de seguridad y la lectura de sensores.
+    * Gestiona el I/O de hardware (USB/Serie), las comprobaciones de seguridad y la lectura de sensores.
     * Expone una REST API (`localhost:8000`) y WebSocket.
 
 2.  **El SDK (Cliente):**
@@ -46,23 +46,23 @@ Al mover el robot, trabajarás con dos marcos de referencia principales:
 ### 1. Marco de la Cabeza
 Ubicado en la base de la cabeza. Se utiliza para los comandos `goto_target` y `set_target`.
 
-![Reachy Mini Head Frame](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/head_frame.png)
+[![Reachy Mini Head Frame](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/head_frame.png)](https://github.com/pollen-robotics/reachy_mini/tree/main/docs/assets)
 
 ### 2. Marco del Mundo
 Fijo con respecto a la base del robot. Se utiliza para los comandos `look_at_world`.
 
-![Reachy Mini World Frame](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/world_frame.png)
+[![Reachy Mini World Frame](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/world_frame.png)](https://github.com/pollen-robotics/reachy_mini/tree/main/docs/assets)
 
 ## Límites de Seguridad ⚠️
 
 Reachy Mini tiene límites físicos y de software para evitar autocolisiones y daños. El SDK limitará automáticamente los valores a la posición válida más cercana.
 
-| Articulación / Eje | Rango de Límite |
+| Articulación / Eje | Rango de límite |
 | :--- | :--- |
-| **Inclinación/Rodamiento de Cabeza** | [-40°, +40°] |
-| **Giro de Cabeza** | [-180°, +180°] |
-| **Giro de Cuerpo** | [-160°, +160°] |
-| **Delta de Giro** | Diferencia máxima de 65° entre el Giro de Cabeza y el de Cuerpo |
+| **Inclinación/Roll de la Cabeza** | [-40°, +40°] |
+| **Giro de la Cabeza (Yaw)** | [-180°, +180°] |
+| **Giro del Cuerpo (Yaw)** | [-160°, +160°] |
+| **Delta de Yaw** | Diferencia máxima de 65° entre el giro de la Cabeza y del Cuerpo |
 
 ## Modos de Motor
 

@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 04/27/2026
+  date: 06/15/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-04-27'
+updatedAt: '2026-06-15'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,37 +18,92 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is April 27th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is June 15th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Get Started with ESP32 MeshCore](https://wiki.seeedstudio.com/get_started_with_esp32s3_meshcore/)
+### [Getting Started with Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/xiao_nrf54lm20a_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/get_start_1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[MeshCore](https://meshcore.io/) is an open sourced system for enabling secure text based communications utilising LoRa Mes hardware. You can use MeshCore repeater and MeshCore companion node to build your MeshCore network. [XIAO ESP32S3 & Wio-SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) is flexible solution to develop a MeshCore node.
+Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless development board built around Nordic Semiconductor’s nRF54LM20A SoC. It combines a 128 MHz Arm Cortex-M33 processor, 512 KB RAM, 2 MB on-chip NVM, multiprotocol 2.4 GHz wireless connectivity, onboard IMU, digital microphone, 8MB external flash, IPEX antenna connector, and nPM1300 PMIC for advanced battery-powered IoT, wearable, smart sensing, and edge AI applications.
 
 </div>
 
-### [reBot Arm B601-DM Visual Grasping DemoreBot Arm B601-DM Visual Grasping Demov](https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/)
+### [Wio-S3 Wireless Module Introduction](https://wiki.seeedstudio.com/wio-s3_wireless_module_introduction/)
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-S3/Wio-S3-Wireless-Module-with-IPEX.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This tutorial uses YOLO together with the Orbbec Gemini 2 depth camera to build a working desktop visual grasping demo for the reBot Arm B601-DM, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
+[Wio-S3 wireless module](https://www.seeedstudio.com/Wio-S3-Wireless-Module-p-6832.html) is embedded with the [ESP32-S3R8](https://www.espressif.com/en/products/socs/esp32-s3/) dual core Xtensa® LX7 MCU and the long range [SX1262 LoRa chip](https://www.semtech.com/products/wireless-rf/lora-connect/sx1262). It supports LoRaWAN frequency plan on EU868, US915 and more, as well as **2.4GHz Wi-Fi and BLE 5.0 connectivity**. It integrates 16MB Flash and 8MB PSRAM, making it ideal for edge AI processing.
 
 </div>
 
-### [Arduino for Seeed Studio XIAO nRF54L15](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_arduino/)
+### [Driving E-Paper and SD Card with XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_epaper_and_sdcard/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991421-XIAO-nRF54L14.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/epaper_1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces how to develop with the Seeed Studio XIAO nRF54L15 Sense using the Arduino platform, including environment setup, board configuration, and example applications, enabling rapid prototyping of low-power, multi-protocol wireless IoT projects with onboard sensors.
+The XIAO nRF54LM20A supports development with peripheral modules of the XIAO series and is fully compatible with the entire development ecosystem of XIAO products. This article demonstrates its ecosystem compatibility using the ePaper driver and MicroSD card read/write functions of the XIAO series as examples.
+
+</div>
+
+### [AI Voice Interaction Demo Based on reCamera](https://wiki.seeedstudio.com/ai_voice_assitant_with_recamera/)
+
+<div align="center">
+  <video width="600" controls>
+    <source src="https://raw.githubusercontent.com/hunter5299/Node-Red-project/main/reCamera_ai_voice_assitant/testVedioFinal.mp4" type="video/mp4" />
+    Your browser does not support video playback.
+  </video>
+</div>
+
+<div style={{ textAlign: "justify" }}>
+
+This project demonstrates a way to interact with reCamera through natural language. After visual reasoning triggers audio recording, reCamera sends the recording to the server, processes it through the complete **STT (Speech-to-Text) → LLM (Large Language Model Reasoning) → TTS (Text-to-Speech)** pipeline, and the synthesized voice is returned to reCamera for playback, enabling natural language conversation.
+
+</div>
+
+### [RTSP to WebRTC Real-Time Video Streaming with reCamera](https://wiki.seeedstudio.com/rtsp_to_webrtc_with_recamera/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/test.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This project streams reCamera's video through the **RTSP protocol**, transmits inference results to the PC via the **mqtt out** node, then merges the RTSP stream with inference results on the PC side and converts it to **WebRTC** format, allowing any browser to play the inference video stream in real time without plugins.
+
+</div>
+
+### [ESPHome Cookbook: RTC, SD Card & Microphone (reTerminal E Series)](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This project uses **ESPHome** to enable reTerminal E Series' onboard **PCF8563 RTC**, **microSD card detection**, and **PDM microphone**, synchronizes RTC time with **Home Assistant**, displays real-time status on the ePaper screen, and provides ready-to-use YAML examples for **reTerminal E1001** and **E1002**.
+
+</div>
+
+### [Real-Time QR Code Recognition on reCamera](https://wiki.seeedstudio.com/recamera_qrcode_udp/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/qrcode_udp/testvideo.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This example demonstrates how to build a **real-time QR code recognition system** using reCamera. The system captures live video frames through the camera, decodes QR codes using the **ZXing** library, and pushes the video frames (JPEG) along with the recognition results to a PC via **UDP** for display.
+
+</div>
+
+### [JetPack 7.2 Deep Dive: What Changes for Jetson AGX Orin Inference?](https://wiki.seeedstudio.com/jetpack72_deep_dive/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/flash-page.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This FAQ summarizes why JetPack 7.2 matters for Jetson AGX Orin users, what Seeed measured when comparing JetPack 7.2 with JetPack 6.2, and how to evaluate an upgrade path with Seeed Jetson DevelopTool.
 
 </div>
 
@@ -187,5 +242,11 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.4.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260406)
 - [weekly wiki on 2026.4.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260413)
 - [weekly wiki on 2026.4.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260420)
+- [weekly wiki on 2026.4.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260427)
+- [weekly wiki on 2026.5.11th](/Seeed_Elderly/weekly_wiki/2026/wiki260511)
+- [weekly wiki on 2026.5.18th](/Seeed_Elderly/weekly_wiki/2026/wiki260518)
+- [weekly wiki on 2026.5.25th](/Seeed_Elderly/weekly_wiki/2026/wiki260525)
+- [weekly wiki on 2026.6.01st](/Seeed_Elderly/weekly_wiki/2026/wiki260601)
+- [weekly wiki on 2026.6.08th](/Seeed_Elderly/weekly_wiki/2026/wiki260608)
 
 </details>

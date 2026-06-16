@@ -12,35 +12,31 @@ keywords:
   - prerequisites
   - cross-platform
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/reachymini_sdk_installation/
 ---
 
 # 📦 Installation Guide
 
-:::note Welcome to Reachy Mini!
-This guide will help you install the Python SDK and daemon to start controlling your robot.
-:::
-
-<div align="center">
+> **Welcome to Reachy Mini!** This guide will help you install the Python SDK and daemon to start controlling your robot.
 
 | 🐧 **Linux** | 🍎 **macOS** | 🪟 **Windows** |
 |:---:|:---:|:---:|
 | ✅ Supported | ✅ Supported | ✅ Supported |
 
-</div>
-
 **Need help?** Feel free to open an [issue](https://github.com/pollen-robotics/reachy_mini/issues) if you encounter any problem.
 
 ## First time using the command line? 🖥️
 
-:::note New to command line?
+<details>
+<summary>Click here if you're new to using a terminal/command line</summary>
+
 A **command line** (also called terminal or command prompt) is a text-based interface where you can type commands to interact with your computer. Don't worry—it's simpler than it looks!
 
 **How to open the command line:**
@@ -52,15 +48,14 @@ A **command line** (also called terminal or command prompt) is a text-based inte
 * Type commands exactly as shown in the instructions
 * Press `Enter` after typing each command to run it
 * You can copy and paste commands (right-click to paste in most command line interfaces)
-:::
 
 :::tip
 _Don't be intimidated!_ The command line is just another way to give instructions to your computer. Follow the commands step by step, and you'll be controlling your Reachy Mini in no time!
 :::
 
-## 1. 📋 Prerequisites
+</details>
 
-<div align="center">
+## 1. 📋 Prerequisites
 
 | Tool | Version | Purpose |
 |------|---------|---------|
@@ -68,34 +63,32 @@ _Don't be intimidated!_ The command line is just another way to give instruction
 | 📂 **Git** | Latest | Download source code and apps |
 | 📦 **Git LFS** | Latest | Download model assets |
 
-</div>
-
 ### 🐍 Install Python
 
 We'll use `uv` - a fast Python package manager that makes installation simple!
 
 #### Step 1: Install uv
 
-:::tip Linux / macOS
+:::info Linux / macOS
 In your terminal, run:
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 :::
 
-:::tip Windows
+:::info Windows
 In your terminal, run:
 ```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 :::
 
-:::success Verify installation
+**✅ Verify installation:**
+
 Once the installation is completed, close your terminal and open a new one. You can check if everything went well with:
 ```bash
 uv --version
 ```
-:::
 
 #### Step 2: Install Python
 
@@ -134,12 +127,12 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-:::success Verify Homebrew
+✅ Verify Homebrew:
+
 Once the installation is completed you can check if it went fine with:
 ```zsh
 brew --version
 ```
-:::
 
 #### 2. Install Git and Git LFS
 
@@ -156,18 +149,17 @@ Download and install Git for Windows:
 https://git-scm.com/install/windows
 :::
 
-:::success Finalize installation
+**✅ Finalize installation:**
+
 Finally, Git LFS then needs to be initialized with the command:
+
 ```bash
 git lfs install
 ```
-:::
 
 ## 2. 🏠 Set up a Virtual Environment
 
-:::tip Why use a virtual environment?
-It keeps your Reachy Mini installation isolated and prevents conflicts with other Python projects. Modern Python development requires this!
-:::
+> **Why use a virtual environment?** It keeps your Reachy Mini installation isolated and prevents conflicts with other Python projects. Modern Python development requires this!
 
 ### Create the environment
 
@@ -207,71 +199,38 @@ reachy_mini_env\Scripts\activate
 ```
 :::
 
-:::success Success indicator
-You should see `(reachy_mini_env)` at the start of your command line prompt!
-:::
+> **✅ Success indicator:** You should see `(reachy_mini_env)` at the start of your command line prompt!
 
 ## 3. 🚀 Install Reachy Mini
 
 Choose your installation method:
 
-<div align="center">
-
-| 📦 **PyPI Installation** | 🔧 **Source Installation** |
-|:---:|:---:|
-| **For Everyone** | **For Developers** |
-| Ready to use | Modify the code |
-
-</div>
-
-### 📦 Option A: Install from PyPI
-
-:::tip Recommended for most users
-Just want to control your robot? This is for you!
-:::
+:::info 📦 Option A: PyPI
+**Recommended for most users** - Just want to control your robot? This is for you!
 
 In your terminal, run:
 ```bash
 uv pip install "reachy-mini"
-uv pip install --upgrade --index-url https://gitlab.freedesktop.org/api/v4/projects/1340/packages/pypi/simple gstreamer==1.28.0
 ```
 
 If you want to use the simulation mode, you need to add the `mujoco` extra:
 ```bash
 uv pip install "reachy-mini[mujoco]"
-uv pip install --upgrade --index-url https://gitlab.freedesktop.org/api/v4/projects/1340/packages/pypi/simple gstreamer==1.28.0
 ```
 
-:::note
+:::tip
 The post installation of gstreamer is due to an [issue](https://github.com/pypi/support/issues/8847#issuecomment-3899714506) with PyPi and should be solved in the future.
 :::
 
-### 🔧 Option B: Install from Source
+<details>
+<summary>🐧 <strong>Linux users: additional steps required</strong></summary>
 
-:::info For developers
-Want to modify the SDK or contribute? Choose this option!
-:::
+**GStreamer** must be installed manually on Linux:
 
-In your terminal, run:
-```bash
-git clone https://github.com/pollen-robotics/reachy_mini
-cd reachy_mini
-uv pip install -e .
-uv pip install --upgrade --index-url https://gitlab.freedesktop.org/api/v4/projects/1340/packages/pypi/simple gstreamer==1.28.0
-```
+**[📖 GStreamer Installation Guide](https://wiki.seeedstudio.com/reachymini_sdk_gstreamer-installation/)**
 
-If you want to use the simulation mode, you need to add the `mujoco` extra:
-```bash
-uv pip install -e ".[mujoco]"
-uv pip install --upgrade --index-url https://gitlab.freedesktop.org/api/v4/projects/1340/packages/pypi/simple gstreamer==1.28.0
-```
+**USB permissions** — needed for the USB connection to Reachy Mini:
 
-### 🐧 Linux Users
-
-:::info Linux + USB connection?
-You need to grant access to Reachy Mini's serial port.
-
-Run these commands in your terminal:
 ```bash
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d3", MODE="0666", GROUP="dialout"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="38fb", ATTRS{idProduct}=="1001", MODE="0666", GROUP="dialout"' \
@@ -280,35 +239,50 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="38fb", ATTRS{idProduct}=="1001", MODE="0666"
 sudo udevadm control --reload-rules && sudo udevadm trigger
 sudo usermod -aG dialout $USER
 ```
-:::
 
 :::warning
 Log out and log back in for the changes to take effect!
 :::
 
-:::tip PortAudio
-Make sure that portaudio is installed on your system to enable audio features with the default backend.
-
-Run this command in your terminal:
-```bash
-sudo apt-get install libportaudio2
-```
+</details>
 :::
 
-#### Gstreamer
+:::info 🔧 Option B: Source
+**For developers** - Want to modify the SDK or contribute? Choose this option!
 
-Media management is performed by the GStreamer library. Windows and MacOSX users can use pip to install it:
+In your terminal, run:
 ```bash
-uv pip install --upgrade --index-url https://gitlab.freedesktop.org/api/v4/projects/1340/packages/pypi/simple gstreamer==1.28.0
+git clone https://github.com/pollen-robotics/reachy_mini && cd reachy_mini
+uv sync
 ```
 
-Linux users have extra steps to follow:
+If you want to use the simulation mode, you need to add the `mujoco` extra:
+```bash
+uv sync --extra mujoco
+```
 
-<div align="center">
+<details>
+<summary>🐧 <strong>Linux users: additional steps required</strong></summary>
 
-[![GStreamer Installation Guide](https://img.shields.io/badge/📖-GStreamer%20Installation%20Guide-blue?style=for-the-badge)](gstreamer-installation.md)
+**GStreamer** must be installed manually on Linux:
 
-</div>
+**[📖 GStreamer Installation Guide](https://wiki.seeedstudio.com/reachymini_sdk_gstreamer-installation/)**
+
+**USB permissions** — needed for the USB connection to Reachy Mini:
+
+```bash
+echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d3", MODE="0666", GROUP="dialout"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="38fb", ATTRS{idProduct}=="1001", MODE="0666", GROUP="dialout"' \
+| sudo tee /etc/udev/rules.d/99-reachy-mini.rules
+
+sudo udevadm control --reload-rules && sudo udevadm trigger
+sudo usermod -aG dialout $USER
+```
+
+> [!WARNING]
+> Log out and log back in for the changes to take effect!
+
+</details>
 
 ## 🎉 Congratulations!
 

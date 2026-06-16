@@ -9,7 +9,7 @@ last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-30'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_main_page/
 ---
 # reTerminal E Series ePaper Display Overview
@@ -49,7 +49,7 @@ Four models, one ecosystem. Pick by **screen size**, **color vs. monochrome**, *
     <tr>
       <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer"><strong>Buy E1001</strong></a><br/><a href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
       <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer"><strong>Buy E1002</strong></a><br/><a href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
-      <td align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank" rel="noopener noreferrer"><strong>Buy E1003</strong></a><br/><a href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
+      <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer"><strong>Buy E1003</strong></a><br/><a href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
       <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer"><strong>Buy E1004</strong></a><br/><a href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
     </tr>
   </table>
@@ -288,7 +288,7 @@ The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with 
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1003 Wiki</font></span></strong>
   </a>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank" rel="noopener noreferrer">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
   </a>
 </div><br />
@@ -364,20 +364,28 @@ Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-
 			<th>E1004</th>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome">ESPHome — Basic Usage</a></td>
-			<td>Plug the device into Home Assistant and draw simple graphics with YAML.</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome">ESPHome — Display</a></td>
+			<td>Plug the device into Home Assistant and draw simple ePaper graphics with YAML.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">Planned</td>
 			<td align="center">via Home Assistant</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced">ESPHome — Advanced Usage</a></td>
-			<td>Buttons, buzzer, battery monitoring, deep sleep, multi-page dashboards.</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced">ESPHome — I/O, Battery &amp; Power</a></td>
+			<td>Buttons, buzzer, onboard LED, battery monitoring, deep sleep, multi-page dashboards.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">Planned</td>
 			<td align="center">via Home Assistant</td>
+		</tr>
+		<tr>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone">ESPHome — RTC, SD &amp; Microphone</a></td>
+			<td>PCF8563 RTC time sync, microSD card detect, and onboard PDM microphone setup.</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">Planned</td>
+			<td align="center">No mic</td>
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_trmnl">Works with TRMNL</a></td>
@@ -442,8 +450,24 @@ Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-
 			<th>E1004</th>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino">Work with Arduino</a></td>
-			<td>Program the ePaper display directly from Arduino IDE on the ESP32-S3.</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino">Arduino — ePaper Display</a></td>
+			<td>Render text, graphics, and images on the ePaper screen with the Seeed_GFX or GxEPD2 libraries.</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+		</tr>
+		<tr>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals">Arduino — Onboard Peripherals</a></td>
+			<td>Drive the onboard LED, buzzer, three user buttons, SHT4x sensor, battery monitor, and microSD card.</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+		</tr>
+		<tr>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2">Arduino — RTC, Low Power, Audio &amp; Touch</a></td>
+			<td>RTC time management, deep sleep / light sleep, I2S microphone recording, and capacitive touch drawing (E1003 only for mic &amp; touch).</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>

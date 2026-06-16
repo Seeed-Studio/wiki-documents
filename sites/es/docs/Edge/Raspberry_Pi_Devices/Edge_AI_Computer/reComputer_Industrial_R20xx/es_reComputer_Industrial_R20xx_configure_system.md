@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-04-21'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/es/recomputer_industrial_r20xx_configure_system/
 ---
 
@@ -136,7 +136,7 @@ Este comando iniciará el escaneo de dispositivos Bluetooth cercanos. Luego pued
 
 ### Configuración SPI de LoRa®  
 
-Después de instalar el LoRa® SPI en la ranura Mini-PCIe 2, puedes configurar LoRa® SPI siguiendo estos pasos:
+Después de instalar el LoRa® SPI en la ranura Mini-PCIe 2, puedes configurar LoRa® SPI, sigue estos pasos:
 
 1. Clona el repositorio **SX1302_HAL**:
 
@@ -325,7 +325,7 @@ Modifica el parámetro com_path, cambia  ***"com_path": "/dev/spidev0.0"*** a  *
 sudo make
 ```
 
-Estos pasos configurarán LoRa® SPI y ejecutarán el reenviador de paquetes con el archivo de configuración especificado.
+Estos pasos configurarán LoRa® SPI y ejecutarán el packet forwarder con el archivo de configuración especificado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.7.1_lora_spi_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -392,7 +392,7 @@ echo "5g module reboot completed"
 sudo ./power_5g.sh
 ```
 
-Después de 10-15 segundos (tarda un tiempo en que el módulo se encienda y enumere el USB), comprueba si aparece el nodo del dispositivo:
+Después de 10-15 segundos (el módulo tarda un tiempo en encenderse y enumerar el USB), comprueba si aparece el nodo del dispositivo:
 
 ```bash
 ls /dev/ttyUSB*
@@ -450,7 +450,7 @@ Ejecuta el archivo:
 sudo ./power_4g.sh
 ```
 
-Después de 10-15 segundos (tarda un tiempo en que el módulo se encienda y enumere el USB), comprueba si aparece el nodo del dispositivo:
+Después de 10-15 segundos (el módulo tarda un tiempo en encenderse y enumerar el USB), comprueba si aparece el nodo del dispositivo:
 
 ```bash
 ls /dev/ttyUSB*
@@ -481,7 +481,7 @@ AT+QCFG="usbnet",1
 
 Hasta que la última línea muestre OK, será exitoso.
 
-> Nota
+> Note
 > El dispositivo necesita esperar un rato y luego podrás ver la dirección IP de usb0 en ifconfig.
 
 Probar el estado de la red y la comunicación：
@@ -498,14 +498,14 @@ ping www.baidu.com -I usb0
 El reComputer Industrial R20xx incluye **tres puertos RS485**. A continuación se muestran sus correspondientes **puertos COM** y **archivos de dispositivo**:  
 
 | **Número de puertos RS485** | **Puerto COM** | **Etiqueta serigrafiada** | **Archivo de dispositivo** |
-|---------------------------|--------------|---------------------------|-----------------------------|
-| **RS485-2**               | COM2         | A2/B2/GND2                | `/dev/ttyACM1`              |
-| **RS485-3**               | COM3         | A3/B3/GND3                | `/dev/ttyACM2`              |
-| **RS485-4**               | COM4         | A4/B4/GND4                | `/dev/ttyACM3`              |
+|---------------------------|----------------|---------------------------|----------------------------|
+| **RS485-2**               | COM2           | A2/B2/GND2                | `/dev/ttyACM1`             |
+| **RS485-3**               | COM3           | A3/B3/GND3                | `/dev/ttyACM2`             |
+| **RS485-4**               | COM4           | A4/B4/GND4                | `/dev/ttyACM3`             |
 
 Para probar la función RS485, puedes seguir los pasos a continuación (tomando RS485_1 y RS485_2 como ejemplos):
 
-1. Conecta los terminales A y B de RS485_1 y RS485_2.
+1. Conecta los A y B de RS485_1 y RS485_2.
 2. Abre minicom en dos ventanas de terminal respectivamente:
 
 ```bash
@@ -540,8 +540,8 @@ Por el contrario, si quieres enviar desde ACM3 a ACM2, ACM3 necesita configurars
 reComputer Industrial R20xx incluye 1x puertos RS232, y los puertos COM y archivos de dispositivo correspondientes son los siguientes:
 
 | **Número de puertos RS232** | **Puerto COM** | **Etiqueta serigrafiada** | **Archivo de dispositivo** |
-|---------------------------|--------------|---------------------------|-----------------------------|
-| **RS232-1**               | COM1         | RX1/TX1/GND1              | `/dev/ttyACM0`              |
+|---------------------------|----------------|---------------------------|----------------------------|
+| **RS232-1**               | COM1           | RX1/TX1/GND1              | `/dev/ttyACM0`             |
 
 Debido a que RS232 es comunicación full-dúplex, cortocircuita directamente el TX y RX de RS232 para realizar una prueba de bucle de retorno.
 
@@ -682,10 +682,10 @@ reComputer Industrial R20xx contiene 8x puertos DO, el usuario puede configurar 
 </div>
 
 El tipo de salida de los puertos DO es transistor. Admite tensión de salida - por debajo de 60 VDC, capacidad de corriente - 500 mA.
-Para probar la funcionalidad de DO, puedes seguir estos pasos para probarlo:
+Para probar la funcionalidad de DO, puedes seguir estos pasos para probarla:
 
 1. Se ha completado la conexión entre el puerto DO de reComputer Industrial R20xx y la carga externa.
-2. Introduce el siguiente comando para establecer la salida en nivel alto o nivel bajo：
+2. Introduce el siguiente comando para ajustar la salida a nivel alto o nivel bajo：
 
 ```bash
 echo 638 > /sys/class/gpio/export
@@ -707,9 +707,15 @@ lsusb
 ```
 
 La ejecución de este comando debería mostrar información sobre los dispositivos USB conectados a tu sistema, incluidos los concentradores USB presentes.
-Si el concentrador USB funciona correctamente, deberías ver sus detalles listados en la salida del comando lsusb. Si no aparece en la lista, puede haber un problema con el concentrador o con su conexión al sistema. En tales casos, es posible que necesites solucionar problemas del concentrador USB o de sus conexiones.
+Si el concentrador USB funciona correctamente, deberías ver sus detalles listados en la salida del comando lsusb. Si no aparece en la lista, puede haber un problema con el concentrador o con su conexión al sistema. En tales casos, puede que necesites solucionar problemas del concentrador USB o de sus conexiones.
 
 ## Prueba del RTC (Reloj en Tiempo Real)
+
+:::note
+Dado que el dispositivo reComputer está equipado con el chip CM5, hay dos unidades RTC en el dispositivo: ① El RTC integrado de CM5 (rtc0); ② El RTC ensamblado en reComputer (rtc1).
+
+rtc0 no puede conservar los datos de tiempo. Por lo tanto, para usar la función RTC, debes especificar manualmente el número de dispositivo rtc1 al ajustar la hora.
+:::
 
 Para probar la funcionalidad del Reloj en Tiempo Real (RTC), sigue estos pasos:
 
@@ -720,43 +726,103 @@ sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
 ```
 
-2. Establece la hora:
+2. Ajusta la hora:
 Configura el RTC a una fecha y hora específicas:
 
 ```bash
-sudo hwclock --set --date "2025-7-17 12:00:00"
+sudo hwclock --set --date "2025-7-17 12:00:00" -f /dev/rtc1
 ```
 
-3. Sincronizar la hora del RTC con el sistema
+3. Sincroniza la hora del RTC con el sistema
 Actualiza la hora del sistema para que coincida con la hora del RTC:  
 
 ```bash
-sudo hwclock --hctosys
+sudo hwclock --hctosys -f /dev/rtc1
 ```
 
 4. Comprueba la hora del RTC:
 
 ```bash
-sudo hwclock -r
+sudo hwclock -r -f /dev/rtc1
 ```
 
 Este comando leerá y mostrará la hora almacenada en el RTC.
 
 5. Desconecta la fuente de alimentación del RTC, espera unos minutos, luego vuelve a conectarla y comprueba de nuevo la hora del RTC para ver si ha conservado la hora correcta.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1_new.png" style={{width:800, height:'auto'}}/></div>
+
+### Usar RTC1 como reloj de hardware del sistema 
+
+El dispositivo RTC predeterminado es rtc0, y el servicio de sincronización de hora solo sincroniza la hora del sistema con el dispositivo RTC predeterminado. Para usar rtc1 como reloj de hardware principal, crea servicios personalizados de systemd para leer la hora desde rtc1 durante el arranque y escribir periódicamente la hora actual del sistema de vuelta en rtc1.
+
+1. Crea un servicio para hctosys
+
+Crea un servicio systemd para cargar la hora del sistema desde rtc1 durante el arranque.
+
+```bash
+sudo tee /etc/systemd/system/rtc1-hctosys.service >/dev/null <<'EOF'
+[Unit]
+Description=Load system time from RTC1
+After=dev-rtc1.device
+Wants=dev-rtc1.device
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hwclock --hctosys --utc -f /dev/rtc1
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable rtc1-hctosys.service
+```
+
+2. Crea un servicio para systohc
+
+Crea un servicio systemd para guardar la hora actual del sistema en rtc1, y un temporizador para ejecutar el servicio periódicamente.
+
+```bash
+sudo tee /etc/systemd/system/rtc1-systohc.service >/dev/null <<'EOF'
+[Unit]
+Description=Save system time to RTC1
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hwclock --systohc --utc -f /dev/rtc1
+EOF
+
+sudo tee /etc/systemd/system/rtc1-systohc.timer >/dev/null <<'EOF'
+[Unit]
+Description=Periodically save system time to RTC1
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Unit=rtc1-systohc.service
+
+[Install]
+WantedBy=timers.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now rtc1-systohc.timer
+```
+
+El temporizador se inicia dos minutos después del arranque y actualiza rtc1 cada diez minutos a partir de entonces. Puedes ajustar el intervalo según tus necesidades.
 
 ## Prueba del temporizador watchdog
 
 Para realizar una prueba del watchdog, sigue estos pasos:
 
-1. Instala el software del watchdog:
+1. Instala el software watchdog:
 
 ```bash
 sudo apt install watchdog
 ```
 
-2. Edita el archivo de configuración del watchdog:
+2. Edita el archivo de configuración de watchdog:
 
 ```bash
 # make sure you install vim already, if haven't, can install by the command below
@@ -764,7 +830,7 @@ sudo apt-get install vim
 sudo vim /etc/watchdog.conf
 ```
 
-Modifica la configuración de la siguiente manera:
+Modifica la configuración como sigue:
 
 ```bash
 watchdog-device = /dev/watchdog
@@ -792,7 +858,7 @@ priority = 1
 
 Puedes ajustar otros parámetros según sea necesario.
 
-3. Asegúrate de que el servicio de watchdog se esté ejecutando:
+3. Asegúrate de que el servicio watchdog se esté ejecutando:
 
 ```bash
 sudo systemctl start watchdog
@@ -814,25 +880,25 @@ Estos pasos te ayudarán a probar y garantizar la funcionalidad del temporizador
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
-## Control del zumbador mediante GPIO  
+## Controlar el zumbador mediante GPIO  
 
 El GPIO correspondiente al zumbador es gpio627. Introduce el siguiente script para encender/apagar el zumbador:
 
-1. Encender el zumbador:
+1. Enciende el zumbador:
 
 ```bash
 echo 627 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio627/direction
 echo 1 > /sys/class/gpio/gpio627/value
-```  
+```
 
-2. Apagar el zumbador :Turn off the buzzer :
+2. Apaga el zumbador :Turn off the buzzer :
 
 ```bash
 echo 627 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio627/direction 
 echo 0 > /sys/class/gpio/gpio627/value
-```  
+```
 
 ## TPM 2.0
 
@@ -840,11 +906,11 @@ Si conectas un módulo TPM 2.0 al dispositivo, el siguiente código puede ayudar
 
 ```bash
 ls /dev | grep tpm
-```  
+```
 
 **Interpretación de la salida:**  
 
-Si ves ***tpm0*** y ***tpmrm0*** en la salida, significa que los dispositivos TPM (Trusted Platform Module) se detectan y están disponibles en tu sistema. Esto indica que el hardware TPM es reconocido y accesible, lo cual es una buena señal. Puedes continuar usando funcionalidades o aplicaciones relacionadas con TPM sabiendo que los dispositivos están presentes y accesibles.
+Si ves ***tpm0*** y ***tpmrm0*** en la salida, significa que los dispositivos TPM (Trusted Platform Module) están detectados y disponibles en tu sistema. Esto indica que el hardware TPM es reconocido y accesible, lo cual es una buena señal. Puedes continuar usando funcionalidades o aplicaciones relacionadas con TPM sabiendo que los dispositivos están presentes y accesibles.
 
 ## ATECC608A
 
@@ -854,13 +920,13 @@ Para interactuar con el dispositivo ATECC608A y generar un número de serie alea
 
 ```bash
 curl -LJO https://github.com/wirenboard/atecc-util/releases/download/v0.4.12/atecc-util_0.4.12_arm64.deb
-```  
+```
 
 2. Extrae el contenido del paquete .deb en el directorio actual:
 
 ```bash
 dpkg -x ./atecc-util_0.4.12_arm64.deb .
-```  
+```
 
 3. Navega al directorio atecc:
 
@@ -877,7 +943,7 @@ cd usr/bin
 Este comando indica a la utilidad ATECC que use la ranura 10 (-b 10), establezca el tamaño del número de serie en 192 bits ***(-s 192)*** y genere un número de serie aleatorio ***(-c 'serial')***. La salida será el número de serie generado, como ***"01235595d3d621f0ee"***.
 Este proceso te permite interactuar con el dispositivo ATECC608A y realizar varias operaciones, como generar números de serie aleatorios.
 
-## Interacción con la EEPROM
+## Interactuar con la EEPROM
 
 Aquí están los comandos para interactuar con una EEPROM (Memoria de Solo Lectura Programable y Borrable Eléctricamente):
 
@@ -885,19 +951,19 @@ Aquí están los comandos para interactuar con una EEPROM (Memoria de Solo Lectu
 
 ```bash
  sudo chmod 777 /sys/bus/i2c/devices/10-0050/eeprom
-```  
+```
 
 2. Escribe la cadena "This is a test string" en el dispositivo EEPROM:
 
 ```bash
 echo "This is a test string" > /sys/bus/i2c/devices/10-0050/eeprom
-```  
+```
 
 3. Lee el contenido del dispositivo EEPROM y lo muestra en formato ***hexadecimal*** usando la utilidad hexdump:
 
 ```bash
 cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
-```  
+```
 
 ## Comprobación de la detección del SSD
 
@@ -908,16 +974,16 @@ sudo fdisk -l
 ```
 
 Este comando mostrará una lista de todos los discos conectados a tu sistema, incluido el SSD si se detecta correctamente. Busca las entradas que representen tu SSD. Normalmente comienzan con ***/dev/sd*** seguido de una letra (por ejemplo, ***/dev/sda, /dev/sdb,*** etc.).
-Una vez que identifiques la entrada correspondiente a tu SSD, puedes continuar con el particionado o formateo según sea necesario.
+Una vez que identifiques la entrada correspondiente a tu SSD, puedes proceder a particionarlo o formatearlo según sea necesario.
 
-## UPS para apagado seguro
+## SAI para apagado seguro
 
 Se utiliza un GPIO6 entre la CPU y la entrada de alimentación de CC para avisar a la CPU cuando se interrumpe la fuente de alimentación. Entonces la CPU debería hacer algo urgente en un script antes de que se agote la energía del supercondensador y ejecutar un "$ shutdown".
 Otra forma de usar esta función es iniciar un apagado cuando cambie el pin GPIO. El pin GPIO dado se configura como una tecla de entrada que genera eventos KEY_POWER. Este evento es gestionado por systemd-logind iniciando un apagado.
 
 1. Conexión de hardware.
 
-Asegúrate de que el pin ***'CM5_UPS_DET'*** del dispositivo UPS esté conectado al pin GPIO16 del dispositivo R20xx.
+Asegúrate de que el pin ***'CM5_UPS_DET'*** del dispositivo SAI esté conectado al pin GPIO16 del dispositivo R20xx.
 
 2. Modifica el archivo de configuración.
 
@@ -1006,44 +1072,44 @@ sudo python3 ups_shutdown.py
  Usa `sudo` para asegurarte de que el script tenga permisos suficientes para ejecutar el comando de apagado.
 :::
 
-6. Simular prueba de fallo de alimentación
+6. Simula una prueba de fallo de alimentación
 
 - Corta la fuente de alimentación externa.
-- Observe si el sistema guarda los datos automáticamente y se apaga.
+- Observa si el sistema guarda automáticamente los datos y se apaga.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.23_ups_for_safe_shut_down_1.png" style={{width:800, height:'auto'}}/></div>
 
-7. Verificar el resultado
+7. Verifica el resultado
 
-- Vuelva a conectar la fuente de alimentación.
-- Compruebe si los datos del sistema están completos y si se inicia con normalidad.
+- Vuelve a conectar la fuente de alimentación.
+- Comprueba si los datos del sistema están completos y si se inicia con normalidad.
 
 :::note
 
-1. Para la función de UPS, póngase en contacto con nosotros para obtener más información.
+1. Para la función de UPS, ponte en contacto con nosotros para obtener más información.
 2. La señal de alarma es activa en nivel BAJO.
 
 :::
 
 ## Acelerador de IA
 
-La ranura M.2 M-KEY 2280 del reComputer Industrial R20xx está diseñada para alojar un acelerador de IA PCIE M.2. Y la serie R20xx-12 viene preinstalada con una aceleración de IA Hailo-8 M.2 de hasta 26TOPS.
-Si compró el producto de la serie R20xx-10, deberá adquirir el módulo NPU de Hailo para habilitar la funcionalidad de IA.
-El dispositivo viene con el controlador del acelerador Hailo preinstalado, por lo que puede usarlo directamente y ejecutar el caso de prueba:
+La ranura M.2 M-KEY 2280 del reComputer Industrial R20xx está diseñada para alojar un Acelerador de IA PCIE M.2. Y la serie R20xx-12 viene preinstalada con una aceleración de IA Hailo-8 M.2 de hasta 26TOPS.
+Si compraste el producto de la serie R20xx-10, tendrás que comprar el módulo NPU de Hailo para habilitar la funcionalidad de IA.
+El dispositivo viene preinstalado con el controlador del acelerador Hailo, por lo que puedes usarlo directamente y ejecutar el caso de prueba:
 
-1. Vaya al directorio del caso de prueba
+1. Navega al directorio del caso de prueba
 
 ```bash
 cd /mnt/hailo-rpi5-examples/
 ```
 
-2. Inicie el entorno virtual
+2. Inicia el entorno virtual
 
 ```bash
 source ./setup_env.sh
 ```
 
-3. Ejecute el ejemplo de detección simple
+3. Ejecuta el ejemplo de detección simple
 
 ```bash
 python basic_pipelines/detection_simple.py
@@ -1051,16 +1117,16 @@ python basic_pipelines/detection_simple.py
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
-Para cerrar la aplicación, presione ***`Ctrl+C`*** .
-Esta es una versión ligera del ejemplo de detección, centrada principalmente en demostrar el rendimiento de Hailo mientras se minimiza la carga de la CPU. La canalización interna de procesamiento de vídeo de GStreamer se simplifica al minimizar las tareas de procesamiento de vídeo, y se utiliza el modelo YOLOv6 Nano.
+Para cerrar la aplicación, pulsa ***`Ctrl+C`*** .
+Esta es una versión ligera del ejemplo de detección, centrada principalmente en demostrar el rendimiento de Hailo mientras se minimiza la carga de la CPU. El flujo interno de procesamiento de vídeo de GStreamer se simplifica minimizando las tareas de procesamiento de vídeo, y se utiliza el modelo YOLOv6 Nano.
 
 :::note
-Si el reComputer que compró no incluye Hailo-8 y está considerando adquirir un dispositivo Hailo para su integración, consulte la documentación oficial de Hailo (https://github.com/hailo-ai) para configurar el firmware y el entorno, y ejecute los ejemplos para verificar que el dispositivo pueda utilizarse con normalidad.
+Si el reComputer que compraste no incluye Hailo-8 y estás considerando adquirir un dispositivo Hailo para integrarlo, consulta la documentación oficial de Hailo (https://github.com/hailo-ai) para configurar el firmware y el entorno, y ejecuta los ejemplos para verificar que el dispositivo pueda utilizarse con normalidad.
 :::
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerle diferentes tipos de soporte y garantizar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

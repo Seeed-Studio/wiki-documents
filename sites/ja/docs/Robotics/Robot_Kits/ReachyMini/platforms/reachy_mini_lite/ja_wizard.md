@@ -11,37 +11,37 @@ keywords:
   - scan
   - read
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_lite_wizard/
 ---
 
-# Dynamixel Wizard を使用してモーターのパラメータを読み取る方法
+# Dynamixel Wizard を使用してモーターパラメータを読み取る方法
 
-## Dynamixel Wizard をインストールする
-Dynamixel Wizard は次のリンクからダウンロードできます：
+## Dynamixel Wizard のインストール
+次のリンクから Dynamixel Wizard をダウンロードできます：
 - [Dynamixel Wizard](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/)
 
-## Reachy Mini Lite に接続する
+## Reachy Mini Lite への接続
 1. 付属の電源アダプターを使用して Reachy Mini Lite の電源を入れます。
 2. USB-C ケーブルを使用して、コンピューターを Reachy Mini Lite に接続します。
 3. Dynamixel Wizard アプリケーションを開きます。
 4. "connect button" の横にある "option" をクリックし、"scan" タブに移動して、すべてのモーターを検出できるように次の情報を確認します。
     - Protocol Version: 2.0
     - Baudrate: 1000000
-    - Port: USB 接続に適したポートを選択します（例：Windows では COM3、Linux/Mac では /dev/ttyUSB0 など）。
+    - Port: USB 接続に適したポートを選択します（例：Windows では COM3、Linux/Mac では /dev/ttyUSB0）。
 
-![Dynamixel_Wizard_Scan_Settings](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/scan_parameters.png)
+![Dynamixel_Wizard_Scan_Settings](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/scan_parameters.png)
 
 5. "Scan" ボタンをクリックして、接続されているすべてのモーターを検出します。ウィザードには、検出されたモーターとその ID の一覧が表示されます。
 
 ## モーターパラメータを読み取る
 1. 検出されたモーターの一覧からモーターを 1 つ選択します。
-2. 読み取りたいパラメータを選択します（例：Present Position、Present Velocity、Present Load など）。
+2. 読み取りたいパラメータをチェックします（例：Present Position、Present Velocity、Present Load など）。
 
-![Dynamixel_Wizard_Read_Settings](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/wizard_parameters.png)
+![Dynamixel_Wizard_Read_Settings](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/wizard_parameters.png)

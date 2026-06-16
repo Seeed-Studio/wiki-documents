@@ -293,6 +293,23 @@ export const translations = {
       ],
       tags: ['Open Source', 'JetPack 6.2', 'Production Ready']
     },
+    devTool: {
+      title: 'Seeed Jetson DevelopTool',
+      desc: 'A desktop GUI that streamlines everyday Jetson developer workflows',
+      subtitle: 'New Developer Tool',
+      mainTitle: 'Seeed-Jetson-DevelopTool',
+      mainDesc: 'One-click tooling for flashing, monitoring, and managing Seeed Jetson devices — now with Windows flashing via WSL. The tool handles the WSL setup for you, so you can flash straight from your Windows PC.',
+      videoTitle: 'See it in action',
+      features: [
+        { icon: '🪟', text: 'Flash on Windows via WSL — auto-configured, no manual setup' },
+        { icon: '⚡', text: 'One-click JetPack flashing for Seeed carrier boards' },
+        { icon: '📊', text: 'Real-time device status and resource monitoring' },
+        { icon: '🖥️', text: 'Cross-platform desktop GUI (Windows / Linux)' }
+      ],
+      tags: ['Windows Support', 'Open Source', 'New'],
+      githubCta: 'View on GitHub',
+      videoCta: 'Watch Demo'
+    },
     examples: {
       title: 'One-Command Deployment',
       desc: 'Deploy AI models instantly with jetson-examples',
@@ -317,7 +334,7 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'A complete learning journey covering Jetson fundamentals, computer vision, generative AI, robotics, and edge deployment. Perfect for developers new to edge AI.',
       stats: [
-        { value: '9', label: 'Learning Modules' },
+        { value: '10', label: 'Learning Modules' },
         { value: '70+', label: 'Code Examples' },
         { value: '6', label: 'Application Categories' }
       ],
@@ -329,7 +346,8 @@ export const translations = {
         { key: 'physical', icon: '🏭', title: 'Physical AI', desc: 'Build autonomous robots, AMR systems, and robotic arm applications', topics: ['ROS2', 'Robot', 'Control'] },
         { key: 'managed', icon: '☁️', title: 'Managed Services', desc: 'Cloud-based management and deployment services for Jetson', topics: ['Cloud', 'OTA', 'Manage'] }
       ],
-      cta: 'Start Learning on GitHub'
+      cta: 'GitHub Repository',
+      ctaOnline: 'Read Online Tutorial'
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -413,6 +431,23 @@ export const translations = {
       ],
       tags: ['オープンソース', 'JetPack 6.2', '本番環境対応']
     },
+    devTool: {
+      title: 'Seeed Jetson DevelopTool',
+      desc: 'Jetson 開発の日常作業を効率化するデスクトップ GUI ツール',
+      subtitle: '新しい開発者ツール',
+      mainTitle: 'Seeed-Jetson-DevelopTool',
+      mainDesc: 'Seeed Jetson デバイスのフラッシュ、モニタリング、管理をワンクリックで。WSL による Windows 書き込みに対応し、WSL のセットアップはツールが自動で処理するため、Windows PC から直接フラッシュできます。',
+      videoTitle: '動作デモ',
+      features: [
+        { icon: '🪟', text: 'WSL 経由で Windows から書き込み — セットアップは自動' },
+        { icon: '⚡', text: 'Seeed キャリアボード向けワンクリック JetPack 書き込み' },
+        { icon: '📊', text: 'デバイス状態とリソースをリアルタイムで監視' },
+        { icon: '🖥️', text: 'クロスプラットフォーム GUI (Windows / Linux)' }
+      ],
+      tags: ['Windows 対応', 'オープンソース', 'New'],
+      githubCta: 'GitHub で見る',
+      videoCta: 'デモ動画を視聴'
+    },
     examples: {
       title: 'ワンコマンドデプロイメント',
       desc: 'jetson-examplesでAIモデルを即座にデプロイ',
@@ -437,7 +472,7 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'Jetsonの基礎、コンピュータビジョン、生成AI、ロボティクス、エッジデプロイメントをカバーする完全な学習ジャーニー。エッジAI初心者の開発者に最適です。',
       stats: [
-        { value: '9', label: '学習モジュール' },
+        { value: '10', label: '学習モジュール' },
         { value: '70+', label: 'コード例' },
         { value: '6', label: 'アプリケーションカテゴリー' }
       ],
@@ -449,7 +484,8 @@ export const translations = {
         { key: 'physical', icon: '🏭', title: '物理AI', desc: '自律型ロボット、AMRシステム、ロボットアームアプリケーションを構築', topics: ['ROS2', 'Robot', 'Control'] },
         { key: 'managed', icon: '☁️', title: 'マネージドサービス', desc: 'Jetson向けクラウドベース管理・デプロイメントサービス', topics: ['Cloud', 'OTA', 'Manage'] }
       ],
-      cta: 'GitHubで学習を開始'
+      cta: 'GitHub リポジトリ',
+      ctaOnline: 'オンラインチュートリアルを読む'
     },
     faq: {
       title: 'よくある質問',
@@ -533,6 +569,23 @@ export const translations = {
       ],
       tags: ['开源', 'JetPack 6.2', '生产就绪']
     },
+    devTool: {
+      title: 'Seeed Jetson 开发工具',
+      desc: '简化 Jetson 日常开发工作流的桌面 GUI 工具',
+      subtitle: '全新开发者工具',
+      mainTitle: 'Seeed-Jetson-DevelopTool',
+      mainDesc: '一键完成 Seeed Jetson 设备的刷机、监控与管理。现已支持基于 WSL 的 Windows 刷机，工具会自动帮你配置好 WSL 环境，直接在 Windows 电脑上即可完成刷机。',
+      videoTitle: '演示视频',
+      features: [
+        { icon: '🪟', text: '基于 WSL 的 Windows 刷机，WSL 自动配置无需手动搭建' },
+        { icon: '⚡', text: '为 Seeed 载板提供一键 JetPack 刷机' },
+        { icon: '📊', text: '实时监控设备状态与资源占用' },
+        { icon: '🖥️', text: '跨平台桌面 GUI（Windows / Linux）' }
+      ],
+      tags: ['支持 Windows', '开源', '新工具'],
+      githubCta: '在 GitHub 查看',
+      videoCta: '观看演示'
+    },
     examples: {
       title: '一键部署',
       desc: '使用 jetson-examples 即时部署 AI 模型',
@@ -557,7 +610,7 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: '涵盖 Jetson 基础、计算机视觉、生成式 AI、机器人和边缘部署的完整学习之旅。非常适合边缘 AI 新手开发者。',
       stats: [
-        { value: '9', label: '学习模块' },
+        { value: '10', label: '学习模块' },
         { value: '70+', label: '代码示例' },
         { value: '6', label: '应用分类' }
       ],
@@ -569,7 +622,8 @@ export const translations = {
         { key: 'physical', icon: '🏭', title: '物理 AI', desc: '构建自主机器人、AMR 系统和机械臂应用', topics: ['ROS2', '机器人', '控制'] },
         { key: 'managed', icon: '☁️', title: '托管服务', desc: 'Jetson 的云端管理和部署服务', topics: ['Cloud', 'OTA', '管理'] }
       ],
-      cta: '在 GitHub 上开始学习'
+      cta: 'GitHub 仓库',
+      ctaOnline: '在线阅读教程'
     },
     faq: {
       title: '常见问题',
@@ -653,6 +707,23 @@ export const translations = {
       ],
       tags: ['Código Abierto', 'JetPack 6.2', 'Listo para Producción']
     },
+    devTool: {
+      title: 'Seeed Jetson DevelopTool',
+      desc: 'Una GUI de escritorio que agiliza los flujos de trabajo diarios del desarrollador Jetson',
+      subtitle: 'Nueva Herramienta para Desarrolladores',
+      mainTitle: 'Seeed-Jetson-DevelopTool',
+      mainDesc: 'Flasheo, monitoreo y gestión de dispositivos Seeed Jetson con un solo clic. Ahora con flasheo en Windows mediante WSL: la herramienta configura WSL por ti, para que flashees directamente desde tu PC con Windows.',
+      videoTitle: 'Míralo en acción',
+      features: [
+        { icon: '🪟', text: 'Flasheo en Windows vía WSL — configuración automática' },
+        { icon: '⚡', text: 'Flasheo JetPack con un clic para carrier boards Seeed' },
+        { icon: '📊', text: 'Estado del dispositivo y monitoreo de recursos en tiempo real' },
+        { icon: '🖥️', text: 'GUI de escritorio multiplataforma (Windows / Linux)' }
+      ],
+      tags: ['Soporte Windows', 'Código Abierto', 'Nuevo'],
+      githubCta: 'Ver en GitHub',
+      videoCta: 'Ver Demo'
+    },
     examples: {
       title: 'Despliegue con Un Comando',
       desc: 'Despliegue modelos de IA al instante con jetson-examples',
@@ -677,7 +748,7 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'Un viaje de aprendizaje completo que cubre fundamentos de Jetson, visión por computadora, IA generativa, robótica y despliegue en el borde. Perfecto para desarrolladores nuevos en IA de borde.',
       stats: [
-        { value: '9', label: 'Módulos' },
+        { value: '10', label: 'Módulos' },
         { value: '70+', label: 'Ejemplos' },
         { value: '6', label: 'Categorías' }
       ],
@@ -689,7 +760,8 @@ export const translations = {
         { key: 'physical', icon: '🏭', title: 'IA Física', desc: 'Construya robots autónomos, sistemas AMR y aplicaciones de brazos robóticos', topics: ['ROS2', 'Robot', 'Control'] },
         { key: 'managed', icon: '☁️', title: 'Servicios Gestionados', desc: 'Servicios de gestión y despliegue basados en la nube para Jetson', topics: ['Cloud', 'OTA', 'Gestionar'] }
       ],
-      cta: 'Comenzar en GitHub'
+      cta: 'Repositorio GitHub',
+      ctaOnline: 'Leer tutorial en línea'
     },
     faq: {
       title: 'Preguntas Frecuentes',
@@ -773,6 +845,23 @@ export const translations = {
       ],
       tags: ['Código Aberto', 'JetPack 6.2', 'Pronto para Produção']
     },
+    devTool: {
+      title: 'Seeed Jetson DevelopTool',
+      desc: 'Uma GUI de desktop que simplifica os fluxos diários de desenvolvimento no Jetson',
+      subtitle: 'Nova Ferramenta para Desenvolvedores',
+      mainTitle: 'Seeed-Jetson-DevelopTool',
+      mainDesc: 'Gravação, monitoramento e gestão de dispositivos Seeed Jetson com um clique. Agora com gravação no Windows via WSL: a ferramenta configura o WSL automaticamente, para você gravar direto do seu PC com Windows.',
+      videoTitle: 'Veja em ação',
+      features: [
+        { icon: '🪟', text: 'Gravação no Windows via WSL — configuração automática' },
+        { icon: '⚡', text: 'Gravação de JetPack com um clique para carrier boards Seeed' },
+        { icon: '📊', text: 'Status do dispositivo e monitoramento de recursos em tempo real' },
+        { icon: '🖥️', text: 'GUI de desktop multiplataforma (Windows / Linux)' }
+      ],
+      tags: ['Suporte a Windows', 'Código Aberto', 'Novo'],
+      githubCta: 'Ver no GitHub',
+      videoCta: 'Assistir Demo'
+    },
     examples: {
       title: 'Implantação com Um Comando',
       desc: 'Implante modelos de IA instantaneamente com jetson-examples',
@@ -797,7 +886,7 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'Uma jornada completa de aprendizado cobrindo fundamentos do Jetson, visão computacional, IA generativa, robótica e implantação na borda. Perfeito para desenvolvedores iniciantes em IA de borda.',
       stats: [
-        { value: '9', label: 'Módulos de Aprendizado' },
+        { value: '10', label: 'Módulos de Aprendizado' },
         { value: '70+', label: 'Exemplos de Código' },
         { value: '6', label: 'Categorias de Aplicação' }
       ],
@@ -809,7 +898,8 @@ export const translations = {
         { key: 'physical', icon: '🏭', title: 'IA Física', desc: 'Construa robôs autônomos, sistemas AMR e aplicações com braços robóticos', topics: ['ROS2', 'Robot', 'Control'] },
         { key: 'managed', icon: '☁️', title: 'Serviços Gerenciados', desc: 'Serviços baseados em nuvem para gerenciamento e implantação no Jetson', topics: ['Cloud', 'OTA', 'Manage'] }
       ],
-      cta: 'Começar no GitHub'
+      cta: 'Repositório GitHub',
+      ctaOnline: 'Ler tutorial online'
     },
     faq: {
       title: 'Perguntas Frequentes',
@@ -881,6 +971,7 @@ const RecomputerPage = ({ lang }: Props) => {
     devices: true,
     flashGuide: true,
     bsp: true,
+    devTool: true,
     beginnerGuide: true,
     community: true,
     faq: true
@@ -1248,6 +1339,85 @@ const RecomputerPage = ({ lang }: Props) => {
           <div className={styles.section}>
             <div className={styles.section_header}>
               <div>
+                <h2 className={styles.section_title}>{t.devTool.title}</h2>
+                <p className={styles.section_description}>{t.devTool.desc}</p>
+              </div>
+              <CollapseButton section="devTool" isExpanded={expandedSections.devTool} />
+            </div>
+
+            {expandedSections.devTool && (
+              <div className={styles.devtool_container}>
+                <div className={styles.devtool_card}>
+                  <div className={styles.devtool_info}>
+                    <div className={styles.devtool_header}>
+                      <span className={styles.devtool_icon}><WrenchIcon size={32} /></span>
+                      <div className={styles.devtool_title_group}>
+                        <span className={styles.devtool_subtitle}>
+                          <SparklesIcon size={14} /> {t.devTool.subtitle}
+                        </span>
+                        <span className={styles.devtool_main_title}>{t.devTool.mainTitle}</span>
+                      </div>
+                    </div>
+
+                    <p className={styles.devtool_description}>{t.devTool.mainDesc}</p>
+
+                    <div className={styles.devtool_features}>
+                      {t.devTool.features.map((feature, idx) => (
+                        <div key={idx} className={styles.devtool_feature_item}>
+                          <span className={styles.devtool_feature_icon}>{feature.icon}</span>
+                          <span className={styles.devtool_feature_text}>{feature.text}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className={styles.devtool_tags_row}>
+                      {t.devTool.tags.map((tag, idx) => (
+                        <span key={idx} className={styles.devtool_tag}>{tag}</span>
+                      ))}
+                    </div>
+
+                    <div className={styles.devtool_actions}>
+                      <a
+                        href="https://github.com/Seeed-Projects/Seeed-Jetson-DevelopTool"
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.devtool_cta_primary}
+                      >
+                        <span>{t.devTool.githubCta}</span>
+                        <span>→</span>
+                      </a>
+                      <a
+                        href="https://www.youtube.com/watch?v=8_SjIEZI2lQ"
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.devtool_cta_secondary}
+                      >
+                        <span>▶</span>
+                        <span>{t.devTool.videoCta}</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className={styles.devtool_video}>
+                    <div className={styles.devtool_video_label}>{t.devTool.videoTitle}</div>
+                    <div className={styles.devtool_video_frame}>
+                      <iframe
+                        src="https://www.youtube.com/embed/8_SjIEZI2lQ"
+                        title="Seeed Jetson DevelopTool Demo"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className={styles.section}>
+            <div className={styles.section_header}>
+              <div>
                 <h2 className={styles.section_title}>{t.beginnerGuide.title}</h2>
                 <p className={styles.section_description}>{t.beginnerGuide.desc}</p>
               </div>
@@ -1318,15 +1488,26 @@ const RecomputerPage = ({ lang }: Props) => {
                   })}
                 </div>
 
-                <a
-                  href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.beginner_cta_button}
-                >
-                  <span>{t.beginnerGuide.cta}</span>
-                  <span>→</span>
-                </a>
+                <div className={styles.beginner_cta_group}>
+                  <a
+                    href="https://sensecraft.seeed.cc/ai-lab/tutorials/j/introduction"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.beginner_cta_button}
+                  >
+                    <span>{t.beginnerGuide.ctaOnline}</span>
+                    <span>→</span>
+                  </a>
+                  <a
+                    href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.beginner_cta_button_secondary}
+                  >
+                    <span>{t.beginnerGuide.cta}</span>
+                    <span>→</span>
+                  </a>
+                </div>
               </div>
             )}
           </div>

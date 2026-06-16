@@ -1,22 +1,22 @@
 ---
-description: Reachy Mini をコンプライアンスモードにし、重力補償を有効にして、ロボットが軽い押しに追従し、手を離すとその場に留まるデモです。
+description: Reachy Mini をコンプライアンスモードにし、重力補償を行うことで、ロボットが軽く押した動きに追従し、手を離すとその場に留まるデモです。
 title: コンプライアンスモード デモ
 slug: /reachymini_examples_reachy_compliant_demo
 keywords:
-  - compliant mode
-  - gravity compensation
+  - コンプライアンスモード
+  - 重力補償
   - placo
-  - kinematics
-  - human-robot interaction
-  - soft mode
+  - 運動学
+  - 人とロボットのインタラクション
+  - ソフトモード
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/ja/reachymini_examples_reachy_compliant_demo/
 ---
 
@@ -24,8 +24,8 @@ url: https://wiki.seeedstudio.com/ja/reachymini_examples_reachy_compliant_demo/
 
 このデモでは、Reachy Mini をコンプライアンスモードにし、ロボットプラットフォームの重力を補償して、倒れないようにします。
 
-ロボットを軽く押すと、その動きに追従します。押すのをやめると、その場に留まります。これは、人とロボットのインタラクションのように、ロボットに柔軟性を持たせてユーザーの動きに追従させたい用途に有用です。
+ロボットを優しく押すと、その動きに追従します。押すのをやめると、その場に留まります。これは、人とロボットのインタラクションのように、ロボットをコンプライアントにしてユーザーの動きに追従させたいアプリケーションに有用です。
 
 注意：このデモは現在、運動学エンジンとして Placo を使用している場合にのみ動作します。
 
-完全なサンプルはこちらを参照してください: [reachy_compliant_demo.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/reachy_compliant_demo.py)
+完全なサンプルはこちらを参照してください: [reachy_compliant_demo.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/reachy_compliant_demo.py)
