@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-15 15:36:45 (北京时间)
-// 多语言页面: 2333 个
+// 生成时间: 2026-06-16 13:39:13 (北京时间)
+// 多语言页面: 2335 个
 
 (function() {
   'use strict';
@@ -1137,6 +1137,20 @@
     "pt"
   ],
   "/ai_robotics_reachy_fleet_dance": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_graspnet_visual_grasping": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/voice_control_rebot_arm": [
     "cn",
     "en",
     "es",
