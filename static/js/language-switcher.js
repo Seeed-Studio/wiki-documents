@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-16 14:53:06 (北京时间)
-// 多语言页面: 2335 个
+// 生成时间: 2026-06-16 16:21:21 (北京时间)
+// 多语言页面: 2337 个
 
 (function() {
   'use strict';
@@ -1102,6 +1102,13 @@
     "pt"
   ],
   "/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601": [
     "cn",
     "en",
     "es",
@@ -3440,6 +3447,13 @@
     "pt"
   ],
   "/recamera_network_connection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wifi_halow_getting_started": [
     "cn",
     "en",
     "es",
