@@ -19,8 +19,30 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_nfc/
 # NFC para XIAO nRF54LM20A Sense
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF54LM20A_NFC.png" style={{width:400, height:'auto'}}/></div>
+
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Adquira agora 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
 <br/>
-Near Field Communication (NFC) é uma tecnologia para transferência sem fio de pequenas quantidades de dados entre dois dispositivos. Ela usa protocolos de comunicação muito simples e, portanto, permite uma conexão mais rápida do que Bluetooth® Low Energy. No entanto, como a NFC usa indução magnética para possibilitar a comunicação, os dispositivos devem estar muito próximos (< 10 cm) para se conectar.】
+Near Field Communication (NFC) é uma tecnologia para transferência sem fio de pequenas quantidades de dados entre dois dispositivos. Ela utiliza protocolos de comunicação muito simples e, portanto, permite uma conexão mais rápida do que Bluetooth® Low Energy. No entanto, como o NFC usa indução magnética para possibilitar a comunicação, os dispositivos devem estar muito próximos (< 10 cm) para se conectar.】
 
 - *Para tutoriais e referências de NFC para chips da série Nordic, consulte [Near Field Communication (NFC)](https://docs.nordicsemi.com/bundle/ncs-3.2.0/page/nrf/protocols/nfc/index.html)*
 - *As especificações técnicas para NFC estão disponíveis em [NFC Forum specification overview](https://nfc-forum.org/build/specifications)*.
@@ -182,7 +204,7 @@ Esta seção aborda a função NFC. Pesquise por **nRF Toolbox for Bluetooth LE*
 
 Os recursos de NFC podem ser reutilizados em vários cenários, como gravação de dados e despertar de baixo consumo de energia. O nRF Connect SDK fornece códigos de exemplo correspondentes. Você pode estender esses exemplos para aplicações práticas. Por exemplo, combinar o despertar de baixo consumo de energia por NFC com controle de motor permite um simples cadeado inteligente para uso diário.
 
-Além disso, acreditamos que você obteve uma compreensão básica da implementação de NFC no XIAO nRF54LM20A por meio dos exemplos acima. Aguardamos suas ideias criativas e contribuições para a comunidade de código aberto.
+Além disso, acreditamos que você tenha adquirido uma compreensão básica da implementação de NFC no XIAO nRF54LM20A por meio dos exemplos acima. Aguardamos suas ideias criativas e contribuições para a comunidade de código aberto.
 
 ## Suporte técnico e discussão sobre o produto
 

@@ -1,6 +1,6 @@
 ---
 title: Transmissão de Vídeo em Tempo Real de RTSP para WebRTC com reCamera
-description: Este documento apresenta como usar a reCamera para transmitir vídeo para um PC via protocolo RTSP e converter o stream RTSP para o formato WebRTC no PC, permitindo a reprodução de vídeo em tempo real com baixa latência em um navegador.
+description: Este documento apresenta como usar a reCamera para transmitir vídeo para um PC via protocolo RTSP e converter o stream RTSP para o formato WebRTC no PC, permitindo a reprodução de vídeo em tempo real e baixa latência em um navegador.
 keywords:
   - reCamera
   - RTSP
@@ -13,7 +13,7 @@ last_update:
   date: 06/10/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
-updatedAt: '2026-06-10'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/pt-br/rtsp_to_webrtc_with_recamera/
 ---
 
@@ -22,15 +22,15 @@ url: https://wiki.seeedstudio.com/pt-br/rtsp_to_webrtc_with_recamera/
 ## Introdução
 
 Quando você quiser **integrar o stream de vídeo da reCamera à sua própria aplicação Web** ou **visualizar remotamente** o feed da câmera com baixa latência por meio de um navegador, você pode usar este demo como referência.
-Este projeto transmite o vídeo da reCamera por meio do **protocolo RTSP**, envia os resultados de inferência para o PC via nó **mqtt out**, depois mescla o stream RTSP com os resultados de inferência no PC e o converte para o formato **WebRTC**, permitindo que qualquer navegador reproduza o stream de vídeo com inferência em tempo real sem plugins. Ele fornece uma forma de **“libertar” o stream de vídeo da reCamera** — uma vez que o stream de vídeo possa ser enviado via RTSP, você pode facilmente:
+Este projeto transmite o vídeo da reCamera por meio do **protocolo RTSP**, envia os resultados de inferência para o PC via nó **mqtt out**, depois mescla o stream RTSP com os resultados de inferência no PC e o converte para o formato **WebRTC**, permitindo que qualquer navegador reproduza o stream de vídeo com inferência em tempo real sem plugins. Ele oferece uma forma de **“libertar” o stream de vídeo da reCamera** — uma vez que o stream de vídeo possa ser enviado via RTSP, você pode facilmente:
 
 - **Integrar à sua própria aplicação Web ou plataforma de gerenciamento**: Incorporar o vídeo ao vivo em dashboards existentes, sistemas de monitoramento ou plataformas de IoT.
 
 - **Agregação de vídeo de múltiplos dispositivos**: Visualizar múltiplos feeds de reCamera simultaneamente na mesma página web para construir um videowall de vigilância multicanal.
 
-- **Acesso remoto e travessia de redes diferentes**: Por meio da capacidade de travessia de NAT do WebRTC, você pode visualizar o feed ao vivo da reCamera com baixa latência mesmo em diferentes ambientes de rede.
+- **Acesso remoto e travessia de redes diferentes**: Por meio da capacidade de travessia de NAT do WebRTC, você pode visualizar o feed ao vivo da reCamera com baixa latência mesmo em ambientes de rede diferentes.
 
-- **Fornecer um canal de transporte para visualização de resultados de inferência de IA**: Após a reCamera realizar inferência de IA na borda, envie os resultados de inferência junto com o vídeo, e o PC poderá exibir em tempo real, no navegador, os resultados de análise de IA, adequado para construir aplicações de inspeção remota, segurança inteligente e outras.
+- **Fornecer um canal de transporte para visualização de resultados de inferência de IA**: Após a reCamera realizar inferência de IA na borda, envie os resultados de inferência junto com o vídeo, e o PC poderá exibir em tempo real, no navegador, os resultados da análise de IA, adequado para construir aplicações de inspeção remota, segurança inteligente e outras.
 
 Este demo demonstra uma abordagem para **transformar a reCamera de um dispositivo visual independente em uma fonte de vídeo que pode ser integrada por qualquer sistema Web**. Esperamos que este projeto inspire você a explorar mais possibilidades de combinar a reCamera com tecnologias Web.
 <div align="center">
@@ -38,17 +38,17 @@ Este demo demonstra uma abordagem para **transformar a reCamera de um dispositiv
 </div>
 ### Arquitetura do Sistema
 
-Todo o sistema é realizado de forma colaborativa por duas partes: **lado reCamera** e **lado servidor PC**. A arquitetura é a seguinte:
+Todo o sistema é concluído de forma colaborativa por duas partes: **lado reCamera** e **lado servidor PC**. A arquitetura é a seguinte:
 
 | Etapa | Local de Execução | Tecnologia/Protocolo Utilizado | Descrição |
 |------|----------|-----------------|------|
 | Captura e Codificação de Vídeo | reCamera | Câmera + Codificação H.264 | Captura o vídeo e o codifica |
-| Inferência de IA | reCamera | Modelo YOLO11n | Realiza inferência de detecção de objetos em quadros de vídeo |
+| Inferência de IA | reCamera | Modelo YOLO11n | Executa inferência de detecção de objetos de IA nos frames de vídeo |
 | Streaming RTSP | reCamera | Protocolo RTSP (Porta 554) | Transmite o vídeo via protocolo RTSP para a rede |
 | Transmissão de Resultados de Inferência via MQTT | reCamera → Servidor PC | Protocolo MQTT (Porta 1883) | Transmite resultados de inferência (caixas delimitadoras, rótulos) para o PC via MQTT |
-| Recepção e Decodificação de Vídeo | Servidor PC | OpenCV + FFmpeg | Recebe o stream RTSP e decodifica para quadros brutos |
-| Fusão de Resultados de Inferência e Vídeo | Servidor PC | detection_store + OpenCV | Sobrepõe caixas de detecção de IA e rótulos sobre os quadros de vídeo |
-| Codificação e Transmissão WebRTC | Servidor PC | aiortc | Codifica os quadros de vídeo fundidos para o formato WebRTC e os transmite |
+| Recepção e Decodificação de Vídeo | Servidor PC | OpenCV + FFmpeg | Recebe o stream RTSP e o decodifica em frames brutos |
+| Fusão de Resultados de Inferência e Vídeo | Servidor PC | detection_store + OpenCV | Sobrepõe caixas de detecção de IA e rótulos sobre os frames de vídeo |
+| Codificação e Transmissão WebRTC | Servidor PC | aiortc | Codifica os frames de vídeo fundidos para o formato WebRTC e os transmite |
 | Reprodução em Tempo Real | Navegador no PC | WebRTC | Reproduz o vídeo com resultados de inferência no navegador com baixa latência |
 
 ## Preparação de Hardware
@@ -64,8 +64,8 @@ Você pode escolher **qualquer versão da reCamera** com base nas suas necessida
 - reCamera Gimbal
 - reCamera HQ PoE (Ethernet + PoE)
 
-> **Nota:**
-> A versão PoE não suporta Wi-Fi e deve ser conectada à mesma rede local por meio de um switch com suporte a PoE.
+> **Observação:**
+> A versão PoE não suporta Wi-Fi e deve ser conectada à mesma rede local por meio de um switch compatível com PoE.
 
 <table align="center">
  <tr>
@@ -119,7 +119,7 @@ Você pode escolher **qualquer versão da reCamera** com base nas suas necessida
 
 ### Etapa 1: Configurar a reCamera
 
-Primeiro, siga o guia oficial de primeiros passos para concluir a configuração básica da reCamera: [reCamera Getting Started](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/)
+Primeiro, siga o guia oficial de primeiros passos para concluir a configuração básica da reCamera: [Introdução à reCamera](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/)
 
 Após concluir a configuração inicial, certifique-se de que o dispositivo esteja ligado e devidamente conectado à rede.
 Em seguida, acesse o endereço 192.168.42.1 por meio de um navegador para fazer login na reCamera e entrar no workspace do **Node-RED**.
@@ -132,7 +132,7 @@ Se você conseguir acessar com sucesso a interface de fluxo de trabalho do Node-
 
 ### Etapa 2: Configurar o Streaming RTSP
 
-A reCamera possui funcionalidade de streaming RTSP integrada que pode ser facilmente configurada por meio do fluxo de trabalho do Node-RED. Você só precisa implantar dois nós no fluxo. Para tutoriais do SenseCraft AI, consulte o link [Access SenseCraft AI reCamera Dashboard](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/#access-recamera-preview-dashboard).
+A reCamera possui funcionalidade de streaming RTSP integrada que pode ser facilmente configurada por meio do fluxo de trabalho do Node-RED. Você só precisa implantar dois nós no fluxo de trabalho. Para tutoriais do SenseCraft AI, consulte o link [Access SenseCraft AI reCamera Dashboard](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/#access-recamera-preview-dashboard).
 
 
 #### 2.1 Importar e Configurar o Nó da Câmera
@@ -145,7 +145,7 @@ Arraste o **Camera Node** do lado esquerdo para o workspace e clique duas vezes 
 
 #### 2.2 Importar e Configurar o Nó de Stream
 
-Arraste o **Stream Node** do lado esquerdo para o workspace, selecione o protocolo RTSP e configure o endereço e a porta do stream. O endereço padrão do stream RTSP para a reCamera é:
+Arraste o **Stream Node** do lado esquerdo para o workspace, selecione o protocolo RTSP e configure o endereço e a porta do stream. O endereço padrão do stream RTSP da reCamera é:
 
 ```
 rtsp://admin:admin@192.168.42.1:554/live
@@ -186,7 +186,7 @@ Certifique-se de que o seguinte ambiente esteja instalado no seu PC:
 - **Python 3.8+**
 - Gerenciador de pacotes **pip**
 
-> **Nota:** A instalação de `aiortc` no Windows pode exigir que o Microsoft C++ Build Tools seja instalado primeiro. Você pode baixá-lo e instalá-lo a partir de [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+> **Observação:** A instalação de `aiortc` no Windows pode exigir que o Microsoft C++ Build Tools seja instalado primeiro. Você pode baixá-lo e instalá-lo a partir de [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
 
 #### 3.2 Obter o Código e Instalar Dependências
 
@@ -199,13 +199,13 @@ pip install -r requirements.txt
 
 #### 3.3 Descrição dos Arquivos do Projeto
 
-O projeto contém os seguintes arquivos principais:
+O projeto contém os seguintes arquivos centrais:
 
 | Arquivo | Descrição |
 |------|------|
 | `server.py` | Servidor de sinalização WebRTC, inicia o MQTT Broker embutido, lida com solicitações de conexão do navegador e estabelece sessões WebRTC |
 | `mqtt_broker.py` | MQTT 3.1.1 Broker embutido (implementação pura em asyncio) e cliente de assinatura, recebe resultados de inferência YOLO enviados a partir do Node-RED da reCamera |
-| `detection_store.py` | Módulo de armazenamento de resultados de inferência, armazena em cache os dados mais recentes de caixas de detecção e rótulos para renderização sobreposta nos quadros de vídeo |
+| `detection_store.py` | Módulo de armazenamento de resultados de inferência, armazena em cache os dados mais recentes de caixas de detecção e rótulos para renderização sobre o frame de vídeo |
 | `video_sources.py` | Camada de abstração de protocolo de vídeo |
 | `index.html` | Página de player frontend, fornece seleção de protocolo e funcionalidade de reprodução de vídeo WebRTC |
 | `requirements.txt` | Lista de dependências Python |
@@ -254,7 +254,7 @@ python server.py --source rtsp://admin:admin@192.168.42.1:554/live --port 8080
 ### Etapa 4: Executar a demonstração
 
 1. Certifique-se de que a reCamera foi configurada para streaming RTSP e que o fluxo de trabalho foi implantado
-2. Certifique-se de que o `server.py` no PC foi iniciado e está em execução
+2. Certifique-se de que `server.py` no PC foi iniciado e está em execução
 3. Acesse `http://localhost:8080` no navegador do PC
 4. Selecione o protocolo (RTSP) na página e insira o endereço do stream RTSP da reCamera (preenchido por padrão)
 5. Clique no botão **"Start Playing"**
@@ -266,7 +266,7 @@ python server.py --source rtsp://admin:admin@192.168.42.1:554/live --port 8080
 
 Após uma conexão bem-sucedida, a página exibirá as seguintes informações:
 
-- **Feed de vídeo**: Exibição em tempo real do vídeo da reCamera
+- **Fluxo de vídeo**: Exibição em tempo real do vídeo da reCamera
 - **Status da conexão**: Indicador de status de conexão verde no canto superior esquerdo da página
 - **Informações do stream**: Exibe o endereço do stream de vídeo, status da conexão, status da conexão ICE e resolução de vídeo
 - **Log de operação**: Logs de conexão detalhados exibidos na parte inferior da página
@@ -284,23 +284,23 @@ O fluxo de trabalho de alto nível de todo o sistema é o seguinte:
 3. **Recepção de vídeo e fusão dos resultados de inferência**
    O serviço no PC usa uma thread em segundo plano OpenCV + FFmpeg para ler continuamente os quadros de vídeo mais recentes do stream RTSP, recupera os resultados de inferência mais recentes de detection_store e sobrepõe caixas delimitadoras e rótulos nos quadros de vídeo.
 
-4. **Codificação e transmissão WebRTC**
+4. **Codificação e transmissão via WebRTC**
    Quando o navegador inicia uma solicitação de conexão, o PC codifica os quadros de vídeo fundidos em formato WebRTC por meio da biblioteca aiortc, estabelecendo uma PeerConnection WebRTC para transmissão.
 
 5. **Reprodução em tempo real no navegador**
-   O navegador recebe o stream de vídeo via WebRTC e reproduz o vídeo com anotações de inferência de IA em tempo real, sem instalar nenhum plugin.
+   O navegador recebe o fluxo de vídeo via WebRTC e reproduz o vídeo com anotações de inferência de IA em tempo real, sem instalar nenhum plugin.
 
-## Observações
+## Notas
 
-- O stream RTSP da reCamera suporta apenas **1-2 conexões simultâneas** por padrão. Se outros programas (como VLC) já tiverem ocupado a conexão RTSP, o serviço WebRTC pode não conseguir receber o stream de vídeo. Feche outros programas conectados ao stream RTSP antes de usar.
+- O stream RTSP da reCamera suporta apenas **1-2 conexões simultâneas** por padrão. Se outros programas (como VLC) já tiverem ocupado a conexão RTSP, o serviço WebRTC pode não conseguir receber o fluxo de vídeo. Feche outros programas conectados ao stream RTSP antes de usar.
 - Se você encontrar falhas na instalação do `aiortc`, certifique-se de que o **Microsoft C++ Build Tools** (Windows) ou as ferramentas `gcc`/`make` (Linux) estejam instaladas.
 - Se erros `non-existing PPS` aparecerem no log do servidor, isso ocorre porque um quadro-chave ainda não foi recebido, o que é normal. A recuperação será automática após a chegada do quadro-chave (aproximadamente 1 segundo).
 - Para alterar a porta do serviço, use `python server.py --port <port_number>` para especificar uma porta diferente.
-- Se você experimentar alta latência de vídeo, verifique se a largura de banda da rede é suficiente e garanta uma conexão de rede estável entre o PC e a reCamera.
+- Se você estiver enfrentando alta latência de vídeo, verifique se a largura de banda da rede é suficiente e garanta uma conexão de rede estável entre o PC e a reCamera.
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Se você precisar de orientação sobre metas específicas de personalização ou quiser estender ainda mais o fluxo de trabalho, sinta-se à vontade para entrar em contato conosco. Estamos aqui para fornecer diferentes níveis de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Se você precisar de orientação sobre objetivos específicos de personalização ou quiser estender ainda mais o fluxo de trabalho, sinta-se à vontade para entrar em contato conosco. Estamos aqui para fornecer diferentes níveis de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

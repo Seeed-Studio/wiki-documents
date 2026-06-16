@@ -285,8 +285,8 @@ reComputer Robotics J501 是一款面向高级机器人和工业应用的高性�
       <td rowSpan={4}>6.2.1</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQClLB_mdGMPQpqEw1jxTRuFAYqxZRQJZIAtiYt7-clcocI">Download</a></td>
-      <td>F95E91C3BFB00D50EB999383F85949B4</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCiNRM83_Q1Qq2lodZbxxz7AQb046lJeZh4aTUo20T6ks4">Download</a></td>
+      <td>B858312B9DC9EA5D43A104F478C0ABDC</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>

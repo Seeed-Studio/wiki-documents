@@ -1,6 +1,6 @@
 ---
-description: Home Assitant 向け音声アシスタントシステム
-title: Home Assitant 向け音声アシスタントシステム
+description: Home Assistant 向け音声アシスタントシステム
+title: Home Assistant 向け音声アシスタントシステム reSpeaker Lite
 keywords:
   - ESP32S3
   - XIAO
@@ -17,7 +17,7 @@ updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/respeaker_lite_ha/
 ---
 
-このチュートリアルでは、ReSpeaker Lite を Home Assistant で動作するように設定する方法を学びます。必要なファームウェアの書き込み方法と、YAML ファイルのコンパイルおよびアップロード方法を説明します。その後は、音声を使って家庭内の家電を制御および自動化できるようになります。「Okay Nabu」と話しかけて、家と会話を始めましょう。
+このチュートリアルでは、ReSpeaker Lite を Home Assistant で動作するように設定する方法を学びます。必要なファームウェアの書き込み方法と、YAML ファイルのコンパイルおよびアップロード方法を学びます。その後は、音声を使って家庭内の家電を制御および自動化できるようになります。「Okay Nabu」と話しかけて、家と会話を始めましょう。
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -42,13 +42,13 @@ url: https://wiki.seeedstudio.com/ja/respeaker_lite_ha/
 
 ## XMOS ファームウェアの更新
 
-最良の再生体験を得るために、XMOS ファームウェアを `respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin` に更新する必要があります。
+最高の再生体験を得るために、XMOS ファームウェアを `respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin` に更新する必要があります。
 
 [こちら](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration)からリポジトリ全体としてファームウェアをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
-PC で ReSpeaker Lite を USB インターフェース（3.5mm ジャックの近く）に接続し、次のコマンドを実行します。
+PC で、ReSpeaker Lite を USB インターフェース（3.5mm ジャックの近く）に接続し、次のコマンドを実行します。
 
 
 
@@ -66,7 +66,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_flashing.gif" alt="pir" width={800} height="auto" /></p>
 
-詳細については、この[リンク](https://wiki.seeedstudio.com/ja/reSpeaker_usb_v3/#update-firmware)を参照してください。
+詳しくはこの[リンク](https://wiki.seeedstudio.com/ja/reSpeaker_usb_v3/#update-firmware)を参照してください
 
 :::note
 ユーザーボタンとミュートボタンを使用するには、ユーザーボタンを D2 に、ミュートボタンを D3 にはんだ付けする必要があります。
@@ -77,7 +77,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ## 入門ガイド
 
 :::note
-ここでは、Raspberry Pi 5 上で Home Assistant バージョン 2026.1.3 と ESPHome バージョン 2026.1.3 を使用しています。
+Raspberry Pi 5 上で、Home Assistant バージョン 2026.1.3 と ESPHome バージョン 2026.1.3 を使用しています。
 :::
 
 ## ESPHome Builder のインストール 
@@ -122,7 +122,7 @@ Home Assistant のサイドバーから **ESPHome Builder** に移動します�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
-プロンプトが表示されたら **SKIP** をクリックします。設定は手動で作成します。
+表示されたら **SKIP** をクリックします。設定は手動で作成します。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
@@ -1575,19 +1575,19 @@ Nabu Cloud にサインインして Voice Assistant を設定できます。セ�
 
 ## FAQ
 
-### reSpeaker のログを確認する方法は？
+### reSpeaker のログを確認するには？
 
 ログファイルの確認や、ウェイクワード検出や STT 機能の検証などのデバッグ手順を行うには、前述の ESP Web アプリケーションを使用できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/log_view.gif" alt="pir" width={700} height="auto" /></p>
 
-## Special Thanks
-Seeed Studio reSpeaker Lite 用にこの素晴らしい YAML ファイルを作成してくれた FormatBCE 氏に感謝いたします。彼を [Github](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration) でサポートしてください。
+## スペシャルサンクス
+Seeed Studio reSpeaker Lite 用にこの素晴らしい YAML ファイルを作成してくれた FormatBCE に感謝いたします。彼を [Github](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration) でサポートしてください
 
 
 
 ## プロジェクト共有
-- **Smart Home Circle** より: [Create Local Voice Assistant](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
+- **Smart Home Circle** より: [ローカル音声アシスタントを作成](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
 
 ## 技術サポート & 製品ディスカッション
 

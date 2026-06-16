@@ -10,9 +10,9 @@ slug: /xiao_nrf54lm20a_getting_started
 sku: 100018440
 last_update:
   date: 05/13/2026
-  author: Brandy
+  author: Zeller
 createdAt: '2025-05-13'
-updatedAt: '2026-05-15'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_getting_started/
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +21,27 @@ import Steppers from '@site/src/components/utils/Stepper';
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/get_start_1.jpg" style={{width:600, height:'auto'}}/></div>
+
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Get One Now 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
 
 ## Introduction
 
@@ -152,7 +173,25 @@ Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless develo
 
 ## Hardware Overview
 
-<div className="table-center">
+### XIAO nRF54LM20A Sense Front
+
+<div style={{textAlign: 'center'}}>
+              <img
+                src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/4_pin.png"
+                style={{width: 1000, height: 'auto'}}
+              />
+            </div>
+
+### XIAO nRF54LM20A Sense Back
+
+<div style={{textAlign: 'center'}}>
+              <img
+                src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/5_pin.png"
+                style={{width: 800, height: 'auto'}}
+              />
+            </div>
+
+<!-- <div className="table-center">
   <TabItem value="54lm20a" label="XIAO nRF54LM20A" default>
     <table align="center">
       <tbody>
@@ -164,7 +203,7 @@ Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless develo
             <div style={{textAlign: 'center'}}>
               <img
                 src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/4_pin.png"
-                style={{width: 800, height: 'auto'}}
+                style={{width: 1000, height: 'auto'}}
               />
             </div>
           </td>
@@ -182,7 +221,7 @@ Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless develo
       </tbody>
     </table>
   </TabItem>
-</div>
+</div> -->
 
 ## **Pin Map**
 
@@ -232,16 +271,17 @@ Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless develo
 | -              | IMU_INT1       | P0.06                             | IMU Interrupt 1                                                             |
 | -              | NFC            | P1.02 / P1.01                     | NFC Antenna Pins                                                            |
 | -              | GRTC           | P0.04 / P0.05                     | General Purpose RTC Pins                                                    |
-## Getting Started
+
+## Getting Started With PlatformIO
 
 In this section, we will guide you to quickly get started with the XIAO nRF54LM20A through the multi-color blinking effect of an RGB LED.
 Please complete the hardware and software preparations below to set up your XIAO for subsequent development.
 
-### Hardware
+### Hardware Preperation
 
 You need to prepare the following:
 
-- 1 x [Seeed Studio XIAO nRF54LM20A](https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-p-5884.html)
+- 1 x [Seeed Studio XIAO nRF54LM20A Sense](https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html)
 - 1 x Computer
 - 1 x USB Type-C cable
 
@@ -283,63 +323,41 @@ You need to prepare the following:
   </table>
 </div>
 
-## Software
+### Download VS Code
 
-<!-- <Tabs>
-  <TabItem value="platformio" label="PlatformIO" default> -->
+Download according to the system you are using [VS Code](https://code.visualstudio.com/download)
 
-### Setting Up PlatformIO for XIAO nRF54LM20A
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
-Follow these streamlined steps to configure your development environment and deploy your first application on the XIAO nRF54LM20A.
+### Install the PlatformIO extension
 
-#### Install PlatformIO IDE Extension for VS Code
+Open VSCode, click on Extensions, then search for PlatformIO and select to install. After the installation is complete, restart VSCode.
 
-If you haven't already, install the PlatformIO IDE extension directly within Visual Studio Code. This powerful extension transforms VS Code into a comprehensive embedded development environment.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
 
-- Open VS Code.
-- Go to the Extensions view (Ctrl+Shift+X or Cmd+Shift+X).
-- Search for [**PlatformIO IDE**](https://platformio.org/platformio-ide) and click Install.
+### Install the platform-seeedboards platform package
 
-#### Create a New PlatformIO Project
+The Seeed Studio XIAO series boards use a custom PlatformIO platform, so you need to install the corresponding platform package manually.
 
-Here you can choose any one of the development version to create a project file, I take XIAO ESP32 C3 for example.
+- Run the following command for a fresh installation:
 
-<div className="table-center">
-<table align="center">
-  <tr>
-      <th>Operation one</th>
-        <th>Operation two</th>
-  </tr>
-  <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_platform/mg24patform2.jpg" style={{width:400, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_PlatformIO/mg24_platformIO.jpg" style={{width:400, height:'auto'}}/></div></td>
-  </tr>
-</table>
-</div>
+```bash
+pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+```
 
-#### Configure platformio.ini for XIAO nRF54LM20A Zephyr Support
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+- If you have previously used Seeed Studio XIAO series boards in PlatformIO, run the command below to update:
 
-Once your project is created, locate the platformio.ini file in the root of your project directory (visible in the VS Code Explorer on the left). This file is the heart of your PlatformIO project configuration.
+```bash
+pio pkg update -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+```
 
-<table align="center">
-  <tbody>
-    <tr>
-      <th>Operation three</th>
-    </tr>
-    <tr>
-      <td>
-        <div style={{textAlign: 'center'}}>
-          <img
-            src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/1.1.png"style={{width: 800, height: 'auto'}}
-          />
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+:::tip
 
-
-You need to replace the entire content of your platformio.ini file with the following configuration:
+If you want to use an existing PlatformIO project, replace the content of **platformio.ini** as follows:
 
 ```ini
 [env:seeed-xiao-nrf54lm20a]
@@ -348,104 +366,53 @@ framework = zephyr
 board = seeed-xiao-nrf54lm20a
 ```
 
-Then re-save the platformio.ini file (Ctrl+S or Cmd+S) and wait for it to load completely.
+:::
 
-You can close this project once the loading is complete. This step is to download the necessary library files.
+### Create New Project
 
-:::tip
-If you have installed other XIAO libraries before, we recommend updating this library to the latest version using the following PlatformIO command.
-This is the official recommended method. Simply run the command directly in your project root directory (no need to navigate to the platform folder):
+1. Open the PlatformIO extension and select **Create New Project**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_2.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+2. Set the project name, select the development board, framework and file storage path.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_3.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+3. After creation completes, a prompt to open the workspace will pop up. Click OK.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_4.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+4. Navigate to the project folder. Files are stored in the default directory if you did not specify a custom path.
+
+- For Windows Default:
 
 ```bash
-pio pkg update -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+<path>: C:\Users\your_name\Documents\PlatformIO\Projects
 ```
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_1.png" style={{width:800, height:'auto'}}/></div>
+- For Mac / Linux Default:
 
-:::
+```bash
+<path>: ~/Documents/PlatformIO/Projects
+```
 
-#### Compile and Upload Your First Blink Example
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_5.png" style={{width:800, height:'auto'}}/></div>
 
-Now, let's test your setup with a classic **Blink** example. This code will toggle the built-in LED on your XIAO nRF54LM20A Sense.
+### Add the Blink program
 
-Below is the link to download the library. You can choose to download this project directly to your local machine and then open it directly in VS Code. Alternatively, you can follow these steps: Replace and add some demo code. This process involves:
+This tutorial is developed based on Zephyr RTOS. The project consists of three core files:
 
-:::tip
+- `main.c`: Main program that contains the application logic.
+- `app.overlay`: Devicetree overlay file for hardware peripheral configuration.
+- `prj.conf`: Project configuration file to enable required Zephyr modules.
 
-The definitions for Seeed Studio XIAO series development boards are stored in the **platform-seeedboards** repository. If you are using the XIAO nRF54LM20A Sense, make sure to update this repository to the latest version.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_6.png" style={{width:800, height:'auto'}}/></div>
 
-<div className="github_container" style={{textAlign: 'center'}}>
-    <a className="github_item" href="hhttps://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-blink" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-:::
-
-Step 1: Create a New Project
-<table align="center">
-  <tbody>
-    <tr>
-      <th>Operation four</th>
-    </tr>
-    <tr>
-      <td>
-<div style={{textAlign: 'center'}}>
-  <img
-    src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/2.png"
-    style={{width: 800, height: 'auto'}}
-  />
-</div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-Step 2: Open the Project
-You can compile it first to see if the project you pulled runs correctly. If it does, the project was successfully pulled.
-Image below:
-<table align="center">
-  <tbody>
-    <tr>
-      <th>Operation five</th>
-    </tr>
-    <tr>
-      <td>
-<div style={{textAlign: 'center'}}>
-  <img
-    src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_2.png"
-    style={{width: 800, height: 'auto'}}
-  />
-</div>  
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-Step 3: Replace the Project Code
-- Open the **src/main.c** and **Zephyr/prj.conf**  files and replace the original code with the following code.
-<table align="center">
-  <tbody>
-    <tr>
-      <th>Operation six</th>
-    </tr>
-    <tr>
-      <td>
-<div style={{textAlign: 'center'}}>
-  <img
-    src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/14io.png"
-    style={{width: 800, height: 'auto'}}
-  />
-</div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+1. Add the **main.c** program
 
 <details>
-<summary>src/main.c</summary>
-<div>
+
+<summary>main.c</summary>
 
 ```c
 
@@ -546,32 +513,19 @@ int main(void)
 
 	return 0;
 }
-
 ```
 
-</div>
-</details> 
-
-
-<details>
-<summary>Zephyr/prj.conf</summary>
-<div>
-
-```prj
-CONFIG_GPIO=y
-CONFIG_PWM=y
-CONFIG_SERIAL=n
-```
-
-</div>
 </details>
 
-<details>
-1. If you need to modify or redefine device tree node contents, create a new **app.overlay** file in the Zephyr directory to explicitly bind device nodes.
-2. If you have modified the device tree files, please clean up the original files before rebuilding to prevent CMake from failing to recognize your changes.
+2. Add the app.overlay file
 
-<summary>Zephyr/app.overlay</summary>
-<div>
+The devicetree overlay file does not exist in the newly created blank sample. You need to add it under the zephyr directory.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_7.png" style={{width:800, height:'auto'}}/></div>
+
+<details>
+
+<summary>app.overlay</summary>
 
 ```dts
 /*
@@ -617,55 +571,35 @@ CONFIG_SERIAL=n
 };
 ```
 
-</div>
 </details>
 
-Now, connect your XIAO nRF54LM20A to your computer via USB. After saving, compiling, and downloading, the RGB light will start blinking.In VS Code:
+3. Modify `prj.conf` and enable the corresponding configurations.
 
-<!-- You can use the command line or the buttons.
+```prj
+CONFIG_GPIO=y
+CONFIG_PWM=y
+CONFIG_SERIAL=n
+```
+
+### Compile and upload the program
+
+Two methods for compilation and uploading are introduced below.
+
+1. Compile & Upload via Button
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_8.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+2. Compile & Upload via Command Line
 
 ```bash
 pio run -e seeed-xiao-nrf54lm20a -t upload -v
 ```
 
-<div style={{textAlign: 'center'}}>
-  <img
-    src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_3.png"
-    style={{width: 800, height: 'auto'}}
-  />
-</div> -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_9.png" style={{width:800, height:'auto'}}/></div>
 
-<table align="center">
-  <tbody>
-    <tr>
-      <th>Operation seven</th>
-    </tr>
-    <tr>
-      <td>
-        <div style={{textAlign: 'center'}}>
-          <img
-            src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_4.png"
-            style={{width: 800, height: 'auto'}}
-          />
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+### Observe the Result
 
-The output in the terminal should indicate a successful compilation and burning process.
-
-### Code Explanation
-
-- **src/main.c**
-Main application entry point that implements demo logic, including LED color configuration, breathing effects, blink rhythm control, button-based mode switching, and other hardware interaction behaviors.
-
-- **zephyr/prj.conf**
-Zephyr RTOS configuration file for enabling/disabling system components and peripheral drivers, including logging, UART, PWM, I2C, SPI, low-power management, and other functionalities.
-
-#### Observe the Result
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:800, height:'auto'}}/></div>
 
 ## Bluetooth Antenna
 
@@ -676,7 +610,7 @@ The connection method is shown below:
   <img
     src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_6.gif"
     alt="Bluetooth antenna connection"
-    style={{width: 600, height: 'auto'}}
+    style={{width: 800, height: 'auto'}}
   />
 </div>
 
@@ -710,7 +644,7 @@ If the battery has power, never solder it onto the board, as this may burn out t
 The XIAO nRF54LM20A integrates a battery voltage detection feature that centers on efficiently managing battery power measurements using the nPM1300-CAA load switch. This guide will focus on analyzing the software implementation of the battery detection **(especially the main.c code)** and guide you on how to easily deploy and use this feature in a PlatformIO environment, avoiding the complexity of the Zephyr NCS SDK.
 
 <div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/9_battery.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:600, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_10.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Detecting Battery Schematic</em></p>
 </div>
 
@@ -755,18 +689,18 @@ The XIAO nRF54LM20A is equipped with an MSM261DGT006 microphone, supporting 16-b
 
 ## FAQ
 
-### Issue 1: Stuck at **Reading CMake configuration** on macOS
+<!-- ### Issue 1: Stuck at **Reading CMake configuration** on macOS
 
 When compiling and uploading programs with PlatformIO on macOS, the process may get stuck at the **Reading CMake configuration** step even after network issues have been ruled out. This is usually caused by a macOS compatibility problem that prevents the Python-based `arm-none-eabi-gdb-py` tool from running correctly.
 
 **Recommended fix:** Replace the faulty `gdb-py` file with a symbolic link.
 
 1. Navigate to the tool directory:
-   `/Users/mengdu/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/bin/`
+   `/Users/your_name/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/bin/`
 2. Back up the original file by renaming `arm-none-eabi-gdb-py` to `arm-none-eabi-gdb-py.broken.bak`.
-3. Create a new symbolic link named `arm-none-eabi-gdb-py` that points to `arm-none-eabi-gdb`.
+3. Create a new symbolic link named `arm-none-eabi-gdb-py` that points to `arm-none-eabi-gdb`. -->
 
-### Issue 2: Build errors after modifying configuration files
+1. **Build errors after modifying configuration files**
 
 If you previously built the full Zephyr project and later modified configuration files, it is recommended to clean the build cache before rebuilding and uploading. This helps avoid compilation errors caused by stale or corrupted cache files.
 
@@ -774,9 +708,9 @@ If you previously built the full Zephyr project and later modified configuration
 pio run -t clean  // Clean command
 ```
 
-### Issue 3: Build errors after modifying configuration files
+<!-- ### Issue 3: Build errors after modifying configuration files
 
-Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html). -->
 
 ## Resources
 
