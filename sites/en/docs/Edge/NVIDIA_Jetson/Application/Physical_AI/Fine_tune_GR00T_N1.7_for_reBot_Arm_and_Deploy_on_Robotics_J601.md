@@ -8,7 +8,7 @@ keywords:
   - gr00t n1.7
 image: https://files.seeedstudio.com/wiki/other/cover1.png
 slug: /fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601
-sku: 
+sku:  E26052001
 last_update:
   date: 2026-06-12
   author: Zibo
