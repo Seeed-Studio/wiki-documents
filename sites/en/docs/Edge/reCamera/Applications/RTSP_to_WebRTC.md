@@ -7,7 +7,7 @@ keywords:
   - WebRTC
 slug: /rtsp_to_webrtc_with_recamera
 sku: 102991897, 100029708, 108990120
-image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/test.gif
 sidebar_position: 15
 last_update:
   date: 06/10/2026

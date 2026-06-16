@@ -8,7 +8,7 @@ keywords:
   - ZXing
   - UDP Streaming
   - Real-Time Recognition
-image: https://files.seeedstudio.com/wiki/reCamera/recamera-qrcode-udp-show.gif
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/qrcode_udp/testvideo.gif
 slug: /recamera_qrcode_udp
 sku: 102991897, 100029708, 108990120
 sidebar_position: 17

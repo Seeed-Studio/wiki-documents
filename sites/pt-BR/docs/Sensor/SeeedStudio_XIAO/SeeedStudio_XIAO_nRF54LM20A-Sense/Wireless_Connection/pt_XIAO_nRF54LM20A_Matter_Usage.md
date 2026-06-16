@@ -20,11 +20,33 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_matter/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF54LM20A_Matter.png" style={{width:600, height:'auto'}}/></div>
 
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Adquira agora 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+
 ## Introdução
 
-Com o SoC nRF54LM20A, a série XIAO nRF54LM20A oferece suporte a Bluetooth LE, Matter, Thread, Zigbee e protocolos proprietários de 2,4 GHz, fornecendo uma taxa de dados de pico de 4 Mbps ideal para cenários de baixa latência.
+Com o SoC nRF54LM20A, a Série XIAO nRF54LM20A oferece suporte a Bluetooth LE, Matter, Thread, Zigbee e protocolos proprietários de 2,4 GHz, fornecendo uma taxa de dados de pico de 4 Mbps ideal para cenários de baixa latência.
 
-Este tutorial usa duas placas XIAO nRF54LM20A para verificar a rede Matter: uma atua como um roteador de borda conectado ao Home Assistant, e a outra funciona como um dispositivo Matter que entra na rede Thread para exibir dados simulados de temperatura e umidade no painel do Home Assistant.
+Este tutorial usa duas placas XIAO nRF54LM20A para verificar a rede Matter: uma atua como um roteador de borda conectado ao Home Assistant, e a outra opera como um dispositivo Matter ingressando na rede Thread para exibir dados simulados de temperatura e umidade no painel do Home Assistant.
 
 ***Agradecimentos ao autor [@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/) pelas ideias para o WiKi***
 
@@ -54,24 +76,24 @@ OpenThread é uma implementação de código aberto do protocolo de rede Thread.
 
 ### Qual é a relação entre Matter e Thread
 
-***Agradecimentos ao autor[@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/) por uma explicação muito detalhada deste ponto, citando-a aqui!***
+***Agradecimentos ao autor[@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/) por uma explicação muito detalhada deste ponto, citada aqui!***
 
-Após esta breve introdução ao Matter e ao Thread, agora você entende que Thread e Matter têm propósitos diferentes e operam em camadas distintas da pilha de tecnologia. Para recapitular:
+Após esta breve introdução ao Matter e ao Thread, agora você entende que Thread e Matter têm finalidades diferentes e operam em camadas distintas da pilha de tecnologia. Para recapitular:
 
 Thread:
 
-- Thread é um protocolo de rede mesh sem fio e de baixo consumo projetado para dispositivos de casa conectada. Ele fornece uma forma confiável e segura para que os dispositivos se comuniquem entre si e com a internet.
+- Thread é um protocolo de rede mesh sem fio de baixo consumo projetado para dispositivos de casa conectada. Ele fornece uma forma confiável e segura para que os dispositivos se comuniquem entre si e com a internet.
 - Thread cria uma rede local que permite que os dispositivos conversem entre si mesmo se a internet cair.
 
 Matter:
 
-- Matter é um protocolo de camada de aplicação que fica sobre protocolos de rede como Thread, Wi-Fi e Ethernet. Ele busca simplificar e unificar o ecossistema de casa inteligente, garantindo que dispositivos de diferentes fabricantes possam funcionar juntos sem problemas.
+- Matter é um protocolo de camada de aplicação que fica sobre protocolos de rede como Thread, Wi-Fi e Ethernet. Ele busca simplificar e unificar o ecossistema de casa inteligente garantindo que dispositivos de diferentes fabricantes possam funcionar juntos sem problemas.
 - Matter define como os dispositivos se comunicam e interagem na camada de aplicação, com foco em interoperabilidade, segurança e facilidade de uso.
 
 Conexão entre Thread e Matter:
 
-- Matter pode usar Thread como um de seus protocolos de rede subjacentes. Isso significa que dispositivos usando o protocolo Matter podem se comunicar em uma rede Thread.
-- A combinação de Matter e Thread permite um ecossistema de casa inteligente robusto, seguro e interoperável, onde os dispositivos podem se comunicar localmente e de forma eficiente.
+- Matter pode usar Thread como um de seus protocolos de rede subjacentes. Isso significa que dispositivos usando o protocolo Matter podem se comunicar por meio de uma rede Thread.
+- A combinação de Matter e Thread permite um ecossistema de casa inteligente robusto, seguro e interoperável, em que os dispositivos podem se comunicar localmente e de forma eficiente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/HA_OpenThread/TOPPLOGY.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -145,7 +167,7 @@ Navegue até Settings -> Apps e selecione Install app para adicionar o add-on.
 
 ### Configurar o roteamento Thread
 
-Siga os passos abaixo para gravar firmware em um XIAO nRF54LM20A como Coprocessor para emular um dispositivo roteador de borda.
+Siga os passos abaixo para gravar um XIAO nRF54LM20A como Coprocessor para emular um dispositivo roteador de borda.
 
 :::tip
 
@@ -157,7 +179,7 @@ Dispositivos de roteamento Thread como Connect ZBT-1, Connect ZBT-2 ou Home Assi
 
 :::tip
 
-Este tutorial é baseado no VS Code e na extensão nRF Connect. Se você é iniciante neles, pode consultar [XIAO nRF54LM20A nRFConnect SDK Usage](http://localhost:3000/xiao_nrf54lm20a_getting_started/#nrfconnect-sdk-usage)
+Este tutorial é baseado no VS Code e na extensão nRF Connect. Se você é iniciante neles, pode consultar [XIAO nRF54LM20A nRFConnect SDK Usage](http://localhost:3000/xiao_nrf54lm20a_getting_started/#uso-do-nrfconnect-sdk)
 
 :::
 
@@ -223,17 +245,17 @@ CONFIG_NPM13XX_CHARGER=n
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_7.png" style={{width:800, height:'auto'}}/></div>
 
-- Você pode verificar o status da configuração em Log — a configuração é bem-sucedida como mostrado na figura abaixo.
+- Você pode verificar o status da configuração no Log — a configuração é bem-sucedida como mostrado na figura abaixo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_8.png" style={{width:800, height:'auto'}}/></div>
 
-- Vá para Settings -> Thread para descobrir o dispositivo, que normalmente é chamado de `ha-thread-c6c8`.
+- Vá para Settings -> Thread para descobrir o dispositivo, que normalmente é nomeado como `ha-thread-c6c8`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_9.png" style={{width:800, height:'auto'}}/></div>
 
 ### Configurar o dispositivo Matter
 
-1. Escolha Create a new application, selecione copy a sample, pesquise por Matter-Template e crie o projeto.
+1. Escolha Create a new application, selecione copy a sample, procure por Matter-Template e crie o projeto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -625,19 +647,19 @@ external_flash:
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.overlay</code></td>
       <td>
-        <strong>Flash interna — Overlay DTS:</strong> Desabilita a PY25Q64, garantindo que o MCUboot use apenas a Flash interna.
+        <strong>Flash interna — DTS Overlay:</strong> Desativa o PY25Q64, garantindo que o MCUboot use apenas a Flash interna.
       </td>
     </tr>
 
     <tr>
-      <td colspan="2"><strong>3. Arquivos de Partição Estática (<code>pm_static_*.yml</code>)</strong><br/>
-      Tabelas de partição estática para o Partition Manager, definindo todo o layout de Flash para MCUboot, APP, OTA, Factory Data e Settings.</td>
+      <td colspan="2"><strong>3. Arquivos de partição estática (<code>pm_static_*.yml</code>)</strong><br/>
+      Tabelas de partição estática para o Partition Manager, definindo todo o layout da Flash para MCUboot, APP, OTA, Dados de Fábrica e Configurações.</td>
     </tr>
     <tr>
       <td><code>pm_static_xiao_nrf54lm20a_nrf54lm20a_cpuapp.yml</code></td>
       <td>
         <strong>Variante com Flash externa:</strong> <code>mcuboot_secondary</code> (imagem OTA) fica na Flash externa (PY25Q64);<br/>
-        O tamanho utilizável do APP é <code>0x1E2800</code> (~1,9 MB).
+        o tamanho utilizável do APP é <code>0x1E2800</code> (~1,9 MB).
       </td>
     </tr>
     <tr>
@@ -646,7 +668,7 @@ external_flash:
         <strong>Variante com Flash interna:</strong> <code>mcuboot_secondary</code> fica na Flash interna;<br/>
         MCUboot reduzido para <code>0xA000</code> (40 KB);<br/>
         APP reduzido para <code>0x125800</code> (~1,2 MB);<br/>
-        A imagem OTA requer compactação.
+        a imagem OTA requer compactação.
       </td>
     </tr>
 
@@ -675,11 +697,11 @@ external_flash:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_14.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-- As informações do dispositivo Matter e o link do código QR de pareamento serão exibidos por meio dos logs seriais.
+- As informações do dispositivo Matter e o link do código QR de pareamento serão exibidos pelos logs seriais.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_15.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-- Toque diretamente no link do código QR ou copie o link para um navegador da web separadamente.
+- Toque diretamente no link do código QR ou copie o link para um navegador web separadamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_16.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -723,7 +745,7 @@ external_flash:
 
 Seguindo os procedimentos acima, configuramos uma rede Matter over Thread usando dois módulos XIAO nRF54LM20A e conectamos a rede com sucesso ao Home Assistant. O protocolo Matter oferece suporte ao acesso a uma gama mais ampla de tipos de sensores, enquanto o demo acima apenas simula a aquisição de dados de temperatura e umidade. Ao integrar outros dispositivos sensores, verifique se Clusters correspondentes estão definidos na especificação Matter. Para mais detalhes, consulte a documentação oficial em [Home Assistant Matter](https://www.home-assistant.io/integrations/matter).
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
