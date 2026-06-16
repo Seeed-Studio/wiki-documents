@@ -16,10 +16,10 @@ translation:
   skip:
     - zh-CN
 last_update:
-  date: 2026-05-26T00:00:00.000Z
+  date: 2026-05-26
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-06-01'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/
 ---
 
@@ -44,95 +44,115 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/
 </p>
 
 O projeto reBot Arm foi disponibilizado como código aberto no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Este guia irá conduzi-lo pelo início rápido do B601-RS, da montagem à operação.
-
-O conteúdo deste guia está vindo em sua direção à velocidade da luz — fique ligado!
-
-:::
-
-## Opções de Compra
-
+O conteúdo deste guia está chegando até você à velocidade da luz — fique ligado.
 
 ## Etapa 1: Guia de Montagem
 
-Antes da montagem:
+- Antes da montagem, leia atentamente as instruções a seguir. Para garantir um processo de montagem tranquilo e uma experiência prática completa, seja paciente, mantenha o foco e siga sempre estes pontos-chave:
+  1. Este kit inclui numerosos parafusos e peças estruturais, alguns dos quais são semelhantes. Verifique cuidadosamente as especificações dos parafusos e os modelos das peças, e confirme a orientação de instalação antes de apertar.
+  2. O vídeo foi gravado no início de abril. Pode haver pequenos ajustes nas peças posteriormente, mas isso não afeta a qualidade da montagem ao seguir o vídeo. As peças finais são as que acompanham o produto enviado.
+  3. Para facilitar a instalação e remoção dos parafusos, a BOM open source especifica parafusos padrão. No entanto, os parafusos enviados com o kit têm trava química aplicada. Você também pode usar suas próprias ferramentas preferidas ou uma parafusadeira elétrica (altamente recomendado ter uma à mão). Se usar uma ferramenta elétrica, certifique-se de ajustar o torque para um nível baixo a médio (3–6 kgf·cm) para evitar torque excessivo que possa espanar os parafusos, causando danos irreversíveis que impeçam a remoção das peças. Se houver qualquer sinal de espanamento, substitua imediatamente o parafuso ou realinhe e tente novamente. Parafusos com trava química espanados não podem ser removidos com extrator de parafusos e irão inutilizar toda a peça. Portanto, proceda com cautela.
+  4. Priorize a segurança durante a montagem para evitar dedos presos ou lesões por esmagamento. Crianças devem concluir este projeto acompanhadas por um dos pais ou responsável.
 
-- Leia atentamente as instruções a seguir para garantir um processo de montagem tranquilo.
-  1. Este kit inclui vários parafusos e peças com aparência semelhante. Verifique as especificações e a orientação antes de apertar.
-  2. O vídeo foi gravado no início de abril. Podem existir pequenas atualizações, mas a montagem permanece a mesma. Considere as peças enviadas como versão final.
-  3. Os parafusos enviados possuem trava-rosca aplicada. Use ferramentas adequadas ou uma parafusadeira elétrica (recomendado). Ajuste o torque para (3–6 kgf·cm) para evitar espanar. Se ocorrer espanamento, pare imediatamente e substitua ou realinhe o parafuso. Parafusos com trava-rosca espanados são difíceis de remover e podem danificar as peças.
-  4. Garanta a segurança durante a montagem. Evite beliscões ou ferimentos. Crianças devem estar sob supervisão.
 
-## Etapa 2: Redefinir ID dos Motores
 
-### Antes de Redefinir os Motores:
 
-Antes da configuração dos parâmetros do motor, observe as seguintes preparações e regras de segurança:
+## Etapa 2: Calibrar o Braço Robótico e Começar
 
-- Compre 2 grampos de fixação (≥3 polegadas) e uma fonte de alimentação chaveada de 48 V com saída XT30 (use marca confiável, sem produtos de baixa qualidade).
-- Mantenha distância ≥1 m durante a depuração/operação.
-- Não faça conexão a quente dos motores; desligue a alimentação antes de conectar/desconectar a interface XT30 2+2.
-- Não sobrecarregue/não exceda a velocidade; verifique a fiação e os fixadores antes da inicialização; evite ambientes úmidos/quentes/empoeirados.
-- Defina parâmetros de programa razoáveis e parada de emergência para evitar perda de controle.
-- **Siga rigorosamente estas regras. O vendedor não é responsável por riscos/responsabilidades decorrentes de operação ilegal ou erros pessoais.**
+1. Explore nossa plataforma **MotorBridge**. Esta plataforma é uma solução abrangente tudo-em-um que oferece expansão contínua dos tipos de motores, cobrindo [motores Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [motores Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [motores Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [motores Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow e mais. Ela também é compatível com produtos de braço robótico continuamente atualizados como o reBot. A plataforma é fácil de usar para iniciantes e também fornece um SDK em Python com funcionalidade totalmente consistente para desenvolvedores.
 
-### Lista de Preparação
-
-#### Hardware
-
-#### Requisito de Computador
-
-- Computador pessoal com dual-boot (Windows + Ubuntu / macOS)
-
-#### Software
-
-## Etapa 3: Calibrar o reBot Arm e Primeiros Passos
-
-Confiamos que você concluiu a montagem do braço robótico, a inicialização do ponto zero, a configuração do ID dos motores e outras etapas de preparação seguindo o vídeo. Agora você está pronto para explorar oficialmente a série de tutoriais e ferramentas que lançamos.
-
-1. Explore nossa plataforma **MotorBridge**, uma solução tudo-em-um que oferece suporte a uma lista crescente de motores, incluindo [Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow e outros. Ela também é compatível com braços robóticos continuamente atualizados, como o reBot. Projetada para iniciantes, também oferecemos um SDK em Python que implementa a mesma funcionalidade para desenvolvedores.
-
-2. Experimente novos recursos e detalhes do MotorBridge para o braço robótico reBot, incluindo calibração de ponto zero com um clique, gravação de parâmetros, controle de motores via interface gráfica de arrastar e soltar e uma interface integrada de visualização de modelo.
+2. Experimente os novos recursos e detalhes do MotorBridge adaptados especificamente para o braço robótico reBot, incluindo calibração de ponto zero com um clique, gravação de parâmetros, controle de motor por arrastar e soltar via UI e uma interface integrada de visualização de modelo.
 
 3. Esta ferramenta é totalmente compatível com os sistemas operacionais **Windows, Ubuntu e macOS**.
 
-### Etapa 1: Instalar o miniforge (em Windows\Ubuntu\macOS\Jetson\Pi)
+:::tip
+1. É altamente recomendável não usar máquina virtual. Máquinas virtuais são propensas a problemas de ambiente.
 
-Este tutorial usa o Ubuntu como exemplo.
+2. (Versão Beta) Deixe um agente ajudar você a inicializar o braço robótico. Copie o conteúdo a seguir e envie para o agente:
+
+```text
+Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-RS-Skills/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
+```
+
+  Observação: Se você comprou um kit pré-montado, informe o agente durante a etapa de gravação do ID do motor: "I purchased a pre-assembled kit, please scan motors 1–7 to verify they are all online, do not rewrite the motor IDs."
+
+3. O agente usa comandos de CLI para concluir a gravação dos IDs dos motores, enquanto o wiki usa um método de interação via web UI. Ambos os métodos funcionam.
+
+:::
+
+Você deve ter concluído a preparação preliminar para a montagem do braço robótico seguindo o vídeo. Em seguida, apresentaremos como gravar os IDs dos motores e calibrar o braço robótico.
+
+
+
+### 1. Instalar Miniforge (Recomendado) (Suporta Windows\Ubuntu\macOS\Jetson\Raspberry Pi)
+
+1. Instale o Miniforge e crie um ambiente virtual para evitar conflitos com outros pacotes de ambiente que possam causar falhas nos demos.
+
+Ubuntu\macOS\Jetson\Raspberry Pi:
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-### Etapa 2: Configuração do Ambiente
+ou Windows:
 
-Crie um ambiente virtual com Python 3.12:
+Abra a página de Release do Miniforge no seu navegador, encontre a versão mais recente de `Miniforge3-Windows-x86_64.exe` e clique para baixar:
+
+```text
+https://github.com/conda-forge/miniforge/releases
+```
+
+2. Crie um ambiente virtual Python 3.12:
+
+:::tip
+  **Usuários de Git Bash**: Se o comando `conda` não for encontrado, significa que o Git Bash não carregou o ambiente conda. Você precisa inicializá-lo primeiro:
+
+  ```bash
+  # Temporary (current terminal only), replace <install_path> with the actual path
+  source <install_path>/etc/profile.d/conda.sh
+
+  # Permanent (write to bashrc, run once)
+  echo 'source <install_path>/etc/profile.d/conda.sh' >> ~/.bashrc
+  source ~/.bashrc
+  ```
+
+  Para que o PowerShell ative automaticamente o ambiente conda:
+
+  ```bash
+  conda init powershell
+  ```
+
+:::
 
 ```bash
 conda create -y -n rebot python=3.12
 ```
 
-Em seguida, ative seu ambiente virtual. **Você precisa executar este comando de ativação sempre que abrir um terminal para usar recursos relacionados ao reBot**:
+3. Ative o ambiente virtual. **Você precisa executar novamente este comando de ativação sempre que abrir um terminal para usar recursos relacionados ao reBot**:
 
 ```bash
 conda activate rebot
 ```
 
-### Etapa 3: Instalar o Motorbridge
-
-:::tip Nota para usuários de macOS
-Se você tiver baixa taxa de quadros durante a teleoperação no macOS, isso pode ser causado por um driver WCH CH34x desatualizado. Para **macOS 10.14 e posteriores**, o sistema inclui um driver `AppleUSBCHC0M` integrado. Você pode desinstalar o driver antigo e mudar para o driver integrado do macOS, o que deve melhorar efetivamente a taxa de quadros.
-:::
+### 2. Instalar o Motorbridge
 
 Após ativar o ambiente virtual do reBot, execute o seguinte comando para instalar o motorbridge:
+
+:::tip Nota para usuários de macOS
+Se você tiver baixa taxa de quadros durante a teleoperação no macOS, isso pode ser causado por uma versão desatualizada do driver WCH CH34x. Para **macOS 10.14 e posteriores**, o sistema inclui um driver `AppleUSBCHC0M` integrado. Você pode desinstalar o driver antigo e mudar para o driver integrado do macOS, o que deve melhorar efetivamente a taxa de quadros.
+:::
+
 
 ```bash
 pip install motorbridge
 ```
 
-### Etapa 4: Conectar o Braço Robótico
+### 3. PCAN-USB
 
-Faça o dispositivo PCAN-USB funcionar no barramento CAN a 1 Mbps para comunicação com o braço robótico.
+Coloque o dispositivo PCAN-USB para funcionar no barramento CAN a 1 Mbps para comunicação com o braço robótico.
+
+Ubuntu\macOS\Jetson\Raspberry Pi:
 
 ```bash
 # The kit includes PCAN-USB, which should normally show up as can0 or can1
@@ -145,14 +165,57 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 ```
 
-### Etapa 5: Iniciar o MotorBridge-gateway
+Usuários de Windows, acessem [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) para instalar o driver do PCAN-USB.
 
-Opcional (você pode conectar o braço robótico na web para testar a conexão)
+<!-- ### 3. Write Motor IDs
 
-Abra `https://motorbridge.github.io/motorbridge-studio/` no seu navegador, clique na opção de ajuda, copie o comando correspondente ao seu sistema operacional e à sua placa controladora, verifique o endereço IP e o número da porta e, em seguida, pressione Enter no terminal para executá-lo.
+:::tip Pre-assembled kit users, please skip this step
+:::
+
+Use a screwdriver to disconnect all motor cables, then connect a single motor to the USB-to-CAN module.
+
+Run the following command to scan whether the motor is detected. The factory ID may be 127.
 
 ```bash
-motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can0
+motorbridge-cli scan --vendor robstride --channel can0 --start-id 126 --end-id 127 --timeout-ms 300
 ```
+
+After confirming the motor's current ID, run the modification command (note: do not connect multiple motors at the same time, as this will cause all of them to be overwritten):
+
+```bash
+# Example: Change ID 127 to 5
+motorbridge-cli id-set --vendor robstride --channel can0 --motor-id 127 --new-motor-id 5
+```
+
+Repeat the above steps until all motor IDs have been successfully written. Then connect all motor cables and run the following command to make a final confirmation. If 7 motors are detected, you are done.
+
+```bash
+motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 --timeout-ms 300
+``` -->
+
+
+### 4. Iniciar o MotorBridge-gateway para Gravar Pontos Zero e Depurar
+
+#### Antes do Reset do Motor
+
+Antes da configuração dos parâmetros do motor, observe as seguintes preparações e regras de segurança:
+
+- Prepare 2 grampos de fixação (tamanho ≥3 polegadas) e uma fonte de alimentação chaveada de 48 V com saída XT30 (escolha uma marca confiável; não use fontes de baixa qualidade).
+- Durante a depuração e operação, mantenha uma distância segura de pelo menos 1 metro.
+- Não conecte ou desconecte os motores com o sistema energizado; desligue a fonte de alimentação antes de conectar/desconectar o conector XT30 2+2.
+- Não sobrecarregue nem opere os motores em velocidade excessiva; verifique a fiação e os fixadores antes da partida; não use em ambientes úmidos, de alta temperatura ou empoeirados.
+- Defina parâmetros de programa razoáveis e função de parada de emergência para evitar perda de controle do equipamento.
+- **Siga rigorosamente as regras acima. O vendedor não se responsabiliza por quaisquer riscos e perdas causados por operações em desacordo com as instruções ou por erro humano.**
+
+
+#### Gravação de Ponto Zero e Depuração via Web UI
+
+Abra o endereço [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) no seu navegador, clique na opção Help, copie o comando correspondente com base no seu sistema operacional e na sua placa controladora, verifique o endereço IP e o número da porta e, em seguida, pressione Enter no terminal para executá-lo.
+
+
+```bash
+motorbridge-gateway -- --bind 127.0.0.1:9002  
+```
+
 
 Consulte o vídeo para saber como usar.
