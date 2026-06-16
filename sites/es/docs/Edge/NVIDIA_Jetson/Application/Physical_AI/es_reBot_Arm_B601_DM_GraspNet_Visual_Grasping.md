@@ -22,11 +22,11 @@ updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_graspnet_visual_grasping/
 ---
 
-# Agarre visual GraspNet con reBot Arm B601-DM en Jetson
+# Agarre visual GraspNet en Jetson con reBot Arm B601-DM
 
-Este wiki explica cómo desplegar la **demo de agarre visual reBot Arm B601-DM** en NVIDIA Jetson. La demo combina una cámara RGB-D, segmentación por instancias con YOLO, estimación de pose de agarre 6-DoF con GraspNet, calibración ojo-en-mano y control de robot real, de modo que el brazo pueda seleccionar y agarrar objetos comunes sobre una mesa.
+Este wiki explica cómo desplegar la **demo de agarre visual reBot Arm B601-DM** en NVIDIA Jetson. La demo combina una cámara RGB-D, segmentación por instancias con YOLO, estimación de poses de agarre 6-DoF con GraspNet, calibración eye-in-hand y control de robot real, de modo que el brazo pueda seleccionar y agarrar objetos comunes sobre una mesa.
 
-La versión 1.0 de esta guía se centra en un despliegue fiable con un solo Jetson y un flujo de operación diario. La configuración predeterminada usa **Orbbec Gemini 2** como cámara RGB-D, **YOLO11n-seg TensorRT** para el filtrado de objetivos y **GraspNet** para la generación genérica de poses de agarre 6-DoF.
+La versión 1.0 de esta guía se centra en un despliegue fiable con un solo Jetson y en el flujo de operación diaria. La configuración predeterminada usa **Orbbec Gemini 2** como cámara RGB-D, **YOLO11n-seg TensorRT** para el filtrado de objetivos y **GraspNet** para la generación genérica de poses de agarre 6-DoF.
 
 <div align="center">
   <img width={900} src="https://files.seeedstudio.com/wiki/graspnet/front-graspnet.png" />
@@ -78,9 +78,9 @@ El proyecto proporciona tres formas prácticas de usar el sistema:
 
 | Modo | Punto de entrada | Uso típico |
 | --- | --- | --- |
-| Web UI | `scripts/grasp_web.py` | Vídeo en vivo, selección de objetivo, vista previa de agarre, agarre real, ajuste de offset |
-| CLI | `scripts/grasp.py` | Agarre sin pantalla o pruebas por script |
-| HTTP API | `scripts/grasp_curl.sh` and `scripts/grasp_api_client.py` | Control remoto, automatización, integración con otras aplicaciones |
+| Interfaz web | `scripts/grasp_web.py` | Vídeo en vivo, selección de objetivo, vista previa de agarre, agarre real, ajuste de offset |
+| CLI | `scripts/grasp.py` | Agarre sin pantalla o pruebas automatizadas por script |
+| API HTTP | `scripts/grasp_curl.sh` and `scripts/grasp_api_client.py` | Control remoto, automatización, integración con otras aplicaciones |
 
 ## Preparación de hardware y sistema
 
@@ -91,8 +91,8 @@ Prepara el siguiente hardware antes de empezar:
 - Cámara RGB-D Orbbec Gemini 2
 - Adaptador USB2CAN para el bus CAN del robot
 - Cable USB 3.0 para la cámara
-- Marcador ArUco para la calibración mano-ojo, `DICT_4X4_50`, ID `0`, longitud de arista de 0.1 m
-- Una mesa estable, suficiente espacio libre alrededor del brazo y un método de corte de energía de emergencia
+- Marcador ArUco para la calibración mano-ojo, `DICT_4X4_50`, ID `0`, longitud de arista 0.1 m
+- Una mesa estable, espacio libre suficiente alrededor del brazo y un método de corte de energía de emergencia
 
 :::warning
 Esta demo controla un brazo robótico real. Durante todas las pruebas de movimiento y de agarre, mantén las manos, cables y objetos sueltos fuera del espacio de trabajo del brazo. Empieza con `--dry-run`, comprobaciones de solo lectura y valores de desplazamiento pequeños antes de habilitar la ejecución completa del robot.
@@ -100,9 +100,9 @@ Esta demo controla un brazo robótico real. Durante todas las pruebas de movimie
 
 Conecta el hardware:
 
-1. Conecta Gemini 2 al Jetson mediante USB 3.0.
-2. Conecta el adaptador USB2CAN al bus CAN del reBot Arm y luego al Jetson.
-3. Enciende el reBot Arm.
+1. Conecta Gemini 2 a Jetson mediante USB 3.0.
+2. Conecta el adaptador USB2CAN al bus CAN de reBot Arm y luego a Jetson.
+3. Enciende reBot Arm.
 4. Confirma que los dispositivos son visibles:
 
 ```bash
@@ -144,7 +144,7 @@ git clone https://github.com/jjjadand/reBot-DevArm-Grasp.git rebot_grasp-jetson
 cd rebot_grasp-jetson
 ```
 
-Si estás usando un paquete interno en lugar del repositorio público, copia ese directorio de proyecto al Jetson y ejecuta los comandos restantes desde la raíz del proyecto.
+Si estás usando un paquete interno en lugar del repositorio público, copia ese directorio de proyecto a Jetson y ejecuta los comandos restantes desde la raíz del proyecto.
 
 **Paso 3. Crear el entorno de Python**
 
@@ -242,7 +242,7 @@ bash scripts/install_graspnet_cuda_ops.sh
 bash scripts/install_graspnet_cuda_ops.sh --check
 ```
 
-Si más adelante cambias JetPack, Python, CUDA o PyTorch, recompila con:
+Si más adelante cambias JetPack, Python, CUDA o PyTorch, vuelve a compilar con:
 
 ```bash
 bash scripts/install_graspnet_cuda_ops.sh --force
@@ -273,7 +273,7 @@ sudo udevadm trigger
 
 **Paso 9. Descargar pesos de YOLO y exportar TensorRT en el Jetson de destino**
 
-Los archivos de motor TensorRT son específicos del dispositivo. Siempre exporta el `.engine` en el Jetson que ejecutará la demo.
+Los archivos de motor TensorRT son específicos del dispositivo. Exporta siempre el `.engine` en el Jetson que ejecutará la demo.
 
 ```bash
 mkdir -p models
@@ -308,7 +308,7 @@ python scripts/verify_pyorbbec_stream.py
 python scripts/verify_pyorbbec_stream.py --preview --seconds 10
 ```
 
-La comprobación solo de texto debería informar de la información de los fotogramas RGB y de profundidad. La comprobación con vista previa debería mostrar ventanas RGB y de profundidad cuando haya una pantalla de escritorio disponible.
+La comprobación solo texto debe informar de la información de los fotogramas RGB y de profundidad. La comprobación con vista previa debe mostrar ventanas RGB y de profundidad cuando haya una pantalla de escritorio disponible.
 
 **2. Comprobar la conexión del robot**
 
@@ -336,9 +336,9 @@ Si la cámara aún no está conectada pero solo quieres comprobar Python, CUDA, 
 python scripts/verify_graspnet_stack.py --skip-camera
 ```
 
-**4. Realizar la calibración ojo-en-mano**
+**4. Realizar la calibración eye-in-hand**
 
-Este proyecto utiliza calibración ojo-en-mano: la cámara está montada en el efector final y el marcador ArUco está fijo en la mesa. La configuración predeterminada espera un marcador `DICT_4X4_50`, ID `0`, de 0.1 m. El repositorio incluye archivos de marcadores imprimibles como `aruco100x100.pdf`.
+Este proyecto usa calibración eye-in-hand: la cámara está montada en el efector final y el marcador ArUco está fijo en la mesa. La configuración predeterminada espera un marcador `DICT_4X4_50`, ID `0`, de 0.1 m. El repositorio incluye archivos de marcadores imprimibles como `aruco100x100.pdf`.
 
 Recogida automática:
 
@@ -367,11 +367,11 @@ python scripts/verify_handeye_calibration.py
 
 Recalibra siempre que cambie el soporte de la cámara, el efector final, el tamaño de la placa ArUco o la geometría de la mesa.
 
-## Ejecutar la demostración web
+## Ejecutar la demostración Web
 
-La interfaz web es la primera interfaz de usuario recomendada. Proporciona vídeo MJPEG en vivo, selección de objetivo, vista previa de agarre, ejecución real de agarre, ajuste de compensación, movimiento manual de la base, control del efector final, postura de preparado y operaciones de reinicio.
+La interfaz Web es la primera interfaz de usuario recomendada. Proporciona vídeo MJPEG en vivo, selección de objetivo, vista previa de agarre, ejecución real de agarre, ajuste de compensación, movimiento manual de la base, control del efector final, postura de preparado y operaciones de reinicio.
 
-Comienza primero en modo de vista previa. Esto no ejecuta movimiento real del robot:
+Empieza primero en modo de vista previa. Esto no ejecuta movimiento real del robot:
 
 ```bash
 conda activate graspnet
@@ -379,40 +379,40 @@ cd ~/rebot_grasp-jetson
 
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --num-point 12000 \
   --cloud-crop-nsample 32
 ```
 
-Abre la interfaz web desde un navegador:
+Abre la interfaz Web desde un navegador:
 
 ```text
-http://<jetson_ip>:8000
+http://<jetson_ip>:8090
 ```
 
 <div align="center">
   <img width={900} src="https://files.seeedstudio.com/wiki/graspnet/web.png" />
 </div>
 
-Utiliza el modo de vista previa para confirmar el flujo de la cámara, las detecciones de YOLO, el filtrado de objetivos y la generación de puntos de agarre. Haz clic en el control de inferencia o actualización en la interfaz web para actualizar la vista previa de GraspNet.
+Utiliza el modo de vista previa para confirmar el flujo de la cámara, las detecciones de YOLO, el filtrado de objetivos y la generación de puntos de agarre. Haz clic en el control de inferencia o actualización en la interfaz Web para actualizar la vista previa de GraspNet.
 
 Cuando la escena sea estable y los pasos de verificación se hayan superado, comienza con la ejecución real del robot:
 
 ```bash
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --enable-robot \
   --num-point 12000 \
   --cloud-crop-nsample 32
 ```
 
-Para las primeras pruebas reales, desactiva la colocación posterior al agarre para que el brazo solo realice el movimiento de agarre y recuperación:
+Para las primeras pruebas reales, desactiva la colocación posterior al agarre para que el brazo solo realice el agarre y el movimiento de recuperación:
 
 ```bash
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --enable-robot \
   --no-place-after-grasp \
   --num-point 12000 \
@@ -425,14 +425,14 @@ Opciones de inicio útiles:
 | --- | --- |
 | `--enable-robot` | Permitir movimiento real del brazo y del efector final |
 | `--target-class cup` | Preseleccionar una clase objetivo |
-| `--no-yolo` | Desactivar el filtrado YOLO y ejecutar GraspNet en toda la escena |
+| `--no-yolo` | Desactivar el filtrado de YOLO y ejecutar GraspNet en toda la escena |
 | `--camera-type orbbec_gemini2` | Forzar el controlador de la cámara |
 | `--no-place-after-grasp` | Omitir la rotación de la base y la colocación después del agarre |
-| `--num-point 12000` | Reducir el recuento de puntos de GraspNet para la memoria de Jetson |
+| `--num-point 12000` | Reducir el número de puntos de GraspNet para la memoria de Jetson |
 | `--cloud-crop-nsample 32` | Reducir las muestras de CloudCrop para la memoria de Jetson |
 | `--graspnet-interval 2.0` | Establecer el intervalo de actualización automática de GraspNet cuando esté habilitado |
 
-El flujo de trabajo normal de la interfaz web es:
+El flujo de trabajo normal de la interfaz Web es:
 
 1. Haz clic en **Ready** para mover el brazo a la postura de preparado.
 2. Selecciona una clase objetivo o déjala vacía para usar los objetos detectados.
@@ -440,11 +440,11 @@ El flujo de trabajo normal de la interfaz web es:
 4. Comprueba que el marcador de agarre parezca razonable en el vídeo.
 5. Ajusta el efector final, la cámara o la compensación de la base si es necesario.
 6. Haz clic en **Real Grasp** solo cuando la trayectoria del brazo esté despejada.
-7. Usa **Reset** si la escena cambia o si el robot necesita volver a un estado seguro.
+7. Usa **Reset** si la escena cambia o el robot necesita volver a un estado seguro.
 
-Los valores de compensación se utilizan para corregir pequeños errores mecánicos y de calibración. Después de ajustarlos en la interfaz web, persiste los valores en `config/compensation.json` o copia los valores estables en tus notas de despliegue. Usa incrementos pequeños, por ejemplo 0.005 m para desplazamientos de posición y de 1 a 2 grados para desplazamientos de rotación.
+Los valores de compensación se utilizan para corregir pequeños errores mecánicos y de calibración. Después de ajustarlos en la interfaz Web, persiste los valores en `config/compensation.json` o copia los valores estables en tus notas de despliegue. Usa incrementos pequeños, por ejemplo 0.005 m para desplazamientos de posición y de 1 a 2 grados para desplazamientos de rotación.
 
-## Uso de la CLI y la API
+## Uso de CLI y API
 
 Para una ejecución de prueba sin interfaz gráfica, usa:
 
@@ -452,7 +452,7 @@ Para una ejecución de prueba sin interfaz gráfica, usa:
 python scripts/grasp.py --dry-run --camera-type orbbec_gemini2 --target-class cup
 ```
 
-Para GraspNet en toda la escena sin filtrado YOLO:
+Para GraspNet en toda la escena sin filtrado de YOLO:
 
 ```bash
 python scripts/grasp.py --dry-run --camera-type orbbec_gemini2 --no-yolo
@@ -464,7 +464,7 @@ Para ejecución real desde la CLI:
 python scripts/grasp.py --camera-type orbbec_gemini2 --target-class cup
 ```
 
-Desactiva la colocación durante la puesta en marcha con la CLI:
+Desactiva la colocación durante la puesta en marcha con CLI:
 
 ```bash
 python scripts/grasp.py \
@@ -480,7 +480,7 @@ python scripts/graspnet_camera_demo.py --auto --target-class cup
 python scripts/graspnet_camera_demo.py --auto --no-yolo --no-visualizer
 ```
 
-Para automatización HTTP, inicia el servicio web con el asistente:
+Para automatización HTTP, inicia el servicio Web con el asistente:
 
 ```bash
 bash scripts/grasp_curl.sh serve --enable-robot --no-auto-graspnet
@@ -500,7 +500,7 @@ bash scripts/grasp_curl.sh reset
 Las mismas operaciones se pueden llamar directamente con `curl`:
 
 ```bash
-BASE=http://127.0.0.1:8000
+BASE=http://127.0.0.1:8090
 
 curl -s "$BASE/state"
 curl -s -X POST "$BASE/ready" -H "Content-Type: application/json" -d "{}"
@@ -513,7 +513,7 @@ Otros endpoints útiles:
 
 | Endpoint | Método | Propósito |
 | --- | --- | --- |
-| `/state` | GET | Detección actual, agarre y estado de ejecución web |
+| `/state` | GET | Estado actual de detección, agarre y ejecución Web |
 | `/robot/state` | GET | Articulaciones del robot, postura TCP, estado del efector final |
 | `/stream.mjpg` | GET | Flujo de cámara MJPEG |
 | `/compensation` | POST | Establecer compensación del efector final, cámara y base |
@@ -573,11 +573,17 @@ Si el efector final falla sistemáticamente al sujetar el objeto, ajusta en este
 
 | Síntoma | Primer objetivo de ajuste |
 | --- | --- |
-| El efector final queda demasiado adelantado o atrasado | `grasp_forward_offset` / avance del efector final en la web |
+| El efector final queda demasiado adelantado o retrasado | `grasp_forward_offset` / avance del efector final en la Web |
 | El efector final falla a la izquierda o a la derecha | `grasp_lateral_offset` o compensación X/Y de la cámara |
 | El efector final queda demasiado alto o bajo | `grasp_vertical_offset` o compensación Z de la cámara |
 | El ángulo de la muñeca es incorrecto | Compensación de giro, cabeceo y guiñada del efector final |
 | Todos los agarres se desplazan en la misma dirección | Compensación de la cámara o de la base |
+
+## Vídeo de demostración
+
+<div align="center">
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Solución de problemas
 
@@ -607,18 +613,13 @@ GraspNet se queda sin memoria: reduce `--num-point`, reduce `--cloud-crop-nsampl
 
 ## Recursos
 
-- Referencia de la demostración GraspNet del reBot Arm: https://github.com/EclipseaHime017/reBot-DevArm-Grasp
+- Referencia de la demostración GraspNet de reBot Arm: https://github.com/EclipseaHime017/reBot-DevArm-Grasp
 - SDK de reBot Arm: https://github.com/vectorBH6/reBotArm_control_py
 - GraspNet baseline: https://github.com/graspnet/graspnet-baseline
 - GraspNet API: https://github.com/graspnet/graspnetAPI
 - Orbbec pyorbbecsdk: https://github.com/orbbec/pyorbbecsdk
 - Instalar Pytorch para reComputer Jetson: https://wiki.seeedstudio.com/es/install_torch_on_recomputer/
 
-## Vídeo de demostración
-
-<div align="center">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ## Soporte técnico y debate sobre el producto
 
