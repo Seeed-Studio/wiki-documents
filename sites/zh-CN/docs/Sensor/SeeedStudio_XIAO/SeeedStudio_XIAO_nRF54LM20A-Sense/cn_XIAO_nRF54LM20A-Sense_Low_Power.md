@@ -20,7 +20,28 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_low_power/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/xiao_nrf54lm20a_power.png" style={{width:400, height:'auto'}}/></div>
 
-XIAO nRF54LM20A 基于 nRF54LM20 SoC 打造，具备超低功耗特性。其出色的低功耗表现能够有效延长对电池续航要求严苛的应用的运行时间，例如可穿戴设备、物联网端节点以及远程传感单元。本文档将介绍如何在 XIAO nRF54LM20A 上实现并部署多种低功耗模式。
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  立即获取 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+XIAO nRF54LM20A 基于 nRF54LM20 SoC 构建，具备超低功耗特性。其出色的低功耗表现能够有效延长设备在电池敏感型应用中的运行时间，例如可穿戴设备、物联网终端节点以及远程传感单元。本文档将介绍如何在 XIAO nRF54LM20A 上实现并部署多种低功耗模式。
 
 :::tip
 
@@ -48,9 +69,9 @@ XIAO nRF54LM20A 基于 nRF54LM20 SoC 打造，具备超低功耗特性。其出�
 </table>
 </div>
 
-## 使用电池供电
+## 电池供电
 
-本章实现的所有模式均通过 XIAO nRF54LM20A 底部焊盘使用电池供电，而非通过 USB-C 供电。
+本章中实现的所有模式均通过 XIAO nRF54LM20A 底部焊盘使用电池供电，而不是通过 USB-C 供电。
 XIAO nRF54LM20A 支持使用 3.7V 锂电池作为电源输入。你可以参考下图进行接线。
 
 <div style={{textAlign: 'center'}}>
@@ -62,13 +83,13 @@ XIAO nRF54LM20A 支持使用 3.7V 锂电池作为电源输入。你可以参考�
 :::caution
 
 焊接时请务必注意不要将正负极短路，以免烧毁电池和设备。
-如果电池本身带电，切勿直接焊接到电路板上，否则可能烧毁电路板。在电路上电的情况下发生短路风险极大，建议使用适配器连接。
+如果电池本身带电，切勿直接焊接到电路板上，否则可能烧毁电路板。在电路上电的情况下发生短路风险极大，建议使用转接板或适配器。
 
 :::
 
 ## 低功耗模式
 
-在 XIAO nRF54LM20A 上通过 System ON Sleep 等功能实现低功耗模式。在该模式下，系统仍保持工作，但功耗显著降低。CPU 时钟被门控并挂起，但 RAM 内容、外设状态以及程序上下文都会被完整保留，且包括 GRTC 在内的低功耗定时器仍在运行。本节将通过 `k_sleep` 函数和 BLE 广播来验证低功耗模式。
+在 XIAO nRF54LM20A 上通过 System ON Sleep 等功能实现低功耗模式。在该模式下，系统仍保持工作，但功耗被降低。CPU 时钟被门控并暂停运行，但 RAM 内容、外设状态以及程序上下文都会被完整保留，且包括 GRTC 在内的低功耗定时器仍会继续运行。本节将通过 `k_sleep` 函数和 BLE 广播来验证低功耗模式。
 
 ### 软件
 
@@ -123,7 +144,7 @@ CONFIG_BT_BROADCASTER=y
 CONFIG_BT_DEVICE_NAME="XIAO nRF54LM20A"
 ```
 
-3. 修改 main.c 程序，通过 `k_sleep(K_SECONDS(10))` 启用低功耗模式，并配置 BLE 以 1 秒为间隔周期性广播消息。
+3. 修改 main.c 程序，通过 `k_sleep(K_SECONDS(10))` 启用低功耗模式，并配置 BLE 以 1 秒为周期定时广播消息。
 
 ```c
 /*
@@ -170,7 +191,7 @@ int main(void)
 }
 ```
 
-### 结果
+### 测试结果
 
 烧录固件后，我们可以使用功耗测试仪测量 XIAO nRF54LM20A 在低功耗条件下的工作电流。
 
@@ -192,7 +213,7 @@ int main(void)
 <br/>
 :::tip
 
-以上测试结果均在实验室条件下测得。不同环境和测试仪器可能导致数值有所差异，请以实际测得性能为准。
+以上测试结果均在实验室条件下测得。不同环境和测试仪器可能导致数值有所差异，请以实际测量性能为准。
 
 :::
 
@@ -479,7 +500,7 @@ int main(void)
 <br/>
 :::tip
 
-以上测试结果是在实验室条件下测得的。数值可能会因环境和测试仪器不同而有所变化，请以实际测得的性能为准。
+以上测试结果为实验室条件下测得。数值可能会因环境和测试仪器不同而有所差异，请以实际测得性能为准。
 
 :::
 
