@@ -19,6 +19,28 @@ url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_nfc/
 # NFC para XIAO nRF54LM20A Sense
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF54LM20A_NFC.png" style={{width:400, height:'auto'}}/></div>
+
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Consigue uno ahora 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
 <br/>
 Near Field Communication (NFC) es una tecnología para la transferencia inalámbrica de pequeñas cantidades de datos entre dos dispositivos. Utiliza protocolos de comunicación muy simples y, por lo tanto, permite una conexión más rápida que Bluetooth® Low Energy. Sin embargo, debido a que NFC utiliza inducción magnética para habilitar la comunicación, los dispositivos deben estar muy cerca (< 10 cm) para conectarse.】
 
@@ -29,7 +51,7 @@ El XIAO nRF54LM20A está equipado con una interfaz NFC reservada para que puedas
 
 :::tip
 
-Este tutorial se basa en VS Code y la extensión nRF Connect. Si eres nuevo en ellas, puedes consultar [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_ncs/)
+Este tutorial se basa en VS Code y la extensión nRF Connect. Si no estás familiarizado con ellas, puedes consultar [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_ncs/)
 
 :::
 
@@ -114,7 +136,7 @@ Este ejemplo demuestra la lectura de información de texto mediante NFC.
 
 #### Resultado
 
-Selecciona un teléfono móvil con funcionalidad NFC para intentar este experimento.
+Selecciona un teléfono móvil con funcionalidad NFC para realizar este experimento.
 
 1. Para ver la información leída por NFC con más detalle, necesitas descargar la aplicación correspondiente para tu sistema.
 
@@ -180,7 +202,7 @@ Esta sección cubre la función NFC. Busca **nRF Toolbox for Bluetooth LE**.
 
 ## Resumen
 
-Las funciones NFC se pueden reutilizar en varios escenarios, como escritura de datos y activación de bajo consumo. El nRF Connect SDK proporciona códigos de ejemplo correspondientes. Puedes ampliar estos ejemplos para aplicaciones prácticas. Por ejemplo, combinar la activación de bajo consumo por NFC con el control de un motor permite implementar una cerradura inteligente sencilla para el uso diario.
+Las funciones NFC pueden reutilizarse en diversos escenarios, como escritura de datos y activación de bajo consumo. El nRF Connect SDK proporciona códigos de ejemplo correspondientes. Puedes ampliar estos ejemplos para aplicaciones prácticas. Por ejemplo, combinar la activación de bajo consumo por NFC con el control de un motor permite implementar una cerradura inteligente sencilla para el uso diario.
 
 Además, creemos que has adquirido una comprensión básica de la implementación de NFC en el XIAO nRF54LM20A a través de los ejemplos anteriores. Esperamos tus ideas creativas y tus contribuciones a la comunidad de código abierto.
 
