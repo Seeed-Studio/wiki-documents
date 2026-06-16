@@ -1,6 +1,6 @@
 ---
-title: Demo de Interação por Voz com IA Baseado em reCamera
-description: Este documento apresenta um demo de conversa inteligente por voz baseado em reCamera usando STT/LLM/TTS, demonstrando como a reCamera aciona a interação por voz por meio de reconhecimento de pose e se conecta ao grande modelo iFlytek Spark para implementar todo o pipeline de diálogo STT→LLM→TTS.
+title: Interação de Voz com IA usando reCamera
+description: Este documento apresenta uma demonstração de conversa inteligente por voz baseada em reCamera usando STT/LLM/TTS, mostrando como a reCamera aciona a interação por voz por meio de reconhecimento de pose e se conecta ao grande modelo iFlytek Spark para implementar todo o pipeline de diálogo STT→LLM→TTS.
 keywords:
   - reCamera
   - AI Edge Vision
@@ -13,23 +13,23 @@ last_update:
   date: 06/10/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
-updatedAt: '2026-06-10'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/pt-br/ai_voice_assitant_with_recamera/
 ---
 
-# Demo de Interação por Voz com IA Baseado em reCamera
+# Interação de Voz com IA usando reCamera
 
 ## Introdução
 
-Este projeto demonstra uma forma de interagir com a reCamera por meio de linguagem natural. Após o raciocínio visual acionar a gravação de áudio, a reCamera envia a gravação para o servidor, processa-a por todo o pipeline **STT (Speech-to-Text) → LLM (Large Language Model Reasoning) → TTS (Text-to-Speech)**, e a voz sintetizada é retornada à reCamera para reprodução, permitindo conversas em linguagem natural.
+Este projeto demonstra uma forma de interagir com a reCamera por meio de linguagem natural. Após o raciocínio visual acionar a gravação de áudio, a reCamera envia a gravação para o servidor, que a processa através do pipeline completo **STT (Speech-to-Text) → LLM (Large Language Model Reasoning) → TTS (Text-to-Speech)**, e a voz sintetizada é retornada para a reCamera para reprodução, possibilitando conversas em linguagem natural.
 
-Você já quis uma câmera que não apenas "veja", mas também "entenda" e "fale"? Por meio da arquitetura deste projeto, usando o microfone e o alto-falante da reCamera, o dispositivo deixa de ser apenas uma ferramenta visual e se torna um assistente inteligente capaz de conversar naturalmente. Isso inclui, mas não se limita, aos seguintes cenários:
+Você já quis ter uma câmera que não apenas "vê", mas também "entende" e "fala"? Por meio da arquitetura deste projeto, usando o microfone e o alto-falante da reCamera, o dispositivo deixa de ser apenas uma ferramenta visual e se torna um assistente inteligente capaz de conversar naturalmente. Isso inclui, mas não se limita, aos seguintes cenários:
 
 - **Assistente Inteligente de Controle de Acesso**: Instale a reCamera na entrada, onde os visitantes podem concluir o registro de identidade, deixar recados ou obter orientações apenas por voz, sem a necessidade de uma tela interativa adicional.
 
 - **Parceiro de Inspeção de Segurança em Fábricas**: Em ambientes industriais, quando as mãos dos trabalhadores estão ocupadas, eles podem acionar a interação por voz por meio de gestos para perguntar ao assistente de IA sobre o status de equipamentos, manuais de operação ou relatar anomalias.
 
-- **Interação Assistiva para Acessibilidade**: Forneça um ponto de entrada de controle por voz para usuários com deficiência visual ou mobilidade reduzida, permitindo conversas em linguagem natural com o dispositivo por meio de simples gestos para obter informações do ambiente ou enviar comandos.
+- **Interação Assistiva para Acessibilidade**: Fornece um ponto de entrada de controle por voz para usuários com deficiência visual ou mobilidade reduzida, permitindo conversas em linguagem natural com o dispositivo por meio de simples gestos para obter informações do ambiente ou enviar comandos.
 
 - **Guia para Educação e Exposições**: Em museus ou salas de exposição, os visitantes podem acionar a interação por voz por meio de gestos para perguntar ao assistente de IA sobre informações das exposições e receber visitas guiadas personalizadas.
 
@@ -57,12 +57,12 @@ Todo o sistema é concluído de forma colaborativa por duas partes: **lado reCam
 | Julgamento de Pose | reCamera (Função Node-RED) | Lógica personalizada | Compara as distâncias dos pontos-chave do ombro e do cotovelo |
 | Gravação/Reprodução | reCamera | arecord / aplay | PCM mono 16kHz |
 | Reconhecimento de Fala (STT) | Servidor PC | iFlytek Speech Dictation API | Áudio para texto |
-| Raciocínio de Grande Modelo (LLM) | Servidor PC | Spark Large Model Spark Lite | Gera respostas inteligentes |
-| Texto-para-Fala (TTS) | Servidor PC | iFlytek Speech Synthesis API | Texto para áudio |
+| Raciocínio com Modelo de Grande Porte (LLM) | Servidor PC | Spark Large Model Spark Lite | Gera respostas inteligentes |
+| Texto para Fala (TTS) | Servidor PC | iFlytek Speech Synthesis API | Texto para áudio |
 
 ## Preparação de Hardware
 
-Para executar este demo, você precisa do seguinte hardware:
+Para executar esta demonstração, você precisa do seguinte hardware:
 
 - **Um dispositivo reCamera** (suporta todas as variantes de reCamera)
 - **Um computador PC** (para executar o serviço de processamento de voz, deve estar na mesma LAN que a reCamera)
@@ -124,7 +124,7 @@ Você pode escolher **qualquer versão da reCamera** com base em suas necessidad
  </tr>
 </table>
 
-## Configurando o Demo
+## Configurando a Demonstração
 
 ### Etapa 1: Configurar a reCamera
 
@@ -133,7 +133,7 @@ Primeiro, siga o guia oficial de primeiros passos para concluir a configuração
 Após concluir a configuração inicial, certifique-se de que o dispositivo esteja ligado e devidamente conectado à rede.
 Em seguida, acesse o endereço 192.168.42.1 por meio de um navegador para fazer login na reCamera e entrar no espaço de trabalho do **Node-RED**.
 
-Se você conseguir acessar com sucesso a interface de fluxo do Node-RED, como mostrado abaixo, a configuração estará concluída.
+Se você conseguir acessar com sucesso a interface de fluxo do Node-RED, conforme mostrado abaixo, a configuração estará concluída.
 
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload5.png" />
@@ -141,23 +141,23 @@ Se você conseguir acessar com sucesso a interface de fluxo do Node-RED, como mo
 
 ### Etapa 2: Importar o Fluxo do Node-RED
 
-Este demo fornece um **arquivo de fluxo pré-configurado** com todos os nós e conexões necessários para o assistente de voz inteligente já configurados.
+Esta demonstração fornece um **arquivo de fluxo pré-configurado** com todos os nós e conexões necessários para o assistente de voz inteligente já configurados.
 Você precisa seguir as etapas abaixo para fazer algumas configurações a fim de executar corretamente este projeto.
 
 Crie um novo aplicativo, depois baixe o arquivo de fluxo do Assistente de Voz com IA na [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/application/) e importe-o diretamente para a reCamera. Para tutoriais do SenseCraft AI, consulte o link [Access SenseCraft AI reCamera Dashboard](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/#access-recamera-preview-dashboard).
 
-Se você conseguir acessar com sucesso a interface de fluxo do Node-RED, como mostrado abaixo, o fluxo foi importado com êxito.
+Se você conseguir acessar com sucesso a interface de fluxo do Node-RED, conforme mostrado abaixo, o fluxo foi importado com êxito.
 
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/AI_Voice_Assistant/workflow.jpg" />
 </div>
 
-### Etapa 3: Configurar Parâmetros do Fluxo
+### Etapa 3: Configurar os Parâmetros do Fluxo
 
 Após importar o fluxo, você precisa modificar os parâmetros nas seções 3.1 a 3.5 abaixo de acordo com o seu ambiente de rede real e configurações do sistema.
 #### 3.1 Nó Model
 
-O nó Model no fluxo vem com vários modelos pré-treinados. Você pode selecionar e configurar vários parâmetros de modelo aqui. Este demo usa o modelo YOLO11n Pose para detectar poses humanas.
+O nó Model no fluxo vem com vários modelos pré-treinados. Você pode selecionar e configurar vários parâmetros de modelo aqui. Esta demonstração usa o modelo YOLO11n Pose para detectar poses humanas.
 
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/AI_Voice_Assistant/modelset.png" />
@@ -273,7 +273,7 @@ LLM_APPID = "your_APPID"
 LLM_APISecret = "your_APISecret"
 LLM_APIKey = "your_APIKey"
 ```
-Este demo usa o modelo **Spark Lite** (gratuito). Você também pode alternar para uma versão de modelo mais avançada conforme necessário ou usar grandes modelos de outros provedores.
+Este demo usa o modelo **Spark Lite** (gratuito). Você também pode alternar para uma versão de modelo mais avançada, conforme necessário, ou usar grandes modelos de outros provedores.
 
 #### 4.4 Iniciar o serviço
 
@@ -321,11 +321,11 @@ A lógica de alto nível de todo o fluxo de trabalho é a seguinte:
 1. **Entrada de vídeo e detecção de pose**
    A câmera captura continuamente quadros de vídeo, e o modelo de estimativa de pose YOLO11 detecta os pontos-chave do corpo humano (17 pontos-chave no total, incluindo ombros, cotovelos, pulsos, etc.).
 
-2. **Julgamento de acionamento por gesto**
-   O nó Function calcula a distância entre os pontos-chave dos ombros esquerdo e direito e a distância entre os pontos-chave dos cotovelos esquerdo e direito. Quando **distância entre ombros < distância entre cotovelos**, isso é determinado como um gesto de acionamento (ou seja, pose de braços cruzados).
+2. **Julgamento de gatilho por gesto**
+   O nó Function calcula a distância entre os pontos-chave dos ombros esquerdo e direito e a distância entre os pontos-chave dos cotovelos esquerdo e direito. Quando **distância entre ombros < distância entre cotovelos**, isso é determinado como um gesto de gatilho (ou seja, pose de braços cruzados).
 
 3. **Processo de gravação**
-   Após o acionamento: ligar o LED azul → gravar áudio → desligar o LED azul.
+   Após o gatilho: ligar o LED azul → gravar áudio → desligar o LED azul.
 
 4. **Processamento de áudio e geração de diálogo**
    Após a conclusão da gravação, os dados de áudio são enviados por POST para o serviço Flask do PC via HTTP Request, executando:
@@ -336,10 +336,10 @@ A lógica de alto nível de todo o fluxo de trabalho é a seguinte:
 5. **Reprodução de áudio**
    O PC retorna o áudio WAV, e a reCamera reproduz a voz de resposta por meio do comando `aplay`.
 
-## Observações
+## Notas
 
-- O intervalo de gravação atual está definido para **10 segundos**. Se o tempo de processamento STT → LLM → TTS exceder esse intervalo, vários acionamentos podem causar congestionamento no pipeline. Recomenda-se controlar a contagem de palavras da resposta do LLM (o prompt de sistema atual a limita a 50 palavras ou menos) para reduzir o tempo de processamento.
-- Se o congestionamento fizer com que a CPU deixe de responder, você pode ajustar o atributo Confidence no nó Model para reduzir falsos positivos e controlar a frequência de acionamento.
+- O intervalo de gravação atual está definido para **10 segundos**. Se o tempo de processamento STT → LLM → TTS exceder esse intervalo, múltiplos gatilhos podem causar congestionamento no pipeline. Recomenda-se controlar a contagem de palavras da resposta do LLM (o prompt de sistema atual a limita a 50 palavras ou menos) para reduzir o tempo de processamento.
+- Se o congestionamento fizer com que a CPU deixe de responder, você pode ajustar o atributo Confidence no nó Model para reduzir falsos positivos e controlar a frequência de gatilho.
 - Ao reproduzir o áudio retornado usando `aplay`, especifique os parâmetros corretos (`-f S16_LE -c 1 -r 16000`), caso contrário a reprodução pode não funcionar corretamente. Consulte o áudio gerado pelo TTS para parâmetros específicos.
 
 ## Suporte técnico e discussão sobre o produto

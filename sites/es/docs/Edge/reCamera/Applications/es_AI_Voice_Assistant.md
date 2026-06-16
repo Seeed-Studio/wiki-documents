@@ -1,6 +1,6 @@
 ---
-title: Demostración de interacción por voz con IA basada en reCamera
-description: Este documento presenta una demostración de conversación inteligente por voz basada en reCamera usando STT/LLM/TTS, que muestra cómo reCamera desencadena la interacción por voz mediante reconocimiento de pose y se conecta al gran modelo iFlytek Spark para implementar la canalización completa de diálogo STT→LLM→TTS.
+title: Interacción de voz con IA con reCamera
+description: Este documento presenta una demostración de conversación de voz inteligente basada en reCamera utilizando STT/LLM/TTS, que muestra cómo reCamera desencadena la interacción por voz mediante el reconocimiento de poses y se conecta al gran modelo iFlytek Spark para implementar la canalización completa de diálogo STT→LLM→TTS.
 keywords:
   - reCamera
   - AI Edge Vision
@@ -13,15 +13,15 @@ last_update:
   date: 06/10/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
-updatedAt: '2026-06-10'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/ai_voice_assitant_with_recamera/
 ---
 
-# Demostración de interacción por voz con IA basada en reCamera
+# Interacción de voz con IA con reCamera
 
 ## Introducción
 
-Este proyecto demuestra una forma de interactuar con reCamera mediante lenguaje natural. Después de que el razonamiento visual desencadena la grabación de audio, reCamera envía la grabación al servidor, la procesa a través de la canalización completa de **STT (Speech-to-Text) → LLM (Large Language Model Reasoning) → TTS (Text-to-Speech)**, y la voz sintetizada se devuelve a reCamera para su reproducción, lo que permite una conversación en lenguaje natural.
+Este proyecto demuestra una forma de interactuar con reCamera mediante lenguaje natural. Después de que el razonamiento visual activa la grabación de audio, reCamera envía la grabación al servidor, la procesa a través de la canalización completa de **STT (Speech-to-Text) → LLM (Large Language Model Reasoning) → TTS (Text-to-Speech)** y la voz sintetizada se devuelve a reCamera para su reproducción, lo que permite una conversación en lenguaje natural.
 
 ¿Alguna vez has querido una cámara que no solo pueda "ver", sino también "entender" y "hablar"? A través de la arquitectura de este proyecto, utilizando el micrófono y el altavoz de la reCamera, el dispositivo deja de ser solo una herramienta visual para convertirse en un asistente inteligente capaz de mantener conversaciones naturales. Esto incluye, entre otros, los siguientes escenarios:
 
@@ -58,7 +58,7 @@ Todo el sistema se completa de forma colaborativa por dos partes: **lado reCamer
 | Grabación/Reproducción | reCamera | arecord / aplay | PCM mono de 16 kHz |
 | Reconocimiento de voz (STT) | Servidor PC | iFlytek Speech Dictation API | Audio a texto |
 | Razonamiento de gran modelo (LLM) | Servidor PC | Spark Large Model Spark Lite | Genera respuestas inteligentes |
-| Text-to-Speech (TTS) | Servidor PC | iFlytek Speech Synthesis API | Texto a audio |
+| Texto a voz (TTS) | Servidor PC | iFlytek Speech Synthesis API | Texto a audio |
 
 ## Preparación de hardware
 
@@ -154,10 +154,10 @@ Si puedes acceder correctamente a la interfaz de flujo de trabajo de Node-RED co
 
 ### Paso 3: Configurar los parámetros del flujo de trabajo
 
-Después de importar el flujo de trabajo, debes modificar los parámetros en las secciones 3.1 a 3.5 a continuación de acuerdo con tu entorno de red real y la configuración del sistema.
+Después de importar el flujo de trabajo, debes modificar los parámetros en las secciones 3.1 a 3.5 que aparecen a continuación de acuerdo con tu entorno de red real y la configuración del sistema.
 #### 3.1 Nodo Model
 
-El nodo Model en el flujo de trabajo viene con varios modelos preentrenados. Aquí puedes seleccionar y configurar varios parámetros del modelo. Esta demostración utiliza el modelo YOLO11n Pose para detectar poses humanas.
+El nodo Model en el flujo de trabajo incluye varios modelos preentrenados. Aquí puedes seleccionar y configurar varios parámetros del modelo. Esta demostración utiliza el modelo YOLO11n Pose para detectar poses humanas.
 
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/AI_Voice_Assistant/modelset.png" />
@@ -190,7 +190,7 @@ echo "your_Password" | sudo -S sh -c 'echo 1 > /sys/class/leds/blue/brightness'
 
 #### 3.4 Nodo HTTP Request — Dirección de envío de audio
 
-Busca el nodo **HTTP Request** en el flujo de trabajo y modifica la URL a la dirección de tu servidor PC. Esto requiere que completes el Paso 4 y ejecutes primero server.py, luego rellenes la dirección en la posición correspondiente que se muestra a continuación.
+Busca el nodo **HTTP Request** en el flujo de trabajo y modifica la URL a la dirección de tu servidor PC. Para ello debes completar primero el Paso 4 y ejecutar server.py, luego rellenar la dirección en la posición correspondiente que se muestra a continuación.
 
 ```
 http://<PC_IP_ADDRESS>:5000/interact
@@ -229,7 +229,7 @@ Asegúrate de que el siguiente entorno esté instalado en tu PC:
 
 #### 4.2 Obtén el código e instala las dependencias
 
-Obtén el código Python del lado del servidor para el Asistente de Voz con IA desde el [repositorio](https://github.com/hunter5299/Node-Red-project/tree/main/reCamera_ai_voice_assitant). Después de descargar el código del proyecto en tu PC, entra en el directorio del servicio e instala las dependencias de Python:
+Obtén el código Python del lado del servidor para el Asistente de Voz con IA desde el [repositorio](https://github.com/hunter5299/Node-Red-project/tree/main/reCamera_ai_voice_assitant). Después de descargar el código del proyecto a tu PC, entra en el directorio del servicio e instala las dependencias de Python:
 
 ```bash
 cd server/
@@ -273,7 +273,7 @@ LLM_APPID = "your_APPID"
 LLM_APISecret = "your_APISecret"
 LLM_APIKey = "your_APIKey"
 ```
-Esta demostración utiliza el modelo **Spark Lite** (gratuito). También puedes cambiar a una versión de modelo más avanzada según sea necesario, o usar modelos grandes de otros proveedores.
+Esta demo utiliza el modelo **Spark Lite** (gratuito). También puedes cambiar a una versión de modelo más avanzada según sea necesario, o usar modelos grandes de otros proveedores.
 
 #### 4.4 Iniciar el servicio
 
@@ -284,7 +284,7 @@ python server.py
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/AI_Voice_Assistant/serverlog.png" />
 </div>
 <p align="center">Registro de inicio del servidor</p>
-Después de que el servicio se inicie, esperará solicitudes de audio desde la reCamera. Asegúrate de que el firewall del PC permita conexiones entrantes en el puerto 5000 y de que el PC y la reCamera estén en la misma LAN.
+Después de que el servicio se inicie, esperará solicitudes de audio desde reCamera. Asegúrate de que el firewall del PC permita conexiones entrantes en el puerto 5000 y de que el PC y la reCamera estén en la misma LAN.
 
 
 ### Paso 5: Ejecutar la demostración
@@ -293,7 +293,7 @@ Después de que el servicio se inicie, esperará solicitudes de audio desde la r
 2. Haz clic en **Deploy** en Node-RED para desplegar el flujo de trabajo
 3. Ponte frente a la reCamera y haz un gesto de **brazos cruzados** (la distancia entre hombros debe ser menor que la distancia entre codos)
 4. El **LED azul** de la reCamera se enciende, indicando que la grabación ha comenzado
-5. Habla tu pregunta al micrófono
+5. Di tu pregunta al micrófono
 6. Después de que el LED azul se apague, la reCamera envía el audio al servidor y reproduce la respuesta después de recibirla.
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/AI_Voice_Assistant/test.jpg" />
@@ -344,7 +344,7 @@ La lógica de alto nivel de todo el flujo de trabajo es la siguiente:
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Si necesitas orientación sobre objetivos de personalización específicos o quieres ampliar aún más el flujo de trabajo, no dudes en ponerte en contacto con nosotros. Estamos aquí para ofrecerte distintos niveles de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Si necesitas orientación sobre objetivos de personalización específicos o quieres ampliar aún más el flujo de trabajo, no dudes en contactarnos. Estamos aquí para ofrecerte distintos niveles de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

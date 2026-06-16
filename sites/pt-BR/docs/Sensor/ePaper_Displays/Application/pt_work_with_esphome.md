@@ -17,7 +17,7 @@ last_update:
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/pt-br/epaper_work_with_esphome/
-updatedAt: '2026-04-28'
+updatedAt: '2026-06-03'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -25,10 +25,10 @@ import TabItem from '@theme/TabItem';
 
 # Trabalhar com ESPHome
 
-Esta página é o **manual de referência** para controlar qualquer produto Seeed ePaper compatível por meio do [ESPHome](https://esphome.io/) e integrá-lo ao [Home Assistant](https://www.home-assistant.io/). Ela cobre as partes que são idênticas em todo o hardware:
+Esta página é o **manual de referência** para controlar qualquer produto Seeed ePaper compatível através do [ESPHome](https://esphome.io/) e integrá-lo com o [Home Assistant](https://www.home-assistant.io/). Ela cobre as partes que são idênticas em todo o hardware:
 
-1. Por que você escolheria o ESPHome para controlar um display ePaper.
-2. Os dois caminhos de gravação: **ESPHome Web Installer** (sem configuração, baseado em navegador) e **ESPHome CLI / Add-on do HA** (controle total via YAML).
+1. Por que você escolheria ESPHome para controlar um display ePaper.
+2. Os dois caminhos de gravação: **ESPHome Web Installer** (zero configuração, baseado em navegador) e **ESPHome CLI / Add-on do HA** (controle total via YAML).
 3. O esqueleto YAML genérico — `wifi`, `api`, `ota`, `display` — que cada produto especializa com seu próprio mapa de pinos.
 4. Onde fica o cookbook de cada produto (periféricos, lambdas específicos de hardware, receitas de dashboards).
 
@@ -36,7 +36,7 @@ Para um **passo a passo completo "gravar → conectar → primeiro dashboard"**,
 
 ## Hardware compatível
 
-Todo produto Seeed ePaper na [página principal do hub](/pt-br/seeed_epaper_displays) que tenha a coluna **ESPHome** marcada pode seguir este fluxo de trabalho:
+Todo produto Seeed ePaper na [página principal](/pt-br/seeed_epaper_displays) que tenha a coluna **ESPHome** marcada pode seguir este fluxo de trabalho:
 
 <div class="table-center">
   <table align="center">
@@ -48,7 +48,7 @@ Todo produto Seeed ePaper na [página principal do hub](/pt-br/seeed_epaper_disp
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
       <td>XIAO ESP32-S3</td>
-      <td><a href="/pt-br/reterminal_e10xx_with_esphome">Básico</a> · <a href="/pt-br/reterminal_e10xx_with_esphome_advanced">Avançado (periféricos)</a></td>
+      <td><a href="/pt-br/reterminal_e10xx_with_esphome">Display</a> · <a href="/pt-br/reterminal_e10xx_with_esphome_advanced">E/S e energia</a> · <a href="/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone">RTC, SD e microfone</a></td>
     </tr>
     <tr>
       <td><strong>Placa controladora EE04</strong></td>
@@ -86,28 +86,28 @@ O firmware ESPHome pode ser carregado no dispositivo de duas maneiras. A escolha
 <Tabs groupId="esphome-flash-path">
 <TabItem value="web-installer" label="Caminho A: ESPHome Web Installer (recomendado para usuários iniciantes)" default>
 
-Um firmware ZIP pré-compilado é hospedado pela Seeed e gravado no seu dispositivo pelo navegador via WebSerial.
+Um arquivo ZIP de firmware pré-compilado é hospedado pela Seeed e gravado no seu dispositivo através do navegador via WebSerial.
 
 1. Conecte o dispositivo ao seu computador com um cabo USB-C.
 2. Abra a página de gravação específica do produto (linkada a partir do cookbook do seu produto) no **Chrome** ou **Edge**.
 3. Clique em **Connect**, escolha a porta serial e depois clique em **Install**.
-4. Após a gravação, o dispositivo inicia em um portal cativo de Wi-Fi (`ESPHome-XXXX`). Conecte-se, configure o Wi-Fi e o dispositivo aparecerá no Home Assistant por meio da integração ESPHome.
+4. Após a gravação, o dispositivo inicia em um portal cativo de Wi-Fi (`ESPHome-XXXX`). Conecte-se, configure o Wi-Fi e o dispositivo aparecerá no Home Assistant via integração ESPHome.
 
 Este caminho não exige **nenhuma edição de YAML**. Você pode posteriormente "adotar" o dispositivo no dashboard do ESPHome se quiser começar a personalizá-lo.
 
 </TabItem>
 <TabItem value="yaml-cli" label="Caminho B: YAML + dashboard ESPHome (controle total)">
 
-Para controle completo sobre o firmware (layouts de display personalizados, sensores personalizados, dashboards com várias páginas, ajuste de deep sleep, atualizações OTA), execute o **dashboard ESPHome** como:
+Para controle completo sobre o firmware (layouts de display personalizados, sensores personalizados, dashboards com múltiplas páginas, ajuste de deep sleep, atualizações OTA), execute o **dashboard ESPHome** como:
 
 - um **Add-on** do Home Assistant (recomendado se você já roda HA OS / HA Supervised), ou
 - um **CLI Python** independente (`pip install esphome` e depois `esphome dashboard config/`).
 
 Fluxo de trabalho:
 
-1. No dashboard do ESPHome, clique em **+ New device** → insira um nome → escolha a variante correta de ESP (ESP32-S3 / ESP32-C3 / etc. — o cookbook do seu produto informará qual).
+1. No dashboard do ESPHome, clique em **+ New device** → insira um nome → escolha a variante correta de ESP (ESP32-S3 / ESP32-C3 / etc. — o cookbook do seu produto dirá qual).
 2. O dashboard gera um `<device-name>.yaml` inicial. Substitua o corpo dele pelo YAML específico do produto a partir do seu cookbook (veja a Etapa 2 abaixo para o formato).
-3. Clique em **Install** → **Conecte ao computador que está executando o ESPHome** para a primeira gravação; as gravações seguintes são sem fio via OTA.
+3. Clique em **Install** → **Conecte ao computador que está executando o ESPHome** para a primeira gravação; as gravações subsequentes são sem fio via OTA.
 4. O dispositivo entra automaticamente na integração ESPHome no Home Assistant.
 
 </TabItem>
@@ -176,7 +176,7 @@ O que é específico do produto (e está em cada cookbook):
 - `esp32.board` — `seeed_xiao_esp32s3` para E1001/E1002/EE04/Kit TRMNL; `esp32-c3-devkitm-1` para o Painel XIAO 7,5"; etc.
 - Os mapas de pinos de `spi` e `display`.
 - O valor de `model` (`7.50in-bwr`, `13.3in-spectra6`, …).
-- Quaisquer periféricos onboard (botões / buzzer / bateria / SHT4x) — abordados nas seções **Avançado** do cookbook correspondente.
+- Quaisquer periféricos onboard (botões / buzzer / bateria / SHT4x) — abordados nas seções **Avançado** do cookbook relevante.
 
 ## Etapa 3: Conectar ao Home Assistant
 
@@ -187,16 +187,17 @@ Quando o firmware inicia e entra na sua rede Wi-Fi, o Home Assistant descobre o 
 3. Clique em **Configure**, cole a chave de criptografia da API (de `secrets.yaml`) e envie.
 4. O dispositivo + todas as suas entidades (sensors, binary_sensors, o display) agora estão disponíveis no HA.
 
-Agora você pode arrastar as entidades para um dashboard Lovelace ou — muito mais interessante em ePaper — usar o bloco `display.lambda` para renderizar qualquer entidade do HA diretamente na tela por meio do componente [`homeassistant`](https://esphome.io/components/homeassistant.html).
+Agora você pode arrastar as entidades para um dashboard Lovelace ou — muito mais interessante em ePaper — usar o bloco `display.lambda` para renderizar qualquer entidade do HA diretamente na tela via o componente [`homeassistant`](https://esphome.io/components/homeassistant.html).
 
 ## Para onde ir em seguida — Cookbooks
 
 Esta página intencionalmente para no boilerplate. O YAML específico do produto, exemplos de periféricos e receitas ponta a ponta ficam no cookbook de cada produto:
 
-- **[reTerminal E Series — ESPHome Básico](/pt-br/reterminal_e10xx_with_esphome)** — primeiro dashboard, configuração de Wi-Fi, firmware ZIP pré-compilado para E1001/E1002/E1003/E1004.
-- **[reTerminal E Series — ESPHome Avançado](/pt-br/reterminal_e10xx_with_esphome_advanced)** — botões, buzzer, monitoramento de bateria, sensor SHT4x, deep sleep, dashboards com várias páginas.
-- **[Placa controladora EE04 — ESPHome](/pt-br/EE04_with_esphome_advanced)** — integração completa com o Home Assistant no XIAO ESP32-S3 + EE04 + a tela ePaper de sua escolha.
-- **[Painel ePaper XIAO 7,5" — ESPHome](/pt-br/xiao_075inch_epaper_panel_esphome)** — dashboard mínimo em ESP32-C3.
+- **[reTerminal E Series — ESPHome Display](/pt-br/reterminal_e10xx_with_esphome)** — primeiro dashboard, configuração de Wi-Fi, arquivo ZIP de firmware pré-compilado e exemplos de desenho em ePaper para E1001/E1002/E1003/E1004.
+- **[reTerminal E Series — ESPHome I/O, Battery & Power](/pt-br/reterminal_e10xx_with_esphome_advanced)** — botões, buzzer, LED onboard, monitoramento de bateria, sensor SHT4x, deep sleep e dashboards com múltiplas páginas.
+- **[reTerminal E1001 / E1002 — ESPHome RTC, SD & Microphone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone)** — sincronização de hora com PCF8563 RTC, pinos de alimentação/detecção do cartão microSD e configuração do microfone PDM onboard.
+- **[Placa controladora EE04 — ESPHome](/pt-br/EE04_with_esphome_advanced)** — integração completa com o Home Assistant no XIAO ESP32-S3 + EE04 + sua escolha de tela ePaper.
+- **[Painel ePaper XIAO 7,5" — ESPHome](/pt-br/xiao_075inch_epaper_panel_esphome)** — dashboard mínimo com ESP32-C3.
 - **[Kit DIY TRMNL 7,5" — ESPHome](/pt-br/ogdiy_kit_works_with_esphome)** — usando o hardware do kit com ESPHome em vez da plataforma em nuvem TRMNL.
 
 Quando novos produtos ePaper forem lançados, o cookbook correspondente será adicionado na pasta de cada produto; esta página principal será atualizada para apontar para ele.
@@ -205,7 +206,7 @@ Quando novos produtos ePaper forem lançados, o cookbook correspondente será ad
 
 ### O display permanece em branco após a gravação
 
-- Confirme que as strings `display.platform` e `model` correspondem à sua tela — o modelo errado produz silenciosamente uma atualização em branco.
+- Confirme que as strings `display.platform` e `model` correspondem à sua tela — modelo errado produz silenciosamente uma atualização em branco.
 - Verifique se `busy_pin` e `reset_pin` estão conectados corretamente; uma linha busy solta bloqueará todas as atualizações.
 - Para ePaper colorido (`spectra6`, `7-color`, `bwr`), a primeira atualização pode levar de 25 a 45 segundos; aguarde antes de continuar o debug.
 
@@ -217,11 +218,11 @@ Quando novos produtos ePaper forem lançados, o cookbook correspondente será ad
 
 ### A bateria descarrega mais rápido do que o esperado
 
-O ePaper só economiza energia quando o restante do SoC também está em modo de suspensão. Adicione um bloco `deep_sleep` (veja o cookbook Avançado do seu produto) e reduza o `update_interval`.
+O ePaper só economiza energia quando o restante do SoC também está em modo de suspensão. Adicione um bloco `deep_sleep` (veja o cookbook de E/S, bateria e baixo consumo do seu produto) e reduza o `update_interval`.
 
-Para uma depuração mais aprofundada em um produto específico, consulte o cookbook para esse hardware.
+Para uma solução de problemas mais aprofundada em um produto específico, consulte o cookbook para esse hardware.
 
-## Suporte técnico e discussão sobre produtos
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

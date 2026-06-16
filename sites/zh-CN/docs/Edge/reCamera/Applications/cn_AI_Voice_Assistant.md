@@ -1,6 +1,6 @@
 ---
-title: 基于 reCamera 的 AI 语音交互演示
-description: 本文档介绍了一个基于 reCamera 的智能语音对话演示项目，使用 STT/LLM/TTS，展示 reCamera 如何通过姿态识别触发语音交互，并连接讯飞星火大模型，实现完整的 STT→LLM→TTS 对话流程。
+title: 使用 reCamera 实现 AI 语音交互
+description: 本文档介绍了一个基于 reCamera 的智能语音对话演示，使用 STT/LLM/TTS，展示 reCamera 如何通过姿态识别触发语音交互，并连接讯飞星火大模型，实现完整的 STT→LLM→TTS 对话流程。
 keywords:
   - reCamera
   - AI 边缘视觉
@@ -13,19 +13,19 @@ last_update:
   date: 06/10/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
-updatedAt: '2026-06-10'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/cn/ai_voice_assitant_with_recamera/
 ---
 
-# 基于 reCamera 的 AI 语音交互演示
+# 使用 reCamera 实现 AI 语音交互
 
 ## 介绍
 
 本项目展示了一种通过自然语言与 reCamera 进行交互的方式。在视觉推理触发音频录制后，reCamera 将录音发送到服务器，通过完整的 **STT（语音转文本）→ LLM（大语言模型推理）→ TTS（文本转语音）** 流程进行处理，合成后的语音再返回到 reCamera 播放，从而实现自然语言对话。
 
-你是否曾经希望有一台不仅能“看见”，还可以“理解”和“说话”的相机？通过本项目的架构，利用 reCamera 的麦克风和扬声器，设备不再只是一个视觉工具，而是一个能够自然对话的智能助手。这包括但不限于以下场景：
+你是否曾经希望有一台不仅能“看见”，还能“理解”和“说话”的相机？通过本项目的架构，利用 reCamera 的麦克风和扬声器，设备不再只是一个视觉工具，而是一个能够自然对话的智能助手。这包括但不限于以下场景：
 
-- **智能门禁助手**：将 reCamera 安装在出入口，访客只需通过语音即可完成身份登记、留言或获取路线指引，无需额外的交互屏幕。
+- **智能门禁助手**：将 reCamera 安装在出入口，访客仅通过语音即可完成身份登记、留言或询问路线，无需额外的交互屏幕。
 
 - **工厂安全巡检伙伴**：在工业环境中，当工人双手被占用时，可以通过手势触发语音交互，向 AI 助手询问设备状态、操作手册，或上报异常情况。
 
@@ -44,7 +44,7 @@ url: https://wiki.seeedstudio.com/cn/ai_voice_assitant_with_recamera/
 
 ### 系统架构
 
-整个系统由两部分协同完成：**reCamera 端**和 **PC 服务器端**。架构如下：
+整个系统由两部分协同完成：**reCamera 端** 和 **PC 服务器端**。架构如下：
 
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/AI_Voice_Assistant/arc.png" />
@@ -131,7 +131,7 @@ url: https://wiki.seeedstudio.com/cn/ai_voice_assitant_with_recamera/
 首先，按照官方入门指南完成 reCamera 的基础配置：[reCamera 入门指南](https://wiki.seeedstudio.com/cn/recamera_getting_started/)
 
 完成初始设置后，确保设备已上电并正确连接到网络。
-然后，通过浏览器访问地址 192.168.42.1 登录 reCamera，进入 **Node-RED** 工作空间。
+然后通过浏览器访问 192.168.42.1 登录 reCamera，进入 **Node-RED** 工作空间。
 
 如果你能够成功访问如下所示的 Node-RED 流程界面，则说明配置已完成。
 
@@ -144,7 +144,7 @@ url: https://wiki.seeedstudio.com/cn/ai_voice_assitant_with_recamera/
 本演示提供了一个**预配置的工作流文件**，其中已经包含智能语音助手所需的全部节点和连接。
 你需要按照下面的步骤进行一些配置，以便正确运行本项目。
 
-创建一个新的应用，然后从 [SenseCraft AI 平台](https://sensecraft.seeed.cc/ai/application/) 下载 AI Voice Assistant 工作流文件，并直接导入到 reCamera 中。关于 SenseCraft AI 的教程，请参考链接 [访问 SenseCraft AI reCamera Dashboard](https://wiki.seeedstudio.com/cn/recamera_getting_started/#access-recamera-preview-dashboard)。
+创建一个新应用，然后从 [SenseCraft AI 平台](https://sensecraft.seeed.cc/ai/application/) 下载 AI Voice Assistant 工作流文件，并直接导入到 reCamera 中。关于 SenseCraft AI 的教程，请参考链接 [访问 SenseCraft AI reCamera Dashboard](https://wiki.seeedstudio.com/cn/recamera_getting_started/#access-recamera-preview-dashboard)。
 
 如果你能够成功访问如下所示的 Node-RED 流程界面，则说明工作流已导入成功。
 
@@ -247,13 +247,13 @@ pip install -r requirements.txt
 
 #### 4.3 配置 API 密钥
 
-在运行服务之前，你需要配置 **iFlytek** 的 API 密钥。请前往[iFlytek 开放平台](https://www.xfyun.cn/)注册账号，并开通以下三个服务：
+在运行服务之前，你需要配置 **iFlytek** 的 API 密钥。请前往[iFlytek 开放平台](https://www.xfyun.cn/)注册账号，并开通以下三项服务：
 
 | Service | Purpose | Activation Link |
 |------|------|----------|
-| 语音听写 (STT) | 将用户语音转换为文本 | [iFlytek 语音听写](https://www.xfyun.cn/services/voicedictation) |
-| 星火大模型 (LLM) | 基于文本生成智能回复 | [iFlytek 星火大模型](https://www.xfyun.cn/services/SparkLLM) |
-| 语音合成 (TTS) | 将回复文本转换为语音 | [iFlytek 语音合成](https://www.xfyun.cn/services/online_tts) |
+| 语音听写（STT） | 将用户语音转换为文本 | [iFlytek 语音听写](https://www.xfyun.cn/services/voicedictation) |
+| 星火大模型（LLM） | 基于文本生成智能回复 | [iFlytek 星火大模型](https://www.xfyun.cn/services/SparkLLM) |
+| 语音合成（TTS） | 将回复文本转换为语音 | [iFlytek 语音合成](https://www.xfyun.cn/services/online_tts) |
 
 开通后，在 `server.py` 中填写你的 API 密钥：
 
@@ -284,7 +284,7 @@ python server.py
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/AI_Voice_Assistant/serverlog.png" />
 </div>
 <p align="center">服务启动日志</p>
-服务启动后，将等待来自 reCamera 的音频请求。请确保电脑防火墙允许 5000 端口的入站连接，并确保电脑与 reCamera 处于同一局域网。
+服务启动后，将等待来自 reCamera 的音频请求。请确保电脑防火墙允许 5000 端口的入站连接，并确保电脑与 reCamera 处于同一局域网中。
 
 
 ### 步骤 5：运行 Demo
@@ -292,7 +292,7 @@ python server.py
 1. 确保电脑上的 `server.py` 已启动并在运行
 2. 在 Node-RED 中点击 **Deploy** 部署流程
 3. 站在 reCamera 前方，做出**双臂交叉**手势（肩膀间距小于手肘间距）
-4. reCamera 上的 **蓝色 LED** 亮起，表示开始录音
+4. reCamera 上的**蓝色 LED** 亮起，表示开始录音
 5. 对着麦克风说出你的问题
 6. 蓝色 LED 熄灭后，reCamera 会将音频发送到服务器，并在收到回复后播放。
 <div align="center">
@@ -322,7 +322,7 @@ Speech delivered! Waiting for next interaction.
    摄像头持续采集视频帧，YOLO11 姿态估计模型检测人体关键点（共 17 个关键点，包括肩膀、手肘、手腕等）。
 
 2. **手势触发判断**
-   Function 节点计算左右肩关键点之间的距离以及左右肘关键点之间的距离。当**肩膀距离 < 手肘距离**时，即判定为触发手势（即双臂交叉姿势）。
+   Function 节点计算左右肩关键点之间的距离以及左右手肘关键点之间的距离。当**肩膀距离 < 手肘距离**时，即判定为触发手势（即双臂交叉姿势）。
 
 3. **录音流程**
    触发后：点亮蓝色 LED → 录制音频 → 熄灭蓝色 LED。
@@ -338,13 +338,13 @@ Speech delivered! Waiting for next interaction.
 
 ## 注意事项
 
-- 当前录音间隔设置为 **10 秒**。如果 STT → LLM → TTS 的处理时间超过该间隔，多次触发可能导致流水线拥塞。建议控制 LLM 回复字数（当前系统提示将其限制在 50 词以内），以减少处理时间。
+- 当前录音间隔设置为 **10 秒**。如果 STT → LLM → TTS 的处理时间超过该间隔，多次触发可能导致流水线拥塞。建议控制 LLM 回复字数（当前系统提示将其限制在 50 个单词以内），以减少处理时间。
 - 如果因拥塞导致 CPU 无响应，你可以在 Model 节点中调整 Confidence 属性，以减少误触发并控制触发频率。
 - 使用 `aplay` 播放返回音频时，请指定正确的参数（`-f S16_LE -c 1 -r 16000`），否则可能无法正常播放。具体参数可参考 TTS 生成的音频。
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！如果你在实现特定定制目标时需要指导，或希望进一步扩展工作流，欢迎随时联系我们。我们将为你提供不同层级的支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！如果你在特定定制目标方面需要指导，或希望进一步扩展工作流，欢迎随时联系我们。我们将为你提供不同层级的支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

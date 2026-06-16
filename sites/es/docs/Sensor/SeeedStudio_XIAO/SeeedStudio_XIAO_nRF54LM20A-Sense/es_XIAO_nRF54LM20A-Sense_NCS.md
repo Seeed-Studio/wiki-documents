@@ -1,5 +1,5 @@
 ---
-title: Uso de NRF Connect SDK con Seeed Studio XIAO nRF54LM20A Sense
+title: NRF Connect SDK con Seeed Studio XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_ncs
 sku: 100018440
 last_update:
-  date: 05/13/2026
+  date: 06/15/2026
   author: Brandy
 createdAt: '2025-05-13'
-updatedAt: '2026-05-15'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_ncs/
 ---
 
@@ -21,13 +21,38 @@ import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Uso de nRFConnect SDK con Seeed Studio XIAO nRF54LM20A Sense
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_first.png" style={{width:600, height:'auto'}}/></div>
+
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Consigue uno ahora 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+## Introducción
 
 nRF Connect SDK (NCS) es el kit de desarrollo de software oficial de Nordic Semiconductor, construido sobre el sistema operativo en tiempo real Zephyr RTOS. Proporciona un marco de desarrollo completo, nativo y altamente optimizado para los chips de la serie nRF. En comparación con PlatformIO, NCS ofrece a los desarrolladores un acceso más completo a todas las capacidades de hardware de la serie nRF54, incluyendo compatibilidad nativa con Bluetooth Low Energy (BLE), Thread, Matter y otras pilas de protocolos inalámbricos, así como una gestión de energía y control de periféricos más detallados. Nordic mantiene y actualiza oficialmente este SDK de forma continua, garantizando una compatibilidad óptima con el firmware del chip y acceso temprano a las funciones más recientes.
 
-Este tutorial te guiará paso a paso por todo el proceso: desde la configuración del entorno de desarrollo de nRF Connect SDK y la instalación de la toolchain, hasta la creación y configuración de tu primer proyecto y, finalmente, la grabación de tu primer programa de ejemplo en la XIAO nRF54LM20A Sense para verlo en funcionamiento.
+Este tutorial te guiará paso a paso por todo el proceso: desde la configuración del entorno de desarrollo de nRF Connect SDK y la instalación de la toolchain, hasta la creación y configuración de tu primer proyecto, y finalmente la grabación de tu primer programa de ejemplo en la XIAO nRF54LM20A Sense para verlo en funcionamiento.
 
-## Preparación de hardware
+## Primeros pasos con NCS
+
+### Preparación de hardware
 
 <div className="table-center">
   <table align="center">
@@ -67,252 +92,146 @@ Este tutorial te guiará paso a paso por todo el proceso: desde la configuració
   </table>
 </div>
 
-## Uso de nRF Connect SDK en VSCode
+### Descargar VS Code
 
-<details>
+Descarga según el sistema que estés utilizando [VS Code](https://code.visualstudio.com/download)
 
-<summary>Instalar conocimientos previos sobre nRF Connect SDK</summary>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
-Este documento detalla cómo instalar el entorno de desarrollo de nRF Connect SDK en un ordenador con Windows 11. A continuación se muestra una visión general de las herramientas que deben instalarse
+### Instalar la extensión nRF Connect for VS Code Extension Pack
 
-- Instalar VS Studio Code
+1. Abre VS Code, busca e instala **nRF Connect for VS Code Extension Pack**. Esta extensión instalará automáticamente todas las subextensiones necesarias para la toolchain completa, incluyendo nRF Connect, Kconfig, DeviceTree y más.
 
-  [Visual Studio Code - Code Editing .Redefined](https://code.visualstudio.com/ )
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+2. nRF Connect for VS Code Extension Pack instalará automáticamente las siguientes extensiones por ti.
 
-- nRF Command Line Tools
-- nRF Connect for Desktop
-- Git
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_2.png" style={{width:800, height:'auto'}}/></div>
 
-- Ninja
+### Instalar la toolchain
 
-```cpp
-ninja --version
-```
-
-- CMake
-
-```cpp
-cmake --version
-```
-
-- Zephyr SDK
-
-```cpp
-west --version
-```
-
-- nRF Connect SDK
-- VSCode nRF Connect plugin
-
-***Si ya lo has preinstalado en tu ordenador, puedes comprobar la versión de tu herramienta con el siguiente comando***
-
-</details>
-
-<Steppers>
-
-### Instalar la extensión
-
-Abre VS Code y busca **nRF Connect for VS Code Extension Pack** en el Centro de Plugins. Este paquete de plugins instalará automáticamente otros plugins de VS Code necesarios para nRF Connect.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
-<br />
-La extensión nRF Connect for VS Code permite a los desarrolladores utilizar el popular entorno de desarrollo integrado Visual Studio Code (VS Code IDE) para desarrollar, compilar, depurar y desplegar aplicaciones embebidas basadas en el nRF Connect SDK (Software Development Kit) de Nordic. La extensión incluye herramientas de desarrollo útiles como una interfaz de compilador, enlazador, sistema de compilación completo, depurador habilitado para RTOS, integración perfecta con el nRF Connect SDK, editor de visualización de device tree y un terminal serie integrado.
-
-El paquete de extensión nRF Connect para VS Code incluye los siguientes componentes:
-
-- nRF Connect for VS Code: La extensión principal contiene la interfaz entre el sistema de compilación y el nRF Connect SDK, así como una interfaz para gestionar la versión del nRF Connect SDK y la toolchain.
-- nRF DeviceTree: Proporciona compatibilidad con el lenguaje device tree y un editor de visualización de device tree.
-- nRF Kconfig: Proporciona compatibilidad con el lenguaje Kconfig.
-- nRF Terminal: Terminales serie y RTT.
-- Microsoft C/C++: Añade compatibilidad de lenguaje para C/C++, incluyendo funciones de IntelliSense.
-- CMake: Compatibilidad con el lenguaje CMake.
-- GNU Linker Mapping Files: Compatibilidad con archivos de mapeo del enlazador.
-Podemos descargar cualquier versión preferida del nRF Connect SDK y su toolchain a través de la extensión. La documentación completa de nRF Connect for VS Code está disponible en https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html.
-
-### Instalación de la toolchain
-
-La toolchain es un conjunto de herramientas que trabajan juntas para compilar aplicaciones de nRF Connect SDK, incluyendo ensamblador, compilador, enlazador y componentes de CMake.
-La primera vez que abras nRF Connect for VS Code, se te pedirá que instales la toolchain. Esto suele ocurrir si la extensión no detecta ninguna toolchain instalada en tu ordenador.
-Haz clic en Install Toolchain y se mostrará una lista de versiones de toolchain que se pueden descargar e instalar en tu ordenador. Selecciona la versión de la toolchain que coincida con la versión del nRF Connect SDK que planeas utilizar. Siempre recomendamos utilizar la última versión etiquetada del nRF Connect SDK.
-
-Por defecto, nRF Connect for VS Code solo muestra la pestaña Released (es decir, la versión estable) de la toolchain. Si estás evaluando una nueva función y deseas utilizar la pestaña Preview u otro tipo de pestaña (por ejemplo, Customer Sampling -cs), haz clic en "Show all toolchain versions" como se muestra a continuación:
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_7.png" style={{width:800, height:'auto'}}/></div>
-
-:::note
-**La ToolChain aquí es 3.3.0 o superior**
-:::
-
-### Instalación de nRF Connect SDK
-
-En la extensión nRF Connect para VS Code, haz clic en Manage SDK. Desde el menú Manage SDK, podemos instalar o desinstalar la versión de nRF Connect SDK. Como es la primera vez que utilizamos la extensión, la interfaz solo mostrará dos opciones.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/install_sdk.png" style={{width:800, height:'auto'}}/></div>
-
-Al hacer clic en Install SDK se enumerarán todas las versiones disponibles de nRF Connect SDK que se pueden descargar e instalar localmente. Selecciona la versión de nRF Connect SDK que se requiera para el desarrollo de tu proyecto.
-
-:::note
-**El nRF Connect SDK aquí es 3.2.4 o superior**
-:::
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_8_1.png" style={{width:800, height:'auto'}}/></div>
-
+1. Instala la toolchain requerida para nRF Connect SDK. Utiliza la versión compatible; se recomienda **v3.2.4**.
 
 :::tip
-Si no ves ninguna de estas opciones, asegúrate de tener instalada la última versión del paquete de extensión nRF Connect for VS Code.
-Es importante tener en cuenta que nRF Connect SDK es independiente del IDE, lo que significa que puedes elegir utilizar cualquier IDE o ninguno. El nRF Connect SDK está disponible a través de la interfaz de línea de comandos https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil). La interfaz de línea de comandos (CLI) (nrfutil) descargará e instalará nRF Connect. Sin embargo, recomendamos encarecidamente utilizar nuestra extensión nRF Connect for VS Code con VS Code, ya que integra no solo una cómoda interfaz gráfica de usuario (GUI) y una eficiente interfaz de línea de comandos (CLI), sino que también incluye una serie de funciones que simplificarán enormemente el desarrollo de firmware. Configurar otros IDE para que funcionen con nRF Connect SDK requiere pasos manuales adicionales que van más allá del alcance de este curso.
+
+- La serie Seeed Studio XIAO nRF54LM20A es compatible con la versión v3.2.x. Las versiones v3.3.x y superiores no son compatibles por ahora.
+- La instalación inicial de la toolchain tomará algo de tiempo. Espera pacientemente.
+
+:::
+<br/>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_3.png" style={{width:800, height:'auto'}}/></div>
+
+### Instalar el paquete SDK
+
+1. Abre la extensión nRF Connect, selecciona **Install SDK** y luego elige **nRF Connect SDK**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_4.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+2. Selecciona la versión que coincida con tu toolchain: **v3.2.4**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_5.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+3. Se recomienda utilizar la ruta de instalación predeterminada.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_6.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+:::tip
+
+nRF Connect SDK es bastante grande. Asegúrate de tener una conexión de red estable durante la instalación para evitar fallos.
+
 :::
 
-### Creación de programas de usuario
+### Verificación del entorno
 
-En este ejercicio escribiremos una aplicación sencilla basada en el ejemplo blinky para controlar el parpadeo de los LED en una placa de desarrollo. Lo mismo se aplica a todas las placas de desarrollo compatibles de Nordic Semiconductor (series nRF54, nRF53, nRF52, nRF70 o nRF91). El objetivo es asegurarse de que todas las herramientas necesarias para compilar y grabar el ejemplo estén configuradas correctamente. El enfoque está en aprender cómo crear una aplicación, compilarla y grabarla en una placa de desarrollo con chip Nordic utilizando la plantilla “Copy Example”.
+Después de instalar la toolchain de desarrollo, el entorno integrado para nRF Connect SDK se configurará automáticamente. Para garantizar un desarrollo fluido posterior, recomendamos verificar el entorno en este paso.
 
-- En VS Code, haz clic en el icono de la extensión nRF Connect. En la vista Welcome, haz clic en Create New Application.
+1. Inicia **nRF Terminal**, una terminal integrada de nRF Connect SDK.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_7.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+2. Introduce comandos para comprobar la información de versión de las herramientas necesarias. Puedes copiar y ejecutar los comandos uno por uno para la verificación.
 
-- Escribe blinky en la barra de búsqueda y selecciona el segundo ejemplo Blinky (ruta zephyr/samples/basic/blinky), como se muestra a continuación.
+```bash
+# Check west (project manager & build entry) version
+west --version
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project2.png" style={{width:800, height:'auto'}}/></div>
+# Check CMake (build system generator) version
+cmake --version
 
-El ejemplo Blinky hará que el LED1 de la placa de desarrollo parpadee continuamente. Sin embargo, dado que nuestro nRF54LM20A está equipado con una luz RGB, puedes modificar algunos archivos mediante los siguientes pasos para hacer que la luz RGB brille con varios efectos de iluminación.
+# Check Ninja (build executor) version
+ninja --version
 
-Nuestra primera aplicación se basará en el ejemplo Blinky. El ejemplo Blinky se deriva del bloque de molde Zephyr en nRF Connect SDK, por lo que verás el nombre zephyr en la ruta del ejemplo: zephyr\samples\basic\blinky.
+# Check Python (scripting runtime for west & Zephyr tools) version
+python --version
 
-### Añadir la placa XIAO nRF54LM20A
+# Check ARM cross-compiler (Zephyr toolchain for Cortex-M) version
+arm-zephyr-eabi-gcc --version
 
-<div className="github_container" style={{textAlign: 'center'}}>
-    <a className="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar las bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div>
+# Check OpenOCD (on-chip debugger & flasher via CMSIS-DAP) version
+openocd --version
+```
 
-Para comenzar, **clona el repositorio desde el enlace de GitHub** en tu carpeta local preferida. Una vez clonado, navega al directorio `platform-seeedboards/zephyr/`. **Recuerda esta ruta de la carpeta `zephyr`**;
+- La salida se muestra a continuación. Si falta algún componente, vuelve a instalar la toolchain y asegúrate de tener una red estable durante la instalación.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_8.png" style={{width:800, height:'auto'}}/></div>
+
+### Añadir la ruta de la placa personalizada
+
+Las definiciones de placa para la serie XIAO nRF54LM20A aún no se han fusionado en el repositorio oficial de NCS, por lo que debes añadir la ruta de la placa manualmente.
+
+1. Clona el repositorio **platform-seeedboards** en tu directorio preferido.
 
 ```bash
 git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 ```
 
-Para configurar tu placa para nRF Connect en VS Code, puedes seguir estos pasos:
-
-- Abre VS Code y ve a Settings.
-
-- Escribe nRF Connect en el cuadro de búsqueda.
-
-- Busca el elemento de configuración Board Roots y haz clic en Edit in settings.json.
-
-- Añade la ruta de `zephyr` del archivo de placa descargado XIAO nRF54LM20A al array boardRoots.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/12ncs_2.PNG" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_9.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-:::tip
-Ten en cuenta que el punto final de la ruta añadida es la ruta de la carpeta `boards`, no la ruta de la carpeta `platform-seeedboards`.
-:::
+2. Abre **Settings** en la esquina inferior izquierda de VS Code.
 
-- En la vista de aplicación, haz clic en Add Build Configuration debajo del nombre de la aplicación.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_10.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+3. Busca **nRF Connect**, modifica **Board Roots** y añade la ruta `~\your_path\platform-seeedboards\zephyr`. Aquí se almacenan las definiciones de placa para la serie XIAO nRF54LM20A.
 
-- Podemos seleccionar el modelo de XIAO nRF54LM20A en Board target, y seleccionar el archivo prj.config predeterminado en Base configuration files, y finalmente hacer clic en `Generate and Build` para compilar el archivo.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_11.png" style={{width:800, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/11ncs_1.PNG" style={{width:800, height:'auto'}}/></div>
+### Crear una nueva aplicación
 
-### Descargar el complemento de grabación
+En esta sección, modificaremos un proyecto de ejemplo en blanco.
 
-<Tabs>
-<TabItem  value="window" label="Window" default>
+1. En la extensión, selecciona **Create a blank application** para duplicar la plantilla.
 
-**Plugins adicionales:**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_12.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+2. Nombra el proyecto `blinky` y elige una ruta de almacenamiento.
 
-En Windows, usaremos el gestor de paquetes Chocolatey para instalar OpenOCD.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_13.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+3. Una vez creado, abre el proyecto copiado.
 
-**1.Abre PowerShell (Ejecutar como administrador):**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_14.png" style={{width:800, height:'auto'}}/></div>
+<br/>
 
-- En la barra de búsqueda de Windows, escribe **PowerShell**.
-- Haz clic derecho en **Windows PowerShell** y selecciona **Run as administrator**.
+4. Elimina las configuraciones originales. Este paso elimina interferencias para configurar los ajustes relacionados con XIAO nRF54LM20A en la siguiente fase.
 
-**2.Comprueba la directiva de ejecución de PowerShell:**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_15.png" style={{width:800, height:'auto'}}/></div>
 
-- Escribe `Get-ExecutionPolicy` y pulsa Intro.
-- Escribe `Get-ExecutionPolicy -List` y pulsa Intro.
+### Escribir el programa Blinky
 
-**3.Instala Chocolatey:**
+Dado que la serie XIAO nRF54LM20A utiliza devicetree y asignaciones de pines de hardware personalizadas, es necesario modificar varios archivos. Los archivos que se deben editar se enumeran a continuación.
 
-- Pega y ejecuta el siguiente comando:
+- `main.c`: Programa principal que contiene la lógica de la aplicación.
+- `app.overlay`: Archivo overlay de devicetree para la configuración de periféricos de hardware.
+- `prj.conf`: Archivo de configuración del proyecto para habilitar los módulos Zephyr necesarios.
 
-```cpp
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_16.png" style={{width:800, height:'auto'}}/></div>
+<br/>
 
-Este comando omite la directiva de ejecución para la sesión actual de PowerShell e instala Chocolatey. Después de la instalación, cierra y vuelve a abrir la ventana de PowerShell (ejecutándola aún como administrador).
-
-**4.Instala OpenOCD:**
-
-- En la nueva ventana de PowerShell (como administrador), escribe:
-
-```cpp
-choco install openocd
-```
-
-**5.Verifica la instalación de OpenOCD:**
-
-- Escribe `Get-Command openocd` y pulsa Intro.
-
-- Si la instalación se ha realizado correctamente, este comando mostrará la ruta a openocd.exe.
-
-</TabItem>
-
-<TabItem value="mac" label="Mac OS" default>
-
-**Plugins adicionales:**
-
-En macOS, usaremos el gestor de paquetes Homebrew para instalar las herramientas necesarias.
-
-**1.Instala Homebrew (si aún no está instalado):**
-
-- Abre Terminal.app.
-
-- Ejecuta el siguiente comando:
-
-```cpp
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-- Sigue las indicaciones en pantalla; puede que necesites introducir la contraseña de usuario de macOS. Después de la instalación, ejecuta los comandos que te indique la terminal para añadir Homebrew a tu variable de entorno PATH `(e.g., eval "$(/opt/homebrew/bin/brew shellenv)")`. Luego cierra y vuelve a abrir la terminal.
-
-**2.Instala Ccache:**
-
-En la terminal, escribe:
-
-```cpp
-brew install ccache
-```
-
-**3.Instala OpenOCD:**
-
-En la terminal, escribe:
-
-```cpp
-brew install openocd
-```
-
-**4.Verifica la instalación de OpenOCD::**
-
-- Escribe `which openocd` y pulsa Intro.
-
-- Si la instalación se ha realizado correctamente, este comando mostrará la ruta al ejecutable `openocd`.
-
-</TabItem>
-
-</Tabs>
-
-### Programa de grabación
-
-- Abre los archivos **src/main.c** y **prj.conf** y reemplaza el código original con el siguiente código.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_1.png" style={{width:800, height:'auto'}}/></div>
+1. Modificar el código en main.c
 
 <details>
-<summary>src/main.c</summary>
-<div>
+
+<summary>main.c</summary>
 
 ```c
 
@@ -413,31 +332,22 @@ int main(void)
 
 	return 0;
 }
-
 ```
 
-</div>
 </details>
 
-<details>
-<summary>prj.conf</summary>
-<div>
+2. Añade **xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay**
 
-```prj
-CONFIG_GPIO=y
-CONFIG_PWM=y
-CONFIG_SERIAL=n
+- Crea una carpeta **board** en el directorio raíz del proyecto blinky, al mismo nivel que carpetas como src.
 
-```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_17.png" style={{width:600, height:'auto'}}/></div>
+<br/>
 
-</div>
-</details>
+- Crea el archivo devicetree **xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay** dentro de la carpeta board.
 
 <details>
-<summary>board/xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay</summary>
-1. Si necesitas modificar o redefinir el contenido de los nodos del árbol de dispositivos, crea un nuevo archivo **xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay** en el directorio de Zephyr para vincular explícitamente los nodos de dispositivo.
-2. Si has modificado los archivos del árbol de dispositivos, limpia los archivos originales antes de recompilar para evitar que CMake no reconozca tus cambios.
-<div>
+
+<summary>xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay</summary>
 
 ```dts
 /*
@@ -483,33 +393,59 @@ CONFIG_SERIAL=n
 };
 ```
 
-</div>
 </details>
 
-- Luego abre **Open terminal** y escribe el comando `west flash`.
+3. Modifica el archivo prj.conf para habilitar las configuraciones correspondientes.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_2.png" style={{width:800, height:'auto'}}/></div>
+```conf
+CONFIG_GPIO=y
+CONFIG_PWM=y
+CONFIG_SERIAL=n
+```
+
+1. Ve a la sección **APPLICATIONS** de la extensión y selecciona **Add build configuration**. Confirma las versiones del SDK y del toolchain. Establece **Board Target** en `xiao_nrf54lm20a/nrf54lm20a/cpuapp` y **base configuration files** en `prj.conf`, luego haz clic en **Generate and Build** para crear las configuraciones correspondientes.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_18.png" style={{width:800, height:'auto'}}/></div>
 <br/>
+
 :::tip
- Si se produce un error de west flash, significa que necesitas añadir de nuevo la configuración de compilación, pero primero debes eliminar la compilación incorrecta.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/error.jpg" style={{width:800, height:'auto'}}/></div>
-<br/>
+
+Si `xiao_nrf54lm20a/nrf54lm20a/cpuapp` no se puede encontrar aquí, comprueba si la ruta se añadió correctamente en la sección [Add Custom Board Path](#add-custom-board-path).
+
 :::
 
-</Steppers>
+2. Si la compilación se realiza correctamente, se mostrará la siguiente información en la terminal.
 
-### Explicación del código
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_19.png" style={{width:800, height:'auto'}}/></div>
+<br/>
 
-- **src/main.c**
-Punto de entrada principal de la aplicación que implementa la lógica de demostración, incluyendo la configuración del color del LED, efectos de respiración, control del ritmo de parpadeo, cambio de modo basado en botones y otros comportamientos de interacción con el hardware.
+### Programar el flasheo
 
-- **zephyr/prj.conf**
-Archivo de configuración de Zephyr RTOS para habilitar/deshabilitar componentes del sistema y controladores de periféricos, incluyendo registro (logging), UART, PWM, I2C, SPI, gestión de bajo consumo y otras funcionalidades.
+En esta sección, utilizamos la herramienta west del nRF Connect SDK para flashear el programa.
 
-### Observa el resultado
+1. Conecta el XIAO nRF54LM20A Sense con un cable USB-C. Abre el nRF Terminal e introduce el comando west para flashear el programa.
+
+```bash
+west flash
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_20.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+:::tip
+
+Si el firmware que se va a flashear se genera a partir del primer archivo de configuración creado en **Add build configuration**, debes especificar la ruta de configuración cuando existan varias carpetas de configuración como `build` y `build_1`.
+
+```bash
+# examples: west flash configgration build_1
+west flash --build-dir build_1
+```
+
+:::
+
+### Observar el resultado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:600, height:'auto'}}/></div>
-
 
 ## Soporte técnico y debate sobre el producto
 

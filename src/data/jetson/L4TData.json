@@ -826,11 +826,11 @@
     {
         "product": "j501-agx-orin-64g",
         "l4t": "36.4.4 (GMSL✅)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDPKrVl7UDaTYXmxi1CoTu2AcsHUPKLqNw_olmvlPBODqQ?e=gWuNzv",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCiNRM83_Q1Qq2lodZbxxz7AQb046lJeZh4aTUo20T6ks4",
         "mirrorlink": "",
-        "filename": "mfi_recomputer-robo-agx-orin-64g-j501-6.2.1-36.4.4-2025-11-01.tar.gz",
+        "filename": "mfi_recomputer-robo-agx-orin-64g-j501-6.2.1-36.4.4-2026-02-04.tar.gz",
         "foldername": "mfi_recomputer-robo-agx-orin-j501x",
-        "sha256": "ed82745decdf554d82bd93441f1f4ad149f395a4ba5719664ce2351be8201522"
+        "sha256": "B858312B9DC9EA5D43A104F478C0ABDC"
     },
     {
         "product": "j501-agx-orin-32g",

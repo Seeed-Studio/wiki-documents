@@ -1,5 +1,5 @@
 ---
-description: Este FAQ explica los cambios clave de JetPack 7.2 para Jetson AGX Orin, resume la comparación de inferencia de JetPack 7.2 y JetPack 6.2 realizada por Seeed, y muestra cómo actualizar con Seeed Jetson DevelopTool.
+description: Este FAQ explica los cambios clave de JetPack 7.2 para Jetson AGX Orin, resume la comparación de inferencia de JetPack 7.2 y JetPack 6.2 de Seeed, y muestra cómo actualizar con Seeed Jetson DevelopTool.
 title: Análisis profundo de JetPack 7.2
 keywords:
   - Jetson
@@ -48,12 +48,12 @@ Consulta siempre las notas de la versión de NVIDIA y las notas de la versión d
 
 #### P2: ¿Qué hardware y software comparó Seeed?
 
-Seeed utilizó el mismo módulo Jetson AGX Orin 32GB y comparó los entornos de software JetPack 6.2 y JetPack 7.2 con una carga de trabajo de inferencia de modelo de lenguaje grande.
+Seeed comparó un AGX Orin 32GB Developer Kit con un reComputer J5011 utilizando los entornos de software JetPack 6.2 y JetPack 7.2 y la misma carga de trabajo de inferencia de modelo de lenguaje grande.
 
 | Elemento | Prueba con JetPack 6.2 | Prueba con JetPack 7.2 |
 | --- | --- | --- |
 | Módulo | Jetson AGX Orin 32GB | Jetson AGX Orin 32GB |
-| Placa carrier | AGX Orin H01 | reComputer Classic J5011 |
+| Dispositivo de prueba | AGX Orin 32GB Developer Kit | reComputer J5011 |
 | Jetson Linux | L4T 36.4.3 | L4T 39.2 |
 | Ubuntu | 22.04 | 24.04 |
 | CUDA | 12.6 | 13.x |
@@ -79,7 +79,7 @@ El resultado más práctico es el margen de memoria. En la ejecución con JetPac
 Sí. El siguiente video muestra el efecto de la comparación.
 
 <div class="video-container">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/pE5zINVDc9w" title="JetPack 7.2 and JetPack 6.2 comparison on Jetson AGX Orin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/rO0ZPA2VK9w" title="JetPack 7.2 and JetPack 6.2 comparison on Jetson AGX Orin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 #### P5: ¿Debería actualizar mi dispositivo Jetson a JetPack 7.2?
@@ -90,11 +90,11 @@ Utiliza la siguiente tabla como punto de partida:
 | --- | --- |
 | Nuevo proyecto con Jetson AGX Orin | Considera comenzar con JetPack 7.2 si el BSP, los controladores y la pila de aplicaciones necesarios están disponibles. |
 | Proyecto existente con JetPack 6.x | Valida los módulos del kernel, dependencias de CUDA, motores TensorRT, controladores de cámara y controladores de periféricos antes de la migración. |
-| Cargas de trabajo LLM o VLM limitadas por memoria | Vale la pena evaluar JetPack 7.2 porque la reducción de memoria medida puede facilitar la ejecución de modelos más grandes o canalizaciones de múltiples servicios. |
+| Cargas de trabajo LLM o VLM limitadas por memoria | Vale la pena evaluar JetPack 7.2 porque la reducción de memoria medida puede facilitar la ejecución de modelos más grandes o de canalizaciones con múltiples servicios. |
 | Sistema en producción con placa carrier personalizada | No actualices solo ejecutando `apt upgrade`. Utiliza una imagen completa validada o una ruta OTA oficialmente soportada por Seeed. |
 
 :::caution
-Los modos de mayor rendimiento aumentan los requisitos de potencia y térmicos. Antes de habilitar un modo de alta potencia, confirma que la placa carrier, el adaptador de corriente, la carcasa y el diseño de disipación de calor pueden sostener la carga de trabajo objetivo.
+Los modos de mayor rendimiento incrementan los requisitos de potencia y térmicos. Antes de habilitar un modo de alta potencia, confirma que la placa carrier, el adaptador de corriente, la carcasa y el diseño de disipación de calor pueden sostener la carga de trabajo objetivo.
 :::
 
 #### P6: ¿Cómo puedo actualizar a JetPack 7.2 con Seeed Jetson DevelopTool?
@@ -111,9 +111,9 @@ Flujo de trabajo general:
 
 1. Instala y abre Seeed Jetson DevelopTool.
 2. Selecciona el producto Jetson o el modelo de placa carrier.
-3. Selecciona la versión de L4T o JetPack de destino que coincida con JetPack 7.2.
+3. Selecciona la versión de L4T o JetPack que coincida con JetPack 7.2.
 4. Descarga y extrae el paquete BSP desde la herramienta.
-5. Pon el dispositivo Jetson en modo Force Recovery.
+5. Pon el dispositivo Jetson en Force Recovery Mode.
 6. Detecta el dispositivo desde el PC host.
 7. Inicia el flasheo y espera hasta que el dispositivo se reinicie.
 8. Completa la configuración del primer arranque y verifica la versión del sistema.
@@ -126,7 +126,7 @@ Después de flashear o actualizar, verifica los siguientes elementos antes de ej
 
 - Versiones de JetPack, L4T, CUDA, cuDNN y TensorRT.
 - Frecuencia de GPU, modo de energía y comportamiento térmico bajo carga.
-- Cámara, GMSL, Ethernet, CAN, USB, M.2 y otras interfaces periféricas.
+- Interfaces de cámara, GMSL, Ethernet, CAN, USB, M.2 y otros periféricos.
 - Módulos de kernel personalizados y controladores out-of-tree.
 - Compatibilidad del framework de IA, incluyendo PyTorch, motores TensorRT, compilaciones de llama.cpp y extensiones CUDA.
 - Pruebas de estrés de larga duración para la estabilidad de potencia y temperatura.
@@ -138,9 +138,9 @@ Después de flashear o actualizar, verifica los siguientes elementos antes de ej
 - [NVIDIA JetPack Archive](https://developer.nvidia.com/embedded/jetpack-archive)
 - [Seeed Jetson Wiki](https://wiki.seeedstudio.com/es/)
 
-## Soporte técnico y debate sobre productos
+## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

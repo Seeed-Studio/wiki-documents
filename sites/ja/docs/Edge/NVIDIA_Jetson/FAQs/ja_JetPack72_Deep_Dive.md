@@ -1,5 +1,5 @@
 ---
-description: この FAQ では、Jetson AGX Orin 向けの JetPack 7.2 の主な変更点を説明し、Seeed による JetPack 7.2 と JetPack 6.2 の推論比較結果をまとめ、Seeed Jetson DevelopTool を使ったアップグレード方法を紹介します。
+description: この FAQ では、Jetson AGX Orin 向け JetPack 7.2 の主な変更点を説明し、Seeed による JetPack 7.2 と JetPack 6.2 の推論比較結果をまとめ、Seeed Jetson DevelopTool を使ったアップグレード方法を紹介します。
 title: JetPack 7.2 徹底解説
 keywords:
   - Jetson
@@ -18,7 +18,7 @@ updatedAt: '2026-06-11'
 url: https://wiki.seeedstudio.com/ja/jetpack72_deep_dive/
 ---
 
-# JetPack 7.2 徹底解説：Jetson AGX Orin の推論はどう変わる？
+# JetPack 7.2 徹底解説：Jetson AGX Orin の推論はどう変わるのか？
 
 この FAQ では、JetPack 7.2 が Jetson AGX Orin ユーザーにとって重要である理由、Seeed が JetPack 7.2 と JetPack 6.2 を比較して測定した内容、および Seeed Jetson DevelopTool を使ってアップグレードパスを評価する方法をまとめます。
 
@@ -38,7 +38,7 @@ Seeed が使用したテストプラットフォームは、reComputer Jetson AG
 
 #### Q1: Jetson ユーザー向けの JetPack 7.2 の主な変更点は何ですか？
 
-JetPack 7.2 は、より新しい Jetson Linux ベース、Ubuntu 24.04、CUDA 13、更新された AI ランタイムコンポーネント、およびメモリ効率とエージェント型 AI ワークフロー向けのプラットフォームレベルの改善により、Jetson ソフトウェアスタックを前進させます。
+JetPack 7.2 は、より新しい Jetson Linux ベース、Ubuntu 24.04、CUDA 13、更新された AI ランタイムコンポーネント、そしてメモリ効率やエージェント型 AI ワークフロー向けのプラットフォームレベルの改善により、Jetson ソフトウェアスタックを前進させます。
 
 Jetson AGX Orin 32GB ユーザーにとって最も重要な変更点の 1 つは、Seeed のテストで使用された新しい高性能電力モードです。これにより、同じモジュールでもキャリアボードの電源および熱設計が対応できる場合には、より高い GPU 周波数で動作し、より高い AI スループットを実現できます。
 
@@ -48,12 +48,12 @@ Jetson AGX Orin 32GB ユーザーにとって最も重要な変更点の 1 つ�
 
 #### Q2: Seeed はどのようなハードウェアとソフトウェアを比較しましたか？
 
-Seeed は同じ Jetson AGX Orin 32GB モジュールを使用し、大規模言語モデルの推論ワークロードで JetPack 6.2 と JetPack 7.2 のソフトウェア環境を比較しました。
+Seeed は、AGX Orin 32GB Developer Kit と reComputer J5011 を、JetPack 6.2 および JetPack 7.2 のソフトウェア環境と同一の大規模言語モデル推論ワークロードで比較しました。
 
 | 項目 | JetPack 6.2 テスト | JetPack 7.2 テスト |
 | --- | --- | --- |
 | モジュール | Jetson AGX Orin 32GB | Jetson AGX Orin 32GB |
-| キャリアボード | AGX Orin H01 | reComputer Classic J5011 |
+| テストデバイス | AGX Orin 32GB Developer Kit | reComputer J5011 |
 | Jetson Linux | L4T 36.4.3 | L4T 39.2 |
 | Ubuntu | 22.04 | 24.04 |
 | CUDA | 12.6 | 13.x |
@@ -76,25 +76,25 @@ Seeed の比較では、JetPack 7.2 によってモデル読み込み後のメ�
 
 #### Q4: JetPack 7.2 と JetPack 6.2 の比較結果を動画で見ることはできますか？
 
-はい。以下の動画で比較の様子を見ることができます。
+はい。以下の動画で比較の様子を確認できます。
 
 <div class="video-container">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/pE5zINVDc9w" title="JetPack 7.2 and JetPack 6.2 comparison on Jetson AGX Orin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/rO0ZPA2VK9w" title="JetPack 7.2 and JetPack 6.2 comparison on Jetson AGX Orin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 #### Q5: Jetson デバイスを JetPack 7.2 にアップグレードすべきですか？
 
-検討の出発点として、次の表を参照してください。
+まずは次の表を参考にしてください。
 
 | シナリオ | 推奨事項 |
 | --- | --- |
-| 新規 Jetson AGX Orin プロジェクト | 必要な BSP、ドライバ、およびアプリケーションスタックが利用可能であれば、JetPack 7.2 から開始することを検討してください。 |
+| 新規 Jetson AGX Orin プロジェクト | 必要な BSP、ドライバ、アプリケーションスタックが利用可能であれば、JetPack 7.2 から開始することを検討してください。 |
 | 既存の JetPack 6.x プロジェクト | 移行前に、カーネルモジュール、CUDA 依存関係、TensorRT エンジン、カメラドライバ、および周辺機器ドライバを検証してください。 |
 | メモリに制約されている LLM または VLM ワークロード | 測定されたメモリ削減により、より大きなモデルやマルチサービスパイプラインを実行しやすくなる可能性があるため、JetPack 7.2 を評価する価値があります。 |
-| カスタムキャリアボードを使用した本番システム | `apt upgrade` を実行するだけでアップグレードしないでください。Seeed が提供する検証済みのフルイメージ、または正式にサポートされた OTA パスを使用してください。 |
+| カスタムキャリアボードを用いた本番システム | `apt upgrade` の実行だけでアップグレードしないでください。Seeed が提供する検証済みのフルイメージ、または公式にサポートされた OTA パスを使用してください。 |
 
 :::caution
-高性能モードでは、電力および熱の要件が増加します。高電力モードを有効にする前に、キャリアボード、電源アダプタ、筐体、および放熱設計が対象ワークロードを継続的に処理できることを確認してください。
+高性能モードでは、電力および熱の要件が増加します。高電力モードを有効にする前に、キャリアボード、電源アダプタ、筐体、および放熱設計が対象ワークロードを継続的に支えられることを確認してください。
 :::
 
 #### Q6: Seeed Jetson DevelopTool を使って JetPack 7.2 にどのようにアップグレードできますか？
@@ -105,7 +105,7 @@ Seeed Jetson DevelopTool は、Jetson のファームウェアダウンロード
   <img width={800} src="https://files.seeedstudio.com/wiki/flash-page.png" />
 </div>
 
-JetPack 6.x から JetPack 7.x へのようなメジャーバージョン移行では、Seeed が特定の製品および元のイメージ向けに検証済み OTA パスを明示的に提供していない限り、フルフラッシュを推奨します。
+JetPack 6.x から JetPack 7.x へのようなメジャーバージョン移行では、Seeed が特定の製品および元イメージ向けに検証済み OTA パスを明示的に提供していない限り、フルフラッシュを推奨します。
 
 一般的なワークフロー：
 
@@ -120,16 +120,16 @@ JetPack 6.x から JetPack 7.x へのようなメジャーバージョン移行�
 
 ツールの詳細については、[Seeed Jetson DevelopTool](https://github.com/Seeed-Projects/Seeed-Jetson-DevelopTool) を参照してください。
 
-#### Q7: アップグレード後に何を確認すべきですか？
+#### Q7: アップグレード後に何を検証すべきですか？
 
-フラッシュまたはアップグレード後、本番ワークロードを実行する前に次の項目を確認してください：
+フラッシュまたはアップグレード後、本番ワークロードを実行する前に次の項目を確認してください。
 
-- JetPack、L4T、CUDA、cuDNN、および TensorRT のバージョン。
+- JetPack、L4T、CUDA、cuDNN、TensorRT のバージョン。
 - 負荷時の GPU 周波数、電力モード、および熱挙動。
 - カメラ、GMSL、Ethernet、CAN、USB、M.2 などの周辺インターフェース。
 - カスタムカーネルモジュールおよびツリー外ドライバ。
-- PyTorch、TensorRT エンジン、llama.cpp ビルド、CUDA 拡張を含む AI フレームワークの互換性。
-- 電力および温度の安定性を確認するための長時間ストレステスト。
+- PyTorch、TensorRT エンジン、llama.cpp ビルド、CUDA 拡張などを含む AI フレームワークの互換性。
+- 電力および温度の安定性を確認する長時間ストレステスト。
 
 ## リソース
 
@@ -138,9 +138,9 @@ JetPack 6.x から JetPack 7.x へのようなメジャーバージョン移行�
 - [NVIDIA JetPack Archive](https://developer.nvidia.com/embedded/jetpack-archive)
 - [Seeed Jetson Wiki](https://wiki.seeedstudio.com/ja/)
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択できる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

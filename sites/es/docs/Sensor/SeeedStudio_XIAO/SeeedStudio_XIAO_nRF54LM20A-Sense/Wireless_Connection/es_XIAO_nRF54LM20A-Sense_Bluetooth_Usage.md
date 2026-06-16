@@ -20,20 +20,42 @@ url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_ble/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/xiao_nrf54lm20a_ble.png" style={{width:400, height:'auto'}}/></div>
 
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Consigue uno ahora 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+
 Bluetooth Low Energy (BLE) es un estándar de comunicación inalámbrica de bajo consumo introducido en Bluetooth 4.0. Diseñado para la transmisión intermitente de pequeños datos, permite la conectividad inalámbrica dentro de decenas de metros mientras mantiene un consumo de corriente promedio ultrabajo a nivel de microamperios. Se aplica ampliamente en dispositivos wearables, sensores de hogar inteligente, posicionamiento en interiores y escenarios de IoT industrial.
 
-Impulsado por el SoC nRF54LM20A, la Serie XIAO nRF54LM20A es compatible con Bluetooth LE, Matter, Thread, Zigbee y protocolos propietarios de 2,4 GHz, ofreciendo una tasa de datos máxima de 4 Mbps ideal para escenarios de baja latencia. También admite Bluetooth Channel Sounding y Bluetooth Mesh. Este artículo ilustra su funcionalidad BLE mediante tres programas de ejemplo progresivos, comenzando con la transmisión básica de balizas de difusión (Beacon) y ampliándose a comunicación UART bidireccional y carga de datos de sensores en tiempo real.
+Impulsada por el SoC nRF54LM20A, la Serie XIAO nRF54LM20A es compatible con Bluetooth LE, Matter, Thread, Zigbee y protocolos propietarios de 2,4 GHz, ofreciendo una tasa de datos máxima de 4 Mbps ideal para escenarios de baja latencia. También admite Bluetooth Channel Sounding y Bluetooth Mesh. Este artículo ilustra su funcionalidad BLE mediante tres programas de ejemplo progresivos, comenzando con la transmisión básica de balizas de difusión (Beacon) y ampliando posteriormente a comunicación UART bidireccional y carga de datos de sensores en tiempo real.
 
 :::tip
 
-- Este tutorial está desarrollado sobre el sistema de compilación PlatformIO y Zephyr RTOS. Si no estás familiarizado con la creación de un proyecto para el XIAO nRF54LM20A en PlatformIO, puedes ir a [Getting Sarted With Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/)
+- Este tutorial está desarrollado sobre el sistema de construcción PlatformIO y Zephyr RTOS. Si no estás familiarizado con la creación de un proyecto para la XIAO nRF54LM20A en PlatformIO, puedes ir a [Getting Sarted With Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/)
 - Si deseas aprender más sobre el SoC nRF54LM20A y BLE, visita los siguientes enlaces: [**nRF54LM20A SoC Introduction**](https://www.nordicsemi.com/Products/nRF54LM20A) y [**Bluetooth-Low-Energy for Nordic**](https://www.nordicsemi.com/Products/Wireless/Bluetooth-Low-Energy)
 
 :::
 
 ## Preparación de hardware
 
-Antes de comenzar con la implementación de la rutina, necesitas preparar al menos un XIAO nRF54LM20A Sense.
+Antes de comenzar con la implementación de la rutina, necesitas preparar al menos una XIAO nRF54LM20A Sense.
 
 <div className="table-center">
 <table align="center">
@@ -55,7 +77,7 @@ Antes de comenzar con la implementación de la rutina, necesitas preparar al men
 
 ## Antena Bluetooth
 
-Esta placa utiliza una antena Bluetooth externa. Para garantizar una mejor calidad de señal Bluetooth y mejorar tu experiencia de uso de Bluetooth, se recomienda instalar una antena Bluetooth.
+Esta placa utiliza una antena Bluetooth externa. Para garantizar una mejor calidad de la señal Bluetooth y mejorar tu experiencia de uso de Bluetooth, se recomienda instalar una antena Bluetooth.
 El método de conexión se muestra a continuación:
 
 <div style={{textAlign: 'center'}}>
@@ -68,12 +90,12 @@ El método de conexión se muestra a continuación:
 
 ### Instalación de la antena
 
-Dentro del embalaje del Seeed Studio XIAO nRF54LM20A, hay un conector dedicado para antena Wi-Fi/BT. Para obtener una intensidad óptima de la señal WiFi/Bluetooth, debes sacar la antena incluida en el paquete y conectarla al conector.
+Dentro del embalaje de la Seeed Studio XIAO nRF54LM20A, hay un conector dedicado de antena Wi-Fi/BT. Para obtener una intensidad óptima de la señal WiFi/Bluetooth, debes sacar la antena incluida en el paquete y conectarla al conector.
 <!--  -->
 <div class="table-center">
  <table>
   <tr>
-   <th>Antena FPC de 2,4 GHz A-04 para XIAO nRF54 Serie</th>
+   <th>Antena FPC de 2,4GHz A-04 para XIAO nRF54 Serie</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100039813-2.4ghz-fpc-antenna-_1.86dbi_-for-xiao-nrf54l15.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -91,11 +113,11 @@ Dentro del embalaje del Seeed Studio XIAO nRF54LM20A, hay un conector dedicado p
 
 ## Aplicación
 
-Esta sección presenta las funciones principales de BLE y el método de uso de BLE en XIAO nRF54LM20A Sense mediante casos prácticos.
+Esta sección introduce las funciones principales de BLE y el método de uso de BLE en la XIAO nRF54LM20A Sense mediante casos prácticos.
 
-### BLE Beacon
+### Baliza BLE
 
-Este proyecto implementa una función de BLE Beacon en XIAO nRF54LM20A. El dispositivo sigue emitiendo paquetes de advertising que contienen Manufacturer Specific Data después de encenderse. El paquete contiene un valor de contador que aumenta cada segundo, y la variación de datos en tiempo real puede comprobarse a través de nRF Connect.
+Este proyecto implementa una función de baliza BLE en la XIAO nRF54LM20A. El dispositivo sigue emitiendo paquetes de advertising que contienen Manufacturer Specific Data después de encenderse. El paquete contiene un valor de contador que aumenta cada segundo, y la variación de datos en tiempo real puede comprobarse mediante nRF Connect.
 
 #### Software
 
@@ -119,7 +141,7 @@ Este proyecto implementa una función de BLE Beacon en XIAO nRF54LM20A. El dispo
 };
 ```
 
-2. Habilita las configuraciones de Bluetooth relevantes en `prj.conf`, establece el modo de salida de registro y cambia el nombre del dispositivo Bluetooth a **XIAO-Beacon**.
+2. Habilita las configuraciones relevantes de Bluetooth en `prj.conf`, establece el modo de salida de registro y cambia el nombre del dispositivo Bluetooth a **XIAO-Beacon**.
 
 ```prj
 # GPIO
@@ -334,19 +356,19 @@ manuf_data[6] = 0xAA;
 manuf_data[7] = 0xBB;
 ```
 
-- Abre la herramienta de puerto serie y comprueba que los valores del contador se imprimen línea por línea, alcanzando el recuento actual 3.
+- Abre la herramienta de puerto serie y comprueba que los valores del contador se imprimen línea por línea, alcanzando el conteo actual 3.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_beacon_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-A partir de los resultados anteriores, se puede comprender claramente el proceso de transmisión de paquetes de publicidad BLE personalizados en XIAO nRF54LM20A Sense, lo que facilita una investigación más profunda sobre las características de funcionamiento de BLE. En escenarios de aplicación específicos, se pueden adoptar datos de publicidad para juzgar las condiciones de disparo sin establecer conexiones reales.
+A partir de los resultados anteriores, se puede comprender claramente el proceso de transmisión de paquetes de publicidad BLE personalizados en XIAO nRF54LM20A Sense, lo que facilita una investigación más profunda sobre las características de funcionamiento de BLE. En escenarios de aplicación específicos, se pueden adoptar los datos de advertising para juzgar las condiciones de disparo sin establecer conexiones reales.
 
 ### BLE UART
 
-Este ejemplo demuestra cómo establecer un canal de datos bidireccional a través de BLE en el XIAO nRF54LM20A Sense. Basado en el Nordic UART Service (NUS), realiza una interacción básica en la que los teléfonos móviles envían datos de cadena al dispositivo para obtener una respuesta de eco. Mientras tanto, el dispositivo informa el contador de estado una vez por segundo mediante Notify, ilustrando dos modos principales de transmisión de datos BLE GATT: Write y Notify.
+Este ejemplo demuestra cómo establecer un canal de datos bidireccional mediante BLE en el XIAO nRF54LM20A Sense. Basado en el Nordic UART Service (NUS), realiza una interacción básica en la que los teléfonos móviles envían datos de cadena al dispositivo para obtener una respuesta de eco. Al mismo tiempo, el dispositivo informa el contador de estado una vez por segundo a través de Notify, ilustrando dos modos principales de transmisión de datos BLE GATT: Write y Notify.
 
 #### Software
 
-1. Las configuraciones relevantes del árbol de dispositivos deben habilitarse en `app.overlay` para cambiar el controlador BLE a la implementación nativa de Zephyr.
+1. Las configuraciones relevantes del device tree deben habilitarse en `app.overlay` para cambiar el controlador BLE a la implementación nativa de Zephyr.
 
 ```dts
 /*
@@ -579,7 +601,7 @@ Mientras tanto, puedes buscar y descargar la app nRF Connect en las principales 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. Después de descargar el software, escanea y busca el dispositivo Bluetooth **XIAO BLE UART**, y conéctate siguiendo los pasos a continuación.
+2. Después de descargar el software, escanea y busca el dispositivo Bluetooth **XIAO BLE UART**, y conéctate siguiendo los pasos que se indican a continuación.
 
 <div className="table-center">
 <table align="center">
@@ -603,13 +625,13 @@ Mientras tanto, puedes buscar y descargar la app nRF Connect en las principales 
 </table>
 </div>
 
-- Abre el registro del puerto serie, donde se imprimirán el estado habilitado de Notify y el valor actual del contador.
+- Abre el registro del puerto serie, donde se imprimirán el estado de habilitación de Notify y el valor actual del contador.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_7.png" style={{width:800, height:'auto'}}/></div>
 
 4. Envía datos para demostrar el efecto del reenvío de los datos recibidos.
 
-- Despliega la RX Characteristic, haz clic en el botón **Write**, introduce una cadena como `hello World` y envíala a XIAO nRF54LM20A Sense. Al mismo tiempo, la cadena reenviada se puede recibir a través de la TX Characteristic.
+- Expande la característica RX, haz clic en el botón **Write**, introduce una cadena como `hello World` y envíala a XIAO nRF54LM20A Sense. Mientras tanto, la cadena reenviada se puede recibir a través de la característica TX.
 
 <div className="table-center">
 <table align="center">
@@ -629,7 +651,7 @@ En esta sección, obtendrás una comprensión básica del **mecanismo de suscrip
 
 ### Sensor BLE
 
-Esta sección implementa la función de reporte en tiempo real de datos de movimiento IMU basados en BLE en XIAO nRF54LM20A Sense. Después de que el programa se inicie, el dispositivo habilita automáticamente la publicidad BLE. Los usuarios pueden conectarse al dispositivo y suscribirse a Notify mediante nRF Connect en teléfonos móviles para recibir datos de aceleración X/Y/Z en tiempo real. El LED integrado se enciende cuando la aceleración resultante supera el umbral preestablecido y se apaga cuando está por debajo del umbral, logrando una detección de movimiento básica y una indicación visual.
+Esta sección implementa la función de reporte en tiempo real de datos de movimiento del IMU basado en BLE en XIAO nRF54LM20A Sense. Después de que el programa se inicie, el dispositivo habilita automáticamente la publicidad BLE. Los usuarios pueden conectarse al dispositivo y suscribirse a Notify mediante nRF Connect en teléfonos móviles para recibir datos de aceleración X/Y/Z en tiempo real. El LED integrado se enciende cuando la aceleración resultante supera el umbral preestablecido y se apaga cuando está por debajo del umbral, logrando una detección de movimiento básica y una indicación visual.
 
 :::tip
 
@@ -692,7 +714,7 @@ La serie XIAO nRF54LM20A está equipada con el sensor de seis ejes LSM6DS3TR-C. 
 };
 ```
 
-2. Habilita la configuración del IMU y establece el nombre del dispositivo Bluetooth en **XIAO-IMU**.
+2. Habilita la configuración del IMU y establece el nombre del dispositivo Bluetooth como **XIAO-IMU**.
 
 ```prj
 # Standard output
@@ -1116,7 +1138,7 @@ Mientras tanto, puedes buscar y descargar la app nRF Connect en las principales 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. Después de iniciar el software, escanea el dispositivo Bluetooth **XIAO BLE IMU** y conéctate siguiendo los pasos a continuación.
+2. Después de iniciar el software, escanea el dispositivo Bluetooth **XIAO BLE IMU** y conéctalo siguiendo los pasos a continuación.
 
 <div className="table-center">
 <table align="center">
@@ -1127,7 +1149,7 @@ Mientras tanto, puedes buscar y descargar la app nRF Connect en las principales 
 </table>
 </div>
 
-3. Suscríbete y recibe datos IMU desde XIAO nRF54LM20A Sense mediante el mecanismo de suscripción Notify en nRF Connect.
+3. Suscríbete y recibe datos de la IMU desde XIAO nRF54LM20A Sense mediante el mecanismo de suscripción Notify en nRF Connect.
 
 <div className="table-center">
 <table align="center">
@@ -1142,9 +1164,9 @@ Mientras tanto, puedes buscar y descargar la app nRF Connect en las principales 
 
 <div className="table-center"> <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_imu_5.png" style={{width:800, height:'auto'}}/></div></td></div>
 
-4. Agita el XIAO nRF54LM20A Sense para activar el mecanismo de alarma por umbral.
+4. Agita el XIAO nRF54LM20A Sense para activar el mecanismo de alarma de umbral.
 
-- El valor de alarma de umbral se puede modificar mediante definición de macro. El valor estático predeterminado de la aceleración gravitacional estándar en la Tierra es 9.8 m/s².
+- El valor de la alarma de umbral se puede modificar mediante definición de macro. El valor estático predeterminado de la aceleración gravitatoria estándar en la Tierra es 9.8 m/s².
 
 ```c
 /* Motion threshold in m/s^2 - acceleration vector magnitude */

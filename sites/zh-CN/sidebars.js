@@ -1990,7 +1990,7 @@ const sidebars = {
               collapsed: true,
               collapsible: true,
               items: [
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ha',
+                // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ha',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_edgeimpulse',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2',
@@ -2023,9 +2023,8 @@ const sidebars = {
               label: '应用',
               items: [
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_picovoice',
-                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lekiwi',
-                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lerobot_soarm',
-                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_rebot_arm',
+                // 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lerobot_soarm',
+                // 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_rebot_arm',
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_ros',
               ],
             },
@@ -2090,29 +2089,52 @@ const sidebars = {
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_xiao_respeaker',
               },
               items: [
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_i2s_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_rgb_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_volume',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_button',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_record_and_play',
-                // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb', // commented out
                 {
-                  type: 'doc',
-                  id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_generator',
-                  label: '流生成器',
+                  type: 'category',
+                  label: '播放与录音',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_i2s_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_record_and_play',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_volume',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_player_spiffs',
+                  ],
                 },
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_print',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_memory',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_player_spiffs',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_mqtt',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_i2s_tflite',
+                {
+                  type: 'category',
+                  label: '流式传输',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_generator',
+                      label: 'Streams Generator',
+                    },
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_print',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_memory',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_mqtt',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'TensorFlow',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_i2s_tflite',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: '设备控制',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_rgb_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_button',
+                  ],
+                },
               ],
             },
             {
               type: 'category',
               label: '应用',
               items: [
-                'Sensor/ReSpeaker_Lite/Application/cn_respeaker_lite_ha',
+                // 'Sensor/ReSpeaker_Lite/Application/cn_respeaker_lite_ha',
                 'Sensor/ReSpeaker_Lite/Application/cn_respeaker_lite_pi5',
               ],
             },
@@ -2169,10 +2191,36 @@ const sidebars = {
             id: 'Sensor/Sound_event_sensor/cn_sound_event_sensor_intro',
           },
           items: [
-            'Sensor/Sound_event_sensor/cn_sound_event_sensor_intro_ha',
+            // 'Sensor/Sound_event_sensor/cn_sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+          ],
+        },
+        {
+          type: 'category',
+          label: '应用',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            {
+              type: 'category',
+              label: 'Home Assistant',
+              items: [
+                'Sensor/Sound_event_sensor/cn_sound_event_sensor_intro_ha',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ha',
+                'Sensor/ReSpeaker_Lite/Application/cn_respeaker_lite_ha',
+              ],
+            },
+            {
+              type: 'category',
+              label: '机器人',
+              items: [
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_rebot_arm',
+              ],
+            },
           ],
         },
       ],
@@ -4073,6 +4121,8 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_J501_Mini_StarAI_Viola_Fruit_Sorting',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Control_SoArm_by_OpenClaw_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Voice_Control_reBot_Arm_B601_by_Nvidia_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_reBot_Arm_B601_DM_GraspNet_Visual_Grasping',
               ]
             },
             // Managed Services
