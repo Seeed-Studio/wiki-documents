@@ -29,8 +29,8 @@ Aquí verás cómo reCamera ejecuta sin problemas los modelos de detección de o
 
 ## Preparación de hardware
 
-Una reCamera
-Un PC
+- Una reCamera
+- Un PC
 
 <table align="center">
  <tr>
@@ -69,9 +69,9 @@ Un PC
 
 ## 2. Visualización del efecto en tiempo real
 
-Ver para creer. Ejecutamos localmente los modelos de detección y segmentación YOLO11n en la reCamera y utilizamos el protocolo UDP para transmitir el vídeo procesado y los datos de cómputo al PC en tiempo real.
+Ver para creer. Ejecutamos los modelos de detección y segmentación YOLO11n localmente en la reCamera y utilizamos el protocolo UDP para transmitir el vídeo procesado y los datos de cómputo al PC en tiempo real.
 
-La información OSD en la esquina superior izquierda de la pantalla muestra en tiempo real el desglose riguroso del tiempo de consumo de hardware: tiempo de **Pre-proceso**, **Inferencia**, **Post-proceso** y **Total**.
+La información OSD en la esquina superior izquierda de la pantalla muestra en tiempo real el desglose riguroso del tiempo de consumo de hardware: tiempo de **preprocesamiento**, **inferencia**, **posprocesamiento** y **total**.
 
 ### Transmisión en tiempo real de segmentación de instancias YOLO11n
 <div style={{textAlign: 'center'}}>
@@ -104,15 +104,15 @@ Bajo pruebas de esfuerzo de carga completa a largo plazo, reCamera demostró una
   <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/recamera_benchmark_information.png" alt="Benchmark YOLO11n" />
 </div>
 
-:::info 📊 Descripción de unidades e indicadores de prueba
+:::info 📊 Descripción de las unidades e indicadores de prueba
 * **FPS (Frames Per Second)**: Se refiere al **número de fotogramas que el dispositivo puede procesar por segundo**. 20 FPS significa que el sistema puede completar continuamente 20 reconocimientos de imágenes con IA en 1 segundo. Cuanto mayor sea el valor, más fluido será el vídeo de monitorización en tiempo real.
-* **ms (Milisegundos)**: es decir, una milésima de segundo. Aquí se refiere al **tiempo total de extremo a extremo para procesar una sola imagen**. 50 ms significa que el dispositivo tarda un mínimo de solo ***0.05 segundos*** en procesar un fotograma de vídeo (incluyendo preprocesamiento, inferencia en la NPU, posprocesamiento y todos los demás pasos).
-* **W (Watt)**: La unidad de medida del consumo de energía del dispositivo. Aquí 1.5W se refiere al consumo medio de energía de todo el dispositivo reCamera cuando ejecuta modelos de IA a plena carga.
+* **ms (Milisegundos)**: es decir, una milésima de segundo. Aquí se refiere al **tiempo total de extremo a extremo para procesar una sola imagen**. 50 ms significa que el dispositivo tarda un mínimo de solo ***0.05 segundos*** en procesar un fotograma de vídeo (incluidos el preprocesamiento, la inferencia en la NPU, el posprocesamiento y todos los demás pasos).
+* **W (Watt)**: La unidad de medida del consumo de energía del dispositivo. Aquí 1.5W se refiere al consumo de energía medio de todo el dispositivo reCamera cuando ejecuta modelos de IA a plena carga.
 :::
 
 ### 💡 Análisis detallado de los datos
-* **Eficiencia energética extrema**: El consumo de 1.5W es casi equivalente al de un ordenador monoplaca normal en modo de suspensión, pero reCamera puede alcanzar una tasa de fotogramas de detección de 20 FPS/S con este consumo, adaptándose perfectamente a escenarios de monitorización exterior alimentados por baterías o PoE de larga distancia.
-* **Rendimiento de latencia**: La latencia de extremo a extremo ultrabaja de un mínimo de 50 ms para el modelo de detección significa que puede capturar fácilmente objetos en rápido movimiento; mientras que el modelo de segmentación, a pesar de añadir el operador de decodificación de máscaras de alta carga, aún puede mantener una experiencia fluida de hasta 10 FPS/S.
+* **Eficiencia energética extrema**: El consumo de 1.5W es casi equivalente al de una computadora de placa única normal en modo de suspensión, pero reCamera puede alcanzar una tasa de fotogramas de detección de 20 FPS/s con este consumo, adaptándose perfectamente a escenarios de monitorización en exteriores alimentados por baterías o PoE de larga distancia.
+* **Rendimiento de latencia**: La latencia de extremo a extremo ultrabaja de un mínimo de 50 ms para el modelo de detección significa que puede capturar fácilmente objetos en rápido movimiento; mientras que el modelo de segmentación, a pesar de añadir el operador de decodificación de máscaras de alta carga, aún puede mantener una experiencia fluida de hasta 10 FPS/s.
 
 ---
 
@@ -121,8 +121,8 @@ Bajo pruebas de esfuerzo de carga completa a largo plazo, reCamera demostró una
 
 Si ya tienes un dispositivo reCamera, puedes reproducir fácilmente localmente los resultados de prueba anteriores con solo unos pocos pasos sencillos.
 
-### Paso 1: Obtener el ejecutable del Benchmark y el modelo
-Primero, descarga el archivo bin compilado, el archivo de modelo convertido `.cvimodel` y el script de python a través del siguiente enlace:
+### Paso 1: Obtén el ejecutable del Benchmark y el modelo
+Primero, descarga el archivo bin compilado, el archivo de modelo convertido `.cvimodel` y el script de Python a través del siguiente enlace:
 
 ```bash
 [https://drive.google.com/drive/folders/10QfxxT2BkIVX3-DojtMnnyvPfwMESC_6?usp=drive_link](https://drive.google.com/drive/folders/10QfxxT2BkIVX3-DojtMnnyvPfwMESC_6?usp=drive_link)
@@ -132,13 +132,13 @@ Primero, descarga el archivo bin compilado, el archivo de modelo convertido `.cv
   <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/recamera_benchmark_list.png" alt="Lista YOLO11n" />
 </div>
 
-### Paso 2: Subir archivos al dispositivo reCamera
+### Paso 2: Sube los archivos al dispositivo reCamera
 Sube el archivo bin descargado y el archivo de modelo al directorio /userdata/ del dispositivo reCamera.
 <div style={{textAlign: 'center'}}>
   <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/recamera_benchmark_userdata.png" alt="YOLO11n UserData" />
 </div>
 
-### Paso 3: Ejecutar la prueba de Benchmark
+### Paso 3: Ejecuta la prueba de Benchmark
 Ejecuta el siguiente comando en el dispositivo reCamera para iniciar la prueba de benchmark:
 
 ```bash
