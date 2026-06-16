@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/cn/recomputer_industrial_r2000_flash_os/
     </a>
 </div>
 
-reComputer Industrial R20xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器驱动，这款紧凑型边缘 AI 系统可提供 26 TOPS 的算力，用于实时多通道视觉处理。凭借四核 Cortex-A76 CPU、最高 16GB 内存、64GB eMMC 和多功能接口，它能够无缝集成到工业 AI 应用中。
+reComputer Industrial R20xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器驱动，这款紧凑型边缘 AI 系统可提供 26 TOPS 的算力，用于实时多通道视觉处理。凭借四核 Cortex-A76 CPU、最高 16GB 内存、64GB eMMC 以及多功能接口，它能够无缝集成到工业 AI 应用中。
 
 ## 硬件需求
 
@@ -38,8 +38,8 @@ reComputer Industrial R20xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器�
 
 ## 软件需求
 
-- [usbboot 工具](https://github.com/raspberrypi/usbboot)
-- [Raspberry Pi Imager 应用](https://www.raspberrypi.com/software/)
+- [usbboot tool](https://github.com/raspberrypi/usbboot)
+- [Raspberry Pi Imager APP](https://www.raspberrypi.com/software/)
 
 ## 刷写操作系统
 
@@ -56,27 +56,28 @@ reComputer Industrial R20xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器�
 ### 适用于 Windows 主机电脑
 
 - **步骤 1.** 点击下面的链接下载设备[镜像文件](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)
-选择最后一个并点击日期链接进行下载：
+选择最后一个，并点击日期链接进行下载：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_1.png" style={{width:800, height:'auto'}}/></div>
 
 - **步骤 2.** 从**[这里](https://www.raspberrypi.org/software/)**下载 **Raspberry Pi Imager** 软件
 
-- **步骤 3.** 打开 Raspberry Pi Imager 软件
+- **步骤 3.** 打开 Raspberry Pi Imager 软件，在 Device 下选择 "Raspberry Pi 5"，然后点击 "Next"
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/Raspberry_Pi_device.png" alt="pir" width="800" height="auto"/></p>
 
-- **步骤 4.** 在键盘上按下 **CTRL + SHIFT + X** 打开 **Advanced options** 窗口
+- **步骤 4.** 向下滚动并点击 **Use custom** 
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/use_custom.png" alt="pir" width="800" height="auto"/></p>
 
-- **步骤 5.** 点击 **CHOOSE OS** 并选择下载好的镜像文件。
+- **步骤 5.** 然后选择之前下载的镜像文件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_5.png" alt="pir" width="800" height="auto"/></p>
 
-继续烧录镜像直到成功完成。
+- **步骤 6.** 
+然后你就可以开始烧录镜像了。等待该过程成功完成。
 
-拔下 USB-C 接口，再次按下启动按钮，然后开关电源。如果你可以正常登录系统，则说明镜像已成功烧录并可以正常使用。
+拔下 USB-C 接口，再次按下启动按钮，然后重新上电/断电。如果你可以正常登录系统，则说明镜像已成功烧录并可以正常使用。
 
 ### 适用于 MAC 主机电脑
 
@@ -85,9 +86,9 @@ reComputer Industrial R20xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器�
 请打开终端并输入 ```brew -V``` 来检查是否已正确配置 homebrew 环境，你应该能看到已安装的 homebrew 环境版本。
 :::
 
-- **步骤 1.** 访问[此链接](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)下载并安装 **Raspberry Pi Imager** 应用
+- **步骤 1.** 访问[此链接](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)下载并安装 **Raspberry Pi Imager** 应用程序
 
-- **步骤 2.** 打开 **Raspberry Pi Imager** 应用
+- **步骤 2.** 打开 **Raspberry Pi Imager** 应用程序
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="800" height="auto"/></p>
 
@@ -95,13 +96,13 @@ reComputer Industrial R20xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器�
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
 
-在这里你可以**设置主机名、启用 SSH、设置密码、配置 WiFi、设置本地化选项**等
+在这里你可以**设置主机名、启用 SSH、设置密码、配置 WiFi、本地化设置**等
 
 - **步骤 4.** 点击 **CHOOSE OS** 并选择你偏好的操作系统
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="800" height="auto"/></p>
 
-**注意：**你可以通过进入 **Other general purpose OS** 来选择其他操作系统，例如 **64-bit Ubuntu**
+**注意：** 你可以通过进入 **Other general purpose OS** 来选择其他操作系统，例如 **64-bit Ubuntu**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -142,13 +143,13 @@ rpi-imager
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
 
-在这里你可以**设置主机名、启用 SSH、设置密码、配置 WiFi、设置本地化选项**等
+在这里你可以**设置主机名、启用 SSH、设置密码、配置 WiFi、本地化设置**等
 
 - **步骤 5.** 点击 **CHOOSE OS** 并选择你偏好的操作系统
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
 
-**注意：**你可以通过进入 **Other general purpose OS** 来选择其他操作系统，例如 **64-bit Ubuntu**
+**注意：** 你可以通过进入 **Other general purpose OS** 来选择其他操作系统，例如 **64-bit Ubuntu**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -170,7 +171,7 @@ rpi-imager
 
 ### 更新 EEPROM
 
-*如果你有一块 SSD，并且已经通过 eMMC 成功启动了设备，则此方法适用。请确保你的系统为最新的 Raspberry Pi 系统（Bookworm 或更高版本），并且你的 RPi 5 固件已更新到 2023-12-06（12 月 6 日）或更新版本，否则可能无法识别与 NVME 相关的配置。*
+*如果你有一块 SSD，并且已经通过 eMMC 成功启动了设备，则此方法适用。请确保你的系统为最新的 Raspberry Pi 系统（Bookworm 或更高版本），并且 RPi 5 固件已更新到 2023-12-06（12 月 6 日）或更新的版本，否则可能无法识别与 NVME 相关的配置。*
 
 **步骤 1**：确保你的 Raspberry Pi 系统是最新的（Bookworm 或更高版本），输入以下命令来更新 RPi 5 固件：
 
@@ -180,14 +181,14 @@ rpi-imager
   sudo raspi-config
 ```
 
-向下滚动到 `Advanced Options` 并按回车：
+向下滚动到 `Advanced Options` 并按 Enter：
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_1.png" alt="pir" width="800" height="auto" /></div>
 
-向下滚动到 `Bootloader Version` 并按回车：
+向下滚动到 `Bootloader Version` 并按 Enter：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_2.png" alt="pir" width="800" height="auto" /></div>
 
-最后选择 `Latest`，然后按回车：
+最后选择 `Latest`，然后按 Enter：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_3.png" alt="pir" width="800" height="auto" /></div>
 
@@ -203,7 +204,7 @@ rpi-imager
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_6.png" alt="pir" width="800" height="auto" /></div>
 
-**步骤 2**：在主屏幕上点击 **Applications** =>**Accessories** =>**SD Card Copier**，运行 **SD Card Copier** 程序，并按照下图所示将操作系统复制到 NVME SSD。
+**步骤 2**：在主屏幕上点击 **Applications** =>**Accessories** =>**SD Card Copier**，运行 **SD Card Copier** 程序，并按照下图所示将操作系统复制到 NVME SSD 上。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/copy.gif" alt="pir" width="800" height="auto" /></div>
 
@@ -217,14 +218,14 @@ rpi-imager
   sudo raspi-config
 ```
 
-向下滚动到 `Advanced Options` 并按回车：
+向下滚动到 `Advanced Options` 并按 Enter：
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_1.png" alt="pir" width="800" height="auto" /></div>
 
-**步骤 2**：向下滚动到 `Boot Order` 并按回车：
+**步骤 2**：向下滚动到 `Boot Order` 并按 Enter：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_2.png" alt="pir" width="800" height="auto" /></div>
 
-**步骤 3**：选择 `NVMe/USB Boot` 并按回车：
+**步骤 3**：选择 `NVMe/USB Boot` 并按 Enter：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_3.png" alt="pir" width="800" height="auto" /></div>
 
@@ -232,7 +233,7 @@ rpi-imager
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="800" height="auto" /></div>
 
-**步骤 4**：通过选择 `Back` 或按 Esc 键返回第一个界面。然后使用右方向键移动到 Finish。
+**步骤 4**：通过选择 `Back` 或按 Esc 键返回到第一个界面。然后使用右方向键移动到 Finish。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_5.png" alt="pir" width="800" height="auto" /></div>
 
@@ -242,7 +243,7 @@ rpi-imager
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
