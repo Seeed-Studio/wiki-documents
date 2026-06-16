@@ -19,8 +19,29 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_onboard/
 # XIAO nRF54LM20A Sense の内蔵センサーの使用方法
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png" style={{width:400, height:'auto'}}/></div>
-<br/>
-XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーションをサポートする豊富なオンボードセンサーが搭載されています。姿勢認識用の 6 軸センサー LSM6DS3TR-C、PDM デジタル出力と無指向性集音に対応したデジタル MEMS マイク MSM261DGT006 を備えており、インテリジェントボイスのシナリオに適しています。本記事では、XIAO nRF54LM20A の豊富なオンボード周辺機能に基づく開発および使用方法を紹介します。
+
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  今すぐ入手 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーションをサポートする豊富なオンボードセンサーが搭載されています。姿勢認識用の 6 軸センサー LSM6DS3TR-C、PDM デジタル出力と全方向集音に対応し、インテリジェントボイスシナリオに適したデジタル MEMS マイク MSM261DGT006 を備えています。本記事では、XIAO nRF54LM20A の豊富なオンボード周辺機能に基づく開発および使用方法を紹介します。
 
 :::tip
 
@@ -30,13 +51,13 @@ XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーション�
 
 ## ハードウェアの準備
 
-本記事は XIAO nRF54LM20A Sense をベースに開発されており、事前に関連ハードウェアを用意する必要があります。
+本記事は XIAO nRF54LM20A Sense をベースに開発されており、あらかじめ関連するハードウェアを用意する必要があります。
 
 <div className="table-center">
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-   <th>Seeed Studio XIAO 用 6x10 RGB WS2812 マトリクス</th>
+   <th>6x10 RGB WS2812 Matrix for Seeed Studio XIAO</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -59,7 +80,7 @@ XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーション�
 
 ## IMU
 
-LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジャイロスコープを統合した 6 軸センサーで、STMicroelectronics が提供する iNEMO 慣性計測ユニット (IMU) に属します。XIAO nRF54LM20A Sense では、このセンサーは割り込みトリガによるデータ出力をサポートしています。加速度のフルスケール範囲は ±2/±4/±8/±16 g、角速度の範囲は ±125/±250/±500/±1000/±2000 dps で、持続的な低消費電力モードをサポートしており、さまざまなモーション検出シナリオに適しています。オンボードチップは I2C プロトコルを介してこのセンサーと通信し、データを取得します。
+LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジャイロスコープを統合した 6 軸センサーで、STMicroelectronics が提供する iNEMO 慣性計測ユニット (IMU) に属します。XIAO nRF54LM20A Sense では、このセンサーは割り込みトリガによるデータ出力をサポートしています。フルスケール加速度範囲は ±2/±4/±8/±16 g、角速度範囲は ±125/±250/±500/±1000/±2000 dps で、持続的な低消費電力モードをサポートしており、さまざまな動作検知シナリオに適しています。オンボードチップは I2C プロトコルを介してこのセンサーと通信し、データを取得します。
 :::tip
 
 - LSM6DS3TR-C の詳細については、[Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) および [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf) を参照してください。
@@ -68,7 +89,7 @@ LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジ
 
 ### 6 軸データの取得
 
-1. デバイスツリーファイル `app.overlay` を編集し、LSM6DS3TR-C が使用するハードウェアピンをデバイスツリーにバインドします。IMU_SDA と IMU_SCL を i2c30 ノードにバインドし、XIAO nRF54LM20A Sense 上の P0.08 と P0.07 に対応させます。割り込みトリガピン IMU_INT1 を P0.06 にバインドします。
+1. デバイスツリーファイル `app.overlay` を編集し、LSM6DS3TR-C が使用するハードウェアピンをデバイスツリーにバインドします。IMU_SDA と IMU_SCL を i2c30 ノードにバインドし、XIAO nRF54LM20A Sense 上の P0.08 および P0.07 に対応させます。割り込みトリガピン IMU_INT1 を P0.06 にバインドします。
 
 :::tip
 
@@ -312,7 +333,7 @@ int main(void)
 <br/>
 
 :::tip
-IMU の性能を直接検証したい場合は、Platform-seeedboards リポジトリをクローンし、examples ディレクトリ内の zephyr-imu サンプルを見つけて、コンパイルして書き込むことでテストを開始できます。
+IMU の性能を直接検証したい場合は、Platform-seeedboards リポジトリをクローンし、examples ディレクトリ内の zephyr-imu サンプルを見つけてコンパイルおよび書き込みを行い、テストを開始してください。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -329,23 +350,38 @@ IMU の性能を直接検証したい場合は、Platform-seeedboards リポジ�
 - 3 軸デジタル加速度センサ：X、Y、Z 各軸方向の加速度を測定します。
 - 3 軸デジタルジャイロスコープ：X、Y、Z 各軸周りの角速度を測定します。
 
+:::tip
+
+1. シリアルモニタでデータを確認する際は、ボーレートを 115200 に設定してください。
+2. PlatformIO IDE のシリアルモニタ用に、**platformio.ini** 設定ファイル内でボーレートを 115200 に指定してください。
+
+```ini
+[env:seeed-xiao-nrf54lm20a]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+framework = zephyr
+board = seeed-xiao-nrf54lm20a
+monitor_speed = 115200
+```
+
+:::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboar_imu_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### 応用
 
-IMU は 3 軸加速度データをフュージョンして、姿勢認識のためのピッチ、ヨー、ロールの姿勢角を算出できます。また、対応するコントローラと連携してモーションコントロールを実現したり、姿勢トリガによるウェイクアップなどの低消費電力シナリオに適用することもできます。
+IMU は 3 軸加速度データを融合して、姿勢認識のためのピッチ、ヨー、ロールの姿勢角を算出できます。また、対応するコントローラと連携してモーションコントロールを実現したり、姿勢トリガによるウェイクアップなどの低消費電力シナリオに適用したりできます。
 
 #### Electronic Ocean
 
-これは XIAO nRF54LM20A Sense のオンボード IMU をベースにしたサンプルです。姿勢データを収集し、加速度情報をフュージョンして、動作状態を RGB ライトパネル上にマッピングし、視覚的な海のリズム効果を実現します。
+これは XIAO nRF54LM20A Sense のオンボード IMU をベースにしたサンプルです。姿勢データを収集し、加速度情報を融合して動作状態を RGB ライトパネル上にマッピングし、視覚的な海のリズム効果を実現します。
 
 - **傾きによる水位制御** — 左右のロール傾きで水位の高さを調整
 - **波のアニメーション** — 3 層の周波数を重ね合わせた波面、2D 波の伝播と端での反射効果
-- **流体慣性** — 慣性を持つ水面；急激な傾きでオーバーシュートが発生し、その後の揺り戻しが生じます
-- **反転検出** — ボードを反転させると表示が自動的にミラー反転
+- **流体慣性** — 慣性を持つ水面；急激に傾けるとオーバーシュートが発生し、その後の揺り戻しが生じる
+- **反転検出** — ボードが反転すると表示が自動的に反転
 - **ダイナミックカラー** — 各列ごとにランダムなグラデーションの海の色調に切り替え
 
-さらに、main.c 内のマクロ定義を通じて、ボードの RGB 配列構成を変更することもできます。
+さらに、main.c 内のマクロ定義を通じて、ボードの RGB 配列設定を変更できます。
 
 ```cpp
 #define COLS 10          // Number of matrix columns
@@ -476,7 +512,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### IMU ウェイクアップ
 
-このルーチンでは、電源投入後に RGB のグリーンチャネルが点灯して消灯し、その後システムは超低消費電力スリープモードに入ります。ボードがタップを検出すると、割り込みによって XIAO nRF54LM20A Sense がウェイクアップされます。タップイベントは記録され、シリアルポートを通じて出力されます。
+このルーチンでは、電源投入後に RGB のグリーンチャネルが点灯して消灯し、その後システムは超低消費電力スリープモードに入ります。ボードがタップを検出すると、割り込みによって XIAO nRF54LM20A Sense がウェイクアップします。タップイベントは記録され、シリアルポート経由で出力されます。
 
 IMU ウェイクアップ機能を実装するには、このルーチンをダウンロードしてください。
 
@@ -588,7 +624,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <br/>
 :::tip
 
-検知位置はあくまで参考です。正確なタップ位置の認識は、IMU フュージョン制御アルゴリズムに依存します。
+検知位置はあくまで参考値です。正確なタップ位置の認識は、IMU 融合制御アルゴリズムに依存します。
 
 :::
 
@@ -598,11 +634,11 @@ XIAO nRF54LM20A Sense に採用されているチップには GRTC ハードウ�
 
 RTC はタイムスタンプカウントをサポートしており、電源断後も動作時間を記録できるため、ログ記録や時間追跡に役立ちます。
 
-このセクションでは、XIAO nRF54LM20A Sense 上で実装されたサンプルプログラムを紹介します。電源投入後、RTC を介してコンパイル時刻からのタイムスタンプを取得し、1 秒ごとにデータを出力します。System OFF モードに入った後は、RTC アラームによってシステムがウェイクアップされ、カウントを継続します。
+本セクションでは、XIAO nRF54LM20A Sense 上で実装されたサンプルプログラムを紹介します。電源投入後、RTC を介してコンパイル時刻からのタイムスタンプを取得し、1 秒ごとにデータを出力します。System OFF モードに入った後は、RTC アラームによってシステムがウェイクアップし、カウントを継続します。
 
-1. [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) を main.c ファイルにコピーします。RTC 機能を使用してタイムスタンプを出力します。
+1. [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) を main.c ファイルにコピーします。RTC 関数を使用してタイムスタンプを出力します。
 
-2. デバイスツリー `app.overlay` を修正して、RTC ノードを有効にします。
+2. デバイスツリー `app.overlay` を変更して RTC ノードを有効にします。
 
 ```dts
 / {
@@ -632,7 +668,7 @@ RTC はタイムスタンプカウントをサポートしており、電源断�
 };
 ```
 
-3. 関連する RTC 設定を有効にするために prj.conf ファイルを編集します。
+3. prj.conf ファイルを編集して、関連する RTC 設定を有効にします。
 
 ```prj
 # Console and serial
@@ -662,7 +698,7 @@ CONFIG_NEWLIB_LIBC=y
 
 ### 結果
 
-- プログラムはコンパイルおよび書き込み時点からカウントを開始します。シリアルポートツールを開いて動作状況を確認すると、期待されるすべての機能が実装されていることが分かります。
+- プログラムはコンパイルおよび書き込み時点からカウントを開始します。シリアルポートツールを開いて動作状況を確認すると、期待されるすべての機能が実装されていることがわかります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -673,7 +709,7 @@ XIAO nRF54LM20A Sense には、音声入力用に MSM261DGT006 デジタル MEMS
 
 :::tip
 
-XIAO nRF54LM20A シリーズの中で、マイクを搭載しているのは XIAO nRF54M20A Sense のみであり、開発ボードの左下隅に配置されています。
+XIAO nRF54LM20A シリーズの中で、マイクを搭載しているのは XIAO nRF54M20A Sense のみであり、開発ボードの左下に配置されています。
 
 :::
 
@@ -681,14 +717,14 @@ XIAO nRF54LM20A シリーズの中で、マイクを搭載しているのは XIA
 
 このセクションでは、音声サンプルを通してマイク機能をデモします。具体的な手順は次のとおりです。
 
-- BOOT ボタンを押すと RGB-G LED が点灯し、録音を開始します。もう一度押すと録音が停止します（最大 10 秒）。
-- 録音後、音声ファイルは Bluetooth を介してホストコンピュータに送信されます。送信中は RGB-G LED が点滅します。
-- Windows 上で受信スクリプトを実行し、音声ファイルをデスクトップに保存します。
+- BOOT ボタンを押すと RGB-G LED が点灯し、録音を開始します。もう一度押すと録音を停止します（最大 10 秒）。
+- 録音後、音声ファイルは Bluetooth 経由でホストコンピュータに送信されます。送信中は RGB-G LED が点滅します。
+- Windows 上で受信用スクリプトを実行し、音声ファイルをデスクトップに保存します。
 - 送信が完了すると RGB-G LED は消灯します。
 
 1. <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> からプログラムをコピーして `main.c` に貼り付けます。
 
-2. デバイスツリーファイル `app.overlay` を修正して、BLE ノードをバインドします。
+2. デバイスツリーファイル `app.overlay` を変更して、BLE ノードをバインドします。
 
 ```dts
 
@@ -744,7 +780,7 @@ dmic_dev: &pdm20 {
 };
 ```
 
-2. shturl.c ファイルを修正して、Bluetooth とマイクの設定を有効にし、Bluetooth デバイス名を **XIAO MIC** に設定します。
+2. shturl.c ファイルを変更して、Bluetooth とマイク用の設定を有効にし、Bluetooth デバイス名を **XIAO MIC** に設定します。
 
 ```prj
 # Audio / DMIC
@@ -813,7 +849,7 @@ CONFIG_ASSERT=y
 
 ### 結果
 
-プログラムをコンパイルして書き込み、その後 Windows コンピュータ上でスクリプトを使用して Bluetooth 経由で録音された音声を受信します。
+プログラムをコンパイルして書き込み、その後 Windows コンピュータを使用して、スクリプトを用いて Bluetooth 経由で録音した音声を受信します。
 
 1. Python スクリプトを実行します
 
@@ -971,7 +1007,7 @@ if __name__ == "__main__":
 </details>
 <br/>
 
-スクリプトの実行コマンド：
+スクリプト実行コマンド：
 
 ```bash
 python ble_recorder_receiver.py
@@ -983,7 +1019,7 @@ BLE UUID はすでに Python プログラム内で設定されているため、
 
 2. 結果を確認する
 
-- BOOT キーを押して録音を開始します。緑色の RGB LED が点灯している間は録音中であることを示します。マイクに向かって大きな声で話し、その後もう一度 BOOT キーを押して録音を停止します。緑色の RGB LED が点滅している場合は、音声ファイルを送信中であることを意味します。
+- BOOT キーを押して録音を開始します。緑色の RGB LED が点灯している場合は、録音中であることを示します。マイクに向かって大きな声で話し、再度 BOOT キーを押して録音を停止します。緑色の RGB LED が点滅している場合は、オーディオファイルを送信中であることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -993,14 +1029,14 @@ BLE UUID はすでに Python プログラム内で設定されているため、
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- 受信した音声ファイルとそのバイトサイズが表示されます。
+- 受信したオーディオファイルとそのバイトサイズが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

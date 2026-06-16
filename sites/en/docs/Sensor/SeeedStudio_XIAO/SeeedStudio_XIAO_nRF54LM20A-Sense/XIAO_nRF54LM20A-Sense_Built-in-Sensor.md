@@ -19,7 +19,28 @@ url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_onboard/
 # Usage of Built-in Sensors for XIAO nRF54LM20A Sense
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png" style={{width:400, height:'auto'}}/></div>
-<br/>
+
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Get One Now 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
 The XIAO nRF54LM20A Sense is equipped with abundant on-board sensors to support multi-scenario applications. It includes the LSM6DS3TR-C six-axis sensor for posture recognition, and the MSM261DGT006 digital MEMS microphone that supports PDM digital output and omnidirectional sound pickup, which is suitable for intelligent voice scenarios. This article introduces the development and usage methods based on the rich on-board peripherals of XIAO nRF54LM20A.
 
 :::tip
@@ -328,6 +349,21 @@ After flashing the firmware, you can open the serial port assistant on your PC f
 
 - 3-axis digital accelerometer: Measures acceleration along the X, Y, and Z axes.
 - 3-axis digital gyroscope: Measures angular velocity around the X, Y, and Z axes.
+
+:::tip
+
+1. Set the baud rate to 115200 when viewing data via the serial monitor.
+2. Specify the baud rate as 115200 in the **platformio.ini** configuration file for the PlatformIO IDE serial monitor.
+
+```ini
+[env:seeed-xiao-nrf54lm20a]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+framework = zephyr
+board = seeed-xiao-nrf54lm20a
+monitor_speed = 115200
+```
+
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboar_imu_1.png" style={{width:800, height:'auto'}}/></div>
 

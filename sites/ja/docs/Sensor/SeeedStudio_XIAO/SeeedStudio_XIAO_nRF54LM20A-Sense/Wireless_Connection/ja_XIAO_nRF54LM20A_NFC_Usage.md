@@ -19,10 +19,32 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_nfc/
 # XIAO nRF54LM20A Sense 向け NFC
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF54LM20A_NFC.png" style={{width:400, height:'auto'}}/></div>
-<br/>
-近距離無線通信（NFC）は、2 つのデバイス間で少量のデータをワイヤレス転送するための技術です。非常にシンプルな通信プロトコルを使用するため、Bluetooth® Low Energy よりも素早く接続できます。ただし、NFC は磁気誘導を利用して通信を行うため、デバイス同士が接続するには非常に近く（10 cm 未満）にある必要があります。】
 
-- *Nordic シリーズチップ向けの NFC チュートリアルおよびリファレンスについては、[Near Field Communication (NFC)](https://docs.nordicsemi.com/bundle/ncs-3.2.0/page/nrf/protocols/nfc/index.html) を参照してください。*
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  今すぐ入手 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+<br/>
+近距離無線通信（NFC）は、2 つのデバイス間で少量のデータをワイヤレス転送するための技術です。非常にシンプルな通信プロトコルを使用するため、Bluetooth® Low Energy よりも素早く接続できます。ただし、NFC は磁気誘導を利用して通信を行うため、デバイス同士を接続するには非常に近づける必要があります（10 cm 未満）。】
+
+- *Nordic シリーズチップ向けの NFC チュートリアルとリファレンスについては、[Near Field Communication (NFC)](https://docs.nordicsemi.com/bundle/ncs-3.2.0/page/nrf/protocols/nfc/index.html) を参照してください。*
 - *NFC の技術仕様は [NFC Forum specification overview](https://nfc-forum.org/build/specifications) から入手できます。*
 
 XIAO nRF54LM20A には、NFC 機能をさらに探索・活用するための NFC インターフェースが予約されています。
@@ -69,13 +91,13 @@ XIAO nRF54LM20A では、外部 NFC アンテナ用のデフォルトピンは P
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_1.png" style={{width:600, height:'auto'}}/></div>
 <br/>
-- 実配線図
+- 実際の接続図
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_2.jpg" style={{width:600, height:'auto'}}/></div>
 <br/>
 :::caution
 
-このはんだ付け作業は比較的難しく、高度なはんだ付けスキルが必要です。人身事故やデバイスの損傷を避けるため、安全対策に十分注意してください。
+このはんだ付け作業は比較的難易度が高く、熟練したはんだ付けスキルが必要です。人身事故やデバイスの損傷を避けるため、安全対策に十分注意してください。
 
 :::
 
@@ -146,9 +168,9 @@ Witaj świecie!
 
 ### NFC Launch App
 
-このセクションでは NFC 機能を扱います。**nRF Toolbox for Bluetooth LE** を検索してください。
+このセクションでは NFC のアプリ起動機能を扱います。**nRF Toolbox for Bluetooth LE** を検索してください。
 
-1. 拡張機能内で空のサンプルプロジェクトを作成し、既存のサンプルをコピーするオプションを選択してから **NFC Launch App** を選択します。[NFC Records text](#NFC-Records-text) を参照して設定およびコンパイルを行います。
+1. 拡張機能内で空のサンプルプロジェクトを作成し、既存のサンプルをコピーするオプションを選択してから **NFC Launch App** を選びます。設定とコンパイルは [NFC Records text](#nfc-records-text) を参照して行ってください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -180,9 +202,9 @@ Witaj świecie!
 
 ## まとめ
 
-NFC 機能は、データ書き込みや低消費電力でのウェイクアップなど、さまざまなシナリオで再利用できます。nRF Connect SDK には対応するサンプルコードが用意されています。これらのサンプルを拡張して実際のアプリケーションに応用できます。例えば、NFC の低消費電力ウェイクアップとモーター制御を組み合わせることで、日常使用に適したシンプルなスマートロックを実現できます。
+NFC 機能は、データ書き込みや低消費電力でのウェイクアップなど、さまざまなシナリオで再利用できます。nRF Connect SDK には対応するサンプルコードが用意されており、これらを拡張して実際のアプリケーションに応用できます。例えば、NFC の低消費電力ウェイクアップとモーター制御を組み合わせることで、日常的に使用できるシンプルなスマートロックを実現できます。
 
-さらに、上記の例を通じて、XIAO nRF54LM20A 上での NFC 実装について基本的な理解が得られたと考えています。皆さまの創造的なアイデアやオープンソースコミュニティへの貢献を楽しみにしています。
+さらに、上記の例を通じて、XIAO nRF54LM20A 上での NFC 実装について基本的な理解が得られたと思います。皆さまの創造的なアイデアやオープンソースコミュニティへの貢献を楽しみにしています。
 
 ## 技術サポートと製品ディスカッション
 
