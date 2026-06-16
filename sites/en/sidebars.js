@@ -4132,6 +4132,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/J501_Mini_StarAI_Viola_Fruit_Sorting',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Control_SoArm_by_OpenClaw_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Voice_Control_reBot_Arm_B601_by_Nvidia_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/reBot_Arm_B601_DM_GraspNet_Visual_Grasping',
               ]
             },
