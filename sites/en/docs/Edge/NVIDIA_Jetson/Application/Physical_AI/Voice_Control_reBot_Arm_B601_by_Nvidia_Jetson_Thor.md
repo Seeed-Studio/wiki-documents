@@ -1,5 +1,5 @@
 ---
-description: ...
+description: This wiki shows how to deploy a local voice-controlled robotic grasping system on NVIDIA Jetson Thor with the reBot Arm B601. It covers Jetson environment setup, Whisper speech recognition, Ollama local LLM deployment, OpenWebUI integration, GraspNet-based grasp planning, and voice-command control for robotic grasping tasks.
 title: Voice Control reBot Arm B601 by Nvidia Jetson Thor
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg
 slug: /voice_control_rebot_arm
