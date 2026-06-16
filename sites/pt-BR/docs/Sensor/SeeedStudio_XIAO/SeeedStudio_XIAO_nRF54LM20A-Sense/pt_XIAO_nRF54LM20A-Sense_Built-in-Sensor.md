@@ -19,8 +19,29 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_onboard/
 # Uso dos sensores integrados do XIAO nRF54LM20A Sense
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png" style={{width:400, height:'auto'}}/></div>
-<br/>
-O XIAO nRF54LM20A Sense está equipado com abundantes sensores integrados para suportar aplicações em múltiplos cenários. Ele inclui o sensor de seis eixos LSM6DS3TR-C para reconhecimento de postura e o microfone digital MEMS MSM261DGT006, que suporta saída digital PDM e captação de som omnidirecional, sendo adequado para cenários de voz inteligente. Este artigo apresenta os métodos de desenvolvimento e uso com base nos ricos periféricos integrados do XIAO nRF54LM20A.
+
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Adquira agora 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+O XIAO nRF54LM20A Sense vem equipado com abundantes sensores integrados para dar suporte a aplicações em múltiplos cenários. Ele inclui o sensor de seis eixos LSM6DS3TR-C para reconhecimento de postura e o microfone digital MEMS MSM261DGT006, que oferece saída digital PDM e captação de som omnidirecional, sendo adequado para cenários de voz inteligente. Este artigo apresenta os métodos de desenvolvimento e uso com base nos ricos periféricos integrados do XIAO nRF54LM20A.
 
 :::tip
 
@@ -36,7 +57,7 @@ Este artigo é desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa p
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-   <th>Matriz RGB WS2812 6x10 para Seeed Studio XIAO</th>
+   <th>Matriz RGB 6x10 WS2812 para Seeed Studio XIAO</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -59,10 +80,10 @@ Este artigo é desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa p
 
 ## IMU
 
-O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor suporta saída de dados acionada por interrupção. Ele possui uma faixa de aceleração de escala completa de ±2/±4/±8/±16 g e uma faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir dados.
+O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor oferece saída de dados acionada por interrupção. Ele possui faixa de aceleração de escala completa de ±2/±4/±8/±16 g e faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir os dados.
 :::tip
 
-- Para mais informações sobre o LSM6DS3TR-C, visite: [Visão geral do produto LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) e [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
+- Para mais informações sobre o LSM6DS3TR-C, visite: [Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) e [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
 
 :::
 
@@ -72,7 +93,7 @@ O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de
 
 :::tip
 
-- Para o pinout do XIAO nRF54LM20A, clique em [XIAO nRF54LM20A Sense Pin List](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_getting_started/#visão-geral-do-hardware) para ver os detalhes.
+- Para o pinout do XIAO nRF54LM20A, clique em [XIAO nRF54LM20A Sense Pin List](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_getting_started/#hardware-overview) para ver os detalhes.
 
 :::
 
@@ -329,6 +350,21 @@ Após gravar o firmware, você pode abrir o assistente de porta serial no seu PC
 - Acelerômetro digital de 3 eixos: mede a aceleração ao longo dos eixos X, Y e Z.
 - Giroscópio digital de 3 eixos: mede a velocidade angular em torno dos eixos X, Y e Z.
 
+:::tip
+
+1. Defina a taxa de baud para 115200 ao visualizar dados via monitor serial.
+2. Especifique a taxa de baud como 115200 no arquivo de configuração **platformio.ini** para o monitor serial da IDE PlatformIO.
+
+```ini
+[env:seeed-xiao-nrf54lm20a]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+framework = zephyr
+board = seeed-xiao-nrf54lm20a
+monitor_speed = 115200
+```
+
+:::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboar_imu_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### Aplicação
@@ -337,12 +373,12 @@ A IMU pode fundir dados de aceleração de três eixos para calcular os ângulos
 
 #### Oceano Eletrônico
 
-Este é um exemplo baseado na IMU integrada da XIAO nRF54LM20A Sense. Ele coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, obtendo efeitos visuais de ritmo oceânico.
+Este é um exemplo baseado na IMU integrada da XIAO nRF54LM20A Sense. Ela coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, alcançando efeitos visuais de ritmo oceânico.
 
 - **Controle de nível de água por inclinação** — Ajuste a altura do nível de água por meio da inclinação de roll para a esquerda e para a direita
 - **Animação de ondas** — Superfície de ondas com sobreposição de três camadas de frequência, propagação de ondas 2D e efeito de reflexão nas bordas
-- **Inércia do fluido** — Superfície de água com momento; inclinação rápida causa overshoot e subsequente oscilação de retorno
-- **Detecção de inversão** — A tela é espelhada automaticamente quando a placa é virada
+- **Inércia do fluido** — Superfície da água com momento; inclinação rápida causa overshoot e subsequente oscilação de retorno
+- **Detecção de inversão** — A exibição é automaticamente espelhada quando a placa é virada
 - **Cor dinâmica** — Troca de tons oceânicos em gradiente aleatório para cada coluna
 
 Além disso, você pode modificar a configuração da matriz RGB da placa por meio de definições de macro em main.c.
@@ -440,7 +476,7 @@ Além disso, você pode modificar a configuração da matriz RGB da placa por me
 };
 ```
 
-3. Habilite as configurações relacionadas ao uso da IMU
+3. Habilite configurações relacionadas ao uso da IMU
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -600,9 +636,9 @@ O RTC suporta contagem de carimbo de data/hora e pode registrar o tempo de opera
 
 Esta seção apresenta um programa de exemplo implementado na XIAO nRF54LM20A Sense. Após a energização, ele obtém carimbos de data/hora a partir do horário de compilação via RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será despertado pelo alarme do RTC para continuar a contagem.
 
-1. Copie [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções de RTC para imprimir o carimbo de data/hora.
+1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções de RTC para imprimir o carimbo de data e hora.
 
-2. Modifique a árvore de dispositivo `app.overlay` para habilitar o nó RTC.
+2. Modifique a árvore de dispositivo `app.overlay` para habilitar o nó de RTC.
 
 ```dts
 / {
@@ -632,7 +668,7 @@ Esta seção apresenta um programa de exemplo implementado na XIAO nRF54LM20A Se
 };
 ```
 
-3. Edite o arquivo prj.conf para ativar as configurações relevantes de RTC.
+3. Edite o arquivo prj.conf para habilitar as configurações relevantes de RTC.
 
 ```prj
 # Console and serial
@@ -669,7 +705,7 @@ CONFIG_NEWLIB_LIBC=y
 
 ## MIC
 
-O XIAO nRF54LM20A Sense está equipado com o microfone digital MEMS MSM261DGT006 para entrada de voz. Ele se conecta diretamente via interface PDM sem exigir um ADC. É adequado para dispositivos vestíveis, dispositivos inteligentes, reconhecimento de voz, gravação de áudio e outros cenários de aplicação que exigem funções de detecção acústica.
+O XIAO nRF54LM20A Sense está equipado com o microfone digital MEMS MSM261DGT006 para entrada de voz. Ele se conecta diretamente via interface PDM sem necessidade de um ADC. É adequado para dispositivos vestíveis, dispositivos inteligentes, reconhecimento de voz, gravação de áudio e outros cenários de aplicação que exigem funções de detecção acústica.
 
 :::tip
 
@@ -681,7 +717,7 @@ Entre a série XIAO nRF54LM20A, apenas o XIAO nRF54M20A Sense está equipado com
 
 Esta seção demonstra a função do microfone por meio de um exemplo de voz. O processo específico é o seguinte:
 
-- Pressione o botão BOOT, o LED RGB-G permanecerá aceso e iniciará a gravação; pressione-o novamente para parar a gravação (máximo de 10 segundos).
+- Pressione o botão BOOT, o LED RGB-G permanecerá aceso e iniciará a gravação; pressione novamente para parar a gravação (máximo de 10 segundos).
 - Após a gravação, o arquivo de áudio será enviado ao computador host via Bluetooth. O LED RGB-G pisca durante a transmissão.
 - Execute o script de recepção no Windows para salvar o arquivo de áudio na área de trabalho.
 - O LED RGB-G apaga após a conclusão da transmissão.
@@ -744,7 +780,7 @@ dmic_dev: &pdm20 {
 };
 ```
 
-2. Modifique o arquivo shturl.c para ativar as configurações de Bluetooth e microfone e defina o nome do dispositivo Bluetooth como **XIAO MIC**.
+2. Modifique o arquivo shturl.c para habilitar as configurações de Bluetooth e microfone, e defina o nome do dispositivo Bluetooth como **XIAO MIC**.
 
 ```prj
 # Audio / DMIC
@@ -815,7 +851,7 @@ CONFIG_ASSERT=y
 
 Compile e grave o programa e, em seguida, use um computador com Windows para receber o áudio gravado via Bluetooth com a ajuda de scripts.
 
-1. Execute o script em Python
+1. Execute o script Python
 
 Instale as bibliotecas dependentes necessárias antes da execução:
 
@@ -825,7 +861,7 @@ pip install bleak
 
 <br/>
 
-Copie o arquivo de script em Python.
+Copie o arquivo de script Python.
 
 <details>
 
@@ -978,17 +1014,17 @@ python ble_recorder_receiver.py
 ```
 
 :::tip
-O UUID BLE já está configurado no programa em Python, portanto ele se conectará automaticamente após a execução do script.
+O UUID BLE já está configurado no programa Python, portanto ele se conectará automaticamente após executar o script.
 :::
 
-2. Verifique o resultado
+2. Verificar o resultado
 
 - Pressione a tecla BOOT para iniciar a gravação. O LED RGB verde constante indica que a gravação está em andamento. Você pode falar em voz alta em direção ao microfone e, em seguida, pressionar a tecla BOOT novamente para parar a gravação. O LED RGB verde piscando significa que o arquivo de áudio está sendo transmitido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- Abra a porta serial, o log será impresso. Defina a taxa de baud para 921600.
+- Abra a porta Serial, ela irá imprimir o log. Por favor, defina a taxa de Baud para 921600.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -1000,7 +1036,7 @@ O UUID BLE já está configurado no programa em Python, portanto ele se conectar
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

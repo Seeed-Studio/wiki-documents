@@ -19,10 +19,32 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_nfc/
 # XIAO nRF54LM20A Sense 的 NFC 功能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF54LM20A_NFC.png" style={{width:400, height:'auto'}}/></div>
-<br/>
-近场通信（Near Field Communication，NFC）是一种用于在两台设备之间无线传输少量数据的技术。它使用非常简单的通信协议，因此比 Bluetooth® Low Energy 连接更快。然而，由于 NFC 使用磁感应来实现通信，设备之间必须非常接近（< 10 cm）才能建立连接。】
 
-- *关于 Nordic 系列芯片的 NFC 教程和参考资料，请参阅 [Near Field Communication (NFC)](https://docs.nordicsemi.com/bundle/ncs-3.2.0/page/nrf/protocols/nfc/index.html)*
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  立即获取 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+<br/>
+近场通信（NFC）是一种用于在两台设备之间无线传输少量数据的技术。它使用非常简单的通信协议，因此比 Bluetooth® Low Energy 连接更快。然而，由于 NFC 使用磁感应来实现通信，设备之间必须非常接近（< 10 cm）才能建立连接。】
+
+- *有关 Nordic 系列芯片的 NFC 教程和参考资料，请参阅 [Near Field Communication (NFC)](https://docs.nordicsemi.com/bundle/ncs-3.2.0/page/nrf/protocols/nfc/index.html)*
 - *NFC 的技术规范可从 [NFC Forum specification overview](https://nfc-forum.org/build/specifications) 获取。*
 
 XIAO nRF54LM20A 预留了 NFC 接口，方便你进一步探索和使用 NFC 功能。
@@ -57,7 +79,7 @@ XIAO nRF54LM20A 预留了 NFC 接口，方便你进一步探索和使用 NFC 功
 
 :::tip
 
-Nordic NFC 天线在 Seeed Studio Bazaar 上没有单独销售，因此你需要从其他渠道购买。
+Nordic NFC 天线目前未在 Seeed Studio Bazaar 单独销售，因此你需要从其他渠道购买。
 
 :::
 
@@ -75,7 +97,7 @@ Nordic NFC 天线在 Seeed Studio Bazaar 上没有单独销售，因此你需要
 <br/>
 :::caution
 
-该焊接过程难度较高，需要熟练的焊接技巧。操作时请注意安全，避免造成人身伤害和设备损坏。
+该焊接过程相对较难，需要熟练的焊接技巧。请注意安全防护，避免造成人身伤害和设备损坏。
 
 :::
 
@@ -104,7 +126,7 @@ Nordic NFC 天线在 Seeed Studio Bazaar 上没有单独销售，因此你需要
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_4.png" style={{width:800, height:'auto'}}/></div>
 
-4. 打开项目，在对应扩展下添加 XIAO nRF54LM20A 的配置并进行编译。
+4. 打开工程，在对应扩展下添加 XIAO nRF54LM20A 的配置并进行编译。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_6.png" style={{width:800, height:'auto'}}/></div>
 
@@ -114,9 +136,9 @@ Nordic NFC 天线在 Seeed Studio Bazaar 上没有单独销售，因此你需要
 
 #### 结果
 
-请准备一部带有 NFC 功能的手机来尝试本实验。
+请选择一部带有 NFC 功能的手机来尝试本实验。
 
-1. 若想更详细地查看 NFC 读取信息，需要根据你的系统下载相应的 App。
+1. 若想更详细地查看 NFC 读取信息，你需要根据系统下载相应的 App。
 
 - iOS ：[NFC Tools](https://apps.apple.com/app/nfc-tools/id1252962749)
 - Android：[nRF NFC Toolbox](https://play.google.com/store/apps/details?id=no.nordicsemi.android.nfc)
@@ -148,7 +170,7 @@ Witaj świecie!
 
 本节介绍 NFC 启动应用功能。请搜索 **nRF Toolbox for Bluetooth LE**。
 
-1. 在扩展中创建一个空白示例工程，选择复制现有示例，并选择 **NFC Launch App**。配置和编译方式可参考 [NFC Records text](#NFC-文本记录)。
+1. 在扩展中创建一个空白示例工程，选择复制现有示例，并选择 **NFC Launch App**。配置并编译时可参考 [NFC Records text](#nfc-文本记录)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -158,7 +180,7 @@ Witaj świecie!
 
 #### 结果
 
-1. 若想更详细地查看 NFC 读取信息，需要根据你的系统下载相应的 App。
+1. 若想更详细地查看 NFC 读取信息，你需要根据系统下载相应的 App。
 
 - iOS ：[NFC Tools](https://apps.apple.com/app/nfc-tools/id1252962749)
 - Android：[nRF NFC Toolbox](https://play.google.com/store/apps/details?id=no.nordicsemi.android.nfc)
@@ -182,11 +204,11 @@ Witaj świecie!
 
 NFC 功能可以在多种场景中复用，例如数据写入和低功耗唤醒。nRF Connect SDK 提供了相应的示例代码，你可以在此基础上扩展为实际应用。例如，将 NFC 低功耗唤醒与电机控制结合，就可以实现一个简单的日常使用智能门锁。
 
-此外，通过以上示例，我们相信你已经对在 XIAO nRF54LM20A 上实现 NFC 有了基本了解。期待你将更多创意和项目贡献到开源社区。
+此外，通过以上示例，我们相信你已经对在 XIAO nRF54LM20A 上实现 NFC 有了基本了解。期待你将更多创意应用于实践，并为开源社区做出贡献。
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用产品的过程中尽可能顺利。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
