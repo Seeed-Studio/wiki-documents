@@ -1,5 +1,5 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-16 13:39:13 (北京时间)
+// 生成时间: 2026-06-16 14:53:06 (北京时间)
 // 多语言页面: 2335 个
 
 (function() {
@@ -3334,7 +3334,7 @@
     "ja",
     "pt"
   ],
-  "/ai_voice_interaction_with_recamera": [
+  "/ai_voice_assitant_with_recamera": [
     "cn",
     "en",
     "es",

@@ -45,7 +45,7 @@ const docList = [
   ],
   [
     {
-      "path": "/ai_voice_interaction_with_recamera",
+      "path": "/ai_voice_assitant_with_recamera",
       "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
       "title": "AI Voice Interaction with reCamera",
       "date": "2026-06-10",
