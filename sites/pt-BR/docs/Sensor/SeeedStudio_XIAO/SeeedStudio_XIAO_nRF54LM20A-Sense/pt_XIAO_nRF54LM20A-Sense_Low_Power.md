@@ -20,6 +20,27 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_low_power/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/xiao_nrf54lm20a_power.png" style={{width:400, height:'auto'}}/></div>
 
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Adquira agora 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
 O XIAO nRF54LM20A é construído em torno do SoC nRF54LM20 e apresenta consumo de energia ultrabaixo. Seu desempenho excepcional em baixo consumo estende de forma eficaz o tempo de operação do dispositivo para aplicações críticas em bateria, como wearables, nós finais de IoT e unidades de sensoriamento remoto. Este documento descreve como implementar e implantar vários modos de baixo consumo no XIAO nRF54LM20A.
 
 :::tip
@@ -62,7 +83,7 @@ O XIAO nRF54LM20A é capaz de usar uma bateria de lítio de 3,7 V como entrada d
 :::caution
 
 Tenha cuidado para não causar curto-circuito entre os terminais positivo e negativo e queimar a bateria e o equipamento durante a soldagem.
-Se a bateria estiver com carga, nunca a solde na placa, pois isso pode queimar a placa de circuito. Um curto-circuito enquanto o circuito estiver energizado representa um risco significativo; é recomendável usar um adaptador.
+Se a bateria estiver com carga, nunca a solde na placa, pois isso pode queimar a placa de circuito. Um curto-circuito enquanto o circuito está energizado representa um risco significativo; é recomendável usar um adaptador.
 
 :::
 
@@ -72,7 +93,7 @@ O modo de baixo consumo é implementado no XIAO nRF54LM20A usando funções como
 
 ### Software
 
-1. Modifique o arquivo device tree com extensão `.overlay`.
+1. Modifique o arquivo device tree com a extensão `.overlay`.
 
 ```dts
 /* Switch BT HCI from Nordic SDC (needs nrfxlib binary) to Zephyr SW controller */
@@ -176,7 +197,7 @@ Após gravar o firmware, podemos usar um medidor de consumo de energia para medi
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-Ao mesmo tempo, você pode fazer a varredura via Bluetooth e encontrar o dispositivo anunciando sob o nome `XIAO nRF54LM20A`.
+Ao mesmo tempo, você pode fazer a varredura via Bluetooth e encontrar o dispositivo anunciando com o nome `XIAO nRF54LM20A`.
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
@@ -196,15 +217,15 @@ Os resultados de teste acima foram medidos em condições de laboratório. Os va
 
 :::
 
-## Modo de ultrabaixo consumo
+## Modo de consumo ultrabaixo
 
-O XIAO nRF54LM20A atinge o modo de ultrabaixo consumo por meio do System OFF. Ao entrar nesse modo, todos os clocks dos periféricos são interrompidos e a maioria dos periféricos é totalmente desligada, resultando em uma corrente de standby tão baixa quanto 5 µA. Os gatilhos de despertar incluem o temporizador GRTC ou interrupções de GPIO. O estado do sistema não é mantido; após o despertar, o chip se comporta como se tivesse sido reinicializado pela alimentação e o programa reinicia a partir da função main().
+O XIAO nRF54LM20A atinge o modo de consumo ultrabaixo por meio do System OFF. Ao entrar nesse modo, todos os clocks dos periféricos são interrompidos e a maioria dos periféricos é totalmente desligada, resultando em uma corrente de standby tão baixa quanto 5 µA. Os gatilhos de despertar incluem o temporizador GRTC ou interrupções de GPIO. O estado do sistema não é mantido; após o despertar, o chip se comporta como se tivesse sido reinicializado pela alimentação e o programa reinicia a partir da função main().
 
-Esta seção verifica o desempenho prático do modo System OFF no XIAO nRF54LM20A usando o despertar por interrupção de GPIO.
+Esta seção verifica o desempenho prático do modo System OFF no XIAO nRF54LM20A usando despertar por interrupção de GPIO.
 
 ### Software
 
-Neste exemplo, a Flash deve ser desativada manualmente; caso contrário, ela introduzirá uma corrente de fuga adicional de aproximadamente 15 µA e afetará negativamente as aplicações de ultrabaixo consumo.
+Neste exemplo, a Flash deve ser desativada manualmente; caso contrário, ela introduzirá uma corrente de fuga adicional de aproximadamente 15 µA e afetará negativamente aplicações de consumo ultrabaixo.
 
 1. Modifique o arquivo device tree com o sufixo `.overlay`.
 
@@ -246,7 +267,7 @@ CONFIG_POWEROFF=y
 CONFIG_HWINFO=y
 ```
 
-3. Escreva o programa main.c para acordar o chip do modo de ultrabaixo consumo quando o botão Boot onboard for pressionado.
+3. Escreva o programa main.c para acordar o chip do modo de consumo ultrabaixo quando o botão Boot onboard for pressionado.
 
 <details>
 
@@ -473,7 +494,7 @@ O dispositivo entra no modo de consumo ultrabaixo de energia por padrão após s
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_4.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-Ao pressionar o botão BOOT onboard por meio de um monitor serial, você pode acordar o chip para imprimir informações de status antes que ele entre novamente em sono profundo.
+Ao pressionar o botão BOOT onboard por meio de um monitor serial, você pode acordar o chip para imprimir informações de status antes que ele volte a entrar em sono profundo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_5.png" style={{width:800, height:'auto'}}/></div>
 <br/>

@@ -29,8 +29,8 @@ Here, you will see how reCamera smoothly drives the YOLO11n object detection and
 
 ## Hardware Preparation
 
-One reCamera
-One PC
+- One reCamera
+- One PC
 
 <table align="center">
  <tr>

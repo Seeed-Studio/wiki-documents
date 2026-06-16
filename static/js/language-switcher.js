@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-11 10:16:20 (北京时间)
-// 多语言页面: 2327 个
+// 生成时间: 2026-06-16 14:53:06 (北京时间)
+// 多语言页面: 2335 个
 
 (function() {
   'use strict';
@@ -1143,6 +1143,20 @@
     "ja",
     "pt"
   ],
+  "/rebot_arm_b601_dm_graspnet_visual_grasping": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/voice_control_rebot_arm": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/reComputer_A203_Flash_System": [
     "cn",
     "en",
@@ -1354,6 +1368,13 @@
     "pt"
   ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack72_deep_dive": [
     "cn",
     "en",
     "es",
@@ -3313,6 +3334,13 @@
     "ja",
     "pt"
   ],
+  "/ai_voice_assitant_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/ai_parking_slot_monitoring_demo_with_recamera": [
     "cn",
     "en",
@@ -3362,7 +3390,21 @@
     "ja",
     "pt"
   ],
+  "/recamera_qrcode_udp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_source_localization_of_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rtsp_to_webrtc_with_recamera": [
     "cn",
     "en",
     "es",
@@ -5141,6 +5183,13 @@
     "pt"
   ],
   "/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bulk_configuration_chirpstack": [
     "cn",
     "en",
     "es",
@@ -8129,6 +8178,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_esphome_rtc_sd_microphone": [
     "cn",
     "en",
     "es",
