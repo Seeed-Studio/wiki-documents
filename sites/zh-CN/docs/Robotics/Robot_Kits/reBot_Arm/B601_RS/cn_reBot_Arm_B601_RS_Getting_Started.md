@@ -72,7 +72,7 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 2.(Beta版)让 agent 来帮助你初始化机械臂，复制以下内容发送给 agent：
 
 ```text
-请参考 AGENTS.md（https://github.com/Welt-liu/reBot-B601-RS-Skills/blob/main/zh/AGENTS.md）中的流程，帮助用户完成新机械臂的初始化。
+请参考 AGENTS.md（https://github.com/Welt-liu/reBot-B601-Agent-Guide/blob/main/zh/AGENTS.md）中的流程，帮助用户完成新机械臂的初始化。
 ```
 
   注意：如果你购买的是成品套件，请在写入电机id环节提示agent：我购买的是成品套件，帮我扫描1~7电机是否都在线，不要写入重新写入电机id。
@@ -209,14 +209,18 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 - **请严格遵守以上规范。因违规操作、人为失误造成的一切风险与损失，卖家不承担任何责任。**
 
 
-#### web ui写入零点和调试
+#### 写入零点和调试
 
 在浏览器中打开地址 [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/)，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
 
 
 ```bash
-motorbridge-gateway -- --bind 127.0.0.1:9002  
+motorbridge-gateway --bind 127.0.0.1:9002  
 ```
 
 
-使用请参考视频
+使用请参考视频,在控制机械臂运动之前，需要重新设置一次零点。
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1MEJV6TELk&p=1" title="Bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
