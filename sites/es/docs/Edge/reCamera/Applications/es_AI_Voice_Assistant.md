@@ -5,7 +5,7 @@ keywords:
   - reCamera
   - AI Edge Vision
   - Interacción por voz
-slug: /ai_voice_interaction_with_recamera
+slug: /ai_voice_assitant_with_recamera
 sku: 102991897, 100029708, 108990120
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 16
@@ -14,7 +14,7 @@ last_update:
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
 updatedAt: '2026-06-15'
-url: https://wiki.seeedstudio.com/es/ai_voice_interaction_with_recamera/
+url: https://wiki.seeedstudio.com/es/ai_voice_assitant_with_recamera/
 ---
 
 # Interacción de voz con IA con reCamera
