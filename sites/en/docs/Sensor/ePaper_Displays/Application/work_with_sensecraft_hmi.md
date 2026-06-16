@@ -159,7 +159,7 @@ For a display board plus separate ePaper screen, flash the HMI firmware that mat
 
 **Step 1.** Sign in to [SenseCraft HMI](https://sensecraft.seeed.cc/hmi), then open **Tools** from the top menu.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi62.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/256.png" style={{width:1000, height:'auto'}}/></div>
 
 **Step 2.** Select the firmware entry that matches your display. In this example, select the **7.3" Full-Color Display 800 x 480** entry.
 
@@ -181,7 +181,7 @@ If no port appears, press the **RESET** button on the board and try again. Also 
 
 **Step 5.** Wait for the ePaper display to refresh and show the setup QR code.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi67.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi67.png" style={{width:800, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
@@ -229,17 +229,15 @@ Use a 2.4 GHz Wi-Fi network. Many ESP32-S3-based devices do not connect to 5 GHz
 
 After Wi-Fi setup, add the device to your SenseCraft HMI workspace.
 
-**Step 1.** Open the **Workspace** page and click **Add Device**.
+**Step 1.** Open the **Device** page and click **Add Device**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi12.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/255.png" style={{width:700, height:'auto'}}/></div>
 
 **Step 2.** Enter a device name and the pair code shown on the ePaper screen, then click **Create**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi11.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/251.png" style={{width:700, height:'auto'}}/></div>
 
-**Step 3.** Confirm that the device appears in your workspace.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi68.png" style={{width:700, height:'auto'}}/></div>
+**Step 3.** Confirm that the device appears in your Panel.
 
 ## Step 4: Deploy Your First Page
 

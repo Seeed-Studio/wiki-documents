@@ -1,5 +1,5 @@
 ---
-description: Reference guide for driving any compatible Seeed ePaper product with ESPHome and Home Assistant - flashing paths, generic YAML skeleton, and where to find each product's cookbook.
+description: Reference guide for driving any compatible Seeed ePaper product with ESPHome and Home Assistant - YAML workflow, generic skeleton, and where to find each product's cookbook.
 title: Work with ESPHome
 keywords:
   - ePaper display
@@ -20,9 +20,6 @@ url: https://wiki.seeedstudio.com/epaper_work_with_esphome/
 updatedAt: '2026-06-15'
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Work with ESPHome
 
 :::tip Try demos without setting up a development environment
@@ -38,7 +35,7 @@ If you want to quickly preview project results or try the basic demo firmware be
 This page is the **reference manual** for driving any compatible Seeed ePaper product through [ESPHome](https://esphome.io/) and integrating it with [Home Assistant](https://www.home-assistant.io/). It covers the parts that are identical across all hardware:
 
 1. Why you'd choose ESPHome to drive an ePaper display.
-2. The two flashing paths: **ESPHome Web Installer** (zero-config, browser-based) and **ESPHome CLI / HA Add-on** (full YAML control).
+2. How to use the cookbook YAML examples, adapt them to your needs, and flash from your ESPHome dashboard.
 3. The generic YAML skeleton — `wifi`, `api`, `ota`, `display` — that every product specialises with its own pin map.
 4. Where the per-product cookbook lives (peripherals, hardware-specific lambdas, dashboard recipes).
 
@@ -58,7 +55,11 @@ Every Seeed ePaper product on the [main hub page](/seeed_epaper_displays) that h
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
       <td>XIAO ESP32-S3</td>
-      <td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome/">Display basics, HA integration & drawing</a> · <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/">Buttons, buzzer, LED, battery, SHT4x & deep sleep</a> · <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone/">RTC, SD card & microphone</a></td>
+      <td>
+        <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome/">Display basics, HA integration & drawing</a><br/>
+        <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/">Buttons, buzzer, LED, battery, SHT4x & deep sleep</a><br/>
+        <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone/">RTC, SD card & microphone</a>
+      </td>
     </tr>
     <tr>
       <td><strong>EE04 driver board</strong></td>
@@ -89,6 +90,8 @@ Every Seeed ePaper product on the [main hub page](/seeed_epaper_displays) that h
 ## Step 1: Generate ESPHome YAML and flash your firmware
 
 The easiest way to start is to use the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. The hub can generate an ESPHome YAML file from your device and feature selections, so you do not need to assemble the first configuration by hand.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/257.png" style={{width:1000, height:'auto'}}/></div>
 
 Recommended workflow:
 
@@ -259,7 +262,7 @@ You can now drag the entities into a Lovelace dashboard, or — much more intere
 
 This page intentionally stops at the boilerplate. The product-specific YAML, peripheral examples, and end-to-end recipes live in each product's cookbook:
 
-- **[reTerminal E Series — ESPHome Display](/reterminal_e10xx_with_esphome)** — first dashboard, Wi-Fi setup, pre-built firmware ZIP, and ePaper drawing examples for E1001/E1002/E1003/E1004.
+- **[reTerminal E Series — ESPHome Display](/reterminal_e10xx_with_esphome)** — first dashboard, Wi-Fi setup, and ePaper drawing examples for E1001/E1002/E1003/E1004.
 - **[reTerminal E Series — ESPHome I/O, Battery & Power](/reterminal_e10xx_with_esphome_advanced)** — buttons, buzzer, onboard LED, battery monitoring, SHT4x sensor, deep sleep, and multi-page dashboards.
 - **[reTerminal E1001 / E1002 — ESPHome RTC, SD & Microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone)** — PCF8563 RTC time sync, microSD card power/detect pins, and onboard PDM microphone setup.
 - **[EE04 driver board — ESPHome](/EE04_with_esphome_advanced)** — full Home Assistant integration on the XIAO ESP32-S3 + EE04 + your choice of ePaper screen.
@@ -270,23 +273,7 @@ When new ePaper products ship, the corresponding cookbook is added under each pr
 
 ## Common Issues
 
-### Display stays blank after flashing
 
-- Confirm the `display.platform` and `model` strings match your screen — wrong model silently produces a blank refresh.
-- Check the `busy_pin` and `reset_pin` are wired correctly; a dangling busy line will block all refreshes.
-- For colour ePaper (`spectra6`, `7-color`, `bwr`), the first refresh can take 25-45 seconds; wait before debugging further.
-
-### Device doesn't show up in Home Assistant
-
-- Verify the device joined Wi-Fi (check the ESPHome dashboard logs).
-- Make sure `api:` is present in the YAML and that the encryption key in HA matches `secrets.yaml`.
-- Manually add the integration: **Settings → Devices & services → Add Integration → ESPHome**, then enter the device's IP.
-
-### Battery drains faster than expected
-
-ePaper only saves power when the rest of the SoC is also asleep. Add a `deep_sleep` block (see the I/O, battery, and low-power cookbook for your product) and lower the `update_interval`.
-
-For deeper troubleshooting on a specific product, check the cookbook for that hardware.
 
 ## Tech Support & Product Discussion
 

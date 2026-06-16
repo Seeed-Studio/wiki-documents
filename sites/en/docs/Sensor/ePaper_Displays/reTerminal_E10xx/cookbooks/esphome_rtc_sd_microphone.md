@@ -24,6 +24,16 @@ import TabItem from '@theme/TabItem';
 This page assumes you have already completed the [ESPHome display cookbook for reTerminal E Series](/reterminal_e10xx_with_esphome) and your device is online in Home Assistant. For buttons, buzzer, LED, battery monitoring, SHT4x, and deep sleep, see [ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power](/reterminal_e10xx_with_esphome_advanced).
 :::
 
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
 This cookbook continues the reTerminal E Series ESPHome examples with three onboard hardware blocks that are not covered in the display and I/O cookbooks:
 
 - **PCF8563 RTC** - read hardware time from the onboard RTC and sync it from Home Assistant.

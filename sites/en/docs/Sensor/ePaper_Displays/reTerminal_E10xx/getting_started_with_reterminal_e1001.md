@@ -26,7 +26,13 @@ import TabItem from '@theme/TabItem';
 </div><br />
 
 :::tip Try demos without setting up a development environment
-If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/). You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
 :::
 
 :::caution Update Firmware Tips
