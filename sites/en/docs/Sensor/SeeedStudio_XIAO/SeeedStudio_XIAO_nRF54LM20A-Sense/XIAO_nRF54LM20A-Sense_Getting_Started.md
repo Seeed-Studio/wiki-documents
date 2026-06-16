@@ -712,6 +712,19 @@ pio run -t clean  // Clean command
 
 Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html). -->
 
+2. **After installation, zsh: command not found: openocd appears. What's the situation? Do I have to reinstall it?**
+
+When directly entering "openocd" in the terminal, the shell will only search in the directories within the PATH; if the directory has not been added yet, it will prompt that the command cannot be found. Simply add it permanently to ~/.zshrc, following the instructions below
+
+```cpp
+echo 'export PATH="$HOME/Library/Application Support/Seeed/OpenOCD/tool-openocd/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+openocd --version
+```
+3. **What should I do if I previously downloaded Seeed Studio XIAO series boards multiple times and now the drop-down of the Platform project fails?**
+
+It is recommended to clean up before trying again. Too many libraries can cause the addressing to be too long when pulling the project, leading to failure. Clean up the Seeed platform directories with mixed sources, and only keep the one officially used by PlatformIO to avoid further confusion between incorrect directories and old version directories in the future.
+
 ## Resources
 
 ### Seeed Studio XIAO nRF54LM20A
