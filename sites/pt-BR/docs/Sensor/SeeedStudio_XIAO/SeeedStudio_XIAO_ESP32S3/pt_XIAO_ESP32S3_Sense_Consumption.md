@@ -1,5 +1,5 @@
 ---
-description: XIAO ESP32 Sense utiliza diferentes consumos de modos de sono
+description: XIAO ESP32 Sense Use different Sleep Modes Consumptions
 title: Modos de Sono do XIAO ESP32S3 Sense
 keywords:
   - Sleep_Modes
@@ -9,7 +9,7 @@ last_update:
   date: 08/27/2024
   author: Jason
 createdAt: '2024-08-28'
-updatedAt: '2026-03-12'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/pt-br/XIAO_ESP32S3_Consumption/
 ---
 
@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 
 Aqui, apresentarei alguns exemplos simples para demonstrar o uso desses modos de sono de baixo consumo. Todas as placas ESP32 são versáteis, e a placa de desenvolvimento que estou usando neste contexto é a XIAO ESP32S3 Sense.
 
-## Visão Geral do Hardware
+## Visão geral de hardware
 
 <div class="table-center">
   <table align="center">
@@ -34,31 +34,35 @@ Aqui, apresentarei alguns exemplos simples para demonstrar o uso desses modos de
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-## Sono Profundo (Deep-Sleep)
+## Deep-Sleep
 
 ### Introdução
 
-No modo Deep-Sleep, o ESP32 desliga as CPUs, a maior parte da RAM e todos os periféricos digitais temporizados a partir do APB_CLK. Os únicos componentes que permanecem ligados são:
+No modo Deep-Sleep, o ESP32 desliga as CPUs, a maior parte da RAM e todos os periféricos digitais acionados a partir de APB_CLK. Os únicos componentes que permanecem energizados são:
 
 - Controlador RTC
 - Coprocessador ULP
 - Memória RTC FAST
 - Memória RTC SLOW
 
-### Métodos de Despertar
+:::warning
+**Periférico USB desativado durante o Deep Sleep:** Todos os periféricos digitais, incluindo o periférico USB interno (USB-Serial-JTAG), serão desligados durante o Deep Sleep. **A saída serial via USB não estará disponível** enquanto o dispositivo estiver em Deep Sleep. Se você precisar depurar, use um chip USB-UART externo conectado aos pinos UART de hardware.
+:::
+
+### Métodos de despertar
 
 - **Timer Wake-up：**O ESP32 pode acordar automaticamente após um tempo especificado configurando um temporizador.
 
 - **Touchpad Interrupt Wake-up：**O dispositivo pode ser despertado por atividade no touchpad, adequado para aplicações que exigem interação do usuário.
 
-- **External Wake-up：**O ESP32 pode ser acordado por sinais externos (por exemplo, pressionamento de botão), ideal para aplicações de baixo consumo.
+- **External Wake-up：**O ESP32 pode ser acordado por sinais externos (por exemplo, pressionamento de botões), ideal para aplicações de baixo consumo.
 
 - **ULP Coprocessor Activity Wake-up：**O coprocessador ULP pode operar de forma independente, monitorando condições específicas e acordando a CPU principal para economizar energia.
 
@@ -66,7 +70,7 @@ No modo Deep-Sleep, o ESP32 desliga as CPUs, a maior parte da RAM e todos os per
 
 Três exemplos simples do XIAO ESP32 S3 Sense usando o modo DeepSleep são apresentados abaixo.
 
-### Implementação do Código
+### Implementação do código
 
 <Tabs>
 <TabItem  value="DeepSleepExample1" label="TimerWakeUP" default>
@@ -119,7 +123,7 @@ void loop() {
 }
 ```
 
-### Notas Detalhadas
+### Notas detalhadas
 
 ```cpp
 #define uS_TO_S_FACTOR 1000000ULL 
@@ -137,7 +141,7 @@ void loop() {
 RTC_DATA_ATTR int bootCount = 0;
 ```
 
-- Declare uma variável inteira `bootCount` com o atributo `RTC_DATA_ATTR`, que permite que ela mantenha seu valor durante o sono profundo.
+- Declare uma variável inteira `bootCount` com o atributo `RTC_DATA_ATTR`, que permite que ela mantenha seu valor durante o deep sleep.
 
 ```cpp
 void print_wakeup_reason() {
@@ -168,17 +172,17 @@ wakeup_reason = esp_sleep_get_wakeup_cause();
 }
 ```
 
-- `ESP_SLEEP_WAKEUP_EXT0` : Este motivo de despertar indica que o ESP32 acordou devido a um sinal externo detectado em um pino GPIO configurado para I/O de RTC (Relógio em Tempo Real). Isso é normalmente usado para despertar do sono quando um botão ou sensor é acionado.
-- `ESP_SLEEP_WAKEUP_EXT1` : Isso indica que o despertar foi causado por um sinal externo em pinos GPIO gerenciados pelo controlador RTC. Diferente do EXT0, o EXT1 pode lidar com múltiplos pinos e pode acordar quando qualquer um dos pinos especificados mudar de estado (por exemplo, ir para nível baixo ou alto).
+- `ESP_SLEEP_WAKEUP_EXT0` : Este motivo de despertar indica que o ESP32 acordou devido a um sinal externo detectado em um pino GPIO configurado para I/O de RTC (Real-Time Clock). Isso é normalmente usado para despertar do sono quando um botão ou sensor é acionado.
+- `ESP_SLEEP_WAKEUP_EXT1` : Isso indica que o despertar foi causado por um sinal externo em pinos GPIO gerenciados pelo controlador RTC. Diferente do EXT0, o EXT1 pode lidar com vários pinos e pode acordar quando qualquer um dos pinos especificados muda de estado (por exemplo, vai para nível baixo ou alto).
 - `ESP_SLEEP_WAKEUP_TIMER` : Este motivo de despertar significa que o ESP32 acordou após uma duração de temporizador predefinida. Isso é útil para aplicações que precisam executar tarefas periódicas sem exigir interação do usuário.
-- `ESP_SLEEP_WAKEUP_TOUCHPAD` : Isso indica que o ESP32 acordou devido a um evento no touchpad. Se um touchpad configurado para despertar detectar um toque, ele pode trazer o dispositivo para fora do modo de sono.
-- `ESP_SLEEP_WAKEUP_ULP` :  Este motivo de despertar significa que o despertar foi acionado por um programa ULP (Ultra-Low Power). Programas ULP podem ser executados enquanto a CPU principal está em sono profundo e podem acordar o ESP32 quando certas condições são atendidas, permitindo operação de baixo consumo com drenagem mínima da bateria.
+- `ESP_SLEEP_WAKEUP_TOUCHPAD` : Isso indica que o ESP32 acordou devido a um evento no touchpad. Se um touchpad configurado para despertar detectar um toque, ele pode tirar o dispositivo do modo de sono.
+- `ESP_SLEEP_WAKEUP_ULP` :  Este motivo de despertar significa que o despertar foi acionado por um programa ULP (Ultra-Low Power). Programas ULP podem ser executados enquanto a CPU principal está em deep sleep e podem acordar o ESP32 quando certas condições são atendidas, permitindo operação de baixo consumo com drenagem mínima da bateria.
 
 ```cpp
 ++bootCount;
 ```
 
-- Incremente a contagem de inicializações e imprima-a sempre que o dispositivo reiniciar.
+- Incremente a contagem de inicializações e a imprima toda vez que o dispositivo reiniciar.
 
 ```cpp
 print_wakeup_reason();
@@ -198,7 +202,7 @@ Serial.println("This will never be printed");
 
 - `esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);`Habilite o temporizador para acordar o ESP32 após um tempo especificado.
 - `Serial.flush();`Garanta que todos os dados seriais sejam enviados antes de entrar em modo de sono.
-- `esp_deep_sleep_start();`Coloque o ESP32 em modo de sono profundo.
+- `esp_deep_sleep_start();`Coloque o ESP32 em modo de deep sleep.
 
 </TabItem>
 
@@ -260,13 +264,13 @@ void loop() {
 }
 ```
 
-### Notas Detalhadas
+### Notas detalhadas
 
 ```cpp
 #include "driver/rtc_io.h"
 ```
 
-- Inclua o driver de I/O do RTC para acessar o GPIO de RTC.
+- Inclua o driver de I/O do RTC para acessar o GPIO do RTC.
 
 ```cpp
 #define BUTTON_PIN_BITMASK(GPIO) (1ULL << GPIO)  
@@ -277,7 +281,7 @@ RTC_DATA_ATTR int bootCount = 0;
 
 - 2 ^ GPIO_NUMBER em hexadecimal
 - 1 = despertar EXT0, 0 = despertar EXT1
-- Apenas I/O de RTC são permitidos - exemplo de pino do ESP32
+- Somente IO de RTC são permitidos - exemplo de pino do ESP32
 
 ```cpp
   switch (wakeup_reason) {
@@ -290,11 +294,11 @@ RTC_DATA_ATTR int bootCount = 0;
 }
 ```
 
-- `ESP_SLEEP_WAKEUP_EXT0` : Este motivo de despertar indica que o ESP32 acordou devido a um sinal externo detectado em um pino GPIO configurado para E/S de RTC (Relógio em Tempo Real). Isso é normalmente usado para despertar do modo de sono quando um botão ou sensor é acionado.
-- `ESP_SLEEP_WAKEUP_EXT1` : Isso indica que o despertar foi causado por um sinal externo em pinos GPIO gerenciados pelo controlador RTC. Diferente do EXT0, o EXT1 pode lidar com múltiplos pinos e pode acordar quando qualquer um dos pinos especificados mudar de estado (por exemplo, ir para nível baixo ou alto).
+- `ESP_SLEEP_WAKEUP_EXT0` : Este motivo de despertar indica que o ESP32 acordou devido a um sinal externo detectado em um pino GPIO configurado para E/S de RTC (Real-Time Clock). Isso é normalmente usado para acordar do modo de sono quando um botão ou sensor é acionado.
+- `ESP_SLEEP_WAKEUP_EXT1` : Isto indica que o despertar foi causado por um sinal externo em pinos GPIO gerenciados pelo controlador RTC. Diferente do EXT0, o EXT1 pode lidar com múltiplos pinos e pode acordar quando qualquer um dos pinos especificados muda de estado (por exemplo, vai para nível baixo ou alto).
 - `ESP_SLEEP_WAKEUP_TIMER` : Este motivo de despertar significa que o ESP32 acordou após uma duração de temporizador predefinida. Isso é útil para aplicações que precisam executar tarefas periódicas sem exigir interação do usuário.
-- `ESP_SLEEP_WAKEUP_TOUCHPAD` : Isso indica que o ESP32 acordou devido a um evento do touchpad. Se um touchpad configurado para despertar detectar um toque, ele pode tirar o dispositivo do modo de sono.
-- `ESP_SLEEP_WAKEUP_ULP` :  Este motivo de despertar significa que o despertar foi acionado por um programa ULP (Ultra-Low Power). Programas ULP podem ser executados enquanto a CPU principal está em deep sleep e podem acordar o ESP32 quando certas condições são atendidas, permitindo uma operação de baixo consumo com drenagem mínima da bateria.
+- `ESP_SLEEP_WAKEUP_TOUCHPAD` : Isto indica que o ESP32 acordou devido a um evento no touchpad. Se um touchpad configurado para despertar detectar um toque, ele pode tirar o dispositivo do modo de sono.
+- `ESP_SLEEP_WAKEUP_ULP` :  Este motivo de despertar significa que o despertar foi acionado por um programa ULP (Ultra-Low Power). Programas ULP podem ser executados enquanto a CPU principal está em deep sleep e podem acordar o ESP32 quando certas condições são atendidas, permitindo operação de baixo consumo com drenagem mínima da bateria.
 
 ```cpp
   Serial.begin(115200);
@@ -304,8 +308,8 @@ RTC_DATA_ATTR int bootCount = 0;
   print_wakeup_reason();
 ```
 
-- `++bootCount;`Incrementar o número de inicializações e imprimi-lo a cada reboot
-- `print_wakeup_reason();` Imprimir o motivo do despertar do ESP32
+- `++bootCount;`Incrementa o número de inicializações e o imprime a cada reinicialização
+- `print_wakeup_reason();` Imprime o motivo do despertar do ESP32
 
 ```cpp
 #if USE_EXT0_WAKEUP
@@ -315,9 +319,9 @@ RTC_DATA_ATTR int bootCount = 0;
   rtc_gpio_pulldown_en(WAKEUP_GPIO);
 ```
 
-- `esp_sleep_enable_ext0_wakeup(WAKEUP_GPIO, 1);`Habilitar o despertar EXT0 no pino GPIO especificado quando ele for para nível alto.
-- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` Desabilitar o resistor de pull-up no pino GPIO de despertar.
-- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` Habilitar o resistor de pull-down no pino GPIO de despertar.
+- `esp_sleep_enable_ext0_wakeup(WAKEUP_GPIO, 1);`Habilita o despertar EXT0 no pino GPIO especificado quando ele vai para nível alto.
+- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` Desabilita o resistor de pull-up no pino GPIO de despertar.
+- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` Habilita o resistor de pull-down no pino GPIO de despertar.
 
 ```cpp
 #else  
@@ -328,12 +332,12 @@ RTC_DATA_ATTR int bootCount = 0;
 ```
 
 - `esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_HIGH);`DESPERTAR EXT1
-- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` GPIO33 é ligado ao GND para poder acordar em nível ALTO
-- `rtc_gpio_pullup_dis(WAKEUP_GPIO);`  Desabilitar PULL_UP para permitir que ele acorde em nível ALTO
+- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` O GPIO33 é ligado ao GND para permitir o despertar em nível ALTO
+- `rtc_gpio_pullup_dis(WAKEUP_GPIO);`  Desabilita o PULL_UP para permitir que ele acorde em nível ALTO
 
-- `esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_HIGH);`  Se você fosse usar ext1, você o usaria assim
-- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` GPIO33 é ligado ao GND para poder acordar em nível ALTO
-- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` Desabilitar PULL_UP para permitir que ele acorde em nível ALTO
+- `esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_HIGH);`  Se você fosse usar o ext1, você o usaria assim
+- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` O GPIO33 é ligado ao GND para permitir o despertar em nível ALTO
+- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` Desabilita o PULL_UP para permitir que ele acorde em nível ALTO
 
 ```cpp
   Serial.println("Going to sleep now");
@@ -341,7 +345,7 @@ RTC_DATA_ATTR int bootCount = 0;
   Serial.println("This will never be printed");
 ```
 
-- `esp_deep_sleep_start();`Colocar o ESP32 em modo de deep sleep.
+- `esp_deep_sleep_start();`Coloca o ESP32 em modo de deep sleep.
 
 </TabItem>
 
@@ -430,7 +434,7 @@ void loop() {
 }
 ```
 
-### Notas Detalhadas
+### Notas detalhadas
 
 ```cpp
 #if CONFIG_IDF_TARGET_ESP32
@@ -442,12 +446,12 @@ void loop() {
 #endif
 ```
 
-- Verificar se o alvo é ESP32
-- Definir o limite de sensibilidade ao toque para o ESP32
-- Verificar se o alvo é ESP32S2 ou ESP32S3
-- Definir um limite mais alto de sensibilidade ao toque para ESP32S2/S3
-- Se o alvo não for nenhum dos anteriores
-- Definir um limite padrão para outros alvos
+- Verifique se o alvo é ESP32
+- Defina o limite de sensibilidade ao toque para o ESP32
+- Verifique se o alvo é ESP32S2 ou ESP32S3
+- Defina um limite mais alto de sensibilidade ao toque para ESP32S2/S3
+- Se o alvo não for nenhum dos acima
+- Defina um limite padrão para outros alvos
 
 ```cpp
 RTC_DATA_ATTR int bootCount = 0; // Declare a variable to count boots, stored in RTC memory.
@@ -459,11 +463,11 @@ void print_wakeup_reason() { // Function to print the reason for waking up.
   wakeup_reason = esp_sleep_get_wakeup_cause(); // Get the cause of the wakeup.
 ```
 
-- `RTC_DATA_ATTR int bootCount = 0;`Declarar uma variável para contar as inicializações, armazenada na memória RTC.
-- `touch_pad_t touchPin;`Declarar uma variável para armazenar o status do pino do touchpad.
+- `RTC_DATA_ATTR int bootCount = 0;`Declara uma variável para contar as inicializações, armazenada na memória RTC.
+- `touch_pad_t touchPin;`Declara uma variável para manter o status do pino do touchpad.
 - `void print_wakeup_reason()` Função para imprimir o motivo do despertar.
 - `esp_sleep_wakeup_cause_t wakeup_reason;`Variável para armazenar o motivo do despertar.
-- `wakeup_reason = esp_sleep_get_wakeup_cause();` Obter a causa do despertar.
+- `wakeup_reason = esp_sleep_get_wakeup_cause();` Obtém a causa do despertar.
 
 ```cpp
   switch (wakeup_reason) {
@@ -476,11 +480,11 @@ void print_wakeup_reason() { // Function to print the reason for waking up.
 }
 ```
 
-- `ESP_SLEEP_WAKEUP_EXT0` : Este motivo de despertar indica que o ESP32 acordou devido a um sinal externo detectado em um pino GPIO configurado para E/S de RTC (Relógio em Tempo Real). Isso é normalmente usado para despertar do modo de sono quando um botão ou sensor é acionado.
-- `ESP_SLEEP_WAKEUP_EXT1` : Isso indica que o despertar foi causado por um sinal externo em pinos GPIO gerenciados pelo controlador RTC. Diferente do EXT0, o EXT1 pode lidar com múltiplos pinos e pode acordar quando qualquer um dos pinos especificados mudar de estado (por exemplo, ir para nível baixo ou alto).
+- `ESP_SLEEP_WAKEUP_EXT0` : Este motivo de despertar indica que o ESP32 acordou devido a um sinal externo detectado em um pino GPIO configurado para E/S de RTC (Real-Time Clock). Isso é normalmente usado para acordar do modo de sono quando um botão ou sensor é acionado.
+- `ESP_SLEEP_WAKEUP_EXT1` : Isto indica que o despertar foi causado por um sinal externo em pinos GPIO gerenciados pelo controlador RTC. Diferente do EXT0, o EXT1 pode lidar com múltiplos pinos e pode acordar quando qualquer um dos pinos especificados muda de estado (por exemplo, vai para nível baixo ou alto).
 - `ESP_SLEEP_WAKEUP_TIMER` : Este motivo de despertar significa que o ESP32 acordou após uma duração de temporizador predefinida. Isso é útil para aplicações que precisam executar tarefas periódicas sem exigir interação do usuário.
-- `ESP_SLEEP_WAKEUP_TOUCHPAD` : Isso indica que o ESP32 acordou devido a um evento do touchpad. Se um touchpad configurado para despertar detectar um toque, ele pode tirar o dispositivo do modo de sono.
-- `ESP_SLEEP_WAKEUP_ULP` :  Este motivo de despertar significa que o despertar foi acionado por um programa ULP (Ultra-Low Power). Programas ULP podem ser executados enquanto a CPU principal está em deep sleep e podem acordar o ESP32 quando certas condições são atendidas, permitindo uma operação de baixo consumo com drenagem mínima da bateria.
+- `ESP_SLEEP_WAKEUP_TOUCHPAD` : Isto indica que o ESP32 acordou devido a um evento no touchpad. Se um touchpad configurado para despertar detectar um toque, ele pode tirar o dispositivo do modo de sono.
+- `ESP_SLEEP_WAKEUP_ULP` :  Este motivo de despertar significa que o despertar foi acionado por um programa ULP (Ultra-Low Power). Programas ULP podem ser executados enquanto a CPU principal está em deep sleep e podem acordar o ESP32 quando certas condições são atendidas, permitindo operação de baixo consumo com drenagem mínima da bateria.
 
 ```cpp
 void print_wakeup_touchpad() {
@@ -549,17 +553,17 @@ void setup() {
 }
 ```
 
-- `++bootCount;` Incrementar a contagem de inicializações.
+- `++bootCount;` Incrementa a contagem de inicializações.
 
-- `print_wakeup_reason();` Imprimir o motivo do wakeup.
-- `print_wakeup_touchpad();` Imprimir o status do wakeup por touchpad.
+- `print_wakeup_reason();` Imprime o motivo do despertar.
+- `print_wakeup_touchpad();` Imprime o status de despertar por touchpad.
 
-- `#if CONFIG_IDF_TARGET_ESP32` Verificar se o alvo é ESP32
-- `touchSleepWakeUpEnable(T3, THRESHOLD);` Habilitar wakeup por toque para T3 com o limite definido.
-- `touchSleepWakeUpEnable(T7, THRESHOLD);` Habilitar wakeup por toque para T7 com o limite definido.
-- `touchSleepWakeUpEnable(T3, THRESHOLD);` Habilitar wakeup por toque para T3 com o limite definido.
+- `#if CONFIG_IDF_TARGET_ESP32` Verifica se o alvo é ESP32
+- `touchSleepWakeUpEnable(T3, THRESHOLD);` Habilita o despertar por toque para T3 com o limite definido.
+- `touchSleepWakeUpEnable(T7, THRESHOLD);` Habilita o despertar por toque para T7 com o limite definido.
+- `touchSleepWakeUpEnable(T3, THRESHOLD);` Habilita o despertar por toque para T3 com o limite definido.
 
-- `esp_deep_sleep_start();` Colocar o ESP32 em modo de sono profundo.
+- `esp_deep_sleep_start();` Coloca o ESP32 em modo de sono profundo.
 
 </TabItem>
 
@@ -717,10 +721,10 @@ void loop() { // Arduino loop function
 </Tabs>
 
 :::tip
-Para regravar o programa após entrar no modo de sono profundo, mantenha pressionado o botão de boot e depois pressione o botão de reset para reiniciar o ESP32.
+Para regravar o programa após entrar no modo de sono profundo, mantenha pressionado o botão de boot e, em seguida, pressione o botão de reset para reiniciar o ESP32.
 :::
 
-### Exibição dos Resultados
+### Exibição de resultados
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/deep.png" style={{width:700, height:'auto'}}/></div>
 
@@ -728,18 +732,22 @@ Para regravar o programa após entrar no modo de sono profundo, mantenha pressio
 
 ### Introdução
 
-O modo Light Sleep é outro modo de baixo consumo de energia no ESP32 que permite ao dispositivo economizar energia enquanto ainda mantém um tempo de resposta rápido. Nesse modo, os núcleos da CPU são interrompidos, mas a RAM e alguns periféricos permanecem energizados, permitindo que o dispositivo acorde rapidamente em resposta a certos eventos.
+O modo Light Sleep é outro modo de baixo consumo de energia no ESP32 que permite ao dispositivo economizar energia enquanto ainda mantém um tempo de resposta rápido. Nesse modo, os núcleos da CPU são interrompidos, mas a RAM e alguns periféricos permanecem ligados, permitindo que o dispositivo acorde rapidamente em resposta a certos eventos.
 
-O Light Sleep é ideal para aplicações que exigem baixo consumo de energia, mas que ainda precisam manter uma conexão com WiFi ou Bluetooth, pois permite que os módulos de comunicação sem fio permaneçam ativos.
+O Light Sleep é ideal para aplicações que exigem baixo consumo de energia, mas ainda precisam manter uma conexão com WiFi ou Bluetooth, pois permite que os módulos de comunicação sem fio permaneçam ativos.
 
-### Métodos de Wake-up
+:::warning
+**Periférico USB desativado durante o Light Sleep:** O periférico USB interno (USB-Serial-JTAG) será desativado durante o Light Sleep para economia de energia. Isso significa que **a saída Serial via USB não estará disponível** enquanto o dispositivo estiver em Light Sleep. Se você estiver usando a porta USB para visualizar logs Serial, não verá nenhuma saída durante o período de sono. Para depurar, considere usar um chip USB-UART externo conectado aos pinos UART de hardware ou use wake-up por GPIO para monitorar a saída após o dispositivo acordar.
+:::
 
-- **Wake-up por Timer:** O dispositivo pode acordar após um período de tempo especificado, permitindo a execução de tarefas periódicas.
-- **Wake-up por Interrupção Externa:** O ESP32 pode ser acordado por sinais externos, como pressionamento de botões ou outras interrupções de hardware.
-- **Wake-up por Atividade de Rede:** O dispositivo pode acordar em resposta a pacotes de rede recebidos, permitindo comunicação eficiente sem estar constantemente em estado ativo.
-- **Wake-up por GPIO:** Pinos GPIO específicos podem ser configurados para acordar o dispositivo do Light Sleep quando um evento ocorre, como uma mudança de estado ou de sinal.
+### Métodos de despertar
 
-### Implementação de Código
+- **Despertar por temporizador:** O dispositivo pode acordar após um período de tempo especificado, permitindo a execução de tarefas periódicas.
+- **Despertar por interrupção externa:** O ESP32 pode ser acordado por sinais externos, como pressionamento de botões ou outras interrupções de hardware.
+- **Despertar por atividade de rede:** O dispositivo pode acordar em resposta a pacotes de rede recebidos, permitindo comunicação eficiente sem estar constantemente em estado ativo.
+- **Despertar por GPIO:** Pinos GPIO específicos podem ser configurados para acordar o dispositivo do Light Sleep quando um evento ocorrer, como uma mudança de estado ou sinal.
+
+### Implementação do código
 
 ```cpp
 #include <freertos/FreeRTOS.h>
@@ -775,14 +783,14 @@ void loop() {
 }
 ```
 
-### Notas Detalhadas
+### Notas detalhadas
 
 ```cpp
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 ```
 
-- Incldue FreeRTOS library
+- Incluir a biblioteca FreeRTOS
 
 ```cpp
 const int sleepTime = 10000; 
@@ -790,13 +798,13 @@ const int ledPin = LED_BUILTIN;
 ```
 
 - Definir o tempo de sono para 10 segundos
-- Usar o pino do LED embutido
+- Usar o pino de LED integrado
 
 ```cpp
 void ledTask(void *pvParameters): 
 ```
 
-- Defina uma tarefa FreeRTOS para controlar o estado do LED.
+- Definir uma tarefa FreeRTOS para controlar o estado do LED.
 
 ```cpp
 digitalWrite(ledPin, HIGH); 
@@ -807,8 +815,8 @@ Serial.println("LED is OFF");
 vTaskDelete(NULL); 
 ```
 
-- `vTaskDelay(pdMS_TO_TICKS(1000));`Keep the LED on for 1 second
-- `vTaskDelete(NULL);`Delete the current task
+- `vTaskDelay(pdMS_TO_TICKS(1000));`Manter o LED aceso por 1 segundo
+- `vTaskDelete(NULL);`Excluir a tarefa atual
 
 ```cpp
 esp_sleep_enable_timer_wakeup(sleepTime * 1000);
@@ -818,11 +826,11 @@ xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);
 delay(1000); 
 ```
 
-- `esp_sleep_enable_timer_wakeup(sleepTime * 1000);`Set timer for wakeup
-- `esp_light_sleep_start();` Enter light sleep mode
-- `xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);`Create LED control task
+- `esp_sleep_enable_timer_wakeup(sleepTime * 1000);`Definir o temporizador para o despertar
+- `esp_light_sleep_start();` Entrar no modo de sono leve
+- `xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);`Criar tarefa de controle do LED
 
-### Resultados
+### Exibição dos resultados
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/light_led.gif" style={{width:300, height:'auto'}}/></div>
 
@@ -830,11 +838,11 @@ delay(1000);
 
 ### Introdução
 
-O modo Modem Sleep é outro modo importante de baixo consumo de energia no ESP32, que é diferente do modo Deep Sleep. O modo Modem Sleep é otimizado principalmente para o módulo de comunicação sem fio do ESP32.
+O modo Modem Sleep é outro modo de baixo consumo importante no ESP32, que é diferente do modo Deep Sleep. O modo Modem Sleep é otimizado principalmente para o módulo de comunicação sem fio do ESP32.
 
-Nesse modo, o módulo WiFi/Bluetooth do ESP32 entra em estado de suspensão, enquanto os núcleos da CPU permanecem ativos. Isso permite que o ESP32 mantenha um certo nível de conectividade sem fio enquanto reduz significativamente o consumo de energia.
+Nesse modo, o módulo WiFi/Bluetooth do ESP32 entra em estado de sono, enquanto os núcleos da CPU permanecem ativos. Isso permite que o ESP32 mantenha um certo nível de conectividade sem fio, reduzindo significativamente o consumo de energia.
 
-### Métodos de Despertar
+### Métodos de despertar
 
 - Despertar por temporizador
 
@@ -844,7 +852,7 @@ Nesse modo, o módulo WiFi/Bluetooth do ESP32 entra em estado de suspensão, enq
 
 - Despertar por atividade de rede
 
-### Implementação do Código
+### Implementação do código
 
 ```cpp
 #include "WiFi.h"
@@ -886,25 +894,25 @@ void loop() {
 }
 ```
 
-### Notas Detalhadas
+### Notas detalhadas
 
 ```cpp
 #include "WiFi.h"
 ```
 
-- Inclua a biblioteca WiFi para habilitar as funções de WiFi.
+- Incluir a biblioteca WiFi para habilitar as funções de WiFi.
 
 ```cpp
 Serial.println("Connecting to WiFi...");
 ```
 
-- Imprima uma mensagem indicando que a conexão ao WiFi está começando.
+- Imprimir uma mensagem indicando que a conexão ao WiFi está iniciando.
 
 ```cpp
 WiFi.begin("****", "****");
 ```
 
-- Inicie a conexão à rede WiFi especificada.
+- Iniciar a conexão à rede WiFi especificada.
 
 ```cpp
     while (WiFi.status() != WL_CONNECTED) {
@@ -914,43 +922,43 @@ WiFi.begin("****", "****");
     Serial.println("Connected to WiFi!");
 ```
 
-- Faça o loop até conectar-se ao WiFi com sucesso.
+- Repetir até conectar-se ao WiFi com sucesso.
 
 ```cpp
 WiFi.setSleep(true);
 ```
 
-- Ative o modo modem sleep para economizar energia.
+- Habilitar o modo modem sleep para economizar energia.
 
 ```cpp
 WiFi.setSleep(false);
 ```
 
-- Desative o modo modem sleep para ativar o WiFi.
+- Desabilitar o modo modem sleep para ativar o WiFi.
 
 ```cpp
 if (WiFi.status() == WL_CONNECTED) {
 ```
 
-- Verifique o status do WiFi.
+- Verificar o status do WiFi.
 
 ```cpp
 WiFi.setSleep(true);
 ```
 
-- Ative novamente o modo modem sleep.
+- Habilitar novamente o modo modem sleep.
 
-### Resultados
+### Exibição dos resultados
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/light.png" style={{width:700, height:'auto'}}/></div>
 
-## Aplicação da Função de Suspensão
+## Aplicação da função de sono
 
-Com o simples exemplo acima, vamos agora dar um passo adiante e usar esses recursos de suspensão no sensor ESP32 S3 Sense.
+Com o simples exemplo acima, vamos agora dar um passo adiante e usar esses recursos de sono no sensor ESP32 S3 Sense.
 
-### Preparação de Software
+### Preparação de software
 
-Antes de começar este artigo, certifique-se de que você concluiu algumas preparações de instalação de software caso ainda não tenha utilizado todos os recursos de hardware no XIAO ESP32S3 Sense.
+Antes de iniciar este artigo, certifique-se de que você concluiu algumas preparações de instalação de software, caso ainda não tenha utilizado todos os recursos de hardware no XIAO ESP32S3 Sense.
 
 Aqui estão introduções a três funcionalidades, e você pode encontrar mais informações através dos seguintes links:
 
@@ -960,7 +968,7 @@ Aqui estão introduções a três funcionalidades, e você pode encontrar mais i
 
 - [Camera Use](https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_camera_usage/): Domine como usar o módulo de câmera no XIAO ESP32S3 Sense para tirar fotos e gravar vídeos.
 
-### Implementação do Código
+### Implementação do código
 
 <Tabs>
 <TabItem  value="SleepApplication1" label="Deep-Sleep" default>
@@ -1096,9 +1104,9 @@ void loop() {
 }
 ```
 
-### Notas Detalhadas
+### Notas detalhadas
 
-Este código implementa um sistema de captura de imagens baseado no módulo de câmera do ESP32, que pode tirar automaticamente uma foto a cada 60 segundos e salvá-la no cartão SD. Na função `void setup()`, a câmera e o cartão SD são inicializados e o status do dispositivo é confirmado; na função `void loop()`, verifica-se se a câmera pode tirar uma foto e, se a condição for atendida, a função `photo_save()` é chamada para salvar a imagem e, após o salvamento, o dispositivo entra em um estado de deep sleep por 10 segundos para economizar energia.
+Este código implementa um sistema de captura de imagens baseado no módulo de câmera ESP32, que pode tirar automaticamente uma foto a cada 60 segundos e salvá-la no cartão SD. Na função `void setup()`, a câmera e o cartão SD são inicializados e o status do dispositivo é confirmado; na função `void loop()`, é verificado se a câmera pode tirar uma foto e, se a condição for atendida, a função `photo_save()` é chamada para salvar a imagem e entrar em um estado de sono profundo por 10 segundos após o salvamento para economizar energia.
 
 </TabItem>
 
@@ -1151,9 +1159,9 @@ void loop() {
 }
 ```
 
-### Notas Detalhadas
+### Notas detalhadas
 
-Este código implementa a função de captura de dados de áudio usando a interface I2S. Na função `void setup()`, a porta serial e a interface I2S são inicializadas; na função `void loop()`, o temporizador de despertar é habilitado e uma tarefa `void i2sTask(void *pvParameters)` é criada, que é responsável por ler amostras de áudio e imprimir dados válidos a cada segundo. Após a tarefa ser executada 10 vezes, ela atrasa por 3 segundos e então se exclui.
+Este código implementa a função de captura de dados de áudio usando a interface I2S. Na função `void setup()`, a porta serial e a interface I2S são inicializadas; na função `void loop()`, o temporizador de despertar é habilitado e uma tarefa `void i2sTask(void *pvParameters)` é criada, que é responsável por ler amostras de áudio e imprimir dados válidos a cada segundo. Após a tarefa ser executada 10 vezes, ela atrasa por 3 segundos e se exclui.
 
 </TabItem>
 
@@ -1299,14 +1307,14 @@ void cameraOperation() {
 
 ### Notas detalhadas
 
-Este código implementa o uso do módulo de câmera ESP32 para captura de imagem e conexão via Wi-Fi. Na função `void setup()`, a porta serial, a câmera e a conexão Wi-Fi são inicializadas; se a inicialização for bem-sucedida, o programa imprime o endereço Wi-Fi para o usuário se conectar. Na função `void loop()`, o código verifica o status do Wi-Fi a cada 10 segundos, se não houver operação da câmera, o Wi-Fi será colocado em modo de suspensão para economizar energia. Cada chamada para a função `cameraOperation()` atualiza o horário da última operação para garantir que o Wi-Fi permaneça conectado durante o evento.
+Este código implementa o uso do módulo de câmera ESP32 para captura de imagem e conexão via Wi-Fi. Na função `void setup()`, a porta serial, a câmera e a conexão Wi-Fi são inicializadas; se a inicialização for bem-sucedida, o programa imprime o endereço Wi-Fi para o usuário se conectar. Na função `void loop()`, o código verifica o status do Wi-Fi a cada 10 segundos; se não houver operação da câmera, o Wi-Fi será colocado em modo de suspensão para economizar energia. Cada chamada da função `cameraOperation()` atualiza o horário da última operação para garantir que o Wi-Fi permaneça conectado durante o evento.
 
 </TabItem>
 
 </Tabs>
 
 :::tip
-Esses códigos não podem ser usados diretamente, você precisa adicionar o arquivo de cabeçalho da câmera, por favor verifique o exemplo acima sobre o XIAO ESP32 S3.
+Este código não pode ser usado diretamente, você precisa adicionar o arquivo de cabeçalho da câmera, por favor verifique o exemplo acima sobre o XIAO ESP32 S3.
 :::
 
 ## Para concluir
@@ -1314,20 +1322,20 @@ Esses códigos não podem ser usados diretamente, você precisa adicionar o arqu
 ### Por que usar o modo Deep Sleep
 
 maximizar a economia de energia sem comprometer a funcionalidade, a fim de estender a vida útil da bateria do dispositivo.
-Cenários adequados: Aplicações em que a duração da bateria é crucial, como nós de sensores remotos, dispositivos vestíveis e outros dispositivos IoT de baixo consumo. Embora o tempo de despertar seja relativamente lento, essa compensação vale a pena.
+Cenários adequados: aplicações em que a vida útil da bateria é crucial, como nós de sensores remotos, dispositivos vestíveis e outros dispositivos IoT de baixo consumo. Embora o tempo de despertar seja relativamente lento, essa compensação vale a pena.
 
 ### Por que usar o modo Modem Sleep
 
 otimizar o consumo de energia do módulo de comunicação sem fio, mantendo ainda assim a conectividade de rede.
-Cenários adequados: Aplicações que precisam manter a conexão de rede, mas também exigem baixo consumo de energia, como dispositivos IoT que operam intermitentemente. O Modem Sleep pode reduzir significativamente o consumo de energia do módulo sem fio, ao mesmo tempo em que fornece uma resposta de despertar rápida.
+Cenários adequados: aplicações que precisam manter a conexão de rede, mas também exigem baixo consumo de energia, como dispositivos IoT que funcionam de forma intermitente. O Modem Sleep pode reduzir significativamente o consumo de energia do módulo sem fio, ao mesmo tempo em que fornece uma resposta de despertar rápida.
 
 ### Em resumo
 
-esses três modos de suspensão oferecem aos desenvolvedores diferentes opções de compromisso entre energia e desempenho, que podem ser escolhidas de forma flexível com base nos requisitos específicos da aplicação. Para dispositivos com requisitos de duração de bateria, o modo Deep Sleep é uma boa escolha; e para dispositivos IoT que precisam manter conectividade de rede, o modo Modem Sleep é a escolha ideal.
+estes três modos de suspensão fornecem aos desenvolvedores diferentes opções de compromisso entre consumo de energia e desempenho, que podem ser escolhidas de forma flexível com base nos requisitos específicos da aplicação. Para dispositivos com requisitos de vida útil de bateria, o modo Deep Sleep é uma boa escolha; e para dispositivos IoT que precisam manter a conectividade de rede, o modo Modem Sleep é a escolha ideal.
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para lhe fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

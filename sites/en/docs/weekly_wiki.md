@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 06/01/2026
+  date: 06/15/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-06-01'
+updatedAt: '2026-06-15'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,86 +18,94 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is June 1st, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is June 15th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Seeed Jetson DevelopTool Overview](https://wiki.seeedstudio.com/jetson_developtool_overview/)
+### [Getting Started with Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/xiao_nrf54lm20a_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/video-cover-recomputer-guide-en.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-**Seeed Jetson DevelopTool** is an all-in-one AI development workbench designed for Seeed Studio Jetson products. It consolidates the most common Jetson development workflows — from first-time firmware flashing to AI app deployment — into a single desktop GUI application.
-
-</div>
-
-### [ROS2 Voice Pipeline on reSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_ros2_voice_pipeline/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/get_start_1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project turns your voice into TurtleSim control using a reSpeaker XVF3800 microphone array and ROS2. Say “Hey Jarvis” followed by a command, and Jarvis records audio, transcribes it with Groq Whisper, interprets intent with Groq LLaMA, and responds with Groq Orpheus TTS. It is designed for fast setup with Ubuntu and ROS2 Humble, making voice-driven robot experiments easy to run.
+Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless development board built around Nordic Semiconductor’s nRF54LM20A SoC. It combines a 128 MHz Arm Cortex-M33 processor, 512 KB RAM, 2 MB on-chip NVM, multiprotocol 2.4 GHz wireless connectivity, onboard IMU, digital microphone, 8MB external flash, IPEX antenna connector, and nPM1300 PMIC for advanced battery-powered IoT, wearable, smart sensing, and edge AI applications.
 
 </div>
 
-### [ROS2 Voice Pipeline on reSpeaker Flex](https://wiki.seeedstudio.com/respeaker_flex_ros2_voice_pipeline/)
+### [Wio-S3 Wireless Module Introduction](https://wiki.seeedstudio.com/wio-s3_wireless_module_introduction/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-S3/Wio-S3-Wireless-Module-with-IPEX.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project turns your voice into TurtleSim control using a reSpeaker Flex microphone array and ROS2. Say “Hey Jarvis” followed by a command, and Jarvis records audio, transcribes it with Groq Whisper, interprets intent with Groq LLaMA, and responds with Groq Orpheus TTS. It is designed for fast setup with Ubuntu and ROS2 Humble, making voice-driven robot experiments easy to run.
+[Wio-S3 wireless module](https://www.seeedstudio.com/Wio-S3-Wireless-Module-p-6832.html) is embedded with the [ESP32-S3R8](https://www.espressif.com/en/products/socs/esp32-s3/) dual core Xtensa® LX7 MCU and the long range [SX1262 LoRa chip](https://www.semtech.com/products/wireless-rf/lora-connect/sx1262). It supports LoRaWAN frequency plan on EU868, US915 and more, as well as **2.4GHz Wi-Fi and BLE 5.0 connectivity**. It integrates 16MB Flash and 8MB PSRAM, making it ideal for edge AI processing.
 
 </div>
 
-### [Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Series)](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2/)
+### [Driving E-Paper and SD Card with XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_epaper_and_sdcard/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/epaper_1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document explains how to use Arduino peripheral features on the reTerminal E Series, including RTC setup, low-power mode, PDM microphone recording, and E1003 touch screen examples, with hardware compatibility notes and sample code.
+The XIAO nRF54LM20A supports development with peripheral modules of the XIAO series and is fully compatible with the entire development ecosystem of XIAO products. This article demonstrates its ecosystem compatibility using the ePaper driver and MicroSD card read/write functions of the XIAO series as examples.
 
 </div>
 
-### [Using Stream Deck to Control reCamera Gimbal](https://wiki.seeedstudio.com/using_stream_deck_to_control_recamera_gimbal/)
+### [AI Voice Interaction Demo Based on reCamera](https://wiki.seeedstudio.com/ai_voice_assitant_with_recamera/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_stream-deck-demo_show.gif" alt="pir" width={800} height="auto" /></p>
+<div align="center">
+  <video width="600" controls>
+    <source src="https://raw.githubusercontent.com/hunter5299/Node-Red-project/main/reCamera_ai_voice_assitant/testVedioFinal.mp4" type="video/mp4" />
+    Your browser does not support video playback.
+  </video>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki demonstrates how to control the reCamera Gimbal using a Stream Deck. By sending commands via the HTTP protocol from the Stream Deck, you can control the reCamera Gimbal to rotate to specific angles, turn the fill light on/off, play audio, and perform other operations.
+This project demonstrates a way to interact with reCamera through natural language. After visual reasoning triggers audio recording, reCamera sends the recording to the server, processes it through the complete **STT (Speech-to-Text) → LLM (Large Language Model Reasoning) → TTS (Text-to-Speech)** pipeline, and the synthesized voice is returned to reCamera for playback, enabling natural language conversation.
 
 </div>
 
-### [How to Install Antenna for reComputer Super and Classic](https://wiki.seeedstudio.com/recomputer_antenna_installation/)
+### [RTSP to WebRTC Real-Time Video Streaming with reCamera](https://wiki.seeedstudio.com/rtsp_to_webrtc_with_recamera/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Antenna-Installation-Guide/image1.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/test.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide walks you through installing antennas on the **reComputer Super** series and the **reComputer Classic** series. The procedures differ between the two product lines, so please follow the section that matches your device.
+This project streams reCamera's video through the **RTSP protocol**, transmits inference results to the PC via the **mqtt out** node, then merges the RTSP stream with inference results on the PC side and converts it to **WebRTC** format, allowing any browser to play the inference video stream in real time without plugins.
 
 </div>
 
-### [reSpeaker Flex with XIAO Feature Updates](https://wiki.seeedstudio.com/respeaker_flex_xiao_introduction/)
+### [ESPHome Cookbook: RTC, SD Card & Microphone (reTerminal E Series)](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-We updated a series of documents for **reSpeaker Flex with XIAO**, covering audio testing, streaming, and device control features. The new guides include I2S record and playback, UDP/HTTP/MQTT streaming, DoA and VAD examples, and volume control, helping users quickly validate device capabilities and build connected audio applications.
+This project uses **ESPHome** to enable reTerminal E Series' onboard **PCF8563 RTC**, **microSD card detection**, and **PDM microphone**, synchronizes RTC time with **Home Assistant**, displays real-time status on the ePaper screen, and provides ready-to-use YAML examples for **reTerminal E1001** and **E1002**.
 
 </div>
 
-- [reSpeaker Flex Record and Playback Audio Using I2S](https://wiki.seeedstudio.com/respeaker_flex_xiao_record_playback/)
-- [UDP streaming reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_udp_streaming/)
-- [HTTP Streaming reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_http_stream/)
-- [MQTT Streaming reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_mqtt_stream/)
-- [DoA and VAD reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_doa_vad/)
-- [Volume controlling reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_volume_control/)
+### [Real-Time QR Code Recognition on reCamera](https://wiki.seeedstudio.com/recamera_qrcode_udp/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/qrcode_udp/testvideo.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This example demonstrates how to build a **real-time QR code recognition system** using reCamera. The system captures live video frames through the camera, decodes QR codes using the **ZXing** library, and pushes the video frames (JPEG) along with the recognition results to a PC via **UDP** for display.
+
+</div>
+
+### [JetPack 7.2 Deep Dive: What Changes for Jetson AGX Orin Inference?](https://wiki.seeedstudio.com/jetpack72_deep_dive/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/flash-page.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This FAQ summarizes why JetPack 7.2 matters for Jetson AGX Orin users, what Seeed measured when comparing JetPack 7.2 with JetPack 6.2, and how to evaluate an upgrade path with Seeed Jetson DevelopTool.
+
+</div>
 
 <!-- ## Existing Wiki Updated
 
@@ -238,5 +246,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.5.11th](/Seeed_Elderly/weekly_wiki/2026/wiki260511)
 - [weekly wiki on 2026.5.18th](/Seeed_Elderly/weekly_wiki/2026/wiki260518)
 - [weekly wiki on 2026.5.25th](/Seeed_Elderly/weekly_wiki/2026/wiki260525)
+- [weekly wiki on 2026.6.01st](/Seeed_Elderly/weekly_wiki/2026/wiki260601)
+- [weekly wiki on 2026.6.08th](/Seeed_Elderly/weekly_wiki/2026/wiki260608)
 
 </details>

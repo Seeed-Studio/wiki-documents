@@ -153,7 +153,7 @@ Nvidia Jetson 上で次のコマンドを実行します：
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
 ```
 
-その後、ブラウザで `https://rebot-devarm.w0x7ce.eu/` を開くと、次のページが表示されます。このインターフェースから、モーターパラメータの調整、ロボットアームの状態確認、その他の操作を行うことができます。
+その後、ブラウザで `https://motorbridge.github.io/motorbridge-studio/` を開くと、次のページが表示されます。このインターフェースから、モーターパラメータの調整、ロボットアームの状態確認、その他の操作を行うことができます。
 
 <div align="center">
     <img width={900}

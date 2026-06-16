@@ -1,6 +1,6 @@
 ---
-description: XIAO ESP32 Sense 使用不同睡眠模式的功耗
-title: XIAO ESP32S3 Sense 睡眠模式
+description: XIAO ESP32 Sense 使用不同休眠模式的功耗
+title: XIAO ESP32S3 Sense 休眠模式
 keywords:
   - Sleep_Modes
 image: https://files.seeedstudio.com//wiki/ESP32S3_Sense_SleepMode/1.png
@@ -8,8 +8,8 @@ slug: /XIAO_ESP32S3_Consumption
 last_update:
   date: 08/27/2024
   author: Jason
-createdAt: '2025-05-30'
-updatedAt: '2025-09-23'
+createdAt: '2024-08-28'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/cn/XIAO_ESP32S3_Consumption/
 ---
 
@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/background02.png" style={{width:800, height:'auto'}}/></div>
 
-在这里，我将展示一些简单的示例来演示这些低功耗睡眠模式的使用。所有 ESP32 开发板都是多功能的，我在此上下文中使用的开发板是 XIAO ESP32S3 Sense。
+在这里，我将通过一些简单的示例来演示这些低功耗休眠模式的使用。所有 ESP32 开发板都非常通用，而我在本文中使用的开发板是 XIAO ESP32S3 Sense。
 
 ## 硬件概览
 
@@ -41,30 +41,34 @@ import TabItem from '@theme/TabItem';
   </table>
 </div>
 
-## 深度睡眠
+## 深度休眠（Deep-Sleep）
 
 ### 介绍
 
-在深度睡眠模式下，ESP32 会关闭 CPU、大部分 RAM 以及所有由 APB_CLK 时钟驱动的数字外设。只有以下组件保持供电：
+在 Deep-Sleep 模式下，ESP32 会关闭 CPU、大部分 RAM，以及所有由 APB_CLK 驱动的数字外设。仅有以下组件保持上电：
 
 - RTC 控制器
 - ULP 协处理器
-- RTC 快速存储器
-- RTC 慢速存储器
+- RTC FAST 内存
+- RTC SLOW 内存
 
-### 唤醒方法
+:::warning
+**深度休眠期间 USB 外设被禁用：**包括内部 USB 外设（USB-Serial-JTAG）在内的所有数字外设在深度休眠期间都会断电。**通过 USB 的串口输出在设备处于深度休眠时将不可用**。如果你需要调试，请使用外部 USB-UART 芯片连接到硬件 UART 引脚。
+:::
 
-- **定时器唤醒：**ESP32 可以通过设置定时器在指定时间后自动唤醒。
+### 唤醒方式
 
-- **触摸板中断唤醒：**设备可以通过触摸板活动唤醒，适用于需要用户交互的应用。
+- **定时器唤醒：**通过设置定时器，ESP32 可以在指定时间后自动唤醒。
 
-- **外部唤醒：**ESP32 可以通过外部信号（如按钮按压）唤醒，非常适合低功耗应用。
+- **触摸按键中断唤醒：**设备可以通过触摸按键上的活动被唤醒，适用于需要用户交互的应用。
 
-- **ULP 协处理器活动唤醒：**ULP 协处理器可以独立运行，监控特定条件并唤醒主 CPU 以节省功耗。
+- **外部唤醒：**ESP32 可以通过外部信号（例如按键按下）被唤醒，非常适合低功耗应用。
 
-- **GPIO 唤醒：**设备可以通过 GPIO 引脚状态变化（高电平或低电平）唤醒，为各种传感器和外设提供灵活性。
+- **ULP 协处理器活动唤醒：**ULP 协处理器可以独立运行，监测特定条件并唤醒主 CPU，从而节省电能。
 
-下面给出三个 XIAO ESP32 S3 Sense 使用深度睡眠模式的简单示例。
+- **GPIO 唤醒：**设备可以通过 GPIO 引脚电平状态（高或低）的变化被唤醒，为各种传感器和外设提供灵活性。
+
+下面给出了 XIAO ESP32 S3 Sense 使用 DeepSleep 模式的三个简单示例。
 
 ### 代码实现
 
@@ -119,43 +123,43 @@ void loop() {
 }
 ```
 
-### Detailed Notes
+### 详细说明
 
 ```cpp
 #define uS_TO_S_FACTOR 1000000ULL 
 ```
 
-- 定义一个宏来将微秒转换为秒。1000000ULL是用于将微秒转换为秒的因子。
+- 定义一个宏，用于将微秒转换为秒。1000000ULL 是将微秒转换为秒所使用的系数。
 
 ```cpp
 #define TIME_TO_SLEEP  5     
 ```
 
-- 定义一个宏来设置 ESP32 将进入睡眠状态的时间，在这种情况下为 5 秒。
+- 定义一个宏，用于设置 ESP32 进入休眠的时间，在本例中为 5 秒。
 
 ```cpp
 RTC_DATA_ATTR int bootCount = 0;
 ```
 
-- 声明一个整型变量 `bootCount`，带有 `RTC_DATA_ATTR` 属性，这允许它在深度睡眠期间保持其值。
+- 声明一个整型变量 `bootCount`，并使用属性 `RTC_DATA_ATTR`，使其在深度休眠期间仍能保留其数值。
 
 ```cpp
 void print_wakeup_reason() {
 ```
 
-- 定义一个名为 `print_wakeup_reason()` 的函数，用于打印 ESP32 唤醒的原因。
+- 定义一个名为 `print_wakeup_reason()` 的函数，用于打印 ESP32 的唤醒原因。
 
 ```cpp
 esp_sleep_wakeup_cause_t wakeup_reason;
 ```
 
-- 声明一个类型为 `esp_sleep_wakeup_cause_t` 的变量 `wakeup_reason` 来存储唤醒事件的原因。
+- 声明一个类型为 `esp_sleep_wakeup_cause_t` 的变量 `wakeup_reason`，用于存储唤醒事件的原因。
 
 ```cpp
 wakeup_reason = esp_sleep_get_wakeup_cause();
 ```
 
-- 调用函数 `esp_sleep_get_wakeup_cause()` 来获取唤醒原因并将其赋值给 `wakeup_reason` 变量。
+- 调用函数 `esp_sleep_get_wakeup_cause()` 获取唤醒原因，并将其赋值给变量 `wakeup_reason`。
 
 ```cpp
   switch (wakeup_reason) {
@@ -168,23 +172,23 @@ wakeup_reason = esp_sleep_get_wakeup_cause();
 }
 ```
 
-- `ESP_SLEEP_WAKEUP_EXT0` : 此唤醒原因表示 ESP32 由于在配置为 RTC（实时时钟）I/O 的 GPIO 引脚上检测到外部信号而唤醒。这通常用于当按钮或传感器被触发时从睡眠中唤醒。
-- `ESP_SLEEP_WAKEUP_EXT1` : 这表示唤醒是由 RTC 控制器管理的 GPIO 引脚上的外部信号引起的。与 EXT0 不同，EXT1 可以处理多个引脚，并且可以在任何指定引脚改变状态时唤醒（例如，变为低电平或高电平）。
-- `ESP_SLEEP_WAKEUP_TIMER` : 此唤醒原因表示 ESP32 在预定义的定时器持续时间后唤醒。这对于需要执行周期性任务而不需要用户交互的应用程序很有用。
-- `ESP_SLEEP_WAKEUP_TOUCHPAD` : 这表示 ESP32 由于触摸板事件而唤醒。如果配置为唤醒的触摸板检测到触摸，它可以使设备退出睡眠模式。
-- `ESP_SLEEP_WAKEUP_ULP` : 此唤醒原因意味着唤醒是由 ULP（超低功耗）程序触发的。ULP 可以在主 CPU 处于深度睡眠时运行，并且可以在满足某些条件时唤醒 ESP32，从而实现低功耗操作，最大限度地减少电池消耗。
+- `ESP_SLEEP_WAKEUP_EXT0` ：该唤醒原因表示 ESP32 因在配置为 RTC（实时时钟）I/O 的某个 GPIO 引脚上检测到外部信号而被唤醒。这通常用于在按钮或传感器被触发时从休眠中唤醒。
+- `ESP_SLEEP_WAKEUP_EXT1` ：该唤醒原因表示唤醒是由 RTC 控制器管理的 GPIO 引脚上的外部信号引起的。与 EXT0 不同，EXT1 可以处理多个引脚，并且当任一指定引脚状态发生变化（例如变为低电平或高电平）时即可唤醒。
+- `ESP_SLEEP_WAKEUP_TIMER` ：该唤醒原因表示 ESP32 在预设的定时器时间到期后被唤醒。这对于需要在无需用户交互的情况下执行周期性任务的应用非常有用。
+- `ESP_SLEEP_WAKEUP_TOUCHPAD` ：该唤醒原因表示 ESP32 因触摸按键事件而被唤醒。如果配置为唤醒源的触摸按键检测到触摸，就可以将设备从休眠模式中唤醒。
+- `ESP_SLEEP_WAKEUP_ULP` ： 该唤醒原因表示唤醒是由 ULP（超低功耗）程序触发的。ULP 可以在主 CPU 处于深度休眠时运行，并在满足某些条件时唤醒 ESP32，从而在尽量减少电池消耗的情况下实现低功耗运行。
 
 ```cpp
 ++bootCount;
 ```
 
-- 每次设备重启时增加启动计数并打印出来。
+- 每次设备重启时，自增启动计数并将其打印出来。
 
 ```cpp
 print_wakeup_reason();
 ```
 
-- 打印 ESP32 唤醒的原因。
+- 打印 ESP32 的唤醒原因。
 
 ```cpp
 esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
@@ -196,9 +200,9 @@ esp_deep_sleep_start();
 Serial.println("This will never be printed");
 ```
 
-- `esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);`启用定时器在指定时间后唤醒ESP32。
-- `Serial.flush();`确保在进入睡眠前发送所有串口数据。
-- `esp_deep_sleep_start();`将ESP32置于深度睡眠模式。
+- `esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);`启用定时器，使 ESP32 在指定时间后被唤醒。
+- `Serial.flush();`在进入休眠前，确保所有串口数据都已发送完成。
+- `esp_deep_sleep_start();`让 ESP32 进入深度休眠模式。
 
 </TabItem>
 
@@ -260,13 +264,13 @@ void loop() {
 }
 ```
 
-### Detailed Notes
+### 详细说明
 
 ```cpp
 #include "driver/rtc_io.h"
 ```
 
-- 包含 RTC I/O 驱动程序以访问 RTC GPIO。
+- 引入 RTC I/O 驱动，以访问 RTC GPIO。
 
 ```cpp
 #define BUTTON_PIN_BITMASK(GPIO) (1ULL << GPIO)  
@@ -275,9 +279,9 @@ void loop() {
 RTC_DATA_ATTR int bootCount = 0;
 ```
 
-- 2 ^ GPIO_NUMBER 的十六进制表示
-- 1 = EXT0唤醒，0 = EXT1唤醒
-- 仅允许RTC IO - ESP32引脚示例
+- 以十六进制表示的 2 ^ GPIO_NUMBER
+- 1 = EXT0 唤醒，0 = EXT1 唤醒
+- 只允许使用 RTC IO - ESP32 引脚示例
 
 ```cpp
   switch (wakeup_reason) {
@@ -290,11 +294,11 @@ RTC_DATA_ATTR int bootCount = 0;
 }
 ```
 
-- `ESP_SLEEP_WAKEUP_EXT0` : 此唤醒原因表示 ESP32 由于在配置为 RTC（实时时钟）I/O 的 GPIO 引脚上检测到外部信号而唤醒。这通常用于当按钮或传感器被触发时从睡眠中唤醒。
-- `ESP_SLEEP_WAKEUP_EXT1` : 这表示唤醒是由 RTC 控制器管理的 GPIO 引脚上的外部信号引起的。与 EXT0 不同，EXT1 可以处理多个引脚，并且可以在任何指定引脚改变状态时唤醒（例如，变为低电平或高电平）。
-- `ESP_SLEEP_WAKEUP_TIMER` : 此唤醒原因表示 ESP32 在预定义的定时器持续时间后唤醒。这对于需要执行周期性任务而不需要用户交互的应用程序很有用。
-- `ESP_SLEEP_WAKEUP_TOUCHPAD` : 这表示 ESP32 由于触摸板事件而唤醒。如果配置为唤醒的触摸板检测到触摸，它可以使设备退出睡眠模式。
-- `ESP_SLEEP_WAKEUP_ULP` : 此唤醒原因意味着唤醒是由 ULP（超低功耗）程序触发的。ULP 可以在主 CPU 处于深度睡眠时运行，并且可以在满足某些条件时唤醒 ESP32，从而实现低功耗操作，最大限度地减少电池消耗。
+- `ESP_SLEEP_WAKEUP_EXT0` : 此唤醒原因表示 ESP32 因在配置为 RTC（实时时钟）I/O 的 GPIO 引脚上检测到外部信号而被唤醒。通常用于在按键或传感器被触发时，从睡眠状态唤醒。
+- `ESP_SLEEP_WAKEUP_EXT1` : 此项表示唤醒是由 RTC 控制器管理的 GPIO 引脚上的外部信号引起的。与 EXT0 不同，EXT1 可以处理多个引脚，并且当任一指定引脚状态发生变化（例如变为低电平或高电平）时即可唤醒。
+- `ESP_SLEEP_WAKEUP_TIMER` : 此唤醒原因表示 ESP32 在预设的定时器时间到达后被唤醒。适用于需要周期性执行任务且不需要用户交互的应用。
+- `ESP_SLEEP_WAKEUP_TOUCHPAD` : 此项表示 ESP32 因触摸按键事件而被唤醒。如果配置为唤醒源的触摸按键检测到触摸，就可以使设备退出睡眠模式。
+- `ESP_SLEEP_WAKEUP_ULP` :  此唤醒原因表示唤醒是由 ULP（超低功耗）程序触发的。ULP 可以在主 CPU 处于深度睡眠时运行，并在满足某些条件时唤醒 ESP32，从而在尽量减少电池消耗的情况下实现低功耗运行。
 
 ```cpp
   Serial.begin(115200);
@@ -304,7 +308,7 @@ RTC_DATA_ATTR int bootCount = 0;
   print_wakeup_reason();
 ```
 
-- `++bootCount;` 增加启动次数并在每次重启时打印
+- `++bootCount;`Increment boot number and print it every reboot
 - `print_wakeup_reason();` 打印 ESP32 的唤醒原因
 
 ```cpp
@@ -315,9 +319,9 @@ RTC_DATA_ATTR int bootCount = 0;
   rtc_gpio_pulldown_en(WAKEUP_GPIO);
 ```
 
-- `esp_sleep_enable_ext0_wakeup(WAKEUP_GPIO, 1);`在指定的GPIO引脚变为高电平时启用EXT0唤醒。
-- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` 禁用唤醒GPIO引脚上的上拉电阻。
-- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` 启用唤醒GPIO引脚上的下拉电阻。
+- `esp_sleep_enable_ext0_wakeup(WAKEUP_GPIO, 1);`在指定的 GPIO 引脚变为高电平时启用 EXT0 唤醒。
+- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` 禁用唤醒 GPIO 引脚上的上拉电阻。
+- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` 启用唤醒 GPIO 引脚上的下拉电阻。
 
 ```cpp
 #else  
@@ -328,12 +332,12 @@ RTC_DATA_ATTR int bootCount = 0;
 ```
 
 - `esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_HIGH);`EXT1 唤醒
-- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` GPIO33 连接到 GND 以便在高电平时唤醒
-- `rtc_gpio_pullup_dis(WAKEUP_GPIO);`  禁用上拉以允许在高电平时唤醒
+- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` GPIO33 接到 GND 以便在高电平时唤醒
+- `rtc_gpio_pullup_dis(WAKEUP_GPIO);`  禁用上拉电阻以允许其在高电平时唤醒
 
-- `esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_HIGH);`  如果你要使用 ext1，你可以这样使用
-- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` GPIO33 连接到 GND 以便在高电平时唤醒
-- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` 禁用上拉以允许在高电平时唤醒
+- `esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_HIGH);`  如果你要使用 ext1，可以像这样使用
+- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` GPIO33 接到 GND 以便在高电平时唤醒
+- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` 禁用上拉电阻以允许其在高电平时唤醒
 
 ```cpp
   Serial.println("Going to sleep now");
@@ -341,11 +345,11 @@ RTC_DATA_ATTR int bootCount = 0;
   Serial.println("This will never be printed");
 ```
 
-- `esp_deep_sleep_start();`使ESP32进入深度睡眠模式。
+- `esp_deep_sleep_start();`使 ESP32 进入深度睡眠模式。
 
 </TabItem>
 
-<TabItem value="DeepSleepExample3" label="TouchWakeUp" default>
+<TabItem value="DeepSleepExample3" label="触摸唤醒" default>
 
 ```cpp
 #if CONFIG_IDF_TARGET_ESP32
@@ -430,7 +434,7 @@ void loop() {
 }
 ```
 
-### Detailed Notes
+### 详细说明
 
 ```cpp
 #if CONFIG_IDF_TARGET_ESP32
@@ -446,7 +450,7 @@ void loop() {
 - 为 ESP32 定义触摸灵敏度阈值
 - 检查目标是否为 ESP32S2 或 ESP32S3
 - 为 ESP32S2/S3 定义更高的触摸灵敏度阈值
-- 如果目标不是上述任何一种
+- 如果目标不是以上任一类型
 - 为其他目标定义默认阈值
 
 ```cpp
@@ -459,11 +463,11 @@ void print_wakeup_reason() { // Function to print the reason for waking up.
   wakeup_reason = esp_sleep_get_wakeup_cause(); // Get the cause of the wakeup.
 ```
 
-- `RTC_DATA_ATTR int bootCount = 0;` 声明一个用于计算启动次数的变量，存储在RTC内存中。
-- `touch_pad_t touchPin;` 声明一个用于保存触摸板引脚状态的变量。
+- `RTC_DATA_ATTR int bootCount = 0;`声明一个用于统计启动次数的变量，存储在 RTC 内存中。
+- `touch_pad_t touchPin;`声明一个变量用于保存触摸按键引脚状态。
 - `void print_wakeup_reason()` 用于打印唤醒原因的函数。
-- `esp_sleep_wakeup_cause_t wakeup_reason;` 用于保存唤醒原因的变量。
-- `wakeup_reason = esp_sleep_get_wakeup_cause();` 获取唤醒的原因。
+- `esp_sleep_wakeup_cause_t wakeup_reason;`用于保存唤醒原因的变量。
+- `wakeup_reason = esp_sleep_get_wakeup_cause();` 获取唤醒原因。
 
 ```cpp
   switch (wakeup_reason) {
@@ -476,11 +480,11 @@ void print_wakeup_reason() { // Function to print the reason for waking up.
 }
 ```
 
-- `ESP_SLEEP_WAKEUP_EXT0` : 此唤醒原因表示 ESP32 由于在配置为 RTC（实时时钟）I/O 的 GPIO 引脚上检测到外部信号而唤醒。这通常用于当按钮或传感器被触发时从睡眠中唤醒。
-- `ESP_SLEEP_WAKEUP_EXT1` : 这表示唤醒是由 RTC 控制器管理的 GPIO 引脚上的外部信号引起的。与 EXT0 不同，EXT1 可以处理多个引脚，并且可以在任何指定引脚改变状态时唤醒（例如，变为低电平或高电平）。
-- `ESP_SLEEP_WAKEUP_TIMER` : 此唤醒原因表示 ESP32 在预定义的定时器持续时间后唤醒。这对于需要执行周期性任务而不需要用户交互的应用程序很有用。
-- `ESP_SLEEP_WAKEUP_TOUCHPAD` : 这表示 ESP32 由于触摸板事件而唤醒。如果配置为唤醒的触摸板检测到触摸，它可以使设备退出睡眠模式。
-- `ESP_SLEEP_WAKEUP_ULP` : 此唤醒原因意味着唤醒是由 ULP（超低功耗）程序触发的。ULP 可以在主 CPU 处于深度睡眠时运行，并且可以在满足某些条件时唤醒 ESP32，从而实现低功耗操作，最大限度地减少电池消耗。
+- `ESP_SLEEP_WAKEUP_EXT0` : 此唤醒原因表示 ESP32 因在配置为 RTC（实时时钟）I/O 的 GPIO 引脚上检测到外部信号而被唤醒。通常用于在按键或传感器被触发时，从睡眠状态唤醒。
+- `ESP_SLEEP_WAKEUP_EXT1` : 此项表示唤醒是由 RTC 控制器管理的 GPIO 引脚上的外部信号引起的。与 EXT0 不同，EXT1 可以处理多个引脚，并且当任一指定引脚状态发生变化（例如变为低电平或高电平）时即可唤醒。
+- `ESP_SLEEP_WAKEUP_TIMER` : 此唤醒原因表示 ESP32 在预设的定时器时间到达后被唤醒。适用于需要周期性执行任务且不需要用户交互的应用。
+- `ESP_SLEEP_WAKEUP_TOUCHPAD` : 此项表示 ESP32 因触摸按键事件而被唤醒。如果配置为唤醒源的触摸按键检测到触摸，就可以使设备退出睡眠模式。
+- `ESP_SLEEP_WAKEUP_ULP` :  此唤醒原因表示唤醒是由 ULP（超低功耗）程序触发的。ULP 可以在主 CPU 处于深度睡眠时运行，并在满足某些条件时唤醒 ESP32，从而在尽量减少电池消耗的情况下实现低功耗运行。
 
 ```cpp
 void print_wakeup_touchpad() {
@@ -520,7 +524,7 @@ void print_wakeup_touchpad() {
 - `case 7:`在 GPIO 27 上检测到触摸。
 - `case 8:`在 GPIO 33 上检测到触摸。
 - `case 9:`在 GPIO 32 上检测到触摸。
-- `default:`如果没有检测到触摸的默认情况。
+- `default:`如果未检测到触摸则执行的默认情况。
 
 ```cpp
 void setup() {
@@ -549,17 +553,17 @@ void setup() {
 }
 ```
 
-- `++bootCount;` 增加启动计数。
+- `++bootCount;` 自增启动计数。
 
 - `print_wakeup_reason();` 打印唤醒原因。
 - `print_wakeup_touchpad();` 打印触摸板唤醒状态。
 
-- `#if CONFIG_IDF_TARGET_ESP32` 检查目标是否为ESP32
-- `touchSleepWakeUpEnable(T3, THRESHOLD);` 为T3启用触摸唤醒，使用定义的阈值。
-- `touchSleepWakeUpEnable(T7, THRESHOLD);` 为T7启用触摸唤醒，使用定义的阈值。
-- `touchSleepWakeUpEnable(T3, THRESHOLD);` 为T3启用触摸唤醒，使用定义的阈值。
+- `#if CONFIG_IDF_TARGET_ESP32` 检查目标是否为 ESP32
+- `touchSleepWakeUpEnable(T3, THRESHOLD);` 为 T3 启用具有定义阈值的触摸唤醒。
+- `touchSleepWakeUpEnable(T7, THRESHOLD);` 为 T7 启用具有定义阈值的触摸唤醒。
+- `touchSleepWakeUpEnable(T3, THRESHOLD);` 为 T3 启用具有定义阈值的触摸唤醒。
 
-- `esp_deep_sleep_start();` 将ESP32置于深度睡眠模式。
+- `esp_deep_sleep_start();` 让 ESP32 进入深度睡眠模式。
 
 </TabItem>
 
@@ -618,7 +622,7 @@ void ulp_setup() { // ULP setup function
     I_ST(R1, R0, RTC_dir), // Store the value of R1 in dir
 
     M_LABEL(INIFINITE_LOOP), // Define the infinite loop label
-    
+
     I_MOVI(R3, 0), // Move 0 to R3
     I_LD(R3, R3, RTC_fadeDelay), // Load the value from fadeDelay into R3
     M_LABEL(RUN_PWM), // Define the run PWM label
@@ -671,7 +675,7 @@ void ulp_setup() { // ULP setup function
     M_BX(INIFINITE_LOOP), // Go back to the infinite loop label
 
     M_LABEL(POSITIVE_DIR), // Define POSITIVE_DIR label
-  
+
     I_MOVR(R0, R1), // Move R1 to R0
     M_BL(INC_DUTY, 100), // Branch to INC_DUTY label with parameter 100
     I_MOVI(R2, 0), // Move 0 to R2
@@ -681,7 +685,7 @@ void ulp_setup() { // ULP setup function
     I_ADDI(R0, R0, 2), // Increment R0 by 2
     I_MOVI(R2, 0), // Move 0 to R2
     I_ST(R0, R2, RTC_dutyMeter), // Store the value of R0 in dutyMeter
-  
+
     M_BX(INIFINITE_LOOP), // Go back to the infinite loop label
   };
   // Run the ULP program
@@ -717,27 +721,31 @@ void loop() { // Arduino loop function
 </Tabs>
 
 :::tip
-要在进入深度睡眠模式后重新烧录程序，请按住启动按钮，然后按下复位按钮来重启ESP32。
+在进入深度睡眠模式后要重新烧录程序，请按住 boot 按钮，然后按下 reset 按钮以重启 ESP32。
 :::
 
 ### 结果展示
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/deep.png" style={{width:700, height:'auto'}}/></div>
 
-## 轻度睡眠
+## 轻睡眠（Light-Sleep）
 
 ### 介绍
 
-轻度睡眠模式是ESP32中的另一种低功耗模式，允许设备在节约能源的同时仍保持快速响应时间。在此模式下，CPU内核被暂停，但RAM和一些外设仍保持供电，使设备能够快速响应某些事件而唤醒。
+轻睡眠模式是 ESP32 中的另一种低功耗模式，它允许设备在保持快速响应时间的同时节省能耗。在该模式下，CPU 内核会停止运行，但 RAM 和部分外设仍保持上电状态，从而使设备能够在响应某些事件时快速唤醒。
 
-轻度睡眠非常适合需要低功耗但仍需要保持WiFi或蓝牙连接的应用，因为它允许无线通信模块保持活跃状态。
+轻睡眠非常适合既需要低功耗又需要保持与 WiFi 或 Bluetooth 连接的应用，因为它允许无线通信模块保持活动状态。
 
-### 唤醒方法
+:::warning
+**轻睡眠期间 USB 外设被禁用：** 为了节省电能，内部 USB 外设（USB-Serial-JTAG）将在轻睡眠期间被禁用。这意味着**通过 USB 的串口输出在设备处于轻睡眠时将不可用**。如果你使用 USB 端口查看串口日志，在睡眠期间将看不到任何输出。要进行调试，可以考虑使用连接到硬件 UART 引脚的外部 USB-UART 芯片，或者使用 GPIO 唤醒，在设备唤醒后再监控输出。
+:::
 
-- **定时器唤醒：** 设备可以在指定时间段后唤醒，允许执行周期性任务。
-- **外部中断唤醒：** ESP32可以通过外部信号唤醒，如按钮按压或其他硬件中断。
-- **网络活动唤醒：** 设备可以响应传入的网络数据包而唤醒，实现高效通信而无需持续处于活跃状态。
-- **GPIO唤醒：** 特定的GPIO引脚可以配置为在事件发生时从轻度睡眠中唤醒设备，如状态变化或信号。
+### 唤醒方式
+
+- **定时器唤醒：** 设备可以在指定时间段后唤醒，从而执行周期性任务。
+- **外部中断唤醒：** ESP32 可以通过外部信号唤醒，例如按键按下或其他硬件中断。
+- **网络活动唤醒：** 设备可以在接收到网络数据包时唤醒，从而在不持续保持活动状态的情况下实现高效通信。
+- **GPIO 唤醒：** 可以将特定 GPIO 引脚配置为在事件发生（例如状态或信号变化）时，从轻睡眠中唤醒设备。
 
 ### 代码实现
 
@@ -754,7 +762,7 @@ void ledTask(void *pvParameters) {
   vTaskDelay(pdMS_TO_TICKS(1000));
   digitalWrite(ledPin, LOW);
   Serial.println("LED is OFF");
-  
+
   vTaskDelete(NULL); 
 }
 
@@ -770,19 +778,19 @@ void loop() {
   esp_light_sleep_start();
 
   xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);
-  
+
   delay(1000);
 }
 ```
 
-### Detailed Notes
+### 详细说明
 
 ```cpp
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 ```
 
-- Incldue FreeRTOS library
+- 包含 FreeRTOS 库
 
 ```cpp
 const int sleepTime = 10000; 
@@ -790,7 +798,7 @@ const int ledPin = LED_BUILTIN;
 ```
 
 - 将睡眠时间设置为 10 秒
-- 使用内置的 LED 引脚
+- 使用板载 LED 引脚
 
 ```cpp
 void ledTask(void *pvParameters): 
@@ -807,8 +815,8 @@ Serial.println("LED is OFF");
 vTaskDelete(NULL); 
 ```
 
-- `vTaskDelay(pdMS_TO_TICKS(1000));`保持LED开启1秒钟
-- `vTaskDelete(NULL);`删除当前任务
+- `vTaskDelay(pdMS_TO_TICKS(1000));`Keep the LED on for 1 second
+- `vTaskDelete(NULL);`Delete the current task
 
 ```cpp
 esp_sleep_enable_timer_wakeup(sleepTime * 1000);
@@ -818,23 +826,23 @@ xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);
 delay(1000); 
 ```
 
-- `esp_sleep_enable_timer_wakeup(sleepTime * 1000);`设置唤醒定时器
-- `esp_light_sleep_start();` 进入轻度睡眠模式
-- `xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);`创建LED控制任务
+- `esp_sleep_enable_timer_wakeup(sleepTime * 1000);`Set timer for wakeup
+- `esp_light_sleep_start();` Enter light sleep mode
+- `xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);`Create LED control task
 
 ### 结果展示
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/light_led.gif" style={{width:300, height:'auto'}}/></div>
 
-## 调制解调器睡眠模式
+## Modem-Sleep
 
 ### 介绍
 
-调制解调器睡眠模式是ESP32中另一个重要的低功耗模式，它与深度睡眠模式不同。调制解调器睡眠模式主要针对ESP32的无线通信模块进行优化。
+Modem Sleep 模式是 ESP32 中另一种重要的低功耗模式，它不同于 Deep Sleep 模式。Modem Sleep 模式主要针对 ESP32 的无线通信模块进行功耗优化。
 
-在此模式下，ESP32的WiFi/蓝牙模块进入睡眠状态，而CPU核心保持活跃。这使得ESP32能够在显著降低功耗的同时保持一定程度的无线连接能力。
+在这种模式下，ESP32 的 WiFi/Bluetooth 模块进入睡眠状态，而 CPU 内核保持活动。这使得 ESP32 在显著降低功耗的同时，仍能维持一定程度的无线连接能力。
 
-### 唤醒方法
+### 唤醒方式
 
 - 定时器唤醒
 
@@ -860,7 +868,7 @@ void setup() {
         Serial.println("Connecting...");
     }
     Serial.println("Connected to WiFi!");
- 
+
     WiFi.setSleep(true); 
     Serial.println("Modem-Sleep enabled.");
 }
@@ -886,19 +894,19 @@ void loop() {
 }
 ```
 
-### Detailed Notes
+### 详细说明
 
 ```cpp
 #include "WiFi.h"
 ```
 
-- 包含 WiFi 库以启用 WiFi 函数。
+- 包含 WiFi 库以启用 WiFi 功能。
 
 ```cpp
 Serial.println("Connecting to WiFi...");
 ```
 
-- 打印一条消息，指示正在开始连接到 WiFi。
+- 打印一条消息，指示开始连接 WiFi。
 
 ```cpp
 WiFi.begin("****", "****");
@@ -920,25 +928,25 @@ WiFi.begin("****", "****");
 WiFi.setSleep(true);
 ```
 
-- 启用调制解调器睡眠模式以节省电量。
+- 启用 modem sleep 模式以节省电能。
 
 ```cpp
 WiFi.setSleep(false);
 ```
 
-- 禁用调制解调器睡眠模式以激活 WiFi。
+- 禁用 modem sleep 模式以激活 WiFi。
 
 ```cpp
 if (WiFi.status() == WL_CONNECTED) {
 ```
 
-- Check the WiFi status.
+- 检查 WiFi 状态。
 
 ```cpp
 WiFi.setSleep(true);
 ```
 
-- 重新启用调制解调器睡眠模式。
+- 再次启用 modem sleep 模式。
 
 ### 结果展示
 
@@ -946,19 +954,19 @@ WiFi.setSleep(true);
 
 ## 睡眠功能应用
 
-通过上面的简单示例，现在让我们更进一步，在 ESP32 S3 Sense 传感器上使用这些睡眠功能。
+通过以上简单示例，现在我们更进一步，在 ESP32 S3 Sense 传感器上使用这些睡眠特性。
 
 ### 软件准备
 
-在开始本文之前，如果您还没有使用 XIAO ESP32S3 Sense 上的所有硬件功能，请确保您已经完成了一些软件安装准备工作。
+在开始本节内容之前，如果你尚未在 XIAO ESP32S3 Sense 上使用全部硬件功能，请确保已经完成一些软件安装准备工作。
 
-以下是三个功能的介绍，您可以通过以下链接找到更多信息：
+下面是三个功能的介绍，你可以通过以下链接获取更多信息：
 
-- [麦克风使用](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_mic/)：学习如何使用 XIAO ESP32S3 Sense 上的麦克风来捕获环境声音级别并录制音频。
+- [Micrphone Use](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_mic/)：了解如何使用 XIAO ESP32S3 Sense 上的麦克风来捕获环境声音并录制音频。
 
-- [MicroSD](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_filesystem/)：了解如何使用 MicroSD 卡进行数据存储，确保您可以在项目中保存和检索文件。
+- [MicroSD](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_filesystem/)：了解如何使用 MicroSD 卡进行数据存储，确保你可以在项目中保存和读取文件。
 
-- [相机使用](https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage/)：掌握如何使用 XIAO ESP32S3 Sense 上的相机模块拍照和录制视频。
+- [Camera Use](https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage/)：掌握如何使用 XIAO ESP32S3 Sense 上的摄像头模块进行拍照和录像。
 
 ### 代码实现
 
@@ -988,7 +996,7 @@ void photo_save(const char * fileName) {
     return;
   }
   writeFile(SD, fileName, fb->buf, fb->len);
-  
+
   esp_camera_fb_return(fb);
 
   Serial.println("Photo saved to file");
@@ -1053,9 +1061,9 @@ void setup() {
     Serial.println("Card Mount Failed");
     return;
   }
-  
+
   uint8_t cardType = SD.cardType();
-  
+
   if (cardType == CARD_NONE) {
     Serial.println("No SD card attached");
     return;
@@ -1080,17 +1088,17 @@ void setup() {
 void loop() {
   if (camera_sign && sd_sign) {
     unsigned long now = millis();
-  
+
     if ((now - lastCaptureTime) >= 60000) {
       char filename[32];
       sprintf(filename, "/image%d.jpg", imageCount);
       photo_save(filename);
       Serial.printf("Saved picture: %s\r\n", filename);
       Serial.println("Entering deep sleep for 10 seconds...");
-      
+
       esp_sleep_enable_timer_wakeup(10000000); 
       esp_deep_sleep_start(); 
-      
+
     }
   }
 }
@@ -1098,7 +1106,7 @@ void loop() {
 
 ### 详细说明
 
-这段代码实现了一个基于ESP32摄像头模块的图像捕获系统，可以每60秒自动拍摄一张照片并保存到SD卡中。在`void setup()`函数中，初始化摄像头和SD卡并确认设备状态；在`void loop()`函数中，检查摄像头是否可以拍照，如果满足条件，则调用`photo_save()`函数保存图像，并在保存后进入深度睡眠状态10秒以节省能耗。
+这段代码实现了一个基于 ESP32 摄像头模块的图像采集系统，可以每隔 60 秒自动拍摄一张照片并保存到 SD 卡中。在 `void setup()` 函数中，完成摄像头和 SD 卡的初始化并确认设备状态；在 `void loop()` 函数中，检查摄像头是否可以拍照，如果条件满足，则调用 `photo_save()` 函数保存图像，并在保存后进入 10 秒的深度睡眠状态以节省能耗。
 
 </TabItem>
 
@@ -1143,7 +1151,7 @@ void setup() {
 void loop() {
   esp_sleep_enable_timer_wakeup(sleepTime * 1000);
   xTaskCreate(i2sTask, "I2S Task", 2048, NULL, 1, NULL);
-  
+
   Serial.println("Going to sleep now...");
   esp_light_sleep_start();
 
@@ -1153,7 +1161,7 @@ void loop() {
 
 ### 详细说明
 
-此代码实现了使用 I2S 接口捕获音频数据的功能。在 `void setup()` 函数中，初始化了串口和 I2S 接口；在 `void loop()` 函数中，启用了唤醒定时器并创建了一个任务 `void i2sTask(void *pvParameters)`，该任务负责读取音频采样并每秒打印有效数据。任务运行 10 次后，延迟 3 秒并删除自身。
+这段代码实现了使用 I2S 接口采集音频数据的功能。在 `void setup()` 函数中，初始化串口和 I2S 接口；在 `void loop()` 函数中，启用唤醒定时器并创建任务 `void i2sTask(void *pvParameters)`，该任务负责读取音频采样数据，并每秒打印一次有效数据。在任务运行 10 次后，会延时 3 秒并自我删除。
 
 </TabItem>
 
@@ -1299,35 +1307,35 @@ void cameraOperation() {
 
 ### 详细说明
 
-这段代码实现了使用 ESP32 摄像头模块进行图像捕获并通过 Wi-Fi 连接的功能。在 `void setup()` 函数中，初始化了串口、摄像头和 Wi-Fi 连接；如果初始化成功，程序会打印 Wi-Fi 地址供用户连接。在 `void loop()` 函数中，代码每 10 秒检查一次 Wi-Fi 状态，如果没有摄像头操作，Wi-Fi 将被设置为睡眠模式以节省能源。每次调用 `cameraOperation()` 函数都会更新最后操作的时间，以确保在事件期间 Wi-Fi 保持连接。
+此代码实现了使用 ESP32 摄像头模块进行图像采集并通过 Wi-Fi 进行连接。在 `void setup()` 函数中，会初始化串口、摄像头和 Wi-Fi 连接；如果初始化成功，程序会打印 Wi-Fi 地址供用户连接。在 `void loop()` 函数中，代码每 10 秒检查一次 Wi-Fi 状态，如果没有摄像头操作，则会将 Wi-Fi 设置为休眠模式以节省能耗。每次调用 `cameraOperation()` 函数时，都会更新上次操作的时间，以确保在事件期间 Wi-Fi 保持连接。
 
 </TabItem>
 
 </Tabs>
 
 :::tip
-这些代码不能直接使用，您需要添加关于摄像头的头文件，请查看上面关于 XIAO ESP32 S3 的示例。
+这些代码不能直接使用，你需要添加关于摄像头的头文件，请参考上面关于 XIAO ESP32 S3 的示例。
 :::
 
 ## 总结
 
-### 为什么使用深度睡眠模式
+### 为什么使用 Deep Sleep 模式
 
-在不影响功能的前提下最大化节能，以延长设备的电池寿命。
-适用场景：电池寿命至关重要的应用，如远程传感器节点、可穿戴设备和其他低功耗物联网设备。虽然唤醒时间相对较慢，但这种权衡是值得的。
+在不影响功能的前提下最大化节能，从而延长设备的电池寿命。
+适用场景：对电池寿命要求较高的应用，例如远程传感器节点、可穿戴设备以及其他低功耗物联网设备。尽管唤醒时间相对较慢，但这种权衡是值得的。
 
-### 为什么使用调制解调器睡眠模式
+### 为什么使用 Modem Sleep 模式
 
-优化无线通信模块的功耗，同时仍保持网络连接。
-适用场景：需要保持网络连接但也需要低功耗的应用，如间歇工作的物联网设备。调制解调器睡眠可以显著降低无线模块的功耗，同时仍提供快速唤醒响应。
+在仍然保持网络连接的同时，优化无线通信模块的功耗。
+适用场景：既需要保持网络连接又要求低功耗的应用，例如间歇性工作的物联网设备。Modem Sleep 可以在仍然提供快速唤醒响应的同时，显著降低无线模块的功耗。
 
-### 总结
+### 小结
 
-这三种睡眠模式为开发者提供了不同的功耗/性能权衡选项，可以根据应用的具体要求灵活选择。对于有电池寿命要求的设备，深度睡眠模式是一个好选择；而对于需要保持网络连接的物联网设备，调制解调器睡眠模式是最佳选择。
+这三种休眠模式为开发者提供了不同的功耗/性能权衡选项，可根据应用的具体需求灵活选择。对于有电池寿命要求的设备，Deep Sleep 模式是一个不错的选择；而对于需要保持网络连接的物联网设备，Modem Sleep 模式是最佳选择。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-02 14:33:13 (北京时间)
-// 多语言页面: 2310 个
+// 生成时间: 2026-06-15 15:36:45 (北京时间)
+// 多语言页面: 2333 个
 
 (function() {
   'use strict';
@@ -1346,7 +1346,21 @@
     "ja",
     "pt"
   ],
+  "/how_to_use_camera_imx219": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack72_deep_dive": [
     "cn",
     "en",
     "es",
@@ -1361,6 +1375,13 @@
     "pt"
   ],
   "/make_diy_bsp_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer": [
     "cn",
     "en",
     "es",
@@ -3299,6 +3320,13 @@
     "ja",
     "pt"
   ],
+  "/ai_voice_interaction_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/ai_parking_slot_monitoring_demo_with_recamera": [
     "cn",
     "en",
@@ -3348,7 +3376,21 @@
     "ja",
     "pt"
   ],
+  "/recamera_qrcode_udp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_source_localization_of_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rtsp_to_webrtc_with_recamera": [
     "cn",
     "en",
     "es",
@@ -3370,6 +3412,13 @@
     "pt"
   ],
   "/using_stream_deck_to_control_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_benchmarking": [
     "cn",
     "en",
     "es",
@@ -3978,6 +4027,20 @@
     "ja",
     "pt"
   ],
+  "/wio-s3_wireless_module_command_list": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio-s3_wireless_module_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Wio-WM1110_Dev_Kit_Hardware_Overview": [
     "cn",
     "en",
@@ -4266,6 +4329,13 @@
     "pt"
   ],
   "/meshtastic_kit_wio_tracker_1110": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_tracker_l1_3d_enclosure": [
     "cn",
     "en",
     "es",
@@ -5099,6 +5169,13 @@
     "pt"
   ],
   "/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bulk_configuration_chirpstack": [
     "cn",
     "en",
     "es",
@@ -7953,6 +8030,13 @@
     "ja",
     "pt"
   ],
+  "/epaper_work_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/EE04_with_hmi": [
     "cn",
     "en",
@@ -8080,6 +8164,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_esphome_rtc_sd_microphone": [
     "cn",
     "en",
     "es",
@@ -11270,6 +11361,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_xvf3800_sensecraft": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_xvf3800_xiao_tensorflow": [
     "cn",
     "en",
@@ -12223,6 +12321,69 @@
     "pt"
   ],
   "/xiao_nrf54l15_zigbee": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_epaper_and_sdcard": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_bluetooth_lowpower": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_matter": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_nfc": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_onboard": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_low_power": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_ncs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_pin_multiplexing": [
     "cn",
     "en",
     "es",

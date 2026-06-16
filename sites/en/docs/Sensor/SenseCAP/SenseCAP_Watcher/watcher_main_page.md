@@ -6,7 +6,7 @@ slug: /watcher
 sku: 113991315,113991275
 sidebar_position: 1
 last_update:
-  date: 06/20/2024
+  date: 6/12/2026
   author: Citric
 createdAt: '2024-06-21'
 updatedAt: '2026-01-07'
@@ -96,13 +96,12 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Traning Model For Watcher](https://wiki.seeedstudio.com/training_model_for_watcher/)
 
+## Resources
 
-
-
-
-**In Preparation...**
-
-
+- [HX6538 Datasheet](https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher/blob/main/Hardware/HX6538_datasheet.pdf)
+- [SenseCAP Watcher 3D Shell](https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher/blob/main/Hardware/SenseCAP_Watcher-3D-Shell_v1.stp)
+- [SenseCAP Watcher Schematic](https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher/blob/main/Hardware/SenseCAP_Watcher_v1.0_SCH.pdf)
+- [ESP32-S3 Datasheet](https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher/blob/main/Hardware/esp32-s3_datasheet.pdf)
 
 ## ✨ Contributor Project
 

@@ -1211,6 +1211,40 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO nRF54LM20Aシリーズ',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_NCS',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_Built-in-Sensor',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_Low_Power',
+            {
+              type: 'category',
+              label: 'ワイヤレス接続',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/ja_XIAO_nRF54LM20A-Sense_Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/ja_XIAO_nRF54LM20A_Matter_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/ja_XIAO_nRF54LM20A_NFC_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'アプリケーション',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Application/ja_XIAO_nRF54LM20A_with_epaper_and_sdcard',
+              ],
+            },
+            // {
+            //   type: 'category',
+            //   label: 'Programming Language',
+            //   items: [
+            //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/XIAO_nRF54LM20A-Sense_with_MicroPython',
+            //   ],
+            // },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO ESP32C3',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/ja_XIAO_ESP32C3_Getting_Started',
@@ -1921,36 +1955,120 @@ const sidebars = {
                 id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_with_xiao_intro',
               },
               items: [
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_i2s_test',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_rgb_test',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_volume',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_record_playback',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_gpio',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_mqtt_stream',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_udp_streaming',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_http',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_doa_vad',
                 {
                   type: 'category',
-                  label: 'アプリケーション',
+                  label: '再生と録音',
                   items: [
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ha',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_edgeimpulse',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_tflm',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2_voice_pipeline',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_voice_agent',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_xiaozhi',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_arm',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora_ten_framework',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_openclaw',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_picovoice',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_i2s_test',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_record_playback',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_volume',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'ストリーミング',
+                  items: [
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_udp_streaming',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_http',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_mqtt_stream',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'デバイス制御',
+                  items: [
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_rgb_test',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_gpio',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_doa_vad',
                   ],
                 },
               ],
             },
+            {
+              type: 'category',
+              label: 'アプリケーション',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ha',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_edgeimpulse',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_tflm',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2_voice_pipeline',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_voice_agent',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_xiaozhi',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora_ten_framework',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_picovoice',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_sensecraft',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_arm',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_openclaw',
+              ],
+            },
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_python_sdk',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'reSpeaker Flex',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'アプリケーション',
+              items: [
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_picovoice',
+                // 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lerobot_soarm',
+                // 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_rebot_arm',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_ros',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'XIAO対応 reSpeaker Flex',
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: '再生と録音',
+                  items: [
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_i2s_test',
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_playback_record',
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_volume_xiao',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'オーディオストリーミング',
+                  items: [
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_udp_stream',
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_http_stream',
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_mqtt',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'デバイス制御',
+                  items: [
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_gpio',
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_doa',
+                  ],
+                },
+              ],
+            },
+            'Sensor/reSpeaker_flex/ja_reSpeaker_flex_python_control',
+            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
         {
@@ -1971,33 +2089,67 @@ const sidebars = {
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_xiao_respeaker',
               },
               items: [
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_i2s_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_rgb_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_volume',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_button',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_record_and_play',
-                // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb', // commented out
                 {
-                  type: 'doc',
-                  id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_generator',
-                  label: 'Streams Generator',
+                  type: 'category',
+                  label: '再生と録音',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_i2s_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_record_and_play',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_volume',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_player_spiffs',
+                  ],
                 },
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_print',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_memory',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_player_spiffs',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_mqtt',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_i2s_tflite',
+                {
+                  type: 'category',
+                  label: 'ストリーミング',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_generator',
+                      label: 'Streams Generator',
+                    },
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_print',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_memory',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_mqtt',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'TensorFlow',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_i2s_tflite',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'デバイス制御',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_rgb_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_button',
+                  ],
+                },
               ],
             },
             {
               type: 'category',
               label: 'アプリケーション',
               items: [
-                'Sensor/ReSpeaker_Lite/Application/ja_respeaker_lite_ha',
+                // 'Sensor/ReSpeaker_Lite/Application/ja_respeaker_lite_ha',
                 'Sensor/ReSpeaker_Lite/Application/ja_respeaker_lite_pi5',
               ],
             },
             'Sensor/ReSpeaker_Lite/ja_respeaker_enclosure',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'reSpeaker XVF 3000',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Seeed_Elderly/reSpeaker/Extension_Board/ja_ReSpeaker_Mic_Array_v3.0',
+            'Seeed_Elderly/reSpeaker/Extension_Board/ja_ReSpeaker_Mic_Array_v2.0',
+            'Seeed_Elderly/reSpeaker/ja_ReSpeaker-USB-Mic-Array',
           ],
         },
         {
@@ -2031,17 +2183,6 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker XVF 3000',
-          collapsed: true,
-          collapsible: true,
-          items: [
-            'Seeed_Elderly/reSpeaker/Extension_Board/ja_ReSpeaker_Mic_Array_v3.0',
-            'Seeed_Elderly/reSpeaker/Extension_Board/ja_ReSpeaker_Mic_Array_v2.0',
-            'Seeed_Elderly/reSpeaker/ja_ReSpeaker-USB-Mic-Array',
-          ],
-        },
-        {
-          type: 'category',
           label: '音響イベント検出モジュール',
           collapsed: true,
           collapsible: true,
@@ -2050,7 +2191,7 @@ const sidebars = {
             id: 'Sensor/Sound_event_sensor/ja_sound_event_sensor_intro',
           },
           items: [
-            'Sensor/Sound_event_sensor/ja_sound_event_sensor_intro_ha',
+            // 'Sensor/Sound_event_sensor/ja_sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
@@ -2058,48 +2199,28 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker Flex',
+          label: 'アプリケーション',
           collapsed: true,
           collapsible: true,
-          link: {
-            type: 'doc',
-            id: 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_intro',
-          },
           items: [
             {
               type: 'category',
-              label: 'アプリケーション',
+              label: 'Home Assistant',
               items: [
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_picovoice',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lekiwi',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lerobot_soarm',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_rebot_arm',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_ros',
+                'Sensor/Sound_event_sensor/ja_sound_event_sensor_intro_ha',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ha',
+                'Sensor/ReSpeaker_Lite/Application/ja_respeaker_lite_ha',
               ],
             },
             {
               type: 'category',
-              label: 'reSpeaker Flex with Xiao',
-              link: {
-                type: 'doc',
-                id: 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao',
-              },
+              label: 'ロボティクス',
               items: [
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_i2s_test',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_playback_record',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_udp_stream',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_http_stream',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_mqtt',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_doa',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_volume_xiao',
-                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_gpio',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_rebot_arm',
               ],
             },
-            'Sensor/reSpeaker_flex/ja_reSpeaker_flex_python_control',
-            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
-            // add sub-docs here later
-            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
-            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
       ],
@@ -4081,9 +4202,11 @@ const sidebars = {
           items: [
             'Edge/NVIDIA_Jetson/FAQs/ja_jetson_FAQ',
             'Edge/NVIDIA_Jetson/FAQs/ja_Create_Backup_and_Restore_on_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/ja_Migrate_Home_Data_from_Jetson_Orin_Nano_Developer_Kit_to_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/ja_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/ja_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
+            'Edge/NVIDIA_Jetson/FAQs/ja_How_to_use_Camera_IMX219',
             'Edge/NVIDIA_Jetson/FAQs/ja_Use_IMX477_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/ja_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/ja_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
