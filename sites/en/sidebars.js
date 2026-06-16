@@ -1995,7 +1995,7 @@ const sidebars = {
               collapsed: true,
               collapsible: true,
               items: [
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
+                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
@@ -2028,9 +2028,8 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/reSpeaker_flex/reSpeaker_flex_picovoice',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_lekiwi',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_lerobot_soarm',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
+                //'Sensor/reSpeaker_flex/reSpeaker_flex_lerobot_soarm',
+                //'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
                 'Sensor/reSpeaker_flex/reSpeaker_flex_ros',
               ],
             },
@@ -2095,29 +2094,52 @@ const sidebars = {
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
               },
               items: [
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
-                // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb', // commented out
                 {
-                  type: 'doc',
-                  id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_generator',
-                  label: 'Streams Generator',
+                  type: 'category',
+                  label: 'Playback & Recording',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_player_spiffs',
+                  ],
                 },
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_print',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_memory',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_player_spiffs',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_mqtt',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
+                {
+                  type: 'category',
+                  label: 'Streaming',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_generator',
+                      label: 'Streams Generator',
+                    },
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_print',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_memory',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_mqtt',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'TensorFlow',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Device Control',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
+                  ],
+                },
               ],
             },
             {
               type: 'category',
               label: 'Application',
               items: [
-                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
+                //'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
                 'Sensor/ReSpeaker_Lite/Application/respeaker_lite_pi5',
               ],
             },
@@ -2174,12 +2196,38 @@ const sidebars = {
             id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
           },
           items: [
-            'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
-        },       
+        },  
+        {
+          type: 'category',
+          label: 'Applications',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            {
+              type: 'category',
+              label: 'Home Assistant',
+              items: [
+                'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
+                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Robotics',
+              items: [
+                'Sensor/reSpeaker_flex/reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
+              ],
+            },
+          ],
+        },
       ],
     },
     {
@@ -4081,9 +4129,12 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Getting_Started_with_Jetson_Claw_on_Orin_Nano_NX_8GB',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.7_for_reBot_Arm_and_Deploy_on_Robotics_J601',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/J501_Mini_StarAI_Viola_Fruit_Sorting',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Control_SoArm_by_OpenClaw_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Voice_Control_reBot_Arm_B601_by_Nvidia_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/reBot_Arm_B601_DM_GraspNet_Visual_Grasping',
               ]
             },
             // Managed Services

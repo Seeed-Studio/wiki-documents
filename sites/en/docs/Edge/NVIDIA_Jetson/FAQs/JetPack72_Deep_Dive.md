@@ -48,12 +48,12 @@ Always check the NVIDIA release notes and the Seeed BSP release notes for the ex
 
 #### Q2: What hardware and software did Seeed compare?
 
-Seeed used the same Jetson AGX Orin 32GB module and compared the JetPack 6.2 and JetPack 7.2 software environments with a large language model inference workload.
+Seeed compared an AGX Orin 32GB Developer Kit with a reComputer J5011 using the JetPack 6.2 and JetPack 7.2 software environments and the same large language model inference workload.
 
 | Item | JetPack 6.2 test | JetPack 7.2 test |
 | --- | --- | --- |
 | Module | Jetson AGX Orin 32GB | Jetson AGX Orin 32GB |
-| Carrier board | AGX Orin H01 | reComputer Classic J5011 |
+| Test device | AGX Orin 32GB Developer Kit | reComputer J5011 |
 | Jetson Linux | L4T 36.4.3 | L4T 39.2 |
 | Ubuntu | 22.04 | 24.04 |
 | CUDA | 12.6 | 13.x |
@@ -79,7 +79,7 @@ The most practical result is the memory headroom. In the JetPack 6.2 run, the 27
 Yes. The following video shows the comparison effect.
 
 <div class="video-container">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/pE5zINVDc9w" title="JetPack 7.2 and JetPack 6.2 comparison on Jetson AGX Orin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/rO0ZPA2VK9w" title="JetPack 7.2 and JetPack 6.2 comparison on Jetson AGX Orin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 #### Q5: Should I upgrade my Jetson device to JetPack 7.2?
