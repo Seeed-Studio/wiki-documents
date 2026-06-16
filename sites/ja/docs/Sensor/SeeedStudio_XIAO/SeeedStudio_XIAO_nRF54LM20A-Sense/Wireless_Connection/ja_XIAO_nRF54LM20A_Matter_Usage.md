@@ -20,11 +20,33 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_matter/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF54LM20A_Matter.png" style={{width:600, height:'auto'}}/></div>
 
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  今すぐ入手 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+
 ## はじめに
 
-nRF54LM20A SoC を搭載した XIAO nRF54LM20A シリーズは、Bluetooth LE、Matter、Thread、Zigbee、および 2.4GHz 独自プロトコルをサポートし、低レイテンシーなシナリオに最適な最大 4 Mbps のデータレートを実現します。
+nRF54LM20A SoC を搭載した XIAO nRF54LM20A シリーズは、Bluetooth LE、Matter、Thread、Zigbee、および 2.4GHz 独自プロトコルをサポートし、低レイテンシーなシナリオに最適な 4 Mbps のピークデータレートを実現します。
 
-このチュートリアルでは 2 枚の XIAO nRF54LM20A ボードを使用して Matter ネットワークを検証します。1 枚は Home Assistant に接続されたボーダールーターとして動作し、もう 1 枚は Thread ネットワークに参加する Matter デバイスとして動作して、Home Assistant ダッシュボード上に模擬的な温度と湿度データを表示します。
+このチュートリアルでは 2 枚の XIAO nRF54LM20A ボードを使用して Matter ネットワークを検証します。1 枚は Home Assistant に接続されたボーダールーターとして機能し、もう 1 枚は Thread ネットワークに参加する Matter デバイスとして動作し、Home Assistant ダッシュボード上に模擬の温度・湿度データを表示します。
 
 ***WiKi のアイデアをご提供いただいた著者 [@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/) に感謝します***
 
@@ -45,7 +67,7 @@ Matter（旧称 CHIP）は、Connectivity Standards Alliance（CSA）によっ�
 
 ### OpenThread とは
 
-OpenThread は Thread ネットワークプロトコルのオープンソース実装です。IEEE 802.15.4 無線技術を使用して、IoT デバイス向けの低消費電力でセキュアなメッシュネットワークを構築します。主な特長は次のとおりです。
+OpenThread は Thread ネットワーキングプロトコルのオープンソース実装です。IEEE 802.15.4 無線技術を使用して、IoT デバイス向けの低消費電力で安全なメッシュネットワークを構築します。主な特長は次のとおりです。
 
 - IPv6（6LoWPAN）のサポートを内蔵
 - 自己組織化ネットワークトポロジ
@@ -56,22 +78,22 @@ OpenThread は Thread ネットワークプロトコルのオープンソース�
 
 ***この点について非常に詳細な説明をしている著者 [@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/) に感謝し、その内容を引用します！***
 
-Matter と Thread の簡単な紹介の後で、Thread と Matter が異なる目的を持ち、技術スタックの異なるレイヤーで動作していることが理解できたと思います。まとめると次のとおりです。
+Matter と Thread の簡単な紹介の後で、Thread と Matter は異なる目的を持ち、技術スタックの異なるレイヤーで動作することが理解できたと思います。まとめると次のとおりです。
 
 Thread：
 
-- Thread は、コネクテッドホームデバイス向けに設計された低消費電力の無線メッシュネットワークプロトコルです。デバイス同士およびインターネットとの間で、信頼性が高くセキュアな通信手段を提供します。
-- Thread はローカルネットワークを構築し、インターネットがダウンしてもデバイス同士が通信できるようにします。
+- Thread は、コネクテッドホームデバイス向けに設計された低消費電力の無線メッシュネットワークプロトコルです。デバイス同士およびインターネットとの間で、信頼性が高く安全な通信手段を提供します。
+- Thread はローカルネットワークを構築し、インターネットが切断された場合でもデバイス同士が通信できるようにします。
 
 Matter：
 
 - Matter は Thread、Wi-Fi、Ethernet などのネットワークプロトコルの上位に位置するアプリケーションレイヤープロトコルです。異なるメーカーのデバイス同士がシームレスに連携できるようにすることで、スマートホームエコシステムを簡素化・統一することを目的としています。
-- Matter はアプリケーションレベルでデバイスがどのように通信し相互作用するかを定義し、相互運用性、セキュリティ、使いやすさに重点を置いています。
+- Matter はアプリケーションレベルでデバイスがどのように通信・相互作用するかを定義し、相互運用性、セキュリティ、使いやすさに重点を置いています。
 
 Thread と Matter の接続：
 
 - Matter は基盤となるネットワークプロトコルの 1 つとして Thread を使用できます。つまり、Matter プロトコルを使用するデバイスは Thread ネットワーク上で通信できます。
-- Matter と Thread を組み合わせることで、デバイスがローカルかつ効率的に通信できる、堅牢でセキュアかつ相互運用可能なスマートホームエコシステムが実現します。
+- Matter と Thread を組み合わせることで、デバイスがローカルかつ効率的に通信できる、堅牢で安全かつ相互運用可能なスマートホームエコシステムが実現します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/HA_OpenThread/TOPPLOGY.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -87,7 +109,7 @@ Home Assistant は、スマートホームデバイスを単一の統合イン�
 
 ## ハードウェアの準備
 
-ハードウェアの準備には 2 台の XIAO nRF54LM20A Sense が必要です。
+ハードウェアの準備には 2 枚の XIAO nRF54LM20A Sense が必要です。
 
 <div className="table-center">
 <table align="center">
@@ -116,8 +138,8 @@ Home Assistant は、スマートホームデバイスを単一の統合イン�
 
 ## Bluetooth アンテナ
 
-このボードは外部 Bluetooth アンテナを使用します。より良い Bluetooth 信号品質を確保し、Bluetooth の使用体験を向上させるために、Bluetooth アンテナを取り付けることを推奨します。
-接続方法は以下のとおりです。
+このボードは外部 Bluetooth アンテナを使用します。より良い Bluetooth 信号品質を確保し、Bluetooth の使用体験を向上させるため、Bluetooth アンテナを取り付けることを推奨します。
+接続方法は次のとおりです。
 
 <div style={{textAlign: 'center'}}>
   <img
@@ -145,7 +167,7 @@ Settings -> Apps に移動し、Install app を選択してアドオンを追加
 
 ### Thread ルーティングを構成する
 
-以下の手順に従って、1 台の XIAO nRF54LM20A を Coprocessor として書き込み、ボーダールーター機器をエミュレートします。
+以下の手順に従って、1 枚の XIAO nRF54LM20A を Coprocessor として書き込み、ボーダールーター機器をエミュレートします。
 
 :::tip
 
@@ -165,11 +187,11 @@ Connect ZBT-1、Connect ZBT-2、Home Assistant Yellow などの Thread ルーテ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_3.png" style={{width:800, height:'auto'}}/></div>
 
-2. boards フォルダ配下にデバイスツリー設定ファイルを追加・変更します。競合を避けるために PMIC が使用する I2C 設定を無効にし、UART20 のボーレートを 1000000 に設定します。
+2. boards フォルダ内にデバイスツリー設定ファイルを追加・変更します。競合を避けるために PMIC が使用する I2C 設定を無効にし、UART20 のボーレートを 1000000 に設定します。
 
 ファイルパス：~/boards：
 
-- xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay.
+- xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay。
 
 ```dts
 &uart20 {
@@ -189,7 +211,7 @@ Connect ZBT-1、Connect ZBT-2、Home Assistant Yellow などの Thread ルーテ
 };
 ```
 
-- xiao_nrf54lm20a_nrf54lm20a_cpuapp.conf.
+- xiao_nrf54lm20a_nrf54lm20a_cpuapp.conf。
 
 ```conf
 CONFIG_SPI_NOR=n
@@ -213,7 +235,7 @@ CONFIG_NPM13XX_CHARGER=n
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_5.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-4. Home Assistant でデバイスを検出するには、Coprocessor ファームウェアを書き込んだ XIAO nRF54LM20A を USB-C 経由で Home Assistant Green に接続します。
+4. Home Assistant でデバイスを検出できるようにするため、Coprocessor ファームウェアを書き込んだ XIAO nRF54LM20A を USB-C 経由で Home Assistant Green に接続します。
 
 - Add-on store を開き、Open Thread Border Router を見つけて設定します。XIAO nRF54LM20A という名前のデバイスが表示されるので、ボーレートなどのパラメータを設定し、設定を保存します。
 
@@ -223,23 +245,23 @@ CONFIG_NPM13XX_CHARGER=n
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_7.png" style={{width:800, height:'auto'}}/></div>
 
-- Log で設定状況を確認できます。下図のように表示されていれば設定は成功です。
+- Log で設定状況を確認できます。下図のように表示されていれば、設定は正常に完了しています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_8.png" style={{width:800, height:'auto'}}/></div>
 
-- Settings -> Thread に移動してデバイスを検出します。通常、`ha-thread-c6c8` という名前で表示されます。
+- Settings -> Thread に移動してデバイスを検出します。通常、デバイス名は `ha-thread-c6c8` です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_9.png" style={{width:800, height:'auto'}}/></div>
 
 ### Matter デバイスを設定する
 
-1. 「Create a new application」を選択し、「copy a sample」を選び、Matter-Template を検索してプロジェクトを作成します。
+1. Create a new application を選択し、copy a sample を選び、Matter-Template を検索してプロジェクトを作成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_10.png" style={{width:800, height:'auto'}}/></div>
 
 2. デバイスツリーファイルと設定ファイルを修正します。
 
-- XIAO nRF54LM20A と Nordic 公式評価ボードのハードウェアの違いにより、デバイスツリーおよび設定ファイルの修正が必要です。公式評価ボードには外付け MX25R64 フラッシュチップが搭載されていますが、XIAO nRF54LM20A は PY25Q64 を使用しているため、それに応じた調整を行う必要があります。
+- XIAO nRF54LM20A と Nordic 公式評価ボードのハードウェア構成が異なるため、デバイスツリーおよび設定ファイルの修正が必要です。公式評価ボードには外付けの MX25R64 フラッシュチップが搭載されていますが、XIAO nRF54LM20A は PY25Q64 を使用しているため、それに応じた調整を行う必要があります。
 
 - 追加するファイルは以下のとおりです：
 
@@ -575,75 +597,75 @@ external_flash:
   <tbody>
 
     <tr>
-      <td colspan="2"><strong>1. ボード Overlay ファイル (<code>boards/</code>)</strong><br/>
-      XIAO nRF54LM20A 用のアプリケーションレベルのデバイスツリー Overlay です。</td>
+      <td colspan="2"><strong>1. Board Overlay Files (<code>boards/</code>)</strong><br/>
+      XIAO nRF54LM20A 用のアプリケーションレベルのデバイスツリーオーバーレイです。</td>
     </tr>
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay</code></td>
       <td>
-        <strong>外付け Flash バリアント:</strong> PY25Q64 SPI NOR Flash を OTA セカンダリスロットとして有効化します；<br/>
-        wdt31 ウォッチドッグを有効化します；<br/>
-        Partition Manager が外付け Flash を認識できるように、<code>nordic,pm-ext-flash</code> を宣言します。
+        <strong>外部 Flash バリアント:</strong> PY25Q64 SPI NOR Flash を OTA セカンダリスロットとして有効化します。<br/>
+        wdt31 ウォッチドッグを有効化します。<br/>
+        Partition Manager が外部 Flash を認識できるように、<code>nordic,pm-ext-flash</code> を宣言します。
       </td>
     </tr>
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.overlay</code></td>
       <td>
-        <strong>内蔵 Flash バリアント:</strong> PY25Q64 を無効化します（BOM コストと消費電力を削減）；<br/>
-        OTA セカンダリスロットを内蔵 RRAM に配置します；<br/>
+        <strong>内部 Flash バリアント:</strong> PY25Q64 を無効化します（BOM コストと消費電力を削減）。<br/>
+        OTA セカンダリスロットを内部 RRAM に配置します。<br/>
         wdt31 ウォッチドッグを有効化します。
       </td>
     </tr>
 
     <tr>
-      <td colspan="2"><strong>2. MCUboot 設定ファイル (<code>sysbuild/mcuboot/boards/</code>)</strong><br/>
-      MCUboot は独立した Zephyr イメージであり、専用の Kconfig とデバイスツリー Overlay ファイルが必要です。</td>
+      <td colspan="2"><strong>2. MCUboot Configuration Files (<code>sysbuild/mcuboot/boards/</code>)</strong><br/>
+      MCUboot は独立した Zephyr イメージであり、専用の Kconfig とデバイスツリーオーバーレイファイルが必要です。</td>
     </tr>
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp.conf</code></td>
       <td>
-        <strong>外付け Flash — Kconfig:</strong> PY25Q64 へアクセスするための SPI/SPI_NOR ドライバを有効化します；<br/>
-        大きなファームウェア向けに <code>BOOT_MAX_IMG_SECTORS=512</code> を設定します；<br/>
+        <strong>外部 Flash — Kconfig:</strong> PY25Q64 にアクセスするための SPI/SPI_NOR ドライバを有効化します。<br/>
+        大きなファームウェアに対応するため、<code>BOOT_MAX_IMG_SECTORS=512</code> を設定します。<br/>
         ティックレスカーネルを有効化します。
       </td>
     </tr>
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay</code></td>
       <td>
-        <strong>外付け Flash — DTS Overlay:</strong> PY25Q64 を <code>pm-ext-flash</code> として有効化し、
-        MCUboot が起動時に外付け Flash 上の OTA イメージへアクセスできるようにします。
+        <strong>外部 Flash — DTS オーバーレイ:</strong> PY25Q64 を <code>pm-ext-flash</code> として有効化し、
+        MCUboot が起動時に外部 Flash 上の OTA イメージへアクセスできるようにします。
       </td>
     </tr>
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.conf</code></td>
       <td>
-        <strong>内蔵 Flash — Kconfig:</strong> SPI/SPI_NOR を無効化します；<br/>
-        40 KB パーティションに収まるよう MCUboot サイズを削減するため、デバッグ出力（<code>PRINTK=n</code>、<code>ASSERT=n</code>）を無効化します；<br/>
+        <strong>内部 Flash — Kconfig:</strong> SPI/SPI_NOR を無効化します。<br/>
+        40 KB パーティションに収まるよう MCUboot サイズを削減するため、デバッグ出力（<code>PRINTK=n</code>、<code>ASSERT=n</code>）を無効化します。<br/>
         <code>BOOT_MAX_IMG_SECTORS=512</code> を設定します。
       </td>
     </tr>
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.overlay</code></td>
       <td>
-        <strong>内蔵 Flash — DTS Overlay:</strong> PY25Q64 を無効化し、MCUboot が内蔵 Flash のみを使用するようにします。
+        <strong>内部フラッシュ — DTS オーバーレイ:</strong> PY25Q64 を無効化し、MCUboot が内部フラッシュのみを使用するようにします。
       </td>
     </tr>
 
     <tr>
-      <td colspan="2"><strong>3. 静的パーティションファイル (<code>pm_static_*.yml</code>)</strong><br/>
-      Partition Manager 用の静的パーティションテーブルであり、MCUboot、APP、OTA、Factory Data、Settings 用の Flash 全体レイアウトを定義します。</td>
+      <td colspan="2"><strong>3. 静的パーティションファイル（<code>pm_static_*.yml</code>）</strong><br/>
+      Partition Manager 用の静的パーティションテーブルで、MCUboot、APP、OTA、Factory Data、Settings のためのフラッシュ全体のレイアウトを定義します。</td>
     </tr>
     <tr>
       <td><code>pm_static_xiao_nrf54lm20a_nrf54lm20a_cpuapp.yml</code></td>
       <td>
-        <strong>外部フラッシュバリアント：</strong> <code>mcuboot_secondary</code>（OTA イメージ）は外部フラッシュ（PY25Q64）上に配置されます；<br/>
+        <strong>外部フラッシュバリアント:</strong> <code>mcuboot_secondary</code>（OTA イメージ）は外部フラッシュ（PY25Q64）上に配置されます；<br/>
         APP の使用可能サイズは <code>0x1E2800</code>（約 1.9 MB）です。
       </td>
     </tr>
     <tr>
       <td><code>pm_static_xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.yml</code></td>
       <td>
-        <strong>内部フラッシュバリアント：</strong> <code>mcuboot_secondary</code> は内部フラッシュ上に配置されます；<br/>
+        <strong>内部フラッシュバリアント:</strong> <code>mcuboot_secondary</code> は内部フラッシュ上に配置されます；<br/>
         MCUboot は <code>0xA000</code>（40 KB）に縮小されます；<br/>
         APP は <code>0x125800</code>（約 1.2 MB）に縮小されます；<br/>
         OTA イメージには圧縮が必要です。
@@ -653,9 +675,9 @@ external_flash:
   </tbody>
 </table>
 
-#### デバイスへのフラッシュとダウンロード
+#### デバイスへのフラッシュと書き込み
 
-- ビルド構成を進めます。
+- ビルド構成を続行します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_12_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -671,7 +693,7 @@ external_flash:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_13.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-- インターフェース上部にシリアルポートリストがポップアップ表示されるので、XIAO nRF54LM20A に対応するシリアルポートを選択します。
+- インターフェース上部にシリアルポートのリストがポップアップ表示されるので、XIAO nRF54LM20A に対応するシリアルポートを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_14.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -679,13 +701,13 @@ external_flash:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_15.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-- QR コードリンクを直接タップするか、リンクをコピーして別途 Web ブラウザで開きます。
+- QR コードリンクを直接タップするか、リンクをコピーして別途ウェブブラウザで開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_16.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 2. Home Assistant アプリをダウンロードします。
 
-- Matter デバイスの Home Assistant への追加はモバイルアプリ経由で行います。表示された QR コードをスキャンしてアプリをダウンロードします。
+- Matter デバイスの Home Assistant への参加はモバイルアプリケーション経由で完了します。提示された QR コードをスキャンしてアプリをダウンロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_17.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -721,11 +743,11 @@ external_flash:
 
 ## まとめ
 
-上記の手順に従って、2 つの XIAO nRF54LM20A モジュールを使用して Matter over Thread ネットワークを構築し、そのネットワークを Home Assistant に正常に接続しました。Matter プロトコルは、より幅広い種類のセンサーへのアクセスをサポートしていますが、上記のデモでは温度と湿度のデータ取得のみをシミュレートしています。他のセンサーデバイスを統合する際には、Matter 仕様内に対応する Cluster が定義されているかどうかを確認してください。詳細については、[Home Assistant Matter](https://www.home-assistant.io/integrations/matter) の公式ドキュメントを参照してください。
+上記の手順に従って、2 つの XIAO nRF54LM20A モジュールを使用して Matter over Thread ネットワークを構築し、そのネットワークを Home Assistant に正常に接続しました。Matter プロトコルは、より幅広い種類のセンサーへのアクセスをサポートしていますが、上記のデモでは温度と湿度のデータ取得のみをシミュレートしています。他のセンサーデバイスを統合する際には、Matter 仕様内に対応する Cluster が定義されているかを確認してください。詳細については、[Home Assistant Matter](https://www.home-assistant.io/integrations/matter) の公式ドキュメントを参照してください。
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
