@@ -20,14 +20,36 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_ble/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/xiao_nrf54lm20a_ble.png" style={{width:400, height:'auto'}}/></div>
 
-Bluetooth Low Energy（BLE）は、Bluetooth 4.0 で導入された低消費電力の無線通信規格です。間欠的な少量データ伝送向けに設計されており、マイクロアンペアレベルという超低平均電流消費を維持しながら、数十メートルの範囲でワイヤレス接続を実現します。ウェアラブルデバイス、スマートホームセンサー、屋内測位、産業用 IoT シナリオなどで広く利用されています。
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  今すぐ入手 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
 
-nRF54LM20A SoC を搭載した XIAO nRF54LM20A シリーズは、Bluetooth LE、Matter、Thread、Zigbee、および 2.4GHz 独自プロトコルをサポートし、低レイテンシーシナリオに最適な 4 Mbps のピークデータレートを実現します。また、Bluetooth Channel Sounding と Bluetooth Mesh にも対応しています。本記事では、基本的なブロードキャスト Beacon 送信から始めて、双方向 UART 通信やリアルタイムセンサーデータのアップロードへと発展させる、3 つの段階的なサンプルプログラムを通して、その BLE 機能を解説します。
+
+Bluetooth Low Energy（BLE）は、Bluetooth 4.0 で導入された低消費電力の無線通信規格です。断続的な少量データ伝送向けに設計されており、マイクロアンペアレベルという超低平均電流消費を維持しながら、数十メートルの範囲でワイヤレス接続を実現します。ウェアラブルデバイス、スマートホームセンサー、屋内測位、産業用 IoT などのシナリオで広く利用されています。
+
+nRF54LM20A SoC を搭載した XIAO nRF54LM20A シリーズは、Bluetooth LE、Matter、Thread、Zigbee、および 2.4GHz 独自プロトコルをサポートし、低レイテンシーシナリオに最適な 4 Mbps のピークデータレートを実現します。また、Bluetooth Channel Sounding と Bluetooth Mesh にも対応しています。本記事では、基本的なブロードキャスト Beacon 送信から始めて、双方向 UART 通信、リアルタイムセンサーデータのアップロードへと発展させる 3 つの段階的なサンプルプログラムを通して、その BLE 機能を解説します。
 
 :::tip
 
-- このチュートリアルは PlatformIO ビルドシステムと Zephyr RTOS をベースに作成されています。PlatformIO で XIAO nRF54LM20A 向けプロジェクトの作成に慣れていない場合は、[Getting Sarted With Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_getting_started/) にジャンプしてください。
-- nRF54LM20A SoC や BLE についてさらに学びたい場合は、次のリンクを参照してください: [**nRF54LM20A SoC Introduction**](https://www.nordicsemi.com/Products/nRF54LM20A) および [**Bluetooth-Low-Energy for Nordic**](https://www.nordicsemi.com/Products/Wireless/Bluetooth-Low-Energy)
+- 本チュートリアルは PlatformIO ビルドシステムと Zephyr RTOS をベースに作成されています。PlatformIO で XIAO nRF54LM20A 向けプロジェクトの作成に不慣れな場合は、[Getting Sarted With Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_getting_started/) にジャンプしてください。
+- nRF54LM20A SoC や BLE についてさらに詳しく知りたい場合は、次のリンクを参照してください：[**nRF54LM20A SoC Introduction**](https://www.nordicsemi.com/Products/nRF54LM20A) および [**Bluetooth-Low-Energy for Nordic**](https://www.nordicsemi.com/Products/Wireless/Bluetooth-Low-Energy)
 
 :::
 
@@ -55,8 +77,8 @@ nRF54LM20A SoC を搭載した XIAO nRF54LM20A シリーズは、Bluetooth LE、
 
 ## Bluetooth アンテナ
 
-このボードは外部 Bluetooth アンテナを使用します。より良い Bluetooth 信号品質を確保し、Bluetooth の使用体験を向上させるために、Bluetooth アンテナを取り付けることを推奨します。
-接続方法は以下の通りです。
+このボードは外部 Bluetooth アンテナを使用します。より良い Bluetooth 信号品質を確保し、Bluetooth の使用体験を向上させるため、Bluetooth アンテナを取り付けることを推奨します。
+接続方法は以下のとおりです。
 
 <div style={{textAlign: 'center'}}>
   <img
@@ -68,7 +90,7 @@ nRF54LM20A SoC を搭載した XIAO nRF54LM20A シリーズは、Bluetooth LE、
 
 ### アンテナの取り付け
 
-Seeed Studio XIAO nRF54LM20A のパッケージ内には、専用の Wi-Fi/BT アンテナコネクタが同梱されています。最適な WiFi/Bluetooth 信号強度を得るために、パッケージに含まれているアンテナを取り出し、コネクタに取り付ける必要があります。
+Seeed Studio XIAO nRF54LM20A のパッケージ内には、専用の Wi-Fi/BT アンテナコネクタが同梱されています。最適な WiFi/Bluetooth 信号強度を得るためには、同梱されているアンテナを取り出し、コネクタに取り付ける必要があります。
 <!--  -->
 <div class="table-center">
  <table>
@@ -95,11 +117,11 @@ Seeed Studio XIAO nRF54LM20A のパッケージ内には、専用の Wi-Fi/BT �
 
 ### BLE Beacon
 
-このプロジェクトでは、XIAO nRF54LM20A 上で BLE Beacon 機能を実現します。デバイスは電源投入後、Manufacturer Specific Data を含むアドバタイジングパケットを継続的にブロードキャストします。パケットには 1 秒ごとに増加するカウンタ値が含まれており、nRF Connect を介してリアルタイムのデータ変化を確認できます。
+このプロジェクトでは、XIAO nRF54LM20A 上で BLE Beacon 機能を実現します。デバイスは起動後、Manufacturer Specific Data を含むアドバタイジングパケットを継続的にブロードキャストします。パケットには 1 秒ごとに増加するカウンタ値が含まれており、nRF Connect を介してリアルタイムのデータ変化を確認できます。
 
 #### ソフトウェア
 
-1. `app.overlay` で関連するデバイスツリー設定を有効にし、BLE コントローラをネイティブの Zephyr 実装に切り替えます。
+1. `app.overlay` 内で関連するデバイスツリー設定を有効にし、BLE コントローラをネイティブの Zephyr 実装に切り替えます。
 
 ```dts
 /* Disable Nordic SoftDevice Controller (not available in mainline Zephyr) */
@@ -302,7 +324,7 @@ int main(void)
 
 1. ファームウェアを書き込んだ後、nRF Connect アプリをインストールして BLE デバイスをスキャン・検出します。
 
-同時に、主要なモバイルアプリストアで nRF Connect アプリを検索してダウンロードすることもでき、スマートフォンから Bluetooth デバイスの検索と接続が可能になります。
+同時に、主要なモバイルアプリストアで nRF Connect アプリを検索してダウンロードすることもできます。これにより、スマートフォンで Bluetooth デバイスを検索して接続できます。
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
@@ -318,7 +340,7 @@ int main(void)
 </table>
 </div>
 
-- 取得された Manufacturer Data は 16 進数の値 `<0x0059> 0x03000000AABB` です。プログラムコードを確認すると、セグメント `0x03000000` は現在のカウンタ値が 3 であることを示しています。
+- 取得された Manufacturer Data は 16 進値 `<0x0059> 0x03000000AABB` です。プログラムコードを確認すると、`0x03000000` の部分は現在のカウンタ値が 3 であることを示しています。
 
 ```c
 #define MANUF_COMPANY_ID    0x0059
@@ -338,11 +360,11 @@ manuf_data[7] = 0xBB;
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_beacon_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-上記の結果から、XIAO nRF54LM20A Sense 上でカスタム BLE アドバタイジングパケットを送信するプロセスを明確に理解でき、BLE の動作特性に関するさらなる研究が容易になります。特定のアプリケーションシナリオでは、実際の接続を確立することなく、アドバタイジングデータを用いてトリガ条件を判定することができます。
+上記の結果から、XIAO nRF54LM20A Sense 上でカスタム BLE アドバタイジングパケットを送信するプロセスを明確に理解でき、BLE の動作特性に関するさらなる研究に役立ちます。特定のアプリケーションシナリオでは、実際に接続を確立することなく、アドバタイジングデータを用いてトリガ条件を判定できます。
 
 ### BLE UART
 
-このサンプルでは、XIAO nRF54LM20A Sense 上で BLE を介して双方向データチャネルを確立する方法を示します。Nordic UART Service (NUS) に基づき、モバイルフォンが文字列データをデバイスに送信し、そのエコーバックを行う基本的なインタラクションを実現します。同時に、デバイスは Notify を通じて 1 秒ごとにステータスカウンタを報告し、Write と Notify という 2 つのコアな BLE GATT データ伝送モードを示します。
+このサンプルでは、XIAO nRF54LM20A Sense 上で BLE を介して双方向データチャネルを確立する方法を示します。Nordic UART Service (NUS) に基づき、モバイル端末からデバイスへ文字列データを送信してエコーバックを行う基本的なインタラクションを実現します。同時に、デバイスは Notify を通じて 1 秒ごとにステータスカウンタを報告し、BLE GATT の 2 つのコアなデータ伝送モードである Write と Notify を示します。
 
 #### ソフトウェア
 
@@ -384,7 +406,7 @@ CONFIG_BT_PERIPHERAL=y
 CONFIG_BT_DEVICE_NAME="XIAO BLE UART"
 ```
 
-3. `main.c` でサブスクリプションロジックとデータフィードバックメカニズムを設定します
+3. `main.c` でサブスクリプションロジックとデータフィードバック機構を設定します
 
 
 <details>
@@ -574,12 +596,12 @@ int main(void)
 
 1. ファームウェアを書き込んだ後、nRF Connect アプリをインストールして BLE デバイスをスキャン・検出します。
 
-同時に、主要なモバイルアプリストアで nRF Connect アプリを検索してダウンロードすることもでき、スマートフォンから Bluetooth デバイスを検索して接続できます。
+同時に、主要なモバイルアプリストアで nRF Connect アプリを検索してダウンロードすることもできます。これにより、スマートフォンで Bluetooth デバイスを検索して接続できます。
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. ソフトウェアをダウンロードした後、Bluetooth デバイス **XIAO BLE UART** をスキャンして検索し、以下の手順に従って接続します
+2. ソフトウェアをダウンロードしたら、Bluetooth デバイス **XIAO BLE UART** をスキャンして検索し、以下の手順に従って接続します
 
 <div className="table-center">
 <table align="center">
@@ -607,9 +629,9 @@ int main(void)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_7.png" style={{width:800, height:'auto'}}/></div>
 
-4. データを送信して、受信データの転送効果を確認します。
+4. データを送信して、受信データ転送の効果を確認します。
 
-- RX Characteristic を展開し、**Write** ボタンをクリックして、`hello World` などの文字列を入力し、XIAO nRF54LM20A Sense に送信します。同時に、転送された文字列は TX Characteristic を介して受信できます。
+- RX Characteristic を展開し、**Write** ボタンをクリックして、`hello World` のような文字列を入力し、XIAO nRF54LM20A Sense に送信します。同時に、転送された文字列は TX Characteristic を介して受信できます。
 
 <div className="table-center">
 <table align="center">
@@ -625,15 +647,15 @@ int main(void)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_8.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-このセクションでは、**BLE Notify 購読メカニズム**の基本的な理解と、**データ受信および転送メカニズム**について学びます。特定のシナリオでは、Bluetooth 接続と**センサーによるトリガー制御**を組み合わせることで、デバイスを**オフラインで使用可能なカスタムコントローラ**として機能させることができます。
+このセクションでは、**BLE Notify 購読メカニズム**と**データ受信および転送メカニズム**の基本的な理解を得ることができます。特定のシナリオでは、Bluetooth 接続と**センサーによるトリガー制御**を組み合わせることで、デバイスを**オフラインでも使用可能なカスタムコントローラ**として機能させることができます。
 
 ### BLE センサー
 
-このセクションでは、XIAO nRF54LM20A Sense 上で BLE ベースの IMU モーションデータをリアルタイムに報告する機能を実装します。プログラム起動後、デバイスは自動的に BLE アドバタイジングを有効にします。ユーザーはスマートフォンの nRF Connect からデバイスに接続し、Notify を購読することで、リアルタイムの X/Y/Z 加速度データを受信できます。合成加速度が設定したしきい値を超えるとオンボード LED が点灯し、しきい値を下回ると消灯することで、基本的な動作検知と視覚的なインジケータを実現します。
+このセクションでは、XIAO nRF54LM20A Sense 上で、BLE ベースの IMU モーションデータをリアルタイムに報告する機能を実装します。プログラム起動後、デバイスは自動的に BLE アドバタイジングを有効にします。ユーザーはスマートフォンの nRF Connect からデバイスに接続し、Notify を購読することで、リアルタイムの X/Y/Z 加速度データを受信できます。合成加速度が設定したしきい値を超えるとオンボード LED が点灯し、しきい値未満になると消灯することで、基本的な動作検知と視覚的なインジケータを実現します。
 
 :::tip
 
-XIAO nRF54LM20A シリーズには LSM6DS3TR-C 6 軸センサーが搭載されています。詳しくは [XIAO nRF54LM20A Sense の内蔵センサーの使用方法](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_1.jpg) を参照してください。
+XIAO nRF54LM20A シリーズには LSM6DS3TR-C 6 軸センサーが搭載されています。詳しくは、[XIAO nRF54LM20A Sense の内蔵センサーの使用方法](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_1.jpg)を参照してください。
 
 :::
 
@@ -1111,12 +1133,12 @@ int main(void)
 
 1. ファームウェアを書き込んだ後、BLE デバイスをスキャンして検出するために nRF Connect アプリをインストールします。
 
-同時に、主要なモバイルアプリストアで nRF Connect アプリを検索してダウンロードすることもでき、スマートフォンから Bluetooth デバイスの検索と接続が可能になります。
+同時に、主要なモバイルアプリストアで nRF Connect アプリを検索してダウンロードできます。これにより、スマートフォンで Bluetooth デバイスを検索して接続できます。
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. ソフトウェアを起動したら、Bluetooth デバイス **XIAO BLE IMU** をスキャンし、以下の手順に従って接続します。
+2. ソフトウェアを起動したら、以下の手順に従って Bluetooth デバイス **XIAO BLE IMU** をスキャンして接続します。
 
 <div className="table-center">
 <table align="center">
@@ -1127,7 +1149,7 @@ int main(void)
 </table>
 </div>
 
-3. nRF Connect の Notify 購読メカニズムを通じて、XIAO nRF54LM20A Sense から IMU データを購読・受信します。
+3. nRF Connect の Notify 購読メカニズムを通じて、XIAO nRF54LM20A Sense から IMU データを購読して受信します。
 
 <div className="table-center">
 <table align="center">
@@ -1138,13 +1160,13 @@ int main(void)
 </table>
 </div>
 
-- シリアルポートツールを開き、データ形式を確認して、購読が有効になっていることを確認します。
+- シリアルポートツールを開いてデータ形式を確認し、購読が有効になっていることを確認します。
 
 <div className="table-center"> <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_imu_5.png" style={{width:800, height:'auto'}}/></div></td></div>
 
 4. XIAO nRF54LM20A Sense を振って、しきい値アラームメカニズムをトリガーします。
 
-- しきい値アラーム値はマクロ定義によって変更できます。地球上の標準重力加速度の静止時のデフォルト値は 9.8 m/s² です。
+- しきい値アラーム値はマクロ定義で変更できます。地球上の標準重力加速度の静的なデフォルト値は 9.8 m/s² です。
 
 ```c
 /* Motion threshold in m/s^2 - acceleration vector magnitude */
@@ -1155,11 +1177,11 @@ int main(void)
 
 ## まとめ
 
-上記の例を通して、XIAO nRF54LM20A における BLE アプリケーションについてしっかりと理解することができます。ぜひ独自のクリエイティブなプロジェクトを設計し、その成果を共有してください。
+上記の例を通して、XIAO nRF54LM20A における BLE アプリケーションについてしっかりと理解できるようになります。ぜひ独自のクリエイティブなプロジェクトを設計し、その成果を共有してください。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
