@@ -27,11 +27,11 @@ TensorRT Edge-LLM is NVIDIA’s high-performance C++ inference runtime for Large
 
 TensorRT Edge-LLM supports a wide range of state-of-the-art models:
 
-• Large Language Models: Llama 3.x, Qwen 2/2.5/3, DeepSeek-R1 Distilled
+- Large Language Models: Llama 3.x, Qwen 2/2.5/3, DeepSeek-R1 Distilled
 
-• Vision-Language Models: Qwen2/2.5/3-VL, InternVL3-1B-hf, InternVL3-2B-hf, Phi-4-Multimodal
+- Vision-Language Models: Qwen2/2.5/3-VL, InternVL3-1B-hf, InternVL3-2B-hf, Phi-4-Multimodal
 
-• Quantization: FP16, FP8 (SM89+), INT4 AWQ/GPTQ, NVFP4 (SM100+)
+- Quantization: FP16, FP8 (SM89+), INT4 AWQ/GPTQ, NVFP4 (SM100+)
 
 For the complete list of supported models, precision requirements, and platform compatibility, see Supported Models.https://nvidia.github.io/TensorRT-Edge-LLM/0.6.0/user_guide/getting_started/supported-models.html
 
@@ -43,17 +43,13 @@ The deployment workflow consists of two stages:
 
 1. Model Preparation on an x86 Linux Host
 
-On an x86 Linux workstation equipped with an NVIDIA GPU, the target large language model (LLM) is quantized and exported to the ONNX format using the TensorRT Edge-LLM toolchain.
+    On an x86 Linux workstation equipped with an NVIDIA GPU, the target large language model (LLM) is quantized and exported to the ONNX format using the TensorRT Edge-LLM toolchain.
 
 2. Engine Generation on Jetson
 
-The exported ONNX model is transferred to the Jetson device, where TensorRT Edge-LLM generates an optimized TensorRT inference engine for deployment and runtime execution.
+    The exported ONNX model is transferred to the Jetson device, where TensorRT Edge-LLM generates an optimized TensorRT inference engine for deployment and runtime execution.
 
-
-
-
-
-# Part 1: Model Preparation (x86 Host with GPU)
+## Part 1: Model Preparation (x86 Host with GPU)
 
 The Python export pipeline converts and quantizes models. This must run on an x86 Linux system with an NVIDIA GPU.
 
@@ -92,40 +88,40 @@ The Python export pipeline converts and quantizes models. This must run on an x8
 - Very large models (13B+): 48GB+
 
 > **Note:** FP8 ONNX export currently requires significantly higher CPU (up to 20x model size) and GPU (up to 6x model size) memory due to internal processing. This is a known issue and is being actively optimized.
-> 
-> 
+>
+>
 
 ### Install
 
 1. **Clone Repository**
 
-```
-git clone https://github.com/NVIDIA/TensorRT-Edge-LLM.git
-cd TensorRT-Edge-LLM
-git submodule update --init --recursive
-```
+    ```
+    git clone https://github.com/NVIDIA/TensorRT-Edge-LLM.git
+    cd TensorRT-Edge-LLM
+    git submodule update --init --recursive
+    ```
 
 2. **Install Python Package**
 
-It is recommended to use a virtual environment:
+    It is recommended to use a virtual environment:
 
-```
-python3 -m venv venv
-source venv/bin/activate
-```
+    ```
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
 
-Then just install the software:
+    Then just install the software:
 
-```
-pip3 install .
-```
+    ```
+    pip3 install .
+    ```
 
 3. **Verify Installation**
 
-```
-tensorrt-edgellm-export-llm --help
-tensorrt-edgellm-quantize-llm --help
-```
+    ```
+    tensorrt-edgellm-export-llm --help
+    tensorrt-edgellm-quantize-llm --help
+    ```
 
 ![Image](https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/1.png)
 
@@ -160,13 +156,11 @@ tensorrt-edgellm-export-llm \
 
 ![Image](https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/3.png)
 
-
-
 ![Image](https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/4.png)
 
 ![Image](https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/5.png)
 
-# Part 2: Engine Generation (Edge Jetson Device)
+## Part 2: Engine Generation (Edge Jetson Device)
 
 The C++ runtime builds and executes models on the target Edge device. This must be built on or for the target platform.
 
@@ -174,70 +168,64 @@ The C++ runtime builds and executes models on the target Edge device. This must 
 
 Target Platform:
 
-• NVIDIA Jetson Orin NX SUPER 16GB
+- NVIDIA Jetson Orin NX SUPER 16GB
 
-• JetPack 6.2
+- JetPack 6.2
 
-• Disk Space: 20~50GB for ONNX files and TensorRT engines
+- Disk Space: 20~50GB for ONNX files and TensorRT engines
 
 ### Install and build
 
 1. **Install System Dependencies (on Edge device)**
 
-```
-sudo apt update
-sudo apt install -y \
-    cmake \
-    build-essential \
-    git
-```
-
-
+    ```
+    sudo apt update
+    sudo apt install -y \
+        cmake \
+        build-essential \
+        git
+    ```
 
 2. **Verify CUDA and TensorRT Installation**
 
-After JetPack is installed, TensorRT should be installed in /usr
+    After JetPack is installed, TensorRT should be installed in /usr
 
-Check CUDA version
+    Check CUDA version
 
-```
-nvcc  --version  # Should show CUDA 12.6
-```
-
-
+    ```
+    nvcc  --version  # Should show CUDA 12.6
+    ```
 
 3. **Clone Repository (on Edge device)**
 
-```
-cd ~
-git clone https://github.com/NVIDIA/TensorRT-Edge-LLM.git
-cd TensorRT-Edge-LLM
-git submodule update --init --recursive
-```
-
-
+    ```
+    cd ~
+    git clone https://github.com/NVIDIA/TensorRT-Edge-LLM.git
+    cd TensorRT-Edge-LLM
+    git submodule update --init --recursive
+    ```
 
 4. **Configure Build**
 
-On your Jetson Thor device, configure the build with the following command:
+    On your Jetson Thor device, configure the build with the following command:
 
-```
-mkdir build
-cd build
-cmake .. \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DTRT_PACKAGE_DIR=/usr \
-    -DCMAKE_TOOLCHAIN_FILE=cmake/aarch64_linux_toolchain.cmake \
-    -DEMBEDDED_TARGET=jetson-orin
-```
+    ```
+    mkdir build
+    cd build
+    cmake .. \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DTRT_PACKAGE_DIR=/usr \
+        -DCMAKE_TOOLCHAIN_FILE=cmake/aarch64_linux_toolchain.cmake \
+        -DEMBEDDED_TARGET=jetson-orin
+    ```
 
-1. **Build Project**
+5. **Build Project**
 
-```
-make -j$(nproc)
-```
+    ```
+    make -j$(nproc)
+    ```
 
-Build time: ~1-2 minutes depending on hardware.
+    Build time: ~1-2 minutes depending on hardware.
 
 **Verify Build**
 
@@ -246,8 +234,6 @@ Build time: ~1-2 minutes depending on hardware.
 ./examples/llm/llm_build --help
 ./examples/llm/llm_inference --help
 ```
-
-
 
 ### Build TensorRT Engine
 
@@ -269,8 +255,6 @@ cd ~/TensorRT-Edge-LLM
     --maxInputLen 1024 \
     --maxKVCacheCapacity 4096
 ```
-
-
 
 ![Image](https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/6.png)
 
@@ -344,11 +328,11 @@ You should see a JSON response with the model’s answer, similar to:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
