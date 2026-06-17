@@ -1,5 +1,5 @@
 ---
-title: Introducción a Seeed Studio XIAO nRF54LM20A Sense
+title: Primeros pasos con Seeed Studio XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -60,7 +60,7 @@ Seeed Studio XIAO nRF54LM20A Sense es una placa de desarrollo inalámbrica compa
   <tbody>
     <tr>
       <td><strong>Procesador</strong></td>
-      <td colspan="2">Arm® Cortex®-M33 128 MHz y coprocesador RISC-V 128 MHz</td>
+      <td colspan="2">Arm® Cortex®-M33 128 MHz &amp; coprocesador RISC-V 128 MHz</td>
     </tr>
     <tr>
       <td><strong>RAM</strong></td>
@@ -161,11 +161,11 @@ Seeed Studio XIAO nRF54LM20A Sense es una placa de desarrollo inalámbrica compa
 
 - **SoC potente con conectividad y seguridad avanzadas**
 
-  Seeed Studio XIAO nRF54LM20A Sense es una placa de desarrollo inalámbrica compacta y de ultra bajo consumo impulsada por el SoC nRF54LM20A de Nordic Semiconductor. Incorpora un procesador Arm Cortex-M33 de 128 MHz, 512 KB de RAM, 2 MB de NVM integrada, un coprocesador RISC-V de 128 MHz, conectividad inalámbrica multiprotocolo de 2,4 GHz, IMU integrada, micrófono digital, 8MB de memoria flash externa, conector de antena IPEX y PMIC Nordic nPM1300 para una gestión de energía eficiente. Con compatibilidad para Bluetooth LE, Bluetooth Channel Sounding, Bluetooth Mesh, Thread, Zigbee, Matter y protocolos propietarios de 2,4 GHz de hasta 4 Mbps, esta placa está diseñada para productos conectados de próxima generación. Los sensores de movimiento y audio integrados la hacen ideal para wearables, sensado inteligente, TinyML, reconocimiento de gestos, dispositivos activados por voz y aplicaciones IoT alimentadas por batería.
+  Seeed Studio XIAO nRF54LM20A Sense es una placa de desarrollo inalámbrica compacta y de ultra bajo consumo impulsada por el SoC nRF54LM20A de Nordic Semiconductor. Incorpora un procesador Arm Cortex-M33 de 128 MHz, 512 KB de RAM, 2 MB de NVM integrada, un coprocesador RISC-V de 128 MHz, conectividad inalámbrica multiprotocolo de 2,4 GHz, IMU integrada, micrófono digital, 8MB de flash externa, conector de antena IPEX y PMIC Nordic nPM1300 para una gestión de energía eficiente. Con compatibilidad con Bluetooth LE, Bluetooth Channel Sounding, Bluetooth Mesh, Thread, Zigbee, Matter y protocolos propietarios de 2,4 GHz de hasta 4 Mbps, esta placa está diseñada para productos conectados de próxima generación. Los sensores de movimiento y audio integrados la hacen ideal para wearables, sensado inteligente, TinyML, reconocimiento de gestos, dispositivos activados por voz y aplicaciones IoT alimentadas por batería.
 
 - **Eficiencia de ultra bajo consumo**
 
-  Basada en Nordic nRF54LM20A y el PMIC nPM1300, XIAO nRF54LM20A Sense alcanza una corriente de deep sleep medida de solo 4.76 µA bajo alimentación BAT. Combinada con el PMIC nPM1300 y su corriente BAT en Ship Mode de 0.33 µA, en operación inalámbrica activa registra una corriente media de 3.87 mA con una entrada de batería simulada de 3.7 V y la potencia de transmisión ajustada a +8 dBm; la placa es ideal para aplicaciones de sensado alimentadas por batería de larga duración, wearables y dispositivos IoT siempre encendidos.
+  Basada en Nordic nRF54LM20A y el PMIC nPM1300, XIAO nRF54LM20A Sense alcanza una corriente de sueño profundo medida de solo 4.76 µA bajo alimentación BAT. Combinada con el PMIC nPM1300 y su corriente BAT en Ship Mode de 0.33 µA, en operación inalámbrica activa registra una corriente media de 3.87 mA con una entrada de batería simulada de 3.7 V y la potencia de transmisión configurada a +8 dBm; la placa es ideal para aplicaciones de sensado alimentadas por batería de larga duración, wearables y dispositivos IoT siempre encendidos.
 
 - **Experiencia de desarrollo simplificada**
 
@@ -225,7 +225,7 @@ Seeed Studio XIAO nRF54LM20A Sense es una placa de desarrollo inalámbrica compa
 
 ## **Mapa de pines**
 
-| Pin XIAO       | Función        | Pin del chip                      | Descripción                                                                 |
+| Pin XIAO       | Función        | Pin del chip                       | Descripción                                                                 |
 | :------------: | :------------: | :-------------------------------: | :-------------------------------------------------------------------------- |
 | **Pines de alimentación** |                |                                   |                                                                             |
 | VBUS           | VBUS           | -                                 | Entrada/salida de alimentación de 5V                                       |
@@ -251,8 +251,8 @@ Seeed Studio XIAO nRF54LM20A Sense es una placa de desarrollo inalámbrica compa
 | A3             | AIN3           | P1.29                             | Entrada analógica 3 / GPIO                                                 |
 | A7             | AIN7           | P1.03                             | Entrada analógica 7 / GPIO                                                 |
 | **Pines I2C**  |                |                                   |                                                                             |
-| SDA            | I2C_SDA        | P1.03                             | Línea de datos I2C (IMU y periféricos)                                     |
-| SCL            | I2C_SCL        | P1.07                             | Línea de reloj I2C (IMU y periféricos)                                     |
+| SDA            | I2C_SDA        | P1.03                             | Línea de datos I2C (IMU y periférico)                                      |
+| SCL            | I2C_SCL        | P1.07                             | Línea de reloj I2C (IMU y periférico)                                      |
 | -              | BAT_SDA        | P1.18                             | SDA I2C del monitor de batería (nPM1300)                                   |
 | -              | BAT_SCL        | P1.17                             | SCL I2C del monitor de batería (nPM1300)                                   |
 | **Pines UART** |                |                                   |                                                                             |
@@ -265,9 +265,9 @@ Seeed Studio XIAO nRF54LM20A Sense es una placa de desarrollo inalámbrica compa
 | **Pines de periféricos integrados** |      |                                   |                                                                             |
 | -              | MIC_DAT        | P1.14                             | Línea de datos del micrófono                                               |
 | -              | MIC_CLK        | P1.13                             | Línea de reloj del micrófono                                               |
-| -              | IMU_SDA        | P0.08                             | SDA I2C de la IMU (IMU integrada)                                          |
-| -              | IMU_SCL        | P0.07                             | SCL I2C de la IMU (IMU integrada)                                          |
-| -              | IMU_CS         | P3.12                             | Chip Select de la IMU                                                      |
+| -              | IMU_SDA        | P0.08                             | IMU I2C SDA (IMU integrada)                                                |
+| -              | IMU_SCL        | P0.07                             | IMU I2C SCL (IMU integrada)                                                |
+| -              | IMU_CS         | P3.12                             | Selección de chip de la IMU                                                |
 | -              | IMU_INT1       | P0.06                             | Interrupción 1 de la IMU                                                   |
 | -              | NFC            | P1.02 / P1.01                     | Pines de antena NFC                                                        |
 | -              | GRTC           | P0.04 / P0.05                     | Pines RTC de propósito general                                             |
@@ -283,7 +283,7 @@ Necesitas preparar lo siguiente:
 
 - 1 x [Seeed Studio XIAO nRF54LM20A Sense](https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html)
 - 1 x Ordenador
-- 1 x Cable USB Type-C
+- 1 x Cable USB Tipo-C
 
 <div className="table-center">
   <table align="center">
@@ -325,7 +325,7 @@ Necesitas preparar lo siguiente:
 
 ### Descargar VS Code
 
-Descarga [VS Code](https://code.visualstudio.com/download) de acuerdo con el sistema que estés utilizando
+Descarga según el sistema que estés utilizando [VS Code](https://code.visualstudio.com/download)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -378,7 +378,7 @@ board = seeed-xiao-nrf54lm20a
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-3. Una vez completada la creación, aparecerá un aviso para abrir el espacio de trabajo. Haz clic en OK.
+3. Después de que se complete la creación, aparecerá un aviso para abrir el espacio de trabajo. Haz clic en OK.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_4.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -400,10 +400,10 @@ board = seeed-xiao-nrf54lm20a
 
 ### Añadir el programa Blink
 
-Este tutorial está desarrollado sobre la base de Zephyr RTOS. El proyecto consta de tres archivos principales:
+Este tutorial se desarrolla sobre la base de Zephyr RTOS. El proyecto consta de tres archivos principales:
 
 - `main.c`: Programa principal que contiene la lógica de la aplicación.
-- `app.overlay`: Archivo de superposición de devicetree para la configuración de periféricos de hardware.
+- `app.overlay`: Archivo de superposición Devicetree para la configuración de periféricos de hardware.
 - `prj.conf`: Archivo de configuración del proyecto para habilitar los módulos necesarios de Zephyr.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_6.png" style={{width:800, height:'auto'}}/></div>
@@ -519,7 +519,7 @@ int main(void)
 
 2. Añadir el archivo app.overlay
 
-El archivo de superposición devicetree no existe en el ejemplo en blanco recién creado. Debes añadirlo en el directorio zephyr.
+El archivo de superposición Devicetree no existe en el ejemplo en blanco recién creado. Debes añadirlo en el directorio zephyr.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_7.png" style={{width:800, height:'auto'}}/></div>
 
@@ -627,30 +627,30 @@ La XIAO nRF54LM20A es capaz de utilizar una batería de litio de 3,7 V como entr
 </div>
 
 :::caution
-Por favor, ten cuidado de no provocar un cortocircuito entre los terminales positivo y negativo y quemar la batería y el equipo al soldar.
-Si la batería tiene carga, nunca la sueldes a la placa, ya que esto puede quemar la placa de circuito. Provocar un cortocircuito mientras el circuito está encendido supone un riesgo significativo; se recomienda utilizar un adaptador.
+Tenga cuidado de no provocar un cortocircuito entre los terminales positivo y negativo y quemar la batería y el equipo al soldar.
+Si la batería tiene carga, nunca la suelde en la placa, ya que esto puede quemar la placa de circuito. Provocar un cortocircuito mientras el circuito está alimentado supone un riesgo significativo; se recomienda utilizar un adaptador.
 
 :::
 
 **Instrucciones sobre el uso de baterías:**
 
-1. Utiliza baterías calificadas que cumplan con las especificaciones.
-2. XIAO puede conectarse a tu dispositivo informático mediante un cable de datos mientras usas la batería; ten la seguridad de que XIAO tiene un chip de protección de circuito integrado, lo cual es seguro.
+1. Utilice baterías calificadas que cumplan con las especificaciones.
+2. XIAO se puede conectar a su dispositivo informático mediante un cable de datos mientras usa la batería; puede estar tranquilo, ya que XIAO tiene un chip de protección de circuito integrado, lo cual es seguro.
 
 
 
 ### Detección de voltaje de la batería
 
-El XIAO nRF54LM20A integra una función de detección de voltaje de la batería que se centra en gestionar de forma eficiente las mediciones de potencia de la batería utilizando el interruptor de carga nPM1300-CAA. Esta guía se centrará en analizar la implementación de software de la detección de batería **(especialmente el código main.c)** y te guiará sobre cómo desplegar y utilizar fácilmente esta función en un entorno PlatformIO, evitando la complejidad del SDK Zephyr NCS.
+El XIAO nRF54LM20A integra una función de detección de voltaje de la batería que se centra en gestionar de forma eficiente las mediciones de energía de la batería utilizando el interruptor de carga nPM1300-CAA. Esta guía se centrará en analizar la implementación de software de la detección de batería **(especialmente el código main.c)** y le guiará sobre cómo desplegar y utilizar fácilmente esta función en un entorno PlatformIO, evitando la complejidad del SDK Zephyr NCS.
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_10.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Esquema de detección de batería</em></p>
 </div>
 
-Lo que hace el chip nPM1300-CAA:
+Función del chip nPM1300-CAA:
 
-nPM1300-CAA es un circuito integrado de gestión de energía (PMIC) altamente integrado que sustituye la simple función de interruptor de carga del TPS22916. No solo controla la conmutación del voltaje de la batería para la monitorización de bajo consumo, sino que también integra carga, regulación y una medición precisa del estado de carga (mediante voltaje, corriente y temperatura) para maximizar la vida útil de la batería del nRF54LM20A.
+nPM1300-CAA es un circuito integrado de gestión de energía (PMIC) altamente integrado que sustituye la simple función de interruptor de carga del TPS22916. No solo controla la conmutación del voltaje de la batería para la monitorización de bajo consumo, sino que también integra carga, regulación y medición precisa del nivel de batería (mediante voltaje, corriente y temperatura) para maximizar la vida útil de la batería del nRF54LM20A.
 
 
 
@@ -661,17 +661,17 @@ nPM1300-CAA es un circuito integrado de gestión de energía (PMIC) altamente in
 </div><br/>
 
 :::note
-El siguiente ejemplo funciona tanto para PlatformIO como para nRF Connect SDK. Puede utilizarse directamente en PlatformIO, mientras que el SDK requiere añadir archivos manualmente. Consulta este [enlace](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#placa-alimentada-por-batería)
+El siguiente ejemplo funciona tanto para PlatformIO como para nRF Connect SDK. Se puede usar directamente en PlatformIO, mientras que el SDK requiere añadir archivos manualmente. Consulte este [enlace](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#placa-alimentada-por-batería)
 :::
 
 ## Descripción general de periféricos
 
-El circuito periférico de esta placa incluye un IMU y un micrófono. Puedes ver su ubicación en el siguiente diagrama:
+El circuito periférico de esta placa incluye un IMU y un micrófono. Puede ver sus ubicaciones en el siguiente diagrama:
 
 <div style={{textAlign: 'center'}}>
   <img
     src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png"
-    alt="Ubicaciones del IMU y el micrófono"
+    alt="Ubicaciones del IMU y del micrófono"
     style={{width: 400, height: 'auto'}}
   />
 </div>
@@ -680,14 +680,14 @@ El circuito periférico de esta placa incluye un IMU y un micrófono. Puedes ver
 
 El XIAO nRF54LM20A incorpora un IMU LSM6DS3TR-C, que admite acelerómetro, giroscopio y magnetómetro de 6 ejes.
 
-- [Uso del IMU del XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_onboard/#imu)
+- [Uso del IMU de XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_onboard/#imu)
 
 ## MIC
 
 El XIAO nRF54LM20A está equipado con un micrófono MSM261DGT006, que admite captura de audio de 16 bits.
-- [Uso del MIC del XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_onboard/#mic)
+- [Uso del MIC de XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_onboard/#mic)
 
-## Preguntas frecuentes
+## Preguntas frecuentes (FAQ)
 
 <!-- ### Issue 1: Stuck at **Reading CMake configuration** on macOS
 
@@ -702,9 +702,9 @@ When compiling and uploading programs with PlatformIO on macOS, the process may 
 
 1. **Errores de compilación después de modificar archivos de configuración**
 
-Si anteriormente compilaste el proyecto completo de Zephyr y luego modificaste archivos de configuración, se recomienda limpiar la caché de compilación antes de volver a compilar y cargar. Esto ayuda a evitar errores de compilación causados por archivos de caché obsoletos o dañados.
+Si anteriormente compiló el proyecto completo de Zephyr y luego modificó archivos de configuración, se recomienda limpiar la caché de compilación antes de volver a compilar y cargar. Esto ayuda a evitar errores de compilación causados por archivos de caché obsoletos o dañados.
 
-```cpp
+```shell
 pio run -t clean  // Clean command
 ```
 
@@ -712,18 +712,38 @@ pio run -t clean  // Clean command
 
 Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html). -->
 
+2. **zsh: command not found: openocd después de la instalación**
+
+Al introducir directamente "openocd" en la terminal, el shell solo buscará en los directorios dentro de PATH; si el directorio aún no se ha añadido, indicará que no se puede encontrar el comando. Simplemente añádalo de forma permanente a ~/.zshrc, siguiendo las instrucciones a continuación.
+Esta solución es solo para usuarios de macOS
+
+```shell
+echo 'export PATH="$HOME/Library/Application Support/Seeed/OpenOCD/tool-openocd/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+openocd --version
+```
+
+3. **¿Qué debo hacer si anteriormente descargué placas de la serie Seeed Studio XIAO varias veces y ahora el desplegable del proyecto de Platform falla?**
+
+Se recomienda limpiar antes de intentarlo de nuevo. Las carpetas de la plataforma Seeed duplicadas y obsoletas acumuladas en los paquetes locales de PlatformIO provocan rutas de búsqueda de archivos demasiado largas y conflictos de versiones, lo que da lugar a fallos en la carga del proyecto. Limpie los directorios redundantes de la plataforma Seeed de fuentes mixtas según los pasos siguientes y conserve únicamente la plataforma oficial que PlatformIO descarga automáticamente para evitar conflictos causados por directorios antiguos e incorrectos:
+Elimine todas las carpetas que comiencen con platform-seeed- y framework-seeed-
+
+```shell
+rm -rf ~/.platformio/packages/platform-seeed-* ~/.platformio/packages/framework-seeed-*
+```
+
 ## Recursos
 
 ### Seeed Studio XIAO nRF54LM20A
 
 **Diseño de hardware**
 - **📄[Datasheet]** [Nordic nRF54LM20A Datasheet](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/nRF54LM20A_nRF54LM20B_Datasheet_v1.0.pdf)
-- **📄[Esquemático]** [Esquemático del XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
-- **🗃️[Archivos de diseño de PCB]** [Proyecto KiCad del XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_V1.0_SCH&PCB_260508.zip )
-- **🗃️[Bibliotecas de diseño de PCB]** 
+- **📄[Esquemático]** [Esquemático de XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
+- **🗃️[Archivos de diseño PCB]** [Proyecto KiCad de XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_V1.0_SCH&PCB_260508.zip )
+- **🗃️[Librerías de diseño PCB]** 
   - [Huellas KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [Símbolos SCH KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de pines]**[Hoja de pines del XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Pin_definition.xlsx)
+- **📄[Diagrama de pines]**[Hoja de pines de XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Pin_definition.xlsx)
 
 <!-- **Mechanical**
 - **🗃️[3D Dimensions]** [XIAO nRF54LM20A Dimension in DXF](1) -->
@@ -732,12 +752,12 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 **Diseño de hardware**
 - **📄[Datasheet]** [Nordic nRF54LM20A Datasheet](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/nRF54LM20A_nRF54LM20B_Datasheet_v1.0.pdf)
-- **📄[Esquemático]** [Esquemático del XIAO nRF54LM20A Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
-- **🗃️[Archivos de diseño de PCB]** [Proyecto KiCad del XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_V1.0_SCH&PCB_260508.zip )
-- **🗃️[Bibliotecas de diseño de PCB]**
+- **📄[Esquemático]** [Esquemático de XIAO nRF54LM20A Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
+- **🗃️[Archivos de diseño PCB]** [Proyecto KiCad de XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_V1.0_SCH&PCB_260508.zip )
+- **🗃️[Librerías de diseño PCB]**
   - [Huellas KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [Símbolos SCH KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de pines]**[Hoja de pines del XIAO nRF54LM20A Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Pin_definition.xlsx)
+- **📄[Diagrama de pines]**[Hoja de pines de XIAO nRF54LM20A Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Pin_definition.xlsx)
 
 <!-- **Mechanical**
 - **🗃️[3D Dimensions]** [XIAO nRF54LM20A Sense Dimension in DXF](1) -->
@@ -745,7 +765,7 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerle diferentes tipos de soporte y garantizar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
