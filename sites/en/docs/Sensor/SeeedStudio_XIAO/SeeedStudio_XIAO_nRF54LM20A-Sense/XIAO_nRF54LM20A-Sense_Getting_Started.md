@@ -704,13 +704,33 @@ When compiling and uploading programs with PlatformIO on macOS, the process may 
 
 If you previously built the full Zephyr project and later modified configuration files, it is recommended to clean the build cache before rebuilding and uploading. This helps avoid compilation errors caused by stale or corrupted cache files.
 
-```cpp
+```shell
 pio run -t clean  // Clean command
 ```
 
 <!-- ### Issue 3: Build errors after modifying configuration files
 
 Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html). -->
+
+2. **zsh: command not found: openocd after installation**
+
+When directly entering "openocd" in the terminal, the shell will only search in the directories within the PATH; if the directory has not been added yet, it will prompt that the command cannot be found. Simply add it permanently to ~/.zshrc, following the instructions below.
+This solution is for macOS users only
+
+```shell
+echo 'export PATH="$HOME/Library/Application Support/Seeed/OpenOCD/tool-openocd/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+openocd --version
+```
+
+3. **What should I do if I previously downloaded Seeed Studio XIAO series boards multiple times and now the drop-down of the Platform project fails?**
+
+It is recommended to clean up before trying again. Accumulated duplicate and outdated Seeed platform folders under PlatformIO local packages cause overlong file lookup paths and version conflicts, resulting in project loading failure. Clean up redundant mixed-source Seeed platform directories according to the steps below, and only retain the official platform automatically pulled by PlatformIO to avoid conflicts caused by old and incorrect directories:
+Delete all folders starting with platform-seeed- and framework-seeed-
+
+```shell
+rm -rf ~/.platformio/packages/platform-seeed-* ~/.platformio/packages/framework-seeed-*
+```
 
 ## Resources
 
