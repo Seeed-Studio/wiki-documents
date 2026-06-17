@@ -324,6 +324,15 @@ The `checkpoint` field supports three forms: a file name is resolved under `sdk/
 
 Before running the full grasping pipeline, complete the Eye-in-Hand hand-eye calibration first.
 
+Before running the calibration script, bring up and verify the CAN interface:
+
+```bash
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up
+ip -details link show can0
+```
+
 ```bash
 python scripts/collect_handeye_eih.py
 ```

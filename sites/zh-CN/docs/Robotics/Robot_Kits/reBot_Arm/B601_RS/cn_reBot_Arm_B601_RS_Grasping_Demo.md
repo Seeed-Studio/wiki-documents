@@ -325,6 +325,15 @@ graspnet:
 
 第一次运行完整抓取前，先完成 Eye-in-Hand 手眼标定。
 
+运行标定程序前，请先启动并确认 CAN 接口：
+
+```bash
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up
+ip -details link show can0
+```
+
 ```bash
 python scripts/collect_handeye_eih.py
 ```
