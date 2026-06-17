@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-15 15:36:45 (北京时间)
-// 多语言页面: 2333 个
+// 生成时间: 2026-06-16 16:21:21 (北京时间)
+// 多语言页面: 2337 个
 
 (function() {
   'use strict';
@@ -1108,6 +1108,13 @@
     "ja",
     "pt"
   ],
+  "/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/getting_started_with_jetson_claw_on_orin_nano_nx_8gb": [
     "cn",
     "en",
@@ -1137,6 +1144,20 @@
     "pt"
   ],
   "/ai_robotics_reachy_fleet_dance": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_graspnet_visual_grasping": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/voice_control_rebot_arm": [
     "cn",
     "en",
     "es",
@@ -3320,7 +3341,7 @@
     "ja",
     "pt"
   ],
-  "/ai_voice_interaction_with_recamera": [
+  "/ai_voice_assitant_with_recamera": [
     "cn",
     "en",
     "es",
@@ -3426,6 +3447,13 @@
     "pt"
   ],
   "/recamera_network_connection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wifi_halow_getting_started": [
     "cn",
     "en",
     "es",

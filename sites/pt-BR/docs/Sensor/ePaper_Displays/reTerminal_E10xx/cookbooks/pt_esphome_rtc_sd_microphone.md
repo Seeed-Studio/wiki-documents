@@ -1,5 +1,5 @@
 ---
-description: Livro de receitas ESPHome para reTerminal E1001 / E1002 - demonstrações independentes para sincronização de horário do RTC PCF8563, detecção de cartão microSD, inicialização do microfone PDM onboard e um painel combinado de status de hardware.
+description: Livro de receitas ESPHome para reTerminal E1001 / E1002 - demos independentes para sincronização de horário do RTC PCF8563, detecção de cartão microSD, inicialização do microfone PDM onboard e um painel combinado de status de hardware.
 title: 'Livro de Receitas ESPHome: RTC, Cartão SD e Microfone (reTerminal E Série)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
@@ -18,19 +18,29 @@ import TabItem from '@theme/TabItem';
 
 # Livro de Receitas ESPHome: RTC, Cartão SD e Microfone (reTerminal E Série)
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/251.jpeg" style={{width:1000, height:'auto'}}/></div><br />
+
 :::tip Pré-requisitos
-Esta página pressupõe que você já concluiu o [livro de receitas ESPHome para display do reTerminal E Série](/pt-br/reterminal_e10xx_with_esphome) e que seu dispositivo está online no Home Assistant. Para botões, buzzer, LED, monitoramento de bateria, SHT4x e deep sleep, consulte [Livro de Receitas ESPHome: Botões, Buzzer, LED, Bateria e Baixo Consumo](/pt-br/reterminal_e10xx_with_esphome_advanced).
+Esta página pressupõe que você já concluiu o [livro de receitas ESPHome de display para reTerminal E Série](/pt-br/reterminal_e10xx_with_esphome) e que seu dispositivo está online no Home Assistant. Para botões, buzzer, LED, monitoramento de bateria, SHT4x e deep sleep, consulte [Livro de Receitas ESPHome: Botões, Buzzer, LED, Bateria e Baixo Consumo](/pt-br/reterminal_e10xx_with_esphome_advanced).
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
+:::tip Teste os demos sem configurar um ambiente de desenvolvimento
+Se você quiser visualizar rapidamente os resultados do projeto ou testar o firmware demo básico antes de configurar um ambiente de desenvolvimento, abra o **[Hub de Firmware reTerminal E-Series](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Você pode escolher um dispositivo reTerminal E Série compatível e gravar o firmware demo diretamente a partir de um navegador.
 
-Este livro de receitas continua os exemplos ESPHome do reTerminal E Série com três blocos de hardware onboard que não são cobertos nos livros de receitas de display e E/S:
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
+Este livro de receitas continua os exemplos ESPHome do reTerminal E Série com três blocos de hardware onboard que não são abordados nos livros de receitas de display e E/S:
 
 - **RTC PCF8563** - lê o horário de hardware do RTC onboard e o sincroniza a partir do Home Assistant.
 - **slot para cartão microSD** - habilita a linha de alimentação do SD e informa se um cartão está inserido.
 - **microfone PDM** - habilita a linha de alimentação do microfone onboard e inicializa o microfone PDM através do ESPHome.
 
-Cada seção abaixo é organizada como uma pequena demonstração ESPHome independente. Você pode copiar um exemplo YAML completo, substituir os placeholders de API e OTA e enviá-lo diretamente a partir do ESPHome.
+Cada seção abaixo é organizada como um pequeno demo ESPHome independente. Você pode copiar um exemplo YAML completo, substituir os placeholders de API e OTA e enviá-lo diretamente a partir do ESPHome.
 
 :::note Cobertura de modelos
 Os exemplos prontos para copiar nesta página foram escritos para **reTerminal E1001** e **reTerminal E1002**, correspondendo aos exemplos de hardware ESPHome testados. Os exemplos de microfone onboard se aplicam a modelos que incluem o hardware de microfone PDM; o reTerminal E1004 não inclui o microfone.
@@ -38,7 +48,7 @@ Os exemplos prontos para copiar nesta página foram escritos para **reTerminal E
 
 ## Capacidades de Hardware
 
-Os seguintes pinos são usados pelas demonstrações neste livro de receitas.
+Os seguintes pinos são usados pelos demos neste livro de receitas.
 
 <div class="table-center">
   <table align="center">
@@ -55,7 +65,7 @@ Os seguintes pinos são usados pelas demonstrações neste livro de receitas.
     <tr>
       <td>Detecção de cartão microSD</td>
       <td><code>binary_sensor.gpio</code></td>
-      <td><code>GPIO15</code>, ativo em nível BAIXO</td>
+      <td><code>GPIO15</code>, ativo em LOW</td>
     </tr>
     <tr>
       <td>Habilitar alimentação do microSD</td>
@@ -91,7 +101,7 @@ Os exemplos usam placeholders como `REPLACE_WITH_YOUR_API_KEY` e `REPLACE_WITH_Y
 
 ## Sincronização de Horário do RTC
 
-Esta demonstração lê o horário do **RTC PCF8563** onboard e o exibe na tela ePaper. Quando o Home Assistant sincroniza o horário com o dispositivo, o ESPHome grava esse horário de volta no RTC de hardware.
+Este demo lê o horário do **RTC PCF8563** onboard e o exibe na tela ePaper. Quando o Home Assistant sincroniza o horário com o dispositivo, o ESPHome grava esse horário de volta no RTC de hardware.
 
 O RTC usa o barramento I2C compartilhado:
 
@@ -289,7 +299,7 @@ Esta configuração:
 - Grava o horário do Home Assistant de volta no RTC de hardware.
 - Exibe a data e hora atuais na tela ePaper.
 
-A imagem a seguir mostra o resultado esperado no reTerminal E1002. A mesma demonstração funciona tanto no reTerminal E1001 quanto no E1002. A principal diferença é a saída do display: o E1001 mostra um resultado monocromático, enquanto o E1002 pode mostrar um resultado em cores.
+A imagem a seguir mostra o resultado esperado no reTerminal E1002. O mesmo demo funciona tanto no reTerminal E1001 quanto no E1002. A principal diferença é a saída do display: o E1001 mostra um resultado monocromático, enquanto o E1002 pode mostrar um resultado em cores.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/252.jpeg" style={{width:700, height:'auto'}}/></div>
 
@@ -299,9 +309,9 @@ Se o horário do RTC não permanecer correto após um ciclo completo de energia,
 
 ## Detecção de Cartão MicroSD
 
-Esta demonstração informa se um cartão microSD está inserido. Ela também liga a linha de alimentação do cartão SD através do `GPIO16`.
+Este demo informa se um cartão microSD está inserido. Ele também liga a linha de alimentação do cartão SD através do `GPIO16`.
 
-O pino de detecção de cartão é ativo em nível BAIXO, portanto o sensor binário usa `inverted: true`.
+O pino de detecção do cartão é ativo em LOW, portanto o sensor binário usa `inverted: true`.
 
 Você pode usar este exemplo substituindo os valores de placeholder e enviando o YAML completo para o seu dispositivo.
 
@@ -517,7 +527,7 @@ Isso acontece porque o ESPHome é projetado principalmente para sensores, interr
 Em uma configuração típica de ESPHome, o status do cartão SD pode ser usado para:
 - mostrar se o armazenamento está fisicamente disponível;
 - acionar automações do Home Assistant quando um cartão é inserido ou removido;
-- exibir informações de integridade de hardware junto com o status de RTC, bateria e microfone.
+- exibir informações de integridade de hardware junto com o status do RTC, bateria e microfone.
 
 Se o seu objetivo é leitura/gravação direta de arquivos no cartão SD, consulte em vez disso o cookbook de cartão SD para Arduino.
 :::
@@ -692,7 +702,7 @@ Esta configuração:
 - Mostra o pino de clock PDM `GPIO42` e o pino de dados `GPIO41` na tela de ePaper.
 - Mantém a demonstração principal próxima às demos de RTC e microSD, para que a atualização da tela possa ser verificada antes de adicionar o componente de áudio.
 
-Se você quiser expor o microfone PDM onboard ao ESPHome, adicione o seguinte bloco opcional depois de confirmar que a demonstração de tela está atualizando corretamente:
+Se você quiser expor o microfone PDM onboard ao ESPHome, adicione o seguinte bloco opcional depois de confirmar que a demonstração da tela está atualizando corretamente:
 
 ```yaml
 i2s_audio:
@@ -1019,37 +1029,17 @@ Quando o firmware está em execução, a tela mostra a hora do RTC, o estado do 
 
 A imagem a seguir mostra o resultado esperado no reTerminal E1002. A mesma demonstração funciona tanto no reTerminal E1001 quanto no E1002. A principal diferença é a saída de exibição: o E1001 mostra um resultado monocromático, enquanto o E1002 pode mostrar um resultado em cores.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/255.jpeg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/250.jpeg" style={{width:700, height:'auto'}}/></div>
 
 ## FAQ
 
 ### P1: Por que a tela mostra "RTC: waiting for sync"?
 
-O dispositivo ainda não recebeu uma hora válida. Confirme que o Wi-Fi está conectado, que a API do ESPHome está conectada ao Home Assistant e que o Home Assistant está com a hora do sistema correta. Depois que o Home Assistant sincronizar a hora, o ESPHome grava a hora de volta no RTC PCF8563.
+O dispositivo ainda não recebeu uma hora válida. Confirme que o Wi‑Fi está conectado, que a API do ESPHome está conectada ao Home Assistant e que o Home Assistant está com a hora correta do sistema. Depois que o Home Assistant sincronizar a hora, o ESPHome grava a hora de volta no RTC PCF8563.
 
-### P2: Por que a hora do RTC desaparece após remover a alimentação?
+### P2: Por que não há log serial via USB?
 
-O PCF8563 precisa de uma bateria tipo moeda CR1220 para manter a hora quando a bateria principal e a alimentação USB são removidas. Instale ou substitua a bateria tipo moeda, ligue o dispositivo novamente e deixe o Home Assistant sincronizar a hora uma vez.
-
-### P3: Por que o Home Assistant sempre mostra o cartão SD como não detectado?
-
-Verifique três coisas:
-
-- Confirme se o cartão está totalmente inserido no slot.
-- Certifique-se de que `bsp_sd_enable` em `GPIO16` esteja ligado durante a inicialização.
-- Mantenha o `GPIO15` configurado como `INPUT_PULLUP` com `inverted: true`, porque o sinal de detecção é ativo em nível BAIXO.
-
-### P4: O ESPHome pode ler e gravar arquivos no cartão microSD?
-
-Esta página usa o ESPHome apenas para habilitar a linha de alimentação do SD e ler o pino de detecção do cartão. Operações gerais de arquivos, como listar arquivos, ler imagens, criar pastas ou salvar arquivos de áudio, são melhor tratadas pelos exemplos de cartão SD do Arduino.
-
-### P5: O ESPHome pode gravar áudio do microfone diretamente no cartão SD?
-
-Não com o YAML simples mostrado nesta página. A demonstração do microfone inicializa o hardware do microfone PDM onboard. Se o seu objetivo é gravar arquivos WAV no cartão SD, use em vez disso os exemplos de microfone e SD do Arduino.
-
-### P6: Por que não há log serial via USB?
-
-A reTerminal E Série usa uma ponte USB‑para‑UART CH340K na UART0. Mantenha esta configuração de logger no seu YAML:
+A reTerminal E Series usa uma ponte USB‑para‑UART CH340K na UART0. Mantenha esta configuração de logger no seu arquivo YAML:
 
 ```yaml
 logger:
@@ -1058,19 +1048,19 @@ logger:
 
 ### P3: Por que a tela não é atualizada na demonstração de RTC ou de microfone?
 
-Se um cartão microSD estiver inserido, remova primeiro o cartão e reinicie o dispositivo. Exceto para a demonstração de detecção de cartão microSD, as outras demonstrações desta página não precisam que o cartão esteja inserido. Manter um cartão inserido pode afetar o barramento SPI compartilhado e impedir que a tela de ePaper seja atualizada corretamente.
+Se um cartão microSD estiver inserido, remova o cartão primeiro e reinicie o dispositivo. Exceto para a demonstração de detecção de cartão microSD, as outras demonstrações desta página não precisam que o cartão esteja inserido. Manter um cartão inserido pode afetar o barramento SPI compartilhado e impedir que a tela de ePaper seja atualizada corretamente.
 
 Depois de remover o cartão, envie novamente ou reinicie a demonstração de RTC ou de microfone. A tela de ePaper deve ser atualizada normalmente.
 
 ## Recursos
 
-- **[Wiki]** [ESPHome Cookbook: Conceitos básicos de display](/pt-br/reterminal_e10xx_with_esphome)
-- **[Wiki]** [ESPHome Cookbook: Botões, buzzer, LED, bateria e baixo consumo](/pt-br/reterminal_e10xx_with_esphome_advanced)
-- **[Wiki]** [Trabalhar com ESPHome](/pt-br/epaper_work_with_esphome)
-- **[Wiki]** [Arduino Cookbook: Periféricos onboard](/pt-br/reterminal_e10xx_with_arduino_peripherals)
-- **[Wiki]** [Arduino Cookbook: RTC, baixo consumo, áudio e toque](/pt-br/reterminal_e10xx_with_arduino_peripherals_2)
-- **[Documentation]** [Componente de tempo do ESPHome](https://esphome.io/components/time/)
-- **[Documentation]** [Componente de áudio I2S do ESPHome](https://esphome.io/components/i2s_audio.html)
+- **[Wiki]** [ESPHome Cookbook: Display Basics](/pt-br/reterminal_e10xx_with_esphome)
+- **[Wiki]** [ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power](/pt-br/reterminal_e10xx_with_esphome_advanced)
+- **[Wiki]** [Work with ESPHome](/pt-br/epaper_work_with_esphome)
+- **[Wiki]** [Arduino Cookbook: Onboard Peripherals](/pt-br/reterminal_e10xx_with_arduino_peripherals)
+- **[Wiki]** [Arduino Cookbook: RTC, Low Power, Audio & Touch](/pt-br/reterminal_e10xx_with_arduino_peripherals_2)
+- **[Documentation]** [ESPHome Time Component](https://esphome.io/components/time/)
+- **[Documentation]** [ESPHome I2S Audio Component](https://esphome.io/components/i2s_audio.html)
 
 ## Suporte Técnico e Discussão de Produtos
 

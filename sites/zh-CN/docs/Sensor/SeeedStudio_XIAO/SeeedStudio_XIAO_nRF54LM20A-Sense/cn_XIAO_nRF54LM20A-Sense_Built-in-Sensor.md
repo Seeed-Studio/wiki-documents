@@ -19,8 +19,29 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/
 # XIAO nRF54LM20A Sense 板载传感器的使用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png" style={{width:400, height:'auto'}}/></div>
-<br/>
-XIAO nRF54LM20A Sense 配备了丰富的板载传感器，可支持多场景应用。它集成了用于姿态识别的 LSM6DS3TR-C 六轴传感器，以及支持 PDM 数字输出和全向拾音的 MSM261DGT006 数字 MEMS 麦克风，适用于智能语音场景。本文将介绍基于 XIAO nRF54LM20A 丰富板载外设的开发与使用方法。
+
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  立即获取 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+XIAO nRF54LM20A Sense 配备了丰富的板载传感器，以支持多场景应用。它集成了用于姿态识别的 LSM6DS3TR-C 六轴传感器，以及支持 PDM 数字输出和全向拾音的 MSM261DGT006 数字 MEMS 麦克风，适用于智能语音场景。本文将介绍基于 XIAO nRF54LM20A 丰富板载外设的开发与使用方法。
 
 :::tip
 
@@ -112,7 +133,7 @@ LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的�
 };
 ```
 
-2. 修改 prj.conf 文件，开启 I2C 和中断触发相关配置。
+2. 修改 prj.conf 文件以启用 I2C 和中断触发配置。
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -329,11 +350,26 @@ int main(void)
 - 三轴数字加速度计：测量 X、Y 和 Z 轴方向的加速度。
 - 三轴数字陀螺仪：测量绕 X、Y 和 Z 轴的角速度。
 
+:::tip
+
+1. 通过串口监视器查看数据时，将波特率设置为 115200。
+2. 在 PlatformIO IDE 串口监视器中，在 **platformio.ini** 配置文件中将波特率指定为 115200。
+
+```ini
+[env:seeed-xiao-nrf54lm20a]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+framework = zephyr
+board = seeed-xiao-nrf54lm20a
+monitor_speed = 115200
+```
+
+:::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboar_imu_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### 应用
 
-IMU 可以融合三轴加速度数据来计算俯仰、偏航和横滚姿态角，用于姿态识别。它还可以与相应的控制器配合实现运动控制，或应用于姿态触发唤醒等低功耗场景。
+IMU 可以融合三轴加速度数据来计算俯仰角、偏航角和横滚姿态角，用于姿态识别。它还可以与相应的控制器配合实现运动控制，或应用于姿态触发唤醒等低功耗场景。
 
 #### 电子海洋
 
@@ -341,7 +377,7 @@ IMU 可以融合三轴加速度数据来计算俯仰、偏航和横滚姿态角�
 
 - **倾斜水位控制** — 通过左右横滚倾斜调节水位高度
 - **波浪动画** — 三层频率叠加的波面，2D 波浪传播和边缘反射效果
-- **流体惯性** — 具有动量的水面；快速倾斜会产生过冲和随后的晃动回弹
+- **流体惯性** — 具有动量的水面；快速倾斜会产生过冲以及随后的晃动回弹
 - **翻转检测** — 当开发板被翻转时显示会自动镜像
 - **动态色彩** — 每一列随机渐变切换海洋色调
 
@@ -588,7 +624,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <br/>
 :::tip
 
-感应位置仅供参考，准确的轻敲位置识别取决于 IMU 融合控制算法。
+感应位置仅供参考。准确的轻敲位置识别取决于 IMU 融合控制算法。
 
 :::
 
@@ -600,7 +636,7 @@ RTC 支持时间戳计数，即使断电也能记录运行时间，便于日志�
 
 本节介绍一个在 XIAO nRF54LM20A Sense 上实现的示例程序。上电后，通过 RTC 获取从编译时间开始的时间戳，并每秒打印一次数据。进入 System OFF 模式后，系统将由 RTC 闹钟唤醒以继续计数。
 
-1. 将 [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) 复制到 main.c 文件中，使用 RTC 功能打印时间戳。
+1. 将 [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) 复制到 main.c 文件中。使用 RTC 函数打印时间戳。
 
 2. 修改设备树 `app.overlay` 以启用 RTC 节点。
 
@@ -632,7 +668,7 @@ RTC 支持时间戳计数，即使断电也能记录运行时间，便于日志�
 };
 ```
 
-3. 编辑 prj.conf 文件以启用相关的 RTC 配置。
+3. 编辑 prj.conf 文件以启用相关 RTC 配置。
 
 ```prj
 # Console and serial
@@ -662,7 +698,7 @@ CONFIG_NEWLIB_LIBC=y
 
 ### 结果
 
-- 程序从编译和烧录的时间开始计时。打开串口工具观察运行效果，所有预期功能均已实现。
+- 程序从编译和烧录的时间开始计数。打开串口工具观察运行效果，所有预期功能均已实现。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -673,7 +709,7 @@ XIAO nRF54LM20A Sense 配备 MSM261DGT006 数字 MEMS 麦克风用于语音输�
 
 :::tip
 
-在 XIAO nRF54LM20A 系列中，只有 XIAO nRF54M20A Sense 配备了麦克风，位于开发板的左下角。
+在 XIAO nRF54LM20A 系列中，只有 XIAO nRF54M20A Sense 配备麦克风，位于开发板的左下角。
 
 :::
 
@@ -681,7 +717,7 @@ XIAO nRF54LM20A Sense 配备 MSM261DGT006 数字 MEMS 麦克风用于语音输�
 
 本节通过语音示例演示麦克风功能。具体流程如下：
 
-- 按下 BOOT 按键，RGB-G LED 常亮并开始录音；再次按下停止录音（最长 10 秒）。
+- 按下 BOOT 按钮，RGB-G LED 常亮并开始录音；再次按下停止录音（最长 10 秒）。
 - 录音结束后，音频文件将通过蓝牙发送到上位机。传输过程中 RGB-G LED 闪烁。
 - 在 Windows 上运行接收脚本，将音频文件保存到桌面。
 - 传输完成后 RGB-G LED 熄灭。
@@ -817,7 +853,7 @@ CONFIG_ASSERT=y
 
 1. 运行 Python 脚本
 
-在执行前安装所需的依赖库：
+在执行前安装所需依赖库：
 
 ```bash
 pip install bleak 
@@ -983,12 +1019,12 @@ BLE UUID 已在 Python 程序中配置好，因此运行脚本后会自动连接
 
 2. 检查结果
 
-- 按下 BOOT 键开始录音，绿色常亮的 RGB LED 表示正在录音。你可以对着麦克风大声说话，然后再次按下 BOOT 键停止录音。绿色闪烁的 RGB LED 表示正在传输音频文件。
+- 按下 BOOT 键开始录音。常亮的绿色 RGB LED 表示正在录音。你可以对着麦克风大声说话，然后再次按下 BOOT 键停止录音。闪烁的绿色 RGB LED 表示正在传输音频文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- 打开串口，将会打印日志。请将波特率设置为 921600。
+- 打开串口，它会打印日志。请将波特率设置为 921600。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -1000,7 +1036,7 @@ BLE UUID 已在 Python 程序中配置好，因此运行脚本后会自动连接
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供多种支持方式，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

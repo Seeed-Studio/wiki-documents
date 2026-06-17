@@ -20,9 +20,31 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_ble/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/xiao_nrf54lm20a_ble.png" style={{width:400, height:'auto'}}/></div>
 
-Bluetooth Low Energy（BLE）是 Bluetooth 4.0 中引入的一种低功耗无线通信标准。它专为间歇性的小数据传输而设计，可在数十米范围内实现无线连接，同时将平均电流消耗保持在微安级的超低水平。BLE 被广泛应用于可穿戴设备、智能家居传感器、室内定位以及工业物联网等场景。
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  立即获取 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
 
-得益于 nRF54LM20A SoC，XIAO nRF54LM20A 系列支持 Bluetooth LE、Matter、Thread、Zigbee 以及 2.4GHz 私有协议，在低时延场景下可提供高达 4 Mbps 的峰值数据速率。同时，它还支持 Bluetooth Channel Sounding 和 Bluetooth Mesh。本文通过三个循序渐进的示例程序来展示其 BLE 功能，从基础的广播 Beacon 发送开始，进一步扩展到双向 UART 通信以及实时传感器数据上传。
+
+Bluetooth Low Energy（BLE）是 Bluetooth 4.0 中引入的一种低功耗无线通信标准。它专为间歇性的小数据传输而设计，可在数十米范围内实现无线连接，同时将平均电流消耗保持在微安级的超低水平。BLE 被广泛应用于可穿戴设备、智能家居传感器、室内定位以及工业物联网场景。
+
+得益于 nRF54LM20A SoC，XIAO nRF54LM20A 系列支持 Bluetooth LE、Matter、Thread、Zigbee 以及 2.4GHz 私有协议，能够提供高达 4 Mbps 的峰值数据速率，非常适合低延迟场景。同时，它还支持 Bluetooth Channel Sounding 和 Bluetooth Mesh。本文通过三个循序渐进的示例程序来展示其 BLE 功能，从基础的广播 Beacon 发送开始，进一步扩展到双向 UART 通信以及实时传感器数据上传。
 
 :::tip
 
@@ -33,7 +55,7 @@ Bluetooth Low Energy（BLE）是 Bluetooth 4.0 中引入的一种低功耗无线
 
 ## 硬件准备
 
-在开始例程实现之前，你至少需要准备一块 XIAO nRF54LM20A Sense。
+在开始例程实现之前，你需要至少准备一块 XIAO nRF54LM20A Sense。
 
 <div className="table-center">
 <table align="center">
@@ -53,9 +75,9 @@ Bluetooth Low Energy（BLE）是 Bluetooth 4.0 中引入的一种低功耗无线
 </table>
 </div>
 
-## Bluetooth 天线
+## 蓝牙天线
 
-该开发板使用外置 Bluetooth 天线。为了确保更好的 Bluetooth 信号质量并提升你的 Bluetooth 使用体验，建议安装 Bluetooth 天线。
+该开发板使用外置蓝牙天线。为了确保更好的蓝牙信号质量并提升你的蓝牙使用体验，建议安装蓝牙天线。
 连接方式如下图所示：
 
 <div style={{textAlign: 'center'}}>
@@ -68,7 +90,7 @@ Bluetooth Low Energy（BLE）是 Bluetooth 4.0 中引入的一种低功耗无线
 
 ### 天线安装
 
-在 Seeed Studio XIAO nRF54LM20A 的包装内，附带有一个专用的 Wi-Fi/BT 天线连接器。为了获得最佳的 WiFi/Bluetooth 信号强度，你需要取出包装中附带的天线并将其连接到该连接器上。
+在 Seeed Studio XIAO nRF54LM20A 的包装内，附带有一个专用的 Wi-Fi/BT 天线连接器。为了获得最佳的 WiFi/蓝牙信号强度，你需要取出包装中附带的天线并将其连接到该连接器上。
 <!--  -->
 <div class="table-center">
  <table>
@@ -91,15 +113,15 @@ Bluetooth Low Energy（BLE）是 Bluetooth 4.0 中引入的一种低功耗无线
 
 ## 应用
 
-本节将通过实际案例介绍 BLE 的核心特性以及在 XIAO nRF54LM20A Sense 上使用 BLE 的方法。
+本节将通过实际案例介绍 BLE 的核心特性，以及在 XIAO nRF54LM20A Sense 上使用 BLE 的方法。
 
 ### BLE Beacon
 
-本项目在 XIAO nRF54LM20A 上实现了 BLE Beacon 功能。设备上电后会持续广播携带 Manufacturer Specific Data 的广播数据包。数据包中包含一个每秒递增的计数值，可通过 nRF Connect 检查其实时变化。
+本项目在 XIAO nRF54LM20A 上实现 BLE Beacon 功能。设备上电后会持续广播携带 Manufacturer Specific Data 的广播包。该数据包中包含一个每秒递增的计数值，可以通过 nRF Connect 检查其实时变化。
 
 #### 软件
 
-1. 需要在 `app.overlay` 中启用相关设备树配置，将 BLE 控制器切换为原生 Zephyr 实现。
+1. 需要在 `app.overlay` 中启用相关设备树配置，以将 BLE 控制器切换为原生 Zephyr 实现。
 
 ```dts
 /* Disable Nordic SoftDevice Controller (not available in mainline Zephyr) */
@@ -300,14 +322,14 @@ int main(void)
 
 #### 结果
 
-1. 在烧录固件后，安装 nRF Connect 应用以扫描并检测 BLE 设备。
+1. 在上传固件后，安装 nRF Connect 应用以扫描并检测 BLE 设备。
 
-同时，你也可以在各大手机应用商店中搜索并下载 nRF Connect 应用，使手机能够搜索并连接 Bluetooth 设备。
+同时，你可以在各大手机应用商店中搜索并下载 nRF Connect 应用，它可以让你的手机搜索并连接蓝牙设备。
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. 安装软件后，扫描名为 **XIAO-Beacon** 的 Bluetooth 设备并查看接收到的 Manufacturer Data。同时，打开串口查看输出日志。
+2. 安装软件后，扫描名为 **XIAO-Beacon** 的蓝牙设备，并查看接收到的 Manufacturer Data。同时，打开串口以查看输出日志。
 
 <div className="table-center">
 <table align="center">
@@ -334,7 +356,7 @@ manuf_data[6] = 0xAA;
 manuf_data[7] = 0xBB;
 ```
 
-- 打开串口工具，可以看到计数器的数值按行打印，当前计数达到 3。
+- 打开串口工具，可以看到计数器的数值被一行一行打印出来，当前计数已达到 3。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_beacon_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -342,7 +364,7 @@ manuf_data[7] = 0xBB;
 
 ### BLE UART
 
-本示例演示如何在 XIAO nRF54LM20A Sense 上通过 BLE 建立双向数据通道。基于 Nordic UART Service (NUS)，实现手机向设备发送字符串数据并进行回显反馈的基本交互。同时，设备通过 Notify 每秒上报一次状态计数器，展示 BLE GATT 两种核心数据传输模式：Write 和 Notify。
+本示例演示如何在 XIAO nRF54LM20A Sense 上通过 BLE 建立双向数据通道。基于 Nordic UART Service (NUS)，实现了手机向设备发送字符串数据并获得回显反馈的基本交互。同时，设备通过 Notify 每秒上报一次状态计数器，展示了 BLE GATT 中两种核心数据传输模式：Write 和 Notify。
 
 #### 软件
 
@@ -572,9 +594,9 @@ int main(void)
 
 #### 结果
 
-1. 烧录固件后，安装 nRF Connect 应用以扫描并检测 BLE 设备。
+1. 上传固件后，安装 nRF Connect 应用以扫描并检测 BLE 设备。
 
-同时，你也可以在各大手机应用商店中搜索并下载 nRF Connect 应用，使手机能够搜索并连接蓝牙设备。
+同时，你可以在各大手机应用商店中搜索并下载 nRF Connect 应用，它可以让你的手机搜索并连接蓝牙设备。
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
@@ -592,7 +614,7 @@ int main(void)
 
 3. 按照以下步骤启用 Notify 订阅。
 
-- 在服务列表中找到 Nordic UART Service，展开 TX Characteristic，点击 Notify 订阅按钮，以接收由 XIAO nRF54LM20A Sense 发送的计数信息。
+- 在服务列表中找到 Nordic UART Service，展开 TX Characteristic，并点击 Notify 订阅按钮，以接收由 XIAO nRF54LM20A Sense 发送的计数信息。
 
 <div className="table-center">
 <table align="center">
@@ -609,7 +631,7 @@ int main(void)
 
 4. 发送数据以演示接收数据转发的效果。
 
-- 展开 RX Characteristic，点击 **Write** 按钮，输入如 `hello World` 的字符串并发送到 XIAO nRF54LM20A Sense。同时，可以通过 TX Characteristic 接收到被转发的字符串。
+- 展开 RX Characteristic，点击 **Write** 按钮，输入诸如 `hello World` 的字符串并发送到 XIAO nRF54LM20A Sense。同时，可以通过 TX Characteristic 接收转发后的字符串。
 
 <div className="table-center">
 <table align="center">
@@ -625,7 +647,7 @@ int main(void)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_8.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-在本节中，你将对 **BLE Notify 订阅机制** 以及 **数据接收与转发机制** 有一个基本的了解。在某些特定场景下，将蓝牙连接与 **传感器触发控制** 结合起来，可以让设备充当一种 **可离线使用的自定义控制器**。
+在本节中，你将对**BLE Notify 订阅机制**以及**数据接收与转发机制**有一个基本的了解。在某些特定场景下，将蓝牙连接与**传感器触发控制**相结合，可以让设备充当**可离线使用的自定义控制器**。
 
 ### BLE 传感器
 
@@ -633,7 +655,7 @@ int main(void)
 
 :::tip
 
-XIAO nRF54LM20A 系列配备了 LSM6DS3TR-C 六轴传感器。请参考 [XIAO nRF54LM20A Sense 内置传感器的使用方法](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_1.jpg)。
+XIAO nRF54LM20A 系列配备 LSM6DS3TR-C 六轴传感器。请参考 [XIAO nRF54LM20A Sense 内置传感器的使用方法](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_1.jpg)。
 
 :::
 
@@ -1111,12 +1133,12 @@ int main(void)
 
 1. 上传固件后，安装 nRF Connect 应用以扫描和检测 BLE 设备。
 
-同时，你也可以在各大手机应用商店中搜索并下载 nRF Connect 应用，它可以让你的手机搜索并连接蓝牙设备。
+同时，你可以在各大手机应用商店中搜索并下载 nRF Connect 应用，它可以让你的手机搜索并连接蓝牙设备。
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. 启动软件后，扫描蓝牙设备 **XIAO BLE IMU**，并按照下列步骤进行连接。
+2. 启动软件后，扫描蓝牙设备 **XIAO BLE IMU**，并按照下图步骤进行连接。
 
 <div className="table-center">
 <table align="center">
@@ -1142,9 +1164,9 @@ int main(void)
 
 <div className="table-center"> <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_imu_5.png" style={{width:800, height:'auto'}}/></div></td></div>
 
-4. 摇动 XIAO nRF54LM20A Sense 以触发阈值告警机制。
+4. 摇动 XIAO nRF54LM20A Sense 以触发阈值报警机制。
 
-- 阈值告警数值可以通过宏定义进行修改。地球上标准重力加速度的默认静态值为 9.8 m/s²。
+- 阈值报警值可以通过宏定义进行修改。地球上标准重力加速度的默认静态值为 9.8 m/s²。
 
 ```c
 /* Motion threshold in m/s^2 - acceleration vector magnitude */
@@ -1155,7 +1177,7 @@ int main(void)
 
 ## 总结
 
-通过以上示例，你将对 XIAO nRF54LM20A 上的 BLE 应用有一个扎实的理解。欢迎自由设计你自己的创意项目，并分享你的成果。
+通过以上示例，你将对 XIAO nRF54LM20A 上的 BLE 应用有一个扎实的理解。欢迎自由设计你自己的创意项目并分享你的成果。
 
 ## 技术支持与产品讨论
 

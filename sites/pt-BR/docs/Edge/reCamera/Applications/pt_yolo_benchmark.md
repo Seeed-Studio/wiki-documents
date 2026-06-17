@@ -22,15 +22,15 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_benchmarking/
 
 ## 1. Introdução
 
-Com o aprofundamento contínuo dos cenários de IA de borda, como executar a geração mais recente de modelos de visão sob um consumo de energia extremamente limitado tornou-se a demanda central dos desenvolvedores. Este WIKI irá demonstrar de forma direta o desempenho de referência (Benchmark) da **reCamera** ao implantar o modelo **YOLO11n**.
+Com o aprofundamento contínuo dos cenários de IA de borda, como executar a geração mais recente de modelos de visão sob consumo de energia extremamente limitado tornou-se a demanda central dos desenvolvedores. Este WIKI irá demonstrar de forma direta o desempenho de referência (Benchmark) da **reCamera** ao implantar o modelo **YOLO11n**.
 Aqui, você verá como a reCamera aciona suavemente os modelos de detecção de objetos e segmentação de instâncias YOLO11n com apenas **1,5W** de consumo de energia.
 
 ---
 
 ## Preparação de Hardware
 
-Uma reCamera
-Um PC
+- Uma reCamera
+- Um PC
 
 <table align="center">
  <tr>
@@ -75,13 +75,13 @@ As informações de OSD no canto superior esquerdo da tela exibem em tempo real 
 
 ### Transmissão em Tempo Real de Segmentação de Instâncias YOLO11n
 <div style={{textAlign: 'center'}}>
-  <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/yolo-benchmark-seg.gif" alt="YOLO11n Segmentation Demo" />
+  <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/yolo-benchmark-seg.gif" alt="Demonstração de Segmentação YOLO11n" />
 </div>
 <br/>
 
 ### Transmissão em Tempo Real de Detecção de Objetos YOLO11n
 <div style={{textAlign: 'center'}}>
-  <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/yolo-benchmark-detect.gif" alt="YOLO11n Detection Demo" />
+  <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/yolo-benchmark-detect.gif" alt="Demonstração de Detecção YOLO11n" />
 </div>
 
 :::note Descrição do Teste
@@ -93,7 +93,7 @@ As animações acima mostram gravações reais de tela. Os resultados do teste s
 
 ## 3. Resultados Centrais do Benchmark
 
-Sob testes de estresse de carga total de longo prazo, a reCamera demonstrou uma "relação desempenho-consumo de energia" extremamente excelente. A seguir está o desempenho extremo do modelo YOLO11n quantizado em INT8 no NPU:
+Sob testes de estresse de carga total de longo prazo, a reCamera demonstrou uma "relação desempenho-consumo" extremamente excelente. A seguir está o desempenho extremo do modelo YOLO11n quantizado em INT8 no NPU:
 
 | Tipo de Tarefa do Modelo | Resolução de Entrada | Formato de Quantização | Taxa de Quadros de Pico (FPS) | Latência de Ponta a Ponta por Quadro Único | Potência Média de Operação |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -101,27 +101,27 @@ Sob testes de estresse de carga total de longo prazo, a reCamera demonstrou uma 
 | **YOLO11n Segmentação de Instâncias** | 640 x 640 | INT8 | **10 FPS** | **100 ms** | **1,5 W** |
 
 <div style={{textAlign: 'center'}}>
-  <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/recamera_benchmark_information.png" alt="YOLO11n Benchmark" />
+  <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/recamera_benchmark_information.png" alt="Benchmark YOLO11n" />
 </div>
 
 :::info 📊 Descrição das Unidades e Indicadores de Teste
 * **FPS (Frames Per Second)**: Refere-se ao **número de quadros que o dispositivo pode processar por segundo**. 20 FPS significa que o sistema pode completar continuamente 20 reconhecimentos de imagem por IA em 1 segundo. Quanto maior o valor, mais suave será o vídeo de monitoramento em tempo real.
-* **ms (Milissegundos)**: ou seja, um milésimo de segundo. Aqui refere-se ao **tempo total de ponta a ponta para processar uma única imagem**. 50 ms significa que o dispositivo leva no mínimo apenas ***0,05 segundos*** para processar um quadro de vídeo (incluindo pré-processamento, inferência no NPU, pós-processamento e todas as outras etapas).
-* **W (Watt)**: A unidade de medida para o consumo de energia do dispositivo. Aqui 1,5W refere-se ao consumo médio de energia de todo o dispositivo reCamera ao executar modelos de IA em carga total.
+* **ms (Milissegundos)**: ou seja, um milésimo de segundo. Aqui refere-se ao **tempo total de ponta a ponta para processar uma única imagem**. 50 ms significa que o dispositivo leva no mínimo apenas ***0,05 segundos*** para processar um quadro de vídeo (incluindo pré-processamento, inferência NPU, pós-processamento e todas as outras etapas).
+* **W (Watt)**: A unidade de medida para consumo de energia do dispositivo. Aqui 1,5W refere-se ao consumo médio de energia de todo o dispositivo reCamera ao executar modelos de IA em carga total.
 :::
 
 ### 💡 Análise Detalhada dos Dados
-* **Eficiência Energética Extrema**: O consumo de energia de 1,5W é quase equivalente ao de um computador de placa única normal em modo de suspensão, mas a reCamera pode atingir uma taxa de quadros de detecção de 20 FPS/S nesse consumo de energia, encaixando-se perfeitamente em cenários de monitoramento externo alimentados por baterias ou PoE de longa distância.
-* **Desempenho de Latência**: A latência de ponta a ponta ultrabaixa de no mínimo 50ms para o modelo de detecção significa que ele pode capturar facilmente objetos em movimento rápido; enquanto o modelo de segmentação, apesar de adicionar o operador de decodificação de Mask de alta carga, ainda pode manter uma experiência suave de até 10 FPS/S.
+* **Eficiência Energética Extrema**: O consumo de energia de 1,5W é quase equivalente ao de um computador de placa única normal em modo de suspensão, mas a reCamera pode atingir uma taxa de quadros de detecção de 20 FPS/S com esse consumo de energia, encaixando-se perfeitamente em cenários de monitoramento externo alimentados por baterias ou PoE de longa distância.
+* **Desempenho de Latência**: A latência de ponta a ponta ultrabaixa de no mínimo 50 ms para o modelo de detecção significa que ele pode capturar facilmente objetos em movimento rápido; enquanto o modelo de segmentação, apesar de adicionar o operador de decodificação de Mask de alta carga, ainda pode manter uma experiência suave de até 10 FPS/S.
 
 ---
 
 
-## 4. Mão na Massa: Reproduza o Benchmark
+## 4. Mão na Massa: Reproduzir o Benchmark
 
 Se você já possui um dispositivo reCamera, pode reproduzir facilmente localmente os resultados de teste acima com apenas alguns passos simples.
 
-### Etapa 1: Obtenha o Executável de Benchmark e o Modelo
+### Etapa 1: Obter o Executável de Benchmark e o Modelo
 Primeiro, baixe o arquivo bin compilado, o arquivo de modelo convertido `.cvimodel` e o script em python através do link abaixo:
 
 ```bash
@@ -129,16 +129,16 @@ Primeiro, baixe o arquivo bin compilado, o arquivo de modelo convertido `.cvimod
 ```
 
 <div style={{textAlign: 'center'}}>
-  <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/recamera_benchmark_list.png" alt="YOLO11n List" />
+  <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/recamera_benchmark_list.png" alt="Lista YOLO11n" />
 </div>
 
-### Etapa 2: Envie os Arquivos para o Dispositivo reCamera
-Envie o arquivo bin e o arquivo de modelo baixados para o diretório /userdata/ do dispositivo reCamera.
+### Etapa 2: Enviar Arquivos para o Dispositivo reCamera
+Envie o arquivo bin baixado e o arquivo de modelo para o diretório /userdata/ do dispositivo reCamera.
 <div style={{textAlign: 'center'}}>
   <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/recamera_benchmark_userdata.png" alt="YOLO11n UserData" />
 </div>
 
-### Etapa 3: Execute o Teste de Benchmark
+### Etapa 3: Executar o Teste de Benchmark
 Execute o seguinte comando no dispositivo reCamera para iniciar o teste de benchmark:
 
 ```bash
@@ -156,7 +156,7 @@ python.exe .\yolo_udp.py
 
 ## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Forneceremos a você diversos tipos de suporte para garantir que você tenha a experiência mais tranquila possível ao usar nossos produtos. Oferecemos múltiplos canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Forneceremos a você diversos tipos de suporte para garantir que você tenha a experiência mais tranquila possível ao usar nossos produtos. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

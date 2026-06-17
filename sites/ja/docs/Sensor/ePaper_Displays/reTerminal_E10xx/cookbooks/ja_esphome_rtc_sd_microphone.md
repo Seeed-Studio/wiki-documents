@@ -1,5 +1,5 @@
 ---
-description: reTerminal E1001 / E1002 向け ESPHome クックブックです。PCF8563 RTC の時刻同期、microSD カード検出、オンボード PDM マイクの初期化、およびそれらを組み合わせたハードウェアステータスダッシュボードのスタンドアロンデモを紹介します。
+description: reTerminal E1001 / E1002 向け ESPHome クックブックです。PCF8563 RTC の時刻同期、microSD カード検出、オンボード PDM マイクの初期化、およびハードウェアステータスダッシュボードを単体デモとして紹介します。
 title: 'ESPHome クックブック: RTC、SD カード & マイク (reTerminal E シリーズ)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
@@ -18,22 +18,32 @@ import TabItem from '@theme/TabItem';
 
 # ESPHome クックブック: RTC、SD カード & マイク (reTerminal E シリーズ)
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/251.jpeg" style={{width:1000, height:'auto'}}/></div><br />
+
 :::tip 前提条件
-このページでは、すでに [reTerminal E シリーズ向け ESPHome ディスプレイクックブック](/ja/reterminal_e10xx_with_esphome) を完了し、デバイスが Home Assistant 上でオンラインになっていることを前提とします。ボタン、ブザー、LED、バッテリー監視、SHT4x、およびディープスリープについては、[ESPHome クックブック: ボタン、ブザー、LED、バッテリー & 省電力](/ja/reterminal_e10xx_with_esphome_advanced) を参照してください。
+このページでは、すでに [reTerminal E シリーズ向け ESPHome ディスプレイクックブック](/ja/reterminal_e10xx_with_esphome) を完了し、デバイスが Home Assistant 上でオンラインになっていることを前提とします。ボタン、ブザー、LED、バッテリー監視、SHT4x、ディープスリープについては、[ESPHome クックブック: ボタン、ブザー、LED、バッテリー & 省電力](/ja/reterminal_e10xx_with_esphome_advanced) を参照してください。
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
+:::tip 開発環境を用意せずにデモを試す
+開発環境をセットアップする前に、プロジェクトの結果をすばやくプレビューしたり、基本的なデモファームウェアを試したい場合は、**[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** を開いてください。対応する reTerminal E シリーズデバイスを選択し、ブラウザから直接デモファームウェアを書き込むことができます。
 
-このクックブックでは、reTerminal E シリーズ向け ESPHome サンプルの続きとして、ディスプレイおよび I/O クックブックでは扱っていない 3 つのオンボードハードウェアブロックを取り上げます：
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
+このクックブックは、ディスプレイおよび I/O クックブックでは扱っていない 3 つのオンボードハードウェアブロックについて、reTerminal E シリーズ向け ESPHome の例を続けて紹介します。
 
 - **PCF8563 RTC** - オンボード RTC からハードウェア時刻を読み取り、Home Assistant から同期します。
 - **microSD カードスロット** - SD 電源レールを有効にし、カードが挿入されているかどうかを報告します。
 - **PDM マイク** - オンボードマイクの電源レールを有効にし、ESPHome 経由で PDM マイクを初期化します。
 
-以下の各セクションは、小さなスタンドアロン ESPHome デモとして構成されています。完全な YAML サンプルを 1 つコピーし、API と OTA のプレースホルダを置き換えて、ESPHome からそのままアップロードできます。
+以下の各セクションは、小さな単体 ESPHome デモとして構成されています。完全な YAML 例を 1 つコピーし、API と OTA のプレースホルダを置き換えて、ESPHome からそのままアップロードできます。
 
 :::note 対応モデル
-このページのコピーしてすぐ使えるサンプルは、テスト済みの ESPHome ハードウェアサンプルに合わせて **reTerminal E1001** と **reTerminal E1002** 向けに記述されています。オンボードマイクのサンプルは PDM マイクハードウェアを搭載したモデルに適用されますが、reTerminal E1004 にはマイクが搭載されていません。
+このページのコピーしてすぐ使えるサンプルは、検証済みの ESPHome ハードウェア例に合わせて **reTerminal E1001** と **reTerminal E1002** 向けに記述されています。オンボードマイクのサンプルは PDM マイクハードウェアを搭載したモデルに適用されます。reTerminal E1004 にはマイクが搭載されていません。
 :::
 
 ## ハードウェア機能
@@ -55,7 +65,7 @@ import TabItem from '@theme/TabItem';
     <tr>
       <td>microSD カード検出</td>
       <td><code>binary_sensor.gpio</code></td>
-      <td><code>GPIO15</code>、アクティブ Low</td>
+      <td><code>GPIO15</code>、アクティブ LOW</td>
     </tr>
     <tr>
       <td>microSD 電源イネーブル</td>
@@ -282,10 +292,10 @@ display:
 </TabItem>
 </Tabs>
 
-この構成では、次のことを行います：
+この設定では、次のことを行います：
 
 - 起動時に一度 PCF8563 RTC から時刻を読み取ります。
-- デバイスが接続された後は、Home Assistant の時刻を信頼できる基準として使用します。
+- デバイスが接続された後は、Home Assistant の時刻を信頼できる情報源として使用します。
 - Home Assistant の時刻をハードウェア RTC に書き戻します。
 - 現在の日付と時刻を ePaper 画面に表示します。
 
@@ -301,7 +311,7 @@ display:
 
 このデモでは、microSD カードが挿入されているかどうかを報告します。また、`GPIO16` を通じて SD カードの電源レールをオンにします。
 
-カード検出ピンはアクティブ Low なので、binary sensor では `inverted: true` を使用します。
+カード検出ピンはアクティブ LOW なので、binary sensor では `inverted: true` を使用します。
 
 このサンプルは、プレースホルダ値を置き換え、完全な YAML をデバイスにアップロードすることで使用できます。
 
@@ -498,33 +508,33 @@ display:
 </TabItem>
 </Tabs>
 
-この構成では、次のことを行います：
+この設定では、次のことを行います：
 
 - `GPIO16` を通して SD カードの電源を有効にします。
 - `GPIO15` からカード検出信号を読み取ります。
 - ePaper 画面にカードの状態を表示します。
 - Home Assistant に `SD Card Detected` をバイナリセンサーとして公開します。
 
-次の画像は、reTerminal E1002 上で期待される結果を示しています。同じデモは reTerminal E1001 と E1002 の両方で動作します。主な違いはディスプレイ出力で、E1001 はモノクロ表示、E1002 はカラー表示が可能です。
+次の画像は reTerminal E1002 上での期待される結果を示しています。同じデモは reTerminal E1001 と E1002 の両方で動作します。主な違いはディスプレイ出力で、E1001 はモノクロ表示、E1002 はカラー表示が可能です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/253.jpeg" style={{width:700, height:'auto'}}/></div>
 
 :::note ESPHome が microSD カードをどのように利用するか
 この ESPHome クックブックでは、microSD カードはデバイスのステータス信号として使用されます。デモではカードが挿入されているかどうかを確認し、その結果を画面に表示し、同じ状態を Home Assistant に公開します。
 
-これは、ESPHome が主にセンサー、スイッチ、ディスプレイ、および Home Assistant の自動化向けに設計されており、通常はデバイス上のローカルファイルマネージャとして使用されないためです。ファイルを開く、フォルダを作成する、ログを書き込む、WAV オーディオを SD カードに直接記録するといったタスクは、ファームウェアが SD カードのファイルシステムを直接制御できる Arduino で行う方が適しています。
+これは、ESPHome が主にセンサー、スイッチ、ディスプレイ、および Home Assistant の自動化向けに設計されているためです。通常、デバイス上のローカルファイルマネージャとしては使用されません。ファイルを開く、フォルダを作成する、ログを書き込む、WAV オーディオを SD カードに直接記録するといったタスクは、ファームウェアが SD カードのファイルシステムを直接制御できる Arduino で扱う方が適しています。
 
-一般的な ESPHome セットアップでは、SD カードのステータスは次の用途に使用できます：
-- ストレージが物理的に利用可能かどうかを表示する
-- カードの挿入・取り外し時に Home Assistant のオートメーションをトリガーする
-- RTC、バッテリー、マイクの状態と合わせてハードウェアヘルス情報を表示する
+典型的な ESPHome セットアップでは、SD カードのステータスは次の用途に利用できます：
+- ストレージが物理的に利用可能かどうかを表示する。
+- カードの挿入・取り外し時に Home Assistant のオートメーションをトリガーする。
+- RTC、バッテリー、マイクの状態と合わせてハードウェアヘルス情報を表示する。
 
-目的が SD カードへの直接的なファイルの読み書きである場合は、代わりに Arduino SD カードクックブックを参照してください。
+SD カードファイルの直接的な読み書きが目的の場合は、代わりに Arduino の SD カードクックブックを参照してください。
 :::
 
 ## PDM マイク電源チェック
 
-このデモでは、オンボード PDM マイクの電源レールを有効にし、マイクのピン割り当てを ePaper 画面に表示します。YAML を最小限に保つことで、まずディスプレイの更新を確認し、その後、Home Assistant Voice Assistant でマイクを使用したい場合に、オプションの ESPHome I2S マイク設定を追加できるようにしています。
+このデモでは、オンボード PDM マイクの電源レールを有効にし、マイクのピン割り当てを ePaper 画面に表示します。YAML を最小限に保つことで、まずディスプレイ更新を確認し、その後、Home Assistant Voice Assistant でマイクを使用したい場合に、任意の ESPHome I2S マイク設定を追加できるようにしています。
 
 マイクは次のピンを使用します：
 
@@ -686,7 +696,7 @@ display:
 </TabItem>
 </Tabs>
 
-この構成では、次のことを行います：
+この設定では、次のことを行います：
 
 - `GPIO38` を通してマイクの電源を有効にします。
 - ePaper 画面に PDM クロックピン `GPIO42` とデータピン `GPIO41` を表示します。
@@ -706,15 +716,15 @@ microphone:
     i2s_din_pin: GPIO41
 ```
 
-次の画像は、reTerminal E1002 上で期待される結果を示しています。同じデモは reTerminal E1001 と E1002 の両方で動作します。主な違いはディスプレイ出力で、E1001 はモノクロ表示、E1002 はカラー表示が可能です。
+次の画像は reTerminal E1002 上での期待される結果を示しています。同じデモは reTerminal E1001 と E1002 の両方で動作します。主な違いはディスプレイ出力で、E1001 はモノクロ表示、E1002 はカラー表示が可能です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/254.jpeg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-このデモは、マイクの電源制御と、ePaper 画面上での関連ピン割り当ての確認のみを行います。完全な Home Assistant Assist 音声パイプラインには、上記のオプションのマイクブロックと、追加のボイスアシスタント設定が必要です。オーディオを SD カードに直接録音する処理は、Arduino のマイクサンプルで行う方が適しています。
+このデモは、マイク電源制御と、それに関連するピン割り当てを ePaper 画面上で検証するだけです。完全な Home Assistant Assist 音声パイプラインには、上記のオプションのマイクブロックと、追加の音声アシスタント設定が必要です。オーディオを SD カードに直接録音する処理は、Arduino のマイクサンプルで扱う方が適しています。
 :::
 
-## デモ 4：RTC、SD カード、マイクのステータスを統合したダッシュボード
+## デモ 4：RTC・SD カード・マイクのステータスを統合したダッシュボード
 
 このデモでは、上記 3 つの機能を 1 つのハードウェアステータスページに統合します：
 
@@ -722,7 +732,7 @@ microphone:
 2. `GPIO15` からの microSD カード挿入ステータス。
 3. PDM マイクの初期化ステータス。
 
-よりよく理解するために、この統合サンプルを試す前に、単一機能のデモを先に実行してください。
+理解を深めるために、この統合サンプルを試す前に、単一機能のデモを先に実行してください。
 
 <details>
 <summary>完全なコードを見るにはここをクリック</summary>
@@ -1017,9 +1027,9 @@ display:
 
 ファームウェアが動作しているとき、画面には 1 ページに RTC 時刻、SD カードの状態、マイクの初期化ステータスが表示されます。
 
-次の画像は reTerminal E1002 での期待される結果を示しています。同じデモは reTerminal E1001 と E1002 の両方で動作します。主な違いはディスプレイ出力で、E1001 はモノクロ表示、E1002 はカラー表示が可能です。
+次の画像は reTerminal E1002 上での期待される結果を示しています。同じデモは reTerminal E1001 と E1002 の両方で動作します。主な違いはディスプレイ出力で、E1001 はモノクロ表示、E1002 はカラー表示が可能です。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/255.jpeg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/250.jpeg" style={{width:700, height:'auto'}}/></div>
 
 ## FAQ
 
@@ -1027,29 +1037,9 @@ display:
 
 デバイスがまだ有効な時刻を受信していません。Wi-Fi が接続されていること、ESPHome API が Home Assistant に接続されていること、そして Home Assistant のシステム時刻が正しいことを確認してください。Home Assistant が時刻を同期すると、ESPHome はその時刻を PCF8563 RTC に書き戻します。
 
-### Q2: なぜ電源を外すと RTC の時刻が消えてしまうのですか？
+### Q2: なぜ USB 経由のシリアルログが出力されないのですか？
 
-PCF8563 は、メインバッテリーと USB 電源が外されたときに時刻を保持するため、CR1220 コイン電池を必要とします。コイン電池を取り付けるか交換し、デバイスを再起動して、Home Assistant に一度時刻を同期させてください。
-
-### Q3: なぜ Home Assistant では SD カードが常に未検出と表示されるのですか？
-
-次の 3 点を確認してください：
-
-- カードがスロットに最後までしっかり挿入されていることを確認します。
-- 起動時に `GPIO16` 上の `bsp_sd_enable` がオンになっていることを確認します。
-- 検出信号はアクティブ Low なので、`GPIO15` は `INPUT_PULLUP` かつ `inverted: true` に設定したままにしておきます。
-
-### Q4: ESPHome で microSD カード上のファイルを読み書きできますか？
-
-このページでは、ESPHome を使って SD 電源レールを有効にし、カード検出ピンを読み取ることだけを行っています。ファイル一覧、画像の読み取り、フォルダの作成、音声ファイルの保存といった一般的なファイル操作は、Arduino の SD カードサンプルで行う方が適しています。
-
-### Q5: ESPHome でマイク音声を直接 SD カードに録音できますか？
-
-このページにあるシンプルな YAML だけではできません。マイクのデモはオンボードの PDM マイクハードウェアを初期化するだけです。目的が SD カードに WAV ファイルを録音することであれば、代わりに Arduino のマイクおよび SD のサンプルを使用してください。
-
-### Q6: なぜ USB 経由のシリアルログが出力されないのですか？
-
-reTerminal E シリーズは UART0 上に CH340K USB-UART ブリッジを使用しています。YAML には次の logger 設定を保持してください：
+reTerminal E シリーズは UART0 上に CH340K USB-UART ブリッジを使用しています。YAML では次の logger 設定を維持してください：
 
 ```yaml
 logger:
@@ -1058,9 +1048,9 @@ logger:
 
 ### Q3: なぜ RTC またはマイクのデモで画面が更新されないのですか？
 
-microSD カードが挿入されている場合は、まずカードを取り外してからデバイスを再起動してください。microSD カード検出デモを除き、このページの他のデモではカードを挿入しておく必要はありません。カードを挿入したままにすると、共有 SPI バスに影響し、ePaper 画面が正しくリフレッシュされない場合があります。
+microSD カードが挿入されている場合は、まずカードを取り外してからデバイスを再起動してください。microSD カード検出デモを除き、このページの他のデモではカードを挿入しておく必要はありません。カードを挿入したままにしておくと、共有 SPI バスに影響し、ePaper 画面が正しく更新されない可能性があります。
 
-カードを取り外した後、RTC またはマイクのデモを再度アップロードまたは再起動してください。ePaper 画面は正常にリフレッシュされるはずです。
+カードを取り外した後、RTC またはマイクのデモを再度アップロードするか再起動してください。ePaper 画面は正常に更新されるはずです。
 
 ## リソース
 
@@ -1074,7 +1064,7 @@ microSD カードが挿入されている場合は、まずカードを取り外
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

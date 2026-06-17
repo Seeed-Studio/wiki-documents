@@ -25,6 +25,16 @@ import TabItem from '@theme/TabItem';
 This page is the **reTerminal E Series-specific ESPHome display cookbook**. The shared boilerplate — picking a flashing path, the generic YAML skeleton, connecting to Home Assistant — lives in **[Work with ESPHome](/epaper_work_with_esphome)**. Skim that first if you're new to ESPHome on Seeed ePaper. For buttons, buzzer, LED, battery, SHT4x, and deep sleep, see the [I/O, battery, and low-power cookbook](/reterminal_e10xx_with_esphome_advanced). For RTC, microSD card detect, and microphone setup, see the [RTC, SD card, and microphone cookbook](/reterminal_e10xx_with_esphome_rtc_sd_microphone).
 :::
 
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
