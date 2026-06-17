@@ -100,10 +100,16 @@ url: https://wiki.seeedstudio.com/robotics_page/
                 <span className="text">reBot with LeRobot</span>
               </a>
               <a href="/rebot_arm_b601_dm_grasping_demo/" className="content-card">
-                <span className="text">reBot Visual Graspng Demo</span>
+                <span className="text">reBot B601-DM Visual Grasping Demo</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-RS Visual Grasping Demo</span>
               </a>
               <a href="/rebot_arm_b601_dm_ros2_integration/" className="content-card">
                 <span className="text">reBot B601-DM ROS2 Integration</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_ros2_integration/" className="content-card">
+                <span className="text">reBot B601-RS ROS2 Integration</span>
               </a>
           </div>
 

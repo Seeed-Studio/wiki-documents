@@ -1,38 +1,30 @@
 ---
-description: This tutorial shows how to build a complete visual grasping demo for the reBot Arm B601-DM using an RGB-D depth camera and a YOLO/OBB grasping pipeline.
-title: reBot Arm B601-DM Visual Grasping Demo
+description: This tutorial shows how to build a complete visual grasping demo for the reBot Arm B601-RS using an RGB-D depth camera and a YOLO/OBB grasping pipeline.
+title: reBot Arm B601-RS Visual Grasping Demo
 keywords:
   - reBot Arm
-  - B601-DM
+  - B601-RS
   - Grasping
   - RGB-D
   - YOLO
   - Hand-Eye Calibration
   - Robot
-slug: /rebot_arm_b601_dm_grasping_demo
-sku: 100065783, 100095532, 100063143, 100045679, 100040187
+slug: /rebot_arm_b601_rs_grasping_demo
 last_update:
   date: 2026-06-17
   author: YinHaizhou
 translation:
   skip: [zh-CN]
-createdAt: '2026-04-22'
+createdAt: '2026-06-15'
 updatedAt: '2026-06-17'
-url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
+url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/
 ---
 
-# reBot Arm B601-DM Visual Grasping Demo
+# reBot Arm B601-RS Visual Grasping Demo
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
-
-<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -48,15 +40,11 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
   <strong>Depth Perception · Object Detection · Hand-Eye Calibration · Autonomous Grasping · Fully Open Source</strong>
 </p>
 
-YOLO is a widely used family of real-time object detection models that can localize and classify targets in a single forward pass. This tutorial uses YOLO, an RGB-D depth camera, and the reBot Arm B601-DM to build a working desktop visual grasping demo, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
+YOLO is a widely used family of real-time object detection models that can localize and classify targets in a single forward pass. This tutorial uses YOLO, an RGB-D depth camera, and the reBot Arm B601-RS to build a working desktop visual grasping demo, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
 
 <p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/demo.gif" alt="reBot Arm B601-DM visual grasping demo" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping demo" />
 </p>
-
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/6dqKZNh_D7k?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ## Project Features
 
@@ -66,7 +54,7 @@ YOLO is a widely used family of real-time object detection models that can local
 2. **GraspNet-Baseline 6D grasp pose estimation (optional)**  
    The project also supports GraspNet-Baseline (`graspnet/graspnet-baseline`) for 6D grasp pose estimation from RGB-D point clouds, with YOLO bounding boxes used to select target candidates for more complex grasping experiments.
 
-3. **Robotic arm and gripper driver integration**
+3. **Robotic arm and gripper driver integration**  
    The main grasping script is based on the robotic arm and end-pose controller from `reBotArm_control_py`, with a lightweight grasp helper for gripper opening, force-controlled grasping, and TCP pose reading.
 
 4. **Open Source and Extensible**  
@@ -86,7 +74,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
   <tbody>
     <tr>
       <td>Robot Arm Model</td>
-      <td>reBot Arm B601-DM</td>
+      <td>reBot Arm B601-RS</td>
     </tr>
     <tr>
       <td>Degrees of Freedom</td>
@@ -106,7 +94,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
     </tr>
     <tr>
       <td>Operating Voltage</td>
-      <td>24V DC</td>
+      <td>48V DC</td>
     </tr>
     <tr>
       <td>Host Platform</td>
@@ -123,10 +111,10 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 
 | Component | Quantity | Included |
 |--|--|--|
-| reBot Arm B601-DM Robotic Arm | 1 | ✅ |
+| reBot Arm B601-RS Robotic Arm | 1 | ✅ |
 | Gripper | 1 | ✅ |
 | USB2CAN Serial Bridge | 1 | ✅ |
-| Power Adapter (24V) | 1 | ✅ |
+| Power Adapter (48V) | 1 | ✅ |
 | USB-C / Communication Cable | 1 | ✅ |
 | RGB-D Depth Camera | 1 | ✅ |
 | Camera Connector / Mounting Bracket | 1 | ✅ |
@@ -135,7 +123,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 
 1. Connect the depth camera to the host via USB 3.0.
 2. Connect the USB2CAN adapter to the arm CAN bus.
-3. Make sure the 24V power supply, camera, and robotic arm are all connected securely.
+3. Make sure the 48V power supply, camera, and robotic arm are all connected securely.
 4. Set permissions:
 
 ```bash
@@ -149,15 +137,12 @@ sudo chmod 666 /dev/ttyUSB0
 |------|-------------|
 | Operating System | Ubuntu 22.04+ |
 | Python | 3.10 |
-| Recommended Environment | conda |
-| Recommended Workspace Folder | `rebot_grasp` |
-| Recommended conda Environment | `rebotarm` |
 
 ## Installation Steps
 
 ### Step 0. Complete the basic robotic arm preparation first
 
-Before starting this tutorial, please finish the content in [reBot Arm B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/), including robotic arm assembly, zero-point initialization, motor ID configuration, and basic connectivity checks.
+Before starting this tutorial, please finish the content in [reBot Arm B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/), including robotic arm assembly, zero-point initialization, motor ID configuration, and basic connectivity checks.
 
 ### Step 1. Clone the repository
 
@@ -193,10 +178,10 @@ pip install -e .
 cd ../..
 ```
 
-B601 DM and RS configurations are selected through the SDK configuration files. For B601-DM, confirm the following in `sdk/reBotArm_control_py/config/rebotarm.yaml`:
+B601 DM and RS configurations are selected through the SDK configuration files. For B601-RS, confirm the following in `sdk/reBotArm_control_py/config/rebotarm.yaml`:
 
 ```yaml
-hardware_yaml: rebotarm_dm.yaml
+hardware_yaml: rebotarm_rs.yaml
 ```
 
 The visual grasping programs read this SDK configuration and automatically select the matching arm control mode and gripper parameters.
@@ -335,6 +320,15 @@ The `checkpoint` field supports three forms: a file name is resolved under `sdk/
 ## Hand-Eye Calibration
 
 Before running the full grasping pipeline, complete the Eye-in-Hand hand-eye calibration first.
+
+Before running the calibration script, bring up and verify the CAN interface:
+
+```bash
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up
+ip -details link show can0
+```
 
 ```bash
 python scripts/collect_handeye_eih.py
@@ -579,9 +573,8 @@ If the output is `False`, fix the CUDA / PyTorch installation first. If it is `T
 
 ## References
 
-- [reBot Arm B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/)
-- [Getting Started with Pinocchio and MeshCat for reBot Arm B601-DM](https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/)
-- [Getting Started with LeRobot-based reBot Arm B601-DM and reBot 102 Leader](https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/)
+- [reBot Arm B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/)
+- [reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/)
 - [Orbbec Gemini 2 Product Page](https://www.orbbec.com/products/stereo-vision-camera/gemini-2/)
 - [Orbbec Developer Resources](https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
