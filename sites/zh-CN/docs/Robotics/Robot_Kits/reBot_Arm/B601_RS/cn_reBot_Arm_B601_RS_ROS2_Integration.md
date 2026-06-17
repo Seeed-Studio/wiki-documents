@@ -51,6 +51,10 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/
 本文默认以 `Ubuntu 24.04 + ROS2 Jazzy` 为主要环境。ROS2 Humble / Ubuntu 22.04 可参考相同流程使用。
 :::
 
+<p align="center">
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/ros2/MoveIt2_RS.gif" alt="reBot Arm B601-RS MoveIt 2 demo" />
+</p>
+
 ## 项目特点
 
 1. **标准 ROS2 接口**  
@@ -70,8 +74,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/
 |---|---|
 | 机械臂型号 | reBot Arm B601-RS |
 | 自由度 | 6-DOF + 夹爪 |
-| 电机版本 | Robstride 电机版 |
-| 通信方式 | SocketCAN |
+| 通信方式 | CAN |
 | 默认 CAN 通道 | `can0` |
 | 默认 arm 控制模式 | `mit` |
 | 推荐系统 | Ubuntu 24.04 + ROS2 Jazzy + Python 3.12 |
@@ -108,15 +111,6 @@ sudo ip link set can0 up
 ip -details link show can0
 ```
 
-:::tip
-如果使用 PCAN-USB，通常需要先加载驱动：
-
-```bash
-sudo modprobe peak_usb
-ip -br link
-```
-:::
-
 ## 环境要求
 
 | 项目 | 推荐要求 |
@@ -129,7 +123,7 @@ ip -br link
 
 ### 步骤 0. 完成机械臂基础准备
 
-开始 ROS2 集成前，请先完成 [reBot Arm B601-RS 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) 中的内容，包括机械臂组装、电机 ID 配置、零点初始化和基础连通性确认。
+开始 ROS2 集成前，请先完成 [reBot Arm B601-RS 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) 中的内容，包括机械臂组装、电机 ID 配置、零点初始化等前置工作。
 
 ### 步骤 1. 安装适合 Ubuntu 系统版本的 ROS2
 
@@ -294,7 +288,7 @@ ros2 launch rebotarm_bringup driver.launch.py model:=rs channel:=can0
 /rebotarm/move_to_pose
 ```
 
-如果需要多机械臂或和其他 ROS2 系统共存，可以在 launch 时修改命名空间：
+如果有多机械臂控制需求，可以在 launch 时修改命名空间进行重映射：
 
 ```bash
 ros2 launch rebotarm_bringup bringup.launch.py model:=rs channel:=can0 arm_namespace:=right_arm

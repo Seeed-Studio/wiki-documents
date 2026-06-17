@@ -1,39 +1,31 @@
 ---
-description: 本教程介绍如何基于 reBot Arm B601-DM、RGB-D 深度相机与 YOLO/OBB 抓取管线搭建一个完整的视觉夹取 Demo。
-title: reBot Arm B601-DM 视觉夹取 Demo
+description: 本教程介绍如何基于 reBot Arm B601-RS、RGB-D 深度相机与 YOLO/OBB 抓取管线搭建一个完整的视觉夹取 Demo。
+title: reBot Arm B601-RS 视觉夹取 Demo
 keywords:
   - reBot Arm
-  - B601-DM
+  - B601-RS
   - 抓取
   - RGB-D
   - YOLO
   - 手眼标定
   - 机器人
-slug: /rebot_arm_b601_dm_grasping_demo
-sku: 100065783, 100095532, 100063143, 100045679, 100040187
+slug: /rebot_arm_b601_rs_grasping_demo
 last_update:
   date: 2026-06-17
   author: YinHaizhou
 translation:
   skip:
     - [zh-CN]
-createdAt: '2026-04-22'
+createdAt: '2026-06-15'
 updatedAt: '2026-06-17'
-url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
+url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_grasping_demo/
 ---
 
-# reBot Arm B601-DM 视觉夹取 Demo
+# reBot Arm B601-RS 视觉夹取 Demo
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
-
-<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -49,15 +41,11 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
   <strong>深度感知 · 目标检测 · 手眼标定 · 自主抓取 · 全开源</strong>
 </p>
 
-YOLO 是一类广泛使用的实时目标检测模型，能够在单次前向推理中同时完成目标定位与类别识别。本教程基于 YOLO、RGB-D 深度相机和 reBot Arm B601-DM 搭建一个可运行的桌面视觉夹取 Demo，并完成从环境安装、相机接入、手眼标定到抓取调试的完整流程。
+YOLO 是一类广泛使用的实时目标检测模型，能够在单次前向推理中同时完成目标定位与类别识别。本教程基于 YOLO、RGB-D 深度相机和 reBot Arm B601-RS 搭建一个可运行的桌面视觉夹取 Demo，并完成从环境安装、相机接入、手眼标定到抓取调试的完整流程。
 
 <p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/demo.gif" alt="reBot Arm B601-DM 视觉夹取 Demo" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS 视觉夹取 Demo" />
 </p>
-
-<div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1VjVA6KEff&autoplay=0" title="Bilibili video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ## 项目特点
 
@@ -67,7 +55,7 @@ YOLO 是一类广泛使用的实时目标检测模型，能够在单次前向推
 2. **GraspNet-Baseline 6D 夹取姿态估计（可选）**  
    支持基于 GraspNet-Baseline（`graspnet/graspnet-baseline`）对 RGB-D 点云进行 6D 夹取姿态估计，并结合 YOLO 检测框筛选目标候选，用于更复杂物体的夹取调试。
 
-3. **机械臂与夹爪驱动封装**
+3. **机械臂与夹爪驱动封装**  
    主抓取脚本基于 `reBotArm_control_py` 的机械臂与末端控制器，并通过轻量抓取辅助完成夹爪开合、力控夹取与 TCP 位姿读取。
 
 4. **开源 & 可扩展**  
@@ -87,7 +75,7 @@ YOLO 是一类广泛使用的实时目标检测模型，能够在单次前向推
   <tbody>
     <tr>
       <td>机械臂型号</td>
-      <td>reBot Arm B601-DM</td>
+      <td>reBot Arm B601-RS</td>
     </tr>
     <tr>
       <td>自由度</td>
@@ -124,7 +112,7 @@ YOLO 是一类广泛使用的实时目标检测模型，能够在单次前向推
 
 | 部件 | 数量 | 是否包含 |
 |--|--|--|
-| reBot Arm B601-DM 机械臂 | 1 | ✅ |
+| reBot Arm B601-RS 机械臂 | 1 | ✅ |
 | 夹爪 | 1 | ✅ |
 | USB2CAN 串口桥 | 1 | ✅ |
 | 电源适配器（24V） | 1 | ✅ |
@@ -158,7 +146,7 @@ sudo chmod 666 /dev/ttyUSB0
 
 ### 步骤 0. 先完成机械臂基础准备
 
-开始本教程前，请先完成 [reBot Arm B601-DM 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/) 中的内容，包括机械臂组装、零点初始化、电机 ID 配置与基础连通性确认。
+开始本教程前，请先完成 [reBot Arm B601-RS 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) 中的内容，包括机械臂组装、零点初始化、电机 ID 配置与基础连通性确认。
 
 ### 步骤 1. 克隆仓库
 
@@ -194,10 +182,10 @@ pip install -e .
 cd ../..
 ```
 
-B601 的 DM 与 RS 两种机械臂配置通过 SDK 仓库中的配置文件切换。B601-DM 请在 `sdk/reBotArm_control_py/config/rebotarm.yaml` 中确认：
+B601 的 DM 与 RS 两种机械臂配置通过 SDK 仓库中的配置文件切换。B601-RS 请在 `sdk/reBotArm_control_py/config/rebotarm.yaml` 中确认：
 
 ```yaml
-hardware_yaml: rebotarm_dm.yaml
+hardware_yaml: rebotarm_rs.yaml
 ```
 
 视觉抓取程序会读取该 SDK 配置，并自动选择对应的机械臂控制模式与夹爪参数。
@@ -332,7 +320,6 @@ graspnet:
 ```
 
 `checkpoint` 支持三种写法：仅文件名会自动从 `sdk/graspnet-baseline/checkpoints/` 查找；相对路径会按项目根目录解析；绝对路径会直接使用。
-
 
 ## 手眼标定
 
@@ -576,9 +563,8 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## 参考文档
 
-- [reBot Arm B601-DM 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/)
-- [reBot Arm B601-DM Pinocchio 与 MeshCat](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/)
-- [reBot Arm B601-DM LeRobot 教程](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/)
+- [reBot Arm B601-RS 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)
+- [reBot Arm B601-RS ROS2 集成](https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/)
 - [Orbbec Gemini 2 产品页](https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51)
 - [Orbbec 开发资料总链接](https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
