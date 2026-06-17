@@ -678,7 +678,7 @@ The peripheral circuitry on this board includes an IMU and a microphone. You can
 
 ## IMU
 
-The XIAO nRF54LM20A features an LSM6DS3TR-C IMU, supporting 6-axis accelerometer, gyroscope, and magnetometer.
+The XIAO nRF54LM20A features an LSM6DS3TR-C IMU, supporting 3-axis accelerometer, gyroscope.
 
 - [XIAO nRF54LM20A IMU Usage](https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_onboard/#imu)
 
