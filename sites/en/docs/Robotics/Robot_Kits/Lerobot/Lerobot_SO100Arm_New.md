@@ -338,6 +338,15 @@ If you are using a Jetson device, install Pytorch and Torchvision according to [
 
 ## Configure the motors
 
+:::tip
+If you purchased a pre-assembled robotic arm, please skip to the Calibrate section.
+:::
+<details>
+
+<summary> For kit version, please follow the steps below </summary>
+
+
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -431,7 +440,7 @@ If you buy the Arm Kit version (ST-3215-C001), use a 5V power supply. If you buy
 Again, please make sure that the servo joint IDs and gear ratios strictly correspond to those of the SO-ARM101.
 :::
 
-### Calibrate Follower Arm Servos
+**Calibrate Follower Arm Servos**
 
 Connect the usb cable from your computer and the power supply to the follower arm’s controller board. Then, run the following command.
 
@@ -473,7 +482,7 @@ Check your cabling at each step before pressing Enter. For instance, the power s
 
 When you are done, the script will simply finish, at which point the motors are ready to be used. You can now plug the 3-pin cable from each motor to the next one, and the cable from the first motor (the ‘shoulder pan’ with id=1) to the controller board, which can now be attached to the base of the arm.
 
-### Calibrate Leader Arm Servos
+**Calibrate Leader Arm Servos**
 
 Do the same steps for the leader arm.
 
@@ -491,7 +500,7 @@ lerobot-setup-motors \
 
 </Tabs>
 
-## Assembly
+**Assembly**
 
 :::tip
 
@@ -539,6 +548,8 @@ If you purchased the **SO101 Arm Kit Standard Edition**, all power supplies are 
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F7.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F8.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F9.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F11.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F12.jpg) |
 | **Step 13** | **Step 14** | **Step 15** | **Step 16** | **Step 17** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F15.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F16.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F17.jpg) |
+
+</details>
 
 ## Calibrate
 
@@ -705,7 +716,7 @@ The teleoperate command will automatically:
 
 RealSense depth cameras can provide RGB-D perception for LeRobot and are suitable for tasks such as object recognition, point cloud reconstruction, and tabletop manipulation. The recommended models here are **RealSense D405** and **RealSense D435i**.
 
-### RealSense D405
+**RealSense D405**
 
 <div align="center">
     <img width={420}
@@ -714,7 +725,7 @@ RealSense depth cameras can provide RGB-D perception for LeRobot and are suitabl
 
 The RealSense D405 is a short-range stereo depth camera designed for high-precision close-range tasks such as tabletop robotic manipulation, with a typical working range of **7 cm to 50 cm**.
 
-### RealSense D435i
+**RealSense D435i**
 
 <div align="center">
     <img width={420}
@@ -723,7 +734,7 @@ The RealSense D405 is a short-range stereo depth camera designed for high-precis
 
 The RealSense D435i combines depth sensing, RGB imaging, and an IMU, making it suitable for mid- to close-range applications such as 3D reconstruction, SLAM, and robotic environment perception.
 
-### 1. Switch to the Camera Branch
+**1. Switch to the Camera Branch**
 
 Current camera support is available on the `DepthCameraSupport` branch:
 
@@ -744,7 +755,7 @@ Expected output:
 DepthCameraSupport
 ```
 
-### 2. Install LeRobot in Editable Mode
+**2. Install RealSense in Editable Mode**
 
 If you only use RealSense:
 
@@ -752,13 +763,13 @@ If you only use RealSense:
 pip install -e ".[realsense]"
 ```
 
-### 3. Grant Camera Permissions
+**3. Grant Camera Permissions**
 
 ```bash
 chmod a+rw /dev/bus/usb/*/* 
 ```
 
-### 4. Detect Cameras
+**4. Detect Cameras**
 
 ```bash
 lerobot-find-cameras realsense
@@ -773,7 +784,7 @@ This step will output:
 
 Enter the retrieved `Serial number` into the `serial_number_or_name` parameter of the camera command below.
 
-### 5. RealSense Example
+**5. RealSense Example**
 
 Dual RealSense test:
 
@@ -833,7 +844,7 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 6. Parameter Notes
+**6. Parameter Notes**
 
 - `depth_alpha` controls the scaling factor of the depth image and can be adjusted based on the display result and target distance range.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` to improve overall stability.
@@ -843,6 +854,7 @@ lerobot-teleoperate \
 
 <details>
 <summary> If using Orbbec Gemini2/Gemini336 cameras </summary>
+
 
 <div align="center">
     <img width={800}
@@ -862,7 +874,7 @@ Orbbec Gemini 2 is a high-performance RGB-D camera for robotics applications, pr
 
 Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
 
-### 1. Switch to the Camera Branch
+**1. Switch to the Camera Branch**
 
 Current camera support is available on the `DepthCameraSupport` branch:
 
@@ -883,7 +895,7 @@ Expected output:
 DepthCameraSupport
 ```
 
-### 2. Install LeRobot in Editable Mode
+**2. Install LeRobot in Editable Mode**
 
 If you only use Orbbec:
 
@@ -891,14 +903,13 @@ If you only use Orbbec:
 pip install -e ".[orbbec]"
 ```
 
-### 3. Grant Camera Permissions
-
+**3. Grant Camera Permissions**
 
 ```bash
 chmod a+rw /dev/bus/usb/*/* 
 ```
 
-### 4. USBFS Cache Size Configuration
+**4. USBFS Cache Size Configuration**
 
 By default, the USBFS cache size is 16 MB. This value is insufficient for high-resolution images, multiple data streams, and multi-device scenarios. Users can increase the cache size up to 128 MB.
 
@@ -918,7 +929,7 @@ If you still encounter the `timeout error TimeoutError: Timed out waiting for fr
 
 :::
 
-### 5. Detect Cameras
+**5. Detect Cameras**
 
 ```bash
 lerobot-find-cameras orbbec
@@ -933,7 +944,7 @@ This step will output:
 
 Enter the retrieved `Serial Number` into the `serial_number_or_name` parameter of the camera command shown below.
 
-### 6. Orbbec Example
+**6. Orbbec Example**
 
 Single Orbbec test:
 
@@ -1018,13 +1029,13 @@ When using a single Orbbec camera together with a standard camera, it is recomme
 When running the lerobot-find-cameras opencv command to detect camera IDs, you will find that the Orbbec camera occupies 3 consecutive camera numbers. Therefore, it is advisable to plug in the standard camera last so that its number is assigned at the end.
 :::
 
-### 7. Parameter Notes
+**7. Parameter Notes**
 
 - `depth_alpha` controls the scaling factor of the depth image. A good starting point is `0.2`, then you can fine-tune it based on the display result.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` for better stability.
 - It is recommended to keep the resolution at `640x480` for more stable display and data transfer.
 
-### 8. Common Issues
+**8. Common Issues**
 
 If you see the following error:
 
@@ -1042,7 +1053,11 @@ Then confirm the actual `serial` and update `serial_number_or_name` in your comm
 
 </details>
 
-## If using a regular camera
+<details>
+
+<summary> If using a regular camera </summary>
+
+
 
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
@@ -1137,6 +1152,8 @@ pip3 install rerun-sdk==0.23
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/EUcXlLlOjGE?si=6ncQ7o5ZFLR4PGTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+</details>
 
 ## Record the dataset
 

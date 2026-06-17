@@ -4479,6 +4479,7 @@ const sidebars = {
               label: 'B601-RS',
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Getting_Started',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Lerobot',
               ]
             }
           ]
