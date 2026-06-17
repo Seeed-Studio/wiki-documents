@@ -7,7 +7,7 @@ keywords:
   - picovoice
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
 slug: /respeaker_xvf3800_picovoice
-sku: 114993700,100005504,100099135
+sku: 114993700,100005504,100099135,100070894
 last_update:
   date: 3/24/2026
   author: Kasun Thushara
@@ -36,13 +36,28 @@ This demo showcases how wake word detection using Picovoice Porcupine works toge
 
 ## Hardware Required 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-</div>
+<table align="center">
+  <tr>
+    <th>ReSpeaker XVF3800 </th>
+    <th>Jetson AGX Orin 32GB H01 Kit</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" style={{width:500, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" style={{width:500, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+    </div></td>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-with-XIAO-ESP32S3-p-6739.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+    </div></td>
+  </tr>
+</table>
 
 ## Wakeword Detection 
 
