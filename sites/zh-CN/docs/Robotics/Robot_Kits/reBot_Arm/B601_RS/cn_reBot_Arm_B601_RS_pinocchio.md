@@ -590,7 +590,3 @@ ENABLED_JOINTS = ["joint1"]  # 仅使能 joint1
 - [motorbridge SDK](https://github.com/motorbridge/motorbridge)
 
 ---
-
-<div align="center">
-  <strong>如果本项目对你有帮助，请给个 Star 支持一下！</strong>
-</div>

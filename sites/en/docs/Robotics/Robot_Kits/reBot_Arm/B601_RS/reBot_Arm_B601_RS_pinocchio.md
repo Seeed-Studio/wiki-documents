@@ -591,7 +591,3 @@ ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 - [motorbridge SDK](https://github.com/motorbridge/motorbridge)
 
 ---
-
-<div align="center">
-  <strong>If this project is helpful to you, please give it a Star!</strong>
-</div>
