@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 05/25/2026
+  date: 06/15/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-05-25'
+updatedAt: '2026-06-15'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,37 +18,92 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is May 25th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is June 15th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Add Voice Interaction to Your SO-ARM10x with reSpeaker Flex](https://wiki.seeedstudio.com/respeaker_flex_soarm/)
+### [Getting Started with Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/xiao_nrf54lm20a_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/lerobot_flex.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/get_start_1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The LeRobot SO-ARM Voice Controller lets you control a SO-ARM100 robotic arm using natural voice commands powered by AI. The system combines wake word detection, Groq Whisper speech-to-text, LLaMA 3 language understanding, and Orpheus text-to-speech to create a fully interactive hands-free robotics experience. Built on top of the [LeRobot framework](https://github.com/huggingface/lerobot?utm_source=chatgpt.com), it runs on Ubuntu x86 systems and NVIDIA Jetson devices using a ReSpeaker USB microphone array for voice input. Users can create custom arm poses, gestures, and conversational triggers to build intelligent robotic interactions for research, education, and robotics development.
+Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless development board built around Nordic Semiconductor’s nRF54LM20A SoC. It combines a 128 MHz Arm Cortex-M33 processor, 512 KB RAM, 2 MB on-chip NVM, multiprotocol 2.4 GHz wireless connectivity, onboard IMU, digital microphone, 8MB external flash, IPEX antenna connector, and nPM1300 PMIC for advanced battery-powered IoT, wearable, smart sensing, and edge AI applications.
 
 </div>
 
-### [Arduino Cookbook: Onboard Peripherals (reTerminal E Series)](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals/)
+### [Wio-S3 Wireless Module Introduction](https://wiki.seeedstudio.com/wio-s3_wireless_module_introduction/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/245.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-S3/Wio-S3-Wireless-Module-with-IPEX.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This page focuses on **driving the onboard hardware peripherals** of the reTerminal E Series with Arduino. If you want to render text, graphics, or images on the ePaper screen instead, head over to **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino)**.
+[Wio-S3 wireless module](https://www.seeedstudio.com/Wio-S3-Wireless-Module-p-6832.html) is embedded with the [ESP32-S3R8](https://www.espressif.com/en/products/socs/esp32-s3/) dual core Xtensa® LX7 MCU and the long range [SX1262 LoRa chip](https://www.semtech.com/products/wireless-rf/lora-connect/sx1262). It supports LoRaWAN frequency plan on EU868, US915 and more, as well as **2.4GHz Wi-Fi and BLE 5.0 connectivity**. It integrates 16MB Flash and 8MB PSRAM, making it ideal for edge AI processing.
 
 </div>
 
-### [Control reBot Arm using voice with reSpeaker Flex](https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_flex/)
+### [Driving E-Paper and SD Card with XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_epaper_and_sdcard/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/epaper_1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document will take you hand in hand from scratch to build a "listening and moving" intelligent robot arm system. Even if you have never touched the robotic arm or hardware development, as long as you follow the steps, you can successfully reproduce this project!
+The XIAO nRF54LM20A supports development with peripheral modules of the XIAO series and is fully compatible with the entire development ecosystem of XIAO products. This article demonstrates its ecosystem compatibility using the ePaper driver and MicroSD card read/write functions of the XIAO series as examples.
+
+</div>
+
+### [AI Voice Interaction Demo Based on reCamera](https://wiki.seeedstudio.com/ai_voice_assitant_with_recamera/)
+
+<div align="center">
+  <video width="600" controls>
+    <source src="https://raw.githubusercontent.com/hunter5299/Node-Red-project/main/reCamera_ai_voice_assitant/testVedioFinal.mp4" type="video/mp4" />
+    Your browser does not support video playback.
+  </video>
+</div>
+
+<div style={{ textAlign: "justify" }}>
+
+This project demonstrates a way to interact with reCamera through natural language. After visual reasoning triggers audio recording, reCamera sends the recording to the server, processes it through the complete **STT (Speech-to-Text) → LLM (Large Language Model Reasoning) → TTS (Text-to-Speech)** pipeline, and the synthesized voice is returned to reCamera for playback, enabling natural language conversation.
+
+</div>
+
+### [RTSP to WebRTC Real-Time Video Streaming with reCamera](https://wiki.seeedstudio.com/rtsp_to_webrtc_with_recamera/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/test.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This project streams reCamera's video through the **RTSP protocol**, transmits inference results to the PC via the **mqtt out** node, then merges the RTSP stream with inference results on the PC side and converts it to **WebRTC** format, allowing any browser to play the inference video stream in real time without plugins.
+
+</div>
+
+### [ESPHome Cookbook: RTC, SD Card & Microphone (reTerminal E Series)](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This project uses **ESPHome** to enable reTerminal E Series' onboard **PCF8563 RTC**, **microSD card detection**, and **PDM microphone**, synchronizes RTC time with **Home Assistant**, displays real-time status on the ePaper screen, and provides ready-to-use YAML examples for **reTerminal E1001** and **E1002**.
+
+</div>
+
+### [Real-Time QR Code Recognition on reCamera](https://wiki.seeedstudio.com/recamera_qrcode_udp/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/qrcode_udp/testvideo.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This example demonstrates how to build a **real-time QR code recognition system** using reCamera. The system captures live video frames through the camera, decodes QR codes using the **ZXing** library, and pushes the video frames (JPEG) along with the recognition results to a PC via **UDP** for display.
+
+</div>
+
+### [JetPack 7.2 Deep Dive: What Changes for Jetson AGX Orin Inference?](https://wiki.seeedstudio.com/jetpack72_deep_dive/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/flash-page.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This FAQ summarizes why JetPack 7.2 matters for Jetson AGX Orin users, what Seeed measured when comparing JetPack 7.2 with JetPack 6.2, and how to evaluate an upgrade path with Seeed Jetson DevelopTool.
 
 </div>
 
@@ -190,5 +245,8 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.4.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260427)
 - [weekly wiki on 2026.5.11th](/Seeed_Elderly/weekly_wiki/2026/wiki260511)
 - [weekly wiki on 2026.5.18th](/Seeed_Elderly/weekly_wiki/2026/wiki260518)
+- [weekly wiki on 2026.5.25th](/Seeed_Elderly/weekly_wiki/2026/wiki260525)
+- [weekly wiki on 2026.6.01st](/Seeed_Elderly/weekly_wiki/2026/wiki260601)
+- [weekly wiki on 2026.6.08th](/Seeed_Elderly/weekly_wiki/2026/wiki260608)
 
 </details>

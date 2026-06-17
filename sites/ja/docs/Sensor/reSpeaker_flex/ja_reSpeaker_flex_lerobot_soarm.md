@@ -1,6 +1,6 @@
 ---
-description: LeRobot、Groq Whisper STT、LLaMA 3、openwakeword を使用し、Nvidia または Ubuntu 上で動作する音声制御 SO-ARM100 ロボットアーム。
-title: reSpeaker Flex で SO-ARM10x に音声インタラクションを追加する
+description: LeRobot、Groq Whisper STT、LLaMA 3、openwakeword を Nvidia または Ubuntu 上で使用して、音声操作が可能な SO-ARM100 ロボットアームを実現します。
+title: reSpeaker で SO-ARM10x に音声インタラクションを追加する 
 keywords:
   - reSpeaker flex
   - xvf3800
@@ -11,7 +11,7 @@ last_update:
   date: 05/19/2026
   author: Kasun Thushara
 createdAt: '2026-05-19'
-updatedAt: '2026-05-19'
+updatedAt: '2026-05-20'
 url: https://wiki.seeedstudio.com/ja/respeaker_flex_soarm/
 ---
 
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_soarm/
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/lerobot_flex.png" alt="pir" width={800} height="auto" /></p>
 
 
-LeRobot SO-ARM Voice Controller を使うと、AI を活用した自然な音声コマンドで SO-ARM100 ロボットアームを制御できます。このシステムは、ウェイクワード検出、Groq Whisper 音声認識（STT）、LLaMA 3 による言語理解、Orpheus 音声合成（TTS）を組み合わせ、完全なハンズフリーのインタラクティブなロボティクス体験を実現します。[LeRobot framework](https://github.com/huggingface/lerobot?utm_source=chatgpt.com) の上に構築されており、Ubuntu x86 システムおよび NVIDIA Jetson デバイス上で動作し、音声入力には ReSpeaker USB マイクアレイを使用します。ユーザーはカスタムのアームポーズ、ジェスチャー、会話トリガーを作成して、研究、教育、ロボット開発向けのインテリジェントなロボットインタラクションを構築できます。
+LeRobot SO-ARM Voice Controller を使うと、AI による自然な音声コマンドで SO-ARM100 ロボットアームを操作できます。このシステムは、ウェイクワード検出、Groq Whisper 音声認識、LLaMA 3 による言語理解、Orpheus 音声合成を組み合わせることで、完全にハンズフリーでインタラクティブなロボット体験を実現します。[LeRobot framework](https://github.com/huggingface/lerobot?utm_source=chatgpt.com) の上に構築されており、Ubuntu x86 システムおよび NVIDIA Jetson デバイス上で動作し、音声入力には ReSpeaker USB マイクアレイを使用します。ユーザーはカスタムのアームポーズ、ジェスチャー、会話トリガーを作成して、研究、教育、ロボット開発向けのインテリジェントなロボットインタラクションを構築できます。
 
 
 ## 必要なハードウェア
@@ -28,13 +28,11 @@ LeRobot SO-ARM Voice Controller を使うと、AI を活用した自然な音声
 <table align="center">
   <tr>
     <th>SO-ARM101</th>
-    <th>reSpeaker Flex XVF3800 Circular</th>
     <th>reComputer Super J4012</th>
 
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-100046482-so-arm-101-assembled-kit-pro.jpg" style={{width:500, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg" style={{width:500, height:'auto'}}/></div></td>
 
   </tr>
@@ -45,17 +43,97 @@ LeRobot SO-ARM Voice Controller を使うと、AI を活用した自然な音声
       </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
     </div></td>
   </tr>
 </table>
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      または
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                今すぐ入手 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                今すぐ入手 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+
 
 ## 動作の仕組み
 
@@ -89,7 +167,7 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 source ~/.bashrc
 conda init --all
 ```
-### Conda 環境を作成する
+### Conda 環境を作成
 
 ```bash
 conda create -y -n lerobot python=3.10
@@ -109,15 +187,15 @@ pip install -e ".[feetech]"
 
 ## パート 2 — アームをセットアップする
 
-### モーター ID を設定する
+### モーター ID を設定
 
 各サーボには、組み立て前に一意の ID を割り当てる必要があります。公式ガイドに従ってください：
-[Configure the Motors](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#configure-the-motors)
+[Configure the Motors](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#モーターを設定)
 
 ### アームを組み立てる
 
 SO-ARM100 の組み立てチュートリアルに従ってください：
-[Assembly Guide](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#assembly)
+[Assembly Guide](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#組み立て)
 
 ### USB ポートを確認する
 
@@ -132,7 +210,7 @@ lerobot-find-port
 ### 両方のアームをキャリブレーションする
 
 キャリブレーションでは、生のモーター値を正規化された位置にマッピングします。リーダーアームとフォロワーアームの両方について、次のガイドに従ってください：
-[Calibration Guide](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#calibrate)
+[Calibration Guide](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#キャリブレーション)
 
 キャリブレーションファイルは自動的に次の場所に保存されます：
 ```
@@ -168,7 +246,7 @@ python download_model.py
 
 ### マイクのインデックスを確認する
 
-ReSpeaker Flex を接続し、次を実行します：
+reSpeaker を接続し、次を実行します：
 
 ```bash
 python list_mics.py
@@ -184,7 +262,7 @@ Available audio INPUT devices:
   [2] USB PnP Sound Device    (rate=16000Hz)
 ```
 
-ReSpeaker の横に表示されるインデックス番号をメモします — これが `MIC_INDEX` です。
+ReSpeaker の横に表示されているインデックス番号をメモします — それが `MIC_INDEX` です。
 
 ### プロジェクトを設定する
 
@@ -205,7 +283,7 @@ MIC_INDEX=1
 
 ---
 
-## パート 4 — アームアクションを定義する
+## パート 4 — アームのアクションを定義する
 
 ### ステップ 1 — 現在の関節位置を読み取る
 
@@ -215,7 +293,7 @@ MIC_INDEX=1
 python read_positions.py
 ```
 
-スクリプトは、アームを動かしている間、正規化された関節値をリアルタイムで出力します。ポーズが決まったら **Ctrl+C** を押すと、最終位置が表示されるので、それをコピーします。
+スクリプトは、アームを動かしている間、正規化された関節値をリアルタイムで出力します。ポーズが決まったら **Ctrl+C** を押すと、最終位置が表示されるのでコピーできます。
 
 ### ステップ 2 — `robot_arm.py` にポーズを追加する
 
@@ -233,7 +311,7 @@ python read_positions.py
 }),
 ```
 
-ウェーブのようなアニメーションジェスチャーには、ポーズのリストを使用します — 各ステップはその間に `ARM_GESTURE_DELAY` を挟んで実行されます：
+アニメーションするジェスチャー（手を振るなど）の場合は、ポーズのリストを使用します — 各ステップはその間に `ARM_GESTURE_DELAY` を挟んで実行されます：
 
 ```python
 "wave_hi": [
@@ -245,7 +323,7 @@ python read_positions.py
 
 ### ステップ 3 — `llm.py` の LLM システムプロンプトを更新する
 
-新しいアクションを有効なアクションリストとトリガールールに追加し、LLM がそれを認識できるようにします：
+新しいアクションを有効なアクション一覧とトリガールールに追加し、LLM がそれを認識できるようにします：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/llm_ss.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -261,14 +339,14 @@ Trigger rules:
 
 ## ボイスコントローラーを実行する
 
-conda 環境がアクティブになっていることを確認し、次を実行します：
+conda 環境が有効になっていることを確認し、次を実行します：
 
 ```bash
 conda activate lerobot
 python pipeline.py
 ```
 
-次のような表示が出ます：
+次のような表示が出るはずです：
 
 ```
 ======================================================
@@ -282,18 +360,18 @@ python pipeline.py
 [WakeWord] Listening for 'hey jarvis' ...
 ```
 
-ここで **"Hey Jarvis"** と話しかけて、コマンドを出してみましょう！
+さあ、**"Hey Jarvis"** と話しかけてコマンドを出してみましょう！
 
 ### 音声コマンドの例
 
-| あなたの発話 | 動作内容 |
+| 話す内容 | 実行される動作 |
 |---------|-------------|
 | *"Hey Jarvis, open the gripper"* | グリッパーが全開になる |
 | *"Hey Jarvis, grab it"* | グリッパーが閉じる |
 | *"Hey Jarvis, go to pick up mode"* | アームが把持用のポーズに移動する |
 | *"Hey Jarvis, can you turn around"* | ベースが横方向に回転する |
-| *"Hey Jarvis, wave at the camera"* | アームが手を振り、ニュートラルポジションに戻る |
-| *"Hey Jarvis, go home"* | すべての関節がニュートラルポジションに戻る |
+| *"Hey Jarvis, wave at the camera"* | アームが手を振り、ニュートラルに戻る |
+| *"Hey Jarvis, go home"* | すべての関節がニュートラル位置に戻る |
 
 ---
 
@@ -324,41 +402,41 @@ examples/voice_arm/
 | `GROQ_API_KEY` | *(required)* | Groq の API キー |
 | `WAKEWORD_MODEL` | `hey jarvis` | ウェイクワードのフレーズ |
 | `MIC_INDEX` | `1` | PyAudio デバイスインデックス |
-| `WAKEWORD_THRESHOLD` | `0.5` | 検出感度（0.0–1.0） |
+| `WAKEWORD_THRESHOLD` | `0.5` | 検出感度 (0.0–1.0) |
 | `WAKEWORD_COOLDOWN` | `2` | 再トリガーまでの秒数 |
-| `RECORDING_SECONDS` | `3` | ウェイクワード検出後に録音する時間（秒） |
+| `RECORDING_SECONDS` | `3` | ウェイクワード検出後に録音する時間 |
 | `LLM_MODEL` | `llama-3.1-8b-instant` | Groq の LLM モデル |
-| `STT_MODEL` | `whisper-large-v3-turbo` | Groq Whisper モデル |
+| `STT_MODEL` | `whisper-large-v3-turbo` | Groq の Whisper モデル |
 | `TTS_VOICE` | `autumn` | 音声出力に使用するボイス |
 | `ARM_PORT` | `/dev/ttyACM0` | フォロワーアームの USB ポート |
 | `ARM_ID` | `my_awesome_follower_arm` | アーム ID（キャリブレーションファイル名と一致） |
 | `ARM_MOVE_DELAY` | `1.5` | ポーズ移動後に待機する秒数 |
-| `ARM_GESTURE_DELAY` | `0.4` | ジェスチャーシーケンス各ステップ間の秒数 |
+| `ARM_GESTURE_DELAY` | `0.4` | ジェスチャーシーケンスの各ステップ間の秒数 |
 
 ---
 
 ## トラブルシューティング
 
 **PyAudio のインストールに失敗する**
-まず PortAudio システムライブラリをインストールします：
+まず PortAudio のシステムライブラリをインストールします：
 ```bash
 sudo apt-get install -y portaudio19-dev
 ```
 
-**ウェイクワードが反応しない**
+**ウェイクワードがまったく反応しない**
 `list_mics.py` をもう一度実行し、`MIC_INDEX` が ReSpeaker と一致していることを確認します。`WAKEWORD_THRESHOLD` を `0.3` に下げてみてください。マイクから約 1 メートル以内で、はっきりと話してください。
 
 **コマンド後にアームが動かない**
-`ARM_PORT` が正しいことを確認します（`lerobot-find-port`）。キャリブレーションファイルが `~/.cache/huggingface/lerobot/calibration/robots/so_follower/<ARM_ID>.json` に存在することを確認します。
+`ARM_PORT` が正しいか（`lerobot-find-port`）を確認します。キャリブレーションファイルが `~/.cache/huggingface/lerobot/calibration/robots/so_follower/<ARM_ID>.json` に存在することを確認します。
 
 **アームが誤った位置に動く**
 `ACTION_MAP` のデフォルトポーズ値は初期推定値です。`read_positions.py` を実行し、アームを目的のポーズに物理的に動かしてから、表示された値を `robot_arm.py` にコピーします。
 
 **TTS / STT のエラー**
-`config.env` 内の `GROQ_API_KEY` を再確認します。Groq の無料枠にはレート制限があります — エラーが発生した場合は、コマンドの間を数秒あけてください。
+`config.env` 内の `GROQ_API_KEY` を再確認します。Groq の無料枠にはレート制限があるため、エラーが発生した場合はコマンドの間を数秒あけてください。
 
 **音声は再生されるが歪んで聞こえる**
-Raspberry Pi では、`raspi-config` → System Options → Audio から、オーディオ出力を正しいデバイスに設定します。
+Raspberry Pi では、`raspi-config` → System Options → Audio から、正しいデバイスに音声出力を設定します。
 
 ---
 

@@ -10,7 +10,7 @@ keywords:
   - ePaper Breakout Board
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 slug: /EN04_opendisplay
-sidebar_position: 7
+sidebar_position: 9
 last_update:
   date: 04/28/2026
   author: dimo
@@ -18,7 +18,7 @@ aliases:
   - /epaper_breakout_board_with_oepl
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/EN04_opendisplay/
-updatedAt: '2026-04-28'
+updatedAt: '2026-06-03'
 ---
 
 import Tabs from '@theme/Tabs';

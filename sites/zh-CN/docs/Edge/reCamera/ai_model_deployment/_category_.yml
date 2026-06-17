@@ -1,4 +1,4 @@
-position: 5 # float position is supported
+position: 7 # float position is supported
 label: 'AI模型部署概述'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default

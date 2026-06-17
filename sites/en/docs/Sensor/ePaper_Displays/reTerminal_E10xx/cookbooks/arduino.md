@@ -9,7 +9,7 @@ last_update:
   date: 05/15/2026
   author: dimo
 createdAt: '2025-08-21'
-updatedAt: '2026-05-27'
+updatedAt: '2026-05-30'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';
@@ -18,6 +18,16 @@ import TabItem from '@theme/TabItem';
 # Arduino Cookbook: ePaper Display (reTerminal E Series)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/244.png" style={{width:650, height:'auto'}}/></div>
+
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
 
 :::tip Looking for the hardware peripherals?
 This page focuses on **driving the ePaper screen** from Arduino. If you want to use the onboard LED, buzzer, buttons, SHT4x sensor, battery monitor, or microSD card slot, head over to **[Arduino Cookbook: Onboard Peripherals](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals)**. For RTC, low-power modes, the onboard microphone, and capacitive touch drawing, see **[Arduino Cookbook: RTC, Low Power, Audio & Touch](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2)**.

@@ -127,9 +127,7 @@ cd ~/rebot_lerobot
 git clone https://github.com/Seeed-Projects/lerobot.git
 ```
 
-### 3. 克隆功能包
-
-克隆两个依赖功能包到 rebot_lerobot 目录下：
+### 3. 创建 Conda 环境并安装 LeRobot
 
 :::tip
 关于功能包的详细功能，请参考：
@@ -137,17 +135,6 @@ git clone https://github.com/Seeed-Projects/lerobot.git
 - [lerobot-robot-seeed-b601](https://github.com/Seeed-Projects/lerobot-robot-seeed-b601)
 :::
 
-```bash
-cd ~/rebot_lerobot
-
-# 克隆 rebot 102 leader 功能包
-git clone https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102.git
-
-# 克隆 rebot b601 follower 功能包
-git clone https://github.com/Seeed-Projects/lerobot-robot-seeed-b601.git
-```
-
-### 4. 创建 Conda 环境并安装 LeRobot
 
 lerobot 仓库已有 pyproject.toml，创建 conda 环境并安装所有依赖包。
 
@@ -163,14 +150,14 @@ conda activate lerobot
 # 安装 lerobot 主项目（可编辑模式）
 pip install -e ./lerobot
 
-# 添加本地依赖包（可编辑安装）
-pip install -e ./lerobot-teleoperator-rebot-arm-102
-pip install -e ./lerobot-robot-seeed-b601
+# 添加依赖包
+pip install lerobot-teleoperator-rebot-arm-102
+pip install lerobot-robot-seeed-b601
 pip install motorbridge
 ```
 
 
-### 5. 安装 ffmpeg
+### 4. 安装 ffmpeg
 
 ffmpeg 是视频解码依赖，通过 conda 安装：
 
@@ -188,7 +175,7 @@ conda install ffmpeg -c conda-forge
 - 可通过 `ffmpeg -encoders | grep svtav1` 检查是否支持 libsvtav1 编码器
 :::
 
-### 6. Jetson Jetpack 6.0+ 设备特殊配置
+### 5. Jetson Jetpack 6.0+ 设备特殊配置
 
 (电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照 [此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) 的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
 
@@ -201,7 +188,7 @@ conda uninstall numpy
 pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
 ```
 
-### 7. 检查 Pytorch 和 Torchvision
+### 6. 检查 Pytorch 和 Torchvision
 
 :::tip
 如果你使用的是 Jetson 设备，请根据 [此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) 安装 Pytorch 和 Torchvision。
@@ -332,10 +319,20 @@ lerobot-teleoperate \
     --robot.can_adapter=damiao \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
-    --teleop.id=rebot_arm_102_leader \
-    --teleop.joint_directions='{"shoulder_pan":-1,"shoulder_lift":-1,"elbow_flex":1,"wrist_flex":1,"wrist_yaw":1,"wrist_roll":-1,"gripper":-4}'
+    --teleop.id=rebot_arm_102_leader
 ```
-
+<div class="video-container">
+    <iframe 
+        width="900" 
+        height="600" 
+        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0" 
+        scrolling="no" 
+        border="0" 
+        frameborder="no" 
+        framespacing="0" 
+        allowfullscreen="true">
+    </iframe>
+</div>
 
 ## 添加摄像头
 

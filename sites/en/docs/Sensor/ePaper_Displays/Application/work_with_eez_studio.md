@@ -9,7 +9,7 @@ keywords:
   - EE04
 image: https://files.seeedstudio.com/wiki/EEZStudio/eez.webp
 slug: /reterminal_e10xx_with_eezstudio
-sidebar_position: 6
+sidebar_position: 8
 last_update:
   date: 04/28/2026
   author: dimo
@@ -17,7 +17,7 @@ aliases:
   - /epaper_ee04_eezstudio
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio/
-updatedAt: '2026-04-28'
+updatedAt: '2026-06-03'
 ---
 
 import Tabs from '@theme/Tabs';

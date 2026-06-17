@@ -1,4 +1,4 @@
-position: 5 # float position is supported
+position: 6 # float position is supported
 label: 'Aplicación'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
@@ -7,4 +7,4 @@ link:
   type: generated-index
   slug: application
   title: Aplicación
-  description: Documentación de aplicaciones de la serie reCamera 2002 incluyendo la integración de reCamera con plataformas de software y hardware externas
+  description: Documentación de aplicaciones de la serie reCamera 2002, incluida la integración de reCamera con plataformas externas de software y hardware
