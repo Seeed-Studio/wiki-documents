@@ -94,7 +94,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
     </tr>
     <tr>
       <td>Operating Voltage</td>
-      <td>24V DC</td>
+      <td>48V DC</td>
     </tr>
     <tr>
       <td>Host Platform</td>
@@ -114,7 +114,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 | reBot Arm B601-RS Robotic Arm | 1 | ✅ |
 | Gripper | 1 | ✅ |
 | USB2CAN Serial Bridge | 1 | ✅ |
-| Power Adapter (24V) | 1 | ✅ |
+| Power Adapter (48V) | 1 | ✅ |
 | USB-C / Communication Cable | 1 | ✅ |
 | RGB-D Depth Camera | 1 | ✅ |
 | Camera Connector / Mounting Bracket | 1 | ✅ |
@@ -123,7 +123,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 
 1. Connect the depth camera to the host via USB 3.0.
 2. Connect the USB2CAN adapter to the arm CAN bus.
-3. Make sure the 24V power supply, camera, and robotic arm are all connected securely.
+3. Make sure the 48V power supply, camera, and robotic arm are all connected securely.
 4. Set permissions:
 
 ```bash
@@ -137,9 +137,6 @@ sudo chmod 666 /dev/ttyUSB0
 |------|-------------|
 | Operating System | Ubuntu 22.04+ |
 | Python | 3.10 |
-| Recommended Environment | conda |
-| Recommended Workspace Folder | `rebot_grasp` |
-| Recommended conda Environment | `rebotarm` |
 
 ## Installation Steps
 
