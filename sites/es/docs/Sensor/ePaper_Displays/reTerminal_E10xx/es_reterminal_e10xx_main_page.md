@@ -259,7 +259,7 @@ Utiliza la siguiente guía rápida para reducir la elección a un modelo. Si se 
   </a>
 </div><br />
 
-El reTerminal E1001 incorpora una pantalla ePaper monocroma de 7,5 pulgadas con capacidad de escala de grises de 4 niveles. Con su resolución de 800×480, ofrece texto nítido e imágenes claras consumiendo muy poca energía. La pantalla monocroma es perfecta para aplicaciones en las que la legibilidad del texto y la duración de la batería son prioridades.</td>
+El reTerminal E1001 incorpora una pantalla ePaper monocroma de 7,5 pulgadas con capacidad de escala de grises de 4 niveles. Con su resolución de 800×480, ofrece texto nítido e imágenes claras consumiendo muy poca energía. La pantalla monocroma es perfecta para aplicaciones en las que la legibilidad del texto y la duración de la batería son prioridades.
 
 ### Características clave
 
@@ -281,7 +281,7 @@ El reTerminal E1001 incorpora una pantalla ePaper monocroma de 7,5 pulgadas con 
   </a>
 </div><br />
 
-El reTerminal E1002 incorpora una vibrante pantalla ePaper a todo color de 7,3 pulgadas con tecnología ACeP (Advanced Color ePaper). Esta pantalla en color ofrece los mismos beneficios de eficiencia energética de la tecnología ePaper, al tiempo que permite contenido más atractivo visualmente con múltiples colores, lo que la hace ideal para aplicaciones en las que la diferenciación visual y el atractivo estético son importantes.</td>
+El reTerminal E1002 incorpora una vibrante pantalla ePaper a todo color de 7,3 pulgadas con tecnología ACeP (Advanced Color ePaper). Esta pantalla en color ofrece los mismos beneficios de eficiencia energética de la tecnología ePaper, al tiempo que permite contenido más atractivo visualmente con múltiples colores, lo que la hace ideal para aplicaciones en las que la diferenciación visual y el atractivo estético son importantes.
 
 ### Características clave
 
@@ -303,9 +303,9 @@ El reTerminal E1002 incorpora una vibrante pantalla ePaper a todo color de 7,3 p
   </a>
 </div><br />
 
-reTerminal E1003 es una pantalla ePaper monocroma de código abierto de 10,3 pulgadas que incorpora 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con hasta 6 meses de duración de la batería. La interacción táctil es actualmente compatible con el firmware SenseCraft HMI v1.1.2. Impulsado por ESP32-S3, admite de forma nativa el diseño de interfaces sin código con SenseCraft HMI, mientras que Arduino y PlatformIO están disponibles para un desarrollo adicional.</td>
+reTerminal E1003 es una pantalla ePaper monocroma de código abierto de 10,3 pulgadas que incorpora 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con hasta 6 meses de duración de la batería. La interacción táctil es actualmente compatible con el firmware SenseCraft HMI v1.1.2. Impulsado por ESP32-S3, admite de forma nativa el diseño de interfaces sin código con SenseCraft HMI, mientras que Arduino y PlatformIO están disponibles para un desarrollo adicional.
 
-Se planea la futura publicación como código abierto de la biblioteca relacionada con el tacto, lo que proporcionará mayor flexibilidad para personalizar los paneles. Próximamente se compartirán más actualizaciones. El soporte del controlador ESPHome para el E1003 también está previsto para una versión futura.</td>
+Se planea la futura publicación como código abierto de la biblioteca relacionada con el tacto, lo que proporcionará mayor flexibilidad para personalizar los paneles. Próximamente se compartirán más actualizaciones. El soporte del controlador ESPHome para el E1003 también está previsto para una versión futura.
 
 ### Características clave
 
@@ -327,7 +327,7 @@ Se planea la futura publicación como código abierto de la biblioteca relaciona
   </a>
 </div><br />
 
-El reTerminal E1004 incorpora una pantalla ePaper a todo color de 13,3 pulgadas y hasta 6 meses de duración de la batería. Impulsado por ESP32-S3, es compatible con SenseCraft HMI para la creación de paneles de control sin código y la carga de imágenes, y también es compatible con Home Assistant, Arduino y ESP-IDF para flujos de trabajo de desarrollo avanzados.</td>
+El reTerminal E1004 incorpora una pantalla ePaper a todo color de 13,3 pulgadas y hasta 6 meses de duración de la batería. Impulsado por ESP32-S3, es compatible con SenseCraft HMI para la creación de paneles de control sin código y la carga de imágenes, y también es compatible con Home Assistant, Arduino y ESP-IDF para flujos de trabajo de desarrollo avanzados.
 
 ### Características clave
 
@@ -347,7 +347,7 @@ El reTerminal E1004 incorpora una pantalla ePaper a todo color de 13,3 pulgadas 
   </a>
 </div><br />
 
-Cada dispositivo de la Serie reTerminal E se envía con el firmware **SenseCraft HMI** listo para usar, de modo que puedes empezar a trabajar sin escribir ni una sola línea de código. La aplicación web gestiona el inicio de sesión, el diseño del panel de control y la implementación inalámbrica en tu dispositivo:</td>
+Cada dispositivo de la Serie reTerminal E se envía con el firmware **SenseCraft HMI** listo para usar, de modo que puedes empezar a trabajar sin escribir ni una sola línea de código. La aplicación web gestiona el inicio de sesión, el diseño del panel de control y la implementación inalámbrica en tu dispositivo:
 
 - **Generador de IA**: describe un panel de control en texto plano y deja que la IA lo diseñe por ti.
 - **Galería**: envía imágenes y presentaciones directamente al panel para casos de uso como marco digital.
@@ -355,11 +355,11 @@ Cada dispositivo de la Serie reTerminal E se envía con el firmware **SenseCraft
 - **RSS / Contenido web**: trae noticias en vivo, clima, calendario o cualquier fuente web a la pantalla.
 - **Interacción táctil**: totalmente compatible en el E1003 a partir del firmware HMI v1.1.2.
 
-Si necesitas más control del que te ofrece el flujo de trabajo sin código, cada dispositivo también expone el ESP32-S3 subyacente, por lo que puedes pasar a los tutoriales de aplicaciones que aparecen a continuación en cualquier momento.</td>
+Si necesitas más control del que te ofrece el flujo de trabajo sin código, cada dispositivo también expone el ESP32-S3 subyacente, por lo que puedes pasar a los tutoriales de aplicaciones que aparecen a continuación en cualquier momento.
 
 ## Aplicaciones y tutoriales
 
-Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataformas estándar de la industria y herramientas de diseño de interfaces visuales. La siguiente matriz te indica, para cada tutorial, qué modelos cubre actualmente.</td>
+Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataformas estándar de la industria y herramientas de diseño de interfaces visuales. La siguiente matriz te indica, para cada tutorial, qué modelos cubre actualmente.
 
 ### Marcos de hogar inteligente y paneles de control
 

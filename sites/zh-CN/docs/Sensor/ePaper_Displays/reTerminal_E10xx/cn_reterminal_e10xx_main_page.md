@@ -112,7 +112,7 @@ reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 打造的电子纸显示终�
 			<td align="center">15–20 s</td>
 			<td align="center">2–3 s</td>
 			<td align="center">约 20 s</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>触控</strong></td>
 			<td align="center">—</td>

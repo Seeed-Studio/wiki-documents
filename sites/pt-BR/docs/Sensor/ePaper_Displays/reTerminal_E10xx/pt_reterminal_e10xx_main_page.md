@@ -98,7 +98,7 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 			<td align="center">800 × 480</td>
 			<td align="center">1404 × 1872</td>
 			<td align="center">1200 × 1600</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>Atualização parcial</strong></td>
 			<td align="center">✅</td>

@@ -78,7 +78,7 @@ O reTerminal E1001 é um display ePaper monocromático open-source de 7,5 polega
 		<tr>
 			<td align="center"><strong>Resolução</strong></td>
 			<td align="center">800 x 480 pixels</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>Cartão Micro SD</strong></td>
 			<td align="center">Suporta no máximo cartão SD de 32GB, formato FAT32</td>
