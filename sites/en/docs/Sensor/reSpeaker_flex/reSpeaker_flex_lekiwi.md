@@ -1,10 +1,11 @@
 ---
 description: Voice-controlled Kiwi-drive robot using Raspberry Pi, XIAO ESP32, ReSpeaker Lite, and voice embeddings for intelligent hands-free robotic control.
-title: Add Voice Interaction to Your LeKiwi Robot with reSpeaker Flex
+title: Add Voice Interaction to Your LeKiwi Robot with reSpeaker 
 keywords:
   - reSpeaker flex
   - LeKiwi
   - xvf3800
+
 image: https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png
 slug: /respeaker_flex_lekiwi
 sku: 100005504,100099135,100070894,100026178
@@ -21,7 +22,7 @@ url: https://wiki.seeedstudio.com/respeaker_flex_lekiwi/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png" alt="pir" width={800} height="auto" /></p>
 
-Control a 3-wheeled Kiwi-drive robot with your voice! This project combines a Seeed Studio XIAO ESP32 (motor controller) with a Raspberry Pi (voice processing brain), enhanced by the reSpeaker Flex for high-quality audio capture and Voice Embeddings for smarter, more personalized voice interaction. Using natural language commands, you can drive, steer, and control the robot completely hands-free with improved accuracy and responsiveness.
+Control a 3-wheeled Kiwi-drive robot with your voice! This project combines a Seeed Studio XIAO ESP32 (motor controller) with a Raspberry Pi (voice processing brain), enhanced by the reSpeaker  for high-quality audio capture and Voice Embeddings for smarter, more personalized voice interaction. Using natural language commands, you can drive, steer, and control the robot completely hands-free with improved accuracy and responsiveness.
 
 ## Hardware Required
 
@@ -29,14 +30,12 @@ Control a 3-wheeled Kiwi-drive robot with your voice! This project combines a Se
   <tr>
     <th>LeKiwi Kit</th>
     <th>XIAO ESP32S3</th>
-    <th>reSpeaker Flex XVF3800 Circular</th>
     <th>Raaspberry pi 5</th>
 
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114090065-lekiwi-kit_1.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102010634-seeed-studio-xiao-esp32s3-_pre-soldered_-45font_1.jpg" style={{width:500, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
 
   </tr>
@@ -52,17 +51,96 @@ Control a 3-wheeled Kiwi-drive robot with your voice! This project combines a Se
       </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
       </a>
     </div></td>
   </tr>
 </table>
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 300, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      OR
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 300, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ## Services
 
@@ -502,7 +580,7 @@ This downloads the pre-trained **"Hey Jarvis"** model (and others) from openwake
 
 ### Step 5 — Find Your Microphone Index
 
-Plug in your **ReSpeaker Flex** via USB, then run:
+Plug in your **reSpeaker** via USB, then run:
 
 ```bash
 python3 list_mics.py

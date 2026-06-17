@@ -1,20 +1,21 @@
 ---
-description: SenseCraft HMI - Seeed のノーコード・ビジュアルインターフェース設計プラットフォームを使用して、reTerminal E シリーズからすべての XIAO ePaper ドライバボードまで、互換性のあるあらゆる Seeed ePaper 製品を駆動します。
+description: SenseCraft HMI を使用して、対応する Seeed ePaper ディスプレイデバイス向けのノーコードダッシュボードを設計およびデプロイします。
 title: SenseCraft HMI を使う
 keywords:
   - ePaper ディスプレイ
   - SenseCraft HMI
+  - ノーコードダッシュボード
   - reTerminal
-  - EE02
-  - EE03
-  - EE04
-  - EE05
+  - XIAO ePaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.webp
 slug: /EE04_with_hmi
 sidebar_position: 1
 last_update:
-  date: 04/28/2026
+  date: 06/15/2026
   author: dimo
+createdAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/ja/EE04_with_hmi/
+updatedAt: '2026-06-15'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -22,347 +23,319 @@ import TabItem from '@theme/TabItem';
 
 # SenseCraft HMI を使う
 
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) は、Seeed Studio が提供する強力なクラウドベースのインターフェース設計プラットフォームで、画面を備えたデバイス向けに、**コードを書くことなく**プロフェッショナルなビジュアルインターフェースを作成できます。直感的なドラッグ＆ドロップエディタ、あらかじめ用意されたテンプレート、AI を活用したデザイン機能により、SenseCraft HMI はあなたのハードウェアを、美しい情報表示、ダッシュボード、デジタルサイネージ、あるいはコントロールパネルへと変身させます。
+[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) は、ePaper ディスプレイデバイス向けの Seeed Studio 製ノーコードインターフェース設計プラットフォームです。ブラウザ上でダッシュボード、画像ギャラリー、カレンダー、RSS ページ、Web コンテンツページ、その他の常時表示情報画面を設計し、Wi-Fi 経由で対応デバイスにデプロイできます。
 
-このガイドは、**すべての互換性のある Seeed ePaper 製品**で SenseCraft HMI を使用するための唯一の信頼できる情報源です。ファームウェアのステップで一度だけハードウェアを選択すれば、その後のワークフローはすべてのデバイスで同一です。
+この Wiki は ePaper ディスプレイのアプリケーションガイドです。Seeed の ePaper デバイスから動作する SenseCraft HMI ページまでの最短ルートを説明し、1 枚の ePaper ディスプレイボードと 1 枚の ePaper スクリーンを使用したハードウェア構成を例として扱います。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.png" style={{width:1000, height:'auto'}}/></div>
 
-## 対応ハードウェア
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI を開く</font></span></strong>
+    </a>
+</div><br />
 
-SenseCraft HMI は、以下の Seeed ePaper 製品で箱から出してすぐに動作します。reTerminal E シリーズには HMI ファームウェアがあらかじめ書き込まれており、XIAO ePaper Display Board（EE02–EE05）ファミリは、ブラウザ上の SenseCraft HMI Tools ページから書き込みを行います。
+## このガイドを使うタイミング
+
+SenseCraft HMI を対応する Seeed ePaper 製品と一緒に使い、次のワークフローをすばやく完了したいときに、このガイドを使用してください：
+
+1. SenseCraft HMI ファームウェアを確認または書き込む。
+2. デバイスを Wi-Fi に接続する。
+3. デバイスを SenseCraft HMI ワークスペースに追加する。
+4. 最初のページを ePaper ディスプレイにデプロイする。
+
+アカウント設定、エディタの詳細、テンプレート、データウィジェット、リリースノートなどを含む完全なプラットフォームマニュアルについては、[公式 SenseCraft HMI ドキュメント](https://sensecraft-hmi-docs.seeed.cc/en/overview/)を参照してください。
+
+## 始める前に
+
+SenseCraft HMI を使用する前に、次の項目を準備してください：
+
+- 対応する Seeed ePaper ディスプレイデバイス。
+- SenseCraft アカウント。[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) のログインページから作成できます。
+- 2.4 GHz の Wi-Fi ネットワーク。
+- デバイスにファームウェア書き込みが必要な場合は USB-C データケーブル。
+- SenseCraft HMI Web ツールからのシリアルポート書き込みをサポートするブラウザを実行しているコンピュータ。
+
+:::tip
+ePaper 製品ごとに使用する HMI ファームウェアビルドは異なります。必ず、お使いのデバイスと画面サイズに正確に一致するファームウェアを選択してください。
+:::
+
+## 公式 SenseCraft HMI ドキュメント
+
+SenseCraft HMI には専用のドキュメントサイトがあります。ePaper ディスプレイのクイックスタートフローにはこの Wiki を使用し、プラットフォーム全体の手順には公式ドキュメントを使用してください。
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>製品ライン</th>
-      <th>開封直後の体験</th>
-      <th>対象スクリーン</th>
+      <th>トピック</th>
+      <th>このトピックを使う場面</th>
+      <th>リンク</th>
     </tr>
     <tr>
-      <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
-      <td>HMI ファームウェアをプリインストール済み — 電源を入れてペアリングするだけ</td>
-      <td>一体型 7.5" / 7.3" / 10.3" / 13.3" パネル</td>
+      <td>概要</td>
+      <td>SenseCraft HMI が何であり、何ができるかを理解したいとき。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/overview/" target="_blank" rel="noopener noreferrer">概要を開く</a></td>
     </tr>
     <tr>
-      <td><strong>EE02</strong></td>
-      <td>SenseCraft HMI Tools ページから書き込み</td>
-      <td>13.3" Spectra 6（カラー）</td>
+      <td>対応ハードウェア</td>
+      <td>現在のデバイスおよび画面の対応リストを確認したいとき。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/supported_hardware/" target="_blank" rel="noopener noreferrer">対応ハードウェアを開く</a></td>
     </tr>
     <tr>
-      <td><strong>EE03</strong></td>
-      <td>SenseCraft HMI Tools ページから書き込み</td>
-      <td>10.3" モノクロ（高速リフレッシュ）</td>
+      <td>はじめに</td>
+      <td>公式のアカウント作成、ファームウェア、接続、デプロイのフローに従いたいとき。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/guides/getting_started/" target="_blank" rel="noopener noreferrer">はじめにを開く</a></td>
     </tr>
     <tr>
-      <td><strong>EE04</strong></td>
-      <td>SenseCraft HMI Tools ページから書き込み</td>
-      <td>24 ピン / 50 ピン汎用 — 多くのサイズに対応</td>
+      <td>ワークスペースとキャンバス</td>
+      <td>エディタレイアウト、ウィジェット、データソース、ページ作成フローについて学びたいとき。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/guides/workspace/" target="_blank" rel="noopener noreferrer">ワークスペースガイドを開く</a></td>
     </tr>
     <tr>
-      <td><strong>EE05</strong></td>
-      <td>SenseCraft HMI Tools ページから書き込み</td>
-      <td>24 ピン / 50 ピン汎用（最新）</td>
+      <td>AI 生成</td>
+      <td>テキストプロンプトから画像やページレイアウトを生成したいとき。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/guides/ai_gen/" target="_blank" rel="noopener noreferrer">AI 生成を開く</a></td>
+    </tr>
+    <tr>
+      <td>リリースノート</td>
+      <td>最新のプラットフォームおよびファームウェアの更新内容を確認したいとき。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/release_note/" target="_blank" rel="noopener noreferrer">リリースノートを開く</a></td>
     </tr>
   </table>
 </div>
 
-この記事では、最も多くの機能をカバーしているため、主なハードウェア例として **XIAO ePaper Display Board (ESP32-S3) – EE04** と **7.3" Spectra 6** ディスプレイの組み合わせを使用します。すべての手順は、各タブで示すわずかな違いを除き、他の製品にも同様に適用できます。
+## ハードウェア構成の例
+
+以下の手順では、**XIAO ePaper Display Board (ESP32-S3) - EE04** と **7.3" Spectra 6 ePaper display** を例として使用します。他の対応 Seeed ePaper デバイスも同じプラットフォームフローに従いますが、ファームウェアビルド、画面サイズ、ハードウェア構成は異なる場合があります。
 
 <div class="table-center">
-<table align="center">
+  <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board(ESP32-S3) - EE04</th>
-        <th>7.3" Spectra 6 E-Ink</th>
+      <th>XIAO ePaper Display Board (ESP32-S3) - EE04</th>
+      <th>7.3" Spectra 6 ePaper Display</th>
     </tr>
     <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
-    <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-        </a>
-    </div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/60hmi.jpg" style={{width:300, height:'auto'}}/></div>
-    <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-        </a>
-    </div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/60hmi.jpg" style={{width:300, height:'auto'}}/></div></td>
     </tr>
- </table>
+    <tr>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank" rel="noopener noreferrer">
+          <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html" target="_blank" rel="noopener noreferrer">
+          <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手</font></span></strong>
+        </a>
+      </div></td>
+    </tr>
+  </table>
 </div>
 
-### EE04 / EE05 — 対応スクリーン一覧
-
-XIAO ePaper Display Board EE04 / EE05 は、**24 ピン** と **50 ピン** の 2 種類のコネクタオプションを備え、幅広いスクリーンサイズをサポートします。以下の一覧から、お使いのディスプレイに対応するものを選択してください。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi71.png" style={{width:800, height:'auto'}}/></div>
-
-<Tabs groupId="hmi-connector">
-<TabItem value="24pin" label="24 ピンコネクタ" default>
-
-- [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [2.13-inch ePaper - Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [2.13-inch ePaper - Quadruple Color 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9-inch ePaper - Monochrome 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [2.9-inch ePaper - Quadruple Color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [4.26-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [5.83-inch ePaper - Monochrome 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [7.5-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
-
-:::tip 電源を入れる前にジャンパを **24 Pin** に設定する
-誤ったジャンパ設定を使用すると、ePaper が表示されなかったり、異常な内容が表示されたりする可能性があります。電源を入れる前に、必ずジャンパ位置を再確認してください。
+:::note
+この例は対応リストではありません。現在の対応ハードウェアおよびファームウェアのマトリクスについては、必ず [SenseCraft HMI Supported Hardware ページ](https://sensecraft-hmi-docs.seeed.cc/en/supported_hardware/)を参照してください。
 :::
 
-</TabItem>
-<TabItem value="50pin" label="50 ピンコネクタ">
+## ステップ 1: HMI ファームウェアを確認または書き込む
 
-- [7.3-Inch Spectra 6 ePaper 800x480](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
-
-:::tip 電源を入れる前にジャンパを **50 Pin** に設定する
-誤ったジャンパ設定を使用すると、ePaper が表示されなかったり、異常な内容が表示されたりする可能性があります。電源を入れる前に、必ずジャンパ位置を再確認してください。
-:::
-
-</TabItem>
-</Tabs>
-
-## ステップ 1: SenseCraft HMI アカウントを登録する
-
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) ページ右上のボタンをクリックして、アカウントを作成します。
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
-    </a>
-</div><br />
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi63.png" style={{width:1000, height:'auto'}}/></div>
-
-## ステップ 2: デバイスに HMI ファームウェアを入れる
+最初のステップは、お使いの ePaper デバイスが SenseCraft HMI ファームウェアを実行していることを確認することです。
 
 <Tabs groupId="hmi-hardware">
 <TabItem value="reterminal" label="reTerminal E シリーズ" default>
 
-reTerminal **E1001 / E1002 / E1003 / E1004** には、SenseCraft HMI ファームウェアがあらかじめ書き込まれています。デバイスの電源を入れ、ステップ 3（ネットワーク設定）までスキップしてください。
+reTerminal E シリーズは、箱から出してすぐに SenseCraft HMI と連携できるように設計されています。デバイスの電源を入れ、[ステップ 2: デバイスを Wi-Fi に接続する](#step-2-connect-the-device-to-wi-fi) に進んでください。
 
-以前に別のファームウェア（たとえば TRMNL）を書き込んでいる場合は、SenseCraft HMI Tools ページから HMI に戻すことができます。
-
-1. [SenseCraft HMI デバイスページ](https://sensecraft.seeed.cc/hmi/device) を開き、使用している reTerminal モデルを選択します。
-2. 最新の **HMI** ファームウェアビルドを選択します（デバイスをクリーンな状態にしたい場合は **Full Flash** を使用します）。
-3. デバイスを USB-C でコンピュータに接続し、画面のシリアルポートに関する指示に従います。
-
-</TabItem>
-<TabItem value="ee04" label="EE02 / EE03 / EE04 / EE05">
-
-登録後、上部メニューバーの **Tools** をクリックして、ファームウェア書き込みセクションに入ります。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi62.png" style={{width:1000, height:'auto'}}/></div>
+以前に別のファームウェアを書き込んだことがある場合は、[SenseCraft HMI デバイスページ](https://sensecraft.seeed.cc/hmi/device)を開き、デバイスモデルを選択して、画面の指示に従ってファームウェアを操作してください。
 
 :::tip
-XIAO ePaper Display Board EE04 / EE05 は、以下の ePaper スクリーンを標準でサポートしています。
-
-- [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [2.13-inch ePaper - Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [2.13-inch ePaper - Quadruple Color 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9-inch ePaper - Monochrome 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [2.9-inch ePaper - Quadruple Color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [4.26-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [5.83-inch ePaper - Monochrome 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [7.5-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-- [7.3-inch Spectra 6 ePaper 800x480](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
-
-EE02 は 13.3" Spectra 6 専用、EE03 は 10.3" 高速リフレッシュ対応モノクロ専用として出荷されます。
+保存されている Wi-Fi 情報、ペアリングデータ、既存のデバイスコンテンツを消去したい場合にのみ、**Full Flash** を使用してください。
 :::
 
-書き込みの流れは、どのスクリーンサイズでも同一です — 使用するパネルに合ったファームウェアビルドを選択してください。以下の例では、**7.3" フルカラー・ディスプレイ（800×480）** を使用します。
+</TabItem>
+<TabItem value="display-board" label="ePaper Display Board + Screen">
 
-**ステップ 1.** Tools ページで **7.3" Full-Color Display 800×480** の項目を選択します。
+ディスプレイボードと別体の ePaper スクリーンを使用する場合は、ボードとパネルに対応した HMI ファームウェアを書き込んでください。
+
+**ステップ 1.** [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) にサインインし、上部メニューから **Tools** を開きます。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/256.png" style={{width:1000, height:'auto'}}/></div>
+
+**ステップ 2.** お使いのディスプレイに対応するファームウェアエントリを選択します。この例では、**7.3" Full-Color Display 800 x 480** エントリを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi92.png" style={{width:1000, height:'auto'}}/></div>
 
-**ステップ 2.** 最新のファームウェアを選択します（例：`EE04_7_3_color_1.0.5`）。
-
-:::tip
-SenseCraft HMI プラットフォームは定期的にアップデートされています。常に最新バージョンのファームウェアを選択して、最高の互換性と性能を確保してください。
-:::
+**ステップ 3.** お使いのハードウェアに対して利用可能な最新のファームウェアバージョンを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi5.png" style={{width:1000, height:'auto'}}/></div>
 
-**ステップ 3.** **Flash** をクリックしてファームウェアを書き込みます。
+**ステップ 4.** ボードを USB-C データケーブルでコンピュータに接続し、**Flash** をクリックします。
 
-Flash をクリックすると、プラットフォームにポート選択ウィンドウが表示されます。お使いのデバイスに対応するポートを選択してください。
-
-- **Full Flash**：Wi-Fi ネットワークやユーザーパネルデータを含む、保存されているすべての情報を消去します。
+**Flash** をクリックすると、ブラウザにシリアルポート選択ウィンドウが表示されます。お使いのデバイスに対応するポートを選択してください。
 
 :::tip
-ポートが表示されない場合は、ボード上の **RESET** ボタンを押して接続を更新してください。
+ポートが表示されない場合は、ボード上の **RESET** ボタンを押してから再試行してください。また、使用している USB-C ケーブルがデータ転送に対応していることを確認してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi65.png" style={{width:1000, height:'auto'}}/></div>
 
-**ステップ 4.** ディスプレイ出力を確認します。
+**ステップ 5.** ePaper ディスプレイがリフレッシュされ、セットアップ用 QR コードが表示されるまで待ちます。
 
-書き込み後、ePaper ディスプレイが一瞬ちらつき、下図の QR コード画面が表示されます。2 つの QR コードは、それぞれユーザーガイドと Wi-Fi セットアップページにリンクしています。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi67.png" style={{width:1000, height:'auto'}}/></div>
-
-この時点では、まだ設定は完了していません。続けて、以下の **ステップ 3：ネットワーク設定** に進んでください。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi67.png" style={{width:800, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
 
-## ステップ 3：ネットワーク設定
+## ステップ 2: デバイスを Wi-Fi に接続する
 
-Wi-Fi ペアリングの手順は、HMI ファームウェアを実行しているすべての Seeed ePaper 製品で共通です。
+デバイスが HMI ファームウェアを実行していることを確認したら、ローカルの Wi-Fi ネットワークに接続します。
 
-**ステップ 1.** スマートフォンまたはコンピュータを、デバイスの Wi-Fi アクセスポイントに接続します。AP 名はデバイスの画面に表示されます（パスワード不要）。
+**ステップ 1.** ePaper スクリーンに表示されている Wi-Fi アクセスポイントに、スマートフォンまたはコンピュータを接続します。この一時的なアクセスポイントにパスワードは不要です。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi31.png" style={{width:500, height:'auto'}}/></div>
+アクセスポイント名はデバイスタイプによって異なります。別体スクリーン付きの ePaper Display Board の場合、名前は `ePaper DIY Kit-xxxx` のように表示されることがあります。reTerminal E シリーズデバイスの場合、名前は `reTerminal E100x-xxxx` のように表示されることがあります。どちらの場合も、`xxxx` は通常 MAC アドレスの末尾 4 文字を表します。
 
-**ステップ 2.** 接続後、ePaper 画面上の QR コードをスキャンします。スマートフォンは自動的に Wi-Fi 設定ページへリダイレクトされるはずです。自動で開かない場合は、ブラウザを開き `192.168.4.1` にアクセスしてください。
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>ePaper Display Board + Screen</th>
+      <th>reTerminal E シリーズ</th>
+    </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi31.png" style={{width:360, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/5.png" style={{width:360, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+      <td>AP 名の例: <code>ePaper DIY Kit-xxxx</code></td>
+      <td>AP 名の例: <code>reTerminal E100x-xxxx</code></td>
+    </tr>
+  </table>
+</div>
+
+**ステップ 2.** ePaper スクリーン上の QR コードをスキャンします。設定ページが自動的に開かない場合は、ブラウザを開き `192.168.4.1` にアクセスします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi32.png" style={{width:500, height:'auto'}}/></div>
 
-**ステップ 3.** お使いのローカル Wi-Fi ネットワークを選択し、パスワードを入力してから **Connect** をクリックします。
+**ステップ 3.** ローカルの Wi-Fi ネットワークを選択し、パスワードを入力して **Connect** をクリックします。
 
 :::tip
-XIAO ESP32-S3 ファミリーは **2.4 GHz Wi-Fi** ネットワークのみをサポートします。5 GHz ネットワークには対応していません。
+2.4 GHz の Wi-Fi ネットワークを使用してください。多くの ESP32-S3 ベースのデバイスは 5 GHz の Wi-Fi ネットワークには接続できません。
 :::
 
-**ステップ 4.** 接続が完了すると、画面にペアコードが表示されます：
+**ステップ 4.** デバイスがネットワークに参加し、ペアコードが表示されるまで待ちます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi13.jpg" style={{width:700, height:'auto'}}/></div>
 
-## ステップ 4：デバイスを SenseCraft HMI に追加する
+## ステップ 3: デバイスを SenseCraft HMI に追加する
 
-**ステップ 1.** **Workspace** セクションに移動し、**Add Device** をクリックします。
+Wi-Fi の設定が完了したら、デバイスを SenseCraft HMI ワークスペースに追加します。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi12.png" style={{width:700, height:'auto'}}/></div>
+**ステップ 1.** **Device** ページを開き、**Add Device** をクリックします。
 
-**ステップ 2.** デバイスに名前を付け、デバイス画面に表示されているペアコードを入力し、**Create** をクリックします。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/255.png" style={{width:700, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi11.png" style={{width:700, height:'auto'}}/></div>
+**ステップ 2.** デバイス名と ePaper 画面に表示されているペアコードを入力し、**Create** をクリックします。
 
-**ステップ 3.** ペアリングが完了すると、Workspace にデバイスが表示されます。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/251.png" style={{width:700, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi68.png" style={{width:700, height:'auto'}}/></div>
+**ステップ 3.** デバイスが Panel に表示されていることを確認します。
 
-これで、SenseCraft HMI でダッシュボードのデザインを開始できます。
+## ステップ 4: 最初のページをデプロイする
 
-## ダッシュボードの作成
+デバイスがペアリングされると、SenseCraft HMI から ePaper 画面へコンテンツをデプロイできます。
 
-SenseCraft HMI プラットフォームは、コンテンツの設計とカスタマイズのための強力なツールを提供します。5 つのコアとなる構成要素を以下に説明します。完全なリファレンスについては、[SenseCraft HMI documentation](https://sensecraft-hmi-docs.seeed.cc/en/) を参照してください。
+最も手早く始める方法は、既存のテンプレートまたは組み込みの作成ツールのいずれかを使用することです。エディタの詳細なフローについては、[公式入門ガイド](https://sensecraft-hmi-docs.seeed.cc/en/guides/getting_started/)に従ってください。
 
-:::note
-以下のデモでは 7.3 インチ画面を使用しています。別のサイズを使用する場合は、次の点に注意してください：
-
-- 画面のフレックスケーブルの向き（表裏）を確認する。
-- ピンヘッダの本数がデバイスのコネクタと一致していることを確認する。
-- 対応するサイズのカバーキャップを使用する。
-- フレックスケーブルを取り付ける際に、曲げすぎたり過度に折り曲げたりしない。
-:::
-
-### AI Generator
-
-AI にダッシュボードのデザインを任せましょう。表示したい情報を説明すると、AI Generator が魅力的で機能的なレイアウトを自動生成します。天気表示、カレンダー、ToDo リスト、インフォメーションパネルなどを、手作業でデザインすることなく作成するのに最適です。
-
-[AI Generator について詳しく見る →](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/)
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi25.png" style={{width:700, height:'auto'}}/></div>
-
-**ePaper ディスプレイ結果：**
-
-<div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi42.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3-Inch ePaper Display</em></p>
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>機能</th>
+      <th>用途</th>
+      <th>公式ガイド</th>
+    </tr>
+    <tr>
+      <td>Canvas</td>
+      <td>テキスト、画像、ウィジェット、図形、データソースからページを作成します。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/guides/workspace/" target="_blank" rel="noopener noreferrer">ガイドを開く</a></td>
+    </tr>
+    <tr>
+      <td>AI Generation</td>
+      <td>テキストプロンプトから画像やレイアウトを生成します。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/guides/ai_gen/" target="_blank" rel="noopener noreferrer">ガイドを開く</a></td>
+    </tr>
+    <tr>
+      <td>Gallery</td>
+      <td>アップロードした画像やスライドショー形式のコンテンツを表示します。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/overview/" target="_blank" rel="noopener noreferrer">ドキュメントを開く</a></td>
+    </tr>
+    <tr>
+      <td>RSS</td>
+      <td>RSS フィードから見出しや記事コンテンツを表示します。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/overview/" target="_blank" rel="noopener noreferrer">ドキュメントを開く</a></td>
+    </tr>
+    <tr>
+      <td>Web Content</td>
+      <td>Web ページや Web ベースの情報パネルを ePaper ディスプレイ上にレンダリングします。</td>
+      <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/overview/" target="_blank" rel="noopener noreferrer">ドキュメントを開く</a></td>
+    </tr>
+  </table>
 </div>
 
-### Gallery
-
-ePaper ディスプレイをデジタルフォトフレームに変身させましょう。お気に入りの画像をアップロードすると、プラットフォームが ePaper 用に最適化します。カスタムの切り替え時間を設定したスライドショーも作成できます。
-
-[Gallery について詳しく見る →](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-gallery/)
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi27.png" style={{width:700, height:'auto'}}/></div>
-
-**ePaper ディスプレイ結果：**
+以下の例は、7.3 インチ ePaper ディスプレイにデプロイされた SenseCraft HMI ページを示しています。
 
 <div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi50.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3-Inch ePaper Display</em></p>
+    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi42.png" alt="SenseCraft HMI page on a 7.3 inch ePaper display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3 インチ ePaper ディスプレイでの結果例</em></p>
 </div>
 
-### Canvas
+## トラブルシューティング
 
-Canvas を使って、ダッシュボードをゼロから設計します。ドラッグ＆ドロップのインターフェースで、次のような機能を提供します：
+### Q1: フラッシュ中にコンピュータがデバイスを検出しないのはなぜですか？
 
-- フォントやサイズをカスタマイズできるテキストブロック
-- 画像プレースホルダー
-- 時刻、日付、天気用のウィジェット
-- データ可視化ツール
-- レイアウト構成用の図形や区切り線
+これは通常、ブラウザがシリアルポートにアクセスできないか、ケーブルが充電のみに対応しているか、ボードが正しい USB 状態になっていないことを意味します。
 
-[Canvas について詳しく見る →](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-canvas/)
+- データ転送に対応した USB-C ケーブルを使用してください。
+- USB ハブ経由ではなく、デバイスをコンピュータに直接接続してください。
+- **RESET** ボタンを押してから、ポート選択ウィンドウを再度開いてください。
+- 現在使用しているブラウザが Web シリアルフラッシングをサポートしていない場合は、Chromium ベースのブラウザを試してください。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi30.png" style={{width:700, height:'auto'}}/></div>
+### Q2: デバイスが Wi-Fi に接続できないのはなぜですか？
 
-**ePaper ディスプレイ結果：**
+最も一般的な原因は、サポートされていない Wi-Fi バンドを使用しているか、パスワードを誤って入力していることです。
 
-<div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi46.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3-Inch ePaper Display</em></p>
-</div>
+- 2.4 GHz の Wi-Fi ネットワークを使用してください。
+- Wi-Fi パスワードを注意深く再入力してください。
+- セットアップ中はデバイスをルーターの近くに移動してください。
+- 以前にデバイスを設定していた場合、保存されたネットワーク設定を消去して最初からやり直したいときにのみ **Full Flash** を使用してください。
 
-### RSS フィード連携
+### Q3: フラッシュ後に画面に期待したセットアップ用 QR コードが表示されないのはなぜですか？
 
-RSS フィードをダッシュボードに追加して、お気に入りのニュースソースや Web サイトの最新情報を常にチェックしましょう。複数のソースから見出し、要約、または記事全文を表示できます。
+ファームウェアが接続されている画面と一致していないか、画面が正しく接続されていない可能性があります。
 
-おすすめのソース：
+- SenseCraft HMI Tools ページで、デバイスモデル、画面サイズ、ファームウェア項目を再確認してください。
+- ePaper フレックスケーブルを再接続する前に、ボードの電源を切ってください。
+- フレックスケーブルの向きとコネクタの種類がハードウェアに合っていることを確認してください。
+- 一致するファームウェアを再度フラッシュし、ePaper のリフレッシュが完了するまで待ちます。
 
-- [BBC News](http://feeds.bbci.co.uk/news/rss.xml)
-- [The New York Times](https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml)
+### Q4: デプロイしたページがエディタのプレビューと異なって見えるのはなぜですか？
 
-[RSS フィード連携について詳しく見る →](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-rss/)
+ePaper パネルによって、解像度、色の表現能力、グレースケールの挙動、リフレッシュ特性が異なります。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/75hmi.png" style={{width:700, height:'auto'}}/></div>
+- ターゲット画面と同じ解像度でページを作成してください。
+- 画面解像度が低い場合は、非常に小さなテキストは避けてください。
+- モノクロまたはグレースケール画面では、コントラストの高い色を使用してください。
+- エディタとデプロイの詳細については、公式ドキュメントを確認してください。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi26.png" style={{width:700, height:'auto'}}/></div>
+## リソース
 
-**ePaper ディスプレイ結果：**
-
-<div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi51.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3-Inch ePaper Display</em></p>
-</div>
-
-### Web コンテンツ表示
-
-任意の Web URL を ePaper ダッシュボード上に直接埋め込むことができます。まだネイティブの HMI プラグインがないツールやページを、そのまま表示するのに最適です。
-
-[Web コンテンツ表示について詳しく見る →](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/)
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi29.png" style={{width:700, height:'auto'}}/></div>
-
-**ePaper ディスプレイ結果：**
-
-<div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi53.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3-Inch ePaper Display</em></p>
-</div>
-
-## リファレンス & リソース
-
-- [Getting Started with SenseCraft HMI (official docs)](https://sensecraft-hmi-docs.seeed.cc/en/) — SenseCraft HMI の使い方をより深く理解し、その機能を最大限に引き出してプロジェクトを強化しましょう。
+- [SenseCraft HMI プラットフォーム](https://sensecraft.seeed.cc/hmi)
+- [SenseCraft HMI 公式ドキュメント](https://sensecraft-hmi-docs.seeed.cc/en/overview/)
+- [SenseCraft HMI 対応ハードウェア](https://sensecraft-hmi-docs.seeed.cc/en/supported_hardware/)
+- [SenseCraft HMI 入門ガイド](https://sensecraft-hmi-docs.seeed.cc/en/guides/getting_started/)
+- [SenseCraft HMI リリースノート](https://sensecraft-hmi-docs.seeed.cc/en/release_note/)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

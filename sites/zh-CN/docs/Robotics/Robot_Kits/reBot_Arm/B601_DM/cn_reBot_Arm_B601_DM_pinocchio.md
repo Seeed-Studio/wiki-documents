@@ -399,6 +399,19 @@ uv run python example/9_gravity_compensation.py
 - 实时显示各关节期望力矩（N·m）
 - 按 `Ctrl+C` 停止并断开连接
 
+<div class="video-container">
+    <iframe 
+        width="900" 
+        height="600" 
+        src="https://player.bilibili.com/player.html?bvid=BV1o8EY6iEkt&page=1&high_quality=1&danmaku=0" 
+        scrolling="no" 
+        border="0" 
+        frameborder="no" 
+        framespacing="0" 
+        allowfullscreen="true">
+    </iframe>
+</div>
+
 ---
 
 ## FAQ
