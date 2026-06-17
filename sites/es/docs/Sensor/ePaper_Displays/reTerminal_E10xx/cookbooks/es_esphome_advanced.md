@@ -19,12 +19,22 @@ import TabItem from '@theme/TabItem';
 # Recetario ESPHome: Botones, Zumbador, LED, Batería y Bajo Consumo (reTerminal E Serie)
 
 :::tip Requisitos previos
-Esta página asume que ya has seguido el [recetario de pantallas ESPHome para reTerminal E Serie](/es/reterminal_e10xx_with_esphome) (dispositivo en Wi‑Fi, integración con Home Assistant en línea, primer panel de control renderizado). Para el esqueleto YAML a nivel de plataforma y los pasos de integración con Home Assistant, consulta [Trabajar con ESPHome](/es/epaper_work_with_esphome). Para la configuración del RTC, la detección de tarjeta microSD y el micrófono, consulta [Recetario ESPHome: RTC, Tarjeta SD y Micrófono](/es/reterminal_e10xx_with_esphome_rtc_sd_microphone).
+Esta página asume que ya has completado el [recetario de pantallas ESPHome para reTerminal E Serie](/es/reterminal_e10xx_with_esphome) (dispositivo en Wi‑Fi, integración con Home Assistant en línea, primer panel de control renderizado). Para el esqueleto de YAML a nivel de plataforma y los pasos de integración con Home Assistant, consulta [Trabajar con ESPHome](/es/epaper_work_with_esphome). Para la configuración de RTC, detección de tarjeta microSD y micrófono, consulta [Recetario ESPHome: RTC, Tarjeta SD y Micrófono](/es/reterminal_e10xx_with_esphome_rtc_sd_microphone).
+:::
+
+:::tip Prueba las demos sin configurar un entorno de desarrollo
+Si quieres previsualizar rápidamente los resultados del proyecto o probar el firmware de demostración básico antes de configurar un entorno de desarrollo, abre el **[Centro de Firmware de reTerminal E-Series](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Puedes elegir un dispositivo reTerminal E Serie compatible y flashear firmware de demostración directamente desde un navegador.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-Este artículo cubre las configuraciones de ESPHome relacionadas con E/S integradas y energía para tu dispositivo reTerminal E Serie con pantalla de tinta electrónica, basándose en los conceptos fundamentales tratados en nuestro [recetario de pantallas ESPHome](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome). Si eres nuevo en ESPHome o en reTerminal E Serie, te recomendamos comenzar con la guía de pantalla antes de usar estos ejemplos de hardware.
+Este artículo cubre las configuraciones de ESPHome relacionadas con E/S integradas y energía para tu dispositivo reTerminal E Serie con pantalla de tinta electrónica, basándose en los conceptos fundamentales tratados en nuestro [recetario de pantallas ESPHome](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome). Si eres nuevo en ESPHome o en la reTerminal E Serie, te recomendamos comenzar con la guía de pantalla antes de usar estos ejemplos de hardware.
 
 ## Capacidades de hardware
 
@@ -34,7 +44,7 @@ La reTerminal E Serie con pantalla de tinta electrónica incluye varios componen
 
 - Zumbador (GPIO45)
 
-- Monitorización del nivel de batería (GPIO1 para el voltaje)
+- Monitorización del nivel de batería (GPIO1 para voltaje)
 
 - LED integrado (GPIO6)
 
@@ -115,7 +125,7 @@ Esta configuración:
 - Configura los tres botones como entradas con resistencias pull‑up
 - Configura el Botón 1 para hacer parpadear brevemente el LED
 - Configura el Botón 2 para hacer parpadear el LED con un patrón de doble destello
-- Configura el Botón 3 para conmutar el LED entre encendido y apagado
+- Configura el Botón 3 para conmutar el LED encendido/apagado
 - Hace que el LED esté disponible en Home Assistant como una entidad de luz controlable
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/45.gif" style={{width:250, height:'auto'}}/></div>
@@ -180,12 +190,12 @@ Esta configuración:
 - Configura el Botón 1 para reproducir un patrón de pitido corto cuando se pulsa
 
 :::tip
-Puedes ajustar el parámetro `frequency` para cambiar el tono del zumbador. Los valores más altos generan tonos más agudos.
+Puedes ajustar el parámetro `frequency` para cambiar el tono del zumbador. Los valores más altos crean tonos más agudos.
 :::
 
 ### Monitorización de la batería
 
-La reTerminal E Serie con pantalla de tinta electrónica puede monitorizar su nivel de batería a través de la entrada analógica en el GPIO1. Aquí se muestra cómo configurarlo:
+La reTerminal E Serie con pantalla de tinta electrónica puede monitorizar su nivel de batería a través de la entrada analógica en GPIO1. Aquí se muestra cómo configurarlo:
 
 ```yaml
 esphome:
@@ -274,12 +284,12 @@ Esta configuración:
 - Hace que tanto el voltaje bruto como el porcentaje estén disponibles en Home Assistant
 
 :::caution
-Para medir el nivel de batería, necesitas habilitar el pin **GPIO21**. De lo contrario, no es posible leer el valor de voltaje de la batería desde el GPIO1.
+Para medir el nivel de batería, necesitas habilitar el pin **GPIO21**. De lo contrario, no es posible leer el valor de voltaje de la batería desde GPIO1.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/46.png" style={{width:1000, height:'auto'}}/></div>
 
-## Demo 2. Tomar el panel de control de Home Assistant como captura de pantalla
+## Demo 2. Tomar el panel de control de Home Assistant como una captura de pantalla
 
 Este ejemplo muestra cómo capturar capturas de pantalla de tu panel de control de Home Assistant y mostrarlas en tu reTerminal E Serie.
 
@@ -293,7 +303,7 @@ Paso 1. Primero, necesitas instalar el complemento Puppet. Haz clic en el botón
 </a>
 </div>
 
-Paso 2. En la página del complemento, haz clic en el botón "INSTALL" y espera a que se complete la instalación.
+Paso 2. En la página del complemento, haz clic en el botón "INSTALL" y espera a que la instalación se complete.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/48.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -321,7 +331,7 @@ Paso 7. Guarda la configuración y reinicia el complemento Puppet.
 
 ### Comprender la API de captura de pantalla
 
-El complemento Puppet inicia un servidor en el puerto 10000 que genera capturas de pantalla de cualquier página de Home Assistant. Así es como se usa:
+El complemento Puppet inicia un servidor en el puerto 10000 que genera capturas de pantalla de cualquier página de Home Assistant. Aquí se explica cómo usarlo:
 
 #### Formato básico de la URL de captura de pantalla
 
@@ -329,9 +339,9 @@ El complemento Puppet inicia un servidor en el puerto 10000 que genera capturas 
 http://homeassistant.local:10000/lovelace/0?viewport=800x480
 ```
 
-Esta URL capturará una captura de pantalla de tu panel predeterminado a una resolución de 800x480 (perfecta para reTerminal E Serie).
+Esta URL capturará una captura de pantalla de tu panel predeterminado con una resolución de 800x480 (perfecta para reTerminal E Serie).
 
-#### Optimización para E-Paper
+#### Optimización para e-paper
 
 Para pantallas de papel electrónico, añade el parámetro `eink` para reducir la paleta de colores:
 
@@ -482,10 +492,10 @@ Cuando tu configuración se haya subido y esté ejecutándose correctamente, tu 
 ## Demo 3: Modo de suspensión profunda
 
 :::tip
-Si empiezas a usar el programa de suspensión profunda, te recomendamos encarecidamente que lo uses preferiblemente con el botón blanco del lado derecho y que configures el botón blanco del lado derecho como botón de activación de suspensión. De este modo, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda de que el dispositivo esté durmiendo y no puedas subir el programa a través del puerto serie.
+Si empiezas a usar el programa de Deep Sleep, te recomendamos encarecidamente que lo utilices preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como botón de activación de Sleep Wake. De este modo, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda de que el dispositivo esté durmiendo y no puedas subir el programa a través del puerto serie.
 :::
 
-Este ejemplo muestra cómo usar el modo de suspensión profunda para reducir significativamente el consumo de energía, haciendo que tu pantalla de papel electrónico reTerminal E Serie sea adecuada para aplicaciones alimentadas por batería.
+Este ejemplo muestra cómo utilizar el modo de suspensión profunda para reducir significativamente el consumo de energía, haciendo que tu pantalla de papel electrónico reTerminal E Serie sea adecuada para aplicaciones alimentadas por batería.
 
 Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
 
@@ -596,7 +606,7 @@ Esta configuración:
 - Actualiza la pantalla con el número actual de activaciones
 - Opcionalmente configura un botón para activar el dispositivo
 
-Cuando se esté ejecutando, verás que un contador se incrementa cada vez que el dispositivo se despierta de la suspensión:
+Cuando se esté ejecutando, verás un contador que se incrementa cada vez que el dispositivo se despierta de la suspensión:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/53.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -606,7 +616,7 @@ Cuando se esté ejecutando, verás que un contador se incrementa cada vez que el
 Para una mejor comprensión, te recomendamos encarecidamente que ejecutes primero los ejemplos básicos anteriores antes de probar este ejemplo completo.
 :::
 
-Este ejemplo avanzado combina múltiples funciones en una solución de panel completa para el reTerminal E Serie. Demuestra:
+Este ejemplo avanzado combina múltiples funciones en una solución de panel completa para la reTerminal E Serie. Demuestra:
 
 1. Visualización del clima y del ambiente interior
 2. Monitorización de la batería con iconos
@@ -1277,7 +1287,7 @@ Este ejemplo implementa:
 3. **Supervisión de la batería**: El nivel de batería se muestra con iconos apropiados que cambian según el nivel de carga
 4. **Inicialización de hardware**: La tarjeta SD y los circuitos de monitorización de la batería se habilitan al arrancar
 5. **Visualización de temperatura y humedad**: Usando el sensor SHT4x integrado a través de I²C
-6. **Iconos dinámicos**: Los iconos de Material Design cambian en función de los valores de los sensores
+6. **Iconos dinámicos**: Los iconos de Material Design cambian según los valores de los sensores
 
 ## Preguntas frecuentes
 
@@ -1318,7 +1328,7 @@ En este caso, tu dispositivo está desconectado o en modo de sueño profundo. As
 
 ### P4: ¿Por qué no hay registro serie por USB?
 
-La reTerminal E Serie utiliza un puente USB-a-UART CH340K en UART0. Mantén esta configuración de registro en tu YAML:
+La reTerminal E Serie utiliza un puente CH340K USB-a-UART en UART0. Mantén esta configuración de logger en tu YAML:
 
 ```yaml
 logger:
@@ -1327,7 +1337,7 @@ logger:
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

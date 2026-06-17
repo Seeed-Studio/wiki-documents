@@ -321,7 +321,18 @@ lerobot-teleoperate \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader
 ```
-
+<div class="video-container">
+    <iframe 
+        width="900" 
+        height="600" 
+        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0" 
+        scrolling="no" 
+        border="0" 
+        frameborder="no" 
+        framespacing="0" 
+        allowfullscreen="true">
+    </iframe>
+</div>
 
 ## 添加摄像头
 

@@ -18,11 +18,21 @@ import TabItem from '@theme/TabItem';
 
 # ESPHome Cookbook: RTC, SD Card & Microphone (reTerminal E Series)
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/251.jpeg" style={{width:1000, height:'auto'}}/></div><br />
+
 :::tip Prerequisites
 This page assumes you have already completed the [ESPHome display cookbook for reTerminal E Series](/reterminal_e10xx_with_esphome) and your device is online in Home Assistant. For buttons, buzzer, LED, battery monitoring, SHT4x, and deep sleep, see [ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power](/reterminal_e10xx_with_esphome_advanced).
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
 
 This cookbook continues the reTerminal E Series ESPHome examples with three onboard hardware blocks that are not covered in the display and I/O cookbooks:
 
@@ -1019,7 +1029,7 @@ When the firmware is running, the screen shows the RTC time, SD card state, and 
 
 The following image shows the expected result on reTerminal E1002. The same demo works on both reTerminal E1001 and E1002. The main difference is the display output: E1001 shows a monochrome result, while E1002 can show a color result.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/255.jpeg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/250.jpeg" style={{width:700, height:'auto'}}/></div>
 
 ## FAQ
 
@@ -1027,27 +1037,7 @@ The following image shows the expected result on reTerminal E1002. The same demo
 
 The device has not received valid time yet. Confirm that Wi-Fi is connected, the ESPHome API is connected to Home Assistant, and Home Assistant has the correct system time. After Home Assistant syncs time, ESPHome writes the time back to the PCF8563 RTC.
 
-### Q2: Why does the RTC time disappear after removing power?
-
-The PCF8563 needs a CR1220 coin cell to keep time when the main battery and USB power are removed. Install or replace the coin cell, boot the device again, and let Home Assistant sync the time once.
-
-### Q3: Why does Home Assistant always show the SD card as not detected?
-
-Check three things:
-
-- Confirm the card is fully inserted into the slot.
-- Make sure `bsp_sd_enable` on `GPIO16` is turned on during boot.
-- Keep `GPIO15` configured as `INPUT_PULLUP` with `inverted: true`, because the detect signal is active LOW.
-
-### Q4: Can ESPHome read and write files on the microSD card?
-
-This page only uses ESPHome to enable the SD power rail and read the card-detect pin. General file operations such as listing files, reading images, creating folders, or saving audio files are better handled by the Arduino SD card examples.
-
-### Q5: Can ESPHome record microphone audio directly to the SD card?
-
-Not with the simple YAML shown in this page. The microphone demo initializes the onboard PDM microphone hardware. If your goal is to record WAV files to the SD card, use the Arduino microphone and SD examples instead.
-
-### Q6: Why is there no serial log over USB?
+### Q2: Why is there no serial log over USB?
 
 The reTerminal E Series uses a CH340K USB-to-UART bridge on UART0. Keep this logger setting in your YAML:
 

@@ -14,6 +14,16 @@ url: https://wiki.seeedstudio.com/reterminal_e10xx_main_page/
 ---
 # reTerminal E Series ePaper Display Overview
 
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
 ## Introduction
 
 The reTerminal E Series is Seeed Studio's family of ESP32-S3-powered ePaper display terminals, purpose-built for **always-on, low-power information display**. The lineup spans four models — **E1001, E1002, E1003, E1004** — covering monochrome and full-color panels from 7.3" to 13.3", with options for touch interaction and multi-month battery life. They all share the same software stack (SenseCraft HMI, Home Assistant, Arduino, and more), so you only have to learn it once and then pick the form-factor that fits your scenario.
@@ -225,8 +235,8 @@ Use the quick guide below to narrow down to one model. If multiple rows apply, t
 		</tr>
 		<tr>
 			<td>Want a TRMNL E-Ink dashboard</td>
-			<td align="center"><strong>E1001 / E1002</strong></td>
-			<td>Both are officially supported. E1002 currently runs in monochrome mode under TRMNL.</td>
+			<td align="center"><strong>E1001 / E1002 / E1003</strong></td>
+			<td>All three are officially supported. E1002 currently runs in monochrome mode under TRMNL.</td>
 		</tr>
 		<tr>
 			<td>Battery life is the single most important factor</td>
