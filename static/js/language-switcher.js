@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-08 16:00:14 (北京时间)
-// 多语言页面: 2316 个
+// 生成时间: 2026-06-16 16:21:21 (北京时间)
+// 多语言页面: 2337 个
 
 (function() {
   'use strict';
@@ -1108,6 +1108,13 @@
     "ja",
     "pt"
   ],
+  "/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/getting_started_with_jetson_claw_on_orin_nano_nx_8gb": [
     "cn",
     "en",
@@ -1137,6 +1144,20 @@
     "pt"
   ],
   "/ai_robotics_reachy_fleet_dance": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_graspnet_visual_grasping": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/voice_control_rebot_arm": [
     "cn",
     "en",
     "es",
@@ -1354,6 +1375,13 @@
     "pt"
   ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack72_deep_dive": [
     "cn",
     "en",
     "es",
@@ -3313,6 +3341,13 @@
     "ja",
     "pt"
   ],
+  "/ai_voice_assitant_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/ai_parking_slot_monitoring_demo_with_recamera": [
     "cn",
     "en",
@@ -3362,7 +3397,21 @@
     "ja",
     "pt"
   ],
+  "/recamera_qrcode_udp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_source_localization_of_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rtsp_to_webrtc_with_recamera": [
     "cn",
     "en",
     "es",
@@ -3398,6 +3447,13 @@
     "pt"
   ],
   "/recamera_network_connection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wifi_halow_getting_started": [
     "cn",
     "en",
     "es",
@@ -3993,6 +4049,20 @@
     "pt"
   ],
   "/lora-e5_relay": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio-s3_wireless_module_command_list": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio-s3_wireless_module_introduction": [
     "cn",
     "en",
     "es",
@@ -5127,6 +5197,13 @@
     "pt"
   ],
   "/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bulk_configuration_chirpstack": [
     "cn",
     "en",
     "es",
@@ -8115,6 +8192,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_esphome_rtc_sd_microphone": [
     "cn",
     "en",
     "es",
@@ -12265,6 +12349,69 @@
     "pt"
   ],
   "/xiao_nrf54l15_zigbee": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_epaper_and_sdcard": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_bluetooth_lowpower": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_matter": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_nfc": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_onboard": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_low_power": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_ncs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_pin_multiplexing": [
     "cn",
     "en",
     "es",

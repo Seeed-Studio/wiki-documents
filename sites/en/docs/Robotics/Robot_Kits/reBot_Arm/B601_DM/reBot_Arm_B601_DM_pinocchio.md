@@ -396,6 +396,10 @@ uv run python example/9_gravity_compensation.py
 - Real-time display of expected torque for each joint (N·m)
 - Press `Ctrl+C` to stop and disconnect
 
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/nqaoqjiHQE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ---
 
 ## FAQ

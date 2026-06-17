@@ -62,19 +62,20 @@ Select the last one and click the date link to download:
 
 - **Step 2.** Download **Raspberry Pi Imager** software from **[here](https://www.raspberrypi.org/software/)**
 
-- **Step 3.** Open Raspberry Pi Imager software
+- **Step 3.** Open Raspberry Pi Imager software,Under Device, choose "Raspberry Pi 5" , and click "Next"
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/Raspberry_Pi_device.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 4.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+- **Step 4.** Scroll down and click **Use custom** 
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/use_custom.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 5.** Click **CHOOSE OS** and Select the downloaded image file.
+- **Step 5.** then choose the previously downloaded mirror file.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_5.png" alt="pir" width="800" height="auto"/></p>
 
-Continue burning the image until it succeeds.
+- **Step 6.** 
+You can then begin flashing the image. Wait for the process to finish successfully.
 
 Unplug the USB-C port, press the boot button again, and power on/off. If you can log in to the system normally, the image has been burned successfully and can be used normally.
 

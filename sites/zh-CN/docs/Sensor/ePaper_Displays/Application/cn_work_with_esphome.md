@@ -1,6 +1,6 @@
 ---
-description: 使用 ESPHome 和 Home Assistant 驱动任意兼容的 Seeed ePaper 产品的参考指南——烧录路径、通用 YAML 骨架，以及各产品 cookbook 的查找位置。
-title: 使用 ESPHome
+description: 使用 ESPHome 和 Home Assistant 驱动任意兼容 Seeed ePaper 产品的参考指南——YAML 工作流、通用骨架，以及各产品 cookbook 的查找位置。
+title: 使用 ESPHome 工作
 keywords:
   - ePaper 显示屏
   - ESPHome
@@ -17,26 +17,33 @@ last_update:
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/cn/epaper_work_with_esphome/
-updatedAt: '2026-04-28'
+updatedAt: '2026-06-15'
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+# 使用 ESPHome 工作
 
-# 使用 ESPHome
+:::tip 在不搭建开发环境的情况下试用演示
+如果你想在搭建开发环境之前，快速预览项目效果或试用基础演示固件，请打开 **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**。你可以选择受支持的 reTerminal E 系列设备，并直接通过浏览器烧录演示固件。
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
 
 本页是通过 [ESPHome](https://esphome.io/) 驱动任意兼容 Seeed ePaper 产品并将其集成到 [Home Assistant](https://www.home-assistant.io/) 中的**参考手册**。它涵盖了所有硬件之间相同的部分：
 
-1. 为什么你会选择用 ESPHome 来驱动 ePaper 显示屏。
-2. 两种烧录路径：**ESPHome Web Installer**（零配置、基于浏览器）和 **ESPHome CLI / HA 插件**（完整 YAML 控制）。
-3. 通用 YAML 骨架——`wifi`、`api`、`ota`、`display`——每个产品都在此基础上结合自己的引脚映射进行特化。
-4. 每个产品的 cookbook 在哪里（外设、硬件相关 lambda、仪表盘配方）。
+1. 为什么你会选择使用 ESPHome 来驱动 ePaper 显示屏。
+2. 如何使用 cookbook 中的 YAML 示例，将其调整为满足你的需求，并从 ESPHome 仪表板进行烧录。
+3. 通用的 YAML 骨架——`wifi`、`api`、`ota`、`display`——每个产品都在此基础上结合自己的引脚映射进行专门化。
+4. 每个产品的 cookbook 在哪里（外设、硬件相关的 lambda、仪表板配方）。
 
-如果你想要一个**从“烧录 → 连接 → 第一个仪表盘”的端到端演练**，可以直接跳到下面你所用硬件的 cookbook；这些页面会复用本参考中的样板内容，并添加产品特定示例。
+如果你想要一个**从“烧录 → 连接 → 第一个仪表板”的端到端演练**，可以直接跳转到下方与你硬件对应的 cookbook；这些页面复用本参考中的样板内容，并补充产品特定示例。
 
 ## 兼容硬件
 
-在 [主汇总页面](/cn/seeed_epaper_displays) 上，所有 **ESPHome** 列被勾选的 Seeed ePaper 产品都可以按本流程操作：
+在 [主汇总页面](/cn/seeed_epaper_displays) 上，所有 **ESPHome** 列被勾选的 Seeed ePaper 产品都可以使用本工作流：
 
 <div class="table-center">
   <table align="center">
@@ -48,182 +55,229 @@ import TabItem from '@theme/TabItem';
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
       <td>XIAO ESP32-S3</td>
-      <td><a href="/cn/reterminal_e10xx_with_esphome">基础</a> · <a href="/cn/reterminal_e10xx_with_esphome_advanced">进阶（外设）</a></td>
+      <td>
+        <a href="https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome/">显示基础、HA 集成与绘制</a><br/>
+        <a href="https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced/">按键、蜂鸣器、LED、电池、SHT4x 与深度睡眠</a><br/>
+        <a href="https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_rtc_sd_microphone/">RTC、SD 卡与麦克风</a>
+      </td>
     </tr>
     <tr>
       <td><strong>EE04 driver board</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td><a href="/cn/EE04_with_esphome_advanced">EE04 ESPHome cookbook</a></td>
+      <td><a href="https://wiki.seeedstudio.com/cn/EE04_with_esphome_advanced/">EE04 ESPHome cookbook</a></td>
     </tr>
     <tr>
       <td><strong>XIAO 7.5" ePaper Panel</strong></td>
       <td>XIAO ESP32-C3</td>
-      <td><a href="/cn/xiao_075inch_epaper_panel_esphome">XIAO Panel ESPHome cookbook</a></td>
+      <td><a href="https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_esphome/">XIAO Panel ESPHome cookbook</a></td>
     </tr>
     <tr>
       <td><strong>TRMNL 7.5" (OG) DIY Kit</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td><a href="/cn/ogdiy_kit_works_with_esphome">TRMNL DIY Kit ESPHome cookbook</a></td>
+      <td><a href="https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_esphome/">TRMNL DIY Kit ESPHome cookbook</a></td>
     </tr>
   </table>
 </div>
 
-:::tip
-在找 **TRMNL 云端仪表盘**（无需 YAML、基于插件）吗？请查看 [使用 TRMNL](/cn/reterminal_e10xx_trmnl)。在找 **Seeed 的零代码可视化 HMI** 吗？请查看 [使用 SenseCraft HMI](/cn/EE04_with_hmi)。
-:::
 
 ## 为什么在 ePaper 上使用 ESPHome？
 
-- **能效高**——ePaper 只有在刷新屏幕时才耗电，因此（ESP32 + ESPHome 深度睡眠 + ePaper）的组合可以在电池供电下运行数周甚至数月。
-- **日光可读**——与 LCD 不同，显示屏在阳光下也清晰可见；非常适合作为壁挂式 Home Assistant 面板。
-- **原生 HA 公民**——一旦设备出现在 Home Assistant 中，每个实体（空调、日历、传感器、人员、天气）都只差一个 Jinja 模板就能上墙显示。
-- **本地优先**——无云端、无厂商锁定。一切都在你的局域网中运行。
+- **能效高** —— ePaper 只有在屏幕更新时才会消耗电能，因此组合（ESP32 + ESPHome 深度睡眠 + ePaper）可以在电池供电下运行数周甚至数月。
+- **日光可读** —— 与 LCD 不同，显示屏在阳光下也清晰可见；非常适合作为壁挂式 Home Assistant 面板。
+- **原生 HA 公民** —— 一旦设备出现在 Home Assistant 中，每个实体（空调、日历、传感器、人员、天气）都只差一个 Jinja 模板就能上墙显示。
+- **本地优先** —— 无需云端，无厂商锁定。一切都在你的局域网中运行。
 
-## 步骤 1：选择烧录路径
+## 步骤 1：生成 ESPHome YAML 并烧录固件
 
-ESPHome 固件可以通过两种方式写入设备。正确的选择取决于你是想从零开始写 YAML，还是只想快速获得一个可用的仪表盘。
+最简单的入门方式是使用 **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**。该 Hub 可以根据你的设备和功能选择生成 ESPHome YAML 文件，因此你无需手动拼装第一份配置。
 
-<Tabs groupId="esphome-flash-path">
-<TabItem value="web-installer" label="路径 A：ESPHome Web Installer（推荐首次使用者）" default>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/257.png" style={{width:1000, height:'auto'}}/></div>
 
-Seeed 会托管一个预构建的固件 ZIP，并通过浏览器中的 WebSerial 将其烧录到你的设备。
+推荐工作流：
 
-1. 使用 USB-C 线将设备连接到电脑。
-2. 在 **Chrome** 或 **Edge** 中打开对应产品的烧录页面（从该产品的 cookbook 中链接）。
-3. 点击 **Connect**，选择串口，然后点击 **Install**。
-4. 烧录完成后，设备会启动到一个 Wi-Fi 强制门户（`ESPHome-XXXX`）。连接后设置 Wi-Fi，设备就会通过 ESPHome 集成出现在 Home Assistant 中。
+1. 在桌面版 Chrome 或 Edge 中打开 [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)。
+2. 选择 **ESPHome** 作为平台。
+3. 选择你的设备。
+4. 在设置步骤中，选择你想启用的功能，例如显示屏、按键、电池、传感器、RTC、SD 卡、麦克风或深度睡眠（如果你的设备支持）。
+5. 让页面生成匹配的 ESPHome YAML。
+6. 使用 **Copy to clipboard** 或 **Download file** 导出生成的 YAML。
+7. 将 YAML 粘贴或导入到你的 ESPHome 仪表板中。
+8. 将手动编辑的精力集中在对你的项目最重要的部分：ePaper 显示内容、Home Assistant 实体、布局、字体和刷新行为。
 
-此路径**无需编辑 YAML**。如果之后想开始自定义，你可以在 ESPHome 仪表盘中“接管”该设备。
+:::tip
+Firmware Hub 是新手推荐的起点，因为它处理了大量与设备相关的 YAML 结构。当你想理解生成的配置、组合高级功能，或从更小的示例构建自定义布局时，再使用各产品的 cookbook。
+:::
 
-</TabItem>
-<TabItem value="yaml-cli" label="路径 B：YAML + ESPHome 仪表盘（完全控制）">
+运行 ESPHome 仪表板的方式可以是：
 
-若想对固件进行完全控制（自定义显示布局、自定义传感器、多页面仪表盘、深度睡眠调优、OTA 更新），请以以下任一方式运行 **ESPHome 仪表盘**：
+- 作为 Home Assistant 插件（如果你已经运行 HA OS / HA Supervised，推荐此方式），或
+- 作为独立 Python CLI（`pip install esphome` 然后 `esphome dashboard config/`）。
 
-- 作为 Home Assistant 的一个 **插件（Add-on）**（如果你已经运行 HA OS / HA Supervised，推荐此方式），或
-- 作为独立的 **Python CLI**（`pip install esphome` 然后 `esphome dashboard config/`）。
+手动 cookbook 工作流：
 
-工作流程：
+1. 打开与你硬件对应的 cookbook（见上表），并复制你需要的 YAML 示例。
+2. 在 ESPHome 仪表板中点击 + New device，输入名称，并选择 cookbook 中列出的 ESP 变体（ESP32-S3、ESP32-C3 等）。
+3. 用你的配置替换生成的起始文件。只有在你需要在同一设备上启用多个功能时，才组合多个 cookbook 片段。
+4. 点击 Install → Plug into this computer 进行首次 USB 烧录。在 `wifi`、`api` 和 `ota` 设置完成后，后续更新可以通过 Wi-Fi 进行。
+5. 当设备在线后，它会通过 ESPHome 集成出现在 Home Assistant 中。
 
-1. 在 ESPHome 仪表盘中，点击 **+ New device** → 输入名称 → 选择正确的 ESP 变体（ESP32-S3 / ESP32-C3 / 等——你的产品 cookbook 会告诉你选哪一个）。
-2. 仪表盘会生成一个初始的 `<device-name>.yaml`。将其主体替换为你所用产品 cookbook 中的 YAML（形状见下方步骤 2）。
-3. 点击 **Install** → 首次烧录时选择 **Plug into the computer running ESPHome**；之后的烧录将通过 OTA 无线完成。
-4. 设备会自动加入 Home Assistant 中的 ESPHome 集成。
+## 步骤 2：理解生成的 YAML 结构
 
-</TabItem>
-</Tabs>
+每个 Seeed ePaper 的 ESPHome 配置都遵循相同的基本结构，但硬件数值并非通用。请使用 Firmware Hub 或你产品的 cookbook 作为关于板卡类型、总线引脚、电源使能引脚、显示平台、显示型号以及板载外设的权威来源。
 
-## 步骤 2：通用 YAML 骨架
-
-每个 Seeed ePaper 的 ESPHome 配置都遵循相同的结构。你所用产品的 cookbook 会填入**产品特定部分**（替换项、引脚映射、屏幕型号）——但整体形状始终是：
+下面的代码块是一个**结构指南**，而不是可直接烧录的配置。它展示了在你生成或复制产品特定的 YAML 文件后，各类设置通常会出现的位置：
 
 ```yaml
 substitutions:
   device_name: my-epaper
+  friendly_name: My ePaper Display
 
 esphome:
   name: ${device_name}
-  friendly_name: ${device_name}
+  friendly_name: ${friendly_name}
+  # Optional. Some products enable power rails or read sensors during boot.
+  # Keep this section from the generated YAML if your device needs it.
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: <power_enable_output_id>
+      - delay: 200ms
 
-# Pick the right platform for your hardware.
-# - reTerminal E Series & EE04 & TRMNL Kit: esp32 with framework: arduino (S3 variant)
-# - XIAO 7.5" Panel: esp32 with framework: arduino (C3 variant)
+# Board and framework come from the Firmware Hub or your cookbook.
 esp32:
-  board: seeed_xiao_esp32s3   # see your cookbook
+  board: <board_from_generated_yaml>
   framework:
     type: arduino
 
 logger:
+  # Some ESP32-S3 products use a USB-to-UART bridge.
+  # Keep hardware_uart from the generated YAML if it is present.
+  # hardware_uart: UART0
+
 api:
   encryption:
     key: !secret api_key
+
 ota:
   - platform: esphome
     password: !secret ota_password
+
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   ap:
     ssid: "${device_name} Fallback"
 
-# SPI bus that drives the ePaper - exact pins come from the cookbook
-spi:
-  clk_pin: GPIO13
-  mosi_pin: GPIO11
+captive_portal:
 
-# The display block - the model + pin map are the part that's
-# different per product. The cookbook gives you the right values.
-display:
-  - platform: waveshare_epaper
-    id: epaper
-    cs_pin: GPIO9
-    dc_pin: GPIO15
-    busy_pin: GPIO12
-    reset_pin: GPIO14
-    model: 7.50inv2
-    update_interval: never   # we'll trigger refreshes from automations
-    lambda: |-
-      it.print(0, 0, id(roboto_24), "Hello, ePaper!");
+# Buses are hardware-specific. Do not reuse pins from another product.
+spi:
+  clk_pin: <spi_clk_from_generated_yaml>
+  mosi_pin: <spi_mosi_from_generated_yaml>
+  miso_pin: <spi_miso_if_required>
+
+i2c:
+  scl: <i2c_scl_if_required>
+  sda: <i2c_sda_if_required>
+
+i2s_audio:
+  # Only needed when your generated YAML enables a microphone.
+  i2s_lrclk_pin: <i2s_clock_if_required>
 
 font:
-  - file: "fonts/Roboto-Regular.ttf"
-    id: roboto_24
+  - file: "gfonts://Inter@700"
+    id: font_medium
     size: 24
+
+# Outputs are often used for LEDs, buzzers, or power-enable circuits.
+output:
+  - platform: gpio
+    id: <output_id_from_generated_yaml>
+    pin: <gpio_from_generated_yaml>
+
+light:
+  - platform: binary
+    name: "Onboard LED"
+    output: <output_id_from_generated_yaml>
+
+time:
+  - platform: homeassistant
+    id: ha_time
+
+sensor:
+  # Add Home Assistant, onboard, or template sensors here.
+  - platform: homeassistant
+    id: outdoor_temperature
+    entity_id: sensor.outdoor_temperature
+
+binary_sensor:
+  # Add buttons or status inputs here if your hardware provides them.
+  - platform: gpio
+    id: button_1
+    pin: <button_gpio_from_generated_yaml>
+
+display:
+  - platform: <display_platform_from_generated_yaml>
+    id: epaper_display
+    # Keep the model and pin map from the generated YAML or cookbook.
+    model: <display_model_from_generated_yaml>
+    cs_pin: <display_cs_from_generated_yaml>
+    dc_pin: <display_dc_from_generated_yaml>
+    reset_pin: <display_reset_from_generated_yaml>
+    busy_pin: <display_busy_from_generated_yaml>
+    update_interval: never
+    lambda: |-
+      it.print(0, 0, id(font_medium), "Hello, ePaper!");
 ```
 
-哪些是产品特定内容（并写在各自的 cookbook 中）：
+请保留来自 Firmware Hub 或 cookbook 的以下数值：
 
-- `esp32.board` —— E1001/E1002/EE04/TRMNL Kit 使用 `seeed_xiao_esp32s3`；XIAO 7.5" Panel 使用 `esp32-c3-devkitm-1`；等等。
-- `spi` 和 `display` 的引脚映射。
-- `model` 的取值（`7.50in-bwr`、`13.3in-spectra6` 等）。
-- 任意板载外设（按键 / 蜂鸣器 / 电池 / SHT4x）——在对应 cookbook 的 **进阶** 章节中介绍。
+- `esp32.board` 以及任何日志设置，例如 `hardware_uart`。
+- `spi`、`i2c` 和 `i2s_audio` 引脚。
+- 用于显示屏、电池测量、SD 卡、麦克风或其他板载电路的电源使能 `output` 模块。
+- 按键、电池、RTC、SHT4x、SD 卡、麦克风、蜂鸣器和 LED 的定义。
+- `display.platform`、`model`、引脚映射、复位行为、busy 引脚行为以及更新间隔。
+
+你通常会自定义的部分包括：
+
+- `substitutions`、设备名称和友好名称。
+- `wifi`、`api` 和 `ota` 的密钥。
+- `font` 的选择和字号。
+- 提供你想绘制数据的 Home Assistant `sensor`、`binary_sensor`、`text_sensor` 或 `time` 实体。
+- `display.lambda` 块，用于设计实际的电子纸屏幕布局。
+- 刷新行为，例如 `update_interval`、按键触发刷新或深度睡眠定时。
 
 ## 步骤 3：连接到 Home Assistant
 
-当固件启动并加入你的 Wi-Fi 后，Home Assistant 会自动发现该设备：
+固件启动并加入你的 Wi-Fi 后，Home Assistant 会自动发现该设备：
 
 1. **Settings → Devices & services**
-2. ESPHome 集成会显示一个该设备的 “Discovered” 卡片。
+2. ESPHome 集成会为你的设备显示一个 “Discovered” 卡片。
 3. 点击 **Configure**，粘贴 API 加密密钥（来自 `secrets.yaml`），然后提交。
-4. 设备及其所有实体（sensors、binary_sensors、display）现在都可以在 HA 中使用了。
+4. 设备及其所有实体（sensors、binary_sensors、display）现在都可以在 HA 中使用。
 
-你现在可以把这些实体拖到一个 Lovelace 仪表盘中，或者——在 ePaper 上更有趣的做法——使用 `display.lambda` 块，通过 [`homeassistant`](https://esphome.io/components/homeassistant.html) 组件将任意 HA 实体直接渲染到屏幕上。
+现在你可以将这些实体拖入 Lovelace 仪表盘，或者——在电子纸上更有趣的方式——使用 `display.lambda` 块，通过 [`homeassistant`](https://esphome.io/components/homeassistant.html) 组件将任意 HA 实体直接渲染到屏幕上。
 
-## 接下来去哪——Cookbooks
+## 接下来去哪儿 —— 菜谱（Cookbooks）
 
-本页有意只停留在样板层面。产品特定的 YAML、外设示例以及端到端配方都写在各产品的 cookbook 中：
+本页有意只停留在样板配置。与具体产品相关的 YAML、外设示例和端到端配方都在各产品的菜谱中：
 
-- **[reTerminal E 系列 — 基础 ESPHome](/cn/reterminal_e10xx_with_esphome)** —— 第一个仪表盘、Wi-Fi 设置、适用于 E1001/E1002/E1003/E1004 的预构建固件 ZIP。
-- **[reTerminal E 系列 — 进阶 ESPHome](/cn/reterminal_e10xx_with_esphome_advanced)** —— 按键、蜂鸣器、电池监测、SHT4x 传感器、深度睡眠、多页面仪表盘。
-- **[EE04 driver board — ESPHome](/cn/EE04_with_esphome_advanced)** —— 在 XIAO ESP32-S3 + EE04 + 你选择的 ePaper 屏幕上实现完整的 Home Assistant 集成。
-- **[XIAO 7.5" ePaper Panel — ESPHome](/cn/xiao_075inch_epaper_panel_esphome)** —— 精简的 ESP32-C3 仪表盘。
-- **[TRMNL 7.5" DIY Kit — ESPHome](/cn/ogdiy_kit_works_with_esphome)** —— 使用该套件硬件搭配 ESPHome，而非 TRMNL 云平台。
+- **[reTerminal E 系列 — ESPHome 显示](/cn/reterminal_e10xx_with_esphome)** — 适用于 E1001/E1002/E1003/E1004 的第一个仪表盘、Wi-Fi 设置和电子纸绘图示例。
+- **[reTerminal E 系列 — ESPHome I/O、电池与电源](/cn/reterminal_e10xx_with_esphome_advanced)** — 按钮、蜂鸣器、板载 LED、电池监测、SHT4x 传感器、深度睡眠和多页面仪表盘。
+- **[reTerminal E1001 / E1002 — ESPHome RTC、SD 与麦克风](/cn/reterminal_e10xx_with_esphome_rtc_sd_microphone)** — PCF8563 RTC 时间同步、microSD 卡电源/检测引脚以及板载 PDM 麦克风配置。
+- **[EE04 驱动板 — ESPHome](/cn/EE04_with_esphome_advanced)** — 在 XIAO ESP32-S3 + EE04 + 你选择的电子纸屏幕上实现完整的 Home Assistant 集成。
+- **[XIAO 7.5" 电子纸面板 — ESPHome](/cn/xiao_075inch_epaper_panel_esphome)** — 精简的 ESP32-C3 仪表盘。
+- **[TRMNL 7.5" DIY 套件 — ESPHome](/cn/ogdiy_kit_works_with_esphome)** — 使用套件硬件搭配 ESPHome，而非 TRMNL 云平台。
 
-当有新的 ePaper 产品发布时，相应的 cookbook 会被添加到各产品的文件夹下；本主页面也会更新链接。
+当有新的电子纸产品发售时，相应的菜谱会添加到各产品的文件夹下；本主页面也会更新链接到它。
 
 ## 常见问题
 
-### 烧录后显示屏保持空白
 
-- 确认 `display.platform` 和 `model` 字符串与你的屏幕匹配——错误的型号会在刷新时静默保持空白。
-- 检查 `busy_pin` 和 `reset_pin` 是否正确连接；悬空的 busy 线会阻塞所有刷新。
-- 对于彩色 ePaper（`spectra6`、`7-color`、`bwr`），首次刷新可能需要 25–45 秒；在进一步排查前请耐心等待。
-
-### 设备没有出现在 Home Assistant 中
-
-- 确认设备已加入 Wi-Fi（在 ESPHome 仪表盘日志中查看）。
-- 确保 YAML 中存在 `api:`，且 HA 中的加密密钥与 `secrets.yaml` 中一致。
-- 手动添加集成：**Settings → Devices & services → Add Integration → ESPHome**，然后输入设备的 IP。
-
-### 电池耗电比预期更快
-
-只有当 SoC 的其余部分也处于睡眠状态时，ePaper 才能真正省电。添加一个 `deep_sleep` 块（参见你所用产品的进阶 cookbook），并降低 `update_interval`。
-
-若要对某个特定产品进行更深入的故障排查，请查看该硬件的 cookbook。
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品时体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
