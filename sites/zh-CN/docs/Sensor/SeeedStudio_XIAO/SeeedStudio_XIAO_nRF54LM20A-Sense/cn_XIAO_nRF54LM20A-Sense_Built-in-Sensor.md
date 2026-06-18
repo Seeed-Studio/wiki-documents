@@ -1,5 +1,5 @@
 ---
-title: XIAO nRF54LM20A Sense 板载传感器的使用
+title: XIAO nRF54LM20A Sense 板载传感器使用方法
 description: ''
 keywords:
   - xiao
@@ -16,7 +16,7 @@ updatedAt: '2026-05-19'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/
 ---
 
-# XIAO nRF54LM20A Sense 板载传感器的使用
+# XIAO nRF54LM20A Sense 板载传感器使用方法
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png" style={{width:400, height:'auto'}}/></div>
 
@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/
   </table>
 </div>
 
-XIAO nRF54LM20A Sense 配备了丰富的板载传感器，以支持多场景应用。它集成了用于姿态识别的 LSM6DS3TR-C 六轴传感器，以及支持 PDM 数字输出和全向拾音的 MSM261DGT006 数字 MEMS 麦克风，适用于智能语音场景。本文将介绍基于 XIAO nRF54LM20A 丰富板载外设的开发与使用方法。
+XIAO nRF54LM20A Sense 配备了丰富的板载传感器，可支持多场景应用。它集成了用于姿态识别的 LSM6DS3TR-C 六轴传感器，以及支持 PDM 数字输出和全向拾音的 MSM261DGT006 数字 MEMS 麦克风，适用于智能语音场景。本文将介绍基于 XIAO nRF54LM20A 丰富板载外设的开发与使用方法。
 
 :::tip
 
@@ -80,10 +80,10 @@ XIAO nRF54LM20A Sense 配备了丰富的板载传感器，以支持多场景应�
 
 ## IMU
 
-LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的六轴传感器，属于意法半导体推出的 iNEMO 惯性测量单元（IMU）。在 XIAO nRF54LM20A Sense 上，该传感器支持中断触发数据输出。它具有 ±2/±4/±8/±16 g 的加速度全量程范围和 ±125/±250/±500/±1000/±2000 dps 的角速度范围，并支持持续低功耗模式，适用于多种运动检测场景。板载芯片通过 I2C 协议与其通信以获取数据。
+LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的六轴传感器，属于意法半导体推出的 iNEMO 惯性测量单元（IMU）。在 XIAO nRF54LM20A Sense 上，该传感器支持中断触发数据输出。其加速度全量程范围为 ±2/±4/±8/±16 g，角速度范围为 ±125/±250/±500/±1000/±2000 dps，并支持持续低功耗模式，适用于多种运动检测场景。板载芯片通过 I2C 协议与其通信以获取数据。
 :::tip
 
-- 如需了解更多关于 LSM6DS3TR-C 的信息，请访问：[Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) 和 [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
+- 关于 LSM6DS3TR-C 的更多信息，请访问：[Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) 和 [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
 
 :::
 
@@ -133,7 +133,7 @@ LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的�
 };
 ```
 
-2. 修改 prj.conf 文件以启用 I2C 和中断触发配置。
+2. 修改 prj.conf 文件，开启 I2C 和中断触发相关配置。
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -698,12 +698,12 @@ CONFIG_NEWLIB_LIBC=y
 
 ### 结果
 
-- 程序从编译和烧录的时间开始计数。打开串口工具观察运行效果，所有预期功能均已实现。
+- 程序从编译和烧录的时间开始计时。打开串口工具观察运行效果，所有预期功能均已实现。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-## MIC
+## MIC 
 
 XIAO nRF54LM20A Sense 配备 MSM261DGT006 数字 MEMS 麦克风用于语音输入。它通过 PDM 接口直接连接，无需 ADC。适用于可穿戴设备、智能设备、语音识别、音频录制以及其他需要声学感知功能的应用场景。
 
@@ -722,7 +722,7 @@ XIAO nRF54LM20A Sense 配备 MSM261DGT006 数字 MEMS 麦克风用于语音输�
 - 在 Windows 上运行接收脚本，将音频文件保存到桌面。
 - 传输完成后 RGB-G LED 熄灭。
 
-1. 将 <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> 中的程序复制到 `main.c` 中。
+1. 将 <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> 程序复制到 `main.c` 中。
 
 2. 修改设备树文件 `app.overlay` 以绑定 BLE 节点。
 
@@ -778,9 +778,14 @@ dmic_dev: &pdm20 {
 		};
 	};
 };
+
+/* External 8MB SPI NOR Flash for audio storage */
+&py25q64 {
+	status = "okay";
+};
 ```
 
-2. 修改 shturl.c 文件以启用蓝牙和麦克风的相关配置，并将蓝牙设备名称设置为 **XIAO MIC**。
+2. 修改 prj.conf 文件以启用蓝牙和麦克风相关配置，并将蓝牙设备名称设置为 **XIAO MIC**。
 
 ```prj
 # Audio / DMIC
@@ -813,6 +818,10 @@ CONFIG_BT_DEVICE_APPEARANCE=833
 CONFIG_BT_MAX_CONN=1
 CONFIG_BT_MAX_PAIRED=1
 
+# BLE log level: ERR only.  Fixed 30 ms application pacing prevents
+# buffer exhaustion; this just silences WRN/INF noise from the stack.
+CONFIG_BT_LOG_LEVEL_ERR=y
+
 # Disable auto-procedures to avoid LL Procedure Collision (reason 35)
 # on nRF54L with Zephyr native BLE controller
 CONFIG_BT_AUTO_PHY_UPDATE=n
@@ -822,26 +831,36 @@ CONFIG_BT_CTLR_CONN_PARAM_REQ=n
 # Disable data length auto-update (can also cause LL races)
 CONFIG_BT_DATA_LEN_UPDATE=n
 
-# BLE buffer tuning for NUS notifications (244-byte chunks at MTU 247)
+# BLE buffer tuning for high-throughput NUS notifications
+# nRF54LM20A has 1.5MB RAM, generous buffer allocation
 CONFIG_BT_BUF_ACL_TX_SIZE=251
-CONFIG_BT_BUF_ACL_TX_COUNT=10
-CONFIG_BT_BUF_EVT_RX_COUNT=15
+CONFIG_BT_BUF_ACL_TX_COUNT=32
+CONFIG_BT_BUF_EVT_RX_COUNT=33
 CONFIG_BT_BUF_ACL_RX_SIZE=251
 CONFIG_BT_L2CAP_TX_MTU=247
-CONFIG_BT_L2CAP_TX_BUF_COUNT=10
-CONFIG_BT_L2CAP_TX_FRAG_COUNT=6
-CONFIG_BT_ATT_TX_COUNT=10
-CONFIG_BT_CONN_TX_MAX=10
+CONFIG_BT_L2CAP_TX_BUF_COUNT=24
+CONFIG_BT_L2CAP_TX_FRAG_COUNT=12
+CONFIG_BT_ATT_TX_COUNT=24
+CONFIG_BT_CONN_TX_MAX=32
+
+# Note: BT_CTLR_DATA_LENGTH is selected indirectly (e.g. by BT_DATA_LEN_UPDATE).
+# It cannot be set directly, so BT_CTLR_DATA_LENGTH_MAX is also omitted.
 
 # BLE NUS
 CONFIG_BT_ZEPHYR_NUS=y
 CONFIG_BT_ZEPHYR_NUS_DEFAULT_INSTANCE=y
 
 # Memory
-CONFIG_HEAP_MEM_POOL_SIZE=8192
+CONFIG_HEAP_MEM_POOL_SIZE=16384
 
-# System workqueue stack
-CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
+# System workqueue stack (increased for BLE work items)
+CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=4096
+
+# External SPI NOR Flash (8MB PY25Q64HA)
+CONFIG_SPI=y
+CONFIG_SPI_NOR=y
+CONFIG_FLASH=y
+CONFIG_FLASH_PAGE_LAYOUT=y
 
 # Assert level
 CONFIG_ASSERT=y
@@ -1024,7 +1043,7 @@ BLE UUID 已在 Python 程序中配置好，因此运行脚本后会自动连接
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- 打开串口，它会打印日志。请将波特率设置为 921600。
+- 打开串口，会打印日志。请将波特率设置为 921600。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -1036,7 +1055,7 @@ BLE UUID 已在 Python 程序中配置好，因此运行脚本后会自动连接
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们为您提供多种支持方式，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供多种支持方式，以确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

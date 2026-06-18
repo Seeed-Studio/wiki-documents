@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_onboard/
   </table>
 </div>
 
-XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーションをサポートする豊富なオンボードセンサーが搭載されています。姿勢認識用の 6 軸センサー LSM6DS3TR-C、PDM デジタル出力と全方向集音に対応し、インテリジェントボイスシナリオに適したデジタル MEMS マイク MSM261DGT006 を備えています。本記事では、XIAO nRF54LM20A の豊富なオンボード周辺機能に基づく開発および使用方法を紹介します。
+XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーションをサポートするための豊富なオンボードセンサーが搭載されています。姿勢認識用の 6 軸センサー LSM6DS3TR-C、PDM デジタル出力と無指向性集音に対応し、インテリジェントボイスシナリオに適したデジタル MEMS マイク MSM261DGT006 を備えています。本記事では、XIAO nRF54LM20A の豊富なオンボード周辺機能に基づく開発および使用方法を紹介します。
 
 :::tip
 
@@ -51,13 +51,13 @@ XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーション�
 
 ## ハードウェアの準備
 
-本記事は XIAO nRF54LM20A Sense をベースに開発されており、あらかじめ関連するハードウェアを用意する必要があります。
+本記事は XIAO nRF54LM20A Sense をベースに開発されており、事前に関連ハードウェアを準備する必要があります。
 
 <div className="table-center">
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-   <th>6x10 RGB WS2812 Matrix for Seeed Studio XIAO</th>
+   <th>Seeed Studio XIAO 用 6x10 RGB WS2812 マトリクス</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -80,7 +80,7 @@ XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーション�
 
 ## IMU
 
-LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジャイロスコープを統合した 6 軸センサーで、STMicroelectronics が提供する iNEMO 慣性計測ユニット (IMU) に属します。XIAO nRF54LM20A Sense では、このセンサーは割り込みトリガによるデータ出力をサポートしています。フルスケール加速度範囲は ±2/±4/±8/±16 g、角速度範囲は ±125/±250/±500/±1000/±2000 dps で、持続的な低消費電力モードをサポートしており、さまざまな動作検知シナリオに適しています。オンボードチップは I2C プロトコルを介してこのセンサーと通信し、データを取得します。
+LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジャイロスコープを統合した 6 軸センサーで、STMicroelectronics が提供する iNEMO 慣性計測ユニット (IMU) に属します。XIAO nRF54LM20A Sense では、このセンサーは割り込みトリガによるデータ出力をサポートします。加速度のフルスケール範囲は ±2/±4/±8/±16 g、角速度の範囲は ±125/±250/±500/±1000/±2000 dps で、持続的な低消費電力モードをサポートしており、さまざまな動作検知シナリオに適しています。オンボードチップは I2C プロトコルを介してこのセンサーと通信し、データを取得します。
 :::tip
 
 - LSM6DS3TR-C の詳細については、[Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) および [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf) を参照してください。
@@ -333,7 +333,7 @@ int main(void)
 <br/>
 
 :::tip
-IMU の性能を直接検証したい場合は、Platform-seeedboards リポジトリをクローンし、examples ディレクトリ内の zephyr-imu サンプルを見つけてコンパイルおよび書き込みを行い、テストを開始してください。
+IMU の性能を直接検証したい場合は、Platform-seeedboards リポジトリをクローンし、examples ディレクトリ内の zephyr-imu サンプルを見つけて、コンパイルして書き込むことでテストを開始できます。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -367,21 +367,21 @@ monitor_speed = 115200
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboar_imu_1.png" style={{width:800, height:'auto'}}/></div>
 
-### 応用
+### アプリケーション
 
-IMU は 3 軸加速度データを融合して、姿勢認識のためのピッチ、ヨー、ロールの姿勢角を算出できます。また、対応するコントローラと連携してモーションコントロールを実現したり、姿勢トリガによるウェイクアップなどの低消費電力シナリオに適用したりできます。
+IMU は 3 軸加速度データをフュージョンして、姿勢認識のためのピッチ、ヨー、ロールの姿勢角を算出できます。また、対応するコントローラと連携してモーションコントロールを実現したり、姿勢トリガによるウェイクアップなどの低消費電力シナリオに適用することもできます。
 
 #### Electronic Ocean
 
-これは XIAO nRF54LM20A Sense のオンボード IMU をベースにしたサンプルです。姿勢データを収集し、加速度情報を融合して動作状態を RGB ライトパネル上にマッピングし、視覚的な海のリズム効果を実現します。
+これは XIAO nRF54LM20A Sense のオンボード IMU をベースにしたサンプルです。姿勢データを収集し、加速度情報をフュージョンして、動作状態を RGB ライトパネル上にマッピングし、視覚的な海のリズム効果を実現します。
 
 - **傾きによる水位制御** — 左右のロール傾きで水位の高さを調整
-- **波のアニメーション** — 3 層の周波数を重ね合わせた波面、2D 波の伝播と端での反射効果
-- **流体慣性** — 慣性を持つ水面；急激に傾けるとオーバーシュートが発生し、その後の揺り戻しが生じる
-- **反転検出** — ボードが反転すると表示が自動的に反転
+- **波のアニメーション** — 3 層の周波数を重ね合わせた波面、2D の波の伝播と端での反射効果
+- **流体慣性** — 慣性を持つ水面；急激に傾けるとオーバーシュートが発生し、その後の揺り戻しが生じます
+- **反転検出** — ボードを反転させると表示が自動的にミラー反転
 - **ダイナミックカラー** — 各列ごとにランダムなグラデーションの海の色調に切り替え
 
-さらに、main.c 内のマクロ定義を通じて、ボードの RGB 配列設定を変更できます。
+さらに、main.c 内のマクロ定義を通じて、ボードの RGB 配列設定を変更することもできます。
 
 ```cpp
 #define COLS 10          // Number of matrix columns
@@ -500,7 +500,7 @@ CONFIG_FAULT_DUMP=2
 CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
-- デバイスを振ると、海の波のビジュアルエフェクトがトリガーされます。
+- デバイスを振ると、海の波のビジュアルエフェクトがトリガされます。
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WHPSAryN-W4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -514,7 +514,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 このルーチンでは、電源投入後に RGB のグリーンチャネルが点灯して消灯し、その後システムは超低消費電力スリープモードに入ります。ボードがタップを検出すると、割り込みによって XIAO nRF54LM20A Sense がウェイクアップします。タップイベントは記録され、シリアルポート経由で出力されます。
 
-IMU ウェイクアップ機能を実装するには、このルーチンをダウンロードしてください。
+IMU ウェイクアップ機能を実装するルーチンをダウンロードしてください。
 
 1. [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) プログラムをダウンロードし、その内容で main.c を置き換えます。
 
@@ -624,7 +624,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <br/>
 :::tip
 
-検知位置はあくまで参考値です。正確なタップ位置の認識は、IMU 融合制御アルゴリズムに依存します。
+検知位置はあくまで参考です。正確なタップ位置の認識は、IMU フュージョン制御アルゴリズムに依存します。
 
 :::
 
@@ -634,11 +634,11 @@ XIAO nRF54LM20A Sense に採用されているチップには GRTC ハードウ�
 
 RTC はタイムスタンプカウントをサポートしており、電源断後も動作時間を記録できるため、ログ記録や時間追跡に役立ちます。
 
-本セクションでは、XIAO nRF54LM20A Sense 上で実装されたサンプルプログラムを紹介します。電源投入後、RTC を介してコンパイル時刻からのタイムスタンプを取得し、1 秒ごとにデータを出力します。System OFF モードに入った後は、RTC アラームによってシステムがウェイクアップし、カウントを継続します。
+このセクションでは、XIAO nRF54LM20A Sense 上で実装されたサンプルプログラムを紹介します。電源投入後、RTC を介してコンパイル時刻からのタイムスタンプを取得し、1 秒ごとにデータを出力します。System OFF モードに入った後は、RTC アラームによってシステムがウェイクアップし、カウントを継続します。
 
 1. [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) を main.c ファイルにコピーします。RTC 関数を使用してタイムスタンプを出力します。
 
-2. デバイスツリー `app.overlay` を変更して RTC ノードを有効にします。
+2. デバイスツリー `app.overlay` を修正して RTC ノードを有効にします。
 
 ```dts
 / {
@@ -703,7 +703,7 @@ CONFIG_NEWLIB_LIBC=y
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-## MIC
+## MIC 
 
 XIAO nRF54LM20A Sense には、音声入力用に MSM261DGT006 デジタル MEMS マイクが搭載されています。PDM インターフェースを介して直接接続され、ADC を必要としません。ウェアラブルデバイス、スマートデバイス、音声認識、音声録音など、音響センシング機能を必要とするアプリケーションシナリオに適しています。
 
@@ -724,7 +724,7 @@ XIAO nRF54LM20A シリーズの中で、マイクを搭載しているのは XIA
 
 1. <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> からプログラムをコピーして `main.c` に貼り付けます。
 
-2. デバイスツリーファイル `app.overlay` を変更して、BLE ノードをバインドします。
+2. デバイスツリーファイル `app.overlay` を修正して、BLE ノードをバインドします。
 
 ```dts
 
@@ -778,9 +778,14 @@ dmic_dev: &pdm20 {
 		};
 	};
 };
+
+/* External 8MB SPI NOR Flash for audio storage */
+&py25q64 {
+	status = "okay";
+};
 ```
 
-2. shturl.c ファイルを変更して、Bluetooth とマイク用の設定を有効にし、Bluetooth デバイス名を **XIAO MIC** に設定します。
+2. prj.conf ファイルを修正して、Bluetooth とマイク用の設定を有効にし、Bluetooth デバイス名を **XIAO MIC** に設定します。
 
 ```prj
 # Audio / DMIC
@@ -813,6 +818,10 @@ CONFIG_BT_DEVICE_APPEARANCE=833
 CONFIG_BT_MAX_CONN=1
 CONFIG_BT_MAX_PAIRED=1
 
+# BLE log level: ERR only.  Fixed 30 ms application pacing prevents
+# buffer exhaustion; this just silences WRN/INF noise from the stack.
+CONFIG_BT_LOG_LEVEL_ERR=y
+
 # Disable auto-procedures to avoid LL Procedure Collision (reason 35)
 # on nRF54L with Zephyr native BLE controller
 CONFIG_BT_AUTO_PHY_UPDATE=n
@@ -822,26 +831,36 @@ CONFIG_BT_CTLR_CONN_PARAM_REQ=n
 # Disable data length auto-update (can also cause LL races)
 CONFIG_BT_DATA_LEN_UPDATE=n
 
-# BLE buffer tuning for NUS notifications (244-byte chunks at MTU 247)
+# BLE buffer tuning for high-throughput NUS notifications
+# nRF54LM20A has 1.5MB RAM, generous buffer allocation
 CONFIG_BT_BUF_ACL_TX_SIZE=251
-CONFIG_BT_BUF_ACL_TX_COUNT=10
-CONFIG_BT_BUF_EVT_RX_COUNT=15
+CONFIG_BT_BUF_ACL_TX_COUNT=32
+CONFIG_BT_BUF_EVT_RX_COUNT=33
 CONFIG_BT_BUF_ACL_RX_SIZE=251
 CONFIG_BT_L2CAP_TX_MTU=247
-CONFIG_BT_L2CAP_TX_BUF_COUNT=10
-CONFIG_BT_L2CAP_TX_FRAG_COUNT=6
-CONFIG_BT_ATT_TX_COUNT=10
-CONFIG_BT_CONN_TX_MAX=10
+CONFIG_BT_L2CAP_TX_BUF_COUNT=24
+CONFIG_BT_L2CAP_TX_FRAG_COUNT=12
+CONFIG_BT_ATT_TX_COUNT=24
+CONFIG_BT_CONN_TX_MAX=32
+
+# Note: BT_CTLR_DATA_LENGTH is selected indirectly (e.g. by BT_DATA_LEN_UPDATE).
+# It cannot be set directly, so BT_CTLR_DATA_LENGTH_MAX is also omitted.
 
 # BLE NUS
 CONFIG_BT_ZEPHYR_NUS=y
 CONFIG_BT_ZEPHYR_NUS_DEFAULT_INSTANCE=y
 
 # Memory
-CONFIG_HEAP_MEM_POOL_SIZE=8192
+CONFIG_HEAP_MEM_POOL_SIZE=16384
 
-# System workqueue stack
-CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
+# System workqueue stack (increased for BLE work items)
+CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=4096
+
+# External SPI NOR Flash (8MB PY25Q64HA)
+CONFIG_SPI=y
+CONFIG_SPI_NOR=y
+CONFIG_FLASH=y
+CONFIG_FLASH_PAGE_LAYOUT=y
 
 # Assert level
 CONFIG_ASSERT=y
@@ -849,7 +868,7 @@ CONFIG_ASSERT=y
 
 ### 結果
 
-プログラムをコンパイルして書き込み、その後 Windows コンピュータを使用して、スクリプトを用いて Bluetooth 経由で録音した音声を受信します。
+プログラムをコンパイルして書き込み、その後 Windows コンピュータ上でスクリプトを使用して Bluetooth 経由で録音データを受信します。
 
 1. Python スクリプトを実行します
 
@@ -1007,7 +1026,7 @@ if __name__ == "__main__":
 </details>
 <br/>
 
-スクリプト実行コマンド：
+スクリプトの実行コマンド：
 
 ```bash
 python ble_recorder_receiver.py
@@ -1034,7 +1053,7 @@ BLE UUID はすでに Python プログラム内で設定されているため、
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
