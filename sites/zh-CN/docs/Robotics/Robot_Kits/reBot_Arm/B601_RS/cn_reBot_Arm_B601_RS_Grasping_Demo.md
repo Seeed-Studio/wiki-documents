@@ -179,6 +179,13 @@ pip install -e .
 cd ../..
 ```
 
+如果 `pip install -e .` 报 `Multiple top-level packages discovered in a flat-layout`，请在 `reBotArm_control_py` 的 `pyproject.toml` 中加入显式包发现配置，然后重新执行 `pip install -e .`：
+
+```toml
+[tool.setuptools.packages.find]
+include = ["reBotArm_control_py*"]
+```
+
 B601 的 DM 与 RS 两种机械臂配置通过 SDK 仓库中的配置文件切换。B601-RS 请在 `sdk/reBotArm_control_py/config/rebotarm.yaml` 中确认：
 
 ```yaml
