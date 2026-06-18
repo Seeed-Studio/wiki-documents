@@ -267,7 +267,8 @@ rebotarmcontroller MoveToPose
 - オプションの RViz
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/seeed/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
 ```
@@ -304,11 +305,6 @@ ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
 ```bash
 ros2 run rebotarmcontroller reBotArmController
 ```
-
-設定ファイルを `rebotarm_bringup/config` から渡す `driver.launch.py` と異なり、
-コントローラを直接実行した場合は SDK のデフォルトアーム設定に
-フォールバックします。通常の使用では、ROS を通して起動することを
-推奨します。
 
 ## ROS2 ネームスペース
 
@@ -410,7 +406,8 @@ ros2 service call /rebotarm/disable std_srvs/srv/Trigger
 すべての例は、`reBotArmController` がすでに実行中であることを前提としています：
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/seeed/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
 ```
@@ -547,41 +544,38 @@ MoveIt 環境は、`ros2_control` を介したシミュレートされたハー�
 まず ROS2 環境が利用可能であることを確認します。現在 source されている ROS ディストリビューション向けに、
 `ROS_DISTRO` を通じてパッケージをインストールできます：
 
-__CODE_LINE_PLH__
 ```bash
 sudo apt update
 sudo apt install -y \
   ros-${ROS_DISTRO}-moveit \
   ros-${ROS_DISTRO}-moveit-configs-utils \
-  ros-${ROS_DISTRO}-moveit-kinematics \
-  ros-${ROS_DISTRO}-moveit-planners-ompl \
-  ros-${ROS_DISTRO}-moveit-simple-controller-manager \
   ros-${ROS_DISTRO}-ros2-control \
   ros-${ROS_DISTRO}-ros2-controllers \
   ros-${ROS_DISTRO}-xacro
+```
 
 MoveIt の設定およびデモはこのワークスペースに含まれています。依存関係をインストールしたら、
 ワークスペースを再ビルドします：
 
-__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
 colcon build --symlink-install
 source install/setup.bash
+```
 
 MoveIt パッケージとデモのエントリポイントを確認します：
 
-__CODE_LINE_PLH__
 ```bash
 ros2 pkg list | grep rebotarm_moveit
 ros2 pkg executables rebotarm_moveit_demos
+```
 
 想定されるエントリには次が含まれます：
 
-__CODE_LINE_PLH__
 ```text
 rebotarm_moveit_demos draw_square
 rebotarm_moveit_demos pick_place
+```
 
 ### MoveIt の使用
 
@@ -592,11 +586,11 @@ MoveIt のプランニングは、RViz の GUI または ROS ノードを通じ�
 
 MoveIt は RViz シミュレーションのために ros2_control 仮想ハードウェアインターフェースを使用します：
 
-__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
 ros2 launch rebotarm_moveit_config demo.launch.py
+```
 
 デフォルトでは次が起動します：
 
@@ -613,26 +607,26 @@ RViz は自動的に開き、ロボットの URDF モデルを読み込みます
 
 RViz なしで MoveIt 環境を実行するには：
 
-__CODE_LINE_PLH__
 ```bash
 ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
+```
 
 #### reBotArm ハードウェアで MoveIt を使用
 
 実機ロボットの場合は、まず仮想コントローラではなくハードウェアインターフェース付きの
 コントローラを起動し、その後ハードウェア用 MoveIt 環境を起動します：
 
-__CODE_LINE_PLH__
 ```bash
 ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
+```
 
 別のターミナルで：
 
-__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
 ros2 launch rebotarm_moveit_config hardware.launch.py
+```
 
 繰り返しになりますが、実機ハードウェアで任意のデモを実行する前に、ワークスペース内に
 人や障害物がいないことを確認し、RViz で計画経路を検証し、いつでも
@@ -642,18 +636,18 @@ ros2 launch rebotarm_moveit_config hardware.launch.py
 
 まず MoveIt 環境を起動し、その後別のターミナルで次を実行します：
 
-__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
 ros2 launch rebotarm_moveit_demos draw_square.launch.py
+```
 
 `draw_square` は、`gripper_tcp` を同一平面上の長方形の 4 つの頂点に沿って移動させます。
 デフォルトパラメータ：
 
-__CODE_LINE_PLH__
 ```text
 src/rebotarm_moveit_demos/config/draw_square.yaml
+```
 
 一般的なパラメータ：
 
@@ -664,7 +658,6 @@ src/rebotarm_moveit_demos/config/draw_square.yaml
 | `rectangle_width` / `rectangle_height` | メートル単位の長方形の寸法 |
 | `tcp_rpy` | TCP の姿勢。デフォルトは下向きのグリッパー |
 | `tcp_yaw_offsets` | 大きな joint6 の巻き付きを避けるために使用される代替 IK ヨー値 |
-| `tcp_yaw_offsets` | Alternative IK yaw values used to avoid large joint6 wraps |
 
 ### ピック・プレースデモを実行する
 
