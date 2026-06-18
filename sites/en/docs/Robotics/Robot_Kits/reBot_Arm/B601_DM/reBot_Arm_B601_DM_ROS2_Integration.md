@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/
     </a>
     <img src="https://img.shields.io/badge/ROS2-Humble | Jazzy-blue.svg" alt="ROS2 Humble | Jazzy" />
     <img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python Version" />
-    <img src="https://img.shields.io/badge/Version-v0.2.2-brightgreen.svg" alt="Version v0.2.2" />
+    <img src="https://img.shields.io/badge/Version-v0.2.3-brightgreen.svg" alt="Version v0.2.3" />
     <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
 </p>
 
@@ -267,8 +267,7 @@ The full bringup launches:
 - Optional RViz
 
 ```bash
-cd ~/seeed/rebotarm_ros2
-source /opt/ros/jazzy/setup.bash
+cd your/path/to/rebotarm_ros2
 source install/setup.bash
 ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
 ```
@@ -297,7 +296,7 @@ If the model appears too small in RViz, adjust the view from the `Views` panel o
 If URDF and RViz are not needed:
 
 ```bash
-ros2 launch rebotarm_bringup driver_only.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
 ```
 
 You can also run the node directly:
@@ -305,6 +304,11 @@ You can also run the node directly:
 ```bash
 ros2 run rebotarmcontroller reBotArmController
 ```
+
+Unlike `driver.launch.py`, which passes configuration files from
+`rebotarm_bringup/config`, running the controller directly falls back to the
+default SDK arm configuration. For normal use, launching through ROS is
+recommended.
 
 ## ROS2 Namespace
 
@@ -406,8 +410,7 @@ ros2 service call /rebotarm/disable std_srvs/srv/Trigger
 All examples assume that `reBotArmController` is already running:
 
 ```bash
-cd ~/seeed/rebotarm_ros2
-source /opt/ros/jazzy/setup.bash
+cd your/path/to/rebotarm_ros2
 source install/setup.bash
 ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
 ```
@@ -550,6 +553,9 @@ sudo apt update
 sudo apt install -y \
   ros-${ROS_DISTRO}-moveit \
   ros-${ROS_DISTRO}-moveit-configs-utils \
+  ros-${ROS_DISTRO}-moveit-kinematics \
+  ros-${ROS_DISTRO}-moveit-planners-ompl \
+  ros-${ROS_DISTRO}-moveit-simple-controller-manager \
   ros-${ROS_DISTRO}-ros2-control \
   ros-${ROS_DISTRO}-ros2-controllers \
   ros-${ROS_DISTRO}-xacro
