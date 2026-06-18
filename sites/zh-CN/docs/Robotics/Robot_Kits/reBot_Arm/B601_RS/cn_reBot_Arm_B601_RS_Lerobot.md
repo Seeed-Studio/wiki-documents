@@ -1,13 +1,13 @@
 ---
-description: 本wiki提供 reBot Arm B601-DM 在 Lerobot 框架内实现数据收集和训练的完整流程。
-title: reBot Arm B601-DM入门Lerobot
+description: 本wiki提供 reBot Arm B601-RS 在 Lerobot 框架内实现数据收集和训练的完整流程。
+title: reBot Arm B601-RS入门Lerobot
 keywords:
   - Lerobot
   - Huggingface
   - 机械臂
   - rebot arm
   - 机器人
-slug: /rebot_arm_b601_dm_lerobot
+slug: /rebot_arm_b601_rs_lerobot
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
   date: 2026-04-15
@@ -15,12 +15,17 @@ last_update:
 translation:
   skip:
     - [zh-CN]
-createdAt: '2026-04-09'
-updatedAt: '2026-04-09'
-url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
+createdAt: '2026-06-17'
+updatedAt: '2026-06-17'
+url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_lerobot/
 ---
 
-# reBot Arm B601-DM入门Lerobot
+# reBot Arm B601-RS入门Lerobot
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -36,7 +41,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
 </p>
 
 
-[reBot Arm B601-DM](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/)是由Seeed开源的是一个致力于降低具身智能学习门槛的机械臂项目。我们毫无保留地开源了所有结构设计和代码，一起让机器人技术触手可及。
+[reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)是由Seeed开源的是一个致力于降低具身智能学习门槛的机械臂项目。我们毫无保留地开源了所有结构设计和代码，一起让机器人技术触手可及。
 
 
 [LeRobot](https://github.com/huggingface/lerobot/tree/main) 致力于为真实世界的机器人提供 PyTorch 中的模型、数据集和工具。其目标是降低机器人学的入门门槛，使每个人都能通过共享数据集和预训练模型进行贡献和受益。LeRobot 集成了经过验证的前沿方法，专注于模仿学习和强化学习。它提供了一套预训练模型、包含人类收集的示范数据集和仿真环境，使用户无需进行机器人组装即可开始使用。
@@ -68,7 +73,7 @@ reBot-DevArm 和 reComputer Jetson AI 智能机器人套件无缝结合了高精
 Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或环境问题，请先查阅文末FAQ，或者联系客服加入SeeedStudio Lerobot交流群询问，也可以在这里询问：[LeRobot GitHub](https://github.com/huggingface/lerobot) 或 [Discord频道](https://discord.gg/8TnwDdjFGU)。  
 :::
 
-## 🔧 reBot B601-DM 系列特点：
+## 🔧 reBot B601-RS 系列特点：
 
 1. **开源 & 低成本**  
    reBot Arm 是由 Seeed Studio 提供的开源机器人臂解决方案，致力于降低具身智能学习门槛。
@@ -82,9 +87,9 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 4. **兼容 Nvidia 平台**  
    支持通过 reComputer Mini J4012 Orin NX 16GB 平台进行部署。
 
-<div class="video-container">
+<!-- <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+</div> -->
 
 ## 初始系统环境
 **For Ubuntu X86:**
@@ -101,9 +106,9 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 
 ## 安装LeRobot
 
-<div class="video-container">
+<!-- <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+</div> -->
 
 需要根据你的 CUDA 版本安装 pytorch 和 torchvision 等环境。
 
@@ -212,36 +217,39 @@ print(torch.cuda.is_available())#输出结果应该为True
 
 ## 校准机械臂
 
-<div class="video-container">
+<!-- <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+</div> -->
 
-接下来，你需要对你的 reBot B601-DM 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。  
-这个校准过程至关重要，因为它可以让在一个 reBot B601-DM 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
+接下来，你需要对你的 reBot B601-RS 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。  
+这个校准过程至关重要，因为它可以让在一个 reBot B601-RS 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
-首先，您需要授予接口权限，运行以下命令：
-
-```bash
-sudo chmod 666 /dev/ttyUSB*  # leader 臂
-sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
-```
 
 ### 校准follower臂
-B601-DM只需要在组装完成后校准一次，以下是校准指令，参考零位如图（夹爪要完全闭合）。
+
+:::tip
+如果无法链接follower，请导航至gettingstarted wiki尝试使用motorbridge提供的接口测试机械臂是否正常。
+:::
+
+B601-RS只需要在组装完成后校准一次，以下是校准指令，参考零位如图（夹爪要完全闭合）。
 
 ```bash
-sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
+
+# follower
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up
 
 lerobot-calibrate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao
+    --robot.can_adapter=socketcan
 ```
 
   <div align="center">
       <img width={800} 
-      src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
+      src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_0pos.jpg" />
   </div>
 
 
@@ -297,31 +305,38 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 ```
 
 </details>
-
-:::danger
-遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
-:::
-
 ## 遥操作
 
+:::danger
+**所有机械臂运动场景同样需要注意!**
+
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+
+:::
+
 先对串口给予权限：
+
 ```bash
-sudo chmod 666 /dev/ttyUSB*  # leader 臂
-sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
+# leader
+sudo chmod 666 /dev/ttyUSB*  
+# follower
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up  
 ```
 
 运行遥操作：
 ```bash
 lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader
 ```
-<div class="video-container">
+<!-- <div class="video-container">
     <iframe 
         width="900" 
         height="600" 
@@ -332,7 +347,7 @@ lerobot-teleoperate \
         framespacing="0" 
         allowfullscreen="true">
     </iframe>
-</div>
+</div> -->
 
 ## 添加摄像头
 
@@ -414,10 +429,10 @@ lerobot-find-cameras realsense
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras='{
     d435i_color: {
       type: realsense_d435i_color,
@@ -555,10 +570,10 @@ lerobot-find-cameras orbbec
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras="{
     orbbec_color: {
       type: orbbec_color,
@@ -656,16 +671,13 @@ Camera #0:
 
 之后，您就可以在遥控操作时在电脑上显示摄像头画面了，只需运行以下代码即可。这对于在录制第一个数据集之前准备您的设置非常有用。
 
-:::danger
-遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
-:::
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
@@ -684,10 +696,10 @@ lerobot-teleoperate \
 <!-- TODO: reBot 多摄像头配置命令 -->
 ```bash
 lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
@@ -695,21 +707,15 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-:::danger
-遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
-:::
-
 </details>
 
 ## 数据集制作采集
 
-<div class="video-container">
+<!-- <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+</div> -->
 
-:::danger
-遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
-:::
+
 
 <details>
 
@@ -718,16 +724,16 @@ lerobot-teleoperate \
 <!-- TODO: reBot 本地数据采集命令 -->
 ```bash
 lerobot-record \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
     --display_data=true \
-    --dataset.repo_id=seeed_rebot_b601_dm/test \
+    --dataset.repo_id=seeed_rebot_b601_rs/test \
     --dataset.num_episodes=5 \
     --dataset.single_task="Grab the black cube" \
     --dataset.push_to_hub=false \
@@ -735,7 +741,7 @@ lerobot-record \
     --dataset.reset_time_s=30 
 ```
 
-其中`repo_id`可以自定义修改，`push_to_hub=false`，最后数据集会保存在主目录的`~/.cache/huggingface/lerobot`下会创建上述`seeed_rebot_b601_dm/test`文件夹
+其中`repo_id`可以自定义修改，`push_to_hub=false`，最后数据集会保存在主目录的`~/.cache/huggingface/lerobot`下会创建上述`seeed_rebot_b601_rs/test`文件夹
 
 </details>
 
@@ -760,10 +766,10 @@ echo $HF_USER
 <!-- TODO: reBot 数据采集并上传到 Hugging Face 命令 -->
 ```bash
 lerobot-record \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
@@ -870,12 +876,12 @@ lerobot-dataset-viz \
 
 ```bash
 lerobot-dataset-viz \
-  --repo-id seeed_rebot_b601_dm/test \
+  --repo-id seeed_rebot_b601_rs/test \
   --episode-index 0 \
   --display-compressed-images=false
 ```
 
-这里，`seeed_rebot_b601_dm/test` 是数据收集时自定义的 `repo_id` 名称。
+这里，`seeed_rebot_b601_rs/test` 是数据收集时自定义的 `repo_id` 名称。
 
 ## 回放一个数据集
 
@@ -888,11 +894,11 @@ lerobot-dataset-viz \
 <!-- TODO: reBot 数据集回放命令 -->
 ```bash
 lerobot-replay \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.can_adapter=damiao \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
+    --robot.can_adapter=socketcan \
     --robot.id=follower1 \
-    --dataset.repo_id=seeed_rebot_b601_dm/test \
+    --dataset.repo_id=seeed_rebot_b601_rs/test \
     --dataset.episode=0
 ```
 
@@ -924,7 +930,7 @@ lerobot-train \
 
 ```bash
 lerobot-train \
-  --dataset.repo_id=seeed_rebot_b601_dm/test \
+  --dataset.repo_id=seeed_rebot_b601_rs/test \
   --policy.type=act \
   --output_dir=outputs/train/act_rebot_test \
   --job_name=act_rebot_test \
@@ -940,7 +946,7 @@ lerobot-train \
 
 ```bash
 lerobot-train \
-  --dataset.repo_id=seeed_rebot_b601_dm/test \
+  --dataset.repo_id=seeed_rebot_b601_rs/test \
   --dataset.video_backend=pyav \
   --policy.type=act \
   --output_dir=outputs/train/act_rebot_test \
@@ -969,9 +975,9 @@ lerobot-train \
 
 ```bash
 lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=follower1 \
   --display_data=false \
@@ -1044,9 +1050,9 @@ lerobot-train \
 
 ```bash
 lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.id=follower1 \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --dataset.single_task="Grasp a lego block and put it in the bin." \
@@ -1058,7 +1064,7 @@ lerobot-record \
 
 参数怎么填：
 
-- `--robot.port`：改成你自己机器上识别到的串口（常见是 `/dev/ttyACM0` 或 `/dev/ttyUSB0`）。
+- `--robot.port`：改成你自己机器上识别到的串口（常见是 `can0` 或 `/dev/ttyACM0`）。
 - `--robot.id`：你的机器人 ID（要和你校准/录制时使用的保持一致）。
 - `--robot.cameras`：改成你真实相机的 `index_or_path`，并确保相机键名（比如 `front`、`side`）和你录制数据集时完全一致。
 - `--dataset.single_task`：建议与录制数据集时的任务描述一致。
@@ -1133,9 +1139,9 @@ lerobot-train \
 
 ```bash
 lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=follower1 \
   --display_data=false \
@@ -1154,7 +1160,13 @@ lerobot-record \
 
 参考官方教程 [Pi0.5](https://huggingface.co/docs/lerobot/pi05)。
 
-π₀.₅（Pi0.5）同样是 Physical Intelligence 提出的 **Vision-Language-Action（视觉-语言-动作）** 模型，可以理解为 π₀ 的"升级版"，重点增强了**开放世界泛化**能力。
+π₀.₅（Pi0.5）同样是 Physical Intelligence 提出的 **Vision-Language-Action（视觉-语言-动作）** 模型，可以理解为 π₀ 的"升级版"，重点增强了**开放世界泛化**能力：不只在训练时见过的固定场景里表现好，还要能在新的房间、新的物体、新的摆放方式下更稳地完成任务。
+
+它要解决的"泛化"大致分三层（举例帮助理解）：
+
+- **物理层**：没见过的勺子/盘子，也能知道该怎么抓（把手/边缘），并在杂乱环境中操作。
+- **语义层**：理解"该放哪里/用什么工具"，例如鞋子应该进鞋柜、衣服进洗衣篮。
+- **环境层**：适应更真实的"乱糟糟"场景，例如家庭、办公室、医院等。
 
 在 LeRobot 里使用它：把策略类型设为 `--policy.type=pi05` 即可
 
@@ -1194,17 +1206,19 @@ lerobot-train \
 
 常用参数（Pi0.5 相关）：
 
-- `--policy.pretrained_path=lerobot/pi05_base`：基础模型。官方也提供 `lerobot/pi05_libero`。
-- `--policy.train_expert_only=true`（省显存技巧）：冻结大模型（VLM）部分，只训练"动作专家"和投影层。
-- `--policy.normalization_mapping=...`：如果你的数据集归一化统计不匹配/缺失，可以用该映射强制指定归一化方式。
+- `--policy.pretrained_path=lerobot/pi05_base`：基础模型。官方也提供 `lerobot/pi05_libero`（更偏 Libero 数据集的版本），你可以按任务尝试切换。
+- `--policy.train_expert_only=true`（省显存技巧）：冻结大模型（VLM）部分，只训练"动作专家"和投影层；更省显存，适合先跑通或小数据试验。
+- `--policy.normalization_mapping=...`：如果你的数据集归一化统计不匹配/缺失，可以用该映射强制指定归一化方式（见官方教程示例）。
+
+如果你的数据集没有 quantile 统计（某些版本/格式需要），官方也提供了转换脚本思路：把数据集补齐/转换统计后再训练（具体以官方文档为准）。
 
 **验证**
 
 ```bash
 lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=follower1 \
   --display_data=false \
@@ -1222,7 +1236,9 @@ lerobot-record \
 
 请参考官方教程 [GR00T N1.5](https://huggingface.co/docs/lerobot/groot)。
 
-GR00T N1.5 是 NVIDIA 提供的一个开放基础模型（foundation model）。在 LeRobot 中使用它的关键点是把策略类型设为 `--policy.type=groot`。不过需要注意：目前 GR00T N1.5 对环境要求更高（依赖 FlashAttention，且需要 CUDA GPU），建议先把 ACT / Pi0 跑通，再来尝试。
+GR00T N1.5 是 NVIDIA 提供的一个开放基础模型（foundation model），面向更通用的机器人推理与技能学习。它是跨机体（cross-embodiment）模型：可以同时接收**语言**与**图像**等多模态输入，在不同环境里执行操作任务。
+
+在 LeRobot 中使用它的关键点是把策略类型设为 `--policy.type=groot`。不过需要注意：目前 GR00T N1.5 对环境要求更高（依赖 FlashAttention，且需要 CUDA GPU），建议先把 ACT / Pi0 跑通，再来尝试。
 
 **安装（重要）**
 
@@ -1231,15 +1247,17 @@ GR00T N1.5 是 NVIDIA 提供的一个开放基础模型（foundation model）。
 建议步骤（按顺序执行）：
 
 1. 按安装指南先把基础环境准备好（Python、CUDA、驱动等），**这一步先不要安装 `lerobot`**。
-2. 安装 PyTorch（版本范围以官方为准）：
+2. 安装 PyTorch（版本范围以官方为准；下面是示例写法）：
 
 ```bash
+# 不同 CUDA 版本对应不同 index-url，请按你的系统参考 PyTorch 安装页
 pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"
 ```
 
 :::tip
 如果您是RTX 50系列，需要满足下面要求：Python=3.10，CUDA=12.8，Torch=2.7.1
 
+下载命令如下：
 ```bash
 pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
 ```
@@ -1256,6 +1274,7 @@ python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} i
 :::tip
 如果您是RTX 50系列，需要满足下面要求：flash_attn=2.8.0
 
+下载命令如下：
 ```bash
 pip install flash_attn==2.8.0.post2 torch==2.7.1 --no-build-isolation
 ```
@@ -1307,13 +1326,13 @@ accelerate launch \
 
 **验证（上机运行/评估）**
 
-训练完成后可以像其它策略一样用 `lerobot-record` 做评估/录制回放。对于 reBot B601-DM 单臂用户，请参考以下命令：
+训练完成后可以像其它策略一样用 `lerobot-record` 做评估/录制回放。对于 reBot B601-RS 单臂用户，请参考以下命令：
 
 ```bash
 lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30} }' \
   --robot.id=follower1 \
   --display_data=true \
@@ -1339,10 +1358,12 @@ PEFT（Parameter-Efficient Fine-Tuning，参数高效微调）是一套"参数�
 安装 LeRobot 的 `peft` 可选依赖后即可使用 PEFT 相关参数：
 
 ```bash
+# 方式一：源码安装（在 lerobot 仓库根目录）
 pip install -e ".[peft]"
 ```
 
 ```bash
+# 方式二：pip 安装
 pip install "lerobot[peft]"
 ```
 
@@ -1749,9 +1770,9 @@ python -m lerobot.async_inference.policy_server \
 
 ```bash
 python -m lerobot.async_inference.robot_client \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=follower1 \
   --server_address=127.0.0.1:8080 \
@@ -1779,13 +1800,6 @@ python -m lerobot.async_inference.robot_client \
 异步推理需要平衡的是：服务器生成动作块的速度必须大于或等于客户端消费动作块的速度。否则动作队列会清空，机器人开始出现卡顿（这可以在队列可视化曲线中看到触底）。
 
 </details>
-
-要从某个训练结果权重文件恢复训练，下面是一个从 `act_rebot_test` 策略的最后一个训练结果权重文件恢复训练的示例命令：
-```bash
-lerobot-train \
-  --config_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true
-```
 
 ## FAQ
 
