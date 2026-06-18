@@ -91,7 +91,6 @@ url: https://wiki.seeedstudio.com/robotics_page/
               </a>
               <a href="/rebot_b601_dm_getting_started/" className="content-card">
                 <span className="text">reBot B601-DM Getting Started</span>
-                <span className="tag recommended">
               </a>
               <a href="/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
                 <span className="text">reBot with Pinocchio</span>
