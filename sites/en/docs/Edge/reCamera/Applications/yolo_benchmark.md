@@ -14,7 +14,7 @@ last_update:
   date: 2026-06-02T00:00:00.000Z
   author: Sizhao zhou
 createdAt: '2026-06-02'
-updatedAt: '2026-06-02'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/recamera_benchmarking/
 ---
 

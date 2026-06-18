@@ -16,7 +16,7 @@ last_update:
   author: Dongxu Jin
 url: https://wiki.seeedstudio.com/deploy_tensorrt_edge_llm_on_jetpack6.2/
 createdAt: '2026-06-16'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-17'
 ---
 
 # Deploy TensorRT Edge-LLM on Jetpack6.2
