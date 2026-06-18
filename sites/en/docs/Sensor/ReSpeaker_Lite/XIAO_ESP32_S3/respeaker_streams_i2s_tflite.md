@@ -1,6 +1,6 @@
 ---
 description: Keyword Spotting with ReSpeaker Lite and TensorFlow Lite
-title: Keyword Spotting
+title: Keyword Spotting on reSpeaker Lite 
 keywords:
   - ESP32S3
   - XIAO
