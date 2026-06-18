@@ -149,7 +149,7 @@ O Seeed Studio XIAO nRF54LM20A Sense é uma placa de desenvolvimento sem fio com
     <tr>
       <td><strong>Temperatura de Operação</strong></td>
       <td colspan="2">-20°C a 70°C</td>
-    </tr]
+    </tr>
     <tr>
       <td><strong>Dimensões</strong></td>
       <td colspan="2">21 x 17,8mm</td>
