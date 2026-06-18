@@ -85,9 +85,12 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
                 <span className="text">Primeros pasos con reBot B601-RS</span>
                 <span className="tag recommended">Nuevo</span>
               </a>
+              <a href="/es/rebot_arm_b601_rs_lerobot/" className="content-card">
+                <span className="text">reBot B601-RS con LeRobot</span>
+                <span className="tag recommended">Nuevo</span>
+              </a>
               <a href="/es/rebot_b601_dm_getting_started/" className="content-card">
                 <span className="text">Primeros pasos con reBot B601-DM</span>
-                <span className="tag recommended">Nuevo</span>
               </a>
               <a href="/es/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
                 <span className="text">reBot con Pinocchio</span>
@@ -184,7 +187,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
           <h3>🦀 Efectores finales</h3>
           <div className="card-container">
               <a href="/es/dm_gripper/" className="content-card">
-                <span className="text">Pinza DM</span>
+                <span className="text">DM Gripper</span>
                 <span className="tag recommended">Nuevo</span>
               </a>
           </div>
@@ -205,7 +208,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
             <span className="text">Damiao DM43 Serie</span>
           </a>
           <a href="/es/feetech_servo/" className="content-card">
-            <span className="text">Servo Feetech STS3215</span>
+            <span className="text">Feetech STS3215 Servo</span>
           </a>
           <a href="/es/hightorque_control" className="content-card">
             <span className="text">HighTorque Serie</span>
@@ -217,7 +220,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
             <span className="text">Stackforce Serie</span>
           </a>
           <a href="/es/robstride_control/" className="content-card">
-            <span className="text">Control RobStride</span>
+            <span className="text">RobStride Control</span>
             <span className="tag recommended">Nuevo</span>
           </a>
       </div>
@@ -382,7 +385,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
     </div>
 
     <!-- Section 1: Core Software -->
-    <h3 className="course-section-title">💻 Software principal y simulación</h3>
+    <h3 className="course-section-title">💻 Software Básico y Simulación</h3>
     <div className="course-grid">
 
       <!-- ROS Basics: 8 Lectures -->
@@ -401,7 +404,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Principiante</span> <span>⏱️ 8h</span></div>
-          <h3>Simulación de robots con ROS 1: 7 clases.</h3>
+          <h3>Simulación de robots en ROS 1: 7 clases.</h3>
           <p>	Desde el modelado hasta la navegación autónoma.</p>
           <span className="btn-start">Aprender</span>
         </div>
@@ -424,9 +427,9 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-moveit">MoveIt 1/2</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">Principiante en brazo</span> <span>⏱️ 6h</span></div>
+          <div className="course-meta"><span className="level beg">Principiante en brazos</span> <span>⏱️ 6h</span></div>
           <h3>MoveIt 1/2</h3>
-          <p>Importa un manipulador personalizado en MoveIt 1/2 e implementa cinemática directa e inversa.</p>
+          <p>Importa un manipulador personalizado en MoveIt 1/2 e implementa cinemática directa e inversa</p>
           <span className="btn-plan">Planificación</span>
         </div>
       </a>
@@ -435,9 +438,9 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-pinocchio">Pinocchio</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">Intermedio en brazo</span> <span>⏱️ 6h</span></div>
+          <div className="course-meta"><span className="level int">Intermedio en brazos</span> <span>⏱️ 6h</span></div>
           <h3>Pinocchio</h3>
-          <p>Aprende el framework de robótica Pinocchio y desarrolla tareas de cinemática y dinámica para tu propio manipulador.</p>
+          <p>Aprende el framework de robótica Pinocchio y desarrolla tareas de cinemática y dinámica para tu propio manipulador</p>
           <span className="btn-plan">Planificación</span>
         </div>
       </a>
@@ -448,8 +451,8 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-cover c-isaac">ISAAC</div>
         <div className="course-info">
           <div className="course-meta"><span className="level adv">Avanzado</span> <span>⏱️ 12h</span></div>
-          <h3>NVIDIA Isaac Sim & Lab</h3>
-          <p>Flujos de trabajo Sim2Real, pipelines USD y creación de entornos.</p>
+          <h3>NVIDIA Isaac Sim y Lab</h3>
+          <p>Flujos de trabajo Sim2Real, canalizaciones USD y creación de entornos.</p>
           <span className="btn-plan">Planificación</span>
         </div>
       </a>
@@ -471,7 +474,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-info">
           <div className="course-meta"><span className="level adv">Difícil</span> <span>⏱️ 20h</span></div>
           <h3>Aprendizaje por refuerzo</h3>
-          <p>Pipelines de entrenamiento PPO y DRL, y despliegue en Jetson.</p>
+          <p>Canalizaciones de entrenamiento PPO y DRL, y despliegue en Jetson.</p>
           <span className="btn-plan">Planificación</span>
         </div>
       </a>
@@ -511,7 +514,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-info">
           <div className="course-meta"><span className="level int">Intermedio</span> <span>⏱️ 15h</span></div>
           <h3>Curso del sistema de brazo StarAI</h3>
-          <p>Manipulador StarAI de 6+1 GDL: cinemática, dinámica, aprendizaje por imitación y aprendizaje por refuerzo avanzado basado en VLA.</p>
+          <p>Manipulador StarAI de 6+1 GDL: cinemática, dinámica, aprendizaje por imitación y aprendizaje por refuerzo avanzado basado en VLA</p>
           <span className="btn-plan">Planificación</span>
         </div>
       </a>
@@ -521,7 +524,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-cover c-legged">Robot con ruedas y patas</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">Intermedio</span> <span>⏱️ 8h</span></div>
-          <h3>Curso de robots con ruedas y patas Stackforce</h3>
+          <h3>Curso de robots con ruedas y patas de Stackforce</h3>
           <p>Control de equilibrio y planificación de movimiento LQR para robots híbridos.</p>
           <span className="btn-start">Aprendiendo</span>
         </div>
@@ -704,7 +707,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
   cursor: default;
 }
 
-/* Efecto hover: mantener un tono cálido, sin invertir colores como el botón Start, para evitar robar la atención visual */
+/* Efecto hover: mantener un tono cálido, sin invertir los colores como el botón Start, para evitar robar la atención visual */
 .course-card:hover .btn-plan {
   background: #ffedd5;
   color: #c2410c;
