@@ -1,6 +1,6 @@
 ---
-description: Un proyecto de TurtleSim con ROS2 controlado por voz que utiliza reSpeaker Flex y Groq AI para convertir comandos hablados en movimiento del robot en tiempo real, giros, y respuestas habladas.
-title: Canalización de voz ROS2 en reSpeaker 
+description: Un proyecto de TurtleSim con ROS2 controlado por voz que utiliza reSpeaker Flex y Groq AI para convertir comandos hablados en movimiento del robot en tiempo real, giros, y retroalimentación hablada.
+title: Canal de voz ROS2 en reSpeaker
 keywords:
   - reSpeaker
   - Robótica
@@ -12,7 +12,7 @@ last_update:
   date: 5/27/2026
   author: Kasun Thushara
 createdAt: '2026-05-27'
-updatedAt: '2026-06-01'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/respeaker_flex_ros2_voice_pipeline/
 ---
 
@@ -20,21 +20,98 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_ros2_voice_pipeline/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
 
-Este proyecto convierte tu voz en control de TurtleSim usando una matriz de micrófonos reSpeaker y ROS2. Di “Hey Jarvis” seguido de un comando, y Jarvis graba el audio, lo transcribe con Groq Whisper, interpreta la intención con Groq LLaMA y responde con Groq Orpheus TTS. Admite movimiento hacia adelante/atrás, giros angulares, orientación basada en DoA y comandos de parada instantánea. El sistema integra detección de palabra de activación, captura de audio, tópicos de ROS2 y publicación de comandos al simulador en una única canalización fluida. Está diseñado para una configuración rápida con Ubuntu y ROS2 Humble, lo que facilita la ejecución de experimentos de robots controlados por voz.
+Este proyecto convierte tu voz en control de TurtleSim usando una matriz de micrófonos reSpeaker y ROS2. Di “Hey Jarvis” seguido de un comando, y Jarvis graba el audio, lo transcribe con Groq Whisper, interpreta la intención con Groq LLaMA y responde con Groq Orpheus TTS. Es compatible con movimiento hacia adelante/atrás, giros angulares, orientación basada en DoA y comandos de parada instantánea. El sistema integra detección de palabra de activación, captura de audio, tópicos de ROS2 y publicación de comandos al simulador en una única canalización fluida. Está diseñado para una configuración rápida con Ubuntu y ROS2 Humble, lo que facilita la ejecución de experimentos de robots controlados por voz.
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={600} height="auto" /></p>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-    </a>
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      O
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
 </div>
+
 
 ## Parte 1 — Instalar ROS2 Humble
 
 > Omite esta parte si ROS2 Humble ya está instalado en tu máquina.
-> Compruébalo ejecutando: `ros2 --version`
+> Comprueba ejecutando: `ros2 --version`
 
 **1.1 Configurar el repositorio apt de ROS2**
 
@@ -95,11 +172,11 @@ ros2 run turtlesim turtlesim_node
 ros2 run turtlesim turtle_teleop_key
 ```
 
-Deberías ver una ventana con una tortuga que puedes manejar con las teclas de flecha. Pulsa `Ctrl+C` en ambas terminales cuando termines.
+Deberías ver una ventana con una tortuga que puedes manejar con las teclas de flecha. Pulsa `Ctrl+C` en ambos terminales cuando termines.
 
 ## Parte 2 — Crear una regla udev para el dispositivo
 
-Crea una nueva regla udev para garantizar los permisos adecuados para la matriz de micrófonos USB reSpeaker:
+Crea una nueva regla udev para asegurar los permisos adecuados para la reSpeaker USB Mic Array:
 
 ```bash
 sudo nano /etc/udev/rules.d/50-respeaker.rules
@@ -123,7 +200,7 @@ sudo udevadm trigger
 sudo service udev restart
 ```
 
-Desconecta y vuelve a conectar tu matriz de micrófonos USB reSpeaker para aplicar las nuevas reglas.
+Desconecta y vuelve a conectar tu reSpeaker USB Mic Array para aplicar las nuevas reglas.
 
 ---
 
@@ -176,7 +253,7 @@ sudo apt install -y portaudio19-dev python3-pyaudio
 
 ---
 
-## Parte 5 — Crear tu espacio de trabajo ROS2
+## Parte 5 — Crear tu espacio de trabajo de ROS2
 
 > Sáltate a la Parte 6 si ya tienes un espacio de trabajo `~/ros2_ws`.
 
@@ -335,7 +412,7 @@ Deberías ver que se inician tres procesos:
 [voice_command-3]    [INFO] Jarvis is listening ...
 ```
 
-Se abrirá una ventana mostrando la tortuga. Ahora di:
+Se abrirá una ventana que muestra la tortuga. Ahora habla:
 
 > **"Hey Jarvis, move forward"**
 
@@ -349,16 +426,16 @@ Jarvis responderá "Moving forward!" y la tortuga se moverá.
 
 | Di esto | Qué sucede |
 |---|---|
-| `"Hey Jarvis, move forward"` | La tortuga avanza 1 paso |
-| `"Hey Jarvis, move backward"` | La tortuga retrocede 1 paso |
-| `"Hey Jarvis, turn left"` | La tortuga gira a la izquierda 90° |
-| `"Hey Jarvis, turn left 45"` | La tortuga gira a la izquierda 45° |
-| `"Hey Jarvis, turn right"` | La tortuga gira a la derecha 90° |
-| `"Hey Jarvis, turn right 30 degrees"` | La tortuga gira a la derecha 30° |
+| `"Hey Jarvis, move forward"` | La tortuga se mueve 1 paso hacia adelante |
+| `"Hey Jarvis, move backward"` | La tortuga se mueve 1 paso hacia atrás |
+| `"Hey Jarvis, turn left"` | La tortuga gira 90° a la izquierda |
+| `"Hey Jarvis, turn left 45"` | La tortuga gira 45° a la izquierda |
+| `"Hey Jarvis, turn right"` | La tortuga gira 90° a la derecha |
+| `"Hey Jarvis, turn right 30 degrees"` | La tortuga gira 30° a la derecha |
 | `"Hey Jarvis, turn to my direction"` | La tortuga se orienta hacia tu voz (DoA) |
 | `"Hey Jarvis, face me"` | Igual que arriba |
-| `"Hey Jarvis, turn to 90"` | La tortuga gira hasta 90° absolutos |
-| `"Hey Jarvis, face 180 degrees"` | La tortuga gira hasta 180° absolutos |
+| `"Hey Jarvis, turn to 90"` | La tortuga gira al ángulo absoluto de 90° |
+| `"Hey Jarvis, face 180 degrees"` | La tortuga gira al ángulo absoluto de 180° |
 | `"Hey Jarvis, spin around"` | La tortuga hace un giro completo de 360° |
 | `"Hey Jarvis, do a 360"` | Igual que arriba |
 | `"Hey Jarvis, stop"` | La tortuga se detiene inmediatamente |
@@ -424,7 +501,7 @@ Todos los ajustes se encuentran en `config.env`. Edítalo y recompila para aplic
 | `WAKEWORD_MODEL` | `hey jarvis` | Frase de palabra de activación |
 | `WAKEWORD_THRESHOLD` | `0.5` | Sensibilidad de detección (0.0–1.0, menor = más sensible) |
 | `WAKEWORD_COOLDOWN` | `2` | Segundos antes de que la palabra de activación pueda volver a dispararse |
-| `RECORDING_SECONDS` | `4` | Cuánto tiempo grabar después de que se active la palabra de activación |
+| `RECORDING_SECONDS` | `4` | Tiempo de grabación después de que se active la palabra de activación |
 | `SAMPLE_RATE` | `16000` | Frecuencia de muestreo de audio en Hz |
 | `LLM_MODEL` | `llama-3.1-8b-instant` | Modelo Groq LLM para el análisis de intención |
 | `STT_MODEL` | `whisper-large-v3-turbo` | Modelo Groq Whisper para transcripción |
@@ -441,12 +518,12 @@ Creado con:
 - [ROS2 Humble](https://docs.ros.org/en/humble/) — middleware para robots
 - [openwakeword](https://github.com/dscripka/openWakeWord) — detección local de palabra de activación
 - [Groq](https://groq.com/) — Whisper STT ultrarrápido, LLaMA LLM, Orpheus TTS
-- [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — simulador de tortugas ROS2
+- [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — simulador de tortuga para ROS2
 
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

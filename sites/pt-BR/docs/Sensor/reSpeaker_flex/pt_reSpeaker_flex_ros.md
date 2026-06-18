@@ -1,6 +1,6 @@
 ---
 description: Um projeto ROS2 TurtleSim controlado por voz usando reSpeaker Flex e Groq AI para converter comandos falados em movimento de robô em tempo real, ações de giro e resposta falada.
-title: Pipeline de Voz ROS2 no reSpeaker 
+title: Pipeline de Voz ROS2 no reSpeaker
 keywords:
   - reSpeaker
   - Robótica
@@ -12,7 +12,7 @@ last_update:
   date: 5/27/2026
   author: Kasun Thushara
 createdAt: '2026-05-27'
-updatedAt: '2026-06-01'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_flex_ros2_voice_pipeline/
 ---
 
@@ -20,16 +20,93 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_flex_ros2_voice_pipeline/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
 
-Este projeto transforma sua voz em controle do TurtleSim usando um array de microfones reSpeaker e ROS2. Diga “Hey Jarvis” seguido de um comando, e o Jarvis grava o áudio, o transcreve com Groq Whisper, interpreta a intenção com Groq LLaMA e responde com Groq Orpheus TTS. Ele oferece suporte a movimento para frente/para trás, giros em ângulo, orientação baseada em DoA e comandos de parada instantânea. O sistema integra detecção de palavra de ativação, captura de áudio, tópicos ROS2 e publicação de comandos para o simulador em um pipeline contínuo. Ele foi projetado para configuração rápida com Ubuntu e ROS2 Humble, facilitando a execução de experimentos de robótica controlados por voz.
+Este projeto transforma sua voz em controle do TurtleSim usando um array de microfones reSpeaker e ROS2. Diga “Hey Jarvis” seguido de um comando, e o Jarvis grava o áudio, o transcreve com Groq Whisper, interpreta a intenção com Groq LLaMA e responde com Groq Orpheus TTS. Ele oferece suporte a movimento para frente/para trás, giros por ângulo, orientação baseada em DoA e comandos de parada instantânea. O sistema integra detecção de palavra de ativação, captura de áudio, tópicos ROS2 e publicação de comandos para o simulador em um pipeline contínuo. Ele foi projetado para configuração rápida com Ubuntu e ROS2 Humble, facilitando a execução de experimentos de robótica controlada por voz.
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={600} height="auto" /></p>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-    </a>
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      OU
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Adquira agora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Adquira agora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
 </div>
+
 
 ## Parte 1 — Instalar o ROS2 Humble
 
@@ -65,13 +142,13 @@ sudo apt install -y ros-humble-desktop
 > A variante `desktop` inclui TurtleSim, RViz e todas as ferramentas de que você precisa.
 > Este download tem cerca de 1 GB — pode levar alguns minutos.
 
-**1.3 Instalar ferramentas de build**
+**1.3 Instalar ferramentas de compilação**
 
 ```bash
 sudo apt install -y python3-colcon-common-extensions python3-rosdep
 ```
 
-**1.4 Fazer o source do ROS2 automaticamente em todo terminal**
+**1.4 Carregar o ROS2 automaticamente em todo terminal**
 
 ```bash
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
@@ -130,13 +207,13 @@ Desconecte e reconecte seu reSpeaker USB Mic Array para aplicar as novas regras.
 ## Parte 3 — Obter uma chave de API Groq
 
 Este projeto usa a API em nuvem gratuita da Groq para:
-- **Whisper** — conversão de fala em texto
-- **LLaMA 3** — compreensão dos seus comandos
+- **Whisper** — fala para texto
+- **LLaMA 3** — entender seus comandos
 - **Orpheus** — resposta de voz do Jarvis
 
 1. Acesse [console.groq.com](https://console.groq.com) e crie uma conta gratuita
 2. Clique em **API Keys** na barra lateral esquerda
-3. Clique em **Create API Key**, dê um nome (por exemplo, "jarvis") e copie a chave
+3. Clique em **Create API Key**, dê um nome (por exemplo, "jarvis") e copie-a
 4. Salve-a em um local seguro — você irá colá-la em `config.env` em breve
 
 > O nível gratuito da Groq é generoso o suficiente para desenvolvimento e testes.
@@ -298,7 +375,7 @@ Encontre a linha que diz **reSpeaker Flex** ou **reSpeaker Flex XVF3800**. Anote
 
 ---
 
-## Parte 7 — Fazer o build do pacote
+## Parte 7 — Compilar o pacote
 
 ```bash
 cd ~/ros2_ws
@@ -319,7 +396,7 @@ Summary: 1 package finished [3.5s]
 
 ---
 
-## Parte 8 — Executar o projeto
+## Parte 8 — Execute o projeto
 
 ```bash
 ros2 launch my_robot_controller jarvis.launch.py
@@ -355,7 +432,7 @@ Jarvis responderá "Moving forward!" e a tartaruga se moverá.
 | `"Hey Jarvis, turn left 45"` | A tartaruga gira 45° para a esquerda |
 | `"Hey Jarvis, turn right"` | A tartaruga gira 90° para a direita |
 | `"Hey Jarvis, turn right 30 degrees"` | A tartaruga gira 30° para a direita |
-| `"Hey Jarvis, turn to my direction"` | A tartaruga se volta na direção da sua voz (DoA) |
+| `"Hey Jarvis, turn to my direction"` | A tartaruga fica voltada para a direção da sua voz (DoA) |
 | `"Hey Jarvis, face me"` | Igual ao acima |
 | `"Hey Jarvis, turn to 90"` | A tartaruga gira para 90° absolutos |
 | `"Hey Jarvis, face 180 degrees"` | A tartaruga gira para 180° absolutos |
@@ -365,7 +442,7 @@ Jarvis responderá "Moving forward!" e a tartaruga se moverá.
 
 ---
 
-## Estrutura de Arquivos do Projeto
+## Estrutura de arquivos do projeto
 
 ```
 my_robot_controller/
@@ -413,7 +490,7 @@ reSpeaker Flex (USB)
 
 ---
 
-## Referência de Configuração
+## Referência de configuração
 
 Todas as configurações ficam em `config.env`. Edite e reconstrua para aplicar as alterações.
 
@@ -421,10 +498,10 @@ Todas as configurações ficam em `config.env`. Edite e reconstrua para aplicar 
 |---|---|---|
 | `GROQ_API_KEY` | *(required)* | Sua chave de API Groq |
 | `MIC_INDEX` | `1` | Índice de dispositivo PyAudio do reSpeaker |
-| `WAKEWORD_MODEL` | `hey jarvis` | Frase da palavra de ativação |
+| `WAKEWORD_MODEL` | `hey jarvis` | Frase de palavra de ativação |
 | `WAKEWORD_THRESHOLD` | `0.5` | Sensibilidade de detecção (0,0–1,0, menor = mais sensível) |
 | `WAKEWORD_COOLDOWN` | `2` | Segundos antes que a palavra de ativação possa ser disparada novamente |
-| `RECORDING_SECONDS` | `4` | Quanto tempo gravar após a palavra de ativação disparar |
+| `RECORDING_SECONDS` | `4` | Por quanto tempo gravar após a palavra de ativação disparar |
 | `SAMPLE_RATE` | `16000` | Taxa de amostragem de áudio em Hz |
 | `LLM_MODEL` | `llama-3.1-8b-instant` | Modelo Groq LLM para análise de intenção |
 | `STT_MODEL` | `whisper-large-v3-turbo` | Modelo Groq Whisper para transcrição |
@@ -444,9 +521,9 @@ Construído com:
 - [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — simulador de tartaruga ROS2
 
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
