@@ -1,13 +1,13 @@
 ---
 description: A voice-controlled ROS2 TurtleSim project using reSpeaker Flex and Groq AI to convert spoken commands into real-time robot motion, turn actions, and spoken feedback.
-title: ROS2 Voice Pipeline on reSpeaker Flex
+title: ROS2 Voice Pipeline on reSpeaker 
 keywords:
   - reSpeaker
   - Robotics
   - ROS2
 image: https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png
 slug: /respeaker_flex_ros2_voice_pipeline
-sku: 114993700, 101991441, 114993701
+sku: 114993700, 101991441, 114993701,100099135,,100005504
 last_update:
   date: 5/27/2026
   author: Kasun Thushara
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/respeaker_flex_ros2_voice_pipeline/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
 
-This project turns your voice into TurtleSim control using a reSpeaker Flex microphone array and ROS2. Say “Hey Jarvis” followed by a command, and Jarvis records audio, transcribes it with Groq Whisper, interprets intent with Groq LLaMA, and responds with Groq Orpheus TTS. It supports forward/backward motion, angle turns, DoA-based facing, and instant stop commands. The system integrates wake-word detection, audio capture, ROS2 topics, and simulator command publishing in one seamless pipeline. It is designed for fast setup with Ubuntu and ROS2 Humble, making voice-driven robot experiments easy to run.
+This project turns your voice into TurtleSim control using a reSpeaker microphone array and ROS2. Say “Hey Jarvis” followed by a command, and Jarvis records audio, transcribes it with Groq Whisper, interprets intent with Groq LLaMA, and responds with Groq Orpheus TTS. It supports forward/backward motion, angle turns, DoA-based facing, and instant stop commands. The system integrates wake-word detection, audio capture, ROS2 topics, and simulator command publishing in one seamless pipeline. It is designed for fast setup with Ubuntu and ROS2 Humble, making voice-driven robot experiments easy to run.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={600} height="auto" /></p>
@@ -199,9 +199,18 @@ source ~/.bashrc
 
 **6.1 Clone the repository**
 
+**If you are using Flex**
+
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/KasunThushara/ros_voice_controller_flex.git my_robot_controller
+```
+
+**If you are using XVF3800**
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/KasunThushara/ros_voice_controller.git my_robot_controller
 ```
 
 > Your workspace should now look like this:

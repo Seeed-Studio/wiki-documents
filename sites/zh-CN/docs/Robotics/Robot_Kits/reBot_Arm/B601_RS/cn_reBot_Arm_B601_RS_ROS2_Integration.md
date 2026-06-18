@@ -1,41 +1,35 @@
 ---
-description: 本教程介绍如何基于 reBot Arm B601-DM 搭建 ROS2 控制工作空间，完成机械臂控制、RViz 可视化和 MoveIt 2 集成。
-title: reBot Arm B601-DM ROS2 集成
+description: 本教程介绍如何基于 reBot Arm B601-RS 搭建 ROS2 控制工作空间，完成 SocketCAN 连接、机械臂控制、RViz 可视化和 MoveIt 2 集成。
+title: reBot Arm B601-RS ROS2 集成
 keywords:
   - reBot Arm
-  - B601-DM
+  - B601-RS
   - ROS2
   - Humble
   - Jazzy
+  - SocketCAN
   - RViz
   - MoveIt 2
   - 机械臂
   - 机器人
-slug: /rebot_arm_b601_dm_ros2_integration
-sku: 100065783, 100095532
+slug: /rebot_arm_b601_rs_ros2_integration
 last_update:
   date: 2026-06-10
   author: YinHaizhou
 translation:
   skip:
     - [zh-CN]
-createdAt: '2026-04-29'
+createdAt: '2026-06-10'
 updatedAt: '2026-06-10'
-url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
+url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/
 ---
 
-# reBot Arm B601-DM ROS2 集成教程
+# reBot Arm B601-RS ROS2 集成教程
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
-</p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
-
-<br />
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -48,18 +42,18 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 </p>
 
 <p align="center">
-  <strong>ROS2 控制 · RViz 可视化 · MoveIt 2 支持 · 重力补偿 · 夹爪控制</strong>
+  <strong>ROS2 控制 · SocketCAN · RViz 可视化 · MoveIt 2 支持 · 重力补偿</strong>
 </p>
 
-本教程介绍如何通过在工作空间 `rebotarm_ros2`中运行 ROS2 实现对 reBot Arm B601-DM 的控制。该工作空间将接入Pinocchio逆运动学、轨迹规划和重力补偿功能的`reBotArm_control_py` 机械臂Python SDK 封装为 ROS2 topic、service 和 action，方便用户接入上层规划、RViz 可视化、重力补偿、夹爪控制和二次开发流程。
-
-<div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1cHLU67EfN&autoplay=0" title="Bilibili video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+本教程介绍如何通过在工作空间 `rebotarm_ros2` 中运行 ROS2 实现对 reBot Arm B601-RS 的控制。该工作空间将接入 Pinocchio 逆运动学、轨迹规划和重力补偿功能的 `reBotArm_control_py` 机械臂 Python SDK 封装为 ROS2 topic、service 和 action，方便用户接入上层规划、RViz 可视化、重力补偿、夹爪控制和二次开发流程。
 
 :::note
 本文默认以 `Ubuntu 24.04 + ROS2 Jazzy` 为主要环境。ROS2 Humble / Ubuntu 22.04 可参考相同流程使用。
 :::
+
+<p align="center">
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/ros2/MoveIt2_RS.gif" alt="reBot Arm B601-RS MoveIt 2 demo" />
+</p>
 
 ## 项目特点
 
@@ -67,7 +61,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
    提供 `/rebotarm/joint_states`、`/rebotarm/arm_status`、`FollowJointTrajectory`、`GripperCommand`、`MoveToPose` 等常用接口。
 
 2. **提供正逆运动学、轨迹规划和重力补偿等功能节点**  
-   提供开箱即用的正逆运动学、轨迹规划和重力补偿等控制节点、支持RViz可视化。
+   提供开箱即用的正逆运动学、轨迹规划和重力补偿等控制节点，支持 RViz 可视化。
 
 3. **MoveIt 2 集成**  
    提供 MoveIt 2 配置和应用 demo，支持 RViz MotionPlanning 插件进行仿真规划，也可配合硬件控制节点进行真实机械臂执行。
@@ -78,12 +72,11 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 
 | 参数 | 规格 |
 |---|---|
-| 机械臂型号 | reBot Arm B601-DM |
+| 机械臂型号 | reBot Arm B601-RS |
 | 自由度 | 6-DOF + 夹爪 |
-| 电机版本 | DAMIAO 电机版 |
-| 通信方式 | CAN Bus via USB2CAN 串口桥 |
-| 默认串口 | `/dev/ttyACM0` |
-| 默认 arm 控制模式 | `posvel` |
+| 通信方式 | CAN |
+| 默认 CAN 通道 | `can0` |
+| 默认 arm 控制模式 | `mit` |
 | 推荐系统 | Ubuntu 24.04 + ROS2 Jazzy + Python 3.12 |
 | 参考系统 | Ubuntu 22.04 + ROS2 Humble + Python 3.10 |
 
@@ -91,34 +84,31 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 
 | 部件 | 数量 | 是否包含 |
 |---|---|---|
-| reBot Arm B601-DM 机械臂 | 1 | ✅ |
+| reBot Arm B601-RS 机械臂 | 1 | ✅ |
 | 夹爪 | 1 | ✅ |
-| USB2CAN 串口桥 | 1 | ✅ |
-| 电源适配器（24V） | 1 | ✅ |
-| USB-C / 通信线缆 | 1 | ✅ |
+| CAN 适配器 | 1 | ✅ |
+| 电源适配器 | 1 | ✅ |
+| 通信线缆 | 1 | ✅ |
 | Ubuntu 主机 | 1 | 自备 |
 
 ## 接线说明
 
-1. 将 USB2CAN 串口桥连接到机械臂 CAN 总线。
+1. 将 CAN 适配器连接到机械臂 CAN 总线。
 2. 将夹爪电机接入同一条 CAN 总线。
-3. 接通 24V 电源，并将 USB2CAN 插入主机。
-4. 确认主机识别到串口：
+3. 接通机械臂电源，并将 CAN 适配器接入主机。
+4. 确认主机识别到 CAN 设备：
 
 ```bash
-ls /dev/ttyACM*
+ip -br link
 ```
 
-如果需要临时开放串口权限：
+启动 CAN 接口：
 
 ```bash
-sudo chmod 666 /dev/ttyACM0
-```
-
-更推荐将当前用户加入 `dialout` 组，重新登录后生效：
-
-```bash
-sudo usermod -a -G dialout $USER
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up
+ip -details link show can0
 ```
 
 ## 环境要求
@@ -133,7 +123,7 @@ sudo usermod -a -G dialout $USER
 
 ### 步骤 0. 完成机械臂基础准备
 
-开始 ROS2 集成前，请先完成 [reBot Arm B601-DM 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/) 中的内容，包括机械臂组装、电机 ID 配置、零点初始化和基础连通性确认。
+开始 ROS2 集成前，请先完成 [reBot Arm B601-RS 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) 中的内容，包括机械臂组装、电机 ID 配置、零点初始化等前置工作。
 
 ### 步骤 1. 安装适合 Ubuntu 系统版本的 ROS2
 
@@ -235,6 +225,12 @@ rebotarmcontroller MoveToPose
 
 ### 启动完整系统
 
+先确认 CAN 接口已经启动：
+
+```bash
+ip -details link show can0
+```
+
 完整 bringup 会启动：
 
 - `reBotArmController` 控制节点
@@ -244,19 +240,19 @@ rebotarmcontroller MoveToPose
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup bringup.launch.py model:=rs channel:=can0
 ```
 
-如果你的串口不是 `/dev/ttyACM0`，请替换为实际设备名：
+如果长期只使用 B601-RS，也可以手动将 `src/rebotarm_bringup/config/rebotarm_hardware.yaml` 中的 `default_model` 修改为 `rs`。修改后可以省略 `model:=rs`，只保留实际 CAN 通道参数，例如：
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM1
+ros2 launch rebotarm_bringup bringup.launch.py channel:=can0
 ```
 
 ### 启动 RViz 可视化
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0 use_rviz:=true
+ros2 launch rebotarm_bringup bringup.launch.py model:=rs channel:=can0 use_rviz:=true
 ```
 
 如果 RViz 中模型看起来很小，可以在 RViz 左侧 `Views` 面板中调整：
@@ -271,16 +267,10 @@ ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0 use_rviz:=t
 如果不需要 URDF 和 RViz：
 
 ```bash
-ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup driver.launch.py model:=rs channel:=can0
 ```
 
-也可以直接运行节点：
-
-```bash
-ros2 run rebotarmcontroller reBotArmController
-```
-
-需要注意的是，和 `driver.launch.py` 从 `rebotarm_bringup/config` 加载配置不同，直接运行控制节点会从 SDK 加载默认机械臂参数，因此更推荐通过 ros launch 的方式启动节点。
+请通过 ros launch 的方式启动节点，因为 launch 文件会传入 `rebotarm_bringup/config` 中的硬件配置。
 
 ## ROS2 命名空间
 
@@ -298,13 +288,13 @@ ros2 run rebotarmcontroller reBotArmController
 /rebotarm/move_to_pose
 ```
 
-如果需要多机械臂或和其他 ROS2 系统共存，可以在 launch 时修改命名空间：
+如果有多机械臂控制需求，可以在 launch 时修改命名空间进行重映射：
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py arm_namespace:=left_arm channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup bringup.launch.py model:=rs channel:=can0 arm_namespace:=right_arm
 ```
 
-此时 `/rebotarm/joint_states` 会变为 `/left_arm/joint_states`。
+此时 `/rebotarm/joint_states` 会变为 `/right_arm/joint_states`。
 
 ## 常用 API
 
@@ -362,7 +352,7 @@ ros2 action send_goal /rebotarm/move_to_pose rebotarm_msgs/action/MoveToPose \
   "{target_pose: {position: {x: 0.30, y: 0.0, z: 0.30}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}, duration: 2.0}"
 ```
 
-`move_to_pose` action 通过 SDK 末端控制器执行。B601-DM 的控制模式在 `rebotarm_hardware.yaml` 中默认为 `posvel`。
+`move_to_pose` action 通过 SDK 末端控制器执行。B601-RS 的 arm 控制模式在 `rebotarm_hardware.yaml` 中默认为 `mit`。
 
 ### 3. 发送关节目标
 
@@ -383,7 +373,7 @@ ros2 service call /rebotarm/gripper/close rebotarm_msgs/srv/GripperCommand "{}"
 也可以发送明确的夹爪电机位置：
 
 ```bash
-ros2 service call /rebotarm/gripper/set rebotarm_msgs/srv/SetGripper "{position: -5.0}"
+ros2 service call /rebotarm/gripper/set rebotarm_msgs/srv/SetGripper "{position: 5.0}"
 ```
 
 ### 5. 安全回零并失能
@@ -400,7 +390,7 @@ ros2 service call /rebotarm/disable std_srvs/srv/Trigger
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup bringup.launch.py model:=rs channel:=can0
 ```
 
 ### 关节移动示例
@@ -473,32 +463,41 @@ src/rebotarm_bringup/config/
 
 | 文件 | 说明 |
 |---|---|
-| `rebotarm_hardware.yaml` | B601-DM 的 ROS2 上层硬件选择和 SDK 参数覆盖配置 |
+| `rebotarm_hardware.yaml` | B601-RS 的 ROS2 上层硬件选择和 SDK 参数覆盖配置 |
 | `driver_params.yaml` | ROS 参数示例 |
+
+`rebotarm_hardware.yaml` 顶部的 `default_model` 默认可能为 `dm`。如果希望 B601-RS 成为默认型号，可以改为：
+
+```yaml
+default_model: rs
+```
+
+修改后，未显式传入 `model:=...` 时会自动使用 B601-RS 配置。
 
 常用 launch 参数：
 
 | 参数 | 默认值 | 说明 |
 |---|---|---|
 | `hardware_config` | bringup 内置 `rebotarm_hardware.yaml` | ROS2 上层硬件配置路径 |
-| `model` | 空字符串 | 留空使用硬件配置中的默认型号 |
-| `channel` | 空字符串 | 留空使用 YAML，非空时覆盖通信串口 |
+| `model` | `rs` | 本教程命令显式传入 `rs`，用于选择 B601-RS 配置 |
+| `channel` | `can0` | SocketCAN 通道 |
 | `joint_state_rate` | `100.0` | `/rebotarm/joint_states` 发布频率 |
 | `cmd_arbitration` | `reject` | 轨迹运行中 arm joint 低层 cmd 仲裁，`reject` 或 `preempt` |
 | `arm_namespace` | `rebotarm` | ROS 命名空间前缀 |
 | `frame_id` | `base_link` | 机械臂基座坐标系 |
-| `ee_frame_id` | `end_link` | 末端坐标系 |
+| `ee_frame_id` | `gripper_end` | 末端坐标系 |
 | `use_rviz` | `false` | 是否启动 bringup RViz |
 | `disable_after_safe_home` | `true` | 该参数控制 safe home 完成后是否失能电机 |
 
-B601-DM 在 `rebotarm_hardware.yaml` 中的默认关键配置：
+B601-RS 在 `rebotarm_hardware.yaml` 中的默认关键配置：
 
 | 项目 | 默认值 |
 |---|---|
-| 通信通道 | `/dev/ttyACM0` |
-| arm 控制模式 | `posvel` |
-| 夹爪 open 位置 | `-5.0` |
+| 通信通道 | `can0` |
+| arm 控制模式 | `mit` |
+| 夹爪 open 位置 | `5.0` |
 | 夹爪 close 位置 | `0.0` |
+| 重力补偿关节 2/3 输出增益 | `1.5` |
 
 ## 低层 Command Topic
 
@@ -581,7 +580,7 @@ MoveIt 通过 ros2_control 虚拟硬件接口实现 RViz 中的仿真，首先�
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-ros2 launch rebotarm_moveit_config demo.launch.py
+ros2 launch rebotarm_moveit_config demo.launch.py model:=rs
 ```
 
 默认会启动：
@@ -594,20 +593,22 @@ ros2 launch rebotarm_moveit_config demo.launch.py
 - `gripper_controller`
 - RViz MoveIt MotionPlanning 插件
 
-RViz 界面会自动弹出并加载 B601-DM 模型，可以通过左侧的 GUI 控制面板对机械臂的运动进行控制。
+RViz 界面会自动弹出并加载 B601-RS 模型，可以通过左侧的 GUI 控制面板对机械臂的运动进行控制。
 
 如果只需要后台 MoveIt 环境，不启动 RViz：
 
 ```bash
-ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
+ros2 launch rebotarm_moveit_config demo.launch.py model:=rs use_rviz:=false
 ```
 
 #### 使用 MoveIt 控制 reBotArm
 
 在实际场景中使用 MoveIt 控制 reBotArm 需要先启动带有硬件接口的控制器而不再是虚拟控制器，再启动针对实际场景的 MoveIt 环境：
 
+先启动硬件控制节点：
+
 ```bash
-ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup driver.launch.py model:=rs channel:=can0
 ```
 
 另开终端：
@@ -615,7 +616,7 @@ ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-ros2 launch rebotarm_moveit_config hardware.launch.py
+ros2 launch rebotarm_moveit_config hardware.launch.py model:=rs
 ```
 
 :::caution 
@@ -629,13 +630,13 @@ ros2 launch rebotarm_moveit_config hardware.launch.py
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-ros2 launch rebotarm_moveit_demos draw_square.launch.py
+ros2 launch rebotarm_moveit_demos draw_square.launch.py model:=rs
 ```
 
 `draw_square` 会控制 `gripper_tcp` 遍历同一平面矩形的四个角点。默认参数在：
 
 ```text
-src/rebotarm_moveit_demos/config/draw_square.yaml
+src/rebotarm_moveit_demos/config/draw_square_rs.yaml
 ```
 
 常用参数：
@@ -657,13 +658,13 @@ src/rebotarm_moveit_demos/config/draw_square.yaml
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-ros2 launch rebotarm_moveit_demos pick_place.launch.py
+ros2 launch rebotarm_moveit_demos pick_place.launch.py model:=rs
 ```
 
 默认参数在：
 
 ```text
-src/rebotarm_moveit_demos/config/pick_place.yaml
+src/rebotarm_moveit_demos/config/pick_place_rs.yaml
 ```
 
 常用参数：
@@ -684,9 +685,9 @@ src/rebotarm_moveit_demos/config/pick_place.yaml
 
 | 文件 | 说明 |
 |---|---|
-| `rebotarm_moveit_config/config/rebotarm.urdf.xacro` | MoveIt 使用的 B601-DM 机器人模型，包含夹爪和 `gripper_tcp` |
-| `rebotarm_moveit_config/config/rebotarm.ros2_control.xacro` | 仿真环境使用的 ros2_control mock hardware 描述 |
-| `rebotarm_moveit_config/config/rebotarm.srdf` | MoveIt group、end effector、默认状态等语义配置 |
+| `rebotarm_moveit_config/config/rebotarm_rs.urdf.xacro` | MoveIt 使用的 B601-RS 机器人模型，包含夹爪和 `gripper_tcp` |
+| `rebotarm_moveit_config/config/rebotarm_rs.ros2_control.xacro` | 仿真环境使用的 ros2_control mock hardware 描述 |
+| `rebotarm_moveit_config/config/rebotarm_rs.srdf` | MoveIt group、end effector、默认状态等语义配置 |
 | `rebotarm_moveit_config/config/kinematics.yaml` | IK solver 配置 |
 | `rebotarm_moveit_config/config/joint_limits.yaml` | MoveIt 规划使用的关节限位 |
 | `rebotarm_moveit_config/config/ompl_planning.yaml` | OMPL planner 参数 |
@@ -694,50 +695,49 @@ src/rebotarm_moveit_demos/config/pick_place.yaml
 | `rebotarm_moveit_config/config/moveit_hardware_controllers.yaml` | 真实硬件 MoveIt trajectory execution controller 配置 |
 | `rebotarm_moveit_config/config/ros2_controllers.yaml` | 仿真环境 ros2_control controller 配置 |
 | `rebotarm_moveit_config/config/initial_positions.yaml` | ros2_control 模拟硬件初始关节位置 |
-| `rebotarm_moveit_demos/config/draw_square.yaml` | 画矩形 demo 参数 |
-| `rebotarm_moveit_demos/config/pick_place.yaml` | 抓取放置 demo 参数 |
+| `rebotarm_moveit_demos/config/draw_square_rs.yaml` | 画矩形 demo 参数 |
+| `rebotarm_moveit_demos/config/pick_place_rs.yaml` | 抓取放置 demo 参数 |
 
 ## FAQ
 
-### 1. 启动时报 `open serial port /dev/ttyACM0 failed`
+### 1. 启动时报 `socketcan write failed: Network is down`
 
-表示默认串口不存在或名称变化。先查看实际串口：
-
-```bash
-ls /dev/ttyACM*
-```
-
-再通过 `channel` 指定：
+表示 CAN 接口还没有启动。先查看接口：
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM1
+ip -details link show can0
 ```
 
-### 2. 启动时报 `Device or resource busy`
-
-表示串口已经被其他进程占用。常见原因是之前的 ROS2 节点、SDK 示例或调试脚本没有退出。可以先确认进程：
+重新启动 CAN：
 
 ```bash
-ps aux | grep -E "reBotArmController|ros2|python"
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up
 ```
 
-停止占用串口的进程后重新启动。机械臂和夹爪应该共用同一个底层 Controller，不要分别打开同一个串口。
+### 2. 找不到 `can0`
 
-### 3. 权限不足
-
-如果串口存在但无权限：
+先确认 CAN 适配器已经插入，并查看接口名：
 
 ```bash
-sudo usermod -a -G dialout $USER
+ip -br link
 ```
 
-重新登录后生效。临时调试也可以执行：
+如果使用 PCAN-USB：
 
 ```bash
-sudo chmod 666 /dev/ttyACM0
+sudo modprobe peak_usb
+ip -br link
 ```
 
-### 4. RViz 中模型不显示
+如果接口名不是 `can0`，请在启动时替换 `channel`：
+
+```bash
+ros2 launch rebotarm_bringup bringup.launch.py model:=rs channel:=can1
+```
+
+### 3. RViz 中模型不显示
 
 请检查：
 
@@ -748,7 +748,7 @@ sudo chmod 666 /dev/ttyACM0
 
 如果模型已经显示但视角不方便，可以在 RViz 左侧 `Views` 面板中将视角类型切换为 `Move Camera`，将 `Target Frame` 设为 `base_link`，再调整 `Distance`。
 
-### 5. MoveIt 规划失败
+### 4. MoveIt 规划失败
 
 如果 demo 打印 `MoveIt planning failed`，可以按下面顺序检查：
 
@@ -758,7 +758,7 @@ sudo chmod 666 /dev/ttyACM0
 - 确认 `joint_limits.yaml` 中的关节限位和速度限制符合当前机械臂。
 - 先在 RViz MotionPlanning 插件中手动规划，确认路径无碰撞后再运行 demo。
 
-### 6. 出现 FastDDS SHM 端口提示
+### 5. 出现 FastDDS SHM 端口提示
 
 如果终端出现类似：
 
@@ -782,11 +782,11 @@ rm -f /dev/shm/fastrtps_port*
 export FASTDDS_BUILTIN_TRANSPORTS=UDPv4
 ```
 
-### 7. 如果使用 Humble 怎么办？
+### 6. 如果使用 Humble 怎么办？
 
 Humble 用户可以参考同样流程，将命令中的 `jazzy` 替换为 `humble`，并按 Humble 官方文档安装对应依赖。切换 ROS2 发行版后，重新执行 `colcon build` 即可。
 
-### 8. 提示找不到 `pinocchio`
+### 7. 提示找不到 `pinocchio`
 
 如果运行节点或验证命令时提示：
 
@@ -823,10 +823,7 @@ python3 -c "import sys; print('\n'.join(sys.path))"
 
 ## 参考文档
 
-- [reBot Arm B601-DM 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/)
-- [reBot Arm B601-DM 视觉夹取 Demo](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/)
-- [reBot Arm B601-DM Pinocchio 与 MeshCat](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/)
-- [reBot Arm B601-DM LeRobot 教程](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/)
+- [reBot Arm B601-RS 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)
 - [ROS2 Humble 文档](https://docs.ros.org/en/humble/)
 - [ROS2 Jazzy 文档](https://docs.ros.org/en/jazzy/)
 - [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)
