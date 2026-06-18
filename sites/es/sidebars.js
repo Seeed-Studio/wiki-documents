@@ -4166,6 +4166,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_vnc_for_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Implement_Ethercat_communication_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Distributed_llama_cpp_RPC_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Jetson_SPI_Getting_Start',
               ]
             },
