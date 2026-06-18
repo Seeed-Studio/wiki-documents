@@ -1,14 +1,14 @@
 ---
-description: This wiki provides a complete guide for reBot Arm B601-DM to implement data collection and training within the LeRobot framework.
-title: Getting Started with reBot Arm B601-DM in LeRobot
+description: This wiki provides a complete guide for reBot Arm B601-RS to implement data collection and training within the LeRobot framework.
+title: Getting Started with reBot Arm B601-RS in LeRobot
 keywords:
   - Lerobot
   - Huggingface
   - Robotic Arm
   - rebot arm
   - Robot
-image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg
-slug: /rebot_arm_b601_dm_lerobot
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+slug: /rebot_arm_b601_rs_lerobot
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
   date: 2026-04-15T00:00:00.000Z
@@ -16,16 +16,19 @@ last_update:
 translation:
   skip:
     - zh-CN
-createdAt: '2026-04-09'
-updatedAt: '2026-04-30'
-url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
+createdAt: '2026-06-17'
+updatedAt: '2026-06-17'
+url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/
 ---
 
 
-# Getting Started with LeRobot-based reBot Arm B601-DM and reBot 102 Leader
+# Getting Started with LeRobot-based reBot Arm B601-RS
 
 
-![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -41,14 +44,8 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 </p>
 
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+[reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/) is an open-source robotic arm project launched by Seeed, dedicated to lowering the threshold for learning embodied intelligence. We open-source all structural designs and code without reservation, making robotics technology accessible to everyone.
 
-
-
-[reBot Arm B601-DM](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/) is an open-source robotic arm project launched by Seeed, dedicated to lowering the threshold for learning embodied intelligence. We open-source all structural designs and code without reservation, making robotics technology accessible to everyone.
 
 [LeRobot](https://github.com/huggingface/lerobot/tree/main) is committed to providing models, datasets and tools for real-world robotics in PyTorch. Its aim is to reduce the entry barrier of robotics, enabling everyone to contribute and benefit from sharing datasets and pretrained models. LeRobot integrates cutting-edge methodologies validated for real-world application, centering on imitation learning and reinforcement learning. It has furnished a suite of pre-trained models, datasets featuring human-gathered demonstrations, and simulation environments, enabling users to commence without the necessity of robot assembly.
 
@@ -77,7 +74,7 @@ This wiki provides debugging tutorials for reBot-DevArm and implements data coll
 Seeed Studio tutorials are strictly updated according to official documentation. If you encounter software or environmental issues that cannot be resolved, please check the FAQ at the end of the article first, or contact customer service to join the SeeedStudio LeRobot discussion group. You can also ask questions here: [LeRobot GitHub](https://github.com/huggingface/lerobot) or [Discord Channel](https://discord.gg/8TnwDdjFGU).
 :::
 
-## 🔧 Features of reBot B601-DM Series:
+## 🔧 Features of reBot B601-RS Series:
 
 1. **Open-source & Low-cost**
    reBot Arm is an open-source, low-cost robotic arm solution from Seeed Studio, dedicated to lowering the threshold for learning embodied intelligence.
@@ -91,9 +88,9 @@ Seeed Studio tutorials are strictly updated according to official documentation.
 4. **Nvidia Platform Compatible**
    Supports deployment via the reComputer Mini J4012 Orin NX 16GB platform.
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/PoMv3mw8SGk" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<!-- <div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div> -->
 
 ## Initial System Environment
 
@@ -110,9 +107,9 @@ Seeed Studio tutorials are strictly updated according to official documentation.
 
 ## Install LeRobot
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/mWrWeqAPDSY" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<!-- <div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div> -->
 
 You need to install pytorch, torchvision and other environments based on your CUDA version.
 
@@ -214,36 +211,37 @@ If the output is False, you need to reinstall Pytorch and Torchvision according 
 
 ## Calibrate the Robotic Arm
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/v8Ek1Ad1VWo" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<!-- <div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div> -->
 
-Next, you need to connect the power supply and data cable to your reBot B601-DM robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one reBot B601-DM robot to work on another. If you need to recalibrate the robotic arm, please completely delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, an error prompt will appear. The calibration information for the robotic arm will be stored in the JSON files under this directory.
-
-First, you need to grant interface permissions by running the following commands:
-
-```bash
-sudo chmod 666 /dev/ttyUSB*  # Leader arm
-sudo chmod 666 /dev/ttyACM*  # Follower arm (serial bridge)
-```
+Next, you need to connect the power supply and data cable to your reBot B601-RS robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one reBot B601-RS robot to work on another. If you need to recalibrate the robotic arm, please completely delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, an error prompt will appear. The calibration information for the robotic arm will be stored in the JSON files under this directory.
 
 ### Calibrate the Follower Arm
 
-B601-DM only needs to be calibrated once after assembly. Here is the calibration command. Refer to the figure for the zero position (gripper fully closed).
+:::tip
+If you cannot connect to the follower, please navigate to the getting started wiki and try using the motorbridge-provided interface to test whether the robotic arm is functioning properly.
+:::
+
+B601-RS only needs to be calibrated once after assembly. Here is the calibration command. Refer to the figure for the zero position (gripper fully closed).
 
 ```bash
-sudo chmod 666 /dev/ttyACM*  # follower arm (serial bridge)
+
+# follower
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up
 
 lerobot-calibrate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao
+    --robot.can_adapter=socketcan
 ```
 
   <div align="center">
       <img width={800}
-      src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
+      src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_0pos.jpg" />
   </div>
 
 ### Calibrate the Leader Arm
@@ -272,7 +270,7 @@ sudo apt remove brltty #Remove brltty
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/102_zeroposition.jpg" />
 </div>
 
@@ -300,43 +298,51 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 
 </details>
 
-:::danger
-During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
-:::
-
 ## Teleoperate
 
 :::danger
+**All robotic arm movement scenarios require the same attention!**
+
 During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
+
 :::
 
 First grant permissions to the serial ports:
+
 ```bash
-sudo chmod 666 /dev/ttyUSB*  # Leader arm
-sudo chmod 666 /dev/ttyACM*  # Follower arm (serial bridge)
+# leader
+sudo chmod 666 /dev/ttyUSB*
+# follower
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up
 ```
 
 Run teleoperation:
 ```bash
 lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader
 ```
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/6_hXd_QXO2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<!-- <div class="video-container">
+    <iframe
+        width="900"
+        height="600"
+        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0"
+        scrolling="no"
+        border="0"
+        frameborder="no"
+        framespacing="0"
+        allowfullscreen="true">
+    </iframe>
+</div> -->
 
 ## Add Cameras
-
-
-:::danger
-During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
-:::
 
 <details>
 <summary> If using RealSense D435i/D405 </summary>
@@ -382,7 +388,7 @@ Expected output:
 DepthCameraSupport
 ```
 
-**2. Install LeRobot in Editable Mode**
+**2. Install RealSense:**
 
 If you only use RealSense:
 
@@ -415,11 +421,11 @@ Dual RealSense test:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
-  --robot.cameras='{
+    --robot.can_adapter=socketcan \
+    --robot.cameras='{
     d435i_color: {
       type: realsense_d435i_color,
       serial_number_or_name: "419522072950",
@@ -500,6 +506,8 @@ providing synchronized RGB and depth streams with precise depth-to-color alignme
 
 Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
 
+* 🚀 Step 1: Install Orbbec SDK Dependencies
+
 **1. Switch to the Camera Branch**
 
 Current camera support is available on the `DepthCameraSupport` branch:
@@ -521,9 +529,7 @@ Expected output:
 DepthCameraSupport
 ```
 
-**2. Install LeRobot in Editable Mode**
-
-If you only use Orbbec:
+**2. Install Orbbec**
 
 ```bash
 pip install -e ".[orbbec]"
@@ -550,17 +556,14 @@ This step will output:
 
 **5. Orbbec Example**
 
-
 Single Orbbec test:
-
-
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras="{
     orbbec_color: {
       type: orbbec_color,
@@ -655,16 +658,12 @@ When using Intel RealSense cameras in **macOS**, you could get this error: **"Er
 
 After that, you will be able to display the cameras on your computer while you are teleoperating by running the following code. This is useful to prepare your setup before recording your first dataset.
 
-:::danger
-During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
-:::
-
 ```bash
 lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
@@ -680,17 +679,13 @@ If you have more cameras, you can change the `--robot.cameras` parameter to add 
 
 For example, if you want to add a camera:
 
-:::danger
-During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
-:::
-
 <!-- TODO: reBot multi-camera configuration command -->
 ```bash
 lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
@@ -702,13 +697,9 @@ lerobot-teleoperate \
 
 ## Dataset Collection
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/PLACEHOLDER" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-:::danger
-During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
-:::
+<!-- <div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div> -->
 
 <details>
 
@@ -717,24 +708,24 @@ During teleoperation, if the master-slave robotic arm experiences power disconne
 <!-- TODO: reBot local data collection command -->
 ```bash
 lerobot-record \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
     --display_data=true \
-    --dataset.repo_id=seeed_rebot_b601_dm/test \
+    --dataset.repo_id=seeed_rebot_b601_rs/test \
     --dataset.num_episodes=5 \
     --dataset.single_task="Grab the black cube" \
     --dataset.push_to_hub=false \
     --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
+    --dataset.reset_time_s=30
 ```
 
-Among them, `repo_id` can be modified customarily, and `push_to_hub=false`. Finally, the dataset will be saved in the `~/.cache/huggingface/lerobot` directory in the home folder, where the aforementioned `seeed_rebot_b601_dm/test` folder will be created.
+Among them, `repo_id` can be modified customarily, and `push_to_hub=false`. Finally, the dataset will be saved in the `~/.cache/huggingface/lerobot` directory in the home folder, where the aforementioned `seeed_rebot_b601_rs/test` folder will be created.
 
 </details>
 
@@ -759,10 +750,10 @@ Record 5 episodes and upload your dataset to the Hub:
 <!-- TODO: reBot data collection and upload to Hugging Face command -->
 ```bash
 lerobot-record \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
     --robot.id=follower1 \
-    --robot.can_adapter=damiao \
+    --robot.can_adapter=socketcan \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
@@ -773,7 +764,7 @@ lerobot-record \
     --dataset.single_task="Grab the black cube" \
     --dataset.push_to_hub=true \
     --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
+    --dataset.reset_time_s=30
 ```
 
 You will see a lot of lines appearing like this one:
@@ -853,7 +844,7 @@ If Right Arrow/Left Arrow/ESC keys are unresponsive during recording:
 ## Visualize the Dataset
 
 ```bash
-echo ${HF_USER}/rebot_test  
+echo ${HF_USER}/rebot_test
 ```
 
 If you uploaded the data, you can also visualize it locally with the following command:
@@ -869,12 +860,12 @@ If you used `--dataset.push_to_hub=false` and didn't upload the data, you can al
 
 ```bash
 lerobot-dataset-viz \
-  --repo-id seeed_rebot_b601_dm/test \
+  --repo-id seeed_rebot_b601_rs/test \
   --episode-index 0 \
   --display-compressed-images=false
 ```
 
-Here, `seeed_rebot_b601_dm/test` is the custom `repo_id` name defined during data collection.
+Here, `seeed_rebot_b601_rs/test` is the custom `repo_id` name defined during data collection.
 
 ## Replay an Episode
 
@@ -887,11 +878,11 @@ Now, try replaying the first dataset on your robot:
 <!-- TODO: reBot dataset replay command -->
 ```bash
 lerobot-replay \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.can_adapter=damiao \
+    --robot.type=Bseeed_b601_rs_follower \
+    --robot.port=can0 \
+    --robot.can_adapter=socketcan \
     --robot.id=follower1 \
-    --dataset.repo_id=seeed_rebot_b601_dm/test \
+    --dataset.repo_id=seeed_rebot_b601_rs/test \
     --dataset.episode=0
 ```
 
@@ -916,21 +907,21 @@ lerobot-train \
   --job_name=act_rebot_test \
   --policy.device=cuda \
   --wandb.enable=false \
-  --steps=300000 
+  --steps=300000
 ```
 
 **If you want to train on a local dataset, make sure the `repo_id` matches the name used during data collection and add `--policy.push_to_hub=false`.**
 
 ```bash
 lerobot-train \
-  --dataset.repo_id=seeed_rebot_b601_dm/test \
+  --dataset.repo_id=seeed_rebot_b601_rs/test \
   --policy.type=act \
   --output_dir=outputs/train/act_rebot_test \
   --job_name=act_rebot_test \
   --policy.device=cuda \
   --wandb.enable=false \
   --policy.push_to_hub=false \
-  --steps=300000 
+  --steps=300000
 ```
 
 :::tip
@@ -939,14 +930,14 @@ If you are using an RTX 50 series GPU, you need to add `--dataset.video_backend=
 
 ```bash
 lerobot-train \
-  --dataset.repo_id=seeed_rebot_b601_dm/test \
+  --dataset.repo_id=seeed_rebot_b601_rs/test \
   --dataset.video_backend=pyav \
   --policy.type=act \
   --output_dir=outputs/train/act_rebot_test \
   --policy.device=cuda \
   --wandb.enable=false \
   --policy.push_to_hub=false \
-  --steps=300000 
+  --steps=300000
 ```
 
 :::
@@ -963,12 +954,11 @@ Command Explanation
 
 You can use the `record` function from [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) but with a policy checkpoint as input. For instance, run this command to record 10 evaluation episodes:
 
-<!-- TODO: reBot ACT evaluation command -->
 ```bash
 lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=follower1 \
   --display_data=false \
@@ -1038,9 +1028,9 @@ The evaluation phase loads your fine-tuned model, lets the robot perform the tas
 
 ```bash
 lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.id=follower1 \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --dataset.single_task="Grasp a lego block and put it in the bin." \
@@ -1052,7 +1042,7 @@ lerobot-record \
 
 How to fill in parameters:
 
-- `--robot.port`: Change to the serial port recognized on your machine (commonly `/dev/ttyACM0` or `/dev/ttyUSB0`).
+- `--robot.port`: Change to the serial port recognized on your machine (commonly `can0` or `/dev/ttyACM0`).
 - `--robot.id`: Your robot ID (must match what you used during calibration/recording).
 - `--robot.cameras`: Change to your real camera `index_or_path`, and ensure camera keys (e.g., `front`, `side`) match exactly what you used when recording the dataset.
 - `--dataset.single_task`: Should match the task description used when recording the dataset.
@@ -1078,7 +1068,7 @@ Refer to the official tutorial [Pi0](https://huggingface.co/docs/lerobot/pi0).
 
 π₀ (Pi0) is a **Vision-Language-Action** model proposed by Physical Intelligence for more "general" robot control. You can think of it as: it can both see camera images and understand a natural language instruction, then output actions to control the robotic arm.
 
-Using it in LeRobot is simple: just set the policy type to `--policy.type=pi0` during training (no need to repeat the general training/evaluation concepts covered in the ACT section).
+Using it in LeRobot is simply: just set the policy type to `--policy.type=pi0` during training (no need to repeat the general training/evaluation concepts covered in the ACT section).
 
 ```bash
 pip install -e ".[pi]"
@@ -1111,7 +1101,7 @@ lerobot-train \
   --steps=3000 \
   --policy.device=cuda \
   --batch_size=32 \
-  --wandb.enable=false 
+  --wandb.enable=false
 ```
 
 Common parameters (only Pi0-specific / most frequently adjusted):
@@ -1126,9 +1116,9 @@ Common parameters (only Pi0-specific / most frequently adjusted):
 
 ```bash
 lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=follower1 \
   --display_data=false \
@@ -1146,7 +1136,13 @@ lerobot-record \
 
 Refer to the official tutorial [Pi0.5](https://huggingface.co/docs/lerobot/pi05).
 
-π₀.₅ (Pi0.5) is also a **Vision-Language-Action** model proposed by Physical Intelligence, which can be understood as an "upgraded version" of π₀, with a focus on enhanced **open-world generalization** capability.
+π₀.₅ (Pi0.5) is also a **Vision-Language-Action** model proposed by Physical Intelligence, which can be understood as an "upgraded version" of π₀, with a focus on enhanced **open-world generalization** capability: not only performing well in fixed scenarios seen during training, but also completing tasks more reliably in new rooms, with new objects, and in new arrangements.
+
+The "generalization" it addresses can be roughly divided into three levels (examples for understanding):
+
+- **Physical layer**: Grasping an unfamiliar spoon/plate by knowing how to hold it (handle/edge), and operating in cluttered environments.
+- **Semantic layer**: Understanding "where to put things / which tool to use", e.g., shoes should go in the shoe cabinet, clothes in the laundry basket.
+- **Environmental layer**: Adapting to more realistic "messy" scenarios, such as homes, offices, hospitals, etc.
 
 To use it in LeRobot: just set the policy type to `--policy.type=pi05`.
 
@@ -1190,13 +1186,15 @@ Common parameters (Pi0.5 related):
 - `--policy.train_expert_only=true` (VRAM saving trick): Freezes the large model (VLM) part, only trains the "action expert" and projection layers.
 - `--policy.normalization_mapping=...`: If your dataset normalization statistics don't match / are missing, you can use this mapping to force a normalization method.
 
+If your dataset doesn't have quantile statistics (required by some versions/formats), the official also provides a conversion script approach: complete/convert the dataset statistics before training (refer to official docs for details).
+
 **Evaluation**
 
 ```bash
 lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=follower1 \
   --display_data=false \
@@ -1214,7 +1212,9 @@ lerobot-record \
 
 Please refer to the official tutorial [GR00T N1.5](https://huggingface.co/docs/lerobot/groot).
 
-GR00T N1.5 is an open foundation model provided by NVIDIA. The key to using it in LeRobot is setting the policy type to `--policy.type=groot`. Note: GR00T N1.5 currently has higher environment requirements (depends on FlashAttention and requires a CUDA GPU). It is recommended to get ACT / Pi0 working first before trying GR00T.
+GR00T N1.5 is an open foundation model provided by NVIDIA for more general robot reasoning and skill learning. It is a **cross-embodiment** model: it can take multimodal inputs such as **language** and **images**, and execute manipulation tasks across different environments.
+
+The key to using it in LeRobot is setting the policy type to `--policy.type=groot`. Note: GR00T N1.5 currently has higher environment requirements (depends on FlashAttention and requires a CUDA GPU). It is recommended to get ACT / Pi0 working first before trying GR00T.
 
 **Installation (Important)**
 
@@ -1299,13 +1299,13 @@ Parameter explanation (most commonly modified):
 
 **Evaluation (Running on the Robot)**
 
-After training, you can use `lerobot-record` for evaluation/recording just like other policies. For reBot B601-DM single-arm users, refer to the following command:
+After training, you can use `lerobot-record` for evaluation/recording just like other policies. For reBot B601-RS single-arm users, refer to the following command:
 
 ```bash
 lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30} }' \
   --robot.id=follower1 \
   --display_data=true \
@@ -1331,10 +1331,12 @@ PEFT (Parameter-Efficient Fine-Tuning) is a set of "parameter-efficient adaptati
 Install LeRobot's optional `peft` dependency to use PEFT-related parameters:
 
 ```bash
+# Method 1: Source installation (in the lerobot root directory)
 pip install -e ".[peft]"
 ```
 
 ```bash
+# Method 2: pip installation
 pip install "lerobot[peft]"
 ```
 
@@ -1387,7 +1389,7 @@ Common patterns include:
 
 **Specifying Certain Layers for Full Training (Optional)**
 
-If you want certain modules to be "fully trained" (instead of just injecting LoRA), use `--peft.full_training_modules` to specify them. For example, to fully train only `state_proj`:
+If you want certain modules to be "fully trained" (instead of only injecting LoRA), use `--peft.full_training_modules` to specify them. For example, only fully train `state_proj`:
 
 ```bash
 --peft.full_training_modules="['state_proj']"
@@ -1687,9 +1689,9 @@ Run on the client:
 
 ```bash
 python -m lerobot.async_inference.robot_client \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
+  --robot.type=Bseeed_b601_rs_follower \
+  --robot.port=can0 \
+  --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=follower1 \
   --server_address=127.0.0.1:8080 \
@@ -1717,14 +1719,6 @@ In async inference, there are two additional parameters not present in synchrono
 Async inference needs to balance: the server's action chunk generation speed must be greater than or equal to the client's consumption speed. Otherwise, the action queue will empty and the robot will start stuttering (this can be seen in the queue visualization curve hitting bottom).
 
 </details>
-
-To resume training from a checkpoint, here is an example command to resume from the `last` checkpoint of the `act_rebot_test` policy:
-
-```bash
-lerobot-train \
-  --config_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true
-```
 
 ## FAQ
 
@@ -1779,11 +1773,11 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
