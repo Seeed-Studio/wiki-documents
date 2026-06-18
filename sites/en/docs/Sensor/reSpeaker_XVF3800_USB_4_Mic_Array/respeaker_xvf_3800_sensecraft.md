@@ -1,6 +1,6 @@
 ---
 description: SenseCraft AI is a no-code/low-code AIoT platform from Seeed Studio that lets you deploy pre-trained AI models to edge devices like the reSpeaker . With the wakeword "Lumio," this setup enables voice-controlled AI applications—no complex coding required.
-title: SenseCraft AI with reSpeaker 
+title: SenseCraft AI with reSpeaker
 keywords:
   - SenseCraft
   - reSpeaker XVF3800
@@ -12,7 +12,7 @@ last_update:
   date: 6/4/2026
   author: Kasun Thushara
 createdAt: '2026-06-04'
-updatedAt: '2026-06-08'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_sensecraft/
 ---
 

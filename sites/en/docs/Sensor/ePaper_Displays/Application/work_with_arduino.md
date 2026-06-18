@@ -16,7 +16,7 @@ last_update:
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/epaper_work_with_arduino/
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-16'
 ---
 
 import Tabs from '@theme/Tabs';

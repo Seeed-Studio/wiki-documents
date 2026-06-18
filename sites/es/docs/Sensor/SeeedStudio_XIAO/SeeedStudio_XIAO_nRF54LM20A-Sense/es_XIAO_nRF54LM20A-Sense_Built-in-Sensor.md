@@ -1,5 +1,5 @@
 ---
-title: Uso de los sensores integrados en XIAO nRF54LM20A Sense
+title: Uso de los sensores integrados para XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -16,7 +16,7 @@ updatedAt: '2026-05-19'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_onboard/
 ---
 
-# Uso de los sensores integrados en XIAO nRF54LM20A Sense
+# Uso de los sensores integrados para XIAO nRF54LM20A Sense
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png" style={{width:400, height:'auto'}}/></div>
 
@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_onboard/
   </table>
 </div>
 
-El XIAO nRF54LM20A Sense está equipado con abundantes sensores integrados para admitir aplicaciones en múltiples escenarios. Incluye el sensor de seis ejes LSM6DS3TR-C para el reconocimiento de postura y el micrófono digital MEMS MSM261DGT006 que admite salida digital PDM y captación de sonido omnidireccional, lo que lo hace adecuado para escenarios de voz inteligente. Este artículo presenta los métodos de desarrollo y uso basados en los ricos periféricos integrados del XIAO nRF54LM20A.
+El XIAO nRF54LM20A Sense está equipado con abundantes sensores integrados para admitir aplicaciones en múltiples escenarios. Incluye el sensor de seis ejes LSM6DS3TR-C para reconocimiento de postura y el micrófono digital MEMS MSM261DGT006 que admite salida digital PDM y captación de sonido omnidireccional, lo que lo hace adecuado para escenarios de voz inteligente. Este artículo presenta los métodos de desarrollo y uso basados en los ricos periféricos integrados del XIAO nRF54LM20A.
 
 :::tip
 
@@ -93,7 +93,7 @@ El LSM6DS3TR-C es un sensor de seis ejes que integra un acelerómetro digital de
 
 :::tip
 
-- Para ver el pinout del XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Sense Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#visión-general-del-hardware) para ver los detalles.
+- Para el pinout del XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Sense Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#visión-general-del-hardware) para ver los detalles.
 
 :::
 
@@ -333,7 +333,7 @@ int main(void)
 <br/>
 
 :::tip
-Si quieres verificar directamente el rendimiento de la IMU, clona el repositorio Platform-seeedboards, localiza el ejemplo zephyr-imu en el directorio examples, luego compila y flashea el programa para iniciar la prueba.
+Si quieres verificar directamente el rendimiento de la IMU, clona el repositorio Platform-seeedboards, localiza el ejemplo zephyr-imu en el directorio examples, luego compila y graba el programa para iniciar la prueba.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -345,14 +345,14 @@ Si quieres verificar directamente el rendimiento de la IMU, clona el repositorio
 
 #### Resultado
 
-Después de flashear el firmware, puedes abrir el asistente de puerto serie en tu PC para visualizar los datos. La frecuencia de disparo es de 12,5 Hz con un intervalo de 80 milisegundos.
+Después de flashear el firmware, puedes abrir el asistente de puerto serie en tu PC para ver los datos. La frecuencia de disparo es de 12,5 Hz con un intervalo de 80 milisegundos.
 
 - Acelerómetro digital de 3 ejes: Mide la aceleración a lo largo de los ejes X, Y y Z.
 - Giroscopio digital de 3 ejes: Mide la velocidad angular alrededor de los ejes X, Y y Z.
 
 :::tip
 
-1. Establece la velocidad en baudios en 115200 al visualizar datos mediante el monitor serie.
+1. Establece la velocidad en baudios en 115200 al ver los datos mediante el monitor serie.
 2. Especifica la velocidad en baudios como 115200 en el archivo de configuración **platformio.ini** para el monitor serie de la IDE PlatformIO.
 
 ```ini
@@ -369,11 +369,11 @@ monitor_speed = 115200
 
 ### Aplicación
 
-La IMU puede fusionar datos de aceleración de tres ejes para calcular los ángulos de actitud de cabeceo, guiñada y alabeo para el reconocimiento de postura. También puede trabajar con controladores correspondientes para realizar control de movimiento, o aplicarse en escenarios de bajo consumo como el despertar activado por actitud.
+La IMU puede fusionar datos de aceleración de tres ejes para calcular los ángulos de actitud de cabeceo, guiñada y alabeo para el reconocimiento de postura. También puede trabajar con los controladores correspondientes para realizar control de movimiento, o aplicarse en escenarios de bajo consumo como el despertar activado por actitud.
 
 #### Océano electrónico
 
-Este es un ejemplo basado en la IMU integrada de XIAO nRF54LM20A Sense. Recoge datos de actitud y fusiona información de aceleración para mapear estados de movimiento en el panel de luz RGB, logrando efectos visuales de ritmo oceánico.
+Este es un ejemplo basado en la IMU integrada de XIAO nRF54LM20A Sense. Recoge datos de actitud y fusiona la información de aceleración para mapear los estados de movimiento en el panel de luz RGB, logrando efectos visuales de ritmo oceánico.
 
 - **Control de nivel de agua por inclinación** — Ajusta la altura del nivel de agua mediante la inclinación de alabeo hacia la izquierda y derecha
 - **Animación de olas** — Superposición de ondas de tres capas de frecuencia, propagación de ondas 2D y efecto de reflexión en los bordes
@@ -411,7 +411,7 @@ Además, puedes modificar la configuración de la matriz RGB de la placa mediant
 &pmic_i2c {
 	sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
 	scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
-};
+
 
 /*
  * Give LDO1 the label "imu_vdd" so main() can call regulator_enable().
@@ -512,7 +512,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### Despertar por IMU
 
-En esta rutina, el canal verde del RGB se enciende y apaga después del encendido, luego el sistema entra en modo de suspensión de ultra bajo consumo. Cuando la placa detecta un toque, XIAO nRF54LM20A Sense se despertará mediante una interrupción. El evento de toque se registrará e imprimirá a través del puerto serie.
+En esta rutina, el canal verde de RGB se enciende y apaga después del encendido, luego el sistema entra en modo de suspensión de ultra bajo consumo. Cuando la placa detecta un toque, XIAO nRF54LM20A Sense se despertará mediante una interrupción. El evento de toque se registrará e imprimirá a través del puerto serie.
 
 Descarga la rutina para implementar la función de despertar por IMU.
 
@@ -703,7 +703,7 @@ CONFIG_NEWLIB_LIBC=y
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-## MIC
+## MIC 
 
 El XIAO nRF54LM20A Sense está equipado con el micrófono digital MEMS MSM261DGT006 para entrada de voz. Se conecta directamente a través de la interfaz PDM sin requerir un ADC. Es adecuado para dispositivos portátiles, dispositivos inteligentes, reconocimiento de voz, grabación de audio y otros escenarios de aplicación que requieren funciones de detección acústica.
 
@@ -717,14 +717,14 @@ Entre la serie XIAO nRF54LM20A, solo el XIAO nRF54M20A Sense está equipado con 
 
 Esta sección demuestra la función del micrófono mediante un ejemplo de voz. El proceso específico es el siguiente:
 
-- Pulsa el botón BOOT, el LED RGB-G permanecerá encendido y comenzará la grabación; púlsalo de nuevo para detener la grabación (máximo 10 segundos).
+- Pulsa el botón BOOT, el LED RGB-G permanecerá encendido y comenzará a grabar; púlsalo de nuevo para detener la grabación (máximo 10 segundos).
 - Después de la grabación, el archivo de audio se enviará al ordenador host mediante Bluetooth. El LED RGB-G parpadea durante la transmisión.
 - Ejecuta el script de recepción en Windows para guardar el archivo de audio en el escritorio.
 - El LED RGB-G se apaga después de que se complete la transmisión.
 
 1. Copia el programa desde <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> en `main.c`.
 
-2. Modifica el archivo de device tree `app.overlay` para enlazar el nodo BLE.
+2. Modifica el archivo device tree `app.overlay` para enlazar el nodo BLE.
 
 ```dts
 
@@ -778,9 +778,14 @@ dmic_dev: &pdm20 {
 		};
 	};
 };
+
+/* External 8MB SPI NOR Flash for audio storage */
+&py25q64 {
+	status = "okay";
+};
 ```
 
-2. Modifica el archivo shturl.c para habilitar las configuraciones de Bluetooth y micrófono, y establece el nombre del dispositivo Bluetooth como **XIAO MIC**.
+2. Modifica el archivo prj.conf para habilitar las configuraciones de Bluetooth y micrófono, y establece el nombre del dispositivo Bluetooth como **XIAO MIC**.
 
 ```prj
 # Audio / DMIC
@@ -813,6 +818,10 @@ CONFIG_BT_DEVICE_APPEARANCE=833
 CONFIG_BT_MAX_CONN=1
 CONFIG_BT_MAX_PAIRED=1
 
+# BLE log level: ERR only.  Fixed 30 ms application pacing prevents
+# buffer exhaustion; this just silences WRN/INF noise from the stack.
+CONFIG_BT_LOG_LEVEL_ERR=y
+
 # Disable auto-procedures to avoid LL Procedure Collision (reason 35)
 # on nRF54L with Zephyr native BLE controller
 CONFIG_BT_AUTO_PHY_UPDATE=n
@@ -822,26 +831,36 @@ CONFIG_BT_CTLR_CONN_PARAM_REQ=n
 # Disable data length auto-update (can also cause LL races)
 CONFIG_BT_DATA_LEN_UPDATE=n
 
-# BLE buffer tuning for NUS notifications (244-byte chunks at MTU 247)
+# BLE buffer tuning for high-throughput NUS notifications
+# nRF54LM20A has 1.5MB RAM, generous buffer allocation
 CONFIG_BT_BUF_ACL_TX_SIZE=251
-CONFIG_BT_BUF_ACL_TX_COUNT=10
-CONFIG_BT_BUF_EVT_RX_COUNT=15
+CONFIG_BT_BUF_ACL_TX_COUNT=32
+CONFIG_BT_BUF_EVT_RX_COUNT=33
 CONFIG_BT_BUF_ACL_RX_SIZE=251
 CONFIG_BT_L2CAP_TX_MTU=247
-CONFIG_BT_L2CAP_TX_BUF_COUNT=10
-CONFIG_BT_L2CAP_TX_FRAG_COUNT=6
-CONFIG_BT_ATT_TX_COUNT=10
-CONFIG_BT_CONN_TX_MAX=10
+CONFIG_BT_L2CAP_TX_BUF_COUNT=24
+CONFIG_BT_L2CAP_TX_FRAG_COUNT=12
+CONFIG_BT_ATT_TX_COUNT=24
+CONFIG_BT_CONN_TX_MAX=32
+
+# Note: BT_CTLR_DATA_LENGTH is selected indirectly (e.g. by BT_DATA_LEN_UPDATE).
+# It cannot be set directly, so BT_CTLR_DATA_LENGTH_MAX is also omitted.
 
 # BLE NUS
 CONFIG_BT_ZEPHYR_NUS=y
 CONFIG_BT_ZEPHYR_NUS_DEFAULT_INSTANCE=y
 
 # Memory
-CONFIG_HEAP_MEM_POOL_SIZE=8192
+CONFIG_HEAP_MEM_POOL_SIZE=16384
 
-# System workqueue stack
-CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
+# System workqueue stack (increased for BLE work items)
+CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=4096
+
+# External SPI NOR Flash (8MB PY25Q64HA)
+CONFIG_SPI=y
+CONFIG_SPI_NOR=y
+CONFIG_FLASH=y
+CONFIG_FLASH_PAGE_LAYOUT=y
 
 # Assert level
 CONFIG_ASSERT=y
@@ -1014,12 +1033,12 @@ python ble_recorder_receiver.py
 ```
 
 :::tip
-El UUID de BLE ya está configurado en el programa de Python, por lo que se conectará automáticamente después de ejecutar el script.
+El UUID BLE ya está configurado en el programa de Python, por lo que se conectará automáticamente después de ejecutar el script.
 :::
 
-2. Comprobar el resultado
+2. Verificar el resultado
 
-- Pulsa la tecla BOOT para empezar a grabar. El LED RGB verde fijo indica que la grabación está en curso. Puedes hablar en voz alta hacia el micrófono y luego pulsar de nuevo la tecla BOOT para detener la grabación. El LED RGB verde parpadeando significa que se está transmitiendo el archivo de audio.
+- Pulsa la tecla BOOT para empezar a grabar. El LED RGB verde fijo indica que la grabación está en curso. Puedes hablar en voz alta hacia el micrófono y luego pulsar de nuevo la tecla BOOT para detener la grabación. El LED RGB verde parpadeando significa que el archivo de audio se está transmitiendo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>

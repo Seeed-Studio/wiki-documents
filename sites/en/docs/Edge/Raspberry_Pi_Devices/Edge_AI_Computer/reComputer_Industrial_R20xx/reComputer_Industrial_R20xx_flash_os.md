@@ -12,7 +12,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-01-09'
-updatedAt: '2026-03-10'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/recomputer_industrial_r2000_flash_os/
 ---
 # reComputer Industrial R20xx Flash OS

@@ -1,19 +1,18 @@
 ---
 description: Um projeto ROS2 TurtleSim controlado por voz usando reSpeaker Flex e Groq AI para converter comandos falados em movimento de robô em tempo real, ações de giro e resposta falada.
-
-title: Pipeline de Voz ROS2 no reSpeaker Flex
+title: Pipeline de Voz ROS2 no reSpeaker 
 keywords:
   - reSpeaker
   - Robótica
   - ROS2
-image: https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png
 slug: /respeaker_flex_ros2_voice_pipeline
-sku: 114993700, 101991441, 114993701
+sku: 114993700, 101991441, 114993701,100099135,,100005504
 last_update:
   date: 5/27/2026
   author: Kasun Thushara
 createdAt: '2026-05-27'
-updatedAt: '2026-05-27'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_flex_ros2_voice_pipeline/
 ---
 
@@ -21,7 +20,7 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_flex_ros2_voice_pipeline/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
 
-Este projeto transforma sua voz em controle do TurtleSim usando um array de microfones reSpeaker Flex e ROS2. Diga “Hey Jarvis” seguido de um comando, e o Jarvis grava o áudio, o transcreve com Groq Whisper, interpreta a intenção com Groq LLaMA e responde com Groq Orpheus TTS. Ele oferece suporte a movimento para frente/para trás, giros em ângulo, orientação baseada em DoA e comandos de parada instantânea. O sistema integra detecção de palavra de ativação, captura de áudio, tópicos ROS2 e publicação de comandos para o simulador em um pipeline contínuo. Ele foi projetado para configuração rápida com Ubuntu e ROS2 Humble, facilitando a execução de experimentos de robótica controlados por voz.
+Este projeto transforma sua voz em controle do TurtleSim usando um array de microfones reSpeaker e ROS2. Diga “Hey Jarvis” seguido de um comando, e o Jarvis grava o áudio, o transcreve com Groq Whisper, interpreta a intenção com Groq LLaMA e responde com Groq Orpheus TTS. Ele oferece suporte a movimento para frente/para trás, giros em ângulo, orientação baseada em DoA e comandos de parada instantânea. O sistema integra detecção de palavra de ativação, captura de áudio, tópicos ROS2 e publicação de comandos para o simulador em um pipeline contínuo. Ele foi projetado para configuração rápida com Ubuntu e ROS2 Humble, facilitando a execução de experimentos de robótica controlados por voz.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={600} height="auto" /></p>
@@ -131,13 +130,13 @@ Desconecte e reconecte seu reSpeaker USB Mic Array para aplicar as novas regras.
 ## Parte 3 — Obter uma chave de API Groq
 
 Este projeto usa a API em nuvem gratuita da Groq para:
-- **Whisper** — fala para texto
-- **LLaMA 3** — entender seus comandos
+- **Whisper** — conversão de fala em texto
+- **LLaMA 3** — compreensão dos seus comandos
 - **Orpheus** — resposta de voz do Jarvis
 
 1. Acesse [console.groq.com](https://console.groq.com) e crie uma conta gratuita
 2. Clique em **API Keys** na barra lateral esquerda
-3. Clique em **Create API Key**, dê um nome (por exemplo, "jarvis") e copie-a
+3. Clique em **Create API Key**, dê um nome (por exemplo, "jarvis") e copie a chave
 4. Salve-a em um local seguro — você irá colá-la em `config.env` em breve
 
 > O nível gratuito da Groq é generoso o suficiente para desenvolvimento e testes.
@@ -200,9 +199,18 @@ source ~/.bashrc
 
 **6.1 Clonar o repositório**
 
+**Se você estiver usando Flex**
+
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/KasunThushara/ros_voice_controller_flex.git my_robot_controller
+```
+
+**Se você estiver usando XVF3800**
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/KasunThushara/ros_voice_controller.git my_robot_controller
 ```
 
 > Seu workspace agora deve estar assim:
@@ -347,7 +355,7 @@ Jarvis responderá "Moving forward!" e a tartaruga se moverá.
 | `"Hey Jarvis, turn left 45"` | A tartaruga gira 45° para a esquerda |
 | `"Hey Jarvis, turn right"` | A tartaruga gira 90° para a direita |
 | `"Hey Jarvis, turn right 30 degrees"` | A tartaruga gira 30° para a direita |
-| `"Hey Jarvis, turn to my direction"` | A tartaruga se vira em direção à sua voz (DoA) |
+| `"Hey Jarvis, turn to my direction"` | A tartaruga se volta na direção da sua voz (DoA) |
 | `"Hey Jarvis, face me"` | Igual ao acima |
 | `"Hey Jarvis, turn to 90"` | A tartaruga gira para 90° absolutos |
 | `"Hey Jarvis, face 180 degrees"` | A tartaruga gira para 180° absolutos |
@@ -413,7 +421,7 @@ Todas as configurações ficam em `config.env`. Edite e reconstrua para aplicar 
 |---|---|---|
 | `GROQ_API_KEY` | *(required)* | Sua chave de API Groq |
 | `MIC_INDEX` | `1` | Índice de dispositivo PyAudio do reSpeaker |
-| `WAKEWORD_MODEL` | `hey jarvis` | Frase de palavra de ativação |
+| `WAKEWORD_MODEL` | `hey jarvis` | Frase da palavra de ativação |
 | `WAKEWORD_THRESHOLD` | `0.5` | Sensibilidade de detecção (0,0–1,0, menor = mais sensível) |
 | `WAKEWORD_COOLDOWN` | `2` | Segundos antes que a palavra de ativação possa ser disparada novamente |
 | `RECORDING_SECONDS` | `4` | Quanto tempo gravar após a palavra de ativação disparar |

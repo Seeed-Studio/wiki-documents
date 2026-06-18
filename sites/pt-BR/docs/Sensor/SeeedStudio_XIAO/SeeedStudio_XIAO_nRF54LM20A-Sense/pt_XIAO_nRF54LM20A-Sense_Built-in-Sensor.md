@@ -80,10 +80,10 @@ Este artigo é desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa p
 
 ## IMU
 
-O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor oferece saída de dados acionada por interrupção. Ele possui faixa de aceleração de escala completa de ±2/±4/±8/±16 g e faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir os dados.
+O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor oferece suporte à saída de dados acionada por interrupção. Ele possui faixa de aceleração de escala completa de ±2/±4/±8/±16 g e faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir os dados.
 :::tip
 
-- Para mais informações sobre o LSM6DS3TR-C, visite: [Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) e [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
+- Para mais informações sobre o LSM6DS3TR-C, visite: [Visão geral do produto LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) e [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
 
 :::
 
@@ -93,7 +93,7 @@ O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de
 
 :::tip
 
-- Para o pinout do XIAO nRF54LM20A, clique em [XIAO nRF54LM20A Sense Pin List](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_getting_started/#hardware-overview) para ver os detalhes.
+- Para o pinout do XIAO nRF54LM20A, clique em [XIAO nRF54LM20A Sense Pin List](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_getting_started/#visão-geral-do-hardware) para ver os detalhes.
 
 :::
 
@@ -345,10 +345,10 @@ Se você quiser verificar diretamente o desempenho da IMU, clone o repositório 
 
 #### Resultado
 
-Após gravar o firmware, você pode abrir o assistente de porta serial no seu PC para visualização dos dados. A frequência de disparo é de 12,5 Hz com um intervalo de 80 milissegundos.
+Após gravar o firmware, você pode abrir o assistente de porta serial no seu PC para visualização de dados. A frequência de disparo é de 12,5 Hz com um intervalo de 80 milissegundos.
 
-- Acelerômetro digital de 3 eixos: mede a aceleração ao longo dos eixos X, Y e Z.
-- Giroscópio digital de 3 eixos: mede a velocidade angular em torno dos eixos X, Y e Z.
+- Acelerômetro digital de 3 eixos: Mede a aceleração ao longo dos eixos X, Y e Z.
+- Giroscópio digital de 3 eixos: Mede a velocidade angular em torno dos eixos X, Y e Z.
 
 :::tip
 
@@ -373,12 +373,12 @@ A IMU pode fundir dados de aceleração de três eixos para calcular os ângulos
 
 #### Oceano Eletrônico
 
-Este é um exemplo baseado na IMU integrada da XIAO nRF54LM20A Sense. Ela coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, alcançando efeitos visuais de ritmo oceânico.
+Este é um exemplo baseado na IMU integrada da XIAO nRF54LM20A Sense. Ele coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, alcançando efeitos visuais de ritmo oceânico.
 
 - **Controle de nível de água por inclinação** — Ajuste a altura do nível de água por meio da inclinação de roll para a esquerda e para a direita
 - **Animação de ondas** — Superfície de ondas com sobreposição de três camadas de frequência, propagação de ondas 2D e efeito de reflexão nas bordas
-- **Inércia do fluido** — Superfície da água com momento; inclinação rápida causa overshoot e subsequente oscilação de retorno
-- **Detecção de inversão** — A exibição é automaticamente espelhada quando a placa é virada
+- **Inércia do fluido** — Superfície de água com momento; inclinação rápida causa overshoot e subsequente oscilação de retorno
+- **Detecção de inversão** — A exibição é automaticamente espelhada quando a placa é invertida
 - **Cor dinâmica** — Troca de tons oceânicos em gradiente aleatório para cada coluna
 
 Além disso, você pode modificar a configuração da matriz RGB da placa por meio de definições de macro em main.c.
@@ -476,7 +476,7 @@ Além disso, você pode modificar a configuração da matriz RGB da placa por me
 };
 ```
 
-3. Habilite configurações relacionadas ao uso da IMU
+3. Ative as configurações relacionadas ao uso da IMU
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -512,11 +512,11 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### Despertar por IMU
 
-Nesta rotina, o canal verde do RGB acende e apaga após a energização, e então o sistema entra em modo de sono de ultrabaixo consumo. Quando um toque é detectado pela placa, a XIAO nRF54LM20A Sense será despertada via interrupção. O evento de toque será registrado e impresso pela porta serial.
+Nesta rotina, o canal verde do RGB acende e apaga após a energização, então o sistema entra em modo de sono de ultrabaixo consumo. Quando um toque é detectado pela placa, a XIAO nRF54LM20A Sense será despertada via interrupção. O evento de toque será registrado e impresso pela porta serial.
 
 Baixe a rotina para implementar a função de despertar por IMU.
 
-1. Baixe o programa [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) e substitua o conteúdo de main.c por ele.
+1. Baixe o programa [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) e substitua com ele o conteúdo de main.c.
 
 2. Modifique o arquivo de árvore de dispositivo `app.overlay` e adicione as configurações de nós necessárias.
 
@@ -588,7 +588,7 @@ Baixe a rotina para implementar a função de despertar por IMU.
 };
 ```
 
-3. Habilite as configurações relevantes da IMU em prj.conf
+3. Ative as configurações relevantes da IMU em prj.conf
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -636,7 +636,7 @@ O RTC suporta contagem de carimbo de data/hora e pode registrar o tempo de opera
 
 Esta seção apresenta um programa de exemplo implementado na XIAO nRF54LM20A Sense. Após a energização, ele obtém carimbos de data/hora a partir do horário de compilação via RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será despertado pelo alarme do RTC para continuar a contagem.
 
-1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções de RTC para imprimir o carimbo de data e hora.
+1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções de RTC para imprimir o carimbo de data/hora.
 
 2. Modifique a árvore de dispositivo `app.overlay` para habilitar o nó de RTC.
 
@@ -703,7 +703,7 @@ CONFIG_NEWLIB_LIBC=y
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-## MIC
+## MIC 
 
 O XIAO nRF54LM20A Sense está equipado com o microfone digital MEMS MSM261DGT006 para entrada de voz. Ele se conecta diretamente via interface PDM sem necessidade de um ADC. É adequado para dispositivos vestíveis, dispositivos inteligentes, reconhecimento de voz, gravação de áudio e outros cenários de aplicação que exigem funções de detecção acústica.
 
@@ -713,18 +713,18 @@ Entre a série XIAO nRF54LM20A, apenas o XIAO nRF54M20A Sense está equipado com
 
 :::
 
-### Gravação de áudio e upload via BLE
+### Gravação de Áudio e Upload via BLE
 
 Esta seção demonstra a função do microfone por meio de um exemplo de voz. O processo específico é o seguinte:
 
-- Pressione o botão BOOT, o LED RGB-G permanecerá aceso e iniciará a gravação; pressione novamente para parar a gravação (máximo de 10 segundos).
-- Após a gravação, o arquivo de áudio será enviado ao computador host via Bluetooth. O LED RGB-G pisca durante a transmissão.
+- Pressione o botão BOOT, o LED RGB-G permanecerá aceso e iniciará a gravação; pressione-o novamente para parar a gravação (máximo de 10 segundos).
+- Após a gravação, o arquivo de áudio será enviado para o computador host via Bluetooth. O LED RGB-G pisca durante a transmissão.
 - Execute o script de recepção no Windows para salvar o arquivo de áudio na área de trabalho.
 - O LED RGB-G apaga após a conclusão da transmissão.
 
 1. Copie o programa de <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> para `main.c`.
 
-2. Modifique o arquivo de árvore de dispositivo `app.overlay` para vincular o nó BLE.
+2. Modifique o arquivo de árvore de dispositivo `app.overlay` para vincular o nó de BLE.
 
 ```dts
 
@@ -778,9 +778,14 @@ dmic_dev: &pdm20 {
 		};
 	};
 };
+
+/* External 8MB SPI NOR Flash for audio storage */
+&py25q64 {
+	status = "okay";
+};
 ```
 
-2. Modifique o arquivo shturl.c para habilitar as configurações de Bluetooth e microfone, e defina o nome do dispositivo Bluetooth como **XIAO MIC**.
+2. Modifique o arquivo prj.conf para habilitar as configurações de Bluetooth e microfone, e defina o nome do dispositivo Bluetooth como **XIAO MIC**.
 
 ```prj
 # Audio / DMIC
@@ -813,6 +818,10 @@ CONFIG_BT_DEVICE_APPEARANCE=833
 CONFIG_BT_MAX_CONN=1
 CONFIG_BT_MAX_PAIRED=1
 
+# BLE log level: ERR only.  Fixed 30 ms application pacing prevents
+# buffer exhaustion; this just silences WRN/INF noise from the stack.
+CONFIG_BT_LOG_LEVEL_ERR=y
+
 # Disable auto-procedures to avoid LL Procedure Collision (reason 35)
 # on nRF54L with Zephyr native BLE controller
 CONFIG_BT_AUTO_PHY_UPDATE=n
@@ -822,26 +831,36 @@ CONFIG_BT_CTLR_CONN_PARAM_REQ=n
 # Disable data length auto-update (can also cause LL races)
 CONFIG_BT_DATA_LEN_UPDATE=n
 
-# BLE buffer tuning for NUS notifications (244-byte chunks at MTU 247)
+# BLE buffer tuning for high-throughput NUS notifications
+# nRF54LM20A has 1.5MB RAM, generous buffer allocation
 CONFIG_BT_BUF_ACL_TX_SIZE=251
-CONFIG_BT_BUF_ACL_TX_COUNT=10
-CONFIG_BT_BUF_EVT_RX_COUNT=15
+CONFIG_BT_BUF_ACL_TX_COUNT=32
+CONFIG_BT_BUF_EVT_RX_COUNT=33
 CONFIG_BT_BUF_ACL_RX_SIZE=251
 CONFIG_BT_L2CAP_TX_MTU=247
-CONFIG_BT_L2CAP_TX_BUF_COUNT=10
-CONFIG_BT_L2CAP_TX_FRAG_COUNT=6
-CONFIG_BT_ATT_TX_COUNT=10
-CONFIG_BT_CONN_TX_MAX=10
+CONFIG_BT_L2CAP_TX_BUF_COUNT=24
+CONFIG_BT_L2CAP_TX_FRAG_COUNT=12
+CONFIG_BT_ATT_TX_COUNT=24
+CONFIG_BT_CONN_TX_MAX=32
+
+# Note: BT_CTLR_DATA_LENGTH is selected indirectly (e.g. by BT_DATA_LEN_UPDATE).
+# It cannot be set directly, so BT_CTLR_DATA_LENGTH_MAX is also omitted.
 
 # BLE NUS
 CONFIG_BT_ZEPHYR_NUS=y
 CONFIG_BT_ZEPHYR_NUS_DEFAULT_INSTANCE=y
 
 # Memory
-CONFIG_HEAP_MEM_POOL_SIZE=8192
+CONFIG_HEAP_MEM_POOL_SIZE=16384
 
-# System workqueue stack
-CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
+# System workqueue stack (increased for BLE work items)
+CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=4096
+
+# External SPI NOR Flash (8MB PY25Q64HA)
+CONFIG_SPI=y
+CONFIG_SPI_NOR=y
+CONFIG_FLASH=y
+CONFIG_FLASH_PAGE_LAYOUT=y
 
 # Assert level
 CONFIG_ASSERT=y
@@ -851,7 +870,7 @@ CONFIG_ASSERT=y
 
 Compile e grave o programa e, em seguida, use um computador com Windows para receber o áudio gravado via Bluetooth com a ajuda de scripts.
 
-1. Execute o script Python
+1. Execute o script em Python
 
 Instale as bibliotecas dependentes necessárias antes da execução:
 
@@ -861,7 +880,7 @@ pip install bleak
 
 <br/>
 
-Copie o arquivo de script Python.
+Copie o arquivo de script em Python.
 
 <details>
 
@@ -1014,7 +1033,7 @@ python ble_recorder_receiver.py
 ```
 
 :::tip
-O UUID BLE já está configurado no programa Python, portanto ele se conectará automaticamente após executar o script.
+O UUID BLE já está configurado no programa Python, portanto a conexão será feita automaticamente após executar o script.
 :::
 
 2. Verificar o resultado
@@ -1024,7 +1043,7 @@ O UUID BLE já está configurado no programa Python, portanto ele se conectará 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- Abra a porta Serial, ela irá imprimir o log. Por favor, defina a taxa de Baud para 921600.
+- Abra a porta serial, ela irá imprimir o log. Defina a taxa de transmissão para 921600.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -1036,7 +1055,7 @@ O UUID BLE já está configurado no programa Python, portanto ele se conectará 
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

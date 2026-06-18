@@ -19,7 +19,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-06-11'
-updatedAt: '2026-06-11'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 

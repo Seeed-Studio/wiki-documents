@@ -1,19 +1,18 @@
 ---
-description: Un proyecto de TurtleSim con ROS2 controlado por voz que utiliza reSpeaker Flex y Groq AI para convertir comandos hablados en movimiento del robot en tiempo real, giros, y retroalimentación hablada.
-
-title: Canal de voz ROS2 en reSpeaker Flex
+description: Un proyecto de TurtleSim con ROS2 controlado por voz que utiliza reSpeaker Flex y Groq AI para convertir comandos hablados en movimiento del robot en tiempo real, giros, y respuestas habladas.
+title: Canalización de voz ROS2 en reSpeaker 
 keywords:
   - reSpeaker
   - Robótica
   - ROS2
-image: https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png
 slug: /respeaker_flex_ros2_voice_pipeline
-sku: 114993700, 101991441, 114993701
+sku: 114993700, 101991441, 114993701,100099135,,100005504
 last_update:
   date: 5/27/2026
   author: Kasun Thushara
 createdAt: '2026-05-27'
-updatedAt: '2026-05-27'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/es/respeaker_flex_ros2_voice_pipeline/
 ---
 
@@ -21,7 +20,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_ros2_voice_pipeline/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
 
-Este proyecto convierte tu voz en control de TurtleSim usando una matriz de micrófonos reSpeaker Flex y ROS2. Di “Hey Jarvis” seguido de un comando, y Jarvis graba el audio, lo transcribe con Groq Whisper, interpreta la intención con Groq LLaMA y responde con Groq Orpheus TTS. Admite movimiento hacia adelante/atrás, giros angulares, orientación basada en DoA y comandos de parada instantánea. El sistema integra detección de palabra de activación, captura de audio, tópicos de ROS2 y publicación de comandos al simulador en una única canalización fluida. Está diseñado para una configuración rápida con Ubuntu y ROS2 Humble, lo que facilita la ejecución de experimentos de robots controlados por voz.
+Este proyecto convierte tu voz en control de TurtleSim usando una matriz de micrófonos reSpeaker y ROS2. Di “Hey Jarvis” seguido de un comando, y Jarvis graba el audio, lo transcribe con Groq Whisper, interpreta la intención con Groq LLaMA y responde con Groq Orpheus TTS. Admite movimiento hacia adelante/atrás, giros angulares, orientación basada en DoA y comandos de parada instantánea. El sistema integra detección de palabra de activación, captura de audio, tópicos de ROS2 y publicación de comandos al simulador en una única canalización fluida. Está diseñado para una configuración rápida con Ubuntu y ROS2 Humble, lo que facilita la ejecución de experimentos de robots controlados por voz.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={600} height="auto" /></p>
@@ -133,14 +132,14 @@ Desconecta y vuelve a conectar tu matriz de micrófonos USB reSpeaker para aplic
 Este proyecto utiliza la API en la nube gratuita de Groq para:
 - **Whisper** — conversión de voz a texto
 - **LLaMA 3** — comprensión de tus comandos
-- **Orpheus** — la respuesta de voz de Jarvis
+- **Orpheus** — respuesta de voz de Jarvis
 
 1. Ve a [console.groq.com](https://console.groq.com) y crea una cuenta gratuita
 2. Haz clic en **API Keys** en la barra lateral izquierda
-3. Haz clic en **Create API Key**, asígnale un nombre (por ejemplo, "jarvis") y cópiala
+3. Haz clic en **Create API Key**, ponle un nombre (por ejemplo, "jarvis") y cópiala
 4. Guárdala en un lugar seguro — la pegarás en `config.env` en breve
 
-> El nivel gratuito de Groq es lo bastante generoso para desarrollo y pruebas.
+> El nivel gratuito de Groq es lo suficientemente generoso para desarrollo y pruebas.
 > No se requiere tarjeta de crédito para comenzar.
 
 ---
@@ -200,9 +199,18 @@ source ~/.bashrc
 
 **6.1 Clonar el repositorio**
 
+**Si estás usando Flex**
+
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/KasunThushara/ros_voice_controller_flex.git my_robot_controller
+```
+
+**Si estás usando XVF3800**
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/KasunThushara/ros_voice_controller.git my_robot_controller
 ```
 
 > Tu espacio de trabajo ahora debería verse así:
@@ -286,7 +294,7 @@ Available INPUT devices:
         channels=2  rate=16000Hz
 ```
 
-Busca la línea que diga **reSpeaker Flex** o **reSpeaker Flex XVF3800**. Anota el número entre corchetes — ese es tu `MIC_INDEX`. Actualiza `config.env` con ese número.
+Encuentra la línea que dice **reSpeaker Flex** o **reSpeaker Flex XVF3800**. Anota el número entre corchetes — ese es tu `MIC_INDEX`. Actualiza `config.env` con ese número.
 
 ---
 
@@ -416,7 +424,7 @@ Todos los ajustes se encuentran en `config.env`. Edítalo y recompila para aplic
 | `WAKEWORD_MODEL` | `hey jarvis` | Frase de palabra de activación |
 | `WAKEWORD_THRESHOLD` | `0.5` | Sensibilidad de detección (0.0–1.0, menor = más sensible) |
 | `WAKEWORD_COOLDOWN` | `2` | Segundos antes de que la palabra de activación pueda volver a dispararse |
-| `RECORDING_SECONDS` | `4` | Tiempo de grabación después de que se active la palabra de activación |
+| `RECORDING_SECONDS` | `4` | Cuánto tiempo grabar después de que se active la palabra de activación |
 | `SAMPLE_RATE` | `16000` | Frecuencia de muestreo de audio en Hz |
 | `LLM_MODEL` | `llama-3.1-8b-instant` | Modelo Groq LLM para el análisis de intención |
 | `STT_MODEL` | `whisper-large-v3-turbo` | Modelo Groq Whisper para transcripción |
@@ -433,12 +441,12 @@ Creado con:
 - [ROS2 Humble](https://docs.ros.org/en/humble/) — middleware para robots
 - [openwakeword](https://github.com/dscripka/openWakeWord) — detección local de palabra de activación
 - [Groq](https://groq.com/) — Whisper STT ultrarrápido, LLaMA LLM, Orpheus TTS
-- [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — simulador de tortugas de ROS2
+- [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — simulador de tortugas ROS2
 
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
