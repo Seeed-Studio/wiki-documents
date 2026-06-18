@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-05-19'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_onboard/
 ---
 
