@@ -1991,17 +1991,17 @@ const sidebars = {
               collapsible: true,
               items: [
                 // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ha',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_edgeimpulse',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2_voice_pipeline',
+                // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_edgeimpulse',
+                // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
+                // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2',
+                // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2_voice_pipeline',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_voice_agent',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_xiaozhi',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora_ten_framework',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_picovoice',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_sensecraft',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_arm',
+                // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_picovoice',
+                // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_sensecraft',
+                // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_arm',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_openclaw',
               ],
             },
@@ -2018,16 +2018,6 @@ const sidebars = {
             id: 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_intro',
           },
           items: [
-            {
-              type: 'category',
-              label: '应用',
-              items: [
-                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_picovoice',
-                // 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lerobot_soarm',
-                // 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_rebot_arm',
-                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_ros',
-              ],
-            },
             {
               type: 'category',
               label: 'reSpeaker Flex 搭配 XIAO',
@@ -2115,13 +2105,6 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'TensorFlow',
-                  items: [
-                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_i2s_tflite',
-                  ],
-                },
-                {
-                  type: 'category',
                   label: '设备控制',
                   items: [
                     'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_rgb_test',
@@ -2175,7 +2158,7 @@ const sidebars = {
               label: '适用于 v2 用户',
               items: [
                 'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/cn_ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2',
-                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/cn_ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+                // 'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/cn_ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
               ],
             },
             'Sensor/ReSpeaker_2-Mics_Pi_HAT/cn_ReSpeaker_2_Mics_Pi_HAT-Hardware-Revisions',
@@ -2219,6 +2202,26 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lekiwi',
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lerobot_soarm',
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_rebot_arm',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_arm',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_ros',
+              ],
+            },
+            {
+              type: 'category',
+              label: '语音识别',
+              items: [
+                {
+                type: 'category',
+                label: 'TensorFlow',
+                items: [
+                  'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_i2s_tflite',
+                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
+                  'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/cn_ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+                ],
+              },
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_edgeimpulse',                
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_picovoice',
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_sensecraft',
               ],
             },
           ],

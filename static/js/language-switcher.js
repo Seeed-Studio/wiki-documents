@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-16 16:21:21 (北京时间)
-// 多语言页面: 2337 个
+// 生成时间: 2026-06-18 13:58:38 (北京时间)
+// 多语言页面: 2344 个
 
 (function() {
   'use strict';
@@ -773,6 +773,13 @@
     "pt"
   ],
   "/DeciAI-Getting-Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/deploy_tensorrt_edge_llm_on_jetpack6.2": [
     "cn",
     "en",
     "es",
@@ -1851,6 +1858,13 @@
     "pt"
   ],
   "/reserver_industrial_hardware_interface_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reserver_industrial_poe_camera_usage": [
     "cn",
     "en",
     "es",
@@ -4223,6 +4237,13 @@
     "ja",
     "pt"
   ],
+  "/update_internal_lr1110_firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/WM1302_module": [
     "cn",
     "en",
@@ -5918,6 +5939,34 @@
     "pt"
   ],
   "/rebot_b601_rs_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_grasping_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_lerobot": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_pinocchio_meshcat": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_ros2_integration": [
     "cn",
     "en",
     "es",
