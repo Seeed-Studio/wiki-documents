@@ -45,7 +45,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 介绍
 
-Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM20A SoC 的紧凑型、超低功耗无线开发板。它集成了 128 MHz Arm Cortex-M33 处理器、512 KB RAM、2 MB 片上 NVM、多协议 2.4 GHz 无线连接、板载 IMU、数字麦克风、8MB 外部 Flash、IPEX 天线连接器以及 nPM1300 PMIC，可用于先进的电池供电物联网、可穿戴设备、智能感知和边缘 AI 应用。
+Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM20A SoC 的紧凑型超低功耗无线开发板。它集成了 128 MHz Arm Cortex-M33 处理器、512 KB RAM、2 MB 片上 NVM、多协议 2.4 GHz 无线连接、板载 IMU、数字麦克风、8MB 外部 Flash、IPEX 天线连接器以及 nPM1300 PMIC，可用于先进的电池供电物联网、可穿戴设备、智能感知和边缘 AI 应用。
 
 ### 规格参数
 
@@ -136,7 +136,7 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM2
         轻睡眠：~9.96µA<br/>
         深度睡眠（系统关闭）：~4.76µA<br/>
         深度睡眠（系统关闭，GRTC 唤醒）：~4.92µA<br/>
-        运输模式：0.33µA
+        船运模式：0.33µA
       </td>
     </tr>
     <tr>
@@ -161,15 +161,15 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM2
 
 - **具备高级连接与安全性的强大 SoC**
 
-  Seeed Studio XIAO nRF54LM20A Sense 是一款由 Nordic Semiconductor nRF54LM20A SoC 驱动的紧凑型、超低功耗无线开发板。它配备 128 MHz Arm Cortex-M33 处理器、512 KB RAM、2 MB 片上 NVM、128 MHz RISC-V 协处理器、多协议 2.4 GHz 无线连接、板载 IMU、数字麦克风、8MB 外部 Flash、IPEX 天线连接器以及 Nordic nPM1300 PMIC，用于高效电源管理。凭借对 Bluetooth LE、Bluetooth Channel Sounding、Bluetooth Mesh、Thread、Zigbee、Matter 以及最高 4 Mbps 的专有 2.4 GHz 协议的支持，该开发板专为下一代互联产品而设计。板载的运动与音频传感器使其非常适合可穿戴设备、智能感知、TinyML、手势识别、语音触发设备以及电池供电的物联网应用。
+  Seeed Studio XIAO nRF54LM20A Sense 是一款由 Nordic Semiconductor nRF54LM20A SoC 驱动的紧凑型超低功耗无线开发板。它配备 128 MHz Arm Cortex-M33 处理器、512 KB RAM、2 MB 片上 NVM、128 MHz RISC-V 协处理器、多协议 2.4 GHz 无线连接、板载 IMU、数字麦克风、8MB 外部 Flash、IPEX 天线连接器以及 Nordic nPM1300 PMIC，用于高效电源管理。凭借对 Bluetooth LE、Bluetooth Channel Sounding、Bluetooth Mesh、Thread、Zigbee、Matter 以及最高 4 Mbps 的专有 2.4 GHz 协议的支持，该开发板专为下一代互联产品而设计。板载的运动与音频传感器使其非常适合用于可穿戴设备、智能感知、TinyML、手势识别、语音触发设备以及电池供电的物联网应用。
 
 - **超低功耗效率**
 
-  基于 Nordic nRF54LM20A 和 nPM1300 PMIC，XIAO nRF54LM20A Sense 在电池供电（BAT）下实现了仅 4.76 µA 的实测深度睡眠电流。结合 nPM1300 PMIC 及其 0.33 µA 的运输模式 BAT 电流，在有源无线工作状态下，在 3.7 V 模拟电池输入、发射功率设置为 +8 dBm 的条件下，其平均电流仅为 3.87 mA，非常适合长寿命电池供电的传感应用、可穿戴设备以及始终在线的物联网设备。
+  基于 Nordic nRF54LM20A 和 nPM1300 PMIC，XIAO nRF54LM20A Sense 在电池供电（BAT）下实现了仅 4.76 µA 的实测深度睡眠电流。结合 nPM1300 PMIC 及其 0.33 µA 船运模式 BAT 电流，在无线工作状态下，以 3.7 V 模拟电池输入、发射功率设置为 +8 dBm 时，其平均电流仅为 3.87 mA，非常适合长寿命电池供电的传感应用、可穿戴设备以及始终在线的物联网设备。
 
 - **精简的开发体验**
 
-  对 Nordic nRF Connect SDK 和 PlatformIO（Zephyr）的完整支持，可实现高效的嵌入式开发流程。（注意：当前不支持 Arduino IDE）
+  对 Nordic nRF Connect SDK 和 PlatformIO（Zephyr）的完整支持，使嵌入式开发流程更加高效。（注意：当前不支持 Arduino IDE）
 
 ## 硬件概览
 
@@ -223,58 +223,58 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM2
   </TabItem>
 </div> -->
 
-## **引脚映射**
+## **引脚图**
 
-| XIAO 引脚     | 功能           | 芯片引脚                          | 描述                                                                         |
+| XIAO 引脚      | 功能           | 芯片引脚                          | 描述                                                                         |
 | :------------: | :------------: | :-------------------------------: | :-------------------------------------------------------------------------- |
 | **电源引脚**   |                |                                   |                                                                             |
-| VBUS           | VBUS           | -                                 | 5V 电源输入/输出                                                            |
+| VBUS           | VBUS           | -                                 | 5V 电源输入/输出                                                             |
 | GND            | GND            | -                                 | 地                                                                          |
-| 3V3            | 3V3-OUT        | -                                 | 3.3V 电源输出                                                               |
-| BAT+           | BAT+           | -                                 | 电池输入（通过 I²C 由 nPM1300 监测）                                        |
-| BAT-           | BAT-           | -                                 | 电池负极端子                                                                |
-| SHPHLD         | SHPHLD         | -                                 | PMIC 运输/休眠模式控制（超低功耗运输状态）                                  |
+| 3V3            | 3V3-OUT        | -                                 | 3.3V 电源输出                                                                |
+| BAT+           | BAT+           | -                                 | 电池输入（通过 I²C 由 nPM1300 监测）                                         |
+| BAT-           | BAT-           | -                                 | 电池负极端子                                                                 |
+| SHPHLD         | SHPHLD         | -                                 | PMIC 船运/休眠模式控制（超低功耗运输状态）                                   |
 | **系统与控制引脚** |             |                                   |                                                                             |
-| RESET          | RESET          | -                                 | 板级复位                                                                    |
-| SWCLK          | SWCLK          | nRF54LM20A SWCLK / SAMD11 SWCLK   | 串行线时钟（用于 nRF54 和 SAMD11）                                          |
-| SWDIO          | SWDIO          | nRF54LM20A SWDIO / SAMD11 SWDIO   | 串行线数据（用于 nRF54 和 SAMD11）                                          |
-| SAMD11_RESET   | RESET          | SAMD11 RESET                      | SAMD11 协处理器复位                                                         |
+| RESET          | RESET          | -                                 | 板级复位                                                                     |
+| SWCLK          | SWCLK          | nRF54LM20A SWCLK / SAMD11 SWCLK   | 串行线时钟（用于 nRF54 和 SAMD11）                                           |
+| SWDIO          | SWDIO          | nRF54LM20A SWDIO / SAMD11 SWDIO   | 串行线数据（用于 nRF54 和 SAMD11）                                           |
+| SAMD11_RESET   | RESET          | SAMD11 RESET                      | SAMD11 协处理器复位                                                          |
 | **用户与 LED 引脚** |            |                                   |                                                                             |
-| -              | USER_BUTTON    | P0.09                             | 用户按钮输入                                                                |
-| -              | RGB-B          | P1.23                             | 板载 RGB LED 蓝色通道                                                       |
-| -              | RGB-G          | P1.24                             | 板载 RGB LED 绿色通道                                                       |
-| -              | RGB-R          | P1.22                             | 板载 RGB LED 红色通道                                                       |
+| -              | USER_BUTTON    | P0.09                             | 用户按钮输入                                                                 |
+| -              | RGB-B          | P1.23                             | 板载 RGB LED 蓝色通道                                                        |
+| -              | RGB-G          | P1.24                             | 板载 RGB LED 绿色通道                                                        |
+| -              | RGB-R          | P1.22                             | 板载 RGB LED 红色通道                                                        |
 | **模拟输入 (ADC) 引脚** |        |                                   |                                                                             |
-| A0             | AIN0           | P1.00                             | 模拟输入 0 / GPIO                                                           |
-| A1             | AIN1           | P1.31                             | 模拟输入 1 / GPIO                                                           |
-| A2             | AIN2           | P1.30                             | 模拟输入 2 / GPIO                                                           |
-| A3             | AIN3           | P1.29                             | 模拟输入 3 / GPIO                                                           |
-| A7             | AIN7           | P1.03                             | 模拟输入 7 / GPIO                                                           |
+| A0             | AIN0           | P1.00                             | 模拟输入 0 / GPIO                                                            |
+| A1             | AIN1           | P1.31                             | 模拟输入 1 / GPIO                                                            |
+| A2             | AIN2           | P1.30                             | 模拟输入 2 / GPIO                                                            |
+| A3             | AIN3           | P1.29                             | 模拟输入 3 / GPIO                                                            |
+| A7             | AIN7           | P1.03                             | 模拟输入 7 / GPIO                                                            |
 | **I2C 引脚**   |                |                                   |                                                                             |
-| SDA            | I2C_SDA        | P1.03                             | I2C 数据线（IMU 与外设）                                                    |
-| SCL            | I2C_SCL        | P1.07                             | I2C 时钟线（IMU 与外设）                                                    |
-| -              | BAT_SDA        | P1.18                             | 电池监测 I2C SDA（nPM1300）                                                 |
-| -              | BAT_SCL        | P1.17                             | 电池监测 I2C SCL（nPM1300）                                                 |
+| SDA            | I2C_SDA        | P1.03                             | I2C 数据线（IMU 与外设）                                                     |
+| SCL            | I2C_SCL        | P1.07                             | I2C 时钟线（IMU 与外设）                                                     |
+| -              | BAT_SDA        | P1.18                             | 电池监测 I2C SDA（nPM1300）                                                  |
+| -              | BAT_SCL        | P1.17                             | 电池监测 I2C SCL（nPM1300）                                                  |
 | **UART 引脚**  |                |                                   |                                                                             |
-| TX             | UART_TX        | P1.08                             | UART 发送                                                                   |
-| RX             | UART_RX        | P1.09                             | UART 接收                                                                   |
+| TX             | UART_TX        | P1.08                             | UART 发送                                                                    |
+| RX             | UART_RX        | P1.09                             | UART 接收                                                                    |
 | **SPI 引脚**   |                |                                   |                                                                             |
-| MOSI           | SPI_MOSI       | P1.06                             | SPI 主出从入                                                                |
-| MISO           | SPI_MISO       | P1.05                             | SPI 主入从出                                                                |
-| SCK            | SPI_SCK        | P1.04                             | SPI 串行时钟                                                                |
+| MOSI           | SPI_MOSI       | P1.06                             | SPI 主出从入                                                                 |
+| MISO           | SPI_MISO       | P1.05                             | SPI 主入从出                                                                 |
+| SCK            | SPI_SCK        | P1.04                             | SPI 串行时钟                                                                 |
 | **板载外设引脚** |               |                                   |                                                                             |
-| -              | MIC_DAT        | P1.14                             | 麦克风数据线                                                                |
-| -              | MIC_CLK        | P1.13                             | 麦克风时钟线                                                                |
-| -              | IMU_SDA        | P0.08                             | IMU I2C SDA（板载 IMU）                                                     |
-| -              | IMU_SCL        | P0.07                             | IMU I2C SCL（板载 IMU）                                                     |
-| -              | IMU_CS         | P3.12                             | IMU 片选                                                                    |
-| -              | IMU_INT1       | P0.06                             | IMU 中断 1                                                                  |
-| -              | NFC            | P1.02 / P1.01                     | NFC 天线引脚                                                                |
-| -              | GRTC           | P0.04 / P0.05                     | 通用 RTC 引脚                                                               |
+| -              | MIC_DAT        | P1.14                             | 麦克风数据线                                                                 |
+| -              | MIC_CLK        | P1.13                             | 麦克风时钟线                                                                 |
+| -              | IMU_SDA        | P0.08                             | IMU I2C SDA（板载 IMU）                                                      |
+| -              | IMU_SCL        | P0.07                             | IMU I2C SCL（板载 IMU）                                                      |
+| -              | IMU_CS         | P3.12                             | IMU 片选                                                                     |
+| -              | IMU_INT1       | P0.06                             | IMU 中断 1                                                                   |
+| -              | NFC            | P1.02 / P1.01                     | NFC 天线引脚                                                                 |
+| -              | GRTC           | P0.04 / P0.05                     | 通用 RTC 引脚                                                                |
 
 ## 使用 PlatformIO 入门
 
-在本节中，我们将通过 RGB LED 的多彩闪烁效果，带你快速上手 XIAO nRF54LM20A。
+在本节中，我们将通过 RGB LED 的多色闪烁效果，带你快速上手 XIAO nRF54LM20A。
 请先完成下面的软硬件准备，为后续在 XIAO 上的开发做好环境搭建。
 
 ### 硬件准备
@@ -378,11 +378,11 @@ board = seeed-xiao-nrf54lm20a
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-3. 创建完成后，会弹出打开工作区的提示，点击 OK。
+3. 创建完成后，会弹出打开工作区的提示。点击 OK。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_4.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-4. 进入项目文件夹。如果你没有指定自定义路径，文件将存放在默认目录下。
+4. 进入项目文件夹。如果你没有指定自定义路径，文件将存储在默认目录中。
 
 - Windows 默认路径：
 
@@ -400,7 +400,7 @@ board = seeed-xiao-nrf54lm20a
 
 ### 添加 Blink 程序
 
-本教程基于 Zephyr RTOS 开发。项目由以下三个核心文件组成：
+本教程基于 Zephyr RTOS 开发。项目由三个核心文件组成：
 
 - `main.c`：包含应用逻辑的主程序。
 - `app.overlay`：用于硬件外设配置的 Devicetree 覆盖文件。
@@ -519,7 +519,7 @@ int main(void)
 
 2. 添加 app.overlay 文件
 
-在新建的空白示例中不存在 Devicetree 覆盖文件，你需要在 zephyr 目录下添加该文件。
+在新创建的空白示例中不存在 Devicetree 覆盖文件，你需要在 zephyr 目录下添加该文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_7.png" style={{width:800, height:'auto'}}/></div>
 
@@ -597,13 +597,13 @@ pio run -e seeed-xiao-nrf54lm20a -t upload -v
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_9.png" style={{width:800, height:'auto'}}/></div>
 
-### 观察运行效果
+### 观察运行结果
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:800, height:'auto'}}/></div>
 
 ## 蓝牙天线
 
-本开发板使用外置蓝牙天线。为了确保更好的蓝牙信号质量并提升你的蓝牙使用体验，建议安装蓝牙天线。
+该开发板使用外置蓝牙天线。为了确保更好的蓝牙信号质量并提升你的蓝牙使用体验，建议安装蓝牙天线。
 连接方式如下图所示：
 
 <div style={{textAlign: 'center'}}>
@@ -635,13 +635,13 @@ XIAO nRF54LM20A 支持使用 3.7V 锂电池作为电源输入。你可以参考�
 **电池使用说明：**
 
 1. 请使用符合规格要求的合格电池。
-2. 使用电池时，XIAO 可以通过数据线连接到你的电脑设备，请放心，XIAO 内置电路保护芯片，使用安全。
+2. 使用电池时，XIAO 可以通过数据线连接到你的计算机设备，请放心，XIAO 内置电路保护芯片，使用安全。
 
 
 
 ### 电池电压检测
 
-XIAO nRF54LM20A 集成了电池电压检测功能，核心是利用 nPM1300-CAA 负载开关高效管理电池电量测量。本指南将重点分析电池检测的软件实现（尤其是 `main.c` 代码），并指导你如何在 PlatformIO 环境中轻松部署和使用该功能，从而避免直接使用 Zephyr NCS SDK 的复杂性。
+XIAO nRF54LM20A 集成了电池电压检测功能，核心是利用 nPM1300-CAA 负载开关高效管理电池电量测量。本指南将重点分析电池检测的软件实现部分（尤其是 **main.c 代码**），并指导你如何在 PlatformIO 环境中轻松部署和使用该功能，从而避免直接使用 Zephyr NCS SDK 带来的复杂性。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_10.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -661,12 +661,12 @@ nPM1300-CAA 是一款高度集成的电源管理 IC（PMIC），用于替代 TPS
 </div><br/>
 
 :::note
-以下示例同时适用于 PlatformIO 和 nRF Connect SDK。在 PlatformIO 中可以直接使用，而在 SDK 中则需要手动添加文件。请参考此[链接](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#电池供电板)
+下面的示例同时适用于 PlatformIO 和 nRF Connect SDK。在 PlatformIO 中可以直接使用，而在 SDK 中则需要手动添加文件。请参考此[链接](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#电池供电板)
 :::
 
 ## 外设概览
 
-本板载外设电路包括 IMU 和麦克风。你可以在下图中看到它们的位置：
+本板载的外设电路包括 IMU 和麦克风。你可以在下图中看到它们的位置：
 
 <div style={{textAlign: 'center'}}>
   <img
@@ -678,13 +678,13 @@ nPM1300-CAA 是一款高度集成的电源管理 IC（PMIC），用于替代 TPS
 
 ## IMU
 
-XIAO nRF54LM20A 搭载 LSM6DS3TR-C IMU，支持 6 轴加速度计、陀螺仪和磁力计。
+XIAO nRF54LM20A Sense 搭载了一颗 LSM6DS3TR-C IMU，内含 3 轴加速度计和 3 轴陀螺仪。
 
 - [XIAO nRF54LM20A IMU 使用方法](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/#imu)
 
 ## MIC
 
-XIAO nRF54LM20A 配备 MSM261DGT006 麦克风，支持 16 位音频采集。
+XIAO nRF54LM20A Sense 配备了一颗 MSM261DGT006 数字麦克风用于音频采集。
 - [XIAO nRF54LM20A MIC 使用方法](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/#mic)
 
 ## 常见问题
@@ -714,7 +714,7 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 2. **安装后出现 zsh: command not found: openocd**
 
-在终端中直接输入 “openocd” 时，shell 只会在 PATH 中包含的目录里搜索；如果尚未将该目录加入 PATH，就会提示找不到该命令。只需按照下面的说明，将其永久添加到 ~/.zshrc 中即可。
+在终端中直接输入 “openocd” 时，shell 只会在 PATH 中包含的目录里查找；如果尚未将对应目录加入 PATH，就会提示找不到该命令。只需按照下面的说明，将其永久添加到 ~/.zshrc 中即可。
 此解决方案仅适用于 macOS 用户
 
 ```shell
@@ -723,7 +723,7 @@ source ~/.zshrc
 openocd --version
 ```
 
-3. **如果之前多次下载 Seeed Studio XIAO 系列开发板，现在 Platform 项目的下拉选择失败怎么办？**
+3. **如果之前多次下载 Seeed Studio XIAO 系列开发板，现在 Platform 项目的下拉列表加载失败怎么办？**
 
 建议先进行清理后再重试。PlatformIO 本地 packages 下累积的重复和过期的 Seeed 平台文件夹会导致文件查找路径过长以及版本冲突，从而造成项目加载失败。请按照以下步骤清理多余的混合来源 Seeed 平台目录，仅保留由 PlatformIO 自动拉取的官方平台，以避免旧的或错误目录引发冲突：
 删除所有以 platform-seeed- 和 framework-seeed- 开头的文件夹

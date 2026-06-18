@@ -84,9 +84,12 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
                 <span className="text">reBot B601-RS 快速开始</span>
                 <span className="tag recommended">New</span>
               </a>
+              <a href="/cn/rebot_arm_b601_rs_lerobot/" className="content-card">
+                <span className="text">reBot B601-RS 与 LeRobot</span>
+                <span className="tag recommended">New</span>
+              </a>
               <a href="/cn/rebot_b601_dm_getting_started/" className="content-card">
                 <span className="text">reBot B601-DM 快速开始</span>
-                <span className="tag recommended">New</span>
               </a>
               <a href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
                 <span className="text">reBot B601-DM 与 Pinocchio</span>
@@ -97,8 +100,14 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               <a href="/cn/rebot_arm_b601_dm_grasping_demo/" className="content-card">
                 <span className="text">reBot B601-DM 视觉夹取 Demo</span>
               </a>
+              <a href="/cn/rebot_arm_b601_rs_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-RS 视觉夹取 Demo</span>
+              </a>
               <a href="/cn/rebot_arm_b601_dm_ros2_integration/" className="content-card">
                 <span className="text">reBot B601-DM ROS2 集成</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_ros2_integration/" className="content-card">
+                <span className="text">reBot B601-RS ROS2 集成</span>
               </a>
           </div>
 
