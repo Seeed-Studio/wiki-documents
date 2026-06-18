@@ -3983,7 +3983,8 @@ const sidebars = {
                   label: 'reServer Industrial J30/40',
                   items: [
                     'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/pt_reServer_Industrial_Getting_Started',
-                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/pt_reServer_Industrial_Hardware_Interface_Usage'
+                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/pt_reServer_Industrial_Hardware_Interface_Usage',
+                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/pt_reServer_Industrial_POE_Camera_Usage',
                   ],
                 },
                 {
@@ -4166,6 +4167,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_vnc_for_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Implement_Ethercat_communication_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Distributed_llama_cpp_RPC_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Jetson_SPI_Getting_Start',
               ]
             },
