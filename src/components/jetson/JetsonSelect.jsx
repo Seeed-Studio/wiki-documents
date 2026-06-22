@@ -98,6 +98,7 @@ export const ProductSelect = ({ children, options, lang }) => {
 
   // L4T version and corresponding JetPack SDK version
   const L4T2JPVers = {
+    '39.2.0': 'R39.2.0 (JetPack 7.2🚀)',
     '36.4.3 (GMSL❌)': 'R36.4.3 (GMSL❌) (JetPack 6.2🚀)',
     '36.4.3 (GMSL✅)': 'R36.4.3 (GMSL✅) (JetPack 6.2🚀)',
     '36.4.3': 'R36.4.3 (JetPack 6.2🚀)',
