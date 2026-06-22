@@ -11,7 +11,7 @@ keywords:
   - YOLO
   - TensorRT
   - Visual Grasping
-image: https://files.seeedstudio.com/wiki/graspnet/front-graspnet.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-e26052001-rebot-arm-b601-dm-bundle-with-jetson-thor.jpg
 slug: /rebot_arm_b601_dm_graspnet_visual_grasping
 sku: E26051901
 last_update:
