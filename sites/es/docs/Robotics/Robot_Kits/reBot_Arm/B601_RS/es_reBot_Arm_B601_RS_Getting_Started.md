@@ -221,5 +221,5 @@ motorbridge-gateway --bind 127.0.0.1:9002
 Consulta el vídeo para conocer el uso. Antes de operar el brazo robótico, necesitas restablecer de nuevo el punto cero.
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/WcjDPm8GUDM" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
