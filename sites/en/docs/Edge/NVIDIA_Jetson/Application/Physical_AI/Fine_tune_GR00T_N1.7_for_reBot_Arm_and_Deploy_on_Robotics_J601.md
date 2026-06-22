@@ -7,7 +7,7 @@ keywords:
   - reBot Arm
   - gr00t n1.7
   - reComputer
-image: https://files.seeedstudio.com/wiki/other/cover1.png
+image: https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
 slug: /fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601
 sku: E26052001
 last_update:

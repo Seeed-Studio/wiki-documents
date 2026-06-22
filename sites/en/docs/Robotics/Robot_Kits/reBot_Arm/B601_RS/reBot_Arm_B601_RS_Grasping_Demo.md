@@ -9,6 +9,7 @@ keywords:
   - YOLO
   - Hand-Eye Calibration
   - Robot
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif
 slug: /rebot_arm_b601_rs_grasping_demo
 last_update:
   date: 2026-06-17
