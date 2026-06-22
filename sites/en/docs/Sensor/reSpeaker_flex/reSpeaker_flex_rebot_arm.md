@@ -1,6 +1,6 @@
 ---
 description: This document will take you hand in hand from scratch to build a "listening and moving" intelligent robot arm system. Even if you have never touched the robotic arm or hardware development, as long as you follow the steps, you can successfully reproduce this project!
-title: Control reBot Arm using voice with reSpeaker 
+title: Control reBot Arm using voice with reSpeaker
 keywords:
   - reSpeaker
   - python
@@ -14,7 +14,7 @@ last_update:
   date: 5/22/2026
   author: wuxinrui
 createdAt: '2026-05-22'
-updatedAt: '2026-05-22'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_flex/
 ---
 

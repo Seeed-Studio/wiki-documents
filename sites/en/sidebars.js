@@ -1989,27 +1989,6 @@ const sidebars = {
                 },
               ],
             },
-            {
-              type: 'category',
-              label: 'Applications',
-              collapsed: true,
-              collapsible: true,
-              items: [
-                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2_voice_pipeline',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_voice_agent',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_xiaozhi',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_picovoice',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_sensecraft',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_arm',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
-              ],
-            },
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_python_sdk',
           ],
         },
@@ -2023,16 +2002,6 @@ const sidebars = {
             id: 'Sensor/reSpeaker_flex/reSpeaker_flex_intro',
           },
           items: [
-            {
-              type: 'category',
-              label: 'Application',
-              items: [
-                'Sensor/reSpeaker_flex/reSpeaker_flex_picovoice',
-                //'Sensor/reSpeaker_flex/reSpeaker_flex_lerobot_soarm',
-                //'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_ros',
-              ],
-            },
             {
               type: 'category',
               label: 'reSpeaker Flex with Xiao',
@@ -2120,13 +2089,6 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'TensorFlow',
-                  items: [
-                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
-                  ],
-                },
-                {
-                  type: 'category',
                   label: 'Device Control',
                   items: [
                     'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
@@ -2180,7 +2142,7 @@ const sidebars = {
               label: 'For v2 Users',
               items: [
                 'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2',
-                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+                //'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
               ],
             },
             'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT-Hardware-Revisions',
@@ -2224,8 +2186,41 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/reSpeaker_flex_lekiwi',
                 'Sensor/reSpeaker_flex/reSpeaker_flex_lerobot_soarm',
                 'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_arm',
+                'Sensor/reSpeaker_flex/reSpeaker_flex_ros',
               ],
             },
+            {
+              type: 'category',
+              label: 'Speech Recognition',
+              items: [
+                {
+                type: 'category',
+                label: 'TensorFlow',
+                items: [
+                  'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
+                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
+                  'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+                ],
+              },
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',                
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_picovoice',
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_sensecraft',
+              ],
+            },
+                        {
+              type: 'category',
+              label: 'Conversational AI',
+              items: [
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_voice_agent',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_xiaozhi',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
+
+              ],
+            },
+
           ],
         },
       ],
@@ -3996,7 +3991,8 @@ const sidebars = {
                   label: 'reServer Industrial J30/40',
                   items: [
                     'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Industrial_Getting_Started',
-                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Industrial_Hardware_Interface_Usage'
+                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Industrial_Hardware_Interface_Usage',
+                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Industrial_POE_Camera_Usage',
                   ],
                 },
                 {
@@ -4179,6 +4175,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/vnc_for_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Implement_Ethercat_communication_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Distributed_llama_cpp_RPC_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Jetson_SPI_Getting_Start',
               ]
             },
@@ -4479,6 +4476,10 @@ const sidebars = {
               label: 'B601-RS',
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Getting_Started',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Lerobot',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Grasping_Demo',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_ROS2_Integration',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_pinocchio',
               ]
             }
           ]

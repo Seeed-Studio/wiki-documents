@@ -1,19 +1,18 @@
 ---
-description: 一个使用 reSpeaker Flex 和 Groq AI 的语音控制 ROS2 TurtleSim 项目，将口头指令转换为实时机器人移动、转向动作和语音反馈。
-
-title: 在 reSpeaker Flex 上构建 ROS2 语音流水线
+description: 一个使用 reSpeaker Flex 和 Groq AI 的语音控制 ROS2 TurtleSim 项目，将口头指令转换为实时机器人运动、转向动作和语音反馈。
+title: 在 reSpeaker 上构建 ROS2 语音流水线 
 keywords:
   - reSpeaker
   - 机器人技术
   - ROS2
-image: https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png
 slug: /respeaker_flex_ros2_voice_pipeline
-sku: 114993700, 101991441, 114993701
+sku: 114993700, 101991441, 114993701,100099135,,100005504
 last_update:
   date: 5/27/2026
   author: Kasun Thushara
 createdAt: '2026-05-27'
-updatedAt: '2026-05-27'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/cn/respeaker_flex_ros2_voice_pipeline/
 ---
 
@@ -21,7 +20,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_flex_ros2_voice_pipeline/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
 
-本项目使用 reSpeaker Flex 麦克风阵列和 ROS2，将你的语音转换为 TurtleSim 控制。说出 “Hey Jarvis” 加上一条指令，Jarvis 会录制音频，使用 Groq Whisper 转写，使用 Groq LLaMA 解析意图，并通过 Groq Orpheus TTS 做出语音回应。它支持前进/后退运动、角度转向、基于声源方向（DoA）的朝向以及立即停止指令。系统将唤醒词检测、音频采集、ROS2 话题以及模拟器指令发布整合到一个无缝的流水线中。它针对 Ubuntu 和 ROS2 Humble 进行了快速部署设计，使语音驱动的机器人实验易于运行。
+本项目使用 reSpeaker 麦克风阵列和 ROS2，将你的语音转换为 TurtleSim 控制。说出 “Hey Jarvis” 加上一条指令，Jarvis 会录制音频，使用 Groq Whisper 转写，使用 Groq LLaMA 解析意图，并通过 Groq Orpheus TTS 做出语音回应。它支持前进/后退运动、角度转向、基于声源方向（DoA）的朝向以及即时停止指令。系统将唤醒词检测、音频采集、ROS2 话题以及模拟器指令发布整合到一个无缝的流水线中。它针对 Ubuntu 和 ROS2 Humble 进行了快速部署设计，使语音驱动的机器人实验易于运行。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={600} height="auto" /></p>
@@ -106,7 +105,7 @@ ros2 run turtlesim turtle_teleop_key
 sudo nano /etc/udev/rules.d/50-respeaker.rules
 ```
 
-在文件中添加以下几行：
+在文件中添加以下内容：
 
 ```bash
 # ReSpeaker USB Mic Array
@@ -128,9 +127,9 @@ sudo service udev restart
 
 ---
 
-## 第 3 部分 — 获取 Groq API Key
+## 第 3 部分 — 获取 Groq API 密钥
 
-本项目使用 Groq 的免费云 API 来实现：
+本项目使用 Groq 的免费云 API 来完成以下任务：
 - **Whisper** — 语音转文本
 - **LLaMA 3** — 理解你的指令
 - **Orpheus** — Jarvis 的语音回复
@@ -149,7 +148,7 @@ sudo service udev restart
 
 > **重要：** 不要为本项目使用虚拟环境。
 > ROS2 使用系统 Python，无法看到安装在 venv 中的包。
-> 我们使用 `--break-system-packages` 安装所有内容，以便让 ROS2 节点可以使用这些包。
+> 我们使用 `--break-system-packages` 安装所有内容，以便 ROS2 节点可以使用它们。
 
 ```bash
 pip install \
@@ -200,12 +199,21 @@ source ~/.bashrc
 
 **6.1 克隆仓库**
 
+**如果你使用的是 Flex**
+
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/KasunThushara/ros_voice_controller_flex.git my_robot_controller
 ```
 
-> 你的工作空间现在应类似如下结构：
+**如果你使用的是 XVF3800**
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/KasunThushara/ros_voice_controller.git my_robot_controller
+```
+
+> 你的工作空间现在应该如下所示：
 > ```
 > ~/ros2_ws/
 > └── src/
@@ -228,7 +236,7 @@ cp config.env.example config.env
 nano config.env
 ```
 
-打开该文件并填写你的参数：
+打开文件并填写你的参数：
 
 ```env
 # ── Groq API (required) ────────────────────────────────
@@ -409,19 +417,19 @@ reSpeaker Flex (USB)
 
 所有设置都保存在 `config.env` 中。编辑并重新构建以应用更改。
 
-| 变量 | 默认值 | 描述 |
+| 变量 | 默认值 | 说明 |
 |---|---|---|
 | `GROQ_API_KEY` | *(required)* | 你的 Groq API 密钥 |
 | `MIC_INDEX` | `1` | reSpeaker 的 PyAudio 设备索引 |
 | `WAKEWORD_MODEL` | `hey jarvis` | 唤醒词短语 |
 | `WAKEWORD_THRESHOLD` | `0.5` | 检测灵敏度（0.0–1.0，数值越低越灵敏） |
 | `WAKEWORD_COOLDOWN` | `2` | 唤醒词可再次触发前的秒数 |
-| `RECORDING_SECONDS` | `4` | 唤醒词触发后录音的时长 |
+| `RECORDING_SECONDS` | `4` | 唤醒词触发后录音时长 |
 | `SAMPLE_RATE` | `16000` | 音频采样率（Hz） |
 | `LLM_MODEL` | `llama-3.1-8b-instant` | 用于意图解析的 Groq LLM 模型 |
-| `STT_MODEL` | `whisper-large-v3-turbo` | 用于转录的 Groq Whisper 模型 |
+| `STT_MODEL` | `whisper-large-v3-turbo` | 用于转写的 Groq Whisper 模型 |
 | `TTS_MODEL` | `canopylabs/orpheus-v1-english` | Groq TTS 模型 |
-| `TTS_VOICE` | `autumn` | 语音输出所用的声音（`tara`、`leah`、`leo`、`dan`、`mia`） |
+| `TTS_VOICE` | `autumn` | 语音输出的声音（`tara`、`leah`、`leo`、`dan`、`mia`） |
 
 ---
 
@@ -433,12 +441,12 @@ reSpeaker Flex (USB)
 - [ROS2 Humble](https://docs.ros.org/en/humble/) — 机器人中间件
 - [openwakeword](https://github.com/dscripka/openWakeWord) — 本地唤醒词检测
 - [Groq](https://groq.com/) — 超高速 Whisper STT、LLaMA LLM、Orpheus TTS
-- [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — ROS2 海龟模拟器
+- [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — ROS2 乌龟模拟器
 
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

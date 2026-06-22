@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-16 14:53:06 (北京时间)
-// 多语言页面: 2335 个
+// 生成时间: 2026-06-18 13:58:38 (北京时间)
+// 多语言页面: 2344 个
 
 (function() {
   'use strict';
@@ -779,6 +779,13 @@
     "ja",
     "pt"
   ],
+  "/deploy_tensorrt_edge_llm_on_jetpack6.2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/develop_recomputer_jetson_using_clawdbot": [
     "cn",
     "en",
@@ -1102,6 +1109,13 @@
     "pt"
   ],
   "/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601": [
     "cn",
     "en",
     "es",
@@ -1844,6 +1858,13 @@
     "pt"
   ],
   "/reserver_industrial_hardware_interface_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reserver_industrial_poe_camera_usage": [
     "cn",
     "en",
     "es",
@@ -3446,6 +3467,13 @@
     "ja",
     "pt"
   ],
+  "/wifi_halow_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_hardware_and_specs": [
     "cn",
     "en",
@@ -4203,6 +4231,13 @@
     "pt"
   ],
   "/connect_wio_tracker_to_locator": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/update_internal_lr1110_firmware": [
     "cn",
     "en",
     "es",
@@ -5904,6 +5939,34 @@
     "pt"
   ],
   "/rebot_b601_rs_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_grasping_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_lerobot": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_pinocchio_meshcat": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_ros2_integration": [
     "cn",
     "en",
     "es",

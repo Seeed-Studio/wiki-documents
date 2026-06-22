@@ -1,50 +1,50 @@
 ---
 description: Desbloqueie um poderoso controle por voz com o ReSpeaker XVF3800 USB 4-Mic Array e o XIAO ESP32S3. Com captura de áudio em 360°, supressão de ruído e detecção de palavra de ativação TinyML via Edge Impulse — perfeito para dispositivos inteligentes, robótica e projetos de IoT.
-title: Reconhecimento de Fala com TinyML usando Edge Impulse
+title: Reconhecimento de fala TinyML com Edge Impulse com reSpeaker XVF3800
 keywords:
   - reSpeaker
   - XIAO
   - ESP32S3
   - Edge Impulse
   - TinyML
-  - Reconhecimento de Fala
+  - Reconhecimento de fala
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /respeaker_xvf3800_xiao_edge_impulse
 last_update:
   date: 8/7/2025
   author: Kasun Thushara
 createdAt: '2025-08-08'
-updatedAt: '2026-03-13'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_xiao_edge_impulse/
 ---
 
-## Visão Geral
+## Visão geral
 
 
-Desbloqueie o controle sem uso das mãos com detecção de comandos de voz em tempo real usando um sistema de Keyword Spotting (KWS) alimentado por TinyML. Ao combinar o array de microfones de alto desempenho ReSpeaker XVF3800 com o eficiente XIAO ESP32S3 e a plataforma Edge Impulse, trazemos reconhecimento de voz para dispositivos compactos e de baixo consumo. Treine, faça o deploy e escute — seu dispositivo estará sempre pronto para o seu próximo comando!
+Desbloqueie o controle sem uso das mãos com detecção de comandos de voz em tempo real usando um sistema de Keyword Spotting (KWS) alimentado por TinyML. Ao combinar o array de microfones de alto desempenho ReSpeaker XVF3800 com o eficiente XIAO ESP32S3 e a plataforma Edge Impulse, trazemos reconhecimento de voz para dispositivos compactos e de baixo consumo. Treine, faça o deploy e ouça — seu dispositivo estará sempre pronto para o seu próximo comando!
 
-## Hardware Necessário
+## Hardware necessário
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-      <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+      <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
 ## Coleta de dados 
 
-### Instalação do Firmware USB para o ReSpeaker XVF3800 com XIAO ESP32S3
+### Instalação do firmware USB para ReSpeaker XVF3800 com XIAO ESP32S3
 
-Para começar a coleta de dados de áudio, certifique-se de que o seu ReSpeaker esteja gravado com o firmware USB, permitindo que ele funcione como um microfone USB.
+Para iniciar a coleta de dados de áudio, certifique-se de que o seu ReSpeaker esteja gravado com o firmware USB, permitindo que ele funcione como um microfone USB.
 
 
 [**Firmware Installation Wiki**](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#update-firmware)
 
 [**Firmware Files**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
 
-### Configurar o Ambiente Python
+### Configurar o ambiente Python
 
 Em seguida, você precisa criar um **ambiente python no seu laptop ou PC para coletar os dados de voz**. Aqui vamos criar o respeaker-env
 
@@ -53,13 +53,13 @@ python -m venv respeaker-env
 source respeaker-env/bin/activate  
 ```
 
-Instalar as Bibliotecas Necessárias:
+Instalar bibliotecas necessárias:
 
 ```bash
 pip install sounddevice scipy numpy 
 ```
 
-### Encontrar o ID do Dispositivo ReSpeaker
+### Encontrar o ID do dispositivo ReSpeaker
 
 Para gravar a partir da entrada de microfone correta, precisamos identificar o índice de dispositivo do microfone ReSpeaker.
 
@@ -72,9 +72,9 @@ for i, device in enumerate(devices):
 
 ```
 
-Procure o nome de dispositivo que corresponda ao ReSpeaker (frequentemente nomeado algo como ReSpeaker XVF3800 USB 4-Mic Array) e anote o número de índice (por exemplo, Device 2).
+Procure o nome de dispositivo que corresponde ao ReSpeaker (geralmente algo como ReSpeaker XVF3800 USB 4-Mic Array) e anote o número de índice (por exemplo, Device 2).
 
-### Gravar Amostras de Áudio
+### Gravar amostras de áudio
 
 O script a seguir permitirá que você grave amostras de áudio rotuladas, organizadas por pessoa e comando/palavra-chave.
 
@@ -144,7 +144,7 @@ if __name__ == "__main__":
     collect_samples()
 
 ```
-### Exemplo de Estrutura de Pastas
+### Exemplo de estrutura de pastas
 
 ```
 /PersonA
@@ -160,11 +160,11 @@ if __name__ == "__main__":
 
 A pasta de cada pessoa contém arquivos .wav rotulados que serão posteriormente enviados para o Edge Impulse para o treinamento do modelo.
 
-##  Enviando e Preparando Dados de Áudio no Edge Impulse
+##  Enviando e preparando dados de áudio no Edge Impulse
 
 Depois de coletar amostras de áudio brutas usando o ReSpeaker XVF3800 e organizá-las por rótulo, o próximo passo é enviá-las e processá-las no Edge Impulse Studio para treinar seu modelo de Keyword Spotting.
 
-### Criar um Novo Projeto no Edge Impulse
+### Criar um novo projeto no Edge Impulse
 
 - Acesse o [Edge Impulse](https://edgeimpulse.com/) e faça login (ou crie uma conta se for novo).
 
@@ -172,33 +172,33 @@ Depois de coletar amostras de áudio brutas usando o ReSpeaker XVF3800 e organiz
 
 - Forneça um nome para o seu projeto (por exemplo, "Voice Command KWS") 
 
-### Enviar Amostras de Áudio Existentes
+### Enviar amostras de áudio existentes
 
 Para enviar os dados coletados:
 
-- 1. Navegue até a aba **Data Acquisition**.
-- 2. Clique em **"Upload existing data"** (canto superior direito).
-- 3. Selecione e envie a pasta que contém seus arquivos .wav
+- 1.Navegue até a aba **Data Acquisition**.
+- 2.Clique em **"Upload existing data"** (canto superior direito).
+- 3.Selecione e envie a pasta que contém seus arquivos .wav
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/files.png" alt="pir" width={800} height="auto" /></p>
 
-- 4. Ative a opção para dividir automaticamente os dados em treinamento e teste (o Edge Impulse recomenda uma divisão de aproximadamente 80/20).
+- 4.Ative a opção para dividir automaticamente os dados em treinamento e teste (o Edge Impulse recomenda uma divisão de ~80/20).
 
-### Dividir Áudio de 10 Segundos em Amostras de 1 Segundo
+### Dividir áudio de 10 segundos em amostras de 1 segundo
 
-O Edge Impulse funciona melhor com clipes de áudio de 1 segundo para Keyword Spotting. Como as amostras originais foram gravadas em segmentos de 10 segundos, você precisará dividir cada uma em múltiplas amostras de 1 segundo.
+O Edge Impulse funciona melhor com clipes de áudio de 1 segundo para Keyword Spotting. Como as amostras originais foram gravadas em segmentos de 10 segundos, você precisará dividir cada uma em várias amostras de 1 segundo.
 
 
 **Siga estes passos**:
-- 1. Após o envio, vá para a página **Data Acquisition**.
-- 2. Encontre uma amostra (por exemplo, yes.1.wav) e clique nos três **pontos (…)** ao lado da amostra.
-- 3. Selecione "**Split sample**" no menu.
+- 1.Após o envio, vá para a página **Data Acquisition**.
+- 2.Encontre uma amostra (por exemplo, yes.1.wav) e clique nos três **pontos (…)** ao lado da amostra.
+- 3.Selecione "**Split sample**" no menu.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/split.png" alt="pir" width={800} height="auto" /></p>
 
-- 4. Use a ferramenta para dividir a forma de onda em segmentos de 1 segundo.
-    - a. Você pode arrastar para ajustar os segmentos ou adicioná-los/removê-los conforme necessário.
-- 5. Clique em Save and Split.
+- 4.Use a ferramenta para dividir a forma de onda em segmentos de 1 segundo.
+    - a.Você pode arrastar para ajustar os segmentos ou adicioná-los/removê-los conforme necessário.
+- 5.Clique em Save and Split.
 
 Repita esse processo para cada amostra de 10 segundos em todas as classes, tanto de treinamento quanto de teste.
 
@@ -206,55 +206,55 @@ Isso garante que seu conjunto de dados esteja devidamente formatado e otimizado 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/split2.png" alt="pir" width={800} height="auto" /></p>
 
-## Criando o Impulse (Pré-processamento / Definição do modelo)
+## Criando o Impulse (pré-processamento / definição do modelo)
 
- Um **impulse** no Edge Impulse define o pipeline de ponta a ponta que transforma dados brutos em um modelo de machine learning treinado. Ele inclui **processamento de sinal**, **extração de características** e um **bloco de aprendizado** para classificação.
+ Um **impulse** no Edge Impulse define o pipeline de ponta a ponta que transforma dados brutos em um modelo de aprendizado de máquina treinado. Ele inclui **processamento de sinal**, **extração de características** e um **bloco de aprendizado** para classificação.
 
 ### Criar o Impulse
 
-- 1. Navegue até a aba **"Impulse Design"** no seu projeto Edge Impulse.
-- 2. Clique em **“Create Impulse”**.
-- 3. Configure a janela de entrada:
-    - a. **Window size**: 1000 ms (1 segundo)
-    - b. **Window increase**: 500 ms (janelas sobrepostas para aumentar os dados)
-    - c. **Enable "Zero-pad data"**: Isso garante que segmentos mais curtos (por exemplo, 800 ms) sejam preenchidos com zeros, especialmente útil quando a remoção de ruído é aplicada durante a divisão das amostras.
+- 1.Navegue até a aba **"Impulse Design"** no seu projeto Edge Impulse.
+- 2.Clique em **“Create Impulse”**.
+- 3.Configure a janela de entrada:
+    - a.**Window size**: 1000 ms (1 segundo)
+    - b.**Window increase**: 500 ms (janelas sobrepostas para aumentar os dados)
+    - c.**Enable "Zero-pad data"**: Isso garante que segmentos mais curtos (por exemplo, 800 ms) sejam preenchidos com zeros, o que é especialmente útil quando a remoção de ruído é aplicada durante a divisão das amostras.
 
-### Adicionar o Extrator de Características MFCC
+### Adicionar extrator de características MFCC
 
 Após criar a janela do impulse:
 
-- 1. Clique em **“Add a processing block”** e selecione **MFCC (Mel Frequency Cepstral Coefficients)**.
-    - a. MFCC é um método amplamente utilizado para converter sinais de áudio em características 2D que representam padrões de frequência da voz.
-    - b. Essas características são perfeitas para modelos de reconhecimento baseados em voz.
-- 2. Defina os parâmetros do MFCC (os padrões funcionam bem na maioria dos casos):
-    - a. Formato de saída: 13 x 49 x 1
-    - b. Isso transforma seu clipe de áudio em uma “imagem” para classificação.
+- 1.Clique em **“Add a processing block”** e selecione **MFCC (Mel Frequency Cepstral Coefficients)**.
+    - a.MFCC é um método amplamente utilizado para converter sinais de áudio em características 2D que representam padrões de frequência de voz.
+    - b.Essas características são perfeitas para modelos de reconhecimento baseados em voz.
+- 2.Defina os parâmetros MFCC (os padrões funcionam bem na maioria dos casos):
+    - a.Output shape: 13 x 49 x 1
+    - b.Isto transforma seu clipe de áudio em uma “imagem” para classificação.
 
-### Adicionar um Bloco de Aprendizado
+### Adicionar um bloco de aprendizado
 
-- 1. Clique em **“Add a learning block”** e escolha **“Classification (Keras)”**.
-- 2. Isso cria uma **Rede Neural Convolucional (CNN)** personalizada que realizará **classificação de imagens** nas características MFCC.
-- 3. Agora você pode ir até a aba **NN Classifier** para personalizar e treinar o seu modelo.
+- 1.Clique em **“Add a learning block”** e escolha **“Classification (Keras)”**.
+- 2.Isto cria uma **Rede Neural Convolucional (CNN)** personalizada que realizará **classificação de imagens** nas características MFCC.
+- 3.Agora você pode prosseguir para a aba **NN Classifier** para personalizar e treinar seu modelo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/impulse.png" alt="pir" width={800} height="auto" /></p>
 
 ## Pré-processamento (MFCC)
 
-O próximo passo é gerar imagens de espectrograma a partir do áudio gravado, que serão usadas para o treinamento do modelo. Podemos usar os parâmetros padrão de DSP ou, como no nosso caso, utilizar o recurso DSP Autotune para otimizá-los automaticamente para um melhor desempenho.
+O próximo passo é gerar imagens de espectrograma a partir do áudio gravado, que serão usadas para o treinamento do modelo. Podemos usar os parâmetros DSP padrão ou, como no nosso caso, aproveitar o recurso DSP Autotune para otimizá-los automaticamente para um melhor desempenho.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/mfcc.png" alt="pir" width={800} height="auto" /></p>
 
-## Construindo um modelo de machine learning
+## Construindo um modelo de aprendizado de máquina
 
-Para este projeto, usaremos um modelo de Rede Neural Convolucional (CNN). A arquitetura consiste em duas camadas Conv1D + MaxPooling com 8 e 16 filtros respectivamente, seguidas por uma camada Dropout de 0,25. Após o flattening, a camada densa final inclui quatro neurônios — um para cada classe.
-Treinaremos o modelo usando uma taxa de aprendizado de 0,005 ao longo de 100 épocas. Para melhorar a capacidade de generalização e robustez, serão aplicadas técnicas de aumento de dados, como ruído de fundo. Os resultados iniciais são promissores.
+Para este projeto, usaremos um modelo de Rede Neural Convolucional (CNN). A arquitetura consiste em duas camadas Conv1D + MaxPooling com 8 e 16 filtros, respectivamente, seguidas por uma camada Dropout de 0,25. Após o flattening, a camada densa final inclui quatro neurônios — um para cada classe.
+Treinaremos o modelo usando uma taxa de aprendizado de 0,005 ao longo de 100 épocas. Para melhorar a capacidade de generalização e a robustez, serão aplicadas técnicas de aumento de dados, como ruído de fundo. Os resultados iniciais são promissores.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/accuracy.png" alt="pir" width={800} height="auto" /></p>
 
 ## Fazendo o deploy no ReSpeaker XVF3800 com XIAO ESP32 S3
 
 
-**O Edge Impulse irá empacotar automaticamente todas as bibliotecas necessárias, funções de pré-processamento e o modelo treinado em um pacote para download.**
+**O Edge Impulse irá agrupar automaticamente todas as bibliotecas necessárias, funções de pré-processamento e o modelo treinado em um pacote para download.**
 Para continuar:
 - 1.Selecione **"Arduino Library"** como opção de implantação.
 - 2.Na parte inferior, escolha o formato **"Quantized (Int8)"**.
@@ -266,14 +266,14 @@ Quando o download for concluído:
 - 5.Selecione **"Include Library"** > **"Add .ZIP Library..."**
 - 6.Escolha o arquivo .zip baixado do Edge Impulse para adicioná-lo ao seu projeto Arduino.
 
-### Alternando o Firmware para o Modo I2S
+### Alternando o firmware para o modo I2S
 
 Antes de enviar o código Arduino, você deve alternar o firmware do ReSpeaker XVF3800 para o modo I2S para habilitar a comunicação via protocolo I2C.
 [Firmware Installation Guide](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#update-firmware)
 
-### Integração do Código Arduino
+### Integração do código Arduino
 
-O código Arduino fornecido pelo Edge Impulse exigirá algumas modificações para garantir a compatibilidade com o hardware ReSpeaker XVF3800 e XIAO ESP32S3: Atualize as **definições dos pinos GPIO, taxa de amostragem I2S** e outros parâmetros específicos de hardware de acordo com sua configuração.
+O código Arduino fornecido pelo Edge Impulse exigirá algumas modificações para garantir a compatibilidade com o hardware ReSpeaker XVF3800 e XIAO ESP32S3: atualize as **definições dos pinos GPIO, taxa de amostragem I2S** e outros parâmetros específicos de hardware de acordo com a sua configuração.
 
 ```c
 #define EIDSP_QUANTIZE_FILTERBANK   0
@@ -461,9 +461,9 @@ static void i2s_deinit() {
 }
 
 ```
-## Suporte Técnico & Discussão de Produtos
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

@@ -1,23 +1,23 @@
 ---
-description: This tutorial shows how to build a complete visual grasping demo for the reBot Arm B601-DM using Orbbec Gemini 2 and a YOLO/OBB grasping pipeline.
+description: This tutorial shows how to build a complete visual grasping demo for the reBot Arm B601-DM using an RGB-D depth camera and a YOLO/OBB grasping pipeline.
 title: reBot Arm B601-DM Visual Grasping Demo
 keywords:
   - reBot Arm
   - B601-DM
   - Grasping
-  - Gemini 2
+  - RGB-D
   - YOLO
   - Hand-Eye Calibration
   - Robot
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-06-01
+  date: 2026-06-17
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-06-01'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -40,7 +40,7 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
     </a>
     <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
     <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Camera-Orbbec%20Gemini%202-green.svg" alt="Camera" />
+    <img src="https://img.shields.io/badge/Camera-RGB--D-green.svg" alt="Camera" />
     <img src="https://img.shields.io/badge/Detection-YOLO-yellow.svg" alt="YOLO" />
 </p>
 
@@ -48,7 +48,7 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
   <strong>Depth Perception · Object Detection · Hand-Eye Calibration · Autonomous Grasping · Fully Open Source</strong>
 </p>
 
-YOLO is a widely used family of real-time object detection models that can localize and classify targets in a single forward pass. This tutorial uses YOLO together with the Orbbec Gemini 2 depth camera to build a working desktop visual grasping demo for the reBot Arm B601-DM, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
+YOLO is a widely used family of real-time object detection models that can localize and classify targets in a single forward pass. This tutorial uses YOLO, an RGB-D depth camera, and the reBot Arm B601-DM to build a working desktop visual grasping demo, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/demo.gif" alt="reBot Arm B601-DM visual grasping demo" />
@@ -66,8 +66,8 @@ YOLO is a widely used family of real-time object detection models that can local
 2. **GraspNet-Baseline 6D grasp pose estimation (optional)**  
    The project also supports GraspNet-Baseline (`graspnet/graspnet-baseline`) for 6D grasp pose estimation from RGB-D point clouds, with YOLO bounding boxes used to select target candidates for more complex grasping experiments.
 
-3. **Lightweight robotic arm and gripper integration**  
-   The main grasping script reuses the `RebotArm` interface and integrates IK, trajectory control, and the gripper state machine.
+3. **Robotic arm and gripper driver integration**
+   The main grasping script is based on the robotic arm and end-pose controller from `reBotArm_control_py`, with a lightweight grasp helper for gripper opening, force-controlled grasping, and TCP pose reading.
 
 4. **Open Source and Extensible**  
    All source code is open, and users can customize control algorithms and effects based on their own needs.
@@ -94,7 +94,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
     </tr>
     <tr>
       <td>Camera Model</td>
-      <td>Orbbec Gemini 2</td>
+      <td>Orbbec Gemini 2 / Intel RealSense D435i / D405</td>
     </tr>
     <tr>
       <td>Detection Method</td>
@@ -128,12 +128,12 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 | USB2CAN Serial Bridge | 1 | ✅ |
 | Power Adapter (24V) | 1 | ✅ |
 | USB-C / Communication Cable | 1 | ✅ |
-| Orbbec Gemini 2 Depth Camera | 1 | ✅ |
-| Gemini 2 Camera Connector / Mounting Bracket | 1 | ✅ |
+| RGB-D Depth Camera | 1 | ✅ |
+| Camera Connector / Mounting Bracket | 1 | ✅ |
 
 ### Wiring
 
-1. Connect the Gemini 2 to the host via USB 3.0.
+1. Connect the depth camera to the host via USB 3.0.
 2. Connect the USB2CAN adapter to the arm CAN bus.
 3. Make sure the 24V power supply, camera, and robotic arm are all connected securely.
 4. Set permissions:
@@ -193,11 +193,28 @@ pip install -e .
 cd ../..
 ```
 
+If `pip install -e .` reports `Multiple top-level packages discovered in a flat-layout`, add explicit package discovery to `pyproject.toml` in `reBotArm_control_py`, then run `pip install -e .` again:
+
+```toml
+[tool.setuptools.packages.find]
+include = ["reBotArm_control_py*"]
+```
+
+B601 DM and RS configurations are selected through the SDK configuration files. For B601-DM, confirm the following in `sdk/reBotArm_control_py/config/rebotarm.yaml`:
+
+```yaml
+hardware_yaml: rebotarm_dm.yaml
+```
+
+The visual grasping programs read this SDK configuration and automatically select the matching arm control mode and gripper parameters.
+
 ### Step 4. Install the depth camera SDK
 
-**This project uses the Orbbec Gemini2 depth camera. If you use a different depth camera, install the matching SDK for your camera and skip this step.**
+This project supports RGB-D depth cameras such as Orbbec Gemini 2 and RealSense D435i / D405. Install the SDK that matches your camera; if your environment can already import the camera driver, you can skip this step.
 
-The Orbbec Gemini2 depth camera depends on `pyorbbecsdk`, the Python wrapper for Orbbec SDK v2. Prefer installing the prebuilt Python package first:
+**Orbbec Gemini 2**
+
+The Orbbec Gemini 2 depth camera depends on `pyorbbecsdk`, the Python wrapper for Orbbec SDK v2. Prefer installing the prebuilt Python package first:
 
 **Option 1: Install from pip (recommended)**
 
@@ -227,6 +244,12 @@ When installing from source, make sure the native extension has been built with 
 
 If all installation methods above fail, please refer to the official Orbbec documentation below.
 
+**Verify installation**
+
+```bash
+python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
+```
+
 For first-time use, it is recommended to install the udev rules:
 
 ```bash
@@ -234,6 +257,17 @@ sudo bash scripts/install_udev_rules.sh
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
+
+**RealSense D435i / D405**
+
+RealSense cameras depend on `pyrealsense2`. Usually you can install it directly with pip:
+
+```bash
+pip install pyrealsense2
+python -c "import pyrealsense2; print('pyrealsense2 OK')"
+```
+
+If your system needs the full RealSense toolchain or udev rules, install `librealsense2` by following the official RealSense SDK documentation.
 
 ### Step 5. Configure GraspNet (optional)
 
@@ -305,15 +339,6 @@ graspnet:
 
 The `checkpoint` field supports three forms: a file name is resolved under `sdk/graspnet-baseline/checkpoints/`; a relative path is resolved from the project root; an absolute path is used directly.
 
-### Step 6. Verify the dependencies
-
-```bash
-python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
-python -c "import motorbridge; print('motorbridge OK')"
-```
-
-For first-time Orbbec camera use, it is recommended to run `scripts/install_udev_rules.sh` inside your installed `pyorbbecsdk` directory, otherwise the camera may fail to open correctly.
-
 ## Hand-Eye Calibration
 
 Before running the full grasping pipeline, complete the Eye-in-Hand hand-eye calibration first.
@@ -343,7 +368,7 @@ In manual mode, the arm enters gravity-compensation mode. Move the end effector 
 The calibration result is saved to:
 
 ```text
-config/calibration/orbbec_gemini2/hand_eye.npz
+config/calibration/<camera_type>/hand_eye.npz
 ```
 
 Recommended sample count is at least 5 samples, with 15 or more recommended.
@@ -387,8 +412,10 @@ If you need to adjust the grasp inference frequency or the pre-grasp retreat dis
 grasp_pipeline:
   infer_every_live: 3
   grasp:
-    depth_quantile: 0.6
+    depth_quantile: 0.5
     pregrasp_offset_m: 0.080
+    insertion_depth_m: 0.015
+    min_base_z_m: 0.00
 ```
 
 This script does not connect to the robotic arm. It is only used to verify:
@@ -417,19 +444,11 @@ python scripts/main.py --dry-run
 
 It is recommended to verify the pose and reachable workspace with `--dry-run` first before executing a real grasp.
 
-If `reBotArm_control_py` is not in the default location, specify it in `config/default.yaml`:
-
-```yaml
-robot:
-  repo_root: null
-```
-
-Keeping it as `null` is usually enough because the program will try to auto-detect `sdk/reBotArm_control_py` first.
-
 Main program flow:
 
-1. Initialize the robotic arm and gripper
-2. Move to the ready pose. If you want to change the startup ready pose, modify `config/default.yaml`:
+1. Initialize the RGB-D camera and confirm the image stream is available.
+2. Enable the robotic arm and gripper.
+3. Move to the ready pose. If you want to change the startup ready pose, modify `config/default.yaml`:
 
 ```yaml
 robot:
@@ -438,13 +457,13 @@ robot:
     y: 0.0
     z: 0.3
     roll: 0.0
-    pitch: 1.0
+    pitch: 0.7
     duration: 3.0
 ```
 
-3. Detect tabletop targets in real time
-4. Estimate the grasp pose from the short axis
-5. Press `G` to capture the current frame and execute grasping
+4. Detect tabletop targets in real time.
+5. Estimate the grasp pose from the short axis.
+6. Press `G` to capture the current frame and execute grasping.
 
 Runtime keys:
 
@@ -571,10 +590,12 @@ If the output is `False`, fix the CUDA / PyTorch installation first. If it is `T
 - [Getting Started with Pinocchio and MeshCat for reBot Arm B601-DM](https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/)
 - [Getting Started with LeRobot-based reBot Arm B601-DM and reBot 102 Leader](https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/)
 - [Orbbec Gemini 2 Product Page](https://www.orbbec.com/products/stereo-vision-camera/gemini-2/)
+- [Orbbec Developer Resources](https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
 - [Orbbec SDK v2 API Guide](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/)
 - [pyorbbecsdk Repository](https://github.com/orbbec/pyorbbecsdk)
 - [pyorbbecsdk Documentation](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
+- [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) Docs](https://graspnet.net/)

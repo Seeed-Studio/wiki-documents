@@ -1,19 +1,18 @@
 ---
-description: reSpeaker Flex マイクアレイと ROS2 を使用して、音声コマンドをリアルタイムのロボット移動、回転動作、および音声フィードバックに変換する、音声制御 ROS2 TurtleSim プロジェクトです。
-
-title: reSpeaker Flex 上の ROS2 音声パイプライン
+description: reSpeaker Flex と Groq AI を使用して、音声コマンドをリアルタイムのロボット移動、回転動作、および音声フィードバックに変換する、音声制御 ROS2 TurtleSim プロジェクト。
+title: reSpeaker 上の ROS2 音声パイプライン 
 keywords:
   - reSpeaker
   - ロボティクス
   - ROS2
-image: https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png
 slug: /respeaker_flex_ros2_voice_pipeline
-sku: 114993700, 101991441, 114993701
+sku: 114993700, 101991441, 114993701,100099135,,100005504
 last_update:
   date: 5/27/2026
   author: Kasun Thushara
 createdAt: '2026-05-27'
-updatedAt: '2026-05-27'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/ja/respeaker_flex_ros2_voice_pipeline/
 ---
 
@@ -21,7 +20,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_ros2_voice_pipeline/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
 
-このプロジェクトでは、reSpeaker Flex マイクアレイと ROS2 を使用して、あなたの声で TurtleSim を制御できるようにします。「Hey Jarvis」と言ってからコマンドを話すと、Jarvis が音声を録音し、Groq Whisper で文字起こしし、Groq LLaMA で意図を解釈し、Groq Orpheus TTS で応答します。前進 / 後退の移動、角度指定の回転、DoA に基づく方向向き、即時停止コマンドをサポートします。このシステムは、ウェイクワード検出、音声キャプチャ、ROS2 トピック、シミュレータへのコマンド送信を 1 つのシームレスなパイプラインに統合しています。Ubuntu と ROS2 Humble で素早くセットアップできるよう設計されており、音声駆動ロボットの実験を簡単に実行できます。
+このプロジェクトは、reSpeaker マイクアレイと ROS2 を使用して、あなたの声を TurtleSim の制御に変換します。「Hey Jarvis」と言ってからコマンドを続けると、Jarvis は音声を録音し、Groq Whisper で文字起こしし、Groq LLaMA でインテントを解釈し、Groq Orpheus TTS で応答します。前進 / 後退、角度指定の回転、DoA に基づく方向向き、即時停止コマンドをサポートします。このシステムは、ウェイクワード検出、音声キャプチャ、ROS2 トピック、シミュレータへのコマンド送信を 1 つのシームレスなパイプラインに統合しています。Ubuntu と ROS2 Humble での素早いセットアップを想定して設計されており、音声駆動のロボット実験を簡単に実行できます。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={600} height="auto" /></p>
@@ -34,10 +33,10 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_ros2_voice_pipeline/
 
 ## パート 1 — ROS2 Humble をインストールする
 
-> すでにマシンに ROS2 Humble がインストールされている場合は、このパートをスキップしてください。
+> すでにお使いのマシンに ROS2 Humble がインストールされている場合は、このパートをスキップしてください。
 > 次を実行して確認します: `ros2 --version`
 
-**1.1 ROS2 の apt リポジトリを設定する**
+**1.1 ROS2 の apt リポジトリをセットアップする**
 
 ```bash
 # Make sure your system is up to date
@@ -63,7 +62,7 @@ sudo apt update
 sudo apt install -y ros-humble-desktop
 ```
 
-> `desktop` バリアントには、TurtleSim、RViz、および必要なすべてのツールが含まれます。
+> `desktop` バリアントには、TurtleSim、RViz、および必要なすべてのツールが含まれています。
 > ダウンロードサイズは約 1 GB です — 数分かかる場合があります。
 
 **1.3 ビルドツールをインストールする**
@@ -100,7 +99,7 @@ ros2 run turtlesim turtle_teleop_key
 
 ## パート 2 — デバイス用の udev ルールを作成する
 
-reSpeaker USB Mic Array の適切な権限を確保するために、新しい udev ルールを作成します:
+reSpeaker USB Mic Array の適切なパーミッションを確保するために、新しい udev ルールを作成します:
 
 ```bash
 sudo nano /etc/udev/rules.d/50-respeaker.rules
@@ -114,9 +113,9 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="0018", MODE="0666", 
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="001a", MODE="0666", GROUP="plugdev"
 ```
 
-udev ルールを再読み込みし、サービスを再起動する
+udev ルールをリロードし、サービスを再起動する
 
-変更を反映させるために、udev ルールを再読み込みし、サービスを再起動します:
+変更を反映させるために、udev ルールをリロードし、サービスを再起動します:
 
 ```bash
 sudo udevadm control --reload-rules
@@ -132,10 +131,10 @@ sudo service udev restart
 
 このプロジェクトでは、Groq の無料クラウド API を次の用途で使用します:
 - **Whisper** — 音声からテキストへの変換
-- **LLaMA 3** — コマンド内容の理解
+- **LLaMA 3** — コマンドの理解
 - **Orpheus** — Jarvis の音声応答
 
-1. [console.groq.com](https://console.groq.com) にアクセスして無料アカウントを作成します
+1. [console.groq.com](https://console.groq.com) にアクセスし、無料アカウントを作成します
 2. 左側のサイドバーで **API Keys** をクリックします
 3. **Create API Key** をクリックし、名前（例: "jarvis"）を付けて作成し、コピーします
 4. どこか安全な場所に保存します — すぐ後で `config.env` に貼り付けます
@@ -148,7 +147,7 @@ sudo service udev restart
 ## パート 4 — Python 依存パッケージを（システム全体に）インストールする
 
 > **重要:** このプロジェクトでは仮想環境を使用しないでください。
-> ROS2 はシステムの Python を使用し、venv 内にインストールされたパッケージは認識できません。
+> ROS2 はシステムの Python を使用し、venv 内にインストールされたパッケージを見ることができません。
 > すべてのパッケージを ROS2 ノードから利用できるようにするため、`--break-system-packages` を付けてインストールします。
 
 ```bash
@@ -200,12 +199,21 @@ source ~/.bashrc
 
 **6.1 リポジトリをクローンする**
 
+**Flex を使用している場合**
+
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/KasunThushara/ros_voice_controller_flex.git my_robot_controller
 ```
 
-> 現在、ワークスペースは次のようになっているはずです:
+**XVF3800 を使用している場合**
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/KasunThushara/ros_voice_controller.git my_robot_controller
+```
+
+> あなたのワークスペースは次のようになっているはずです:
 > ```
 > ~/ros2_ws/
 > └── src/
@@ -286,7 +294,7 @@ Available INPUT devices:
         channels=2  rate=16000Hz
 ```
 
-**reSpeaker Flex** または **reSpeaker Flex XVF3800** と表示されている行を探します。角括弧内の数字があなたの `MIC_INDEX` です。その番号で `config.env` を更新してください。
+**reSpeaker Flex** または **reSpeaker Flex XVF3800** と書かれている行を探します。角括弧内の数字があなたの `MIC_INDEX` です。その数字で `config.env` を更新してください。
 
 ---
 
@@ -298,7 +306,7 @@ colcon build --packages-select my_robot_controller
 source ~/.bashrc
 ```
 
-想定される出力:
+期待される出力:
 
 ```
 Starting >>> my_robot_controller
@@ -307,7 +315,7 @@ Finished <<< my_robot_controller [3.2s]
 Summary: 1 package finished [3.5s]
 ```
 
->  Python ファイルを変更するたびに、`colcon build` と `source ~/.bashrc` を実行する必要があります。
+>  いずれかの Python ファイルを変更するたびに、`colcon build` と `source ~/.bashrc` を実行する必要があります。
 
 ---
 
@@ -317,7 +325,7 @@ Summary: 1 package finished [3.5s]
 ros2 launch my_robot_controller jarvis.launch.py
 ```
 
-次の 3 つのプロセスが起動するはずです:
+3 つのプロセスが起動するのが確認できるはずです:
 
 ```
 [turtlesim_node-1]   [INFO] Spawning turtle [turtle1] at x=[5.54], y=[5.54]
@@ -331,7 +339,7 @@ ros2 launch my_robot_controller jarvis.launch.py
 
 > **"Hey Jarvis, move forward"**
 
-Jarvis が「Moving forward!」と応答し、カメが前進します。
+Jarvis は「Moving forward!」と応答し、カメが前進します。 
 
 ---
 
@@ -339,21 +347,21 @@ Jarvis が「Moving forward!」と応答し、カメが前進します。
 
 ## 音声コマンドリファレンス
 
-| このように話す | 実行される動作 |
+| このように話す | 何が起こるか |
 |---|---|
-| `"Hey Jarvis, move forward"` | カメが 1 ステップ前進します |
-| `"Hey Jarvis, move backward"` | カメが 1 ステップ後退します |
-| `"Hey Jarvis, turn left"` | カメが左に 90° 回転します |
-| `"Hey Jarvis, turn left 45"` | カメが左に 45° 回転します |
-| `"Hey Jarvis, turn right"` | カメが右に 90° 回転します |
-| `"Hey Jarvis, turn right 30 degrees"` | カメが右に 30° 回転します |
-| `"Hey Jarvis, turn to my direction"` | カメがあなたの声の方向（DoA）を向きます |
+| `"Hey Jarvis, move forward"` | カメが 1 ステップ前進する |
+| `"Hey Jarvis, move backward"` | カメが 1 ステップ後退する |
+| `"Hey Jarvis, turn left"` | カメが左に 90° 回転する |
+| `"Hey Jarvis, turn left 45"` | カメが左に 45° 回転する |
+| `"Hey Jarvis, turn right"` | カメが右に 90° 回転する |
+| `"Hey Jarvis, turn right 30 degrees"` | カメが右に 30° 回転する |
+| `"Hey Jarvis, turn to my direction"` | カメがあなたの声の方向（DoA）を向く |
 | `"Hey Jarvis, face me"` | 上と同じ |
-| `"Hey Jarvis, turn to 90"` | カメが絶対角 90° の向きに回転します |
-| `"Hey Jarvis, face 180 degrees"` | カメが絶対角 180° の向きに回転します |
-| `"Hey Jarvis, spin around"` | カメが 360° のスピンを行います |
+| `"Hey Jarvis, turn to 90"` | カメが絶対 90° の向きに回転する |
+| `"Hey Jarvis, face 180 degrees"` | カメが絶対 180° の向きに回転する |
+| `"Hey Jarvis, spin around"` | カメが 360° のスピンを 1 回行う |
 | `"Hey Jarvis, do a 360"` | 上と同じ |
-| `"Hey Jarvis, stop"` | カメが即座に停止します |
+| `"Hey Jarvis, stop"` | カメが即座に停止する |
 
 ---
 
@@ -407,7 +415,7 @@ reSpeaker Flex (USB)
 
 ## 設定リファレンス
 
-すべての設定は `config.env` にあります。変更を反映するには編集して再ビルドしてください。
+すべての設定は `config.env` にあります。編集して再ビルドすると変更が適用されます。
 
 | 変数 | デフォルト | 説明 |
 |---|---|---|
@@ -416,11 +424,11 @@ reSpeaker Flex (USB)
 | `WAKEWORD_MODEL` | `hey jarvis` | ウェイクワードのフレーズ |
 | `WAKEWORD_THRESHOLD` | `0.5` | 検出感度 (0.0–1.0、値が小さいほど高感度) |
 | `WAKEWORD_COOLDOWN` | `2` | ウェイクワードが再度トリガーされるまでの秒数 |
-| `RECORDING_SECONDS` | `4` | ウェイクワード検出後に録音を続ける時間 |
-| `SAMPLE_RATE` | `16000` | オーディオサンプリングレート (Hz) |
-| `LLM_MODEL` | `llama-3.1-8b-instant` | インテント解析用の Groq LLM モデル |
+| `RECORDING_SECONDS` | `4` | ウェイクワード検出後に録音する時間（秒） |
+| `SAMPLE_RATE` | `16000` | オーディオサンプリングレート（Hz） |
+| `LLM_MODEL` | `llama-3.1-8b-instant` | インテント解析に使用する Groq LLM モデル |
 | `STT_MODEL` | `whisper-large-v3-turbo` | 音声書き起こし用の Groq Whisper モデル |
-| `TTS_MODEL` | `canopylabs/orpheus-v1-english` | Groq TTS モデル |
+| `TTS_MODEL` | `canopylabs/orpheus-v1-english` | Groq の TTS モデル |
 | `TTS_VOICE` | `autumn` | 音声出力に使用するボイス (`tara`, `leah`, `leo`, `dan`, `mia`) |
 
 ---
@@ -428,7 +436,7 @@ reSpeaker Flex (USB)
 
 ## リソース
 
-以下を利用して構築されています：
+使用コンポーネント：
 - [Seeed Studio reSpeaker Flex](https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/) — XMOS XVF3800 チップ搭載のマイクアレイ
 - [ROS2 Humble](https://docs.ros.org/en/humble/) — ロボット用ミドルウェア
 - [openwakeword](https://github.com/dscripka/openWakeWord) — ローカルウェイクワード検出
@@ -436,7 +444,7 @@ reSpeaker Flex (USB)
 - [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — ROS2 タートルシミュレータ
 
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
 

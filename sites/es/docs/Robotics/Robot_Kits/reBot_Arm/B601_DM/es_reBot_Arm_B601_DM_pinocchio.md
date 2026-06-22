@@ -396,6 +396,10 @@ uv run python example/9_gravity_compensation.py
 - Visualización en tiempo real del par esperado para cada articulación (N·m)
 - Pulsa `Ctrl+C` para detener y desconectar
 
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/nqaoqjiHQE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ---
 
 ## Preguntas frecuentes (FAQ)

@@ -1,6 +1,6 @@
 ---
-description: SenseCraft AI é uma plataforma AIoT no-code/low-code da Seeed Studio que permite implantar modelos de IA pré-treinados em dispositivos de borda como o reSpeaker XVF3800. Com a palavra de ativação "Lumio", esta configuração habilita aplicações de IA controladas por voz — sem necessidade de programação complexa.
-title: SenseCraft AI com reSpeaker XVF3800
+description: SenseCraft AI é uma plataforma AIoT sem código/baixo código da Seeed Studio que permite implantar modelos de IA pré-treinados em dispositivos de borda como o reSpeaker. Com a palavra de ativação "Lumio", esta configuração permite aplicações de IA controladas por voz — sem necessidade de codificação complexa.
+title: SenseCraft AI com reSpeaker 
 keywords:
   - SenseCraft
   - reSpeaker XVF3800
@@ -8,18 +8,18 @@ keywords:
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_5.jpg
 slug: /respeaker_xvf3800_sensecraft
 sku: 114993702,114993700
-last_update: 
+last_update:
   date: 6/4/2026
   author: Kasun Thushara
 createdAt: '2026-06-04'
-updatedAt: '2026-06-04'
+updatedAt: '2026-06-08'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_sensecraft/
 ---
 
 
 ## Introdução
 
-SenseCraft AI é a plataforma de IA no-code/low-code da Seeed Studio que simplifica a implantação de modelos de inteligência artificial pré-treinados em dispositivos de borda, como o reSpeaker XVF3800. Este guia foca na configuração do reSpeaker XVF3800 para detecção de palavra de ativação usando o gatilho personalizado "Lumio", permitindo controle ativado por voz para seus projetos sem escrever código complexo. Com o SenseCraft AI, você pode rapidamente testar, pré-visualizar e integrar eventos de palavra de ativação em seus fluxos de trabalho de hardware. A plataforma também permite criar e enviar seus próprios modelos personalizados para detectar eventos sonoros específicos e palavras de ativação personalizadas, oferecendo total flexibilidade para adaptar interações por voz às necessidades exclusivas da sua aplicação.
+SenseCraft AI é a plataforma de IA sem código/baixo código da Seeed Studio que simplifica a implantação de modelos de inteligência artificial pré-treinados em dispositivos de borda, como o reSpeaker. Este guia se concentra em configurar o reSpeaker para detecção de palavra de ativação usando o gatilho personalizado "Lumio", permitindo controle ativado por voz para seus projetos sem escrever código complexo. Com o SenseCraft AI, você pode testar, pré-visualizar e integrar rapidamente eventos de palavra de ativação em seus fluxos de trabalho de hardware. A plataforma também permite criar e enviar seus próprios modelos personalizados para detectar eventos sonoros específicos e palavras de ativação personalizadas, oferecendo total flexibilidade para adaptar as interações por voz às necessidades exclusivas da sua aplicação.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -38,7 +38,14 @@ Antes de implantar o modelo de palavra de ativação, certifique-se de que o seu
 O arquivo de firmware necessário é:
 > `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.7_48k_test5.bin`
 
-Siga o [procedimento](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#atualizar-firmware) padrão de DFU (Atualização de Firmware do Dispositivo) do seu dispositivo para gravar este arquivo no reSpeaker XVF3800.
+Siga o [procedimento](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#atualizar-firmware) padrão de DFU (Device Firmware Update) do seu dispositivo para gravar este arquivo no reSpeaker XVF3800.
+
+Se você estiver usando um reSpeaker Lite, certifique-se de que ele esteja executando a versão correta do firmware.
+
+O arquivo de firmware necessário é:
+> `respeaker_lite_i2s_dfu_firmware_v1.0.9.bin`
+
+Siga o [procedimento](https://wiki.seeedstudio.com/pt-br/reSpeaker_usb_v3/#download-de-firmware) padrão de DFU (Device Firmware Update) do seu dispositivo para gravar este arquivo no reSpeaker Lite.
 
 
 ### Etapa 2: Acessar a plataforma SenseCraft AI
@@ -82,7 +89,7 @@ Depois de conectado, você irá substituir o modelo existente no dispositivo:
 
 :::note
 
-O modelo que você está implantando é chamado **Lumos**. Ele é um modelo leve de reconhecimento de fala projetado para fornecer capacidades eficientes de interação por voz com baixa latência para dispositivos de borda. Ao analisar características espectrais de áudio, o modelo pode detectar com precisão a palavra de ativação específica **"Lumos"** mesmo em meio a ruídos de fundo ambientes complexos.
+O modelo que você está implantando é chamado **Lumos**. É um modelo leve de reconhecimento de fala projetado para fornecer capacidades eficientes e de baixa latência de interação por voz para dispositivos de borda. Ao analisar características espectrais de áudio, o modelo pode detectar com precisão a palavra de ativação específica **"Lumos"** mesmo em meio a ruídos de fundo ambientes complexos.
 :::
 
 
@@ -90,7 +97,7 @@ O modelo que você está implantando é chamado **Lumos**. Ele é um modelo leve
 
 1. Uma caixa de diálogo aparecerá com os detalhes do modelo
 2. Clique em **Confirm** para prosseguir com a gravação do modelo no seu dispositivo
-3. Aguarde um momento enquanto o modelo é gravado no reSpeaker XVF3800
+3. Aguarde um momento enquanto o modelo é gravado no reSpeaker 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_4.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -100,21 +107,21 @@ Após a implantação bem-sucedida, você verá:
 
 - **Visualização do espectro de áudio** – exibindo a entrada de som em tempo real
 - **Duas classes de detecção**:
-  - *Ruído de fundo*
+  - *Background Noise*
   - *Lumos*
 
 Para testar a palavra de ativação:
 1. Fale claramente a palavra **"Lumos"** no microfone do reSpeaker
 2. Observe o aumento do nível de confiança para a classe Lumos
-3. Ajuste o **parâmetro de limiar (threshold)** conforme necessário para refinar a sensibilidade de detecção
+3. Ajuste o **parâmetro de threshold** conforme necessário para ajustar a sensibilidade de detecção
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_5.jpg" alt="pir" width={800} height="auto" /></p>
 
 ## Treinar e implantar seu próprio classificador de áudio
 
-### Etapa 1: Abrir a aba de treinamento
+### Etapa 1: Abrir a aba Training
 
-1. Acesse **https://sensecraft.seeed.cc/**
+1. Navegue até **https://sensecraft.seeed.cc/**
 2. No menu principal, vá para **Products** → **SenseCraft AI** → **Training AI Models**
 3. Clique na aba **Training** para acessar a interface de classificação de áudio
 
@@ -126,7 +133,7 @@ Para testar a palavra de ativação:
 Em **Audio Classification / Detection**:
 
 1. Verifique se **reSpeaker Microphone** está selecionado como dispositivo de entrada
-2. Clique no botão **Connect** para estabelecer a conexão
+2. Clique no botão **Connect** para estabelecer uma conexão
 3. Aguarde a plataforma confirmar a conexão bem-sucedida
 
 
@@ -144,7 +151,7 @@ Antes de treinar sons personalizados, você deve estabelecer uma linha de base p
 
 2. A plataforma irá gravar automaticamente por aproximadamente **20 segundos**
 3. A gravação será dividida em **amostras de 1 segundo**
-4. Quando concluído, uma pré-visualização das amostras de dados de fundo será exibida
+4. Quando concluída, uma pré-visualização das amostras de dados de fundo será exibida
 5. Revise as amostras e pressione **Apply** quando estiver satisfeito
 
 
@@ -253,7 +260,7 @@ Após a implantação bem-sucedida:
 
 
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

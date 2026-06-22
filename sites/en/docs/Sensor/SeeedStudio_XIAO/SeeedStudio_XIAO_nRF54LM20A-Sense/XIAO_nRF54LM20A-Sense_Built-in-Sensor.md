@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-05-19'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_onboard/
 ---
 
@@ -703,7 +703,7 @@ CONFIG_NEWLIB_LIBC=y
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-## MIC
+## MIC 
 
 The XIAO nRF54LM20A Sense is equipped with the MSM261DGT006 digital MEMS microphone for voice input. It connects directly via the PDM interface without requiring an ADC. It is suitable for wearable devices, smart devices, voice recognition, audio recording and other application scenarios that require acoustic sensing functions.
 
@@ -778,9 +778,14 @@ dmic_dev: &pdm20 {
 		};
 	};
 };
+
+/* External 8MB SPI NOR Flash for audio storage */
+&py25q64 {
+	status = "okay";
+};
 ```
 
-2. Modify the shturl.c file to enable configurations for Bluetooth and microphone, and set the Bluetooth device name to **XIAO MIC**.
+2. Modify the prj.conf file to enable configurations for Bluetooth and microphone, and set the Bluetooth device name to **XIAO MIC**.
 
 ```prj
 # Audio / DMIC
@@ -813,6 +818,10 @@ CONFIG_BT_DEVICE_APPEARANCE=833
 CONFIG_BT_MAX_CONN=1
 CONFIG_BT_MAX_PAIRED=1
 
+# BLE log level: ERR only.  Fixed 30 ms application pacing prevents
+# buffer exhaustion; this just silences WRN/INF noise from the stack.
+CONFIG_BT_LOG_LEVEL_ERR=y
+
 # Disable auto-procedures to avoid LL Procedure Collision (reason 35)
 # on nRF54L with Zephyr native BLE controller
 CONFIG_BT_AUTO_PHY_UPDATE=n
@@ -822,26 +831,36 @@ CONFIG_BT_CTLR_CONN_PARAM_REQ=n
 # Disable data length auto-update (can also cause LL races)
 CONFIG_BT_DATA_LEN_UPDATE=n
 
-# BLE buffer tuning for NUS notifications (244-byte chunks at MTU 247)
+# BLE buffer tuning for high-throughput NUS notifications
+# nRF54LM20A has 1.5MB RAM, generous buffer allocation
 CONFIG_BT_BUF_ACL_TX_SIZE=251
-CONFIG_BT_BUF_ACL_TX_COUNT=10
-CONFIG_BT_BUF_EVT_RX_COUNT=15
+CONFIG_BT_BUF_ACL_TX_COUNT=32
+CONFIG_BT_BUF_EVT_RX_COUNT=33
 CONFIG_BT_BUF_ACL_RX_SIZE=251
 CONFIG_BT_L2CAP_TX_MTU=247
-CONFIG_BT_L2CAP_TX_BUF_COUNT=10
-CONFIG_BT_L2CAP_TX_FRAG_COUNT=6
-CONFIG_BT_ATT_TX_COUNT=10
-CONFIG_BT_CONN_TX_MAX=10
+CONFIG_BT_L2CAP_TX_BUF_COUNT=24
+CONFIG_BT_L2CAP_TX_FRAG_COUNT=12
+CONFIG_BT_ATT_TX_COUNT=24
+CONFIG_BT_CONN_TX_MAX=32
+
+# Note: BT_CTLR_DATA_LENGTH is selected indirectly (e.g. by BT_DATA_LEN_UPDATE).
+# It cannot be set directly, so BT_CTLR_DATA_LENGTH_MAX is also omitted.
 
 # BLE NUS
 CONFIG_BT_ZEPHYR_NUS=y
 CONFIG_BT_ZEPHYR_NUS_DEFAULT_INSTANCE=y
 
 # Memory
-CONFIG_HEAP_MEM_POOL_SIZE=8192
+CONFIG_HEAP_MEM_POOL_SIZE=16384
 
-# System workqueue stack
-CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
+# System workqueue stack (increased for BLE work items)
+CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=4096
+
+# External SPI NOR Flash (8MB PY25Q64HA)
+CONFIG_SPI=y
+CONFIG_SPI_NOR=y
+CONFIG_FLASH=y
+CONFIG_FLASH_PAGE_LAYOUT=y
 
 # Assert level
 CONFIG_ASSERT=y
