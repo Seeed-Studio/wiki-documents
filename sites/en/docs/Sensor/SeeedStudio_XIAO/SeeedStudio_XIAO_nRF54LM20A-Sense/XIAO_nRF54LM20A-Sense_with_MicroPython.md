@@ -462,18 +462,6 @@ except Exception as e:
 3. **Main loop:** `adc.read_uv()` returns the ADC reading in microvolts (µV). The value is converted to volts for display. Both raw µV and voltage readings are printed every 500 ms.
 4. **Error handling:** `try/except/finally` ensures graceful shutdown.
 
-:::tip
-
-Voltage Reference Reading Table
-
-| Status                    | Sensor Output Voltage | Expected ADC Raw Value |
-| ------------------------- | --------------------- | ---------------------- |
-| In air (Dry)              | ~2.0–2.4V             | ~2.0–2.4V              |
-| In moist soil             | ~1.3–1.8V             | ~1.3–1.8V              |
-| Fully immersed in water   | ~0.8–1.2V             | ~0.8–1.2V              |
-
-:::
-
 ### Result
 
 After flashing the program, insert the Grove-Capacitive Soil Moisture Sensor into household potted plants.
@@ -511,7 +499,7 @@ Universal Asynchronous Receiver/Transmitter (UART) is a standard asynchronous se
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-        <th>Grove - Capacitive Soil Moisture Sensor</th>
+        <th>CH340G USB-to-Serial TTL Module Adapter</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -870,7 +858,7 @@ except Exception as e:
 ### Result
 
 
-After the program runs, the text **Hello XIAO nRF54LM20A** will be displayed on the screen, and thread data will be printed through the USB serial port.
+After the program runs, the text **NRF54LM20A** and **HELLO WORLD** will be displayed on the screen, and status information will be printed through the USB serial port.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_5.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -929,7 +917,7 @@ from boards.xiao_nrf54lm20a import xiao_nrf54lm20a as xiao
 cs  = Pin(("gpio1", 31), Pin.OUT)   # D1
 dc  = Pin(("gpio1", 29), Pin.OUT)   # D3
 bl  = Pin(("gpio1", 8), Pin.OUT)   
-rst = Pin(("gpio1", 30), Pin.OUT)   # D2 (新增复位脚，如硬件未接可跳过但建议接上)
+rst = Pin(("gpio1", 30), Pin.OUT)   # D2 
 
 spi_id = xiao.spi("spi0") 
 spi = SPI(spi_id, baudrate=8000000, polarity=0, phase=0)
@@ -970,7 +958,7 @@ def set_addr_window(x0, y0, x1, y1):
     cs.value(1)
 
 def init_display():
-    # 硬件复位 (如果已接 rst 引脚)
+    # Hardware reset (if reset pin is connected)
     rst.value(1)
     time.sleep_ms(10)
     rst.value(0)
@@ -978,7 +966,7 @@ def init_display():
     rst.value(1)
     time.sleep_ms(120)
     
-    # GC9A01 完整初始化序列
+    # GC9A01 full initialization sequence
     write_command(0xEF)
     write_command(0xEB)
     write_data(0x14)
@@ -1030,10 +1018,10 @@ def init_display():
     write_data(0x20)
     
     write_command(0x36)
-    write_data(0x08)  # 内存访问控制，旋转方向根据实际需要调整
+    write_data(0x08)  # Memory access control, adjust rotation direction as needed
     
     write_command(0x3A)
-    write_data(0x05)  # RGB565 16位色
+    write_data(0x05)  # RGB565 16-bit color mode
     
     write_command(0x90)
     write_data(0x08)
