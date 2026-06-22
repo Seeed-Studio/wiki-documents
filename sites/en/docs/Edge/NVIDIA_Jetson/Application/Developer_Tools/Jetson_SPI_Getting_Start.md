@@ -15,7 +15,7 @@ last_update:
   date: 06/08/2026
   author: HaoChen
 createdAt: '2026-06-01'
-updatedAt: '2026-06-08'
+updatedAt: '2026-06-09'
 url: https://wiki.seeedstudio.com/jetson_spi_getting_start/
 ---
 

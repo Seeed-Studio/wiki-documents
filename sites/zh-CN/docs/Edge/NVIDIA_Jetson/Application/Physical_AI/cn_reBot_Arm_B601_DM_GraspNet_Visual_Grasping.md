@@ -1,5 +1,5 @@
 ---
-description: 本维基展示如何在 NVIDIA Jetson 上部署 reBot Arm B601-DM GraspNet 视觉抓取演示。内容涵盖 Jetson 环境配置、GraspNet CUDA 算子、Orbbec Gemini 2 RGB-D 相机配置、YOLO TensorRT 导出、手眼标定、Web UI 使用、CLI 使用以及 HTTP API 控制。
+description: 本维基展示如何在 NVIDIA Jetson 上部署 reBot Arm B601-DM 的 GraspNet 视觉抓取演示。内容涵盖 Jetson 环境配置、GraspNet CUDA 算子、Orbbec Gemini 2 RGB-D 相机配置、YOLO TensorRT 导出、手眼标定、Web UI 使用、CLI 使用以及 HTTP API 控制。
 title: 在 Jetson 上使用 reBot-DM 实现 GraspNet 视觉抓取
 keywords:
   - reBot Arm
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_graspnet_visual_grasping/
 
 # 在 Jetson 上运行 reBot Arm B601-DM 的 GraspNet 视觉抓取
 
-本维基说明如何在 NVIDIA Jetson 上部署 **reBot Arm B601-DM 视觉抓取演示**。该演示结合了 RGB-D 相机、YOLO 实例分割、GraspNet 六自由度抓取姿态估计、手眼标定以及真实机器人控制，使机械臂能够在桌面上选择并抓取常见物体。
+本维基说明如何在 NVIDIA Jetson 上部署 **reBot Arm B601-DM 视觉抓取演示**。该演示结合 RGB-D 相机、YOLO 实例分割、GraspNet 六自由度抓取姿态估计、手眼标定以及真实机器人控制，使机械臂能够在桌面上选择并抓取常见物体。
 
 本指南 1.0 版本聚焦于可靠的单 Jetson 部署和日常操作流程。默认配置使用 **Orbbec Gemini 2** 作为 RGB-D 相机，使用 **YOLO11n-seg TensorRT** 进行目标筛选，并使用 **GraspNet** 生成通用的六自由度抓取姿态。
 
@@ -78,7 +78,7 @@ Optional base rotation and object placement
 
 | 模式 | 入口脚本 | 典型用途 |
 | --- | --- | --- |
-| Web UI | `scripts/grasp_web.py` | 实时视频、目标选择、抓取预览、真实抓取、偏移调节 |
+| Web UI | `scripts/grasp_web.py` | 实时视频、目标选择、抓取预览、真实抓取、偏移调试 |
 | CLI | `scripts/grasp.py` | 无界面抓取或脚本化测试 |
 | HTTP API | `scripts/grasp_curl.sh` and `scripts/grasp_api_client.py` | 远程控制、自动化、与其他应用集成 |
 
@@ -92,7 +92,7 @@ Optional base rotation and object placement
 - 用于机器人 CAN 总线的 USB2CAN 适配器
 - 相机用 USB 3.0 线缆
 - 用于手眼标定的 ArUco 标记，`DICT_4X4_50`，ID `0`，边长 0.1 m
-- 一张稳定的桌子、机械臂周围足够的空隙，以及一种紧急断电方式
+- 一张稳定的桌子、机械臂周围足够的空隙，以及紧急断电方式
 
 :::warning
 本演示会驱动真实机械臂。在所有运动测试和抓取测试期间，请将手、线缆和松散物体远离机械臂工作空间。先从 `--dry-run`、只读检查和小幅度点动开始，再启用完整的机器人执行。
@@ -102,7 +102,7 @@ Optional base rotation and object placement
 
 1. 通过 USB 3.0 将 Gemini 2 连接到 Jetson。
 2. 将 USB2CAN 适配器连接到 reBot Arm 的 CAN 总线，然后连接到 Jetson。
-3. 打开 reBot Arm 电源。
+3. 给 reBot Arm 上电。
 4. 确认设备可见：
 
 ```bash
@@ -110,7 +110,7 @@ lsusb
 ls /dev/ttyUSB* /dev/ttyACM* 2>/dev/null || true
 ```
 
-在首次启动时临时设置设备权限：
+首次上电时临时设置设备权限：
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*
@@ -170,7 +170,7 @@ nvcc --version
 
 **步骤 4. 安装适用于 Jetson 的 PyTorch**
 
-不要在 Jetson 上安装通用的 PyPI CPU/GPU PyTorch 软件包。请安装与你的 JetPack、Python 和 CUDA 版本匹配的 wheel。对于 reComputer 用户，你也可以参考专门的指南：[Install Pytorch for reComputer Jetson](https://wiki.seeedstudio.com/cn/install_torch_on_recomputer/)。
+不要在 Jetson 上安装通用的 PyPI CPU/GPU PyTorch 软件包。请安装与你的 JetPack、Python 和 CUDA 版本匹配的 wheel。对于 reComputer 用户，也可以参考专门的指南：[Install Pytorch for reComputer Jetson](https://wiki.seeedstudio.com/cn/install_torch_on_recomputer/)。
 
 常见的起点包括：
 
@@ -242,7 +242,7 @@ bash scripts/install_graspnet_cuda_ops.sh
 bash scripts/install_graspnet_cuda_ops.sh --check
 ```
 
-如果之后更改了 JetPack、Python、CUDA 或 PyTorch，请使用以下命令重新构建：
+如果之后更换了 JetPack、Python、CUDA 或 PyTorch，请使用以下命令重新构建：
 
 ```bash
 bash scripts/install_graspnet_cuda_ops.sh --force
@@ -250,13 +250,13 @@ bash scripts/install_graspnet_cuda_ops.sh --force
 
 **步骤 8. 安装 Orbbec 相机 SDK**
 
-项目中包含一个辅助脚本，可将 `pyorbbecsdk2` 安装到当前激活的 Python 环境中：
+本项目包含一个辅助脚本，可将 `pyorbbecsdk2` 安装到当前激活的 Python 环境中：
 
 ```bash
 bash scripts/install_pyorbbecsdk.sh
 ```
 
-如果你需要在本地构建 SDK，请先克隆源码树并以源码模式运行：
+如果你需要在本地构建 SDK，请先克隆源码树并运行源码模式：
 
 ```bash
 git clone https://github.com/orbbec/pyorbbecsdk.git sdk/pyorbbecsdk
@@ -273,7 +273,7 @@ sudo udevadm trigger
 
 **步骤 9. 在目标 Jetson 上下载 YOLO 权重并导出 TensorRT**
 
-TensorRT 引擎文件与设备相关。务必在将要运行演示的 Jetson 上导出 `.engine` 文件。
+TensorRT 引擎文件与设备相关。务必在将要运行演示的那台 Jetson 上导出 `.engine`。
 
 ```bash
 mkdir -p models
@@ -296,7 +296,7 @@ yolo export model=models/yolo11n-seg.pt format=engine imgsz=640 device=0 workspa
 
 ## 验证与标定
 
-在尝试真实抓取之前，请按顺序运行以下检查。
+在尝试真实抓取之前，按顺序运行以下检查。
 
 **1. 检查 RGB-D 相机**
 
@@ -359,7 +359,7 @@ config/calibration/orbbec_gemini2/hand_eye.npz
 config/calibration/orbbec_gemini2/intrinsics.npz
 ```
 
-验证保存的标定结果：
+验证已保存的标定结果：
 
 ```bash
 python scripts/verify_handeye_calibration.py
@@ -369,9 +369,9 @@ python scripts/verify_handeye_calibration.py
 
 ## 运行 Web 演示
 
-Web UI 是推荐的首选用户界面。它提供实时 MJPEG 视频、目标选择、抓取预览、真实抓取执行、补偿调节、基座点动、夹爪控制、就绪姿态以及复位操作。
+Web UI 是推荐的首选用户界面。它提供实时 MJPEG 视频、目标选择、抓取预览、真实抓取执行、补偿调节、基座点动、夹爪控制、就绪姿态和复位操作。
 
-先从预览模式开始。这不会执行真实的机器人运动：
+先以预览模式启动。此模式不会执行真实的机器人运动：
 
 ```bash
 conda activate graspnet
@@ -379,7 +379,7 @@ cd ~/rebot_grasp-jetson
 
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --num-point 12000 \
   --cloud-crop-nsample 32
 ```
@@ -387,21 +387,21 @@ python scripts/grasp_web.py \
 在浏览器中打开 Web UI：
 
 ```text
-http://<jetson_ip>:8000
+http://<jetson_ip>:8090
 ```
 
 <div align="center">
   <img width={900} src="https://files.seeedstudio.com/wiki/graspnet/web.png" />
 </div>
 
-使用预览模式确认相机视频流、YOLO 检测、目标过滤以及抓取点生成。在 Web UI 中点击推理或刷新控件以更新 GraspNet 预览。
+使用预览模式确认相机视频流、YOLO 检测、目标过滤和抓取点生成。在 Web UI 中点击推理或刷新控件以更新 GraspNet 预览。
 
-当场景稳定且验证步骤通过后，开始进行真实机器人执行：
+当场景稳定且验证步骤通过后，开始真实机器人执行：
 
 ```bash
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --enable-robot \
   --num-point 12000 \
   --cloud-crop-nsample 32
@@ -412,7 +412,7 @@ python scripts/grasp_web.py \
 ```bash
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --enable-robot \
   --no-place-after-grasp \
   --num-point 12000 \
@@ -442,7 +442,7 @@ python scripts/grasp_web.py \
 6. 仅在机械臂路径无障碍时点击 **Real Grasp**。
 7. 当场景发生变化或机器人需要回到安全状态时使用 **Reset**。
 
-补偿值用于修正小的机械和标定误差。在 Web UI 中调好后，将这些值持久化到 `config/compensation.json`，或将稳定的数值记录到你的部署笔记中。请使用小步长调整，例如位置偏移为 0.005 m，旋转偏移为 1 到 2 度。
+补偿值用于修正小的机械和标定误差。在 Web UI 中调节完成后，将这些值持久化到 `config/compensation.json`，或将稳定的数值复制到你的部署记录中。请使用小步长，例如位置偏移为 0.005 m，旋转偏移为 1 到 2 度。
 
 ## CLI 和 API 用法
 
@@ -497,10 +497,10 @@ bash scripts/grasp_curl.sh grasp
 bash scripts/grasp_curl.sh reset
 ```
 
-也可以直接使用 `curl` 调用相同操作：
+同样的操作也可以直接通过 `curl` 调用：
 
 ```bash
-BASE=http://127.0.0.1:8000
+BASE=http://127.0.0.1:8090
 
 curl -s "$BASE/state"
 curl -s -X POST "$BASE/ready" -H "Content-Type: application/json" -d "{}"
@@ -513,7 +513,7 @@ curl -s -X POST "$BASE/grasp" -H "Content-Type: application/json" -d "{}"
 
 | 端点 | 方法 | 作用 |
 | --- | --- | --- |
-| `/state` | GET | 当前检测、抓取以及 Web 运行时状态 |
+| `/state` | GET | 当前检测、抓取和 Web 运行时状态 |
 | `/robot/state` | GET | 机器人关节、TCP 位姿、夹爪状态 |
 | `/stream.mjpg` | GET | MJPEG 相机视频流 |
 | `/compensation` | POST | 设置夹爪、相机和基座补偿 |
@@ -574,10 +574,16 @@ grasp_pipeline:
 | 现象 | 首要调节对象 |
 | --- | --- |
 | 夹爪在前后方向偏差过大 | `grasp_forward_offset` / Web 夹爪前向补偿 |
-| 夹爪左右偏差 | `grasp_lateral_offset` 或相机 X/Y 补偿 |
+| 夹爪在左右方向抓偏 | `grasp_lateral_offset` 或相机 X/Y 补偿 |
 | 夹爪过高或过低 | `grasp_vertical_offset` 或相机 Z 补偿 |
 | 腕部角度错误 | 夹爪滚转、俯仰、偏航补偿 |
 | 所有抓取都向同一方向偏移 | 相机或基座补偿 |
+
+## 演示视频
+
+<div align="center">
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 故障排查
 
@@ -603,7 +609,7 @@ ArUco 标记未被检测到：请确认标记字典为 `DICT_4X4_50`，ID 为 `0
 
 机器人已连接但运动失败：运行 `verify_rebot_arm_motion.py --read-only`，确认 USB2CAN 设备，检查电机电源，并在重试抓取执行前测试一个小的 `--deg 5` 点动。
 
-GraspNet 内存不足：请减小 `--num-point`，减小 `--cloud-crop-nsample`，关闭桌面应用，并避免同时运行多个高负载推理进程。
+GraspNet 内存不足：请减小 `--num-point`，减小 `--cloud-crop-nsample`，关闭桌面应用程序，并避免同时运行多个高负载推理进程。
 
 ## 资源
 
@@ -614,11 +620,6 @@ GraspNet 内存不足：请减小 `--num-point`，减小 `--cloud-crop-nsample`�
 - Orbbec pyorbbecsdk：https://github.com/orbbec/pyorbbecsdk
 - 为 reComputer Jetson 安装 Pytorch：https://wiki.seeedstudio.com/cn/install_torch_on_recomputer/
 
-## 演示视频
-
-<div align="center">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ## 技术支持与产品讨论
 

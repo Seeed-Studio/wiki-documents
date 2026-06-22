@@ -1,5 +1,5 @@
 ---
-description: Este wiki mostra como implantar o demo de preensão visual GraspNet do reBot Arm B601-DM em NVIDIA Jetson. Ele abrange a configuração do ambiente Jetson, operadores CUDA do GraspNet, configuração da câmera RGB-D Orbbec Gemini 2, exportação do YOLO TensorRT, calibração mão-olho, uso da interface Web, uso via CLI e controle por HTTP API.
+description: Este wiki mostra como implantar o demo de preensão visual GraspNet do reBot Arm B601-DM em NVIDIA Jetson. Ele abrange a configuração do ambiente Jetson, operadores CUDA do GraspNet, configuração da câmera RGB-D Orbbec Gemini 2, exportação do YOLO TensorRT, calibração mão‑olho, uso da interface Web, uso via CLI e controle pela API HTTP.
 title: Preensão Visual GraspNet no Jetson com reBot-DM
 keywords:
   - reBot Arm
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_graspnet_visual_graspi
 
 # Preensão Visual GraspNet no Jetson com reBot Arm B601-DM
 
-Este wiki explica como implantar o **demo de preensão visual do reBot Arm B601-DM** em NVIDIA Jetson. O demo combina uma câmera RGB-D, segmentação por instância com YOLO, estimativa de pose de preensão 6-DoF com GraspNet, calibração olho-na-mão e controle de robô real, para que o braço possa selecionar e agarrar objetos comuns sobre uma mesa.
+Este wiki explica como implantar o **demo de preensão visual do reBot Arm B601-DM** em NVIDIA Jetson. O demo combina uma câmera RGB-D, segmentação por instância com YOLO, estimação de pose de preensão 6-DoF com GraspNet, calibração olho‑na‑mão e controle de robô real, para que o braço possa selecionar e agarrar objetos comuns sobre uma mesa.
 
 A versão 1.0 deste guia foca em uma implantação confiável com um único Jetson e no fluxo de operação diária. A configuração padrão usa **Orbbec Gemini 2** como câmera RGB-D, **YOLO11n-seg TensorRT** para filtragem de alvos e **GraspNet** para geração genérica de poses de preensão 6-DoF.
 
@@ -74,7 +74,7 @@ reBot Arm IK trajectory and gripper force control
 Optional base rotation and object placement
 ```
 
-O projeto fornece três maneiras práticas de usar o sistema:
+O projeto oferece três maneiras práticas de usar o sistema:
 
 | Modo | Ponto de entrada | Uso típico |
 | --- | --- | --- |
@@ -91,16 +91,16 @@ Prepare o seguinte hardware antes de começar:
 - Câmera RGB-D Orbbec Gemini 2
 - Adaptador USB2CAN para o barramento CAN do robô
 - Cabo USB 3.0 para a câmera
-- Marcador ArUco para calibração mão-olho, `DICT_4X4_50`, ID `0`, comprimento de aresta de 0,1 m
+- Marcador ArUco para calibração mão‑olho, `DICT_4X4_50`, ID `0`, aresta de 0,1 m
 - Uma mesa estável, espaço livre suficiente ao redor do braço e um método de desligamento de emergência
 
 :::warning
-Este demo aciona um braço robótico real. Durante todos os testes de movimento e de preensão, mantenha mãos, cabos e objetos soltos fora da área de trabalho do braço. Comece com `--dry-run`, verificações somente leitura e pequenos valores de avanço antes de habilitar a execução completa do robô.
+Este demo aciona um braço robótico real. Durante todos os testes de movimento e de preensão, mantenha mãos, cabos e objetos soltos fora da área de trabalho do braço. Comece com `--dry-run`, verificações somente leitura e pequenos valores de deslocamento antes de habilitar a execução completa do robô.
 :::
 
 Conecte o hardware:
 
-1. Conecte o Gemini 2 ao Jetson via USB 3.0.
+1. Conecte a Gemini 2 ao Jetson via USB 3.0.
 2. Conecte o adaptador USB2CAN ao barramento CAN do reBot Arm e depois ao Jetson.
 3. Ligue o reBot Arm.
 4. Confirme que os dispositivos estão visíveis:
@@ -168,7 +168,7 @@ cat /etc/nv_tegra_release
 nvcc --version
 ```
 
-**Passo 4. Instalar PyTorch compatível com Jetson**
+**Passo 4. Instalar o PyTorch compatível com Jetson**
 
 Não instale o pacote genérico PyTorch CPU/GPU do PyPI no Jetson. Instale um wheel que corresponda às suas versões de JetPack, Python e CUDA. Para usuários de reComputer, você também pode seguir o guia dedicado: [Install Pytorch for reComputer Jetson](https://wiki.seeedstudio.com/pt-br/install_torch_on_recomputer/).
 
@@ -318,7 +318,7 @@ Comece com o modo somente leitura:
 python scripts/verify_rebot_arm_motion.py --read-only
 ```
 
-Depois execute um pequeno avanço na junta 6 após confirmar que o caminho do braço está livre:
+Depois execute um pequeno deslocamento na junta 6 após confirmar que o caminho do braço está livre:
 
 ```bash
 python scripts/verify_rebot_arm_motion.py --deg 5
@@ -336,9 +336,9 @@ Se a câmera ainda não estiver conectada, mas você só quiser verificar Python
 python scripts/verify_graspnet_stack.py --skip-camera
 ```
 
-**4. Executar calibração olho-na-mão**
+**4. Executar calibração olho‑na‑mão**
 
-Este projeto usa calibração olho-na-mão: a câmera é montada no efetuador final e o marcador ArUco é fixado na mesa. A configuração padrão espera um marcador `DICT_4X4_50`, ID `0`, de 0,1 m. O repositório inclui arquivos de marcador imprimíveis como `aruco100x100.pdf`.
+Este projeto usa calibração olho‑na‑mão: a câmera é montada no efetuador final e o marcador ArUco é fixado na mesa. A configuração padrão espera um marcador `DICT_4X4_50`, ID `0`, de 0,1 m. O repositório inclui arquivos de marcador imprimíveis como `aruco100x100.pdf`.
 
 Coleta automática:
 
@@ -365,11 +365,11 @@ Verifique a calibração salva:
 python scripts/verify_handeye_calibration.py
 ```
 
-Recalibre sempre que o suporte da câmera, a garra, o tamanho da placa ArUco ou a geometria da mesa forem alterados.
+Recalibre sempre que o suporte da câmera, o gripper, o tamanho da placa ArUco ou a geometria da mesa forem alterados.
 
 ## Executar a demonstração Web
 
-A interface Web é a primeira interface de usuário recomendada. Ela fornece vídeo MJPEG ao vivo, seleção de alvo, pré-visualização de apreensão, execução real de apreensão, ajuste de compensação, movimentação da base, controle da garra, pose de pronto e operações de redefinição.
+A interface Web é a primeira interface de usuário recomendada. Ela fornece vídeo MJPEG ao vivo, seleção de alvo, pré-visualização de preensão, execução real de preensão, ajuste de compensação, movimentação da base, controle do gripper, pose de pronto e operações de redefinição.
 
 Comece primeiro no modo de pré-visualização. Isso não executa movimento real do robô:
 
@@ -379,7 +379,7 @@ cd ~/rebot_grasp-jetson
 
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --num-point 12000 \
   --cloud-crop-nsample 32
 ```
@@ -387,62 +387,62 @@ python scripts/grasp_web.py \
 Abra a interface Web a partir de um navegador:
 
 ```text
-http://<jetson_ip>:8000
+http://<jetson_ip>:8090
 ```
 
 <div align="center">
   <img width={900} src="https://files.seeedstudio.com/wiki/graspnet/web.png" />
 </div>
 
-Use o modo de pré-visualização para confirmar o fluxo da câmera, detecções YOLO, filtragem de alvos e geração de pontos de apreensão. Clique no controle de inferência ou atualização na interface Web para atualizar a pré-visualização do GraspNet.
+Use o modo de pré-visualização para confirmar o fluxo da câmera, detecções YOLO, filtragem de alvos e geração de pontos de preensão. Clique no controle de inferência ou atualização na interface Web para atualizar a pré-visualização do GraspNet.
 
 Quando a cena estiver estável e as etapas de verificação tiverem sido concluídas, inicie a execução real do robô:
 
 ```bash
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --enable-robot \
   --num-point 12000 \
   --cloud-crop-nsample 32
 ```
 
-Para os primeiros testes reais, desative o posicionamento pós-apreensão para que o braço execute apenas o movimento de apreensão e recuperação:
+Para os primeiros testes reais, desative o posicionamento pós-preensão para que o braço execute apenas o movimento de preensão e recuperação:
 
 ```bash
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --enable-robot \
   --no-place-after-grasp \
   --num-point 12000 \
   --cloud-crop-nsample 32
 ```
 
-Opções úteis de inicialização:
+Opções de inicialização úteis:
 
 | Opção | Finalidade |
 | --- | --- |
-| `--enable-robot` | Permitir movimento real do braço e da garra |
+| `--enable-robot` | Permitir movimento real do braço e do gripper |
 | `--target-class cup` | Pré-selecionar uma classe de alvo |
 | `--no-yolo` | Desativar filtragem YOLO e executar GraspNet em cena completa |
 | `--camera-type orbbec_gemini2` | Forçar o driver da câmera |
-| `--no-place-after-grasp` | Ignorar rotação da base e posicionamento após a apreensão |
-| `--num-point 12000` | Reduzir a contagem de pontos do GraspNet para a memória do Jetson |
-| `--cloud-crop-nsample 32` | Reduzir amostras do CloudCrop para a memória do Jetson |
-| `--graspnet-interval 2.0` | Definir o intervalo de atualização automática do GraspNet quando habilitado |
+| `--no-place-after-grasp` | Ignorar rotação da base e posicionamento após a preensão |
+| `--num-point 12000` | Reduzir a contagem de pontos do GraspNet para memória do Jetson |
+| `--cloud-crop-nsample 32` | Reduzir amostras do CloudCrop para memória do Jetson |
+| `--graspnet-interval 2.0` | Definir o intervalo de atualização automática do GraspNet quando ativado |
 
 O fluxo de trabalho normal da interface Web é:
 
 1. Clique em **Ready** para mover o braço para a pose de pronto.
 2. Selecione uma classe de alvo ou deixe em branco para usar objetos detectados.
-3. Clique em **Infer** ou **Refresh** para calcular uma pose de apreensão.
-4. Verifique se o marcador de apreensão parece razoável no vídeo.
-5. Ajuste a garra, a câmera ou a compensação da base, se necessário.
+3. Clique em **Infer** ou **Refresh** para calcular uma pose de preensão.
+4. Verifique se o marcador de preensão parece razoável no vídeo.
+5. Ajuste o gripper, a câmera ou a compensação da base, se necessário.
 6. Clique em **Real Grasp** somente quando o caminho do braço estiver livre.
 7. Use **Reset** se a cena mudar ou se o robô precisar retornar a um estado seguro.
 
-Os valores de compensação são usados para corrigir pequenos erros mecânicos e de calibração. Após o ajuste na interface Web, persista os valores em `config/compensation.json` ou copie valores estáveis para suas anotações de implantação. Use incrementos pequenos, por exemplo 0,005 m para deslocamentos de posição e 1 a 2 graus para deslocamentos de rotação.
+Os valores de compensação são usados para corrigir pequenos erros mecânicos e de calibração. Após o ajuste na interface Web, persista os valores em `config/compensation.json` ou copie valores estáveis para suas notas de implantação. Use incrementos pequenos, por exemplo 0,005 m para deslocamentos de posição e 1 a 2 graus para deslocamentos de rotação.
 
 ## Uso via CLI e API
 
@@ -464,7 +464,7 @@ Para execução real via CLI:
 python scripts/grasp.py --camera-type orbbec_gemini2 --target-class cup
 ```
 
-Desative o posicionamento durante a configuração via CLI:
+Desative o posicionamento durante a colocação em serviço via CLI:
 
 ```bash
 python scripts/grasp.py \
@@ -500,7 +500,7 @@ bash scripts/grasp_curl.sh reset
 As mesmas operações podem ser chamadas diretamente com `curl`:
 
 ```bash
-BASE=http://127.0.0.1:8000
+BASE=http://127.0.0.1:8090
 
 curl -s "$BASE/state"
 curl -s -X POST "$BASE/ready" -H "Content-Type: application/json" -d "{}"
@@ -513,16 +513,16 @@ Outros endpoints úteis:
 
 | Endpoint | Método | Finalidade |
 | --- | --- | --- |
-| `/state` | GET | Estado atual de detecção, apreensão e runtime Web |
-| `/robot/state` | GET | Juntas do robô, pose do TCP, estado da garra |
+| `/state` | GET | Estado atual de detecção, preensão e runtime Web |
+| `/robot/state` | GET | Juntas do robô, pose do TCP, estado do gripper |
 | `/stream.mjpg` | GET | Fluxo de câmera MJPEG |
-| `/compensation` | POST | Definir compensação da garra, câmera e base |
+| `/compensation` | POST | Definir compensação do gripper, da câmera e da base |
 | `/joint/limits` | GET | Ler posições e limites das juntas |
 | `/joint/jog` | POST | Movimentar uma junta, frequentemente `joint1` para testes da base |
 | `/move/joints` | POST | Mover todas as juntas para posições absolutas |
 | `/move/pose` | POST | Mover o TCP para uma pose alvo via IK ou modo de trajetória |
-| `/gripper` | POST | Abrir, fechar, liberar ou ler o estado da garra |
-| `/auto_grasp` | POST | Executar um ciclo em segundo plano de busca de alvo e apreensão |
+| `/gripper` | POST | Abrir, fechar, liberar ou ler o estado do gripper |
+| `/auto_grasp` | POST | Executar um ciclo em segundo plano de busca de alvo e preensão |
 
 ## Configuração e Ajuste Fino
 
@@ -569,15 +569,21 @@ grasp_pipeline:
     return_home: false
 ```
 
-Se a garra perder o objeto de forma consistente, ajuste nesta ordem:
+Se o gripper perder o objeto de forma consistente, ajuste nesta ordem:
 
 | Sintoma | Primeiro alvo de ajuste |
 | --- | --- |
-| A garra fica muito à frente ou atrás | `grasp_forward_offset` / avanço da garra na Web |
-| A garra erra para a esquerda ou direita | `grasp_lateral_offset` ou compensação X/Y da câmera |
-| A garra fica muito alta ou baixa | `grasp_vertical_offset` ou compensação Z da câmera |
-| O ângulo do punho está errado | Compensação de rolagem, inclinação e guinada da garra |
-| Todas as apreensões se deslocam na mesma direção | Compensação da câmera ou da base |
+| O gripper fica muito à frente ou atrás | `grasp_forward_offset` / avanço do gripper na Web |
+| O gripper erra para a esquerda ou direita | `grasp_lateral_offset` ou compensação X/Y da câmera |
+| O gripper fica muito alto ou baixo | `grasp_vertical_offset` ou compensação Z da câmera |
+| O ângulo do punho está errado | Compensação de rolagem, inclinação e guinada do gripper |
+| Todas as preensões se deslocam na mesma direção | Compensação da câmera ou da base |
+
+## Vídeo de Demonstração
+
+<div align="center">
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Solução de Problemas
 
@@ -597,11 +603,11 @@ sudo chmod a+rw /dev/bus/usb/*/*
 python scripts/verify_pyorbbec_stream.py
 ```
 
-Falha ao carregar o YOLO `.engine`: reexporte-o no mesmo Jetson. Arquivos de engine não devem ser copiados entre modelos de Jetson, versões do JetPack ou versões do TensorRT.
+Falha ao carregar o YOLO `.engine`: reexporte-o no mesmo Jetson. Arquivos de engine não devem ser copiados entre modelos Jetson, versões do JetPack ou versões do TensorRT.
 
 O marcador ArUco não é detectado: confirme que o dicionário do marcador é `DICT_4X4_50`, o ID é `0`, o comprimento da aresta do marcador é 0,1 m, a iluminação é estável e o marcador está plano e totalmente visível.
 
-O robô conecta, mas o movimento falha: execute `verify_rebot_arm_motion.py --read-only`, confirme o dispositivo USB2CAN, verifique a alimentação dos motores e teste um pequeno movimento de `--deg 5` antes de tentar novamente a execução de apreensão.
+O robô conecta, mas o movimento falha: execute `verify_rebot_arm_motion.py --read-only`, confirme o dispositivo USB2CAN, verifique a alimentação dos motores e teste um pequeno movimento de `--deg 5` antes de tentar novamente a execução da preensão.
 
 O GraspNet fica sem memória: reduza `--num-point`, reduza `--cloud-crop-nsample`, feche aplicativos de desktop e evite executar vários processos de inferência pesados ao mesmo tempo.
 
@@ -614,13 +620,8 @@ O GraspNet fica sem memória: reduza `--num-point`, reduza `--cloud-crop-nsample
 - Orbbec pyorbbecsdk: https://github.com/orbbec/pyorbbecsdk
 - Instalar Pytorch para reComputer Jetson: https://wiki.seeedstudio.com/pt-br/install_torch_on_recomputer/
 
-## Vídeo de Demonstração
 
-<div align="center">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Fornecemos vários canais de suporte para dúvidas, discussões e relato de problemas.
 

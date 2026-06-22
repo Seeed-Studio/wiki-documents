@@ -15,7 +15,7 @@ last_update:
   date: 12/09/2025
   author: Lorraine
 createdAt: '2026-01-12'
-updatedAt: '2026-05-13'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_j501_robotics_getting_started/
 ---
 

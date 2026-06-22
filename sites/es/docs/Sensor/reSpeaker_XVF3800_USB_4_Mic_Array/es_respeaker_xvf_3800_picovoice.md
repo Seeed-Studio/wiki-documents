@@ -1,67 +1,143 @@
 ---
-description: El ReSpeaker XVF3800 USB 4-Mic Array es una matriz de micrófonos circular profesional con AEC, conformación de haz, supresión de ruido y captura de voz de 360°. Combinado con el XIAO ESP32S3, permite un control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones de IoT. Descubre una integración perfecta y flexibilidad de doble modo.
-title: reSpeaker XVF3800 Controla la palabra de activación y el NLU con Pico-voice
+description: La ReSpeaker XVF3800 USB 4-Mic Array es una matriz de micrófonos circular profesional con AEC, conformación de haz, supresión de ruido y captura de voz de 360°. Combinada con la XIAO ESP32S3, permite un control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre una integración perfecta y flexibilidad de doble modo.
+title: reSpeaker Controla la palabra de activación y el NLU con Pico-voice
 keywords:
   - reSpeaker
   - python
   - picovoice
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
 slug: /respeaker_xvf3800_picovoice
-sku: 114993700
+sku: 114993700,100005504,100099135,100070894
 last_update:
   date: 3/24/2026
   author: Kasun Thushara
 createdAt: '2026-03-24'
-updatedAt: '2026-03-25'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_picovoice/
 ---
 
 ## Introducción 
 
-[Picovoice](https://picovoice.ai/) es una empresa especializada en IA de voz en el dispositivo, que proporciona un stack completo de tecnologías como detección de palabra de activación, conversión de voz a texto e identificación de intención que se ejecutan localmente en dispositivos embebidos y de borde sin depender de la nube. Sus soluciones están diseñadas para baja latencia, privacidad y despliegue multiplataforma, lo que las hace adecuadas para sistemas de IoT y robótica. 
+[Picovoice](https://picovoice.ai/) es una empresa especializada en IA de voz en el dispositivo, que proporciona un stack completo de tecnologías como detección de palabra de activación, conversión de voz a texto e identificación de intención que se ejecutan localmente en dispositivos embebidos y de borde sin depender de la nube. Sus soluciones están diseñadas para baja latencia, privacidad y despliegue multiplataforma, lo que las hace adecuadas para sistemas IoT y robóticos. 
 
 [Porcupine](https://picovoice.ai/docs/porcupine/) es el motor de detección de palabra de activación de Picovoice, ligero y de alta precisión, creado usando redes neuronales profundas y optimizado para sistemas embebidos. Permite aplicaciones siempre en escucha manteniendo un bajo coste computacional y puede ejecutarse en plataformas como microcontroladores, Raspberry Pi, móviles y ordenadores de escritorio. 
 
-Picovoice [Rhino](https://picovoice.ai/docs/rhino/) es un motor de voz a intención que convierte directamente los comandos hablados en intenciones estructuradas sin requerir un paso separado de voz a texto. Utiliza un enfoque de aprendizaje profundo de un solo paso, combinando reconocimiento de voz y comprensión del lenguaje natural para mejorar la precisión y reducir la latencia.
+Picovoice [Rhino](https://picovoice.ai/docs/rhino/) es un motor de conversión de voz a intención que transforma directamente los comandos hablados en intenciones estructuradas sin requerir un paso separado de voz a texto. Utiliza un enfoque de aprendizaje profundo de un solo paso, combinando reconocimiento de voz y comprensión del lenguaje natural para mejorar la precisión y reducir la latencia.
 
 ## ¿Qué son NLP, NLU y STT?
 
-El Procesamiento del Lenguaje Natural (NLP) es el campo amplio que permite a las máquinas procesar el lenguaje humano, mientras que la Comprensión del Lenguaje Natural (NLU) es un subconjunto que se centra específicamente en extraer el significado o la intención de ese lenguaje. La conversión de Voz a Texto (STT) transforma el audio hablado en texto, que luego normalmente se pasa a NLU para entender la intención del usuario. Picovoice Rhino adopta un enfoque diferente al omitir STT y convertir directamente la voz en intención (voz a intención), mejorando la eficiencia y la precisión.
+El Procesamiento del Lenguaje Natural (NLP) es el campo amplio que permite a las máquinas procesar el lenguaje humano, mientras que la Comprensión del Lenguaje Natural (NLU) es un subconjunto que se centra específicamente en extraer el significado o la intención de ese lenguaje. La conversión de voz a texto (STT) transforma el audio hablado en texto, que normalmente se pasa después a NLU para entender la intención del usuario. Picovoice Rhino adopta un enfoque diferente al omitir STT y convertir directamente la voz en intención (voz a intención), mejorando la eficiencia y la precisión.
 
 La detección de palabras clave (palabra de activación) (por ejemplo, “Hey device”) es el primer paso que activa el sistema y, tras la activación, se utiliza la canalización STT → NLU o voz a intención (Rhino) para comprender y ejecutar el comando.
 
 ## Objetivo
 
-Esta demostración muestra cómo la detección de palabra de activación usando Picovoice Porcupine funciona junto con Picovoice Rhino para un procesamiento eficiente de voz a intención en una Raspberry Pi. El sistema primero escucha una palabra clave para activarse y, una vez activado, convierte directamente los comandos hablados en intenciones accionables sin depender de un procesamiento pesado en la nube. Este enfoque está altamente optimizado para dispositivos embebidos de bajos recursos, lo que lo hace ideal para aplicaciones de robótica e IA en el borde. Permite una interacción de voz en tiempo real y baja latencia, garantizando un rendimiento rápido y fiable incluso en hardware limitado.
+Esta demostración muestra cómo la detección de palabra de activación usando Picovoice Porcupine funciona junto con Picovoice Rhino para un procesamiento eficiente de voz a intención en una Raspberry Pi. El sistema primero escucha una palabra clave para activarse y, una vez activado, convierte directamente los comandos hablados en intenciones accionables sin depender de un procesamiento pesado en la nube. Este enfoque está altamente optimizado para dispositivos embebidos de bajos recursos, lo que lo hace ideal para aplicaciones de robótica e IA en el borde. Permite una interacción de voz en tiempo real y baja latencia, garantizando un rendimiento rápido y fiable incluso en hardware con recursos limitados.
 
 ## Hardware necesario 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-    </a>
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      O
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
 </div>
 
 ## Detección de palabra de activación 
 
-Una palabra de activación en sistemas robóticos embebidos permite el **procesamiento dirigido por eventos**, lo que permite que el dispositivo permanezca en un estado de escucha de bajo consumo y solo active el procesamiento pesado de voz cuando sea necesario. Esto reduce significativamente el consumo de CPU, memoria y energía en hardware con recursos limitados como microcontroladores y dispositivos de borde. También actúa como un **mecanismo de compuerta** en la canalización de audio, filtrando el ruido irrelevante y evitando activaciones innecesarias del reconocimiento de voz y la lógica de control. Desde la perspectiva de la privacidad, la detección de palabra de activación garantiza que el audio solo se capture o transmita después de detectar una intención explícita del usuario, manteniendo la mayor parte del procesamiento de datos en el dispositivo. Además, mejora la interacción humano-robot al proporcionar un disparador natural para la participación, ayudando al sistema a distinguir entre conversación ambiental y comandos dirigidos.
+Una palabra de activación en sistemas embebidos robóticos permite un **procesamiento dirigido por eventos**, lo que hace que el dispositivo permanezca en un estado de escucha de bajo consumo y solo active el procesamiento pesado de voz cuando sea necesario. Esto reduce significativamente el consumo de CPU, memoria y energía en hardware con recursos limitados como microcontroladores y dispositivos de borde. También actúa como un **mecanismo de compuerta** en la canalización de audio, filtrando el ruido irrelevante y evitando activaciones innecesarias del reconocimiento de voz y la lógica de control. Desde la perspectiva de la privacidad, la detección de palabra de activación garantiza que el audio solo se capture o transmita después de detectar una intención explícita del usuario, manteniendo la mayor parte del procesamiento de datos en el dispositivo. Además, mejora la interacción humano-robot al proporcionar un disparador natural para el compromiso, ayudando al sistema a distinguir entre conversación ambiental y comandos dirigidos.
 
-Usar una palabra de activación junto con un sistema avanzado de matriz de micrófonos como reSpeaker XVF3800 permite una interacción por voz **eficiente y fiable** en sistemas encarnados. La palabra de activación garantiza que el sistema solo active el procesamiento completo de voz cuando sea necesario, reduciendo el consumo de energía y el uso de CPU en hardware embebido. La matriz de micrófonos mejora esto al proporcionar **formación de haz, supresión de ruido y detección de dirección en la matriz de micrófonos circular**, lo que permite un reconocimiento preciso de la palabra de activación incluso en entornos ruidosos. Esta combinación minimiza los disparos falsos y mejora la capacidad de respuesta general del sistema. También favorece una mejor interacción humano-robot al garantizar que el dispositivo responda solo cuando se le habla explícitamente y pueda centrarse en el hablante correcto.
+Usar una palabra de activación junto con un sistema avanzado de matriz de micrófonos como reSpeaker permite una interacción por voz **eficiente y fiable** en sistemas encarnados. La palabra de activación garantiza que el sistema solo active el procesamiento completo de voz cuando sea necesario, reduciendo el consumo de energía y el uso de CPU en hardware embebido. La matriz de micrófonos mejora esto proporcionando **formación de haz, supresión de ruido y detección de dirección en la matriz de micrófonos circular**, lo que permite un reconocimiento preciso de la palabra de activación incluso en entornos ruidosos. Esta combinación minimiza los disparos falsos y mejora la capacidad de respuesta general del sistema. También favorece una mejor interacción humano-robot al garantizar que el dispositivo responda solo cuando se le habla explícitamente y pueda centrarse en el interlocutor correcto.
 
 ## Cómo usar la palabra de activación con Pico-voice
 
-Regístrate en [Picovoice](https://console.picovoice.ai/) y obtendrás una clave de acceso 
+Regístrate en [Picovoice](https://console.picovoice.ai/) y obtendrás una Access Key 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic1.png" alt="pir" width={800} height="auto" /></p>
 
 
 ### Opción A: Palabras clave integradas 
 
- Porcupine proporciona varias opciones de palabras de activación integradas como **AMERICANO, BLUEBERRY, BUMBLEBEE, GRAPEFRUIT, GRASSHOPPER, PICOVOICE, PORCUPINE, TERMINATOR y JARVIS,** que pueden usarse directamente con una clave de acceso válida. Con la clave de acceso, estas palabras clave pueden integrarse fácilmente en tu aplicación sin entrenar un modelo personalizado.
+ Porcupine proporciona varias opciones de palabras de activación integradas como **AMERICANO, BLUEBERRY, BUMBLEBEE, GRAPEFRUIT, GRASSHOPPER, PICOVOICE, PORCUPINE, TERMINATOR y JARVIS,** que pueden usarse directamente con una Access Key válida. Con la Access Key, estas palabras clave pueden integrarse fácilmente en tu aplicación sin entrenar un modelo personalizado.
 
-En esta configuración, utilizamos una **Raspberry Pi 5** como dispositivo host, y la detección de palabra de activación se ejecutará localmente en el dispositivo. El sistema de micrófonos basado en XMOS está programado con el **firmware de audio USB**, lo que permite que el sistema operativo lo reconozca como un dispositivo de entrada de audio estándar.
+En esta configuración, utilizamos una **Raspberry Pi 5** como dispositivo host, y la detección de la palabra de activación se ejecutará localmente en el dispositivo. El sistema de micrófonos basado en XMOS está flasheado con **firmware de audio USB**, lo que permite que el sistema operativo lo reconozca como un dispositivo de entrada de audio estándar.
 
 Para comenzar, es necesario instalar en el entorno las bibliotecas y dependencias requeridas de Porcupine.
 
@@ -100,11 +176,11 @@ recorder.delete()
 
 ### Opción B: Palabras clave personalizadas 
 
-Ve a la consola de Picovoice y abre la página de palabra de activación personalizada. Selecciona tu idioma preferido y define una palabra de activación, por ejemplo “hi flex”. Puedes probar la palabra de activación en la consola para verificar su rendimiento de detección.
+Ve a la Picovoice Console y abre la página de palabra de activación personalizada. Selecciona tu idioma preferido y define una palabra de activación, por ejemplo “hi flex”. Puedes probar la palabra de activación en la consola para verificar su rendimiento de detección.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic2.png" alt="pir" width={400} height="auto" /></p>
 
-Una vez que estés satisfecho, haz clic en Train para generar el modelo. Luego selecciona tu plataforma de destino; aquí elegimos Raspberry Pi. Finalmente, descarga el archivo .ppn generado, que se utilizará en tu aplicación para la detección de palabras de activación personalizadas.
+Una vez satisfecho, haz clic en Train para generar el modelo. Luego selecciona tu plataforma de destino; aquí elegimos Raspberry Pi. Finalmente, descarga el archivo .ppn generado, que se utilizará en tu aplicación para la detección de palabras de activación personalizadas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic3.png" alt="pir" width={600} height="auto" /></p>
 
@@ -141,16 +217,16 @@ recorder.delete()
 ## De voz a intención 
 
 Picovoice Rhino es un motor de voz a intención que convierte directamente los comandos hablados en intenciones estructuradas sin requerir un paso separado de voz a texto. Utiliza un **enfoque de aprendizaje profundo de un solo paso**, combinando reconocimiento de voz y comprensión del lenguaje natural para mejorar la precisión y reducir la latencia. 
-Rhino está optimizado para el **procesamiento en tiempo real en el dispositivo**, lo que significa que funciona sin conexión, con cero retraso de red y mantiene todos los datos de voz en privado. Es altamente eficiente y está diseñado para sistemas embebidos y de IoT como Raspberry Pi y microcontroladores. 
-Además, Rhino permite a los desarrolladores definir contextos personalizados con intenciones y ranuras, lo que permite que los sistemas comprendan comandos específicos de un dominio y desencadenen acciones directamente a partir de la entrada de voz. 
+Rhino está optimizado para el **procesamiento en tiempo real en el dispositivo**, lo que significa que funciona sin conexión, con cero retraso de red y mantiene todos los datos de voz en privado. Es altamente eficiente y está diseñado para sistemas embebidos e IoT como Raspberry Pi y microcontroladores. 
+Además, Rhino permite a los desarrolladores definir contextos personalizados con intenciones y slots, lo que permite que los sistemas comprendan comandos específicos de un dominio y desencadenen acciones directamente a partir de la entrada de voz.
 
 ### Crear un contexto 
 
-Un contexto define el conjunto de comandos hablados, intenciones y ranuras para un dominio específico; aquí creamos un contexto **“Bumblebee”** para controlar ReSpeaker Flex usando comandos de voz. Ve a la consola de voz a intención Rhino en Picovoice y crea un nuevo contexto llamado **Bumblebee** usando la plantilla **“Empty”**.
+Un contexto define el conjunto de comandos hablados, intenciones y ranuras para un dominio específico; aquí, creamos un contexto **“Bumblebee”** para controlar ReSpeaker Flex usando comandos de voz. Ve a la consola Rhino Speech-to-Intent en Picovoice y crea un nuevo contexto llamado **Bumblebee** usando la plantilla **“Empty”**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic4.png" alt="pir" width={600} height="auto" /></p>
 
-### Crear intenciones
+### Crear Intents
 
 En el nivel superior, un contexto es una colección de intenciones que representan acciones del usuario dentro de un dominio. Por ejemplo, crea una intención llamada “Gesture” en el contexto HiFlex para representar comandos de voz relacionados con gestos.
 
@@ -162,27 +238,27 @@ Un usuario puede expresar la misma intención de múltiples maneras, y cada vari
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic6.png" alt="pir" width={600} height="auto" /></p>
 
-### Usar ranuras para capturar variables
+### Usar ranuras para capturar variables 
 
 
-Utiliza ranuras para capturar las partes variables dentro de las expresiones de los usuarios. En este caso, palabras como **“wave”** y **“shake”** representan un estado cambiante dentro del comando, por lo que pueden modelarse como una variable. Crea una ranura llamada **“commands”** en el contexto de Rhino para capturar estas variaciones de forma dinámica.
+Usa ranuras para capturar las partes variables dentro de las expresiones del usuario. En este caso, palabras como **“wave”** y **“shake”** representan un estado cambiante dentro del comando, por lo que pueden modelarse como una variable. Crea una ranura llamada **“commands”** en el contexto Rhino para capturar estas variaciones dinámicamente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic7.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic8.png" alt="pir" width={800} height="auto" /></p>
 
-Modifica las expresiones existentes para incluir la ranura recién creada. Al añadir una ranura, utiliza el símbolo `$` para indicar una ranura, luego selecciona el tipo de ranura deseado en el menú desplegable de autocompletado y asígnale un nombre.
+Modifica las expresiones existentes para incluir la ranura recién creada. Al añadir una ranura, usa el símbolo `$` para indicar una ranura, luego selecciona el tipo de ranura deseado en el menú desplegable de autocompletado y asígnale un nombre.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic9.png" alt="pir" width={800} height="auto" /></p>
 
-Si estás listo para empezar, primero prueba haciendo clic en test 
+Si estás listo, primero prueba haciendo clic en test 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic10.png" alt="pir" width={800} height="auto" /></p>
 
 ### Vamos a descargar el modelo
 
-Una vez que el diseño del contexto esté completo, haz clic en el icono de descarga en la esquina superior derecha, selecciona la plataforma de destino y haz clic en **“Download.”** La Picovoice Console entrenará automáticamente el modelo Rhino para esa plataforma, lo que normalmente tarda entre 5 y 10 segundos.
+Una vez que el diseño del contexto esté completo, haz clic en el icono de descarga en la parte superior derecha, selecciona la plataforma de destino y haz clic en **“Download.”** La consola de Picovoice entrenará automáticamente el modelo Rhino para esa plataforma, lo que normalmente tarda unos 5–10 segundos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic11.png" alt="pir" width={800} height="auto" /></p>
 
@@ -224,7 +300,7 @@ while True:
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -43,15 +43,15 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/
   <strong>Braço Robótico de 6 DOF · Suporte a Múltiplos Motores · Solução de Cinemática · Planejamento de Trajetória · Totalmente Open Source</strong>
 </p>
 
-O projeto reBot Arm foi disponibilizado como código aberto no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Este guia irá conduzi-lo pelo início rápido do B601-RS, da montagem à operação.
+O projeto reBot Arm foi disponibilizado como open source no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Este guia irá conduzi-lo pelo início rápido do B601-RS, da montagem à operação.
 O conteúdo deste guia está chegando até você à velocidade da luz — fique ligado.
 
 ## Etapa 1: Guia de Montagem
 
 - Antes da montagem, leia atentamente as instruções a seguir. Para garantir um processo de montagem tranquilo e uma experiência prática completa, seja paciente, mantenha o foco e siga sempre estes pontos-chave:
-  1. Este kit inclui numerosos parafusos e peças estruturais, alguns dos quais são semelhantes. Verifique cuidadosamente as especificações dos parafusos e os modelos das peças, e confirme a orientação de instalação antes de apertar.
+  1. Este kit inclui numerosos parafusos e peças estruturais, alguns dos quais são semelhantes. Verifique cuidadosamente as especificações dos parafusos e os modelos das peças e confirme a orientação de instalação antes de apertar.
   2. O vídeo foi gravado no início de abril. Pode haver pequenos ajustes nas peças posteriormente, mas isso não afeta a qualidade da montagem ao seguir o vídeo. As peças finais são as que acompanham o produto enviado.
-  3. Para facilitar a instalação e remoção dos parafusos, a BOM open source especifica parafusos padrão. No entanto, os parafusos enviados com o kit têm trava química aplicada. Você também pode usar suas próprias ferramentas preferidas ou uma parafusadeira elétrica (altamente recomendado ter uma à mão). Se usar uma ferramenta elétrica, certifique-se de ajustar o torque para um nível baixo a médio (3–6 kgf·cm) para evitar torque excessivo que possa espanar os parafusos, causando danos irreversíveis que impeçam a remoção das peças. Se houver qualquer sinal de espanamento, substitua imediatamente o parafuso ou realinhe e tente novamente. Parafusos com trava química espanados não podem ser removidos com extrator de parafusos e irão inutilizar toda a peça. Portanto, proceda com cautela.
+  3. Para facilitar a instalação e remoção dos parafusos, a BOM open source especifica parafusos padrão. No entanto, os parafusos enviados com o kit têm trava química aplicada. Você também pode usar suas próprias ferramentas preferidas ou uma parafusadeira elétrica (altamente recomendado ter uma à mão). Se usar uma ferramenta elétrica, certifique-se de ajustar o torque para um nível baixo a médio (3–6 kgf·cm) para evitar torque excessivo que possa espanar os parafusos, causando danos irreversíveis em que as peças não podem ser removidas. Se houver qualquer sinal de espanamento, substitua imediatamente o parafuso ou realinhe e tente novamente. Parafusos com trava química espanados não podem ser removidos com extrator de parafusos e irão inutilizar toda a peça. Portanto, proceda com cautela.
   4. Priorize a segurança durante a montagem para evitar dedos presos ou lesões por esmagamento. Crianças devem concluir este projeto acompanhadas por um dos pais ou responsável.
 
 
@@ -61,7 +61,7 @@ O conteúdo deste guia está chegando até você à velocidade da luz — fique 
 
 1. Explore nossa plataforma **MotorBridge**. Esta plataforma é uma solução abrangente tudo-em-um que oferece expansão contínua dos tipos de motores, cobrindo [motores Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [motores Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [motores Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [motores Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow e mais. Ela também é compatível com produtos de braço robótico continuamente atualizados como o reBot. A plataforma é fácil de usar para iniciantes e também fornece um SDK em Python com funcionalidade totalmente consistente para desenvolvedores.
 
-2. Experimente os novos recursos e detalhes do MotorBridge adaptados especificamente para o braço robótico reBot, incluindo calibração de ponto zero com um clique, gravação de parâmetros, controle de motor por arrastar e soltar via UI e uma interface integrada de visualização de modelo.
+2. Experimente os novos recursos e detalhes do MotorBridge especificamente adaptados para o braço robótico reBot, incluindo calibração de ponto zero com um clique, gravação de parâmetros, controle de motor por arrastar e soltar via UI e uma interface integrada de visualização de modelo.
 
 3. Esta ferramenta é totalmente compatível com os sistemas operacionais **Windows, Ubuntu e macOS**.
 
@@ -71,12 +71,12 @@ O conteúdo deste guia está chegando até você à velocidade da luz — fique 
 2. (Versão Beta) Deixe um agente ajudar você a inicializar o braço robótico. Copie o conteúdo a seguir e envie para o agente:
 
 ```text
-Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-RS-Skills/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
+Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-Agent-Guide/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
 ```
 
   Observação: Se você comprou um kit pré-montado, informe o agente durante a etapa de gravação do ID do motor: "I purchased a pre-assembled kit, please scan motors 1–7 to verify they are all online, do not rewrite the motor IDs."
 
-3. O agente usa comandos de CLI para concluir a gravação dos IDs dos motores, enquanto o wiki usa um método de interação via web UI. Ambos os métodos funcionam.
+3. O agente usa comandos de CLI para concluir a gravação do ID do motor, enquanto o wiki usa um método de interação via web UI. Ambos os métodos funcionam.
 
 :::
 
@@ -84,7 +84,7 @@ Você deve ter concluído a preparação preliminar para a montagem do braço ro
 
 
 
-### 1. Instalar Miniforge (Recomendado) (Suporta Windows\Ubuntu\macOS\Jetson\Raspberry Pi)
+### 1. Instalar o Miniforge (Recomendado) (Suporta Windows\Ubuntu\macOS\Jetson\Raspberry Pi)
 
 1. Instale o Miniforge e crie um ambiente virtual para evitar conflitos com outros pacotes de ambiente que possam causar falhas nos demos.
 
@@ -137,7 +137,7 @@ conda activate rebot
 
 ### 2. Instalar o Motorbridge
 
-Após ativar o ambiente virtual do reBot, execute o seguinte comando para instalar o motorbridge:
+Após ativar o ambiente virtual do reBot, execute o comando a seguir para instalar o motorbridge:
 
 :::tip Nota para usuários de macOS
 Se você tiver baixa taxa de quadros durante a teleoperação no macOS, isso pode ser causado por uma versão desatualizada do driver WCH CH34x. Para **macOS 10.14 e posteriores**, o sistema inclui um driver `AppleUSBCHC0M` integrado. Você pode desinstalar o driver antigo e mudar para o driver integrado do macOS, o que deve melhorar efetivamente a taxa de quadros.
@@ -165,7 +165,7 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 ```
 
-Usuários de Windows, acessem [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) para instalar o driver do PCAN-USB.
+Usuários de Windows, acessem [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) para instalar o driver PCAN-USB.
 
 <!-- ### 3. Write Motor IDs
 
@@ -202,7 +202,7 @@ Antes da configuração dos parâmetros do motor, observe as seguintes preparaç
 
 - Prepare 2 grampos de fixação (tamanho ≥3 polegadas) e uma fonte de alimentação chaveada de 48 V com saída XT30 (escolha uma marca confiável; não use fontes de baixa qualidade).
 - Durante a depuração e operação, mantenha uma distância segura de pelo menos 1 metro.
-- Não conecte ou desconecte os motores com o sistema energizado; desligue a fonte de alimentação antes de conectar/desconectar o conector XT30 2+2.
+- Não conecte ou desconecte motores com o sistema energizado; desligue a fonte de alimentação antes de conectar/desconectar o conector XT30 2+2.
 - Não sobrecarregue nem opere os motores em velocidade excessiva; verifique a fiação e os fixadores antes da partida; não use em ambientes úmidos, de alta temperatura ou empoeirados.
 - Defina parâmetros de programa razoáveis e função de parada de emergência para evitar perda de controle do equipamento.
 - **Siga rigorosamente as regras acima. O vendedor não se responsabiliza por quaisquer riscos e perdas causados por operações em desacordo com as instruções ou por erro humano.**
@@ -214,8 +214,12 @@ Abra o endereço [motorbridge-studio](https://motorbridge.github.io/motorbridge-
 
 
 ```bash
-motorbridge-gateway -- --bind 127.0.0.1:9002  
+motorbridge-gateway --bind 127.0.0.1:9002  
 ```
 
 
-Consulte o vídeo para saber como usar.
+Consulte o vídeo para saber como usar. Antes de operar o braço robótico, você precisa redefinir o ponto zero novamente.
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/WcjDPm8GUDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
