@@ -1234,13 +1234,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Application/ja_XIAO_nRF54LM20A_with_epaper_and_sdcard',
               ],
             },
-            // {
-            //   type: 'category',
-            //   label: 'Programming Language',
-            //   items: [
-            //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/XIAO_nRF54LM20A-Sense_with_MicroPython',
-            //   ],
-            // },
+            {
+              type: 'category',
+              label: 'プログラミング言語',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_with_MicroPython',
+              ],
+            },
           ],
         },
         {
