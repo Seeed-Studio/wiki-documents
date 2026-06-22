@@ -6,7 +6,7 @@ keywords:
   - Tracker
   - LR1110
   - Firmware update
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png
 slug: /update_internal_lr1110_firmware
 sku: 114993186
 sidebar_position: 8

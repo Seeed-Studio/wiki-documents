@@ -7,7 +7,7 @@ keywords:
   - IP camera
   - RTSP
   - industrial camera
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reServer-Industrial/5.jpg
 slug: /reserver_industrial_poe_camera_usage
 last_update:
   date: 06/18/2026
