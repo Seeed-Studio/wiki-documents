@@ -2208,7 +2208,7 @@ const sidebars = {
               'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_sensecraft',
               ],
             },
-                        {
+            {
               type: 'category',
               label: 'Conversational AI',
               items: [
@@ -2220,7 +2220,6 @@ const sidebars = {
 
               ],
             },
-
           ],
         },
       ],
