@@ -159,6 +159,42 @@
     },
     {
         "product": "j4012classic",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD1BsWy20dpQ6-ucjqOUDqFAT4hAvTcstZkiuLG5zDv5HQ",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-orin-nx-16g-j401-7.2.0-39.2.0-2026-06-18.tar.gz",
+        "foldername": "mfi_recomputer-orin",
+        "sha256": "bbaae572ddcfb745a9ce519ade817bf238a9cd9be8c0177bbef6ada353f89878"
+    },
+    {
+        "product": "j4011classic",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOmjI0fvPXRKZq51PiF7vaAekVzzuOQVqNLI_81mT1PqM",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-orin-nx-8g-j401-7.2.0-39.2.0-2026-06-18.tar.gz",
+        "foldername": "mfi_recomputer-orin",
+        "sha256": "bbaae572ddcfb745a9ce519ade817bf238a9cd9be8c0177bbef6ada353f89878"
+    },
+    {
+        "product": "j3011classic",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBjTuQE8nJZQKuHW0S-d_yvAY31NHNqYIV31T5nmyUXUJM",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-orin-nano-8g-j401-7.2.0-39.2.0-2026-06-18.tar.gz",
+        "foldername": "mfi_recomputer-orin",
+        "sha256": "35c75bf18416287b4ae2e450f3207b3fd33d765832cd6f1ed86d62d354775a81"
+    },
+    {
+        "product": "j3010classic",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCG0vZAYpXDTJBrWKaXycEaAc85mqMbAdHQlh5o0tFrXAE",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-orin-nano-4g-j401-7.2.0-39.2.0-2026-06-18.tar.gz",
+        "foldername": "mfi_recomputer-orin",
+        "sha256": "ee0959c32df50ed41ed7d2940344c69d93b5212b6222fb6451af7b71bad7749e"
+    },
+    {
+        "product": "j4012classic",
         "l4t": "36.4.0",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAeJrT8r6rJSKVpp2_32UtQAZJzy4wNyCuHqVSCy0f-q4U?e=84CkEW",
         "mirrorlink": "",

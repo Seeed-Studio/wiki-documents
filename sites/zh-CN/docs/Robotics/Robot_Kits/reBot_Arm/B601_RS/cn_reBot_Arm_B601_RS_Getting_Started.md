@@ -89,11 +89,17 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 
 1.安装miniforge，创建虚拟环境，避免其他环境包的干扰导致demo运行失败。
 
-Ubuntu\macOS\Jetson\树莓派:
+Ubuntu\Jetson\树莓派:
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+or macOS:
+```bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
 or windows:
@@ -153,7 +159,7 @@ pip install motorbridge
 
 让 PCAN-USB 设备以 1Mbps 速率工作在 CAN 总线上，供机械臂通信使用
 
-Ubuntu\macOS\Jetson\树莓派：
+Ubuntu\Jetson\树莓派：
 
 ```bash
 #套件里是 PCAN-USB，通常应该直接出现 can0 或 can1
@@ -166,7 +172,43 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 ```
 
-Windows用户请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
+or macOS:
+
+libPCBUSB.dylib 无法加载，请先安装 PCBUSB
+
+```bash
+curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
+  https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
+tar -xzf macOS_Library_for_PCANUSB_v0.13.tar.gz
+cd PCBUSB
+sudo ./install.sh
+```
+
+配置 `DYLD_LIBRARY_PATH`，确保 motorbridge-gateway 运行时能找到 PCBUSB 库。在 conda 环境中创建激活脚本，每次 `conda activate rebot` 自动生效：
+
+```bash
+mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
+cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
+export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+EOF
+
+echo $DYLD_LIBRARY_PATH
+```
+
+检查是否就绪
+```bash
+# 检查 Python 包和 CLI 是否就绪
+python3 -c "import motorbridge; print('motorbridge OK')"
+motorbridge-cli --help
+
+# 可选：检查 PCBUSB 运行时是否可加载
+python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
+```
+
+
+or Windows：
+
+请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
 
 <!-- ### 3.写入电机id
 
@@ -216,6 +258,19 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 
 ```bash
 motorbridge-gateway --bind 127.0.0.1:9002  
+```
+
+macOS:
+
+```bash
+motorbridge-gateway --bind 127.0.0.1:9002 
+```
+
+or
+
+
+```bash
+DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
 
 

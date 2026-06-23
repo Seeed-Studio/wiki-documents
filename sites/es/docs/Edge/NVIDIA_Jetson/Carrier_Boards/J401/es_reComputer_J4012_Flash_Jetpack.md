@@ -10,7 +10,7 @@ last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-03-24'
+updatedAt: '2026-06-22'
 url: https://wiki.seeedstudio.com/es/reComputer_J4012_Flash_Jetpack/
 ---
 
@@ -25,13 +25,13 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 </a></div>
 
-La placa portadora J401 es una potente placa de expansión que admite módulos NVIDIA Jetson Orin NX/Nano. Incluye 1 puerto GbE, 1 CAN para transferencia de datos, M.2 Key M para SSD, M.2 Key E para WiFi/Bluetooth, 2 CSI y 1 HDMI para captura y visualización de vídeo de alta calidad. También incorpora 4 puertos USB 3.2, un ventilador, RTC y una fuente de alimentación flexible de 9-19 V. Todo esto la hace fiable para una variedad de sistemas de automatización industrial, creando potentes aplicaciones de IA.
+La placa portadora J401 es una potente placa de expansión que admite módulos NVIDIA Jetson Orin NX/Nano. Cuenta con 1 puerto GbE, 1 CAN para transferencia de datos, M.2 Key M para SSD, M.2 Key E para WiFi/Bluetooth, 2 CSI y 1 HDMI para captura y visualización de vídeo de alta calidad. También incluye 4 puertos USB 3.2, un ventilador, RTC y una fuente de alimentación flexible de 9-19 V. Todo esto la hace fiable para una variedad de sistemas de automatización industrial, creando potentes aplicaciones de IA.
 
 ## Características
 
-- **Placa portadora de rendimiento excepcional:** Admite el módulo NVIDIA Jetson Orin NX/Nano, aprovechando una potente capacidad de cómputo para abordar tareas exigentes con facilidad
+- **Placa portadora de rendimiento excepcional:** Admite el módulo NVIDIA Jetson Orin NX/Nano, aprovechando una potente capacidad de cómputo para abordar tareas difíciles con facilidad
 - **Conectividad versátil:** Ofrece 1 puerto Ethernet Gigabit para redes, 4 puertos USB 3.2 Type-A (10Gbps), 1 puerto USB2.0 Type-C, 1 conector CAN para transferencia rápida de datos
-- **Almacenamiento flexible y expansión inalámbrica:** Equipada con 1 ranura M.2 Key M 2280 y 1 ranura M.2 Key E, ofreciendo amplio espacio para un almacenamiento flexible y expansión de conectividad inalámbrica
+- **Almacenamiento flexible y expansión inalámbrica:** Equipada con ranuras 1x M.2 Key M 2280 y 1x M.2 Key E, que ofrecen un amplio espacio para un almacenamiento flexible y expansión de conectividad inalámbrica
 - **Periféricos avanzados compatibles:** Incorpora 2 conectores de cámara CSI de 15 pines, 1 HDMI 2.1, 1 ventilador y 1 RTC para múltiples periféricos
 - **Amplio rango de voltajes de entrada:** De 9-19 V CC, proporcionando flexibilidad en las opciones de alimentación
 
@@ -160,7 +160,7 @@ La placa portadora J401 es una potente placa de expansión que admite módulos N
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={4}>RTC de 2 pines, zócalo RTC (compatible con CR1220 pero no incluida)</td>
+      <td colSpan={4}>RTC de 2 pines, zócalo RTC (compatible con CR1220 pero no incluido)</td>
     </tr>
     <tr>
       <td>Alimentación</td>
@@ -257,9 +257,9 @@ Consulta la siguiente tabla para preparar la máquina host.
 <thead>
   <tr>
     <th> </th>
-    <th>Encabezado de botón</th>
+    <th>Cabecera de botones</th>
     <th>Descripción</th>
-    <th>Encabezado de botón</th>
+    <th>Cabecera de botones</th>
     <th>Descripción</th>
   </tr>
 </thead>
@@ -308,7 +308,7 @@ Consulta la siguiente tabla para preparar la máquina host.
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/2.png"/></div>
 
-**Paso 3.** En el PC host con Linux, abre una ventana de Terminal e introduce el comando `lsusb`. Si el contenido devuelto incluye una de las siguientes salidas según el Jetson SoM que utilices, entonces la placa está en modo de recuperación forzada.
+**Paso 3.** En el PC host con Linux, abre una ventana de Terminal e introduce el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el Jetson SoM que utilices, entonces la placa está en modo de recuperación forzada.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
@@ -376,7 +376,7 @@ Aquí utilizaremos NVIDIA L4T 35.3.1 para instalar Jetpack 5.1.1 en el reCompute
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**Paso 2:** Extrae **Jetson_Linux_R35.3.1_aarch64** y **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** navegando a la carpeta que contiene estos archivos, aplica los cambios e instala los prerrequisitos necesarios
+**Paso 2:** Extrae **Jetson_Linux_R35.3.1_aarch64** y **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** navegando hasta la carpeta que contiene estos archivos, aplica los cambios e instala los prerrequisitos necesarios
 
 ```sh
 tar xf Jetson_Linux_R35.3.1_aarch64
@@ -435,7 +435,7 @@ Aquí utilizaremos NVIDIA L4T 35.4.1 para instalar Jetpack 5.1.2 en el reCompute
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**Paso 2:** Extrae **Jetson_Linux_R35.4.1_aarch64** y **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** navegando a la carpeta que contiene estos archivos, aplica los cambios e instala los prerrequisitos necesarios
+**Paso 2:** Extrae **Jetson_Linux_R35.4.1_aarch64** y **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** navegando hasta la carpeta que contiene estos archivos, aplica los cambios e instala los prerrequisitos necesarios
 
 ```sh
 tar xf Jetson_Linux_R35.4.1_aarch64.tbz2
@@ -842,11 +842,11 @@ La capacidad de refrigeración de la placa portadora reComputer J401 es insufici
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, confirma que el firmware que descargaste está completo e intacto.
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
 :::
 
 :::note
-Ten en cuenta que, debido al aumento del consumo de energía y la generación de calor después de habilitar el `super mode`, la [reComputer J4011](https://www.seeedstudio.com/reComputer-J4011-p-5585.html) y la [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6Iko0MDEyIiwiY19zZWFyY2hfcmVzdWx0X3BvcyI6MiwiY190b3RhbF9yZXN1bHRzIjo4LCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0ifQ%3D%3D) no pueden funcionar de manera estable en el modo más alto. Por lo tanto, esta actualización no incluye estos dos productos.
+Ten en cuenta que, debido al aumento del consumo de energía y la generación de calor después de habilitar el `super mode`, las [reComputer J4011](https://www.seeedstudio.com/reComputer-J4011-p-5585.html) y [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6Iko0MDEyIiwiY19zZWFyY2hfcmVzdWx0X3BvcyI6MiwiY190b3RhbF9yZXN1bHRzIjo4LCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0ifQ%3D%3D) no pueden funcionar de forma estable en el modo más alto. Por lo tanto, esta actualización no incluye estos dos productos.
 Actualmente estamos diseñando una nueva versión de reComputer. ¡Mantente atento!
 :::
 
@@ -873,7 +873,99 @@ Verás la siguiente salida si el proceso de flasheo se realiza correctamente
 El comando de flasheo puede ejecutarse durante 2-10 minutos.
 :::
 
-**Paso 4:** Conecta el J401 a una pantalla usando el conector HDMI de la placa y completa la configuración inicial:
+**Paso 4:** Conecta la J401 a una pantalla usando el conector HDMI de la placa y completa la configuración inicial:
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+:::info
+Completa la **Configuración del sistema** según tus necesidades.
+:::
+
+</TabItem>
+
+<TabItem value="JP7.2" label="JP7.2">
+
+Aquí usaremos NVIDIA L4T 39.2.0 para instalar JetPack 7.2 en la serie reComputer Classic.
+
+:::danger
+Si estás utilizando un módulo **Orin NX 16GB/8GB**, **no habilites el modo MAXN SUPER**.
+La capacidad de refrigeración de la placa carrier reComputer J401 es insuficiente para soportarlo, y forzar este modo puede provocar daños permanentes en el módulo.
+:::
+
+**Paso 1:** Descarga la imagen del sistema en tu PC con Ubuntu correspondiente al módulo Jetson que estás utilizando:
+
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
+  <thead>
+    <tr>
+      <th>Módulo Jetson</th>
+      <th>Enlace de descarga</th>
+      <th>SHA256</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD1BsWy20dpQ6-ucjqOUDqFAT4hAvTcstZkiuLG5zDv5HQ" target="_blank" rel="noopener noreferrer">Descargar</a>
+      </td>
+      <td>bbaae572ddcfb745a9ce519ade817bf238a9cd9be8c0177bbef6ada353f89878</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOmjI0fvPXRKZq51PiF7vaAekVzzuOQVqNLI_81mT1PqM" target="_blank" rel="noopener noreferrer">Descargar</a>
+      </td>
+      <td>bbaae572ddcfb745a9ce519ade817bf238a9cd9be8c0177bbef6ada353f89878</td>
+    </tr>
+    <tr>
+      <td>Orin Nano 8GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBjTuQE8nJZQKuHW0S-d_yvAY31NHNqYIV31T5nmyUXUJM" target="_blank" rel="noopener noreferrer">Descargar</a>
+      </td>
+      <td>35c75bf18416287b4ae2e450f3207b3fd33d765832cd6f1ed86d62d354775a81</td>
+    </tr>
+    <tr>
+      <td>Orin Nano 4GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCG0vZAYpXDTJBrWKaXycEaAc85mqMbAdHQlh5o0tFrXAE" target="_blank" rel="noopener noreferrer">Descargar</a>
+      </td>
+      <td>ee0959c32df50ed41ed7d2940344c69d93b5212b6222fb6451af7b71bad7749e</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+:::info
+Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
+
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
+:::
+
+**Paso 2:** Extrae el archivo de imagen descargado:
+
+```bash
+sudo tar xpf mfi_xxxx.tar.gz
+# For example: sudo tar xpf mfi_recomputer-orin-nx-16g-j401-7.2.0-39.2.0-2026-06-18.tar.gz
+```
+
+**Paso 3:** Navega al directorio descomprimido y ejecuta el siguiente comando para grabar el sistema JetPack en el SSD NVMe:
+
+```bash
+cd mfi_xxxx
+# For example: cd mfi_recomputer-orin
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
+```
+
+Verás la siguiente salida si el proceso de flasheo se realiza correctamente
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+:::note
+El comando de flasheo puede ejecutarse durante 2-10 minutos.
+:::
+
+**Paso 4:** Conecta la J401 a una pantalla usando el conector HDMI de la placa y completa la configuración inicial:
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
@@ -893,10 +985,10 @@ Completa la **Configuración del sistema** según tus necesidades.
 - [Hoja de datos de reComputer J40x](https://files.seeedstudio.com/products/NVIDIA/reComputer-J401x-datasheet.pdf)
 - [Esquemático de reComputer J30/J40](https://files.seeedstudio.com/wiki/J401/reComputer_J401_SCH_V1.0.pdf)
 - [Archivo 3D de reComputer J30/J40](https://files.seeedstudio.com/wiki/reComputer-J4012/reComputer-J4012.stp)
-- [Catálogo de series Jetson de Seeed](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Casos de éxito de Edge AI de Seeed Studio](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Comparación de series Jetson de Seeed](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Resumen de dispositivos Jetson de Seeed](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Catálogo de series Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Casos de éxito de Seeed Studio Edge AI](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Comparación de series Seeed Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Dispositivos Seeed Jetson en una página](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 - [Ejemplos de Jetson](https://github.com/Seeed-Projects/jetson-examples)
 - [reComputer-Jetson-para-principiantes](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
 
