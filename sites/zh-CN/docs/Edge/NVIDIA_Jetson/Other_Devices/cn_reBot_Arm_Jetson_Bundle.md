@@ -2,7 +2,7 @@
 description: ....
 title: reBot Arm Jetson 套装
 tags:
-  - reBot Arm 
+  - reBot Arm
   - reComputer Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /rebot_arm_jetson_bundle
@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-05-18'
+updatedAt: '2026-06-09'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
 ---
 
@@ -19,19 +19,18 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
 
 ## 介绍
 
-面向物理智能新时代的一体化具身智能开发平台。
-随着生成式 AI 从单纯“理解世界”发展到主动“与世界交互”，机器人开发正迈入一个全新的时代：物理智能（Physical AI）。
-为了帮助开发者、研究人员和教育工作者加速迈入具身智能领域，Seeed Studio 将完全开源的 reBot Arm B601 与前沿的 NVIDIA Jetson 开发套件相结合，打造出强大的下一代机器人开发套装。
+面向物理 AI 新时代的一体化具身智能开发平台。
+随着生成式 AI 从简单的“理解世界”发展到主动“与世界交互”，机器人开发正迈入一个全新的时代：物理 AI。
+为了帮助开发者、研究人员和教育工作者加速踏入具身智能领域，Seeed Studio 将完全开源的 reBot Arm B601 与前沿的 NVIDIA Jetson 开发套件相结合，打造出一款强大的下一代机器人开发套装。
 
-该套装不仅提供精确的机器人操作能力，还具备运行多模态 AI 模型、视觉语言模型（VLM）以及在边缘本地进行实时机器人推理所需的强大 AI 计算能力。
-它是一个完整的平台，可用于构建新一代智能机器人——从学习与研究到快速原型设计与部署。
+该套装不仅提供高精度的机器人操作能力，还具备运行多模态 AI 模型、视觉语言模型（VLM）以及在边缘本地进行实时机器人推理所需的强大 AI 计算能力。
+它是一个完整的平台，可用于构建新一代智能机器人——从学习与研究到快速原型开发与部署。
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
-        <th> reBot Arm B601 </th>
-        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
-        <th> reComputer Classic J3011 </th>
+        <th> reBot Arm B601 DM</th>
+        <th> reBot Arm B601 RS </th>
     </tr>
     <tr>
         <td>
@@ -39,6 +38,47 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
                 <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg" style={{width:400, height:'auto'}}/>
             </div>
         </td>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-100019336--rebot-arm-b601-rs-assembled-kit-with-gripper--rebot-arm-b601-rs.jpg" style={{width:400, height:'auto'}}/>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 快速开始 </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+                    </a>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 快速开始 </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Assembled-Kit-with-Gripper-p-6865.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+                    </a>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
+        <th> reComputer Classic J3011 </th>
+    </tr>
+    <tr>
         <td>
             <div style={{textAlign:'center'}}>
                 <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-kit-3.png" style={{width:400, height:'auto'}}/>
@@ -52,47 +92,31 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
     </tr>
     <tr>
         <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 快速开始 </font></span></strong>
-                </a>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/quick_start.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 快速开始 </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+                    </a>
+                </div>
             </div>
         </td>
         <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/quick_start.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 快速开始 </font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/reComputer_J30_40_with_Jetson_getting_start/">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 快速开始 </font></span></strong>
-                </a>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-                </a>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/reComputer_J30_40_with_Jetson_getting_start/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 快速开始 </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+                    </a>
+                </div>
             </div>
         </td>
     </tr>
@@ -109,20 +133,20 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
 
 传统的机器人开发通常存在以下几个限制：
 
-1. 封闭的硬件生态系统
+1. 封闭的硬件生态
 2. 不足的 AI 计算能力
 3. 支离破碎的软件栈
 4. 较高的开发门槛
-5. 难以验证真实世界的物理智能场景
+5. 难以验证真实世界的物理 AI 场景
 
 reBot Arm × Jetson 套装正是为了解决这些挑战而设计的。
 
 通过这个套装，你将获得：
 
 1. 一个完全开源的 6+1 自由度机械臂平台
-2. 由 GPU 提供动力的 NVIDIA 旗舰边缘 AI 计算平台
+2. 由 GPU 提供算力的 NVIDIA 旗舰边缘 AI 计算平台
 3. 对 ROS1、ROS2、Isaac Sim 和 LeRobot 的原生支持
-4. 为多模态 AI 和生成式 AI 工作流做好准备
+4. 对多模态 AI 和生成式 AI 工作流的即开即用支持
 5. 一个统一的环境，用于教育、研究和 AI 机器人原型开发
 
 ## 入门指南
@@ -153,7 +177,7 @@ uv pip install motorbridge
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
 ```
 
-然后在浏览器中打开 `https://motorbridge.github.io/motorbridge-studio/`，你将看到如下页面。通过该界面，你可以调整电机参数、查看机械臂状态并执行其他操作。
+然后，在浏览器中打开 `https://motorbridge.github.io/motorbridge-studio/`，你将看到如下页面。通过该界面，你可以调整电机参数、查看机械臂状态以及执行其他操作。
 
 <div align="center">
     <img width={900}
@@ -170,8 +194,7 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
         marginTop: '24px'
     }}
 >
-    <a
-        href="/cn/rebot_arm_b601_dm_lerobot/"
+    <a [LINE_197]        href="/cn/rebot_arm_b601_dm_lerobot/"
         style={{
         textDecoration: 'none',
             color: 'inherit',
@@ -182,22 +205,23 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
             }}
-    >
-        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-            <img
-                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
+        >
+    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
                 alt="LeRobot for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-            />
-        </div>
+                />
+            </div>
         <div style={{padding: '18px'}}>
-            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                在 LeRobot 中使用 reBot Arm B601-DM 入门
-            </h3>
-        </div>
-    </a>
+        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+            在 LeRobot 中使用 reBot Arm B601-DM 的入门指南
+                </h3>
+            </div>
+        </a>
     <a
-        href="/cn/rebot_arm_b601_dm_grasping_demo/"
+    <a
+        href="/rebot_arm_b601_dm_grasping_demo/"
         style={{
             textDecoration: 'none',
             color: 'inherit',
@@ -212,9 +236,9 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
             <img
                 src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png"
-                alt="Visual Grasping Demo for reBot Arm B601-DM"
+                alt="reBot Arm B601-DM 视觉抓取演示"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-                />
+            />
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
@@ -222,10 +246,9 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
             </h3>
         </div>
     </a>
-    <a
-        href="/cn/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
+    <a [LINE_26]        href="/cn/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
         style={{
-            textDecoration: 'none',
+        textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -233,26 +256,26 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-        }}
-    >
-        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-            <img
-                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
-                alt="Control reBot Arm with NemoClaw on Nvidia Jetson Thor"
+            }}
+        >
+    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
+                alt="在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-            />
-        </div>
+                />
+            </div>
         <div style={{padding: '18px'}}>
-            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm
-            </h3>
-        </div>
-    </a>
-</div>
+        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+            在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm
+                </h3>
+            </div>
+        </a>
+    </div>
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
@@ -263,3 +286,4 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+
