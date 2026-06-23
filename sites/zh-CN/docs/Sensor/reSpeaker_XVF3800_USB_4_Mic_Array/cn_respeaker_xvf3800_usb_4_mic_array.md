@@ -516,12 +516,7 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 ## 如何调参？
 
-调参允许用户配置内置音频算法的参数，并与 XMOS 芯片直接通信。
-
-提供了专用的 Python 控制接口，用于参数配置和设备交互。
-
-
-[**Python Control Directory**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)
+调参允许用户配置内置音频算法的参数，并与 XMOS 芯片直接通信。我们提供了一个专用的 Python 控制脚本（核心文件为 `xvf_host.py`）用于参数配置和设备交互。
 
 使用提供的 Python 脚本，你可以：
 
@@ -532,16 +527,19 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 * 控制语音处理流水线
 * 直接与 XMOS 设备通信
 
-**系统要求**
+### 获取脚本
+
+你需要将包含控制脚本的代码仓库下载到本地电脑：
+
+[**点击此处访问 Python Control Directory 的 GitHub 仓库并下载**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)
+
+### 环境配置
 
 使用 Python 控制接口需要以下依赖：
 
 * Python 3.6 或更高版本
 * `pyusb` Python 库
 * `libusb` 系统库
-
-
-### 安装与依赖
 
 使用以下命令安装所需的 Python 依赖：
 
@@ -551,9 +549,13 @@ pip install pyusb
 
 根据你的操作系统，你可能还需要单独安装 `libusb` 软件包。
 
-
-
 ### 用法
+
+切换到 `xvf_host.py` 脚本所在的目录
+
+```bash
+cd <your_download_path>/python_control
+```
 
 **基本语法**
 
