@@ -175,7 +175,8 @@ sudo ip link set can0 up
 or macOS:
 
 libPCBUSB.dylib 无法加载，请先安装 PCBUSB
-```zsh
+
+```bash
 curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
   https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
 tar -xzf macOS_Library_for_PCANUSB_v0.13.tar.gz
@@ -183,8 +184,19 @@ cd PCBUSB
 sudo ./install.sh
 ```
 
+配置 `DYLD_LIBRARY_PATH`，确保 motorbridge-gateway 运行时能找到 PCBUSB 库。在 conda 环境中创建激活脚本，每次 `conda activate rebot` 自动生效：
+
+```bash
+mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
+cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
+export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+EOF
+
+echo $DYLD_LIBRARY_PATH
+```
+
 检查是否就绪
-```zsh
+```bash
 # 检查 Python 包和 CLI 是否就绪
 python3 -c "import motorbridge; print('motorbridge OK')"
 motorbridge-cli --help
@@ -249,12 +261,16 @@ motorbridge-gateway --bind 127.0.0.1:9002
 ```
 
 macOS:
+
 ```bash
-ln -s /usr/local/lib/libPCBUSB.dylib "$CONDA_PREFIX/lib/PCBUSB"
+motorbridge-gateway --bind 127.0.0.1:9002 
+```
+
+or
 
 
+```bash
 DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
-
 ```
 
 
