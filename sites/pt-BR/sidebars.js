@@ -3916,7 +3916,8 @@ const sidebars = {
                   label: 'reComputer Mini',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/pt_reComputer_Mini_Getting_Started',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/pt_reComputer_Mini_Hardware_Interfaces_Usage'
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/pt_reComputer_Mini_Hardware_Interfaces_Usage',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/pt_reComputer_Mini_J501_WiFi_Module_Installation',
                   ],
                 },
                 {
