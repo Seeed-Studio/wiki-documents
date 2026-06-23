@@ -3,7 +3,7 @@ description: この記事では主に、Lopaka のウェブサイトを使って
 title: Lopaka を使う
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /reterminal_e10xx_with_lopaka
-sidebar_position: 5
+sidebar_position: 7
 last_update:
   date: 9/12/2025
   author: Martin
@@ -54,7 +54,7 @@ url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_lopaka/
 Arduino で reTerminal E シリーズの ePaper ディスプレイをプログラムするには、ESP32 をサポートするように Arduino IDE をセットアップする必要があります。
 
 :::tip
-初めて Arduino を使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くおすすめします。
+Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くおすすめします。
 :::
 
 ### Arduino IDE のセットアップ
@@ -71,7 +71,7 @@ Arduino で reTerminal E シリーズの ePaper ディスプレイをプログ�
 
 **Step 2.** Arduino IDE に ESP32 ボードのサポートを追加します。
 
-Arduino IDE で **File > Preferences** を開き、「Additional Boards Manager URLs」フィールドに次の URL を追加します。
+Arduino IDE で **File > Preferences** に移動し、「Additional Boards Manager URLs」フィールドに次の URL を追加します。
 
 ```url
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -83,15 +83,15 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 **Step 4.** 正しいボードを選択します。
 
-**Tools > Board > ESP32 Arduino** を開き、**XIAO_ESP32S3** を選択します。
+**Tools > Board > ESP32 Arduino** に移動し、**XIAO_ESP32S3** を選択します。
 
 **Step 5.** reTerminal E シリーズ ePaper ディスプレイを USB-C ケーブルでコンピュータに接続します。
 
 **Step 6.** **Tools > Port** から正しいポートを選択します。
 
-### Lopaka の登録と利用
+### Lopaka の登録と使用
 
-Lopaka は、組み込みグラフィックス開発専用に設計されたグラフィックエディタです。ユーザーが独自の UI インターフェースを自由に作成できるほか、複数のフォントリソースを内蔵しており、Arduino や ESP32 の OLED、TFT、LCD ディスプレイと組み合わせて非常に便利に使用できます。Lopaka はスケッチに直接適用できる C コードを自動生成でき、開発効率を大幅に向上させます。
+Lopaka は、組み込みグラフィックス開発専用に設計されたグラフィックエディタです。ユーザーが独自の UI インターフェースをカスタマイズして作成できるようにし、複数のフォントリソースを内蔵しており、Arduino や ESP32 の OLED、TFT、LCD ディスプレイと組み合わせて使用すると非常に便利です。Lopaka はスケッチに直接適用できる C コードを自動生成でき、開発効率を大幅に向上させます。
 
 **Step 1.** [登録](https://lopaka.app/)
 
@@ -109,8 +109,8 @@ Lopaka は、組み込みグラフィックス開発専用に設計されたグ�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_3.png" style={{width:800, height:'auto'}}/></div>
 
 - **Titile**: プロジェクト名。ここでは hello を選択しました。
-- **Platform**: 開発に選択したプラットフォーム。reTerminal E シリーズでは AdfruitGFX Color を使用します。
-- **Screen**: 画面サイズの選択。"Custom" をクリックしてサイズをカスタマイズします。reTerminal E シリーズの画面サイズは 800×480 です。
+- **Platform**: 開発に選択したプラットフォーム。reTeerminal E シリーズでは AdfruitGFX Color を使用します。
+- **Screen**: 画面サイズの選択。"Custom" をクリックしてサイズをカスタマイズします。reTeerminal E シリーズの画面サイズは 800×480 です。
 - **Background**: 画面の背景色。デフォルトでは黒です。より良い表示のため、ここでは黄色に変更しました。
 その後、"SUBMIT" をクリックしてプロジェクトを作成します。
 
@@ -118,11 +118,11 @@ Lopaka は、組み込みグラフィックス開発専用に設計されたグ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_4.png" style={{width:800, height:'auto'}}/></div>
 
-- **Layers**：レイヤー名。任意の名前を付けることができます。
-- **Screens**：複数のスクリーンを作成でき、異なるアイデアを保存することができます。
+- **Layers**：レイヤー名。カスタム命名がサポートされています。
+- **Screens**：複数のスクリーンを作成でき、異なるアイデアを保存するのに役立ちます。
 - **CODE**：生成されるコードは C 言語です。
 - **IMAGES**：Lopaka の公式画像タイプです。
-- **Code settings**：生成コードの設定。すべてのチェックボックスをオンにすることをおすすめします。
+- **Code settings**：生成されるコードの設定です。すべての項目にチェックを入れることをおすすめします。
 
 **その他**
 
@@ -131,18 +131,18 @@ Lopaka は、組み込みグラフィックス開発専用に設計されたグ�
 左から右へ
 
 - **"Gear"**: プロジェクトを管理します。ここではプロジェクト名の再定義、画面サイズや背景色の調整ができますが、Platform の変更は、プロジェクトを削除または再作成しない限りサポートされていません。
-- **Toolbar**: このツールバーの機能は、選択、塗りつぶし、文字列、長方形、円、線、画像です。
+- **Toolbar**: この行のツールバーの機能は、Select、Paint、String、Rectangle、Circle、Line、Image です。
 - **Slider**: ここではキャンバスのサイズを調整でき、細かい操作が可能になります。
-- **Frok and SHARE**: 他の人のプロジェクトをフォークしたり、自分のプロジェクトを共有したりできます。
-- **Price Gally Blog Feedback**: Price では、Lopaka のさまざまなレベルを購読して追加機能にアクセスできます。Gally はオープンソースのエンジニアリングマーケットプレイスです。Blog は Lopaka の更新ログです。Feedback ではフィードバックを送信できます。
+- **Frok and SHARE**: 他の人のプロジェクトを frok したり、自分のプロジェクトを共有したりできます。
+- **Price Gally Blog Feedback**: Price では、Lopaka のさまざまなレベルを購読して追加機能にアクセスできます。Gally はオープンソースのエンジニアリングマーケットプレイスです。Blog は Lopaka の更新ログです。Feedback はフィードバックを送信するためのものです。
 - **Shortcuts**: いくつかのショートカットキーのヒントです。
 
 ### Hello World
 
 - "String" を選択し、キャンバスをクリックします。
 - 右側のカラムで "Font" を選択し、Adafruit 5×7 などのフォントを選びます。
-- "Hello World!" と入力し、"Size" を 6 に設定して、好みの色を選びます。ここでは緑色を選択しました。
-- その後、画面の中央位置に移動します。これで、必要なプロジェクトコードが "CODE" 内に生成されます。
+- "Hello World!" と入力し、"Size" を 6 に設定し、好みの色を選択します。ここでは緑を選びました。
+- その後、画面の中央位置に移動します。そのあと、「CODE」内に必要なプロジェクトコードが生成されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -162,19 +162,19 @@ Lopaka は、組み込みグラフィックス開発専用に設計されたグ�
     </a>
 </div><br />
 
-**Step 2.** Arduino IDE で ZIP ファイルを追加してライブラリをインストールします。**Sketch > Include Library > Add .ZIP Library** を開き、ダウンロードした ZIP ファイルを選択します。
+**Step 2.** Arduino IDE で ZIP ファイルを追加してライブラリをインストールします。**Sketch > Include Library > Add .ZIP Library** に移動し、ダウンロードした ZIP ファイルを選択します。
 
 :::note
-以前に TFT_eSPI ライブラリをインストールしている場合、競合を避けるために、一時的に Arduino ライブラリフォルダから削除するか名前を変更する必要があるかもしれません。Seeed_GFX は、Seeed Studio のディスプレイ向けに機能を追加した TFT_eSPI のフォークであるためです。
+以前に TFT_eSPI ライブラリをインストールしている場合、競合を避けるために、一時的に Arduino ライブラリフォルダから削除するか名前を変更する必要があるかもしれません。Seeed_GFX は、Seeed Studio のディスプレイ向けに追加機能を備えた TFT_eSPI のフォークであるためです。
 :::
 
-### reTerminal E1002 をプログラミングする
+### reTerminal E1002 のプログラミング
 
 フルカラー ePaper ディスプレイは、赤、黒、黄、緑、白の色をサポートしており、より視覚的に豊かなインターフェースを実現できます。
 
 **Step 1.** Seeed_GFX ライブラリからカラーのサンプルスケッチを開きます。**File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
-**Step 2.** スケッチと同じフォルダに `driver.h` という名前の新しいファイルを作成します。手順は前と同じです。
+**Step 2.** 先ほどと同じ手順で、スケッチと同じフォルダ内に `driver.h` という名前の新しいファイルを作成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -203,7 +203,7 @@ reTerminal E1001 を使用している場合は、次のコードをコピーし
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
-reTerminal E1002 は現在 6 色に対応しています。そのため、実際の状況に応じて色を修正する必要があります。
+reTerminal E1002 は現在 6 色をサポートしています。そのため、実際の状況に応じて色を変更する必要があります。
 <details>
 
 <summary>色のカテゴリ</summary>
@@ -334,7 +334,7 @@ void loop()
 
 - パラメータの調整 <br/>
 
-    適切なサイズに調整します。ここでは 300×300 に設定し、その後 Brightness などのパラメータを調整して画像をより鮮明にし、インポートしました。<br/>
+    適切なサイズに調整します。ここでは 300×300 に設定し、その後、画像をより鮮明にするために Brightness などのパラメータを調整してからインポートしました。<br/>
 
 <!-- **image**: [dragon](https://seeedstudio.com/wiki/reterminal_e10xx/img/dragon.png) -->
 
@@ -420,7 +420,7 @@ void loop()
 
 - 効果の提示
 
-  プログラムをアップロードし、電子ペーパー画面がリフレッシュされるまで待ちます。
+  プログラムをアップロードし、電子ペーパー画面がリフレッシュされるのを待ちます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_3.jpg" style={{width:800, height:'auto'}}/></div>
 

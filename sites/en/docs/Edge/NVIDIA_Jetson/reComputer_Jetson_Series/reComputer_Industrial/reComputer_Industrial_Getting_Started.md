@@ -10,7 +10,7 @@ last_update:
   date: 05/16/2023
   author: Lakshantha
 createdAt: '2025-06-05'
-updatedAt: '2026-04-21'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/
 ---
 
@@ -26,10 +26,14 @@ reComputer industrial comes with a passive heatsink and a fanless design, making
 
 reComputer industrial has 2 RJ45 GbE ports, one of which is a PoE PSE port for providing power over Ethernet to devices like IP cameras. This eliminates the need for a separate power source and makes it easier to deploy network devices in areas without readily available power outlets. The other GbE port is used to connect to a network switch or router, enabling communication with other devices on the network and access to the Internet.
 
+:::note
+Available customization options: logo branding, packaging, and firmware flashing.
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
+</div>
 
 ## Features
 

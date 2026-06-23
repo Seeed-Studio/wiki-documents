@@ -11,7 +11,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-04-08'
-updatedAt: '2026-03-10'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/es/meshtastic_solar_node/
 ---
 
@@ -38,7 +38,7 @@ El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
 ### Características
 
 - Integrado con un panel solar de 5W y admite baterías externas (que deben ser proporcionadas por los propios usuarios).
-- El dispositivo viene con el firmware Meshtastic preinstalado de fábrica. Puede integrarse sin problemas en el ecosistema Meshtastic.
+- El dispositivo viene con el firmware Meshtastic preinstalado de fábrica. Puede integrarse perfectamente en el ecosistema Meshtastic.
 - Compatible con el ecosistema Grove y admite la conexión plug-and-play de sensores como sensores de temperatura y humedad, sensores de luz, etc.
 - Es adecuado para uso prolongado en exteriores.
 - Admite transmisión de 8 a 9 KM en áreas abiertas. Puede utilizarse como nodo o repetidor exterior, ampliando fácilmente la red Mesh y mejorando la cobertura de la red.
@@ -109,7 +109,7 @@ El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
     <td>Encendido/apagado</td>
   </tr>
   <tr>
-    <td>Reinicio</td>
+    <td>Restablecer</td>
   </tr>
   <tr>
     <td>Definido por el usuario</td>
@@ -122,7 +122,7 @@ El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
     <td>Luz indicadora de estado del panel solar *1</td>
   </tr>
   <tr>
-    <td>Luz de latido de Mesh *1</td>
+    <td>Luz de latido de la malla *1</td>
   </tr>
   <tr>
     <td>Definido por el usuario *1</td>
@@ -137,12 +137,12 @@ El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
   </tr>
   <tr>
     <td><b>Grado de impermeabilidad</b></td>
-    <td>IPX5</td>
+    <td>IPX6</td>
   </tr>
   <tr>
     <td><b>Batería (para la versión P1-Pro)</b></td>
     <td>
-      <p>- 4 baterías de litio 18650 (3350mAh cada una)</p>
+      <p>- 4 baterías de litio (NMC) 18650 (3350mAh cada una)</p>
       <p>- Compatible con carga por Type-C y solar.</p>
       <p>- Entorno de descarga: -40～60°C</p>
       <p>- Entorno de carga: 0-50°C</p>
@@ -150,7 +150,7 @@ El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
   </tr>
   <tr>
     <td><b>Certificación</b></td>
-    <td>FCC、CE</td>
+    <td>FCC, CE</td>
   </tr>
   <tr>
     <td><b>Dimensiones</b></td>
@@ -160,7 +160,7 @@ El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
 
 
 
-### Descripción del hardware
+### Descripción general del hardware
 
 **Elementos interactivos**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/interactive.png" alt="pir" width={800} height="auto" /></p>

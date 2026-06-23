@@ -6,10 +6,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_topic_page
 last_update:
-  date: 05/12/2026
+  date: 06/04/2026
   author: Carla Guo
 createdAt: '2023-07-07'
-updatedAt: '2026-05-12'
+updatedAt: '2026-06-04'
 url: https://wiki.seeedstudio.com/xiao_topic_page/
 ---
 
@@ -487,7 +487,12 @@ We can't do it without the love, contribution that we get from the community, an
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://tinygo.org/docs/reference/microcontrollers/xiao/" target="_blank">XIAO SAMD21</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://tinygo.org/docs/reference/microcontrollers/xiao-ble/" target="_blank">XIAO nRF52840 (Sense)</a></th>
-            <th style={{width:333, height:'auto'}}><a href="https://tinygo.org/docs/reference/microcontrollers/xiao-rp2040/" target="_blank">XIAO RP2040</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://tinygo.org/docs/reference/microcontrollers/xiao-rp2040/" target="_blank">XIAO RP2040</a></th>
+  </tr>
+  <tr>
+   <th style={{width:333, height:'auto'}}><a href="https://tinygo.org/docs/reference/microcontrollers/boards/xiao-rp2350/" target="_blank">XIAO RP2350</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://tinygo.org/docs/reference/microcontrollers/featured/xiao-esp32c3/" target="_blank">XIAO ESP32C3</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://tinygo.org/docs/reference/microcontrollers/featured/xiao-esp32s3/" target="_blank">XIAO ESP32S3 (Sense)</a></th>
   </tr>
  </table>
 </div>

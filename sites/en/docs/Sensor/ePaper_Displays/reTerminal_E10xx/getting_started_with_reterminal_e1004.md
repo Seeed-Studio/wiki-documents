@@ -16,7 +16,7 @@ last_update:
   date: 4/24/2026
   author: Citric
 createdAt: '2026-01-29'
-updatedAt: '2026-05-13'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/
 ---
 import Tabs from '@theme/Tabs';
@@ -34,13 +34,13 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visulization.
+reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visualization.
 
 ### Features
 
-- High-resolution，Beautiful and Ready-to-Use E Ink® Spectra™6 Color ePaper Display
+- High-resolution, Beautiful and Ready-to-Use E Ink® Spectra™ 6 Color ePaper Display
 - No-Code UI Design & Deployment with SenseCraft HMI
-- Image Slideshows with Live Data Sync&Battery Lasts for Months
+- Image Slideshows with Live Data Sync & Battery Lasts for Months
 - Adapting to decoration and display needs in different scenarios
 
 ## Specification
@@ -373,7 +373,6 @@ The refresh button is located either as the leftmost button on the lower front o
 
 - **Single Press**: Manually refreshes the display and checks for new content from the SenseCraft platform. The buzzer will beep once to confirm the action. This button is also commonly used to wake up the device. You can use this button to wake up a device when it has gone to sleep and a dashboard refresh command is usually not immediately available to the device.
 
-- **Long Press** (future functionality): Will activate voice input mode.
 
 ### Navigation Buttons
 
@@ -408,7 +407,7 @@ When operating on battery power:
 
 - The device will automatically enter low-power mode between refreshes
 
-- Battery life depends on refresh frequency (typically 3-month on a full charge with default settings)
+- Battery life depends on refresh frequency (up to 6 months in low-power mode with a 6-hour refresh interval)
 
 - The device will display a low battery icon in the top-right corner when the battery level is below 20%
 

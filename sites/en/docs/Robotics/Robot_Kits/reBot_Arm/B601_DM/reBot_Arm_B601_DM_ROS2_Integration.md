@@ -1,5 +1,5 @@
 ---
-description: This tutorial shows how to set up the ROS2 control workspace for the reBot Arm B601-DM, including arm control, gripper control, trajectory interfaces, gravity compensation, and RViz visualization.
+description: This tutorial shows how to set up the ROS2 control workspace for the reBot Arm B601-DM, including arm control, RViz visualization, and MoveIt2 integration.
 title: reBot Arm B601-DM ROS2 Integration
 keywords:
   - reBot Arm
@@ -13,12 +13,12 @@ keywords:
 slug: /rebot_arm_b601_dm_ros2_integration
 sku: 100065783, 100095532
 last_update:
-  date: 2026-05-14
+  date: 2026-05-29
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-05-14'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/
 ---
 
@@ -28,6 +28,13 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/
   <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </p>
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+<br />
+
 <p align="center">
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
@@ -36,14 +43,17 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/
     <img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python Version" />
     <img src="https://img.shields.io/badge/Version-v0.2.2-brightgreen.svg" alt="Version v0.2.2" />
     <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Hardware-B601--DM-lightgrey.svg" alt="Hardware" />
 </p>
 
 <p align="center">
-  <strong>ROS2 Control · Gripper Control · Standard Trajectory Interface · Gravity Compensation · RViz Visualization · Fully Open Source</strong>
+  <strong>ROS2 Control · RViz Visualization · MoveIt2 Support</strong>
 </p>
 
 This tutorial shows how to run the ROS2 control workspace `rebotarm_ros2` for the reBot Arm B601-DM. The workspace wraps the low-level `reBotArm_control_py` Python SDK into ROS2 topics, services, and actions, making it easier to integrate upper-level planning, visual grasping, RViz visualization, and custom application development.
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/v2MlI3zMi1k?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::note
 This tutorial uses `Ubuntu 24.04 + ROS2 Jazzy + Python 3.12` as the main reference environment. ROS2 Humble / Ubuntu 22.04 can follow the same workflow with the corresponding ROS2 distribution.
@@ -240,11 +250,13 @@ rebotarmcontroller MoveToPose
 
 ## Quick Start
 
+:::caution
 Before using the robot, note the following: **The arm controller has a high
 degree of freedom. Before enabling the controller or powering the arm, make
 sure the workspace is clear of people and obstacles. Review every motion
 command carefully to avoid accidents. Dangerous operation is strictly
 prohibited; you are responsible for any consequences.**
+:::
 
 ### Start the Full System
 
@@ -316,7 +328,7 @@ If you need multiple robot arms or want to run alongside other ROS2 systems, you
 ros2 launch rebotarm_bringup bringup.launch.py arm_namespace:=left_arm
 ```
 
-In this case, `/rebotarm/joint_states` becomes `/left_arm/joint_states`. The namespace only affects topic, service, and action names in the ROS graph. It does not automatically change TF frame names in the URDF.
+In this case, `/rebotarm/joint_states` becomes `/left_arm/joint_states`.
 
 ## Common APIs
 

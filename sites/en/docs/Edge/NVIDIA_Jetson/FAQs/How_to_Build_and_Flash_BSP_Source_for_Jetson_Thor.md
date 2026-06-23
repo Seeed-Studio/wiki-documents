@@ -14,7 +14,7 @@ last_update:
   date: 04/14/2026
   author: Dayu
 createdAt: '2026-04-14'
-updatedAt: '2026-04-15'
+updatedAt: '2026-05-22'
 url: https://wiki.seeedstudio.com/how_to_build_and_flash_bsp_source_for_jetson_thor/
 ---
 
@@ -143,7 +143,7 @@ cd /other_data/thor-dev/linux_for_tegra
 
 Default board settings are already configured for **Thor J601**:
 
-- `CONFIG=recomputer-thor-carrier-j601`
+- `CONFIG=jetson-agx-thor-devkit`
 - `BOARDID=3834`
 - `BOARDSKU=0008`
 - `FAB=400`
@@ -201,7 +201,7 @@ For the first flash, the split `prepare -> build -> flash` flow is recommended b
 Use environment variables when you need to override defaults:
 
 ```bash
-CONFIG=recomputer-thor-carrier-j601 \
+CONFIG=jetson-agx-thor-devkit \
 DOWNLOAD_BASE_URL=http://192.168.1.77/jetson \
 DEFAULT_USER=seeed \
 DEFAULT_PASSWORD=seeed \

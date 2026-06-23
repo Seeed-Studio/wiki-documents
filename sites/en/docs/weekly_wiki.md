@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 05/18/2026
+  date: 06/08/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-05-11'
+updatedAt: '2026-06-08'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,17 +18,73 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is May 18th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is June 8th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor](https://wiki.seeedstudio.com/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/)
+### [reCamera Pro Quick Start Guide](https://wiki.seeedstudio.com/recamera_pro_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png" alt="pir" width={500} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-NVIDIA `NemoClaw` is an open-source reference stack that simplifies running OpenClaw always-on assistants more safely.  This wiki explains how to deploy NemoClaw on Jetson Thor and connect `reBot Arm B601` capabilities into the NemoClaw agent workflow, forming a closed loop of: semantic understanding + visual detection + robotic execu
+This guide will assist you in completing the hardware connection, logging into the device Web interface, configuring the wireless network, and troubleshooting common connection failures.
+
+</div>
+
+### [GPIO controlling reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_gpio_control/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4withXIAOESP32S3.jpg" alt="pir" width={500} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide explains how to read and control GPIO pins on the XVF3800 voice processor using the I2C interface. You’ll learn how to read GPI and GPO pin statuses, understand GPIO mappings, and identify their purpose.
+
+</div>
+
+### [YOLO11n Edge Benchmarking on reCamera](https://wiki.seeedstudio.com/recamera_benchmarking/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+With the continuous deepening of edge AI scenarios, how to run the latest generation of vision models under extremely limited power consumption has become the core demand of developers. This WIKI will hardcore demonstrate the baseline performance (Benchmark) of **reCamera** when deploying the **YOLO11n** model. Here, you will see how reCamera smoothly drives the YOLO11n object detection and instance segmentation models with only **1.5W** of power consumption.
+
+</div>
+
+### [Work with PlatformIO for ePaper Displays](https://wiki.seeedstudio.com/epaper_work_with_platformio/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/248.png" alt="pir" width={500} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide explains how to set up and configure PlatformIO for Seeed ePaper displays. You’ll learn how to install PlatformIO in Visual Studio Code, create a PlatformIO project, configure platformio.ini for compatible Seeed ePaper devices, add the Seeed_GFX library, and generate the correct driver.h file for your board and screen combination.
+
+</div>
+
+### [SenseCraft AI with reSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_sensecraft/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+SenseCraft AI is Seeed Studio's no-code/low-code AI platform that simplifies deploying pre-trained artificial intelligence models to edge devices such as the reSpeaker XVF3800. This guide focuses on configuring the reSpeaker XVF3800 for wakeword detection using the custom trigger "Lumio," enabling voice-activated control for your projects without writing complex code. With SenseCraft AI, you can quickly test, preview, and integrate wakeword events into your hardware workflows. The platform also allows you to create and upload your own custom models for detecting specific sound events and custom wakewords, giving you full flexibility to tailor voice interactions to your unique application needs.
+
+</div>
+
+### [Migrate /home Data from Jetson Orin Nano Developer Kit to reComputer](https://wiki.seeedstudio.com/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer/)
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki shows how to use the [reComputer Classic backup to Super migration project](https://github.com/jjjadand/reComputer_classic-backup-to-super.git) to migrate only `/home` from the source Jetson Orin Nano Developer Kit to a target reComputer. In this guide, [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) are used as target examples. Flash the target reComputer with its matching Seeed JetPack 6 BSP first, then restore the `/home` package on top of that clean reComputer system.
+
+</div>
+
+### [Use an SPI Display on reComputer J4012 Classic](https://wiki.seeedstudio.com/jetson_spi_getting_start/)
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki introduces how to connect and drive an SPI display on the Seeed reComputer J4012 Classic. It covers the basic workflow of using an SPI display through the 40-pin header, including hardware wiring, SPI interface configuration, device node checking, dependency installation, compiling a C++ demo, and running a simple display test.
 
 </div>
 
@@ -169,5 +225,8 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.4.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260420)
 - [weekly wiki on 2026.4.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260427)
 - [weekly wiki on 2026.5.11th](/Seeed_Elderly/weekly_wiki/2026/wiki260511)
+- [weekly wiki on 2026.5.18th](/Seeed_Elderly/weekly_wiki/2026/wiki260518)
+- [weekly wiki on 2026.5.25th](/Seeed_Elderly/weekly_wiki/2026/wiki260525)
+- [weekly wiki on 2026.6.01st](/Seeed_Elderly/weekly_wiki/2026/wiki260601)
 
 </details>

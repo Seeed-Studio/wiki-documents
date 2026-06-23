@@ -11,7 +11,7 @@ keywords:
   - TRMNL
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /epaper_work_with_esphome
-sidebar_position: 1
+sidebar_position: 2
 last_update:
   date: 04/28/2026
   author: dimo

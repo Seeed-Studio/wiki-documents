@@ -1,6 +1,6 @@
 ---
-description: Multiplexación de Pines en Seeed Studio XIAO RP2350
-title: Multiplexación de Pines (Arduino)
+description: Multiplexación de pines en Seeed Studio XIAO RP2350
+title: Multiplexación de pines (Arduino)
 keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/2350image.png
@@ -9,35 +9,45 @@ sidebar_position: 2
 last_update:
   date: 11/02/2024
   author: Allen
-createdAt: '2025-02-21'
-updatedAt: '2025-09-19'
+createdAt: '2024-11-13'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/es/XIAO_RP2350_Pin_Multiplexing/
 ---
 
-# Multiplexación de Pines (Arduino)
+# Multiplexación de pines (Arduino)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/2350image.png" style={{width:800, height:'auto'}}/></div>
 
-Seeed Studio XIAO RP2350 tiene interfaces ricas. Hay **19 E/S digitales** que pueden usarse como **pines PWM** y **3 entradas analógicas** que pueden usarse como **pines ADC**. Soporta cuatro interfaces de comunicación serie como **UART, I2C y SPI**. ¡Esta wiki será útil para aprender sobre estas interfaces e implementarlas en tus próximos proyectos!
+Seeed Studio XIAO RP2350 tiene interfaces muy completas. Hay **19 E/S digitales** que se pueden usar como **pines PWM** y **3 entradas analógicas** que se pueden usar como **pines ADC**. Es compatible con cuatro interfaces de comunicación serie como **UART, I2C y SPI**. Este wiki será útil para aprender sobre estas interfaces e implementarlas en tus próximos proyectos.
+
+## Descripción general del hardware
+
+### Parte frontal
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Parte trasera
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 ## Preparación
 
-Actualmente, hay algunos problemas con el uso de pines del XIAO RP2350 debido a problemas de compatibilidad. Hemos solucionado este problema, y la biblioteca oficial de Raspberry Pi ha sido fusionada. La versión actual es 4.2.0, y la actualización se completará en la próxima versión, **4.2.1**.
+Actualmente, hay algunos problemas con el uso de los pines del XIAO RP2350 debido a problemas de compatibilidad. Hemos solucionado este problema y la biblioteca oficial de Raspberry Pi ha sido fusionada. La versión actual es la 4.2.0 y la actualización se completará en la próxima versión, **4.2.1**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/12.png" style={{width:500, height:'auto'}}/></div>
 
-Mientras tanto, por favor reemplaza este archivo yendo a **Arduino15/packages/rp2040/hardware/rp2040/4.2.0/variants/seeed_xiao_rp2350（Tu Dirección de Biblioteca Arduino）** y [haciendo clic aquí para descargar el archivo](https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/file.zip). ¡Una vez hecho, puedes disfrutar tu trabajo!
+Mientras tanto, reemplaza este archivo yendo a **Arduino15/packages/rp2040/hardware/rp2040/4.2.0/variants/seeed_xiao_rp2350（Tu dirección de biblioteca de Arduino）** y [haz clic aquí para descargar el archivo](https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/file.zip). Una vez hecho esto, ¡podrás disfrutar de tu trabajo!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/3.png" style={{width:800, height:'auto'}}/></div>
 
 ## Digital
 
-### Preparación de Hardware
+### Preparación de hardware
 
 <table align="center">
   <tr>
         <th>Seeed Studio XIAO RP2350</th>
-        <th>Seeed Studio Expansion Base para XIAO con Grove OLED</th>
+        <th>Base de expansión Seeed Studio para XIAO con Grove OLED</th>
         <th>Grove - LED</th>
   </tr>
   <tr>
@@ -48,27 +58,27 @@ Mientras tanto, por favor reemplaza este archivo yendo a **Arduino15/packages/rp
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
 </table>
 
-Por favor instala XIAO RP2350 en la placa de expansión, y conecta el LED Grove a la interfaz **A0/D0** de la placa de expansión mediante un cable Grove. Finalmente, conecta XIAO a la computadora mediante un cable USB-C.
+Instala el XIAO RP2350 en la placa de expansión y conecta el Grove LED a la interfaz **A0/D0** de la placa de expansión mediante un cable Grove. Finalmente, conecta el XIAO al ordenador mediante un cable USB-C.
 
-### Implementación de Software
+### Implementación de software
 
-En este ejemplo, implementaremos el control del estado de encendido/apagado de un relé usando un botón conectado a la placa de expansión XIAO. Cuando se presiona el botón, el relé se enciende, y cuando se suelta el botón, el relé se apaga.
+En este ejemplo, implementaremos el control del estado de encendido/apagado de un relé utilizando un botón conectado a la placa de expansión XIAO. Cuando se pulsa el botón, el relé se enciende y, cuando se suelta el botón, el relé se apaga.
 
 ```c
 //define which pin you use
@@ -90,20 +100,20 @@ void loop() {
 
 ### Efecto
 
-Si todo va bien, después de cargar el programa, deberías ver el siguiente efecto.
+Si todo va bien, después de cargar el programa deberías ver el siguiente efecto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/1.gif" style={{width:500, height:'auto'}}/></div>
 
 ## Digital como PWM
 
-Todos los pines GPIO en XIAO RP2350 soportan salida PWM. Por lo tanto, puedes usar cualquier pin para generar PWM para ajustar el brillo de las luces, controlar servos y otras funciones.
+Todos los pines GPIO en XIAO RP2350 admiten salida PWM. Por lo tanto, puedes usar cualquier pin para generar PWM y ajustar el brillo de las luces, controlar servos y otras funciones.
 
-### Preparación del Hardware
+### Preparación de hardware
 
 <table align="center">
   <tr>
         <th>Seeed Studio XIAO RP2350</th>
-        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+        <th>Base de expansión Seeed Studio para XIAO con Grove OLED</th>
         <th>Grove - LED</th>
   </tr>
   <tr>
@@ -114,27 +124,27 @@ Todos los pines GPIO en XIAO RP2350 soportan salida PWM. Por lo tanto, puedes us
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
 </table>
 
-Por favor instala XIAO RP2350 en la placa de expansión, y conecta el LED Grove a la interfaz **A0/D0** de la placa de expansión mediante un cable Grove. Finalmente, conecta XIAO a la computadora mediante un cable USB-C.
+Instala el XIAO RP2350 en la placa de expansión y conecta el Grove LED a la interfaz **A0/D0** de la placa de expansión mediante un cable Grove. Finalmente, conecta el XIAO al ordenador mediante un cable USB-C.
 
-### Implementación del Software
+### Implementación de software
 
-En este ejemplo, demostraremos cómo usar la salida PWM para controlar el brillo de una luz.
+En este ejemplo, mostraremos cómo utilizar la salida PWM para controlar el brillo de una luz.
 
 ```cpp
 int LED_pin = D0;    // LED connected to digital pin 10
@@ -171,17 +181,17 @@ Si el programa se ejecuta correctamente, verás el siguiente efecto de funcionam
 
 ## Analógico
 
-La Placa de Desarrollo XIAO MG24(Sense) tiene un ADC de 12 bits para lectura de alta resolución de valores de sensores analógicos, puede ayudarnos a leer valores más precisos.
+La placa de desarrollo XIAO MG24(Sense) tiene un ADC de 12 bits para la lectura de alta resolución de valores de sensores analógicos, lo que nos ayuda a leer valores más precisos.
 
 A continuación, elegiremos dos sensores para reflejar las características del ADC.
 
-### Preparación de Hardware
+### Preparación de hardware
 
 <table align="center">
   <tr>
         <th>Seeed Studio XIAO RP2350</th>
-        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
-        <th>Grove - Loudness Sensor</th>
+        <th>Base de expansión Seeed Studio para XIAO con Grove OLED</th>
+        <th>Grove - Sensor de ruido</th>
   </tr>
   <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102010550-xiao-rp2350.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -191,23 +201,23 @@ A continuación, elegiremos dos sensores para reflejar las características del 
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Loudness-Sensor.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
 </table>
 
-### Implementación de Software
+### Implementación de software
 
 ``` cpp
 int loudness;
@@ -233,21 +243,20 @@ Si todo va bien, después de cargar el programa, deberías ver el siguiente efec
 
 ## UART
 
-Al trabajar con Arduino IDE, la comunicación Serial es una parte esencial de muchos proyectos. Para
-usar Serial en Arduino IDE, necesitas comenzar abriendo la ventana del Monitor Serie. Esto se puede hacer haciendo clic en el icono **Monitor Serie** en la barra de herramientas o presionando la tecla de acceso directo **Ctrl+Shift+M**.
+Al trabajar con Arduino IDE, la comunicación Serial es una parte esencial de muchos proyectos. Para usar Serial en Arduino IDE, debes comenzar abriendo la ventana del Monitor Serial. Esto se puede hacer haciendo clic en el icono **Serial Monitor** en la barra de herramientas o presionando el atajo de teclado **Ctrl+Shift+M**.
 
-### Uso General
+### Uso general
 
-Algunas de las funciones Serial comúnmente utilizadas incluyen:
+Algunas de las funciones Serial más utilizadas incluyen:
 
-- `Serial.begin()` -- que inicializa la comunicación a una velocidad de baudios especificada;
+- `Serial.begin()` -- que inicializa la comunicación a una velocidad en baudios especificada;
 - `Serial.print()` -- que envía datos al puerto Serial en un formato legible;
 - `Serial.write()` -- que envía datos binarios al puerto Serial;
-- `Serial.available()` -- que verifica si hay algún dato disponible para ser leído desde el puerto Serial;
+- `Serial.available()` -- que comprueba si hay datos disponibles para ser leídos desde el puerto Serial;
 - `Serial.read()` -- que lee un solo byte de datos desde el puerto Serial;
-- `Serial.flush()` -- que espera a que se complete la transmisión de datos seriales salientes.
+- `Serial.flush()` -- que espera a que se complete la transmisión de los datos seriales salientes.
 
-Al usar estas funciones Serial, puedes enviar y recibir datos entre la placa Arduino y tu computadora, lo que abre muchas posibilidades para crear proyectos interactivos.
+Al usar estas funciones Serial, puedes enviar y recibir datos entre la placa Arduino y tu ordenador, lo que abre muchas posibilidades para crear proyectos interactivos.
 
 Aquí hay un programa de ejemplo:
 
@@ -269,7 +278,7 @@ void loop() {
     Serial.print("I received: ");
     Serial.println(incomingByte);
   }
-  
+
   // wait for a second before repeating the loop
   delay(1000);
 }
@@ -283,14 +292,14 @@ Si todo va bien, después de cargar el programa, deberías ver el siguiente efec
 
 ### Uso de Serial1
 
-Según los diagramas de pines del XIAO RP2350 anteriores para parámetros específicos, podemos observar que hay pines TX y RX (D6,D7).
-El uso también es muy similar, pero necesitamos usar una **herramienta de monitoreo de puerto serie** para monitorear los pines D6,D7 para obtener datos.
-Así que a continuación, usaremos los pines D6,D7 para usar **serial1**.
+De acuerdo con los diagramas de pines de XIAO RP2350 anteriores para parámetros específicos, podemos observar que hay pines TX y RX (D6, D7).
+El uso también es muy similar, pero necesitamos usar una **herramienta de monitorización de puerto serie** para monitorizar los pines D6 y D7 para obtener datos.
+Así que a continuación, usaremos los pines D6 y D7 para usar **serial1**.
 
 :::tip
-Normalmente, usamos **Serial** para comunicarnos entre el dispositivo y tu computadora para que podamos saber qué está pasando en tu programa.
+Normalmente, usamos **Serial** para comunicarnos entre el dispositivo y tu ordenador para que podamos saber qué está pasando en tu programa.
 
-Basándose en eso, quieres usar este dispositivo para comunicarte con otro dispositivo. En este caso, usaremos **Serial1**.
+Basado en eso, quieres usar este dispositivo para comunicarse con otro dispositivo. En este caso, usaremos **Serial1**.
 :::
 
 ```c
@@ -298,7 +307,7 @@ Basándose en eso, quieres usar este dispositivo para comunicarte con otro dispo
 void setup() {
     Serial1.begin(115200);
 }
- 
+
 void loop() {
   if(Serial1.available() > 0)
   {
@@ -318,9 +327,9 @@ Si todo va bien, después de cargar el programa, deberías ver el siguiente efec
 
 ## I2C
 
-XIAO RP2350 tiene una interfaz I2C que se puede usar para la transmisión y análisis de datos de muchos sensores, así como para usar algunas pantallas OLED.
+XIAO RP2350 tiene una interfaz I2C que se puede usar para la transmisión y el análisis de datos de muchos sensores, así como para usar algunas pantallas OLED.
 
-### Preparación de Hardware
+### Preparación de hardware
 
 <table align="center">
   <tr>
@@ -336,49 +345,49 @@ XIAO RP2350 tiene una interfaz I2C que se puede usar para la transmisión y aná
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
 </table>
 
-El sensor DHT20 utiliza protocolo I2C, por lo que podemos usar el puerto I2C en la placa de expansión XIAO para obtener datos del sensor.
+El sensor DHT20 usa el protocolo I2C, por lo que podemos usar el puerto I2C en la XIAO Expansion Board para obtener los datos del sensor.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/7.png" style={{width:500, height:'auto'}}/></div>
 
-### Implementación de Software
+### Implementación de software
 
-Este ejemplo presenta cómo obtener datos del sensor DHT20 a través de la base de expansión Seeed Studio para XIAO RP2350.
+Este ejemplo presenta cómo obtener los datos del sensor DHT20 a través de la Seeed Studio Expansion Base para XIAO RP2350.
 
-Paso 1. Instala el Seeed Studio XIAO RP2350 en la placa de expansión y luego conecta el cable Type-C.
+Paso 1. Instala la Seeed Studio XIAO RP2350 en la placa de expansión y luego conecta el cable Type-C.
 
-Paso 2. Instala la biblioteca **Grove Temperature And Humidity Sensor**.
+Paso 2. Instala la librería **Grove Temperature And Humidity Sensor**.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar las Bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar las librerías</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-Paso 3. Añade la biblioteca a Arduino.
+Paso 3. Añade la librería a Arduino.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/10.png" style={{width:800, height:'auto'}}/></div>
 
-Paso 4. Abre la demostración DHTtester de la biblioteca que acabas de descargar.
+Paso 4. Abre la demo DHTtester desde la librería que acabas de descargar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/11.png" style={{width:800, height:'auto'}}/></div>
 
-Debido a que usamos DHT20, necesitamos descomentar los códigos DHT20 como el siguiente código.
+Como usamos DHT20, necesitamos descomentar el código de DHT20 como en el siguiente código.
 
 ```c
 // Example testing sketch for various DHT humidity/temperature sensors
@@ -456,9 +465,9 @@ Si todo va bien, después de cargar el programa, deberías ver el siguiente efec
 
 ## SPI
 
-El chip XIAO RP2350 integra múltiples periféricos, incluyendo una interfaz SPI que puede usarse para conectar dispositivos SPI externos como memoria flash, pantallas, sensores y más. El XIAO RP2350 también soporta modo de transferencia SPI de alta velocidad, que puede alcanzar una velocidad máxima de transferencia SPI de 80 MHz, satisfaciendo las necesidades de transferencia de datos de la mayoría de dispositivos SPI.
+El chip XIAO RP2350 integra múltiples periféricos, incluido una interfaz SPI que se puede utilizar para conectar dispositivos SPI externos como memorias flash, pantallas, sensores y más. El XIAO RP2350 también admite un modo de transferencia SPI de alta velocidad, que puede alcanzar una velocidad máxima de transferencia SPI de 80 MHz, satisfaciendo las necesidades de transferencia de datos de la mayoría de los dispositivos SPI.
 
-### Preparación de Hardware
+### Preparación de hardware
 
 <table align="center">
  <tr>
@@ -472,20 +481,20 @@ El chip XIAO RP2350 integra múltiples periféricos, incluyendo una interfaz SPI
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-Después de preparar el hardware como se mencionó anteriormente, usa cables puente para conectar la interfaz SPI del XIAO y el OLED. Por favor, consulta la siguiente tabla para el cableado.
+Después de preparar el hardware como se mencionó anteriormente, utiliza cables de puente para conectar la interfaz SPI del XIAO y el OLED. Consulta la siguiente tabla para el cableado.
 
-|XIAO RP2350| Pantalla OLED|
+|XIAO RP2350| OLED Display|
 |-----------|-------------|
 |D8|SCL|
 |D10|SI|
@@ -495,15 +504,15 @@ Después de preparar el hardware como se mencionó anteriormente, usa cables pue
 |VCC(VBUS)|5V|
 |GND|GND|
 
-### Implementación de Software
+### Implementación de software
 
-A continuación, tomaremos el siguiente programa como ejemplo para introducir cómo usar la interfaz SPI para controlar la visualización de la pantalla OLED.
+A continuación, tomaremos el siguiente programa como ejemplo para introducir cómo utilizar la interfaz SPI para controlar la pantalla OLED.
 
 Instala la biblioteca u8g2.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar las Bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar las bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -514,13 +523,13 @@ Instala la biblioteca u8g2.
 #include <U8g2lib.h>
 #include <SPI.h>
 #include <Wire.h>
- 
+
 U8G2_SH1107_128X128_1_4W_HW_SPI u8g2(U8G2_R3, /* cs=*/ D7, /* dc=*/ D4, /* reset=*/ D5);
- 
+
 void setup(void) {
   u8g2.begin();
 }
- 
+
 void loop(void) {
   u8g2.firstPage();
 
@@ -531,22 +540,22 @@ void loop(void) {
 }
 ```
 
-En la función `setup()`, la clase `U8G2_SH1107_128X128_1_4W_HW_SPI` se instancia con los argumentos del constructor apropiados que especifican los pines utilizados para chip select (cs), data/command (dc), y reset. Luego, se llama a la función `u8g2.begin()` para inicializar la pantalla.
+En la función `setup()`, la clase `U8G2_SH1107_128X128_1_4W_HW_SPI` se instancia con los argumentos de constructor apropiados que especifican los pines utilizados para chip select (cs), datos/comando (dc) y reset. Luego, se llama a la función `u8g2.begin()` para inicializar la pantalla.
 
-En la función `loop()`, la pantalla se actualiza con nuevo contenido usando las funciones `u8g2.firstPage()`, `u8g2.setFont()`, y `u8g2.drawStr()`. La función `u8g2.firstPage()` configura el buffer de la pantalla para escritura, mientras que `u8g2.nextPage()` muestra el contenido actualizado. El bucle do-while asegura que el contenido se muestre continuamente hasta que el programa se detenga.
+En la función `loop()`, la pantalla se actualiza con nuevo contenido utilizando las funciones `u8g2.firstPage()`, `u8g2.setFont()` y `u8g2.drawStr()`. La función `u8g2.firstPage()` configura el búfer de la pantalla para escritura, mientras que `u8g2.nextPage()` muestra el contenido actualizado. El bucle do-while garantiza que el contenido se muestre continuamente hasta que el programa se detenga.
 
-En general, este código demuestra cómo usar la biblioteca U8g2 para controlar una pantalla OLED y mostrar texto en ella.
+En general, este código demuestra cómo utilizar la biblioteca U8g2 para controlar una pantalla OLED y mostrar texto en ella.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/15.png" style={{width:700, height:'auto'}}/></div>
 
 ## Finalizar
 
-Has aprendido las funciones básicas de los pines del XIAO RP2350. Ahora, ¡divirtámonos con él~
+Has aprendido las funciones básicas de los pines del XIAO RP2350. Ahora, ¡diviértete con él~!
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/6.png" style={{width:1000, height:'auto'}}/></div>
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

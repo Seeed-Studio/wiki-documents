@@ -15,11 +15,10 @@ last_update:
   date: 05/27/2026
   author: FanWenhan
 translation:
-  skip:
-    - zh-CN
+  skip: [es,ja,pt,en]
 createdAt: '2026-05-27'
-updatedAt: 'xxxx'
-url: https://wiki.seeedstudio.com/reachymini_conversation/
+updatedAt: '2026-06-08'
+url: https://wiki.seeedstudio.com/cn/reachymini_conversation/
 ---
 
 # Reachy Mini接入豆包大模型API
@@ -29,8 +28,6 @@ url: https://wiki.seeedstudio.com/reachymini_conversation/
 本wiki仅以豆包大语言模型Doubao-Seed-Character与豆包流式语音识别2.0为案例，再次提醒Reachy Mini本身支持接入任意一款国内外模型，并且也支持本地部署且服务化API公开的模型。
 
 :::
-
-## 效果展示  
 
 ## 效果展示  
 
@@ -49,7 +46,6 @@ url: https://wiki.seeedstudio.com/reachymini_conversation/
 ```bash
 pip install "reachy-mini"
 ```
-
 
 2.安装舞蹈动作库
 
@@ -78,26 +74,24 @@ pip install edge-tts soundfile scipy numpy websockets httpx gradio fastapi
 :::tip
 
 Linux系统需要额外安装依赖环境
+
 ```bash
 sudo apt install -y libcairo2-dev libgirepository1.0-dev pkg-config python3-dev
 ```
+
 :::
 
 ## 火山引擎（豆包）API申请
 
 ### LLM模型API接入
 
-
 1.进入[火山引擎方舟管理控制台官网](https://www.volcengine.com/docs/6561/1354869?lang=zh)
 
-
 2.在API Key管理中进行模型API申请
-
 
 | **进行API Key申请** | **设置API名称并创建** |
 | :---: | :---: |
 | ![API Key申请](https://files.seeedstudio.com/wiki/robotics/Reachymini/conversation/LLM_API_Create1.png) | ![确认创建](https://files.seeedstudio.com/wiki/robotics/Reachymini/conversation/LLM_API_Create2.png) |
-
 
 3.进入体验中心，选择合适的模型
 
@@ -202,6 +196,7 @@ python main.py
 ```
 
 启动后系统会：
+
 - 初始化 Reachy Mini 机器人
 - 启动运动管理器 (60Hz 控制循环)
 - 启动语音动画系统
@@ -234,11 +229,16 @@ Reachy Mini 在回复中会用（）包含动作描述，系统会自动解析�
 | 看上/抬头 | 抬头 |
 | 看下/低头 | 低头 |
 
-
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们提供多种支持渠道：
+感谢您选择我们的产品！我们为您提供不同的支持，以确保您与我们的产品体验尽可能顺畅。我们提供多种沟通渠道以满足不同的偏好和需求。
 
-- [论坛](https://forum.seeedstudio.com/)
-- [Discord](https://discord.gg/eWkprNDMU7)
-- [GitHub Discussions](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

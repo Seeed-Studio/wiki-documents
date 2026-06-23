@@ -9,7 +9,7 @@ keywords:
   - EE04
 image: https://files.seeedstudio.com/wiki/EEZStudio/eez.webp
 slug: /reterminal_e10xx_with_eezstudio
-sidebar_position: 6
+sidebar_position: 8
 last_update:
   date: 04/28/2026
   author: dimo

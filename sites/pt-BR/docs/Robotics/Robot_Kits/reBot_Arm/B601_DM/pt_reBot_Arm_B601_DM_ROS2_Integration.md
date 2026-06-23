@@ -1,6 +1,6 @@
 ---
-description: Este tutorial mostra como configurar o workspace de controle ROS2 para o reBot Arm B601-DM, incluindo controle do braço, controle da garra, interfaces de trajetória, compensação de gravidade e visualização no RViz.
-title: Integração do reBot Arm B601-DM com ROS2
+description: Este tutorial mostra como configurar o workspace de controle ROS2 para o reBot Arm B601-DM, incluindo controle do braço, visualização no RViz e integração com o MoveIt2.
+title: Integração ROS2 do reBot Arm B601-DM
 keywords:
   - reBot Arm
   - B601-DM
@@ -13,20 +13,27 @@ keywords:
 slug: /rebot_arm_b601_dm_ros2_integration
 sku: 100065783, 100095532
 last_update:
-  date: 2026-05-14
+  date: 2026-05-29
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-05-14'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_ros2_integration/
 ---
 
-# Guia de Integração do reBot Arm B601-DM com ROS2
+# Guia de Integração ROS2 do reBot Arm B601-DM
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+</a></div>
+
+<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -36,14 +43,17 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_ros2_integration/
     <img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python Version" />
     <img src="https://img.shields.io/badge/Version-v0.2.2-brightgreen.svg" alt="Version v0.2.2" />
     <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Hardware-B601--DM-lightgrey.svg" alt="Hardware" />
 </p>
 
 <p align="center">
-  <strong>ROS2 Control · Controle da Garra · Interface de Trajetória Padrão · Compensação de Gravidade · Visualização no RViz · Totalmente Open Source</strong>
+  <strong>ROS2 Control · Visualização no RViz · Suporte ao MoveIt2</strong>
 </p>
 
 Este tutorial mostra como executar o workspace de controle ROS2 `rebotarm_ros2` para o reBot Arm B601-DM. O workspace encapsula o SDK Python de baixo nível `reBotArm_control_py` em tópicos, serviços e ações ROS2, facilitando a integração com planejamento de alto nível, preensão visual, visualização no RViz e desenvolvimento de aplicações personalizadas.
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/v2MlI3zMi1k?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::note
 Este tutorial usa `Ubuntu 24.04 + ROS2 Jazzy + Python 3.12` como ambiente de referência principal. ROS2 Humble / Ubuntu 22.04 podem seguir o mesmo fluxo de trabalho com a distribuição ROS2 correspondente.
@@ -55,10 +65,10 @@ Este tutorial usa `Ubuntu 24.04 + ROS2 Jazzy + Python 3.12` como ambiente de ref
    Fornece interfaces ROS2 comuns como `/joint_states`, `FollowJointTrajectory`, `GripperCommand` e `MoveToPose`, facilitando a integração com MoveIt2, pipelines de preensão visual ou sistemas em nível de tarefa.
 
 2. **Nós Prontos para Uso de Cinemática, Trajetória e Compensação de Gravidade**  
-   Fornece nós prontos para uso de cinemática direta/inversa, execução de trajetória, compensação de gravidade e suporte à visualização no RViz.
+   Fornece cinemática direta/inversa, execução de trajetória, compensação de gravidade e suporte à visualização no RViz prontos para uso.
 
 3. **Integração com MoveIt 2**  
-   Inclui configuração completa do MoveIt 2 e demos de aplicação, suportando o plugin MotionPlanning do RViz para planejamento simulado e execução em hardware real.
+   Inclui configuração completa do MoveIt 2 e demonstrações de aplicação, suportando o plugin MotionPlanning do RViz para planejamento simulado e execução em hardware real.
 
 ## Especificações
 
@@ -240,11 +250,13 @@ rebotarmcontroller MoveToPose
 
 ## Início Rápido
 
-Antes de usar o robô, observe o seguinte: **O controlador do braço possui um alto
+:::caution
+Antes de usar o robô, observe o seguinte: **O controlador do braço possui alto
 grau de liberdade. Antes de habilitar o controlador ou energizar o braço, certifique-se
 de que a área de trabalho esteja livre de pessoas e obstáculos. Revise cuidadosamente
 cada comando de movimento para evitar acidentes. Operações perigosas são estritamente
 proibidas; você é responsável por quaisquer consequências.**
+:::
 
 ### Iniciar o Sistema Completo
 
@@ -261,7 +273,7 @@ source install/setup.bash
 ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
 ```
 
-Se a sua porta serial não for `/dev/ttyACM0`, substitua-a pelo nome real do dispositivo:
+Se a sua porta serial não for `/dev/ttyACM0`, substitua pelo nome real do dispositivo:
 
 ```bash
 ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM1
@@ -316,7 +328,7 @@ Se você precisar de múltiplos braços robóticos ou quiser executar em paralel
 ros2 launch rebotarm_bringup bringup.launch.py arm_namespace:=left_arm
 ```
 
-Nesse caso, `/rebotarm/joint_states` se torna `/left_arm/joint_states`. O namespace afeta apenas os nomes de tópicos, serviços e ações no grafo ROS. Ele não altera automaticamente os nomes dos frames TF no URDF.
+Nesse caso, `/rebotarm/joint_states` se torna `/left_arm/joint_states`.
 
 ## APIs Comuns
 
@@ -428,7 +440,7 @@ ros2 run rebotarmcontroller MoveToPose -- --x 0.30 --y 0.0 --z 0.30 --qw 1.0 --d
 ros2 run rebotarmcontroller GravityCompensation
 ```
 
-O script primeiro chama `/rebotarm/enable`, depois inicia a compensação de gravidade. Quando você pressionar `Ctrl+C`, o script chama os seguintes serviços na ordem:
+O script primeiro chama `/rebotarm/enable`, depois inicia a compensação de gravidade. Quando você pressionar `Ctrl+C`, o script chama os seguintes serviços em ordem:
 
 1. `/rebotarm/gravity_compensation/stop`
 2. `/rebotarm/safe_home`
@@ -478,14 +490,14 @@ Parâmetros comuns de launch:
 
 | Parâmetro | Padrão | Descrição |
 |---|---|---|
-| `arm_config` | `arm.yaml` embutido do bringup | Caminho da configuração do braço |
-| `gripper_config` | `gripper.yaml` embutido do bringup | Caminho da configuração da garra |
+| `arm_config` | `arm.yaml` interno do bringup | Caminho da configuração do braço |
+| `gripper_config` | `gripper.yaml` interno do bringup | Caminho da configuração da garra |
 | `channel` | String vazia | Usar YAML por padrão. Sobrescreve a porta serial quando não estiver vazia |
 | `joint_state_rate` | `100.0` | Taxa de publicação de `/rebotarm/joint_states` |
 | `cmd_arbitration` | `reject` | Arbitragem de comandos de baixo nível durante a execução da trajetória do braço. `reject` ou `preempt`; comandos de baixo nível da garra não preemptam trajetórias do braço |
 | `arm_namespace` | `rebotarm` | Prefixo de namespace ROS |
-| `frame_id` | `base_link` | Quadro base do braço robótico |
-| `ee_frame_id` | `end_link` | Quadro do efetuador final |
+| `frame_id` | `base_link` | Frame base do braço robótico |
+| `ee_frame_id` | `end_link` | Frame do efetuador final |
 | `use_rviz` | `false` | Se deve iniciar o RViz |
 
 ## Tópicos de Comando de Baixo Nível
@@ -543,7 +555,7 @@ sudo apt install -y \
   ros-${ROS_DISTRO}-xacro
 ```
 
-A configuração e as demos do MoveIt estão incluídas neste workspace. Após instalar
+A configuração do MoveIt e as demos estão incluídas neste workspace. Após instalar
 as dependências, reconstrua o workspace:
 
 ```bash
@@ -552,7 +564,7 @@ colcon build --symlink-install
 source install/setup.bash
 ```
 
-Verifique os pacotes MoveIt e os pontos de entrada das demos:
+Verifique os pacotes MoveIt e pontos de entrada das demos:
 
 ```bash
 ros2 pkg list | grep rebotarm_moveit
@@ -568,8 +580,8 @@ rebotarm_moveit_demos pick_place
 
 ### Usar o MoveIt
 
-O planejamento com MoveIt pode ser usado através da interface gráfica do RViz ou através de nós ROS, tanto em
-simulação quanto em cenas reais.
+O planejamento com MoveIt pode ser usado através da interface gráfica do RViz ou através de nós ROS, tanto
+em simulação quanto em cenas reais.
 
 #### Usar o MoveIt em simulação
 
@@ -645,8 +657,8 @@ Parâmetros comuns:
 | `start_point` | Posição de reset das juntas antes do início da demo |
 | `rectangle_center` | Centro do retângulo em `base_link` |
 | `rectangle_width` / `rectangle_height` | Dimensões do retângulo em metros |
-| `tcp_rpy` | Orientação do TCP, com padrão de garra voltada para baixo |
-| `tcp_yaw_offsets` | Valores alternativos de yaw de IK usados para evitar grandes voltas da junta 6 |
+| `tcp_rpy` | Orientação do TCP, padrão para uma garra voltada para baixo |
+| `tcp_yaw_offsets` | Valores alternativos de yaw de IK usados para evitar grandes voltas da junta6 |
 
 ### Executar a demo pick-place
 
@@ -669,7 +681,7 @@ Parâmetros comuns:
 | Parâmetro | Descrição |
 |---|---|
 | `ready_point` | Posição de junta de prontidão usada antes e depois de pegar/colocar |
-| `pick_position` | Posição inferior-central do objeto em `base_link` |
+| `pick_position` | Posição do centro da base do objeto em `base_link` |
 | `pick_tcp_rpy` / `place_tcp_rpy` | Orientação do TCP para pegar e colocar |
 | `object_dimensions` | Dimensões do objeto na cena de planejamento em metros |
 | `max_gripper_width` | Abertura total máxima da garra, padrão `0.09m` |
@@ -685,11 +697,11 @@ Parâmetros comuns:
 | `rebotarm_moveit_config/config/rebotarm.srdf` | Grupos do MoveIt, efetuador final e estados padrão |
 | `rebotarm_moveit_config/config/kinematics.yaml` | Configuração do solucionador de IK |
 | `rebotarm_moveit_config/config/joint_limits.yaml` | Limites das juntas usados pelo planejamento do MoveIt |
-| `rebotarm_moveit_config/config/moveit_controllers.yaml` | Configuração do controlador de execução de trajetórias do MoveIt |
-| `rebotarm_moveit_config/config/ros2_controllers.yaml` | Configuração do controlador ros2_control |
+| `rebotarm_moveit_config/config/moveit_controllers.yaml` | Configuração do controlador de execução de trajetória do MoveIt |
+| `rebotarm_moveit_config/config/ros2_controllers.yaml` | Configuração do controlador do ros2_control |
 | `rebotarm_moveit_config/config/initial_positions.yaml` | Posições iniciais das juntas para hardware simulado |
-| `rebotarm_moveit_demos/config/draw_square.yaml` | Parâmetros da demonstração de desenho de quadrado |
-| `rebotarm_moveit_demos/config/pick_place.yaml` | Parâmetros da demonstração de pick and place |
+| `rebotarm_moveit_demos/config/draw_square.yaml` | Parâmetros da demonstração de desenhar quadrado |
+| `rebotarm_moveit_demos/config/pick_place.yaml` | Parâmetros da demonstração de pegar e colocar |
 
 ## FAQ
 
@@ -735,12 +747,12 @@ sudo chmod 666 /dev/ttyACM0
 
 Verifique o seguinte:
 
-- Se o workspace foi carregado com: `source install/setup.bash`
+- Se o workspace foi carregado com `source install/setup.bash`
 - Se `Fixed Frame` está definido como `base_link`
 - Se `robot_state_publisher` foi iniciado corretamente
 - Se o caminho da malha URDF é `package://rebotarm_bringup/description/meshes/...`
 
-### 5. Aparece um aviso de porta FastDDS SHM
+### 5. Aviso de porta FastDDS SHM aparece
 
 Se o terminal mostrar algo como:
 
@@ -750,7 +762,7 @@ Se o terminal mostrar algo como:
 
 Isso geralmente é causado por arquivos de bloqueio de memória compartilhada do FastDDS remanescentes após um processo ROS2 anterior ter sido encerrado de forma anormal. Se serviços e ações ainda responderem normalmente, esse aviso geralmente não afeta o controle.
 
-Para limpar isso, pare primeiro os processos ROS2 relacionados e então execute:
+Para limpar, pare primeiro os processos ROS2 relacionados e então execute:
 
 ```bash
 pkill -f ros2
@@ -789,7 +801,7 @@ source /opt/ros/jazzy/setup.bash
 python3 -c "import pinocchio; print(pinocchio.__version__)"
 ```
 
-Se ainda assim não puder ser encontrado, verifique se o caminho de busca do Python atual contém o caminho do pacote Python do ROS2:
+Se ainda não puder ser encontrado, verifique se o caminho de busca do Python atual contém o caminho do pacote Python do ROS2:
 
 ```bash
 python3 -c "import sys; print('\n'.join(sys.path))"
@@ -810,7 +822,7 @@ Após carregar o Jazzy, você deverá ver um caminho semelhante a
 - [Introdução ao reBot Arm B601-DM](https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/)
 - [Demonstração de apreensão visual do reBot Arm B601-DM](https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_grasping_demo/)
 - [reBot Arm B601-DM Pinocchio e MeshCat](https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/)
-- [Tutorial reBot Arm B601-DM LeRobot](https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_lerobot/)
+- [Tutorial LeRobot do reBot Arm B601-DM](https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_lerobot/)
 - [Documentação do ROS2 Humble](https://docs.ros.org/en/humble/)
 - [Documentação do ROS2 Jazzy](https://docs.ros.org/en/jazzy/)
 - [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)

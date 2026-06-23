@@ -1,5 +1,5 @@
 ---
-description: reTerminal E1003 は、16 階調グレースケールと 1404×1872 ピクセルの高解像度を備えた 10.3 インチのオープンソース白黒電子ペーパーディスプレイで、HMI ファームウェア v1.1.2 以降でタッチ操作をサポートします。
+description: reTerminal E1003 は、16 階調グレースケールと 1404×1872 ピクセルの高解像度を備えた 10.3 インチのオープンソース白黒 ePaper ディスプレイで、HMI ファームウェア v1.1.2 以降でタッチ操作をサポートします。
 title: reTerminal E1003 入門ガイド
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.webp
 slug: /getting_started_with_reterminal_e1003
@@ -9,7 +9,7 @@ last_update:
   date: 05/09/2026
   author: dimo
 createdAt: '2026-03-18'
-updatedAt: '2026-05-09'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1003/
 ---
 import Tabs from '@theme/Tabs';
@@ -20,29 +20,29 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
 ## はじめに
 
-reTerminal E1003 は、タッチ操作に対応した 10.3 インチのオープンソース白黒電子ペーパーディスプレイで、16 階調グレースケールと 1404×1872 ピクセルの高解像度を備え、1 日 1 回のリフレッシュを前提として最長 6 か月のバッテリー駆動が可能です。ESP32-S3 を搭載し、ダッシュボードを簡単に作成できるノーコード UI プラットフォームである [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) をネイティブにサポートします。スマートホームのダッシュボードの可視化と制御、オフィスの情報表示、教育プロジェクトなど、あらかじめ用意されたタッチ対応デバイスとして、美しい表示と柔軟なカスタマイズ性であらゆるニーズに応えます。
+reTerminal E1003 は、16 階調グレースケールと 1404×1872 ピクセルの高解像度を備えた 10.3 インチのタッチ対応オープンソース白黒 ePaper ディスプレイで、1 日 1 回のリフレッシュを前提として最長 6 か月のバッテリー駆動が可能です。ESP32-S3 を搭載し、ダッシュボードを簡単に作成できるノーコード UI プラットフォームである [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) をネイティブにサポートします。スマートホームのダッシュボードの可視化と制御、オフィスの情報表示、教育プロジェクトなど、あらゆる用途において、このすぐに使えるタッチ対応デバイスは、美しい表示と柔軟なカスタマイズ性でニーズに応えます。
 
 :::tip
-reTerminal E1003 のタッチ操作は、[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) ファームウェア v1.1.2 以降でサポートされています。現在の最新バージョンは v1.1.4.3 であり、最良の体験のためにこのバージョンへのアップデートを推奨します。
-タッチ関連ライブラリのサポートは、今後のオープンソース公開で提供予定であり、パネルのカスタマイズ性がさらに高まります。詳細なアップデートは追って共有されます。
+reTerminal E1003 のタッチ操作は、[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) ファームウェア v1.1.2 以降でサポートされています。現在の最新バージョンは v1.1.4.3 であり、最良の体験のためにこのバージョンへの更新を推奨します。
+タッチ関連ライブラリのサポートは、今後のオープンソース公開で提供予定であり、パネルのカスタマイズにさらなる柔軟性をもたらします。詳細は追ってお知らせします。
 
 reTerminal E1003 向けの ESPHome サポートは現在開発中で、今後のリリースで利用可能になる予定です。
 :::
 
 ### 特長
 
-- ePaper ダッシュボードの応答性を高める 3 秒フルリフレッシュ
+- 3 秒フルリフレッシュによる高速な ePaper レスポンシブダッシュボード
 - [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) とタッチサポートでインタラクティブなインターフェースを簡単構築
 - 16 階調グレースケールと高解像度 ePaper ディスプレイによる鮮明な表示
-- 1 日 1 回のリフレッシュを前提とした最長 6 か月のバッテリー駆動
-- 柔軟なハードウェアおよびソフトウェアのカスタマイズ
+- 1 日 1 回のリフレッシュを前提とした最長 6 か月のバッテリー寿命
+- 柔軟なハードウェア & ソフトウェアカスタマイズ
 
 
 ## 仕様
@@ -113,27 +113,27 @@ reTerminal E1003 向けの ESPHome サポートは現在開発中で、今後の
 </div>
 
 
-## アプリケーション
+## 応用例
 
 - **ホームオートメーションダッシュボード：** Home Assistant を介して、温度、湿度、空気質などのスマートホームデータをリアルタイムに表示します。
-- **低消費電力の白黒電子フォトフレーム：** [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) またはアプリを使用して、アルバム内の写真を複数枚リモートで簡単にアップロードできます。大型・高解像度の白黒電子ペーパースクリーンと組み合わせることで、超低消費電力の画像表示を実現し、バッテリー寿命を心配する必要がなくなります。
+- **低消費電力の白黒電子フォトフレーム：** [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) またはアプリを使用して、アルバム内の写真をリモートで簡単に複数枚アップロードできます。大型・高解像度の白黒電子ペーパー画面と組み合わせることで、超低消費電力の画像表示を実現し、バッテリー寿命を心配する必要がなくなります。
 - **スマートオフィスディスプレイ：** 会議室の空き状況、オフィスのスケジュール、案内表示などを、低消費電力で常時表示可能な ePaper ディスプレイに表示します。
-- **小売・公共情報ディスプレイ：** メニュー、時刻表、混雑状況表示などに適した、長時間駆動の低消費電力 ePaper サインとして利用できます。
+- **小売・公共情報ディスプレイ：** メニュー、時刻表、混雑状況インジケータなどに、長時間駆動可能な低消費電力 ePaper サインを活用できます。
 
 
 ## ハードウェア概要
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/221.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/208.png" style={{width:1000, height:'auto'}}/></div>
 
-1. **画面リフレッシュボタン：** デバイス上部にあり、手動で画面をリフレッシュします。
+1. **画面リフレッシュボタン：** デバイス上部にあり、手動で画面をリフレッシュするために使用します。
 2. **ページアップ・ダウンボタン：** デバイス上部にあり、ページ間の移動に使用します。
-3. **Wi-Fi アンテナエリア：** デバイス下部にあり、Wi-Fi 接続に使用されます。
+3. **Wi-Fi アンテナエリア：** デバイス下部にあり、Wi-Fi 接続のためのエリアです。
 4. **MicroSD カード / TF カードスロット：** 追加ストレージ用（FAT32、最大 32GB）。
 5. **電源スイッチ：** デバイスの電源をオン／オフします。
 6. **赤色電源 LED：** バッテリーの充電状態を示します。
-7. **緑色ステータス LED：** 現在の動作状態またはシステム状態を示します。
+7. **緑色ステータス LED：** 現在の動作状態またはシステムステータスを示します。
 8. **USB-C データ・充電ポート：** デバイスの充電およびデータ転送に使用します。
-9. **拡張ポート：** 外部センサ、モジュール、周辺機器接続用に、VDD、GND、I2C、GPIO を提供するピンヘッダです。
+9. **拡張ポート：** 外部センサ、モジュール、周辺機器用に VDD、GND、I2C、GPIO 接続を提供するピンヘッダです。
 10. **スタンド取り付け用ネジ穴：** デバイス背面にあるねじ穴で、スタンドを固定するために使用します。
 11. **3D プリント製サポートスタンド：** デバイスを平らな面で直立させるための付属スタンドアクセサリです。
 12. **スタンド取り付け用ネジ：** サポートスタンドをデバイスに固定するために使用するネジです。
@@ -155,17 +155,17 @@ reTerminal E1003 には、ノーコードプラットフォームである **[Se
 
 **ステップ 2.**（任意）デバイスを直立させるために 3D プリント製サポートスタンドを取り付けます：
 
-同梱されている 3D プリント製サポートスタンドを見つけます。reTerminal E1003 背面の、埋め込みナットが配置されている所定の取り付け位置にスタンドを合わせます。ドライバーを使用して、背面の埋め込みナットにネジを締め込み、スタンドをデバイスに固定します。しっかり固定できたら、スタンドがデバイスを直立させられるよう、平らな面に reTerminal E1003 を設置します。
+同梱されている 3D プリント製サポートスタンドを見つけます。reTerminal E1003 背面の、埋め込みナットがある所定の取り付け位置にスタンドを合わせます。ドライバーを使用して、reTerminal E1003 背面の埋め込みナットにネジを締め込み、スタンドをデバイスに固定します。しっかり固定できたら、スタンドがデバイスを直立させられるよう、平らな面に reTerminal E1003 を設置します。
 
 :::note
-スタンドは固定の視野角を提供するもので、角度調整はできません。この固定位置は、ほとんどの使用シーンで最適な視認性が得られるよう設計されています。
+スタンドは固定の視野角を提供するもので、角度調整はできません。この固定位置は、ほとんどの使用シーンで最適な視認性を得られるよう設計されています。
 :::
 
 **ステップ 3.**（任意）デジタルフォトフレームとして使用する場合や追加ストレージが必要な場合は、microSD カードを挿入します。
 
 :::note
 reTerminal E シリーズ ePaper ディスプレイは、FAT32 形式の最大 32GB までの MicroSD カードのみをサポートします。  
-32GB の SD カードはデフォルトで exFAT 形式になっています。FAT32 に再フォーマットすると、正常にマウントされ、画像の保存に使用できるようになります。
+32GB の SD カードはデフォルトで exFAT にフォーマットされています。FAT32 に再フォーマットすると、正常にマウントされ、画像の保存に使用できます。
 :::
 
 **ステップ 4.**（任意）必要に応じて USB ドライバーをインストールします：
@@ -185,7 +185,7 @@ reTerminal E シリーズ ePaper ディスプレイは、FAT32 形式の最大 3
 Mac を使用していて、これまでに CH34X ドライバーを手動インストールしていない場合は、以下の手順に従ってインストールを完了してください：
 
 **ステップ 1. ドライバーのダウンロードとインストール**
-[WCH 公式ページ](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) からドライバーをダウンロードし、`CH34xVCPDriver.pkg` を実行します。 
+
 :::tip
 macOS によってインストールがブロックされた場合は、**System Settings → Privacy & Security** に移動し、ブロックされた WCH ソフトウェアを探して **Allow** をクリックします。
 :::
@@ -195,14 +195,14 @@ macOS によってインストールがブロックされた場合は、**System
 </div>
 
 **ステップ 2. ドライバー拡張機能を有効化（重要）**
-Launchpad から **CH34xVCPDriver** アプリを開き、**Install** をクリックしてから、**System Settings → General → Login Items & Extensions → Driver Extensions** に移動します。**CH34xVCPDriver Extensions** を **ON**（青）に切り替えます。
+Launchpad から **CH34xVCPDriver** アプリを開き、**Install** をクリックします。その後、**System Settings → General → Login Items & Extensions → Driver Extensions** に移動します。**CH34xVCPDriver Extensions** を **ON**（青）に切り替えます。
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
   <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
   <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
 </div>
 
 **ステップ 3. 接続と確認**
-デバイスの **電源スイッチが ON** になっていることを確認し、**データ通信対応の USB-C ケーブル**（充電専用ではないもの）を使用します。Terminal を開き、次を実行します：
+デバイスの **電源スイッチが ON** であることを確認し、**データ通信対応の USB-C ケーブル**（充電専用ではないもの）を使用します。Terminal を開き、次を実行します：
 ```bash
 ls /dev/tty.wch*
 # Expected output: /dev/tty.wchusbserialxxx
@@ -228,14 +228,14 @@ Ubuntu 22.04 以降のバージョンには、必要なドライバがデフォ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/235.gif" style={{width:700, height:'auto'}}/></div>
 
-**Step 2.** 初回起動時には、製品情報とネットワーク設定手順が表示されます。
+**Step 2.** 初回起動時、デバイスには製品情報とネットワーク設定手順が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/229.png" style={{width:600, height:'auto'}}/></div><br />
 
 **Step 3.** 緑色のステータス LED が約 3 秒間点灯した後に消灯し、デバイスの電源が入り初期化中であることを示します。30 秒以内に操作を行わない場合、デバイスは自動的にスリープモードに入り、電力を節約します。
 
 :::tip
-したがって、この間にネットワーク設定の次の手順を完了する必要があります。デバイスがスリープ状態になると、デバイスのホットスポットを見つけることができません。この場合は、本体上部の **Refresh** ボタンを押してデバイスをウェイクアップできます。
+したがって、この間にネットワーク設定の次のステップを完了する必要があります。デバイスがスリープ状態になると、デバイスのホットスポットを見つけることができなくなります。この場合は、本体上部の **Refresh** ボタンを押してデバイスをウェイクアップできます。
 :::
 
 ### ネットワーク設定
@@ -243,11 +243,11 @@ Ubuntu 22.04 以降のバージョンには、必要なドライバがデフォ�
 <Tabs>
 <TabItem value="Network Setup via PC" label="Network Setup via PC" default>
 
-**Step 1.** スマートフォンまたはコンピュータから、デバイスの Wi-Fi アクセスポイントに接続します。AP 名は画面に表示されます（パスワード不要）。ネットワーク認証情報は `reTerminal E1003-{MAC Address}` です。
+**Step 1.** スマートフォンまたはコンピュータからデバイスの Wi-Fi アクセスポイントに接続します。AP 名は画面に表示されます（パスワード不要）。ネットワーク認証情報は `reTerminal E1003-{MAC Address}` です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/228.png" style={{width:400, height:'auto'}}/></div><br />
 
-**Step 2.** 接続されると、スマートフォンは自動的に Wi-Fi 設定ページへリダイレクトされます。自動的に開かない場合は、reTerminal E1003 の画面に表示されている QR コードをスマートフォンでスキャンするか、ブラウザを開いて `192.168.4.1` にアクセスしてください。
+**Step 2.** 接続されると、スマートフォンは自動的に Wi-Fi 設定ページへリダイレクトされます。自動的に開かない場合は、reTerminal E1003 の画面に表示されている QR コードをスマートフォンでスキャンするか、ブラウザを開いて `192.168.4.1` にアクセスします。
 
 誤ったパスワードを入力した場合は、正しいパスワードを再入力して再度送信してください。
 
@@ -256,7 +256,7 @@ Ubuntu 22.04 以降のバージョンには、必要なドライバがデフォ�
 **Step 3.** ローカルの Wi-Fi ネットワークを選択してパスワードを入力し、「Connect」をクリックします。
 
 :::note
-reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネットワークのみをサポートし、5 GHz など他の帯域には対応していません。
+reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネットワークのみをサポートし、5 GHz など他の帯域はサポートしません。
 :::
 
 **Step 4.** 接続に成功すると、デバイスが確認音を鳴らし、ペアリングコードの画面を表示します。
@@ -273,11 +273,11 @@ reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネッ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/225.png" style={{width:600, height:'auto'}}/></div>
 
-**Step 3.** デバイスに名前を付け、デバイス画面に表示されているペアリングコードを入力して **Create** をクリックします。
+**Step 3.** デバイスに名前を付け、デバイスの画面に表示されているペアリングコードを入力して **Create** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
 
-**Step 4.** ペアリングが完了すると、最初のダッシュボードを作成するよう促すメッセージがデバイスに表示されます。
+**Step 4.** ペアリングが完了すると、デバイスに最初のダッシュボードを作成するよう促すメッセージが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/231.png" style={{width:600, height:'auto'}}/></div>
 
@@ -286,7 +286,7 @@ reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネッ�
 
 この方法では、SenseCraft モバイルアプリを使用して、Bluetooth 経由でデバイスのネットワークを設定し、SenseCraft アカウントに追加します。
 
-まず SenseCraft アプリをダウンロードします。Google Play ストアまたは Apple App Store で「SenseCraft」と検索して見つけることができます。あるいは、この Web サイトからダウンロードすることもできます。
+まず SenseCraft アプリをダウンロードします。Google Play ストアまたは Apple App Store で「SenseCraft」と検索して見つけることができます。あるいは、このウェブサイトからダウンロードすることもできます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
@@ -314,7 +314,7 @@ reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネッ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/154.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Step 5.** アプリは Wi-Fi の認証情報をデバイスに送信し、SenseCraft アカウントにデバイスを追加します。完了すると「Device added successfully」というメッセージが表示されます。**Start exploring!** をタップして次に進むことができます。
+**Step 5.** アプリは Wi-Fi の認証情報をデバイスに送信し、SenseCraft アカウントに追加します。完了すると「Device added successfully」というメッセージが表示されます。**Start exploring!** をタップして次に進むことができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/155.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -322,7 +322,7 @@ reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネッ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Step 7.** 一覧のデバイスをタップすると、その **Device Detail** ページを表示できます。ここからデバイスの管理や写真のアップロードが可能です。より高度なダッシュボードやキャンバスデザインを行う場合は、SenseCraft の Web ブラウザ版を使用するよう促されます。
+**Step 7.** リスト内のデバイスをタップすると、その **Device Detail** ページを表示できます。ここからデバイスを管理したり、写真をアップロードしたりできます。より高度なダッシュボードやキャンバスデザインを行う場合は、SenseCraft の Web ブラウザ版を使用するよう促されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/157.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -333,39 +333,39 @@ reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネッ�
 
 デバイスが SenseCraft アカウントに正常に追加されると、プラットフォームは自動的にファームウェアバージョンを確認します。新しいファームウェアが利用可能な場合は、更新を促すメッセージが表示されます。
 
-また、いつでも手動でファームウェアバージョンを確認することもできます：
+また、いつでも手動でファームウェアバージョンを確認することもできます。
 
-**Step 1.** **Device** ページで reTerminal E1003 を探して詳細を表示し、**current firmware version** を確認します。
+**Step 1.** **Device** ページで reTerminal E1003 を見つけて詳細を表示し、**current firmware version** を確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/227.png" style={{width:350, height:'auto'}}/></div>
 
-**Step 2.** 左側のサイドバーで **Tools** をクリックし、**Firmware Flasher** タブを開いて、このデバイスに利用可能な **latest firmware version** を確認します。
+**Step 2.** 左側のサイドバーで **Tools** をクリックし、**Firmware Flasher** タブを開いて、このデバイスで利用可能な **latest firmware version** を確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/202.png" style={{width:1000, height:'auto'}}/></div>
 
-**Step 3.** 現在のバージョンが最新バージョンより古い場合は、Firmware Flasher ページの 3 ステップフローに従って更新します：
+**Step 3.** 現在のバージョンが最新バージョンより古い場合は、Firmware Flasher ページの 3 ステップフローに従って更新します。
 
 1. **Select your device** — reTerminal E1003 を USB-C ケーブルでコンピュータに接続し、電源スイッチが **ON** になっていることを確認してから **Select** をクリックし、リストからデバイスを選択します。
 
 2. **Select firmware** — リリースオプションのドロップダウンから最新のファームウェアを選択します。
 
-3. **Flash** — **Flash** をクリックして更新が完了するまで待ちます。デバイスを工場出荷状態にリセットしたい場合にのみ **Full Flash** を有効にしてください（すべてのデータ、設定、デザインが消去されます）。
+3. **Flash** — **Flash** をクリックし、更新が完了するまで待ちます。デバイスを工場出荷状態にリセットしたい場合にのみ **Full Flash** を有効にしてください（すべてのデータ、設定、デザインが消去されます）。
 
 :::note
 
 1. ファームウェアを更新することで、最適なパフォーマンスと最新機能へのアクセスが保証されます。reTerminal E1003 のタッチ操作には、ファームウェア **v1.1.2 以降** が必要です。現在の最新バージョンは v1.1.4.3 であり、最高の体験のためにこのバージョンへの更新を推奨します。
 
-2. デバイスがシャットダウンまたはスリープ状態のときは、ファームウェアを正しくフラッシュすることはできません。デバイスに対して正しいポートを選択しているにもかかわらず、ファームウェアフラッシュの進行状況がまったく表示されない場合は、本体上部の **Refresh** ボタンを押してデバイスをウェイクアップし、再試行する必要があるかもしれません。
+2. デバイスがシャットダウンまたはスリープ状態のときは、ファームウェアを正しく書き込むことはできません。デバイスに対して正しいポートを選択しているにもかかわらず、ファームウェア書き込みの進行状況がまったく表示されない場合は、本体上部の **Refresh** ボタンを押してデバイスをウェイクアップし、再試行する必要があるかもしれません。
 
-3. **標準の Flash を実行** すると、Wi-Fi、デプロイ済みデザイン、画像などの設定は保持されます。**Full Flash を実行して一からやり直す** と、すべてのデータ、設定、デザインが消去され（工場出荷状態）、初期状態に戻ります。
+3. **標準の Flash を実行** すると設定を保持できます：Wi-Fi、デプロイ済みのデザイン、画像は保持されます。**Full Flash を実行して一からやり直す** 場合は、すべてのデータ、設定、デザインが消去されます（工場出荷状態）。
 
 :::
 
 ## reTerminal E1003 にコンテンツを表示する
 
-デバイスのペアリングが完了したら、好きなコンテンツを表示するために使用できます。おすすめは **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)** です。これは、数回クリックするだけで reTerminal E1003 に表示するコンテンツを設計・デプロイできる、ノーコードのクラウドプラットフォームです。
+デバイスのペアリングが完了したら、好きなコンテンツを表示するために使用できます。おすすめは **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)** です。これは、数回クリックするだけで reTerminal E1003 にコンテンツをデザインしてデプロイできる、ノーコードのクラウドプラットフォームです。
 
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) には、チュートリアルや機能ドキュメントを網羅した専用の Wiki があります。詳細なガイド（アカウント設定、ファームウェアのフラッシュ、高度なエディタの使い方、デプロイ方法など）については、次を参照してください。
+[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) には、チュートリアルと機能ドキュメントを完全に網羅した専用の Wiki があります。詳細なガイド（アカウント設定、ファームウェア書き込み、高度なエディタの使い方、デプロイなど）については、次を参照してください。
 
 - **[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
 
@@ -373,7 +373,7 @@ reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネッ�
 
 ### Home — コミュニティテンプレートから始める
 
-画面に何かを表示する最も手っ取り早い方法は、既製のテンプレートから始めることです。[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) の **Home** ページには、コミュニティによって提供され、継続的に増え続けているテンプレートコレクションがあります。ダッシュボード、時計、天気パネル、名言ウォール、カレンダー、フォトフレームなど、さまざまなテンプレートがあります。ギャラリーを閲覧して好みのデザインを選び、ワンクリックで reTerminal E1003 にデプロイできます。
+画面に何かを表示する最も速い方法は、既製のテンプレートから始めることです。[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) の **Home** ページには、コミュニティによって提供されたテンプレートが多数あり、今も増え続けています。ダッシュボード、時計、天気パネル、名言ウォール、カレンダー、フォトフレームなど、さまざまなテンプレートがあります。ギャラリーを閲覧して好みのデザインを選び、ワンクリックで reTerminal E1003 にデプロイできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -383,14 +383,14 @@ reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネッ�
 
 - ゼロから独自のデザインページを作成し、配置する
 - 画像をアップロードしてスライドショーとして整理する
-- テキスト、ウィジェット、図形、データ、RSS フィード、Web コンテンツなどを 1 つのドラッグ＆ドロップエディタで組み合わせる
+- テキスト、ウィジェット、図形、データ、RSSフィード、Webコンテンツなどを 1 つのドラッグ＆ドロップエディタで組み合わせる
 - 最終的なデザインをワイヤレスで reTerminal E1003 にデプロイする
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/226.png" style={{width:1000, height:'auto'}}/></div>
 
 デザインを保存したら、**Deploy to Device** をクリックし、ペアリング済みの reTerminal E1003 を選択すると、コンテンツがワイヤレスでデバイスに送信されます。ePaper ディスプレイが更新され、あなたのデザインが表示されます。タッチ操作には **v1.1.2 以降** のファームウェアが必要です。現在の最新バージョンは **v1.1.4.3** であり、最良の体験のためにこのバージョンへの更新を推奨します。
 
-その他の詳細なエディタ操作、ヒント、リリースノートについては、[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/) を参照してください。
+その他すべての内容 — 詳細なエディタ操作、ヒント、リリースノート — については、[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/) を参照してください。
 
 ## 手動デバイス操作
 
@@ -400,7 +400,7 @@ reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネッ�
 
 デバイス上部のリフレッシュボタンには、次のような機能があります：
 
-- **短押し**：ディスプレイを手動でリフレッシュし、SenseCraft プラットフォームから新しいコンテンツがないかを確認します。操作が行われたことを確認するためにブザーが 1 回鳴ります。このボタンは、デバイスがスリープ状態に入り、ダッシュボードの自動リフレッシュがすぐに行われない場合に、デバイスを起こす用途でもよく使われます。
+- **短押し**：ディスプレイを手動でリフレッシュし、SenseCraft プラットフォームから新しいコンテンツがないか確認します。操作が行われたことを確認するためにブザーが 1 回鳴ります。このボタンは、デバイスがスリープ状態で、ダッシュボードの自動リフレッシュがすぐに行えない場合に、デバイスを起こす用途でもよく使われます。
 
 - **長押し**（今後の機能）：音声入力モードを有効にします。
 
@@ -418,9 +418,9 @@ reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネッ�
 
 別の Wi-Fi ネットワークに接続する必要がある場合：
 
-**ステップ 1.** 左右両方のナビゲーションボタンを同時に 2 秒間押し続けます。
+**ステップ 1.** 左右両方のナビゲーションボタンを同時に 2 秒間長押しします。
 
-**ステップ 2.** デバイスが Wi-Fi 設定モードに入り、[Network Setup](#network-setup) の手順に従って新しいネットワークに再接続できます。
+**ステップ 2.** デバイスが Wi-Fi 設定モードに入り、[Network Setup](#Network-Setup) の手順に従って新しいネットワークに再接続できます。
 
 ### LED インジケータ
 
@@ -446,15 +446,15 @@ reTerminal E シリーズ ePaper ディスプレイは 2.4 GHz の Wi-Fi ネッ�
 - バッテリー残量が 20% 未満になると、画面右上にバッテリー残量低下アイコンが表示されます
 
 :::tip
-自分でコードを書いてバッテリー電圧を読み取りたい場合、`analogRead()` 関数の前に 10ms のディレイを追加すると、より正確になります。
+自分でコードを書いてバッテリー電圧を読み取りたい場合、analogRead() 関数の前に 10ms のディレイを追加すると、より正確になります。
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/232.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/232.png" style={{width:300, height:'auto'}}/></div>
 
 
 ### 拡張ピン
 
-reTerminal E1003 には 6 ピンの拡張ヘッダ（J2）が搭載されており、外部センサやモジュール、その他のハードウェアを追加してデバイスの機能を拡張するための接続オプションを提供します。この拡張ヘッダは、複数の ESP32-S3 GPIO ピンおよび通信インターフェースを外部に引き出しており、DIY プロジェクトにとって汎用性の高い接続ポイントとなります。
+reTerminal E1003 には 6 ピンの拡張ヘッダ（J2）が搭載されており、外部センサやモジュール、その他のハードウェアを追加してデバイスの機能を拡張するための接続オプションを提供します。この拡張ヘッダは複数の ESP32-S3 GPIO ピンおよび通信インターフェースを引き出しており、DIY プロジェクトのための多用途な接続ポイントとなります。
 
 #### 拡張ヘッダのピン配置
 
@@ -543,6 +543,37 @@ reTerminal E1003 には 6 ピンの拡張ヘッダ（J2）が搭載されてお�
 - デバイスは既知のネットワークへの再接続を自動的に試みます
 - 再接続されると、Wi-Fi 切断アイコンは消えます
 - 再接続できない場合は、上記のネットワークリセット手順に従ってください
+
+### Q5: macOS でシリアルポート（COM）が見つからない
+
+Mac が USB 経由で reTerminal を認識しない場合は、次の簡易ガイドに従って CH340/CH340K ドライバをインストールしてください：
+
+**ステップ 1. ドライバをダウンロードしてインストールする**
+[official WCH page](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) からドライバをダウンロードし、`CH34xVCPDriver.pkg` を実行します。 
+:::tip
+macOS によってインストールがブロックされた場合は、**System Settings → Privacy & Security** に移動し、ブロックされた WCH ソフトウェアを探して **Allow** をクリックします。
+:::
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/02_installer_welcome.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/03_install_success.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**ステップ 2. ドライバ拡張機能を有効化する（重要）**
+Launchpad から **CH34xVCPDriver** アプリを開き、**Install** をクリックします。その後、**System Settings → General → Login Items & Extensions → Driver Extensions** に移動します。**CH34xVCPDriver Extensions** を **ON**（青）に切り替えます。
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**ステップ 3. 接続して確認する**
+デバイスの**電源スイッチが ON** であることを確認し、**データ通信対応の USB-C ケーブル**（充電専用ではないもの）を使用します。Terminal を開き、次を実行します：
+```bash
+ls /dev/tty.wch*
+# Expected output: /dev/tty.wchusbserialxxx
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/06_check%20installation.jpg" style={{width:500, height:'auto'}}/></div>
+
+出力にデバイスパスが表示されれば、ドライバは正しくインストールされており、reTerminal を使用する準備が整っています。
 
 ## リソース
 
