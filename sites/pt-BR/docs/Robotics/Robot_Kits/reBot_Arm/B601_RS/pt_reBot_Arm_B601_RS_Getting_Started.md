@@ -5,8 +5,8 @@ keywords:
   - reBot
   - B601-DM
   - B601-RS
-  - Robotic Arm
-  - Robot
+  - Braço Robótico
+  - Robô
   - Lerobot
   - Pinocchio
   - 6 DOF
@@ -23,7 +23,7 @@ updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/
 ---
 
-# Introdução ao reBot Arm B601-RS
+# Começando com o reBot Arm B601-RS
 
 <div align="center">
     <img width={800}
@@ -40,18 +40,18 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/
 </p>
 
 <p align="center">
-  <strong>Braço Robótico de 6 DOF · Suporte a Múltiplos Motores · Solucionador de Cinemática · Planejamento de Trajetória · Totalmente Open Source</strong>
+  <strong>Braço Robótico de 6 DOF · Suporte a Múltiplos Motores · Solução de Cinemática · Planejamento de Trajetória · Totalmente Open Source</strong>
 </p>
 
-O projeto reBot Arm foi disponibilizado como open source no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Este guia levará você pelo início rápido do B601-RS, da montagem à operação.
+O projeto reBot Arm foi disponibilizado como open source no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Este guia irá conduzi-lo pelo início rápido do B601-RS, da montagem à operação.
 O conteúdo deste guia está chegando até você à velocidade da luz — fique ligado.
 
 ## Etapa 1: Guia de Montagem
 
 - Antes da montagem, leia atentamente as instruções a seguir. Para garantir um processo de montagem tranquilo e uma experiência prática completa, seja paciente, mantenha o foco e siga sempre estes pontos-chave:
-  1. Este kit inclui numerosos parafusos e peças estruturais, alguns dos quais são semelhantes. Verifique cuidadosamente as especificações dos parafusos e os modelos das peças, e confirme a orientação de instalação antes de apertar.
+  1. Este kit inclui numerosos parafusos e peças estruturais, alguns dos quais são semelhantes. Verifique cuidadosamente as especificações dos parafusos e os modelos das peças e confirme a orientação de instalação antes de apertar.
   2. O vídeo foi gravado no início de abril. Pode haver pequenos ajustes nas peças posteriormente, mas isso não afeta a qualidade da montagem ao seguir o vídeo. As peças finais são as que acompanham o produto enviado.
-  3. Para facilitar a instalação e remoção dos parafusos, a BOM open source especifica parafusos padrão. No entanto, os parafusos enviados com o kit têm trava química aplicada. Você também pode usar suas próprias ferramentas preferidas ou uma parafusadeira elétrica (altamente recomendado ter uma à mão). Se usar uma ferramenta elétrica, certifique-se de ajustar o torque para um nível baixo a médio (3–6 kgf·cm) para evitar torque excessivo que possa espanar os parafusos, causando danos irreversíveis que impeçam a remoção das peças. Se houver qualquer sinal de espanamento, substitua imediatamente o parafuso ou realinhe e tente novamente. Parafusos com trava química espanados não podem ser removidos com extrator de parafusos e irão inutilizar toda a peça. Portanto, proceda com cautela.
+  3. Para facilitar a instalação e remoção dos parafusos, a BOM open source especifica parafusos padrão. No entanto, os parafusos enviados com o kit têm trava química aplicada. Você também pode usar suas próprias ferramentas preferidas ou uma parafusadeira elétrica (altamente recomendado ter uma à mão). Se usar uma ferramenta elétrica, certifique-se de ajustar o torque para um nível baixo a médio (3–6 kgf·cm) para evitar torque excessivo que possa espanar os parafusos, causando danos irreversíveis em que as peças não podem ser removidas. Se houver qualquer sinal de espanamento, substitua imediatamente o parafuso ou realinhe e tente novamente. Parafusos com trava química espanados não podem ser removidos com extrator de parafusos e irão inutilizar toda a peça. Portanto, proceda com cautela.
   4. Priorize a segurança durante a montagem para evitar dedos presos ou lesões por esmagamento. Crianças devem concluir este projeto acompanhadas por um dos pais ou responsável.
 
 
@@ -123,7 +123,7 @@ https://github.com/conda-forge/miniforge/releases
   source ~/.bashrc
   ```
 
-  Para que o PowerShell ative automaticamente o ambiente conda:
+  Para fazer o PowerShell ativar automaticamente o ambiente conda:
 
   ```bash
   conda init powershell
@@ -135,7 +135,7 @@ https://github.com/conda-forge/miniforge/releases
 conda create -y -n rebot python=3.12
 ```
 
-3. Ative o ambiente virtual. **Você precisa executar novamente este comando de ativação sempre que abrir um terminal para usar recursos relacionados ao reBot**:
+3. Ative o ambiente virtual. **Você precisa executar novamente este comando de ativação toda vez que abrir um terminal para usar recursos relacionados ao reBot**:
 
 ```bash
 conda activate rebot
@@ -156,7 +156,7 @@ pip install motorbridge
 
 ### 3. PCAN-USB
 
-Coloque o dispositivo PCAN-USB para funcionar no barramento CAN a 1 Mbps para comunicação com o braço robótico.
+Faça o dispositivo PCAN-USB funcionar no barramento CAN a 1 Mbps para comunicação com o braço robótico.
 
 Ubuntu\Jetson\Raspberry Pi:
 
@@ -180,6 +180,17 @@ curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
 tar -xzf macOS_Library_for_PCANUSB_v0.13.tar.gz
 cd PCBUSB
 sudo ./install.sh
+```
+
+Configure `DYLD_LIBRARY_PATH` para garantir que o motorbridge-gateway consiga encontrar a biblioteca PCBUSB em tempo de execução. Crie um script de ativação no ambiente conda para que ele entre em vigor automaticamente sempre que você executar `conda activate rebot`:
+
+```bash
+mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
+cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
+export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+EOF
+
+echo $DYLD_LIBRARY_PATH
 ```
 
 Verifique se está pronto:
@@ -231,8 +242,8 @@ Antes da configuração dos parâmetros do motor, observe as seguintes preparaç
 
 - Prepare 2 grampos de fixação (tamanho ≥3 polegadas) e uma fonte de alimentação chaveada de 48 V com saída XT30 (escolha uma marca confiável; não use fontes de baixa qualidade).
 - Durante a depuração e operação, mantenha uma distância segura de pelo menos 1 metro.
-- Não conecte ou desconecte motores com o sistema energizado; desligue a fonte de alimentação antes de conectar/desconectar o conector XT30 2+2.
-- Não sobrecarregue nem opere os motores em velocidade excessiva; verifique a fiação e os fixadores antes da inicialização; não use em ambientes úmidos, de alta temperatura ou empoeirados.
+- Não faça hot-plug dos motores; desconecte a fonte de alimentação antes de conectar/desconectar o conector XT30 2+2.
+- Não sobrecarregue nem exceda a velocidade dos motores; verifique a fiação e os fixadores antes da inicialização; não use em ambientes úmidos, de alta temperatura ou empoeirados.
 - Defina parâmetros de programa razoáveis e função de parada de emergência para evitar perda de controle do equipamento.
 - **Siga rigorosamente as regras acima. O vendedor não se responsabiliza por quaisquer riscos e perdas causados por operações em desacordo com as instruções ou por erro humano.**
 
@@ -247,10 +258,15 @@ motorbridge-gateway --bind 127.0.0.1:9002
 ```
 
 macOS:
+
 ```bash
+motorbridge-gateway --bind 127.0.0.1:9002 
+```
 
+ou
+
+```bash
 DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
-
 ```
 
 
