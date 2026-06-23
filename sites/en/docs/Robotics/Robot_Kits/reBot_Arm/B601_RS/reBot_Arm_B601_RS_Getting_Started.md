@@ -182,6 +182,17 @@ cd PCBUSB
 sudo ./install.sh
 ```
 
+Configure `DYLD_LIBRARY_PATH` to ensure motorbridge-gateway can find the PCBUSB library at runtime. Create an activation script in the conda environment so it takes effect automatically each time you run `conda activate rebot`:
+
+```bash
+mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
+cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
+export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+EOF
+
+echo $DYLD_LIBRARY_PATH
+```
+
 Check if ready:
 ```zsh
 # Check Python package and CLI are ready
@@ -247,10 +258,15 @@ motorbridge-gateway --bind 127.0.0.1:9002
 ```
 
 macOS:
+
 ```bash
+motorbridge-gateway --bind 127.0.0.1:9002 
+```
 
+or
+
+```bash
 DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
-
 ```
 
 
