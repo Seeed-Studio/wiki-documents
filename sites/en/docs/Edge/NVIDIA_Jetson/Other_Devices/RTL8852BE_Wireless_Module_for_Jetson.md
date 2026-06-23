@@ -15,6 +15,7 @@ last_update:
   author: Zibo
 createdAt: '2026-04-14'
 updatedAt: '2026-04-14'
+sku: 100042928
 url: https://wiki.seeedstudio.com/rtl8852be_wireless_module_for_jetson/
 ---
 
@@ -24,7 +25,7 @@ url: https://wiki.seeedstudio.com/rtl8852be_wireless_module_for_jetson/
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/RTL8822CE-WIFI-Module-p-6313.html" target="_blank">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/RTL8852BE-WIFI-Module-M-2-Key-E-p-6835.html" target="_blank">
     <strong>
       <span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span>
     </strong>
