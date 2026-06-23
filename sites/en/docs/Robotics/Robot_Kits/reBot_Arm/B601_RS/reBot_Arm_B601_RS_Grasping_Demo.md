@@ -9,6 +9,7 @@ keywords:
   - YOLO
   - Hand-Eye Calibration
   - Robot
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif
 slug: /rebot_arm_b601_rs_grasping_demo
 last_update:
   date: 2026-06-17
@@ -176,6 +177,13 @@ git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_cont
 cd sdk/reBotArm_control_py
 pip install -e .
 cd ../..
+```
+
+If `pip install -e .` reports `Multiple top-level packages discovered in a flat-layout`, add explicit package discovery to `pyproject.toml` in `reBotArm_control_py`, then run `pip install -e .` again:
+
+```toml
+[tool.setuptools.packages.find]
+include = ["reBotArm_control_py*"]
 ```
 
 B601 DM and RS configurations are selected through the SDK configuration files. For B601-RS, confirm the following in `sdk/reBotArm_control_py/config/rebotarm.yaml`:

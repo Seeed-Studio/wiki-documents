@@ -1,11 +1,10 @@
 ---
 description: Voice-controlled Kiwi-drive robot using Raspberry Pi, XIAO ESP32, ReSpeaker Lite, and voice embeddings for intelligent hands-free robotic control.
-title: Add Voice Interaction to Your LeKiwi Robot with reSpeaker 
+title: Add Voice Interaction to Your LeKiwi Robot with reSpeaker
 keywords:
   - reSpeaker flex
   - LeKiwi
   - xvf3800
-
 image: https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png
 slug: /respeaker_flex_lekiwi
 sku: 100005504,100099135,100070894,100026178
@@ -13,7 +12,7 @@ last_update:
   date: 04/28/2026
   author: Kasun Thushara
 createdAt: '2026-04-28'
-updatedAt: '2026-05-08'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/respeaker_flex_lekiwi/
 ---
 

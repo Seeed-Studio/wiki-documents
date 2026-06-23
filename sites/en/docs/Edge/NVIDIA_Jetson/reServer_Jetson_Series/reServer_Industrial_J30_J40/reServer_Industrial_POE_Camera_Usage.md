@@ -7,14 +7,14 @@ keywords:
   - IP camera
   - RTSP
   - industrial camera
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reServer-Industrial/5.jpg
 slug: /reserver_industrial_poe_camera_usage
 last_update:
-  date: 06/17/2026
+  date: 06/18/2026
   author: HaoChen
 sku: 114110247
 createdAt: '2026-06-15'
-updatedAt: '2026-06-17'
+updatedAt: '2026-06-18'
 url: https://wiki.seeedstudio.com/reserver_industrial_poe_camera_usage/
 ---
 
@@ -82,23 +82,41 @@ To enable PoE automatically on every boot, add the commands above to a systemd s
 
 ## Step 2: Map Physical Ports to Linux Interfaces
 
-Each physical PoE port maps to one Linux interface (`eth0`, `eth1`, …). Link state is visible in `ip -br link` **without** configuring an IP first — the interface that shows `UP` with `LOWER_UP` is the one with a cable connected.
+Each physical PoE port maps to one Linux interface (`eth0`, `eth1`, …). On reServer Industrial, PoE interfaces are **down by default** until NetworkManager brings them up — plugging in a camera alone will not show `LOWER_UP` in `ip -br link` until the interface is activated.
 
 Map **one physical port at a time** to keep variables controlled:
 
-**Step 1.** With PoE enabled and **no camera connected** to PoE ports, list interfaces:
+**Step 1.** With PoE enabled, list interfaces and note the candidate Ethernet names (ignore `lo`, `docker0`, `l4tbr0`, `rndis0`, and `usb0`):
 
 ```bash
 ip -br link
 ```
 
-Ignore virtual interfaces such as `lo`, `docker0`, `l4tbr0`, `rndis0`, and `usb0`.
+**Step 2.** For each candidate PoE interface, create a link-only NetworkManager profile (no IP required) and bring it up. Example for `eth0`:
 
-**Step 2.** Plug the camera into **one** physical port only (for example **LAN1**).
+```bash
+sudo nmcli connection add type ethernet ifname eth0 con-name POE1 \
+  ipv4.method disabled connection.autoconnect yes
+sudo nmcli -w 5 connection up POE1
+```
 
-**Step 3.** Run `ip -br link` again. The interface that changed to `UP` / `LOWER_UP` is the Linux interface for that physical port. Record the mapping (for example **LAN1** → `eth0`).
+`ipv4.method disabled` keeps the profile link-only. `-w 5` limits the wait to 5 seconds — the command may report a timeout if no camera is connected yet, but the interface is still activated.
 
-**Step 4.** Unplug the camera, repeat Steps 2–3 for **LAN2**, **LAN3**, and **LAN4**.
+:::tip Alternative (quick test, not persistent)
+To bring up a single interface without NetworkManager:
+
+```bash
+sudo ip link set eth0 up
+```
+
+This is enough for one-time port mapping, but the setting is lost after reboot unless you add a persistent profile as above.
+:::
+
+**Step 3.** Plug the camera into **one** physical port only (for example **LAN1**).
+
+**Step 4.** Run `ip -br link` again. The interface that shows `UP` with `LOWER_UP` is the Linux interface for that physical port. Record the mapping (for example **LAN1** → `eth0`).
+
+**Step 5.** Unplug the camera, repeat Steps 3–4 for **LAN2**, **LAN3**, and **LAN4**.
 
 | Physical port | Linux interface | Notes |
 | :--- | :--- | :--- |
@@ -114,13 +132,18 @@ Keep **LAN0** connected to your router or switch when Internet access on reServe
 
 The reServer interface and the camera must each have an IP address on the **same subnet** to communicate. Obtain the camera address from its documentation or factory label (many cameras ship with a fixed default such as `192.168.1.64`). If the address is unknown, you can run `tcpdump` on the mapped interface while power-cycling the camera — some models broadcast their IP once at boot.
 
-Assign a static IP on the reServer side for each PoE port. Example for **LAN1** (`eth0`), camera `192.168.1.64`, reServer `192.168.1.10/24`:
+If you already created a link-only profile in Step 2 (for example `POE1`), add the static IP to it. Otherwise create the profile in one step. Example for **LAN1** (`eth0`), camera `192.168.1.64`, reServer `192.168.1.10/24`:
 
 ```bash
-sudo nmcli connection add type ethernet ifname eth0 con-name POE1
+# Option A — profile already exists from Step 2
 sudo nmcli connection modify POE1 ipv4.addresses 192.168.1.10/24
 sudo nmcli connection modify POE1 ipv4.method manual
-sudo nmcli connection up POE1
+sudo nmcli -w 10 connection up POE1
+
+# Option B — create profile with static IP in one command
+sudo nmcli connection add type ethernet ifname eth0 con-name POE1 \
+  ipv4.addresses 192.168.1.10/24 ipv4.method manual connection.autoconnect yes
+sudo nmcli -w 10 connection up POE1
 ```
 
 For multiple cameras, use **one camera per PoE port** and a **different subnet on each port**:
@@ -151,6 +174,8 @@ Once connectivity is confirmed, refer to your camera manufacturer's documentatio
 | `gpiochip2` not found (JetPack 6) | GPIO chip name differs by image | Run `gpioinfo`; use the chip and line for PoE (gpio-315). See [GPIO table](https://wiki.seeedstudio.com/reserver_industrial_hardware_interface_usage/#gpio) |
 | Camera does not power on | PoE GPIO not enabled | Re-run Step 1; confirm GPIO value is `1` |
 | Camera reboots repeatedly | Power draw exceeds 15 W | Use a camera rated for 802.3af (≤ 15 W) or an external power supply |
+| `ip -br link` shows no `LOWER_UP` after plugging camera | PoE interface not activated | Create a link-only profile and run `nmcli -w 5 connection up` (Step 2), or `sudo ip link set <if> up` |
+| `nmcli connection up` hangs or times out | No carrier yet (camera not connected) | Expected with an empty port — use `-w 5`; link still activates. Plug in the camera and check `ip -br link` |
 | Cannot identify which interface is UP | Multiple cables connected | Disconnect all PoE ports; map one physical port at a time (Step 2) |
 | Cannot ping camera | Subnet mismatch or wrong interface | Confirm reServer IP is on the same subnet as the camera; verify the port mapping from Step 2 |
 | Camera IP unknown | Not documented on label | Run `sudo tcpdump -i <poe-interface> -n` on the mapped interface, then power-cycle the camera |

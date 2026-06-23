@@ -9,14 +9,14 @@ keywords:
   - JetPack 6.2
   - ONNX
   - Edge AI
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/7.png
 slug: /deploy_tensorrt_edge_llm_on_jetpack6.2
 last_update:
   date: 06/16/2026
   author: Dongxu Jin
 url: https://wiki.seeedstudio.com/deploy_tensorrt_edge_llm_on_jetpack6.2/
 createdAt: '2026-06-16'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-17'
 ---
 
 # Deploy TensorRT Edge-LLM on Jetpack6.2

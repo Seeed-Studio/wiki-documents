@@ -11,14 +11,14 @@ image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.webp
 slug: /reterminal_e10xx_trmnl
 sidebar_position: 3
 last_update:
-  date: 06/16/2026
+  date: 06/22/2026
   author: dimo
 aliases:
   - /ogdiy_kit_works_with_trmnl
   - /xiao_7_5_inch_epaper_panel_with_trmnl
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-22'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -230,7 +230,7 @@ The XIAO 7.5" ePaper Panel ships with the XIAO ESP32-C3 directly mated to the pa
 
 ## Step 3: Flash the TRMNL Firmware
 
-Three flashing methods are available. **Method 1 (Web Flasher)** is the easiest and works for all supported hardware. **Method 2 (SenseCraft HMI)** is exclusive to reTerminal E Series. **Method 3 (Build from Source)** is for advanced users.
+Three flashing methods are available. **Method 1 (Web Flasher)** is the easiest and works for all supported hardware. **Method 2 (reTerminal E-Series Firmware Flasher)** is exclusive to reTerminal E Series. **Method 3 (Build from Source)** is for advanced users.
 
 :::tip Brand-new TRMNL DIY Kits already ship with TRMNL firmware
 If you bought a brand-new TRMNL 7.5" (OG) DIY Kit, it already has TRMNL firmware preinstalled — you can skip the flashing step entirely and jump to Step 4.
@@ -269,43 +269,52 @@ Use **FW 1.5.12 or newer** for Seeed compatibility on the XIAO 7.5" ePaper Panel
 </TabItem>
 </Tabs>
 
-### Method 2: Flash via SenseCraft HMI Platform (reTerminal E Series only)
+### Method 2: Flash via reTerminal E-Series Firmware Flasher (reTerminal E Series only)
 
 :::info
-This method is only applicable to **reTerminal E1001 / E1002 / E1003**. The SenseCraft HMI flasher knows how to switch between SenseCraft HMI firmware and TRMNL firmware on the same device.
+This method is only applicable to **reTerminal E1001 / E1002 / E1003**. The reTerminal E-Series Firmware Flasher provides TRMNL firmware packages for these three reTerminal E Series devices.
 :::
 
-:::caution Prefer Method 1 — older, Seeed-tested firmware only
-The SenseCraft HMI flasher ships a **fixed, older TRMNL build** that Seeed has verified on reTerminal hardware. Seeed does **not** continuously sync every new TRMNL release into this channel.
+:::caution Prefer Method 1 for newer TRMNL firmware
+The reTerminal E-Series Firmware Flasher provides a Seeed-hosted TRMNL firmware channel for reTerminal E Series devices. Seeed does not update this channel as frequently as the official TRMNL Web Flasher, and not every upstream TRMNL firmware release is synchronized here.
 
-**Use [Method 1: TRMNL Web Flasher](#method-1-trmnl-web-flasher-recommended) first** — it is the easiest way to get the latest Seeed-compatible firmware. Fall back to this SenseCraft HMI method only if the Web Flasher fails or you cannot complete a flash through the browser.
-
-After your device is registered on TRMNL, open the device settings in the TRMNL web interface and **turn off** both **Firmware Early Release** and **OTA Updates Enabled** so the device does not auto-upgrade to firmware that may not match your Seeed hardware. See [Step 5](#step-5-register-the-device-on-trmnl) for details.
+Use [Method 1: TRMNL Web Flasher](#method-1-trmnl-web-flasher-recommended) first when you want a newer TRMNL firmware release. Use this method when you need the Seeed-hosted reTerminal E Series flashing flow.
 :::
 
 <details>
-<summary>Click to expand the SenseCraft HMI flashing steps</summary>
+<summary>Click to expand the reTerminal E-Series Firmware Flasher steps</summary>
 
-1. Visit the [SenseCraft HMI device page](https://sensecraft.seeed.cc/hmi/device).
-2. Select your device.
+1. Visit the [reTerminal E-Series Firmware Flasher](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/).
 
-   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/164.jpg" style={{width:700, height:'auto'}}/></div>
+2. In **Select platform**, choose the **TRMNL** card from the official platform section.
 
-3. Choose the **TRMNL** firmware (you can switch back to HMI firmware here later). Click **Full Flash** then **Flash**.
+3. Select your device:
 
-   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/162.jpg" style={{width:700, height:'auto'}}/></div>
+   - **reTerminal E1001**
+   - **reTerminal E1002**
+   - **reTerminal E1003**
 
-4. Connect your device to the computer and select the serial port.
+4. On the second page, review the available TRMNL firmware version for your selected device.
 
-   :::tip reTerminal E1003 only
-   Make sure the power switch is **ON**. If the device is asleep and the flash does not start, press the **Refresh** button on the top of the unit to wake it, then retry.
-   :::
+5. Connect your device to the computer with a USB data cable.
 
-   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/163.jpg" style={{width:700, height:'auto'}}/></div>
+6. In **Flash to device**, select **Erase flash + flash** for the first installation, then click **Connect & flash**.
 
-5. The screen will refresh and display the TRMNL logo and MAC address.
+7. Choose the serial port for your device in the browser prompt and start the flashing process.
 
-   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/165.jpeg" style={{width:700, height:'auto'}}/></div>
+:::tip First-time flashing
+For the first installation, select **Erase flash + flash** so the device starts from a clean firmware state.
+:::
+
+:::tip reTerminal E1003 only
+Make sure the power switch is **ON**. If the device is asleep and the flash does not start, press the **Refresh** button on the top of the unit to wake it, then retry.
+:::
+
+:::note reTerminal E1002 display behavior
+The reTerminal E1002 uses a full-color ePaper screen, but TRMNL firmware currently renders content in monochrome mode. During Wi-Fi provisioning, the E1002 AP screen shows a compact layout with the TRMNL logo in the lower-right corner. When you see this screen, search for and connect to the E1002 hotspot, then continue with the same Wi-Fi setup flow as the other devices.
+:::
+
+After flashing is complete, continue to [Step 4: Connect Device to Wi-Fi](#step-4-connect-device-to-wi-fi).
 
 </details>
 
