@@ -1,5 +1,5 @@
 ---
-description: 本维基介绍 RTL8852BE 无线模块的特性和规格，这是一款适用于 NVIDIA Jetson 设备的 Wi-Fi 6 和 Bluetooth M.2 无线模块。文章提供其技术规格、适用于 JetPack 5 和 JetPack 6 的驱动安装方法，以及配置无线网络和 Bluetooth 的方法。
+description: 本维基介绍 RTL8852BE 无线模块的功能和规格，这是一款适用于 NVIDIA Jetson 设备的 Wi-Fi 6 和 Bluetooth M.2 无线模块。本文提供其技术规格、适用于 JetPack 5 和 JetPack 6 的驱动安装方法，以及配置无线网络和 Bluetooth 的方法。
 title: 适用于 Jetson 的 RTL8852BE 无线模块
 keywords:
   - Edge
@@ -15,6 +15,8 @@ last_update:
   author: Zibo
 createdAt: '2026-04-14'
 updatedAt: '2026-04-14'
+sku: 100042928
+url: https://wiki.seeedstudio.com/cn/rtl8852be_wireless_module_for_jetson/
 ---
 
 <div align="center">
@@ -23,7 +25,7 @@ updatedAt: '2026-04-14'
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/RTL8822CE-WIFI-Module-p-6313.html" target="_blank">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/RTL8852BE-WIFI-Module-M-2-Key-E-p-6835.html" target="_blank">
     <strong>
       <span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span>
     </strong>
@@ -38,8 +40,8 @@ RTL8852BE 是一款基于 Realtek 芯片组的 Wi-Fi 6（802.11ax）M.2 无线�
 
 - 支持 2.4 GHz / 5 GHz 双频
 - IEEE 802.11 a/b/g/n/ax（Wi-Fi 6）
-- 在 5 GHz 频段上 PHY 速率最高可达 1200 Mbps
-- 封装形式：M.2 2230，A key 或 E key
+- 在 5 GHz 频段上物理速率最高可达 1200 Mbps
+- 封装形式：M.2 2230，A Key 或 E Key
 - 电源：DC 3.3V
 - 支持 Linux（JetPack 5 / JetPack 6）、Windows 10/11
 
@@ -77,7 +79,7 @@ RTL8852BE 是一款基于 Realtek 芯片组的 Wi-Fi 6（802.11ax）M.2 无线�
     </tr>
     <tr>
       <td>最大无线速率</td>
-      <td>最高可达 1200 Mbps</td>
+      <td>最高 1200 Mbps</td>
     </tr>
     <tr>
       <td>工作温度</td>
@@ -92,13 +94,13 @@ RTL8852BE 是一款基于 Realtek 芯片组的 Wi-Fi 6（802.11ax）M.2 无线�
 
 ## 支持的设备
 
-所有 reComputer 系列
+所有 reComputer Seri
 
 - 所有 reComputer 系列
 
 ## 驱动安装
 
-Jetson 可能会将 RTL8852BE 模块检测为 PCIe 设备，但不会自动加载其驱动程序。你需要根据 JetPack 版本手动安装驱动。
+Jetson 可能会将 RTL8852BE 模块识别为 PCIe 设备，但不会自动加载其驱动程序。您需要根据 JetPack 版本手动安装驱动。
 
 ```bash
 lspci | grep -i network
@@ -111,7 +113,7 @@ lspci | grep -i network
 
 ### JetPack 5.x
 
-对于 JetPack 5，使用 [lwfinger/rtw8852be](https://github.com/lwfinger/rtw8852be) 驱动：
+对于 JetPack 5，请使用 [lwfinger/rtw8852be](https://github.com/lwfinger/rtw8852be) 驱动：
 
 ```bash
 git clone https://github.com/lwfinger/rtw8852be.git
@@ -131,7 +133,7 @@ sudo modprobe 8852be
 
 ### JetPack 6.x
 
-对于 JetPack 6，使用 [rtw89](https://github.com/a5a5aa555oo/rtw89) 驱动：
+对于 JetPack 6，请使用 [rtw89](https://github.com/a5a5aa555oo/rtw89) 驱动：
 
 ```bash
 git clone https://github.com/a5a5aa555oo/rtw89
@@ -186,7 +188,7 @@ ifconfig
 sudo iw dev wlan0 scan | grep -E "SSID|freq"
 ```
 
-如果不同，请将 `wlan0` 替换为你的实际接口名称。
+如果不同，请将 `wlan0` 替换为实际的接口名称。
 
 ### 连接到 WiFi 网络
 
@@ -227,7 +229,7 @@ bluetoothctl
 </div>
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
