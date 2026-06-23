@@ -194,9 +194,10 @@ Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador 
         marginTop: '24px'
     }}
 >
-    <a [LINE_197]        href="/es/rebot_arm_b601_dm_lerobot/"
+    <a
+        href="/es/rebot_arm_b601_dm_lerobot/"
         style={{
-        textDecoration: 'none',
+            textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -204,24 +205,23 @@ Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador 
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-            }}
-        >
-    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-        <img
-            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
                 alt="LeRobot for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-                />
-            </div>
+            />
+        </div>
         <div style={{padding: '18px'}}>
-        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-            Primeros pasos con reBot Arm B601-DM en LeRobot
-                </h3>
-            </div>
-        </a>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Primeros pasos con reBot Arm B601-DM en LeRobot
+            </h3>
+        </div>
+    </a>
     <a
-    <a
-        href="/rebot_arm_b601_dm_grasping_demo/"
+        href="/es/rebot_arm_b601_dm_grasping_demo/"
         style={{
             textDecoration: 'none',
             color: 'inherit',
@@ -246,9 +246,10 @@ Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador 
             </h3>
         </div>
     </a>
-    <a [LINE_26]        href="/es/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
+    <a
+        href="/es/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
         style={{
-        textDecoration: 'none',
+            textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -256,22 +257,22 @@ Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador 
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-            }}
-        >
-    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-        <img
-            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
                 alt="Controla reBot Arm con NemoClaw en Nvidia Jetson Thor"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-                />
-            </div>
+            />
+        </div>
         <div style={{padding: '18px'}}>
-        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-            Controla reBot Arm con NemoClaw en Nvidia Jetson Thor
-                </h3>
-            </div>
-        </a>
-    </div>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Controla reBot Arm con NemoClaw en Nvidia Jetson Thor
+            </h3>
+        </div>
+    </a>
+</div>
 
 ## Soporte técnico y debate sobre el producto
 
@@ -286,4 +287,3 @@ Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes t
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

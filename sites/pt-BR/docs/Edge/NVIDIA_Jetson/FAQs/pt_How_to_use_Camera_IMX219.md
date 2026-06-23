@@ -22,7 +22,7 @@ A IMX219 é um sensor de imagem CMOS de 8 megapixels amplamente utilizado que ut
 ## Instalação de Hardware
 A câmera CSI não suporta hot-swapping. Todas as operações de fiação devem ser realizadas com a placa de desenvolvimento completamente desligada.
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/imx219/IMG_20260602_165135.jpg"/></div>
-[LINE_24>Levante a trava no conector CSI da placa Jetson.
+Levante a trava no conector CSI da placa Jetson.
 Insira o cabo flat CSI, certificando-se de que os contatos metálicos do cabo estejam alinhados com os da placa carrier do Jetson.
 Pressione a trava firmemente para baixo para travar o cabo no lugar.
 
