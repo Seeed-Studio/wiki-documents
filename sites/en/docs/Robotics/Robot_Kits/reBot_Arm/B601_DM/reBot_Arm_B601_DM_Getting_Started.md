@@ -109,7 +109,9 @@ Before Assembly:
 
 #### Software
 
-<<<<<<< HEAD
+- [DM_Tools_v.2.1.6.8.exe (Supports Windows Only)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool_v2.1.6.8.zip)
+
+
 #### Write Motor ID and Test Enable
 
 Set the CAN ID and Master ID for each joint motor according to the parameters in the table below:
@@ -162,8 +164,6 @@ After testing, remember to click `Disable` to exit the enabled state.
 | Motor 1 Enabled | Motor 2 Enabled | Motor 3 Enabled | Motor 4 Enabled | Motor 5 Enabled | Motor 6 Enabled | Motor 7 Enabled |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_Enable.jpg" width="120" > | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_Enable.jpg" width="120" > | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_Enable.jpg" width="120" > | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/4_Enable.jpg" width="120" > | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/5_Enable.jpg" width="120" > | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/6_Enable.jpg" width="120" > | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/7_Enable2.jpg" width="120" > |
-=======
-- [DM_Tools_v.2.1.6.8.exe (Supports Windows Only)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool_v2.1.6.8.zip)
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/uXuzs1qmj6A?si=lfgXXlF1awhtnvaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -215,7 +215,6 @@ After activating the reBot virtual environment, run the following command to ins
 pip install motorbridge
 ```
 
-<<<<<<< HEAD
 ###  Step4: Connect the rebot
 After connecting the robotic arm to your computer through USB cable and turning on its power supply, you need to configure 666 access permissions for the serial port.(Windows systems do not require permission configuration; you may skip this step.)
 
