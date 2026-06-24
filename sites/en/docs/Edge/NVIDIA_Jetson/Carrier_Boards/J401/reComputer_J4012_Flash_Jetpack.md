@@ -10,7 +10,7 @@ last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-06-22'
+updatedAt: '2026-06-24'
 url: https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/
 ---
 
@@ -212,17 +212,19 @@ Please refer to the table below to prepare the host machine.
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 5.x</td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
         <td > </td>
     </tr>
     <tr>
@@ -230,9 +232,19 @@ Please refer to the table below to prepare the host machine.
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.</p>
 
 :::
 

@@ -224,21 +224,32 @@ Please refer to the table below to prepare the host machine.
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.</p>
 
 :::
 
