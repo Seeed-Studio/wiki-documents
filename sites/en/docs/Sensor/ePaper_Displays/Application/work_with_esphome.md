@@ -1,5 +1,5 @@
 ---
-description: Reference guide for driving any compatible Seeed ePaper product with ESPHome and Home Assistant - flashing paths, generic YAML skeleton, and where to find each product's cookbook.
+description: Reference guide for driving any compatible Seeed ePaper product with ESPHome and Home Assistant - YAML workflow, generic skeleton, and where to find each product's cookbook.
 title: Work with ESPHome
 keywords:
   - ePaper display
@@ -17,18 +17,25 @@ last_update:
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/epaper_work_with_esphome/
-updatedAt: '2026-06-03'
+updatedAt: '2026-06-16'
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Work with ESPHome
+
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
 
 This page is the **reference manual** for driving any compatible Seeed ePaper product through [ESPHome](https://esphome.io/) and integrating it with [Home Assistant](https://www.home-assistant.io/). It covers the parts that are identical across all hardware:
 
 1. Why you'd choose ESPHome to drive an ePaper display.
-2. The two flashing paths: **ESPHome Web Installer** (zero-config, browser-based) and **ESPHome CLI / HA Add-on** (full YAML control).
+2. How to use the cookbook YAML examples, adapt them to your needs, and flash from your ESPHome dashboard.
 3. The generic YAML skeleton — `wifi`, `api`, `ota`, `display` — that every product specialises with its own pin map.
 4. Where the per-product cookbook lives (peripherals, hardware-specific lambdas, dashboard recipes).
 
@@ -48,29 +55,30 @@ Every Seeed ePaper product on the [main hub page](/seeed_epaper_displays) that h
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
       <td>XIAO ESP32-S3</td>
-      <td><a href="/reterminal_e10xx_with_esphome">Display</a> · <a href="/reterminal_e10xx_with_esphome_advanced">I/O & power</a> · <a href="/reterminal_e10xx_with_esphome_rtc_sd_microphone">RTC, SD & mic</a></td>
+      <td>
+        <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome/">Display basics, HA integration & drawing</a><br/>
+        <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/">Buttons, buzzer, LED, battery, SHT4x & deep sleep</a><br/>
+        <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone/">RTC, SD card & microphone</a>
+      </td>
     </tr>
     <tr>
       <td><strong>EE04 driver board</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td><a href="/EE04_with_esphome_advanced">EE04 ESPHome cookbook</a></td>
+      <td><a href="https://wiki.seeedstudio.com/EE04_with_esphome_advanced/">EE04 ESPHome cookbook</a></td>
     </tr>
     <tr>
       <td><strong>XIAO 7.5" ePaper Panel</strong></td>
       <td>XIAO ESP32-C3</td>
-      <td><a href="/xiao_075inch_epaper_panel_esphome">XIAO Panel ESPHome cookbook</a></td>
+      <td><a href="https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_esphome/">XIAO Panel ESPHome cookbook</a></td>
     </tr>
     <tr>
       <td><strong>TRMNL 7.5" (OG) DIY Kit</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td><a href="/ogdiy_kit_works_with_esphome">TRMNL DIY Kit ESPHome cookbook</a></td>
+      <td><a href="https://wiki.seeedstudio.com/ogdiy_kit_works_with_esphome/">TRMNL DIY Kit ESPHome cookbook</a></td>
     </tr>
   </table>
 </div>
 
-:::tip
-Looking for **TRMNL cloud dashboards** (no YAML, plug-in based) instead? See [Work with TRMNL](/reterminal_e10xx_trmnl). Looking for **Seeed's no-code visual HMI** instead? See [Work with SenseCraft HMI](/EE04_with_hmi).
-:::
 
 ## Why ESPHome on ePaper?
 
@@ -79,104 +87,165 @@ Looking for **TRMNL cloud dashboards** (no YAML, plug-in based) instead? See [Wo
 - **Native HA citizen** — once the device shows up in Home Assistant, every entity (climate, calendar, sensor, person, weather) is one Jinja template away from being on the wall.
 - **Local-first** — no cloud, no vendor lock-in. Everything runs on your LAN.
 
-## Step 1: Pick a flashing path
+## Step 1: Generate ESPHome YAML and flash your firmware
 
-ESPHome firmware can be loaded onto the device in two ways. The right choice depends on whether you want to write YAML from scratch or just get a working dashboard fast.
+The easiest way to start is to use the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. The hub can generate an ESPHome YAML file from your device and feature selections, so you do not need to assemble the first configuration by hand.
 
-<Tabs groupId="esphome-flash-path">
-<TabItem value="web-installer" label="Path A: ESPHome Web Installer (recommended for first-time users)" default>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/257.png" style={{width:1000, height:'auto'}}/></div>
 
-A pre-built firmware ZIP is hosted by Seeed and flashed to your device through the browser via WebSerial.
+Recommended workflow:
 
-1. Plug the device into your computer with a USB-C cable.
-2. Open the per-product flashing page (linked from the cookbook for your product) in **Chrome** or **Edge**.
-3. Click **Connect**, pick the serial port, then click **Install**.
-4. After flashing, the device boots into a Wi-Fi captive portal (`ESPHome-XXXX`). Connect, set Wi-Fi, and the device will appear in Home Assistant via the ESPHome integration.
+1. Open the [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/) in desktop Chrome or Edge.
+2. Select **ESPHome** as the platform.
+3. Select your device.
+4. In the setup step, choose the features you want to enable, such as display, buttons, battery, sensors, RTC, SD card, microphone, or deep sleep if they are available for your device.
+5. Let the page generate the matching ESPHome YAML.
+6. Use **Copy to clipboard** or **Download file** to export the generated YAML.
+7. Paste or import the YAML into your ESPHome dashboard.
+8. Focus your manual editing on the part that matters most for your project: ePaper display content, Home Assistant entities, layout, fonts, and refresh behavior.
 
-This path requires **no YAML editing**. You can later "adopt" the device in the ESPHome dashboard if you want to start customising it.
+:::tip
+The Firmware Hub is the recommended starting point for new users because it handles much of the device-specific YAML structure. Use the cookbooks when you want to understand the generated configuration, combine advanced features, or build a custom layout from smaller examples.
+:::
 
-</TabItem>
-<TabItem value="yaml-cli" label="Path B: YAML + ESPHome dashboard (full control)">
+Run the ESPHome dashboard as either:
 
-For complete control over the firmware (custom display layouts, custom sensors, multi-page dashboards, deep sleep tuning, OTA updates), run the **ESPHome dashboard** as either:
+- a Home Assistant Add-on (recommended if you already run HA OS / HA Supervised), or
+- a standalone Python CLI (`pip install esphome` then `esphome dashboard config/`).
 
-- a Home Assistant **Add-on** (recommended if you already run HA OS / HA Supervised), or
-- a standalone **Python CLI** (`pip install esphome` then `esphome dashboard config/`).
+Manual cookbook workflow:
 
-Workflow:
+1. Open the cookbook for your hardware (see the table above) and copy the YAML example you need.
+2. In the ESPHome dashboard, click + New device, enter a name, and pick the ESP variant listed in your cookbook (ESP32-S3, ESP32-C3, etc.).
+3. Replace the generated starter file with your configuration. Combine cookbook sections only if you need multiple features on one device.
+4. Click Install → Plug into this computer for the first USB flash. After `wifi`, `api`, and `ota` are set up, later updates can go over Wi-Fi.
+5. When the device is online, it appears in Home Assistant through the ESPHome integration.
 
-1. In the ESPHome dashboard, click **+ New device** → enter a name → pick the right ESP variant (ESP32-S3 / ESP32-C3 / etc. — your product cookbook will tell you which).
-2. The dashboard generates a starter `<device-name>.yaml`. Replace its body with the product-specific YAML from your cookbook (see Step 2 below for the shape).
-3. Click **Install** → **Plug into the computer running ESPHome** for the first flash; subsequent flashes are wireless via OTA.
-4. The device joins the ESPHome integration in Home Assistant automatically.
+## Step 2: Understand the generated YAML structure
 
-</TabItem>
-</Tabs>
+Every Seeed ePaper ESPHome configuration follows the same basic structure, but the hardware values are not universal. Use the Firmware Hub or the cookbook for your product as the source of truth for the board type, bus pins, power-enable pins, display platform, display model, and onboard peripherals.
 
-## Step 2: Generic YAML skeleton
-
-Every Seeed ePaper ESPHome configuration follows the same outline. The cookbook for your product fills in the **product-specific bits** (substitutions, pin map, screen model) — but the overall shape is always:
+The block below is a **structure guide**, not a ready-to-flash configuration. It shows where each kind of setting usually appears after you generate or copy a product-specific YAML file:
 
 ```yaml
 substitutions:
   device_name: my-epaper
+  friendly_name: My ePaper Display
 
 esphome:
   name: ${device_name}
-  friendly_name: ${device_name}
+  friendly_name: ${friendly_name}
+  # Optional. Some products enable power rails or read sensors during boot.
+  # Keep this section from the generated YAML if your device needs it.
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: <power_enable_output_id>
+      - delay: 200ms
 
-# Pick the right platform for your hardware.
-# - reTerminal E Series & EE04 & TRMNL Kit: esp32 with framework: arduino (S3 variant)
-# - XIAO 7.5" Panel: esp32 with framework: arduino (C3 variant)
+# Board and framework come from the Firmware Hub or your cookbook.
 esp32:
-  board: seeed_xiao_esp32s3   # see your cookbook
+  board: <board_from_generated_yaml>
   framework:
     type: arduino
 
 logger:
+  # Some ESP32-S3 products use a USB-to-UART bridge.
+  # Keep hardware_uart from the generated YAML if it is present.
+  # hardware_uart: UART0
+
 api:
   encryption:
     key: !secret api_key
+
 ota:
   - platform: esphome
     password: !secret ota_password
+
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   ap:
     ssid: "${device_name} Fallback"
 
-# SPI bus that drives the ePaper - exact pins come from the cookbook
-spi:
-  clk_pin: GPIO13
-  mosi_pin: GPIO11
+captive_portal:
 
-# The display block - the model + pin map are the part that's
-# different per product. The cookbook gives you the right values.
-display:
-  - platform: waveshare_epaper
-    id: epaper
-    cs_pin: GPIO9
-    dc_pin: GPIO15
-    busy_pin: GPIO12
-    reset_pin: GPIO14
-    model: 7.50inv2
-    update_interval: never   # we'll trigger refreshes from automations
-    lambda: |-
-      it.print(0, 0, id(roboto_24), "Hello, ePaper!");
+# Buses are hardware-specific. Do not reuse pins from another product.
+spi:
+  clk_pin: <spi_clk_from_generated_yaml>
+  mosi_pin: <spi_mosi_from_generated_yaml>
+  miso_pin: <spi_miso_if_required>
+
+i2c:
+  scl: <i2c_scl_if_required>
+  sda: <i2c_sda_if_required>
+
+i2s_audio:
+  # Only needed when your generated YAML enables a microphone.
+  i2s_lrclk_pin: <i2s_clock_if_required>
 
 font:
-  - file: "fonts/Roboto-Regular.ttf"
-    id: roboto_24
+  - file: "gfonts://Inter@700"
+    id: font_medium
     size: 24
+
+# Outputs are often used for LEDs, buzzers, or power-enable circuits.
+output:
+  - platform: gpio
+    id: <output_id_from_generated_yaml>
+    pin: <gpio_from_generated_yaml>
+
+light:
+  - platform: binary
+    name: "Onboard LED"
+    output: <output_id_from_generated_yaml>
+
+time:
+  - platform: homeassistant
+    id: ha_time
+
+sensor:
+  # Add Home Assistant, onboard, or template sensors here.
+  - platform: homeassistant
+    id: outdoor_temperature
+    entity_id: sensor.outdoor_temperature
+
+binary_sensor:
+  # Add buttons or status inputs here if your hardware provides them.
+  - platform: gpio
+    id: button_1
+    pin: <button_gpio_from_generated_yaml>
+
+display:
+  - platform: <display_platform_from_generated_yaml>
+    id: epaper_display
+    # Keep the model and pin map from the generated YAML or cookbook.
+    model: <display_model_from_generated_yaml>
+    cs_pin: <display_cs_from_generated_yaml>
+    dc_pin: <display_dc_from_generated_yaml>
+    reset_pin: <display_reset_from_generated_yaml>
+    busy_pin: <display_busy_from_generated_yaml>
+    update_interval: never
+    lambda: |-
+      it.print(0, 0, id(font_medium), "Hello, ePaper!");
 ```
 
-What's product-specific (and lives in each cookbook):
+Keep these values from the Firmware Hub or the cookbook:
 
-- `esp32.board` — `seeed_xiao_esp32s3` for E1001/E1002/EE04/TRMNL Kit; `esp32-c3-devkitm-1` for XIAO 7.5" Panel; etc.
-- The `spi` and `display` pin maps.
-- The `model` value (`7.50in-bwr`, `13.3in-spectra6`, …).
-- Any onboard peripherals (buttons / buzzer / battery / SHT4x) — covered in the **Advanced** sections of the relevant cookbook.
+- `esp32.board` and any logger settings such as `hardware_uart`.
+- `spi`, `i2c`, and `i2s_audio` pins.
+- Power-enable `output` blocks for display, battery measurement, SD card, microphone, or other onboard circuits.
+- Button, battery, RTC, SHT4x, SD card, microphone, buzzer, and LED definitions.
+- The `display.platform`, `model`, pin map, reset behavior, busy-pin behavior, and update interval.
+
+The parts you usually customize are:
+
+- `substitutions`, device name, and friendly name.
+- `wifi`, `api`, and `ota` secrets.
+- `font` choices and sizes.
+- Home Assistant `sensor`, `binary_sensor`, `text_sensor`, or `time` entities that provide the data you want to draw.
+- The `display.lambda` block, where you design the actual ePaper screen layout.
+- Refresh behavior, such as `update_interval`, button-triggered refreshes, or deep sleep timing.
 
 ## Step 3: Connect to Home Assistant
 
@@ -193,7 +262,7 @@ You can now drag the entities into a Lovelace dashboard, or — much more intere
 
 This page intentionally stops at the boilerplate. The product-specific YAML, peripheral examples, and end-to-end recipes live in each product's cookbook:
 
-- **[reTerminal E Series — ESPHome Display](/reterminal_e10xx_with_esphome)** — first dashboard, Wi-Fi setup, pre-built firmware ZIP, and ePaper drawing examples for E1001/E1002/E1003/E1004.
+- **[reTerminal E Series — ESPHome Display](/reterminal_e10xx_with_esphome)** — first dashboard, Wi-Fi setup, and ePaper drawing examples for E1001/E1002/E1003/E1004.
 - **[reTerminal E Series — ESPHome I/O, Battery & Power](/reterminal_e10xx_with_esphome_advanced)** — buttons, buzzer, onboard LED, battery monitoring, SHT4x sensor, deep sleep, and multi-page dashboards.
 - **[reTerminal E1001 / E1002 — ESPHome RTC, SD & Microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone)** — PCF8563 RTC time sync, microSD card power/detect pins, and onboard PDM microphone setup.
 - **[EE04 driver board — ESPHome](/EE04_with_esphome_advanced)** — full Home Assistant integration on the XIAO ESP32-S3 + EE04 + your choice of ePaper screen.
@@ -204,23 +273,7 @@ When new ePaper products ship, the corresponding cookbook is added under each pr
 
 ## Common Issues
 
-### Display stays blank after flashing
 
-- Confirm the `display.platform` and `model` strings match your screen — wrong model silently produces a blank refresh.
-- Check the `busy_pin` and `reset_pin` are wired correctly; a dangling busy line will block all refreshes.
-- For colour ePaper (`spectra6`, `7-color`, `bwr`), the first refresh can take 25-45 seconds; wait before debugging further.
-
-### Device doesn't show up in Home Assistant
-
-- Verify the device joined Wi-Fi (check the ESPHome dashboard logs).
-- Make sure `api:` is present in the YAML and that the encryption key in HA matches `secrets.yaml`.
-- Manually add the integration: **Settings → Devices & services → Add Integration → ESPHome**, then enter the device's IP.
-
-### Battery drains faster than expected
-
-ePaper only saves power when the rest of the SoC is also asleep. Add a `deep_sleep` block (see the I/O, battery, and low-power cookbook for your product) and lower the `update_interval`.
-
-For deeper troubleshooting on a specific product, check the cookbook for that hardware.
 
 ## Tech Support & Product Discussion
 

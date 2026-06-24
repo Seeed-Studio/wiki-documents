@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、NVIDIA Jetson 上で reBot Arm B601-DM GraspNet ビジュアル把持デモをデプロイする方法を説明します。Jetson 環境構築、GraspNet CUDA オペレータ、Orbbec Gemini 2 RGB-D カメラ設定、YOLO TensorRT エクスポート、ハンドアイキャリブレーション、Web UI の使い方、CLI の使い方、HTTP API 制御について扱います。
+description: このWikiでは、NVIDIA Jetson 上で reBot Arm B601-DM GraspNet ビジュアル把持デモをデプロイする方法を説明します。Jetson 環境構築、GraspNet CUDA オペレータ、Orbbec Gemini 2 RGB-D カメラ設定、YOLO TensorRT エクスポート、ハンドアイキャリブレーション、Web UI の使用方法、CLI の使用方法、HTTP API 制御について扱います。
 title: Jetson 上での reBot-DM を用いた GraspNet ビジュアル把持
 keywords:
   - reBot Arm
@@ -22,7 +22,7 @@ updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_graspnet_visual_grasping/
 ---
 
-# reBot Arm B601-DM Jetson 上での GraspNet ビジュアル把持
+# reBot Arm B601-DM GraspNet ビジュアル把持 on Jetson
 
 このWikiでは、NVIDIA Jetson 上で **reBot Arm B601-DM ビジュアル把持デモ** をデプロイする方法を説明します。このデモは、RGB-D カメラ、YOLO インスタンスセグメンテーション、GraspNet 6自由度把持姿勢推定、アイインハンドキャリブレーション、実機ロボット制御を組み合わせ、アームがテーブル上の一般的な物体を選択して把持できるようにします。
 
@@ -80,7 +80,7 @@ Optional base rotation and object placement
 | --- | --- | --- |
 | Web UI | `scripts/grasp_web.py` | ライブ映像、ターゲット選択、把持プレビュー、実際の把持、オフセット調整 |
 | CLI | `scripts/grasp.py` | ヘッドレス把持やスクリプトによるテスト |
-| HTTP API | `scripts/grasp_curl.sh` and `scripts/grasp_api_client.py` | リモート制御、自動化、他アプリとの統合 |
+| HTTP API | `scripts/grasp_curl.sh` and `scripts/grasp_api_client.py` | リモート制御、自動化、他アプリとの連携 |
 
 ## ハードウェアとシステムの準備
 
@@ -95,12 +95,12 @@ Optional base rotation and object placement
 - 安定したテーブル、アーム周辺の十分なクリアランス、および緊急電源遮断手段
 
 :::warning
-このデモは実際のロボットアームを駆動します。すべての動作テストおよび把持テスト中は、手、ケーブル、緩んだ物体をアームの作業領域から遠ざけてください。`--dry-run`、読み取り専用チェック、小さなジョグ値から開始し、その後で完全なロボット実行を有効にしてください。
+このデモは実際のロボットアームを駆動します。すべての動作テストおよび把持テスト中は、手、ケーブル、緩んだ物体をアームの作業空間から遠ざけてください。`--dry-run`、読み取り専用チェック、小さなジョグ値から開始し、その後で完全なロボット実行を有効にしてください。
 :::
 
 ハードウェアを接続します：
 
-1. Gemini 2 を USB 3.0 経由で Jetson に接続します。
+1. Gemini 2 を USB 3.0 で Jetson に接続します。
 2. USB2CAN アダプタを reBot Arm の CAN バスに接続し、その後 Jetson に接続します。
 3. reBot Arm の電源を入れます。
 4. デバイスが認識されていることを確認します：
@@ -110,7 +110,7 @@ lsusb
 ls /dev/ttyUSB* /dev/ttyACM* 2>/dev/null || true
 ```
 
-初回起動のために一時的なデバイス権限を設定します：
+初回起動のために一時的なデバイスパーミッションを設定します：
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*
@@ -263,7 +263,7 @@ git clone https://github.com/orbbec/pyorbbecsdk.git sdk/pyorbbecsdk
 bash scripts/install_pyorbbecsdk.sh --from-source
 ```
 
-SDK ソースツリーが利用可能なときに Orbbec udev ルールをインストールします：
+SDK ソースツリーが利用可能な場合は、Orbbec の udev ルールをインストールします：
 
 ```bash
 sudo bash sdk/pyorbbecsdk/scripts/env_setup/install_udev_rules.sh
@@ -273,7 +273,7 @@ sudo udevadm trigger
 
 **ステップ 9. YOLO の重みをダウンロードし、対象 Jetson 上で TensorRT をエクスポートする**
 
-TensorRT エンジンファイルはデバイス固有です。デモを実行する Jetson 上で `.engine` を必ずエクスポートしてください。
+TensorRT エンジンファイルはデバイス固有です。デモを実行する Jetson 上で必ず `.engine` をエクスポートしてください。
 
 ```bash
 mkdir -p models
@@ -330,7 +330,7 @@ python scripts/verify_rebot_arm_motion.py --deg 5
 python scripts/verify_graspnet_stack.py
 ```
 
-カメラがまだ接続されていないが、Python、CUDA、GraspNet、および YOLO ファイルのみを確認したい場合：
+カメラがまだ接続されていないが、Python、CUDA、GraspNet、および YOLO ファイルだけを確認したい場合：
 
 ```bash
 python scripts/verify_graspnet_stack.py --skip-camera
@@ -338,7 +338,7 @@ python scripts/verify_graspnet_stack.py --skip-camera
 
 **4. アイインハンドキャリブレーションを実行する**
 
-このプロジェクトではアイインハンドキャリブレーションを使用します：カメラはエンドエフェクタに取り付けられ、ArUco マーカーはテーブル上に固定されます。デフォルト設定では、`DICT_4X4_50`、ID `0`、一辺 0.1 m のマーカーを想定しています。リポジトリには `aruco100x100.pdf` などの印刷可能なマーカーファイルが含まれています。
+このプロジェクトではアイインハンドキャリブレーションを使用します。カメラはエンドエフェクタに取り付けられ、ArUco マーカーはテーブル上に固定されます。デフォルト設定では、`DICT_4X4_50`、ID `0`、0.1 m マーカーを想定しています。リポジトリには `aruco100x100.pdf` などの印刷可能なマーカーファイルが含まれています。
 
 自動収集：
 
@@ -379,7 +379,7 @@ cd ~/rebot_grasp-jetson
 
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --num-point 12000 \
   --cloud-crop-nsample 32
 ```
@@ -387,7 +387,7 @@ python scripts/grasp_web.py \
 ブラウザから Web UI を開きます：
 
 ```text
-http://<jetson_ip>:8000
+http://<jetson_ip>:8090
 ```
 
 <div align="center">
@@ -401,7 +401,7 @@ http://<jetson_ip>:8000
 ```bash
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --enable-robot \
   --num-point 12000 \
   --cloud-crop-nsample 32
@@ -412,7 +412,7 @@ python scripts/grasp_web.py \
 ```bash
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --enable-robot \
   --no-place-after-grasp \
   --num-point 12000 \
@@ -425,24 +425,24 @@ python scripts/grasp_web.py \
 | --- | --- |
 | `--enable-robot` | 実際のアームとグリッパーの動作を許可 |
 | `--target-class cup` | ターゲットクラスを事前選択 |
-| `--no-yolo` | YOLO フィルタリングを無効にし、シーン全体に対して GraspNet を実行 |
+| `--no-yolo` | YOLO フィルタリングを無効にしてシーン全体に対して GraspNet を実行 |
 | `--camera-type orbbec_gemini2` | カメラドライバを強制指定 |
 | `--no-place-after-grasp` | 把持後のベース回転と配置をスキップ |
-| `--num-point 12000` | Jetson のメモリ向けに GraspNet のポイント数を減らす |
-| `--cloud-crop-nsample 32` | Jetson のメモリ向けに CloudCrop サンプル数を減らす |
-| `--graspnet-interval 2.0` | 有効時の自動 GraspNet 更新間隔を設定 |
+| `--num-point 12000` | Jetson のメモリ向けに GraspNet のポイント数を削減 |
+| `--cloud-crop-nsample 32` | Jetson のメモリ向けに CloudCrop サンプル数を削減 |
+| `--graspnet-interval 2.0` | 有効時の GraspNet 自動更新間隔を設定 |
 
 通常の Web UI ワークフローは次のとおりです：
 
 1. **Ready** をクリックして、アームをレディポーズに移動します。
-2. ターゲットクラスを選択するか、検出されたオブジェクトを使用する場合は空のままにします。
-3. **Infer** または **Refresh** をクリックして、把持姿勢を計算します。
+2. ターゲットクラスを選択するか、空のままにして検出された物体を使用します。
+3. **Infer** または **Refresh** をクリックして把持姿勢を計算します。
 4. ビデオ内の把持マーカーが妥当な位置に見えることを確認します。
 5. 必要に応じて、グリッパー、カメラ、またはベースの補正を調整します。
 6. アームの経路が安全である場合にのみ **Real Grasp** をクリックします。
 7. シーンが変化した場合やロボットを安全な状態に戻す必要がある場合は **Reset** を使用します。
 
-補正値は、小さな機械的誤差やキャリブレーション誤差を補正するために使用されます。Web UI で調整した後、値を `config/compensation.json` に保存するか、安定した値をデプロイメントノートにコピーしてください。位置オフセットには 0.005 m、回転オフセットには 1〜2 度など、小さな刻みで調整します。
+補正値は、小さな機械的誤差やキャリブレーション誤差を補正するために使用されます。Web UI で調整した後、値を `config/compensation.json` に保存するか、安定した値をデプロイ用メモにコピーしてください。位置オフセットには 0.005 m、回転オフセットには 1〜2 度など、小さな刻みで調整します。
 
 ## CLI と API の使用
 
@@ -473,7 +473,7 @@ python scripts/grasp.py \
   --no-place-after-grasp
 ```
 
-ロボットを動かさずに、GraspNet のライブ出力を確認するには：
+ロボットを動かさずに GraspNet のライブ出力を確認するには：
 
 ```bash
 python scripts/graspnet_camera_demo.py --auto --target-class cup
@@ -500,7 +500,7 @@ bash scripts/grasp_curl.sh reset
 同じ操作は `curl` を使って直接呼び出すこともできます：
 
 ```bash
-BASE=http://127.0.0.1:8000
+BASE=http://127.0.0.1:8090
 
 curl -s "$BASE/state"
 curl -s -X POST "$BASE/ready" -H "Content-Type: application/json" -d "{}"
@@ -513,10 +513,10 @@ curl -s -X POST "$BASE/grasp" -H "Content-Type: application/json" -d "{}"
 
 | エンドポイント | メソッド | 目的 |
 | --- | --- | --- |
-| `/state` | GET | 現在の検出、把持、および Web ランタイム状態 |
+| `/state` | GET | 現在の検出結果、把持情報、および Web ランタイム状態 |
 | `/robot/state` | GET | ロボットの関節、TCP 姿勢、グリッパー状態 |
 | `/stream.mjpg` | GET | MJPEG カメラストリーム |
-| `/compensation` | POST | グリッパー、カメラ、およびベースの補正を設定 |
+| `/compensation` | POST | グリッパー、カメラ、ベースの補正値を設定 |
 | `/joint/limits` | GET | 関節位置とリミットを読み取り |
 | `/joint/jog` | POST | 1 つの関節をジョグ（ベーステストでは多くの場合 `joint1`） |
 | `/move/joints` | POST | すべての関節を絶対位置に移動 |
@@ -526,7 +526,7 @@ curl -s -X POST "$BASE/grasp" -H "Content-Type: application/json" -d "{}"
 
 ## 設定とチューニング
 
-メインの設定ファイルは次のとおりです：
+主な設定ファイルは次のとおりです：
 
 ```text
 config/default.yaml
@@ -571,13 +571,19 @@ grasp_pipeline:
 
 グリッパーが一貫して物体を取り逃す場合は、次の順序で調整します：
 
-| 症状 | 最初に調整する対象 |
+| 症状 | 最初に調整すべき対象 |
 | --- | --- |
 | グリッパーが前後方向に離れすぎている | `grasp_forward_offset` / Web グリッパー前方補正 |
 | グリッパーが左右に外れる | `grasp_lateral_offset` またはカメラの X/Y 補正 |
 | グリッパーが高すぎる／低すぎる | `grasp_vertical_offset` またはカメラの Z 補正 |
 | 手首の角度が正しくない | グリッパーのロール・ピッチ・ヨー補正 |
 | すべての把持が同じ方向にずれる | カメラまたはベースの補正 |
+
+## デモ動画
+
+<div align="center">
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## トラブルシューティング
 
@@ -589,7 +595,7 @@ grasp_pipeline:
 bash scripts/install_graspnet_cuda_ops.sh --force
 ```
 
-`pyorbbecsdk import failed` またはカメラが開けない：SDK を再インストールし、USB パーミッションを確認します：
+`pyorbbecsdk import failed` またはカメラを開けない：SDK を再インストールし、USB パーミッションを確認します：
 
 ```bash
 bash scripts/install_pyorbbecsdk.sh
@@ -599,7 +605,7 @@ python scripts/verify_pyorbbec_stream.py
 
 YOLO の `.engine` が読み込めない：同じ Jetson 上で再エクスポートしてください。Engine ファイルは Jetson モデル、JetPack バージョン、TensorRT バージョン間でコピーすべきではありません。
 
-ArUco マーカーが検出されない：マーカー辞書が `DICT_4X4_50`、ID が `0`、マーカーの一辺の長さが 0.1 m であること、照明が安定していること、マーカーが平らで完全に見えていることを確認してください。
+ArUco マーカーが検出されない：マーカー辞書が `DICT_4X4_50`、ID が `0`、マーカーの一辺の長さが 0.1 m であること、照明が安定していること、マーカーが平坦で完全に見えていることを確認してください。
 
 ロボットは接続されているが動作しない：`verify_rebot_arm_motion.py --read-only` を実行し、USB2CAN デバイスを確認し、モータ電源をチェックし、把持実行を再試行する前に小さな `--deg 5` ジョグをテストしてください。
 
@@ -614,15 +620,10 @@ GraspNet がメモリ不足になる：`--num-point` を減らし、`--cloud-cro
 - Orbbec pyorbbecsdk: https://github.com/orbbec/pyorbbecsdk
 - reComputer Jetson 向け Pytorch のインストール: https://wiki.seeedstudio.com/ja/install_torch_on_recomputer/
 
-## デモ動画
-
-<div align="center">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ## 技術サポートと製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。ご質問、ディスカッション、問題報告のために、いくつかのサポートチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます。ご質問、ディスカッション、問題報告のために、いくつかのサポートチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -9,7 +9,7 @@ last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/
 ---
 
@@ -20,6 +20,16 @@ import TabItem from '@theme/TabItem';
 
 :::tip Prerequisites
 This page assumes you've already worked through the [ESPHome display cookbook for reTerminal E Series](/reterminal_e10xx_with_esphome) (device on Wi-Fi, Home Assistant integration online, first dashboard rendered). For the platform-level YAML skeleton and Home Assistant integration steps, see [Work with ESPHome](/epaper_work_with_esphome). For RTC, microSD card detect, and microphone setup, see [ESPHome Cookbook: RTC, SD Card & Microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone).
+:::
+
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />

@@ -16,13 +16,23 @@ last_update:
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/epaper_work_with_arduino/
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-16'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Work with Arduino
+
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
 
 This page is the **reference manual** for driving any compatible Seeed ePaper product from the Arduino IDE. It covers the parts that are identical across all hardware:
 

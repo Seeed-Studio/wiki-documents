@@ -71,7 +71,7 @@ The content of this guide is racing towards you at the speed of light — stay t
 2. (Beta version) Let an agent help you initialize the robotic arm. Copy the following content and send it to the agent:
 
 ```text
-Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-RS-Skills/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
+Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-Agent-Guide/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
 ```
 
   Note: If you purchased a pre-assembled kit, please tell the agent during the motor ID writing step: "I purchased a pre-assembled kit, please scan motors 1–7 to verify they are all online, do not rewrite the motor IDs."
@@ -88,11 +88,17 @@ You should have completed the preliminary preparation for the robotic arm assemb
 
 1. Install Miniforge and create a virtual environment to avoid conflicts with other environment packages that could cause demo failures.
 
-Ubuntu\macOS\Jetson\Raspberry Pi:
+Ubuntu\Jetson\Raspberry Pi:
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+or macOS:
+```bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
 or Windows:
@@ -152,7 +158,7 @@ pip install motorbridge
 
 Get the PCAN-USB device working on the CAN bus at 1Mbps for robotic arm communication.
 
-Ubuntu\macOS\Jetson\Raspberry Pi:
+Ubuntu\Jetson\Raspberry Pi:
 
 ```bash
 # The kit includes PCAN-USB, which should normally show up as can0 or can1
@@ -165,7 +171,41 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 ```
 
-Windows users, please visit [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) to install the PCAN-USB driver.
+or macOS:
+
+If libPCBUSB.dylib cannot be loaded, install PCBUSB first:
+```zsh
+curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
+  https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
+tar -xzf macOS_Library_for_PCANUSB_v0.13.tar.gz
+cd PCBUSB
+sudo ./install.sh
+```
+
+Configure `DYLD_LIBRARY_PATH` to ensure motorbridge-gateway can find the PCBUSB library at runtime. Create an activation script in the conda environment so it takes effect automatically each time you run `conda activate rebot`:
+
+```bash
+mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
+cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
+export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+EOF
+
+echo $DYLD_LIBRARY_PATH
+```
+
+Check if ready:
+```zsh
+# Check Python package and CLI are ready
+python3 -c "import motorbridge; print('motorbridge OK')"
+motorbridge-cli --help
+
+# Optional: Check if PCBUSB runtime is loadable
+python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
+```
+
+or Windows:
+
+Please visit [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) to install the PCAN-USB driver.
 
 <!-- ### 3. Write Motor IDs
 
@@ -214,8 +254,24 @@ Open the address [motorbridge-studio](https://motorbridge.github.io/motorbridge-
 
 
 ```bash
-motorbridge-gateway -- --bind 127.0.0.1:9002  
+motorbridge-gateway --bind 127.0.0.1:9002  
+```
+
+macOS:
+
+```bash
+motorbridge-gateway --bind 127.0.0.1:9002 
+```
+
+or
+
+```bash
+DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
 
 
-Please refer to the video for usage.
+Please refer to the video for usage. Before operating the robotic arm, you need to reset the zero point again.
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/WcjDPm8GUDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>

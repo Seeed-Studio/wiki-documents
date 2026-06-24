@@ -17,7 +17,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-03-24'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
@@ -395,6 +395,10 @@ uv run python example/9_gravity_compensation.py
 **Output**:
 - Real-time display of expected torque for each joint (N·m)
 - Press `Ctrl+C` to stop and disconnect
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/nqaoqjiHQE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 

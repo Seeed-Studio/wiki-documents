@@ -5,7 +5,7 @@ keywords:
   - reBot
   - B601-DM
   - B601-RS
-  - Robotic Arm
+  - Brazo robótico
   - Robot
   - Lerobot
   - Pinocchio
@@ -50,8 +50,8 @@ El contenido de esta guía se dirige hacia ti a la velocidad de la luz — mante
 
 - Antes del montaje, lee atentamente las siguientes instrucciones. Para garantizar un proceso de montaje fluido y una experiencia práctica completa, ten paciencia, mantén la concentración y sigue siempre estos puntos clave:
   1. Este kit incluye numerosos tornillos y piezas estructurales, algunas de las cuales se ven similares. Verifica cuidadosamente las especificaciones de los tornillos y los modelos de las piezas, y confirma la orientación de instalación antes de apretar.
-  2. El vídeo se grabó a principios de abril. Puede haber pequeños ajustes en las piezas posteriormente, pero esto no afecta la calidad del montaje si sigues el vídeo. Las piezas finales están sujetas a lo que se envía.
-  3. Para facilitar la instalación y extracción de los tornillos, la lista de materiales de código abierto especifica tornillos estándar. Sin embargo, los tornillos enviados con el kit tienen fijador de roscas aplicado. También puedes usar tus propias herramientas preferidas o un destornillador eléctrico (se recomienda encarecidamente tener uno preparado). Si utilizas una herramienta eléctrica, asegúrate de ajustar el par a un nivel bajo o medio (3–6 kgf·cm) para evitar un par excesivo que pueda barrer los tornillos, causando daños irreversibles que impidan retirar las piezas. Si hay cualquier indicio de que la cabeza se está barriendo, sustituye inmediatamente el tornillo o realinea e inténtalo de nuevo. Los tornillos con fijador de roscas barridos no pueden retirarse con un extractor de tornillos y arruinarán toda la pieza. Por lo tanto, procede con precaución.
+  2. El video fue grabado a principios de abril. Puede haber pequeños ajustes en las piezas posteriormente, pero esto no afecta la calidad del montaje si sigues el video. Las piezas finales están sujetas a lo que se envía.
+  3. Para facilitar la instalación y extracción de los tornillos, la lista de materiales de código abierto especifica tornillos estándar. Sin embargo, los tornillos enviados con el kit tienen fijador de roscas aplicado. También puedes usar tus propias herramientas preferidas o un destornillador eléctrico (se recomienda encarecidamente tener uno preparado). Si utilizas una herramienta eléctrica, asegúrate de ajustar el par a un nivel bajo o medio (3–6 kgf·cm) para evitar un par excesivo que pueda barrer los tornillos, causando daños irreversibles que impidan retirar las piezas. Si hay cualquier indicio de que la cabeza se está barriendo, reemplaza inmediatamente el tornillo o realinea e inténtalo de nuevo. Los tornillos con fijador de roscas barridos no pueden retirarse con un extractor de tornillos y arruinarán toda la pieza. Por lo tanto, procede con precaución.
   4. Da prioridad a la seguridad durante el montaje para evitar pellizcos en los dedos o lesiones por aplastamiento. Los niños deben completar este proyecto acompañados por un padre o tutor.
 
 
@@ -59,9 +59,9 @@ El contenido de esta guía se dirige hacia ti a la velocidad de la luz — mante
 
 ## Paso 2: Calibrar el brazo robótico y comenzar
 
-1. Explora nuestra plataforma **MotorBridge**. Esta plataforma es una solución integral de ventanilla única que admite la expansión continua de tipos de motores, cubriendo [motores Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [motores Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [motores Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [motores Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow y más. También es compatible con productos de brazo robótico en actualización continua como reBot. La plataforma es fácil de usar para principiantes y también proporciona un SDK de Python con funcionalidad totalmente consistente para desarrolladores.
+1. Explora nuestra plataforma **MotorBridge**. Esta plataforma es una solución integral de ventanilla única que admite la expansión continua de tipos de motores, cubriendo [motores Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [motores Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [motores Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [motores Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow y más. También es compatible con productos de brazo robótico que se actualizan continuamente como reBot. La plataforma es fácil de usar para principiantes y también proporciona un SDK de Python con funcionalidad totalmente consistente para desarrolladores.
 
-2. Experimenta las nuevas funciones y detalles de MotorBridge adaptados específicamente al brazo robótico reBot, incluyendo calibración de punto cero con un clic, escritura de parámetros, control de motores mediante arrastrar y soltar a través de la interfaz gráfica, y una interfaz integrada de visualización de modelos.
+2. Experimenta las nuevas funciones y detalles de MotorBridge adaptados específicamente para el brazo robótico reBot, incluyendo calibración de punto cero con un clic, escritura de parámetros, control de motores mediante arrastrar y soltar a través de la interfaz de usuario y una interfaz integrada de visualización de modelos.
 
 3. Esta herramienta es totalmente compatible con los sistemas operativos **Windows, Ubuntu y macOS**.
 
@@ -71,16 +71,16 @@ El contenido de esta guía se dirige hacia ti a la velocidad de la luz — mante
 2. (Versión beta) Deja que un agente te ayude a inicializar el brazo robótico. Copia el siguiente contenido y envíaselo al agente:
 
 ```text
-Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-RS-Skills/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
+Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-Agent-Guide/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
 ```
 
-  Nota: Si compraste un kit preensamblado, dile al agente durante el paso de escritura de ID de motor: "Compré un kit preensamblado, por favor escanea los motores 1–7 para verificar que todos estén en línea, no reescribas los IDs de los motores."
+  Nota: Si compraste un kit preensamblado, indícaselo al agente durante el paso de escritura de ID de motor: "Compré un kit preensamblado, por favor escanea los motores 1–7 para verificar que todos estén en línea, no reescribas los IDs de los motores."
 
 3. El agente utiliza comandos de CLI para completar la escritura de IDs de motor, mientras que la wiki utiliza un método de interacción mediante interfaz web. Ambos enfoques funcionan.
 
 :::
 
-Deberías haber completado la preparación preliminar para el montaje del brazo robótico siguiendo el vídeo. A continuación, presentaremos cómo escribir los IDs de los motores y calibrar el brazo robótico.
+Deberías haber completado la preparación preliminar para el montaje del brazo robótico siguiendo el video. A continuación, presentaremos cómo escribir los IDs de los motores y calibrar el brazo robótico.
 
 
 
@@ -88,16 +88,22 @@ Deberías haber completado la preparación preliminar para el montaje del brazo 
 
 1. Instala Miniforge y crea un entorno virtual para evitar conflictos con otros paquetes de entorno que puedan causar fallos en las demostraciones.
 
-Ubuntu\macOS\Jetson\Raspberry Pi:
+Ubuntu\Jetson\Raspberry Pi:
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-o Windows:
+or macOS:
+```bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+bash Miniforge3-MacOSX-$(uname -m).sh
+```
 
-Abre la página de lanzamientos de Miniforge en tu navegador, busca la última versión de `Miniforge3-Windows-x86_64.exe` y haz clic para descargarla:
+or Windows:
+
+Open the Miniforge Release page in your browser, find the latest version of `Miniforge3-Windows-x86_64.exe` and click to download:
 
 ```text
 https://github.com/conda-forge/miniforge/releases
@@ -140,7 +146,7 @@ conda activate rebot
 Después de activar el entorno virtual de reBot, ejecuta el siguiente comando para instalar motorbridge:
 
 :::tip Nota para usuarios de macOS
-Si experimentas bajas tasas de fotogramas durante la teleoperación en macOS, puede deberse a una versión obsoleta del controlador WCH CH34x. Para **macOS 10.14 y posteriores**, el sistema incluye un controlador integrado `AppleUSBCHC0M`. Puedes desinstalar el controlador antiguo y cambiar al controlador integrado de macOS, lo que debería mejorar eficazmente la tasa de fotogramas.
+Si experimentas bajas tasas de fotogramas durante la teleoperación en macOS, puede deberse a una versión desactualizada del controlador WCH CH34x. Para **macOS 10.14 y posteriores**, el sistema incluye un controlador integrado `AppleUSBCHC0M`. Puedes desinstalar el controlador antiguo y cambiar al controlador integrado de macOS, lo que debería mejorar eficazmente la tasa de fotogramas.
 :::
 
 
@@ -152,7 +158,7 @@ pip install motorbridge
 
 Haz que el dispositivo PCAN-USB funcione en el bus CAN a 1 Mbps para la comunicación del brazo robótico.
 
-Ubuntu\macOS\Jetson\Raspberry Pi:
+Ubuntu\Jetson\Raspberry Pi:
 
 ```bash
 # The kit includes PCAN-USB, which should normally show up as can0 or can1
@@ -165,7 +171,41 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 ```
 
-Los usuarios de Windows, por favor visiten [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) para instalar el controlador de PCAN-USB.
+or macOS:
+
+If libPCBUSB.dylib cannot be loaded, install PCBUSB first:
+```zsh
+curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
+  https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
+tar -xzf macOS_Library_for_PCANUSB_v0.13.tar.gz
+cd PCBUSB
+sudo ./install.sh
+```
+
+Configure `DYLD_LIBRARY_PATH` to ensure motorbridge-gateway can find the PCBUSB library at runtime. Create an activation script in the conda environment so it takes effect automatically each time you run `conda activate rebot`:
+
+```bash
+mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
+cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
+export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+EOF
+
+echo $DYLD_LIBRARY_PATH
+```
+
+Check if ready:
+```zsh
+# Check Python package and CLI are ready
+python3 -c "import motorbridge; print('motorbridge OK')"
+motorbridge-cli --help
+
+# Optional: Check if PCBUSB runtime is loadable
+python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
+```
+
+or Windows:
+
+Please visit [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) to install the PCAN-USB driver.
 
 <!-- ### 3. Write Motor IDs
 
@@ -196,26 +236,42 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 
 ### 4. Iniciar MotorBridge-gateway para escribir puntos cero y depurar
 
-#### Antes del reinicio de los motores
+#### Antes del reinicio del motor
 
-Antes de la configuración de parámetros de los motores, ten en cuenta las siguientes preparaciones y normas de seguridad:
+Antes de la configuración de parámetros del motor, ten en cuenta las siguientes preparaciones y normas de seguridad:
 
 - Prepara 2 abrazaderas de sujeción (tamaño ≥3 pulgadas) y una fuente de alimentación conmutada de 48 V con salida XT30 (elige una marca de buena reputación; no uses fuentes de alimentación de mala calidad).
 - Durante la depuración y operación, mantén una distancia de seguridad de al menos 1 metro.
 - No conectes ni desconectes los motores en caliente; desconecta la fuente de alimentación antes de enchufar o desenchufar el conector XT30 2+2.
-- No sobrecargues ni hagas funcionar los motores a exceso de velocidad; comprueba el cableado y los elementos de fijación antes de arrancar; no los uses en entornos húmedos, de alta temperatura o con polvo.
+- No sobrecargues ni hagas funcionar los motores a exceso de velocidad; comprueba el cableado y los elementos de fijación antes de arrancar; no lo uses en entornos húmedos, de alta temperatura o con polvo.
 - Configura parámetros de programa razonables y una función de parada de emergencia para evitar que el equipo se descontrole.
-- **Sigue estrictamente las reglas anteriores. El vendedor no es responsable de ningún riesgo o pérdida causada por operaciones no conformes o errores humanos.**
+- **Sigue estrictamente las reglas anteriores. El vendedor no es responsable de ningún riesgo o pérdida causados por operaciones no conformes o errores humanos.**
 
 
-#### Escritura de punto cero y depuración mediante la interfaz web
+#### Escritura y depuración del punto cero mediante la interfaz web
 
-Abre la dirección [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) en tu navegador, haz clic en la opción Help, copia el comando correspondiente según tu sistema operativo y placa controladora, verifica la dirección IP y el número de puerto, y luego pulsa Enter en la terminal para ejecutarlo.
+Abre la dirección [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) en tu navegador, haz clic en la opción Help, copia el comando correspondiente según tu sistema operativo y placa controladora, verifica la dirección IP y el número de puerto, luego pulsa Enter en la terminal para ejecutarlo.
 
 
 ```bash
-motorbridge-gateway -- --bind 127.0.0.1:9002  
+motorbridge-gateway --bind 127.0.0.1:9002  
+```
+
+macOS:
+
+```bash
+motorbridge-gateway --bind 127.0.0.1:9002 
+```
+
+o
+
+```bash
+DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
 
 
-Consulta el vídeo para conocer el uso.
+Consulta el video para conocer el uso. Antes de operar el brazo robótico, debes restablecer de nuevo el punto cero.
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/WcjDPm8GUDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>

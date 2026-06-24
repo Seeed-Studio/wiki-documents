@@ -11,14 +11,14 @@ keywords:
   - YOLO
   - TensorRT
   - Visual Grasping
-image: https://files.seeedstudio.com/wiki/graspnet/front-graspnet.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-e26052001-rebot-arm-b601-dm-bundle-with-jetson-thor.jpg
 slug: /rebot_arm_b601_dm_graspnet_visual_grasping
 sku: E26051901
 last_update:
   date: 06/15/2026
   author: Dayu
 createdAt: '2026-06-15'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_graspnet_visual_grasping/
 ---
 
@@ -379,7 +379,7 @@ cd ~/rebot_grasp-jetson
 
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --num-point 12000 \
   --cloud-crop-nsample 32
 ```
@@ -387,7 +387,7 @@ python scripts/grasp_web.py \
 Open the Web UI from a browser:
 
 ```text
-http://<jetson_ip>:8000
+http://<jetson_ip>:8090
 ```
 
 <div align="center">
@@ -401,7 +401,7 @@ When the scene is stable and the verification steps have passed, start with real
 ```bash
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --enable-robot \
   --num-point 12000 \
   --cloud-crop-nsample 32
@@ -412,7 +412,7 @@ For first real tests, disable post-grasp placement so the arm only performs the 
 ```bash
 python scripts/grasp_web.py \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8090 \
   --enable-robot \
   --no-place-after-grasp \
   --num-point 12000 \
@@ -500,7 +500,7 @@ bash scripts/grasp_curl.sh reset
 The same operations can be called directly with `curl`:
 
 ```bash
-BASE=http://127.0.0.1:8000
+BASE=http://127.0.0.1:8090
 
 curl -s "$BASE/state"
 curl -s -X POST "$BASE/ready" -H "Content-Type: application/json" -d "{}"
@@ -579,6 +579,12 @@ If the gripper consistently misses the object, tune in this order:
 | Wrist angle is wrong | Gripper roll, pitch, yaw compensation |
 | All grasps shift in the same direction | Camera or base compensation |
 
+## Demo Video
+
+<div align="center">
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## Troubleshooting
 
 `torch.cuda.is_available()` returns `False`: reinstall a JetPack-matched PyTorch wheel. Generic PyPI `torch` is not suitable for Jetson deployment.
@@ -614,11 +620,6 @@ GraspNet runs out of memory: reduce `--num-point`, reduce `--cloud-crop-nsample`
 - Orbbec pyorbbecsdk: https://github.com/orbbec/pyorbbecsdk
 - Install Pytorch for reComputer Jetson: https://wiki.seeedstudio.com/install_torch_on_recomputer/
 
-## Demo Video
-
-<div align="center">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ## Tech Support & Product Discussion
 

@@ -15,6 +15,8 @@ last_update:
   author: Zibo
 createdAt: '2026-04-14'
 updatedAt: '2026-04-14'
+sku: 100042928
+url: https://wiki.seeedstudio.com/es/rtl8852be_wireless_module_for_jetson/
 ---
 
 <div align="center">
@@ -23,7 +25,7 @@ updatedAt: '2026-04-14'
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/RTL8822CE-WIFI-Module-p-6313.html" target="_blank">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/RTL8852BE-WIFI-Module-M-2-Key-E-p-6835.html" target="_blank">
     <strong>
       <span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span>
     </strong>
@@ -32,16 +34,16 @@ updatedAt: '2026-04-14'
 
 
 
-El RTL8852BE es un módulo inalámbrico Wi‑Fi 6 (802.11ax) M.2 basado en el chipset Realtek. Integra una interfaz PCIe para WLAN y una interfaz USB para Bluetooth, ofreciendo un rendimiento de transferencia significativamente mayor y una latencia más baja en comparación con los módulos Wi‑Fi 5 de la generación anterior. Es ideal para dispositivos embebidos como [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) que requieren conectividad inalámbrica de alto rendimiento.
+El RTL8852BE es un módulo inalámbrico M.2 Wi‑Fi 6 (802.11ax) basado en el chipset Realtek. Integra una interfaz PCIe para WLAN y una interfaz USB para Bluetooth, ofreciendo un rendimiento significativamente mayor y una latencia más baja en comparación con los módulos Wi‑Fi 5 de la generación anterior. Es ideal para dispositivos embebidos como [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) que requieren conectividad inalámbrica de alto rendimiento.
 
 ## Características
 
-- Compatible con banda dual de 2.4 GHz / 5 GHz
+- Soporta banda dual de 2.4 GHz / 5 GHz
 - IEEE 802.11 a/b/g/n/ax (Wi‑Fi 6)
-- Velocidad PHY de hasta 1200 Mbps en la banda de 5 GHz
+- Tasa PHY de hasta 1200 Mbps en la banda de 5 GHz
 - Factor de forma: M.2 2230, llave A o llave E
 - Alimentación: DC 3.3V
-- Compatible con Linux (JetPack 5 / JetPack 6), Windows 10/11
+- Soporta Linux (JetPack 5 / JetPack 6), Windows 10/11
 
 ## Especificaciones
 
@@ -138,7 +140,7 @@ git clone https://github.com/a5a5aa555oo/rtw89
 cd rtw89
 ```
 
-Edita el `Makefile` para establecer la ruta correcta a los encabezados del kernel:
+Edita el `Makefile` para establecer la ruta correcta de los encabezados del kernel:
 
 ```diff
 # JP 6.2

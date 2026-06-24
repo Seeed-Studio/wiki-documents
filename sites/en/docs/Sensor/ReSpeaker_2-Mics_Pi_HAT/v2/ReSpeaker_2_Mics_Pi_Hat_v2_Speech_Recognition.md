@@ -1,6 +1,6 @@
 ---
 description: This wiki will demonstrate how you can use TensorFlow Lite for keyword spotting with ReSpeaker 2-Mics Pi HAT v2 and perform speech recognition.
-title: Keyword Spotting with TensorFlow Lite
+title: Keyword Spotting with TensorFlow Lite on Raspberry Pi Mic HAT
 keywords:
   - ReSpeaker_2-Mics_Pi_HAT
   - Keyword_Spotting
@@ -11,7 +11,7 @@ last_update:
   date: 12/23/2024
   author: Joshua Lee
 createdAt: '2024-12-24'
-updatedAt: '2024-12-24'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/respeaker_2_mics_pi_hat_v2_speech_recognition/
 ---
 
