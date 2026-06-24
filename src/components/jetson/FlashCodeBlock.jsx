@@ -892,16 +892,25 @@ export const PrepareRequirementsRobotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
   const texts = useLocalizedTexts(lang);
 
-  const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics'];
+  const carrierProducts = [
+    'j401-robotics-orin-nx-16g',
+    'j401-robotics-orin-nx-8g',
+    'j401-robotics-orin-nano-8g',
+    'j401-robotics-orin-nano-4g'
+  ];
+  const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics', ...carrierProducts];
   if (!allowed.includes(product)) {
     return null;
   }
+  const deviceName = carrierProducts.includes(product)
+    ? 'J401-Robotics Carrier Board with NVIDIA Jetson Orin Nano/NX Module'
+    : `reComputer Robotics J4012 / J4011 / J3010 ${texts.or} J3011`;
 
   return (
     <div>
       <ul>
         <li>{texts.ubuntuHost}</li>
-        <li>reComputer Robotics J4012 / J4011 / J3010 {texts.or} J3011</li>
+        <li>{deviceName}</li>
         <li>{texts.usbTypeC}</li>
       </ul>
 
@@ -914,7 +923,16 @@ export const RecoveryRobotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
   const texts = useLocalizedTexts(lang);
 
-  const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics'];
+  const allowed = [
+    'j4012robotics',
+    'j4011robotics',
+    'j3011robotics',
+    'j3010robotics',
+    'j401-robotics-orin-nx-16g',
+    'j401-robotics-orin-nx-8g',
+    'j401-robotics-orin-nano-8g',
+    'j401-robotics-orin-nano-4g'
+  ];
   if (!allowed.includes(product)) {
     return null;
   }

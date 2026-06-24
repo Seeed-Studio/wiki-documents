@@ -150,7 +150,7 @@ const cmpVersions = (a, b) => {
   
         <Row>
           <Col span={3}><p style={{ fontWeight: 'bold' }}>{texts.sha256}</p></Col>
-          <Col><span>{obj.sha256}</span></Col>
+          <Col><span style={{ whiteSpace: 'pre-line' }}>{obj.sha256}</span></Col>
         </Row>
       </div>
     );
