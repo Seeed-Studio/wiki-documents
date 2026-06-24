@@ -340,7 +340,7 @@ url: https://wiki.seeedstudio.com/cn/SenseCAP_probes_intro/
   <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Solar%20Radiation%20Shield%20for%20Outdoor%20Sensor%20Protection-A10%2C%20Louver%20Box%20for%20Temperature%2C%20Humidity%20and%20Gas%20Sensors.webp" alt="Solar Radiation Shield A10" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/Solar-Radiation-Shield-for-Outdoor-Sensor-Protection-A10-p-4601.html">立即获取!</a></div>
 </div>
-</div]
+</div>
 
 ## ✨ 贡献者项目
 
