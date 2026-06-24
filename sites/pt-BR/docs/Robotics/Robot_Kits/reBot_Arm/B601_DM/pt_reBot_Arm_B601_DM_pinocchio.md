@@ -296,7 +296,7 @@ uv run python example/sim/traj_sim.py
 
 #### Ferramenta de Visualização (`sim/visualizer.py`)
 
-[LINE_298>Wrapper de visualização MeshCat, fornecendo uma interface unificada de exibição do robô.
+Wrapper de visualização MeshCat, fornecendo uma interface unificada de exibição do robô.
 
 **Principais Recursos**:
 - Carregar modelo URDF e exibir o robô
