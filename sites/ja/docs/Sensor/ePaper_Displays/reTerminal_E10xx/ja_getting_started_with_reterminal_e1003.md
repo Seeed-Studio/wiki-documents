@@ -195,7 +195,7 @@ reTerminal E シリーズ ePaper ディスプレイは、FAT32 形式の最大 3
 Mac を使用していて、これまでに CH34X ドライバーを手動インストールしていない場合は、以下の手順に従ってインストールを完了してください：
 
 **ステップ 1. ドライバーをダウンロードしてインストールする**
-[LINE_197]Download the driver from the [official WCH page](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) and run `CH34xVCPDriver.pkg`. 
+Download the driver from the [official WCH page](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) and run `CH34xVCPDriver.pkg`. 
 :::tip
 macOS によってインストールがブロックされた場合は、**System Settings → Privacy & Security** に移動し、ブロックされた WCH ソフトウェアを探して **Allow** をクリックします。
 :::
