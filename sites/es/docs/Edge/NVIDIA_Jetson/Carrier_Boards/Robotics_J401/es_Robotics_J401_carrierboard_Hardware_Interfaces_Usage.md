@@ -128,7 +128,7 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
     <tr>
       <td>UART</td>
       <td>1x UART con conector GH 1.25 de 4 pines</td>
-    </tr]
+    </tr>
     <tr>
       <td>I2C</td>
       <td>2x I2C con conector GH 1.25 de 4 pines</td>
