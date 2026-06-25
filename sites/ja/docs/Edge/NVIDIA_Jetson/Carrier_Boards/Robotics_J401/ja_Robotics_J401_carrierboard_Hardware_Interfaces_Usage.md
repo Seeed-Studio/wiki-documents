@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、reComputer Jetson Robotics J401キャリアボードのハードウェア機能とインターフェースの使用方法について包括的に紹介します。詳細な仕様、対応モジュール、セットアップ手順、M.2、Ethernet、USB、CAN、UART、I2C、GMSL2カメラ拡張など各種インターフェースの実用的なガイドを網羅し、ユーザーがJ401プラットフォームでのロボット開発を素早く開始できるよう支援します。
+description: このWikiでは、reComputer Jetson Robotics J401キャリアボードのハードウェア機能とインターフェースの使用方法について包括的に紹介します。詳細な仕様、対応モジュール、セットアップ手順、M.2、Ethernet、USB、CAN、UART、I2C、GMSL2カメラ拡張など各種インターフェースの実用的な使用ガイドを網羅し、ユーザーがJ401プラットフォーム上でのロボット開発を素早く開始できるよう支援します。
 title: インターフェースの使用方法
 tags:
   - J401-Robotics キャリアボード
@@ -15,7 +15,7 @@ last_update:
   date: 06/10/2025
   author: Zibo
 createdAt: '2025-04-29'
-updatedAt: '2026-03-24'
+updatedAt: '2026-06-24'
 url: https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j401_getting_started/
 ---
 
@@ -23,9 +23,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Robotics J401 キャリアボード ハードウェアと入門ガイド
 
-reComputer Robotics J401 は、高度なロボティクス向けに設計された、コンパクトで高性能なエッジAIキャリアボードです。NVIDIA Jetson Orin Nano/Orin NX モジュールの Super/MAXN モードに対応し、最大157 TOPS のAI性能を発揮します。デュアルGigabit Ethernetポート、5GおよびWi-Fi/BTモジュール用M.2スロット、6つのUSB 3.2ポート、CAN、GMSL2（オプション拡張経由）、I2C、UART などの豊富な接続オプションを備え、各種センサーからの複雑なデータを処理できる強力なロボット用ブレインとして機能します。JetPack 6 と Linux BSP をプリインストールしており、シームレスなデプロイを実現します。​
+reComputer Robotics J401 は、高度なロボティクス向けに設計された、コンパクトで高性能なエッジAIキャリアボードです。Super/MAXNモードのNVIDIA Jetson Orin Nano/Orin NXモジュールに対応し、最大157 TOPSのAI性能を発揮します。デュアルGigabit Ethernetポート、5GおよびWi-Fi/BTモジュール用M.2スロット、6つのUSB 3.2ポート、CAN、GMSL2（オプション拡張経由）、I2C、UARTなど、豊富な接続オプションを備え、各種センサーからの複雑なデータを処理可能な強力なロボットブレインとして機能します。JetPack 6とLinux BSPをプリインストールしており、シームレスなデプロイを実現します。​
 
-NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワークをサポートする reComputer Robotics J401 は、大規模言語モデルによる意思決定と、モーションプランニングやセンサーフュージョンといった物理ロボット制御との橋渡しを行います。自律ロボットの迅速な開発に最適で、すぐに使えるインターフェースと最適化されたAIフレームワークにより、製品化までの時間を短縮します。
+NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワークをサポートすることで、reComputer Robotics J401 は、大規模言語モデルによる意思決定と、モーションプランニングやセンサーフュージョンといった物理ロボット制御との橋渡しを行います。自律ロボットの迅速な開発に最適で、すぐに使えるインターフェースと最適化されたAIフレームワークにより、製品化までの時間を短縮します。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics-carrier-board.png"/>
@@ -50,8 +50,8 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
 ## 同梱物一覧
 
 - reComputer Robotics J401 キャリアボード x 1
-- 電源アダプタおよび JST 拡張ボード x 1
-- XT30 から DC へのケーブル x 1
+- 電源およびJST拡張ボード x 1
+- XT30 から DC ケーブル x 1
 - USB ケーブル（Type A - Type C）x 1
 - 拡張ボード用ヒートシンク x 1
 - スタッド（M3*30）x 5
@@ -63,17 +63,17 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
 - ユーザーマニュアル x 1
 
 :::note
-1.高電圧電源および高温環境で動作させる場合は、Thermal Design Guide に従って堅牢な放熱ソリューションを設計してください。
+1.高電圧電源および高温環境で使用する場合は、Thermal Design Guide に従って堅牢な放熱ソリューションを設計してください。
 2.より良い性能のために、モジュールにヒートシンクを取り付けてください。
 3.高電圧入力かつ高負荷で動作中は、やけど防止のためヒートシンクに触れないでください。
-4.検証用の電源アダプタについては、Seeed 公式サイトで推奨されている電源アダプタを使用してください。
+4.検証用の電源アダプタについては、Seeed公式サイトで推奨されている電源アダプタを使用してください。
 
 - 19V/4.74A 5525 バレルジャック電源アダプタ
 - 最大消費電力要件を満たしていることを確認してください。
 2.AC 電源コードの互換性
-- ご利用地域に応じて、地域仕様の AC クローバーリーフ電源コードを購入してください。
+- ご利用地域に応じて、地域仕様のACクローバーリーフ電源コードを購入してください。
 3.アクセサリの互換性
-- 最適な性能と互換性を得るために、公式に推奨されているアクセサリ（無線モジュール、カメラ、周辺機器など）のみを使用してください。
+- 最適な性能と互換性のために、公式に推奨されているアクセサリ（無線モジュール、カメラ、周辺機器など）のみを使用してください。
 
 :::
 
@@ -96,7 +96,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
       <td>1x M.2 KEY M PCIe（M.2 NVMe 2280 SSD 128G 付属）</td>
     </tr>
     <tr>
-      <th rowSpan="3">ネットワーク</th>
+      <th rowSpan="3">ネットワーキング</th>
       <td>M.2 KEY E</td>
       <td>1x M.2 Key E（WiFi/Bluetooth モジュール用）</td>
     </tr>
@@ -167,7 +167,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
     </tr>
     <tr>
       <th rowSpan="1">Jetpack バージョン</th>
-      <td colSpan="2">Jetpack 6</td>
+      <td colSpan="2">JetPack 6 プリインストール；JetPack 7.2 対応</td>
     </tr>
     <tr>
       <th rowSpan="3">機構</th>
@@ -212,46 +212,57 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
 - Robotics J401 キャリアボード
 - NVIDIA® Jetson Orin™ Nano/NX モジュール
 - Nano/NX モジュール用アクティブファン
-- NVMe M.2 2280 内蔵 SSD
+- NVMe M.2 2280 内蔵SSD
 - USB Type-C データ転送ケーブル
 
 :::info
 
 仮想マシンではなく、物理的な Ubuntu ホストデバイスを使用することを推奨します。
-ホストマシンを準備する際は、以下の表を参照してください。
+ホストマシンの準備については、以下の表を参照してください。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td  rowspan="2"> JetPack バージョン </td>
+        <td class="dbon" colspan="4"> Ubuntu バージョン（ホストコンピュータ） </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> JetPack 7.2 では、Ubuntu 24.04 はフラッシュおよびターゲット側コンポーネントのインストールのみに対応しています。ホスト開発コンポーネントが必要な場合は、Ubuntu 20.04 または 22.04 を使用してください。</p>
 
 :::
 
 ### Jetpack イメージの準備
 
-ここでは、使用している Jetson モジュールに対応したシステムイメージを Ubuntu PC にダウンロードする必要があります。
+ここでは、使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードする必要があります。
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Jetpack Version</th>
-      <th>Jetson Module</th>
+      <th>Jetpack バージョン</th>
+      <th>Jetson モジュール</th>
       <th> GMSL </th>
       <th>Download Link1</th>
       <th>SHA256</th>
@@ -283,48 +294,73 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETx2PP9D85dHgzljJ_pJH-0Bsss82nPxMbOkJ-JvPA1hrQ?e=cReLPU">Download</a></td>
       <td> b08cbdad8ab6e50222146d3175a9d2<br />627d499bf1d67cfaf69cc737b5bfa9e33a </td>
     </tr>
+    <tr>
+      <td rowSpan={4}>7.2</td>
+      <td> Orin Nano 4GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCXU7mPG_OyR7z-VhF3E5j8AcmgsCPAZAuXSdKduZUKtHQ">Download</a></td>
+      <td>6c499899d6c00a1661a48974d4dfc734<br />e9cbfefc06fc9c5c02ac7040dd1f2eb8</td>
+    </tr>
+    <tr>
+      <td>Orin Nano 8GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBxz11HG6naSak2wIytiRbXAaqxhsgIWFaVR9H9GfGWqus">ダウンロード</a></td>
+      <td>23b68b43e630d166e5079f72509c71ea<br />0e13f76e372ddd06fe22df5494ad3f41</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBw84cKdsnuRYQLA1pkfg3mAY1x0HW0UMppZbnaDBaV6XI">ダウンロード</a></td>
+      <td>2712fe373afb3dff8202cdd9288b266f<br />080b76837eb13161918efd80111d9035</td>
+    </tr>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDqVVHOlgc7T6b5LbNYFImdAaUr2OlKT1IkQKk2P89lCW8">ダウンロード</a></td>
+      <td>6d9086d692a0f40fad02c75df1ff56ae<br />d9b368320bb2bfe3a777692513529697</td>
+    </tr>
   </tbody>
 </table>
 </div>
 
 :::danger
-Jetpack6 のイメージファイルサイズは約 **14.2GB** で、ダウンロードにはおよそ 60 分かかります。ダウンロード完了までお待ちください。
+JetPack イメージファイルはサイズが大きく、ダウンロードに約 60 分かかる場合があります。ダウンロードが完了するまでお待ちください。
 :::
 
 :::info
-ダウンロードしたファームウェアの完全性を確認するには、SHA256 ハッシュ値を比較します。
+ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較します。
 
-Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。出力されたハッシュ値が本Wikiに記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ破損していないことが確認できます。
+Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全で破損していないことが確認できます。
 :::
 
-### Force Recovery モードに入る
+### 強制リカバリーモードに入る
 
 :::info
-インストール手順に進む前に、ボードが Force Recovery モードになっていることを確認する必要があります。
+インストール手順に進む前に、ボードが強制リカバリーモードになっていることを確認する必要があります。
 :::
 
 <details>
 
-<summary> 手順ガイド </summary>
+<summary> 手順 </summary>
 
-**Step 1.** スイッチを RESET モードに切り替えます。
+**ステップ 1.** スイッチを RESET モードに切り替えます。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" />
 </div>
 
-**Step 2.** 電源ケーブルを接続してキャリアボードの電源を入れます。
+**ステップ 2.** 電源ケーブルを接続してキャリアボードの電源を入れます。
 
-**Step 3.** Ubuntu ホスト PC とボードを USB Type-C データ転送ケーブルで接続します。
+**ステップ 3.** USB Type-C データ転送ケーブルでボードを Ubuntu ホスト PC に接続します。
 
-**Step 4.** Linux ホスト PC でターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用している Jetson SoM に応じて、返された内容に以下のいずれかの出力が含まれていれば、ボードはフォースリカバリモードになっています。
+**ステップ 4.** Linux ホスト PC でターミナルウィンドウを開き、`lsusb` コマンドを入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
 
 - Orin NX 16GB の場合: **0955:7323 NVidia Corp**
 - Orin NX 8GB の場合: **0955:7423 NVidia Corp**
 - Orin Nano 8GB の場合: **0955:7523 NVidia Corp**
 - Orin Nano 4GB の場合: **0955:7623 NVidia Corp**
 
-以下の画像は Orin Nano 8GB の例です。
+以下の画像は Orin Nano 8GB の例です
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png"/>
@@ -334,7 +370,7 @@ Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマ
 
 ### Jetson へのフラッシュ
 
-**Step 1:** ダウンロードしたイメージファイルを展開します：
+**ステップ 1:** ダウンロードしたイメージファイルを解凍します：
 
 ```bash
 cd <path-to-image>
@@ -342,7 +378,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-robo-orin-nano-8g-j401-gmsl-6.2-36.4.3-2026-02-06.tar.gz
 ```
 
-**Step 2:** 次のコマンドを実行して JetPack システムを NVMe SSD にフラッシュします：
+**ステップ 2:** 次のコマンドを実行して、JetPack システムを NVMe SSD にフラッシュします：
 
 ```bash
 cd mfi_xxxx
@@ -350,7 +386,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-フラッシュ処理が正常に完了すると、次のような出力が表示されます。
+フラッシュ処理が成功すると、次のような出力が表示されます
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
@@ -358,7 +394,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 フラッシュコマンドの実行には 2〜10 分かかる場合があります。
 :::
 
-**Step 3:** Robotics J401 をディスプレイに接続します。PD から HDMI へのアダプタを使用して HDMI 入力対応ディスプレイに接続するか、PD ケーブルを使用して PD 入力対応ディスプレイに直接接続し、初期設定を完了します。
+**ステップ 3:** Robotics J401 をディスプレイに接続します。PD から HDMI へのアダプタを使用して HDMI 入力対応ディスプレイに接続するか、PD ケーブルを使用して PD 入力対応ディスプレイに直接接続し、初期設定を完了します。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
@@ -410,7 +446,7 @@ dd if=/dev/zero of=/home/seeed/ssd/test bs=1024M count=5 conv=fdatasync
 
 ## M.2 Key B
 
-M.2 Key B スロットは 5G モジュール拡張用で、ロボティクスやエッジ AI シナリオ向けに高速セルラー接続を実現します。
+M.2 Key B スロットは 5G モジュール拡張用で、ロボティクスやエッジ AI シナリオ向けに高速セルラー接続を可能にします。
 
 ### ハードウェア接続
 
@@ -420,32 +456,32 @@ M.2 Key B スロットは 5G モジュール拡張用で、ロボティクスや
 
 ### 使用手順
 
-**Step 1.** ハードウェア認識の確認
+**ステップ 1.** ハードウェア認識の確認
 
 ```bash
 lsusb 
 ```
 
-このコマンドは、システムに接続されているすべての USB デバイスの一覧を、メーカー（ID）、種類、その他の情報とともに表示します。たとえば、出力に Quectel Wireless Solutions Co., Ltd. EM12-G などのデバイスが表示されていれば、5G モジュールが存在していることを示します。
+このコマンドは、システムに接続されているすべての USB デバイスの一覧を、メーカー（ID）、種類、その他の情報とともに表示します。たとえば、出力に Quectel Wireless Solutions Co., Ltd. EM12-G というデバイスが表示されていれば、5G モジュールが存在することを示します。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb.png"/>
 </div>
 
-**Step 2.** ドライバのロードを確認
-5G モジュールに必要な option ドライバがロードされていることを確認することが重要です。これを確認するために lsmod コマンドを使用できます。
+**ステップ 2.** ドライバー読み込みの確認
+5G モジュールに必要な option ドライバーが読み込まれていることを確認することが重要です。これを確認するために lsmod コマンドを使用できます。
 
 ```bash
 lsmod | grep option 
 ```
 
-option ドライバが正常にロードされていれば、出力にドライバに関する情報が表示されます。
+option ドライバーが正常に読み込まれていれば、出力にドライバーに関する関連情報が表示されます。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsmod.png"/>
 </div>
 
-**Step 3.** ModemManager の設定
+**ステップ 3.** ModemManager の設定
 ModemManager はモデムデバイスを管理するためのツールであり、インストールして再起動する必要があります。
 
 ```bash
@@ -453,9 +489,9 @@ sudo apt install modemmanager
 sudo systemctl restart ModemManager 
 ```
 
-apt install コマンドは ModemManager パッケージをインストールするために使用され、systemctl restart は ModemManager サービスを再起動して新しい設定を有効にします。
+apt install コマンドは ModemManager パッケージのインストールに使用され、systemctl restart は ModemManager サービスを再起動して新しい設定を有効にします。
 
-**Step 4.** モジュール認識の確認
+**ステップ 4.** モジュール認識の確認
 ModemManager が 5G モジュールを正しく認識できるかどうかを確認するために、mmcli -L コマンドを使用できます。
 
 ```bash
@@ -467,8 +503,8 @@ mmcli -L
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_l.jpg"/>
 </div>
 
-**Step 5.** APN の設定
-APN（Access Point Name）は、モバイルデバイスをネットワークに接続するために重要です。ここでは nmcli コマンドを使用してベアラープロファイルを作成します。China Mobile を例に、次のコマンドで設定ファイルを作成できます。
+**ステップ 5.** APN の設定
+APN（Access Point Name）は、モバイルデバイスをネットワークに接続するために重要です。nmcli コマンドを使用してベアラープロファイルを作成します。China Mobile を例に、次のコマンドで設定ファイルを作成できます。
 
 ```bash
 sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto 
@@ -479,7 +515,7 @@ sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_con.jpg"/>
 </div>
 
-**Step 6.** 接続の有効化
+**ステップ 6.** 接続の有効化
 ベアラープロファイルを作成したら、接続を有効化する必要があります。
 
 ```bash
@@ -488,21 +524,21 @@ sudo nmcli con up "gsm"
 
 このコマンドは GSM 接続を有効化し、成功すると確認メッセージが表示されます。
 
-**Step 7.** モジュール認識の再確認
+**ステップ 7.** モジュール認識の再確認
 APN を設定した後もモジュールが認識されていることを確認するために、再度 mmcli -L コマンドを実行します。
 
 ```bash
 mmcli -L 
 ```
 
-**Step 8.** モジュールステータスの確認
-最後に、mmcli -m 0 コマンドを使用して、IP 割り当て、キャリア、ネットワーク接続状態など、モジュールに関する詳細情報を表示できます。
+**ステップ 8.** モジュールステータスの確認
+最後に、mmcli -m 0 コマンドを使用して、IP 割り当て、キャリア、ネットワーク接続ステータスなど、モジュールに関する詳細情報を表示できます。
 
 ```bash
 mmcli -m 0 
 ```
 
-このコマンドは、メーカー、モデル、サポートおよび現在使用中のネットワーク技術、デバイスステータス、接続中のネットワークオペレータなど、5G モジュールに関する包括的な詳細を提供します。
+このコマンドは、メーカー、モデル、サポートおよび現在のネットワーク技術、デバイスステータス、接続中のネットワークオペレーターなど、5G モジュールに関する包括的な詳細を提供します。
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_m.jpg"/>
 </div>
@@ -519,7 +555,7 @@ M.2 Key E インターフェースは標準的な M.2 コネクタで、主に W
 
 ### 使用手順
 
-Wi-Fi の性能をテストするには、次のコマンドを使用します（IP アドレスはテストサーバーのものに置き換えてください）。
+Wi-Fi パフォーマンスをテストするには、次のコマンドを使用します（IP アドレスはテストサーバーのものに置き換えてください）。
 
 ```bash
 iperf3 -c 192.168.6.191
@@ -535,15 +571,15 @@ Bluetooth 機能は M.2 Key E スロット経由で利用できます。
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/bluetooth.png"/>
 </div>
 
-## Ethernet
+## イーサネット
 
-Robotics J401 キャリアボードには、高速有線ネットワーク接続用に 1Gbps RJ45 Ethernet ポートが 2 つ搭載されています。
+Robotics j401 キャリアボードには、高速な有線ネットワーク接続のために 2 つの 1Gbps RJ45 イーサネットポートが搭載されています。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/eth.jpg"/>
 </div>
 
-Ethernet ポートの速度をテストするには、次のように `iperf3` を使用します：
+イーサネットポートの速度をテストするには、次のように `iperf3` を使用します：
 
 ```bash
 iperf3 -c <server_ip> -B <bind_ip>
@@ -560,17 +596,17 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 ## LED
 
-reComputer Jetson Robotics J401 には 3 つの LED インジケータ（PWR、ACT、User LED）が搭載されており、電源、システムアクティビティ、およびユーザー定義機能の状態をわかりやすく表示します。
+reComputer Jetson Robotics J401 には 3 つの LED インジケータ（PWR、ACT、User LED）が搭載されており、電源、システムアクティビティ、およびユーザー定義機能の状態を明確に表示します。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/led.jpg"/>
 </div>
 
-### 使用手順
+### 使用方法
 
-User LED は RGB LED で、さまざまな状態を示すために異なる色を表示できます。動作はユーザーが定義する必要があります。
+User LED は RGB LED で、さまざまな状態を示すために異なる色を表示できます。これはユーザーによって定義する必要があります。
 
-以下は RGB LED を制御するためのテストスクリプトです。
+以下は RGB LED を制御するためのテストスクリプトです：
 
 ```bash
 touch rgb_test
@@ -578,7 +614,7 @@ chmod +x rgb_test
 vi rgb_test
 ```
 
-次の内容を貼り付けます。
+次の内容を貼り付けます：
 
 ```bash
 #!/bin/bash
@@ -609,9 +645,9 @@ gpioset --mode=time --sec=1 2 2=0
 
 ## USB
 
-Robotics j401 キャリアボードには、6 つの USB 3.2 Type-A ポート（5Gbps）、DP 1.4（ホストモード）対応の USB 3.0 Type-C ポートが 1 つ、デバイスモード/デバッグ用の USB 2.0 Type-C ポートが 1 つ搭載されており、多様な接続オプションを提供します。
+Robotics j401 キャリアボードには、6 つの USB 3.2 Type-A ポート（5Gbps）、DP 1.4（ホストモード）対応の USB 3.0 Type-C ポートが 1 つ、デバイスモード/デバッグ用の USB 2.0 Type-C ポートが 1 つなど、さまざまな USB ポートが搭載されており、柔軟な接続オプションを提供します。
 
-### USB スピードテスト
+### USB 速度テスト
 
 USB デバイスの速度をテストするスクリプトを作成します：
 
@@ -636,11 +672,11 @@ sudo dd if=/dev/$1 of=/dev/null bs=1000M count=2
 sudo chmod +x test_usb
 ```
 
-USB デバイス名を引数として指定し、スクリプトを実行します。
+USB デバイス名を引数としてスクリプトを実行します。
 
 ### USB 2.0 Type-C ポート
 
-このシリアルポートを USB-C データケーブル経由で使用することで、PC 側で入出力のデバッグ情報をモニタリングできます。
+このシリアルポートを USB C データケーブル経由で使用することで、PC 側で入出力のデバッグ情報をモニタリングできます。
 
 **Step1.** スイッチをデバッグモードに切り替えます。
 
@@ -660,13 +696,13 @@ USB デバイス名を引数として指定し、スクリプトを実行しま�
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
-**Step4.** Windows PC で Device Manager を開き、reComputer Super に割り当てられた COM ポート番号を確認します。"Ports (COM & LPT)" の下に "Silicon Labs CP210x USB to UART Bridge (COMX)" と表示され、X が COM ポート番号になります。
+**Step4.** Windows PC でデバイスマネージャーを開き、reComputer Super に割り当てられた COM ポート番号を確認します。"Ports (COM & LPT)" の下に "Silicon Labs CP210x USB to UART Bridge (COMX)" と表示され、X が COM ポート番号になります。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png"/>
 </div>
 
-**Step5.** シリアルポートツール（ここでは例として MobaXterm ツールを使用）を開き、新しいセッションを作成します。
+**Step5.** シリアルポートツールを開きます（ここでは例として MobaXterm ツールを使用）、新しいセッションを作成します。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
@@ -707,9 +743,9 @@ guvcview -d /dev/video0
 
 reComputer Jetson Robotics J401 には、異なる電圧および冷却ニーズに対応する 2 種類のファンコネクタが搭載されています：
 
-- 1x 4 ピンファンコネクタ（5V PWM）：低電圧・低消費電力の静音ファン向けに設計されており、PWM による回転数制御をサポートします。システム温度に基づいてファン速度をインテリジェントに調整し、省エネと騒音低減を実現します。
+- 1x 4 ピンファンコネクタ（5V PWM）：低電圧・低消費電力の静音ファン向けに設計されており、PWM による回転数制御をサポートします。これにより、システム温度に応じたインテリジェントなファン速度調整が可能となり、省エネと騒音低減に貢献します。
 
-- 1x 4 ピンファンコネクタ（12V PWM）：標準的な 12V PWM ファンに対応し、精密な回転数制御もサポートするため、高性能な冷却要件に最適です。
+- 1x 4 ピンファンコネクタ（12V PWM）：標準的な 12V PWM ファンに対応しており、精密な回転数制御もサポートするため、高性能な冷却が必要な用途に最適です。
 
 ### ハードウェア接続
 
@@ -718,7 +754,7 @@ reComputer Jetson Robotics J401 には、異なる電圧および冷却ニーズ
 </div>
 
 :::note
-詳細については、[こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control) を参照してください。
+詳細については、[こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control)を参照してください。
 :::
 
 **ファン速度を設定するスクリプトを作成します：**
@@ -737,13 +773,13 @@ echo "000000" | sudo -S chmod 777 /sys/devices/platform/pwm-fan/hwmon/hwmon1/pwm
 echo $1 > /sys/devices/platform/pwm-fan/hwmon/hwmon1/pwm1
 ```
 
-> 注：Jetson Nano 4G の場合、ファンのパスは `/sys/devices/platform/pwm-fan/hwmon/hwmon0/pwm1` です。
+> 注：Jetson Nano 4G の場合、ファンパスは `/sys/devices/platform/pwm-fan/hwmon/hwmon0/pwm1` です。
 
 さらに、jtop ツールを使用してファン速度を手動で設定することもできます。
 
 ## ピンホールボタン
 
-Robotics J401 キャリアボードには、ユーザー操作用として Power（PWR）ボタンと Reset（RESET）ボタンを備えたピンホールボタンが搭載されています。これらのボタンは、それぞれデバイスの電源オン/オフおよびシステムの再起動を行うために不可欠です。
+Robotics J401 キャリアボードには、ユーザー操作用としてピンホールボタンが搭載されており、電源（PWR）ボタンとリセット（RESET）ボタンが含まれます。これらのボタンは、それぞれデバイスの電源オン/オフおよびシステムの再起動を行うために不可欠です。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/pinhole_button.jpg"/>
@@ -751,12 +787,12 @@ Robotics J401 キャリアボードには、ユーザー操作用として Power
 
 ## CAN
 
-CAN（Controller Area Network）は、ホストコンピュータなしでマイコンやデバイス同士が通信できる、堅牢な車載バス規格です。
-Robotics J401 は、電源およびデータ伝送を容易にするために、XT30（2+2）電源コネクタに統合された 1 つの CAN0 インターフェースを提供します。さらに、柔軟な CAN バス接続のために、2 つの標準 JST 4 ピンヘッダを介して 3 つの CAN1 インターフェースを提供します。
+CAN（Controller Area Network）は、ホストコンピュータを必要とせずにマイコンやデバイス同士が通信できる、堅牢な車載バス規格です。
+Robotics J401 は、電源およびデータ伝送を容易にするために XT30（2+2）電源コネクタに統合された 1 つの CAN0 インターフェースを提供します。さらに、柔軟な CAN バス接続のために、2 つの標準 JST 4 ピンヘッダを介して 3 つの CAN1 インターフェースを提供します。
 
 ### CAN 通信
 
-[データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf) には、以下に示す CAN0/CAN1 インターフェースの配線図が記載されています：
+[データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)には、以下に示すような CAN0/CAN1 インターフェースの配線図が記載されています：
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_datasheet.png"/>
@@ -776,7 +812,7 @@ Robotics J401 は、電源およびデータ伝送を容易にするために、
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_c1.png"/>
 </div>
 
-本手順では、使用しているアダプタに応じて、[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program) から入手できるソフトウェアをダウンロードしてインストールしています。
+本手順では、使用しているアダプタに応じて、[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)から入手できるソフトウェアをダウンロードしてインストールしました。
 
 **Step 1.** CAN1 インターフェースを設定します：
 
@@ -834,7 +870,7 @@ candump can1
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1.png"/>
 </div>
 
-Jetson のターミナルが、PC から送信されたデータを受信していることが確認できます。
+Jetson のターミナルが PC から送信されたデータを受信していることが確認できます。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_r.png"/>
@@ -842,7 +878,7 @@ Jetson のターミナルが、PC から送信されたデータを受信して�
 
 ### CAN FD モード
 
-ここでは、CAN0 を CAN1 に接続し、複数の Jetson デバイスが CAN インターフェースを介してどのように通信できるかをデモンストレーションします。
+ここでは、CAN0 を CAN1 に接続して、複数の Jetson デバイスが CAN インターフェースを介してどのように通信できるかをデモします。
 
 ### ハードウェア接続
 
@@ -856,7 +892,7 @@ Jetson のターミナルが、PC から送信されたデータを受信して�
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/on.jpg"/>
 </div>
 
-**Step 2.** CAN0 および CAN1 インターフェースを設定します：
+**Step 2.** CAN0 と CAN1 インターフェースを設定します：
 
 ```bash
 #close the interface
@@ -902,11 +938,11 @@ cansend can0 123##011112233445566778899AABBCCDDEEFF112233445566778899AABBCCDDEEF
 
 ## UART
 
-Robotics J401 は、UART シリアル通信のための標準 4 ピン JST ヘッダを備えています。
+Robotics J401 は、UART シリアル通信のための標準 4 ピン JST ヘッダを提供します。
 
 ### ハードウェア接続
 
-UART 通信を行うには、以下の配線に従ってください。ここでは例として USB to TTL ツールを使用します。
+UART 通信では、以下の配線に従ってください。ここでは例として USB-TTL ツールを使用します。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_c.jpg"/>
@@ -920,9 +956,9 @@ UART 通信を行うには、以下の配線に従ってください。ここで
 gpioset --mode=time --sec=100 2 5=0
 ```
 
-**Step 2.** USB to TTL ツールを Robotics J401 の UART ポートおよび PC に接続します。
+**Step 2.** USB-TTL ツールを Robotics J401 の UART ポートと PC に接続します。
 
-**Step 3.** PC 側でシリアルポートツールを開き（ここでは例として xcom ツールを使用します）、ボーレートを 115200 に設定します。
+**Step 3.** PC 側でシリアルポートツール（ここでは例として xcom ツールを使用）を開き、ボーレートを 115200 に設定します。
 
 **Step 4.** シリアル通信のための簡単な Python スクリプトを作成します：
 
@@ -949,7 +985,7 @@ ser.close()
 python3 uart_test.py
 ```
 
-**Step 6.** これで PC 側で出力を確認でき、PC から Jetson デバイスへデータを送信することもできます：
+**Step 6.** これで PC 側に出力が表示され、PC から Jetson デバイスへデータを送信することもできます：
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_s.jpg"/>
@@ -962,16 +998,16 @@ python3 uart_test.py
 ## I2C
 
 Robotics J401 は、標準 JST 4 ピンヘッダを介して 2 つの I2C インターフェース（IIC0 と IIC1）を提供します。
-これにより、センサーや周辺機器を簡単に接続してシステムを拡張できます。
+センサーや周辺機器を簡単に接続して、システムを拡張できます。
 
 ### ハードウェア接続
 
-Robotics J401 には、IIC0 と IIC1 の 2 つの 4 ピン GH-1.25 IIC インターフェースがあります。
+Robotics J401 には、2 つの 4 ピン GH-1.25 IIC インターフェース IIC0 と IIC1 が搭載されています。
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic.jpg"/>
 </div>
 
-[datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf) には、以下に示すような IIC0/IIC1 4 ピン GH-1.25 インターフェースの配線図が記載されています：
+[datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf) には、以下に示す IIC0/IIC1 4 ピン GH-1.25 インターフェースの配線図が記載されています：
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/12c.png"/>
 </div>
@@ -997,7 +1033,7 @@ Robotics J401 には、IIC0 と IIC1 の 2 つの 4 ピン GH-1.25 IIC インタ
 
 ### 使用手順
 
-**Step 1.** コードを書き込むために [Arduino IDE](https://www.arduino.cc/en/software/) をダウンロードします。
+**Step 1.** [Arduino IDE](https://www.arduino.cc/en/software/) をダウンロードしてコードを書き込みます。
 
 **Step 2.** 開発ボードの種類を選択します。
 
@@ -1005,7 +1041,7 @@ Robotics J401 には、IIC0 と IIC1 の 2 つの 4 ピン GH-1.25 IIC インタ
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/slect_board.png"/>
 </div>
 
-**Step 3.** IDE を再起動し、コードを書き込みます。
+**Step 3.** IDE を再起動し、コードをアップロードします。
 
 ```bash
 #code example
@@ -1062,15 +1098,15 @@ sudo i2cdetect -y -r 1
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_detect.png"/>
 </div>
 
-IIC0 に接続されたデバイスのアドレスが 0x08 に設定されていることが確認できます。
+IIC0 に接続されているデバイスのアドレスが 0x08 に設定されていることがわかります。
 
 ## 拡張ポート
 
-Robotics j401 キャリアボードには、GMSL 拡張ボード用の Camera Expansion Header が搭載されています。これにより、4 台の GMSL カメラを同時に接続して動作させることができます。
+Robotics j401 キャリアボードには、GMSL 拡張ボード用のカメラ拡張ヘッダが搭載されています。これにより、4 台の GMSL カメラを同時に接続して動作させることができます。
 
 ### ハードウェア接続
 
-以下は、Robotics j401 キャリアボードの GMSL カメラ拡張ボード接続スロットです（事前に拡張ボードを用意する必要があります）：
+以下は Robotics j401 キャリアボードの GMSL カメラ拡張ボード接続スロットです（事前に拡張ボードを用意する必要があります）：
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/exb.png"/>
@@ -1090,7 +1126,7 @@ Robotics j401 キャリアボードには、GMSL 拡張ボード用の Camera Ex
 GMSL 機能を有効にする前に、GMSL 拡張ボードドライバを含む JetPack バージョンをインストールしていることを確認してください。
 :::
 
-### Jetson IO ファイルの設定
+### Jetson IO ファイルを設定する
 
 ```bash
 sudo /opt/nvidia/jetson-io/jetson-io.py
@@ -1105,7 +1141,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 </div>
 
 :::note
-オーバーレイファイルは全部で 3 つあり、それぞれ Seeed GMSL 1X4 3G、Seeed GMSL 1X4 6G、Seeed GMSL 1X4、および Orbbec Gemini 335Lg です。これらはそれぞれ、SG3S の 3G カメラ、SG2 および SG8S の 6G カメラ、そして Orbbec のカメラに対応しています。図 3 に示すように、お使いのカメラのモデルに応じて io ファイルを設定してください。
+オーバーレイファイルは全部で 3 つあり、Seeed GMSL 1X4 3G、Seeed GMSL 1X4 6G、Seeed GMSL 1X4、および Orbbec Gemini 335Lg です。これらはそれぞれ、SG3S の 3G カメラ、SG2 と SG8S の 6G カメラ、そして Orbbec のカメラに対応しています。図 3 に示すように、お使いのカメラのモデルに応じて io ファイルを設定してください。
 :::
 
 **step 2.** ビデオインターフェース設定ツールをインストールします。
@@ -1115,7 +1151,7 @@ sudo apt update
 sudo apt install v4l-utils
 ```
 
-### Gemini 335Lg カメラの使用
+### Gemini 335Lg のカメラを使用する
 
 ```bash
 #Download the Orbbec Gemini 335Lg visualization tool
@@ -1136,12 +1172,12 @@ cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
 </div>
 
-### SGxxx シリーズカメラの使用
+### SGxxx シリーズのカメラを使用する
 
 **step 1.** フレーム同期モードを設定します（デフォルトでは有効になっていません！）。
 
 :::info
-ここでは、異なるモデルおよび解像度のカメラを設定する方法を示します。
+ここでは、異なるモデルおよび解像度のカメラをどのように設定するかを示します。
 :::
 
 ```bash
@@ -1199,29 +1235,29 @@ gst-launch-1.0 \
 
 ## ディスプレイ
 
-reComputer Jetson Robotics J401 には、高解像度ディスプレイ出力用に DP1.4（Type-C Host に含まれる）が搭載されています。
+reComputer Jetson Robotics J401 には、高解像度ディスプレイ出力用に DP1.4（Type-C ホストに含まれています）が搭載されています。
 
 ## リソース
 
-- [reComputer Robotics J401 Carrier Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
-- [reComputer Robotics J401 Carrier Board Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
-- [reComputer Robotics 3D file](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
-- [Mechanical Document-reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
-- [Seeed NVIDIA Jetson Product Catalog](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed_NVIDIA_Jetson_Catalog_in_Robotics_and_Edge_AI.pdf)
-- [Nvidia Jetson Comparison](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Nvidia Jetson Success Cases](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson One Pager](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [reComputer Robotics J401 キャリアボード回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
+- [reComputer Robotics J401 キャリアボードデータシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
+- [reComputer Robotics 3D ファイル](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
+- [メカニカルドキュメント - reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
+- [Seeed NVIDIA Jetson 製品カタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed_NVIDIA_Jetson_Catalog_in_Robotics_and_Edge_AI.pdf)
+- [Nvidia Jetson 比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed Nvidia Jetson 導入事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Seeed Jetson ワンページ資料](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
-  buttonText="カスタマイズの見積もりを依頼"
+  buttonText="Request Quote of Customization"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
-  imageAlt="Jetson の見積もりを依頼"
+  imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
 />
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、お客様が弊社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様それぞれの好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。お客様が製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
