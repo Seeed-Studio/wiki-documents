@@ -723,19 +723,6 @@ const sidebars = {
             }
           ],
         },
-        //       {
-        //            type: 'category',
-        //           label: 'Rastreador de pets SenseCAP T1000-P',
-        //           collapsed: true,
-        //           collapsible: true,
-        //          link: {
-        //            type: "doc",
-        //           id: 'Sensor/SenseCAP/SenseCAP_T1000-P/pt_t1000_p_intro',
-        //         },
-        //        items: [
-        //         'Sensor/SenseCAP/SenseCAP_T1000-P/pt_get_started_with_t1000_p',
-        //           ],
-        //     },
         {
           type: 'category',
           label: 'Sensor SenseCAP',

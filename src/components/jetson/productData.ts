@@ -101,7 +101,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j4012robotics',
     label: 'reComputer robotics J4012',
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0", "36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/')
@@ -109,7 +109,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j4011robotics',
     label: 'reComputer robotics J4011',
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0", "36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/')
@@ -117,7 +117,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j3011robotics',
     label: 'reComputer robotics J3011',
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0", "36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/')
@@ -125,7 +125,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j3010robotics',
     label: 'reComputer robotics J3010',
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0", "36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/')
