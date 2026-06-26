@@ -1,4 +1,4 @@
-position: 4 # float position is supported
+position: 6 # float position is supported
 label: '软件文档'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default

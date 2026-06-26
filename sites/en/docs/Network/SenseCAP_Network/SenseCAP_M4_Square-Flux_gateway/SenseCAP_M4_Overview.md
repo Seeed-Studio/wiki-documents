@@ -13,7 +13,7 @@ updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview/
 ---
 
-**SenseCAP M4 Square** is a device designed to run multiple web 3.0 applications and help you build decentralized networks. It has excellent hardware features to support the extension of multiple applications while providing easy and friendly methods to deploy **CUMULUS FluxNode** and other **web 3.0 Apps** with SenseCAP Hotspot App.
+**SenseCAP M4 Square** is a device designed to run multiple Third-Generation Internet applications and help you build decentralized networks. It has excellent hardware features to support the extension of multiple applications while providing easy and friendly methods to deploy **CUMULUS FluxNode** and other **Third-Generation Internet Apps** with SenseCAP Hotspot App.
 
 SenseCAP M4 Square runs at a Quad-core Intel® Celeron® J4125 and RP2040 co-processor, equipping dual 2.5GbE interfaces and multiple wireless connectivities, supporting 4K output, carrying sufficient storage capability, and equipment expandability.
 
@@ -30,7 +30,7 @@ SenseCAP M4 Square runs at a Quad-core Intel® Celeron® J4125 and RP2040 co-pro
 
 - **Plug and Play**：Provide a no-command experience that enables users to finish deployment CUMULUS FluxNode with 4 steps.
 
-- **Support Multiple Apps**: Deploy multiple web 3.0 applications provided by SenseCAP from the dApp center.Cloud Service：Provide a one-stop cloud service to help users purchase, deploy, manage, and monitor their devices.
+- **Support Multiple Apps**: Deploy multiple Third-Generation Internet applications provided by SenseCAP from the dApp center.Cloud Service：Provide a one-stop cloud service to help users purchase, deploy, manage, and monitor their devices.
 
 - **High Security**：Built-in TPM2.0 cryptographic processor and ECC608 crypto chip, high-security authentication, and reliable connectivity.
 

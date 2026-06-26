@@ -296,7 +296,7 @@ uv run python example/sim/traj_sim.py
 
 #### Herramienta de visualización (`sim/visualizer.py`)
 
-[LINE_298>Envoltorio del visualizador MeshCat, que proporciona una interfaz unificada de visualización del robot.
+Envoltorio del visualizador MeshCat, que proporciona una interfaz unificada de visualización del robot.
 
 **Características principales**:
 - Cargar el modelo URDF y mostrar el robot
@@ -395,6 +395,10 @@ uv run python example/9_gravity_compensation.py
 **Salida**:
 - Visualización en tiempo real del par esperado para cada articulación (N·m)
 - Pulsa `Ctrl+C` para detener y desconectar
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/nqaoqjiHQE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 

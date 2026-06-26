@@ -1,19 +1,18 @@
 ---
-description: 一个使用 reSpeaker Flex 和 Groq AI 的语音控制 ROS2 TurtleSim 项目，将口头指令转换为实时机器人移动、转向动作和语音反馈。
-
-title: 在 reSpeaker Flex 上构建 ROS2 语音流水线
+description: 一个使用 reSpeaker Flex 和 Groq AI 的语音控制 ROS2 TurtleSim 项目，将口头指令转换为实时机器人运动、转向动作和语音反馈。
+title: 在 reSpeaker 上构建 ROS2 语音流水线
 keywords:
   - reSpeaker
-  - 机器人技术
+  - 机器人
   - ROS2
-image: https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png
 slug: /respeaker_flex_ros2_voice_pipeline
-sku: 114993700, 101991441, 114993701
+sku: 114993700, 101991441, 114993701,100099135,,100005504
 last_update:
   date: 5/27/2026
   author: Kasun Thushara
 createdAt: '2026-05-27'
-updatedAt: '2026-05-27'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/cn/respeaker_flex_ros2_voice_pipeline/
 ---
 
@@ -21,23 +20,100 @@ url: https://wiki.seeedstudio.com/cn/respeaker_flex_ros2_voice_pipeline/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
 
-本项目使用 reSpeaker Flex 麦克风阵列和 ROS2，将你的语音转换为 TurtleSim 控制。说出 “Hey Jarvis” 加上一条指令，Jarvis 会录制音频，使用 Groq Whisper 转写，使用 Groq LLaMA 解析意图，并通过 Groq Orpheus TTS 做出语音回应。它支持前进/后退运动、角度转向、基于声源方向（DoA）的朝向以及立即停止指令。系统将唤醒词检测、音频采集、ROS2 话题以及模拟器指令发布整合到一个无缝的流水线中。它针对 Ubuntu 和 ROS2 Humble 进行了快速部署设计，使语音驱动的机器人实验易于运行。
+本项目使用 reSpeaker 麦克风阵列和 ROS2，将你的语音转换为 TurtleSim 控制。说出 “Hey Jarvis” 加上一条指令，Jarvis 会录制音频，使用 Groq Whisper 转写，使用 Groq LLaMA 解析意图，并通过 Groq Orpheus TTS 做出语音回应。它支持前进/后退运动、角度转向、基于声源方向（DoA）的朝向调整，以及即时停止指令。系统将唤醒词检测、音频采集、ROS2 话题以及模拟器指令发布整合到一个无缝的流水线中。它针对 Ubuntu 和 ROS2 Humble 进行了快速部署设计，让语音驱动的机器人实验易于运行。
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={600} height="auto" /></p>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    </a>
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      或
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                立即获取 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                立即获取 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
 </div>
+
 
 ## 第 1 部分 — 安装 ROS2 Humble
 
 > 如果你的机器上已经安装了 ROS2 Humble，可以跳过本部分。
-> 通过运行以下命令检查：`ros2 --version`
+> 通过运行：`ros2 --version` 进行检查
 
-**1.1 设置 ROS2 apt 软件源**
+**1.1 设置 ROS2 的 apt 软件源**
 
 ```bash
 # Make sure your system is up to date
@@ -86,7 +162,7 @@ ros2 --version
 # Expected output: ros2 cli    version 0.18.x (or similar)
 ```
 
-然后测试 TurtleSim 以确认一切正常：
+然后测试 TurtleSim 以确认一切正常工作：
 
 ```bash
 # Terminal 1
@@ -130,7 +206,7 @@ sudo service udev restart
 
 ## 第 3 部分 — 获取 Groq API Key
 
-本项目使用 Groq 的免费云 API 来实现：
+本项目使用 Groq 的免费云 API 来完成：
 - **Whisper** — 语音转文本
 - **LLaMA 3** — 理解你的指令
 - **Orpheus** — Jarvis 的语音回复
@@ -138,9 +214,9 @@ sudo service udev restart
 1. 访问 [console.groq.com](https://console.groq.com) 并创建一个免费账号
 2. 点击左侧边栏中的 **API Keys**
 3. 点击 **Create API Key**，给它起一个名字（例如 "jarvis"），并复制它
-4. 将其保存在安全的位置 —— 稍后你会把它粘贴到 `config.env` 中
+4. 将它保存在安全的位置 —— 稍后你会把它粘贴到 `config.env` 中
 
-> Groq 的免费套餐足以用于开发和测试。
+> Groq 的免费套餐足以满足开发和测试需求。
 > 开始使用不需要信用卡。
 
 ---
@@ -149,7 +225,7 @@ sudo service udev restart
 
 > **重要：** 不要为本项目使用虚拟环境。
 > ROS2 使用系统 Python，无法看到安装在 venv 中的包。
-> 我们使用 `--break-system-packages` 安装所有内容，以便让 ROS2 节点可以使用这些包。
+> 我们使用 `--break-system-packages` 安装所有内容，以便让 ROS2 节点可以使用它们。
 
 ```bash
 pip install \
@@ -200,12 +276,21 @@ source ~/.bashrc
 
 **6.1 克隆仓库**
 
+**如果你使用的是 Flex**
+
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/KasunThushara/ros_voice_controller_flex.git my_robot_controller
 ```
 
-> 你的工作空间现在应类似如下结构：
+**如果你使用的是 XVF3800**
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/KasunThushara/ros_voice_controller.git my_robot_controller
+```
+
+> 你的工作空间现在应该看起来像这样：
 > ```
 > ~/ros2_ws/
 > └── src/
@@ -228,7 +313,7 @@ cp config.env.example config.env
 nano config.env
 ```
 
-打开该文件并填写你的参数：
+打开该文件并填写你的参数值：
 
 ```env
 # ── Groq API (required) ────────────────────────────────
@@ -255,7 +340,7 @@ TTS_VOICE=autumn
 
 **6.3 找到正确的 MIC_INDEX**
 
-运行此辅助脚本以列出所有音频输入设备：
+运行这个辅助脚本来列出所有音频输入设备：
 
 ```bash
 python3 -c "
@@ -307,7 +392,7 @@ Finished <<< my_robot_controller [3.2s]
 Summary: 1 package finished [3.5s]
 ```
 
->  每次修改任何 Python 文件后，你都必须运行 `colcon build` 并执行 `source ~/.bashrc`。
+>  每次更改任何 Python 文件时，你都必须运行 `colcon build` 并执行 `source ~/.bashrc`。
 
 ---
 
@@ -327,11 +412,11 @@ ros2 launch my_robot_controller jarvis.launch.py
 [voice_command-3]    [INFO] Jarvis is listening ...
 ```
 
-会弹出一个窗口显示乌龟。现在说：
+会弹出一个窗口显示小海龟。现在说：
 
 > **"Hey Jarvis, move forward"**
 
-Jarvis 会回复 “Moving forward!”，乌龟会开始移动。
+Jarvis 会回复 “Moving forward!”，然后小海龟会移动。
 
 ---
 
@@ -341,19 +426,19 @@ Jarvis 会回复 “Moving forward!”，乌龟会开始移动。
 
 | 说这句 | 会发生什么 |
 |---|---|
-| `"Hey Jarvis, move forward"` | 乌龟前进 1 步 |
-| `"Hey Jarvis, move backward"` | 乌龟后退 1 步 |
-| `"Hey Jarvis, turn left"` | 乌龟向左旋转 90° |
-| `"Hey Jarvis, turn left 45"` | 乌龟向左旋转 45° |
-| `"Hey Jarvis, turn right"` | 乌龟向右旋转 90° |
-| `"Hey Jarvis, turn right 30 degrees"` | 乌龟向右旋转 30° |
-| `"Hey Jarvis, turn to my direction"` | 乌龟朝向你的声音方向（DoA） |
+| `"Hey Jarvis, move forward"` | 小海龟向前移动 1 步 |
+| `"Hey Jarvis, move backward"` | 小海龟向后移动 1 步 |
+| `"Hey Jarvis, turn left"` | 小海龟向左旋转 90° |
+| `"Hey Jarvis, turn left 45"` | 小海龟向左旋转 45° |
+| `"Hey Jarvis, turn right"` | 小海龟向右旋转 90° |
+| `"Hey Jarvis, turn right 30 degrees"` | 小海龟向右旋转 30° |
+| `"Hey Jarvis, turn to my direction"` | 小海龟朝向你的声音方向（DoA） |
 | `"Hey Jarvis, face me"` | 同上 |
-| `"Hey Jarvis, turn to 90"` | 乌龟旋转到绝对 90° |
-| `"Hey Jarvis, face 180 degrees"` | 乌龟旋转到绝对 180° |
-| `"Hey Jarvis, spin around"` | 乌龟完成一次 360° 旋转 |
+| `"Hey Jarvis, turn to 90"` | 小海龟旋转到绝对 90° |
+| `"Hey Jarvis, face 180 degrees"` | 小海龟旋转到绝对 180° |
+| `"Hey Jarvis, spin around"` | 小海龟做一次完整的 360° 旋转 |
 | `"Hey Jarvis, do a 360"` | 同上 |
-| `"Hey Jarvis, stop"` | 乌龟立即停止 |
+| `"Hey Jarvis, stop"` | 小海龟立即停止 |
 
 ---
 
@@ -415,11 +500,11 @@ reSpeaker Flex (USB)
 | `MIC_INDEX` | `1` | reSpeaker 的 PyAudio 设备索引 |
 | `WAKEWORD_MODEL` | `hey jarvis` | 唤醒词短语 |
 | `WAKEWORD_THRESHOLD` | `0.5` | 检测灵敏度（0.0–1.0，数值越低越灵敏） |
-| `WAKEWORD_COOLDOWN` | `2` | 唤醒词可再次触发前的秒数 |
-| `RECORDING_SECONDS` | `4` | 唤醒词触发后录音的时长 |
+| `WAKEWORD_COOLDOWN` | `2` | 唤醒词可再次触发前的冷却时间（秒） |
+| `RECORDING_SECONDS` | `4` | 唤醒词触发后录音时长 |
 | `SAMPLE_RATE` | `16000` | 音频采样率（Hz） |
 | `LLM_MODEL` | `llama-3.1-8b-instant` | 用于意图解析的 Groq LLM 模型 |
-| `STT_MODEL` | `whisper-large-v3-turbo` | 用于转录的 Groq Whisper 模型 |
+| `STT_MODEL` | `whisper-large-v3-turbo` | 用于转写的 Groq Whisper 模型 |
 | `TTS_MODEL` | `canopylabs/orpheus-v1-english` | Groq TTS 模型 |
 | `TTS_VOICE` | `autumn` | 语音输出所用的声音（`tara`、`leah`、`leo`、`dan`、`mia`） |
 
@@ -433,12 +518,12 @@ reSpeaker Flex (USB)
 - [ROS2 Humble](https://docs.ros.org/en/humble/) — 机器人中间件
 - [openwakeword](https://github.com/dscripka/openWakeWord) — 本地唤醒词检测
 - [Groq](https://groq.com/) — 超高速 Whisper STT、LLaMA LLM、Orpheus TTS
-- [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — ROS2 海龟模拟器
+- [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — ROS2 小海龟模拟器
 
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

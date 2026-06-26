@@ -1,6 +1,6 @@
 ---
 description: Recetario de Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — lectura/escritura del RTC PCF8563, estrategias de bajo consumo con deep-sleep, grabación de audio con micrófono PDM en tarjeta SD (E1001 / E1002 / E1003) y dibujo táctil capacitivo (solo E1003).
-title: 'Recetario de Arduino: RTC, Bajo Consumo, Audio y Táctil (reTerminal E Serie)'
+title: 'Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Serie)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals_2
 sidebar_position: 3
@@ -9,19 +9,29 @@ last_update:
   date: 05/27/2026
   author: Citric
 createdAt: '2026-05-27'
-updatedAt: '2026-05-27'
+updatedAt: '2026-05-30'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals_2/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Recetario de Arduino: RTC, Bajo Consumo, Audio y Táctil (reTerminal E Serie)
+# Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Serie)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" style={{width:600, height:'auto'}}/></div>
 
+:::tip Prueba las demos sin configurar un entorno de desarrollo
+Si quieres previsualizar rápidamente los resultados del proyecto o probar el firmware de demostración básico antes de configurar un entorno de desarrollo, abre el **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Puedes elegir un dispositivo compatible de la reTerminal E Serie y flashear el firmware de demostración directamente desde un navegador.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
 :::tip Otros recetarios en esta serie
-- **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino)** — renderizado de texto, gráficos e imágenes en la pantalla de papel electrónico.
+- **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino)** — representación de texto, gráficos e imágenes en la pantalla de tinta electrónica.
 - **[Arduino Cookbook: Onboard Peripherals](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals)** — LED, zumbador, botones, sensor SHT4x, monitor de batería, tarjeta microSD y la canalización de imágenes de la tarjeta SD.
 :::
 
@@ -29,16 +39,16 @@ import TabItem from '@theme/TabItem';
 
 Este es el segundo recetario de periféricos para la reTerminal E Serie. Mientras que el [primer recetario de periféricos](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals) cubre los periféricos básicos de E/S (LED, zumbador, botones, SHT4x, batería, tarjeta SD), esta página profundiza en cuatro temas más avanzados:
 
-- **Reloj en Tiempo Real (RTC)** — el chip RTC **PCF8563** integrado, respaldado por una pila tipo moneda CR1220, que mantiene la hora incluso cuando se retira la batería principal.
-- **Modos de Bajo Consumo** — deep sleep, light sleep y estrategias de activación por GPIO para extender la vida de la batería de días a meses.
+- **Reloj en tiempo real (RTC)** — el chip RTC **PCF8563** integrado, alimentado por una pila tipo moneda CR1220, que mantiene la hora incluso cuando se retira la batería principal.
+- **Modos de bajo consumo** — deep sleep, light sleep y estrategias de activación por GPIO para extender la vida de la batería de días a meses.
 - **Micrófono PDM** — captura de audio mediante el micrófono digital PDM integrado (solo E1001 / E1002 / E1003; el E1004 no tiene micrófono) y guardado de archivos WAV en la tarjeta microSD.
-- **Pantalla Táctil** — uso del panel táctil capacitivo integrado en el E1003 (modelo de 10,3") para dibujar puntos en la pantalla de papel electrónico. Solo el E1003 tiene panel táctil.
+- **Pantalla táctil** — uso del panel táctil capacitivo integrado en el E1003 (modelo de 10,3") para dibujar puntos en la pantalla de tinta electrónica. Solo el E1003 tiene panel táctil.
 
-Todos los ejemplos de este recetario provienen del repositorio [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D). Los ejemplos de RTC, bajo consumo y micrófono **no requieren instalación adicional de librerías** — todo utiliza las API integradas del ESP32. El ejemplo de táctil requiere la librería **Seeed_GFX**.
+Todos los ejemplos de este recetario provienen del repositorio [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D). Los ejemplos de RTC, bajo consumo y micrófono **no requieren instalar bibliotecas adicionales**: todo utiliza las API integradas del ESP32. El ejemplo de táctil requiere la biblioteca **Seeed_GFX**.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -92,9 +102,9 @@ Antes de ejecutar cualquiera de los ejemplos siguientes, ya deberías tener:
 - El **Arduino IDE** instalado con el **paquete de placas ESP32** (≥ 3.0 para el micrófono PDM) y la placa **XIAO_ESP32S3** seleccionada.
 - **PSRAM** configurada como **OPI PSRAM** y **Flash** configurada como **8 MB** en el menú Tools.
 - Un **cable de datos USB-C** funcional y el puerto serie correcto seleccionado.
-- Verificado que puedes grabar un sketch básico en el dispositivo — consulta la preparación del entorno en [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino#preparación-del-entorno) si aún no lo has hecho.
+- Verificado que puedes flashear un sketch básico al dispositivo; consulta la preparación del entorno en [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino#preparación-del-entorno) si aún no lo has hecho.
 
-Todos los sketches de este recetario imprimen información de depuración a través de `Serial1` en los pines **GPIO44 (RX) / GPIO43 (TX)** a **115200 baudios** — este es el puente USB-UART portador, **no** el USB-CDC `Serial` que el Arduino IDE abre automáticamente. Abre el Monitor Serie de Arduino y selecciona el puerto y la velocidad en baudios correspondientes para seguir la salida.
+Todos los sketches de este recetario imprimen información de depuración a través de `Serial1` en los pines **GPIO44 (RX) / GPIO43 (TX)** a **115200 baudios**; este es el puente USB-UART portador, **no** el USB-CDC `Serial` que el Arduino IDE abre automáticamente. Abre el Monitor Serie de Arduino y selecciona el puerto y la velocidad en baudios correspondientes para seguir la salida.
 
 ### Resumen de compatibilidad de hardware
 
@@ -147,11 +157,11 @@ No todas las funciones de este recetario están disponibles en los cuatro modelo
   </table>
 </div>
 
-## Reloj en Tiempo Real (RTC)
+## Reloj en tiempo real (RTC)
 
 Cada modelo de la reTerminal E Serie incluye un chip de reloj en tiempo real **PCF8563** de NXP integrado, con su propio cristal de 32,768 kHz y un portapilas para **batería tipo moneda CR1220** que mantiene el tiempo en marcha incluso cuando se retira o se agota por completo la batería principal.
 
-:::warning Batería no incluida — instálala tú mismo
+:::warning Batería no incluida: instálala tú mismo
 La pila tipo moneda CR1220 **no** se envía con el dispositivo. Debes comprar una batería CR1220 por separado e instalarla antes de que el RTC pueda conservar la hora entre ciclos de alimentación.
 :::
 
@@ -172,19 +182,19 @@ Desconecta el cable USB-C y asegúrate de que el dispositivo esté completamente
 
 **Paso 2 — Retira la tapa trasera**
 
-Retira los cuatro tornillos del panel posterior y levanta la tapa trasera para dejar la PCB al descubierto.
+Retira los cuatro tornillos del panel posterior y levanta la tapa trasera para dejar al descubierto la PCB.
 
 **Paso 3 — Localiza el portapilas**
 
-Encuentra el portapilas para la moneda CR1220 en la PCB (marcado como `BT2` o `CR1220`).
+Localiza el portapilas tipo moneda CR1220 en la PCB (marcado como `BT2` o `CR1220`).
 
 **Paso 4 — Inserta la batería**
 
-Coloca la batería CR1220 en el portapilas con el **lado positivo (+) hacia arriba**. Presiona suavemente hasta que encaje en su lugar.
+Coloca la batería CR1220 en el portapilas con el **lado positivo (+) hacia arriba**. Presiona suavemente hasta que encaje en su sitio.
 
 **Paso 5 — Vuelve a montar**
 
-Vuelve a colocar la tapa trasera y aprieta los cuatro tornillos. El RTC ahora tiene respaldo de batería y mantendrá la hora incluso cuando se desconecte la alimentación principal.
+Vuelva a colocar la tapa trasera y apriete los cuatro tornillos. El RTC ahora tiene respaldo de batería y mantendrá la hora incluso cuando se desconecte la alimentación principal.
 
 </TabItem>
 <TabItem value="e1003" label="E1003">
@@ -193,23 +203,23 @@ Vuelve a colocar la tapa trasera y aprieta los cuatro tornillos. El RTC ahora ti
 <iframe style={{width:'80%', aspectRatio:'16/9'}} src="https://files.seeedstudio.com/wiki/reterminal_e10xx/res/rtc_1003.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-**Paso 1 — Apaga el dispositivo**
+**Paso 1 — Apagar el dispositivo**
 
 Desconecta el cable USB-C y asegúrate de que el dispositivo esté completamente apagado.
 
-**Paso 2 — Retira la tapa trasera**
+**Paso 2 — Retirar la tapa trasera**
 
-Retira los tornillos del panel posterior y levanta la tapa trasera para dejar la PCB al descubierto.
+Retira los tornillos del panel trasero y levanta la tapa posterior para dejar al descubierto la PCB.
 
-**Paso 3 — Localiza el portapilas**
+**Paso 3 — Localizar el portapilas**
 
 Encuentra el portapilas tipo moneda CR1220 en la PCB (marcado como `BT2` o `CR1220`).
 
-**Paso 4 — Inserta la batería**
+**Paso 4 — Insertar la batería**
 
 Coloca la batería CR1220 en el portapilas con el **lado positivo (+) hacia arriba**. Presiona suavemente hasta que encaje en su lugar.
 
-**Paso 5 — Vuelve a montar**
+**Paso 5 — Volver a montar**
 
 Vuelve a colocar la tapa trasera y aprieta los tornillos. El RTC ahora tiene respaldo de batería y mantendrá la hora incluso cuando se desconecte la alimentación principal.
 
@@ -220,23 +230,23 @@ Vuelve a colocar la tapa trasera y aprieta los tornillos. El RTC ahora tiene res
 <iframe style={{width:'80%', aspectRatio:'16/9'}} src="https://files.seeedstudio.com/wiki/reterminal_e10xx/res/rtc_1004.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-**Paso 1 — Apaga el dispositivo**
+**Paso 1 — Apagar el dispositivo**
 
 Desconecta el cable USB-C y asegúrate de que el dispositivo esté completamente apagado.
 
-**Paso 2 — Retira la tapa trasera**
+**Paso 2 — Retirar la tapa trasera**
 
 Retira los tornillos alrededor del perímetro del panel trasero y levanta con cuidado la tapa posterior para dejar al descubierto la PCB.
 
-**Paso 3 — Localiza el portapilas**
+**Paso 3 — Localizar el portapilas**
 
 Encuentra el portapilas tipo moneda CR1220 en la PCB (marcado como `BT2` o `CR1220`).
 
-**Paso 4 — Inserta la batería**
+**Paso 4 — Insertar la batería**
 
 Coloca la batería CR1220 en el portapilas con el **lado positivo (+) hacia arriba**. Presiona suavemente hasta que encaje en su lugar.
 
-**Paso 5 — Vuelve a montar**
+**Paso 5 — Volver a montar**
 
 Vuelve a colocar la tapa trasera y aprieta todos los tornillos. El RTC ahora tiene respaldo de batería y mantendrá la hora incluso cuando se desconecte la alimentación principal.
 
@@ -269,7 +279,7 @@ Vuelve a colocar la tapa trasera y aprieta todos los tornillos. El RTC ahora tie
     </tr>
     <tr>
       <td>Cristal</td>
-      <td>32.768 kHz (pines OSCI / OSCO)</td>
+      <td>32,768 kHz (pines OSCI / OSCO)</td>
     </tr>
     <tr>
       <td>Batería de respaldo</td>
@@ -287,7 +297,7 @@ Vuelve a colocar la tapa trasera y aprieta todos los tornillos. El RTC ahora tie
 El sketch completo está disponible en el repositorio: [`examples/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/RTC_PCF8563/RTC_PCF8563.ino).
 
 <details>
-<summary>Haz clic para expandir el código completo de RTC_PCF8563.ino</summary>
+<summary>Haz clic para desplegar el código completo de RTC_PCF8563.ino</summary>
 
 ```cpp
 // ============================================================
@@ -740,7 +750,7 @@ El `loop()` lee el RTC una vez por segundo vía I2C e imprime la hora formateada
 |---|---|---|
 | **En tiempo de compilación** (recomendado) | `#define USE_COMPILE_TIME` | El preprocesador de C inserta `__DATE__` / `__TIME__` (el momento en que hiciste clic en Upload). Cero esfuerzo: solo compila y flashea. |
 | **Manual** | Comenta `USE_COMPILE_TIME`, rellena las constantes `INITIAL_*` | Escribes la fecha y hora exactas. Útil para entornos sin conexión. |
-| **Forzar sobrescritura** | `#define FORCE_SET_TIME` | Sobrescribe el RTC en **cada** arranque. Úsalo para recalibración, luego coméntalo y vuelve a flashear. |
+| **Forzar sobrescritura** | `#define FORCE_SET_TIME` | Sobrescribe el RTC en **cada** arranque. Úsalo para recalibrar, luego coméntalo y vuelve a flashear. |
 
 :::tip
 La bandera VL persiste entre ciclos de alimentación. Una vez que se ajusta la hora y la batería CR1220 está en buen estado, el PCF8563 sigue funcionando y los reinicios posteriores **no** la sobrescriben.
@@ -800,7 +810,7 @@ El ESP32-S3 admite varios estados de energía. Los dos más útiles para aplicac
     </tr>
     <tr>
       <td><strong>Deep Sleep</strong></td>
-      <td>Apagada</td>
+      <td>Apagado</td>
       <td>Apagado</td>
       <td>Perdida (excepto RTC)</td>
       <td>Encendido</td>
@@ -814,7 +824,7 @@ El ESP32-S3 admite varios estados de energía. Los dos más útiles para aplicac
 El sketch completo está disponible en el repositorio: [`examples/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/LowPower_DeepSleep/LowPower_DeepSleep.ino).
 
 <details>
-<summary>Haz clic para desplegar todo el código LowPower_DeepSleep.ino</summary>
+<summary>Haz clic para expandir todo el código de LowPower_DeepSleep.ino</summary>
 
 ```cpp
 // ============================================================
@@ -913,7 +923,7 @@ El botón de activación difiere entre modelos debido a la distribución de los 
 
 | Modelo | Pin de activación | `PIN_WAKE_BTN` | Notas |
 |---|---|---|---|
-| **E1001 / E1002 / E1003** | GPIO3 (KEY0) | `3` | Botón del lado derecho (Botón Verde en E1001/E1002) |
+| **E1001 / E1002 / E1003** | GPIO3 (KEY0) | `3` | Botón derecho (Botón Verde en E1001/E1002) |
 | **E1004** | GPIO4 (KEY0) | `4` | Botón de dirección derecho (panel frontal) |
 
 Descomenta la línea correcta en la sección USER CONFIGURATION antes de flashear.
@@ -955,7 +965,7 @@ Un patrón común para aplicaciones de ePaper es:
 3. **Leer sensores** (SHT4x, batería, etc.).
 4. **Conectarse a Wi-Fi** y obtener datos, si es necesario.
 5. **Actualizar la pantalla de ePaper** con la nueva información.
-6. **Volver a deep sleep** hasta la siguiente activación programada.
+6. **Volver a deep sleep** hasta el siguiente despertar programado.
 
 Para añadir un **despertar por temporizador** además del despertar por botón, simplemente añade:
 
@@ -968,10 +978,10 @@ antes de llamar a `esp_deep_sleep_start()`. Ambas fuentes de activación pueden 
 ## Micrófono (E1001 / E1002 / E1003)
 
 :::caution E1004 no tiene micrófono
-El reTerminal **E1004** no incluye un micrófono integrado. Los ejemplos de esta sección se aplican solo a **E1001, E1002 y E1003**. Si estás usando un E1004, sáltate esta sección.
+El reTerminal **E1004** no incluye un micrófono integrado. Los ejemplos de esta sección se aplican solo a **E1001, E1002 y E1003**. Si estás usando un E1004, omite esta sección.
 :::
 
-Los reTerminal E1001 / E1002 / E1003 incluyen un micrófono digital integrado **PDM (Pulse Density Modulation)**. Los micrófonos PDM generan un flujo sigma-delta de 1 bit que es decodificado por el periférico PDM integrado del ESP32-S3, por lo que no se necesita un chip códec externo.
+Los reTerminal E1001 / E1002 / E1003 incluyen un micrófono digital integrado **PDM (Pulse Density Modulation)**. Los micrófonos PDM generan un flujo sigma-delta de 1 bit que es decodificado por el periférico PDM integrado del ESP32-S3; no se necesita ningún chip códec externo.
 
 ### Descripción general del hardware
 
@@ -1000,10 +1010,10 @@ Los reTerminal E1001 / E1002 / E1003 incluyen un micrófono digital integrado **
   </table>
 </div>
 
-Los pines son los mismos en E1001, E1002 y E1003. El pin de habilitación de alimentación del micrófono (`GPIO38`) controla un interruptor de carga (TPS22916CYFPR): **debes** ponerlo en HIGH antes de grabar y puedes ponerlo en LOW después para ahorrar energía.
+Los pines son los mismos en E1001, E1002 y E1003. El pin de habilitación de alimentación del micrófono (`GPIO38`) controla un interruptor de carga (TPS22916CYFPR); **debes** ponerlo en HIGH antes de grabar y puedes ponerlo en LOW después para ahorrar energía.
 
 :::note Se requiere Arduino ESP32 ≥ 3.0
-El sketch utiliza la API PDM-RX de ESP-IDF 5.x (`driver/i2s_pdm.h`), que solo está disponible en la versión 3.0 o superior del core de Arduino ESP32. Asegúrate de que el paquete de tu placa esté actualizado.
+El sketch utiliza la API ESP-IDF 5.x PDM-RX (`driver/i2s_pdm.h`), que solo está disponible en la versión 3.0 o superior del core Arduino ESP32. Asegúrate de que el paquete de tu placa esté actualizado.
 :::
 
 ### Sketch completo: MicRecordToSD
@@ -1414,39 +1424,39 @@ void loop()
 1. **Parpadeo de arranque**: el LED integrado parpadea 3 veces para confirmar el encendido.
 2. **Montar la tarjeta SD**: enciende la ranura SD mediante `PIN_SD_EN`, inicializa el bus HSPI y llama a `SD.begin()`.
 3. **Inicializar el micrófono PDM**: este es un proceso de 4 pasos:
-   - **Encender** el micrófono mediante `PIN_MIC_PWR_EN` (GPIO38): pone el interruptor de carga TPS22916 en nivel ALTO.
+   - **Encender** el micrófono mediante `PIN_MIC_PWR_EN` (GPIO38): pone en HIGH el interruptor de carga TPS22916.
    - **Crear un canal I2S** usando `i2s_new_channel()`.
-   - **Configurar el modo PDM-RX** con `i2s_channel_init_pdm_rx_mode()`: establece la frecuencia de muestreo, la profundidad de bits (16 bits), el modo mono y los pines GPIO.
-   - **Habilitar y calentar**: `i2s_channel_enable()` inicia el reloj y luego se leen y descartan 3 búferes DMA para permitir que el filtro de decimación sigma-delta se estabilice.
+   - **Configurar el modo PDM-RX** con `i2s_channel_init_pdm_rx_mode()` — establece la frecuencia de muestreo, la profundidad de bits (16 bits), el modo mono y los pines GPIO.
+   - **Habilitar y calentar** — `i2s_channel_enable()` inicia el reloj, luego se leen y descartan 3 búferes DMA para permitir que el filtro de decimación sigma-delta se estabilice.
 
 **Bucle de grabación (`loop()`):**
 
-1. **Antirrebote del botón**: lee KEY0 con una ventana de antirrebote de 50 ms. En flanco descendente (pulsado):
+1. **Antirrebote del botón**: lee KEY0 con una ventana de antirrebote de 50 ms. En flanco descendente (presionado):
    - Si no está grabando → **inicia** la grabación (crea el archivo WAV, escribe una cabecera provisional).
    - Si está grabando → **detiene** la grabación (reescribe la cabecera con el tamaño real, cierra el archivo).
-2. **Captura de audio**: `i2s_channel_read()` lee un búfer DMA (512 muestras = 1024 bytes) a la vez con un tiempo de espera de 200 ms. Los datos se escriben directamente en la tarjeta SD.
-3. **Parada automática**: si se alcanza `MAX_RECORD_SECS`, la grabación se detiene automáticamente.
-4. **Parpadeo del LED**: el LED parpadea a intervalos de 500 ms mientras la grabación está activa.
+2. **Captura de audio** — `i2s_channel_read()` lee un búfer DMA (512 muestras = 1024 bytes) a la vez con un tiempo de espera de 200 ms. Los datos se escriben directamente en la tarjeta SD.
+3. **Parada automática** — si se alcanza `MAX_RECORD_SECS`, la grabación se detiene automáticamente.
+4. **Parpadeo del LED** — el LED parpadea a intervalos de 500 ms mientras la grabación está activa.
 
 ### Configuración específica del modelo
 
-El sketch requiere que descomentes **una** `#define` en la sección USER CONFIGURATION:
+El sketch requiere que descomentes **una** directiva `#define` en la sección USER CONFIGURATION:
 
 | Modelo | `#define` | Pin SD_EN | Pin LED |
 |---|---|---|---|
 | E1001 / E1002 | `DEVICE_E1001_E1002` | GPIO16 | GPIO6 |
 | E1003 | `DEVICE_E1003` | GPIO39 | GPIO16 |
 
-### Preparar la tarjeta SD
+### Preparación de la tarjeta SD
 
-Para obtener instrucciones sobre cómo insertar y formatear la tarjeta microSD, consulta la sección **[Uso de la tarjeta MicroSD](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals#uso-de-la-tarjeta-microsd)** en el primer libro de recetas de periféricos.
+Para obtener instrucciones sobre cómo insertar y formatear la tarjeta microSD, consulta la sección **[Using the MicroSD Card](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals#using-the-microsd-card)** en el primer libro de recetas de periféricos.
 
 :::note
-La reTerminal E Serie admite tarjetas microSD de hasta **64 GB**, formateadas como **FAT32**.
+La reTerminal E Serie es compatible con tarjetas microSD de hasta **64 GB**, formateadas como **FAT32**.
 :::
 
 :::tip E1004 se envía con una tarjeta SD preinstalada
-La reTerminal **E1004** viene con una tarjeta microSD ya insertada. No necesitas comprar ni instalar una por separado. Para otros modelos (E1001 / E1002 / E1003), debes insertar una tarjeta tú mismo.
+La reTerminal **E1004** viene con una tarjeta microSD ya insertada. No necesitas comprar ni instalar una por separado. Para otros modelos (E1001 / E1002 / E1003), debes insertar tú mismo una tarjeta.
 :::
 
 Preparación rápida:
@@ -1858,7 +1868,7 @@ void loop()
 
 **Secuencia de inicialización (`setup()`):**
 
-1. **Inicializar la pantalla ePaper** — `setupDisplay()` comprueba la disponibilidad de PSRAM (requerida para el búfer de fotogramas de 1872×1404), crea el objeto EPaper y cambia al **modo de escala de grises de 16 niveles** para un dibujo más suave.
+1. **Inicializar la pantalla ePaper** — `setupDisplay()` comprueba la disponibilidad de PSRAM (requerida para el búfer de imagen de 1872×1404), crea el objeto EPaper y cambia al **modo de escala de grises de 16 niveles** para un dibujo más suave.
 2. **Inicializar I2C** a 400 kHz en GPIO19/GPIO20 — el mismo bus utilizado por el RTC PCF8563 y el sensor SHT4x.
 3. **Reiniciar y sondear el GT911** — el controlador táctil se reinicia por hardware mediante GPIO48 y luego se sondea en dos posibles direcciones I2C (0x5D y 0x14). El sketch detecta automáticamente a qué dirección responde el chip.
 4. **Leer la resolución táctil** — consulta los registros internos max-X/max-Y del GT911 para obtener el rango de coordenadas táctiles.
@@ -1867,14 +1877,14 @@ void loop()
 **Bucle de sondeo táctil (`loop()`):**
 
 1. **Sondear cada 30 ms** — lee el registro de estado del GT911 para comprobar si hay un nuevo evento táctil disponible.
-2. **Leer las coordenadas táctiles** — extrae las coordenadas X/Y sin procesar de los registros de datos de puntos del GT911 y luego las mapea a coordenadas de pantalla usando `mapTouchToDisplay()` (que tiene en cuenta cualquier diferencia entre la resolución táctil y la resolución de la pantalla).
+2. **Leer las coordenadas táctiles** — extrae las coordenadas X/Y en bruto de los registros de datos de puntos del GT911 y luego las mapea a coordenadas de pantalla usando `mapTouchToDisplay()` (que tiene en cuenta cualquier diferencia entre la resolución táctil y la resolución de la pantalla).
 3. **Antirrebote y comprobación de distancia** — solo se dibuja un nuevo punto si:
    - Han pasado al menos 450 ms desde el último dibujo, **o**
    - El punto táctil se ha movido al menos 12 píxeles desde el último punto dibujado.
-4. **Dibujar en la pantalla ePaper** — `fillCircle()` dibuja un punto negro sólido, `drawCircle()` añade un anillo de halo gris y luego `update()` envía el búfer de fotogramas al panel ePaper.
+4. **Dibujar en la pantalla ePaper** — `fillCircle()` dibuja un punto negro sólido, `drawCircle()` añade un anillo de halo gris y luego `update()` envía el búfer de imagen al panel ePaper.
 
-:::note latencia de refresco del ePaper
-Cada llamada a `update()` desencadena un refresco completo del ePaper, que tarda alrededor de **1–2 segundos** en el panel E1003. Esto es normal: el ePaper no es una pantalla de refresco rápido. La lógica de antirrebote (`DRAW_MIN_MS = 450 ms`) está diseñada para evitar saturar el panel con solicitudes de refresco.
+:::note ePaper refresh latency
+Cada llamada a `update()` desencadena una actualización completa de la pantalla ePaper, lo que tarda alrededor de **1–2 segundos** en el panel E1003. Esto es normal: ePaper no es una pantalla de actualización rápida. La lógica de antirrebote (`DRAW_MIN_MS = 450 ms`) está diseñada para evitar saturar el panel con solicitudes de actualización.
 :::
 
 ### Requisitos previos
@@ -1882,8 +1892,8 @@ Cada llamada a `update()` desencadena un refresco completo del ePaper, que tarda
 Antes de ejecutar este sketch:
 
 1. Instala la biblioteca **Seeed_GFX** mediante el Administrador de Bibliotecas de Arduino.
-2. Configura **PSRAM** como **OPI PSRAM** en el menú Tools — sin PSRAM, el búfer de pantalla no se puede asignar y `display_.width()` devolverá 0.
-3. Configura **Flash Size** en **8 MB**.
+2. Establece **PSRAM** en **OPI PSRAM** en el menú Tools — sin PSRAM, el búfer de pantalla no se puede asignar y `display_.width()` devolverá 0.
+3. Establece **Flash Size** en **8 MB**.
 4. Selecciona la placa **XIAO_ESP32S3**.
 
 ### Salida esperada
@@ -1929,7 +1939,7 @@ Para confirmar que el deep sleep está realmente activo, revisa el registro seri
 
 **Escenario:** Placa completamente nueva o se acaba de reemplazar la batería CR1220.
 
-No necesitas cambiar nada: simplemente carga el sketch tal cual.
+No necesitas cambiar nada: simplemente sube el sketch tal como está.
 
 En una placa completamente nueva, el indicador interno VL (Voltage Low) del PCF8563 siempre es `1` porque la batería nunca ha alimentado el reloj. El sketch lee VL=1 al inicio y escribe automáticamente la marca de tiempo de compilación en el RTC.
 
@@ -1956,7 +1966,7 @@ La batería CR1220 mantiene el PCF8563 en marcha mientras la alimentación princ
 
 **Escenario:** La hora del RTC es incorrecta y necesita ser recalibrada.
 
-**Paso 1 — Forzar sobrescritura.** Quita el comentario de `FORCE_SET_TIME` y luego carga:
+**Paso 1 — Forzar sobrescritura.** Quita el comentario de `FORCE_SET_TIME` y luego sube:
 
 ```cpp
 #define USE_COMPILE_TIME
@@ -1965,7 +1975,7 @@ La batería CR1220 mantiene el PCF8563 en marcha mientras la alimentación princ
 
 → Haz clic en **Upload** → Ahora la hora se fuerza a la marca de tiempo de compilación.
 
-**Paso 2 — Desactivar la sobrescritura forzada.** Inmediatamente vuelve a comentarlo y carga de nuevo:
+**Paso 2 — Desactivar la sobrescritura forzada.** Inmediatamente vuelve a comentarla y sube de nuevo:
 
 ```cpp
 #define USE_COMPILE_TIME

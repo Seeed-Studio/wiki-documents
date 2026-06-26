@@ -2,7 +2,7 @@
 description: ....
 title: reBot Arm Jetson バンドル
 tags:
-  - reBot Arm 
+  - reBot Arm
   - reComputer Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /rebot_arm_jetson_bundle
@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-05-18'
+updatedAt: '2026-06-09'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
 ---
 
@@ -19,19 +19,18 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
 
 ## はじめに
 
-新時代の Physical AI のためのオールインワン具現化 AI 開発プラットフォーム。
-生成 AI が単に「世界を理解する」段階から、積極的に「世界とインタラクトする」段階へと進化するにつれ、ロボティクス開発は新たな時代、すなわち Physical AI の時代に突入しています。
-開発者、研究者、教育者が具現化 AI の世界へ踏み出すスピードを加速させるため、Seeed Studio は完全オープンソースの reBot Arm B601 と最先端の NVIDIA Jetson Developer Kit を組み合わせ、強力な次世代ロボティクス開発バンドルを提供します。
+新時代の Physical AI のためのオールインワン Embodied AI 開発プラットフォームです。
+生成 AI が単に「世界を理解する」段階から、積極的に「世界とインタラクションする」段階へと進化するにつれ、ロボティクス開発は新たな時代 ― Physical AI ― に突入しています。
+開発者、研究者、教育者が Embodied AI の世界へ踏み出すスピードを加速させるため、Seeed Studio は完全オープンソースの reBot Arm B601 と最先端の NVIDIA Jetson Developer Kit を組み合わせ、強力な次世代ロボティクス開発バンドルを提供します。
 
-このバンドルは、高精度なロボットマニピュレーション機能だけでなく、マルチモーダル AI モデルや Vision-Language Model（VLM）、リアルタイムロボット推論をエッジでローカル実行するために必要な膨大な AI 計算能力も提供します。
+このバンドルは、高精度なロボットマニピュレーション機能だけでなく、マルチモーダル AI モデルや Vision-Language Model（VLM）、リアルタイムロボット推論をエッジでローカル実行するために必要な大規模 AI 演算能力も提供します。
 学習・研究から迅速なプロトタイピング、実運用まで、次世代のインテリジェントロボットを構築するための完全なプラットフォームです。
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
-        <th> reBot Arm B601 </th>
-        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
-        <th> reComputer Classic J3011 </th>
+        <th> reBot Arm B601 DM</th>
+        <th> reBot Arm B601 RS </th>
     </tr>
     <tr>
         <td>
@@ -39,6 +38,47 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
                 <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg" style={{width:400, height:'auto'}}/>
             </div>
         </td>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-100019336--rebot-arm-b601-rs-assembled-kit-with-gripper--rebot-arm-b601-rs.jpg" style={{width:400, height:'auto'}}/>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/rebot_b601_dm_getting_started/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> クイックスタート </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+                    </a>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/rebot_b601_rs_getting_started/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> クイックスタート </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Assembled-Kit-with-Gripper-p-6865.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+                    </a>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
+        <th> reComputer Classic J3011 </th>
+    </tr>
+    <tr>
         <td>
             <div style={{textAlign:'center'}}>
                 <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-kit-3.png" style={{width:400, height:'auto'}}/>
@@ -52,47 +92,31 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
     </tr>
     <tr>
         <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/rebot_b601_dm_getting_started/">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> クイックスタート </font></span></strong>
-                </a>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/quick_start.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> クイックスタート </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+                    </a>
+                </div>
             </div>
         </td>
         <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/quick_start.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> クイックスタート </font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/reComputer_J30_40_with_Jetson_getting_start/">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> クイックスタート </font></span></strong>
-                </a>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-                </a>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/reComputer_J30_40_with_Jetson_getting_start/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> クイックスタート </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+                    </a>
+                </div>
             </div>
         </td>
     </tr>
@@ -105,25 +129,25 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
 
 ## なぜこのバンドルなのか？
 
-完全な具現化 AI 開発プラットフォーム
+完全な Embodied AI 開発プラットフォーム
 
-従来のロボティクス開発には、しばしば次のような制約があります：
+従来のロボティクス開発には、しばしば次のような制約があります。
 
 1. クローズドなハードウェアエコシステム
-2. 不十分な AI 計算能力
+2. 不十分な AI 演算能力
 3. 断片化されたソフトウェアスタック
 4. 高い開発ハードル
 5. 実世界の Physical AI シナリオの検証が困難
 
 reBot Arm × Jetson バンドルは、これらの課題を解決するために設計されています。
 
-このバンドルにより、次のものが得られます：
+このバンドルにより、次のものが得られます。
 
 1. 完全オープンソースの 6+1 自由度ロボットアームプラットフォーム
-2. GPU によって駆動される NVIDIA のフラッグシップエッジ AI コンピューティングプラットフォーム
+2. GPU 搭載の NVIDIA フラッグシップエッジ AI コンピューティングプラットフォーム
 3. ROS1、ROS2、Isaac Sim、LeRobot のネイティブサポート
-4. マルチモーダル AI および生成 AI ワークフローへの対応
-5. 教育・研究・AI ロボティクスプロトタイピングのための統合環境
+4. マルチモーダル AI と生成 AI ワークフローへの対応
+5. 教育・研究・AI ロボティクス試作のための統合環境
 
 ## セットアップ
 
@@ -147,13 +171,13 @@ uv pip install motorbridge
 
 ### WebUI
 
-Nvidia Jetson 上で次のコマンドを実行します：
+Nvidia Jetson 上で次のコマンドを実行します。
 
 ```bash
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
 ```
 
-その後、ブラウザで `https://rebot-devarm.w0x7ce.eu/` を開くと、次のページが表示されます。このインターフェースから、モーターパラメータの調整、ロボットアームの状態確認、その他の操作を行うことができます。
+その後、ブラウザで `https://motorbridge.github.io/motorbridge-studio/` を開くと、次のページが表示されます。このインターフェースから、モーターパラメータの調整、ロボットアームの状態確認、その他の操作を行うことができます。
 
 <div align="center">
     <img width={900}
@@ -212,7 +236,7 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
             <img
                 src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png"
-                alt="Visual Grasping Demo for reBot Arm B601-DM"
+                alt="reBot Arm B601-DM 用ビジュアル把持デモ"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
             />
         </div>
@@ -238,13 +262,13 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
             <img
                 src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
-                alt="Control reBot Arm with NemoClaw on Nvidia Jetson Thor"
+                alt="Nvidia Jetson Thor 上の NemoClaw で reBot Arm を制御"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
             />
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Nvidia Jetson Thor 上で NemoClaw を使って reBot Arm を制御
+                Nvidia Jetson Thor 上の NemoClaw で reBot Arm を制御
             </h3>
         </div>
     </a>
@@ -252,7 +276,7 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

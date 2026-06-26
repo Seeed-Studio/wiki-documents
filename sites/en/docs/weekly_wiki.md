@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 06/08/2026
+  date: 06/22/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-06-08'
+updatedAt: '2026-06-22'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,73 +18,117 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is June 8th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is June 22nd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [reCamera Pro Quick Start Guide](https://wiki.seeedstudio.com/recamera_pro_getting_started/)
+### [reBot Arm B601-DM GraspNet Visual Grasping on Jetson](https://wiki.seeedstudio.com/rebot_arm_b601_dm_graspnet_visual_grasping/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/graspnet/front-graspnet.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide will assist you in completing the hardware connection, logging into the device Web interface, configuring the wireless network, and troubleshooting common connection failures.
+This wiki explains how to deploy the **reBot Arm B601-DM visual grasping demo** on NVIDIA Jetson. The demo combines an RGB-D camera, YOLO instance segmentation, GraspNet 6-DoF grasp pose estimation, eye-in-hand calibration, and real robot control, so the arm can select and grasp common objects on a table.
 
 </div>
 
-### [GPIO controlling reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_gpio_control/)
+### [Voice Control reBot Arm B601 by Nvidia Jetson Thor](https://wiki.seeedstudio.com/voice_control_rebot_arm/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4withXIAOESP32S3.jpg" alt="pir" width={500} height="auto" /></p>
+<div class="video-container">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/V1_ksIhJgkQ" title="Voice Control reBot Arm B601 by Nvidia Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to read and control GPIO pins on the XVF3800 voice processor using the I2C interface. You’ll learn how to read GPI and GPO pin statuses, understand GPIO mappings, and identify their purpose.
+Large Language Models (LLMs) are making robotic systems more intuitive by enabling natural language interaction. Combined with robotic vision and grasp planning, users can control robots using simple voice commands. In this tutorial, we will deploy a complete voice-controlled robotic grasping system on the NVIDIA Jetson Thor platform.
 
 </div>
 
-### [YOLO11n Edge Benchmarking on reCamera](https://wiki.seeedstudio.com/recamera_benchmarking/)
+### [Fine-tune GR00T N1.7 for reBot Arm and Deploy on Jetson Thor](https://wiki.seeedstudio.com/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-With the continuous deepening of edge AI scenarios, how to run the latest generation of vision models under extremely limited power consumption has become the core demand of developers. This WIKI will hardcore demonstrate the baseline performance (Benchmark) of **reCamera** when deploying the **YOLO11n** model. Here, you will see how reCamera smoothly drives the YOLO11n object detection and instance segmentation models with only **1.5W** of power consumption.
+This wiki explains how to **fine-tune NVIDIA Isaac GR00T N1.7** for the **reBot Arm B601 DM** and deploy it on **reComputer Robotics J601** using **TensorRT acceleration**.
 
 </div>
 
-### [Work with PlatformIO for ePaper Displays](https://wiki.seeedstudio.com/epaper_work_with_platformio/)
+### [Getting Started with LeRobot-based reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/248.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to set up and configure PlatformIO for Seeed ePaper displays. You’ll learn how to install PlatformIO in Visual Studio Code, create a PlatformIO project, configure platformio.ini for compatible Seeed ePaper devices, add the Seeed_GFX library, and generate the correct driver.h file for your board and screen combination.
+[reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/) is an open-source robotic arm project launched by Seeed, dedicated to lowering the threshold for learning embodied intelligence. We open-source all structural designs and code without reservation, making robotics technology accessible to everyone. This wiki provides a complete guide for reBot Arm B601-RS to implement data collection and training within the LeRobot framework.
 
 </div>
 
-### [SenseCraft AI with reSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_sensecraft/)
+### [reBot Arm B601-RS Visual Grasping Demo](https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-SenseCraft AI is Seeed Studio's no-code/low-code AI platform that simplifies deploying pre-trained artificial intelligence models to edge devices such as the reSpeaker XVF3800. This guide focuses on configuring the reSpeaker XVF3800 for wakeword detection using the custom trigger "Lumio," enabling voice-activated control for your projects without writing complex code. With SenseCraft AI, you can quickly test, preview, and integrate wakeword events into your hardware workflows. The platform also allows you to create and upload your own custom models for detecting specific sound events and custom wakewords, giving you full flexibility to tailor voice interactions to your unique application needs.
+YOLO is a widely used family of real-time object detection models that can localize and classify targets in a single forward pass. This tutorial uses YOLO, an RGB-D depth camera, and the reBot Arm B601-RS to build a working desktop visual grasping demo, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
 
 </div>
 
-### [Migrate /home Data from Jetson Orin Nano Developer Kit to reComputer](https://wiki.seeedstudio.com/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer/)
+### [reBot Arm B601-RS ROS2 Integration Guide](https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/ros2/MoveIt2_RS.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki shows how to use the [reComputer Classic backup to Super migration project](https://github.com/jjjadand/reComputer_classic-backup-to-super.git) to migrate only `/home` from the source Jetson Orin Nano Developer Kit to a target reComputer. In this guide, [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) are used as target examples. Flash the target reComputer with its matching Seeed JetPack 6 BSP first, then restore the `/home` package on top of that clean reComputer system.
+This tutorial shows how to control the reBot Arm B601-RS through the ROS2 workspace `rebotarm_ros2`. The workspace wraps the `reBotArm_control_py` Python SDK, including Pinocchio-based inverse kinematics, trajectory planning, and gravity compensation, into ROS2 topics, services, and actions. This makes it easier to use upper-level planning, RViz visualization, gravity compensation, gripper control, and custom application development.
 
 </div>
 
-### [Use an SPI Display on reComputer J4012 Classic](https://wiki.seeedstudio.com/jetson_spi_getting_start/)
+### [Getting Started with Pinocchio and MeshCat for reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki introduces how to connect and drive an SPI display on the Seeed reComputer J4012 Classic. It covers the basic workflow of using an SPI display through the 40-pin header, including hardware wiring, SPI interface configuration, device node checking, dependency installation, compiling a C++ demo, and running a simple display test.
+[Pinocchio](https://github.com/stack-of-tasks/pinocchio) is an open-source library for robot dynamics analysis and optimization. It provides efficient forward/inverse kinematics, dynamics computation, and trajectory planning. [MeshCat](https://github.com/rdeits/meshcat) is a web-based 3D visualization tool that can display robot states and motion trajectories in real time. This project combines Pinocchio's powerful computation capabilities with MeshCat's intuitive visualization, providing a complete set of kinematics analysis and debugging tools for reBot Arm B601-RS.
+
+</div>
+
+### [Wio-LR2021 Introduction](https://wiki.seeedstudio.com/wio_lr2021_introduction/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-LR2021/img/1-100058045-Seeed-Studio-Wio-LR2021-Wireless-module-masked.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The **Wio-LR2021 Wireless Module** is a next-generation, multi-band wireless transceiver module powered by Semtech's fourth-generation LR2021 chipset. It integrates **Sub-GHz (863-928MHz)**, and **2.4GHz ISM** operation into a single compact subsystem, eliminating the need for multiple radio designs across regional and application boundaries.
+
+</div>
+
+### [Update LR1110 Firmware on Wio Tracker 1110](https://wiki.seeedstudio.com/update_internal_lr1110_firmware/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The Wio Tracker 1110 development board is built around the Wio-WM1110 wireless module, which integrates Semtech’s LR1110 LoRa® transceiver and a multi-purpose radio front‑end for geolocation. This guide explains how to update the firmware on the LR1110 chip embedded in the Wio Tracker 1110 using the official Semtech LR11xx Updater tool.
+
+</div>
+
+### [PoE Camera Usage on reServer Industrial](https://wiki.seeedstudio.com/reserver_industrial_poe_camera_usage/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer-Industrial/5.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+reServer Industrial is designed as an edge AI NVR with **4 PoE PSE Ethernet ports (LAN1–LAN4)** and **1 uplink port (LAN0)**. You can power and connect **network IP cameras** (RTSP/ONVIF) and **industrial PoE cameras** directly over a single Ethernet cable — no separate power adapter required.
+
+</div>
+
+### [Deploy TensorRT Edge-LLM on Jetpack6.2](https://wiki.seeedstudio.com/deploy_tensorrt_edge_llm_on_jetpack6.2/)
+
+<div style={{ textAlign: "justify" }}>
+
+This Wiki explains how to deploy TensorRT Edge-LLM on JetPack 6.2, including model quantization, ONNX export, TensorRT engine generation, and efficient LLM inference on NVIDIA Jetson devices.
 
 </div>
 
@@ -228,5 +272,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.5.18th](/Seeed_Elderly/weekly_wiki/2026/wiki260518)
 - [weekly wiki on 2026.5.25th](/Seeed_Elderly/weekly_wiki/2026/wiki260525)
 - [weekly wiki on 2026.6.01st](/Seeed_Elderly/weekly_wiki/2026/wiki260601)
+- [weekly wiki on 2026.6.08th](/Seeed_Elderly/weekly_wiki/2026/wiki260608)
+- [weekly wiki on 2026.6.15th](/Seeed_Elderly/weekly_wiki/2026/wiki260615)
 
 </details>

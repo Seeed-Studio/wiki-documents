@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-05-19'
+updatedAt: '2026-06-09'
 url: https://wiki.seeedstudio.com/rebot_arm_jetson_bundle/
 ---
 
@@ -29,9 +29,8 @@ It is a complete platform for building the next wave of intelligent robots — f
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
-        <th> reBot Arm B601 </th>
-        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
-        <th> reComputer Classic J3011 </th>
+        <th> reBot Arm B601 DM</th>
+        <th> reBot Arm B601 RS </th>
     </tr>
     <tr>
         <td>
@@ -39,6 +38,47 @@ It is a complete platform for building the next wave of intelligent robots — f
                 <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg" style={{width:400, height:'auto'}}/>
             </div>
         </td>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-100019336--rebot-arm-b601-rs-assembled-kit-with-gripper--rebot-arm-b601-rs.jpg" style={{width:400, height:'auto'}}/>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Quick Start </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    </a>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Quick Start </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Assembled-Kit-with-Gripper-p-6865.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    </a>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
+        <th> reComputer Classic J3011 </th>
+    </tr>
+    <tr>
         <td>
             <div style={{textAlign:'center'}}>
                 <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-kit-3.png" style={{width:400, height:'auto'}}/>
@@ -52,47 +92,31 @@ It is a complete platform for building the next wave of intelligent robots — f
     </tr>
     <tr>
         <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Quick Start </font></span></strong>
-                </a>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/quick_start.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Quick Start </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    </a>
+                </div>
             </div>
         </td>
         <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/quick_start.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Quick Start </font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/reComputer_J30_40_with_Jetson_getting_start/">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Quick Start </font></span></strong>
-                </a>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-                </a>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/reComputer_J30_40_with_Jetson_getting_start/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Quick Start </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    </a>
+                </div>
             </div>
         </td>
     </tr>
@@ -153,7 +177,7 @@ run this command on Nvidia Jetson:
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
 ```
 
-Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see the following page. From this interface, you can adjust motor parameters, check the status of the robotic arm, and perform other operations.
+Then, Open `https://motorbridge.github.io/motorbridge-studio/` in your browser, and you will see the following page. From this interface, you can adjust motor parameters, check the status of the robotic arm, and perform other operations.
 
 <div align="center">
     <img width={900}
