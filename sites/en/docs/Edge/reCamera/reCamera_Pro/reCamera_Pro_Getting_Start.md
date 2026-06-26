@@ -8,7 +8,7 @@ keywords:
   - YOLO
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_getting_started
-sku: 
+sku: null
 sidebar_position: 12
 last_update:
   date: 06/01/2026
