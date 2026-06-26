@@ -47,10 +47,10 @@ Wifi Halow 是 reCamera 的一个无线网络模块，它允许您将 reCamera �
 ![拆掉后盖的reCamera](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/reCamera_uncover.jpg)
 
 安装教程视频：
-<video 
-  src="https://github.com/6zsz6/seeed_wiki_video/blob/main/Wifi_Halow%E5%AE%89%E8%A3%85%E8%A7%86%E9%A2%91.mp4" 
-  controls 
-  width="100%" 
+<video
+  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/Wifi_Halow_install.mp4"
+  controls
+  width="100%"
   preload="metadata">
   您的浏览器不支持播放该视频。
 </video>

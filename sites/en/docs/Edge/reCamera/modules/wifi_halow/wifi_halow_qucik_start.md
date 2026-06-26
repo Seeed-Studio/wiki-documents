@@ -47,13 +47,14 @@ Then you need to prepare a reCamera with the back cover removed, as shown in the
 ![reCamera with back cover removed](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/reCamera_uncover.jpg)
 
 Installation tutorial video:
-<video 
-  src="https://github.com/6zsz6/seeed_wiki_video/blob/main/Wifi_Halow%E5%AE%89%E8%A3%85%E8%A7%86%E9%A2%91.mp4" 
-  controls 
-  width="100%" 
+<video
+  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/Wifi_Halow_install.mp4"
+  controls
+  width="100%"
   preload="metadata">
   Your browser does not support playing this video.
 </video>
+
 
 
 :::note Note
