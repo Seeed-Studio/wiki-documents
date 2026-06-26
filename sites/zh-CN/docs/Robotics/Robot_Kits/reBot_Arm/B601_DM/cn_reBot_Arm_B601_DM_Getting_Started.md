@@ -193,6 +193,22 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 
 更多功能可以从我们视频中学习。
 
+## 关于电源
+
+  1. 机械臂在发货时并未配备电源/默认情况下不带电源。您可自行连接电池，或选购一款我们开源的[24V 14.6A MeanWell电源](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html)供应器。
+
+  <div align="center">
+    <img width={800}
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100029903-gallery-6_1.jpg" />
+</div>
+
+  2. 选择我们开源的24V14.6AMeanWell电源外壳进行自组装，文字步骤和BOM在[github仓库](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM)中开源（只推荐有过相关电源组装经验的开发者使用）
+  组装参考视频：
+  
+  <div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116798867506587&bvid=BV1mLjm6xEzn&cid=39341657580&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## 常见问题
   1. 电机一启动就有很大声的异响？
     - 可能是在写入ID的过程中不小心点了参数标定，这会导致电机原本出厂的转动惯量等参数被破坏。你可以用[DM_Tools_v.1.8.0.1.exe（仅支持 Windows 系统）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe)上位机将同型号正常的电机参数导出，然后再导入到异常的电机后，修改相应的CANID，点击写入参数后继续执行零点校准的流程。
