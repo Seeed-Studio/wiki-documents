@@ -162,6 +162,7 @@ sudo chmod 666 /dev/ttyACM0
 # Or set CAN device permissions (e.g., can0)
 sudo chmod 666 /dev/can0
 ```
+:::
 
 ### Single Motor Control Console (`0x01damiao_test.py`)
 
