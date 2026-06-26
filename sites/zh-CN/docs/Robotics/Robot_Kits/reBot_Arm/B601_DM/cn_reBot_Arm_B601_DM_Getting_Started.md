@@ -118,6 +118,68 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 
 <!-- - [DM_Tools_v.1.8.0.1.exe（仅支持 Windows 系统）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe) -->
 
+#### 写入电机ID并测试使能
+
+按照表格中的参数设置各关节电机对应的 CAN ID 与 Master ID
+| 电机编号 | CAN ID | Master ID | 
+|:---|:---:|:---:|
+| 1号电机 | 0x01 | 0x11 |
+| 2号电机 | 0x02 | 0x12 |
+| 3号电机 | 0x03 | 0x13 |
+| 4号电机 | 0x04 | 0x14 |
+| 5号电机 | 0x05 | 0x15 |
+| 6号电机 | 0x06 | 0x16 |
+| 7号电机 | 0x07 | 0x17 |
+
+:::danger
+
+下面以1号电机作为操作示例，注意各关节电机的 CAN ID 与 Master ID 一定要根据上面的表格设置正确参数
+
+:::
+
+1、打开 DM_Tools 上位机软件，选择 USB 对应的 COM 串口号，波特率设置为 `921600` ，连接成功后 `串口` 界面会有信息打印。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_connect_cn.png" />
+</div>
+
+
+2、使用 3pin 线将 1 号电机与 USB-CAN 转接板连接
+
+3、连接完成后进入 `参数设置界面`  ，点击 `读参数` 将 `CAN ID` 设置为 `0x01` ，`Master ID` 设置为 `0x11`
+
+4、设置完成后点击 `写参数` 完成参数写入
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_id_set_cn.png" />
+</div>
+
+5、进入到 `调试` 界面确保  `CAN ID` 与 `Master ID` 设置无误后点击 `电机使能` ，此时电机指示灯绿灯常亮进入使能状态，1号电机测试完成。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_enable_cn.png" />
+</div>
+
+:::tip
+
+测试完成后注意点击 `电机失能` 退出使能状态。
+
+:::
+
+**各电机编号时 3pin 线连接位置与使能效果**
+| **1号电机接线图** | **2号电机接线图** | **3号电机接线图** | **4号电机接线图** | **5号电机接线图** | **6号电机接线图** | **7号电机接线图** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_ID_set.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_ID_set.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_ID_set.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/4_ID_set.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/5_ID_set.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/6_ID_set.jpg" width="4000" /> |  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/7_ID_set.jpg" width="4000" /> |
+
+| **1号电机使能效果** | **2号电机使能效果** | **3号电机使能效果** | **4号电机使能效果** | **5号电机使能效果** | **6号电机使能效果** | **7号电机使能效果** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_Enable.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_Enable.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_Enable.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/4_Enable.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/5_Enable.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/6_Enable.jpg" width="4000" /> |  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/7_Enable2.jpg" width="4000" /> |
+
+
+
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116440455775862&bvid=BV1r9d1BuESN&cid=37680973414&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
@@ -169,9 +231,7 @@ pip install motorbridge
 ```
 
 ### 步骤 4：连接机械臂
-
-使用 USB 数据线将机械臂连接至电脑并接通电源后，需要为串口配置 666 权限。
-
+使用 USB 数据线将机械臂连接至电脑并接通电源后，需要为串口配置 666 权限。（Windows系统不需要配置权限，跳过此步骤即可）
 ```bash
 sudo chmod 666 /dev/ttyACM*
 ```

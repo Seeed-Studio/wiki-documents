@@ -39,10 +39,15 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/
 
 ![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
+
+:::tip
+本案例示例代码可用于进行机械臂的电机或姿态的调控，包含单个电机调控、正/逆运动学调控与测试、机械臂原点设置及电机角度读取、MeshCat可视化系统等。
+:::
+
+
 [Pinocchio](https://github.com/stack-of-tasks/pinocchio) 是一个用于机器人动力学分析和优化的开源库。它提供了高效的正向/逆向运动学、动力学计算和轨迹规划功能。[MeshCat](https://github.com/rdeits/meshcat) 是一个基于 Web 的 3D 可视化工具，可以实时显示机器人状态和运动轨迹。
 
 本项目结合了 Pinocchio 的强大计算能力和 MeshCat 的直观可视化，为 reBot Arm B601-DM 提供了一套完整的运动学分析和调试工具。
-
 
 ---
 
@@ -148,15 +153,26 @@ uv sync
 :::
 
 
-### 调试工具
+## 调试工具介绍
 
-#### 单电机控制台 (`1_damiao_text.py`)
+:::tip 权限设置
+运行实机控制示例前，需要设置设备权限：
+
+```bash
+# 设置串口设备权限（达妙 USB2CAN）
+sudo chmod 666 /dev/ttyACM0
+
+# 或设置 CAN 设备权限（如 can0）
+sudo chmod 666 /dev/can0
+```
+:::
+### 单电机控制台 (`0x01damiao_test.py`)
 
 直接使用 motorbridge SDK 进行单电机测试。
 
 **运行方式**：
 ```bash
-uv run python example/1_damiao_text.py
+uv run python example/0x01damiao_test.py
 ```
 
 **交互命令**：
@@ -165,23 +181,57 @@ uv run python example/1_damiao_text.py
 | `enable` / `disable` | 使能/失能 |
 | `set_zero` | 设置零位 |
 | `state` | 查看状态 |
-
+| `mode mit` | MIT 模式 |
+| `mode posvel` | 位置速度模式，并可追加 PID 参数 |
+| `mode vel` | 纯速度模式 |
 ---
 
-#### 零点校准与角度监控 (`2_zero_and_read.py`)
+### 零点校准与角度监控 (`2_zero_and_read.py`)
 
 自动设置所有关节零点，实时显示关节角度。
 
 **运行方式**：
 ```bash
 uv run python example/2_zero_and_read.py
+
+# 输出实例
+-0.12  +0.23  -6.42  +41.74  -0.45  -0.01  -0.01
+```
+
+### MIT 控制模式 (`3_mit_control.py`)
+
+输入所有关节的目标角度，将MIT控制模式下完成各电机的控制，通常用于力控、阻抗控制或需要高动态响应的场景。
+
+**运行方式**：
+```bash
+uv run python example/3_mit_control.py
+> 30 0 0 0 0 0 # 控制1号电机正转30度
+> state
+  pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
+> q # 退出系统
+```
+:::danger
+注意，在MIT控制模式下，机械臂的速度会很快，需要保证人或其他设备远离机械臂的工作半径。
+:::
+
+### 位置-速度控制模式 (`4_pos_vel_control.py`)
+
+输入所有关节的目标角度，将在POS_VEL（位置-速度）混合控制模式下完成各电机的控制，在到达指定角度时运动得更加平稳、可控，减少震动。
+
+**运行方式**：
+```bash
+uv run python example/4_pos_vel_control.py
+> 30 0 0 0 0 0 # 控制1号电机正转30度
+> state
+  pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
+> q # 退出系统
 ```
 
 ---
 
-### 运动学测试
+## 运动学测试
 
-#### 正运动学测试 (`5_fk_test.py`)
+### 正运动学测试 (`5_fk_test.py`)
 
 根据关节角度计算末端位姿。
 
@@ -196,12 +246,27 @@ uv run python example/2_zero_and_read.py
 ```bash
 uv run python example/5_fk_test.py
 > 0 0 0 0 0 0
-> 45 -30 15 -60 90 180
+====================================================
+  结果 / Result
+====================================================
+  关节角度 (度) / Joint angles (deg): [0. 0. 0. 0. 0. 0.]
+  末端位置 (m) / End-effector position (m):
+    X = +0.260306
+    Y = +0.000000
+    Z = +0.191701
+  旋转矩阵 (R_world^end) / Rotation matrix (R_world^end):
+    [+1.000000  +0.000000  -0.000007]
+    [+0.000000  +1.000000  +0.000100]
+    [+0.000007  -0.000100  +1.000000]
+  欧拉角 XYZ (横滚, 俯仰, 偏航) [度] / Euler XYZ (roll, pitch, yaw) [deg]:
+    横滚/roll  = -0.0057
+    俯仰/pitch = -0.0004
+    偏航/yaw   = +0.0000
 ```
 
 ---
 
-#### 逆运动学测试 (`6_ik_test.py`)
+### 逆运动学测试 (`6_ik_test.py`)
 
 根据期望末端位姿求解关节角度。
 
@@ -212,9 +277,151 @@ uv run python example/5_fk_test.py
 **示例**：
 ```bash
 uv run python example/6_ik_test.py
-> 0.25 0.0 0.15              # 仅位置
-> 0.25 0.0 0.15 0 0 0        # 位置 + 姿态
+
+# 用法A
+> 0.28 0 0.3  # 仅位置
+====================================================
+  结果 / Result
+====================================================
+  目标末端位置 / Target position : [+0.2800, +0.0000, +0.3000] m
+  收敛 / Converged : 是 / Yes
+  迭代次数 / Iterations: 2000
+  位置误差 / Position error: 5.62e-17 m
+  关节角度 (度) [前 6 个控制关节] / Joint angles (deg) [first 6 control joints]:
+    joint1     =  -0.0003 deg  (-0.0000 rad)
+    joint2     = -22.9687 deg  (-0.4009 rad)
+    joint3     = -24.2191 deg  (-0.4227 rad)
+    joint4     =  +1.2508 deg  (+0.0218 rad)
+    joint5     =  -0.0003 deg  (-0.0000 rad)
+    joint6     =  +0.0057 deg  (+0.0001 rad)
+
+# 用法B
+> 0.28 0 0.3 0 1 0       # 位置 + 姿态
+====================================================
+  结果 / Result
+====================================================
+  目标末端位置 / Target position   : [+0.2800, +0.0000, +0.3000] m
+  目标末端姿态 / Target orientation: [+0.00, +1.00, +0.00] deg
+  收敛 / Converged  : 是 / Yes
+  迭代次数 / Iterations: 2000
+  位置误差 / Position error: 6.28e-17 m
+  关节角度 (度) [前 6 个控制关节] / Joint angles (deg) [first 6 control joints]:
+    joint1     =  -0.0003 deg  (-0.0000 rad)
+    joint2     = -23.3968 deg  (-0.4084 rad)
+    joint3     = -25.3018 deg  (-0.4416 rad)
+    joint4     =  +2.9054 deg  (+0.0507 rad)
+    joint5     =  -0.0003 deg  (-0.0000 rad)
+    joint6     =  +0.0057 deg  (+0.0001 rad)
 ```
+### MIT 模式下的逆运动学控制 (`7_arm_ik_control.py`)
+
+在 MIT 模式下使用逆运动学（IK）指定机械臂末端想去的三维坐标（X, Y, Z）和姿态（欧拉角）
+
+**输入格式**：
+- 仅位置：`<x> <y> <z>`（米）
+- 位置 + 姿态：`<x> <y> <z> <roll> <pitch> <yaw>`（度）
+- 输入 `state` ：查看当前各个关节的实际弧度值。
+- 输入 `end_state` ：查看当前 末端在空间中的实际坐标 (m) 和欧拉角 (rad)。
+
+**运行方式**：
+```bash
+uv run python example/7_arm_ik_control.py
+
+#用法A
+> 0.3 0.0 0.4 # 仅控制位置（姿态默认为0），让机械臂末端走到前方 0.3 米，上方 0.4 米的位置。
+
+#用法B
+> 0.3 0.0 0.4 0.0 0.0 0.5 #同时控制位置和姿态：走到指定位置，同时手腕偏航角旋转 0.5 弧度。
+
+> ctrl + c # 退出系统
+```
+:::danger
+注意，在该实例代码下机械臂的速度会很快，需要保证人或其他设备远离机械臂的工作半径。
+:::
+
+### 平滑轨迹的逆运动学控制 (`8_arm_traj_control.py`)
+
+在 MIT 模式下使用逆运动学（IK），在目标时间内自动规划出一条匀速或带平滑加减速的运动轨迹，避免了关节剧烈抖动。
+
+**输入格式**：
+- 仅位置：`<x> <y> <z>`（米）
+- 位置 + 姿态：`<x> <y> <z> <roll> <pitch> <yaw>`（度）
+- 位置 + 姿态 + 时间（默认为 2.0 ）：`<x> <y> <z> <roll> <pitch> <yaw> <time>`（度）
+- 输入 `state` ：查看当前各个关节的实际弧度值。
+- 输入 `end_state` ：查看当前 末端在空间中的实际坐标 (m) 和欧拉角 (rad)。
+
+**运行方式**：
+```bash
+uv run python example/8_arm_traj_control.py
+
+#用法A
+> 0.3 0.0 0.4 #仅指定位置，姿态默认为 0，移动时间默认为 2.0 秒
+
+#用法B
+> 0.3 0.0 0.4 0.0 0.0 0.5 #同时控制位置和姿态：走到指定位置，同时手腕偏航角旋转 0.5 弧度，移动时间默认为 2.0 秒
+
+#用法C
+> 0.3 0.0 0.4 0.0 0.0 0.0 5.0 #让机械臂走到特定位置，并指定用 5.0 秒 的时间慢慢挪过去。(注意：如果要输时间，前方的姿态参数 0 0 0 不能省略)
+
+> ctrl + c # 退出系统
+```
+---
+
+## 重力补偿测试
+
+### 重力补偿控制 (`9_gravity_compensation.py`)
+
+使用 Pinocchio 动力学模型补偿关节重力。
+
+**控制律**：
+```
+tau = g(q)          — 重力前馈
+pos = 当前电机位置   — 关节位置跟随当前位置
+kp = 2, kd = 1     — 所有关节统一刚度/阻尼
+```
+
+**预期行为**：
+- 机械臂可以在任意姿态下"漂浮"
+- 松开后不会因自重坠落
+- 可以手动掰动到任意位置
+
+**运行方式**：
+```bash
+uv run python example/9_gravity_compensation.py
+```
+
+**输出**：
+- 实时显示各关节期望力矩（N·m）
+- 按 `Ctrl+C` 停止并断开连接
+
+### 高阻尼重力补偿控制 (`10_gravity_compensation_lock.py`)
+
+抵抗轻微外力的重力补偿控制。
+
+**控制律**：
+
+注：当人用力推机械臂，末端线速度 > 0.04 m/s 或角速度 > 0.08 rad/s 时，解锁并实时更新目标角度
+
+```
+tau = g(q) + 积分项  — 重力前馈，并引入积分累计消除静摩擦力和残余重力死区
+pos = 目标锁定角度   — 当末端移动速度低于阈值时，目标角度锁死在当前点
+kp = 8.0, kd = 1.0  — 锁定状态下刚度提升至 8.0，提供更坚固的抗干扰和定位约束
+```
+
+**预期行为**：
+  - 松手即锁死：将机械臂用手掰到某个位置一旦松手，会立刻在原地死死锁住，能完美解决缓缓下坠和微小漂移的问题。
+  - 轻推不发生位移：轻微的晃动、风吹或外力触碰无法让机械臂移位。
+  - 用力即可拖动：只有用一定的力气推它、打破速度阈值后，才会解锁并顺从地滑动。
+
+**运行方式**：
+```bash
+uv run python example/10_gravity_compensation_lock.py
+```
+
+**输出**：
+- 实时显示当前的状态（锁定状态显示 `LOCKED`，解锁拖动状态显示 `UPDATE`）。
+- 同步打印末端实时的线速度（m/s）、角速度（rad/s）以及各关节的重力矩（N·m）。
+- 按 `Ctrl+C` 停止并断开连接
 
 ---
 
@@ -314,103 +521,6 @@ viz = Visualizer()
 viz.update(q)  # 更新机器人位姿
 viz.draw_path(points, "path_name", color)  # 绘制路径
 ```
-
----
-
-### 实机控制
-
-:::tip 权限设置
-运行实机控制示例前，需要设置设备权限：
-
-```bash
-# 设置串口设备权限（达妙 USB2CAN）
-sudo chmod 666 /dev/ttyACM0
-
-# 或设置 CAN 设备权限（如 can0）
-sudo chmod 666 /dev/can0
-```
-:::
-
-#### IK 实时控制 (`7_arm_ik_control.py`)
-
-基于 IK 解算的机械臂实时末端控制。
-
-**交互命令**：
-| 命令 | 说明 |
-|------|------|
-| `x y z [roll pitch yaw]` | 目标末端位姿 |
-| `state` | 查看状态 |
-| `pos` | 当前末端位置 |
-| `q/quit/exit` | 退出 |
-
-**运行方式**：
-```bash
-uv run python example/7_arm_ik_control.py
-> 0.3 0.0 0.2
-> 0.3 0.1 0.25 0 0.5 0
-```
-
----
-
-#### 轨迹规划控制 (`8_arm_traj_control.py`)
-
-SE(3) 测地线轨迹规划 + CLIK 跟踪。
-
-**输入格式**：
-```
-x y z [roll pitch yaw] [duration]
-```
-
-**参数说明**：
-- `x, y, z`: 目标位置（米）
-- `roll, pitch, yaw`: 目标姿态（弧度）
-- `duration`: 运动时长（秒），默认 2.0s
-
-**运行方式**：
-```bash
-uv run python example/8_arm_traj_control.py
-> 0.3 0.0 0.3 0 0.4 0 2.0
-```
-
----
-
-#### 重力补偿控制 (`9_gravity_compensation.py`)
-
-使用 Pinocchio 动力学模型补偿关节重力。
-
-**控制律**：
-```
-tau = g(q)          — 重力前馈
-pos = 当前电机位置   — 关节位置跟随当前位置
-kp = 2,  kd = 1     — 所有关节统一刚度/阻尼
-```
-
-**预期行为**：
-- 机械臂可以在任意姿态下"漂浮"
-- 松开后不会因自重坠落
-- 可以手动掰动到任意位置
-
-**运行方式**：
-```bash
-uv run python example/9_gravity_compensation.py
-```
-
-**输出**：
-- 实时显示各关节期望力矩（N·m）
-- 按 `Ctrl+C` 停止并断开连接
-
-<div class="video-container">
-    <iframe 
-        width="900" 
-        height="600" 
-        src="https://player.bilibili.com/player.html?bvid=BV1o8EY6iEkt&page=1&high_quality=1&danmaku=0" 
-        scrolling="no" 
-        border="0" 
-        frameborder="no" 
-        framespacing="0" 
-        allowfullscreen="true">
-    </iframe>
-</div>
 
 ---
 
