@@ -266,7 +266,7 @@ On the Firmware Hub page:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/39.png" style={{width:800, height:'auto'}}/></div>
 
-3. The page displays a step-by-step usage guide for the template. Click the **Download projtct template** button to get the PlatformIO project ZIP.
+3. The page displays a step-by-step usage guide for the template. Click the **Download project template** button to get the PlatformIO project ZIP.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/40.png" style={{width:800, height:'auto'}}/></div>
 
