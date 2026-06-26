@@ -279,3 +279,19 @@ DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1MEJV6TELk&p=1" title="Bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+## 关于电源
+
+  1. 机械臂在发货时并未配备电源/默认情况下不带电源。您可自行连接电池，或选购一款我们开源的[48V 12.5A MeanWell电源](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html)供应器。
+
+  <div align="center">
+    <img width={800}
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100054289-gallery-6.jpg" />
+</div>
+
+  2. 选择我们开源的24V14.6AMeanWell电源外壳进行自组装，文字步骤和BOM在[github仓库](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_RS)中开源（只推荐有过相关电源组装经验的开发者使用）
+  组装参考视频：
+  
+  <div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116793196675417&bvid=BV15i7K69EnQ&cid=39314066536&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
