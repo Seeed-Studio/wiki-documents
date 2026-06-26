@@ -15,7 +15,7 @@ last_update:
   date: 06/10/2025
   author: Zibo
 createdAt: '2025-04-29'
-updatedAt: '2026-05-14'
+updatedAt: '2026-06-24'
 url: https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/
 ---
 
@@ -167,7 +167,7 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
     </tr>
     <tr>
       <th rowSpan="1">Jetpack Version</th>
-      <td colSpan="2">Jetpack 6</td>
+      <td colSpan="2">JetPack 6 pre-installed; JetPack 7.2 supported</td>
     </tr>
     <tr>
       <th rowSpan="3">Mechanical</th>
@@ -224,21 +224,32 @@ Please refer to the table below to prepare the host machine.
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.</p>
 
 :::
 
@@ -283,12 +294,37 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETx2PP9D85dHgzljJ_pJH-0Bsss82nPxMbOkJ-JvPA1hrQ?e=cReLPU">Download</a></td>
       <td> b08cbdad8ab6e50222146d3175a9d2<br />627d499bf1d67cfaf69cc737b5bfa9e33a </td>
     </tr>
+    <tr>
+      <td rowSpan={4}>7.2</td>
+      <td> Orin Nano 4GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCXU7mPG_OyR7z-VhF3E5j8AcmgsCPAZAuXSdKduZUKtHQ">Download</a></td>
+      <td>6c499899d6c00a1661a48974d4dfc734<br />e9cbfefc06fc9c5c02ac7040dd1f2eb8</td>
+    </tr>
+    <tr>
+      <td>Orin Nano 8GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBxz11HG6naSak2wIytiRbXAaqxhsgIWFaVR9H9GfGWqus">Download</a></td>
+      <td>23b68b43e630d166e5079f72509c71ea<br />0e13f76e372ddd06fe22df5494ad3f41</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBw84cKdsnuRYQLA1pkfg3mAY1x0HW0UMppZbnaDBaV6XI">Download</a></td>
+      <td>2712fe373afb3dff8202cdd9288b266f<br />080b76837eb13161918efd80111d9035</td>
+    </tr>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDqVVHOlgc7T6b5LbNYFImdAaUr2OlKT1IkQKk2P89lCW8">Download</a></td>
+      <td>6d9086d692a0f40fad02c75df1ff56ae<br />d9b368320bb2bfe3a777692513529697</td>
+    </tr>
   </tbody>
 </table>
 </div>
 
 :::danger
-The Jetpack6 image file is approximately **14.2GB** in size and should take around 60 minutes to download. Please kindly wait for the download to complete.
+The JetPack image file is large and may take around 60 minutes to download. Please kindly wait for the download to complete.
 :::
 
 :::info

@@ -10,7 +10,7 @@ last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-06-22'
+updatedAt: '2026-06-24'
 url: https://wiki.seeedstudio.com/ja/reComputer_J4012_Flash_Jetpack/
 ---
 
@@ -25,15 +25,15 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
-J401 キャリアボードは、NVIDIA Jetson Orin NX/Nano モジュールをサポートする高性能な拡張ボードです。1xGbE ポート、データ転送用の 1x CAN、SSD 用の M.2 Key M、WiFi/BlueTooth 用の M.2 Key E、2 つの CSI、そして高品質なビデオキャプチャと表示のための 1 つの HDMI を備えています。また、4x USB 3.2 ポート、ファン、RTC、柔軟な 9-19V 電源も搭載しています。これらすべてにより、さまざまな産業オートメーションシステムにおいて信頼性が高く、強力な AI アプリケーションを構築できます。
+J401 キャリアボードは、NVIDIA Jetson Orin NX/Nano モジュールをサポートする高性能な拡張ボードです。1xGbE ポート、データ転送用の 1x CAN、SSD 用の M.2 Key M、WiFi/BlueTooth 用の M.2 Key E、2 つの CSI、そして高品質なビデオキャプチャと表示のための 1 つの HDMI を備えています。また、4x USB 3.2 ポート、ファン、RTC、柔軟な 9-19V 電源も搭載しています。これらすべてにより、強力な AI アプリケーションを構築する、さまざまな産業オートメーションシステムにおいて信頼性の高いボードとなっています。
 
 ## 特長
 
 - **卓越した性能を持つキャリアボード:** NVIDIA Jetson Orin NX/Nano モジュールをサポートし、強力なコンピューティングパワーを活用して、困難なタスクも容易にこなします
-- **多彩な接続性:** ネットワーキング用の 1x ギガビット Ethernet ポート、4x USB 3.2 Type-A（10Gbps）ポート、1x USB2.0 Type-C ポート、高速データ転送用の 1x CAN コネクタを提供
-- **柔軟なストレージおよび無線拡張:** 1x M.2 Key M 2280 と 1x M.2 Key E スロットを搭載し、柔軟なストレージおよび無線接続拡張のための十分なスペースを提供
-- **高度な周辺機器をサポート:** 2x 15 ピン CSI カメラコネクタ、1x HDMI 2.1、1x ファン、1x RTC を搭載し、複数の周辺機器に対応
-- **広い入力電圧範囲:** 9-19V DC に対応し、電源オプションに柔軟性を提供
+- **多彩な接続性:** ネットワーキング用の 1x ギガビット Ethernet ポート、4x USB 3.2 Type-A（10Gbps）ポート、1x USB2.0 Type-C ポート、1x CAN コネクタを備え、高速なデータ転送を実現します
+- **柔軟なストレージおよび無線拡張:** 1x M.2 Key M 2280 と 1x M.2 Key E スロットを搭載し、柔軟なストレージおよび無線接続拡張のための十分なスペースを提供します
+- **高度な周辺機器をサポート:** 2x 15 ピン CSI カメラコネクタ、1x HDMI 2.1、1x ファン、1x RTC を搭載し、複数の周辺機器に対応します
+- **広い入力電圧範囲:** 9-19V DC に対応し、電源オプションに柔軟性を持たせます
 
 ## 仕様
 
@@ -114,13 +114,13 @@ J401 キャリアボードは、NVIDIA Jetson Orin NX/Nano モジュールをサ
     </tr>
     <tr>
       <td>ビデオエンコーダ</td>
-      <td colSpan={2}>1〜2 個の CPU コアで 1080p30 をサポート</td>
-      <td colSpan={2}>1x 4K60（H.265） | 3x 4K30（H.265）<br />6x 1080p60（H.265） | 12x 1080p30（H.265）</td>
+      <td colSpan={2}>1～2 個の CPU コアで 1080p30 をサポート</td>
+      <td colSpan={2}>1x 4K60 (H.265) | 3x 4K30 (H.265)<br />6x 1080p60 (H.265) | 12x 1080p30 (H.265)</td>
     </tr>
     <tr>
       <td>ビデオデコーダ</td>
-      <td colSpan={2}>1x 4K60（H.265）<br />2x 4K30（H.265）<br />5x 1080p60（H.265）<br />11x 1080p30（H.265）</td>
-      <td colSpan={2}>1x 8K30（H.265） | 2x 4K60（H.265） | 4x 4K30（H.265）<br />9x 1080p60（H.265） | 18x 1080p30（H.265）</td>
+      <td colSpan={2}>1x 4K60 (H.265)<br />2x 4K30 (H.265)<br />5x 1080p60 (H.265)<br />11x 1080p30 (H.265)</td>
+      <td colSpan={2}>1x 8K30 (H.265) | 2x 4K60 (H.265) | 4x 4K30 (H.265)<br />9x 1080p60 (H.265) | 18x 1080p30 (H.265)</td>
     </tr>
     <tr>
       <td>ディスプレイ</td>
@@ -132,11 +132,11 @@ J401 キャリアボードは、NVIDIA Jetson Orin NX/Nano モジュールをサ
     </tr>
     <tr>
       <td>ネットワーキング</td>
-      <td colSpan={4}>1* ギガビット Ethernet（10/100/1000M）</td>
+      <td colSpan={4}>1* ギガビット Ethernet (10/100/1000M)</td>
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={4}>4* USB 3.2 Type-A（10Gbps）；1* USB2.0 Type-C（デバイスモード）</td>
+      <td colSpan={4}>4* USB 3.2 Type-A (10Gbps); 1* USB2.0 Type-C (Device Mode)</td>
     </tr>
     <tr>
       <td>M.2 Key M</td>
@@ -148,7 +148,7 @@ J401 キャリアボードは、NVIDIA Jetson Orin NX/Nano モジュールをサ
     </tr>
     <tr>
       <td>ファン</td>
-      <td colSpan={4}>1* 4 ピンファンコネクタ（5V PWM）</td>
+      <td colSpan={4}>1* 4 ピンファンコネクタ (5V PWM)</td>
     </tr>
     <tr>
       <td>CAN</td>
@@ -160,7 +160,7 @@ J401 キャリアボードは、NVIDIA Jetson Orin NX/Nano モジュールをサ
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={4}>RTC 2 ピン、RTC ソケット（CR1220 をサポート、ただし同梱されていません）</td>
+      <td colSpan={4}>RTC 2 ピン、RTC ソケット（CR1220 をサポート、同梱なし）</td>
     </tr>
     <tr>
       <td>電源</td>
@@ -172,7 +172,7 @@ J401 キャリアボードは、NVIDIA Jetson Orin NX/Nano モジュールをサ
     </tr>
     <tr>
       <td>温度</td>
-      <td colSpan={4}>-10℃〜60℃</td>
+      <td colSpan={4}>-10℃~60℃</td>
     </tr>
     <tr>
       <td>機構</td>
@@ -205,24 +205,26 @@ reComputer J40/ J30 シリーズには、付属の NVMe SSD に JetPack 5.1.3 �
 - USB Type-C データ転送ケーブル
 
 :::info
-仮想マシンではなく、物理的な Ubuntu ホストデバイスを使用することを推奨します。
+物理的な Ubuntu ホストデバイスを使用し、仮想マシンは使用しないことを推奨します。
 ホストマシンを準備するために、以下の表を参照してください。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack バージョン </td>
-        <td class="dbon" colspan="3"> Ubuntu バージョン（ホストコンピュータ） </td>
+        <td class="dbon" colspan="4"> Ubuntu バージョン（ホストコンピュータ） </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 5.x</td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
         <td > </td>
     </tr>
     <tr>
@@ -230,18 +232,28 @@ reComputer J40/ J30 シリーズには、付属の NVMe SSD に JetPack 5.1.3 �
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
 
+<p><strong>Note:</strong> JetPack 7.2 では、Ubuntu 24.04 はフラッシュおよびターゲット側コンポーネントのインストールのみサポートされます。ホスト開発コンポーネントが必要な場合は、Ubuntu 20.04 または 22.04 を使用してください。</p>
+
 :::
 
-### フォースリカバリモードに入る
+### 強制リカバリモードに入る
 
 :::note
 
 - フラッシュには、仮想マシンおよび ARM アーキテクチャの Ubuntu を使用しないことを推奨します。
-- インストール手順に進む前に、ボードがフォースリカバリモードになっていることを確認する必要があります。
+- インストール手順に進む前に、ボードが強制リカバリモードになっていることを確認する必要があります。
 
 :::
 
@@ -251,7 +263,7 @@ reComputer J40/ J30 シリーズには、付属の NVMe SSD に JetPack 5.1.3 �
 
 <summary> ステップバイステップ </summary>
 
-**Step 1.** ジャンパワイヤを使用して、**FC REC** ピンと **GND** ピンを接続します。
+**Step 1.** ジャンパワイヤを使用して **FC REC** ピンと **GND** ピンを接続します。
 
 <table align="center">
 <thead>
@@ -304,11 +316,11 @@ reComputer J40/ J30 シリーズには、付属の NVMe SSD に JetPack 5.1.3 �
 </tbody>
 </table>
 
-**Step 2.** 電源アダプタから付属のケーブルを接続して reComputer の電源を入れ、USB Type-C データ転送ケーブルでボードを Ubuntu ホスト PC に接続します
+**ステップ 2.** 付属のケーブルで電源アダプタから電源を供給し、USB Type-C データ転送ケーブルでボードを Ubuntu ホスト PC に接続して reComputer の電源を入れます
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/2.png"/></div>
 
-**ステップ 3.** Linux ホスト PC でターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用している Jetson SoM に応じて、返された内容に以下のいずれかの出力が含まれていれば、ボードは強制リカバリモードになっています。
+**ステップ 3.** Linux ホスト PC でターミナルウィンドウを開き、`lsusb` コマンドを入力します。使用している Jetson SoM に応じて、返された内容に以下のいずれかの出力が含まれていれば、ボードは強制リカバリモードになっています。
 
 - Orin NX 16GB の場合: **0955:7323 NVidia Corp**
 - Orin NX 8GB の場合: **0955:7423 NVidia Corp**
@@ -323,13 +335,13 @@ reComputer J40/ J30 シリーズには、付属の NVMe SSD に JetPack 5.1.3 �
 
 </details>
 <!-- 
-### 1 回のコマンドでデバイスをフラッシュする
+### Flash the device with a single command
 
 <details>
 
-<summary> 1 回のコマンドでデバイスをフラッシュします。 </summary>
+<summary> Flash the device with a single command. </summary>
 
-reComputer Jetson J30/40 はワンクリックフラッシュスクリプトをリリースしており、Jetpack 5.1.1、5.1.2、6.0、6.1、6.2 のフラッシュをサポートしています。現在、Jetpack 6.1 およびその他の reComputer Jetson シリーズ向けのワンクリックフラッシュはテスト中で、近い将来すべての方にご利用いただける予定です。
+The reComputer Jetson J30/40 has launched a one-click flashing script, which supports flashing Jetpack 5.1.1, 5.1.2 , 6.0 , 6.1 and 6.2. Currently, the one-click flashing for Jetpack 6.1 and other series of reComputer Jetson is under testing and will be available to everyone in the near future.
 
 ```bash
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
@@ -340,7 +352,7 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 </div>
 
 :::caution
-免責事項: ワンクリックフラッシュスクリプトは、Jetpack のフラッシュをより迅速に行うことを目的としています。現在のバージョンはベータ版であり、多くの問題が含まれている可能性があります。あらかじめご了承ください。フラッシュに問題が発生した場合は、以下の `Flash The Device Step by Step` に従い、[Discord Jetson channel](https://discord.com/channels/862602258452578314/930732339624026152) でフィードバックをお寄せください。できるだけ早く修正し、近い将来この機能を改善していきます。
+Disclaimer: The one-click flashing script aims to make jetpack flashing quicker. The current version is a beta one and may have many problems. We hope for your understanding. If there are flashing issues, follow the `Flash The Device Step by Step` below and give feedback in our [Discord Jetson channel](https://discord.com/channels/862602258452578314/930732339624026152). We'll fix them promptly and improve this function in the near future.
 :::
 
 </details> -->
@@ -348,10 +360,10 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 ### デバイスをステップバイステップでフラッシュする
 
 :::note
-フラッシュに進む前に、Jetson Orin NX モジュールは JetPack 5.1 以降のみをサポートし、Jetson Orin Nano モジュールは JetPack 5.1.1 以降のみをサポートすることに注意してください。
+フラッシュ作業に進む前に、Jetson Orin NX モジュールは JetPack 5.1 以降のみをサポートし、Jetson Orin Nano モジュールは JetPack 5.1.1 以降のみをサポートすることに注意してください。
 :::
 
-まず最初に、JetPack をフラッシュする前に、Ubuntu ホスト PC に以下の必要な依存関係をインストールします。
+まず最初に、JetPack のフラッシュに進む前に、Ubuntu ホスト PC に以下の必須依存パッケージをインストールします。
 
 ```sh
 sudo apt install qemu-user-static sshpass abootimg nfs-kernel-server libxml2-utils binutils -y
@@ -372,11 +384,11 @@ NVIDIA はモジュールで使用される DRAM を更新しました。新し�
 
 ここでは NVIDIA L4T 35.3.1 を使用して、reComputer に Jetpack 5.1.1 をインストールします
 
-**ステップ 1:** ホスト PC 上で [Download](https://developer.nvidia.com/embedded/jetson-linux-r3531) から NVIDIA ドライバをダウンロードします。必要なドライバは以下の通りです:
+**ステップ 1:** ホスト PC 上で [Download](https://developer.nvidia.com/embedded/jetson-linux-r3531) から NVIDIA ドライバをダウンロードします。必要なドライバは以下のとおりです:
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**ステップ 2:** これらのファイルを含むフォルダに移動して **Jetson_Linux_R35.3.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** を展開し、変更を適用して必要な前提条件をインストールします
+**ステップ 2:** これらのファイルを含むフォルダに移動し、**Jetson_Linux_R35.3.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** を展開して変更を適用し、必要な前提パッケージをインストールします
 
 ```sh
 tar xf Jetson_Linux_R35.3.1_aarch64
@@ -386,7 +398,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**ステップ 3（任意）:** ユーザー名、パスワード、ホスト名を設定して、デバイスの起動完了後に Ubuntu インストールウィザードを入力する必要がないようにします
+**ステップ 3（任意）:** デバイスの起動完了後に Ubuntu インストールウィザードで入力する必要がないように、ユーザー名、パスワード、およびホスト名を設定します
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
@@ -431,11 +443,11 @@ sudo apt install nvidia-jetpack
 
 ここでは NVIDIA L4T 35.4.1 を使用して、reComputer に Jetpack 5.1.2 をインストールします
 
-**ステップ 1:** ホスト PC 上で [Download](https://developer.nvidia.com/embedded/jetson-linux-r3541) から NVIDIA ドライバをダウンロードします。必要なドライバは以下の通りです:
+**ステップ 1:** ホスト PC 上で [Download](https://developer.nvidia.com/embedded/jetson-linux-r3541) から NVIDIA ドライバをダウンロードします。必要なドライバは以下のとおりです:
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**ステップ 2:** これらのファイルを含むフォルダに移動して **Jetson_Linux_R35.4.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** を展開し、変更を適用して必要な前提条件をインストールします
+**ステップ 2:** これらのファイルを含むフォルダに移動し、**Jetson_Linux_R35.4.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** を展開して変更を適用し、必要な前提パッケージをインストールします
 
 ```sh
 tar xf Jetson_Linux_R35.4.1_aarch64.tbz2
@@ -445,7 +457,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-次に、JP5.1.2 に必要であり、公式 NVIDIA JetPack リリースノートのセクション 4.2.3 で説明されている、NVIDIA からのパッチを適用する必要があります。詳細は[こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/ReleaseNotes/Jetson_Linux_Release_Notes_r35.4.1.pdf)を参照してください。
+次に、JP5.1.2 に必要な NVIDIA からのパッチを適用する必要があります。これは公式 NVIDIA JetPack リリースノートのセクション 4.2.3 で [こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/ReleaseNotes/Jetson_Linux_Release_Notes_r35.4.1.pdf) に説明されています。
 
 **ステップ 3:** 次のディレクトリに移動します
 
@@ -463,7 +475,7 @@ tfc {
     };
 ```
 
-**ステップ 5（任意）:** **"Linux_for_Tegra"** ディレクトリに移動し、以下のコマンドを入力してユーザー名、パスワード、ホスト名を設定し、デバイスの起動完了後に Ubuntu インストールウィザードを入力する必要がないようにします
+**ステップ 5（任意）:** **"Linux_for_Tegra"** ディレクトリに移動し、以下のコマンドを入力してユーザー名、パスワード、およびホスト名を設定します。これにより、デバイスの起動完了後に Ubuntu インストールウィザードで入力する必要がなくなります
 
 ```sh
 cd Linux_for_Tegra
@@ -516,8 +528,8 @@ sudo apt install nvidia-jetpack
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Jetson モジュール</th>
-      <th>ダウンロードリンク</th>
+      <th>Jetson Module</th>
+      <th>Download Link</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -557,7 +569,7 @@ sudo apt install nvidia-jetpack
 :::info
 ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較します。
 
-Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。出力されたハッシュ値が wiki に記載されている SHA256 ハッシュ値と一致すれば、ダウンロードしたファームウェアが完全かつ破損していないことが確認できます。
+Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。出力されたハッシュ値が wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ破損していないことが確認できます。
 :::
 
 **ステップ 2：** ダウンロードしたイメージファイルを解凍します：
@@ -586,7 +598,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 **ステップ 4：** ボード上の HDMI コネクタを使用して J401 をディスプレイに接続し、初期設定を完了します。
 
 :::info
-ご自身のニーズに応じて **System Configuration** を完了してください。
+ご利用の用途に応じて **System Configuration** を完了してください。
 :::
 
 </TabItem>
@@ -655,7 +667,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 :::info
 ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較します。
 
-Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。出力されたハッシュ値が wiki に記載されている SHA256 ハッシュ値と一致すれば、ダウンロードしたファームウェアが完全かつ破損していないことが確認できます。
+Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。出力されたハッシュ値が wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ破損していないことが確認できます。
 :::
 
 **ステップ 2：** ダウンロードしたイメージファイルを解凍します：
@@ -686,10 +698,10 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-ご自身のニーズに応じて **System Configuration** を完了してください。
+ご利用の用途に応じて **System Configuration** を完了してください。
 :::
 
-**ステップ 5：** システム起動後、無線ネットワークカードドライバを再有効化するために、次のコマンドを実行する必要があります：
+**ステップ 5：** システム起動後、ワイヤレスネットワークカードドライバを再有効化するために、次のコマンドを実行する必要があります：
 
 ```bash
 sudo rm /lib/modules/5.15.136-tegra/build
@@ -750,7 +762,7 @@ sudo apt install -y iwlwifi-modules
 :::info
 ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較します。
 
-Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。出力されたハッシュ値が wiki に記載されている SHA256 ハッシュ値と一致すれば、ダウンロードしたファームウェアが完全かつ破損していないことが確認できます。
+Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。出力されたハッシュ値が wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ破損していないことが確認できます。
 :::
 
 **ステップ 2：** ダウンロードしたイメージファイルを解凍します：
@@ -781,7 +793,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-ご自身のニーズに応じて **System Configuration** を完了してください。
+ご利用の用途に応じて **System Configuration** を完了してください。
 :::
 
 </TabItem>
@@ -792,10 +804,10 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 :::danger
 **Orin NX 16GB/8GB** モジュールを使用している場合は、**MAXN SUPER モードを有効にしないでください**。
-reComputer J401 キャリアボードの冷却能力ではこのモードをサポートできず、このモードを強制するとモジュールが永久的に損傷する可能性があります。
+reComputer J401 キャリアボードの冷却能力ではこのモードをサポートするには不十分であり、このモードを強制するとモジュールが永久的な損傷を受ける可能性があります。
 :::
 
-**ステップ 1：** 使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードします：
+**ステップ 1:** 使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードします：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -810,28 +822,28 @@ reComputer J401 キャリアボードの冷却能力ではこのモードをサ�
     <tr>
       <td>Orin NX 16GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDTDQf5Gh0LSIg9QSsHPNgBAcegrhbyGeZYrQF7kMpdgFQ?e=ahwlIc" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDTDQf5Gh0LSIg9QSsHPNgBAcegrhbyGeZYrQF7kMpdgFQ?e=ahwlIc" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>b9529f008cf9a65460db3ee17736db971b8d110049f9f6ea8ecc8fe4d1691869</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDR6PGcF5i6Q5tWR9dJa1vSAfZrQUfHfQhTFe2DOeMKXuo?e=lf88Um" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDR6PGcF5i6Q5tWR9dJa1vSAfZrQUfHfQhTFe2DOeMKXuo?e=lf88Um" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>b7106b4f8c5835011040c071dd14e1144b5298af300f920e44517b99c183ed05</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDM6v_9Ggo4R5OXqj4R1T0PAf_uevclLKzjmj8XpkX0_jQ?e=B5oC3m" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDM6v_9Ggo4R5OXqj4R1T0PAf_uevclLKzjmj8XpkX0_jQ?e=B5oC3m" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td> c2247262dec1379fd4494def6a6ed2d4414605a8dcb902c6d6afbb94a5e48499 </td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA9g-hqq4_KR5bdPc2PgfgmAYq3mRxdRBkgrUtZBOm-jtE?e=WMICt2" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA9g-hqq4_KR5bdPc2PgfgmAYq3mRxdRBkgrUtZBOm-jtE?e=WMICt2" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td> 1d570b54853bba4ecc115789d1b03c5ba07b34344f7616dfa3c3772c9ff37e64 </td>
     </tr>
@@ -850,14 +862,14 @@ Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <
 現在、新バージョンの reComputer を設計中です。続報をお待ちください！
 :::
 
-**ステップ 2：** ダウンロードしたイメージファイルを解凍します：
+**ステップ 2:** ダウンロードしたイメージファイルを解凍します：
 
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.2-36.4.3-2025-04-07.tar.gz
 ```
 
-**ステップ 3：** 解凍したディレクトリに移動し、次のコマンドを実行して JetPack システムを NVMe SSD にフラッシュします：
+**ステップ 3:** 解凍したディレクトリに移動し、次のコマンドを実行して JetPack システムを NVMe SSD にフラッシュします：
 
 ```bash
 cd mfi_xxxx
@@ -873,26 +885,26 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 フラッシュコマンドの実行には 2〜10 分かかる場合があります。
 :::
 
-**ステップ 4：** ボード上の HDMI コネクタを使用して J401 をディスプレイに接続し、初期設定を完了します：
+**ステップ 4:** ボード上の HDMI コネクタを使用して J401 をディスプレイに接続し、初期設定を完了します：
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-ご自身のニーズに応じて **System Configuration** を完了してください。
+ニーズに応じて **System Configuration** を完了してください。
 :::
 
 </TabItem>
 
 <TabItem value="JP7.2" label="JP7.2">
 
-ここでは、NVIDIA L4T 39.2.0 を使用して、reComputer Classic シリーズに JetPack 7.2 をインストールします。
+ここでは NVIDIA L4T 39.2.0 を使用して、reComputer Classic シリーズに JetPack 7.2 をインストールします。
 
 :::danger
 **Orin NX 16GB/8GB** モジュールを使用している場合は、**MAXN SUPER モードを有効にしないでください**。
-reComputer J401 キャリアボードの冷却能力ではこのモードをサポートするには不十分であり、このモードを強制するとモジュールが永久的に損傷する可能性があります。
+reComputer J401 キャリアボードの冷却能力ではこのモードをサポートするには不十分であり、このモードを強制するとモジュールが永久的な損傷を受ける可能性があります。
 :::
 
-**ステップ 1：** 使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードします：
+**ステップ 1:** 使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードします：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -907,28 +919,28 @@ reComputer J401 キャリアボードの冷却能力ではこのモードをサ�
     <tr>
       <td>Orin NX 16GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD1BsWy20dpQ6-ucjqOUDqFAT4hAvTcstZkiuLG5zDv5HQ" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD1BsWy20dpQ6-ucjqOUDqFAT4hAvTcstZkiuLG5zDv5HQ" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>bbaae572ddcfb745a9ce519ade817bf238a9cd9be8c0177bbef6ada353f89878</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOmjI0fvPXRKZq51PiF7vaAekVzzuOQVqNLI_81mT1PqM" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOmjI0fvPXRKZq51PiF7vaAekVzzuOQVqNLI_81mT1PqM" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>bbaae572ddcfb745a9ce519ade817bf238a9cd9be8c0177bbef6ada353f89878</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBjTuQE8nJZQKuHW0S-d_yvAY31NHNqYIV31T5nmyUXUJM" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBjTuQE8nJZQKuHW0S-d_yvAY31NHNqYIV31T5nmyUXUJM" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>35c75bf18416287b4ae2e450f3207b3fd33d765832cd6f1ed86d62d354775a81</td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCG0vZAYpXDTJBrWKaXycEaAc85mqMbAdHQlh5o0tFrXAE" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCG0vZAYpXDTJBrWKaXycEaAc85mqMbAdHQlh5o0tFrXAE" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>ee0959c32df50ed41ed7d2940344c69d93b5212b6222fb6451af7b71bad7749e</td>
     </tr>
@@ -942,14 +954,14 @@ reComputer J401 キャリアボードの冷却能力ではこのモードをサ�
 Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ破損していないことが確認できます。
 :::
 
-**ステップ 2：** ダウンロードしたイメージファイルを解凍します：
+**ステップ 2:** ダウンロードしたイメージファイルを解凍します：
 
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nx-16g-j401-7.2.0-39.2.0-2026-06-18.tar.gz
 ```
 
-**ステップ 3：** 解凍したディレクトリに移動し、次のコマンドを実行して JetPack システムを NVMe SSD にフラッシュします：
+**ステップ 3:** 解凍したディレクトリに移動し、次のコマンドを実行して JetPack システムを NVMe SSD にフラッシュします：
 
 ```bash
 cd mfi_xxxx
@@ -965,12 +977,12 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 フラッシュコマンドの実行には 2〜10 分かかる場合があります。
 :::
 
-**ステップ 4：** ボード上の HDMI コネクタを使用して J401 をディスプレイに接続し、初期設定を完了します：
+**ステップ 4:** ボード上の HDMI コネクタを使用して J401 をディスプレイに接続し、初期設定を完了します：
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-ご自身のニーズに応じて **System Configuration** を完了してください。
+ニーズに応じて **System Configuration** を完了してください。
 :::
 
 </TabItem>
@@ -988,7 +1000,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 - [Seeed Jetson シリーズ カタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
 - [Seeed Studio Edge AI 導入事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson シリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Jetson デバイス一覧](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Seeed Jetson デバイス一覧（1 ページ）](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 - [Jetson examples](https://github.com/Seeed-Projects/jetson-examples)
 - [reComputer-Jetson-for-Beginners](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
 
@@ -1001,7 +1013,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。お客様が製品をスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。お客様が弊社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

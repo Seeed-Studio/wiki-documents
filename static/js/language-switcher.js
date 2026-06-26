@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-22 14:03:11 (北京时间)
-// 多语言页面: 2346 个
+// 生成时间: 2026-06-25 13:56:59 (北京时间)
+// 多语言页面: 2347 个
 
 (function() {
   'use strict';
@@ -1774,6 +1774,13 @@
     "pt"
   ],
   "/recomputer_jetson_mini_hardware_interfaces_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_mini_j501_wifi_module_installation": [
     "cn",
     "en",
     "es",
@@ -12481,6 +12488,13 @@
     "ja",
     "pt"
   ],
+  "/xiao_nrf54lm20a_with_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/xiao_ra4m1_clock": [
     "cn",
     "en",
@@ -13539,13 +13553,6 @@
     "pt"
   ],
   "/SenseCAP_Builder_build_LoRaWAN_Sensors": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/get_started_with_t1000_p": [
     "cn",
     "en",
     "es",
