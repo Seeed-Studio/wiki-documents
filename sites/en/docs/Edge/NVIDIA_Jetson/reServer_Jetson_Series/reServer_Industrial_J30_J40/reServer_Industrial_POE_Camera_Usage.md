@@ -14,7 +14,7 @@ last_update:
   author: HaoChen
 sku: 114110247
 createdAt: '2026-06-15'
-updatedAt: '2026-06-18'
+updatedAt: '2026-06-22'
 url: https://wiki.seeedstudio.com/reserver_industrial_poe_camera_usage/
 ---
 
