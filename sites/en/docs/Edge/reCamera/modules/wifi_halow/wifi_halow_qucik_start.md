@@ -13,7 +13,7 @@ last_update:
   date: 2026-06-02T00:00:00.000Z
   author: Sizhao zhou
 createdAt: '2026-06-02'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/wifi_halow_getting_started/
 ---
 
@@ -47,13 +47,14 @@ Then you need to prepare a reCamera with the back cover removed, as shown in the
 ![reCamera with back cover removed](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/reCamera_uncover.jpg)
 
 Installation tutorial video:
-<video 
-  src="https://github.com/6zsz6/seeed_wiki_video/blob/main/Wifi_Halow%E5%AE%89%E8%A3%85%E8%A7%86%E9%A2%91.mp4" 
-  controls 
-  width="100%" 
+<video
+  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/Wifi_Halow_install.mp4"
+  controls
+  width="100%"
   preload="metadata">
   Your browser does not support playing this video.
 </video>
+
 
 
 :::note Note
@@ -67,7 +68,7 @@ There are multiple interfaces on the Wifi Halow module, which are:
 - BAT interface: Used to connect a battery, the package specification is MX1.25-2P
 - DC interface: Used to connect a 12V DC power supply, the package specification is PH2.0-2P
 - USB adapter cable port: Used to connect the reCamera device, the package specification is GH1.25-4P
-![Interface diagram](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/wifi_halow_hardware_line.jpg)
+![Interface diagram](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/getting_start/wifi_halow_line.png)
 
 ---
 

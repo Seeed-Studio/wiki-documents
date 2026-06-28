@@ -1,11 +1,11 @@
 ---
-description: このガイドでは、reBot Arm B601-DM の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む入門手順を説明します。
+description: このガイドでは、reBot Arm B601-DM の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む、入門手順を説明します。
 title: reBot Arm B601-DM クイックスタート
 keywords:
   - reBot
   - B601-DM
-  - Robotic Arm
-  - Robot
+  - ロボットアーム
+  - ロボット
   - Lerobot
   - Pinocchio
   - 6 DOF
@@ -17,7 +17,7 @@ last_update:
   date: 2026-04-13T00:00:00.000Z
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-06-09'
+updatedAt: '2026-06-10'
 url: https://wiki.seeedstudio.com/ja/rebot_b601_dm_getting_started/
 ---
 
@@ -48,7 +48,7 @@ url: https://wiki.seeedstudio.com/ja/rebot_b601_dm_getting_started/
 reBot Arm プロジェクトは [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) 上でオープンソース公開されています。本ガイドでは、B601-DM の組み立てから操作までのクイックスタート手順を説明します。
 
 :::tip
-すでに組み立て済みキットを購入された場合は、本記事の最後にある **Step 3** のチュートリアル動画へ直接進み、その内容に従ってください。モーター ID の書き込みやゼロ点キャリブレーションを行う必要はありません。
+完成品キットをご購入の場合は、本記事の最後にある **ステップ 3** のチュートリアル動画へ直接進み、動画に沿って操作してください。モーター ID の書き込みやゼロ点キャリブレーションを行う必要はありません。
 :::
 
 ## 購入オプション
@@ -57,36 +57,36 @@ reBot Arm B601-DM には、さまざまなユーザーのニーズに対応す�
 
 ### オプション比較
 
-| 構成 | 本体 | グリッパ | モーター | 構造部品 | 購入リンク |
+| 構成 | 本体 | グリッパー | モーター | 構造部品 | 購入リンク |
 |:---|:---:|:---:|:---:|:---:|:---|
 | **コンプリートキット** | ✅ | ✅ | ✅ | ✅ | [Coming Soon](https://www.seeedstudio.com/) |
-| **グリッパのみ** | ❌ | ✅ | ❌ | ❌ | [Coming Soon](https://www.seeedstudio.com/) |
+| **グリッパーのみ** | ❌ | ✅ | ❌ | ❌ | [Coming Soon](https://www.seeedstudio.com/) |
 | **本体のみ（構造部品）** | ✅ | ❌ | ❌ | ✅ | [Coming Soon](https://www.seeedstudio.com/) |
 | **本体のみ（モーター）** | ✅ | ❌ | ✅ | ❌ | [Coming Soon](https://www.seeedstudio.com/) |
 
-## Step 1: [組み立てガイド](https://youtu.be/rfTQoFCfnMc)
+## ステップ 1: [組み立てガイド](https://youtu.be/rfTQoFCfnMc)
 
 組み立て前に：
 
 - スムーズに組み立てを行うため、以下の注意事項をよくお読みください。
   1. 本キットには、外観がよく似たさまざまなネジや部品が含まれています。締結する前に、仕様や向きが正しいか必ず確認してください。
-  2. 動画は 4 月上旬に撮影されたものです。細かな更新が行われている場合がありますが、組み立て手順は同じです。最終的には、同梱されている部品を正としてください。
-  3. 同梱のネジにはねじロック剤が塗布されています。適切な工具、または電動ドライバー（推奨）を使用してください。トルクは（3–6 kgf·cm）に設定し、なめないように注意してください。もしネジがなめてしまった場合は、すぐに作業を中止し、ネジの交換または位置調整を行ってください。ねじロック剤付きでなめたネジは取り外しが困難で、部品を破損するおそれがあります。
-  4. 組み立て作業中の安全を確保してください。指を挟むなどのけがに注意し、子どもが作業する場合は必ず保護者が付き添ってください。
+  2. 動画は 4 月上旬に撮影されたものです。細かな更新がある場合がありますが、組み立て手順は同じです。最終的には、同梱されている部品を正としてください。
+  3. 同梱のネジにはねじロック剤が塗布されています。適切な工具、または電動ドライバー（推奨）を使用してください。トルクは (3–6 kgf·cm) に設定し、なめないように注意してください。もしネジがなめてしまった場合は、すぐに作業を中止し、ネジの交換または位置調整を行ってください。ねじロック剤付きでなめたネジは外しにくく、部品を破損するおそれがあります。
+  4. 組み立て作業中の安全に十分注意してください。指を挟むなどのけがを避けてください。子どもが作業する場合は、必ず保護者が付き添ってください。
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/rfTQoFCfnMc?si=KkEfY0NePxC96Xdu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Step 2: モーター ID のリセット
+## ステップ 2: モーター ID のリセット
 
 ### AI AGENT
 
 :::tip
-このセクションはベータ版です。使用時は安全上の注意を守ってください。AI の提案内容が本ドキュメントと異なる場合は、本ガイドを優先し、必要に応じて当社エンジニアにお問い合わせください。
+このセクションはベータ版です。使用時は安全上の注意を必ず守ってください。AI の提案内容が本ドキュメントと異なる場合は、本ガイドを優先し、必要に応じて当社エンジニアにお問い合わせください。
 :::
 
-AI AGENT にこのプロセスをサポートさせましょう。以下のプロンプトをコピーして、お使いの AI アシスタントに入力してください：
+この手順は AI AGENT にサポートさせることもできます。以下のプロンプトをコピーして、お使いの AI アシスタントに入力してください：
 
 ```text
 
@@ -94,16 +94,16 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 ```
 
-### モーター ID リセット前の準備：
+### モーター ID リセット前の準備
 
   モーターのパラメータ設定を行う前に、以下の準備と安全ルールを確認してください：
 
-- 2 個の治具クランプ（3 インチ以上）と、24V 15A XT30 出力のスイッチング電源を用意してください（一般的なブランド品を使用し、粗悪品は使用しないでください）。
+- 工作用クランプを 2 個（3 インチ以上）と、24V 15A XT30 出力のスイッチング電源を 1 台用意してください（一般的なブランド品を使用し、粗悪品は使用しないでください）。
 - デバッグ／動作中は 1m 以上の距離を保ってください。
 - モーターのホットプラグは禁止です。XT30 2+2 インターフェースの抜き差しは、必ず電源を切ってから行ってください。
 - 過負荷／過回転をさせないでください。起動前に配線やネジの緩みを確認し、湿気の多い場所、高温、多粉じん環境での使用は避けてください。
-- 暴走を防ぐため、プログラムパラメータと非常停止を適切に設定してください。
-- **これらのルールは必ず厳守してください。違反操作や個人的なミスに起因するリスクや責任について、販売者は一切の責任を負いません。**
+- プログラムの各種パラメータや非常停止を適切に設定し、暴走を防止してください。
+- **上記ルールは必ず厳守してください。違反操作や個人的なミスに起因するリスクや責任について、販売者は一切の責任を負いません。**
 
 ### 準備リスト
 
@@ -119,77 +119,128 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 #### コンピュータ要件
 
-- デュアルブート構成のパーソナルコンピュータ（Windows + Ubuntu / macOS）
+- デュアルブート環境のパーソナルコンピュータ（Windows + Ubuntu / macOS）
 
 #### ソフトウェア
 
 - [DM_Tools_v.2.1.6.8.exe（Windows のみ対応）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool_v2.1.6.8.zip)
 
-<!-- - [DM_Tools_v.1.8.0.1.exe (Supports Windows Only)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe) -->
+
+#### モーター ID の書き込みと有効化テスト
+
+各関節モーターの CAN ID と Master ID を、以下の表のパラメータに従って設定します：
+
+| モーター番号 | CAN ID | Master ID |
+|:---:|:---:|:---:|
+| モーター 1 | 0x01 | 0x11 |
+| モーター 2 | 0x02 | 0x12 |
+| モーター 3 | 0x03 | 0x13 |
+| モーター 4 | 0x04 | 0x14 |
+| モーター 5 | 0x05 | 0x15 |
+| モーター 6 | 0x06 | 0x16 |
+| モーター 7 | 0x07 | 0x17 |
+
+:::danger
+以下はモーター 1 を例にした操作手順です。各関節モーターの CAN ID と Master ID は、必ず上記の表に従って正しく設定してください。
+:::
+1. **DM_Tools** ホストソフトウェアを起動し、該当する USB COM ポートを選択して、ボーレートを `921600` に設定します。接続に成功すると、`Serial` インターフェースに情報が表示されます。
+
+<div align="center">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_connect_en.png" width="800" />
+</div>
+
+2. 3 ピンケーブルを使用して、モーター 1 を USB-CAN アダプタボードに接続します。
+
+3. 接続後、`Parameter Settings` インターフェースに移動します。`Read Parameters` をクリックして現在のパラメータを読み出し、`CAN ID` を `0x01`、`Master ID` を `0x11` に設定します。
+
+4. 設定が完了したら、`Write Parameters` をクリックしてパラメータを保存します。
+
+<div align="center">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_id_set_en.png" width="800" />
+</div>
+
+5. `Debug` インターフェースに移動します。`CAN ID` と `Master ID` が正しく設定されていることを確認したら、`Enable` をクリックします。モーターのインジケータが緑色点灯に変わり、モーターが有効になったことを示します。これでモーター 1 のテストは完了です。
+
+<div align="center">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_enable_en.png" width="800" />
+</div>
+
+:::tip
+テスト後は、必ず `Disable` をクリックして有効状態を解除してください。
+:::
+
+**各モーターの 3 ピンケーブル接続位置と有効化時の状態**
+
+| モーター 1 セットアップ | モーター 2 セットアップ | モーター 3 セットアップ | モーター 4 セットアップ | モーター 5 セットアップ | モーター 6 セットアップ | モーター 7 セットアップ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/4_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/5_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/6_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/7_ID_set.jpg" width="120" /> |
+
+| モーター 1 有効化 | モーター 2 有効化 | モーター 3 有効化 | モーター 4 有効化 | モーター 5 有効化 | モーター 6 有効化 | モーター 7 有効化 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/4_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/5_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/6_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/7_Enable2.jpg" width="120" /> |
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/uXuzs1qmj6A?si=lfgXXlF1awhtnvaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Step 3: reBot Arm のキャリブレーションと入門
+## ステップ 3: reBot Arm のキャリブレーションと入門
 
 ここまでの動画に従って、ロボットアームの組み立て、ゼロ点初期化、モーター ID 設定などの準備が完了していることを前提としています。これで、私たちが公開している一連のチュートリアルやツールを本格的に活用する準備が整いました。
 
-1. まずは **MotorBridge** プラットフォームをお試しください。これは、[Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow など、対応モーターが拡大し続けているオールインワンソリューションです。継続的にアップデートされる reBot などのロボットアームにも対応しています。初心者向けに設計されているだけでなく、同等の機能を実装した Python SDK も提供しており、開発者の方にもご利用いただけます。
+1. 拡張し続けるモーターのリスト（[Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow など）をサポートするオールインワンソリューションである **MotorBridge** プラットフォームをお試しください。reBot など、継続的にアップデートされるロボットアームにも対応しています。初心者向けに設計されており、開発者向けには同等の機能を実装した Python SDK も提供しています。
 
-2. reBot ロボットアーム向け MotorBridge の新機能や詳細を体験してください。ワンクリックでのゼロ点設定、パラメータ書き込み、UI のドラッグ＆ドロップによるモーター制御、モデル可視化インターフェースの内蔵などが含まれます。
+2. reBot ロボットアーム向け MotorBridge の新機能と詳細を体験してください。ワンクリックでのゼロ点設定、パラメータ書き込み、UI のドラッグ＆ドロップによるモーター制御、組み込みのモデル可視化インターフェースなどが含まれます。
 
-3. このツールは **Windows、Ubuntu、Mac** の各オペレーティングシステムに完全対応しています。
+3. このツールは **Windows、Ubuntu、Mac** オペレーティングシステムと完全互換です。
 
-### Step 1: miniforge のインストール（Windows\Ubuntu\Mac\Jetson\Pi）
+### ステップ 1: miniforge をインストールする（Windows\Ubuntu\Mac\Jetson\Pi 上）
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-### Step 2: 環境構築
+### ステップ 2: 環境構築
 
-Python 3.12 の仮想環境を作成します：
+Python 3.12 で仮想環境を作成します：
 
 ```
 conda create -y -n rebot python=3.12
 ```
 
-次に仮想環境を有効化します。rebot を使用するためには、シェルを開くたびにこの操作を行う必要があります：
+その後、仮想環境を有効化します。reBot を使用するためには、シェルを開くたびにこの操作を行う必要があります：
 
 ```bash
 conda activate rebot
 ```
 
-### Step3: motorbridge のインストール
+### ステップ 3: motorbridge をインストールする
 
 :::tip
 
 **macOS ユーザーへの注意：**
-macOS でテレオペレーション中にフレームレートが低い場合、古い WCH CH34x ドライバが原因の可能性があります。**macOS 10.14 以降** では、システムに `AppleUSBCHC0M` ドライバが標準で含まれています。古いドライバをアンインストールして macOS 標準ドライバに切り替えることで、フレームレートが大幅に改善されるはずです。
+macOS でテレオペレーション中にフレームレートが低い場合、古い WCH CH34x ドライバーが原因の可能性があります。**macOS 10.14 以降** では、システムに `AppleUSBCHC0M` ドライバーが標準搭載されています。古いドライバーをアンインストールして macOS 標準ドライバーに切り替えることで、フレームレートを効果的に改善できるはずです。
 
 :::
 
-reBot 用の仮想環境を有効化したら、次のコマンドを実行して motorbridge をインストールします：
+reBot の仮想環境を有効化した後、次のコマンドを実行して motorbridge をインストールします：
 
 ```bash
 pip install motorbridge
 ```
 
-### Step4: rebot を接続する
-
-USB ケーブルでロボットアームをコンピュータに接続し、電源をオンにしたら、シリアルポートに対して 666 のアクセス権限を設定する必要があります。
+###  ステップ 4: reBot を接続する
+ロボットアームを USB ケーブルでコンピュータに接続し、電源をオンにした後、シリアルポートに対して 666 のアクセス権限を設定する必要があります。（Windows システムでは権限設定は不要なため、このステップはスキップできます。）
 
 ```bash
 sudo chmod 666 /dev/ttyACM*
 ```
 
-### Step5: motorbridge を開く
+### ステップ 5: motorbridge を開く
 
 ブラウザで `https://motorbridge.github.io/motorbridge-studio/` を開き、ヘルプをクリックします。お使いのシステムとドライバボードに適したコマンドをコピーし、IP とポートを確認してから、ターミナルで Enter キーを押します。
 
-例：Windows の場合：
+例えば Windows の場合：
 
 ```bash
 motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port COM3 --serial-baud 921600 --model 4340P --motor-id 0x01 --feedback-id 0x11 --dt-ms 20
@@ -200,11 +251,28 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
       src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/motorbridge_help.png" />
   </div>
 
+## 電源について
+
+1. ロボットアームには電源は同梱されておらず、標準では電源は含まれていません。ご自身でバッテリーを接続するか、当社のオープンソース [24V 14.6A MeanWell 電源](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html)を購入することができます。
+
+   <div align="center">
+     <img width={800}
+     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100029903-gallery-6_1.jpg" />
+   </div>
+
+2. あるいは、セルフアセンブリ用のオープンソース 24V 14.6A MeanWell 電源エンクロージャを選択することもできます。テキストによる手順と BOM は [GitHub リポジトリ](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM) でオープンソース公開されています（関連する電源組立経験を持つ開発者にのみ推奨）。
+
+   組立参考動画：
+
+   <div class="video-container">
+     <iframe width="900" height="600" src="https://www.youtube.com/embed/DHFA2UfQzUo?si=GYy-Z38qTUW6KPqq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
+
 ## FAQ
 ### 1. モーター起動直後に大きな異常音が発生する
-- この問題は通常、ID 設定中に誤ってパラメータキャリブレーションを実行してしまい、モーター慣性などの工場出荷時プリセットパラメータが上書きされることで発生します。以下から入手できる **DM_Tools_v.1.8.0.1.exe（Windows のみ）** を使用してください：
+- この問題は通常、ID 設定中に誤ってパラメータキャリブレーションがトリガーされ、モーター慣性などの工場出荷時プリセットパラメータが上書きされてしまった場合に発生します。以下から入手できる **DM_Tools_v.1.8.0.1.exe（Windows 専用）** を使用してください：
 https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe
-ホストソフトウェアを使用して、同一モデルの正常なモーターから完全なパラメータをエクスポートし、それらのパラメータを不具合のあるモーターにインポートして、対応する CAN ID を更新し、書き込んだパラメータを保存してから、ゼロ点キャリブレーションを実行してください。
+ホストソフトウェアを使用して、同一モデルの正常なモーターから完全なパラメータをエクスポートし、それらのパラメータを不具合のあるユニットにインポートして、対応する CAN ID を更新し、書き込んだパラメータを保存してから、ゼロ点キャリブレーションを実行します。
 
 <div align="center">
     <img width={400}
@@ -219,11 +287,11 @@ https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1
 [DM4310 デフォルトパラメータ](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4310_Default_Parameters.txt)
 [DM4340P デフォルトパラメータ](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4340P_Default_Parameters.txt)
 
-### 2. すべてのモーターが同一の CAN ID を共有している場合
-- **DM_Tools_v.1.8.0.1.exe (Windows-only)** を使用してゼロ点キャリブレーションを行う際は、CAN ID フィールド横の Read または Set ボタンをクリックしないでください。デバッグインターフェースは CAN バス経由で通信しており、Set をクリックすると CANBUS に接続されているすべてのモーターの CAN ID が同一に設定されてしまいます。
+### 2. すべてのモーターの CAN ID が同一になってしまった
+- **DM_Tools_v.1.8.0.1.exe（Windows 専用）** でゼロ点キャリブレーションを行う際は、CAN ID フィールド横の Read または Set ボタンをクリックしないでください。デバッグインターフェースは CAN バス経由で通信しており、Set をクリックすると CANBUS 上に接続されているすべてのモーターの CAN ID が同一に設定されてしまいます。
 
 
-#### その後の操作手順については、チュートリアル動画を参照してください。
+#### その後の操作手順については、チュートリアル動画をご参照ください。
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/SI1PRQYkhdg?si=E0m7uTF4IhCVZYl_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

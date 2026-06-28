@@ -14,7 +14,7 @@ last_update:
   date: 2026-06-12
   author: Zibo
 createdAt: '2026-06-12'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-22'
 url: https://wiki.seeedstudio.com/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601/
 ---
 

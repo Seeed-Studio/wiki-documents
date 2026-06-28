@@ -38,10 +38,6 @@ No máximo 8 dispositivos por IP, e certifique-se de que o seu roteador oferece 
 
 https://www.speedtest.net
 
-### **Qual é a diferença entre Flux e tokens Flux**
-
-Tokens Flux são Flux. Tokens Flux são Parallel Assets que são pagos em diferentes blockchains, como ETH Flux, BSC Flux, etc. Eles podem ser solicitados no aplicativo Fusion dentro do Zelcore. Selecione "Parallel Mining Claim" nos três pontos no canto superior direito. Você só verá um valor resgatável se a sua quantidade de Flux-Token for maior que as taxas necessárias para reivindicar.
-
 ### **Se eu for um usuário profissional, posso apagar o sistema original e instalar outro?**
 
 Esta não é uma operação recomendada. No entanto, é um dispositivo baseado em x86 e você pode reinstalar qualquer sistema que quiser; antes disso, certifique-se de que você sabe o que está fazendo.

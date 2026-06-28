@@ -47,10 +47,10 @@ Wifi Halow 是 reCamera 的一个无线网络模块，它允许您将 reCamera �
 ![拆掉后盖的reCamera](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/reCamera_uncover.jpg)
 
 安装教程视频：
-<video 
-  src="https://github.com/6zsz6/seeed_wiki_video/blob/main/Wifi_Halow%E5%AE%89%E8%A3%85%E8%A7%86%E9%A2%91.mp4" 
-  controls 
-  width="100%" 
+<video
+  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/Wifi_Halow_install.mp4"
+  controls
+  width="100%"
   preload="metadata">
   您的浏览器不支持播放该视频。
 </video>
@@ -67,7 +67,7 @@ Wifi Halow 是 reCamera 的一个无线网络模块，它允许您将 reCamera �
 - BAT接口：用于连接电池使用，封装规格是MX1.25-2P
 - DC 接口：用于连接12V的DC供电，封装规格是PH2.0-2P
 - USB转接线端口：用于连接reCamera设备，封装规格是GH1.25-4P
-![接口示意图](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/wifi_halow_hardware_line.jpg)
+![接口示意图](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/getting_start/wifi_halow_line.png)
 
 ---
 

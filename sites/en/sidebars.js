@@ -729,19 +729,6 @@ const sidebars = {
             }
           ],
         },
-        //       {
-        //            type: 'category',
-        //           label: 'SenseCAP T1000-P Pet Tracker',
-        //           collapsed: true,
-        //           collapsible: true,
-        //          link: {
-        //            type: "doc",
-        //           id: 'Sensor/SenseCAP/SenseCAP_T1000-P/t1000_p_intro',
-        //         },
-        //        items: [
-        //         'Sensor/SenseCAP/SenseCAP_T1000-P/get_started_with_t1000_p',
-        //           ],
-        //     },
         {
           type: 'category',
           label: 'SenseCAP Sensor',

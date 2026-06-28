@@ -37,10 +37,6 @@ O SenseCAP M4 Square abre todas as portas exigidas pelo Flux. O SenseCAP Hotspot
 
 https://www.speedtest.net
 
-### **Qual é a diferença entre flux e flux tokens**
-
-Flux tokens são Flux. Flux tokens são Parallel Assets que são pagos em diferentes blockchains, como ETH Flux, BSC Flux, etc. Eles podem ser reivindicados no aplicativo Fusion dentro do Zelcore. Selecione "Parallel Mining Claim" nos três pontos no canto superior direito. Você só verá um valor reivindicável se a sua quantidade de Flux-Token for maior do que as taxas exigidas para reivindicar.
-
 ### **Se eu for um usuário profissional, posso apagar o sistema original e instalar outro?**
 
 Esta não é uma operação recomendada. No entanto, é um dispositivo baseado em x86 e você pode reinstalar qualquer sistema que quiser; antes disso, certifique-se de que você sabe o que está fazendo.
