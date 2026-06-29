@@ -37,7 +37,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j4012s',
     label: 'reComputer Super J4012',
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0", "36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/')
@@ -45,7 +45,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j4011s',
     label: 'reComputer Super J4011',
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0", "36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-8g.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/')
@@ -53,7 +53,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j3011s',
     label: 'reComputer Super J3011',
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0", "36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-8g.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/')
@@ -61,7 +61,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j3010s',
     label: 'reComputer Super J3010',
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0", "36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-4g.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/')
@@ -165,7 +165,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j4012industrial',
     label: 'reComputer industrial J4012',
-    l4t: ["36.4.0", "36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0", "36.4.0", "36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Flash_Jetpack/')
@@ -173,7 +173,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j4011industrial',
     label: 'reComputer industrial J4011',
-    l4t: ["36.4.0", "36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0", "36.4.0", "36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Flash_Jetpack/')
@@ -181,7 +181,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j3011industrial',
     label: 'reComputer industrial J3011',
-    l4t: ["36.4.3", "36.4.0", "36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0", "36.4.3", "36.4.0", "36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Flash_Jetpack/')
@@ -189,7 +189,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j3010industrial',
     label: 'reComputer industrial J3010',
-    l4t: ["36.4.3", "36.4.0", "36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0", "36.4.3", "36.4.0", "36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Flash_Jetpack/')
@@ -253,7 +253,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j501mini',
     label: 'reComputer Robotics J501 Mini',
-    l4t: ["36.4.4 (GMSL✅)"],
+    l4t: ["39.2.0", "36.4.4 (GMSL✅)"],
     img: 'https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_j501_mini_getting_started/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J501_Mini_Flash_Jetpack/')
@@ -261,7 +261,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j5012robotics',
     label: 'reComputer robotics J5012',
-    l4t: ["36.4.4 (GMSL✅)"],
+    l4t: ["39.2.0", "36.4.4 (GMSL✅)"],
     img: 'https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/ai_robotics_recomputer_j501_robotics_getting_started/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J501_Flash_Jetpack/')
@@ -269,7 +269,7 @@ export const productOptions: ProductOption[] = [
   {
     value: 'j5011robotics',
     label: 'reComputer robotics J5011',
-    l4t: ["36.4.4 (GMSL✅)"],
+    l4t: ["39.2.0", "36.4.4 (GMSL✅)"],
     img: 'https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/ai_robotics_recomputer_j501_robotics_getting_started/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reComputer_J501_Flash_Jetpack/')

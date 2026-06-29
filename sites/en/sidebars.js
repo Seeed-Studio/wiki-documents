@@ -3827,6 +3827,7 @@ const sidebars = {
                   label: 'J601-Robotics Carrier Board',
                   items: [
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/reComputer_Robotics_J601_Getting_Started',
+                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
                 // {
