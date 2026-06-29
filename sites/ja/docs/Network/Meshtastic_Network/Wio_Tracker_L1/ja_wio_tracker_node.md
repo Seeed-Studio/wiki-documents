@@ -1,6 +1,6 @@
 ---
-description: Wio Tracker L1 の概要
-title: Wio Tracker L1 の概要
+description: Wio Tracker L1 入門
+title: Wio Tracker L1 入門
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.webp
@@ -10,7 +10,7 @@ last_update:
   date: 12/18/2025
   author: Michelle Huang
 createdAt: '2025-05-23'
-updatedAt: '2025-12-18'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/ja/wio_tracker_l1_node/
 ---
 
@@ -21,9 +21,9 @@ url: https://wiki.seeedstudio.com/ja/wio_tracker_l1_node/
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 </font></span></strong>
     </a>
 </div>
-Wio Tracker L1 シリーズは、LoRa（862～930 MHz）、高効率な処理を行う nRF52840、そして高精度な位置情報を提供する L76K GPS モジュールを搭載した、低消費電力かつ高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードです。柔軟性を重視した設計により、OLED や E-Ink ディスプレイ、ソーラーパネルおよびバッテリー電源に対応しており、幅広い IoT やオフグリッド用途に最適です。
+Wio Tracker L1 シリーズは、LoRa（862–930 MHz）、効率的な処理を行う nRF52840、そして高精度な位置情報取得のための L76K GPS モジュールを搭載した、低消費電力かつ高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードです。柔軟性を重視した設計により、OLED や E-Ink ディスプレイ、ソーラーパネルおよびバッテリー電源に対応しており、幅広い IoT やオフグリッド用途に最適です。
 
-## L1 シリーズのモデル
+## L1 シリーズモデル
 
 :::tip
 Wio Tracker L1 シリーズは 4 つのバージョンが用意されており、用途に最も適したものを選択できます。
@@ -44,7 +44,7 @@ Wio Tracker L1 シリーズは 4 つのバージョンが用意されており�
 |LoRa|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |GPS|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |画面|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>1.3 インチ OLED</p><br/><p style={{textAlign: 'center'}}>解像度：128 × 64 ピクセル</p>|<p style={{textAlign: 'center'}}>1.3 インチ OLED</p><br/><p style={{textAlign: 'center'}}>解像度：128 × 64 ピクセル</p>|<p style={{textAlign: 'center'}}>2.13 インチ E-ink</p><br/><p style={{textAlign: 'center'}}>解像度：122 × 250 ピクセル</p>|
-|ソーラー＋バッテリーコネクタ|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>内蔵 2000mAh バッテリー</p>|<p style={{textAlign: 'center'}}>✅</p>|
+|ソーラー＋バッテリーコネクタ|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>2000mAh バッテリー内蔵</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |筐体|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>-</p>|
 
 ## 概要
@@ -52,21 +52,21 @@ Wio Tracker L1 シリーズは 4 つのバージョンが用意されており�
 ### 特長
 
 - **Meshtastic ファームウェアをプリインストール**
-Meshtastic ファームウェアがあらかじめ書き込まれているため、箱から出してすぐにシームレスなセットアップで使用を開始できます。
+Meshtastic ファームウェアがあらかじめインストールされており、箱から出してすぐにシームレスなセットアップで使用できます。
 
 - **3 種類の電源供給オプション**
 Type-C 急速充電、ソーラー入力、リチウムイオンバッテリー電源に対応し、さまざまな環境で柔軟に展開可能です。屋外やモバイル用途に最適です。
 
 - **柔軟なディスプレイ対応**
-オプションの 1.3 インチ OLED および 2.13 インチ E-Ink スクリーンに対応し、消費電力や視覚的フィードバックの要件に応じて多様な表示オプションを提供します。
+1.3 インチ OLED と 2.13 インチ E-Ink のオプション画面に対応し、消費電力や視覚的フィードバックのニーズに応じて多様な表示方法を選択できます。
 
 - **高い拡張性**
-Grove エコシステムと完全互換であり、PTH ヘッダおよび SWD デバッグインターフェースを備えているため、カスタムハードウェア拡張や高度な開発が可能です。
+Grove エコシステムと完全互換で、PTH ヘッダおよび SWD デバッグインターフェースを備えており、カスタムハードウェア拡張や高度な開発が可能です。
 
 ### 仕様
 
 :::tip
-最新ロットの L1、L1 Lite、L1 E-Ink にはすべてバッテリーアダプターケーブルが付属しており、1mm インターフェースを 2mm インターフェースに変換できます。これにより、使用できるバッテリーの選択肢が広がります。
+最新ロットの L1、L1 Lite、L1 E-Ink にはすべて、1mm インターフェースを 2mm インターフェースに変換するバッテリーアダプターケーブルが付属しています。これにより、使用できるバッテリーの選択肢が広がります。
 :::
 
 <table>
@@ -78,11 +78,11 @@ Grove エコシステムと完全互換であり、PTH ヘッダおよび SWD �
   </tr>
   <tr>
     <td colspan="1">オンチップメモリ</td>
-    <td colspan="1">1 MB フラッシュ、256 kB RAM</td>
+    <td colspan="1">1 MB フラッシュおよび 256 kB RAM</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">無線</td>
-    <td colspan="1">LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a> ベース、862～930MHz 対応</td>
+    <td colspan="1">LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a> ベース、862–930MHz 対応</td>
   </tr>
    <tr>
   <td colspan="1">L1 Pro 用 LoRa アンテナ：3dBi</td>
@@ -109,13 +109,13 @@ Grove エコシステムと完全互換であり、PTH ヘッダおよび SWD �
     <td colspan="1">USB Type-C：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">ソーラーパネル（2.0mm 2p）：5V — 1A</td>
+    <td colspan="1">ソーラーパネル（2P-2.0mm）：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">リチウムバッテリー（1mm 2p JST）：3.7V — 1A</td>
+    <td colspan="1">リチウムバッテリー（2P-1.25mm）：3.7V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">[OLED スクリーン](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
+    <td colspan="1" rowspan="3">[OLED Screen](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
     <td colspan="1">サイズ：1.3 インチ</td>
   </tr>
   <tr>
@@ -125,7 +125,7 @@ Grove エコシステムと完全互換であり、PTH ヘッダおよび SWD �
     <td colspan="1">有効表示エリア（mm）：34.5 × 23.0</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">[E-Ink スクリーン](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
+    <td colspan="1" rowspan="3">[E-Ink Screen](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
     <td colspan="1">サイズ：2.13 インチ</td>
   </tr>
   <tr>

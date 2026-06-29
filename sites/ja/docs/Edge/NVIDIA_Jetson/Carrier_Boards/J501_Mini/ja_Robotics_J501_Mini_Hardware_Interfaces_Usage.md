@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、Jetson Robotics J501-Miniキャリアボードのハードウェア機能とインターフェースの使用方法について包括的に紹介します。詳細な仕様、対応モジュール、セットアップ手順、M.2、Ethernet、USB、CAN、UART、DI/DO、I2S、GMSL2カメラ拡張など各種インターフェースの実用的なガイドを網羅し、ユーザーがJ501-Miniプラットフォーム上でのロボット開発を素早く開始できるよう支援します。
+description: このWikiでは、Jetson Robotics J501-Miniキャリアボードのハードウェア機能とインターフェースの使用方法について包括的に紹介します。詳細な仕様、対応モジュール、セットアップ手順、M.2、Ethernet、USB、CAN、UART、DI/DO、I2S、GMSL2カメラ拡張など各種インターフェースの実用的な使用ガイドを網羅し、ユーザーがJ501-Miniプラットフォームでのロボティクス開発を素早く開始できるよう支援します。
 title: Jetpack のフラッシュ && インターフェースの使用
 tags:
   - J501-Robotics キャリアボード
@@ -15,14 +15,14 @@ last_update:
   date: 11/04/2025
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-03-30'
+updatedAt: '2026-06-27'
 url: https://wiki.seeedstudio.com/ja/recomputer_j501_mini_getting_started/
 ---
 # Robotics J501 キャリアボード ハードウェアと入門ガイド
 
-Robotics J501 Miniキャリアは、高度なロボティクス向けに設計されたコンパクトで高性能なエッジAIキャリアボードです。MAXNモードでNVIDIA Jetson AGX Orinモジュール（32GB/64GB）に対応し、最大275 TOPSのAI性能を発揮します。デュアルGigabit Ethernetポート、5GおよびWi-Fi/BTモジュール用M.2スロット、2つのUSB 3.2ポート、CAN、GMSL2（オプションの拡張経由）、I2C、UARTなどの豊富な接続オプションを備え、各種センサーからの複雑なデータを処理できる強力なロボット用ブレインとして機能します。JetPack 6.2.1とLinux BSPをプリインストールしており、シームレスなデプロイを実現します。​
+Robotics J501 Mini キャリアは、高度なロボティクス向けに設計されたコンパクトで高性能なエッジAIキャリアボードです。MAXNモードでNVIDIA Jetson AGX Orinモジュール（32GB/64GB）に対応し、最大275 TOPSのAI性能を発揮します。デュアルGigabit Ethernetポート、5GおよびWi-Fi/BTモジュール用M.2スロット、2つのUSB 3.2ポート、CAN、GMSL2（オプションの拡張経由）、I2C、UARTなどの豊富な接続オプションを備え、各種センサーからの複雑なデータを処理できる強力なロボットブレインとして機能します。JetPack 6.2.1とLinux BSPをプリインストールしており、シームレスなデプロイを実現します。​
 
-NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワークをサポートするRobotics J501 Miniは、大規模言語モデルによる意思決定と、モーションプランニングやセンサーフュージョンといった物理ロボット制御との橋渡しを行います。自律ロボットの迅速な開発に最適で、すぐに使えるインターフェースと最適化されたAIフレームワークにより、製品化までの時間を短縮します。
+NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワークをサポートする Robotics J501 Mini は、大規模言語モデルによる意思決定と、モーションプランニングやセンサーフュージョンといった物理ロボット制御との橋渡しを行います。自律ロボットの迅速な開発に最適で、すぐに使えるインターフェースと最適化されたAIフレームワークにより、製品化までの時間を短縮します。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg"/>
@@ -48,29 +48,29 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
 
 - Robotics J501-Mini キャリアボード x 1
 - 電源およびJST拡張ボード x 1
-- XT30 to DC ケーブル x 1
-- USBケーブル（Type A to Type C） x 1
+- XT30 から DC ケーブル x 1
+- USB ケーブル（Type A to Type C）x 1
 - 拡張ボード用ヒートシンク x 1
-- スタッド（M3*30） x 5
+- スタッド（M3*30）x 5
 - M3 六角ナット x 5
-- JetsonモジュールおよびM.2 Key M用ネジ（CM2.5*L.4） x3
-- M.2 Key E用ネジ（CM2*3.0） x1
-- M.2 Key B用スタッド（M2*2.0） x1
-- M.2 Key B用ネジ（CM3*4.0） x1
+- Jetson モジュールおよび M.2 Key M 用ネジ（CM2.5*L.4）x3
+- M.2 Key E 用ネジ（CM2*3.0）x1
+- M.2 Key B 用スタッド（M2*2.0）x1
+- M.2 Key B 用ネジ（CM3*4.0）x1
 - ユーザーマニュアル x 1
 
 :::note
-1.高電圧電源および動作温度で使用する場合は、Thermal Design Guideに従って堅牢な放熱ソリューションを設計してください。
+1.高電圧電源および高温環境で動作させる場合は、Thermal Design Guide に従って堅牢な放熱ソリューションを設計してください。
 2.より良い性能のために、モジュールにヒートシンクを取り付けてください。
 3.高電圧入力かつ高負荷で動作中は、やけど防止のためヒートシンクに触れないでください。
 4.検証用の電源アダプタについては、Seeed公式サイトで推奨されている電源アダプタを使用してください。
 
 - 19V/4.74A 5525 バレルジャック電源アダプタ
 - 最大消費電力要件を満たしていることを確認してください。
-2.AC電源コードの互換性
-- ご利用地域に応じて、地域仕様のACクローバーリーフ電源コードを購入してください。
+2.AC 電源コードの互換性
+- お住まいの地域に応じて、地域仕様のACクローバーリーフ電源コードを購入してください。
 3.アクセサリの互換性
-- 最適な性能と互換性のために、公式に推奨されているアクセサリ（ワイヤレスモジュール、カメラ、周辺機器など）のみを使用してください。
+- 最適な性能と互換性のために、公式に推奨されているアクセサリ（例：無線モジュール、カメラ、周辺機器）のみを使用してください。
 
 :::
 
@@ -99,7 +99,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
     </tr>
     <tr>
       <td>Ethernet</td>
-      <td>1x RJ45 10GbE && 1x RJ45 1GbE</td>
+      <td>1x RJ45 10GbE ＆＆ 1x RJ45 1GbE</td>
     </tr>
     <tr>
       <th rowSpan="13">I/O</th>
@@ -108,11 +108,11 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
     </tr>
     <tr>
       <td>カメラ</td>
-      <td>2x 4 in 1 GMSL2 Mini-Fakra コネクタ（オプション）;</td>
+      <td>2x 4 in 1 GMSL2 Mini-Fakra コネクタ（オプション）；</td>
     </tr>
     <tr>
       <td>CAN</td>
-      <td>2x CAN JST 4ピンコネクタ（GH 1.25）;</td>
+      <td>2x CAN JST 4ピンコネクタ（GH 1.25）；</td>
     </tr>
     <tr>
       <td>DI/DO</td>
@@ -128,7 +128,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x UART JST 6ピンコネクタ（DOと多重化）</td>
+      <td>1x UART JST 6ピンコネクタ（DO と多重化）</td>
     </tr>
     <tr>
       <td>ディスプレイ</td>
@@ -140,11 +140,11 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
     </tr>
     <tr>
       <td>拡張ポート</td>
-      <td>2x カメラ拡張ヘッダ（GMSL2ボード用）</td>
+      <td>2x カメラ拡張ヘッダ（GMSL2 ボード用）</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x RTC 2ピン;</td>
+      <td>1x RTC 2ピン；</td>
     </tr>
     <tr>
       <td>LED</td>
@@ -152,11 +152,11 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
     </tr>
     <tr>
       <td>ボタン</td>
-      <td>1x Recovery ボタン；<br />1x RESET ボタン</td>
+      <td>1x リカバリボタン；<br />1x RESET ボタン</td>
     </tr>
     <tr>
       <th rowSpan="1">電源</th>
-      <td colSpan="2">19-48V XT30（XT30 to 5525 DCジャックケーブル同梱）</td>
+      <td colSpan="2">19-48V XT30（XT30 から 5525 DC ジャックケーブル付属）</td>
     </tr>
     <tr>
       <th rowSpan="1">Jetpack バージョン</th>
@@ -177,11 +177,11 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
     </tr>
     <tr>
       <th rowSpan="1">動作温度</th>
-      <td colSpan="2">-20℃～60℃（25Wモード）；<br />-20℃～55℃（MAXNモード）；<br />（reComputer Robotics ヒートシンク＋ファン使用時）</td>
+      <td colSpan="2">-20℃～60℃（25W モード）；<br />-20℃～55℃（MAXN モード）；<br />（reComputer Robotics ヒートシンク＋ファン使用時）</td>
     </tr>
     <tr>
       <th rowSpan="1">保証</th>
-      <td colSpan="2">2年</td>
+      <td colSpan="2">2 年</td>
     </tr>
     <tr>
       <th rowSpan="1">認証</th>
@@ -208,34 +208,45 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
 
 :::info
 
-仮想マシンではなく、物理的なUbuntuホストデバイスを使用することを推奨します。
+仮想マシンではなく、物理的な Ubuntu ホストデバイスを使用することを推奨します。
 ホストマシンを準備する際は、以下の表を参照してください。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> JetPack 7.2 では、Ubuntu 24.04 はフラッシュおよびターゲット側コンポーネントのインストールのみサポートされます。ホスト開発コンポーネントが必要な場合は、Ubuntu 20.04 または 22.04 を使用してください。</p>
 
 :::
 
 ### Jetpack イメージの準備
 
-ここでは、使用しているJetsonモジュールに対応するシステムイメージをUbuntu PCにダウンロードする必要があります。
+ここでは、使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードする必要があります。
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -250,7 +261,20 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
   </thead>
   <tbody>
     <tr>
-      <td rowSpan={4}>6.2.1</td>
+      <td rowSpan={2}>7.2</td>
+      <td> AGX Orin 64GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCZEEr-Co7XSJmdL_F1Rvo9AbidOmBTdQjSspf6EXRcU9s?e=39pbm6">Download</a></td>
+      <td>36e2616404f9451a043797968e87755b<br />4dc654a5683cd70c7e223cc80910ac0a</td>
+    </tr>
+    <tr>
+      <td>AGX Orin 32GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCepjaEexEOSb_ula7wMpDlAX61iyLzJ1B1RTHpY32mPIQ?e=sOyPdU">Download</a></td>
+      <td>05d082994fd1b2ae85c5c666a621b5a6<br />e8ec178db5ce64cca516c837acca7552</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>6.2.1</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAUQ4ithrVMQLSE274ftNcLAdScXb2OFE8LXfabvKzaGS8">Download</a></td>
@@ -267,13 +291,13 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
 </div>
 
 :::danger
-Jetpack6 のイメージファイルは約 **14.2GB** あり、ダウンロードにはおよそ60分かかります。ダウンロード完了までお待ちください。
+JetPack イメージファイルは大容量のため、ダウンロードに約60分かかる場合があります。ダウンロードが完了するまでお待ちください。
 :::
 
 :::info
-ダウンロードしたファームウェアの完全性を確認するには、SHA256ハッシュ値を比較します。
+ダウンロードしたファームウェアの完全性を確認するには、SHA256 ハッシュ値を比較します。
 
-Ubuntuホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルのSHA256ハッシュ値を取得します。結果のハッシュがWikiに記載されているSHA256ハッシュと一致すれば、ダウンロードしたファームウェアが完全で破損していないことが確認できます。
+Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。出力されたハッシュがWikiに記載されているSHA256ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ破損していないことが確認できます。
 :::
 
 ⚙️ **SEEED の Jetson キャリアボード向けのすべての `.dts` ファイルおよびその他のソースコードは** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra) **からダウンロードできます**
@@ -282,14 +306,14 @@ Ubuntuホストマシンでターミナルを開き、`sha256sum <File>` コマ�
 ### Force Recovery モードに入る
 
 :::info
-インストール手順に進む前に、ボードがForce Recoveryモードになっていることを確認する必要があります。
+インストール手順に進む前に、ボードが強制リカバリーモードになっていることを確認する必要があります。
 :::
 
 <details>
 
-<summary> 手順 </summary>
+<summary> 手順ごとの説明 </summary>
 
-**Step 1.** ボタンを押し続けてRESETモードにします。
+**Step 1.** ボタンを押し続けて、RESET モードに入ります。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
@@ -297,18 +321,18 @@ Ubuntuホストマシンでターミナルを開き、`sha256sum <File>` コマ�
 
 **Step 2.** 電源ケーブルを接続してキャリアボードの電源を入れ、その後 **REC** ボタンを離します。
 
-**Step 3.** USB Type-C データ転送ケーブルでボードをUbuntuホストPCに接続します。
+**Step 3.** USB Type-C データ転送ケーブルを使用して、ボードを Ubuntu ホスト PC に接続します。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/flash-port.png" />
 </div>
 
-**Step 4.** LinuxホストPCでターミナルウィンドウを開き、`lsusb` コマンドを入力します。使用しているJetson SoMに応じて、返された内容に次のいずれかの出力が含まれていれば、ボードはForce Recoveryモードになっています。
+**Step 4.** Linux ホスト PC でターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
 
 - AGX Orin 32GB の場合: **0955:7223 NVidia Corp**
 - AGX Orin 64GB の場合: **0955:7023 NVidia Corp**
 
-以下の画像は AGX Orin 32GB 用です: 
+以下の画像は AGX Orin 32GB の例です: 
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png"/>
@@ -318,15 +342,16 @@ Ubuntuホストマシンでターミナルを開き、`sha256sum <File>` コマ�
 
 ### Jetson へのフラッシュ
 
-**ステップ 1:** ダウンロードしたイメージファイルを解凍します:
+**Step 1:** ダウンロードしたイメージファイルを解凍します:
 
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
+# For JetPack 7.2 example: sudo tar xpf mfi_recomputer-mini-agx-orin-j501x-32g-7.2.0-39.2.0-2026-06-25.tar.gz
+# For JetPack 6.2.1 example: sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
 ```
 
-**ステップ 2:** JetPack システムを NVMe SSD にフラッシュするために、次のコマンドを実行します:
+**Step 2:** 次のコマンドを実行して、JetPack システムを NVMe SSD にフラッシュします:
 
 ```bash
 cd mfi_xxxx
@@ -334,7 +359,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-フラッシュ処理が成功すると、次のような出力が表示されます
+フラッシュ処理が正常に完了すると、次のような出力が表示されます。
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
@@ -342,14 +367,14 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 フラッシュコマンドの実行には 2〜10 分かかる場合があります。
 :::
 
-**ステップ 3:** Robotics J501-Mini をディスプレイに接続します。PD から HDMI へのアダプタを使用して HDMI 入力対応ディスプレイに接続するか、PD ケーブルを使用して PD 入力対応ディスプレイに直接接続し、初期設定を完了します:
+**Step 3:** Robotics J501-Mini をディスプレイに接続します。PD から HDMI へのアダプタを使用して HDMI 入力対応ディスプレイに接続するか、PD ケーブルを使用して PD 入力対応ディスプレイに直接接続し、初期設定を完了します:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-**System Configuration** は、ニーズに応じて完了させてください。
+ニーズに応じて **System Configuration** を完了してください。
 :::
 
 ## 🔌 インターフェースの使用方法
@@ -360,7 +385,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 M.2 Key M は高速 NVMe SSD 用に設計されており、ロボティクスアプリケーション向けに超高速データ転送を提供します。
 
-### 対応 SSD は以下の通りです
+### 対応 SSD は次のとおりです
 
 - [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
 - [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
@@ -420,7 +445,7 @@ sudo chmod +x test_nvme.sh
 
 ## M.2 Key E
 
-M.2 Key E インターフェースは標準的な M.2 コネクタで、主に Wi-Fi や Bluetooth などの無線モジュールを接続し、無線通信機能を拡張するために使用されます。
+M.2 Key E インターフェースは標準的な M.2 コネクタで、主に Wi-Fi や Bluetooth などのワイヤレスモジュールを接続し、ワイヤレス通信機能を拡張するために使用されます。
 
 ### ハードウェア接続
 
@@ -462,7 +487,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 :::info
 `<server_ip>` は iperf3 サーバーの IP アドレスです。クライアントはこのサーバーに接続して帯域幅テストを実行します。
-`<bind_ip>` は、テストトラフィックの送信元として指定されたローカル IP アドレスをバインドします。
+`<bind_ip>` は、テストトラフィックの送信元として指定したローカル IP アドレスをバインドします。
 :::
 
 <div align="center">
@@ -557,16 +582,16 @@ sudo apt install screen
 screen /dev/ttyUSB0 115200
 ```
 
-その後、別の Linux ホスト上のシリアルポート経由で Jetson のターミナルを、以下のように操作できます:
+その後、別の Linux ホスト上のシリアルポート経由で、Jetson のターミナルを次のように操作できます:
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/login-usb.png"/>
 </div>
 
 
-## Fan
+## ファン
 
-reComputer Jetson Robotics j501-Mini には、次のものが搭載されています: 
+reComputer Jetson Robotics j501-Mini には次のものが搭載されています: 
 
 - 1x 4 ピンファンコネクタ (12V PWM): 標準的な 12V PWM ファンと互換性があり、精密な回転数制御もサポートするため、高性能な冷却が必要な用途に最適です。
 
@@ -578,7 +603,7 @@ Robotics J501 Mini には、ファン用の標準 4 ピンヘッダが用意さ�
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/fan0.png"/>
 </div>
 
-**Fan** のデータシート回路図は以下の通りです:
+**Fan** のデータシート回路図は以下のとおりです:
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/fan1.png"/>
@@ -591,7 +616,7 @@ Robotics J501 Mini には、ファン用の標準 4 ピンヘッダが用意さ�
 </div>
 
 :::note
-詳細については、[こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control) を確認してください。
+詳細については、[こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control)を参照してください。
 :::
 
 ### 使用手順
@@ -620,19 +645,19 @@ echo $1 > /sys/devices/platform/pwm-fan/hwmon/hwmon1/pwm1
 
 CAN（Controller Area Network）は、ホストコンピュータなしでマイコンやデバイス同士が通信できる、堅牢な車載バス規格です。  
 
-J501 Mini には JST 4 ピン（GH1.25）に統合された 2 つの CAN インターフェースが用意されています。さらに、両方の CAN インターフェースは **CAN-FD をサポート** しており、CAN0 と CAN1 は以下のように示されています:
+J501 Mini は JST 4ピン（GH1.25）に統合された 2 つの CAN インターフェースを提供します。さらに、両方の CAN インターフェースは **CAN-FD をサポート** しており、CAN0 と CAN1 は次のように示されています：
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can-real.png"/>
 </div>
 
-**CAN0** と **CAN1** のピン配置定義は同様で、インターフェース図は以下の通りです:
+**CAN0** と **CAN1** のピン配置定義は類似しており、インターフェース図は次のとおりです：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can-jst.png"/>
 </div>
 
-**CAN0** は **J6** に対応しており、ピン定義は次のとおりです:
+**CAN0** は **J6** に対応しており、ピン定義は次のとおりです：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can0-ds.png"/>
@@ -645,13 +670,13 @@ J501 Mini には JST 4 ピン（GH1.25）に統合された 2 つの CAN イン�
 </div>
 
 ### CAN 通信
-このセクションでは、Jetson 上の CAN0 と CAN1 を接続し、`Classic CAN mode` と `CAN-FD mode` で CAN0 と CAN1 間のデータ送受信を行う方法を説明します。
+このセクションでは、Jetson 上の CAN0 と CAN1 を接続し、`Classic CAN mode` と `CAN-FD mode` で CAN0 と CAN1 間のデータ送受信を行う方法を示します。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/CAN-connect.png"/>
 </div>
 
-CAN0 と CAN1 の終端抵抗は、gpiochip1 line4 にある PAA.04 と、gpiochip1 line7 にある PAA.07 の 2 本のピンで制御できます。  
+CAN0 と CAN1 の終端抵抗は、gpiochip1 line4 にある PAA.04 と、gpiochip1 line7 にある PAA.07 の 2 つのピンで制御できます。  
 
 終端抵抗の制御は次のルールに従います：  
 ```
@@ -686,9 +711,9 @@ sudo gpioset --mode=wait gpiochip1 7=1
 
 
 
-#### Classic CAN モード
+#### Classic CAN mode
 
-標準モードで **CAN0** と **CAN1** 間のデータ送受信をテストするために `test_can.sh` を作成します：
+標準モードで **CAN0** と **CAN1** 間のデータ送受信をテストするために、`test_can.sh` を作成します：
 
 ```bash
 touch test_can.sh
@@ -734,16 +759,16 @@ candump can0
 
 </details>
 
-これで **CAN0** と **CAN1** 間のデータ送受信が完了します：
+**CAN0** と **CAN1** 間のデータ送受信が完了します：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can_normal.jpg"/>
 </div>
 
 
-#### CAN-FD モード
+#### CAN-FD mode
 
-[datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf) には、次のように **CAN0/CAN1** インターフェースの配線図が記載されています：
+[データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)では、以下に示すように **CAN0/CAN1** インターフェースの配線図を確認できます：
 
 
 <!-- <div align="center">
@@ -752,7 +777,7 @@ candump can0
 
 <!-- Here we will demonstrate to you how to conduct data communication using the CAN1 interface, by utilizing the [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html). -->
 
-CAN-FD モードで CAN0 と CAN1 間のデータ送受信をテストするために `test_canfd.sh` を作成します：
+CAN-FD モードで CAN0 と CAN1 間のデータ送受信をテストするために、`test_canfd.sh` を作成します：
 
 ```bash
 touch test_canfd.sh
@@ -806,14 +831,14 @@ cangen can1 -f
 
 </details>
 
-これで CAN0 と CAN1 間のデータ送受信が完了します：
+CAN0 と CAN1 間のデータ送受信が完了します：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can-fd.jpg"/>
 </div>
 
 
-## GPI および GPO
+## GPI && GPO
 
 ### GPI
 
@@ -949,7 +974,7 @@ sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
 sudo vim /boot/extlinux/extlinux.conf
 ```
 
-使用しているデバイスツリーファイル名に基づき、`extlinux.conf` に `FDT=/your_path` の行を追加します。AGX Orin 32G を例にすると次のようになります：
+使用しているデバイスツリーファイル名に基づいて、`extlinux.conf` に `FDT=/your_path` の行を追加します。AGX Orin 32G を例にすると次のようになります：
 
 ```python
 LABEL primary
@@ -963,7 +988,7 @@ LABEL primary
 </div>
 
 
-Jetson 上の 6 ピン JST ヘッダ **UART** は `/dev/ttyTHS1` にマッピングされています。`minicom` を使用してシリアルポートのデータ送受信を確認できます：
+6 ピン JST ヘッダ **UART** は Jetson 上の `/dev/ttyTHS1` にマッピングされています。`minicom` を使用してシリアルポートのデータ送受信を確認できます：
 
 ```bash
 sudo apt install minicom
@@ -1007,14 +1032,14 @@ sudo gpioset --mode=wait 0 126=0 # Enable RS485
 ```
 
 
-**RS485** インターフェースは Jetson 上で `/dev/ttyTHS4` にマッピングされています。`cutecom` を使用して、PC とシリアルデータの送受信テストを行うことができます：
+**RS485** インターフェースは Jetson 上の `/dev/ttyTHS4` にマッピングされています。`cutecom` を使用して、PC とシリアルデータの送受信テストを行うことができます：
 
 ```bash
 sudo apt install cutecom
 sudo cutecom
 ```
 
-`/dev/ttyTHS4` を選択し、Jetson と PC の両方をボーレート 9600 に設定し、RS485-USB 変換モジュールを介して Jetson と PC を接続します。
+`/dev/ttyTHS4` を選択し、Jetson と PC の両方でボーレートを 9600 に設定し、RS485-USB 変換モジュールを介して Jetson と PC を接続します。
 シリアルデータの送受信の様子は、以下の図のように確認できます：
 
 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '5px' }}>
@@ -1050,13 +1075,13 @@ Robotics J501-Mini は **I2S** 用に 1x JST 5 ピンコネクタ（GH 1.25）�
 
 ### 使用手順
 
-**I2S** を有効にするには、`jetson-io.py` で設定を行う必要があります。ターミナルで次のコマンドを実行します：
+**I2S** を有効にするには、`jetson-io.py` で設定する必要があります。ターミナルで次を実行します：
 
 ```bash
 sudo python /opt/nvidia/jetson-io/jetson-io.py
 ```
 
-その後、以下の 4 つのステップに従って I2S インターフェースを有効にします：
+次に、以下の 4 つのステップに従って I2S インターフェースを有効にします：
 
 - step1: **Jetson 40-pin header** オプションを選択します  
 - step2: **Configure header pins manually** を選択します  
@@ -1150,24 +1175,24 @@ sudo python /opt/nvidia/jetson-io/jetson-io.py
 </div>
 
 
-**I2S** を有効にした後、このセクションでは I2S を使用して 2 チャンネルスピーカーを駆動する方法を説明します。まず、ターミナルで次のコマンドを入力します：
+**I2S** を有効にした後、このセクションでは I2S を使用して 2 チャンネルスピーカーを駆動する方法を説明します。まず、ターミナルで次を入力します：
 
 ```bash
 amixer -c APE cset name="I2S2 Mux" "ADMAIF1" # Speaker
 ```
 
-マイクを使用する場合は、次のコマンドを実行します：
+マイクを使用する場合：
 ```bash
 amixer -c APE cset name="ADMAIF2 Mux" "I2S2" # Microphone
 ```
 
-次のコマンドを参照してスピーカーを駆動します。このとき、`-c` は使用しているスピーカーチャンネル数に変更してください：
+以下のコマンドを参照してスピーカーを駆動します。ここで、`-c` は使用しているスピーカーチャンネル数に変更してください：
 
 ```bash
 speaker-test -t sine -f 440 -c 2
 ```
 
-スピーカーが正常に駆動されると、以下の図のようにターミナル上で出力を確認できます。
+スピーカーが正常に駆動されると、ターミナルに以下の図のような出力が表示されます。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/i2s-speaker.png"/>
@@ -1205,11 +1230,11 @@ cat /sys/class/rtc/rtc0/power/runtime_status
 
 ## 拡張ポート - GMSL
 
-Robotics j501-Mini キャリアボードには、GMSL 拡張ボード用のカメラ拡張ヘッダが搭載されています。これにより、4 台の GMSL カメラを同時に接続して動作させることができます。
+Robotics j501-Mini キャリアボードには、GMSL 拡張ボード用のカメラ拡張ヘッダがあります。これにより、4 台の GMSL カメラを同時に接続して動作させることができます。
 
 ### ハードウェア接続
 
-以下は、Robotics j501-Mini キャリアボードの GMSL カメラ拡張ボード接続スロットです（事前に拡張ボードを用意しておく必要があります）：
+以下は Robotics j501-Mini キャリアボードの GMSL カメラ拡張ボード接続スロットです（事前に拡張ボードを用意する必要があります）：
 
 <div align="center">
   <img width="450" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/gmsl-real1.png"/>
@@ -1226,7 +1251,7 @@ Robotics j501-Mini キャリアボードには、GMSL 拡張ボード用のカ�
 ### 使用手順
 
 :::note
-GMSL 機能を有効にする前に、GMSL 拡張ボード用ドライバを含む JetPack バージョンをインストールしていることを確認してください。
+GMSL 機能を有効にする前に、GMSL 拡張ボードドライバを含む JetPack バージョンをインストールしていることを確認してください。
 :::
 
 ### Jetson IO ファイルの設定
@@ -1254,7 +1279,7 @@ sudo apt update
 sudo apt install v4l-utils
 ```
 
-<!-- ### Use the camera of Gemini 335Lg
+<!-- ### Gemini 335Lg のカメラを使用する
 
 ```bash
 #Download the Orbbec Gemini 335Lg visualization tool
@@ -1265,19 +1290,19 @@ cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
 ./OrbbecViewer
 ```
 
-The first time you turn it on, you might need to update the firmware.
+初回起動時には、ファームウェアを更新する必要がある場合があります。
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/update.png"/>
 </div>
 
-Opening the data stream, you can view the video from the camera.
+データストリームを開くと、カメラからの映像を表示できます。
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
 </div> -->
 
 ### SGxxx シリーズのカメラを使用する
 
-**step 1.** シリアライザおよびデシリアライザのチャネルフォーマットを設定します。図中のインターフェース番号はシリアライザ／デシリアライザ番号に対応しています。
+**step 1.** シリアライザとデシリアライザのチャネルフォーマットを設定します。図中のインターフェース番号は、シリアライザ／デシリアライザ番号に対応しています。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/gmsl-Interface.png"/>
@@ -1304,8 +1329,8 @@ Opening the data stream, you can view the video from the camera.
 ```
 
 :::note
-`ser_0_ch_0` はデコーダの最初のチャネルであり、`des_ch_0` は最初のカメラ上のシリアライザです。他についても同様です。接続されているカメラの解像度が異なる場合は、ここでの設定はカメラの実際のフォーマットに基づきます。
-デバイスが再起動するたびに、シリアライザとデシリアライザのチャネルフォーマットを設定する必要があります。
+`ser_0_ch_0` はデコーダの最初のチャネル、`des_ch_0` は最初のカメラ上のシリアライザであり、他も同様です。接続されているカメラの解像度が異なる場合は、ここでの設定はカメラの実際のフォーマットに基づきます。
+デバイスを再起動するたびに、シリアライザとデシリアライザのチャネルフォーマットを設定する必要があります。
 :::
 
 **step 2.** カメラの解像度を設定します。
@@ -1322,7 +1347,7 @@ v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/vid
 ```
 
 :::note
-`--set-fmt-video` は、接続されているカメラに基づいて選択された解像度に従います。sensor_mode もそれに応じて選択されます。現在、3 つの sensor_mode オプションがあり、それぞれが異なる解像度に対応しています。
+`--set-fmt-video` の後には、接続されているカメラに基づいて選択された解像度が続きます。sensor_mode もそれに応じて選択されます。現在、3 つの sensor_mode オプションがあり、それぞれ異なる解像度に対応しています。
 
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080
@@ -1356,7 +1381,7 @@ videoconvert ! autovideosink -ev
 
 ## ディスプレイ
 
-Robotics J501 Mini には、高解像度ディスプレイ出力用の HDMI が搭載されています。
+Robotics J501 Mini は、高解像度ディスプレイ出力用の HDMI を備えています。
 
 ## リソース
 
@@ -1368,7 +1393,7 @@ Robotics J501 Mini には、高解像度ディスプレイ出力用の HDMI が�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

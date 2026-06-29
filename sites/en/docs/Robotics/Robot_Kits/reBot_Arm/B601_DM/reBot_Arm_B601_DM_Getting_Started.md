@@ -64,6 +64,32 @@ The reBot Arm B601-DM is available in multiple configurations to meet different 
 | **Body Only (Structure)** | ✅ | ❌ | ❌ | ✅ | [Coming Soon](https://www.seeedstudio.com/) |
 | **Body Only (Motors)** | ✅ | ❌ | ✅ | ❌ | [Coming Soon](https://www.seeedstudio.com/) |
 
+
+## About Power Supply
+
+1. The robotic arm is not shipped with a power supply / does not include a power supply by default. You can connect a battery yourself, or purchase our open-source [24V 14.6A MeanWell Power Supply](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html) or [Amazon](https://www.amazon.com/MEAN-WELL-LRS-350-24-350-4W-Switchable/dp/B013ETVO12/ref=sr_1_1?crid=36B2HIB8MM2IT&dib=eyJ2IjoiMSJ9.vpZwmjb4m5KMNcsg2Kb7wr8DDWa-ryUqO5fConlxqlsGoTVB5HN2uBBnRNZI0kcACiaR5DKFiYWvIHLEUN3luZqJAzogeQkeT-fol0m835-oBBWSud1ixkGayrl5nRsF5KMgfvkwAIW949dTTpU2CWdNMrf8g43_vKWaytfX9SHeMJ1hmhS6Kab6fBgER6CgB47K_eEmoJj3KhrjJMtn980osDG-bCLniBcRAHThmXsVRVdpGPsmckGLLyaXrIGRG9plhKI-F7H8hfqW7vzGbwIV_bF8cFtRjdRm5Shtb0o.ekLYD0hsc1Uzji4qKl0Q0USpDTr92JEMQobBXl9lYD0&dib_tag=se&keywords=LRS-350-24&qid=1780021690&s=industrial&sprefix=lrs-350-24%2Cindustrial%2C696&sr=1-1&th=1), Please do not purchase power supplies from unbranded manufacturers or unsafe channels. Any risks or consequences arising therefrom shall be borne by the individual.
+
+If your household voltage is 220V, set the voltage selector switch on the side of the power supply to 230V. If your household voltage is 110V, switch it to 115V.
+
+| **220V** | **110V** |
+|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" width="300" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" width="300" /> |
+
+   <div align="center">
+     <img width={800}
+     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100029903-gallery-6_1.jpg" />
+   </div>
+
+2. Alternatively, you can choose our open-source 24V 14.6A MeanWell power supply enclosure for self-assembly. The text instructions and BOM are open-sourced in the [GitHub repository](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM) (recommended only for developers with relevant power supply assembly experience).
+
+   Assembly reference video:
+
+   <div class="video-container">
+     <iframe width="900" height="600" src="https://www.youtube.com/embed/DHFA2UfQzUo?si=GYy-Z38qTUW6KPqq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
+
+
+
 ## Step 1: [Assembly Guide](https://youtu.be/rfTQoFCfnMc)
 
 Before Assembly:
@@ -250,23 +276,6 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
       <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/motorbridge_help.png" />
   </div>
-
-## About Power Supply
-
-1. The robotic arm is not shipped with a power supply / does not include a power supply by default. You can connect a battery yourself, or purchase our open-source [24V 14.6A MeanWell Power Supply](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html).
-
-   <div align="center">
-     <img width={800}
-     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100029903-gallery-6_1.jpg" />
-   </div>
-
-2. Alternatively, you can choose our open-source 24V 14.6A MeanWell power supply enclosure for self-assembly. The text instructions and BOM are open-sourced in the [GitHub repository](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM) (recommended only for developers with relevant power supply assembly experience).
-
-   Assembly reference video:
-
-   <div class="video-container">
-     <iframe width="900" height="600" src="https://www.youtube.com/embed/DHFA2UfQzUo?si=GYy-Z38qTUW6KPqq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-   </div>
 
 ## FAQ
 ### 1. Loud abnormal noise occurs immediately after motor startup

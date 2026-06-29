@@ -49,7 +49,7 @@ Please `don't use NRF-OTA` to update the firmware, it may cause the device to be
 
 #### Four-way Joystick
 
-L1 E-Ink firmware currently don't support the four-way joystick. If you want to use the joystick, please purchase other models.
+The `latest Alpha firmware` of L1 E-Ink firmware currently supports the four-way joystick. If you want to use the joystick, please [click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to upgarde the firmware. 
 
 #### Menu Bar
 
@@ -157,37 +157,6 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-### Connect via Website
-
-If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now.
-
-  Step 1: Open the Website
-
-[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite.
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
-
-  Step 2: Add the new device
-  
-    Click "+ New Connection". 
-
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
-
-    There are two ways to connect. You can choose your preferred method.
-
- Method 1: Via Bluetooth
-  
-    Choose bluetooth method. Choose the device ID in the pop-up window.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
-
- Method 2: Via Serial
-
-    Choose serial method. Open the device manager to see which port the device is connected to. Choose that port in the pop-up window.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
-
-    Your device will be shown in the list. Click to connect. If the connection succeed, you can see the device status directly on the website.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
-
 ### Configure the LoRa
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
@@ -220,6 +189,39 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 :::
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
+
+## Advanced Configuration
+
+### Connect via Website
+
+If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now.
+
+  Step 1: Open the Website
+
+[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite.
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  Step 2: Add the new device
+  
+    Click "+ New Connection". 
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    There are two ways to connect. You can choose your preferred method.
+
+ Method 1: Via Bluetooth
+  
+    Choose bluetooth method. Choose the device ID in the pop-up window.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ Method 2: Via Serial
+
+    Choose serial method. Open the device manager to see which port the device is connected to. Choose that port in the pop-up window.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    Your device will be shown in the list. Click to connect. If the connection succeed, you can see the device status directly on the website.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 ### Configure GPS
 
@@ -311,49 +313,68 @@ The OLED will show sensor data if you enable `on screen`.
 The 2.7 version firmware now support virtual keyboard! You can type message directly on the device to communicate with other device. Follow the [Flash Firmware Tutorial](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to update firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
-### (Optional) Configure Ringtone
+### Configure Ringtone
 
 Navigate to `Settings` -> `Ringtone Config`, then enter the RTTTL ringtone string you want to use for external notifications.
 
+<Tabs>
+<TabItem value="ios" label="IOS App">
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
 
-You can paste one of the following RTTTL examples directly:
+</TabItem>
 
-**The Legend of Zelda: Item Get**
+<TabItem value="android" label="Android App">
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/ringtonex1.png" alt="pir" width={900} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+<Tabs>
+<TabItem value="13" label="The Legend of Zelda: Item Get">
 
 ```plain
 24:d=16,o=5,b=120:g,c6,d6,2g6
 ```
+</TabItem>
 
-**Super Mario Theme (Short)**
+<TabItem value="14" label="Super Mario Theme (Short)">
 
 ```plain
 24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
 ```
+</TabItem>
 
-**Mario Coin**
+<TabItem value="15" label="Mario Coin">
 
 ```plain
 24:d=8,o=6,b=200:b,e7
 ```
+</TabItem>
 
-**Mario Power-Up**
-
-```plain
-powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
-```
-
-**Nokia Ringtone**
+<TabItem value="16" label="Nokia Ringtone">
 
 ```plain
 24:d=4,o=5,b=180:8e6,8d6,f#,g#,8c#6,8b,d,e,8b,8a,c#,e,2a
 ```
+</TabItem>
 
-**Morse Code CQ**
+<TabItem value="17" label="Mario Power-Up">
+
+```plain
+powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
+```
+</TabItem>
+
+<TabItem value="18" label="Morse Code CQ">
 
 ```plain
 24:d=16,o=6,b=120:8c,p,c,p,8c,p,c,4p,8c,p,8c,p,c,p,8c,8p
 ```
+</TabItem>
+
+</Tabs>
+
 ## FAQ
 
 ### Device bricked & Bootloader installation
