@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-25 13:56:59 (北京时间)
-// 多语言页面: 2347 个
+// 生成时间: 2026-06-29 14:09:44 (北京时间)
+// 多语言页面: 2350 个
 
 (function() {
   'use strict';
@@ -1277,6 +1277,13 @@
     "pt"
   ],
   "/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_jetson_robotics_j601_interfaces_usage": [
     "cn",
     "en",
     "es",
@@ -3404,6 +3411,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_hand_gesture": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
@@ -3412,6 +3426,13 @@
     "pt"
   ],
   "/use_cpenclaw_to_control_the_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_picoclaw": [
     "cn",
     "en",
     "es",

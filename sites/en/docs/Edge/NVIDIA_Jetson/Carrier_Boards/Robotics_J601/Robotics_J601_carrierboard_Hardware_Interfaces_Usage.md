@@ -9,7 +9,7 @@ tags:
   - Interfaces Usage
   - Interfaces
   - Hardware
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg
 slug: /recomputer_jetson_robotics_j601_interfaces_usage
 sku: 100060965
 last_update:
