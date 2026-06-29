@@ -269,7 +269,7 @@ Vá para `Settings` -> `Ringtone Config` e insira a string de toque RTTTL que vo
 ```plain
 24:d=4,o=5,b=180:8e6,8d6,f#,g#,8c#6,8b,d,e,8b,8a,c#,e,2a
 ```
-</TabItem]
+</TabItem>
 
 <TabItem value="17" label="Mario Power-Up">
 
