@@ -103,7 +103,7 @@ reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4
       <td>ビデオデコード</td>
       <td colSpan={2}>対応規格：H.265 (HEVC)、H.264、VP9、AV1 1×8K30 (H.265) | 2×4K60 (H.265) | 4×4K30 (H.265) | 9×1080p60 (H.265) | 18×1080p30 (H.265)</td>
       <td colSpan={2}>対応規格：H.265 (HEVC)、H.264、VP9、AV1 1×4K60 (H.265) | 2×4K30 (H.265) | 5×1080p60 (H.265) | 11×1080p30 (H.265)</td>
-    </tr]
+    </tr>
     <tr>
       <td rowSpan={2}>ストレージ</td>
       <td>eMMC</td>

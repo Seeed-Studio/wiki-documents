@@ -146,7 +146,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     <tr>
       <td>SIM</td>
       <td colSpan={4}>1× slot para cartão Nano SIM</td>
-    </tr]
+    </tr>
     <tr>
       <td>Botão</td>
       <td colSpan={4}>Botão de Reset, Botão de Recovery</td>

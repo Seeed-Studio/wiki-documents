@@ -142,7 +142,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     <tr>
       <td>SATA</td>
       <td colSpan={4}>2 bahías para unidades que admiten HDD/SSD SATA de 2,5" (SATA III 6.0Gbps)</td>
-    </tr]
+    </tr>
     <tr>
       <td>SIM</td>
       <td colSpan={4}>1× ranura para tarjeta Nano SIM</td>
