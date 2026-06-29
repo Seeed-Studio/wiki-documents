@@ -3822,6 +3822,7 @@ const sidebars = {
                   label: 'J601-Robotics キャリアボード',
                   items: [
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/ja_reComputer_Robotics_J601_Getting_Started',
+                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/ja_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/ja_reComputer_A203_Flash_System',

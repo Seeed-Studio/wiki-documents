@@ -10,7 +10,7 @@ last_update:
   date: 09/22/2023
   author: Lakshantha
 createdAt: '2023-06-08'
-updatedAt: '2026-03-04'
+updatedAt: '2026-06-29'
 url: https://wiki.seeedstudio.com/pt-br/reServer_Industrial_Getting_Started/
 ---
 
@@ -18,11 +18,11 @@ url: https://wiki.seeedstudio.com/pt-br/reServer_Industrial_Getting_Started/
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reServer-Industrial/1.png"/></div>
 
-A série reServer Industrial oferece servidores NVR (Network Video Recorder) compactos, sem ventoinha e habilitados para IA, incluindo módulos NVIDIA Jetson™ Orin Nano/Orin NX, com desempenho de IA variando de 20 TOPS a 100 TOPS. O reServer Industrial vem pré-instalado com Jetpack 5.1.1, simplifica o desenvolvimento, é ideal para construir VMS (Video Management System) juntamente com poderosos recursos de IA, o que traz transformação digital para setores como cidades inteligentes, segurança, automação industrial e fábricas inteligentes.
+A série reServer Industrial oferece servidores NVR (Network Video Recorder) sem ventoinha, compactos e habilitados para IA, incluindo módulos NVIDIA Jetson™ Orin Nano/Orin NX, com desempenho de IA de 20 TOPS a 100 TOPS. O reServer Industrial vem pré-instalado com Jetpack 5.1.1, simplifica o desenvolvimento, é ideal para construir VMS (Video Management System) juntamente com poderosos recursos de IA, o que traz transformação digital para setores como cidades inteligentes, segurança, automação industrial e fábricas inteligentes.
 
 O reServer Industrial vem com um dissipador de calor passivo e um design sem ventoinha, tornando-o ideal para uso em ambientes exigentes. O dissipador de calor passivo permite um resfriamento eficiente sem a necessidade de uma ventoinha, reduzindo o risco de falha de componentes devido a poeira ou outros contaminantes. O design sem ventoinha também reduz os níveis de ruído e o consumo de energia, tornando-o adequado para uso em ambientes sensíveis a ruído e minimizando os custos de energia.
 
-O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE para fornecer energia via Ethernet para dispositivos como câmeras IP. Isso elimina a necessidade de uma fonte de alimentação separada e facilita a implantação de dispositivos de rede em áreas sem tomadas de energia facilmente disponíveis. A porta GbE restante é usada para conectar a um switch de rede ou roteador, permitindo a comunicação com outros dispositivos na rede e o acesso à Internet.
+O reServer Industrial possui 5 portas RJ45 GbE, das quais 4 são portas PoE PSE para fornecer energia via Ethernet para dispositivos como câmeras IP. Isso elimina a necessidade de uma fonte de alimentação separada e facilita a implantação de dispositivos de rede em áreas sem tomadas de energia facilmente disponíveis. A porta GbE restante é usada para conectar a um switch de rede ou roteador, permitindo a comunicação com outros dispositivos na rede e o acesso à Internet.
 
 :::note
 Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
@@ -35,7 +35,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 
 ## Recursos
 
-- **Servidor de Borda de IA Compacto e sem Ventoinha:** Alimentado por módulos NVIDIA Jetson™ Orin Nano/Orin NX, com desempenho de IA variando de 20 TOPS a 100 TOPS, faixa de temperatura mais ampla de -20 ~ 60°C com fluxo de ar de 0,7 m/s
+- **Servidor de Borda de IA Compacto e sem Ventoinha:** Alimentado por módulos NVIDIA Jetson™ Orin Nano/Orin NX, com desempenho de IA de 20 TOPS a 100 TOPS, faixa de temperatura mais ampla de -20 ~ 60°C com fluxo de ar de 0,7 m/s
 - **Processamento Multi-Stream:** 5× GbE RJ45 (4 para 802.3af PSE), lida com múltiplos streams com processamento em tempo real
 - **Armazenamento Expansível:** 2 baias para unidades SATA HDD/SSD de 2,5", além de um soquete M.2 2280 para SSD NVMe
 - **Interfaces Industriais:** Inclui porta COM, portas DI/DO, porta CAN, USB 3.1 e módulo TPM2.0 opcional
@@ -84,8 +84,8 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>CPU</td>
-      <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos, 64 bits; 2MB L2 + 4MB L3 </td>
-      <td colSpan={3}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos, 64 bits, 1.5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 64 bits de 8 núcleos; 2MB L2 + 4MB L3 </td>
+      <td colSpan={3}>CPU Arm® Cortex®-A78AE v8.2 64 bits de 6 núcleos 1.5MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Memória</td>
@@ -111,7 +111,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Expansão</td>
-      <td colSpan={4}>M.2 Key M (2280) PCIe Gen4.0 SSD (inclui M.2 NVMe SSD 128G)</td>
+      <td colSpan={4}>M.2 Key M (2280) PCIe Gen4.0 SSD (inclui SSD M.2 NVMe 128G)</td>
     </tr>
     <tr>
       <td rowSpan={9}>I/O</td>
@@ -141,7 +141,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>SATA</td>
-      <td colSpan={4}>2 baias para suportar SATA HDD/SSD de 2,5" (SATA III 6.0Gbps)</td>
+      <td colSpan={4}>2 baias para suportar HDD/SSD SATA de 2,5" (SATA III 6.0Gbps)</td>
     </tr>
     <tr>
       <td>SIM</td>
@@ -149,16 +149,16 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Botão</td>
-      <td colSpan={4}>Botão de Reset, Botão de Recuperação</td>
+      <td colSpan={4}>Botão de Reset, Botão de Recovery</td>
     </tr>
     <tr>
       <td rowSpan={5}>Expansão</td>
       <td>Mini PCIe</td>
-      <td colSpan={4}>Mini PCIe para LoRaWAN®/4G/Série Wireless (Módulo opcional)</td>
+      <td colSpan={4}>Mini PCIe para LoRaWAN®/4G/Série Wireless (módulo opcional)</td>
     </tr>
     <tr>
       <td>M.2 Key B</td>
-      <td colSpan={4}>M.2 Key B (3042/3052) suporta 4G/5G (Módulo opcional) </td>
+      <td colSpan={4}>M.2 Key B (3042/3052) suporta 4G/5G (módulo opcional) </td>
     </tr>
     <tr>
       <td>Ventoinha</td>
@@ -166,7 +166,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>TPM</td>
-      <td colSpan={4}>1× conector TPM 2.0 (Módulo opcional)</td>
+      <td colSpan={4}>1× conector TPM 2.0 (módulo opcional)</td>
     </tr>
     <tr>
       <td>RTC</td>
@@ -179,7 +179,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Adaptador de Energia</td>
-      <td colSpan={4}>Adaptador de Energia 24V /5A (Sem cabo de alimentação)</td>
+      <td colSpan={4}>Adaptador de Energia 24V /5A (sem cabo de alimentação)</td>
     </tr>
     <tr>
       <td rowSpan={9}>Mecânico</td>
@@ -200,7 +200,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Umidade de Operação</td>
-      <td colSpan={4}>95% @ 40 °C (Sem condensação)</td>
+      <td colSpan={4}>95% @ 40 °C (sem condensação)</td>
     </tr>
     <tr>
       <td>Temperatura de Armazenamento</td>
@@ -208,7 +208,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Umidade de Armazenamento</td>
-      <td colSpan={4}>60°C@ 95% RH (Sem condensação)</td>
+      <td colSpan={4}>60°C@ 95% RH (sem condensação)</td>
     </tr>
     <tr>
       <td>Vibração</td>
@@ -216,10 +216,10 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Choque</td>
-      <td colSpan={4}>Aceleração de pico de 50G (duração de 11 mseg., eMMC, microSD ou mSATA)</td>
+      <td colSpan={4}>Aceleração de pico de 50G (duração de 11 mseg, eMMC, microSD ou mSATA)</td>
     </tr>
     <tr>
-      <td colSpan={2}>OS</td>
+      <td colSpan={2}>SO</td>
       <td colSpan={4}>Jetpack 5.1.1 (ou superior) pré-instalado (fornece sistema operacional Linux com pacote de suporte à placa) </td>
     </tr>
     <tr>
@@ -228,7 +228,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td colSpan={2}>Garantia</td>
-      <td colSpan={4}>2 Anos</td>
+      <td colSpan={4}>2 anos</td>
     </tr>
   </tbody>
 </table>
@@ -246,10 +246,10 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 ## Gravar o JetPack
 
 :::danger
-O dispositivo virá pré-instalado com JetPack 5.1.1. Se não houver requisitos especiais, você não precisa regravar o sistema.
+O dispositivo virá com JetPack 5.1.1 pré-instalado. Se não houver requisitos especiais, você não precisa regravar o sistema.
 :::
 
-O reServer Industrial vem pré-instalado com JetPack 5.1.1 em um SSD de 128GB juntamente com os drivers necessários. Isso inclui componentes do SDK como CUDA, CUDNN e TensorRT. No entanto, se você quiser regravar o Jetpack no SSD incluído ou em um novo SSD, você pode seguir as etapas abaixo. Atualmente, fornecemos orientação apenas para JP5.1.1 e continuaremos atualizando isso no futuro.
+O reServer Industrial vem pré-instalado com JetPack 5.1.1 em um SSD de 128GB juntamente com os drivers necessários. Isso inclui componentes do SDK como CUDA, CUDNN e TensorRT. No entanto, se você quiser regravar o JetPack no SSD incluído ou em um novo SSD, você pode seguir as etapas abaixo.
 
 :::note
 Se você quiser usar SSDs com o reServer Industrial, recomendamos apenas que escolha as versões de [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) e [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) da Seeed.
@@ -267,6 +267,49 @@ Você precisa preparar o seguinte hardware antes de começar a usar o reServer I
 - Cabo HDMI
 - Teclado e mouse
 
+:::info
+Recomendamos que você use dispositivos host físicos com Ubuntu em vez de máquinas virtuais.
+Consulte a tabela abaixo para preparar a máquina host.
+
+<table style={{textAlign: 'center'}}>
+  <tbody>
+    <tr>
+        <td  rowspan="2"> Versão do JetPack </td>
+        <td class="dbon" colspan="4"> Versão do Ubuntu (Computador Host) </td>
+    </tr>
+    <tr>
+        <td > 18.04 </td>
+        <td > 20.04 </td>
+        <td > 22.04 </td>
+        <td > 24.04 </td>
+    </tr>
+    <tr>
+        <td >JetPack 5.x</td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 6.x</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note:</strong> Para o JetPack 7.2, o Ubuntu 24.04 é suportado apenas para gravação e instalação de componentes no lado do dispositivo. Use Ubuntu 20.04 ou 22.04 se você precisar de componentes de desenvolvimento no host.</p>
+:::
+
 ### Entrar no modo Force Recovery
 
 Agora você precisa entrar no modo de recuperação na placa reServer Industrial para poder gravar o dispositivo. Conecte um cabo USB Tipo-C entre a porta **DEVICE** e o seu PC. Use um pino e insira no orifício **REC** para pressionar o botão de recuperação e, enquanto o mantém pressionado, conecte o **conector de alimentação de bloco terminal de 2 pinos** incluído ao conector de alimentação na placa (certifique-se de usar os 2 parafusos para fixar o terminal no lugar) e conecte o adaptador de energia incluído com um cabo de energia para ligar a placa
@@ -277,7 +320,7 @@ Agora você precisa entrar no modo de recuperação na placa reServer Industrial
 Certifique-se de ligar o dispositivo enquanto mantém o botão RECOVERY pressionado, caso contrário ele não entrará no modo de recuperação
 :::
 
-No PC host com Ubuntu, abra uma janela do Terminal e insira o comando **lsusb**. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
+No PC host com Ubuntu, abra uma janela do Terminal e insira o comando **lsusb**. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo de recuperação forçada.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
@@ -320,7 +363,7 @@ import TabItem from '@theme/TabItem';
     </thead>
     <tbody>
       <tr>
-        <td rowSpan={5}>reServer Industrial J4012</td>
+        <td rowSpan={6}>reServer Industrial J4012</td>
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
@@ -371,7 +414,17 @@ import TabItem from '@theme/TabItem';
         </td>
       </tr>
       <tr>
-        <td rowSpan={5}>reServer Industrial J4011</td>
+        <td>7.2</td>
+        <td>39.2.0</td>
+        <td>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB2YV-odVTxTZGy3D-1hPMEAXOH0iN6v_IAmHIUVZFymiE?e=cgN4kc" target="_blank" rel="noopener noreferrer">Download1</a>
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
+      <tr>
+        <td rowSpan={6}>reServer Industrial J4011</td>
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
@@ -422,7 +475,17 @@ import TabItem from '@theme/TabItem';
         </td>
       </tr>
       <tr>
-        <td rowSpan={5}>reServer Industrial J3011</td>
+        <td>7.2</td>
+        <td>39.2.0</td>
+        <td>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDWd-W-rHfES4JiXSPXUWJ4AQbt4APS-jeWDtskFAZb6kw?e=XaI195" target="_blank" rel="noopener noreferrer">Download1</a>
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
+      <tr>
+        <td rowSpan={6}>reServer Industrial J3011</td>
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
@@ -473,7 +536,17 @@ import TabItem from '@theme/TabItem';
         </td>
       </tr>
       <tr>
-        <td rowSpan={5}>reServer Industrial J3010</td>
+        <td>7.2</td>
+        <td>39.2.0</td>
+        <td>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB5T6WBaPY7Q5vjG9Q_u2uJAW2zWj9vOYU3GGT_R5lqSzE?e=gmOKa7" target="_blank" rel="noopener noreferrer">Download1</a>
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
+      <tr>
+        <td rowSpan={6}>reServer Industrial J3010</td>
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
@@ -523,9 +596,59 @@ import TabItem from '@theme/TabItem';
           -
         </td>
       </tr>
+      <tr>
+        <td>7.2</td>
+        <td>39.2.0</td>
+        <td>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA_GpwpaczHTbTaXQEsNAreAVBjoiwpi7dtiz4kiOZRlIo?e=ZKa4sL" target="_blank" rel="noopener noreferrer">Download1</a>
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
+
+<div class="table-center">
+  <table style={{textAlign: 'center'}}>
+    <thead>
+      <tr>
+        <th>Device</th>
+        <th>JetPack Version</th>
+        <th>SHA256</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>reServer Industrial J4012</td>
+        <td>7.2</td>
+        <td>fcf2eb2d0977856cc8e74aa1483397b61<br />eff588fdae00145c67a9ed7953beba7</td>
+      </tr>
+      <tr>
+        <td>reServer Industrial J4011</td>
+        <td>7.2</td>
+        <td>b687dc99d86d9e9a9c071b39d3062e68<br />d8e7f542d58fcb7e8117db21b18d9c11</td>
+      </tr>
+      <tr>
+        <td>reServer Industrial J3011</td>
+        <td>7.2</td>
+        <td>d805862bd75bb8d2f0970fb72c336d30<br />a69c7e3daa84dcecce83806e42b794e1</td>
+      </tr>
+      <tr>
+        <td>reServer Industrial J3010</td>
+        <td>7.2</td>
+        <td>86ad9eec225bab64adccfb3d9ce5678f<br />85fb7f4881fe589df9e74334fb477acc</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+:::info
+Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
+
+Em uma máquina host Ubuntu, execute `sha256sum <file_name>.tar.gz` e compare a saída com o valor SHA256 na tabela acima.
+:::
 
 <p style={{ fontSize: '0.9em', color: 'yellow' , textAlign: 'center'}}>
   * Os arquivos de imagem de Download1 e Download2 são os mesmos. Você pode escolher o link com a velocidade de download mais rápida.
@@ -533,32 +656,36 @@ import TabItem from '@theme/TabItem';
 
 <!-- The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra) -->
 
-- **Step 2:** Extract the generated file
+- **Passo 2:** Extraia o arquivo gerado
 
 ```sh
 tar -xvf <file_name>.tar.gz
+# For JetPack 7.2 example:
+# tar -xvf mfi_reserver-industrial-orin-nx-16g-7.2.0-39.2.0-2026-06-24.tar.gz
 ```
 
-#### Flash to Jetson
+#### Gravar no Jetson
 
-- **Step 1:** Navigate to the extracted file from before and execute the flash command as follows
+- **Passo 1:** Navegue até o arquivo extraído anteriormente e execute o comando de gravação da seguinte forma
 
 ```sh
-cd mfi_reserver-orin-industrial
+cd mfi_xxxx
+# For JetPack 7.2 example:
+# cd mfi_reserver-industrial-orin-nx-16g-7.2.0-39.2.0
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-Now it will start to flash the system image to the board. If the flashing is successful, you will see the below output
+Agora ele começará a gravar a imagem do sistema na placa. Se a gravação for bem-sucedida, você verá a saída abaixo
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Step 2:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
+- **Passo 2:** Conecte a placa a um monitor usando o conector HDMI na placa e finalize a configuração inicial
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
 
-After that, the board will reboot and will be ready to use!
+Depois disso, a placa será reiniciada e estará pronta para uso!
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
@@ -581,7 +708,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 
 #### Baixar e preparar os drivers
 
-- **Step 1:** Baixe os arquivos de driver para o seu PC Ubuntu correspondentes à placa que você está usando
+- **Passo 1:** Baixe os arquivos de driver para o seu PC com Ubuntu correspondentes à placa que você está usando
 
 <table>
   <thead>
@@ -612,11 +739,11 @@ sudo ./tools/l4t_flash_prerequisites.sh
   </tbody>
 </table>
 
-- **Step 2:** Mova os drivers de periféricos baixados para a mesma pasta do diretório **Linux_For_Tegra**
+- **Passo 2:** Mova os drivers de periféricos baixados para a mesma pasta do diretório **Linux_For_Tegra**
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/29.jpg"/></div>
 
-- **Step 3:** Extraia o arquivo .zip de driver baixado. Aqui instalamos adicionalmente o pacote **unzip**, que é necessário para descompactar o arquivo .zip
+- **Passo 3:** Extraia o arquivo .zip de driver baixado. Aqui instalamos adicionalmente o pacote **unzip**, que é necessário para descompactar o arquivo .zip
 
 ```sh
 sudo apt install unzip
@@ -629,7 +756,7 @@ Aqui será perguntado se deseja substituir os arquivos. Digite A e pressione ENT
 
 #### Gravar no Jetson
 
-- **Step 1:** Navegue até o diretório **Linux_for_Tegra** e execute o comando de gravação como a seguir
+- **Passo 1:** Navegue até o diretório **Linux_for_Tegra** e execute o comando de gravação da seguinte forma
 
 ```sh
 cd Linux_for_Tegra
@@ -640,7 +767,7 @@ Agora ele começará a gravar a imagem do sistema na placa. Se a gravação for 
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Step 2:** Conecte a placa a um monitor usando o conector HDMI na placa e finalize a configuração inicial
+- **Passo 2:** Conecte a placa a um monitor usando o conector HDMI na placa e conclua a configuração inicial
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
@@ -650,7 +777,7 @@ Depois disso, a placa será reiniciada e você verá o seguinte
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
-- **Step 3:** Abra uma janela de terminal no dispositivo, execute o seguinte, o dispositivo será reiniciado e ficará pronto para uso!
+- **Passo 3:** Abra uma janela de terminal dentro do dispositivo, execute o seguinte, o dispositivo será reiniciado e estará pronto para uso!
 
 ```sh
 systemctl disable nvgetty.service
@@ -672,24 +799,24 @@ sudo apt install nvidia-jetpack -y
 
 <!-- Code END -->
 
-## Uso de hardware e interfaces
+## Uso de Hardware e Interfaces
 
 :::info
-  Para saber mais sobre como usar todo o hardware e as interfaces na placa reServer Industrial, você precisa seguir este [**wiki**](/pt-br/reserver_industrial_hardware_interface_usage):
+  Para saber mais sobre como usar todo o hardware e interfaces na placa reServer Industrial, você precisa seguir este [**wiki**](/pt-br/reserver_industrial_hardware_interface_usage):
 :::
 
 ## Recursos
 
 (alterar os links)
 
-- [Folha de dados do reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
-- [Guia de referência do reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)
-- [Comparação de dispositivos NVIDIA Jetson e placas carrier](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+- [Folha de Dados do reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
+- [Guia de Referência do reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)
+- [Comparação de Dispositivos NVIDIA Jetson e Carrier Boards](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 - [Arquivo 3D do reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-3D.stp)
 
-## Suporte técnico
+## Suporte Técnico
 
-Não hesite em enviar problemas em nosso [fórum](https://forum.seeedstudio.com/).
+Não hesite em enviar problemas para o nosso [fórum](https://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

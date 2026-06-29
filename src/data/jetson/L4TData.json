@@ -1,6 +1,42 @@
 [
     {
         "product": "j4012s",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz",
+        "foldername": "mfi_recomputer-orin-super-j401",
+        "sha256": "5c66fcbf8f4bcb21477ada08c78796f69524ccc6eccf929fdd9f026e948482f1"
+    },
+    {
+        "product": "j4011s",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-super-orin-nx-8g-7.2.0-39.2.0-2026-06-19.tar.gz",
+        "foldername": "mfi_recomputer-orin-super-j401",
+        "sha256": "7613332f8eeb315a0d9d51744a8f0a9e8e11e92e091d2a06ad609235a54f7c72"
+    },
+    {
+        "product": "j3011s",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFEKDfgr0CS7jHtF-JwR0KAZC0l4XMAUKFW4Tsq2960iU?e=PI5PkJ",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-super-orin-nano-8g-7.2.0-39.2.0-2026-06-19.tar.gz",
+        "foldername": "mfi_recomputer-orin-super-j401",
+        "sha256": "22a21d0ee9abdceb812e06ac399d8ca5f14a3880fdf989c876223e72b21f4de6"
+    },
+    {
+        "product": "j3010s",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-super-orin-nano-4g-7.2.0-39.2.0-2026-06-19.tar.gz",
+        "foldername": "mfi_recomputer-orin-super-j401",
+        "sha256": "0978be490c5ff7c1648317240e8f00d76b2d025ed30a945249eaa69112a047c8"
+    },
+    {
+        "product": "j4012s",
         "l4t": "36.4.3",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm",
         "filename": "mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz",
@@ -411,6 +447,15 @@
     },
     {
         "product": "j4012industrial",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBfReHmaDICTY_-byQpDlSOAXzoeJxfBtyuMYKgIKn5pqo?e=kum4Aa",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-industrial-orin-nx-16g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_recomputer-industrial-orin-nx-16g-7.2.0-39.2.0",
+        "sha256": "51035f2fee6a383a973250f1efcc2ea77c083dc4f3e7661541c5fdc579bc9f9d"
+    },
+    {
+        "product": "j4012industrial",
         "l4t": "36.4.3",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EaUtjH4gdPFGkQX86xzbLyEB6sckcd09RxxGJAlH2Qs4yg?e=a1KYbF",
         "mirrorlink": "",
@@ -453,6 +498,15 @@
         "filename": "mfi_recomputer-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz",
         "foldername": "mfi_recomputer-industrial-orin-nx-16g-5.1.3-35.3.1",
         "sha256": "F6623A277E538F309999107297405E1378CF3791EA9FD19F91D263E3B4C88333"
+    },
+    {
+        "product": "j4011industrial",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC2tUVw9b3HTqtmb7QI6Bi5AZS9iz9O9lXJyPlI07R5XUY?e=yY7o3T",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-industrial-orin-nx-8g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_recomputer-industrial-orin-nx-8g-7.2.0-39.2.0",
+        "sha256": "dd03129ba599101972eb2ea75eaa2e5e3b203d04130dbf6aaf4683461587945f"
     },
     {
         "product": "j4011industrial",
@@ -501,6 +555,15 @@
     },
     {
         "product": "j3011industrial",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQClwzLEoHNhR5r0RVE9G5H8Aa6Tc4-uBwOJNP-eDi4gSMI?e=8v78Ro",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-industrial-orin-nano-8g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_recomputer-industrial-orin-nano-8g-7.2.0-39.2.0",
+        "sha256": "2bacc1a2577819630702901f2200e2e38a905eb292a71e63532b5056a9e73f87"
+    },
+    {
+        "product": "j3011industrial",
         "l4t": "36.4.3",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdypjC_kT7RAqqBHytE_KLwBLU6fEpoQ5Rv_MWYk-lMszQ?e=VV0U9A",
         "mirrorlink": "",
@@ -543,6 +606,15 @@
         "filename": "mfi_recomputer-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz",
         "foldername": "mfi_recomputer-industrial-orin-nano-8g-5.1.1-35.3.1",
         "sha256": "347AB7247ED83286BDFAEF84B49B84C5F5B871AEE68192339EDE4773149D8737"
+    },
+    {
+        "product": "j3010industrial",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD1SrMagx31RoPYJRTfH0anAS_G9TCSJckK1pV_DdYFFPU?e=K0QfUg",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-industrial-orin-nano-4g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_recomputer-industrial-orin-nano-4g-7.2.0-39.2.0",
+        "sha256": "b0a1466b3b0c7582a9d398109f53e50792a6526fc51b5b1b9ddb1c04bdb52692"
     },
     {
         "product": "j3010industrial",
@@ -735,6 +807,15 @@
     },
     {
         "product": "j4012reserver",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB2YV-odVTxTZGy3D-1hPMEAXOH0iN6v_IAmHIUVZFymiE?e=cgN4kc",
+        "mirrorlink": "",
+        "filename": "mfi_reserver-industrial-orin-nx-16g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_reserver-industrial-orin-nx-16g-7.2.0-39.2.0",
+        "sha256": "fcf2eb2d0977856cc8e74aa1483397b61eff588fdae00145c67a9ed7953beba7"
+    },
+    {
+        "product": "j4012reserver",
         "l4t": "36.4.3",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVOMzCf8ulxAgCOCN9jlsUcBNR29X1dB6ILeYngqVHtwVA?e=UVc1qc",
         "mirrorlink": "",
@@ -777,6 +858,15 @@
         "filename": "mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz",
         "foldername": "mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1",
         "sha256": ""
+    },
+    {
+        "product": "j4011reserver",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDWd-W-rHfES4JiXSPXUWJ4AQbt4APS-jeWDtskFAZb6kw?e=XaI195",
+        "mirrorlink": "",
+        "filename": "mfi_reserver-industrial-orin-nx-8g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_reserver-industrial-orin-nx-8g-7.2.0-39.2.0",
+        "sha256": "b687dc99d86d9e9a9c071b39d3062e68d8e7f542d58fcb7e8117db21b18d9c11"
     },
     {
         "product": "j4011reserver",
@@ -825,6 +915,15 @@
     },
     {
         "product": "j3011reserver",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB5T6WBaPY7Q5vjG9Q_u2uJAW2zWj9vOYU3GGT_R5lqSzE?e=gmOKa7",
+        "mirrorlink": "",
+        "filename": "mfi_reserver-industrial-orin-nano-8g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_reserver-industrial-orin-nano-8g-7.2.0-39.2.0",
+        "sha256": "d805862bd75bb8d2f0970fb72c336d30a69c7e3daa84dcecce83806e42b794e1"
+    },
+    {
+        "product": "j3011reserver",
         "l4t": "36.4.3",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EahC2mJQOQRBtoqG7fhuIecBSEo7w_Py8nGy_FB51QdtHg?e=W0U23d",
         "mirrorlink": "",
@@ -867,6 +966,15 @@
         "filename": "mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-03.tar.gz",
         "foldername": "mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1",
         "sha256": ""
+    },
+    {
+        "product": "j3010reserver",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA_GpwpaczHTbTaXQEsNAreAVBjoiwpi7dtiz4kiOZRlIo?e=ZKa4sL",
+        "mirrorlink": "",
+        "filename": "mfi_reserver-industrial-orin-nano-4g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_reserver-industrial-orin-nano-4g-7.2.0-39.2.0",
+        "sha256": "86ad9eec225bab64adccfb3d9ce5678f85fb7f4881fe589df9e74334fb477acc"
     },
     {
         "product": "j3010reserver",
@@ -915,12 +1023,30 @@
     },
     {
         "product": "j501mini-agx-orin-64g",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCZEEr-Co7XSJmdL_F1Rvo9AbidOmBTdQjSspf6EXRcU9s?e=39pbm6",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-mini-agx-orin-j501x-64g-7.2.0-39.2.0-2026-06-25.tar.gz",
+        "foldername": "mfi_recomputer-orin-robotics-j501",
+        "sha256": "36e2616404f9451a043797968e87755b4dc654a5683cd70c7e223cc80910ac0a"
+    },
+    {
+        "product": "j501mini-agx-orin-64g",
         "l4t": "36.4.4 (GMSL✅)",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAUQ4ithrVMQLSE274ftNcLAdScXb2OFE8LXfabvKzaGS8",
         "mirrorlink": "",
         "filename": "mfi_recomputer-mini-agx-orin-64g-j501-6.2.1-36.4.4-2026-02-11.tar.gz",
         "foldername": "mfi_recomputer-orin-robotics-j501",
         "sha256": "F95E91C3BFB00D50EB999383F85949B4"
+    },
+    {
+        "product": "j501mini-agx-orin-32g",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCepjaEexEOSb_ula7wMpDlAX61iyLzJ1B1RTHpY32mPIQ?e=sOyPdU",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-mini-agx-orin-j501x-32g-7.2.0-39.2.0-2026-06-25.tar.gz",
+        "foldername": "mfi_recomputer-orin-robotics-j501",
+        "sha256": "05d082994fd1b2ae85c5c666a621b5a6e8ec178db5ce64cca516c837acca7552"
     },
     {
         "product": "j501mini-agx-orin-32g",
@@ -933,12 +1059,30 @@
     },
     {
         "product": "j501-agx-orin-64g",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBHOaCA_77pT4TRnRM80ZRwAYWI6uFAkaoXvMawW_SrD5Q",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-robo-agx-orin-64g-j501-7.2.0-39.2.0-2026-06-26.tar.gz",
+        "foldername": "mfi_recomputer-robo-agx-orin-j501x",
+        "sha256": "dddee915df6dcd939dc05743c6e5e9df6c2b2b6836a969ce4ae4bc02d3078d50"
+    },
+    {
+        "product": "j501-agx-orin-64g",
         "l4t": "36.4.4 (GMSL✅)",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCiNRM83_Q1Qq2lodZbxxz7AQb046lJeZh4aTUo20T6ks4",
         "mirrorlink": "",
         "filename": "mfi_recomputer-robo-agx-orin-64g-j501-6.2.1-36.4.4-2026-02-04.tar.gz",
         "foldername": "mfi_recomputer-robo-agx-orin-j501x",
         "sha256": "B858312B9DC9EA5D43A104F478C0ABDC"
+    },
+    {
+        "product": "j501-agx-orin-32g",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC3k6dHKR8cSZjMUL7j7u9yAbnjbBg84bmV2Cg5YRQnFA8",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-robo-agx-orin-32g-j501-7.2.0-39.2.0-2026-06-26.tar.gz",
+        "foldername": "mfi_recomputer-robo-agx-orin-j501x",
+        "sha256": "6da5c7cd6c143460958a460a5f9d66391cb49bb4da8f0e158ecbd34c0a6336f1"
     },
     {
         "product": "j501-agx-orin-32g",

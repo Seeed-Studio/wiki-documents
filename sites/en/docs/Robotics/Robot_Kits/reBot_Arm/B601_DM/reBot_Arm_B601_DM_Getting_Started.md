@@ -17,7 +17,7 @@ last_update:
   date: 2026-04-13T00:00:00.000Z
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-06-10'
+updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
@@ -63,6 +63,32 @@ The reBot Arm B601-DM is available in multiple configurations to meet different 
 | **Gripper Only** | ❌ | ✅ | ❌ | ❌ | [Coming Soon](https://www.seeedstudio.com/) |
 | **Body Only (Structure)** | ✅ | ❌ | ❌ | ✅ | [Coming Soon](https://www.seeedstudio.com/) |
 | **Body Only (Motors)** | ✅ | ❌ | ✅ | ❌ | [Coming Soon](https://www.seeedstudio.com/) |
+
+
+## About Power Supply
+
+1. The robotic arm is not shipped with a power supply / does not include a power supply by default. You can connect a battery yourself, or purchase our open-source [24V 14.6A MeanWell Power Supply](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html) or [Amazon](https://www.amazon.com/MEAN-WELL-LRS-350-24-350-4W-Switchable/dp/B013ETVO12/ref=sr_1_1?crid=36B2HIB8MM2IT&dib=eyJ2IjoiMSJ9.vpZwmjb4m5KMNcsg2Kb7wr8DDWa-ryUqO5fConlxqlsGoTVB5HN2uBBnRNZI0kcACiaR5DKFiYWvIHLEUN3luZqJAzogeQkeT-fol0m835-oBBWSud1ixkGayrl5nRsF5KMgfvkwAIW949dTTpU2CWdNMrf8g43_vKWaytfX9SHeMJ1hmhS6Kab6fBgER6CgB47K_eEmoJj3KhrjJMtn980osDG-bCLniBcRAHThmXsVRVdpGPsmckGLLyaXrIGRG9plhKI-F7H8hfqW7vzGbwIV_bF8cFtRjdRm5Shtb0o.ekLYD0hsc1Uzji4qKl0Q0USpDTr92JEMQobBXl9lYD0&dib_tag=se&keywords=LRS-350-24&qid=1780021690&s=industrial&sprefix=lrs-350-24%2Cindustrial%2C696&sr=1-1&th=1), Please do not purchase power supplies from unbranded manufacturers or unsafe channels. Any risks or consequences arising therefrom shall be borne by the individual.
+
+If your household voltage is 220V, set the voltage selector switch on the side of the power supply to 230V. If your household voltage is 110V, switch it to 115V.
+
+| **220V** | **110V** |
+|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" width="300" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" width="300" /> |
+
+   <div align="center">
+     <img width={800}
+     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100029903-gallery-6_1.jpg" />
+   </div>
+
+2. Alternatively, you can choose our open-source 24V 14.6A MeanWell power supply enclosure for self-assembly. The text instructions and BOM are open-sourced in the [GitHub repository](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM) (recommended only for developers with relevant power supply assembly experience).
+
+   Assembly reference video:
+
+   <div class="video-container">
+     <iframe width="900" height="600" src="https://www.youtube.com/embed/DHFA2UfQzUo?si=GYy-Z38qTUW6KPqq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
+
+
 
 ## Step 1: [Assembly Guide](https://youtu.be/rfTQoFCfnMc)
 
@@ -125,7 +151,59 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 - [DM_Tools_v.2.1.6.8.exe (Supports Windows Only)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool_v2.1.6.8.zip)
 
-<!-- - [DM_Tools_v.1.8.0.1.exe (Supports Windows Only)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe) -->
+
+#### Write Motor ID and Test Enable
+
+Set the CAN ID and Master ID for each joint motor according to the parameters in the table below:
+
+| Motor Number | CAN ID | Master ID |
+|:---:|:---:|:---:|
+| Motor 1 | 0x01 | 0x11 |
+| Motor 2 | 0x02 | 0x12 |
+| Motor 3 | 0x03 | 0x13 |
+| Motor 4 | 0x04 | 0x14 |
+| Motor 5 | 0x05 | 0x15 |
+| Motor 6 | 0x06 | 0x16 |
+| Motor 7 | 0x07 | 0x17 |
+
+:::danger
+The following is an operation example using Motor 1. Please ensure that the CAN ID and Master ID for each joint motor are set correctly according to the table above.
+:::
+1.Open the **DM_Tools** host software, select the corresponding USB COM port, and set the baud rate to `921600`. Once connected successfully, information will be printed in the `Serial` interface.
+
+<div align="center">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_connect_en.png" width="800" />
+</div>
+
+2.Use the 3-pin cable to connect Motor 1 to the USB-CAN adapter board.
+
+3.After connection, enter the `Parameter Settings` interface. Click `Read Parameters` to retrieve the current parameters, then set the `CAN ID` to `0x01` and the `Master ID` to `0x11`.
+
+4.After setting, click `Write Parameters` to save the parameters.
+
+<div align="center">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_id_set_en.png" width="800" />
+</div>
+
+5.Navigate to the `Debug` interface. After ensuring the `CAN ID` and `Master ID` are set correctly, click `Enable`. The motor indicator light will turn solid green, indicating the motor is enabled. Motor 1 testing is now complete.
+
+<div align="center">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_enable_en.png" width="800" />
+</div>
+
+:::tip
+After testing, remember to click `Disable` to exit the enabled state.
+:::
+
+**3-pin Cable Connection Points and Enable Effect for Each Motor**
+
+| Motor 1 Setup | Motor 2 Setup | Motor 3 Setup | Motor 4 Setup | Motor 5 Setup | Motor 6 Setup | Motor 7 Setup |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/4_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/5_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/6_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/7_ID_set.jpg" width="120" /> |
+
+| Motor 1 Enabled | Motor 2 Enabled | Motor 3 Enabled | Motor 4 Enabled | Motor 5 Enabled | Motor 6 Enabled | Motor 7 Enabled |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/4_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/5_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/6_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/7_Enable2.jpg" width="120" /> |
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/uXuzs1qmj6A?si=lfgXXlF1awhtnvaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -177,9 +255,8 @@ After activating the reBot virtual environment, run the following command to ins
 pip install motorbridge
 ```
 
-### Step4: Connect the rebot
-
-After connecting the robotic arm to your computer through USB cable and turning on its power supply, you need to configure 666 access permissions for the serial port.
+###  Step4: Connect the rebot
+After connecting the robotic arm to your computer through USB cable and turning on its power supply, you need to configure 666 access permissions for the serial port.(Windows systems do not require permission configuration; you may skip this step.)
 
 ```bash
 sudo chmod 666 /dev/ttyACM*
