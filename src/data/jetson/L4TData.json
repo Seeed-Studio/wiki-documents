@@ -807,6 +807,15 @@
     },
     {
         "product": "j4012reserver",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB2YV-odVTxTZGy3D-1hPMEAXOH0iN6v_IAmHIUVZFymiE?e=cgN4kc",
+        "mirrorlink": "",
+        "filename": "mfi_reserver-industrial-orin-nx-16g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_reserver-industrial-orin-nx-16g-7.2.0-39.2.0",
+        "sha256": "fcf2eb2d0977856cc8e74aa1483397b61eff588fdae00145c67a9ed7953beba7"
+    },
+    {
+        "product": "j4012reserver",
         "l4t": "36.4.3",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVOMzCf8ulxAgCOCN9jlsUcBNR29X1dB6ILeYngqVHtwVA?e=UVc1qc",
         "mirrorlink": "",
@@ -849,6 +858,15 @@
         "filename": "mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz",
         "foldername": "mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1",
         "sha256": ""
+    },
+    {
+        "product": "j4011reserver",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDWd-W-rHfES4JiXSPXUWJ4AQbt4APS-jeWDtskFAZb6kw?e=XaI195",
+        "mirrorlink": "",
+        "filename": "mfi_reserver-industrial-orin-nx-8g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_reserver-industrial-orin-nx-8g-7.2.0-39.2.0",
+        "sha256": "b687dc99d86d9e9a9c071b39d3062e68d8e7f542d58fcb7e8117db21b18d9c11"
     },
     {
         "product": "j4011reserver",
@@ -897,6 +915,15 @@
     },
     {
         "product": "j3011reserver",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB5T6WBaPY7Q5vjG9Q_u2uJAW2zWj9vOYU3GGT_R5lqSzE?e=gmOKa7",
+        "mirrorlink": "",
+        "filename": "mfi_reserver-industrial-orin-nano-8g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_reserver-industrial-orin-nano-8g-7.2.0-39.2.0",
+        "sha256": "d805862bd75bb8d2f0970fb72c336d30a69c7e3daa84dcecce83806e42b794e1"
+    },
+    {
+        "product": "j3011reserver",
         "l4t": "36.4.3",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EahC2mJQOQRBtoqG7fhuIecBSEo7w_Py8nGy_FB51QdtHg?e=W0U23d",
         "mirrorlink": "",
@@ -939,6 +966,15 @@
         "filename": "mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-03.tar.gz",
         "foldername": "mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1",
         "sha256": ""
+    },
+    {
+        "product": "j3010reserver",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA_GpwpaczHTbTaXQEsNAreAVBjoiwpi7dtiz4kiOZRlIo?e=ZKa4sL",
+        "mirrorlink": "",
+        "filename": "mfi_reserver-industrial-orin-nano-4g-7.2.0-39.2.0-2026-06-24.tar.gz",
+        "foldername": "mfi_reserver-industrial-orin-nano-4g-7.2.0-39.2.0",
+        "sha256": "86ad9eec225bab64adccfb3d9ce5678f85fb7f4881fe589df9e74334fb477acc"
     },
     {
         "product": "j3010reserver",
