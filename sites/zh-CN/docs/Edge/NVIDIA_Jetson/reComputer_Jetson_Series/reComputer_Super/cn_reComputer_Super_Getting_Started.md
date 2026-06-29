@@ -307,7 +307,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
   </tbody>
 </table>
 
-<p><strong>Note:</strong> 对于 JetPack 7.2，Ubuntu 24.04 仅支持刷机和目标端组件安装。如果需要主机端开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
+<p><strong>注意：</strong>对于 JetPack 7.2，Ubuntu 24.04 仅支持刷写和目标端组件安装；如果需要主机开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
 
 :::
 
@@ -373,7 +373,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 </div>
 
 :::danger
-JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等待下载完成。
+JetPack 镜像文件较大，下载可能需要约 60 分钟。请耐心等待下载完成。
 :::
 
 :::info
@@ -424,15 +424,15 @@ JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等�
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For JetPack 6.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
-# For JetPack 7.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
+# JetPack 6.2 示例: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
+# JetPack 7.2 示例: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
 ```
 
 **步骤 2：** 执行以下命令，将 JetPack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
-# For example: cd mfi_recomputer-orin-super-j401
+# 示例: cd mfi_recomputer-orin-super-j401
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
