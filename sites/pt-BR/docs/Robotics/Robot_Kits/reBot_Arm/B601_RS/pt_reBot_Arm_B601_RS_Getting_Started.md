@@ -19,7 +19,7 @@ last_update:
   date: 2026-05-26
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/
 ---
 
@@ -46,12 +46,37 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/
 O projeto reBot Arm foi disponibilizado como open source no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Este guia irá conduzi-lo pelo início rápido do B601-RS, da montagem à operação.
 O conteúdo deste guia está chegando até você à velocidade da luz — fique ligado.
 
+
+## Sobre a Fonte de Alimentação
+
+1. O braço robótico não é enviado com uma fonte de alimentação / não inclui uma fonte de alimentação por padrão. Você pode conectar uma bateria por conta própria ou adquirir nossa [Fonte de Alimentação MeanWell 48V 12.5A](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html) open source ou pela [Amazon](https://www.amazon.com/LRS-600-48-Switching-Upgrade-Version-SE-600-48/dp/B0BV5XFYNS/ref=sr_1_1?crid=2MK5Y1UI66CW9&dib=eyJ2IjoiMSJ9.FAt8rrpVeLIbeU2px5Bpe3WU2xsHpE3Kw1Fc6ZdPBFrIpRsaASOwU1dL9jPUNnpXO5u67hvlSXTsKCXH7jehZ8VWfiSFbcHmsVhJY_ua86iPUltJFeWlT9LIXphFER27jHWGnaJb2NdRIpPBMVdae8qgIllUI1J-Q8pZranpyjkkiJP2RmiEdhUBXTvvH3-vhk8z2uhf7BJrGW7hjRbjyCO7WHwwBQ3tMcnEKwto2doy9qus35djHRzODSFPbMuiA66PdgPuib4VL1aQghehDEiceMIpTUiCHHeRHfpB71M._yrosm8mVfpUq-5PjNTLSaYPgv8Dot6YbQTaGULjlLQ&dib_tag=se&keywords=LRS-600-48&qid=1781762081&s=electronics&sprefix=lrs-600-48%2Celectronics%2C351&sr=1-1). Por favor, não compre fontes de alimentação de fabricantes sem marca ou por canais inseguros. Quaisquer riscos ou consequências decorrentes disso serão de responsabilidade do indivíduo.
+
+Se a tensão da sua residência for 220V, ajuste a chave seletora de tensão na lateral da fonte de alimentação para 230V. Se a tensão da sua residência for 110V, altere para 115V.
+
+| **220V** | **110V** |
+|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" width="300" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" width="300" /> |
+
+
+   <div align="center">
+     <img width={800}
+     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100054289-gallery-6.jpg" />
+   </div>
+
+2. Como alternativa, você pode escolher nosso gabinete open source para fonte de alimentação MeanWell 24V 14.6A para auto-montagem. As instruções em texto e a BOM estão em open source no [repositório GitHub](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_RS) (recomendado apenas para desenvolvedores com experiência relevante em montagem de fontes de alimentação).
+
+   Vídeo de referência para montagem:
+
+   <div class="video-container">
+     <iframe width="900" height="600" src="https://www.youtube.com/embed/5GitUWT9gx0?si=I_dnd2bSNHbB95BW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
+
 ## Etapa 1: Guia de Montagem
 
 - Antes da montagem, leia atentamente as instruções a seguir. Para garantir um processo de montagem tranquilo e uma experiência prática completa, seja paciente, mantenha o foco e siga sempre estes pontos-chave:
   1. Este kit inclui numerosos parafusos e peças estruturais, alguns dos quais são semelhantes. Verifique cuidadosamente as especificações dos parafusos e os modelos das peças, e confirme a orientação de instalação antes de apertar.
-  2. O vídeo foi gravado no início de abril. Pode haver pequenos ajustes nas peças posteriormente, mas isso não afeta a qualidade da montagem ao seguir o vídeo. As peças finais são as que acompanham o produto enviado.
-  3. Para facilitar a instalação e remoção dos parafusos, a BOM open source especifica parafusos padrão. No entanto, os parafusos enviados com o kit têm trava química aplicada. Você também pode usar suas próprias ferramentas preferidas ou uma parafusadeira elétrica (altamente recomendado ter uma à mão). Se usar uma ferramenta elétrica, certifique-se de ajustar o torque para um nível baixo a médio (3–6 kgf·cm) para evitar torque excessivo que possa espanar os parafusos, causando danos irreversíveis em que as peças não podem ser removidas. Se houver qualquer sinal de espanamento, substitua imediatamente o parafuso ou realinhe e tente novamente. Parafusos com trava química espanados não podem ser removidos com extrator de parafusos e irão inutilizar toda a peça. Portanto, proceda com cautela.
+  2. O vídeo foi gravado no início de abril. Pode haver pequenos ajustes nas peças posteriormente, mas isso não afeta a qualidade da montagem ao seguir o vídeo. As peças finais são as que acompanham o envio.
+  3. Para facilitar a instalação e remoção dos parafusos, a BOM open source especifica parafusos padrão. No entanto, os parafusos enviados com o kit têm trava-rosca aplicada. Você também pode usar suas próprias ferramentas preferidas ou uma chave de fenda elétrica (altamente recomendado ter uma à mão). Se usar uma ferramenta elétrica, certifique-se de ajustar o torque para um nível baixo a médio (3–6 kgf·cm) para evitar torque excessivo que possa espanar os parafusos, causando danos irreversíveis em que as peças não podem ser removidas. Se houver qualquer sinal de espanamento, substitua imediatamente o parafuso ou realinhe e tente novamente. Parafusos com trava-rosca espanados não podem ser removidos com extrator de parafusos e irão inutilizar toda a peça. Portanto, proceda com cautela.
   4. Priorize a segurança durante a montagem para evitar dedos presos ou lesões por esmagamento. Crianças devem concluir este projeto acompanhadas por um dos pais ou responsável.
 
 
@@ -59,7 +84,7 @@ O conteúdo deste guia está chegando até você à velocidade da luz — fique 
 
 ## Etapa 2: Calibrar o Braço Robótico e Começar
 
-1. Explore nossa plataforma **MotorBridge**. Esta plataforma é uma solução abrangente tudo-em-um que oferece expansão contínua dos tipos de motores, cobrindo [motores Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [motores Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [motores Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [motores Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow e mais. Ela também é compatível com produtos de braço robótico continuamente atualizados como o reBot. A plataforma é amigável para iniciantes e também fornece um SDK em Python com funcionalidade totalmente consistente para desenvolvedores.
+1. Explore nossa plataforma **MotorBridge**. Esta plataforma é uma solução abrangente tudo-em-um que suporta expansão contínua de tipos de motores, cobrindo [motores Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [motores Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [motores Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [motores Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow e mais. Ela também é compatível com produtos de braço robótico continuamente atualizados como o reBot. A plataforma é amigável para iniciantes e também fornece um SDK em Python com funcionalidade totalmente consistente para desenvolvedores.
 
 2. Experimente os novos recursos e detalhes do MotorBridge especificamente adaptados para o braço robótico reBot, incluindo calibração de ponto zero com um clique, gravação de parâmetros, controle de motor por arrastar e soltar via UI e uma interface integrada de visualização de modelo.
 
@@ -76,7 +101,7 @@ Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-A
 
   Observação: Se você comprou um kit pré-montado, informe o agente durante a etapa de gravação do ID do motor: "I purchased a pre-assembled kit, please scan motors 1–7 to verify they are all online, do not rewrite the motor IDs."
 
-3. O agente usa comandos de CLI para concluir a gravação dos IDs dos motores, enquanto o wiki usa um método de interação via interface web. Ambas as abordagens funcionam.
+3. O agente usa comandos de CLI para concluir a gravação do ID do motor, enquanto o wiki usa um método de interação via interface web. Ambos os métodos funcionam.
 
 :::
 
@@ -143,10 +168,10 @@ conda activate rebot
 
 ### 2. Instalar o Motorbridge
 
-Após ativar o ambiente virtual do reBot, execute o comando a seguir para instalar o motorbridge:
+Após ativar o ambiente virtual do reBot, execute o seguinte comando para instalar o motorbridge:
 
 :::tip Nota para usuários de macOS
-Se você tiver baixa taxa de quadros durante a teleoperação no macOS, isso pode ser causado por uma versão desatualizada do driver WCH CH34x. Para **macOS 10.14 e posteriores**, o sistema inclui um driver `AppleUSBCHC0M` integrado. Você pode desinstalar o driver antigo e mudar para o driver integrado do macOS, o que deve melhorar efetivamente a taxa de quadros.
+Se você tiver taxas de quadros baixas durante a teleoperação no macOS, isso pode ser causado por uma versão desatualizada do driver WCH CH34x. Para **macOS 10.14 e posteriores**, o sistema inclui um driver `AppleUSBCHC0M` integrado. Você pode desinstalar o driver antigo e mudar para o driver integrado do macOS, o que deve melhorar efetivamente as taxas de quadros.
 :::
 
 
@@ -182,7 +207,7 @@ cd PCBUSB
 sudo ./install.sh
 ```
 
-Configure `DYLD_LIBRARY_PATH` para garantir que o motorbridge-gateway consiga encontrar a biblioteca PCBUSB em tempo de execução. Crie um script de ativação no ambiente conda para que ele tenha efeito automaticamente sempre que você executar `conda activate rebot`:
+Configure `DYLD_LIBRARY_PATH` para garantir que o motorbridge-gateway possa encontrar a biblioteca PCBUSB em tempo de execução. Crie um script de ativação no ambiente conda para que ele tenha efeito automaticamente sempre que você executar `conda activate rebot`:
 
 ```bash
 mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
@@ -205,7 +230,7 @@ python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK
 
 ou Windows:
 
-Visite [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) para instalar o driver do PCAN-USB.
+Visite [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) para instalar o driver PCAN-USB.
 
 <!-- ### 3. Write Motor IDs
 
@@ -236,21 +261,21 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 
 ### 4. Iniciar o MotorBridge-gateway para Gravar Pontos Zero e Depurar
 
-#### Antes do Reset do Motor
+#### Antes de Redefinir o Motor
 
 Antes da configuração dos parâmetros do motor, observe as seguintes preparações e regras de segurança:
 
-- Prepare 2 grampos de fixação (tamanho ≥3 polegadas) e uma fonte de alimentação chaveada de 48 V com saída XT30 (escolha uma marca confiável; não use fontes de baixa qualidade).
+- Prepare 2 grampos de fixação (tamanho ≥3 polegadas) e uma fonte de alimentação chaveada de 48 V com saída XT30 (escolha uma marca confiável; não use fontes de alimentação de baixa qualidade).
 - Durante a depuração e operação, mantenha uma distância segura de pelo menos 1 metro.
-- Não conecte ou desconecte motores com o sistema energizado; desligue a fonte de alimentação antes de conectar/desconectar o conector XT30 2+2.
-- Não sobrecarregue nem opere os motores em velocidade excessiva; verifique a fiação e os fixadores antes da inicialização; não use em ambientes úmidos, de alta temperatura ou empoeirados.
-- Defina parâmetros de programa razoáveis e função de parada de emergência para evitar perda de controle do equipamento.
+- Não conecte ou desconecte os motores com o sistema energizado; desligue a fonte de alimentação antes de conectar/desconectar o conector XT30 2+2.
+- Não sobrecarregue nem opere os motores em velocidade excessiva; verifique a fiação e os fixadores antes da partida; não utilize em ambientes úmidos, de alta temperatura ou empoeirados.
+- Defina parâmetros de programa razoáveis e uma função de parada de emergência para evitar perda de controle do equipamento.
 - **Siga rigorosamente as regras acima. O vendedor não se responsabiliza por quaisquer riscos e perdas causados por operações em desacordo com as instruções ou por erro humano.**
 
 
-#### Escrita e depuração do ponto zero via interface Web
+#### Escrita de Ponto Zero e Depuração pela Interface Web
 
-Abra o endereço [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) no seu navegador, clique na opção Help, copie o comando correspondente com base no seu sistema operacional e na placa controladora, verifique o endereço IP e o número da porta e, em seguida, pressione Enter no terminal para executá-lo.
+Abra o endereço [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) no navegador, clique na opção Help, copie o comando correspondente com base no seu sistema operacional e placa controladora, verifique o endereço IP e o número da porta e, em seguida, pressione Enter no terminal para executá-lo.
 
 
 ```bash
@@ -275,20 +300,3 @@ Consulte o vídeo para saber como usar. Antes de operar o braço robótico, voc�
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
-## Sobre a fonte de alimentação
-
-1. O braço robótico não é enviado com fonte de alimentação / não inclui uma fonte de alimentação por padrão. Você pode conectar uma bateria por conta própria ou adquirir nossa [fonte de alimentação MeanWell 48V 12,5A de código aberto](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html).
-
-   <div align="center">
-     <img width={800}
-     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100054289-gallery-6.jpg" />
-   </div>
-
-2. Como alternativa, você pode escolher nosso gabinete de fonte de alimentação MeanWell 24V 14,6A de código aberto para montagem própria. As instruções em texto e a lista de materiais (BOM) são de código aberto no [repositório GitHub](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_RS) (recomendado apenas para desenvolvedores com experiência relevante em montagem de fontes de alimentação).
-
-   Vídeo de referência para montagem:
-
-   <div class="video-container">
-     <iframe width="900" height="600" src="https://www.youtube.com/embed/5GitUWT9gx0?si=I_dnd2bSNHbB95BW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-   </div>
