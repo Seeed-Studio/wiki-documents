@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-05-21'
+updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/cn/recomputer_jetson_super_getting_started/
 ---
 
@@ -282,21 +282,32 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack 版本 </td>
-        <td class="dbon" colspan="3"> Ubuntu 版本（主机电脑） </td>
+        <td class="dbon" colspan="4"> Ubuntu 版本（主机电脑） </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>注意：</strong>对于 JetPack 7.2，Ubuntu 24.04 仅支持刷写和目标端组件安装；如果需要主机开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
 
 :::
 
@@ -315,6 +326,27 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td rowSpan={4}>7.2</td>
+      <td> Orin Nano 4GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm">下载</a></td>
+      <td>0978be490c5ff7c1648317240e8f00d7<br />6b2d025ed30a945249eaa69112a047c8</td>
+    </tr>
+    <tr>
+      <td>Orin Nano 8GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFEKDfgr0CS7jHtF-JwR0KAZC0l4XMAUKFW4Tsq2960iU?e=PI5PkJ">下载</a></td>
+      <td>22a21d0ee9abdceb812e06ac399d8ca<br />5f14a3880fdf989c876223e72b21f4de6</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1">下载</a></td>
+      <td>7613332f8eeb315a0d9d51744a8f0a9<br />e8e11e92e091d2a06ad609235a54f7c72</td>
+    </tr>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">下载</a></td>
+      <td>5c66fcbf8f4bcb21477ada08c78796f<br />69524ccc6eccf929fdd9f026e948482f1</td>
+    </tr>
     <tr>
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
@@ -341,7 +373,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 </div>
 
 :::danger
-Jetpack6 镜像文件大小约为 **14.1GB**，下载大约需要 60 分钟。请耐心等待下载完成。
+JetPack 镜像文件较大，下载可能需要约 60 分钟。请耐心等待下载完成。
 :::
 
 :::info
@@ -392,13 +424,15 @@ Jetpack6 镜像文件大小约为 **14.1GB**，下载大约需要 60 分钟。�
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
+# JetPack 6.2 示例: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
+# JetPack 7.2 示例: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
 ```
 
 **步骤 2：** 执行以下命令，将 Jetpack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
+# 示例: cd mfi_recomputer-orin-super-j401
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 

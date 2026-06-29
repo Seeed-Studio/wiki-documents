@@ -15,7 +15,7 @@ last_update:
   date: 11/04/2025
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-05-14'
+updatedAt: '2026-06-27'
 url: https://wiki.seeedstudio.com/recomputer_j501_mini_getting_started/
 ---
 # Robotics J501 carrier board Hardware and Getting Started
@@ -215,21 +215,32 @@ Please refer to the table below to prepare the host machine.
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.</p>
 
 :::
 
@@ -250,7 +261,20 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
   </thead>
   <tbody>
     <tr>
-      <td rowSpan={4}>6.2.1</td>
+      <td rowSpan={2}>7.2</td>
+      <td> AGX Orin 64GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCZEEr-Co7XSJmdL_F1Rvo9AbidOmBTdQjSspf6EXRcU9s?e=39pbm6">Download</a></td>
+      <td>36e2616404f9451a043797968e87755b<br />4dc654a5683cd70c7e223cc80910ac0a</td>
+    </tr>
+    <tr>
+      <td>AGX Orin 32GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCepjaEexEOSb_ula7wMpDlAX61iyLzJ1B1RTHpY32mPIQ?e=sOyPdU">Download</a></td>
+      <td>05d082994fd1b2ae85c5c666a621b5a6<br />e8ec178db5ce64cca516c837acca7552</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>6.2.1</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAUQ4ithrVMQLSE274ftNcLAdScXb2OFE8LXfabvKzaGS8">Download</a></td>
@@ -267,7 +291,7 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
 </div>
 
 :::danger
-The Jetpack6 image file is approximately **14.2GB** in size and should take around 60 minutes to download. Please kindly wait for the download to complete.
+The JetPack image files are large and may take around 60 minutes to download. Please wait for the download to complete.
 :::
 
 :::info
@@ -323,7 +347,8 @@ The below image is for AGX Orin 32GB:
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
+# For JetPack 7.2 example: sudo tar xpf mfi_recomputer-mini-agx-orin-j501x-32g-7.2.0-39.2.0-2026-06-25.tar.gz
+# For JetPack 6.2.1 example: sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
 ```
 
 **Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
