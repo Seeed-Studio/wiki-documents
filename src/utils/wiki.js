@@ -1,134 +1,134 @@
 const docList = [
   [
     {
-      "path": "/control_rebot_arm_using_voice_with_respeaker_flex",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg",
-      "title": "Control reBot Arm using voice with reSpeaker Flex",
-      "date": "2026-05-22",
-      "title_cn": "使用 reSpeaker Flex 通过语音控制 reBot Arm",
-      "title_ja": "reSpeaker Flex を使って音声で reBot Arm を制御する",
-      "title_es": "Controlar reBot Arm usando la voz con reSpeaker Flex",
-      "title_pt": "Controle o reBot Arm usando voz com o reSpeaker Flex"
+      "path": "/update_internal_lr1110_firmware",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png",
+      "title": "Update LR1110 Firmware on Wio Tracker 1110",
+      "date": "2026-06-17",
+      "title_cn": "在 Wio Tracker 1110 上更新 LR1110 固件",
+      "title_ja": "Wio Tracker 1110 上の LR1110 ファームウェアを更新する",
+      "title_es": "Actualizar el firmware LR1110 en Wio Tracker 1110",
+      "title_pt": "Atualizar o firmware LR1110 no Wio Tracker 1110"
     },
     {
-      "path": "/atom_s",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-s/product_photo.webp",
-      "title": "Getting started with Atom-S",
-      "date": "5/22/2026",
-      "title_cn": "Atom-S 入门指南",
-      "title_ja": "Atom-S 入門ガイド",
-      "title_es": "Primeros pasos con Atom-S",
-      "title_pt": "Introdução ao Atom-S"
+      "path": "/rebot_arm_b601_rs_lerobot",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png",
+      "title": "Getting Started with LeRobot-based reBot Arm B601-RS",
+      "date": "2026-06-17",
+      "title_cn": "reBot Arm B601-RS入门Lerobot",
+      "title_ja": "LeRobot ベース reBot Arm B601-RS 入門",
+      "title_es": "Primeros pasos con reBot Arm B601-RS basado en LeRobot",
+      "title_pt": "Introdução ao reBot Arm B601-RS baseado em LeRobot"
     }
   ],
   [
     {
-      "path": "/atom_x",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-x/atom_x_overview.webp",
-      "title": "Getting started with Atom-X",
-      "date": "5/22/2026",
-      "title_cn": "Atom-X 入门指南",
-      "title_ja": "Atom-X 入門ガイド",
-      "title_es": "Primeros pasos con Atom-X",
-      "title_pt": "Introdução ao uso do Atom-X"
+      "path": "/deploy_tensorrt_edge_llm_on_jetpack6.2",
+      "image": "https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/7.png",
+      "title": "Deploy TensorRT Edge-LLM on Jetpack6.2",
+      "date": "2026-06-16",
+      "title_cn": "在 Jetpack6.2 上部署 TensorRT Edge-LLM",
+      "title_ja": "Jetpack6.2 に TensorRT Edge-LLM をデプロイする",
+      "title_es": "Desplegar TensorRT Edge-LLM en Jetpack6.2",
+      "title_pt": "Implantar TensorRT Edge-LLM no Jetpack6.2"
     },
     {
-      "path": "/respeaker_flex_soarm",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/lerobot_flex.png",
-      "title": "Add Voice Interaction to Your SO-ARM10x with reSpeaker Flex",
-      "date": "2026-05-19",
-      "title_cn": "使用 reSpeaker Flex 为你的 SO-ARM10x 添加语音交互",
-      "title_ja": "reSpeaker Flex で SO-ARM10x に音声インタラクションを追加する",
-      "title_es": "Añade interacción por voz a tu SO-ARM10x con reSpeaker Flex",
-      "title_pt": "Adicione Interação por Voz ao Seu SO-ARM10x com reSpeaker Flex"
+      "path": "/rebot_arm_b601_dm_graspnet_visual_grasping",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-e26052001-rebot-arm-b601-dm-bundle-with-jetson-thor.jpg",
+      "title": "reBot Arm B601-DM GraspNet Visual Grasping on Jetson",
+      "date": "2026-06-15",
+      "title_cn": "在 Jetson 上运行 reBot Arm B601-DM 的 GraspNet 视觉抓取",
+      "title_ja": "reBot Arm B601-DM GraspNet ビジュアル把持 on Jetson",
+      "title_es": "Agarre visual GraspNet en Jetson con reBot Arm B601-DM",
+      "title_pt": "Preensão Visual GraspNet no Jetson com reBot Arm B601-DM"
     }
   ],
   [
     {
-      "path": "/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor",
-      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg",
-      "title": "Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor",
-      "date": "2026-05-18",
-      "title_cn": "在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm B601",
-      "title_ja": "Nvidia Jetson Thor 上の NemoClaw で reBot Arm B601 を制御する",
-      "title_es": "Controlar reBot Arm B601 con NemoClaw en Nvidia Jetson Thor",
-      "title_pt": "Controlar o reBot Arm B601 com NemoClaw no Nvidia Jetson Thor"
+      "path": "/voice_control_rebot_arm",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_controlled_rebot_arm/cover_page.png",
+      "title": "Voice Control reBot Arm B601 by Nvidia Jetson Thor",
+      "date": "2026-06-15",
+      "title_cn": "使用 Nvidia Jetson Thor 语音控制 reBot Arm B601",
+      "title_ja": "Nvidia Jetson Thor による reBot Arm B601 の音声制御",
+      "title_es": "Control por voz de reBot Arm B601 con Nvidia Jetson Thor",
+      "title_pt": "Controle de voz do reBot Arm B601 com Nvidia Jetson Thor"
     },
     {
-      "path": "/reterminal_e10xx_with_arduino_peripherals",
+      "path": "/reserver_industrial_poe_camera_usage",
+      "image": "https://files.seeedstudio.com/wiki/reServer-Industrial/5.jpg",
+      "title": "PoE Camera Usage on reServer Industrial",
+      "date": "2026-06-15",
+      "title_cn": "reServer Industrial 上的 PoE 摄像头使用",
+      "title_ja": "reServer Industrial における PoE カメラの使用",
+      "title_es": "Uso de cámaras PoE en reServer Industrial",
+      "title_pt": "Uso de câmera PoE no reServer Industrial"
+    }
+  ],
+  [
+    {
+      "path": "/recamera_qrcode_udp",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/qrcode_udp/testvideo.gif",
+      "title": "Real-Time QR Code Recognition on reCamera",
+      "date": "2026-06-15",
+      "title_cn": "在 reCamera 上进行实时二维码识别",
+      "title_ja": "reCamera でのリアルタイム QR コード認識",
+      "title_es": "Reconocimiento de códigos QR en tiempo real en reCamera",
+      "title_pt": "Reconhecimento de Código QR em Tempo Real na reCamera"
+    },
+    {
+      "path": "/rebot_arm_b601_rs_grasping_demo",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif",
+      "title": "reBot Arm B601-RS Visual Grasping Demo",
+      "date": "2026-06-15",
+      "title_cn": "reBot Arm B601-RS 视觉夹取 Demo",
+      "title_ja": "reBot Arm B601-RS ビジュアル把持デモ",
+      "title_es": "Demo de agarre visual con reBot Arm B601-RS",
+      "title_pt": "Demonstração de Preensão Visual com reBot Arm B601-RS"
+    }
+  ],
+  [
+    {
+      "path": "/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601",
+      "image": "https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png",
+      "title": "Fine-tune GR00T N1.7 for reBot Arm and Deploy on Jetson Thor",
+      "date": "2026-06-12",
+      "title_cn": "为 reBot Arm 微调 GR00T N1.7 并部署到 Jetson Thor",
+      "title_ja": "reBot Arm 向け GR00T N1.7 のファインチューニングと Jetson Thor へのデプロイ",
+      "title_es": "Ajuste fino de GR00T N1.7 para reBot Arm y despliegue en Jetson Thor",
+      "title_pt": "Ajustar finamente o GR00T N1.7 para reBot Arm e implantar no Jetson Thor"
+    },
+    {
+      "path": "/bulk_configuration_chirpstack",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/m2-white.webp",
+      "title": "Bulk Configuration of the ChirpStack on M2 Gateway",
+      "date": "2026-06-12",
+      "title_cn": "在 M2 网关上批量配置 ChirpStack",
+      "title_ja": "M2 Gateway 上の ChirpStack の一括設定",
+      "title_es": "Configuración masiva de ChirpStack en M2 Gateway",
+      "title_pt": "Configuração em Massa do ChirpStack no M2 Gateway"
+    }
+  ],
+  [
+    {
+      "path": "/reterminal_e10xx_with_esphome_rtc_sd_microphone",
       "image": "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp",
-      "title": "Arduino Cookbook: Onboard Peripherals (reTerminal E Series)",
-      "date": "2026-05-15",
-      "title_cn": "Arduino 菜谱：板载外设（reTerminal E 系列）",
-      "title_ja": "Arduino クックブック: オンボードペリフェラル (reTerminal E シリーズ)",
-      "title_es": "Recetario de Arduino: Periféricos Integrados (reTerminal E Serie)",
-      "title_pt": "Livro de Receitas Arduino: Periféricos Onboard (reTerminal E Série)"
-    }
-  ],
-  [
-    {
-      "path": "/recamera_udp_face_analysis",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera-udp-face-show.gif",
-      "title": "UDP Face Analysis with reCamera",
-      "date": "2026-04-30",
-      "title_cn": "使用 reCamera 进行 UDP 人脸分析",
-      "title_ja": "reCamera を用いた UDP 顔解析",
-      "title_es": "Análisis de Rostros por UDP con reCamera",
-      "title_pt": "Análise de Rosto via UDP com reCamera"
+      "title": "ESPHome Cookbook: RTC, SD Card & Microphone (reTerminal E Series)",
+      "date": "2026-06-12",
+      "title_cn": "ESPHome 菜谱：RTC、SD 卡与麦克风（reTerminal E 系列）",
+      "title_ja": "ESPHome クックブック: RTC、SD カード & マイク (reTerminal E シリーズ)",
+      "title_es": "Recetario ESPHome: RTC, Tarjeta SD y Micrófono (reTerminal E Serie)",
+      "title_pt": "Livro de Receitas ESPHome: RTC, Cartão SD e Microfone (reTerminal E Série)"
     },
     {
-      "path": "/respeaker_flex_lekiwi",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png",
-      "title": "Add Voice Interaction to Your LeKiwi Robot with reSpeaker Flex",
-      "date": "2026-04-28",
-      "title_cn": "使用 reSpeaker Flex 为你的 LeKiwi 机器人添加语音交互",
-      "title_ja": "reSpeaker Flex で LeKiwi ロボットに音声インタラクションを追加",
-      "title_es": "Añade interacción por voz a tu robot LeKiwi con reSpeaker Flex",
-      "title_pt": "Adicione interação por voz ao seu robô LeKiwi com o reSpeaker Flex"
-    }
-  ],
-  [
-    {
-      "path": "/xiao_esp32c5_with_zephyr",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
-      "title": "XIAO ESP32-C5 With Zephyr(RTOS)",
-      "date": "2026-04-28",
-      "title_cn": "XIAO ESP32-C5 与 Zephyr(RTOS)",
-      "title_ja": "XIAO ESP32-C5 と Zephyr(RTOS)",
-      "title_es": "XIAO ESP32-C5 con Zephyr(RTOS)",
-      "title_pt": "XIAO ESP32-C5 com Zephyr(RTOS)"
-    },
-    {
-      "path": "/get_started_with_meshcore_remote_terminal",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/first.png",
-      "title": "Get Started with MeshCore Remote Terminal",
-      "date": "2026-04-20",
-      "title_cn": "MeshCore Remote Terminal 入门指南",
-      "title_ja": "MeshCore Remote Terminal を使い始める",
-      "title_es": "Primeros pasos con MeshCore Remote Terminal",
-      "title_pt": "Introdução ao MeshCore Remote Terminal"
-    }
-  ],
-  [
-    {
-      "path": "/get_started_with_esp32s3_meshcore",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png",
-      "title": "Get Started with ESP32 MeshCore",
-      "date": "2026-04-20",
-      "title_cn": "ESP32 MeshCore 入门",
-      "title_ja": "ESP32 MeshCore を使い始める",
-      "title_es": "Primeros pasos con ESP32 MeshCore",
-      "title_pt": "Primeiros Passos com ESP32 MeshCore"
-    },
-    {
-      "path": "/sound_source_localization_of_recamera_gimbal",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_reSpeaker/reCamera_reSpeaker.gif",
-      "title": "Sound source localization of reCamera Gimbal",
-      "date": "2026-04-17",
-      "title_cn": "reCamera Gimbal 的声源定位",
-      "title_ja": "reCamera Gimbal の音源定位",
-      "title_es": "Localización de fuentes de sonido con reCamera Gimbal",
-      "title_pt": "Localização de fonte sonora do reCamera Gimbal"
+      "path": "/jetpack72_deep_dive",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/-/1-e26020301-recomputer-jetson-agx-orin_-developer-kit-gmsl-bundle.jpg",
+      "title": "JetPack 7.2 Deep Dive: What Changes for Jetson AGX Orin Inference?",
+      "date": "2026-06-11",
+      "title_cn": "JetPack 7.2 深度解析：Jetson AGX Orin 推理发生了哪些变化？",
+      "title_ja": "JetPack 7.2 徹底解説：Jetson AGX Orin の推論はどう変わるのか？",
+      "title_es": "Análisis profundo de JetPack 7.2: ¿Qué cambia para la inferencia en Jetson AGX Orin?",
+      "title_pt": "Análise Detalhada do JetPack 7.2: O que muda para a inferência no Jetson AGX Orin?"
     }
   ]
 ];

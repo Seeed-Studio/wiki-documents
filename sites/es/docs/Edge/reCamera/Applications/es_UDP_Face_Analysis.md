@@ -17,7 +17,7 @@ last_update:
   date: 04/30/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-04-30'
+updatedAt: '2026-05-06'
 url: https://wiki.seeedstudio.com/es/recamera_udp_face_analysis/
 ---
 
@@ -34,8 +34,8 @@ Esta demostración muestra cómo construir un sistema de análisis de rostros en
 
 La aplicación en C++ se ejecuta en reCamera y envía fotogramas de video junto con los resultados de detección (cajas delimitadoras, atributos) a través de UDP. Un script receptor en Python ejecutándose en tu PC muestra el flujo de video anotado en tiempo real.
 
-**Características clave**:
-- Detección de rostros en tiempo real con control del umbral de confianza
+**Características Clave**:
+- Detección de rostros en tiempo real con control de umbral de confianza
 - Análisis de múltiples atributos por rostro (género, edad, raza, emoción)
 - Transmisión UDP eficiente con compresión JPEG
 - Inferencia con salto de fotogramas para reducir la carga de CPU/TPU
@@ -43,12 +43,12 @@ La aplicación en C++ se ejecuta en reCamera y envía fotogramas de video junto 
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/recamera-udp-face-show.gif" /></div>
 
-## Configuración de la Demo
+## Configuración de la Demostración
 
 Para configurar esta demostración, necesitas:
 
-1. Compilar el programa en C++ en ReCamera
-2. Ejecutar el ejecutable compilado en ReCamera
+1. Compilar de forma cruzada el programa en C++ en tu PC
+2. Ejecutar el ejecutable compilado en reCamera
 3. Ejecutar el script receptor en Python en tu PC
 
 ### 1. Compilar el Programa en C++
@@ -90,7 +90,7 @@ El repositorio incluye modelos precompilados en la carpeta de la solución:
 - `emotion_bf16.cvimodel`
 :::
 
-### 2. Configurar ReCamera
+### 2. Configurar reCamera
 
 :::warning
 Antes de ejecutar el programa en C++, debes detener los servicios predeterminados de Node-RED ya que ocupan los recursos de la cámara. Ejecuta los siguientes comandos vía SSH:
@@ -102,9 +102,9 @@ sudo /etc/init.d/S91sscma-node stop
 sudo /etc/init.d/S93sscma-supervisor stop
 ```
 
-### 3. Ejecutar el Ejecutable en ReCamera
+### 3. Ejecutar el Ejecutable en reCamera
 
-Sube el ejecutable compilado y los modelos a `/home/recamera/` en ReCamera, luego ejecuta:
+Sube el ejecutable compilado y los modelos a `/home/recamera/` en reCamera, luego ejecuta:
 
 ```bash
 chmod +x face_udp
@@ -138,7 +138,7 @@ chmod +x face_udp
 ```
 
 :::note
-Recuerda reemplazar `192.168.31.100` con la dirección IP real de tu PC en la misma red que ReCamera.
+Recuerda reemplazar `192.168.31.100` con la dirección IP real de tu PC en la misma red que reCamera.
 :::
 
 ### 4. Ejecutar el Receptor en Python en el PC
@@ -161,7 +161,7 @@ python3 udp_receiver.py
 
 ## Salida Esperada
 
-### En la Terminal de ReCamera
+### En la Terminal de reCamera
 
 El programa mostrará estadísticas de rendimiento en tiempo real cada 2 segundos:
 
@@ -199,7 +199,7 @@ El PC mostrará una ventana que contiene:
 
 
 
-## Solución de Problemas
+## Resolución de Problemas
 
 ### Error de Acceso a la Cámara
 
@@ -207,10 +207,10 @@ Si ves el error "No camera":
 - Asegúrate de que los servicios de Node-RED estén detenidos (ver Paso 2 arriba)
 - Verifica la conexión de la cámara
 
-### Error en la Conexión UDP
+### Error de Conexión UDP
 
 Si el PC no recibe datos:
-- Verifica que el PC y ReCamera estén en la misma red
+- Verifica que el PC y reCamera estén en la misma red
 - Revisa la configuración del firewall en el PC
 - Confirma que el puerto UDP 5001 no esté bloqueado
 - Prueba con `ping` entre los dispositivos

@@ -1,27 +1,27 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic ArrayとXIAO ESP32S3で強力な音声制御を実現。360°音声キャプチャ、ノイズ抑制、Edge Impulse経由のTinyML起動ワード検出機能を搭載—スマートデバイス、ロボティクス、IoTプロジェクトに最適。
-title: TinyML音声認識とEdge Impulse
+description: ReSpeaker XVF3800 USB 4-Mic Array と XIAO ESP32S3 を使って、強力な音声コントロールを実現しましょう。360° オーディオキャプチャ、ノイズ抑制、Edge Impulse を用いた TinyML ウェイクワード検出に対応し、スマートデバイス、ロボティクス、IoT プロジェクトに最適です。
+title: reSpeaker XVF3800 と Edge Impulse を用いた TinyML 音声認識
 keywords:
   - reSpeaker
   - XIAO
   - ESP32S3
   - Edge Impulse
   - TinyML
-  - Speech Recognition
+  - 音声認識
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /respeaker_xvf3800_xiao_edge_impulse
 last_update:
   date: 8/7/2025
   author: Kasun Thushara
 createdAt: '2025-08-08'
-updatedAt: '2025-09-25'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_edge_impulse/
 ---
 
 ## 概要
 
 
-TinyMLを活用したキーワードスポッティング（KWS）システムを使用して、リアルタイム音声コマンド検出によるハンズフリー制御を実現します。高性能なReSpeaker XVF3800マイクロフォンアレイと効率的なXIAO ESP32S3、そしてEdge Impulseプラットフォームを組み合わせることで、コンパクトで低消費電力のデバイスに音声認識機能をもたらします。トレーニング、デプロイ、リスニング—あなたのデバイスは常に次のコマンドに対応する準備ができています！
+TinyML を用いたキーワードスポッティング（KWS）システムにより、リアルタイムの音声コマンド検出でハンズフリー操作を実現します。高性能な ReSpeaker XVF3800 マイクアレイと高効率な XIAO ESP32S3、そして Edge Impulse プラットフォームを組み合わせることで、小型・低消費電力デバイスに音声認識機能をもたらします。学習、デプロイ、そしてリッスン——あなたのデバイスは常に次のコマンドを待ち受けます。
 
 ## 必要なハードウェア
 
@@ -29,37 +29,37 @@ TinyMLを活用したキーワードスポッティング（KWS）システム�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-      <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+      <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
 ## データ収集 
 
-### ReSpeaker XVF3800とXIAO ESP32S3用USBファームウェアのインストール
+### XIAO ESP32S3 搭載 ReSpeaker XVF3800 用 USB ファームウェアのインストール
 
-音声データ収集を開始するには、ReSpeakerにUSBファームウェアがフラッシュされており、USBマイクロフォンとして機能できることを確認してください。
+オーディオデータの収集を開始する前に、ReSpeaker に USB ファームウェアを書き込み、USB マイクとして動作できるようにしておきます。
 
 
-[**ファームウェアインストールWiki**](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#update-firmware)
+[**Firmware Installation Wiki**](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェアを更新する)
 
-[**ファームウェアファイル**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
+[**Firmware Files**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
 
-### Python環境のセットアップ
+### Python 環境のセットアップ
 
-次に、**音声データを収集するためにラップトップまたはPCでpython環境を作成**する必要があります。ここではrespeaker-envを作成します
+次に、音声データを収集するために、ノート PC またはデスクトップ PC 上に **python 環境を構築する必要があります**。ここでは respeaker-env を作成します。
 
 ```bash
 python -m venv respeaker-env
 source respeaker-env/bin/activate  
 ```
 
-必要なライブラリをインストール：
+必要なライブラリをインストールします：
 
 ```bash
 pip install sounddevice scipy numpy 
 ```
 
-### ReSpeaker デバイス ID を見つける
+### ReSpeaker デバイス ID の確認
 
 正しいマイク入力から録音するために、ReSpeaker マイクのデバイスインデックスを特定する必要があります。
 
@@ -72,11 +72,11 @@ for i, device in enumerate(devices):
 
 ```
 
-デバイス名でReSpeakerに対応するもの（通常はReSpeaker XVF3800 USB 4-Mic Arrayのような名前）を探し、インデックス番号（例：Device 2）をメモしてください。
+ReSpeaker に対応するデバイス名（ReSpeaker XVF3800 USB 4-Mic Array などの名称）を探し、そのインデックス番号（例：Device 2）をメモしておきます。
 
 ### 音声サンプルの録音
 
-以下のスクリプトを使用すると、人物とコマンド/キーワード別に整理されたラベル付き音声サンプルを録音できます。
+次のスクリプトを使用すると、人物とコマンド／キーワードごとに整理されたラベル付き音声サンプルを録音できます。
 
 ```python
 
@@ -144,8 +144,7 @@ if __name__ == "__main__":
     collect_samples()
 
 ```
-
-### フォルダ構造の例
+### フォルダ構成の例
 
 ```
 /PersonA
@@ -159,121 +158,122 @@ if __name__ == "__main__":
 
 ```
 
-各人のフォルダには、後でモデル訓練のためにEdge Impulseにアップロードされるラベル付きの.wavファイルが含まれています。
+各人物のフォルダにはラベル付きの .wav ファイルが含まれており、後で Edge Impulse にアップロードしてモデル学習に使用します。
 
-## Edge Impulseでのオーディオデータのアップロードと準備
+##  Edge Impulse への音声データのアップロードと準備
 
-ReSpeaker XVF3800を使用して生のオーディオサンプルを収集し、ラベル別に整理した後、次のステップはキーワードスポッティングモデルの訓練のためにEdge Impulse Studioでそれらをアップロードし、処理することです。
+ReSpeaker XVF3800 を使って生の音声サンプルを収集し、ラベルごとに整理したら、次のステップとして、それらを Edge Impulse Studio にアップロードし、キーワードスポッティングモデルの学習用に処理します。
 
-### Edge Impulseで新しいプロジェクトを作成
+### Edge Impulse で新しいプロジェクトを作成
 
-- [Edge Impulse](https://edgeimpulse.com/)にアクセスしてログインします（新規の場合はサインアップ）。
+- [Edge Impulse](https://edgeimpulse.com/) にアクセスし、ログインします（初めての場合はサインアップします）。
 
-- 「Create new project」をクリックします。
+- "Create new project" をクリックします。
 
-- プロジェクトの名前を入力します（例：「Voice Command KWS」）
+- プロジェクト名を入力します（例："Voice Command KWS"）。
 
-### 既存のオーディオサンプルをアップロード
+### 既存の音声サンプルをアップロード
 
 収集したデータをアップロードするには：
 
-- 1.**Data Acquisition**タブに移動します。
-- 2.**「Upload existing data」**（右上）をクリックします。
-- 3.フォルダに含まれる.wavファイルを選択してアップロードします
+- 1.**Data Acquisition** タブに移動します。
+- 2.右上の **"Upload existing data"** をクリックします。
+- 3.フォルダ内の .wav ファイルを選択してアップロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/files.png" alt="pir" width={800} height="auto" /></p>
 
-- 4.データを自動的に訓練用とテスト用に分割するオプションを有効にします（Edge Impulseは約80/20の分割を推奨）。
+- 4.データを自動的に学習用とテスト用に分割するオプションを有効にします（Edge Impulse ではおよそ 80/20 の分割を推奨しています）。
 
-### 10秒のオーディオを1秒のサンプルに分割
+### 10 秒の音声を 1 秒サンプルに分割
 
-Edge Impulseはキーワードスポッティングに1秒のオーディオクリップで最適に動作します。元のサンプルは10秒のセグメントで録音されているため、それぞれを複数の1秒サンプルに分割する必要があります。
+Edge Impulse は、キーワードスポッティングにおいて 1 秒の音声クリップで最も良く動作します。元のサンプルは 10 秒単位で録音されているため、それぞれを複数の 1 秒サンプルに分割する必要があります。
 
-**以下の手順に従ってください**：
-- 1.アップロード後、**Data Acquisition**ページに移動します。
-- 2.サンプル（例：yes.1.wav）を見つけて、サンプルの横にある3つの**ドット（…）**をクリックします。
-- 3.メニューから「**Split sample**」を選択します。
+
+**次の手順に従います**：
+- 1.アップロード後、**Data Acquisition** ページに移動します。
+- 2.サンプル（例：yes.1.wav）を見つけ、そのサンプルの横にある **三つの点（…）** をクリックします。
+- 3.メニューから "**Split sample**" を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/split.png" alt="pir" width={800} height="auto" /></p>
 
-- 4.ツールを使用して波形を1秒のセグメントに分割します。
-    - a.必要に応じてセグメントを調整したり、追加/削除したりできます。
-- 5.Save and Splitをクリックします。
+- 4.ツールを使って波形を 1 秒セグメントに分割します。
+    - a.ドラッグしてセグメントを調整したり、必要に応じて追加／削除することができます。
+- 5.Save and Split をクリックします。
 
-訓練用とテスト用の両方で、すべてのクラスの10秒サンプルごとにこのプロセスを繰り返します。
+この処理を、すべてのクラスのすべての 10 秒サンプル（学習用・テスト用の両方）に対して繰り返します。
 
-これにより、データセットが適切にフォーマットされ、高精度モデルの訓練に最適化されます。
+これにより、データセットが適切な形式に整えられ、高精度なモデルを学習するために最適化されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/split2.png" alt="pir" width={800} height="auto" /></p>
 
-## インパルスの作成（前処理/モデル定義）
- 
-Edge Impulseの**インパルス**は、生データを訓練済み機械学習モデルに変換するエンドツーエンドのパイプラインを定義します。これには**信号処理**、**特徴抽出**、および分類のための**学習ブロック**が含まれます。
+## Impulse の作成（前処理 / モデル定義）
 
-### インパルスの作成
+ Edge Impulse における **impulse** とは、生データを学習済み機械学習モデルへと変換するエンドツーエンドのパイプラインを定義するものです。これには、**信号処理**、**特徴抽出**、そして分類のための **学習ブロック** が含まれます。
 
-- 1.Edge Impulseプロジェクトの**「Impulse Design」**タブに移動します。
-- 2.**「Create Impulse」**をクリックします。
+### Impulse を作成
+
+- 1.Edge Impulse プロジェクト内の **"Impulse Design"** タブに移動します。
+- 2.**“Create Impulse”** をクリックします。
 - 3.入力ウィンドウを設定します：
-    - a.**Window size**: 1000 ms（1秒）
-    - b.**Window increase**: 500 ms（データを増強するためのオーバーラップウィンドウ）
-    - c.**「Zero-pad data」を有効にする**: これにより、短いセグメント（例：800ms）がゼロでパディングされ、サンプル分割時にノイズトリミングが適用される場合に特に有用です。
+    - a.**Window size**: 1000 ms（1 秒）
+    - b.**Window increase**: 500 ms（データ拡張のためのオーバーラップウィンドウ）
+    - c.**"Zero-pad data" を有効化**：これは、特にサンプル分割時にノイズトリミングが適用される場合に、800ms などの短いセグメントをゼロでパディングするのに役立ちます。
 
-### MFCC特徴抽出器の追加
+### MFCC 特徴抽出器を追加
 
-インパルスウィンドウを作成した後：
+Impulse ウィンドウを作成したら：
 
-- 1.**「Add a processing block」**をクリックして**MFCC（Mel Frequency Cepstral Coefficients）**を選択します。
-    - a.MFCCは、オーディオ信号を音声周波数パターンを表す2D特徴に変換するために広く使用される方法です。
-    - b.これらの特徴は音声ベースの認識モデルに最適です。
-- 2.MFCCパラメータを設定します（デフォルトはほとんどの場合でうまく動作します）：
-    - a.出力形状: 13 x 49 x 1
-    - b.これにより、オーディオクリップが分類用の「画像」に変換されます。
+- 1.**“Add a processing block”** をクリックし、**MFCC (Mel Frequency Cepstral Coefficients)** を選択します。
+    - a.MFCC は、音声信号を音声の周波数パターンを表す 2D 特徴に変換するために広く用いられている手法です。
+    - b.これらの特徴は、音声ベースの認識モデルに最適です。
+- 2.MFCC パラメータを設定します（ほとんどの場合、デフォルトで問題ありません）：
+    - a.Output shape: 13 x 49 x 1
+    - b.これにより、音声クリップが分類用の「画像」に変換されます。
 
-### 学習ブロックの追加
+### 学習ブロックを追加
 
-- 1.**「Add a learning block」**をクリックして**「Classification (Keras)」**を選択します。
-- 2.これにより、MFCC特徴に対して**画像分類**を実行するカスタム**畳み込みニューラルネットワーク（CNN）**が作成されます。
-- 3.これで**NN Classifier**タブに進んで、モデルをカスタマイズし、訓練することができます。
+- 1.**“Add a learning block”** をクリックし、**“Classification (Keras)”** を選択します。
+- 2.これにより、MFCC 特徴に対して **画像分類** を行うカスタム **畳み込みニューラルネットワーク（CNN）** が作成されます。
+- 3.その後、**NN Classifier** タブに進み、モデルのカスタマイズと学習を行うことができます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/impulse.png" alt="pir" width={800} height="auto" /></p>
 
 ## 前処理（MFCC）
 
-次のステップは、録音された音声からスペクトログラム画像を生成することです。これらの画像はモデルの訓練に使用されます。デフォルトのDSPパラメータを使用することもできますが、今回のケースでは、DSP Autotuneフィーチャーを活用して、より良いパフォーマンスのために自動的に最適化します。
+次のステップは、録音した音声からスペクトログラム画像を生成し、モデル学習に使用することです。デフォルトの DSP パラメータを使用することもできますが、本プロジェクトでは DSP Autotune 機能を活用し、より良い性能が得られるようパラメータを自動最適化します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/mfcc.png" alt="pir" width={800} height="auto" /></p>
 
 ## 機械学習モデルの構築
 
-このプロジェクトでは、畳み込みニューラルネットワーク（CNN）モデルを使用します。アーキテクチャは、それぞれ8個と16個のフィルターを持つ2つのConv1D + MaxPooling層で構成され、その後に0.25のDropout層が続きます。フラット化後、最終的な密結合層には4つのニューロンが含まれており、各クラスに1つずつ対応しています。
-学習率0.005で100エポックにわたってモデルを訓練します。汎化性能と堅牢性を向上させるため、背景ノイズなどのデータ拡張技術を適用します。初期結果は有望です。
+このプロジェクトでは、畳み込みニューラルネットワーク（CNN）モデルを使用します。アーキテクチャは、8 フィルタと 16 フィルタを持つ 2 つの Conv1D + MaxPooling レイヤーに続き、0.25 の Dropout レイヤーで構成されています。Flatten の後、最終の全結合レイヤーには 4 つのニューロンがあり、それぞれが 1 クラスを表します。
+学習率 0.005、エポック数 100 でモデルを学習します。汎化性能とロバスト性を高めるために、背景ノイズなどのデータ拡張手法を適用します。初期結果は有望です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/accuracy.png" alt="pir" width={800} height="auto" /></p>
 
-## XIAO ESP32 S3を使用したReSpeaker XVF3800への展開
+## XIAO ESP32 S3 搭載 ReSpeaker XVF3800 へのデプロイ
 
 
-**Edge Impulseは、必要なすべてのライブラリ、前処理関数、および訓練済みモデルを自動的にダウンロード可能なパッケージにバンドルします。**
-進行するには：
-- 1.展開オプションとして**「Arduino Library」**を選択します。
-- 2.下部で**「Quantized (Int8)」**フォーマットを選択します。
-- 3.**「Build」**をクリックしてライブラリを生成します。
+**Edge Impulse は、必要なすべてのライブラリ、前処理関数、および学習済みモデルを自動的に 1 つのダウンロード可能なパッケージにまとめます。**
+続行するには：
+- 1.デプロイオプションとして **"Arduino Library"** を選択します。
+- 2.下部で **"Quantized (Int8)"** フォーマットを選択します。
+- 3.ライブラリを生成するために **"Build"** をクリックします。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/arduino.png" alt="pir" width={800} height="auto" /></p>
 
 ダウンロードが完了したら：
-- 4.**Arduino IDE**を開き、**Sketch**メニューに移動します。
-- 5.**「Include Library」** > **「Add .ZIP Library...」**を選択します。
-- 6.Edge Impulseからダウンロードした.zipファイルを選択して、Arduinoプロジェクトに追加します。
+- 4.**Arduino IDE** を開き、**Sketch** メニューに移動します。
+- 5.**"Include Library"** > **"Add .ZIP Library..."** を選択します。
+- 6.Edge Impulse からダウンロードした .zip ファイルを選択し、Arduino プロジェクトに追加します。
 
-### ファームウェアをI2Sモードに切り替え
+### ファームウェアを I2S モードに切り替える
 
-Arduinoコードをアップロードする前に、I2Cプロトコル経由での通信を有効にするため、ReSpeaker XVF3800ファームウェアをI2Sモードに切り替える必要があります。
-[ファームウェアインストールガイド](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#update-firmware)
+Arduino コードを書き込む前に、I2C プロトコル経由で通信できるように、ReSpeaker XVF3800 のファームウェアを I2S モードに切り替える必要があります。
+[Firmware Installation Guide](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェアを更新)
 
-### Arduinoコードの統合
+### Arduino コードの統合
 
-Edge Impulseによって提供されるArduinoコードは、ReSpeaker XVF3800とXIAO ESP32S3ハードウェアとの互換性を確保するために、いくつかの修正が必要です：セットアップに応じて**GPIOピン定義、I2Sサンプリングレート**、およびその他のハードウェア固有のパラメータを更新してください。
+Edge Impulse が提供する Arduino コードは、ReSpeaker XVF3800 と XIAO ESP32S3 ハードウェアとの互換性を確保するために、いくつかの修正が必要になります。セットアップに応じて、**GPIO ピン定義、I2S サンプリングレート**、その他のハードウェア固有パラメータを更新してください。
 
 ```c
 #define EIDSP_QUANTIZE_FILTERBANK   0
@@ -461,10 +461,9 @@ static void i2s_deinit() {
 }
 
 ```
-
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しております。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

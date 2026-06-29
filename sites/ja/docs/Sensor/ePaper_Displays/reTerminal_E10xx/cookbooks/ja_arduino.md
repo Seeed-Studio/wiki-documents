@@ -1,5 +1,5 @@
 ---
-description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino クックブック — Arduino から Seeed_GFX と GxEPD2 ライブラリを使って ePaper ディスプレイを駆動する方法を解説し、Hello World のサンプルに加えて、E1001 での 4 階調グレースケールと E1003 での 16 階調グレースケールも含みます。
+description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino クックブック — Seeed_GFX と GxEPD2 ライブラリを使って Arduino から ePaper ディスプレイを駆動し、Hello World のサンプルに加えて、E1001 での 4 階調グレースケールと E1003 での 16 階調グレースケールを含みます。
 title: 'Arduino クックブック: ePaper ディスプレイ (reTerminal E シリーズ)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
@@ -9,7 +9,7 @@ last_update:
   date: 05/15/2026
   author: dimo
 createdAt: '2025-08-21'
-updatedAt: '2026-05-15'
+updatedAt: '2026-05-30'
 url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';
@@ -19,26 +19,36 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/244.png" style={{width:650, height:'auto'}}/></div>
 
-:::tip ハードウェア周辺機能をお探しですか？
-このページでは Arduino からの**ePaper 画面の駆動**に焦点を当てています。オンボードの LED、ブザー、ボタン、SHT4x センサ、バッテリーモニタ、microSD カードスロットを使いたい場合は、**[Arduino Cookbook: Onboard Peripherals](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)** を参照してください。RTC、低消費電力モード、オンボードマイクについては **[Arduino Cookbook: RTC, Low Power & Audio](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2)** を参照してください。
+:::tip 開発環境を用意せずにデモを試す
+開発環境をセットアップする前に、プロジェクトの結果を素早くプレビューしたり、基本的なデモ用ファームウェアを試したい場合は、**[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** を開いてください。対応する reTerminal E シリーズデバイスを選択し、ブラウザから直接デモ用ファームウェアを書き込むことができます。
 
-共通のボイラープレート — Arduino IDE のセットアップ、ESP32 ボードパッケージ、`Seeed_GFX` のインストール、`driver.h` の生成 — は **[Work with Arduino](https://wiki.seeedstudio.com/ja/epaper_work_with_arduino)** にもまとめられています。Seeed の ePaper で Arduino を使うのが初めての場合は、まずそちらに目を通してください。
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
+:::tip ハードウェア周辺機能を探していますか？
+このページでは Arduino からの**ePaper 画面の駆動**に焦点を当てています。オンボード LED、ブザー、ボタン、SHT4x センサ、バッテリーモニタ、microSD カードスロットを使いたい場合は、**[Arduino クックブック: オンボード周辺機能](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)** を参照してください。RTC、低消費電力モード、オンボードマイク、静電容量式タッチ描画については、**[Arduino クックブック: RTC、低消費電力、オーディオ & タッチ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2)** を参照してください。
+
+共通のボイラープレート — Arduino IDE のセットアップ、ESP32 ボードパッケージ、`Seeed_GFX` のインストール、`driver.h` の生成 — は **[Work with Arduino](https://wiki.seeedstudio.com/ja/epaper_work_with_arduino)** にも記載されています。Seeed の ePaper で Arduino を使うのが初めての場合は、まずそちらに目を通してください。
 :::
 
 ## はじめに
 
-reTerminal E シリーズは、XIAO ESP32-S3 をベースにした Seeed Studio の産業用 HMI ラインで、ePaper ディスプレイを一体化しています。このクックブックでは、画面にテキスト、グラフィックス、画像を描画するために必要な内容を一通り解説します。
+reTerminal E シリーズは、XIAO ESP32-S3 をベースに、ePaper ディスプレイを統合した Seeed Studio の産業用 HMI ラインです。このクックブックでは、画面にテキスト、グラフィックス、画像を描画するために必要な内容を一通り解説します：
 
-- E1001 / E1002 / E1003 / E1004 のハードウェア概要と購入リンク
-- 4 モデル共通の Arduino IDE 環境構築（XIAO_ESP32S3 ボード、OPI PSRAM）
-- **Seeed_GFX** ライブラリ（対応する `BOARD_SCREEN_COMBO`）を使った、各モデルでの最初の **Hello World**
-- Seeed_GFX を用いた**パネル別の高度なサンプル** — **E1001 での 4 階調グレースケール**と **E1003 での 16 階調グレースケール**
-- 人気の **GxEPD2** ライブラリを使った別アプローチの **Hello World**
-- ePaper のリフレッシュ問題や書き込み失敗に関するトラブルシューティングのヒント
+- E1001 / E1002 / E1003 / E1004 のハードウェア概要と購入リンク。
+- 4 モデルすべてに共通の Arduino IDE 環境構築（XIAO_ESP32S3 ボード、OPI PSRAM）。
+- **Seeed_GFX** ライブラリ（対応する `BOARD_SCREEN_COMBO`）を使った、各モデルでの最初の **Hello World**。
+- Seeed_GFX を用いた**パネル固有の高度なサンプル** — **E1001 での 4 階調グレースケール**と **E1003 での 16 階調グレースケール**。
+- 人気の **GxEPD2** ライブラリを使った別の **Hello World**。
+- ePaper のリフレッシュ問題や書き込み失敗に関するトラブルシューティングのヒント。
 
 ### 必要なもの
 
-このチュートリアルを完了するには、次の reTerminal E シリーズデバイスのいずれかを用意してください。
+このチュートリアルを完了するには、次の reTerminal E シリーズデバイスのいずれかを用意してください：
 
 <div class="table-center">
   <table align="center">
@@ -95,13 +105,13 @@ Arduino を初めて使用する場合は、[Getting Started with Arduino](https
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
-      <strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong>
+      <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
     </a>
 </div><br />
 
-**Step 2.** Arduino IDE に ESP32 ボードサポートを追加します。
+**Step 2.** Arduino IDE に ESP32 ボードのサポートを追加します。
 
-Arduino IDE で **File > Preferences** を開き、「Additional Boards Manager URLs」フィールドに次の URL を追加します。
+Arduino IDE で **File > Preferences** を開き、「Additional Boards Manager URLs」フィールドに次の URL を追加します：
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -121,32 +131,32 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ## ePaper ディスプレイのプログラミング
 
-**reTerminal E1001 には 7.5 インチの白黒 ePaper ディスプレイ**が搭載されており、**reTerminal E1002 には 7.3 インチのフルカラー ePaper ディスプレイ**が搭載されています。どちらのディスプレイも、さまざまな照明条件下で優れた視認性を提供しつつ超低消費電力で動作するため、常時表示と最小限の電力消費が求められる産業用途に最適です。
+**reTerminal E1001 には 7.5 インチの白黒 ePaper ディスプレイ**が搭載されており、**reTerminal E1002 には 7.3 インチのフルカラー ePaper ディスプレイ**が搭載されています。どちらのディスプレイも、超低消費電力でさまざまな照明条件下で優れた視認性を提供し、常時表示と最小限の電力消費が求められる産業用途に最適です。
 
 ### Seeed_GFX ライブラリの使用
 
-ePaper ディスプレイを制御するために、Seeed Studio の各種ディスプレイデバイスを幅広くサポートする Seeed_GFX ライブラリを使用します。
+ePaper ディスプレイを制御するために、さまざまな Seeed Studio 製ディスプレイデバイスを幅広くサポートする Seeed_GFX ライブラリを使用します。
 
-**Step 1.** GitHub から Seeed_GFX ライブラリをダウンロードします。
+**Step 1.** GitHub から Seeed_GFX ライブラリをダウンロードします：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 **Step 2.** Arduino IDE で ZIP ファイルを追加してライブラリをインストールします。**Sketch > Include Library > Add .ZIP Library** を開き、ダウンロードした ZIP ファイルを選択します。
 
 :::note
-以前に TFT_eSPI ライブラリをインストールしている場合、競合を避けるために、一時的に Arduino のライブラリフォルダから削除するか名前を変更する必要があるかもしれません。Seeed_GFX は、Seeed Studio のディスプレイ向けに機能を追加した TFT_eSPI のフォークであるためです。
+以前に TFT_eSPI ライブラリをインストールしている場合、競合を避けるために、一時的に Arduino のライブラリフォルダから削除するか名前を変更する必要があるかもしれません。Seeed_GFX は、Seeed Studio 製ディスプレイ向けの追加機能を備えた TFT_eSPI のフォークであるためです。
 :::
 
 <Tabs>
 <TabItem value="Programming reTerminal E1001" label="reTerminal E1001 のプログラミング" default>
 
-#### reTerminal E1001 のプログラミング（7.5 インチ白黒 ePaper）
+#### reTerminal E1001 のプログラミング (7.5 インチ白黒 ePaper)
 
-白黒 ePaper ディスプレイ上での基本的な描画操作を示す、シンプルなサンプルを試してみましょう。
+白黒 ePaper ディスプレイでの基本的な描画操作を示す、シンプルなサンプルを試してみましょう。
 
 **Step 1.** Seeed_GFX ライブラリのサンプルスケッチを開きます：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
@@ -154,28 +164,28 @@ ePaper ディスプレイを制御するために、Seeed Studio の各種ディ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/open_opi_psram.jpg" style={{width:800, height:'auto'}}/></div>
 
-**Step 3.** スケッチと同じフォルダに `driver.h` という名前の新しいファイルを作成します。Arduino IDE の矢印ボタンをクリックして "New Tab" を選択し、`driver.h` と名付けることで作成できます。
+**Step 3.** スケッチと同じフォルダに `driver.h` という名前の新しいファイルを作成します。Arduino IDE で矢印ボタンをクリックして "New Tab" を選択し、`driver.h` と名付けることで作成できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**Step 4.** 生成された設定コードをコピーして `driver.h` ファイルに貼り付けます。コードは次のようになります。
+**ステップ 4.** 生成された設定コードをコピーし、`driver.h` ファイルに貼り付けます。コードは次のようになります：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 520 // reTerminal E1001 (UC8179)
 ```
 
-**Step 5.** スケッチを reTerminal E1001 に書き込みます。線、テキスト、図形など、基本的な描画機能を示すさまざまなグラフィックスがディスプレイに表示されるはずです。
+**ステップ 5.** スケッチを reTerminal E1001 に書き込みます。ディスプレイには、基本的な描画機能を示す線、テキスト、図形など、さまざまなグラフィックが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/148.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Programming reTerminal E1002" label="reTerminal E1002 のプログラミング">
+<TabItem value="Programming reTerminal E1002" label="Programming reTerminal E1002">
 
-#### reTerminal E1002 のプログラミング（7.3 インチフルカラー ePaper）
+#### reTerminal E1002 のプログラミング（7.3 インチ フルカラー ePaper）
 
-フルカラー ePaper ディスプレイは赤・黒・白の色をサポートしており、より視覚的にリッチなインターフェースを実現できます。
+フルカラー ePaper ディスプレイは赤、黒、白の色をサポートしており、より視覚的にリッチなインターフェースを実現できます。
 
-**ステップ 1.** Seeed_GFX ライブラリからカラー用サンプルスケッチを開きます：**File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
+**ステップ 1.** Seeed_GFX ライブラリからカラーのサンプルスケッチを開きます：**File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
 **ステップ 2.** Arduino IDE で OPI PSRAM を有効にします：**Tools > PSRAM > OPI PSRAM**
 
@@ -185,7 +195,7 @@ ePaper ディスプレイを制御するために、Seeed Studio の各種ディ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select2.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**ステップ 4.** 生成された設定コードをコピーして、`driver.h` ファイルに貼り付けます。コードは次のようになります：
+**ステップ 4.** 生成された設定コードをコピーし、`driver.h` ファイルに貼り付けます。コードは次のようになります：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
@@ -196,11 +206,11 @@ ePaper ディスプレイを制御するために、Seeed Studio の各種ディ
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/149.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Programming reTerminal E1003" label="reTerminal E1003 のプログラミング">
+<TabItem value="Programming reTerminal E1003" label="Programming reTerminal E1003">
 
 #### reTerminal E1003 のプログラミング（10.3 インチ ePaper）
 
-同じワークフローで Seeed_GFX ライブラリを使用し、reTerminal E1003 上の ePaper を設定・駆動します。
+Seeed_GFX ライブラリを使用して、同じワークフローで reTerminal E1003 上の ePaper を設定および駆動します。
 
 **ステップ 1.** Seeed_GFX ライブラリからサンプルスケッチを開きます：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
@@ -212,24 +222,24 @@ ePaper ディスプレイを制御するために、Seeed Studio の各種ディ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/arduino_1.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**ステップ 4.** 生成された設定コードをコピーして、E1003 用の `driver.h` ファイルに貼り付けます。
+**ステップ 4.** 生成された設定コードをコピーし、E1003 用の `driver.h` ファイルに貼り付けます。
 
 ```cpp
 #define BOARD_SCREEN_COMBO 522 // reTerminal E1003 (ED103TC2)
 ```
 
-**ステップ 5.** スケッチを reTerminal E1003 に書き込み、図形プリミティブ、テキスト描画、およびフルスクリーンリフレッシュの挙動を確認します。
+**ステップ 5.** スケッチを reTerminal E1003 に書き込み、描画プリミティブ、テキスト描画、およびフルスクリーンリフレッシュの挙動を確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/arduino_3.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Programming reTerminal E1004" label="reTerminal E1004 のプログラミング">
+<TabItem value="Programming reTerminal E1004" label="Programming reTerminal E1004">
 
 #### reTerminal E1004 のプログラミング（13.3 インチ フルカラー ePaper）
 
-Seeed_GFX ライブラリを使用して、reTerminal E1004 上の E Ink® Spectra™ 6 フルカラー ePaper ディスプレイを設定・駆動します。
+Seeed_GFX ライブラリを使用して、reTerminal E1004 上の E Ink® Spectra™ 6 フルカラー ePaper ディスプレイを設定および駆動します。
 
-**ステップ 1.** Seeed_GFX ライブラリからカラー用サンプルスケッチを開きます：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
+**ステップ 1.** Seeed_GFX ライブラリからカラーのサンプルスケッチを開きます：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
 **ステップ 2.** Arduino IDE で OPI PSRAM を有効にします：**Tools > PSRAM > OPI PSRAM**
 
@@ -239,35 +249,35 @@ Seeed_GFX ライブラリを使用して、reTerminal E1004 上の E Ink® Spect
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_1.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**ステップ 4.** 生成された設定コードをコピーして、E1004 用の `driver.h` ファイルに貼り付けます。
+**ステップ 4.** 生成された設定コードをコピーし、E1004 用の `driver.h` ファイルに貼り付けます。
 
 ```cpp
 #define BOARD_SCREEN_COMBO 523 // reTerminal E1004 (T133A01)
 ```
 
-**ステップ 5.** スケッチを reTerminal E1004 に書き込み、カラー描画、図形プリミティブ、テキスト描画、およびフルスクリーンリフレッシュの挙動を確認します。
+**ステップ 5.** スケッチを reTerminal E1004 に書き込み、カラー描画、描画プリミティブ、テキスト描画、およびフルスクリーンリフレッシュの挙動を確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_3.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
 
-### Seeed_GFX を使った多階調グレースケール
+### Seeed_GFX による多階調グレースケール
 
-上記の Hello World スケッチは、すべてのモデルで動作するよう、あえて最小限の内容になっています。E1001 と E1003 のモノクロパネルは、単なる白黒に加えて実際には多階調グレースケールをサポートしており、E1001 では 4 階調、E1003 では 16 階調です。Seeed_GFX は、`epaper.initGrayMode(...)` と一連の `TFT_GRAY_*` パレット定数を通じて、両方のモードを提供します。以下の 2 つの例でそれぞれを説明します。
+上記の Hello World スケッチは、すべてのモデルで動作するように、あえて最小限の内容になっています。E1001 と E1003 のモノクロパネルは、単なる白黒に加えて実際には多階調グレースケールをサポートしており、E1001 では 4 階調、E1003 では 16 階調です。Seeed_GFX は、`epaper.initGrayMode(...)` と一連の `TFT_GRAY_*` パレット定数を通じて両方のモードを提供しています。以下の 2 つの例では、それぞれの使い方を説明します。
 
 <Tabs>
-<TabItem value="E1001 Advanced" label="E1001 — 4 階調グレースケール" default>
+<TabItem value="E1001 Advanced" label="E1001 — 4-Level Grayscale" default>
 
 #### reTerminal E1001 での 4 階調グレースケール
 
-reTerminal E1001 の 7.5 インチモノクロパネルは、純粋な白黒ではなく、**4 階調のグレースケール** を描画できます。Seeed_GFX は、`epaper.initGrayMode(GRAY_LEVEL4)` と 4 つのパレット定数を通じてこれを提供します：
+reTerminal E1001 の 7.5 インチモノクロパネルは、純粋な白黒の代わりに**4 階調のグレースケール**を描画できます。Seeed_GFX は、`epaper.initGrayMode(GRAY_LEVEL4)` と 4 つのパレット定数を通じてこれを提供します：
 
 <div class="table-center">
 	<table align="center">
 		<tr>
 			<th align="center">定数</th>
-			<th align="center">表示される階調</th>
+			<th align="center">表示される濃淡</th>
 		</tr>
 		<tr>
 			<td align="center"><code>TFT_GRAY_0</code></td>
@@ -288,7 +298,7 @@ reTerminal E1001 の 7.5 インチモノクロパネルは、純粋な白黒で�
 	</table>
 </div>
 
-以下のサンプルでは、まず 4 本の横ストライプ（各グレーレベル 1 本ずつ）を描画してパレットを目視で確認し、その後 800×480 のグレースケールビットマップを画面にブリット転送します。Seeed_GFX ライブラリには、すでに変換済みの `image.h` を含むこのサンプルが書き込み準備済みの形で同梱されているため、自分でビットマップデータを生成する必要はありません。
+以下のサンプルでは、まず 4 本の横ストライプ（グレーの各レベルにつき 1 本）を描画してパレットを目視で確認できるようにし、その後 800×480 のグレースケールビットマップを画面にブリット転送します。Seeed_GFX ライブラリには、あらかじめ変換済みの `image.h` を含む、この書き込み準備済みサンプルが同梱されているため、自分でビットマップデータを生成する必要はありません。
 
 **ステップ 1.** Seeed_GFX ライブラリからサンプルスケッチを開きます：**File > Examples > Seeed_GFX > ePaper > Gray > GrayLevel4**。スケッチとそれに付属する `image.h` がエディタで開きます。
 
@@ -302,7 +312,7 @@ reTerminal E1001 の 7.5 インチモノクロパネルは、純粋な白黒で�
 #define BOARD_SCREEN_COMBO 520 // reTerminal E1001 (UC8179)
 ```
 
-**ステップ 4.** スケッチを書き込みます。ディスプレイには、まず 4 本のグレースケールストライプ（上から黒、濃いグレー、薄いグレー、下が白）が表示され、その後クリアされて `image.h` からビットマップが描画されます。
+**ステップ 4.** スケッチを書き込みます。ディスプレイには、最初に 4 本のグレースケールストライプ（上から黒、濃いグレー、薄いグレー、下が白）が表示され、その後クリアされて `image.h` からビットマップが描画されます。
 
 参考として、サンプルスケッチは次のようになっています：
 
@@ -353,25 +363,25 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/236.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip 独自の画像を使いたいですか？
-`image.h` 内の `L4_GRAY` 配列は、800×480 のグレースケールビットマップを C 配列に事前変換したものにすぎません。自分の画像に差し替えるには、任意の一般的な「画像を C 配列に変換する」ツールを使って 800×480 のグレースケール画像から配列を再生成し、`image.h` 内の `L4_GRAY` を置き換えてください。スケッチ本体を変更する必要はありません。
+`image.h` 内の `L4_GRAY` 配列は、800×480 のグレースケールビットマップをあらかじめ C 配列に変換したものにすぎません。自分の画像に差し替えるには、任意の一般的な「画像から C 配列への変換」ツールを使って 800×480 のグレースケール画像から配列を再生成し、`image.h` 内の `L4_GRAY` を置き換えてください。スケッチ自体を変更する必要はありません。
 :::
 
 :::tip
-4 階調グレースケールのリフレッシュは、コントローラが各ピクセルを 2 つではなく 4 つの目標電圧に対して駆動するため、1 ビット白黒更新のおよそ 4 倍の時間がかかります。写真、イラスト、細部の多いダッシュボードなどの静的コンテンツに使用し、高速な UI 更新には標準の 1 ビットモードを使用してください。
+4 階調グレースケールでのリフレッシュは、コントローラが各ピクセルを 2 つではなく 4 つの目標電圧に対して駆動するため、1 ビット白黒更新のおよそ 4 倍の時間がかかります。写真、イラスト、細部の多いダッシュボードなどの静的コンテンツに使用し、高速な UI 更新には標準の 1 ビットモードを使用してください。
 :::
 
 </TabItem>
-<TabItem value="E1003 Advanced" label="E1003 — 16 階調グレースケール">
+<TabItem value="E1003 Advanced" label="E1003 — 16-Level Grayscale">
 
 #### reTerminal E1003 での 16 階調グレースケール
 
-reTerminal E1003 の 10.3 インチパネルは、解像度 1404×1872 で **16 階調のグレースケール** を実現します。Seeed_GFX は、`epaper.initGrayMode(GRAY_LEVEL16)` と、`TFT_GRAY_0`（黒）から `TFT_GRAY_15`（白）までの 16 個のパレット定数を通じてこれを提供します：
+reTerminal E1003 の 10.3 インチパネルは、1404×1872 の解像度で**16 階調のグレースケール**に対応しています。Seeed_GFX は、`epaper.initGrayMode(GRAY_LEVEL16)` と、`TFT_GRAY_0`（黒）から `TFT_GRAY_15`（白）までの 16 個のパレット定数を通じてこれを提供します：
 
 <div class="table-center">
 	<table align="center">
 		<tr>
 			<th align="center">定数</th>
-			<th align="center">表示される階調</th>
+			<th align="center">表示される濃淡</th>
 		</tr>
 		<tr>
 			<td align="center"><code>TFT_GRAY_0</code></td>
@@ -379,7 +389,7 @@ reTerminal E1003 の 10.3 インチパネルは、解像度 1404×1872 で **16 
 		</tr>
 		<tr>
 			<td align="center"><code>TFT_GRAY_1</code> … <code>TFT_GRAY_14</code></td>
-			<td align="center">14 段階の中間グレー（最も暗い → 最も明るい）</td>
+			<td align="center">14 個の中間グレー（最も暗い → 最も明るい）</td>
 		</tr>
 		<tr>
 			<td align="center"><code>TFT_GRAY_15</code></td>
@@ -388,13 +398,13 @@ reTerminal E1003 の 10.3 インチパネルは、解像度 1404×1872 で **16 
 	</table>
 </div>
 
-以下のサンプルでは、16 本の横帯（各グレーレベル 1 本ずつ）を描画し、パネル上でフルパレットを目視確認できるようにします。Seeed_GFX ライブラリには、E1003 用に適切に設定された `driver.h` を含むこのサンプルが、書き込み準備済みの形で同梱されているため、自分で何かを配線したり設定したりする必要はありません。
+以下のサンプルでは、16 本の水平バンド（グレーレベルごとに 1 本）を描画し、パネル上でフルパレットを目視で確認できるようにします。Seeed_GFX ライブラリには、E1003 用に対応する `driver.h` があらかじめ設定された、書き込み準備済みのサンプルとして同梱されているため、自分で配線を行う必要はありません。
 
-**ステップ 1.** Seeed_GFX ライブラリからサンプルスケッチを開きます：**File > Examples > Seeed_GFX > ePaper > Gray > GrayLevel16**。スケッチは同梱の `driver.h` と一緒に開きます（E1003 ED103TC2 パネル用に `BOARD_SCREEN_COMBO 522` にすでに設定されています）。このファイルを編集する必要はありません。
+**ステップ 1.** Seeed_GFX ライブラリからサンプルスケッチを開きます：**File > Examples > Seeed_GFX > ePaper > Gray > GrayLevel16**。スケッチは同梱の `driver.h` と一緒に開きます（E1003 の ED103TC2 パネル向けに `BOARD_SCREEN_COMBO 522` にすでに設定されています）。通常は編集する必要はありません。
 
 **ステップ 2.** Arduino IDE で OPI PSRAM を有効にします：**Tools > PSRAM > OPI PSRAM**。
 
-**ステップ 3.** スケッチを書き込みます。ディスプレイには、上部の純粋な黒から下部の純粋な白まで、16 本の水平グレースケール帯が表示されます。
+**ステップ 3.** スケッチを書き込みます。ディスプレイには、上部の完全な黒から下部の完全な白まで、16 本の水平グレースケールバンドが表示されます。
 
 参考として、サンプルスケッチは次のようになります：
 
@@ -454,7 +464,7 @@ void loop()
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/237.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-16 階調グレースケールは、このパネルにおいて最もリフレッシュが遅いモードです。各ピクセルが 2 つではなく 16 個の電圧ターゲットを順番に安定させる必要があるためです。静的な写真スタイルのコンテンツやダッシュボードにはこのモードを使用し、高速な UI 更新には標準の 1 ビットモードに戻してください。
+16 レベルグレースケールは、このパネルにおいて最もリフレッシュが遅いモードです。各ピクセルが 2 つではなく 16 個の電圧ターゲットを順に安定させる必要があるためです。静的な写真スタイルのコンテンツやダッシュボードに使用し、高速な UI 更新には標準の 1 ビットモードに切り替えてください。
 :::
 
 </TabItem>
@@ -462,11 +472,11 @@ void loop()
 
 ### GxEPD2 ライブラリの使用
 
-Seeed_GFX に加えて、`GxEPD2` ライブラリを使用して reTerminal の ePaper ディスプレイを駆動することもできます。Seeed は人気の `GxEPD2` ライブラリをフォークし、reTerminal E10xx シリーズ向けの専用サポートを追加しており、reTerminal ユーザーに推奨される選択肢となっています。
+Seeed_GFX に加えて、`GxEPD2` ライブラリを使用して reTerminal の ePaper ディスプレイを駆動することもできます。Seeed は人気の `GxEPD2` ライブラリをフォークし、reTerminal E10xx シリーズ向けの専用サポートを追加しているため、reTerminal ユーザーにはこのライブラリを使用することを推奨します。
 
 **Seeed_GxEPD2 ライブラリのインストール**
 
-このライブラリを reTerminal 製品で使用するには、`Seeed_GxEPD2` をインストールする必要があります。これは reTerminal E10xx シリーズ向けに特別に調整された Seeed 独自のフォークです。
+このライブラリを reTerminal 製品で使用するには、reTerminal E10xx シリーズ向けに特別に調整された Seeed 独自のフォークである `Seeed_GxEPD2` をインストールする必要があります。
 
 **ステップ 1.** Seeed_GxEPD2 の GitHub リポジトリにアクセスします。"Code" ボタンをクリックし、"Download ZIP" を選択してライブラリをコンピュータに保存します。
 
@@ -478,10 +488,10 @@ Seeed_GFX に加えて、`GxEPD2` ライブラリを使用して reTerminal の 
 
 **ステップ 2.** Arduino IDE で、ダウンロードしたファイルからライブラリをインストールします。**Sketch > Include Library > Add .ZIP Library...** に移動し、先ほどダウンロードした ZIP ファイルを選択します。
 
-**ステップ 3.** `Seeed_GxEPD2` ライブラリは動作のために `Adafruit GFX Library` を必要とするため、これもインストールする必要があります。最も簡単な方法はライブラリマネージャを使うことです：**Tools > Manage Libraries...** に移動し、"Adafruit GFX Library" を検索して "Install" をクリックします。
+**ステップ 3.** `Seeed_GxEPD2` ライブラリは動作に `Adafruit GFX Library` を必要とするため、これもインストールする必要があります。最も簡単な方法はライブラリマネージャを使うことです：**Tools > Manage Libraries...** に進み、"Adafruit GFX Library" を検索して "Install" をクリックします。
 
 :::note
-`Seeed_GxEPD2` は、オリジナルの `GxEPD2` ライブラリを Seeed がカスタムフォークしたもので、reTerminal E10xx シリーズ向けの専用ドライバと最適化が含まれています。お使いの reTerminal デバイスとの完全な互換性を確保するため、上流ライブラリではなくこのフォークを使用することを強く推奨します。
+`Seeed_GxEPD2` は、元の `GxEPD2` ライブラリを Seeed がカスタムフォークしたもので、reTerminal E10xx シリーズ向けの専用ドライバと最適化が含まれています。お使いの reTerminal デバイスとの完全な互換性を確保するため、上流ライブラリではなくこのフォークを使用することを強く推奨します。
 :::
 
 <Tabs>
@@ -489,9 +499,9 @@ Seeed_GFX に加えて、`GxEPD2` ライブラリを使用して reTerminal の 
 
 #### reTerminal E1001 のプログラミング（7.5 インチ白黒スクリーン）
 
-reTerminal E1001 には 7.5 インチの白黒 ePaper ディスプレイ（800×480、GDEY075T7 パネル、UC8179 コントローラ）が搭載されています。以下のサンプルでは、スプラッシュ画面、システム情報、タイポグラフィ、図形、パターン、ダッシュボードレイアウトなど、複数の画面をデモします。
+reTerminal E1001 には、7.5 インチの白黒 ePaper ディスプレイ（800×480、GDEY075T7 パネル、UC8179 コントローラ）が搭載されています。以下のサンプルでは、スプラッシュ画面、システム情報、タイポグラフィ、図形、パターン、ダッシュボードレイアウトなど、複数の画面をデモします。
 
-`Seeed_GxEPD2` ライブラリをインストールした後、Arduino IDE の **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1001** からこのサンプルを見つけることができます。または、`Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1001/GxEPD2_reTerminal_E1001.ino` を手動で探すこともできます。
+`Seeed_GxEPD2` ライブラリをインストールした後、Arduino IDE の **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1001** からこのサンプルを見つけることができます。または、`Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1001/GxEPD2_reTerminal_E1001.ino` を手動で開くこともできます。
 
 <details>
 <summary>完全なコードを表示するにはここをクリック</summary>
@@ -923,14 +933,14 @@ void showDashboardDemo()
 </TabItem>
 <TabItem value="Programming reTerminal E1002 GxEPD2" label="reTerminal E1002">
 
-#### reTerminal E1002 のプログラミング (7.3インチ 6色スクリーン)
+#### reTerminal E1002 のプログラミング（7.3インチ 6色スクリーン）
 
-reTerminal E1002 は、7.3インチ 6色 ePaper ディスプレイ（800×480、GDEP073E01 パネル、ED2208 コントローラ）を搭載しています。ブラック、ホワイト、レッド、グリーン、ブルー、イエローをサポートします。以下のサンプルでは、複数画面にわたるカラー描画をデモンストレーションします。
+reTerminal E1002 は 7.3インチ 6色 ePaper ディスプレイ（800×480、GDEP073E01 パネル、ED2208 コントローラ）を搭載しています。Black、White、Red、Green、Blue、Yellow をサポートします。以下のサンプルでは、複数画面にわたるカラー描画をデモンストレーションします。
 
 `Seeed_GxEPD2` ライブラリをインストールした後、Arduino IDE の **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1002** からこのサンプルを開くか、`Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1002/GxEPD2_reTerminal_E1002.ino` を手動で探して開くことができます。
 
 <details>
-<summary>完全なコードを表示するにはここをクリック</summary>
+<summary>クリックして完全なコードを表示</summary>
 
 ```cpp
 #include <SPI.h>
@@ -1468,16 +1478,16 @@ void showDashboard()
 
 #### reTerminal E1003 のプログラミング（10.3インチ モノクロ画面）
 
-reTerminal E1003 は、10.3インチのモノクロ電子ペーパー・ディスプレイ（1872×1404、ED103TC2 パネル、IT8951 コントローラ）を搭載しています。16 階調グレースケールをサポートし、OPI PSRAM を必要とします。このサンプルは、サンプルフォルダに含まれるカスタムドライバファイル `GxEPD2_ED103TC2_1872x1404.h` に依存しています。
+reTerminal E1003 は、10.3インチのモノクロ ePaper ディスプレイ（1872×1404、ED103TC2 パネル、IT8951 コントローラ）を搭載しています。16 階調グレースケールをサポートし、OPI PSRAM を必要とします。このサンプルは、サンプルフォルダに含まれるカスタムドライバファイル `GxEPD2_ED103TC2_1872x1404.h` に依存しています。
 
 `Seeed_GxEPD2` ライブラリをインストールした後、Arduino IDE の **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1003** からこのサンプルを見つけることができます。または、`Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003/` で手動で探すこともできます。
 
 ::::note
-E1003 では、Arduino IDE で **OPI PSRAM** を有効にする必要があります：**Tools > PSRAM > OPI PSRAM**。約 321 kB のフレームバッファは PSRAM 上に配置されます。
+E1003 を使用するには、Arduino IDE で **OPI PSRAM** を有効にする必要があります：**Tools > PSRAM > OPI PSRAM**。約 321 kB のフレームバッファは PSRAM 上に配置されます。
 ::::
 
 <details>
-<summary>完全なコードを表示するにはここをクリック</summary>
+<summary>クリックして完全なコードを表示</summary>
 
 ```cpp
 #include <SPI.h>
@@ -2138,16 +2148,16 @@ void showDashboardDemo()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/240.png" style={{width:600, height:'auto'}}/></div>
 
-E1003 サンプルの完全なソースコード（スプラッシュ、システム情報、タイポグラフィ、ジオメトリ、パターン、ダッシュボードの 6 つのデモ画面すべての完全な実装を含む）は、リポジトリ内の `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003/` にあります。このサンプルには、中央揃えテキスト、ページヘッダー／フッター、大型 10.3 インチディスプレイ向けに最適化されたカードスタイルレイアウト用のヘルパー関数が含まれています。
+E1003 サンプルの完全なソースコード（Splash、System Info、Typography、Geometry、Patterns、Dashboard の 6 つのデモ画面すべての完全な実装を含む）は、リポジトリ内の `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003/` にあります。このサンプルには、中央揃えテキスト、ページヘッダー／フッター、大型 10.3 インチディスプレイ向けに最適化されたカードスタイルレイアウト用のヘルパー関数が含まれています。
 
 </TabItem>
 <TabItem value="Programming reTerminal E1004 GxEPD2" label="reTerminal E1004">
 
 #### reTerminal E1004 のプログラミング（13.3 インチ 6 色スクリーン）
 
-reTerminal E1004 は、13.3 インチ 6 色 ePaper ディスプレイ（1200×1600、T133A01 パネル、デュアルチップコントローラ、Spectra 6）を搭載しています。ブラック、ホワイト、レッド、グリーン、ブルー、イエローをサポートします。このサンプルは、サンプルフォルダに含まれるカスタムドライバファイル `GxEPD2_T133A01_1200x1600.h` に依存しています。
+reTerminal E1004 は、13.3 インチ 6 色 ePaper ディスプレイ（1200×1600、T133A01 パネル、デュアルチップコントローラ、Spectra 6）を搭載しています。Black、White、Red、Green、Blue、Yellow をサポートします。このサンプルは、サンプルフォルダに含まれるカスタムドライバファイル `GxEPD2_T133A01_1200x1600.h` に依存しています。
 
-`Seeed_GxEPD2` ライブラリをインストールした後、Arduino IDE の **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1004** からこのサンプルを見つけることができます。または、`Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1004/` で手動で探すこともできます。
+`Seeed_GxEPD2` ライブラリをインストールした後、Arduino IDE の **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1004** からこのサンプルを見つけるか、`Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1004/` を手動で開いてください。
 
 ::::note
 E1004 を使用するには、Arduino IDE で **OPI PSRAM** を有効にする必要があります：**Tools > PSRAM > OPI PSRAM**。約 937 KB のフレームバッファは PSRAM 上に配置されます。
@@ -2779,7 +2789,7 @@ void showDashboard()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/241.jpeg" style={{width:600, height:'auto'}}/></div>
 
-E1004 サンプルの完全なソースコード（Splash、Color Palette、Typography、Geometry、Patterns、Dashboard の 6 つのデモ画面すべての完全な実装を含む）は、リポジトリ内の `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1004/` にあります。このサンプルでは、カラーカード、多色プログレスバー、ステータスカード、アクティビティログなど、大型 13.3 インチ 6 色ディスプレイ向けに最適化された要素を備えています。
+E1004 サンプルの完全なソースコード（Splash、Color Palette、Typography、Geometry、Patterns、Dashboard の 6 つのデモ画面すべての完全な実装を含む）は、リポジトリ内の `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1004/` にあります。このサンプルでは、13.3 インチ 6 色大型ディスプレイ向けに最適化されたカラーカード、多色プログレスバー、ステータスカード、アクティビティログを備えています。
 
 </TabItem>
 </Tabs>
@@ -2788,7 +2798,7 @@ E1004 サンプルの完全なソースコード（Splash、Color Palette、Typo
 
 標準的な白黒および 6 色モードに加えて、一部の reTerminal ディスプレイは多階調グレースケール描画をサポートしています。`Seeed_GxEPD2` ライブラリには、通常の `GxEPD2_BW` / `GxEPD2_7C` ドライバをバイパスし、カスタム LUT 波形を使用してディスプレイコントローラを直接駆動しつつ、描画には `Adafruit_GFX` を活用する専用のグレースケールサンプルが含まれています。
 
-- **reTerminal E1001 (7.5" B&W)**: UC8179 コントローラは、専用の VCOM/WW/KW/WK/KK LUT テーブルを介して **4 階調グレースケール** モードをサポートします。2bpp（96 KB）のフレームバッファを使用し、各ピクセルは黒、ダークグレー、ライトグレー、白のいずれかになります。
+- **reTerminal E1001 (7.5" B&W)**: UC8179 コントローラは、専用の VCOM/WW/KW/WK/KK LUT テーブルを介して **4 階調グレースケール** モードをサポートします。2bpp（96 KB）のフレームバッファを使用し、各ピクセルは黒、ダークグレー、ライトグレー、白のいずれかを表現できます。
 - **reTerminal E1003 (10.3" Monochrome)**: IT8951 コントローラは、GC16 波形モードによりネイティブに **16 階調グレースケール** をサポートします。4bpp（約 1.25 MB）のフレームバッファが PSRAM に確保され、各ピクセルは 16 段階のグレーのいずれかを描画できます。
 
 <Tabs>
@@ -2798,7 +2808,7 @@ E1004 サンプルの完全なソースコード（Splash、Color Palette、Typo
 
 E1001 の UC8179 コントローラは、カスタム LUT テーブル（VCOM、LUTWW、LUTKW、LUTWK、LUTKK）をアップロードすることで、通常の 1 ビットモードから 4 階調グレースケールモードに切り替えることができます。このサンプルでは `Gray4Canvas`（2bpp、96 KB）を作成し、描画には `Adafruit_GFX` を使用し、その後 2 つのビットプレーンをコントローラにアップロードしてグレースケール描画を行います。
 
-`Seeed_GxEPD2` ライブラリをインストールした後、Arduino IDE の **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1001_Gray4** からこのサンプルを見つけることができます。または、`Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1001_Gray4/GxEPD2_reTerminal_E1001_Gray4.ino` を手動で開くこともできます。
+`Seeed_GxEPD2` ライブラリをインストールした後、このサンプルは Arduino IDE の **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1001_Gray4** から見つけることができます。または、`Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1001_Gray4/GxEPD2_reTerminal_E1001_Gray4.ino` を手動で探すこともできます。
 
 <details>
 <summary>完全なコードを表示するにはここをクリック</summary>
@@ -3232,7 +3242,7 @@ E1003 の IT8951 コントローラは、GC16 波形モードによってネイ�
 このサンプルを使用するには、Arduino IDE で **OPI PSRAM** を有効にする必要があります：**Tools > PSRAM > OPI PSRAM**。約 1.25 MB のフレームバッファは PSRAM 上に配置されます。
 ::::
 
-`Seeed_GxEPD2` ライブラリをインストールした後、Arduino IDE の **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1003_Gray16** からこのサンプルを見つけることができます。または、`Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003_Gray16/GxEPD2_reTerminal_E1003_Gray16.ino` を手動で探すこともできます。
+`Seeed_GxEPD2` ライブラリをインストールした後、Arduino IDE の **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1003_Gray16** からこのサンプルを見つけることができます。または、`Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003_Gray16/GxEPD2_reTerminal_E1003_Gray16.ino` を手動で開くこともできます。
 
 <details>
 <summary>完全なコードを表示するにはここをクリック</summary>
@@ -3594,7 +3604,7 @@ void loop() {}
 
 </details>
 
-次の図は、E1003 の 16 階調グレースケール例の実際の表示効果を示しています。
+次の図は、E1003 の 16 段階グレースケール例の実際の表示効果を示しています：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/243.png" style={{width:600, height:'auto'}}/></div>
 
@@ -3607,7 +3617,7 @@ ePaper ディスプレイは、比較的リフレッシュレートが遅いで�
 
 ## トラブルシューティング
 
-### Q1: 上記のコードを実行しても、reTerminal の ePaper ディスプレイに何も表示されない、またはリフレッシュされないのはなぜですか？
+### Q1: 上記のコードを実行しても reTerminal の ePaper ディスプレイに何も表示されない、またはリフレッシュされないのはなぜですか？
 
 この問題は、reTerminal に MicroSD カードを挿入している場合に発生することがあります。理由は、reTerminal 上では MicroSD カードと ePaper ディスプレイが同じ SPI バスを共有しているためです。MicroSD カードが挿入されているにもかかわらず、そのイネーブル（チップセレクト）ピンが適切に制御されていないと、SPI バス上で競合が発生する可能性があります。具体的には、MicroSD カードが BUSY ラインを High のまま保持してしまい、その結果 ePaper ディスプレイが正しく動作できず、画面が更新・リフレッシュされない状態になります。
 
@@ -3618,13 +3628,13 @@ digitalWrite(SD_EN_PIN, HIGH);
 pinMode(SD_DET_PIN, INPUT_PULLUP);
 ```
 
-これを解決するには、上記のコードを使用して MicroSD カードが正しくイネーブルされていることを確認する必要があります。このコードは、適切なピン状態を設定することで MicroSD カードを初期化および有効化し、SPI バスの競合を防いで SD カードと ePaper ディスプレイの両方が同時に動作できるようにします。reTerminal で MicroSD カードを使用する場合は、常に推奨される初期化コードを使用して、このような問題を回避してください。
+これを解決するには、上記のコードを使用して MicroSD カードが正しくイネーブルされていることを確認する必要があります。このコードは、適切なピン状態を設定することで MicroSD カードを初期化および有効化し、SPI バスの競合を防いで SD カードと ePaper ディスプレイの両方が同時に動作できるようにします。reTerminal で MicroSD カードを使用する場合は、必ず推奨される初期化コードを使用して、このような問題を回避してください。
 
 プロジェクト内で MicroSD カードを使用しない場合は、ディスプレイプログラムを実行する前に、デバイスの電源を切り、カードを取り外すことをお勧めします。カードが reTerminal に挿入されている場合は、MicroSD カードを使用するかどうかに関係なく、画面を正しく表示できるようにするために、上記のコードを追加する必要があります。
 
-### Q2: なぜ reTerminal にプログラムをアップロードできないのですか？
+### Q2: なぜ reTerminal にプログラムを書き込めないのですか？
 
-reTerminal にプログラムをアップロードする際に、次のエラーが発生する場合があります。
+reTerminal にプログラムを書き込む際に、次のようなエラーが発生する場合があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/158.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -3634,7 +3644,7 @@ reTerminal にプログラムをアップロードする際に、次のエラー
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

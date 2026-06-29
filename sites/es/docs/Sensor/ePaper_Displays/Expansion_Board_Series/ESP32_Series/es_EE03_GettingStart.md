@@ -159,7 +159,7 @@ Descarga e instala la biblioteca Seeed GFX desde GitHub.
 <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Haz clic aquí para descargar</button></p>
 </a>
 </div>
-[LINE_161>Desplázate hacia abajo y abre este enlace.
+Desplázate hacia abajo y abre este enlace.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 

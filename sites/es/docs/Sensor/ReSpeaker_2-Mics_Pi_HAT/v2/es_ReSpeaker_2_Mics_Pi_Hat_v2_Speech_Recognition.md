@@ -1,6 +1,6 @@
 ---
 description: Este wiki demostrará cómo puedes usar TensorFlow Lite para detección de palabras clave con ReSpeaker 2-Mics Pi HAT v2 y realizar reconocimiento de voz.
-title: Detección de Palabras Clave con TensorFlow Lite
+title: Detección de palabras clave con TensorFlow Lite en Raspberry Pi Mic HAT
 keywords:
   - ReSpeaker_2-Mics_Pi_HAT
   - Keyword_Spotting
@@ -11,22 +11,22 @@ last_update:
   date: 12/23/2024
   author: Joshua Lee
 createdAt: '2024-12-24'
-updatedAt: '2025-09-03'
+updatedAt: '2024-12-24'
 url: https://wiki.seeedstudio.com/es/respeaker_2_mics_pi_hat_v2_speech_recognition/
 ---
 
 ## Introducción
 
-Este proyecto demuestra cómo usar TensorFlow Lite para detección de palabras clave en el ReSpeaker 2-Mics Pi HAT v2. La detección de palabras clave permite la detección en tiempo real de palabras predefinidas desde entrada de audio, habilitando aplicaciones como dispositivos controlados por voz y sistemas interactivos. Te guiaremos a través de los pasos para entrenar un modelo de TensorFlow Lite, desplegarlo en el ReSpeaker HAT y ejecutar reconocimiento de voz localmente.
+Este proyecto demuestra cómo usar TensorFlow Lite para la detección de palabras clave en el ReSpeaker 2-Mics Pi HAT v2. La detección de palabras clave permite la detección en tiempo real de palabras predefinidas a partir de una entrada de audio, lo que habilita aplicaciones como dispositivos controlados por voz y sistemas interactivos. Te guiaremos a través de los pasos para entrenar un modelo de TensorFlow Lite, desplegarlo en el ReSpeaker HAT y ejecutar el reconocimiento de voz localmente.
 
-### Requisitos de Hardware y Software
+### Requisitos de hardware y software
 
 - Hardware: Raspberry Pi con ReSpeaker 2-Mics Pi HAT v2
-- Software: TensorFlow Lite, Google Colab, Python y librerías de soporte
+- Software: TensorFlow Lite, Google Colab, Python y bibliotecas de soporte
 
 ### Aplicaciones
 
-La detección de palabras clave puede aplicarse en:
+La detección de palabras clave se puede aplicar en:
 
 - Dispositivos de hogar inteligente
 - Robots controlados por voz
@@ -34,17 +34,17 @@ La detección de palabras clave puede aplicarse en:
 
 ### ¿Qué es TensorFlow Lite?
 
-TensorFlow Lite es una versión ligera de TensorFlow diseñada para dispositivos móviles y embebidos. Permite inferencia de aprendizaje automático con baja latencia y tamaños de binario pequeños, haciéndolo ideal para ejecutar modelos en dispositivos de borde como Raspberry Pi.
+TensorFlow Lite es una versión ligera de TensorFlow diseñada para dispositivos móviles y embebidos. Permite la inferencia de aprendizaje automático con baja latencia y binarios pequeños, lo que lo hace ideal para ejecutar modelos en dispositivos de borde como Raspberry Pi.
 
-## Entrenar y Obtener el Modelo de TensorFlow Lite
+## Entrenar y obtener el modelo de TensorFlow Lite
 
-### Conjunto de Datos
+### Conjunto de datos
 
-Usaremos un subconjunto del conjunto de datos Speech Commands para entrenamiento. El conjunto de datos contiene archivos de audio WAV de personas diciendo diferentes palabras, recopilado por Google y liberado bajo una licencia CC BY. El conjunto de datos puede descargarse desde aquí. Para más información sobre conjuntos de datos, consulta esta guía.
+Usaremos un subconjunto del conjunto de datos Speech Commands para el entrenamiento. El conjunto de datos contiene archivos de audio WAV de personas diciendo diferentes palabras, recopilados por Google y publicados bajo una licencia CC BY. El conjunto de datos se puede descargar desde aquí. Para obtener más información sobre conjuntos de datos, consulta esta guía.
 
-### ¿Por Qué Usar Google Colab?
+### ¿Por qué usar Google Colab?
 
-Google Colab es una plataforma basada en la nube para ejecutar notebooks de Jupyter. Proporciona acceso gratuito a recursos GPU, haciéndolo una excelente opción para entrenar modelos de aprendizaje automático sin requerir poder de cómputo local.
+Google Colab es una plataforma en la nube para ejecutar notebooks de Jupyter. Proporciona acceso gratuito a recursos de GPU, lo que lo convierte en una excelente opción para entrenar modelos de aprendizaje automático sin requerir potencia de cómputo local.
 
 ### Pasos
 
@@ -54,18 +54,18 @@ Ahora usaremos un Notebook de Google Colab para realizar el entrenamiento de dat
 
   ![Load Notebook](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_1.png)
 
-  Por defecto, cargará [el conjunto de datos mini Speech Commands](http://storage.googleapis.com/download.tensorflow.org/data/mini_speech_commands.zip) que es una versión más pequeña del conjunto de datos Speech Commands. El conjunto de datos original consiste en más de 105,000 archivos de audio en formato de archivo de audio WAV (Waveform) de personas diciendo 35 palabras diferentes. Estos datos fueron recopilados por Google y liberados bajo una licencia CC BY.
+  De forma predeterminada, cargará [el conjunto de datos mini Speech Commands](http://storage.googleapis.com/download.tensorflow.org/data/mini_speech_commands.zip), que es una versión más pequeña del conjunto de datos Speech Commands. El conjunto de datos original consta de más de 105 000 archivos de audio en formato de archivo de audio WAV (Waveform) de personas diciendo 35 palabras diferentes. Estos datos fueron recopilados por Google y publicados bajo una licencia CC BY.
 
 - **Paso 2.** Conéctate a un nuevo runtime seleccionando **Changing runtime type -> CPU -> Save**, luego haz clic en **Connect**.
 
   ![Change runtime type - 1](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_2.png)
   ![Change runtime type - 2](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_3.png)
 
-- **Paso 3.** Navega a `Runtime > Run all` para ejecutar todas las celdas de código. Este proceso tomará aproximadamente 10 minutos en completarse.
+- **Paso 3.** Navega a `Runtime > Run all` para ejecutar todas las celdas de código. Este proceso tardará unos 10 minutos en completarse.
 
   ![Run all](https://files.seeedstudio.com/wiki/XIAO-BLE/TFLite/pics/micro-speech-run-all.png)
 
-- **Paso 4.** Una vez que todas las celdas de código sean ejecutadas, agrega una nueva celda y ejecuta el siguiente código para generar el archivo del modelo `.tflite`.
+- **Paso 4.** Una vez que se ejecuten todas las celdas de código, agrega una nueva celda y ejecuta el siguiente código para generar el archivo de modelo `.tflite`.
 
   ```python
   converter = tf.lite.TFLiteConverter.from_keras_model(model)
@@ -81,19 +81,19 @@ Ahora usaremos un Notebook de Google Colab para realizar el entrenamiento de dat
 
   ![Download](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_5.png)
 
-## Inferencia Local
+## Inferencia local
 
-### Ejecutando el Script de Inferencia
+### Ejecución del script de inferencia
 
 El script inference.py realiza los siguientes pasos:
 
-1. Carga el modelo TensorFlow Lite entrenado.
+1. Carga el modelo entrenado de TensorFlow Lite.
 2. Procesa el audio de entrada en un espectrograma adecuado para la inferencia.
-3. Ejecuta la inferencia y produce la palabra clave detectada junto con las puntuaciones de confianza para cada etiqueta.
+3. Ejecuta la inferencia y muestra la palabra clave detectada junto con las puntuaciones de confianza para cada etiqueta.
 
-### Pasos para Ejecutar
+### Pasos para ejecutar
 
-1. Sube el archivo de modelo `model.tflite` a tu Pi, en este ejemplo, lo ponemos en `~/speech_recognition/model.tflite`.
+1. Sube el archivo de modelo `model.tflite` a tu Pi; en este ejemplo, lo colocamos en `~/speech_recognition/model.tflite`.
 2. Guarda el siguiente script como `~/speech_recognition/inference.py`:
 
     ```python
@@ -183,7 +183,7 @@ El script inference.py realiza los siguientes pasos:
         run_inference(audio_file_path)
     ```
 
-3. Graba un sonido usando el siguiente comando, las palabras clave disponibles son: `no`, `yes`, `down`, `go`, `left`, `up`, `right`, `stop`.
+3. Graba un sonido usando el siguiente comando; las palabras clave disponibles son: `no`, `yes`, `down`, `go`, `left`, `up`, `right`, `stop`.
 
     ```
     $ arecord -D "plughw:2,0" -f S16_LE -r 16000 -d 1 -t wav ~/speech_recognition/test_audio.wav
@@ -205,13 +205,13 @@ El script inference.py realiza los siguientes pasos:
     stop: 19.94%
     ```
 
-### Interpretando los Resultados
+### Interpretación de los resultados
 
-El script produce el comando detectado (por ejemplo, YES) y las puntuaciones de confianza para todas las etiquetas. Esto proporciona información sobre las predicciones del modelo y te permite evaluar su rendimiento.
+El script muestra el comando detectado (por ejemplo, YES) y las puntuaciones de confianza para todas las etiquetas. Esto proporciona información sobre las predicciones del modelo y te permite evaluar su rendimiento.
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

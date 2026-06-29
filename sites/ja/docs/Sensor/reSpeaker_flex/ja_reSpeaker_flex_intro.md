@@ -1,5 +1,5 @@
 ---
-description: reSpeaker Flex は XMOS XVF3800 を搭載した高性能なモジュラー音声システムで、円形およびリニアの交換可能な 4 マイクアレイにより、ロボットやスマートデバイスに最適な、高精度な 360° または指向性オーディオキャプチャを実現します。
+description: reSpeaker Flex は XMOS XVF3800 を搭載した高性能なモジュラー音声システムで、円形および線形の交換可能な 4 マイクアレイにより、ロボットやスマートデバイスに最適な、高精度な 360° または指向性オーディオキャプチャを実現します。
 title: reSpeaker Flex 入門ガイド
 keywords:
   - reSpeaker flex
@@ -11,15 +11,15 @@ last_update:
   date: 03/26/2026
   author: Kasun Thushara
 createdAt: '2026-03-26'
-updatedAt: '2026-05-08'
+updatedAt: '2026-05-26'
 url: https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/
 ---
 # reSpeaker Flex 入門ガイド
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
-reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジュラー型・分離アーキテクチャの音声処理システムで、ロボットやインテリジェントインタラクション端末向けに特別に設計されています。従来の一体型マイクアレイとは異なり、Flex ではコア処理ボードとマイクアレイボードが分離されており、両者は柔軟な FPC フラットケーブルで接続されます。これにより、マイクアレイを製品筐体内の任意の物理位置に組み込みつつ、処理用エレクトロニクスを別の場所に配置することができます。
-本システムは 2 種類の交換可能なマイクアレイ構成をサポートします。全方位 360° 収音用の**円形 4 マイクアレイ**と、背面方向を抑圧した前方指向性の**リニア 4 マイクアレイ**です。どちらのボードも標準化された 24 ピン FPC インターフェースを介して同じコアボードに接続され、システムは USB（UAC 2.0 プラグアンドプレイ）または I2S モードで動作し、組み込み統合が可能です。オプションとして XIAO ESP32S3 モジュールをコアボード上にはんだ付けすることで、ワイヤレス接続と拡張制御機能を追加できます。
+reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジュラー型・分離アーキテクチャの音声処理システムで、ロボットやインテリジェントインタラクション端末向けに特別に設計されています。従来の一体型マイクアレイとは異なり、Flex ではコア処理ボードとマイクアレイボードが分離されており、両者は柔軟な FPC フラットケーブルで接続されます。これにより、マイクアレイを製品筐体内の任意の物理位置に組み込む一方で、処理用エレクトロニクスを別の場所に配置することができます。
+本システムは 2 種類の交換可能なマイクアレイ構成をサポートします。全方位 360° 収音用の**円形 4 マイクアレイ**と、背面抑圧付きの前方指向収音用**線形 4 マイクアレイ**です。どちらのボードも標準化された 24 ピン FPC インターフェースを介して同じコアボードに接続され、システムは USB（UAC 2.0 プラグアンドプレイ）または I2S モードで動作し、組み込み統合が可能です。オプションとして XIAO ESP32S3 モジュールをコアボード上にはんだ付けすることで、ワイヤレス接続と拡張制御機能を追加できます。
 
 ### 円形マイクシリーズ
 
@@ -51,7 +51,7 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
   </tr>
 </table>
 
-### リニアマイクシリーズ
+### 線形マイクシリーズ
 
 <table align="center">
   <tr>
@@ -83,11 +83,11 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 
 ## 特長
 
-- **分離モジュラー設計**：コアボードとマイクアレイボードが物理的に分離されており、FPC フラットケーブルで接続することで、任意の製品シャーシ内に柔軟に配置可能
+- **分離型モジュラー設計**：コアボードとマイクアレイボードが物理的に分離されており、FPC フラットケーブルで接続することで、任意の製品シャーシ内に柔軟に配置可能
 
-- **マイク構成の選択肢**：同一のコアボードを使用し、円形 4 マイクアレイ（360° 収音、44mm 間隔）またはリニア 4 マイクアレイ（180° 前方指向性、33mm 間隔）を交換して利用可能
+- **マイク構成の選択肢**：同一のコアボードを使用し、円形 4 マイクアレイ（360° 収音、44mm 間隔）または線形 4 マイクアレイ（180° 前方指向性、33mm 間隔）を交換して利用可能
 
-- **XMOS XVF3800 オーディオ処理**：AEC、AGC、DoA、多チャンネルビームフォーミング、VAD、ノイズ抑圧、残響除去などのフル機能 DSP を搭載
+- **XMOS XVF3800 オーディオ処理**：AEC、AGC、DoA、多チャンネルビームフォーミング、VAD、ノイズ抑圧、残響抑圧を含むフル機能のオーディオ DSP
 
 - **2 つの動作モード**：PC や SBC とプラグアンドプレイで接続できる USB UAC 2.0、組み込み統合向けの I2S モード
 
@@ -97,7 +97,7 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 
 - **XIAO ESP32S3 対応（オプション）**：はんだ付けモジュールにより Wi-Fi/Bluetooth を追加し、I2S および I2C バスが XVF3800 に直接配線されることで、ワイヤレス制御とオーディオ転送が可能
 
-- **柔軟なファームウェア**：2 チャンネル版と 6 チャンネル版の 2 種類の USB ファームウェア、I2S ファームウェア、`dfu-util` による DFU アップグレード、電源再投入後も保持される設定
+- **柔軟なファームウェア**：2 チャンネル版と 6 チャンネル版の 2 種類の USB ファームウェア、I2S ファームウェア、dfu-util による DFU アップグレード、電源再投入後も保持される設定
 
 - **Python SDK**：Python 経由で録音フォーマット、音量、アルゴリズムパラメータ、チャンネルルーティングを調整可能
 
@@ -110,21 +110,21 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 | コンポーネント / 機能 | 説明 |
 |--------------------|------------|
 | **メインオーディオプロセッサ** | XMOS XVF3800（ファームウェア v3.2.1）。AEC、ビームフォーミング、DoA、ノイズ抑圧など、すべてのオーディオ DSP を処理 |
-| **オーディオコーデック** | TLV320AIC3104。オーディオ変換および DAC 出力を担当 |
+| **オーディオコーデック** | TLV320AIC3104。オーディオ変換および DAC 出力を処理 |
 | **FPC マイクアレイインターフェース** | ロックラッチ付き 24 ピン FPC コネクタ。最大 8 マイクアレイと 2 本の GPIO ラインをサポート |
 | **USB-C ポート** | UAC 2.0 オーディオ、DFU ファームウェアアップグレード、および電源供給 |
-| **PH2.0 ポート** | ロックラッチ付きコネクタ。USB-C ポートと同じ UAC 2.0 オーディオおよび DFU を提供 |
+| **PH2.0 ポート** | ロックラッチ付きコネクタ。USB-C ポートと同じ UAC 2.0 オーディオおよび DFU 機能を提供 |
 | **3.5 mm AUX ジャック** | オンボード DAC から駆動される側面出力のヘッドホン端子 |
-| **スピーカー JST コネクタ** | 最大 10W・4Ω のスピーカーを駆動可能な縦型実装コネクタ。スピーカーを直結するためのはんだパッドも用意 |
-| **外部電源端子** | システム全体に 12V を供給し、10W スピーカー負荷に対応（P1 優先） |
-| **RST ボタン** | XVF3800 用ハードウェアリセット |
+| **スピーカー JST コネクタ** | 最大 10W・4Ω のスピーカーを駆動可能な垂直実装コネクタ。スピーカーを直結するためのはんだパッドも用意 |
+| **外部電源端子** | システム全体に 12V を供給し、10W スピーカー負荷をサポート（P1 優先） |
+| **RST ボタン** | XVF3800 用のハードウェアリセット |
 | **SafeMode（ブート）ボタン** | 電源投入時に押し続けると、ファームウェアリカバリ用のセーフモードで起動 |
 | **PWR LED** | 電源オンを示す緑色インジケータ |
-| **デバッグパッド** | XMOS XTAG4 用の予備パッド（工場出荷時は未はんだ付け） |
+| **デバッグパッド** | XMOS XTAG4 用の予約パッド（工場出荷時は未はんだ付け） |
 | **XMOS 3800 IO ヘッダ** | I2C、I2S、5V/GND、スピーカーピン、および残りの XVF3800 IO を引き出したピンヘッダ／パッド |
-| **取付穴** | M3 取付穴 × 4 |
-| **XIAO ESP32S3** | ホストデバイスとして使用する際に XIAO ESP32S3 をはんだ付けして搭載可能 |
-| **XIAO ESP32S3 GPIO** | 残りの GPIO は IO や周辺機能拡張に利用可能 |
+| **取付穴** | 4 × M3 取付穴 |
+| **XIAO ESP32S3** | ホストデバイスとして XIAO ESP32S3 をはんだ付けして使用可能 |
+| **XIAO ESP32S3 GPIO** | 残りの GPIO は IO および周辺機能拡張に利用可能 |
 
 ### 円形アレイボード
 
@@ -132,21 +132,21 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 
 | コンポーネント / 機能 | 説明 |
 |--------------------|------------|
-| **マイク** | 44 mm 間隔で円形に配置された 4× PDM MEMS マイク |
+| **マイク** | 44mm 間隔で円形に配置された 4× PDM MEMS マイク |
 | **収音パターン** | 360° の全方位オーディオキャプチャ |
 | **インターフェース** | コアボードへの FPC コネクタ |
-| **取付** | エンクロージャや筐体への固定用 M3 取付穴 × 3 |
+| **取付** | エンクロージャや筐体への固定用 3 × M3 取付穴 |
 
-### リニアアレイボード
+### 線形アレイボード
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_linear.jpg" alt="pir" width={800} height="auto" /></p>
 
 | コンポーネント / 機能 | 説明 |
 |--------------------|------------|
-| **マイク** | 33 mm 間隔で直線状に配置された 4× PDM MEMS マイク |
-| **収音パターン** | 約 180° の前方指向性収音パターンで、背面の音を抑圧 |
+| **マイク** | 33mm 間隔で直線状に配置された 4× PDM MEMS マイク |
+| **収音パターン** | 約 180° の前方指向収音パターンで、背面の音を抑圧 |
 | **インターフェース** | FPC コネクタ。ケーブルは側面または背面から配線可能 |
-| **取付** | M3 取付穴 × 2 |
+| **取付** | 2 × M3 取付穴 |
 
 ### XIAO ESP32S3 対応
 
@@ -168,7 +168,7 @@ XIAO が実装されている場合、XIAO と XVF3800 の間には次の接続�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/pinheader_1.png" alt="pir" width={600} height="auto" /></p>
 
-### 24 ピン FPC ケーブル
+### 24 FPC ケーブル
 
 FPC マイクアレイインターフェースは、ロックラッチ付きの 24 ピン・0.5mm ピッチコネクタで、同梱の 20cm FPC フラットケーブルはこのコネクタにキーイングされています。
 
@@ -214,7 +214,7 @@ FPC マイクアレイインターフェースは、ロックラッチ付きの 
 
 #### リセット
 
-リセット（RST）ボタンは、reSpeaker Flex に対してハードウェアリセットを行います。押すとチップが再起動し、システムが最初から再初期化され、完全な電源再投入と同じ動作をします。
+リセット（RST）ボタンは、reSpeaker Flex に対してハードウェアリセットを行います。押すとチップが再起動し、システムが最初から再初期化されます。これは完全な電源再投入と同じ動作です。
 
 #### スピーカー接続
 
@@ -224,7 +224,7 @@ FPC マイクアレイインターフェースは、ロックラッチ付きの 
 
 #### セーフモード
 
-**Safe Mode** は **reSpeaker Flex** 上の特別なリカバリモードで、**USB DFU** または I2C を介して、Raspberry Pi や **ESP32** のようなデバイスにファームウェアを書き込むことができます。
+**Safe Mode** は **reSpeaker Flex** 上の特別なリカバリモードで、**USB DFU** または I2C を介して **ESP32** のようなデバイスにファームウェアを書き込むことができます。
 
 以前に **I2S ファームウェア** を書き込んでいて、**USB ファームウェア** に戻したい場合は、**Safe Mode** に入って **USB DFU** を使用して USB ファームウェアを書き直すことができます。
 
@@ -238,7 +238,7 @@ FPC マイクアレイインターフェースは、ロックラッチ付きの 
   - I2C DFU をサポートします。
   - I2C インターフェースを介してファームウェアを更新できます。
   - USB DFU はサポートしません。
-- Safe Mode ファームウェア
+- セーフモードファームウェア
   - Factory パーティションに保存されています。
   - USB DFU と I2C DFU の両方をサポートします。
   - これは最も柔軟なリカバリ用ファームウェアです。
@@ -248,7 +248,7 @@ FPC マイクアレイインターフェースは、ロックラッチ付きの 
 **次のような場合に Safe Mode を使用します**
 
 - ファームウェアが**正しく動作していない**（例：**USB が認識されない**）場合。
-- **新しいファームウェアを書き込みたい**が、現在のファームウェアが**応答しない**場合。
+- **新しいファームウェアを書き込み**たいが、現在のファームウェアが**応答しない**場合。
 - **誤ったファームウェアを書き込んでしまい**、デバイスを復旧したい場合。
 
  **Safe Mode に入る方法**
@@ -256,8 +256,7 @@ FPC マイクアレイインターフェースは、ロックラッチ付きの 
 - デバイスの電源を**完全にオフ**にします。
 - **Boot ボタンを押し続けます。**
 - **Boot ボタンを押したまま、電源を再接続します。**
-- **赤色 LED が点滅し始め**、デバイスが **Safe Mode** に入ったことが確認できます。
-これでデバイスは、Factory パーティションに保存されている **Safe Mode ファームウェア** を実行しています。
+DFU util コマンドラインツールを使用して DFU パーティションを確認します。詳細については、以下の **Install DFU Util** セクションを参照してください。
 
 ### ファームウェアの更新
 
@@ -273,10 +272,10 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="USB" label="USB">
 
-USB ファームウェアは、USB ハードウェアインターフェースを介して通信する際に、**Windows、Linux、macOS** などのホスト OS で使用することを目的としています。
+USB ファームウェアは、USB ハードウェアインターフェースを介して通信する際に、**Windows、Linux、macOS** などのホスト OS で使用することを想定しています。
 2 つのファームウェアバリエーションが利用可能です。2 チャンネルオーディオを提供する **respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin** と、6 チャンネルオーディオを提供する **respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin** です。どちらのファームウェアも、16 kHz サンプリングレート、32 ビット深度で動作します。
 
-これらのファームウェアファイルはこのリンクから確認できます
+これらのファームウェアファイルは次のリンクから確認できます
 
 | ファームウェア                         | チャンネル数 | 備考                                                   |
 |----------------------------------|----------|---------------------------------------------------------|
@@ -309,7 +308,7 @@ USB ケーブルで reSpeaker Flex を PC に接続します。XMOS のファー
 
 ### DFU Util のインストール
 
-`dfu-util` は、USB 経由で Device Firmware Upgrade を行うためのコマンドラインツールです。
+`dfu-util` は、USB 経由でデバイスファームウェアをアップグレードするためのコマンドラインツールです。
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -338,14 +337,14 @@ dfu-util -l
 
 > 次のようなメッセージが表示された場合：  
 > `Cannot open DFU device 2886:001a ... (LIBUSB_ERROR_NOT_SUPPORTED)`  
-> 以下のドライバインストール手順を実行してください。
+> 以下のドライバインストール手順に進んでください。
 
 - [Zadig](https://zadig.akeo.ie/) をインストールします。  
   - Zadig を開き、`Options > List All Devices` を選択します。  
   - `reSpeaker XVF3800 Flex` を選択します。  
   - **WinUSB** ドライバをインストールします。  
   - デバイスの電源を入れ直します。  
-  - `dfu-util -l` を再度実行し、検出を確認します。
+  - `dfu-util -l` を再度実行して検出を確認します。
 
 </TabItem>
 
@@ -416,7 +415,7 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 
 ### ファームウェアを書き込む
 
-GitHub から reSpeaker Flex XVF 3800 の完全なファームウェアリポジトリをここからダウンロードします。
+GitHub から reSpeaker Flex XVF 3800 用の完全なファームウェアリポジトリをダウンロードします。
 
 - 次のコマンドを実行してファームウェアを書き込みます
 
@@ -448,7 +447,7 @@ GitHub から reSpeaker Flex XVF 3800 の完全なファームウェアリポジ
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/audacity_setting_2.png" alt="pir" width={600} height="auto" /></p>
 
 1. **OK** をクリックします。
-2. 準備完了です — 録音を開始しましょう！
+2. 準備完了です — 録音を開始しましょう。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/windw3.png" alt="pir" width={600} height="auto"/></p>
 
@@ -464,14 +463,14 @@ GitHub から reSpeaker Flex XVF 3800 の完全なファームウェアリポジ
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac1.png" alt="pir" width={600} height="auto"/></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac2.png" alt="pir" width={600} height="auto"/></p>
 
-3. **Audio Setting** に移動して、以下のように設定します：
+3. **Audio Setting** に移動し、次のように設定します：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac3.png" alt="pir" width={600} height="auto"/></p>
 
-- **Recording Device**: `reSpeaker 3800 Flex`
-- **Channels**: `2 (Stereo)`
-- **Sample Rate**: `16000 Hz`（**Project** と **Default Sample Rate** の両方）
-- **Sample Format**: `16-bit`
+- **録音デバイス**: `reSpeaker 3800 Flex`
+- **チャンネル数**: `2 (Stereo)`
+- **サンプリングレート**: `16000 Hz`（**Project** と **Default Sample Rate** の両方）
+- **サンプルフォーマット**: `16-bit`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac4.png" alt="pir" width={600} height="auto"/></p>
 
@@ -486,13 +485,13 @@ GitHub から reSpeaker Flex XVF 3800 の完全なファームウェアリポジ
 
 ### Raspberry Pi での録音（コマンドライン）
 
-1. **サウンドカード番号を確認する**：
+1. **サウンドカード番号を確認する**:
 
 ```bash
 arecord -l
 ```
 
-出力例：
+出力例:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/arecord.png" alt="pir" width={600} height="auto"/></p>
 
@@ -500,7 +499,7 @@ arecord -l
 
 ---
 
-2. **音声を録音する（5 秒）**：
+2. **音声を録音する（5 秒）**:
 
 ```bash
 arecord -D plughw:3,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
@@ -510,17 +509,17 @@ arecord -D plughw:3,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 
 ---
 
-3. **ALSA で reSpeaker XVF3800 の音量を調整する**
+3. **ALSA 上で reSpeaker XVF3800 の音量を調整する**
 
 ```bash
 alsamixer
 ```
 
-alsamixer では、左右の矢印キーを使用して正しいサウンドデバイスに移動します。上矢印キーを使用して音量を上げます。
+alsamixer では、左右の矢印キーを使って正しいサウンドデバイスに移動します。上矢印キーを使って音量を上げます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/alsa.png" alt="pir" width={600} height="auto"/></p>
 
-4. **再生**：
+4. **再生**:
 
 ```bash
 aplay -D plughw:3,0 output.wav
@@ -547,11 +546,11 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/raspberry-audiopy-1.PNG" alt="pir" width={600} height="auto"/></p>
 
-- Audio Settings ウィンドウで：
-  - 正しい Recording Device を選択します（例：reSpeaker XVF3800 Flex）。
-  - 適切な Playback Device を選択します（例：reSpeaker XVF3800 Flex）。
+- Audio Settings ウィンドウで:
+  - 正しい Recording Device を選択します（例: reSpeaker XVF3800 Flex）。
+  - 適切な Playback Device を選択します（例: reSpeaker XVF3800 Flex）。
   - Raspberry Pi での互換性を高めるため、Host が ALSA に設定されていることを確認します。
-- 設定を適用するために OK をクリックします。
+- 設定を適用するには OK をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/raspberry-audiopy.PNG" alt="pir" width={600} height="auto"/></p>
 
@@ -564,25 +563,25 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 ## パラメータをどのようにチューニングしますか？
 
-チューニングにより、内蔵オーディオアルゴリズムのパラメータを設定し、XMOS チップと直接通信することができます。
+チューニングにより、ユーザーは内蔵オーディオアルゴリズムのパラメータを設定し、XMOS チップと直接通信することができます。
 
 パラメータ設定とデバイスとのやり取りのために、専用の Python 制御インターフェースが提供されています。
 
 
 [**Python Control Directory**](https://github.com/respeaker/reSpeaker_Flex/tree/main/python_control)
 
-提供されている Python スクリプトを使用すると、次のことができます：
+提供されている Python スクリプトを使用して、次のことができます:
 
-* 内蔵オーディオアルゴリズムのパラメータを設定する
-* DoA（到来方向）データを取得する
-* VAD（音声活動検出）データを取得する
-* オンボード LED を制御する
-* 音声処理パイプラインを制御する
-* XMOS デバイスと直接通信する
+* 内蔵オーディオアルゴリズムのパラメータを設定
+* DoA（到来方向）データを取得
+* VAD（音声活動検出）データを取得
+* オンボード LED を制御
+* 音声処理パイプラインを制御
+* XMOS デバイスと直接通信
 
 **システム要件**
 
-Python 制御インターフェースを使用するには、以下の依存関係が必要です：
+Python 制御インターフェースを使用するには、以下の依存関係が必要です:
 
 * Python 3.6 以降
 * `pyusb` Python ライブラリ
@@ -591,7 +590,7 @@ Python 制御インターフェースを使用するには、以下の依存関�
 
 ### インストールと依存関係
 
-必要な Python 依存関係を次のコマンドでインストールします：
+必要な Python 依存関係を次のコマンドでインストールします:
 
 ```bash
 pip install pyusb
@@ -615,16 +614,16 @@ python xvf_host.py [options] command [value(s)...]
 
 | オプション        | 説明                                                   |
 | -------------- | ----------------------------------------------------- |
-| `-l`, `--list` | サポートされているすべてのコマンドと詳細情報を一覧表示します |
-| `--vid`        | USB ベンダー ID を設定します（デフォルト：`0x2886`）      |
-| `--pid`        | USB プロダクト ID を設定します（デフォルト：`0x001A`）    |
-| `--values`     | 書き込みコマンドに渡す値を指定します（オプション）        |
+| `-l`, `--list` | サポートされているすべてのコマンドと詳細情報を一覧表示 |
+| `--vid`        | USB ベンダー ID を設定（デフォルト: `0x2886`）        |
+| `--pid`        | USB プロダクト ID を設定（デフォルト: `0x001A`）      |
+| `--values`     | 書き込みコマンドに値を指定（オプション）              |
 
 ---
 
 ### 使用例
 
-**1. 利用可能なすべてのコマンドを一覧表示する**
+**1. 利用可能なすべてのコマンドを一覧表示**
 
 ```bash
 python xvf_host.py --list
@@ -654,44 +653,44 @@ python xvf_host.py DOA_VALUE
 
 ## トラブルシューティング
 
-### スピーカー出力からの再生音量が十分でない場合は？
+### スピーカー出力からの再生音量が十分ではありませんか？
 
-Linux 上で **reSpeaker Flex** のスピーカー出力音量が小さすぎる場合、XVF3800 サウンドカードの **ALSA ミキサーレベル** を調整する必要があるかもしれません。出力音量を上げるには、以下の手順に従ってください。
+Linux で **reSpeaker Flex** のスピーカー出力音量が小さすぎる場合、XVF3800 サウンドカードの **ALSA ミキサーレベル** を調整する必要があるかもしれません。出力音量を上げるには、以下の手順に従ってください。
 
-**ステップ 1：ALSA Mixer を開く**
+**ステップ 1: ALSA ミキサーを開く**
 
 1. ターミナルを開きます。
-2. 次のコマンドを入力し、**Enter** キーを押します：
+2. 次のコマンドを入力し、**Enter** キーを押します:
 
    ```bash
    alsamixer
    ```
 
-**ステップ 2：XVF3800 Flex サウンドカードを選択する**
+**ステップ 2: XVF3800 Flex サウンドカードを選択する**
 
 1. **F6** キーを押してサウンドカード選択メニューを開きます。
-2. **上下の矢印キー** を使用して **XVF3800 Flex** サウンドカードをハイライトします。
+2. **上下の矢印キー** を使って **XVF3800 Flex** サウンドカードを選択します。
 3. **Enter** キーを押して選択を確定します。
 
-**ステップ 3：PCM-1 の音量を調整する**
+**ステップ 3: PCM-1 の音量を調整する**
 
-1. **左右の矢印キー** を使用して **PCM-1** に移動します。
-2. **上矢印キー** を使用して音量レベルを **100%** まで上げます。
+1. **左右の矢印キー** を使って **PCM-1** に移動します。
+2. **上矢印キー** を使って音量レベルを **100%** まで上げます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
 
-**ステップ 4：ALSA 設定を保存する**
+**ステップ 4: ALSA 設定を保存する**
 
 1. **ESC** キーを押して `alsamixer` を終了します。
-2. reSpeaker Flex を取り外す前に、次のコマンドを実行して設定を保存します：
+2. reSpeaker Flex を取り外す前に、次のコマンドを実行して設定を保存します:
 
 ```bash
    sudo alsactl store
    ```
 
-**ステップ 5：追加オプション（PulseAudio の使用）**
+**ステップ 5: 追加オプション（PulseAudio の使用）**
 
-ALSA レベルを調整してもまだ音がはっきり聞こえない場合は、より詳細な音量調整のために **PulseAudio Volume Control** をインストールしてみてください：
+ALSA レベルを調整してもまだ音がはっきり聞こえない場合は、より詳細な音量調整のために **PulseAudio Volume Control** をインストールしてみてください:
 
 ```bash
 sudo apt install pavucontrol -y
@@ -699,9 +698,9 @@ sudo apt install pavucontrol -y
 
 その後、**pavucontrol** を開き、必要に応じて出力音量を 100% を超えて上げることができます。
 
-### ファームウェアを書き込んだ後、Windows でサウンドデバイスとして使用できない？
+### ファームウェアを書き込んだ後、Windows でサウンドデバイスとして使用できませんか？
 
-スタートメニューを開き、「Device manager」と入力します。関連する reSpeaker Flex デバイスを見つけて右クリックし、Uninstall devices を選択します。その後、デバイス（USB の抜き差し）を再起動すると、Windows が正しいサウンドカードドライバを再インストールします。
+スタートメニューを開き、「Device manager」と入力します。関連する reSpeaker Flex デバイスを見つけて右クリックし、Uninstall devices を選択します。その後、デバイスを再起動します（USB を抜き差しします）。すると Windows が正しいサウンドカードドライバを再インストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
@@ -712,7 +711,7 @@ sudo apt install pavucontrol -y
 
 [reSpeaker Flex XVF3800 Linear step ファイル](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
 
-[reSpeaker Flex XVF3800 コアボード Step](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
+[reSpeaker Flex XVF3800 Core Board Step](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
 
 
 

@@ -13,7 +13,7 @@ last_update:
   date: 06/1/2025
   author: ZhuYaoHui
 createdAt: '2025-06-01'
-updatedAt: '2026-01-07'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/damiao_series/
 ---
 
@@ -57,7 +57,7 @@ J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 |
 
 **Windows System in PC**
 
-- Download the [Download the Damiao Debugging Tools](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/Debugging_Tools_v.1.6.8.8.exe).
+- Download the [Download the Damiao Debugging Tools](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe).
 - Downlaod the [USB2CAN Tools](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/USB2CAN_2.0.0.3.exe)
 
 ### Connect the Circuit to PC

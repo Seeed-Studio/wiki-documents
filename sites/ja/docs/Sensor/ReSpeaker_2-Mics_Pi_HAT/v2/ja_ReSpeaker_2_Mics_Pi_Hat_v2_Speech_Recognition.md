@@ -1,33 +1,32 @@
 ---
-description: この Wiki では、ReSpeaker 2-Mics Pi HAT v2 を使用して TensorFlow Lite を用いたキーワードスポッティングと音声認識を実現する方法を説明します。
-title: TensorFlow Lite を用いたキーワードスポッティング
+description: この Wiki では、TensorFlow Lite を使用して ReSpeaker 2-Mics Pi HAT v2 でキーワードスポッティングを行い、音声認識を実行する方法を紹介します。
+title: Raspberry Pi Mic HAT 上で TensorFlow Lite を用いたキーワードスポッティング
 keywords:
   - ReSpeaker_2-Mics_Pi_HAT
-  - キーワードスポッティング
+  - Keyword_Spotting
   - TensorFlow_Lite
 image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/social-image.webp
 slug: /respeaker_2_mics_pi_hat_v2_speech_recognition
 last_update:
-  date: 05/15/2025
+  date: 12/23/2024
   author: Joshua Lee
-createdAt: '2025-05-27'
-updatedAt: '2025-09-17'
+createdAt: '2024-12-24'
+updatedAt: '2024-12-24'
 url: https://wiki.seeedstudio.com/ja/respeaker_2_mics_pi_hat_v2_speech_recognition/
 ---
 
-
 ## はじめに
 
-このプロジェクトでは、ReSpeaker 2-Mics Pi HAT v2 を使用して TensorFlow Lite を用いたキーワードスポッティングの方法を紹介します。キーワードスポッティングは、音声入力から事前定義された単語をリアルタイムで検出する技術であり、音声制御デバイスやインタラクティブシステムなどのアプリケーションに利用できます。TensorFlow Lite モデルのトレーニング、ReSpeaker HAT へのデプロイ、およびローカルでの音声認識の実行手順を説明します。
+このプロジェクトでは、TensorFlow Lite を使用して ReSpeaker 2-Mics Pi HAT v2 上でキーワードスポッティングを行う方法を紹介します。キーワードスポッティングは、音声入力からあらかじめ定義された単語をリアルタイムに検出する技術であり、音声制御デバイスやインタラクティブシステムなどのアプリケーションを実現できます。ここでは、TensorFlow Lite モデルを学習し、ReSpeaker HAT にデプロイし、ローカルで音声認識を実行するまでの手順を順を追って説明します。
 
-### ハードウェアとソフトウェアの要件
+### ハードウェアおよびソフトウェア要件
 
-- ハードウェア: Raspberry Pi と ReSpeaker 2-Mics Pi HAT v2
+- ハードウェア: ReSpeaker 2-Mics Pi HAT v2 を搭載した Raspberry Pi
 - ソフトウェア: TensorFlow Lite、Google Colab、Python、および関連ライブラリ
 
-### アプリケーション
+### 応用例
 
-キーワードスポッティングは以下の用途に適用できます:
+キーワードスポッティングは次のような用途に利用できます:
 
 - スマートホームデバイス
 - 音声制御ロボット
@@ -35,38 +34,38 @@ url: https://wiki.seeedstudio.com/ja/respeaker_2_mics_pi_hat_v2_speech_recogniti
 
 ### TensorFlow Lite とは？
 
-TensorFlow Lite は、モバイルおよび組み込みデバイス向けに設計された TensorFlow の軽量版です。低遅延と小さなバイナリサイズで機械学習推論を可能にし、Raspberry Pi のようなエッジデバイスでのモデル実行に最適です。
+TensorFlow Lite は、モバイルおよび組み込みデバイス向けに設計された TensorFlow の軽量版です。低レイテンシかつ小さなバイナリサイズで機械学習の推論を実行できるため、Raspberry Pi のようなエッジデバイス上でモデルを動作させるのに最適です。
 
-## TensorFlow Lite モデルのトレーニングと取得
+## TensorFlow Lite モデルの学習と取得
 
 ### データセット
 
-トレーニングには Speech Commands データセットのサブセットを使用します。このデータセットには、Google によって収集され、CC BY ライセンスで公開された、さまざまな単語を話す音声ファイル（WAV形式）が含まれています。このデータセットは [こちら](http://storage.googleapis.com/download.tensorflow.org/data/mini_speech_commands.zip) からダウンロードできます。データセットに関する詳細は、このガイドを参照してください。
+学習には Speech Commands データセットのサブセットを使用します。このデータセットには、人々がさまざまな単語を発話した WAV 音声ファイルが含まれており、Google によって収集され、CC BY ライセンスの下で公開されています。データセットはここからダウンロードできます。データセットの詳細については、このガイドを参照してください。
 
-### なぜ Google Colab を使用するのか？
+### なぜ Google Colab を使うのか？
 
-Google Colab は Jupyter ノートブックを実行するためのクラウドベースのプラットフォームです。無料で GPU リソースにアクセスできるため、ローカルの計算能力を必要とせずに機械学習モデルをトレーニングするのに最適です。
+Google Colab は、Jupyter Notebook を実行するためのクラウドベースのプラットフォームです。GPU リソースに無料でアクセスできるため、ローカルの計算能力を必要とせずに機械学習モデルを学習させるのに最適な選択肢です。
 
 ### 手順
 
-以下の手順で Google Colab ノートブックを使用してデータトレーニングを行い、`.tflite` 形式の TensorFlow Lite モデルを生成します。
+ここでは Google Colab Notebook を使用してデータの学習を行い、`.tflite` 形式の TensorFlow Lite モデルを生成します。
 
-- **ステップ 1.** [この Python ノートブック](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/audio/simple_audio.ipynb) を開きます。
+- **Step 1.** [この Python Notebook](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/audio/simple_audio.ipynb) を開きます
 
-  ![ノートブックを読み込む](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_1.png)
+  ![Load Notebook](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_1.png)
 
-  デフォルトでは、[mini Speech Commands データセット](http://storage.googleapis.com/download.tensorflow.org/data/mini_speech_commands.zip) が読み込まれます。このデータセットは Speech Commands データセットの小型版で、元のデータセットには WAV (Waveform) オーディオファイル形式で 35 種類の異なる単語を話す 105,000 以上の音声ファイルが含まれています。このデータは Google によって収集され、CC BY ライセンスで公開されています。
+  デフォルトでは、Speech Commands データセットの小規模版である [mini Speech Commands データセット](http://storage.googleapis.com/download.tensorflow.org/data/mini_speech_commands.zip) が読み込まれます。元のデータセットは、35 種類の単語を人々が発話した、WAV（Waveform）音声ファイル形式の 105,000 以上の音声ファイルで構成されています。このデータは Google によって収集され、CC BY ライセンスの下で公開されています。
 
-- **ステップ 2.** **ランタイムの変更 -> CPU -> 保存** を選択して新しいランタイムに接続し、**接続** をクリックします。
+- **Step 2.** **Changing runtime type -> CPU -> Save** を選択して新しいランタイムに接続し、その後 **Connect** をクリックします。
 
-  ![ランタイムタイプを変更 - 1](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_2.png)
-  ![ランタイムタイプを変更 - 2](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_3.png)
+  ![Change runtime type - 1](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_2.png)
+  ![Change runtime type - 2](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_3.png)
 
-- **ステップ 3.** `Runtime > Run all` に移動してすべてのコードセルを実行します。このプロセスは約 10 分かかります。
+- **Step 3.** `Runtime > Run all` に移動して、すべてのコードセルを実行します。この処理には約 10 分かかります。
 
-  ![すべて実行](https://files.seeedstudio.com/wiki/XIAO-BLE/TFLite/pics/micro-speech-run-all.png)
+  ![Run all](https://files.seeedstudio.com/wiki/XIAO-BLE/TFLite/pics/micro-speech-run-all.png)
 
-- **ステップ 4.** すべてのコードセルが実行されたら、新しいセルを追加し、以下のコードを実行して `.tflite` モデルファイルを生成します。
+- **Step 4.** すべてのコードセルの実行が完了したら、新しいセルを追加し、次のコードを実行して `.tflite` モデルファイルを生成します。
 
   ```python
   converter = tf.lite.TFLiteConverter.from_keras_model(model)
@@ -76,26 +75,26 @@ Google Colab は Jupyter ノートブックを実行するためのクラウド�
   f.write(tflite_model)
   ```
 
-  ![新しいセルを追加](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_4.png)
+  ![Append a new cell](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_4.png)
 
-- **ステップ 5.** 生成された `model.tflite` ファイルを右クリックし、**ダウンロード** を選択してコンピュータに保存します。
+- **Step 5.** 生成された `model.tflite` ファイルを右クリックし、**Download** を選択してコンピュータに保存します。
 
-  ![ダウンロード](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_5.png)
+  ![Download](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_5.png)
 
 ## ローカル推論
 
 ### 推論スクリプトの実行
 
-スクリプト `inference.py` は以下の手順を実行します：
+スクリプト inference.py は、次の手順を実行します:
 
-1. 訓練済みの TensorFlow Lite モデルを読み込みます。
+1. 学習済みの TensorFlow Lite モデルを読み込みます。
 2. 入力音声を推論に適したスペクトログラムに変換します。
 3. 推論を実行し、検出されたキーワードと各ラベルの信頼度スコアを出力します。
 
 ### 実行手順
 
-1. `model.tflite` モデルファイルを Pi にアップロードします。この例では、`~/speech_recognition/model.tflite` に配置します。
-2. 以下のスクリプトを `~/speech_recognition/inference.py` として保存します：
+1. `model.tflite` モデルファイルを Pi にアップロードします。この例では `~/speech_recognition/model.tflite` に配置します。
+2. 次のスクリプトを `~/speech_recognition/inference.py` として保存します:
 
     ```python
     import numpy as np
@@ -184,13 +183,13 @@ Google Colab は Jupyter ノートブックを実行するためのクラウド�
         run_inference(audio_file_path)
     ```
 
-3. 以下のコマンドを使用して音声を録音します。使用可能なキーワードは `no`, `yes`, `down`, `go`, `left`, `up`, `right`, `stop` です。
+3. 次のコマンドを使用して音声を録音します。利用可能なキーワードは `no`, `yes`, `down`, `go`, `left`, `up`, `right`, `stop` です。
 
     ```
     $ arecord -D "plughw:2,0" -f S16_LE -r 16000 -d 1 -t wav ~/speech_recognition/test_audio.wav
     ```
 
-4. スクリプトを実行します：
+4. スクリプトを実行します:
 
     ```
     $ python3 inference.py
@@ -208,11 +207,11 @@ Google Colab は Jupyter ノートブックを実行するためのクラウド�
 
 ### 結果の解釈
 
-スクリプトは検出されたコマンド（例：YES）とすべてのラベルの信頼度スコアを出力します。これにより、モデルの予測に関する洞察を得ることができ、性能を評価することができます。
+スクリプトは、検出されたコマンド（例: YES）と、すべてのラベルに対する信頼度スコアを出力します。これにより、モデルの予測内容を把握し、その性能を評価することができます。
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、できるだけスムーズな体験を提供するために、さまざまなサポートを提供しております。お客様の好みやニーズに合わせた複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

@@ -105,3 +105,4 @@ url: https://wiki.seeedstudio.com/cn/t1000_e_intro/
 |开机|先常亮后快速闪烁|
 |DFU 模式|常亮|
 |工作中|随机闪烁|
+|充电中|以 0.5 Hz 闪烁，每秒切换一次|

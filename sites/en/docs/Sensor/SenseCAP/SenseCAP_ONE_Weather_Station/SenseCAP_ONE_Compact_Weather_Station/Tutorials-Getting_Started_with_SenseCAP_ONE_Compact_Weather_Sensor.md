@@ -10,7 +10,7 @@ last_update:
   date: 03/18/2026
   author: Kian
 createdAt: '2023-04-13'
-updatedAt: '2026-03-30'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor/
 ---
 # Getting Started with SenseCAP ONE Compact Weather Sensor
@@ -86,6 +86,13 @@ The device adopts an M12 8-pin connector, the different colored pins provide pow
 When working with the RS-485, you can connect only 4 wires (not using a heating function), and the rest can be individually wrapped with tape to prevent short circuit
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image7.png" /></div>
+Below is the wiring schematic for the M12  connector for your reference.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/M12_connector_faces_p1_p2.png" /></div>
+
+The image below is a wiring definition diagram.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/wiring-definition.png" /></div>
 
 The holes of the cable and the pins of the device connector must be aligned when the cable is plugged in.
 

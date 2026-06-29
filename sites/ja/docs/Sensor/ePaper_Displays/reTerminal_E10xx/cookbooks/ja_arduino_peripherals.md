@@ -1,5 +1,5 @@
 ---
-description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino クックブック — LED、ブザー、3 つのユーザーボタン、SHT4x 温度・湿度センサー、バッテリー監視、microSD カード、そして 4 種類すべてのパネルバリアントに対応したエンドツーエンドの画像パイプライン（JPEG / BMP / PNG → ディザ → ePaper）を含むオンボードハードウェアペリフェラルのサンプル集です。
+description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino クックブック — LED、ブザー、3 つのユーザーボタン、SHT4x 温度・湿度センサー、バッテリー監視、microSD カード、そして 4 種類すべてのパネルバリエーションに対応したエンドツーエンドの画像パイプライン（JPEG / BMP / PNG → ディザ → ePaper）を含むオンボードハードウェアペリフェラルのサンプル集です。
 title: 'Arduino クックブック: オンボードペリフェラル (reTerminal E シリーズ)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals
@@ -9,7 +9,7 @@ last_update:
   date: 05/21/2026
   author: Citric
 createdAt: '2026-05-15'
-updatedAt: '2026-05-21'
+updatedAt: '2026-05-30'
 url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals/
 ---
 
@@ -20,28 +20,38 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/245.png" style={{width:600, height:'auto'}}/></div>
 
+:::tip 開発環境を用意せずにデモを試す
+開発環境をセットアップする前に、プロジェクトの結果をすばやくプレビューしたり、基本的なデモ用ファームウェアを試したい場合は、**[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** を開いてください。対応する reTerminal E シリーズデバイスを選択し、ブラウザから直接デモファームウェアを書き込むことができます。
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
 :::tip このシリーズの他のクックブック
-- **[Arduino クックブック: ePaper ディスプレイ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino)** — ePaper 画面へのテキスト、グラフィックス、画像の描画。
-- **[Arduino クックブック: RTC、低消費電力 & オーディオ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2)** — RTC 時刻管理、ディープスリープ / ライトスリープ、および I2S マイク録音。
+- **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino)** — ePaper 画面へのテキスト、グラフィックス、画像の描画。
+- **[Arduino Cookbook: RTC, Low Power, Audio & Touch](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2)** — RTC 時刻管理、ディープスリープ / ライトスリープ、I2S マイク録音、および静電容量式タッチ描画（E1003 のみ）。
 :::
 
 ## はじめに
 
-reTerminal E シリーズは単なる ePaper 画面ではありません。すべてのモデルにオンボード LED、ブザー、3 つのユーザーボタン、SHT4x 温度・湿度センサー、バッテリー電圧監視、microSD カードスロットが搭載されています。このクックブックでは、それぞれのペリフェラル向けにすぐに書き込める Arduino サンプルをまとめ、さらに SD カードから JPEG / BMP / PNG ファイルを読み込み、パネルのパレット向けにディザ処理を行い、ePaper 画面に描画するエンドツーエンドの画像パイプラインも提供します。各パネルバリアント（E1001 BW、E1001 Gray4、E1002、E1003、E1004）ごとに 1 つの完成済みスケッチが用意されています。
+reTerminal E シリーズは単なる ePaper 画面ではありません。すべてのモデルにオンボード LED、ブザー、3 つのユーザーボタン、SHT4x 温度・湿度センサー、バッテリー電圧監視、microSD カードスロットが搭載されています。このクックブックでは、それぞれのペリフェラル向けにすぐに書き込める Arduino サンプルをまとめており、さらに SD カードから JPEG / BMP / PNG ファイルを読み込み、パネルのパレット向けにディザ処理を行い、ePaper 画面に描画するエンドツーエンドの画像パイプラインも含まれています。各パネルバリエーション（E1001 BW、E1001 Gray4、E1002、E1003、E1004）ごとに 1 つの完成済みスケッチが用意されています。
 
-このクックブックで扱う内容:
+このクックブックで扱う内容：
 
-- GPIO6（反転ロジック）による**LED 制御**。
-- GPIO45 上の**ブザー**によるアラートと音階トーン。
+- GPIO6（反転ロジック）による **LED 制御**。
+- GPIO45 を使った **ブザー** のアラートおよび音階トーン。
 - **3 つのユーザーボタン**（KEY0 / KEY1 / KEY2）のチャタリング除去済み状態検出。
 - Sensirion ライブラリを用いた I²C（GPIO19 SDA / GPIO20 SCL）経由の **SHT4x センサー**。
-- ADC + イネーブルピン回路を用いた**バッテリー電圧監視**。
-- 共有 SPI バス上での**microSD カード**のマウント / 検出 / ファイル一覧取得。
-- **応用例 — SD カード画像パイプライン**: SD カード上の任意の JPEG / BMP / PNG を選択し、5 種類の内蔵ディザリングアルゴリズムのいずれかで処理し、アンカー位置、フィットモード、スケールを設定してパネルに描画します。
+- ADC + イネーブルピン回路を用いた **バッテリー電圧監視**。
+- 共有 SPI バス上での **microSD カード** のマウント / 検出 / ファイル一覧取得。
+- **応用例 — SD カード画像パイプライン**：SD カード上の任意の JPEG / BMP / PNG を選び、5 種類の内蔵ディザリングアルゴリズムのいずれかで処理し、アンカー位置、フィットモード、スケールを設定してパネルに描画。
 
 ### 必要なもの
 
-このクックブックは、4 種類すべての reTerminal E シリーズモデルに適用できます。手元にあるデバイスを選んでください:
+このクックブックは、すべての reTerminal E シリーズ 4 モデルに適用できます。手元にあるデバイスを 1 つ選んでください：
 
 <div class="table-center">
   <table align="center">
@@ -82,19 +92,19 @@ reTerminal E シリーズは単なる ePaper 画面ではありません。す�
   </table>
 </div>
 
-### 前提条件
+### 事前準備
 
-以下のサンプルを実行する前に、次の準備ができている必要があります:
+以下のサンプルを実行する前に、次の準備ができている必要があります：
 
-- **Arduino IDE** をインストールし、**ESP32 ボードパッケージ**を追加して **XIAO_ESP32S3** ボードを選択していること。
-- 動作する **USB-C データケーブル**があり、正しいシリアルポートを選択していること。
-- デバイスに基本的なスケッチを書き込めることを確認していること — まだの場合は、[Arduino クックブック: ePaper ディスプレイ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino#環境準備)の環境構築手順を参照してください。
+- **Arduino IDE** をインストールし、**ESP32 ボードパッケージ**を追加して、ボードに **XIAO_ESP32S3** を選択していること。
+- 動作する **USB-C データケーブル** があり、正しいシリアルポートを選択していること。
+- デバイスに基本的なスケッチを書き込めることを確認していること — まだの場合は、[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino#環境準備) の環境構築手順を参照してください。
 
 このクックブック内のすべてのスケッチは、`Serial1` を通じて **GPIO44 (RX) / GPIO43 (TX)**、**115200 ボー**でデバッグ情報を出力します。Arduino シリアルモニタを開き、対応するポートとボーレートを選択してログを確認してください。
 
 ## LED 制御
 
-reTerminal E シリーズには、GPIO 経由で制御できるオンボード LED が搭載されています。LED のロジックは反転している点に注意してください（LOW = 点灯、HIGH = 消灯）。LED ピンはモデルごとに異なります:
+reTerminal E シリーズには、GPIO から制御できるオンボード LED が搭載されています。LED のロジックは反転している点に注意してください（LOW = ON、HIGH = OFF）。LED ピンはモデルによって異なります：
 
 <div class="table-center">
 	<table align="center">
@@ -227,7 +237,7 @@ void loop() {
 
 ## ブザー制御
 
-reTerminal E シリーズには GPIO45 に接続されたブザーが搭載されており、さまざまなトーンやアラート音を鳴らすことができます。
+reTerminal E シリーズには GPIO45 接続のブザーが搭載されており、さまざまなトーンやアラート音を鳴らすことができます。
 
 ```cpp
 // reTerminal E Series - Buzzer Control Example
@@ -435,14 +445,14 @@ void loop() {
 
 reTerminal E シリーズには、さまざまな制御用途に使用できるユーザー設定可能なボタンが3つ搭載されています。このセクションでは、Arduino を使用してボタンの状態を読み取り、ボタン押下に応答する方法を説明します。
 
-reTerminal E シリーズには、ESP32-S3 に接続された3つのボタンがあり、それぞれ KEY0（GPIO3）、KEY1（GPIO4）、KEY2（GPIO5）に接続されています。すべてのボタンはアクティブ Low であり、押されているときは LOW、離されているときは HIGH を読み取ります。
+reTerminal E シリーズには、ESP32-S3 に KEY0（GPIO3）、KEY1（GPIO4）、KEY2（GPIO5）を介して接続された3つのボタンがあります。すべてのボタンはアクティブ Low であり、押されているときは LOW、離されているときは HIGH を読み取ります。
 
 これらのボタンの物理的な配置と機能は、モデルによって異なります：
 
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th>キー</th>
+			<th>Key</th>
 			<th>E1001 / E1002 / E1003</th>
 			<th>E1004</th>
 		</tr>
@@ -465,7 +475,7 @@ reTerminal E シリーズには、ESP32-S3 に接続された3つのボタンが
 </div>
 
 :::note
-E1004 には、デバイスの前面と背面の両方にボタンがあります。上記の KEY0～KEY2 の接続は、前面パネル上のボタンに対応しています。
+E1004 には、デバイスの前面と背面の両方にボタンがあります。上記の KEY0–KEY2 の接続は、前面パネル上のボタンに対応しています。
 :::
 
 ### 基本的なボタン読み取りの例
@@ -566,7 +576,7 @@ void loop() {
 
 4. **デバウンス**：各ボタン押下後に 200ms の簡易ディレイを入れることで、機械的なチャタリングによる単一押下の複数検出を防ぎます。
 
-5. **シリアル出力**：各ボタン押下時に、デバッグおよび確認用としてシリアルモニタにメッセージを出力します。
+5. **シリアル出力**：各ボタンが押されると、デバッグと確認のためにシリアルモニタへメッセージを送信します。
 
 ---
 
@@ -596,7 +606,7 @@ KEY2 (GPIO5) released!
 
 ## 環境センサ（SHT4x）
 
-reTerminal E シリーズには、I2C 接続の SHT4x 温湿度センサが統合されています。
+reTerminal E シリーズには、I2C 接続の SHT4x 温度・湿度センサが統合されています。
 
 ### 必要なライブラリのインストール
 
@@ -689,13 +699,13 @@ void loop() {
 1. **シリアル初期化**：reTerminal E シリーズ専用のピン 44（RX）と 43（TX）を使用して `Serial1` を初期化します
 2. **I2C 初期化**：ピン 19（SDA）と 20（SCL）で I2C を設定します
 3. **センサ初期化**：`sht4x.begin(Wire, 0x44)` を呼び出して、アドレス 0x44 の SHT4x センサを初期化します
-4. **シリアル番号の読み取り**：センサの一意なシリアル番号を読み取り、確認用に表示します
+4. **シリアル番号の読み取り**：センサの一意なシリアル番号を読み取り、確認のために表示します
 
 **loop 関数：**
 
-1. **ディレイ**：オーバーサンプリングを避けるため、測定間隔として 5 秒待機します
+1. **ディレイ**：オーバーサンプリングを避けるため、測定の間に 5 秒待機します
 2. **測定**：高精度な読み取りのために `measureHighPrecision()` を使用します（約 8.3ms かかります）
-3. **エラーハンドリング**：エラーをチェックし、`errorToString()` を使用して読みやすいメッセージに変換します
+3. **エラー処理**：エラーをチェックし、`errorToString()` を使用して読みやすいメッセージに変換します
 4. **結果表示**：温度（摂氏）と相対湿度（パーセンテージ）を出力します
 
 **想定される出力**
@@ -711,7 +721,17 @@ Temperature: 27.38°C Humidity: 53.37%
 
 ## バッテリーマネジメントシステム
 
-reTerminal E シリーズには、分圧回路付きの ADC ピンを介したバッテリー電圧監視機能が搭載されています。
+reTerminal E シリーズには、分圧回路付き ADC ピンを介したバッテリー電圧監視機能が搭載されています。
+
+:::note
+
+reTerminal E1003 の BATTERY_ENABLE_PIN は、E1001/E1002/E1004 とは異なります。
+
+- E1001/E1002/E1004: BATTERY_ENABLE_PIN → GPIO21
+- E1003: BATTERY_ENABLE_PIN → IO40
+異なる reTerminal E10xx モデル間でサンプルコードを移植する際は、それに応じてコードを更新してください。
+
+:::
 
 ### シンプルなバッテリー電圧監視
 
@@ -771,11 +791,11 @@ void loop() {
 
 **コードの説明：**
 
-- GPIO1 は、ADC を通して分圧されたバッテリー電圧を読み取ります
+- GPIO1 は ADC を通して分圧されたバッテリー電圧を読み取ります
 - GPIO21 はバッテリー監視回路を有効にします
 - 電圧分圧回路のため、実際のバッテリー電圧は測定電圧の 2 倍になります
 - フル充電された LiPo バッテリーでは、およそ 4.2V を想定してください
-- バッテリー残量が少ないときは、電圧はおよそ 3.3V まで低下します
+- バッテリーが少なくなると、電圧はおよそ 3.3V まで低下します
 
 **期待される出力**
 
@@ -789,9 +809,9 @@ Battery: 4.18 V
 
 ## MicroSD カードの使用
 
-デジタルフォトフレームやデータロギングなど、追加のストレージを必要とするアプリケーション向けに、reTerminal E シリーズには MicroSD カードスロットが搭載されています。
+デジタルフォトフレームやデータロギングなど、追加ストレージを必要とするアプリケーション向けに、reTerminal E シリーズには MicroSD カードスロットが搭載されています。
 
-デバイスをデジタルフォトフレームとして使用する場合や、追加のストレージが必要な場合は、microSD カードを挿入してください。
+デバイスをデジタルフォトフレームとして使用する場合や、追加ストレージが必要な場合は、microSD カードを挿入してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -799,9 +819,9 @@ Battery: 4.18 V
 reTerminal E シリーズは、**Fat32** ファイルシステムでフォーマットされた 64GB までの MicroSD カードのみをサポートします。
 :::
 
-### 基本的な SD カード操作：ファイル一覧
+### 基本的な SD カード操作：ファイル一覧表示
 
-この例では、SD カードを初期化し、その挿入および取り外しを検出し、ルート内のすべてのファイルとディレクトリを一覧表示する方法を示します。SD カードの電源イネーブルピン（`SD_EN_PIN`）はモデルによって異なります：
+この例では、SD カードを初期化し、挿入および取り外しを検出し、ルート内のすべてのファイルとディレクトリを一覧表示する方法を示します。SD カードの電源イネーブルピン（`SD_EN_PIN`）はモデルによって異なります：
 
 <div class="table-center">
 	<table align="center">
@@ -823,7 +843,7 @@ reTerminal E シリーズは、**Fat32** ファイルシステムでフォーマ
 	</table>
 </div>
 
-その他の SD カードピン（DET、CS、MOSI、MISO、SCK）は、すべてのモデルで同じです。お使いのデバイスに対応するタブを選択し、そのコードを Arduino IDE のスケッチにコピーしてください。
+その他の SD カードピン（DET、CS、MOSI、MISO、SCK）は、すべてのモデルで同じです。お使いのデバイスに対応するタブを選択し、コードを Arduino IDE のスケッチにコピーしてください。
 
 <Tabs>
 <TabItem value="e1001_e1002_e1004" label="E1001 / E1002 / E1004" default>
@@ -1176,13 +1196,13 @@ void loop() {
 
 #### コードの解説
 
-- **ピン定義:** コードは、MicroSDカードスロットに使用されるGPIOピンを定義するところから始まります。SPIピン（`MOSI`、`SCK`）は電子ペーパーディスプレイと共有されていますが、個別のチップセレクト（`SD_CS_PIN`）と専用のSPIインスタンス（`spiSD`）により、互いに独立して使用できるようになっています。
-- **SPI の初期化:** ESP32 の第2ハードウェア SPI コントローラ（HSPI）を使用するために、新しい SPI オブジェクト `spiSD(HSPI)` を生成します。これは、他の SPI デバイスとの競合を避けるためのベストプラクティスです。
+- **ピン定義:** コードは、MicroSD カードスロットに使用される GPIO ピンを定義するところから始まります。SPI ピン（`MOSI`、`SCK`）は電子ペーパーディスプレイと共有されていますが、個別のチップセレクト（`SD_CS_PIN`）と専用の SPI インスタンス（`spiSD`）によって、それぞれを独立して使用できるようになっています。
+- **SPI の初期化:** ESP32 の 2 つ目のハードウェア SPI コントローラ（HSPI）を使用するために、新しい SPI オブジェクト `spiSD(HSPI)` を生成します。これは、他の SPI デバイスとの競合を避けるためのベストプラクティスです。
 - **カード検出:** `isCardInserted()` 関数は `SD_DET_PIN` を読み取ります。reTerminal ハードウェアでは、このピンはカードが挿入されているときに LOW にプルダウンされます。
-- **マウント／アンマウント:** `mountSD()` 関数はカードへの電源を有効にし、正しいピンで HSPI バスを設定し、`SD.begin()` を呼び出してファイルシステムを初期化します。`unmountSD()` はリソースを解放します。
+- **マウント / アンマウント:** `mountSD()` 関数はカードへの電源を有効にし、正しいピンで HSPI バスを設定し、ファイルシステムを初期化するために `SD.begin()` を呼び出します。`unmountSD()` はリソースを解放します。
 - **ファイル一覧:** `listRoot()` はルートディレクトリ（`/`）を開き、`listDir()` はファイルシステムを走査して、すべてのファイルとディレクトリ名を再帰的に表示する関数です。
-- **`setup()`:** 出力用に `Serial1` を初期化し、カード検出ピンを設定し、デバイスの電源投入時にカードがすでに挿入されているかどうかを最初にチェックします。
-- **`loop()`:** カードを常に監視する代わりに、コードはノンブロッキングタイマー（`millis()`）を使用して、カードの状態変化を1秒に1回チェックします。変化（カードの挿入または取り外し）が検出されると、カードをマウントまたはアンマウントし、その状態をシリアルモニタに出力します。
+- **`setup()`:** 出力用に `Serial1` を初期化し、カード検出ピンを設定し、デバイスの電源投入時にカードがすでに挿入されているかどうかを確認する初期チェックを行います。
+- **`loop()`:** カードを常に監視する代わりに、コードはノンブロッキングタイマー（`millis()`）を使用して、カードの状態変化を 1 秒に 1 回チェックします。変化（カードの挿入または取り外し）が検出されると、カードをマウントまたはアンマウントし、その状態をシリアルモニタに出力します。
 
 #### 期待される結果
 
@@ -1190,7 +1210,7 @@ void loop() {
 2. Arduino IDE のシリアルモニタ（**Tools > Serial Monitor**）を開きます。
 3. ボーレートが **115200** に設定されていることを確認します。
 
-次の操作に対応した出力が表示されます:
+次の操作に対応した出力が表示されます：
 
 - **起動時にカードがない場合:** モニタには `[SD] No card detected at startup...` と表示されます。
 - **カードを挿入したとき:** モニタには `[SD] Card inserted.` と表示され、その後にカード上のすべてのファイルとディレクトリの一覧が続きます。
@@ -1211,11 +1231,11 @@ void loop() {
 [FILE] live.1.indexPostings  4096 bytes
 ```
 
-## 応用例: SD カード → ePaper 画像パイプライン
+## 上級例: SD カード → ePaper 画像パイプライン
 
-これは reTerminal E シリーズ向けのフラッグシップ例です。**JPEG / BMP / PNG** ファイルを microSD カードから読み込み、設定可能なディザリングパイプラインを通して処理し、その結果を ePaper パネルに描画します。ここでは **ディザリングアルゴリズム**、**明るさ**、**アンカー位置**、**フィット / スケール** を調整できます。同じコード構造が 4 つすべてのパネルバリアントで動作し、モデルごとに変わるのは出力の色深度（1ビット白黒、2ビット Gray4、4ビット Gray16、または 6色 E6）のみです。
+これは reTerminal E シリーズ向けのフラッグシップ例です。microSD カードから **JPEG / BMP / PNG** ファイルを読み込み、設定可能なディザリングパイプラインを通して処理し、その結果を ePaper パネルに描画します。ここでは **ディザリングアルゴリズム**、**明るさ**、**アンカー位置**、**フィット / スケール** を調整できます。同じコード構造が 4 つすべてのパネルバリエーションで動作し、モデルごとに変わるのは出力の色深度（1 ビット白黒、2 ビット Gray4、4 ビット Gray16、または 6 色 E6）のみです。
 
-書き込み準備済みのスケッチが 5 つ **Seeed_GFX** ライブラリに同梱されています。自分のハードウェアに合ったものを選んでください:
+書き込み準備済みのスケッチが 5 つ **Seeed_GFX** ライブラリに同梱されています。自分のハードウェアに合ったものを選んでください：
 
 ### サンプル一覧
 
@@ -1231,36 +1251,36 @@ void loop() {
       <td>reTerminal&nbsp;E1001 (BW)</td>
       <td><code>reTerminal_E1001_SDcard_BW</code></td>
       <td>800 × 480</td>
-      <td>1ビット白 / 黒</td>
+      <td>1 ビット白黒</td>
     </tr>
     <tr>
       <td>reTerminal&nbsp;E1001 (Gray4)</td>
       <td><code>reTerminal_E1001_SDcard_Gray4</code></td>
       <td>800 × 480</td>
-      <td>2ビット 4階調グレースケール</td>
+      <td>2 ビット 4 階調グレースケール</td>
     </tr>
     <tr>
       <td>reTerminal&nbsp;E1002</td>
       <td><code>reTerminal_E1002_SDcard_Color6</code></td>
       <td>800 × 480</td>
-      <td>6色（B / W / R / Y / G / B）</td>
+      <td>6 色（B / W / R / Y / G / B）</td>
     </tr>
     <tr>
       <td>reTerminal&nbsp;E1003</td>
       <td><code>reTerminal_E1003_SDcard_Gray16</code></td>
       <td>1872 × 1404</td>
-      <td>4ビット 16階調グレースケール</td>
+      <td>4 ビット 16 階調グレースケール</td>
     </tr>
     <tr>
       <td>reTerminal&nbsp;E1004</td>
       <td><code>reTerminal_E1004_SDcard_Color6</code></td>
       <td>1200 × 1600</td>
-      <td>6色（B / W / R / Y / G / B）</td>
+      <td>6 色（B / W / R / Y / G / B）</td>
     </tr>
   </table>
 </div>
 
-5 つのスケッチはすべて [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_Bitmap/`](https://github.com/Seeed-Studio/Seeed_GFX/tree/master/examples/ePaper/reTerminal_SDcard_Bitmap) にあります。各フォルダは**完全に自己完結**しており、追加でインストールするライブラリは不要です。開いてそのまま書き込むだけです。
+5 つすべてのスケッチは [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_Bitmap/`](https://github.com/Seeed-Studio/Seeed_GFX/tree/master/examples/ePaper/reTerminal_SDcard_Bitmap) に含まれています。各フォルダは **完全に自己完結** しており、追加のライブラリをインストールする必要はありません。開いてそのまま書き込むだけです。
 
 ### パイプラインが行うこと
 
@@ -1289,7 +1309,7 @@ void loop() {
 
   {/* タイトル */}
   <text x="525" y="40" fontFamily="sans-serif" fontSize="20" fontWeight="bold" fill="#1e293b" textAnchor="middle">
-    画像処理パイプライン: microSD から ePaper へ
+    Image Processing Pipeline: microSD to ePaper
   </text>
 
   {/* ================= ノード ================= */}
@@ -1323,7 +1343,7 @@ void loop() {
     <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#8b5cf6" strokeWidth="2" filter="url(#shadow)" />
     <path d="M70 14 c-5.52 0-10 4.48-10 10 s4.48 10 10 10 c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.17-.64-1.6-.39-.41-.61-.98-.61-1.6 0-1.38 1.12-2.5 2.5-2.5 h1.5 c2.21 0 4-1.79 4-4 0-3.86-4.48-7-10-7z m-4 7 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5-3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5 3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5 3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z" fill="#8b5cf6" />
     <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">Palette Buffer</text>
-    <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">パネルパレットインデックス</text>
+    <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">panel-palette indices</text>
   </g>
 
   {/* ノード 5: ePaper */}
@@ -1331,7 +1351,7 @@ void loop() {
     <rect x="0" y="0" width="130" height="90" rx="8" fill="#f8fafc" stroke="#10b981" strokeWidth="2" filter="url(#shadow)" />
     <path d="M77 15 H53 c-1.1 0-2 .9-2 2 v14 c0 1.1 .9 2 2 2 h24 c1.1 0 2-.9 2-2 V17 c0-1.1-.9-2-2-2z m0 16 H53 V17 h24 v14z" fill="#10b981" />
     <text x="65" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">ePaper</text>
-    <text x="65" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">パネル更新</text>
+    <text x="65" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">panel update</text>
   </g>
 
   {/* ================= 矢印 & ラベル ================= */}
@@ -1360,7 +1380,7 @@ void loop() {
     </circle>
   </g>
 
-  {/* 矢印 3: ディザ */}
+  {/* 矢印 3：ディザ */}
   <g>
     <line x1="600" y1="145" x2="672" y2="145" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" markerEnd="url(#arrowhead)" />
     <text x="636" y="135" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#f59e0b" textAnchor="middle">ディザ</text>
@@ -1372,7 +1392,7 @@ void loop() {
     </circle>
   </g>
 
-  {/* 矢印 4: プッシュ */}
+  {/* 矢印 4：プッシュ */}
   <g>
     <line x1="820" y1="145" x2="892" y2="145" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" markerEnd="url(#arrowhead)" />
     <text x="856" y="135" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#8b5cf6" textAnchor="middle">プッシュ</text>
@@ -1393,9 +1413,9 @@ void loop() {
 </svg>
 
 1. **デコード** — ファイル形式はマジックバイト（`FF D8`、`BM`、または `89 50 4E 47`）によって検出されます。誤解を招く拡張子は自動的に修正され、警告がログに記録されます。
-2. **リサイズ**（オプション） — `DISPLAY_FIT` / `DISPLAY_SCALE` に基づいて最近傍でダウンスケールします。
+2. **リサイズ**（オプション） — `DISPLAY_FIT` / `DISPLAY_SCALE` に基づいて最近傍で縮小します。
 3. **ディザ** — 5 つのアルゴリズムのいずれかが、24 ビット RGB をパネルの小さなパレット（2 / 4 / 6 / 16 段階）に量子化します。
-4. **プッシュ** — 量子化されたバッファはアンカー位置の ePaper スプライトに書き込まれ、その後 `epaper.update()` によってパネルへクロックアウトされます。
+4. **プッシュ** — 量子化されたバッファはアンカー位置の ePaper スプライトに書き込まれ、その後 `epaper.update()` によってパネルへクロック出力されます。
 
 ### ステップ 1 — 自分のモデル用のサンプルを開く
 
@@ -1475,7 +1495,7 @@ Arduino Library Manager から pngle や miniz などをインストールする
 
 ### スケッチ全体のコード
 
-各バリアント用の完全な `.ino` ソースを以下に示します。ユーザーが調整できる設定（画像パス、ディザリングアルゴリズム、アンカー、フィット／スケール）はすべて、先頭付近の **USER CONFIGURATION** ブロック内にあります — それ以外のファイル部分は、通常編集する必要のない定型コードです。
+各バリアント用の完全な `.ino` ソースを以下に示します。ユーザーが調整できる設定（画像パス、ディザリングアルゴリズム、アンカー、フィット／スケール）はすべて、先頭付近の **USER CONFIGURATION** ブロック内にあります — それ以外のファイル部分は、通常は編集する必要のない定型コードです。
 
 <Tabs groupId="reterm-model">
 <TabItem value="e1001-bw" label="E1001 BW" default>
@@ -1680,7 +1700,7 @@ void loop() { delay(1000); }
 <TabItem value="e1001-gray4" label="E1001 Gray4">
 
 <details>
-<summary>ここをクリックして完全なコードをプレビュー — reTerminal_E1001_SDcard_Gray4.ino</summary>
+<summary>完全なコードをプレビューするにはここをクリック — reTerminal_E1001_SDcard_Gray4.ino</summary>
 
 ```cpp
 #include <SPI.h>
@@ -1819,7 +1839,7 @@ void loop() { delay(1000); }
 <TabItem value="e1002" label="E1002">
 
 <details>
-<summary>ここをクリックして完全なコードをプレビュー — reTerminal_E1002_SDcard_Color6.ino</summary>
+<summary>完全なコードをプレビューするにはここをクリック — reTerminal_E1002_SDcard_Color6.ino</summary>
 
 ```cpp
 #include <SPI.h>
@@ -1953,7 +1973,7 @@ void loop() { delay(1000); }
 <TabItem value="e1003" label="E1003">
 
 <details>
-<summary>ここをクリックして完全なコードをプレビュー — reTerminal_E1003_SDcard_Gray16.ino</summary>
+<summary>完全なコードをプレビューするにはここをクリック — reTerminal_E1003_SDcard_Gray16.ino</summary>
 
 ```cpp
 #include <SPI.h>
@@ -2225,7 +2245,7 @@ void loop() { delay(1000); }
 </Tabs>
 
 :::note 簡略版と完全なソースの違い
-上のコードブロックは、ここで読みやすくするために**少しだけ簡略化**されています（ヘルパー関数のインライン化、冗長なログ呼び出しの削除など）。ライブラリ内のスケッチ — **File → Examples → Seeed_GFX → ePaper → reTerminal_SDcard_Bitmap** から開くもの — には、完全な診断ログ、完全なフィット／アンカー処理ロジック、およびすべてのコメントが含まれています。
+上のコードブロックは、ここで読みやすくするために**少しだけ簡略化**されています（ヘルパー関数のインライン化、冗長なログ呼び出しの削除など）。ライブラリ内のスケッチ（**File → Examples → Seeed_GFX → ePaper → reTerminal_SDcard_Bitmap** から開くもの）は、完全な診断ログ、完全なフィット／アンカー処理ロジック、およびすべてのコメントを含んでいます。
 :::
 
 ### ステップ 2 — microSD カードを準備する
@@ -2245,11 +2265,11 @@ void loop() { delay(1000); }
 
 ローダーは標準で次の 3 つの形式を受け付けます：
 
-| フォーマット | 使用できるもの | 避けるべきもの |
+| 形式 | 使用できるもの | 避けるべきもの |
 |---|---|---|
 | **JPEG** (`.jpg` / `.jpeg`) | ベースライン 8 ビット、YCbCr またはグレースケール、任意のクロマサブサンプリング（4:4:4 / 4:2:2 / 4:2:0）。 | プログレッシブ JPEG、CMYK、EXIF の回転情報のみを使ったソース。 |
 | **BMP** (`.bmp`) | 24 ビット BGR 非圧縮、または 4 ビットインデックス（パレット + `BI_RGB`）。 | `BI_BITFIELDS`、RLE 圧縮 BMP。 |
-| **PNG** (`.png`) | 標準的な PNG なら何でも可（8 ビット、16 ビット、パレット、インターレース、RGBA）。RGBA は ePaper パネルが不透明なため、**白**の上に合成されます。 | なし — pngle はすべての標準 PNG バリアントを処理できます。 |
+| **PNG** (`.png`) | 標準的な PNG であれば何でも可（8 ビット、16 ビット、パレット、インターレース、RGBA）。ePaper パネルは不透明なので、RGBA は**白**の上に合成されます。 | なし — pngle はすべての標準 PNG バリアントを処理できます。 |
 
 ファイルの実際の形式は拡張子ではなく **マジックバイト** から判別されます。`.bmp` として保存された JPEG でも動作します（シリアルログに警告が表示されるだけです）。
 
@@ -2263,24 +2283,24 @@ void loop() { delay(1000); }
 </TabItem>
 <TabItem value="e1001-gray4" label="E1001 Gray4">
 
-BW と同じパネル（**800 × 480**）ですが、階調の幅がかなり広くなります — ネイティブ解像度のポートレートや風景写真は、BW スケッチよりも明らかに滑らかに見えます。
+BW と同じパネル（**800 × 480**）ですが、階調の幅が大きく向上します — ポートレートや風景写真をネイティブ解像度で表示すると、BW スケッチよりも明らかに滑らかに見えます。
 
 </TabItem>
 <TabItem value="e1002" label="E1002">
 
-パネルは **800 × 480** です。6 色パレットは疎なので、写真コンテンツでは強めのディザ（FS / Jarvis）をかけると見た目の品質が最も良くなります。
+パネルは **800 × 480** です。6 色パレットは色数が少ないため、強めのディザリング（FS / Jarvis）を使うと、写真コンテンツで最も良好な見た目になります。
 
 </TabItem>
 <TabItem value="e1003" label="E1003">
 
-パネルは **1872 × 1404**（約 **260 万ピクセル**、RGB888 で約 7.5 MB）です。パネルいっぱいのサイズのソースを使うと PSRAM が飽和し、ディザ段は `DITHER_NONE` へのフォールバックを余儀なくされます — この状況になるとローダーが警告を出力します。
+パネルは **1872 × 1404**（約 **260 万ピクセル**、RGB888 で約 7.5 MB）です。パネルサイズいっぱいのソースを使うと PSRAM が飽和し、ディザ段は `DITHER_NONE` へのフォールバックを余儀なくされます — この状況になるとローダーが警告を出力します。
 
-最良の結果を得るには、PC 上でソースをあらかじめ **1200 × 900 以下** にプリスケールする（または `DISPLAY_FIT = FIT_CONTAIN` とより小さい `DISPLAY_SCALE` を使う）ようにし、そのうえでデバイス側に最終的なディザ処理を任せてください。
+最良の結果を得るには、PC 側でソースをあらかじめ **1200 × 900 以下** にスケーリングしておく（または `DISPLAY_FIT = FIT_CONTAIN` とより小さい `DISPLAY_SCALE` を使う）うえで、最終的なディザリングをデバイスに任せてください。
 
 </TabItem>
 <TabItem value="e1004" label="E1004">
 
-パネルは **1200 × 1600**（約 190 万ピクセル、RGB888 で約 5.5 MB）です。8 MB の PSRAM に余裕を持って収まりますが、**パネル解像度での FS** と、それに必要な 11 MB のエラーバッファを組み合わせると、**確実に** フォールバックが発生します。安全のためデフォルトは `DITHER_BAYER8` になっています；ソースを縮小したあとでのみ `DITHER_FS` に切り替えてください。
+パネルは **1200 × 1600**（約 190 万ピクセル、RGB888 で約 5.5 MB）です。8 MB の PSRAM には余裕で収まりますが、**パネル解像度での FS** と、それに必要な 11 MB のエラーバッファを組み合わせると、**必ず** フォールバックが発生します。デフォルトは安全のため `DITHER_BAYER8` です。`DITHER_FS` に切り替えるのは、ソースを縮小した後にしてください。
 
 </TabItem>
 </Tabs>
@@ -2299,7 +2319,7 @@ static const char* IMAGE_PATH = "/img/demo.jpg";
 
 #### `DITHER_METHOD` — 使用するディザリングアルゴリズム
 
-ePaper パネルは物理的には 2 / 4 / 6 / 16 色しか表示できません。典型的な写真に含まれる何百万もの色を表現するために、ローダーは各ピクセルをそれら少数のパレットエントリのいずれかに**量子化**する必要があります。ディザリングアルゴリズムは、その量子化誤差を隣接ピクセルにどのように分散させるかを決定します。
+ePaper パネルが物理的に表示できるのは 2 / 4 / 6 / 16 色だけです。典型的な写真に含まれる何百万もの色を表現するために、ローダーは各ピクセルをそれら少数のパレットエントリのいずれかに**量子化**する必要があります。ディザリングアルゴリズムは、その量子化誤差を隣接ピクセルにどのように分散させるかを決定します。
 
 ```cpp
 static const DitherMethod DITHER_METHOD = DITHER_FS;
@@ -2307,22 +2327,22 @@ static const DitherMethod DITHER_METHOD = DITHER_FS;
 
 | オプション | 動作 | 使用タイミング |
 |---|---|---|
-| `DITHER_NONE` | 最も近い色に量子化し、誤差拡散なし。最速だが最もブロック状。 | 診断用途、またはポスタライズされた見た目にしたい場合。 |
-| `DITHER_BAYER8` | 8×8 の順序付き Bayer マトリクス。決定論的で、**エラーバッファ不要**。 | パネル解像度での E1003 / E1004 における最も安全な選択 — メモリ不足になりません。 |
-| `DITHER_FS` | Floyd-Steinberg 誤差拡散。**品質 / 速度** のバランスが最良。 | E1001 / E1002 でのデフォルト。滑らかなグラデーションを含む写真に最適。 |
-| `DITHER_JARVIS` | Jarvis-Judice-Ninke。より広い 12 係数カーネルで、出力がより滑らか。 | FS より高品質ですが、約 3 倍遅く、PSRAM 使用量も増えます。 |
-| `DITHER_ATKINSON` | Atkinson（クラシック Mac）。誤差の 6/8 のみを拡散 → コントラストが高く、より「エッチング」されたような見た目。 | スタイライズされた白黒出力、コミック／線画コンテンツ向け。 |
+| `DITHER_NONE` | 最も近い色に量子化し、誤差拡散なし。最速だがブロック感が強い。 | 診断用途、またはポスタライズされた見た目にしたい場合。 |
+| `DITHER_BAYER8` | 8×8 の順序付き Bayer 行列。決定論的で、**エラーバッファ不要**。 | パネル解像度での E1003 / E1004 に最も安全な選択 — メモリ不足になりません。 |
+| `DITHER_FS` | Floyd-Steinberg 誤差拡散。**画質と速度**のバランスが最良。 | E1001 / E1002 でのデフォルト。滑らかなグラデーションを含む写真に最適。 |
+| `DITHER_JARVIS` | Jarvis-Judice-Ninke。より広い 12 係数カーネルで、より滑らかな出力。 | FS より高画質ですが、約 3 倍遅く、PSRAM 使用量も増えます。 |
+| `DITHER_ATKINSON` | Atkinson（クラシック Mac）。誤差の 6/8 のみを拡散 → コントラストが高く、より「エッチング」された見た目。 | スタイライズされた白黒出力、コミック／線画コンテンツ向け。 |
 
 :::caution 誤差拡散のメモリコスト
 `DITHER_FS`、`DITHER_JARVIS`、`DITHER_ATKINSON` には、おおよそ `W × H × N_channels × 4` バイトの **浮動小数点エラーバッファ** が必要です。1872 × 1404 の場合、カラーでは約 **31 MB**、グレースケールでも約 **10 MB** となり、利用可能な PSRAM を大きく超えます。
 
-`ps_malloc` が失敗すると、ローダーは次のメッセージを出力し
+`ps_malloc` が失敗すると、ローダーは次のメッセージを出力し、
 
 ```
 [dither] FS error buffer alloc FAILED (10358 kB) -- falling back to DITHER_NONE
 ```
 
-静かに `DITHER_NONE` へ切り替えます。このフォールバックを避けたい場合は、`DITHER_BAYER8`（順序付きで追加メモリアロケーションなし）に切り替える **か**、先に画像を縮小してください。
+静かに `DITHER_NONE` へ切り替えます。このフォールバックを避けたい場合は、`DITHER_BAYER8`（順序付きで追加メモリアロケーションなし）に変更する **か**、先に画像を縮小してください。
 :::
 
 #### `DITHER_GAMMA` — 輝度補正
@@ -2331,7 +2351,7 @@ static const DitherMethod DITHER_METHOD = DITHER_FS;
 static const float DITHER_GAMMA = 1.0f;
 ```
 
-`1.0` がニュートラルです。値を大きくすると出力が**暗く**なります（屋外写真が ePaper 上で明るくなりすぎる場合に有効）。値を小さくすると**明るく**なります（夜景写真やスクリーンショットに有効）。典型的に有用な範囲は **0.8 – 1.6** です。
+`1.0` がニュートラルです。値を大きくすると出力が**暗く**なります（屋外写真が ePaper 上で明るくなりすぎる場合に有効）。値を小さくすると出力が**明るく**なります（夜景写真やスクリーンショットに有効）。実用的な範囲はおおよそ **0.8 – 1.6** です。
 
 #### `DISPLAY_ANCHOR` — パネル上のどこに画像を配置するか
 
@@ -2358,7 +2378,7 @@ static const float       DISPLAY_SCALE = 1.0f;
 
 | モード | 動作 |
 |---|---|
-| `FIT_ORIGINAL` | デコードされたサイズをそのまま保持します。推奨デフォルト — 予測しやすく、常に安全です。 |
+| `FIT_ORIGINAL` | デコード後のサイズをそのまま保持します。推奨デフォルト — 予測しやすく、常に安全です。 |
 | `FIT_CONTAIN` | アスペクト比を維持したまま、画像全体がパネル内に**完全に**収まるように縮小します。**拡大は一切行いません** — 小さい画像は小さいままです（拡大には `FIT_SCALE` を使用します）。 |
 | `FIT_SCALE` | 元のサイズに `DISPLAY_SCALE` を乗算します。縮小（`< 1.0`）と拡大（`> 1.0`）の両方をサポートします。 |
 
@@ -2370,12 +2390,12 @@ E1003（1872 × 1404）および E1004（1200 × 1600）では、`DISPLAY_SCALE`
 
 #### グレースケール深度（E1001 のみ）
 
-E1001 には **2 つ**のスケッチが同梱されています。これは同じ UC8179 パネルが BW（高速、1 ビット）**または** Gray4（低速、2 ビット、4 階調）で動作できるためです。コンテンツに応じて選択してください：
+E1001 には**2 つ**のスケッチが同梱されています。これは、同じ UC8179 パネルが BW（高速、1 ビット）**または** Gray4（低速、2 ビット、4 階調）で動作できるためです。コンテンツに応じて選択してください：
 
 | コンテンツ | 推奨スケッチ |
 |---|---|
 | 線画、QR コード、テキスト、手描きコミック。 | `reTerminal_E1001_SDcard_BW` |
-| 写真、滑らかな陰影を持つイラスト。 | `reTerminal_E1001_SDcard_Gray4` |
+| 写真、滑らかな陰影を含むイラスト。 | `reTerminal_E1001_SDcard_Gray4` |
 
 E1003 は常に 16 階調グレースケール（`initGrayMode(16)`）を使用します — このモードがパネルの代表的な機能です。E1002 と E1004 は 6 色パネルであり、グレースケール深度の選択肢は提供されません。
 
@@ -2384,7 +2404,7 @@ E1003 は常に 16 階調グレースケール（`initGrayMode(16)`）を使用�
 1. **Arduino IDE → Tools** で、ボードを **XIAO_ESP32S3**、**PSRAM = OPI PSRAM**、**Flash = 8 MB**、**Partition Scheme = Default 8 MB** に設定します。
 2. 準備した microSD カードを挿入します。
 3. スケッチを**アップロード**します。
-4. **キャリア基板上の USB-UART ブリッジ経由でシリアルモニタを開きます**（GPIO43 TX / GPIO44 RX、**115200 baud, 8N1**）— これは IDE が自動的に開く USB-CDC の `Serial` ではなく、`Serial1` である点に注意してください。
+4. **キャリアの USB-UART ブリッジ上のシリアルモニタ**を開きます（GPIO43 TX / GPIO44 RX、**115200 baud, 8N1**）— これは IDE が自動で開く USB-CDC の `Serial` ではなく、`Serial1` である点に注意してください。
 
 典型的なログ出力（1080 × 1920 PNG を使用した E1004 の例）：
 
@@ -2400,31 +2420,31 @@ E1003 は常に 16 階調グレースケール（`initGrayMode(16)`）を使用�
 [reTerm_E1004] done. Sleeping panel.
 ```
 
-この後パネルがリフレッシュを開始します — モデルと選択したグレー / カラーモードに応じて、フル更新には **15 ～ 45 秒** かかります。静止した状態を保ち、リフレッシュの途中でボードをリセットしないでください。
+この後パネルがリフレッシュされます — モデルと選択したグレー / カラーモードに応じて、フル更新には**15 ～ 45 秒**かかります。動かずに、リフレッシュの途中でボードをリセットしないでください。
 
 ### メモリ予算チートシート
 
-| パネル | RGB888 バッファ | FS エラーバッファ（ピーク） | FS 利用の余裕 |
+| パネル | RGB888 バッファ | FS エラーバッファ（ピーク） | FS を快適に使用可能？ |
 |---|---|---|---|
-| E1001 BW @ 800×480 | 1.1 MB | 1.5 MB | ✅ あり |
-| E1001 Gray4 @ 800×480 | 1.1 MB | 1.5 MB | ✅ あり |
-| E1002 E6 @ 800×480 | 1.1 MB | 4.6 MB | ✅ あり |
-| E1003 Gray16 @ 1872×1404 | 7.5 MB | 10.1 MB | ❌ なし — `DITHER_BAYER8` を使用するかソースを縮小 |
-| E1004 E6 @ 1200×1600 | 5.5 MB | 22.0 MB | ❌ なし — `DITHER_BAYER8` を使用するかソースを縮小 |
+| E1001 BW @ 800×480 | 1.1 MB | 1.5 MB | ✅ はい |
+| E1001 Gray4 @ 800×480 | 1.1 MB | 1.5 MB | ✅ はい |
+| E1002 E6 @ 800×480 | 1.1 MB | 4.6 MB | ✅ はい |
+| E1003 Gray16 @ 1872×1404 | 7.5 MB | 10.1 MB | ❌ いいえ — `DITHER_BAYER8` を使うかソースを縮小 |
+| E1004 E6 @ 1200×1600 | 5.5 MB | 22.0 MB | ❌ いいえ — `DITHER_BAYER8` を使うかソースを縮小 |
 
-XIAO ESP32-S3 モジュール上の 8 MB OPI PSRAM モジュールでは、Arduino ランタイムのオーバーヘッドを差し引くと、およそ **7.9 MB の使用可能領域** が得られます。ローダーがメモリアロケーションを満たせない場合、必要とした正確なサイズをログに出力し、`DISPLAY_FIT = FIT_CONTAIN` のときはサイズ変更して再試行するか、`DITHER_NONE` にフォールバックします。
+XIAO ESP32-S3 モジュール上の 8 MB OPI PSRAM モジュールでは、Arduino ランタイムのオーバーヘッドを差し引くと、およそ**7.9 MB の使用可能領域**が得られます。ローダーがメモリアロケーションを満たせない場合、必要とした正確なサイズをログに出力し、`DISPLAY_FIT = FIT_CONTAIN` のときはサイズ変更して再試行するか、`DITHER_NONE` にフォールバックします。
 
 :::tip リフレッシュ速度について
-書き込み後、ドライバが初期ウェーブフォームを実行している間、ePaper が最初の数秒間は真っ白のままになることがあります。最初のフルリフレッシュは、冷えたパネルでは数分かかる場合があります — これはパネルの電気化学的特性によるものであり、不具合ではありません。2 回目以降のリフレッシュはより高速になります。
+書き込み後、ドライバが初期ウェーブフォームを実行している間、ePaper が最初の数秒間は真っ白のままになることがあります。最初のフルリフレッシュは、冷えたパネルでは数分かかる場合があります — これはパネルの電気化学的特性であり、バグではありません。2 回目以降のリフレッシュはより高速になります。
 :::
 
 ## トラブルシューティング
 
-Arduino IDE のセットアップ、USB ドライバの問題、書き込み失敗、または「ePaper ディスプレイがリフレッシュしない」といった問題については、[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino#トラブルシューティング) の **Troubleshooting** セクションを参照してください。
+Arduino IDE のセットアップ問題、USB ドライバの問題、書き込み失敗、または「ePaper ディスプレイがリフレッシュしない」といった問題については、[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino#トラブルシューティング) の **Troubleshooting** セクションを参照してください。
 
 ## 技術サポート & 製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,24 +1,24 @@
 ---
-description: 本教程介绍如何基于 reBot Arm B601-DM、Orbbec Gemini 2 与 YOLO/OBB 抓取管线搭建一个完整的视觉夹取 Demo。
+description: 本教程介绍如何基于 reBot Arm B601-DM、RGB-D 深度相机与 YOLO/OBB 抓取管线搭建一个完整的视觉夹取 Demo。
 title: reBot Arm B601-DM 视觉夹取 Demo
 keywords:
   - reBot Arm
   - B601-DM
   - 抓取
-  - Gemini 2
+  - RGB-D
   - YOLO
   - 手眼标定
   - 机器人
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-05-20
+  date: 2026-06-17
   author: YinHaizhou
 translation:
   skip:
     - [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -28,13 +28,20 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
   <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </p>
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+<br />
+
 <p align="center">
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
     <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
     <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Camera-Orbbec%20Gemini%202-green.svg" alt="Camera" />
+    <img src="https://img.shields.io/badge/Camera-RGB--D-green.svg" alt="Camera" />
     <img src="https://img.shields.io/badge/Detection-YOLO-yellow.svg" alt="YOLO" />
 </p>
 
@@ -42,7 +49,15 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
   <strong>深度感知 · 目标检测 · 手眼标定 · 自主抓取 · 全开源</strong>
 </p>
 
-YOLO是一类广泛使用的实时目标检测模型，能够在单次前向推理中同时完成目标定位与类别识别。本教程基于YOLO、Orbbec Gemini 2深度相机，搭建一个可运行的reBot Arm B601-DM桌面视觉夹取Demo，并完成从环境安装、相机接入、手眼标定到抓取调试的完整流程。
+YOLO 是一类广泛使用的实时目标检测模型，能够在单次前向推理中同时完成目标定位与类别识别。本教程基于 YOLO、RGB-D 深度相机和 reBot Arm B601-DM 搭建一个可运行的桌面视觉夹取 Demo，并完成从环境安装、相机接入、手眼标定到抓取调试的完整流程。
+
+<p align="center">
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/demo.gif" alt="reBot Arm B601-DM 视觉夹取 Demo" />
+</p>
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1VjVA6KEff&autoplay=0" title="Bilibili video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 项目特点
 
@@ -52,8 +67,8 @@ YOLO是一类广泛使用的实时目标检测模型，能够在单次前向推�
 2. **GraspNet-Baseline 6D 夹取姿态估计（可选）**  
    支持基于 GraspNet-Baseline（`graspnet/graspnet-baseline`）对 RGB-D 点云进行 6D 夹取姿态估计，并结合 YOLO 检测框筛选目标候选，用于更复杂物体的夹取调试。
 
-3. **机械臂与夹爪驱动轻量封装**  
-   主抓取脚本统一复用 `RebotArm` 接口，集成 IK、轨迹控制和夹爪状态机。
+3. **机械臂与夹爪驱动封装**
+   主抓取脚本基于 `reBotArm_control_py` 的机械臂与末端控制器，并通过轻量抓取辅助完成夹爪开合、力控夹取与 TCP 位姿读取。
 
 4. **开源 & 可扩展**  
    所有代码开源，支持用户根据需求自定义控制算法和效果。
@@ -80,7 +95,7 @@ YOLO是一类广泛使用的实时目标检测模型，能够在单次前向推�
     </tr>
     <tr>
       <td>相机型号</td>
-      <td>Orbbec Gemini 2</td>
+      <td>Orbbec Gemini 2 / Intel RealSense D435i / D405</td>
     </tr>
     <tr>
       <td>检测方式</td>
@@ -114,12 +129,12 @@ YOLO是一类广泛使用的实时目标检测模型，能够在单次前向推�
 | USB2CAN 串口桥 | 1 | ✅ |
 | 电源适配器（24V） | 1 | ✅ |
 | USB-C / 通信线缆 | 1 | ✅ |
-| Orbbec Gemini 2 深度相机 | 1 | ✅ |
-| Gemini 2 摄像头连接件 / 安装支架 | 1 | ✅ |
+| RGB-D 深度相机 | 1 | ✅ |
+| 摄像头连接件 / 安装支架 | 1 | ✅ |
 
 ### 接线说明
 
-1. 将 Gemini 2 通过 USB 3.0 连接到主机。
+1. 将深度相机通过 USB 3.0 连接到主机。
 2. 将 USB2CAN 适配器连接到机械臂 CAN 总线。
 3. 确认 24V 电源、相机和机械臂全部连接可靠。
 4. 配置权限：
@@ -179,11 +194,28 @@ pip install -e .
 cd ../..
 ```
 
+如果 `pip install -e .` 报 `Multiple top-level packages discovered in a flat-layout`，请在 `reBotArm_control_py` 的 `pyproject.toml` 中加入显式包发现配置，然后重新执行 `pip install -e .`：
+
+```toml
+[tool.setuptools.packages.find]
+include = ["reBotArm_control_py*"]
+```
+
+B601 的 DM 与 RS 两种机械臂配置通过 SDK 仓库中的配置文件切换。B601-DM 请在 `sdk/reBotArm_control_py/config/rebotarm.yaml` 中确认：
+
+```yaml
+hardware_yaml: rebotarm_dm.yaml
+```
+
+视觉抓取程序会读取该 SDK 配置，并自动选择对应的机械臂控制模式与夹爪参数。
+
 ### 步骤 4. 安装深度相机 SDK
 
-**本项目使用 Orbbec Gemini2 深度相机，用户可根据自身情况选择合适的深度相机安装对应的 SDK 后，可跳过本步骤。**
+本项目支持 Orbbec Gemini 2 与 RealSense D435i / D405 等 RGB-D 深度相机。请根据实际使用的相机安装对应 SDK；如果当前环境已经能正常导入相机驱动，可跳过本步骤。
 
-Orbbec Gemini2 深度相机依赖 `pyorbbecsdk`（Orbbec SDK v2 的 Python 版本）。优先推荐直接安装预编译 Python 包：
+**Orbbec Gemini 2**
+
+Orbbec Gemini 2 深度相机依赖 `pyorbbecsdk`（Orbbec SDK v2 的 Python 版本）。优先推荐直接安装预编译 Python 包：
 
 **方式一：通过 pip 安装（推荐）**
 
@@ -213,13 +245,30 @@ git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 
 注意，如果上述安装过程中均发生错误导致安装失败，请参考下方 Orbbec 官方文档进行安装操作。
 
-首次使用建议安装 udev 规则：
+**验证安装**
+
+```bash
+python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
+```
+
+首次使用 Orbbec 相机时建议安装 udev 规则：
 
 ```bash
 sudo bash scripts/install_udev_rules.sh
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
+
+**RealSense D435i / D405**
+
+RealSense 相机依赖 `pyrealsense2`。通常可以直接通过 pip 安装：
+
+```bash
+pip install pyrealsense2
+python -c "import pyrealsense2; print('pyrealsense2 OK')"
+```
+
+如果系统需要完整的 RealSense 工具链或 udev 规则，请参考 RealSense SDK 官方文档安装 `librealsense2`。
 
 ### 步骤 5. 配置 GraspNet（可选）
 
@@ -248,6 +297,13 @@ cd graspnet-baseline
 # 按你的 CUDA 版本安装 PyTorch 后，再安装 GraspNet 运行依赖
 pip install open3d tensorboard Pillow tqdm
 
+# 编译本地算子前配置 CUDA 编译路径。
+export CUDA_HOME=$CONDA_PREFIX
+export TORCH_CUDA_ARCH_LIST="12.0"
+export CPATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPATH
+export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPLUS_INCLUDE_PATH
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+
 # 编译 CUDA 算子
 cd pointnet2
 pip install . --no-build-isolation
@@ -259,14 +315,15 @@ cd ..
 git clone https://github.com/graspnet/graspnetAPI.git
 cd graspnetAPI
 sed -i "s/'sklearn'/'scikit-learn'/" setup.py
-sed -i "s/'numpy==1.23.4'/'numpy>=1.24.0'/" setup.py
 pip install .
 cd ../../..
 ```
 
 ***注：如果直接参考graspnet-baseline官方仓库文档使用 `python setup.py install` 可能报 CUDA / PyTorch 相关错误，建议使用 `pip install . --no-build-isolation`，让扩展在当前 conda 环境中复用已安装的 PyTorch 与 CUDA 配置进行编译。***
 
-***此外，GraspNet API 的旧版依赖中可能仍使用已弃用的 `sklearn` 包名， `sed` 命令会将其替换为当前推荐的 `scikit-learn`，避免安装时报 `The 'sklearn' PyPI package is deprecated`。同时将 `numpy==1.23.4` 调整为 `numpy>=1.24.0`，避免安装 GraspNet API 时把现有环境中的 NumPy 降级并与机械臂控制依赖产生冲突。***
+***如果编译时报 `fatal error: cusparse.h: No such file or directory`，先运行 `find $CONDA_PREFIX -name cusparse.h`，并把包含 `cusparse.h` 的目录加入 `CPATH` / `CPLUS_INCLUDE_PATH`。如果 CUDA 头文件来自 conda `cuda-toolkit`，路径通常是 `$CONDA_PREFIX/targets/x86_64-linux/include`，而不是上面示例里的 pip `nvidia/cu13/include` 路径。***
+
+***此外，GraspNet API 的旧版依赖中可能仍使用已弃用的 `sklearn` 包名， `sed` 命令会将其替换为当前推荐的 `scikit-learn`，避免安装时报 `The 'sklearn' PyPI package is deprecated`。除非同步升级 GraspNet API 的旧依赖，否则建议保留其 `numpy==1.23.4` 约束，因为 `transforms3d==0.3.1` 仍使用 `np.float` 等旧 NumPy 别名。***
 
 参考 graspnet-baseline 官方仓库下载 GraspNet 官方预训练权重后，将 `checkpoint-rs.tar` 放到：
 
@@ -282,15 +339,6 @@ graspnet:
 ```
 
 `checkpoint` 支持三种写法：仅文件名会自动从 `sdk/graspnet-baseline/checkpoints/` 查找；相对路径会按项目根目录解析；绝对路径会直接使用。
-
-### 步骤 6. 验证依赖
-
-```bash
-python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
-python -c "import motorbridge; print('motorbridge OK')"
-```
-
-首次使用 Orbbec 相机时，建议在你安装的 `pyorbbecsdk` 目录内执行 `scripts/install_udev_rules.sh` 安装 udev 规则，否则可能无法正常打开设备。
 
 
 ## 手眼标定
@@ -322,7 +370,7 @@ python scripts/collect_handeye_eih.py --manual
 标定结果保存到：
 
 ```text
-config/calibration/orbbec_gemini2/hand_eye.npz
+config/calibration/<camera_type>/hand_eye.npz
 ```
 
 样本数建议最少 5 个样本且建议不少于 15 个样本。
@@ -366,8 +414,10 @@ python scripts/ordinary_grasp_pipeline.py
 grasp_pipeline:
   infer_every_live: 3
   grasp:
-    depth_quantile: 0.6
+    depth_quantile: 0.5
     pregrasp_offset_m: 0.080
+    insertion_depth_m: 0.015
+    min_base_z_m: 0.00
 ```
 
 这个脚本不会连接机械臂，只用于验证：  
@@ -393,18 +443,10 @@ python scripts/main.py --dry-run
 ```
 建议先通过 `--dry-run` 验证位姿和工作空间，再执行真实抓取。
 
-如果 `reBotArm_control_py` 不在默认位置，请在 `config/default.yaml` 中指定：
-
-```yaml
-robot:
-  repo_root: null
-```
-
-默认保持 `null` 即可，程序会优先自动查找 `sdk/reBotArm_control_py`。
-
 主程序执行流程：  
-1. 初始化机械臂与夹爪
-2. 移动到预备位，如果需要调整机械臂启动后的预备位置，请在 `config/default.yaml` 中修改：
+1. 初始化 RGB-D 相机，确认图像流可用
+2. 机械臂与夹爪使能
+3. 移动到预备位，如果需要调整机械臂启动后的预备位置，请在 `config/default.yaml` 中修改：
 
 ```yaml
 robot:
@@ -413,13 +455,13 @@ robot:
     y: 0.0
     z: 0.3
     roll: 0.0
-    pitch: 1.0
+    pitch: 0.7
     duration: 3.0
 ```
 
-3. 实时检测桌面目标
-4. 基于短轴估计抓取姿态
-5. 按 `G` 采当前帧并执行抓取
+4. 实时检测桌面目标
+5. 基于短轴估计抓取姿态
+6. 按 `G` 采当前帧并执行抓取
 
 运行时按键：  
 - `G`：抓取当前最佳目标
@@ -551,5 +593,6 @@ python -c "import torch; print(torch.cuda.is_available())"
 - [pyorbbecsdk 仓库](https://github.com/orbbec/pyorbbecsdk)
 - [pyorbbecsdk 文档](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
+- [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) 文档](https://graspnet.net/)

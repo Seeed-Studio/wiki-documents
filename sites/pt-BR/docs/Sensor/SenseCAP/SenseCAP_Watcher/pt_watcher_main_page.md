@@ -1,15 +1,15 @@
 ---
 description: SenseCAP Watcher
-title: Visão Geral
+title: Visão geral
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.png
 slug: /watcher
 sku: 113991315,113991275
 sidebar_position: 1
 last_update:
-  date: 06/20/2024
+  date: 6/12/2026
   author: Citric
 createdAt: '2024-06-21'
-updatedAt: '2026-03-16'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/watcher/
 ---
 
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/pt-br/watcher/
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Vídeo do Watcher</font></span></strong>
@@ -32,7 +32,7 @@ url: https://wiki.seeedstudio.com/pt-br/watcher/
 
 ## Catálogo do SenseCAP Watcher
 
-Apresentamos o Catálogo de Produtos do Watcher, seu guia completo para configurar, usar e manter seu dispositivo Watcher. Descubra os principais recursos, opções de personalização e possibilidades de montagem que tornam o Watcher a solução de monitoramento perfeita. Com instruções detalhadas, dicas de solução de problemas e especificações, este catálogo capacita você a utilizar totalmente o seu Watcher e ter tranquilidade por meio de tecnologia avançada de vigilância.
+Apresentamos o Catálogo de Produtos do Watcher, seu guia completo para configurar, usar e manter seu dispositivo Watcher. Descubra os principais recursos, opções de personalização e possibilidades de montagem que tornam o Watcher a solução de monitoramento perfeita. Com instruções detalhadas, dicas de solução de problemas e especificações, este catálogo permite que você aproveite totalmente o seu Watcher e tenha tranquilidade por meio de tecnologia avançada de vigilância.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/Infrastructure.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -40,29 +40,29 @@ Apresentamos o Catálogo de Produtos do Watcher, seu guia completo para configur
 
 ### [Preço e benefícios](https://wiki.seeedstudio.com/pt-br/watcher_price/)
 
-### [Visão Geral do Produto](https://wiki.seeedstudio.com/pt-br/product_overview_with_watcher/)
+### [Visão geral do produto](https://wiki.seeedstudio.com/pt-br/product_overview_with_watcher/)
 
-- [Visão Geral do Hardware](https://wiki.seeedstudio.com/pt-br/watcher_hardware_overview/)
+- [Visão geral de hardware](https://wiki.seeedstudio.com/pt-br/watcher_hardware_overview/)
 
-- [Diretriz de Operação](https://wiki.seeedstudio.com/pt-br/watcher_operation_guideline/)
+- [Diretrizes de operação](https://wiki.seeedstudio.com/pt-br/watcher_operation_guideline/)
 
-- [Diretriz de Atribuição de Tarefas](https://wiki.seeedstudio.com/pt-br/getting_started_with_watcher_task/)
+- [Diretrizes de atribuição de tarefas](https://wiki.seeedstudio.com/pt-br/getting_started_with_watcher_task/)
 
-### [Visão Geral da Estrutura de Software](https://wiki.seeedstudio.com/pt-br/watcher_software_framework_overview/)
+### [Visão geral da estrutura de software](https://wiki.seeedstudio.com/pt-br/watcher_software_framework_overview/)
 
-- [Introdução ao app SenseCraft](https://wiki.seeedstudio.com/pt-br/sensecap_app_introduction/)
+- [Introdução ao SenseCraft APP](https://wiki.seeedstudio.com/pt-br/sensecap_app_introduction/)
 
-- [Introdução ao Serviço de Software do Watcher](https://wiki.seeedstudio.com/pt-br/watcher_software_service_framework/)
+- [Introdução ao serviço de software do Watcher](https://wiki.seeedstudio.com/pt-br/watcher_software_service_framework/)
 
-- [Implantar Localmente os Recursos de IA do Watcher](https://wiki.seeedstudio.com/pt-br/watcher_local_deploy/)
+- [Implantar localmente os recursos de IA do Watcher](https://wiki.seeedstudio.com/pt-br/watcher_local_deploy/)
 
 ### [Notificação](https://wiki.seeedstudio.com/pt-br/notifications_with_watcher_main_page/)
 
 #### [Saída UART](https://wiki.seeedstudio.com/pt-br/uart_output/)
 
-#### [Notificação via Proxy HTTP](https://wiki.seeedstudio.com/pt-br/http_proxy_notification/)
+#### [Notificação por proxy HTTP](https://wiki.seeedstudio.com/pt-br/http_proxy_notification/)
 
-##### [Casa Inteligente](https://wiki.seeedstudio.com/pt-br/smart_main_page/)
+##### [Casa inteligente](https://wiki.seeedstudio.com/pt-br/smart_main_page/)
 
 - [Integrar o Watcher ao Home Assistant](https://wiki.seeedstudio.com/pt-br/integrate_watcher_to_ha/)
 
@@ -90,26 +90,25 @@ Apresentamos o Catálogo de Produtos do Watcher, seu guia completo para configur
 
 ### [Aplicação](https://wiki.seeedstudio.com/pt-br/applications_with_watcher_main_page/)
 
-#### [Caso de Uso](https://wiki.seeedstudio.com/pt-br/use_case/)
+#### [Caso de uso](https://wiki.seeedstudio.com/pt-br/use_case/)
 
 #### [Desenvolvimento](https://wiki.seeedstudio.com/pt-br/development/)
 
-- [Treinando Modelo para o Watcher](https://wiki.seeedstudio.com/pt-br/training_model_for_watcher/)
+- [Treinando modelo para o Watcher](https://wiki.seeedstudio.com/pt-br/training_model_for_watcher/)
 
+## Recursos
 
+- [HX6538 Datasheet](https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher/blob/main/Hardware/HX6538_datasheet.pdf)
+- [SenseCAP Watcher 3D Shell](https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher/blob/main/Hardware/SenseCAP_Watcher-3D-Shell_v1.stp)
+- [SenseCAP Watcher Schematic](https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher/blob/main/Hardware/SenseCAP_Watcher_v1.0_SCH.pdf)
+- [ESP32-S3 Datasheet](https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher/blob/main/Hardware/esp32-s3_datasheet.pdf)
 
+## ✨ Projeto de colaboradores
 
+- Temos uma lista de tarefas para atualizar esta página, que está categorizada em nosso [projeto de colaboradores](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), pois estamos dedicados a aprimorar a experiência do usuário e fornecer melhor suporte por meio do desenvolvimento da nossa plataforma wiki.
+- [Sua contribuição para esta página](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33962909) é essencial para nós! Valorizamos muito a sua opinião e agradeceríamos imensamente a sua ajuda na geração de ideias.
 
-**Em preparação...**
-
-
-
-## ✨ Projeto de Colaboradores
-
-- Temos uma lista de tarefas para atualizar esta página, que está categorizada em nosso [projeto de colaboradores](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), pois estamos dedicados a aprimorar a experiência do usuário e oferecer um melhor suporte por meio do desenvolvimento da nossa plataforma wiki.
-- [Sua contribuição para esta página](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33962909) é essencial para nós! Valorizamos muito sua opinião e agradeceríamos imensamente sua ajuda na geração de ideias.
-
-## Suporte Técnico & Discussão de Produto
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

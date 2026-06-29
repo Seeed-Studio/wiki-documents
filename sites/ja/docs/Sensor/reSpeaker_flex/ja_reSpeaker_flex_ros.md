@@ -1,19 +1,18 @@
 ---
-description: reSpeaker Flex マイクアレイと ROS2 を使用して、音声コマンドをリアルタイムのロボット移動、回転動作、および音声フィードバックに変換する、音声制御 ROS2 TurtleSim プロジェクトです。
-
-title: reSpeaker Flex 上の ROS2 音声パイプライン
+description: reSpeaker Flex と Groq AI を使用して、音声コマンドをリアルタイムのロボット移動、回転動作、および音声フィードバックに変換する、音声制御 ROS2 TurtleSim プロジェクト。
+title: reSpeaker 上の ROS2 音声パイプライン
 keywords:
   - reSpeaker
   - ロボティクス
   - ROS2
-image: https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png
 slug: /respeaker_flex_ros2_voice_pipeline
-sku: 114993700, 101991441, 114993701
+sku: 114993700, 101991441, 114993701,100099135,,100005504
 last_update:
   date: 5/27/2026
   author: Kasun Thushara
 createdAt: '2026-05-27'
-updatedAt: '2026-05-27'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/ja/respeaker_flex_ros2_voice_pipeline/
 ---
 
@@ -21,23 +20,100 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_ros2_voice_pipeline/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
 
-このプロジェクトでは、reSpeaker Flex マイクアレイと ROS2 を使用して、あなたの声で TurtleSim を制御できるようにします。「Hey Jarvis」と言ってからコマンドを話すと、Jarvis が音声を録音し、Groq Whisper で文字起こしし、Groq LLaMA で意図を解釈し、Groq Orpheus TTS で応答します。前進 / 後退の移動、角度指定の回転、DoA に基づく方向向き、即時停止コマンドをサポートします。このシステムは、ウェイクワード検出、音声キャプチャ、ROS2 トピック、シミュレータへのコマンド送信を 1 つのシームレスなパイプラインに統合しています。Ubuntu と ROS2 Humble で素早くセットアップできるよう設計されており、音声駆動ロボットの実験を簡単に実行できます。
+このプロジェクトは、reSpeaker マイクアレイと ROS2 を使って、あなたの声を TurtleSim の制御に変換します。「Hey Jarvis」と言ってからコマンドを話すと、Jarvis が音声を録音し、Groq Whisper で文字起こしし、Groq LLaMA で意図を解釈し、Groq Orpheus TTS で応答します。前進 / 後退の移動、角度指定の回転、DoA に基づく向き合わせ、即時停止コマンドをサポートします。このシステムは、ウェイクワード検出、音声キャプチャ、ROS2 トピック、シミュレータへのコマンド送信を 1 つのシームレスなパイプラインに統合しています。Ubuntu と ROS2 Humble での素早いセットアップを前提に設計されており、音声駆動のロボット実験を簡単に実行できます。
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={600} height="auto" /></p>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-    </a>
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      OR
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                今すぐ入手 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                今すぐ入手 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
 </div>
+
 
 ## パート 1 — ROS2 Humble をインストールする
 
 > すでにマシンに ROS2 Humble がインストールされている場合は、このパートをスキップしてください。
 > 次を実行して確認します: `ros2 --version`
 
-**1.1 ROS2 の apt リポジトリを設定する**
+**1.1 ROS2 の apt リポジトリをセットアップする**
 
 ```bash
 # Make sure your system is up to date
@@ -63,7 +139,7 @@ sudo apt update
 sudo apt install -y ros-humble-desktop
 ```
 
-> `desktop` バリアントには、TurtleSim、RViz、および必要なすべてのツールが含まれます。
+> `desktop` バリアントには、TurtleSim、RViz、および必要なすべてのツールが含まれています。
 > ダウンロードサイズは約 1 GB です — 数分かかる場合があります。
 
 **1.3 ビルドツールをインストールする**
@@ -79,7 +155,7 @@ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-**1.5 インストールを確認する**
+**1.5 インストールを検証する**
 
 ```bash
 ros2 --version
@@ -100,7 +176,7 @@ ros2 run turtlesim turtle_teleop_key
 
 ## パート 2 — デバイス用の udev ルールを作成する
 
-reSpeaker USB Mic Array の適切な権限を確保するために、新しい udev ルールを作成します:
+reSpeaker USB Mic Array に適切な権限を与えるため、新しい udev ルールを作成します:
 
 ```bash
 sudo nano /etc/udev/rules.d/50-respeaker.rules
@@ -114,9 +190,9 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="0018", MODE="0666", 
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="001a", MODE="0666", GROUP="plugdev"
 ```
 
-udev ルールを再読み込みし、サービスを再起動する
+udev ルールをリロードし、サービスを再起動する
 
-変更を反映させるために、udev ルールを再読み込みし、サービスを再起動します:
+変更を反映させるために、udev ルールをリロードし、サービスを再起動します:
 
 ```bash
 sudo udevadm control --reload-rules
@@ -135,7 +211,7 @@ sudo service udev restart
 - **LLaMA 3** — コマンド内容の理解
 - **Orpheus** — Jarvis の音声応答
 
-1. [console.groq.com](https://console.groq.com) にアクセスして無料アカウントを作成します
+1. [console.groq.com](https://console.groq.com) にアクセスし、無料アカウントを作成します
 2. 左側のサイドバーで **API Keys** をクリックします
 3. **Create API Key** をクリックし、名前（例: "jarvis"）を付けて作成し、コピーします
 4. どこか安全な場所に保存します — すぐ後で `config.env` に貼り付けます
@@ -149,7 +225,7 @@ sudo service udev restart
 
 > **重要:** このプロジェクトでは仮想環境を使用しないでください。
 > ROS2 はシステムの Python を使用し、venv 内にインストールされたパッケージは認識できません。
-> すべてのパッケージを ROS2 ノードから利用できるようにするため、`--break-system-packages` を付けてインストールします。
+> すべてを `--break-system-packages` 付きでインストールし、ROS2 ノードから利用できるようにします。
 
 ```bash
 pip install \
@@ -200,12 +276,21 @@ source ~/.bashrc
 
 **6.1 リポジトリをクローンする**
 
+**Flex を使用している場合**
+
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/KasunThushara/ros_voice_controller_flex.git my_robot_controller
 ```
 
-> 現在、ワークスペースは次のようになっているはずです:
+**XVF3800 を使用している場合**
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/KasunThushara/ros_voice_controller.git my_robot_controller
+```
+
+> あなたのワークスペースは、現在次のようになっているはずです:
 > ```
 > ~/ros2_ws/
 > └── src/
@@ -286,7 +371,7 @@ Available INPUT devices:
         channels=2  rate=16000Hz
 ```
 
-**reSpeaker Flex** または **reSpeaker Flex XVF3800** と表示されている行を探します。角括弧内の数字があなたの `MIC_INDEX` です。その番号で `config.env` を更新してください。
+**reSpeaker Flex** または **reSpeaker Flex XVF3800** と表示されている行を探します。角括弧内の数字があなたの `MIC_INDEX` です。その数字で `config.env` を更新してください。
 
 ---
 
@@ -307,7 +392,7 @@ Finished <<< my_robot_controller [3.2s]
 Summary: 1 package finished [3.5s]
 ```
 
->  Python ファイルを変更するたびに、`colcon build` と `source ~/.bashrc` を実行する必要があります。
+>  Python ファイルを変更するたびに、`colcon build` を実行し、`source ~/.bashrc` を実行する必要があります。
 
 ---
 
@@ -317,7 +402,7 @@ Summary: 1 package finished [3.5s]
 ros2 launch my_robot_controller jarvis.launch.py
 ```
 
-次の 3 つのプロセスが起動するはずです:
+3 つのプロセスが起動するはずです：
 
 ```
 [turtlesim_node-1]   [INFO] Spawning turtle [turtle1] at x=[5.54], y=[5.54]
@@ -327,11 +412,11 @@ ros2 launch my_robot_controller jarvis.launch.py
 [voice_command-3]    [INFO] Jarvis is listening ...
 ```
 
-カメのウィンドウが開きます。次のように話しかけてください:
+カメのウィンドウが開きます。次のように話しかけてください：
 
 > **"Hey Jarvis, move forward"**
 
-Jarvis が「Moving forward!」と応答し、カメが前進します。
+Jarvis が「Moving forward!」と応答し、カメが動きます。
 
 ---
 
@@ -339,25 +424,25 @@ Jarvis が「Moving forward!」と応答し、カメが前進します。
 
 ## 音声コマンドリファレンス
 
-| このように話す | 実行される動作 |
+| このように話す | 何が起こるか |
 |---|---|
-| `"Hey Jarvis, move forward"` | カメが 1 ステップ前進します |
-| `"Hey Jarvis, move backward"` | カメが 1 ステップ後退します |
-| `"Hey Jarvis, turn left"` | カメが左に 90° 回転します |
-| `"Hey Jarvis, turn left 45"` | カメが左に 45° 回転します |
-| `"Hey Jarvis, turn right"` | カメが右に 90° 回転します |
-| `"Hey Jarvis, turn right 30 degrees"` | カメが右に 30° 回転します |
-| `"Hey Jarvis, turn to my direction"` | カメがあなたの声の方向（DoA）を向きます |
+| `"Hey Jarvis, move forward"` | カメが前方に 1 ステップ進む |
+| `"Hey Jarvis, move backward"` | カメが後方に 1 ステップ下がる |
+| `"Hey Jarvis, turn left"` | カメが左に 90° 回転する |
+| `"Hey Jarvis, turn left 45"` | カメが左に 45° 回転する |
+| `"Hey Jarvis, turn right"` | カメが右に 90° 回転する |
+| `"Hey Jarvis, turn right 30 degrees"` | カメが右に 30° 回転する |
+| `"Hey Jarvis, turn to my direction"` | カメがあなたの声の方向（DoA）を向く |
 | `"Hey Jarvis, face me"` | 上と同じ |
-| `"Hey Jarvis, turn to 90"` | カメが絶対角 90° の向きに回転します |
-| `"Hey Jarvis, face 180 degrees"` | カメが絶対角 180° の向きに回転します |
-| `"Hey Jarvis, spin around"` | カメが 360° のスピンを行います |
+| `"Hey Jarvis, turn to 90"` | カメが絶対 90° の向きに回転する |
+| `"Hey Jarvis, face 180 degrees"` | カメが絶対 180° の向きに回転する |
+| `"Hey Jarvis, spin around"` | カメが 360° のスピンを 1 回行う |
 | `"Hey Jarvis, do a 360"` | 上と同じ |
-| `"Hey Jarvis, stop"` | カメが即座に停止します |
+| `"Hey Jarvis, stop"` | カメが即座に停止する |
 
 ---
 
-## プロジェクトファイル構成
+## プロジェクトのファイル構成
 
 ```
 my_robot_controller/
@@ -382,7 +467,7 @@ my_robot_controller/
 └── setup.py
 ```
 
-### ノード同士の接続方法
+### ノード同士の接続
 
 ```
 reSpeaker Flex (USB)
@@ -411,32 +496,32 @@ reSpeaker Flex (USB)
 
 | 変数 | デフォルト | 説明 |
 |---|---|---|
-| `GROQ_API_KEY` | *(required)* | Groq の API キー |
+| `GROQ_API_KEY` | *(required)* | あなたの Groq API キー |
 | `MIC_INDEX` | `1` | reSpeaker の PyAudio デバイスインデックス |
 | `WAKEWORD_MODEL` | `hey jarvis` | ウェイクワードのフレーズ |
-| `WAKEWORD_THRESHOLD` | `0.5` | 検出感度 (0.0–1.0、値が小さいほど高感度) |
-| `WAKEWORD_COOLDOWN` | `2` | ウェイクワードが再度トリガーされるまでの秒数 |
-| `RECORDING_SECONDS` | `4` | ウェイクワード検出後に録音を続ける時間 |
-| `SAMPLE_RATE` | `16000` | オーディオサンプリングレート (Hz) |
+| `WAKEWORD_THRESHOLD` | `0.5` | 検出感度（0.0–1.0、値が小さいほど高感度） |
+| `WAKEWORD_COOLDOWN` | `2` | ウェイクワードが再トリガー可能になるまでの秒数 |
+| `RECORDING_SECONDS` | `4` | ウェイクワード検出後に録音する時間（秒） |
+| `SAMPLE_RATE` | `16000` | オーディオサンプリングレート（Hz） |
 | `LLM_MODEL` | `llama-3.1-8b-instant` | インテント解析用の Groq LLM モデル |
-| `STT_MODEL` | `whisper-large-v3-turbo` | 音声書き起こし用の Groq Whisper モデル |
+| `STT_MODEL` | `whisper-large-v3-turbo` | 音声認識用の Groq Whisper モデル |
 | `TTS_MODEL` | `canopylabs/orpheus-v1-english` | Groq TTS モデル |
-| `TTS_VOICE` | `autumn` | 音声出力に使用するボイス (`tara`, `leah`, `leo`, `dan`, `mia`) |
+| `TTS_VOICE` | `autumn` | 音声出力に使用するボイス（`tara`、`leah`、`leo`、`dan`、`mia`） |
 
 ---
 
 
 ## リソース
 
-以下を利用して構築されています：
+以下を使用して構築されています：
 - [Seeed Studio reSpeaker Flex](https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/) — XMOS XVF3800 チップ搭載のマイクアレイ
 - [ROS2 Humble](https://docs.ros.org/en/humble/) — ロボット用ミドルウェア
-- [openwakeword](https://github.com/dscripka/openWakeWord) — ローカルウェイクワード検出
+- [openwakeword](https://github.com/dscripka/openWakeWord) — ローカルのウェイクワード検出
 - [Groq](https://groq.com/) — 超高速 Whisper STT、LLaMA LLM、Orpheus TTS
-- [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — ROS2 タートルシミュレータ
+- [TurtleSim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) — ROS2 カメシミュレータ
 
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
 
