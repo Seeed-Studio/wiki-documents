@@ -111,7 +111,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
       <td colSpan={2}>1*4K60 (H.265) | 3*4K30 (H.265) | 6*1080p60 (H.265) | 12*1080p30 (H.265)</td>
       <td colSpan={2}>1080p30 suportado por 1-2 núcleos de CPU</td>
       <td colSpan={2}>2*4K60 | 4*4K30 | 10*1080p60 | 22*1080p30 (H.265)<br /> 2*4K60 | 4*4K30 | 10*1080p60 | 20*108p30 (H.264)</td>
-    </tr]
+    </tr>
     <tr>
       <td>Decodificação de vídeo</td>
       <td colSpan={2}>1×8K30 (H.265) | 2×4K60 (H.265) | 4×4K30 (H.265) | 9×1080p60 (H.265) | 18×1080p30 (H.265)</td>

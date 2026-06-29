@@ -160,7 +160,7 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
       <td rowSpan={7}>拡張</td>
       <td>Mini PCIe</td>
       <td colSpan={6}>4G/LoRaWAN® 用 Mini PCIe（モジュールはオプション） <br /></td>
-    </tr]
+    </tr>
     <tr>
       <td>Wi-Fi</td>
       <td colSpan={6}>SMD Wi-Fi/Bluetooth をサポート（モジュールはオプション） </td>

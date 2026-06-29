@@ -161,7 +161,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     <tr>
       <th rowSpan="1">Versão do Jetpack</th>
       <td colSpan="2">Jetpack 6.2.1</td>
-    </tr]
+    </tr>
     <tr>
       <th rowSpan="3">Mecânico</th>
       <td>Dimensões (L x P x A)</td>

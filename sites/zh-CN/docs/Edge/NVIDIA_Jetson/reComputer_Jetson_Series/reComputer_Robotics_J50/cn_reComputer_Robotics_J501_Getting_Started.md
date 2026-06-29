@@ -136,7 +136,7 @@ reComputer Robotics J501 是一款面向高级机器人和工业应用的高性�
     <tr>
       <th>风扇</th>
       <td colSpan={2}>1×12 V（2.54 mm），1×5 V（1.25 mm JST）</td>
-    </tr]
+    </tr>
     <tr>
       <th>按键</th>
       <td colSpan={2}>1× Recovery + 1× Reset</td>

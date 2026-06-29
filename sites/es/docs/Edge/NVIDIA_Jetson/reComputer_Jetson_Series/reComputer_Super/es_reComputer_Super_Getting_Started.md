@@ -197,7 +197,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     <tr>
       <td>Pantalla</td>
       <td colSpan={3}>1x HDMI 2.1</td>
-    </tr]
+    </tr>
     <tr>
       <td>Ventilador</td>
       <td colSpan={3}>1x conector de ventilador de 4 pines (5V PWM); <br />1x conector de ventilador de 4 pines (12V PWM);</td>
