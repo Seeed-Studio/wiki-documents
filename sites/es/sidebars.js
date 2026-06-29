@@ -723,19 +723,6 @@ const sidebars = {
             }
           ],
         },
-        //       {
-        //            type: 'category',
-        //           label: 'SenseCAP T1000-P Pet Tracker',
-        //           collapsed: true,
-        //           collapsible: true,
-        //          link: {
-        //            type: "doc",
-        //           id: 'Sensor/SenseCAP/SenseCAP_T1000-P/t1000_p_intro',
-        //         },
-        //        items: [
-        //         'Sensor/SenseCAP/SenseCAP_T1000-P/get_started_with_t1000_p',
-        //           ],
-        //     },
         {
           type: 'category',
           label: 'SenseCAP Sensor',
@@ -3834,6 +3821,7 @@ const sidebars = {
                   label: 'J601-Robotics Carrier Board',
                   items: [
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/es_reComputer_Robotics_J601_Getting_Started',
+                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/es_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/es_reComputer_A203_Flash_System',

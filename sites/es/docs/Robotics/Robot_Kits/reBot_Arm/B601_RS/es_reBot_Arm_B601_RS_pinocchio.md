@@ -229,7 +229,7 @@ uv run python example/0x01rs06_test.py
 | `loop` | Entrar en modo de control en bucle |
 | `q` / `quit` | Salir |
 
-**Nota**: Los motores Robostride usan la interfaz CAN (`can0` por defecto), con ID de host/feedback por defecto `0xFD`.
+**Nota**: Los motores Robostride usan la interfaz CAN (`can0` por defecto), con ID de host/feedback por defecto `0xFD`. Durante las pruebas del motor, primero es necesario deshabilitar el motor y luego volver a habilitarlo para permitir una lectura y un control normales.
 
 ---
 

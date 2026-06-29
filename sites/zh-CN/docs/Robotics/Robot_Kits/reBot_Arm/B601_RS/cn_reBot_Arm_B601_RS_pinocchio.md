@@ -228,7 +228,7 @@ uv run python example/0x01rs06_test.py
 | `loop` | 进入循环控制模式 |
 | `q` / `quit` | 退出 |
 
-**注意**：Robostride 电机使用 CAN 接口（默认 `can0`），host/feedback ID 默认为 `0xFD`。
+**注意**：Robostride 电机使用 CAN 接口（默认 `can0`），host/feedback ID 默认为 `0xFD`，电机在测试时需要disable后在enable才可以正常读取和控制电机。
 
 ---
 

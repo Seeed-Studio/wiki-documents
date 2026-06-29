@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-06-05'
+updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/recomputer_jetson_super_getting_started/
 ---
 
@@ -282,21 +282,32 @@ Please refer to the table below to prepare the host machine.
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.</p>
 
 :::
 
@@ -315,6 +326,27 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td rowSpan={4}>7.2</td>
+      <td> Orin Nano 4GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm">Download</a></td>
+      <td>0978be490c5ff7c1648317240e8f00d7<br />6b2d025ed30a945249eaa69112a047c8</td>
+    </tr>
+    <tr>
+      <td>Orin Nano 8GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFEKDfgr0CS7jHtF-JwR0KAZC0l4XMAUKFW4Tsq2960iU?e=PI5PkJ">Download</a></td>
+      <td>22a21d0ee9abdceb812e06ac399d8ca<br />5f14a3880fdf989c876223e72b21f4de6</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1">Download</a></td>
+      <td>7613332f8eeb315a0d9d51744a8f0a9<br />e8e11e92e091d2a06ad609235a54f7c72</td>
+    </tr>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">Download</a></td>
+      <td>5c66fcbf8f4bcb21477ada08c78796f<br />69524ccc6eccf929fdd9f026e948482f1</td>
+    </tr>
     <tr>
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
@@ -341,7 +373,7 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
 </div>
 
 :::danger
-The Jetpack6 image file is approximately **14.1GB** in size and should take around 60 minutes to download. Please kindly wait for the download to complete.
+JetPack image files are large and may take around 60 minutes to download. Please kindly wait for the download to complete.
 :::
 
 :::info
@@ -392,13 +424,15 @@ The below image is for Orin Nano 8GB
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
+# For JetPack 6.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
+# For JetPack 7.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
 ```
 
 **Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
+# For example: cd mfi_recomputer-orin-super-j401
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 

@@ -12,7 +12,7 @@ last_update:
   date: 1/09/2025
   author: Jiahao Li
 createdAt: '2025-01-09'
-updatedAt: '2026-04-16'
+updatedAt: '2026-06-24'
 url: https://wiki.seeedstudio.com/r2000_series_getting_start/
 ---
 
@@ -108,7 +108,7 @@ The Hailo AI Software Suite provides powerful tools to run AI models efficiently
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/piimager_show_2.png" alt="pir" width="600" height="auto"/></p>      
 
-**NOTE1:** We recommend flashing the (64-bit Raspberry Pi OS Debian 12 Bookworm)[https://downloads.raspberrypi.com/raspios_oldstable_full_arm64/images/raspios_oldstable_full_arm64-2025-10-02/2025-10-01-raspios-bookworm-arm64-full.img.xz] image for now. The newly released Raspberry Pi OS based on Debian 13 “Trixie” hasn’t updated the hailo-all package yet, so Bookworm will give you full Hailo support out of the box.
+**NOTE1:** We recommend flashing the [64-bit Raspberry Pi OS Debian 12 Bookworm](https://downloads.raspberrypi.com/raspios_oldstable_full_arm64/images/raspios_oldstable_full_arm64-2025-10-02/2025-10-01-raspios-bookworm-arm64-full.img.xz) image for now. The newly released Raspberry Pi OS based on Debian 13 “Trixie” hasn’t updated the hailo-all package yet, so Bookworm will give you full Hailo support out of the box.
 Download [link](https://www.raspberrypi.com/software/operating-systems/).
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/OS.png" alt="pir" width="600" height="auto"/></p>
@@ -125,15 +125,19 @@ If you still want to try the latest image, **you’ll need to install the Hailo 
 
 Or you can use this link to download the image file:
 
-[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntu for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Step 5.** Click **STORAGE** and select the target storage device prepared for OS flashing.
+- **Step 4.** Click **STORAGE** and select the target storage device prepared for OS flashing.
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/piimager_show_4.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 6.** Finally, click **WRITE**
+- **Step 5.** Finally, click **WRITE**
 
 Please wait a few minutes until the flashing process is complete.
+
+- **Step 6.** Fix M.2 Dual Hat Driver
+
+Put the flashed SD card into your reComputer, and boot it up. Follow the instructions in the [Fix M.2 Dual Hat Driver](https://wiki.seeedstudio.com/r2000_series_getting_start/#fix-m2-dual-hat-driver).
 
 ### For MAC host computer
 
@@ -164,13 +168,17 @@ Here you can **set a hostname, enable SSH, set a password, configure wifi, set l
 
 Or you can use this link to download the image file:
 
-[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntu for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Step 5.** Click **CHOOSE STORAGE**
 
 - **Step 6.** Finally, click **WRITE**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
+
+- **Step 7.** Fix M.2 Dual Hat Driver
+
+Put the flashed SD card into your reComputer, and boot it up. Follow the instructions in the [Fix M.2 Dual Hat Driver](https://wiki.seeedstudio.com/r2000_series_getting_start/#fix-m2-dual-hat-driver).
 
 ### For Linux host computer
 
@@ -211,9 +219,7 @@ Here you can **set a hostname, enable SSH, set a password, configure wifi, set l
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
-Or you can use this link to download the image file:
-
-[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+Or you can use manual download link: [Ubuntu24.04 for Raspberry-Pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Step 6.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
@@ -224,6 +230,11 @@ Or you can use this link to download the image file:
 Please wait a few minutes until the flashing process is complete.
 The result is shown as below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
+
+- **Step 8.** Fix M.2 Dual Hat Driver
+
+Put the flashed SD card into your reComputer, and boot it up. Follow the instructions in the [Fix M.2 Dual Hat Driver](https://wiki.seeedstudio.com/r2000_series_getting_start/#fix-m2-dual-hat-driver).
+
 
 ## Boot from NVME
 
@@ -299,6 +310,8 @@ You will be asked whether you want to reboot now. Click `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="700" height="auto" /></div>
 
+**Step 5**:After rebooting, the Raspberry Pi will boot from the NVMe SSD. You need to follow the instructions in the [Fix M.2 Dual Hat Driver](https://wiki.seeedstudio.com/r2000_series_getting_start/#fix-m2-dual-hat-driver) to install the `pcie-fix.dtbo` overlay to fix the M.2 Dual Hat Driver.
+
 ## Flash ubuntu to NVME
 
 ### First: Update EEPROM with SD card
@@ -335,19 +348,21 @@ Choose Ubuntu os:
 
 Finally, click `Next` and wait for the flashing process to complete.
 
-### Third: Replace the OS file
+After booting Ubuntu, you need to follow the instructions in the [Fix M.2 Dual Hat Driver](https://wiki.seeedstudio.com/r2000_series_getting_start/#fix-m2-dual-hat-driver) to install the `pcie-fix.dtbo` overlay to fix the M.2 Dual Hat Driver.
 
-Install `pcie-fix.dtbo` with this [link](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
+## Fix M.2 Dual Hat Driver
 
-Copy pcie-fix.dtbo to /overlays file like below:
+After flashing a fresh OS image, install the `pcie-fix.dtbo` overlay to fix the M.2 Dual Hat Driver.
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="700" height="auto" /></div>
+Enter the flashed OS and run the following commands in the terminal:
 
-Modify the `config.txt`, add `dtoverlay=pcie-fix` at the end of the file like below:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file2.png" alt="pir" width="700" height="auto" /></div>
-
-And then Use `Ctrl+X` and input `y` to store this file.
+```shell
+cd /tmp
+wget https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo
+sudo cp pcie-fix.dtbo /boot/firmware/overlays/
+echo "dtoverlay=pcie-fix" | sudo tee -a /boot/firmware/config.txt
+sudo reboot
+```
 
 ## Power consumption and temperature
 

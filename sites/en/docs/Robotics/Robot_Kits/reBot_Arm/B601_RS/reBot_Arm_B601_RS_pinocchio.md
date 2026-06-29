@@ -19,7 +19,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-06-11'
-updatedAt: '2026-06-17'
+updatedAt: '2026-06-23'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 
@@ -229,7 +229,7 @@ uv run python example/0x01rs06_test.py
 | `loop` | Enter loop control mode |
 | `q` / `quit` | Quit |
 
-**Note**: Robostride motors use the CAN interface (default `can0`), with host/feedback ID defaulting to `0xFD`.
+**Note**: Robostride motors use the CAN interface (default `can0`), with host/feedback ID defaulting to `0xFD`, During motor testing, the motor needs to be disabled first and then re-enabled to allow normal reading and control.
 
 ---
 

@@ -37,10 +37,6 @@ SenseCAP M4 Square 开放了 Flux 所需的所有端口。SenseCAP Hotspot 应�
 
 https://www.speedtest.net
 
-### **flux 和 flux tokens 有什么区别？**
-
-Flux tokens 就是 Flux。Flux tokens 是在不同区块链上支付的平行资产，如 ETH Flux、BSC Flux 等。它们可以在 Zelcore 内的 Fusion 应用中领取。从右上角三个点选择"平行挖矿领取"。只有当您的 Flux-Token 数量高于领取所需费用时，您才会看到可领取金额。
-
 ### **如果我是专业用户，可以擦除原系统并安装其他系统吗？**
 
 这不是推荐的操作。但是，这是基于 x86 的设备，您可以重新安装任何您想要的系统，在此之前，请确保您知道自己在做什么。

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-22 14:03:11 (北京时间)
-// 多语言页面: 2346 个
+// 生成时间: 2026-06-29 14:09:44 (北京时间)
+// 多语言页面: 2350 个
 
 (function() {
   'use strict';
@@ -1283,6 +1283,13 @@
     "ja",
     "pt"
   ],
+  "/recomputer_jetson_robotics_j601_interfaces_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/create_backup_and_restore_on_recomputer": [
     "cn",
     "en",
@@ -1774,6 +1781,13 @@
     "pt"
   ],
   "/recomputer_jetson_mini_hardware_interfaces_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_mini_j501_wifi_module_installation": [
     "cn",
     "en",
     "es",
@@ -3397,6 +3411,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_hand_gesture": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
@@ -3405,6 +3426,13 @@
     "pt"
   ],
   "/use_cpenclaw_to_control_the_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_picoclaw": [
     "cn",
     "en",
     "es",
@@ -12481,6 +12509,13 @@
     "ja",
     "pt"
   ],
+  "/xiao_nrf54lm20a_with_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/xiao_ra4m1_clock": [
     "cn",
     "en",
@@ -13539,13 +13574,6 @@
     "pt"
   ],
   "/SenseCAP_Builder_build_LoRaWAN_Sensors": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/get_started_with_t1000_p": [
     "cn",
     "en",
     "es",
