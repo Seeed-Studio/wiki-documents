@@ -150,6 +150,10 @@ url: https://wiki.seeedstudio.com/robotics_page/
                   <span className="text">SO101 with NVIDIA GR00T</span>
                   <span className="tag recommended">New</span>
               </a>
+              <a href="/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">Steering Gear Debugging Tool</span>
+                  <span className="tag recommended">New</span>
+              </a>
           </div>
 
           <h3>🚗 Lekiwi</h3>
