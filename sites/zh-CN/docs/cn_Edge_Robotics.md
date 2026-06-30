@@ -150,6 +150,10 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
                   <span className="text">SO101 与 NVIDIA GR00T</span>
                   <span className="tag recommended">New</span>
               </a>
+              <a href="/cn/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">Lerobot 中 SO-ARM 的舵机调试工具</span>
+                  <span className="tag recommended">New</span>
+              </a>
           </div>
 
           <h3>🚗 Lekiwi移动底盘</h3>
