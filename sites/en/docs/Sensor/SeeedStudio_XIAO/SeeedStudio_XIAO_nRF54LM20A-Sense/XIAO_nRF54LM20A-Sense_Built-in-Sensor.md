@@ -98,49 +98,37 @@ The LSM6DS3TR-C is a six-axis sensor integrating a 3-axis digital accelerometer 
 :::
 
 ```dtsi
-/* Configure I2C30 for LSM6DS3TR-C */
-&i2c30 {
-	pinctrl-0 = <&i2c30_default>;
-	pinctrl-1 = <&i2c30_sleep>;
-	pinctrl-names = "default", "sleep";
+&pmic_i2c {
+	sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
+	scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
 	status = "okay";
-	clock-frequency = <I2C_BITRATE_STANDARD>;
-
-	lsm6ds3tr_c: lsm6ds3tr-c@6a {
-		compatible = "st,lsm6dsl";
-		reg = <0x6a>;
-		irq-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
-		status = "okay";
-	};
 };
 
-/* Pin control configuration for I2C30 */
-&pinctrl {
-	i2c30_default: i2c30_default {
-		group1 {
-			psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
-				<NRF_PSEL(TWIM_SCL, 0, 7)>;
-		};
-	};
-
-	i2c30_sleep: i2c30_sleep {
-		group1 {
-			psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
-				<NRF_PSEL(TWIM_SCL, 0, 7)>;
-			low-power-enable;
+&pmic {
+	regulators {
+		imu_vdd: LDO1 {
+			regulator-min-microvolt = <3300000>;
+			regulator-max-microvolt = <3300000>;
+			regulator-boot-on;
 		};
 	};
 };
+
+&lsm6ds3tr_c {
+	zephyr,deferred-init;
+};
+
 ```
 
 2. Modify the prj.conf file to enable I2C and interrupt trigger configurations.
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
+
 CONFIG_LOG=y
 CONFIG_LOG_BACKEND_UART=y
 CONFIG_LOG_DEFAULT_LEVEL=3
-CONFIG_MAIN_STACK_SIZE=4096
+CONFIG_MAIN_STACK_SIZE=2048
 CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
 CONFIG_GPIO=y
 CONFIG_I2C=y
@@ -148,13 +136,9 @@ CONFIG_MFD=y
 CONFIG_REGULATOR=y
 CONFIG_SENSOR=y
 CONFIG_LSM6DSL=y
-CONFIG_SPI=y
-CONFIG_LED_STRIP=y
-CONFIG_WS2812_STRIP_SPI=y
+CONFIG_LSM6DSL_TRIGGER_GLOBAL_THREAD=y
 CONFIG_CBPRINTF_FP_SUPPORT=y
 CONFIG_CBPRINTF_COMPLETE=y
-CONFIG_FAULT_DUMP=2
-CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
 3. Write a program to output the acquired 3-axis digital accelerometer data and 3-axis digital gyroscope data via the USB serial port.
@@ -168,13 +152,65 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
+#include <zephyr/drivers/regulator.h>
 #include <zephyr/logging/log.h>
-#include <stdio.h>
 
-LOG_MODULE_REGISTER(lsm6ds3tr_c_imu, LOG_LEVEL_INF);
+LOG_MODULE_REGISTER(zephyr_imu, LOG_LEVEL_INF);
 
-/* Use the LSM6DS3TR-C device defined in device tree */
-#define IMU_NODE DT_NODELABEL(lsm6ds3tr_c)
+#define IMU_NODE DT_ALIAS(imu0)
+
+/*
+ * nrf54lm20a needs power_en (fixed regulator on gpio1.12) and imu_vdd
+ * (PMIC NPM1300 LDO1) enabled before the IMU can be used.
+ * nrf54l15 has pdm_imu_pwr with regulator-boot-on; power is already on.
+ */
+#if defined(DT_N_NODELABEL_power_en)
+static const struct device *const power_en_dev =
+	DEVICE_DT_GET(DT_NODELABEL(power_en));
+#endif
+
+#if defined(DT_N_NODELABEL_imu_vdd)
+static const struct device *const imu_vdd_dev =
+	DEVICE_DT_GET(DT_NODELABEL(imu_vdd));
+#endif
+
+static int enable_imu_power(void)
+{
+#if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
+	int ret;
+#endif
+
+#if defined(DT_N_NODELABEL_power_en)
+	if (!device_is_ready(power_en_dev)) {
+		LOG_ERR("power_en regulator is not ready");
+		return -ENODEV;
+	}
+	ret = regulator_enable(power_en_dev);
+	if (ret < 0 && ret != -EALREADY) {
+		LOG_ERR("Failed to enable power_en: %d", ret);
+		return ret;
+	}
+#endif
+
+#if defined(DT_N_NODELABEL_imu_vdd)
+	if (!device_is_ready(imu_vdd_dev)) {
+		LOG_ERR("imu_vdd regulator is not ready");
+		return -ENODEV;
+	}
+	ret = regulator_enable(imu_vdd_dev);
+	if (ret < 0 && ret != -EALREADY) {
+		LOG_ERR("Failed to enable imu_vdd: %d", ret);
+		return ret;
+	}
+#endif
+
+#if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
+	/* Wait for power rail to stabilize */
+	k_sleep(K_MSEC(20));
+#endif
+
+	return 0;
+}
 
 static inline float out_ev(struct sensor_value *val)
 {
@@ -184,28 +220,29 @@ static inline float out_ev(struct sensor_value *val)
 static void fetch_and_display(const struct device *dev)
 {
 	struct sensor_value x, y, z;
-	static int sample_count;
+	static int trig_cnt;
 
-	sample_count++;
+	trig_cnt++;
 
-	/* Fetch and display accelerometer data */
+	/* lsm6dsl accel */
 	sensor_sample_fetch_chan(dev, SENSOR_CHAN_ACCEL_XYZ);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_X, &x);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
 
-	LOG_INF("Sample #%d", sample_count);
-	LOG_INF("Accel - X: %.6f m/s^2, Y: %.6f m/s^2, Z: %.6f m/s^2",
+	LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
-	/* Fetch and display gyroscope data */
+	/* lsm6dsl gyro */
 	sensor_sample_fetch_chan(dev, SENSOR_CHAN_GYRO_XYZ);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_X, &x);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
 
-	LOG_INF("Gyro - X: %.6f rad/s, Y: %.6f rad/s, Z: %.6f rad/s",
+	LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
+
+	LOG_INF("trig_cnt:%d", trig_cnt);
 }
 
 static int set_sampling_freq(const struct device *dev)
@@ -218,17 +255,15 @@ static int set_sampling_freq(const struct device *dev)
 	odr_attr.val2 = 500000;
 
 	ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
-						  SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
-	if (ret != 0)
-	{
+			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+	if (ret != 0) {
 		LOG_ERR("Cannot set sampling frequency for accelerometer.");
 		return ret;
 	}
 
 	ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
-						  SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
-	if (ret != 0)
-	{
+			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+	if (ret != 0) {
 		LOG_ERR("Cannot set sampling frequency for gyro.");
 		return ret;
 	}
@@ -238,7 +273,7 @@ static int set_sampling_freq(const struct device *dev)
 
 #ifdef CONFIG_LSM6DSL_TRIGGER
 static void trigger_handler(const struct device *dev,
-							const struct sensor_trigger *trig)
+			    const struct sensor_trigger *trig)
 {
 	fetch_and_display(dev);
 }
@@ -247,25 +282,19 @@ static void test_trigger_mode(const struct device *dev)
 {
 	struct sensor_trigger trig;
 
-	if (set_sampling_freq(dev) != 0)
-	{
+	if (set_sampling_freq(dev) != 0) {
 		return;
 	}
 
 	trig.type = SENSOR_TRIG_DATA_READY;
 	trig.chan = SENSOR_CHAN_ACCEL_XYZ;
 
-	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0)
-	{
-		LOG_ERR("Could not set sensor trigger");
+	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
+		LOG_ERR("Could not set sensor type and channel");
 		return;
 	}
 
-	LOG_INF("LSM6DS3TR-C in trigger mode - waiting for data...");
-
-	/* Keep the application running */
-	while (1)
-	{
+	while (1) {
 		k_sleep(K_MSEC(1000));
 	}
 }
@@ -273,17 +302,13 @@ static void test_trigger_mode(const struct device *dev)
 #else
 static void test_polling_mode(const struct device *dev)
 {
-	if (set_sampling_freq(dev) != 0)
-	{
+	if (set_sampling_freq(dev) != 0) {
 		return;
 	}
 
-	LOG_INF("LSM6DS3TR-C in polling mode - sampling at 12.5 Hz");
-
-	while (1)
-	{
+	while (1) {
 		fetch_and_display(dev);
-		k_sleep(K_MSEC(80)); /* ~12.5 Hz sampling rate */
+		k_sleep(K_MSEC(1000));
 	}
 }
 #endif
@@ -293,38 +318,38 @@ int main(void)
 	const struct device *const dev = DEVICE_DT_GET(IMU_NODE);
 	int ret;
 
-	LOG_INF("LSM6DS3TR-C IMU Data Acquisition System");
-	LOG_INF("========================================");
+	/* On nrf54lm20a, enable power_en + imu_vdd before accessing IMU.
+	 * On nrf54l15, these nodes don't exist; function returns immediately.
+	 */
+	ret = enable_imu_power();
+	if (ret < 0) {
+		LOG_ERR("Failed to enable IMU power: %d", ret);
+		return 0;
+	}
 
-	/* Check if device pointer is valid */
-	if (!device_is_ready(dev))
-	{
-		LOG_INF("IMU device %s not ready, attempting to initialize...", dev->name);
+	/* On nrf54lm20a, IMU has zephyr,deferred-init; must init manually.
+	 * On nrf54l15, device auto-inits at boot; device_is_ready() is true.
+	 */
+	if (!device_is_ready(dev)) {
 		ret = device_init(dev);
-		if (ret < 0 && ret != -EALREADY)
-		{
+		if (ret < 0 && ret != -EALREADY) {
 			LOG_ERR("Failed to initialize %s: %d", dev->name, ret);
-			return 1;
+			return 0;
 		}
 	}
 
-	/* Final check - ensure device is ready */
-	if (!device_is_ready(dev))
-	{
-		LOG_ERR("%s: device not ready after init", dev->name);
-		return 1;
+	if (!device_is_ready(dev)) {
+		LOG_ERR("%s: device not ready.", dev->name);
+		return 0;
 	}
 
-	LOG_INF("IMU device initialized successfully");
-
 #ifdef CONFIG_LSM6DSL_TRIGGER
-	LOG_INF("Running in interrupt-triggered mode");
+	LOG_INF("Testing LSM6DSL sensor in trigger mode.");
 	test_trigger_mode(dev);
 #else
-	LOG_INF("Running in polling mode");
+	LOG_INF("Testing LSM6DSL sensor in polling mode.");
 	test_polling_mode(dev);
 #endif
-
 	return 0;
 }
 ```
@@ -785,7 +810,7 @@ dmic_dev: &pdm20 {
 };
 ```
 
-2. Modify the prj.conf file to enable configurations for Bluetooth and microphone, and set the Bluetooth device name to **XIAO MIC**.
+2. Modify the `prj.conf` file to enable configurations for Bluetooth and microphone, and set the Bluetooth device name to **XIAO MIC**.
 
 ```prj
 # Audio / DMIC
@@ -864,6 +889,8 @@ CONFIG_FLASH_PAGE_LAYOUT=y
 
 # Assert level
 CONFIG_ASSERT=y
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+
 ```
 
 ### Result
