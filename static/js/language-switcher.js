@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-29 14:09:44 (北京时间)
-// 多语言页面: 2350 个
+// 生成时间: 2026-06-30 14:44:34 (北京时间)
+// 多语言页面: 2357 个
 
 (function() {
   'use strict';
@@ -25,6 +25,41 @@
   // 内嵌的语言映射数据
   const languageMapping = {
   "/Cloud": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/codecraft/codecraft-overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/codecraft/quick-start-and-support": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/codecraft/creation-and-platform": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/codecraft/community-and-publishing": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/codecraft/codecraft-for-education": [
     "cn",
     "en",
     "es",
@@ -3446,6 +3481,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_meshtastic_ha_security_system": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_source_localization_of_recamera_gimbal": [
     "cn",
     "en",
@@ -5547,6 +5589,13 @@
     "pt"
   ],
   "/starai_arm_ros_moveit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/lerobot_steering_gear_debugging_tool": [
     "cn",
     "en",
     "es",

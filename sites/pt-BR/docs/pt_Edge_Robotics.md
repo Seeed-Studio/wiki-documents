@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-06-18'
+updatedAt: '2026-06-19'
 url: https://wiki.seeedstudio.com/pt-br/robotics_page/
 ---
 
@@ -55,7 +55,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         </a>
         <a href="#actuators" className="nav-item">
           <span className="icon">⚙️</span>
-          <span className="text">Atuadores Articulares</span>
+          <span className="text">Atuadores de Junta</span>
           <div className="hover-effect"></div>
         </a>
         <a href="#sensors" className="nav-item">
@@ -143,11 +143,15 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
                 <span className="text">Phospho Lerobot</span>
               </a>
               <a href="/pt-br/training_soarm101_policy_with_isaacLab/" className="content-card">
-                  <span className="text">Treinamento RL do So Arm</span>
+                  <span className="text">Treinamento RL do braço SO</span>
                   <span className="tag recommended">Novo</span>
               </a>
               <a href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
                   <span className="text">SO101 com NVIDIA GR00T</span>
+                  <span className="tag recommended">Novo</span>
+              </a>
+              <a href="/pt-br/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">Ferramenta de Depuração de Engrenagem de Direção</span>
                   <span className="tag recommended">Novo</span>
               </a>
           </div>
@@ -196,7 +200,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
           <h3>🦀 Efetuadores Finais</h3>
           <div className="card-container">
               <a href="/pt-br/dm_gripper/" className="content-card">
-                <span className="text">DM Gripper</span>
+                <span className="text">Garra DM</span>
                 <span className="tag recommended">Novo</span>
               </a>
           </div>
@@ -229,7 +233,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
             <span className="text">Série Stackforce</span>
           </a>
           <a href="/pt-br/robstride_control/" className="content-card">
-            <span className="text">RobStride Control</span>
+            <span className="text">Controle RobStride</span>
             <span className="tag recommended">Novo</span>
           </a>
       </div>
@@ -403,7 +407,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 8h</span></div>
           <h3>Noções básicas de ROS 1: 8 aulas</h3>
-          <p>Aprenda sobre nós, tópicos, serviços e conceitos básicos</p>
+          <p>Aprenda sobre nós, tópicos, serviços e conceitos básicos.</p>
           <span className="btn-start">Aprender</span>
         </div>
       </a>
@@ -425,7 +429,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <div className="course-info">
           <div className="course-meta"><span className="level int">Intermediário</span> <span>⏱️ 8h</span></div>
           <h3>Noções básicas de ROS 2 Humble: 8 aulas</h3>
-          <p>Aprenda sobre nós, tópicos, serviços e conceitos básicos</p>
+          <p>Aprenda sobre nós, tópicos, serviços e conceitos básicos.</p>
           <span className="btn-start">Aprender</span>
         </div>
       </a>
@@ -456,7 +460,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
 
 
       <!-- Isaac Sim -->
-      <a href="" className="course-card">
+      <a href="" classNameName="course-card">
         <div className="course-cover c-isaac">ISAAC</div>
         <div className="course-info">
           <div className="course-meta"><span className="level adv">Avançado</span> <span>⏱️ 12h</span></div>
@@ -483,7 +487,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <div className="course-info">
           <div className="course-meta"><span className="level adv">Difícil</span> <span>⏱️ 20h</span></div>
           <h3>Aprendizado por Reforço</h3>
-          <p>Pipelines de treinamento PPO, DRL e implantação no Jetson.</p>
+          <p>PPO, pipelines de treinamento DRL e implantação no Jetson.</p>
           <span className="btn-plan">Planejamento</span>
         </div>
       </a>
@@ -491,7 +495,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
     </div>
 
     <!-- Section 2: Robot Applications -->
-    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 Aplicações em Robótica</h3>
+    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 Aplicações em Robôs</h3>
     <div className="course-grid">
 
       <!-- Humanoid -->
@@ -500,7 +504,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 5h</span></div>
           <h3>Curso de pequenos robôs humanoides com servo </h3>
-          <p>Acionamento de hardware, coreografia de movimento e dança, e desenvolvimento secundário para pequenos robôs humanoides.</p>
+          <p>Acionamento de hardware, coreografia de movimentos e dança, e desenvolvimento secundário para pequenos robôs humanoides.</p>
           <span className="btn-plan">Planejamento</span>
         </div>
       </a>
@@ -511,7 +515,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <div className="course-cover c-lekiwi">Robô móvel</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 6h</span></div>
-          <h3>Robótica móvel (Lekiwi)</h3>
+          <h3>Robótica Móvel (Lekiwi)</h3>
           <p>SLAM, Navigation 2 e patrulhamento autônomo.</p>
           <span className="btn-plan">Planejamento</span>
         </div>
@@ -523,7 +527,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <div className="course-info">
           <div className="course-meta"><span className="level int">Intermediário</span> <span>⏱️ 15h</span></div>
           <h3>Curso do Sistema StarAI Arm</h3>
-          <p>Manipulador StarAI 6+1 DOF: Cinemática, Dinâmica, Aprendizado por Imitação e Aprendizado por Reforço Avançado baseado em VLA</p>
+          <p>Manipulador StarAI 6+1 DOF: cinemática, dinâmica, aprendizado por imitação e aprendizado por reforço avançado baseado em VLA</p>
           <span className="btn-plan">Planejamento</span>
         </div>
       </a>
@@ -716,7 +720,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
   cursor: default;
 }
 
-/* Efeito de hover: manter o tom quente, diferente do botão Start que inverte as cores, para evitar roubar a atenção visual */
+/* Efeito de hover: manter o tom quente, diferente do botão Start que inverte as cores, para evitar roubar a atenção */
 .course-card:hover .btn-plan {
   background: #ffedd5;
   color: #c2410c;
@@ -732,7 +736,7 @@ html[data-theme='dark'] .tab-item { color: #aaa; }
 html[data-theme='dark'] #tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #60a5fa; }
 html[data-theme='dark'] #tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #a78bfa; }
 
-/* Hardware Dark Mode */
+/* Modo escuro de hardware */
 html[data-theme='dark'] .quick-nav-container { background: linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); border: none; }
 html[data-theme='dark'] .nav-item { color: #e5e7eb; background: rgb(47, 50, 57); box-shadow: 0 2px 4px rgba(0,0,0,0.4); }
 html[data-theme='dark'] .category-card { background: #1b1b1d; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border-color: #303033; }
@@ -742,7 +746,7 @@ html[data-theme='dark'] .content-card::after { background: #60a5fa; }
 html[data-theme='dark'] .recommended { background: rgba(255, 107, 107, 0.15); color: #ff8e8e; border-color: rgba(255, 142, 142, 0.3); }
 html[data-theme='dark'] h2, html[data-theme='dark'] h3 { color: #f9fafb; }
 
-/* Learning Dark Mode */
+/* Modo escuro de aprendizado */
 html[data-theme='dark'] .course-card { background: #1b1b1d; border-color: #303033; }
 html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
 html[data-theme='dark'] .course-info p { color: #9ca3af; }

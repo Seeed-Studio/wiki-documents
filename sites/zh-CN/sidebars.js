@@ -4856,7 +4856,7 @@ const sidebars = {
       collapsible: true,
       link: {
         type: 'doc',
-        id: 'Cloud_Chain/CodeCraft/codecraft-overview',
+        id: 'Cloud_Chain/CodeCraft/cn_0-codecraft-overview',
       },
       items: [
         {
