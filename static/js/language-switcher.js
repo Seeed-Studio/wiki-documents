@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-30 14:11:04 (北京时间)
-// 多语言页面: 2356 个
+// 生成时间: 2026-06-30 14:44:34 (北京时间)
+// 多语言页面: 2357 个
 
 (function() {
   'use strict';
@@ -3481,6 +3481,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_meshtastic_ha_security_system": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_source_localization_of_recamera_gimbal": [
     "cn",
     "en",
@@ -5590,7 +5597,10 @@
   ],
   "/lerobot_steering_gear_debugging_tool": [
     "cn",
-    "en"
+    "en",
+    "es",
+    "ja",
+    "pt"
   ],
   "/reachymini_agents": [
     "cn",

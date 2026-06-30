@@ -1,22 +1,23 @@
-# reCamera と Meshtastic を使った長距離セキュリティシステムの構築  
-**description**: reCamera と Meshtastic を使用して長距離セキュリティシステムを構築し、LoRa メッシュネットワーク経由で AI 検出アラートをワイヤレスで Home Assistant にプッシュします  
-**title**: reCamera と Meshtastic を使った長距離セキュリティシステムの構築  
-**keywords**:  
-  - エッジ AI  
-  - reCamera  
-  - Meshtastic  
-  - LoRa  
-  - Home Assistant  
-**image**: https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/demo_show.gif
-**slug**: /recamera_meshtastic_ha_security_system  
-**sku**: 100029708  
-**sidebar_position**: 13  
-**last_update**:  
-  date: 06/29/2026  
-  author: Sizhao Zhou  
-**createdAt**: '2026-06-29'  
-**updatedAt**: '2026-06-29'  
-**url**: https://wiki.seeedstudio.com/ja/recamera_meshtastic_ha_security_system/  
+---
+description: reCamera と Meshtastic を使用して長距離セキュリティシステムを構築し、LoRa メッシュネットワーク経由で AI 検出アラートをワイヤレスで Home Assistant にプッシュします
+title: reCamera と Meshtastic を使った長距離セキュリティシステムの構築
+keywords:
+  - エッジ AI
+  - reCamera
+  - Meshtastic
+  - LoRa
+  - Home Assistant
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/demo_show.gif
+slug: /recamera_meshtastic_ha_security_system
+sku: 100029708
+sidebar_position: 13
+last_update:
+  date: 06/29/2026
+  author: Sizhao Zhou
+createdAt: '2026-06-29'
+updatedAt: '2026-06-29'
+url: https://wiki.seeedstudio.com/ja/recamera_meshtastic_ha_security_system/
+---
 
 # reCamera と Meshtastic を使った長距離セキュリティシステムの構築  
 

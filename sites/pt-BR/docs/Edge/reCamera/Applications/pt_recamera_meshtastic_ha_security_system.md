@@ -1,22 +1,23 @@
-# Construindo um Sistema de Segurança de Longo Alcance com reCamera e Meshtastic  
-**description**: Construa um sistema de segurança de longo alcance usando reCamera e Meshtastic — envie alertas de detecção por IA sem fio para o Home Assistant via rede mesh LoRa  
-**title**: Construindo um Sistema de Segurança de Longo Alcance com reCamera e Meshtastic  
-**keywords**:  
-  - IA de Borda  
-  - reCamera  
-  - Meshtastic  
-  - LoRa  
-  - Home Assistant  
-**image**: https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/demo_show.gif
-**slug**: /recamera_meshtastic_ha_security_system  
-**sku**: 100029708  
-**sidebar_position**: 13  
-**last_update**:  
-  date: 06/29/2026  
-  author: Sizhao Zhou  
-**createdAt**: '2026-06-29'  
-**updatedAt**: '2026-06-29'  
-**url**: https://wiki.seeedstudio.com/pt-br/recamera_meshtastic_ha_security_system/  
+---
+description: Construa um sistema de segurança de longo alcance usando reCamera e Meshtastic — envie alertas de detecção por IA sem fio para o Home Assistant via rede mesh LoRa
+title: Construindo um Sistema de Segurança de Longo Alcance com reCamera e Meshtastic
+keywords:
+  - IA de Borda
+  - reCamera
+  - Meshtastic
+  - LoRa
+  - Home Assistant
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/demo_show.gif
+slug: /recamera_meshtastic_ha_security_system
+sku: 100029708
+sidebar_position: 13
+last_update:
+  date: 06/29/2026
+  author: Sizhao Zhou
+createdAt: '2026-06-29'
+updatedAt: '2026-06-29'
+url: https://wiki.seeedstudio.com/pt-br/recamera_meshtastic_ha_security_system/
+---
 
 # Construindo um Sistema de Segurança de Longo Alcance com reCamera e Meshtastic  
 
