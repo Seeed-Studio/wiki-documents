@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 06/22/2026
+  date: 06/29/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-06-22'
+updatedAt: '2026-06-29'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,9 +18,83 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is June 22nd, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is June 29th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
+
+### [reComputer Mini J501 WiFi Module Installation](https://wiki.seeedstudio.com/recomputer_mini_j501_wifi_module_installation/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+In this document, you will learn how to disassemble the **reComputer Mini J501** and install or replace a **Wi-Fi module** (M.2 Key E).
+
+</div>
+
+### [Local Deployment of Picoclaw on reCamera](https://wiki.seeedstudio.com/recamera_picoclaw/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+We believe many people want to implement their own ideas on reCamera but are unable to do so due to a lack of programming skills. To address these needs, we offer a case of locally deploying Picoclaw on reCamera. With Picoclaw, you can let it write code and debug devices for you—no need to do it yourself. Of course, it can not only help you write code but also directly control the onboard hardware modules. There are more ways to play waiting for you to explore!!
+
+</div>
+
+### [Porting the MediaPipe Hand Gesture Recognition Model to reCamera](https://wiki.seeedstudio.com/recamera_hand_gesture/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/hand_gesture/test.gif" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This project demonstrates how to fully port the official Google **MediaPipe hand gesture recognition suite** onto the **reCamera** to perform real-time gesture recognition, and to stream the video and recognition results to a PC for visualization via UDP.
+
+</div>
+
+### [Robotics J601 carrier board Hardware Interfaces Usage](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j601_interfaces_usage/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The reComputer Robotics J601 is a high-performance robotics carrier board designed for the NVIDIA Jetson AGX Thor module, targeting advanced embodied AI and robotic control applications. Equipped with extensive connectivity options — including high-speed Ethernet, M.2 slots for 5G and Wi-Fi/BT modules, USB 3.2 ports, 4x CAN (with CAN FD support), RS-232/485, I2C, I2S, UART, GMSL2 expansion (up to 8 cameras), and wide-range DC input — it serves as a powerful robotic brain capable of processing complex data from various sensors.
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### [reBot Arm B601-DM GraspNet Visual Grasping on Jetson](https://wiki.seeedstudio.com/rebot_arm_b601_dm_graspnet_visual_grasping/)
 
@@ -274,5 +348,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.6.01st](/Seeed_Elderly/weekly_wiki/2026/wiki260601)
 - [weekly wiki on 2026.6.08th](/Seeed_Elderly/weekly_wiki/2026/wiki260608)
 - [weekly wiki on 2026.6.15th](/Seeed_Elderly/weekly_wiki/2026/wiki260615)
+- [weekly wiki on 2026.6.22nd](/Seeed_Elderly/weekly_wiki/2026/wiki260622)
 
 </details>

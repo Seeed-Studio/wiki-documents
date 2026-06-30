@@ -173,55 +173,30 @@ Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless develo
 
 ## Hardware Overview
 
+<Tabs>
+<TabItem value="XIAO nRF54LM20A" label="XIAO nRF54LM20A" default>
+
+### XIAO nRF54LM20A Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/XIAO_front.png" style={{width:800, height:'auto'}}/></div>
+
+### XIAO nRF54LM20A Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/XIAO_2.png" style={{width:800, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="XIAO nRF54LM20A Sense" label="XIAO nRF54LM20A Sense">
+
 ### XIAO nRF54LM20A Sense Front
 
-<div style={{textAlign: 'center'}}>
-              <img
-                src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/4_pin.png"
-                style={{width: 1000, height: 'auto'}}
-              />
-            </div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/4_pin.png" style={{width:800, height:'auto'}}/></div>
 
 ### XIAO nRF54LM20A Sense Back
 
-<div style={{textAlign: 'center'}}>
-              <img
-                src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/5_pin.png"
-                style={{width: 800, height: 'auto'}}
-              />
-            </div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/5_pin.png" style={{width:800, height:'auto'}}/></div>
 
-<!-- <div className="table-center">
-  <TabItem value="54lm20a" label="XIAO nRF54LM20A" default>
-    <table align="center">
-      <tbody>
-        <tr>
-          <th>XIAO nRF54LM20A Pin List</th>
-        </tr>
-        <tr>
-          <td>
-            <div style={{textAlign: 'center'}}>
-              <img
-                src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/4_pin.png"
-                style={{width: 1000, height: 'auto'}}
-              />
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div style={{textAlign: 'center'}}>
-              <img
-                src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/5_pin.png"
-                style={{width: 800, height: 'auto'}}
-              />
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </TabItem>
-</div> -->
+</TabItem>
+</Tabs>
 
 ## **Pin Map**
 

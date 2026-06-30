@@ -25,6 +25,10 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 
 ![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
+:::tip
+This example code can be used to control the robotic arm motors or poses, including single motor control, forward/inverse kinematics control and testing, arm zero position setting and motor angle reading, MeshCat visualization system, and more.
+:::
+
 [Pinocchio](https://github.com/stack-of-tasks/pinocchio) is an open-source library for robotics dynamics analysis and optimization. It provides efficient forward/inverse kinematics, dynamics calculations, and trajectory planning capabilities. [MeshCat](https://github.com/rdeits/meshcat) is a web-based 3D visualization tool that can display robot status and motion trajectories in real-time.
 
 This project combines Pinocchio's powerful computing capabilities with MeshCat's intuitive visualization, providing a complete set of kinematic analysis and debugging tools for reBot Arm B601-DM.
@@ -146,62 +150,123 @@ uv sync
 
 ---
 
-## Debug Tools
+## Debug Tools Introduction
 
-#### Single Motor Console (`1_damiao_text.py`)
+:::tip Permission Settings
+Before running hardware control examples, you need to set device permissions:
 
-Direct motorbridge SDK single motor testing.
-
-**Usage**:
 ```bash
-uv run python example/1_damiao_text.py
+# Set serial device permissions (Damiao USB2CAN)
+sudo chmod 666 /dev/ttyACM0
+
+# Or set CAN device permissions (e.g., can0)
+sudo chmod 666 /dev/can0
+```
+:::
+
+### Single Motor Control Console (`0x01damiao_test.py`)
+
+Direct single motor testing using the motorbridge SDK.
+
+**How to Run**:
+```bash
+uv run python example/0x01damiao_test.py
 ```
 
 **Interactive Commands**:
 | Command | Description |
-|---------|-------------|
-| `enable` / `disable` | Enable/Disable |
+|------|------|
+| `enable` / `disable` | Enable/Disable motor |
 | `set_zero` | Set zero position |
-| `state` | View state |
-
+| `state` | View status |
+| `mode mit` | MIT mode |
+| `mode posvel` | Position-Velocity mode, can append PID parameters |
+| `mode vel` | Pure velocity mode |
 ---
 
-#### Zero Calibration & Angle Monitor (`2_zero_and_read.py`)
+### Zero Calibration and Angle Monitoring (`2_zero_and_read.py`)
 
 Automatically set all joint zeros and display joint angles in real-time.
 
-**Usage**:
+**How to Run**:
 ```bash
 uv run python example/2_zero_and_read.py
+
+# Example Output
+-0.12  +0.23  -6.42  +41.74  -0.45  -0.01  -0.01
+```
+
+### MIT Control Mode (`3_mit_control.py`)
+
+Input target angles for all joints to complete motor control in MIT control mode, typically used for force control, impedance control, or scenarios requiring high dynamic response.
+
+**How to Run**:
+```bash
+uv run python example/3_mit_control.py
+> 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
+> state
+  pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
+> q # Exit system
+```
+:::danger
+Note that in MIT control mode, the robotic arm moves very fast. Ensure that people and other devices are away from the arm's working radius.
+:::
+
+### Position-Velocity Control Mode (`4_pos_vel_control.py`)
+
+Input target angles for all joints to complete motor control in POS_VEL (Position-Velocity) hybrid control mode, achieving smoother and more controllable motion when reaching target angles, reducing vibration.
+
+**How to Run**:
+```bash
+uv run python example/4_pos_vel_control.py
+> 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
+> state
+  pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
+> q # Exit system
 ```
 
 ---
 
-## Kinematics Tests
+## Kinematics Testing
 
-#### Forward Kinematics Test (`5_fk_test.py`)
+### Forward Kinematics Testing (`5_fk_test.py`)
 
-Calculate end-effector pose from joint angles.
+Calculate end-effector pose based on joint angles.
 
 **Input**: 6 joint angles (degrees)
 
 **Output**:
 - End-effector position (X, Y, Z) — Unit: meters
 - Rotation matrix (3×3)
-- Euler angles (Roll/Pitch/Yaw) — Unit: degrees
+- Euler angles (roll/pitch/yaw) — Unit: degrees
 
 **Example**:
 ```bash
 uv run python example/5_fk_test.py
 > 0 0 0 0 0 0
-> 45 -30 15 -60 90 180
+====================================================
+  Result / Result
+====================================================
+  Joint angles (deg): [0. 0. 0. 0. 0. 0.]
+  End-effector position (m):
+    X = +0.260306
+    Y = +0.000000
+    Z = +0.191701
+  Rotation matrix (R_world^end):
+    [+1.000000  +0.000000  -0.000007]
+    [+0.000000  +1.000000  +0.000100]
+    [+0.000007  -0.000100  +1.000000]
+  Euler XYZ (roll, pitch, yaw) [deg]:
+    roll   = -0.0057
+    pitch  = -0.0004
+    yaw    = +0.0000
 ```
 
 ---
 
-#### Inverse Kinematics Test (`6_ik_test.py`)
+### Inverse Kinematics Testing (`6_ik_test.py`)
 
-Solve joint angles from desired end-effector pose.
+Solve joint angles based on desired end-effector pose.
 
 **Input Format**:
 - Position only: `<x> <y> <z>` (meters)
@@ -210,11 +275,151 @@ Solve joint angles from desired end-effector pose.
 **Example**:
 ```bash
 uv run python example/6_ik_test.py
-> 0.25 0.0 0.15              # Position only
-> 0.25 0.0 0.15 0 0 0        # Position + Orientation
+
+# Usage A
+> 0.28 0 0.3  # Position only
+====================================================
+  Result / Result
+====================================================
+  Target position : [+0.2800, +0.0000, +0.3000] m
+  Converged : Yes
+  Iterations: 2000
+  Position error: 5.62e-17 m
+  Joint angles (deg) [first 6 control joints]:
+    joint1     =  -0.0003 deg  (-0.0000 rad)
+    joint2     = -22.9687 deg  (-0.4009 rad)
+    joint3     = -24.2191 deg  (-0.4227 rad)
+    joint4     =  +1.2508 deg  (+0.0218 rad)
+    joint5     =  -0.0003 deg  (-0.0000 rad)
+    joint6     =  +0.0057 deg  (+0.0001 rad)
+
+# Usage B
+> 0.28 0 0.3 0 1 0       # Position + Orientation
+====================================================
+  Result / Result
+====================================================
+  Target position   : [+0.2800, +0.0000, +0.3000] m
+  Target orientation : [+0.00, +1.00, +0.00] deg
+  Converged  : Yes
+  Iterations: 2000
+  Position error: 6.28e-17 m
+  Joint angles (deg) [first 6 control joints]:
+    joint1     =  -0.0003 deg  (-0.0000 rad)
+    joint2     = -23.3968 deg  (-0.4084 rad)
+    joint3     = -25.3018 deg  (-0.4416 rad)
+    joint4     =  +2.9054 deg  (+0.0507 rad)
+    joint5     =  -0.0003 deg  (-0.0000 rad)
+    joint6     =  +0.0057 deg  (+0.0001 rad)
+```
+### Inverse Kinematics Control in MIT Mode (`7_arm_ik_control.py`)
+
+Use inverse kinematics (IK) in MIT mode to specify the 3D coordinates (X, Y, Z) and orientation (Euler angles) where the robotic arm end-effector should move.
+
+**Input Format**:
+- Position only: `<x> <y> <z>` (meters)
+- Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
+- Input `state`: View current actual radian values of each joint.
+- Input `end_state`: View current end-effector actual coordinates (m) and Euler angles (rad) in space.
+
+**How to Run**:
+```bash
+uv run python example/7_arm_ik_control.py
+
+#Usage A
+> 0.3 0.0 0.4 # Position only (orientation defaults to 0), move the arm end-effector to 0.3 meters forward and 0.4 meters above.
+
+#Usage B
+> 0.3 0.0 0.4 0.0 0.0 0.5 # Control both position and orientation: move to the specified position while rotating the wrist yaw angle by 0.5 radians.
+
+> ctrl + c # Exit system
+```
+:::danger
+Note that in this example code, the robotic arm moves very fast. Ensure that people and other devices are away from the arm's working radius.
+:::
+
+### Inverse Kinematics Control with Smooth Trajectory (`8_arm_traj_control.py`)
+
+Use inverse kinematics (IK) in MIT mode to automatically plan a uniform or smooth acceleration/deceleration motion trajectory within the target time, avoiding severe joint vibration.
+
+**Input Format**:
+- Position only: `<x> <y> <z>` (meters)
+- Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
+- Position + Orientation + Time (default 2.0): `<x> <y> <z> <roll> <pitch> <yaw> <time>` (degrees)
+- Input `state`: View current actual radian values of each joint.
+- Input `end_state`: View current end-effector actual coordinates (m) and Euler angles (rad) in space.
+
+**How to Run**:
+```bash
+uv run python example/8_arm_traj_control.py
+
+#Usage A
+> 0.3 0.0 0.4 # Position only, orientation defaults to 0, default movement time is 2.0 seconds
+
+#Usage B
+> 0.3 0.0 0.4 0.0 0.0 0.5 # Control both position and orientation: move to the specified position while rotating the wrist yaw angle by 0.5 radians, default movement time is 2.0 seconds
+
+#Usage C
+> 0.3 0.0 0.4 0.0 0.0 0.0 5.0 # Move the arm to the specific position and specify 5.0 seconds to slowly move there. (Note: If entering time, the preceding orientation parameters 0 0 0 cannot be omitted)
+
+> ctrl + c # Exit system
+```
+---
+
+## Gravity Compensation Testing
+
+### Gravity Compensation Control (`9_gravity_compensation.py`)
+
+Compensate joint gravity using Pinocchio dynamics model.
+
+**Control Law**:
+```
+tau = g(q)          — Gravity feedforward
+pos = current motor position   — Joint position follows current position
+kp = 2, kd = 1     — Uniform stiffness/damping for all joints
 ```
 
----
+**Expected Behavior**:
+- The arm can "float" at any pose
+- Won't fall due to its own weight when released
+- Can be manually moved to any position
+
+**How to Run**:
+```bash
+uv run python example/9_gravity_compensation.py
+```
+
+**Output**:
+- Real-time display of desired torque for each joint (N·m)
+- Press `Ctrl+C` to stop and disconnect
+
+### High-Damping Gravity Compensation Control (`10_gravity_compensation_lock.py`)
+
+Gravity compensation control that resists mild external forces.
+
+**Control Law**:
+
+Note: When a person pushes the arm hard enough that the end-effector linear velocity > 0.04 m/s or angular velocity > 0.08 rad/s, it unlocks and updates the target angle in real-time.
+
+```
+tau = g(q) + integral term  — Gravity feedforward with integral accumulation to eliminate static friction and residual gravity dead zone
+pos = target lock angle   — When end-effector velocity is below threshold, target angle locks at current position
+kp = 8.0, kd = 1.0  — Increased stiffness to 8.0 in locked state, providing stronger resistance to disturbance and positioning constraint
+```
+
+**Expected Behavior**:
+  - Lock on release: When the arm is manually moved to a position and released, it immediately locks firmly in place, perfectly solving the problem of slow falling and minor drift.
+  - No displacement under light push: Mild shaking, wind gusts, or accidental touches cannot move the arm.
+  - Movable with force: Only when pushed with enough force to break the velocity threshold will it unlock and move compliantly.
+
+**How to Run**:
+```bash
+uv run python example/10_gravity_compensation_lock.py
+```
+
+**Output**:
+- Real-time display of current status (shows `LOCKED` for locked state, `UPDATE` for unlocked dragging state).
+- Synchronized printing of end-effector real-time linear velocity (m/s), angular velocity (rad/s), and gravity torque for each joint (N·m).
+- Press `Ctrl+C` to stop and disconnect
 
 ## Simulation Environment
 
@@ -311,94 +516,6 @@ viz = Visualizer()
 viz.update(q)  # Update robot pose
 viz.draw_path(points, "path_name", color)  # Draw path
 ```
-
----
-
-## Real Machine Control
-
-:::tip Permission Setup
-Before running real machine control examples, you need to set device permissions:
-
-```bash
-# Set serial device permission (Damiao USB2CAN)
-sudo chmod 666 /dev/ttyACM0
-
-# Or for CAN interface (e.g., can0)
-sudo chmod 666 /dev/can0
-```
-:::
-
-#### IK Real-time Control (`7_arm_ik_control.py`)
-
-Real-time end-effector control based on IK solver.
-
-**Interactive Commands**:
-| Command | Description |
-|---------|-------------|
-| `x y z [roll pitch yaw]` | Target end-effector pose |
-| `state` | View state |
-| `pos` | Current end-effector position |
-| `q/quit/exit` | Exit |
-
-**Usage**:
-```bash
-uv run python example/7_arm_ik_control.py
-> 0.3 0.0 0.2
-> 0.3 0.1 0.25 0 0.5 0
-```
-
----
-
-#### Trajectory Planning Control (`8_arm_traj_control.py`)
-
-SE(3) geodesic trajectory planning + CLIK tracking.
-
-**Input Format**:
-```
-x y z [roll pitch yaw] [duration]
-```
-
-**Parameters**:
-- `x, y, z`: Target position (meters)
-- `roll, pitch, yaw`: Target orientation (radians)
-- `duration`: Movement duration (seconds), default 2.0s
-
-**Usage**:
-```bash
-uv run python example/8_arm_traj_control.py
-> 0.3 0.0 0.3 0 0.4 0 2.0
-```
-
----
-
-#### Gravity Compensation Control (`9_gravity_compensation.py`)
-
-Compensates for joint gravity using Pinocchio dynamics model.
-
-**Control Law**:
-```
-tau = g(q)          — Gravity feedforward
-pos = current motor position  — Joint position follows current position
-kp = 2,  kd = 1     — Unified stiffness/damping for all joints
-```
-
-**Expected Behavior**:
-- The robotic arm can "float" in any posture
-- Won't fall due to its own weight when released
-- Can be manually moved to any position
-
-**Usage**:
-```bash
-uv run python example/9_gravity_compensation.py
-```
-
-**Output**:
-- Real-time display of expected torque for each joint (N·m)
-- Press `Ctrl+C` to stop and disconnect
-
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/nqaoqjiHQE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ---
 

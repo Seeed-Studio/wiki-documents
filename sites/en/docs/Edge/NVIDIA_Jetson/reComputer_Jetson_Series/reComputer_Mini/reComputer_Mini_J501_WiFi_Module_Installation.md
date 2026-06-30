@@ -11,7 +11,7 @@ keywords:
   - M.2 Key M
   - AGX Orin
   - Jetson AGX Orin
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png
 slug: /recomputer_mini_j501_wifi_module_installation
 last_update:
   date: 06/17/2026

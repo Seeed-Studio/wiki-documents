@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-06-18'
+updatedAt: '2026-06-19'
 url: https://wiki.seeedstudio.com/robotics_page/
 ---
 
@@ -148,6 +148,10 @@ url: https://wiki.seeedstudio.com/robotics_page/
               </a>
               <a href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
                   <span className="text">SO101 with NVIDIA GR00T</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">Steering Gear Debugging Tool</span>
                   <span className="tag recommended">New</span>
               </a>
           </div>

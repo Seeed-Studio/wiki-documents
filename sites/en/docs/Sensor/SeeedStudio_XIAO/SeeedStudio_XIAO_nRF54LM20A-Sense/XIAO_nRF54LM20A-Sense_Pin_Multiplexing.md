@@ -171,12 +171,6 @@ int main(void)
 }
 ```
 
-abou the prj.conf
-
-```conf
-
-```
-
 ### Result
 
 After flashing the firmware, press the button and the buzzer will beep.And Serial port will print the status.
@@ -593,7 +587,7 @@ Universal Asynchronous Receiver/Transmitter (UART) is a standard asynchronous se
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-        <th>Grove - Capacitive Soil Moisture Sensor</th>
+        <th>USB to TTL Converter</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>

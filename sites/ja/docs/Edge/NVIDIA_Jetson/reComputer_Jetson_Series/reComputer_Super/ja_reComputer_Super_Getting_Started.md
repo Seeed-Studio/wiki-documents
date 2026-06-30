@@ -1,6 +1,6 @@
 ---
 description: reComputer Super 入門ガイド
-title: reComputer Super の始め方
+title: reComputer Super を使い始める
 keywords:
   - reComputer Super
   - reComputer Super Getting Started
@@ -12,19 +12,19 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-05-21'
+updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/ja/recomputer_jetson_super_getting_started/
 ---
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# reComputer Super の始め方
+# reComputer Super を使い始める
 
 <div align="center">
   <img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png"/>  
 </div>
 
-reComputer Super シリーズは reComputer Classic を強化し、AI パフォーマンスを最大 1.7 倍、157 TOPS まで引き上げます。Jetson Orin Nano（11410311, 11410312）および Jetson Orin NX（11410313, 11410314）を搭載したモデルを備えています。
+reComputer Super シリーズは reComputer Classic を強化し、AI パフォーマンスを最大 1.7 倍、157 TOPS まで向上させます。Jetson Orin Nano（11410311, 11410312）および Jetson Orin NX（11410313, 11410314）を搭載したモデルを備えています。
 開発と量産の両方を想定して設計されており、M.2 Key E/M、デュアル RJ45 Ethernet、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI、CAN など豊富なインターフェースを備えています。Jetpack 6.2 と Linux OS BSP をプリインストールしているため、すぐに市場投入が可能です。
 また、NVIDIA、Hugging Face、ONNX、PyTorch、ROS2/1 など、幅広い LLM および Physical AI フレームワークをエッジでシームレスにサポートし、これらのマルチモーダル機能をロボティクスアプリケーションと統合することで、Physical AI 開発をさらに充実させます。
 
@@ -34,7 +34,7 @@ reComputer Super シリーズは reComputer Classic を強化し、AI パフォ�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong></a>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>今すぐカスタマイズ ➜</font></span></strong></a>
 </div>
 
 ## 主な特長  
@@ -53,17 +53,17 @@ reComputer Super シリーズは reComputer Classic を強化し、AI パフォ�
 
 ### 🛠️ ​**開発および量産にすぐ使える設計**  
 
-- ​**Jetpack 6.2** と ​**Linux OS BSP** をプリインストールし、開封後すぐにデプロイ可能  
-- 次のフレームワークとシームレスに連携したエッジ AI を実現：  
+- ​**Jetpack 6.2** と ​**Linux OS BSP** をプリインストールし、箱から出してすぐにデプロイ可能  
+- 次のフレームワークとシームレスにエッジ AI を統合：  
   - ​**NVIDIA**、​**Hugging Face**、​**ONNX**、​**PyTorch**  
   - ロボティクスアプリケーション向け ​**ROS2/1**  
 - ​**マルチモーダル AI** および ​**Physical AI** 開発をサポート  
 
-### 🤖 ​**エッジ AI & ロボティクス向けに最適化**  
+### 🤖 ​**エッジ AI とロボティクスに最適化**  
 
-- エッジにおいて ​**LLM（大規模言語モデル）** の機能と ​**Physical AI** を統合  
+- エッジで ​**LLM（Large Language Model）** の機能と ​**Physical AI** を統合  
 - ロボティクス、産業オートメーション、リアルタイム AI 推論に最適  
-- 事前構成済みソフトウェアスタックにより ​**市場投入までの時間** を短縮  
+- 事前構成済みソフトウェアスタックにより ​**市場投入** を加速  
 
 :::tip
 
@@ -71,8 +71,8 @@ reComputer Super シリーズは reComputer Classic を強化し、AI パフォ�
 
 #### 1. ​**電源アダプタ**  
 
-- ​**Jetson Orin Nano**：12V 5A（5525 バレルジャック）  
-- ​**Jetson Orin NX**：19V 4.74A（5525 バレルジャック）  
+- ​**Jetson Orin Nano**: 12V 5A（5525 バレルジャック）  
+- ​**Jetson Orin NX**: 19V 4.74A（5525 バレルジャック）  
 - 常に ​**純正アダプタ** を使用し、電源要件を満たしてください。  
 
 #### 2. ​**AC 電源コード**  
@@ -155,10 +155,10 @@ reComputer Super シリーズは reComputer Classic を強化し、AI パフォ�
     </tr>
     <tr>
       <td>CSI</td>
-      <td colSpan={5}>最大 4 台のカメラ<br />(仮想チャネル経由で 8 台)<br />8 レーン MIPI CSI-2<br />D-PHY 2.1（最大 20Gbps）</td>
+      <td colSpan={5}>最大 4 台のカメラ<br />(バーチャルチャネル経由で 8 台)<br />8 レーン MIPI CSI-2<br />D-PHY 2.1（最大 20Gbps）</td>
     </tr>
     <tr>
-      <td>機構</td>
+      <td>メカニカル</td>
       <td colSpan={5}>69.6mm x 45mm<br />260 ピン SO-DIMM コネクタ</td>
     </tr>
     <tr>
@@ -282,21 +282,32 @@ reComputer Super シリーズは reComputer Classic を強化し、AI パフォ�
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> JetPack 7.2 では、Ubuntu 24.04 はフラッシュおよびターゲット側コンポーネントのインストールのみサポートされます。ホスト開発コンポーネントが必要な場合は、Ubuntu 20.04 または 22.04 を使用してください。</p>
 
 :::
 
@@ -310,30 +321,51 @@ reComputer Super シリーズは reComputer Classic を強化し、AI パフォ�
     <tr>
       <th>Jetpack バージョン</th>
       <th>Jetson モジュール</th>
-      <th>Download Link1</th>
+      <th>ダウンロードリンク1</th>
       <th>SHA256</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td rowSpan={4}>7.2</td>
+      <td> Orin Nano 4GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm">ダウンロード</a></td>
+      <td>0978be490c5ff7c1648317240e8f00d7<br />6b2d025ed30a945249eaa69112a047c8</td>
+    </tr>
+    <tr>
+      <td>Orin Nano 8GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFEKDfgr0CS7jHtF-JwR0KAZC0l4XMAUKFW4Tsq2960iU?e=PI5PkJ">ダウンロード</a></td>
+      <td>22a21d0ee9abdceb812e06ac399d8ca<br />5f14a3880fdf989c876223e72b21f4de6</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1">ダウンロード</a></td>
+      <td>7613332f8eeb315a0d9d51744a8f0a9<br />e8e11e92e091d2a06ad609235a54f7c72</td>
+    </tr>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">ダウンロード</a></td>
+      <td>5c66fcbf8f4bcb21477ada08c78796f<br />69524ccc6eccf929fdd9f026e948482f1</td>
+    </tr>
+    <tr>
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">ダウンロード</a></td>
       <td>7a1f2085f50d77e5d86d3f01ccdc1255<br />c90a7c7d22a6ab7e4c4e3263e3148670</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCkqeSMa1GUQ57Y0K-pz0GtAYgobLanXDHP_d-rJIAzkcY?e=VqEnca">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCkqeSMa1GUQ57Y0K-pz0GtAYgobLanXDHP_d-rJIAzkcY?e=VqEnca">ダウンロード</a></td>
       <td>d26cbf4e16b9d5879e4b737754f65bb0<br />ea485b98760a1aa0657e07054efd8877</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAuSOue4x97QKJGLUkBabdzAamlCy6twJd68P69GlaTzws?e=hw82Sw">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAuSOue4x97QKJGLUkBabdzAamlCy6twJd68P69GlaTzws?e=hw82Sw">ダウンロード</a></td>
       <td>55a559dc6736650d45c2d787265c7e2c<br />36cd2d7f233ae58b00364aec7d82455c</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm">ダウンロード</a></td>
       <td>51f816d57dedd6e2305acd0ae8e0ffdc<br />19aec7319e351b7a70489f7eab8d69c6</td>
     </tr>
   </tbody>
@@ -341,7 +373,7 @@ reComputer Super シリーズは reComputer Classic を強化し、AI パフォ�
 </div>
 
 :::danger
-Jetpack6 のイメージファイルのサイズは約 **14.1GB** で、ダウンロードには約 60 分かかります。ダウンロードが完了するまでお待ちください。
+JetPack イメージファイルはサイズが大きく、ダウンロードに約 60 分かかる場合があります。ダウンロードが完了するまでお待ちください。
 :::
 
 :::info
@@ -360,17 +392,17 @@ Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <
 
 <summary> 手順 </summary>
 
-**Step 1.** スイッチを RESET モードに切り替えます。
+**ステップ 1.** スイッチを RESET モードに切り替えます。
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/flash.jpg"/>  
 </div>
 
-**Step 2.** 電源ケーブルを接続して reComputer Super の電源を入れます。
+**ステップ 2.** 電源ケーブルを接続して reComputer Super の電源を入れます。
 
-**Step 3.** USB Type-C データ転送ケーブルで Super を Ubuntu ホスト PC に接続します。
+**ステップ 3.** USB Type-C データ転送ケーブルで Super を Ubuntu ホスト PC に接続します。
 
-**Step 4.** Linux ホスト PC でターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
+**ステップ 4.** Linux ホスト PC でターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
 
 - Orin NX 16GB の場合: **0955:7323 NVidia Corp**
 - Orin NX 8GB の場合: **0955:7423 NVidia Corp**
@@ -387,18 +419,20 @@ Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <
 
 ### Jetson へフラッシュする
 
-**Step 1:** ダウンロードしたイメージファイルを解凍します：
+**ステップ 1:** ダウンロードしたイメージファイルを解凍します：
 
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
+# For JetPack 6.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
+# For JetPack 7.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
 ```
 
-**Step 2:** 次のコマンドを実行して、Jetpack システムを NVMe SSD にフラッシュします：
+**ステップ 2:** 次のコマンドを実行して、JetPack システムを NVMe SSD にフラッシュします：
 
 ```bash
 cd mfi_xxxx
+# For example: cd mfi_recomputer-orin-super-j401
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
@@ -410,7 +444,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 フラッシュコマンドの実行には 2〜10 分かかる場合があります。
 :::
 
-**Step 3:** HDMI ケーブルでモニターを接続し、reComputer Super システムの初期化設定を完了します：
+**ステップ 3:** HDMI ケーブルでモニターを接続し、reComputer Super システムの初期設定を完了します：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
@@ -429,7 +463,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 - [メカニカルドキュメント - reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
 - [メカニカルドキュメント - reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
 - [Seeed Nvidia Jetson 導入事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson ワンペーパー](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Seeed Jetson ワンページ資料](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
@@ -440,7 +474,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
