@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-XIAO
 sku: 110010004, 102010388, 102010328
 last_update:
-  date: 1/11/2023
+  date: 6/30/2026
   author: shuxu hu
 createdAt: '2023-01-16'
 updatedAt: '2026-05-27'
@@ -87,7 +87,7 @@ Working voltage of MCU is 3.3V. Voltage input connected to general I/O pins may 
 For power supply pins:
 The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows to power the device with a 5V supply via VIN-PIN and 5V-PIN.
 
-It is critical to understand that the VIN and GND pads on the back of the XIAO SAMD21 are not designed for directly connecting a battery, especially not a rechargeable lithium battery (LiPo/Li-Ion). The board lacks the essential battery management circuitry required for safe operation. These pads are simply an alternative power input point that bypasses the board's built-in protection diode. If you wish to power your project with a battery, you must use a dedicated external battery management module that provides charging and protection, and then connect that module's regulated output to the XIAO's 5V or 3V3 pin.
+It is critical to understand that the VIN and GND pads on the back of the XIAO SAMD21 are not designed for directly connecting a battery, especially not a rechargeable lithium battery (LiPo/Li-Ion). The board lacks the essential battery management circuitry required for safe operation. These pads are simply an alternative power input point that bypasses the board's built-in protection diode. If you wish to power your project with a battery, you must use a dedicated external battery management module that provides charging and protection, and then connect that module's regulated output to the XIAO's 5V pin.
 
 Please pay attention to use, do not lift the shield cover.
 :::
