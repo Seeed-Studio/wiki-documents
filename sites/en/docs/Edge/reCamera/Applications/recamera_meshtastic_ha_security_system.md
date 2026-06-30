@@ -1,22 +1,23 @@
-# Building a Long-Range Security System with reCamera and Meshtastic  
-**description**: Build a long-range security system using reCamera and Meshtastic — wirelessly push AI detection alerts to Home Assistant via LoRa mesh network  
-**title**: Building a Long-Range Security System with reCamera and Meshtastic  
-**keywords**:  
-  - Edge AI  
-  - reCamera  
-  - Meshtastic  
-  - LoRa  
-  - Home Assistant  
-**image**: https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/demo_show.gif
-**slug**: /recamera_meshtastic_ha_security_system  
-**sku**: 100029708  
-**sidebar_position**: 13  
-**last_update**:  
-  date: 06/29/2026  
-  author: Sizhao Zhou  
-**createdAt**: '2026-06-29'  
-**updatedAt**: '2026-06-29'  
-**url**: https://wiki.seeedstudio.com/recamera_meshtastic_ha_security_system/  
+---
+description: Build a long-range security system using reCamera and Meshtastic — wirelessly push AI detection alerts to Home Assistant via LoRa mesh network
+title: Building a Long-Range Security System with reCamera and Meshtastic
+keywords:
+  - Edge AI
+  - reCamera
+  - Meshtastic
+  - LoRa
+  - Home Assistant
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/demo_show.gif
+slug: /recamera_meshtastic_ha_security_system
+sku: 100029708
+sidebar_position: 13
+last_update:
+  date: 06/29/2026
+  author: Sizhao Zhou
+createdAt: '2026-06-29'
+updatedAt: '2026-06-29'
+url: https://wiki.seeedstudio.com/recamera_meshtastic_ha_security_system/
+---
 
 # Building a Long-Range Security System with reCamera and Meshtastic  
 
