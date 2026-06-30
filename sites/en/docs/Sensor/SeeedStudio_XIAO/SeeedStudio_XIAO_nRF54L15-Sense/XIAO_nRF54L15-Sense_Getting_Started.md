@@ -176,26 +176,27 @@ export const Highlight = ({children, color}) => (
 ## Hardware Overview
 
 <Tabs>
-<TabItem value="XIAO nRF54LM20A" label="XIAO nRF54LM20A" default>
+<TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
 
-### XIAO nRF54LM20A Front
+### XIAO nRF54L15 Front
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/XIAO_front.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### XIAO nRF54LM20A Back
+### XIAO nRF54L15 Back
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/XIAO_2.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
 
 </TabItem>
-<TabItem value="XIAO nRF54LM20A Sense" label="XIAO nRF54LM20A Sense">
+<TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense" default>
 
-### XIAO nRF54LM20A Sense Front
+### XIAO nRF54L15 Sense Front
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/4_pin.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### XIAO nRF54LM20A Sense Back
+### XIAO nRF54L15 Sense Back
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/5_pin.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
