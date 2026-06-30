@@ -1,0 +1,70 @@
+---
+description: Comece rapidamente com o CodeCraft, um assistente de programação com IA para hardware que transforma descrições em linguagem natural em programas de hardware executáveis.
+title: Visão geral do CodeCraft
+keywords:
+  - CodeCraft
+  - Vibe Coding
+  - SenseCraft AI
+image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+slug: /codecraft/codecraft-overview
+sidebar_class_name: hidden
+sidebar_position: 1
+last_update:
+  date: 06/29/2026
+  author: Shihan Gao
+url: https://wiki.seeedstudio.com/pt-br/codecraft/codecraft-overview/
+---
+
+# Guia do Usuário CodeCraft
+
+Bem-vindo ao CodeCraft. Este guia ajudará você a entender rapidamente a plataforma, concluir a preparação da conta e começar a usar o CodeCraft para criação de projetos sem código, reutilização de projetos da comunidade e publicação de seus trabalhos.
+
+## Conteúdo da Documentação
+
+### [1. Início Rápido e Suporte](/pt-br/codecraft/quick-start-and-support)
+
+Recomendado para usuários que estão usando o CodeCraft pela primeira vez.
+
+Esta seção inclui:
+
+- Introdução ao CodeCraft
+- Preparação e login
+- Compra e ativação da assinatura CodeCraft
+- Faturamento e gerenciamento de uso
+- Ajuda e suporte
+
+### [2. Criação e Plataforma](/pt-br/codecraft/creation-and-platform)
+
+Recomendado para usuários que desejam começar a construir projetos.
+
+Esta seção inclui:
+
+- Criação prática de projetos sem código
+- Compreendendo o espaço de trabalho conversacional
+- Seleção de hardware
+- Descrição dos requisitos do projeto
+- Geração de código, gravação e depuração
+- Exemplos de projetos: Temporizador Pomodoro, The Terminal Pomodoro Timer, LED em formato de coração piscando com ESP32S3 e LED controlado por botão do Beginner Kit
+
+### [3. Comunidade e Publicação](/pt-br/codecraft/community-and-publishing)
+
+Recomendado para usuários que concluíram projetos e desejam navegar, reutilizar ou publicar seus trabalhos.
+
+Esta seção inclui:
+
+- O que a Galeria de Aplicações pode fazer
+- Navegar e reutilizar projetos da comunidade
+- Preparação antes da publicação
+- Publicar um novo aplicativo
+- Edição do conteúdo do aplicativo
+- Informações do aplicativo, documentação, lista de materiais e pré-visualização e publicação
+- Compartilhar trabalhos com a comunidade
+
+### [4. CodeCraft para Educação](/pt-br/codecraft/codecraft-for-education)
+
+Recomendado para usuários que desejam aplicar o CodeCraft em ensino, design de currículo ou treinamento em educação tecnológica.
+
+Esta seção inclui:
+
+- Solução educacional completa
+- Gerenciamento de professores e alunos e suporte ao fluxo de trabalho de ensino
