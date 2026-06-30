@@ -4419,6 +4419,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/es_Lerobot_SO100Arm_New',
             'Robotics/Robot_Kits/Lerobot/es_Lerobot_SO_ARM101_DAMO',
             'Robotics/Robot_Kits/Lerobot/es_Lerobot_Dataset_Tool',
+            'Robotics/Robot_Kits/Lerobot/es_Steering_Gear_Debugging_Tool',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'Robotics/Robot_Kits/Lerobot/es_Lerobot_Lekiwi',
             'Robotics/Robot_Kits/Lerobot/es_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
