@@ -11,7 +11,7 @@ last_update:
   author: Zeller
   sidebar_position: 0
 createdAt: '2025-12-15'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/
 ---
 ## Introduction
@@ -122,22 +122,16 @@ url: https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/
 
 ## Hardware overview
 
-<table align="center">
- <tr>
-     <th>XIAO ESP32-C5 indication diagram</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/front.png" style={{width:700, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>XIAO ESP32-C5 Pin List</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/PinList_1.png" style={{width:1000, height:'auto'}}/></div></td>
- </tr>
-</table>
+### Front
 
- ## **Pin Map**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/XIAO_ESP32-C5_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/XIAO_ESP32-C5_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+## Pin Map
+
 | XIAO Pin                | Function   | Chip Pin  | Alternate Functions       | Description                  |
 | :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
 | 5V                     | VBUS       |           |                          | Power Input/Output           |

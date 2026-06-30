@@ -1,6 +1,6 @@
 ---
-description: Deploy_AI_With_A1102
-title: Desplegando Modelos de IA en SenseCAP A1102 Usando SenseCraft AI
+description: Desplegar_IA_con_A1102
+title: Despliegue de modelos de IA en SenseCAP A1102 usando SenseCraft AI
 keywords:
   - Sensor Vision_AI_V2
   - SenseCAP A1102
@@ -20,16 +20,16 @@ url: https://wiki.seeedstudio.com/es/deploy_ai_with_a1102/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Desplegando Modelos de IA en SenseCAP A1102 Usando SenseCraft AI
+# Despliegue de modelos de IA en SenseCAP A1102 usando SenseCraft AI
 
-## Descripción General
+## Descripción general
 
-El SenseCAP A1102 es un dispositivo sensor potente que combina capacidades avanzadas de IA con facilidad de despliegue. Esta guía te llevará a través del despliegue de modelos de IA oficiales o personalizados en el A1102 usando el sitio web **SenseCraft AI**, ofreciendo instrucciones paso a paso para configuración, despliegue y pruebas.
+El SenseCAP A1102 es un potente dispositivo sensor que combina avanzadas capacidades de IA con facilidad de despliegue. Esta guía te explicará cómo desplegar modelos de IA oficiales o personalizados en el A1102 usando el sitio web **SenseCraft AI**, ofreciendo instrucciones paso a paso para la configuración, el despliegue y las pruebas.
 
 <div class="info-section">
   <div class="section-header">
-      <h2>Desplegar Modelos de IA en SenseCAP A1102</h2>
-      <p>Entrena y Despliega Tus Modelos de IA: Potencia tus cámaras LoRaWAN con modelos de IA personalizados u oficiales para análisis en tiempo real. SenseCAP A1102 puede proporcionar la flexibilidad para llevar insights impulsados por IA a tus aplicaciones.</p>
+      <h2>Despliega modelos de IA en SenseCAP A1102</h2>
+      <p>Entrena y despliega tus modelos de IA: potencia tus cámaras LoRaWAN con modelos de IA personalizados u oficiales para análisis en tiempo real. SenseCAP A1102 puede proporcionar la flexibilidad para llevar información basada en IA a tus aplicaciones.</p>
   </div>
   <ul class="info-list">
       <li class="info-item">
@@ -39,8 +39,8 @@ El SenseCAP A1102 es un dispositivo sensor potente que combina capacidades avanz
             </svg>
           </div>
           <div class="info-content">
-              <h3>Despliegue de Modelos de IA Personalizados con Cámaras LoRaWAN</h3>
-              <p>Con SenseCAP A1102, puedes entrenar tus propios modelos de IA y desplegarlos directamente en cámaras habilitadas para LoRaWAN. Esto permite la detección de objetos en tiempo real. La integración perfecta con LoRaWAN asegura que tus insights impulsados por IA sean accesibles y accionables en el sitio.</p>
+              <h3>Despliegue de modelos de IA personalizados con cámaras LoRaWAN</h3>
+              <p>Con SenseCAP A1102, puedes entrenar tus propios modelos de IA y desplegarlos directamente en cámaras con LoRaWAN habilitado. Esto permite la detección de objetos en tiempo real. La integración perfecta con LoRaWAN garantiza que la información generada por tu IA sea accesible y procesable in situ.</p>
           </div>
       </li>
       <li class="info-item">
@@ -53,8 +53,8 @@ El SenseCAP A1102 es un dispositivo sensor potente que combina capacidades avanz
               </svg>
           </div>
           <div class="info-content">
-              <h3>Uso de Modelos Pre-entrenados o Modelos Personalizados</h3>
-              <p>SenseCAP A1102 soporta una amplia gama de modelos de IA pre-entrenados, así como la capacidad de entrenar modelos personalizados usando conjuntos de datos disponibles públicamente o personalizados, como los que se encuentran en Roboflow Universe. Esta flexibilidad te permite desplegar fácilmente modelos que están específicamente adaptados a tus casos de uso.</p>
+              <h3>Uso de modelos preentrenados o modelos personalizados</h3>
+              <p>SenseCAP A1102 es compatible con una amplia gama de modelos de IA preentrenados, así como con la posibilidad de entrenar modelos personalizados utilizando conjuntos de datos públicos o personalizados, como los que se encuentran en Roboflow Universe. Esta flexibilidad te permite desplegar fácilmente modelos específicamente adaptados a tus casos de uso.</p>
           </div>
       </li>
       <li class="info-item">
@@ -67,34 +67,34 @@ El SenseCAP A1102 es un dispositivo sensor potente que combina capacidades avanz
               </svg>
           </div>
           <div class="info-content">
-              <h3>Aplicaciones Versátiles</h3>
-              <p>SenseCAP A1102 puede ser desplegado en varias aplicaciones del mundo real. Ya sea monitoreando la salud de las hojas de plantas en agricultura, detectando la ocupación de espacios de estacionamiento en entornos urbanos, o rastreando posiciones de embarcaciones en áreas marítimas, tus modelos de IA pueden adaptarse a tus necesidades específicas.</p>
+              <h3>Aplicaciones versátiles</h3>
+              <p>SenseCAP A1102 puede desplegarse en diversas aplicaciones del mundo real. Ya sea para monitorizar el estado de las hojas de las plantas en agricultura, detectar la ocupación de plazas de aparcamiento en entornos urbanos o rastrear la posición de embarcaciones en zonas marítimas, tus modelos de IA pueden adaptarse a tus necesidades específicas.</p>
           </div>
       </li>
   </ul>
 </div>
 
 
-## Prerrequisitos
+## Requisitos previos
 
-### Hardware Requerido
+### Hardware necesario
 
 - Dispositivo SenseCAP A1102  
-- Cable de datos USB Type-C  
+- Cable de datos USB tipo C  
 - PC  
 
-### Software Requerido
+### Software necesario
 - [Plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home)
 
-## Proceso de Despliegue de Modelo de IA Oficial
+## Proceso de despliegue de modelos de IA oficiales
 
-### Paso 1. Abrir nuestra plataforma y Seleccionar A1102 en el Espacio de Trabajo
+**Paso 1.** Accede al espacio de trabajo de SenseCAP A1102 a través de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP A1102`**, o utiliza este [enlace directo al espacio de trabajo](https://sensecraft.seeed.cc/ai/device/local/37).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/sensecap_a1102_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
-### Paso 2. Conectar a nuestra Plataforma por puerto serie
+**Paso 2. Conéctate a nuestra plataforma por puerto serie**
 
-- Usa un cable Type-C para conectar el dispositivo a tu PC (asegúrate de estar conectando al puerto Type-C superior, que es el puerto serie Himax, como se muestra en la imagen a continuación).
+- Utiliza un cable tipo C para conectar el dispositivo a tu PC (asegúrate de conectarte al puerto tipo C superior, que es el puerto serie Himax, como se muestra en la imagen siguiente).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture3.png" style={{width:400, height:'auto'}}/></div>
 
@@ -104,58 +104,58 @@ El SenseCAP A1102 es un dispositivo sensor potente que combina capacidades avanz
 
 - Selecciona el puerto serie correcto y haz clic en `Connect` en la ventana emergente
 
-Si se selecciona el puerto correcto, podrás ver la transmisión de video de vista previa a través de Invoke y proceder con la selección y flasheo del modelo normalmente.
+Si se selecciona el puerto correcto, podrás ver la transmisión de vídeo de vista previa mediante Invoke y continuar normalmente con la selección y grabación del modelo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture5.png" style={{width:1000, height:'auto'}}/></div>
 
-### Paso 3. Seleccionar el modelo de IA que quieres desplegar en el dispositivo
+**Paso 3. Selecciona el modelo de IA que quieres desplegar en el dispositivo**
 
 - Haz clic en `Select Model`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture6.png" style={{width:500, height:'auto'}}/></div>
 
-- Elige entre Modelos Públicos o tus propios modelos entrenados en SenseCraft AI
+- Elige entre modelos públicos o tus propios modelos entrenados en SenseCraft AI
 
-- El proceso de flasheo comenzará después de que hagas clic en el modelo
+- El proceso de grabación comenzará después de que hagas clic en el modelo
 
 :::note
-¡Tu dispositivo ahora está usando el modelo de IA que desplegaste para detectar y subir resultados! Por favor navega a tu APP u otra plataforma para ver.
+¡Tu dispositivo ahora está usando el modelo de IA que has desplegado para detectar y subir resultados! Por favor, ve a tu APP u otra plataforma para visualizarlo.
 :::
 
-## Proceso de Despliegue de Modelo de IA Personalizado
+## Proceso de despliegue de modelos de IA personalizados
 
 :::warning note
-Nuestro modelo de IA puede ser entrenado con muchas clases, pero dado que los resultados de reconocimiento se transmiten vía **S2100**, solo las **primeras 9 clases** son efectivamente soportadas para reportes.
+Nuestro modelo de IA se puede entrenar con muchas clases, pero dado que los resultados de reconocimiento se transmiten a través de **S2100**, solo las **primeras 9 clases** son compatibles de forma efectiva para el reporte.
 :::
 
-### Paso 1. Obtener tu conjunto de datos de Roboflow
+**Paso 1. Obtén tu conjunto de datos desde Roboflow**
 
-- [Crear una cuenta gratuita de Roboflow](https://app.roboflow.com/) 
+- [Crea una cuenta gratuita de Roboflow](https://app.roboflow.com/) 
 
-- Si necesitas un conjunto de datos de código abierto, por favor navega a [Roboflow Universe](https://universe.roboflow.com/)
+- Si necesitas un conjunto de datos de código abierto, ve a [Roboflow Universe](https://universe.roboflow.com/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p1.png" style={{width:800, height:'auto'}}/></div>
 
-- Si quieres usar tus propias imágenes y etiquetarlas para obtener un conjunto de datos, por favor navega a [Roboflow](https://app.roboflow.com/) para crear un **Proyecto**
+- Si quieres usar tus propias imágenes y etiquetarlas para obtener un conjunto de datos, ve a [Roboflow](https://app.roboflow.com/) para crear un **Project**
 
 :::warning note
-Cuando uses tus propias imágenes, por favor presta especial atención al orden de las etiquetas.
+Cuando uses tus propias imágenes, presta especial atención al orden de las etiquetas.
 Solo las primeras 9 clases (índices de etiqueta 0–8) son válidas y pueden ser reconocidas por el A1102.
-Si tu conjunto de datos contiene más de 9 clases, debes seleccionar solo las nueve clases requeridas eliminando las otras antes de exportar el modelo.
+Si tu conjunto de datos contiene más de 9 clases, debes seleccionar solo las nueve clases necesarias eliminando las demás antes de exportar el modelo.
 :::
 
-### Paso 2. Exportar tu conjunto de datos de Roboflow
+**Paso 2. Exporta tu conjunto de datos desde Roboflow**
 
-- Haz clic en Overview y Verifica las clases
+- Haz clic en Overview y comprueba las clases
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p7.png" style={{width:800, height:'auto'}}/></div>
 
 :::danger note 
-El orden de las clases mostradas corresponde al orden del índice de etiquetas. Por lo tanto, solo las primeras 9 clases (índices de etiqueta 0–8) pueden ser correctamente subidas como resultados de reconocimiento en el A1102.
-Si tu modelo contiene más de 9 clases, debes seleccionar las nueve clases que necesitas clonando el conjunto de datos en tu propio proyecto, eliminando las otras etiquetas, y luego exportando el conjunto de datos nuevamente.
+El orden de las clases que se muestra corresponde al orden de los índices de etiqueta. Por lo tanto, solo las primeras 9 clases (índices de etiqueta 0–8) pueden subirse correctamente como resultados de reconocimiento en el A1102.
+Si tu modelo contiene más de 9 clases, debes seleccionar las nueve clases que necesitas clonando el conjunto de datos en tu propio proyecto, eliminando las otras etiquetas y luego exportando de nuevo el conjunto de datos.
 :::
 
-- En el proyecto, Haz clic en `Dataset`
+- En el proyecto, haz clic en `Dataset`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p2.png" style={{width:300, height:'auto'}}/></div>
 
@@ -167,29 +167,29 @@ Si tu modelo contiene más de 9 clases, debes seleccionar las nueve clases que n
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p4.png" style={{width:500, height:'auto'}}/></div>
 
-- Selecciona `COCO` y `Show download code`, luego Haz clic en `Continue`
+- Selecciona `COCO` y `Show download code`, luego haz clic en `Continue`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p5.png" style={{width:500, height:'auto'}}/></div>
 
-- Copia la **Raw URL** que será usada en el proceso de entrenamiento del modelo de IA
+- Copia la **Raw URL** que se utilizará en el proceso de entrenamiento del modelo de IA
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p6.png" style={{width:600, height:'auto'}}/></div>
 
-### Paso 3. Entrenar tu modelo de IA con el conjunto de datos
+**Paso 3. Entrena tu modelo de IA con el conjunto de datos**
 
-- Sigue el [Inicio rápido de entrenamiento de modelos](https://wiki.seeedstudio.com/es/grove_vision_ai_v2_sscma#training-dataset-exported-model) para entrenar tu modelo de IA con tu conjunto de datos preparado.
+- Sigue la [guía rápida de entrenamiento de modelos](https://wiki.seeedstudio.com/es/grove_vision_ai_v2_sscma#training-dataset-exported-model) para entrenar tu modelo de IA con el conjunto de datos que has preparado.
 
-- Después de que el entrenamiento esté completo, exporta el modelo entrenado en formato .tflite, que será usado para el despliegue en el dispositivo.
+- Una vez finalizado el entrenamiento, exporta el modelo entrenado en formato .tflite, que se utilizará para el despliegue en el dispositivo.
 
-### Paso 4. Subir y flashear el Modelo de IA personalizado 
+**Paso 4. Sube y graba el modelo de IA personalizado**
 
-- Abre nuestra [plataforma](https://sensecraft.seeed.cc/ai/home) y Selecciona A1102 en el Espacio de Trabajo
+- Accede al espacio de trabajo de SenseCAP A1102 a través de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP A1102`**, o utiliza este [enlace directo al espacio de trabajo](https://sensecraft.seeed.cc/ai/device/local/37).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/sensecap_a1102_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
-- Conectar a nuestra Plataforma por puerto serie
+- Conéctate a nuestra plataforma por puerto serie
 
-- Usa un cable Type-C para conectar el dispositivo a tu PC (asegúrate de estar conectando al puerto Type-C superior, que es el puerto serie Himax, como se muestra en la imagen a continuación).
+- Utiliza un cable tipo C para conectar el dispositivo a tu PC (asegúrate de conectarte al puerto tipo C superior, que es el puerto serie Himax, como se muestra en la imagen siguiente).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture3.png" style={{width:400, height:'auto'}}/></div>
 
@@ -207,23 +207,23 @@ Si tu modelo contiene más de 9 clases, debes seleccionar las nueve clases que n
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture8.png" style={{width:500, height:'auto'}}/></div>
 
-- `Model File`: Para instrucciones detalladas sobre el entrenamiento y exportación de un modelo TFLite, consulta esta [guía](https://wiki.seeedstudio.com/es/grove_vision_ai_v2_sscma/)
+- `Model File`: Para obtener instrucciones detalladas sobre el entrenamiento y la exportación de un modelo TFLite, consulta esta [guía](https://wiki.seeedstudio.com/es/grove_vision_ai_v2_sscma/)
 
-- `Object`: El nombre de categoría correspondiente al orden de etiquetas del modelo (de 0 a 8). Solo se admiten hasta nueve clases — cualquier clase adicional no se mostrará.
+- `Object`: El nombre de la categoría que corresponde al orden de las etiquetas del modelo (de 0 a 8). Solo se admiten hasta nueve clases; cualquier clase adicional no se mostrará.
 
-- Haz clic en `Send` y espera el proceso de flasheo
+- Haz clic en `Send` y espera al proceso de flasheo
 
-## Análisis de Resultados en [Seeed Portal](https://sensecap.seeed.cc/portal/#/dashboard)
+## Análisis de resultados en [Seeed Portal](https://sensecap.seeed.cc/portal/#/dashboard)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture11.png" style={{width:1000, height:'auto'}}/></div>
 
-- El primer valor es la marca de tiempo del reporte de datos
+- El primer valor es la marca de tiempo del informe de datos
 
 - Los siguientes nueve valores representan las puntuaciones de confianza (measurementValue) de cada índice de clase (de 0 a 8).
 
-- El valor final contiene la información del modelo, incluyendo metadatos relacionados con el modelo de IA desplegado.
+- El valor final contiene la información del modelo, incluida la metainformación relacionada con el modelo de IA implementado.
 
-## Análisis de Resultados en [TTN](https://eu1.cloud.thethings.network/console/)
+## Análisis de resultados en [TTN](https://eu1.cloud.thethings.network/console/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture9.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -231,17 +231,17 @@ Si tu modelo contiene más de 9 clases, debes seleccionar las nueve clases que n
 
 - Las primeras nueve mediciones representan las puntuaciones de confianza (measurementValue) de cada índice de clase (de 0 a 8).
 
-- La décima medición contiene la información del modelo, incluyendo metadatos relacionados con el modelo de IA desplegado.
+- La décima medición contiene la información del modelo, incluida la metainformación relacionada con el modelo de IA implementado.
 
-## FAQ
+## Preguntas frecuentes
 
 **P: ¿Qué tipo de modelo personalizado puedo subir?**
 
-R: Puedes subir modelos con extensión de archivo .tflite. Puedes entrenar y exportar tus propios modelos siguiendo las instrucciones en [Inicio rápido de entrenamiento de modelos](https://wiki.seeedstudio.com/es/grove_vision_ai_v2_sscma/#training-dataset-exported-model).
+R: Puedes subir modelos con la extensión de archivo .tflite. Puedes entrenar y exportar tus propios modelos siguiendo las instrucciones en [Inicio rápido de entrenamiento de modelos](https://wiki.seeedstudio.com/es/grove_vision_ai_v2_sscma/#inicio-rápido-de-entrenamiento-de-modelos).
 
-## **Soporte Técnico y Discusión de Productos**
+## **Soporte técnico y debate sobre el producto**
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

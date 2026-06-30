@@ -10,7 +10,7 @@ last_update:
   date: 05/16/2023
   author: Lakshantha
 createdAt: '2025-06-05'
-updatedAt: '2026-04-21'
+updatedAt: '2026-06-27'
 url: https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/
 ---
 
@@ -26,10 +26,14 @@ reComputer industrial comes with a passive heatsink and a fanless design, making
 
 reComputer industrial has 2 RJ45 GbE ports, one of which is a PoE PSE port for providing power over Ethernet to devices like IP cameras. This eliminates the need for a separate power source and makes it easier to deploy network devices in areas without readily available power outlets. The other GbE port is used to connect to a network switch or router, enabling communication with other devices on the network and access to the Internet.
 
+:::note
+Available customization options: logo branding, packaging, and firmware flashing.
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
+</div>
 
 ## Features
 
@@ -259,7 +263,7 @@ You need to prepare the following hardware before getting started with reCompute
 
 - reComputer Industrial
 - Provided Power Adapter with power cord ([US version](https://www.seeedstudio.com/AC-US-p-5122.html) or [EU version](https://www.seeedstudio.com/AC-EU-p-5121.html))
-- Ubuntu 20.04 Host PC
+- Ubuntu host PC
 - USB Type-C data transmission cable
 - External monitor
 - HDMI cable
@@ -273,17 +277,19 @@ Please refer to the table below to prepare the host machine.
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 5.x</td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
         <td > </td>
     </tr>
     <tr>
@@ -291,9 +297,19 @@ Please refer to the table below to prepare the host machine.
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.</p>
 :::
 
 ### Enter Force Recovery Mode
@@ -857,6 +873,81 @@ Please complete the **System Configuration** according to your needs.
 :::
 
 - **Step 4:** Connect the J401 to a display using the HDMI connector on the board and finish the initial configuration setup:
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+:::info
+Please complete the **System Configuration** according to your needs.
+:::
+
+</TabItem>
+
+<TabItem value="Jetpack 7.2" label="Jetpack7.2">
+
+- **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using
+
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>Link</th>
+      <th>SHA256</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>reComputer Industrial J4012</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBfReHmaDICTY_-byQpDlSOAXzoeJxfBtyuMYKgIKn5pqo?e=kum4Aa" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>51035f2fee6a383a973250f1efcc2ea7<br />7c083dc4f3e7661541c5fdc579bc9f9d</th>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J4011</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC2tUVw9b3HTqtmb7QI6Bi5AZS9iz9O9lXJyPlI07R5XUY?e=yY7o3T" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>dd03129ba599101972eb2ea75eaa2e5e<br />3b203d04130dbf6aaf4683461587945f</th>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J3011</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQClwzLEoHNhR5r0RVE9G5H8Aa6Tc4-uBwOJNP-eDi4gSMI?e=8v78Ro" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>2bacc1a2577819630702901f2200e2e38<br />a905eb292a71e63532b5056a9e73f87</th>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J3010</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD1SrMagx31RoPYJRTfH0anAS_G9TCSJckK1pV_DdYFFPU?e=K0QfUg" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>b0a1466b3b0c7582a9d398109f53e507<br />92a6526fc51b5b1b9ddb1c04bdb52692</th>
+    </tr>
+  </tbody>
+  </table>
+</div>
+
+:::info
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
+
+On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
+:::
+
+:::info
+The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra).
+:::
+
+- **Step 2:** Extract the generated file
+
+```sh
+sudo tar -xvf <file_name>.tar.gz
+```
+
+- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
+
+```sh
+cd mfi_xxxx
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+Now it will start to flash the system image to the board. If the flashing is successful, you will see the below output
+
+<div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
+
+- **Step 4:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 

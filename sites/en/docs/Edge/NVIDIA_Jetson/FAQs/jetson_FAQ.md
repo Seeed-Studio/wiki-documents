@@ -7,7 +7,7 @@ last_update:
   date: 7/5/2023
   author: Seraphina
 createdAt: '2025-04-11'
-updatedAt: '2026-03-18'
+updatedAt: '2026-06-11'
 url: https://wiki.seeedstudio.com/Jetson_FAQ/
 ---
 
@@ -112,13 +112,21 @@ This mounts the exFAT-formatted external drive to `/media/seeed/tmp-exfat/` so t
 
 For details, please click [here](/how_to_encrypt_the_disk_for_jetson)
 
-#### Q18：How to establish communication between Jetson and EtherCAT devices?
+#### Q19：How to establish communication between Jetson and EtherCAT devices?
 
 For details, please click [here](/how_to_establish_the_ethercat_on_jetson)
 
-#### Q18 I did not modify anything related to the Jetson kernel, but during boot the Jetson reported a UUID-related error and then entered the recovery terminal.
+#### Q20： I did not modify anything related to the Jetson kernel, but during boot the Jetson reported a UUID-related error and then entered the recovery terminal.
 
 Solution for this issue: please click [here](/deal_the_issue_of_UUID)
+
+#### Q21: How to use the IMX219 camera on NVIDIA Jetson devices?
+
+For details, please click [here](/how_to_use_camera_imx219)
+
+#### Q22: What changes does JetPack 7.2 bring to Jetson AGX Orin inference performance?
+
+For details, please click [here](/jetpack72_deep_dive)
 
 ## Tech support
 
@@ -133,4 +141,3 @@ Thank you for choosing our products! We are **here** to provide you with differe
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

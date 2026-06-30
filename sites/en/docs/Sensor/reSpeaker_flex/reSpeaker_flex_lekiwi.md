@@ -1,6 +1,6 @@
 ---
 description: Voice-controlled Kiwi-drive robot using Raspberry Pi, XIAO ESP32, ReSpeaker Lite, and voice embeddings for intelligent hands-free robotic control.
-title: LeKiwi Voice Controller
+title: Add Voice Interaction to Your LeKiwi Robot with reSpeaker
 keywords:
   - reSpeaker flex
   - LeKiwi
@@ -12,17 +12,16 @@ last_update:
   date: 04/28/2026
   author: Kasun Thushara
 createdAt: '2026-04-28'
-updatedAt: '2026-04-30'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/respeaker_flex_lekiwi/
 ---
 
 
 ## Overview
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png" alt="pir" width={800} height="auto" /></p>
 
-Control a 3-wheeled Kiwi-drive robot with your voice! This project combines a Seeed Studio XIAO ESP32 (motor controller) with a Raspberry Pi (voice processing brain), enhanced by the reSpeaker Flex for high-quality audio capture and Voice Embeddings for smarter, more personalized voice interaction. Using natural language commands, you can drive, steer, and control the robot completely hands-free with improved accuracy and responsiveness.
-
-
+Control a 3-wheeled Kiwi-drive robot with your voice! This project combines a Seeed Studio XIAO ESP32 (motor controller) with a Raspberry Pi (voice processing brain), enhanced by the reSpeaker  for high-quality audio capture and Voice Embeddings for smarter, more personalized voice interaction. Using natural language commands, you can drive, steer, and control the robot completely hands-free with improved accuracy and responsiveness.
 
 ## Hardware Required
 
@@ -30,14 +29,12 @@ Control a 3-wheeled Kiwi-drive robot with your voice! This project combines a Se
   <tr>
     <th>LeKiwi Kit</th>
     <th>XIAO ESP32S3</th>
-    <th>reSpeaker Flex XVF3800 Circular</th>
     <th>Raaspberry pi 5</th>
-    
+
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114090065-lekiwi-kit_1.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102010634-seeed-studio-xiao-esp32s3-_pre-soldered_-45font_1.jpg" style={{width:500, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
 
   </tr>
@@ -53,11 +50,6 @@ Control a 3-wheeled Kiwi-drive robot with your voice! This project combines a Se
       </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
       </a>
@@ -65,31 +57,115 @@ Control a 3-wheeled Kiwi-drive robot with your voice! This project combines a Se
   </tr>
 </table>
 
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 300, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      OR
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 300, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+
 ## Services
 
 - [**Groq**](https://groq.com/) account : free tier is enough to get started
 
-
 ## How It Works
- 
+
 ```
 You speak → Wake word detected → Audio recorded → Whisper STT → LLaMA LLM → Orpheus TTS speaks back → ESP32 moves the robot
 ```
- 
+
 1. You say the wake word (default: **"Hey Jarvis"**)
 2. The Raspberry Pi records your command
 3. **Groq Whisper** transcribes your speech to text
 4. **LLaMA 3** decides what action the robot should take
 5. **Groq Orpheus TTS** speaks a reply out loud
 6. A serial command is sent to the ESP32, which drives the motors
+
 ---
 
 ## Prepare the XIAO ESP32 (Motor Controller)
- 
+
 The ESP32 runs the Arduino sketch that physically drives the three wheels using **Kiwi-drive kinematics**. It receives single-character serial commands (`w`, `s`, `a`, `d`, etc.) from the Raspberry Pi and translates them into coordinated motor speeds.
- 
+
 ### Step 1 — Set Motor IDs
- 
+
 :::info
 The sketch expects servo IDs **1, 2, 3**. Before assembling your robot, connect each servo individually and assign the correct ID using the Feetech configuration tool.
 
@@ -100,28 +176,25 @@ The sketch expects servo IDs **1, 2, 3**. Before assembling your robot, connect 
 ### Step 2 — Assemble the LeKiwi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/hardware_lekiwi_1.png" alt="pir" width={800} height="auto" /></p>
- 
+
 Follow the official Seeed Studio video tutorial to assemble the chassis, mount the wheels, and wire the servos:
- 
+
  [LeKiwi Assembly Tutorial](https://wiki.seeedstudio.com/lerobot_lekiwi/#assembly)
- 
+
 :::info
 You only need to complete the **physical assembly**  skip any steps about cloning the LeRobot GitHub repository, as this project uses a different setup.
 :::
 
-
 ### Step 3 — Upload the Arduino Sketch
 
-
- 
 The sketch (`lekiwi_motor_control.ino`) does the following:
- 
+
 - Initialises all three servos in **position mode**, centres them, then switches to **wheel (continuous rotation) mode**
 - Listens on the USB serial port for single-character commands
 - Uses **Kiwi-drive kinematics** to calculate the correct speed for each wheel
-- Supports only **nudge mode** (short burst, then auto-stop) 
+- Supports only **nudge mode** (short burst, then auto-stop)
 **Serial command reference:**
- 
+
 | Key | Action |
 |-----|--------|
 | `w` | Forward nudge |
@@ -133,7 +206,7 @@ The sketch (`lekiwi_motor_control.ino`) does the following:
 | `x` / Space | Emergency stop |
 | `+` / `-` | Increase / decrease nudge duration |
 | `*` / `/` | Increase / decrease nudge speed |
- 
+
 Upload the sketch via the Arduino IDE with the **SCServo** library installed. Open the Serial Monitor at **115200 baud** to verify all three servos respond with `OK`.
 
 <details>
@@ -466,53 +539,54 @@ void loop() {
 ```
 
 </details>
- 
- ## Prepare the Raspberry Pi (Voice Brain)
- 
+
+## Prepare the Raspberry Pi (Voice Brain)
+
 ### Step 1 — Get a Groq API Key
- 
+
 1. Register at [console.groq.com](https://console.groq.com/)
 2. Create a new API key and copy it — you'll need it in Step 4
+
 ### Step 2 — Clone This Repository
- 
+
 ```bash
 git clone https://github.com/KasunThushara/Lekiwi-voice
 cd Lekiwi-voice
 ```
- 
+
 ### Step 3 — Create a Virtual Environment
- 
+
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
- 
+
 > Run `source venv/bin/activate` every time you open a new terminal before using this project.
- 
+
 ### Step 4 — Install Dependencies
- 
+
 ```bash
 pip install -r requirements.txt
 ```
- 
+
 Then download the wake word model:
- 
+
 ```bash
 python3 download_model.py
 ```
- 
+
 This downloads the pre-trained **"Hey Jarvis"** model (and others) from openwakeword into `~/.openwakeword/`.
- 
+
 ### Step 5 — Find Your Microphone Index
- 
-Plug in your **ReSpeaker Flex** via USB, then run:
- 
+
+Plug in your **reSpeaker** via USB, then run:
+
 ```bash
 python3 list_mics.py
 ```
- 
+
 You'll see a list like:
- 
+
 ```
 Available audio INPUT devices:
  
@@ -520,39 +594,39 @@ Available audio INPUT devices:
   [1] ReSpeaker 4 Mic Array  (rate=16000Hz)
   [2] USB PnP Sound Device  (rate=16000Hz)
 ```
- 
+
 Note the number in brackets next to your ReSpeaker — that's your `MIC_INDEX`.
- 
+
 ### Step 6 — Find Your ESP32 Serial Port
- 
+
 Plug the XIAO ESP32 into the Pi via USB, then run:
- 
+
 ```bash
 python3 list_ports.py
 ```
- 
+
 Example output:
- 
+
 ```
 Available serial ports:
  
   /dev/ttyACM0         USB Serial Device
   /dev/ttyUSB0         CP2102 USB to UART Bridge
 ```
- 
+
 Note the device path (usually `/dev/ttyACM0` for XIAO).
- 
+
 ### Step 7 — Configure the Project
- 
+
 Copy the example config and fill in your values:
- 
+
 ```bash
 cp config.env.example config.env
 nano config.env
 ```
- 
+
 The key settings to update:
- 
+
 ```env
 # Your Groq API key (required)
 GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxx
@@ -563,21 +637,21 @@ MIC_INDEX=1
 # The port from list_ports.py
 SERIAL_PORT=/dev/ttyACM0
 ```
- 
+
 Everything else can be left at its default to get started.
- 
+
 ---
- 
+
 ## Run the Robot
- 
+
 Make sure your virtual environment is active, then:
- 
+
 ```bash
 python3 pipeline.py
 ```
- 
+
 You should see:
- 
+
 ```
 ======================================================
   LeKiwi Voice Controller — Ready
@@ -589,11 +663,11 @@ You should see:
 ======================================================
 [WakeWord] Listening for 'hey jarvis' ...
 ```
- 
+
 Now say **"Hey Jarvis"** and give a movement command!
- 
+
 ### Example Commands
- 
+
 > "Hey Jarvis, move forward"
 
 > "Hey Jarvis, turn left"
@@ -603,7 +677,7 @@ Now say **"Hey Jarvis"** and give a movement command!
 > "Hey Jarvis, stop"
 
 > "Hey Jarvis, what can you do?"
- 
+
 ---
 
 ## Tech Support & Product Discussion

@@ -723,19 +723,6 @@ const sidebars = {
             }
           ],
         },
-        //       {
-        //            type: 'category',
-        //           label: 'SenseCAP T1000-P Pet Tracker',
-        //           collapsed: true,
-        //           collapsible: true,
-        //          link: {
-        //            type: "doc",
-        //           id: 'Sensor/SenseCAP/SenseCAP_T1000-P/t1000_p_intro',
-        //         },
-        //        items: [
-        //         'Sensor/SenseCAP/SenseCAP_T1000-P/get_started_with_t1000_p',
-        //           ],
-        //     },
         {
           type: 'category',
           label: 'SenseCAP 传感器',
@@ -1207,6 +1194,40 @@ const sidebars = {
             //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Bluetooth_Usage',
             //   ],
             // },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'XIAO nRF54LM20A 系列',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_NCS',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_Built-in-Sensor',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_Low_Power',
+            {
+              type: 'category',
+              label: '无线连接',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/cn_XIAO_nRF54LM20A-Sense_Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/cn_XIAO_nRF54LM20A_Matter_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/cn_XIAO_nRF54LM20A_NFC_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: '应用',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Application/cn_XIAO_nRF54LM20A_with_epaper_and_sdcard',
+              ],
+            },
+            {
+              type: 'category',
+              label: '编程语言',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_with_MicroPython',
+              ],
+            },
           ],
         },
         {
@@ -1921,35 +1942,89 @@ const sidebars = {
                 id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf3800_with_xiao_intro',
               },
               items: [
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf3800_i2s_test',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_rgb_test',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_volume',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_record_playback',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_gpio',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_mqtt_stream',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_udp_streaming',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_http',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_doa_vad',
                 {
                   type: 'category',
-                  label: '应用',
+                  label: '播放与录音',
                   items: [
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ha',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_edgeimpulse',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_voice_agent',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_xiaozhi',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_arm',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora_ten_framework',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_openclaw',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_picovoice',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf3800_i2s_test',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_record_playback',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_volume',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: '流媒体传输',
+                  items: [
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_udp_streaming',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_http',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_mqtt_stream',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: '设备控制',
+                  items: [
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_rgb_test',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_gpio',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_doa_vad',
                   ],
                 },
               ],
             },
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_python_sdk',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'reSpeaker Flex',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'reSpeaker Flex 搭配 XIAO',
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_xiao',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: '播放与录音',
+                  items: [
+                    'Sensor/reSpeaker_flex/cn_reSpeaker_flex_i2s_test',
+                    'Sensor/reSpeaker_flex/cn_reSpeaker_flex_xiao_playback_record',
+                    'Sensor/reSpeaker_flex/cn_reSpeaker_flex_volume_xiao',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: '音频流传输',
+                  items: [
+                    'Sensor/reSpeaker_flex/cn_reSpeaker_flex_xiao_udp_stream',
+                    'Sensor/reSpeaker_flex/cn_reSpeaker_flex_xiao_http_stream',
+                    'Sensor/reSpeaker_flex/cn_reSpeaker_flex_xiao_mqtt',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: '设备控制',
+                  items: [
+                    'Sensor/reSpeaker_flex/cn_reSpeaker_flex_gpio',
+                    'Sensor/reSpeaker_flex/cn_reSpeaker_flex_doa',
+                  ],
+                },
+              ],
+            },
+            'Sensor/reSpeaker_flex/cn_reSpeaker_flex_python_control',
+            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
         {
@@ -1970,33 +2045,60 @@ const sidebars = {
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_xiao_respeaker',
               },
               items: [
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_i2s_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_rgb_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_volume',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_button',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_record_and_play',
-                // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb', // commented out
                 {
-                  type: 'doc',
-                  id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_generator',
-                  label: '流生成器',
+                  type: 'category',
+                  label: '播放与录音',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_i2s_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_record_and_play',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_volume',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_player_spiffs',
+                  ],
                 },
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_print',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_memory',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_player_spiffs',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_mqtt',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_i2s_tflite',
+                {
+                  type: 'category',
+                  label: '流式传输',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_generator',
+                      label: 'Streams Generator',
+                    },
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_print',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_memory',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_mqtt',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: '设备控制',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_rgb_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_button',
+                  ],
+                },
               ],
             },
             {
               type: 'category',
               label: '应用',
               items: [
-                'Sensor/ReSpeaker_Lite/Application/cn_respeaker_lite_ha',
+                // 'Sensor/ReSpeaker_Lite/Application/cn_respeaker_lite_ha',
                 'Sensor/ReSpeaker_Lite/Application/cn_respeaker_lite_pi5',
               ],
             },
             'Sensor/ReSpeaker_Lite/cn_respeaker_enclosure',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'reSpeaker XVF 3000',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Seeed_Elderly/reSpeaker/Extension_Board/cn_ReSpeaker_Mic_Array_v3.0',
+            'Seeed_Elderly/reSpeaker/Extension_Board/cn_ReSpeaker_Mic_Array_v2.0',
+            'Seeed_Elderly/reSpeaker/cn_ReSpeaker-USB-Mic-Array',
           ],
         },
         {
@@ -2022,21 +2124,10 @@ const sidebars = {
               label: '适用于 v2 用户',
               items: [
                 'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/cn_ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2',
-                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/cn_ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+                // 'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/cn_ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
               ],
             },
             'Sensor/ReSpeaker_2-Mics_Pi_HAT/cn_ReSpeaker_2_Mics_Pi_HAT-Hardware-Revisions',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'reSpeaker XVF 3000',
-          collapsed: true,
-          collapsible: true,
-          items: [
-            'Seeed_Elderly/reSpeaker/Extension_Board/cn_ReSpeaker_Mic_Array_v3.0',
-            'Seeed_Elderly/reSpeaker/Extension_Board/cn_ReSpeaker_Mic_Array_v2.0',
-            'Seeed_Elderly/reSpeaker/cn_ReSpeaker-USB-Mic-Array',
           ],
         },
         {
@@ -2049,7 +2140,7 @@ const sidebars = {
             id: 'Sensor/Sound_event_sensor/cn_sound_event_sensor_intro',
           },
           items: [
-            'Sensor/Sound_event_sensor/cn_sound_event_sensor_intro_ha',
+            // 'Sensor/Sound_event_sensor/cn_sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
@@ -2057,38 +2148,60 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker Flex',
+          label: '应用',
           collapsed: true,
           collapsible: true,
-          link: {
-            type: 'doc',
-            id: 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_intro',
-          },
           items: [
             {
               type: 'category',
-              label: '应用',
+              label: 'Home Assistant',
               items: [
-                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_picovoice',
-                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lekiwi',
+                'Sensor/Sound_event_sensor/cn_sound_event_sensor_intro_ha',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ha',
+                'Sensor/ReSpeaker_Lite/Application/cn_respeaker_lite_ha',
               ],
             },
             {
               type: 'category',
-              label: 'reSpeaker Flex with Xiao',
-              link: {
-                type: 'doc',
-                id: 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_xiao',
-              },
+              label: '机器人',
               items: [
-                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_i2s_test',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_rebot_arm',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_arm',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_ros',
               ],
             },
-            'Sensor/reSpeaker_flex/cn_reSpeaker_flex_python_control',
-            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
-            // add sub-docs here later
-            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
-            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+            {
+              type: 'category',
+              label: '语音识别',
+              items: [
+                {
+                type: 'category',
+                label: 'TensorFlow',
+                items: [
+                  'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_respeaker_streams_i2s_tflite',
+                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
+                  'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/cn_ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+                ],
+              },
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_edgeimpulse',                
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_picovoice',
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_sensecraft',
+              ],
+            },
+            {
+              type: 'category',
+              label: '对话式 AI',
+              items: [
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_voice_agent',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_xiaozhi',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora_ten_framework',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_openclaw',
+
+              ],
+            },
           ],
         },
       ],
@@ -3709,6 +3822,7 @@ const sidebars = {
                   label: 'J601-Robotics 载板',
                   items: [
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/cn_reComputer_Robotics_J601_Getting_Started',
+                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/cn_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/cn_reComputer_A203_Flash_System',
@@ -3792,6 +3906,7 @@ const sidebars = {
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/cn_reComputer_Mini_Getting_Started',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/cn_reComputer_Mini_Hardware_Interfaces_Usage',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/cn_reComputer_Mini_J501_WiFi_Module_Installation',
                   ],
                 },
                 {
@@ -3816,6 +3931,7 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/cn_reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
+
                 {
                   type: 'category',
                   label: 'reComputer J401B',
@@ -3832,6 +3948,7 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/cn_reComputer_Super_Hardware_Interfaces_Usage',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/cn_reComputer_Super_vs_Classic_Next-Gen_AI_Performance_in_Edge_Inferencing',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/cn_Replace_the_Thermal_Conductive_Paste_for_reComputer',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/cn_reComputer_Antenna_Installation'
                   ],
                 },
               ]
@@ -3852,6 +3969,7 @@ const sidebars = {
                   items: [
                     'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/cn_reServer_Industrial_Getting_Started',
                     'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/cn_reServer_Industrial_Hardware_Interface_Usage',
+                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/cn_reServer_Industrial_POE_Camera_Usage',
                   ],
                 },
                 {
@@ -3873,6 +3991,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Other_Devices',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Other_Devices/cn_reBot_Arm_Jetson_Bundle',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8822CE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8852BE_Wireless_Module_for_Jetson',
@@ -3881,6 +4000,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_Jetson_Xavier_AGX_H01_Driver_Installation',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_Jetson-Mate',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_Mini_AI_Computer_T906',
+                'Edge/NVIDIA_Jetson/Other_Devices/cn_Seeed_AGX_Orin_Dev_Kit_Getting_Started',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_reComputer_A203E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_reComputer_A205E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_reComputer_Jetson_Series_GPIO_Grove',
@@ -3982,8 +4102,12 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Getting_Started_with_Jetson_Claw_on_Orin_Nano_NX_8GB',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.7_for_reBot_Arm_and_Deploy_on_Robotics_J601',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_J501_Mini_StarAI_Viola_Fruit_Sorting',
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Control_SoArm_by_OpenClaw_on_Jetson_Thor'
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Control_SoArm_by_OpenClaw_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Voice_Control_reBot_Arm_B601_by_Nvidia_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_reBot_Arm_B601_DM_GraspNet_Visual_Grasping',
               ]
             },
             // Managed Services
@@ -4028,9 +4152,33 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_vnc_for_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Implement_Ethercat_communication_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Distributed_llama_cpp_RPC_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Jetson_SPI_Getting_Start',
               ]
             },
           ]
+        },
+        // Seeed Jetson DevelopTool
+        {
+          type: 'category',
+          label: 'Seeed Jetson DevelopTool',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/Jetson_DevelopTool/cn_Jetson_DevelopTool_Overview',
+          },
+          items: [
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/cn_Jetson_DevelopTool_Supported_Devices',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/cn_Jetson_DevelopTool_Installation',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/cn_Jetson_DevelopTool_Connect_Device',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/cn_Jetson_DevelopTool_Flash_Firmware',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/cn_Jetson_DevelopTool_Device_Management',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/cn_Jetson_DevelopTool_App_Market',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/cn_Jetson_DevelopTool_Skills',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/cn_Jetson_DevelopTool_Remote_Development',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/cn_Jetson_DevelopTool_FAQ',
+          ],
         },
         // FAQs
         {
@@ -4043,9 +4191,11 @@ const sidebars = {
           items: [
             'Edge/NVIDIA_Jetson/FAQs/cn_jetson_FAQ',
             'Edge/NVIDIA_Jetson/FAQs/cn_Create_Backup_and_Restore_on_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/cn_Migrate_Home_Data_from_Jetson_Orin_Nano_Developer_Kit_to_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/cn_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/cn_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
+            'Edge/NVIDIA_Jetson/FAQs/cn_How_to_use_Camera_IMX219',
             'Edge/NVIDIA_Jetson/FAQs/cn_Use_IMX477_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/cn_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/cn_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
@@ -4290,12 +4440,23 @@ const sidebars = {
             {
               type: 'category',
               label: 'B601-DM',
-              items: [           
+              items: [
                   'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Getting_Started',
                   'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_pinocchio',
                   'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Lerobot',
                   'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Grasping_Demo',
                   'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_ROS2_Integration',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'B601-RS',
+              items: [
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Getting_Started',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Lerobot',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Grasping_Demo',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_ROS2_Integration',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_pinocchio',
               ]
             }
           ]
@@ -4313,6 +4474,233 @@ const sidebars = {
           items: [
             'Robotics/Robot_Kits/StackForce/cn_StackForce_Mini_Wheeled_Legged_Robot',
           ]
+        },
+        {
+          type: 'category',
+          label: '人形机器人',
+          items: [
+            {
+              type: 'category',
+              label: 'Atom-S',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-S/cn_Atom-S',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Atom-X',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-X/cn_Atom-X',
+              ]
+            },
+
+          ]
+        },
+        {
+          type: 'category',
+          label: 'ReachyMini',
+          collapsible: true,
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_intro',
+              label: '简介',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_Getting_Started',
+              label: '快速入门',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_AGENTS',
+              label: 'AI代理指南',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_vibe-code-with-your-agent',
+              label: '使用代理进行Vibe Code编程',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_conversation',
+              label: 'Reachy Mini接入豆包大模型API',
+            },
+            {
+              type: 'category',
+              label: 'Reachy Mini (无线版)',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_get_started',
+                  label: '快速入门',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_usage',
+                  label: '使用方法',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_hardware',
+                  label: '硬件',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_media_advanced_controls',
+                  label: '媒体高级控制',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_reset',
+                  label: '重置',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_install_daemon_from_branch',
+                  label: '从分支安装守护进程',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_development_workflow',
+                  label: '开发工作流程',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_reflash_the_rpi_ISO',
+                  label: '重新刷写ISO',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Reachy Mini Lite',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/cn_get_started',
+                  label: '快速入门',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/cn_usage',
+                  label: '使用方法',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/cn_hardware',
+                  label: '硬件',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/cn_media_advanced_controls',
+                  label: '媒体高级控制',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/cn_wizard',
+                  label: '向导',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: '仿真',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/simulation/cn_get_started',
+                  label: '快速入门',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SDK指南',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_installation',
+                  label: '安装',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_quickstart',
+                  label: '快速入门',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_python-sdk',
+                  label: 'Python SDK',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_integration',
+                  label: 'AI集成',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_core-concept',
+                  label: '核心概念',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_gstreamer-installation',
+                  label: 'GStreamer安装',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: '帮助与故障排除',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/cn_troubleshooting',
+                  label: '故障排除',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/cn_motors_diagnosis',
+                  label: '电机诊断',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/cn_change_mic_fpc_cable',
+                  label: '更换麦克风FPC线缆',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: '示例',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/examples' },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'API参考',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/API' },
+              ],
+            },
+          ],
         },
       ]
     },

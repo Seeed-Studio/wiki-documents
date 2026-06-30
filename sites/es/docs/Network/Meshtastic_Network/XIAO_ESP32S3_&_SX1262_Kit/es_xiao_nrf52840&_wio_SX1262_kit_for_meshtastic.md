@@ -66,7 +66,7 @@ Por favor, `don't use NRF-OTA` para actualizar el firmware, ya que puede hacer q
 **Instrucciones en video:**
 
 <div class="video-container">
-<iframe width="100%" height="500" src="https://youtu.be/54Ep36bkHOo" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
@@ -178,7 +178,6 @@ Conecta un [Módulo GNSS L76K](https://www.seeedstudio.com/L76K-GNSS-Module-for-
 - **[LBR]** [Huella Eagle de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-footprint-eagle.lbr)
 - **[XLSX]** [Hoja de distribución de pines de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
 - 🔗 **[Kicad]** [Huella de Seeed Studio XIAO nRF52840](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- **[RAR]** [Archivo 3D de Wio SX-1262 para XIAO](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
 - **[PDF]** [Diagrama esquemático del SX1262 compatible con Xiao nRF52840](https://files.seeedstudio.com/products/113010003/Wio-SX1262%20for%20XIAO%20V1.0.pdf)
 - **[PDF]** [Hoja de datos del módulo Wio SX-1262](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf
 )

@@ -1,8 +1,12 @@
 # Dependencies
 /node_modules
 
+# Qoder IDE rules (global, not project-specific)
+.qoder/
+
 # Production
 /build
+/tmp
 
 # Generated files
 .docusaurus

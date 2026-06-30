@@ -324,6 +324,15 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 
 ## 校准舵机并组装机械臂
 
+:::tip
+如果你购买的是组装版机械臂，请跳到校准机械臂步骤
+:::
+<details>
+
+<summary> 散件机械臂，请按步骤进行 </summary>
+
+
+
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819257278&bvid=BV1r6UUBFECD&cid=34227948757&p=1&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
@@ -358,7 +367,7 @@ SO101 的舵机校准初始化与 SO100 方法和代码一致，只是需要注�
 :::
 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" />
+    <img width={800} src="https://files.seeedstudio.com//wiki/robotics/Sensor/Camera/Orbbec_Gemini2/gemini2_ID.png" />
 </div>
 
 ***以下是代码校准步骤，请参照上图中接线舵机进行校准***
@@ -425,7 +434,7 @@ sudo chmod 666 /dev/ttyACM1
 再次提醒，请确保舵机关节 ID 和齿轮比与 **SO-ARM101** 的严格对应。
 :::
 
-### 校准从动臂舵机
+**校准从动臂舵机**
 
 将 USB 线从电脑连接到从动臂的舵机驱动板，并接通电源。然后，运行以下命令。
 
@@ -465,7 +474,7 @@ Connect the controller board to the 'wrist_roll' motor only and press enter.
 
 当您完成所有步骤后，脚本将自动结束，此时舵机即可投入使用。现在，您可以将每根舵机的 3 针接口依次连接，并将第一个舵机（ID 为 1 的“shoulder pan”舵机）的线缆连接到驱动板。现在可以将驱动板安装到机械臂的底座上。
 
-### 校准领导臂舵机
+**校准领导臂舵机**
 
 对领导臂重复相同的步骤。
 
@@ -483,7 +492,7 @@ lerobot-setup-motors \
 
 </Tabs>
 
-## 组装教程
+**组装教程**
 
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819256249&bvid=BV1k6UUBFEw4&cid=34228079335&p=1&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -536,6 +545,8 @@ lerobot-setup-motors \
 | **步骤 13** | **步骤 14** | **步骤 15** | **步骤 16** | **步骤 17** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F15.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F16.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F17.jpg) |
 
+</details>
+
 ## 校准机械臂
 
 <div class="video-container">
@@ -584,6 +595,12 @@ lerobot-calibrate \
 ```
 
 下面的视频演示了如何执行校准。首先，您需要将机器人移动到所有关节都位于其活动范围中间的位置。然后，按下回车键后，您必须将每个关节在其完整的运动范围内移动。
+
+:::tip
+
+由于lerobot仓库更新，在做主从臂校准时，终端没有收到5号舵机的信号属于正常现象，继续往下进行操作即可
+
+:::
 
 ### 校准领导臂
 
@@ -697,8 +714,8 @@ lerobot-teleoperate \
 
 RealSense 深度相机可为 LeRobot 提供 RGB-D 感知能力，适用于目标识别、点云重建与桌面抓取等场景。这里推荐使用 **RealSense D405** 与 **RealSense D435i**。
 
-### RealSense D405
 
+**RealSense D405**
 <div align="center">
     <img width={420}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" />
@@ -706,7 +723,7 @@ RealSense 深度相机可为 LeRobot 提供 RGB-D 感知能力，适用于目标
 
 RealSense D405 是一款近距离双目深度相机，适合机械臂桌面操作等高精度近场视觉任务，典型工作范围为 **7 cm 到 50 cm**。
 
-### RealSense D435i
+**RealSense D435i**
 
 <div align="center">
     <img width={420}
@@ -715,7 +732,7 @@ RealSense D405 是一款近距离双目深度相机，适合机械臂桌面操�
 
 RealSense D435i 集成深度感知、RGB 成像和 IMU，适合三维重建、SLAM 与机器人环境感知等中近距离应用。
 
-### 1. 切换到相机分支
+**1. 切换到相机分支**
 
 当前相机支持位于 `DepthCameraSupport` 分支上：
 
@@ -736,9 +753,7 @@ git branch --show-current
 DepthCameraSupport
 ```
 
-### 2. 检测相机
-
-### 2. 以可编辑模式安装 LeRobot
+**2. 以可编辑模式安装RealSense**
 
 如果你只使用 RealSense：
 
@@ -746,13 +761,13 @@ DepthCameraSupport
 pip install -e ".[realsense]"
 ```
 
-### 3. 赋予相机权限
+**3. 赋予相机权限**
 
 ```bash
 chmod a+rw /dev/bus/usb/*/* 
 ```
 
-### 4. 检测相机
+**4. 检测相机**
 
 ```bash
 lerobot-find-cameras realsense
@@ -771,7 +786,7 @@ lerobot-find-cameras realsense
 
 这里需要将采集到的 `Serial number` 输入到下面调用相机命令的 `serial_number_or_name` 参数中。
 
-### 5. RealSense 示例
+**5. RealSense 示例**
 
 双 RealSense 测试：
 
@@ -831,7 +846,7 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 6. 参数建议
+**6. 参数建议**
 
 - `depth_alpha` 用于控制深度图的缩放比例；可以根据画面显示效果和目标距离范围进行调整。
 - 如果需要连接三个及以上深度相机，建议将 `fps` 降低到 `15`，以减轻 USB 带宽与系统负载压力。
@@ -842,6 +857,7 @@ lerobot-teleoperate \
 <details>
 
 <summary> 如果使用 Orbbec Gemini2/Gemini336 相机 </summary>
+
 
 <div align="center">
     <img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
@@ -860,7 +876,7 @@ Orbbec Gemini 2 是一款适用于机器人场景的高性能 RGB-D 相机，提
 
 Gemini 336 是 Gemini 330 系列中的新成员，继承了 Gemini 335 出色的深度性能，并进一步优化了在室内反光区域、高动态暗部区域以及户外强光环境下的深度成像表现。对于机器人应用来说，它能够提供更稳定的高质量深度数据，适合感知、定位与操作等任务。
 
-### 1. 切换到相机分支
+**1. 切换到相机分支**
 
 当前相机支持位于 `DepthCameraSupport` 分支上：
 
@@ -881,7 +897,7 @@ git branch --show-current
 DepthCameraSupport
 ```
 
-### 2. 以可编辑模式安装 LeRobot
+**2. 以可编辑模式安装 LeRobot**
 
 如果你只使用 Orbbec：
 
@@ -889,13 +905,33 @@ DepthCameraSupport
 pip install -e ".[orbbec]"
 ```
 
-### 3. 赋予相机权限
+**3. 赋予相机权限**
 
 ```bash
 chmod a+rw /dev/bus/usb/*/* 
 ```
 
-### 4. 检测相机
+**4. USBFS 缓存大小配置**
+
+默认情况下，USBFS 缓存大小为 16 MB。此值不足以用于高分辨率图像或多个流和多个设备使用。用户可以将缓存大小增加到 128 MB。
+
+检查 USBFS 缓存大小
+```bash
+cat /sys/module/usbcore/parameters/usbfs_memory_mb
+```
+
+临时增加 USBFS 缓存大小
+```bash
+sudo sh -c 'echo 128> /sys/module/usbcore/parameters/usbfs_memory_mb'
+```
+
+:::tip
+
+如果仍然遇到 `TimeoutError: Timed out waiting for frame from <lerobot.cameras.orbbec.camera_orbbec.OrbbecDepthCamera object at 0x7ba4ba130910.........` 超时的报错，对相机进行拔插即可。
+
+:::
+
+**5. 检测相机**
 
 ```bash
 lerobot-find-cameras orbbec
@@ -914,7 +950,7 @@ lerobot-find-cameras orbbec
 
 这里需要将采集到的 `Serial number` 输入到下面调用相机命令的 `serial_number_or_name` 参数中
 
-### 5. Orbbec 示例
+**6. Orbbec 示例**
 
 单 Orbbec 测试：
 
@@ -951,13 +987,62 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 6. 参数建议
+单 Orbbec 测试 + 普通相机测试：
+
+```bash
+lerobot-teleoperate \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.id=my_awesome_follower_arm \
+  --robot.cameras='{
+    orbbec_color: {
+      type: orbbec_color,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      rotation: 0,
+      warmup_s: 1
+    },
+    orbbec_depth: {
+      type: orbbec_depth,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 400,
+      fps: 30,
+      depth_alpha: 0.2,
+      rotation: 0,
+      warmup_s: 5
+    },
+     side: {
+     type: opencv,
+     index_or_path: 8,
+     width: 640,
+     height: 480,
+     fps: 30,
+     fourcc: "MJPG"} 
+  }' \
+  --teleop.type=so101_leader \
+  --teleop.port=/dev/ttyACM1 \
+  --teleop.id=my_awesome_leader_arm \
+  --display_data=true
+```
+
+:::tip
+
+在使用单 Orbbec + 普通相机时，建议先插入 Orbbec 后再插入普通相机，因为在使用 ` lerobot-find-cameras opencv ` 命令查找相机编号时会发现 Orbbec 会存在3个连续的相机编号，因此建议最后插入普通相机，让普通相机的编号排在最后。
+
+:::
+
+
+**7. 参数建议**
 
 - `depth_alpha` 用于控制深度图的缩放比例；通常可以从 `0.2` 开始测试，再根据显示效果进行微调。
 - 如果需要连接三个及以上深度相机，建议将 `fps` 降低到 `15`，以提升整体稳定性。
 - 建议优先保持 `640x480` 分辨率，以获得更稳定的显示与传输效果。
 
-### 7. 常见问题
+**8. 常见问题**
 
 出现以下报错时：
 
@@ -975,7 +1060,11 @@ lerobot-find-cameras orbbec
 
 </details>
 
-## 如果使用普通相机
+<details>
+
+<summary> 如果使用普通相机 </summary>
+
+
 
 为了实例化摄像头，您需要一个摄像头标识符。这个标识符可能会在您重启电脑或重新插拔摄像头时发生变化，这主要取决于您的操作系统。
 
@@ -1046,6 +1135,8 @@ lerobot-teleoperate \
 :::tip
 `fourcc: "MJPG"`格式图像是经过压缩后的图像，你可以尝试更高分辨率，当然你可以尝试`YUYV`格式图像，但是这会导致图像的分辨率和FPS降低导致机械臂运行卡顿。目前`MJPG`格式下可支持`3`个摄像头`1920*1080`分辨率并且保持`30FPS`, 但是依然不推荐2个摄像头通过同一个USB HUB接入电脑。同时，如果摄像头接在 USB2.0 的接口，也可能会出现无法读取的问题，建议优先使用 USB3.0 接口并尽量直连设备。
 :::
+
+</details>
 
 ## 数据集制作采集
 
@@ -1585,6 +1676,15 @@ GR00T N1.5 是 NVIDIA 提供的一个开放基础模型（foundation model），
 pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"
 ```
 
+:::tip
+如果您是RTX 50系列，需要满足下面要求：Python=3.10，CUDA=12.8，Torch=2.7.1
+
+下载命令如下：
+```bash
+pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
+```
+:::
+
 3. 安装 flash-attn 依赖与 flash-attn 本体：
 
 ```bash
@@ -1592,6 +1692,15 @@ pip install ninja "packaging>=24.2,<26.0"
 pip install "flash-attn>=2.5.9,<3.0.0" --no-build-isolation
 python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} imported successfully')"
 ```
+
+:::tip
+如果您是RTX 50系列，需要满足下面要求：flash_attn=2.8.0
+
+下载命令如下：
+```bash
+pip install flash_attn==2.8.0.post2 torch==2.7.1 --no-build-isolation
+```
+:::
 
 4. 安装 LeRobot 的 groot 依赖：
 
@@ -1666,7 +1775,7 @@ License：该模型遵循 Apache 2.0 许可证（与原始 GR00T 仓库一致）
 
 PEFT（Parameter-Efficient Fine-Tuning，参数高效微调）是一套“参数高效适配”方法与工具，用于在**不更新全部模型参数**的前提下，让大型预训练模型更快适配新任务。对于 LeRobot 的预训练策略（例如 SmolVLA、π₀ 等），通常可以只训练少量“适配器”参数（例如 LoRA），在降低显存占用与训练成本的同时获得接近全量微调的效果。
 
-## 安装
+**安装**
 
 安装 LeRobot 的 `peft` 可选依赖后即可使用 PEFT 相关参数：
 
@@ -1683,7 +1792,7 @@ pip install "lerobot[peft]"
 更多适配方法与概念说明可参考官方文档：  
 [🤗 PEFT 文档](https://huggingface.co/docs/peft/index)
 
-## 示例：用 LoRA 微调 SmolVLA（Libero 的 libero_spatial 子任务）
+**示例：用 LoRA 微调 SmolVLA（Libero 的 libero_spatial 子任务）**
 
 下面示例展示如何在 `HuggingFaceVLA/libero` 数据集上，对 `lerobot/smolvla_base` 进行 LoRA 微调。参数名称以当前 LeRobot 版本为准，建议同时参考 `lerobot-train --help`。
 
@@ -1704,12 +1813,12 @@ lerobot-train \
   --peft.r=64
 ```
 
-## PEFT 关键参数说明
+**PEFT 关键参数说明**
 
 - `--peft.method_type`：选择要使用的 PEFT 方法。LoRA（Low-Rank Adapter）是最常用的方法之一。
 - `--peft.r`：LoRA 的 rank。一般来说，rank 越大可表达能力越强，但参数量与显存占用也会增加。
 
-## 指定要注入 LoRA 的层（可选）
+**指定要注入 LoRA 的层（可选）**
 
 默认情况下，PEFT 往往会针对模型中最关键的投影层（例如注意力的 `q_proj`、`v_proj` 等）注入 LoRA，并可能额外覆盖状态/动作相关的投影层。若需要针对不同层，可以使用 `--peft.target_modules` 指定目标层。
 
@@ -1727,7 +1836,7 @@ lerobot-train \
 --peft.target_modules='(model\\.vlm_with_expert\\.lm_expert\\..*\\.(down|gate|up)_proj|.*\\.(state_proj|action_in_proj|action_out_proj|action_time_mlp_in|action_time_mlp_out))'
 ```
 
-## 指定某些层进行全量训练（可选）
+**指定某些层进行全量训练（可选）**
 
 如果希望某些模块“全量训练”（而不是只注入 LoRA），可以使用 `--peft.full_training_modules` 指定。例如仅全量训练 `state_proj`：
 
@@ -1735,7 +1844,7 @@ lerobot-train \
 --peft.full_training_modules="['state_proj']"
 ```
 
-## 学习率建议（经验值）
+**学习率建议（经验值）**
 
 LoRA 的学习率通常可以比全量微调更大一个量级（常见经验：约 10×）。例如全量微调常用 `1e-4`，LoRA 可以从 `1e-3` 起步；若你启用了学习率衰减（scheduler），最终学习率也常设置在 `1e-4` 附近作为参考。
 
@@ -1744,9 +1853,9 @@ LoRA 的学习率通常可以比全量微调更大一个量级（常见经验：
 <details>
 <summary>（可选）在训练时使用多GPU训练</summary>
 
-## 1.训练步骤
+**1.训练步骤**
 
-### 方式一：使用命令行参数进行多卡训练
+**方式一：使用命令行参数进行多卡训练**
 
 首先，在lerobot环境中安装训练加速系统
 
@@ -1804,7 +1913,7 @@ $(which lerobot-train) \
 
 或在命令行中显式指定 fp16。
 
-### 方式二：使用 accelerate 配置文件（可选）
+**方式二：使用 accelerate 配置文件（可选）**
 
 如果您经常进行多卡训练，也可以将上述的训练配置进行保存，从而避免繁琐的命令行输入。
 
@@ -1868,13 +1977,13 @@ accelerate launch $(which lerobot-train) \
 
 ```
 
-## 多 GPU 训练对于训练参数的影响以及调整策略
+**多 GPU 训练对于训练参数的影响以及调整策略**
 
 LeRobot 不会根据 GPU 数量自动调整学习率或训练步骤。以避免在用户在不知情的情况下改变训练行为。这与其他常用的分布式训练框架不同。
 
 如果您希望**在多 GPU 训练时调整超参数**，需要按以下步骤手动完成。
 
-### 对于步数的影响以及调整策略
+**对于步数的影响以及调整策略**
 
 由于多 GPU 会使 有效 batch size 增大（batch_size × num_gpus）
 
@@ -1908,7 +2017,7 @@ accelerate launch --num_processes=2 $(which lerobot-train) \
 
 ```
 
-### 对于学习率的影响以及调整策略
+**对于学习率的影响以及调整策略**
 
 使用多块 GPU 时，每一步更新会使用更多样本。
 
@@ -1966,28 +2075,28 @@ accelerate launch --num_processes=2 $(which lerobot-train) \
 - 同步推理：预测一块动作块、执行一块动作块；机器人在等待下一块动作时会出现等待动作块推理的间隙，这时候机械臂不会移动。在模型参数量更大并且算力不足的时候，推理的时间间隙是显著的，这时候机械臂会运动一段时间，然后停滞一段时间（推理），然后继续运动。
 - 异步推理：不同于同步推理，机器人执行当前动作块的同时，服务器已经在计算下一块动作；重叠部分会做聚合，以得到更及时的控制。
 
-### 异步推理的三种部署场景
+**异步推理的三种部署场景**
 
-#### 1. 单机部署
+**1. 单机部署**
 
 机器人、相机、客户端、服务器都在同一台设备上。  
 这是最简单的情况，服务器监听 127.0.0.1 即可，客户端也连接 127.0.0.1:端口。官方文档中的命令示例就是这个场景。
 
-#### 2. 局域网部署
+**2. 局域网部署**
 
 机器人和相机接在一台轻量设备上，策略服务器运行在同一局域网中的另一台高算力设备上。  
 此时服务器必须监听一个可被其他机器访问的地址，客户端也必须连接服务器的局域网 IP，而不能再写 127.0.0.1。
 
-#### 3. 跨网络 / 云端部署
+**3. 跨网络 / 云端部署**
 
 策略服务器运行在公网可访问的云主机上，客户端通过公网连接它。  
 这种方式可以使用云主机更强的 GPU。在网络状况良好的情况下，网络往返时间（网络延时）有时相对推理耗时较小，但这取决于你的实际网络环境。
 
 > 安全提醒：LeRobot async inference 管线存在未认证 gRPC + pickle 反序列化的风险。如果服务器上有重要信息或者重要服务，公网部署时，不建议把服务直接裸露到互联网；更稳妥的做法是 VPN、SSH 隧道，或至少把安全组来源 IP 限制到你自己的客户端公网地址。
 
-### 开始异步推理部署
+**开始异步推理部署**
 
-#### Step1: 环境配置
+**Step1: 环境配置**
 
 首先，使用 pip 安装运行异步推理所需的额外依赖。客户端和服务器端均需要安装 lerobot 并安装额外依赖：
 
@@ -1995,9 +2104,9 @@ accelerate launch --num_processes=2 $(which lerobot-train) \
 pip install -e ".[async]"
 ```
 
-#### Step2: 网络配置与检查
+**Step2: 网络配置与检查**
 
-##### 1. 代理问题
+**1. 代理问题**
 
 如果你当前终端配置了代理，并且连接出现异常，可以临时取消代理环境变量：
 
@@ -2007,7 +2116,7 @@ unset http_proxy https_proxy ftp_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROX
 
 注意：以上的命令只对一个终端生效，如果你重新开了另一个终端窗口，需要重新运行该命令。
 
-##### 2. 在防火墙 / 安全组放行端口
+**2. 在防火墙 / 安全组放行端口**
 
 - 单机部署：通常可以跳过。
 - 局域网部署：需要在服务器端放行监听端口。  
@@ -2022,7 +2131,7 @@ sudo ufw allow 8080/tcp
 如果是在云端服务器上运行：  
 在服务器管理页面的安全组放行 8080 端口，或使用其他已经放行的端口。不同云服务平台的方式并不统一，详见云平台服务商。
 
-##### 3. 确认 IP 地址
+**3. 确认 IP 地址**
 
 单机部署可以跳过这一步（单机的 IP 地址恒为 127.0.0.1）。
 
@@ -2073,7 +2182,7 @@ ifconfig
 
 我们需要将公网 IP 地址记住。我们将用`<服务器公网IP>`来指代它。
 
-##### 4. 连接测试
+**4. 连接测试**
 
 - 单机部署：可跳过这一步
 - 局域网 / 云端部署：建议在客户端测试是否能访问服务器端口，测试例子如下：
@@ -2090,9 +2199,9 @@ nc -vz <局域网IP地址> 8080
 nc -vz <服务器公网IP> 8080
 ```
 
-#### Step3: 启动服务
+**Step3: 启动服务**
 
-##### 场景 A：单机部署
+**场景 A：单机部署**
 
 在一个终端中启动本地服务：
 
@@ -2104,7 +2213,7 @@ python -m lerobot.async_inference.policy_server \
 
 运行成功后，你需要保持这个终端打开，你需要新建新的终端才可以执行其他命令。
 
-##### 场景 B：局域网内部署
+**场景 B：局域网内部署**
 
 在服务器端运行：
 
@@ -2116,7 +2225,7 @@ python -m lerobot.async_inference.policy_server \
 
 此时客户端连接时，--server_address 中填写的应当是服务器端的局域网 IP 地址，即 `<局域网IP地址>:8080`。
 
-##### 场景 C：云端服务器部署
+**场景 C：云端服务器部署**
 
 在服务器端运行：
 
@@ -2128,7 +2237,7 @@ python -m lerobot.async_inference.policy_server \
 
 此时客户端连接时，--server_address 中填写的应当是服务器的公网 IP 地址，即`<服务器公网IP>:8080`。
 
-#### Step4: 选择推理参数
+**Step4: 选择推理参数**
 
 在客户端运行：
 
@@ -2208,7 +2317,7 @@ python -m lerobot.async_inference.robot_client \
   是否在运行时可视化动作队列大小。  
   打开后可以更直观地看到队列是否频繁触底，从而帮助你调整 actions_per_chunk 和 chunk_size_threshold。
 
-#### Step5: 根据机器人表现调整参数
+**Step5: 根据机器人表现调整参数
 
 在异步推理中，有两个同步推理没有的额外参数需要调整：
 

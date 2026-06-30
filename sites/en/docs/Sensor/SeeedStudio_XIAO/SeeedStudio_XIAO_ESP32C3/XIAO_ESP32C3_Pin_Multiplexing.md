@@ -9,13 +9,26 @@ last_update:
   date: 07/25/2024
   author: Spencer
 createdAt: '2023-01-16'
-updatedAt: '2025-09-11'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/
 ---
 
 # Pin Multiplexing
 
 Seeed Studio XIAO ESP32C3 has rich interfaces. There are **11 digital I/O** that can be used as **PWM pins** and **4 analog inputs** that can be used as **ADC pins**. It supports four serial communication interfaces such as **UART, I2C, SPI and I2S**. This wiki will be helpful to learn about these interfaces and implement them in your next projects!
+
+## Hardware overview
+
+> *A3(GP105) - Uses ADC2, which may become inoperative due to false sampling signals. For reliable analog reads, use ADC1(A0/A1/A2) instead. Refer to the ESP32-C3 datasheet.
+
+### Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/XIAO_ESP32-C3_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/XIAO_ESP32-C3_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
 
 ## Digital
 

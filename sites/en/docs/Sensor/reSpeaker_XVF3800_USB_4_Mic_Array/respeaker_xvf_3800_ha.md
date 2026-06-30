@@ -1,6 +1,6 @@
 ---
 description: Experience the power of the ReSpeaker XVF3800 USB 4-Mic Array—an advanced circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the compact XIAO ESP32S3, it delivers high-performance voice control for smart devices, robotics, and IoT applications. Join us as we demonstrate seamless integration with Home Assistant to control devices using voice commands.
-title: Smart Home Voice Control with Home Assistant
+title: Smart Home Voice Control with Home Assistant with reSpeaker XVF3800
 keywords:
   - reSpeaker
   - XIAO
@@ -12,7 +12,7 @@ last_update:
   date: 9/17/2025
   author: Kasun Thushara
 createdAt: '2025-07-31'
-updatedAt: '2026-04-22'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_home_assistant/
 ---
 

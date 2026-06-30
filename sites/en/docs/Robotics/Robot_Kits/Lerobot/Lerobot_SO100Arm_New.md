@@ -16,7 +16,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-06-05'
-updatedAt: '2026-04-30'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/lerobot_so100m_new/
 ---
 # Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot
@@ -338,6 +338,15 @@ If you are using a Jetson device, install Pytorch and Torchvision according to [
 
 ## Configure the motors
 
+:::tip
+If you purchased a pre-assembled robotic arm, please skip to the Calibrate section.
+:::
+<details>
+
+<summary> For kit version, please follow the steps below </summary>
+
+
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -431,7 +440,7 @@ If you buy the Arm Kit version (ST-3215-C001), use a 5V power supply. If you buy
 Again, please make sure that the servo joint IDs and gear ratios strictly correspond to those of the SO-ARM101.
 :::
 
-### Calibrate Follower Arm Servos
+**Calibrate Follower Arm Servos**
 
 Connect the usb cable from your computer and the power supply to the follower arm’s controller board. Then, run the following command.
 
@@ -473,7 +482,7 @@ Check your cabling at each step before pressing Enter. For instance, the power s
 
 When you are done, the script will simply finish, at which point the motors are ready to be used. You can now plug the 3-pin cable from each motor to the next one, and the cable from the first motor (the ‘shoulder pan’ with id=1) to the controller board, which can now be attached to the base of the arm.
 
-### Calibrate Leader Arm Servos
+**Calibrate Leader Arm Servos**
 
 Do the same steps for the leader arm.
 
@@ -491,7 +500,7 @@ lerobot-setup-motors \
 
 </Tabs>
 
-## Assembly
+**Assembly**
 
 :::tip
 
@@ -539,6 +548,8 @@ If you purchased the **SO101 Arm Kit Standard Edition**, all power supplies are 
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F7.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F8.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F9.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F11.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F12.jpg) |
 | **Step 13** | **Step 14** | **Step 15** | **Step 16** | **Step 17** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F15.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F16.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F17.jpg) |
+
+</details>
 
 ## Calibrate
 
@@ -598,6 +609,10 @@ lerobot-calibrate \
 
 The video below shows how to perform the calibration. First you need to move the robot to the position where all joints are in the middle of their ranges. Then after pressing enter you have to move each joint through its full range of motion.
 
+:::tip
+Due to the update of the lerobot repository, it is normal that the terminal does not receive a signal from servo 5 when performing master-slave arm calibration. You can continue with the operation.
+:::
+
 **Manual calibration of leader arm**
 
 Do the same steps to calibrate the leader arm, run the following command or API example:
@@ -612,6 +627,7 @@ lerobot-calibrate \
 :::tip
 
 If you encounter the error “Could not connect on port '/dev/ttyACM0'. Make sure you are using the correct port., Try running lerobot-find-port” while calibrating the Leader or Follower arms, you need to grant the necessary permissions by running:`sudo chmod 666 /dev/ttyACM*`
+:::
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -700,7 +716,7 @@ The teleoperate command will automatically:
 
 RealSense depth cameras can provide RGB-D perception for LeRobot and are suitable for tasks such as object recognition, point cloud reconstruction, and tabletop manipulation. The recommended models here are **RealSense D405** and **RealSense D435i**.
 
-### RealSense D405
+**RealSense D405**
 
 <div align="center">
     <img width={420}
@@ -709,7 +725,7 @@ RealSense depth cameras can provide RGB-D perception for LeRobot and are suitabl
 
 The RealSense D405 is a short-range stereo depth camera designed for high-precision close-range tasks such as tabletop robotic manipulation, with a typical working range of **7 cm to 50 cm**.
 
-### RealSense D435i
+**RealSense D435i**
 
 <div align="center">
     <img width={420}
@@ -718,7 +734,7 @@ The RealSense D405 is a short-range stereo depth camera designed for high-precis
 
 The RealSense D435i combines depth sensing, RGB imaging, and an IMU, making it suitable for mid- to close-range applications such as 3D reconstruction, SLAM, and robotic environment perception.
 
-### 1. Switch to the Camera Branch
+**1. Switch to the Camera Branch**
 
 Current camera support is available on the `DepthCameraSupport` branch:
 
@@ -739,7 +755,7 @@ Expected output:
 DepthCameraSupport
 ```
 
-### 2. Install LeRobot in Editable Mode
+**2. Install RealSense in Editable Mode**
 
 If you only use RealSense:
 
@@ -747,13 +763,13 @@ If you only use RealSense:
 pip install -e ".[realsense]"
 ```
 
-### 3. Grant Camera Permissions
+**3. Grant Camera Permissions**
 
 ```bash
 chmod a+rw /dev/bus/usb/*/* 
 ```
 
-### 4. Detect Cameras
+**4. Detect Cameras**
 
 ```bash
 lerobot-find-cameras realsense
@@ -768,7 +784,7 @@ This step will output:
 
 Enter the retrieved `Serial number` into the `serial_number_or_name` parameter of the camera command below.
 
-### 5. RealSense Example
+**5. RealSense Example**
 
 Dual RealSense test:
 
@@ -828,7 +844,7 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 6. Parameter Notes
+**6. Parameter Notes**
 
 - `depth_alpha` controls the scaling factor of the depth image and can be adjusted based on the display result and target distance range.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` to improve overall stability.
@@ -838,6 +854,7 @@ lerobot-teleoperate \
 
 <details>
 <summary> If using Orbbec Gemini2/Gemini336 cameras </summary>
+
 
 <div align="center">
     <img width={800}
@@ -857,7 +874,7 @@ Orbbec Gemini 2 is a high-performance RGB-D camera for robotics applications, pr
 
 Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
 
-### 1. Switch to the Camera Branch
+**1. Switch to the Camera Branch**
 
 Current camera support is available on the `DepthCameraSupport` branch:
 
@@ -878,7 +895,7 @@ Expected output:
 DepthCameraSupport
 ```
 
-### 2. Install LeRobot in Editable Mode
+**2. Install LeRobot in Editable Mode**
 
 If you only use Orbbec:
 
@@ -886,13 +903,33 @@ If you only use Orbbec:
 pip install -e ".[orbbec]"
 ```
 
-### 3. Grant Camera Permissions
+**3. Grant Camera Permissions**
 
 ```bash
 chmod a+rw /dev/bus/usb/*/* 
 ```
 
-### 4. Detect Cameras
+**4. USBFS Cache Size Configuration**
+
+By default, the USBFS cache size is 16 MB. This value is insufficient for high-resolution images, multiple data streams, and multi-device scenarios. Users can increase the cache size up to 128 MB.
+
+Check the USBFS Cache Size
+```bash
+cat /sys/module/usbcore/parameters/usbfs_memory_mb
+```
+
+Temporarily Increase USBFS Cache Size
+```bash
+sudo sh -c 'echo 128> /sys/module/usbcore/parameters/usbfs_memory_mb'
+```
+
+:::tip
+
+If you still encounter the `timeout error TimeoutError: Timed out waiting for frame from <lerobot.cameras.orbbec.camera_orbbec.OrbbecDepthCamera object at 0x7ba4ba130910.........>`, simply reconnect the camera.
+
+:::
+
+**5. Detect Cameras**
 
 ```bash
 lerobot-find-cameras orbbec
@@ -907,7 +944,7 @@ This step will output:
 
 Enter the retrieved `Serial Number` into the `serial_number_or_name` parameter of the camera command shown below.
 
-### 5. Orbbec Example
+**6. Orbbec Example**
 
 Single Orbbec test:
 
@@ -944,13 +981,61 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 6. Parameter Notes
+Single Orbbec Camera Test + Standard Camera Test:
+
+```bash
+  lerobot-teleoperate \
+    --robot.type=so101_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=my_awesome_follower_arm \
+    --robot.cameras='{
+      orbbec_color: {
+        type: orbbec_color,
+        serial_number_or_name: "CP9JA530003A",
+        width: 640,
+        height: 480,
+        fps: 30,
+        color_mode: rgb,
+        rotation: 0,
+        warmup_s: 1
+      },
+      orbbec_depth: {
+        type: orbbec_depth,
+        serial_number_or_name: "CP9JA530003A",
+        width: 640,
+        height: 400,
+        fps: 30,
+        depth_alpha: 0.2,
+        rotation: 0,
+        warmup_s: 5
+      },
+      side: {
+      type: opencv,
+      index_or_path: 8,
+      width: 640,
+      height: 480,
+      fps: 30,
+      fourcc: "MJPG"} 
+    }' \
+    --teleop.type=so101_leader \
+    --teleop.port=/dev/ttyACM1 \
+    --teleop.id=my_awesome_leader_arm \
+    --display_data=true
+```
+
+:::tip
+When using a single Orbbec camera together with a standard camera, it is recommended to plug in the Orbbec camera first, followed by the standard camera.
+
+When running the lerobot-find-cameras opencv command to detect camera IDs, you will find that the Orbbec camera occupies 3 consecutive camera numbers. Therefore, it is advisable to plug in the standard camera last so that its number is assigned at the end.
+:::
+
+**7. Parameter Notes**
 
 - `depth_alpha` controls the scaling factor of the depth image. A good starting point is `0.2`, then you can fine-tune it based on the display result.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` for better stability.
 - It is recommended to keep the resolution at `640x480` for more stable display and data transfer.
 
-### 7. Common Issues
+**8. Common Issues**
 
 If you see the following error:
 
@@ -968,7 +1053,11 @@ Then confirm the actual `serial` and update `serial_number_or_name` in your comm
 
 </details>
 
-## If using a regular camera
+<details>
+
+<summary> If using a regular camera </summary>
+
+
 
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
@@ -1063,6 +1152,8 @@ pip3 install rerun-sdk==0.23
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/EUcXlLlOjGE?si=6ncQ7o5ZFLR4PGTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+</details>
 
 ## Record the dataset
 
@@ -1622,6 +1713,16 @@ Recommended order:
 pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"
 ```
 
+:::tip
+
+If you are using an RTX 50 Series GPU, the following requirements must be met: Python=3.10, CUDA=12.8, Torch=2.7.1
+
+The download command is as follows:
+```bash
+pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
+```
+:::
+
 3. Install the build dependencies for `flash-attn`, then install `flash-attn` itself.
 
 ```bash
@@ -1629,6 +1730,16 @@ pip install ninja "packaging>=24.2,<26.0"
 pip install "flash-attn>=2.5.9,<3.0.0" --no-build-isolation
 python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} imported successfully')"
 ```
+
+:::tip
+
+If you are using an RTX 50 Series GPU, the following requirement must be met: flash_attn=2.8.0
+
+The download command is as follows:
+```bash
+pip install flash_attn==2.8.0.post2 torch==2.7.1 --no-build-isolation
+```
+:::
 
 4. Install LeRobot with the `groot` optional dependencies (`lerobot[groot]`).
 

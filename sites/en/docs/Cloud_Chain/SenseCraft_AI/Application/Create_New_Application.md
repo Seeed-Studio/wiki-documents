@@ -11,7 +11,7 @@ last_update:
   date: 03/30/2026
   author: Rida
 createdAt: '2026-03-30'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/sensecraft-ai/application/create-new-application/
 ---
 # Creating a New Application in SenseCraft AI
@@ -83,16 +83,16 @@ In the deployment flow you can insert SenseCraft AI integrated features in one c
 
 Available tool blocks:
 
-- **[AI Vision](./Tool_Blocks.md#ai-vision)** — Deploy vision models for object recognition, detection, and classification on supported hardware.
-- **[AI Audio](./Tool_Blocks.md#ai-audio)** — Deploy speech recognition models on supported hardware.
-- **[AI Vibration](./Tool_Blocks.md#ai-vibration)** — Detect vibration anomalies by learning normal vibration patterns and flagging deviations.
-- **[Node-RED](./Tool_Blocks.md#node-red)** — Build and deploy visual logic flows for reCamera.
-- **[Aily Blockly](./Tool_Blocks.md#aily-blockly)** — Flash programs built in the Aily Blockly visual environment to edge devices.
-- **[Deploy container app](./Tool_Blocks.md#deploy-container-app)** — Deploy containerized applications to supported hardware.
-- **[Flash firmware](./Tool_Blocks.md#flash-firmware)** — Flash firmware images to devices in one click.
+- **[AI Vision](/sensecraft-ai/application/tool-blocks#ai-vision)** — Deploy vision models for object recognition, detection, and classification on supported hardware.
+- **[AI Audio](/sensecraft-ai/application/tool-blocks#ai-audio)** — Deploy speech recognition models on supported hardware.
+- **[AI Vibration](/sensecraft-ai/application/tool-blocks#ai-vibration)** — Detect vibration anomalies by learning normal vibration patterns and flagging deviations.
+- **[Node-RED](/sensecraft-ai/application/tool-blocks#node-red)** — Build and deploy visual logic flows for reCamera.
+- **[Aily Blockly](/sensecraft-ai/application/tool-blocks#aily-blockly)** — Flash programs built in the Aily Blockly visual environment to edge devices.
+- **[Deploy container app](/sensecraft-ai/application/tool-blocks#deploy-container-app)** — Deploy containerized applications to supported hardware.
+- **[Flash firmware](/sensecraft-ai/application/tool-blocks#flash-firmware)** — Flash firmware images to devices in one click.
 - **Debug tools** *(coming soon)* — Inspect and troubleshoot device behavior during deployment.
 
-See [Tool Blocks](./Tool_Blocks.md) for full configuration details on each block.
+See [Tool Blocks](/sensecraft-ai/application/tool-blocks) for full configuration details on each block.
 
 ### Step 3: Bill of Materials (BOM)
 

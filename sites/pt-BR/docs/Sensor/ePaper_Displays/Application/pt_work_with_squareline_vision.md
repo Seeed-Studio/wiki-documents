@@ -3,7 +3,7 @@ description: Este artigo fornece instruções sobre como criar a interface de us
 title: Trabalhar com SquareLine Vision
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
 slug: /reterminal_e10xx_with_squareline_vision
-sidebar_position: 4
+sidebar_position: 6
 last_update:
   date: 10/29/2025
   author: Zovey
@@ -26,12 +26,12 @@ Também é uma ferramenta de **design + exportação de código**: você projeta
 ## Os recursos do SquareLine Vision
 
 - **Design visual de UI** – Projete interfaces bonitas e interativas visualmente com um editor de arrastar e soltar, eliminando a necessidade de criação manual de código LVGL.
-- **Prototipagem rápida embarcada** – Visualize e valide instantaneamente sua UI no desktop ou no hardware de destino, reduzindo drasticamente o tempo de iteração entre design e dispositivo.
-- **Exportação baseada em LVGL** – Exporte perfeitamente seus designs em código-fonte limpo baseado em LVGL, pronto para compilar em dispositivos embarcados, microcontroladores ou ambientes de simulação.
+- **Prototipagem rápida embarcada** – Visualize e valide instantaneamente sua UI no desktop ou no hardware de destino, reduzindo drasticamente o tempo de iteração do design até o dispositivo.
+- **Exportação com tecnologia LVGL** – Exporte perfeitamente seus designs em código-fonte limpo baseado em LVGL, pronto para compilação em dispositivos embarcados, microcontroladores ou ambientes de simulação.
 
 Com o SquareLine Vision, você pode ir do conceito ao protótipo de UI embarcada interativa em minutos — combinando flexibilidade de design, visualização em tempo real e saída LVGL pronta para produção para acelerar todo o ciclo de desenvolvimento do seu produto.
 
-### Materiais necessários
+### Materiais Necessários
 
 Para concluir este tutorial, prepare um dos seguintes dispositivos da Série reTerminal E, o E1001 é monocromático e o E1002 é totalmente colorido:
 
@@ -65,13 +65,13 @@ Para concluir este tutorial, prepare um dos seguintes dispositivos da Série reT
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_7.png" style={{width:600, height:'auto'}}/></div>
 
-### Introdução aos componentes
+### Introdução aos Componentes
 
-Toda a plataforma SquareLine Vision pode ser dividida em duas partes: **Launcher** e **Interface do Aplicativo**.
+Toda a plataforma SquareLine Vision pode ser dividida em duas partes: **Launcher** e a **Interface do Aplicativo**.
 Na interface do **Launcher**, podemos ver as três funções principais a seguir:
 - projetos
 - lidar com importações
-- controlar configurações de conta
+- controlar configurações da conta
 
 Quando você começar a desenhar a UI, conhecerá cinco ferramentas:
 - sistema de hierarquia
@@ -82,9 +82,9 @@ Quando você começar a desenhar a UI, conhecerá cinco ferramentas:
 
 Quando você tiver uma compreensão clara da estrutura organizacional geral e das ferramentas da plataforma, isso será muito útil para a produção do seu projeto pessoal. Em seguida, criarei um projeto com base no nosso reTerminal E1002.
 
-## Criar um projeto
+## Criar um Projeto
 
-### Iniciar um novo projeto LVGL
+### Iniciar um novo Projeto LVGL
 
 Na parte superior da interface do Launcher do SquareLine Vision, clique no botão `Create new`. Em seguida, selecione `Seeed Studio` para visualizar nossos produtos. Escolha o `reTerminal E1002` para criar um projeto.
 As configurações fixas deste projeto são:
@@ -99,20 +99,20 @@ As configurações fixas deste projeto são:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Launcher_2.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-Já oferecemos suporte aos dispositivos SenseCAP Watcher e reTerminal E1001 e E1002. No futuro, também ofereceremos suporte a mais produtos da Seeed Studio.
+Já oferecemos suporte aos dispositivos SenseCAP Watcher e reTerminal E1001 e E1002. No futuro, também daremos suporte a mais produtos da Seeed Studio.
 :::
 
 ### Importar um projeto .slvp existente
-Se você já tiver um arquivo .slvp, poderá importá-lo diretamente como um projeto. Fornecemos dois dashboards relacionados ao clima. Você pode baixá-los diretamente abaixo.
+Se você já tiver um arquivo .slvp, poderá importá-lo diretamente como um projeto. Fornecemos dois painéis relacionados ao clima. Você pode baixá-los diretamente abaixo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_1.png" style={{width:600, height:'auto'}}/></div>
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Clima monocromático</th>
-      <th>Clima em cores</th>
-      <th>Clima em cores 2</th>
+      <th>Clima Monocromático</th>
+      <th>Clima em Cores</th>
+      <th>Clima em Cores 2</th>
     </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_1.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -139,20 +139,20 @@ Se você já tiver um arquivo .slvp, poderá importá-lo diretamente como um pro
   </table>
 </div>
 
-## Configurações de parâmetros do projeto e design da interface de UI
+## Configurações de Parâmetros do Projeto & Design da Interface de UI
 
 Assim que você entrar na interface de engenharia, poderá ver quatro áreas principais:
 
-- A Região 1 é a **Hierarchy**, usada principalmente para gerenciar a estrutura dos elementos da UI. 
+- A Região 1 é a **Hierarchy**, usada principalmente para gerenciar a estrutura dos elementos de UI. 
 - A Região 2 é o **Simulator**, onde a UI é exibida e usada para visualizar os efeitos de apresentação de cada UI. 
 - A Região 3 é o **Inspector**, que fornece controles detalhados para o elemento atualmente selecionado. 
 - A Região 4 é a **Toolbar**, localizada na parte superior da interface do aplicativo, permitindo acesso fácil a muitas ferramentas e funções.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_2.png" style={{width:500, height:'auto'}}/></div>
 
-### Design da interface de UI
+### Design da Interface de UI
 
-O design de UI (User Interface) é crucial no desenvolvimento de produtos embarcados, pois determina diretamente a experiência do usuário. Uma interface esteticamente agradável, intuitiva e responsiva não apenas melhora a usabilidade do produto, como também aumenta seu apelo geral.
+O design de UI (Interface do Usuário) é crucial no desenvolvimento de produtos embarcados, pois determina diretamente a experiência do usuário. Uma interface esteticamente agradável, intuitiva e responsiva não apenas melhora a usabilidade do produto, como também aumenta seu apelo geral.
 
 No SquareLine Vision, você pode montar rapidamente interfaces arrastando e soltando componentes. Utilize ferramentas como Styles, Fonts, Bitmaps e Themes para controlar com precisão os efeitos visuais, criando uma experiência de usuário profissional e distinta.
 
@@ -160,7 +160,7 @@ No SquareLine Vision, você pode montar rapidamente interfaces arrastando e solt
 Este tutorial aborda apenas os controles que aparecem neste projeto. No entanto, o SquareLine Vision oferece muitas outras funcionalidades, como animações, eventos e diferentes fontes. Se você quiser explorar mais essa ferramenta, consulte [os tutoriais oficiais](https://docs.vision.squareline.io/docs/overview).
 :::
 
-#### Introdução à Hierarchy
+#### Introdução à Hierarquia
 
 Aqui você pode aninhar widgets uns dentro dos outros, criando relações pai-filho em que o widget contêiner se torna o pai e os elementos dentro dele se tornam widgets filhos. Pode-se ver que esta imagem é composta por vários contêineres, imagens e textos. Esses três controles podem ser encontrados todos na barra de ferramentas.
 
@@ -179,14 +179,14 @@ A Toolbar inclui opções para configuração do projeto, salvar seu projeto, ac
 - **Menu**: A partir daqui, você pode acessar as funções para salvar seu trabalho, exportar o projeto, ajustar as configurações do projeto e retornar à tela inicial.
 - **Project name**: Exibe o nome do seu projeto atual.
 - **Plan**: Mostra o plano de assinatura atual do usuário.
-- **Editor / Animation mode**: Alterna entre dois ambientes de trabalho distintos.
+- **Editor / Animation mode**: Alterna entre dois ambientes de trabalho distintos
 - **Widgets**: Acesse elementos de UI por meio de três menus suspensos que agrupam logicamente os componentes, facilitando a localização do widget apropriado para o seu projeto. 
 - **Undo / Redo**: Permite avançar e retroceder pelas alterações de design, apoiando a experimentação sem risco. 
 - **Play mode**: Inicia a visualização e o teste da simulação da UI.
 - **Send bug report**: Fornece acesso direto ao sistema de relatório de erros.
 - **User(s)**: Exibe todos os usuários ativos que estão trabalhando atualmente no seu projeto, apoiando esforços de design colaborativo.
 - **View options**: Você pode alternar a exibição do minimapa e inserir valores precisos de zoom em porcentagem em um campo de entrada dedicado.
-- **Version**: Exibe a versão atual do SquareLine Vision na qual seu projeto está sendo executado, garantindo que você esteja ciente do ambiente de software.
+- **Version**: Exibe a versão atual do SquareLine Vision na qual seu projeto está sendo executado, garantindo que você esteja ciente do seu ambiente de software.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_6.png" style={{width:500, height:'auto'}}/></div>
 
@@ -258,7 +258,7 @@ Se esta é a sua primeira vez usando o PlatformIO, recomendamos fortemente que v
 
 ### Rotina de referência
 
-Fornecemos três modelos existentes, cada um com uma interface de UI diferente que pode exibir o painel de clima em tempo real. Eles também se integram ao [OpenWeather](https://openweathermap.org/)(é uma plataforma de serviços que fornece dados meteorológicos globais) para obter mudanças climáticas em tempo real. Tudo o que você precisa fazer é obter a API KEY do OpenWeather e conectar ao WIFI para usá-los normalmente.
+Fornecemos três modelos existentes, cada um com uma interface de UI diferente que pode exibir o painel de clima em tempo real. Eles também se integram ao [OpenWeather](https://openweathermap.org/)(é uma plataforma de serviços que fornece dados meteorológicos globais) para obter mudanças climáticas em tempo real. Tudo o que você precisa fazer é obter a API KEY do OpenWeather e conectar-se ao WIFI para usá-los normalmente.
 
 <div class="table-center">
   <table align="center">
@@ -270,24 +270,24 @@ Fornecemos três modelos existentes, cada um com uma interface de UI diferente q
     <tr>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/res/weather_gray.zip" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Clique aqui para obter</button></p>
         </a>
       </div></td>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/weather_7_fix.zip" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Clique aqui para obter</button></p>
         </a>
       </div></td>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/weather_13_fix.zip" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Clique aqui para obter</button></p>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-- **Step 1**: Abra a pasta no VScode e aguarde até que as dependências relacionadas sejam totalmente baixadas. Após abrir o projeto, abra o arquivo `.ini` e pressione `Ctrl+S`. Neste momento, as dependências do projeto começarão a ser baixadas automaticamente. Quando você vir `Project has been successfully updated`, isso significa que o processo de download foi concluído. Quando a palavra `successful` estiver presente, isso indicará imediatamente que a instalação foi concluída com sucesso.
+- **Step 1**: Abra a pasta no VScode e aguarde até que as dependências relacionadas sejam totalmente baixadas. Após abrir o projeto, abra o arquivo `.ini` e pressione `Ctrl+S`. Nesse momento, as dependências do projeto começarão a ser baixadas automaticamente. Quando você vir `Project has been successfully updated`, isso significa que o processo de download foi concluído. Quando a palavra `successful` estiver presente, isso indicará imediatamente que a instalação foi concluída com sucesso.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_2.png" style={{width:700, height:'auto'}}/></div>
 
 
@@ -300,7 +300,7 @@ Fornecemos três modelos existentes, cada um com uma interface de UI diferente q
 
 - **Step 4**: Conecte o reTerminal ao computador usando um cabo de dados USB e selecione a porta serial apropriada para o processo de gravação. Em seguida, clique no botão `upload` para realizar o processo de gravação.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_3.png" style={{width:700, height:'auto'}}/></div>
-  Quando o seguinte conteúdo aparecer no terminal, isso indica que o processo de gravação foi bem-sucedido. Em seguida, o reTerminal atualizará automaticamente a imagem da tela.
+  Quando o seguinte conteúdo aparecer no terminal, isso indica que o processo de gravação foi bem-sucedido. Subsequentemente, o reTerminal atualizará automaticamente a imagem da tela.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_4.png" style={{width:700, height:'auto'}}/></div>
 
 ## Apresentação do resultado

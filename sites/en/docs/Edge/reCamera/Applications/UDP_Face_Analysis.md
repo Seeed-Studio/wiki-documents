@@ -17,7 +17,7 @@ last_update:
   date: 04/30/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-04-30'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/recamera_udp_face_analysis/
 ---
 
@@ -47,7 +47,7 @@ The C++ application runs on reCamera and pushes video frames along with detectio
 
 To set up this demo, you need to:
 
-1. Compile the C++ program on ReCamera
+1. Cross-compile the C++ program on your PC
 2. Run the compiled executable on ReCamera
 3. Run the Python receiver script on your PC
 

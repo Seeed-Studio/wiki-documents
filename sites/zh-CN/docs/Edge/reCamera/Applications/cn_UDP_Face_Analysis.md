@@ -17,7 +17,7 @@ last_update:
   date: 04/30/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-04-30'
+updatedAt: '2026-05-06'
 url: https://wiki.seeedstudio.com/cn/recamera_udp_face_analysis/
 ---
 
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_udp_face_analysis/
 
 ## 介绍
 
-本示例演示如何使用 reCamera 构建一个实时人脸分析系统。该系统可以执行：
+本示例演示如何使用 reCamera 构建一个实时人脸分析系统。该系统执行以下功能：
 
 - **人脸检测**：使用 YOLO 人脸检测模型
 - **属性分析**：使用 FairFace 模型进行年龄、性别和种族估计
@@ -47,14 +47,14 @@ C++ 应用程序在 reCamera 上运行，并通过 UDP 推送视频帧以及检�
 
 要搭建本示例，你需要：
 
-1. 在 ReCamera 上编译 C++ 程序
+1. 在你的 PC 上交叉编译 C++ 程序
 2. 在 ReCamera 上运行已编译的可执行文件
-3. 在 PC 上运行 Python 接收脚本
+3. 在你的 PC 上运行 Python 接收脚本
 
 ### 1. 编译 C++ 程序
 
 :::note
-在构建此解决方案之前，请确保你已经按照主项目文档配置好了 **ReCamera-OS** 环境。
+在构建此解决方案之前，请确保你已经根据主项目文档完成 **ReCamera-OS** 环境的搭建。
 :::
 
 在运行 `cmake` 之前，为 **ReCamera-OS** 构建环境设置以下环境变量：
@@ -68,7 +68,7 @@ export PATH='current compile chain path'/host-tools/gcc/riscv64-linux-musl-x86_6
 - `age_gender_race.cvimodel` - 用于年龄/性别/种族的 FairFace 模型
 - `emotion.cvimodel` - 情绪识别模型
 
-你可以从 [sscma-example-sg200x v1.0.1 发布版](https://github.com/RobotXTeam/sscma-example-sg200x/releases/tag/v1.0.1)下载这三个模型文件，或者训练你自己的模型，然后将其量化/转换为 `.cvimodel` 格式。
+你可以从 [sscma-example-sg200x v1.0.1 发布页](https://github.com/RobotXTeam/sscma-example-sg200x/releases/tag/v1.0.1)下载这三个模型文件，或者训练你自己的模型，然后将其量化/转换为 `.cvimodel` 格式。
 
 进入解决方案目录并编译：
 
@@ -81,10 +81,10 @@ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-std=c++17" ..
 make -j$(nproc)
 ```
 
-编译后的可执行文件位于：`build/face_udp`
+编译后的可执行文件位置为：`build/face_udp`
 
 :::note
-代码仓库在解决方案文件夹中包含预编译模型：
+仓库在解决方案文件夹中已包含预编译模型：
 - `yolo-face_mixfp16.cvimodel`
 - `age_gender_race_bf16.cvimodel`
 - `emotion_bf16.cvimodel`
@@ -111,7 +111,7 @@ chmod +x face_udp
 ./face_udp <yolo_face.cvimodel> <age_gender_race.cvimodel> <emotion.cvimodel> [single|multi] [threshold] [skip] [udp_ip] [udp_port] [log_every_n_infer]
 ```
 
-#### 参数
+#### 参数说明
 
 | 参数 | 描述 | 默认值 |
 |-----------|-------------|---------|
@@ -120,7 +120,7 @@ chmod +x face_udp
 | `emotion.cvimodel` | 情绪模型（必需） | - |
 | `single\|multi` | YOLO head 类型 | multi |
 | `threshold` | 检测阈值 | 0.5（multi）/ 0.7（single） |
-| `skip` | 每 N 帧推理一次 | 3（multi）/ 1（single） |
+| `skip` | 每 N 帧进行一次推理 | 3（multi）/ 1（single） |
 | `udp_ip` | 用于 UDP 的 PC IP 地址 | - |
 | `udp_port` | UDP 端口号 | - |
 | `log_every_n_infer` | 每 N 次推理打印一次日志 | 20 |
@@ -186,7 +186,7 @@ UDP Send:
 ======================================
 ```
 
-### 在 Python 接收端窗口中
+### 在 Python 接收窗口中
 
 PC 将显示一个窗口，其中包括：
 - 带 JPEG 帧的实时视频流
@@ -210,10 +210,10 @@ PC 将显示一个窗口，其中包括：
 ### UDP 连接失败
 
 如果 PC 未收到数据：
-- 确认 PC 和 ReCamera 在同一网络中
+- 确认 PC 和 ReCamera 处于同一网络
 - 检查 PC 上的防火墙设置
 - 确认 UDP 端口 5001 未被阻塞
-- 使用 `ping` 测试设备之间的连通性
+- 使用 `ping` 在设备之间进行测试
 
 ### 模型加载错误
 
@@ -224,7 +224,7 @@ PC 将显示一个窗口，其中包括：
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

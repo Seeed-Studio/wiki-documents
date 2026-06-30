@@ -11,7 +11,7 @@ last_update:
   author: Jason
 sidebar_position: 1
 createdAt: '2024-11-08'
-updatedAt: '2025-09-11'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/xiao_mg24_pin_multiplexing/
 ---
 
@@ -21,6 +21,34 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/top.png" style={{width:700, height:'auto'}}/></div>
 
 ***The XIAO MG24*** features up to ***22 regular pins***, ***18 analog pins***, ***18 digital pins***, ***2 SPI***, ***2 UART***, ***2 I2C***, and supports ***all PWM***. It offers a rich variety of pins available for our use. In this wiki, I will teach you how to drive these pins, enabling us to utilize them effectively 😀!
+
+## Hardware overview
+
+<Tabs>
+<TabItem value="XIAO MG24" label="XIAO MG24">
+
+### XIAO MG24 Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO MG24 Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+
+<TabItem value="XIAO MG24 Sense" label="XIAO MG24 Sense">
+
+### XIAO MG24 Sense Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO MG24 Sense Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
 
 ## Digital
 

@@ -1,134 +1,134 @@
 const docList = [
   [
     {
-      "path": "/respeaker_flex_lekiwi",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png",
-      "title": "LeKiwi Voice Controller",
-      "date": "2026-04-28",
-      "title_cn": "LeKiwi 语音控制器",
-      "title_ja": "LeKiwi 音声コントローラ",
-      "title_es": "Controlador de voz LeKiwi",
-      "title_pt": "Controlador de Voz LeKiwi"
+      "path": "/recamera_hand_gesture",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
+      "title": "Porting the MediaPipe Hand Gesture Recognition Model to reCamera",
+      "date": "2026-06-26",
+      "title_cn": "将 MediaPipe 手势识别模型移植到 reCamera",
+      "title_ja": "MediaPipe ハンドジェスチャー認識モデルの reCamera への移植",
+      "title_es": "Migración del modelo de reconocimiento de gestos de mano de MediaPipe a reCamera",
+      "title_pt": "Portando o modelo de reconhecimento de gestos de mão do MediaPipe para a reCamera"
     },
     {
-      "path": "/get_started_with_meshcore_remote_terminal",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/first.png",
-      "title": "Get Started with MeshCore Remote Terminal",
-      "date": "2026-04-20",
-      "title_cn": "MeshCore Remote Terminal 入门指南",
-      "title_ja": "MeshCore Remote Terminal を使い始める",
-      "title_es": "Primeros pasos con MeshCore Remote Terminal",
-      "title_pt": "Introdução ao MeshCore Remote Terminal"
+      "path": "/recamera_picoclaw",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Picoclaw&Gimbal/picoclaw_turn_led.gif",
+      "title": "Local Deployment of Picoclaw on reCamera",
+      "date": "2026-06-24",
+      "title_cn": "在reCamera上本地部署龙虾",
+      "title_ja": "reCamera 上での Picoclaw のローカルデプロイ",
+      "title_es": "Despliegue local de Picoclaw en reCamera",
+      "title_pt": "Implantação local do Picoclaw na reCamera"
     }
   ],
   [
     {
-      "path": "/get_started_with_esp32s3_meshcore",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png",
-      "title": "Get Started with ESP32 MeshCore",
-      "date": "2026-04-20",
-      "title_cn": "ESP32 MeshCore 入门",
-      "title_ja": "ESP32 MeshCore を使い始める",
-      "title_es": "Primeros pasos con ESP32 MeshCore",
-      "title_pt": "Primeiros Passos com ESP32 MeshCore"
+      "path": "/recomputer_jetson_robotics_j601_interfaces_usage",
+      "image": "https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg",
+      "title": "Robotics J601 carrier board Hardware Interfaces Usage",
+      "date": "2026-06-18",
+      "title_cn": "Robotics J601 载板硬件接口使用",
+      "title_ja": "Robotics J601 キャリアボード ハードウェアインターフェースの使用方法",
+      "title_es": "Uso de interfaces de hardware de la placa portadora Robotics J601",
+      "title_pt": "Uso das Interfaces de Hardware da placa carrier Robotics J601"
     },
     {
-      "path": "/sound_source_localization_of_recamera_gimbal",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_reSpeaker/reCamera_reSpeaker.gif",
-      "title": "Sound source localization of reCamera Gimbal",
-      "date": "2026-04-17",
-      "title_cn": "reCamera Gimbal 的声源定位",
-      "title_ja": "reCamera Gimbal の音源定位",
-      "title_es": "Localización de fuentes de sonido con reCamera Gimbal",
-      "title_pt": "Localização de fonte sonora do reCamera Gimbal"
+      "path": "/update_internal_lr1110_firmware",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png",
+      "title": "Update LR1110 Firmware on Wio Tracker 1110",
+      "date": "2026-06-17",
+      "title_cn": "在 Wio Tracker 1110 上更新 LR1110 固件",
+      "title_ja": "Wio Tracker 1110 上の LR1110 ファームウェアを更新する",
+      "title_es": "Actualizar el firmware LR1110 en Wio Tracker 1110",
+      "title_pt": "Atualizar o firmware LR1110 no Wio Tracker 1110"
     }
   ],
   [
     {
-      "path": "/driving_reterminal_d1001_microphone",
-      "image": "https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.webp",
-      "title": "Driving reTerminal D1001 Microphone",
-      "date": "2026-04-17",
-      "title_cn": "驱动 reTerminal D1001 麦克风",
-      "title_ja": "reTerminal D1001 マイクの駆動",
-      "title_es": "Control del micrófono de reTerminal D1001",
-      "title_pt": "Acionando o Microfone do reTerminal D1001"
+      "path": "/rebot_arm_b601_rs_lerobot",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png",
+      "title": "Getting Started with LeRobot-based reBot Arm B601-RS",
+      "date": "2026-06-17",
+      "title_cn": "reBot Arm B601-RS入门Lerobot",
+      "title_ja": "LeRobot ベース reBot Arm B601-RS 入門",
+      "title_es": "Primeros pasos con reBot Arm B601-RS basado en LeRobot",
+      "title_pt": "Introdução ao reBot Arm B601-RS baseado em LeRobot"
     },
     {
-      "path": "/how_to_build_and_flash_bsp_source_for_jetson_thor",
-      "image": "https://files.seeedstudio.com/wiki/other/thor-post.png",
-      "title": "How to Build and Flash BSP Source for Jetson Thor",
-      "date": "2026-04-14",
-      "title_cn": "如何为 Jetson Thor 构建和刷写 BSP 源码",
-      "title_ja": "Jetson Thor 向け BSP ソースのビルドとフラッシュ方法",
-      "title_es": "Cómo Compilar y Flashear el Código Fuente BSP para Jetson Thor",
-      "title_pt": "Como Construir e Gravar a Fonte BSP para o Jetson Thor"
+      "path": "/deploy_tensorrt_edge_llm_on_jetpack6.2",
+      "image": "https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/7.png",
+      "title": "Deploy TensorRT Edge-LLM on Jetpack6.2",
+      "date": "2026-06-16",
+      "title_cn": "在 Jetpack6.2 上部署 TensorRT Edge-LLM",
+      "title_ja": "Jetpack6.2 に TensorRT Edge-LLM をデプロイする",
+      "title_es": "Desplegar TensorRT Edge-LLM en Jetpack6.2",
+      "title_pt": "Implantar TensorRT Edge-LLM no Jetpack6.2"
     }
   ],
   [
     {
-      "path": "/configure_static_ip_on_recamera",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/static_ip_banner.png",
-      "title": "Configure Static IP on reCamera",
-      "date": "2026-04-13",
-      "title_cn": "在 reCamera 上配置静态 IP",
-      "title_ja": "reCameraでの静的IP設定",
-      "title_es": "Configurar IP estática en reCamera",
-      "title_pt": "Configurar IP Estático no reCamera"
+      "path": "/rebot_arm_b601_dm_graspnet_visual_grasping",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-e26052001-rebot-arm-b601-dm-bundle-with-jetson-thor.jpg",
+      "title": "reBot Arm B601-DM GraspNet Visual Grasping on Jetson",
+      "date": "2026-06-15",
+      "title_cn": "在 Jetson 上运行 reBot Arm B601-DM 的 GraspNet 视觉抓取",
+      "title_ja": "reBot Arm B601-DM GraspNet ビジュアル把持 on Jetson",
+      "title_es": "Agarre visual GraspNet en Jetson con reBot Arm B601-DM",
+      "title_pt": "Preensão Visual GraspNet no Jetson com reBot Arm B601-DM"
     },
     {
-      "path": "/rebot_arm_b601_dm_lerobot",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg",
-      "title": "Getting Started with LeRobot-based reBot Arm B601-DM and reBot 102 Leader",
-      "date": "2026-04-09",
-      "title_cn": "reBot Arm B601-DM入门Lerobot",
-      "title_ja": "LeRobot ベースの reBot Arm B601-DM と reBot 102 Leader 入門",
-      "title_es": "Introducción al reBot Arm B601-DM basado en LeRobot y al reBot 102 Leader",
-      "title_pt": "Introdução ao reBot Arm B601-DM baseado em LeRobot e reBot 102 Leader"
+      "path": "/voice_control_rebot_arm",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_controlled_rebot_arm/cover_page.png",
+      "title": "Voice Control reBot Arm B601 by Nvidia Jetson Thor",
+      "date": "2026-06-15",
+      "title_cn": "使用 Nvidia Jetson Thor 语音控制 reBot Arm B601",
+      "title_ja": "Nvidia Jetson Thor による reBot Arm B601 の音声制御",
+      "title_es": "Control por voz de reBot Arm B601 con Nvidia Jetson Thor",
+      "title_pt": "Controle de voz do reBot Arm B601 com Nvidia Jetson Thor"
     }
   ],
   [
     {
-      "path": "/epaper_en05",
-      "image": "https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp",
-      "title": "Getting Started with XIAO ePaper Display Board - EN05",
-      "date": "2026-04-08",
-      "title_cn": "XIAO ePaper Display Board - EN05 入门指南",
-      "title_ja": "XIAO ePaper Display Board - EN05 入門ガイド",
-      "title_es": "Primeros pasos con XIAO ePaper Display Board - EN05",
-      "title_pt": "Introdução à XIAO ePaper Display Board - EN05"
+      "path": "/recomputer_mini_j501_wifi_module_installation",
+      "image": "https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png",
+      "title": "reComputer Mini J501 WiFi Module Installation",
+      "date": "2026-06-15",
+      "title_cn": "reComputer Mini J501 WiFi 模块安装",
+      "title_ja": "reComputer Mini J501 WiFi モジュール取り付けガイド",
+      "title_es": "Instalación del módulo WiFi en reComputer Mini J501",
+      "title_pt": "Instalação do Módulo WiFi no reComputer Mini J501"
     },
     {
-      "path": "/respeaker_flex_xiao_introduction",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4withXIAOESP32S3.jpg",
-      "title": "reSpeaker Flex with XIAO ESP32S3",
-      "date": "2026-04-08",
-      "title_cn": "搭配 XIAO ESP32S3 的 reSpeaker Flex",
-      "title_ja": "reSpeaker Flex with XIAO ESP32S3",
-      "title_es": "reSpeaker Flex con XIAO ESP32S3",
-      "title_pt": "reSpeaker Flex com XIAO ESP32S3"
+      "path": "/reserver_industrial_poe_camera_usage",
+      "image": "https://files.seeedstudio.com/wiki/reServer-Industrial/5.jpg",
+      "title": "PoE Camera Usage on reServer Industrial",
+      "date": "2026-06-15",
+      "title_cn": "reServer Industrial 上的 PoE 摄像头使用",
+      "title_ja": "reServer Industrial における PoE カメラの使用",
+      "title_es": "Uso de cámaras PoE en reServer Industrial",
+      "title_pt": "Uso de câmera PoE no reServer Industrial"
     }
   ],
   [
     {
-      "path": "/epaper_ee05",
-      "image": "https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp",
-      "title": "Getting Started with XIAO ePaper Display Board - EE05",
-      "date": "2026-04-07",
-      "title_cn": "XIAO ePaper Display Board - EE05 入门指南",
-      "title_ja": "XIAO ePaper Display Board - EE05 入門ガイド",
-      "title_es": "Introducción a XIAO ePaper Display Board - EE05",
-      "title_pt": "Introdução à XIAO ePaper Display Board - EE05"
+      "path": "/recamera_qrcode_udp",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/qrcode_udp/testvideo.gif",
+      "title": "Real-Time QR Code Recognition on reCamera",
+      "date": "2026-06-15",
+      "title_cn": "在 reCamera 上进行实时二维码识别",
+      "title_ja": "reCamera でのリアルタイム QR コード認識",
+      "title_es": "Reconocimiento de códigos QR en tiempo real en reCamera",
+      "title_pt": "Reconhecimento de Código QR em Tempo Real na reCamera"
     },
     {
-      "path": "/meshcore_node_map_solar_node",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg",
-      "title": "MeshCore Node Map",
-      "date": "2026-04-3",
-      "title_cn": "MeshCore 节点地图",
-      "title_ja": "MeshCore Node Map",
-      "title_es": "Mapa de Nodos MeshCore",
-      "title_pt": "Mapa de Nós MeshCore"
+      "path": "/rebot_arm_b601_rs_grasping_demo",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif",
+      "title": "reBot Arm B601-RS Visual Grasping Demo",
+      "date": "2026-06-15",
+      "title_cn": "reBot Arm B601-RS 视觉夹取 Demo",
+      "title_ja": "reBot Arm B601-RS ビジュアル把持デモ",
+      "title_es": "Demo de agarre visual con reBot Arm B601-RS",
+      "title_pt": "Demonstração de Preensão Visual com reBot Arm B601-RS"
     }
   ]
 ];

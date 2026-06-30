@@ -1,6 +1,6 @@
 ---
-description: 使用 Jetpack 将 BSP 刷写到所选产品。本页面目前仅包含部分产品。
-title: 使用 Jetpack 将 BSP 刷写到指定 Jetson
+description: 使用 Jetpack 将 BSP 刷写到选定产品。本页面目前仅包含部分产品。
+title: 使用 Jetpack 将 BSP 刷写到选定 Jetson
 keywords:
   - jetson
   - flash
@@ -12,7 +12,7 @@ last_update:
   date: 06/25/2025
   author: robotics group
 createdAt: '2025-06-27'
-updatedAt: '2026-03-05'
+updatedAt: '2026-06-24'
 url: https://wiki.seeedstudio.com/cn/flash/jetpack_to_selected_product/
 ---
 
@@ -42,28 +42,28 @@ export const productOptions = [
   { 
     value: 'j4012s', 
     label: 'reComputer Super J4012', 
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/',
   },
   { 
     value: 'j4011s', 
     label: 'reComputer Super J4011', 
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-8g.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/',
   },
   { 
     value: 'j3011s', 
     label: 'reComputer Super J3011', 
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-8g.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/',
   },
   { 
     value: 'j3010s', 
     label: 'reComputer Super J3010', 
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-4g.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/'
   },
@@ -98,84 +98,84 @@ export const productOptions = [
   { 
     value: 'j4012robotics', 
     label: 'reComputer robotics J4012', 
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage:~:text=to%20your%20needs.-,Interfaces%20Usage%E2%80%8B,interfaces%20of%20the%20Robotics%20J401%20board%20and%20how%20to%20use%20them.,-M.2%20Key'
   },
   { 
     value: 'j4011robotics', 
     label: 'reComputer robotics J4011', 
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage:~:text=to%20your%20needs.-,Interfaces%20Usage%E2%80%8B,interfaces%20of%20the%20Robotics%20J401%20board%20and%20how%20to%20use%20them.,-M.2%20Key'
   },
   { 
     value: 'j3011robotics', 
     label: 'reComputer robotics J3011', 
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage:~:text=to%20your%20needs.-,Interfaces%20Usage%E2%80%8B,interfaces%20of%20the%20Robotics%20J401%20board%20and%20how%20to%20use%20them.,-M.2%20Key'
   },
   { 
     value: 'j3010robotics', 
     label: 'reComputer robotics J3010', 
-    l4t: ["36.4.3"],
+    l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage:~:text=to%20your%20needs.-,Interfaces%20Usage%E2%80%8B,interfaces%20of%20the%20Robotics%20J401%20board%20and%20how%20to%20use%20them.,-M.2%20Key'
   },
-  { 
+  {
     value: 'j4012classic', 
     label: 'reComputer J4012 / reComputer J4012B', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j4011classic', 
     label: 'reComputer J4011 / reComputer J4011B', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j3011classic', 
     label: 'reComputer J3011 / reComputer J3011B', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j3010classic', 
     label: 'reComputer J3010 / reComputer J3010B', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j4012industrial', 
     label: 'reComputer industrial J4012 ', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j4011industrial', 
     label: 'reComputer industrial J4011', 
-    l4t: ["36.4.0","36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j3011industrial', 
     label: 'reComputer industrial J3011', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j3010industrial', 
     label: 'reComputer industrial J3010', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'
   },
@@ -196,28 +196,28 @@ export const productOptions = [
   { 
     value: 'j4012reserver', 
     label: 'reServer industrial J4012', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110247-reserver-industrial-j4012-first.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reserver_industrial_hardware_interface_usage/'
   },
   { 
     value: 'j4011reserver', 
     label: 'reServer industrial J4011', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110248-reserver-industrial-j4011-first.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reserver_industrial_hardware_interface_usage/'
   },
   { 
     value: 'j3011reserver', 
     label: 'reServer industrial J3011', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110249-reserver-industrial-j3011-first_1.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reserver_industrial_hardware_interface_usage/'
   },
   { 
     value: 'j3010reserver', 
     label: 'reServer industrial J3010', 
-    l4t: ["36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
+    l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110250-reserver-industrial-j3010-first.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reserver_industrial_hardware_interface_usage/'
   },
@@ -238,28 +238,28 @@ export const productOptions = [
   { 
     value: 'j501mini-agx-orin-64g', 
     label: 'reComputer Robotics J501 Mini AGX-Orin 64GB',
-    l4t: ["36.4.4 (GMSL✅)"],
+    l4t: ["39.2.0","36.4.4 (GMSL✅)"],
     img: 'https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_j501_mini_getting_started/'
   },
   { 
     value: 'j501mini-agx-orin-32g', 
     label: 'reComputer Robotics J501 Mini AGX-Orin 32GB',
-    l4t: ["36.4.4 (GMSL✅)"],
+    l4t: ["39.2.0","36.4.4 (GMSL✅)"],
     img: 'https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_j501_mini_getting_started/'
   },
   { 
     value: 'j501-agx-orin-64g', 
     label: 'reComputer Robotics J501 AGX-Orin 64GB',
-    l4t: ["36.4.4 (GMSL✅)"],
+    l4t: ["39.2.0","36.4.4 (GMSL✅)"],
     img: 'https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_j501_robotics_getting_started/'
   },
   { 
     value: 'j501-agx-orin-32g', 
     label: 'reComputer Robotics J501 AGX-Orin 32GB',
-    l4t: ["36.4.4 (GMSL✅)"],
+    l4t: ["39.2.0","36.4.4 (GMSL✅)"],
     img: 'https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_j501_robotics_getting_started/'
   }
@@ -269,10 +269,10 @@ export const productOptions = [
   <div style={{padding: '2.5rem 1.5rem', borderRadius: '18px', background: 'radial-gradient(900px circle at 85% 25%, rgba(141,194,21,0.35), transparent 55%), radial-gradient(900px circle at 15% 20%, rgba(0,58,74,0.28), transparent 60%), linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)), var(--ifm-background-surface-color)', border: '1px solid rgba(141,194,21,0.35)', boxShadow: '0 18px 44px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.06) inset', textAlign: 'center'}}>
     <h1 style={{margin: 0, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', lineHeight: 1.1}}>
       <span style={{fontSize: '2.2rem', filter: 'drop-shadow(0 6px 14px rgba(141,194,21,0.35))'}}>⚡</span>
-      <span style={{fontSize: '2.2rem', fontWeight: 800}}>刷写 Jetson Linux</span>
+      <span style={{fontSize: '2.2rem', fontWeight: 800}}>烧录 Jetson Linux</span>
     </h1>
     <p style={{margin: '0.75rem auto 0', maxWidth: '60ch', fontSize: '1.05rem', color: 'var(--ifm-font-color-base)', opacity: 0.92}}>
-      为所有 Seeed Studio Jetson 设备提供精简的刷机流程。请选择你的产品，并按照下方的引导步骤操作。
+      为所有 Seeed Studio Jetson 设备提供精简的烧录流程。请选择你的产品，并按照下方的引导步骤操作。
     </p>
   </div>
 </div>
@@ -289,7 +289,7 @@ export const productOptions = [
           选择你的 Jetson 设备
         </span>
       </h2>
-      <p style={{fontSize: '1.05rem', margin: 0, opacity: 0.9}}>选择你的设备以及你想要刷写的 Linux 版本</p>
+      <p style={{fontSize: '1.05rem', margin: 0, opacity: 0.9}}>选择你的设备以及你想要烧录的 Linux 版本</p>
     </div>
   </div>
 
@@ -306,7 +306,7 @@ export const productOptions = [
       <span style={{fontSize: '1.5rem', marginRight: '0.5rem'}}>🚀</span>
       JetPack 6.2 与 MAXN 超级模式
     </div>
-    <p>现已为 Orin Nano 和 Orin NX 模块提供增强的性能配置。<a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">了解更多</a></p>
+    <p>现已为 Orin Nano 和 Orin NX 模组提供增强性能配置。<a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">了解更多</a></p>
     <div className="margin-top--md" style={{display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap'}}>
       <a href="https://seeedstudio88-my.sharepoint.com/:w:/r/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B152BF560-D35A-4895-86B9-26D71EF7F578%7D&file=Jetson%20BSP%20release%20note.docx&action=default&mobileredirect=true&DefaultItemOpen=1" target="_blank" rel="noopener noreferrer"
         style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.55rem', height: '44px', padding: '0 18px', borderRadius: '999px', background: 'linear-gradient(135deg, #6fbf3a 0%, #5aaa28 100%)', color: '#fff', fontSize: '0.95rem', fontWeight: 700, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.18)', boxShadow: '0 10px 24px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06) inset', whiteSpace: 'nowrap', lineHeight: 1}}>
@@ -340,7 +340,7 @@ export const productOptions = [
   </div>
 </div>
 
-## 🛠️ 准备环境需求
+## 🛠️ 准备环境要求
 
 <div className="card margin-bottom--lg" style={{borderLeft: '4px solid #10b981'}}>
   <div className="card__body">
@@ -378,7 +378,7 @@ export const productOptions = [
   <div className="card__body">
     <div className="admonition admonition-info">
       <div className="admonition-content">
-        <p><strong>在你的主机电脑上安装所需的刷机依赖：</strong></p>
+        <p><strong>在你的主机电脑上安装所需的烧录依赖：</strong></p>
       </div>
     </div>
 
@@ -494,7 +494,7 @@ export const productOptions = [
         <h3>🔧 源代码</h3>
       </div>
       <div className="card__body">
-        <p>访问 Seeed 定制的 Linux for Tegra (L4T) 源代码及其修改内容。</p>
+        <p>访问 Seeed 为 Tegra (L4T) 定制的 Linux 源代码及其修改内容。</p>
       </div>
       <div className="card__footer">
         <a href="https://github.com/Seeed-Studio/Linux_for_Tegra" target="_blank" rel="noopener noreferrer"
@@ -511,7 +511,7 @@ export const productOptions = [
 
 ## 🤝 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

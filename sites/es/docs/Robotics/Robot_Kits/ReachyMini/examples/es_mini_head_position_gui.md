@@ -5,27 +5,27 @@ slug: /reachymini_examples_mini_head_position_gui
 keywords:
   - gui
   - tkinter
-  - head position
-  - orientation
-  - sliders
-  - real-time control
-  - interactive
+  - posición de la cabeza
+  - orientación
+  - deslizadores
+  - control en tiempo real
+  - interactivo
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/es/reachymini_examples_mini_head_position_gui/
 ---
 
 # GUI de Posición de la Cabeza
 
-Este ejemplo proporciona una interfaz gráfica de usuario (GUI) usando Tkinter para controlar de forma interactiva la posición y la orientación de la cabeza de Reachy Mini. Puedes ajustar los ángulos de roll, pitch, yaw de la cabeza y la posición X, Y, Z usando deslizadores, así como controlar el yaw del cuerpo y ver movimientos animados de las antenas.
+Este ejemplo proporciona una interfaz gráfica de usuario (GUI) usando Tkinter para controlar interactivamente la posición y la orientación de la cabeza de Reachy Mini. Puedes ajustar los ángulos de roll, pitch, yaw de la cabeza y la posición X, Y, Z usando deslizadores, así como controlar el yaw del cuerpo y ver movimientos animados de las antenas.
 
-**Características:**
+**Funciones:**
 - Control en tiempo real de la orientación de la cabeza (roll, pitch, yaw)
 - Control en tiempo real de la posición de la cabeza (X, Y, Z)
 - Control del yaw del cuerpo
@@ -39,4 +39,4 @@ python mini_head_position_gui.py
 
 Se abrirá una ventana de GUI con deslizadores para todos los parámetros controlables. Ajusta los deslizadores para ver cómo el robot responde en tiempo real.
 
-Consulta el ejemplo completo en: [mini_head_position_gui.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/mini_head_position_gui.py)
+Consulta el ejemplo completo en: [mini_head_position_gui.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/mini_head_position_gui.py)

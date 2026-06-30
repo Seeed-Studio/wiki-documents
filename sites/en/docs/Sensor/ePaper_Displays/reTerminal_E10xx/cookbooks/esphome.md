@@ -1,28 +1,38 @@
 ---
-description: ESPHome cookbook for reTerminal E1001 / E1002 / E1003 / E1004 - Basic Home Assistant integration, first dashboard, Wi-Fi setup, pre-built firmware ZIP.
-title: ESPHome Cookbook - Basic (reTerminal E Series)
+description: ESPHome display cookbook for reTerminal E1001 / E1002 / E1003 / E1004 - Home Assistant integration, first dashboard, Wi-Fi setup, pre-built firmware ZIP, and ePaper drawing examples.
+title: ESPHome Cookbook - Display Basics (reTerminal E Series)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome
 aliases:
   - /reterminal_e10xx_esphome
 sku: 100017057,100073581
-sidebar_position: 2
-sidebar_label: ESPHome (Basic)
+sidebar_position: 3
+sidebar_label: ESPHome - Display
 last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome Cookbook - Basic: reTerminal E Series
+# ESPHome Cookbook - Display Basics: reTerminal E Series
 
 :::tip Read the main ESPHome guide first
-This page is the **reTerminal E Series-specific ESPHome cookbook (basic)**. The shared boilerplate — picking a flashing path, the generic YAML skeleton, connecting to Home Assistant — lives in **[Work with ESPHome](/epaper_work_with_esphome)**. Skim that first if you're new to ESPHome on Seeed ePaper. For onboard-peripheral examples (buttons, buzzer, battery, SHT4x, deep sleep), see the [Advanced cookbook](/reterminal_e10xx_with_esphome_advanced).
+This page is the **reTerminal E Series-specific ESPHome display cookbook**. The shared boilerplate — picking a flashing path, the generic YAML skeleton, connecting to Home Assistant — lives in **[Work with ESPHome](/epaper_work_with_esphome)**. Skim that first if you're new to ESPHome on Seeed ePaper. For buttons, buzzer, LED, battery, SHT4x, and deep sleep, see the [I/O, battery, and low-power cookbook](/reterminal_e10xx_with_esphome_advanced). For RTC, microSD card detect, and microphone setup, see the [RTC, SD card, and microphone cookbook](/reterminal_e10xx_with_esphome_rtc_sd_microphone).
+:::
+
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
@@ -969,7 +979,10 @@ By combining images with text and other display elements covered in previous exa
 
 ## Continue Reading
 
-Due to space constraints, this article only covers some basic use cases and drawing examples of the device. We will cover the use of reTerminal's hardware on ESPHome in more detail in the [Advanced ESPHome Usage of reTerminal E Series ePaper Display in Home Assistant](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced)'s Wiki, which you can read on.
+This article focuses on connecting the display and drawing content on the ePaper screen. Continue with these ESPHome cookbooks when you want to use the rest of the onboard hardware:
+
+- **[ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power](/reterminal_e10xx_with_esphome_advanced)** - user buttons, buzzer feedback, onboard LED, battery monitoring, SHT4x sensor, deep sleep, and multi-page dashboards.
+- **[ESPHome Cookbook: RTC, SD Card & Microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone)** - PCF8563 RTC time sync, microSD card power/detect pins, and onboard PDM microphone initialization.
 
 ## FAQ
 
@@ -990,6 +1003,15 @@ In this case, you should go to Settings -> Devices & Services -> Integrations to
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 
 Try unplugging and replugging it several times, or just install the driver according to the prompts.
+
+### Q4: Why is there no serial log over USB?
+
+The reTerminal E Series uses a CH340K USB-to-UART bridge on UART0. Keep this logger setting in your YAML:
+
+```yaml
+logger:
+  hardware_uart: UART0
+```
 
 ## Tech Support & Product Discussion
 

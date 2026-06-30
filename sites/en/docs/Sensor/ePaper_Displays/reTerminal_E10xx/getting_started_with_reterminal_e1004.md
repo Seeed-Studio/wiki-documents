@@ -16,7 +16,7 @@ last_update:
   date: 4/24/2026
   author: Citric
 createdAt: '2026-01-29'
-updatedAt: '2026-04-28'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/
 ---
 import Tabs from '@theme/Tabs';
@@ -32,15 +32,25 @@ import TabItem from '@theme/TabItem';
     </a>
 </div>
 
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
 ## Introduction
 
-reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visulization.
+reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visualization.
 
 ### Features
 
-- High-resolution，Beautiful and Ready-to-Use E Ink® Spectra™6 Color ePaper Display
+- High-resolution, Beautiful and Ready-to-Use E Ink® Spectra™ 6 Color ePaper Display
 - No-Code UI Design & Deployment with SenseCraft HMI
-- Image Slideshows with Live Data Sync&Battery Lasts for Months
+- Image Slideshows with Live Data Sync & Battery Lasts for Months
 - Adapting to decoration and display needs in different scenarios
 
 ## Specification
@@ -207,7 +217,7 @@ So, we need to complete the next steps of configuring the network during this ti
 ### Network Setup
 
 <Tabs>
-<TabItem value="Network Setup vis PC" label="Network Setup vis PC" default>
+<TabItem value="Network Setup via PC" label="Network Setup via PC" default>
 
 **Step 1.** Connect to the device's Wi-Fi access point from your smartphone or computer. The AP name will appear on the screen (no password required). The network credentials are `reTerminal E1004-{MAC Address}`.
 
@@ -249,7 +259,7 @@ The reTerminal E Series ePaper Display only supports 2.4GHz WiFi networks, not 5
 **Step 4.** Once paired, the device will display a message prompting you to create your first dashboard.
 
 </TabItem>
-<TabItem value="Network Setup vis SenseCraft APP" label="Network Setup vis SenseCraft APP">
+<TabItem value="Network Setup via SenseCraft APP" label="Network Setup via SenseCraft APP">
 
 This method uses the SenseCraft mobile app to configure the device's network and add it to your SenseCraft account via Bluetooth.
 
@@ -373,7 +383,6 @@ The refresh button is located either as the leftmost button on the lower front o
 
 - **Single Press**: Manually refreshes the display and checks for new content from the SenseCraft platform. The buzzer will beep once to confirm the action. This button is also commonly used to wake up the device. You can use this button to wake up a device when it has gone to sleep and a dashboard refresh command is usually not immediately available to the device.
 
-- **Long Press** (future functionality): Will activate voice input mode.
 
 ### Navigation Buttons
 
@@ -408,7 +417,7 @@ When operating on battery power:
 
 - The device will automatically enter low-power mode between refreshes
 
-- Battery life depends on refresh frequency (typically 3-month on a full charge with default settings)
+- Battery life depends on refresh frequency (up to 6 months in low-power mode with a 6-hour refresh interval)
 
 - The device will display a low battery icon in the top-right corner when the battery level is below 20%
 

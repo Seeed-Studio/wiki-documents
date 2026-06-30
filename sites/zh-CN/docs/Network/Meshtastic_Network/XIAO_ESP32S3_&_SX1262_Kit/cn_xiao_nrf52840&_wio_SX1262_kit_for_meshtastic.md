@@ -66,7 +66,7 @@ XIAO nRF52840 & Wio-SX1262 套件已预刷入 Meshtastic 固件，可帮助你�
 **视频教程：**
 
 <div class="video-container">
-<iframe width="100%" height="500" src="https://youtu.be/54Ep36bkHOo" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
@@ -178,7 +178,6 @@ import TabItem from '@theme/TabItem';
 - **[LBR]** [Seeed Studio XIAO nRF52840 Eagle 封装库](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-footprint-eagle.lbr)
 - **[XLSX]** [Seeed Studio XIAO nRF52840 引脚分布表](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
 - 🔗 **[Kicad]** [Seeed Studio XIAO nRF52840 封装库](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- **[RAR]** [Wio SX-1262 for XIAO 3D 文件](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
 - **[PDF]** [与 Xiao nRF52840 兼容的 SX1262 原理图](https://files.seeedstudio.com/products/113010003/Wio-SX1262%20for%20XIAO%20V1.0.pdf)
 - **[PDF]** [Wio SX-1262 模块数据手册](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf
 )

@@ -369,6 +369,37 @@ module.exports = (async () => {
       
       'docusaurus-plugin-image-zoom',
       'docusaurus-plugin-sass',
+      [
+        'docusaurus-plugin-copy-page-button',
+        {
+          enabledActions: ['copy', 'view', 'chatgpt', 'claude', 'gemini'],
+          labels: {
+            button: {
+              label: '复制页面',
+            },
+            copy: {
+              title: '复制为 Markdown',
+              description: '将本页内容复制为 Markdown',
+            },
+            view: {
+              title: '以 Markdown 查看',
+              description: '以 Markdown 格式查看本页内容',
+            },
+            chatgpt: {
+              title: '在 ChatGPT 中打开',
+              description: '将本页内容作为上下文发送到 ChatGPT',
+            },
+            claude: {
+              title: '在 Claude 中打开',
+              description: '将本页内容作为上下文发送到 Claude',
+            },
+            gemini: {
+              title: '在 Gemini 中打开',
+              description: '将本页内容作为上下文发送到 Gemini',
+            },
+          },
+        },
+      ],
     ],
 
     themeConfig:

@@ -10,7 +10,7 @@ last_update:
   date: 05/16/2023
   author: Lakshantha
 createdAt: '2025-06-05'
-updatedAt: '2026-03-24'
+updatedAt: '2026-06-27'
 url: https://wiki.seeedstudio.com/cn/reComputer_Industrial_Getting_Started/
 ---
 
@@ -20,31 +20,35 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png"/></div>
 
-reComputer industrial 系列提供包含 NVIDIA Jetson™ Xavier NX/ Orin Nano/Orin NX/ 模组的完整系统，AI 性能范围从 20 TOPS 到 100 TOPS。预装 Jetpack 5.1.3，reComputer industrial 简化了开发流程，非常适合构建视频分析、目标检测、自然语言处理、医学影像和机器人等应用，为智慧城市、安全、工业自动化、智能工厂等行业带来数字化转型。
+reComputer Industrial 系列提供包含 NVIDIA Jetson™ Xavier NX / Orin Nano / Orin NX 模组的完整系统，AI 性能范围从 20 TOPS 到 100 TOPS。预装 Jetpack 5.1.3，reComputer Industrial 简化了开发流程，非常适合构建视频分析、目标检测、自然语言处理、医学影像和机器人等应用，为智慧城市、安全、工业自动化、智能工厂等行业带来数字化转型。
 
-reComputer industrial 配备被动散热片并采用无风扇设计，非常适合在苛刻环境中使用。被动散热片无需风扇即可实现高效散热，降低因灰尘或其他污染物导致元件故障的风险。无风扇设计还可降低噪音水平和功耗，适用于对噪音敏感的环境，并最大限度地减少能源成本。
+reComputer Industrial 配备被动散热片并采用无风扇设计，非常适合在严苛环境中使用。被动散热片无需风扇即可实现高效散热，降低因灰尘或其他污染物导致元件故障的风险。无风扇设计还可降低噪音水平和功耗，适用于对噪音敏感的环境，并最大限度减少能源成本。
 
-reComputer industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接口，可为 IP 摄像机等设备提供以太网供电。这消除了单独电源的需求，使在没有现成电源插座的区域部署网络设备更加容易。另一个 GbE 接口用于连接到网络交换机或路由器，从而实现与网络上其他设备的通信并访问互联网。
+reComputer Industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接口，可为 IP 摄像头等设备提供以太网供电。这消除了单独电源的需求，使在缺乏现成电源插座的区域部署网络设备更加容易。另一个 GbE 接口用于连接到网络交换机或路由器，从而实现与网络上其他设备的通信并访问互联网。
+
+:::note
+可定制选项：Logo 品牌定制、包装和固件烧录。
+:::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>立即定制 ➜</font></span></strong></a>
+</div>
 
 ## 特性
 
-- **无风扇紧凑型 PC：** 热设计参考，支持更宽温度范围 -20 ~ 60°C，配合 0.7m/s 气流
+- **无风扇紧凑型 PC：** 热设计参考，支持更宽温度范围 -20 ~ 60°C，0.7m/s 气流
 - **为工业接口而设计：** 2x RJ-45 GbE（1 个用于 POE-PSE 802.3 af）；1x RS-232/RS-422/RS-485；4x DI/DO；1x CAN；3x USB3.2；1x TPM2.0（可选模组）
 - **混合连接：** 支持 5G/4G/LTE/LoRaWAN®（可选模组），带 1x Nano SIM 卡槽
 - **灵活安装：** 桌面、DIN 导轨、壁挂、VESA
 - **认证：** FCC、CE、RoHS、UKCA
 
-## 规格参数
+## 规格
 
 <table>
   <thead>
     <tr>
-      <th colSpan={2}>产品名称</th>
+      <th colSpan={2}>Product Name</th>
       <th>reComputer Industrial J4012</th>
       <th>reComputer Industrial J4011</th>
       <th> reComputer Industrial J3011 </th>
@@ -55,7 +59,7 @@ reComputer industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接
   </thead>
   <tbody>
     <tr>
-      <td colSpan={2}>NVIDIA Jetson 模组</td>
+      <td colSpan={2}>NVIDIA Jetson Module</td>
       <td>Orin NX 16GB</td>
       <td>Orin NX 8GB</td>
       <td>Orin Nano 8GB</td>
@@ -73,8 +77,8 @@ reComputer industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接
       <td><a href="https://www.seeedstudio.com/reComputer-Industrial-J2011-p-5683.html">110110188</a></td>
     </tr>
     <tr>
-      <td rowSpan={6}>处理器系统</td>
-      <td>AI 性能</td>
+      <td rowSpan={6}>Processor System</td>
+      <td>AI Performance</td>
       <td>100 TOPS</td>
       <td>70 TOPS</td>
       <td>40 TOPS</td>
@@ -83,18 +87,18 @@ reComputer industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接
     </tr>
     <tr>
       <td>GPU</td>
-      <td colSpan={3}>1024 核 NVIDIA Ampere 架构 GPU，带 32 个 Tensor Core</td>
-      <td>512 核 NVIDIA Ampere 架构 GPU，带 16 个 Tensor Core</td>
-      <td colSpan={2}>384 核 NVIDIA Volta™ GPU，带 48 个 Tensor Core</td>
+      <td colSpan={3}>1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores</td>
+      <td>512-core NVIDIA Ampere architecture GPU with 16 Tensor Cores</td>
+      <td colSpan={2}>384-core NVIDIA Volta™ GPU with 48 Tensor Cores</td>
     </tr>
     <tr>
       <td>CPU</td>
-      <td>8 核 Arm® Cortex®-A78AE v8.2 64 位 CPU<br />2MB L2 + 4MB L3</td>
-      <td colSpan={3}>6 核 Arm® Cortex®-A78AE v8.2 64 位 CPU<br />1.5MB L2 + 4MB L3</td>
-      <td colSpan={2}>6 核 NVIDIA Carmel ARM®v8.2 64 位 CPU，6MB L2 + 4MB L3</td>
+      <td>8-core Arm® Cortex®-A78AE v8.2 64-bit CPU<br />2MB L2 + 4MB L3</td>
+      <td colSpan={3}>6-core Arm® Cortex®-A78AE v8.2 64-bit CPU<br />1.5MB L2 + 4MB L3</td>
+      <td colSpan={2}>6-core NVIDIA Carmel ARM®v8.2 64-bit CPU, 6MB L2 + 4MB L3</td>
     </tr>
     <tr>
-      <td>内存</td>
+      <td>Memory</td>
       <td>16GB 128-bit LPDDR5<br />102.4GB/s</td>
       <td>8GB 128-bit LPDDR5<br />102.4GB/s</td>
       <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
@@ -103,19 +107,19 @@ reComputer industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接
       <td>8GB 128-bit LPDDR4x<br />59.7GB/s</td>
     </tr>
     <tr>
-      <td>视频编码</td>
+      <td>Video Encode</td>
       <td colSpan={2}>1*4K60 (H.265) | 3*4K30 (H.265) | 6*1080p60 (H.265) | 12*1080p30 (H.265)</td>
-      <td colSpan={2}>由 1-2 个 CPU 核心支持 1080p30</td>
+      <td colSpan={2}>由 1-2 个 CPU 核心支持的 1080p30</td>
       <td colSpan={2}>2*4K60 | 4*4K30 | 10*1080p60 | 22*1080p30 (H.265)<br /> 2*4K60 | 4*4K30 | 10*1080p60 | 20*108p30 (H.264)</td>
     </tr>
     <tr>
-      <td>视频解码</td>
+      <td>Video Decode</td>
       <td colSpan={2}>1×8K30 (H.265) | 2×4K60 (H.265) | 4×4K30 (H.265) | 9×1080p60 (H.265) | 18×1080p30 (H.265)</td>
       <td colSpan={2}>1*4K60 (H.265) | 2*4K30 (H.265) | 5*1080p60 (H.265) | 11*1080p30 (H.265)</td>
       <td colSpan={2}>2*8K30 | 6*4K60 | 12*4K30 | 22*1080p60 | 44*1080p30 (H.265)<br /> 2*4K60 | 6*4K30 | 10*1080p60 | 22*1080p30 (H.264)</td>
     </tr>
     <tr>
-      <td rowSpan={2}>存储</td>
+      <td rowSpan={2}>Storage</td>
       <td>eMMC<br /></td>
       <td><br />-</td>
       <td>-</td>
@@ -124,12 +128,12 @@ reComputer industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接
       <td colSpan={2}>16GB eMMC 5.1</td>
     </tr>
     <tr>
-      <td>扩展</td>
+      <td>Expansion</td>
       <td colSpan={6}>M.2 Key M PCIe Gen4.0 SSD（包含 M.2 NVMe 2280 SSD 128G）</td>
     </tr>
     <tr>
       <td rowSpan={6}>I/O</td>
-      <td>网络</td>
+      <td>Networking</td>
       <td colSpan={6}>1* LAN1 RJ45 GbE PoE(PSE 802.3 af 15 W)<br />1* LAN2 RJ45 GbE (10/100/1000Mbps) </td>
     </tr>
     <tr>
@@ -145,7 +149,7 @@ reComputer industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接
       <td colSpan={6}>1* DB9（RS232/RS422/RS485）</td>
     </tr>
     <tr>
-      <td>显示</td>
+      <td>Display</td>
       <td colSpan={6}>1*HDMI 2.0 Type A</td>
     </tr>
     <tr>
@@ -153,83 +157,83 @@ reComputer industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接
       <td colSpan={6}>1* Nano SIM 卡槽</td>
     </tr>
     <tr>
-      <td rowSpan={7}>扩展</td>
+      <td rowSpan={7}>Expansion</td>
       <td>Mini PCIe</td>
       <td colSpan={6}>Mini PCIe 用于 4G/LoRaWAN®&nbsp;&nbsp;（可选模组）<br /></td>
     </tr>
     <tr>
       <td>Wi-Fi</td>
-      <td colSpan={6}>支持 SMD Wi-Fi/Bluetooth（可选模组） </td>
+      <td colSpan={6}>支持 SMD Wi-Fi/Bluetooth（可选模组）</td>
     </tr>
     <tr>
       <td>M.2 Key B </td>
-      <td colSpan={6}>M.2 Key B 支持 4G/5G（可选模组） </td>
+      <td colSpan={6}>M.2 Key B 支持 4G/5G（可选模组）</td>
     </tr>
     <tr>
-      <td>风扇</td>
+      <td>Fan</td>
       <td colSpan={6}>无风扇，被动散热片<br />1* 风扇连接器（5V PWM）</td>
     </tr>
     <tr>
       <td>TPM</td>
-      <td colSpan={6}>1* TPM 2.0 接口（可选模组） </td>
+      <td colSpan={6}>1* TPM 2.0 接口（可选模组）</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={6}>1* RTC 插座（含 CR1220），1* RTC 2 针</td>
+      <td colSpan={6}>1* RTC 座（含 CR1220），1* RTC 2 针</td>
     </tr>
     <tr>
-      <td>摄像头</td>
+      <td>Camera</td>
       <td colSpan={6}>2* CSI（2-lane 15pin）</td>
     </tr>
     <tr>
-      <td rowSpan={2}>电源</td>
-      <td>电源输入</td>
+      <td rowSpan={2}>Power</td>
+      <td>Power Supply</td>
       <td colSpan={6}>DC 12V-24V 2 针端子块</td>
     </tr>
     <tr>
-      <td>电源适配器</td>
-      <td colSpan={6}>19V 电源适配器（不含电源线） </td>
+      <td>Power Adapter</td>
+      <td colSpan={6}>19V 电源适配器（不含电源线）</td>
     </tr>
     <tr>
-      <td rowSpan={3}>机械结构<br /></td>
-      <td>尺寸（宽 x 深 x 高）</td>
+      <td rowSpan={3}>Mechanical<br /></td>
+      <td>Dimensions (W x D x H)</td>
       <td colSpan={6}>159mm×155mm×57mm</td>
     </tr>
     <tr>
-      <td>重量</td>
+      <td>Weight</td>
       <td colSpan={6}>1.57kg</td>
     </tr>
     <tr>
-      <td>安装方式</td>
+      <td>Installation</td>
       <td colSpan={6}>桌面、DIN 导轨、壁挂、VESA</td>
     </tr>
     <tr>
-      <td rowSpan={4}>环境</td>
-      <td>工作温度</td>
+      <td rowSpan={4}>Environment</td>
+      <td>Operating Temperature</td>
       <td colSpan={6}> -20 ~ 60°C，0.7m/s</td>
     </tr>
     <tr>
-      <td>工作湿度</td>
+      <td>Operating Humidity</td>
       <td colSpan={6}>95% @ 40 °C（无冷凝）</td>
     </tr>
     <tr>
-      <td>振动</td>
+      <td>Vibration</td>
       <td colSpan={6}>3 Grms @ 5 ~ 500 Hz，随机，1 小时/轴</td>
     </tr>
     <tr>
-      <td>冲击</td>
+      <td>Shock</td>
       <td colSpan={6}>50G 峰值加速度（11 毫秒）</td>
     </tr>
     <tr>
-      <td colSpan={2}>操作系统</td>
-      <td colSpan={6}>预装 Jetpack 5.1（及以上）（提供带有板级支持包的 Linux 操作系统）</td>
+      <td colSpan={2}>OS</td>
+      <td colSpan={6}>预装 Jetpack 5.1（及以上）（提供带有板级支持包的 Linux OS）</td>
     </tr>
     <tr>
-      <td colSpan={2}>认证</td>
+      <td colSpan={2}>Certification</td>
       <td colSpan={6}>FCC、CE、RoHS、UKCA</td>
     </tr>
     <tr>
-      <td colSpan={2}>质保</td>
+      <td colSpan={2}>Warranty</td>
       <td colSpan={6}>2 年</td>
     </tr>
   </tbody>
@@ -247,10 +251,10 @@ reComputer industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接
 
 ## 刷写 JetPack
 
-reComputer Industrial 预装了 JetPack 5.1.3 于 128GB SSD 上，并包含必要的驱动程序。这其中包括 CUDA、CUDNN 和 TensorRT 等 SDK 组件。不过，如果你想将 Jetpack 重新刷写到随附 SSD 或新的 SSD 上，可以按照以下步骤进行。
+reComputer Industrial 预装了 JetPack 5.1.3 和必要的驱动程序在一块 128GB SSD 上，其中包含 CUDA、CUDNN 和 TensorRT 等 SDK 组件。不过，如果你想将 Jetpack 重新刷写到这块 SSD 或新的 SSD 上，可以按照以下步骤进行。
 
 :::note
-如果你想在 reComputer Industrial 上使用 SSD，我们只建议你选择 Seeed 提供的 [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html) 和 [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) 版本。
+如果你想在 reComputer Industrial 上使用 SSD，我们只推荐你选择 Seeed 提供的 [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html) 和 [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) 版本。
 :::
 
 ### 前置准备
@@ -258,32 +262,34 @@ reComputer Industrial 预装了 JetPack 5.1.3 于 128GB SSD 上，并包含必�
 在开始使用 reComputer Industrial 之前，你需要准备以下硬件
 
 - reComputer Industrial
-- 随机附带的带电源线的电源适配器（[美规版本](https://www.seeedstudio.com/AC-US-p-5122.html) 或 [欧规版本](https://www.seeedstudio.com/AC-EU-p-5121.html)）
-- Ubuntu 20.04 主机电脑
+- 随机附带的带电源线电源适配器（[US version](https://www.seeedstudio.com/AC-US-p-5122.html) 或 [EU version](https://www.seeedstudio.com/AC-EU-p-5121.html)）
+- Ubuntu 主机电脑
 - USB Type-C 数据传输线
 - 外接显示器
-- HDMI 线缆
+- HDMI 线
 - 键盘和鼠标
 
 :::info
-我们建议您使用物理 Ubuntu 主机设备，而不是虚拟机。
-请参考下表来准备主机。
+我们建议你使用物理的 Ubuntu 主机设备，而不是虚拟机。
+请参考下表来准备主机设备。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td  rowspan="2"> JetPack 版本 </td>
+        <td class="dbon" colspan="4"> Ubuntu 版本（主机电脑） </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 5.x</td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
         <td > </td>
     </tr>
     <tr>
@@ -291,18 +297,28 @@ reComputer Industrial 预装了 JetPack 5.1.3 于 128GB SSD 上，并包含必�
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> 对于 JetPack 7.2，Ubuntu 24.04 仅支持用于烧录和目标端组件安装。如果你需要主机端开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
 :::
 
 ### 进入强制恢复模式
 
-现在你需要让 reComputer Industrial 板进入恢复模式，以便烧录设备。
+现在你需要让 reComputer Industrial 板进入恢复模式，以便对设备进行烧录。
 
-1. 使用 USB Type-C 线缆连接 **USB2.0 DEVICE** 接口和你的电脑。
+1. 使用 USB Type-C 线连接 **USB2.0 DEVICE** 接口和你的电脑。
 2. 使用一根针插入 **RECOVERY** 孔中按下恢复按键，并保持按住。
-3. 将附带的 **2-Pin 端子电源连接器** 连接到板上的电源接口，并将附带的电源适配器与电源线连接以开启电源。
+3. 将随附的 **2-Pin 端子电源连接器** 连接到板上的电源接口，并连接随附的电源适配器和电源线以开启开发板。
 4. 松开恢复按键。
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/97.png"/></div>
@@ -331,7 +347,7 @@ import TabItem from '@theme/TabItem';
 这里我们提供 2 种不同的烧录方法。
 
 1. 下载我们已经准备好的完整系统镜像，其中包含 NVIDIA JetPack、硬件外设驱动并烧录到设备
-2. 下载官方 NVIDIA L4T，使用附带的硬件外设驱动并烧录到设备
+2. 下载官方 NVIDIA L4T，使用随附的硬件外设驱动并烧录到设备
 
 :::note
 第一种方法的下载大小约为 14GB，第二种方法的下载大小约为 3GB。
@@ -346,9 +362,9 @@ import TabItem from '@theme/TabItem';
   <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Device</th>
-      <th>Image Link1</th>
-      <th>Image Link2</th>
+      <th>设备</th>
+      <th>镜像链接 1</th>
+      <th>镜像链接 2</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -400,7 +416,7 @@ import TabItem from '@theme/TabItem';
 :::info
 为了验证下载固件的完整性，你可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希一致，则说明你下载的固件是完整且未损坏的。
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
 上述镜像的源代码可以在[这里](https://github.com/Seeed-Studio/Linux_for_Tegra)找到
@@ -422,7 +438,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **步骤 4：** 使用板载 HDMI 接口将开发板连接到显示器，并完成初始配置设置
+- **步骤 4：** 使用板载的 HDMI 接口将开发板连接到显示器，并完成初始配置设置
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
@@ -453,16 +469,16 @@ sudo ./tools/l4t_flash_prerequisites.sh
 <table>
   <thead>
     <tr>
-      <th>Jetson Module</th>
-      <th>Download Link</th>
-      <th>JetPack Version</th>
-      <th>L4T Version</th>
+      <th>Jetson 模组</th>
+      <th>下载链接</th>
+      <th>JetPack 版本</th>
+      <th>L4T 版本</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowSpan={2}>Jetson Orin NX 8GB/ 16GB,<br />Orin Nano 8GB</td>
-      <td rowSpan={2}><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/orin-nx-8-16-nano-8-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td rowSpan={2}><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/orin-nx-8-16-nano-8-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">下载</a></td>
       <td rowSpan={4}>5.1.1</td>
       <td rowSpan={4}>35.3.1</td>
     </tr>
@@ -470,7 +486,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
     </tr>
     <tr>
       <td>Jetson Orin Nano 4GB</td>
-      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/orin-nano-4-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/orin-nano-4-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">下载</a></td>
     </tr>
     <tr>
       <td>Jetson Xavier NX 8GB/ 16GB</td>
@@ -494,7 +510,7 @@ sudo unzip xxxx.zip # Replace xxxx with the driver file name
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/126.png"/></div>
 
-- **步骤 4：** 进入 **Linux_for_Tegra** 目录并按如下方式执行刷机命令
+- **步骤 4：** 进入 **Linux_for_Tegra** 目录并按如下方式执行烧录命令
 
 ```sh
 cd Linux_for_Tegra
@@ -506,7 +522,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 sudo ADDITIONAL_DTB_OVERLAY_OPT="BootOrderNvme.dtbo" ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_nvme.xml -S 80GiB  -p "-c bootloader/t186ref/cfg/flash_l4t_t194_qspi_p3668.xml --no-systemimg" --network usb0  recomputer-xavier-nx-industrial external
 ```
 
-现在将开始向板卡刷写系统镜像。如果刷写成功，你会看到如下输出
+现在将开始向板卡烧录系统镜像。如果烧录成功，你将看到如下输出
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -591,9 +607,9 @@ sudo apt install nvidia-jetpack -y
 </div>
 
 :::info
-为了验证下载固件的完整性，你可以对比 SHA256 哈希值。
+要验证下载固件的完整性，你可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
 :::info
@@ -606,14 +622,14 @@ sudo apt install nvidia-jetpack -y
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **步骤 3：** 进入之前解压得到的文件目录，并按如下方式执行刷机命令
+- **步骤 3：** 进入之前解压得到的文件目录，并按如下方式执行烧录命令
 
 ```sh
 cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-现在将开始向板卡刷写系统镜像。如果刷写成功，你会看到如下输出
+现在将开始向板卡烧录系统镜像。如果烧录成功，你将看到如下输出
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -666,9 +682,9 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 </div>
 
 :::info
-为了验证下载固件的完整性，你可以对比 SHA256 哈希值。
+要验证下载固件的完整性，你可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
 :::info
@@ -681,31 +697,31 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **步骤 3：** 进入之前解压得到的文件目录，并按如下方式执行刷机命令
+- **步骤 3：** 进入之前解压得到的文件目录，并按如下方式执行烧录命令
 
 ```sh
 cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-现在将开始向板卡刷写系统镜像。如果刷写成功，你会看到如下输出
+现在将开始把系统镜像烧录到板卡上。如果烧录成功，你会看到如下输出
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **步骤 4：** 使用板载 HDMI 接口将板卡连接到显示器，并完成初始配置设置
+- **步骤 4：** 使用板载的 HDMI 接口将板卡连接到显示器，并完成初始配置设置
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
 
-之后，主板将会重启并准备就绪，可以开始使用了！
+之后，板卡会重启并准备就绪，可以开始使用了！
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 </TabItem>
 
 <TabItem value="Jetpack 6.1" label="Jetpack6.1">
 
-- **步骤 1：** 将与你所使用主板对应的系统镜像下载到 Ubuntu PC 上
+- **步骤 1：** 将与你所使用板卡对应的系统镜像下载到 Ubuntu 电脑上
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -744,7 +760,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 :::info
 为了验证下载固件的完整性，你可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果结果哈希与 wiki 中提供的 SHA256 哈希一致，则说明你下载的固件是完整且未损坏的。
+在 Ubuntu 主机上打开终端，运行命令 `sha256sum <File>` 获取下载文件的 SHA256 哈希值。如果结果与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
 :::info
@@ -757,23 +773,23 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **步骤 3：** 进入之前解压后的文件目录，并按如下方式执行烧录命令
+- **步骤 3：** 进入之前解压得到的文件目录，并按如下方式执行烧录命令
 
 ```sh
 cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-现在将开始把系统镜像烧录到主板上。如果烧录成功，你会看到如下输出
+现在将开始把系统镜像烧录到板卡上。如果烧录成功，你会看到如下输出
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **步骤 4：** 使用主板上的 HDMI 接口将 J401 连接到显示器，并完成初始配置设置：
+- **步骤 4：** 使用板载的 HDMI 接口将 J401 连接到显示器，并完成初始配置设置：
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-请根据你的需求完成 **System Configuration**。
+请根据你的需求完成**系统配置**。
 :::
 
 </TabItem>
@@ -785,7 +801,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 J4011/J4012 的散热能力不足以支持该模式，强行启用可能会对模块造成永久性损坏。
 :::
 
-- **步骤 1：** 将与你所使用主板对应的系统镜像下载到 Ubuntu PC 上
+- **步骤 1：** 将与你所使用板卡对应的系统镜像下载到 Ubuntu 电脑上
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -819,7 +835,7 @@ J4011/J4012 的散热能力不足以支持该模式，强行启用可能会对�
 :::info
 为了验证下载固件的完整性，你可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果结果哈希与 wiki 中提供的 SHA256 哈希一致，则说明你下载的固件是完整且未损坏的。
+在 Ubuntu 主机上打开终端，运行命令 `sha256sum <File>` 获取下载文件的 SHA256 哈希值。如果结果与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
 :::info
@@ -827,7 +843,7 @@ J4011/J4012 的散热能力不足以支持该模式，强行启用可能会对�
 :::
 
 :::note
-请注意，由于启用 `super mode` 后功耗和发热量增加，[reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) 和 [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) 在 JetPack 6.2 下无法在最高模式下稳定运行。因此，JetPack 6.2 仅适用于 J4012（Orin NX 16GB），而不推荐用于 J4011（Orin NX 8GB）。
+请注意，由于启用 `super mode` 后功耗和发热量增加，[reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) 和 [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) 在 JetPack 6.2 下无法在最高模式下稳定运行。因此，只有 J4012（Orin NX 16GB）适用于 JetPack 6.2，而不推荐 J4011（Orin NX 8GB）。
 我们目前正在设计新版本的 reComputer，敬请期待！
 :::
 
@@ -837,26 +853,101 @@ J4011/J4012 的散热能力不足以支持该模式，强行启用可能会对�
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **步骤 3：** 进入之前解压后的文件目录，并按如下方式执行烧录命令
+- **步骤 3：** 进入之前解压得到的文件目录，并按如下方式执行烧录命令
 
 ```sh
 cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-现在将开始把系统镜像烧录到主板上。如果烧录成功，你会看到如下输出
+现在将开始把系统镜像烧录到板卡上。如果烧录成功，你会看到如下输出
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **步骤 4：** 使用主板上的 HDMI 接口将主板连接到显示器，并完成初始配置设置
+- **步骤 4：** 使用板载的 HDMI 接口将板卡连接到显示器，并完成初始配置设置
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-请根据你的需求完成 **System Configuration**。
+请根据你的需求完成**系统配置**。
 :::
 
-- **步骤 4：** 使用主板上的 HDMI 接口将 J401 连接到显示器，并完成初始配置设置：
+- **步骤 4：** 使用板载的 HDMI 接口将 J401 连接到显示器，并完成初始配置设置：
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+:::info
+请根据你的需求完成**系统配置**。
+:::
+
+</TabItem>
+
+<TabItem value="Jetpack 7.2" label="Jetpack7.2">
+
+- **步骤 1：** 将与你所使用板卡对应的系统镜像下载到 Ubuntu 电脑上
+
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
+  <thead>
+    <tr>
+      <th>设备</th>
+      <th>链接</th>
+      <th>SHA256</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>reComputer Industrial J4012</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBfReHmaDICTY_-byQpDlSOAXzoeJxfBtyuMYKgIKn5pqo?e=kum4Aa" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>51035f2fee6a383a973250f1efcc2ea7<br />7c083dc4f3e7661541c5fdc579bc9f9d</th>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J4011</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC2tUVw9b3HTqtmb7QI6Bi5AZS9iz9O9lXJyPlI07R5XUY?e=yY7o3T" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>dd03129ba599101972eb2ea75eaa2e5e<br />3b203d04130dbf6aaf4683461587945f</th>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J3011</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQClwzLEoHNhR5r0RVE9G5H8Aa6Tc4-uBwOJNP-eDi4gSMI?e=8v78Ro" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>2bacc1a2577819630702901f2200e2e38<br />a905eb292a71e63532b5056a9e73f87</th>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J3010</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD1SrMagx31RoPYJRTfH0anAS_G9TCSJckK1pV_DdYFFPU?e=K0QfUg" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>b0a1466b3b0c7582a9d398109f53e507<br />92a6526fc51b5b1b9ddb1c04bdb52692</th>
+    </tr>
+  </tbody>
+  </table>
+</div>
+
+:::info
+为了验证下载的固件完整性，你可以比较 SHA256 哈希值。
+
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未被篡改的。
+:::
+
+:::info
+上述镜像的源代码可以在[这里](https://github.com/Seeed-Studio/Linux_for_Tegra)找到。
+:::
+
+- **步骤 2：** 解压生成的文件
+
+```sh
+sudo tar -xvf <file_name>.tar.gz
+```
+
+- **步骤 3：** 进入之前解压得到的文件目录，并按如下方式执行烧录命令
+
+```sh
+cd mfi_xxxx
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+现在系统镜像将开始烧录到板卡上。如果烧录成功，你会看到如下输出
+
+<div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
+
+- **步骤 4：** 使用板载 HDMI 接口将板卡连接到显示器，并完成初始配置设置
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
@@ -872,20 +963,20 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 硬件与接口使用
 
-若想进一步了解如何使用 reComputer Industrial 主板上的所有硬件和接口，我们建议你参考我们准备的相关 wiki 文档。
+若想进一步了解如何使用 reComputer Industrial 板上的所有硬件和接口，我们建议你参考我们准备的相关 wiki 文档。
 
 - [reComputer Industrial J20 硬件与接口使用](https://wiki.seeedstudio.com/cn/reComputer_Industrial_J20_Hardware_Interfaces_Usage)
 - [reComputer Industrial J40、J30 硬件与接口使用](https://wiki.seeedstudio.com/cn/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage)
 
 ## 资源
 
-- [reComputer Industrial 数据手册](https://files.seeedstudio.com/products/NVIDIA/reComputer-Industrial-datasheet.pdf)
+- [reComputer Industrial 规格书](https://files.seeedstudio.com/products/NVIDIA/reComputer-Industrial-datasheet.pdf)
 - [reComputer Industrial 参考指南](https://files.seeedstudio.com/products/NVIDIA/reComputer-Industrial-Reference-Guide.pdf)
 - [NVIDIA Jetson 设备与载板对比](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 - [reComputer Industrial 3D 文件](https://files.seeedstudio.com/products/NVIDIA/Industrial/reComputer-Industrial.stp)
-- [Seeed Jetson 系列目录](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Seeed Studio 边缘 AI 成功案例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson 系列对比](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed Jetson 系列产品目录](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Seeed Studio Edge AI 成功案例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Seeed Jetson 系列产品对比](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Jetson 设备一页概览](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
@@ -897,7 +988,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

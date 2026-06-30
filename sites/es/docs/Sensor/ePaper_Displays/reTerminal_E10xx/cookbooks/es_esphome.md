@@ -1,27 +1,38 @@
 ---
-description: Recetario de ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - integración básica con Home Assistant, primer panel, configuración de Wi‑Fi, firmware precompilado en ZIP.
-title: Recetario de ESPHome - Básico (reTerminal E Serie)
+description: Recetario de pantallas ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - integración con Home Assistant, primer panel, configuración de Wi‑Fi, firmware precompilado en ZIP y ejemplos de dibujo en ePaper.
+title: Recetario ESPHome - Conceptos básicos de pantalla (reTerminal E Serie)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome
 aliases:
   - /reterminal_e10xx_esphome
 sku: 100017057,100073581
-sidebar_position: 2
-sidebar_label: ESPHome (Básico)
+sidebar_position: 3
+sidebar_label: ESPHome - Pantalla
 last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-20'
+url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Recetario de ESPHome - Básico: reTerminal E Serie
+# Recetario ESPHome - Conceptos básicos de pantalla: reTerminal E Serie
 
 :::tip Lee primero la guía principal de ESPHome
-Esta página es el **recetario básico de ESPHome específico para reTerminal E Serie**. El contenido común — elegir un método de flasheo, el esqueleto YAML genérico, la conexión con Home Assistant — se encuentra en **[Work with ESPHome](/es/epaper_work_with_esphome)**. Échale un vistazo primero si eres nuevo en ESPHome en Seeed ePaper. Para ejemplos de periféricos integrados (botones, zumbador, batería, SHT4x, deep sleep), consulta el [recetario avanzado](/es/reterminal_e10xx_with_esphome_advanced).
+Esta página es el **recetario de pantalla de ESPHome específico para reTerminal E Serie**. El contenido común — elegir una ruta de flasheo, el esqueleto YAML genérico, conectar con Home Assistant — se encuentra en **[Trabajar con ESPHome](/es/epaper_work_with_esphome)**. Échale un vistazo primero si eres nuevo en ESPHome en Seeed ePaper. Para botones, zumbador, LED, batería, SHT4x y deep sleep, consulta el [recetario de E/S, batería y bajo consumo](/es/reterminal_e10xx_with_esphome_advanced). Para RTC, detección de tarjeta microSD y configuración del micrófono, consulta el [recetario de RTC, tarjeta SD y micrófono](/es/reterminal_e10xx_with_esphome_rtc_sd_microphone).
+:::
+
+:::tip Prueba las demos sin configurar un entorno de desarrollo
+Si quieres previsualizar rápidamente los resultados del proyecto o probar el firmware de demostración básico antes de configurar un entorno de desarrollo, abre el **[Centro de firmware de reTerminal E Serie](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Puedes elegir un dispositivo reTerminal E Serie compatible y flashear firmware de demostración directamente desde un navegador.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
@@ -32,7 +43,7 @@ Esta página es el **recetario básico de ESPHome específico para reTerminal E 
 
 ## Introducción a [Home Assistant](https://www.home-assistant.io/)
 
-Home Assistant es una potente plataforma de automatización del hogar de código abierto que te permite controlar y supervisar tus dispositivos domésticos inteligentes desde una única interfaz unificada. Actúa como el concentrador central de tu hogar inteligente, lo que te permite automatizar rutinas, monitorizar sensores y crear un espacio vital más inteligente.
+Home Assistant es una potente plataforma de automatización del hogar de código abierto que te permite controlar y supervisar tus dispositivos domésticos inteligentes desde una única interfaz unificada. Actúa como el concentrador central de tu hogar inteligente, lo que te permite automatizar rutinas, supervisar sensores y crear un espacio vital más inteligente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/204.png" style={{width:700, height:'auto'}}/></div>
 
@@ -42,7 +53,7 @@ Home Assistant es una potente plataforma de automatización del hogar de código
 
 - **Amplia compatibilidad de dispositivos**: Home Assistant se integra con miles de dispositivos y servicios de hogar inteligente diferentes, lo que lo hace muy versátil y preparado para el futuro.
 
-- **Automatización potente**: Crea reglas de automatización sofisticadas que puedan responder a diversos desencadenantes como la hora, estados de dispositivos, lecturas de sensores y más.
+- **Automatización potente**: Crea reglas de automatización sofisticadas que puedan responder a varios desencadenantes como la hora, estados de dispositivos, lecturas de sensores y más.
 
 - **Panel personalizable**: Diseña tu propia interfaz de usuario para mostrar la información que más te importa.
 
@@ -50,9 +61,9 @@ Home Assistant es una potente plataforma de automatización del hogar de código
     <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Más información 🖱️</font></span></strong></a>
 </div>
 
-### ¿Por qué usar la pantalla de tinta electrónica reTerminal E Serie con Home Assistant?
+### ¿Por qué la pantalla ePaper reTerminal E Serie con Home Assistant?
 
-La pantalla de tinta electrónica reTerminal E Serie es un excelente complemento para Home Assistant por varias razones:
+La pantalla ePaper reTerminal E Serie es un excelente complemento para Home Assistant por varias razones:
 
 1. **Eficiencia energética**: La pantalla de tinta electrónica solo consume energía al actualizar el contenido, lo que la hace perfecta para mostrar información persistente como previsiones meteorológicas, eventos del calendario o el estado del sistema.
 
@@ -62,19 +73,19 @@ La pantalla de tinta electrónica reTerminal E Serie es un excelente complemento
 
 4. **Integración flexible**: A través de ESPHome, la pantalla se integra perfectamente con Home Assistant, lo que te permite mostrar cualquier dato de tu sistema de hogar inteligente en un formato elegante y siempre visible.
 
-Estas ventajas hacen que la pantalla de tinta electrónica reTerminal E Serie sea una opción ideal para crear una pantalla de información siempre encendida y de bajo consumo para tu configuración de Home Assistant.
+Estas ventajas hacen que la pantalla ePaper reTerminal E Serie sea una opción ideal para crear una pantalla de información siempre encendida y de bajo consumo para tu configuración de Home Assistant.
 
 ### Integración con ESPHome
 
-ESPHome es una herramienta de creación de firmware de código abierto diseñada específicamente para dispositivos ESP8266/ESP32. Te permite crear firmware personalizado usando sencillos archivos de configuración YAML, que luego pueden flashearse en tu dispositivo. Para la reTerminal E Serie, ESPHome actúa como el middleware esencial que habilita la comunicación entre el dispositivo y Home Assistant.
+ESPHome es una herramienta de creación de firmware de código abierto diseñada específicamente para dispositivos ESP8266/ESP32. Te permite crear firmware personalizado usando sencillos archivos de configuración YAML, que luego pueden flashearse en tu dispositivo. Para reTerminal E Serie, ESPHome actúa como el middleware esencial que habilita la comunicación entre el dispositivo y Home Assistant.
 
-El sistema funciona convirtiendo tu configuración YAML en un firmware totalmente funcional que se ejecuta en tu dispositivo ESP. Este firmware se encarga de todas las tareas complejas de conectarse a tu red, comunicarse con Home Assistant y controlar la pantalla de tinta electrónica. Combinado con Home Assistant, ESPHome proporciona una plataforma robusta para crear pantallas y controles sofisticados de automatización del hogar.
+El sistema funciona convirtiendo tu configuración YAML en un firmware totalmente funcional que se ejecuta en tu dispositivo ESP. Este firmware se encarga de todas las tareas complejas de conectarse a tu red, comunicarse con Home Assistant y controlar la pantalla ePaper. Combinado con Home Assistant, ESPHome proporciona una plataforma robusta para crear pantallas y controles sofisticados de automatización del hogar.
 
-Veamos cómo configurarlo y sacar el máximo partido de esta versátil pantalla.
+Veamos cómo configurarlo y sacar el máximo partido a esta versátil pantalla.
 
 ## Primeros pasos
 
-Antes de comenzar con el contenido del tutorial de este artículo, es posible que necesites tener preparado el siguiente hardware.
+Antes de que comience el contenido del tutorial de este artículo, es posible que necesites tener listo el siguiente hardware.
 
 ### Materiales necesarios
 
@@ -145,7 +156,7 @@ Haz clic en **INSTALL** y **START**.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/30.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-Si no puedes encontrar ESPHome en la tienda de complementos, asegúrate de que estás usando una instalación de Home Assistant que admita complementos (como Home Assistant OS o instalaciones supervisadas). Para otros tipos de instalación (como Home Assistant Container), es posible que tengas que ejecutar ESPHome Device Builder de forma independiente usando Docker. Consulta la [documentación oficial de ESPHome](https://esphome.io/guides/getting_started_hassio) para más detalles.
+Si no puedes encontrar ESPHome en la tienda de complementos, asegúrate de que estás usando una instalación de Home Assistant que admita complementos (como Home Assistant OS o instalaciones supervisadas). Para otros tipos de instalación (como Home Assistant Container), puede que necesites ejecutar ESPHome Device Builder de forma independiente usando Docker. Consulta la [documentación oficial de ESPHome](https://esphome.io/guides/getting_started_hassio) para más detalles.
 :::
 
 ### Paso 2. Añadir un nuevo dispositivo
@@ -169,11 +180,11 @@ Después de crear un nuevo dispositivo, haz clic en **EDIT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_arduino.png" style={{width:600, height:'auto'}}/></div> -->
 
-### Paso 3. Instalar el firmware
+### Paso 3. Instalar firmware
 
 Este es un ejemplo muy básico y mostrará "Hello World!" en la pantalla.
 
-**El propósito principal es mostrarte diferentes formas de instalar el firmware en el dispositivo.**
+**El propósito principal es mostrarte diferentes formas de instalar firmware en el dispositivo.**
 
 Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
 
@@ -249,7 +260,7 @@ Haz clic en **INSTALL** para instalar el código en el dispositivo y verás la s
 <TabItem value='Install through browser'>
 
 :::tip
-Si tu Home Assistant Host (Raspberry PI/Green/Yellow etc.) está lejos de ti, recomendamos usar este método. Puedes instalarlo con el ordenador que tengas a mano.
+Si tu Home Assistant Host (Raspberry PI/Green/Yellow, etc.) está lejos de ti, recomendamos usar este método. Puedes instalarlo con el ordenador que tengas a mano.
 :::
 
 Primero, necesitas hacer clic en **Manual download** para descargar el firmware compilado.
@@ -264,7 +275,7 @@ Vuelve a ESPHome para descargar el firmware.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-Selecciona Factory format.
+Selecciona formato Factory.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
@@ -289,10 +300,10 @@ Espera un momento y verás 'Hello world!' en la pantalla ～
 <TabItem value='Install through host'>
 
 :::tip
-Si tu Home Assistant Host (Raspberry PI/Green/Yellow etc.) está cerca, recomendamos usar este método ya que es más sencillo.
+Si tu Home Assistant Host (Raspberry PI/Green/Yellow, etc.) está cerca, recomendamos usar este método ya que es más sencillo.
 :::
 
-Antes de instalar el código en el dispositivo, necesitas usar un cable USB para **conectar este dispositivo a tu Raspberry Pi o HA Green(Yellow) etc.** que esté ejecutando Home Assistant.
+Antes de instalar el código en el dispositivo, necesitas usar un cable USB para **conectar este dispositivo a tu Raspberry Pi o HA Green(Yellow), etc.** que esté ejecutando Home Assistant.
 
 Haz clic en las opciones siguiendo la imagen para instalar el código en el dispositivo. [¿No has encontrado el puerto cuando el dispositivo está en modo de suspensión profunda?](#port)
 
@@ -434,11 +445,11 @@ Paso 3. Busca "Open-Meteo" y selecciónalo de la lista.
 
 Paso 4. Sigue el asistente de configuración para establecer tu ubicación y las unidades preferidas.
 
-Paso 5. Una vez instalada, la integración de Open-Meteo creará varias entidades relacionadas con el clima en tu instancia de Home Assistant.
+Paso 5. Una vez instalada, la integración Open-Meteo creará varias entidades relacionadas con el clima en tu instancia de Home Assistant.
 
-#### Acceder a los datos meteorológicos en Herramientas de Desarrollador
+#### Acceder a los datos meteorológicos en Developer Tools
 
-Después de instalar la integración de Open-Meteo, puedes acceder a los datos meteorológicos a través de Herramientas de Desarrollador:
+Después de instalar la integración Open-Meteo, puedes acceder a los datos meteorológicos a través de Developer Tools:
 
 Paso 1. En tu panel de Home Assistant, navega a **Developer Tools** → **States**.
 
@@ -479,13 +490,13 @@ sensor:
     internal: true
 ```
 
-Esta configuración crea entidades de sensor en tu dispositivo ESPHome que obtienen datos de la integración meteorológica de Home Assistant. Luego puedes usar estos sensores para actualizar la pantalla ePaper de la reTerminal E Serie con la información meteorológica actual.
+Esta configuración crea entidades de sensor en tu dispositivo ESPHome que obtienen datos de la integración meteorológica de Home Assistant. Luego puedes usar estos sensores para actualizar la pantalla ePaper de tu reTerminal E Serie con la información meteorológica actual.
 
 :::tip
 Para los datos de pronóstico, tendrás que usar las entidades `weather.open_meteo_forecast` que contienen valores previstos para días futuros.
 :::
 
-Por último, añade el código para la sección de pantalla para usar estos valores anteriores. El código completo es el siguiente:
+Por último, añade el código para la sección de la pantalla para usar estos valores anteriores. El código completo es el siguiente:
 
 <Tabs>
 <TabItem value="For E1001" label="Para E1001" default>
@@ -610,7 +621,7 @@ Después de compilar el código anterior y subirlo a tu dispositivo, es posible 
 
 #### Añadir la pantalla ePaper reTerminal E Serie a Home Assistant
 
-Paso 1. Después de grabar tu dispositivo, vuelve a Home Assistant y navega a **Settings → Devices & Services**.
+Paso 1. Después de flashear tu dispositivo, vuelve a Home Assistant y navega a **Settings → Devices & Services**.
 
 Paso 3. Home Assistant debería detectar automáticamente tu dispositivo reTerminal E Serie ePaper Display mediante mDNS. Si aparece en la sección de dispositivos detectados, haz clic en Configure para añadirlo.
 
@@ -628,15 +639,15 @@ Paso 6. Una vez conectado, tu reTerminal E Serie ePaper Display aparecerá como 
 El programa puede tardar de 2 a 3 minutos desde la finalización de la grabación hasta la visualización final.
 :::
 
-Aquí está el contenido mejorado de la Demo 3 con formato mejorado, colocación de imágenes y descripciones adicionales:
+Aquí tienes el contenido mejorado de la Demo 3 con formato mejorado, colocación de imágenes y descripciones adicionales:
 
 ### Dibujo de fuentes TrueType
 
-Este ejemplo demuestra cómo mostrar iconos personalizados en tu reTerminal E Serie ePaper Display usando fuentes TrueType. Material Design Icons proporciona una amplia gama de símbolos escalables perfectos para pantallas de papel electrónico.
+Este ejemplo demuestra cómo mostrar iconos personalizados en tu reTerminal E Serie ePaper Display usando fuentes TrueType. Material Design Icons proporciona una amplia gama de símbolos escalables perfectos para pantallas de tinta electrónica.
 
 #### Instalación de las herramientas necesarias
 
-Paso 1. Primero, necesitamos instalar el complemento Studio Code Server para gestionar archivos. Navega a la tienda de complementos de Home Assistant, busca **Studio Code Server** y haz clic en él.
+Paso 1. Primero, necesitamos instalar el complemento Studio Code Server para gestionar archivos. Navega a la tienda de Add-ons de Home Assistant, busca **Studio Code Server** y haz clic en él.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -644,7 +655,7 @@ Paso 2. Haz clic en **INSTALL** y espera a que se complete la instalación. Una 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/18.png" style={{width:800, height:'auto'}}/></div>
 
-#### Configuración de fuentes de iconos
+#### Configuración de las fuentes de iconos
 
 Paso 3. Crea una nueva carpeta llamada **fonts** en tu directorio de configuración de ESPHome. Esta carpeta almacenará los archivos de fuentes TrueType necesarios para mostrar iconos.
 
@@ -747,7 +758,7 @@ display:
 
 :::note
 
-1. La sección `glyphs` define qué iconos cargar desde el archivo de fuente. Cargar solo los iconos que necesitas ahorra memoria en tu dispositivo.
+1. La sección `glyphs` define qué iconos se cargan desde el archivo de fuente. Cargar solo los iconos que necesitas ahorra memoria en tu dispositivo.
 
 2. El programa puede tardar de 2 a 3 minutos desde que termina la grabación hasta la visualización final.
 
@@ -799,10 +810,10 @@ lambda: |-
 Paso 5. Guarda tu configuración actualizada y súbela a tu dispositivo para ver el nuevo icono.
 
 :::tip
-Para paneles de clima, considera usar iconos como `F0590` (soleado), `F0591` (parcialmente nublado), `F0593` (lluvioso) y `F059E` (ventoso).
+Para paneles de control del clima, considera usar iconos como `F0590` (soleado), `F0591` (parcialmente nublado), `F0593` (lluvioso) y `F059E` (ventoso).
 :::
 
-Combinando estos iconos con los datos meteorológicos de Home Assistant que configuramos antes, puedes crear una pantalla de clima dinámica que muestre las condiciones actuales usando iconos apropiados.
+Combinando estos iconos con los datos meteorológicos de Home Assistant que configuramos antes, puedes crear una pantalla meteorológica dinámica que muestre las condiciones actuales usando iconos apropiados.
 
 ### Mostrar imágenes personalizadas
 
@@ -836,7 +847,7 @@ Paso 4. Sube la imagen descargada a la carpeta **image** que creaste antes usand
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Si quieres mostrar imágenes de paisajes complejos y bonitos, es mejor realizar el tramado de la imagen de antemano [en nuestro sitio web](https://sensecraft.seeed.cc/hmi/tools/dither) para obtener un mejor efecto. Se admiten los formatos JPG y PNG.
+Si quieres mostrar imágenes de paisajes complejas y bonitas, es mejor realizar el tramado de la imagen de antemano [en nuestro sitio web](https://sensecraft.seeed.cc/hmi/tools/dither) para obtener un mejor efecto. Se admiten los formatos JPG y PNG.
 :::
 
 #### Configurar ESPHome para mostrar imágenes
@@ -917,7 +928,7 @@ Puedes mejorar la visualización de imágenes con estas técnicas adicionales:
 
 **Posicionar imágenes**
 
-Para posicionar tu imagen en coordenadas específicas en la pantalla:
+Para posicionar tu imagen en coordenadas específicas de la pantalla:
 
 ```yaml
 lambda: |-
@@ -968,7 +979,10 @@ Combinando imágenes con texto y otros elementos de visualización tratados en e
 
 ## Seguir leyendo
 
-Debido a limitaciones de espacio, este artículo solo cubre algunos casos de uso básicos y ejemplos de dibujo del dispositivo. Trataremos el uso del hardware de reTerminal en ESPHome con más detalle en el Wiki [Advanced ESPHome Usage of reTerminal E Series ePaper Display in Home Assistant](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_advanced), que puedes seguir leyendo.
+Este artículo se centra en conectar la pantalla y dibujar contenido en la pantalla ePaper. Continúa con estos recetarios de ESPHome cuando quieras usar el resto del hardware integrado:
+
+- **[Recetario ESPHome: botones, zumbador, LED, batería y bajo consumo](/es/reterminal_e10xx_with_esphome_advanced)**: botones de usuario, retroalimentación del zumbador, LED integrado, monitorización de batería, sensor SHT4x, suspensión profunda y paneles de varias páginas.
+- **[Recetario ESPHome: RTC, tarjeta SD y micrófono](/es/reterminal_e10xx_with_esphome_rtc_sd_microphone)**: sincronización horaria con PCF8563 RTC, pines de alimentación/detección de tarjeta microSD e inicialización del micrófono PDM integrado.
 
 ## Preguntas frecuentes
 
@@ -990,9 +1004,18 @@ En este caso, debes ir a Settings -> Devices & Services -> Integrations para **A
 
 Intenta desconectarla y volverla a conectar varias veces, o simplemente instala el controlador según las indicaciones.
 
+### P4: ¿Por qué no hay registro serie por USB?
+
+La reTerminal E Serie utiliza un puente USB-a-UART CH340K en UART0. Mantén esta configuración de registro en tu YAML:
+
+```yaml
+logger:
+  hardware_uart: UART0
+```
+
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

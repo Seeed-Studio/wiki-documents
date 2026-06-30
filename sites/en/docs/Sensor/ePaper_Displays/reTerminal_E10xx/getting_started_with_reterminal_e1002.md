@@ -8,7 +8,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,16 @@ import TabItem from '@theme/TabItem';
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div><br />
+
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
 
 :::caution Update Firmware Tips
 We recommend that you **[complete your product's firmware update](#preliminary)** as soon as you receive it for the best experience.
@@ -210,7 +220,7 @@ So, we need to complete the next steps of configuring the network during this ti
 ### Network Setup
 
 <Tabs>
-<TabItem value="Network Setup vis PC" label="Network Setup vis PC" default>
+<TabItem value="Network Setup via PC" label="Network Setup via PC" default>
 
 **Step 1.** Connect to the device's Wi-Fi access point from your smartphone or computer. The AP name will appear on the screen (no password required). The network credentials are `reTerminal E1002-{MAC Adress}`.
 
@@ -254,7 +264,7 @@ The reTerminal E Series ePaper Display only supports 2.4GHz WiFi networks, not 5
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/18.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Network Setup vis SenseCraft APP" label="Network Setup vis SenseCraft APP">
+<TabItem value="Network Setup via SenseCraft APP" label="Network Setup via SenseCraft APP">
 
 This method uses the SenseCraft mobile app to configure the device's network and add it to your SenseCraft account via Bluetooth.
 

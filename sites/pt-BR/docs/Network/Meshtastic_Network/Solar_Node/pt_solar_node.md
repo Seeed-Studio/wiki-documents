@@ -1,6 +1,6 @@
 ---
-description: Nó Solar SenseCAP para Meshtastic & LoRa
-title: Introdução ao Nó Solar SenseCAP
+description: SenseCAP Solar Node para Meshtastic & LoRa
+title: Introdução ao SenseCAP Solar Node
 keywords:
   - Meshtastic
   - Solar
@@ -11,7 +11,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-04-08'
-updatedAt: '2026-03-10'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/pt-br/meshtastic_solar_node/
 ---
 
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/pt-br/meshtastic_solar_node/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-É um nó de comunicação ou repetidor econômico alimentado por energia solar, baseado em [Meshtastic®](https://meshtastic.org/), que integra o controlador principal XIAO nRF52840 Plus e o módulo LoRa Wio-SX1262. Ele é especificamente projetado para áreas sem cobertura de rede. Suporta comunicação de longa distância, posicionamento preciso e operação de baixo consumo de energia. É adequado para expandir a cobertura de rede em áreas externas.
+É um nó de comunicação ou repetidor econômico alimentado por energia solar baseado em [Meshtastic®](https://meshtastic.org/), que integra o controlador principal XIAO nRF52840 Plus e o módulo LoRa Wio-SX1262. Ele é especificamente projetado para áreas sem cobertura de rede. Suporta comunicação de longa distância, posicionamento preciso e operação de baixo consumo de energia. É adequado para expandir a cobertura de rede em áreas externas.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank">
@@ -27,21 +27,21 @@ url: https://wiki.seeedstudio.com/pt-br/meshtastic_solar_node/
     </a>
 </div>
 
-## Comparação de Versões
+## Comparação de versões
 
-O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) e [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html).
+O Solar Node está disponível em duas variantes: [SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) e [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html).
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-1_1.jpeg" alt="pir" width={800} height="auto" /></p>
 
-## Visão Geral
+## Visão geral
 
 ### Recursos
 
 - Integrado com um painel solar de 5W e suporta baterias externas (que precisam ser fornecidas pelos próprios usuários).
 - O dispositivo vem com o firmware Meshtastic pré-instalado de fábrica. Ele pode ser integrado perfeitamente ao ecossistema Meshtastic.
-- Compatível com o ecossistema Grove e suporta conexão plug-and-play de sensores como sensores de temperatura e umidade, sensores de luz etc.
+- Compatível com o ecossistema Grove e suporta plug-and-play de sensores como sensores de temperatura e umidade, sensores de luz etc.
 - É adequado para uso externo de longo prazo.
-- Suporta transmissão de 8 a 9 KM em áreas abertas. Pode ser usado como um nó externo ou repetidor, expandindo facilmente a rede Mesh e aprimorando a cobertura da rede.
+- Suporta transmissão de 8 a 9KM em áreas abertas. Pode ser usado como um nó externo ou repetidor, expandindo facilmente a rede Mesh e aprimorando a cobertura da rede.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-3.png" alt="pir" width={800} height="auto" /></p>
 
@@ -49,14 +49,14 @@ O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https:
 
 <table>
   <tr>
-    <td><b>Controlador Principal</b></td>
+    <td><b>Controlador principal</b></td>
     <th>
       <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Plus-p-6359.html" target="_blank">XIAO nRF52840 Plus</a><br />
-      (Nordic nRF52840, processador ARM® Cortex®-M4 de 32 bits com FPU, 64 MHz, 256KB RAM, 1MB Flash, 2MB Flash onboard)
+      (Nordic nRF52840, processador ARM® Cortex®-M4 de 32 bits com FPU, 64 MHz, 256KB RAM, 1MB Flash, 2MB de Flash onboard)
     </th>
   </tr>
   <tr>
-    <td><b>Chip de Gerenciamento de Carga</b></td>
+    <td><b>Chip de gerenciamento de carregamento</b></td>
     <td>CN3165 (0,99A)</td>
   </tr>
   <tr>
@@ -94,7 +94,7 @@ O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https:
     <td>Bluetooth 5.0</td>
   </tr>
   <tr>
-    <td><b>Painel Solar</b></td>
+    <td><b>Painel solar</b></td>
     <td>5W</td>
   </tr>
   <tr>
@@ -122,7 +122,7 @@ O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https:
     <td>Luz indicadora de status do painel solar *1</td>
   </tr>
   <tr>
-    <td>Luz de batimento da Mesh *1</td>
+    <td>Luz de batimento da malha (Mesh) *1</td>
   </tr>
   <tr>
     <td>Definido pelo usuário *1</td>
@@ -137,12 +137,12 @@ O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https:
   </tr>
   <tr>
     <td><b>Grau de impermeabilidade</b></td>
-    <td>IPX5</td>
+    <td>IPX6</td>
   </tr>
   <tr>
     <td><b>Bateria (para versão P1-Pro)</b></td>
     <td>
-      <p>- 4 baterias de lítio 18650 (3350mAh cada)</p>
+      <p>- 4 baterias de lítio (NMC) 18650 (3350mAh cada)</p>
       <p>- Suporta carregamento via Type-C e solar.</p>
       <p>- Ambiente de descarga: -40～60°C</p>
       <p>- Ambiente de carregamento: 0-50°C</p>
@@ -150,17 +150,17 @@ O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https:
   </tr>
   <tr>
     <td><b>Certificação</b></td>
-    <td>FCC、CE</td>
+    <td>FCC, CE</td>
   </tr>
   <tr>
-    <td><b>Dimensão</b></td>
+    <td><b>Dimensões</b></td>
     <td>191,2 x 201,2 x 42,1 mm</td>
   </tr>
 </table>
 
 
 
-### Visão Geral do Hardware
+### Visão geral do hardware
 
 **Itens interativos**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/interactive.png" alt="pir" width={800} height="auto" /></p>

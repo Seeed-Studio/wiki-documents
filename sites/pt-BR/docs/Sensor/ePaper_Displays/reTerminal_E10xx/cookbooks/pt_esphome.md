@@ -1,27 +1,38 @@
 ---
-description: Livro de receitas ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - Integração básica com Home Assistant, primeiro dashboard, configuração de Wi‑Fi, firmware pré‑compilado em ZIP.
-title: Livro de Receitas ESPHome - Básico (reTerminal E Série)
+description: Livro de receitas de display ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - integração com Home Assistant, primeiro dashboard, configuração de Wi‑Fi, firmware pré‑compilado em ZIP e exemplos de desenho em ePaper.
+title: Livro de Receitas ESPHome - Noções Básicas de Display (reTerminal E Série)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome
 aliases:
   - /reterminal_e10xx_esphome
 sku: 100017057,100073581
-sidebar_position: 2
-sidebar_label: ESPHome (Básico)
+sidebar_position: 3
+sidebar_label: ESPHome - Display
 last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-20'
+url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Livro de Receitas ESPHome - Básico: reTerminal E Série
+# Livro de Receitas ESPHome - Noções Básicas de Display: reTerminal E Série
 
 :::tip Leia primeiro o guia principal do ESPHome
-Esta página é o **livro de receitas ESPHome básico específico para reTerminal E Série**. O conteúdo compartilhado — escolher um método de gravação, o esqueleto YAML genérico, conexão ao Home Assistant — está em **[Trabalhar com ESPHome](/pt-br/epaper_work_with_esphome)**. Dê uma olhada nele primeiro se você é novo em ESPHome no Seeed ePaper. Para exemplos de periféricos onboard (botões, buzzer, bateria, SHT4x, deep sleep), consulte o [livro de receitas avançado](/pt-br/reterminal_e10xx_with_esphome_advanced).
+Esta página é o **livro de receitas de display do ESPHome específico para reTerminal E Série**. O conteúdo compartilhado — escolher um caminho de gravação, o esqueleto genérico de YAML, conectar ao Home Assistant — está em **[Trabalhar com ESPHome](/pt-br/epaper_work_with_esphome)**. Dê uma olhada nisso primeiro se você é novo em ESPHome no ePaper da Seeed. Para botões, buzzer, LED, bateria, SHT4x e deep sleep, consulte o [livro de receitas de E/S, bateria e baixo consumo](/pt-br/reterminal_e10xx_with_esphome_advanced). Para RTC, detecção de cartão microSD e configuração de microfone, consulte o [livro de receitas de RTC, cartão SD e microfone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone).
+:::
+
+:::tip Teste demos sem configurar um ambiente de desenvolvimento
+Se você quiser visualizar rapidamente os resultados do projeto ou testar o firmware demo básico antes de configurar um ambiente de desenvolvimento, abra o **[Hub de Firmware reTerminal E-Series](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Você pode escolher um dispositivo reTerminal E Série compatível e gravar o firmware de demonstração diretamente a partir de um navegador.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
@@ -40,7 +51,7 @@ Home Assistant é uma poderosa plataforma de automação residencial de código 
 
 - **Controle local**: Diferente de muitas soluções baseadas em nuvem, o Home Assistant é executado localmente na sua rede, garantindo que seus dados permaneçam privados e que suas automações funcionem mesmo sem acesso à internet.
 
-- **Amplo suporte a dispositivos**: Home Assistant integra-se a milhares de diferentes dispositivos e serviços de casa inteligente, tornando-o altamente versátil e preparado para o futuro.
+- **Amplo suporte a dispositivos**: O Home Assistant integra-se a milhares de diferentes dispositivos e serviços de casa inteligente, tornando-o altamente versátil e preparado para o futuro.
 
 - **Automação poderosa**: Crie regras de automação sofisticadas que podem responder a vários gatilhos, como horário, estados de dispositivos, leituras de sensores e muito mais.
 
@@ -54,25 +65,25 @@ Home Assistant é uma poderosa plataforma de automação residencial de código 
 
 O Display ePaper reTerminal E Série é um excelente companheiro para o Home Assistant por vários motivos:
 
-1. **Eficiência energética**: O display de e‑paper só consome energia ao atualizar o conteúdo, tornando-o perfeito para exibir informações persistentes como previsões do tempo, eventos de calendário ou status do sistema.
+1. **Eficiência energética**: O display de e-paper só consome energia ao atualizar o conteúdo, tornando-o perfeito para exibir informações persistentes como previsões do tempo, eventos de calendário ou status do sistema.
 
-2. **Ótima visibilidade**: Diferente das telas LCD, os displays de e‑paper são facilmente legíveis em qualquer condição de iluminação, incluindo luz solar direta, o que os torna ideais para painéis de controle de parede.
+2. **Visibilidade clara**: Diferente das telas LCD, os displays de e-paper são facilmente legíveis em qualquer condição de iluminação, incluindo luz solar direta, tornando-os ideais para painéis de controle de casa montados na parede.
 
 3. **Longa duração de bateria**: Combinado com o modo de deep sleep, o display pode operar por meses com uma única carga de bateria, ainda fornecendo informações valiosas de relance.
 
-4. **Integração flexível**: Através do ESPHome, o display se integra perfeitamente ao Home Assistant, permitindo que você exiba qualquer dado do seu sistema de casa inteligente em um formato elegante e sempre visível.
+4. **Integração flexível**: Por meio do ESPHome, o display se integra perfeitamente ao Home Assistant, permitindo que você exiba qualquer dado do seu sistema de casa inteligente em um formato elegante e sempre visível.
 
-Essas vantagens tornam o Display ePaper reTerminal E Série uma escolha ideal para criar um display de informações sempre ligado e energeticamente eficiente para sua configuração com Home Assistant.
+Essas vantagens tornam o Display ePaper reTerminal E Série uma escolha ideal para criar um display de informações sempre ligado e energeticamente eficiente para sua configuração de Home Assistant.
 
 ### Integração com ESPHome
 
-ESPHome é uma ferramenta de criação de firmware de código aberto projetada especificamente para dispositivos ESP8266/ESP32. Ela permite criar firmware personalizado usando arquivos de configuração YAML simples, que podem então ser gravados no seu dispositivo. Para o reTerminal E Série, o ESPHome atua como o middleware essencial que habilita a comunicação entre o dispositivo e o Home Assistant.
+ESPHome é uma ferramenta de criação de firmware de código aberto projetada especificamente para dispositivos ESP8266/ESP32. Ela permite criar firmware personalizado usando arquivos de configuração YAML simples, que podem então ser gravados no seu dispositivo. Para o reTerminal E Série, o ESPHome atua como o middleware essencial que permite a comunicação entre o dispositivo e o Home Assistant.
 
-O sistema funciona convertendo sua configuração YAML em um firmware completo que roda no seu dispositivo ESP. Esse firmware lida com todas as tarefas complexas de conexão à sua rede, comunicação com o Home Assistant e controle do display ePaper. Quando combinado com o Home Assistant, o ESPHome fornece uma plataforma robusta para criar displays e controles sofisticados de automação residencial.
+O sistema funciona convertendo sua configuração YAML em um firmware completo que é executado no seu dispositivo ESP. Esse firmware lida com todas as tarefas complexas de conexão à sua rede, comunicação com o Home Assistant e controle do display ePaper. Quando combinado com o Home Assistant, o ESPHome fornece uma plataforma robusta para criar displays e controles sofisticados de automação residencial.
 
-Vamos explorar como configurá-lo e tirar o máximo proveito desse display versátil.
+Vamos explorar como configurá-lo e aproveitar ao máximo esse display versátil.
 
-## Primeiros passos
+## Introdução
 
 Antes de começar o conteúdo do tutorial deste artigo, você pode precisar ter o seguinte hardware preparado.
 
@@ -112,16 +123,16 @@ Antes de começar o conteúdo do tutorial deste artigo, você pode precisar ter 
 
 Home Assistant Green é a maneira mais fácil e com maior foco em privacidade de automatizar sua casa. Ele oferece uma configuração simples e permite controlar todos os dispositivos inteligentes com apenas um sistema, onde todos os dados são armazenados localmente por padrão. Esta placa se beneficia do próspero ecossistema do Home Assistant e será aprimorada todos os meses pelo código aberto.
 
-Recomendamos usar o Home Assistant Green como o host do Home Assistant para este tutorial, ou você pode usar qualquer host Home Assistant com Supervisor.
+Recomendamos usar o Home Assistant Green como o host do Home Assistant para este tutorial, ou você pode usar qualquer host de Home Assistant com Supervisor.
 
 :::tip instalar Home Assistant
 Também escrevemos como instalar o Home Assistant para alguns produtos da Seeed Studio, consulte-os.
 
-- **[Primeiros passos com Home Assistant no ODYSSEY-X86](https://wiki.seeedstudio.com/pt-br/ODYSSEY-X86-Home-Assistant/)**
-- **[Primeiros passos com Home Assistant no reTerminal](https://wiki.seeedstudio.com/pt-br/reTerminal_Home_Assistant/)**
-- **[Primeiros passos com Home Assistant no LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/pt-br/h68k-ha-esphome/)**
+- **[Introdução ao Home Assistant no ODYSSEY-X86](https://wiki.seeedstudio.com/pt-br/ODYSSEY-X86-Home-Assistant/)**
+- **[Introdução ao Home Assistant no reTerminal](https://wiki.seeedstudio.com/pt-br/reTerminal_Home_Assistant/)**
+- **[Introdução ao Home Assistant no LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/pt-br/h68k-ha-esphome/)**
 
-Se você não estiver usando um produto Seeed Studio, também pode verificar e aprender como instalar o Home Assistant para outros produtos no site oficial do Home Assistant.
+Se você não estiver usando um produto da Seeed Studio, também pode verificar e aprender como instalar o Home Assistant para outros produtos no site oficial do Home Assistant.
 
 - **[Instalação do Home Assistant](https://www.home-assistant.io/installation/)**
 :::
@@ -145,7 +156,7 @@ Clique em **INSTALL** e **START**.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/30.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-Se você não conseguir encontrar o ESPHome na loja de add-ons, certifique-se de que está usando uma instalação do Home Assistant que suporte add-ons (como Home Assistant OS ou instalações supervisionadas). Para outros tipos de instalação (como Home Assistant Container), talvez seja necessário executar o ESPHome Device Builder de forma independente usando Docker. Consulte a [documentação oficial do ESPHome](https://esphome.io/guides/getting_started_hassio) para mais detalhes.
+Se você não conseguir encontrar o ESPHome na loja de complementos, certifique-se de que está usando uma instalação do Home Assistant que ofereça suporte a complementos (como Home Assistant OS ou instalações supervisionadas). Para outros tipos de instalação (como Home Assistant Container), talvez seja necessário executar o ESPHome Device Builder de forma independente usando Docker. Consulte a [documentação oficial do ESPHome](https://esphome.io/guides/getting_started_hassio) para mais detalhes.
 :::
 
 ### Etapa 2. Adicionar um novo dispositivo
@@ -154,7 +165,7 @@ Vá para o ESPHome e clique em **NEW DEVICE**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/31.png" style={{width:1000, height:'auto'}}/></div>
 
-Dê ao dispositivo um nome de sua preferência e selecione **ESP32-S3** para o tipo de chip, depois clique em **SKIP**.
+Dê ao dispositivo um nome que você goste e selecione **ESP32-S3** para o tipo de chip, depois clique em **SKIP**.
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'80%', marginLeft:'10%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/32.png" style={{width:'100%', height:'auto'}}/></div>
@@ -169,16 +180,16 @@ Depois de criar um novo dispositivo, clique em **EDIT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_arduino.png" style={{width:600, height:'auto'}}/></div> -->
 
-### Etapa 3. Instalar firmware
+### Etapa 3. Instalar o firmware
 
-Este é um exemplo bem básico e mostrará "Hello World!" no display.
+Este é um exemplo bem básico e exibirá "Hello World!" na tela.
 
 **O principal objetivo é mostrar diferentes maneiras de instalar o firmware no dispositivo.**
 
 Você pode usar este exemplo copiando o código abaixo e colando-o após a linha de código `captive_portal` no seu arquivo Yaml.
 
 <Tabs>
-<TabItem value="For E1001" label="Para E1001" default>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 # define font to display words
@@ -210,7 +221,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="Para E1002">
+<TabItem value="For E1002" label="For E1002">
 
 ```yaml
 
@@ -264,7 +275,7 @@ Volte para o ESPHome para baixar o firmware.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-Selecione Factory format.
+Selecione o formato Factory.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
@@ -280,7 +291,7 @@ Clique em **INSTALL** e selecione o firmware que você acabou de baixar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:500, height:'auto'}}/></div>
 
-Espere um momento e você verá 'Hello world!' no display ～
+Aguarde um momento e você verá “Hello world!” na tela ～
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/37.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -294,14 +305,14 @@ Se o seu Home Assistant Host (Raspberry PI/Green/Yellow etc.) estiver por perto,
 
 Antes de instalar o código no dispositivo, você precisa usar um cabo USB para **conectar este dispositivo ao seu Raspberry Pi ou HA Green(Yellow) etc.** que está executando o Home Assistant.
 
-Clique nas opções seguindo a imagem para instalar o código no dispositivo. [Não encontrou a porta quando o dispositivo está em modo de sono profundo?](#port)
+Clique nas opções conforme a imagem a seguir para instalar o código no dispositivo. [Não encontrou a porta quando o dispositivo está em modo de sono profundo?](#port)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-Espere um momento e você verá o retorno como na imagem a seguir. Isso significa que o código está sendo executado com sucesso.
+Aguarde um momento e você verá o retorno como na imagem a seguir. Isso significa que o código está sendo executado com sucesso.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/37.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -310,7 +321,7 @@ Espere um momento e você verá o retorno como na imagem a seguir. Isso signific
 <TabItem value='Install through Wi-Fi'>
 
 :::tip
-Esta é a maneira mais simples, mas com a premissa de que, ao instalar o programa pela primeira vez, você deve primeiro fazer o upload do programa para o painel ePaper usando o método à esquerda. Depois disso, você pode fazer o upload via wifi. Além disso, certifique-se de que sua configuração YAML inclua seções `ota` e `api` devidamente configuradas com chaves de criptografia válidas para que este método funcione.
+Esta é a maneira mais simples, mas com a premissa de que, ao instalar o programa pela primeira vez, você deve primeiro fazer o upload do programa para o painel ePaper usando o método à esquerda. Depois disso, você pode fazer o upload via Wi-Fi. Além disso, certifique-se de que sua configuração YAML inclua seções `ota` e `api` devidamente configuradas com chaves de criptografia válidas para que este método funcione.
 :::
 
 Dessa forma, você não precisa conectar o painel ePaper a nada, apenas certifique-se de que ele esteja online.
@@ -319,7 +330,7 @@ Clique na opção e então o firmware será instalado automaticamente no painel 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
-Espere um momento e você verá o retorno como na imagem a seguir. Se falhar, pode ser devido a um sinal fraco. Por favor, aproxime o dispositivo do seu roteador. [Encontrou um problema? Clique aqui.](#Q4)
+Aguarde um momento e você verá o retorno como na imagem a seguir. Se falhar, pode ser devido a um sinal fraco. Por favor, aproxime o dispositivo do seu roteador. [Encontrou um problema? Clique aqui.](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/37.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -340,7 +351,7 @@ Este exemplo de código YAML configura a interface SPI e o reTerminal E Series e
 Você pode usar este exemplo copiando o código abaixo e colando-o após a linha de código `captive_portal` no seu arquivo Yaml.
 
 <Tabs>
-<TabItem value="For E1001" label="Para E1001" default>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 spi:
@@ -374,7 +385,7 @@ Quando você vir o retorno como na imagem a seguir, isso significa que o código
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/38.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="For E1002" label="Para E1002">
+<TabItem value="For E1002" label="For E1002">
 
 ```yaml
 
@@ -416,11 +427,11 @@ Quando você vir o retorno como na imagem a seguir, isso significa que o código
 </TabItem>
 </Tabs>
 
-Devido a limitações de espaço, não vamos detalhar muito os métodos de desenho e os princípios de outros padrões; se necessário, recomenda-se ao leitor consultar [ESPHome nesta parte dos exemplos detalhados](https://esphome.io/components/display/).
+Devido a limitações de espaço, não vamos nos aprofundar muito nos métodos de desenho e princípios de outros padrões; se necessário, recomenda-se ao leitor consultar [esta parte de exemplos detalhados no ESPHome](https://esphome.io/components/display/).
 
 ### Obtendo valores do Home Assistant para exibição
 
-Para exibir dados meteorológicos no seu dispositivo reTerminal E Series ePaper Display, você precisará acessar dados de temperatura, condições climáticas e velocidade do vento a partir do Home Assistant. A integração Open-Meteo fornece dados meteorológicos confiáveis que podem ser acessados por meio das Developer Tools.
+Para exibir dados meteorológicos no seu dispositivo reTerminal E Series ePaper Display, você precisará acessar dados de temperatura, condições climáticas e velocidade do vento a partir do Home Assistant. A integração Open-Meteo fornece dados meteorológicos confiáveis que podem ser acessados por meio das Ferramentas de Desenvolvedor.
 
 #### Instalando a integração Open-Meteo
 
@@ -432,29 +443,29 @@ Passo 3. Pesquise por "Open-Meteo" e selecione-o na lista.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_weather.png" style={{width:800, height:'auto'}}/></div>
 
-Etapa 4. Siga o assistente de configuração para definir sua localização e unidades preferidas.
+Passo 4. Siga o assistente de configuração para definir sua localização e unidades preferidas.
 
-Etapa 5. Depois de instalada, a integração Open-Meteo criará várias entidades relacionadas ao clima na sua instância do Home Assistant.
+Passo 5. Depois de instalada, a integração Open-Meteo criará várias entidades relacionadas ao clima na sua instância do Home Assistant.
 
-#### Acessando dados de clima em Ferramentas de Desenvolvedor
+#### Acessando dados meteorológicos em Developer Tools
 
-Após instalar a integração Open-Meteo, você pode acessar os dados de clima por meio de Ferramentas de Desenvolvedor:
+Após instalar a integração Open-Meteo, você pode acessar os dados meteorológicos por meio de Developer Tools:
 
-Etapa 1. No painel do Home Assistant, navegue até **Developer Tools** → **States**.
+Passo 1. No painel do Home Assistant, navegue até **Developer Tools** → **States**.
 
-Etapa 2. Na caixa de filtro, digite `weather` para encontrar a entidade principal de clima.
+Passo 2. Na caixa de filtro, digite `weather` para encontrar a entidade principal de clima.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/39.png" style={{width:1000, height:'auto'}}/></div>
 
-Etapa 3. Clique na entidade para ver todos os atributos disponíveis. Os principais atributos de clima incluem:
+Passo 3. Clique na entidade para ver todos os atributos disponíveis. Os principais atributos de clima incluem:
 
 - `temperature`: Temperatura atual (nas unidades configuradas)
 - `wind_bearing`: Direção do vento
 - `wind_speed`: Velocidade do vento
 
-#### Usando dados de clima no ESPHome
+#### Usando dados meteorológicos no ESPHome
 
-Para usar esses dados de clima na sua configuração ESPHome para o reTerminal E Series, você precisará configurar uma conexão de API do Home Assistant no seu arquivo YAML do ESPHome:
+Para usar esses dados meteorológicos na sua configuração ESPHome para o reTerminal E Series, você precisará configurar uma conexão de API do Home Assistant no seu arquivo YAML do ESPHome:
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -606,21 +617,21 @@ display:
 </TabItem>
 </Tabs>
 
-Depois de compilar o código acima e enviá-lo para o seu dispositivo, você poderá ver primeiro **NaN** exibido na tela, por favor, não se preocupe, isso é normal. Isso ocorre porque o dispositivo ainda não foi adicionado ao ambiente do Home Assistant, então o reTerminal ainda não conseguiu obter os dados do Home Assistant. Só precisamos seguir as etapas abaixo para adicionar o dispositivo.
+Depois de compilar o código acima e enviá-lo para o seu dispositivo, você poderá ver primeiro **NaN** exibido na tela, por favor, não se preocupe, isso é normal. Isso ocorre porque o dispositivo ainda não foi adicionado ao ambiente do Home Assistant, então o reTerminal ainda não conseguiu obter os dados do Home Assistant. Só precisamos seguir os passos abaixo para adicionar o dispositivo.
 
-#### Adicionando o display ePaper reTerminal E Series ao Home Assistant
+#### Adicionando o reTerminal E Series ePaper Display ao Home Assistant
 
-Etapa 1. Após gravar o firmware no dispositivo, volte ao Home Assistant e navegue até **Settings → Devices & Services**.
+Passo 1. Após gravar o firmware no dispositivo, volte ao Home Assistant e navegue até **Settings → Devices & Services**.
 
-Etapa 3. O Home Assistant deve detectar automaticamente o dispositivo reTerminal E Series ePaper Display via mDNS. Se ele aparecer na seção de dispositivos descobertos, clique em Configure para adicioná-lo.
+Passo 3. O Home Assistant deve detectar automaticamente seu dispositivo reTerminal E Series ePaper Display via mDNS. Se ele aparecer na seção de dispositivos descobertos, clique em Configure para adicioná-lo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
-Etapa 4. Se o dispositivo não for detectado automaticamente, clique em Add Integration e procure por "ESPHome".
+Passo 4. Se o dispositivo não for detectado automaticamente, clique em Add Integration e pesquise por "ESPHome".
 
-Etapa 5. Insira o endereço IP do seu dispositivo reTerminal E Series ePaper Display e a chave de criptografia da API, se você tiver definido uma.
+Passo 5. Insira o endereço IP do seu dispositivo reTerminal E Series ePaper Display e a chave de criptografia da API, se você tiver definido uma.
 
-Etapa 6. Depois de conectado, o seu reTerminal E Series ePaper Display aparecerá como um dispositivo no Home Assistant com todos os seus sensores e componentes disponíveis.
+Passo 6. Depois de conectado, seu reTerminal E Series ePaper Display aparecerá como um dispositivo no Home Assistant com todos os seus sensores e componentes disponíveis.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -632,23 +643,23 @@ Aqui está o conteúdo aprimorado da Demo 3 com formatação melhorada, posicion
 
 ### Desenhando fontes TrueType
 
-Este exemplo demonstra como exibir ícones personalizados no seu reTerminal E Series ePaper Display usando fontes TrueType. Os Material Design Icons fornecem uma ampla variedade de símbolos escaláveis perfeitos para displays de papel eletrônico.
+Este exemplo demonstra como exibir ícones personalizados no seu reTerminal E Series ePaper Display usando fontes TrueType. Os Material Design Icons fornecem uma ampla variedade de símbolos escaláveis, perfeitos para displays de papel eletrônico.
 
 #### Instalando as ferramentas necessárias
 
-Etapa 1. Primeiro, precisamos instalar o add-on Studio Code Server para gerenciar arquivos. Navegue até a loja de Add-ons do Home Assistant, procure por **Studio Code Server** e clique nele.
+Passo 1. Primeiro, precisamos instalar o add-on Studio Code Server para gerenciar arquivos. Navegue até a loja de Add-ons do Home Assistant, pesquise por **Studio Code Server** e clique nele.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:1000, height:'auto'}}/></div>
 
-Etapa 2. Clique em **INSTALL** e aguarde a conclusão da instalação. Depois de instalado, clique em **START** para iniciar o editor.
+Passo 2. Clique em **INSTALL** e aguarde a conclusão da instalação. Depois de instalado, clique em **START** para iniciar o editor.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/18.png" style={{width:800, height:'auto'}}/></div>
 
 #### Configurando fontes de ícones
 
-Etapa 3. Crie uma nova pasta chamada **fonts** no diretório de configuração do ESPHome. Essa pasta armazenará os arquivos de fonte TrueType necessários para exibir ícones.
+Passo 3. Crie uma nova pasta chamada **fonts** no diretório de configuração do ESPHome. Essa pasta armazenará os arquivos de fonte TrueType necessários para exibir ícones.
 
-Etapa 4. Baixe o arquivo de fonte Material Design Icons clicando no botão abaixo e extraia o conteúdo.
+Passo 4. Baixe o arquivo de fonte Material Design Icons clicando no botão abaixo e extraia o conteúdo.
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/font_ttf.zip" target="_blank">
@@ -656,13 +667,13 @@ Etapa 4. Baixe o arquivo de fonte Material Design Icons clicando no botão abaix
 </a>
 </div>
 
-Etapa 5. Envie o arquivo de fonte baixado (`materialdesignicons-webfont.ttf`) para a pasta fonts que você criou anteriormente.
+Passo 5. Envie o arquivo de fonte baixado (`materialdesignicons-webfont.ttf`) para a pasta fonts que você criou anteriormente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/19.png" style={{width:800, height:'auto'}}/></div>
 
 #### Configurando o ESPHome para ícones
 
-Etapa 6. Adicione o seguinte código ao seu arquivo de configuração ESPHome após a seção `captive_portal`. Esse código define dois tamanhos de fonte para ícones e configura o display para mostrar ícones de clima.
+Passo 6. Adicione o seguinte código ao seu arquivo de configuração do ESPHome após a seção `captive_portal`. Esse código define dois tamanhos de fonte para ícones e configura o display para mostrar ícones de clima.
 
 <Tabs>
 <TabItem value="For E1001" label="Para E1001" default>
@@ -757,7 +768,7 @@ Passo 7. Salve sua configuração e envie-a para o seu reTerminal E Series. Quan
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/42.jpg" style={{width:600, height:'auto'}}/></div>
 
-#### Personalizando com Ícones Diferentes
+#### Personalizando com ícones diferentes
 
 A biblioteca Material Design Icons contém milhares de ícones que você pode usar em seus projetos. Veja como encontrar e usar ícones diferentes:
 
@@ -778,7 +789,7 @@ Passo 3. Quando encontrar um ícone de que você goste, clique nele para ver os 
 Passo 4. Adicione o valor Unicode à sua configuração ESPHome:
 
 - Adicionando-o à lista `glyphs` na sua configuração de fonte
-- Atualizando o código de display para usar o novo ícone
+- Atualizando o código de exibição para usar o novo ícone
 
 Por exemplo, para usar um novo ícone com Unicode `F0123`:
 
@@ -789,7 +800,7 @@ glyphs:
   - "\U000F0123" # your new icon
 ```
 
-E no lambda de display:
+E no lambda de exibição:
 
 ```yaml
 lambda: |-
@@ -799,14 +810,14 @@ lambda: |-
 Passo 5. Salve sua configuração atualizada e envie-a para o seu dispositivo para ver o novo ícone.
 
 :::tip
-Para dashboards de clima, considere usar ícones como `F0590` (ensolarado), `F0591` (parcialmente nublado), `F0593` (chuvoso) e `F059E` (ventoso).
+Para painéis de clima, considere usar ícones como `F0590` (ensolarado), `F0591` (parcialmente nublado), `F0593` (chuvoso) e `F059E` (ventoso).
 :::
 
-Combinando esses ícones com os dados de clima do Home Assistant que configuramos anteriormente, você pode criar um display de clima dinâmico que mostra as condições atuais usando ícones apropriados.
+Combinando esses ícones com os dados de clima do Home Assistant que configuramos anteriormente, você pode criar uma tela de clima dinâmica que mostra as condições atuais usando ícones apropriados.
 
-### Exibindo Imagens Personalizadas
+### Exibindo imagens personalizadas
 
-Este exemplo demonstra como exibir imagens personalizadas na tela ePaper do seu reTerminal E Series. Você pode usar esse recurso para mostrar logotipos, ícones ou quaisquer gráficos que melhorem a experiência do seu dashboard.
+Este exemplo demonstra como exibir imagens personalizadas na tela ePaper do seu reTerminal E Series. Você pode usar esse recurso para mostrar logotipos, ícones ou quaisquer gráficos que melhorem a experiência do seu painel.
 
 #### Preparação
 
@@ -821,13 +832,13 @@ config/
     └── image/         <- Create this folder
 ```
 
-#### Adicionando Imagens
+#### Adicionando imagens
 
 Passo 3. Baixe uma imagem de exemplo para testar a funcionalidade. Você pode usar o ícone de WiFi fornecido abaixo ou usar sua própria imagem.
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Baixar Imagem de WiFi de Exemplo</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Baixar imagem de exemplo de WiFi</button></p>
 </a>
 </div>
 
@@ -836,12 +847,12 @@ Passo 4. Envie a imagem baixada para a pasta **image** que você criou anteriorm
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Se você quiser exibir imagens de paisagem complexas e bonitas, é melhor realizar a ditherização da imagem com antecedência [em nosso site](https://sensecraft.seeed.cc/hmi/tools/dither) para obter um efeito melhor. Os formatos JPG e PNG são ambos suportados.
+Se você quiser exibir imagens de paisagem complexas e bonitas, é melhor realizar a ditherização da imagem com antecedência [em nosso site](https://sensecraft.seeed.cc/hmi/tools/dither) para obter um efeito melhor. Os formatos JPG e PNG são suportados.
 :::
 
-#### Configurando o ESPHome para Exibição de Imagens
+#### Configurando o ESPHome para exibição de imagens
 
-Passo 5. Adicione o seguinte código ao seu arquivo de configuração ESPHome após a seção `captive_portal`. Esse código define o recurso de imagem e configura o display para exibi-la.
+Passo 5. Adicione o seguinte código ao seu arquivo de configuração ESPHome após a seção `captive_portal`. Esse código define o recurso de imagem e configura a tela para exibi-la.
 
 <Tabs>
 <TabItem value="For E1001" label="Para E1001" default>
@@ -911,11 +922,11 @@ Passo 6. Salve sua configuração e envie-a para o seu reTerminal E Series. Quan
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/43.jpg" style={{width:600, height:'auto'}}/></div>
 
-#### Técnicas Avançadas de Imagem
+#### Técnicas avançadas de imagem
 
 Você pode aprimorar a exibição de imagens com estas técnicas adicionais:
 
-**Posicionando Imagens**
+**Posicionando imagens**
 
 Para posicionar sua imagem em coordenadas específicas na tela:
 
@@ -925,7 +936,7 @@ lambda: |-
   it.image(100, 50, id(myImage));
 ```
 
-**Combinando Imagens com Texto**
+**Combinando imagens com texto**
 
 Você pode exibir imagens e texto na mesma tela:
 
@@ -938,9 +949,9 @@ lambda: |-
   it.printf(400, 400, id(myFont), TextAlign::CENTER, "WiFi Connected");
 ```
 
-**Usando Múltiplas Imagens**
+**Usando múltiplas imagens**
 
-Para exibir várias imagens na mesma tela, defina cada imagem na sua configuração:
+Para exibir múltiplas imagens na mesma tela, defina cada imagem na sua configuração:
 
 ```yaml
 image:
@@ -964,11 +975,14 @@ lambda: |-
 Lembre-se de que telas e-paper têm taxas de atualização limitadas. A configuração `update_interval: 300s` significa que sua tela será atualizada apenas a cada 5 minutos. Ajuste esse valor de acordo com suas necessidades, mas esteja ciente de que atualizações frequentes podem reduzir a vida útil das telas e-paper.
 :::
 
-Combinando imagens com texto e outros elementos de display abordados em exemplos anteriores, você pode criar dashboards ricos e informativos no seu reTerminal E Series.
+Combinando imagens com texto e outros elementos de exibição abordados em exemplos anteriores, você pode criar painéis ricos e informativos no seu reTerminal E Series.
 
-## Continue Lendo
+## Continue lendo
 
-Devido a limitações de espaço, este artigo aborda apenas alguns casos de uso básicos e exemplos de desenho do dispositivo. Trataremos o uso do hardware do reTerminal no ESPHome com mais detalhes no Wiki [Advanced ESPHome Usage of reTerminal E Series ePaper Display in Home Assistant](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome_advanced), que você pode continuar lendo.
+Este artigo se concentra em conectar o display e desenhar conteúdo na tela ePaper. Continue com estes cookbooks do ESPHome quando quiser usar o restante do hardware onboard:
+
+- **[ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power](/pt-br/reterminal_e10xx_with_esphome_advanced)** - botões de usuário, retorno sonoro com buzzer, LED onboard, monitoramento de bateria, sensor SHT4x, deep sleep e painéis com múltiplas páginas.
+- **[ESPHome Cookbook: RTC, SD Card & Microphone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone)** - sincronização de hora com PCF8563 RTC, pinos de alimentação/detecção do cartão microSD e inicialização do microfone PDM onboard.
 
 ## FAQ
 
@@ -978,21 +992,30 @@ Nesse caso, você deve ir em Settings -> Devices & Services -> Integrations para
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-### Q2: Por que não consigo obter esses dados no Home Assistant? {#port}
+### P2: Por que não consigo obter esses dados no Home Assistant? {#port}
 
 Nesse caso, você deve ir em Settings -> Devices & Services -> Integrations para **ADICIONAR** seu dispositivo ao HA.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
-### Q3: O display ePaper da reTerminal E Series não consegue se conectar ao seu computador?
+### P3: O display ePaper da reTerminal E Série não consegue se conectar ao seu computador?
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 
 Tente desconectar e reconectar várias vezes ou simplesmente instalar o driver de acordo com as instruções.
 
-## Suporte Técnico & Discussão de Produtos
+### P4: Por que não há log serial via USB?
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+A reTerminal E Série usa uma ponte USB-para-UART CH340K na UART0. Mantenha esta configuração de logger no seu YAML:
+
+```yaml
+logger:
+  hardware_uart: UART0
+```
+
+## Suporte Técnico e Discussão de Produto
+
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
