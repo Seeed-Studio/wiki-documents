@@ -293,6 +293,10 @@ static void test_trigger_mode(const struct device *dev)
 		LOG_ERR("Could not set sensor type and channel");
 		return;
 	}
+
+	while (1) {
+		k_sleep(K_MSEC(1000));
+	}
 }
 
 #else
@@ -806,7 +810,7 @@ dmic_dev: &pdm20 {
 };
 ```
 
-2. Modify the prj.conf file to enable configurations for Bluetooth and microphone, and set the Bluetooth device name to **XIAO MIC**.
+2. Modify the `prj.conf` file to enable configurations for Bluetooth and microphone, and set the Bluetooth device name to **XIAO MIC**.
 
 ```prj
 # Audio / DMIC
@@ -885,6 +889,8 @@ CONFIG_FLASH_PAGE_LAYOUT=y
 
 # Assert level
 CONFIG_ASSERT=y
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+
 ```
 
 ### Result

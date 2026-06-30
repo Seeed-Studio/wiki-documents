@@ -452,7 +452,6 @@ mkdir -p /opt/nordic/ncs/downloads
 aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   -d /opt/nordic/ncs/downloads \
   -o ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz \
-  
   "https://files.nordicsemi.cn/artifactory/NCS/external/bundles/v3/ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz"
 ```
 
@@ -462,14 +461,14 @@ aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   -d /opt/nordic/ncs/downloads \
   -o sdk-nrf-bundle-v3.3.0.tar.gz \
   "https://files.nordicsemi.cn/artifactory/ncs-src-mirror/external/sdk-nrf/v3.3.0/src.tar.gz"
-  ```
+```
 
 - Step 5: Install nRF Connect SDK v3.3.0
 ```
 nrfutil sdk-manager install v3.3.0 \
   --sdk-path /opt/nordic/ncs/v3.3.0 \
   --type nrf
-  ```
+```
 
 ## Tech Support & Product Discussion
 
