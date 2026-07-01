@@ -3996,6 +3996,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8822CE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8852BE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RM520N_Module_for_Jetson',
+                'Edge/NVIDIA_Jetson/Other_Devices/cn_EM12-G_GNSS_Module_for_reComputer_Robotics_J3011',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_Jetson_Xavier_AGX_H01_Driver_Installation',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_Jetson-Mate',
