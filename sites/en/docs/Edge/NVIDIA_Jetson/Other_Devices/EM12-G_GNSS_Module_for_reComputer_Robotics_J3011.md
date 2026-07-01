@@ -7,8 +7,9 @@ keywords:
   - J3011
   - GNSS
   - EM12-G
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/GNSS_for_jetson/2.png
 slug: /em12_g_gnss_module_for_recomputer_robotics_j3011
+sku: 100001302
 last_update:
   date: 07/01/2026
   author: Dongxu Jin
@@ -29,13 +30,13 @@ This guide uses the J401 carrier board on reComputer Robotics J3011 as an exampl
 - **Serial device names may change**: This wiki uses `/dev/ttyUSB1` as the default NMEA data port and `/dev/ttyUSB2` as the default AT command port. The actual USB serial nodes depend on the kernel enumeration order, so the ports may also appear as `ttyUSB0`, `ttyUSB3`, or other nodes. If a command reports that the file does not exist, run `ls /dev/ttyUSB* /dev/ttyACM*` first, confirm the actual device node, and replace the port name in the commands below.
 - **Outdoor positioning is required**: A GNSS first fix is very unlikely to succeed indoors. Perform the full test in an open outdoor area.
 
-<div align="center"><img width="800" src="https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2Y5ZmVjY2Y5YWVhMjdhZTg0OTkwNmI5MzBjZDFlMWJfN2Y5NTVjNTVjNmE3Y2QzMmJmNGM3MjM5YmNlNTY2ODNfSUQ6NzY1NzA5NTg3NDM1NTk0MDU4M18xNzgyODcxMTY1OjE3ODI5NTc1NjVfVjM"/></div>
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/GNSS_for_jetson/1.png"/></div>
 
-<div align="center"><img width="800" src="https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTE4ZDkzZDU5MmZlYmUxMWNlNDY3MmZlM2U3ODI2YjNfZGE4YTU1ZDU4NWVkNGI5ZDIxNzE2YTExMDllMTEyM2NfSUQ6NzY1NzA5NzgyMDkwMjY1NzI1NV8xNzgyODcxMTY1OjE3ODI5NTc1NjVfVjM"/></div>
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/GNSS_for_jetson/2.png"/></div>
 
 ## Hardware Installation
 
-<div align="center"><img width="800" src="https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzA2OTdmNDBlNGVmM2FkZDBlNGU1NGQ5NmMyYzBmODdfYTgzNWYzODMzYWRlOGIyZDgyNDRkYTFmZDBlMmVjMDlfSUQ6NzY1NzEwMTUwMTMyODA4NDE1M18xNzgyODcxMTY1OjE3ODI5NTc1NjVfVjM"/></div>
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/GNSS_for_jetson/3.jpg"/></div>
 
 After installing the module on the device, connect a **passive antenna** to the contact marked `G` on the module. Place the device in an open outdoor area. The first satellite search may take about 3 to 5 minutes.
 
@@ -93,7 +94,7 @@ After confirming that the device node exists, run the following command. The GNS
 sudo stdbuf -oL cat /dev/ttyUSB1
 ```
 
-<div align="center"><img width="800" src="https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTFiNTVhMDc4YTAxMzFiZTRjZWNlZjY1YjY4NzRlYjVfNGYxODAxYzQxNDk3MzIzYWQ0MGY0YTQwNDM0NDNkOWRfSUQ6NzY1NzEyMzY3NDM1NzA5MTI4Ml8xNzgyODcxMTY1OjE3ODI5NTc1NjVfVjM"/></div>
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/GNSS_for_jetson/4.png"/></div>
 
 ## Configure AT Commands
 
@@ -103,7 +104,7 @@ Open another terminal window and connect to the AT command port. The default por
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-<div align="center"><img width="800" src="https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjU5Njg1YWE4MGY5NmM2ZjJmYmIxMDNmNTRhOGM4Y2JfNTlkMWQ2MDVkNmM0YmRiNzI5OTNiZTM4MDI0MDc4ZWNfSUQ6NzY1NzEyMjk2Mjk1MzYyMDcxNV8xNzgyODcxMTY1OjE3ODI5NTc1NjVfVjM"/></div>
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/GNSS_for_jetson/5.png"/></div>
 
 After entering `minicom`, configure the NMEA output and enable GNSS:
 
@@ -124,7 +125,7 @@ After GNSS is enabled, `OK` should be returned in the AT command terminal, and t
 
 The following example shows positioning information that contains valid latitude and longitude data:
 
-<div align="center"><img width="800" src="https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTRhYTNhNTIyYjFkZGJlMjRkMDJhNjJmNTlmY2M2OWVfODk5YThlYWQ3ZjVjZjk2NTQwNTFhMDI2MDYyZTVjNWRfSUQ6NzY1NzEyNDM0Nzg5NTA1NzYxN18xNzgyODcxMTY1OjE3ODI5NTc1NjVfVjM"/></div>
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/GNSS_for_jetson/6.png"/></div>
 
 ## Tech Support & Product Discussion
 
