@@ -1,5 +1,5 @@
 ---
-description: Una visión completa de la matriz de productos de pantallas de papel electrónico de Seeed Studio, desde terminales integrados reTerminal E Serie hasta placas controladoras, kits DIY y los frameworks de aplicación que las impulsan.
+description: Una visión general completa de la matriz de productos de pantallas de papel electrónico de Seeed Studio, desde terminales integrados reTerminal E Serie hasta placas controladoras, kits DIY y los frameworks de aplicación que las impulsan.
 title: Pantallas ePaper de Seeed
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png
 slug: /seeed_epaper_displays
@@ -8,23 +8,23 @@ last_update:
   date: 05/18/2026
   author: dimo
 createdAt: '2026-04-28'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/es/seeed_epaper_displays/
 ---
 
-# Pantallas ePaper de Seeed — Descripción general de la matriz de productos
+# Pantallas ePaper de Seeed — Visión general de la matriz de productos
 
 ## Introducción
 
-ePaper (papel electrónico) solo consume energía cuando su contenido cambia, lo que la convierte en la tecnología de visualización ideal para **paneles de información siempre encendidos**: señalización digital, paneles de control para el hogar inteligente, etiquetas electrónicas de estantería, pizarras de salas de reuniones, marcos de fotos y más.
+ePaper (papel electrónico) solo consume energía cuando su contenido cambia, lo que la convierte en la tecnología de visualización ideal para **paneles de información siempre encendidos**: señalización digital, paneles de control para el hogar inteligente, etiquetas electrónicas de estantería, paneles para salas de reuniones, marcos de fotos y más.
 
-Seeed Studio ofrece un portafolio de ePaper de extremo a extremo organizado en torno a tres líneas de productos:
+Seeed Studio ofrece un portafolio de ePaper de extremo a extremo organizado en torno a tres líneas de producto:
 
 1. **reTerminal E Serie** — terminales ePaper totalmente integrados y listos para usar (solo hay que encenderlos).
 2. **Placas controladoras / de expansión** — combina un MCU con pantallas ePaper universales o de gran formato para construir tu propio producto.
 3. **Kits DIY y paneles desnudos** — diseñados para la comunidad maker, optimizados para plataformas específicas como TRMNL o XIAO.
 
-Las tres líneas comparten el **mismo ecosistema de software**: SenseCraft HMI (sin código), Home Assistant / ESPHome, TRMNL, Arduino / ESP-IDF / PlatformIO, además de herramientas visuales de UI como SquareLine Vision, EEZ Studio y Lopaka. Elige una familia de hardware y el resto de la cadena de herramientas se mantiene igual.
+Las tres líneas comparten el **mismo ecosistema de software**: SenseCraft HMI (sin código), Home Assistant / ESPHome, TRMNL, Arduino / ESP-IDF / PlatformIO, Zephyr, además de herramientas visuales de UI como SquareLine Vision, EEZ Studio y Lopaka. Elige una familia de hardware y el resto de la cadena de herramientas permanece igual.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -57,7 +57,7 @@ Si no estás seguro de por dónde empezar, utiliza esta matriz de decisión:
     <tr>
       <td>Conectar directamente un panel ePaper de 7.5" a un módulo Seeed Studio XIAO</td>
       <td><a href="https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel" target="_blank" rel="noopener noreferrer"><strong>Panel ePaper XIAO 7.5" →</strong></a></td>
-      <td>Panel desnudo + placa de conexión que se acopla a cualquier placa XIAO; huella mínima.</td>
+      <td>Panel desnudo + placa adaptadora que se acopla a cualquier placa XIAO; huella mínima.</td>
     </tr>
   </table>
 </div>
@@ -87,21 +87,21 @@ Cuatro terminales impulsados por ESP32-S3, que comparten la misma familia de car
       <td align="center"><strong>13.3" a todo color</strong><br/>E Ink Spectra 6<br/>~6 meses de batería</td>
     </tr>
     <tr>
-      <td align="center"><a href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer"><strong>Wiki E1001 →</strong></a></td>
-      <td align="center"><a href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer"><strong>Wiki E1002 →</strong></a></td>
-      <td align="center"><a href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer"><strong>Wiki E1003 →</strong></a></td>
-      <td align="center"><a href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1004" target="_blank" rel="noopener noreferrer"><strong>Wiki E1004 →</strong></a></td>
+      <td align="center"><a href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer"><strong>E1001 Wiki →</strong></a></td>
+      <td align="center"><a href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer"><strong>E1002 Wiki →</strong></a></td>
+      <td align="center"><a href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer"><strong>E1003 Wiki →</strong></a></td>
+      <td align="center"><a href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1004" target="_blank" rel="noopener noreferrer"><strong>E1004 Wiki →</strong></a></td>
     </tr>
   </table>
 </div>
 
 :::tip
-Para una comparación de especificaciones lado a lado (resolución, tiempo de refresco, compatibilidad con refresco parcial, certificaciones, MSRP, etc.) y una matriz detallada de compatibilidad de software, dirígete a la **[Descripción general de reTerminal E Serie](https://wiki.seeedstudio.com/es/reterminal_e10xx_main_page)** dedicada.
+Para una comparación de especificaciones lado a lado (resolución, tiempo de refresco, compatibilidad con refresco parcial, certificaciones, MSRP, etc.) y una matriz detallada de compatibilidad de software, dirígete a la página dedicada **[Visión general de reTerminal E Serie](https://wiki.seeedstudio.com/es/reterminal_e10xx_main_page)**.
 :::
 
 ## Serie de placas controladoras / de expansión — BYO Screen
 
-Si ya tienes (o quieres adquirir por separado) un panel ePaper de 24 pines, 50 pines, 10.3" o 13.3", la familia de placas controladoras te ofrece la electrónica portadora: gestión de batería, botones, CI de carga y el MCU.
+Si ya tienes (o quieres adquirir por separado) un panel ePaper de 24 pines, 50 pines, 10.3" o 13.3", la familia de placas controladoras te proporciona la electrónica portadora: gestión de batería, botones, CI de carga y el MCU.
 
 ### Placas controladoras ESP32-S3 (Wi-Fi / BLE, SenseCraft HMI)
 
@@ -133,7 +133,7 @@ Si ya tienes (o quieres adquirir por separado) un panel ePaper de 24 pines, 50 p
     </tr>
     <tr>
       <td align="center"><strong>EE05</strong></td>
-      <td align="center">24 pines universal (más reciente)</td>
+      <td align="center">24 pines universal (última)</td>
       <td>Distribución renovada de EE04; misma base XIAO ESP32-S3, compatibilidad con el firmware más reciente.</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/es/epaper_ee05" target="_blank" rel="noopener noreferrer">EE05 →</a></td>
     </tr>
@@ -158,7 +158,7 @@ Si ya tienes (o quieres adquirir por separado) un panel ePaper de 24 pines, 50 p
     </tr>
     <tr>
       <td align="center"><strong>EN05</strong></td>
-      <td align="center">24 pines universal (más reciente)</td>
+      <td align="center">24 pines universal (última)</td>
       <td>Distribución renovada de EN04; misma base nRF52840 con compatibilidad con el firmware más reciente.</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/es/epaper_en05" target="_blank" rel="noopener noreferrer">EN05 →</a></td>
     </tr>
@@ -176,24 +176,24 @@ Si ya tienes (o quieres adquirir por separado) un panel ePaper de 24 pines, 50 p
     </tr>
     <tr>
       <td align="center"><strong>XIAO eInk Expansion Board v2</strong></td>
-      <td>Placa de expansión plug-and-play para cualquier módulo XIAO; es compatible con pantallas ePaper pequeñas populares.</td>
+      <td>Placa de expansión plug-and-play para cualquier módulo XIAO; admite pantallas ePaper pequeñas populares.</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/es/xiao_eink_expansion_board_v2" target="_blank" rel="noopener noreferrer">v2 →</a></td>
     </tr>
     <tr>
       <td align="center"><strong>XIAO ePaper Breakout Board</strong></td>
-      <td>La placa de conexión original para XIAO + ePaper; bien documentada con compatibilidad con OpenEpaperLink (OEPL).</td>
+      <td>La placa adaptadora original para XIAO + ePaper; bien documentada con compatibilidad con OpenEpaperLink (OEPL).</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/es/XIAO-eInk-Expansion-Board" target="_blank" rel="noopener noreferrer">Breakout →</a></td>
     </tr>
   </table>
 </div>
 
 :::tip
-También está disponible una **[Descripción general de placas controladoras ePaper](https://wiki.seeedstudio.com/es/xiao_epaper_display_board_overview)** consolidada, con listas de características de cada placa lado a lado.
+También está disponible una **[visión general de placas controladoras ePaper](https://wiki.seeedstudio.com/es/xiao_epaper_display_board_overview)** consolidada, con listas de características de cada placa lado a lado.
 :::
 
 ## Kits DIY y paneles desnudos
 
-Para makers que prefieren ensamblar todo por sí mismos, dos opciones flexibles:
+Para makers que prefieren ensamblarlo todo por sí mismos, dos opciones flexibles:
 
 <div class="table-center">
   <table align="center">
@@ -205,22 +205,22 @@ Para makers que prefieren ensamblar todo por sí mismos, dos opciones flexibles:
     </tr>
     <tr>
       <td><strong>TRMNL 7.5" (OG) DIY Kit</strong><br/><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/head.webp" style={{width:200, height:'auto'}}/></div></td>
-      <td>ePaper monocromático de 7,5" + placa controladora ESP32 + soporte acrílico. Preajustado para la plataforma en la nube TRMNL; también ejecuta ESPHome y Arduino.</td>
+      <td>ePaper monocromática de 7,5" + placa controladora ESP32 + soporte acrílico. Preajustada para la plataforma en la nube TRMNL; también ejecuta ESPHome y Arduino.</td>
       <td>El camino más rápido hacia un panel de control estilo TRMNL con el menor coste de BOM.</td>
-      <td align="center"><a href="https://wiki.seeedstudio.com/es/trmnl_7inch5_diy_kit_main_page" target="_blank" rel="noopener noreferrer">Kit TRMNL →</a></td>
+      <td align="center"><a href="https://wiki.seeedstudio.com/es/trmnl_7inch5_diy_kit_main_page" target="_blank" rel="noopener noreferrer">TRMNL Kit →</a></td>
     </tr>
     <tr>
       <td><strong>XIAO 7.5" ePaper Panel</strong><br/><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/100.webp" style={{width:200, height:'auto'}}/></div></td>
       <td>Panel ePaper desnudo de 7,5" con un conector FPC que se acopla directamente a la huella de un módulo XIAO.</td>
       <td>Proyectos compactos y de bajo coste donde ya tienes un XIAO y quieres añadir una pantalla.</td>
-      <td align="center"><a href="https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel" target="_blank" rel="noopener noreferrer">Panel XIAO →</a></td>
+      <td align="center"><a href="https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel" target="_blank" rel="noopener noreferrer">XIAO Panel →</a></td>
     </tr>
   </table>
 </div>
 
 ## Ecosistema de software de un vistazo
 
-Cada producto ePaper de Seeed converge en el mismo ecosistema de software. Elige el flujo de trabajo que coincida con tu nivel de habilidad — puedes combinarlos y mezclarlos:
+Cada producto ePaper de Seeed converge en el mismo ecosistema de software. Elige el flujo de trabajo que coincida con tu nivel de habilidad — puedes combinarlos:
 
 <div class="table-center">
   <table align="center">
@@ -233,7 +233,7 @@ Cada producto ePaper de Seeed converge en el mismo ecosistema de software. Elige
     <tr>
       <td><a href="https://wiki.seeedstudio.com/es/sensecraft_hmi_overview" target="_blank" rel="noopener noreferrer"><strong>SenseCraft HMI</strong></a></td>
       <td align="center">Sin código (nube)</td>
-      <td>Generador de IA, Galería, Lienzo, Contenido RSS / Web, despliegue OTA. El firmware predeterminado en reTerminal E Serie.</td>
+      <td>Generador de IA, Galería, Lienzo, Contenido RSS / Web, implementación OTA. El firmware predeterminado en reTerminal E Serie.</td>
       <td>reTerminal E1001 / E1002 / E1003 / E1004 · EE02 · EE03 · EE04 · EE05</td>
     </tr>
     <tr>
@@ -255,6 +255,12 @@ Cada producto ePaper de Seeed converge en el mismo ecosistema de software. Elige
       <td>Todos los productos ESP32-S3 (E1001–E1004, EE02–EE05, TRMNL Kit, XIAO Panel)</td>
     </tr>
     <tr>
+      <td><a href="https://wiki.seeedstudio.com/es/epaper_work_with_zephyr" target="_blank" rel="noopener noreferrer"><strong>Zephyr RTOS</strong></a></td>
+      <td align="center">RTOS</td>
+      <td>Flujo de trabajo de placa Zephyr upstream con west, device tree, servicios de kernel, controladores, flasheo y depuración.</td>
+      <td>reTerminal E1001 / E1002 / E1003</td>
+    </tr>
+    <tr>
       <td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_squareline_vision" target="_blank" rel="noopener noreferrer"><strong>SquareLine Vision</strong></a></td>
       <td align="center">Diseño visual de UI</td>
       <td>UI LVGL de arrastrar y soltar en el navegador, luego exporta código listo para compilar.</td>
@@ -263,7 +269,7 @@ Cada producto ePaper de Seeed converge en el mismo ecosistema de software. Elige
     <tr>
       <td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_eezstudio" target="_blank" rel="noopener noreferrer"><strong>EEZ Studio</strong></a></td>
       <td align="center">Diseño visual de UI</td>
-      <td>Diseña pantallas HMI de forma visual y despliega a través de Arduino IDE.</td>
+      <td>Diseña pantallas HMI de forma visual e impleméntalas a través de Arduino IDE.</td>
       <td>reTerminal E1001 / E1002 · EE04</td>
     </tr>
     <tr>
@@ -288,7 +294,7 @@ Cada tutorial a continuación recorre una plataforma de principio a fin:
 ### Frameworks de hogar inteligente y paneles de control
 
 - [Trabajar con ESPHome](https://wiki.seeedstudio.com/es/epaper_work_with_esphome) — referencia principal: rutas de flasheo, esqueleto YAML genérico, integración con Home Assistant. Recetarios por producto: [reTerminal E (Básico)](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome), [reTerminal E (Avanzado)](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_advanced), [EE04](https://wiki.seeedstudio.com/es/EE04_with_esphome_advanced), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_esphome), [TRMNL DIY Kit](https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_esphome).
-- [Trabajar con TRMNL](https://wiki.seeedstudio.com/es/reterminal_e10xx_trmnl) — despliega paneles E-Ink a través de la plataforma en la nube TRMNL. Un único artículo ahora cubre reTerminal E1001/E1002, el TRMNL DIY Kit y el XIAO 7.5" ePaper Panel — elige tu hardware en las pestañas.
+- [Trabajar con TRMNL](https://wiki.seeedstudio.com/es/reterminal_e10xx_trmnl) — implementa paneles E-Ink a través de la plataforma en la nube TRMNL. Un único artículo ahora cubre reTerminal E1001/E1002, el TRMNL DIY Kit y el XIAO 7.5" ePaper Panel — elige tu hardware en las pestañas.
 
 ### Herramientas sin código / de diseño visual de UI
 
@@ -299,8 +305,9 @@ Cada tutorial a continuación recorre una plataforma de principio a fin:
 
 ### Desarrollo basado en código
 
-- [Trabajar con Arduino](https://wiki.seeedstudio.com/es/epaper_work_with_arduino) — referencia principal: configuración del IDE, biblioteca `Seeed_GFX`, generación de `driver.h`. Recetarios por producto: reTerminal E Serie — [Pantalla ePaper](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino) y [Periféricos integrados](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals), [TRMNL DIY Kit](https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_arduino).
+- [Trabajar con Arduino](https://wiki.seeedstudio.com/es/epaper_work_with_arduino) — referencia principal: configuración del IDE, biblioteca `Seeed_GFX`, generación de `driver.h`. Recetarios por producto: reTerminal E Serie — [ePaper Display](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino) y [Periféricos integrados](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals), [TRMNL DIY Kit](https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_arduino).
 - [Trabajar con PlatformIO](https://wiki.seeedstudio.com/es/epaper_work_with_platformio) — referencia principal: configuración de VS Code, configuración de `platformio.ini`, configuración de `Seeed_GFX` y selección del entorno PlatformIO por producto. Recetario por producto: [EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/es/ee04_with_platformio).
+- [Trabajar con Zephyr](https://wiki.seeedstudio.com/es/epaper_work_with_zephyr) — página de entrada para el soporte de Zephyr RTOS en reTerminal E1001, E1002 y E1003, con enlaces a la documentación oficial de placas Zephyr y objetivos de placa.
 
 ### ESL / OEPL de código abierto
 
