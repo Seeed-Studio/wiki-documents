@@ -154,6 +154,10 @@ url: https://wiki.seeedstudio.com/robotics_page/
                   <span className="text">Steering Gear Debugging Tool</span>
                   <span className="tag recommended">New</span>
               </a>
+              <a href="/lerobot_double_arm_so_arm_training/" className="content-card">
+                  <span className="text">Complete Guide to Double-Arm SO-ARM Training</span>
+                  <span className="tag recommended">New</span>
+              </a>
           </div>
 
           <h3>🚗 Lekiwi</h3>
