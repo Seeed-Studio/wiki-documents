@@ -99,6 +99,7 @@ Before Assembly:
   2. The video was recorded in early April. Minor updates may exist, but assembly remains the same. Refer to shipped parts as final.
   3. Shipped screws have thread-lock applied. Use proper tools or an electric screwdriver (recommended). Set torque to (3–6 kgf·cm) to avoid stripping. If stripping occurs, stop immediately and replace or realign the screw. Stripped thread-lock screws are difficult to remove and may damage parts.
   4. Ensure safety during assembly. Avoid pinching or injury. Children must be supervised.
+
   :::tip
   Reminder: The D4 * 7 between motor 5 and motor 6 in the assembly video does not need to be installed. It's a mistake in the video. If you bought the DIY version of the reBot Arm B601-DM, the 7 D4 * 7 screws are enough for you to complete the assembly.
   :::

@@ -100,6 +100,10 @@ reBot Arm B601-DM には、さまざまなユーザーのニーズに対応す�
   3. 同梱のネジにはねじロック剤が塗布されています。適切な工具、または電動ドライバー（推奨）を使用してください。トルクは (3–6 kgf·cm) に設定し、なめないようにしてください。もしなめてしまった場合は、直ちに作業を中止し、ネジの交換または位置調整を行ってください。ねじロック剤付きでなめたネジは外しにくく、部品を破損するおそれがあります。
   4. 組み立て作業中は安全に十分注意してください。指を挟むなどのけがに注意し、子どもが作業する場合は必ず保護者が付き添ってください。
 
+  :::tip
+  注意: 組み立て動画でモーター5とモーター6の間にある D4 * 7 は取り付ける必要はありません。これは動画内の誤りです。reBot Arm B601-DM のDIY版を購入された場合、7本の D4 * 7 ネジで組み立てを完了できます。
+  :::
+
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/rfTQoFCfnMc?si=KkEfY0NePxC96Xdu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
