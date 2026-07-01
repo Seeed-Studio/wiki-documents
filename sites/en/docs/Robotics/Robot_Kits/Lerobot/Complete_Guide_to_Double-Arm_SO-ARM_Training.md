@@ -13,6 +13,9 @@ sku: 114993666,114993667
 last_update:
   date: 7/1/2026
   author: ZhuYuan
+translation:
+  skip:
+    - zh-CN
 url: https://wiki.seeedstudio.com/lerobot_double_arm_so_arm_training/
 ---
 # Complete Guide to Double-Arm SO-ARM Training
