@@ -18,6 +18,9 @@ translation:
     - zh-CN
 url: https://wiki.seeedstudio.com/lerobot_double_arm_so_arm_training/
 ---
+
+import Link from '@docusaurus/Link';
+
 # Complete Guide to Double-Arm SO-ARM Training
 
 ## Introduction
@@ -42,7 +45,13 @@ The follower arm type is `so101_follower`, and the leader arm type is `so101_lea
 
 ### 0.1 Install Dependencies
 
-See related links.
+For environment setup, please refer to the SO-ARM tutorial:
+
+<div style={{textAlign: 'center'}}>
+    <Link to="/lerobot_so100m_new/#install-lerobot" style={{display: 'inline-block', width: 'auto', height: '40px', lineHeight: '40px', padding: '0 24px', whiteSpace: 'nowrap', backgroundColor: '#1eff00', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
+        ▶ Jump to Environment Setup
+    </Link>
+</div>
 
 ### 0.2 USB Permissions
 

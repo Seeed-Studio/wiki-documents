@@ -19,6 +19,9 @@ createdAt: '2025-06-05'
 updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/lerobot_so100m_new/
 ---
+
+import Link from '@docusaurus/Link';
+
 # Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot
 
 :::tip
@@ -678,6 +681,14 @@ python -m src.tools.servo_center_test
 ```
 
 After the middle-position calibration, return to the `lerobot-calibrate` steps above and redo the full-arm calibration.
+
+If you encounter the above errors, you can use the Steering Gear Debugging Tool for debugging. It supports Windows, Ubuntu, and Mac.
+
+<div style={{textAlign: 'center'}}>
+    <Link to="/lerobot_steering_gear_debugging_tool" style={{display: 'inline-block', width: 'auto', height: '40px', lineHeight: '40px', padding: '0 24px', whiteSpace: 'nowrap', backgroundColor: '#1eff00', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
+        ▶ Open Steering Gear Debugging Tool Tutorial
+    </Link>
+</div>
 
 ## Teleoperate
 
