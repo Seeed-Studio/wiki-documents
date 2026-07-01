@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-05-19'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_onboard/
 ---
 
@@ -45,7 +45,7 @@ O XIAO nRF54LM20A Sense vem equipado com abundantes sensores integrados para dar
 
 :::tip
 
-- Este artigo é desenvolvido com base no sistema de build PlatformIO e no Zephyr RTOS. Se você não tiver experiência prévia com eles, consulte [Getting Started With SeeedStudio XIAO nRF54LM20A](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_sense_getting_started/)
+- Este artigo foi desenvolvido com base no sistema de build PlatformIO e no Zephyr RTOS. Se você não tiver experiência prévia com eles, consulte [Getting Started With SeeedStudio XIAO nRF54LM20A](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_sense_getting_started/)
 
 :::
 
@@ -80,10 +80,10 @@ Este artigo é desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa p
 
 ## IMU
 
-O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor oferece suporte à saída de dados acionada por interrupção. Ele possui faixa de aceleração de escala completa de ±2/±4/±8/±16 g e faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir os dados.
+O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor oferece saída de dados acionada por interrupção. Ele possui faixa de aceleração de escala completa de ±2/±4/±8/±16 g e faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir os dados.
 :::tip
 
-- Para mais informações sobre o LSM6DS3TR-C, visite: [Visão geral do produto LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) e [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
+- Para mais informações sobre o LSM6DS3TR-C, visite: [Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) e [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
 
 :::
 
@@ -98,49 +98,37 @@ O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de
 :::
 
 ```dtsi
-/* Configure I2C30 for LSM6DS3TR-C */
-&i2c30 {
-	pinctrl-0 = <&i2c30_default>;
-	pinctrl-1 = <&i2c30_sleep>;
-	pinctrl-names = "default", "sleep";
+&pmic_i2c {
+	sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
+	scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
 	status = "okay";
-	clock-frequency = <I2C_BITRATE_STANDARD>;
-
-	lsm6ds3tr_c: lsm6ds3tr-c@6a {
-		compatible = "st,lsm6dsl";
-		reg = <0x6a>;
-		irq-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
-		status = "okay";
-	};
 };
 
-/* Pin control configuration for I2C30 */
-&pinctrl {
-	i2c30_default: i2c30_default {
-		group1 {
-			psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
-				<NRF_PSEL(TWIM_SCL, 0, 7)>;
-		};
-	};
-
-	i2c30_sleep: i2c30_sleep {
-		group1 {
-			psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
-				<NRF_PSEL(TWIM_SCL, 0, 7)>;
-			low-power-enable;
+&pmic {
+	regulators {
+		imu_vdd: LDO1 {
+			regulator-min-microvolt = <3300000>;
+			regulator-max-microvolt = <3300000>;
+			regulator-boot-on;
 		};
 	};
 };
+
+&lsm6ds3tr_c {
+	zephyr,deferred-init;
+};
+
 ```
 
 2. Modifique o arquivo prj.conf para habilitar as configurações de I2C e de disparo por interrupção.
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
+
 CONFIG_LOG=y
 CONFIG_LOG_BACKEND_UART=y
 CONFIG_LOG_DEFAULT_LEVEL=3
-CONFIG_MAIN_STACK_SIZE=4096
+CONFIG_MAIN_STACK_SIZE=2048
 CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
 CONFIG_GPIO=y
 CONFIG_I2C=y
@@ -148,13 +136,9 @@ CONFIG_MFD=y
 CONFIG_REGULATOR=y
 CONFIG_SENSOR=y
 CONFIG_LSM6DSL=y
-CONFIG_SPI=y
-CONFIG_LED_STRIP=y
-CONFIG_WS2812_STRIP_SPI=y
+CONFIG_LSM6DSL_TRIGGER_GLOBAL_THREAD=y
 CONFIG_CBPRINTF_FP_SUPPORT=y
 CONFIG_CBPRINTF_COMPLETE=y
-CONFIG_FAULT_DUMP=2
-CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
 3. Escreva um programa para enviar os dados adquiridos do acelerômetro digital de 3 eixos e do giroscópio digital de 3 eixos pela porta serial USB.
@@ -168,13 +152,65 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
+#include <zephyr/drivers/regulator.h>
 #include <zephyr/logging/log.h>
-#include <stdio.h>
 
-LOG_MODULE_REGISTER(lsm6ds3tr_c_imu, LOG_LEVEL_INF);
+LOG_MODULE_REGISTER(zephyr_imu, LOG_LEVEL_INF);
 
-/* Use the LSM6DS3TR-C device defined in device tree */
-#define IMU_NODE DT_NODELABEL(lsm6ds3tr_c)
+#define IMU_NODE DT_ALIAS(imu0)
+
+/*
+ * nrf54lm20a needs power_en (fixed regulator on gpio1.12) and imu_vdd
+ * (PMIC NPM1300 LDO1) enabled before the IMU can be used.
+ * nrf54l15 has pdm_imu_pwr with regulator-boot-on; power is already on.
+ */
+#if defined(DT_N_NODELABEL_power_en)
+static const struct device *const power_en_dev =
+	DEVICE_DT_GET(DT_NODELABEL(power_en));
+#endif
+
+#if defined(DT_N_NODELABEL_imu_vdd)
+static const struct device *const imu_vdd_dev =
+	DEVICE_DT_GET(DT_NODELABEL(imu_vdd));
+#endif
+
+static int enable_imu_power(void)
+{
+#if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
+	int ret;
+#endif
+
+#if defined(DT_N_NODELABEL_power_en)
+	if (!device_is_ready(power_en_dev)) {
+		LOG_ERR("power_en regulator is not ready");
+		return -ENODEV;
+	}
+	ret = regulator_enable(power_en_dev);
+	if (ret < 0 && ret != -EALREADY) {
+		LOG_ERR("Failed to enable power_en: %d", ret);
+		return ret;
+	}
+#endif
+
+#if defined(DT_N_NODELABEL_imu_vdd)
+	if (!device_is_ready(imu_vdd_dev)) {
+		LOG_ERR("imu_vdd regulator is not ready");
+		return -ENODEV;
+	}
+	ret = regulator_enable(imu_vdd_dev);
+	if (ret < 0 && ret != -EALREADY) {
+		LOG_ERR("Failed to enable imu_vdd: %d", ret);
+		return ret;
+	}
+#endif
+
+#if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
+	/* Wait for power rail to stabilize */
+	k_sleep(K_MSEC(20));
+#endif
+
+	return 0;
+}
 
 static inline float out_ev(struct sensor_value *val)
 {
@@ -184,28 +220,29 @@ static inline float out_ev(struct sensor_value *val)
 static void fetch_and_display(const struct device *dev)
 {
 	struct sensor_value x, y, z;
-	static int sample_count;
+	static int trig_cnt;
 
-	sample_count++;
+	trig_cnt++;
 
-	/* Fetch and display accelerometer data */
+	/* lsm6dsl accel */
 	sensor_sample_fetch_chan(dev, SENSOR_CHAN_ACCEL_XYZ);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_X, &x);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
 
-	LOG_INF("Sample #%d", sample_count);
-	LOG_INF("Accel - X: %.6f m/s^2, Y: %.6f m/s^2, Z: %.6f m/s^2",
+	LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
-	/* Fetch and display gyroscope data */
+	/* lsm6dsl gyro */
 	sensor_sample_fetch_chan(dev, SENSOR_CHAN_GYRO_XYZ);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_X, &x);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
 
-	LOG_INF("Gyro - X: %.6f rad/s, Y: %.6f rad/s, Z: %.6f rad/s",
+	LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
+
+	LOG_INF("trig_cnt:%d", trig_cnt);
 }
 
 static int set_sampling_freq(const struct device *dev)
@@ -218,17 +255,15 @@ static int set_sampling_freq(const struct device *dev)
 	odr_attr.val2 = 500000;
 
 	ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
-						  SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
-	if (ret != 0)
-	{
+			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+	if (ret != 0) {
 		LOG_ERR("Cannot set sampling frequency for accelerometer.");
 		return ret;
 	}
 
 	ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
-						  SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
-	if (ret != 0)
-	{
+			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+	if (ret != 0) {
 		LOG_ERR("Cannot set sampling frequency for gyro.");
 		return ret;
 	}
@@ -238,7 +273,7 @@ static int set_sampling_freq(const struct device *dev)
 
 #ifdef CONFIG_LSM6DSL_TRIGGER
 static void trigger_handler(const struct device *dev,
-							const struct sensor_trigger *trig)
+			    const struct sensor_trigger *trig)
 {
 	fetch_and_display(dev);
 }
@@ -247,25 +282,19 @@ static void test_trigger_mode(const struct device *dev)
 {
 	struct sensor_trigger trig;
 
-	if (set_sampling_freq(dev) != 0)
-	{
+	if (set_sampling_freq(dev) != 0) {
 		return;
 	}
 
 	trig.type = SENSOR_TRIG_DATA_READY;
 	trig.chan = SENSOR_CHAN_ACCEL_XYZ;
 
-	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0)
-	{
-		LOG_ERR("Could not set sensor trigger");
+	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
+		LOG_ERR("Could not set sensor type and channel");
 		return;
 	}
 
-	LOG_INF("LSM6DS3TR-C in trigger mode - waiting for data...");
-
-	/* Keep the application running */
-	while (1)
-	{
+	while (1) {
 		k_sleep(K_MSEC(1000));
 	}
 }
@@ -273,17 +302,13 @@ static void test_trigger_mode(const struct device *dev)
 #else
 static void test_polling_mode(const struct device *dev)
 {
-	if (set_sampling_freq(dev) != 0)
-	{
+	if (set_sampling_freq(dev) != 0) {
 		return;
 	}
 
-	LOG_INF("LSM6DS3TR-C in polling mode - sampling at 12.5 Hz");
-
-	while (1)
-	{
+	while (1) {
 		fetch_and_display(dev);
-		k_sleep(K_MSEC(80)); /* ~12.5 Hz sampling rate */
+		k_sleep(K_MSEC(1000));
 	}
 }
 #endif
@@ -293,38 +318,38 @@ int main(void)
 	const struct device *const dev = DEVICE_DT_GET(IMU_NODE);
 	int ret;
 
-	LOG_INF("LSM6DS3TR-C IMU Data Acquisition System");
-	LOG_INF("========================================");
+	/* On nrf54lm20a, enable power_en + imu_vdd before accessing IMU.
+	 * On nrf54l15, these nodes don't exist; function returns immediately.
+	 */
+	ret = enable_imu_power();
+	if (ret < 0) {
+		LOG_ERR("Failed to enable IMU power: %d", ret);
+		return 0;
+	}
 
-	/* Check if device pointer is valid */
-	if (!device_is_ready(dev))
-	{
-		LOG_INF("IMU device %s not ready, attempting to initialize...", dev->name);
+	/* On nrf54lm20a, IMU has zephyr,deferred-init; must init manually.
+	 * On nrf54l15, device auto-inits at boot; device_is_ready() is true.
+	 */
+	if (!device_is_ready(dev)) {
 		ret = device_init(dev);
-		if (ret < 0 && ret != -EALREADY)
-		{
+		if (ret < 0 && ret != -EALREADY) {
 			LOG_ERR("Failed to initialize %s: %d", dev->name, ret);
-			return 1;
+			return 0;
 		}
 	}
 
-	/* Final check - ensure device is ready */
-	if (!device_is_ready(dev))
-	{
-		LOG_ERR("%s: device not ready after init", dev->name);
-		return 1;
+	if (!device_is_ready(dev)) {
+		LOG_ERR("%s: device not ready.", dev->name);
+		return 0;
 	}
 
-	LOG_INF("IMU device initialized successfully");
-
 #ifdef CONFIG_LSM6DSL_TRIGGER
-	LOG_INF("Running in interrupt-triggered mode");
+	LOG_INF("Testing LSM6DSL sensor in trigger mode.");
 	test_trigger_mode(dev);
 #else
-	LOG_INF("Running in polling mode");
+	LOG_INF("Testing LSM6DSL sensor in polling mode.");
 	test_polling_mode(dev);
 #endif
-
 	return 0;
 }
 ```
@@ -345,15 +370,15 @@ Se você quiser verificar diretamente o desempenho da IMU, clone o repositório 
 
 #### Resultado
 
-Após gravar o firmware, você pode abrir o assistente de porta serial no seu PC para visualização de dados. A frequência de disparo é de 12,5 Hz com um intervalo de 80 milissegundos.
+Após gravar o firmware, você pode abrir o assistente de porta serial no seu PC para visualizar os dados. A frequência de disparo é de 12,5 Hz com um intervalo de 80 milissegundos.
 
-- Acelerômetro digital de 3 eixos: Mede a aceleração ao longo dos eixos X, Y e Z.
-- Giroscópio digital de 3 eixos: Mede a velocidade angular em torno dos eixos X, Y e Z.
+- Acelerômetro digital de 3 eixos: mede a aceleração ao longo dos eixos X, Y e Z.
+- Giroscópio digital de 3 eixos: mede a velocidade angular em torno dos eixos X, Y e Z.
 
 :::tip
 
-1. Defina a taxa de baud para 115200 ao visualizar dados via monitor serial.
-2. Especifique a taxa de baud como 115200 no arquivo de configuração **platformio.ini** para o monitor serial da IDE PlatformIO.
+1. Defina a taxa de transmissão para 115200 ao visualizar dados via monitor serial.
+2. Especifique a taxa de transmissão como 115200 no arquivo de configuração **platformio.ini** para o monitor serial da IDE PlatformIO.
 
 ```ini
 [env:seeed-xiao-nrf54lm20a]
@@ -373,12 +398,12 @@ A IMU pode fundir dados de aceleração de três eixos para calcular os ângulos
 
 #### Oceano Eletrônico
 
-Este é um exemplo baseado na IMU integrada da XIAO nRF54LM20A Sense. Ele coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, alcançando efeitos visuais de ritmo oceânico.
+Este é um exemplo baseado na IMU integrada do XIAO nRF54LM20A Sense. Ele coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, obtendo efeitos visuais de ritmo oceânico.
 
 - **Controle de nível de água por inclinação** — Ajuste a altura do nível de água por meio da inclinação de roll para a esquerda e para a direita
 - **Animação de ondas** — Superfície de ondas com sobreposição de três camadas de frequência, propagação de ondas 2D e efeito de reflexão nas bordas
-- **Inércia do fluido** — Superfície de água com momento; inclinação rápida causa overshoot e subsequente oscilação de retorno
-- **Detecção de inversão** — A exibição é automaticamente espelhada quando a placa é invertida
+- **Inércia do fluido** — Superfície da água com momento; inclinação rápida causa overshoot e subsequente oscilação de retorno
+- **Detecção de inversão** — A exibição é espelhada automaticamente quando a placa é virada
 - **Cor dinâmica** — Troca de tons oceânicos em gradiente aleatório para cada coluna
 
 Além disso, você pode modificar a configuração da matriz RGB da placa por meio de definições de macro em main.c.
@@ -512,13 +537,13 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### Despertar por IMU
 
-Nesta rotina, o canal verde do RGB acende e apaga após a energização, então o sistema entra em modo de sono de ultrabaixo consumo. Quando um toque é detectado pela placa, a XIAO nRF54LM20A Sense será despertada via interrupção. O evento de toque será registrado e impresso pela porta serial.
+Nesta rotina, o canal verde do RGB acende e apaga após a energização, e então o sistema entra em modo de sono de ultrabaixo consumo. Quando um toque é detectado pela placa, o XIAO nRF54LM20A Sense será despertado via interrupção. O evento de toque será registrado e impresso pela porta serial.
 
 Baixe a rotina para implementar a função de despertar por IMU.
 
 1. Baixe o programa [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) e substitua com ele o conteúdo de main.c.
 
-2. Modifique o arquivo de árvore de dispositivo `app.overlay` e adicione as configurações de nós necessárias.
+2. Modifique o arquivo de árvore de dispositivo `app.overlay` e adicione as configurações de nó necessárias.
 
 ```dts
 /*
@@ -614,7 +639,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
 <br/>
-- Após gravar e ligar, o LED RGB-G piscará brevemente. Toque em qualquer lugar na placa para acender o LED RGB-G.
+- Após gravar e ligar, o LED RGB-G piscará brevemente. Toque em qualquer lugar da placa para acender o LED RGB-G.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_3_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -630,15 +655,15 @@ A posição de detecção é apenas para referência. O reconhecimento preciso d
 
 ## RTC
 
-O chip adotado pela XIAO nRF54LM20A Sense é equipado com recursos de hardware GRTC integrados, permitindo funções de RTC sem módulos RTC adicionais.
+O chip adotado pelo XIAO nRF54LM20A Sense é equipado com recursos de hardware GRTC integrados, permitindo funções de RTC sem módulos RTC adicionais.
 
-O RTC suporta contagem de carimbo de data/hora e pode registrar o tempo de operação mesmo após falha de energia, o que facilita o registro de logs e o rastreamento de tempo.
+O RTC oferece suporte à contagem de carimbos de data e hora e pode registrar o tempo de operação mesmo após uma queda de energia, o que facilita o registro de logs e o rastreamento de tempo.
 
-Esta seção apresenta um programa de exemplo implementado na XIAO nRF54LM20A Sense. Após a energização, ele obtém carimbos de data/hora a partir do horário de compilação via RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será despertado pelo alarme do RTC para continuar a contagem.
+Esta seção apresenta um programa de exemplo implementado no XIAO nRF54LM20A Sense. Após a energização, ele obtém carimbos de data e hora a partir do momento da compilação por meio do RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será acordado pelo alarme do RTC para continuar a contagem.
 
-1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções de RTC para imprimir o carimbo de data/hora.
+1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções do RTC para imprimir o carimbo de data e hora.
 
-2. Modifique a árvore de dispositivo `app.overlay` para habilitar o nó de RTC.
+2. Modifique a árvore de dispositivo `app.overlay` para habilitar o nó do RTC.
 
 ```dts
 / {
@@ -668,7 +693,7 @@ Esta seção apresenta um programa de exemplo implementado na XIAO nRF54LM20A Se
 };
 ```
 
-3. Edite o arquivo prj.conf para habilitar as configurações relevantes de RTC.
+3. Edite o arquivo prj.conf para habilitar as configurações relevantes do RTC.
 
 ```prj
 # Console and serial
@@ -698,7 +723,7 @@ CONFIG_NEWLIB_LIBC=y
 
 ### Resultado
 
-- O programa começa a contar a partir do momento da compilação e gravação. Abra a ferramenta de porta serial para observar o efeito de execução, e todas as funções esperadas serão implementadas.
+- O programa começa a contar a partir do momento da compilação e gravação. Abra a ferramenta de porta serial para observar o efeito de execução, e todas as funções esperadas são implementadas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -713,18 +738,18 @@ Entre a série XIAO nRF54LM20A, apenas o XIAO nRF54M20A Sense está equipado com
 
 :::
 
-### Gravação de Áudio e Upload via BLE
+### Gravação de áudio e upload via BLE
 
 Esta seção demonstra a função do microfone por meio de um exemplo de voz. O processo específico é o seguinte:
 
 - Pressione o botão BOOT, o LED RGB-G permanecerá aceso e iniciará a gravação; pressione-o novamente para parar a gravação (máximo de 10 segundos).
-- Após a gravação, o arquivo de áudio será enviado para o computador host via Bluetooth. O LED RGB-G pisca durante a transmissão.
+- Após a gravação, o arquivo de áudio será enviado ao computador host via Bluetooth. O LED RGB-G pisca durante a transmissão.
 - Execute o script de recepção no Windows para salvar o arquivo de áudio na área de trabalho.
 - O LED RGB-G apaga após a conclusão da transmissão.
 
 1. Copie o programa de <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> para `main.c`.
 
-2. Modifique o arquivo de árvore de dispositivo `app.overlay` para vincular o nó de BLE.
+2. Modifique o arquivo de árvore de dispositivo `app.overlay` para vincular o nó BLE.
 
 ```dts
 
@@ -785,7 +810,7 @@ dmic_dev: &pdm20 {
 };
 ```
 
-2. Modifique o arquivo prj.conf para habilitar as configurações de Bluetooth e microfone, e defina o nome do dispositivo Bluetooth como **XIAO MIC**.
+2. Modifique o arquivo `prj.conf` para habilitar as configurações de Bluetooth e microfone, e defina o nome do dispositivo Bluetooth como **XIAO MIC**.
 
 ```prj
 # Audio / DMIC
@@ -864,6 +889,8 @@ CONFIG_FLASH_PAGE_LAYOUT=y
 
 # Assert level
 CONFIG_ASSERT=y
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+
 ```
 
 ### Resultado
