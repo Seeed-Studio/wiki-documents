@@ -46,9 +46,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 介绍
 
-nRF Connect SDK（NCS）是 Nordic Semiconductor 官方的软件开发套件，构建在 Zephyr RTOS 实时操作系统之上。它为 nRF 系列芯片提供了完整、原生且高度优化的开发框架。与 PlatformIO 相比，NCS 为开发者提供了对 nRF54 系列全部硬件能力的更全面访问，包括对 Bluetooth Low Energy（BLE）、Thread、Matter 等无线协议栈的原生支持，以及更精细的电源管理和外设控制。Nordic 官方持续维护并更新该 SDK，确保与芯片固件的最佳兼容性，并能更早使用最新特性。
+nRF Connect SDK（NCS）是 Nordic Semiconductor 官方的软件开发套件，构建在 Zephyr RTOS 实时操作系统之上。它为 nRF 系列芯片提供了完整、原生且高度优化的开发框架。与 PlatformIO 相比，NCS 为开发者提供了对 nRF54 系列全部硬件能力的更全面访问，包括对 Bluetooth Low Energy（BLE）、Thread、Matter 等无线协议栈的原生支持，以及更精细的电源管理和外设控制。Nordic 官方持续维护并更新该 SDK，确保与芯片固件的最佳兼容性，并能优先体验最新特性。
 
-本教程将一步步引导你完成整个流程——从搭建 nRF Connect SDK 开发环境、安装工具链，到创建和配置你的第一个项目，最后将第一个示例程序烧录到 XIAO nRF54LM20A Sense 上并运行。
+本教程将一步步引导你完成整个流程——从搭建 nRF Connect SDK 开发环境和安装工具链，到创建和配置你的第一个项目，最后将第一个示例程序烧录到 XIAO nRF54LM20A Sense 上并运行起来。
 
 ## NCS 入门
 
@@ -108,34 +108,46 @@ nRF Connect SDK（NCS）是 Nordic Semiconductor 官方的软件开发套件，�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_2.png" style={{width:800, height:'auto'}}/></div>
 
+### 安装工具链
 
-### 安装 nRF Connect SDK 和工具链
+1. 安装 nRF Connect SDK 所需的工具链。请使用兼容版本，推荐 **v3.2.4**。
+
+:::tip
+
+- Seeed Studio XIAO nRF54LM20A 系列兼容 v3.2.x。v3.3.x 及以上版本目前暂不支持。
+- 初次安装工具链需要一定时间，请耐心等待。
+
+:::
+<br/>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_3.png" style={{width:800, height:'auto'}}/></div>
+
+### 安装 SDK 包
 
 1. 打开 nRF Connect 扩展，选择 **Install SDK**，然后选择 **nRF Connect SDK**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_4.png" style={{width:800, height:'auto'}}/></div>
 <br/>
+2. 选择与你的工具链匹配的版本：**v3.2.4**。
 
-2. 在 **Pre-packaged SDKs & Toolchains** 列表中选择 **v3.3.0**。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/7.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_5.png" style={{width:800, height:'auto'}}/></div>
 <br/>
+3. 建议使用默认安装路径。
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_6.png" style={{width:800, height:'auto'}}/></div>
+<br/>
 :::tip
 
-对于 nRF Connect SDK v3.3.0，预打包安装同时包含 SDK 代码和匹配的工具链，你无需单独安装工具链。
-
-nRF Connect SDK 体积较大，首次安装会花费一定时间。请在安装过程中确保网络连接稳定，以避免安装失败。
+nRF Connect SDK 体积较大。安装过程中请确保网络连接稳定，以避免安装失败。
 
 :::
 
 ### 环境验证
 
-安装完成后，nRF Connect SDK 的集成环境会自动配置好。为确保后续开发顺利，建议在此步骤对环境进行验证。
+安装开发工具链后，nRF Connect SDK 的集成环境会自动搭建完成。为确保后续开发顺利，建议在此步骤对环境进行验证。
 
 1. 启动 **nRF Terminal**，这是 nRF Connect SDK 内置的终端。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/2.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_7.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 2. 输入命令检查所需工具的版本信息。你可以逐条复制并运行这些命令进行验证。
 
@@ -159,15 +171,15 @@ arm-zephyr-eabi-gcc --version
 openocd --version
 ```
 
-- 输出如下所示。如果有任何组件缺失，请重新安装工具链，并在安装过程中确保网络稳定。
+- 输出如下所示。如果有组件缺失，请重新安装工具链，并在安装过程中确保网络稳定。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/3.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_8.png" style={{width:800, height:'auto'}}/></div>
 
 ### 添加自定义板卡路径
 
-由于 XIAO nRF54LM20A 系列的板卡定义尚未合入官方 NCS 仓库，因此你需要手动添加板卡路径。
+XIAO nRF54LM20A 系列的板卡定义尚未合入官方 NCS 仓库，因此你需要手动添加板卡路径。
 
-1. 将 **platform-seeedboards** 仓库克隆到你希望的目录中。
+1. 将 **platform-seeedboards** 仓库克隆到你希望的目录。
 
 ```bash
 git clone https://github.com/Seeed-Studio/platform-seeedboards.git
@@ -191,7 +203,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_12.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-2. 将项目命名为 `blinky` 并选择存储路径。
+2. 将项目命名为 `blinky`，并选择一个存储路径。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_13.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -200,13 +212,13 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_14.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-4. 移除原有配置。此步骤是为了在下一阶段配置与 XIAO nRF54LM20A 相关的设置时，避免受到干扰。（如果你的项目还没有构建记录，可以直接跳过此步骤）
+4. 删除原有配置。此步骤是为了在下一阶段配置与 XIAO nRF54LM20A 相关的设置时避免干扰。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_15.png" style={{width:800, height:'auto'}}/></div>
 
 ### 编写 Blinky 程序
 
-由于 XIAO nRF54LM20A 系列使用了自定义 devicetree 和硬件引脚映射，因此需要修改若干文件。需要编辑的文件如下所示。
+由于 XIAO nRF54LM20A 系列采用了自定义 devicetree 和硬件引脚映射，因此需要修改多个文件。需要编辑的文件如下：
 
 - `main.c`：包含应用逻辑的主程序。
 - `app.overlay`：用于硬件外设配置的 devicetree overlay 文件。
@@ -391,9 +403,9 @@ CONFIG_PWM=y
 CONFIG_SERIAL=n
 ```
 
-1. 进入扩展的 APPLICATIONS 部分并选择 Add build configuration。确认 SDK 和工具链版本。将 Board Target 设置为 xiao_nrf54lm20a/nrf54lm20a/cpuapp，将基础配置文件设置为 prj.conf。向下滚动页面，然后点击 Generate and Build 以生成相应的配置文件。
+1. 进入扩展的 **APPLICATIONS** 部分并选择 **Add build configuration**。确认 SDK 和工具链版本。将 **Board Target** 设置为 `xiao_nrf54lm20a/nrf54lm20a/cpuapp`，将 **base configuration files** 设置为 `prj.conf`，然后点击 **Generate and Build** 以创建相关配置。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/4_2.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_18.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 :::tip
@@ -402,9 +414,9 @@ CONFIG_SERIAL=n
 
 :::
 
-2. 如果构建成功，终端中会显示如下信息。
+2. 如果构建成功，终端中将显示如下信息。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/5.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_19.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 ### 程序烧录
@@ -417,7 +429,7 @@ CONFIG_SERIAL=n
 west flash
 ```
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/6.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_20.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 :::tip
@@ -435,44 +447,9 @@ west flash --build-dir build_1
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:600, height:'auto'}}/></div>
 
-## 常见问题
-如果你的 SDK 下载耗时过长，我们也提供了一种相对较快的下载方式
-- 步骤 1：安装 aria2
-```
-brew install aria2
-```
-
-- 步骤 2：创建下载目录
-```
-mkdir -p /opt/nordic/ncs/downloads
-```
-
-- 步骤 3：下载 Toolchain Bundle
-```
-aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
-  -d /opt/nordic/ncs/downloads \
-  -o ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz \
-  "https://files.nordicsemi.cn/artifactory/NCS/external/bundles/v3/ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz"
-```
-
-- 步骤 4：下载 nRF Connect SDK Bundle
-```
-aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
-  -d /opt/nordic/ncs/downloads \
-  -o sdk-nrf-bundle-v3.3.0.tar.gz \
-  "https://files.nordicsemi.cn/artifactory/ncs-src-mirror/external/sdk-nrf/v3.3.0/src.tar.gz"
-```
-
-- 步骤 5：安装 nRF Connect SDK v3.3.0
-```
-nrfutil sdk-manager install v3.3.0 \
-  --sdk-path /opt/nordic/ncs/v3.3.0 \
-  --type nrf
-```
-
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种交流渠道，以满足不同的偏好和需求。
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>

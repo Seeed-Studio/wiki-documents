@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-06-15'
+updatedAt: '2026-05-19'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_pin_multiplexing/
 ---
 
@@ -46,7 +46,7 @@ El XIAO nRF54LM20A cuenta con abundantes recursos de pines y admite de forma nat
 
 :::tip
 
-Este tutorial se desarrolla sobre la base del sistema de compilación PlatformIO y Zephyr RTOS.
+Este tutorial se desarrolla sobre el sistema de compilación PlatformIO y Zephyr RTOS.
 Si no estás familiarizado con la creación de un proyecto para el XIAO nRF54LM20A en PlatformIO, puedes ir a [Getting Sarted With Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/)
 
 :::
@@ -171,6 +171,12 @@ int main(void)
 }
 ```
 
+sobre el prj.conf
+
+```conf
+
+```
+
 ### Resultado
 
 Después de flashear el firmware, pulsa el botón y el zumbador emitirá un pitido. Y el puerto serie imprimirá el estado.
@@ -223,7 +229,7 @@ Según el pinout del XIAO nRF54LM20A, **P1.0** se puede seleccionar como pin de 
 
 :::
 
-1. Modifica el archivo del device tree `app.overlay`. Para la función de salida PWM, la instancia de hardware debe estar vinculada explícitamente al nodo `pwm20`, `pwm21` o `pwm22`. La salida UART de consola predeterminada del sistema está asociada al nodo `uart20`.
+1. Modifica el archivo del device tree `app.overlay`. Para la función de salida PWM, la instancia de hardware debe estar vinculada explícitamente al nodo `pwm20`, `pwm21` o `pwm22`. La salida UART de consola predeterminada del sistema está conectada al nodo `uart20`.
 
 <details>
 <summary>app.overlay</summary>
@@ -396,7 +402,7 @@ Mientras tanto, el ángulo actual del servo se imprimirá a través del puerto s
 
 ## Analógico
 
-La E/S analógica se basa en un Convertidor Analógico-Digital (ADC) y se utiliza principalmente para capturar señales de voltaje analógicas continuas generadas por sensores externos. Después de obtener los valores digitales de muestreo sin procesar (Raw Data), se pueden mapear a valores reales de medición de ingeniería utilizando algoritmos de conversión lineales o no lineales específicos. Esta función se utiliza ampliamente en escenarios como el muestreo de voltaje de batería y la monitorización en tiempo real de magnitudes físicas, incluyendo la humedad del suelo y la temperatura ambiente.
+La E/S analógica se basa en un Convertidor Analógico-Digital (ADC) y se utiliza principalmente para capturar señales de voltaje analógicas continuas generadas por sensores externos. Después de obtener los valores digitales de muestreo en bruto (Raw Data), se pueden mapear a valores reales de medición de ingeniería utilizando algoritmos de conversión lineales o no lineales específicos. Esta función se utiliza ampliamente en escenarios como el muestreo de voltaje de batería y la monitorización en tiempo real de magnitudes físicas, incluyendo la humedad del suelo y la temperatura ambiente.
 
 ### Preparación de hardware
 
@@ -553,7 +559,7 @@ int main(void)
 
 ### Resultado
 
-Después de flashear el programa, inserta el Grove-Capacitive Soil Moisture Sensor en las plantas en maceta de casa.
+Después de flashear el programa, inserta el Grove - Capacitive Soil Moisture Sensor en plantas en maceta domésticas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_3.jpg" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -563,7 +569,7 @@ Abre el asistente de puerto serie en tu ordenador y observa los valores de salid
 <br/>
 :::tip
 
-Tabla de referencia de lectura de voltaje
+Tabla de lectura de referencia de voltaje
 | Estado     | Voltaje de salida del sensor | Valor bruto esperado del ADC|
 | -------------- | -------------- | ---------------- |
 | En el aire (seco) | ~2.0–2.4V      | ~3400–4095       |
@@ -587,7 +593,7 @@ El Receptor/Transmisor Asíncrono Universal (UART) es un protocolo estándar de 
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-        <th>USB to TTL Converter</th>
+        <th>Grove - Capacitive Soil Moisture Sensor</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -609,15 +615,15 @@ El Receptor/Transmisor Asíncrono Universal (UART) es un protocolo estándar de 
 
 ### Preparación de software
 
-Según el pinout de XIAO nRF54LM20A, P1.08 y P1.09 se pueden seleccionar respectivamente como pines TX y RX para la comunicación serie.
+Según el pinout de la XIAO nRF54LM20A, P1.08 y P1.09 se pueden seleccionar respectivamente como pines TX y RX para la comunicación serie.
 
 :::tip
 
-- Para el pinout del XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#visión-general-del-hardware) para ver los detalles.
+- Para el pinout de la XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#visión-general-del-hardware) para ver los detalles.
 
 :::
 
-1. Modifica el archivo del árbol de dispositivos, asigna el pin P1.08 como UART TX y P1.09 como UART RX al nodo `uart21`, y establece la velocidad en baudios del puerto serie en 115200.
+1. Modifica el archivo del device tree, asigna el pin P1.08 como UART TX y P1.09 como UART RX al nodo `uart21`, y establece la velocidad en baudios del puerto serie en 115200.
 
 ```dtsi
 /*
@@ -642,7 +648,7 @@ Según el pinout de XIAO nRF54LM20A, P1.08 y P1.09 se pueden seleccionar respect
 };
 ```
 
-2. Modifica el archivo de configuración `prj.conf` para habilitar las configuraciones UART relevantes.
+2. Modifica el archivo de configuración `prj.conf` para habilitar las configuraciones UART correspondientes.
 
 ```prj
 # Serial and UART
@@ -661,7 +667,7 @@ CONFIG_LOG_BACKEND_UART=y
 CONFIG_LOG_DEFAULT_LEVEL=3
 ```
 
-3. Escribe la función principal. Cuando se presione el botón BOOT integrado, el estado del puerto serie y la configuración de los pines se imprimirán en el ordenador a través del puerto serie; de lo contrario, se imprimirá por defecto el estado de funcionamiento.
+3. Escribe la función principal. Cuando se pulse el botón BOOT integrado, el estado del puerto serie y la configuración de los pines se imprimirán en el ordenador a través del puerto serie; de lo contrario, se imprimirá por defecto el estado de funcionamiento.
 
 <details>
 
@@ -841,7 +847,7 @@ int main(void)
 
 ### Resultado
 
-1. Cablea de acuerdo con el orden de la tabla
+1. Cablea según el orden de la tabla
 
 | XIAO nRF54LM20A | CH340 |
 | --------------- | ----- |
@@ -850,14 +856,14 @@ int main(void)
 | P1.08 - TX      | RX    |
 | P1.09 - RX      | TX    |
 
-2. Abre el software de monitorización de puerto serie en tu ordenador. Cuando se presione el botón BOOT integrado, la información configurada del puerto serie se imprimirá a través del puerto serie. De forma predeterminada, se imprimirá la cadena `[Heartbeat # number] UART21 running...`.
+2. Abre el software de monitorización de puerto serie en tu ordenador. Cuando se pulse el botón BOOT integrado, la información configurada del puerto serie se imprimirá a través del puerto serie. De forma predeterminada, se imprimirá la cadena `[Heartbeat # number] UART21 running...`.
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_uart_1.png" style={{width:800, height:'auto'}}/></div>
 
 ## I2C
 
-I2C es un protocolo de comunicación de datos síncrono y half-dúplex. Permite la conexión de múltiples dispositivos mediante direccionamiento a través de la línea de reloj SCL y la línea de datos SDA, y se utiliza comúnmente para leer datos de sensores que requieren tasas de transmisión relativamente altas, como IMU y sensores de temperatura/humedad, o para la salida de pantalla OLED.
+I2C es un protocolo de comunicación de datos síncrono y half-duplex. Permite la conexión de múltiples dispositivos mediante direccionamiento a través de la línea de reloj SCL y la línea de datos SDA, y se utiliza comúnmente para leer datos de sensores que requieren tasas de transmisión relativamente altas, como IMU y sensores de temperatura/humedad, o para la salida de pantallas OLED.
 
 ### Preparación de hardware
 
@@ -886,15 +892,15 @@ I2C es un protocolo de comunicación de datos síncrono y half-dúplex. Permite 
 
 ### Preparación de software
 
-Según el pinout de XIAO nRF54LM20A, P1.03 y P1.07 se pueden configurar como pines I2C.
+Según el pinout de la XIAO nRF54LM20A, P1.03 y P1.07 se pueden configurar como pines I2C.
 
 :::tip
 
-- Para el pinout del XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#visión-general-del-hardware) para ver los detalles.
+- Para el pinout de la XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#visión-general-del-hardware) para ver los detalles.
 
 :::
 
-1. Modifica el árbol de dispositivos, configura P1.03 y P1.07 en XIAO nRF54LM20A como los pines del nodo `i2c22` del árbol de dispositivos respectivamente, y luego añade el nodo del árbol de dispositivos para la pantalla. La pantalla OLED tiene una resolución de 128×64 y adopta el chip controlador SSD1306 común.
+1. Modifica el device tree, configura P1.03 y P1.07 en la XIAO nRF54LM20A como los pines del nodo `i2c22` del device tree respectivamente, y luego añade el nodo del device tree para la pantalla. La pantalla OLED tiene una resolución de 128×64 y adopta el chip controlador SSD1306 común.
 
 ```dts
 / {
@@ -934,7 +940,7 @@ CONFIG_LOG_DEFAULT_LEVEL=4
 CONFIG_CHARACTER_FRAMEBUFFER=y
 ```
 
-3. Escribe la función principal para establecer la posición de la pantalla y las funciones para la cadena.
+3. Escribe la función principal para establecer la posición de visualización y las funciones para la cadena.
 
 <details>
 
@@ -1096,13 +1102,13 @@ int main(void) {
 
 ### Resultado
 
-Después de que el programa se ejecute, el texto **Hello XIAO nRF54LM20A** se mostrará en la pantalla y los datos del hilo se imprimirán a través del puerto serie USB.
+Después de que el programa se ejecute, el texto **Hello XIAO nRF54LM20A** se mostrará en la pantalla y los datos de los hilos se imprimirán a través del puerto serie USB.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_5.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## SPI
 
-SPI es un protocolo de comunicación síncrono, full-dúplex y de alta velocidad. A diferencia de la comunicación asíncrona, SPI depende de una línea de reloj SCLK dedicada para una sincronización de datos precisa. Generalmente adopta la topología de hardware clásica de cuatro hilos que consta de los pines MOSI, MISO y de selección de chip CS/SS. Equipado con canales independientes de envío y recepción de datos y una alta frecuencia de reloj de bus, SPI ofrece un excelente rendimiento de transmisión de datos. Se utiliza ampliamente en escenarios de control de periféricos que requieren un gran ancho de banda, como dispositivos de almacenamiento masivo, incluidos Flash y tarjetas SD, pantallas de alta resolución y alta frecuencia de actualización, y sensores de muestreo de alta frecuencia.
+SPI es un protocolo de comunicación síncrono, full-dúplex y de alta velocidad. A diferencia de la comunicación asíncrona, SPI depende de una línea de reloj SCLK dedicada para una sincronización de datos precisa. Generalmente adopta la topología de hardware clásica de cuatro hilos compuesta por los pines MOSI, MISO y de selección de chip CS/SS. Equipado con canales independientes de envío y recepción de datos y una alta frecuencia de reloj de bus, SPI ofrece un excelente rendimiento de transmisión de datos. Se utiliza ampliamente en escenarios de control de periféricos que requieren un gran ancho de banda, como dispositivos de almacenamiento masivo, incluidos Flash y tarjetas SD, pantallas de alta resolución y alta frecuencia de actualización, y sensores de muestreo de alta frecuencia.
 
 ### Preparación de hardware
 
@@ -1414,7 +1420,7 @@ Después de encender, el programa actualiza la pantalla en la secuencia de rojo,
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_spi_1.gif" style={{width:600, height:'auto'}}/></div>
 
-## Soporte técnico y debate sobre productos
+## Soporte técnico y debate sobre el producto
 
 Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 

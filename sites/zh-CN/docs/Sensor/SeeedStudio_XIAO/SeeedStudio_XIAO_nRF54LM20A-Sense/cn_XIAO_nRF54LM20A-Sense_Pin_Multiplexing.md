@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-06-15'
+updatedAt: '2026-05-19'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_pin_multiplexing/
 ---
 
@@ -47,13 +47,13 @@ XIAO nRF54LM20A 具有丰富的引脚资源，原生支持使用 Digital、Analo
 :::tip
 
 本教程基于 PlatformIO 构建系统和 Zephyr RTOS 开发。
-如果你还不熟悉如何在 PlatformIO 下为 XIAO nRF54LM20A 创建项目，可以跳转到 [Getting Sarted With Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/)
+如果你还不熟悉在 PlatformIO 下为 XIAO nRF54LM20A 创建项目，可以跳转到 [Getting Sarted With Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/)
 
 :::
 
-## 数字引脚
+## 数字量
 
-数字引脚主要通过输出高低电平逻辑，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细阐述 XIAO nRF54LM20A 上数字引脚的底层驱动逻辑和实际调用方法。
+数字引脚主要通过输出高低电平逻辑，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细阐述 XIAO nRF54LM20A 上数字引脚的底层驱动逻辑及实际调用方式。
 
 ### 硬件准备
 
@@ -169,6 +169,12 @@ int main(void)
 
 	return 0;
 }
+```
+
+关于 prj.conf
+
+```conf
+
 ```
 
 ### 结果
@@ -301,7 +307,7 @@ CONFIG_PRINTK=y
 CONFIG_UART_CONSOLE=y
 ```
 
-3. 编写 main.c 程序，实现 PWM 舵机控制功能，并配置 PWM 周期等参数。
+3. 编写 main.c 程序以实现 PWM 舵机控制功能，并配置 PWM 周期等参数。
 
 ```cpp
 /*
@@ -386,7 +392,7 @@ int main(void)
 
 ### 结果
 
-固件烧录完成后，舵机将以 33 弧度每秒的速度从 0° 旋转到 180°，然后再旋转回 0°。
+固件烧录完成后，舵机以每秒 33 弧度的速度从 0° 旋转到 180°，然后再旋转回 0°。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -396,7 +402,7 @@ int main(void)
 
 ## 模拟量
 
-模拟量 I/O 基于模数转换器（ADC），主要用于采集外部传感器输出的连续模拟电压信号。获取原始数字采样值（Raw Data）后，可通过特定的线性或非线性转换算法映射为实际工程测量值。该功能广泛应用于电池电压采样，以及对土壤湿度、环境温度等物理量的实时监测场景。
+模拟 I/O 基于模数转换器（ADC），主要用于采集外部传感器输出的连续模拟电压信号。获取原始数字采样值（Raw Data）后，可通过特定的线性或非线性转换算法映射为实际工程测量值。该功能广泛应用于电池电压采样，以及对土壤湿度、环境温度等物理量的实时监测场景。
 
 ### 硬件准备
 
@@ -495,7 +501,7 @@ CONFIG_PRINTK=y
 CONFIG_UART_CONSOLE=y
 ```
 
-3. 编写 main.c 程序，将 P1.00 引脚作为模拟输入引脚，并每隔 500ms 通过 USB 串口输出读取到的数值。
+3. 编写 main.c 程序，使用 P1.00 引脚作为模拟输入引脚，并每隔 500ms 通过 USB 串口输出读取值。
 
 ```cpp
 /*
@@ -574,20 +580,20 @@ int main(void)
 
 :::caution
 
-由于元器件存在个体差异，在相同环境下，不同模块的测量结果可能会有所不同。
+由于元器件存在个体差异，不同模组在相同环境下的测量结果可能会有所不同。
 
 :::
 
 ## UART
 
-通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预先约定的波特率来实现数据的异步收发。在物理连线方面，只需将设备的 TX 与 RX 引脚交叉连接并共地，即可建立全双工数据链路。由于硬件成本极低且支持同时收发数据，UART 被广泛应用于嵌入式系统中的控制台日志输出、模块化外设调试以及低带宽点对点数据通信。
+通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预先约定的波特率来实现数据的异步收发。在物理连线方面，只需将设备的 TX 与 RX 引脚交叉连接并共地，即可建立全双工数据链路。由于硬件成本极低且支持收发同时进行，UART 被广泛应用于嵌入式系统中的控制台日志输出、模块化外设调试以及低带宽点对点数据通信。
 
 ### 硬件准备
 
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-        <th>USB 转 TTL 转换器</th>
+        <th>Grove - Capacitive Soil Moisture Sensor</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -609,7 +615,7 @@ int main(void)
 
 ### 软件准备
 
-根据 XIAO nRF54LM20A 的引脚分布，P1.08 和 P1.09 可分别被选作串口通信的 TX 和 RX 引脚。
+根据 XIAO nRF54LM20A 的引脚分布，P1.08 和 P1.09 可以分别被选择为串口通信的 TX 和 RX 引脚。
 
 :::tip
 
@@ -661,7 +667,7 @@ CONFIG_LOG_BACKEND_UART=y
 CONFIG_LOG_DEFAULT_LEVEL=3
 ```
 
-3. 编写主函数。当按下板载 BOOT 按钮时，会通过串口向电脑打印串口状态和引脚配置；否则默认打印运行状态。
+3. 编写主函数。当按下板载 BOOT 按钮时，将通过串口向电脑打印串口状态和引脚配置；否则默认打印运行状态。
 
 <details>
 
@@ -850,7 +856,7 @@ int main(void)
 | P1.08 - TX      | RX    |
 | P1.09 - RX      | TX    |
 
-2. 在电脑上打开串口监控软件。当按下板载 BOOT 按钮时，会通过串口打印已配置的串口信息。默认情况下，会打印字符串 `[Heartbeat # number] UART21 running...`。
+2. 在电脑上打开串口监控软件。当按下板载 BOOT 按钮时，配置好的串口信息会通过串口打印出来。默认情况下，会打印字符串 `[Heartbeat # number] UART21 running...`。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_uart_1.png" style={{width:800, height:'auto'}}/></div>
@@ -886,7 +892,7 @@ I2C 是一种同步、半双工的数据通信协议。它通过 SCL 时钟线�
 
 ### 软件准备
 
-根据 XIAO nRF54LM20A 的引脚分布，P1.03 和 P1.07 可被配置为 I2C 引脚。
+根据 XIAO nRF54LM20A 的引脚分布，P1.03 和 P1.07 可以被配置为 I2C 引脚。
 
 :::tip
 
@@ -1137,7 +1143,7 @@ SPI 是一种高速、同步、全双工的通信协议。与异步通信不同�
 
 :::
 
-1. 修改设备树文件。为了驱动 LCD 屏幕，需要在设备树中启用 spi23 节点并配置引脚映射。将 P1.04、P1.05 和 P1.06 分别设置为 SPI 的 SCK、MISO 和 MOSI。同时，将 P1.31 和 P1.29 配置为屏幕的 CS（片选）和 DC（数据/命令）控制引脚。
+1. 修改设备树文件。为了驱动 LCD 屏幕，需要在设备树中使能 spi23 节点并配置引脚映射。将 P1.04、P1.05 和 P1.06 分别设置为 SPI 的 SCK、MISO 和 MOSI。同时，将 P1.31 和 P1.29 配置为屏幕的 CS（片选）和 DC（数据/命令）控制引脚。
 
 <details>
 
@@ -1252,7 +1258,7 @@ SPI 是一种高速、同步、全双工的通信协议。与异步通信不同�
 </details>
 <br/>
 
-2. 修改 prj.conf，启用 SPI 相关配置。
+2. 修改 prj.conf，开启 SPI 相关配置。
 
 ```prj
 CONFIG_LOG=y
@@ -1268,7 +1274,7 @@ CONFIG_HEAP_MEM_POOL_SIZE=32768
 CONFIG_MAIN_STACK_SIZE=4096
 ```
 
-3. 修改 main.c 程序，编写纯色屏幕填充逻辑。
+3. 修改 main.c 程序，编写纯色填充屏幕的逻辑。
 
 <details>
 
@@ -1416,7 +1422,7 @@ int main(void)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供了多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
