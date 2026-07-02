@@ -181,7 +181,7 @@ If you already have (or want to source separately) a 24-pin, 50-pin, 10.3", or 1
     </tr>
     <tr>
       <td align="center"><strong>XIAO ePaper Breakout Board</strong></td>
-      <td>The original breakout board for XIAO + ePaper; well documented with OpenEpaperLink (OEPL) support.</td>
+      <td>The original breakout board for XIAO + ePaper; supported by OpenDisplay with compatible BLE XIAO modules (nRF52840, ESP32-S3, ESP32-C3, ESP32-C6).</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/XIAO-eInk-Expansion-Board" target="_blank" rel="noopener noreferrer">Breakout →</a></td>
     </tr>
   </table>
@@ -279,10 +279,10 @@ Every Seeed ePaper product converges into the same software ecosystem. Pick the 
       <td>reTerminal E1001 / E1002</td>
     </tr>
     <tr>
-      <td><a href="https://wiki.seeedstudio.com/EN04_opendisplay" target="_blank" rel="noopener noreferrer"><strong>OpenEPaperLink / OpenDisplay</strong></a></td>
+      <td><a href="https://wiki.seeedstudio.com/EN04_opendisplay" target="_blank" rel="noopener noreferrer"><strong>OpenDisplay</strong></a></td>
       <td align="center">Open-source firmware (BLE)</td>
-      <td>BLE-driven open-source ePaper firmware. OpenDisplay targets EN04 out of the box; OEPL Config Builder targets the Breakout Board + XIAO nRF52840 DIY path.</td>
-      <td>EN04 · XIAO ePaper Breakout Board</td>
+      <td>BLE-driven open-source ePaper firmware for EN04, EN05, reTerminal E Series, and the Breakout Board + compatible XIAO modules via the OpenDisplay Toolbox.</td>
+      <td>EN04 · EN05 · XIAO ePaper Breakout Board</td>
     </tr>
   </table>
 </div>
@@ -309,9 +309,9 @@ Each tutorial below walks through one platform end-to-end:
 - [Work with PlatformIO](https://wiki.seeedstudio.com/epaper_work_with_platformio) — main reference: VS Code setup, `platformio.ini` configuration, `Seeed_GFX` setup, and per-product PlatformIO environment selection. Per-product cookbook: [EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/ee04_with_platformio).
 - [Work with Zephyr](https://wiki.seeedstudio.com/epaper_work_with_zephyr) — entry page for Zephyr RTOS support on reTerminal E1001, E1002, and E1003, with official Zephyr board documentation links and board targets.
 
-### Open-source ESL / OEPL
+### OpenDisplay (BLE firmware)
 
-- [Work with OpenEPaperLink / OpenDisplay](https://wiki.seeedstudio.com/EN04_opendisplay) — single article covers the EN04 BLE kit and the ePaper Breakout Board + XIAO nRF52840 DIY path.
+- [Work with OpenDisplay](https://wiki.seeedstudio.com/EN04_opendisplay) — single article covers reTerminal E Series, EN04, EN05, and the ePaper Breakout Board with compatible XIAO modules.
 
 ## Resources
 
