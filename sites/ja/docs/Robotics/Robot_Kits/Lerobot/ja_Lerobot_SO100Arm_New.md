@@ -19,8 +19,6 @@ createdAt: '2025-06-05'
 updatedAt: '2026-05-22'
 url: https://wiki.seeedstudio.com/ja/lerobot_so100m_new/
 ---
-import Link from '@docusaurus/Link';
-
 # SO-ARM100 と SO-ARM101 ロボットアームを LeRobot で始める
 
 :::tip
@@ -680,14 +678,6 @@ python -m src.tools.servo_center_test
 ```
 
 中立位置キャリブレーションが完了したら、上記の `lerobot-calibrate` の手順に戻り、アーム全体のキャリブレーションをやり直してください。
-
-サーボ ID が異常である、またはサーボが応答しないなどのエラーが引き続き発生する場合は、Windows / Ubuntu / Mac でステアリングギア調整ツールを使用してさらに診断できます。
-
-<div style={{textAlign: 'center'}}>
-    <Link to="/ja/lerobot_steering_gear_debugging_tool" style={{display: 'inline-block', width: 'auto', height: '40px', lineHeight: '40px', padding: '0 24px', whiteSpace: 'nowrap', backgroundColor: '#1eff00', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
-        ▶ ステアリングギア調整ツールのチュートリアルを開く
-    </Link>
-</div>
 
 ## テレオペレーション
 

@@ -19,8 +19,6 @@ createdAt: '2025-06-05'
 updatedAt: '2026-05-22'
 url: https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/
 ---
-import Link from '@docusaurus/Link';
-
 # Primeiros passos com o braço robótico SO-ARM100 e SO-ARM101 com LeRobot
 
 :::tip
@@ -680,14 +678,6 @@ python -m src.tools.servo_center_test
 ```
 
 Após a calibração de posição central, volte para as etapas do `lerobot-calibrate` acima e refaça a calibração de todo o braço.
-
-Se você ainda encontrar erros como IDs de servo anormais ou servos sem resposta, pode usar a Ferramenta de Depuração de Servos para diagnóstico adicional no Windows, Ubuntu ou Mac.
-
-<div style={{textAlign: 'center'}}>
-    <Link to="/pt-br/lerobot_steering_gear_debugging_tool" style={{display: 'inline-block', width: 'auto', height: '40px', lineHeight: '40px', padding: '0 24px', whiteSpace: 'nowrap', backgroundColor: '#1eff00', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
-        ▶ Abrir Tutorial da Ferramenta de Depuração de Servos
-    </Link>
-</div>
 
 ## Teleoperação
 

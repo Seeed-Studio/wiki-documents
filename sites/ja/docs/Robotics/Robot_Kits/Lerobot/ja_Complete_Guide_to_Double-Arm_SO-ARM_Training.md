@@ -4,63 +4,55 @@ title: 両腕 SO-ARM トレーニング完全ガイド
 keywords:
   - Lerobot
   - SO-ARM
-  - 両腕
+  - Double Arm
   - Robotics
-  - トレーニング
-image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
+  - Training
+image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/double_soarm/Arm_kit.webp
 slug: /lerobot_double_arm_so_arm_training
+sku: 114993666,114993667
 last_update:
-  date: 6/29/2026
-  author: ZhangJiaQuan
+  date: 7/1/2026
+  author: ZhuYuan
 translation:
   skip:
     - zh-CN
 url: https://wiki.seeedstudio.com/ja/lerobot_double_arm_so_arm_training/
 ---
+# 両腕 SO-ARM トレーニング完全ガイド
 
-import Link from '@docusaurus/Link';
+## はじめに
 
-# Complete Guide to Double-Arm SO-ARM Training
+このガイドでは、LeRobot を用いて両腕 SO-ARM ロボットシステムをトレーニングするための一連の手順をすべて説明します。ハードウェアのセットアップ、アームのキャリブレーション、両腕テレオペレーション、データセットの記録と管理、ACT ポリシーのトレーニング、実機へのデプロイまでをカバーします。これらの手順に従うことで、2 本のリーダーアームと 2 本のフォロワーアームを使ってデモデータを収集し、模倣学習ポリシーをトレーニングし、それを実機ロボットにデプロイできます。
 
-## Introduction
-
-This guide walks through the complete pipeline for training a dual-arm SO-ARM robotic system with LeRobot. It covers hardware setup, arm calibration, dual-arm teleoperation, dataset recording and management, ACT policy training, and real-robot deployment. By following these steps, you can collect demonstration data with two leader arms and two follower arms, train an imitation-learning policy, and deploy it on the real robot.
-
-First, connect the wires as follows.
+まず、以下のように配線を接続します。
 
 
-| Role               | Port           |
+| 役割               | ポート           |
 | ------------------ | -------------- |
-| Left follower arm  | `/dev/ttyACM0` |
-| Right follower arm | `/dev/ttyACM1` |
-| Left leader arm    | `/dev/ttyACM2` |
-| Right leader arm   | `/dev/ttyACM3` |
+| 左フォロワーアーム | `/dev/ttyACM0` |
+| 右フォロワーアーム | `/dev/ttyACM1` |
+| 左リーダーアーム   | `/dev/ttyACM2` |
+| 右リーダーアーム   | `/dev/ttyACM3` |
 
-The follower arm type is `so101_follower`, and the leader arm type is `so101_leader` (in LeRobot, `so100_leader` and `so101_leader` share the same implementation).
+フォロワーアームのタイプは `so101_follower`、リーダーアームのタイプは `so101_leader` です（LeRobot では、`so100_leader` と `so101_leader` は同じ実装を共有します）。
 
 ---
 
-## 0. Prerequisites
+## 0. 前提条件
 
-### 0.1 Install Dependencies
+### 0.1 依存関係のインストール
 
-環境設定については、SO-ARM チュートリアルを参照してください：
+関連リンクを参照してください。
 
-<div style={{textAlign: 'center'}}>
-    <Link to="/ja/lerobot_so100m_new/#install-lerobot" style={{display: 'inline-block', width: 'auto', height: '40px', lineHeight: '40px', padding: '0 24px', whiteSpace: 'nowrap', backgroundColor: '#1eff00', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
-        ▶ 環境設定へジャンプ
-    </Link>
-</div>
-
-### 0.2 USB Permissions
+### 0.2 USB パーミッション
 
 ```bash
 sudo chmod 666 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3 /dev/ttyACM4
 ```
 
-## 1. Calibration (Key Step)
+## 1. キャリブレーション（重要なステップ）
 
-### 1.1 Calibrate the Left Follower Arm
+### 1.1 左フォロワーアームのキャリブレーション
 
 ```bash
 lerobot-calibrate \
@@ -69,7 +61,7 @@ lerobot-calibrate \
   --robot.id=my_awesome_bimanual_follower_left
 ```
 
-### 1.2 Calibrate the Right Follower Arm
+### 1.2 右フォロワーアームのキャリブレーション
 
 ```bash
 lerobot-calibrate \
@@ -78,7 +70,7 @@ lerobot-calibrate \
   --robot.id=my_awesome_bimanual_follower_right
 ```
 
-### 1.3 Calibrate the Left Leader Arm
+### 1.3 左リーダーアームのキャリブレーション
 
 ```bash
 lerobot-calibrate \
@@ -87,7 +79,7 @@ lerobot-calibrate \
   --teleop.id=my_awesome_bimanual_leader_left
 ```
 
-### 1.4 Calibrate the Right Leader Arm
+### 1.4 右リーダーアームのキャリブレーション
 
 ```bash
 lerobot-calibrate \
@@ -96,7 +88,7 @@ lerobot-calibrate \
   --teleop.id=my_awesome_bimanual_leader_right
 ```
 
-After calibration, the files will be saved at:
+キャリブレーション後、ファイルは次の場所に保存されます：
 
 ```text
 ~/.cache/huggingface/lerobot/calibration/robots/so101_follower/my_awesome_bimanual_follower_left.json
@@ -105,9 +97,9 @@ After calibration, the files will be saved at:
 ~/.cache/huggingface/lerobot/calibration/robots/so101_leader/my_awesome_bimanual_leader_right.json
 ```
 
-### (Optional) If You Have Previously Calibrated with Other IDs
+### （オプション）以前に別の ID でキャリブレーションしている場合
 
-For example, if you previously used `my_awesome_follower_arm1`, `my_awesome_follower_arm2`, etc., you can copy the calibration files:
+たとえば、以前に `my_awesome_follower_arm1`、`my_awesome_follower_arm2` などを使用していた場合は、キャリブレーションファイルをコピーできます：
 
 ```bash
 CAL_DIR=~/.cache/huggingface/lerobot/calibration/robots
@@ -127,9 +119,9 @@ cp $CAL_DIR/so101_leader/my_awesome_leader_arm4.json \
 
 ---
 
-## 2. Dual-Arm Teleoperation
+## 2. 両腕テレオペレーション
 
-### 2.1 Without Camera
+### 2.1 カメラなし
 
 ```bash
 lerobot-teleoperate \
@@ -144,7 +136,7 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 2.2 With Camera
+### 2.2 カメラあり
 
 ```bash
 lerobot-teleoperate \
@@ -165,19 +157,19 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-You can use `lerobot-find-cameras opencv` to view camera indexes.
+カメラインデックスを確認するには `lerobot-find-cameras opencv` を使用できます。
 
-### Safety Tips
+### 安全上のヒント
 
-- Be aware of the surroundings to avoid collisions of the follower arms.
+- フォロワーアーム同士が衝突しないよう、周囲の状況に注意してください。
 
-## 3. Record Dataset
+## 3. データセットの記録
 
-### 3.1 Save Locally (Do Not Upload to Hub)
+### 3.1 ローカルに保存（Hub にはアップロードしない）
 
-Add `--dataset.root` and `--dataset.push_to_hub=false`.
+`--dataset.root` と `--dataset.push_to_hub=false` を追加します。
 
-> Note: `repo_id` must contain `/`. For local datasets, you can use `local/` as a placeholder prefix; it will not actually upload.
+> 注意：`repo_id` には `/` を含める必要があります。ローカルデータセットの場合は、プレースホルダーの接頭辞として `local/` を使用できますが、実際にはアップロードされません。
 
 ```bash
 lerobot-record \
@@ -207,7 +199,7 @@ lerobot-record \
   --display_data=true
 ```
 
-Data will be saved to `~///bimanual_so101_task/`, structured as follows:
+データは `~///bimanual_so101_task/` に保存され、次のような構造になります：
 
 ```text
 ./datasets/bimanual_so101_task/
@@ -220,9 +212,9 @@ Data will be saved to `~///bimanual_so101_task/`, structured as follows:
 └── videos/
 ```
 
-### 3.2 Upload to Hugging Face Hub
+### 3.2 Hugging Face Hub へのアップロード
 
-If you want to upload automatically, keep `HF_USER` and remove `root` and `push_to_hub=false`:
+自動的にアップロードしたい場合は、`HF_USER` を残し、`root` と `push_to_hub=false` を削除します：
 
 ```bash
 export HF_USER=your_hf_username
@@ -253,15 +245,15 @@ lerobot-record \
   --display_data=true
 ```
 
-### 3.3 Continue Recording (Resume)
+### 3.3 記録の継続（再開）
 
-If the recording exits unexpectedly (for example, pressing the right button to exit during the reset phase), or if you want to complete the collection in multiple sessions, you can use `--resume` to continue appending episodes to the same dataset.
+記録が予期せず終了した場合（たとえばリセットフェーズ中に右ボタンを押して終了した場合）や、複数回に分けて収集を完了したい場合は、`--resume` を使用して同じデータセットにエピソードを追加し続けることができます。
 
-**Notes**:
+**注意事項**：
 
-- You must add `--resume=true`; otherwise `LeRobotDataset.create()` will report an error because the directory already exists.
-- `--dataset.num_episodes` refers to **how many episodes to record this time**, not the total target. For example, if 15 episodes have already been recorded and you want to reach 50, set it to `35`.
-- Try to exit during an episode recording or after a natural end; avoid exiting during the "Reset the environment" phase (which may cause empty episode save failures).
+- 必ず `--resume=true` を追加してください。そうしないと、ディレクトリがすでに存在するために `LeRobotDataset.create()` がエラーを報告します。
+- `--dataset.num_episodes` は**今回記録するエピソード数**を指し、目標の合計数ではありません。たとえば、すでに 15 エピソードを記録済みで、合計 50 にしたい場合は `35` に設定します。
+- できるだけエピソード記録中、または自然な終了後に終了するようにし、「環境をリセットしてください」フェーズの途中で終了することは避けてください（空のエピソード保存失敗を引き起こす可能性があります）。
 
 ```bash
 lerobot-record \
@@ -292,9 +284,9 @@ lerobot-record \
   --display_data=true
 ```
 
-### 3.4 Replay and Delete Episodes
+### 3.4 エピソードの再生と削除
 
-#### Replay a Specific Episode
+#### 特定のエピソードを再生
 
 ```bash
 lerobot-replay \
@@ -306,9 +298,9 @@ lerobot-replay \
   --dataset.episode=24
 ```
 
-> `episode` is a 0-based index, so `24` means the 25th episode.
+> `episode` は 0 始まりのインデックスなので、`24` は 25 番目のエピソードを意味します。
 
-#### Delete a Specific Episode
+#### 特定のエピソードを削除
 
 ```bash
 python -m lerobot.scripts.lerobot_edit_dataset \
@@ -317,15 +309,15 @@ python -m lerobot.scripts.lerobot_edit_dataset \
   --operation.episode_indices="[24]"
 ```
 
-After deletion, the dataset will be rewritten in place, and the original data will be backed up to `./datasets/bimanual_so101_task_old/`. After confirming the new dataset is correct, you can manually delete the backup:
+削除後、データセットはその場で書き換えられ、元のデータは `./datasets/bimanual_so101_task_old/` にバックアップされます。新しいデータセットが正しいことを確認したら、バックアップを手動で削除できます：
 
 ```bash
 rm -rf ./datasets/bimanual_so101_task_old
 ```
 
-> Note: If you are using an older version of LeRobot before the fix, pointing `--root` to the local dataset root directory may fail due to path parsing errors. The `lerobot_edit_dataset.py` in the current project has been fixed for this scenario.
+> 注意: 修正前の古いバージョンの LeRobot を使用している場合、`--root` をローカルのデータセットのルートディレクトリに指定すると、パス解析エラーにより失敗する可能性があります。現在のプロジェクトに含まれる `lerobot_edit_dataset.py` は、この状況に対応するよう修正されています。
 
-#### Delete the Entire Dataset
+#### データセット全体を削除する
 
 ```bash
 rm -rf ./datasets/bimanual_so101_task
@@ -333,9 +325,9 @@ rm -rf ./datasets/bimanual_so101_task
 
 ---
 
-## 4. ACT Training
+## 4. ACT の学習
 
-### 4.1 Train from Local Dataset
+### 4.1 ローカルデータセットから学習する
 
 ```bash
 lerobot-train \
@@ -348,7 +340,7 @@ lerobot-train \
   --policy.push_to_hub=false
 ```
 
-### 4.2 Train from Hugging Face Hub
+### 4.2 Hugging Face Hub から学習する
 
 ```bash
 export HF_USER=your_hf_username
@@ -363,13 +355,13 @@ lerobot-train \
   --policy.push_to_hub=false
 ```
 
-> The above uses ACT's default parameters (`chunk_size=100`, `dim_model=512`, etc.). If the dataset is small (for example, fewer than 50 episodes), you can explicitly reduce the model size to lower the risk of overfitting, e.g. `--policy.chunk_size=50 --policy.dim_model=256 --batch_size=16 --steps=30000`.
+> 上記は ACT のデフォルトパラメータ（`chunk_size=100`、`dim_model=512` など）を使用しています。データセットが小さい場合（例えば 50 エピソード未満）、モデルサイズを明示的に小さくして過学習のリスクを下げることができます。例: `--policy.chunk_size=50 --policy.dim_model=256 --batch_size=16 --steps=30000`。
 
 ---
 
-## 5. Real-Robot Deployment
+## 5. 実機ロボットへのデプロイ
 
-### 5.1 Save Evaluation Data Locally
+### 5.1 評価データをローカルに保存する
 
 ```bash
 lerobot-record \
@@ -394,7 +386,7 @@ lerobot-record \
   --display_data=true
 ```
 
-### 5.2 Upload to Hugging Face Hub
+### 5.2 Hugging Face Hub にアップロードする
 
 ```bash
 export HF_USER=your_hf_username
@@ -424,13 +416,13 @@ lerobot-record \
 ## 6. FAQ
 
 
-| Problem                                                                   | Cause                                                                         | Solution                                                                                                                                                                 |
+| 問題                                                                      | 原因                                                                            | 解決策                                                                                                                                                                   |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Teleoperation prompts to recalibrate                                      | `bi_so_follower` cannot find calibration files with `_left` / `_right` suffix | Recalibrate with IDs containing`_left` / `_right`, or copy existing calibration files                                                                                    |
-| Leader arm cannot be moved by hand                                        | Leader torque is not disabled                                                 | Recalibrate or check the motors                                                                                                                                          |
-| "Directory already exists" when continuing recording                      | `--resume=true` was not added                                                 | Add`--resume=true` to the `lerobot-record` command                                                                                                                       |
-| Left and right arms are swapped                                           | Port configuration error                                                      | Swap`left_arm_config.port` and `right_arm_config.port`                                                                                                                   |
-| Dataset not found during training                                         | `root` was not specified for the local dataset                                | Add`--dataset.root=./datasets/xxx` during training                                                                                                                       |
-| Dataset is uploaded automatically                                         | `push_to_hub=false` was not set                                               | Add`--dataset.push_to_hub=false` during recording                                                                                                                        |
-| Exits with`You must add one or several frames before calling add_episode` | Exited during the reset phase, the current episode has no frames              | Does not affect already recorded data; continue recording with`--resume=true`; the current code has fixed this scenario and empty episodes will be automatically skipped |
+| テレオペレーションで再キャリブレーションを求められる                     | `bi_so_follower` が `_left` / `_right` サフィックス付きのキャリブレーションファイルを見つけられない | `_left` / `_right` を含む ID で再キャリブレーションするか、既存のキャリブレーションファイルをコピーする                                                                |
+| リーダーアームを手で動かせない                                            | リーダーのトルクが無効化されていない                                           | 再キャリブレーションするか、モーターを確認する                                                                                                                           |
+| 記録を継続するときに "Directory already exists" と表示される             | `--resume=true` が追加されていない                                             | `lerobot-record` コマンドに `--resume=true` を追加する                                                                                                                   |
+| 左右のアームが入れ替わっている                                            | ポート設定の誤り                                                                | `left_arm_config.port` と `right_arm_config.port` を入れ替える                                                                                                          |
+| 学習中にデータセットが見つからない                                        | ローカルデータセットの `root` が指定されていない                               | 学習時に `--dataset.root=./datasets/xxx` を追加する                                                                                                                      |
+| データセットが自動的にアップロードされる                                  | `push_to_hub=false` が設定されていない                                         | 記録時に `--dataset.push_to_hub=false` を追加する                                                                                                                        |
+| `You must add one or several frames before calling add_episode` で終了する | リセットフェーズ中に終了したため、現在のエピソードにフレームがない             | 既に記録済みのデータには影響しません。`--resume=true` を付けて記録を続行してください。現在のコードではこの状況は修正されており、空のエピソードは自動的にスキップされます |
 |                                                                           |                                                                               |                                                                                                                                                                          |

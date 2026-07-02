@@ -1,66 +1,58 @@
 ---
-description: Guia completo para treinar SO-ARM de dois braços com LeRobot.
-title: Guia Completo para Treinar SO-ARM de Dois Braços
+description: Guia completo para treinamento de SO-ARM de dois braços com LeRobot.
+title: Guia Completo para Treinamento de SO-ARM de Dois Braços
 keywords:
   - Lerobot
   - SO-ARM
-  - Dois Braços
+  - Double Arm
   - Robotics
-  - Treinamento
-image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
+  - Training
+image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/double_soarm/Arm_kit.webp
 slug: /lerobot_double_arm_so_arm_training
+sku: 114993666,114993667
 last_update:
-  date: 6/29/2026
-  author: ZhangJiaQuan
+  date: 7/1/2026
+  author: ZhuYuan
 translation:
   skip:
     - zh-CN
 url: https://wiki.seeedstudio.com/pt-br/lerobot_double_arm_so_arm_training/
 ---
+# Guia Completo para Treinamento de SO-ARM de Dois Braços
 
-import Link from '@docusaurus/Link';
+## Introdução
 
-# Complete Guide to Double-Arm SO-ARM Training
+Este guia percorre todo o pipeline para treinar um sistema robótico SO-ARM de dois braços com o LeRobot. Ele abrange a configuração de hardware, calibração dos braços, teleoperação de dois braços, gravação e gerenciamento de conjuntos de dados, treinamento de política ACT e implantação no robô real. Seguindo estas etapas, você pode coletar dados de demonstração com dois braços líderes e dois braços seguidores, treinar uma política de aprendizado por imitação e implantá-la no robô real.
 
-## Introduction
-
-This guide walks through the complete pipeline for training a dual-arm SO-ARM robotic system with LeRobot. It covers hardware setup, arm calibration, dual-arm teleoperation, dataset recording and management, ACT policy training, and real-robot deployment. By following these steps, you can collect demonstration data with two leader arms and two follower arms, train an imitation-learning policy, and deploy it on the real robot.
-
-First, connect the wires as follows.
+Primeiro, conecte os cabos da seguinte forma.
 
 
-| Role               | Port           |
+| Função             | Porta          |
 | ------------------ | -------------- |
-| Left follower arm  | `/dev/ttyACM0` |
-| Right follower arm | `/dev/ttyACM1` |
-| Left leader arm    | `/dev/ttyACM2` |
-| Right leader arm   | `/dev/ttyACM3` |
+| Braço seguidor esquerdo  | `/dev/ttyACM0` |
+| Braço seguidor direito | `/dev/ttyACM1` |
+| Braço líder esquerdo    | `/dev/ttyACM2` |
+| Braço líder direito   | `/dev/ttyACM3` |
 
-The follower arm type is `so101_follower`, and the leader arm type is `so101_leader` (in LeRobot, `so100_leader` and `so101_leader` share the same implementation).
+O tipo de braço seguidor é `so101_follower`, e o tipo de braço líder é `so101_leader` (no LeRobot, `so100_leader` e `so101_leader` compartilham a mesma implementação).
 
 ---
 
-## 0. Prerequisites
+## 0. Pré-requisitos
 
-### 0.1 Install Dependencies
+### 0.1 Instalar Dependências
 
-Para configuração do ambiente, consulte o tutorial SO-ARM:
+Consulte os links relacionados.
 
-<div style={{textAlign: 'center'}}>
-    <Link to="/pt-br/lerobot_so100m_new/#install-lerobot" style={{display: 'inline-block', width: 'auto', height: '40px', lineHeight: '40px', padding: '0 24px', whiteSpace: 'nowrap', backgroundColor: '#1eff00', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
-        ▶ Ir para Configuração do Ambiente
-    </Link>
-</div>
-
-### 0.2 USB Permissions
+### 0.2 Permissões USB
 
 ```bash
 sudo chmod 666 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3 /dev/ttyACM4
 ```
 
-## 1. Calibration (Key Step)
+## 1. Calibração (Etapa Chave)
 
-### 1.1 Calibrate the Left Follower Arm
+### 1.1 Calibrar o Braço Seguidor Esquerdo
 
 ```bash
 lerobot-calibrate \
@@ -69,7 +61,7 @@ lerobot-calibrate \
   --robot.id=my_awesome_bimanual_follower_left
 ```
 
-### 1.2 Calibrate the Right Follower Arm
+### 1.2 Calibrar o Braço Seguidor Direito
 
 ```bash
 lerobot-calibrate \
@@ -78,7 +70,7 @@ lerobot-calibrate \
   --robot.id=my_awesome_bimanual_follower_right
 ```
 
-### 1.3 Calibrate the Left Leader Arm
+### 1.3 Calibrar o Braço Líder Esquerdo
 
 ```bash
 lerobot-calibrate \
@@ -87,7 +79,7 @@ lerobot-calibrate \
   --teleop.id=my_awesome_bimanual_leader_left
 ```
 
-### 1.4 Calibrate the Right Leader Arm
+### 1.4 Calibrar o Braço Líder Direito
 
 ```bash
 lerobot-calibrate \
@@ -96,7 +88,7 @@ lerobot-calibrate \
   --teleop.id=my_awesome_bimanual_leader_right
 ```
 
-After calibration, the files will be saved at:
+Após a calibração, os arquivos serão salvos em:
 
 ```text
 ~/.cache/huggingface/lerobot/calibration/robots/so101_follower/my_awesome_bimanual_follower_left.json
@@ -105,9 +97,9 @@ After calibration, the files will be saved at:
 ~/.cache/huggingface/lerobot/calibration/robots/so101_leader/my_awesome_bimanual_leader_right.json
 ```
 
-### (Optional) If You Have Previously Calibrated with Other IDs
+### (Opcional) Se Você Já Tiver Calibrado com Outros IDs
 
-For example, if you previously used `my_awesome_follower_arm1`, `my_awesome_follower_arm2`, etc., you can copy the calibration files:
+Por exemplo, se você usou anteriormente `my_awesome_follower_arm1`, `my_awesome_follower_arm2`, etc., você pode copiar os arquivos de calibração:
 
 ```bash
 CAL_DIR=~/.cache/huggingface/lerobot/calibration/robots
@@ -127,9 +119,9 @@ cp $CAL_DIR/so101_leader/my_awesome_leader_arm4.json \
 
 ---
 
-## 2. Dual-Arm Teleoperation
+## 2. Teleoperação de Dois Braços
 
-### 2.1 Without Camera
+### 2.1 Sem Câmera
 
 ```bash
 lerobot-teleoperate \
@@ -144,7 +136,7 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 2.2 With Camera
+### 2.2 Com Câmera
 
 ```bash
 lerobot-teleoperate \
@@ -165,19 +157,19 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-You can use `lerobot-find-cameras opencv` to view camera indexes.
+Você pode usar `lerobot-find-cameras opencv` para visualizar os índices das câmeras.
 
-### Safety Tips
+### Dicas de Segurança
 
-- Be aware of the surroundings to avoid collisions of the follower arms.
+- Esteja atento ao ambiente ao redor para evitar colisões dos braços seguidores.
 
-## 3. Record Dataset
+## 3. Gravar Conjunto de Dados
 
-### 3.1 Save Locally (Do Not Upload to Hub)
+### 3.1 Salvar Localmente (Não Enviar para o Hub)
 
-Add `--dataset.root` and `--dataset.push_to_hub=false`.
+Adicione `--dataset.root` e `--dataset.push_to_hub=false`.
 
-> Note: `repo_id` must contain `/`. For local datasets, you can use `local/` as a placeholder prefix; it will not actually upload.
+> Observação: `repo_id` deve conter `/`. Para conjuntos de dados locais, você pode usar `local/` como um prefixo de espaço reservado; isso não fará upload de fato.
 
 ```bash
 lerobot-record \
@@ -207,7 +199,7 @@ lerobot-record \
   --display_data=true
 ```
 
-Data will be saved to `~///bimanual_so101_task/`, structured as follows:
+Os dados serão salvos em `~///bimanual_so101_task/`, estruturados da seguinte forma:
 
 ```text
 ./datasets/bimanual_so101_task/
@@ -220,9 +212,9 @@ Data will be saved to `~///bimanual_so101_task/`, structured as follows:
 └── videos/
 ```
 
-### 3.2 Upload to Hugging Face Hub
+### 3.2 Enviar para o Hugging Face Hub
 
-If you want to upload automatically, keep `HF_USER` and remove `root` and `push_to_hub=false`:
+Se você quiser enviar automaticamente, mantenha `HF_USER` e remova `root` e `push_to_hub=false`:
 
 ```bash
 export HF_USER=your_hf_username
@@ -253,15 +245,15 @@ lerobot-record \
   --display_data=true
 ```
 
-### 3.3 Continue Recording (Resume)
+### 3.3 Continuar Gravação (Retomar)
 
-If the recording exits unexpectedly (for example, pressing the right button to exit during the reset phase), or if you want to complete the collection in multiple sessions, you can use `--resume` to continue appending episodes to the same dataset.
+Se a gravação for encerrada inesperadamente (por exemplo, pressionando o botão direito para sair durante a fase de reinicialização) ou se você quiser concluir a coleta em várias sessões, você pode usar `--resume` para continuar adicionando episódios ao mesmo conjunto de dados.
 
-**Notes**:
+**Observações**:
 
-- You must add `--resume=true`; otherwise `LeRobotDataset.create()` will report an error because the directory already exists.
-- `--dataset.num_episodes` refers to **how many episodes to record this time**, not the total target. For example, if 15 episodes have already been recorded and you want to reach 50, set it to `35`.
-- Try to exit during an episode recording or after a natural end; avoid exiting during the "Reset the environment" phase (which may cause empty episode save failures).
+- Você deve adicionar `--resume=true`; caso contrário, `LeRobotDataset.create()` reportará um erro porque o diretório já existe.
+- `--dataset.num_episodes` se refere a **quantos episódios gravar desta vez**, não ao total desejado. Por exemplo, se 15 episódios já foram gravados e você quer chegar a 50, defina como `35`.
+- Tente sair durante a gravação de um episódio ou após um término natural; evite sair durante a fase "Reset the environment" (o que pode causar falhas ao salvar episódios vazios).
 
 ```bash
 lerobot-record \
@@ -292,9 +284,9 @@ lerobot-record \
   --display_data=true
 ```
 
-### 3.4 Replay and Delete Episodes
+### 3.4 Reproduzir e Excluir Episódios
 
-#### Replay a Specific Episode
+#### Reproduzir um Episódio Específico
 
 ```bash
 lerobot-replay \
@@ -306,9 +298,9 @@ lerobot-replay \
   --dataset.episode=24
 ```
 
-> `episode` is a 0-based index, so `24` means the 25th episode.
+> `episode` é um índice baseado em 0, então `24` significa o 25º episódio.
 
-#### Delete a Specific Episode
+#### Excluir um Episódio Específico
 
 ```bash
 python -m lerobot.scripts.lerobot_edit_dataset \
@@ -317,15 +309,15 @@ python -m lerobot.scripts.lerobot_edit_dataset \
   --operation.episode_indices="[24]"
 ```
 
-After deletion, the dataset will be rewritten in place, and the original data will be backed up to `./datasets/bimanual_so101_task_old/`. After confirming the new dataset is correct, you can manually delete the backup:
+Após a exclusão, o conjunto de dados será reescrito no local, e os dados originais serão copiados para `./datasets/bimanual_so101_task_old/`. Depois de confirmar que o novo conjunto de dados está correto, você pode excluir o backup manualmente:
 
 ```bash
 rm -rf ./datasets/bimanual_so101_task_old
 ```
 
-> Note: If you are using an older version of LeRobot before the fix, pointing `--root` to the local dataset root directory may fail due to path parsing errors. The `lerobot_edit_dataset.py` in the current project has been fixed for this scenario.
+> Observação: Se você estiver usando uma versão mais antiga do LeRobot anterior à correção, apontar `--root` para o diretório raiz do dataset local pode falhar devido a erros de análise de caminho. O `lerobot_edit_dataset.py` no projeto atual foi corrigido para esse cenário.
 
-#### Delete the Entire Dataset
+#### Excluir todo o Dataset
 
 ```bash
 rm -rf ./datasets/bimanual_so101_task
@@ -333,9 +325,9 @@ rm -rf ./datasets/bimanual_so101_task
 
 ---
 
-## 4. ACT Training
+## 4. Treinamento ACT
 
-### 4.1 Train from Local Dataset
+### 4.1 Treinar a partir de Dataset Local
 
 ```bash
 lerobot-train \
@@ -348,7 +340,7 @@ lerobot-train \
   --policy.push_to_hub=false
 ```
 
-### 4.2 Train from Hugging Face Hub
+### 4.2 Treinar a partir do Hugging Face Hub
 
 ```bash
 export HF_USER=your_hf_username
@@ -363,13 +355,13 @@ lerobot-train \
   --policy.push_to_hub=false
 ```
 
-> The above uses ACT's default parameters (`chunk_size=100`, `dim_model=512`, etc.). If the dataset is small (for example, fewer than 50 episodes), you can explicitly reduce the model size to lower the risk of overfitting, e.g. `--policy.chunk_size=50 --policy.dim_model=256 --batch_size=16 --steps=30000`.
+> O acima utiliza os parâmetros padrão do ACT (`chunk_size=100`, `dim_model=512`, etc.). Se o dataset for pequeno (por exemplo, menos de 50 episódios), você pode reduzir explicitamente o tamanho do modelo para diminuir o risco de overfitting, por exemplo: `--policy.chunk_size=50 --policy.dim_model=256 --batch_size=16 --steps=30000`.
 
 ---
 
-## 5. Real-Robot Deployment
+## 5. Implantação em Robô Real
 
-### 5.1 Save Evaluation Data Locally
+### 5.1 Salvar Dados de Avaliação Localmente
 
 ```bash
 lerobot-record \
@@ -394,7 +386,7 @@ lerobot-record \
   --display_data=true
 ```
 
-### 5.2 Upload to Hugging Face Hub
+### 5.2 Fazer Upload para o Hugging Face Hub
 
 ```bash
 export HF_USER=your_hf_username
@@ -424,13 +416,13 @@ lerobot-record \
 ## 6. FAQ
 
 
-| Problem                                                                   | Cause                                                                         | Solution                                                                                                                                                                 |
+| Problema                                                                 | Causa                                                                         | Solução                                                                                                                                                                  |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Teleoperation prompts to recalibrate                                      | `bi_so_follower` cannot find calibration files with `_left` / `_right` suffix | Recalibrate with IDs containing`_left` / `_right`, or copy existing calibration files                                                                                    |
-| Leader arm cannot be moved by hand                                        | Leader torque is not disabled                                                 | Recalibrate or check the motors                                                                                                                                          |
-| "Directory already exists" when continuing recording                      | `--resume=true` was not added                                                 | Add`--resume=true` to the `lerobot-record` command                                                                                                                       |
-| Left and right arms are swapped                                           | Port configuration error                                                      | Swap`left_arm_config.port` and `right_arm_config.port`                                                                                                                   |
-| Dataset not found during training                                         | `root` was not specified for the local dataset                                | Add`--dataset.root=./datasets/xxx` during training                                                                                                                       |
-| Dataset is uploaded automatically                                         | `push_to_hub=false` was not set                                               | Add`--dataset.push_to_hub=false` during recording                                                                                                                        |
-| Exits with`You must add one or several frames before calling add_episode` | Exited during the reset phase, the current episode has no frames              | Does not affect already recorded data; continue recording with`--resume=true`; the current code has fixed this scenario and empty episodes will be automatically skipped |
+| A teleoperação solicita recalibração                                      | `bi_so_follower` não consegue encontrar arquivos de calibração com sufixo `_left` / `_right` | Recalibre com IDs contendo `_left` / `_right`, ou copie arquivos de calibração existentes                                                                               |
+| O braço líder não pode ser movido à mão                                   | O torque do líder não está desativado                                         | Recalibre ou verifique os motores                                                                                                                                        |
+| "Directory already exists" ao continuar a gravação                       | `--resume=true` não foi adicionado                                            | Adicione `--resume=true` ao comando `lerobot-record`                                                                                                                     |
+| Braços esquerdo e direito estão invertidos                               | Erro de configuração de porta                                                 | Troque `left_arm_config.port` e `right_arm_config.port`                                                                                                                  |
+| Dataset não encontrado durante o treinamento                             | `root` não foi especificado para o dataset local                              | Adicione `--dataset.root=./datasets/xxx` durante o treinamento                                                                                                           |
+| Dataset é enviado automaticamente                                         | `push_to_hub=false` não foi definido                                          | Adicione `--dataset.push_to_hub=false` durante a gravação                                                                                                                |
+| Sai com `You must add one or several frames before calling add_episode`  | Saiu durante a fase de reset, o episódio atual não possui frames              | Não afeta os dados já gravados; continue gravando com `--resume=true`; o código atual corrigiu esse cenário e episódios vazios serão automaticamente ignorados          |
 |                                                                           |                                                                               |                                                                                                                                                                          |
