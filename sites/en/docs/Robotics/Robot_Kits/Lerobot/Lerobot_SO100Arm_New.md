@@ -16,7 +16,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-06-05'
-updatedAt: '2026-06-17'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/lerobot_so100m_new/
 ---
 
