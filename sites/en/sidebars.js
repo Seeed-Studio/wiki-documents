@@ -2150,7 +2150,25 @@ const sidebars = {
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
-        },  
+        },
+        
+                {
+          type: 'category',
+          label: 'reSpeaker Clip',
+          //collapsed: true,
+          //collapsible: true,
+          //link: {
+            //type: 'doc',
+            //id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
+         // },
+          items: [
+            
+            'Sensor/reSpeaker_clip/respeaker_clip_python_control',
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+          ],
+        }, 
         {
           type: 'category',
           label: 'Applications',
