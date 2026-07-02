@@ -15,6 +15,9 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/cn/lerobot_double_arm_so_arm_training/
 ---
+
+import Link from '@docusaurus/Link';
+
 # 双臂 SO-ARM训练完整指南
 
 ## 简介
@@ -39,7 +42,13 @@ url: https://wiki.seeedstudio.com/cn/lerobot_double_arm_so_arm_training/
 
 ### 0.1 安装依赖
 
-跳转相关链接
+环境安装请参考 SO-ARM 教程：
+
+<div style={{textAlign: 'center'}}>
+    <Link to="/cn/lerobot_so100m_new/#安装-lerobot" style={{display: 'inline-block', width: 'auto', height: '40px', lineHeight: '40px', padding: '0 24px', whiteSpace: 'nowrap', backgroundColor: '#1eff00', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
+        ▶ 跳转至环境安装
+    </Link>
+</div>
 
 ### 0.2 USB 权限
 

@@ -18,6 +18,9 @@ translation:
     - zh-CN
 url: https://wiki.seeedstudio.com/es/lerobot_double_arm_so_arm_training/
 ---
+
+import Link from '@docusaurus/Link';
+
 # Guía Completa para el Entrenamiento de SO-ARM de Doble Brazo
 
 ## Introducción
@@ -27,7 +30,7 @@ Esta guía recorre todo el flujo para entrenar un sistema robótico SO-ARM de do
 Primero, conecta los cables de la siguiente manera.
 
 
-| Rol               | Puerto         |
+| Rol                | Puerto         |
 | ------------------ | -------------- |
 | Brazo seguidor izquierdo  | `/dev/ttyACM0` |
 | Brazo seguidor derecho | `/dev/ttyACM1` |
@@ -42,7 +45,13 @@ El tipo de brazo seguidor es `so101_follower`, y el tipo de brazo líder es `so1
 
 ### 0.1 Instalar dependencias
 
-Consulta los enlaces relacionados.
+Para la configuración del entorno, consulta el tutorial de SO-ARM:
+
+<div style={{textAlign: 'center'}}>
+    <Link to="/lerobot_so100m_new/#instalar-lerobot" style={{display: 'inline-block', width: 'auto', height: '40px', lineHeight: '40px', padding: '0 24px', whiteSpace: 'nowrap', backgroundColor: '#1eff00', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
+        ▶ Ir a la configuración del entorno
+    </Link>
+</div>
 
 ### 0.2 Permisos USB
 
@@ -97,9 +106,9 @@ Después de la calibración, los archivos se guardarán en:
 ~/.cache/huggingface/lerobot/calibration/robots/so101_leader/my_awesome_bimanual_leader_right.json
 ```
 
-### (Opcional) Si has calibrado previamente con otros IDs
+### (Opcional) Si has calibrado previamente con otros ID
 
-Por ejemplo, si anteriormente usaste `my_awesome_follower_arm1`, `my_awesome_follower_arm2`, etc., puedes copiar los archivos de calibración:
+Por ejemplo, si antes usaste `my_awesome_follower_arm1`, `my_awesome_follower_arm2`, etc., puedes copiar los archivos de calibración:
 
 ```bash
 CAL_DIR=~/.cache/huggingface/lerobot/calibration/robots
@@ -253,7 +262,7 @@ Si la grabación se cierra inesperadamente (por ejemplo, al pulsar el botón der
 
 - Debes añadir `--resume=true`; de lo contrario, `LeRobotDataset.create()` dará un error porque el directorio ya existe.
 - `--dataset.num_episodes` se refiere a **cuántos episodios grabar esta vez**, no al objetivo total. Por ejemplo, si ya se han grabado 15 episodios y quieres llegar a 50, configúralo en `35`.
-- Intenta salir durante la grabación de un episodio o después de un final natural; evita salir durante la fase de "Reset the environment" (lo que puede provocar fallos al guardar episodios vacíos).
+- Intenta salir durante la grabación de un episodio o después de un final natural; evita salir durante la fase de "Reset the environment" (lo que puede causar fallos al guardar episodios vacíos).
 
 ```bash
 lerobot-record \
@@ -298,7 +307,7 @@ lerobot-replay \
   --dataset.episode=24
 ```
 
-> `episode` es un índice basado en 0, por lo que `24` significa el episodio 25.
+> `episode` es un índice basado en 0, por lo que `24` significa el episodio número 25.
 
 #### Eliminar un episodio específico
 
@@ -309,15 +318,15 @@ python -m lerobot.scripts.lerobot_edit_dataset \
   --operation.episode_indices="[24]"
 ```
 
-Después de la eliminación, el conjunto de datos se reescribirá en el mismo lugar, y los datos originales se respaldarán en `./datasets/bimanual_so101_task_old/`. Después de confirmar que el nuevo conjunto de datos es correcto, puedes eliminar manualmente la copia de seguridad:
+Después de la eliminación, el conjunto de datos se reescribirá en el mismo lugar y los datos originales se respaldarán en `./datasets/bimanual_so101_task_old/`. Después de confirmar que el nuevo conjunto de datos es correcto, puedes eliminar manualmente la copia de seguridad:
 
 ```bash
 rm -rf ./datasets/bimanual_so101_task_old
 ```
 
-> Nota: Si estás usando una versión antigua de LeRobot anterior a la corrección, apuntar `--root` al directorio raíz del conjunto de datos local puede fallar debido a errores de análisis de rutas. El `lerobot_edit_dataset.py` en el proyecto actual ha sido corregido para este escenario.
+> Nota: si estás usando una versión antigua de LeRobot anterior a la corrección, apuntar `--root` al directorio raíz del dataset local puede fallar debido a errores de análisis de rutas. El `lerobot_edit_dataset.py` en el proyecto actual ha sido corregido para este escenario.
 
-#### Eliminar todo el conjunto de datos
+#### Eliminar todo el dataset
 
 ```bash
 rm -rf ./datasets/bimanual_so101_task
@@ -327,7 +336,7 @@ rm -rf ./datasets/bimanual_so101_task
 
 ## 4. Entrenamiento ACT
 
-### 4.1 Entrenar desde un conjunto de datos local
+### 4.1 Entrenar desde un dataset local
 
 ```bash
 lerobot-train \
@@ -355,7 +364,7 @@ lerobot-train \
   --policy.push_to_hub=false
 ```
 
-> Lo anterior usa los parámetros predeterminados de ACT (`chunk_size=100`, `dim_model=512`, etc.). Si el conjunto de datos es pequeño (por ejemplo, menos de 50 episodios), puedes reducir explícitamente el tamaño del modelo para disminuir el riesgo de sobreajuste, por ejemplo `--policy.chunk_size=50 --policy.dim_model=256 --batch_size=16 --steps=30000`.
+> Lo anterior usa los parámetros predeterminados de ACT (`chunk_size=100`, `dim_model=512`, etc.). Si el dataset es pequeño (por ejemplo, menos de 50 episodios), puedes reducir explícitamente el tamaño del modelo para disminuir el riesgo de sobreajuste, por ejemplo `--policy.chunk_size=50 --policy.dim_model=256 --batch_size=16 --steps=30000`.
 
 ---
 
@@ -416,13 +425,13 @@ lerobot-record \
 ## 6. Preguntas frecuentes
 
 
-| Problema                                                                 | Causa                                                                          | Solución                                                                                                                                                                 |
+| Problema                                                                  | Causa                                                                         | Solución                                                                                                                                                                 |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | La teleoperación solicita recalibrar                                      | `bi_so_follower` no puede encontrar archivos de calibración con sufijo `_left` / `_right` | Recalibra con IDs que contengan `_left` / `_right`, o copia los archivos de calibración existentes                                                                      |
-| El brazo líder no se puede mover a mano                                   | El par del líder no está deshabilitado                                        | Recalibra o revisa los motores                                                                                                                                           |
+| El brazo líder no se puede mover a mano                                   | El par del líder no está deshabilitado                                       | Vuelve a calibrar o revisa los motores                                                                                                                                   |
 | "Directory already exists" al continuar la grabación                     | No se añadió `--resume=true`                                                  | Añade `--resume=true` al comando `lerobot-record`                                                                                                                        |
-| Los brazos izquierdo y derecho están intercambiados                       | Error de configuración de puertos                                             | Intercambia `left_arm_config.port` y `right_arm_config.port`                                                                                                            |
-| Conjunto de datos no encontrado durante el entrenamiento                  | No se especificó `root` para el conjunto de datos local                       | Añade `--dataset.root=./datasets/xxx` durante el entrenamiento                                                                                                           |
-| El conjunto de datos se sube automáticamente                              | No se estableció `push_to_hub=false`                                          | Añade `--dataset.push_to_hub=false` durante la grabación                                                                                                                 |
-| Sale con `You must add one or several frames before calling add_episode`  | Se salió durante la fase de reinicio, el episodio actual no tiene frames      | No afecta a los datos ya grabados; continúa grabando con `--resume=true`; el código actual ha corregido este escenario y los episodios vacíos se omitirán automáticamente |
+| Los brazos izquierdo y derecho están intercambiados                      | Error de configuración de puertos                                             | Intercambia `left_arm_config.port` y `right_arm_config.port`                                                                                                            |
+| No se encuentra el dataset durante el entrenamiento                      | No se especificó `root` para el dataset local                                 | Añade `--dataset.root=./datasets/xxx` durante el entrenamiento                                                                                                           |
+| El dataset se sube automáticamente                                       | No se estableció `push_to_hub=false`                                          | Añade `--dataset.push_to_hub=false` durante la grabación                                                                                                                 |
+| Sale con `You must add one or several frames before calling add_episode` | Se salió durante la fase de reinicio, el episodio actual no tiene frames      | No afecta a los datos ya grabados; continúa grabando con `--resume=true`; el código actual ha corregido este escenario y los episodios vacíos se omitirán automáticamente |
 |                                                                           |                                                                               |                                                                                                                                                                          |
