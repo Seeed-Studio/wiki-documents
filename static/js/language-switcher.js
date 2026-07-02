@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-30 14:44:34 (北京时间)
-// 多语言页面: 2357 个
+// 生成时间: 2026-07-01 17:44:37 (北京时间)
+// 多语言页面: 2360 个
 
 (function() {
   'use strict';
@@ -1571,6 +1571,13 @@
     "pt"
   ],
   "/jetson_developtool_supported_devices": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/em12_g_gnss_module_for_recomputer_robotics_j3011": [
     "cn",
     "en",
     "es",
@@ -5525,6 +5532,13 @@
     "ja",
     "pt"
   ],
+  "/lerobot_double_arm_so_arm_training": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor": [
     "cn",
     "en",
@@ -8220,6 +8234,13 @@
     "pt"
   ],
   "/reterminal_e10xx_trmnl": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_work_with_zephyr": [
     "cn",
     "en",
     "es",

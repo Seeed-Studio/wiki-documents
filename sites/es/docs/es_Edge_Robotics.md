@@ -154,6 +154,10 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
                   <span className="text">Herramienta de Depuración de Engranajes de Dirección</span>
                   <span className="tag recommended">Nuevo</span>
               </a>
+              <a href="/es/lerobot_double_arm_so_arm_training/" className="content-card">
+                  <span className="text">Guía Completa para el Entrenamiento de SO-ARM de Doble Brazo</span>
+                  <span className="tag recommended">Nuevo</span>
+              </a>
           </div>
 
           <h3>🚗 Lekiwi</h3>
@@ -162,7 +166,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
                 <span className="text">Base Móvil Lekiwi</span>
               </a>
               <a href="/es/sound_follow_robot/" className="content-card">
-                <span className="text">Seguimiento de Sonido de Lekiwi</span>
+                <span className="text">Lekiwi Seguidor de Sonido</span>
               </a>
           </div>
 
@@ -200,7 +204,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
           <h3>🦀 Efectores Finales</h3>
           <div className="card-container">
               <a href="/es/dm_gripper/" className="content-card">
-                <span className="text">Pinza DM</span>
+                <span className="text">DM Gripper</span>
                 <span className="tag recommended">Nuevo</span>
               </a>
           </div>
@@ -215,25 +219,25 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
 
       <div className="card-container">
           <a href="/es/myactuator_series/" className="content-card">
-            <span className="text">MyActuator Serie X</span>
+            <span className="text">MyActuator X Serie</span>
           </a>
           <a href="/es/damiao_series/" className="content-card">
-            <span className="text">Damiao Serie DM43</span>
+            <span className="text">Damiao DM43 Serie</span>
           </a>
           <a href="/es/feetech_servo/" className="content-card">
-            <span className="text">Servo Feetech STS3215</span>
+            <span className="text">Feetech STS3215 Servo</span>
           </a>
           <a href="/es/hightorque_control" className="content-card">
-            <span className="text">Serie HighTorque</span>
+            <span className="text">HighTorque Serie</span>
           </a>
           <a href="/es/fashionstar_servo/" className="content-card">
-            <span className="text">Serie Fashionstar</span>
+            <span className="text">Fashionstar Serie</span>
           </a>
           <a href="/es/stackforce_series/" className="content-card">
-            <span className="text">Serie Stackforce</span>
+            <span className="text">Stackforce Serie</span>
           </a>
           <a href="/es/robstride_control/" className="content-card">
-            <span className="text">Control RobStride</span>
+            <span className="text">RobStride Control</span>
             <span className="tag recommended">Nuevo</span>
           </a>
       </div>
@@ -367,11 +371,11 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <span className="text">Instalación de Isaac Lab</span>
       </a>
       <a href="/es/training_soarm101_policy_with_isaacLab/" className="content-card">
-        <span className="text">Entrenamiento SO Arm RL</span>
+        <span className="text">Entrenamiento RL de SO Arm</span>
         <span className="tag recommended">Nuevo</span>
       </a>
       <a href="/es/simulate_soarm101_by_leisaac/" className="content-card">
-        <span className="text">SO100 Arm Isaac Sim</span>
+        <span className="text">Simulación SO100 Arm Isaac</span>
         <span className="tag recommended">Nuevo</span>
       </a>
       </div>
@@ -417,7 +421,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Principiante</span> <span>⏱️ 8h</span></div>
-          <h3>Simulación de robots en ROS 1: 7 clases.</h3>
+          <h3>Simulación de robots con ROS 1: 7 clases.</h3>
           <p>	Desde el modelado hasta la navegación autónoma.</p>
           <span className="btn-start">Aprender</span>
         </div>
@@ -440,7 +444,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-moveit">MoveIt 1/2</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">Brazo principiante</span> <span>⏱️ 6h</span></div>
+          <div className="course-meta"><span className="level beg">Principiante en brazos</span> <span>⏱️ 6h</span></div>
           <h3>MoveIt 1/2</h3>
           <p>Importa un manipulador personalizado en MoveIt 1/2 e implementa cinemática directa e inversa.</p>
           <span className="btn-plan">Planificación</span>
@@ -451,7 +455,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-pinocchio">Pinocchio</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">Brazo intermedio</span> <span>⏱️ 6h</span></div>
+          <div className="course-meta"><span className="level int">Intermedio en brazos</span> <span>⏱️ 6h</span></div>
           <h3>Pinocchio</h3>
           <p>Aprende el framework de robótica Pinocchio y desarrolla tareas de cinemática y dinámica para tu propio manipulador.</p>
           <span className="btn-plan">Planificación</span>
@@ -475,7 +479,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-cover c-mujoco">MuJoCo</div>
         <div className="course-info">
           <div className="course-meta"><span className="level adv">Avanzado</span> <span>⏱️ 10h</span></div>
-          <h3>Motor físico MuJoCo</h3>
+          <h3>Motor de física MuJoCo</h3>
           <p>Modelado de dinámica y simulación para control ágil de robots.</p>
           <span className="btn-plan">Planificación</span>
         </div>
@@ -715,12 +719,12 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
   transition: all 0.2s;
 
   /* Diseño diferenciado */
-  background: #fff7ed; /* Fondo naranja extremadamente claro */
+  background: #fff7ed; /* Fondo naranja muy claro */
   color: #ea580c;      /* Texto naranja más oscuro */
   cursor: default;
 }
 
-/* Efecto hover: mantener el tono cálido, a diferencia del botón Start que invierte el color, para evitar robar la atención visual */
+/* Efecto hover: mantener el tono cálido, a diferencia del botón Start que invierte los colores, para evitar robar la atención visual */
 .course-card:hover .btn-plan {
   background: #ffedd5;
   color: #c2410c;
