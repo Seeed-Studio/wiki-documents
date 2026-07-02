@@ -17,6 +17,8 @@ translation:
   skip:
     - zh-CN
 url: https://wiki.seeedstudio.com/lerobot_double_arm_so_arm_training/
+createdAt: '2026-07-01'
+updatedAt: '2026-07-01'
 ---
 
 import Link from '@docusaurus/Link';
