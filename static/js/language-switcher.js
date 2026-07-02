@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-02 15:58:03 (北京时间)
-// 多语言页面: 2361 个
+// 生成时间: 2026-07-02 17:22:35 (北京时间)
+// 多语言页面: 2362 个
 
 (function() {
   'use strict';
@@ -829,6 +829,13 @@
     "pt"
   ],
   "/ai_robotics_distributed_llama_cpp_rpc_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/flash_preempt_rt_kernel_on_recomputer_jetson_jetpack_6_2_1": [
     "cn",
     "en",
     "es",
