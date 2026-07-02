@@ -18,6 +18,7 @@ updatedAt: '2026-02-04'
 url: https://wiki.seeedstudio.com/XIAO_IR_Mate_Smart_IR_Remote/
 ---
 
+
 # Getting Started with XIAO IR Mate Smart IR Remote (For Home Assistant)
 
 Welcome to the **XIAO IR Mate Smart IR Remote**\! This device is specially designed for Home Assistant users, aiming to provide a seamless, efficient, and integrated smart infrared remote control solution. Through this guide, you will learn how to set up the device, connect it to your home network, integrate it into Home Assistant, and unlock its full potential, from basic signal learning to advanced smart air conditioner control.
