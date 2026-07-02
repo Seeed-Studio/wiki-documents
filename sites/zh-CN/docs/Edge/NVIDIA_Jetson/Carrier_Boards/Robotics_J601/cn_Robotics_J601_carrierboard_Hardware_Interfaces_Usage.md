@@ -95,7 +95,7 @@ chmod +x test_usb_speed.sh
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
-</div]
+</div>
 
 **Step4.** 在 Windows PC 上打开设备管理器，检查分配给 reComputer J601 的 COM 端口号。它应显示在“Ports (COM & LPT)”下，名称为“Silicon Labs CP210x USB to UART Bridge (COMX)”，其中 X 为 COM 端口号。
 
