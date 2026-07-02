@@ -2147,6 +2147,13 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reSpeaker Clip',
+          items: [
+            'Sensor/reSpeaker_clip/es_respeaker_clip_python_control',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Aplicaciones',
           collapsed: true,
           collapsible: true,

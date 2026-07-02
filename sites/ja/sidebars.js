@@ -2148,6 +2148,13 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reSpeaker Clip',
+          items: [
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_python_control',
+          ],
+        },
+        {
+          type: 'category',
           label: 'アプリケーション',
           collapsed: true,
           collapsible: true,
