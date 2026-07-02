@@ -87,7 +87,7 @@ The following table intentionally keeps only the clearer parts of the current ha
     </tr>
     <tr>
       <td>Serial</td>
-      <td>2x RS-232/422/485 via DB9, 1x RS-232/422/485 via DB9, 1x RS-485 via JST 4-pin</td>
+      <td>1x RS-232/422/485 (DB9 Connector), 1x RS-485 (JST Connector)</td>
     </tr>
     <tr>
       <td>Digital I/O</td>
