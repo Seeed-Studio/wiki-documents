@@ -105,8 +105,14 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 
 :::
 
-相信你已经跟随视频完成了机械臂组装前期准备工作,接下来开始介绍写入电机ID和校准机械臂。
+相信你已经跟随视频完成了机械臂组装前期准备工作,接下来开始介绍写入电机ID和校准机械臂的步骤。
 
+
+使用请参考视频和文字教程,在控制机械臂运动之前，需要重新设置一次零点。
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1MEJV6TELk&p=1" title="Bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 ### 1.安装 Miniforge（建议）（支持 Windows\Ubuntu\macOS\Jetson\树莓派）
@@ -298,8 +304,4 @@ DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002
 ```
 
 
-使用请参考视频,在控制机械臂运动之前，需要重新设置一次零点。
 
-<div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1MEJV6TELk&p=1" title="Bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>

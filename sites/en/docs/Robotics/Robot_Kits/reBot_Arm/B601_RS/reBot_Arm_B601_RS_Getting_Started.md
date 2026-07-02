@@ -105,7 +105,14 @@ Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-A
 
 :::
 
-You should have completed the preliminary preparation for the robotic arm assembly by following the video. Next, we will introduce how to write motor IDs and calibrate the robotic arm.
+You should have completed the preliminary preparation for the robotic arm assembly by following the video. Next, we will introduce the steps for writing motor IDs and calibrating the robotic arm.
+
+
+Please refer to the video and text tutorial. Before controlling the robotic arm, you need to reset the zero point again.
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 
 
@@ -295,8 +302,3 @@ DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002
 ```
 
 
-Please refer to the video for usage. Before operating the robotic arm, you need to reset the zero point again.
-
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>

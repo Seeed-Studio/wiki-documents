@@ -4161,7 +4161,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Implement_Ethercat_communication_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Distributed_llama_cpp_RPC_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Jetson_SPI_Getting_Start',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Jetson_SPI_Getting_Start','Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Flash_PREEMPT_RT_Kernel_on_reComputer_Jetson_JetPack_6_2_1',
               ]
             },
           ]
