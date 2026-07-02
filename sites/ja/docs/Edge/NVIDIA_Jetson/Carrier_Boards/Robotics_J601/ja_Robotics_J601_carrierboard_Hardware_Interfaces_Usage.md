@@ -1,15 +1,15 @@
 ---
-description: このWikiでは、reComputer Jetson Robotics J601キャリアボードのハードウェア機能とインターフェースの使用方法について包括的に紹介します。詳細な仕様、対応モジュール、セットアップ手順、M.2、Ethernet、USB、CAN、RS485/RS232、UART、I2C、I2S、GMSL2カメラ拡張、5G、GPS など各種インターフェースの実用的な使用ガイドを網羅し、ユーザーがJ601プラットフォーム上でのロボティクス開発を素早く開始できるよう支援します。
+description: このWikiでは、reComputer Jetson Robotics J601キャリアボードのハードウェア機能とインターフェースの使用方法について包括的に紹介します。詳細な仕様、対応モジュール、セットアップ手順、M.2、Ethernet、USB、CAN、RS485/RS232、UART、I2C、I2S、GPIO、GMSL2カメラ拡張、5G、GPS など各種インターフェースの実用的な使用ガイドを網羅し、ユーザーがJ601プラットフォーム上でのロボット開発を素早く開始できるよう支援します。
 title: インターフェースの使用方法
 tags:
   - J601-Robotics キャリアボード
   - Jetson
   - AGX Thor
-  - ロボティクス
+  - Robotics
   - インターフェースの使用方法
   - インターフェース
   - ハードウェア
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg
 slug: /recomputer_jetson_robotics_j601_interfaces_usage
 sku: 100060965
 last_update:
@@ -23,26 +23,23 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Robotics J601 キャリアボード ハードウェアインターフェースの使用方法
 
-reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けに設計された高性能ロボティクスキャリアボードで、高度なエンボディドAIおよびロボット制御アプリケーションをターゲットとしています。高速 Ethernet、5G および Wi-Fi/BT モジュール用の M.2 スロット、USB 3.2 ポート、4系統の CAN（CAN FD 対応）、RS-232/485、I2C、I2S、UART、GMSL2 拡張（最大 8 台のカメラ）、ワイドレンジ DC 入力など、豊富な接続オプションを備えており、各種センサーからの複雑なデータを処理できる強力なロボットブレインとして機能します。
+reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けに設計された高性能ロボット用キャリアボードで、高度なエンボディドAIおよびロボット制御アプリケーションをターゲットとしています。4x 10GbE Ethernet、5Gおよび Wi-Fi/BT モジュール用の M.2 スロット、USB 3.2 ポート、4x CAN（CAN FD 対応）、RS-232/422/485、I2C、I2S、UART、GPIO（GPI/GPO）、GMSL2 拡張（最大8台のカメラ）、ワイドレンジDC入力など、豊富な接続オプションを備えており、さまざまなセンサーからの複雑なデータを処理できる強力なロボットブレインとして機能します。
 
 NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワークをサポートする reComputer Robotics J601 は、大規模言語モデルによる意思決定と、モーションプランニングやセンサーフュージョンといった物理ロボット制御との橋渡しを行います。自律ロボットの迅速な開発に最適で、すぐに使えるインターフェースと最適化されたAIフレームワークにより、製品化までの時間を短縮します。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg"/>
 </div>
-## インターフェースの使用方法
-
-以下では、Robotics J601 ボードの各種インターフェースとその使用方法について紹介します。
 
 ## USB
 
-Robotics J601 キャリアボードには複数の USB ポートが搭載されており、高速な周辺機器接続用の USB 3.2 Type-A ポート（ホスト）、フラッシュ用の USB 3.0 Type-C ポートが 1 つ、デバイスモード/デバッグ用の USB 2.0 Type-C ポートが 1 つ含まれます。
+Robotics J601 キャリアボードには複数の USB ポートが搭載されており、高速な周辺機器接続用に 4x USB 3.2 Type-A ポート（ホスト、10Gbps）、リカバリ/フラッシュ用に 1x USB 3.2 Type-C ポート（J4）、デバイスモード/デバッグ用に 1x USB 2.0 Type-C ポート（J3）が用意されています。
 
 ### USB 3.2 スピードテスト
 
-USB 3.0 フラッシュドライブを挿入し、その読み書き速度をテストします。実際の速度は USB ドライブ自体の性能に依存する点に注意してください。
+USB 3.0 フラッシュドライブを挿入し、その読み書き速度をテストします。実際の速度は USB ドライブ自体の性能に依存することに注意してください。
 
-テストスクリプトを作成します：
+テスト用スクリプトを作成します：
 
 ```bash
 vim test_usb_speed.sh
@@ -100,7 +97,7 @@ chmod +x test_usb_speed.sh
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
-**Step4.** Windows PC でデバイスマネージャーを開き、reComputer Super に割り当てられた COM ポート番号を確認します。"Ports (COM & LPT)" の下に "Silicon Labs CP210x USB to UART Bridge (COMX)" と表示され、X が COM ポート番号になります。
+**Step4.** Windows PC でデバイスマネージャーを開き、reComputer J601 に割り当てられた COM ポート番号を確認します。"Ports (COM & LPT)" の下に "Silicon Labs CP210x USB to UART Bridge (COMX)" と表示され、X が COM ポート番号になります。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png"/>
@@ -124,7 +121,7 @@ chmod +x test_usb_speed.sh
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug1.png"/>
 </div>
 
-**Step8.** ユーザー名とパスワードで reComputer Super にログインします。
+**Step8.** ユーザー名とパスワードを使用して reComputer J601 にログインします。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug2.png"/>
@@ -154,7 +151,7 @@ screen /dev/ttyUSB0 -b 115200
 
 ## GMSL
 
-Robotics J601 には GMSL カメラ拡張ヘッダーが搭載されており、**最大 8 台の GMSL カメラ** を同時にサポートし、マルチカメラによるロボットビジョンアプリケーションを実現できます。
+Robotics J601 には GMSL カメラ拡張ヘッダが搭載されており、**最大 8 台の GMSL カメラ** を同時にサポートし、マルチカメラのロボットビジョンアプリケーションを実現できます。
 
 ### 対応 GMSL カメラモデル
 
@@ -166,7 +163,7 @@ Robotics J601 には GMSL カメラ拡張ヘッダーが搭載されており、
 
 ### ハードウェア接続
 
-GMSL 拡張ボードを J601 キャリアボード上のカメラ拡張ヘッダーに接続し、その後 GMSL カメラを拡張ボードに接続します。
+GMSL 拡張ボードを J601 キャリアボード上のカメラ拡張ヘッダに接続し、その後 GMSL カメラを拡張ボードに接続します。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/GMSL_connect.png"/>
@@ -220,45 +217,9 @@ cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
 
 初回起動時には、ファームウェアの更新が必要になる場合があります。データストリームを開くと、カメラからの映像を確認できます。
 
-## I2S
-
-Robotics J601 は、アンプ出力およびマイク入力を備えた I2S オーディオインターフェースを提供し、音声の再生と録音が可能です。
-
-### ハードウェア接続
-
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2s_connect.png"/>
-</div>
-
-### 使用手順
-
-**Step 1.** I2S2 オーディオ MUX を設定し、テストトーン出力を行います：
-
-```bash
-# Configure I2S2 mux
-amixer -c 2 sset "I2S2 Mux" "ADMAIF1"
-
-# Play a 440Hz sine wave test tone (one iteration)
-speaker-test -D hw:2,0 -c 2 -r 48000 -t sine -f 440 -l 1
-```
-
-:::info
-`-l 1` フラグは、テストトーンが 1 回だけ再生され、その後停止することを意味します。
-:::
-
-**Step 2.** 自分のオーディオファイルを再生します：
-
-```bash
-aplay -D hw:2,0 -c 2 -r 48000 your_audio_file.wav
-```
-
-:::note
-`your_audio_file.wav` を実際のオーディオファイルへのパスに置き換えてください。オーディオファイルの形式が、指定されたサンプルレート（48000 Hz）およびチャンネル数（2）と一致していることを確認してください。
-:::
-
 ## UART
 
-Robotics J601 は、外部デバイスとのシリアル通信のために、標準 JST ヘッダー経由の UART インターフェースを提供します。
+Robotics J601 は、外部デバイスとのシリアル通信のために標準 JST ヘッダ経由の UART インターフェースを提供します。UART ポートは Jetson システム上の `/dev/ttyTHS1` に接続されており、デフォルトのボーレートは 115200 です。
 
 ### ハードウェア接続
 
@@ -303,109 +264,79 @@ python3 uart_test.py
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png"/>
 </div>
 
-## RGB
+## I2S
 
-<details>
-<summary>test_rgb.sh</summary>
+Robotics J601 は、オーディオ再生および録音用にアンプ出力とマイク入力を備えた I2S オーディオインターフェースを提供します。I2S インターフェースは J14 JST GH-1.25 コネクタから引き出されています。
 
-```bash
-#!/bin/bash
+### ピン定義
 
-# ==============================================================================
-# Script Name: test_rgb.sh
-# Target Platform: Seeed reComputer J601 (Jetson)
-# Description: Automatically tests RGB LEDs by lighting up Red, Green, Blue, 
-#              and White colors sequentially for 1 second each.
-# Usage: sudo ./test_rgb.sh
-# ==============================================================================
+| Pin # | モジュールピン名 | モジュールピン # | 用途/説明 | 種別/方向 |
+| --- | --- | --- | --- | --- |
+| 1 | - | - | 3V3 電源 | Power |
+| 2 | I2S2_DIN | F6 | I2S2 オーディオポート 2 データ入力（1.8V から 3.3V へレベルシフト） | Input |
+| 3 | I2S2_FS | E4 | I2S2 オーディオポート 2 左右クロック（1.8V から 3.3V へレベルシフト） | Bidir |
+| 4 | I2S2_CLK | G4 | I2S2 オーディオポート 2 クロック（1.8V から 3.3V へレベルシフト） | Bidir |
+| 5 | I2S2_DOUT | F5 | I2S2 オーディオポート 2 データ出力（1.8V から 3.3V へレベルシフト） | Output |
+| 6 | - | - | グラウンド | Ground |
 
-# Define LED paths
-LED_DIR="/sys/class/leds"
-RED="$LED_DIR/red/brightness"
-GREEN="$LED_DIR/green/brightness"
-BLUE="$LED_DIR/blue/brightness"
+### ハードウェア接続
 
-# Check if running as root (sysfs write access requires root privileges)
-if [ "$EUID" -ne 0 ]; then
-    echo "Error: Please run this script with sudo!"
-    echo "Example: sudo $0"
-    exit 1
-fi
-
-# Check if the hardware paths exist
-if [ ! -d "$LED_DIR/red" ] || [ ! -d "$LED_DIR/green" ] || [ ! -d "$LED_DIR/blue" ]; then
-    echo "Error: RGB LED hardware paths not found. Please check your driver or device model."
-    exit 1
-fi
-
-# Helper function: Control LED states
-# Arguments: set_leds <Red(0/1)> <Green(0/1)> <Blue(0/1)>
-set_leds() {
-    echo "$1" > "$RED"
-    echo "$2" > "$GREEN"
-    echo "$3" > "$BLUE"
-}
-
-echo "========================================"
-echo "         Starting Jetson RGB LED Test    "
-echo "========================================"
-
-# 1. Initialization: Turn off all LEDs
-echo "-> Initializing: Turning off all LEDs"
-set_leds 0 0 0
-sleep 0.5
-
-# 2. Red LED on for 1 second
-echo "-> [ON] Red Light"
-set_leds 1 0 0
-sleep 1
-
-# 3. Green LED on for 1 second
-echo "-> [ON] Green Light"
-set_leds 0 1 0
-sleep 1
-
-# 4. Blue LED on for 1 second
-echo "-> [ON] Blue Light"
-set_leds 0 0 1
-sleep 1
-
-# 5. Mixed White LED on for 1 second (Red + Green + Blue mixed)
-echo "-> [ON] White Light (RGB Mixed)"
-set_leds 1 1 1
-sleep 1
-
-# 6. Test completed, turn off all LEDs
-echo "-> Test completed: Turning off all LEDs"
-set_leds 0 0 0
-
-echo "========================================"
-echo "             LED Test Ended             "
-echo "========================================"
-```
-
-</details>
-
-```bash
-sudo chmod +x test_rgb.sh
-sudo ./test_rgb.sh
-```
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/grb.gif"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2s_connect.png"/>
 </div>
+
+### 使用手順
+
+**Step 1.** I2S2 オーディオ MUX を設定し、テストトーン出力を行います：
+
+```bash
+# Configure I2S2 mux
+amixer -c 2 sset "I2S2 Mux" "ADMAIF1"
+
+# Play a 440Hz sine wave test tone (one iteration)
+speaker-test -D hw:2,0 -c 2 -r 48000 -t sine -f 440 -l 1
+```
+
+:::info
+`-l 1` フラグは、テストトーンが一度だけ再生され、その後停止することを意味します。
+:::
+
+**ステップ 2.** 自分の音声ファイルを再生します：
+
+```bash
+aplay -D hw:2,0 -c 2 -r 48000 your_audio_file.wav
+```
+
+:::note
+`your_audio_file.wav` を実際の音声ファイルへのパスに置き換えてください。音声ファイルのフォーマットが指定されたサンプルレート（48000 Hz）とチャンネル数（2）に一致していることを確認してください。
+:::
+
 
 ## I2C
 
-Robotics J601 は標準 JST ヘッダを介して I2C インターフェースを提供しており、センサーや周辺機器を簡単に接続してシステムを拡張できます。
+Robotics J601 は J12 JST GH-1.25 コネクタ経由で I2C インターフェースを提供し、センサーや周辺機器を簡単に接続してシステムを拡張できます。
+
+### ピン定義
+
+| ピン # | モジュールピン名 | モジュールピン # | 用途/説明 | 種別/方向 |
+| --- | --- | --- | --- | --- |
+| 1 | - | - | グラウンド | Ground |
+| 2 | DP_AUX_CH2_N | E18 | I2C4_SDA_3V3 | 双方向 |
+| 3 | DP_AUX_CH2_P | E19 | I2C4_SCL_3V3 | 出力 |
+| 4 | - | - | 3V3 電源 | 電源 |
+
+:::info
+I2C コネクタは Jetson AGX Thor SoC 上の **I2C4** バスを使用します。
+:::
 
 ### ハードウェア接続
 
 I2C デバイスをキャリアボード上の I2C インターフェースに接続します：
 
-- 電源 → 電源
-- SDA → SDA
-- SCL → SCL
-- GND → GND
+- Ground → Ground（ピン 1）
+- SDA → SDA（ピン 2）
+- SCL → SCL（ピン 3）
+- Power → 3V3（ピン 4）
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_connect.png"/>
@@ -413,14 +344,14 @@ I2C デバイスをキャリアボード上の I2C インターフェースに�
 
 ### 使用手順
 
-**Step 1.** I2C テストツールをインストールします：
+**ステップ 1.** I2C テストツールをインストールします：
 
 ```bash
 sudo apt update
 sudo apt-get install i2c-tools
 ```
 
-**Step 2.** I2C バスのマッピングを確認します：
+**ステップ 2.** I2C バスのマッピングを表示します：
 
 ```bash
 i2cdetect -l
@@ -430,7 +361,7 @@ i2cdetect -l
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c1.PNG"/>
 </div>
 
-**Step 3.** I2C バス上のデバイスをスキャンします：
+**ステップ 3.** I2C バス上のデバイスをスキャンします：
 
 ```bash
 sudo i2cdetect -y -r 1
@@ -440,7 +371,7 @@ sudo i2cdetect -y -r 1
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c2.png"/>
 </div>
 
-**Step 4.** I2C デバイスからレジスタを読み取ります。例えば、バス `i2c-1` 上のアドレス `0x58` のデバイスからレジスタ `0x00` を読み取るには：
+**ステップ 4.** I2C デバイスからレジスタを読み取ります。例えば、バス `i2c-1` 上のアドレス `0x58` のデバイスからレジスタ `0x00` を読み取るには：
 
 ```bash
 sudo i2cget -y 1 0x58 0x00
@@ -450,9 +381,114 @@ sudo i2cget -y 1 0x58 0x00
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c3.png"/>
 </div>
 
+## GPIO (GPI/GPO)
+
+Robotics J601 は 2 つの JST GH-1.25 コネクタを介してデジタル GPIO インターフェースを提供します：4 つの入力チャネルを持つ **GPI（汎用入力）** コネクタ J20 と、4 つの出力チャネルを持つ **GPO（汎用出力）** コネクタ J14 です。すべての GPIO 信号は 1.8V（SoC ドメイン）から 3.3V にレベルシフトされており、標準的な 3.3V センサーや周辺機器と直接互換性があります。
+
+### ピン定義
+
+#### GPI コネクタ - J20（入力）
+
+| ピン # | モジュールピン名 | モジュールピン # | 用途/説明 | 種別/方向 |
+| --- | --- | --- | --- | --- |
+| 1 | - | - | 3V3 電源 | 電源 |
+| 2 | SPI2_MISO | D62 | GPI_1_3V3（1.8V から 3.3V へのレベルシフト） | 入力, 3.3V |
+| 3 | GPIO64 | J6 | GPI_2_3V3（1.8V から 3.3V へのレベルシフト） | 入力, 3.3V |
+| 4 | GPIO65 | J7 | GPI_3_3V3（1.8V から 3.3V へのレベルシフト） | 入力, 3.3V |
+| 5 | GPIO49 | G6 | GPI_4_3V3（1.8V から 3.3V へのレベルシフト） | 入力, 3.3V |
+| 6 | - | - | グラウンド | Ground |
+
+#### GPO コネクタ - J14（出力）
+
+| ピン # | モジュールピン名 | モジュールピン # | 用途/説明 | 種別/方向 |
+| --- | --- | --- | --- | --- |
+| 1 | - | - | 3V3 電源 | 電源 |
+| 2 | GPIO13 | G7 | GPO_1_3V3（1.8V から 3.3V へのレベルシフト） | 出力, 3.3V |
+| 3 | SPI2_CS0_N | D60 | GPO_2_3V3（1.8V から 3.3V へのレベルシフト） | 出力, 3.3V |
+| 4 | SPI2_CLK | E61 | GPO_3_3V3（1.8V から 3.3V へのレベルシフト） | 出力, 3.3V |
+| 5 | SPI2_MOSI | F60 | GPO_4_3V3（1.8V から 3.3V へのレベルシフト） | 出力, 3.3V |
+| 6 | - | - | グラウンド | Ground |
+
+### ハードウェア接続
+
+GH-1.25 ケーブルを使用して、GPIO デバイスをキャリアボード上の GPI または GPO コネクタに接続します：
+
+- VCC → 3V3（ピン 1）
+- Signal → GPI/GPO ピン（ピン 2–5）
+- GND → Ground（ピン 6）
+
+<!-- PLACEHOLDER_GPIO_IMAGE: ボード上の GPI（J20）および GPO（J14）コネクタを示す写真を追加 -->
+
+### 使用手順
+
+:::note
+GPI および GPO ピンには `libgpiod`（`gpioset` / `gpioget`）経由でアクセスできます。`gpioinfo` を使用して GPIO チップとライン番号を確認できます。
+:::
+
+**ステップ 1.** GPIO ユーティリティをインストールします：
+
+```bash
+sudo apt update
+sudo apt-get install gpiod
+```
+
+**ステップ 2.** 利用可能なすべての GPIO チップとラインを表示します：
+
+```bash
+gpioinfo
+```
+
+**ステップ 3.** GPI ピンを読み取ります。例えば、GPI_2（GPIO64、J20 のピン 3）を読み取るには：
+
+```bash
+# Replace <chip> and <line> with the actual GPIO chip/line numbers from gpioinfo
+gpioget <chip> <line>
+```
+
+**ステップ 4.** GPO ピンに書き込みます。例えば、GPO_1（GPIO13、J14 のピン 2）を High に設定するには：
+
+```bash
+# Replace <chip> and <line> with the actual GPIO chip/line numbers from gpioinfo
+gpioset <chip> <line>=1
+```
+
+**ステップ 5.** `gpiod` ライブラリを使用して Python スクリプト内でピンを使用します：
+
+```python
+import gpiod
+
+# Replace chip and line numbers based on your gpioinfo output
+chip = gpiod.Chip('<chip_number>')
+
+# Read GPI example
+gpi_line = chip.get_line(<gpi_line_number>)
+gpi_line.request(consumer="gpi_test", type=gpiod.LINE_REQ_DIR_IN)
+print("GPI value:", gpi_line.get_value())
+
+# Write GPO example
+gpo_line = chip.get_line(<gpo_line_number>)
+gpo_line.request(consumer="gpo_test", type=gpiod.LINE_REQ_DIR_OUT)
+gpo_line.set_value(1)  # Set high
+```
+
+<!-- PLACEHOLDER_GPIO_USAGE_IMAGE: GPIO の読み取り/書き込み結果を示す写真またはスクリーンショットを追加 -->
+
 ## CAN
 
-CAN（Controller Area Network）は、ホストコンピュータなしでマイコンやデバイス同士が通信できる堅牢な車載バス規格です。Robotics J601 は JST コネクタ経由で **4 つの CAN インターフェース**（CAN0、CAN1、CAN2、CAN3）を提供し、すべて CAN FD モードをサポートします。
+CAN（Controller Area Network）は、ホストコンピュータなしでマイコンやデバイス同士が通信できる堅牢な車載バス規格です。Robotics J601 は JST GH-1.25 コネクタを介して **4 つの CAN インターフェース**（CAN0、CAN1、CAN2、CAN3）を提供し、すべて CAN FD モードをサポートします。
+
+### CAN コネクタのピンマッピング
+
+| CAN インターフェース | コネクタ | ピン 1 | ピン 2 | ピン 3 | ピン 4 |
+| --- | --- | --- | --- | --- | --- |
+| CAN0 | J31 | Ground | CAN0_L_ISO | CAN0_H_ISO | 5V 電源 |
+| CAN1 | J30 | Ground | CAN1_L_ISO | CAN1_H_ISO | 5V 電源 |
+| CAN2 | J28 | Ground | CAN2_L_ISO | CAN2_H_ISO | 5V 電源 |
+| CAN3 | J25 | Ground | CAN3_L_ISO | CAN3_H_ISO | 5V 電源 |
+
+:::info
+4 つの CAN インターフェースはすべてアイソレートされています。各コネクタはピン 4 に 5V 電源を提供します。
+:::
 
 ### 120Ω 終端抵抗の制御
 
@@ -480,14 +516,14 @@ gpioinfo
 
 ここでは CAN0 と CAN1 間のデータ通信をデモします。
 
-**Step 1.** CAN ユーティリティをインストールします：
+**ステップ 1.** CAN ユーティリティをインストールします：
 
 ```bash
 sudo apt update
 sudo apt install can-utils -y
 ```
 
-**Step 2.** CAN インターフェースを設定します：
+**ステップ 2.** CAN インターフェースを設定します：
 
 ```bash
 sudo ip link set down can0
@@ -500,7 +536,7 @@ sudo ip link set up can0
 sudo ip link set up can1
 ```
 
-**Step 3.** 新しいターミナルを開き、CAN1 でデータを受信し、CAN0 からデータを送信します：
+**ステップ 3.** 新しいターミナルを開き、CAN1 でデータを受信し、CAN0 からデータを送信します：
 
 ```bash
 # In a new terminal, listen on CAN1
@@ -516,9 +552,9 @@ cansend can0 123#DEADBEEF
 
 ### CAN FD モード
 
-CAN FD（Flexible Data-Rate）は、クラシック CAN プロトコルを拡張し、より高いデータレートと（最大 64 バイトまでの）大きなペイロードをサポートします。
+CAN FD（Flexible Data-Rate）は、クラシック CAN プロトコルを拡張し、より高いデータレートとより大きなペイロード（最大 64 バイト）をサポートします。
 
-**Step 1.** CAN0 と CAN1 を FD モード用に設定します：
+**ステップ 1.** CAN0 と CAN1 を FD モード用に設定します：
 
 ```bash
 sudo ip link set down can0
@@ -534,7 +570,7 @@ sudo ip link set up can0
 sudo ip link set up can1
 ```
 
-**Step 2.** 新しいターミナルを開き、CAN FD 通信をテストします：
+**ステップ 2.** 新しいターミナルを開き、CAN FD 通信をテストします：
 
 ```bash
 # Listen on CAN1 with extended output
@@ -550,8 +586,8 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
 :::info
 - `5AA` / `7DF` は CAN ID です
 - `##` は CAN FD フレームを示します
-- `##` の後の数字は BRS（Bit Rate Switch）フラグで、`1` = BRS 有効 を意味します
-- その後に続くのがデータペイロードです（64 バイトの場合は最大 128 文字の 16 進数）
+- `##` の後の数字は BRS（Bit Rate Switch）フラグです：`1` = BRS 有効
+- その後に続くのがデータペイロードです（64 バイトの場合は最大 128 個の 16 進数文字）
 :::
 
 <div align="center">
@@ -560,7 +596,7 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
 
 ### CAN 包括テストスクリプト
 
-次のスクリプトは、依存関係の確認、インターフェース設定、基本的な通信検証、および 10 秒間のストレステストを含む、完全な CAN FD テストを実行します。
+次のスクリプトは、依存関係のチェック、インターフェース設定、基本的な通信検証、および 10 秒間のストレステストを含む完全な CAN FD テストを実行します。
 
 テストスクリプトを作成します：
 
@@ -678,7 +714,7 @@ rm -f /tmp/can_test_rx.log
 
 </details>
 
-スクリプトに実行権限を与え、任意の 2 つの CAN インターフェースをテストするために実行します：
+スクリプトに実行権限を付与し、任意の2つのCANインターフェースをテストするために実行します：
 
 ```bash
 chmod +x can_test.sh
@@ -691,24 +727,39 @@ chmod +x can_test.sh
 
 
 
-# RS485
+## RS485
+
+reComputer J601 キャリアボードには、J24 JST GH-1.25 4ピンコネクタから引き出された専用のアイソレートRS-485ポートが搭載されています。ピン定義は次のとおりです：
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/rs485-jstpin.png"/>
+</div>
+
+### ハードウェア接続
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/jst485-c.png"/>
+</div>
+
+ここでは、テスト用に `usb-to-rs485` を使用します：
 
 ```bash
-#Jetson 
-sudo stty -F /dev/ttyAMA10 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
+#[Jetson] Init UART: 115200 baud, 8N1, raw mode, no flow control.
+sudo stty -F /dev/ttyAMA10 115200 cs8 -cst -parenb -ixon -ixoff -crtscts raw -echo
+# [Jetson] Enable and verify RS485 mode via ioctl (TIOCSRS485 / TIOCGRS485).
 sudo python3 -c 'import os,fcntl,struct; fd=os.open("/dev/ttyAMA10",os.O_RDWR|os.O_NOCTTY); fcntl.ioctl(fd,0x542F,struct.pack("IIIIIIII",3,0,20,0,0,0,0,0)); out=bytearray(32); fcntl.ioctl(fd,0x542E,out,True); print(struct.unpack("IIIIIIII",out)); os.close(fd)'
-#(3, 0, 20, 0, 0, 0, 0, 0)
+# Verification output:(3, 0, 20, 0, 0, 0, 0, 0)
 
-#PC
+#[PC] Init USB UART with identical parameters.
 sudo stty -F /dev/ttyUSB0 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-#jetson
+#[Jetson] Listen for data.
 sudo cat /dev/ttyAMA10
-#PC
+#[PC] Send message.
 echo "hello from pc" | sudo tee /dev/ttyUSB0 >/dev/null
 
-#PC 收
+#[PC] Listen for data.
 sudo cat /dev/ttyUSB0
-#jetson
+#[Jetson] Send message.、
 echo "hello from jetson" | sudo tee /dev/ttyAMA10 >/dev/null
 ```
 
@@ -722,283 +773,300 @@ echo "hello from jetson" | sudo tee /dev/ttyAMA10 >/dev/null
 
 
 
-## DB9（RS232 / RS422 / RS485）
+## DB9 (RS232 / RS422 / RS485)
 
-Robotics J601 は、ソフトウェアで切り替え可能な 1 つの DB9 シリアルインターフェースを提供します。DB9 ポートは Jetson システム上の `/dev/ttyAMA9` に接続されており、SW3 DIP スイッチを設定することで RS232、RS422、または RS485 として構成できます。
+Robotics J601 はソフトウェアで切り替え可能な1つのDB9シリアルインターフェースを提供します。DB9ポートはJetsonシステム上の `/dev/ttyAMA9` に接続されており、SW3 DIPスイッチを設定することでRS232、RS422、RS485として構成できます。
+
+### ピン定義
+
+各DB9ピンの機能は、選択した通信モードによって異なります。アダプタを配線する前に、以下の表とコネクタ図を参照してください。
+
+<div align="center">
+  <img width="400" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png"/>
+</div>
+
+### RS485モード
+### ハードウェア構成
+
+ボード底面のスイッチを、下図のようにRS485モードに切り替えます。
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-mode.png"/>
+</div>
 
 ### ハードウェア接続
 
-各 DB9 ピンの機能は、選択した通信モードによって異なります。アダプタを配線する前に、以下の表とコネクタ図を参照してください。
-
 <div align="center">
-  <img width="600" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c.png"/>
 </div>
 
-| DB9 ピン | RS232 モード | RS422 モード | RS485 モード |
-| --- | --- | --- | --- |
-| 1 | - | TXD- (B) | Data- (B) |
-| 2 | RXD | TXD+ (A) | Data+ (A) |
-| 3 | TXD | RXD+ (A) | - |
-| 4 | - | RXD- (B) | - |
-| 5 | GND | GND | GND |
-| 6 | - | - | - |
-| 7 | RTS | - | - |
-| 8 | CTS | - | - |
-| 9 | - | - | - |
+:::tip
+RS485配線では、USB-RS485アダプタの `A/D+` をDB9ピン2に、`B/D-` をDB9ピン1に接続します。一部のUSB-RS485アダプタではA/Bのラベルが逆になっている場合があります。PCが送信していないのにJetsonがランダムなバイトを受信する場合は、AとBを入れ替えて再度テストしてください。
+:::
+
+### 通信テスト
+
+ここでは、minicom を使用してテストを行います：
+
+```bash
+# Set pin 6 on GPIO chip 3 to low level to enable the DB9 transceiver
+sudo gpioset 3 6=0
+
+# On Jetson terminal
+sudo minicom -D /dev/ttyAMA9 -b 115200
+
+# On PC terminal
+sudo minicom -D /dev/ttyACM0 -b 115200
+```
 
 :::tip
-RS485 配線では、USB-RS485 アダプタの `A/D+` を DB9 ピン 2 に、`B/D-` を DB9 ピン 1 に、`GND` を DB9 ピン 5 に接続します。一部の USB-RS485 アダプタでは A/B のラベルが逆になっている場合があります。PC が送信していないのに Jetson がランダムなバイトを受信する場合は、A と B を入れ替えて再度テストしてください。
+minicomで入力したテキストを表示するには、Local Echo 機能を有効にする必要があります。デフォルトでは、minicom はキー入力を表示しないため、これは非常によくある問題です。
+- step 1. `Ctrl+A` を押します
+- step 2. 次に `E` を押します
+
 :::
 
-### SW3 で DB9 モードを選択
+PCからJetsonへメッセージを送信するテストを行います。 
 
-SW3 は、スイッチが ON のときに各モードピンを Low にプルダウンします。言い換えると、**ON = 0**、**OFF = 1** です。
 
-| モード | 回路図上の MODE 値 (MODE_0 MODE_1 MODE_2) | SW3-1 (MODE_0) | SW3-2 (MODE_1) | SW3-3 (MODE_2) | SW3-4 (SLEW) |
-| --- | --- | --- | --- | --- | --- |
-| RS232 | `001` | ON | ON | OFF | ON 推奨 |
-| RS422 | `000` | ON | ON | ON | ON 推奨 |
-| RS422 | `100` | OFF | ON | ON | ON 推奨 |
-| RS485 | `010` | ON | OFF | ON | ON 推奨 |
-| RS485 | `110` | OFF | OFF | ON | ON 推奨 |
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c1.png"/>
+</div>
 
-:::note
-115200 bps などの低速テストでは、SW3-4 (SLEW) を ON のままにしておくことを推奨します。これによりドライバのスルーレートが制限され、長いケーブルでのノイズ低減に役立ちます。
+RS485は半二重プロトコルであるため、JetsonがRS485経由でPCに情報を送信できることをテストするには、RS485モードを有効にする必要があります。
+- step 1. `Ctrl+A` を押します
+- step 2. 次に `O` を押して設定オプションを開きます。
+
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c2.png"/>
+</div>
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c3.png"/>
+</div>
+
+最後に、JetsonからPCへメッセージを送信できるようになります。
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c4.png"/>
+</div>
+
+### RS232モード 
+
+### ハードウェア構成
+
+ボード底面のスイッチを、下図のようにRS232モードに切り替えます。
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-mode.png"/>
+</div>
+
+### ハードウェア接続
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c.png"/>
+</div>
+
+:::tip
+- TX → RX
+- RX → TX
+- GND → GND
 :::
 
-### DB9 トランシーバの有効化
+### 通信テスト
 
-DB9 ポートをテストする前に、専用の Jetson ターミナルから DB9 トランシーバを有効にしておきます：
-
-```bash
-sudo gpioset --mode=wait gpiochip3 6=0
-```
-
-テスト中はこのコマンドを実行し続けてください。テストが完了したら、このターミナルで **Enter** を押します。
-
-### RS232 モードテスト
-
-USB-RS232 アダプタを使用します。アダプタが個別の線を出している場合は、アダプタ TXD を DB9 ピン 2 (RXD)、アダプタ RXD を DB9 ピン 3 (TXD)、アダプタ GND を DB9 ピン 5 (GND) に接続します。2 つの DTE デバイス間を DB9-DB9 ケーブルで接続する場合は、通常、ヌルモデムケーブルまたはクロス接続が必要です。
-
-**ステップ 1.** SW3 を RS232 モードに設定します。
-
-| SW3-1 | SW3-2 | SW3-3 | SW3-4 |
-| --- | --- | --- | --- |
-| ON | ON | OFF | ON |
-
-**ステップ 2.** Jetson の DB9 ポートを設定します：
+ここでは、minicom を使用してテストを行います：
 
 ```bash
-sudo stty -F /dev/ttyAMA9 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
+# Set pin 6 on GPIO chip 3 to low level to enable the DB9 transceiver
+sudo gpioset 3 6=0
+
+# On Jetson terminal
+sudo minicom -D /dev/ttyAMA9 -b 115200
+
+# On PC terminal
+sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
-**ステップ 3.** PC のシリアルポートを設定します。
+:::tip
+minicomで入力したテキストを表示するには、Local Echo 機能を有効にする必要があります。デフォルトでは、minicom はキー入力を表示しないため、これは非常によくある問題です。
+- step 1. `Ctrl+A` を押します
+- step 2. 次に `E` を押します
+:::
 
-Linux の場合：
+PCからJetsonへメッセージを送信するテストを行います。 
+
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c1.png"/>
+</div>
+
+
+テストモードも有効にします。
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c2.png"/>
+</div>
+
+JetsonからPCへメッセージを送信します。
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c3.png"/>
+</div>
+
+### RS422モード
+
+### ハードウェア構成
+
+ボード底面のスイッチを、下図のようにRS422モードに切り替えます。
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-mode.png"/>
+</div>
+
+### ハードウェア接続
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c.png"/>
+</div>
+
+:::tip
+- RXD+ ←─────→  TXD+  
+- RXD- ←─────→  TXD-  
+- TXD+ ←─────→  RXD+  
+- TXD- ←─────→  RXD-
+- GND  ←─────→  GND
+:::
+
+### 通信テスト
+
+ここでは、minicom を使用してテストを行います：
 
 ```bash
-PC_DEV=/dev/ttyUSB0
-# If your adapter appears as /dev/ttyACM0, use:
-# PC_DEV=/dev/ttyACM0
+# Set pin 6 on GPIO chip 3 to low level to enable the DB9 transceiver
+sudo gpioset 3 6=0
 
-sudo stty -F $PC_DEV 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
+# On Jetson terminal
+sudo minicom -D /dev/ttyAMA9 -b 115200
+
+# On PC terminal
+sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
-macOS の場合：
+:::tip
+minicomで入力したテキストを表示するには、Local Echo 機能を有効にする必要があります。デフォルトでは、minicom はキー入力を表示しないため、これは非常によくある問題です。
+- step 1. `Ctrl+A` を押します
+- step 2. 次に `E` を押します
+:::
+
+PCからJetsonへメッセージを送信するテストを行います。 
+
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c1.png"/>
+</div>
+
+
+テストモードも有効にします。
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c2.png"/>
+</div>
+
+
+## RGB
+
+<details>
+<summary>test_rgb.sh</summary>
 
 ```bash
-ls /dev/cu.* | grep -i usb
+#!/bin/bash
 
-PC_DEV=/dev/cu.usbserial-0001
-stty -f $PC_DEV 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
+# ==============================================================================
+# Script Name: test_rgb.sh
+# Target Platform: Seeed reComputer J601 (Jetson)
+# Description: Automatically tests RGB LEDs by lighting up Red, Green, Blue, 
+#              and White colors sequentially for 1 second each.
+# Usage: sudo ./test_rgb.sh
+# ==============================================================================
+
+# Define LED paths
+LED_DIR="/sys/class/leds"
+RED="$LED_DIR/red/brightness"
+GREEN="$LED_DIR/green/brightness"
+BLUE="$LED_DIR/blue/brightness"
+
+# Check if running as root (sysfs write access requires root privileges)
+if [ "$EUID" -ne 0 ]; then
+    echo "Error: Please run this script with sudo!"
+    echo "Example: sudo $0"
+    exit 1
+fi
+
+# Check if the hardware paths exist
+if [ ! -d "$LED_DIR/red" ] || [ ! -d "$LED_DIR/green" ] || [ ! -d "$LED_DIR/blue" ]; then
+    echo "Error: RGB LED hardware paths not found. Please check your driver or device model."
+    exit 1
+fi
+
+# Helper function: Control LED states
+# Arguments: set_leds <Red(0/1)> <Green(0/1)> <Blue(0/1)>
+set_leds() {
+    echo "$1" > "$RED"
+    echo "$2" > "$GREEN"
+    echo "$3" > "$BLUE"
+}
+
+echo "========================================"
+echo "         Starting Jetson RGB LED Test    "
+echo "========================================"
+
+# 1. Initialization: Turn off all LEDs
+echo "-> Initializing: Turning off all LEDs"
+set_leds 0 0 0
+sleep 0.5
+
+# 2. Red LED on for 1 second
+echo "-> [ON] Red Light"
+set_leds 1 0 0
+sleep 1
+
+# 3. Green LED on for 1 second
+echo "-> [ON] Green Light"
+set_leds 0 1 0
+sleep 1
+
+# 4. Blue LED on for 1 second
+echo "-> [ON] Blue Light"
+set_leds 0 0 1
+sleep 1
+
+# 5. Mixed White LED on for 1 second (Red + Green + Blue mixed)
+echo "-> [ON] White Light (RGB Mixed)"
+set_leds 1 1 1
+sleep 1
+
+# 6. Test completed, turn off all LEDs
+echo "-> Test completed: Turning off all LEDs"
+set_leds 0 0 0
+
+echo "========================================"
+echo "             LED Test Ended             "
+echo "========================================"
 ```
 
-macOS で対話型ターミナルを使用するには、次のコマンドも利用できます：
+</details>
 
 ```bash
-screen $PC_DEV 115200
+sudo chmod +x test_rgb.sh
+sudo ./test_rgb.sh
 ```
-
-`screen` を終了するには **Ctrl+A**、次に **K**、次に **Y** を押します。
-
-**ステップ 4.** PC から Jetson へのテストを行います。
-
-Jetson 上で次を実行します：
-
-```bash
-sudo cat /dev/ttyAMA9
-```
-
-その後、PC からデータを送信します。
-
-Linux PC：
-
-```bash
-echo "hello from pc to db9 rs232" | sudo tee $PC_DEV >/dev/null
-```
-
-macOS：
-
-```bash
-echo "hello from mac to db9 rs232" > $PC_DEV
-```
-
-**ステップ 5.** Jetson から PC へのテストを行います。
-
-PC 上で次を実行します。
-
-Linux PC：
-
-```bash
-sudo cat $PC_DEV
-```
-
-macOS：
-
-```bash
-cat $PC_DEV
-```
-
-その後、Jetson からデータを送信します：
-
-```bash
-echo "hello from jetson db9 rs232" | sudo tee /dev/ttyAMA9 >/dev/null
-```
-
-### RS485 モードテスト
-
-USB-RS485 アダプタを使用します。アダプタの `A/D+` を DB9 ピン 2 に、`B/D-` を DB9 ピン 1 に、`GND` を DB9 ピン 5 に接続します。
-
-**ステップ 1.** SW3 を RS485 モードのいずれかに設定します。
-
-推奨設定：
-
-| SW3-1 | SW3-2 | SW3-3 | SW3-4 |
-| --- | --- | --- | --- |
-| OFF | OFF | ON | ON |
-
-代替設定：
-
-| SW3-1 | SW3-2 | SW3-3 | SW3-4 |
-| --- | --- | --- | --- |
-| ON | OFF | ON | ON |
-
-**ステップ 2.** Jetson の DB9 ポートを設定し、Linux の RS485 モードを有効にします：
-
-```bash
-sudo stty -F /dev/ttyAMA9 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-sudo python3 -c 'import os,fcntl,struct; fd=os.open("/dev/ttyAMA9",os.O_RDWR|os.O_NOCTTY); fcntl.ioctl(fd,0x542F,struct.pack("IIIIIIII",5,0,20,0,0,0,0,0)); out=bytearray(32); fcntl.ioctl(fd,0x542E,out,True); print(struct.unpack("IIIIIIII",out)); os.close(fd)'
-```
-
-期待される RS485 設定の出力は次のとおりです：
-
-```bash
-(5, 0, 20, 0, 0, 0, 0, 0)
-```
-
-**ステップ 3.** PC のシリアルポートを設定します。
-
-Linux PC：
-
-```bash
-PC_DEV=/dev/ttyUSB0
-# If your adapter appears as /dev/ttyACM0, use:
-# PC_DEV=/dev/ttyACM0
-
-sudo stty -F $PC_DEV 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-```
-
-macOS：
-
-```bash
-ls /dev/cu.* | grep -i usb
-
-PC_DEV=/dev/cu.usbserial-0001
-stty -f $PC_DEV 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-```
-
-**ステップ 4.** PC から Jetson へのテストを行います。
-
-Jetson 上で次を実行します：
-
-```bash
-sudo cat /dev/ttyAMA9
-```
-
-その後、PC からデータを送信します。
-
-Linux PC：
-
-```bash
-echo "hello from pc to db9 rs485" | sudo tee $PC_DEV >/dev/null
-```
-
-macOS：
-
-```bash
-echo "hello from mac to db9 rs485" > $PC_DEV
-```
-
-**ステップ 5.** Jetson から PC へのテストを行います。
-
-PC 上で次を実行します。
-
-Linux PC：
-
-```bash
-sudo cat $PC_DEV
-```
-
-macOS：
-
-```bash
-cat $PC_DEV
-```
-
-その後、Jetson からデータを送信します：
-
-```bash
-echo "hello from jetson db9 rs485" | sudo tee /dev/ttyAMA9 >/dev/null
-```
-
-### RS422 モードテスト
-
-USB-RS422 アダプタを使用します。アダプタの TXD+ を DB9 ピン 3 (RXD+)、TXD- を DB9 ピン 4 (RXD-)、RXD+ を DB9 ピン 2 (TXD+)、RXD- を DB9 ピン 1 (TXD-) に接続し、アダプタが GND 端子を備えている場合は GND を DB9 ピン 5 に接続します。
-
-**ステップ 1.** SW3 を RS422 モードのいずれかに設定します。
-
-推奨設定：
-
-| SW3-1 | SW3-2 | SW3-3 | SW3-4 |
-| --- | --- | --- | --- |
-| ON | ON | ON | ON |
-
-代替設定：
-
-| SW3-1 | SW3-2 | SW3-3 | SW3-4 |
-| --- | --- | --- | --- |
-| OFF | ON | ON | ON |
-
-**ステップ 2.** Jetson の DB9 ポートを設定します：
-
-```bash
-sudo stty -F /dev/ttyAMA9 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-```
-
-**ステップ 3.** PC のシリアルポートを 115200 8N1、フロー制御なしに設定し、RS232 セクションで示したのと同じ `cat` と `echo` の方法を使用して双方向のテストを行います。
-
-### トラブルシューティング
-
-- `/dev/ttyAMA9` をオープンできない場合は、そのポートをすでに使用している可能性のある `cat`、`minicom`、テストスクリプトなどの他のツールを終了してください。
-- PC が何も送信していないのに RS485 でランダムなバイトを受信する場合、通常は A/B 線が逆になっているか、GND が接続されていません。A/B を入れ替え、DB9 ピン 5 をアダプタの GND に接続したままにしてください。
-- PC から Jetson への通信は動作するが Jetson から PC への通信が動作しない場合は、`sudo gpioset --mode=wait gpiochip3 6=0` が Jetson の別ターミナルでまだ実行中であることを確認してください。
-- それでも Jetson から PC への RS485 送信ができない場合は、選択したモードに対して RS485 の方向極性が反転している可能性があります。フラグを `5` の代わりに `3` とした同じ RS485 ioctl コマンドを試し、その後もう一度 Jetson から PC への通信をテストしてください。
-- macOS では `/dev/cu.*` デバイス（例：`/dev/cu.usbserial-0001`）を使用してください。`stty -F` や Linux RS485 ioctl コマンドなど、Linux 専用コマンドを macOS で使用しないでください。
-- RS485 では、PC 側では通常 USB-RS485 アダプタが半二重の方向切り替えを処理します。Linux RS485 設定が必要なのは Jetson の DB9 ポートだけです。
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/grb.gif"/>
+</div>
 
 ## Ethernet
 
-Robotics J601 キャリアボードには、有線ネットワーク接続用の高速 Ethernet ポートが搭載されており、PTP および EtherCAT プロトコルのサポートが予定されています。
+Robotics J601 キャリアボードには、有線ネットワーク接続用に **4x 10GbE RJ45 Ethernet** ポートが搭載されており、PTPおよびEtherCATプロトコルのサポートが予定されています。（注：T4000モジュールは3x 10GbEをサポートします。）
 
 ### ハードウェア接続
 
@@ -1031,9 +1099,9 @@ iperf3 -c <server_ip> -B <bind_ip> -R
 </div>
 
 :::info
-- `<server_ip>` は iperf3 サーバの IP アドレスです。クライアントはこのサーバに接続して帯域幅テストを実行します。
-- `<bind_ip>` は、テストトラフィックの送信元として使用するローカル IP アドレスを指定してバインドします。
-- `-R` フラグは、ダウンロード速度テストのためにテスト方向を反転させます。
+- `<server_ip>` は iperf3 サーバーの IP アドレスです。クライアントはこのサーバーに接続して帯域幅テストを実行します。
+- `<bind_ip>` は、テストトラフィックの送信元として指定したローカル IP アドレスをバインドします。
+- `-R` フラグはテスト方向を反転し、ダウンロード速度テストを行います。
 :::
 
 ## M.2 Key E
@@ -1042,13 +1110,11 @@ M.2 Key E インターフェースは標準的な M.2 コネクタで、主に W
 
 ### ハードウェア接続
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl_c1.png"/>
-</div>
+<!-- PLACEHOLDER_M2E_IMAGE: Add a photo showing the M.2 Key E slot on the bottom of the board with WiFi module installed -->
 
 ### 使用手順
 
-**ステップ 1.** Wi-Fi ドライバファームウェアをインストールします：
+**ステップ 1.** Wi-Fi ドライバーファームウェアをインストールします：
 
 ```bash
 # Decompress firmware files
@@ -1069,7 +1135,7 @@ sudo modprobe rtw88_8822ce
 sudo reboot
 ```
 
-**ステップ 3.** 再起動後、無線インターフェースを有効にします：
+**ステップ 3.** 再起動後、無線インターフェースを有効化します：
 
 ```bash
 sudo ip link set wlP1p1s0 up
@@ -1116,13 +1182,13 @@ scan on
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/blue_tooth.png"/>
 </div>
 
-## 5Gモジュール（M.2 Key B）
+## 5G モジュール（M.2 Key B）
 
-M.2 Key Bスロットは5Gモジュールの拡張をサポートしており、ロボティクスやエッジAIのシナリオ向けに高速なセルラー接続を実現します。
+M.2 Key B スロットは 5G モジュール拡張をサポートしており、ロボティクスやエッジ AI のシナリオ向けに高速セルラー接続を実現します。
 
 ### ハードウェア接続
 
-5GモジュールをM.2 Key Bスロットに取り付け、アンテナを接続します。
+5G モジュールを M.2 Key B スロットに装着し、アンテナを接続します。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/5g_c1.png"/>
@@ -1130,28 +1196,28 @@ M.2 Key Bスロットは5Gモジュールの拡張をサポートしており、
 
 ### 使用手順
 
-**Step 1.** 5Gモジュールのシリアルコンソールを開きます：
+**ステップ 1.** 5G モジュールのシリアルコンソールを開きます：
 
 ```bash
 sudo apt install -y minicom
 sudo minicom -D /dev/ttyUSB3
 ```
 
-**Step 2.** **Ctrl+A** を押してから **E** を押し、インタラクティブモードに入ります。
+**ステップ 2.** **Ctrl+A** を押してから **E** を押し、インタラクティブモードに入ります。
 
-**Step 3.** ATコマンドをテストします：
+**ステップ 3.** AT コマンドをテストします：
 
 ```
 AT
 ```
 
-**Step 4.** 信号強度を確認します：
+**ステップ 4.** 電波強度を確認します：
 
 ```
 AT+CSQ
 ```
 
-**Step 5.** 登録されているネットワークオペレーターを確認します：
+**ステップ 5.** 登録されているネットワークオペレーターを確認します：
 
 ```
 AT+COPS?
@@ -1161,44 +1227,44 @@ AT+COPS?
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/lsusb_5g.png"/>
 </div>
 
-## Nano SIM
+### Nano SIM
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/sim.png"/>
 </div>
 
-## GPS
+### GPS
 
-M.2 Key Bスロット上の5Gモジュールは、位置情報トラッキング用のGPS機能も提供します。
+M.2 Key B スロット上の 5G モジュールは、位置情報トラッキング用の GPS 機能も提供します。
 
 ### 使用手順
 
-**Step 1.** GPS ATコマンドポートを開きます：
+**ステップ 1.** GPS AT コマンドポートを開きます：
 
 ```bash
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-**Step 2.** GPSレシーバーを有効化します：
+**ステップ 2.** GPS 受信機を有効化します：
 
 ```
 AT+QGPS=1
 ```
 
 :::info
-- 応答が `OK` の場合、GPSレシーバーは正常に起動しています。
-- 応答が `+CME ERROR: 549` の場合、GPSはすでに有効になっているため、再度有効化する必要はありません。
+- 応答が `OK` の場合、GPS 受信機は正常に起動しています。
+- 応答が `+CME ERROR: 549` の場合、GPS はすでに有効になっているため、再度有効化する必要はありません。
 :::
 
-**Step 3.** **Ctrl+A** を押してから **X** を押し、**Yes** を選択してminicomを終了します。
+**ステップ 3.** **Ctrl+A** を押してから **X** を押し、**Yes** を選択して minicom を終了します。
 
-**Step 4.** GPSが有効になると、衛星データがGPSデータポート（通常は `/dev/ttyUSB1`）からストリーミングされます。生のNMEAデータを読み取ります：
+**ステップ 4.** GPS が有効になると、衛星データは GPS データポート（通常は `/dev/ttyUSB1`）からストリーミングされます。生の NMEA データを読み取ります：
 
 ```bash
 sudo cat /dev/ttyUSB1
 ```
 
-標準的なGPS NMEAセンテンスが次のように表示されるはずです：
+標準的な GPS NMEA センテンスが次のように表示されるはずです：
 
 ```
 $GPRMC,023011.00,A,2232.12345,N,11356.54321,E,0.026,,100626,,,A*7A
@@ -1207,18 +1273,17 @@ $GPGSV,3,1,11,01,65,120,42,03,45,210,38,08,30,045,35,11,15,290,31*74
 ```
 
 :::note
-GPS信号を取得するために、空がよく見える場所にいることを確認してください。有効な測位が得られるまで数分かかる場合があります。
+GPS 信号を取得するために、空がよく見える場所にいることを確認してください。有効な測位が得られるまで数分かかる場合があります。
 :::
 
 ## リソース
 
-- 詳細なハードウェアレイアウト：TBD
-- 書き込みガイド：TBD
-- BSPリリースノート：TBD
+- [reComputer J601 データシート](https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/reComputer_J601_Datasheet.pdf)
+- [reComputer Robotics J601 入門ガイド](/ja/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,15 +1,15 @@
 ---
-description: Este wiki proporciona una introducción completa a las características de hardware y al uso de las interfaces de la placa portadora reComputer Jetson Robotics J601. Cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar varias interfaces como M.2, Ethernet, USB, CAN, RS485/RS232, UART, I2C, I2S, expansión de cámara GMSL2, 5G y GPS, ayudando a los usuarios a comenzar rápidamente con el desarrollo de robótica en la plataforma J601.
+description: Este wiki proporciona una introducción completa a las características de hardware y al uso de las interfaces de la carrier board reComputer Jetson Robotics J601. Cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar varias interfaces como M.2, Ethernet, USB, CAN, RS485/RS232, UART, I2C, I2S, GPIO, expansión de cámara GMSL2, 5G y GPS, ayudando a los usuarios a comenzar rápidamente con el desarrollo de robótica en la plataforma J601.
 title: Uso de interfaces
 tags:
-  - Placa portadora J601-Robotics
+  - J601-Robotics carrier board
   - Jetson
   - AGX Thor
-  - Robótica
-  - Uso de interfaces
+  - Robotics
+  - Interfaces Usage
   - Interfaces
   - Hardware
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg
 slug: /recomputer_jetson_robotics_j601_interfaces_usage
 sku: 100060965
 last_update:
@@ -21,22 +21,19 @@ updatedAt: '2026-06-18'
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Uso de interfaces de hardware de la placa portadora Robotics J601
+# Uso de interfaces de hardware de la carrier board Robotics J601
 
-La reComputer Robotics J601 es una placa portadora de robótica de alto rendimiento diseñada para el módulo NVIDIA Jetson AGX Thor, dirigida a aplicaciones avanzadas de IA encarnada y control robótico. Equipada con amplias opciones de conectividad — incluyendo Ethernet de alta velocidad, ranuras M.2 para módulos 5G y Wi‑Fi/BT, puertos USB 3.2, 4x CAN (con soporte CAN FD), RS-232/485, I2C, I2S, UART, expansión GMSL2 (hasta 8 cámaras) y entrada de CC de amplio rango — sirve como un potente cerebro robótico capaz de procesar datos complejos de varios sensores.
+La reComputer Robotics J601 es una carrier board de robótica de alto rendimiento diseñada para el módulo NVIDIA Jetson AGX Thor, dirigida a aplicaciones avanzadas de IA encarnada y control robótico. Equipada con amplias opciones de conectividad — incluyendo 4x Ethernet 10GbE, ranuras M.2 para módulos 5G y Wi‑Fi/BT, puertos USB 3.2, 4x CAN (con soporte CAN FD), RS-232/422/485, I2C, I2S, UART, GPIO (GPI/GPO), expansión GMSL2 (hasta 8 cámaras) y entrada de CC de amplio rango — sirve como un potente cerebro robótico capaz de procesar datos complejos de varios sensores.
 
 Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1, la reComputer Robotics J601 conecta la toma de decisiones impulsada por modelos de lenguaje grandes con el control robótico físico, como la planificación de movimiento y la fusión de sensores. Ideal para el desarrollo rápido de robots autónomos, acelera el tiempo de salida al mercado con interfaces listas para usar y frameworks de IA optimizados.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg"/>
 </div>
-## Uso de interfaces
-
-A continuación se presentarán las diversas interfaces de la placa Robotics J601 y cómo utilizarlas.
 
 ## USB
 
-La placa portadora Robotics J601 está equipada con múltiples puertos USB, incluidos puertos USB 3.2 Type-A (Host) para conectividad de periféricos de alta velocidad, un puerto USB 3.0 Type-C para flasheo y un puerto USB 2.0 Type-C para modo dispositivo/depuración.
+La carrier board Robotics J601 está equipada con múltiples puertos USB, incluyendo 4 puertos USB 3.2 Tipo A (Host, 10Gbps) para conectividad de periféricos de alta velocidad, un puerto USB 3.2 Tipo C (J4) para recuperación/flasheo y un puerto USB 2.0 Tipo C (J3) para modo dispositivo/depuración.
 
 ### Prueba de velocidad USB 3.2
 
@@ -61,7 +58,7 @@ echo "seeed" | sudo -S dd if=/dev/sda of=/dev/null bs=1000M count=2
 ```
 
 :::info
-Reemplaza `/dev/sda` con el nombre de dispositivo real de tu unidad USB. Puedes usar `lsblk` para comprobarlo.
+Sustituye `/dev/sda` por el nombre de dispositivo real de tu unidad USB. Puedes usar `lsblk` para comprobarlo.
 :::
 
 Haz que el script sea ejecutable y ejecútalo:
@@ -75,7 +72,7 @@ chmod +x test_usb_speed.sh
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/usb_speed.PNG"/>
 </div>
 
-### Puerto de depuración USB 2.0 Type-C
+### Puerto de depuración USB 2.0 Tipo C
 
 Usando este puerto serie, a través del cable de datos USB‑C, puedes monitorizar en el PC la información de depuración de entrada y salida.
 
@@ -100,7 +97,7 @@ Usando este puerto serie, a través del cable de datos USB‑C, puedes monitoriz
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
-**Paso 4.** Abre el Administrador de dispositivos en tu PC con Windows y comprueba el número de puerto COM asignado al reComputer Super. Debería aparecer en "Ports (COM & LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", donde X es el número de puerto COM.
+**Paso 4.** Abre el Administrador de dispositivos en tu PC con Windows y comprueba el número de puerto COM asignado al reComputer J601. Debería aparecer en "Ports (COM & LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", donde X es el número de puerto COM.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png"/>
@@ -124,7 +121,7 @@ Usando este puerto serie, a través del cable de datos USB‑C, puedes monitoriz
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug1.png"/>
 </div>
 
-**Paso 8.** Inicia sesión en tu reComputer Super con el nombre de usuario y la contraseña.
+**Paso 8.** Inicia sesión en tu reComputer J601 con el nombre de usuario y la contraseña.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug2.png"/>
@@ -166,7 +163,7 @@ La Robotics J601 incorpora un conector de expansión para cámaras GMSL que admi
 
 ### Conexión de hardware
 
-Conecta la placa de expansión GMSL al conector de expansión de cámara en la placa portadora J601 y luego conecta tus cámaras GMSL a la placa de expansión.
+Conecta la placa de expansión GMSL al conector de expansión de cámara en la carrier board J601 y, a continuación, conecta tus cámaras GMSL a la placa de expansión.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/GMSL_connect.png"/>
@@ -220,9 +217,67 @@ cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
 
 La primera vez que la enciendas, es posible que necesites actualizar el firmware. Al abrir el flujo de datos, podrás ver el vídeo de la cámara.
 
+## UART
+
+La Robotics J601 proporciona una interfaz UART mediante un conector JST estándar para la comunicación serie con dispositivos externos. El puerto UART está conectado a `/dev/ttyTHS1` en el sistema Jetson con una velocidad en baudios predeterminada de 115200.
+
+### Conexión de hardware
+
+Para la comunicación UART, conecta la herramienta USB‑a‑TTL según el siguiente cableado:
+
+- TX → RX
+- RX → TX
+- GND → GND
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png"/>
+</div>
+
+### Instrucciones de uso
+
+Conecta la herramienta USB‑a‑TTL al puerto UART de la Robotics J601 y al PC, luego abre la herramienta de puerto serie en el PC y establece la velocidad en baudios en **115200**.
+
+Puedes usar un script sencillo de Python para probar la comunicación serie:
+
+```python
+import serial
+import time
+
+ser = serial.Serial('/dev/ttyTHS1', 115200, timeout=1)
+ser.write(b'Hello Jetson!\n')
+while True:
+    if ser.in_waiting:
+        data = ser.readline()
+        print("get:", data.decode('utf-8').strip())
+    time.sleep(0.1)
+
+ser.close()
+```
+
+Ejecuta el script en el dispositivo Jetson:
+
+```bash
+python3 uart_test.py
+```
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png"/>
+</div>
+
 ## I2S
 
-La Robotics J601 proporciona una interfaz de audio I2S con salida de amplificador y entrada de micrófono para reproducción y grabación de audio.
+La Robotics J601 proporciona una interfaz de audio I2S con salida de amplificador y entrada de micrófono para reproducción y grabación de audio. La interfaz I2S se expone a través del conector J14 JST GH‑1.25.
+
+### Definición de pines
+
+| Pin # | Nombre de pin del módulo | # de pin del módulo | Uso/Descripción | Tipo/Dir |
+| --- | --- | --- | --- | --- |
+| 1 | - | - | Fuente de alimentación 3V3 | Alimentación |
+| 2 | I2S2_DIN | F6 | Puerto de audio I2S2 2 Datos de entrada (nivel desplazado de 1.8V a 3.3V) | Entrada |
+| 3 | I2S2_FS | E4 | Puerto de audio I2S2 2 Reloj izquierda/derecha (nivel desplazado de 1.8V a 3.3V) | Bidireccional |
+| 4 | I2S2_CLK | G4 | Puerto de audio I2S2 2 Reloj (nivel desplazado de 1.8V a 3.3V) | Bidireccional |
+| 5 | I2S2_DOUT | F5 | Puerto de audio I2S2 2 Datos de salida (nivel desplazado de 1.8V a 3.3V) | Salida |
+| 6 | - | - | Tierra | Tierra |
 
 ### Conexión de hardware
 
@@ -253,159 +308,35 @@ aplay -D hw:2,0 -c 2 -r 48000 your_audio_file.wav
 ```
 
 :::note
-Reemplaza `your_audio_file.wav` con la ruta de tu archivo de audio real. Asegúrate de que el formato del archivo de audio coincida con la frecuencia de muestreo especificada (48000 Hz) y el número de canales (2).
+Reemplaza `your_audio_file.wav` con la ruta a tu archivo de audio real. Asegúrate de que el formato del archivo de audio coincida con la frecuencia de muestreo especificada (48000 Hz) y el número de canales (2).
 :::
 
-## UART
-
-La Robotics J601 proporciona una interfaz UART mediante un conector JST estándar para comunicación serie con dispositivos externos.
-
-### Conexión de hardware
-
-Para la comunicación UART, conecta la herramienta USB‑a‑TTL según el siguiente cableado:
-
-- TX → RX
-- RX → TX
-- GND → GND
-
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png"/>
-</div>
-
-### Instrucciones de uso
-
-Conecta la herramienta USB‑a‑TTL al puerto UART de la Robotics J601 y al PC, luego abre la herramienta de puerto serie en el PC y establece la velocidad en baudios a **115200**.
-
-Puedes usar un sencillo script de Python para probar la comunicación serie:
-
-```python
-import serial
-import time
-
-ser = serial.Serial('/dev/ttyTHS1', 115200, timeout=1)
-ser.write(b'Hello Jetson!\n')
-while True:
-    if ser.in_waiting:
-        data = ser.readline()
-        print("get:", data.decode('utf-8').strip())
-    time.sleep(0.1)
-
-ser.close()
-```
-
-Ejecuta el script en el dispositivo Jetson:
-
-```bash
-python3 uart_test.py
-```
-
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png"/>
-</div>
-
-## RGB
-
-<details>
-<summary>test_rgb.sh</summary>
-
-```bash
-#!/bin/bash
-
-# ==============================================================================
-# Script Name: test_rgb.sh
-# Target Platform: Seeed reComputer J601 (Jetson)
-# Description: Automatically tests RGB LEDs by lighting up Red, Green, Blue, 
-#              and White colors sequentially for 1 second each.
-# Usage: sudo ./test_rgb.sh
-# ==============================================================================
-
-# Define LED paths
-LED_DIR="/sys/class/leds"
-RED="$LED_DIR/red/brightness"
-GREEN="$LED_DIR/green/brightness"
-BLUE="$LED_DIR/blue/brightness"
-
-# Check if running as root (sysfs write access requires root privileges)
-if [ "$EUID" -ne 0 ]; then
-    echo "Error: Please run this script with sudo!"
-    echo "Example: sudo $0"
-    exit 1
-fi
-
-# Check if the hardware paths exist
-if [ ! -d "$LED_DIR/red" ] || [ ! -d "$LED_DIR/green" ] || [ ! -d "$LED_DIR/blue" ]; then
-    echo "Error: RGB LED hardware paths not found. Please check your driver or device model."
-    exit 1
-fi
-
-# Helper function: Control LED states
-# Arguments: set_leds <Red(0/1)> <Green(0/1)> <Blue(0/1)>
-set_leds() {
-    echo "$1" > "$RED"
-    echo "$2" > "$GREEN"
-    echo "$3" > "$BLUE"
-}
-
-echo "========================================"
-echo "         Starting Jetson RGB LED Test    "
-echo "========================================"
-
-# 1. Initialization: Turn off all LEDs
-echo "-> Initializing: Turning off all LEDs"
-set_leds 0 0 0
-sleep 0.5
-
-# 2. Red LED on for 1 second
-echo "-> [ON] Red Light"
-set_leds 1 0 0
-sleep 1
-
-# 3. Green LED on for 1 second
-echo "-> [ON] Green Light"
-set_leds 0 1 0
-sleep 1
-
-# 4. Blue LED on for 1 second
-echo "-> [ON] Blue Light"
-set_leds 0 0 1
-sleep 1
-
-# 5. Mixed White LED on for 1 second (Red + Green + Blue mixed)
-echo "-> [ON] White Light (RGB Mixed)"
-set_leds 1 1 1
-sleep 1
-
-# 6. Test completed, turn off all LEDs
-echo "-> Test completed: Turning off all LEDs"
-set_leds 0 0 0
-
-echo "========================================"
-echo "             LED Test Ended             "
-echo "========================================"
-```
-
-</details>
-
-```bash
-sudo chmod +x test_rgb.sh
-sudo ./test_rgb.sh
-```
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/grb.gif"/>
-</div>
 
 ## I2C
 
-El Robotics J601 proporciona interfaces I2C a través de conectores JST estándar, lo que permite una fácil conexión de sensores y periféricos para la expansión del sistema.
+El Robotics J601 proporciona una interfaz I2C a través del conector JST GH-1.25 J12, lo que permite una conexión sencilla de sensores y periféricos para la expansión del sistema.
+
+### Definición de pines
+
+| Pin # | Nombre de pin del módulo | Pin del módulo # | Uso/Descripción | Tipo/Dir |
+| --- | --- | --- | --- | --- |
+| 1 | - | - | Tierra | Tierra |
+| 2 | DP_AUX_CH2_N | E18 | I2C4_SDA_3V3 | Bidireccional |
+| 3 | DP_AUX_CH2_P | E19 | I2C4_SCL_3V3 | Salida |
+| 4 | - | - | Alimentación 3V3 | Alimentación |
+
+:::info
+El conector I2C utiliza el bus **I2C4** en el SoC Jetson AGX Thor.
+:::
 
 ### Conexión de hardware
 
-Conecta tu dispositivo I2C a la interfaz I2C en la placa portadora:
+Conecta tu dispositivo I2C a la interfaz I2C en la placa carrier:
 
-- Alimentación → Alimentación
-- SDA → SDA
-- SCL → SCL
-- Tierra → Tierra
+- Tierra → Tierra (Pin 1)
+- SDA → SDA (Pin 2)
+- SCL → SCL (Pin 3)
+- Alimentación → 3V3 (Pin 4)
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_connect.png"/>
@@ -430,7 +361,7 @@ i2cdetect -l
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c1.PNG"/>
 </div>
 
-**Paso 3.** Escanea los dispositivos en el bus I2C:
+**Paso 3.** Escanea dispositivos en el bus I2C:
 
 ```bash
 sudo i2cdetect -y -r 1
@@ -440,7 +371,7 @@ sudo i2cdetect -y -r 1
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c2.png"/>
 </div>
 
-**Paso 4.** Lee un registro desde un dispositivo I2C. Por ejemplo, para leer el registro `0x00` de un dispositivo en la dirección `0x58` en el bus `i2c-1`:
+**Paso 4.** Lee un registro de un dispositivo I2C. Por ejemplo, para leer el registro `0x00` de un dispositivo en la dirección `0x58` en el bus `i2c-1`:
 
 ```bash
 sudo i2cget -y 1 0x58 0x00
@@ -450,13 +381,118 @@ sudo i2cget -y 1 0x58 0x00
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c3.png"/>
 </div>
 
+## GPIO (GPI/GPO)
+
+El Robotics J601 proporciona interfaces GPIO digitales a través de dos conectores JST GH-1.25: un conector **GPI (General Purpose Input)** J20 con 4 canales de entrada, y un conector **GPO (General Purpose Output)** J14 con 4 canales de salida. Todas las señales GPIO se convierten de nivel de 1.8V (dominio del SoC) a 3.3V, haciéndolas directamente compatibles con sensores y periféricos estándar de 3.3V.
+
+### Definición de pines
+
+#### Conector GPI - J20 (Entrada)
+
+| Pin # | Nombre de pin del módulo | Pin del módulo # | Uso/Descripción | Tipo/Dir |
+| --- | --- | --- | --- | --- |
+| 1 | - | - | Alimentación 3V3 | Alimentación |
+| 2 | SPI2_MISO | D62 | GPI_1_3V3 (Cambio de nivel de 1.8V a 3.3V) | Entrada, 3.3V |
+| 3 | GPIO64 | J6 | GPI_2_3V3 (Cambio de nivel de 1.8V a 3.3V) | Entrada, 3.3V |
+| 4 | GPIO65 | J7 | GPI_3_3V3 (Cambio de nivel de 1.8V a 3.3V) | Entrada, 3.3V |
+| 5 | GPIO49 | G6 | GPI_4_3V3 (Cambio de nivel de 1.8V a 3.3V) | Entrada, 3.3V |
+| 6 | - | - | Tierra | Tierra |
+
+#### Conector GPO - J14 (Salida)
+
+| Pin # | Nombre de pin del módulo | Pin del módulo # | Uso/Descripción | Tipo/Dir |
+| --- | --- | --- | --- | --- |
+| 1 | - | - | Alimentación 3V3 | Alimentación |
+| 2 | GPIO13 | G7 | GPO_1_3V3 (Cambio de nivel de 1.8V a 3.3V) | Salida, 3.3V |
+| 3 | SPI2_CS0_N | D60 | GPO_2_3V3 (Cambio de nivel de 1.8V a 3.3V) | Salida, 3.3V |
+| 4 | SPI2_CLK | E61 | GPO_3_3V3 (Cambio de nivel de 1.8V a 3.3V) | Salida, 3.3V |
+| 5 | SPI2_MOSI | F60 | GPO_4_3V3 (Cambio de nivel de 1.8V a 3.3V) | Salida, 3.3V |
+| 6 | - | - | Tierra | Tierra |
+
+### Conexión de hardware
+
+Conecta tu dispositivo GPIO al conector GPI o GPO en la placa carrier usando un cable GH-1.25:
+
+- VCC → 3V3 (Pin 1)
+- Señal → pin GPI/GPO (Pin 2–5)
+- GND → Tierra (Pin 6)
+
+<!-- PLACEHOLDER_GPIO_IMAGE: Add a photo showing the GPI (J20) and GPO (J14) connectors on the board -->
+
+### Instrucciones de uso
+
+:::note
+Los pines GPI y GPO son accesibles mediante `libgpiod` (`gpioset`/`gpioget`). Puedes encontrar el chip GPIO y los números de línea usando `gpioinfo`.
+:::
+
+**Paso 1.** Instala las utilidades GPIO:
+
+```bash
+sudo apt update
+sudo apt-get install gpiod
+```
+
+**Paso 2.** Visualiza todos los chips y líneas GPIO disponibles:
+
+```bash
+gpioinfo
+```
+
+**Paso 3.** Lee un pin GPI. Por ejemplo, para leer GPI_2 (GPIO64, Pin 3 en J20):
+
+```bash
+# Replace <chip> and <line> with the actual GPIO chip/line numbers from gpioinfo
+gpioget <chip> <line>
+```
+
+**Paso 4.** Escribe en un pin GPO. Por ejemplo, para poner GPO_1 (GPIO13, Pin 2 en J14) en alto:
+
+```bash
+# Replace <chip> and <line> with the actual GPIO chip/line numbers from gpioinfo
+gpioset <chip> <line>=1
+```
+
+**Paso 5.** Usa los pines en un script de Python con la biblioteca `gpiod`:
+
+```python
+import gpiod
+
+# Replace chip and line numbers based on your gpioinfo output
+chip = gpiod.Chip('<chip_number>')
+
+# Read GPI example
+gpi_line = chip.get_line(<gpi_line_number>)
+gpi_line.request(consumer="gpi_test", type=gpiod.LINE_REQ_DIR_IN)
+print("GPI value:", gpi_line.get_value())
+
+# Write GPO example
+gpo_line = chip.get_line(<gpo_line_number>)
+gpo_line.request(consumer="gpo_test", type=gpiod.LINE_REQ_DIR_OUT)
+gpo_line.set_value(1)  # Set high
+```
+
+<!-- PLACEHOLDER_GPIO_USAGE_IMAGE: Add a photo/screenshot showing GPIO read/write output -->
+
 ## CAN
 
-CAN (Controller Area Network) es un estándar robusto de bus para vehículos que permite que microcontroladores y dispositivos se comuniquen entre sí sin un ordenador host. El Robotics J601 proporciona **4 interfaces CAN** (CAN0, CAN1, CAN2, CAN3) mediante conectores JST, todas compatibles con el modo CAN FD.
+CAN (Controller Area Network) es un estándar robusto de bus para vehículos que permite que microcontroladores y dispositivos se comuniquen entre sí sin un ordenador host. El Robotics J601 proporciona **4 interfaces CAN** (CAN0, CAN1, CAN2, CAN3) mediante conectores JST GH-1.25, todas compatibles con el modo CAN FD.
+
+### Mapeo de pines del conector CAN
+
+| Interfaz CAN | Conector | Pin 1 | Pin 2 | Pin 3 | Pin 4 |
+| --- | --- | --- | --- | --- | --- |
+| CAN0 | J31 | Tierra | CAN0_L_ISO | CAN0_H_ISO | Alimentación 5V |
+| CAN1 | J30 | Tierra | CAN1_L_ISO | CAN1_H_ISO | Alimentación 5V |
+| CAN2 | J28 | Tierra | CAN2_L_ISO | CAN2_H_ISO | Alimentación 5V |
+| CAN3 | J25 | Tierra | CAN3_L_ISO | CAN3_H_ISO | Alimentación 5V |
+
+:::info
+Las 4 interfaces CAN están aisladas. Cada conector proporciona una alimentación de 5V en el Pin 4.
+:::
 
 ### Control de la resistencia de terminación de 120Ω
 
-Cada interfaz CAN tiene una resistencia de terminación de 120Ω controlada por software. Las asignaciones de GPIO son las siguientes:
+Cada interfaz CAN tiene una resistencia de terminación de 120Ω controlada por software. Los mapeos GPIO son los siguientes:
 
 | Interfaz | Chip GPIO | Línea GPIO | Nombre de control |
 | --- | --- | --- | --- |
@@ -550,7 +586,7 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
 :::info
 - `5AA` / `7DF` es el ID CAN
 - `##` indica una trama CAN FD
-- La cifra después de `##` es el indicador BRS (Bit Rate Switch): `1` = BRS activo
+- El dígito después de `##` es el indicador BRS (Bit Rate Switch): `1` = BRS activo
 - Lo siguiente es la carga útil de datos (hasta 128 caracteres hexadecimales para 64 bytes)
 :::
 
@@ -558,9 +594,9 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/can_c2.png"/>
 </div>
 
-### Script de prueba integral de CAN
+### Script de prueba CAN integral
 
-El siguiente script realiza una prueba completa de CAN FD que incluye verificación de dependencias, configuración de interfaces, verificación básica de comunicación y una prueba de estrés de 10 segundos.
+El siguiente script realiza una prueba CAN FD completa que incluye verificación de dependencias, configuración de interfaces, verificación básica de comunicación y una prueba de estrés de 10 segundos.
 
 Crea el script de prueba:
 
@@ -691,24 +727,39 @@ chmod +x can_test.sh
 
 
 
-# RS485
+## RS485
+
+La Carrier Board reComputer J601 incorpora un puerto RS-485 aislado dedicado expuesto a través del conector JST GH-1.25 de 4 pines J24. Las definiciones de pines son las siguientes:
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/rs485-jstpin.png"/>
+</div>
+
+### Conexión de hardware
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/jst485-c.png"/>
+</div>
+
+Aquí utilizamos un `usb-to-rs485` para realizar la prueba:
 
 ```bash
-#Jetson 
-sudo stty -F /dev/ttyAMA10 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
+#[Jetson] Init UART: 115200 baud, 8N1, raw mode, no flow control.
+sudo stty -F /dev/ttyAMA10 115200 cs8 -cst -parenb -ixon -ixoff -crtscts raw -echo
+# [Jetson] Enable and verify RS485 mode via ioctl (TIOCSRS485 / TIOCGRS485).
 sudo python3 -c 'import os,fcntl,struct; fd=os.open("/dev/ttyAMA10",os.O_RDWR|os.O_NOCTTY); fcntl.ioctl(fd,0x542F,struct.pack("IIIIIIII",3,0,20,0,0,0,0,0)); out=bytearray(32); fcntl.ioctl(fd,0x542E,out,True); print(struct.unpack("IIIIIIII",out)); os.close(fd)'
-#(3, 0, 20, 0, 0, 0, 0, 0)
+# Verification output:(3, 0, 20, 0, 0, 0, 0, 0)
 
-#PC
+#[PC] Init USB UART with identical parameters.
 sudo stty -F /dev/ttyUSB0 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-#jetson
+#[Jetson] Listen for data.
 sudo cat /dev/ttyAMA10
-#PC
+#[PC] Send message.
 echo "hello from pc" | sudo tee /dev/ttyUSB0 >/dev/null
 
-#PC 收
+#[PC] Listen for data.
 sudo cat /dev/ttyUSB0
-#jetson
+#[Jetson] Send message.、
 echo "hello from jetson" | sudo tee /dev/ttyAMA10 >/dev/null
 ```
 
@@ -724,281 +775,298 @@ echo "hello from jetson" | sudo tee /dev/ttyAMA10 >/dev/null
 
 ## DB9 (RS232 / RS422 / RS485)
 
-El Robotics J601 proporciona una interfaz serie DB9 seleccionable por software. El puerto DB9 está conectado a `/dev/ttyAMA9` en el sistema Jetson y se puede configurar como RS232, RS422 o RS485 ajustando el interruptor DIP SW3.
+La Robotics J601 proporciona una interfaz serie DB9 seleccionable por software. El puerto DB9 está conectado a `/dev/ttyAMA9` en el sistema Jetson y se puede configurar como RS232, RS422 o RS485 ajustando el interruptor DIP SW3.
 
-### Conexión de hardware
+### Definición de pines
 
 La función de cada pin DB9 depende del modo de comunicación seleccionado. Consulta la tabla y el diagrama del conector a continuación antes de cablear el adaptador.
 
 <div align="center">
-  <img width="600" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png"/>
+  <img width="400" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png"/>
 </div>
 
-| Pin DB9 | Modo RS232 | Modo RS422 | Modo RS485 |
-| --- | --- | --- | --- |
-| 1 | - | TXD- (B) | Datos- (B) |
-| 2 | RXD | TXD+ (A) | Datos+ (A) |
-| 3 | TXD | RXD+ (A) | - |
-| 4 | - | RXD- (B) | - |
-| 5 | GND | GND | GND |
-| 6 | - | - | - |
-| 7 | RTS | - | - |
-| 8 | CTS | - | - |
-| 9 | - | - | - |
+### Modo RS485
+### Configuración de hardware
+
+Cambia el interruptor en la parte inferior de la placa al modo RS485 como se muestra en la figura siguiente.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-mode.png"/>
+</div>
+
+### Conexión de hardware
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c.png"/>
+</div>
 
 :::tip
-Para el cableado RS485, conecta el adaptador USB-RS485 `A/D+` al pin 2 de DB9, `B/D-` al pin 1 de DB9 y `GND` al pin 5 de DB9. Algunos adaptadores USB-RS485 etiquetan A/B de forma opuesta. Si el Jetson recibe bytes aleatorios mientras el PC no está enviando, intercambia A y B y prueba de nuevo.
+Para el cableado RS485, conecta el `A/D+` del adaptador USB-RS485 al pin 2 del DB9 y `B/D-` al pin 1 del DB9. Algunos adaptadores USB-RS485 etiquetan A/B de forma inversa. Si el Jetson recibe bytes aleatorios mientras el PC no está enviando, intercambia A y B y prueba de nuevo.
 :::
 
-### Seleccionar el modo DB9 con SW3
+### Prueba de comunicación
 
-SW3 lleva cada pin de modo a nivel bajo cuando el interruptor está en ON. En otras palabras, **ON = 0** y **OFF = 1**.
+Aquí utilizamos minicom para realizar la prueba：
 
-| Modo | Valor MODE en el esquema (MODE_0 MODE_1 MODE_2) | SW3-1 (MODE_0) | SW3-2 (MODE_1) | SW3-3 (MODE_2) | SW3-4 (SLEW) |
-| --- | --- | --- | --- | --- | --- |
-| RS232 | `001` | ON | ON | OFF | ON recomendado |
-| RS422 | `000` | ON | ON | ON | ON recomendado |
-| RS422 | `100` | OFF | ON | ON | ON recomendado |
-| RS485 | `010` | ON | OFF | ON | ON recomendado |
-| RS485 | `110` | OFF | OFF | ON | ON recomendado |
+```bash
+# Set pin 6 on GPIO chip 3 to low level to enable the DB9 transceiver
+sudo gpioset 3 6=0
 
-:::note
-Para pruebas de baja velocidad como 115200 bps, se recomienda mantener SW3-4 (SLEW) en ON. Esto limita la velocidad de conmutación del driver y ayuda a reducir el ruido en cables largos.
+# On Jetson terminal
+sudo minicom -D /dev/ttyAMA9 -b 115200
+
+# On PC terminal
+sudo minicom -D /dev/ttyACM0 -b 115200
+```
+
+:::tip
+Para ver el texto que escribes en minicom, necesitas habilitar la función Local Echo. De forma predeterminada, minicom no muestra tus pulsaciones de teclas, por lo que este es un problema muy común.
+- paso 1. Pulsa `Ctrl+A`
+- paso 2. Luego, pulsa `E`
+
 :::
 
-### Habilitar el transceptor DB9
+Prueba que el PC envíe un mensaje a Jetson. 
 
-Antes de probar el puerto DB9, mantén el transceptor DB9 habilitado desde una terminal dedicada de Jetson:
 
-```bash
-sudo gpioset --mode=wait gpiochip3 6=0
-```
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c1.png"/>
+</div>
 
-Mantén este comando en ejecución durante la prueba. Pulsa **Enter** en esta terminal solo después de terminar las pruebas.
+Dado que RS485 es un protocolo half-dúplex, para probar que Jetson puede enviar información al PC mediante RS485 es necesario activar el modo RS485.
+- paso 1. Pulsa `Ctrl+A`
+- paso 2. Luego, pulsa `O` para abrir la opción de configuración.
 
-### Prueba en modo RS232
 
-Utiliza un adaptador USB a RS232. Si el adaptador expone cables separados, conecta TXD del adaptador al pin 2 de DB9 (RXD), RXD del adaptador al pin 3 de DB9 (TXD) y GND del adaptador al pin 5 de DB9 (GND). Si utilizas un cable DB9 a DB9 entre dos dispositivos DTE, normalmente se requiere un cable null-modem o una conexión cruzada.
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c2.png"/>
+</div>
 
-**Paso 1.** Ajusta SW3 al modo RS232.
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c3.png"/>
+</div>
 
-| SW3-1 | SW3-2 | SW3-3 | SW3-4 |
-| --- | --- | --- | --- |
-| ON | ON | OFF | ON |
+Finalmente, podrás enviar mensajes desde Jetson a tu PC.
 
-**Paso 2.** Configura el puerto DB9 del Jetson:
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c4.png"/>
+</div>
 
-```bash
-sudo stty -F /dev/ttyAMA9 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-```
+### Modo RS232 
 
-**Paso 3.** Configura el puerto serie del PC.
+### Configuración de hardware
 
-En Linux:
+Cambia el interruptor en la parte inferior de la placa al modo RS232 como se muestra en la figura siguiente.
 
-```bash
-PC_DEV=/dev/ttyUSB0
-# If your adapter appears as /dev/ttyACM0, use:
-# PC_DEV=/dev/ttyACM0
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-mode.png"/>
+</div>
 
-sudo stty -F $PC_DEV 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-```
+### Conexión de hardware
 
-En macOS:
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c.png"/>
+</div>
 
-```bash
-ls /dev/cu.* | grep -i usb
+:::tip
+- TX → RX
+- RX → TX
+- GND → GND
+:::
 
-PC_DEV=/dev/cu.usbserial-0001
-stty -f $PC_DEV 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-```
+### Prueba de comunicación
 
-Para una terminal interactiva en macOS, también puedes usar:
-
-```bash
-screen $PC_DEV 115200
-```
-
-Pulsa **Ctrl+A**, luego **K**, luego **Y** para salir de `screen`.
-
-**Paso 4.** Prueba de PC a Jetson.
-
-Ejecuta esto en el Jetson:
+Aquí utilizamos minicom para realizar la prueba：
 
 ```bash
-sudo cat /dev/ttyAMA9
+# Set pin 6 on GPIO chip 3 to low level to enable the DB9 transceiver
+sudo gpioset 3 6=0
+
+# On Jetson terminal
+sudo minicom -D /dev/ttyAMA9 -b 115200
+
+# On PC terminal
+sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
-Luego envía datos desde el PC.
+:::tip
+Para ver el texto que escribes en minicom, necesitas habilitar la función Local Echo. De forma predeterminada, minicom no muestra tus pulsaciones de teclas, por lo que este es un problema muy común.
+- paso 1. Pulsa `Ctrl+A`
+- paso 2. Luego, pulsa `E`
+:::
 
-PC con Linux:
+Prueba que el PC envíe un mensaje a Jetson. 
+
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c1.png"/>
+</div>
+
+
+Activa también el modo de prueba.
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c2.png"/>
+</div>
+
+Envía mensajes desde Jetson a tu PC.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c3.png"/>
+</div>
+
+### Modo RS422
+
+### Configuración de hardware
+
+Cambia el interruptor en la parte inferior de la placa al modo RS422 como se muestra en la figura siguiente.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-mode.png"/>
+</div>
+
+### Conexión de hardware
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c.png"/>
+</div>
+
+:::tip
+- RXD+ ←─────→  TXD+  
+- RXD- ←─────→  TXD-  
+- TXD+ ←─────→  RXD+  
+- TXD- ←─────→  RXD-
+- GND  ←─────→  GND
+:::
+
+### Prueba de comunicación
+
+Aquí utilizamos minicom para realizar la prueba：
 
 ```bash
-echo "hello from pc to db9 rs232" | sudo tee $PC_DEV >/dev/null
+# Set pin 6 on GPIO chip 3 to low level to enable the DB9 transceiver
+sudo gpioset 3 6=0
+
+# On Jetson terminal
+sudo minicom -D /dev/ttyAMA9 -b 115200
+
+# On PC terminal
+sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
-macOS:
+:::tip
+Para ver el texto que escribes en minicom, necesitas habilitar la función Local Echo. De forma predeterminada, minicom no muestra tus pulsaciones de teclas, por lo que este es un problema muy común.
+- paso 1. Pulsa `Ctrl+A`
+- paso 2. Luego, pulsa `E`
+:::
+
+Prueba que el PC envíe un mensaje a Jetson. 
+
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c1.png"/>
+</div>
+
+
+Activa también el modo de prueba.
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c2.png"/>
+</div>
+
+
+## RGB
+
+<details>
+<summary>test_rgb.sh</summary>
 
 ```bash
-echo "hello from mac to db9 rs232" > $PC_DEV
+#!/bin/bash
+
+# ==============================================================================
+# Script Name: test_rgb.sh
+# Target Platform: Seeed reComputer J601 (Jetson)
+# Description: Automatically tests RGB LEDs by lighting up Red, Green, Blue, 
+#              and White colors sequentially for 1 second each.
+# Usage: sudo ./test_rgb.sh
+# ==============================================================================
+
+# Define LED paths
+LED_DIR="/sys/class/leds"
+RED="$LED_DIR/red/brightness"
+GREEN="$LED_DIR/green/brightness"
+BLUE="$LED_DIR/blue/brightness"
+
+# Check if running as root (sysfs write access requires root privileges)
+if [ "$EUID" -ne 0 ]; then
+    echo "Error: Please run this script with sudo!"
+    echo "Example: sudo $0"
+    exit 1
+fi
+
+# Check if the hardware paths exist
+if [ ! -d "$LED_DIR/red" ] || [ ! -d "$LED_DIR/green" ] || [ ! -d "$LED_DIR/blue" ]; then
+    echo "Error: RGB LED hardware paths not found. Please check your driver or device model."
+    exit 1
+fi
+
+# Helper function: Control LED states
+# Arguments: set_leds <Red(0/1)> <Green(0/1)> <Blue(0/1)>
+set_leds() {
+    echo "$1" > "$RED"
+    echo "$2" > "$GREEN"
+    echo "$3" > "$BLUE"
+}
+
+echo "========================================"
+echo "         Starting Jetson RGB LED Test    "
+echo "========================================"
+
+# 1. Initialization: Turn off all LEDs
+echo "-> Initializing: Turning off all LEDs"
+set_leds 0 0 0
+sleep 0.5
+
+# 2. Red LED on for 1 second
+echo "-> [ON] Red Light"
+set_leds 1 0 0
+sleep 1
+
+# 3. Green LED on for 1 second
+echo "-> [ON] Green Light"
+set_leds 0 1 0
+sleep 1
+
+# 4. Blue LED on for 1 second
+echo "-> [ON] Blue Light"
+set_leds 0 0 1
+sleep 1
+
+# 5. Mixed White LED on for 1 second (Red + Green + Blue mixed)
+echo "-> [ON] White Light (RGB Mixed)"
+set_leds 1 1 1
+sleep 1
+
+# 6. Test completed, turn off all LEDs
+echo "-> Test completed: Turning off all LEDs"
+set_leds 0 0 0
+
+echo "========================================"
+echo "             LED Test Ended             "
+echo "========================================"
 ```
 
-**Paso 5.** Prueba de Jetson a PC.
-
-Ejecuta esto en el PC.
-
-PC con Linux:
+</details>
 
 ```bash
-sudo cat $PC_DEV
+sudo chmod +x test_rgb.sh
+sudo ./test_rgb.sh
 ```
-
-macOS:
-
-```bash
-cat $PC_DEV
-```
-
-Luego envía datos desde el Jetson:
-
-```bash
-echo "hello from jetson db9 rs232" | sudo tee /dev/ttyAMA9 >/dev/null
-```
-
-### Prueba en modo RS485
-
-Utiliza un adaptador USB a RS485. Conecta `A/D+` del adaptador al pin 2 de DB9, `B/D-` del adaptador al pin 1 de DB9 y `GND` del adaptador al pin 5 de DB9.
-
-**Paso 1.** Ajusta SW3 a uno de los modos RS485.
-
-Configuración recomendada:
-
-| SW3-1 | SW3-2 | SW3-3 | SW3-4 |
-| --- | --- | --- | --- |
-| OFF | OFF | ON | ON |
-
-Configuración alternativa:
-
-| SW3-1 | SW3-2 | SW3-3 | SW3-4 |
-| --- | --- | --- | --- |
-| ON | OFF | ON | ON |
-
-**Paso 2.** Configura el puerto DB9 del Jetson y habilita el modo RS485 de Linux:
-
-```bash
-sudo stty -F /dev/ttyAMA9 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-sudo python3 -c 'import os,fcntl,struct; fd=os.open("/dev/ttyAMA9",os.O_RDWR|os.O_NOCTTY); fcntl.ioctl(fd,0x542F,struct.pack("IIIIIIII",5,0,20,0,0,0,0,0)); out=bytearray(32); fcntl.ioctl(fd,0x542E,out,True); print(struct.unpack("IIIIIIII",out)); os.close(fd)'
-```
-
-La salida esperada de configuración RS485 es:
-
-```bash
-(5, 0, 20, 0, 0, 0, 0, 0)
-```
-
-**Paso 3.** Configura el puerto serie del PC.
-
-PC con Linux:
-
-```bash
-PC_DEV=/dev/ttyUSB0
-# If your adapter appears as /dev/ttyACM0, use:
-# PC_DEV=/dev/ttyACM0
-
-sudo stty -F $PC_DEV 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-```
-
-macOS:
-
-```bash
-ls /dev/cu.* | grep -i usb
-
-PC_DEV=/dev/cu.usbserial-0001
-stty -f $PC_DEV 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-```
-
-**Paso 4.** Prueba de PC a Jetson.
-
-Ejecuta esto en el Jetson:
-
-```bash
-sudo cat /dev/ttyAMA9
-```
-
-Luego envía datos desde el PC.
-
-PC con Linux:
-
-```bash
-echo "hello from pc to db9 rs485" | sudo tee $PC_DEV >/dev/null
-```
-
-macOS:
-
-```bash
-echo "hello from mac to db9 rs485" > $PC_DEV
-```
-
-**Paso 5.** Prueba de Jetson a PC.
-
-Ejecuta esto en el PC.
-
-PC con Linux:
-
-```bash
-sudo cat $PC_DEV
-```
-
-macOS:
-
-```bash
-cat $PC_DEV
-```
-
-Luego envía datos desde el Jetson:
-
-```bash
-echo "hello from jetson db9 rs485" | sudo tee /dev/ttyAMA9 >/dev/null
-```
-
-### Prueba en modo RS422
-
-Utiliza un adaptador USB a RS422. Conecta TXD+ del adaptador al pin 3 de DB9 (RXD+), TXD- al pin 4 de DB9 (RXD-), RXD+ al pin 2 de DB9 (TXD+), RXD- al pin 1 de DB9 (TXD-) y GND al pin 5 de DB9 si el adaptador proporciona un terminal GND.
-
-**Paso 1.** Ajusta SW3 a uno de los modos RS422.
-
-Configuración recomendada:
-
-| SW3-1 | SW3-2 | SW3-3 | SW3-4 |
-| --- | --- | --- | --- |
-| ON | ON | ON | ON |
-
-Configuración alternativa:
-
-| SW3-1 | SW3-2 | SW3-3 | SW3-4 |
-| --- | --- | --- | --- |
-| OFF | ON | ON | ON |
-
-**Paso 2.** Configura el puerto DB9 del Jetson:
-
-```bash
-sudo stty -F /dev/ttyAMA9 115200 cs8 -cstopb -parenb -ixon -ixoff -crtscts raw -echo
-```
-
-**Paso 3.** Configura el puerto serie del PC como 115200 8N1 sin control de flujo y luego prueba en ambas direcciones usando el mismo método con `cat` y `echo` mostrado en la sección RS232.
-
-### Solución de problemas
-
-- Si no se puede abrir `/dev/ttyAMA9`, cierra otras herramientas como `cat`, `minicom` o scripts de prueba que puedan estar usando ya el puerto.
-- Si RS485 recibe bytes aleatorios mientras el PC no está enviando nada, normalmente las líneas A/B están invertidas o GND no está conectado. Intercambia A/B y mantén el pin 5 de DB9 conectado al GND del adaptador.
-- Si de PC a Jetson funciona pero de Jetson a PC no, asegúrate de que `sudo gpioset --mode=wait gpiochip3 6=0` siga ejecutándose en una terminal separada del Jetson.
-- Si RS485 aún no transmite de Jetson a PC, la polaridad de dirección RS485 puede estar invertida para el modo seleccionado. Prueba el mismo comando ioctl RS485 con flags `3` en lugar de `5` y luego vuelve a probar de Jetson a PC.
-- En macOS, utiliza dispositivos `/dev/cu.*`, por ejemplo `/dev/cu.usbserial-0001`. No uses comandos exclusivos de Linux como `stty -F` ni comandos ioctl RS485 de Linux en macOS.
-- Para RS485, el adaptador USB-RS485 normalmente gestiona el cambio de dirección half-dúplex en el lado del PC. Solo el puerto DB9 del Jetson necesita la configuración RS485 de Linux mostrada arriba.
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/grb.gif"/>
+</div>
 
 ## Ethernet
 
-La placa carrier Robotics J601 incorpora puertos Ethernet de alta velocidad para conectividad de red por cable, con soporte previsto para los protocolos PTP y EtherCAT.
+La carrier board Robotics J601 incorpora **4 puertos Ethernet RJ45 10GbE** para conectividad de red por cable, con soporte previsto para los protocolos PTP y EtherCAT. (Nota: los módulos T4000 admiten 3 puertos 10GbE.)
 
 ### Conexión de hardware
 
@@ -1033,18 +1101,16 @@ iperf3 -c <server_ip> -B <bind_ip> -R
 :::info
 - `<server_ip>` es la dirección IP del servidor iperf3. El cliente se conectará a este servidor para realizar una prueba de ancho de banda.
 - `<bind_ip>` vincula la dirección IP local especificada como origen del tráfico de prueba.
-- La opción `-R` invierte la dirección de la prueba para medir la velocidad de descarga.
+- La opción `-R` invierte la dirección de la prueba para probar la velocidad de descarga.
 :::
 
 ## M.2 Key E
 
-La interfaz M.2 Key E es un conector M.2 estándar utilizado principalmente para conectar módulos inalámbricos, como Wi‑Fi y Bluetooth, para ampliar las capacidades de comunicación inalámbrica.
+La interfaz M.2 Key E es un conector M.2 estándar que se utiliza principalmente para conectar módulos inalámbricos, como Wi‑Fi y Bluetooth, para ampliar las capacidades de comunicación inalámbrica.
 
 ### Conexión de hardware
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl_c1.png"/>
-</div>
+<!-- PLACEHOLDER_M2E_IMAGE: Add a photo showing the M.2 Key E slot on the bottom of the board with WiFi module installed -->
 
 ### Instrucciones de uso
 
@@ -1069,7 +1135,7 @@ sudo modprobe rtw88_8822ce
 sudo reboot
 ```
 
-**Paso 3.** Después del reinicio, levanta la interfaz inalámbrica:
+**Paso 3.** Después de reiniciar, levanta la interfaz inalámbrica:
 
 ```bash
 sudo ip link set wlP1p1s0 up
@@ -1118,7 +1184,7 @@ scan on
 
 ## Módulo 5G (M.2 Key B)
 
-La ranura M.2 Key B admite la expansión con un módulo 5G, lo que permite conectividad celular de alta velocidad para escenarios de robótica e IA de borde.
+La ranura M.2 Key B admite la expansión con un módulo 5G, lo que permite conectividad celular de alta velocidad para escenarios de robótica e IA en el borde.
 
 ### Conexión de hardware
 
@@ -1137,7 +1203,7 @@ sudo apt install -y minicom
 sudo minicom -D /dev/ttyUSB3
 ```
 
-**Paso 2.** Entra en el modo interactivo presionando **Ctrl+A** y luego **E**.
+**Paso 2.** Entra en modo interactivo presionando **Ctrl+A** y luego **E**.
 
 **Paso 3.** Prueba los comandos AT:
 
@@ -1161,13 +1227,13 @@ AT+COPS?
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/lsusb_5g.png"/>
 </div>
 
-## Nano SIM
+### Nano SIM
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/sim.png"/>
 </div>
 
-## GPS
+### GPS
 
 El módulo 5G en la ranura M.2 Key B también proporciona funcionalidad GPS para el seguimiento de ubicación.
 
@@ -1187,12 +1253,12 @@ AT+QGPS=1
 
 :::info
 - Si la respuesta es `OK`, el receptor GPS se ha iniciado correctamente.
-- Si la respuesta es `+CME ERROR: 549`, el GPS ya está habilitado — no es necesario habilitarlo de nuevo.
+- Si la respuesta es `+CME ERROR: 549`, el GPS ya está habilitado, no es necesario habilitarlo de nuevo.
 :::
 
 **Paso 3.** Sal de minicom presionando **Ctrl+A** y luego **X**, y selecciona **Yes** para salir.
 
-**Paso 4.** Después de habilitar el GPS, los datos de los satélites se transmitirán desde el puerto de datos GPS (normalmente `/dev/ttyUSB1`). Lee los datos NMEA en bruto:
+**Paso 4.** Una vez habilitado el GPS, los datos de los satélites se enviarán desde el puerto de datos GPS (normalmente `/dev/ttyUSB1`). Lee los datos NMEA en bruto:
 
 ```bash
 sudo cat /dev/ttyUSB1
@@ -1212,9 +1278,8 @@ Asegúrate de tener una vista despejada del cielo para la adquisición de señal
 
 ## Recursos
 
-- Diseño detallado de hardware: TBD
-- Guía de flasheo: TBD
-- Notas de la versión del BSP: TBD
+- [Hoja de datos de reComputer J601](https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/reComputer_J601_Datasheet.pdf)
+- [Primeros pasos con reComputer Robotics J601](/es/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started)
 
 ## Soporte técnico y debate sobre el producto
 

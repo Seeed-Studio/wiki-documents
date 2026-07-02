@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-06-19'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/robotics_page/
 ---
 
@@ -152,6 +152,10 @@ url: https://wiki.seeedstudio.com/robotics_page/
               </a>
               <a href="/lerobot_steering_gear_debugging_tool/" className="content-card">
                   <span className="text">Steering Gear Debugging Tool</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/lerobot_double_arm_so_arm_training/" className="content-card">
+                  <span className="text">Complete Guide to Double-Arm SO-ARM Training</span>
                   <span className="tag recommended">New</span>
               </a>
           </div>
