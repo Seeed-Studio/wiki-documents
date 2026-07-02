@@ -4160,6 +4160,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Distributed_llama_cpp_RPC_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Jetson_SPI_Getting_Start',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Flash_PREEMPT_RT_Kernel_on_reComputer_Jetson_JetPack_6_2_1',
               ]
             },
           ]
