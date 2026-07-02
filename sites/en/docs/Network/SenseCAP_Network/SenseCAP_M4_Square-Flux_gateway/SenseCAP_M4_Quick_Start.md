@@ -9,7 +9,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2023-02-24'
-updatedAt: '2025-09-10'
+updatedAt: '2026-06-25'
 url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start/
 ---
 
@@ -87,7 +87,7 @@ Note: Ensure you have enough BNB to afford the swap fee
 
 <div style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_153450_KYFKcuB_o6xATDxg_1672996615?w=1200&h=1200" alt="swap" width={600} height="auto" /></div>
 
-3. Send the Flux from the Payments portfolio to another portfolio such as Mining's Flux asset
+3. Send the Flux from the Payments portfolio to another portfolio.
 
 4. Now you can deploy the new Flux Cumulus node on SenseCAP M4 Sqaure!
 
@@ -171,7 +171,7 @@ Note: Ensure you have enough BNB to afford the swap fee
 
 4. when start syncing Flux chain, Please go to Zelcore App and input the public IP and name in your FluxNode. Then click the Start button to start your FluxNode.
 
-If your FluxNode is running well and that is passing benchmarks. It will take 1 block to be mined for your FluxNode status to change to Started and 1-10 blocks (2 to 20 minutes) to get Confirmed. Confirmed is the final status. You can check on FluxOS by refreshing the home page if the node gets Confirmed, it will say on Status page.
+If your FluxNode is running well and that is passing benchmarks. It will take 1 block to be processed for your FluxNode status to change to Started and 1-10 blocks (2 to 20 minutes) to get Confirmed. Confirmed is the final status. You can check on FluxOS by refreshing the home page if the node gets Confirmed, it will say on Status page.
 
 <div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-14.png" alt="deploy3" width={600} height="auto" /></div>
 

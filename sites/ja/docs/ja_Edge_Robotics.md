@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-04-30'
+updatedAt: '2026-06-19'
 url: https://wiki.seeedstudio.com/ja/robotics_page/
 ---
 
@@ -80,29 +80,47 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 
 
           <h3>🦾 reBot Arm</h3>
+            <h4> B601-DM アーム</h4>
+          <div className="card-container">
+              <a href="/ja/rebot_b601_dm_getting_started/" className="content-card">
+                <span className="text">reBot B601-DM 入門ガイド</span>
+              </a>
+              <a href="/ja/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot B601-DM と Pinocchio</span>
+              </a>
+              <a href="/ja/rebot_arm_b601_dm_lerobot/" className="content-card">
+                <span className="text">reBot B601-DM と LeRobot</span>
+              </a>
+              <a href="/ja/rebot_arm_b601_dm_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-DM と GraspNet デモ</span>
+              </a>
+              <a href="/ja/rebot_arm_b601_dm_ros2_integration/" className="content-card">
+                <span className="text">reBot B601-DM と ROS2</span>
+              </a>
+          </div>
+            <h4> B601-RS アーム</h4>
           <div className="card-container">
               <a href="/ja/rebot_b601_rs_getting_started/" className="content-card">
                 <span className="text">reBot B601-RS 入門ガイド</span>
                 <span className="tag recommended">New</span>
               </a>
-              <a href="/ja/rebot_b601_dm_getting_started/" className="content-card">
-                <span className="text">reBot B601-DM 入門ガイド</span>
+              <a href="/ja/rebot_arm_b601_rs_lerobot/" className="content-card">
+                <span className="text">reBot B601-RS と LeRobot</span>
                 <span className="tag recommended">New</span>
               </a>
-              <a href="/ja/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
-                <span className="text">Pinocchio を用いた reBot</span>
+              <a href="/ja/rebot_arm_b601_rs_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot B601-RS と Pinocchio</span>
+                <span className="tag recommended">New</span>
               </a>
-              <a href="/ja/rebot_arm_b601_dm_lerobot/" className="content-card">
-                <span className="text">LeRobot を用いた reBot</span>
+              <a href="/ja/rebot_arm_b601_rs_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-RS と GraspNet</span>
+                <span className="tag recommended">New</span>
               </a>
-              <a href="/ja/rebot_arm_b601_dm_grasping_demo/" className="content-card">
-                <span className="text">reBot ビジュアル把持デモ</span>
-              </a>
-              <a href="/ja/rebot_arm_b601_dm_ros2_integration/" className="content-card">
-                <span className="text">reBot B601-DM ROS2 連携</span>
+              <a href="/ja/rebot_arm_b601_rs_ros2_integration" className="content-card">
+                <span className="text">reBot B601-RS と ROS2 </span>
+                <span className="tag recommended">New</span>
               </a>
           </div>
-
 
           <h3> 🤗 Reachy</h3>
           <div className="card-container">
@@ -119,17 +137,21 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
                 <span className="text">SO100/101 アーム</span>
               </a>
               <a href="/ja/simulate_soarm101_by_leisaac/" className="content-card">
-                <span className="text">LeIsaac を用いた SO10x アーム</span>
+                <span className="text">SO10x アームと LeIsaac</span>
               </a>
               <a href="/ja/control_robotic_arm_via_phospho/" className="content-card">
                 <span className="text">Phospho Lerobot</span>
               </a>
               <a href="/ja/training_soarm101_policy_with_isaacLab/" className="content-card">
-                  <span className="text">So Arm 強化学習トレーニング</span>
+                  <span className="text">So アーム RL トレーニング</span>
                   <span className="tag recommended">New</span>
               </a>
               <a href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
-                  <span className="text">NVIDIA GR00T を用いた SO101</span>
+                  <span className="text">SO101 と NVIDIA GR00T</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/ja/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">ステアリングギア デバッグツール</span>
                   <span className="tag recommended">New</span>
               </a>
           </div>
@@ -155,11 +177,11 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
                 <span className="tag recommended">New</span>
               </a>
               <a href="/ja/control_robotic_arm_via_gr00t" className="content-card">
-                <span className="text">NVIDIA GR00T を用いた StarAI</span>
+                <span className="text">StarAI と NVIDIA GR00T</span>
               </a>
           </div>
 
-          <h3>🦿Legged Wheel</h3>
+          <h3>🦿脚付きホイール</h3>
           <div className="card-container">
               <a href="/ja/StackForce_Mini_Wheeled_Legged_Robot" className="content-card">
                 <span className="text">ミニ車輪脚ロボット</span>
@@ -167,7 +189,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
               </a>
           </div>
 
-          <h3>🖐️ Hand</h3>
+          <h3>🖐️ ハンド</h3>
           <div className="card-container">
               <a href="/ja/hand_amazinghand/" className="content-card">
                 <span className="text">AmazingHand</span>
@@ -175,7 +197,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
               </a>
           </div>
 
-          <h3>🦀 End Effectors</h3>
+          <h3>🦀 エンドエフェクタ</h3>
           <div className="card-container">
               <a href="/ja/dm_gripper/" className="content-card">
                 <span className="text">DM グリッパー</span>
@@ -241,18 +263,18 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
           </a>
       </div>
 
-      <strong>📷 Camera</strong>  
+      <strong>📷 カメラ</strong>  
 
       <div className="card-container">
           <a href="/ja/orbbec_gemini2/" className="content-card">
             <span className="text">Orbbec Gemini 2</span>
           </a>
           <a href="/ja/orbbec_gemini_335lg" className="content-card">
-            <span className="text">Gemini 335Lg Depth</span>
+            <span className="text">Gemini 335Lg 深度カメラ</span>
             <span className="tag recommended">New</span>
           </a>
           <a href="/ja/orbbec_gemini336" className="content-card">
-            <span className="text">Gemini 336 Depth</span>
+            <span className="text">Gemini 336 深度カメラ</span>
             <span className="tag recommended">New</span>
           </a>
           <a href="/ja/sensing_gmsl_cameras" className="content-card">
@@ -263,7 +285,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
             <span className="tag recommended">New</span>
           </a>
           <a href="/ja/orbbec_depth_camera_on_ros/" className="content-card">
-            <span className="text">ROS を用いた Orbbec</span>
+            <span className="text">Orbbec と ROS</span>
           </a>
           <a href="/ja/orb_slam3_orbbec_gemini2/" className="content-card">
             <span className="text">ORB-SLAM3 Gemini2</span>
@@ -330,7 +352,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <strong>PX4</strong>  
       <div className="card-container">
       <a href="/ja/control_px4_with_recomputer_jetson/" className="content-card">
-        <span className="text">Jetson と PX4 の連携</span>
+        <span className="text">Jetson での PX4 制御</span>
       </a>
 
       <a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="content-card">
@@ -345,7 +367,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
         <span className="text">Isaac Lab のインストール</span>
       </a>
       <a href="/ja/training_soarm101_policy_with_isaacLab/" className="content-card">
-        <span className="text">SO Arm の強化学習トレーニング</span>
+        <span className="text">SO Arm 強化学習トレーニング</span>
         <span className="tag recommended">New</span>
       </a>
       <a href="/ja/simulate_soarm101_by_leisaac/" className="content-card">
@@ -372,7 +394,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 
     <div className="learning-intro">
         <h2>🎓 ロボティクスアカデミー</h2>
-        <p>ROS、シミュレーション、強化学習、および高度なロボット制御を網羅した総合カリキュラム。</p>
+        <p>ROS、シミュレーション、強化学習、高度なロボット制御を網羅した総合カリキュラム。</p>
     </div>
 
     <!-- Section 1: Core Software -->
@@ -473,7 +495,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
     </div>
 
     <!-- Section 2: Robot Applications -->
-    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 ロボット応用</h3>
+    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 ロボットアプリケーション</h3>
     <div className="course-grid">
 
       <!-- Humanoid -->
@@ -490,12 +512,12 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 
       <!-- Lekiwi -->
       <a href="" className="course-card">
-        <div className="course-cover c-lekiwi">移動ロボット</div>
+        <div className="course-cover c-lekiwi">モバイルロボット</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 6時間</span></div>
           <h3>モバイルロボティクス（Lekiwi）</h3>
           <p>SLAM、Navigation 2、自律巡回。</p>
-          <span className="btn-plan">プランニング</span>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
@@ -504,9 +526,9 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
         <div className="course-cover c-arm">ロボットアーム</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 15時間</span></div>
-          <h3>StarAI アームシステム講座</h3>
-          <p>StarAI 6+1 自由度マニピュレータ：運動学、動力学、模倣学習、および VLA ベースの高度な強化学習。</p>
-          <span className="btn-plan">プランニング</span>
+          <h3>StarAI アームシステムコース</h3>
+          <p>StarAI 6+1 DOF マニピュレータ：運動学、動力学、模倣学習、および高度な VLA ベース強化学習</p>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
@@ -515,9 +537,9 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
         <div className="course-cover c-legged">脚付き車輪ロボット</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 8時間</span></div>
-          <h3>Stackforce 脚付き車輪ロボット講座</h3>
+          <h3>Stackforce 脚付き車輪ロボットコース</h3>
           <p>ハイブリッドロボットのバランス制御と LQR モーションプランニング。</p>
-          <span className="btn-start">学習する</span>
+          <span className="btn-start">学習中</span>
         </div>
       </a>
 
@@ -526,9 +548,9 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
         <div className="course-cover c-reachy">デスクトップロボット</div>
         <div className="course-info">
           <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 8時間</span></div>
-          <h3>ReachyMini チュートリアル 13 講座</h3>
-          <p>ReachyMini の基本操作、インターフェースチュートリアル、および二次開発を体系的に学べるコース</p>
-          <span className="btn-start">学習を始める</span>
+          <h3>ReachyMini チュートリアル 全13講義</h3>
+          <p>ReachyMini の基本操作、インターフェースチュートリアル、および二次開発に関する体系的なコース</p>
+          <span className="btn-start">学習中</span>
         </div>
       </a>
 
@@ -706,7 +728,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 
 
 /* =========================================
-   4. Dark Mode 适配
+   4. Dark Mode への対応
    ========================================= */
 html[data-theme='dark'] .tab-nav { background: #2f2f32; box-shadow: none; }
 html[data-theme='dark'] .tab-slider { background: #444; }
@@ -714,7 +736,7 @@ html[data-theme='dark'] .tab-item { color: #aaa; }
 html[data-theme='dark'] #tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #60a5fa; }
 html[data-theme='dark'] #tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #a78bfa; }
 
-/* ハードウェア ダークモード */
+/* ハードウェアのダークモード */
 html[data-theme='dark'] .quick-nav-container { background: linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); border: none; }
 html[data-theme='dark'] .nav-item { color: #e5e7eb; background: rgb(47, 50, 57); box-shadow: 0 2px 4px rgba(0,0,0,0.4); }
 html[data-theme='dark'] .category-card { background: #1b1b1d; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border-color: #303033; }
@@ -724,7 +746,7 @@ html[data-theme='dark'] .content-card::after { background: #60a5fa; }
 html[data-theme='dark'] .recommended { background: rgba(255, 107, 107, 0.15); color: #ff8e8e; border-color: rgba(255, 142, 142, 0.3); }
 html[data-theme='dark'] h2, html[data-theme='dark'] h3 { color: #f9fafb; }
 
-/* ラーニング ダークモード */
+/* 学習用セクションのダークモード */
 html[data-theme='dark'] .course-card { background: #1b1b1d; border-color: #303033; }
 html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
 html[data-theme='dark'] .course-info p { color: #9ca3af; }

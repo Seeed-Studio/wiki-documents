@@ -9,10 +9,20 @@ last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_main_page/
 ---
 # reTerminal E Series ePaper Display Overview
+
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
 
 ## Introduction
 
@@ -225,8 +235,8 @@ Use the quick guide below to narrow down to one model. If multiple rows apply, t
 		</tr>
 		<tr>
 			<td>Want a TRMNL E-Ink dashboard</td>
-			<td align="center"><strong>E1001 / E1002</strong></td>
-			<td>Both are officially supported. E1002 currently runs in monochrome mode under TRMNL.</td>
+			<td align="center"><strong>E1001 / E1002 / E1003</strong></td>
+			<td>All three are officially supported. E1002 currently runs in monochrome mode under TRMNL.</td>
 		</tr>
 		<tr>
 			<td>Battery life is the single most important factor</td>
@@ -364,20 +374,28 @@ Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-
 			<th>E1004</th>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome">ESPHome — Basic Usage</a></td>
-			<td>Plug the device into Home Assistant and draw simple graphics with YAML.</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome">ESPHome — Display</a></td>
+			<td>Plug the device into Home Assistant and draw simple ePaper graphics with YAML.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">Planned</td>
 			<td align="center">via Home Assistant</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced">ESPHome — Advanced Usage</a></td>
-			<td>Buttons, buzzer, battery monitoring, deep sleep, multi-page dashboards.</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced">ESPHome — I/O, Battery &amp; Power</a></td>
+			<td>Buttons, buzzer, onboard LED, battery monitoring, deep sleep, multi-page dashboards.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">Planned</td>
 			<td align="center">via Home Assistant</td>
+		</tr>
+		<tr>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone">ESPHome — RTC, SD &amp; Microphone</a></td>
+			<td>PCF8563 RTC time sync, microSD card detect, and onboard PDM microphone setup.</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">Planned</td>
+			<td align="center">No mic</td>
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_trmnl">Works with TRMNL</a></td>

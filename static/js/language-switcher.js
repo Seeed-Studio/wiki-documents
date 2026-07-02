@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-08 16:00:14 (北京时间)
-// 多语言页面: 2316 个
+// 生成时间: 2026-06-30 14:44:34 (北京时间)
+// 多语言页面: 2357 个
 
 (function() {
   'use strict';
@@ -25,6 +25,41 @@
   // 内嵌的语言映射数据
   const languageMapping = {
   "/Cloud": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/codecraft/codecraft-overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/codecraft/quick-start-and-support": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/codecraft/creation-and-platform": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/codecraft/community-and-publishing": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/codecraft/codecraft-for-education": [
     "cn",
     "en",
     "es",
@@ -779,6 +814,13 @@
     "ja",
     "pt"
   ],
+  "/deploy_tensorrt_edge_llm_on_jetpack6.2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/develop_recomputer_jetson_using_clawdbot": [
     "cn",
     "en",
@@ -1108,6 +1150,13 @@
     "ja",
     "pt"
   ],
+  "/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/getting_started_with_jetson_claw_on_orin_nano_nx_8gb": [
     "cn",
     "en",
@@ -1137,6 +1186,20 @@
     "pt"
   ],
   "/ai_robotics_reachy_fleet_dance": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_graspnet_visual_grasping": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/voice_control_rebot_arm": [
     "cn",
     "en",
     "es",
@@ -1255,6 +1318,13 @@
     "ja",
     "pt"
   ],
+  "/recomputer_jetson_robotics_j601_interfaces_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/create_backup_and_restore_on_recomputer": [
     "cn",
     "en",
@@ -1354,6 +1424,13 @@
     "pt"
   ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack72_deep_dive": [
     "cn",
     "en",
     "es",
@@ -1745,6 +1822,13 @@
     "ja",
     "pt"
   ],
+  "/recomputer_mini_j501_wifi_module_installation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recomputer_robotics_j401_getting_started": [
     "cn",
     "en",
@@ -1823,6 +1907,13 @@
     "pt"
   ],
   "/reserver_industrial_hardware_interface_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reserver_industrial_poe_camera_usage": [
     "cn",
     "en",
     "es",
@@ -3313,6 +3404,13 @@
     "ja",
     "pt"
   ],
+  "/ai_voice_assitant_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/ai_parking_slot_monitoring_demo_with_recamera": [
     "cn",
     "en",
@@ -3348,6 +3446,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_hand_gesture": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
@@ -3362,7 +3467,35 @@
     "ja",
     "pt"
   ],
+  "/recamera_picoclaw": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_qrcode_udp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_meshtastic_ha_security_system": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_source_localization_of_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rtsp_to_webrtc_with_recamera": [
     "cn",
     "en",
     "es",
@@ -3398,6 +3531,13 @@
     "pt"
   ],
   "/recamera_network_connection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wifi_halow_getting_started": [
     "cn",
     "en",
     "es",
@@ -3999,6 +4139,20 @@
     "ja",
     "pt"
   ],
+  "/wio-s3_wireless_module_command_list": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio-s3_wireless_module_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Wio-WM1110_Dev_Kit_Hardware_Overview": [
     "cn",
     "en",
@@ -4014,6 +4168,20 @@
     "pt"
   ],
   "/Wio-WM1110_Dev_Kit/Introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_lr2021_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_lr2021_pcb_design_guide": [
     "cn",
     "en",
     "es",
@@ -4147,6 +4315,13 @@
     "pt"
   ],
   "/connect_wio_tracker_to_locator": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/update_internal_lr1110_firmware": [
     "cn",
     "en",
     "es",
@@ -5133,6 +5308,13 @@
     "ja",
     "pt"
   ],
+  "/bulk_configuration_chirpstack": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/flash_opensource_firmware_to_m2_gateway": [
     "cn",
     "en",
@@ -5407,6 +5589,13 @@
     "pt"
   ],
   "/starai_arm_ros_moveit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/lerobot_steering_gear_debugging_tool": [
     "cn",
     "en",
     "es",
@@ -5841,6 +6030,34 @@
     "pt"
   ],
   "/rebot_b601_rs_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_grasping_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_lerobot": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_pinocchio_meshcat": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_ros2_integration": [
     "cn",
     "en",
     "es",
@@ -8115,6 +8332,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_esphome_rtc_sd_microphone": [
     "cn",
     "en",
     "es",
@@ -12271,6 +12495,76 @@
     "ja",
     "pt"
   ],
+  "/xiao_nrf54lm20a_with_epaper_and_sdcard": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_bluetooth_lowpower": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_matter": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_nfc": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_onboard": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_low_power": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_ncs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/xiao_ra4m1_clock": [
     "cn",
     "en",
@@ -13329,13 +13623,6 @@
     "pt"
   ],
   "/SenseCAP_Builder_build_LoRaWAN_Sensors": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/get_started_with_t1000_p": [
     "cn",
     "en",
     "es",

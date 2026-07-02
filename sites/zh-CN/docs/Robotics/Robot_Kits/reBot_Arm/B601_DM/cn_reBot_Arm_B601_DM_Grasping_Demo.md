@@ -18,7 +18,7 @@ translation:
   skip:
     - [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-07-02'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -52,34 +52,82 @@ YOLO 是一类广泛使用的实时目标检测模型，能够在单次前向推
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1VjVA6KEff&autoplay=0" title="Bilibili video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
----
+## 项目特点
 
-##  项目介绍
+1. **YOLO + OBB 直接估计抓取姿态**  
+   直接利用检测框或 OBB 最小外接矩形，使用短轴作为夹爪开合方向，避免复杂 3D 点云处理。
 
-**reBot Arm B601 视觉夹取 Demo** 是基于 [reBot Arm B601](https://github.com/vectorBH6/reBotArm_control_py) 机械臂控制库与 RGB-D 深度相机的视觉抓取算法演示项目。系统支持 B601 的 DM 与 RS 两种机械臂配置，通过 YOLO 模型实时识别桌面物体，利用 OBB 最小外接矩形估计夹取姿态，经手眼标定将相机坐标系下的抓取点变换到机械臂基坐标系，最终驱动机械臂完成自主抓取。
+2. **GraspNet-Baseline 6D 夹取姿态估计（可选）**  
+   支持基于 GraspNet-Baseline（`graspnet/graspnet-baseline`）对 RGB-D 点云进行 6D 夹取姿态估计，并结合 YOLO 检测框筛选目标候选，用于更复杂物体的夹取调试。
 
-###  核心功能
+3. **机械臂与夹爪驱动轻量封装**  
+   主抓取脚本统一复用 `RebotArm` 接口，集成 IK、轨迹控制和夹爪状态机。
 
-- 📷 **深度感知** — 支持 Orbbec Gemini 2 与 RealSense D435i / D405 等 RGB-D 深度相机
-- 🔍 **目标检测** — 基于 YOLO 模型识别，支持开放词汇自定义类别
-- 📐 **姿态估计** — OBB 最小外接矩形短轴方向估计夹爪朝向，深度分位数估计抓取高度
-- 🔄 **坐标变换** — TSAI 手眼标定（Eye-in-Hand），将相机系抓取点变换到机械臂基坐标系
-- 🦾 **运动执行** — reBotArm_control_py IK + 轨迹控制器，内置夹爪力控状态机
+4. **开源 & 可扩展**  
+   所有代码开源，支持用户根据需求自定义控制算法和效果。
 
----
+## 规格参数
 
-## 硬件配置
+本教程硬件由 [矽递科技 Seeed Studio](https://www.seeedstudio.com/) 提供
 
-| 组件 | 型号 / 要求 |
-|------|------------|
-| 机械臂 | reBot Arm B601（DM / RS 两种配置） |
-| 深度相机 | Orbbec Gemini 2、Intel RealSense D435i / D405 |
-| 通信接口 | USB2CAN 串口桥接器（机械臂）；USB 3.0（相机） |
-| 主机 | Ubuntu 22.04+，Python 3.10，x86_64 |
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>规格</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>机械臂型号</td>
+      <td>reBot Arm B601-DM</td>
+    </tr>
+    <tr>
+      <td>自由度</td>
+      <td>6-DOF + 夹爪</td>
+    </tr>
+    <tr>
+      <td>相机型号</td>
+      <td>Orbbec Gemini 2</td>
+    </tr>
+    <tr>
+      <td>检测方式</td>
+      <td>YOLO + OBB 最小外接矩形</td>
+    </tr>
+    <tr>
+      <td>通信方式</td>
+      <td>CAN Bus via USB2CAN 适配器；USB 3.0 相机连接</td>
+    </tr>
+    <tr>
+      <td>工作电压</td>
+      <td>24V DC</td>
+    </tr>
+    <tr>
+      <td>控制主机</td>
+      <td>Ubuntu 22.04+ PC</td>
+    </tr>
+    <tr>
+      <td>推荐 Python 版本</td>
+      <td>Python 3.10</td>
+    </tr>
+  </tbody>
+</table>
 
-**接线说明**
+## 材料清单（BOM）
 
-1. 将深度相机通过 USB 3.0 连接到主机。
+| 部件 | 数量 | 是否包含 |
+|--|--|--|
+| reBot Arm B601-DM 机械臂 | 1 | ✅ |
+| 夹爪 | 1 | ✅ |
+| USB2CAN 串口桥 | 1 | ✅ |
+| 电源适配器（24V） | 1 | ✅ |
+| USB-C / 通信线缆 | 1 | ✅ |
+| Orbbec Gemini 2 深度相机 | 1 | ✅ |
+| Gemini 2 摄像头连接件 / 安装支架 | 1 | ✅ |
+
+### 接线说明
+
+1. 将 Gemini 2 通过 USB 3.0 连接到主机。
 2. 将 USB2CAN 适配器连接到机械臂 CAN 总线。
 3. 确认 24V 电源、相机和机械臂全部连接可靠。
 4. 配置权限：
@@ -141,6 +189,21 @@ cd ../..
 如果 `pip install -e .` 报 `Multiple top-level packages discovered in a flat-layout`，请在 `reBotArm_control_py` 的 `pyproject.toml` 中加入显式包发现配置，然后重新执行 `pip install -e .`：
 
 ```toml
+[tool.setuptools.packages.find]
+include = ["reBotArm_control_py*"]
+```
+
+B601 的 DM 与 RS 两种机械臂配置通过 SDK 仓库中的配置文件切换。B601-DM 请在 `sdk/reBotArm_control_py/config/rebotarm.yaml` 中确认：
+
+```yaml
+hardware_yaml: rebotarm_dm.yaml
+```
+
+视觉抓取程序会读取该 SDK 配置，并自动选择对应的机械臂控制模式与夹爪参数。
+
+如果 `pip install -e .` 报 `Multiple top-level packages discovered in a flat-layout`，请在 `reBotArm_control_py` 的 `pyproject.toml` 中加入显式包发现配置，然后重新执行 `pip install -e .`：
+
+```toml
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
@@ -157,7 +220,7 @@ include = ["reBotArm_control_py*"]
 
 **Orbbec Gemini 2**
 
-Orbbec Gemini 2 依赖 **pyorbbecsdk**（Orbbec SDK v2 的 Python 版本）。优先推荐直接安装预编译 Python 包：
+Orbbec Gemini2 深度相机依赖 `pyorbbecsdk`（Orbbec SDK v2 的 Python 版本）。优先推荐直接安装预编译 Python 包：
 
 **方式一：通过 pip 安装（推荐）**
 
@@ -186,7 +249,6 @@ git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 
 注意，如果上述安装过程中均发生错误导致安装失败，请参考下方Orbbec官方文档进行安装操作。
 
-:::tip
 首次使用建议安装 udev 规则：
 
 ```bash
@@ -194,6 +256,17 @@ sudo bash scripts/install_udev_rules.sh
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
+
+**RealSense D435i / D405**
+
+RealSense 相机依赖 `pyrealsense2`。通常可以直接通过 pip 安装：
+
+```bash
+pip install pyrealsense2
+python -c "import pyrealsense2; print('pyrealsense2 OK')"
+```
+
+如果系统需要完整的 RealSense 工具链或 udev 规则，请参考 RealSense SDK 官方文档安装 `librealsense2`。
 
 **验证安装**
 
@@ -312,75 +385,19 @@ graspnet:
 
 `checkpoint` 支持三种写法：仅文件名会自动从 `sdk/graspnet-baseline/checkpoints/` 查找；相对路径会按项目根目录解析；绝对路径会直接使用。
 
----
-
-## 目录结构
-
-```
-rebot_grasp/
-├── config/
-│   ├── default.yaml              # 主配置文件
-│   └── calibration/
-│       └── <camera_type>/
-│           ├── intrinsics.npz    # 相机内参
-│           └── hand_eye.npz      # 手眼标定结果
-├── drivers/
-│   ├── camera/
-│   │   ├── base.py               # 相机抽象基类
-│   │   ├── orbbec_gemini2.py     # Gemini 2 驱动
-│   │   └── realsense.py          # RealSense 驱动（备用）
-│   └── robot/
-│       └── grasp_driver.py       # 基于机械臂 SDK 的轻量抓取辅助
-├── calibration/
-│   ├── aruco_pose.py             # ArUco 位姿估计
-│   └── hand_eye.py               # 手眼标定求解
-├── utils/
-│   ├── ordinary_grasp.py         # OBB 抓取姿态估计与可视化
-│   └── transforms.py             # 坐标变换工具
-├── scripts/
-│   ├── main.py                   # 主抓取程序
-│   ├── set.py                    # 抓取与放置程序
-│   ├── ordinary_grasp_pipeline.py
-│   ├── object_detection.py
-│   └── collect_handeye_eih.py
-├── sdk/
-│   ├── pyorbbecsdk/              # Orbbec SDK Python 封装
-│   └── reBotArm_control_py/      # reBot Arm SDK
-└── environment.yml               # 推荐的 conda 环境文件
-```
-
-
-## 运行与调试
-
-### 0. 确认机械臂版本与 SDK 配置
-
-运行会连接机械臂的脚本前，请先确认机械臂版本、电源和 SDK 配置一致：
-
-- 请先完成对应机械臂的基础准备：[B601-DM 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/) 或 [B601-RS 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)。
-- 在 `sdk/reBotArm_control_py/config/rebotarm.yaml` 中选择对应的硬件配置：
-
-```yaml
-hardware_yaml: rebotarm_dm.yaml
-```
-
-或：
-
-```yaml
-hardware_yaml: rebotarm_rs.yaml
-```
-
-- B601-DM 使用 24V DC 电源，B601-RS 使用 48V DC 电源，请确认电源适配器和接线与机械臂版本一致。
-- 使用 B601-DM 时，请确认 SDK 配置中的串口桥接器设备路径与实际设备一致。
-- 使用 B601-RS 时，运行标定或抓取脚本前请先启动 CAN 接口：
+### 步骤 6. 验证依赖
 
 ```bash
-sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
-sudo ip link set can0 up
-ip -details link show can0
+python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
+python -c "import motorbridge; print('motorbridge OK')"
 ```
 
-### 1. 手眼标定（抓取前必做）
+首次使用 Orbbec 相机时，建议在你安装的 `pyorbbecsdk` 目录内执行 `scripts/install_udev_rules.sh` 安装 udev 规则，否则可能无法正常打开设备。
+
+
+## 手眼标定
+
+第一次运行完整抓取前，先完成 Eye-in-Hand 手眼标定。
 
 ```bash
 python scripts/collect_handeye_eih.py
@@ -394,68 +411,116 @@ python scripts/collect_handeye_eih.py
 python scripts/collect_handeye_eih.py --manual
 ```
 
-手动模式下，机械臂会进入重力补偿状态。将末端推到合适视角后按 `Enter` 采集，按 `c` 或 `q` 结束并计算。
+手动模式下，机械臂会进入重力补偿状态。你可以将末端推到合适视角后按 `Enter` 采集，按 `c` 或 `q` 结束并计算结果。
 
-:::tip
-如果您在校准之后发现机械臂的抓取精度无法满足需求，可以设置`config/default.yaml`参数 `calibration.hand_eye_compensation_m`中的 `X（前后）、Y（左右）、Z（高低）` 参数给予位置补偿。
-:::
+标定结果保存到：
 
-<div class="video-container">
-  <iframe 
-    width="900" 
-    height="600" 
-    src="//player.bilibili.com/player.html?bvid=BV13CTk6bErp&autoplay=0" 
-    title="告别抓取误差：彻底解决机械臂视觉抓取失败的困惑" 
-    frameborder="0" 
-    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-  </iframe>
-</div>
+```text
+config/calibration/orbbec_gemini2/hand_eye.npz
+```
 
-### 2. `scripts/main.py` — 主抓取程序
+样本数建议最少 5 个样本且建议不少于 15 个样本。
 
-完整的视觉抓取流水线：
+## 运行与调试
 
-1. 初始化 RGB-D 相机，确认图像流可用
-2. 机械臂与夹爪使能，移动到预备高位
-3. 实时相机预览 + YOLO 目标检测与实例分割
-4. OBB 短轴估计夹爪朝向，深度分位数估计抓取高度
-5. 按 `G` 冻结帧，经手眼变换计算机械臂目标位姿
-6. 机械臂移动到预抓取点 → 下降 → 夹爪闭合 → 提升 → 回预备位
+### 1. 仅验证目标检测
 
-### 3. `scripts/set.py` — 抓取与放置程序
+```bash
+python scripts/object_detection.py
+```
 
-功能效果：将香蕉抓取并放置到盒子里面
+若需调整检测模型或类别，可在 `config/default.yaml` 中修改：
 
-完成流程：
-1. 相机与机械臂初始化，移动到预备点位
-2. 实时相机预览 + YOLO 目标检测与实例分割
-3. 按 `G` 冻结帧，经手眼变换计算机械臂目标位姿
-4. 机械臂移动抓取香蕉并抬高
-5. 机械臂将香蕉放置在盒子内，并回归初始姿态
-6. 按 `Q` 退出系统，机械臂回归零点
+```yaml
+yolo:
+  model_name: "yoloe-26l-seg.pt"
+  device: "cpu"
+  use_world: true
+  custom_classes:
+    - "yellow banana"
+    - "water bottle"
+    - "cup"
+```
 
-<div class="video-container">
-  <iframe 
-    width="900" 
-    height="600" 
-    src="//player.bilibili.com/player.html?bvid=BV1SoTv6iEwQ&autoplay=0" 
-    title="reBot Arm B601-DM 协同双目视觉实现智能抓取开源方案" 
-    frameborder="0" 
-    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-  </iframe>
-</div>
+用于确认：
 
-### 4. `scripts/ordinary_grasp_pipeline.py` — 简化抓取测试
+- 相机可以正常打开
+- YOLO 模型加载正常
+- YOLO 目标检测功能正常
 
-不依赖机械臂，仅验证 OBB 抓取姿态估计和可视化效果，适合调试感知模块。
+### 2. 仅验证抓取估计
 
-### 5. `scripts/graspnet_camera_demo.py` — GraspNet 相机估计 Demo
+```bash
+python scripts/ordinary_grasp_pipeline.py
+```
 
-不连接机械臂，仅使用 RGB-D 相机运行 GraspNet 6D 夹取姿态估计。脚本会保留实时相机预览，并使用 YOLO 检测框选择目标区域，再从 GraspNet 全场景候选中筛选目标 bbox 内的可行夹取。按 `G` 或 `Space` 对当前帧推理，按 `R` 恢复实时预览，按 `Q` 或 `Esc` 退出；推理后可通过 Open3D 查看点云与夹取候选。
+若需要调整抓取估计频率或预抓取回退距离，可修改：
+
+```yaml
+grasp_pipeline:
+  infer_every_live: 3
+  grasp:
+    depth_quantile: 0.6
+    pregrasp_offset_m: 0.080
+```
+
+这个脚本不会连接机械臂，只用于验证：  
+- OBB 或最小外接矩形是否合理
+- 抓取点是否位于目标中央区域
+- 短轴方向是否符合夹爪开合方向预期
+
+按键说明：  
+- 鼠标左键：点测深度
+- `G`：打印当前最佳抓取姿态
+- `Q` / `Esc`：退出
+
+### 3. 执行主抓取程序
+
+```bash
+python scripts/main.py
+```
+
+如果只想先验证目标位姿，不让机械臂真实动作：
+
+```bash
+python scripts/main.py --dry-run
+```
+建议先通过 `--dry-run` 验证位姿和工作空间，再执行真实抓取。
+
+如果 `reBotArm_control_py` 不在默认位置，请在 `config/default.yaml` 中指定：
+
+```yaml
+robot:
+  repo_root: null
+```
+
+默认保持 `null` 即可，程序会优先自动查找 `sdk/reBotArm_control_py`。
+
+主程序执行流程：  
+1. 初始化机械臂与夹爪
+2. 移动到预备位，如果需要调整机械臂启动后的预备位置，请在 `config/default.yaml` 中修改：
+
+```yaml
+robot:
+  ready_pose:
+    x: 0.3
+    y: 0.0
+    z: 0.3
+    roll: 0.0
+    pitch: 1.0
+    duration: 3.0
+```
+
+3. 实时检测桌面目标
+4. 基于短轴估计抓取姿态
+5. 按 `G` 采当前帧并执行抓取
+
+运行时按键：  
+- `G`：抓取当前最佳目标
+- `R`：恢复实时预览
+- `Q` / `Esc`：退出程序
+
+### 4. GraspNet 相机估计 Demo（可选）
 
 ```bash
 python scripts/graspnet_camera_demo.py
@@ -635,8 +700,10 @@ python -c "import torch; print(torch.cuda.is_available())"
 - [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm) — reBot 机械臂开源项目
 - [Orbbec Gemini 2 产品页](https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
-- [pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
-- [RealSense SDK](https://github.com/realsenseai/librealsense)
+- [Orbbec SDK v2 API 文档](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/)
+- [pyorbbecsdk 仓库](https://github.com/orbbec/pyorbbecsdk)
+- [pyorbbecsdk 文档](https://orbbec.github.io/pyorbbecsdk/index.html)
+- [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Ultralytics YOLOv11](https://github.com/ultralytics/ultralytics)
 

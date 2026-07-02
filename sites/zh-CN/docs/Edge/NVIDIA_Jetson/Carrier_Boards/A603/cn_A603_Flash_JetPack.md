@@ -12,7 +12,7 @@ last_update:
   date: 04/19/2023
   author: Lakshantha
 createdAt: '2025-05-30'
-updatedAt: '2026-03-24'
+updatedAt: '2026-06-29'
 url: https://wiki.seeedstudio.com/cn/reComputer_A603_Flash_System/
 ---
 
@@ -37,9 +37,10 @@ A603 载板是一款功能强大的扩展板，支持 Jetson Orin™ NX/Nano 模
 
 ## 前提条件
 
-- Ubuntu 主机 PC
-- 带有 Jetson Orin 模块的 A603 载板
-- Micro-USB 数据传输线
+- Ubuntu 20.04/22.04/24.04 主机 PC
+- A603 载板 + Jetson Orin NX 或 Jetson Orin Nano 模组
+- Micro-USB 或 Type-C 数据传输线
+- 电源适配器
 
 ## 进入强制恢复模式
 
@@ -141,6 +142,12 @@ A603 载板是一款功能强大的扩展板，支持 Jetson Orin™ NX/Nano 模
       <td>6.2</td>
       <td>36.4.3</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQLFs4vd8N5Lp0nhbP_KU-gB6kYGlXu3_N3KLiL25ze52Q?e=CWhIaE">下载</a></td>
+    </tr>
+    <tr>
+      <td>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
+      <td>7.2</td>
+      <td>39.2.0</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFKQLWsQBBTrenUxxvj-qJAU4s62oPXWg6RxcdSg-uJnY?e=y3buDr" target="_blank" rel="noopener noreferrer">下载</a></td>
     </tr>
   </tbody>
 </table>
@@ -595,6 +602,86 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
      ```
 
    完成后，设备可以启动进入系统。
+:::
+
+</TabItem>
+
+<TabItem value="JP7.2" label="JP7.2">
+
+这里我们将在 A603 载板配合 Jetson Orin NX 或 Jetson Orin Nano 模组上安装 **JetPack 7.2**。
+
+### 硬件准备
+
+- Ubuntu 20.04/22.04/24.04 主机 PC
+- Type-C 数据线
+- A603 载板 + Jetson Orin NX 或 Jetson Orin Nano 模组
+- 电源适配器
+
+**步骤 1：** 在 Ubuntu 系统的电脑上执行以下命令下载 NVIDIA 系统镜像包：
+
+```bash
+wget https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.0/release/Jetson_Linux_R39.2.0_aarch64.tbz2
+wget https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.0/release/Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2
+```
+
+**步骤 2：** 下载 A603 JetPack 7.2 外设驱动包 [603_jp72.tbz2](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFKQLWsQBBTrenUxxvj-qJAU4s62oPXWg6RxcdSg-uJnY?e=y3buDr)，将其放到 NVIDIA 系统镜像包所在目录，然后执行以下命令解压和组装刷机包：
+
+```bash
+# 解压官方刷机包文件
+tar xf Jetson_Linux_R39.2.0_aarch64.tbz2
+sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
+
+# 创建 A603 解压目录
+mkdir 603_jp72/
+cp 603_jp72.tbz2 603_jp72/
+cd 603_jp72
+sudo tar xf 603_jp72.tbz2
+
+# 进入 Linux_for_Tegra 目录并执行配置脚本
+cd ../Linux_for_Tegra/
+sudo ./tools/l4t_flash_prerequisites.sh
+sudo ./apply_binaries.sh
+
+# 替换驱动包文件和目录到 Linux_for_Tegra 目录下
+cp -r ../603_jp72/bootloader/ ./
+cp -r ../603_jp72/kernel/ ./
+cp ../603_jp72/p3768-0000-p3767-0000-a0.conf ./
+sudo cp -r ../603_jp72/rootfs/ ./
+```
+
+**步骤 3：** 将设备置于 Recovery 模式。设备必须进入 Recovery 模式才能进行刷机，步骤如下：
+
+1. 短接载板的 RECOVERY 引脚与 GND 引脚。
+2. 使用 Type-C 数据线连接载板和电脑。
+3. 设备上电。
+4. 在电脑上执行 `lsusb`，看到产品 ID 为 `7323`、`7423`、`7523` 或 `7623`，即表示设备已进入 Recovery 模式。
+   - 7323：Orin NX 16GB
+   - 7423：Orin NX 8GB
+   - 7523：Orin Nano 8GB
+   - 7623：Orin Nano 4GB
+
+**步骤 4：** 将系统刷写到固态硬盘：
+
+```bash
+sudo ./l4t_initrd_flash.sh --erase-all jetson-orin-nano-devkit-super internal
+```
+
+刷机完成后，设备将自动启动。
+
+:::info
+提示：系统备份与恢复
+
+- 备份镜像（进入 Recovery 模式）：
+
+  ```bash
+  sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b jetson-orin-nano-devkit-super
+  ```
+
+- 使用备份的镜像刷机（进入 Recovery 模式）：
+
+  ```bash
+  sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit-super
+  ```
 :::
 
 </TabItem>

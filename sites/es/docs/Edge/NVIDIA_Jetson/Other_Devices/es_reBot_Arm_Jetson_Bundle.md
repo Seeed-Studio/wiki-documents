@@ -2,7 +2,7 @@
 description: ....
 title: Kit reBot Arm Jetson
 tags:
-  - reBot Arm 
+  - reBot Arm
   - reComputer Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /rebot_arm_jetson_bundle
@@ -11,27 +11,26 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-05-18'
+updatedAt: '2026-06-09'
 url: https://wiki.seeedstudio.com/es/rebot_arm_jetson_bundle/
 ---
 
-# Introducción al kit reBot Arm B601 × NVIDIA Jetson
+# Introducción a reBot Arm B601 × NVIDIA Jetson
 
 ## Introducción
 
 Una plataforma de desarrollo de IA incorporada todo en uno para la nueva era de la IA física.
 A medida que la IA generativa evoluciona de simplemente “entender el mundo” a “interactuar con el mundo” de forma activa, el desarrollo de la robótica está entrando en una nueva era: la IA física.
-Para ayudar a desarrolladores, investigadores y educadores a acelerar su camino hacia la IA incorporada, Seeed Studio combina el reBot Arm B601 totalmente de código abierto con el vanguardista kit de desarrollo NVIDIA Jetson para crear un potente kit de desarrollo robótico de próxima generación.
+Para ayudar a desarrolladores, investigadores y educadores a acelerar su camino hacia la IA incorporada, Seeed Studio combina el reBot Arm B601 totalmente de código abierto con el vanguardista Kit de Desarrollo NVIDIA Jetson para crear un potente kit de desarrollo robótico de próxima generación.
 
-Este kit no solo ofrece capacidades precisas de manipulación robótica, sino también la enorme potencia de cómputo de IA necesaria para ejecutar modelos de IA multimodales, modelos de visión y lenguaje (VLM) e inferencia robótica en tiempo real localmente en el borde.
+Este kit no solo ofrece capacidades precisas de manipulación robótica, sino también la enorme potencia de cómputo de IA necesaria para ejecutar modelos de IA multimodal, modelos de visión y lenguaje (VLM) e inferencia robótica en tiempo real localmente en el borde.
 Es una plataforma completa para construir la próxima ola de robots inteligentes, desde el aprendizaje y la investigación hasta la creación rápida de prototipos y el despliegue.
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
-        <th> reBot Arm B601 </th>
-        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
-        <th> reComputer Classic J3011 </th>
+        <th> reBot Arm B601 DM</th>
+        <th> reBot Arm B601 RS </th>
     </tr>
     <tr>
         <td>
@@ -39,6 +38,47 @@ Es una plataforma completa para construir la próxima ola de robots inteligentes
                 <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg" style={{width:400, height:'auto'}}/>
             </div>
         </td>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-100019336--rebot-arm-b601-rs-assembled-kit-with-gripper--rebot-arm-b601-rs.jpg" style={{width:400, height:'auto'}}/>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Inicio rápido </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+                    </a>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Inicio rápido </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Assembled-Kit-with-Gripper-p-6865.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+                    </a>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <th> Kit de Desarrollo NVIDIA® Jetson AGX Thor™ </th>
+        <th> reComputer Classic J3011 </th>
+    </tr>
+    <tr>
         <td>
             <div style={{textAlign:'center'}}>
                 <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-kit-3.png" style={{width:400, height:'auto'}}/>
@@ -52,47 +92,31 @@ Es una plataforma completa para construir la próxima ola de robots inteligentes
     </tr>
     <tr>
         <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Inicio rápido </font></span></strong>
-                </a>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/quick_start.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Inicio rápido </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+                    </a>
+                </div>
             </div>
         </td>
         <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/quick_start.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Inicio rápido </font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reComputer_J30_40_with_Jetson_getting_start/">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Inicio rápido </font></span></strong>
-                </a>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-                </a>
-            </div>
-        </td>
-        <td>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-                </a>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reComputer_J30_40_with_Jetson_getting_start/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Inicio rápido </font></span></strong>
+                    </a>
+                </div>
+                <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+                    </a>
+                </div>
             </div>
         </td>
     </tr>
@@ -100,7 +124,7 @@ Es una plataforma completa para construir la próxima ola de robots inteligentes
 </div>
 
 :::danger
-Aquí usamos el NVIDIA Jetson Thor como ejemplo para mostrar cómo controlar rápidamente el brazo robótico reBot Arm B601 con Jetson. También puedes elegir otros dispositivos Jetson según tus necesidades específicas.
+Aquí usamos el NVIDIA Jetson Thor como ejemplo para demostrar cómo controlar rápidamente el brazo robótico reBot Arm B601 con Jetson. También puedes elegir otros dispositivos Jetson según tus necesidades específicas.
 :::
 
 ## ¿Por qué este kit?
@@ -117,24 +141,24 @@ El desarrollo robótico tradicional suele presentar varias limitaciones:
 
 El kit reBot Arm × Jetson está diseñado para resolver estos desafíos.
 
-Con este kit obtienes:
+Con este kit, obtienes:
 
 1. Una plataforma de brazo robótico totalmente de código abierto con 6+1 GDL
-2. La plataforma insignia de computación de IA en el borde de NVIDIA impulsada por GPU
+2. La plataforma insignia de cómputo de IA en el borde de NVIDIA impulsada por GPU
 3. Compatibilidad nativa con ROS1, ROS2, Isaac Sim y LeRobot
 4. Preparado para flujos de trabajo de IA multimodal e IA generativa
-5. Un entorno unificado para educación, investigación y creación de prototipos de robótica de IA
+5. Un entorno unificado para educación, investigación y creación de prototipos de robótica con IA
 
 ## Primeros pasos
 
 ### Conexión de hardware
 
-1. Consulta [esta guía](https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/) para montar el brazo robótico.
+1. Consulta [esta guía](https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/) para ensamblar el brazo robótico.
 2. Usa un adaptador USB-a-CAN para conectar el brazo robótico al NVIDIA Jetson mediante la interfaz Type-C.
 
 ### Instalación del controlador del brazo con un clic
 
-Abre la ventana de terminal en el Jetson y ejecuta el siguiente comando.
+Abre la ventana de la terminal en el Jetson y ejecuta el siguiente comando.
 
 ```bash
 uv pip install motorbridge
@@ -153,7 +177,7 @@ Ejecuta este comando en Nvidia Jetson:
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
 ```
 
-Luego, abre `https://rebot-devarm.w0x7ce.eu/` en tu navegador y verás la siguiente página. Desde esta interfaz puedes ajustar los parámetros del motor, comprobar el estado del brazo robótico y realizar otras operaciones.
+Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador y verás la siguiente página. Desde esta interfaz, puedes ajustar los parámetros del motor, comprobar el estado del brazo robótico y realizar otras operaciones.
 
 <div align="center">
     <img width={900}
@@ -173,7 +197,7 @@ Luego, abre `https://rebot-devarm.w0x7ce.eu/` en tu navegador y verás la siguie
     <a
         href="/es/rebot_arm_b601_dm_lerobot/"
         style={{
-        textDecoration: 'none',
+            textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -188,7 +212,7 @@ Luego, abre `https://rebot-devarm.w0x7ce.eu/` en tu navegador y verás la siguie
                 src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
                 alt="LeRobot for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-                />
+            />
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
@@ -212,13 +236,13 @@ Luego, abre `https://rebot-devarm.w0x7ce.eu/` en tu navegador y verás la siguie
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
             <img
                 src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png"
-                alt="Visual Grasping Demo for reBot Arm B601-DM"
+                alt="Demostración de agarre visual para reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
             />
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Demostración de agarre visual con reBot Arm B601-DM
+                Demostración de agarre visual de reBot Arm B601-DM
             </h3>
         </div>
     </a>
@@ -238,13 +262,13 @@ Luego, abre `https://rebot-devarm.w0x7ce.eu/` en tu navegador y verás la siguie
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
             <img
                 src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
-                alt="Control reBot Arm with NemoClaw on Nvidia Jetson Thor"
+                alt="Controla reBot Arm con NemoClaw en Nvidia Jetson Thor"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
             />
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Controlar reBot Arm con NemoClaw en Nvidia Jetson Thor
+                Controla reBot Arm con NemoClaw en Nvidia Jetson Thor
             </h3>
         </div>
     </a>

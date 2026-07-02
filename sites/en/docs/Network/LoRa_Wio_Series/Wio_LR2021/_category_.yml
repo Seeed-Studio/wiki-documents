@@ -1,0 +1,10 @@
+position: 8 # float position is supported 
+label: 'Wio-LR2021'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: wio_lr2021
+link:
+  type: generated-index
+  slug: wio_lr2021_class
+  title: Wio-LR2021
+  description: Wio-LR2021 Product Documentation.

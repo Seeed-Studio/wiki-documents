@@ -1,18 +1,18 @@
 ---
 description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
-title: reSpeaker XVF3800 Control Wakeword and NLU with Pico-voice
+title: reSpeaker Control Wakeword and NLU with Pico-voice
 keywords:
   - reSpeaker
   - python
   - picovoice
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
 slug: /respeaker_xvf3800_picovoice
-sku: 114993700
+sku: 114993700,100005504,100099135,100070894
 last_update:
   date: 3/24/2026
   author: Kasun Thushara
 createdAt: '2026-03-24'
-updatedAt: '2026-03-25'
+updatedAt: '2026-06-18'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_picovoice/
 ---
 
@@ -36,19 +36,95 @@ This demo showcases how wake word detection using Picovoice Porcupine works toge
 
 ## Hardware Required 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      OR
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
 </div>
 
 ## Wakeword Detection 
 
 A wake word in robotic embedded systems enables **event-driven processing**, allowing the device to stay in a low-power listening state and only activate heavy speech processing when needed. This significantly reduces CPU, memory, and energy consumption on resource-constrained hardware like microcontrollers and edge devices. It also acts as a **gating mechanism** in the audio pipeline, filtering out irrelevant noise and preventing unnecessary activations of speech recognition and control logic. From a privacy perspective, wake word detection ensures that audio is only captured or transmitted after explicit user intent is detected, keeping most data processing on-device. Additionally, it improves human-robot interaction by providing a natural trigger for engagement, helping the system distinguish between ambient conversation and directed commands.
 
-Using a wake word together with an advanced mic array system like reSpeaker XVF3800 enables **efficient and reliable** voice interaction in embodied systems. The wake word ensures the system only activates full speech processing when needed, reducing power consumption and CPU usage on embedded hardware. The mic array enhances this by providing **beamforming, noise suppression, and direction detection on Circular mic array**, allowing accurate wake word recognition even in noisy environments. This combination minimizes false triggers and improves overall system responsiveness. It also supports better human-robot interaction by ensuring the device responds only when explicitly addressed and can focus on the correct speaker.
+Using a wake word together with an advanced mic array system like reSpeaker  enables **efficient and reliable** voice interaction in embodied systems. The wake word ensures the system only activates full speech processing when needed, reducing power consumption and CPU usage on embedded hardware. The mic array enhances this by providing **beamforming, noise suppression, and direction detection on Circular mic array**, allowing accurate wake word recognition even in noisy environments. This combination minimizes false triggers and improves overall system responsiveness. It also supports better human-robot interaction by ensuring the device responds only when explicitly addressed and can focus on the correct speaker.
 
 ## How to Use Wakeword with Pico-voice
 

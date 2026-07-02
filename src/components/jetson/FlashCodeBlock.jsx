@@ -178,6 +178,8 @@ const content = {
     hostRecommendationTable: "Please refer to the table below to prepare the host machine.",
     jetpackVersion: "JetPack Version",
     ubuntuVersion: "Ubuntu Version (Host Computer)",
+    hostJetpack72Note:
+      "For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.",
 
     // Button headers
     buttonHeader: "Button Header",
@@ -304,6 +306,8 @@ const content = {
     hostRecommendationTable: "请参考下表准备主机环境：",
     jetpackVersion: "JetPack 版本",
     ubuntuVersion: "Ubuntu 版本（主机）",
+    hostJetpack72Note:
+      "对于 JetPack 7.2，Ubuntu 24.04 仅支持刷写和目标端组件安装；如果需要主机开发组件，请使用 Ubuntu 20.04 或 22.04。",
 
     // Button headers
     buttonHeader: "按键/引脚",
@@ -429,6 +433,8 @@ const content = {
     hostRecommendationTable: "以下の表を参考にホスト環境を準備してください。",
     jetpackVersion: "JetPack バージョン",
     ubuntuVersion: "Ubuntu バージョン（ホスト）",
+    hostJetpack72Note:
+      "JetPack 7.2 では、Ubuntu 24.04 はフラッシュとターゲット側コンポーネントのインストールのみをサポートします。ホスト開発コンポーネントが必要な場合は Ubuntu 20.04 または 22.04 を使用してください。",
 
     buttonHeader: "ボタン/ピン",
     description: "説明",
@@ -559,6 +565,8 @@ const content = {
       "Consulte la siguiente tabla para preparar el equipo anfitrión.",
     jetpackVersion: "Versión de JetPack",
     ubuntuVersion: "Versión de Ubuntu (Host)",
+    hostJetpack72Note:
+      "Para JetPack 7.2, Ubuntu 24.04 solo es compatible con el flasheo y la instalación de componentes del dispositivo de destino. Use Ubuntu 20.04 o 22.04 si necesita componentes de desarrollo en el host.",
 
     buttonHeader: "Botón/Pin",
     description: "Descripción",
@@ -705,6 +713,8 @@ const content = {
       "Consulte a tabela abaixo para preparar a máquina host.",
     jetpackVersion: "Versão do JetPack",
     ubuntuVersion: "Versão do Ubuntu (Computador host)",
+    hostJetpack72Note:
+      "Para JetPack 7.2, o Ubuntu 24.04 é compatível apenas com flashing e instalação de componentes no dispositivo de destino. Use Ubuntu 20.04 ou 22.04 se precisar de componentes de desenvolvimento no host.",
 
     // Button headers
     buttonHeader: "Botão / Pino",
@@ -892,16 +902,25 @@ export const PrepareRequirementsRobotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
   const texts = useLocalizedTexts(lang);
 
-  const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics'];
+  const carrierProducts = [
+    'j401-robotics-orin-nx-16g',
+    'j401-robotics-orin-nx-8g',
+    'j401-robotics-orin-nano-8g',
+    'j401-robotics-orin-nano-4g'
+  ];
+  const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics', ...carrierProducts];
   if (!allowed.includes(product)) {
     return null;
   }
+  const deviceName = carrierProducts.includes(product)
+    ? 'J401-Robotics Carrier Board with NVIDIA Jetson Orin Nano/NX Module'
+    : `reComputer Robotics J4012 / J4011 / J3010 ${texts.or} J3011`;
 
   return (
     <div>
       <ul>
         <li>{texts.ubuntuHost}</li>
-        <li>reComputer Robotics J4012 / J4011 / J3010 {texts.or} J3011</li>
+        <li>{deviceName}</li>
         <li>{texts.usbTypeC}</li>
       </ul>
 
@@ -914,7 +933,16 @@ export const RecoveryRobotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
   const texts = useLocalizedTexts(lang);
 
-  const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics'];
+  const allowed = [
+    'j4012robotics',
+    'j4011robotics',
+    'j3011robotics',
+    'j3010robotics',
+    'j401-robotics-orin-nx-16g',
+    'j401-robotics-orin-nx-8g',
+    'j401-robotics-orin-nano-8g',
+    'j401-robotics-orin-nano-4g'
+  ];
   if (!allowed.includes(product)) {
     return null;
   }
@@ -2068,16 +2096,17 @@ const HostEnvironmentNote = ({ lang }) => {
       </div>
       <p></p>
       <div style={{ overflowX: 'auto', marginBottom: '1em' }}>
-        <table style={{ textAlign: 'center', width: '45%', borderCollapse: 'collapse' }} border={1}>
+        <table style={{ textAlign: 'center', width: '55%', borderCollapse: 'collapse' }} border={1}>
           <thead>
             <tr>
               <th rowSpan={2}>{texts.jetpackVersion}</th>
-              <th colSpan={3}>{texts.ubuntuVersion}</th>
+              <th colSpan={4}>{texts.ubuntuVersion}</th>
             </tr>
             <tr>
               <th>18.04</th>
               <th>20.04</th>
               <th>22.04</th>
+              <th>24.04</th>
             </tr>
           </thead>
           <tbody>
@@ -2086,16 +2115,26 @@ const HostEnvironmentNote = ({ lang }) => {
               <td>✅</td>
               <td>✅</td>
               <td></td>
+              <td></td>
             </tr>
             <tr>
               <td>JetPack 6.x</td>
               <td></td>
               <td>✅</td>
               <td>✅</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>JetPack 7.2</td>
+              <td></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>✅</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p style={{ fontSize: '0.9em', marginTop: '-0.5em' }}>{texts.hostJetpack72Note}</p>
     </>
   );
 };
@@ -2113,16 +2152,17 @@ const HostEnvironmentNote1 = ({ lang }) => {
       </div>
       <p></p>
       <div style={{ overflowX: 'auto', marginBottom: '1em' }}>
-        <table style={{ textAlign: 'center', width: '45%', borderCollapse: 'collapse' }} border={1}>
+        <table style={{ textAlign: 'center', width: '55%', borderCollapse: 'collapse' }} border={1}>
           <thead>
             <tr>
               <th rowSpan={2}>{texts.jetpackVersion}</th>
-              <th colSpan={3}>{texts.ubuntuVersion}</th>
+              <th colSpan={4}>{texts.ubuntuVersion}</th>
             </tr>
             <tr>
               <th>18.04</th>
               <th>20.04</th>
               <th>22.04</th>
+              <th>24.04</th>
             </tr>
           </thead>
           <tbody>
@@ -2131,10 +2171,19 @@ const HostEnvironmentNote1 = ({ lang }) => {
               <td></td>
               <td>✅</td>
               <td>✅</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>JetPack 7.2</td>
+              <td></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>✅</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p style={{ fontSize: '0.9em', marginTop: '-0.5em' }}>{texts.hostJetpack72Note}</p>
     </>
   );
 };

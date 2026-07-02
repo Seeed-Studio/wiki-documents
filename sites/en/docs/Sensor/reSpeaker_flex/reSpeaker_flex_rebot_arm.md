@@ -1,6 +1,6 @@
 ---
 description: This document will take you hand in hand from scratch to build a "listening and moving" intelligent robot arm system. Even if you have never touched the robotic arm or hardware development, as long as you follow the steps, you can successfully reproduce this project!
-title: Control reBot Arm using voice with reSpeaker Flex
+title: Control reBot Arm using voice with reSpeaker
 keywords:
   - reSpeaker
   - python
@@ -14,12 +14,12 @@ last_update:
   date: 5/22/2026
   author: wuxinrui
 createdAt: '2026-05-22'
-updatedAt: '2026-05-22'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_flex/
 ---
 
 
-# Control reBot Arm using voice with reSpeaker Flex
+# Control reBot Arm using voice with reSpeaker 
 
 >
 
@@ -27,30 +27,132 @@ url: https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_f
 
 ## Hardware Required
 
-<table align="center">
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
   <tr>
-    <th>reSpeaker Flex XVF3800 Circular</th>
     <th>reBot Arm B601-DM</th>
-
   </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg" style={{width:500, height:'auto'}}/></div></td>
 
-  </tr>
   <tr>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
+
+</div>
+
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      OR
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+
 
 ## 1. Project Overview
 
@@ -86,7 +188,7 @@ Describe the architecture of the entire system in layman's terms:
 ```
 You speak / make a sound
       ↓
-[ reSpeaker Flex ] —— An array composed of 4 "ears" can hear and determine the direction of sound.
+[ reSpeaker ] —— An array composed of 4 "ears" can hear and determine the direction of sound.
       ↓
 [ Ubuntu ] —— 
       ↓
@@ -101,7 +203,7 @@ A more specialized architecture diagram is described as follows:
 
 **Hardware layer** (devices you can touch):
 
-- reSpeaker Flex(4 Microphone Array XIAO ESP32S3 Controller)  
+- reSpeaker (4 Microphone Array XIAO ESP32S3 Controller)  
 
 - reBot Arm B601-DM (6-DOF manipulator)  
 
@@ -140,7 +242,7 @@ Before you begin, make sure you have all the following hardware ready. If you ar
 | Component | Model | Quantity | Approximate Features | Purchase Recommendations |
 |-----|-----|-----|-----|-----|
 | Mechanical arm | reBot Arm B601-DM | 1 set | "body" to perform actions | Seeed Studio official |
-| Microphone array | reSpeaker Flex XVF3800 | 1 | Listen to sound and determine direction | Seeed Studio official |
+| Microphone array | reSpeaker  XVF3800 | 1 | Listen to sound and determine direction | Seeed Studio official |
 | Master PC | Ubuntu 22.04 PC | 1 | Run the program's "brain" | x86_64 architecture |
 | USB cable | USB-A to USB-C | 2 | connected devices | generally included with the device |
 | Woodworking Fixture | 3 inches or more | 2 | Fixed mechanical arm base | Hardware store or included with the set |
@@ -176,7 +278,7 @@ This is a desktop-level mechanical arm with **7 "joints"** (professionally calle
 
 - Please pay attention to safety when assembling to prevent hand clamping and crushing
 
-#### 2.2.2 reSpeaker Flex XVF3800 Microphone Array
+#### 2.2.2 reSpeaker  Microphone Array
 
 This is a **4 microphone** intelligent voice processing module, the core features are:
 
@@ -253,7 +355,7 @@ Before you begin, familiarize yourself with how all devices should be connected.
                 │        │
           ┌─────┴──┐  ┌─┴──────────┐
           │reSpeaker│  │ reBot Arm  │
-          │ Flex   │  │ B601-DM    │
+          │         │  │ B601-DM    │
        │(Microphone) │  │ (Robot Arm)   │
           │        │  │            │
     │ 4-Microphone Array │  │ 7DOF    │
@@ -266,11 +368,11 @@ Before you begin, familiarize yourself with how all devices should be connected.
 
 **Connection steps**:
 
-1. Connect the reSpeaker Flex to the computer via USB-C cable
+1. Connect the reSpeaker  to the computer via USB-C cable
 
 2. Connect the reBot Arm to the computer via a USB-C cable
 
-3. (Optional) connect speakers or headphones to the audio output connector of the reSpeaker Flex
+3. (Optional) connect speakers or headphones to the audio output connector of the reSpeaker 
 
 4. Make sure the computer is connected to the Internet
 
@@ -679,11 +781,11 @@ For example, if your proxy address is' http:// 192.168.4.7:7897 ':
 
 Now that all the software has been installed, let's connect the hardware.
 
-**Step 1: Connect reSpeaker Flex**
+**Step 1: Connect reSpeaker**
 
-1. Connect reSpeaker Flex to computer with USB-A to USB-C cable
+1. Connect reSpeaker  to computer with USB-A to USB-C cable
 
-2. After connection, the indicator light on the reSpeaker Flex should light up
+2. After connection, the indicator light on the reSpeaker  should light up
 
 3. Enter 'lsusb' in the terminal and you should be able to see the equipment of Seeed Studio.
 
@@ -920,7 +1022,7 @@ When mode 2 is selected, the program:
 
 #### What is DOA?
 
-The full name of DOA is **Direction of Arrival** (sound wave arrival direction), which is simply: **judge from which direction the sound comes**. Just as you can use both ears to roughly determine whether the sound is on the left or right, reSpeaker Flex uses four microphones to calculate the direction of the sound more accurately.
+The full name of DOA is **Direction of Arrival** (sound wave arrival direction), which is simply: **judge from which direction the sound comes**. Just as you can use both ears to roughly determine whether the sound is on the left or right, reSpeaker  uses four microphones to calculate the direction of the sound more accurately.
 
 #### Workflow
 
@@ -929,7 +1031,7 @@ Start the system
     ↓
 Initialize USB device
     ↓
-Connect reSpeaker Flex ←──→ Connect reBot Arm
+Connect reSpeaker  ←──→ Connect reBot Arm
     ↓
 Loop Execution:
     ├─ Read DOA angle data (0°~360°)
@@ -1077,7 +1179,7 @@ python sound_tracking_arm.py [Parameter]
 | Parameter | Short | Default | Description |
 |-----|-----|-----|-----|
 | '-- mode' | '-m' | 'doa' | Operation mode: 'doa' (sound source tracking) or 'voice' (voice control) |
-| '-- device' | '-d' | '0' | reSpeaker Flex USB Device ID |
+| '-- device' | '-d' | '0' | reSpeaker  USB Device ID |
 | '-- port' | '-p' | '/dev/ttyUSB0' | Path of mechanical arm serial port device |
 | '-- threshold' | '-t' | '15' | DOA angle trigger threshold (in degrees) |
 | '-- cooldown' | '-c' | '3' | Action cooldown (in seconds) |
@@ -1243,7 +1345,7 @@ python --version  # 应该是 3.10.x
 
 ### 9.2 USB Device Recognition Problem
 
-#### Q5: 'lsusb' does not see reSpeaker Flex
+#### Q5: 'lsusb' does not see reSpeaker
 
 **Troubleshooting steps**:
 
@@ -1650,11 +1752,11 @@ This section briefly introduces the core technical principles involved in the pr
 
 #### Question: How to tell which direction the sound is coming from?
 
-reSpeaker Flex has 4 microphones arranged in a ring. When sound comes from a certain direction, there is a slight difference in the time of arrival at different microphones (called "time difference" or TDOA).
+reSpeaker  has 4 microphones arranged in a ring. When sound comes from a certain direction, there is a slight difference in the time of arrival at different microphones (called "time difference" or TDOA).
 
 **Popular explanation**: Just like you close your eyes, if someone claps your hands on your left, your left ear will hear first, and your right ear will hear a little bit later. Based on this time difference, the brain can tell that the sound is on the left.
 
-reSpeaker Flex built-in XVF3800 chip is to do this:
+reSpeaker  built-in XVF3800 chip is to do this:
 
 1. 4 microphones at the same time
 

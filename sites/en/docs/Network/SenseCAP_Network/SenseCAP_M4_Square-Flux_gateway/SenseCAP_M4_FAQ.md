@@ -9,7 +9,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2023-02-24'
-updatedAt: '2025-07-11'
+updatedAt: '2026-06-25'
 url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ/
 ---
 
@@ -36,10 +36,6 @@ Max run 8 devices per IP, and make sure your router supports UPnP or port forwar
 ### **How to test the network bandwidth to meet the request?**
 
 https://www.speedtest.net
-
-### **What is the different between flux and flux tokens**
-
-Flux tokens are Flux. Flux tokens are Parallel Assets that are paid on different blockchains, like ETH Flux, BSC Flux, etc. They are claimable in the Fusion app inside Zelcore. Select "Parallel Mining Claim" from the three dots top right. You will only see a claimable amount if your Flux-Token amount is higher than the fees required to claim.
 
 ### **If I am a professional user, can I erase the original system and install other one?**
 
