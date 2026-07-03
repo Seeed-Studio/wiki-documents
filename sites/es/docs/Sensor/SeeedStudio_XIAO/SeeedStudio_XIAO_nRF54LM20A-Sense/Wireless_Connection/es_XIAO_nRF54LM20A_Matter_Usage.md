@@ -179,7 +179,7 @@ También se pueden utilizar dispositivos de enrutamiento Thread como Connect ZBT
 
 :::tip
 
-Este tutorial se basa en VS Code y la extensión nRF Connect. Si eres nuevo en ellas, puedes consultar [XIAO nRF54LM20A nRFConnect SDK Usage](http://localhost:3000/xiao_nrf54lm20a_getting_started/#uso-del-sdk-nrfconnect)
+Este tutorial se basa en VS Code y la extensión nRF Connect. Si eres nuevo en ellas, puedes consultar [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_ncs/)
 
 :::
 
