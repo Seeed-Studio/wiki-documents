@@ -49,6 +49,8 @@ The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed
 
 :::tip
 If you purchased a pre-assembled kit, please skip directly to the tutorial video in **Step 3** at the end of this article and follow along. There is no need to write motor IDs or calibrate zero positions.
+
+It has been verified that virtual machine performance is insufficient for running demos and there are configuration issues. It is recommended to use an Ubuntu physical machine to control the robotic arm.
 :::
 
 ## Purchasing Options
@@ -230,11 +232,29 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 
 3. This tool is fully compatible with **Windows, Ubuntu, and Mac** operating systems.
 
-### Step 1: Install miniforge (on Windows\Ubuntu\Mac\Jetson\Pi)
+### Step 1: Install Miniforge (on Windows\Ubuntu\macOS\Jetson\Pi)
+
+Install Miniforge and create a virtual environment to avoid interference from other environment packages.
+
+Ubuntu\Jetson\Pi:
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+or macOS:
+```bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+bash Miniforge3-MacOSX-$(uname -m).sh
+```
+
+or Windows:
+
+Open the Miniforge Release page in your browser, find the latest `Miniforge3-Windows-x86_64.exe` and download it:
+
+```text
+https://github.com/conda-forge/miniforge/releases
 ```
 
 ### Step 2: Environment Setup
