@@ -25,6 +25,11 @@ const excludedPaths = [
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', '3d_enclosure.md'), //6.2
   path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_platformio.md'), //6.1
   path.join(docsDirectory, 'Network', 'LoRa_Wio_Series', 'Wio-S3', 'Wio-S3_Wireless_Module_Command_List.md'), //6.9
+  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_zephyr.md'), //6.30
+  path.join(docsDirectory, 'Cloud_Chain', 'CodeCraft', '0-codecraft-overview.md'), //6.29
+  path.join(docsDirectory, 'Cloud_Chain', 'CodeCraft', '2-creation-and-platform.md'), //6.29
+  path.join(docsDirectory, 'Cloud_Chain', 'CodeCraft', '3-community-and-publishing.md'), //6.29
+  path.join(docsDirectory, 'Cloud_Chain', 'CodeCraft', '4-codecraft-for-education.md'), //6.29
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
