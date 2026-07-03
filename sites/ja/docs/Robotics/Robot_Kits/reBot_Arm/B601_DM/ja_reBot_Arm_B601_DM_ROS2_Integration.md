@@ -260,10 +260,6 @@ rebotarmcontroller MoveToPose
 
 :::caution
 ロボットを使用する前に、次の点に注意してください：**アームコントローラは高い自由度を持ちます。コントローラを有効にする前やアームに給電する前に、作業空間に人や障害物がないことを確認してください。事故を避けるため、すべての動作コマンドを慎重に確認してください。危険な操作は固く禁じられており、その結果については自己責任となります。**
-degree of freedom. Before enabling the controller or powering the arm, make
-sure the workspace is clear of people and obstacles. Review every motion
-command carefully to avoid accidents. Dangerous operation is strictly
-prohibited; you are responsible for any consequences.**
 :::
 
 ### フルシステムを起動する
@@ -321,35 +317,32 @@ ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
 ```bash
 ros2 run rebotarmcontroller reBotArmController
 ```
+
 :::tip
-`driver.launch.py` が `rebotarm_bringup/config` から設定ファイルを渡すのとは異なり、
-コントローラを直接実行した場合は、デフォルトの SDK アーム設定が使用されます。通常の利用では、ROS を通して起動することを推奨します。
-`rebotarm_bringup/config`, running the controller directly falls back to the
-default SDK arm configuration. For normal use, launching through ROS is
-recommended.
+`driver.launch.py` は `rebotarm_bringup/config` から設定ファイルを渡しますが、コントローラーを直接実行すると、デフォルトの SDK アーム設定にフォールバックします。通常の使用では、ROS 経由で起動することを推奨します。
 :::
 
 ## ROS2 名前空間
 
 デフォルトの名前空間は次のとおりです：
 
+```text
 /rebotarm
 ```
-__CODE_LINE_PLH__
 
 したがって、すべてのトピック、サービス、アクションには `/rebotarm` がプレフィックスとして付きます。例：
 
+```text
 /rebotarm/joint_states
 /rebotarm/enable
 /rebotarm/move_to_pose
 ```
-__CODE_LINE_PLH__
 
 複数のロボットアームが必要な場合や、他の ROS2 システムと並行して実行したい場合は、起動時に名前空間を変更できます：
 
+```bash
 ros2 launch rebotarm_bringup bringup.launch.py arm_namespace:=left_arm
 ```
-__CODE_LINE_PLH__
 
 この場合、`/rebotarm/joint_states` は `/left_arm/joint_states` になります。
 
@@ -362,6 +355,7 @@ __CODE_LINE_PLH__
 | `/rebotarm/joint_states` | `sensor_msgs/msg/JointState` | 6 軸の関節位置、速度、およびトルク |
 | `/rebotarm/arm_status` | `rebotarm_msgs/msg/ArmStatus` | 制御モード、有効状態、ステートマシン、およびエラーコード |
 | `/rebotarm/joints/<joint>/state` | `rebotarm_msgs/msg/JointMotorState` | 単一関節モーターの状態 |
+| `/rebotarm/gripper/state` | `rebotarm_msgs/msg/JointMotorState` | グリッパーモーターの状態 |
 
 例:
 
@@ -540,9 +534,8 @@ ROS2 ワークスペースには、低レベルモーターデバッグ用のト
 
 ## MoveIt 2
 
-MoveIt 2 は、ここで使用されているモーションプランニングフレームワークであり、逆運動学、
-衝突チェック、軌道計画および実行を行います。デモはそれぞれ独立したパッケージに分離されており、
-アプリケーションフローがベースドライバから分離された状態を保ちます。詳細については、公式の [MoveIt 2 Documentation](https://moveit.picknik.ai/main/index.html) を参照してください。
+MoveIt 2 は、ここで使用されているモーションプランニングフレームワークであり、逆運動学、衝突チェック、軌道計画および実行を行います。デモはそれぞれ独立したパッケージに分離されており、アプリケーションフローがベースドライバから分離された状態を保ちます。
+詳細については、公式の [MoveIt 2 Documentation](https://moveit.picknik.ai/main/index.html) を参照してください。
 
 MoveIt 関連の内容は 2 つのパッケージに分かれています:
 
@@ -551,21 +544,14 @@ MoveIt 関連の内容は 2 つのパッケージに分かれています:
 | `rebotarm_moveit_config` | ロボットモデル、SRDF、運動学、関節制限、コントローラおよび RViz 設定 |
 | `rebotarm_moveit_demos` | MoveIt 2 ベースのアプリケーションデモ |
 
-MoveIt 環境は、`ros2_control` を介したシミュレートされたハードウェアと、
-計画と実行のための `move_group` を使用します。これは、RViz 内でモデル、IK、軌道計画、
-およびデモフローを検証することを目的としています。
+MoveIt 環境は、`ros2_control` を介したシミュレートされたハードウェアと、計画と実行のための `move_group` を使用します。これは、RViz 内でモデル、IK、軌道計画、およびデモフローを検証することを目的としています。
 
-このリポジトリは実機ハードウェアもサポートしています。実機を接続する前に、
-アームのゼロ設定、関節方向、関節制限、速度制限、
-およびグリッパー範囲がすべて正しいことを確認するか、リポジトリのデフォルト設定を維持してください。
+このリポジトリは実機ハードウェアもサポートしています。実機を接続する前に、アームのゼロ設定、関節方向、関節制限、速度制限、およびグリッパー範囲がすべて正しいことを確認するか、リポジトリのデフォルト設定を維持してください。
 
 ### MoveIt 環境セットアップ
 
-まず ROS2 環境が利用可能であることを確認してください。現在 source されている ROS ディストリビューション向けに、
-`ROS_DISTRO` を通じてパッケージをインストールできます:
+まず ROS2 環境が利用可能であることを確認してください。現在 source されている ROS ディストリビューション向けに、`ROS_DISTRO` を通じてパッケージをインストールできます:
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```bash
 sudo apt update
 sudo apt install -y \
@@ -576,46 +562,46 @@ sudo apt install -y \
   ros-${ROS_DISTRO}-moveit-simple-controller-manager \
   ros-${ROS_DISTRO}-ros2-control \
   ros-${ROS_DISTRO}-ros2-controllers \
-
+  ros-${ROS_DISTRO}-xacro
 ```
-ワークスペースを再ビルドします:
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+MoveIt の設定とデモは、このワークスペースに含まれています。依存関係をインストールした後、ワークスペースを再ビルドします。
+
 ```bash
 cd your/path/to/rebotarm_ros2
 colcon build --symlink-install
-
+source install/setup.bash
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+MoveIt パッケージとデモのエントリーポイントを確認します。
+
 ```bash
 ros2 pkg list | grep rebotarm_moveit
-
+ros2 pkg executables rebotarm_moveit_demos
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+想定されるエントリには、以下が含まれます。
+
 ```text
 rebotarm_moveit_demos draw_square
-
+rebotarm_moveit_demos pick_place
 ```
 
-MoveIt のプランニングは、RViz の GUI または ROS ノードを通じて、
-シミュレーションおよび実機の両方のシーンで使用できます。
+### MoveIt を使用する
+
+MoveIt のプランニングは、RViz の GUI または ROS ノードを通じて、シミュレーションおよび実機の両方のシーンで使用できます。
 
 #### シミュレーションで MoveIt を使用する
 
 MoveIt は RViz シミュレーションのために ros2_control 仮想ハードウェアインターフェースを使用します:
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-
+ros2 launch rebotarm_moveit_config demo.launch.py
 ```
+
+デフォルトでは、これにより以下が起動します。
 
 - `move_group`
 - `robot_state_publisher`
@@ -625,51 +611,45 @@ source install/setup.bash
 - `gripper_controller`
 - MoveIt MotionPlanning プラグイン付きの RViz
 
-RViz は自動的に開き、ロボットの URDF モデルを読み込みます。GUI 左側のパネルから
-モーションを制御できます。
+RViz は自動的に開き、ロボットの URDF モデルを読み込みます。GUI 左側のパネルからモーションを制御できます。
 
 RViz なしで MoveIt 環境を実行するには:
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```bash
-
+ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
 ```
 
-実機ロボットの場合は、まず仮想コントローラではなくハードウェアインターフェースで
-コントローラを起動し、その後ハードウェア用の MoveIt 環境を起動します:
+#### reBotArm ハードウェアで MoveIt を使用する
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+実機ロボットの場合は、まず仮想コントローラではなくハードウェアインターフェースでコントローラを起動し、その後ハードウェア用の MoveIt 環境を起動します:
+
 ```bash
-
+ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+別のターミナルで:
+
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-
+ros2 launch rebotarm_moveit_config hardware.launch.py
 ```
-人や障害物がいないことを確認し、RViz で計画経路を検証し、いつでも
-コントローラを停止できるように準備しておいてください。
+
+改めて: 実機でデモを実行する前に、作業スペースに人や障害物がないことを確認し、RViz で計画された経路を確認し、いつでもコントローラーを停止できるようにしておいてください。
 
 ### draw-square デモを実行する
 
 まず MoveIt 環境を起動し、その後別のターミナルで次を実行します:
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-
+ros2 launch rebotarm_moveit_demos draw_square.launch.py
 ```
+
+`draw_square` は、`gripper_tcp` を同一平面上の長方形の 4 つの角に沿って移動させます。
 デフォルトパラメータ:
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```text
 src/rebotarm_moveit_demos/config/draw_square.yaml
 ```

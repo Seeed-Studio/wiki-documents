@@ -259,11 +259,7 @@ rebotarmcontroller MoveToPose
 ## Quick Start
 
 :::caution
-Before using the robot, note the following: **The arm controller has a high
-degree of freedom. Before enabling the controller or powering the arm, make
-sure the workspace is clear of people and obstacles. Review every motion
-command carefully to avoid accidents. Dangerous operation is strictly
-prohibited; you are responsible for any consequences.**
+Before using the robot, note the following: **The arm controller has a high degree of freedom. Before enabling the controller or powering the arm, make sure the workspace is clear of people and obstacles. Review every motion command carefully to avoid accidents. Dangerous operation is strictly prohibited; you are responsible for any consequences.**
 :::
 
 ### Start the Full System
@@ -321,11 +317,9 @@ You can also run the node directly:
 ```bash
 ros2 run rebotarmcontroller reBotArmController
 ```
+
 :::tip
-Unlike `driver.launch.py`, which passes configuration files from
-`rebotarm_bringup/config`, running the controller directly falls back to the
-default SDK arm configuration. For normal use, launching through ROS is
-recommended.
+Unlike `driver.launch.py`, which passes configuration files from `rebotarm_bringup/config`, running the controller directly falls back to the default SDK arm configuration. For normal use, launching through ROS is recommended.
 :::
 
 ## ROS2 Namespace
@@ -540,9 +534,7 @@ Low-level command topics are intended for debugging and experiments. They do not
 
 ## MoveIt 2
 
-MoveIt 2 is the motion planning framework used here for inverse kinematics,
-collision checking, trajectory planning and execution. The demos are separated
-into their own package so application flows stay isolated from the base driver.
+MoveIt 2 is the motion planning framework used here for inverse kinematics, collision checking, trajectory planning and execution. The demos are separated into their own package so application flows stay isolated from the base driver.
 For more details, see the official [MoveIt 2 Documentation](https://moveit.picknik.ai/main/index.html).
 
 MoveIt-related content is split into two packages:
@@ -552,19 +544,13 @@ MoveIt-related content is split into two packages:
 | `rebotarm_moveit_config` | Robot model, SRDF, kinematics, joint limits, controller and RViz config |
 | `rebotarm_moveit_demos` | Application demos based on MoveIt 2 |
 
-The MoveIt environment uses simulated hardware through `ros2_control` and
-`move_group` for planning and execution. It is intended for validating the
-model, IK, trajectory planning and demo flow in RViz.
+The MoveIt environment uses simulated hardware through `ros2_control` and `move_group` for planning and execution. It is intended for validating the model, IK, trajectory planning and demo flow in RViz.
 
-This repository also supports real hardware. Before connecting real hardware,
-make sure the arm zero configuration, joint directions, joint limits, velocity
-limits and gripper range are all correct, or keep the default repository
-configuration.
+This repository also supports real hardware. Before connecting real hardware, make sure the arm zero configuration, joint directions, joint limits, velocity limits and gripper range are all correct, or keep the default repository configuration.
 
 ### MoveIt Environment Setup
 
-Make sure the ROS2 environment is available first. You can install packages for
-the currently sourced ROS distribution through `ROS_DISTRO`:
+Make sure the ROS2 environment is available first. You can install packages for the currently sourced ROS distribution through `ROS_DISTRO`:
 
 ```bash
 sudo apt update
@@ -579,8 +565,7 @@ sudo apt install -y \
   ros-${ROS_DISTRO}-xacro
 ```
 
-The MoveIt config and demos are included in this workspace. After installing
-dependencies, rebuild the workspace:
+The MoveIt config and demos are included in this workspace. After installing dependencies, rebuild the workspace:
 
 ```bash
 cd your/path/to/rebotarm_ros2
@@ -604,8 +589,7 @@ rebotarm_moveit_demos pick_place
 
 ### Use MoveIt
 
-MoveIt planning can be used through the RViz GUI or through ROS nodes, in both
-simulation and real scenes.
+MoveIt planning can be used through the RViz GUI or through ROS nodes, in both simulation and real scenes.
 
 #### Use MoveIt in simulation
 
@@ -627,8 +611,7 @@ By default this starts:
 - `gripper_controller`
 - RViz with the MoveIt MotionPlanning plugin
 
-RViz opens automatically and loads the robot URDF model. You can control motion
-through the panel on the left side of the GUI.
+RViz opens automatically and loads the robot URDF model. You can control motion through the panel on the left side of the GUI.
 
 To run the MoveIt environment without RViz:
 
@@ -638,8 +621,7 @@ ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
 
 #### Use MoveIt with reBotArm hardware
 
-For the real robot, first start the controller with the hardware interface
-instead of the virtual controller, then start the hardware MoveIt environment:
+For the real robot, first start the controller with the hardware interface instead of the virtual controller, then start the hardware MoveIt environment:
 
 ```bash
 ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
@@ -653,9 +635,7 @@ source install/setup.bash
 ros2 launch rebotarm_moveit_config hardware.launch.py
 ```
 
-To repeat: before running any demo on real hardware, make sure the workspace is
-clear of people and obstacles, verify the planned path in RViz, and be ready to
-stop the controller at any time.
+To repeat: before running any demo on real hardware, make sure the workspace is clear of people and obstacles, verify the planned path in RViz, and be ready to stop the controller at any time.
 
 ### Run the draw-square demo
 
