@@ -11,7 +11,7 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/double_soarm
 slug: /lerobot_double_arm_so_arm_training
 sku: 114993666,114993667
 last_update:
-  date: 7/1/2026
+  date: 6/29/2026
   author: ZhuYuan
 translation:
   skip:
@@ -58,7 +58,7 @@ For environment setup, please refer to the SO-ARM tutorial:
 ### 0.2 USB Permissions
 
 ```bash
-sudo chmod 666 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3 /dev/ttyACM4
+sudo chmod 666 /dev/ttyACM0 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3
 ```
 
 ## 1. Calibration (Key Step)
@@ -68,7 +68,7 @@ sudo chmod 666 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3 /dev/ttyACM4
 ```bash
 lerobot-calibrate \
   --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM1 \
+  --robot.port=/dev/ttyACM0 \
   --robot.id=my_awesome_bimanual_follower_left
 ```
 
@@ -77,7 +77,7 @@ lerobot-calibrate \
 ```bash
 lerobot-calibrate \
   --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM2 \
+  --robot.port=/dev/ttyACM1 \
   --robot.id=my_awesome_bimanual_follower_right
 ```
 
@@ -86,7 +86,7 @@ lerobot-calibrate \
 ```bash
 lerobot-calibrate \
   --teleop.type=so101_leader \
-  --teleop.port=/dev/ttyACM3 \
+  --teleop.port=/dev/ttyACM2 \
   --teleop.id=my_awesome_bimanual_leader_left
 ```
 
@@ -95,7 +95,7 @@ lerobot-calibrate \
 ```bash
 lerobot-calibrate \
   --teleop.type=so101_leader \
-  --teleop.port=/dev/ttyACM4 \
+  --teleop.port=/dev/ttyACM3 \
   --teleop.id=my_awesome_bimanual_leader_right
 ```
 
@@ -149,6 +149,8 @@ lerobot-teleoperate \
 
 ### 2.2 With Camera
 
+You can use `lerobot-find-cameras opencv` to view camera indexes, and you can add or remove cameras as needed.
+
 ```bash
 lerobot-teleoperate \
   --robot.type=bi_so_follower \
@@ -167,8 +169,6 @@ lerobot-teleoperate \
   --teleop.id=my_awesome_bimanual_leader \
   --display_data=true
 ```
-
-You can use `lerobot-find-cameras opencv` to view camera indexes.
 
 ### Safety Tips
 
@@ -210,10 +210,9 @@ lerobot-record \
   --display_data=true
 ```
 
-Data will be saved to `~///bimanual_so101_task/`, structured as follows:
+Data will be saved to `~/.cache/huggingface/lerobot/seeed/bimanual_so101_task/`, structured as follows:
 
 ```text
-./datasets/bimanual_so101_task/
 ├── meta/
 │   ├── info.json
 │   ├── episodes/
@@ -320,18 +319,16 @@ python -m lerobot.scripts.lerobot_edit_dataset \
   --operation.episode_indices="[24]"
 ```
 
-After deletion, the dataset will be rewritten in place, and the original data will be backed up to `./datasets/bimanual_so101_task_old/`. After confirming the new dataset is correct, you can manually delete the backup:
+After deletion, the dataset will be rewritten in place, and the original data will be backed up to `~/.cache/huggingface/lerobot/seeed/bimanual_so101_task_old/`. After confirming the new dataset is correct, you can manually delete the backup:
 
 ```bash
-rm -rf ./datasets/bimanual_so101_task_old
+rm -rf ~/.cache/huggingface/lerobot/seeed/bimanual_so101_task_old
 ```
-
-> Note: If you are using an older version of LeRobot before the fix, pointing `--root` to the local dataset root directory may fail due to path parsing errors. The `lerobot_edit_dataset.py` in the current project has been fixed for this scenario.
 
 #### Delete the Entire Dataset
 
 ```bash
-rm -rf ./datasets/bimanual_so101_task
+rm -rf ~/.cache/huggingface/lerobot/seeed/bimanual_so101_task_old
 ```
 
 ---
@@ -366,9 +363,7 @@ lerobot-train \
   --policy.push_to_hub=false
 ```
 
-> The above uses ACT's default parameters (`chunk_size=100`, `dim_model=512`, etc.). If the dataset is small (for example, fewer than 50 episodes), you can explicitly reduce the model size to lower the risk of overfitting, e.g. `--policy.chunk_size=50 --policy.dim_model=256 --batch_size=16 --steps=30000`.
-
----
+> The above uses ACT's default parameters (`chunk_size=100`, `dim_model=512`, etc.).
 
 ## 5. Real-Robot Deployment
 
@@ -386,8 +381,7 @@ lerobot-record \
   --robot.right_arm_config.cameras='{
     right_wrist: {"type": "opencv", "index_or_path": 4, "width": 640, "height": 480, "fps": 30}
   }' \
-  --dataset.repo_id=local/eval_bimanual_so101_task8 \
-  --dataset.root=./datasets/eval_bimanual_so101_task8 \
+  --dataset.root=seeed_eval/eval_bimanual_so101_task8 \
   --dataset.push_to_hub=false \
   --dataset.num_episodes=10 \
   --dataset.single_task="Pick the cube with left arm and hand it to right arm" \
