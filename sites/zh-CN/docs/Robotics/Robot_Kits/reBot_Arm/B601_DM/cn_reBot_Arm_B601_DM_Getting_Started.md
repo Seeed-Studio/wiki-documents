@@ -42,6 +42,8 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 
 :::tip
 如果你购入的是已组装的成品套件，请直接跳到文章末尾 **第三步** 的教程视频，按照视频教程使用，无需给电机写入ID和校准零位
+
+已验证虚拟机的性能不足以支撑 demo 运行且存在配置问题，建议优先使用 ubuntu 物理机来控制机械臂
 :::
 
 ## 购买选项
@@ -230,9 +232,27 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 
 ### 步骤 1：安装 Miniforge（支持 Windows\Ubuntu\macOS\Jetson\树莓派）
 
+1.安装miniforge，创建虚拟环境，避免其他环境包的干扰导致demo运行失败。
+
+Ubuntu\Jetson\树莓派:
+
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+or macOS:
+```bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+bash Miniforge3-MacOSX-$(uname -m).sh
+```
+
+or windows:
+
+在浏览器中打开 Miniforge 的 Release 页面，找到最新版本的 `Miniforge3-Windows-x86_64.exe` 点击下载：
+
+```text
+https://github.com/conda-forge/miniforge/releases
 ```
 
 ### 步骤 2：环境配置

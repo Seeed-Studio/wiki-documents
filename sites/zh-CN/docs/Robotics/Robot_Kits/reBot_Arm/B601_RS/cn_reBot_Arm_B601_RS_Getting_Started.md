@@ -91,7 +91,7 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 3. 本工具全面兼容 **Windows、Ubuntu、macOS** 操作系统。
 
 :::tip
-1.强烈建议不要使用虚拟机。虚拟机容易出现环境问题
+1.已验证虚拟机的性能不足以支撑 demo 运行且存在配置问题，建议优先使用 ubuntu 物理机来控制机械臂
 
 2.(Beta版)让 agent 来帮助你初始化机械臂，复制以下内容发送给 agent：
 

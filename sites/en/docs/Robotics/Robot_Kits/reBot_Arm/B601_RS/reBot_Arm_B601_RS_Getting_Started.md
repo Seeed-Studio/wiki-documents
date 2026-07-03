@@ -91,7 +91,7 @@ If your household voltage is 220V, set the voltage selector switch on the side o
 3. This tool is fully compatible with **Windows, Ubuntu, and macOS** operating systems.
 
 :::tip
-1. It is highly recommended not to use a virtual machine. Virtual machines are prone to environment issues.
+1. It has been verified that virtual machine performance is insufficient for running demos and there are configuration issues. It is recommended to use an Ubuntu physical machine to control the robotic arm.
 
 2. (Beta version) Let an agent help you initialize the robotic arm. Copy the following content and send it to the agent:
 
