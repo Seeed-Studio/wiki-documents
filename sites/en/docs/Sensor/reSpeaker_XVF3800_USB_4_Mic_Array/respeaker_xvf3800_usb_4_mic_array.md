@@ -644,6 +644,175 @@ AEC_MIC_ARRAY_GEO:
 -0.033, -0.033, 0.000]
 ```
 
+## reSpeaker Console Application
+
+We have prepared a desktop application to control and configure your reSpeaker device.
+
+With this application, you can:
+
+* Connect to your reSpeaker device
+* Configure audio settings (Noise Suppression, Gain, AEC, and Channel Configuration)
+* Monitor Direction of Arrival (DoA) and Voice Activity Detection (VAD)
+* Control LED effects
+* Adjust device parameters
+
+### Installing the Application
+
+Download the latest release from:
+
+https://github.com/respeaker/respeaker-console/releases
+
+| Platform | Architecture  | Package Type         |
+| -------- | ------------- | -------------------- |
+| Windows  | x64           | `.msi` / `.exe`      |
+| macOS    | Apple Silicon | `.dmg` (aarch64)     |
+| macOS    | Intel         | `.dmg` (x86_64)      |
+| Linux    | x64           | `.deb` / `.AppImage` |
+
+### Windows: USB Driver Setup
+
+Before using the application for the first time, install the **WinUSB** driver using **Zadig**.
+
+**Step 1:** Download and run **Zadig**.
+
+**Step 2:** Select **Options → List All Devices**.
+
+**Step 3:** Select **reSpeaker 3800** or **reSpeaker XVF3800 4-Mic Array** from the device list.
+
+**Step 4:** Choose **WinUSB** as the driver.
+
+**Step 5:** Click **Install Driver**.
+
+**Step 6:** Unplug and reconnect the device.
+
+**Step 7:** Run the following command to verify that the device is detected:
+
+```bash
+dfu-util -l
+```
+
+:::note
+`dfu-util.exe` is bundled with the application, so no separate installation is required.
+:::
+
+### Linux: Install dfu-util and Configure USB Permissions
+
+Install **dfu-util**:
+
+```bash
+sudo apt install dfu-util
+```
+
+USB access also requires a **udev** rule.
+
+Create the following file:
+
+```text
+/etc/udev/rules.d/99-respeaker.rules
+```
+
+Add the following line:
+
+```text
+SUBSYSTEM=="usb", ATTRS\{idVendor\}=="2886", MODE="0666", GROUP="plugdev"
+```
+
+Reload the udev rules:
+
+```bash
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+Finally, disconnect and reconnect your device.
+
+### macOS: Install dfu-util
+
+Install **dfu-util** before using the firmware update feature.
+
+```bash
+brew install dfu-util
+```
+
+### Using the Application
+
+After installing the application, launch it to access the **reSpeaker Console**.
+
+Let's go through each section of the sidebar.
+
+#### Device Connection
+
+First, connect your reSpeaker device.
+
+1. Click **Scan Devices**.
+2. The application will list all detected devices.
+3. Select your device.
+4. Click **Connect** to establish the connection.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/scan.jpg" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/connect.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+#### Audio
+
+The **Audio** tab allows you to configure and enhance the audio processing pipeline.
+
+Here you can configure:
+
+* Non-stationary Noise Suppression
+* Stationary Noise Suppression
+* Automatic Gain Control (AGC)
+* Acoustic Echo Cancellation (AEC)
+* Output channel configuration
+* Left and right channel mapping
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/audio.jpg" alt="Audio Tab" width={800} height="auto"/></p>
+
+#### Monitor
+
+The **Monitor** tab provides real-time visualization of the microphone processing.
+
+You can monitor:
+
+* Direction of Arrival (DoA)
+* Voice Activity Detection (VAD)
+* Beam energy levels
+
+These indicators help you verify that the device is detecting speech correctly.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/monitor.jpg" alt="Monitor Tab" width={800} height="auto"/></p>
+
+#### LEDs
+
+The **LEDs** tab lets you customize the LED ring.
+
+Available features include:
+
+* Breathing effect
+* Rainbow effect
+* Ring effect
+* Brightness adjustment
+* Animation speed control
+* RGB color selection
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/led.jpg" alt="LEDs Tab" width={800} height="auto"/></p>
+
+#### Parameters
+
+The **Parameters** tab provides access to all configurable device parameters.
+
+The settings are organized into categories such as:
+
+* Audio
+* Acoustic Echo Cancellation (AEC)
+* Post Processing
+* LEDs / GPIO
+* System
+
+From this interface, you can update parameter values directly.
+
+Each parameter includes a description to help you understand its purpose and the recommended value range.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/parameters.jpg" alt="Parameters Tab" width={800} height="auto"/></p>
+
 ## Troubleshooting
 
 ### Does playback sound from speaker output not enough ?
