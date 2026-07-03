@@ -143,7 +143,28 @@ sudo usermod -a -G dialout $USER
 - [ROS2 Humble Ubuntu 安装教程](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 - [Seeed Studio Wiki ROS2 Humble 安装教程](https://wiki.seeedstudio.com/install_ros2_humble/)
 
+:::tip
+
+如果你使用的是 Ubuntu 24.04 , 你应该安装 ROS 2 Jazzy
+
+如果你使用的是 Ubuntu 22.04 , 你应该安装 ROS 2 Humble
+
+:::
+
 ### 步骤 2. 安装构建工具和 ROS 依赖
+:::tip
+
+When installing and compiling ROS 2, the Conda environment may cause conflicts with Python paths (like not finding packages or paths). It's recommended to temporarily exit the Conda base environment before proceeding with the ROS2 installation and subsequent robotic arm compilation.
+
+```bash
+conda deactivate
+```
+You can also make it a one-time setup by setting the terminal to not activate the Conda environment by default on startup:
+```bash
+conda config --set auto_activate_base false
+```
+:::
+
 
 安装 colcon、pip、Git 和本工作空间需要的 ROS 包。下面命令使用当前终端的 `ROS_DISTRO`：
 
@@ -244,8 +265,17 @@ rebotarmcontroller MoveToPose
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0    #启动通讯时不打开 RViz 可视化界面
 ```
+
+:::tip
+每次打开新终端时都需要首先运行下面两个命令
+
+```bash
+cd your/path/to/rebotarm_ros2
+source install/setup.bash
+```
+:::
 
 如果你的串口不是 `/dev/ttyACM0`，请替换为实际设备名：
 
@@ -256,7 +286,7 @@ ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM1
 ### 启动 RViz 可视化
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0 use_rviz:=true
+ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0 use_rviz:=true #启动通讯时打开 RViz 可视化界面
 ```
 
 如果 RViz 中模型看起来很小，可以在 RViz 左侧 `Views` 面板中调整：
@@ -279,8 +309,9 @@ ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
 ```bash
 ros2 run rebotarmcontroller reBotArmController
 ```
-
+:::tip
 需要注意的是，和 `driver.launch.py` 从 `rebotarm_bringup/config` 加载配置不同，直接运行控制节点会从 SDK 加载默认机械臂参数，因此更推荐通过 ros launch 的方式启动节点。
+:::
 
 ## ROS2 命名空间
 
