@@ -167,6 +167,14 @@ Please refer to the official ROS2 documentation:
 - [ROS2 Jazzy Ubuntu Installation](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
 - [ROS2 Humble Ubuntu Installation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 
+:::tip
+
+If you are using Ubuntu 24.04, you should install ROS 2 Jazzy.
+
+If you are using Ubuntu 22.04, you should install ROS 2 Humble.
+
+:::
+
 ### Step 2. Install Build Tools and ROS Dependencies
 
 Install colcon, pip, Git, and the ROS packages required by this workspace:
@@ -269,8 +277,17 @@ The full bringup launches:
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0  #Do not open the RViz visualization interface when starting communication
 ```
+
+:::tip
+Every time you open a new terminal, you need to run the following two commands first
+
+```bash
+cd your/path/to/rebotarm_ros2
+source install/setup.bash
+```
+:::
 
 If your serial port is not `/dev/ttyACM0`, replace it with the actual device name:
 
@@ -281,7 +298,7 @@ ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM1
 ### Start RViz Visualization
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0 use_rviz:=true
+ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0 use_rviz:=true   #Open the RViz visualization interface when starting communication
 ```
 
 If the model appears too small in RViz, adjust the view from the `Views` panel on the left:
@@ -304,11 +321,12 @@ You can also run the node directly:
 ```bash
 ros2 run rebotarmcontroller reBotArmController
 ```
-
+:::tip
 Unlike `driver.launch.py`, which passes configuration files from
 `rebotarm_bringup/config`, running the controller directly falls back to the
 default SDK arm configuration. For normal use, launching through ROS is
 recommended.
+:::
 
 ## ROS2 Namespace
 
