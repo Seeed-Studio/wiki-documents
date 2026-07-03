@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-06-18'
+updatedAt: '2026-06-19'
 url: https://wiki.seeedstudio.com/pt-br/robotics_page/
 ---
 
@@ -55,7 +55,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         </a>
         <a href="#actuators" className="nav-item">
           <span className="icon">⚙️</span>
-          <span className="text">Atuadores Articulares</span>
+          <span className="text">Atuadores de Junta</span>
           <div className="hover-effect"></div>
         </a>
         <a href="#sensors" className="nav-item">
@@ -80,7 +80,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
 
 
           <h3>🦾 reBot Arm</h3>
-            <h4> B601-DM Arm</h4>
+            <h4> Braço B601-DM</h4>
           <div className="card-container">
               <a href="/pt-br/rebot_b601_dm_getting_started/" className="content-card">
                 <span className="text">Introdução ao reBot B601-DM</span>
@@ -98,7 +98,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
                 <span className="text">reBot B601-DM com ROS2</span>
               </a>
           </div>
-            <h4> B601-RS Arm</h4>
+            <h4> Braço B601-RS</h4>
           <div className="card-container">
               <a href="/pt-br/rebot_b601_rs_getting_started/" className="content-card">
                 <span className="text">Introdução ao reBot B601-RS</span>
@@ -143,11 +143,19 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
                 <span className="text">Phospho Lerobot</span>
               </a>
               <a href="/pt-br/training_soarm101_policy_with_isaacLab/" className="content-card">
-                  <span className="text">Treinamento RL do So Arm</span>
+                  <span className="text">Treinamento RL do SO Arm</span>
                   <span className="tag recommended">Novo</span>
               </a>
               <a href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
                   <span className="text">SO101 com NVIDIA GR00T</span>
+                  <span className="tag recommended">Novo</span>
+              </a>
+              <a href="/pt-br/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">Ferramenta de Depuração de Engrenagem de Direção</span>
+                  <span className="tag recommended">Novo</span>
+              </a>
+              <a href="/pt-br/lerobot_double_arm_so_arm_training/" className="content-card">
+                  <span className="text">Guia Completo para Treinamento de SO-ARM de Dois Braços</span>
                   <span className="tag recommended">Novo</span>
               </a>
           </div>
@@ -193,7 +201,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
               </a>
           </div>
 
-          <h3>🦀 Efetuadores Finais</h3>
+          <h3>🦀 Efetores Finais</h3>
           <div className="card-container">
               <a href="/pt-br/dm_gripper/" className="content-card">
                 <span className="text">DM Gripper</span>
@@ -229,7 +237,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
             <span className="text">Série Stackforce</span>
           </a>
           <a href="/pt-br/robstride_control/" className="content-card">
-            <span className="text">RobStride Control</span>
+            <span className="text">Controle RobStride</span>
             <span className="tag recommended">Novo</span>
           </a>
       </div>
@@ -255,7 +263,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
             <span className="text">Algoritmo A-LOAM</span>
           </a>
           <a href="/pt-br/slamtec/" className="content-card">
-            <span className="text">Série Slamtec</span>
+            <span className="text">Linha Slamtec</span>
           </a>
       </div>
 
@@ -266,11 +274,11 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
             <span className="text">Orbbec Gemini 2</span>
           </a>
           <a href="/pt-br/orbbec_gemini_335lg" className="content-card">
-            <span className="text">Gemini 335Lg Depth</span>
+            <span className="text">Gemini 335Lg Profundidade</span>
             <span className="tag recommended">Novo</span>
           </a>
           <a href="/pt-br/orbbec_gemini336" className="content-card">
-            <span className="text">Gemini 336 Depth</span>
+            <span className="text">Gemini 336 Profundidade</span>
             <span className="tag recommended">Novo</span>
           </a>
           <a href="/pt-br/sensing_gmsl_cameras" className="content-card">
@@ -438,7 +446,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Braço iniciante</span> <span>⏱️ 6h</span></div>
           <h3>MoveIt 1/2</h3>
-          <p>Importe um manipulador personalizado no MoveIt 1/2 e implemente cinemática direta e inversa</p>
+          <p>Importe um manipulador personalizado para o MoveIt 1/2 e implemente cinemática direta e inversa</p>
           <span className="btn-plan">Planejamento</span>
         </div>
       </a>
@@ -483,7 +491,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <div className="course-info">
           <div className="course-meta"><span className="level adv">Difícil</span> <span>⏱️ 20h</span></div>
           <h3>Aprendizado por Reforço</h3>
-          <p>Pipelines de treinamento PPO, DRL e implantação no Jetson.</p>
+          <p>PPO, pipelines de treinamento DRL e implantação no Jetson.</p>
           <span className="btn-plan">Planejamento</span>
         </div>
       </a>
@@ -491,7 +499,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
     </div>
 
     <!-- Section 2: Robot Applications -->
-    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 Aplicações em Robótica</h3>
+    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 Aplicações em Robôs</h3>
     <div className="course-grid">
 
       <!-- Humanoid -->
@@ -511,7 +519,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <div className="course-cover c-lekiwi">Robô móvel</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 6h</span></div>
-          <h3>Robótica móvel (Lekiwi)</h3>
+          <h3>Robótica Móvel (Lekiwi)</h3>
           <p>SLAM, Navigation 2 e patrulhamento autônomo.</p>
           <span className="btn-plan">Planejamento</span>
         </div>

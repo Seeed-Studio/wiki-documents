@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_pin_multiplexing/
 ---
 
@@ -169,12 +169,6 @@ int main(void)
 
 	return 0;
 }
-```
-
-abou the prj.conf
-
-```conf
-
 ```
 
 ### Result
@@ -593,7 +587,7 @@ Universal Asynchronous Receiver/Transmitter (UART) is a standard asynchronous se
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-        <th>Grove - Capacitive Soil Moisture Sensor</th>
+        <th>USB to TTL Converter</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>

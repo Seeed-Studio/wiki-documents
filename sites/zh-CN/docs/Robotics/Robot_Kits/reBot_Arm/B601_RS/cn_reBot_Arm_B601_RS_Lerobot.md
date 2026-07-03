@@ -241,7 +241,7 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 
 lerobot-calibrate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan
@@ -328,7 +328,7 @@ sudo ip link set can0 up
 运行遥操作：
 ```bash
 lerobot-teleoperate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -429,7 +429,7 @@ lerobot-find-cameras realsense
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -570,7 +570,7 @@ lerobot-find-cameras orbbec
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -674,7 +674,7 @@ Camera #0:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -696,7 +696,7 @@ lerobot-teleoperate \
 <!-- TODO: reBot 多摄像头配置命令 -->
 ```bash
 lerobot-teleoperate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -724,7 +724,7 @@ lerobot-teleoperate \
 <!-- TODO: reBot 本地数据采集命令 -->
 ```bash
 lerobot-record \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -766,7 +766,7 @@ echo $HF_USER
 <!-- TODO: reBot 数据采集并上传到 Hugging Face 命令 -->
 ```bash
 lerobot-record \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -894,7 +894,7 @@ lerobot-dataset-viz \
 <!-- TODO: reBot 数据集回放命令 -->
 ```bash
 lerobot-replay \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.can_adapter=socketcan \
     --robot.id=follower1 \
@@ -975,7 +975,7 @@ lerobot-train \
 
 ```bash
 lerobot-record \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
@@ -1050,7 +1050,7 @@ lerobot-train \
 
 ```bash
 lerobot-record \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.id=follower1 \
@@ -1139,7 +1139,7 @@ lerobot-train \
 
 ```bash
 lerobot-record \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
@@ -1216,7 +1216,7 @@ lerobot-train \
 
 ```bash
 lerobot-record \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
@@ -1330,7 +1330,7 @@ accelerate launch \
 
 ```bash
 lerobot-record \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30} }' \
@@ -1770,7 +1770,7 @@ python -m lerobot.async_inference.policy_server \
 
 ```bash
 python -m lerobot.async_inference.robot_client \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \

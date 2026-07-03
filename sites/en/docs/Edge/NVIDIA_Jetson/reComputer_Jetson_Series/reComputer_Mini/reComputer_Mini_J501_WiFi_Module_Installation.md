@@ -18,7 +18,7 @@ last_update:
   author: HaoChen
 sku: 100042928, 114993556, 100020039
 createdAt: '2026-06-15'
-updatedAt: '2026-06-17'
+updatedAt: '2026-06-29'
 url: https://wiki.seeedstudio.com/recomputer_mini_j501_wifi_module_installation/
 ---
 

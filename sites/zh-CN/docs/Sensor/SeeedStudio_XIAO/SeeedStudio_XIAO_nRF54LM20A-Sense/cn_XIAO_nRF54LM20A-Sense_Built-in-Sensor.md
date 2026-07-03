@@ -1,5 +1,5 @@
 ---
-title: XIAO nRF54LM20A Sense 板载传感器使用方法
+title: XIAO nRF54LM20A Sense 板载传感器的使用
 description: ''
 keywords:
   - xiao
@@ -12,11 +12,11 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-05-19'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/
 ---
 
-# XIAO nRF54LM20A Sense 板载传感器使用方法
+# XIAO nRF54LM20A Sense 板载传感器的使用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png" style={{width:400, height:'auto'}}/></div>
 
@@ -80,7 +80,7 @@ XIAO nRF54LM20A Sense 配备了丰富的板载传感器，可支持多场景应�
 
 ## IMU
 
-LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的六轴传感器，属于意法半导体推出的 iNEMO 惯性测量单元（IMU）。在 XIAO nRF54LM20A Sense 上，该传感器支持中断触发数据输出。其加速度全量程范围为 ±2/±4/±8/±16 g，角速度范围为 ±125/±250/±500/±1000/±2000 dps，并支持持续低功耗模式，适用于多种运动检测场景。板载芯片通过 I2C 协议与其通信以获取数据。
+LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的六轴传感器，属于意法半导体推出的 iNEMO 惯性测量单元（IMU）。在 XIAO nRF54LM20A Sense 上，该传感器支持中断触发数据输出。它具有 ±2/±4/±8/±16 g 的加速度全量程范围和 ±125/±250/±500/±1000/±2000 dps 的角速度范围，并支持持续低功耗模式，适用于多种运动检测场景。板载芯片通过 I2C 协议与其通信以获取数据。
 :::tip
 
 - 关于 LSM6DS3TR-C 的更多信息，请访问：[Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) 和 [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
@@ -98,49 +98,37 @@ LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的�
 :::
 
 ```dtsi
-/* Configure I2C30 for LSM6DS3TR-C */
-&i2c30 {
-	pinctrl-0 = <&i2c30_default>;
-	pinctrl-1 = <&i2c30_sleep>;
-	pinctrl-names = "default", "sleep";
+&pmic_i2c {
+	sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
+	scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
 	status = "okay";
-	clock-frequency = <I2C_BITRATE_STANDARD>;
-
-	lsm6ds3tr_c: lsm6ds3tr-c@6a {
-		compatible = "st,lsm6dsl";
-		reg = <0x6a>;
-		irq-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
-		status = "okay";
-	};
 };
 
-/* Pin control configuration for I2C30 */
-&pinctrl {
-	i2c30_default: i2c30_default {
-		group1 {
-			psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
-				<NRF_PSEL(TWIM_SCL, 0, 7)>;
-		};
-	};
-
-	i2c30_sleep: i2c30_sleep {
-		group1 {
-			psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
-				<NRF_PSEL(TWIM_SCL, 0, 7)>;
-			low-power-enable;
+&pmic {
+	regulators {
+		imu_vdd: LDO1 {
+			regulator-min-microvolt = <3300000>;
+			regulator-max-microvolt = <3300000>;
+			regulator-boot-on;
 		};
 	};
 };
+
+&lsm6ds3tr_c {
+	zephyr,deferred-init;
+};
+
 ```
 
 2. 修改 prj.conf 文件，开启 I2C 和中断触发相关配置。
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
+
 CONFIG_LOG=y
 CONFIG_LOG_BACKEND_UART=y
 CONFIG_LOG_DEFAULT_LEVEL=3
-CONFIG_MAIN_STACK_SIZE=4096
+CONFIG_MAIN_STACK_SIZE=2048
 CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
 CONFIG_GPIO=y
 CONFIG_I2C=y
@@ -148,13 +136,9 @@ CONFIG_MFD=y
 CONFIG_REGULATOR=y
 CONFIG_SENSOR=y
 CONFIG_LSM6DSL=y
-CONFIG_SPI=y
-CONFIG_LED_STRIP=y
-CONFIG_WS2812_STRIP_SPI=y
+CONFIG_LSM6DSL_TRIGGER_GLOBAL_THREAD=y
 CONFIG_CBPRINTF_FP_SUPPORT=y
 CONFIG_CBPRINTF_COMPLETE=y
-CONFIG_FAULT_DUMP=2
-CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
 3. 编写程序，通过 USB 串口输出获取到的 3 轴数字加速度计数据和 3 轴数字陀螺仪数据。
@@ -168,13 +152,65 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
+#include <zephyr/drivers/regulator.h>
 #include <zephyr/logging/log.h>
-#include <stdio.h>
 
-LOG_MODULE_REGISTER(lsm6ds3tr_c_imu, LOG_LEVEL_INF);
+LOG_MODULE_REGISTER(zephyr_imu, LOG_LEVEL_INF);
 
-/* Use the LSM6DS3TR-C device defined in device tree */
-#define IMU_NODE DT_NODELABEL(lsm6ds3tr_c)
+#define IMU_NODE DT_ALIAS(imu0)
+
+/*
+ * nrf54lm20a needs power_en (fixed regulator on gpio1.12) and imu_vdd
+ * (PMIC NPM1300 LDO1) enabled before the IMU can be used.
+ * nrf54l15 has pdm_imu_pwr with regulator-boot-on; power is already on.
+ */
+#if defined(DT_N_NODELABEL_power_en)
+static const struct device *const power_en_dev =
+	DEVICE_DT_GET(DT_NODELABEL(power_en));
+#endif
+
+#if defined(DT_N_NODELABEL_imu_vdd)
+static const struct device *const imu_vdd_dev =
+	DEVICE_DT_GET(DT_NODELABEL(imu_vdd));
+#endif
+
+static int enable_imu_power(void)
+{
+#if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
+	int ret;
+#endif
+
+#if defined(DT_N_NODELABEL_power_en)
+	if (!device_is_ready(power_en_dev)) {
+		LOG_ERR("power_en regulator is not ready");
+		return -ENODEV;
+	}
+	ret = regulator_enable(power_en_dev);
+	if (ret < 0 && ret != -EALREADY) {
+		LOG_ERR("Failed to enable power_en: %d", ret);
+		return ret;
+	}
+#endif
+
+#if defined(DT_N_NODELABEL_imu_vdd)
+	if (!device_is_ready(imu_vdd_dev)) {
+		LOG_ERR("imu_vdd regulator is not ready");
+		return -ENODEV;
+	}
+	ret = regulator_enable(imu_vdd_dev);
+	if (ret < 0 && ret != -EALREADY) {
+		LOG_ERR("Failed to enable imu_vdd: %d", ret);
+		return ret;
+	}
+#endif
+
+#if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
+	/* Wait for power rail to stabilize */
+	k_sleep(K_MSEC(20));
+#endif
+
+	return 0;
+}
 
 static inline float out_ev(struct sensor_value *val)
 {
@@ -184,28 +220,29 @@ static inline float out_ev(struct sensor_value *val)
 static void fetch_and_display(const struct device *dev)
 {
 	struct sensor_value x, y, z;
-	static int sample_count;
+	static int trig_cnt;
 
-	sample_count++;
+	trig_cnt++;
 
-	/* Fetch and display accelerometer data */
+	/* lsm6dsl accel */
 	sensor_sample_fetch_chan(dev, SENSOR_CHAN_ACCEL_XYZ);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_X, &x);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
 
-	LOG_INF("Sample #%d", sample_count);
-	LOG_INF("Accel - X: %.6f m/s^2, Y: %.6f m/s^2, Z: %.6f m/s^2",
+	LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
-	/* Fetch and display gyroscope data */
+	/* lsm6dsl gyro */
 	sensor_sample_fetch_chan(dev, SENSOR_CHAN_GYRO_XYZ);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_X, &x);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
 
-	LOG_INF("Gyro - X: %.6f rad/s, Y: %.6f rad/s, Z: %.6f rad/s",
+	LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
+
+	LOG_INF("trig_cnt:%d", trig_cnt);
 }
 
 static int set_sampling_freq(const struct device *dev)
@@ -218,17 +255,15 @@ static int set_sampling_freq(const struct device *dev)
 	odr_attr.val2 = 500000;
 
 	ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
-						  SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
-	if (ret != 0)
-	{
+			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+	if (ret != 0) {
 		LOG_ERR("Cannot set sampling frequency for accelerometer.");
 		return ret;
 	}
 
 	ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
-						  SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
-	if (ret != 0)
-	{
+			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+	if (ret != 0) {
 		LOG_ERR("Cannot set sampling frequency for gyro.");
 		return ret;
 	}
@@ -238,7 +273,7 @@ static int set_sampling_freq(const struct device *dev)
 
 #ifdef CONFIG_LSM6DSL_TRIGGER
 static void trigger_handler(const struct device *dev,
-							const struct sensor_trigger *trig)
+			    const struct sensor_trigger *trig)
 {
 	fetch_and_display(dev);
 }
@@ -247,25 +282,19 @@ static void test_trigger_mode(const struct device *dev)
 {
 	struct sensor_trigger trig;
 
-	if (set_sampling_freq(dev) != 0)
-	{
+	if (set_sampling_freq(dev) != 0) {
 		return;
 	}
 
 	trig.type = SENSOR_TRIG_DATA_READY;
 	trig.chan = SENSOR_CHAN_ACCEL_XYZ;
 
-	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0)
-	{
-		LOG_ERR("Could not set sensor trigger");
+	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
+		LOG_ERR("Could not set sensor type and channel");
 		return;
 	}
 
-	LOG_INF("LSM6DS3TR-C in trigger mode - waiting for data...");
-
-	/* Keep the application running */
-	while (1)
-	{
+	while (1) {
 		k_sleep(K_MSEC(1000));
 	}
 }
@@ -273,17 +302,13 @@ static void test_trigger_mode(const struct device *dev)
 #else
 static void test_polling_mode(const struct device *dev)
 {
-	if (set_sampling_freq(dev) != 0)
-	{
+	if (set_sampling_freq(dev) != 0) {
 		return;
 	}
 
-	LOG_INF("LSM6DS3TR-C in polling mode - sampling at 12.5 Hz");
-
-	while (1)
-	{
+	while (1) {
 		fetch_and_display(dev);
-		k_sleep(K_MSEC(80)); /* ~12.5 Hz sampling rate */
+		k_sleep(K_MSEC(1000));
 	}
 }
 #endif
@@ -293,38 +318,38 @@ int main(void)
 	const struct device *const dev = DEVICE_DT_GET(IMU_NODE);
 	int ret;
 
-	LOG_INF("LSM6DS3TR-C IMU Data Acquisition System");
-	LOG_INF("========================================");
+	/* On nrf54lm20a, enable power_en + imu_vdd before accessing IMU.
+	 * On nrf54l15, these nodes don't exist; function returns immediately.
+	 */
+	ret = enable_imu_power();
+	if (ret < 0) {
+		LOG_ERR("Failed to enable IMU power: %d", ret);
+		return 0;
+	}
 
-	/* Check if device pointer is valid */
-	if (!device_is_ready(dev))
-	{
-		LOG_INF("IMU device %s not ready, attempting to initialize...", dev->name);
+	/* On nrf54lm20a, IMU has zephyr,deferred-init; must init manually.
+	 * On nrf54l15, device auto-inits at boot; device_is_ready() is true.
+	 */
+	if (!device_is_ready(dev)) {
 		ret = device_init(dev);
-		if (ret < 0 && ret != -EALREADY)
-		{
+		if (ret < 0 && ret != -EALREADY) {
 			LOG_ERR("Failed to initialize %s: %d", dev->name, ret);
-			return 1;
+			return 0;
 		}
 	}
 
-	/* Final check - ensure device is ready */
-	if (!device_is_ready(dev))
-	{
-		LOG_ERR("%s: device not ready after init", dev->name);
-		return 1;
+	if (!device_is_ready(dev)) {
+		LOG_ERR("%s: device not ready.", dev->name);
+		return 0;
 	}
 
-	LOG_INF("IMU device initialized successfully");
-
 #ifdef CONFIG_LSM6DSL_TRIGGER
-	LOG_INF("Running in interrupt-triggered mode");
+	LOG_INF("Testing LSM6DSL sensor in trigger mode.");
 	test_trigger_mode(dev);
 #else
-	LOG_INF("Running in polling mode");
+	LOG_INF("Testing LSM6DSL sensor in polling mode.");
 	test_polling_mode(dev);
 #endif
-
 	return 0;
 }
 ```
@@ -347,8 +372,8 @@ int main(void)
 
 烧录固件后，你可以在电脑上打开串口助手进行数据查看。触发频率为 12.5 Hz，间隔为 80 毫秒。
 
-- 三轴数字加速度计：测量 X、Y 和 Z 轴方向的加速度。
-- 三轴数字陀螺仪：测量绕 X、Y 和 Z 轴的角速度。
+- 三轴数字加速度计：测量 X、Y、Z 三个轴向的加速度。
+- 三轴数字陀螺仪：测量绕 X、Y、Z 三个轴的角速度。
 
 :::tip
 
@@ -369,19 +394,19 @@ monitor_speed = 115200
 
 ### 应用
 
-IMU 可以融合三轴加速度数据来计算俯仰角、偏航角和横滚姿态角，用于姿态识别。它还可以与相应的控制器配合实现运动控制，或应用于姿态触发唤醒等低功耗场景。
+IMU 可以融合三轴加速度数据，计算俯仰角、偏航角和横滚姿态角，用于姿态识别。它还可以与相应的控制器配合实现运动控制，或应用于姿态触发唤醒等低功耗场景。
 
 #### 电子海洋
 
 这是一个基于 XIAO nRF54LM20A Sense 板载 IMU 的示例。它采集姿态数据并融合加速度信息，将运动状态映射到 RGB 灯板上，实现可视化的海洋律动效果。
 
 - **倾斜水位控制** — 通过左右横滚倾斜调节水位高度
-- **波浪动画** — 三层频率叠加的波面，2D 波浪传播和边缘反射效果
-- **流体惯性** — 具有动量的水面；快速倾斜会产生过冲以及随后的晃动回弹
-- **翻转检测** — 当开发板被翻转时显示会自动镜像
+- **波浪动画** — 三层频率叠加的波面，2D 波浪传播与边缘反射效果
+- **流体惯性** — 具有动量的水面；快速倾斜会产生超调及随后的晃动回弹
+- **翻转检测** — 板子翻转时显示自动镜像
 - **动态色彩** — 每一列随机渐变切换海洋色调
 
-此外，你可以通过在 main.c 中的宏定义修改开发板的 RGB 阵列配置。
+此外，你可以通过在 main.c 中的宏定义修改板载 RGB 阵列配置。
 
 ```cpp
 #define COLS 10          // Number of matrix columns
@@ -512,7 +537,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### IMU 唤醒
 
-在本例程中，RGB 的绿色通道在上电后点亮又熄灭，然后系统进入超低功耗睡眠模式。当开发板检测到轻敲时，XIAO nRF54LM20A Sense 将通过中断被唤醒。轻敲事件会被记录并通过串口打印输出。
+在本例程中，RGB 的绿色通道在上电后点亮又熄灭，然后系统进入超低功耗睡眠模式。当板子检测到轻敲时，XIAO nRF54LM20A Sense 将通过中断被唤醒。轻敲事件会被记录并通过串口打印输出。
 
 下载该例程即可实现 IMU 唤醒功能。
 
@@ -614,7 +639,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
 <br/>
-- 烧录并上电后，RGB-G LED 会短暂闪烁。轻敲开发板任意位置即可点亮 RGB-G LED。
+- 烧录并上电后，RGB-G LED 会短暂闪烁。轻敲板子任意位置即可点亮 RGB-G LED。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_3_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -624,7 +649,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <br/>
 :::tip
 
-感应位置仅供参考。准确的轻敲位置识别取决于 IMU 融合控制算法。
+感应位置仅供参考，准确的轻敲位置识别取决于 IMU 融合控制算法。
 
 :::
 
@@ -632,13 +657,13 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 XIAO nRF54LM20A Sense 采用的芯片内置 GRTC 硬件资源，无需额外的 RTC 模块即可实现 RTC 功能。
 
-RTC 支持时间戳计数，即使断电也能记录运行时间，便于日志记录和时间追踪。
+RTC 支持时间戳计数，即使在断电后也能记录运行时间，方便进行日志记录和时间追踪。
 
-本节介绍一个在 XIAO nRF54LM20A Sense 上实现的示例程序。上电后，通过 RTC 获取从编译时间开始的时间戳，并每秒打印一次数据。进入 System OFF 模式后，系统将由 RTC 闹钟唤醒以继续计数。
+本节介绍在 XIAO nRF54LM20A Sense 上实现的一个示例程序。上电后，通过 RTC 获取从编译时间开始的时间戳，并每秒打印一次数据。进入 System OFF 模式后，系统将由 RTC 闹钟唤醒以继续计数。
 
-1. 将 [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) 复制到 main.c 文件中。使用 RTC 函数打印时间戳。
+1. 将 [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) 拷贝到 main.c 文件中，使用 RTC 功能打印时间戳。
 
-2. 修改设备树 `app.overlay` 以启用 RTC 节点。
+2. 修改设备树 `app.overlay` 以使能 RTC 节点。
 
 ```dts
 / {
@@ -668,7 +693,7 @@ RTC 支持时间戳计数，即使断电也能记录运行时间，便于日志�
 };
 ```
 
-3. 编辑 prj.conf 文件以启用相关 RTC 配置。
+3. 编辑 prj.conf 文件以使能相关 RTC 配置。
 
 ```prj
 # Console and serial
@@ -698,31 +723,31 @@ CONFIG_NEWLIB_LIBC=y
 
 ### 结果
 
-- 程序从编译和烧录的时间开始计时。打开串口工具观察运行效果，所有预期功能均已实现。
+- 程序从编译和烧录的时间开始计数。打开串口工具观察运行效果，所有预期功能均已实现。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 ## MIC 
 
-XIAO nRF54LM20A Sense 配备 MSM261DGT006 数字 MEMS 麦克风用于语音输入。它通过 PDM 接口直接连接，无需 ADC。适用于可穿戴设备、智能设备、语音识别、音频录制以及其他需要声学感知功能的应用场景。
+XIAO nRF54LM20A Sense 搭载 MSM261DGT006 数字 MEMS 麦克风用于语音输入。它通过 PDM 接口直接连接，无需 ADC。适用于可穿戴设备、智能设备、语音识别、音频录制以及其他需要声学感知功能的应用场景。
 
 :::tip
 
-在 XIAO nRF54LM20A 系列中，只有 XIAO nRF54M20A Sense 配备麦克风，位于开发板的左下角。
+在 XIAO nRF54LM20A 系列中，只有 XIAO nRF54M20A Sense 配备了麦克风，位于开发板的左下角。
 
 :::
 
 ### 音频录制与 BLE 上传
 
-本节通过语音示例演示麦克风功能。具体流程如下：
+本节通过语音示例演示麦克风功能，具体流程如下：
 
-- 按下 BOOT 按钮，RGB-G LED 常亮并开始录音；再次按下停止录音（最长 10 秒）。
-- 录音结束后，音频文件将通过蓝牙发送到上位机。传输过程中 RGB-G LED 闪烁。
+- 按下 BOOT 按键，RGB-G LED 常亮并开始录音；再次按下停止录音（最长 10 秒）。
+- 录音结束后，通过蓝牙将音频文件发送到上位机。传输过程中 RGB-G LED 闪烁。
 - 在 Windows 上运行接收脚本，将音频文件保存到桌面。
 - 传输完成后 RGB-G LED 熄灭。
 
-1. 将 <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> 程序复制到 `main.c` 中。
+1. 将 <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> 程序拷贝到 `main.c` 中。
 
 2. 修改设备树文件 `app.overlay` 以绑定 BLE 节点。
 
@@ -785,7 +810,7 @@ dmic_dev: &pdm20 {
 };
 ```
 
-2. 修改 prj.conf 文件以启用蓝牙和麦克风相关配置，并将蓝牙设备名称设置为 **XIAO MIC**。
+2. 修改 `prj.conf` 文件以使能蓝牙和麦克风相关配置，并将蓝牙设备名称设置为 **XIAO MIC**。
 
 ```prj
 # Audio / DMIC
@@ -864,15 +889,17 @@ CONFIG_FLASH_PAGE_LAYOUT=y
 
 # Assert level
 CONFIG_ASSERT=y
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+
 ```
 
 ### 结果
 
-编译并烧录程序，然后在 Windows 电脑上借助脚本通过蓝牙接收录制的音频。
+编译并烧录程序，然后在 Windows 电脑上配合脚本通过蓝牙接收录制的音频。
 
 1. 运行 Python 脚本
 
-在执行前安装所需依赖库：
+执行前安装所需依赖库：
 
 ```bash
 pip install bleak 
@@ -1055,7 +1082,7 @@ BLE UUID 已在 Python 程序中配置好，因此运行脚本后会自动连接
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们为您提供多种支持方式，以确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
