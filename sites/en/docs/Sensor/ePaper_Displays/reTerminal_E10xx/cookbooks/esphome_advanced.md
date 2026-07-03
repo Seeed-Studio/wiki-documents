@@ -4,7 +4,7 @@ title: 'ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power (reTerminal 
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 4
-sidebar_label: 'ESPHome - I/O, Battery & Power'
+sidebar_label: ESPHome - I/O, Battery & Power
 last_update:
   date: 04/28/2026
   author: Citric

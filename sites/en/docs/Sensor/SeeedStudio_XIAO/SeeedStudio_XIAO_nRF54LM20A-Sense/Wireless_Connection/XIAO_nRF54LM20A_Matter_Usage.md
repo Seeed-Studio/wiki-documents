@@ -179,7 +179,7 @@ Thread routing devices such as Connect ZBT-1, Connect ZBT-2 or Home Assistant Ye
 
 :::tip
 
-This tutorial is based on VS Code and the nRF Connect Extension. If you are new to them, you can refer to [XIAO nRF54LM20A nRFConnect SDK Usage](http://localhost:3000/xiao_nrf54lm20a_getting_started/#nrfconnect-sdk-usage)
+This tutorial is based on VS Code and the nRF Connect Extension. If you are new to them, you can refer to [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/xiao_nrf54lm20a_ncs/#getting-started-with-ncs)
 
 :::
 
