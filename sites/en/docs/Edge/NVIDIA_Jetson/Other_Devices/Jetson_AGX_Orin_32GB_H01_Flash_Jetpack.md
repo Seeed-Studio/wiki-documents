@@ -7,10 +7,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_AGX_Orin_32GB_H01_Flash_Jetpack
 sku: 114110207
 last_update:
-  date: 10/14/2025
+  date: 07/02/2026
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-01-07'
+updatedAt: '2026-07-02'
 url: https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/
 ---
 
@@ -106,6 +106,12 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td>36.4.3</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ES6058EFNl1LkrJGAvTYR6IBFTldWYyxJ4ZxQP3EM00BbQ?e=rjshwu" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td><a href="https://developer.nvidia.com/embedded/jetson-linux-r3643" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>7.2</td>
+      <td>39.2.0</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOW5tcK2vPTagiGOFw9oMcAYITLgRqj_dXQJMchlUeGOk?e=8ar0lu" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetpack/downloads/archive-7.2#:~:text=Jetson%20Linux%2039.2%20%286%2F02%2F2026%29" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
@@ -389,6 +395,72 @@ sudo ./apply_binaries.sh
 cd ..
 tar xf 605_jp62.tar.gz
 sudo cp -r 605_jp62/Linux_for_Tegra/* Linux_for_Tegra/
+```
+
+- **Step 5:** Flash the system to the eMMC:
+
+```bash
+cd Linux_for_Tegra
+sudo ./flash.sh jetson-agx-orin-devkit internal
+```
+
+You will see the following output if the flashing process is successful:
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Orin-AGX-H01/flash_successful.png"/>
+</div>
+
+:::info
+We can also run the following command to install the system onto the SSD:
+
+```bash
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t234_nvme.xml --showlogs --network usb0 jetson-agx-orin-devkit external
+```
+
+:::
+
+</TabItem>
+
+<TabItem value="JP7.2" label="JP7.2">
+
+Here we will use **NVIDIA L4T 39.2.0** to install **JetPack 7.2** on the Jetson AGX Orin 32GB H01 Kit.
+
+- **Step 1:** [Download](https://developer.nvidia.com/embedded/jetpack/downloads/archive-7.2#:~:text=Jetson%20Linux%2039.2%20%286%2F02%2F2026%29) the NVIDIA BSP and RootFS packages on the Ubuntu host PC. The required Jetson Linux 39.2.0 files are shown below:
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/other/7.2-H01.png"/>
+</div>
+
+You can also download the files with the following commands:
+
+```bash
+wget https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.0/release/Jetson_Linux_R39.2.0_aarch64.tbz2
+wget https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.0/release/Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2
+```
+
+- **Step 2:** Download the Jetson AGX Orin 32GB H01 Kit JetPack 7.2 peripheral driver package [605_jp72.tbz2](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOW5tcK2vPTagiGOFw9oMcAYITLgRqj_dXQJMchlUeGOk?e=8ar0lu), then put it in the same folder as the NVIDIA BSP and RootFS packages. Now you will see three compressed files in the same folder.
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/other/Seeed_AGX_Orin_Dev_Kit_JP72_downloaded_files.png"/>
+</div>
+
+- **Step 3:** Extract **Jetson_Linux_R39.2.0_aarch64.tbz2** and **Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2**, then apply the NVIDIA binaries:
+
+```bash
+cd <path_to_files>
+tar xf Jetson_Linux_R39.2.0_aarch64.tbz2
+sudo tar xfp Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
+cd Linux_for_Tegra
+sudo ./tools/l4t_flash_prerequisites.sh
+sudo ./apply_binaries.sh
+```
+
+- **Step 4:** Extract **605_jp72.tbz2**:
+
+```bash
+cd ..
+tar xf 605_jp72.tbz2
+sudo cp -r 605_jp72/Linux_for_Tegra/* Linux_for_Tegra/
 ```
 
 - **Step 5:** Flash the system to the eMMC:

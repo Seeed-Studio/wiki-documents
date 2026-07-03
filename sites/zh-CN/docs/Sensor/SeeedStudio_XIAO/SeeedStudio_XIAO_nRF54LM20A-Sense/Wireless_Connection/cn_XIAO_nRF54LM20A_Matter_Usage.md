@@ -179,7 +179,7 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，可让你�
 
 :::tip
 
-本教程基于 VS Code 和 nRF Connect 扩展。如果你对它们还不熟悉，可以参考 [XIAO nRF54LM20A nRFConnect SDK Usage](http://localhost:3000/xiao_nrf54lm20a_getting_started/#nrfconnect-sdk-usage)
+本教程基于 VS Code 和 nRF Connect 扩展。如果你对它们还不熟悉，可以参考 [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_ncs/)
 
 :::
 

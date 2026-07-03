@@ -11,7 +11,7 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/double_soarm
 slug: /lerobot_double_arm_so_arm_training
 sku: 114993666,114993667
 last_update:
-  date: 7/1/2026
+  date: 6/29/2026
   author: ZhuYuan
 translation:
   skip:
@@ -56,7 +56,7 @@ import Link from '@docusaurus/Link';
 ### 0.2 USB パーミッション
 
 ```bash
-sudo chmod 666 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3 /dev/ttyACM4
+sudo chmod 666 /dev/ttyACM0 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3
 ```
 
 ## 1. キャリブレーション（重要なステップ）
@@ -66,7 +66,7 @@ sudo chmod 666 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3 /dev/ttyACM4
 ```bash
 lerobot-calibrate \
   --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM1 \
+  --robot.port=/dev/ttyACM0 \
   --robot.id=my_awesome_bimanual_follower_left
 ```
 
@@ -75,7 +75,7 @@ lerobot-calibrate \
 ```bash
 lerobot-calibrate \
   --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM2 \
+  --robot.port=/dev/ttyACM1 \
   --robot.id=my_awesome_bimanual_follower_right
 ```
 
@@ -84,7 +84,7 @@ lerobot-calibrate \
 ```bash
 lerobot-calibrate \
   --teleop.type=so101_leader \
-  --teleop.port=/dev/ttyACM3 \
+  --teleop.port=/dev/ttyACM2 \
   --teleop.id=my_awesome_bimanual_leader_left
 ```
 
@@ -93,7 +93,7 @@ lerobot-calibrate \
 ```bash
 lerobot-calibrate \
   --teleop.type=so101_leader \
-  --teleop.port=/dev/ttyACM4 \
+  --teleop.port=/dev/ttyACM3 \
   --teleop.id=my_awesome_bimanual_leader_right
 ```
 
@@ -147,6 +147,8 @@ lerobot-teleoperate \
 
 ### 2.2 カメラあり
 
+カメラインデックスを確認するには `lerobot-find-cameras opencv` を使用できます。必要に応じてカメラを追加または削除することもできます。
+
 ```bash
 lerobot-teleoperate \
   --robot.type=bi_so_follower \
@@ -165,8 +167,6 @@ lerobot-teleoperate \
   --teleop.id=my_awesome_bimanual_leader \
   --display_data=true
 ```
-
-カメラインデックスを確認するには `lerobot-find-cameras opencv` を使用できます。
 
 ### 安全上の注意
 
@@ -208,10 +208,9 @@ lerobot-record \
   --display_data=true
 ```
 
-データは `~///bimanual_so101_task/` に保存され、次のような構造になります：
+データは `~/.cache/huggingface/lerobot/seeed/bimanual_so101_task/` に保存され、次のような構造になります：
 
 ```text
-./datasets/bimanual_so101_task/
 ├── meta/
 │   ├── info.json
 │   ├── episodes/
@@ -318,18 +317,16 @@ python -m lerobot.scripts.lerobot_edit_dataset \
   --operation.episode_indices="[24]"
 ```
 
-削除後、データセットはその場で書き換えられ、元のデータは `./datasets/bimanual_so101_task_old/` にバックアップされます。新しいデータセットが正しいことを確認したら、バックアップを手動で削除できます：
+削除後、データセットはその場で書き換えられ、元のデータは `~/.cache/huggingface/lerobot/seeed/bimanual_so101_task_old/` にバックアップされます。新しいデータセットが正しいことを確認したら、バックアップを手動で削除できます：
 
 ```bash
-rm -rf ./datasets/bimanual_so101_task_old
+rm -rf ~/.cache/huggingface/lerobot/seeed/bimanual_so101_task_old
 ```
-
-> 注意: 修正前の古いバージョンの LeRobot を使用している場合、`--root` をローカルデータセットのルートディレクトリに指定すると、パス解析エラーにより失敗する可能性があります。現在のプロジェクトに含まれる `lerobot_edit_dataset.py` では、この状況に対する修正が行われています。
 
 #### データセット全体を削除する
 
 ```bash
-rm -rf ./datasets/bimanual_so101_task
+rm -rf ~/.cache/huggingface/lerobot/seeed/bimanual_so101_task_old
 ```
 
 ---
@@ -364,9 +361,7 @@ lerobot-train \
   --policy.push_to_hub=false
 ```
 
-> 上記は ACT のデフォルトパラメータ（`chunk_size=100`、`dim_model=512` など）を使用しています。データセットが小さい場合（例えば 50 エピソード未満）、モデルサイズを明示的に小さくして過学習のリスクを下げることができます。例：`--policy.chunk_size=50 --policy.dim_model=256 --batch_size=16 --steps=30000`。
-
----
+> 上記は ACT のデフォルトパラメータ（`chunk_size=100`、`dim_model=512` など）を使用しています。
 
 ## 5. 実機ロボットへのデプロイ
 
@@ -384,8 +379,7 @@ lerobot-record \
   --robot.right_arm_config.cameras='{
     right_wrist: {"type": "opencv", "index_or_path": 4, "width": 640, "height": 480, "fps": 30}
   }' \
-  --dataset.repo_id=local/eval_bimanual_so101_task8 \
-  --dataset.root=./datasets/eval_bimanual_so101_task8 \
+  --dataset.root=seeed_eval/eval_bimanual_so101_task8 \
   --dataset.push_to_hub=false \
   --dataset.num_episodes=10 \
   --dataset.single_task="Pick the cube with left arm and hand it to right arm" \

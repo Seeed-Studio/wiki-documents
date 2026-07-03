@@ -287,14 +287,6 @@ lerobot-calibrate \
     --teleop.id=rebot_arm_102_leader
 ```
 保持静止，然后按下enter，直到提示校准完成。  
-校准完成后，输入以下命令来测试leader机械臂。
-```bash
-python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
-      --port /dev/ttyUSB0
-
-#如果你观测到终端输出类似于如下的字样一直打印，并且在位于上图零点时，各个关节输出值都为0。则代表leader你已经校准完成
-#shoulder_pan=    0.00  shoulder_lift=    0.00  elbow_flex=    0.00  wrist_flex=    0.00  wrist_yaw=    0.00  wrist_roll=    0.00  gripper=    0.00
-```
 
 </details>
 
