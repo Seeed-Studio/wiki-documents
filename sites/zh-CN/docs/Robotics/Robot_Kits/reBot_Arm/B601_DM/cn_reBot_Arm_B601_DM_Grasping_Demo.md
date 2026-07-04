@@ -24,23 +24,28 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
 
 #  reBot Arm B601 视觉夹取 Demo
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601" />
-</p>
+![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
 <p align="center">
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
     <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
-    <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Camera-RGB--D-green.svg" alt="Camera" />
-    <img src="https://img.shields.io/badge/Detection-YOLO-yellow.svg" alt="YOLO" />
+    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
+    <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>
 
 <p align="center">
   <strong>深度感知 · 目标检测 · 手眼标定 · 自主抓取 · 全开源</strong>
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=16&id=1042412233386&mi_id=0000hhNAEYgKZRabreGKmpExx8eS7wS_DqxaG6ePdGjrn4Q&ns=1&skuId=6073790464610&spm=a21n57.1.hoverItem.1&utparam=%7B%22aplus_abtest%22%3A%22ef0f0c248fcf6a14c9bd99035ac573f9%22%7D&xxc=taobaoSearch" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 来一单 🖱️</font></span></strong>
+</a></div>
+
+
+
 
 YOLO 是一类广泛使用的实时目标检测模型，能够在单次前向推理中同时完成目标定位与类别识别。本教程基于 YOLO、RGB-D 深度相机和 reBot Arm B601-DM 搭建一个可运行的桌面视觉夹取 Demo，并完成从环境安装、相机接入、手眼标定到抓取调试的完整流程。
 

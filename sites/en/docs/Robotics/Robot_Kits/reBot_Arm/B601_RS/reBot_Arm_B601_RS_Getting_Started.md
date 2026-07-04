@@ -39,6 +39,12 @@ url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
     <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+
 <p align="center">
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
@@ -84,6 +90,16 @@ If your household voltage is 220V, set the voltage selector switch on the side o
 
 ## Step 2: Calibrate the Robotic Arm and Get Started
 
+:::tip
+If you purchased the pre-assembled version, all motor IDs have been pre-programmed, so no separate ID writing is required. To prevent wiring harness abrasion during shipping, the cable between Joint 1 and Joint 2 is not pre-installed. After unboxing, you will find a harness with an elbow connector on one end and a straight connector on the other inside the package, which should be fitted between Joint 1 and Joint 2.
+:::
+
+Prolonged pulling on the Motor 1 wiring harness will wear down the motor connectors and cause poor electrical contact. Printing the component listed below can mitigate this risk.
+
+| Part Description | Image | File Name | Material | Qty | Printing Specifications |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| Dual-side Wiring Harness Clips for Motor 1 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/RS_Motor1_wiring_harness_clip.jpg" width="100" /> | [3D File](RS_Motor1_wiring_harness_clip.stp) | Bambu Lab Black PLA | 2 pcs | 0.4 mm nozzle, 0.2 mm layer height, 30% infill |
+
 1. Explore our **MotorBridge** platform. This platform is a one-stop comprehensive solution that supports continuous expansion of motor types, covering [Damiao motors](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [Robstride motors](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [Hightorque motors](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [Myactuator motors](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow, and more. It is also compatible with continuously updated robotic arm products like reBot. The platform is user-friendly for beginners and also provides a Python SDK with fully consistent functionality for developers.
 
 2. Experience the new features and details of MotorBridge specifically adapted for the reBot robotic arm, including one-click zero-point calibration, parameter writing, drag-and-drop motor control via the UI, and a built-in model visualization interface.
@@ -104,8 +120,6 @@ Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-A
 3. The agent uses CLI commands to complete motor ID writing, while the wiki uses a web UI interaction method. Both approaches work.
 
 :::
-
-You should have completed the preliminary preparation for the robotic arm assembly by following the video. Next, we will introduce the steps for writing motor IDs and calibrating the robotic arm.
 
 
 Please refer to the video and text tutorial. Before controlling the robotic arm, you need to reset the zero point again.

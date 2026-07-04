@@ -24,6 +24,12 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_pinocchio_meshcat/
 
 # reBot Arm B601-RS 的 Pinocchio 与 MeshCat 入门指南
 
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+</div>
+
 <p align="center">
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
@@ -37,7 +43,11 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_pinocchio_meshcat/
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
-![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png)
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=16&id=1057521963559&mi_id=0000e3EnxaNqLKSz_jjVCIW5p5-sF41U-_zw4ATX6ursnIo&ns=1&skuId=6267129098361&spm=a21n57.1.hoverItem.5&utparam=%7B%22aplus_abtest%22%3A%2222fcb92cefee991f6636dec97150f39e%22%7D&xxc=taobaoSearch" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 来一单 🖱️</font></span></strong>
+</a></div>
+
 
 [Pinocchio](https://github.com/stack-of-tasks/pinocchio) 是一个用于机器人动力学分析和优化的开源库。它提供了高效的正向/逆向运动学、动力学计算和轨迹规划功能。[MeshCat](https://github.com/rdeits/meshcat) 是一个基于 Web 的 3D 可视化工具，可以实时显示机器人状态和运动轨迹。
 

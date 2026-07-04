@@ -94,6 +94,10 @@ If your household voltage is 220V, set the voltage selector switch on the side o
 
 ## Step 1: [Assembly Guide](https://youtu.be/rfTQoFCfnMc)
 
+:::tip
+If you purchased the pre-assembled version, skip this step and proceed directly to Step 3.
+:::
+
 Before Assembly:
 
 - Please read the following instructions carefully to ensure a smooth assembly process.
@@ -111,6 +115,10 @@ Before Assembly:
 </div>
 
 ## Step 2: Reset Motors ID
+
+:::tip
+If you purchased the pre-assembled version, skip this step and proceed directly to Step 3.
+:::
 
 ### AI AGENT
 
@@ -217,8 +225,15 @@ After testing, remember to click `Disable` to exit the enabled state.
 
 ## Step 3: Calibration reBot Arm and Getting Started
 
-We trust you have completed the robotic arm assembly, zero-point initialization, motor ID configuration, and other setup steps by following the video. You are now ready to officially explore the series of tutorials and tools we have released.
+:::tip
+If you bought the pre-assembled unit, the wiring harness between Joint 1 and Joint 2 is uninstalled to prevent cable abrasion during shipping. After unboxing, please locate the harness with one elbow connector and one straight connector inside the package and install it between Joint 1 and Joint 2.
+:::
 
+Long-term tension on the wiring harness of Motor 1 will wear the motor connector and lead to poor electrical contact. Printing the parts listed below can reduce this risk.
+
+| Part Description | Image | File Name | Material | Qty | Printing Specifications |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| Dual-side Wiring Harness Clips for Motor 1 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/DM_Motor1_wiring_harness_clip.jpg" width="100" /> | [3D File](DM_Motor1_wiring_harness_clip.stp) | Bambu Lab Black PLA | 2 pcs | 0.4 mm nozzle, 0.2 mm layer height, 30% infill |
 
 Please refer to the video and text tutorial. Before controlling the robotic arm, you need to reset the zero point again.
 

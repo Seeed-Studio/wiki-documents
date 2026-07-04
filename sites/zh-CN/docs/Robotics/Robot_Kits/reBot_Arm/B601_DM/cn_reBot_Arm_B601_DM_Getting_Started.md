@@ -24,6 +24,8 @@ url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 
 # reBot Arm B601-DM 快速入门
 
+![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
+
 <p align="center">
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
@@ -34,8 +36,16 @@ url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 </p>
 
 <p align="center">
-  <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
+  <strong>深度感知 · 目标检测 · 手眼标定 · 自主抓取 · 全开源</strong>
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=16&id=1042412233386&mi_id=0000hhNAEYgKZRabreGKmpExx8eS7wS_DqxaG6ePdGjrn4Q&ns=1&skuId=6073790464610&spm=a21n57.1.hoverItem.1&utparam=%7B%22aplus_abtest%22%3A%22ef0f0c248fcf6a14c9bd99035ac573f9%22%7D&xxc=taobaoSearch" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 来一单 🖱️</font></span></strong>
+</a></div>
+
+
+
 
 reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)上开源了，本文将带领你快速入门B601-DM，从组装到使用。
 本文的内容正在光速赶来，各位敬请期待。
@@ -84,6 +94,11 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 
 ## 第一步：组装机械臂
 
+:::tip
+如果你购买的是组装好的版本，请跳过此步骤直接到达第三步。
+:::
+
+
 - 开始组装前，请您务必仔细阅读以下内容。为确保您顺利完成组装并获得完整的动手体验，组装过程中请保持耐心与专注，并时刻遵循以下要点：
   1. 本套件包含大量螺丝与结构件，部分零件外观相近。组装时请耐心核对螺丝规格与零件型号，确认安装方向无误后再进行固定。
   2. 视频为四月初拍摄，后续或许会有零件微调和改动，但是不影响跟随本视频的安装效果，最终零件以出货为准。
@@ -99,6 +114,10 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 </div>
 
 ## 第二步：写入电机ID及零点
+
+:::tip
+如果你购买的是组装好的版本，请跳过此步骤直接到达第三步。
+:::
 
 ### AI AGNET
 
@@ -215,8 +234,14 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 
 ## 第三步：校准机械臂及上手初体验
 
-相信你已经跟随视频完成了机械臂组装、零点初始化、电机ID配置等全部前期准备工作。现在你可以正式开始体验我们提供的一系列教程与工具。
+:::tip
+如果你购买的是组装好的版本，担心运输过程中线束磨损，关节1-2之间线束是没有安装的，请你收到后开箱，箱子里有一测弯头一侧直头的线束连接到关节1-2上。
+:::
 
+一号电机线束长期拉扯会磨损电机接头，造成电路接触不良。打印下方列出的配件可降低该风险。
+| 配件名称 | 示意图 | 文件名称 | 材料 | 数量 | 打印参数说明 |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| 一号电机双侧线束卡扣 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/DM_Motor1_wiring_harness_clip.jpg" width="100" /> | [3D File](DM_Motor1_wiring_harness_clip.stp) | 拓竹黑色PLA | 2件 | 0.4毫米喷嘴，0.2毫米层厚，填充率30% |
 
 使用请参考视频和文字教程,在控制机械臂运动之前，需要重新设置一次零点。
 

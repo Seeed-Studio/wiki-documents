@@ -22,6 +22,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_lerobot/
 
 # reBot Arm B601-RS入门Lerobot
 
+
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
@@ -39,6 +40,11 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_lerobot/
 <p align="center">
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=16&id=1057521963559&mi_id=0000e3EnxaNqLKSz_jjVCIW5p5-sF41U-_zw4ATX6ursnIo&ns=1&skuId=6267129098361&spm=a21n57.1.hoverItem.5&utparam=%7B%22aplus_abtest%22%3A%2222fcb92cefee991f6636dec97150f39e%22%7D&xxc=taobaoSearch" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 来一单 🖱️</font></span></strong>
+</a></div>
 
 
 [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)是由Seeed开源的是一个致力于降低具身智能学习门槛的机械臂项目。我们毫无保留地开源了所有结构设计和代码，一起让机器人技术触手可及。
@@ -295,14 +301,14 @@ lerobot-calibrate \
     --teleop.id=rebot_arm_102_leader
 ```
 保持静止，然后按下enter，直到提示校准完成。  
-校准完成后，输入以下命令来测试leader机械臂。
+<!-- 校准完成后，输入以下命令来测试leader机械臂。
 ```bash
 python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
       --port /dev/ttyUSB0
 
 #如果你观测到终端输出类似于如下的字样一直打印，并且在位于上图零点时，各个关节输出值都为0。则代表leader你已经校准完成
 #shoulder_pan=    0.00  shoulder_lift=    0.00  elbow_flex=    0.00  wrist_flex=    0.00  wrist_yaw=    0.00  wrist_roll=    0.00  gripper=    0.00
-```
+``` -->
 
 </details>
 ## 遥操作

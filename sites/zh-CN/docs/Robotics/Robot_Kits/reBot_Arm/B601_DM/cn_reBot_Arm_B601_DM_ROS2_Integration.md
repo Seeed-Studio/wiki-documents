@@ -26,30 +26,26 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 
 # reBot Arm B601-DM ROS2 集成教程
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
-</p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
-
-<br />
+![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
 <p align="center">
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
-    <img src="https://img.shields.io/badge/ROS2-Humble | Jazzy-blue.svg" alt="ROS2 Humble | Jazzy" />
-    <img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python Version" />
-    <img src="https://img.shields.io/badge/Version-v0.3.0-brightgreen.svg" alt="Version v0.3.0" />
-    <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
+    <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>
 
 <p align="center">
-  <strong>ROS2 控制 · RViz 可视化 · MoveIt 2 支持 · 重力补偿 · 夹爪控制</strong>
+  <strong>深度感知 · 目标检测 · 手眼标定 · 自主抓取 · 全开源</strong>
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=16&id=1042412233386&mi_id=0000hhNAEYgKZRabreGKmpExx8eS7wS_DqxaG6ePdGjrn4Q&ns=1&skuId=6073790464610&spm=a21n57.1.hoverItem.1&utparam=%7B%22aplus_abtest%22%3A%22ef0f0c248fcf6a14c9bd99035ac573f9%22%7D&xxc=taobaoSearch" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 来一单 🖱️</font></span></strong>
+</a></div>
+
 
 本教程介绍如何通过在工作空间 `rebotarm_ros2`中运行 ROS2 实现对 reBot Arm B601-DM 的控制。该工作空间将接入Pinocchio逆运动学、轨迹规划和重力补偿功能的`reBotArm_control_py` 机械臂Python SDK 封装为 ROS2 topic、service 和 action，方便用户接入上层规划、RViz 可视化、重力补偿、夹爪控制和二次开发流程。
 

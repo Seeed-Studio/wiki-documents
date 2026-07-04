@@ -43,46 +43,63 @@ url: https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
-reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)上开源了，本文将带领你快速入门B601-RS，从组装到使用。
-本文的内容正在光速赶来，各位敬请期待。
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=16&id=1057521963559&mi_id=0000e3EnxaNqLKSz_jjVCIW5p5-sF41U-_zw4ATX6ursnIo&ns=1&skuId=6267129098361&spm=a21n57.1.hoverItem.5&utparam=%7B%22aplus_abtest%22%3A%2222fcb92cefee991f6636dec97150f39e%22%7D&xxc=taobaoSearch" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 来一单 🖱️</font></span></strong>
+</a></div>
 
+
+
+reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)上开源了，本文将带领你快速入门B601-RS，从组装到使用。
 
 ## 关于电源
 
-  1. 机械臂在发货时并未配备电源/默认情况下不带电源。您可自行连接电池，或选购一款我们开源的[48V 12.5A MeanWell电源](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html)电源适配器, 或者在[京东购买](https://item.jd.com/10161209537223.html?pcdk=XmL78Hf_3R95Ueqck5LtElx9qJy6oC0PjQU1dV0F2rEG5XTr6Xarc8us1UFQm_G2.3z6a.aI3x&spmTag=YTAyNDAuYjAwMjQ5My5jMDAwMDQwMjcuMiUyM3NrdV9jYXJkJTQwMTc4MTc2NzUwNjU1NyUyMzE3Nzk3NjA2MTA2MzA2NTcwNzkwNDUlMjM5NDcyNzI1NzE),切勿使用杂牌和不安全的渠道购买电源，造成风险后果均由个人承担。
-
-    如果你的家庭电压是220V，请把电源侧面拨码调至230V，如果你的家庭电压是110V，请把你电源的拨码调至115V。
-| **220V** | **110V** |
-|:---:|:---:|
-| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" width="300" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" width="300" /> |
-
-  <div align="center">
-    <img width={800}
-    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100054289-gallery-6.jpg" />
-</div>
-
-  2. 选择我们开源的24V14.6AMeanWell电源外壳进行自组装，文字步骤和BOM在[github仓库](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README_zh.md#%E5%85%B3%E4%BA%8E%E7%94%B5%E6%BA%90)中开源（只推荐有过相关电源组装经验的开发者使用）
-  组装参考视频：
   
   <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116793196675417&bvid=BV15i7K69EnQ&cid=39314066536&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
+  1. 机械臂在发货时并未配备电源/默认情况下不带电源。您可自行连接电池，或选购一款我们开源的[48V 12.5A MeanWell电源](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html)电源适配器, 或者在[京东购买](https://item.jd.com/10161209537223.html?pcdk=XmL78Hf_3R95Ueqck5LtElx9qJy6oC0PjQU1dV0F2rEG5XTr6Xarc8us1UFQm_G2.3z6a.aI3x&spmTag=YTAyNDAuYjAwMjQ5My5jMDAwMDQwMjcuMiUyM3NrdV9jYXJkJTQwMTc4MTc2NzUwNjU1NyUyMzE3Nzk3NjA2MTA2MzA2NTcwNzkwNDUlMjM5NDcyNzI1NzE),切勿使用杂牌和不安全的渠道购买电源，造成风险后果均由个人承担。
+
+    如果你的家庭电压是220V，请把电源侧面拨码调至230V，如果你的家庭电压是110V，请把你电源的拨码调至115V。
+| **220V** | **110V** |
+|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" width="200" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" width="200" /> |
+
+  2. 选择我们开源的48V12.5AMeanWell电源外壳进行自组装，文字步骤和BOM在[github仓库](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README_zh.md#%E5%85%B3%E4%BA%8E%E7%94%B5%E6%BA%90)中开源（只推荐有过相关电源组装经验的开发者使用）
+  组装参考视频：
+
+  <div align="center">
+    <img width={800}
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100054289-gallery-6.jpg" />
+</div>
 
 ## 第一步：组装机械臂
 
 - 开始组装前，请您务必仔细阅读以下内容。为确保您顺利完成组装并获得完整的动手体验，组装过程中请保持耐心与专注，并时刻遵循以下要点：
   1. 本套件包含大量螺丝与结构件，部分零件外观相近。组装时请耐心核对螺丝规格与零件型号，确认安装方向无误后再进行固定。
-  2. 视频为四月初拍摄，后续或许会有零件微调和改动，但是不影响跟随本视频的安装效果，最终零件以出货为准。
+  2. 视频为六月初拍摄，后续或许会有零件微调和改动，但是不影响跟随本视频的安装效果，最终零件以出货为准。
   3. 为方便大家拧螺丝和取下螺丝，开源BOM中所选用的是普通螺丝，但是正式出货螺丝涂了防松胶,您也可使用自备的顺手工具或电动螺丝刀（强烈推荐准备好电动螺丝刀）。若使用电动工具，务必将扭力调至中低档(3~6kgf.cm)，避免扭力过大导致螺丝滑丝，造成部件无法取下的不可逆损失。有任何滑丝的可能就立刻更换螺丝或者对准后重新拧，防松螺丝滑丝无法用滑丝取出器取出，会报废整个零件。所以务必小心谨慎。
-  4. 组装过程中请务必注意安全，防止夹手、砸伤，儿童请在家长或监护人陪同下完成该项目。
+  4. 风险声明：由于机身为金属件，请组装过程中请务必注意安全，防止夹手、砸伤，儿童请在家长或监护人陪同下完成该项目，若您继续安装，则代表您会注意安全小心组装，会自行承担组装过程中的风险。
+  
 
-
-
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116854970386234&bvid=BV1xCTs6vEa6&cid=39614154823&p=1" title="Bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 ## 第二步：校准机械臂及上手初体验
+
+:::tip
+如果你购买的是组装好的版本，ID已经全部写入，不需要再单独写入，由于担心运输过程中线束磨损，关节1-2之间线束是没有安装的，请你收到后开箱，箱子里有一测弯头一侧直头的线束连接到关节1-2上。
+:::
+
+一号电机线束长期拉扯会磨损电机接头，造成电路接触不良。打印下方列出的配件可降低该风险。
+| 配件名称 | 示意图 | 文件名称 | 材料 | 数量 | 打印参数说明 |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| 一号电机双侧线束卡扣 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/RS_Motor1_wiring_harness_clip.jpg" width="100" /> | [3D File](RS_Motor1_wiring_harness_clip.stp) | 拓竹黑色PLA | 2件 | 0.4毫米喷嘴，0.2毫米层厚，填充率30% |
+
 
 1. 探索我们的 **MotorBridge** 平台。该平台为一站式综合解决方案，支持电机种类持续扩充，涵盖[达妙电机](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride电机](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[高擎电机](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[脉塔电机](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow 等多款电机，同时兼容 reBot 等持续更新迭代的机械臂产品。平台面向入门用户友好易用，同时也为开发者提供功能完全一致的 Python SDK。
 
@@ -104,9 +121,6 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 3.agent使用cli命令完成写入电机ID，wiki则是使用web ui交互的方式来完成。两者都可行。
 
 :::
-
-相信你已经跟随视频完成了机械臂组装前期准备工作,接下来开始介绍写入电机ID和校准机械臂的步骤。
-
 
 使用请参考视频和文字教程,在控制机械臂运动之前，需要重新设置一次零点。
 

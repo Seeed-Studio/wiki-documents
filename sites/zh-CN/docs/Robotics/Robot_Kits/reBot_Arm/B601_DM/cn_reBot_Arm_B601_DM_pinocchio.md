@@ -23,6 +23,8 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/
 
 # reBot Arm B601-DM 的 Pinocchio 与 MeshCat 入门指南
 
+![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
+
 <p align="center">
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
@@ -33,12 +35,13 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/
 </p>
 
 <p align="center">
-  <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
+  <strong>深度感知 · 目标检测 · 手眼标定 · 自主抓取 · 全开源</strong>
 </p>
 
-
-![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
-
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=16&id=1042412233386&mi_id=0000hhNAEYgKZRabreGKmpExx8eS7wS_DqxaG6ePdGjrn4Q&ns=1&skuId=6073790464610&spm=a21n57.1.hoverItem.1&utparam=%7B%22aplus_abtest%22%3A%22ef0f0c248fcf6a14c9bd99035ac573f9%22%7D&xxc=taobaoSearch" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 来一单 🖱️</font></span></strong>
+</a></div>
 
 :::tip
 本案例示例代码可用于进行机械臂的电机或姿态的调控，包含单个电机调控、正/逆运动学调控与测试、机械臂原点设置及电机角度读取、MeshCat可视化系统等。

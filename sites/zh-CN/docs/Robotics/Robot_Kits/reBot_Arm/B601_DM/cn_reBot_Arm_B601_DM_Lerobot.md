@@ -21,6 +21,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
 ---
 
 # reBot Arm B601-DM入门Lerobot
+![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
 <p align="center">
     <a href="./LICENSE">
@@ -32,8 +33,13 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
 </p>
 
 <p align="center">
-  <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
+  <strong>深度感知 · 目标检测 · 手眼标定 · 自主抓取 · 全开源</strong>
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=16&id=1042412233386&mi_id=0000hhNAEYgKZRabreGKmpExx8eS7wS_DqxaG6ePdGjrn4Q&ns=1&skuId=6073790464610&spm=a21n57.1.hoverItem.1&utparam=%7B%22aplus_abtest%22%3A%22ef0f0c248fcf6a14c9bd99035ac573f9%22%7D&xxc=taobaoSearch" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 来一单 🖱️</font></span></strong>
+</a></div>
 
 
 [reBot Arm B601-DM](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/)是由Seeed开源的是一个致力于降低具身智能学习门槛的机械臂项目。我们毫无保留地开源了所有结构设计和代码，一起让机器人技术触手可及。

@@ -39,9 +39,16 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/
     <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>
 
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
 <p align="center">
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
+
 
 
 [reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/) is an open-source robotic arm project launched by Seeed, dedicated to lowering the threshold for learning embodied intelligence. We open-source all structural designs and code without reservation, making robotics technology accessible to everyone.
@@ -286,7 +293,7 @@ lerobot-calibrate \
 ```
 
 Keep it still, then press Enter until calibration is complete.
-After calibration, enter the following command to test the leader arm.
+<!-- After calibration, enter the following command to test the leader arm.
 
 ```bash
 python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
@@ -294,7 +301,7 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 
 #If you observe terminal output similar to the following printing continuously, and when at the zero position shown above, all joint output values are 0, then leader calibration is complete.
 #shoulder_pan=    0.00  shoulder_lift=    0.00  elbow_flex=    0.00  wrist_flex=    0.00  wrist_yaw=    0.00  wrist_roll=    0.00  gripper=    0.00
-```
+``` -->
 
 </details>
 
