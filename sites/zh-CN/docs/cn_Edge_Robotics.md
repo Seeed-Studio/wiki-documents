@@ -45,18 +45,37 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
     <a href="#software">💻 软件生态</a>
   </nav>
 
+  <section className="kit-index-panel" aria-label="快速选择机器人套件">
+    <div className="section-title-row compact-title">
+      <div>
+        <span className="section-kicker">Choose a Kit</span>
+        <h2>快速选择你的学习路径</h2>
+      </div>
+      <p>所有产品卡片默认折叠，选择你手上的套件后，再展开对应学习计划。</p>
+    </div>
+    <div className="kit-index-grid">
+      <a href="#rebot-rs"><span>🦾</span><strong>B601-RS</strong><small>RobStride 机械臂路线</small></a>
+      <a href="#rebot-dm"><span>🦾</span><strong>B601-DM</strong><small>Damiao 机械臂路线</small></a>
+      <a href="#soarm"><span>🤗</span><strong>SO100 / SO101</strong><small>低成本 LeRobot 路线</small></a>
+      <a href="#starai"><span>🦾</span><strong>StarAI</strong><small>ROS2 / MoveIt / GR00T</small></a>
+      <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>移动底盘与应用 Demo</small></a>
+      <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>轮足机器人路线</small></a>
+      <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>桌面交互机器人路线</small></a>
+    </div>
+  </section>
+
   <section id="robot-kits" className="section-block">
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Start Here</span>
         <h2>📦 机器人套件</h2>
       </div>
-      <p>每个套件都按照“刚拿到手的用户应该先做什么”来组织。建议按步骤从上到下学习。</p>
+      <p>每个套件都按照“先跑通硬件，再进入软件生态，最后做 AI / ROS / 仿真应用”的方式组织。建议先展开自己的产品卡片，再按 Step 顺序学习。</p>
     </div>
 
     <div className="product-stack">
 
-<details className="product-card rebot" open>
+<details id="rebot-rs" className="product-card rebot">
   <summary>
     <div className="product-head">
       <span className="product-icon">🦾</span>
@@ -78,12 +97,12 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <a className="step-card" href="/cn/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>LeRobot 遥操作与数据采集</b><small>学习如何通过主从臂或遥操作采集数据，为模仿学习和具身智能任务做准备。</small></div><em>数据采集</em></a>
       <a className="step-card" href="/cn/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio 运动学可视化</b><small>理解机械臂模型、关节、坐标系、正逆运动学，为后续控制算法打基础。</small></div><em>控制进阶</em></a>
       <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>视觉夹取 Demo</b><small>结合相机、识别和抓取姿态生成，让机械臂完成真实物体抓取。</small></div><em>应用 Demo</em></a>
-      <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration"><span className="step-index">5</span><div><b>ROS2 集成</b><small>将机械臂接入 ROS2 生态，便于后续和感知、规划、导航、仿真系统组合。</small></div><em>系统集成</em></a>
+      <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 集成</b><small>将机械臂接入 ROS2 生态，便于后续和感知、规划、导航、仿真系统组合。</small></div><em>系统集成</em></a>
     </div>
   </div>
 </details>
 
-<details className="product-card rebot">
+<details id="rebot-dm" className="product-card rebot">
 <summary>
   <div className="product-head">
     <span className="product-icon">🦾</span>
@@ -114,7 +133,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 </div>
 </details>
 
-<details className="product-card soarm">
+<details id="soarm" className="product-card soarm">
 <summary>
   <div className="product-head">
     <span className="product-icon">🤗</span>
@@ -143,7 +162,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 </div>
 </details>
 
-<details className="product-card starai">
+<details id="starai" className="product-card starai">
 <summary>
   <div className="product-head">
     <span className="product-icon">🦾</span>
@@ -163,12 +182,12 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
   <div className="learning-steps">
     <a className="step-card" href="/cn/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI 机械臂快速开始</b><small>完成硬件连接、基础控制和最小示例运行。</small></div><em>新手必做</em></a>
     <a className="step-card" href="/cn/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>MoveIt 2 运动规划</b><small>学习模型导入、规划场景、路径规划和 ROS2 机械臂开发流程。</small></div><em>ROS2 进阶</em></a>
-    <a className="step-card" href="/cn/control_robotic_arm_via_gr00t"><span className="step-index">3</span><div><b>StarAI 与 NVIDIA GR00T</b><small>进入基于大模型 / VLA 的机械臂控制应用。</small></div><em>AI 控制</em></a>
+    <a className="step-card" href="/cn/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI 与 NVIDIA GR00T</b><small>进入基于大模型 / VLA 的机械臂控制应用。</small></div><em>AI 控制</em></a>
   </div>
 </div>
 </details>
 
-<details className="product-card lekiwi">
+<details id="lekiwi" className="product-card lekiwi">
 <summary>
   <div className="product-head">
     <span className="product-icon">🚗</span>
@@ -192,7 +211,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 </div>
 </details>
 
-<details className="product-card stackforce">
+<details id="stackforce" className="product-card stackforce">
 <summary>
   <div className="product-head">
     <span className="product-icon">🦿</span>
@@ -210,12 +229,12 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
     <div><strong>建议顺序</strong><span>快速开始 → 控制原理 → 运动调试</span></div>
   </div>
   <div className="learning-steps">
-    <a className="step-card" href="/cn/StackForce_Mini_Wheeled_Legged_Robot"><span className="step-index">1</span><div><b>StackForce Mini 快速开始</b><small>完成硬件认识、基础部署、运动控制和轮足机器人的基础实验。</small></div><em>系统课程</em></a>
+    <a className="step-card" href="/cn/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>StackForce Mini 快速开始</b><small>完成硬件认识、基础部署、运动控制和轮足机器人的基础实验。</small></div><em>系统课程</em></a>
   </div>
 </div>
 </details>
 
-<details className="product-card reachy">
+<details id="reachy" className="product-card reachy">
 <summary>
   <div className="product-head">
     <span className="product-icon">🤗</span>
@@ -334,7 +353,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <a href="/cn/myactuator_series/">MyActuator X 系列</a>
       <a href="/cn/damiao_series/">Damiao DM43 系列</a>
       <a href="/cn/feetech_servo/">Feetech STS3215 舵机</a>
-      <a href="/cn/hightorque_control">HighTorque 系列</a>
+      <a href="/cn/hightorque_control/">HighTorque 系列</a>
       <a href="/cn/fashionstar_servo/">Fashionstar 系列</a>
       <a href="/cn/stackforce_series/">Stackforce 系列</a>
       <a href="/cn/robstride_control/">RobStride 控制</a>
@@ -351,7 +370,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
     </div>
     <div className="resource-columns">
       <div><h4>📡 LiDAR</h4><a href="/cn/robosense_lidar/">RoboSense</a><a href="/cn/mid360/">Livox MID360</a><a href="/cn/a_loam/">A-LOAM 算法</a><a href="/cn/slamtec/">Slamtec 系列</a></div>
-      <div><h4>📷 相机</h4><a href="/cn/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/cn/orbbec_gemini_335lg">Gemini 335Lg 深度相机</a><a href="/cn/orbbec_gemini336">Gemini 336 深度相机</a><a href="/cn/sensing_gmsl_cameras">SENSING GMSL2 相机</a><a href="/cn/ac1">RoboSense AC1</a><a href="/cn/orbbec_depth_camera_on_ros/">Orbbec 与 ROS</a><a href="/cn/orb_slam3_orbbec_gemini2/">ORB-SLAM3 与 Gemini2</a><a href="/cn/csi_camera_on_ros/">Jetson 上的 CSI 相机</a><a href="/cn/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
+      <div><h4>📷 相机</h4><a href="/cn/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/cn/orbbec_gemini_335lg/">Gemini 335Lg 深度相机</a><a href="/cn/orbbec_gemini336">Gemini 336 深度相机</a><a href="/cn/sensing_gmsl_cameras">SENSING GMSL2 相机</a><a href="/cn/ac1">RoboSense AC1</a><a href="/cn/orbbec_depth_camera_on_ros/">Orbbec 与 ROS</a><a href="/cn/orb_slam3_orbbec_gemini2/">ORB-SLAM3 与 Gemini2</a><a href="/cn/csi_camera_on_ros/">Jetson 上的 CSI 相机</a><a href="/cn/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
       <div><h4>🎤 语音</h4><a href="/cn/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/cn/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>🧭 IMU</h4><a href="/cn/hexfellow_y200/">HEXFELLOW Y200</a><a href="/cn/wheeltec_imu/">WHEELTEC IMU</a></div>
     </div>
   </section>
@@ -367,7 +386,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
     <div className="resource-columns">
       <div><h4>ROS 生态系统</h4><a href="/cn/installing_ros1/">ROS 1 安装</a><a href="/cn/install_ros2_humble/">ROS 2 安装</a><a href="/cn/install_isaacros/">Isaac ROS 安装</a><a href="/cn/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/cn/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
       <div><h4>NVIDIA Isaac</h4><a href="/cn/install_isaaclab/">Isaac Lab 安装</a><a href="/cn/training_soarm101_policy_with_isaacLab/">SO Arm 强化学习</a><a href="/cn/simulate_soarm101_by_leisaac/">SO100 机械臂与 IsaacSim</a></div>
-      <div><h4>PX4 / VLA</h4><a href="/cn/control_px4_with_recomputer_jetson/">PX4 与 Jetson</a><a href="/cn/object_tracking_with_reComputer_jetson_and_pX4/">PX4 目标跟踪</a><a href="/cn/control_robotic_arm_via_gr00t">StarAI 与 NVIDIA GR00T</a></div>
+      <div><h4>PX4 / VLA</h4><a href="/cn/control_px4_with_recomputer_jetson/">PX4 与 Jetson</a><a href="/cn/object_tracking_with_reComputer_jetson_and_pX4/">PX4 目标跟踪</a><a href="/cn/control_robotic_arm_via_gr00t/">StarAI 与 NVIDIA GR00T</a></div>
     </div>
   </section>
 
@@ -640,6 +659,83 @@ html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgb
 }
 @media (prefers-reduced-motion: reduce) {
   .robotics-page *, .robotics-page *::before, .robotics-page *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+
+/* Optimized collapsed-card learning path refinements */
+.kit-index-panel {
+  margin: 1.4rem 0 2.2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--rp-border);
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--rp-card-bg), var(--rp-card-bg-soft));
+  box-shadow: var(--rp-shadow-sm);
+  scroll-margin-top: 6rem;
+}
+.compact-title { margin-bottom: 1rem; }
+.kit-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.75rem;
+}
+.kit-index-grid a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "icon title"
+    "icon desc";
+  align-items: center;
+  gap: 0.12rem 0.72rem;
+  padding: 0.88rem 0.95rem;
+  border-radius: 16px;
+  border: 1px solid var(--rp-border);
+  background: var(--rp-card-bg);
+  text-decoration: none !important;
+  color: inherit;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.kit-index-grid a:hover {
+  transform: translateY(-2px);
+  border-color: var(--rp-accent-border);
+  box-shadow: var(--rp-shadow-accent);
+}
+.kit-index-grid span {
+  grid-area: icon;
+  width: 2.35rem;
+  height: 2.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--rp-accent-soft);
+  font-size: 1.2rem;
+}
+.kit-index-grid strong { grid-area: title; color: var(--rp-text); }
+.kit-index-grid small { grid-area: desc; color: var(--rp-text-muted); line-height: 1.35; }
+.product-card { scroll-margin-top: 6rem; }
+.product-card .summary-action { position: relative; min-width: 6.3rem; text-align: center; }
+.product-card[open] .summary-action { font-size: 0; }
+.product-card[open] .summary-action::after { content: "收起学习计划"; font-size: 0.76rem; }
+.product-card:not([open]) summary { background: linear-gradient(90deg, var(--rp-card-bg), var(--rp-card-bg-soft)); }
+.product-card:not([open]) .product-head span { color: var(--rp-text-muted); }
+.product-body { animation: rpFadeIn 0.18s ease-out; }
+@keyframes rpFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.product-meta-grid div, .mini-track, .resource-columns div, .kit-index-panel {
+  backdrop-filter: blur(6px);
+}
+html[data-theme='dark'] .kit-index-panel {
+  background: linear-gradient(135deg, var(--rp-card-bg), var(--rp-card-bg-soft));
+}
+html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
+@media (max-width: 900px) {
+  .kit-index-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .kit-index-panel { padding: 1rem; border-radius: 20px; }
+  .kit-index-grid { grid-template-columns: 1fr; }
 }
 
 `}</style>

@@ -29,7 +29,7 @@ url: https://wiki.seeedstudio.com/robotics_page/
     <div>
       <span className="eyebrow">Seeed Studio Robotics Wiki</span>
       <h2>Not sure which guide to read first? Start with the robot kit in your hands.</h2>
-      <p>This page reorganizes Seeed Studio robotics documentation into product-based learning paths. Whether you are unboxing your first robot or preparing for teleoperation, ROS2, simulation, AI training, or real-world deployment, choose your product first and follow Step 1, Step 2, and Step 3 to move from setup to advanced development.</p>
+      <p>This page reorganizes Seeed Studio robotics documentation into product-based learning paths. Whether you are unboxing your first robot or preparing for teleoperation, ROS2, simulation, AI training, or real-world deployment, start by choosing your robot kit, then follow the recommended steps from hardware bring-up to advanced development.</p>
     </div>
     <div className="hero-tips">
       <div><strong>New users</strong><span>Start with unboxing, wiring, power, drivers, and basic motion checks</span></div>
@@ -45,18 +45,37 @@ url: https://wiki.seeedstudio.com/robotics_page/
     <a href="#software">💻 Software Ecosystem</a>
   </nav>
 
+  <section className="kit-index-panel" aria-label="Choose a robotics learning path">
+    <div className="section-title-row compact-title">
+      <div>
+        <span className="section-kicker">Choose a Kit</span>
+        <h2>Quickly choose your learning path</h2>
+      </div>
+      <p>All product cards are collapsed by default. Pick the kit in your hands, then expand the matching learning path.</p>
+    </div>
+    <div className="kit-index-grid">
+      <a href="#rebot-rs"><span>🦾</span><strong>B601-RS</strong><small>RobStride arm learning path</small></a>
+      <a href="#rebot-dm"><span>🦾</span><strong>B601-DM</strong><small>Damiao arm learning path</small></a>
+      <a href="#soarm"><span>🤗</span><strong>SO100 / SO101</strong><small>Low-cost LeRobot path</small></a>
+      <a href="#starai"><span>🦾</span><strong>StarAI</strong><small>ROS2 / MoveIt / GR00T</small></a>
+      <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>Mobile base and demos</small></a>
+      <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>Wheeled-legged robot path</small></a>
+      <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>Desktop interactive robot path</small></a>
+    </div>
+  </section>
+
   <section id="robot-kits" className="section-block">
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Start Here</span>
         <h2>📦 Robot Kits</h2>
       </div>
-      <p>Each kit is organized around what a new user should do first. Follow the steps from top to bottom for the smoothest onboarding experience.</p>
+      <p>Each kit follows the same logic: bring up the hardware first, then enter the software ecosystem, and finally move into AI, ROS, or simulation applications. Expand your product card and follow the steps in order.</p>
     </div>
 
     <div className="product-stack">
 
-<details className="product-card rebot" open>
+<details id="rebot-rs" className="product-card rebot">
   <summary>
     <div className="product-head">
       <span className="product-icon">🦾</span>
@@ -78,12 +97,12 @@ url: https://wiki.seeedstudio.com/robotics_page/
       <a className="step-card" href="/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>LeRobot Teleoperation and Data Collection</b><small>Learn how to teleoperate the arm and record data for imitation learning and embodied AI tasks.</small></div><em>Data collection</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio Kinematics Visualization</b><small>Understand robot models, joints, coordinate frames, and forward/inverse kinematics.</small></div><em>Control</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine camera perception and grasp pose generation to complete real object grasping.</small></div><em>Application</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Connect the arm to the ROS2 ecosystem for perception, planning, navigation, and simulation workflows.</small></div><em>Integration</em></a>
+      <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Connect the arm to the ROS2 ecosystem for perception, planning, navigation, and simulation workflows.</small></div><em>Integration</em></a>
     </div>
   </div>
 </details>
 
-<details className="product-card rebot">
+<details id="rebot-dm" className="product-card rebot">
   <summary>
     <div className="product-head">
       <span className="product-icon">🦾</span>
@@ -110,7 +129,7 @@ url: https://wiki.seeedstudio.com/robotics_page/
   </div>
 </details>
 
-<details className="product-card soarm">
+<details id="soarm" className="product-card soarm">
   <summary>
     <div className="product-head">
       <span className="product-icon">🤗</span>
@@ -139,7 +158,7 @@ url: https://wiki.seeedstudio.com/robotics_page/
   </div>
 </details>
 
-<details className="product-card starai">
+<details id="starai" className="product-card starai">
   <summary>
     <div className="product-head">
       <span className="product-icon">🦾</span>
@@ -159,12 +178,12 @@ url: https://wiki.seeedstudio.com/robotics_page/
     <div className="learning-steps">
       <a className="step-card" href="/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI Arm Getting Started</b><small>Complete hardware connection, basic control, and the minimum runnable example.</small></div><em>Start here</em></a>
       <a className="step-card" href="/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>MoveIt 2 Motion Planning</b><small>Learn model import, planning scenes, path planning, and ROS2 arm development.</small></div><em>ROS2</em></a>
-      <a className="step-card" href="/control_robotic_arm_via_gr00t"><span className="step-index">3</span><div><b>StarAI with NVIDIA GR00T</b><small>Enter large-model and VLA-based robot-arm control applications.</small></div><em>AI control</em></a>
+      <a className="step-card" href="/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI with NVIDIA GR00T</b><small>Enter large-model and VLA-based robot-arm control applications.</small></div><em>AI control</em></a>
     </div>
   </div>
 </details>
 
-<details className="product-card lekiwi">
+<details id="lekiwi" className="product-card lekiwi">
   <summary>
     <div className="product-head">
       <span className="product-icon">🚗</span>
@@ -188,7 +207,7 @@ url: https://wiki.seeedstudio.com/robotics_page/
   </div>
 </details>
 
-<details className="product-card stackforce">
+<details id="stackforce" className="product-card stackforce">
   <summary>
     <div className="product-head">
       <span className="product-icon">🦿</span>
@@ -206,12 +225,12 @@ url: https://wiki.seeedstudio.com/robotics_page/
       <div><strong>Suggested order</strong><span>Getting Started → Control Principles → Motion Debugging</span></div>
     </div>
     <div className="learning-steps">
-      <a className="step-card" href="/StackForce_Mini_Wheeled_Legged_Robot"><span className="step-index">1</span><div><b>StackForce Mini Getting Started</b><small>Learn the hardware, basic deployment, motion control, and introductory wheeled-legged experiments.</small></div><em>Course</em></a>
+      <a className="step-card" href="/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>StackForce Mini Getting Started</b><small>Learn the hardware, basic deployment, motion control, and introductory wheeled-legged experiments.</small></div><em>Course</em></a>
     </div>
   </div>
 </details>
 
-<details className="product-card reachy">
+<details id="reachy" className="product-card reachy">
   <summary>
     <div className="product-head">
       <span className="product-icon">🤗</span>
@@ -330,7 +349,7 @@ url: https://wiki.seeedstudio.com/robotics_page/
       <a href="/myactuator_series/">MyActuator X Series</a>
       <a href="/damiao_series/">Damiao DM43 Series</a>
       <a href="/feetech_servo/">Feetech STS3215 Servo</a>
-      <a href="/hightorque_control">HighTorque Series</a>
+      <a href="/hightorque_control/">HighTorque Series</a>
       <a href="/fashionstar_servo/">Fashionstar Series</a>
       <a href="/stackforce_series/">Stackforce Series</a>
       <a href="/robstride_control/">RobStride Control</a>
@@ -347,7 +366,7 @@ url: https://wiki.seeedstudio.com/robotics_page/
     </div>
     <div className="resource-columns">
       <div><h4>📡 LiDAR</h4><a href="/robosense_lidar/">RoboSense</a><a href="/mid360/">Livox MID360</a><a href="/a_loam/">A-LOAM Algorithm</a><a href="/slamtec/">Slamtec Series</a></div>
-      <div><h4>📷 Camera</h4><a href="/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/orbbec_gemini_335lg">Gemini 335Lg Depth Camera</a><a href="/orbbec_gemini336">Gemini 336 Depth Camera</a><a href="/sensing_gmsl_cameras">SENSING GMSL2 Camera</a><a href="/ac1">RoboSense AC1</a><a href="/orbbec_depth_camera_on_ros/">Orbbec with ROS</a><a href="/orb_slam3_orbbec_gemini2/">ORB-SLAM3 with Gemini2</a><a href="/csi_camera_on_ros/">CSI Camera on Jetson</a><a href="/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
+      <div><h4>📷 Camera</h4><a href="/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/orbbec_gemini_335lg/">Gemini 335Lg Depth Camera</a><a href="/orbbec_gemini336/">Gemini 336 Depth Camera</a><a href="/sensing_gmsl_cameras/">SENSING GMSL2 Camera</a><a href="/ac1/">RoboSense AC1</a><a href="/orbbec_depth_camera_on_ros/">Orbbec with ROS</a><a href="/orb_slam3_orbbec_gemini2/">ORB-SLAM3 with Gemini2</a><a href="/csi_camera_on_ros/">CSI Camera on Jetson</a><a href="/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
       <div><h4>🎤 Voice</h4><a href="/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>🧭 IMU</h4><a href="/hexfellow_y200/">HEXFELLOW Y200</a><a href="/wheeltec_imu/">WHEELTEC IMU</a></div>
     </div>
   </section>
@@ -363,7 +382,7 @@ url: https://wiki.seeedstudio.com/robotics_page/
     <div className="resource-columns">
       <div><h4>ROS Ecosystem</h4><a href="/installing_ros1/">ROS 1 Installation</a><a href="/install_ros2_humble/">ROS 2 Installation</a><a href="/install_isaacros/">Isaac ROS Installation</a><a href="/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
       <div><h4>NVIDIA Isaac</h4><a href="/install_isaaclab/">Isaac Lab Installation</a><a href="/training_soarm101_policy_with_isaacLab/">SO Arm Reinforcement Learning</a><a href="/simulate_soarm101_by_leisaac/">SO100 Arm with IsaacSim</a></div>
-      <div><h4>PX4 / VLA</h4><a href="/control_px4_with_recomputer_jetson/">PX4 with Jetson</a><a href="/object_tracking_with_reComputer_jetson_and_pX4/">PX4 Object Tracking</a><a href="/control_robotic_arm_via_gr00t">StarAI with NVIDIA GR00T</a></div>
+      <div><h4>PX4 / VLA</h4><a href="/control_px4_with_recomputer_jetson/">PX4 with Jetson</a><a href="/object_tracking_with_reComputer_jetson_and_pX4/">PX4 Object Tracking</a><a href="/control_robotic_arm_via_gr00t/">StarAI with NVIDIA GR00T</a></div>
     </div>
   </section>
 
@@ -636,6 +655,80 @@ html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgb
 }
 @media (prefers-reduced-motion: reduce) {
   .robotics-page *, .robotics-page *::before, .robotics-page *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+
+/* Optimized collapsed-card learning path additions */
+.kit-index-panel {
+  margin: 1.6rem 0 2.2rem;
+  padding: 1.25rem;
+  border-radius: 24px;
+  border: 1px solid var(--rp-border);
+  background: linear-gradient(135deg, var(--rp-card-bg), var(--rp-card-bg-soft));
+  box-shadow: var(--rp-shadow-sm);
+}
+.compact-title { margin-bottom: 1rem; }
+.kit-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.8rem;
+}
+.kit-index-grid a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas: "icon title" "icon desc";
+  gap: 0.18rem 0.75rem;
+  align-items: center;
+  padding: 0.9rem;
+  border-radius: 16px;
+  border: 1px solid var(--rp-border);
+  background: var(--rp-card-bg);
+  text-decoration: none !important;
+  color: inherit;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.kit-index-grid a:hover {
+  transform: translateY(-2px);
+  border-color: var(--rp-accent-border);
+  box-shadow: var(--rp-shadow-accent);
+}
+.kit-index-grid span {
+  grid-area: icon;
+  width: 2.35rem;
+  height: 2.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--rp-accent-soft);
+  font-size: 1.2rem;
+}
+.kit-index-grid strong { grid-area: title; color: var(--rp-text); }
+.kit-index-grid small { grid-area: desc; color: var(--rp-text-muted); line-height: 1.35; }
+.product-card { scroll-margin-top: 6rem; }
+.product-card .summary-action { position: relative; min-width: 6.3rem; text-align: center; }
+.product-card[open] .summary-action { font-size: 0; }
+.product-card[open] .summary-action::after { content: "Close learning path"; font-size: 0.76rem; }
+.product-card:not([open]) summary { background: linear-gradient(90deg, var(--rp-card-bg), var(--rp-card-bg-soft)); }
+.product-card:not([open]) .product-head span { color: var(--rp-text-muted); }
+.product-body { animation: rpFadeIn 0.18s ease-out; }
+@keyframes rpFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.product-meta-grid div, .mini-track, .resource-columns div, .kit-index-panel {
+  backdrop-filter: blur(6px);
+}
+html[data-theme='dark'] .kit-index-panel {
+  background: linear-gradient(135deg, var(--rp-card-bg), var(--rp-card-bg-soft));
+}
+html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
+@media (max-width: 900px) {
+  .kit-index-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .kit-index-panel { padding: 1rem; border-radius: 20px; }
+  .kit-index-grid { grid-template-columns: 1fr; }
 }
 
 `}</style>
