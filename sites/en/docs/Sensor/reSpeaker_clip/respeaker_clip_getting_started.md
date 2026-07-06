@@ -8,7 +8,7 @@ keywords:
   - Wearable AI Recorder
   - Voice to Text
   - LLM Summary
-image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/0/2026.7.1.100020126.jpg
 slug: /respeaker_clip_getting_started
 sku: 100020126
 last_update:
