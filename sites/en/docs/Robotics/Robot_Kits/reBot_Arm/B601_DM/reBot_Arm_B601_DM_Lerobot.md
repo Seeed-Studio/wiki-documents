@@ -47,10 +47,7 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
   <div className="safety-alert-content">
     <strong>Safety Warning: Clear the Robot Workspace Before Running</strong>
     <p>
-      Before running any program that moves the robotic arm, clear all valuable items,
-      fragile objects, tools, cables, and unrelated objects within a <strong>1-meter radius</strong>
-      of the robot workspace. During debugging and operation, personnel must stay outside
-      the robot motion range.
+      Before running any program that moves the robotic arm, clear all valuable items, fragile objects, tools, cables, and unrelated objects within a <strong>1-meter radius</strong> of the robot workspace. During debugging and operation, personnel must stay outside the robot motion range.
     </p>
     <ul>
       <li>Do not touch joints, motors, links, the gripper, or the end effector after the robotic arm is powered on.</li>
