@@ -2154,7 +2154,14 @@ const sidebars = {
         {
           type: 'category',
           label: 'reSpeaker Clip',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
+          },
           items: [
+            'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/respeaker_clip_python_control',
           ],
         },
