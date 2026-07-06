@@ -1,5 +1,5 @@
 ---
-title:  Porting the MediaPipe Hand Gesture Recognition Model to reCamera
+title: Porting the MediaPipe Hand Gesture Recognition Model to reCamera
 description: This document describes how to fully port the official Google MediaPipe hand gesture recognition suite onto reCamera (Sophon/Bitmain SG200X), building a "palm detection → landmark detection → embedding → classification" pipeline and streaming the results to a PC via UDP for visualization.
 keywords:
   - reCamera

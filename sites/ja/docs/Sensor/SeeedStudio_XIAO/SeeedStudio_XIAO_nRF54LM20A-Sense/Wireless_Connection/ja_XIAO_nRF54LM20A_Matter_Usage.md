@@ -179,7 +179,7 @@ Connect ZBT-1、Connect ZBT-2、Home Assistant Yellow などの Thread ルーテ
 
 :::tip
 
-このチュートリアルは VS Code と nRF Connect Extension を前提としています。これらに不慣れな場合は、[XIAO nRF54LM20A nRFConnect SDK Usage](http://localhost:3000/xiao_nrf54lm20a_getting_started/#nrfconnect-sdk-usage) を参照してください。
+このチュートリアルは VS Code と nRF Connect Extension を前提としています。これらに不慣れな場合は、[XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_ncs/) を参照してください。
 
 :::
 

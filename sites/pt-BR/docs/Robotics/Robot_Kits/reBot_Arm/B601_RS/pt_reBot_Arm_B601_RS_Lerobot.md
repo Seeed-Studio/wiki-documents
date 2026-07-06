@@ -233,7 +233,7 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 
 lerobot-calibrate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan
@@ -321,7 +321,7 @@ sudo ip link set can0 up
 Execute a teleoperação:
 ```bash
 lerobot-teleoperate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -421,7 +421,7 @@ Teste com duas RealSense:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -560,7 +560,7 @@ Teste com uma única Orbbec:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -660,7 +660,7 @@ Depois disso, você poderá exibir as câmeras no seu computador enquanto estive
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -682,7 +682,7 @@ Por exemplo, se você quiser adicionar uma câmera:
 <!-- TODO: reBot multi-camera configuration command -->
 ```bash
 lerobot-teleoperate \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -708,7 +708,7 @@ lerobot-teleoperate \
 <!-- TODO: reBot local data collection command -->
 ```bash
 lerobot-record \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -750,7 +750,7 @@ Grave 5 episódios e envie seu conjunto de dados para o Hub:
 <!-- TODO: reBot data collection and upload to Hugging Face command -->
 ```bash
 lerobot-record \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
@@ -878,7 +878,7 @@ Agora, tente reproduzir o primeiro conjunto de dados no seu robô:
 <!-- TODO: reBot dataset replay command -->
 ```bash
 lerobot-replay \
-    --robot.type=Bseeed_b601_rs_follower \
+    --robot.type=seeed_b601_rs_follower \
     --robot.port=can0 \
     --robot.can_adapter=socketcan \
     --robot.id=follower1 \
@@ -956,7 +956,7 @@ Você pode usar a função `record` de [`lerobot/record.py`](https://github.com/
 
 ```bash
 lerobot-record \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
@@ -1028,7 +1028,7 @@ A fase de avaliação carrega seu modelo com fine-tuning, permite que o robô ex
 
 ```bash
 lerobot-record \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.id=follower1 \
@@ -1116,7 +1116,7 @@ Parâmetros comuns (apenas os específicos do Pi0 / mais frequentemente ajustado
 
 ```bash
 lerobot-record \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
@@ -1192,7 +1192,7 @@ Se o seu conjunto de dados não tiver estatísticas de quantis (exigidas por alg
 
 ```bash
 lerobot-record \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
@@ -1303,7 +1303,7 @@ Após o treinamento, você pode usar `lerobot-record` para avaliação/gravaçã
 
 ```bash
 lerobot-record \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30} }' \
@@ -1689,7 +1689,7 @@ Execute no cliente:
 
 ```bash
 python -m lerobot.async_inference.robot_client \
-  --robot.type=Bseeed_b601_rs_follower \
+  --robot.type=seeed_b601_rs_follower \
   --robot.port=can0 \
   --robot.can_adapter=socketcan \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \

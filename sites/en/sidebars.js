@@ -2163,7 +2163,14 @@ const sidebars = {
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
-        },  
+        },
+        {
+          type: 'category',
+          label: 'reSpeaker Clip',
+          items: [
+            'Sensor/reSpeaker_clip/respeaker_clip_python_control',
+          ],
+        },
         {
           type: 'category',
           label: 'Applications',
@@ -4020,6 +4027,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/RTL8822CE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/RTL8852BE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/RM520N_Module_for_Jetson',
+                'Edge/NVIDIA_Jetson/Other_Devices/EM12-G_GNSS_Module_for_reComputer_Robotics_J3011',
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson_Xavier_AGX_H01_Driver_Installation',
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson-Mate',
@@ -4178,6 +4186,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Distributed_llama_cpp_RPC_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Jetson_SPI_Getting_Start',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Flash_PREEMPT_RT_Kernel_on_reComputer_Jetson_JetPack_6_2_1',
               ]
             },
           ]
@@ -4446,6 +4455,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO_ARM101_DAMO',
             'Robotics/Robot_Kits/Lerobot/Lerobot_Dataset_Tool',
             'Robotics/Robot_Kits/Lerobot/Steering_Gear_Debugging_Tool',
+            'Robotics/Robot_Kits/Lerobot/Complete_Guide_to_Double-Arm_SO-ARM_Training',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'Robotics/Robot_Kits/Lerobot/Lerobot_Lekiwi',
             'Robotics/Robot_Kits/Lerobot/Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',

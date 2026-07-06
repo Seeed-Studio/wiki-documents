@@ -179,7 +179,7 @@ Dispositivos de roteamento Thread como Connect ZBT-1, Connect ZBT-2 ou Home Assi
 
 :::tip
 
-Este tutorial é baseado no VS Code e na extensão nRF Connect. Se você é iniciante neles, pode consultar [XIAO nRF54LM20A nRFConnect SDK Usage](http://localhost:3000/xiao_nrf54lm20a_getting_started/#uso-do-nrfconnect-sdk)
+Este tutorial é baseado no VS Code e na extensão nRF Connect. Se você é iniciante neles, pode consultar [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_ncs/)
 
 :::
 
