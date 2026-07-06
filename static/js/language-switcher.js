@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-30 14:44:34 (北京时间)
-// 多语言页面: 2357 个
+// 生成时间: 2026-07-02 17:22:35 (北京时间)
+// 多语言页面: 2362 个
 
 (function() {
   'use strict';
@@ -835,6 +835,13 @@
     "ja",
     "pt"
   ],
+  "/flash_preempt_rt_kernel_on_recomputer_jetson_jetpack_6_2_1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/gapi_getting_started-with_jetson": [
     "cn",
     "en",
@@ -1571,6 +1578,13 @@
     "pt"
   ],
   "/jetson_developtool_supported_devices": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/em12_g_gnss_module_for_recomputer_robotics_j3011": [
     "cn",
     "en",
     "es",
@@ -5525,6 +5539,13 @@
     "ja",
     "pt"
   ],
+  "/lerobot_double_arm_so_arm_training": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor": [
     "cn",
     "en",
@@ -8220,6 +8241,13 @@
     "pt"
   ],
   "/reterminal_e10xx_trmnl": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_work_with_zephyr": [
     "cn",
     "en",
     "es",
@@ -11152,6 +11180,13 @@
     "pt"
   ],
   "/respeaker_2_mics_pi_hat_v2_speech_recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_python_control": [
     "cn",
     "en",
     "es",

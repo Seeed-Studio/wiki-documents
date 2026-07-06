@@ -1,12 +1,12 @@
 ---
-description: Página preliminar de introducción para la placa carrier reComputer Robotics J601 diseñada para módulos NVIDIA Jetson AGX Thor.
+description: Página preliminar de introducción para la carrier board reComputer Robotics J601 diseñada para módulos NVIDIA Jetson AGX Thor.
 title: Introducción a reComputer Robotics J601
 keywords:
   - reComputer Robotics J601
   - AGX Thor
   - Jetson
   - Carrier Board
-  - Robotics
+  - Robótica
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
@@ -21,14 +21,14 @@ url: https://wiki.seeedstudio.com/es/ai_robotics_recomputer_robotics_j601_carrie
 # Introducción a reComputer Robotics J601
 
 :::note
-Esta página es un borrador preliminar para la próxima placa carrier reComputer Robotics J601 para módulos NVIDIA Jetson AGX Thor. Las especificaciones, el soporte de software, los paquetes de accesorios y los detalles mecánicos aún están sujetos a cambios.
+Esta página es un borrador preliminar para la próxima carrier board reComputer Robotics J601 para módulos NVIDIA Jetson AGX Thor. Las especificaciones, el soporte de software, los kits de accesorios y los detalles mecánicos aún están sujetos a cambios.
 :::
 
 <div align="center">
   <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
 </div>
 
-La reComputer Robotics J601 es una placa carrier enfocada en robótica para módulos NVIDIA Jetson AGX Thor. Está pensada para cargas de trabajo de IA encarnada y control robótico de alto rendimiento que requieren redes de alta velocidad, E/S industriales, expansión de cámaras GMSL y entrada de CC de amplio rango en un factor de forma compacto de placa carrier.
+La reComputer Robotics J601 es una carrier board enfocada en robótica para módulos NVIDIA Jetson AGX Thor. Está pensada para cargas de trabajo de IA encarnada y control robótico de alto rendimiento que requieren redes de alta velocidad, E/S industriales, expansión de cámaras GMSL y entrada de CC de amplio rango en un factor de forma compacto de carrier board.
 
 ## Características preliminares
 
@@ -36,15 +36,15 @@ La reComputer Robotics J601 es una placa carrier enfocada en robótica para mód
 - Ranura **M.2 Key M** para SSD NVMe 2280
 - Ranura **M.2 Key E** para módulo Wi‑Fi/Bluetooth
 - Ranura **M.2 Key B** para módulo 5G y compatibilidad con **Nano SIM**
-- Ethernet de alta velocidad con soporte planificado para **PTP** y **EtherCAT**
-- E/S rica para robótica, incluyendo **CAN**, **RS-232/422/485**, **DI/DO**, **I2C**, **I2S**, **SPI** y **GPIO**
+- Ethernet de alta velocidad con soporte previsto para **PTP** y **EtherCAT**
+- E/S ricas para robótica, incluidas **CAN**, **RS-232/422/485**, **DI/DO**, **I2C**, **I2S**, **SPI** y **GPIO**
 - **Expansión GMSL** para hasta **8 cámaras**
-- Entrada de **19V a 48V CC** de amplio rango a través de **XT30**
+- Entrada de **19V a 48V CC** de amplio rango mediante **XT30**
 - Plataforma de software objetivo: **JetPack 7**
 
 ## Especificaciones preliminares
 
-La siguiente tabla mantiene intencionadamente solo las partes más claras de la definición de hardware actual y deja los elementos no resueltos como TBD.
+La siguiente tabla mantiene intencionadamente solo las partes más claras de la definición de hardware actual y deja los elementos no definidos como TBD.
 
 <div class="table-center">
 <table>
@@ -67,7 +67,7 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
     </tr>
     <tr>
       <td>USB</td>
-      <td>Hasta 4x USB 3.2 Tipo A (Host), 1x USB 2.0 Tipo C (Debug UART / Modo dispositivo), 1x USB 3.0 Tipo C para flasheo</td>
+      <td>Hasta 4x USB 3.2 Tipo A (Host), 1x USB 2.0 Tipo C (UART de depuración / modo dispositivo), 1x USB 3.0 Tipo C para flasheo</td>
     </tr>
     <tr>
       <td>Pantalla</td>
@@ -75,7 +75,7 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
     </tr>
     <tr>
       <td>Refrigeración</td>
-      <td>1x conector de ventilador de 4 pines (12V PWM); se planea vender la placa carrier y el ventilador por separado</td>
+      <td>1x conector de ventilador de 4 pines (PWM de 12V); se prevé vender la carrier board y el ventilador por separado</td>
     </tr>
     <tr>
       <td>Cámara</td>
@@ -87,7 +87,7 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
     </tr>
     <tr>
       <td>Serie</td>
-      <td>2x RS-232/422/485 mediante DB9, 1x RS-232/422/485 mediante DB9, 1x RS-485 mediante JST de 4 pines</td>
+      <td>1x RS-232/422/485 (conector DB9), 1x RS-485 (conector JST)</td>
     </tr>
     <tr>
       <td>E/S digital</td>
@@ -135,7 +135,7 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
     </tr>
     <tr>
       <td>Mecánico</td>
-      <td>Tamaño objetivo de la placa carrier dentro de 150 mm x 130 mm</td>
+      <td>Tamaño objetivo de la carrier board dentro de 150 mm x 130 mm</td>
     </tr>
   </tbody>
 </table>
@@ -148,7 +148,7 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
 | Botón | Pin | Señal | Tipo | Descripción |
 | --- | --- | --- | --- | --- |
 | RECOVERY | 240 | - | CMOS-5V | Se utiliza para la recuperación del sistema / flujo de configuración de bajo nivel |
-| RESET | 239 | SYS_RESET* | Drenaje abierto, 1.8V | Tirar a nivel bajo para reiniciar el módulo; cuando la alimentación del módulo está lista, el nivel alto se puede usar como habilitación de alimentación de la placa carrier |
+| RESET | 239 | SYS_RESET* | Drenaje abierto, 1.8V | Tirar a nivel bajo para reiniciar el módulo; cuando la alimentación del módulo está lista, el nivel alto se puede usar como habilitación de alimentación de la carrier board |
 
 ### Indicadores LED
 
@@ -156,16 +156,16 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
 | --- | --- | --- | --- |
 | PWR | Verde | On | El dispositivo está conectado a la alimentación |
 | PWR | Verde | Off | El dispositivo no está conectado a la alimentación |
-| ACT | Verde | Parpadeando | Actividad del SSD |
+| ACT | Verde | Flashing | Actividad del SSD |
 | USER | R / G / B | TBD | Comportamiento definido por el usuario |
 
 ## Software
 
-- Línea base de software planificada: **JetPack 7**
-- Capacidad Ethernet planificada: **EtherCAT**
+- Línea base de software prevista: **JetPack 7**
+- Capacidad Ethernet prevista: **EtherCAT**
 - Guía detallada de flasheo, paquete BSP y pasos de validación: **TBD**
 
-## Adaptación de cámaras planificada
+## Adaptación de cámaras prevista
 
 La lista de requisitos actual incluye los siguientes modelos de cámaras GMSL:
 
@@ -177,7 +177,7 @@ La lista de requisitos actual incluye los siguientes modelos de cámaras GMSL:
 
 ## Diseño térmico
 
-Esta placa carrier está pensada para su uso dentro de carcasas de robots humanoides, donde los clientes pueden diseñar su propia solución térmica. Seeed planea proporcionar una guía de diseño térmico para despliegues basados en AGX Thor.
+Esta carrier board está pensada para su uso dentro de carcasas de robots humanoides, donde los clientes pueden diseñar su propia solución térmica. Seeed planea proporcionar una guía de diseño térmico para despliegues basados en AGX Thor.
 
 Documento de referencia:
 
@@ -187,23 +187,23 @@ Documento de referencia:
 
 ### Accesorios
 
-- Cable XT30 a CC, 200 mm x 1
+- Cable XT30 a DC, 200 mm x 1
 - Arnés de cables sueltos JST, 100 mm x 10
 - Cable USB Tipo C a Tipo A, 1 m x 1
 - Tornillo para Key E x 1
 - Tornillo para Key M x 1
 - Tornillo para Key B x 1
 - Tornillos para AGX Thor SOM x 4
-- Pernos para soporte de la placa carrier x 4
-- Tornillos para pernos x 4
+- Espaciadores para soporte de la carrier board x 4
+- Tornillos para espaciadores x 4
 - Manual de usuario x 1
 
-### Empaque
+### Embalaje
 
 - Caja para transporte aéreo
-- Bandeja interior para la placa carrier y accesorios
+- Bandeja interior para la carrier board y los accesorios
 - Manual de usuario en la parte superior con una capa adicional de espuma
-- Estilo de empaque similar al de la placa carrier mini J501
+- Estilo de embalaje similar al de la mini carrier board J501
 
 ## Recursos
 

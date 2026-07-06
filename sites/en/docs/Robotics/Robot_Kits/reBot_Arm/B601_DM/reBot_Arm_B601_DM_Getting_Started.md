@@ -17,7 +17,7 @@ last_update:
   date: 2026-04-13T00:00:00.000Z
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-06-26'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
@@ -49,6 +49,8 @@ The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed
 
 :::tip
 If you purchased a pre-assembled kit, please skip directly to the tutorial video in **Step 3** at the end of this article and follow along. There is no need to write motor IDs or calibrate zero positions.
+
+It has been verified that virtual machine performance is insufficient for running demos and there are configuration issues. It is recommended to use an Ubuntu physical machine to control the robotic arm.
 :::
 
 ## Purchasing Options
@@ -99,6 +101,10 @@ Before Assembly:
   2. The video was recorded in early April. Minor updates may exist, but assembly remains the same. Refer to shipped parts as final.
   3. Shipped screws have thread-lock applied. Use proper tools or an electric screwdriver (recommended). Set torque to (3–6 kgf·cm) to avoid stripping. If stripping occurs, stop immediately and replace or realign the screw. Stripped thread-lock screws are difficult to remove and may damage parts.
   4. Ensure safety during assembly. Avoid pinching or injury. Children must be supervised.
+
+  :::tip
+  Reminder: The D4 * 7 between motor 5 and motor 6 in the assembly video does not need to be installed. It's a mistake in the video. If you bought the DIY version of the reBot Arm B601-DM, the 7 D4 * 7 screws are enough for you to complete the assembly.
+  :::
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/rfTQoFCfnMc?si=KkEfY0NePxC96Xdu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -213,17 +219,42 @@ After testing, remember to click `Disable` to exit the enabled state.
 
 We trust you have completed the robotic arm assembly, zero-point initialization, motor ID configuration, and other setup steps by following the video. You are now ready to officially explore the series of tutorials and tools we have released.
 
+
+Please refer to the video and text tutorial. Before controlling the robotic arm, you need to reset the zero point again.
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/SI1PRQYkhdg?si=E0m7uTF4IhCVZYl_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 1. Explore our **MotorBridge** platform, an all-in-one solution supporting an expanding list of motors including [Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow, and more. It is also compatible with continuously updated robotic arms such as reBot. Designed for beginners, we also offer a Python SDK that implements the same functionality for developers.
 
 2. Experience new features and details of MotorBridge for the reBot robotic arm, including one-click zero-point setting, parameter writing, motor control via UI drag-and-drop, and a built-in model visualization interface.
 
 3. This tool is fully compatible with **Windows, Ubuntu, and Mac** operating systems.
 
-### Step 1: Install miniforge (on Windows\Ubuntu\Mac\Jetson\Pi)
+### Step 1: Install Miniforge (on Windows\Ubuntu\macOS\Jetson\Pi)
+
+Install Miniforge and create a virtual environment to avoid interference from other environment packages.
+
+Ubuntu\Jetson\Pi:
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+or macOS:
+```bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+bash Miniforge3-MacOSX-$(uname -m).sh
+```
+
+or Windows:
+
+Open the Miniforge Release page in your browser, find the latest `Miniforge3-Windows-x86_64.exe` and download it:
+
+```text
+https://github.com/conda-forge/miniforge/releases
 ```
 
 ### Step 2: Environment Setup
@@ -298,10 +329,3 @@ Export complete parameters from an intact motor of the same model via the host s
 
 ### 2. All motors share identical CAN IDs
 - When performing zero-point calibration via **DM_Tools_v.1.8.0.1.exe (Windows-only)**, avoid clicking the Read or Set buttons next to the CAN ID field. The debug interface communicates over the CAN bus; clicking Set will unify the CAN ID for every motor connected on the CANBUS.
-
-
-#### For subsequent operation steps, please refer to our tutorial video.
-
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/SI1PRQYkhdg?si=E0m7uTF4IhCVZYl_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>

@@ -14,7 +14,7 @@ last_update:
   date: 04/24/2026
   author: Dayu
 createdAt: '2026-04-24'
-updatedAt: '2026-04-24'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
@@ -87,7 +87,7 @@ The following table intentionally keeps only the clearer parts of the current ha
     </tr>
     <tr>
       <td>Serial</td>
-      <td>2x RS-232/422/485 via DB9, 1x RS-232/422/485 via DB9, 1x RS-485 via JST 4-pin</td>
+      <td>1x RS-232/422/485 (DB9 Connector), 1x RS-485 (JST Connector)</td>
     </tr>
     <tr>
       <td>Digital I/O</td>
