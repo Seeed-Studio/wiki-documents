@@ -359,7 +359,7 @@ url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 
   | Part | Image | File | Material | Qty | Print settings |
   |:---|:---:|:---|:---|:---:|:---|
-  | Motor 1 dual-side wiring harness clip | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/DM_Motor1_wiring_harness_clip.jpg" width="100" /> | [3D File](DM_Motor1_wiring_harness_clip.stp) | Bambu Lab Black PLA | 2 | 0.4 mm nozzle, 0.2 mm layer height, 30% infill |
+  | Motor 1 dual-side wiring harness clip | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/DM_Motor1_wiring_harness_clip.jpg" width="100" /> | [3D File](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/DM_Motor1_wiring_harness_clip.stp) | Bambu Lab Black PLA | 2 | 0.4 mm nozzle, 0.2 mm layer height, 30% infill |
 
   <details className="video-details" open>
     <summary>View calibration and first-run video</summary>

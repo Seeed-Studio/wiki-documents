@@ -389,7 +389,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 
     | 配件名称 | 示意图 | 文件名称 | 材料 | 数量 | 打印参数说明 |
     | ---- | ---- | ---- | ---- | ---- | ---- |
-    | 一号电机双侧线束卡扣 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/DM_Motor1_wiring_harness_clip.jpg" width="100" /> | [3D File](DM_Motor1_wiring_harness_clip.stp) | 拓竹黑色 PLA | 2 件 | 0.4 mm 喷嘴，0.2 mm 层厚，填充率 30% |
+    | 一号电机双侧线束卡扣 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/DM_Motor1_wiring_harness_clip.jpg" width="100" /> | [3D File](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/DM_Motor1_wiring_harness_clip.stp) | 拓竹黑色 PLA | 2 件 | 0.4 mm 喷嘴，0.2 mm 层厚，填充率 30% |
   </details>
 
   <details className="content-details">

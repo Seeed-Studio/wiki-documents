@@ -261,7 +261,7 @@ url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 
     | Part Description | Image | File Name | Material | Qty | Printing Specifications |
     | ---- | ---- | ---- | ---- | ---- | ---- |
-    | Dual-side Wiring Harness Clips for Motor 1 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/RS_Motor1_wiring_harness_clip.jpg" width="100" /> | [3D File](RS_Motor1_wiring_harness_clip.stp) | Bambu Lab Black PLA | 2 pcs | 0.4 mm nozzle, 0.2 mm layer height, 30% infill |
+    | Dual-side Wiring Harness Clips for Motor 1 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/RS_Motor1_wiring_harness_clip.jpg" width="100" /> | [3D File](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/RS_Motor1_wiring_harness_clip.stp) | Bambu Lab Black PLA | 2 pcs | 0.4 mm nozzle, 0.2 mm layer height, 30% infill |
   </details>
 
   <div className="feature-grid">
