@@ -47,22 +47,20 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_lerobot/
   <div className="safety-alert-content">
     <strong>安全上の警告：実行前にロボットの作業空間を必ず整理してください</strong>
     <p>
-      ロボットアームを動かすプログラムを実行する前に、ロボットの作業空間から
-      貴重品、壊れやすい物、工具、ケーブル、および無関係な物体を<strong>半径 1 メートル</strong>以内からすべて取り除いてください。
-      デバッグおよび動作中は、作業者は常にロボットの可動範囲の外側にいる必要があります。
+      ロボットアームを動かすプログラムを実行する前に、ロボットの作業空間から貴重品、壊れやすい物、工具、ケーブル、および無関係な物体を<strong>半径 1 メートル</strong>以内からすべて取り除いてください。デバッグおよび動作中は、作業者は常にロボットの可動範囲の外側にいる必要があります。
       </p>
     <ul>
     <li>ロボットアームの電源が入っている状態では、関節、モーター、リンク、グリッパー、エンドエフェクタには触れないでください。</li>
       <li>キャリブレーション、テレオペレーション、IK 制御、軌道制御、重力補償、ROS2 / MoveIt 実行、またはビジュアルグラスピングを行う前に、アームのベースがしっかり固定されていることを確認してください。</li>
       <li>異常な動き、異音、振動、ケーブルの緩み、電源接触不良、または通信断が発生した場合は、直ちにプログラムを停止し、点検前にシステムの電源を切ってください。</li>
       <li>モーターケーブル、CAN ケーブル、USB2CAN / PCAN-USB アダプタ、XT30 コネクタ、または電源コネクタを抜き差しする前には、必ずシステムの電源を切ってください。</li>
-      </ul>
-    </div>
+    </ul>
   </div>
+</div>
 
 
   <nav className="doc-nav" aria-label="reBot LeRobot quick navigation">
-  <a href="#quick-path">パス</a>
+    <a href="#quick-path">パス</a>
     <a href="#install-lerobot">インストール</a>
     <a href="#calibration">キャリブレーション</a>
     <a href="#teleoperation">テレオペレーション</a>
@@ -70,107 +68,106 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_lerobot/
     <a href="#record-dataset">データセット</a>
     <a href="#training">学習</a>
     <a href="#faq">FAQ</a>
-    </nav>
+  </nav>
 
   <section id="quick-path" className="section-card">
-  <div className="section-title">
-    <span>ここから始める</span>
+    <div className="section-title">
+      <span>ここから始める</span>
       <h2>推奨ワークフロー</h2>
       <p>これが初めての LeRobot プロジェクトであれば、以下の順序に従ってください。すでに LeRobot に慣れている場合は、必要なモジュールに直接進んでも構いません。</p>
-      </div>
+    </div>
 
     <div className="path-grid">
-    <a className="path-card" href="#install-lerobot"><span>Step 1</span><b>LeRobot をインストール</b><small>conda 環境を作成し、Seeed が検証した LeRobot フォークをインストールし、必要なパッケージを導入します。</small></a>
+      <a className="path-card" href="#install-lerobot"><span>Step 1</span><b>LeRobot をインストール</b><small>conda 環境を作成し、Seeed が検証した LeRobot フォークをインストールし、必要なパッケージを導入します。</small></a>
       <a className="path-card" href="#calibration"><span>Step 2</span><b>アームをキャリブレーション</b><small>B601-DM フォロワーアームと reBot 102 リーダーアームをキャリブレーションし、物理位置が一致するようにします。</small></a>
       <a className="path-card" href="#teleoperation"><span>Step 3</span><b>テレオペレーション</b><small>リーダー・フォロワー方式のテレオペレーションを実行し、フォロワーアームが正しく安全に動作することを確認します。</small></a>
       <a className="path-card" href="#camera"><span>Step 4</span><b>カメラを追加</b><small>OpenCV、RealSense、または Orbbec カメラを接続し、データ記録前にビデオストリームを確認します。</small></a>
       <a className="path-card" href="#record-dataset"><span>Step 5</span><b>データセットを記録</b><small>タスクのデモンストレーションをローカルに収集するか、Hugging Face Hub にアップロードします。</small></a>
       <a className="path-card" href="#training"><span>Step 6</span><b>学習と評価</b><small>まず ACT から始め、その後 SmolVLA、Pi0 / Pi0.5、または GR00T を用いたより高度な実験に進みます。</small></a>
       </div>
-    </section>
+  </section>
 
   <section className="section-card">
-  <div className="section-title">
-    <span>詳細ステップ</span>
+    <div className="section-title">
+      <span>詳細ステップ</span>
       <h2>ステップバイステップの LeRobot ワークフロー</h2>
       <p>このシーケンスでは、LeRobot のフルワークフローを、小さくテストしやすいマイルストーンに分解します。実機でのデータ収集やポリシーのデプロイに進む前に、各ステップを完了してください。</p>
-      </div>
+    </div>
     <div className="step-card-grid">
-    <div className="step-card"><span className="step-mini">Step 0</span><strong>B601-DM クイックスタートを完了</strong><p>LeRobot を使用する前に、電源、USB2CAN、モーター ID、ゼロ位置、グリッパーの向き、および基本動作を確認します。</p></div>
+      <div className="step-card"><span className="step-mini">Step 0</span><strong>B601-DM クイックスタートを完了</strong><p>LeRobot を使用する前に、電源、USB2CAN、モーター ID、ゼロ位置、グリッパーの向き、および基本動作を確認します。</p></div>
       <div className="step-card"><span className="step-mini">Step 1</span><strong>LeRobot 環境をインストール</strong><p>conda 環境を作成し、Seeed が検証した LeRobot フォークをインストールし、PyTorch / ffmpeg の互換性を確認します。</p></div>
       <div className="step-card"><span className="step-mini">Step 2</span><strong>フォロワーアームとリーダーアームをキャリブレーション</strong><p>B601-DM フォロワーと reBot 102 リーダーをキャリブレーションし、テレオペレーションが既知の物理リファレンスから開始されるようにします。</p></div>
       <div className="step-card"><span className="step-mini">Step 3</span><strong>安全にテレオペレーションを実行</strong><p>最初は小さくクリアな作業空間から始めます。関節の回転方向、グリッパーの挙動、非常停止手順、およびリセット手順を確認します。</p></div>
       <div className="step-card"><span className="step-mini">Step 4</span><strong>カメラを追加しストリームを検証</strong><p>まず 1 台の OpenCV カメラから始め、基本セットアップが安定したら RealSense や Orbbec の RGB-D ストリームを追加します。</p></div>
       <div className="step-card"><span className="step-mini">Step 5</span><strong>データセットを記録して確認</strong><p>最初は短いローカルデータセットを収集し、エピソードを可視化し、安全な場合のみリプレイし、学習前に観測値とアクションを確認します。</p></div>
       <div className="step-card"><span className="step-mini">Step 6</span><strong>ポリシーを学習・評価</strong><p>まず ACT から始め、その後 SmolVLA、Pi0 / Pi0.5、GR00T、PEFT、マルチ GPU 学習、または非同期推論へと進みます。</p></div>
-      </div>
-    </section>
+    </div>
+  </section>
 
   <section className="section-card">
-  <div className="section-title">
+    <div className="section-title">
     <span>概要</span>
       <h2>プロジェクト概要</h2>
       <p>reBot Arm B601-DM は Seeed Studio によるオープンソースロボットアームプロジェクトです。オープンな機構ファイル、BOM、ソフトウェア、チュートリアルを提供することで、Embodied AI 学習へのハードルを下げることを目的としています。</p>
-      </div>
+    </div>
 
     <div className="module-summary-grid">
-    <div className="module-summary-card"><b>目標</b><span>テレオペレーションからポリシー評価まで、模倣学習の完全なワークフローを構築します。</span></div>
+      <div className="module-summary-card"><b>目標</b><span>テレオペレーションからポリシー評価まで、模倣学習の完全なワークフローを構築します。</span></div>
       <div className="module-summary-card"><b>ロボット</b><span>Damiao モーターを搭載した B601-DM フォロワーアームと reBot 102 リーダーアーム。</span></div>
       <div className="module-summary-card"><b>データ</b><span>LeRobot を使用して、ロボットの状態、アクション、カメラフレーム、タスク記述を同期して記録します。</span></div>
       <div className="module-summary-card"><b>学習</b><span>ACT から始め、VLA やより大規模なファウンデーションモデルワークフローへ拡張します。</span></div>
-      </div>
+    </div>
 
     <div className="info-grid">
-    <div><strong>ロボットアーム</strong><span>Damiao モーター版の 6 自由度 reBot Arm B601-DM フォロワーアーム。</span></div>
+      <div><strong>ロボットアーム</strong><span>Damiao モーター版の 6 自由度 reBot Arm B601-DM フォロワーアーム。</span></div>
       <div><strong>リーダーアーム</strong><span>リアルタイムテレオペレーションとデモ収集用の reBot Arm 102 リーダーアーム。</span></div>
       <div><strong>フレームワーク</strong><span>テレオペレーション、データセット記録、学習、評価、ポリシーデプロイメントのための LeRobot。</span></div>
       <div><strong>計算プラットフォーム</strong><span>タスクに応じて、Ubuntu x86 ワークステーション、NVIDIA GPU ワークステーション、または Jetson Orin プラットフォーム。</span></div>
-      </div>
+    </div>
 
     <details className="content-details">
-    <summary>reBot プロジェクト紹介動画を見る</summary>
+      <summary>reBot プロジェクト紹介動画を見る</summary>
       <div className="video-container">
-      <iframe width="900" height="600" src="https://www.youtube.com/embed/PoMv3mw8SGk" title="reBot Arm project introduction" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-        </div>
-      </details>
-    </section>
+        <iframe width="900" height="600" src="https://www.youtube.com/embed/PoMv3mw8SGk" title="reBot Arm project introduction" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      </div>
+    </details>
+  </section>
 
   <section className="section-card">
-  <div className="section-title">
-    <span>システム</span>
+    <div className="section-title">
+      <span>システム</span>
       <h2>初期システム環境</h2>
       <p>クリーンな環境から始めてください。Jetson ユーザーは、LeRobot の依存関係をインストールする前に、GPU 対応の PyTorch と Torchvision がインストールされていることを確認してください。</p>
-      </div>
+    </div>
 
     <div className="two-col">
-    <div className="check-card">
-      <h3>Ubuntu x86</h3>
+      <div className="check-card">
+        <h3>Ubuntu x86</h3>
         <ul>
-        <li>Ubuntu 22.04</li>
+          <li>Ubuntu 22.04</li>
           <li>CUDA 12+</li>
           <li>Python 3.10 / 3.12（環境に応じて）</li>
           <li>Torch 2.6 または互換性のある CUDA ビルド</li>
-          </ul>
-        </div>
+        </ul>
+      </div>
       <div className="check-card">
-      <h3>Jetson Orin</h3>
+        <h3>Jetson Orin</h3>
         <ul>
-        <li>JetPack 6.0 または 6.1</li>
+          <li>JetPack 6.0 または 6.1</li>
           <li>Python 3.10</li>
           <li>Torch 2.3+</li>
           <li>LeRobot の前に GPU 対応 PyTorch をインストール</li>
-          </ul>
-        </div>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
   <section id="install-lerobot" className="section-card">
-  <div className="section-title">
-    <span>Step 1</span>
+    <div className="section-title">
+      <span>Step 1</span>
       <h2>LeRobot をインストール</h2>
       <p>このセクションでは、作業環境を準備し、Seeed が検証した LeRobot リポジトリをインストールし、reBot 向けのパッケージを追加します。</p>
-      </div>
-    <div className="module-summary-grid">
+    </div>
     <div className="module-summary-grid">
       <div className="module-summary-card"><b>1.1 Miniforge をインストール</b><span>システムの Python を変更する代わりに、分離された conda 環境を作成します。</span></div>
       <div className="module-summary-card"><b>1.2 LeRobot をクローン</b><span>B601-DM のサンプル用に検証済みの Seeed-Projects フォークを使用します。</span></div>

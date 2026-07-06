@@ -157,18 +157,18 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_grasping_demo/
 
 ### 配線とパーミッション
 
-__CODE_LINE_PLH__
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*   # Depth camera USB permissions
+```
 
 B601-RS では、キャリブレーションや把持スクリプトを実行する前に CAN インターフェースを立ち上げてください：
 
-__CODE_LINE_PLH__
 ```bash
 sudo ip link set can0 down 2>/dev/null
 sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 ip -details link show can0
+```
 
 :::danger
 B601-RS は 48V DC 電源を使用します。デモを実行する前に、電源、PCAN-USB / SocketCAN インターフェース、および SDK 設定が一致していることを確認してください。
@@ -192,28 +192,27 @@ B601-RS は 48V DC 電源を使用します。デモを実行する前に、電�
 
 公式の Seeed-Projects リポジトリを推奨します：
 
-__CODE_LINE_PLH__
 ```bash
 git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
+```
 
 現在の開発用リポジトリを使用することもできます：
 
-__CODE_LINE_PLH__
 ```bash
 git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
+```
 
 ### Step 2. conda 環境を作成して有効化する
 
-__CODE_LINE_PLH__
 ```bash
 conda env create -f environment.yml
 conda activate rebotarm
+```
 
 ### Step 3. ロボットアーム制御ライブラリをインストールする
 
-__CODE_LINE_PLH__
 ```bash
 git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
 cd sdk/reBotArm_control_py

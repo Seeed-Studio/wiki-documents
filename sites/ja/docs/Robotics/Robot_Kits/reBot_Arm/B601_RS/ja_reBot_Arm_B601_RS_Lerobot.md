@@ -699,7 +699,7 @@ accelerate launch \
     <details className="content-details">
       <summary>非同期推論デプロイ</summary>
       <p>非同期推論では、サーバーが次のアクションチャンクを計算している間に、ロボットが現在のアクションチャンクを実行できます。より大きなモデルやリモート推論に有用です。</p>
-      <pre><code>{`pip install -e ".[async]"`}</code></pre>
+      <pre><code>{`pip install -e ".[async]"
 
 python -m lerobot.async_inference.policy_server \
   --model_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model \

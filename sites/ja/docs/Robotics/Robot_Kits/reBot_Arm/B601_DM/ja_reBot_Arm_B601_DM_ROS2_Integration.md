@@ -54,13 +54,12 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
   <div className="safety-alert-content">
     <strong>安全上の警告：実行前にロボット作業空間を必ずクリアしてください</strong>
     <p>
-      ロボットアームを動かすプログラムを実行する前に、ロボットの作業空間内
-      1 メートル以内
+      ロボットアームを動かすプログラムを実行する前に、ロボットの作業空間内 1 メートル以内
       <strong> の範囲 </strong>
       にある貴重品、壊れやすい物、工具、ケーブル、および無関係な物体をすべて取り除いてください。デバッグおよび動作中は、作業者はロボットの動作範囲から離れている必要があります。
-      </p>
+    </p>
     <ul>
-    <li>ロボットアームの電源投入後は、関節、モーター、リンク、グリッパー、エンドエフェクタには触れないでください。</li>
+      <li>ロボットアームの電源投入後は、関節、モーター、リンク、グリッパー、エンドエフェクタには触れないでください。</li>
       <li>ROS2 アクション、MoveIt 実行、重力補償、IK 制御、軌道制御、テレオペレーション、把持デモを実行する前に、アームベースがしっかり固定されていることを確認してください。</li>
       <li>異常な動き、異音、振動、ケーブルの緩み、電源接触不良、通信断が発生した場合は、直ちにプログラムを停止し、点検前にシステムの電源を切ってください。</li>
       <li>モーターケーブル、CAN ケーブル、USB2CAN アダプタ、XT30 コネクタ、電源コネクタを抜き差しする際は、必ずシステムの電源を切ってから行ってください。</li>
@@ -135,11 +134,11 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
   <span>概要</span>
     <h2>この ROS2 統合で提供されるもの</h2>
     <p>
-    B601-DM ROS2 ワークスペースは、ロボットアームを標準的な ROS2
+      B601-DM ROS2 ワークスペースは、ロボットアームを標準的な ROS2
       インターフェースとして公開し、アームを認識、プランニング、
       可視化、およびより高レベルなロボティクスアプリケーションへ接続しやすくします。
-      </p>
-    </div>
+    </p>
+  </div>
 
   <div className="module-summary-grid">
   <div className="module-summary-card">
@@ -161,13 +160,13 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
     </div>
 
   <div className="spec-card-grid">
-  <div className="spec-card"><span>ロボットアーム</span><strong>reBot Arm B601-DM</strong></div>
+    <div className="spec-card"><span>ロボットアーム</span><strong>reBot Arm B601-DM</strong></div>
     <div className="spec-card"><span>自由度</span><strong>6-DOF + グリッパー</strong></div>
     <div className="spec-card"><span>モーターバージョン</span><strong>Damiao モーターバージョン</strong></div>
     <div className="spec-card"><span>通信</span><strong>USB2CAN シリアルブリッジ</strong></div>
     <div className="spec-card"><span>デフォルトポート</span><strong>/dev/ttyACM0</strong></div>
     <div className="spec-card"><span>電源</span><strong>24V DC</strong></div>
-    </div>
+  </div>
   </section>
 
 <section className="section-card">
@@ -175,9 +174,9 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
   <span>ハードウェア</span>
     <h2>BOM、配線、環境チェックリスト</h2>
     <p>
-    ROS2 ワークスペースを構築する前に、ロボットアーム、電源、USB2CAN シリアルブリッジ、Ubuntu ホストを準備してください。
-      </p>
-      </div>
+      ROS2 ワークスペースを構築する前に、ロボットアーム、電源、USB2CAN シリアルブリッジ、Ubuntu ホストを準備してください。
+    </p>
+  </div>
 
   <div className="two-col">
     <div className="info-card">
@@ -193,15 +192,15 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
         </div>
       <div className="info-card">
     <h3>環境要件</h3>
-    <ul>
-      <li>ROS2 Jazzy を搭載した Ubuntu 24.04、または ROS2 Humble を搭載した Ubuntu 22.04</li>
-      <li>ROS2 ディストリビューションに対応したシステム Python</li>
+      <ul>
+        <li>ROS2 Jazzy を搭載した Ubuntu 24.04、または ROS2 Humble を搭載した Ubuntu 22.04</li>
+        <li>ROS2 ディストリビューションに対応したシステム Python</li>
         <li>colcon ビルドツール</li>
         <li>MotorBridge Python パッケージ</li>
         <li>reBotArm_control_py 低レベル SDK</li>
-        </ul>
-        </div>
-      </div>
+      </ul>
+    </div>
+  </div>
 
   <div className="callout warning">
     <strong>電源投入前：</strong>B601-DM が正しい 24V 電源を使用していること、USB2CAN アダプタが正しく接続されていること、アームがゼロ位置および基本的な接続性の検証を完了していることを確認してください。
@@ -221,7 +220,7 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
     <h3>推奨される永続的な権限設定</h3>
   <pre><code>{`sudo usermod -a -G dialout $USER
 
-    # Log out and log back in for the group change to take effect.`}</code></pre>
+# Log out and log back in for the group change to take effect.`}</code></pre>
   </div>
 </section>
 
@@ -242,19 +241,17 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
   <span className="step-mini">1.1</span>
     <strong>ROS2 をインストールする</strong>
       <p>Ubuntu 24.04 では Jazzy を、Ubuntu 22.04 では Humble を使用します。</p>
-      </div>
-      <div className="step-card">
-    <span className="step-mini">1.2</span>
-    <strong>依存関係をインストールする</strong>
+    </div>
+    <div className="step-card">
+      <span className="step-mini">1.2</span>
+      <strong>依存関係をインストールする</strong>
       <p>colcon、制御メッセージ、軌道メッセージ、RViz、robot_state_publisher、Pinocchio をインストールします。</p>
-      </div>
-      <div className="step-card">
-    <span className="step-mini">1.3</span>
-    <strong>コントローラーリポジトリをクローンする</strong>
+    </div>
+    <div className="step-card">
+      <span className="step-mini">1.3</span>
+      <strong>コントローラーリポジトリをクローンする</strong>
       <p>デフォルトでは Seeed-Projects リポジトリを使用し、指示がある場合は開発用リポジトリを使用します。</p>
-      </div>
-      <div className="step-card">
-    <span className="step-mini">1.4</span>
+    </div>
     <div className="step-card">
       <span className="step-mini">1.4</span>
       <strong>MotorBridge をインストール</strong>
