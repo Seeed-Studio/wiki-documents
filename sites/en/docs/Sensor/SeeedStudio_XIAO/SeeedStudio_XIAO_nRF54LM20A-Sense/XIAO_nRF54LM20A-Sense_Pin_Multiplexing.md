@@ -1,5 +1,5 @@
 ---
-title: Pin Multiplexing with Seeed Studio XIAO nRF54LM20A Sense
+title: Pin Multiplexing with XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -174,6 +174,13 @@ int main(void)
 ### Result
 
 After flashing the firmware, press the button and the buzzer will beep.And Serial port will print the status.
+
+:::tip
+
+Note to set the baud rate to 115200. If you directly open Monitor in VS, it is recommended to set the baud rate in the `.ini` file
+
+:::
+
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -621,44 +628,39 @@ According to the pinout of XIAO nRF54LM20A, P1.08 and P1.09 can be selected as T
 
 ```dtsi
 /*
- * UART21 Demo - Device Tree Overlay for XIAO nRF54LM20A
- * UART21: TX=P1.8, RX=P1.9
- *
- * Note: The pinctrl configuration is already defined in the board file.
- * This overlay enables UART21 and sets it as disabled for the default console
- * so it can be used as a general-purpose serial port.
+ * BLE UART (NUS) overlay for XIAO nRF54LM20A.
  */
 
-/* UART21 is already configured in the board dts, just make sure it's enabled */
-&uart20 {
-	current-speed = <115200>;
-	status = "okay";
+&bt_hci_controller {
+        status = "okay";
 };
 
-/* UART21 is already configured in the board dts, just make sure it's enabled */
-&uart21 {
-	current-speed = <115200>;
-	status = "okay";
+/ {
+        chosen {
+                zephyr,bt-hci = &bt_hci_controller;
+        };
 };
 ```
 
 2. Modify the `prj.conf` configuration file to enable relevant UART configurations.
 
 ```prj
-# Serial and UART
-CONFIG_SERIAL=y
-# This demo uses uart_poll_in()/uart_poll_out().
-# On nrfx UARTE, enabling async mode for the instance makes uart_poll_in()
-# return -ENOTSUP, which breaks RX on uart21.
+# Standard output and console
+CONFIG_STDOUT_CONSOLE=y
+CONFIG_CBPRINTF_FP_SUPPORT=y
+CONFIG_ARM_MPU=n
 
-# Console (for logging via UART20)
-CONFIG_CONSOLE=y
-CONFIG_UART_CONSOLE=y
 
 # Logging
 CONFIG_LOG=y
-CONFIG_LOG_BACKEND_UART=y
-CONFIG_LOG_DEFAULT_LEVEL=3
+
+# Bluetooth peripheral
+CONFIG_BT=y
+CONFIG_BT_PERIPHERAL=y
+CONFIG_BT_DEVICE_NAME="XIAO BLE UART"
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+CONFIG_BT_CTLR_ASSERT_DEBUG=n
+CONFIG_BT_CTLR_ASSERT_OVERHEAD_START=n
 ```
 
 3. Write the main function. When the on-board BOOT button is pressed, the serial port status and pin configuration will be printed to the computer via the serial port; otherwise, the running status will be printed by default.
@@ -668,171 +670,179 @@ CONFIG_LOG_DEFAULT_LEVEL=3
 <summary>main.c</summary>
 
 ```c
-/*
- * UART21 Demo for XIAO nRF54LM20A (Polling Mode)
- *
- * This demo shows how to use UART21 for serial communication using polling mode.
- * - TX: P1.08
- * - RX: P1.09
- * - Baud rate: 115200
- *
- * The demo will:
- * 1. Send a welcome message on startup
- * 2. Echo back any received characters
- * 3. Periodically send a heartbeat message
- */
-
-#include <zephyr/kernel.h>
-#include <zephyr/device.h>
-#include <zephyr/drivers/uart.h>
-#include <zephyr/logging/log.h>
 #include <stdio.h>
 #include <string.h>
 
-LOG_MODULE_REGISTER(uart21_demo, LOG_LEVEL_INF);
+#include <zephyr/kernel.h>
+#include <zephyr/bluetooth/bluetooth.h>
+#include <zephyr/bluetooth/conn.h>
+#include <zephyr/bluetooth/gatt.h>
+#include <zephyr/bluetooth/uuid.h>
+#include <zephyr/logging/log.h>
 
-/* UART21 device */
-static const struct device *uart21_dev = DEVICE_DT_GET(DT_NODELABEL(uart21));
+LOG_MODULE_REGISTER(ble_uart, LOG_LEVEL_INF);
 
-#define RX_BUF_SIZE 128
-#define TX_BUF_SIZE 256
-#define HEARTBEAT_INTERVAL_MS 5000
+#define DEVICE_NAME     CONFIG_BT_DEVICE_NAME
+#define DEVICE_NAME_LEN (sizeof(DEVICE_NAME) - 1)
 
-static uint8_t rx_buf[RX_BUF_SIZE];
-static size_t rx_buf_pos = 0;
-static char tx_buf[TX_BUF_SIZE];
+/* NUS UUIDs — same as Nordic UART Service but defined here to avoid
+ * the NUS library's STRUCT_SECTION_ITERABLE dependency.
+ */
+#define BT_UUID_NUS_SRV_VAL \
+        BT_UUID_128_ENCODE(0x6e400001, 0xb5a3, 0xf393, 0xe0a9, 0xe50e24dcca9e)
+#define BT_UUID_NUS_RX_CHAR_VAL \
+        BT_UUID_128_ENCODE(0x6e400002, 0xb5a3, 0xf393, 0xe0a9, 0xe50e24dcca9e)
+#define BT_UUID_NUS_TX_CHAR_VAL \
+        BT_UUID_128_ENCODE(0x6e400003, 0xb5a3, 0xf393, 0xe0a9, 0xe50e24dcca9e)
 
-/* Send a string over UART21 using polling */
-static void uart21_send_string(const char *str)
+#define BT_UUID_NUS_SRV BT_UUID_DECLARE_128(BT_UUID_NUS_SRV_VAL)
+#define BT_UUID_NUS_TX  BT_UUID_DECLARE_128(BT_UUID_NUS_TX_CHAR_VAL)
+#define BT_UUID_NUS_RX  BT_UUID_DECLARE_128(BT_UUID_NUS_RX_CHAR_VAL)
+
+static struct bt_conn *current_conn;
+static uint32_t notify_counter;
+static bool notify_enabled;
+
+extern const struct bt_gatt_service_static nus_svc;
+
+static void nus_ccc_cfg_changed(const struct bt_gatt_attr *attr, uint16_t value)
 {
-	while (*str)
-	{
-		uart_poll_out(uart21_dev, *str++);
-	}
+        notify_enabled = (value == BT_GATT_CCC_NOTIFY);
+        if (notify_enabled) {
+                LOG_INF("BLE notify enabled");
+        } else {
+                LOG_INF("BLE notify disabled");
+        }
 }
 
-/* Receive a character from UART21 (non-blocking) */
-static int uart21_recv_char(uint8_t *c)
+static ssize_t nus_rx_write(struct bt_conn *conn,
+                            const struct bt_gatt_attr *attr,
+                            const void *buf, uint16_t len,
+                            uint16_t offset, uint8_t flags)
 {
-	return uart_poll_in(uart21_dev, c);
+        char rx_buf[128] = {0};
+        char tx_buf[256] = {0};
+
+        if (len > sizeof(rx_buf) - 1) {
+                len = sizeof(rx_buf) - 1;
+        }
+        memcpy(rx_buf, buf, len);
+        rx_buf[len] = '\0';
+
+        LOG_INF("RX data: %s", rx_buf);
+
+        snprintf(tx_buf, sizeof(tx_buf), "echo: %s", rx_buf);
+        LOG_INF("TX echo: %s", rx_buf);
+
+        int ret = bt_gatt_notify(conn, &nus_svc.attrs[1], tx_buf, strlen(tx_buf));
+        if (ret) {
+                LOG_ERR("BLE notify failed");
+                LOG_ERR("Error code: %d", ret);
+        }
+
+        return len;
 }
 
-static void handle_complete_line(void)
+BT_GATT_SERVICE_DEFINE(nus_svc,
+        BT_GATT_PRIMARY_SERVICE(BT_UUID_NUS_SRV),
+        BT_GATT_CHARACTERISTIC(BT_UUID_NUS_TX,
+                BT_GATT_CHRC_NOTIFY,
+                BT_GATT_PERM_NONE,
+                NULL, NULL, NULL),
+        BT_GATT_CCC(nus_ccc_cfg_changed,
+                BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),
+        BT_GATT_CHARACTERISTIC(BT_UUID_NUS_RX,
+                BT_GATT_CHRC_WRITE | BT_GATT_CHRC_WRITE_WITHOUT_RESP,
+                BT_GATT_PERM_WRITE,
+                NULL, nus_rx_write, NULL),
+);
+
+static void connected(struct bt_conn *conn, uint8_t err)
 {
-	rx_buf[rx_buf_pos] = '\0';
+        if (err) {
+                LOG_ERR("Connection failed, error code: %d", err);
+                return;
+        }
 
-	if (rx_buf_pos > 0)
-	{
-		LOG_INF("Received: %s", rx_buf);
-		uart21_send_string("\r\nYou sent: ");
-		uart21_send_string((const char *)rx_buf);
-	}
-
-	uart21_send_string("\r\n");
-	rx_buf_pos = 0;
-	memset(rx_buf, 0, sizeof(rx_buf));
+        current_conn = bt_conn_ref(conn);
+        LOG_INF("Device connected");
 }
 
-/* Process a received byte and maintain a simple line buffer */
-static void process_rx_byte(uint8_t c)
+static void disconnected(struct bt_conn *conn, uint8_t reason)
 {
-	static bool last_was_cr;
-
-	if (c == '\r' || c == '\n')
-	{
-		if (c == '\n' && last_was_cr)
-		{
-			last_was_cr = false;
-			return;
-		}
-
-		uart21_send_string("\r\n");
-		handle_complete_line();
-		last_was_cr = (c == '\r');
-		return;
-	}
-
-	last_was_cr = false;
-	uart_poll_out(uart21_dev, c);
-
-	if (rx_buf_pos < RX_BUF_SIZE - 1)
-	{
-		rx_buf[rx_buf_pos++] = c;
-		return;
-	}
-
-	uart21_send_string("\r\n[Warning] Input too long, buffer cleared.\r\n");
-	rx_buf_pos = 0;
-	memset(rx_buf, 0, sizeof(rx_buf));
+        LOG_INF("Device disconnected, reason: %d", reason);
+        if (current_conn) {
+                bt_conn_unref(current_conn);
+                current_conn = NULL;
+        }
+        notify_enabled = false;
 }
+
+BT_CONN_CB_DEFINE(conn_callbacks) = {
+        .connected = connected,
+        .disconnected = disconnected,
+};
+
+static void notify_work_handler(struct k_work *work);
+
+static K_WORK_DELAYABLE_DEFINE(notify_work, notify_work_handler);
+
+static void notify_work_handler(struct k_work *work)
+{
+        if (current_conn && notify_enabled) {
+                char msg[64];
+
+                notify_counter++;
+                snprintf(msg, sizeof(msg), "status counter: %u", notify_counter);
+
+                LOG_INF("Notify counter: %u", notify_counter);
+
+                int ret = bt_gatt_notify(current_conn, &nus_svc.attrs[1],
+                                          msg, strlen(msg));
+                if (ret) {
+                        LOG_ERR("BLE notify failed");
+                        LOG_ERR("Error code: %d", ret);
+                }
+        }
+
+        k_work_schedule(&notify_work, K_SECONDS(1));
+}
+
+static const struct bt_data ad[] = {
+        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
+        BT_DATA(BT_DATA_NAME_COMPLETE, DEVICE_NAME, DEVICE_NAME_LEN),
+};
 
 int main(void)
 {
-	uint8_t c;
-	uint32_t heartbeat_count = 0;
-	int64_t last_heartbeat = 0;
+        int ret;
 
-	LOG_INF("========================================");
-	LOG_INF("  UART21 Demo for XIAO nRF54LM20A");
-	LOG_INF("========================================");
-	LOG_INF("");
+        LOG_INF("BLE UART (NUS) example for XIAO nRF54LM20A");
+        LOG_INF("BLE initialization started");
 
-	/* Check if UART21 device is ready */
-	if (!device_is_ready(uart21_dev))
-	{
-		LOG_ERR("UART21 device not ready!");
-		return -1;
-	}
-	LOG_INF("UART21 device ready: %s", uart21_dev->name);
+        ret = bt_enable(NULL);
+        if (ret) {
+                LOG_ERR("Bluetooth init failed");
+                LOG_ERR("Error code: %d", ret);
+                return 0;
+        }
+        LOG_INF("Bluetooth initialized");
 
-	/* Send welcome message */
-	uart21_send_string("\r\n");
-	uart21_send_string("========================================\r\n");
-	uart21_send_string("  UART21 Demo for XIAO nRF54LM20A\r\n");
-	uart21_send_string("========================================\r\n");
-	uart21_send_string("\r\n");
-	uart21_send_string("Pin Configuration:\r\n");
-	uart21_send_string("  TX: P1.08\r\n");
-	uart21_send_string("  RX: P1.09\r\n");
-	uart21_send_string("  Baud Rate: 115200\r\n");
-	uart21_send_string("\r\n");
-	uart21_send_string("Type something and press Enter to see it echoed.\r\n");
-	uart21_send_string("\r\n");
+        ret = bt_le_adv_start(BT_LE_ADV_CONN_FAST_1, ad, ARRAY_SIZE(ad), NULL, 0);
+        if (ret) {
+                LOG_ERR("Advertising start failed");
+                LOG_ERR("Error code: %d", ret);
+                return 0;
+        }
+        LOG_INF("BLE advertising started");
 
-	LOG_INF("UART21 demo started. Waiting for data...");
-	LOG_INF("Connect UART terminal to P1.8(TX) and P1.9(RX)");
+        k_work_schedule(&notify_work, K_SECONDS(1));
 
-	last_heartbeat = k_uptime_get();
+        while (1) {
+                k_sleep(K_FOREVER);
+        }
 
-	/* Main loop */
-	while (1)
-	{
-		/* Check for received data */
-		if (uart21_recv_char(&c) == 0)
-		{
-			process_rx_byte(c);
-		}
-
-		/* Check for heartbeat */
-		int64_t now = k_uptime_get();
-		if (now - last_heartbeat >= HEARTBEAT_INTERVAL_MS)
-		{
-			last_heartbeat = now;
-			heartbeat_count++;
-
-			snprintf(tx_buf, sizeof(tx_buf),
-					 "\r\n[Heartbeat #%u] UART21 running...\r\n",
-					 heartbeat_count);
-			uart21_send_string(tx_buf);
-
-			LOG_INF("Heartbeat #%u sent", heartbeat_count);
-		}
-
-		/* Small delay to prevent busy loop */
-		k_msleep(10);
-	}
-
-	return 0;
+        return 0;
 }
 
 ```
@@ -898,28 +908,29 @@ According to the pinout of XIAO nRF54LM20A, P1.03 and P1.07 can be configured as
 
 ```dts
 / {
-	chosen {
-		zephyr,display = &ssd1306_128x64;
-	};
+        chosen {
+                zephyr,display = &ssd1306_128x64;
+        };
 };
 
 &i2c22 {
-	status = "okay";
-	zephyr,concat-buf-size = <2048>;
-	ssd1306_128x64: ssd1306@3c {
-		compatible = "solomon,ssd1306fb";
-		reg = <0x3c>;
-		width = <128>;
-		height = <64>;
-		segment-offset = <0>;
-		page-offset = <0>;
-		display-offset = <0>;
-		multiplex-ratio = <63>;
-		segment-remap;
-		com-invdir;
-		prechargep = <0x22>;
-	};
+        status = "okay";
+        zephyr,concat-buf-size = <2048>;
+        ssd1306_128x64: ssd1306@3c {
+                compatible = "solomon,ssd1306";
+                reg = <0x3c>;
+                width = <128>;
+                height = <64>;
+                segment-offset = <0>;
+                page-offset = <0>;
+                display-offset = <0>;
+                multiplex-ratio = <63>;
+                segment-remap;
+                com-invdir;
+                prechargep = <0x22>;
+        };
 };
+
 ```
 
 2. Modify the `prj.conf` file to enable I2C and display-related configurations.
@@ -927,11 +938,13 @@ According to the pinout of XIAO nRF54LM20A, P1.03 and P1.07 can be configured as
 ```
 CONFIG_STDOUT_CONSOLE=y
 CONFIG_HEAP_MEM_POOL_SIZE=16384
+CONFIG_I2C=y
 CONFIG_DISPLAY=y
 CONFIG_SSD1306=y
 CONFIG_LOG=y
 CONFIG_LOG_DEFAULT_LEVEL=4
 CONFIG_CHARACTER_FRAMEBUFFER=y
+
 ```
 
 3. Write the main function to set the display position and functions for the string.
