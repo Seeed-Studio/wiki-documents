@@ -2034,19 +2034,6 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker Clip',
-          collapsed: true,
-          collapsible: true,
-          link: {
-            type: 'doc',
-            id: 'Sensor/reSpeaker_Clip/respeaker_clip_getting_started',
-          },
-          items: [
-            'Sensor/reSpeaker_Clip/respeaker_clip_getting_started',
-          ],
-        },
-        {
-          type: 'category',
           label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
@@ -2167,8 +2154,15 @@ const sidebars = {
         {
           type: 'category',
           label: 'reSpeaker Clip',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_Clip/respeaker_clip_getting_started',
+          },
           items: [
-            'Sensor/reSpeaker_clip/respeaker_clip_python_control',
+            'Sensor/reSpeaker_Clip/respeaker_clip_getting_started',
+            'Sensor/reSpeaker_Clip/respeaker_clip_python_control',
           ],
         },
         {

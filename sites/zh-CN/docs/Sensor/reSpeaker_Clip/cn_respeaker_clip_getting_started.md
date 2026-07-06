@@ -563,6 +563,16 @@ reSpeaker Clip 可用于 To B 业务场景，也可以与企业工具链打通�
 | 规格书 | 暂未开放 |
 | 机械图 | 暂未开放 |
 
-## 技术支持
+## 技术支持与产品讨论
 
-如果在使用 reSpeaker Clip 时遇到问题，请通过 Seeed Studio 官方技术支持渠道提交反馈，并附上设备型号、固件版本、App 版本、问题复现步骤和相关日志。
+感谢您选择我们的产品！我们将为您提供不同的支持渠道，以确保您使用我们的产品时获得顺畅体验。您可以根据自己的偏好和需求选择以下沟通渠道。
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
