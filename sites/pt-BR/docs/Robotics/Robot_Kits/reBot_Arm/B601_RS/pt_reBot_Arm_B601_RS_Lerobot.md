@@ -699,7 +699,7 @@ accelerate launch \
     <details className="content-details">
       <summary>Implantação de inferência assíncrona</summary>
       <p>A inferência assíncrona permite que o robô execute o bloco de ação atual enquanto o servidor calcula o próximo bloco. Ela é útil para modelos maiores ou inferência remota.</p>
-      <pre><code>{`pip install -e ".[async]"`}</code></pre>
+      <pre><code>{`pip install -e ".[async]"
 
 python -m lerobot.async_inference.policy_server \
   --model_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model \

@@ -278,7 +278,7 @@ sudo chmod 666 /dev/can0 2>/dev/null || true`}</code></pre>
   </div>
 
   <div className="callout">
-    <strong>Observação adicional:</strong> Os resultados de FK / IK dependem de URDF, limites de juntas, definições de quadros de referência e unidades. As posições estão em metros. Alguns scripts usam graus para ângulos de Euler, enquanto scripts de simulação podem usar radianos. Siga cuidadosamente a descrição de entrada de cada script.</p>
+    <strong>Observação adicional:</strong> Os resultados de FK / IK dependem de URDF, limites de juntas, definições de quadros de referência e unidades. As posições estão em metros. Alguns scripts usam graus para ângulos de Euler, enquanto scripts de simulação podem usar radianos. Siga cuidadosamente a descrição de entrada de cada script.
   </div>
 
   <details className="content-details" open>

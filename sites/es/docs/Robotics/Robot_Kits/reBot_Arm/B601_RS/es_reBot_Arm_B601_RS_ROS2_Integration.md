@@ -335,7 +335,7 @@ ros2 launch rebotarm_bringup bringup.launch.py model:=rs channel:=can0`}</code><
 
   <details className="content-details" open>
     <summary>Leer topics de estado</summary>
-    <pre><code>{`ros2 topic echo /rebotarm/joint_states --once`}</code></pre>
+    <pre><code>{`ros2 topic echo /rebotarm/joint_states --once
 ros2 topic echo /rebotarm/arm_status --once`}</code></pre>
   </details>
 

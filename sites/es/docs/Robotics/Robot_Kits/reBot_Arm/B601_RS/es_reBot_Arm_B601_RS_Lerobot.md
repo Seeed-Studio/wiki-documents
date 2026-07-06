@@ -699,7 +699,7 @@ accelerate launch \
     <details className="content-details">
       <summary>Despliegue de inferencia asíncrona</summary>
       <p>La inferencia asíncrona permite que el robot ejecute el fragmento de acción actual mientras el servidor calcula el siguiente fragmento. Es útil para modelos más grandes o inferencia remota.</p>
-      <pre><code>{`pip install -e ".[async]"`}</code></pre>
+      <pre><code>{`pip install -e ".[async]"
 
 python -m lerobot.async_inference.policy_server \
   --model_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model \

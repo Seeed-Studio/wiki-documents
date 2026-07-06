@@ -278,7 +278,7 @@ sudo chmod 666 /dev/can0 2>/dev/null || true`}</code></pre>
   </div>
 
   <div className="callout">
-    <strong>Nota adicional:</strong> Los resultados de FK / IK dependen del URDF, los límites de las articulaciones, las definiciones de marcos y las unidades. Las posiciones están en metros. Algunos scripts usan grados para los ángulos de Euler, mientras que los scripts de simulación pueden usar radianes. Sigue cuidadosamente la descripción de entrada de cada script.</p>
+    <strong>Nota adicional:</strong> Los resultados de FK / IK dependen del URDF, los límites de las articulaciones, las definiciones de marcos y las unidades. Las posiciones están en metros. Algunos scripts usan grados para los ángulos de Euler, mientras que los scripts de simulación pueden usar radianes. Sigue cuidadosamente la descripción de entrada de cada script.
   </div>
 
   <details className="content-details" open>
@@ -367,7 +367,7 @@ sudo chmod 666 /dev/can0 2>/dev/null || true`}</code></pre>
   </details>
 
   <div className="callout warning">
-    <strong>Consejos de depuración:</strong> Si el brazo cae lentamente, vibra o compensa en la dirección equivocada, primero revisa la masa / centro de masa del URDF, la dirección de las articulaciones, los desplazamientos de cero, las constantes de par del motor y las zonas muertas de fricción. No aumentes simplemente las ganancias.</p>
+    <strong>Consejos de depuración:</strong> Si el brazo cae lentamente, vibra o compensa en la dirección equivocada, primero revisa la masa / centro de masa del URDF, la dirección de las articulaciones, los desplazamientos de cero, las constantes de par del motor y las zonas muertas de fricción. No aumentes simplemente las ganancias.
   </div>
 </section>
 
