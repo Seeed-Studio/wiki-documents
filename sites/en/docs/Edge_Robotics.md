@@ -1,21 +1,20 @@
 ---
-description: This topic introduces Seeed Studio's robotics product documentation and learning paths.
+description: This topic introduces Seeed Studio's Robotics product documentation and learning courses.
 title: Robotics
 keywords:
   - robotics
   - nvidia
   - ros
   - isaac
-  - lerobot
   - learning
   - reinforcement learning
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /robotics_page
 last_update:
-  date: 07/04/2026
+  date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-07-04'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/robotics_page/
 ---
 
@@ -23,712 +22,751 @@ url: https://wiki.seeedstudio.com/robotics_page/
 
 > *"The science of today is the technology of tomorrow." - Edward Teller*
 
-<div className="robotics-page">
+<div className="robotic-tab-container">
+  
+  <input type="radio" id="tab-hardware" name="robo-tabs" defaultChecked className="tab-input-hidden" />
+  <input type="radio" id="tab-learning" name="robo-tabs" className="tab-input-hidden" />
 
-  <section className="hero-panel">
-    <div>
-      <span className="eyebrow">Seeed Studio Robotics Wiki</span>
-      <h2>Not sure which guide to read first? Start with the robot kit in your hands.</h2>
-      <p>This page reorganizes Seeed Studio robotics documentation into product-based learning paths. Whether you are unboxing your first robot or preparing for teleoperation, ROS2, simulation, AI training, or real-world deployment, start by choosing your robot kit, then follow the recommended steps from hardware bring-up to advanced development.</p>
-    </div>
-    <div className="hero-tips">
-      <div><strong>New users</strong><span>Start with unboxing, wiring, power, drivers, and basic motion checks</span></div>
-      <div><strong>Application builders</strong><span>Continue with SDKs, LeRobot, ROS2, visual grasping, or mobile control</span></div>
-      <div><strong>AI robotics users</strong><span>Move into simulation, data collection, GR00T, VLA, and reinforcement learning</span></div>
-    </div>
-  </section>
-
-  <nav className="quick-nav" aria-label="Robotics page quick navigation">
-    <a href="#robot-kits">📦 Robot Kits</a>
-    <a href="#actuators">⚙️ Joint Actuators</a>
-    <a href="#sensors">👁️ Sensors</a>
-    <a href="#software">💻 Software Ecosystem</a>
-  </nav>
-
-  <section className="kit-index-panel" aria-label="Choose a robotics learning path">
-    <div className="section-title-row compact-title">
-      <div>
-        <span className="section-kicker">Choose a Kit</span>
-        <h2>Quickly choose your learning path</h2>
-      </div>
-      <p>All product cards are collapsed by default. Pick the kit in your hands, then expand the matching learning path.</p>
-    </div>
-    <div className="kit-index-grid">
-      <a href="#rebot-rs"><span>🦾</span><strong>B601-RS</strong><small>RobStride arm learning path</small></a>
-      <a href="#rebot-dm"><span>🦾</span><strong>B601-DM</strong><small>Damiao arm learning path</small></a>
-      <a href="#soarm"><span>🤗</span><strong>SO100 / SO101</strong><small>Low-cost LeRobot path</small></a>
-      <a href="#starai"><span>🦾</span><strong>StarAI</strong><small>ROS2 / MoveIt / GR00T</small></a>
-      <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>Mobile base and demos</small></a>
-      <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>Wheeled-legged robot path</small></a>
-      <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>Desktop interactive robot path</small></a>
-    </div>
-  </section>
-
-  <section id="robot-kits" className="section-block">
-    <div className="section-title-row">
-      <div>
-        <span className="section-kicker">Start Here</span>
-        <h2>📦 Robot Kits</h2>
-      </div>
-      <p>Each kit follows the same logic: bring up the hardware first, then enter the software ecosystem, and finally move into AI, ROS, or simulation applications. Expand your product card and follow the steps in order.</p>
-    </div>
-
-    <div className="product-stack">
-
-<details id="rebot-rs" className="product-card rebot">
-  <summary>
-    <div className="product-head">
-      <span className="product-icon">🦾</span>
-      <div>
-        <h3>reBot B601-RS Arm</h3>
-        <span>For robot-arm onboarding, teleoperation, visual grasping, ROS2 integration, and AI data collection</span>
-      </div>
-    </div>
-    <span className="summary-action">Open learning path</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>First-time reBot Arm users who want to quickly run a real robotic arm</span></div>
-      <div><strong>Learning goal</strong><span>Go from power-on checks to LeRobot teleoperation, visual grasping, and ROS2 integration</span></div>
-      <div><strong>Suggested order</strong><span>Getting Started → LeRobot → Pinocchio → Visual Grasping → ROS2</span></div>
-    </div>
-    <div className="learning-steps">
-      <a className="step-card" href="/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Getting Started</b><small>Complete unboxing, wiring, power checks, driver setup, and basic motion tests to verify the arm is working.</small></div><em>Start here</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>LeRobot Teleoperation and Data Collection</b><small>Learn how to teleoperate the arm and record data for imitation learning and embodied AI tasks.</small></div><em>Data collection</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio Kinematics Visualization</b><small>Understand robot models, joints, coordinate frames, and forward/inverse kinematics.</small></div><em>Control</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine camera perception and grasp pose generation to complete real object grasping.</small></div><em>Application</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Connect the arm to the ROS2 ecosystem for perception, planning, navigation, and simulation workflows.</small></div><em>Integration</em></a>
-    </div>
+  <!-- 顶部 Tab 切换条 -->
+  <div className="tab-nav-wrapper">
+    <nav className="tab-nav">
+      <label htmlFor="tab-hardware" className="tab-item">
+        <span className="icon">📦</span>
+        <span className="text">Hardware Wiki</span>
+      </label>
+      <label htmlFor="tab-learning" className="tab-item">
+        <span className="icon">🎓</span>
+        <span className="text">Learning Center</span>
+        <span className="badge">New</span>
+      </label>
+      <div className="tab-slider"></div>
+    </nav>
   </div>
-</details>
 
-<details id="rebot-dm" className="product-card rebot">
-  <summary>
-    <div className="product-head">
-      <span className="product-icon">🦾</span>
-      <div>
-        <h3>reBot B601-DM Arm</h3>
-        <span>For Damiao-motor users learning robot control, LeRobot, Pinocchio, and ROS2</span>
-      </div>
-    </div>
-    <span className="summary-action">Open learning path</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>B601-DM users who want robot-arm control and AI data collection</span></div>
-      <div><strong>Learning goal</strong><span>Complete basic drivers, kinematic modeling, LeRobot data collection, and visual grasping demos</span></div>
-      <div><strong>Suggested order</strong><span>Getting Started → LeRobot → Pinocchio → Visual Grasping → ROS2</span></div>
-    </div>
-    <div className="learning-steps">
-      <a className="step-card" href="/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Getting Started</b><small>Check power, CAN communication, drivers, and basic motion to confirm the hardware is ready.</small></div><em>Start here</em></a>
-      <a className="step-card" href="/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>LeRobot Data Collection</b><small>Use LeRobot for teleoperation, recording, and preparing imitation learning datasets.</small></div><em>AI data</em></a>
-      <a className="step-card" href="/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio and Meshcat</b><small>Load and visualize the robot model, then learn kinematics and joint-space control basics.</small></div><em>Control</em></a>
-      <a className="step-card" href="/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine the arm with vision algorithms to grasp real objects in a physical scene.</small></div><em>Application</em></a>
-      <a className="step-card" href="/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Connect the arm to ROS2 for MoveIt, perception nodes, and system-level applications.</small></div><em>Integration</em></a>
-    </div>
-  </div>
-</details>
+  <!-- ==================== Tab 1: 硬件文档==================== -->
+  <div className="tab-content content-hardware">
 
-<details id="soarm" className="product-card soarm">
-  <summary>
-    <div className="product-head">
-      <span className="product-icon">🤗</span>
-      <div>
-        <h3>SO100 / SO101 Arm</h3>
-        <span>For low-cost robot-arm onboarding, LeRobot, simulation, reinforcement learning, and GR00T/VLA experiments</span>
-      </div>
-    </div>
-    <span className="summary-action">Open learning path</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>Users who want to start embodied AI with an affordable robotic arm</span></div>
-      <div><strong>Learning goal</strong><span>Move from servo debugging to simulation, reinforcement learning, GR00T, and dual-arm training</span></div>
-      <div><strong>Suggested order</strong><span>Setup → Servo Debugging → Simulation → Isaac Lab → GR00T → Dual Arm</span></div>
-    </div>
-    <div className="learning-steps">
-      <a className="step-card" href="/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 Getting Started</b><small>Complete hardware setup, connection, calibration, and the minimum runnable test.</small></div><em>Start here</em></a>
-      <a className="step-card" href="/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Servo Debugging Tool</b><small>Check servo IDs, direction, zero points, and communication status before training.</small></div><em>Debugging</em></a>
-      <a className="step-card" href="/simulate_soarm101_by_leisaac/"><span className="step-index">3</span><div><b>LeIsaac Simulation</b><small>Understand the robot model, scene, and task setup in simulation before Sim2Real.</small></div><em>Simulation</em></a>
-      <a className="step-card" href="/training_soarm101_policy_with_isaacLab/"><span className="step-index">4</span><div><b>Isaac Lab Reinforcement Learning</b><small>Learn task setup, rewards, policy training, and deployment flow in simulation.</small></div><em>Advanced</em></a>
-      <a className="step-card" href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">5</span><div><b>SO101 with NVIDIA GR00T</b><small>Enter the VLA and embodied AI model fine-tuning workflow with Jetson deployment.</small></div><em>VLA</em></a>
-      <a className="step-card" href="/lerobot_double_arm_so_arm_training/"><span className="step-index">6</span><div><b>Dual-Arm SO-ARM Training</b><small>Learn more complex dual-arm data collection, training, and task execution workflows.</small></div><em>Complex tasks</em></a>
-      <a className="step-card optional" href="/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b><small>Optional extension for users who want to try a third-party data collection and training platform.</small></div><em>Optional</em></a>
-    </div>
-  </div>
-</details>
-
-<details id="starai" className="product-card starai">
-  <summary>
-    <div className="product-head">
-      <span className="product-icon">🦾</span>
-      <div>
-        <h3>StarAI Arm</h3>
-        <span>For basic robot-arm control, MoveIt 2, ROS2 planning, and GR00T applications</span>
-      </div>
-    </div>
-    <span className="summary-action">Open learning path</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>Users learning ROS2 robot-arm planning and AI control demos</span></div>
-      <div><strong>Learning goal</strong><span>Run basic control, MoveIt 2 planning, and GR00T-based control</span></div>
-      <div><strong>Suggested order</strong><span>Getting Started → MoveIt 2 → GR00T</span></div>
-    </div>
-    <div className="learning-steps">
-      <a className="step-card" href="/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI Arm Getting Started</b><small>Complete hardware connection, basic control, and the minimum runnable example.</small></div><em>Start here</em></a>
-      <a className="step-card" href="/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>MoveIt 2 Motion Planning</b><small>Learn model import, planning scenes, path planning, and ROS2 arm development.</small></div><em>ROS2</em></a>
-      <a className="step-card" href="/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI with NVIDIA GR00T</b><small>Enter large-model and VLA-based robot-arm control applications.</small></div><em>AI control</em></a>
-    </div>
-  </div>
-</details>
-
-<details id="lekiwi" className="product-card lekiwi">
-  <summary>
-    <div className="product-head">
-      <span className="product-icon">🚗</span>
-      <div>
-        <h3>Lekiwi Mobile Base</h3>
-        <span>For mobile robot onboarding, base control, and sound-following applications</span>
-      </div>
-    </div>
-    <span className="summary-action">Open learning path</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>First-time mobile-base users who want to get the robot moving</span></div>
-      <div><strong>Learning goal</strong><span>Complete basic base control and try sound-following demos</span></div>
-      <div><strong>Note</strong><span>The ROS2 step has been removed here to keep this path focused on the current product onboarding flow</span></div>
-    </div>
-    <div className="learning-steps">
-      <a className="step-card" href="/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Lekiwi Mobile Base Getting Started</b><small>Complete assembly, connection, basic motion control, and safety checks.</small></div><em>Start here</em></a>
-      <a className="step-card" href="/sound_follow_robot/"><span className="step-index">2</span><div><b>Sound Following Demo</b><small>Combine audio input and base motion control for an intuitive interactive mobile robot demo.</small></div><em>Application</em></a>
-    </div>
-  </div>
-</details>
-
-<details id="stackforce" className="product-card stackforce">
-  <summary>
-    <div className="product-head">
-      <span className="product-icon">🦿</span>
-      <div>
-        <h3>StackForce Mini Wheeled-Legged Robot</h3>
-        <span>For wheeled-legged structures, balance control, motion planning, and control algorithms</span>
-      </div>
-    </div>
-    <span className="summary-action">Open learning path</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>Users interested in mobile robots, wheeled-legged robots, and balance control</span></div>
-      <div><strong>Learning goal</strong><span>Understand the hardware structure, control logic, and basic motion capabilities</span></div>
-      <div><strong>Suggested order</strong><span>Getting Started → Control Principles → Motion Debugging</span></div>
-    </div>
-    <div className="learning-steps">
-      <a className="step-card" href="/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>StackForce Mini Getting Started</b><small>Learn the hardware, basic deployment, motion control, and introductory wheeled-legged experiments.</small></div><em>Course</em></a>
-    </div>
-  </div>
-</details>
-
-<details id="reachy" className="product-card reachy">
-  <summary>
-    <div className="product-head">
-      <span className="product-icon">🤗</span>
-      <div>
-        <h3>Reachy Mini</h3>
-        <span>For desktop robotics, human-robot interaction, agents, Python SDK, simulation, and AI integration</span>
-      </div>
-    </div>
-    <span className="summary-action">Open learning path</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>Users who want desktop robot interaction, voice dialogue, motion control, and agent applications</span></div>
-      <div><strong>Learning goal</strong><span>Start with basic use, choose Wireless or Lite, then learn SDK development, AI integration, and troubleshooting</span></div>
-      <div><strong>Documentation map</strong><span>Organized as Product Overview → Platform Setup → SDK Development → AI Apps → Troubleshooting → API Reference</span></div>
+    <div className="quick-nav-container">
+      <nav className="quick-nav">
+        <a href="#robot-kits" className="nav-item">
+          <span className="icon">📦</span>
+          <span className="text">Robot Kits</span>
+          <div className="hover-effect"></div>
+        </a>
+        <a href="#actuators" className="nav-item">
+          <span className="icon">⚙️</span>
+          <span className="text">Joint Actuators</span>
+          <div className="hover-effect"></div>
+        </a>
+        <a href="#sensors" className="nav-item">
+          <span className="icon">👁️</span>
+          <span className="text">Sensors</span>
+          <div className="hover-effect"></div>
+        </a>
+        <a href="#software" className="nav-item">
+          <span className="icon">💻</span>
+          <span className="text">Software</span>
+          <div className="hover-effect"></div>
+        </a>
+      </nav>
     </div>
 
-    <div className="reachy-path-grid">
-      <div className="mini-track">
-        <h4>① Understand the Product</h4>
-        <a href="/reachymini_intro/">Reachy Mini Overview</a>
-        <a href="/reachymini_getting_started/">ReachyMini Getting Started</a>
+    <div className="nav-grid">
+
+      <h2 id="robot-kits">📦 Robot Kits</h2>
+
+      <div className="category-group">
+        <div className="category-card robot-kits">
+
+
+          <h3>🦾 reBot Arm</h3>
+            <h4> B601-DM Arm</h4>
+          <div className="card-container">
+              <a href="/rebot_b601_dm_getting_started/" className="content-card">
+                <span className="text">reBot B601-DM Getting Start</span>
+              </a>
+              <a href="/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot B601-DM with Pinocchio</span>
+              </a>
+              <a href="/rebot_arm_b601_dm_lerobot/" className="content-card">
+                <span className="text">reBot B601-DM with LeRobot</span>
+              </a>
+              <a href="/rebot_arm_b601_dm_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-DM with GraspNet Demo</span>
+              </a>
+              <a href="/rebot_arm_b601_dm_ros2_integration/" className="content-card">
+                <span className="text">reBot B601-DM wit ROS2</span>
+              </a>
+          </div>
+            <h4> B601-RS Arm</h4>
+          <div className="card-container">
+              <a href="/rebot_b601_rs_getting_started/" className="content-card">
+                <span className="text">reBot B601-RS Getting Start</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_lerobot/" className="content-card">
+                <span className="text">reBot B601-RS with LeRobot</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot B601-RS with Pinocchio</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-RS with GraspNet</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_ros2_integration" className="content-card">
+                <span className="text">reBot B601-RS with ROS2 </span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3> 🤗 Reachy</h3>
+          <div className="card-container">
+              <a href="/reachymini_getting_started" className="content-card">
+                <span className="text">Reachy Mini Getting Started</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+
+          <h3>🤗 SO-Arm</h3>
+          <div className="card-container">
+              <a href="/lerobot_so100m_new/" className="content-card">
+                <span className="text">SO100/101 Arm</span>
+              </a>
+              <a href="/simulate_soarm101_by_leisaac/" className="content-card">
+                <span className="text">SO10x Arm with LeIsaac</span>
+              </a>
+              <a href="/control_robotic_arm_via_phospho/" className="content-card">
+                <span className="text">Phospho Lerobot</span>
+              </a>
+              <a href="/training_soarm101_policy_with_isaacLab/" className="content-card">
+                  <span className="text">So Arm RL Training</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
+                  <span className="text">SO101 with NVIDIA GR00T</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">Steering Gear Debugging Tool</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/lerobot_double_arm_so_arm_training/" className="content-card">
+                  <span className="text">Complete Guide to Double-Arm SO-ARM Training</span>
+                  <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🚗 Lekiwi</h3>
+          <div className="card-container">
+              <a href="/lerobot_lekiwi/" className="content-card">
+                <span className="text">Lekiwi Mobile Base</span>
+              </a>
+              <a href="/sound_follow_robot/" className="content-card">
+                <span className="text">Lekiwi Sound Follow</span>
+              </a>
+          </div>
+
+          <h3>🦾 StarAI Arm</h3>
+          <div className="card-container">
+              <a href="/lerobot_starai_arm/" className="content-card">
+                <span className="text">StarAI Robotic Arm</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/starai_arm_ros_moveit/" className="content-card">
+                <span className="text">StarAI Arm MoveIt 2</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/control_robotic_arm_via_gr00t" className="content-card">
+                <span className="text">StarAI with NVIDIA GR00T</span>
+              </a>
+          </div>
+
+          <h3>🦿Legged Wheel</h3>
+          <div className="card-container">
+              <a href="/StackForce_Mini_Wheeled_Legged_Robot" className="content-card">
+                <span className="text">Mini Wheeled-Legged Robot</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🖐️ Hand</h3>
+          <div className="card-container">
+              <a href="/hand_amazinghand/" className="content-card">
+                <span className="text">AmazingHand</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🦀 End Effectors</h3>
+          <div className="card-container">
+              <a href="/dm_gripper/" className="content-card">
+                <span className="text">DM Gripper</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+        </div>
       </div>
-      <div className="mini-track">
-        <h4>② Choose Your Platform</h4>
-        <a href="/reachymini_platforms_simulation_get_started/">Simulation Setup</a>
-        <a href="/reachymini_platforms_reachy_mini_get_started/">Reachy Mini Wireless Setup</a>
-        <a href="/reachymini_platforms_reachy_mini_usage/">Using Reachy Mini</a>
-        <a href="/reachymini_platforms_reachy_mini_hardware/">Reachy Mini Hardware Datasheet</a>
-        <a href="/reachymini_platforms_reachy_mini_lite_get_started/">Reachy Mini Lite Setup</a>
-        <a href="/reachymini_platforms_reachy_mini_lite_usage/">Using Reachy Mini Lite</a>
-        <a href="/reachymini_platforms_reachy_mini_lite_hardware/">Reachy Mini Lite Hardware Datasheet</a>
+
+      <h2 id="actuators">⚙️ Actuators</h2>
+
+      <div className="category-group">
+      <div className="category-card actuators">
+
+      <div className="card-container">
+          <a href="/myactuator_series/" className="content-card">
+            <span className="text">MyActuator X Series</span>
+          </a>
+          <a href="/damiao_series/" className="content-card">
+            <span className="text">Damiao DM43 Series</span>
+          </a>
+          <a href="/feetech_servo/" className="content-card">
+            <span className="text">Feetech STS3215 Servo</span>
+          </a>
+          <a href="/hightorque_control" className="content-card">
+            <span className="text">HighTorque Series</span>
+          </a>
+          <a href="/fashionstar_servo/" className="content-card">
+            <span className="text">Fashionstar Series</span>
+          </a>
+          <a href="/stackforce_series/" className="content-card">
+            <span className="text">Stackforce Series</span>
+          </a>
+          <a href="/robstride_control/" className="content-card">
+            <span className="text">RobStride Control</span>
+            <span className="tag recommended">New</span>
+          </a>
       </div>
-      <div className="mini-track">
-        <h4>③ SDK and Development Basics</h4>
-        <a href="/reachymini_sdk_readme/">Reachy Mini SDK</a>
-        <a href="/reachymini_sdk_installation/">Installation Guide</a>
-        <a href="/reachymini_sdk_quickstart/">Quickstart Guide</a>
-        <a href="/reachymini_sdk_python-sdk/">Python SDK Reference</a>
-        <a href="/reachymini_sdk_core-concept/">Core Concepts and Architecture</a>
-        <a href="/reachymini_sdk_media-architecture/">Media Architecture</a>
-        <a href="/reachymini_sdk_gstreamer-installation/">GStreamer Installation</a>
-        <a href="/reachymini_sdk_javascript-sdk/">JavaScript SDK and Web Apps</a>
+
       </div>
-      <div className="mini-track">
-        <h4>④ Apps and AI Integration</h4>
-        <a href="/reachymini_sdk_integration/">Integration and Applications</a>
-        <a href="/reachymini_sdk_apps/">Build and Publish Apps</a>
-        <a href="/reachymini_conversation/">Doubao LLM Conversation Demo</a>
-        <a href="/reachymini_vibe-code-with-your-agent/">Vibe Coding with an Agent</a>
-        <a href="/reachymini_agents/">Development Guide for AI Agents</a>
       </div>
-      <div className="mini-track">
-        <h4>⑤ Media, System, and Advanced Operations</h4>
-        <a href="/reachymini_platforms_reachy_mini_media_advanced_controls/">Wireless Advanced Media Controls</a>
-        <a href="/reachymini_platforms_reachy_mini_lite_media_advanced_controls/">Lite Advanced Media Controls</a>
-        <a href="/reachymini_platforms_reachy_mini_lite_wizard/">Read Motor Parameters with Dynamixel Wizard</a>
-        <a href="/reachymini_platforms_reachy_mini_development_workflow/">Wireless Development Workflow</a>
-        <a href="/reachymini_platforms_reachy_mini_install_daemon_from_branch/">Install Daemon from a Branch</a>
-        <a href="/reachymini_platforms_reachy_mini_reflash_the_rpi_iso/">Reflash Raspberry Pi OS Image</a>
-        <a href="/reachymini_platforms_reachy_mini_reset/">Bluetooth Reset</a>
+
+      <h2 id="sensors">👁️ Sensors</h2>
+
+      <div className="category-group">
+      <div className="category-card sensors">
+
+      <strong>📡 LiDAR</strong>  
+
+      <div className="card-container">
+          <a href="/robosense_lidar/" className="content-card">
+            <span className="text">RoboSense</span>
+          </a>
+          <a href="/mid360/" className="content-card">
+            <span className="text">MID360</span>
+          </a>
+          <a href="/a_loam/" className="content-card">
+            <span className="text">A-LOAM Algorithm</span>
+          </a>
+          <a href="/slamtec/" className="content-card">
+            <span className="text">Slamtec Series</span>
+          </a>
       </div>
-      <div className="mini-track">
-        <h4>⑥ Examples</h4>
-        <a href="/reachymini_examples_minimal_demo/">Minimal Demo</a>
-        <a href="/reachymini_examples_goto_interpolation_playground/">Goto Interpolation Playground</a>
-        <a href="/reachymini_examples_look_at/">Look at Image</a>
-        <a href="/reachymini_examples_mini_head_position_gui/">Head Position GUI</a>
-        <a href="/reachymini_examples_joy_controller/">Joystick Controller</a>
-        <a href="/reachymini_examples_imu/">IMU Example</a>
-        <a href="/reachymini_examples_custom_media_manager/">Custom Media Manager</a>
-        <a href="/reachymini_examples_reachy_compliant_demo/">Compliant Mode Demo</a>
-        <a href="/reachymini_examples_recorded_moves/">Recorded Moves</a>
-        <a href="/reachymini_examples_rerun_viewer/">Rerun Viewer</a>
-        <a href="/reachymini_examples_sequence/">Sequence Demo</a>
-        <a href="/reachymini_examples_sound_doa/">Sound Direction of Arrival</a>
-        <a href="/reachymini_examples_sound_play/">Sound Playback</a>
-        <a href="/reachymini_examples_sound_record/">Sound Recording</a>
-        <a href="/reachymini_examples_take_picture/">Take Picture</a>
+
+      <strong>📷 Camera</strong>  
+
+      <div className="card-container">
+          <a href="/orbbec_gemini2/" className="content-card">
+            <span className="text">Orbbec Gemini 2</span>
+          </a>
+          <a href="/orbbec_gemini_335lg" className="content-card">
+            <span className="text">Gemini 335Lg Depth</span>
+            <span className="tag recommended">New</span>
+          </a>
+          <a href="/orbbec_gemini336" className="content-card">
+            <span className="text">Gemini 336 Depth</span>
+            <span className="tag recommended">New</span>
+          </a>
+          <a href="/sensing_gmsl_cameras" className="content-card">
+            <span className="text">SENSING GMSL2</span>
+          </a>
+          <a href="/ac1" className="content-card">
+            <span className="text">RoboSense AC1</span>
+            <span className="tag recommended">New</span>
+          </a>
+          <a href="/orbbec_depth_camera_on_ros/" className="content-card">
+            <span className="text">Orbbec with ROS</span>
+          </a>
+          <a href="/orb_slam3_orbbec_gemini2/" className="content-card">
+            <span className="text">ORB-SLAM3 Gemini2</span>
+          </a>
+          <a href="/csi_camera_on_ros/" className="content-card">
+            <span className="text">CSI Camera on Jetson</span>
+          </a>
+          <a href="/pycuvslam_recomputer_robotics/" className="content-card">
+            <span className="text">PyCuVSLAM</span>
+          </a>
+
       </div>
-      <div className="mini-track">
-        <h4>⑦ Troubleshooting and Maintenance</h4>
-        <a href="/reachymini_troubleshooting/">Troubleshooting and FAQ</a>
-        <a href="/reachymini_troubleshooting_motors_diagnosis/">Motor Diagnosis and Troubleshooting</a>
-        <a href="/reachymini_troubleshooting_change_mic_fpc_cable/">Replace the Microphone FPC Cable</a>
-        <a href="/reachymini_troubleshooting_spherical_joints_maintenance/">Spherical Joint Maintenance</a>
-        <a href="/reachymini_troubleshooting_roadmap/">Reachy Mini Roadmap</a>
+
+      <strong>🎤 Voice</strong>  
+
+      <div className="card-container">
+          <a href="/ReSpeaker_Core_v2.0/" className="content-card">
+            <span className="text">ReSpeaker Core v2.0</span>
+          </a>
+          <a href="/ReSpeaker_Mic_Array_v2.0/" className="content-card">
+            <span className="text">ReSpeaker Mic Array v2.0</span>
+          </a>
       </div>
-      <div className="mini-track">
-        <h4>⑧ API Reference</h4>
-        <a href="/reachymini_api_reachymini/">ReachyMini API Reference</a>
-        <a href="/reachymini_api_rest-api/">REST API Reference</a>
-        <a href="/reachymini_api_daemon/">Daemon API</a>
-        <a href="/reachymini_api_motion/">Motion API</a>
-        <a href="/reachymini_api_media/">Media API</a>
-        <a href="/reachymini_api_apps/">Apps API Reference</a>
-        <a href="/reachymini_api_tools/">Tools API Reference</a>
-        <a href="/reachymini_api_utils/">Utils API Reference</a>
+
+      <strong>🧭 IMU</strong>  
+
+      <div className="card-container">
+          <a href="/hexfellow_y200/" className="content-card">
+            <span className="text">HEXFELLOW Y200</span>
+          </a>
+          <a href="/wheeltec_imu/" className="content-card">
+            <span className="text">WHEELTEC IMU</span>
+          </a>
       </div>
-    </div>
-  </div>
-</details>
+
+      </div>
+      </div>
+
+      <h2 id="software">💻 Software</h2>
+
+      <div className="category-group">
+      <div className="category-card software">
+
+      <strong>ROS Ecosystem</strong>  
+
+      <div className="card-container">
+          <a href="/installing_ros1/" className="content-card">
+            <span className="text">ROS 1 Installation</span>
+          </a>
+          <a href="/install_ros2_humble/" className="content-card">
+            <span className="text">ROS 2 Installation</span>
+          </a>
+          <a href="/install_isaacros/" className="content-card">
+            <span className="text">Isaac ROS Installation</span>
+          </a>
+          <a href="/isaac_ros_apriltag/" className="content-card">
+            <span className="text">Isaac ROS AprilTag</span>
+          </a>
+          <a href="/isaac_ros_visual_slam/" className="content-card">
+            <span className="text">Isaac ROS V-SLAM</span>
+          </a>
+      </div>
+
+      <strong>PX4</strong>  
+      <div className="card-container">
+      <a href="/control_px4_with_recomputer_jetson/" className="content-card">
+        <span className="text">PX4 with Jetson</span>
+      </a>
+
+      <a href="/object_tracking_with_reComputer_jetson_and_pX4/" className="content-card">
+        <span className="text">Object Tracking (PX4)</span>
+      </a>
+
+      </div>
+
+      <strong>NVIDIA Isaac</strong>  
+      <div className="card-container">
+      <a href="/install_isaaclab/" className="content-card">
+        <span className="text">Isaac Lab Installation</span>
+      </a>
+      <a href="/training_soarm101_policy_with_isaacLab/" className="content-card">
+        <span className="text">SO Arm RL Training</span>
+        <span className="tag recommended">New</span>
+      </a>
+      <a href="/simulate_soarm101_by_leisaac/" className="content-card">
+        <span className="text">SO100 Arm Isaac Sim</span>
+        <span className="tag recommended">New</span>
+      </a>
+      </div>
+
+      <strong>VLA</strong>  
+      <div className="card-container">
+      <a href="/control_robotic_arm_via_gr00t" className="content-card">
+        <span className="text">StarAI with NVIDIA GR00T</span>
+      </a>
+      </div>
+
+      </div>
+      </div>
 
     </div>
-  </section>
+  </div> 
 
-  <section id="actuators" className="section-block compact-section">
-    <div className="section-title-row">
-      <div>
-        <span className="section-kicker">Reference</span>
-        <h2>⚙️ Joint Actuators</h2>
-      </div>
-      <p>Use these references when you need to debug motors, understand communication protocols, or diagnose joint-level issues.</p>
-    </div>
-    <div className="resource-grid">
-      <a href="/myactuator_series/">MyActuator X Series</a>
-      <a href="/damiao_series/">Damiao DM43 Series</a>
-      <a href="/feetech_servo/">Feetech STS3215 Servo</a>
-      <a href="/hightorque_control/">HighTorque Series</a>
-      <a href="/fashionstar_servo/">Fashionstar Series</a>
-      <a href="/stackforce_series/">Stackforce Series</a>
-      <a href="/robstride_control/">RobStride Control</a>
-    </div>
-  </section>
+  <!-- ==================== Tab 2: 学习中心 (Learning) ==================== -->
+  <div className="tab-content content-learning">
 
-  <section id="sensors" className="section-block compact-section">
-    <div className="section-title-row">
-      <div>
-        <span className="section-kicker">Reference</span>
-        <h2>👁️ Sensors</h2>
-      </div>
-      <p>Useful for visual grasping, SLAM, voice interaction, and robot-state perception.</p>
+    <div className="learning-intro">
+        <h2>🎓 Robotics Academy</h2>
+        <p>Comprehensive curriculum covering ROS, Simulation, Reinforcement Learning, and advanced robot control.</p>
     </div>
-    <div className="resource-columns">
-      <div><h4>📡 LiDAR</h4><a href="/robosense_lidar/">RoboSense</a><a href="/mid360/">Livox MID360</a><a href="/a_loam/">A-LOAM Algorithm</a><a href="/slamtec/">Slamtec Series</a></div>
-      <div><h4>📷 Camera</h4><a href="/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/orbbec_gemini_335lg/">Gemini 335Lg Depth Camera</a><a href="/orbbec_gemini336/">Gemini 336 Depth Camera</a><a href="/sensing_gmsl_cameras/">SENSING GMSL2 Camera</a><a href="/ac1/">RoboSense AC1</a><a href="/orbbec_depth_camera_on_ros/">Orbbec with ROS</a><a href="/orb_slam3_orbbec_gemini2/">ORB-SLAM3 with Gemini2</a><a href="/csi_camera_on_ros/">CSI Camera on Jetson</a><a href="/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
-      <div><h4>🎤 Voice</h4><a href="/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>🧭 IMU</h4><a href="/hexfellow_y200/">HEXFELLOW Y200</a><a href="/wheeltec_imu/">WHEELTEC IMU</a></div>
-    </div>
-  </section>
 
-  <section id="software" className="section-block compact-section">
-    <div className="section-title-row">
-      <div>
-        <span className="section-kicker">Reference</span>
-        <h2>💻 Software Ecosystem</h2>
-      </div>
-      <p>After your kit is running, choose a software direction based on your project goal: ROS, Isaac, PX4, or VLA.</p>
-    </div>
-    <div className="resource-columns">
-      <div><h4>ROS Ecosystem</h4><a href="/installing_ros1/">ROS 1 Installation</a><a href="/install_ros2_humble/">ROS 2 Installation</a><a href="/install_isaacros/">Isaac ROS Installation</a><a href="/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
-      <div><h4>NVIDIA Isaac</h4><a href="/install_isaaclab/">Isaac Lab Installation</a><a href="/training_soarm101_policy_with_isaacLab/">SO Arm Reinforcement Learning</a><a href="/simulate_soarm101_by_leisaac/">SO100 Arm with IsaacSim</a></div>
-      <div><h4>PX4 / VLA</h4><a href="/control_px4_with_recomputer_jetson/">PX4 with Jetson</a><a href="/object_tracking_with_reComputer_jetson_and_pX4/">PX4 Object Tracking</a><a href="/control_robotic_arm_via_gr00t/">StarAI with NVIDIA GR00T</a></div>
-    </div>
-  </section>
+    <!-- Section 1: Core Software -->
+    <h3 className="course-section-title">💻 Core Software & Simulation</h3>
+    <div className="course-grid">
+      
+      <!-- ROS Basics: 8 Lectures -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/1.%20ROS%20Basics%208%20lectures/README.md" className="course-card">
+        <div className="course-cover c-ros1">ROS 1</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 8h</span></div>
+          <h3>ROS 1 Basics: 8 Lectures</h3>
+          <p>Learn About Nodes, Topics, Services, and Basics Learning</p>
+          <span className="btn-start">Learning</span>
+        </div>
+      </a>
 
-</div>
+      <!-- ROS Robot Simulation: 7 Lectures -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/2.%20ROS%20Robot%20Simulation%207%20Lectures/README.MD" className="course-card">
+        <div className="course-cover c-ros1">ROS 1</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 8h</span></div>
+          <h3>ROS 1 Robot Simulation: 7 Lectures.</h3>
+          <p>	From modeling to autonomous navigation.</p>
+          <span className="btn-start">Learning</span>
+        </div>
+      </a>
+
+      <!-- ROS 2 -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/2.English/1.%20ROS%20Basics%208%20lectures/README.MD" className="course-card">
+        <div className="course-cover c-ros2">ROS 2</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 8h</span></div>
+          <h3>ROS 2 Humble Basics: 8 Lectures</h3>
+          <p>Learn About Nodes, Topics, Services, and Basics Learning</p>
+          <span className="btn-start">Learning</span>
+        </div>
+      </a>
+
+
+
+      <!-- Moveit2 -->
+      <a href="" className="course-card">
+        <div className="course-cover c-moveit">MoveIt 1/2</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">Arm Beginner</span> <span>⏱️ 6h</span></div>
+          <h3>MoveIt 1/2</h3>
+          <p>Import a Custom Manipulator into MoveIt 1/2 and Implement Forward and Inverse Kinematics</p>
+          <span className="btn-plan">Planning</span>
+        </div>
+      </a>
+
+      <!-- Pinocchio -->
+      <a href="" className="course-card">
+        <div className="course-cover c-pinocchio">Pinocchio</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level int">Arm Intermediate</span> <span>⏱️ 6h</span></div>
+          <h3>Pinocchio</h3>
+          <p>Learn the Pinocchio Robotics Framework and Develop Kinematics and Dynamics Tasks for Your Own Manipulator</p>
+          <span className="btn-plan">Planning</span>
+        </div>
+      </a>
+
+
+      <!-- Isaac Sim -->
+      <a href="" className="course-card">
+        <div className="course-cover c-isaac">ISAAC</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level adv">Advanced</span> <span>⏱️ 12h</span></div>
+          <h3>NVIDIA Isaac Sim & Lab</h3>
+          <p>Sim2Real workflows, USD pipelines, and environment creation.</p>
+          <span className="btn-plan">Planning</span>
+        </div>
+      </a>
+
+      <!-- MuJoCo -->
+      <a href="" className="course-card">
+        <div className="course-cover c-mujoco">MuJoCo</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level adv">Advanced</span> <span>⏱️ 10h</span></div>
+          <h3>MuJoCo Physics Engine</h3>
+          <p>Model dynamics and simulation for agile robot control.</p>
+          <span className="btn-plan">Planning</span>
+        </div>
+      </a>
+
+      <!-- Reinforcement Learning -->
+      <a href="" className="course-card">
+        <div className="course-cover c-rl">RL</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level adv">Hard</span> <span>⏱️ 20h</span></div>
+          <h3>Reinforcement Learning</h3>
+          <p>PPO, DRL training pipelines, and deployment to Jetson.</p>
+          <span className="btn-plan">Planning</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Section 2: Robot Applications -->
+    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 Robot Applications</h3>
+    <div className="course-grid">
+
+      <!-- Humanoid -->
+      <a href="" className="course-card">
+        <div className="course-cover c-human">Humanoid</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 5h</span></div>
+          <h3>Small Servo Humanoid Robots Course </h3>
+          <p>Hardware Driving, Motion & Dance Choreography, and Secondary Development for Small Humanoid Robots.</p>
+          <span className="btn-plan">Planning</span>
+        </div>
+      </a>
+
+
+      <!-- Lekiwi -->
+      <a href="" className="course-card">
+        <div className="course-cover c-lekiwi">Mobile Robot</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 6h</span></div>
+          <h3>Mobile Robotics (Lekiwi)</h3>
+          <p>SLAM, Navigation 2, and autonomous patrolling.</p>
+          <span className="btn-plan">Planning</span>
+        </div>
+      </a>
+
+      <!-- Robotic Arm -->
+      <a href="" className="course-card">
+        <div className="course-cover c-arm">Robot Arm</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 15h</span></div>
+          <h3>StarAI Arm System Course</h3>
+          <p>StarAI 6+1 DOF Manipulator: Kinematics, Dynamics, Imitation Learning & Advanced VLA-based Reinforcement Learning</p>
+          <span className="btn-plan">Planning</span>
+        </div>
+      </a>
+
+      <!-- Wheeled-Legged -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md" className="course-card">
+        <div className="course-cover c-legged">Wheel-Legged Robot</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 8h</span></div>
+          <h3>Stackforce Wheeled-Legged Robots Course</h3>
+          <p>Balance control and LQR motion planning for hybrid robots.</p>
+          <span className="btn-start">Learning</span>
+        </div>
+      </a>
+
+      <!-- ReachyMini -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ReachyMini_Tutorial/2.English/README.md" className="course-card">
+        <div className="course-cover c-reachy">Desktop Robot</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level adv">Advanced</span> <span>⏱️ 8h</span></div>
+          <h3>ReachyMini Tutorial 13 Lectures</h3>
+          <p>Systematic Course on Basic Operation, Interface Tutorials and Secondary Development of ReachyMini</p>
+          <span className="btn-start">Learning</span>
+        </div>
+      </a>
+
+
+    </div>
+
+  </div> 
+
+</div> 
 
 <style>{`
-.robotics-page {
-  --rp-page-bg: #ffffff;
-  --rp-card-bg: #ffffff;
-  --rp-card-bg-soft: #f8fafc;
-  --rp-card-bg-hover: #ffffff;
-  --rp-text: #0f172a;
-  --rp-text-muted: #64748b;
-  --rp-text-soft: #94a3b8;
-  --rp-border: rgba(148, 163, 184, 0.28);
-  --rp-border-strong: rgba(148, 163, 184, 0.42);
-  --rp-shadow-sm: 0 8px 22px rgba(15, 23, 42, 0.06);
-  --rp-shadow-md: 0 16px 40px rgba(15, 23, 42, 0.10);
-  --rp-shadow-accent: 0 16px 34px rgba(37, 99, 235, 0.12);
-  --rp-accent: #2563eb;
-  --rp-accent-soft: rgba(37, 99, 235, 0.10);
-  --rp-accent-border: rgba(37, 99, 235, 0.24);
-  width: 100%;
-  color: var(--rp-text);
+/* =========================================
+   1. Tab Logic (CSS Only)
+   ========================================= */
+.robotic-tab-container { width: 100%; position: relative; }
+.tab-input-hidden { display: none; }
+.tab-nav-wrapper { display: flex; justify-content: center; margin-bottom: 2rem; margin-top: 1rem; }
+.tab-nav {
+  position: relative; display: flex; background: #f1f3f5; border-radius: 100px;
+  padding: 5px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); user-select: none;
+}
+.tab-item {
+  position: relative; z-index: 2; padding: 10px 30px; font-weight: 600; color: #666;
+  cursor: pointer; transition: color 0.3s ease; display: flex; align-items: center; gap: 8px; font-size: 1rem; margin: 0;
+}
+.tab-item .icon { font-size: 1.2rem; }
+.badge {
+  background: #ff4757; color: white; font-size: 0.6rem; padding: 2px 6px;
+  border-radius: 10px; margin-left: 5px; position: relative; top: -1px;
+}
+.tab-slider {
+  position: absolute; top: 5px; bottom: 5px; left: 5px; width: calc(50% - 5px);
+  background: white; border-radius: 100px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); z-index: 1;
 }
 
-.robotics-page * { box-sizing: border-box; }
-.robotics-page a { -webkit-tap-highlight-color: transparent; }
-.robotics-page a:focus-visible, .robotics-page summary:focus-visible { outline: 3px solid var(--rp-accent-border); outline-offset: 3px; }
+#tab-hardware:checked ~ .tab-nav-wrapper .tab-nav .tab-slider { transform: translateX(0); }
+#tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #4a90e2; }
+#tab-learning:checked ~ .tab-nav-wrapper .tab-nav .tab-slider { transform: translateX(100%); }
+#tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #7b61ff; }
 
-.hero-panel {
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
-  gap: 1.5rem;
-  padding: 2.1rem;
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at 12% 18%, rgba(37, 99, 235, 0.18), transparent 34%),
-    radial-gradient(circle at 88% 76%, rgba(20, 184, 166, 0.18), transparent 38%),
-    linear-gradient(135deg, rgba(248, 250, 252, 0.94), rgba(239, 246, 255, 0.96));
-  border: 1px solid var(--rp-accent-border);
-  margin: 1.5rem 0 1.25rem;
-  box-shadow: var(--rp-shadow-sm);
-}
-.hero-panel::after {
-  content: "";
-  position: absolute;
-  right: -80px;
-  top: -80px;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: rgba(37, 99, 235, 0.08);
-  pointer-events: none;
-}
-.eyebrow, .section-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.76rem;
-  font-weight: 850;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--rp-accent);
-  margin-bottom: 0.6rem;
-}
-.eyebrow::before, .section-kicker::before {
-  content: "";
-  width: 0.45rem;
-  height: 0.45rem;
-  border-radius: 999px;
-  background: var(--rp-accent);
-  box-shadow: 0 0 0 4px var(--rp-accent-soft);
-}
-.hero-panel h2 { margin: 0 0 0.75rem; font-size: clamp(1.55rem, 3vw, 2.35rem); line-height: 1.16; letter-spacing: -0.03em; }
-.hero-panel p { margin: 0; color: var(--rp-text-muted); line-height: 1.78; max-width: 780px; }
-.hero-tips { display: grid; gap: 0.75rem; position: relative; z-index: 1; }
-.hero-tips div {
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid var(--rp-border);
-  border-radius: 18px;
-  padding: 0.95rem 1rem;
-  box-shadow: var(--rp-shadow-sm);
-  backdrop-filter: blur(10px);
-}
-.hero-tips strong { display: block; color: var(--rp-text); margin-bottom: 0.28rem; }
-.hero-tips span { color: var(--rp-text-muted); font-size: 0.92rem; line-height: 1.5; }
+.tab-content { display: none; animation: fadeIn 0.4s ease; }
+#tab-hardware:checked ~ .content-hardware { display: block; }
+#tab-learning:checked ~ .content-learning { display: block; }
 
-.quick-nav {
-  position: sticky;
-  top: 0.75rem;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
-  padding: 0.75rem;
-  margin: 1rem 0 2rem;
-  border-radius: 20px;
-  background: color-mix(in srgb, var(--rp-card-bg) 88%, transparent);
-  border: 1px solid var(--rp-border);
-  backdrop-filter: blur(14px);
-  box-shadow: var(--rp-shadow-sm);
-}
-.quick-nav a {
-  text-align: center;
-  padding: 0.85rem 1rem;
-  border-radius: 14px;
-  text-decoration: none !important;
-  font-weight: 780;
-  color: var(--rp-text);
-  background: var(--rp-card-bg-soft);
-  border: 1px solid transparent;
-  transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
-.quick-nav a:hover { transform: translateY(-2px); color: var(--rp-accent); border-color: var(--rp-accent-border); background: var(--rp-card-bg-hover); box-shadow: var(--rp-shadow-accent); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
-.section-block { margin: 2.6rem 0; scroll-margin-top: 6rem; }
-.section-title-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.25rem; margin-bottom: 1.25rem; }
-.section-title-row h2 { margin: 0.15rem 0 0; font-size: 1.7rem; letter-spacing: -0.02em; }
-.section-title-row p { margin: 0; max-width: 580px; color: var(--rp-text-muted); line-height: 1.68; }
+/* =========================================
+   2. Hardware Styles (Original)
+   ========================================= */
+.quick-nav-container {
+  margin: 2rem 0; padding: 1rem;
+  background: radial-gradient(at 10% 20%, #f0fdf4 0%, transparent 50%), radial-gradient(at 90% 80%, #f0f7ff 0%, transparent 50%), white;
+  border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: none;
+}
+.quick-nav { display: flex; justify-content: space-around; gap: 1rem; }
+.nav-item {
+  position: relative; padding: 0.8rem 1.5rem; border-radius: 12px; display: flex; margin: 6px 6px;
+  flex-direction: column; align-items: center; text-decoration: none !important; color: #333;
+  font-weight: 500; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); z-index: 1; width: 100%;
+}
+.nav-item .icon { font-size: 1.8rem; margin-bottom: 0.5rem; transition: transform 0.3s; }
+.nav-item .text { font-size: 0.95rem; white-space: nowrap; }
+.nav-item .hover-effect {
+  position: absolute; bottom: 0; left: 0; width: 100%; height: 0;
+  background: linear-gradient(135deg, #4a90e2 0%, #50e3c2 100%);
+  border-radius: 12px; transition: height 0.3s ease; z-index: -1;
+}
+.nav-item:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); color: white; }
+.nav-item:hover .icon { transform: scale(1.2) rotate(10deg); }
+.nav-item:hover .hover-effect { height: 100%; }
 
-.product-stack { display: grid; gap: 1rem; }
-.product-card {
-  --rp-accent: #2563eb;
-  --rp-accent-soft: rgba(37, 99, 235, 0.10);
-  --rp-accent-border: rgba(37, 99, 235, 0.26);
-  position: relative;
-  border: 1px solid var(--rp-border);
-  border-radius: 24px;
-  background: var(--rp-card-bg);
-  box-shadow: var(--rp-shadow-sm);
-  overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+.nav-grid { display: block; gap: 2rem; margin-top: 2rem; }
+.category-group { margin-bottom: 2.5rem; }
+.category-card {
+  position: relative; padding: 1.8rem; border-radius: 16px; background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; overflow: hidden; border: 1px solid transparent;
 }
-.product-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
-  background: linear-gradient(180deg, var(--rp-accent), color-mix(in srgb, var(--rp-accent) 52%, #14b8a6));
-  opacity: 0.88;
-}
-.product-card:hover { border-color: var(--rp-accent-border); box-shadow: var(--rp-shadow-md); }
-.product-card[open] { border-color: var(--rp-accent-border); }
-.product-card.rebot { --rp-accent: #2563eb; --rp-accent-soft: rgba(37, 99, 235, 0.10); --rp-accent-border: rgba(37, 99, 235, 0.28); }
-.product-card.soarm { --rp-accent: #f97316; --rp-accent-soft: rgba(249, 115, 22, 0.12); --rp-accent-border: rgba(249, 115, 22, 0.30); }
-.product-card.starai { --rp-accent: #7c3aed; --rp-accent-soft: rgba(124, 58, 237, 0.12); --rp-accent-border: rgba(124, 58, 237, 0.30); }
-.product-card.lekiwi { --rp-accent: #0891b2; --rp-accent-soft: rgba(8, 145, 178, 0.12); --rp-accent-border: rgba(8, 145, 178, 0.30); }
-.product-card.stackforce { --rp-accent: #ca8a04; --rp-accent-soft: rgba(202, 138, 4, 0.13); --rp-accent-border: rgba(202, 138, 4, 0.30); }
-.product-card.reachy { --rp-accent: #0d9488; --rp-accent-soft: rgba(13, 148, 136, 0.12); --rp-accent-border: rgba(13, 148, 136, 0.30); }
-.product-card summary {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  cursor: pointer;
-  padding: 1.18rem 1.28rem 1.18rem 1.45rem;
-  background: linear-gradient(90deg, var(--rp-accent-soft), transparent 46%);
-}
-.product-card summary::-webkit-details-marker { display: none; }
-.product-card summary::after {
-  content: "⌄";
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 999px;
-  color: var(--rp-accent);
-  background: var(--rp-accent-soft);
-  font-size: 1.15rem;
-  font-weight: 900;
-  transition: transform 0.2s ease;
-}
-.product-card[open] summary::after { transform: rotate(180deg); }
-.product-head { display: flex; align-items: center; gap: 0.95rem; min-width: 0; }
-.product-icon { width: 46px; height: 46px; display: inline-flex; align-items: center; justify-content: center; border-radius: 16px; background: var(--rp-accent-soft); color: var(--rp-accent); font-size: 1.45rem; flex: 0 0 auto; }
-.product-head h3 { margin: 0 0 0.25rem; font-size: 1.18rem; letter-spacing: -0.01em; }
-.product-head span { color: var(--rp-text-muted); font-size: 0.92rem; line-height: 1.48; }
-.summary-action { flex: 0 0 auto; padding: 0.42rem 0.7rem; border-radius: 999px; font-size: 0.76rem; font-weight: 850; color: var(--rp-accent); background: var(--rp-accent-soft); border: 1px solid var(--rp-accent-border); }
-.product-card[open] .summary-action { color: #047857; background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.26); }
-.product-body { border-top: 1px solid var(--rp-border); padding: 1.25rem; background: linear-gradient(180deg, var(--rp-card-bg), var(--rp-card-bg-soft)); }
+.category-card::before { content: ""; position: absolute; top: 0; left: 0; width: 6px; height: 100%; }
+.robot-kits::before { background: linear-gradient(to bottom, #4a90e2, #50e3c2); }
+.actuators::before { background: linear-gradient(to bottom, #50e3c2, #a0e3c2); }
+.sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
+.software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-.product-meta-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin-bottom: 1rem; }
-.product-meta-grid div { padding: 0.95rem; border-radius: 16px; background: color-mix(in srgb, var(--rp-card-bg) 82%, var(--rp-accent-soft)); border: 1px solid var(--rp-border); }
-.product-meta-grid strong { display: block; margin-bottom: 0.35rem; color: var(--rp-text); }
-.product-meta-grid span { color: var(--rp-text-muted); font-size: 0.88rem; line-height: 1.58; }
-.learning-steps { display: grid; gap: 0.75rem; }
-.step-card {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 0.96rem;
-  border-radius: 17px;
-  background: var(--rp-card-bg);
-  border: 1px solid var(--rp-border);
-  text-decoration: none !important;
-  color: inherit;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+.card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 12px; margin-bottom: 1.5rem; }
+.content-card {
+  display: flex; align-items: center; justify-content: space-between; padding: 10px 16px;
+  background: #f9fafb; border: 1px solid transparent; border-radius: 8px; text-decoration: none !important;
+  color: var(--ifm-font-color-base); font-weight: 500; font-size: 0.9rem; transition: all 0.25s ease; position: relative; overflow: hidden;
 }
-.step-card:hover { transform: translateX(4px); border-color: var(--rp-accent-border); box-shadow: var(--rp-shadow-accent); background: var(--rp-card-bg-hover); }
-.step-index { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--rp-accent); color: #fff; font-weight: 900; box-shadow: 0 8px 18px var(--rp-accent-soft); }
-.step-card b { display: block; margin-bottom: 0.25rem; color: var(--rp-text); }
-.step-card small { display: block; color: var(--rp-text-muted); line-height: 1.58; font-size: 0.86rem; }
-.step-card em { justify-self: end; font-style: normal; font-size: 0.72rem; font-weight: 850; color: var(--rp-accent); background: var(--rp-accent-soft); border: 1px solid var(--rp-accent-border); border-radius: 999px; padding: 0.32rem 0.58rem; white-space: nowrap; }
-.step-card.optional .step-index { background: #64748b; }
-.step-card.optional em { color: #475569; background: #e2e8f0; border-color: rgba(100, 116, 139, 0.28); }
+.content-card .text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 8px; z-index: 2; }
+.content-card:hover {
+  background: #fff; border-color: #4a90e2; box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+  transform: translateY(-2px); color: #4a90e2;
+}
+.content-card::after { content: ""; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: #4a90e2; transition: width 0.2s ease; }
+.content-card:hover::after { width: 4px; }
 
-.reachy-path-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 0.9rem; align-items: start; }
-.mini-track { background: var(--rp-card-bg); border: 1px solid var(--rp-border); border-radius: 18px; padding: 1rem; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.035); }
-.mini-track h4 { margin: 0 0 0.75rem; color: var(--rp-text); font-size: 0.98rem; }
-.mini-track a { display: block; padding: 0.58rem 0.68rem; margin: 0.42rem 0; border-radius: 11px; background: var(--rp-card-bg-soft); text-decoration: none !important; color: var(--rp-text-muted); font-size: 0.88rem; border: 1px solid transparent; transition: all 0.18s ease; }
-.mini-track a:hover { color: var(--rp-accent); background: var(--rp-accent-soft); border-color: var(--rp-accent-border); transform: translateX(2px); }
+.tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; font-weight: 700; text-transform: uppercase; flex-shrink: 0; z-index: 2; }
+.recommended { background: rgba(255, 107, 107, 0.1); color: #ff6b6b; border: 1px solid rgba(255, 107, 107, 0.2); animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2); } 70% { box-shadow: 0 0 0 4px rgba(255, 107, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); } }
 
-.note-box { margin-top: 1rem; padding: 0.9rem 1rem; border-radius: 14px; color: #92400e; background: #fffbeb; border: 1px solid #fde68a; font-size: 0.88rem; line-height: 1.6; }
-.resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; }
-.resource-grid a, .resource-columns a { display: block; padding: 0.75rem 0.85rem; border-radius: 13px; text-decoration: none !important; color: var(--rp-text-muted); background: var(--rp-card-bg); border: 1px solid var(--rp-border); transition: all 0.2s ease; }
-.resource-grid a:hover, .resource-columns a:hover { color: var(--rp-accent); border-color: var(--rp-accent-border); transform: translateY(-2px); box-shadow: var(--rp-shadow-accent); }
-.resource-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.resource-columns div { padding: 1rem; border-radius: 19px; background: var(--rp-card-bg-soft); border: 1px solid var(--rp-border); }
-.resource-columns h4 { margin: 0 0 0.75rem; color: var(--rp-text); }
-.resource-columns a { margin-bottom: 0.55rem; }
+/* =========================================
+   3. Learning Styles
+   ========================================= */
+.learning-intro { text-align: center; margin-bottom: 2rem; }
+.learning-intro h2 { margin-bottom: 0.5rem; background: -webkit-linear-gradient(45deg, #7b61ff, #4a90e2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.learning-intro p { color: #666; max-width: 600px; margin: 0 auto; }
 
-html[data-theme='dark'] .robotics-page {
-  --rp-page-bg: #111317;
-  --rp-card-bg: #1b1d22;
-  --rp-card-bg-soft: #23262d;
-  --rp-card-bg-hover: #262a32;
-  --rp-text: #f8fafc;
-  --rp-text-muted: #cbd5e1;
-  --rp-text-soft: #94a3b8;
-  --rp-border: rgba(148, 163, 184, 0.18);
-  --rp-border-strong: rgba(148, 163, 184, 0.28);
-  --rp-shadow-sm: 0 10px 26px rgba(0, 0, 0, 0.28);
-  --rp-shadow-md: 0 18px 42px rgba(0, 0, 0, 0.36);
-  --rp-shadow-accent: 0 16px 34px rgba(96, 165, 250, 0.10);
+.course-section-title {
+  margin: 1.5rem 0 1rem; font-size: 1.2rem; font-weight: 700; color: #444; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;
 }
-html[data-theme='dark'] .hero-panel {
-  background:
-    radial-gradient(circle at 12% 18%, rgba(96, 165, 250, 0.20), transparent 34%),
-    radial-gradient(circle at 88% 76%, rgba(45, 212, 191, 0.14), transparent 38%),
-    linear-gradient(135deg, #171a20, #111827);
-  border-color: var(--rp-border-strong);
-}
-html[data-theme='dark'] .hero-tips div { background: rgba(27, 29, 34, 0.78); }
-html[data-theme='dark'] .quick-nav { background: rgba(17, 19, 23, 0.82); }
-html[data-theme='dark'] .note-box { color: #fde68a; background: rgba(146, 64, 14, 0.18); border-color: rgba(253, 230, 138, 0.24); }
-html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgba(100, 116, 139, 0.20); }
 
-@media (max-width: 900px) {
-  .hero-panel, .product-meta-grid, .resource-columns { grid-template-columns: 1fr; }
-  .section-title-row { display: block; }
-  .section-title-row p { margin-top: 0.5rem; }
-  .quick-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); position: static; }
-  .step-card { grid-template-columns: auto minmax(0, 1fr); }
-  .step-card em { grid-column: 2; justify-self: start; }
+.course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.course-card {
+  background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-decoration: none !important; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #eee; display: flex; flex-direction: column;
 }
-@media (max-width: 560px) {
-  .hero-panel { padding: 1.25rem; border-radius: 20px; }
-  .quick-nav { grid-template-columns: 1fr; }
-  .product-card summary { align-items: flex-start; padding-right: 0.9rem; }
-  .summary-action { display: none; }
-  .product-card summary::after { margin-top: 0.45rem; }
-  .product-icon { width: 40px; height: 40px; }
-  .product-body { padding: 1rem; }
+.course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+/* Covers for different topics */
+.course-cover { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; color: white; letter-spacing: 1px; }
+
+/* AI & Software Colors */
+.c-ros2 { background: linear-gradient(135deg, #10b981, #059669); }
+.c-ros1 { background: linear-gradient(135deg, #4b5563, #374151); }
+.c-pinocchio { background: linear-gradient(135deg, #3b82f6, #fa000c); }
+.c-moveit { background: linear-gradient(135deg, #f90306, #ea000c); }
+.c-isaac { background: linear-gradient(135deg, #76b900, #366e00); }
+.c-rl { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.c-mujoco { background: linear-gradient(135deg, #f97316, #ea580c); }
+
+/* Robot Platform Colors */
+.c-arm { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.c-legged { background: linear-gradient(135deg, #eab308, #ca8a04); }
+.c-human { background: linear-gradient(135deg, #ec4899, #db2777); }
+.c-reachy { background: linear-gradient(135deg, #14b8a6, #0d9488); }
+.c-lekiwi { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.c-gray { background: #eee; color: #aaa; }
+
+.course-info { padding: 1rem; flex-grow: 1; display: flex; flex-direction: column; }
+.course-meta { display: flex; justify-content: space-between; font-size: 0.75rem; color: #888; margin-bottom: 0.5rem; }
+.level { font-weight: 700; text-transform: uppercase; }
+.beg { color: #059669; } .int { color: #d97706; } .adv { color: #dc2626; }
+
+.course-info h3 { font-size: 1.1rem; margin: 0 0 0.5rem 0; color: #1f2937; line-height: 1.3; }
+.course-info p { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 1.5rem; flex-grow: 1; }
+
+.btn-start {
+  display: block; text-align: center; padding: 8px 0; background:  #ecfdf5; color: #059669; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
 }
-@media (prefers-reduced-motion: reduce) {
-  .robotics-page *, .robotics-page *::before, .robotics-page *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+.course-card:hover .btn-start { background: #10b981; color: white; }
+
+.btn-plan {
+  display: block; 
+  text-align: center; 
+  padding: 8px 0; 
+  font-weight: 600; 
+  font-size: 0.9rem; 
+  border-radius: 8px; 
+  transition: all 0.2s;
+
+  /* 差异化设计 */
+  background: #fff7ed; /* 极浅的橙色背景 */
+  color: #ea580c;      /* 较深的橙色文字 */
+  cursor: default;
+}
+
+/* Hover 效果：保持暖色调，不像 Start 按钮那样反转颜色，避免抢夺视线 */
+.course-card:hover .btn-plan {
+  background: #ffedd5;
+  color: #c2410c;
 }
 
 
-/* Optimized collapsed-card learning path additions */
-.kit-index-panel {
-  margin: 1.6rem 0 2.2rem;
-  padding: 1.25rem;
-  border-radius: 24px;
-  border: 1px solid var(--rp-border);
-  background: linear-gradient(135deg, var(--rp-card-bg), var(--rp-card-bg-soft));
-  box-shadow: var(--rp-shadow-sm);
-}
-.compact-title { margin-bottom: 1rem; }
-.kit-index-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 0.8rem;
-}
-.kit-index-grid a {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  grid-template-areas: "icon title" "icon desc";
-  gap: 0.18rem 0.75rem;
-  align-items: center;
-  padding: 0.9rem;
-  border-radius: 16px;
-  border: 1px solid var(--rp-border);
-  background: var(--rp-card-bg);
-  text-decoration: none !important;
-  color: inherit;
-  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
-}
-.kit-index-grid a:hover {
-  transform: translateY(-2px);
-  border-color: var(--rp-accent-border);
-  box-shadow: var(--rp-shadow-accent);
-}
-.kit-index-grid span {
-  grid-area: icon;
-  width: 2.35rem;
-  height: 2.35rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  background: var(--rp-accent-soft);
-  font-size: 1.2rem;
-}
-.kit-index-grid strong { grid-area: title; color: var(--rp-text); }
-.kit-index-grid small { grid-area: desc; color: var(--rp-text-muted); line-height: 1.35; }
-.product-card { scroll-margin-top: 6rem; }
-.product-card .summary-action { position: relative; min-width: 6.3rem; text-align: center; }
-.product-card[open] .summary-action { font-size: 0; }
-.product-card[open] .summary-action::after { content: "Close learning path"; font-size: 0.76rem; }
-.product-card:not([open]) summary { background: linear-gradient(90deg, var(--rp-card-bg), var(--rp-card-bg-soft)); }
-.product-card:not([open]) .product-head span { color: var(--rp-text-muted); }
-.product-body { animation: rpFadeIn 0.18s ease-out; }
-@keyframes rpFadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.product-meta-grid div, .mini-track, .resource-columns div, .kit-index-panel {
-  backdrop-filter: blur(6px);
-}
-html[data-theme='dark'] .kit-index-panel {
-  background: linear-gradient(135deg, var(--rp-card-bg), var(--rp-card-bg-soft));
-}
-html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
-@media (max-width: 900px) {
-  .kit-index-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 560px) {
-  .kit-index-panel { padding: 1rem; border-radius: 20px; }
-  .kit-index-grid { grid-template-columns: 1fr; }
-}
+/* =========================================
+   4. Dark Mode 适配
+   ========================================= */
+html[data-theme='dark'] .tab-nav { background: #2f2f32; box-shadow: none; }
+html[data-theme='dark'] .tab-slider { background: #444; }
+html[data-theme='dark'] .tab-item { color: #aaa; }
+html[data-theme='dark'] #tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #60a5fa; }
+html[data-theme='dark'] #tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #a78bfa; }
 
+/* Hardware Dark Mode */
+html[data-theme='dark'] .quick-nav-container { background: linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); border: none; }
+html[data-theme='dark'] .nav-item { color: #e5e7eb; background: rgb(47, 50, 57); box-shadow: 0 2px 4px rgba(0,0,0,0.4); }
+html[data-theme='dark'] .category-card { background: #1b1b1d; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border-color: #303033; }
+html[data-theme='dark'] .content-card { background: #242526; color: #e5e7eb; border-color: #303033; }
+html[data-theme='dark'] .content-card:hover { background: #2f2f32; border-color: #60a5fa; color: #60a5fa; }
+html[data-theme='dark'] .content-card::after { background: #60a5fa; }
+html[data-theme='dark'] .recommended { background: rgba(255, 107, 107, 0.15); color: #ff8e8e; border-color: rgba(255, 142, 142, 0.3); }
+html[data-theme='dark'] h2, html[data-theme='dark'] h3 { color: #f9fafb; }
+
+/* Learning Dark Mode */
+html[data-theme='dark'] .course-card { background: #1b1b1d; border-color: #303033; }
+html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
+html[data-theme='dark'] .course-info p { color: #9ca3af; }
+html[data-theme='dark'] .btn-start { background: #2f2f32; color: #60a5fa; }
+html[data-theme='dark'] .course-card:hover .btn-start { background: #60a5fa; color: white; }
+html[data-theme='dark'] .btn-plan { background: #2f2f32; color: #ea580c; }
+html[data-theme='dark'] .course-card:hover .btn-plan { background: #ea580c; color: white; }
+html[data-theme='dark'] .learning-section-title { color: #ccc; border-bottom-color: #444; }
+
+@media (max-width: 768px) {
+  .quick-nav { flex-direction: column; gap: 0.5rem; }
+  .nav-item { flex-direction: row; justify-content: start; padding: 0.8rem 1rem; }
+  .nav-item .icon { margin-bottom: 0; margin-right: 0.8rem; }
+  .card-container, .course-grid { grid-template-columns: 1fr; }
+  .category-card { padding: 1.2rem; }
+  .tab-nav { width: 100%; }
+  .tab-item { padding: 10px 15px; font-size: 0.9rem; flex: 1; justify-content: center; }
+}
 `}</style>
