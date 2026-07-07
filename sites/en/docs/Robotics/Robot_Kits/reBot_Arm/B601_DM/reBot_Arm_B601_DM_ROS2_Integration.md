@@ -54,9 +54,11 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/
   <div className="safety-alert-content">
     <strong>Safety Warning: Clear the Robot Workspace Before Running</strong>
     <p>
-      Before running any program that moves the robotic arm, clear all valuable items, fragile objects, tools, cables, and unrelated objects within a
+      Before running any program that moves the robotic arm, clear all valuable items,
+      fragile objects, tools, cables, and unrelated objects within a
       <strong> 1-meter radius </strong>
-      of the robot workspace. During debugging and operation, personnel must stay away from the robot motion range.
+      of the robot workspace. During debugging and operation, personnel must stay away
+      from the robot motion range.
     </p>
     <ul>
       <li>Do not touch joints, motors, links, the gripper, or the end effector after the robotic arm is powered on.</li>
@@ -174,7 +176,8 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/
     <span>Hardware</span>
     <h2>BOM, wiring, and environment checklist</h2>
     <p>
-      Prepare the robotic arm, power supply, USB2CAN serial bridge, and Ubuntu host before building the ROS2 workspace.
+      Prepare the robotic arm, power supply, USB2CAN serial bridge, and Ubuntu host
+      before building the ROS2 workspace.
     </p>
   </div>
 
