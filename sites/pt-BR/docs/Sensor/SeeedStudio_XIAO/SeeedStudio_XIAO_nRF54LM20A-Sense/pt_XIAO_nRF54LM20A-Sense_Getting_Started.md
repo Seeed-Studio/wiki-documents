@@ -69,7 +69,7 @@ O Seeed Studio XIAO nRF54LM20A Sense é uma placa de desenvolvimento sem fio com
     <tr>
       <td><strong>Flash</strong></td>
       <td colspan="2">2 MB de memória não volátil (NVM)</td>
-    </tr]
+    </tr>
     <tr>
       <td><strong>Flash Externa</strong></td>
       <td colspan="2">8MB de flash externa onboard</td>
