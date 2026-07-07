@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-02 17:22:35 (北京时间)
-// 多语言页面: 2362 个
+// 生成时间: 2026-07-06 17:44:01 (北京时间)
+// 多语言页面: 2364 个
 
 (function() {
   'use strict';
@@ -3496,6 +3496,13 @@
     "pt"
   ],
   "/recamera_meshtastic_ha_security_system": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_motion_detection": [
     "cn",
     "en",
     "es",
@@ -11180,6 +11187,13 @@
     "pt"
   ],
   "/respeaker_2_mics_pi_hat_v2_speech_recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_getting_started": [
     "cn",
     "en",
     "es",

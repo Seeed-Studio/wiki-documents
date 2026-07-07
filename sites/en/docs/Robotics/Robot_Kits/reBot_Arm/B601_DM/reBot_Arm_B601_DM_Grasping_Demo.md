@@ -1,102 +1,199 @@
 ---
-description: This tutorial shows how to build a complete visual grasping demo for the reBot Arm B601 using the YOLO/OBB grasping pipeline.
+description: This tutorial shows how to build a complete visual grasping demo for the reBot Arm B601 using an RGB-D camera, YOLO / OBB, and optional GraspNet grasping pipelines.
 title: reBot Arm B601 Visual Grasping Demo
 keywords:
   - reBot Arm
-  - B601
+  - B601-DM
+  - B601-RS
   - Grasping
-  - Gemini 2
+  - RGB-D
   - YOLO
+  - GraspNet
   - Hand-Eye Calibration
   - Robot
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-06-30
+  date: 2026-07-05
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-05'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
 ---
 
 # reBot Arm B601 Visual Grasping Demo
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
-</p>
+<div className="rebot-page">
+  <section className="doc-hero">
+    <div>
+      <span className="eyebrow">Seeed Studio Robotics Wiki</span>
+      <h2>Build a desktop visual grasping system with RGB-D vision, YOLO, and reBot Arm</h2>
+      <p>
+        This guide walks through a complete visual grasping demo: environment setup, camera integration,
+        robotic arm SDK configuration, hand-eye calibration, YOLO / OBB / GraspNet grasp estimation,
+        and real robotic arm execution.
+      </p>
+      <div className="hero-actions">
+        <a href="#quick-path">View Workflow</a>
+        <a href="#run">Run the Demo</a>
+      </div>
+    </div>
+    <div className="hero-card">
+      <strong>Recommended Setup</strong>
+      <span>reBot Arm B601-DM / B601-RS</span>
+      <span>Orbbec Gemini 2 or RealSense D435i / D405</span>
+      <span>Ubuntu 22.04 + Python 3.10</span>
+    </div>
+  </section>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<div className="safety-alert">
+  <div className="safety-alert-icon">⚠️</div>
+  <div className="safety-alert-content">
+    <strong>Safety Warning: Clear the Robot Workspace Before Running</strong>
+    <p>
+      Before running any program that moves the robotic arm, clear all valuable items,
+      fragile objects, tools, cables, and unrelated objects within a <strong>1-meter radius</strong>
+      of the robot workspace. During debugging and operation, personnel must stay outside
+      the robot motion range.
+    </p>
+    <ul>
+      <li>Do not touch joints, motors, links, the gripper, or the end effector after the robotic arm is powered on.</li>
+      <li>Before calibration, teleoperation, IK control, trajectory control, gravity compensation, ROS2 / MoveIt execution, or visual grasping, make sure the arm base is firmly fixed.</li>
+      <li>If abnormal motion, noise, vibration, loose cables, poor power contact, or communication loss occurs, stop the program immediately and power off the system before inspection.</li>
+      <li>Always power off the system before plugging or unplugging motor cables, CAN cables, USB2CAN / PCAN-USB adapters, XT30 connectors, or power connectors.</li>
+    </ul>
+  </div>
+</div>
 
-<br />
 
-<p align="center">
-    <a href="./LICENSE">
-        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
-    </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
-    <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Camera-RGB--D-green.svg" alt="Camera" />
-    <img src="https://img.shields.io/badge/Detection-YOLO-yellow.svg" alt="YOLO" />
-</p>
+  <nav className="doc-nav" aria-label="visual grasping navigation">
+    <a href="#quick-path">Workflow</a>
+    <a href="#hardware">Hardware</a>
+    <a href="#install">Installation</a>
+    <a href="#camera-sdk">Camera SDK</a>
+    <a href="#graspnet">GraspNet</a>
+    <a href="#run">Run & Debug</a>
+    <a href="#config">Configuration</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</div>
+
+<div className="rebot-page">
+  <div className="image-frame">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/demo.gif" alt="reBot Arm B601 visual grasping demo" />
+  </div>
+</div>
 
 <p align="center">
   <strong>Depth Perception · Object Detection · Hand-Eye Calibration · Autonomous Grasping · Fully Open Source</strong>
 </p>
 
-YOLO is a widely used family of real-time object detection models that can localize and classify targets in a single forward pass. This tutorial uses YOLO, an RGB-D depth camera, and the reBot Arm B601-DM to build a working desktop visual grasping demo, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
-
-<p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/demo.gif" alt="reBot Arm B601-DM visual grasping demo" />
-</p>
-
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/6dqKZNh_D7k?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="video-container">
+  <iframe
+    width="900"
+    height="600"
+    src="https://www.youtube.com/embed/6dqKZNh_D7k?autoplay=0"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen>
+  </iframe>
 </div>
----
+
+<div className="rebot-page">
+
+<section id="quick-path" className="section-card">
+
+## Recommended Workflow
+
+<div className="path-grid">
+  <div className="path-card"><span>Step 1</span><strong>Prepare Hardware</strong><p>Confirm the arm version, power supply, USB2CAN / CAN interface, and RGB-D camera connection.</p></div>
+  <div className="path-card"><span>Step 2</span><strong>Install Environment</strong><p>Create the conda environment and install the arm SDK, camera SDK, YOLO, and optional GraspNet.</p></div>
+  <div className="path-card"><span>Step 3</span><strong>Complete Hand-Eye Calibration</strong><p>Collect ArUco poses and solve the Eye-in-Hand calibration transform.</p></div>
+  <div className="path-card"><span>Step 4</span><strong>Run the Grasping Demo</strong><p>Validate perception and target poses with dry-run first, then execute with the real arm.</p></div>
+</div>
+
+:::tip
+Complete the quick-start guide for your arm before running this demo: [B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/) or [B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/).
+:::
+
+</section>
+
+<section className="section-card">
 
 ## Project Introduction
 
-**reBot Arm B601 Visual Grasping Demo** is a visual grasping algorithm demonstration project based on the [reBot Arm B601](https://github.com/vectorBH6/reBotArm_control_py) robotic arm control library and RGB-D depth camera. The system supports both DM and RS configurations for the B601 arm. It uses the YOLO model for real-time desktop object detection, estimates grasp poses via OBB minimum-area rectangles, performs hand-eye calibration to transform grasp points from the camera frame to the robot base frame, and drives the robotic arm to complete autonomous grasping.
+**reBot Arm B601 Visual Grasping Demo** is an open-source visual grasping project built around an RGB-D depth camera and the reBot robotic arm control library. The system supports both B601-DM and B601-RS configurations. It uses YOLO for real-time desktop object detection, estimates grasp orientation with an OBB minimum-area rectangle, transforms camera-frame grasp points into the robot base frame through hand-eye calibration, and finally drives the robotic arm to complete autonomous grasping.
 
-### Core Features
+### Core Capabilities
 
-- 📷 **Depth Perception** — Supports RGB-D depth cameras such as Orbbec Gemini 2 and Intel RealSense D435i / D405
-- 🔍 **Object Detection** — YOLO-based recognition with open-vocabulary custom class support
-- 📐 **Pose Estimation** — OBB minimum-area rectangle short axis for gripper orientation, depth quantile for grasp height estimation
-- 🔄 **Coordinate Transformation** — TSAI hand-eye calibration (Eye-in-Hand), transforming camera frame grasp points to robot base frame
-- 🦾 **Motion Execution** — reBotArm_control_py IK + trajectory controller with built-in gripper force control state machine
+<div className="feature-grid">
+  <div><strong>RGB-D Depth Perception</strong><span>Supports Orbbec Gemini 2, RealSense D435i / D405, and similar RGB-D cameras.</span></div>
+  <div><strong>YOLO Object Detection</strong><span>Supports open-vocabulary classes and standard YOLO segmentation models.</span></div>
+  <div><strong>OBB Grasp Estimation</strong><span>Uses the short axis of the minimum-area rectangle for gripper orientation and depth quantiles for grasp height.</span></div>
+  <div><strong>GraspNet 6D Grasping</strong><span>Optionally adds richer 6D grasp candidates for more complex objects.</span></div>
+  <div><strong>Eye-in-Hand Calibration</strong><span>Uses TSAI hand-eye calibration to transform camera-frame grasp points to the robot base frame.</span></div>
+  <div><strong>Real Arm Execution</strong><span>Uses reBotArm_control_py for IK, trajectory control, and gripper force control.</span></div>
+</div>
 
----
+</section>
+
+<section id="hardware" className="section-card">
+
+
+<div className="safety-alert compact">
+  <div className="safety-alert-icon">⚠️</div>
+  <div className="safety-alert-content">
+    <strong>Safety Check Before Running</strong>
+    <p>Clear all valuable objects and keep all personnel away within a <strong>1-meter radius</strong> of the robot workspace. Make sure the arm is firmly fixed before running this section.</p>
+  </div>
+</div>
 
 ## Hardware Configuration
 
-| Component | Model / Requirements |
+| Component | Model / Requirement |
 |------|------------|
-| Robotic Arm | reBot Arm B601 (DM / RS configurations) |
+| Robotic Arm | reBot Arm B601-DM or reBot Arm B601-RS |
 | Depth Camera | Orbbec Gemini 2, Intel RealSense D435i / D405 |
-| Communication Interface | USB2CAN serial bridge (arm); USB 3.0 (camera) |
+| Communication Interface | B601-DM uses a USB2CAN serial bridge; B601-RS uses PCAN-USB / SocketCAN |
 | Host | Ubuntu 22.04+, Python 3.10, x86_64 |
 
-**Wiring Instructions**
-
-1. Connect the depth camera to the host via USB 3.0.
-2. Connect the USB2CAN adapter to the arm CAN bus.
-3. Make sure the 24V power supply, camera, and robotic arm are all connected securely.
-4. Set permissions:
+### Wiring and Permissions
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*   # Depth camera USB permissions
-sudo chmod 666 /dev/ttyUSB0        # USB2CAN (adjust port number as needed)
+sudo chmod 666 /dev/ttyUSB0        # B601-DM USB2CAN; adjust the port if needed
 ```
 
----
+For B601-RS, bring up the CAN interface before running calibration or grasping scripts:
+
+```bash
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up
+ip -details link show can0
+```
+
+:::danger
+B601-DM uses a 24V DC power supply, while B601-RS uses a 48V DC power supply. Make sure the power supply, arm version, and SDK configuration match. Do not mix them.
+:::
+
+</section>
+
+<section id="install" className="section-card">
 
 ## Environment Installation
+
+| Item | Requirement |
+|------|------|
+| OS | Ubuntu 22.04+ |
+| Python | 3.10 |
+| Recommended Environment | conda |
+| Recommended Workspace | `rebot_grasp` |
+| Recommended Environment Name | `rebotarm` |
 
 ### Step 1. Clone the Repository
 
@@ -114,17 +211,12 @@ git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-### Step 2. Create and Configure the conda Environment
+### Step 2. Create and Activate the conda Environment
 
 ```bash
 conda env create -f environment.yml
 conda activate rebotarm
 ```
-:::tip
-If you want to use a different environment name, replace `rebotarm` in the command with your custom name.
-
-:::
-
 
 ### Step 3. Install the Robotic Arm Control Library
 
@@ -135,7 +227,7 @@ pip install -e .
 cd ../..
 ```
 
-If `pip install -e .` reports `Multiple top-level packages discovered in a flat-layout`, add explicit package discovery configuration to `reBotArm_control_py`'s `pyproject.toml`, then re-run `pip install -e .`:
+If `pip install -e .` reports `Multiple top-level packages discovered in a flat-layout`, add the following package discovery configuration to `pyproject.toml` in `reBotArm_control_py`:
 
 ```toml
 [build-system]
@@ -146,133 +238,101 @@ build-backend = "setuptools.build_meta"
 include = ["reBotArm_control_py*"]
 ```
 
-The visual grasping program reads the SDK configuration and automatically selects the corresponding arm control mode and gripper parameters.
+</section>
 
-### Step 4. Install the Depth Camera SDK
+<section id="camera-sdk" className="section-card">
 
-This project supports RGB-D depth cameras such as Orbbec Gemini 2 and RealSense D435i / D405. Please install the corresponding SDK for your actual camera; if the camera driver can already be imported normally in the current environment, you may skip this step.
+## Install the Depth Camera SDK
 
-**Orbbec Gemini 2**
+<details open className="content-details">
+<summary>Orbbec Gemini 2</summary>
 
-Orbbec Gemini 2 depends on **pyorbbecsdk** (Python version of Orbbec SDK v2). It is recommended to install the prebuilt Python package directly:
-
-**Option 1: Install via pip (recommended)**
+Orbbec Gemini 2 depends on `pyorbbecsdk`. The recommended approach is to install the prebuilt Python package:
 
 ```bash
 pip install pyorbbecsdk2
 ```
 
-**Option 2: Get from GitHub**
+You can also build from source:
 
 ```bash
-# Install build dependencies
 sudo apt-get install -y cmake build-essential libusb-1.0-0-dev
-
 cd sdk
 git clone https://github.com/orbbec/pyorbbecsdk.git
 cd pyorbbecsdk
 pip install -e .
 ```
 
-For mainland China users, you can use:
+For mainland China users:
+
 ```bash
 git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 ```
 
-When installing from source, build the native extension with CMake first to ensure `install/lib` contains `pyorbbecsdk*.so` and Orbbec shared libraries, then run `pip install -e .`.
-
-Note: If all installation methods above fail, please refer to the official Orbbec documentation below for installation.
-
-:::tip
-For first-time use, it is recommended to install udev rules:
+For first-time use, install udev rules:
 
 ```bash
 sudo bash scripts/install_udev_rules.sh
 sudo udevadm control --reload-rules
 sudo udevadm trigger
-```
-
-**Verify Installation**
-
-```bash
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
 ```
-:::
 
-**OrbbecViewer (optional, for camera verification)**
+</details>
 
-After downloading the prebuilt package and running `OrbbecViewer`, you can verify the camera connection and depth stream are working properly before running the Demo.
-
-- GitHub: https://github.com/orbbec/OrbbecSDK_v2/releases
-- Gitee: https://gitee.com/orbbecdeveloper/OrbbecSDK_v2/releases
-
-**RealSense D435i / D405**
-
-RealSense cameras depend on `pyrealsense2`. You can usually install it directly via pip:
+<details className="content-details">
+<summary>Intel RealSense D435i / D405</summary>
 
 ```bash
 pip install pyrealsense2
 python -c "import pyrealsense2; print('pyrealsense2 OK')"
 ```
 
-If the system needs the complete RealSense toolkit or udev rules, please refer to the RealSense SDK official documentation to install `librealsense2`.
+If you need the full RealSense toolkit or udev rules, refer to the official Intel RealSense SDK documentation and install `librealsense2`.
 
+</details>
 
-**SDK Resource Summary**
+</section>
 
-| Resource | Link |
-|------|------|
-| Gemini 2 Product Page | https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51 |
-| Development Resources | https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1 |
-| Orbbec SDK v2 | https://github.com/orbbec/OrbbecSDK_v2 |
-| SDK v2 API Documentation | https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/ |
-| pyorbbecsdk | https://github.com/orbbec/pyorbbecsdk |
-| pyorbbecsdk Documentation | https://orbbec.github.io/pyorbbecsdk/index.html |
-| ROS2 Wrapper | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main |
-| Intel RealSense SDK | https://github.com/realsenseai/librealsense |
+<section id="graspnet" className="section-card">
 
-### Step 5. Configure GraspNet (optional)
+## Configure GraspNet (Optional)
 
-To achieve more accurate grasp pose estimation for objects, this project adapts [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) to improve robotic arm grasping performance.
+Skip this section if you only want to run the YOLO + OBB grasping pipeline first. Configure GraspNet when you need richer 6D grasp pose candidates.
 
-The GraspNet `pointnet2` / `knn` extensions require a CUDA compiler. Before starting, confirm that `nvcc` is available in the current environment and check that the CUDA version reported by `nvcc` matches the CUDA version used to build PyTorch:
+Before building the local operators, make sure `nvcc` is available and matches the CUDA version used by PyTorch:
 
 ```bash
 nvcc --version
 python -c "import torch; print(torch.__version__, torch.version.cuda)"
 ```
 
-If `nvcc` is missing, or if the CUDA version reported by `nvcc` does not match `torch.version.cuda`, install a CUDA compiler that matches your current PyTorch CUDA version. For example, when PyTorch shows `13.0`:
+If `nvcc` is missing or does not match `torch.version.cuda`, install a CUDA compiler that matches your current PyTorch CUDA version. For example, when PyTorch reports `13.0`:
 
 ```bash
 conda install -c nvidia cuda-nvcc=13.0
 ```
 
-You can also install a PyTorch build that matches your current `nvcc` version instead. The two versions must match, otherwise building `pointnet2` / `knn` will fail with `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`.
+Build GraspNet local operators:
 
 ```bash
 cd sdk
 git clone https://github.com/graspnet/graspnet-baseline.git
 cd graspnet-baseline
-
-# Install PyTorch for your CUDA version first, then install GraspNet runtime dependencies
 pip install open3d tensorboard Pillow tqdm
 
-# Configure CUDA build paths before building the local operators.
 export CUDA_HOME=$CONDA_PREFIX
 export TORCH_CUDA_ARCH_LIST="12.0"
 export CPATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPATH
 export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPLUS_INCLUDE_PATH
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 
-# Build CUDA operators
 cd pointnet2
 pip install . --no-build-isolation
 cd ../knn
 pip install . --no-build-isolation
 cd ..
 
-# Install GraspNet API
 git clone https://github.com/graspnet/graspnetAPI.git
 cd graspnetAPI
 sed -i "s/'sklearn'/'scikit-learn'/" setup.py
@@ -280,81 +340,71 @@ pip install .
 cd ../../..
 ```
 
-:::tip
-Note: If you directly follow the official graspnet-baseline repository documentation and use `python setup.py install`, CUDA / PyTorch related errors may occur. It is recommended to use `pip install . --no-build-isolation` so the extension is built against the PyTorch and CUDA configuration already installed in the current conda environment.
-:::
+### Configure the Pretrained Model
 
-:::tip
-If building fails with `fatal error: cusparse.h: No such file or directory`, run `find $CONDA_PREFIX -name cusparse.h` and add the directory containing `cusparse.h` to `CPATH` / `CPLUS_INCLUDE_PATH`. If the CUDA headers come from conda `cuda-toolkit`, the path is usually `$CONDA_PREFIX/targets/x86_64-linux/include`, not the pip `nvidia/cu13/include` path shown above.
-:::
-
-:::tip
-Additionally, older GraspNet API dependencies may still use the deprecated `sklearn` package name. The `sed` command above replaces it with `scikit-learn` to avoid package name issues during installation. Unless you also upgrade the GraspNet API dependency stack, keep its `numpy==1.23.4` constraint because `transforms3d==0.3.1` still uses NumPy aliases such as `np.float`.
-:::
-
-**Configure Pretrained Model**
-
-Download the official GraspNet pretrained weights from the graspnet-baseline official repository [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A), and place the downloaded `checkpoint-rs.tar` at:
+Download the official GraspNet pretrained weight `checkpoint-rs.tar`, and place it at:
 
 ```bash
 sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
 ```
 
-Then verify in `config/default.yaml`:
+Then verify `config/default.yaml`:
 
 ```yaml
 graspnet:
   checkpoint: "checkpoint-rs.tar"
 ```
 
-The `checkpoint` field supports three forms: a filename only is resolved under `sdk/graspnet-baseline/checkpoints/`; a relative path is resolved from the project root; an absolute path is used directly.
+</section>
 
----
+<section className="section-card">
 
 ## Directory Structure
 
-```
+```text
 rebot_grasp/
 ├── config/
-│   ├── default.yaml              # Main configuration file
+│   ├── default.yaml
 │   └── calibration/
 │       └── <camera_type>/
-│           ├── intrinsics.npz    # Camera intrinsics
-│           └── hand_eye.npz      # Hand-eye calibration results
+│           ├── intrinsics.npz
+│           └── hand_eye.npz
 ├── drivers/
 │   ├── camera/
-│   │   ├── base.py               # Camera abstract base class
-│   │   ├── orbbec_gemini2.py     # Gemini 2 driver
-│   │   └── realsense.py          # RealSense driver (alternative)
 │   └── robot/
-│       └── grasp_driver.py       # Lightweight grasping helper based on arm SDK
 ├── calibration/
-│   ├── aruco_pose.py             # ArUco pose estimation
-│   └── hand_eye.py               # Hand-eye calibration solver
+│   ├── aruco_pose.py
+│   └── hand_eye.py
 ├── utils/
-│   ├── ordinary_grasp.py         # OBB grasp pose estimation and visualization
-│   └── transforms.py             # Coordinate transformation utilities
 ├── scripts/
-│   ├── main.py                   # Main grasping program
-│   ├── set.py                    # Grasp and place program
+│   ├── main.py
+│   ├── set.py
 │   ├── ordinary_grasp_pipeline.py
-│   ├── object_detection.py
+│   ├── graspnet_camera_demo.py
+│   ├── grasp.py
 │   └── collect_handeye_eih.py
 ├── sdk/
-│   ├── pyorbbecsdk/              # Orbbec SDK Python wrapper
-│   └── reBotArm_control_py/      # reBot Arm SDK
-└── environment.yml               # Recommended conda environment file
+└── environment.yml
 ```
 
+</section>
 
-## Running and Debugging
+<section id="run" className="section-card">
+
+
+<div className="safety-alert compact">
+  <div className="safety-alert-icon">⚠️</div>
+  <div className="safety-alert-content">
+    <strong>Safety Check Before Running</strong>
+    <p>Clear all valuable objects and keep all personnel away within a <strong>1-meter radius</strong> of the robot workspace. Make sure the arm is firmly fixed before running this section.</p>
+  </div>
+</div>
+
+## Run and Debug
 
 ### 0. Confirm Arm Version and SDK Configuration
 
-Before running scripts that connect to the robotic arm, confirm that the arm version, power supply, and SDK configuration are consistent:
-
-- Please complete the basic arm preparation first: [B601-DM Quick Start](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/) or [B601-RS Quick Start](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/).
-- In `sdk/reBotArm_control_py/config/rebotarm.yaml`, select the corresponding hardware configuration:
+In `sdk/reBotArm_control_py/config/rebotarm.yaml`, select the corresponding hardware configuration:
 
 ```yaml
 hardware_yaml: rebotarm_dm.yaml
@@ -366,165 +416,143 @@ Or:
 hardware_yaml: rebotarm_rs.yaml
 ```
 
-- B601-DM uses 24V DC power, B601-RS uses 48V DC power. Please confirm the power adapter and wiring match the arm version.
-- When using B601-DM, confirm the serial bridge device path in the SDK configuration matches the actual device.
-- When using B601-RS, start the CAN interface before running calibration or grasping scripts:
-
-```bash
-sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
-sudo ip link set can0 up
-ip -details link show can0
-```
-
 ### 1. Hand-Eye Calibration (Required Before Grasping)
 
 ```bash
 python scripts/collect_handeye_eih.py
 ```
 
-In automatic mode, the arm automatically traverses 50 preset poses, and automatically samples when ArUco is detected stably. When finishing normally or being interrupted midway, the script tries to compute and save the calibration result; at least 5 samples are required, with 15 or more recommended for more stable results.
+In automatic mode, the arm traverses preset poses and samples automatically when ArUco detection is stable. At least 5 samples are required, and 15 or more samples are recommended for better stability.
 
-If you want to manually move the arm for collection, use:
+To manually move the arm for sample collection:
 
 ```bash
 python scripts/collect_handeye_eih.py --manual
 ```
 
-In manual mode, the arm enters gravity-compensation mode. Push the end effector to a suitable viewing angle and press `Enter` to capture, press `c` or `q` to finish and compute.
-
 :::tip
-If you find that the robotic arm's grasping accuracy cannot meet your requirements after calibration, you can set the `X` (front-back), `Y` (left-right), `Z` (up-down) parameters in `config/default.yaml` under `calibration.hand_eye_compensation_m` to provide positional compensation.
+If the grasping accuracy is not good enough after calibration, adjust `X`, `Y`, and `Z` in `calibration.hand_eye_compensation_m` in `config/default.yaml`.
 :::
 
-### 2. `scripts/main.py` — Main Grasping Program
+### 2. Main Grasping Program: `scripts/main.py`
 
-Complete visual grasping pipeline:
+Complete visual grasping flow:
 
-1. Initialize RGB-D camera, confirm image stream is available
-2. Enable arm and gripper, move to ready position
-3. Real-time camera preview + YOLO object detection and instance segmentation
-4. OBB short axis estimates gripper orientation, depth quantile estimates grasp height
-5. Press `G` to freeze frame, compute arm target pose via hand-eye transformation
-6. Arm moves to pre-grasp point → descends → gripper closes → lifts → returns to ready position
+1. Initialize the RGB-D camera and confirm the image stream is available.
+2. Enable the arm and gripper, then move to the ready pose.
+3. Run real-time camera preview with YOLO object detection and instance segmentation.
+4. Estimate gripper orientation using the OBB short axis and estimate grasp height using a depth quantile.
+5. Press `G` to freeze the frame and compute the target arm pose through hand-eye transformation.
+6. Move to the pre-grasp point, descend, close the gripper, lift, and return to the ready pose.
 
-### 3. `scripts/set.py` — Grasp and Place Program
+```bash
+python scripts/main.py
+```
 
-Function: Grasp the banana and place it in the box
+For debugging, start with:
 
-Completed flow:
-1. Camera and arm initialization, move to ready position
-2. Real-time camera preview + YOLO object detection and instance segmentation
-3. Press `G` to freeze frame, compute arm target pose via hand-eye transformation
-4. Arm moves to grasp banana and lift
-5. Arm places banana in the box and returns to initial pose
-6. Press `Q` to exit system, arm returns to zero position
+```bash
+python scripts/main.py --dry-run
+```
 
+### 3. Grasp-and-Place Program: `scripts/set.py`
 
-### 4. `scripts/ordinary_grasp_pipeline.py` — Simplified Grasp Testing
+This script demonstrates grasping a banana and placing it into a box.
 
-Does not depend on the robotic arm; only verifies OBB grasp pose estimation and visualization effects, suitable for debugging the perception module.
+```bash
+python scripts/set.py
+```
 
-### 5. `scripts/graspnet_camera_demo.py` — GraspNet Camera Estimation Demo
+### 4. Simplified Grasp Test: `scripts/ordinary_grasp_pipeline.py`
 
-Does not connect to the robotic arm; only runs GraspNet 6D grasp pose estimation using the RGB-D camera. The script keeps a live camera preview, uses YOLO detection boxes to select the target area, then filters feasible grasp candidates from GraspNet full-scene candidates within the target bbox. Press `G` or `Space` to run inference on the current frame, press `R` to resume live preview, press `Q` or `Esc` to exit; after inference, you can view the point cloud and grasp candidates via Open3D.
+This script does not connect to the arm. It only verifies OBB grasp pose estimation and visualization.
+
+```bash
+python scripts/ordinary_grasp_pipeline.py
+```
+
+### 5. GraspNet Camera Estimation: `scripts/graspnet_camera_demo.py`
+
+This script does not connect to the arm. It runs GraspNet 6D grasp pose estimation with the RGB-D camera only.
 
 ```bash
 python scripts/graspnet_camera_demo.py
 ```
 
-### 6. `scripts/grasp.py` — GraspNet Robotic Arm Grasping Program
-
-Connects GraspNet estimation results to the robotic arm execution flow based on `graspnet_camera_demo.py`: YOLO selects the target, GraspNet outputs 6D grasp pose, hand-eye calibration transforms it to the robot base frame, then checks IK reachability and executes pre-grasp, grasp, and retreat motions. For debugging, it is recommended to first use `--dry-run` to only print target pose and candidate filtering results.
+### 6. GraspNet Robotic Arm Grasping: `scripts/grasp.py`
 
 ```bash
 python scripts/grasp.py --dry-run
 python scripts/grasp.py --target-class "light blue coffee cup"
 ```
 
-### 7. `scripts/object_detection.py` — Basic Detection Demo
+</section>
 
-Pure YOLO detection demonstration with real-time display of detection boxes and confidence scores, no grasping logic.
+<section id="config" className="section-card">
 
----
+## `default.yaml` Parameter Reference
 
-## default.yaml Parameter Description
+<details open className="content-details">
+<summary>Camera and Calibration</summary>
 
-#### 1. Camera and Calibration Configuration (`camera` & `calibration`)
-
-| Parameter | Type / Options | Meaning and Description |
+| Parameter | Type / Options | Meaning |
 | :--- | :--- | :--- |
-| `camera.type` | `realsense_d435i`<br/>`realsense_d405`<br/>`orbbec_gemini2` | **Camera Type**: Specifies the camera hardware connected to the current system. |
-| `camera.serial` | `string` / `null` | **Device Serial Number**: Specifies the device SN number. Set to `null` to use the first available device detected by the system. |
-| `calibration.aruco.marker_length_m` | `float` | **ArUco Marker Size**: The actual physical side length of the ArUco calibration marker used for hand-eye calibration, in **meters (m)**. |
-| `calibration.hand_eye_compensation_m` | `array` | **Hand-Eye Calibration Translation Compensation**: XYZ manual translation compensation (format `[X, Y, Z]`) executed in the **robot base frame** after hand-eye calibration is complete, in **meters (m)**. If all three values are `0.0`, the compensation matrix is the identity matrix. |
+| `camera.type` | `realsense_d435i` / `realsense_d405` / `orbbec_gemini2` | Camera type connected to the system. |
+| `camera.serial` | `string` / `null` | Device serial number; set to `null` to use the first available device. |
+| `calibration.aruco.marker_length_m` | `float` | ArUco marker side length in meters. |
+| `calibration.hand_eye_compensation_m` | `array` | XYZ translation compensation in the robot base frame, in meters. |
 
----
+</details>
 
-#### 2. Object Detection Configuration (`detection`)
+<details className="content-details">
+<summary>Detection and Grasp Pipeline</summary>
 
-| Parameter | Type | Meaning and Description |
+| Parameter | Type | Meaning |
 | :--- | :--- | :--- |
-| `detection.conf_threshold` | `float` | **YOLO Detection Confidence Threshold**: Detection boxes with scores below this value will be filtered out. |
-| `detection.iou_threshold` | `float` | **YOLO NMS IoU Threshold**: The Intersection over Union (IoU) threshold used in Non-Maximum Suppression (NMS) to filter overlapping boxes. |
+| `detection.conf_threshold` | `float` | YOLO detection confidence threshold. |
+| `detection.iou_threshold` | `float` | YOLO NMS IoU threshold. |
+| `grasp_pipeline.infer_every_live` | `int` | Run detection every N frames during live preview. |
+| `grasp_pipeline.grasp.depth_quantile` | `float` | Depth quantile used by the OBB grasping pipeline. |
+| `grasp_pipeline.grasp.pregrasp_offset_m` | `float` | Retreat distance from the final grasp pose to the pre-grasp pose. |
+| `grasp_pipeline.grasp.insertion_depth_m` | `float` | Additional insertion depth used by GraspNet grasp execution. |
+| `grasp_pipeline.grasp.min_base_z_m` | `float` | Minimum allowed grasp height in the robot base frame. |
 
----
+</details>
 
-#### 3. Robot and Gripper Configuration (`robot`)
+<details className="content-details">
+<summary>Robot and Gripper</summary>
 
-| Parameter | Type / Options | Meaning and Description |
+| Parameter | Type / Options | Meaning |
 | :--- | :--- | :--- |
-| `robot.repo_root` | `string` / `null` | **Repository Root Directory**: Path to the `reBotArm_control_py` repository. When `null`, defaults to the internal relative path `sdk/reBotArm_control_py`. |
-| `robot.ready_pose` | `array` | **Ready Pose**: The ready position the system arm moves to on startup. After each grasping task completes, the arm also automatically returns to this position. |
-| `robot.gripper.dm`<br/>`robot.gripper.rs` | struct object | **Gripper Hardware Parameters**: The system automatically selects and applies one of these two parameter groups based on the current actual hardware configuration in the SDK. |
+| `robot.repo_root` | `string` / `null` | Path to `reBotArm_control_py`; when `null`, `sdk/reBotArm_control_py` is used. |
+| `robot.ready_pose` | `array` | Ready pose used on startup and after each grasping task. |
+| `robot.gripper.dm` / `robot.gripper.rs` | object | DM / RS gripper parameters selected automatically based on SDK configuration. |
 
-#### Gripper Internal Core Parameter Description
+`angle_open`, `close_torque`, and `default_force` should be positive numbers. `counterclockwise` defines the closing direction, and `tau_max` is the torque limit.
 
-For sub-parameters inside `robot.gripper.dm` or `robot.gripper.rs`:
+</details>
 
-* **`angle_open`**, **`close_torque`**, **`default_force`**: Correspond to open angle, close torque, and default control force respectively; all must be填写**positive numbers**.
-* **`counterclockwise`**: Boolean value. Indicates the motor rotation direction used when closing (whether counterclockwise). The code automatically derives the signs of the open angle and close torque based on this logic.
-* **`tau_max`**: Torque upper limit.
+### Model Selection
 
-:::tip
-Note: For other advanced gripper control behavior parameters, refer to and define them in the `drivers/robot/grasp_driver.py` file.
-:::
-
----
-
-#### 4. Grasp Pipeline and GraspNet Configuration (`grasp_pipeline` & `graspnet`)
-
-| Parameter | Type | Meaning and Description |
-| :--- | :--- | :--- |
-| `grasp_pipeline.infer_every_live` | `int` | **Inference Frame Interval**: During real-time video preview, run object detection every N frames to effectively reduce CPU/GPU real-time computation load. |
-| `grasp_pipeline.grasp.depth_quantile` | `float` | **Depth Quantile**: The depth calculation quantile used by the short-axis grasping pipeline. A larger value typically results in a deeper grasp point. |
-| `grasp_pipeline.grasp.pregrasp_offset_m` | `float` | **Pre-grasp Position Offset**: The distance to retreat along the end effector feed direction relative to the final target grasp position, in **meters (m)**. |
-| `grasp_pipeline.grasp.insertion_depth_m` | `float` | **Insertion Depth**: The additional forward push or insertion depth along the feed direction when GraspNet executes grasping, in **meters (m)**. |
-| `grasp_pipeline.grasp.min_base_z_m` | `float` | **Minimum Grasp Height Limit**: The minimum allowable grasp Z-axis height in the **robot base frame**, in **meters (m)** (used as a底层防碰撞safety boundary). |
-| `graspnet` | struct config | **GraspNet Runtime Parameters**: All sub-parameters under this configuration item are loaded when running `scripts/graspnet_camera_demo.py` and `scripts/grasp.py`. |
-
-### Model Selection Library
-
-The YOLO model loads from the `rebot_grasp/models/` directory; if the model file does not exist, Ultralytics usually attempts to download it automatically.
-
-Common models:
+YOLO models are loaded from `rebot_grasp/models/`. If the file does not exist, Ultralytics usually attempts to download it automatically.
 
 | Model | Description |
 | --- | --- |
-| `yoloe-26l-seg.pt` | Open vocabulary + segmentation, current default |
-| `yoloe-26s-seg.pt` | Lighter weight, faster |
-| `yolov8n-seg.pt` | Closed-category segmentation, small model |
-| `yolov8s-seg.pt` | Closed-category segmentation, higher precision |
+| `yoloe-26l-seg.pt` | Open vocabulary + segmentation, current default. |
+| `yoloe-26s-seg.pt` | Lighter and faster. |
+| `yolov8n-seg.pt` | Closed-category segmentation, small model. |
+| `yolov8s-seg.pt` | Closed-category segmentation with higher accuracy. |
 
-When the model name contains `world` / `yoloe` and `yolo.use_world=true`, the program calls `model.set_classes(custom_classes)` to inject `yolo.custom_classes` as open-vocabulary classes. Regular `yolov8*-seg.pt` models ignore this set of open-vocabulary classes.
+</section>
 
----
+<section id="faq" className="section-card">
 
-## ❓ FAQ
+## FAQ
 
-### 1. `ModuleNotFoundError: No module named 'motorbridge'`
+<details className="content-details">
+<summary>1. `ModuleNotFoundError: No module named 'motorbridge'`</summary>
 
-This usually means the robotic arm SDK dependencies are not installed in the current Python environment. Confirm that the project environment is activated and resynchronize the environment and install the robotic arm SDK:
+Confirm that the project environment is activated, then sync the environment and reinstall the arm SDK:
 
 ```bash
 conda activate rebotarm
@@ -532,31 +560,30 @@ conda env update -n rebotarm -f environment.yml
 cd sdk/reBotArm_control_py && pip install -e .
 ```
 
-### 2. Pressing `G` does not execute grasping
+</details>
 
-Common causes:
+<details className="content-details">
+<summary>2. Pressing `G` does not execute grasping</summary>
 
-- `hand_eye.npz` does not exist
-- The hand-eye calibration mode is not `eye_in_hand`
-- The current target pose is not IK reachable
-
-It is recommended to first use dry-run mode to verify perception results and target pose:
+Common causes include: `hand_eye.npz` is missing, the hand-eye calibration mode is not `eye_in_hand`, or the target pose is not IK-reachable. Start with dry-run validation:
 
 ```bash
 python scripts/main.py --dry-run
 ```
 
-### 3. Grasp point depth is unstable
+</details>
 
-Priority can be given to checking and adjusting:
+<details className="content-details">
+<summary>3. Grasp depth is unstable</summary>
 
-- `grasp_pipeline.grasp.depth_quantile`
-- The installation height of the camera relative to the target workspace
-- Reflectivity of the target surface
+Check `grasp_pipeline.grasp.depth_quantile`, camera mounting height, target surface reflectivity, and depth quality in the workspace.
 
-### 4. GraspNet reports `pointnet2_utils` cannot be imported from `pointnet2`
+</details>
 
-This is usually because the local CUDA extension under `sdk/graspnet-baseline/pointnet2` was not properly built and installed in the current conda environment, or Python is resolving to a wrong `pointnet2` package. It is recommended to confirm the project environment is activated and rebuild and install both `pointnet2` and `knn` in the same environment:
+<details className="content-details">
+<summary>4. GraspNet cannot import `pointnet2_utils` from `pointnet2`</summary>
+
+This usually means the local CUDA extensions `pointnet2` / `knn` were not compiled correctly in the current conda environment. Rebuild them:
 
 ```bash
 conda activate rebotarm
@@ -567,59 +594,292 @@ cd ../knn
 pip install . --no-build-isolation
 ```
 
-Verify:
+</details>
 
-```bash
-python -c "from pointnet2 import pointnet2_utils; print('Submodule import works')"
-```
+<details className="content-details">
+<summary>5. GraspNet reports `RuntimeError: CPU not supported`</summary>
 
-### 5. CUDA architecture incompatibility when running GraspNet on the current graphics card
-
-If you see `no kernel image is available for execution on the device` or PyTorch reports that the current GPU's CUDA capability is unsupported, this usually means the current PyTorch wheel does not include CUDA kernels for that graphics card architecture. It is recommended to install a PyTorch version that supports the current CUDA/graphics card architecture, then rebuild the GraspNet local CUDA extensions.
-
-```bash
-python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0))"
-
-cd sdk/graspnet-baseline/pointnet2
-pip install . --no-build-isolation
-
-cd ../knn
-pip install . --no-build-isolation
-```
-
-If you need to manually specify the build architecture, set `TORCH_CUDA_ARCH_LIST` before rebuilding, with the specific value confirmed according to your current graphics card architecture and PyTorch/CUDA version.
-
-### 6. GraspNet inference reports `RuntimeError: CPU not supported`
-
-The sampling operators in `pointnet2` only support CUDA tensors. Confirm that CUDA is available, the GraspNet network and input point cloud are on GPU, and `pointnet2` / `knn` were built against the current environment and PyTorch version.
+The sampling operators in `pointnet2` only support CUDA tensors. Confirm CUDA is available and rebuild the local extensions if needed:
 
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
 ```
 
-If the output is `False`, you need to fix the CUDA / PyTorch installation first; if the output is `True` but the error persists, it is recommended to rebuild `pointnet2` and `knn`.
+</details>
 
----
+</section>
 
-## 📄 References
+<section className="course-nav-section section-card section-block">
+  <div className="section-title">
+    <span>Learning Path</span>
+    <h2>Continue with the reBot B601-DM learning path</h2>
+    <p>These tutorials are designed to be read in the same order as the robotics page: start from basic bring-up, then move to LeRobot data collection, kinematics debugging, visual grasping, and finally ROS2 integration.</p>
+  </div>
+  <div className="course-path-grid">
+    <a className="course-step" href="/rebot_b601_dm_getting_started/">
+      <span className="course-index">1</span>
+      <div>
+        <strong>Getting Started</strong>
+        <small>Complete unboxing, wiring, power checks, driver setup, calibration, and basic motion tests.</small>
+      </div>
+      <em>Start here</em>
+    </a>
+    <a className="course-step" href="/rebot_arm_b601_dm_lerobot/">
+      <span className="course-index">2</span>
+      <div>
+        <strong>LeRobot Teleoperation and Data Collection</strong>
+        <small>Teleoperate the arm, connect cameras, record datasets, train policies, and evaluate real-arm behavior.</small>
+      </div>
+      <em>Data collection</em>
+    </a>
+    <a className="course-step" href="/rebot_arm_b601_dm_pinocchio_meshcat/">
+      <span className="course-index">3</span>
+      <div>
+        <strong>Pinocchio Kinematics Visualization</strong>
+        <small>Understand robot models, coordinate frames, FK / IK, trajectory planning, and gravity compensation.</small>
+      </div>
+      <em>Control</em>
+    </a>
+    <a className="course-step active" href="/rebot_arm_b601_dm_grasping_demo/">
+      <span className="course-index">4</span>
+      <div>
+        <strong>Visual Grasping Demo</strong>
+        <small>Combine RGB-D perception, YOLO / OBB or GraspNet, hand-eye calibration, and real object grasping.</small>
+      </div>
+      <em>Current article</em>
+    </a>
+    <a className="course-step" href="/rebot_arm_b601_dm_ros2_integration/">
+      <span className="course-index">5</span>
+      <div>
+        <strong>ROS2 Integration</strong>
+        <small>Connect the arm to ROS2, RViz, MoveIt 2, standard services, actions, and planning workflows.</small>
+      </div>
+      <em>Integration</em>
+    </a>
+  </div>
+</section>
 
-- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py) — Robotic arm control library
-- [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm) — reBot robotic arm open source project
-- [Orbbec Gemini 2 Product Page](https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51)
+
+## References
+
+- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)
+- [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
 - [pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
 - [RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
-- [Ultralytics YOLOv11](https://github.com/ultralytics/ultralytics)
+- [Ultralytics YOLO](https://github.com/ultralytics/ultralytics)
 
----
+## Technical Support
 
-## ☎ Contact Us
+- [Submit an Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
 
-- **Technical Support**: [Submit an Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
+</div>
 
----
+<style>{`
+.rebot-page {
+  --rb-bg: #ffffff;
+  --rb-surface: #ffffff;
+  --rb-surface-soft: #f8fafc;
+  --rb-text: #111827;
+  --rb-muted: #64748b;
+  --rb-border: rgba(148, 163, 184, 0.28);
+  --rb-primary: #2563eb;
+  --rb-primary-soft: #eff6ff;
+  --rb-accent: #14b8a6;
+  --rb-accent-soft: #ccfbf1;
+  --rb-warning: #f59e0b;
+  --rb-danger: #ef4444;
+  --rb-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  width: 100%;
+}
+.rebot-page .doc-hero { position: relative; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr); gap: 1.5rem; padding: 2rem; margin: 1.5rem 0 1.25rem; border: 1px solid var(--rb-border); border-radius: 26px; background: radial-gradient(circle at 12% 18%, rgba(37,99,235,0.18), transparent 32%), radial-gradient(circle at 90% 85%, rgba(20,184,166,0.18), transparent 35%), linear-gradient(135deg, rgba(248,250,252,0.95), rgba(255,255,255,0.92)); box-shadow: var(--rb-shadow); overflow: hidden; }
+.rebot-page .doc-hero::after { content: ""; position: absolute; width: 260px; height: 260px; right: -120px; top: -120px; background: rgba(37,99,235,0.10); border-radius: 50%; }
+.rebot-page .eyebrow { display: inline-flex; margin-bottom: 0.6rem; color: var(--rb-primary); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.09em; text-transform: uppercase; }
+.rebot-page .doc-hero h2 { margin: 0 0 0.8rem; color: var(--rb-text); font-size: clamp(1.6rem, 3vw, 2.35rem); line-height: 1.18; }
+.rebot-page .doc-hero p { margin: 0; color: var(--rb-muted); line-height: 1.75; }
+.rebot-page .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.2rem; }
+.rebot-page .hero-actions a { display: inline-flex; padding: 0.72rem 1rem; border-radius: 999px; text-decoration: none !important; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--rb-primary), var(--rb-accent)); box-shadow: 0 12px 24px rgba(37,99,235,0.18); }
+.rebot-page .hero-actions a:nth-child(2) { color: var(--rb-primary); background: var(--rb-primary-soft); box-shadow: none; }
+.rebot-page .hero-card { position: relative; z-index: 1; display: grid; align-content: center; gap: 0.75rem; padding: 1.1rem; border-radius: 18px; background: rgba(255,255,255,0.78); border: 1px solid rgba(148,163,184,0.22); box-shadow: 0 10px 26px rgba(15,23,42,0.06); backdrop-filter: blur(10px); }
+.rebot-page .hero-card strong { color: var(--rb-text); }
+.rebot-page .hero-card span { color: var(--rb-muted); font-size: 0.92rem; line-height: 1.55; }
+.rebot-page .doc-nav { position: sticky; top: 0.75rem; z-index: 5; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.65rem; padding: 0.7rem; margin: 1.1rem 0 2rem; border-radius: 18px; background: rgba(255,255,255,0.88); border: 1px solid var(--rb-border); box-shadow: 0 12px 28px rgba(15,23,42,0.07); backdrop-filter: blur(14px); }
+.rebot-page .doc-nav a { text-align: center; padding: 0.72rem 0.7rem; border-radius: 13px; color: #334155; background: var(--rb-surface-soft); text-decoration: none !important; font-weight: 800; font-size: 0.88rem; transition: all 0.2s ease; }
+.rebot-page .doc-nav a:hover { color: var(--rb-primary); background: #fff; transform: translateY(-2px); box-shadow: 0 10px 22px rgba(37,99,235,0.12); }
+.rebot-page .section-card { margin: 1.6rem 0; padding: 1.45rem; border-radius: 22px; background: var(--rb-surface); border: 1px solid var(--rb-border); box-shadow: 0 10px 30px rgba(15,23,42,0.055); }
+.rebot-page .section-card > h2 { margin-top: 0; color: var(--rb-text); }
+.rebot-page .section-card > h3, .rebot-page .section-card h3 { color: var(--rb-text); }
+.rebot-page .section-card p, .rebot-page .section-card li { color: var(--rb-muted); line-height: 1.65; }
+.rebot-page .path-grid, .rebot-page .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.9rem; }
+.rebot-page .path-card, .rebot-page .feature-grid div { display: grid; gap: 0.45rem; padding: 1rem; border-radius: 16px; background: var(--rb-surface-soft); border: 1px solid var(--rb-border); text-decoration: none !important; color: inherit; transition: all 0.2s ease; }
+.rebot-page .path-card:hover { transform: translateY(-3px); border-color: rgba(37,99,235,0.35); box-shadow: 0 12px 26px rgba(37,99,235,0.10); }
+.rebot-page .path-card > span:first-child { width: fit-content; padding: 0.32rem 0.6rem; border-radius: 999px; color: var(--rb-primary); background: var(--rb-primary-soft); font-weight: 900; font-size: 0.75rem; }
+.rebot-page .path-card strong, .rebot-page .feature-grid strong { color: var(--rb-text); }
+.rebot-page .path-card p, .rebot-page .feature-grid span { color: var(--rb-muted); line-height: 1.6; font-size: 0.92rem; margin: 0; }
+.rebot-page .image-frame { margin: 1rem 0; text-align: center; }
+.rebot-page .image-frame img { max-width: 100%; border-radius: 16px; border: 1px solid var(--rb-border); box-shadow: 0 12px 28px rgba(15,23,42,0.08); }
+.rebot-page .content-details, .rebot-page .video-details { margin: 1rem 0; border: 1px solid var(--rb-border); border-radius: 16px; background: var(--rb-surface-soft); overflow: hidden; }
+.rebot-page .content-details summary, .rebot-page .video-details summary { cursor: pointer; padding: 0.95rem 1rem; color: var(--rb-text); font-weight: 850; list-style: none; }
+.rebot-page .content-details summary::-webkit-details-marker, .rebot-page .video-details summary::-webkit-details-marker { display: none; }
+.rebot-page .content-details summary::after, .rebot-page .video-details summary::after { content: "Open"; float: right; color: var(--rb-primary); font-size: 0.78rem; }
+.rebot-page .content-details[open] summary::after, .rebot-page .video-details[open] summary::after { content: "Close"; }
+.rebot-page .content-details > :not(summary), .rebot-page .video-details > :not(summary) { margin-left: 1rem; margin-right: 1rem; }
+.rebot-page .content-details > :last-child, .rebot-page .video-details > :last-child { margin-bottom: 1rem; }
+.rebot-page .video-container, .video-container { position: relative; width: 100%; padding-bottom: 56.25%; margin: 1rem 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--rb-border, rgba(148,163,184,0.28)); background: #000; }
+.rebot-page .video-container iframe, .video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.rebot-page table { width: 100%; display: table; }
+.rebot-page table img { max-width: 220px; height: auto; border-radius: 10px; }
+.rebot-page code { word-break: break-word; }
+html[data-theme='dark'] .rebot-page { --rb-bg: #111827; --rb-surface: #1f2023; --rb-surface-soft: #24262a; --rb-text: #f9fafb; --rb-muted: #a1a1aa; --rb-border: #343840; --rb-primary: #60a5fa; --rb-primary-soft: rgba(96,165,250,0.14); --rb-accent: #2dd4bf; --rb-accent-soft: rgba(45,212,191,0.14); --rb-shadow: 0 18px 42px rgba(0,0,0,0.34); }
+html[data-theme='dark'] .rebot-page .doc-hero { background: radial-gradient(circle at 12% 18%, rgba(96,165,250,0.20), transparent 34%), radial-gradient(circle at 90% 85%, rgba(45,212,191,0.16), transparent 36%), linear-gradient(135deg, #1f2023, #16181d); }
+html[data-theme='dark'] .rebot-page .hero-card, html[data-theme='dark'] .rebot-page .doc-nav { background: rgba(31,32,35,0.86); }
+html[data-theme='dark'] .rebot-page .doc-nav a:hover { background: #1f2023; }
+@media (max-width: 900px) { .rebot-page .doc-hero { grid-template-columns: 1fr; } .rebot-page .doc-nav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .rebot-page .doc-hero, .rebot-page .section-card { padding: 1.1rem; border-radius: 18px; } .rebot-page .doc-nav { grid-template-columns: 1fr; } }
 
-<p align="center">
-  <strong>🌟 If this project is helpful to you, please give it a Star!</strong>
-</p>
+/* Shared safety warning and course navigation */
+.safety-alert {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: flex-start;
+  margin: 1.15rem 0 1.35rem;
+  padding: 1.05rem 1.15rem;
+  border-radius: 18px;
+  border: 1px solid rgba(239, 68, 68, 0.38);
+  background: linear-gradient(135deg, rgba(254, 242, 242, 0.98), rgba(255, 247, 237, 0.92));
+  color: #7f1d1d;
+  box-shadow: 0 14px 30px rgba(239, 68, 68, 0.12);
+}
+.safety-alert-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 999px;
+  background: #fee2e2;
+  color: #dc2626;
+  font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.safety-alert-content strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #991b1b;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+.safety-alert-content p,
+.safety-alert-content ul {
+  margin: 0;
+  color: #7f1d1d;
+  line-height: 1.68;
+}
+.safety-alert-content ul {
+  margin-top: 0.65rem;
+  padding-left: 1.2rem;
+}
+.safety-alert-content li + li { margin-top: 0.35rem; }
+.safety-alert.compact {
+  margin: 1rem 0;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+}
+.safety-alert.compact .safety-alert-content strong { margin-bottom: 0.25rem; }
+.course-nav-section {
+  margin-top: 1.4rem;
+}
+.course-path-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+.course-step {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  border: 1px solid var(--rb-border, rgba(148, 163, 184, 0.28));
+  background: var(--rb-surface, var(--panel-bg, #ffffff));
+  text-decoration: none !important;
+  color: var(--rb-text, var(--text-main, #111827));
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+.course-step:hover {
+  transform: translateY(-1px);
+  border-color: rgba(37, 99, 235, 0.32);
+  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.10);
+}
+.course-step.active {
+  border-color: rgba(37, 99, 235, 0.42);
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.92), rgba(240, 253, 250, 0.78));
+}
+.course-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  color: #ffffff;
+  background: #2563eb;
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.24);
+}
+.course-step strong {
+  display: block;
+  color: var(--rb-text, var(--text-main, #111827));
+  font-size: 1rem;
+  margin-bottom: 0.24rem;
+}
+.course-step small {
+  display: block;
+  color: var(--rb-muted, var(--text-muted, #64748b));
+  line-height: 1.55;
+  font-size: 0.92rem;
+}
+.course-step em {
+  justify-self: end;
+  white-space: nowrap;
+  font-style: normal;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+}
+html[data-theme='dark'] .safety-alert {
+  border-color: rgba(248, 113, 113, 0.42);
+  background: linear-gradient(135deg, rgba(127, 29, 29, 0.26), rgba(124, 45, 18, 0.18));
+  color: #fecaca;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+}
+html[data-theme='dark'] .safety-alert-icon { background: rgba(248, 113, 113, 0.18); color: #fca5a5; }
+html[data-theme='dark'] .safety-alert-content strong,
+html[data-theme='dark'] .safety-alert-content p,
+html[data-theme='dark'] .safety-alert-content ul { color: #fecaca; }
+html[data-theme='dark'] .course-step {
+  background: rgba(31, 32, 35, 0.84);
+  border-color: rgba(148, 163, 184, 0.22);
+}
+html[data-theme='dark'] .course-step.active {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(20, 184, 166, 0.10));
+  border-color: rgba(96, 165, 250, 0.38);
+}
+html[data-theme='dark'] .course-step strong { color: #e5e7eb; }
+html[data-theme='dark'] .course-step small { color: #cbd5e1; }
+html[data-theme='dark'] .course-step em { color: #93c5fd; background: rgba(37, 99, 235, 0.16); border-color: rgba(96, 165, 250, 0.28); }
+@media (max-width: 640px) {
+  .safety-alert { grid-template-columns: 1fr; }
+  .course-step { grid-template-columns: auto minmax(0, 1fr); }
+  .course-step em { grid-column: 2; justify-self: start; }
+}
+
+
+`}</style>
