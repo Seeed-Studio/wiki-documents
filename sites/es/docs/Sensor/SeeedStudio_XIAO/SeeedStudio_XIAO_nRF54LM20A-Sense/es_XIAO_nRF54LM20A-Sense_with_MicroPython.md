@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO nRF54LM20A Sense con MicroPython
+title: XIAO nRF54LM20A Sense con MicroPython
 description: ''
 keywords:
   - xiao
@@ -69,7 +69,7 @@ Antes de comenzar, necesitas preparar una placa de desarrollo XIAO nRF54LM20A Se
 
 ### Instalar [Thonny IDE](https://thonny.org/)
 
-Elige la versión adecuada para la instalación. Aquí lo estoy instalando en un sistema Windows, por lo que he seleccionado la versión para Windows.
+Elige la versión adecuada para la instalación. Aquí lo estoy instalando en un sistema Windows, así que he seleccionado la versión para Windows.
 
 Sigue las instrucciones para la versión de Python deseada.
 
@@ -83,7 +83,7 @@ A continuación, te guiaremos sobre cómo desplegar el firmware de MicroPython e
 
 :::tip
 
-Antes de grabar el firmware, conecta la XIAO nRF54LM20A Sense a tu ordenador
+Antes de flashear el firmware, conecta la XIAO nRF54LM20A Sense a tu ordenador
 
 :::
 
@@ -92,8 +92,8 @@ Antes de grabar el firmware, conecta la XIAO nRF54LM20A Sense a tu ordenador
 
 
 <div class="xiao_nrf54lm20a_flash.zip.zip" style={{textAlign: 'center'}}>
-    <a class="xiao_nrf54lm20a_flash.zip.zip" href="https://github.com/Seeed-Studio/micropython-seeed-boards/tree/master" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Repositorio de GitHub</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <a class="xiao_nrf54lm20a_flash.zip.zip" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/tools/xiao_nrf54lm20a_flash_package.zip" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> GitHub Repository</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -103,9 +103,9 @@ Es necesario descomprimir la carpeta en cualquier directorio, y aparecerá el co
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/micropython/1.1.png" style={{width:400, height:'auto'}}/></div>
 
-3. Usar un script para grabar el firmware de MicroPython
+3. Usar un script para flashear el firmware de MicroPython
 
-- Para Windows, haz clic derecho en la carpeta extraída para abrir una terminal de PowerShell y ejecuta el script de grabación. Después de que el script se ejecute correctamente, los resultados de salida se muestran en la siguiente figura
+- Para Windows, haz clic derecho en la carpeta extraída para abrir una terminal de PowerShell y ejecuta el script de flasheo. Después de que el script se ejecute correctamente, los resultados de salida se muestran en la siguiente figura
 
 ```bash
 .\flash.bat
@@ -124,9 +124,9 @@ chmod +x xiao_nrf54lm20a_flash.sh
 ```
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/micropython/2.png" style={{width:800, height:'auto'}}/></div>
 
-### Probar el efecto de la grabación
+### Probar el efecto del flasheo
 
-Este capítulo te guía principalmente para configurar Thonny IDE
+Este capítulo te guía principalmente en la configuración de Thonny IDE
 
 
 
@@ -138,7 +138,7 @@ Este capítulo te guía principalmente para configurar Thonny IDE
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/micropython/4.png" style={{width:800, height:'auto'}}/></div>
 
-3. Después de la conexión exitosa, se verá como en la figura siguiente
+3. Después de una conexión exitosa, se verá como en la figura siguiente
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/micropython/5.png" style={{width:800, height:'auto'}}/></div>
 
@@ -221,7 +221,7 @@ Los pines digitales se utilizan principalmente para el control de encendido y ap
 
 ### Preparación de software
 
-De acuerdo con el pinout de la XIAO nRF54LM20A Sense, se puede seleccionar **D0 (P1.0)** como el pin de control para el **Grove-Button**, y **D1 (P1.31)** se puede seleccionar como el pin de control para el **Grove-Piezo Buzzer**.
+Según el pinout de la XIAO nRF54LM20A Sense, se puede seleccionar **D0 (P1.0)** como el pin de control para el **Grove-Button**, y **D1 (P1.31)** como el pin de control para el **Grove-Piezo Buzzer**.
 
 :::tip
 
@@ -311,11 +311,11 @@ PWM conmuta rápidamente los niveles del pin a una frecuencia fija y ajusta din�
 
 ### Preparación de software
 
-De acuerdo con el pinout del XIAO nRF54LM20A Sense, **D0 (P1.0)** se puede seleccionar como el pin de control para el **Grove-Servo**.
+Según el pinout del XIAO nRF54LM20A Sense, se puede seleccionar **D0 (P1.0)** como el pin de control para el **Grove-Servo**.
 
 :::tip
 
-- Para el pinout del XIAO nRF54LM20A Sense, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#hardware-overview) para ver los detalles.
+- Para el pinout del XIAO nRF54LM20A Sense, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#visión-general-del-hardware) para ver los detalles.
 
 :::
 
@@ -375,7 +375,7 @@ finally:
 
 ### Resultado
 
-Después de flashear el firmware, el servo gira de 0° a 180° a una velocidad de 33 radianes por segundo y luego vuelve a girar a 0°.
+Después de flashear el firmware, el servo gira de 0° a 180° a una velocidad de 33 radianes por segundo y luego vuelve a girar a 0°. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -385,7 +385,7 @@ Mientras tanto, el ángulo actual del servo se imprimirá a través del puerto s
 
 ## Analógico
 
-La entrada analógica se basa en un convertidor analógico-digital (ADC) y se utiliza principalmente para capturar señales de voltaje analógicas continuas de sensores externos. Los valores digitales de muestreo en bruto se pueden mapear a valores reales de medición de ingeniería utilizando algoritmos de conversión lineales o no lineales.
+La entrada analógica se basa en un convertidor analógico-digital (ADC) y se utiliza principalmente para capturar señales de voltaje analógicas continuas de sensores externos. Los valores digitales de muestreo sin procesar pueden mapearse a valores reales de medición de ingeniería utilizando algoritmos de conversión lineales o no lineales.
 
 ### Preparación de hardware
 
@@ -421,11 +421,11 @@ La entrada analógica se basa en un convertidor analógico-digital (ADC) y se ut
 
 ### Preparación de software
 
-De acuerdo con el pinout del XIAO nRF54LM20A Sense, **D0 (P1.0, AIN0)** se utiliza como pin de entrada ADC. El valor del ADC se lee y se imprime a través del puerto serie USB cada 500 ms.
+Según el pinout del XIAO nRF54LM20A Sense, **D0 (P1.0, AIN0)** se utiliza como pin de entrada del ADC. El valor del ADC se lee y se imprime a través del puerto serie USB cada 500 ms.
 
 :::tip
 
-- Para el pinout del XIAO nRF54LM20A Sense, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#hardware-overview) para ver los detalles.
+- Para el pinout del XIAO nRF54LM20A Sense, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#visión-general-del-hardware) para ver los detalles.
 
 :::
 
@@ -459,7 +459,7 @@ except Exception as e:
 
 1. **Importaciones:** `XiaoADC` de `boards.xiao` proporciona funcionalidad ADC. `ADC_PIN = 0` se asigna a D0 (P1.0 / AIN0).
 2. **Inicialización:** `XiaoADC(ADC_PIN)` configura el pin para la conversión analógico-digital.
-3. **Bucle principal:** `adc.read_uv()` devuelve la lectura del ADC en microvoltios (µV). El valor se convierte a voltios para su visualización. Tanto las lecturas en µV sin procesar como el voltaje se imprimen cada 500 ms.
+3. **Bucle principal:** `adc.read_uv()` devuelve la lectura del ADC en microvoltios (µV). El valor se convierte a voltios para su visualización. Tanto las lecturas en µV sin procesar como en voltios se imprimen cada 500 ms.
 4. **Manejo de errores:** `try/except/finally` garantiza un apagado correcto.
 
 ### Resultado
@@ -491,7 +491,7 @@ Debido a las diferencias individuales de los componentes, las mediciones de dife
 
 ## UART
 
-El receptor/transmisor asíncrono universal (UART) es un protocolo estándar de comunicación serie asíncrona. No requiere señales de reloj externas para la sincronización y realiza la transmisión y recepción de datos basándose en la velocidad en baudios preestablecida por ambas partes. Se puede establecer un enlace de datos full-dúplex simplemente cruzando los pines TX y RX.
+El Receptor/Transmisor Asíncrono Universal (UART) es un protocolo estándar de comunicación serie asíncrona. No requiere señales de reloj externas para la sincronización y realiza la transmisión y recepción de datos basándose en la velocidad en baudios preestablecida por ambas partes. Se puede establecer un enlace de datos full-dúplex simplemente cruzando los pines TX y RX.
 
 ### Preparación de hardware
 
@@ -499,7 +499,7 @@ El receptor/transmisor asíncrono universal (UART) es un protocolo estándar de 
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-        <th>Adaptador de módulo CH340G USB-a-Serie TTL</th>
+        <th>Adaptador de módulo CH340G USB-a-Serial TTL</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -579,7 +579,7 @@ finally:
 
 **Explicación del código:**
 
-1. **Importaciones y mapeo de pines:** `machine.UART` proporciona acceso al hardware UART. `xiao.pin(n)` devuelve la tupla de puerto y pin para un número de pin digital dado desde la definición de la placa.
+1. **Importaciones y mapeo de pines:** `machine.UART` proporciona acceso al UART por hardware. `xiao.pin(n)` devuelve la tupla de puerto y pin para un número de pin digital dado desde la definición de la placa.
 2. **Inicialización:** UART 1 se configura a 115200 baudios con TX en D6 (P1.08) y RX en D7 (P1.09). Se envía un mensaje de bienvenida al inicio.
 3. **Bucle principal:** Los datos entrantes se devuelven (echo). Se envía un mensaje de latido cada 5 segundos para confirmar que el UART sigue en funcionamiento.
 4. **Limpieza:** `uart.deinit()` libera el hardware UART en el bloque `finally`.
@@ -601,7 +601,7 @@ finally:
 
 ## I2C
 
-I2C es un protocolo síncrono de comunicación de datos half-dúplex. Permite la conexión de múltiples dispositivos mediante direccionamiento a través de la línea de reloj SCL y la línea de datos SDA, y se utiliza comúnmente para leer datos de sensores como IMU y sensores de temperatura/humedad, o para la salida de pantallas OLED.
+I2C es un protocolo síncrono de comunicación de datos half-dúplex. Permite la conexión de múltiples dispositivos mediante direccionamiento a través de la línea de reloj SCL y la línea de datos SDA, y se usa comúnmente para leer datos de sensores como IMU y sensores de temperatura/humedad, o para la salida de pantallas OLED.
 
 ### Preparación de hardware
 
@@ -849,11 +849,11 @@ except Exception as e:
 
 **Explicación del código:**
 
-1. **Importaciones y definiciones de pines:** `XiaoI2C` de `boards.xiao` proporciona la gestión del bus I2C. SDA está en D4 (P1.03) y SCL en D5 (P1.07). El bus funciona a 400 kHz.
-2. **Controlador SSD1306:** La pantalla OLED SSD1306 se controla mediante escrituras I2C sin procesar de comandos/datos. Las funciones auxiliares `ssd1306_write_command()`, `ssd1306_write_data()`, `ssd1306_clear()`, `ssd1306_init()` y `ssd1306_draw_text()` forman un controlador mínimo.
-3. **Datos de fuente:** Un diccionario de fuentes de mapa de bits de 8×8 proporciona definiciones de glifos para caracteres ASCII imprimibles. La función `ssd1306_draw_text()` representa cadenas de texto buscando los mapas de bits de los glifos y enviándolos a la pantalla.
+1. **Importaciones y definiciones de pines:** `XiaoI2C` de `boards.xiao` proporciona la gestión del bus I2C. SDA está en D4 (P1.03) y SCL está en D5 (P1.07). El bus funciona a 400 kHz.
+2. **Controlador SSD1306:** La pantalla OLED SSD1306 se controla mediante escrituras I2C directas de comandos/datos. Las funciones auxiliares `ssd1306_write_command()`, `ssd1306_write_data()`, `ssd1306_clear()`, `ssd1306_init()` y `ssd1306_draw_text()` forman un controlador mínimo.
+3. **Datos de fuente:** Un diccionario de fuente de mapa de bits de 8×8 proporciona definiciones de glifos para caracteres ASCII imprimibles. La función `ssd1306_draw_text()` representa cadenas de texto buscando los mapas de bits de los glifos y enviándolos a la pantalla.
 4. **Lógica principal:** Se escanea el bus I2C para verificar que el SSD1306 esté presente en la dirección `0x3C`. La pantalla se inicializa y se dibujan dos líneas de texto centrado ("NRF54LM20A" y "HELLO WORLD").
-5. **Limpieza:** El bloque `try/except` gestiona un apagado correcto en caso de interrupción por teclado o error.
+5. **Limpieza:** El bloque `try/except` gestiona un apagado correcto ante una interrupción de teclado o un error.
 
 ### Resultado
 
@@ -864,7 +864,7 @@ Después de que el programa se ejecute, el texto **NRF54LM20A** y **HELLO WORLD*
 
 ## SPI
 
-SPI es un protocolo de comunicación síncrono, full-dúplex y de alta velocidad. Depende de una línea de reloj SCK dedicada para la sincronización de datos y adopta una topología de cuatro hilos que consta de los pines MOSI, MISO, SCK y CS/SS. Se utiliza ampliamente para controlar pantallas de alta resolución, almacenamiento Flash/tarjetas SD y sensores de muestreo de alta frecuencia.
+SPI es un protocolo de comunicación síncrono, full-dúplex y de alta velocidad. Depende de una línea de reloj SCK dedicada para la sincronización de datos y adopta una topología de cuatro hilos que consta de los pines MOSI, MISO, SCK y CS/SS. Se utiliza ampliamente para controlar pantallas de alta resolución, almacenamiento en tarjetas Flash/SD y sensores de muestreo de alta frecuencia.
 
 ### Preparación de hardware
 

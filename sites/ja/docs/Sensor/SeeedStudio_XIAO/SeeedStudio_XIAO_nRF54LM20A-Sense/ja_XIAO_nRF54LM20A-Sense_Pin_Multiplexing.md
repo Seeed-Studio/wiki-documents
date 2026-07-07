@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO nRF54LM20A Sense によるピンマルチプレクシング
+title: Seeed Studio XIAO nRF54LM20A Sense でのピンマルチプレクシング
 description: ''
 keywords:
   - xiao
@@ -12,11 +12,11 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_pin_multiplexing/
 ---
 
-# Seeed Studio XIAO nRF54LM20A Sense によるピンマルチプレクシング
+# Seeed Studio XIAO nRF54LM20A Sense でのピンマルチプレクシング
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRD54LM20A_pin_1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -42,18 +42,18 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_pin_multiplexing/
 </div>
 
 
-XIAO nRF54LM20A は豊富なピンリソースを備え、Digital、Analog、SPI、IIC などの各種標準ペリフェラルインターフェースによる開発をネイティブにサポートしています。本記事では、実際のアプリケーション事例を通して、関連する実装方法を紹介します。
+XIAO nRF54LM20A は豊富なピンリソースを備え、Digital、Analog、SPI、IIC などの各種標準ペリフェラルインターフェースによる開発をネイティブにサポートしています。本記事では、実際のアプリケーション例を通して、関連する実装方法を紹介します。
 
 :::tip
 
 このチュートリアルは PlatformIO ビルドシステムと Zephyr RTOS をベースに作成されています。
-PlatformIO 上で XIAO nRF54LM20A 用のプロジェクトを作成する方法に慣れていない場合は、[Getting Sarted With Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_getting_started/) にジャンプしてください。
+PlatformIO 上で XIAO nRF54LM20A 用のプロジェクトを作成したことがない場合は、[Getting Sarted With Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_getting_started/) にジャンプしてください。
 
 :::
 
 ## デジタル
 
-デジタルピンは主に、高レベルおよび低レベルのロジックを出力することで、外部センサやアクチュエータのオン・オフ制御を実現します。Grove Base for XIAO 拡張ボードおよび標準 Grove 周辺モジュールと組み合わせることで、本セクションでは XIAO nRF54LM20A 上のデジタルピンの低レベルドライバロジックと実際の呼び出し方法について詳しく説明します。
+デジタルピンは主に、高レベルと低レベルのロジックを出力することで、外部センサやアクチュエータのオン・オフ制御を実現します。Grove Base for XIAO 拡張ボードと標準 Grove 周辺モジュールを組み合わせることで、本セクションでは XIAO nRF54LM20A 上のデジタルピンの低レベルドライバロジックと実用的な呼び出し方法について詳しく説明します。
 
 ### ハードウェアの準備
 
@@ -104,7 +104,7 @@ XIAO nRF54LM20A のピン配置に従い、P1.0 を Grove-Button の制御ピン
 
 :::
 
-main.c のプログラムを書き込みます
+main.c 用のプログラムを書き込みます
 
 ```cpp
 /*
@@ -173,7 +173,14 @@ int main(void)
 
 ### 結果
 
-ファームウェアを書き込んだ後、ボタンを押すとブザーが鳴り、シリアルポートにステータスが出力されます。
+ファームウェアを書き込んだ後、ボタンを押すとブザーが鳴ります。また、シリアルポートにはステータスが出力されます。
+
+:::tip
+
+ボーレートを 115200 に設定することに注意してください。VS で直接 Monitor を開く場合は、`.ini` ファイルでボーレートを設定することを推奨します。
+
+:::
+
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -292,7 +299,7 @@ XIAO nRF54LM20A のピン配置に従い、**P1.0** を **Grove-Servo** の制�
 ```
 </details>
 
-2. `prj.conf` ファイルを変更して、関連する PWM 設定を有効にします。
+2. 関連する PWM 設定を有効にするために `prj.conf` ファイルを変更します。
 
 ```prj
 CONFIG_PWM=y
@@ -386,7 +393,7 @@ int main(void)
 
 ### 結果
 
-ファームウェアの書き込み後、サーボは 0° から 180° まで毎秒 33 ラジアンの速度で回転し、その後 0° に戻ります。
+ファームウェアを書き込むと、サーボは 0° から 180° まで毎秒 33 ラジアンの速度で回転し、その後 0° に戻ります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -396,7 +403,7 @@ int main(void)
 
 ## アナログ
 
-アナログ I/O はアナログ-デジタルコンバータ（ADC）に基づいており、主に外部センサから出力される連続的なアナログ電圧信号を取得するために使用されます。生のデジタルサンプリング値（Raw Data）を取得した後、特定の線形または非線形変換アルゴリズムを用いて実際の工学的測定値にマッピングできます。この機能は、バッテリ電圧サンプリングや、土壌水分、周囲温度などの物理量のリアルタイム監視といったシナリオで広く利用されています。
+アナログ I/O はアナログ・デジタルコンバータ（ADC）に基づいており、主に外部センサから出力される連続的なアナログ電圧信号を取得するために使用されます。生のデジタルサンプリング値（Raw Data）を取得した後、特定の線形または非線形変換アルゴリズムを用いて実際の工学的測定値にマッピングできます。この機能は、バッテリ電圧のサンプリングや、土壌水分、周囲温度などの物理量のリアルタイム監視といったシナリオで広く利用されています。
 
 ### ハードウェアの準備
 
@@ -432,7 +439,7 @@ int main(void)
 
 ### ソフトウェアの準備
 
-XIAO nRF54LM20A のピン配置に従って、P1.00 を PWM 出力ピンとして設定します。
+XIAO nRF54LM20A のピン配置に従い、P1.00 を PWM 出力ピンとして設定します。
 
 :::tip
 
@@ -440,7 +447,7 @@ XIAO nRF54LM20A のピン配置に従って、P1.00 を PWM 出力ピンとし�
 
 :::
 
-1. デバイスツリーファイルを変更します。P1.00 ピンは ADC チャンネル 0 に対応しており、デバイスツリーノードにバインドする必要があります。
+1. デバイスツリーファイルを変更します。ピン P1.00 は ADC チャンネル 0 に対応しており、デバイスツリーノードにバインドする必要があります。
 
 ```dts
 /*
@@ -564,7 +571,7 @@ PC 上でシリアルポートアシスタントを開き、出力値を観察�
 :::tip
 
 電圧リファレンス読み取り表
-| 状態     | センサ出力電圧 | 期待される ADC Raw 値|
+| 状態     | センサ出力電圧 | 期待される ADC 生データ値|
 | -------------- | -------------- | ---------------- |
 | 空気中（乾燥） | 約 2.0–2.4V      | 約 3400–4095       |
 | 湿った土壌中       | 約 1.3–1.8V      | 約 2200–3000       |
@@ -580,7 +587,7 @@ PC 上でシリアルポートアシスタントを開き、出力値を観察�
 
 ## UART
 
-Universal Asynchronous Receiver/Transmitter（UART）は、標準的な非同期シリアル通信プロトコルです。同期のための外部クロック信号を必要とせず、通信双方が事前に設定したボーレートに依存して非同期のデータ送受信を実現します。物理配線の観点では、デバイスの TX と RX ピンをクロス接続し、グラウンド同士を接続するだけでフルデュプレックスのデータリンクを構成できます。ハードウェアコストが最小で、送受信の同時実行をサポートするという特長から、UART は組み込みシステムにおいて、コンソールログ出力、モジュール型周辺機器のデバッグ、低帯域ポイントツーポイントデータ通信などに広く採用されています。
+Universal Asynchronous Receiver/Transmitter（UART）は、標準的な非同期シリアル通信プロトコルです。同期のための外部クロック信号を必要とせず、通信双方が事前に設定したボーレートに依存して非同期のデータ送受信を実現します。物理配線の観点では、デバイスの TX と RX ピンをクロス接続し、グラウンド同士を接続するだけでフルデュプレックスのデータリンクを構成できます。ハードウェアコストが最小で、送受信の同時実行をサポートするという特長から、UART は組み込みシステムにおいて、コンソールログ出力、モジュール型周辺機器のデバッグ、低帯域幅のポイントツーポイントデータ通信などに広く採用されています。
 
 ### ハードウェアの準備
 
@@ -661,7 +668,7 @@ CONFIG_LOG_BACKEND_UART=y
 CONFIG_LOG_DEFAULT_LEVEL=3
 ```
 
-3. メイン関数を作成します。オンボードの BOOT ボタンが押されると、シリアルポートの状態とピン設定がシリアルポート経由でコンピュータに出力されます。押されていない場合は、デフォルトで動作状態が出力されます。
+3. メイン関数を作成します。オンボードの BOOT ボタンが押されたとき、シリアルポートの状態とピン設定がシリアルポート経由でコンピュータに出力されます。押されていない場合は、デフォルトで動作状態が出力されます。
 
 <details>
 
@@ -898,28 +905,29 @@ XIAO nRF54LM20A のピン配置によると、P1.03 と P1.07 を I2C ピンと�
 
 ```dts
 / {
-	chosen {
-		zephyr,display = &ssd1306_128x64;
-	};
+        chosen {
+                zephyr,display = &ssd1306_128x64;
+        };
 };
 
 &i2c22 {
-	status = "okay";
-	zephyr,concat-buf-size = <2048>;
-	ssd1306_128x64: ssd1306@3c {
-		compatible = "solomon,ssd1306fb";
-		reg = <0x3c>;
-		width = <128>;
-		height = <64>;
-		segment-offset = <0>;
-		page-offset = <0>;
-		display-offset = <0>;
-		multiplex-ratio = <63>;
-		segment-remap;
-		com-invdir;
-		prechargep = <0x22>;
-	};
+        status = "okay";
+        zephyr,concat-buf-size = <2048>;
+        ssd1306_128x64: ssd1306@3c {
+                compatible = "solomon,ssd1306fb";
+                reg = <0x3c>;
+                width = <128>;
+                height = <64>;
+                segment-offset = <0>;
+                page-offset = <0>;
+                display-offset = <0>;
+                multiplex-ratio = <63>;
+                segment-remap;
+                com-invdir;
+                prechargep = <0x22>;
+        };
 };
+
 ```
 
 2. `prj.conf` ファイルを修正して、I2C およびディスプレイ関連の設定を有効にします。
@@ -927,14 +935,16 @@ XIAO nRF54LM20A のピン配置によると、P1.03 と P1.07 を I2C ピンと�
 ```
 CONFIG_STDOUT_CONSOLE=y
 CONFIG_HEAP_MEM_POOL_SIZE=16384
+CONFIG_I2C=y
 CONFIG_DISPLAY=y
 CONFIG_SSD1306=y
 CONFIG_LOG=y
 CONFIG_LOG_DEFAULT_LEVEL=4
 CONFIG_CHARACTER_FRAMEBUFFER=y
+
 ```
 
-3. メイン関数を作成し、文字列の表示位置と機能を設定します。
+3. 文字列の表示位置と機能を設定するための main 関数を書きます。
 
 <details>
 
@@ -1096,13 +1106,13 @@ int main(void) {
 
 ### 結果
 
-プログラムの実行後、画面に **Hello XIAO nRF54LM20A** というテキストが表示され、USB シリアルポートを通じてスレッドデータが出力されます。
+プログラムの実行後、テキスト **Hello XIAO nRF54LM20A** が画面に表示され、スレッドデータが USB シリアルポートを通して出力されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_5.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## SPI
 
-SPI は、高速・同期式・全二重の通信プロトコルです。非同期通信とは異なり、SPI は専用の SCLK クロックラインに依存して正確なデータ同期を行います。一般的に、MOSI、MISO、およびチップセレクト CS/SS ピンで構成される古典的な 4 線式ハードウェアトポロジが採用されます。独立した送信・受信チャネルと高いバスクロック周波数を備えているため、SPI は優れたデータスループットを実現します。Flash や SD カードなどの大容量ストレージデバイス、高解像度かつ高リフレッシュレートのディスプレイ、高周波サンプリングセンサなど、高い帯域幅が求められる周辺機器の駆動シーンで広く利用されています。
+SPI は、高速で同期式かつフルデュプレックスの通信プロトコルです。非同期通信とは異なり、SPI は専用の SCLK クロックラインに依存して正確なデータ同期を行います。一般的に、MOSI、MISO、およびチップセレクト CS/SS ピンから構成される古典的な 4 線式ハードウェアトポロジを採用します。独立した送信・受信チャネルと高いバスクロック周波数を備えているため、SPI は優れたデータスループットを実現します。Flash や SD カードなどの大容量ストレージデバイス、高解像度かつ高リフレッシュレートの画面表示、高周波サンプリングセンサなど、高い帯域幅が求められる周辺機器駆動のシナリオで広く利用されています。
 
 ### ハードウェアの準備
 
@@ -1137,7 +1147,7 @@ SPI は、高速・同期式・全二重の通信プロトコルです。非同�
 
 :::
 
-1. デバイスツリーファイルを修正します。LCD 画面を駆動するために、デバイスツリーで spi23 ノードを有効にし、ピンマッピングを設定します。P1.04、P1.05、P1.06 をそれぞれ SPI SCK、MISO、MOSI として設定します。同時に、P1.31 と P1.29 を画面の CS（チップセレクト）および DC（データ/コマンド）制御ピンとして設定します。
+1. デバイスツリーファイルを修正します。LCD 画面を駆動するために、デバイスツリーで spi23 ノードを有効にし、ピンマッピングを設定します。P1.04、P1.05、P1.06 をそれぞれ SPI SCK、MISO、MOSI として設定します。同時に、P1.31 と P1.29 を画面の CS（Chip Select）および DC（Data/Command）制御ピンとして設定します。
 
 <details>
 
@@ -1252,7 +1262,7 @@ SPI は、高速・同期式・全二重の通信プロトコルです。非同�
 </details>
 <br/>
 
-2. prj.conf を修正して、SPI 関連の設定を有効にします。
+2. SPI 関連の設定を有効にするために prj.conf を変更します。
 
 ```prj
 CONFIG_LOG=y
@@ -1268,7 +1278,7 @@ CONFIG_HEAP_MEM_POOL_SIZE=32768
 CONFIG_MAIN_STACK_SIZE=4096
 ```
 
-3. main.c プログラムを修正し、単色で画面を塗りつぶすロジックを記述します。
+3. main.c プログラムを変更し、単色で画面を塗りつぶすロジックを書き込みます。
 
 <details>
 
@@ -1416,7 +1426,7 @@ int main(void)
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
