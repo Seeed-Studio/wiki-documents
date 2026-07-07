@@ -1,314 +1,355 @@
 ---
-description: Este wiki fornece um guia completo para o reBot Arm B601-DM para implementar coleta de dados e treinamento dentro do framework LeRobot.
+description: Este wiki fornece um fluxo de trabalho completo para usar o reBot Arm B601-DM com o LeRobot, incluindo configuração de ambiente, calibração, teleoperação, integração de câmera, coleta de conjunto de dados, treinamento, avaliação e implantação avançada.
 title: Introdução ao reBot Arm B601-DM no LeRobot
 keywords:
   - Lerobot
   - Huggingface
-  - Robotic Arm
+  - Braço robótico
   - rebot arm
-  - Robot
+  - Robô
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg
 slug: /rebot_arm_b601_dm_lerobot
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-15T00:00:00.000Z
-  author: LiuJunjie
+  date: 2026-07-04
+  author: ZhuYaohui
 translation:
   skip:
     - zh-CN
 createdAt: '2026-04-09'
-updatedAt: '2026-06-17'
+updatedAt: '2026-07-04'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_lerobot/
 ---
 
+# Introdução ao reBot Arm B601-DM no LeRobot
 
-# Introdução ao reBot Arm B601-DM baseado em LeRobot e ao reBot 102 Leader
+<div className="rebot-page">
 
+  <section className="doc-hero">
+    <div className="hero-copy">
+      <span className="eyebrow">reBot Arm × LeRobot</span>
+      <h2>Comece com teleoperação, depois construa conjuntos de dados, treine políticas e faça a implantação em um braço robótico real</h2>
+      <p>Este guia é para usuários que já concluíram o início rápido do reBot Arm B601-DM e a configuração básica de hardware. Ele orienta você pela instalação do LeRobot, calibração do braço, teleoperação, integração de câmera, coleta de conjunto de dados, treinamento, avaliação e fluxos de trabalho de implantação avançada.</p>
+      <div className="hero-actions">
+        <a href="#quick-path">Ver trilha de aprendizado</a>
+        <a href="#install-lerobot">Instalar LeRobot</a>
+        <a href="#record-dataset">Iniciar coleta de conjunto de dados</a>
+      </div>
+    </div>
+    <div className="hero-card image-card">
+      <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png" alt="reBot Arm B601-DM" />
+      <span>Teleoperação · Conjunto de dados · Treinamento · Avaliação</span>
+    </div>
+  </section>
 
-![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
-
-<p align="center">
-    <a href="./LICENSE">
-        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
-    </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
-    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
-</p>
-
-<p align="center">
-  <strong>Braço robótico de 6 DOF · Suporte a múltiplos motores · Solucionador de cinemática · Planejamento de trajetória · Totalmente open source</strong>
-</p>
-
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-</a></div>
-
-
-
-[reBot Arm B601-DM](https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/) é um projeto de braço robótico open source lançado pela Seeed, dedicado a reduzir a barreira para o aprendizado de inteligência incorporada. Nós abrimos todo o design estrutural e código sem reservas, tornando a tecnologia de robótica acessível a todos.
-
-[LeRobot](https://github.com/huggingface/lerobot/tree/main) se dedica a fornecer modelos, conjuntos de dados e ferramentas para robótica no mundo real em PyTorch. Seu objetivo é reduzir a barreira de entrada da robótica, permitindo que todos contribuam e se beneficiem do compartilhamento de conjuntos de dados e modelos pré-treinados. O LeRobot integra metodologias de ponta validadas para aplicação no mundo real, com foco em aprendizado por imitação e aprendizado por reforço. Ele fornece um conjunto de modelos pré-treinados, conjuntos de dados com demonstrações coletadas por humanos e ambientes de simulação, permitindo que os usuários comecem sem a necessidade de montar um robô.
-
-### 📖 Introdução ao projeto
-
-**reBot-DevArm (reBot Arm B601 DM e reBot Arm B601 RS)** é um projeto de braço robótico dedicado a reduzir a barreira para o aprendizado de inteligência incorporada. Nós focamos em **"Verdadeiro Open Source"** — não apenas código, abrimos todo o seguinte sem reservas:
-- 🦾 **Braços robóticos open source com duas versões de motor**: Fornecemos todos os arquivos open source para as versões de motor RoboStride e Damiao com a mesma aparência.
-- 🛠️ **Esquemas de hardware**: Arquivos-fonte das peças de chapa metálica e das peças impressas em 3D.
-- 🔩 **BOM (Lista de Materiais)**: Detalhada até a especificação de cada parafuso e link de compra.
-- 💻 **Software e algoritmos**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
-
-## Construindo seu braço robótico reBot
-
-- Oferecemos cinco opções de kit:
-  - **Kit de motores do corpo do braço robótico**: Inclui apenas os motores e chicotes de fios necessários para o braço robótico.
-  - **Kit de peças estruturais do corpo do braço robótico**: Inclui apenas os componentes mecânicos estruturais.
-  - **Kit completo do gripper**: Inclui motores, chicotes de fios e peças estruturais para o gripper.
-  - **Kit completo do braço**: Inclui todos os componentes para o corpo do braço robótico e o gripper.
-  - **Braço robótico pré-montado**: Um braço robótico totalmente montado.
-
-O kit de robô inteligente reBot-DevArm e reComputer Jetson AI combina perfeitamente o controle de braço robótico de alta precisão com uma poderosa plataforma de computação de IA, fornecendo uma solução completa de desenvolvimento de robôs. Este kit é baseado na plataforma Jetson Orin ou AGX Orin, combinada com o reBot-DevArm e o framework de IA LeRobot, oferecendo aos usuários um sistema de robô inteligente aplicável a múltiplos cenários, como educação, pesquisa e automação industrial.
-
-Este wiki fornece tutoriais de depuração para o reBot-DevArm e implementa coleta de dados e treinamento dentro do framework LeRobot.
-
-:::caution
-Os tutoriais da Seeed Studio são rigorosamente atualizados de acordo com a documentação oficial. Se você encontrar problemas de software ou ambiente que não possam ser resolvidos, verifique primeiro o FAQ no final do artigo ou entre em contato com o atendimento ao cliente para entrar no grupo de discussão SeeedStudio LeRobot. Você também pode fazer perguntas aqui: [LeRobot GitHub](https://github.com/huggingface/lerobot) ou [Discord Channel](https://discord.gg/8TnwDdjFGU).
-:::
-
-## 🔧 Recursos da série reBot B601-DM:
-
-1. **Open source e baixo custo**
-   O reBot Arm é uma solução de braço robótico open source e de baixo custo da Seeed Studio, dedicada a reduzir a barreira para o aprendizado de inteligência incorporada.
-
-2. **Integração com a plataforma LeRobot**
-   Projetado para integração com a [plataforma LeRobot](https://github.com/huggingface/lerobot). Esta plataforma fornece modelos PyTorch, conjuntos de dados e ferramentas para aprendizado por imitação de tarefas robóticas reais (incluindo coleta de dados, simulação, treinamento e implantação).
-
-3. **Recursos abundantes de aprendizado**
-   Fornece recursos de aprendizado open source abrangentes, incluindo guias de montagem e calibração, tutoriais de teste e coleta de dados, documentação de treinamento e implantação para ajudar os usuários a começar rapidamente e desenvolver aplicações de robótica.
-
-4. **Compatível com a plataforma Nvidia**
-   Suporta implantação via plataforma reComputer Mini J4012 Orin NX 16GB.
-
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/PoMv3mw8SGk" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="safety-alert">
+  <div className="safety-alert-icon">⚠️</div>
+  <div className="safety-alert-content">
+    <strong>Alerta de segurança: Limpe a área de trabalho do robô antes de executar</strong>
+    <p>
+      Antes de executar qualquer programa que mova o braço robótico, remova todos os itens de valor,
+      objetos frágeis, ferramentas, cabos e objetos não relacionados dentro de um <strong>raio de 1 metro</strong>
+      da área de trabalho do robô. Durante a depuração e operação, o pessoal deve permanecer fora
+      da área de movimento do robô.
+    </p>
+    <ul>
+      <li>Não toque em juntas, motores, elos, garra ou efetuador final após o braço robótico ser ligado.</li>
+      <li>Antes de calibração, teleoperação, controle de IK, controle de trajetória, compensação de gravidade, execução ROS2 / MoveIt ou preensão visual, certifique-se de que a base do braço esteja firmemente fixada.</li>
+      <li>Se ocorrer movimento anormal, ruído, vibração, cabos soltos, mau contato de energia ou perda de comunicação, pare o programa imediatamente e desligue o sistema antes da inspeção.</li>
+      <li>Sempre desligue o sistema antes de conectar ou desconectar cabos de motor, cabos CAN, adaptadores USB2CAN / PCAN-USB, conectores XT30 ou conectores de energia.</li>
+    </ul>
+  </div>
 </div>
 
-## Ambiente inicial do sistema
 
-**Para Ubuntu x86:**
-  - Ubuntu 22.04
-  - CUDA 12+
-  - Python 3.10
-  - Torch 2.6
+  <nav className="doc-nav" aria-label="reBot LeRobot quick navigation">
+    <a href="#quick-path">Trilha</a>
+    <a href="#install-lerobot">Instalar</a>
+    <a href="#calibration">Calibrar</a>
+    <a href="#teleoperation">Teleoperar</a>
+    <a href="#camera">Câmeras</a>
+    <a href="#record-dataset">Conjunto de dados</a>
+    <a href="#training">Treinamento</a>
+    <a href="#faq">FAQ</a>
+  </nav>
 
-**Para Jetson Orin:**
-  - Jetson JetPack 6.0 e 6.1, não suporta 6.2
-  - Python 3.10
-  - Torch 2.3+
+  <section id="quick-path" className="section-card">
+    <div className="section-title">
+      <span>Comece aqui</span>
+      <h2>Fluxo de trabalho recomendado</h2>
+      <p>Se este for o seu primeiro projeto com LeRobot, siga a sequência abaixo. Se você já estiver familiarizado com o LeRobot, pode ir diretamente para o módulo de que precisa.</p>
+    </div>
 
-## Instalar o LeRobot
+    <div className="path-grid">
+      <a className="path-card" href="#install-lerobot"><span>Etapa 1</span><b>Instalar LeRobot</b><small>Crie o ambiente conda, instale o fork do LeRobot verificado pela Seeed e instale os pacotes necessários.</small></a>
+      <a className="path-card" href="#calibration"><span>Etapa 2</span><b>Calibrar braços</b><small>Calibre o braço seguidor B601-DM e o braço líder reBot 102 para que suas posições físicas coincidam.</small></a>
+      <a className="path-card" href="#teleoperation"><span>Etapa 3</span><b>Teleoperar</b><small>Execute a teleoperação líder-seguidor e verifique se o braço seguidor se move de forma correta e segura.</small></a>
+      <a className="path-card" href="#camera"><span>Etapa 4</span><b>Adicionar câmeras</b><small>Conecte câmeras OpenCV, RealSense ou Orbbec e verifique os fluxos de vídeo antes de gravar dados.</small></a>
+      <a className="path-card" href="#record-dataset"><span>Etapa 5</span><b>Registrar conjuntos de dados</b><small>Colete demonstrações de tarefas localmente ou envie-as para o Hugging Face Hub.</small></a>
+      <a className="path-card" href="#training"><span>Etapa 6</span><b>Treinar e avaliar</b><small>Comece com ACT, depois experimente SmolVLA, Pi0 / Pi0.5 ou GR00T para experimentos mais avançados.</small></a>
+    </div>
+  </section>
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/mWrWeqAPDSY" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+  <section className="section-card">
+    <div className="section-title">
+      <span>Etapas detalhadas</span>
+      <h2>Fluxo de trabalho LeRobot passo a passo</h2>
+      <p>Esta sequência transforma o fluxo de trabalho completo do LeRobot em pequenos marcos testáveis. Conclua cada etapa antes de passar para a coleta de dados em braço real ou implantação de políticas.</p>
+    </div>
+    <div className="step-card-grid">
+      <div className="step-card"><span className="step-mini">Etapa 0</span><strong>Concluir início rápido do B601-DM</strong><p>Verifique energia, USB2CAN, IDs dos motores, posição zero, direção da garra e movimento básico antes de usar o LeRobot.</p></div>
+      <div className="step-card"><span className="step-mini">Etapa 1</span><strong>Instalar ambiente LeRobot</strong><p>Crie o ambiente conda, instale o fork do LeRobot verificado pela Seeed e verifique a compatibilidade do PyTorch / ffmpeg.</p></div>
+      <div className="step-card"><span className="step-mini">Etapa 2</span><strong>Calibrar braços seguidor e líder</strong><p>Calibre o seguidor B601-DM e o líder reBot 102 para que a teleoperação comece a partir de referências físicas conhecidas.</p></div>
+      <div className="step-card"><span className="step-mini">Etapa 3</span><strong>Executar teleoperação com segurança</strong><p>Use primeiro uma pequena área de trabalho desobstruída. Confirme direções das juntas, comportamento da garra, procedimento de parada de emergência e fluxo de reinicialização.</p></div>
+      <div className="step-card"><span className="step-mini">Etapa 4</span><strong>Adicionar câmeras e validar fluxos</strong><p>Comece com uma câmera OpenCV, depois adicione fluxos RGB-D RealSense ou Orbbec quando a configuração básica estiver estável.</p></div>
+      <div className="step-card"><span className="step-mini">Etapa 5</span><strong>Registrar e inspecionar conjuntos de dados</strong><p>Colete primeiro conjuntos de dados locais curtos, visualize episódios, reproduza apenas quando for seguro e verifique observações / ações antes do treinamento.</p></div>
+      <div className="step-card"><span className="step-mini">Etapa 6</span><strong>Treinar e avaliar políticas</strong><p>Comece com ACT, depois avance para SmolVLA, Pi0 / Pi0.5, GR00T, PEFT, treinamento multi-GPU ou inferência assíncrona.</p></div>
+    </div>
+  </section>
 
-Você precisa instalar pytorch, torchvision e outros ambientes com base na sua versão do CUDA.
+  <section className="section-card">
+    <div className="section-title">
+      <span>Visão geral</span>
+      <h2>Visão geral do projeto</h2>
+      <p>O reBot Arm B601-DM é um projeto de braço robótico de código aberto da Seeed Studio. Ele foi projetado para reduzir a barreira para aprendizado de IA incorporada, fornecendo arquivos mecânicos abertos, listas de materiais (BOMs), software e tutoriais.</p>
+    </div>
 
-### 1. Instalar o Miniforge
+    <div className="module-summary-grid">
+      <div className="module-summary-card"><b>Objetivo</b><span>Construir um fluxo de trabalho completo de aprendizado por imitação, da teleoperação à avaliação de políticas.</span></div>
+      <div className="module-summary-card"><b>Robô</b><span>Braço seguidor B601-DM com motores Damiao e um braço líder reBot 102.</span></div>
+      <div className="module-summary-card"><b>Dados</b><span>Usar LeRobot para registrar estados do robô, ações, quadros de câmera e descrições de tarefas sincronizados.</span></div>
+      <div className="module-summary-card"><b>Treinamento</b><span>Começar com ACT, depois expandir para VLA e fluxos de trabalho com modelos de base maiores.</span></div>
+    </div>
 
-```bash
-cd ~
+    <div className="info-grid">
+      <div><strong>Braço robótico</strong><span>Braço seguidor reBot Arm B601-DM de 6 DOF com versão de motor Damiao.</span></div>
+      <div><strong>Braço líder</strong><span>Braço líder reBot Arm 102 para teleoperação em tempo real e coleta de demonstrações.</span></div>
+      <div><strong>Framework</strong><span>LeRobot para teleoperação, gravação de conjuntos de dados, treinamento, avaliação e implantação de políticas.</span></div>
+      <div><strong>Plataforma de computação</strong><span>Estação de trabalho Ubuntu x86, estação de trabalho com GPU NVIDIA ou plataforma Jetson Orin, dependendo da tarefa.</span></div>
+    </div>
+
+    <details className="content-details">
+      <summary>Assista ao vídeo de introdução do projeto reBot</summary>
+      <div className="video-container">
+        <iframe width="900" height="600" src="https://www.youtube.com/embed/PoMv3mw8SGk" title="reBot Arm project introduction" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      </div>
+    </details>
+  </section>
+
+  <section className="section-card">
+    <div className="section-title">
+      <span>Sistema</span>
+      <h2>Ambiente inicial do sistema</h2>
+      <p>Comece a partir de um ambiente limpo. Para usuários Jetson, certifique-se de que PyTorch e Torchvision com suporte a GPU estejam instalados antes de instalar as dependências do LeRobot.</p>
+    </div>
+
+    <div className="two-col">
+      <div className="check-card">
+        <h3>Ubuntu x86</h3>
+        <ul>
+          <li>Ubuntu 22.04</li>
+          <li>CUDA 12+</li>
+          <li>Python 3.10 / 3.12 dependendo da sua configuração</li>
+          <li>Torch 2.6 ou uma compilação CUDA compatível</li>
+        </ul>
+      </div>
+      <div className="check-card">
+        <h3>Jetson Orin</h3>
+        <ul>
+          <li>JetPack 6.0 ou 6.1</li>
+          <li>Python 3.10</li>
+          <li>Torch 2.3+</li>
+          <li>Instale o PyTorch com suporte a GPU antes do LeRobot</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="install-lerobot" className="section-card">
+    <div className="section-title">
+      <span>Etapa 1</span>
+      <h2>Instalar LeRobot</h2>
+      <p>Esta seção prepara o ambiente de trabalho, instala o repositório LeRobot verificado pela Seeed e adiciona os pacotes específicos do reBot.</p>
+    </div>
+    <div className="module-summary-grid">
+      <div className="module-summary-card"><b>1.1 Instalar Miniforge</b><span>Crie um ambiente conda isolado em vez de modificar o Python do sistema.</span></div>
+      <div className="module-summary-card"><b>1.2 Clonar o LeRobot</b><span>Use o fork Seeed-Projects validado para os exemplos do B601-DM.</span></div>
+      <div className="module-summary-card"><b>1.3 Instalar pacotes</b><span>Instale o LeRobot, o pacote do robô B601, o pacote de teleoperação reBot 102 e o MotorBridge.</span></div>
+      <div className="module-summary-card"><b>1.4 Verificar a pilha de mídia</b><span>Instale o ffmpeg e confirme o suporte à codificação de vídeo antes de coletar conjuntos de dados.</span></div>
+    </div>
+
+    <details className="content-details">
+      <summary>Vídeo de instalação</summary>
+      <div className="video-container">
+        <iframe width="900" height="600" src="https://www.youtube.com/embed/mWrWeqAPDSY" title="Install LeRobot" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      </div>
+    </details>
+
+    <div className="command-card">
+      <h3>1. Instalar o Miniforge</h3>
+      <pre><code>{`cd ~
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 
 ~/miniforge3/bin/conda init bash
-source ~/.bashrc
-```
+source ~/.bashrc`}</code></pre>
+    </div>
 
-### 2. Clonar o repositório Lerobot
-
-```bash
-mkdir ~/rebot_lerobot
+    <div className="command-card">
+      <h3>2. Clonar o repositório LeRobot</h3>
+      <pre><code>{`mkdir ~/rebot_lerobot
 cd ~/rebot_lerobot
-git clone https://github.com/Seeed-Projects/lerobot.git
-```
+git clone https://github.com/Seeed-Projects/lerobot.git`}</code></pre>
+    </div>
 
-### 3. Criar ambiente Conda e instalar o LeRobot
+    <div className="command-card">
+      <h3>3. Criar o ambiente conda e instalar pacotes</h3>
+      <p>Use o repositório LeRobot verificado da Seeed para este guia. O repositório LeRobot upstream muda rapidamente, então comandos e formatos de conjuntos de dados podem ser diferentes.</p>
+      <pre><code>{`cd ~/rebot_lerobot
 
-:::tip
-Para funções detalhadas dos pacotes de funções, consulte:
-- [lerobot-teleoperator-rebot-arm-102](https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102)
-- [lerobot-robot-seeed-b601](https://github.com/Seeed-Projects/lerobot-robot-seeed-b601)
-:::
-
-O repositório lerobot já possui um pyproject.toml. Crie um ambiente conda e instale todas as dependências.
-
-```bash
-cd ~/rebot_lerobot
-
-# Create conda environment (Python 3.12)
 conda create -y -n lerobot python=3.12
-
-# Activate environment
 conda activate lerobot
 
-# Install lerobot main project (editable mode)
 pip install -e ./lerobot
-
-# Add dependency packages
 pip install lerobot-teleoperator-rebot-arm-102
 pip install lerobot-robot-seeed-b601
-pip install motorbridge
-```
+pip install motorbridge`}</code></pre>
+    </div>
 
-### 4. Instalar o ffmpeg
+    <div className="command-card">
+      <h3>4. Instalar o ffmpeg</h3>
+      <pre><code>{`conda install ffmpeg -c conda-forge
 
-ffmpeg é uma dependência de decodificação de vídeo, instale via conda:
+# If you encounter compatibility issues:
+conda install ffmpeg=7.1.1 -c conda-forge
 
-```bash
-conda install ffmpeg -c conda-forge
-```
+# Check libsvtav1 support:
+ffmpeg -encoders | grep svtav1`}</code></pre>
+    </div>
 
-:::tip
-**Notas de versão**:
-- Por padrão, o ffmpeg 7.X será instalado (suporta o codificador libsvtav1)
-- Se você encontrar problemas de compatibilidade de versão, pode especificar o ffmpeg 7.1.1:
-  ```bash
-  conda install ffmpeg=7.1.1 -c conda-forge
-  ```
-- Você pode verificar se o codificador libsvtav1 é suportado via `ffmpeg -encoders | grep svtav1`
-:::
-
-### 5. Configuração especial para dispositivos Jetson JetPack 6.0+
-
-(Ignore esta etapa para PC) Para dispositivos Jetson JetPack 6.0+ (certifique-se de ter instalado Pytorch-gpu e Torchvision de acordo com [este tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) etapa 5 antes de executar esta etapa):
-
-```bash
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies via conda, for Jetson Jetpack 6.0+ only
-conda remove opencv   # Uninstall OpenCV
-pip3 install opencv-python==4.10.0.84  # Install specific OpenCV version using pip3
+    <details className="content-details">
+      <summary>Configuração especial para Jetson JetPack 6.0+</summary>
+      <p>Pule esta etapa em PCs comuns. No Jetson, instale primeiro o PyTorch e o Torchvision com suporte a GPU e, em seguida, aplique os seguintes ajustes de dependência quando necessário.</p>
+      <pre><code>{`conda install -y -c conda-forge "opencv>=4.10.0.84"
+conda remove opencv
+pip3 install opencv-python==4.10.0.84
 conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
-pip3 install numpy==1.26.0  # This version must be compatible with torchvision
-```
+pip3 install numpy==1.26.0`}</code></pre>
+    </details>
 
-### 6. Verificar Pytorch e Torchvision
-
-:::tip
-Se você estiver usando um dispositivo Jetson, instale Pytorch e Torchvision de acordo com [este tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
-:::
-
-Como instalar o ambiente lerobot via pip desinstalará o Pytorch e o Torchvision originais e instalará as versões para CPU, você precisa realizar uma verificação em Python.
-
-```python
-python3
+    <details className="content-details">
+      <summary>Verificar PyTorch e Torchvision</summary>
+      <p>A instalação via pip pode substituir o seu PyTorch com suporte a GPU por uma compilação para CPU. Sempre verifique a disponibilidade do CUDA antes de continuar.</p>
+      <pre><code>{`python3
 
 import torch
-print(torch.cuda.is_available())#Should output True
-```
+print(torch.cuda.is_available())  # Expected output: True`}</code></pre>
+    </details>
+  </section>
 
-Se a saída for True, você pode digitar exit() para sair do Python e continuar com as etapas a seguir.
-Se a saída for False, você precisa reinstalar Pytorch e Torchvision de acordo com o [tutorial oficial](https://pytorch.org/index.html).
+  <section id="calibration" className="section-card">
 
-## Calibrar o braço robótico
-
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/v8Ek1Ad1VWo" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-Em seguida, você precisa conectar a fonte de alimentação e o cabo de dados ao seu robô reBot B601-DM para calibração, a fim de garantir que os braços líder e seguidor tenham os mesmos valores de posição quando estiverem na mesma posição física. Esta calibração é essencial porque permite que uma rede neural treinada em um robô reBot B601-DM funcione em outro. Se você precisar recalibrar o braço robótico, exclua completamente os arquivos em `~/.cache/huggingface/lerobot/calibration/robots` ou `~/.cache/huggingface/lerobot/calibration/teleoperators` e recalibre o braço robótico. Caso contrário, aparecerá uma mensagem de erro. As informações de calibração do braço robótico serão armazenadas nos arquivos JSON neste diretório.
-
-Primeiro, você precisa conceder permissões de interface executando os seguintes comandos:
-
-```bash
-sudo chmod 666 /dev/ttyUSB*  # Leader arm
-sudo chmod 666 /dev/ttyACM*  # Follower arm (serial bridge)
-```
-
-### Calibrar o braço seguidor
-
-O B601-DM só precisa ser calibrado uma vez após a montagem. Aqui está o comando de calibração. Consulte a figura para a posição zero (garra totalmente fechada).
-
-```bash
-sudo chmod 666 /dev/ttyACM*  # follower arm (serial bridge)
-
-lerobot-calibrate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=follower1 \
-    --robot.can_adapter=damiao
-```
-
-  <div align="center">
-      <img width={800}
-      src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
+<div className="safety-alert compact">
+  <div className="safety-alert-icon">⚠️</div>
+  <div className="safety-alert-content">
+    <strong>Verificação de segurança antes de executar</strong>
+    <p>Remova todos os objetos de valor e mantenha todas as pessoas afastadas dentro de um <strong>raio de 1 metro</strong> da área de trabalho do robô. Certifique-se de que o braço esteja firmemente fixado antes de executar esta seção.</p>
   </div>
-
-### Calibrar o braço líder
-
-As etapas de calibração são cruciais e afetarão diretamente se o braço robótico funcionará normalmente. Siga o processo rigorosamente.
-
-<details>
-
-<summary> rebot 102 leader </summary>
-
-:::tip
-**Notas de calibração do reBot 102 leader**:
-- Quando a calibração começa, a posição atual de cada servo no reBot Arm 102 será **redefinida para zero**
-- `joint_ranges` (limites das juntas) são obtidos do arquivo de configuração `config_rebot_arm_102_leader.py`, não dos dados de calibração
-- Se uma junta parecer sempre travada perto de um limite, verifique primeiro a configuração de `joint_ranges`
-- As direções das juntas são definidas no arquivo de configuração. Se as direções não corresponderem, modifique a configuração em vez de recalibrar
-- O reBot 102 leader usa um módulo USB-para-UART, normalmente mapeado para `/dev/ttyUSB*`
-- Use `ls /dev/ttyUSB*` para verificar o número de porta real
-
-Se esta for a primeira conexão, você pode receber um erro informando que `/dev/ttyACM0` não pode ser encontrado. Isso ocorre porque o brltty está ocupando a porta serial. Execute as seguintes etapas:
-
-```bash
-sudo dmesg | grep ttyUSB #Check the last line shows "disconnected"
-sudo apt remove brltty #Remove brltty
-```
-:::
-
-<div align="center">
-    <img width={800} 
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/102_zeroposition.jpg" />
 </div>
 
-Seguindo as instruções, mova o braço líder para a posição zero mostrada acima,
+<div className="section-title">
+      <span>Etapa 2</span>
+      <h2>Calibrar o braço robótico</h2>
+      <p>A calibração alinha as posições físicas dos braços líder e seguidor. Isso é essencial para teleoperação, coleta de conjuntos de dados e transferência de políticas entre robôs.</p>
+    </div>
+    <div className="step-card-grid compact-grid">
+      <div className="step-card"><span className="step-mini">2.1</span><strong>Conceder permissões</strong><p>Confirme que a porta serial do líder e a ponte serial USB2CAN B601-DM estão acessíveis.</p></div>
+      <div className="step-card"><span className="step-mini">2.2</span><strong>Calibrar o seguidor</strong><p>Defina a posição de referência do seguidor B601-DM e verifique se a garra está na postura zero correta.</p></div>
+      <div className="step-card"><span className="step-mini">2.3</span><strong>Calibrar o líder</strong><p>Calibre o braço líder reBot 102 para que o mapeamento de teleoperação seja consistente.</p></div>
+    </div>
 
-```bash
-sudo chmod 666 /dev/ttyUSB0
+    <details className="content-details">
+      <summary>Vídeo de calibração</summary>
+      <div className="video-container">
+        <iframe width="900" height="600" src="https://www.youtube.com/embed/v8Ek1Ad1VWo" title="Calibrate reBot Arm B601-DM" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      </div>
+    </details>
+
+    <div className="warning-card">
+      <strong>Observação sobre recalibração</strong>
+      <span>Se você precisar recalibrar, exclua os arquivos de calibração em <code>{`~/.cache/huggingface/lerobot/calibration/robots`}</code> ou <code>{`~/.cache/huggingface/lerobot/calibration/teleoperators`}</code> e execute a calibração novamente.</span>
+    </div>
+
+    <div className="command-card">
+      <h3>1. Conceder permissões seriais</h3>
+      <pre><code>{`sudo chmod 666 /dev/ttyUSB*  # Leader arm
+sudo chmod 666 /dev/ttyACM*  # Follower arm / serial bridge`}</code></pre>
+    </div>
+
+    <div className="command-card">
+      <h3>2. Calibrar o braço seguidor B601-DM</h3>
+      <p>Para o B601-DM, a calibração do seguidor geralmente é necessária apenas uma vez após a montagem. A garra deve estar totalmente fechada ao seguir a referência de posição zero.</p>
+      <pre><code>{`lerobot-calibrate \
+    --robot.type=seeed_b601_dm_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao`}</code></pre>
+      <div align="center">
+        <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
+      </div>
+    </div>
+
+    <details className="content-details">
+      <summary>3. Calibrar o braço líder reBot 102</summary>
+      <div className="warning-card">
+        <strong>Importante</strong>
+        <span>Quando a calibração começa, a posição atual de cada servo no braço líder reBot 102 é redefinida como zero. Os limites das juntas são definidos no arquivo de configuração, não nos dados de calibração.</span>
+      </div>
+      <div align="center">
+        <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/102_zeroposition.jpg" />
+      </div>
+      <pre><code>{`sudo chmod 666 /dev/ttyUSB0
 
 lerobot-calibrate \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
-    --teleop.id=rebot_arm_102_leader
-```
+    --teleop.id=rebot_arm_102_leader`}</code></pre>
+      <p>Se esta for a sua primeira conexão e o dispositivo serial se desconectar imediatamente, o <code>brltty</code> pode estar ocupando a porta. Remova-o com <code>sudo apt remove brltty</code>.</p>
+    </details>
+  </section>
 
-Mantenha-o parado e pressione Enter até que a calibração seja concluída.
+  <section id="teleoperation" className="section-card">
 
-</details>
+<div className="safety-alert compact">
+  <div className="safety-alert-icon">⚠️</div>
+  <div className="safety-alert-content">
+    <strong>Verificação de segurança antes de executar</strong>
+    <p>Remova todos os objetos de valor e mantenha todas as pessoas afastadas dentro de um <strong>raio de 1 metro</strong> da área de trabalho do robô. Certifique-se de que o braço esteja firmemente fixado antes de executar esta seção.</p>
+  </div>
+</div>
 
-:::danger
-Durante a teleoperação, se o braço robótico mestre-escravo sofrer desligamento de energia, mau contato de energia ou desconexão da linha de sinal, você deve primeiro parar o código do programa e retornar o braço robótico à sua posição inicial zero. Só então reconecte a fonte de alimentação e reinicie o programa. Isso evita que a desordem de dados cause fuga do braço robótico e possíveis riscos de segurança.
-:::
+<div className="section-title">
+      <span>Etapa 3</span>
+      <h2>Teste de teleoperação</h2>
+      <p>Após a calibração, execute um teste básico de teleoperação líder-seguidor antes de adicionar câmeras ou gravar conjuntos de dados.</p>
+    </div>
+    <div className="module-summary-grid">
+      <div className="module-summary-card"><b>Antes de começar</b><span>Limpe a área de trabalho, fixe a base do braço e mantenha uma mão próxima ao teclado para o procedimento de parada.</span></div>
+      <div className="module-summary-card"><b>Durante o movimento</b><span>Mova o líder lentamente e verifique a direção de cada junta antes de aumentar a velocidade ou o alcance.</span></div>
+      <div className="module-summary-card"><b>Se houver interrupção</b><span>Pare o programa antes de reconectar cabos de energia, USB, CAN ou câmera.</span></div>
+    </div>
 
-## Teleoperar
+    <div className="danger-card">
+      <strong>Lembrete de segurança</strong>
+      <span>Se cabos de energia, USB, CAN ou de sinal se desconectarem durante a teleoperação, pare primeiro o programa, retorne o braço à posição zero, reconecte a alimentação e então reinicie o programa.</span>
+    </div>
 
-:::danger
-Durante a teleoperação, se o braço robótico mestre-escravo sofrer desligamento de energia, mau contato de energia ou desconexão da linha de sinal, você deve primeiro parar o código do programa e retornar o braço robótico à sua posição inicial zero. Só então reconecte a fonte de alimentação e reinicie o programa. Isso evita que a desordem de dados cause fuga do braço robótico e possíveis riscos de segurança.
-:::
+    <div className="command-card">
+      <h3>Executar teleoperação</h3>
+      <pre><code>{`sudo chmod 666 /dev/ttyUSB*
+sudo chmod 666 /dev/ttyACM*
 
-Primeiro conceda permissões às portas seriais:
-```bash
-sudo chmod 666 /dev/ttyUSB*  # Leader arm
-sudo chmod 666 /dev/ttyACM*  # Follower arm (serial bridge)
-```
-
-Execute a teleoperação:
-```bash
 lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
@@ -316,403 +357,132 @@ lerobot-teleoperate \
     --robot.can_adapter=damiao \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
-    --teleop.id=rebot_arm_102_leader
-```
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/6_hXd_QXO2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+    --teleop.id=rebot_arm_102_leader`}</code></pre>
+    </div>
 
-## Adicionar câmeras
+    <details className="content-details">
+      <summary>Vídeo de demonstração de teleoperação</summary>
+      <div className="video-container">
+        <iframe width="900" height="600" src="https://www.youtube.com/embed/6_hXd_QXO2A" title="Teleoperation demo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      </div>
+    </details>
+  </section>
 
+  <section id="camera" className="section-card">
+    <div className="section-title">
+      <span>Etapa 4</span>
+      <h2>Adicionar câmeras</h2>
+      <p>As câmeras fornecem observações visuais para a coleta de conjuntos de dados e o treinamento de políticas. Comece com uma câmera OpenCV simples e depois passe para RealSense ou Orbbec se você precisar de dados RGB-D.</p>
+    </div>
+    <div className="module-summary-grid">
+      <div className="module-summary-card"><b>Opção A: câmera USB</b><span>Melhor primeiro teste para validar a configuração de câmera do LeRobot e o display_data.</span></div>
+      <div className="module-summary-card"><b>Opção B: RealSense</b><span>Use quando você precisar de observações RGB-D e suporte ao Intel RealSense SDK.</span></div>
+      <div className="module-summary-card"><b>Opção C: Orbbec</b><span>Use Gemini2 / Gemini 336 quando o seu fluxo de trabalho precisar de streams RGB-D da Orbbec.</span></div>
+    </div>
 
-:::danger
-Durante a teleoperação, se o braço robótico mestre-escravo sofrer desligamento de energia, mau contato de energia ou desconexão da linha de sinal, você deve primeiro parar o código do programa e retornar o braço robótico à sua posição inicial zero. Só então reconecte a fonte de alimentação e reinicie o programa. Isso evita que a desordem de dados cause fuga do braço robótico e possíveis riscos de segurança.
-:::
+    <div className="camera-grid">
+      <details className="content-details" open>
+        <summary>Câmera genérica USB / OpenCV</summary>
+        <pre><code>{`lerobot-find-cameras opencv
 
-<details>
-<summary> Se estiver usando RealSense D435i/D405 </summary>
+lerobot-teleoperate \
+    --robot.type=seeed_b601_dm_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao \
+    --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader \
+    --display_data=true`}</code></pre>
+        <p>Para múltiplas câmeras USB, evite conectar muitas câmeras de alta resolução no mesmo hub USB.</p>
+      </details>
 
-As câmeras de profundidade RealSense podem fornecer percepção RGB-D para o LeRobot e são adequadas para tarefas como reconhecimento de objetos, reconstrução de nuvens de pontos e manipulação em mesa. Os modelos recomendados aqui são **RealSense D405** e **RealSense D435i**.
-
-**RealSense D405**
-
-<div align="center">
-    <img width={420}
-    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" />
-</div>
-
-A RealSense D405 é uma câmera estéreo de profundidade de curto alcance projetada para tarefas de alta precisão em curta distância, como manipulação robótica em mesa, com faixa de trabalho típica de **7 cm a 50 cm**.
-
-**RealSense D435i**
-
-<div align="center">
-    <img width={420}
-    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" />
-</div>
-
-A RealSense D435i combina detecção de profundidade, imagem RGB e um IMU, tornando-a adequada para aplicações de médio a curto alcance, como reconstrução 3D, SLAM e percepção de ambiente robótico.
-
-**1. Mudar para o branch da câmera**
-
-O suporte atual a câmeras está disponível no branch `DepthCameraSupport`:
-
-```bash
-git checkout DepthCameraSupport
+      <details className="content-details">
+        <summary>RealSense D405 / D435i</summary>
+        <pre><code>{`git checkout DepthCameraSupport
 git pull origin DepthCameraSupport
-```
-
-Confirme o branch atual:
-
-```bash
-git branch --show-current
-```
-
-Saída esperada:
-
-```bash
-DepthCameraSupport
-```
-
-**2. Instalar o LeRobot em modo editável**
-
-Se você usar apenas RealSense:
-
-```bash
 pip install -e ".[realsense]"
-```
-
-**3. Conceder permissões**
-
-```bash
 sudo chmod a+rw /dev/bus/usb/*/*
-```
-
-**4. Detectar câmeras**
-
-```bash
 lerobot-find-cameras realsense
-```
 
-Esta etapa exibirá:
-
-- Modelo da câmera
-- Número de série
-- Informações de USB
-- Configuração de fluxo padrão
-
-**5. Exemplo com RealSense**
-
-Teste com duas RealSense:
-
-```bash
 lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
-  --robot.cameras='{
-    d435i_color: {
-      type: realsense_d435i_color,
-      serial_number_or_name: "419522072950",
-      width: 640,
-      height: 480,
-      fps: 30,
-      color_mode: rgb,
-      color_stream_format: rgb8,
-      rotation: 0,
-      warmup_s: 1
-    },
-    d435i_depth: {
-      type: realsense_d435i_depth,
-      serial_number_or_name: "419522072950",
-      width: 640,
-      height: 480,
-      fps: 30,
-      max_depth_m: 2.0,
-      depth_alpha: 0.2,
-      rotation: 0,
-      warmup_s: 5
-    },
-    d405_color: {
-      type: realsense_d405_color,
-      serial_number_or_name: "409122273421",
-      width: 640,
-      height: 480,
-      fps: 30,
-      color_mode: rgb,
-      color_stream_format: rgb8,
-      rotation: 0,
-      warmup_s: 1
-    },
-    d405_depth: {
-      type: realsense_d405_depth,
-      serial_number_or_name: "409122273421",
-      width: 640,
-      height: 480,
-      fps: 30,
-      depth_alpha: 0.03,
-      rotation: 0,
-      warmup_s: 5
-    }
-  }' \
+    --robot.cameras='{
+      d435i_color: {type: realsense_d435i_color, serial_number_or_name: "419522072950", width: 640, height: 480, fps: 30, color_mode: rgb, color_stream_format: rgb8, rotation: 0, warmup_s: 1},
+      d435i_depth: {type: realsense_d435i_depth, serial_number_or_name: "419522072950", width: 640, height: 480, fps: 30, max_depth_m: 2.0, depth_alpha: 0.2, rotation: 0, warmup_s: 5}
+    }' \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
-    --display_data=true
-```
+    --display_data=true`}</code></pre>
+      </details>
 
-**6. Observações sobre parâmetros**
-
-- `depth_alpha` controla o fator de escala da imagem de profundidade e pode ser ajustado com base no resultado de exibição e na faixa de distância do alvo.
-- Se você conectar três ou mais câmeras de profundidade, é recomendável reduzir `fps` para `15` para melhorar a estabilidade geral.
-- Recomenda-se manter a resolução em `640x480` para um melhor equilíbrio entre estabilidade e desempenho em tempo real.
-
-</details>
-
-<details>
-
-<summary> Se estiver usando a câmera de profundidade Orbbec Gemini2 </summary>
-
-<div align="center">
-    <img width={800}
-    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
-</div>
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer" >
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-</a></div>
-
-fornecendo fluxos sincronizados de RGB e profundidade com alinhamento preciso de profundidade para cor. Combinada com detecção de profundidade estéreo e um IMU de 6 eixos integrado, ela é bem adequada para tarefas robóticas como detecção de objetos, percepção 3D, mapeamento e navegação. Seu design compacto e o suporte completo ao Orbbec SDK a tornam adequada tanto para pesquisa quanto para implantação em cenários reais.
-
-<div align="center">
-    <img width={400}
-    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp" />
-</div>
-
-A Gemini 336 é um novo membro da série Gemini 330. Ela herda o forte desempenho de profundidade da Gemini 335 e melhora ainda mais a qualidade de imagem de profundidade em áreas internas reflexivas, regiões escuras em cenas de alta dinâmica e ambientes externos claros. Para aplicações de robótica, ela pode fornecer dados de profundidade mais estáveis e de alta qualidade para tarefas como percepção, localização e manipulação.
-
-**1. Mudar para o branch da câmera**
-
-O suporte atual a câmeras está disponível no branch `DepthCameraSupport`:
-
-```bash
-git checkout DepthCameraSupport
+      <details className="content-details">
+        <summary>Orbbec Gemini2 / Gemini 336</summary>
+        <pre><code>{`git checkout DepthCameraSupport
 git pull origin DepthCameraSupport
-```
-
-Confirme o branch atual:
-
-```bash
-git branch --show-current
-```
-
-Saída esperada:
-
-```bash
-DepthCameraSupport
-```
-
-**2. Instalar o LeRobot em modo editável**
-
-Se você usar apenas Orbbec:
-
-```bash
 pip install -e ".[orbbec]"
-```
-
-**3. Conceder permissões**
-
-```bash
 sudo chmod a+rw /dev/bus/usb/*/*
-```
-
-**4. Detectar câmeras**
-
-```bash
 lerobot-find-cameras orbbec
-```
 
-Esta etapa exibirá:
-
-- Modelo da câmera
-- Número de série
-- Informações de USB
-- Configuração padrão de fluxo
-
-**5. Exemplo Orbbec**
-
-
-Teste Orbbec único:
-
-
-
-```bash
 lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
-    --robot.cameras="{
-    orbbec_color: {
-      type: orbbec_color,
-      serial_number_or_name: "CP9JA530003A",
-      width: 640,
-      height: 480,
-      fps: 30,
-      color_mode: rgb,
-      rotation: 0,
-      warmup_s: 1
-    },
-    orbbec_depth: {
-      type: orbbec_depth,
-      serial_number_or_name: "CP9JA530003A",
-      width: 640,
-      height: 400,
-      fps: 30,
-      depth_alpha: 0.2,
-      rotation: 0,
-      warmup_s: 5
-    }
-  }" \
+    --robot.cameras='{
+      orbbec_color: {type: orbbec_color, serial_number_or_name: "CP9JA530003A", width: 640, height: 480, fps: 30, color_mode: rgb, rotation: 0, warmup_s: 1},
+      orbbec_depth: {type: orbbec_depth, serial_number_or_name: "CP9JA530003A", width: 640, height: 400, fps: 30, depth_alpha: 0.2, rotation: 0, warmup_s: 5}
+    }' \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
-    --display_data=true
-```
+    --display_data=true`}</code></pre>
+        <p>Se você vir <code>No Orbbec camera found</code>, execute <code>lerobot-find-cameras orbbec</code> e atualize o número de série na configuração da sua câmera.</p>
+      </details>
+    </div>
+  </section>
 
-**6. Notas sobre parâmetros**
+  <section id="record-dataset" className="section-card">
 
-- `depth_alpha` controla o fator de escala da imagem de profundidade. Um bom ponto de partida é `0.2`, depois você pode ajustá-lo com base no resultado exibido.
-- Se você conectar três ou mais câmeras de profundidade, é recomendável reduzir o `fps` para `15` para obter melhor estabilidade.
-- Recomenda-se manter a resolução em `640x480` para uma exibição e transferência de dados mais estáveis.
-
-**7. Problemas comuns**
-
-Se você vir o seguinte erro:
-
-```bash
-No Orbbec camera found for 'XXXX'
-```
-
-isso geralmente significa que o número de série na configuração não corresponde ao dispositivo atualmente conectado. Execute:
-
-```bash
-lerobot-find-cameras orbbec
-```
-
-Em seguida, confirme o `serial` real e atualize `serial_number_or_name` no seu comando.
-
-**💡 Autor e contribuição**
-
-- Autor: Zhang Jiaquan, Wang Wenzhao - South China Normal University
-
-</details>
-
-<details>
-
-<summary> Se estiver usando uma câmera genérica </summary>
-
-Para instanciar uma câmera, você precisa de um identificador de câmera. Esse identificador pode mudar se você reiniciar o computador ou reconectar a câmera, um comportamento que depende principalmente do seu sistema operacional.
-
-Para encontrar os índices das câmeras conectadas ao seu sistema, execute o seguinte script:
-
-```bash
-lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
-```
-
-O terminal exibirá informações relevantes da câmera.
-
-```markdown
---- Detected Cameras ---
-Camera #0:
-  Name: OpenCV Camera @ 0
-  Type: OpenCV
-  Id: 0
-  Backend api: AVFOUNDATION
-  Default stream profile:
-    Format: 16.0
-    Width: 1920
-    Height: 1080
-    Fps: 15.0
---------------------
-(more cameras ...)
-```
-
-Você pode encontrar as fotos tiradas por cada câmera no diretório `~/lerobot/outputs/captured_images`.
-
-:::warning
-Ao usar câmeras Intel RealSense no **macOS**, você pode receber este erro: **"Error finding RealSense cameras: failed to set power state"**. Isso pode ser resolvido executando o mesmo comando com permissões `sudo`. Observe que o uso de câmeras RealSense no **macOS** é instável.
-:::
-
-Depois disso, você poderá exibir as câmeras no seu computador enquanto estiver realizando a teleoperação executando o código a seguir. Isso é útil para preparar sua configuração antes de gravar seu primeiro conjunto de dados.
-
-:::danger
-Durante a teleoperação, se o braço robótico mestre-escravo sofrer desligamento de energia, mau contato de energia ou desconexão da linha de sinal, você deve primeiro parar o código do programa e retornar o braço robótico à sua posição inicial zero. Só então reconecte a fonte de alimentação e reinicie o programa. Isso evita que a desordem de dados cause fuga do braço robótico e potenciais riscos de segurança.
-:::
-
-```bash
-lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=follower1 \
-    --robot.can_adapter=damiao \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-    --teleop.type=rebot_arm_102_leader \
-    --teleop.port=/dev/ttyUSB0 \
-    --teleop.id=rebot_arm_102_leader \
-    --display_data=true
-```
-
-:::tip
-Imagens no formato `fourcc: "MJPG"` são compactadas. Você pode tentar resoluções mais altas e também pode experimentar o formato `YUYV`. No entanto, este último reduzirá a resolução da imagem e o FPS, levando a atrasos na operação do braço robótico. Atualmente, no formato `MJPG`, é possível suportar 3 câmeras com resolução de `1920*1080` mantendo `30FPS`. No entanto, ainda não é recomendado conectar 2 câmeras a um computador por meio do mesmo HUB USB.
-:::
-
-Se você tiver mais câmeras, poderá alterar o parâmetro `--robot.cameras` para adicioná-las. Você deve observar o formato de `index_or_path`, que é determinado pelo último dígito do ID da câmera exibido por `python -m lerobot.find_cameras opencv`.
-
-Por exemplo, se você quiser adicionar uma câmera:
-
-:::danger
-Durante a teleoperação, se o braço robótico mestre-escravo sofrer desligamento de energia, mau contato de energia ou desconexão da linha de sinal, você deve primeiro parar o código do programa e retornar o braço robótico à sua posição inicial zero. Só então reconecte a fonte de alimentação e reinicie o programa. Isso evita que a desordem de dados cause fuga do braço robótico e potenciais riscos de segurança.
-:::
-
-<!-- TODO: reBot multi-camera configuration command -->
-```bash
-lerobot-teleoperate \
-    --robot.type=seeed_b601_dm_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=follower1 \
-    --robot.can_adapter=damiao \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-    --teleop.type=rebot_arm_102_leader \
-    --teleop.port=/dev/ttyUSB0 \
-    --teleop.id=rebot_arm_102_leader \
-    --display_data=true
-```
-
-</details>
-
-## Coleta de conjunto de dados
-
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/PLACEHOLDER" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="safety-alert compact">
+  <div className="safety-alert-icon">⚠️</div>
+  <div className="safety-alert-content">
+    <strong>Verificação de segurança antes de executar</strong>
+    <p>Remova todos os objetos de valor e mantenha todas as pessoas afastadas dentro de um <strong>raio de 1 metro</strong> da área de trabalho do robô. Certifique-se de que o braço esteja firmemente fixado antes de executar esta seção.</p>
+  </div>
 </div>
 
-:::danger
-Durante a teleoperação, se o braço robótico mestre-escravo sofrer desligamento de energia, mau contato de energia ou desconexão da linha de sinal, você deve primeiro parar o código do programa e retornar o braço robótico à sua posição inicial zero. Só então reconecte a fonte de alimentação e reinicie o programa. Isso evita que a desordem de dados cause fuga do braço robótico e potenciais riscos de segurança.
-:::
+<div className="section-title">
+      <span>Etapa 5</span>
+      <h2>Coletar conjuntos de dados</h2>
+      <p>Quando a teleoperação e as câmeras estiverem estáveis, registre demonstrações para a sua tarefa alvo. Você pode salvar conjuntos de dados localmente ou enviá-los para o Hugging Face Hub.</p>
+    </div>
+    <div className="step-card-grid compact-grid">
+      <div className="step-card"><span className="step-mini">5.1</span><strong>Grave localmente primeiro</strong><p>Use um número pequeno de episódios e mantenha push_to_hub desativado enquanto valida o fluxo de trabalho.</p></div>
+      <div className="step-card"><span className="step-mini">5.2</span><strong>Verifique os controles</strong><p>Use atalhos de teclado para encerrar, cancelar ou parar episódios com segurança durante a gravação.</p></div>
+      <div className="step-card"><span className="step-mini">5.3</span><strong>Envie quando estiver estável</strong><p>Envie para o Hugging Face somente depois de confirmar que a estrutura e as estatísticas do conjunto de dados local estão corretas.</p></div>
+    </div>
 
-<details>
+    <details className="content-details">
+      <summary>Vídeo de coleta de conjunto de dados</summary>
+      <div className="video-container">
+        <iframe width="900" height="600" src="https://www.youtube.com/embed/PLACEHOLDER" title="Dataset collection video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      </div>
+    </details>
 
-<summary> Se você quiser salvar o conjunto de dados localmente </summary>
-
-<!-- TODO: reBot local data collection command -->
-```bash
-lerobot-record \
+    <details className="content-details" open>
+      <summary>Salvar o conjunto de dados localmente</summary>
+      <pre><code>{`lerobot-record \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
@@ -722,198 +492,108 @@ lerobot-record \
     --dataset.single_task="Grab the black cube" \
     --dataset.push_to_hub=false \
     --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
-```
+    --dataset.reset_time_s=30`}</code></pre>
+      <p>O conjunto de dados será salvo em <code>{`~/.cache/huggingface/lerobot`}</code> usando o ID de repositório que você forneceu.</p>
+    </details>
 
-Entre eles, `repo_id` pode ser modificado de forma personalizada, e `push_to_hub=false`. Por fim, o conjunto de dados será salvo no diretório `~/.cache/huggingface/lerobot` na pasta home, onde a pasta `seeed_rebot_b601_dm/test` mencionada acima será criada.
+    <details className="content-details">
+      <summary>Enviar o conjunto de dados para o Hugging Face Hub</summary>
+      <pre><code>{`huggingface-cli login --token \${HUGGINGFACE_TOKEN} --add-to-git-credential
 
-</details>
-
-<details>
-<summary> Se você quiser usar os recursos do Hugging Face Hub para enviar seu conjunto de dados </summary>
-
-- Se você quiser usar os recursos do Hugging Face Hub para enviar seu conjunto de dados e ainda não tiver feito isso antes, certifique-se de ter feito login usando um token com permissão de escrita, que pode ser gerado em [Hugging Face settings](https://huggingface.co/settings/tokens):
-
-```bash
-huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
-```
-
-Armazene o nome do seu repositório Hugging Face em uma variável para executar estes comandos:
-
-```bash
 HF_USER=$(huggingface-cli whoami | head -n 1)
 echo $HF_USER
-```
 
-Grave 5 episódios e envie seu conjunto de dados para o Hub:
-
-<!-- TODO: reBot data collection and upload to Hugging Face command -->
-```bash
 lerobot-record \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
     --display_data=true \
-    --dataset.repo_id=${HF_USER}/record-test \
+    --dataset.repo_id=\${HF_USER}/record-test \
     --dataset.num_episodes=5 \
     --dataset.single_task="Grab the black cube" \
     --dataset.push_to_hub=true \
     --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
-```
+    --dataset.reset_time_s=30`}</code></pre>
+    </details>
 
-Você verá muitas linhas aparecendo como esta:
-```bash
-INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
-```
+    <details className="content-details">
+      <summary>Controles de teclado durante a gravação</summary>
+      <div className="content-table">
+        <table>
+          <thead><tr><th>Tecla</th><th>Ação</th></tr></thead>
+          <tbody>
+            <tr><td>Seta para a direita</td><td>Encerra o episódio atual ou redefine antecipadamente e passa para o próximo.</td></tr>
+            <tr><td>Seta para a esquerda</td><td>Cancela o episódio atual e o grava novamente.</td></tr>
+            <tr><td>ESC</td><td>Interrompe a sessão imediatamente, codifica os vídeos e envia o conjunto de dados se estiver habilitado.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Se os eventos de teclado não responderem, tente <code>pip install pynput==1.6.8</code>.</p>
+    </details>
 
-</details>
+    <div className="tip-card">
+      <strong>Dicas de qualidade do conjunto de dados</strong>
+      <span>Mantenha as posições das câmeras fixas, mantenha a iluminação estável, certifique-se de que o objeto alvo esteja visível e colete episódios suficientes. Para uma tarefa simples de preensão, comece com pelo menos 50 episódios quando possível.</span>
+    </div>
+  </section>
 
-**Função de gravação**
+  <section className="section-card">
+    <div className="section-title">
+      <span>Conjunto de dados</span>
+      <h2>Visualizar e reproduzir conjuntos de dados</h2>
+      <p>Antes do treinamento, inspecione o conjunto de dados gravado e verifique se as imagens, estados, ações e descrições de tarefas estão corretos.</p>
+    </div>
 
-A função **record** fornece um conjunto de ferramentas para capturar e gerenciar dados durante a operação do robô.
-
-**1. Armazenamento de dados**
-
-- Os dados são armazenados usando o formato `LeRobotDataset` e são gravados em disco durante a gravação.
-- Por padrão, o conjunto de dados é enviado para a sua página do Hugging Face após a gravação.
-- Para desativar o envio, use: `--dataset.push_to_hub=False`.
-
-**2. Checkpoint e retomada**
-
-- Checkpoints são criados automaticamente durante a gravação.
-- Para retomar após uma interrupção, execute novamente o mesmo comando com: `--resume=true`
-
-⚠️ **Nota importante**: Ao retomar, defina `--dataset.num_episodes` para o número de episódios adicionais a serem gravados (não o número total de episódios desejado no conjunto de dados).
-- Para iniciar a gravação do zero, **exclua manualmente** o diretório do conjunto de dados.
-
-**3. Parâmetros de Gravação**
-
-Defina o fluxo de gravação de dados usando argumentos de linha de comando:
-
-| Parâmetro | Descrição | Padrão |
-|------|------|--------|
-| --dataset.episode_time_s | Duração por episódio de dados (segundos) | 60 |
-| --dataset.reset_time_s | Tempo de reinicialização do ambiente após cada episódio (segundos) | 60 |
-| --dataset.num_episodes | Total de episódios a serem gravados | 50 |
-
-**4. Controles de Teclado Durante a Gravação**
-
-Controle o fluxo de gravação de dados usando atalhos de teclado:
-
-| Tecla | Ação |
-|----|------|
-| → (Seta para a Direita) | Encerrar antecipadamente o episódio atual/reiniciar; ir para o próximo. |
-| ← (Seta para a Esquerda) | Cancelar o episódio atual; regravá-lo. |
-| ESC | Parar a sessão imediatamente, codificar os vídeos e enviar o conjunto de dados. |
-
-:::tip
-Se as teclas do seu teclado não estiverem respondendo, talvez seja necessário fazer o downgrade da sua versão do pynput, por exemplo, instalando a versão 1.6.8.
-```bash
-pip install pynput==1.6.8
-```
-:::
-
-**Dicas para Coletar Dados**
-
-- **Sugestão de tarefa**: Agarrar objetos em diferentes locais e colocá-los em uma caixa.
-- **Escala**: Grave ≥50 episódios (10 episódios por local).
-- **Consistência**:
-  - Mantenha as câmeras fixas.
-  - Mantenha o mesmo comportamento de preensão.
-  - Garanta que os objetos manipulados estejam visíveis nas imagens das câmeras.
-- **Progressão**:
-  - Comece com preensões confiáveis antes de adicionar variações (novos locais, técnicas de preensão, ajustes de câmera).
-  - Evite aumentar a complexidade rapidamente para prevenir falhas.
-
-💡 **Regra geral**: Você deve ser capaz de executar a tarefa apenas olhando para as imagens da câmera na tela.
-
-Se quiser se aprofundar nesse tópico importante, você pode conferir o [post no blog](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) que escrevemos sobre o que torna um bom conjunto de dados.
-
-**Solução de Problemas**
-
-Problema específico do Linux:
-Se as teclas Seta para a Direita/Seta para a Esquerda/ESC não responderem durante a gravação:
-- Verifique se a variável de ambiente `$DISPLAY` está definida (veja [limitações do pynput](https://pynput.readthedocs.io/en/latest/limitations.html)).
-
-## Visualizar o Conjunto de Dados
-
-```bash
-echo ${HF_USER}/rebot_test  
-```
-
-Se você enviou os dados, também pode visualizá-los localmente com o seguinte comando:
-
-```bash
-lerobot-dataset-viz \
-  --repo-id ${HF_USER}/rebot_test \
-  --episode-index 0 \
-  --display-compressed-images=false
-```
-
-Se você usou `--dataset.push_to_hub=false` e não enviou os dados, também pode visualizá-los localmente com:
-
-```bash
-lerobot-dataset-viz \
+    <div className="command-card">
+      <h3>Visualizar um conjunto de dados</h3>
+      <pre><code>{`lerobot-dataset-viz \
   --repo-id seeed_rebot_b601_dm/test \
   --episode-index 0 \
-  --display-compressed-images=false
-```
+  --display-compressed-images=false`}</code></pre>
+    </div>
 
-Aqui, `seeed_rebot_b601_dm/test` é o nome personalizado de `repo_id` definido durante a coleta de dados.
-
-## Reproduzir um Episódio
-
-:::tip
-Instável, pode ser ignorado ou testado.
-:::
-
-Agora, tente reproduzir o primeiro conjunto de dados no seu robô:
-
-<!-- TODO: reBot dataset replay command -->
-```bash
-lerobot-replay \
+    <details className="content-details">
+      <summary>Reproduzir um episódio no robô</summary>
+      <p>Esta etapa pode ser instável, portanto é opcional.</p>
+      <pre><code>{`lerobot-replay \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.can_adapter=damiao \
     --robot.id=follower1 \
     --dataset.repo_id=seeed_rebot_b601_dm/test \
-    --dataset.episode=0
-```
+    --dataset.episode=0`}</code></pre>
+    </details>
+  </section>
 
-Neste ponto, o robô deve executar as mesmas ações que você realizou por teleoperação durante a gravação.
+  <section id="training" className="section-card">
 
-## Treinamento e Avaliação
+<div className="safety-alert compact">
+  <div className="safety-alert-icon">⚠️</div>
+  <div className="safety-alert-content">
+    <strong>Verificação de segurança antes de executar</strong>
+    <p>Remova todos os objetos de valor e mantenha todas as pessoas afastadas dentro de um <strong>raio de 1 metro</strong> da área de trabalho do robô. Certifique-se de que o braço esteja firmemente fixado antes de executar esta seção.</p>
+  </div>
+</div>
 
-<details>
-<summary>[ACT](https://huggingface.co/docs/lerobot/act) </summary>
+<div className="section-title">
+      <span>Etapa 6</span>
+      <h2>Treinamento e avaliação</h2>
+      <p>Comece com ACT para validar o seu pipeline de dados. Depois disso, você pode tentar SmolVLA, Pi0 / Pi0.5, GR00T N1.5, PEFT, treinamento com múltiplas GPUs ou inferência assíncrona.</p>
+    </div>
+    <div className="module-summary-grid">
+      <div className="module-summary-card"><b>ACT primeiro</b><span>Baseline recomendada para verificar a qualidade do conjunto de dados e o formato das ações do robô.</span></div>
+      <div className="module-summary-card"><b>Políticas VLA</b><span>Tente SmolVLA, Pi0 ou Pi0.5 depois que o pipeline de ACT estiver estável.</span></div>
+      <div className="module-summary-card"><b>Modelos avançados</b><span>Use GR00T ou inferência assíncrona somente depois que dependências, CUDA e o fluxo de implantação forem validados.</span></div>
+    </div>
 
-Consulte o tutorial oficial [ACT](https://huggingface.co/docs/lerobot/act)
-
-**Treinamento**
-
-Para treinar uma política para controlar seu robô, use o script `python -m lerobot.scripts.train`. Alguns parâmetros são obrigatórios. Aqui está um comando de exemplo:
-
-```bash
-lerobot-train \
-  --dataset.repo_id=${HF_USER}/rebot_test \
-  --policy.type=act \
-  --output_dir=outputs/train/act_rebot_test \
-  --job_name=act_rebot_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --steps=300000 
-```
-
-**Se você quiser treinar em um conjunto de dados local, certifique-se de que o `repo_id` corresponda ao nome usado durante a coleta de dados e adicione `--policy.push_to_hub=false`.**
-
-```bash
-lerobot-train \
+    <details className="content-details" open>
+      <summary>ACT: política inicial recomendada</summary>
+      <pre><code>{`lerobot-train \
   --dataset.repo_id=seeed_rebot_b601_dm/test \
   --policy.type=act \
   --output_dir=outputs/train/act_rebot_test \
@@ -921,42 +601,9 @@ lerobot-train \
   --policy.device=cuda \
   --wandb.enable=false \
   --policy.push_to_hub=false \
-  --steps=300000 
-```
-
-:::tip
-
-Se você estiver usando uma GPU da série RTX 50, será necessário adicionar `--dataset.video_backend=pyav` para contornar APIs ausentes na versão de prévia do torchvision. O comando de treinamento se torna:
-
-```bash
-lerobot-train \
-  --dataset.repo_id=seeed_rebot_b601_dm/test \
-  --dataset.video_backend=pyav \
-  --policy.type=act \
-  --output_dir=outputs/train/act_rebot_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --policy.push_to_hub=false \
-  --steps=300000 
-```
-
-:::
-
-Explicação do Comando
-
-- **Especificação do conjunto de dados**: Fornecemos o conjunto de dados por meio do parâmetro `--dataset.repo_id=${HF_USER}/rebot_test`.
-- **Etapas de treinamento**: Modificamos o número de etapas de treinamento usando `--steps=300000`. O algoritmo usa por padrão 800000 etapas; ajuste com base na dificuldade da sua tarefa. Você pode definir um valor maior se não tiver certeza, pois checkpoints são gerados durante o treinamento e a avaliação pode ser retomada a partir de qualquer checkpoint.
-- **Tipo de política**: Fornecemos a política com `policy.type=act`. Da mesma forma, você pode alternar entre políticas como [`act`, `diffusion`, `pi0`, `pi0fast`, `sac`, `smolvla`]. Isso carregará a configuração de `configuration_act.py`. Importante: essa política se adaptará automaticamente aos estados dos motores do seu robô, às ações dos motores e ao número de câmeras, pois essas informações já estão armazenadas no seu conjunto de dados.
-- **Seleção de dispositivo**: Fornecemos `policy.device=cuda` porque estamos treinando em uma GPU Nvidia, mas você pode usar `policy.device=mps` para treinar em Apple Silicon.
-- **Ferramenta de visualização**: Fornecemos `wandb.enable=true` para visualizar gráficos de treinamento usando [Weights and Biases](https://docs.wandb.ai/quickstart). Isso é opcional, mas, se você usar, certifique-se de ter feito login executando `wandb login`.
-
-**Avaliação**
-
-Você pode usar a função `record` de [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py), mas com um checkpoint de política como entrada. Por exemplo, execute este comando para gravar 10 episódios de avaliação:
-
-<!-- TODO: reBot ACT evaluation command -->
-```bash
-lerobot-record \
+  --steps=300000`}</code></pre>
+      <p>Para GPUs da série RTX 50, adicione <code>--dataset.video_backend=pyav</code> se as APIs de vídeo do torchvision causarem erros.</p>
+      <pre><code>{`lerobot-record \
   --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
@@ -965,381 +612,115 @@ lerobot-record \
   --display_data=false \
   --dataset.repo_id=seeed/eval_test123 \
   --dataset.single_task="Put lego brick into the transparent box" \
-  --policy.path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model
-```
+  --policy.path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model`}</code></pre>
+    </details>
 
-1. O parâmetro `--policy.path` indica o caminho para o arquivo de pesos dos resultados do treinamento da sua política (por exemplo, `outputs/train/act_rebot_test/checkpoints/last/pretrained_model`). Se você enviar o arquivo de pesos do resultado do treinamento do modelo para o Hub, também poderá usar o repositório do modelo (por exemplo, `${HF_USER}/act_rebot_test`).
-2. O nome do conjunto de dados `dataset.repo_id` começa com `eval_`. Essa operação gravará separadamente vídeos e dados durante a avaliação, que serão salvos na pasta que começa com `eval_`, como `seeed/eval_test123`.
-3. Se você encontrar `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'` durante a fase de avaliação, exclua primeiro a pasta que começa com `eval_` e depois execute o programa novamente.
-4. Ao encontrar `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, observe que palavras-chave como `front` e `side` no parâmetro `--robot.cameras` devem ser estritamente consistentes com as usadas ao coletar o conjunto de dados.
+    <details className="content-details">
+      <summary>SmolVLA: modelo base de robô leve</summary>
+      <p>SmolVLA é um modelo base leve para fine-tuning em seus próprios conjuntos de dados LeRobot. Ele usa imagens de câmera, estados do robô e uma instrução de tarefa em linguagem natural para prever blocos de ações.</p>
+      <pre><code>{`pip install -e ".[smolvla]"
 
-</details>
-
-<details>
-<summary>[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) </summary>
-
-Consulte o tutorial oficial [SmolVLA](https://huggingface.co/docs/lerobot/smolvla).
-
-SmolVLA é um **modelo base leve para robótica** fornecido pela Hugging Face. Ele foi projetado para permitir que você use seu próprio conjunto de dados LeRobot gravado e **faça o fine-tuning rapidamente** para obter resultados em robôs reais.
-
-Simplificando, suas entradas/saídas são:
-
-- Entrada: imagens de múltiplas câmeras + estado atual do robô (sensores/juntas etc.) + uma instrução de tarefa em linguagem natural
-- Saída: um trecho contínuo de ações para mover o braço robótico e executar a tarefa
-
-```bash
-pip install -e ".[smolvla]"
-```
-
-**Coleta de Conjuntos de Dados (Recomendado)**
-
-SmolVLA é um "modelo base". Para ter um bom desempenho na sua bancada, com suas câmeras, garra e objetos, normalmente é necessário fazer o fine-tuning com seus próprios dados.
-
-- Comece com cerca de 50 episódios (muito poucos podem levar a aprendizado/generalização ruins).
-- Se sua tarefa tiver "variáveis" (por exemplo, diferentes posições de cubos na mesa), garanta que cada variação tenha demonstrações suficientes:
-  - Exemplo: 5 posições × 10 episódios cada = 50 episódios
-- Experiência: Gravar apenas 25 episódios geralmente é insuficiente. Tanto a qualidade quanto a quantidade de dados são importantes.
-
-**Treinamento**
-
-Use `smolvla_base` (o modelo pré-treinado de 450M) como ponto de partida e faça o fine-tuning no seu conjunto de dados. O exemplo oficial treina por 20k etapas; em uma única A100 isso leva cerca de 4 horas (apenas para referência; o tempo real varia conforme o hardware).
-
-Se você não tiver uma GPU disponível, considere treinar por meio de um notebook Colab (veja o tutorial oficial).
-
-```bash
 lerobot-train \
   --policy.path=lerobot/smolvla_base \
-  --dataset.repo_id=${HF_USER}/mydataset \
+  --dataset.repo_id=\${HF_USER}/mydataset \
   --batch_size=64 \
   --steps=20000 \
   --output_dir=outputs/train/my_smolvla \
   --job_name=my_smolvla_training \
   --policy.device=cuda \
-  --wandb.enable=true
-```
-
-Dicas:
-
-- Se ficar sem memória, reduza primeiro o `--batch_size`. Depois que estiver rodando, aumente-o gradualmente.
-- Para ver os parâmetros disponíveis: `lerobot-train --help`
-
-**Avaliação**
-
-A fase de avaliação carrega seu modelo com fine-tuning, permite que o robô execute a tarefa e grava o processo de avaliação como um novo conjunto de dados (para revisar vídeos e analisar resultados).
-
-```bash
-lerobot-record \
+  --wandb.enable=true`}</code></pre>
+      <pre><code>{`lerobot-record \
   --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
   --robot.id=follower1 \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --dataset.single_task="Grasp a lego block and put it in the bin." \
-  --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \
+  --dataset.repo_id=\${HF_USER}/eval_DATASET_NAME_test \
   --dataset.episode_time_s=50 \
   --dataset.num_episodes=10 \
-  --policy.path=${HF_USER}/FINETUNE_MODEL_NAME
-```
+  --policy.path=\${HF_USER}/FINETUNE_MODEL_NAME`}</code></pre>
+    </details>
 
-Como preencher os parâmetros:
+    <details className="content-details">
+      <summary>Pi0 / Pi0.5: treinamento de políticas VLA</summary>
+      <p>Pi0 e Pi0.5 são políticas de Visão-Linguagem-Ação. Elas são úteis quando você quer explorar controle robótico condicionado por linguagem.</p>
+      <pre><code>{`pip install -e ".[pi]"
 
-- `--robot.port`: Altere para a porta serial reconhecida na sua máquina (normalmente `/dev/ttyACM0` ou `/dev/ttyUSB0`).
-- `--robot.id`: O ID do seu robô (deve corresponder ao que você usou durante a calibração/gravação).
-- `--robot.cameras`: Altere para o seu `index_or_path` de câmera real e garanta que as chaves de câmera (por exemplo, `front`, `side`) correspondam exatamente ao que você usou ao gravar o conjunto de dados.
-- `--dataset.single_task`: Deve corresponder à descrição de tarefa usada ao gravar o conjunto de dados.
-- `--dataset.repo_id`: O nome do conjunto de dados de saída da avaliação; se você estiver conectado ao Hugging Face, ele será criado/enviado para a sua conta.
-- `--policy.path`:
-  - Se o modelo for local: preencha o caminho dos pesos no diretório de saída do treinamento (por exemplo, `outputs/train/my_smolvla/checkpoints/last/pretrained_model`)
-  - Se o modelo estiver no Hub: preencha `${HF_USER}/FINETUNE_MODEL_NAME`
-
-Opcional: Se você quiser "teleoperar manualmente para ajustar" entre episódios de avaliação, pode adicionar teleop (preencha de acordo com seu dispositivo e configuração):
-
-```bash
---teleop.type=rebot_arm_102_leader \
---teleop.port=/dev/ttyUSB0 \
---teleop.id=rebot_arm_102_leader
-```
-
-</details>
-
-<details>
-<summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
-
-Consulte o tutorial oficial [Pi0](https://huggingface.co/docs/lerobot/pi0).
-
-π₀ (Pi0) é um modelo de **Visão-Linguagem-Ação** proposto pela Physical Intelligence para um controle de robô mais "geral". Você pode pensar assim: ele consegue tanto ver imagens da câmera quanto entender uma instrução em linguagem natural e então gerar ações para controlar o braço robótico.
-
-Usá-lo no LeRobot é simples: basta definir o tipo de política como `--policy.type=pi0` durante o treinamento (não é necessário repetir os conceitos gerais de treinamento/avaliação já abordados na seção ACT).
-
-```bash
-pip install -e ".[pi]"
-```
-
-:::tip
-Se você estiver usando uma versão mais antiga do LeRobot (por exemplo, 0.4.0), talvez seja necessário instalar a dependência `pi` a partir do código-fonte no GitHub (a documentação oficial corrigirá isso em um patch subsequente):
-
-```bash
-pip install "lerobot[pi]@git+https://github.com/huggingface/lerobot.git"
-```
-
-:::
-
-**Treinamento**
-
-```bash
 lerobot-train \
   --policy.type=pi0 \
-  --dataset.repo_id=${HF_USER}/my_dataset \
+  --dataset.repo_id=\${HF_USER}/my_dataset \
   --job_name=pi0_training \
   --output_dir=outputs/pi0_training \
   --policy.pretrained_path=lerobot/pi0_base \
-  --policy.repo_id=${HF_USER}/my_pi0_policy \
+  --policy.repo_id=\${HF_USER}/my_pi0_policy \
   --policy.compile_model=true \
   --policy.gradient_checkpointing=true \
   --policy.dtype=bfloat16 \
-  --policy.freeze_vision_encoder=false \
-  --policy.train_expert_only=false \
-  --steps=3000 \
-  --policy.device=cuda \
-  --batch_size=32 \
-  --wandb.enable=false 
-```
-
-Parâmetros comuns (apenas específicos do Pi0 / mais frequentemente ajustados):
-
-- `--policy.pretrained_path=lerobot/pi0_base`: Modelo base. Oficialmente também é fornecido `lerobot/pi0_libero` (versão orientada ao conjunto de dados Libero); você pode tentar alternar com base na sua tarefa.
-- `--policy.compile_model=true`: Habilita otimização por compilação; o treinamento pode ficar mais rápido (a primeira compilação é mais lenta).
-- `--policy.gradient_checkpointing=true`: Economiza significativamente VRAM, adequado quando a VRAM é limitada.
-- `--policy.dtype=bfloat16`: Precisão mista, mais amigável em termos de velocidade/VRAM (recomendado quando o hardware suporta).
-- `--policy.train_expert_only=true` (dica para economizar VRAM): Congela a parte do modelo grande (VLM), treinando apenas o "especialista de ação" e as camadas de projeção; economiza mais VRAM, mas a capacidade treinável é mais limitada, adequado para começar ou para experimentos rápidos com poucos dados.
-
-**Avaliação**
-
-```bash
-lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
-  --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
-  --robot.id=follower1 \
-  --display_data=false \
-  --dataset.repo_id=${HF_USER}/eval_my_pi0_test \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --dataset.episode_time_s=50 \
-  --dataset.num_episodes=10 \
-  --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model
-```
-
-</details>
-
-<details>
-<summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
-
-Consulte o tutorial oficial [Pi0.5](https://huggingface.co/docs/lerobot/pi05).
-
-π₀.₅ (Pi0.5) também é um modelo de **Visão-Linguagem-Ação** proposto pela Physical Intelligence, que pode ser entendido como uma "versão aprimorada" do π₀, com foco em capacidade reforçada de **generalização em mundo aberto**.
-
-Para usá-lo no LeRobot: basta definir o tipo de política como `--policy.type=pi05`.
-
-```bash
-pip install -e ".[pi]"
-```
-
-:::tip
-Se você estiver usando uma versão mais antiga do LeRobot (por exemplo, 0.4.0), talvez seja necessário instalar a dependência `pi` a partir do código-fonte no GitHub (a documentação oficial corrigirá isso em um patch subsequente):
-
-```bash
-pip install "lerobot[pi]@git+https://github.com/huggingface/lerobot.git"
-```
-
-:::
-
-**Treinamento**
-
-```bash
-lerobot-train \
-  --dataset.repo_id=${HF_USER}/my_dataset \
-  --policy.type=pi05 \
-  --output_dir=outputs/pi05_training \
-  --job_name=pi05_training \
-  --policy.repo_id=${HF_USER}/my_pi05_policy \
-  --policy.pretrained_path=lerobot/pi05_base \
-  --policy.compile_model=true \
-  --policy.gradient_checkpointing=true \
-  --policy.dtype=bfloat16 \
-  --policy.freeze_vision_encoder=false \
-  --policy.train_expert_only=false \
   --steps=3000 \
   --policy.device=cuda \
   --batch_size=32 \
   --wandb.enable=false
-```
 
-Parâmetros comuns (relacionados ao Pi0.5):
+lerobot-train \
+  --dataset.repo_id=\${HF_USER}/my_dataset \
+  --policy.type=pi05 \
+  --output_dir=outputs/pi05_training \
+  --job_name=pi05_training \
+  --policy.repo_id=\${HF_USER}/my_pi05_policy \
+  --policy.pretrained_path=lerobot/pi05_base \
+  --policy.compile_model=true \
+  --policy.gradient_checkpointing=true \
+  --policy.dtype=bfloat16 \
+  --steps=3000 \
+  --policy.device=cuda \
+  --batch_size=32 \
+  --wandb.enable=false`}</code></pre>
+    </details>
 
-- `--policy.pretrained_path=lerobot/pi05_base`: Modelo base. Oficialmente também é fornecido `lerobot/pi05_libero`.
-- `--policy.train_expert_only=true` (dica para economizar VRAM): Congela a parte do modelo grande (VLM), treinando apenas o "especialista de ação" e as camadas de projeção.
-- `--policy.normalization_mapping=...`: Se as estatísticas de normalização do seu conjunto de dados não corresponderem / estiverem ausentes, você pode usar esse mapeamento para forçar um método de normalização.
-
-**Avaliação**
-
-```bash
-lerobot-record \
-  --robot.type=seeed_b601_dm_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.can_adapter=damiao \
-  --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
-  --robot.id=follower1 \
-  --display_data=false \
-  --dataset.repo_id=${HF_USER}/eval_my_pi05_test \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --dataset.episode_time_s=50 \
-  --dataset.num_episodes=10 \
-  --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model
-```
-
-</details>
-
-<details>
-<summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
-
-Consulte o tutorial oficial [GR00T N1.5](https://huggingface.co/docs/lerobot/groot).
-
-GR00T N1.5 é um modelo base aberto fornecido pela NVIDIA. O ponto-chave para usá-lo no LeRobot é definir o tipo de política como `--policy.type=groot`. Observação: o GR00T N1.5 atualmente possui requisitos de ambiente mais altos (depende de FlashAttention e requer uma GPU com CUDA). Recomenda-se fazer o ACT / Pi0 funcionar primeiro antes de tentar o GR00T.
-
-**Instalação (Importante)**
-
-De acordo com a documentação oficial, o GR00T N1.5 requer **flash-attn** para funcionar e só pode ser usado em **dispositivos compatíveis com CUDA**.
-
-Etapas recomendadas (execute na ordem):
-
-1. Configure primeiro o ambiente base (Python, CUDA, drivers, etc.) seguindo o guia de instalação. **Não instale `lerobot` nesta etapa**.
-2. Instale o PyTorch (faixa de versões conforme os requisitos oficiais):
-
-```bash
-pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"
-```
-
-:::tip
-Se você estiver usando a série RTX 50, você precisa de: Python=3.10, CUDA=12.8, Torch=2.7.1
-
-```bash
-pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
-```
-:::
-
-3. Instale a dependência flash-attn e o próprio flash-attn:
-
-```bash
+    <details className="content-details">
+      <summary>GR00T N1.5: fine-tuning de modelo base avançado</summary>
+      <p>GR00T N1.5 tem requisitos mais rígidos de CUDA e FlashAttention. Faça o ACT ou o Pi0 funcionar primeiro e depois tente o GR00T.</p>
+      <pre><code>{`pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"
 pip install ninja "packaging>=24.2,<26.0"
 pip install "flash-attn>=2.5.9,<3.0.0" --no-build-isolation
-python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} imported successfully')"
-```
-
-:::tip
-Se você estiver usando a série RTX 50, você precisa de: flash_attn=2.8.0
-
-```bash
-pip install flash_attn==2.8.0.post2 torch==2.7.1 --no-build-isolation
-```
-:::
-
-4. Instale a dependência groot do LeRobot:
-
-```bash
-pip install "lerobot[groot]"
-```
-
-:::tip
-Se a instalação do flash-attn falhar, geralmente está relacionada a (1) incompatibilidade de versão entre PyTorch/CUDA, (2) dependências de compilação ausentes ou (3) ambiente muito novo/muito antigo. Nesse caso, consulte primeiro a documentação oficial do GR00T e o guia de instalação do PyTorch.
-:::
-
-**Treinamento (Fine-tuning)**
-
-A documentação oficial fornece um exemplo de treinamento multi-GPU (`accelerate launch --multi_gpu ...`). Se você tiver apenas uma GPU, também pode tentar executá-lo primeiro em modo de processo único (o suporte/detalhes de parâmetros estão sujeitos à documentação oficial).
-
-Multi-GPU (variáveis precisam ser substituídas):
-
-```bash
-accelerate launch \
-  --multi_gpu \
-  --num_processes=$NUM_GPUS \
-  $(which lerobot-train) \
-  --output_dir=$OUTPUT_DIR \
-  --save_checkpoint=true \
-  --batch_size=$BATCH_SIZE \
-  --steps=$NUM_STEPS \
-  --save_freq=$SAVE_FREQ \
-  --log_freq=$LOG_FREQ \
-  --policy.push_to_hub=true \
-  --policy.type=groot \
-  --policy.repo_id=$REPO_ID \
-  --policy.tune_diffusion_model=false \
-  --dataset.repo_id=$DATASET_ID \
-  --wandb.enable=true \
-  --wandb.disable_artifact=true \
-  --job_name=$JOB_NAME
-```
-
-Explicação dos parâmetros (os mais comumente modificados):
-
-- `--dataset.repo_id`: Seu conjunto de dados de treinamento (`username/dataset_name` no Hub ou cache local correspondente ao `repo_id`).
-- `--output_dir`: Diretório de saída do treinamento (os pesos/checkpoints serão colocados aqui).
-- `--steps`, `--batch_size`: Etapas de treinamento e tamanho de lote. Modelos grandes são sensíveis à VRAM; se não rodar, reduza primeiro o `batch_size`.
-- `--policy.repo_id`: Se você quiser enviar o modelo para o Hub, preencha o nome do repositório de modelo que deseja criar.
-
-**Avaliação (Execução no Robô)**
-
-Após o treinamento, você pode usar `lerobot-record` para avaliação/gravação como em outras políticas. Para usuários de braço único reBot B601-DM, consulte o seguinte comando:
-
-```bash
-lerobot-record \
+pip install "lerobot[groot]"`}</code></pre>
+      <pre><code>{`lerobot-record \
   --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
   --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30} }' \
   --robot.id=follower1 \
   --display_data=true \
-  --dataset.repo_id=${HF_USER}/eval_groot_rebot \
+  --dataset.repo_id=\${HF_USER}/eval_groot_rebot \
   --dataset.num_episodes=10 \
   --dataset.single_task="Grab the black cube and put it in the box" \
-  --policy.path=${HF_USER}/groot-rebot \
-  --dataset.episode_time_s=30 \
-  --dataset.reset_time_s=10
-```
+  --policy.path=\${HF_USER}/groot-rebot`}</code></pre>
+    </details>
 
-Licença: Este modelo segue a licença Apache 2.0 (consistente com o repositório GR00T original).
+    <details className="content-details">
+      <summary>Retomar o treinamento a partir de um checkpoint</summary>
+      <pre><code>{`lerobot-train \
+  --config_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model/train_config.json \
+  --resume=true`}</code></pre>
+    </details>
+  </section>
 
-</details>
+  <section className="section-card">
+    <div className="section-title">
+      <span>Avançado</span>
+      <h2>Opções avançadas</h2>
+      <p>Estas seções são opcionais. Use-as depois de concluir com sucesso a coleta básica de dados e o treinamento com ACT.</p>
+    </div>
 
-<details>
-<summary>(Opcional) Fine-tuning Eficiente com PEFT</summary>
-
-PEFT (Parameter-Efficient Fine-Tuning) é um conjunto de métodos e ferramentas de "adaptação eficiente em parâmetros" para adaptar grandes modelos pré-treinados a novas tarefas **sem atualizar todos os parâmetros do modelo**. Para as políticas pré-treinadas do LeRobot (por exemplo, SmolVLA, π₀, etc.), você normalmente pode treinar apenas um pequeno número de parâmetros de "adaptador" (por exemplo, LoRA) para obter resultados próximos ao fine-tuning completo, reduzindo o uso de VRAM e o custo de treinamento.
-
-**Instalação**
-
-Instale a dependência opcional `peft` do LeRobot para usar parâmetros relacionados a PEFT:
-
-```bash
-pip install -e ".[peft]"
-```
-
-```bash
+    <details className="content-details">
+      <summary>Fine-tuning eficiente com PEFT / LoRA</summary>
+      <pre><code>{`pip install -e ".[peft]"
 pip install "lerobot[peft]"
-```
 
-Para mais métodos de adaptação e explicações de conceitos, consulte a documentação oficial:
-[🤗 PEFT Documentation](https://huggingface.co/docs/peft/index)
-
-**Exemplo: Fine-tuning do SmolVLA com LoRA (subtarefa libero_spatial do Libero)**
-
-O exemplo a seguir mostra como realizar o fine-tuning com LoRA de `lerobot/smolvla_base` no conjunto de dados `HuggingFaceVLA/libero`. Os nomes dos parâmetros são baseados na versão atual do LeRobot; consulte também `lerobot-train --help`.
-
-```bash
 lerobot-train \
   --policy.path=lerobot/smolvla_base \
-  --policy.repo_id=${HF_USER}/my_libero_smolvla_peft \
+  --policy.repo_id=\${HF_USER}/my_libero_smolvla_peft \
   --dataset.repo_id=HuggingFaceVLA/libero \
   --env.type=libero \
   --env.task=libero_spatial \
@@ -1350,333 +731,35 @@ lerobot-train \
   --batch_size=32 \
   --optimizer.lr=1e-3 \
   --peft.method_type=LORA \
-  --peft.r=64
-```
+  --peft.r=64`}</code></pre>
+    </details>
 
-**Principais Parâmetros de PEFT**
+    <details className="content-details">
+      <summary>Treinamento com múltiplas GPUs</summary>
+      <pre><code>{`pip install accelerate
 
-- `--peft.method_type`: Seleciona o método PEFT. LoRA (Low-Rank Adapter) é um dos métodos mais usados.
-- `--peft.r`: Rank do LoRA. Em geral, um rank mais alto significa maior capacidade de expressão, mas também mais parâmetros e maior uso de VRAM.
-
-**Especificando Camadas para Injetar LoRA (Opcional)**
-
-Por padrão, o PEFT normalmente injeta LoRA nas camadas de projeção mais críticas do modelo (por exemplo, `q_proj`, `v_proj` da atenção, etc.), e pode adicionalmente cobrir camadas de projeção relacionadas a estado/ação. Se você precisar direcionar camadas diferentes, use `--peft.target_modules` para especificar as camadas alvo.
-
-Padrões comuns incluem:
-
-1) Por lista de sufixos de nomes de módulos (exemplo):
-
-```bash
---peft.target_modules="['q_proj', 'v_proj']"
-```
-
-2) Usando uma expressão regular (exemplo, ajuste de acordo com os nomes reais dos módulos):
-
-```bash
---peft.target_modules='(model\\.vlm_with_expert\\.lm_expert\\..*\\.(down|gate|up)_proj|.*\\.(state_proj|action_in_proj|action_out_proj|action_time_mlp_in|action_time_mlp_out))'
-```
-
-**Especificando Certas Camadas para Treinamento Completo (Opcional)**
-
-Se você quiser que certos módulos sejam "totalmente treinados" (em vez de apenas injetar LoRA), use `--peft.full_training_modules` para especificá-los. Por exemplo, para treinar completamente apenas `state_proj`:
-
-```bash
---peft.full_training_modules="['state_proj']"
-```
-
-**Recomendações de Taxa de Aprendizado (Valores de Experiência)**
-
-A taxa de aprendizado do LoRA normalmente pode ser uma ordem de grandeza maior do que a do fine-tuning completo (experiência comum: ~10x). Por exemplo, o fine-tuning completo costuma usar `1e-4`, enquanto o LoRA pode começar em `1e-3`; se você tiver decaimento de taxa de aprendizado (scheduler) ativado, a taxa de aprendizado final também costuma ser definida em torno de `1e-4` como referência.
-
-</details>
-
-<details>
-<summary>(Opcional) Treinamento Multi-GPU</summary>
-
-**1. Etapas de Treinamento**
-
-**Método Um: Treinamento Multi-GPU via Argumentos de Linha de Comando**
-
-Primeiro, instale o sistema de aceleração de treinamento no seu ambiente lerobot:
-
-```bash
-pip install accelerate
-```
-
-Em seguida, execute o seguinte comando para iniciar o treinamento multi-GPU:
-
-```bash
 accelerate launch \
   --multi_gpu \
   --num_processes=2 \
   $(which lerobot-train) \
-  --dataset.repo_id=${HF_USER}/my_dataset \
+  --dataset.repo_id=\${HF_USER}/my_dataset \
   --policy.type=act \
-  --policy.repo_id=${HF_USER}/my_trained_policy \
+  --policy.repo_id=\${HF_USER}/my_trained_policy \
   --output_dir=outputs/train/act_multi_gpu \
   --job_name=act_multi_gpu \
-  --wandb.enable=true
-```
+  --wandb.enable=true`}</code></pre>
+      <p>O treinamento com múltiplas GPUs aumenta o tamanho efetivo do batch. Você pode precisar reduzir os passos de treinamento ou ajustar a taxa de aprendizado dependendo da sua configuração.</p>
+    </details>
+
+    <details className="content-details">
+      <summary>Implantação de inferência assíncrona</summary>
+      <p>A inferência assíncrona permite que o robô execute o bloco de ação atual enquanto o servidor calcula o próximo bloco. Ela é útil para modelos maiores ou inferência remota.</p>
+      <pre><code>{`pip install -e ".[async]"
 
-Explicação dos principais parâmetros do accelerate:
-
-- `--multi_gpu`: Habilita treinamento multi-GPU
-- `--num_processes=2`: Número de GPUs a serem usadas (geralmente igual ao número de GPUs)
-- `--mixed_precision=fp16`: Usa precisão mista fp16 (ou bf16 se o seu hardware suportar)
-
-Observe que **bf16 requer suporte de hardware** e não está disponível em todas as GPUs.
-
-| Tipo de Precisão | Suporte de Hardware |
-|--|--|
-| fp16 | Suportado por quase todas as GPUs NVIDIA |
-| bf16 | Suportado apenas em GPUs mais recentes (arquitetura Ampere e posteriores) |
-
-Se a sua GPU não suportar bf16, escolha fp16 na sua configuração do accelerate ou especifique fp16 explicitamente na linha de comando.
-
-**Método Dois: Usando um Arquivo de Configuração do Accelerate (Opcional)**
-
-Se você realiza treinamento multi-GPU com frequência, pode salvar a configuração de treinamento acima para evitar entradas repetitivas na linha de comando.
-
-> **Dica**: Se você não entender esta seção, ou apenas quiser começar rapidamente,
-> **pode pular esta seção e usar o Método Um (argumentos de linha de comando).**
-
-O objetivo de `accelerate config` é:
-
-**Salvar o seu ambiente de hardware (contagem de GPUs, precisão mista, etc.) como um arquivo de configuração,
-para que você não precise preencher repetidamente esses parâmetros ao executar `accelerate launch` no futuro.**
-
-Ele não altera nenhuma lógica de treinamento do LeRobot; apenas reduz a entrada repetitiva de parâmetros.
-
-Se você apenas **usa multi-GPU ocasionalmente**, ou esta é sua primeira tentativa, **não há problema em não usá-lo**.
-
----
-
-Execute:
-
-```bash
-accelerate config
-```
-
-No processo de configuração interativa, para o cenário comum de multi-GPU em uma única máquina, você pode selecionar da seguinte forma:
-
-- Ambiente de computação: Esta máquina
-- Número de máquinas: 1
-- Número de processos: Número de GPUs a serem usadas (geralmente igual ao número de GPUs)
-- IDs de GPU a serem usadas: Pressione Enter diretamente (significa usar todas as GPUs)
-- Precisão mista:
-  - Preferir fp16
-  - Se você confirmar que a GPU suporta bf16, também pode escolher bf16
-
-Após a configuração, você pode treinar com:
-
-```bash
-accelerate launch $(which lerobot-train) \
-  --dataset.repo_id=${HF_USER}/my_dataset \
-  --policy.type=act \
-  --policy.repo_id=${HF_USER}/my_trained_policy \
-  --output_dir=outputs/train/act_multi_gpu \
-  --job_name=act_multi_gpu \
-  --wandb.enable=true
-```
-
-**Impacto do Treinamento Multi-GPU nos Parâmetros de Treinamento e Estratégias de Ajuste**
-
-O LeRobot não ajusta automaticamente a taxa de aprendizado ou os passos de treinamento com base no número de GPUs, para evitar alterar o comportamento de treinamento sem o conhecimento do usuário. Isso difere de outros frameworks de treinamento distribuído comumente usados.
-
-Se você quiser **ajustar hiperparâmetros para treinamento multi-GPU**, precisa fazê-lo manualmente seguindo estas etapas.
-
-**Impacto nos Passos e Estratégia de Ajuste**
-
-Como o multi-GPU aumenta o tamanho de batch efetivo (batch_size × num_gpus):
-
-(Para entender isso de forma intuitiva: se o treinamento é como caminhar, uma GPU dá um passo de um metro, duas GPUs dão um passo de dois metros. Para alcançar a mesma distância (dados totais aprendidos pelo modelo), o treinamento com duas GPUs deve reduzir os passos pela metade. Da mesma forma, n GPUs = 1/n.)
-
-Portanto, ao treinar com várias GPUs, você deve reduzir adequadamente o número de passos de treinamento.
-
-Treinamento com uma única GPU:
-
-- batch_size = 8
-- steps = 100000
-
-Treinamento com duas GPUs (tamanho de batch efetivo se torna 16):
-
-- batch_size, se ainda definido como 8
-- steps podem ser reduzidos para 50000
-
-```bash
-accelerate launch --num_processes=2 $(which lerobot-train) \
-  --batch_size=8 \
-  --steps=50000 \
-  --dataset.repo_id=lerobot/pusht \
-  --policy=act
-```
-
-**Impacto na Taxa de Aprendizado e Estratégia de Ajuste**
-
-Ao usar várias GPUs, cada atualização de passo usa mais amostras.
-
-Se você quiser manter a "velocidade de aprendizado" do modelo semelhante à de uma única GPU,
-normalmente precisa aumentar a taxa de aprendizado proporcionalmente ao número de GPUs.
-
-- Nova taxa de aprendizado = taxa de aprendizado de uma única GPU × número de GPUs
-
-Por exemplo:
-
-Se a taxa de aprendizado de uma única GPU (optimizer.lr) for 1e-4,
-ao usar 2 GPUs, você pode alterá-la para 2e-4:
-
-```bash
-accelerate launch --num_processes=2 $(which lerobot-train) \
-  --optimizer.lr=2e-4 \
-  --dataset.repo_id=lerobot/pusht \
-  --policy=act
-```
-
-Observação:
-
-Estas não são regras obrigatórias, mas práticas recomendadas comuns.
-
-Se você não tiver certeza de como ajustar, também pode:
-
-- Manter a taxa de aprendizado inalterada
-- Manter os passos de treinamento inalterados
-
-Desde que o processo de treinamento seja estável, os resultados ainda são utilizáveis.
-
-Para configurações mais avançadas e solução de problemas, consulte a documentação do [Accelerate](https://huggingface.co/docs/accelerate/index). Se você quiser aprender mais sobre treinamento em grandes quantidades de GPUs, confira este excelente guia: [Ultrascale Playbook](https://github.com/huggingface/ultrascale-playbook).
-</details>
-
-<details>
-<summary>(Opcional) Usando Inferência Assíncrona para Implantação</summary>
-
-Sem inferência assíncrona, o fluxo de controle do LeRobot pode ser entendido como inferência sequencial/síncrona convencional: a política prediz um bloco de ações, depois o executa, e então espera pela próxima predição. Para modelos maiores, isso pode causar pausas perceptíveis enquanto o robô espera por novos blocos de ações. O objetivo da inferência assíncrona é permitir que o robô execute o bloco de ações atual enquanto pré-computa o próximo, reduzindo o tempo ocioso e melhorando a capacidade de resposta. A inferência assíncrona se aplica às políticas suportadas pelo LeRobot que produzem blocos de ações, como ACT, OpenVLA, Pi0, SmolVLA. Como a inferência e o controle real são desacoplados, a inferência assíncrona também permite usar máquinas mais poderosas para a inferência do robô remotamente.
-
-Você pode ler mais sobre inferência assíncrona neste [post no blog](https://huggingface.co/blog/async-robot-inference) da Hugging Face.
-
-Vamos apresentar alguns conceitos básicos:
-
-- **Cliente**: Conecta-se ao braço robótico e às câmeras, coleta observações (imagens, pose do robô etc.), as envia para o servidor; também recebe blocos de ações do servidor e os executa em ordem.
-- **Servidor**: O dispositivo que fornece poder de computação. Recebe dados da câmera e do robô, infere (calcula) blocos de ações e os envia de volta para o cliente. Pode ser o mesmo dispositivo conectado ao robô e às câmeras, outro computador na mesma LAN ou um servidor em nuvem.
-- **Bloco de ações**: Uma série de comandos de ação do braço robótico, produzidos pela política por meio de inferência no lado do servidor.
-- **Inferência síncrona**: Prediz um bloco, executa um bloco; o robô terá intervalos ociosos aguardando o próximo bloco ser inferido. Quando o modelo é maior e o poder de computação é insuficiente, a lacuna de inferência é significativa — o braço se move, depois pausa (inferência) e então se move novamente.
-- **Inferência assíncrona**: Diferente da inferência síncrona, enquanto o robô executa o bloco atual, o servidor já está calculando o próximo bloco; partes sobrepostas são agregadas para um controle mais responsivo.
-
-**Três Cenários de Implantação de Inferência Assíncrona**
-
-**1. Implantação em Única Máquina**
-
-Robô, câmeras, cliente e servidor estão todos no mesmo dispositivo.
-Este é o caso mais simples — o servidor escuta em 127.0.0.1, e o cliente também se conecta a 127.0.0.1:port. Os exemplos de comando na documentação oficial seguem este cenário.
-
-**2. Implantação em LAN**
-
-Robô e câmeras se conectam a um dispositivo leve, e o servidor de política é executado em outro dispositivo com alta capacidade de computação na mesma LAN.
-Nesse caso, o servidor deve escutar em um endereço acessível a outras máquinas, e o cliente deve se conectar ao IP de LAN do servidor, não a 127.0.0.1.
-
-**3. Implantação entre Redes / em Nuvem**
-
-O servidor de política é executado em um host em nuvem publicamente acessível, e o cliente se conecta por uma rede pública.
-Essa abordagem pode aproveitar GPUs mais potentes em hosts em nuvem. Com boas condições de rede, o tempo de ida e volta (latência de rede) pode ser relativamente pequeno em comparação com o tempo de inferência, mas isso depende do seu ambiente de rede real.
-
-> Nota de segurança: O pipeline de inferência assíncrona do LeRobot apresenta riscos de gRPC sem autenticação + desserialização com pickle. Se o servidor hospedar informações ou serviços importantes, não é recomendado expor o serviço diretamente à internet pública ao implantar em uma rede pública. Uma abordagem mais segura é usar VPN, tunelamento SSH ou, pelo menos, restringir os IPs de origem do grupo de segurança ao IP público do seu cliente.
-
-**Iniciando a Implantação de Inferência Assíncrona**
-
-**Etapa 1: Configuração do Ambiente**
-
-Primeiro, instale as dependências adicionais necessárias para inferência assíncrona usando pip. Tanto o cliente quanto o servidor precisam do lerobot instalado com a dependência extra:
-
-```bash
-pip install -e ".[async]"
-```
-
-**Etapa 2: Configuração e Verificação da Rede**
-
-**1. Problemas de Proxy**
-
-Se o seu terminal tiver variáveis de ambiente de proxy configuradas e ocorrerem problemas de conexão, você pode desativá-las temporariamente:
-
-```bash
-unset http_proxy https_proxy ftp_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY
-```
-
-Observação: O comando acima afeta apenas a sessão de terminal atual. Se você abrir uma nova janela de terminal, precisará executá-lo novamente.
-
-**2. Permitir Portas no Firewall / Grupos de Segurança**
-
-- Implantação em única máquina: Geralmente pode ser ignorado.
-- Implantação em LAN: Você precisa permitir a porta de escuta no lado do servidor.
-  Exemplo de permissão de uma porta de escuta na LAN (executar no servidor):
-
-```bash
-sudo ufw allow 8080/tcp
-```
-
-- Implantação em nuvem: Você precisa permitir a porta no grupo de segurança do servidor em nuvem e, idealmente, restringir os IPs de origem.
-
-Se estiver executando em um servidor em nuvem:
-Permita a porta 8080 no grupo de segurança na página de gerenciamento do servidor ou use outra porta já permitida. Os métodos variam conforme o provedor de nuvem.
-
-**3. Confirmar Endereço IP**
-
-A implantação em única máquina pode ignorar esta etapa (o IP é sempre 127.0.0.1).
-
-**4. Teste de Conexão**
-
-- Implantação em única máquina: Ignore esta etapa.
-- Implantação em LAN / Nuvem: Recomenda-se testar se o cliente consegue acessar a porta do servidor:
-
-```bash
-nc -vz <LAN_IP_address> 8080
-```
-
-```bash
-nc -vz <server_public_IP> 8080
-```
-
-**Etapa 3: Iniciar o Serviço**
-
-**Cenário A: Implantação em Única Máquina**
-
-Inicie o serviço local em um terminal:
-
-```bash
 python -m lerobot.async_inference.policy_server \
   --model_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model \
   --server_address=127.0.0.1:8080
-```
 
-Depois que ele iniciar com sucesso, você precisa manter este terminal aberto e criar um novo terminal para executar outros comandos.
-
-**Cenário B: Implantação em LAN**
-
-Execute no servidor:
-
-```bash
-python -m lerobot.async_inference.policy_server \
-  --model_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model \
-  --server_address=0.0.0.0:8080
-```
-
-Quando o cliente se conectar, `--server_address` deve usar o endereço IP de LAN do servidor: `<LAN_IP_address>:8080`.
-
-**Cenário C: Implantação em Servidor em Nuvem**
-
-Execute no servidor:
-
-```bash
-python -m lerobot.async_inference.policy_server \
-  --model_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model \
-  --server_address=0.0.0.0:8080
-```
-
-Quando o cliente se conectar, `--server_address` deve usar o endereço IP público do servidor: `<server_public_IP>:8080`.
-
-**Etapa 4: Escolher Parâmetros de Inferência**
-
-Execute no cliente:
-
-```bash
 python -m lerobot.async_inference.robot_client \
   --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
@@ -1687,94 +770,233 @@ python -m lerobot.async_inference.robot_client \
   --actions_per_chunk=50 \
   --chunk_size_threshold=0.5 \
   --fixed_update_fps=30 \
-  --visualize_action_queue=false
-```
+  --visualize_action_queue=false`}</code></pre>
+      <div className="danger-card">
+        <strong>Nota de segurança</strong>
+        <span>Não exponha diretamente um servidor de inferência assíncrona sem autenticação à internet pública. Use VPN, tunelamento SSH ou restrições rígidas de IP de origem.</span>
+      </div>
+    </details>
+  </section>
 
-Explicação dos principais parâmetros:
+  <section id="faq" className="section-card">
+    <div className="section-title">
+      <span>FAQ</span>
+      <h2>Problemas comuns</h2>
+    </div>
 
-- `--server_address`: Endereço do servidor. Use `127.0.0.1:port` para única máquina e o IP do servidor para LAN/nuvem.
-- `--actions_per_chunk`: Tamanho de cada bloco de ações (número de ações). Valores maiores significam menor frequência de inferência, mas resultados mais estáveis por inferência; valores menores significam movimento mais suave, porém com mais pressão de inferência no servidor.
-- `--chunk_size_threshold`: Limite de mesclagem entre blocos de ações antigos e novos. Quando o bloco antigo é executado até essa proporção, a mesclagem com o novo bloco começa.
-- `--fixed_update_fps`: Frequência de envio de comandos de controle, correspondente à suavidade do movimento do braço robótico.
-- `--visualize_action_queue`: Se deve visualizar o tamanho da fila de ações em tempo de execução. Quando ativado, você pode ver de forma mais intuitiva se a fila atinge o fundo com frequência, ajudando a ajustar actions_per_chunk e chunk_size_threshold.
+    <details className="content-details">
+      <summary>Por que usar o repositório Seeed-Projects/lerobot?</summary>
+      <p>Este guia é validado com <code>https://github.com/Seeed-Projects/lerobot.git</code>. O repositório LeRobot upstream muda rapidamente e pode introduzir diferenças de comandos, dependências ou formato de conjunto de dados.</p>
+    </details>
 
-**Etapa 5: Ajustar Parâmetros com Base no Comportamento do Robô**
+    <details className="content-details">
+      <summary>Não é possível conectar a /dev/ttyUSB0 ou /dev/ttyACM0</summary>
+      <p>Se o dispositivo existir, mas a conexão falhar, conceda permissões seriais:</p>
+      <pre><code>{`sudo chmod 666 /dev/ttyUSB* /dev/ttyACM*`}</code></pre>
+    </details>
 
-Na inferência assíncrona, há dois parâmetros adicionais que não estão presentes na inferência síncrona e que precisam ser ajustados:
+    <details className="content-details">
+      <summary>Nenhum fluxo válido encontrado no arquivo de entrada</summary>
+      <p>Instale o ffmpeg 7.1.1:</p>
+      <pre><code>{`conda install ffmpeg=7.1.1 -c conda-forge`}</code></pre>
+    </details>
 
-- `--actions_per_chunk`: Tamanho de cada bloco de ações. Se o movimento do robô estiver aos trancos/irregular, aumente esse valor; se a resposta do robô tiver atraso perceptível, diminua esse valor.
-- `--chunk_size_threshold`: Limite de mesclagem entre blocos de ações antigos e novos. Normalmente, comece tentando a partir de `0.5`.
+    <details className="content-details">
+      <summary>Atalhos de teclado não respondem durante a gravação</summary>
+      <p>Verifique a variável de ambiente <code>$DISPLAY</code> no Linux. Você também pode tentar fazer downgrade do pynput:</p>
+      <pre><code>{`pip install pynput==1.6.8`}</code></pre>
+    </details>
 
-A inferência assíncrona precisa equilibrar: a velocidade de geração de blocos de ações do servidor deve ser maior ou igual à velocidade de consumo do cliente. Caso contrário, a fila de ações ficará vazia e o robô começará a engasgar (isso pode ser visto na curva de visualização da fila tocando o fundo).
+    <details className="content-details">
+      <summary>Dicas de treinamento e coleta de dados</summary>
+      <p>Mantenha as câmeras fixas, mantenha a iluminação estável, evite fundos instáveis, colete episódios suficientes e não interrompa a coleta de dados antes que o LeRobot calcule as estatísticas do conjunto de dados.</p>
+    </details>
+  </section>
 
-</details>
+  <section className="section-card">
+    <div className="section-title">
+      <span>Referências</span>
+      <h2>Referências</h2>
+    </div>
+    <div className="reference-grid">
+      <a href="https://wiki.seeedstudio.com/pt-br/lerobot_so100m/">Braço Seeed SO100 no LeRobot</a>
+      <a href="https://github.com/TheRobotStudio/SO-ARM100">TheRobotStudio SO-ARM10x</a>
+      <a href="https://github.com/huggingface/lerobot/tree/main">Hugging Face LeRobot</a>
+      <a href="https://github.com/dusty-nv/jetson-containers/tree/master/packages/robots/lerobot">Jetson Containers</a>
+      <a href="https://www.jetson-ai-lab.com/lerobot.html">Jetson AI Lab</a>
+      <a href="https://diffusion-policy.cs.columbia.edu/">Diffusion Policy</a>
+      <a href="https://tonyzhaozh.github.io/aloha/">ACT / ALOHA</a>
+      <a href="https://sjlee.cc/vq-bet/">VQ-BeT</a>
+    </div>
+  </section>
 
-Para retomar o treinamento a partir de um checkpoint, aqui está um comando de exemplo para retomar a partir do checkpoint `last` da política `act_rebot_test`:
 
-```bash
-lerobot-train \
-  --config_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true
-```
+<section className="course-nav-section section-card section-block">
+  <div className="section-title">
+    <span>Trilha de aprendizado</span>
+    <h2>Continue com a trilha de aprendizado do reBot B601-DM</h2>
+    <p>Estes tutoriais foram projetados para serem lidos na mesma ordem da página de robótica: comece pela inicialização básica, depois passe para a coleta de dados com LeRobot, depuração de cinemática, preensão visual e, por fim, integração com ROS2.</p>
+  </div>
+  <div className="course-path-grid">
+    <a className="course-step" href="/pt-br/rebot_b601_dm_getting_started/">
+      <span className="course-index">1</span>
+      <div>
+        <strong>Primeiros passos</strong>
+        <small>Conclua o unboxing, a fiação, as verificações de energia, a configuração do driver, a calibração e os testes básicos de movimento.</small>
+      </div>
+      <em>Comece aqui</em>
+    </a>
+    <a className="course-step active" href="/pt-br/rebot_arm_b601_dm_lerobot/">
+      <span className="course-index">2</span>
+      <div>
+        <strong>Teleoperação e coleta de dados com LeRobot</strong>
+        <small>Teleopere o braço, conecte câmeras, registre conjuntos de dados, treine políticas e avalie o comportamento do braço real.</small>
+      </div>
+      <em>Artigo atual</em>
+    </a>
+    <a className="course-step" href="/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/">
+      <span className="course-index">3</span>
+      <div>
+        <strong>Visualização de cinemática com Pinocchio</strong>
+        <small>Entenda modelos de robôs, sistemas de coordenadas, FK / IK, planejamento de trajetórias e compensação de gravidade.</small>
+      </div>
+      <em>Controle</em>
+    </a>
+    <a className="course-step" href="/pt-br/rebot_arm_b601_dm_grasping_demo/">
+      <span className="course-index">4</span>
+      <div>
+        <strong>Demo de preensão visual</strong>
+        <small>Combine percepção RGB-D, YOLO / OBB ou GraspNet, calibração mão-olho e preensão de objetos reais.</small>
+      </div>
+      <em>Aplicação</em>
+    </a>
+    <a className="course-step" href="/pt-br/rebot_arm_b601_dm_ros2_integration/">
+      <span className="course-index">5</span>
+      <div>
+        <strong>Integração com ROS2</strong>
+        <small>Conecte o braço ao ROS2, RViz, MoveIt 2, serviços padrão, ações e fluxos de trabalho de planejamento.</small>
+      </div>
+      <em>Integração</em>
+    </a>
+  </div>
+</section>
 
-## FAQ
-
-- Se você estiver seguindo este tutorial de documentação, faça git clone do repositório GitHub recomendado `https://github.com/Seeed-Projects/lerobot.git`. O repositório recomendado nesta documentação é uma versão estável verificada; o repositório oficial do LeRobot é continuamente atualizado para a versão mais recente, o que pode causar problemas imprevistos, como versões de conjunto de dados diferentes, comandos diferentes etc.
-
-- Se você encontrar:
-  ```bash
-  Could not connect on port "/dev/ttyUSB0" or "/dev/ttyACM0"
-  ```
-  E você conseguir ver que o dispositivo existe ao executar `ls /dev/ttyUSB*` ou `ls /dev/ttyACM*`, isso significa que você esqueceu de conceder permissões de porta serial. Digite `sudo chmod 666 /dev/ttyUSB* /dev/ttyACM*` no terminal para corrigir isso.
-
-- Se você encontrar:
-  ```bash
-  No valid stream found in input file. Is -1 of the desired media type?
-  ```
-  Instale o ffmpeg 7.1.1 usando `conda install ffmpeg=7.1.1 -c conda-forge`.
-
-- Treinar ACT em 50 conjuntos de dados leva aproximadamente 6 horas em um laptop com uma RTX 3060 (8GB) e cerca de 2–3 horas em computadores com GPUs RTX 4090 ou A100.
-
-- Durante a coleta de dados, garanta que a posição da câmera, o ângulo e a iluminação ambiente sejam estáveis. Reduza a quantidade de fundo instável e de pedestres capturados pela câmera, pois mudanças excessivas no ambiente de implantação podem fazer com que o braço robótico não consiga agarrar corretamente.
-
-- Para o comando de coleta de dados, certifique-se de que o parâmetro `num-episodes` esteja configurado para coletar dados suficientes. Não pause manualmente no meio, pois a média e a variância dos dados são calculadas somente após a conclusão da coleta, e são necessárias para o treinamento.
-
-- Se o programa indicar que não consegue ler dados de imagem da câmera USB, certifique-se de que a câmera USB não esteja conectada por meio de um hub. A câmera USB deve estar conectada diretamente ao dispositivo para garantir alta velocidade de transmissão de imagem.
-
-:::tip
-Se você encontrar problemas de software ou de dependências de ambiente que não possam ser resolvidos, além de verificar a seção de FAQ no final deste tutorial, relate o problema prontamente na [plataforma LeRobot](https://github.com/huggingface/lerobot) ou no [canal LeRobot no Discord](https://discord.gg/8TnwDdjFGU).
-:::
-
-## Referências
-
-Wiki em inglês da Seeed Studio: [Como usar o braço robótico SO100Arm no Lerobot](https://wiki.seeedstudio.com/pt-br/lerobot_so100m/)
-
-Projeto TheRobotStudio: [SO-ARM10x](https://github.com/TheRobotStudio/SO-ARM100)
-
-Projeto Huggingface: [LeRobot](https://github.com/huggingface/lerobot/tree/main)
-
-Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/master/packages/robots/lerobot)
-
-[Jetson AI Lab](https://www.jetson-ai-lab.com/lerobot.html)
-
-[Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
-
-[ACT or ALOHA](https://tonyzhaozh.github.io/aloha/)
-
-[TDMPC](https://www.nicklashansen.com/td-mpc/)
-
-[VQ-BeT](https://sjlee.cc/vq-bet/)
-
-## Suporte Técnico e Discussão de Produtos
-
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
-
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div>
+<style>{`
+.rebot-page {
+  --rb-bg: #ffffff;
+  --rb-surface: #ffffff;
+  --rb-surface-soft: #f8fafc;
+  --rb-text: #111827;
+  --rb-muted: #64748b;
+  --rb-border: rgba(148, 163, 184, 0.28);
+  --rb-primary: #2563eb;
+  --rb-primary-soft: #eff6ff;
+  --rb-accent: #14b8a6;
+  --rb-accent-soft: #ccfbf1;
+  --rb-warning: #f59e0b;
+  --rb-danger: #ef4444;
+  --rb-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  width: 100%;
+}
+.doc-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 2rem;
+  margin: 1.5rem 0 1.25rem;
+  border: 1px solid var(--rb-border);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(37,99,235,0.18), transparent 32%),
+    radial-gradient(circle at 90% 85%, rgba(20,184,166,0.18), transparent 35%),
+    linear-gradient(135deg, rgba(248,250,252,0.96), rgba(255,255,255,0.94));
+  box-shadow: var(--rb-shadow);
+  overflow: hidden;
+}
+.eyebrow {
+  display: inline-flex;
+  padding: 0.35rem 0.7rem;
+  margin-bottom: 0.85rem;
+  border-radius: 999px;
+  color: var(--rb-primary);
+  background: var(--rb-primary-soft);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.doc-hero h2 { margin: 0 0 0.8rem; color: var(--rb-text); font-size: clamp(1.6rem, 3vw, 2.35rem); line-height: 1.18; }
+.doc-hero p { margin: 0; color: var(--rb-muted); line-height: 1.75; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.2rem; }
+.hero-actions a { display: inline-flex; padding: 0.72rem 1rem; border-radius: 999px; text-decoration: none !important; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--rb-primary), var(--rb-accent)); box-shadow: 0 12px 24px rgba(37,99,235,0.18); }
+.hero-actions a:nth-child(n+2) { color: var(--rb-primary); background: var(--rb-primary-soft); box-shadow: none; }
+.hero-card { position: relative; z-index: 1; display: grid; align-content: center; gap: 0.75rem; padding: 1rem; border-radius: 22px; background: rgba(255,255,255,0.78); border: 1px solid rgba(148,163,184,0.22); box-shadow: 0 10px 26px rgba(15,23,42,0.06); backdrop-filter: blur(10px); }
+.hero-card img { width: 100%; border-radius: 18px; border: 1px solid var(--rb-border); }
+.hero-card strong { color: var(--rb-text); }
+.hero-card span { color: var(--rb-muted); font-size: 0.92rem; line-height: 1.55; text-align: center; }
+.doc-nav { position: sticky; top: 0.75rem; z-index: 5; display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 0.65rem; padding: 0.7rem; margin: 1.1rem 0 2rem; border-radius: 18px; background: rgba(255,255,255,0.88); border: 1px solid var(--rb-border); box-shadow: 0 12px 28px rgba(15,23,42,0.07); backdrop-filter: blur(14px); }
+.doc-nav a { text-align: center; padding: 0.72rem 0.7rem; border-radius: 13px; color: #334155; background: var(--rb-surface-soft); text-decoration: none !important; font-weight: 800; font-size: 0.86rem; transition: all 0.2s ease; }
+.doc-nav a:hover { color: var(--rb-primary); background: #fff; transform: translateY(-2px); box-shadow: 0 10px 22px rgba(37,99,235,0.12); }
+.section-card { margin: 1.6rem 0; padding: 1.45rem; border-radius: 22px; background: var(--rb-surface); border: 1px solid var(--rb-border); box-shadow: 0 10px 30px rgba(15,23,42,0.055); }
+.section-title { margin-bottom: 1rem; }
+.section-title span { display: inline-flex; color: var(--rb-primary); font-size: 0.76rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+.section-title h2 { margin: 0.18rem 0 0.45rem; color: var(--rb-text); font-size: 1.55rem; }
+.section-title p { margin: 0; color: var(--rb-muted); line-height: 1.68; }
+.path-grid, .info-grid, .two-col, .camera-grid, .module-summary-grid, .step-card-grid, .reference-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.9rem; }
+.path-card, .info-grid > div, .check-card, .module-summary-card, .step-card, .content-details, .warning-card, .danger-card, .tip-card, .reference-grid a { border-radius: 18px; border: 1px solid var(--rb-border); background: var(--rb-surface-soft); box-shadow: 0 10px 24px rgba(15,23,42,0.045); }
+.path-card { display: block; padding: 1rem; text-decoration: none !important; color: inherit; transition: all 0.18s ease; }
+.path-card:hover { transform: translateY(-3px); border-color: rgba(37,99,235,0.42); }
+.path-card span, .step-mini { display: inline-flex; align-items: center; justify-content: center; width: fit-content; min-width: 2.2rem; height: 2rem; padding: 0 0.65rem; margin-bottom: 0.65rem; border-radius: 999px; color: #fff; background: linear-gradient(135deg, var(--rb-primary), var(--rb-accent)); font-weight: 900; font-size: 0.82rem; }
+.path-card b, .module-summary-card b, .step-card strong, .info-grid strong, .check-card h3, .warning-card strong, .danger-card strong, .tip-card strong { display: block; color: var(--rb-text); margin-bottom: 0.35rem; }
+.path-card small, .module-summary-card span, .step-card p, .info-grid span, .warning-card span, .danger-card span, .tip-card span { display: block; color: var(--rb-muted); line-height: 1.6; }
+.module-summary-card, .step-card, .info-grid > div, .check-card, .warning-card, .danger-card, .tip-card { padding: 1rem; }
+.compact-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.content-details { margin: 0.9rem 0; overflow: hidden; }
+.content-details summary { cursor: pointer; list-style: none; padding: 0.95rem 1rem; font-weight: 900; color: var(--rb-text); background: linear-gradient(90deg, rgba(37,99,235,0.08), transparent); }
+.content-details[open] summary { border-bottom: 1px solid var(--rb-border); }
+.content-details summary::-webkit-details-marker { display: none; }
+.content-details > *:not(summary) { margin-left: 1rem; margin-right: 1rem; }
+.command-card { margin: 1rem 0; padding: 1rem; border-radius: 18px; border: 1px solid var(--rb-border); background: #fff; box-shadow: 0 10px 24px rgba(15,23,42,0.045); }
+.command-card h3 { margin-top: 0; color: var(--rb-text); }
+.command-card p, .content-details p { color: var(--rb-muted); line-height: 1.65; }
+.warning-card { border-color: rgba(245,158,11,0.34); background: linear-gradient(180deg, #fffbeb, var(--rb-surface)); }
+.danger-card { border-color: rgba(239,68,68,0.34); background: linear-gradient(180deg, #fef2f2, var(--rb-surface)); }
+.tip-card { border-color: rgba(20,184,166,0.32); background: linear-gradient(180deg, #f0fdfa, var(--rb-surface)); }
+.video-container { position: relative; width: calc(100% - 2rem); max-width: 960px; margin: 1rem auto; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; background: #0f172a; border: 1px solid var(--rb-border); }
+.video-container iframe { width: 100%; height: 100%; border: 0; }
+.image-wrap, div[align="center"] { text-align: center; margin: 1rem 0; }
+.image-wrap img, div[align="center"] img { max-width: 820px; width: 100%; border-radius: 18px; border: 1px solid var(--rb-border); }
+.content-table { overflow-x: auto; }
+.content-table table { width: 100%; }
+.reference-grid a { display: block; padding: 0.85rem 0.95rem; text-decoration: none !important; color: var(--rb-text); transition: all 0.18s ease; }
+.reference-grid a:hover { color: var(--rb-primary); transform: translateY(-2px); }
+.safety-alert { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.9rem; align-items: flex-start; margin: 1.2rem 0 1.6rem; padding: 1.05rem 1.15rem; border-radius: 18px; border: 1px solid rgba(239, 68, 68, 0.38); background: linear-gradient(135deg, rgba(254, 242, 242, 0.98), rgba(255, 247, 237, 0.92)); color: #7f1d1d; box-shadow: 0 14px 30px rgba(239, 68, 68, 0.12); }
+.safety-alert-icon { display: inline-flex; align-items: center; justify-content: center; width: 2.35rem; height: 2.35rem; border-radius: 999px; background: #fee2e2; color: #dc2626; font-size: 1.25rem; line-height: 1; flex-shrink: 0; }
+.safety-alert-content strong { display: block; margin-bottom: 0.45rem; color: #991b1b; font-size: 1.05rem; font-weight: 900; }
+.safety-alert-content p { margin: 0; color: #7f1d1d; line-height: 1.72; }
+.safety-alert-content ul { margin: 0.65rem 0 0; padding-left: 1.2rem; color: #7f1d1d; line-height: 1.68; }
+.safety-alert-content li + li { margin-top: 0.35rem; }
+.safety-alert.compact { margin: 1rem 0; padding: 0.9rem 1rem; border-radius: 16px; }
+.course-nav-section { margin-top: 1.6rem; }
+.course-path-grid { display: grid; gap: 0.85rem; }
+.course-step { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 1rem; align-items: center; padding: 1rem 1.1rem; border-radius: 18px; border: 1px solid var(--rb-border); background: var(--rb-surface); text-decoration: none !important; color: var(--rb-text); box-shadow: 0 10px 24px rgba(15,23,42,0.05); }
+.course-step.active { border-color: rgba(37,99,235,0.42); background: linear-gradient(135deg, rgba(239,246,255,0.92), rgba(240,253,250,0.78)); }
+.course-index { display: inline-flex; align-items: center; justify-content: center; width: 2.35rem; height: 2.35rem; border-radius: 999px; color: #fff; background: var(--rb-primary); font-weight: 900; box-shadow: 0 10px 22px rgba(37,99,235,0.24); }
+.course-step strong { display: block; color: var(--rb-text); font-size: 1rem; margin-bottom: 0.24rem; }
+.course-step small { display: block; color: var(--rb-muted); line-height: 1.55; font-size: 0.92rem; }
+.course-step em { justify-self: end; white-space: nowrap; font-style: normal; font-size: 0.78rem; font-weight: 800; color: var(--rb-primary); background: var(--rb-primary-soft); border: 1px solid rgba(37,99,235,0.2); border-radius: 999px; padding: 0.35rem 0.65rem; }
+pre { overflow-x: auto; border-radius: 16px; border: 1px solid var(--rb-border); }
+html[data-theme='dark'] .rebot-page { --rb-bg: #111827; --rb-surface: #1f2023; --rb-surface-soft: #24262a; --rb-text: #f9fafb; --rb-muted: #a1a1aa; --rb-border: #343840; --rb-primary: #60a5fa; --rb-primary-soft: rgba(96,165,250,0.14); --rb-accent: #2dd4bf; --rb-shadow: 0 18px 42px rgba(0,0,0,0.34); }
+html[data-theme='dark'] .doc-hero { background: radial-gradient(circle at 12% 18%, rgba(96,165,250,0.20), transparent 34%), radial-gradient(circle at 90% 85%, rgba(45,212,191,0.16), transparent 36%), linear-gradient(135deg, #1f2023, #16181d); }
+html[data-theme='dark'] .hero-card, html[data-theme='dark'] .doc-nav, html[data-theme='dark'] .command-card { background: rgba(31,32,35,0.86); }
+html[data-theme='dark'] .safety-alert { border-color: rgba(248,113,113,0.42); background: linear-gradient(135deg, rgba(127,29,29,0.26), rgba(124,45,18,0.18)); color: #fecaca; box-shadow: 0 16px 34px rgba(0,0,0,0.28); }
+html[data-theme='dark'] .safety-alert-icon { background: rgba(248,113,113,0.18); color: #fca5a5; }
+html[data-theme='dark'] .safety-alert-content strong, html[data-theme='dark'] .safety-alert-content p, html[data-theme='dark'] .safety-alert-content ul { color: #fecaca; }
+html[data-theme='dark'] .course-step.active { background: linear-gradient(135deg, rgba(37,99,235,0.18), rgba(20,184,166,0.10)); }
+@media (max-width: 900px) { .doc-hero { grid-template-columns: 1fr; } .doc-nav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .doc-hero, .section-card { padding: 1.1rem; border-radius: 18px; } .doc-nav { grid-template-columns: 1fr; } .safety-alert, .course-step { grid-template-columns: 1fr; } .course-step em { justify-self: start; } }
+`}</style>
