@@ -97,7 +97,9 @@ On the XIAO nRF54LM20A, the default pins for the external NFC antenna are P1.01 
 <br/>
 :::caution
 
-This soldering process is relatively difficult and requires proficient soldering skills. Please pay attention to safety precautions to avoid personal injury and device damage.
+This welding process is quite challenging and requires skilled welding techniques. Alternatively, you can choose to connect XIAO and NFC using flying wires. Please pay attention to safety precautions to avoid personal injury and equipment damage.
+
+The pins of NFC do not distinguish between positive and negative
 
 :::
 
@@ -118,21 +120,21 @@ This example demonstrates reading text information via NFC.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_3.png" style={{width:800, height:'auto'}}/></div>
 
-2. Enter nfc, select NFC Records text
+2. Enter nfc, select NFC text Records sample
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_5.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/1.png" style={{width:800, height:'auto'}}/></div>
 
 3. Select storage path
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_4.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/2.png" style={{width:800, height:'auto'}}/></div>
 
 4. Open the project, add the XIAO nRF54LM20A configuration under the corresponding extension, and compile.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_6.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/3.png" style={{width:800, height:'auto'}}/></div>
 
 5. Open the terminal and enter the command `west flash` to burn the firmware to the XIAO nRF54LM20A.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_7.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/4.png" style={{width:800, height:'auto'}}/></div>
 
 #### Result
 
@@ -174,9 +176,13 @@ This section covers the NFC function. Please search for **nRF Toolbox for Blueto
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_10.png" style={{width:800, height:'auto'}}/></div>
 
-2. 打开终端，输入 `west flash`指令烧录到 XIAO nRF54LM20A 上。
+2. Open the project, add the XIAO nRF54LM20A configuration under the corresponding extension, and compile.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_11.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/5.png" style={{width:800, height:'auto'}}/></div>
+
+3. Open the terminal, enter the `west flash` command to flash it onto the XIAO nRF54LM20A.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/6.png" style={{width:800, height:'auto'}}/></div>
 
 #### Result
 
