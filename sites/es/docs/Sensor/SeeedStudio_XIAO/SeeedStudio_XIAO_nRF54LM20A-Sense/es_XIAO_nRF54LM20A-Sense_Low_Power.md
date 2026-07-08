@@ -12,7 +12,7 @@ last_update:
   date: 06/01/2026
   author: Zeller
 createdAt: '2025-06-01'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-02'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_low_power/
 ---
 
@@ -41,11 +41,11 @@ url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_low_power/
   </table>
 </div>
 
-El XIAO nRF54LM20A está basado en el SoC nRF54LM20 y se caracteriza por un consumo de energía ultrabajo. Su excelente rendimiento de bajo consumo prolonga de forma efectiva el tiempo de funcionamiento del dispositivo en aplicaciones críticas para batería, como wearables, nodos finales de IoT y unidades de sensado remoto. Este documento describe cómo implementar y desplegar varios modos de bajo consumo en el XIAO nRF54LM20A.
+El XIAO nRF54LM20A está basado en el SoC nRF54LM20 y ofrece un consumo de energía ultrabajo. Su excelente rendimiento de bajo consumo extiende de forma efectiva el tiempo de funcionamiento del dispositivo para aplicaciones críticas en batería, como wearables, nodos finales de IoT y unidades de sensado remoto. Este documento describe cómo implementar y desplegar varios modos de bajo consumo en el XIAO nRF54LM20A.
 
 :::tip
 
-Este tutorial se ha desarrollado sobre la base del sistema de compilación PlatformIO y Zephyr RTOS. Si no estás familiarizado con la creación de un proyecto para el XIAO nRF54LM20A en PlatformIO, puedes ir a [Getting Sarted With Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/).
+Este tutorial se desarrolla sobre el sistema de compilación PlatformIO y Zephyr RTOS. Si no estás familiarizado con la creación de un proyecto para el XIAO nRF54LM20A en PlatformIO, puedes ir a [Getting Sarted With Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/).
 
 :::
 
@@ -96,10 +96,15 @@ El modo de bajo consumo se implementa en el XIAO nRF54LM20A utilizando funciones
 1. Modifica el archivo del árbol de dispositivos que termina con `.overlay`.
 
 ```dts
+/* Switch BT HCI from Nordic SDC (needs nrfxlib binary) to Zephyr SW controller */
 / {
     chosen {
         zephyr,bt-hci = &bt_hci_controller;
     };
+};
+
+&bt_hci_sdc {
+    status = "disabled";
 };
 
 &bt_hci_controller {
@@ -118,14 +123,12 @@ El modo de bajo consumo se implementa en el XIAO nRF54LM20A utilizando funciones
         };
     };
 };
-
 ```
 
 2. Modifica el archivo de configuración `prj.conf` para habilitar los ajustes de gestión de energía del sistema.
 
 ```conf
 CONFIG_GPIO=y
-CONFIG_ARM_MPU=n
 CONFIG_NRFX_POWER=y
 CONFIG_POWEROFF=y
 CONFIG_HWINFO=y
@@ -139,12 +142,9 @@ CONFIG_PM_DEVICE_RUNTIME=y
 CONFIG_BT=y
 CONFIG_BT_BROADCASTER=y
 CONFIG_BT_DEVICE_NAME="XIAO nRF54LM20A"
-CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
-CONFIG_BT_CTLR_ASSERT_DEBUG=n
-CONFIG_BT_CTLR_ASSERT_OVERHEAD_START=n
 ```
 
-3. Modifica el programa main.c, habilita el modo de bajo consumo con `k_sleep(K_SECONDS(10))` y configura BLE para difundir mensajes periódicamente con un intervalo de 1 segundo.
+3. Modifica el programa main.c, habilita el modo de bajo consumo con `k_sleep(K_SECONDS(10))` y configura BLE para difundir mensajes periódicamente a un intervalo de 1 segundo.
 
 ```c
 /*
@@ -193,11 +193,11 @@ int main(void)
 
 ### Resultado
 
-Después de flashear el firmware, podemos utilizar un medidor de consumo para medir la corriente de funcionamiento del XIAO nRF54LM20A en condiciones de bajo consumo.
+Después de grabar el firmware, podemos utilizar un medidor de consumo para medir la corriente de funcionamiento del XIAO nRF54LM20A en condiciones de bajo consumo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-Mientras tanto, puedes escanear mediante Bluetooth y encontrar el dispositivo anunciándose con el nombre `XIAO nRF54LM20A`.
+Mientras tanto, puedes escanear mediante Bluetooth y encontrar el dispositivo emitiendo anuncios bajo el nombre `XIAO nRF54LM20A`.
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
@@ -213,7 +213,7 @@ Mientras tanto, puedes escanear mediante Bluetooth y encontrar el dispositivo an
 <br/>
 :::tip
 
-Los resultados de prueba anteriores se miden en condiciones de laboratorio. Los valores pueden variar con diferentes entornos e instrumentos de prueba; consulta el rendimiento medido en la práctica.
+Los resultados de prueba anteriores se miden en condiciones de laboratorio. Los valores pueden variar con diferentes entornos e instrumentos de prueba; consulta el rendimiento medido real.
 
 :::
 
@@ -221,7 +221,7 @@ Los resultados de prueba anteriores se miden en condiciones de laboratorio. Los 
 
 El XIAO nRF54LM20A alcanza el modo de ultrabajo consumo mediante System OFF. Al entrar en este modo, todos los relojes de los periféricos se detienen y la mayoría de los periféricos se apagan por completo, lo que da como resultado una corriente en espera tan baja como 5 µA. Los desencadenantes de activación incluyen el temporizador GRTC o interrupciones GPIO. El estado del sistema no se conserva; después de la activación, el chip se comporta como si se hubiera ciclado la alimentación y el programa se reinicia desde la función main().
 
-Esta sección verifica el rendimiento práctico del modo System OFF en el XIAO nRF54LM20A utilizando el despertar por interrupción GPIO.
+Esta sección verifica el rendimiento práctico del modo System OFF en el XIAO nRF54LM20A utilizando la activación por interrupción GPIO.
 
 ### Software
 
@@ -490,11 +490,11 @@ int main(void)
 
 ### Resultado
 
-El dispositivo entra en modo de ultra bajo consumo de forma predeterminada después de encenderse. El XIAO nRF54LM20A se mide con un probador de consumo de energía, obteniendo una corriente de funcionamiento promedio de aproximadamente 5,43 µA cuando se alimenta con una batería de 3,7 V.
+El dispositivo entra en modo de ultra bajo consumo de forma predeterminada después de encenderse. El XIAO nRF54LM20A se mide con un probador de consumo de energía, obteniendo una corriente de funcionamiento promedio de aproximadamente 5.43 µA cuando se alimenta con una batería de 3.7 V.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_4.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-Al presionar el botón BOOT integrado a través de un monitor serie, puedes despertar el chip para imprimir información de estado antes de que vuelva a entrar en sueño profundo.
+Al presionar el botón BOOT integrado a través de un monitor serial, puedes activar el chip para imprimir información de estado antes de que vuelva a entrar en sueño profundo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_5.png" style={{width:800, height:'auto'}}/></div>
 <br/>

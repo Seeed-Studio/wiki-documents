@@ -1,5 +1,5 @@
 ---
-title: XIAO nRF54LM20A Sense での NRF Connect SDK
+title: Seeed Studio XIAO nRF54LM20A Sense での NRF Connect SDK
 description: ''
 keywords:
   - xiao
@@ -12,7 +12,7 @@ last_update:
   date: 06/15/2026
   author: Brandy
 createdAt: '2025-05-13'
-updatedAt: '2026-06-30'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_ncs/
 ---
 
@@ -46,9 +46,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## はじめに
 
-nRF Connect SDK (NCS) は、Zephyr RTOS リアルタイムオペレーティングシステムの上に構築された、Nordic Semiconductor 公式のソフトウェア開発キットです。nRF シリーズチップ向けに、完全でネイティブかつ高度に最適化された開発フレームワークを提供します。PlatformIO と比較して、NCS は Bluetooth Low Energy (BLE)、Thread、Matter などの無線プロトコルスタックのネイティブサポートに加え、よりきめ細かな電源管理やペリフェラル制御など、nRF54 シリーズのハードウェア機能全体へより広くアクセスできるようにします。Nordic が公式にこの SDK を継続的に保守・更新しており、チップファームウェアとの最適な互換性と、最新機能へのいち早いアクセスを保証します。
+nRF Connect SDK (NCS) は、Zephyr RTOS リアルタイムオペレーティングシステム上に構築された、Nordic Semiconductor 公式のソフトウェア開発キットです。nRF シリーズチップ向けに、完全かつネイティブで高度に最適化された開発フレームワークを提供します。PlatformIO と比較して、NCS は Bluetooth Low Energy (BLE)、Thread、Matter などの無線プロトコルスタックのネイティブサポートに加え、よりきめ細かな電源管理やペリフェラル制御など、nRF54 シリーズのハードウェア機能全体へより広範なアクセスを開発者に提供します。Nordic が公式にこの SDK を継続的に保守・更新しており、チップファームウェアとの最適な互換性と、最新機能へのいち早いアクセスが保証されています。
 
-このチュートリアルでは、nRF Connect SDK 開発環境のセットアップとツールチェーンのインストールから、最初のプロジェクトの作成と設定、そして最初のサンプルプログラムを XIAO nRF54LM20A Sense に書き込んで実際に動作させるところまで、全工程をステップバイステップで案内します。
+このチュートリアルでは、nRF Connect SDK 開発環境のセットアップとツールチェーンのインストールから、最初のプロジェクトの作成と設定、そして最初のサンプルプログラムを XIAO nRF54LM20A Sense に書き込んで実行を確認するまで、一連のプロセスをステップバイステップで案内します。
 
 ## NCS を使い始める
 
@@ -94,7 +94,7 @@ nRF Connect SDK (NCS) は、Zephyr RTOS リアルタイムオペレーティン�
 
 ### VS Code をダウンロード
 
-使用しているシステムに応じて [VS Code](https://code.visualstudio.com/download) をダウンロードします。
+使用しているシステムに応じて [VS Code](https://code.visualstudio.com/download) をダウンロードします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -123,9 +123,9 @@ nRF Connect SDK (NCS) は、Zephyr RTOS リアルタイムオペレーティン�
 
 :::tip
 
-nRF Connect SDK v3.3.0 では、事前パッケージ版のインストールに SDK コードと対応するツールチェーンの両方が含まれています。ツールチェーンを別途インストールする必要はありません。
+nRF Connect SDK v3.3.0 では、プリパッケージ版のインストールに SDK コードと対応するツールチェーンの両方が含まれています。ツールチェーンを別途インストールする必要はありません。
 
-nRF Connect SDK はかなり大きく、初回インストールには時間がかかります。インストール中はネットワーク接続を安定させ、失敗を避けてください。
+nRF Connect SDK はかなり大きいため、初回インストールには時間がかかります。インストール中はネットワーク接続を安定させ、失敗を避けてください。
 
 :::
 
@@ -133,11 +133,11 @@ nRF Connect SDK はかなり大きく、初回インストールには時間が�
 
 インストールが完了すると、nRF Connect SDK の統合環境が自動的にセットアップされます。以降の開発をスムーズに進めるため、この段階で環境を検証することをお勧めします。
 
-1. nRF Connect SDK に内蔵されているターミナル **nRF Terminal** を起動します。
+1. nRF Connect SDK に組み込まれているターミナルである **nRF Terminal** を起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-2. 必要なツールのバージョン情報を確認するためのコマンドを入力します。以下のコマンドを 1 つずつコピーして実行し、検証してください。
+2. 必要なツールのバージョン情報を確認するためのコマンドを入力します。検証のため、以下のコマンドを 1 つずつコピーして実行できます。
 
 ```bash
 # Check west (project manager & build entry) version
@@ -175,7 +175,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_9.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-2. VS Code 左下の **Settings** を開きます。
+2. VS Code の左下にある **Settings** を開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_10.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -185,7 +185,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 ### 新しいアプリケーションを作成
 
-このセクションでは、空のサンプルプロジェクトを変更していきます。
+このセクションでは、空のサンプルプロジェクトを編集します。
 
 1. 拡張機能内で **Create a blank application** を選択し、テンプレートを複製します。
 
@@ -200,7 +200,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_14.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-4. 元の設定を削除します。このステップにより、次の段階で XIAO nRF54LM20A に関連する設定を行う際の干渉を取り除きます。（プロジェクトにビルドがない場合は、このステップをスキップして構いません）
+4. 既存の設定を削除します。このステップにより、次の段階で XIAO nRF54LM20A に関連する設定を行う際の干渉を取り除きます。（プロジェクトにビルドがない場合は、このステップをスキップして構いません）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_15.png" style={{width:800, height:'auto'}}/></div>
 
@@ -215,7 +215,7 @@ XIAO nRF54LM20A シリーズはカスタマイズされた devicetree とハー�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_16.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-1. main.c のコードを修正します
+1. main.c のコードを編集します
 
 <details>
 
@@ -383,7 +383,7 @@ int main(void)
 
 </details>
 
-3. prj.conf ファイルを変更して、対応する設定を有効にします。
+3. prj.conf ファイルを修正して、対応する設定を有効にします。
 
 ```conf
 CONFIG_GPIO=y
@@ -391,7 +391,7 @@ CONFIG_PWM=y
 CONFIG_SERIAL=n
 ```
 
-1. 拡張機能の APPLICATIONS セクションに移動し、Add build configuration を選択します。SDK とツールチェーンのバージョンを確認します。Board Target を xiao_nrf54lm20a/nrf54lm20a/cpuapp に設定し、ベース設定ファイルを prj.conf に設定します。ページを下までスクロールし、Generate and Build をクリックして対応する設定ファイルを生成します。
+1. 拡張機能の APPLICATIONS セクションに移動し、Add build configuration を選択します。SDK とツールチェーンのバージョンを確認します。Board Target を xiao_nrf54lm20a/nrf54lm20a/cpuapp に設定し、ベース設定ファイルを prj.conf に設定します。ページを下にスクロールし、Generate and Build をクリックして対応する設定ファイルを生成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/4_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -437,17 +437,17 @@ west flash --build-dir build_1
 
 ## FAQ
 SDK のダウンロードに時間がかかりすぎる場合は、比較的高速なダウンロード方法も提供しています。
-- ステップ 1: aria2 をインストールします
+- ステップ 1: aria2 をインストールする
 ```
 brew install aria2
 ```
 
-- ステップ 2: ダウンロードディレクトリを作成します
+- ステップ 2: ダウンロードディレクトリを作成する
 ```
 mkdir -p /opt/nordic/ncs/downloads
 ```
 
-- ステップ 3: Toolchain Bundle をダウンロードします
+- ステップ 3: Toolchain Bundle をダウンロードする
 ```
 aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   -d /opt/nordic/ncs/downloads \
@@ -455,7 +455,7 @@ aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   "https://files.nordicsemi.cn/artifactory/NCS/external/bundles/v3/ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz"
 ```
 
-- ステップ 4: nRF Connect SDK Bundle をダウンロードします
+- ステップ 4: nRF Connect SDK Bundle をダウンロードする
 ```
 aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   -d /opt/nordic/ncs/downloads \
@@ -463,7 +463,7 @@ aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   "https://files.nordicsemi.cn/artifactory/ncs-src-mirror/external/sdk-nrf/v3.3.0/src.tar.gz"
 ```
 
-- ステップ 5: nRF Connect SDK v3.3.0 をインストールします
+- ステップ 5: nRF Connect SDK v3.3.0 をインストールする
 ```
 nrfutil sdk-manager install v3.3.0 \
   --sdk-path /opt/nordic/ncs/v3.3.0 \
@@ -472,7 +472,7 @@ nrfutil sdk-manager install v3.3.0 \
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>

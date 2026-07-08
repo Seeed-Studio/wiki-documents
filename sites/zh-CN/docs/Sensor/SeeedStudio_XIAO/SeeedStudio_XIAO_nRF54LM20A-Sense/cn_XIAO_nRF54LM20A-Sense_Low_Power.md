@@ -12,7 +12,7 @@ last_update:
   date: 06/01/2026
   author: Zeller
 createdAt: '2025-06-01'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-02'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_low_power/
 ---
 
@@ -69,9 +69,9 @@ XIAO nRF54LM20A 基于 nRF54LM20 SoC 构建，具备超低功耗特性。其出�
 </table>
 </div>
 
-## 使用电池供电
+## 电池供电
 
-本章中实现的所有模式均通过 XIAO nRF54LM20A 底部焊盘使用电池供电，而非通过 USB-C 供电。
+本章中实现的所有模式均通过 XIAO nRF54LM20A 底部焊盘使用电池供电，而不是通过 USB-C 供电。
 XIAO nRF54LM20A 支持使用 3.7V 锂电池作为电源输入。你可以参考下图进行接线。
 
 <div style={{textAlign: 'center'}}>
@@ -83,23 +83,28 @@ XIAO nRF54LM20A 支持使用 3.7V 锂电池作为电源输入。你可以参考�
 :::caution
 
 焊接时请务必注意不要将正负极短路，以免烧毁电池和设备。
-如果电池本身带电，切勿直接焊接到电路板上，否则可能烧毁电路板。在电路上电的情况下发生短路风险极大，建议使用适配器连接。
+如果电池本身带电，切勿直接焊接到电路板上，否则可能烧毁电路板。在电路上电的情况下发生短路风险极大，建议使用转接板或适配器。
 
 :::
 
 ## 低功耗模式
 
-在 XIAO nRF54LM20A 上通过 System ON Sleep 等功能实现低功耗模式。在该模式下，系统仍保持工作，但功耗被降低。CPU 时钟被门控并暂停运行，但 RAM 内容、外设状态以及程序上下文均会被完整保留，且包括 GRTC 在内的低功耗定时器仍会继续运行。本节将通过 `k_sleep` 函数和 BLE 广播来验证低功耗模式。
+在 XIAO nRF54LM20A 上通过 System ON Sleep 等功能实现低功耗模式。在该模式下，系统仍保持工作，但功耗被降低。CPU 时钟被门控并暂停运行，但 RAM 内容、外设状态以及程序上下文都会被完整保留，且包括 GRTC 在内的低功耗定时器仍会继续运行。本节将通过 `k_sleep` 函数和 BLE 广播来验证低功耗模式。
 
 ### 软件
 
 1. 修改以 `.overlay` 结尾的设备树文件。
 
 ```dts
+/* Switch BT HCI from Nordic SDC (needs nrfxlib binary) to Zephyr SW controller */
 / {
     chosen {
         zephyr,bt-hci = &bt_hci_controller;
     };
+};
+
+&bt_hci_sdc {
+    status = "disabled";
 };
 
 &bt_hci_controller {
@@ -118,14 +123,12 @@ XIAO nRF54LM20A 支持使用 3.7V 锂电池作为电源输入。你可以参考�
         };
     };
 };
-
 ```
 
 2. 修改 `prj.conf` 配置文件以启用系统电源管理相关设置。
 
 ```conf
 CONFIG_GPIO=y
-CONFIG_ARM_MPU=n
 CONFIG_NRFX_POWER=y
 CONFIG_POWEROFF=y
 CONFIG_HWINFO=y
@@ -139,9 +142,6 @@ CONFIG_PM_DEVICE_RUNTIME=y
 CONFIG_BT=y
 CONFIG_BT_BROADCASTER=y
 CONFIG_BT_DEVICE_NAME="XIAO nRF54LM20A"
-CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
-CONFIG_BT_CTLR_ASSERT_DEBUG=n
-CONFIG_BT_CTLR_ASSERT_OVERHEAD_START=n
 ```
 
 3. 修改 main.c 程序，通过 `k_sleep(K_SECONDS(10))` 启用低功耗模式，并配置 BLE 以 1 秒为周期定时广播消息。
@@ -193,7 +193,7 @@ int main(void)
 
 ### 测试结果
 
-在烧录固件后，我们可以使用功耗测试仪测量 XIAO nRF54LM20A 在低功耗条件下的工作电流。
+烧录固件后，我们可以使用功耗测试仪测量 XIAO nRF54LM20A 在低功耗条件下的工作电流。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -494,13 +494,13 @@ int main(void)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_4.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-通过在串口监视器中按下板载 BOOT 按钮，可以唤醒芯片以打印状态信息，然后它会重新进入深度睡眠。
+通过串口监视器按下板载 BOOT 按钮，可以唤醒芯片，在其重新进入深度睡眠前打印状态信息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_5.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 :::tip
 
-以上测试结果是在实验室条件下测得。数值可能会因环境和测试仪器不同而有所变化，请以实际测得性能为准。
+以上测试结果为实验室条件下测得。数值可能会因环境和测试仪器不同而有所差异，请以实际测得性能为准。
 
 :::
 

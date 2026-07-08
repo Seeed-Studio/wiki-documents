@@ -12,7 +12,7 @@ last_update:
   date: 05/26/2026
   author: Zeller
 createdAt: '2025-05-26'
-updatedAt: '2026-06-15'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_matter/
 ---
 
@@ -44,9 +44,9 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_matter/
 
 ## Introdução
 
-Com o SoC nRF54LM20A, a série XIAO nRF54LM20A oferece suporte a Bluetooth LE, Matter, Thread, Zigbee e protocolos proprietários de 2,4 GHz, fornecendo uma taxa de dados de pico de 4 Mbps ideal para cenários de baixa latência.
+Com o SoC nRF54LM20A, a Série XIAO nRF54LM20A oferece suporte a Bluetooth LE, Matter, Thread, Zigbee e protocolos proprietários de 2,4 GHz, fornecendo uma taxa de dados de pico de 4 Mbps ideal para cenários de baixa latência.
 
-Este tutorial usa duas placas XIAO nRF54LM20A para verificar a rede Matter: uma atua como um roteador de borda conectado ao Home Assistant, e a outra funciona como um dispositivo Matter que entra na rede Thread para exibir dados simulados de temperatura e umidade no painel do Home Assistant.
+Este tutorial usa duas placas XIAO nRF54LM20A para verificar a rede Matter: uma atua como um roteador de borda conectado ao Home Assistant, e a outra opera como um dispositivo Matter ingressando na rede Thread para exibir dados simulados de temperatura e umidade no painel do Home Assistant.
 
 ***Agradecimentos ao autor [@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/) pelas ideias para o WiKi***
 
@@ -76,9 +76,9 @@ OpenThread é uma implementação de código aberto do protocolo de rede Thread.
 
 ### Qual é a relação entre Matter e Thread
 
-***Agradecimentos ao autor[@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/) por uma explicação muito detalhada deste ponto, aqui citada!***
+***Agradecimentos ao autor[@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/) por uma explicação muito detalhada deste ponto, citada aqui!***
 
-Após esta breve introdução ao Matter e ao Thread, agora você entende que Thread e Matter têm propósitos diferentes e operam em camadas distintas da pilha de tecnologia. Para recapitular:
+Após esta breve introdução ao Matter e ao Thread, agora você entende que Thread e Matter têm finalidades diferentes e operam em camadas distintas da pilha de tecnologia. Para recapitular:
 
 Thread:
 
@@ -87,13 +87,13 @@ Thread:
 
 Matter:
 
-- Matter é um protocolo de camada de aplicação que fica sobre protocolos de rede como Thread, Wi-Fi e Ethernet. Ele busca simplificar e unificar o ecossistema de casa inteligente, garantindo que dispositivos de diferentes fabricantes possam funcionar juntos sem problemas.
+- Matter é um protocolo de camada de aplicação que fica sobre protocolos de rede como Thread, Wi-Fi e Ethernet. Ele busca simplificar e unificar o ecossistema de casa inteligente garantindo que dispositivos de diferentes fabricantes possam funcionar juntos sem problemas.
 - Matter define como os dispositivos se comunicam e interagem na camada de aplicação, com foco em interoperabilidade, segurança e facilidade de uso.
 
 Conexão entre Thread e Matter:
 
 - Matter pode usar Thread como um de seus protocolos de rede subjacentes. Isso significa que dispositivos usando o protocolo Matter podem se comunicar por meio de uma rede Thread.
-- A combinação de Matter e Thread permite um ecossistema de casa inteligente robusto, seguro e interoperável, no qual os dispositivos podem se comunicar localmente e de forma eficiente.
+- A combinação de Matter e Thread permite um ecossistema de casa inteligente robusto, seguro e interoperável, em que os dispositivos podem se comunicar localmente e de forma eficiente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/HA_OpenThread/TOPPLOGY.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -179,7 +179,7 @@ Dispositivos de roteamento Thread como Connect ZBT-1, Connect ZBT-2 ou Home Assi
 
 :::tip
 
-Este tutorial é baseado no VS Code e na extensão nRF Connect. Se você é iniciante neles, pode consultar [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_ncs/#getting-started-with-ncs)
+Este tutorial é baseado no VS Code e na extensão nRF Connect. Se você é iniciante neles, pode consultar [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_ncs/)
 
 :::
 
@@ -195,65 +195,45 @@ Caminho do arquivo: ~/boards：
 
 ```dts
 &uart20 {
-        current-speed = <1000000>;
-        status = "okay";
-        hw-flow-control;
+	current-speed = <1000000>;
+	status = "okay";
+	hw-flow-control;
 };
 
 / {
-        chosen {
-                zephyr,ot-uart = &uart20;
-        };
+	chosen {
+		zephyr,ot-uart = &uart20;
+	};
 };
 
 &pmic_i2c {
-        status = "disabled";
-};
-
-&pmic {
-        status = "disabled";
-
-        charger {
-                status = "disabled";
-        };
-
-        regulators {
-                status = "disabled";
-
-                LDO1 {
-                        status = "disabled";
-                };
-        };
+	status = "disabled";
 };
 ```
 
 - xiao_nrf54lm20a_nrf54lm20a_cpuapp.conf.
 
 ```conf
-#
-# Copyright (c) 2025 Nordic Semiconductor ASA
-#
-# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
-#
-
 CONFIG_SPI_NOR=n
 
 # Increase Main and shell stack sizes to avoid stack overflow
 # while using CRACEN
 CONFIG_MAIN_STACK_SIZE=2048
+
+CONFIG_I2C_GPIO=n
+CONFIG_MFD_NPM13XX=n
+CONFIG_NPM13XX_CHARGER=n
 ```
 
 3. Compile e habilite a configuração.
 
 - Configure e compile o projeto.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-1.png" style={{width:800, height:'auto'}}/></div>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-2.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_4.png" style={{width:800, height:'auto'}}/></div>
 
 - Grave o firmware usando `west flash`.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter_9_mt5.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_5.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 4. Para detectar o dispositivo no Home Assistant, conecte o XIAO nRF54LM20A gravado com o firmware Coprocessor ao Home Assistant Green via USB-C.
 
@@ -265,7 +245,7 @@ CONFIG_MAIN_STACK_SIZE=2048
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_7.png" style={{width:800, height:'auto'}}/></div>
 
-- Você pode verificar o status da configuração em Log — a configuração será bem-sucedida como mostrado na figura abaixo.
+- Você pode verificar o status da configuração no Log — a configuração é bem-sucedida como mostrado na figura abaixo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_8.png" style={{width:800, height:'auto'}}/></div>
 
@@ -275,7 +255,7 @@ CONFIG_MAIN_STACK_SIZE=2048
 
 ### Configurar o dispositivo Matter
 
-1. Escolha Create a new application, selecione copy a sample, pesquise por Matter-Template e crie o projeto.
+1. Escolha Create a new application, selecione copy a sample, procure por Matter-Template e crie o projeto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -285,7 +265,7 @@ CONFIG_MAIN_STACK_SIZE=2048
 
 - Os arquivos a serem adicionados estão listados abaixo:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-8.png" style={{width:350, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_11.png" style={{width:800, height:'auto'}}/></div>
 
 Caminho do arquivo: ~/boards：
 
@@ -605,12 +585,6 @@ external_flash:
 
 </details>
 
-:::tip
-
-Para os dois últimos arquivos, você precisa criar os arquivos manualmente e colar o código
-
-:::
-
 #### Descrição da finalidade dos arquivos adicionados
 
 <table>
@@ -629,7 +603,7 @@ Para os dois últimos arquivos, você precisa criar os arquivos manualmente e co
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay</code></td>
       <td>
-        <strong>Variante com Flash externa:</strong> habilita a Flash SPI NOR PY25Q64 como slot secundário de OTA;<br/>
+        <strong>Variante com Flash externa:</strong> Habilita a Flash SPI NOR PY25Q64 como slot secundário de OTA;<br/>
         habilita o watchdog wdt31;<br/>
         declara <code>nordic,pm-ext-flash</code> para que o Partition Manager possa reconhecer a Flash externa.
       </td>
@@ -637,7 +611,7 @@ Para os dois últimos arquivos, você precisa criar os arquivos manualmente e co
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.overlay</code></td>
       <td>
-        <strong>Variante com Flash interna:</strong> desabilita a PY25Q64 (reduz o custo de BOM e o consumo de energia);<br/>
+        <strong>Variante com Flash interna:</strong> Desabilita a PY25Q64 (reduz o custo de BOM e o consumo de energia);<br/>
         coloca o slot secundário de OTA na RRAM interna;<br/>
         habilita o watchdog wdt31.
       </td>
@@ -650,30 +624,30 @@ Para os dois últimos arquivos, você precisa criar os arquivos manualmente e co
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp.conf</code></td>
       <td>
-        <strong>Flash externa — Kconfig:</strong> habilita os drivers SPI/SPI_NOR para acesso à PY25Q64;<br/>
-        define <code>BOOT_MAX_IMG_SECTORS=512</code> para firmware de grande porte;<br/>
+        <strong>Flash externa — Kconfig:</strong> Habilita os drivers SPI/SPI_NOR para acesso à PY25Q64;<br/>
+        define <code>BOOT_MAX_IMG_SECTORS=512</code> para firmware grande;<br/>
         habilita o kernel sem ticks (tickless).
       </td>
     </tr>
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay</code></td>
       <td>
-        <strong>Flash externa — Overlay DTS:</strong> habilita a PY25Q64 como <code>pm-ext-flash</code>,
+        <strong>Flash externa — Overlay DTS:</strong> Habilita a PY25Q64 como <code>pm-ext-flash</code>,
         permitindo que o MCUboot acesse a imagem OTA na Flash externa durante a inicialização.
       </td>
     </tr>
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.conf</code></td>
       <td>
-        <strong>Flash interna — Kconfig:</strong> Desativa SPI/SPI_NOR;<br/>
-        desativa a saída de depuração (<code>PRINTK=n</code>, <code>ASSERT=n</code>) para reduzir o tamanho do MCUboot para a partição de 40 KB;<br/>
+        <strong>Flash interna — Kconfig:</strong> Desabilita SPI/SPI_NOR;<br/>
+        desabilita a saída de depuração (<code>PRINTK=n</code>, <code>ASSERT=n</code>) para reduzir o tamanho do MCUboot para a partição de 40 KB;<br/>
         define <code>BOOT_MAX_IMG_SECTORS=512</code>.
       </td>
     </tr>
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.overlay</code></td>
       <td>
-        <strong>Flash interna — Overlay DTS:</strong> Desativa PY25Q64, garantindo que o MCUboot use apenas a Flash interna.
+        <strong>Flash interna — DTS Overlay:</strong> Desativa o PY25Q64, garantindo que o MCUboot use apenas a Flash interna.
       </td>
     </tr>
 
@@ -684,14 +658,14 @@ Para os dois últimos arquivos, você precisa criar os arquivos manualmente e co
     <tr>
       <td><code>pm_static_xiao_nrf54lm20a_nrf54lm20a_cpuapp.yml</code></td>
       <td>
-        <strong>Variante com Flash externa:</strong> <code>mcuboot_secondary</code> (imagem OTA) reside na Flash externa (PY25Q64);<br/>
+        <strong>Variante com Flash externa:</strong> <code>mcuboot_secondary</code> (imagem OTA) fica na Flash externa (PY25Q64);<br/>
         o tamanho utilizável do APP é <code>0x1E2800</code> (~1,9 MB).
       </td>
     </tr>
     <tr>
       <td><code>pm_static_xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.yml</code></td>
       <td>
-        <strong>Variante com Flash interna:</strong> <code>mcuboot_secondary</code> reside na Flash interna;<br/>
+        <strong>Variante com Flash interna:</strong> <code>mcuboot_secondary</code> fica na Flash interna;<br/>
         MCUboot reduzido para <code>0xA000</code> (40 KB);<br/>
         APP reduzido para <code>0x125800</code> (~1,2 MB);<br/>
         a imagem OTA requer compactação.
@@ -701,17 +675,15 @@ Para os dois últimos arquivos, você precisa criar os arquivos manualmente e co
   </tbody>
 </table>
 
-
-
 #### Gravar e fazer download para o dispositivo
 
 - Prossiga com a configuração de build.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-3.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_12_1.png" style={{width:800, height:'auto'}}/></div>
 
 - Selecione outro XIAO nRF54LM20A como dispositivo de destino, inicie o OpenTerminal e grave o firmware usando o comando `west flash`.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-4.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_12.png" style={{width:800, height:'auto'}}/></div>
 
 ### Conecte o dispositivo Matter usando o aplicativo Home Assistant.
 
@@ -719,15 +691,15 @@ Para os dois últimos arquivos, você precisa criar os arquivos manualmente e co
 
 - No ambiente de desenvolvimento NCS, abra o nRF Serial Terminal.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-5.2.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_13.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 - Uma lista de portas seriais aparecerá na parte superior da interface; selecione a porta serial correspondente ao XIAO nRF54LM20A.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-6.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_14.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-- As informações do dispositivo Matter e o link do código QR de pareamento serão exibidos via logs seriais.
+- As informações do dispositivo Matter e o link do código QR de pareamento serão exibidos pelos logs seriais.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-7.2.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_15.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 - Toque diretamente no link do código QR ou copie o link para um navegador web separadamente.
 
@@ -773,7 +745,7 @@ Para os dois últimos arquivos, você precisa criar os arquivos manualmente e co
 
 Seguindo os procedimentos acima, configuramos uma rede Matter over Thread usando dois módulos XIAO nRF54LM20A e conectamos a rede com sucesso ao Home Assistant. O protocolo Matter oferece suporte ao acesso a uma gama mais ampla de tipos de sensores, enquanto o demo acima apenas simula a aquisição de dados de temperatura e umidade. Ao integrar outros dispositivos sensores, verifique se Clusters correspondentes estão definidos na especificação Matter. Para mais detalhes, consulte a documentação oficial em [Home Assistant Matter](https://www.home-assistant.io/integrations/matter).
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

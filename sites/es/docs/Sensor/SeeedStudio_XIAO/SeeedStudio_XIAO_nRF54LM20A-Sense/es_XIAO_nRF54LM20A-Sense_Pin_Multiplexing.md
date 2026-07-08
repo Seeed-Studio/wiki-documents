@@ -1,5 +1,5 @@
 ---
-title: Multiplexación de pines con XIAO nRF54LM20A Sense
+title: Multiplexación de pines con Seeed Studio XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-06-30'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_pin_multiplexing/
 ---
 
@@ -46,7 +46,7 @@ El XIAO nRF54LM20A cuenta con abundantes recursos de pines y admite de forma nat
 
 :::tip
 
-Este tutorial se desarrolla sobre el sistema de compilación PlatformIO y Zephyr RTOS.
+Este tutorial se desarrolla sobre la base del sistema de compilación PlatformIO y Zephyr RTOS.
 Si no estás familiarizado con la creación de un proyecto para el XIAO nRF54LM20A en PlatformIO, puedes ir a [Getting Sarted With Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/)
 
 :::
@@ -175,18 +175,11 @@ int main(void)
 
 Después de flashear el firmware, pulsa el botón y el zumbador emitirá un pitido. Y el puerto serie imprimirá el estado.
 
-:::tip
-
-Ten en cuenta que debes configurar la velocidad en baudios a 115200. Si abres directamente Monitor en VS, se recomienda configurar la velocidad en baudios en el archivo `.ini`
-
-:::
-
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.png" style={{width:800, height:'auto'}}/></div>
 
 ## PWM
 
-PWM es una función de salida de forma de onda temporizada implementada sobre GPIOs de salida digital. Cambia rápidamente los niveles del pin a una frecuencia fija y ajusta dinámicamente el ciclo de trabajo del nivel alto dentro de un solo ciclo, para así enviar señales analógicas equivalentes a los periféricos. En aplicaciones de ingeniería práctica, PWM se utiliza ampliamente para el control preciso del ángulo de servomotores y el ajuste suave del brillo de los LED.
+PWM es una función de salida de forma de onda temporizada implementada sobre la base de GPIOs de salida digital. Cambia rápidamente los niveles del pin a una frecuencia fija y ajusta dinámicamente el ciclo de trabajo del nivel alto dentro de un solo ciclo, para así enviar señales analógicas equivalentes a los periféricos. En aplicaciones de ingeniería práctica, PWM se utiliza ampliamente para el control preciso del ángulo de servomotores y el ajuste suave del brillo de los LED.
 
 ### Preparación de hardware
 
@@ -222,7 +215,7 @@ PWM es una función de salida de forma de onda temporizada implementada sobre GP
 
 ### Preparación de software
 
-Según el pinout del XIAO nRF54LM20A, se puede seleccionar **P1.0** como pin de control para el **Grove-Servo**.
+Según el pinout del XIAO nRF54LM20A, **P1.0** se puede seleccionar como pin de control para el **Grove-Servo**.
 
 :::tip
 
@@ -230,7 +223,7 @@ Según el pinout del XIAO nRF54LM20A, se puede seleccionar **P1.0** como pin de 
 
 :::
 
-1. Modifica el archivo del device tree `app.overlay`. Para la función de salida PWM, la instancia de hardware debe estar vinculada explícitamente al nodo `pwm20`, `pwm21` o `pwm22`. La salida UART de consola predeterminada del sistema está unida al nodo `uart20`.
+1. Modifica el archivo del device tree `app.overlay`. Para la función de salida PWM, la instancia de hardware debe estar vinculada explícitamente al nodo `pwm20`, `pwm21` o `pwm22`. La salida UART de consola predeterminada del sistema está asociada al nodo `uart20`.
 
 <details>
 <summary>app.overlay</summary>
@@ -393,7 +386,7 @@ int main(void)
 
 ### Resultado
 
-Después de flashear el firmware, el servo gira de 0° a 180° a una velocidad de 33 radianes por segundo y luego vuelve a girar a 0°.
+Después de flashear el firmware, el servo gira de 0° a 180° a una velocidad de 33 radianes por segundo y luego vuelve a girar hasta 0°.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -403,15 +396,15 @@ Mientras tanto, el ángulo actual del servo se imprimirá a través del puerto s
 
 ## Analógico
 
-La E/S analógica se basa en un convertidor analógico-digital (ADC) y se utiliza principalmente para capturar señales de voltaje analógicas continuas generadas por sensores externos. Después de obtener los valores de muestreo digitales sin procesar (Raw Data), se pueden mapear a valores reales de medición de ingeniería utilizando algoritmos de conversión lineales o no lineales específicos. Esta función se utiliza ampliamente en escenarios como el muestreo de voltaje de batería y la monitorización en tiempo real de magnitudes físicas, incluyendo la humedad del suelo y la temperatura ambiente.
+La E/S analógica se basa en un Convertidor Analógico-Digital (ADC) y se utiliza principalmente para capturar señales de voltaje analógicas continuas generadas por sensores externos. Después de obtener los valores digitales de muestreo sin procesar (Raw Data), se pueden mapear a valores reales de medición de ingeniería utilizando algoritmos de conversión lineales o no lineales específicos. Esta función se utiliza ampliamente en escenarios como el muestreo de voltaje de batería y la monitorización en tiempo real de magnitudes físicas, incluyendo la humedad del suelo y la temperatura ambiente.
 
 ### Preparación de hardware
 
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-        <th>Seeed Studio Grove Base para XIAO </th>
-        <th>Grove - Sensor Capacitivo de Humedad del Suelo</th>
+        <th>Seeed Studio Grove Base for XIAO </th>
+        <th>Grove - Capacitive Soil Moisture Sensor</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -560,7 +553,7 @@ int main(void)
 
 ### Resultado
 
-Después de flashear el programa, inserta el Grove-Capacitive Soil Moisture Sensor en plantas en maceta domésticas.
+Después de flashear el programa, inserta el Grove-Capacitive Soil Moisture Sensor en las plantas en maceta de casa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_3.jpg" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -587,14 +580,14 @@ Debido a las diferencias individuales de los componentes, las mediciones de dife
 
 ## UART
 
-El receptor/transmisor asíncrono universal (UART) es un protocolo estándar de comunicación serie asíncrona. No requiere señales de reloj externas para la sincronización y realiza la transmisión y recepción asíncrona de datos basándose en la velocidad en baudios preestablecida por ambas partes de la comunicación. En cuanto al cableado físico, se puede establecer un enlace de datos full-dúplex simplemente cruzando los pines TX y RX de los dispositivos y conectando sus tierras entre sí. Con un coste de hardware mínimo y compatibilidad con el envío y la recepción simultáneos, UART se adopta ampliamente en sistemas embebidos para la salida de registros de consola, la depuración de periféricos modulares y la comunicación de datos punto a punto de bajo ancho de banda.
+El Receptor/Transmisor Asíncrono Universal (UART) es un protocolo estándar de comunicación serie asíncrona. No requiere señales de reloj externas para la sincronización y realiza la transmisión y recepción asíncrona de datos basándose en la velocidad en baudios preestablecida por ambas partes de la comunicación. En cuanto al cableado físico, se puede establecer un enlace de datos full-dúplex simplemente cruzando los pines TX y RX de los dispositivos y conectando sus tierras entre sí. Con un coste de hardware mínimo y compatibilidad con el envío y la recepción simultáneos, UART se adopta ampliamente en sistemas embebidos para la salida de registros de consola, la depuración de periféricos modulares y la comunicación de datos punto a punto de bajo ancho de banda.
 
 ### Preparación de hardware
 
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-        <th>Convertidor USB a TTL</th>
+        <th>USB to TTL Converter</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -616,11 +609,11 @@ El receptor/transmisor asíncrono universal (UART) es un protocolo estándar de 
 
 ### Preparación de software
 
-Según la distribución de pines de XIAO nRF54LM20A, P1.08 y P1.09 se pueden seleccionar respectivamente como pines TX y RX para la comunicación serie.
+Según el pinout de XIAO nRF54LM20A, P1.08 y P1.09 se pueden seleccionar respectivamente como pines TX y RX para la comunicación serie.
 
 :::tip
 
-- Para la distribución de pines de XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#hardware-overview) para ver los detalles.
+- Para el pinout del XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#visión-general-del-hardware) para ver los detalles.
 
 :::
 
@@ -668,7 +661,7 @@ CONFIG_LOG_BACKEND_UART=y
 CONFIG_LOG_DEFAULT_LEVEL=3
 ```
 
-3. Escribe la función principal. Cuando se presione el botón BOOT integrado, el estado del puerto serie y la configuración de pines se imprimirán en el ordenador a través del puerto serie; de lo contrario, se imprimirá por defecto el estado de ejecución.
+3. Escribe la función principal. Cuando se presione el botón BOOT integrado, el estado del puerto serie y la configuración de los pines se imprimirán en el ordenador a través del puerto serie; de lo contrario, se imprimirá por defecto el estado de funcionamiento.
 
 <details>
 
@@ -848,7 +841,7 @@ int main(void)
 
 ### Resultado
 
-1. Cablea según el orden de la tabla
+1. Cablea de acuerdo con el orden de la tabla
 
 | XIAO nRF54LM20A | CH340 |
 | --------------- | ----- |
@@ -871,7 +864,7 @@ I2C es un protocolo de comunicación de datos síncrono y half-dúplex. Permite 
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-        <th>Seeed Studio Expansion Board Base for XIAO</th>
+        <th>Placa base de expansión Seeed Studio para XIAO</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -893,11 +886,11 @@ I2C es un protocolo de comunicación de datos síncrono y half-dúplex. Permite 
 
 ### Preparación de software
 
-Según la distribución de pines de XIAO nRF54LM20A, P1.03 y P1.07 se pueden configurar como pines I2C.
+Según el pinout de XIAO nRF54LM20A, P1.03 y P1.07 se pueden configurar como pines I2C.
 
 :::tip
 
-- Para la distribución de pines de XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#hardware-overview) para ver los detalles.
+- Para el pinout del XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#visión-general-del-hardware) para ver los detalles.
 
 :::
 
@@ -905,29 +898,28 @@ Según la distribución de pines de XIAO nRF54LM20A, P1.03 y P1.07 se pueden con
 
 ```dts
 / {
-        chosen {
-                zephyr,display = &ssd1306_128x64;
-        };
+	chosen {
+		zephyr,display = &ssd1306_128x64;
+	};
 };
 
 &i2c22 {
-        status = "okay";
-        zephyr,concat-buf-size = <2048>;
-        ssd1306_128x64: ssd1306@3c {
-                compatible = "solomon,ssd1306fb";
-                reg = <0x3c>;
-                width = <128>;
-                height = <64>;
-                segment-offset = <0>;
-                page-offset = <0>;
-                display-offset = <0>;
-                multiplex-ratio = <63>;
-                segment-remap;
-                com-invdir;
-                prechargep = <0x22>;
-        };
+	status = "okay";
+	zephyr,concat-buf-size = <2048>;
+	ssd1306_128x64: ssd1306@3c {
+		compatible = "solomon,ssd1306fb";
+		reg = <0x3c>;
+		width = <128>;
+		height = <64>;
+		segment-offset = <0>;
+		page-offset = <0>;
+		display-offset = <0>;
+		multiplex-ratio = <63>;
+		segment-remap;
+		com-invdir;
+		prechargep = <0x22>;
+	};
 };
-
 ```
 
 2. Modifica el archivo `prj.conf` para habilitar las configuraciones relacionadas con I2C y la pantalla.
@@ -935,16 +927,14 @@ Según la distribución de pines de XIAO nRF54LM20A, P1.03 y P1.07 se pueden con
 ```
 CONFIG_STDOUT_CONSOLE=y
 CONFIG_HEAP_MEM_POOL_SIZE=16384
-CONFIG_I2C=y
 CONFIG_DISPLAY=y
 CONFIG_SSD1306=y
 CONFIG_LOG=y
 CONFIG_LOG_DEFAULT_LEVEL=4
 CONFIG_CHARACTER_FRAMEBUFFER=y
-
 ```
 
-3. Escribe la función principal para establecer la posición de visualización y las funciones para la cadena.
+3. Escribe la función principal para establecer la posición de la pantalla y las funciones para la cadena.
 
 <details>
 
@@ -1112,7 +1102,7 @@ Después de que el programa se ejecute, el texto **Hello XIAO nRF54LM20A** se mo
 
 ## SPI
 
-SPI es un protocolo de comunicación síncrono, full-dúplex y de alta velocidad. A diferencia de la comunicación asíncrona, SPI se basa en una línea de reloj SCLK dedicada para una sincronización de datos precisa. Generalmente adopta la clásica topología de hardware de cuatro hilos que consta de los pines MOSI, MISO y de selección de chip CS/SS. Equipado con canales independientes de envío y recepción de datos y una alta frecuencia de reloj de bus, SPI ofrece un excelente rendimiento de transferencia de datos. Se utiliza ampliamente en escenarios de control de periféricos que requieren un gran ancho de banda, como dispositivos de almacenamiento masivo, incluidos Flash y tarjetas SD, pantallas de alta resolución y alta frecuencia de actualización, y sensores de muestreo de alta frecuencia.
+SPI es un protocolo de comunicación síncrono, full-dúplex y de alta velocidad. A diferencia de la comunicación asíncrona, SPI depende de una línea de reloj SCLK dedicada para una sincronización de datos precisa. Generalmente adopta la topología de hardware clásica de cuatro hilos que consta de los pines MOSI, MISO y de selección de chip CS/SS. Equipado con canales independientes de envío y recepción de datos y una alta frecuencia de reloj de bus, SPI ofrece un excelente rendimiento de transmisión de datos. Se utiliza ampliamente en escenarios de control de periféricos que requieren un gran ancho de banda, como dispositivos de almacenamiento masivo, incluidos Flash y tarjetas SD, pantallas de alta resolución y alta frecuencia de actualización, y sensores de muestreo de alta frecuencia.
 
 ### Preparación de hardware
 
@@ -1147,7 +1137,7 @@ SPI es un protocolo de comunicación síncrono, full-dúplex y de alta velocidad
 
 :::
 
-1. Modifica el archivo del árbol de dispositivos. Para controlar la pantalla LCD, habilita el nodo spi23 y configura la asignación de pines en el árbol de dispositivos. Establece P1.04, P1.05 y P1.06 como SCK, MISO y MOSI de SPI respectivamente. Al mismo tiempo, configura P1.31 y P1.29 como los pines de control CS (Chip Select) y DC (Data/Command) de la pantalla.
+1. Modifica el archivo del árbol de dispositivos. Para controlar la pantalla LCD, habilita el nodo spi23 y configura la asignación de pines en el árbol de dispositivos. Configura P1.04, P1.05 y P1.06 como SCK, MISO y MOSI de SPI respectivamente. Al mismo tiempo, configura P1.31 y P1.29 como los pines de control CS (Chip Select) y DC (Data/Command) de la pantalla.
 
 <details>
 
@@ -1262,7 +1252,7 @@ SPI es un protocolo de comunicación síncrono, full-dúplex y de alta velocidad
 </details>
 <br/>
 
-2. Modifica prj.conf para habilitar las configuraciones relacionadas con SPI.
+2. Modifica `prj.conf` para habilitar las configuraciones relacionadas con SPI.
 
 ```prj
 CONFIG_LOG=y
@@ -1278,7 +1268,7 @@ CONFIG_HEAP_MEM_POOL_SIZE=32768
 CONFIG_MAIN_STACK_SIZE=4096
 ```
 
-3. Modifica el programa main.c y escribe la lógica de llenado de pantalla de color sólido.
+3. Modifica el programa `main.c` y escribe la lógica de relleno de pantalla de color sólido.
 
 <details>
 
@@ -1420,13 +1410,13 @@ int main(void)
 
 ### Resultado
 
-Después de encender, el programa refresca la pantalla en la secuencia de rojo, naranja, amarillo, verde, cian, azul y morado, y finalmente muestra patrones de franjas de colores.
+Después de encender, el programa actualiza la pantalla en la secuencia de rojo, naranja, amarillo, verde, cian, azul y morado, y finalmente muestra patrones de franjas de colores.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_spi_1.gif" style={{width:600, height:'auto'}}/></div>
 
-## Soporte técnico y debate sobre el producto
+## Soporte técnico y debate sobre productos
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

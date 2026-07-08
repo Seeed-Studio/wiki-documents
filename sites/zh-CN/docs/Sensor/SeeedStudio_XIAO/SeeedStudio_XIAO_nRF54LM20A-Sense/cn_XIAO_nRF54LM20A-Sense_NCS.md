@@ -1,5 +1,5 @@
 ---
-title: 使用 NRF Connect SDK 开发 XIAO nRF54LM20A Sense
+title: 使用 NRF Connect SDK 开发 Seeed Studio XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -12,7 +12,7 @@ last_update:
   date: 06/15/2026
   author: Brandy
 createdAt: '2025-05-13'
-updatedAt: '2026-06-30'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_ncs/
 ---
 
@@ -46,9 +46,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 介绍
 
-nRF Connect SDK（NCS）是 Nordic Semiconductor 官方的软件开发套件，构建在 Zephyr RTOS 实时操作系统之上。它为 nRF 系列芯片提供了完整、原生且高度优化的开发框架。与 PlatformIO 相比，NCS 为开发者提供了对 nRF54 系列全部硬件能力的更充分访问，包括对 Bluetooth Low Energy（BLE）、Thread、Matter 等无线协议栈的原生支持，以及更精细的电源管理和外设控制。Nordic 官方持续维护并更新该 SDK，确保与芯片固件的最佳兼容性，并能更早使用最新特性。
+nRF Connect SDK（NCS）是 Nordic Semiconductor 官方的软件开发套件，构建在 Zephyr RTOS 实时操作系统之上。它为 nRF 系列芯片提供了完整、原生且高度优化的开发框架。与 PlatformIO 相比，NCS 为开发者提供了对 nRF54 系列全部硬件能力的更全面访问，包括对 Bluetooth Low Energy（BLE）、Thread、Matter 等无线协议栈的原生支持，以及更精细的电源管理和外设控制。Nordic 官方持续维护并更新该 SDK，确保与芯片固件的最佳兼容性，并能更早使用最新特性。
 
-本教程将一步步引导你完成整个流程——从搭建 nRF Connect SDK 开发环境和安装工具链，到创建和配置你的第一个项目，最后将第一个示例程序烧录到 XIAO nRF54LM20A Sense 上并运行。
+本教程将一步步引导你完成整个流程——从搭建 nRF Connect SDK 开发环境、安装工具链，到创建和配置你的第一个项目，最后将第一个示例程序烧录到 XIAO nRF54LM20A Sense 上并运行。
 
 ## NCS 入门
 
@@ -200,7 +200,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_14.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-4. 移除原有配置。此步骤是为了消除干扰，方便在下一阶段配置与 XIAO nRF54LM20A 相关的设置。（如果你的项目还没有构建记录，可以直接跳过此步骤）
+4. 移除原有配置。此步骤是为了在下一阶段配置与 XIAO nRF54LM20A 相关的设置时，避免受到干扰。（如果你的项目还没有构建记录，可以直接跳过此步骤）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_15.png" style={{width:800, height:'auto'}}/></div>
 
@@ -422,7 +422,7 @@ west flash
 
 :::tip
 
-如果要烧录的固件是由 **Add build configuration** 中创建的第一个配置文件生成的，当存在 `build` 和 `build_1` 等多个配置文件夹时，你需要指定配置路径。
+如果要烧录的固件是由 **Add build configuration** 中创建的第一个配置文件生成的，当存在 `build` 和 `build_1` 等多个配置文件夹时，需要指定配置路径。
 
 ```bash
 # examples: west flash configgration build_1
@@ -472,7 +472,7 @@ nrfutil sdk-manager install v3.3.0 \
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种交流渠道，以满足不同的偏好和需求。
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
