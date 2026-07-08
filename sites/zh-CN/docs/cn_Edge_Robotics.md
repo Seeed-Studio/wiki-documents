@@ -98,6 +98,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <a className="step-card" href="/cn/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio 运动学可视化</b><small>理解机械臂模型、关节、坐标系、正逆运动学，为后续控制算法打基础。</small></div><em>控制进阶</em></a>
       <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>视觉夹取 Demo</b><small>结合相机、识别和抓取姿态生成，让机械臂完成真实物体抓取。</small></div><em>应用 Demo</em></a>
       <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 集成</b><small>将机械臂接入 ROS2 生态，便于后续和感知、规划、导航、仿真系统组合。</small></div><em>系统集成</em></a>
+      <a className="step-card" href="/cn/rebot_arm_b601_rs_Isaacsim/"><span className="step-index">6</span><div><b>Isaacsim 仿真</b><small>将机械臂接入 Isaacsim 生态，在仿真环境中，进行开发和调试。</small></div><em>仿真系统</em></a>
     </div>
   </div>
 </details>

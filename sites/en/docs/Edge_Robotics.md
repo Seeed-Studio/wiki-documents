@@ -98,6 +98,7 @@ url: https://wiki.seeedstudio.com/robotics_page/
       <a className="step-card" href="/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio Kinematics Visualization</b><small>Understand robot models, joints, coordinate frames, and forward/inverse kinematics.</small></div><em>Control</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine camera perception and grasp pose generation to complete real object grasping.</small></div><em>Application</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Connect the arm to the ROS2 ecosystem for perception, planning, navigation, and simulation workflows.</small></div><em>Integration</em></a>
+      <a className="step-card" href="/cn/rebot_arm_b601_rs_Isaacsim/"><span className="step-index">6</span><div><b>Isaacsim Simulation</b><small>Isaac Sim SimulationIntegrate the robotic arm into the Isaac Sim ecosystem for development and debugging in a simulated environment.</small></div><em>Simulation System</em></a>
     </div>
   </div>
 </details>
