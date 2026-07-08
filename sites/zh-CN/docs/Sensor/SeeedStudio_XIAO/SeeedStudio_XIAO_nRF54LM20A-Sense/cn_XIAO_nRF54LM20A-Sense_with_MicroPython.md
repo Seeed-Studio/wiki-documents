@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO nRF54LM20A Sense 搭配 MicroPython 使用
+title: 使用 MicroPython 的 XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -16,7 +16,7 @@ updatedAt: '2026-06-22'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_micropython/
 ---
 
-# Seeed Studio XIAO nRF54LM20A Sense 搭配 MicroPython 使用
+# Seeed Studio XIAO nRF54LM20A Sense 与 MicroPython
 
 [MicroPython](https://github.com/micropython/micropython/wiki) 是一个 Python 解释器，支持为性能关键代码生成本地代码。它提供了经过优化、适用于微控制器和资源受限系统的 Python 3.6+ 核心特性子集。它与 CPython 不同，你可以在 [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences) 页面了解更多差异。
 
@@ -92,7 +92,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_micropython/
 
 
 <div class="xiao_nrf54lm20a_flash.zip.zip" style={{textAlign: 'center'}}>
-    <a class="xiao_nrf54lm20a_flash.zip.zip" href="https://github.com/Seeed-Studio/micropython-seeed-boards/tree/master" target="_blank" rel="noopener noreferrer">
+    <a class="xiao_nrf54lm20a_flash.zip.zip" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/tools/xiao_nrf54lm20a_flash_package.zip" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> GitHub 仓库</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -142,7 +142,7 @@ chmod +x xiao_nrf54lm20a_flash.sh
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/micropython/5.png" style={{width:800, height:'auto'}}/></div>
 
-4. 在 File -> New 中新建一个文件，并进行保存测试
+4. 在 File -> New 中新建文件，并进行保存测试
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/micropython/6.png" style={{width:800, height:'auto'}}/></div>
 
@@ -178,7 +178,7 @@ while True:
 
 ## 数字
 
-数字引脚主要通过输出高低电平来实现对外部传感器和执行器的开关控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将演示如何在 XIAO nRF54LM20A Sense 上使用 MicroPython 操作数字引脚。
+数字引脚主要通过输出高低电平来实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将演示如何在 XIAO nRF54LM20A Sense 上使用 MicroPython 操作数字引脚。
 
 ### 硬件准备
 
@@ -263,8 +263,8 @@ finally:
 **代码说明：**
 
 1. **导入与引脚定义：** 来自 `boards.xiao` 的 `XiaoPin` 提供 GPIO 控制。`BUTTON = 0` 映射到 D0（P1.0），`BUZZER = 1` 映射到 D1（P1.31）。
-2. **初始化：** 按键引脚被配置为输入（Grove Button 板载下拉电阻——按下时为 HIGH）。蜂鸣器引脚被配置为输出，并初始化为 LOW（关闭）。
-3. **主循环：** 持续读取按键状态并直接写入蜂鸣器。当按键被按下（HIGH）时，蜂鸣器开启；当按键释放（LOW）时，蜂鸣器关闭。10 ms 的延时可防止忙轮询。
+2. **初始化：** 按键引脚被配置为输入（Grove 按键板载下拉电阻——按下时为 HIGH）。蜂鸣器引脚被配置为输出，并初始化为 LOW（关闭）。
+3. **主循环：** 持续读取按键状态并直接写入蜂鸣器。当按键被按下（HIGH）时，蜂鸣器打开；当按键松开（LOW）时，蜂鸣器关闭。10 ms 的延时可防止忙轮询。
 4. **清理：** `finally` 代码块确保在程序退出时关闭蜂鸣器。
 
 ### 结果
@@ -311,11 +311,11 @@ PWM 以固定频率快速切换引脚电平并动态调整占空比，从而向�
 
 ### 软件准备
 
-根据 XIAO nRF54LM20A Sense 的引脚分布，**D0 (P1.0)** 可以被选作 **Grove-Servo** 的控制引脚。
+根据 XIAO nRF54LM20A Sense 的引脚分布，**D0（P1.0）** 可以被选作 **Grove-Servo** 的控制引脚。
 
 :::tip
 
-- 关于 XIAO nRF54LM20A Sense 的引脚分布，点击 [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/#硬件概述) 查看详情。
+- 关于 XIAO nRF54LM20A Sense 的引脚分布，请点击 [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/#硬件概述) 查看详情。
 
 :::
 
@@ -368,7 +368,7 @@ finally:
 
 **代码说明：**
 
-1. **导入与常量：** `XiaoPWM` 提供 PWM 输出。标准航模舵机工作在 50 Hz，0.5–2.5 ms 的脉宽对应 0–180° 的转角。
+1. **导入与常量：** `XiaoPWM` 提供 PWM 输出。标准航模舵机工作在 50 Hz，脉宽 0.5–2.5 ms 对应 0–180° 转角。
 2. **初始化：** 在 D0 上以 50 Hz 频率初始化 PWM 通道。初始占空比设置为最小脉宽（0° 位置）。
 3. **主循环：** 两个嵌套循环先将舵机从 0° 扫到 180°，再扫回。角度通过线性插值转换为以纳秒为单位的脉宽。当前角度会打印到控制台。
 4. **清理：** 在 `finally` 代码块中调用 `servo.deinit()` 释放 PWM 资源。
@@ -421,11 +421,11 @@ finally:
 
 ### 软件准备
 
-根据 XIAO nRF54LM20A Sense 的引脚分布，**D0 (P1.0, AIN0)** 被用作 ADC 输入引脚。每隔 500 ms 通过 USB 串口读取并打印一次 ADC 数值。
+根据 XIAO nRF54LM20A Sense 的引脚分布，**D0（P1.0，AIN0）** 被用作 ADC 输入引脚。每隔 500 ms 通过 USB 串口读取并打印一次 ADC 数值。
 
 :::tip
 
-- 关于 XIAO nRF54LM20A Sense 的引脚分布，点击 [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/#硬件概述) 查看详情。
+- 关于 XIAO nRF54LM20A Sense 的引脚分布，请点击 [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/#硬件概述) 查看详情。
 
 :::
 
@@ -459,12 +459,12 @@ except Exception as e:
 
 1. **导入：** 来自 `boards.xiao` 的 `XiaoADC` 提供 ADC 功能。`ADC_PIN = 0` 映射到 D0（P1.0 / AIN0）。
 2. **初始化：** `XiaoADC(ADC_PIN)` 将该引脚配置为模数转换输入。
-3. **主循环：** `adc.read_uv()` 返回以微伏（µV）为单位的 ADC 读数。该值被转换为伏特用于显示。每隔 500 ms 打印一次原始微伏值和电压值。
+3. **主循环：** `adc.read_uv()` 返回以微伏（µV）为单位的 ADC 读数。该值被转换为伏特用于显示。原始 µV 值和电压值每隔 500 ms 打印一次。
 4. **错误处理：** `try/except/finally` 确保程序能够优雅退出。
 
 ### 结果
 
-烧录程序后，将 Grove-Capacitive Soil Moisture Sensor 插入家用盆栽中。
+烧录程序后，将 Grove-Capacitive Soil Moisture Sensor 插入家用盆栽土壤中。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_3.jpg" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -475,10 +475,10 @@ except Exception as e:
 :::tip
 
 电压参考读数表
-| 状态     | 传感器输出电压 | 预期 ADC 原始值|
+| 状态     | 传感器输出电压 | 期望 ADC 原始值|
 | -------------- | -------------- | ---------------- |
-| 在空气中（干燥） | ~2.0–2.4V      | ~3400–4095       |
-| 在潮湿土壤中       | ~1.3–1.8V      | ~2200–3000       |
+| 空气中（干燥） | ~2.0–2.4V      | ~3400–4095       |
+| 潮湿土壤中       | ~1.3–1.8V      | ~2200–3000       |
 | 完全浸没在水中   | ~0.8–1.2V      | ~1365–2048       |
 
 :::
@@ -491,7 +491,7 @@ except Exception as e:
 
 ## UART
 
-通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠双方预设的波特率来实现数据的发送和接收。只需将 TX 和 RX 引脚交叉连接即可建立全双工数据链路。
+通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预设的波特率来实现数据的发送和接收。只需将 TX 和 RX 引脚交叉连接即可建立全双工数据链路。
 
 ### 硬件准备
 
@@ -581,7 +581,7 @@ finally:
 
 1. **导入与引脚映射：** `machine.UART` 提供对硬件 UART 的访问。`xiao.pin(n)` 根据开发板定义返回给定数字引脚编号对应的端口和引脚元组。
 2. **初始化：** 将 UART 1 配置为 115200 波特率，TX 使用 D6 (P1.08)，RX 使用 D7 (P1.09)。启动时会发送一条欢迎消息。
-3. **主循环：** 将接收到的数据回显返回。每 5 秒发送一次心跳消息，以确认 UART 仍在运行。
+3. **主循环：** 将接收到的数据回显输出。每 5 秒发送一次心跳消息，以确认 UART 仍在运行。
 4. **清理：** 在 `finally` 代码块中，`uart.deinit()` 释放 UART 硬件资源。
 
 ### 结果
@@ -849,7 +849,7 @@ except Exception as e:
 
 **代码说明：**
 
-1. **导入与引脚定义：** 来自 `boards.xiao` 的 `XiaoI2C` 提供 I2C 总线管理。SDA 在 D4（P1.03），SCL 在 D5（P1.07）。总线工作在 400 kHz。
+1. **导入与引脚定义：** 来自 `boards.xiao` 的 `XiaoI2C` 提供 I2C 总线管理。SDA 位于 D4（P1.03），SCL 位于 D5（P1.07）。总线工作在 400 kHz。
 2. **SSD1306 驱动：** SSD1306 OLED 显示屏通过原始 I2C 命令/数据写入进行控制。辅助函数 `ssd1306_write_command()`、`ssd1306_write_data()`、`ssd1306_clear()`、`ssd1306_init()` 和 `ssd1306_draw_text()` 组成一个精简驱动。
 3. **字体数据：** 一个 8×8 位图字体字典为可打印 ASCII 字符提供字形定义。`ssd1306_draw_text()` 函数通过查找字形位图并将其发送到显示屏来渲染文本字符串。
 4. **主逻辑：** 扫描 I2C 总线以验证 SSD1306 是否存在于地址 `0x3C`。初始化显示屏，并绘制两行居中文本（"NRF54LM20A" 和 "HELLO WORLD"）。
@@ -1241,7 +1241,7 @@ while True:
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,7 +1,7 @@
 ---
-title: Módulo de Relé Wi-Fi de 6 Canales en Home Assistant
+title: Módulo de Relé Wi‑Fi de 6 Canales en Home Assistant
 description: |
-  Un dispositivo inteligente de Seeed Studio diseñado para controlar dispositivos de forma inalámbrica con voltaje DC seguro.
+  Un dispositivo inteligente de Seeed Studio diseñado para controlar de forma inalámbrica dispositivos con voltaje seguro de CC.
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/7-114993588_6_CH_Relay_Sensor_feature.webp
 slug: /6_channel_wifi_relay
 sku: 114993588
@@ -13,8 +13,8 @@ keywords:
 sidebar_position: 2
 last_update:
   author: Cody
-  date: 01/04/2025
-createdAt: '2025-09-03'
+  date: 07/06/2026
+createdAt: '2025-01-04'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/6_channel_wifi_relay/
 ---
@@ -22,25 +22,25 @@ url: https://wiki.seeedstudio.com/es/6_channel_wifi_relay/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Primeros pasos con el Módulo de Relé Wi-Fi de 6 Canales en Home Assistant
+# Introducción al Módulo de Relé Wi‑Fi de 6 Canales en Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/7-114993588_6_CH_Relay_Sensor_feature.webp" style={{width:640, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/6-Channel-Wi-Fi-5V-DC-Relay-p-6373.html?utm_source=wiki" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div><br />
 
-## Descripción General
+## Descripción general
 
-El **[Módulo de Relé Wi-Fi de 6 Canales](https://www.seeedstudio.com/)** es un dispositivo inteligente de Seeed Studio diseñado para control dentro de un rango de voltaje DC seguro, no para electrodomésticos alimentados con AC. Su configuración de seis canales soporta control independiente de hasta seis cargas, convirtiéndolo en una excelente opción para automatizar una variedad de dispositivos en entornos de hogar inteligente.
+El **[Módulo de Relé Wi‑Fi de 6 Canales](https://www.seeedstudio.com/)** es un dispositivo inteligente de Seeed Studio diseñado para el control dentro de un rango seguro de voltaje de CC, no para electrodomésticos alimentados por CA. Su configuración de seis canales admite el control independiente de hasta seis cargas, lo que lo convierte en una excelente opción para automatizar una variedad de dispositivos en entornos de hogar inteligente.
 
-Además de sus seis canales de relé, este módulo también cuenta con dos interfaces de expansión Grove adicionales, permitiendo a los usuarios integrar sensores o actuadores adicionales para escenarios de automatización más avanzados.
+Además de sus seis canales de relé, este módulo también incorpora dos interfaces de expansión Grove adicionales, lo que permite a los usuarios integrar sensores o actuadores adicionales para escenarios de automatización más avanzados.
 
-Esta guía proporciona un recorrido detallado, incluyendo configuración, integración y configuración avanzada para usuarios que van desde principiantes hasta entusiastas del hogar inteligente.
+Esta guía ofrece un recorrido detallado, que incluye la configuración, la integración y la configuración avanzada para usuarios que van desde principiantes hasta entusiastas del hogar inteligente.
 
-### Características Clave y Especificaciones
+### Características clave y especificaciones
 
 <div class="table-center">
 <table align="center">
@@ -52,15 +52,15 @@ Esta guía proporciona un recorrido detallado, incluyendo configuración, integr
     </thead>
     <tbody>
         <tr>
-            <th>Voltaje de Entrada</th>
-            <td>DC 5V(Para XIAO)</td>
+            <th>Voltaje de entrada</th>
+            <td>DC 5V(For XIAO)</td>
         </tr>
         <tr>
-            <th>Voltaje de resistencia DC</th>
+            <th>Resistencia al voltaje de CC</th>
             <td>DC 0~30V</td>
         </tr>
         <tr>
-            <th>Carga Máxima</th>
+            <th>Carga máxima</th>
             <td>10A por canal</td>
         </tr>
         <tr>
@@ -68,12 +68,12 @@ Esta guía proporciona un recorrido detallado, incluyendo configuración, integr
             <td>6 (control independiente para cada canal)</td>
         </tr>
         <tr>
-            <th>Tipo de Conexión</th>
-            <td>Wi-Fi</td>
+            <th>Tipo de conexión</th>
+            <td>Wi‑Fi</td>
         </tr>
         <tr>
             <th>Puerto eléctrico</th>
-            <td>NO (Normalmente Abierto), COM (Común), NC (Normalmente Cerrado)</td>
+            <td>NO (Normalmente abierto), COM (Común), NC (Normalmente cerrado)</td>
         </tr>
         <tr>
             <th>Extensión Grove</th>
@@ -83,23 +83,23 @@ Esta guía proporciona un recorrido detallado, incluyendo configuración, integr
 </table>
 </div>
 
-:::warning Advertencia de Seguridad
+:::warning Advertencia de seguridad
 
-Este módulo de relé está diseñado para operación DC de bajo voltaje. No lo conecte a alimentación AC para evitar riesgos eléctricos. Siempre desconecte la fuente de alimentación antes de cablear el relé para prevenir cortocircuitos y descargas eléctricas.
+Este módulo de relé está diseñado para funcionar con CC de bajo voltaje. No lo conectes a alimentación de CA para evitar riesgos eléctricos. Desconecta siempre la fuente de alimentación antes de cablear el relé para evitar cortocircuitos y descargas eléctricas.
 
-Los voltajes que excedan 24V pueden causar descargas eléctricas o quemaduras, especialmente en casos de piel dañada o en ambientes húmedos. Tenga precaución al manipular dispositivos eléctricos para evitar lesiones.
+Los voltajes superiores a 24 V pueden causar descargas eléctricas o quemaduras, especialmente en casos de piel dañada o en entornos húmedos. Ten cuidado al manipular dispositivos eléctricos para evitar lesiones.
 
 :::
 
-### Diseño Físico y Conexiones
+### Distribución física y conexiones
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/simplified_diagram_with_con.png" style={{width: 600, height: 'auto'}}/></div>
 
-- **NO (Normalmente Abierto)**: El terminal normalmente abierto. Por defecto, este terminal no está conectado al terminal común (COM). Cuando el relé se activa, el terminal NO se conecta al terminal COM. Se usa típicamente para controlar el interruptor de una carga.
-- **COM (Común)**: El terminal común del relé, compartido como punto de conexión a un lado del circuito.
-- **NC (Normalmente Cerrado)**: El terminal normalmente cerrado. Por defecto, este terminal está conectado al terminal común (COM). Cuando el relé se activa, la conexión entre el terminal NC y el terminal COM se rompe. Se usa típicamente para escenarios que requieren control de desconexión.
+- **NO (Normally Open)**: El terminal normalmente abierto. De forma predeterminada, este terminal no está conectado al terminal común (COM). Cuando se activa el relé, el terminal NO se conecta al terminal COM. Se utiliza normalmente para controlar el interruptor de una carga.
+- **COM (Common)**: El terminal común del relé, compartido como punto de conexión a un lado del circuito.
+- **NC (Normally Closed)**: El terminal normalmente cerrado. De forma predeterminada, este terminal está conectado al terminal común (COM). Cuando se activa el relé, se interrumpe la conexión entre el terminal NC y el terminal COM. Se utiliza normalmente para escenarios que requieren control de desconexión.
 
-   | XIAO GPIO | Canal de Relé |
+   | XIAO GPIO | Canal de relé |
    | --------- | ------------- |
    | GPIO2     | Relé 1        |
    | GPIO21    | Relé 2        |
@@ -108,61 +108,61 @@ Los voltajes que excedan 24V pueden causar descargas eléctricas o quemaduras, e
    | GPIO19    | Relé 5        |
    | GPIO18    | Relé 6        |
 
-## Primeros Pasos
+## Primeros pasos
 
 ### Requisitos
 
-1. **Componentes Principales**:
-   - [Módulo de Relé Wi-Fi de 6 Canales](https://www.seeedstudio.com/)
+1. **Componentes principales**:
+   - [Módulo de Relé Wi‑Fi de 6 Canales](https://www.seeedstudio.com/)
    - [Home Assistant Green](https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html)
 2. **Red**:
-   - Wi-Fi estable para interacción fluida entre hardware y Home Assistant.
+   - Wi‑Fi estable para una interacción fluida entre el hardware y Home Assistant.
 
-### Paso 1: Configurando Home Assistant {#setting-up-home-assistant}
+### Paso 1: Configurar Home Assistant {#setting-up-home-assistant}
 
-1. **Instalación**: homeassistant ya está preinstalado en [Home Assistant Green](https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html).
-2. **Habilitando el Complemento ESPHome**:
-   - Acceda al panel de Home Assistant.
-   - Navegue a la sección "Add-ons" y busque el complemento ESPHome.
-   - Haga clic en "Install" y luego en "Start" para habilitarlo.
-   - Una vez instalado, configure el complemento para asegurar la comunicación adecuada con el XIAO ESP32C6.
+1. **Instalación**: homeassistant ya viene preinstalado en [Home Assistant Green](https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html).
+2. **Habilitar el complemento ESPHome**:
+   - Accede al panel de control de Home Assistant.
+   - Ve a la sección "Add-ons" y busca el complemento ESPHome.
+   - Haz clic en "Install" y luego en "Start" para habilitarlo.
+   - Una vez instalado, configura el complemento para garantizar una comunicación adecuada con el XIAO ESP32C6.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-enabling_ESPHome_Add-on.png" style={{width:1000, height:'auto'}}/></div>
 
-Al reunir los componentes necesarios y configurar Home Assistant con el complemento ESPHome, estará listo para proceder con la integración del módulo de relé de 6 canales.
+Al reunir los componentes necesarios y configurar Home Assistant con el complemento ESPHome, estarás listo para continuar con la integración del módulo de relé de 6 canales.
 
-### Paso 2: Preparando el Módulo de Relé
+### Paso 2: Preparar el módulo de relé
 
-Por defecto, su dispositivo (XIAO ESP32C6) viene pre-flasheado con firmware para relé de 6 canales. Sin embargo, hay dos escenarios donde puede necesitar actualizar el firmware:
+De forma predeterminada, tu dispositivo (XIAO ESP32C6) viene pregrabado con el firmware para el relé de 6 canales. Sin embargo, hay dos situaciones en las que puede que necesites actualizar el firmware:
 
-1. **Re-flashear el Firmware**: Si el firmware existente está corrupto o necesita empezar de nuevo.
-2. **Actualizar el Firmware**: Si hay una versión más nueva del firmware con funcionalidad mejorada.
+1. **Volver a grabar el firmware**: Si el firmware existente está dañado o necesitas empezar desde cero.
+2. **Actualizar el firmware**: Si hay una versión más reciente del firmware con funcionalidades mejoradas.
 
-Hay dos métodos simples para flashear el firmware:
+Hay dos métodos sencillos para grabar el firmware:
 
 :::caution
-Firefox no soporta flashear firmware en dispositivos ESP. Por favor use Google Chrome o Microsoft Edge en su lugar.
+Firefox no admite la grabación de firmware en dispositivos ESP. Utiliza Google Chrome o Microsoft Edge en su lugar.
 :::
 
 <Tabs>
 <TabItem value='Web Tool'>
 
-Puede usar esta [Herramienta Web](https://seeed-projects.github.io/6-Channel_Relay_based_on_XIAO_ESP32C6/) para un método fácil y directo de flashear su firmware. Simplemente siga las instrucciones en pantalla.
+Puedes usar esta [Web Tool](https://seeed-projects.github.io/6-Channel_Relay_based_on_XIAO_ESP32C6/) para un método fácil y directo de grabar tu firmware. Simplemente sigue las instrucciones en pantalla.
 
-- Haga clic en el botón `CONNECT` para iniciar la conexión. La herramienta actualizará automáticamente el firmware.
+- Haz clic en el botón `CONNECT` para iniciar la conexión. La herramienta actualizará el firmware automáticamente.
 
-Si algo sale mal, siga los pasos de solución de problemas en pantalla o cambie al método `ESPHome Web` para completar el proceso.
+Si algo sale mal, sigue los pasos de solución de problemas que aparecen en pantalla o cambia al método `ESPHome Web` para completar el proceso.
 
 </TabItem>
 <TabItem value='ESPHome Web'>
 
-Para este método, necesitará descargar el archivo de firmware `bin` desde [aquí](https://github.com/Seeed-Projects/6-Channel_Relay_based_on_XIAO_ESP32C6/releases)(necesitará descomprimir el archivo descargado).
+Para este método, tendrás que descargar el archivo de firmware `bin` desde [aquí](https://github.com/Seeed-Projects/6-Channel_Relay_based_on_XIAO_ESP32C6/releases) (tendrás que descomprimir el archivo descargado).
 
-1. Conecte el kit de sensores a su PC.
-2. Visite la página [ESPHome Web](https://web.esphome.io/).
-3. Seleccione el archivo de firmware con el sufijo `*.factory.bin`.
+1. Conecta el kit de sensor a tu PC.
+2. Visita la página de [ESPHome Web](https://web.esphome.io/).
+3. Selecciona el archivo de firmware con el sufijo `*.factory.bin`.
 
-Vea el siguiente video para un recorrido detallado de flashear el firmware vía ESPHome Web:
+Mira el siguiente vídeo para un recorrido detallado de cómo grabar el firmware mediante ESPHome Web:
 
 <div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -171,84 +171,86 @@ Vea el siguiente video para un recorrido detallado de flashear el firmware vía 
 </TabItem>
 </Tabs>
 
-Con cualquiera de los métodos, tendrá su firmware actualizado y listo para integración con Home Assistant.
+Con cualquiera de los dos métodos, tendrás tu firmware actualizado y listo para la integración con Home Assistant.
 
-### Paso 3: Configuración de Red
+### Paso 3: Configuración de red
 
-1. **Habilitar Punto de Acceso**:
-   - Al encender por primera vez, el módulo creará una red Wi-Fi (SSID: `seeedstudio-6-channel-relay`).
+1. **Habilitar el punto de acceso**:
+   - Al encenderlo por primera vez, el módulo creará una red Wi‑Fi (SSID: `seeedstudio-6-channel-relay`).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ap-from-xiao-esp32c6-seeedstudio-6-channel-relay.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
-2. **Acceder a la Configuración**:
-   - Conéctese a la red usando un teléfono o PC.
-   - Abra un navegador y navegue a [http://192.168.4.1](http://192.168.4.1).
-   - Ingrese el SSID y contraseña de su red Wi-Fi doméstica.
+2. **Acceder a la configuración**:
+   - Conéctate a la red usando un teléfono o un PC.
+   - Abre un navegador y ve a [http://192.168.4.1](http://192.168.4.1).
+   - Introduce el SSID y la contraseña de tu red Wi‑Fi doméstica.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ap_wireless_setting_page.png" style={{width:'auto', height:680, "border-radius": '15px'}}/></div>
 
 3. **Integración con Home Assistant**:
-   - Una vez conectado a la red doméstica, el módulo será descubrible en Home Assistant bajo `Settings -> Devices & Services`.
+   - Una vez conectado a la red doméstica, el módulo será detectable en Home Assistant en `Settings -> Devices & Services`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ha_new_device_discovered.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
-De esta manera, puede conectar el módulo a su red de Home Assistant y permitir que Home Assistant lo descubra.
+De esta manera, puedes conectar el módulo a tu red de Home Assistant y permitir que Home Assistant lo detecte.
 
 ### Paso 4: Añadir el dispositivo del módulo
 
-1. **Descubrimiento Automático**:
+1. **Detección automática**:
    - Asegúrate de que **ESPHome** esté instalado en Home Assistant.
-   - Navega a `Configuración -> Dispositivos y Servicios -> Integraciones` y busca el dispositivo.
-2. **Configuración Manual**:
-   - Si no se descubre automáticamente, añade manualmente el dispositivo especificando su dirección IP.
+   - Ve a `Settings -> Devices & Services -> Integrations` y busca el dispositivo.
+2. **Configuración manual**:
+   - Si no se detecta automáticamente, añade el dispositivo manualmente especificando su dirección IP.
 
-Después de añadir el dispositivo, puedes ver los seis interruptores en la página de Resumen.
+Después de añadir el dispositivo, podrás ver los seis interruptores en la página Overview.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/buttons_in_ha_overview.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
-También puedes establecer el nombre de cada interruptor individualmente.
+También puedes establecer el nombre de cada interruptor de forma individual.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/buttons_in_ha_overview_with_custom_names.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
-### Paso 5: Conectar los electrodomésticos que deseas controlar
+### Paso 5: Conectar los electrodomésticos que quieres controlar
 
-:::warning Advertencia de Seguridad
+:::warning Advertencia de seguridad
 
-Este módulo de relé está diseñado para operación de CC de bajo voltaje. No lo conectes a alimentación de CA para evitar riesgos eléctricos. Siempre desconecta la fuente de alimentación antes de cablear el relé para prevenir cortocircuitos y descargas eléctricas.
+Este módulo de relé está diseñado para funcionar con CC de bajo voltaje. No lo conectes a alimentación de CA para evitar riesgos eléctricos. Desconecta siempre la fuente de alimentación antes de cablear el relé para evitar cortocircuitos y descargas eléctricas.
 
-Los voltajes que excedan 24V pueden causar descargas eléctricas o quemaduras, especialmente en casos de piel dañada o en ambientes húmedos. Ten precaución al manejar dispositivos eléctricos para evitar lesiones.
+Los voltajes superiores a 24 V pueden causar descargas eléctricas o quemaduras, especialmente en casos de piel dañada o en entornos húmedos. Ten cuidado al manipular dispositivos eléctricos para evitar lesiones.
 
 :::
 
 1. Cableado:
-    - Sigue la sección de Diseño Físico y Conexiones para cablear el módulo de relé.
-    - Asegúrate de que todas las conexiones estén seguras y no haya cables expuestos.
+    - Sigue la sección de Diseño físico y conexiones para cablear el módulo de relé.
+    - Asegúrate de que todas las conexiones estén seguras y que no haya cables expuestos.
 2. Encendido:
     - Enciende el módulo a través de USB.
-    - Enciende la fuente de alimentación de CC para controlar otros electrodomésticos.
+    - Enciende la fuente de alimentación de CC para controlar otros aparatos eléctricos.
 
-## Seguridad y Mantenimiento
+## Seguridad y mantenimiento
 
-1. Inspecciona periódicamente el cableado en busca de desgaste y deterioro.
-2. Usa dispositivos de protección de circuito apropiados, como fusibles o interruptores.
-3. Mantén el dispositivo alejado del agua y el calor excesivo.
+1. Inspecciona periódicamente el cableado para detectar desgaste y daños.
+2. Utiliza dispositivos de protección de circuito adecuados, como fusibles o disyuntores.
+3. Mantén el dispositivo alejado del agua y del calor excesivo.
 
-## Preguntas Frecuentes
+## Preguntas frecuentes
 
-1. **¿Qué sucede si el dispositivo se desconecta del Wi-Fi?**
-   - El módulo intentará reconectarse automáticamente. Si falla, habilitará su punto de acceso de respaldo para reconfiguración.
-2. **¿Puedo usar el puerto USB mientras está conectado a alimentación de CA?**
-   - No, usar USB mientras está conectado a alimentación de CA puede dañar el dispositivo o crear un riesgo de seguridad.
-3. **¿Puede este módulo funcionar sin Home Assistant?**
-   - Sí, el módulo puede ser controlado a través de su **dirección IP local** o integrado con otras plataformas que soporten ESPHome o MQTT.
+1. **¿Qué ocurre si el dispositivo se desconecta de la red Wi‑Fi?**
+   - El módulo intentará reconectarse automáticamente. Si falla, habilitará su punto de acceso de respaldo para volver a configurarlo.
+2. **¿Puedo usar el puerto USB mientras está conectado a la alimentación de CA?**
+   - No, usar USB mientras está conectado a la alimentación de CA puede dañar el dispositivo o crear un riesgo para la seguridad.
+3. **¿Puede funcionar este módulo sin Home Assistant?**
+   - Sí, el módulo se puede controlar a través de su **dirección IP local** o integrarse con otras plataformas que admitan ESPHome o MQTT.
 
 ## Recursos
 
-- **Repositorio de GitHub**: Accede al Firmware de ESPHome en la [página de GitHub del Módulo de Relé de 6 Canales de Seeed Studio](https://github.com/Seeed-Projects/6-Channel_Relay_based_on_XIAO_ESP32C6).
+- **Repositorio de GitHub**: Accede al firmware de ESPHome en la [página de GitHub del módulo de relé de 6 canales de Seeed Studio](https://github.com/Seeed-Projects/6-Channel_Relay_based_on_XIAO_ESP32C6).
+- **📄[Schematic]** [ Esquemático del módulo de relé Wi‑Fi de 6 canales](https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/202004205_PCBA;6-Channel-Wi-Fi-5V-DC-Relay_SCH_PDF.pdf)
+- **🗃️[PCB Design Files]** [ Proyecto KiCad del módulo de relé Wi‑Fi de 6 canales](https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/202004205_PCBA;6-Channel-Wi-Fi-5V-DC-Relay-SCH.zip)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
