@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 06/29/2026
+  date: 07/06/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-06-29'
+updatedAt: '2026-07-06'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 

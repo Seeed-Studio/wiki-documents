@@ -6,7 +6,7 @@ slug: /getting_started_with_reterminal_d1001
 sku: 100058144
 sidebar_position: 2
 last_update:
-  date: 03/06/2026
+  date: 07/07/2026
   author: Jackson.Li
 createdAt: '2026-03-06'
 updatedAt: '2026-04-07'
@@ -160,6 +160,7 @@ After the firmware is successfully flashed, the device will automatically restar
 *   **Hardware Documents**:
     *   [reTerminal D1001 Main Board V1.0 SCH & PCB](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/reTerminal_D1001_main_board_V1.0_SCH_&_PCB_251128.zip)
     *   [reTerminal D1001 Schematic (PDF)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/reTerminal%20D1001_sch.pdf)
+    *   [Exterior overall 3D model STP file](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/D1001_asm.stp)
 *   **Datasheets**:
     *   [ESP32-P4NRW32 Datasheet](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/Espressif_ESP32-P4NRW32_Datasheet.pdf)
     *   [ESP32-C6 Datasheet](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/esp32-c6_datasheet_en.pdf)

@@ -1,5 +1,5 @@
 ---
-title: NRF Connect SDK com Seeed Studio XIAO nRF54LM20A Sense
+title: NRF Connect SDK com XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -12,7 +12,7 @@ last_update:
   date: 06/15/2026
   author: Brandy
 createdAt: '2025-05-13'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_ncs/
 ---
 
@@ -46,7 +46,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Introdução
 
-nRF Connect SDK (NCS) é o kit de desenvolvimento de software oficial da Nordic Semiconductor, construído sobre o sistema operacional em tempo real Zephyr RTOS. Ele fornece um framework de desenvolvimento completo, nativo e altamente otimizado para os chips da série nRF. Em comparação com o PlatformIO, o NCS oferece aos desenvolvedores acesso muito mais amplo a todas as capacidades de hardware da série nRF54, incluindo suporte nativo para Bluetooth Low Energy (BLE), Thread, Matter e outros stacks de protocolos sem fio, bem como gerenciamento de energia e controle de periféricos em nível mais detalhado. A Nordic mantém e atualiza oficialmente este SDK de forma contínua, garantindo compatibilidade ideal com o firmware dos chips e acesso antecipado aos recursos mais recentes.
+nRF Connect SDK (NCS) é o kit de desenvolvimento de software oficial da Nordic Semiconductor, construído sobre o sistema operacional de tempo real Zephyr RTOS. Ele fornece um framework de desenvolvimento completo, nativo e altamente otimizado para os chips da série nRF. Em comparação com o PlatformIO, o NCS oferece aos desenvolvedores um acesso mais amplo a todas as capacidades de hardware da série nRF54, incluindo suporte nativo para Bluetooth Low Energy (BLE), Thread, Matter e outras pilhas de protocolos sem fio, bem como um gerenciamento de energia e controle de periféricos mais granulares. A Nordic mantém e atualiza oficialmente este SDK de forma contínua, garantindo compatibilidade ideal com o firmware dos chips e acesso antecipado aos recursos mais recentes.
 
 Este tutorial irá guiá-lo passo a passo por todo o processo — desde a configuração do ambiente de desenvolvimento do nRF Connect SDK e instalação da toolchain, até a criação e configuração do seu primeiro projeto e, por fim, a gravação do seu primeiro programa de exemplo no XIAO nRF54LM20A Sense para vê-lo em funcionamento.
 
@@ -100,11 +100,11 @@ Baixe de acordo com o sistema que você está usando o [VS Code](https://code.vi
 
 ### Instalar a extensão nRF Connect for VS Code Extension Pack
 
-1. Abra o VS Code, pesquise e instale o **nRF Connect for VS Code Extension Pack**. Esta extensão instalará automaticamente todas as subextensões necessárias para a toolchain completa, incluindo nRF Connect, Kconfig, DeviceTree e mais.
+1. Abra o VS Code, pesquise e instale o **nRF Connect for VS Code Extension Pack**. Esta extensão irá instalar automaticamente todas as subextensões necessárias para a toolchain completa, incluindo nRF Connect, Kconfig, DeviceTree e mais.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-2. O nRF Connect for VS Code Extension Pack instalará automaticamente as seguintes extensões para você.
+2. O nRF Connect for VS Code Extension Pack irá instalar automaticamente as seguintes extensões para você.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -131,7 +131,7 @@ O nRF Connect SDK é bastante grande, e a instalação inicial levará algum tem
 
 ### Verificação do ambiente
 
-Após a conclusão da instalação, o ambiente integrado para o nRF Connect SDK será configurado automaticamente. Para garantir um desenvolvimento tranquilo nas etapas seguintes, recomendamos verificar o ambiente neste ponto.
+Após a conclusão da instalação, o ambiente integrado para o nRF Connect SDK será configurado automaticamente. Para garantir um desenvolvimento contínuo sem problemas, recomendamos verificar o ambiente nesta etapa.
 
 1. Inicie o **nRF Terminal**, um terminal integrado do nRF Connect SDK.
 
@@ -185,7 +185,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 ### Criar um novo aplicativo
 
-Nesta seção, vamos modificar um projeto de exemplo em branco.
+Nesta seção, iremos modificar um projeto de exemplo em branco.
 
 1. Na extensão, selecione **Create a blank application** para duplicar o template.
 
@@ -200,13 +200,13 @@ Nesta seção, vamos modificar um projeto de exemplo em branco.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_14.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-4. Remova as configurações originais. Esta etapa elimina interferências para configurar, na próxima fase, as configurações relacionadas ao XIAO nRF54LM20A. (Se o seu projeto não tiver um build, você pode pular diretamente esta etapa)
+4. Remova as configurações originais. Esta etapa elimina interferências para configurar as configurações relacionadas ao XIAO nRF54LM20A na próxima fase. (Se o seu projeto não tiver um build, você pode pular diretamente esta etapa)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_15.png" style={{width:800, height:'auto'}}/></div>
 
 ### Escrever o programa Blinky
 
-Como a série XIAO nRF54LM20A possui devicetree personalizada e mapeamentos de pinos de hardware específicos, vários arquivos precisam ser modificados. Os arquivos a serem editados estão listados abaixo.
+Como a série XIAO nRF54LM20A possui devicetree e mapeamentos de pinos de hardware personalizados, vários arquivos precisam ser modificados. Os arquivos a serem editados estão listados abaixo.
 
 - `main.c`: Programa principal que contém a lógica da aplicação.
 - `app.overlay`: Arquivo de overlay do devicetree para configuração de periféricos de hardware.
