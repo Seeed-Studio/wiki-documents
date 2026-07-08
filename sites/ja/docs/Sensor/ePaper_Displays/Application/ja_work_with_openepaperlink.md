@@ -1,8 +1,8 @@
 ---
-description: OpenDisplay と OpenEPaperLink エコシステムを使用して、Bluetooth Low Energy 経由で reTerminal E1001、E1002、E1003、XIAO ePaper Display Board EN04、および XIAO ePaper Breakout Board パスを含む Seeed の ePaper ハードウェアを駆動します。
+description: OpenDisplay と OpenEPaperLink エコシステムを使用して、Bluetooth Low Energy 経由で Seeed の ePaper ハードウェア（reTerminal E1001、E1002、E1003、XIAO ePaper Display Board EN04、および XIAO ePaper Breakout Board パスを含む）を駆動します。
 title: OpenEPaperLink / OpenDisplay を使う
 keywords:
-  - ePaper ディスプレイ
+  - ePaper display
   - OpenEPaperLink
   - OEPL
   - OpenDisplay
@@ -13,7 +13,7 @@ keywords:
   - ePaper Breakout Board
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 slug: /EN04_opendisplay
-sidebar_position: 9
+sidebar_position: 10
 last_update:
   date: 06/30/2026
   author: dimo
@@ -33,8 +33,8 @@ import TabItem from '@theme/TabItem';
 
 このガイドでは、2 つの Seeed ハードウェアパスを扱います：
 
-- **OpenDisplay Toolbox パス** — **reTerminal E1001**、**reTerminal E1002**、**reTerminal E1003**、および **XIAO ePaper Display Board EN04** 向けの、すぐに使える OpenDisplay ファームウェアに推奨されるパスです。
-- **OEPL_BLE パス** — **Seeed Studio XIAO 用 ePaper Breakout Board** と **XIAO nRF52840 シリーズボード** を用いたモジュラーな DIY 構成に便利なパスです。
+- **OpenDisplay Toolbox パス** — **reTerminal E1001**、**reTerminal E1002**、**reTerminal E1003**、および **XIAO ePaper Display Board EN04** 上でそのまま使える OpenDisplay ファームウェアに推奨されるパスです。
+- **OEPL_BLE パス** — **ePaper Breakout Board for Seeed Studio XIAO** と **XIAO nRF52840 シリーズボード** を用いたモジュラーな DIY 構成に便利なパスです。
 
 どちらのパスでもユーザー体験は似ています。ファームウェアをインストールし、BLE 経由でデバイスを設定し、その後イメージをアップロードします。使用するツールやサポートされるプリセットが異なるため、自分のハードウェアに合ったタブに従ってください。
 
@@ -90,7 +90,7 @@ OpenDisplay Toolbox には、**reTerminal E1001**、**reTerminal E1002**、**reT
 完成品の reTerminal E シリーズデバイス上で OpenDisplay ファームウェアを直接実行したい場合は、このパスを使用してください。
 
 :::caution
-OpenDisplay ファームウェアをインストールすると、現在デバイス上で動作しているファームウェアは置き換えられます。公式の reTerminal E-Series Firmware Hub または製品 Wiki で推奨されているファームウェアパッケージを使用して、復元用のパスを必ず用意しておいてください。
+OpenDisplay ファームウェアをインストールすると、現在デバイス上で動作しているファームウェアが置き換えられます。公式の reTerminal E-Series Firmware Hub または製品 Wiki で推奨されているファームウェアパッケージを使用して、復元用のパスを必ず用意しておいてください。
 :::
 
 </TabItem>
@@ -126,7 +126,7 @@ EN04 は nRF52840 ベースの ePaper ドライバーボードです。対応す
 	<table align="center">
 		<tr>
 			<th>4.26 インチ モノクロ ePaper ディスプレイ</th>
-			<th>Seeed Studio XIAO 用 ePaper Breakout Board</th>
+			<th>ePaper Breakout Board for Seeed Studio XIAO</th>
 			<th>Seeed Studio XIAO nRF52840 Sense Plus</th>
 		</tr>
 		<tr>
@@ -174,9 +174,9 @@ EN04 は nRF52840 ベースの ePaper ドライバーボードです。対応す
 
 **ステップ 1.** reTerminal E シリーズデバイスを USB-C データケーブルでコンピュータに接続します。
 
-**ステップ 2.** デバイスの電源を入れ、コンピュータの近くに置きます。ブラウザは、ファームウェアのインストールには USB を、設定には BLE を使用します。
+**ステップ 2.** デバイスの電源を入れ、コンピュータの近くに置きます。ブラウザは、ファームウェアのインストールに USB を、設定には BLE を使用します。
 
-**ステップ 3.** 自分のハードウェアに合った OpenDisplay Toolbox プリセットを選択します：
+**ステップ 3.** お使いのハードウェアに合った OpenDisplay Toolbox プリセットを選択します：
 
 <div class="table-center">
 	<table align="center">
@@ -209,7 +209,7 @@ EN04 は nRF52840 ベースの ePaper ドライバーボードです。対応す
 **ステップ 1.** ePaper パネルの FPC ケーブルを EN04 のコネクタに挿入し、ラッチをロックします。
 
 :::tip
-50 ピンコネクタの場合、FPC に印刷された `1` と `50` のマークを、ボード上の対応するマークと合わせてください。下の EN04 キットでは、FPC の金属接点側が上向きになります。
+50 ピンコネクタの場合、FPC 上に印刷された `1` と `50` のマークを、ボード上の対応するマークと合わせてください。下の EN04 キットでは、FPC の金属接点側が上向きになります。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/hardware.jpg" style={{width:600, height:'auto'}}/></div>
@@ -221,7 +221,7 @@ EN04 は nRF52840 ベースの ePaper ドライバーボードです。対応す
 **ステップ 3.** EN04 ボードを USB-C データケーブルでコンピュータに接続します。
 
 :::caution
-ボードに電源を入れる前にバッテリーの極性を確認してください。極性が逆のバッテリーコネクタを使用するとハードウェアが損傷する可能性があります。
+ボードに電源を入れる前にバッテリーの極性を確認してください。極性が逆のバッターリーコネクタを使用すると、ハードウェアが損傷する可能性があります。
 :::
 
 </TabItem>
@@ -229,7 +229,7 @@ EN04 は nRF52840 ベースの ePaper ドライバーボードです。対応す
 
 **ステップ 1.** XIAO nRF52840 シリーズボードを ePaper Breakout Board に取り付けます。
 
-**ステップ 2.** ePaper パネルの FPC ケーブルをブレイクアウトボードのコネクタに挿入し、ラッチをロックします。
+**ステップ 2.** ePaper パネルの FPC ケーブルをブレークアウトボードのコネクタに挿入し、ラッチをロックします。
 
 **ステップ 3.** USB-C データケーブルで XIAO をコンピュータに接続します。
 
@@ -241,7 +241,7 @@ EN04 は nRF52840 ベースの ePaper ドライバーボードです。対応す
 <Tabs groupId="oepl-hardware">
 <TabItem value="reterminal" label="reTerminal E シリーズ" default>
 
-OpenDisplay は reTerminal E シリーズ向けに直接使用できる Toolbox プリセットを提供しています。
+OpenDisplay は reTerminal E シリーズ向けに、Toolbox プリセットを直接提供しています。
 
 **ステップ 1.** Chrome または Edge で対応する Toolbox プリセットを開きます：
 
@@ -255,7 +255,7 @@ OpenDisplay は reTerminal E シリーズ向けに直接使用できる Toolbox 
 
 **ステップ 4.** ブラウザのペアリングダイアログで、reTerminal を接続したときに表示される USB シリアルデバイスを選択します。
 
-**ステップ 5.** インストーラが完了し、デバイスが再起動するまで待ちます。
+**ステップ 5.** インストーラーが完了し、デバイスが再起動するまで待ちます。
 
 インストール後、次のステップで BLE 設定を続行します。
 
@@ -270,7 +270,7 @@ OpenDisplay は reTerminal E シリーズ向けに直接使用できる Toolbox 
 
 **ステップ 3.** **Install firmware (USB)** をクリックし、ブラウザの指示に従います。
 
-**ステップ 4.** ブラウザからブートローダーモードへの切り替えを求められた場合は、EN04 ボードのリセットボタンを 2 回押し、新しく検出された USB デバイスを選択します。
+**ステップ 4.** ブラウザからブートローダーモードへの切り替えを求められた場合は、EN04 ボードのリセットボタンを 2 回押し、その後、新たに検出された USB デバイスを選択します。
 
 **ステップ 5.** ファームウェアのインストールが完了するまで待ちます。
 
@@ -285,7 +285,7 @@ XIAO nRF52840 + Breakout Board のパスでは、OEPL Config Builder が接続�
 
 <div class="github_container" style={{textAlign: 'center'}}>
 	<a class="github_item" href="https://github.com/OpenEPaperLink/OEPL_BLE/releases" target="_blank" rel="noopener noreferrer">
-	<strong><span><font color={'FFFFFF'} size={"4"}> Download OEPL_BLE Firmware</font></span></strong>
+	<strong><span><font color={'FFFFFF'} size={"4"}> OEPL_BLE ファームウェアをダウンロード</font></span></strong>
 	</a>
 </div>
 
@@ -309,7 +309,7 @@ XIAO nRF52840 + Breakout Board のパスでは、OEPL Config Builder が接続�
 <Tabs groupId="oepl-hardware">
 <TabItem value="reterminal" label="reTerminal E シリーズ" default>
 
-**ステップ 1.** 同じ OpenDisplay Toolbox ページで **Configure over Bluetooth** をクリックします。
+**ステップ 1.** 同じ OpenDisplay Toolbox ページで、**Configure over Bluetooth** をクリックします。
 
 **ステップ 2.** BLE ペアリングダイアログで reTerminal デバイスを選択します。
 
@@ -317,7 +317,7 @@ XIAO nRF52840 + Breakout Board のパスでは、OEPL Config Builder が接続�
 
 **ステップ 4.** ディスプレイがリフレッシュするか、OpenDisplay の起動／テスト画像が表示されることを確認します。
 
-これでデバイスは OpenDisplay ツールまたは Home Assistant を通じて画像をアップロードする準備が整いました。
+これでデバイスは、OpenDisplay ツールまたは Home Assistant を通じて画像をアップロードする準備が整いました。
 
 </TabItem>
 <TabItem value="en04" label="XIAO ePaper Display Board EN04">
@@ -349,7 +349,7 @@ XIAO nRF52840 + Breakout Board のパスでは、OEPL Config Builder が接続�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Builder_demo_1.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ 4.** Seeed 4.26 インチ白黒 ePaper のセットアップでは、以下のサンプル設定をインポートします。
+**ステップ 4.** Seeed 4.26 インチ モノクロ ePaper セットアップの場合は、以下のサンプル設定をインポートします。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank" rel="noopener noreferrer">
@@ -400,7 +400,7 @@ OpenDisplay デバイスは、ブラウザのディスプレイツールを通�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/upload_image.png" style={{width:500, height:'auto'}}/></div>
 
-**ステップ 4.** **Upload Image** をクリックします。転送が完了すると ePaper ディスプレイがリフレッシュされます。
+**ステップ 4.** **Upload Image** をクリックします。転送が完了すると、ePaper ディスプレイがリフレッシュされます。
 
 :::tip
 接続しているパネルに合った画像サイズを使用してください。例えば、7.3 インチ Spectra 6 パネルでは 800 × 480 px を使用します。
@@ -441,8 +441,8 @@ Home Assistant には、OpenDisplay ファームウェアデバイス向けの�
 ### 前提条件
 
 - Home Assistant 2026.4 以降。
-- アクティブな BLE 接続をサポートする動作中の Bluetooth セットアップ。
-- 電源が入っており、Bluetooth の通信範囲内にある OpenDisplay ファームウェアデバイス。
+- アクティブな BLE 接続をサポートする、動作中の Bluetooth セットアップ。
+- 電源が入っており、Bluetooth の範囲内にある OpenDisplay ファームウェアデバイス。
 
 次の Bluetooth パスが利用できます：
 
@@ -450,7 +450,7 @@ Home Assistant には、OpenDisplay ファームウェアデバイス向けの�
 - ESPHome ファームウェア 2022.9.3 以降を実行している ESPHome Bluetooth Proxy。
 
 :::info
-Shelly Bluetooth プロキシはパッシブ BLE センサーには便利ですが、OpenDisplay の画像アップロードにはアクティブな BLE 接続が必要です。このワークフローには Home Assistant の Bluetooth アダプタまたは ESPHome Bluetooth Proxy を使用してください。
+Shelly Bluetooth プロキシはパッシブ BLE センサーには便利ですが、OpenDisplay の画像アップロードにはアクティブな BLE 接続が必要です。このワークフローには、Home Assistant の Bluetooth アダプタまたは ESPHome Bluetooth Proxy を使用してください。
 :::
 
 ### デバイスを追加する
@@ -459,7 +459,7 @@ Shelly Bluetooth プロキシはパッシブ BLE センサーには便利です�
 
 **Step 2.** デバイスが自動検出された場合は、OpenDisplay カードの **Add** をクリックします。
 
-**Step 3.** 自動検出されない場合は **Add Integration** をクリックし、**OpenDisplay** を検索してセットアップフローに従います。
+**Step 3.** 自動検出されない場合は、**Add Integration** をクリックし、**OpenDisplay** を検索してセットアップフローに従います。
 
 **Step 4.** デバイス名とエリアを割り当てます。
 
@@ -469,7 +469,7 @@ Shelly Bluetooth プロキシはパッシブ BLE センサーには便利です�
 
 ### Home Assistant から画像をアップロードする
 
-画像を Home Assistant のローカルメディアフォルダに保存し、`opendisplay.upload_image` を呼び出します。
+画像を Home Assistant のローカルメディアフォルダに保存し、その後 `opendisplay.upload_image` を呼び出します。
 
 ```yaml
 action: opendisplay.upload_image
@@ -496,18 +496,18 @@ actions:
 ```
 
 :::tip
-Home Assistant のオートメーションを使用して、`opendisplay.upload_image` を呼び出す前に新しい PNG を生成またはコピーします。その後の BLE 転送は OpenDisplay インテグレーションがディスプレイまで処理します。
+Home Assistant のオートメーションを使用して、`opendisplay.upload_image` を呼び出す前に新しい PNG を生成またはコピーします。その後、OpenDisplay インテグレーションがディスプレイへの BLE 転送を処理します。
 :::
 
 ### オプション：カスタム Draw ペイロード
 
 OpenDisplay コミュニティは、テキスト、アイコン、図形、QR コード、画像、プロット、プログレスバーを Home Assistant のペイロードから直接描画するための `drawcustom` ワークフローを備えた HACS インテグレーションも維持しています。
 
-あらかじめ用意した画像をアップロードするのではなく、特に draw コマンドレイアウトが必要な場合はこのパスを使用してください。
+準備済み画像のアップロードではなく、特に draw コマンドレイアウトが必要な場合は、このパスを使用してください。
 
 <div class="github_container" style={{textAlign: 'center'}}>
 	<a class="github_item" href="https://github.com/OpenDisplay-org/Home_Assistant_Integration" target="_blank" rel="noopener noreferrer">
-	<strong><span><font color={'FFFFFF'} size={"4"}> OpenDisplay HACS インテグレーション</font></span></strong>
+	<strong><span><font color={'FFFFFF'} size={"4"}> OpenDisplay HACS Integration</font></span></strong>
 	</a>
 </div>
 
@@ -523,7 +523,7 @@ Home Assistant のビジュアルエディタでオートメーションを作�
 
 ## ESPHome Bluetooth Proxy の使用
 
-ESPHome Bluetooth Proxy は、ディスプレイが Home Assistant ホストから離れている場合に Bluetooth のカバレッジを拡張し、信頼性を向上させます。
+ESPHome Bluetooth Proxy は、ディスプレイが Home Assistant ホストから離れている場合に、Bluetooth のカバレッジを拡張し、信頼性を向上させます。
 
 ### 前提条件
 
@@ -578,7 +578,7 @@ captive_portal:
 
 **Step 5.** 画像アップロード中は、プロキシを OpenDisplay デバイスの近くに置いてください。
 
-プロキシが動作していると、Home Assistant には Bluetooth Proxy が接続済みとして表示され、ePaper ディスプレイはそのプロキシ経由で検出できるようになります。
+プロキシが動作していると、Home Assistant に Bluetooth Proxy が接続済みとして表示され、ePaper ディスプレイはそのプロキシ経由で検出できるようになります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/5.png" style={{width:700, height:'auto'}}/></div>
 
@@ -586,7 +586,7 @@ captive_portal:
 
 ## おまけ：3D プリントマウント
 
-7.3 インチ Spectra パネル付きの EN04 用に、このコミュニティモデルは IKEA RODALM フォトフレーム用のインサートを提供します：
+7.3 インチ Spectra パネル付きの EN04 用に、このコミュニティモデルは IKEA RODALM 写真フレーム用のインサートを提供します：
 
 - **[MakerWorld]** [Seeed 7.3" Spectra Insert for IKEA RODALM Frame](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
 
@@ -600,7 +600,7 @@ captive_portal:
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
