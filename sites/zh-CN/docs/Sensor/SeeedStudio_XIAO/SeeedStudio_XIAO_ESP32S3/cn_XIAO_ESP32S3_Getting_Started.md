@@ -88,7 +88,7 @@ Seeed Studio XIAO ESP32-S3 Sense 集成了摄像头传感器、数字麦克风�
     <td>片上 8MB PSRAM 和 8MB Flash</td>
     <td>片上 8MB PSRAM 和 8MB Flash<br/>板载 SD 卡槽，支持 32GB FAT</td>
     <td>片上 8MB PSRAM 和 16MB Flash</td>
-  </tr]
+  </tr>
   <tr>
     <th>接口</th>
     <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>9x ADC<br/>1x 用户 LED<br/>1x 充电 LED<br/>1x 复位按钮<br/>1x Boot 按钮</td>
