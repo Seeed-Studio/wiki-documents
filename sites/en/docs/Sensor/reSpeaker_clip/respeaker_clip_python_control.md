@@ -379,21 +379,60 @@ General-purpose CLI.
 
 ```bash
 clip-cli status
+```
 
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/status.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli version
-
+```
+```bash
 clip-cli list
+```
 
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/list.png" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli record --duration 60
 
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli sync --session 20260326120000
+```
+Expected output
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
+clip-cli sync --session 20260326120000 --delete
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli config get
+```
+Expected output
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli bookmark
+```
 
+```bash
 clip-cli terminal
 ```
+
 
 ### record.py
 
@@ -406,6 +445,9 @@ python tools/record.py --duration 60
 
 python tools/record.py --mode enhanced
 ```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### sync.py
 
@@ -416,6 +458,9 @@ python tools/sync.py
 
 python tools/sync.py --all-sessions
 ```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### udp_sync.py
 
@@ -426,6 +471,10 @@ python tools/udp_sync.py
 
 python tools/udp_sync.py --session 20260326120000
 ```
+
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### ble_terminal.py
 
