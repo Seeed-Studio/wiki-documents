@@ -15,21 +15,28 @@ createdAt: '2026-07-03'
 updatedAt: '2026-07-03'
 url: https://wiki.seeedstudio.com/recamera_motion_detection/
 ---
+
 ## I. Project Introduction
+
 This is motion detection for a selected area based on recamera2002. All computational power for this detection is completed within reCamera, without relying on external computation. The external system only needs to render the image and select the detection area.
 You can clone the demo from the following GitHub repository:
 
 [reCamera Motion Detection Demo](https://github.com/yyling0101-a11y/recamera_motion_detection)
 
 ## II. reCamera Configuration Guide
+
 After compiling the motion_detection executable program on a Linux system, push it to reCamera via SCP. Then, after remotely accessing the reCamera's SSH terminal, run the program directly using the following command:
+
 ```bash
 ./motion_detection
 ```
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Motion_Detection/Pasted_image_20260703155625.png" /></div>
 
 ## III. Win Rendering Interface Configuration
+
 In the same directory, there is a `windows_ui` directory. This is the Win interface rendering project. It is recommended to configure the environment using a conda virtual environment.
+
 ```bash
 conda create -n motion_detection python=3.10
 
@@ -39,7 +46,9 @@ conda activate motion_detection
 cd ./windows_ui
 pip install -r requirements.txt
 ```
+
 Once the environment is ready, run the `app.py` file directly:
+
 ```bash
 python app.py --rtsp=rtsp://192.168.42.1:8554/live0 --api=http://192.168.42.1:8080
 ```
@@ -52,6 +61,7 @@ After entering the correct URL, you can click "Connect RTSP" to get the video st
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Motion_Detection/Pasted_image_20260703154419.png" /></div>
 
 ### 1. Define Detection Area
+
 In the "Area Editing" on the left, select the area type. There are two types: one is the "Detection Area" type, used to define the detection region, and the other is "Whitelist," used to define areas within the detection region where detection should not occur, filtering out items that might naturally move within the detection area, such as swaying tree branches, fountains, etc.
 After selecting the type and entering the area name, you can click on the image to select points. Right-click to undo a point.
 
@@ -62,6 +72,7 @@ After selecting the points, click "Complete Current Polygon."
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Motion_Detection/Pasted_image_20260703155033.png" /></div>
 
 ### 2. Enable Detection Box
+
 Then, select "Upload to Device" to save the interface settings.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Motion_Detection/Pasted_image_20260703155107.png" /></div>
