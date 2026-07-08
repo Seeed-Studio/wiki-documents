@@ -179,7 +179,7 @@ Thread routing devices such as Connect ZBT-1, Connect ZBT-2 or Home Assistant Ye
 
 :::tip
 
-This tutorial is based on VS Code and the nRF Connect Extension. If you are new to them, you can refer to [XIAO nRF54LM20A nRFConnect SDK Usage](http://localhost:3000/xiao_nrf54lm20a_getting_started/#nrfconnect-sdk-usage)
+This tutorial is based on VS Code and the nRF Connect Extension. If you are new to them, you can refer to [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/xiao_nrf54lm20a_ncs/#getting-started-with-ncs)
 
 :::
 
@@ -195,45 +195,65 @@ File path: ~/boards：
 
 ```dts
 &uart20 {
-	current-speed = <1000000>;
-	status = "okay";
-	hw-flow-control;
+        current-speed = <1000000>;
+        status = "okay";
+        hw-flow-control;
 };
 
 / {
-	chosen {
-		zephyr,ot-uart = &uart20;
-	};
+        chosen {
+                zephyr,ot-uart = &uart20;
+        };
 };
 
 &pmic_i2c {
-	status = "disabled";
+        status = "disabled";
+};
+
+&pmic {
+        status = "disabled";
+
+        charger {
+                status = "disabled";
+        };
+
+        regulators {
+                status = "disabled";
+
+                LDO1 {
+                        status = "disabled";
+                };
+        };
 };
 ```
 
 - xiao_nrf54lm20a_nrf54lm20a_cpuapp.conf.
 
 ```conf
+#
+# Copyright (c) 2025 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
 CONFIG_SPI_NOR=n
 
 # Increase Main and shell stack sizes to avoid stack overflow
 # while using CRACEN
 CONFIG_MAIN_STACK_SIZE=2048
-
-CONFIG_I2C_GPIO=n
-CONFIG_MFD_NPM13XX=n
-CONFIG_NPM13XX_CHARGER=n
 ```
 
 3. Build and enable the configuration.
 
 - Configure and build the project.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_4.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-1.png" style={{width:800, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-2.png" style={{width:800, height:'auto'}}/></div>
 
 - Flash the firmware using `west flash`.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_5.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter_9_mt5.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 4. To detect the device in Home Assistant, connect the XIAO nRF54LM20A flashed with the Coprocessor firmware to Home Assistant Green via USB-C.
 
@@ -265,7 +285,7 @@ CONFIG_NPM13XX_CHARGER=n
 
 - Files to be added are listed below:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_11.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-8.png" style={{width:350, height:'auto'}}/></div>
 
 File path: ~/boards：
 
@@ -585,6 +605,12 @@ external_flash:
 
 </details>
 
+:::tip
+
+For the last two files, you need to create the files yourself and paste the code
+
+:::
+
 #### Description of the purpose of added files
 
 <table>
@@ -675,15 +701,17 @@ external_flash:
   </tbody>
 </table>
 
+
+
 #### Flash and download to the device
 
 - Proceed with build configuration.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_12_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-3.png" style={{width:800, height:'auto'}}/></div>
 
 - Select another XIAO nRF54LM20A as the target device, launch OpenTerminal, and flash the firmware using the `west flash` command.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_12.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-4.png" style={{width:800, height:'auto'}}/></div>
 
 ### Connect the Matter device using the Home Assistant App.
 
@@ -691,15 +719,15 @@ external_flash:
 
 - In the NCS development environment, open the nRF Serial Terminal.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_13.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-5.2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 - A serial port list pops up at the top of the interface; select the serial port corresponding to XIAO nRF54LM20A.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_14.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-6.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 - Matter device information and the pairing QR code link will be output via serial logs.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_15.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-7.2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 - Tap the QR code link directly or copy the link to a web browser separately.
 

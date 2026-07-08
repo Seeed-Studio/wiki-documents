@@ -1,5 +1,5 @@
 ---
-title: Modos de baixo consumo para XIAO nRF54LM20A Sense
+title: Modos de Baixo Consumo para XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -12,11 +12,11 @@ last_update:
   date: 06/01/2026
   author: Zeller
 createdAt: '2025-06-01'
-updatedAt: '2026-06-02'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_low_power/
 ---
 
-# Modos de baixo consumo para XIAO nRF54LM20A Sense
+# Modos de Baixo Consumo para XIAO nRF54LM20A Sense
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/xiao_nrf54lm20a_power.png" style={{width:400, height:'auto'}}/></div>
 
@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_low_power/
   </table>
 </div>
 
-O XIAO nRF54LM20A é construído em torno do SoC nRF54LM20 e apresenta consumo de energia ultrabaixo. Seu desempenho excepcional em baixo consumo estende de forma eficaz o tempo de operação do dispositivo para aplicações críticas em bateria, como wearables, nós finais de IoT e unidades de sensoriamento remoto. Este documento descreve como implementar e implantar vários modos de baixo consumo no XIAO nRF54LM20A.
+O XIAO nRF54LM20A é construído em torno do SoC nRF54LM20 e apresenta consumo de energia ultrabaixo. Seu excelente desempenho em baixo consumo estende de forma eficaz o tempo de operação do dispositivo para aplicações críticas em bateria, como wearables, nós finais de IoT e unidades de sensoriamento remoto. Este documento descreve como implementar e implantar vários modos de baixo consumo no XIAO nRF54LM20A.
 
 :::tip
 
@@ -83,7 +83,7 @@ O XIAO nRF54LM20A é capaz de usar uma bateria de lítio de 3,7 V como entrada d
 :::caution
 
 Tenha cuidado para não causar curto-circuito entre os terminais positivo e negativo e queimar a bateria e o equipamento durante a soldagem.
-Se a bateria estiver com carga, nunca a solde na placa, pois isso pode queimar a placa de circuito. Um curto-circuito enquanto o circuito está energizado representa um risco significativo; é recomendável usar um adaptador.
+Se a bateria estiver energizada, nunca a solde diretamente na placa, pois isso pode queimar a placa de circuito. Um curto-circuito enquanto o circuito está ligado representa um risco significativo; é recomendável usar um adaptador.
 
 :::
 
@@ -96,15 +96,10 @@ O modo de baixo consumo é implementado no XIAO nRF54LM20A usando funções como
 1. Modifique o arquivo device tree com a extensão `.overlay`.
 
 ```dts
-/* Switch BT HCI from Nordic SDC (needs nrfxlib binary) to Zephyr SW controller */
 / {
     chosen {
         zephyr,bt-hci = &bt_hci_controller;
     };
-};
-
-&bt_hci_sdc {
-    status = "disabled";
 };
 
 &bt_hci_controller {
@@ -123,12 +118,14 @@ O modo de baixo consumo é implementado no XIAO nRF54LM20A usando funções como
         };
     };
 };
+
 ```
 
 2. Modifique o arquivo de configuração `prj.conf` para habilitar as configurações de gerenciamento de energia do sistema.
 
 ```conf
 CONFIG_GPIO=y
+CONFIG_ARM_MPU=n
 CONFIG_NRFX_POWER=y
 CONFIG_POWEROFF=y
 CONFIG_HWINFO=y
@@ -142,6 +139,9 @@ CONFIG_PM_DEVICE_RUNTIME=y
 CONFIG_BT=y
 CONFIG_BT_BROADCASTER=y
 CONFIG_BT_DEVICE_NAME="XIAO nRF54LM20A"
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+CONFIG_BT_CTLR_ASSERT_DEBUG=n
+CONFIG_BT_CTLR_ASSERT_OVERHEAD_START=n
 ```
 
 3. Modifique o programa main.c, habilite o modo de baixo consumo com `k_sleep(K_SECONDS(10))` e configure o BLE para transmitir mensagens periodicamente em um intervalo de 1 segundo.
@@ -197,7 +197,7 @@ Após gravar o firmware, podemos usar um medidor de consumo de energia para medi
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-Ao mesmo tempo, você pode fazer a varredura via Bluetooth e encontrar o dispositivo anunciando com o nome `XIAO nRF54LM20A`.
+Enquanto isso, você pode fazer a varredura via Bluetooth e encontrar o dispositivo anunciando sob o nome `XIAO nRF54LM20A`.
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
@@ -217,15 +217,15 @@ Os resultados de teste acima foram medidos em condições de laboratório. Os va
 
 :::
 
-## Modo de consumo ultrabaixo
+## Modo de ultrabaixo consumo
 
-O XIAO nRF54LM20A atinge o modo de consumo ultrabaixo por meio do System OFF. Ao entrar nesse modo, todos os clocks dos periféricos são interrompidos e a maioria dos periféricos é totalmente desligada, resultando em uma corrente de standby tão baixa quanto 5 µA. Os gatilhos de despertar incluem o temporizador GRTC ou interrupções de GPIO. O estado do sistema não é mantido; após o despertar, o chip se comporta como se tivesse sido reinicializado pela alimentação e o programa reinicia a partir da função main().
+O XIAO nRF54LM20A atinge o modo de ultrabaixo consumo por meio do System OFF. Ao entrar nesse modo, todos os clocks dos periféricos são interrompidos e a maioria dos periféricos é totalmente desligada, resultando em uma corrente de standby tão baixa quanto 5 µA. Os gatilhos de despertar incluem o temporizador GRTC ou interrupções de GPIO. O estado do sistema não é mantido; após o despertar, o chip se comporta como se tivesse sido reinicializado pela alimentação e o programa reinicia a partir da função main().
 
-Esta seção verifica o desempenho prático do modo System OFF no XIAO nRF54LM20A usando despertar por interrupção de GPIO.
+Esta seção verifica o desempenho prático do modo System OFF no XIAO nRF54LM20A usando o despertar por interrupção de GPIO.
 
 ### Software
 
-Neste exemplo, a Flash deve ser desativada manualmente; caso contrário, ela introduzirá uma corrente de fuga adicional de aproximadamente 15 µA e afetará negativamente aplicações de consumo ultrabaixo.
+Neste exemplo, a Flash deve ser desativada manualmente; caso contrário, ela introduzirá uma corrente de fuga adicional de aproximadamente 15 µA e afetará negativamente as aplicações de ultrabaixo consumo.
 
 1. Modifique o arquivo device tree com o sufixo `.overlay`.
 
@@ -267,7 +267,7 @@ CONFIG_POWEROFF=y
 CONFIG_HWINFO=y
 ```
 
-3. Escreva o programa main.c para acordar o chip do modo de consumo ultrabaixo quando o botão Boot onboard for pressionado.
+3. Escreva o programa main.c para acordar o chip do modo de ultrabaixo consumo quando o botão Boot onboard for pressionado.
 
 <details>
 
@@ -494,7 +494,7 @@ O dispositivo entra no modo de consumo ultrabaixo de energia por padrão após s
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_4.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-Ao pressionar o botão BOOT onboard por meio de um monitor serial, você pode acordar o chip para imprimir informações de status antes que ele volte a entrar em sono profundo.
+Ao pressionar o botão BOOT onboard por meio de um monitor serial, você pode acordar o chip para imprimir informações de status antes que ele entre novamente em sono profundo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_5.png" style={{width:800, height:'auto'}}/></div>
 <br/>
