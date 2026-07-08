@@ -1,5 +1,5 @@
 ---
-title: 使用 Seeed Studio XIAO nRF54LM20A Sense 进行引脚复用
+title: 使用 XIAO nRF54LM20A Sense 进行引脚复用
 description: ''
 keywords:
   - xiao
@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_pin_multiplexing/
 ---
 
@@ -47,13 +47,13 @@ XIAO nRF54LM20A 具有丰富的引脚资源，原生支持使用 Digital、Analo
 :::tip
 
 本教程基于 PlatformIO 构建系统和 Zephyr RTOS 开发。
-如果你还不熟悉如何在 PlatformIO 下为 XIAO nRF54LM20A 创建项目，可以跳转到 [Getting Sarted With Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/)
+如果你还不熟悉在 PlatformIO 下为 XIAO nRF54LM20A 创建项目，可以跳转到 [Getting Sarted With Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/)
 
 :::
 
-## 数字引脚
+## 数字量
 
-数字引脚主要通过输出高低电平逻辑，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细阐述 XIAO nRF54LM20A 上数字引脚的底层驱动逻辑和实际调用方法。
+数字引脚主要通过输出高低电平，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细阐述 XIAO nRF54LM20A 上数字引脚的底层驱动逻辑和实际调用方式。
 
 ### 硬件准备
 
@@ -173,7 +173,14 @@ int main(void)
 
 ### 结果
 
-烧录固件后，按下按钮，蜂鸣器会发出滴答声，并且串口会打印状态。
+烧录固件后，按下按钮，蜂鸣器会发出滴答声，同时串口会打印状态。
+
+:::tip
+
+注意将波特率设置为 115200。如果你直接在 VS 中打开 Monitor，建议在 `.ini` 文件中设置波特率。
+
+:::
+
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -301,7 +308,7 @@ CONFIG_PRINTK=y
 CONFIG_UART_CONSOLE=y
 ```
 
-3. 编写 main.c 程序，实现 PWM 舵机控制功能，并配置 PWM 周期等参数。
+3. 编写 main.c 程序以实现 PWM 舵机控制功能，并配置 PWM 周期等参数。
 
 ```cpp
 /*
@@ -386,7 +393,7 @@ int main(void)
 
 ### 结果
 
-固件烧录完成后，舵机将以 33 弧度每秒的速度从 0° 旋转到 180°，然后再旋转回 0°。
+固件烧录完成后，舵机以 33 弧度每秒的速度从 0° 旋转到 180°，然后再旋转回 0°。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -495,7 +502,7 @@ CONFIG_PRINTK=y
 CONFIG_UART_CONSOLE=y
 ```
 
-3. 编写 main.c 程序，将 P1.00 引脚作为模拟输入引脚，并每隔 500ms 通过 USB 串口输出读取到的数值。
+3. 编写 main.c 程序，使用 P1.00 引脚作为模拟输入引脚，并每隔 500ms 通过 USB 串口输出读取到的数值。
 
 ```cpp
 /*
@@ -557,7 +564,7 @@ int main(void)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_3.jpg" style={{width:800, height:'auto'}}/></div>
 <br/>
-在电脑上打开串口助手，观察输出数值。
+在电脑上打开串口助手，观察输出的数值。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_4.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -574,13 +581,13 @@ int main(void)
 
 :::caution
 
-由于元器件存在个体差异，在相同环境下，不同模块的测量结果可能会有所不同。
+由于元器件存在个体差异，不同模组在相同环境下的测量结果可能会有所不同。
 
 :::
 
 ## UART
 
-通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预先约定的波特率来实现数据的异步收发。在物理连线方面，只需将设备的 TX 与 RX 引脚交叉连接并共地，即可建立全双工数据链路。由于硬件成本极低且支持同时收发数据，UART 被广泛应用于嵌入式系统中的控制台日志输出、模块化外设调试以及低带宽点对点数据通信。
+通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预先约定的波特率来实现数据的异步收发。在物理连线方面，只需将设备的 TX 和 RX 引脚交叉连接并共地，即可建立全双工数据链路。由于硬件成本极低且支持同时收发数据，UART 被广泛应用于嵌入式系统中的控制台日志输出、模块化外设调试以及低带宽点对点数据通信。
 
 ### 硬件准备
 
@@ -661,7 +668,7 @@ CONFIG_LOG_BACKEND_UART=y
 CONFIG_LOG_DEFAULT_LEVEL=3
 ```
 
-3. 编写主函数。当按下板载 BOOT 按钮时，会通过串口向电脑打印串口状态和引脚配置；否则默认打印运行状态。
+3. 编写主函数。当按下板载 BOOT 按钮时，将通过串口向电脑打印串口状态和引脚配置；否则默认打印运行状态。
 
 <details>
 
@@ -850,7 +857,7 @@ int main(void)
 | P1.08 - TX      | RX    |
 | P1.09 - RX      | TX    |
 
-2. 在电脑上打开串口监控软件。当按下板载 BOOT 按钮时，会通过串口打印已配置的串口信息。默认情况下，会打印字符串 `[Heartbeat # number] UART21 running...`。
+2. 在电脑上打开串口监控软件。当按下板载 BOOT 按钮时，将通过串口打印已配置的串口信息。默认情况下，会打印字符串 `[Heartbeat # number] UART21 running...`。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_uart_1.png" style={{width:800, height:'auto'}}/></div>
@@ -886,7 +893,7 @@ I2C 是一种同步、半双工的数据通信协议。它通过 SCL 时钟线�
 
 ### 软件准备
 
-根据 XIAO nRF54LM20A 的引脚分布，P1.03 和 P1.07 可被配置为 I2C 引脚。
+根据 XIAO nRF54LM20A 的引脚分布，P1.03 和 P1.07 可以被配置为 I2C 引脚。
 
 :::tip
 
@@ -898,28 +905,29 @@ I2C 是一种同步、半双工的数据通信协议。它通过 SCL 时钟线�
 
 ```dts
 / {
-	chosen {
-		zephyr,display = &ssd1306_128x64;
-	};
+        chosen {
+                zephyr,display = &ssd1306_128x64;
+        };
 };
 
 &i2c22 {
-	status = "okay";
-	zephyr,concat-buf-size = <2048>;
-	ssd1306_128x64: ssd1306@3c {
-		compatible = "solomon,ssd1306fb";
-		reg = <0x3c>;
-		width = <128>;
-		height = <64>;
-		segment-offset = <0>;
-		page-offset = <0>;
-		display-offset = <0>;
-		multiplex-ratio = <63>;
-		segment-remap;
-		com-invdir;
-		prechargep = <0x22>;
-	};
+        status = "okay";
+        zephyr,concat-buf-size = <2048>;
+        ssd1306_128x64: ssd1306@3c {
+                compatible = "solomon,ssd1306fb";
+                reg = <0x3c>;
+                width = <128>;
+                height = <64>;
+                segment-offset = <0>;
+                page-offset = <0>;
+                display-offset = <0>;
+                multiplex-ratio = <63>;
+                segment-remap;
+                com-invdir;
+                prechargep = <0x22>;
+        };
 };
+
 ```
 
 2. 修改 `prj.conf` 文件以启用 I2C 和显示相关配置。
@@ -927,14 +935,16 @@ I2C 是一种同步、半双工的数据通信协议。它通过 SCL 时钟线�
 ```
 CONFIG_STDOUT_CONSOLE=y
 CONFIG_HEAP_MEM_POOL_SIZE=16384
+CONFIG_I2C=y
 CONFIG_DISPLAY=y
 CONFIG_SSD1306=y
 CONFIG_LOG=y
 CONFIG_LOG_DEFAULT_LEVEL=4
 CONFIG_CHARACTER_FRAMEBUFFER=y
+
 ```
 
-3. 编写主函数，为字符串设置显示位置和显示功能。
+3. 编写主函数以设置字符串的显示位置和功能。
 
 <details>
 
@@ -1096,13 +1106,13 @@ int main(void) {
 
 ### 结果
 
-程序运行后，屏幕上会显示文本 **Hello XIAO nRF54LM20A**，并通过 USB 串口打印线程数据。
+程序运行后，文本 **Hello XIAO nRF54LM20A** 将显示在屏幕上，并通过 USB 串口打印线程数据。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_5.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## SPI
 
-SPI 是一种高速、同步、全双工的通信协议。与异步通信不同，SPI 依赖专用的 SCLK 时钟线实现精确的数据同步。它通常采用由 MOSI、MISO 和片选 CS/SS 引脚组成的经典四线硬件拓扑结构。SPI 具备独立的数据发送和接收通道以及较高的总线时钟频率，因此拥有出色的数据吞吐能力。它被广泛应用于对带宽要求较高的外设驱动场景，例如 Flash 和 SD 卡等大容量存储设备、高分辨率高刷新率的屏幕显示，以及高频采样传感器等。
+SPI 是一种高速、同步、全双工的通信协议。与异步通信不同，SPI 依赖专用的 SCLK 时钟线来实现精确的数据同步。它通常采用由 MOSI、MISO 和片选 CS/SS 引脚组成的经典四线硬件拓扑结构。凭借独立的数据发送和接收通道以及较高的总线时钟频率，SPI 具备出色的数据吞吐能力。它被广泛应用于对带宽要求较高的外设驱动场景，例如 Flash 和 SD 卡等大容量存储设备、高分辨率高刷新率的屏幕显示，以及高频采样传感器。
 
 ### 硬件准备
 
@@ -1137,7 +1147,7 @@ SPI 是一种高速、同步、全双工的通信协议。与异步通信不同�
 
 :::
 
-1. 修改设备树文件。为了驱动 LCD 屏幕，需要在设备树中启用 spi23 节点并配置引脚映射。将 P1.04、P1.05 和 P1.06 分别设置为 SPI 的 SCK、MISO 和 MOSI。同时，将 P1.31 和 P1.29 配置为屏幕的 CS（片选）和 DC（数据/命令）控制引脚。
+1. 修改设备树文件。为了驱动 LCD 屏幕，需要在设备树中启用 spi23 节点并配置引脚映射。将 P1.04、P1.05 和 P1.06 分别设置为 SPI SCK、MISO 和 MOSI。同时，将 P1.31 和 P1.29 配置为屏幕的 CS（片选）和 DC（数据/命令）控制引脚。
 
 <details>
 
@@ -1252,7 +1262,7 @@ SPI 是一种高速、同步、全双工的通信协议。与异步通信不同�
 </details>
 <br/>
 
-2. 修改 prj.conf，启用 SPI 相关配置。
+2. 修改 prj.conf 以启用 SPI 相关配置。
 
 ```prj
 CONFIG_LOG=y
@@ -1268,7 +1278,7 @@ CONFIG_HEAP_MEM_POOL_SIZE=32768
 CONFIG_MAIN_STACK_SIZE=4096
 ```
 
-3. 修改 main.c 程序，编写纯色屏幕填充逻辑。
+3. 修改 main.c 程序并编写纯色屏幕填充逻辑。
 
 <details>
 
@@ -1410,13 +1420,13 @@ int main(void)
 
 ### 结果
 
-上电后，程序会按红、橙、黄、绿、青、蓝、紫的顺序刷新屏幕，最后显示彩色条纹图案。
+上电后，程序按红、橙、黄、绿、青、蓝、紫的顺序刷新屏幕，最后显示彩色条纹图案。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_spi_1.gif" style={{width:600, height:'auto'}}/></div>
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
