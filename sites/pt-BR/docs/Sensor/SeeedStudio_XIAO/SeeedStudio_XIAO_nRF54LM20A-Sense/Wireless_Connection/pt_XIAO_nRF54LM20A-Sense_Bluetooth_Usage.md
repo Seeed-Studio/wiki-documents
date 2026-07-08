@@ -12,8 +12,8 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-20'
-updatedAt: '2026-05-21'
-url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_ble/
+updatedAt: '2026-06-15'
+url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_bluetooth_lowpower/
 ---
 
 # Bluetooth LE para XIAO nRF54LM20A Sense
@@ -42,14 +42,14 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_ble/
 </div>
 
 
-Bluetooth Low Energy (BLE) é um padrão de comunicação sem fio de baixo consumo introduzido no Bluetooth 4.0. Projetado para transmissão intermitente de pequenos dados, ele permite conectividade sem fio em dezenas de metros enquanto mantém um consumo médio de corrente ultrabaixo em nível de microampères. É amplamente aplicado em dispositivos vestíveis, sensores de casa inteligente, posicionamento interno e cenários de IoT industrial.
+Bluetooth Low Energy (BLE) é um padrão de comunicação sem fio de baixo consumo introduzido no Bluetooth 4.0. Projetado para transmissão intermitente de pequenos volumes de dados, ele permite conectividade sem fio em dezenas de metros enquanto mantém um consumo médio de corrente ultrabaixo em nível de microampères. É amplamente aplicado em dispositivos vestíveis, sensores de casa inteligente, posicionamento interno e cenários de IoT industrial.
 
-Com o SoC nRF54LM20A, o XIAO nRF54LM20A Series suporta Bluetooth LE, Matter, Thread, Zigbee e protocolos proprietários de 2,4 GHz, oferecendo uma taxa de dados de pico de 4 Mbps ideal para cenários de baixa latência. Ele também oferece suporte a Bluetooth Channel Sounding e Bluetooth Mesh. Este artigo ilustra sua funcionalidade BLE por meio de três programas de exemplo progressivos, começando com a transmissão básica de Beacon de broadcast e estendendo-se para comunicação UART bidirecional e upload de dados de sensores em tempo real.
+Com o SoC nRF54LM20A, a Série XIAO nRF54LM20A oferece suporte a Bluetooth LE, Matter, Thread, Zigbee e protocolos proprietários de 2,4 GHz, fornecendo uma taxa de dados de pico de 4 Mbps ideal para cenários de baixa latência. Ela também oferece suporte a Bluetooth Channel Sounding e Bluetooth Mesh. Este artigo ilustra sua funcionalidade BLE por meio de três programas de exemplo progressivos, começando com a transmissão básica de Beacon de broadcast e estendendo-se para comunicação UART bidirecional e envio de dados de sensores em tempo real.
 
 :::tip
 
 - Este tutorial foi desenvolvido com base no sistema de build PlatformIO e no Zephyr RTOS. Se você não estiver familiarizado com a criação de um projeto para o XIAO nRF54LM20A no PlatformIO, você pode ir para [Getting Sarted With Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_getting_started/)
-- Se você quiser aprender mais sobre o SoC nRF54LM20A e BLE, visite os links abaixo: [**nRF54LM20A SoC Introduction**](https://www.nordicsemi.com/Products/nRF54LM20A) e [**Bluetooth-Low-Energy for Nordic**](https://www.nordicsemi.com/Products/Wireless/Bluetooth-Low-Energy)
+- Se você quiser saber mais sobre o SoC nRF54LM20A e BLE, visite os links abaixo: [**nRF54LM20A SoC Introduction**](https://www.nordicsemi.com/Products/nRF54LM20A) e [**Bluetooth-Low-Energy for Nordic**](https://www.nordicsemi.com/Products/Wireless/Bluetooth-Low-Energy)
 
 :::
 
@@ -124,21 +124,17 @@ Este projeto implementa uma função de BLE Beacon no XIAO nRF54LM20A. O disposi
 1. As configurações relevantes da device tree devem ser habilitadas em `app.overlay` para alternar o controlador BLE para a implementação nativa do Zephyr.
 
 ```dts
-/* Disable Nordic SoftDevice Controller (not available in mainline Zephyr) */
-&bt_hci_sdc {
-	status = "disabled";
-};
-
 /* Enable Zephyr native BLE controller (LL SW Split) */
 &bt_hci_controller {
-	status = "okay";
+        status = "okay";
 };
 
 / {
-	chosen {
-		zephyr,bt-hci = &bt_hci_controller;
-	};
+        chosen {
+                zephyr,bt-hci = &bt_hci_controller;
+        };
 };
+
 ```
 
 2. Habilite as configurações relevantes de Bluetooth em `prj.conf`, defina o modo de saída de log e renomeie o nome do dispositivo Bluetooth para **XIAO-Beacon**.
@@ -146,6 +142,8 @@ Este projeto implementa uma função de BLE Beacon no XIAO nRF54LM20A. O disposi
 ```prj
 # GPIO
 CONFIG_GPIO=y
+# XIAO nRF54LM20A can fault early with the MPU enabled in this toolchain/board package.
+CONFIG_ARM_MPU=n
 # Regulator (for power_en)
 CONFIG_REGULATOR=y
 # Logging
@@ -160,6 +158,10 @@ CONFIG_UART_NRFX_UARTE_ENHANCED_RX=y
 CONFIG_BT=y
 CONFIG_BT_PERIPHERAL=y
 CONFIG_BT_DEVICE_NAME="XIAO-Beacon"
+# Avoid GCC 8.2 rejecting the controller's optimized assert inline asm path.
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+CONFIG_BT_CTLR_ASSERT_DEBUG=n
+CONFIG_BT_CTLR_ASSERT_OVERHEAD_START=n
 # Disable auto-procedures to avoid LL Procedure Collision on nRF54L
 CONFIG_BT_AUTO_PHY_UPDATE=n
 CONFIG_BT_DATA_LEN_UPDATE=n
@@ -169,6 +171,7 @@ CONFIG_HEAP_MEM_POOL_SIZE=8192
 CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
 # Assert level
 CONFIG_ASSERT=y
+
 ```
 
 3. Escreva o código em main.c, personalizando o formato e o conteúdo da transmissão de dados.
@@ -198,7 +201,7 @@ static uint32_t manufacturer_counter;
 
 /* Power enable regulator (GPIO1_12) - must be enabled before BLE init */
 static const struct device *const power_en_dev =
-	DEVICE_DT_GET(DT_NODELABEL(power_en));
+    DEVICE_DT_GET(DT_NODELABEL(power_en));
 
 static void adv_update_work_handler(struct k_work *work);
 
@@ -206,115 +209,115 @@ static K_WORK_DELAYABLE_DEFINE(adv_update_work, adv_update_work_handler);
 
 static int enable_power(void)
 {
-	int ret;
+    int ret;
 
-	if (!device_is_ready(power_en_dev)) {
-		LOG_ERR("power_en regulator is not ready");
-		return -ENODEV;
-	}
+    if (!device_is_ready(power_en_dev)) {
+        LOG_ERR("power_en regulator is not ready");
+        return -ENODEV;
+    }
 
-	ret = regulator_enable(power_en_dev);
-	if (ret < 0 && ret != -EALREADY) {
-		LOG_ERR("Failed to enable power_en: %d", ret);
-		return ret;
-	}
+    ret = regulator_enable(power_en_dev);
+    if (ret < 0 && ret != -EALREADY) {
+        LOG_ERR("Failed to enable power_en: %d", ret);
+        return ret;
+    }
 
-	k_sleep(K_MSEC(20));
-	LOG_INF("Power rail enabled");
-	return 0;
+    k_sleep(K_MSEC(20));
+    LOG_INF("Power rail enabled");
+    return 0;
 }
 
 static void adv_update_work_handler(struct k_work *work)
 {
-	int err;
-	uint8_t manuf_data[MANUF_DATA_SIZE];
+    int err;
+    uint8_t manuf_data[MANUF_DATA_SIZE];
 
-	manufacturer_counter++;
+    manufacturer_counter++;
 
-	/* Build manufacturer data: [Company ID (2B)][Counter (4B)][Custom (2B)] */
-	manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
-	manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-	manuf_data[2] = (manufacturer_counter >> 0) & 0xFF;
-	manuf_data[3] = (manufacturer_counter >> 8) & 0xFF;
-	manuf_data[4] = (manufacturer_counter >> 16) & 0xFF;
-	manuf_data[5] = (manufacturer_counter >> 24) & 0xFF;
-	manuf_data[6] = 0xAA;
-	manuf_data[7] = 0xBB;
+    /* Build manufacturer data: [Company ID (2B)][Counter (4B)][Custom (2B)] */
+    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
+    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
+    manuf_data[2] = (manufacturer_counter >> 0) & 0xFF;
+    manuf_data[3] = (manufacturer_counter >> 8) & 0xFF;
+    manuf_data[4] = (manufacturer_counter >> 16) & 0xFF;
+    manuf_data[5] = (manufacturer_counter >> 24) & 0xFF;
+    manuf_data[6] = 0xAA;
+    manuf_data[7] = 0xBB;
 
-	const struct bt_data ad[] = {
-		BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-		BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-			sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-		BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
-	};
+    const struct bt_data ad[] = {
+        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
+        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
+            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
+        BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
+    };
 
-	err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
-	if (err < 0) {
-		LOG_ERR("Failed to update advertising data (err %d)", err);
-	} else {
-		LOG_INF("Manufacturer counter: %u", manufacturer_counter);
-	}
+    err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
+    if (err < 0) {
+        LOG_ERR("Failed to update advertising data (err %d)", err);
+    } else {
+        LOG_INF("Manufacturer counter: %u", manufacturer_counter);
+    }
 
-	k_work_schedule(&adv_update_work, K_SECONDS(1));
+    k_work_schedule(&adv_update_work, K_SECONDS(1));
 }
 
 int main(void)
 {
-	int err;
-	uint8_t init_data[MANUF_DATA_SIZE];
+    int err;
+    uint8_t init_data[MANUF_DATA_SIZE];
 
-	LOG_INF("BLE Manufacturer Data Beacon");
+    LOG_INF("BLE Manufacturer Data Beacon");
 
-	/* Enable board power rail before BLE initialization */
-	err = enable_power();
-	if (err < 0) {
-		LOG_ERR("Power enable failed (err %d)", err);
-		return err;
-	}
+    /* Enable board power rail before BLE initialization */
+    err = enable_power();
+    if (err < 0) {
+        LOG_ERR("Power enable failed (err %d)", err);
+        return err;
+    }
 
-	LOG_INF("Initializing BLE...");
+    LOG_INF("Initializing BLE...");
 
-	err = bt_enable(NULL);
-	if (err < 0) {
-		LOG_ERR("Bluetooth enable failed (err %d)", err);
-		return err;
-	}
+    err = bt_enable(NULL);
+    if (err < 0) {
+        LOG_ERR("Bluetooth enable failed (err %d)", err);
+        return err;
+    }
 
-	LOG_INF("BLE initialized");
+    LOG_INF("BLE initialized");
 
-	/* Initial advertising data with counter = 0 */
-	init_data[0] = MANUF_COMPANY_ID & 0xFF;
-	init_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-	init_data[2] = 0;
-	init_data[3] = 0;
-	init_data[4] = 0;
-	init_data[5] = 0;
-	init_data[6] = 0xAA;
-	init_data[7] = 0xBB;
+    /* Initial advertising data with counter = 0 */
+    init_data[0] = MANUF_COMPANY_ID & 0xFF;
+    init_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
+    init_data[2] = 0;
+    init_data[3] = 0;
+    init_data[4] = 0;
+    init_data[5] = 0;
+    init_data[6] = 0xAA;
+    init_data[7] = 0xBB;
 
-	const struct bt_data ad[] = {
-		BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-		BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-			sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-		BT_DATA(BT_DATA_MANUFACTURER_DATA, init_data, sizeof(init_data)),
-	};
+    const struct bt_data ad[] = {
+        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
+        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
+            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
+        BT_DATA(BT_DATA_MANUFACTURER_DATA, init_data, sizeof(init_data)),
+    };
 
-	err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
-	if (err < 0) {
-		LOG_ERR("Advertising failed to start (err %d)", err);
-		return err;
-	}
+    err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
+    if (err < 0) {
+        LOG_ERR("Advertising failed to start (err %d)", err);
+        return err;
+    }
 
-	LOG_INF("BLE advertising started");
+    LOG_INF("BLE advertising started");
 
-	/* Schedule counter update after 1 second */
-	k_work_schedule(&adv_update_work, K_SECONDS(1));
+    /* Schedule counter update after 1 second */
+    k_work_schedule(&adv_update_work, K_SECONDS(1));
 
-	for (;;) {
-		k_sleep(K_FOREVER);
-	}
+    for (;;) {
+        k_sleep(K_FOREVER);
+    }
 
-	return 0;
+    return 0;
 }
 ```
 
@@ -324,12 +327,12 @@ int main(void)
 
 1. Após fazer o upload do firmware, instale o aplicativo nRF Connect para escanear e detectar dispositivos BLE.
 
-Enquanto isso, você pode buscar e baixar o app nRF Connect nas principais lojas de aplicativos móveis, o que permite que seu telefone procure e se conecte a dispositivos Bluetooth.
+Enquanto isso, você pode buscar e baixar o aplicativo nRF Connect nas principais lojas de aplicativos móveis, o que permite que seu telefone procure e se conecte a dispositivos Bluetooth.
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. Após instalar o software, faça a varredura pelo dispositivo Bluetooth chamado **XIAO-Beacon** e verifique os Manufacturer Data recebidos. Ao mesmo tempo, abra a porta serial para visualizar os logs de saída.
+2. Após instalar o software, escaneie o dispositivo Bluetooth chamado **XIAO-Beacon** e verifique os Manufacturer Data recebidos. Ao mesmo tempo, abra a porta serial para visualizar os logs de saída.
 
 <div className="table-center">
 <table align="center">
@@ -364,33 +367,27 @@ A partir dos resultados acima, o processo de transmissão de pacotes de advertis
 
 ### BLE UART
 
-Este exemplo demonstra como estabelecer um canal de dados bidirecional via BLE no XIAO nRF54LM20A Sense. Com base no Nordic UART Service (NUS), ele realiza uma interação básica em que os celulares enviam dados de string para o dispositivo para feedback de eco. Ao mesmo tempo, o dispositivo relata o contador de status uma vez por segundo por meio de Notify, ilustrando dois modos centrais de transmissão de dados BLE GATT: Write e Notify.
+Este exemplo demonstra como estabelecer um canal de dados bidirecional via BLE no XIAO nRF54LM20A Sense. Com base no Nordic UART Service (NUS), ele realiza uma interação básica em que celulares enviam dados de string para o dispositivo para feedback de eco. Ao mesmo tempo, o dispositivo relata o contador de status uma vez por segundo por meio de Notify, ilustrando dois modos centrais de transmissão de dados BLE GATT: Write e Notify.
 
 #### Software
 
 1. As configurações relevantes da device tree devem ser habilitadas em `app.overlay` para alternar o controlador BLE para a implementação nativa do Zephyr.
 
 ```dts
-/*
- * BLE UART (NUS) overlay for XIAO nRF54LM20A.
- */
-
-&bt_hci_sdc {
-	status = "disabled";
-};
-
+/* Enable Zephyr native BLE controller (LL SW Split) */
 &bt_hci_controller {
-	status = "okay";
+        status = "okay";
 };
 
 / {
-	chosen {
-		zephyr,bt-hci = &bt_hci_controller;
-	};
+        chosen {
+                zephyr,bt-hci = &bt_hci_controller;
+        };
 };
+
 ```
 
-2. Habilite as configurações relacionadas ao Bluetooth em prj.conf
+2. Habilite as configurações relacionadas a Bluetooth em prj.conf
 
 ```
 # Standard output and console
@@ -404,6 +401,7 @@ CONFIG_LOG=y
 CONFIG_BT=y
 CONFIG_BT_PERIPHERAL=y
 CONFIG_BT_DEVICE_NAME="XIAO BLE UART"
+
 ```
 
 3. Configure a lógica de assinatura e o mecanismo de feedback de dados em `main.c`
@@ -594,9 +592,9 @@ int main(void)
 
 #### Resultado
 
-1. Após fazer o upload do firmware, instale o app nRF Connect para escanear e detectar dispositivos BLE.
+1. Após fazer o upload do firmware, instale o aplicativo nRF Connect para escanear e detectar dispositivos BLE.
 
-Enquanto isso, você pode buscar e baixar o app nRF Connect nas principais lojas de aplicativos móveis, o que permite que seu telefone procure e se conecte a dispositivos Bluetooth.
+Enquanto isso, você pode buscar e baixar o aplicativo nRF Connect nas principais lojas de aplicativos móveis, o que permite que seu telefone procure e se conecte a dispositivos Bluetooth.
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
@@ -631,7 +629,7 @@ Enquanto isso, você pode buscar e baixar o app nRF Connect nas principais lojas
 
 4. Envie dados para demonstrar o efeito do encaminhamento dos dados recebidos.
 
-- Expanda a característica RX, clique no botão **Write**, insira uma string como `hello World` e envie-a para o XIAO nRF54LM20A Sense. Ao mesmo tempo, a string encaminhada pode ser recebida por meio da característica TX.
+- Expanda a característica RX, clique no botão **Write**, insira uma string como `hello World` e envie-a para o XIAO nRF54LM20A Sense. Enquanto isso, a string encaminhada pode ser recebida por meio da característica TX.
 
 <div className="table-center">
 <table align="center">
@@ -651,7 +649,7 @@ Nesta seção, você obterá uma compreensão básica do **mecanismo de assinatu
 
 ### Sensor BLE
 
-Esta seção implementa a função de relatório em tempo real de dados de movimento do IMU baseado em BLE no XIAO nRF54LM20A Sense. Após o início do programa, o dispositivo habilita automaticamente a publicidade BLE. Os usuários podem se conectar ao dispositivo e assinar Notify via nRF Connect em telefones celulares para receber dados de aceleração X/Y/Z em tempo real. O LED integrado acende quando a aceleração resultante excede o limite predefinido e apaga quando fica abaixo desse limite, realizando detecção básica de movimento e indicação visual.
+Esta seção implementa a função de relatório em tempo real de dados de movimento do IMU baseado em BLE no XIAO nRF54LM20A Sense. Após o início do programa, o dispositivo habilita automaticamente a publicidade BLE. Os usuários podem se conectar ao dispositivo e assinar Notify via nRF Connect em telefones celulares para receber dados de aceleração em tempo real de X/Y/Z. O LED integrado acende quando a aceleração resultante excede o limite predefinido e apaga quando fica abaixo do limite, realizando detecção básica de movimento e indicação visual.
 
 :::tip
 
@@ -1131,14 +1129,14 @@ int main(void)
 
 #### Resultado
 
-1. Após fazer o upload do firmware, instale o aplicativo nRF Connect para escanear e detectar dispositivos BLE.
+1. Após enviar o firmware, instale o aplicativo nRF Connect para escanear e detectar dispositivos BLE.
 
-Enquanto isso, você pode buscar e baixar o aplicativo nRF Connect nas principais lojas de aplicativos móveis, o que permite que seu telefone procure e se conecte a dispositivos Bluetooth.
+Enquanto isso, você pode pesquisar e baixar o aplicativo nRF Connect nas principais lojas de aplicativos móveis, o que permite que seu telefone pesquise e se conecte a dispositivos Bluetooth.
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. Após iniciar o software, procure pelo dispositivo Bluetooth **XIAO BLE IMU** e conecte-se a ele seguindo as etapas abaixo.
+2. Após iniciar o software, escaneie o dispositivo Bluetooth **XIAO BLE IMU** e conecte‑se a ele seguindo as etapas abaixo.
 
 <div className="table-center">
 <table align="center">
@@ -1166,7 +1164,7 @@ Enquanto isso, você pode buscar e baixar o aplicativo nRF Connect nas principai
 
 4. Agite o XIAO nRF54LM20A Sense para acionar o mecanismo de alarme de limite.
 
-- O valor de alarme de limite pode ser modificado por meio de definição de macro. O valor estático padrão da aceleração gravitacional padrão na Terra é 9,8 m/s².
+- O valor do alarme de limite pode ser modificado por meio de definição de macro. O valor estático padrão da aceleração gravitacional padrão na Terra é 9,8 m/s².
 
 ```c
 /* Motion threshold in m/s^2 - acceleration vector magnitude */
@@ -1177,7 +1175,7 @@ Enquanto isso, você pode buscar e baixar o aplicativo nRF Connect nas principai
 
 ## Resumo
 
-Por meio dos exemplos acima, você obterá uma compreensão sólida da aplicação de BLE no XIAO nRF54LM20A. Sinta-se à vontade para criar seus próprios projetos criativos e compartilhar seus resultados.
+Por meio dos exemplos acima, você obterá uma compreensão sólida da aplicação de BLE no XIAO nRF54LM20A. Sinta‑se à vontade para criar seus próprios projetos criativos e compartilhar suas conquistas.
 
 ## Suporte Técnico e Discussão de Produtos
 
