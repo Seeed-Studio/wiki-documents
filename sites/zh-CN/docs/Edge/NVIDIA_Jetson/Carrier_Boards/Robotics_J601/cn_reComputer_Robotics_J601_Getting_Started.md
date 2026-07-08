@@ -1,5 +1,5 @@
 ---
-description: 为 NVIDIA Jetson AGX Thor 模组设计的 reComputer Robotics J601 载板的初步入门页面。
+description: 为 NVIDIA Jetson AGX Thor 模组设计的 reComputer Robotics J601 载板的预备入门页面。
 title: reComputer Robotics J601 入门指南
 keywords:
   - reComputer Robotics J601
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_robotics_j601_carrie
 # reComputer Robotics J601 入门指南
 
 :::note
-本页面是即将推出的、面向 NVIDIA Jetson AGX Thor 模组的 reComputer Robotics J601 载板的初步草稿。规格、软件支持、配件套装以及机械结构细节仍有可能变更。
+本页面是即将推出的、面向 NVIDIA Jetson AGX Thor 模组的 reComputer Robotics J601 载板的预备草稿。规格、软件支持、配件套装以及机械结构细节仍有可能变更。
 :::
 
 <div align="center">
@@ -33,9 +33,9 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
 ## 初步特性
 
 - 支持 **NVIDIA Jetson AGX Thor** 模组
-- **M.2 Key M** 插槽，用于 NVMe 2280 SSD
-- **M.2 Key E** 插槽，用于 Wi-Fi/Bluetooth 模组
-- **M.2 Key B** 插槽，用于 5G 模组，并支持 **Nano SIM**
+- 用于 NVMe 2280 SSD 的 **M.2 Key M** 插槽
+- 用于 Wi-Fi/Bluetooth 模组的 **M.2 Key E** 插槽
+- 用于 5G 模组的 **M.2 Key B** 插槽，并支持 **Nano SIM**
 - 高速以太网，计划支持 **PTP** 和 **EtherCAT**
 - 丰富的机器人 I/O，包括 **CAN**、**RS-232/422/485**、**DI/DO**、**I2C**、**I2S**、**SPI** 和 **GPIO**
 - **GMSL 扩展**，最多支持 **8 路摄像头**
@@ -59,15 +59,15 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
     </tr>
     <tr>
       <td>网络</td>
-      <td>以太网定义仍在进行中；初步方案包括带 PTP 和 EtherCAT 支持的高速 RJ45 接口</td>
+      <td>以太网定义仍在进行中；初步计划包括支持 PTP 和 EtherCAT 的高速 RJ45 接口</td>
     </tr>
     <tr>
       <td>无线扩展</td>
-      <td>1x M.2 Key E，用于 Wi-Fi/Bluetooth；1x M.2 Key B，用于 5G；1x Nano SIM</td>
+      <td>1x M.2 Key E（用于 Wi-Fi/Bluetooth），1x M.2 Key B（用于 5G），1x Nano SIM</td>
     </tr>
     <tr>
       <td>USB</td>
-      <td>最多 4x USB 3.2 Type-A（主机），1x USB 2.0 Type-C（调试 UART / 设备模式），1x USB 3.0 Type-C，用于刷机</td>
+      <td>最多 4x USB 3.2 Type-A（主机），1x USB 2.0 Type-C（调试 UART / 设备模式），1x USB 3.0 Type-C（用于刷机）</td>
     </tr>
     <tr>
       <td>显示</td>
@@ -83,11 +83,11 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
     </tr>
     <tr>
       <td>CAN</td>
-      <td>4x CAN，通过 JST 接口</td>
+      <td>4x CAN，通过 JST 连接器</td>
     </tr>
     <tr>
       <td>串口</td>
-      <td>2x RS-232/422/485，通过 DB9；1x RS-232/422/485，通过 DB9；1x RS-485，通过 JST 4 针</td>
+      <td>1x RS-232/422/485（DB9 连接器），1x RS-485（JST 连接器）</td>
     </tr>
     <tr>
       <td>数字 I/O</td>
@@ -99,11 +99,11 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
     </tr>
     <tr>
       <td>低速扩展</td>
-      <td>1x I2C，1x SPI，GPIO 通过 JST/排针提供</td>
+      <td>1x I2C，1x SPI，通过 JST/排针提供 GPIO</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x RTC 2 针</td>
+      <td>1x RTC 2 针接口</td>
     </tr>
     <tr>
       <td>按键</td>
@@ -152,11 +152,11 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
 
 ### 指示灯
 
-| LED | 颜色 | 状态 | 描述 |
+| 指示灯 | 颜色 | 状态 | 描述 |
 | --- | --- | --- | --- |
 | PWR | 绿色 | On | 设备已连接电源 |
 | PWR | 绿色 | Off | 设备未连接电源 |
-| ACT | 绿色 | 闪烁 | SSD 活动状态 |
+| ACT | 绿色 | Flashing | SSD 活动状态 |
 | USER | R / G / B | TBD | 用户自定义行为 |
 
 ## 软件
@@ -177,7 +177,7 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
 
 ## 热设计
 
-该载板预期用于类人机器人机体内部，客户可以自行设计散热方案。Seeed 计划为基于 AGX Thor 的部署提供热设计指导。
+该载板预期用于人形机器人机体内部，客户可以自行设计散热方案。Seeed 计划为基于 AGX Thor 的部署提供热设计指导。
 
 参考文档：
 
