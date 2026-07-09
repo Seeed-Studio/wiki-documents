@@ -120,6 +120,10 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
                 <span className="text">reBot B601-RS ROS2 集成</span>
                 <span className="tag recommended">New</span>
               </a>
+              <a href="cn/rebot_arm_b601_rs_isaacsim/" className="content-card">
+                <span className="text">reBot B601-RS Isaacsim 仿真</span>
+                <span className="tag recommended">New</span>
+              </a>
           </div>
 
 
