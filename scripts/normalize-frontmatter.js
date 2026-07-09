@@ -137,6 +137,37 @@ function todayYMD() {
   return new Date().toISOString().slice(0, 10);
 }
 
+function detectLineEnding(raw) {
+  return raw.includes("\r\n") ? "\r\n" : "\n";
+}
+
+function applyLineEnding(text, eol) {
+  const normalized = String(text || "")
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n");
+
+  return eol === "\r\n" ? normalized.replace(/\n/g, "\r\n") : normalized;
+}
+
+function splitRawFrontmatter(raw) {
+  const text = String(raw || "");
+
+  const match = text.match(
+    /^(\uFEFF?)---[^\r\n]*(\r\n|\n|\r)([\s\S]*?)(\r\n|\n|\r)---[ \t]*(?:(\r\n|\n|\r)|$)/
+  );
+
+  if (!match) {
+    return null;
+  }
+
+  return {
+    bom: match[1] || "",
+    eol: match[2] || "\n",
+    body: text.slice(match[0].length),
+    hasClosingEol: Boolean(match[5]),
+  };
+}
+
 function normalizeSlug(slug) {
   if (!slug || typeof slug !== "string") return "";
   let s = slug.trim();
@@ -159,10 +190,79 @@ function buildUrl(prefix, slug) {
 }
 
 function dumpFrontmatter(data) {
-  return yaml.dump(data, {
+  let dumped = yaml.dump(data, {
     noRefs: true,
     lineWidth: 1000,
   }).trimEnd();
+
+  dumped = keepLastUpdateDateYMD(dumped, data);
+  dumped = keepTranslationSkipInline(dumped, data);
+
+  return dumped;
+}
+
+function keepLastUpdateDateYMD(frontmatterText, data) {
+  const value = data?.last_update?.date;
+
+  if (!(value instanceof Date)) {
+    return frontmatterText;
+  }
+
+  const ymd = value.toISOString().slice(0, 10);
+  const lines = frontmatterText.split("\n");
+
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i] !== "last_update:") continue;
+
+    for (let j = i + 1; j < lines.length && lines[j].startsWith("  "); j++) {
+      if (lines[j].startsWith("  date:")) {
+        lines[j] = `  date: ${ymd}`;
+        return lines.join("\n").trimEnd();
+      }
+    }
+  }
+
+  return frontmatterText;
+}
+
+function keepTranslationSkipInline(frontmatterText, data) {
+  const skip = data?.translation?.skip;
+
+  if (!Array.isArray(skip)) {
+    return frontmatterText;
+  }
+
+  const inlineSkip = yaml
+    .dump(skip, {
+      flowLevel: 0,
+      noRefs: true,
+      lineWidth: 1000,
+    })
+    .trim();
+
+  const lines = frontmatterText.split("\n");
+
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i] !== "translation:") continue;
+
+    for (let j = i + 1; j < lines.length && lines[j].startsWith("  "); j++) {
+      if (lines[j] !== "  skip:") continue;
+
+      let k = j + 1;
+
+      while (k < lines.length && lines[k].startsWith("    - ")) {
+        k++;
+      }
+
+      if (k > j + 1) {
+        lines.splice(j, k - j, `  skip: ${inlineSkip}`);
+      }
+
+      return lines.join("\n").trimEnd();
+    }
+  }
+
+  return frontmatterText;
 }
 
 function parseMatterSafe(raw) {
@@ -305,8 +405,24 @@ function normalizeFile(fileAbsPath, { checkOnly = false } = {}) {
     }
   }
 
-  const newFm = dumpFrontmatter(data);
-  const newRaw = `---\n${newFm}\n---\n${content.replace(/^\n+/, "")}`;
+  const rawParts = splitRawFrontmatter(raw);
+  const eol = rawParts ? rawParts.eol : detectLineEnding(raw);
+  const newFm = applyLineEnding(dumpFrontmatter(data), eol);
+
+  let newRaw;
+
+  if (rawParts) {
+    newRaw = `${rawParts.bom}---${eol}${newFm}${eol}---`;
+
+    if (rawParts.hasClosingEol) {
+      newRaw += eol;
+    }
+
+    newRaw += rawParts.body;
+  } else {
+    const contentForOutput = String(content || "");
+    newRaw = applyLineEnding(`---\n${dumpFrontmatter(data)}\n---\n${contentForOutput}`, eol);
+  }
 
   const changed = newRaw !== raw;
 

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-06 17:44:01 (北京时间)
-// 多语言页面: 2364 个
+// 生成时间: 2026-07-08 10:32:55 (北京时间)
+// 多语言页面: 2365 个
 
 (function() {
   'use strict';
@@ -948,6 +948,13 @@
     "pt"
   ],
   "/deploy_dia_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/deploy_joyai_vl_interaction_on_jetson_thor": [
     "cn",
     "en",
     "es",

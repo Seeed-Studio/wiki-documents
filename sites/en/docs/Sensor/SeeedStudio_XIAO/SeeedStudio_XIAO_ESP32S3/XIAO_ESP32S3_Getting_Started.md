@@ -456,6 +456,26 @@ If you need to know the detailed parameter information of ov5640, you can refer 
 All the programs about cameras in the Wiki are compatible with both OV5640、OV2640 and OV3660 cameras.
 :::
 
+##### Removing the expansion board
+
+If you need to separate the Sense expansion board from the XIAO ESP32-S3, use the same side-entry approach as installation — but in reverse.
+
+**Step 1.** Hold the XIAO ESP32-S3 firmly in one hand and the expansion board in the other.
+
+**Step 2.** Apply gentle pressure from the **side** of the board pair and slide the expansion board off the B2B connector. Work along one edge first, then release the rest of the connector gradually.
+
+**Step 3.** Once the expansion board is free, set it aside on a flat, static-safe surface.
+
+<div style={{textAlign:'center'}}>
+<iframe style={{width:'80%', aspectRatio:'16/9'}} src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/xiao-s3_exp.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+:::caution Do not pry the boards apart vertically
+Never pull the expansion board **straight up** or **straight down**, and do not twist or rock the two boards like opening a book. The XIAO and the expansion board are joined by a **B2B (board-to-board) connector** — prying in the vertical direction can bend pins, crack the connector housing, or break the B2B socket on the XIAO itself.
+
+Always separate the boards by pushing or sliding from the **side**, keeping the motion parallel to the connector. If it feels stuck, recheck your angle and apply steady side pressure instead of increasing upward force.
+:::
+
 #### Installing the Upgraded Heat Sink
 
 Ensure optimal cooling for your XIAO ESP32-S3 Sense by installing our upgraded heat sink. This new design is tailored to address the cooling deficiencies observed with the previous models, particularly during intensive operations like camera usage. Feedback highlighted that the original heat sink did not adequately dissipate heat, leading to the development of a more effective solution.

@@ -4082,6 +4082,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/es_How_to_run_VLM_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/es_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_JoyAI_VL_Interaction_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/es_Local_OpenClaw(Clawdbot)_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_Riva_and_Llama2_on_reComputer',
