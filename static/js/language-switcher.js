@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-08 10:32:55 (北京时间)
-// 多语言页面: 2365 个
+// 生成时间: 2026-07-09 13:37:26 (北京时间)
+// 多语言页面: 2370 个
 
 (function() {
   'use strict';
@@ -3649,7 +3649,42 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_hardware_specifications": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_imu_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_mipi_dsi_screen_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_speaker_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_uart_usage": [
     "cn",
     "en",
     "es",
