@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'ハードウェアの使用方法'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_pro_hardware_usage
+link:
+  type: generated-index
+  slug: recamera_pro_hardware_usage
+  title: ハードウェアの使用方法
+  description: reCamera Pro ハードウェア使用方法ドキュメント
