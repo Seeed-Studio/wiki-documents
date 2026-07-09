@@ -124,21 +124,17 @@ This project realizes a BLE Beacon function on XIAO nRF54LM20A. The device keeps
 1. Relevant device tree configurations shall be enabled in `app.overlay` to switch the BLE controller to native Zephyr implementation.
 
 ```dts
-/* Disable Nordic SoftDevice Controller (not available in mainline Zephyr) */
-&bt_hci_sdc {
-	status = "disabled";
-};
-
 /* Enable Zephyr native BLE controller (LL SW Split) */
 &bt_hci_controller {
-	status = "okay";
+        status = "okay";
 };
 
 / {
-	chosen {
-		zephyr,bt-hci = &bt_hci_controller;
-	};
+        chosen {
+                zephyr,bt-hci = &bt_hci_controller;
+        };
 };
+
 ```
 
 2. Enable relevant Bluetooth configurations in `prj.conf`, set the log output mode, and rename the Bluetooth device name to **XIAO-Beacon**.
@@ -146,6 +142,8 @@ This project realizes a BLE Beacon function on XIAO nRF54LM20A. The device keeps
 ```prj
 # GPIO
 CONFIG_GPIO=y
+# XIAO nRF54LM20A can fault early with the MPU enabled in this toolchain/board package.
+CONFIG_ARM_MPU=n
 # Regulator (for power_en)
 CONFIG_REGULATOR=y
 # Logging
@@ -160,6 +158,10 @@ CONFIG_UART_NRFX_UARTE_ENHANCED_RX=y
 CONFIG_BT=y
 CONFIG_BT_PERIPHERAL=y
 CONFIG_BT_DEVICE_NAME="XIAO-Beacon"
+# Avoid GCC 8.2 rejecting the controller's optimized assert inline asm path.
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+CONFIG_BT_CTLR_ASSERT_DEBUG=n
+CONFIG_BT_CTLR_ASSERT_OVERHEAD_START=n
 # Disable auto-procedures to avoid LL Procedure Collision on nRF54L
 CONFIG_BT_AUTO_PHY_UPDATE=n
 CONFIG_BT_DATA_LEN_UPDATE=n
@@ -169,6 +171,7 @@ CONFIG_HEAP_MEM_POOL_SIZE=8192
 CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
 # Assert level
 CONFIG_ASSERT=y
+
 ```
 
 3. Write codes inside main.c, customize the data transmission format and content.
@@ -198,7 +201,7 @@ static uint32_t manufacturer_counter;
 
 /* Power enable regulator (GPIO1_12) - must be enabled before BLE init */
 static const struct device *const power_en_dev =
-	DEVICE_DT_GET(DT_NODELABEL(power_en));
+    DEVICE_DT_GET(DT_NODELABEL(power_en));
 
 static void adv_update_work_handler(struct k_work *work);
 
@@ -206,115 +209,115 @@ static K_WORK_DELAYABLE_DEFINE(adv_update_work, adv_update_work_handler);
 
 static int enable_power(void)
 {
-	int ret;
+    int ret;
 
-	if (!device_is_ready(power_en_dev)) {
-		LOG_ERR("power_en regulator is not ready");
-		return -ENODEV;
-	}
+    if (!device_is_ready(power_en_dev)) {
+        LOG_ERR("power_en regulator is not ready");
+        return -ENODEV;
+    }
 
-	ret = regulator_enable(power_en_dev);
-	if (ret < 0 && ret != -EALREADY) {
-		LOG_ERR("Failed to enable power_en: %d", ret);
-		return ret;
-	}
+    ret = regulator_enable(power_en_dev);
+    if (ret < 0 && ret != -EALREADY) {
+        LOG_ERR("Failed to enable power_en: %d", ret);
+        return ret;
+    }
 
-	k_sleep(K_MSEC(20));
-	LOG_INF("Power rail enabled");
-	return 0;
+    k_sleep(K_MSEC(20));
+    LOG_INF("Power rail enabled");
+    return 0;
 }
 
 static void adv_update_work_handler(struct k_work *work)
 {
-	int err;
-	uint8_t manuf_data[MANUF_DATA_SIZE];
+    int err;
+    uint8_t manuf_data[MANUF_DATA_SIZE];
 
-	manufacturer_counter++;
+    manufacturer_counter++;
 
-	/* Build manufacturer data: [Company ID (2B)][Counter (4B)][Custom (2B)] */
-	manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
-	manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-	manuf_data[2] = (manufacturer_counter >> 0) & 0xFF;
-	manuf_data[3] = (manufacturer_counter >> 8) & 0xFF;
-	manuf_data[4] = (manufacturer_counter >> 16) & 0xFF;
-	manuf_data[5] = (manufacturer_counter >> 24) & 0xFF;
-	manuf_data[6] = 0xAA;
-	manuf_data[7] = 0xBB;
+    /* Build manufacturer data: [Company ID (2B)][Counter (4B)][Custom (2B)] */
+    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
+    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
+    manuf_data[2] = (manufacturer_counter >> 0) & 0xFF;
+    manuf_data[3] = (manufacturer_counter >> 8) & 0xFF;
+    manuf_data[4] = (manufacturer_counter >> 16) & 0xFF;
+    manuf_data[5] = (manufacturer_counter >> 24) & 0xFF;
+    manuf_data[6] = 0xAA;
+    manuf_data[7] = 0xBB;
 
-	const struct bt_data ad[] = {
-		BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-		BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-			sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-		BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
-	};
+    const struct bt_data ad[] = {
+        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
+        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
+            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
+        BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
+    };
 
-	err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
-	if (err < 0) {
-		LOG_ERR("Failed to update advertising data (err %d)", err);
-	} else {
-		LOG_INF("Manufacturer counter: %u", manufacturer_counter);
-	}
+    err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
+    if (err < 0) {
+        LOG_ERR("Failed to update advertising data (err %d)", err);
+    } else {
+        LOG_INF("Manufacturer counter: %u", manufacturer_counter);
+    }
 
-	k_work_schedule(&adv_update_work, K_SECONDS(1));
+    k_work_schedule(&adv_update_work, K_SECONDS(1));
 }
 
 int main(void)
 {
-	int err;
-	uint8_t init_data[MANUF_DATA_SIZE];
+    int err;
+    uint8_t init_data[MANUF_DATA_SIZE];
 
-	LOG_INF("BLE Manufacturer Data Beacon");
+    LOG_INF("BLE Manufacturer Data Beacon");
 
-	/* Enable board power rail before BLE initialization */
-	err = enable_power();
-	if (err < 0) {
-		LOG_ERR("Power enable failed (err %d)", err);
-		return err;
-	}
+    /* Enable board power rail before BLE initialization */
+    err = enable_power();
+    if (err < 0) {
+        LOG_ERR("Power enable failed (err %d)", err);
+        return err;
+    }
 
-	LOG_INF("Initializing BLE...");
+    LOG_INF("Initializing BLE...");
 
-	err = bt_enable(NULL);
-	if (err < 0) {
-		LOG_ERR("Bluetooth enable failed (err %d)", err);
-		return err;
-	}
+    err = bt_enable(NULL);
+    if (err < 0) {
+        LOG_ERR("Bluetooth enable failed (err %d)", err);
+        return err;
+    }
 
-	LOG_INF("BLE initialized");
+    LOG_INF("BLE initialized");
 
-	/* Initial advertising data with counter = 0 */
-	init_data[0] = MANUF_COMPANY_ID & 0xFF;
-	init_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-	init_data[2] = 0;
-	init_data[3] = 0;
-	init_data[4] = 0;
-	init_data[5] = 0;
-	init_data[6] = 0xAA;
-	init_data[7] = 0xBB;
+    /* Initial advertising data with counter = 0 */
+    init_data[0] = MANUF_COMPANY_ID & 0xFF;
+    init_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
+    init_data[2] = 0;
+    init_data[3] = 0;
+    init_data[4] = 0;
+    init_data[5] = 0;
+    init_data[6] = 0xAA;
+    init_data[7] = 0xBB;
 
-	const struct bt_data ad[] = {
-		BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-		BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-			sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-		BT_DATA(BT_DATA_MANUFACTURER_DATA, init_data, sizeof(init_data)),
-	};
+    const struct bt_data ad[] = {
+        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
+        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
+            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
+        BT_DATA(BT_DATA_MANUFACTURER_DATA, init_data, sizeof(init_data)),
+    };
 
-	err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
-	if (err < 0) {
-		LOG_ERR("Advertising failed to start (err %d)", err);
-		return err;
-	}
+    err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
+    if (err < 0) {
+        LOG_ERR("Advertising failed to start (err %d)", err);
+        return err;
+    }
 
-	LOG_INF("BLE advertising started");
+    LOG_INF("BLE advertising started");
 
-	/* Schedule counter update after 1 second */
-	k_work_schedule(&adv_update_work, K_SECONDS(1));
+    /* Schedule counter update after 1 second */
+    k_work_schedule(&adv_update_work, K_SECONDS(1));
 
-	for (;;) {
-		k_sleep(K_FOREVER);
-	}
+    for (;;) {
+        k_sleep(K_FOREVER);
+    }
 
-	return 0;
+    return 0;
 }
 ```
 
@@ -371,23 +374,17 @@ This example demonstrates how to establish a bidirectional data channel via BLE 
 1. Relevant device tree configurations shall be enabled in `app.overlay` to switch the BLE controller to native Zephyr implementation.
 
 ```dts
-/*
- * BLE UART (NUS) overlay for XIAO nRF54LM20A.
- */
-
-&bt_hci_sdc {
-	status = "disabled";
-};
-
+/* Enable Zephyr native BLE controller (LL SW Split) */
 &bt_hci_controller {
-	status = "okay";
+        status = "okay";
 };
 
 / {
-	chosen {
-		zephyr,bt-hci = &bt_hci_controller;
-	};
+        chosen {
+                zephyr,bt-hci = &bt_hci_controller;
+        };
 };
+
 ```
 
 2. Enable Bluetooth-related configurations in prj.conf
@@ -404,6 +401,7 @@ CONFIG_LOG=y
 CONFIG_BT=y
 CONFIG_BT_PERIPHERAL=y
 CONFIG_BT_DEVICE_NAME="XIAO BLE UART"
+
 ```
 
 3. Set up subscription logic and data feedback mechanism in `main.c`

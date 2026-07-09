@@ -5,6 +5,7 @@ keywords:
   - reCamera
   - Motion Detection
   - Home Assistant
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/Motion_Detection/Pasted_image_20260703155236.png
 slug: /recamera_motion_detection
 sku: 102991897, 100029708, 108990120
 sidebar_position: 13

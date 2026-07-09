@@ -96,15 +96,10 @@ Low-power mode is implemented on the XIAO nRF54LM20A using functions such as Sys
 1. Modify the device tree file ending with `.overlay`.
 
 ```dts
-/* Switch BT HCI from Nordic SDC (needs nrfxlib binary) to Zephyr SW controller */
 / {
     chosen {
         zephyr,bt-hci = &bt_hci_controller;
     };
-};
-
-&bt_hci_sdc {
-    status = "disabled";
 };
 
 &bt_hci_controller {
@@ -123,12 +118,14 @@ Low-power mode is implemented on the XIAO nRF54LM20A using functions such as Sys
         };
     };
 };
+
 ```
 
 2. Modify the `prj.conf` configuration file to enable system power management settings.
 
 ```conf
 CONFIG_GPIO=y
+CONFIG_ARM_MPU=n
 CONFIG_NRFX_POWER=y
 CONFIG_POWEROFF=y
 CONFIG_HWINFO=y
@@ -142,6 +139,9 @@ CONFIG_PM_DEVICE_RUNTIME=y
 CONFIG_BT=y
 CONFIG_BT_BROADCASTER=y
 CONFIG_BT_DEVICE_NAME="XIAO nRF54LM20A"
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+CONFIG_BT_CTLR_ASSERT_DEBUG=n
+CONFIG_BT_CTLR_ASSERT_OVERHEAD_START=n
 ```
 
 3. Modify the main.c program, enable low-power mode with `k_sleep(K_SECONDS(10))` and configure BLE to broadcast messages periodically at a 1-second interval.

@@ -1,5 +1,5 @@
 ---
-title: NRF Connect SDK with Seeed Studio XIAO nRF54LM20A Sense
+title: NRF Connect SDK with XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao

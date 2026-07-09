@@ -2148,7 +2148,14 @@ const sidebars = {
         {
           type: 'category',
           label: 'reSpeaker Clip',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_clip/pt_respeaker_clip_getting_started',
+          },
           items: [
+            'Sensor/reSpeaker_clip/pt_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/pt_respeaker_clip_python_control',
           ],
         },
@@ -4075,6 +4082,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_How_to_run_VLM_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Deploy_JoyAI_VL_Interaction_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Local_OpenClaw(Clawdbot)_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Deploy_Riva_and_Llama2_on_reComputer',

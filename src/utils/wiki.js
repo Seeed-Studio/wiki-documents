@@ -1,6 +1,16 @@
 const docList = [
   [
     {
+      "path": "/recamera_motion_detection",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Motion_Detection/Pasted_image_20260703155236.png",
+      "title": "Motion detection for a selected area based on recamera2002",
+      "date": "2026-07-03",
+      "title_cn": "基于 recamera2002 的选定区域运动检测",
+      "title_ja": "recamera2002 に基づく選択エリアの動体検知",
+      "title_es": "Detección de movimiento para un área seleccionada basada en recamera2002",
+      "title_pt": "Detecção de movimento para uma área selecionada baseada em recamera2002"
+    },
+    {
       "path": "/flash_preempt_rt_kernel_on_recomputer_jetson_jetpack_6_2_1",
       "image": "https://files.seeedstudio.com/wiki/RT_for_jetson/5.png",
       "title": "Flash a PREEMPT_RT Linux Real-Time Kernel on Seeed reComputer Jetson with JetPack 6.2.1",
@@ -9,7 +19,9 @@ const docList = [
       "title_ja": "JetPack 6.2.1 を搭載した Seeed reComputer Jetson に PREEMPT_RT Linux リアルタイムカーネルをフラッシュする",
       "title_es": "Flashear un kernel Linux en tiempo real PREEMPT_RT en Seeed reComputer Jetson con JetPack 6.2.1",
       "title_pt": "Gravar um kernel Linux em tempo real PREEMPT_RT em um Seeed reComputer Jetson com JetPack 6.2.1"
-    },
+    }
+  ],
+  [
     {
       "path": "/em12_g_gnss_module_for_recomputer_robotics_j3011",
       "image": "https://files.seeedstudio.com/wiki/GNSS_for_jetson/2.png",
@@ -19,19 +31,19 @@ const docList = [
       "title_ja": "reComputer Robotics J3011 向け EM12-G GNSS モジュールセットアップガイド",
       "title_es": "Guía de configuración del módulo GNSS EM12-G para reComputer Robotics J3011",
       "title_pt": "Guia de Configuração do Módulo GNSS EM12-G para reComputer Robotics J3011"
-    }
-  ],
-  [
+    },
     {
       "path": "/lerobot_double_arm_so_arm_training",
       "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/double_soarm/Arm_kit.webp",
       "title": "Complete Guide to Double-Arm SO-ARM Training",
       "date": "2026-07-01",
-      "title_cn": "双臂 SO-ARM训练完整指南",
+      "title_cn": "双臂 SO-ARM 训练完整指南",
       "title_ja": "両腕 SO-ARM トレーニング完全ガイド",
       "title_es": "Guía Completa para el Entrenamiento de SO-ARM de Doble Brazo",
       "title_pt": "Guia Completo para Treinamento de SO-ARM de Dois Braços"
-    },
+    }
+  ],
+  [
     {
       "path": "/respeaker_clip_python_control",
       "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png",
@@ -41,6 +53,16 @@ const docList = [
       "title_ja": "Python による reSpeaker Clip 制御",
       "title_es": "Control de reSpeaker Clip con Python",
       "title_pt": "Controle do reSpeaker Clip com Python"
+    },
+    {
+      "path": "/respeaker_clip_getting_started",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/0/2026.7.1.100020126.jpg",
+      "title": "reSpeaker Clip Getting Started",
+      "date": "2026-06-30",
+      "title_cn": "reSpeaker Clip 入门指南",
+      "title_ja": "reSpeaker Clip 入門ガイド",
+      "title_es": "Introducción a reSpeaker Clip",
+      "title_pt": "Introdução ao reSpeaker Clip"
     }
   ],
   [
@@ -69,7 +91,7 @@ const docList = [
     {
       "path": "/lerobot_steering_gear_debugging_tool",
       "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp",
-      "title": "Steering Gear Debugging Tool for SO-ARM in Lerobot",
+      "title": "Steering Gear Debugging Tool for SO-ARM in LeRobot",
       "date": "2026-06-29",
       "title_cn": "Lerobot 中 SO-ARM 的舵机调试工具",
       "title_ja": "Lerobot の SO-ARM 用ステアリングギアデバッグツール",
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "Robotics J601 キャリアボード ハードウェアインターフェースの使用方法",
       "title_es": "Uso de interfaces de hardware de la carrier board Robotics J601",
       "title_pt": "Uso das Interfaces de Hardware da placa carrier Robotics J601"
-    }
-  ],
-  [
-    {
-      "path": "/update_internal_lr1110_firmware",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png",
-      "title": "Update LR1110 Firmware on Wio Tracker 1110",
-      "date": "2026-06-17",
-      "title_cn": "在 Wio Tracker 1110 上更新 LR1110 固件",
-      "title_ja": "Wio Tracker 1110 上の LR1110 ファームウェアを更新する",
-      "title_es": "Actualizar el firmware LR1110 en Wio Tracker 1110",
-      "title_pt": "Atualizar o firmware LR1110 no Wio Tracker 1110"
-    },
-    {
-      "path": "/rebot_arm_b601_rs_lerobot",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png",
-      "title": "Getting Started with LeRobot-based reBot Arm B601-RS",
-      "date": "2026-06-17",
-      "title_cn": "reBot Arm B601-RS入门Lerobot",
-      "title_ja": "LeRobot ベース reBot Arm B601-RS 入門",
-      "title_es": "Primeros pasos con reBot Arm B601-RS basado en LeRobot",
-      "title_pt": "Introdução ao reBot Arm B601-RS baseado em LeRobot"
     }
   ]
 ];

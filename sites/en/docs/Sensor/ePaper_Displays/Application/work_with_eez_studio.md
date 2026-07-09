@@ -141,6 +141,28 @@ Under **General → Display**, set the resolution **for your hardware**:
 
 (7.5" mono on E1001 and 7.3" Spectra 6 on E1002 share the same 800×480 resolution.)
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/32.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="e1003" label="reTerminal E1003">
+
+- **Display width**: 1872
+- **Display height**: 1404
+
+(The 10.3" mono panel on E1003 uses a 1872×1404 resolution.)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/36.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="e1004" label="reTerminal E1004">
+
+- **Display width**: 1200
+- **Display height**: 1600
+
+(The 13.3" Spectra 6 panel on E1004 uses a 1200×1600 resolution.)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/37.png" style={{width:1000, height:'auto'}}/></div>
+
 </TabItem>
 <TabItem value="ee04" label="EE04 + 5.83&quot; mono">
 
@@ -151,8 +173,6 @@ Under **General → Display**, set the resolution **for your hardware**:
 
 </TabItem>
 </Tabs>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/32.png" style={{width:1000, height:'auto'}}/></div>
 
 ## Step 3: Design the UI
 
@@ -236,9 +256,9 @@ Deploy the EEZ Studio output with PlatformIO. PlatformIO provides the project st
 
 If this is your first time using PlatformIO with Seeed ePaper products, follow the setup guide linked below to configure your development environment.
 
-<div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/epaper_work_with_platformio/" target="_blank" rel="noopener noreferrer">
-      <strong><span><font color={'FFFFFF'} size={"4"}>PlatformIO Setup Guide</font></span></strong>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/epaper_work_with_platformio/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}>PlatformIO Guide</font></span></strong>
     </a>
 </div><br />
 

@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO nRF54LM20A Sense と MicroPython
+title: XIAO nRF54LM20A Sense を MicroPython で使う
 description: ''
 keywords:
   - xiao
@@ -16,13 +16,13 @@ updatedAt: '2026-06-22'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_micropython/
 ---
 
-# Seeed Studio XIAO nRF54LM20A Sense と MicroPython
+# Seeed Studio XIAO nRF54LM20A Sense を MicroPython で使う
 
-[MicroPython](https://github.com/micropython/micropython/wiki) は、パフォーマンスが重要なコード向けにネイティブコード出力をサポートする Python インタプリタです。マイコンやリソースに制約のあるシステム向けに最適化された、Python 3.6+ のコア機能のサブセットを提供します。これは CPython とは異なり、その違いについては [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences) のページで詳しく読むことができます。
+[MicroPython](https://github.com/micropython/micropython/wiki) は、性能が重要なコード向けにネイティブコード出力をサポートする Python インタプリタです。マイコンやリソースに制約のあるシステム向けに最適化された、Python 3.6+ のコア機能のサブセットを提供します。これは CPython とは異なり、その違いについては [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences) のページで詳しく読むことができます。
 
 ## XIAO nRF54LM20A Sense で MicroPython を使う
 
-ここでは、**XIAO nRF54LM20A Sense** 上で **MicroPython** を使用し、Windows オペレーティングシステムを前提として [Thonny IDE](https://thonny.org/) でプログラムする方法を順を追って説明します。
+次に、**XIAO nRF54LM20A Sense** 上で **MicroPython** を使用し、Windows オペレーティングシステムを前提として [Thonny IDE](https://thonny.org/) でプログラムする方法を順を追って説明します。
 
 ### ハードウェアの準備
 
@@ -92,14 +92,14 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_micropython/
 
 
 <div class="xiao_nrf54lm20a_flash.zip.zip" style={{textAlign: 'center'}}>
-    <a class="xiao_nrf54lm20a_flash.zip.zip" href="https://github.com/Seeed-Studio/micropython-seeed-boards/tree/master" target="_blank" rel="noopener noreferrer">
+    <a class="xiao_nrf54lm20a_flash.zip.zip" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/tools/xiao_nrf54lm20a_flash_package.zip" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> GitHub リポジトリ</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
 2. フォルダを解凍する
 
-フォルダを任意のディレクトリに解凍すると、次のようなファイル内容が表示されます。
+フォルダを任意のディレクトリに解凍すると、次のファイル群が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/micropython/1.1.png" style={{width:400, height:'auto'}}/></div>
 
@@ -130,11 +130,11 @@ chmod +x xiao_nrf54lm20a_flash.sh
 
 
 
-1. Thonny IDE を開き、右下をクリックしてインタプリタの設定を選択する準備をします。
+1. Thonny IDE を開き、右下をクリックしてインタプリタ設定の選択を行います。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/micropython/3.png" style={{width:800, height:'auto'}}/></div>
 
-2. **MicroPython (generic)** を選択し、デバイスに応じて対応する **Port** を選択して OK をクリックします。
+2. **MicroPython (generic)** を選択し、デバイスに応じて対応する **Port** を選び、OK をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/micropython/4.png" style={{width:800, height:'auto'}}/></div>
 
@@ -146,7 +146,7 @@ chmod +x xiao_nrf54lm20a_flash.sh
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/micropython/6.png" style={{width:800, height:'auto'}}/></div>
 
-5. ファームウェアを書き込んだ後、Python プログラムを作成し、RGB-B LED が 0.5 秒ごとに点滅するようにします。
+5. ファームウェアの書き込み後、Python プログラムを作成し、RGB-B LED が 0.5 秒ごとの周期で点滅するようにします。
 
 ```py
 from machine import Pin
@@ -178,7 +178,7 @@ while True:
 
 ## デジタル
 
-デジタルピンは主に、高レベルと低レベルの論理信号を出力することで、外部センサやアクチュエータのオン・オフ制御に使用されます。Grove Base for XIAO 拡張ボードと標準 Grove 周辺モジュールを組み合わせて、このセクションでは XIAO nRF54LM20A Sense 上で MicroPython を用いてデジタルピンを使用する方法を示します。
+デジタルピンは主に、高低の論理レベルを出力することで外部センサやアクチュエータのオン・オフ制御に使用されます。Grove Base for XIAO 拡張ボードと標準 Grove 周辺モジュールを組み合わせて、このセクションでは XIAO nRF54LM20A Sense で MicroPython を用いてデジタルピンを使用する方法を紹介します。
 
 ### ハードウェアの準備
 
@@ -264,18 +264,18 @@ finally:
 
 1. **インポートとピン定義：** `boards.xiao` の `XiaoPin` は GPIO 制御を提供します。`BUTTON = 0` は D0（P1.0）に対応し、`BUZZER = 1` は D1（P1.31）に対応します。
 2. **初期化：** ボタンピンは入力として設定されます（Grove Button にはオンボードのプルダウン抵抗があり、押されたときに HIGH になります）。ブザーピンは出力として設定され、初期状態は LOW（オフ）です。
-3. **メインループ：** ボタンの状態を連続的に読み取り、その値をそのままブザーに書き込みます。ボタンが押されている（HIGH）とブザーが鳴り、離すと（LOW）ブザーが止まります。10 ms のスリープでビジーループを防ぎます。
+3. **メインループ：** ボタンの状態を継続的に読み取り、その値をそのままブザーに書き込みます。ボタンが押されているとき（HIGH）はブザーがオンになり、離したとき（LOW）はオフになります。10 ms のスリープでビジーループを防ぎます。
 4. **クリーンアップ：** `finally` ブロックで、プログラム終了時にブザーがオフになることを保証します。
 
-### 結果
+### 実行結果
 
-プログラムを実行した後、ボタンを押すとブザーが鳴ります。
+プログラムを実行したあと、ボタンを押すとブザーが鳴ります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.png" style={{width:800, height:'auto'}}/></div>
 
 ## PWM
 
-PWM は一定の周波数でピンのレベルを高速に切り替え、デューティサイクルを動的に調整することで、周辺機器に等価なアナログ信号を出力します。サーボモーターの精密な角度制御や、LED の滑らかな明るさ調整などに広く利用されています。
+PWM は、一定の周波数でピンレベルを高速に切り替え、デューティ比を動的に調整することで、周辺機器に等価なアナログ信号を出力します。サーボモーターの精密な角度制御や、LED の滑らかな明るさ調整などに広く利用されています。
 
 ### ハードウェアの準備
 
@@ -369,11 +369,11 @@ finally:
 **コード解説：**
 
 1. **インポートと定数：** `XiaoPWM` は PWM 出力を提供します。一般的なホビー用サーボは 50 Hz で動作し、0.5〜2.5 ms のパルス幅が 0〜180° の回転に対応します。
-2. **初期化：** PWM チャンネルは D0 上で 50 Hz の周波数に設定して初期化します。初期デューティサイクルは最小パルス幅（0° 位置）に設定されます。
+2. **初期化：** PWM チャンネルは D0 上で 50 Hz の周波数に設定して初期化します。初期デューティ比は最小パルス幅（0° 位置）に設定されます。
 3. **メインループ：** 2 つのネストされたループで、サーボを 0° から 180° までスイープし、その後元に戻します。角度は線形補間によってナノ秒単位のパルス幅に変換されます。現在の角度はコンソールに出力されます。
 4. **クリーンアップ：** `servo.deinit()` は `finally` ブロック内で PWM リソースを解放します。
 
-### 結果
+### 実行結果
 
 ファームウェアを書き込むと、サーボは 0° から 180° まで毎秒 33 ラジアンの速度で回転し、その後 0° まで戻ります。
 
@@ -385,7 +385,7 @@ finally:
 
 ## アナログ
 
-アナログ入力は ADC（アナログ-デジタルコンバータ）に基づいており、主に外部センサからの連続的なアナログ電圧信号を取得するために使用されます。生のデジタルサンプリング値は、線形または非線形の変換アルゴリズムを用いて、実際の工学的な測定値にマッピングできます。
+アナログ入力は ADC（Analog-to-Digital Converter）に基づいており、主に外部センサからの連続的なアナログ電圧信号を取得するために使用されます。生のデジタルサンプリング値は、線形または非線形の変換アルゴリズムを用いて、実際の工学的な測定値にマッピングできます。
 
 ### ハードウェアの準備
 
@@ -458,13 +458,13 @@ except Exception as e:
 **コード解説：**
 
 1. **インポート：** `boards.xiao` の `XiaoADC` は ADC 機能を提供します。`ADC_PIN = 0` は D0（P1.0 / AIN0）に対応します。
-2. **初期化：** `XiaoADC(ADC_PIN)` によって、そのピンがアナログ-デジタル変換用に設定されます。
-3. **メインループ：** `adc.read_uv()` はマイクロボルト（µV）単位の ADC 読み取り値を返します。この値を表示用にボルトに変換します。生の µV 値と電圧値の両方が 500 ms ごとに出力されます。
-4. **エラー処理：** `try/except/finally` によって、正常に終了処理が行われるようにします。
+2. **初期化：** `XiaoADC(ADC_PIN)` によって、ピンがアナログ-デジタル変換用に設定されます。
+3. **メインループ：** `adc.read_uv()` は ADC の読み取り値をマイクロボルト（µV）単位で返します。この値を表示用にボルトに変換します。生の µV 値と電圧値の両方が 500 ms ごとに出力されます。
+4. **エラー処理：** `try/except/finally` によって、正常に終了できるようにします。
 
-### 結果
+### 実行結果
 
-プログラムを書き込んだ後、Grove-Capacitive Soil Moisture Sensor を家庭用の鉢植えに挿し込みます。
+プログラムを書き込んだあと、Grove-Capacitive Soil Moisture Sensor を家庭用の鉢植えに挿し込みます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_3.jpg" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -491,7 +491,7 @@ PC 上でシリアルポートアシスタントを開き、出力値を観察�
 
 ## UART
 
-Universal Asynchronous Receiver/Transmitter（UART）は、標準的な非同期シリアル通信プロトコルです。同期のための外部クロック信号を必要とせず、両端で事前に設定したボーレートに依存してデータの送受信を行います。TX ピンと RX ピンをクロス接続するだけで、全二重のデータリンクを確立できます。
+Universal Asynchronous Receiver/Transmitter（UART）は、標準的な非同期シリアル通信プロトコルです。同期のための外部クロック信号を必要とせず、両端で事前に設定したボーレートに基づいてデータの送受信を行います。TX ピンと RX ピンをクロス接続するだけで、全二重のデータリンクを確立できます。
 
 ### ハードウェアの準備
 
@@ -521,7 +521,7 @@ Universal Asynchronous Receiver/Transmitter（UART）は、標準的な非同期
 
 ### ソフトウェアの準備
 
-XIAO nRF54LM20A Sense のピン配置によると、**D6 (P1.08)** と **D7 (P1.09)** は UART 通信の TX および RX ピンとして、ボーレート 115200 で使用されます。
+XIAO nRF54LM20A Sense のピン配置によると、**D6 (P1.08)** と **D7 (P1.09)** が UART 通信の TX および RX ピンとして、ボーレート 115200 で使用されます。
 
 :::tip
 
@@ -580,13 +580,13 @@ finally:
 **コードの説明：**
 
 1. **インポートとピンマッピング：** `machine.UART` はハードウェア UART へのアクセスを提供します。`xiao.pin(n)` は、ボード定義から指定したデジタルピン番号に対応するポートとピンのタプルを返します。
-2. **初期化：** UART 1 は、TX を D6 (P1.08)、RX を D7 (P1.09) として、ボーレート 115200 で設定されます。起動時にウェルカムメッセージが送信されます。
-3. **メインループ：** 受信したデータをエコーバックします。UART が動作し続けていることを確認するため、5 秒ごとにハートビートメッセージが送信されます。
+2. **初期化：** UART 1 は、D6 (P1.08) を TX、D7 (P1.09) を RX として、ボーレート 115200 で設定されます。起動時にウェルカムメッセージが送信されます。
+3. **メインループ：** 受信したデータをエコーバックします。UART が動作し続けていることを確認するため、5 秒ごとにハートビートメッセージを送信します。
 4. **クリーンアップ：** `uart.deinit()` は、`finally` ブロック内で UART ハードウェアを解放します。
 
 ### 結果
 
-1. 以下の表に従って配線します：
+1. 次の表に従って配線します：
 
 | XIAO nRF54LM20A Sense | CH340 |
 | --------------------- | ----- |
@@ -630,7 +630,7 @@ I2C は同期式の半二重データ通信プロトコルです。SCL クロッ
 
 ### ソフトウェアの準備
 
-XIAO nRF54LM20A Sense のピン配置によると、**D4 (P1.03)** と **D5 (P1.07)** は、それぞれ I2C の SDA および SCL ピンとして設定されています。この例では、I2C 経由で SSD1306 128×64 OLED ディスプレイを駆動します。
+XIAO nRF54LM20A Sense のピン配置によると、**D4 (P1.03)** と **D5 (P1.07)** が、それぞれ I2C の SDA および SCL ピンとして設定されています。この例では、I2C 経由で SSD1306 128×64 OLED ディスプレイを駆動します。
 
 :::tip
 
@@ -849,13 +849,13 @@ except Exception as e:
 
 **コード解説：**
 
-1. **インポートとピン定義：** `boards.xiao` の `XiaoI2C` は I2C バス管理を提供します。SDA は D4（P1.03）、SCL は D5（P1.07）に接続され、バスは 400 kHz で動作します。
+1. **インポートとピン定義：** `boards.xiao` の `XiaoI2C` は I2C バス管理を提供します。SDA は D4（P1.03）、SCL は D5（P1.07）に割り当てられ、バスは 400 kHz で動作します。
 2. **SSD1306 ドライバ：** SSD1306 OLED ディスプレイは、生の I2C コマンド／データ書き込みで制御します。`ssd1306_write_command()`、`ssd1306_write_data()`、`ssd1306_clear()`、`ssd1306_init()`、`ssd1306_draw_text()` のヘルパー関数によって、最小限のドライバを構成しています。
-3. **フォントデータ：** 8×8 ビットマップフォントのディクショナリが、印字可能な ASCII 文字のグリフ定義を提供します。`ssd1306_draw_text()` 関数は、テキスト文字列をグリフビットマップで検索し、それをディスプレイに送信することで描画します。
+3. **フォントデータ：** 8×8 ビットマップフォントのディクショナリが、印字可能な ASCII 文字のグリフ定義を提供します。`ssd1306_draw_text()` 関数は、テキスト文字列をグリフビットマップに引き当ててディスプレイに送信することで描画します。
 4. **メインロジック：** I2C バスをスキャンして、SSD1306 がアドレス `0x3C` に存在することを確認します。ディスプレイを初期化し、中央揃えの 2 行のテキスト（"NRF54LM20A" と "HELLO WORLD"）を描画します。
-5. **クリーンアップ：** `try/except` ブロックにより、キーボード割り込みやエラー発生時に、正常にシャットダウンできるようにします。
+5. **クリーンアップ：** `try/except` ブロックにより、キーボード割り込みやエラー発生時に正常に終了処理を行います。
 
-### 結果
+### 実行結果
 
 
 プログラムの実行後、テキスト **NRF54LM20A** と **HELLO WORLD** が画面に表示され、ステータス情報が USB シリアルポート経由で出力されます。
@@ -864,7 +864,7 @@ except Exception as e:
 
 ## SPI
 
-SPI は、高速で同期式かつフルデュプレックスの通信プロトコルです。データ同期のための専用 SCK クロックラインに依存し、MOSI、MISO、SCK、CS/SS ピンからなる 4 線式トポロジを採用しています。高解像度ディスプレイの駆動、Flash/SD カードストレージ、高周波サンプリングセンサなどに広く利用されています。
+SPI は、高速で同期式かつフルデュプレックスの通信プロトコルです。データ同期のための専用 SCK クロックラインに依存し、MOSI、MISO、SCK、CS/SS ピンから成る 4 線トポロジを採用します。高解像度ディスプレイの駆動、Flash/SD カードストレージ、高周波サンプリングセンサなどで広く利用されています。
 
 ### ハードウェアの準備
 
@@ -1239,7 +1239,7 @@ while True:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_spi_1.gif" style={{width:400, height:'auto'}}/></div>
 
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 

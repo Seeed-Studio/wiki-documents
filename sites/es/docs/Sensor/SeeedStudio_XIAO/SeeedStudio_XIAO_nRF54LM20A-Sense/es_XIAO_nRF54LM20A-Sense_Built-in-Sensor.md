@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-06-17'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_onboard/
 ---
 
@@ -51,7 +51,7 @@ El XIAO nRF54LM20A Sense está equipado con abundantes sensores integrados para 
 
 ## Preparación de hardware
 
-Este artículo se desarrolla sobre la base del XIAO nRF54LM20A Sense, y necesitas preparar el hardware correspondiente con antelación.
+Este artículo se desarrolla basándose en el XIAO nRF54LM20A Sense, y necesitas preparar el hardware correspondiente con antelación.
 
 <div className="table-center">
 <table align="center">
@@ -93,30 +93,31 @@ El LSM6DS3TR-C es un sensor de seis ejes que integra un acelerómetro digital de
 
 :::tip
 
-- Para el pinout del XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Sense Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#hardware-overview) para ver los detalles.
+- Para ver el pinout del XIAO nRF54LM20A, haz clic en [XIAO nRF54LM20A Sense Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/#hardware-overview) para ver los detalles.
 
 :::
 
 ```dtsi
 &pmic_i2c {
-	sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
-	scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
-	status = "okay";
+        sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
+        scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
+        status = "okay";
 };
 
 &pmic {
-	regulators {
-		imu_vdd: LDO1 {
-			regulator-min-microvolt = <3300000>;
-			regulator-max-microvolt = <3300000>;
-			regulator-boot-on;
-		};
-	};
+        regulators {
+                imu_vdd: LDO1 {
+                        regulator-min-microvolt = <3300000>;
+                        regulator-max-microvolt = <3300000>;
+                        regulator-boot-on;
+                };
+        };
 };
 
 &lsm6ds3tr_c {
-	zephyr,deferred-init;
+        zephyr,deferred-init;
 };
+
 
 ```
 
@@ -127,6 +128,7 @@ CONFIG_STDOUT_CONSOLE=y
 
 CONFIG_LOG=y
 CONFIG_LOG_BACKEND_UART=y
+CONFIG_LOG_BACKEND_SHOW_COLOR=n
 CONFIG_LOG_DEFAULT_LEVEL=3
 CONFIG_MAIN_STACK_SIZE=2048
 CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
@@ -139,6 +141,7 @@ CONFIG_LSM6DSL=y
 CONFIG_LSM6DSL_TRIGGER_GLOBAL_THREAD=y
 CONFIG_CBPRINTF_FP_SUPPORT=y
 CONFIG_CBPRINTF_COMPLETE=y
+
 ```
 
 3. Escribe un programa para enviar los datos adquiridos del acelerómetro digital de 3 ejes y del giroscopio digital de 3 ejes a través del puerto serie USB.
@@ -166,191 +169,191 @@ LOG_MODULE_REGISTER(zephyr_imu, LOG_LEVEL_INF);
  */
 #if defined(DT_N_NODELABEL_power_en)
 static const struct device *const power_en_dev =
-	DEVICE_DT_GET(DT_NODELABEL(power_en));
+    DEVICE_DT_GET(DT_NODELABEL(power_en));
 #endif
 
 #if defined(DT_N_NODELABEL_imu_vdd)
 static const struct device *const imu_vdd_dev =
-	DEVICE_DT_GET(DT_NODELABEL(imu_vdd));
+    DEVICE_DT_GET(DT_NODELABEL(imu_vdd));
 #endif
 
 static int enable_imu_power(void)
 {
 #if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
-	int ret;
+    int ret;
 #endif
 
 #if defined(DT_N_NODELABEL_power_en)
-	if (!device_is_ready(power_en_dev)) {
-		LOG_ERR("power_en regulator is not ready");
-		return -ENODEV;
-	}
-	ret = regulator_enable(power_en_dev);
-	if (ret < 0 && ret != -EALREADY) {
-		LOG_ERR("Failed to enable power_en: %d", ret);
-		return ret;
-	}
+    if (!device_is_ready(power_en_dev)) {
+        LOG_ERR("power_en regulator is not ready");
+        return -ENODEV;
+    }
+    ret = regulator_enable(power_en_dev);
+    if (ret < 0 && ret != -EALREADY) {
+        LOG_ERR("Failed to enable power_en: %d", ret);
+        return ret;
+    }
 #endif
 
 #if defined(DT_N_NODELABEL_imu_vdd)
-	if (!device_is_ready(imu_vdd_dev)) {
-		LOG_ERR("imu_vdd regulator is not ready");
-		return -ENODEV;
-	}
-	ret = regulator_enable(imu_vdd_dev);
-	if (ret < 0 && ret != -EALREADY) {
-		LOG_ERR("Failed to enable imu_vdd: %d", ret);
-		return ret;
-	}
+    if (!device_is_ready(imu_vdd_dev)) {
+        LOG_ERR("imu_vdd regulator is not ready");
+        return -ENODEV;
+    }
+    ret = regulator_enable(imu_vdd_dev);
+    if (ret < 0 && ret != -EALREADY) {
+        LOG_ERR("Failed to enable imu_vdd: %d", ret);
+        return ret;
+    }
 #endif
 
 #if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
-	/* Wait for power rail to stabilize */
-	k_sleep(K_MSEC(20));
+    /* Wait for power rail to stabilize */
+    k_sleep(K_MSEC(20));
 #endif
 
-	return 0;
+    return 0;
 }
 
 static inline float out_ev(struct sensor_value *val)
 {
-	return (val->val1 + (float)val->val2 / 1000000);
+    return (val->val1 + (float)val->val2 / 1000000);
 }
 
 static void fetch_and_display(const struct device *dev)
 {
-	struct sensor_value x, y, z;
-	static int trig_cnt;
+    struct sensor_value x, y, z;
+    static int trig_cnt;
 
-	trig_cnt++;
+    trig_cnt++;
 
-	/* lsm6dsl accel */
-	sensor_sample_fetch_chan(dev, SENSOR_CHAN_ACCEL_XYZ);
-	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_X, &x);
-	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
-	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
+    /* lsm6dsl accel */
+    sensor_sample_fetch_chan(dev, SENSOR_CHAN_ACCEL_XYZ);
+    sensor_channel_get(dev, SENSOR_CHAN_ACCEL_X, &x);
+    sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
+    sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
 
-	LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
-			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
+    LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
+            (double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
-	/* lsm6dsl gyro */
-	sensor_sample_fetch_chan(dev, SENSOR_CHAN_GYRO_XYZ);
-	sensor_channel_get(dev, SENSOR_CHAN_GYRO_X, &x);
-	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
-	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
+    /* lsm6dsl gyro */
+    sensor_sample_fetch_chan(dev, SENSOR_CHAN_GYRO_XYZ);
+    sensor_channel_get(dev, SENSOR_CHAN_GYRO_X, &x);
+    sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
+    sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
 
-	LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
-			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
+    LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
+            (double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
-	LOG_INF("trig_cnt:%d", trig_cnt);
+    LOG_INF("trig_cnt:%d", trig_cnt);
 }
 
 static int set_sampling_freq(const struct device *dev)
 {
-	int ret = 0;
-	struct sensor_value odr_attr;
+    int ret = 0;
+    struct sensor_value odr_attr;
 
-	/* set accel/gyro sampling frequency to 12.5 Hz */
-	odr_attr.val1 = 12;
-	odr_attr.val2 = 500000;
+    /* set accel/gyro sampling frequency to 12.5 Hz */
+    odr_attr.val1 = 12;
+    odr_attr.val2 = 500000;
 
-	ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
-			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
-	if (ret != 0) {
-		LOG_ERR("Cannot set sampling frequency for accelerometer.");
-		return ret;
-	}
+    ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
+            SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+    if (ret != 0) {
+        LOG_ERR("Cannot set sampling frequency for accelerometer.");
+        return ret;
+    }
 
-	ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
-			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
-	if (ret != 0) {
-		LOG_ERR("Cannot set sampling frequency for gyro.");
-		return ret;
-	}
+    ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
+            SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+    if (ret != 0) {
+        LOG_ERR("Cannot set sampling frequency for gyro.");
+        return ret;
+    }
 
-	return 0;
+    return 0;
 }
 
 #ifdef CONFIG_LSM6DSL_TRIGGER
 static void trigger_handler(const struct device *dev,
-			    const struct sensor_trigger *trig)
+                const struct sensor_trigger *trig)
 {
-	fetch_and_display(dev);
+    fetch_and_display(dev);
 }
 
 static void test_trigger_mode(const struct device *dev)
 {
-	struct sensor_trigger trig;
+    struct sensor_trigger trig;
 
-	if (set_sampling_freq(dev) != 0) {
-		return;
-	}
+    if (set_sampling_freq(dev) != 0) {
+        return;
+    }
 
-	trig.type = SENSOR_TRIG_DATA_READY;
-	trig.chan = SENSOR_CHAN_ACCEL_XYZ;
+    trig.type = SENSOR_TRIG_DATA_READY;
+    trig.chan = SENSOR_CHAN_ACCEL_XYZ;
 
-	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
-		LOG_ERR("Could not set sensor type and channel");
-		return;
-	}
+    if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
+        LOG_ERR("Could not set sensor type and channel");
+        return;
+    }
 
-	while (1) {
-		k_sleep(K_MSEC(1000));
-	}
+    while (1) {
+        k_sleep(K_MSEC(1000));
+    }
 }
 
 #else
 static void test_polling_mode(const struct device *dev)
 {
-	if (set_sampling_freq(dev) != 0) {
-		return;
-	}
+    if (set_sampling_freq(dev) != 0) {
+        return;
+    }
 
-	while (1) {
-		fetch_and_display(dev);
-		k_sleep(K_MSEC(1000));
-	}
+    while (1) {
+        fetch_and_display(dev);
+        k_sleep(K_MSEC(1000));
+    }
 }
 #endif
 
 int main(void)
 {
-	const struct device *const dev = DEVICE_DT_GET(IMU_NODE);
-	int ret;
+    const struct device *const dev = DEVICE_DT_GET(IMU_NODE);
+    int ret;
 
-	/* On nrf54lm20a, enable power_en + imu_vdd before accessing IMU.
-	 * On nrf54l15, these nodes don't exist; function returns immediately.
-	 */
-	ret = enable_imu_power();
-	if (ret < 0) {
-		LOG_ERR("Failed to enable IMU power: %d", ret);
-		return 0;
-	}
+    /* On nrf54lm20a, enable power_en + imu_vdd before accessing IMU.
+     * On nrf54l15, these nodes don't exist; function returns immediately.
+     */
+    ret = enable_imu_power();
+    if (ret < 0) {
+        LOG_ERR("Failed to enable IMU power: %d", ret);
+        return 0;
+    }
 
-	/* On nrf54lm20a, IMU has zephyr,deferred-init; must init manually.
-	 * On nrf54l15, device auto-inits at boot; device_is_ready() is true.
-	 */
-	if (!device_is_ready(dev)) {
-		ret = device_init(dev);
-		if (ret < 0 && ret != -EALREADY) {
-			LOG_ERR("Failed to initialize %s: %d", dev->name, ret);
-			return 0;
-		}
-	}
+    /* On nrf54lm20a, IMU has zephyr,deferred-init; must init manually.
+     * On nrf54l15, device auto-inits at boot; device_is_ready() is true.
+     */
+    if (!device_is_ready(dev)) {
+        ret = device_init(dev);
+        if (ret < 0 && ret != -EALREADY) {
+            LOG_ERR("Failed to initialize %s: %d", dev->name, ret);
+            return 0;
+        }
+    }
 
-	if (!device_is_ready(dev)) {
-		LOG_ERR("%s: device not ready.", dev->name);
-		return 0;
-	}
+    if (!device_is_ready(dev)) {
+        LOG_ERR("%s: device not ready.", dev->name);
+        return 0;
+    }
 
 #ifdef CONFIG_LSM6DSL_TRIGGER
-	LOG_INF("Testing LSM6DSL sensor in trigger mode.");
-	test_trigger_mode(dev);
+    LOG_INF("Testing LSM6DSL sensor in trigger mode.");
+    test_trigger_mode(dev);
 #else
-	LOG_INF("Testing LSM6DSL sensor in polling mode.");
-	test_polling_mode(dev);
+    LOG_INF("Testing LSM6DSL sensor in polling mode.");
+    test_polling_mode(dev);
 #endif
-	return 0;
+    return 0;
 }
 ```
 </details>
@@ -402,7 +405,7 @@ Este es un ejemplo basado en la IMU integrada de XIAO nRF54LM20A Sense. Recoge d
 
 - **Control de nivel de agua por inclinación** — Ajusta la altura del nivel de agua mediante la inclinación de alabeo hacia la izquierda y la derecha
 - **Animación de olas** — Superposición de ondas de tres capas de frecuencia, propagación de ondas 2D y efecto de reflexión en los bordes
-- **Inercia del fluido** — Superficie de agua con momento; una inclinación rápida provoca sobreimpulso y posterior vaivén de oscilación
+- **Inercia del fluido** — Superficie de agua con momento; una inclinación rápida provoca sobreimpulso y posterior vaivén de retorno
 - **Detección de volteo** — La pantalla se invierte automáticamente cuando la placa se voltea
 - **Color dinámico** — Cambio aleatorio de gradiente de tonos oceánicos para cada columna
 
@@ -537,9 +540,9 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### Despertar por IMU
 
-En esta rutina, el canal verde de RGB se enciende y apaga después del encendido, luego el sistema entra en modo de suspensión de ultra bajo consumo. Cuando la placa detecta un toque, XIAO nRF54LM20A Sense se despertará mediante una interrupción. El evento de toque se registrará e imprimirá a través del puerto serie.
+En esta rutina, el canal verde del RGB se enciende y apaga después del encendido, luego el sistema entra en modo de suspensión de ultra bajo consumo. Cuando la placa detecta un toque, XIAO nRF54LM20A Sense se despertará mediante una interrupción. El evento de toque se registrará e imprimirá a través del puerto serie.
 
-Descarga la rutina para implementar la función de despertar por IMU.
+Descarga la rutina para implementar la función de despertar mediante la IMU.
 
 1. Descarga el programa [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) y reemplaza con él el contenido de main.c.
 
@@ -639,7 +642,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
 <br/>
-- Después de flashear y encender, el LED RGB-G parpadeará brevemente. Toca en cualquier lugar de la placa para encender el LED RGB-G.
+- Después de flashear y encender, el LED RGB-G parpadeará brevemente. Toca en cualquier parte de la placa para encender el LED RGB-G.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_3_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -657,9 +660,9 @@ La posición de detección es solo de referencia. El reconocimiento preciso de l
 
 El chip adoptado por XIAO nRF54LM20A Sense está equipado con recursos de hardware GRTC integrados, lo que permite funciones de RTC sin módulos RTC adicionales.
 
-El RTC admite el conteo de marcas de tiempo y puede registrar el tiempo de funcionamiento incluso después de un corte de energía, lo que facilita el registro de logs y el seguimiento del tiempo.
+El RTC admite el conteo de marcas de tiempo y puede registrar el tiempo de funcionamiento incluso después de un fallo de alimentación, lo que facilita el registro de logs y el seguimiento del tiempo.
 
-Esta sección presenta un programa de ejemplo implementado en XIAO nRF54LM20A Sense. Después de encender, obtiene marcas de tiempo a partir del momento de compilación mediante el RTC y muestra los datos cada segundo. Después de entrar en el modo System OFF, el sistema será despertado por la alarma del RTC para continuar el conteo.
+Esta sección presenta un programa de ejemplo implementado en XIAO nRF54LM20A Sense. Después de encender, obtiene marcas de tiempo a partir del momento de compilación mediante el RTC y muestra los datos cada segundo. Tras entrar en el modo System OFF, el sistema será despertado por la alarma del RTC para continuar el conteo.
 
 1. Copia [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) en el archivo main.c. Usa las funciones del RTC para imprimir la marca de tiempo.
 
@@ -723,14 +726,14 @@ CONFIG_NEWLIB_LIBC=y
 
 ### Resultado
 
-- El programa comienza a contar desde el momento de la compilación y la grabación. Abre la herramienta de puerto serie para observar el efecto de ejecución, y se implementan todas las funciones esperadas.
+- El programa comienza a contar desde el momento de la compilación y la grabación en la memoria flash. Abre la herramienta de puerto serie para observar el efecto de ejecución, y se implementan todas las funciones esperadas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 ## MIC 
 
-El XIAO nRF54LM20A Sense está equipado con el micrófono digital MEMS MSM261DGT006 para entrada de voz. Se conecta directamente a través de la interfaz PDM sin necesidad de un ADC. Es adecuado para dispositivos portátiles, dispositivos inteligentes, reconocimiento de voz, grabación de audio y otros escenarios de aplicación que requieren funciones de detección acústica.
+El XIAO nRF54LM20A Sense está equipado con el micrófono digital MEMS MSM261DGT006 para entrada de voz. Se conecta directamente a través de la interfaz PDM sin necesidad de un ADC. Es adecuado para dispositivos wearables, dispositivos inteligentes, reconocimiento de voz, grabación de audio y otros escenarios de aplicación que requieren funciones de detección acústica.
 
 :::tip
 
@@ -742,14 +745,14 @@ Entre la serie XIAO nRF54LM20A, solo el XIAO nRF54M20A Sense está equipado con 
 
 Esta sección demuestra la función del micrófono mediante un ejemplo de voz. El proceso específico es el siguiente:
 
-- Pulsa el botón BOOT, el LED RGB-G permanecerá encendido y comenzará la grabación; púlsalo de nuevo para detener la grabación (máximo 10 segundos).
+- Pulsa el botón BOOT, el LED RGB-G permanecerá encendido y comenzará la grabación; vuelve a pulsarlo para detener la grabación (máximo 10 segundos).
 - Después de la grabación, el archivo de audio se enviará al ordenador host mediante Bluetooth. El LED RGB-G parpadea durante la transmisión.
 - Ejecuta el script de recepción en Windows para guardar el archivo de audio en el escritorio.
 - El LED RGB-G se apaga después de que se complete la transmisión.
 
 1. Copia el programa desde <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> en `main.c`.
 
-2. Modifica el archivo device tree `app.overlay` para enlazar el nodo BLE.
+2. Modifica el archivo del device tree `app.overlay` para enlazar el nodo BLE.
 
 ```dts
 
@@ -810,7 +813,7 @@ dmic_dev: &pdm20 {
 };
 ```
 
-2. Modifica el archivo `prj.conf` para habilitar las configuraciones de Bluetooth y micrófono, y establece el nombre del dispositivo Bluetooth como **XIAO MIC**.
+2. Modifica el archivo `prj.conf` para habilitar las configuraciones de Bluetooth y del micrófono, y establece el nombre del dispositivo Bluetooth como **XIAO MIC**.
 
 ```prj
 # Audio / DMIC
@@ -895,7 +898,7 @@ CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
 
 ### Resultado
 
-Compila y graba el programa, luego utiliza un ordenador con Windows para recibir el audio grabado mediante Bluetooth con la ayuda de scripts.
+Compila y graba el programa en la placa, luego utiliza un ordenador con Windows para recibir el audio grabado mediante Bluetooth con la ayuda de scripts.
 
 1. Ejecuta el script de Python
 
@@ -1063,14 +1066,14 @@ python ble_recorder_receiver.py
 El UUID BLE ya está configurado en el programa de Python, por lo que se conectará automáticamente después de ejecutar el script.
 :::
 
-2. Verificar el resultado
+2. Comprobar el resultado
 
-- Pulsa la tecla BOOT para empezar a grabar. El LED RGB verde fijo indica que la grabación está en curso. Puedes hablar en voz alta hacia el micrófono y, a continuación, pulsar de nuevo la tecla BOOT para detener la grabación. El LED RGB verde parpadeando significa que se está transmitiendo el archivo de audio.
+- Pulsa la tecla BOOT para empezar a grabar. El LED RGB verde fijo indica que la grabación está en curso. Puedes hablar en voz alta hacia el micrófono y, a continuación, pulsar de nuevo la tecla BOOT para detener la grabación. El LED RGB verde parpadeante significa que se está transmitiendo el archivo de audio.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- Abre el puerto serie, se imprimirá el registro. Configura la velocidad en baudios a 921600.
+- Abre el puerto serie, se imprimirá el registro. Por favor, ajusta la velocidad en baudios a 921600.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
