@@ -7,11 +7,11 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /xiao_esp32c5_getting_started
 last_update:
-  date: 11/26/2025
+  date: 7/9/2026
   author: Zeller
   sidebar_position: 0
 createdAt: '2025-12-15'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/es/xiao_esp32c5_getting_started/
 ---
 ## Introducción
@@ -88,7 +88,7 @@ url: https://wiki.seeedstudio.com/es/xiao_esp32c5_getting_started/
             <td>Botón de reinicio / Boot</td>
             <td>Botón de reinicio / Boot</td>
             <td>Botón de reinicio / Boot</td>
-            <td>Botón de reinicio / botón Boot</td>
+            <td>Botón de reinicio / Botón de Boot</td>
         </tr>
         <tr>
             <th>LEDs integrados</th>
@@ -115,10 +115,10 @@ url: https://wiki.seeedstudio.com/es/xiao_esp32c5_getting_started/
 - **Mejor rendimiento RF:** Antena RF externa incluida.
 - **Chip de carga de batería:** Admite la gestión de carga y descarga de baterías de litio.
 - **Ricos recursos en chip:** 384 KB de SRAM en chip, 320 KB de ROM
-- **Tamaño ultra pequeño:** Tan pequeño como un pulgar (21x17.8mm), factor de forma clásico de la serie XIAO para dispositivos vestibles y proyectos pequeños
+- **Tamaño ultra pequeño:** Tan pequeño como un pulgar (21x17.8mm), factor de forma clásico de la serie XIAO para dispositivos portátiles y proyectos pequeños
 - **Funciones de seguridad fiables**: Aceleradores de hardware criptográfico que admiten AES-128/256, hash de la familia SHA, HMAC, un periférico dedicado de firma digital y Secure Boot (V2).
-- **Interfaces ricas**: 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (compatibles con PWM), 5×canales ADC y una interfaz de almohadilla de conexión JTAG (pads en el lado inverso).
-- Componentes en un solo lado, diseño de montaje en superficie
+- **Interfaces ricas**: 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (compatibles con PWM), 5×canales ADC y una interfaz de almohadilla de conexión JTAG (almohadillas en el lado inverso).
+- Componentes en un solo lado, diseño para montaje en superficie
 
 ## Descripción general del hardware
 
@@ -167,7 +167,7 @@ Para permitirte comenzar más rápido con la XIAO ESP32-C5, lee la preparación 
 
 Necesitas preparar lo siguiente:
 
-- 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
+- 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html)
 - 1 x Ordenador
 - 1 x Cable USB tipo C
 
@@ -199,10 +199,10 @@ Algunos cables USB solo pueden suministrar energía y no pueden transferir datos
 La herramienta de programación recomendada para la XIAO ESP32-C5 es el Arduino IDE, por lo que debes completar la instalación de Arduino como parte de la preparación del software.
 
 :::tip
-Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
+Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consultes [Primeros pasos con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-- **Paso 1.** Descarga e instala la versión estable de Arduino IDE de acuerdo con tu sistema operativo.
+- **Paso 1.** Descarga e instala la versión estable de Arduino IDE según tu sistema operativo.
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
       <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
@@ -306,7 +306,7 @@ void setup(){
 void loop(){}
 ```
 
-Si eres lo suficientemente rápido para encender el monitor serie antes de que el XIAO entre en sueño profundo, entonces podrás ver el mensaje de salida como se muestra a continuación. Esto significa que el XIAO ahora está **dormido**. Luego también puedes verlo y activarlo presionando el botón. También puedes observar el estado de encendido y apagado del **LED L** para comprobar si el dispositivo se ha despertado. Una vez que se despierte, mostrará un efecto de parpadeo.
+Si eres lo suficientemente rápido como para encender el monitor serie antes de que el XIAO entre en sueño profundo, entonces podrás ver el mensaje de salida como se muestra a continuación. Esto significa que el XIAO ahora está **dormido**. Luego también puedes verlo y activarlo presionando el botón. También puedes observar el estado de encendido y apagado del **LED L** para comprobar si el dispositivo se ha despertado. Una vez que se despierte, mostrará un efecto de parpadeo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -315,7 +315,7 @@ Después de entrar en el modo de sueño profundo, el puerto del XIAO desaparecer
 :::
 
 :::caution
-El XIAO ESP32-C5 admite la activación por GPIO y por temporizador. Para evitar la pérdida de capacidades de depuración de hardware y el aumento de la dificultad en el flasheo de firmware durante el desarrollo de bajo consumo, se recomienda encarecidamente que los pines JTAG (MTMS, MTDI, MTCK, MTDO) se reserven para uso exclusivo y no se utilicen como fuentes de activación para el modo de sueño profundo.
+El XIAO ESP32-C5 admite activación por GPIO y por temporizador. Para evitar la pérdida de capacidades de depuración de hardware y el aumento de la dificultad en el flasheo de firmware durante el desarrollo de bajo consumo, se recomienda encarecidamente que los pines JTAG (MTMS, MTDI, MTCK, MTDO) se reserven para uso exclusivo y no se empleen como fuentes de activación para el modo de sueño profundo.
 :::
 
 ## Uso de la batería
@@ -372,7 +372,7 @@ void loop() {
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
 :::tip
-Según la hoja de datos, el rango efectivo de medición del ESP32-C5 cubre 0~3300 mV. Por lo tanto, el circuito integrado de adquisición de voltaje de batería del XIAO ESP32-C5 está diseñado con dos resistencias de 100K para la división de voltaje, lo que permite una lectura precisa de los valores.
+Según la hoja de datos, el rango efectivo de medición del ESP32-C5 cubre 0~3300 mV. Por lo tanto, el circuito de adquisición de voltaje de batería incorporado del XIAO ESP32-C5 está diseñado con dos resistencias de 100K para la división de voltaje, lo que permite una lectura precisa de los valores.
 :::
 
 ## Recursos
