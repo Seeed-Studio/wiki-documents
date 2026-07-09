@@ -1,5 +1,5 @@
 ---
-description: Crie interfaces profissionais baseadas em LVGL para produtos ePaper da Seeed com o EEZ Studio e depois faça o deploy com PlatformIO — funciona em toda a linha reTerminal E e na XIAO ePaper Display Board (EE04).
+description: Crie interfaces profissionais baseadas em LVGL para produtos ePaper da Seeed com o EEZ Studio e depois faça o deploy com PlatformIO – funciona em toda a reTerminal E Series e na XIAO ePaper Display Board (EE04).
 title: Trabalhar com EEZ Studio
 keywords:
   - display ePaper
@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" style={{width:600, height:'auto'}}/></div>
 
-Este guia conduz você pelo processo de criar uma interface de usuário profissional com a ferramenta de design visual [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/), gerar código LVGL e fazer o deploy em um produto ePaper da Seeed com PlatformIO. O fluxo é o mesmo para todas as placas compatíveis — as únicas diferenças são a resolução do display e o ambiente da placa, que apresentamos em abas.
+Este guia conduz você pelo processo de projetar uma interface de usuário profissional com a ferramenta de design visual [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/), gerar código LVGL e fazer o deploy em um produto ePaper da Seeed com PlatformIO. O fluxo é o mesmo para todas as placas compatíveis — as únicas diferenças são a resolução do display e o ambiente da placa, que apresentamos em abas.
 
 ## Hardware compatível
 
@@ -43,7 +43,7 @@ Este guia conduz você pelo processo de criar uma interface de usuário profissi
     </tr>
     <tr>
       <td align="center">7,5" mono / 7,3" Spectra 6 / 10,3" mono / 13,3" Spectra 6</td>
-      <td align="center">Driver universal — combine com qualquer uma de nossas telas ePaper Seeed de 24 pinos ou 50 pinos</td>
+      <td align="center">Driver universal — combine com qualquer uma das nossas telas ePaper Seeed de 24 pinos ou 50 pinos</td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -69,7 +69,7 @@ Em resumo, o EEZ Studio atua como uma ponte entre hardware e software, permitind
 ### Por que usar o EEZ Studio?
 
 - **Design visual de interface** — crie UIs complexas com um editor WYSIWYG.
-- **Prototipagem rápida** — teste e valide ideias de design rapidamente.
+- **Prototipagem rápida** — teste e valide rapidamente ideias de design.
 - **Multiplataforma** — crie aplicativos que rodam em vários sistemas operacionais e alvos embarcados.
 - **Integração de hardware** — conecte diretamente instrumentos de laboratório, dispositivos IoT e placas personalizadas.
 - **Código aberto** — conjunto de ferramentas orientado pela comunidade com suporte premium opcional.
@@ -90,8 +90,8 @@ Ambos são ferramentas de design de GUI, mas têm públicos-alvo ligeiramente di
         </tr>
         <tr>
             <th>Usuários-alvo</th>
-            <td>Engenheiros, desenvolvedores de produto, makers, designers de instrumentos de teste/laboratório</td>
-            <td>Desenvolvedores de UI embarcada, hobbystas, designers de produtos IoT</td>
+            <td>Engenheiros, desenvolvedores de produto, makers, projetistas de instrumentos de laboratório/teste</td>
+            <td>Desenvolvedores de UI embarcada, hobbistas, projetistas de produtos IoT</td>
         </tr>
         <tr>
             <th>Integração de hardware</th>
@@ -105,7 +105,7 @@ Ambos são ferramentas de design de GUI, mas têm públicos-alvo ligeiramente di
         </tr>
         <tr>
             <th>Fluxo de trabalho</th>
-            <td>Prototipar, simular e controlar dispositivos reais em um único ambiente</td>
+            <td>Prototipar, simular e controlar dispositivos reais a partir de um único ambiente</td>
             <td>Principalmente gera código de UI para ser compilado em um projeto embarcado</td>
         </tr>
     </tbody>
@@ -139,7 +139,29 @@ Em **General → Display**, defina a resolução **para o seu hardware**:
 - **Display width**: 800
 - **Display height**: 480
 
-(O display de 7,5" mono no E1001 e o de 7,3" Spectra 6 no E1002 compartilham a mesma resolução de 800×480.)
+(O painel mono de 7,5" no E1001 e o Spectra 6 de 7,3" no E1002 compartilham a mesma resolução de 800×480.)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/32.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="e1003" label="reTerminal E1003">
+
+- **Display width**: 1872
+- **Display height**: 1404
+
+(O painel mono de 10,3" no E1003 usa resolução de 1872×1404.)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/36.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="e1004" label="reTerminal E1004">
+
+- **Display width**: 1200
+- **Display height**: 1600
+
+(O painel Spectra 6 de 13,3" no E1004 usa resolução de 1200×1600.)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/37.png" style={{width:1000, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="ee04" label="EE04 + 5.83&quot; mono">
@@ -152,11 +174,9 @@ Em **General → Display**, defina a resolução **para o seu hardware**:
 </TabItem>
 </Tabs>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/32.png" style={{width:1000, height:'auto'}}/></div>
-
 ## Etapa 3: Projetar a UI
 
-O design da UI determina diretamente a experiência do usuário. O EEZ Studio permite montar interfaces rapidamente arrastando e soltando componentes e usando **Styles**, **Fonts**, **Bitmaps**, **Themes** e **Groups** para controlar o resultado visual.
+O design da UI determina diretamente a experiência do usuário. O EEZ Studio permite montar rapidamente interfaces arrastando e soltando componentes e usando **Styles**, **Fonts**, **Bitmaps**, **Themes** e **Groups** para controlar o resultado visual.
 
 Recursos online recomendados:
 
@@ -170,14 +190,14 @@ A barra lateral direita:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/33.png" style={{width:1000, height:'auto'}}/></div>
 
 - **Styles** — atributos visuais para unificar e reutilizar elementos da interface.
-- **Bitmaps** — planos de fundo, ícones, logotipos.
+- **Bitmaps** — fundos, ícones, logotipos.
 - **Fonts** — renderização de texto e suporte multilíngue.
 - **Themes** — claro/escuro e outros estilos de alto nível.
 - **Groups** — auxiliares de layout.
 
 ### Layout de exemplo (Hello World + Panel + Image + Line + Label)
 
-Neste tutorial vamos criar uma página inicial simples com cinco componentes:
+Neste tutorial vamos construir uma página inicial simples com cinco componentes:
 
 - Panel
 - Label
@@ -187,7 +207,7 @@ Neste tutorial vamos criar uma página inicial simples com cinco componentes:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/15.jpg" style={{width:900, height:'auto'}}/></div>
 
-**Etapa 1.** Altere a cor de fundo da tela — selecione a tela, marque **Color** e escolha um valor hexadecimal.
+**Etapa 1.** Altere a cor de fundo da tela — selecione a tela, marque **Color**, escolha um valor hexadecimal.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a1.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -224,7 +244,7 @@ Depois que o design estiver concluído:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/35.png" style={{width:600, height:'auto'}}/></div>
 
-3. **Compilar / Build** — clique no ícone ✓ para verificar erros e depois na chave inglesa para gerar o código da UI, os dados de imagem e os dados de fonte.
+3. **Compilar / Build** — clique no ícone ✓ para verificar erros e, em seguida, no ícone de chave inglesa para gerar o código da interface, os dados de imagem e os dados de fonte.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/34.png" style={{width:600, height:'auto'}}/></div>
 
@@ -232,18 +252,18 @@ Uma mensagem verde **Build successful** confirma a geração do código. A saíd
 
 ## Etapa 5: Configurar o PlatformIO
 
-Implante a saída do EEZ Studio com o PlatformIO. O PlatformIO fornece a estrutura do projeto, ambiente da placa, dependências de biblioteca e configurações de compilação necessárias para os produtos Seeed ePaper.
+Faça o deploy da saída do EEZ Studio com o PlatformIO. O PlatformIO fornece a estrutura do projeto, o ambiente da placa, as dependências de biblioteca e as configurações de compilação necessárias para os produtos Seeed ePaper.
 
 Se esta é a sua primeira vez usando o PlatformIO com produtos Seeed ePaper, siga o guia de configuração vinculado abaixo para configurar seu ambiente de desenvolvimento.
 
-<div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/pt-br/epaper_work_with_platformio/" target="_blank" rel="noopener noreferrer">
-      <strong><span><font color={'FFFFFF'} size={"4"}>Guia de Configuração do PlatformIO</font></span></strong>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/epaper_work_with_platformio/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}>Guia do PlatformIO</font></span></strong>
     </a>
 </div><br />
 
 :::tip
-O guia de configuração do PlatformIO abrange definições de placa, dependências de biblioteca e configuração de compilação — depois de concluído, volte aqui para continuar.
+O guia de configuração do PlatformIO abrange definições de placa, dependências de biblioteca e configuração de compilação — depois de concluí-lo, volte aqui para continuar.
 :::
 
 ## Etapa 6: Baixar o Template PlatformIO do EEZ Studio
@@ -270,9 +290,9 @@ Na página do Firmware Hub:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/40.png" style={{width:800, height:'auto'}}/></div>
 
-## Etapa 7: Implantar o Projeto EEZ Studio
+## Etapa 7: Fazer o deploy do projeto EEZ Studio
 
-Depois de baixar o template, substitua a interface de usuário do template pelos arquivos gerados pelo EEZ Studio.
+Depois de baixar o template, substitua a interface do template pelos arquivos gerados pelo EEZ Studio.
 
 1. Descompacte o template baixado.
 2. Abra a pasta do projeto descompactado no VS Code com a extensão PlatformIO instalada.
@@ -285,10 +305,10 @@ Depois de baixar o template, substitua a interface de usuário do template pelos
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/42.png" style={{width:1000, height:'auto'}}/></div>
 
-6. Clique em **Build** para compilar e depois em **Upload** para gravar o firmware no seu dispositivo.
+6. Clique em **Build** para compilar e, em seguida, em **Upload** para gravar o firmware no seu dispositivo.
 
 :::tip
-O template já inclui todos os drivers necessários e a configuração LVGL para o seu dispositivo. Você só precisa substituir os arquivos de UI.
+O template já inclui todos os drivers necessários e a configuração do LVGL para o seu dispositivo. Você só precisa substituir os arquivos de interface.
 :::
 
 ### Telas resultantes
@@ -310,11 +330,11 @@ O template já inclui todos os drivers necessários e a configuração LVGL para
 
 ## Referência e Recursos
 
-- [Template PlatformIO do EEZ Studio & Código-fonte](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/official/EEZStudio)
+- [EEZ Studio PlatformIO Template & Source Code](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/official/EEZStudio)
 
-## Suporte Técnico & Discussão de Produtos
+## Suporte Técnico e Discussão sobre o Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
