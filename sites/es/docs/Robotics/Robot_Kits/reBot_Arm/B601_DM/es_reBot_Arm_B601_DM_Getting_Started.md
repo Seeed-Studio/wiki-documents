@@ -178,7 +178,7 @@ Lo siguiente es un ejemplo de operación usando el Motor 1. Asegúrate de que el
 1.Abre el software host **DM_Tools**, selecciona el puerto COM USB correspondiente y ajusta la velocidad en baudios a `921600`. Una vez conectado correctamente, se imprimirá información en la interfaz `Serial`.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_connect_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_damiao_tool_en.png" width="800" />
 </div>
 
 2.Usa el cable de 3 pines para conectar el Motor 1 a la placa adaptadora USB-CAN.
@@ -188,13 +188,17 @@ Lo siguiente es un ejemplo de operación usando el Motor 1. Asegúrate de que el
 4.Después de la configuración, haz clic en `Write Parameters` para guardar los parámetros.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_id_set_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_damiao_tool_en.png" width="800" />
 </div>
+
+:::tip
+The USB mode in the orange box on the left represents the method used when reading and writing motor parameters on the current settings page.
+:::
 
 5. Navega a la interfaz `Debug`. Después de asegurarte de que `CAN ID` y `Master ID` están configurados correctamente, haz clic en `Enable`. El indicador del motor se volverá verde fijo, lo que indica que el motor está habilitado. La prueba del Motor 1 ya está completa.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_enable_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_damiao_tool_en.png" width="800" />
 </div>
 
 :::tip

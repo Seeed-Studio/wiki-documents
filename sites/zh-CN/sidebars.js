@@ -3193,6 +3193,7 @@ const sidebars = {
       label: '其他网络设备',
       items: [
         'Network/TTN_Gateway/cn_The-Things-Indoor-Gateway',
+        'Network/cn_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
           label: 'Wio-WM6108 WiFi-Halow 设备',
@@ -4475,6 +4476,7 @@ const sidebars = {
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Grasping_Demo',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_ROS2_Integration',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_pinocchio',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_isaacsim',
               ]
             }
           ]

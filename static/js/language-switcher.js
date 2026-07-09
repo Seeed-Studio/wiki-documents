@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-09 13:37:26 (北京时间)
-// 多语言页面: 2370 个
+// 生成时间: 2026-07-09 17:33:54 (北京时间)
+// 多语言页面: 2373 个
 
 (function() {
   'use strict';
@@ -4167,6 +4167,13 @@
     "ja",
     "pt"
   ],
+  "/lora_antenna_selection_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/semtech_lr2021_evk_getting_started": [
     "cn",
     "en",
@@ -6107,6 +6114,13 @@
     "pt"
   ],
   "/rebot_arm_b601_rs_grasping_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_isaacsim": [
     "cn",
     "en",
     "es",
@@ -8255,6 +8269,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_work_with_lvgl": [
     "cn",
     "en",
     "es",
