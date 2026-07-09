@@ -1,6 +1,6 @@
 ---
 description: recamera_pro_record_settings
-title: recamera_pro_record_settings
+title: Record Settings
 keywords:
   - reCamera pro
   - web ui

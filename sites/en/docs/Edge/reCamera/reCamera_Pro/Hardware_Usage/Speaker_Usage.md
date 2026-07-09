@@ -52,10 +52,12 @@ Simple mixer control 'ACodec Digital Gain',0
 ``` bash
 amixer set 'DAC Digital' 50%
 ```
-::: Note
+
+:::note
 - Volume set above 80% will cause popping noise.
 - Adjust the volume according to actual conditions to avoid overload.
 :::
+
 ## Play Audio
 First copy the audio file you need to play to the device. Assume the audio file path is `/sdcard/audio.wav3`, use the following command to play audio:
 ``` bash

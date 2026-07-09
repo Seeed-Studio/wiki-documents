@@ -1,6 +1,6 @@
 ---
 description: recamera_pro_terminal
-title: recamera_pro_terminal
+title: Terminal
 keywords:
   - reCamera pro
   - web ui

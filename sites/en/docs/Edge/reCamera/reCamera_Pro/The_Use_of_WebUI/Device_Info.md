@@ -1,6 +1,6 @@
 ---
 description: recamera_pro_device_info
-title: recamera_pro_device_info
+title: Device Info
 keywords:
   - reCamera pro
   - web ui

@@ -1,6 +1,6 @@
 ---
 description: recamera_pro_ai_inference
-title: recamera_pro_ai_inference
+title: Ai Inference
 keywords:
   - reCamera pro
   - web ui

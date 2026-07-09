@@ -1,6 +1,6 @@
 ---
 description: recamera_pro_live_view
-title: recamera_pro_live_view
+title: Live View
 keywords:
   - reCamera pro
   - web ui
