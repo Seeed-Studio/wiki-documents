@@ -8,7 +8,7 @@ keywords:
   - Remote control operation
   - Kinematics
   - Robostride
-image: https://files.seeedstudio.com//wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.webp
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg
 slug: /rebot_arm_b601_rs_isaacsim
 last_update:
   date: 7/7/2026
