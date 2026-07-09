@@ -13,7 +13,7 @@ keywords:
   - ePaper Breakout Board
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 slug: /EN04_opendisplay
-sidebar_position: 9
+sidebar_position: 10
 last_update:
   date: 06/30/2026
   author: dimo
@@ -29,9 +29,9 @@ import TabItem from '@theme/TabItem';
 
 # Trabalhar com OpenEPaperLink / OpenDisplay
 
-[OpenDisplay](https://opendisplay.org/) e [OpenEPaperLink (OEPL)](https://openepaperlink.de/) são ecossistemas de código aberto para controlar displays de ePaper via **Bluetooth Low Energy (BLE)**. Um telefone, computador ou host Home Assistant pode se conectar diretamente ao display, portanto o fluxo básico não exige um ponto de acesso 802.15.4.
+[OpenDisplay](https://opendisplay.org/) e [OpenEPaperLink (OEPL)](https://openepaperlink.de/) são ecossistemas de código aberto para controlar displays ePaper via **Bluetooth Low Energy (BLE)**. Um telefone, computador ou host Home Assistant pode se conectar diretamente ao display, portanto o fluxo básico não exige um ponto de acesso 802.15.4.
 
-Este guia abrange dois caminhos de hardware da Seeed:
+Este guia cobre dois caminhos de hardware da Seeed:
 
 - **Caminho OpenDisplay Toolbox** — recomendado para firmware OpenDisplay pronto para uso em **reTerminal E1001**, **reTerminal E1002**, **reTerminal E1003** e **XIAO ePaper Display Board EN04**.
 - **Caminho OEPL_BLE** — útil para uma configuração modular DIY com a **ePaper Breakout Board para Seeed Studio XIAO** e uma **placa da série XIAO nRF52840**.
@@ -90,7 +90,7 @@ A OpenDisplay Toolbox inclui presets para **reTerminal E1001**, **reTerminal E10
 Use este caminho quando quiser executar o firmware OpenDisplay diretamente em um dispositivo reTerminal E Série finalizado.
 
 :::caution
-Instalar o firmware OpenDisplay substitui o firmware que está sendo executado atualmente no dispositivo. Mantenha um caminho de restauração pronto usando o reTerminal E-Series Firmware Hub oficial ou o pacote de firmware recomendado pelo Wiki do seu produto.
+A instalação do firmware OpenDisplay substitui o firmware que está sendo executado atualmente no dispositivo. Mantenha um caminho de restauração pronto usando o reTerminal E-Series Firmware Hub oficial ou o pacote de firmware recomendado pelo Wiki do seu produto.
 :::
 
 </TabItem>
@@ -117,7 +117,7 @@ Instalar o firmware OpenDisplay substitui o firmware que está sendo executado a
 	</table>
 </div>
 
-EN04 é uma placa controladora de ePaper baseada em nRF52840. É o caminho DIY mais direto para o OpenDisplay quando você quer parear um painel de ePaper compatível com um controlador focado em BLE.
+EN04 é uma placa controladora de ePaper baseada em nRF52840. É o caminho DIY mais direto para o OpenDisplay quando você quer parear um painel ePaper compatível com um controlador focado em BLE.
 
 </TabItem>
 <TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
@@ -154,7 +154,7 @@ EN04 é uma placa controladora de ePaper baseada em nRF52840. É o caminho DIY m
 	</table>
 </div>
 
-Use este caminho quando quiser uma montagem modular OEPL_BLE. A série XIAO nRF52840 pode controlar este kit DIY, e o fluxo de trabalho OEPL da comunidade fornece ferramentas separadas para configuração e envio de imagens.
+Use este caminho quando quiser uma montagem OEPL_BLE modular. A série XIAO nRF52840 pode controlar este kit DIY, e o fluxo de trabalho OEPL da comunidade fornece ferramentas separadas para configuração e envio de imagens.
 
 </TabItem>
 </Tabs>
@@ -206,7 +206,7 @@ Use este caminho quando quiser uma montagem modular OEPL_BLE. A série XIAO nRF5
 </TabItem>
 <TabItem value="en04" label="XIAO ePaper Display Board EN04">
 
-**Etapa 1.** Insira o cabo FPC do painel de ePaper no conector EN04 e trave a lingueta.
+**Etapa 1.** Insira o cabo FPC do painel ePaper no conector da EN04 e trave a lingueta.
 
 :::tip
 Para o conector de 50 pinos, alinhe as marcações `1` e `50` impressas no FPC com as marcações correspondentes na placa. No kit EN04 mostrado abaixo, o lado de contato metálico do FPC fica voltado para cima.
@@ -225,23 +225,23 @@ Verifique a polaridade da bateria antes de energizar a placa. Um conector de bat
 :::
 
 </TabItem>
-<TabItem value="breakout" label="Placa de Breakout ePaper + XIAO nRF52840">
+<TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
-**Passo 1.** Monte a placa da série XIAO nRF52840 na Placa de Breakout ePaper.
+**Passo 1.** Monte a placa da série XIAO nRF52840 na ePaper Breakout Board.
 
-**Passo 2.** Insira o cabo FPC do painel ePaper no conector da placa de breakout e trave a lingueta.
+**Passo 2.** Insira o cabo FPC do painel ePaper no conector da breakout board e trave a lingueta.
 
 **Passo 3.** Conecte o XIAO ao seu computador com um cabo de dados USB-C.
 
 </TabItem>
 </Tabs>
 
-## Passo 2: Instalar o Firmware
+## Passo 2: Instalar o firmware
 
 <Tabs groupId="oepl-hardware">
-<TabItem value="reterminal" label="reTerminal E Série" default>
+<TabItem value="reterminal" label="reTerminal E Series" default>
 
-O OpenDisplay fornece presets diretos do Toolbox para o reTerminal E Série.
+O OpenDisplay fornece presets diretos do Toolbox para o reTerminal E Series.
 
 **Passo 1.** Abra o preset do Toolbox correspondente no Chrome ou Edge:
 
@@ -260,7 +260,7 @@ O OpenDisplay fornece presets diretos do Toolbox para o reTerminal E Série.
 Após a instalação, continue com a configuração BLE no próximo passo.
 
 </TabItem>
-<TabItem value="en04" label="Placa de Display XIAO ePaper EN04">
+<TabItem value="en04" label="XIAO ePaper Display Board EN04">
 
 O fluxo atual do OpenDisplay usa o Toolbox para a configuração da EN04.
 
@@ -274,12 +274,12 @@ O fluxo atual do OpenDisplay usa o Toolbox para a configuração da EN04.
 
 **Passo 5.** Aguarde até que a instalação do firmware seja concluída.
 
-A EN04 irá reiniciar com o firmware OpenDisplay e então poderá ser configurada via BLE.
+A EN04 será reiniciada com o firmware OpenDisplay e poderá então ser configurada via BLE.
 
 </TabItem>
-<TabItem value="breakout" label="Placa de Breakout ePaper + XIAO nRF52840">
+<TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
-O caminho XIAO nRF52840 + Placa de Breakout usa o firmware **OEPL_BLE** antes que o OEPL Config Builder possa se conectar a ele.
+O caminho XIAO nRF52840 + Breakout Board usa o firmware **OEPL_BLE** antes que o OEPL Config Builder possa se conectar a ele.
 
 **Passo 1.** Abra a [página de releases do OEPL_BLE](https://github.com/OpenEPaperLink/OEPL_BLE/releases) e baixe o pacote de firmware que corresponde à sua placa XIAO nRF52840.
 
@@ -299,15 +299,15 @@ O caminho XIAO nRF52840 + Placa de Breakout usa o firmware **OEPL_BLE** antes qu
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/firmware.jpg" style={{width:700, height:'auto'}}/></div>
 
-O XIAO reinicia e executa o firmware OEPL_BLE no próximo ciclo de energia.
+O XIAO será reiniciado e executará o firmware OEPL_BLE no próximo ciclo de energia.
 
 </TabItem>
 </Tabs>
 
-## Passo 3: Configurar o Dispositivo via BLE
+## Passo 3: Configurar o dispositivo via BLE
 
 <Tabs groupId="oepl-hardware">
-<TabItem value="reterminal" label="reTerminal E Série" default>
+<TabItem value="reterminal" label="reTerminal E Series" default>
 
 **Passo 1.** Na mesma página do OpenDisplay Toolbox, clique em **Configure over Bluetooth**.
 
@@ -320,7 +320,7 @@ O XIAO reinicia e executa o firmware OEPL_BLE no próximo ciclo de energia.
 O dispositivo agora está pronto para upload de imagens por meio das ferramentas OpenDisplay ou do Home Assistant.
 
 </TabItem>
-<TabItem value="en04" label="Placa de Display XIAO ePaper EN04">
+<TabItem value="en04" label="XIAO ePaper Display Board EN04">
 
 **Passo 1.** No OpenDisplay Toolbox, mantenha **EN04** selecionado como a placa controladora e confirme a opção de painel correspondente.
 
@@ -337,7 +337,7 @@ O dispositivo agora está pronto para upload de imagens por meio das ferramentas
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/boot_screen.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="breakout" label="Placa de Breakout ePaper + XIAO nRF52840">
+<TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
 **Passo 1.** Abra o [OEPL Config Builder](https://config.openepaperlink.org/).
 
@@ -353,7 +353,7 @@ O dispositivo agora está pronto para upload de imagens por meio das ferramentas
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank" rel="noopener noreferrer">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Config de exemplo 4,26" (JSON)</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Configuração de exemplo 4,26" (JSON)</button></p>
 </a>
 </div>
 
@@ -364,10 +364,10 @@ O dispositivo agora está pronto para upload de imagens por meio das ferramentas
 </TabItem>
 </Tabs>
 
-## Passo 4: Fazer Upload de Imagens
+## Passo 4: Fazer upload de imagens
 
 <Tabs groupId="oepl-hardware">
-<TabItem value="reterminal" label="reTerminal E Série" default>
+<TabItem value="reterminal" label="reTerminal E Series" default>
 
 Os dispositivos OpenDisplay podem receber imagens por meio da ferramenta de display no navegador.
 
@@ -390,7 +390,7 @@ Use um tamanho de imagem que corresponda ao seu painel para obter o melhor resul
 :::
 
 </TabItem>
-<TabItem value="en04" label="Placa de Display XIAO ePaper EN04">
+<TabItem value="en04" label="XIAO ePaper Display Board EN04">
 
 **Passo 1.** Abra a [ferramenta de display OpenDisplay](https://opendisplay.org/firmware/display/index.html).
 
@@ -407,7 +407,7 @@ Use um tamanho de imagem que corresponda ao seu painel conectado. Por exemplo, u
 :::
 
 </TabItem>
-<TabItem value="breakout" label="Placa de Breakout ePaper + XIAO nRF52840">
+<TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
 O OEPL Image Uploader é uma ferramenta web BLE separada para o caminho OEPL_BLE.
 
@@ -444,7 +444,7 @@ O Home Assistant possui uma integração oficial **OpenDisplay** para dispositiv
 - Uma configuração Bluetooth funcional que suporte conexões BLE ativas.
 - Um dispositivo com firmware OpenDisplay ligado e dentro do alcance do Bluetooth.
 
-Os seguintes caminhos de Bluetooth são adequados:
+Os seguintes caminhos Bluetooth são adequados:
 
 - Home Assistant Green ou outro host Home Assistant com hardware Bluetooth compatível.
 - ESPHome Bluetooth Proxy executando firmware ESPHome 2022.9.3 ou posterior.
@@ -499,7 +499,7 @@ actions:
 Use automações do Home Assistant para gerar ou copiar um novo PNG antes de chamar `opendisplay.upload_image`. A integração OpenDisplay então lida com a transferência BLE para o display.
 :::
 
-### Opcional: Payloads de desenho personalizados
+### Opcional: payloads de desenho personalizados
 
 A comunidade OpenDisplay também mantém uma integração HACS com um fluxo de trabalho `drawcustom` para desenhar texto, ícones, formas, códigos QR, imagens, gráficos e barras de progresso diretamente a partir de payloads do Home Assistant.
 
@@ -572,7 +572,7 @@ wifi:
 captive_portal:
 ```
 
-**Passo 3.** Clique em **Install** no ESPHome e grave o firmware no dispositivo ESP32.
+**Passo 3.** Clique em **Install** no ESPHome e faça o flash do firmware no dispositivo ESP32.
 
 **Passo 4.** Depois que o ESP32 se conectar ao Wi-Fi, adicione o Bluetooth Proxy descoberto no Home Assistant.
 
@@ -584,23 +584,23 @@ Quando o proxy estiver funcionando, o Home Assistant mostrará o Bluetooth Proxy
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/6.png" style={{width:700, height:'auto'}}/></div>
 
-## Bônus: Suporte impresso em 3D
+## Bônus: suporte impresso em 3D
 
 Para o EN04 com o painel Spectra de 7,3", este modelo da comunidade fornece um inserto para a moldura de quadro IKEA RODALM:
 
-- **[MakerWorld]** [Seeed 7.3" Spectra Insert for IKEA RODALM Frame](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
+- **[MakerWorld]** [Inserto Seeed 7.3" Spectra para moldura IKEA RODALM](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
 
 ## Recursos
 
 - **[Web Tool]** [OpenDisplay Toolbox](https://opendisplay.org/firmware/toolbox/index.html)
-- **[Web Tool]** [OpenDisplay display tool](https://opendisplay.org/firmware/display/index.html)
-- **[Web Tool]** [OEPL Config Builder](https://config.openepaperlink.org/)
-- **[Web Tool]** [OEPL Image Uploader](https://atc1441.github.io/ATC_BLE_OEPL_Image_Upload.html)
-- **[Home Assistant]** [Official OpenDisplay Integration](https://www.home-assistant.io/integrations/opendisplay/)
+- **[Web Tool]** [Ferramenta de display OpenDisplay](https://opendisplay.org/firmware/display/index.html)
+- **[Web Tool]** [Construtor de Configuração OEPL](https://config.openepaperlink.org/)
+- **[Web Tool]** [Uploader de Imagens OEPL](https://atc1441.github.io/ATC_BLE_OEPL_Image_Upload.html)
+- **[Home Assistant]** [Integração oficial OpenDisplay](https://www.home-assistant.io/integrations/opendisplay/)
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

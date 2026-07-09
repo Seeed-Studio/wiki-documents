@@ -1,5 +1,5 @@
 ---
-description: El SDK de reSpeaker Clip proporciona una interfaz de Python para comunicarse con dispositivos reSpeaker Clip mediante Bluetooth Low Energy (BLE) o WiFi, lo que permite el control de grabación, la sincronización de archivos, la configuración del dispositivo y más.
+description: El SDK de reSpeaker Clip proporciona una interfaz de Python para comunicarse con dispositivos reSpeaker Clip mediante Bluetooth Low Energy (BLE) o WiFi, lo que permite el control de grabaciones, la sincronización de archivos, la configuración del dispositivo y más.
 title: Control de reSpeaker Clip con Python
 keywords:
   - reSpeaker clip
@@ -7,7 +7,7 @@ keywords:
   - wifi
   - python
   - sdk
-image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png
 slug: /respeaker_clip_python_control
 sku: 100020126
 last_update:
@@ -102,7 +102,7 @@ applications/clip/tests/
 | wifi.py       | Transporte WiFi          |
 | progress.py   | Visualización de progreso |
 | utils.py      | Funciones auxiliares     |
-| exceptions.py | Clases de excepción      |
+| exceptions.py | Clases de excepciones    |
 
 ---
 
@@ -127,7 +127,7 @@ async def main():
 asyncio.run(main())
 ```
 
-El SDK busca automáticamente dispositivos cercanos con el nombre:
+El SDK busca automáticamente dispositivos cercanos llamados:
 
 ```
 Clip XXXX
@@ -379,21 +379,60 @@ CLI de propósito general.
 
 ```bash
 clip-cli status
+```
 
+Salida esperada
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/status.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli version
-
+```
+```bash
 clip-cli list
+```
 
+Salida esperada
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/list.png" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli record --duration 60
 
+```
+Salida esperada
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli sync --session 20260326120000
+```
+Salida esperada
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
+clip-cli sync --session 20260326120000 --delete
+```
+Salida esperada
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli config get
+```
+Salida esperada
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli bookmark
+```
 
+```bash
 clip-cli terminal
 ```
+
 
 ### record.py
 
@@ -406,26 +445,36 @@ python tools/record.py --duration 60
 
 python tools/record.py --mode enhanced
 ```
+Salida esperada
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### sync.py
 
-Sincroniza grabaciones mediante BLE.
+Sincroniza grabaciones vía BLE.
 
 ```bash
 python tools/sync.py
 
 python tools/sync.py --all-sessions
 ```
+Salida esperada
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### udp_sync.py
 
-Sincroniza grabaciones mediante WiFi.
+Sincroniza grabaciones vía WiFi.
 
 ```bash
 python tools/udp_sync.py
 
 python tools/udp_sync.py --session 20260326120000
 ```
+
+Salida esperada
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### ble_terminal.py
 
@@ -437,7 +486,7 @@ python tools/ble_terminal.py
 
 ### decode_opus.py
 
-Convierte grabaciones Opus a WAV.
+Convertir grabaciones Opus a WAV.
 
 ```bash
 python tools/decode_opus.py input.opus output.wav
@@ -526,14 +575,14 @@ except CommandError:
 
 ## Ejemplo completo
 
-Este ejemplo demuestra un flujo de trabajo típico:
+Este ejemplo muestra un flujo de trabajo típico:
 
 1. Conectarse al dispositivo
 2. Comprobar el nivel de batería
 3. Configurar parámetros de grabación
-4. Iniciar la grabación
+4. Iniciar grabación
 5. Añadir marcadores
-6. Detener la grabación
+6. Detener grabación
 7. Sincronizar la sesión grabada
 
 ```python
@@ -580,7 +629,7 @@ asyncio.run(record_and_sync())
 
 ### ClipDevice
 
-Propósito: comunicación con el dispositivo BLE y gestión de la conexión.
+Propósito: comunicación del dispositivo BLE y gestión de la conexión.
 
 ```python
 class ClipDevice:
@@ -643,7 +692,7 @@ class WiFiDevice:
 
 ### WiFiSync
 
-Propósito: sincronización de archivos por WiFi.
+Propósito: sincronización de archivos mediante WiFi.
 
 ```python
 class WiFiSync:
@@ -655,12 +704,12 @@ class WiFiSync:
 
 ### Excepciones
 
-| Excepción        | Descripción                    |
+| Exception        | Description                    |
 | ---------------- | ------------------------------ |
-| ClipError        | Excepción base para todos los errores  |
-| ConnectionError  | Fallo de conexión BLE/WiFi    |
-| TimeoutError     | Tiempo de espera de comando agotado                |
-| CommandError     | Comando AT no válido o fallido   |
+| ClipError        | Excepción base para todos los errores |
+| ConnectionError  | Fallo de conexión BLE/WiFi     |
+| TimeoutError     | Tiempo de espera de comando agotado |
+| CommandError     | Comando AT no válido o fallido |
 
 ---
 
