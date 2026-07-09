@@ -3,12 +3,12 @@ description: Este artículo describe principalmente cómo utilizar el sitio web 
 title: Trabajar con Lopaka
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /reterminal_e10xx_with_lopaka
-sidebar_position: 7
+sidebar_position: 9
 last_update:
   date: 9/12/2025
   author: Martin
 createdAt: '2025-09-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-06-03'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_lopaka/
 ---
 
@@ -97,7 +97,7 @@ Lopaka es un editor gráfico diseñado específicamente para el desarrollo de gr
 
 - **[Go to Lopaka](https://lopaka.app/)**
 
-  Puedes registrarte usando una cuenta de Google o GitHub.
+  Puedes registrarte usando una cuenta de Google o de GitHub.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_1.png" style={{width:800, height:'auto'}}/>
 <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Interfaz principal de Lopaka</em></p>
@@ -109,8 +109,8 @@ Haz clic en "NEW PROJECT" para crear un nuevo proyecto. A continuación, aparece
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_3.png" style={{width:800, height:'auto'}}/></div>
 
 - **Titile**: Nombre del proyecto, yo selecciono hello
-- **Platform**: La plataforma que elegiste para el desarrollo; la serie reTeerminal E utiliza AdfruitGFX Color.
-- **Screen**: La selección del tamaño de la pantalla. Haz clic en "Custom" para personalizar el tamaño. El tamaño de la pantalla de la serie reTeerminal E es 800×480.
+- **Platform**: La plataforma que elegiste para el desarrollo; la serie reTerminal E utiliza AdfruitGFX Color.
+- **Screen**: La selección del tamaño de la pantalla. Haz clic en "Custom" para personalizar el tamaño. El tamaño de pantalla de la serie reTerminal E es 800×480.
 - **Background**: El color de fondo de la pantalla es negro por defecto. Para lograr una mejor visualización, lo he cambiado a amarillo.
 Luego haz clic en "SUBMIT" para crear el proyecto.
 
@@ -122,7 +122,7 @@ Luego haz clic en "SUBMIT" para crear el proyecto.
 - **Screens**：Puede crear múltiples pantallas y ayudarte a almacenar diferentes ideas.
 - **CODE**：El código generado está en lenguaje C.
 - **IMAGES**：El tipo de imagen oficial de Lopaka
-- **Code settings**：Configura el código generado. Se recomienda que marques todas las casillas.
+- **Code settings**：Configura el código generado. Se recomienda marcar todas las casillas.
 
 **Otros**
 
@@ -165,14 +165,14 @@ Usaremos la biblioteca Seeed_GFX, que proporciona soporte completo para varios d
 **Paso 2.** Instala la biblioteca añadiendo el archivo ZIP en el IDE de Arduino. Ve a **Sketch > Include Library > Add .ZIP Library** y selecciona el archivo ZIP descargado.
 
 :::note
-Si has instalado previamente la biblioteca TFT_eSPI, es posible que debas eliminarla temporalmente o cambiarle el nombre en la carpeta de bibliotecas de Arduino para evitar conflictos, ya que Seeed_GFX es un fork de TFT_eSPI con funciones adicionales para pantallas de Seeed Studio.
+Si has instalado previamente la biblioteca TFT_eSPI, es posible que tengas que eliminarla temporalmente o cambiarle el nombre en la carpeta de bibliotecas de Arduino para evitar conflictos, ya que Seeed_GFX es un fork de TFT_eSPI con funciones adicionales para las pantallas de Seeed Studio.
 :::
 
 ### Programación de reTerminal E1002
 
 La pantalla de tinta electrónica a todo color admite los colores rojo, negro, amarillo, verde y blanco, lo que permite interfaces visualmente más ricas.
 
-**Paso 1.** Abre el sketch de ejemplo de color de la biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
+**Paso 1.** Abre el sketch de ejemplo en color de la biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
 **Paso 2.** Crea un nuevo archivo llamado `driver.h` en la misma carpeta que tu sketch, siguiendo el mismo proceso que antes.
 
@@ -188,7 +188,7 @@ La pantalla de tinta electrónica a todo color admite los colores rojo, negro, a
 
 :::tip
 
-Si estás utilizando el reTerminal E1001, entonces deberías copiar el siguiente código
+Si estás utilizando el reTerminal E1001, entonces debes copiar el siguiente código
 
 ```cpp
 #define BOARD_SCREEN_COMBO 520 // reTerminal E1001 (UC8179)
@@ -199,11 +199,11 @@ Si estás utilizando el reTerminal E1001, entonces deberías copiar el siguiente
 **Paso 5.** procedimiento de modificación
 
 - Copia el código CODE de la página de Lopaka en el entorno de Arduino.
-- Reemplaza la minúscula "epaper" por "tft", abre la búsqueda global usando Ctrl + F, introduce "epaper", luego haz clic en `Aa` para cambiar a búsqueda que no distingue mayúsculas y minúsculas, después introduce "tft" y haz clic en "Global Replace"
+- Reemplaza la minúscula "epaper" por "tft", abre la búsqueda global usando Ctrl + F, introduce "epaper", luego haz clic en `Aa` para cambiar a búsqueda que no distingue mayúsculas y minúsculas, después introduce "tft" y haz clic en "Reemplazar globalmente"
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
-El reTerminal E1002 actualmente admite seis colores. Por lo tanto, necesitas modificar el color según la situación real.
+El reTerminal E1002 actualmente admite seis colores. Por lo tanto, debes modificar el color según la situación real.
 <details>
 
 <summary>Categoría de colores</summary>
@@ -220,8 +220,8 @@ Here is the 6 colors you can display:
 
 </details>
 
-- Sustituye el parámetro en `tft.fillScreen(TFT_WHITE)` por TFF_YELLOW
-- Sustituye el 0x4D6A en `tft.setTextColor(0x4D6A)` por TFT_GREEN.
+- Reemplaza el parámetro en `tft.fillScreen(TFT_WHITE)` por TFF_YELLOW
+- Reemplaza el 0x4D6A en `tft.setTextColor(0x4D6A)` por TFT_GREEN.
 - Modifica la función `setup` y reemplaza el contenido entre `tft.fillScreen(TFT_WHITE)` y `tft.update` por `draw()`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_3.png" style={{width:800, height:'auto'}}/></div>
@@ -426,7 +426,7 @@ Si estás utilizando la versión gratuita de Lopaka, las imágenes importadas so
 
 #### Ejemplo dibujado a mano
 
-Aquí se dibujó a mano una imagen de Super Mario. También puedes crear tu propio dibujo según tus propias ideas
+Aquí, se dibujó a mano una imagen de Super Mario. También puedes crear tu propio dibujo según tus propias ideas
 
 ##### Hardware
 
@@ -452,7 +452,7 @@ Para completar este tutorial, prepara dispositivos reTerminal E1002:
 
 ##### Software
 
-- Elige las herramientas adecuadas para dibujar, como rectángulos, cadenas, círculos y Pintar.
+- Elige las herramientas adecuadas para dibujar, como rectángulos, cadenas, círculos y Paint.
 - El efecto del dibujo es el siguiente
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/super_mario_1.png" style={{width:800, height:'auto'}}/></div>
