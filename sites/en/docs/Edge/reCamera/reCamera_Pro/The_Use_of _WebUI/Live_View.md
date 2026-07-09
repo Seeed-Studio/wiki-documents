@@ -4,7 +4,7 @@ title: Live_View
 keywords:
   - reCamera pro
   - web ui
-slug: /Live_View
+slug: /live_view
 sku: 10003420
 sidebar_position: 3
 last_update:
@@ -12,7 +12,7 @@ last_update:
   author: yylin
 createdAt: '2026-07-09'
 updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/Live_View/
+url: https://wiki.seeedstudio.com/live_view/
 ---
 
 The reCamera Pro has a built-in real-time video monitoring page, allowing users to view live camera feeds directly through a browser. Users can configure video streams, display settings, OSD overlays, privacy masking, and streaming parameters. This page is suitable for device installation and debugging, previewing footage, adjusting video parameters, and functional verification before deployment.

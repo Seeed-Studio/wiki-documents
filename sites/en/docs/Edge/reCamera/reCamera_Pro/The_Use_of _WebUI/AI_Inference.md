@@ -4,7 +4,7 @@ title: AI_Inference
 keywords:
   - reCamera pro
   - web ui
-slug: /AI_Inference
+slug: /ai_inference
 sku: 10003420
 sidebar_position: 5
 last_update:
@@ -12,7 +12,7 @@ last_update:
   author: yylin
 createdAt: '2026-07-09'
 updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/AI_Inference/
+url: https://wiki.seeedstudio.com/ai_inference/
 ---
 
 reCamera Pro provides a built-in AI inference management page, allowing users to directly manage models, upload models, convert models, configure inference parameters, view real-time inference status, and configure inference result output within the Web UI. This page is suitable for scenarios such as object detection, industrial recognition, security monitoring, event triggering, and edge AI application development.

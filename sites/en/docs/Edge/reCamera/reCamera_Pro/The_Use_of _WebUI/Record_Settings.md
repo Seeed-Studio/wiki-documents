@@ -4,7 +4,7 @@ title: Record_Settings
 keywords:
   - reCamera pro
   - web ui
-slug: /Record_Settings
+slug: /record_settings
 sku: 10003420
 sidebar_position: 4
 last_update:
@@ -12,7 +12,7 @@ last_update:
   author: yylin
 createdAt: '2026-07-09'
 updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/Record_Settings/
+url: https://wiki.seeedstudio.com/record_settings/
 ---
 
 reCamera Pro has built-in rule-triggered video recording. Users can customize rules to set the time for video recording and capturing.

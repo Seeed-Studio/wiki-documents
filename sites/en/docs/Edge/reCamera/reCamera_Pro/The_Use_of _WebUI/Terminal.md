@@ -4,7 +4,7 @@ title: Terminal
 keywords:
   - reCamera pro
   - web ui
-slug: /Terminal
+slug: /terminal
 sku: 10003420
 sidebar_position: 6
 last_update:
@@ -12,7 +12,7 @@ last_update:
   author: yylin
 createdAt: '2026-07-09'
 updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/Terminal/
+url: https://wiki.seeedstudio.com/terminal/
 ---
 
 ## System Log

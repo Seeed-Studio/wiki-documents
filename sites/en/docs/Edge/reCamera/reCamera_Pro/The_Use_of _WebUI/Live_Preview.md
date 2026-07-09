@@ -4,7 +4,7 @@ title: Live_Preview
 keywords:
   - reCamera pro
   - web ui
-slug: /Live_Preview
+slug: /live_preview
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -12,7 +12,7 @@ last_update:
   author: yylin
 createdAt: '2026-07-09'
 updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/Live_Preview/
+url: https://wiki.seeedstudio.com/live_preview/
 ---
 
 ## Web UI Introduction
