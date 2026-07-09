@@ -9,13 +9,13 @@ keywords:
   - Kinematics
   - Robostride
 image: https://files.seeedstudio.com//wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.webp
-slug: /rebot_arm_b601_rs_Isaacsim
+slug: /rebot_arm_b601_rs_isaacsim
 last_update:
   date: 7/7/2026
   author: LiShanghang
 createdAt: '2026-07-07'
 updatedAt: '2026-07-07'
-url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_Isaacsim/
+url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_isaacsim/
 ---
 
 ## Introduction

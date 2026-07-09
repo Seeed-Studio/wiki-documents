@@ -120,6 +120,10 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
                 <span className="text">reBot B601-RS ROS2 集成</span>
                 <span className="tag recommended">New</span>
               </a>
+              <a href="cn/rebot_arm_b601_rs_isaacsim/" className="content-card">
+                <span className="text">reBot B601-RS Isaacsim 仿真</span>
+                <span className="tag recommended">New</span>
+              </a>
           </div>
 
 
@@ -266,45 +270,6 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
             <span className="text">Slamtec 系列</span>
           </a>
       </div>
-    </div>
-    <span className="summary-action">展开学习计划</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>推荐人群</strong><span>第一次使用 reBot Arm、想快速完成真实机械臂控制的用户</span></div>
-      <div><strong>学习目标</strong><span>从硬件上电到完成 LeRobot 遥操作、视觉夹取和 ROS2 集成</span></div>
-      <div><strong>建议顺序</strong><span>快速开始 → LeRobot → Pinocchio → 视觉夹取 → ROS2</span></div>
-    </div>
-    <div className="learning-steps">
-      <a className="step-card" href="/cn/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>快速开始</b><small>先完成开箱、接线、供电、驱动检查和基础运动测试，确认机械臂能正常工作。</small></div><em>新手必做</em></a>
-      <a className="step-card" href="/cn/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>LeRobot 遥操作与数据采集</b><small>学习如何通过主从臂或遥操作采集数据，为模仿学习和具身智能任务做准备。</small></div><em>数据采集</em></a>
-      <a className="step-card" href="/cn/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio 运动学可视化</b><small>理解机械臂模型、关节、坐标系、正逆运动学，为后续控制算法打基础。</small></div><em>控制进阶</em></a>
-      <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>视觉夹取 Demo</b><small>结合相机、识别和抓取姿态生成，让机械臂完成真实物体抓取。</small></div><em>应用 Demo</em></a>
-      <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 集成</b><small>将机械臂接入 ROS2 生态，便于后续和感知、规划、导航、仿真系统组合。</small></div><em>系统集成</em></a>
-      <a className="step-card" href="/cn/rebot_arm_b601_rs_Isaacsim/"><span className="step-index">6</span><div><b>Isaacsim 仿真</b><small>将机械臂接入 Isaacsim 生态，在仿真环境中，进行开发和调试。</small></div><em>仿真系统</em></a>
-    </div>
-  </div>
-</details>
-
-<details id="rebot-dm" className="product-card rebot">
-<summary>
-  <div className="product-head">
-    <span className="product-icon">🦾</span>
-    <div>
-      <h3>reBot B601-DM 机械臂</h3>
-      <span>适合 Damiao 电机版本用户学习机械臂控制、LeRobot、Pinocchio 和 ROS2</span>
-    </div>
-  </div>
-  <span className="summary-action">展开学习计划</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>推荐人群</strong><span>使用 B601-DM 版本机械臂，想做机械臂控制和 AI 数据采集的用户</span></div>
-    <div><strong>学习目标</strong><span>完成基础驱动、运动学建模、LeRobot 数据采集和视觉夹取 Demo</span></div>
-    <div><strong>建议顺序</strong><span>快速开始 → LeRobot → Pinocchio → 视觉夹取 → ROS2</span></div>
-  </div>
-<div className="learning-steps">
-  <a className="step-card" href="/cn/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>快速开始</b><small>先检查电源、CAN 通信、驱动环境和基础运动，确认机械臂硬件状态正常。</small></div><em>新手必做</em></a>
 
       <strong>📷 相机</strong>  
 

@@ -120,6 +120,9 @@ url: https://wiki.seeedstudio.com/robotics_page/
                 <span className="text">reBot B601-RS with ROS2 </span>
                 <span className="tag recommended">New</span>
               </a>
+              <a href="rebot_arm_b601_rs_isaacsim/" className="content-card">
+                <span className="text">reBot B601-RS Isaacsim Simulation</span>
+                <span className="tag recommended">New</span>
           </div>
 
           <h3> 🤗 Reachy</h3>
@@ -243,89 +246,6 @@ url: https://wiki.seeedstudio.com/robotics_page/
       </div>
 
       </div>
-    </div>
-    <span className="summary-action">Open learning path</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>First-time reBot Arm users who want to quickly run a real robotic arm</span></div>
-      <div><strong>Learning goal</strong><span>Go from power-on checks to LeRobot teleoperation, visual grasping, and ROS2 integration</span></div>
-      <div><strong>Suggested order</strong><span>Getting Started → LeRobot → Pinocchio → Visual Grasping → ROS2</span></div>
-    </div>
-    <div className="learning-steps">
-      <a className="step-card" href="/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Getting Started</b><small>Complete unboxing, wiring, power checks, driver setup, and basic motion tests to verify the arm is working.</small></div><em>Start here</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>LeRobot Teleoperation and Data Collection</b><small>Learn how to teleoperate the arm and record data for imitation learning and embodied AI tasks.</small></div><em>Data collection</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio Kinematics Visualization</b><small>Understand robot models, joints, coordinate frames, and forward/inverse kinematics.</small></div><em>Control</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine camera perception and grasp pose generation to complete real object grasping.</small></div><em>Application</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Connect the arm to the ROS2 ecosystem for perception, planning, navigation, and simulation workflows.</small></div><em>Integration</em></a>
-      <a className="step-card" href="/cn/rebot_arm_b601_rs_Isaacsim/"><span className="step-index">6</span><div><b>Isaacsim Simulation</b><small>Isaac Sim SimulationIntegrate the robotic arm into the Isaac Sim ecosystem for development and debugging in a simulated environment.</small></div><em>Simulation System</em></a>
-    </div>
-  </div>
-</details>
-
-<details id="rebot-dm" className="product-card rebot">
-  <summary>
-    <div className="product-head">
-      <span className="product-icon">🦾</span>
-      <div>
-        <h3>reBot B601-DM Arm</h3>
-        <span>For Damiao-motor users learning robot control, LeRobot, Pinocchio, and ROS2</span>
-      </div>
-    </div>
-    <span className="summary-action">Open learning path</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>B601-DM users who want robot-arm control and AI data collection</span></div>
-      <div><strong>Learning goal</strong><span>Complete basic drivers, kinematic modeling, LeRobot data collection, and visual grasping demos</span></div>
-      <div><strong>Suggested order</strong><span>Getting Started → LeRobot → Pinocchio → Visual Grasping → ROS2</span></div>
-    </div>
-    <div className="learning-steps">
-      <a className="step-card" href="/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Getting Started</b><small>Check power, CAN communication, drivers, and basic motion to confirm the hardware is ready.</small></div><em>Start here</em></a>
-      <a className="step-card" href="/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>LeRobot Data Collection</b><small>Use LeRobot for teleoperation, recording, and preparing imitation learning datasets.</small></div><em>AI data</em></a>
-      <a className="step-card" href="/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio and Meshcat</b><small>Load and visualize the robot model, then learn kinematics and joint-space control basics.</small></div><em>Control</em></a>
-      <a className="step-card" href="/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine the arm with vision algorithms to grasp real objects in a physical scene.</small></div><em>Application</em></a>
-      <a className="step-card" href="/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Connect the arm to ROS2 for MoveIt, perception nodes, and system-level applications.</small></div><em>Integration</em></a>
-    </div>
-  </div>
-</details>
-
-<details id="soarm" className="product-card soarm">
-  <summary>
-    <div className="product-head">
-      <span className="product-icon">🤗</span>
-      <div>
-        <h3>SO100 / SO101 Arm</h3>
-        <span>For low-cost robot-arm onboarding, LeRobot, simulation, reinforcement learning, and GR00T/VLA experiments</span>
-      </div>
-    </div>
-    <span className="summary-action">Open learning path</span>
-  </summary>
-  <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>Users who want to start embodied AI with an affordable robotic arm</span></div>
-      <div><strong>Learning goal</strong><span>Move from servo debugging to simulation, reinforcement learning, GR00T, and dual-arm training</span></div>
-      <div><strong>Suggested order</strong><span>Setup → Servo Debugging → Simulation → Isaac Lab → GR00T → Dual Arm</span></div>
-    </div>
-    <div className="learning-steps">
-      <a className="step-card" href="/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 Getting Started</b><small>Complete hardware setup, connection, calibration, and the minimum runnable test.</small></div><em>Start here</em></a>
-      <a className="step-card" href="/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Servo Debugging Tool</b><small>Check servo IDs, direction, zero points, and communication status before training.</small></div><em>Debugging</em></a>
-      <a className="step-card" href="/simulate_soarm101_by_leisaac/"><span className="step-index">3</span><div><b>LeIsaac Simulation</b><small>Understand the robot model, scene, and task setup in simulation before Sim2Real.</small></div><em>Simulation</em></a>
-      <a className="step-card" href="/training_soarm101_policy_with_isaacLab/"><span className="step-index">4</span><div><b>Isaac Lab Reinforcement Learning</b><small>Learn task setup, rewards, policy training, and deployment flow in simulation.</small></div><em>Advanced</em></a>
-      <a className="step-card" href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">5</span><div><b>SO101 with NVIDIA GR00T</b><small>Enter the VLA and embodied AI model fine-tuning workflow with Jetson deployment.</small></div><em>VLA</em></a>
-      <a className="step-card" href="/lerobot_double_arm_so_arm_training/"><span className="step-index">6</span><div><b>Dual-Arm SO-ARM Training</b><small>Learn more complex dual-arm data collection, training, and task execution workflows.</small></div><em>Complex tasks</em></a>
-      <a className="step-card optional" href="/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b><small>Optional extension for users who want to try a third-party data collection and training platform.</small></div><em>Optional</em></a>
-    </div>
-  </div>
-</details>
-
-<details id="starai" className="product-card starai">
-  <summary>
-    <div className="product-head">
-      <span className="product-icon">🦾</span>
-      <div>
-        <h3>StarAI Arm</h3>
-        <span>For basic robot-arm control, MoveIt 2, ROS2 planning, and GR00T applications</span>
       </div>
 
       <h2 id="sensors">👁️ Sensors</h2>
