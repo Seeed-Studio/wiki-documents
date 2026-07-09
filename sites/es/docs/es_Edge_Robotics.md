@@ -115,7 +115,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
               <a href="/es/rebot_arm_b601_rs_grasping_demo/" className="content-card">
                 <span className="text">reBot B601-RS con GraspNet</span>
                 <span className="tag recommended">Nuevo</span>
-              </a]
+              </a>
               <a href="/es/rebot_arm_b601_rs_ros2_integration" className="content-card">
                 <span className="text">reBot B601-RS con ROS2 </span>
                 <span className="tag recommended">Nuevo</span>
