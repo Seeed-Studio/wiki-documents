@@ -3193,6 +3193,7 @@ const sidebars = {
       label: 'その他のネットワークデバイス',
       items: [
         'Network/TTN_Gateway/ja_The-Things-Indoor-Gateway',
+        'Network/ja_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
           label: 'Wio-WM6108 WiFi-Halow Devices',

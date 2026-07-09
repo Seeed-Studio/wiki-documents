@@ -3192,6 +3192,7 @@ const sidebars = {
       label: 'Otros Dispositivos de Red',
       items: [
         'Network/TTN_Gateway/es_The-Things-Indoor-Gateway',
+        'Network/es_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
           label: 'Dispositivos WiFi-Halow Wio-WM6108',

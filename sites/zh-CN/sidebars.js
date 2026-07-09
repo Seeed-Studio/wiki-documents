@@ -3193,6 +3193,7 @@ const sidebars = {
       label: '其他网络设备',
       items: [
         'Network/TTN_Gateway/cn_The-Things-Indoor-Gateway',
+        'Network/cn_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
           label: 'Wio-WM6108 WiFi-Halow 设备',
