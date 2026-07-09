@@ -3198,6 +3198,7 @@ const sidebars = {
       label: 'Other Network Devices',
       items: [
         'Network/TTN_Gateway/The-Things-Indoor-Gateway',
+        'Network/LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
           label: 'Wio-WM6108 WiFi-Halow Devices',
