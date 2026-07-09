@@ -1,5 +1,5 @@
 ---
-description: Controla el hardware de ePaper de Seeed con los ecosistemas OpenDisplay y OpenEPaperLink a través de Bluetooth Low Energy, incluyendo reTerminal E1001, E1002, E1003, XIAO ePaper Display Board EN04 y la ruta de la XIAO ePaper Breakout Board.
+description: Controla el hardware de ePaper de Seeed con los ecosistemas OpenDisplay y OpenEPaperLink a través de Bluetooth Low Energy, incluyendo reTerminal E1001, E1002, E1003, XIAO ePaper Display Board EN04 y la ruta XIAO ePaper Breakout Board.
 title: Trabajar con OpenEPaperLink / OpenDisplay
 keywords:
   - pantalla ePaper
@@ -13,7 +13,7 @@ keywords:
   - ePaper Breakout Board
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 slug: /EN04_opendisplay
-sidebar_position: 10
+sidebar_position: 9
 last_update:
   date: 06/30/2026
   author: dimo
@@ -34,9 +34,9 @@ import TabItem from '@theme/TabItem';
 Esta guía cubre dos rutas de hardware de Seeed:
 
 - **Ruta OpenDisplay Toolbox**: recomendada para firmware OpenDisplay listo para usar en **reTerminal E1001**, **reTerminal E1002**, **reTerminal E1003** y **XIAO ePaper Display Board EN04**.
-- **Ruta OEPL_BLE**: útil para un montaje modular DIY con la **ePaper Breakout Board for Seeed Studio XIAO** y una **placa de la serie XIAO nRF52840**.
+- **Ruta OEPL_BLE**: útil para un montaje modular DIY con la **ePaper Breakout Board for Seeed Studio XIAO** y una **placa XIAO nRF52840 series**.
 
-La experiencia de usuario es similar en ambas rutas: instala el firmware, configura el dispositivo mediante BLE y luego sube una imagen. Las herramientas y los presets compatibles son diferentes, así que sigue la pestaña que coincida con tu hardware.
+La experiencia de usuario es similar en ambas rutas: instalar el firmware, configurar el dispositivo mediante BLE y luego subir una imagen. Las herramientas y los presets compatibles son diferentes, así que sigue la pestaña que coincida con tu hardware.
 
 ## Hardware compatible
 
@@ -87,10 +87,10 @@ OpenDisplay Toolbox incluye presets para **reTerminal E1001**, **reTerminal E100
 	</table>
 </div>
 
-Usa esta ruta cuando quieras ejecutar firmware OpenDisplay directamente en un dispositivo reTerminal E Serie terminado.
+Utiliza esta ruta cuando quieras ejecutar firmware OpenDisplay directamente en un dispositivo reTerminal E Serie terminado.
 
 :::caution
-Instalar firmware OpenDisplay reemplaza el firmware que se está ejecutando actualmente en el dispositivo. Ten preparada una ruta de restauración utilizando el Firmware Hub oficial de reTerminal E-Series o el paquete de firmware recomendado por el Wiki de tu producto.
+La instalación del firmware OpenDisplay sustituye al firmware que se está ejecutando actualmente en el dispositivo. Ten preparada una ruta de restauración utilizando el Firmware Hub oficial de reTerminal E-Series o el paquete de firmware recomendado por el Wiki de tu producto.
 :::
 
 </TabItem>
@@ -154,7 +154,7 @@ EN04 es una placa controladora de ePaper basada en nRF52840. Es la ruta DIY más
 	</table>
 </div>
 
-Usa esta ruta cuando quieras una construcción modular OEPL_BLE. La serie XIAO nRF52840 puede controlar este kit DIY, y el flujo de trabajo comunitario de OEPL proporciona herramientas separadas para la configuración y la carga de imágenes.
+Utiliza esta ruta cuando quieras una construcción modular OEPL_BLE. La serie XIAO nRF52840 puede controlar este kit DIY, y el flujo de trabajo comunitario de OEPL proporciona herramientas separadas para la configuración y la carga de imágenes.
 
 </TabItem>
 </Tabs>
@@ -170,11 +170,11 @@ Usa esta ruta cuando quieras una construcción modular OEPL_BLE. La serie XIAO n
 ## Paso 1: Configuración del hardware
 
 <Tabs groupId="oepl-hardware">
-<TabItem value="reterminal" label="reTerminal E Series" default>
+<TabItem value="reterminal" label="reTerminal E Serie" default>
 
 **Paso 1.** Conecta el dispositivo reTerminal E Serie a tu ordenador con un cable de datos USB-C.
 
-**Paso 2.** Enciende el dispositivo y mantenlo cerca del ordenador. El navegador usará USB para la instalación del firmware y BLE para la configuración.
+**Paso 2.** Enciende el dispositivo y mantenlo cerca del ordenador. El navegador utilizará USB para la instalación del firmware y BLE para la configuración.
 
 **Paso 3.** Haz coincidir tu hardware con el preset correcto de OpenDisplay Toolbox:
 
@@ -262,19 +262,19 @@ Después de la instalación, continúa con la configuración BLE en el siguiente
 </TabItem>
 <TabItem value="en04" label="Placa de pantalla XIAO ePaper EN04">
 
-El flujo actual de OpenDisplay utiliza la Toolbox para la configuración de la EN04.
+El flujo actual de OpenDisplay utiliza Toolbox para la configuración de EN04.
 
 **Paso 1.** Abre [OpenDisplay Toolbox para EN04](https://opendisplay.org/firmware/toolbox/index.html?driver=en04) en Chrome o Edge.
 
-**Paso 2.** Selecciona el panel que coincide con tu pantalla ePaper conectada.
+**Paso 2.** Selecciona el panel que coincida con tu pantalla ePaper conectada.
 
 **Paso 3.** Haz clic en **Install firmware (USB)** y sigue las indicaciones del navegador.
 
-**Paso 4.** Si el navegador solicita el modo bootloader, pulsa dos veces el botón de reinicio en la placa EN04 y luego selecciona el nuevo dispositivo USB detectado.
+**Paso 4.** Si el navegador solicita el modo bootloader, pulsa dos veces el botón de reinicio en la placa EN04 y, a continuación, selecciona el nuevo dispositivo USB detectado.
 
 **Paso 5.** Espera a que finalice la instalación del firmware.
 
-La EN04 se reiniciará con el firmware OpenDisplay y luego se podrá configurar por BLE.
+La EN04 se reiniciará con el firmware OpenDisplay y luego se podrá configurar mediante BLE.
 
 </TabItem>
 <TabItem value="breakout" label="Placa de expansión ePaper + XIAO nRF52840">
@@ -304,7 +304,7 @@ El XIAO se reinicia y ejecuta el firmware OEPL_BLE en el siguiente ciclo de ence
 </TabItem>
 </Tabs>
 
-## Paso 3: Configurar el dispositivo por BLE
+## Paso 3: Configurar el dispositivo mediante BLE
 
 <Tabs groupId="oepl-hardware">
 <TabItem value="reterminal" label="reTerminal E Serie" default>
@@ -313,16 +313,16 @@ El XIAO se reinicia y ejecuta el firmware OEPL_BLE en el siguiente ciclo de ence
 
 **Paso 2.** Selecciona tu dispositivo reTerminal en el cuadro de diálogo de emparejamiento BLE.
 
-**Paso 3.** Espera a que la Toolbox escriba el preset seleccionado en el dispositivo.
+**Paso 3.** Espera a que Toolbox escriba el preset seleccionado en el dispositivo.
 
 **Paso 4.** Confirma que la pantalla se actualiza o muestra la imagen de inicio/prueba de OpenDisplay.
 
-El dispositivo ya está listo para cargar imágenes mediante las herramientas OpenDisplay o Home Assistant.
+El dispositivo ya está listo para la carga de imágenes mediante las herramientas OpenDisplay o Home Assistant.
 
 </TabItem>
 <TabItem value="en04" label="Placa de pantalla XIAO ePaper EN04">
 
-**Paso 1.** En OpenDisplay Toolbox, mantén **EN04** seleccionada como placa controladora y confirma la opción de panel correspondiente.
+**Paso 1.** En OpenDisplay Toolbox, mantén **EN04** seleccionado como placa controladora y confirma la opción de panel correspondiente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step6.png" style={{width:600, height:'auto'}}/></div>
 
@@ -332,7 +332,7 @@ El dispositivo ya está listo para cargar imágenes mediante las herramientas Op
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step7.png" style={{width:500, height:'auto'}}/></div>
 
-**Paso 4.** Espera hasta que la Toolbox escriba la configuración y la pantalla se actualice.
+**Paso 4.** Espera hasta que Toolbox escriba la configuración y la pantalla se actualice.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/boot_screen.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -364,7 +364,7 @@ El dispositivo ya está listo para cargar imágenes mediante las herramientas Op
 </TabItem>
 </Tabs>
 
-## Paso 4: Cargar imágenes
+## Paso 4: Subir imágenes
 
 <Tabs groupId="oepl-hardware">
 <TabItem value="reterminal" label="reTerminal E Serie" default>
@@ -379,7 +379,7 @@ Los dispositivos OpenDisplay pueden recibir imágenes a través de la herramient
 
 **Paso 4.** Haz clic en **Upload Image**.
 
-Cuando finalice la transferencia, la pantalla ePaper se actualizará y mostrará la imagen cargada.
+Cuando finalice la transferencia, la pantalla ePaper se actualizará y mostrará la imagen subida.
 
 :::tip
 Utiliza un tamaño de imagen que coincida con tu panel para obtener el mejor resultado:
@@ -417,7 +417,7 @@ OEPL Image Uploader es una herramienta web BLE independiente para la ruta OEPL_B
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_4.png" style={{width:350, height:'auto'}}/></div>
 
-**Paso 3.** Conéctate al dispositivo XIAO por BLE.
+**Paso 3.** Conéctate al dispositivo XIAO mediante BLE.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_6.png" style={{width:500, height:'auto'}}/></div>
 
@@ -436,7 +436,7 @@ Cuando el cargador muestre **Upload Complete**, la pantalla ePaper se habrá act
 
 ## Integración con Home Assistant
 
-Home Assistant tiene una integración oficial **OpenDisplay** para dispositivos con firmware OpenDisplay. Se comunica por BLE y proporciona la acción `opendisplay.upload_image` para enviar imágenes a la pantalla.
+Home Assistant tiene una integración oficial **OpenDisplay** para dispositivos con firmware OpenDisplay. Se comunica mediante BLE y proporciona la acción `opendisplay.upload_image` para enviar imágenes a la pantalla.
 
 ### Requisitos previos
 
@@ -447,7 +447,7 @@ Home Assistant tiene una integración oficial **OpenDisplay** para dispositivos 
 Las siguientes rutas Bluetooth son adecuadas:
 
 - Home Assistant Green u otro host de Home Assistant con hardware Bluetooth compatible.
-- Proxy Bluetooth ESPHome que ejecute firmware ESPHome 2022.9.3 o posterior.
+- Proxy Bluetooth ESPHome ejecutando firmware ESPHome 2022.9.3 o posterior.
 
 :::info
 Los proxies Bluetooth de Shelly son útiles para sensores BLE pasivos, pero la carga de imágenes de OpenDisplay requiere conexiones BLE activas. Usa un adaptador Bluetooth de Home Assistant o un ESPHome Bluetooth Proxy para este flujo de trabajo.
@@ -496,14 +496,14 @@ actions:
 ```
 
 :::tip
-Usa automatizaciones de Home Assistant para generar o copiar un nuevo PNG antes de llamar a `opendisplay.upload_image`. La integración de OpenDisplay se encarga después de la transferencia BLE a la pantalla.
+Usa automatizaciones de Home Assistant para generar o copiar un nuevo PNG antes de llamar a `opendisplay.upload_image`. La integración de OpenDisplay se encarga entonces de la transferencia BLE a la pantalla.
 :::
 
 ### Opcional: cargas personalizadas de dibujo
 
 La comunidad de OpenDisplay también mantiene una integración HACS con un flujo de trabajo `drawcustom` para dibujar texto, iconos, formas, códigos QR, imágenes, gráficos y barras de progreso directamente desde cargas útiles de Home Assistant.
 
-Utiliza esta ruta cuando necesites específicamente diseños basados en comandos de dibujo en lugar de cargar una imagen preparada.
+Utiliza esta ruta cuando necesites específicamente diseños de comandos de dibujo en lugar de cargar una imagen preparada.
 
 <div class="github_container" style={{textAlign: 'center'}}>
 	<a class="github_item" href="https://github.com/OpenDisplay-org/Home_Assistant_Integration" target="_blank" rel="noopener noreferrer">
@@ -578,7 +578,7 @@ captive_portal:
 
 **Paso 5.** Mantén el proxy cerca del dispositivo OpenDisplay durante las cargas de imágenes.
 
-Cuando el proxy está funcionando, Home Assistant muestra el Bluetooth Proxy como conectado y la pantalla de tinta electrónica puede descubrirse a través de él.
+Cuando el proxy está funcionando, Home Assistant muestra el Bluetooth Proxy como conectado y la pantalla de papel electrónico puede ser descubierta a través de él.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/5.png" style={{width:700, height:'auto'}}/></div>
 

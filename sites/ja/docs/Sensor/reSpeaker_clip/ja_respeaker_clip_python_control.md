@@ -7,7 +7,7 @@ keywords:
   - wifi
   - python
   - sdk
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg
 slug: /respeaker_clip_python_control
 sku: 100020126
 last_update:
@@ -26,15 +26,15 @@ reSpeaker Clip SDK は、Bluetooth Low Energy (BLE) または WiFi を介して 
 
 この SDK を使用すると、次のことができます：
 
-* reSpeaker Clip に接続
-* デバイス情報の読み取り
-* 録音パラメータの設定
-* 録音の開始および停止
-* ブックマークの追加
-* 録音の同期
-* Python を使用したデバイス制御
-* すぐに使えるコマンドラインツールの利用
-* Web インターフェースを介したデバイスへのアクセス
+* reSpeaker Clip に接続する
+* デバイス情報を読み取る
+* 録音パラメータを設定する
+* 録音を開始および停止する
+* ブックマークを追加する
+* 録音を同期する
+* Python を使ってデバイスを制御する
+* すぐに使えるコマンドラインツールを利用する
+* Web インターフェース経由でデバイスにアクセスする
 
 ---
 
@@ -46,7 +46,7 @@ reSpeaker Clip SDK は、Bluetooth Low Energy (BLE) または WiFi を介して 
 * Bluetooth アダプタ（BLE モード）
 * WiFi アダプタ（WiFi モード）
 
-### リポジトリをクローン
+### リポジトリをクローンする
 
 ```bash
 git clone <repository-url>
@@ -54,7 +54,7 @@ git clone <repository-url>
 cd applications/clip/tests
 ```
 
-### 依存関係をインストール
+### 依存関係をインストールする
 
 ```bash
 pip install -r requirements.txt
@@ -106,9 +106,9 @@ applications/clip/tests/
 
 ---
 
-## はじめに
+## はじめての利用
 
-### デバイスに接続
+### デバイスに接続する
 
 ```python
 import asyncio
@@ -127,13 +127,13 @@ async def main():
 asyncio.run(main())
 ```
 
-SDK は、次の名前を持つ近くのデバイスを自動的に検索します：
+SDK は、次の名前の近くのデバイスを自動的に検索します：
 
 ```
 Clip XXXX
 ```
 
-### 特定のデバイスに接続
+### 特定のデバイスに接続する
 
 ```python
 device = ClipDevice(
@@ -172,7 +172,7 @@ print(state.mode)
 timestamp = await cmds.get_time()
 ```
 
-### デバイス時刻を設定
+### デバイス時刻を設定する
 
 ```python
 import time
@@ -186,31 +186,31 @@ await cmds.set_time(
 
 ## オーディオ録音
 
-### 録音開始
+### 録音を開始する
 
 ```python
 session_id = await cmds.start_recording("normal")
 ```
 
-### 録音停止
+### 録音を停止する
 
 ```python
 await cmds.stop_recording()
 ```
 
-### 録音一時停止
+### 録音を一時停止する
 
 ```python
 await cmds.pause_recording()
 ```
 
-### 録音再開
+### 録音を再開する
 
 ```python
 await cmds.resume_recording()
 ```
 
-### ブックマークを追加
+### ブックマークを追加する
 
 ```python
 bookmark = await cmds.add_bookmark()
@@ -232,7 +232,7 @@ await cmds.stop_recording()
 
 ## ファイル同期
 
-### セッションを一覧表示
+### セッションを一覧表示する
 
 ```python
 sessions = await cmds.list_sessions()
@@ -241,7 +241,7 @@ for s in sessions:
     print(s.id)
 ```
 
-### セッションを同期（BLE）
+### セッションを同期する（BLE）
 
 ```python
 from clip import SessionSync
@@ -256,7 +256,7 @@ await sync.sync(
 )
 ```
 
-### 中断されたダウンロードを再開
+### 中断されたダウンロードを再開する
 
 ```python
 session_id = "20260326120000"
@@ -268,7 +268,7 @@ await sync.sync(
 )
 ```
 
-### デバイス上にファイルを保持
+### デバイス上にファイルを保持する
 
 ```python
 session_id = "20260326120000"
@@ -284,7 +284,7 @@ await sync.sync(
 
 ## 設定管理
 
-### パラメータを設定
+### パラメータを設定する
 
 ```python
 await cmds.set_mode("enhanced")
@@ -345,7 +345,7 @@ async with WiFiDevice(
     await device.send_command("AT+GSTAT")
 ```
 
-### WiFi 経由で同期
+### WiFi 経由で同期する
 
 ```python
 from clip import WiFiSync
@@ -379,60 +379,21 @@ SDK には、すぐに使えるユーティリティがいくつか含まれて�
 
 ```bash
 clip-cli status
-```
 
-想定される出力
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/status.jpg" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
 clip-cli version
-```
-```bash
+
 clip-cli list
-```
 
-想定される出力
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/list.png" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
 clip-cli record --duration 60
 
-```
-想定される出力
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.jpg" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
 clip-cli sync --session 20260326120000
-```
-想定される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync.jpg" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
-clip-cli sync --session 20260326120000 --delete
-```
-想定される出力
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
 clip-cli config get
-```
-想定される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
 clip-cli bookmark
-```
 
-```bash
 clip-cli terminal
 ```
-
 
 ### record.py
 
@@ -445,9 +406,6 @@ python tools/record.py --duration 60
 
 python tools/record.py --mode enhanced
 ```
-想定される出力
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### sync.py
 
@@ -458,9 +416,6 @@ python tools/sync.py
 
 python tools/sync.py --all-sessions
 ```
-想定される出力
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### udp_sync.py
 
@@ -471,10 +426,6 @@ python tools/udp_sync.py
 
 python tools/udp_sync.py --session 20260326120000
 ```
-
-想定される出力
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### ble_terminal.py
 
@@ -510,7 +461,7 @@ WiFi モード：
 python tools/clip-web.py --transport wifi
 ```
 
-その後、次を開きます：
+次を開きます：
 
 ```
 http://localhost:5000
@@ -577,13 +528,13 @@ except CommandError:
 
 この例では、一般的なワークフローを示します：
 
-1. デバイスに接続
-2. バッテリーレベルを確認
-3. 録音パラメータを設定
-4. 録音を開始
-5. ブックマークを追加
-6. 録音を停止
-7. 録音されたセッションを同期
+1. デバイスに接続する
+2. バッテリーレベルを確認する
+3. 録音パラメータを設定する
+4. 録音を開始する
+5. ブックマークを追加する
+6. 録音を停止する
+7. 録音されたセッションを同期する
 
 ```python
 import asyncio
@@ -629,7 +580,7 @@ asyncio.run(record_and_sync())
 
 ### ClipDevice
 
-目的：BLE デバイスの通信および接続管理。
+目的：BLE デバイス通信および接続管理。
 
 ```python
 class ClipDevice:
@@ -692,7 +643,7 @@ class WiFiDevice:
 
 ### WiFiSync
 
-目的：WiFi 経由でのファイル同期。
+目的：WiFi 経由でファイルを同期します。
 
 ```python
 class WiFiSync:
@@ -704,7 +655,7 @@ class WiFiSync:
 
 ### 例外
 
-| Exception        | 説明                           |
+| 例外             | 説明                           |
 | ---------------- | ------------------------------ |
 | ClipError        | すべてのエラーの基本例外       |
 | ConnectionError  | BLE/WiFi 接続の失敗            |
@@ -713,9 +664,9 @@ class WiFiSync:
 
 ---
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

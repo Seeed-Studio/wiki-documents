@@ -8,13 +8,13 @@ keywords:
   - YOLO
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_getting_started
-sku: 10003420
-sidebar_position: 1
+sku: 
+sidebar_position: 12
 last_update:
   date: 06/01/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_getting_started/
 ---
 
@@ -31,13 +31,13 @@ Bem-vindo ao **reCamera Pro**. Este guia ajudará você a concluir a conexão de
 ## 1. Conexão de Hardware
 
 Antes de iniciar a configuração, certifique-se de que você preparou o seguinte hardware:
-* **Cabo de Dados**: Um cabo USB Type-C com capacidade de transmissão de dados (não use um cabo que ofereça apenas carregamento).
-* **Fonte de Alimentação**: Um cabo de alimentação DC (requisitos de especificação: **12V, 1A**, a fonte de alimentação padrão de fábrica é: 12V, 2A).
+* **Cabo de dados**: Um cabo USB Type-C com capacidade de transmissão de dados (não use um cabo que suporte apenas carregamento).
+* **Fonte de alimentação**: Um cabo de alimentação DC (requisitos de especificação: **12V, 1A**, a fonte de alimentação padrão de fábrica é: 12V, 2A).
 
 ### Etapas de Conexão
 
-1. Conforme mostrado na figura abaixo, conecte o cabo de alimentação DC de 12V na interface de alimentação do dispositivo, conecte uma extremidade do cabo USB Type-C ao reCamera Pro e conecte a outra extremidade ao seu computador host com Windows (Host PC).
-2. Observe o indicador de status do dispositivo. Quando a **luz verde estiver acesa continuamente**, isso indica que o dispositivo inicializou com sucesso e entrou no estado de operação.
+1. Conforme mostrado na figura abaixo, conecte o cabo de alimentação DC de 12V na interface de alimentação do dispositivo, conecte uma extremidade do cabo USB Type-C ao reCamera Pro e conecte a outra extremidade ao seu computador host Windows (Host PC).
+2. Observe o indicador de status do dispositivo. Quando a **luz verde estiver acesa continuamente**, isso indica que o dispositivo foi inicializado com sucesso e entrou em estado de operação.
 
 ![Diagrama da luz de status do sistema e conexão dos cabos](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
@@ -61,7 +61,7 @@ Antes de tentar fazer login na interface Web, certifique-se de que o cabo USB Ty
 ![Diagrama de login Web e interface principal](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip Solução de Problemas Comuns
-Se a página não carregar após inserir `192.168.42.1` no sistema Windows, vá diretamente para a seção [4. Perguntas Frequentes e Solução de Problemas (FAQ)](#4-perguntas-frequentes-e-solução-de-problemasfaq) no final deste documento para realizar uma verificação do adaptador de rede.
+Se a página não carregar após digitar `192.168.42.1` no sistema Windows, vá diretamente para a seção [4. Perguntas Frequentes e Solução de Problemas (FAQ)](#4-perguntas-frequentes-e-solução-de-problemasfaq) no final deste documento para realizar uma verificação do adaptador de rede.
 :::
 
 ---
@@ -86,7 +86,7 @@ Após conectar-se com sucesso ao Wi-Fi, você pode clicar no nome do Wi-Fi conec
 ![Diagrama de visualização dos detalhes do Wi-Fi](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/wifi_details.png)
 
 :::tip Desconecte o Cabo Type-C para Gerenciamento Sem Fio
-Depois de obter o IP da rede local atribuído pelo Wi-Fi (por exemplo, `192.168.4.200`), desde que o seu computador e o reCamera Pro estejam na mesma rede local, você pode inserir diretamente esse endereço IP (por exemplo, `http://192.168.4.200`) no navegador para fazer login no dispositivo.
+Depois de obter o IP da rede local atribuído pelo Wi-Fi (por exemplo, `192.168.4.200`), desde que o seu computador e o reCamera Pro estejam na mesma rede local, você pode digitar diretamente esse endereço IP (por exemplo, `http://192.168.4.200`) no navegador para fazer login no dispositivo.
 Neste ponto, você pode **desconectar com segurança o cabo USB Type-C** para obter operação e gerenciamento totalmente sem fio.
 :::
 
@@ -98,8 +98,8 @@ Neste ponto, você pode **desconectar com segurança o cabo USB Type-C** para ob
 
 Se você não conseguir abrir a interface Web após conectar o cabo Type-C, geralmente é porque a placa de rede virtual do sistema Windows não obteve corretamente um endereço IP. Siga estas etapas para solucionar o problema:
 
-1. Abra o **Painel de Controle** no computador host com Windows.
-2. Clique para entrar em **Rede e Internet** -> **Central de Rede e Compartilhamento** -> **Alterar as configurações do adaptador**, em sequência.
+1. Abra o **Painel de Controle** no computador host Windows.
+2. Clique para entrar em **Rede e Internet** -> **Central de Rede e Compartilhamento** -> **Alterar configurações do adaptador**, em sequência.
 3. Na lista de conexões de rede que aparecer, encontre a placa de rede virtual com um nome semelhante a `Remote NDIS based Internet Sharing Device` ou relacionada ao reCamera (você pode tentar desconectar e reconectar o dispositivo para ver qual porta de rede desaparece e reaparece; essa porta é a interface de placa de rede virtual do reCamera Pro).
 4. Clique com o botão direito neste adaptador de rede e selecione **Propriedades**.
 5. Clique duas vezes em **Protocolo IP Versão 4 (TCP/IPv4)** na lista.

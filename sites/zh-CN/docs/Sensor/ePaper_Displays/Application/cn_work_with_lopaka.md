@@ -1,14 +1,14 @@
 ---
 description: 本文主要介绍如何使用 Lopaka 网站创建精美的用户界面，并将其应用于 reTerminal E 系列。
-title: 使用 Lopaka 工作
+title: 使用 Lopaka 进行开发
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /reterminal_e10xx_with_lopaka
-sidebar_position: 9
+sidebar_position: 7
 last_update:
   date: 9/12/2025
   author: Martin
 createdAt: '2025-09-19'
-updatedAt: '2026-06-03'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_lopaka/
 ---
 
@@ -51,7 +51,7 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_lopaka/
 
 ## 环境准备
 
-要使用 Arduino 为 reTerminal E 系列电子纸显示屏编程，您需要在 Arduino IDE 中添加 ESP32 支持。
+要使用 Arduino 为 reTerminal E 系列电子纸显示屏编程，您需要在 Arduino IDE 中添加对 ESP32 的支持。
 
 :::tip
 如果这是您第一次使用 Arduino，我们强烈建议您参考[Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
@@ -65,7 +65,7 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_lopaka/
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
-      <strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong>
+      <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
     </a>
 </div><br />
 
@@ -85,7 +85,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 依次点击 **Tools > Board > ESP32 Arduino**，然后选择 **XIAO_ESP32S3**。
 
-**步骤 5.** 使用 USB-C 线将 reTerminal E 系列电子纸显示屏连接到电脑。
+**步骤 5.** 使用 USB-C 线将您的 reTerminal E 系列电子纸显示屏连接到电脑。
 
 **步骤 6.** 在 **Tools > Port** 中选择正确的端口。
 
@@ -122,7 +122,7 @@ Lopaka 是一款专为嵌入式图形开发设计的图形编辑器。它可以�
 - **Screens**：可以创建多个屏幕，支持您存储不同的创意。
 - **CODE**：生成的代码为 C 语言。
 - **IMAGES**：Lopaka 的官方图像类型。
-- **Code settings**：设置生成代码的选项，建议您将所有选项都勾选。
+- **Code settings**：设置生成代码的选项。建议您勾选所有选项。
 
 **其他**
 
@@ -130,18 +130,18 @@ Lopaka 是一款专为嵌入式图形开发设计的图形编辑器。它可以�
 
 从左到右依次为：
 
-- **“Gear”**：用于管理项目，在这里您可以重新定义项目名称、调整屏幕尺寸和背景颜色，但不支持修改 Platform，除非删除或重新创建项目。
-- **Toolbar**：这一排工具栏的功能依次为：Select、Paint、String、Rectangle、Circle、Line 和 Image。
+- **“Gear”**：用于管理项目，在这里您可以重新定义项目名称、调整屏幕尺寸和背景颜色，但不支持修改 Platform，除非您删除或重新创建项目。
+- **Toolbar**：这一排工具栏的功能依次为：选择、填充、字符串、矩形、圆形、直线和图像。
 - **Slider**：在这里可以调整画布的缩放比例，方便您进行细节操作。
 - **Frok and SHARE**：您可以 frok 他人的项目并分享自己的项目。
-- **Price Gally Blog Feedback**：Price 用于订阅不同等级的 Lopaka 以获取更多功能；Gally 是一个开源工程市场；Blog 是 Lopaka 的更新日志；Feedback 用于提交反馈。
+- **Price Gally Blog Feedback**：Price 用于订阅不同等级的 Lopaka 以获取更多功能。Gally 是一个开源工程市场。Blog 是 Lopaka 的更新日志。Feedback 用于提交反馈。
 - **Shortcuts**：这里是一些快捷键提示。
 
 ### Hello World
 
 - 选择 “String”，然后在画布上点击。
 - 在右侧栏中选择 “Font”，并选择您的字体，例如 Adafruit 5×7。
-- 输入内容 “Hello World!”，将 “Size” 选择为 6，并选择您喜欢的颜色，这里我选择绿色。
+- 输入内容 “Hello World!”，选择 “Size” 为 6，并选择您喜欢的颜色，这里我选择绿色。
 - 然后将其移动到屏幕中央位置。之后，所需的项目代码会在 “CODE” 中自动生成。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_1.png" style={{width:800, height:'auto'}}/></div>
@@ -158,21 +158,21 @@ Lopaka 是一款专为嵌入式图形开发设计的图形编辑器。它可以�
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 **步骤 2.** 在 Arduino IDE 中通过添加 ZIP 文件的方式安装该库。依次点击 **Sketch > Include Library > Add .ZIP Library**，然后选择下载好的 ZIP 文件。
 
 :::note
-如果您之前安装过 TFT_eSPI 库，可能需要暂时从 Arduino 库文件夹中移除或重命名它，以避免冲突，因为 Seeed_GFX 是在 TFT_eSPI 基础上进行扩展的分支，专门为 Seeed Studio 显示屏增加了更多功能。
+如果您之前安装过 TFT_eSPI 库，可能需要暂时从 Arduino 库文件夹中移除或重命名它，以避免冲突，因为 Seeed_GFX 是在 TFT_eSPI 的基础上进行分支并为 Seeed Studio 显示屏增加了更多功能。
 :::
 
 ### 为 reTerminal E1002 编程
 
 全彩电子纸显示屏支持红、黑、黄、绿和白色，可以实现更加丰富的可视化界面。
 
-**步骤 1.** 在 Seeed_GFX 库中打开彩色示例草图：**File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
+**步骤 1.** 从 Seeed_GFX 库中打开彩色示例草图：**File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
 **步骤 2.** 在与草图相同的文件夹中创建一个名为 `driver.h` 的新文件，创建方式与之前相同。
 
@@ -180,7 +180,7 @@ Lopaka 是一款专为嵌入式图形开发设计的图形编辑器。它可以�
 
 **步骤 3.** 打开 [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)，并在设备列表中选择 **reTerminal E1002**。
 
-**步骤 4.** 复制生成的配置代码并粘贴到 `driver.h` 文件中。代码应类似如下所示：
+**步骤 4.** 复制生成的配置代码并粘贴到 `driver.h` 文件中。代码应类似如下：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
@@ -199,7 +199,7 @@ Lopaka 是一款专为嵌入式图形开发设计的图形编辑器。它可以�
 **步骤 5.** 修改流程
 
 - 将 Lopaka 页面中的 CODE 代码复制到 Arduino 环境中。
-- 将小写的 "epaper" 替换为 "tft"，使用 Ctrl + F 打开全局搜索，输入 "epaper"，然后点击 `Aa` 切换为不区分大小写搜索，接着输入 "tft"，并点击 "Global Replace"
+- 将小写的 "epaper" 替换为 "tft"，使用 Ctrl + F 打开全局搜索，输入 "epaper"，然后点击 `Aa` 切换为不区分大小写搜索，接着输入 "tft"，并点击“全局替换”
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -298,7 +298,7 @@ void loop()
 
 ### 示例
 
-这里介绍了两种不同的绘制方式。你可以选择适合自己实际需求的一种。
+这里介绍了两种不同的绘制方式。你可以选择适合自己实际需求的方式。
 
 此外，为了更好地展示效果，我将背景颜色改为了黑色。
 
@@ -340,7 +340,7 @@ void loop()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_1.png" style={{width:800, height:'auto'}}/></div>
 
-- 将位置和间距调整到合适，然后再添加一些细节。
+- 将位置和间距调整到合适，然后添加一些细节。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -940,7 +940,7 @@ void loop()
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

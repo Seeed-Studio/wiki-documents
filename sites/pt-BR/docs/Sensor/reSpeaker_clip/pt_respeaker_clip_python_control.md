@@ -7,7 +7,7 @@ keywords:
   - wifi
   - python
   - sdk
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg
 slug: /respeaker_clip_python_control
 sku: 100020126
 last_update:
@@ -33,7 +33,7 @@ Com este SDK você pode:
 * Adicionar marcadores
 * Sincronizar gravações
 * Controlar o dispositivo usando Python
-* Usar ferramentas de linha de comando prontas para uso
+* Usar ferramentas de linha de comando prontas
 * Acessar o dispositivo por meio de uma interface web
 
 ---
@@ -93,13 +93,13 @@ applications/clip/tests/
 
 ### Módulos do SDK
 
-| Módulo       | Descrição                |
+| Module        | Description              |
 | ------------- | ------------------------ |
 | client.py     | Comunicação com dispositivo BLE |
 | commands.py   | Comandos AT de alto nível |
 | transfer.py   | Sincronização de arquivos |
 | codec.py      | Codificação/decodificação de áudio |
-| wifi.py       | Transporte via WiFi      |
+| wifi.py       | Transporte WiFi          |
 | progress.py   | Exibição de progresso    |
 | utils.py      | Funções auxiliares       |
 | exceptions.py | Classes de exceção       |
@@ -127,7 +127,7 @@ async def main():
 asyncio.run(main())
 ```
 
-O SDK pesquisa automaticamente por dispositivos próximos com os nomes:
+O SDK procura automaticamente por dispositivos próximos chamados:
 
 ```
 Clip XXXX
@@ -326,7 +326,7 @@ O reSpeaker Clip pode se comunicar via WiFi usando UDP.
 
 Configurações padrão:
 
-| Parâmetro | Valor       |
+| Parameter | Value       |
 | --------- | ----------- |
 | SSID      | ClipAP_XXXX |
 | Password  | 12345678    |
@@ -379,60 +379,21 @@ CLI de uso geral.
 
 ```bash
 clip-cli status
-```
 
-Saída esperada
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/status.jpg" alt="Conexão do dispositivo" width={800} height="auto"/></p>
-
-```bash
 clip-cli version
-```
-```bash
+
 clip-cli list
-```
 
-Saída esperada
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/list.png" alt="Conexão do dispositivo" width={800} height="auto"/></p>
-
-```bash
 clip-cli record --duration 60
 
-```
-Saída esperada
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.jpg" alt="Conexão do dispositivo" width={800} height="auto"/></p>
-
-```bash
 clip-cli sync --session 20260326120000
-```
-Saída esperada
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync.jpg" alt="Conexão do dispositivo" width={800} height="auto"/></p>
-
-```bash
-clip-cli sync --session 20260326120000 --delete
-```
-Saída esperada
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="Conexão do dispositivo" width={800} height="auto"/></p>
-
-```bash
 clip-cli config get
-```
-Saída esperada
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="Conexão do dispositivo" width={800} height="auto"/></p>
-
-```bash
 clip-cli bookmark
-```
 
-```bash
 clip-cli terminal
 ```
-
 
 ### record.py
 
@@ -445,9 +406,6 @@ python tools/record.py --duration 60
 
 python tools/record.py --mode enhanced
 ```
-Saída esperada
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="Conexão do dispositivo" width={800} height="auto"/></p>
 
 ### sync.py
 
@@ -458,9 +416,6 @@ python tools/sync.py
 
 python tools/sync.py --all-sessions
 ```
-Saída esperada
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="Conexão do dispositivo" width={800} height="auto"/></p>
 
 ### udp_sync.py
 
@@ -471,10 +426,6 @@ python tools/udp_sync.py
 
 python tools/udp_sync.py --session 20260326120000
 ```
-
-Saída esperada
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="Conexão do dispositivo" width={800} height="auto"/></p>
 
 ### ble_terminal.py
 
@@ -527,7 +478,7 @@ http://localhost:5000
 
 ### REST API
 
-| Método | Endpoint             |
+| Method | Endpoint             |
 | ------ | -------------------- |
 | GET    | /api/status          |
 | GET    | /api/version         |
@@ -625,7 +576,7 @@ asyncio.run(record_and_sync())
 
 ---
 
-## Referência da API
+## Referência de API
 
 ### ClipDevice
 
@@ -704,11 +655,11 @@ class WiFiSync:
 
 ### Exceções
 
-| Exception        | Description                    |
+| Exceção         | Descrição                      |
 | ---------------- | ------------------------------ |
 | ClipError        | Exceção base para todos os erros |
 | ConnectionError  | Falha de conexão BLE/WiFi      |
-| TimeoutError     | Tempo limite de comando        |
+| TimeoutError     | Tempo limite de comando excedido |
 | CommandError     | Comando AT inválido ou com falha |
 
 ---

@@ -8,13 +8,13 @@ keywords:
   - YOLO
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_getting_started
-sku: 10003420
-sidebar_position: 1
+sku: 
+sidebar_position: 12
 last_update:
   date: 06/01/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/es/recamera_pro_getting_started/
 ---
 
@@ -61,7 +61,7 @@ Antes de intentar iniciar sesión en la interfaz web, asegúrese de que el cable
 ![Diagrama de inicio de sesión web e interfaz principal](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip Solución de problemas comunes
-Si la página no se carga después de introducir `192.168.42.1` en el sistema Windows, vaya directamente a la sección [4. Preguntas frecuentes y solución de problemas (FAQ)](#4-preguntas-frecuentes-y-solución-de-problemasfaq) al final de este documento para realizar una comprobación del adaptador de red.
+Si la página no se carga después de introducir `192.168.42.1` en el sistema Windows, vaya directamente a la sección [4. Frequently Asked Questions and Troubleshooting (FAQ)](#4-preguntas-frecuentes-y-solución-de-problemasfaq) al final de este documento para realizar una comprobación del adaptador de red.
 :::
 
 ---
@@ -73,7 +73,7 @@ Para permitir que el dispositivo acceda a Internet o habilitar la gestión inal�
 ### Pasos de operación
 
 1. Después de iniciar sesión correctamente en la interfaz web principal, haga clic en **Device Info** en la barra de navegación izquierda.
-2. En el submenú o en el área de configuración derecha, haga clic en **Network Settings**.
+2. En el submenú o en el área de configuración de la derecha, haga clic en **Network Settings**.
 3. Active la función Wi-Fi (si está desactivada por defecto) y el sistema escaneará automáticamente las redes inalámbricas cercanas.
 4. Seleccione el SSID de su Wi-Fi de la lista de redes disponibles, introduzca la contraseña inalámbrica correcta y haga clic en conectar.
 
@@ -86,7 +86,7 @@ Después de conectarse correctamente al Wi-Fi, puede hacer clic en el nombre del
 ![Diagrama de visualización de detalles de Wi-Fi](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/wifi_details.png)
 
 :::tip Desconecte el cable Type-C para la gestión inalámbrica
-Después de obtener la IP de la red de área local asignada por el Wi-Fi (por ejemplo, `192.168.4.200`), siempre que su ordenador y la reCamera Pro estén dentro de la misma red de área local, puede introducir directamente esta dirección IP (por ejemplo, `http://192.168.4.200`) en el navegador para iniciar sesión en el dispositivo.
+Después de obtener la IP de red local asignada por el Wi-Fi (por ejemplo, `192.168.4.200`), siempre que su ordenador y la reCamera Pro estén dentro de la misma red de área local, puede introducir directamente esta dirección IP (por ejemplo, `http://192.168.4.200`) en el navegador para iniciar sesión en el dispositivo.
 En este punto, puede **desconectar el cable USB Type-C** de forma segura para lograr una operación y gestión completamente inalámbricas.
 :::
 
@@ -99,8 +99,8 @@ En este punto, puede **desconectar el cable USB Type-C** de forma segura para lo
 Si no puede abrir la interfaz web después de conectar el cable Type-C, normalmente se debe a que la tarjeta de red virtual del sistema Windows no obtuvo correctamente una dirección IP. Siga estos pasos para solucionar el problema:
 
 1. Abra el **Panel de control** en el equipo host con Windows.
-2. Haga clic sucesivamente en **Red e Internet** -> **Centro de redes y recursos compartidos** -> **Cambiar configuración del adaptador**.
-3. En la lista emergente de conexiones de red, busque la tarjeta de red virtual con un nombre similar a `Remote NDIS based Internet Sharing Device` o relacionada con reCamera (puede intentar desconectar y volver a conectar el dispositivo para ver qué puerto de red desaparece y reaparece; ese puerto es la interfaz de tarjeta de red virtual de reCamera Pro).
+2. Haga clic para entrar secuencialmente en **Redes e Internet** -> **Centro de redes y recursos compartidos** -> **Cambiar configuración del adaptador**.
+3. En la lista emergente de conexiones de red, busque la tarjeta de red virtual con un nombre similar a `Remote NDIS based Internet Sharing Device` o relacionada con reCamera (puede intentar desconectar y volver a conectar el dispositivo para ver qué puerto de red desaparece y reaparece; ese puerto es la interfaz de la tarjeta de red virtual de reCamera Pro).
 4. Haga clic con el botón derecho en este adaptador de red y seleccione **Propiedades**.
 5. Haga doble clic en **Protocolo de Internet versión 4 (TCP/IPv4)** en la lista.
 6. Asegúrese de que la configuración tenga marcadas **Obtener una dirección IP automáticamente** y **Obtener la dirección del servidor DNS automáticamente**.
@@ -111,15 +111,15 @@ Si no puede abrir la interfaz web después de conectar el cable Type-C, normalme
   controls 
   width="100%" 
   preload="metadata">
-  Your browser does not support playing this video.
+  Su navegador no admite la reproducción de este vídeo.
 </video>
 
 
 ### P2: Después de conectar la reCamera al ordenador mediante el cable USB, el ordenador no pudo acceder a Internet
 
-Si su ordenador MAC no puede acceder a Internet después de conectar la reCamera mediante un cable USB, se debe a que la tarjeta de red virtual se hará cargo del WIFI de su MAC, impidiendo que su MAC se conecte a Internet. Siga los pasos a continuación para resolver el problema:
+Si su ordenador MAC no puede acceder a Internet después de conectar la reCamera mediante un cable USB, se debe a que la tarjeta de red virtual se hará cargo del WIFI de su MAC, impidiendo que su MAC se conecte a Internet. Siga los pasos siguientes para resolver el problema:
 
-1. Abra los ***Ajustes del sistema de su MAC -> Red***.
+1. Abra los ***System Settings of your MAC -> Network***.
 2. En la esquina inferior derecha (o en la parte inferior derecha), localice un icono que es un ***círculo con tres puntos '...' dentro*** (o una flecha hacia abajo, según la versión de su MAC).
 3. Haga clic en ***Set Service Order...(Set Service Order...)***.
 4. En la lista emergente, arrastre el WIFI a la parte superior para asegurarse de que esté colocado antes de la tarjeta de red virtual USB (como USB_Gadget).
