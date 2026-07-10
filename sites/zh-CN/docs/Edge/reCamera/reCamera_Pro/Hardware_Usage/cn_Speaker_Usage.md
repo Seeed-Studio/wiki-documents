@@ -52,16 +52,18 @@ Simple mixer control 'ACodec Digital Gain',0
 ``` bash
 amixer set 'DAC Digital' 50%
 ```
-::: Note
+
+:::note
 - 将音量设置在 80% 以上会产生爆音。
 - 请根据实际情况调节音量，避免过载。
 :::
+
 ## 播放音频
 首先将需要播放的音频文件拷贝到设备上。假设音频文件路径为 `/sdcard/audio.wav3`，使用以下命令播放音频：
 ``` bash
 aplay /sdcard/audio.wav3
 ```
-如果你的音频文件为 MP3 格式，请先使用下面的命令将其转换为 WAV 格式，然后按上述方式进行播放：
+如果你的音频文件为 MP3 格式，请先使用下面的命令转换为 WAV 格式，然后按上述方式进行播放：
 ```bash
 ffmpeg -i test.mp3 test.wav
 ```
@@ -69,7 +71,7 @@ ffmpeg -i test.mp3 test.wav
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中体验顺畅。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用产品的过程中体验顺畅。我们提供多种交流渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

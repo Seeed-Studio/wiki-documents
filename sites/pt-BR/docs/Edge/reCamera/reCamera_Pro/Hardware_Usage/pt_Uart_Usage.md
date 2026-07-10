@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_pro_uart_usage/
 
 # Usando a interface UART
 
-Há duas portas seriais no dispositivo: uma é a DEBUG UART dedicada à depuração, e a outra é a interface UART usada para acionamento pela interface web.
+Existem duas portas seriais no dispositivo: uma é a DEBUG UART dedicada à depuração, e a outra é a interface UART usada para acionamento pela interface web.
 ![Diagrama da interface da placa base de hardware](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
 ![Esquemático da porta de expansão](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/EXT_GPIO.jpg)
 
@@ -52,7 +52,7 @@ Esta interface UART é usada como a interface UART para acionamento pela interfa
 6. Em ***Recording Settings*** -> ***File Preview***, você pode visualizar a foto ou o vídeo capturado pelo acionamento da porta serial há pouco.
 ![DEBUG_UART_FILE_SHOW](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/DEBUG_UART_FILE_SHOW.png)
 
-::: note
+:::note
 O comando de acionamento só pode ser enviado em formato ASCII. O envio em HEX não é suportado, e caracteres chineses não são suportados.
 :::
 
@@ -65,7 +65,7 @@ O comando de acionamento só pode ser enviado em formato ASCII. O envio em HEX n
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos múltiplos canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
