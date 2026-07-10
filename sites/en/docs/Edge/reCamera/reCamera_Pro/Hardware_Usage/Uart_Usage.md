@@ -52,7 +52,7 @@ This UART interface is used as the UART interface for web UI triggering. It can 
 6. In ***Recording Settings*** -> ***File Preview***, you can view the photo or video captured by the serial port trigger just now.
 ![DEBUG_UART_FILE_SHOW](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/DEBUG_UART_FILE_SHOW.png)
 
-::: note
+:::note
 The trigger command can only be sent in ASCII format. HEX sending is not supported, and Chinese characters are not supported.
 :::
 
