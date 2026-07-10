@@ -18,11 +18,11 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_usage/
 ---
 
 # Uso da IMU
-O modelo de IMU equipado no dispositivo é o ICM-42670-P, um sensor de 6 eixos que integra um acelerômetro de 3 eixos e um giroscópio de 3 eixos. O giroscópio do ICM-42670-P suporta faixas de medição de ±250 / ±500 / ±1000 / ±2000 dps, enquanto o acelerômetro suporta faixas de ±2 / ±4 / ±8 / ±16 g. Seus dados internos são fornecidos em formato de complemento de dois de 16 bits.
+O modelo de IMU equipado no dispositivo é o ICM-42670-P, um sensor de 6 eixos que integra um acelerômetro de 3 eixos e um giroscópio de 3 eixos. O giroscópio do ICM-42670-P suporta faixas de medição de ±250 / ±500 / ±1000 / ±2000 dps, enquanto o acelerômetro suporta faixas de ±2 / ±4 / ±8 / ±16 g. Seus dados internos são fornecidos no formato de complemento de dois de 16 bits.
 ## Caminho dos dados
 O reCamera PRO usa o driver IIO padrão para a IMU, portanto os dados brutos podem ser obtidos diretamente por meio das interfaces IIO.
 Os arquivos de dados brutos podem ser encontrados no diretório ***/sys/bus/iio/devices/iio:device1/***.
-
+![IMU_DATA_SAMPLE](https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO_imu_dir.png)
 ## Ler dados
 Execute o seguinte comando para ler os dados brutos correspondentes. O exemplo abaixo demonstra a leitura dos dados de aceleração do eixo X:
 ``` bash

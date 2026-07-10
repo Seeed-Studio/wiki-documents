@@ -52,10 +52,12 @@ Simple mixer control 'ACodec Digital Gain',0
 ``` bash
 amixer set 'DAC Digital' 50%
 ```
-::: Note
+
+:::note
 - Volume ajustado acima de 80% causará estalos.
 - Ajuste o volume de acordo com as condições reais para evitar sobrecarga.
 :::
+
 ## Reproduzir áudio
 Primeiro copie o arquivo de áudio que você precisa reproduzir para o dispositivo. Suponha que o caminho do arquivo de áudio seja `/sdcard/audio.wav3`, use o seguinte comando para reproduzir o áudio:
 ``` bash

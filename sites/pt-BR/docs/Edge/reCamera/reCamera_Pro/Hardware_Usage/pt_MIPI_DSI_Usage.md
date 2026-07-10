@@ -33,10 +33,54 @@ Localize a extremidade TCON do cabo da tela MIPI e insira-a para dentro, conform
 Após conectar a tela MIPI, ligue o dispositivo e a imagem em tempo real da câmera será exibida na tela MIPI.
 ![SHOW_GIF](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/MIPI_DSI_SHOW_CAMERA.gif)
 
-::: note
+:::note
 A tela requer uma fonte de alimentação separada; o dispositivo não fornece saída de energia dedicada para a tela.
 :::
 
+O link da tela é o seguinte：
+<table align="center">
+  <tbody>
+    <tr>
+      <th>Raspberry Pi Touch Display 2</th>
+    </tr>
+    <tr>
+      <td>
+        <div style={{ textAlign: "center" }}>
+          <img
+            src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/104990902_1.jpg"
+            alt="Raspberry Pi Touch Display 2"
+            style={{
+              width: "auto",
+              height: "auto",
+              objectFit: "contain",
+            }}
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          className="get_one_now_container"
+          style={{ textAlign: "center" }}
+        >
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Raspberry-Pi-Touch-Display-2-p-6255.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: "#FFFFFF", fontSize: "16px" }}>
+                Compre agora 🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Suporte Técnico e Discussão de Produtos
 

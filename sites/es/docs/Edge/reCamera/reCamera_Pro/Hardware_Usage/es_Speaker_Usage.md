@@ -32,7 +32,7 @@ card 0: rockchiprv1126b [rockchip,rv1126b-acodec], device 0: dailink-multicodecs
   Subdevices: 1/1
   Subdevice #0: subdevice #0
 ```
-## Ajustar el volumen
+## Ajustar volumen
 1. Comprobar el mezclador actual:
 ``` bash
 amixer
@@ -52,10 +52,12 @@ Simple mixer control 'ACodec Digital Gain',0
 ``` bash
 amixer set 'DAC Digital' 50%
 ```
-::: Note
+
+:::note
 - Establecer el volumen por encima del 80% provocará ruidos de chasquidos.
-- Ajuste el volumen según las condiciones reales para evitar sobrecargas.
+- Ajuste el volumen según las condiciones reales para evitar sobrecarga.
 :::
+
 ## Reproducir audio
 Primero copie el archivo de audio que necesita reproducir al dispositivo. Suponga que la ruta del archivo de audio es `/sdcard/audio.wav3`, use el siguiente comando para reproducir audio:
 ``` bash

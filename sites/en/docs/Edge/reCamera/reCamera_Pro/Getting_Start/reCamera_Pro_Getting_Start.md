@@ -41,6 +41,15 @@ Before starting the configuration, please ensure that you have prepared the foll
 
 ![System status light and cable connection diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
+### Status indicator explanation
+The green LED indicates the system status, while the red LED serves as the power indicator. The following table describes the device status corresponding to each state of the green LED.
+
+1. ***breathing*** : At this moment, the representative device is in the process of powering on.
+2. ***Solid on*** : The equipment is operating normally.
+3. ***off*** : Abnormal state, the core process is not running.
+4. ***100 ms blink*** : Currently in the OTA process.
+5. ***Short green blink*** : An SD card with a dirty filesystem has been detected.
+
 ---
 
 ## 2. Log in to the Device Web Management Interface
