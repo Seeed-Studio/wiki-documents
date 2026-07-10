@@ -372,6 +372,7 @@ module.exports = (async () => {
       [
         'docusaurus-plugin-copy-page-button',
         {
+          injectButton: false,
           enabledActions: ['copy', 'view', 'chatgpt', 'claude', 'gemini'],
           labels: {
             button: {
