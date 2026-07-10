@@ -222,7 +222,7 @@ Mini J501 也可用于机器人场景。其支持 NVIDIA Isaac ROS、Hugging Fac
         <td > 20.04 </td>
         <td > 22.04 </td>
         <td > 24.04 </td>
-    </tr]
+    </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>

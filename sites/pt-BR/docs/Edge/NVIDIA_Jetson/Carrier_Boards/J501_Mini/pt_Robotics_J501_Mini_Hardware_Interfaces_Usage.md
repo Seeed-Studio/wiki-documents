@@ -229,7 +229,7 @@ Consulte a tabela abaixo para preparar a máquina host.
         <td > ✅ </td>
         <td > ✅ </td>
         <td > </td>
-    </tr]
+    </tr>
     <tr>
         <td >JetPack 7.2</td>
         <td > </td>
