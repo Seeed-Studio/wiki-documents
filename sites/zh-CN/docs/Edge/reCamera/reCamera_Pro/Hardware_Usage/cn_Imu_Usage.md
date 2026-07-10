@@ -18,13 +18,13 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_usage/
 ---
 
 # IMU 使用
-设备上配备的 IMU 型号为 ICM-42670-P，这是一款 6 轴传感器，集成了 3 轴加速度计和 3 轴陀螺仪。ICM-42670-P 的陀螺仪支持 ±250 / ±500 / ±1000 / ±2000 dps 的测量范围，而加速度计支持 ±2 / ±4 / ±8 / ±16 g 的量程。其内部数据以 16 位二进制补码格式输出。
+设备上配备的 IMU 型号为 ICM-42670-P，是一款集成 3 轴加速度计和 3 轴陀螺仪的 6 轴传感器。ICM-42670-P 的陀螺仪支持 ±250 / ±500 / ±1000 / ±2000 dps 的测量范围，而加速度计支持 ±2 / ±4 / ±8 / ±16 g 的测量范围。其内部数据以 16 位二进制补码格式输出。
 ## 数据路径
 reCamera PRO 为 IMU 使用标准 IIO 驱动，因此可以通过 IIO 接口直接获取原始数据。
 原始数据文件可以在目录 ***/sys/bus/iio/devices/iio:device1/*** 下找到。
-
+![IMU_DATA_SAMPLE](https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO_imu_dir.png)
 ## 读取数据
-运行以下命令以读取对应的原始数据。下面的示例演示了如何读取 X 轴加速度数据：
+运行以下命令以读取对应的原始数据。下面的示例演示如何读取 X 轴加速度数据：
 ``` bash
 cat /sys/bus/iio/devices/iio:device1/in_accel_x_raw
 ```
@@ -44,7 +44,7 @@ print(f"Gyroscope X: {gyro_x:.6f} rad/s")
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
