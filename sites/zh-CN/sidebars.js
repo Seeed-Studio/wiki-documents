@@ -2149,7 +2149,14 @@ const sidebars = {
         {
           type: 'category',
           label: 'reSpeaker Clip',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_clip/cn_respeaker_clip_getting_started',
+          },
           items: [
+            'Sensor/reSpeaker_clip/cn_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/cn_respeaker_clip_python_control',
           ],
         },
@@ -3186,6 +3193,7 @@ const sidebars = {
       label: '其他网络设备',
       items: [
         'Network/TTN_Gateway/cn_The-Things-Indoor-Gateway',
+        'Network/cn_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
           label: 'Wio-WM6108 WiFi-Halow 设备',
@@ -4077,6 +4085,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/cn_How_to_run_VLM_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/cn_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_JoyAI_VL_Interaction_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Local_OpenClaw(Clawdbot)_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_Riva_and_Llama2_on_reComputer',
@@ -4467,6 +4476,7 @@ const sidebars = {
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Grasping_Demo',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_ROS2_Integration',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_pinocchio',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_isaacsim',
               ]
             }
           ]

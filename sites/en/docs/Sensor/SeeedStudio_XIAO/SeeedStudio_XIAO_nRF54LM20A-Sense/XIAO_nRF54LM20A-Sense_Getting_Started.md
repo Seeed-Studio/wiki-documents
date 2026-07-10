@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Seeed Studio XIAO nRF54LM20A Sense
+title: Getting Started with XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao

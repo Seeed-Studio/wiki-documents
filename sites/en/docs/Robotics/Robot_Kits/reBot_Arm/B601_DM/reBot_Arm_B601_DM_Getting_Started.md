@@ -49,6 +49,8 @@ The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed
 
 :::tip
 If you purchased a pre-assembled kit, please skip directly to the tutorial video in **Step 3** at the end of this article and follow along. There is no need to write motor IDs or calibrate zero positions.
+
+It has been verified that virtual machine performance is insufficient for running demos and there are configuration issues. It is recommended to use an Ubuntu physical machine to control the robotic arm.
 :::
 
 ## Purchasing Options
@@ -176,7 +178,7 @@ The following is an operation example using Motor 1. Please ensure that the CAN 
 1.Open the **DM_Tools** host software, select the corresponding USB COM port, and set the baud rate to `921600`. Once connected successfully, information will be printed in the `Serial` interface.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_connect_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_damiao_tool_en.png" width="800" />
 </div>
 
 2.Use the 3-pin cable to connect Motor 1 to the USB-CAN adapter board.
@@ -186,13 +188,17 @@ The following is an operation example using Motor 1. Please ensure that the CAN 
 4.After setting, click `Write Parameters` to save the parameters.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_id_set_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_damiao_tool_en.png" width="800" />
 </div>
+
+:::tip
+The USB mode in the orange box on the left represents the method used when reading and writing motor parameters on the current settings page.
+:::
 
 5.Navigate to the `Debug` interface. After ensuring the `CAN ID` and `Master ID` are set correctly, click `Enable`. The motor indicator light will turn solid green, indicating the motor is enabled. Motor 1 testing is now complete.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_enable_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_damiao_tool_en.png" width="800" />
 </div>
 
 :::tip
@@ -230,11 +236,29 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 
 3. This tool is fully compatible with **Windows, Ubuntu, and Mac** operating systems.
 
-### Step 1: Install miniforge (on Windows\Ubuntu\Mac\Jetson\Pi)
+### Step 1: Install Miniforge (on Windows\Ubuntu\macOS\Jetson\Pi)
+
+Install Miniforge and create a virtual environment to avoid interference from other environment packages.
+
+Ubuntu\Jetson\Pi:
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+or macOS:
+```bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+bash Miniforge3-MacOSX-$(uname -m).sh
+```
+
+or Windows:
+
+Open the Miniforge Release page in your browser, find the latest `Miniforge3-Windows-x86_64.exe` and download it:
+
+```text
+https://github.com/conda-forge/miniforge/releases
 ```
 
 ### Step 2: Environment Setup

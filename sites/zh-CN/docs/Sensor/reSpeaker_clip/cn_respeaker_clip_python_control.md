@@ -1,5 +1,5 @@
 ---
-description: reSpeaker Clip SDK 提供了一个 Python 接口，用于通过低功耗蓝牙（BLE）或 WiFi 与 reSpeaker Clip 设备通信，实现录音控制、文件同步、设备配置等功能。
+description: reSpeaker Clip SDK 提供了一个 Python 接口，可通过蓝牙低功耗（BLE）或 WiFi 与 reSpeaker Clip 设备通信，实现录音控制、文件同步、设备配置等功能。
 title: 使用 Python 控制 reSpeaker Clip
 keywords:
   - reSpeaker clip
@@ -7,7 +7,7 @@ keywords:
   - wifi
   - python
   - sdk
-image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png
 slug: /respeaker_clip_python_control
 sku: 100020126
 last_update:
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_python_control/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
-reSpeaker Clip SDK 提供了一个 Python 接口，用于通过低功耗蓝牙（BLE）或 WiFi 与 reSpeaker Clip 设备通信。
+reSpeaker Clip SDK 提供了一个 Python 接口，可通过蓝牙低功耗（BLE）或 WiFi 与 reSpeaker Clip 设备通信。
 
 使用此 SDK，您可以：
 
@@ -93,16 +93,16 @@ applications/clip/tests/
 
 ### SDK 模块
 
-| Module        | Description              |
-| ------------- | ------------------------ |
-| client.py     | BLE 设备通信             |
-| commands.py   | 高层 AT 命令             |
-| transfer.py   | 文件同步                 |
-| codec.py      | 音频编码/解码            |
-| wifi.py       | WiFi 传输                |
-| progress.py   | 进度显示                 |
-| utils.py      | 辅助函数                 |
-| exceptions.py | 异常类                   |
+| 模块          | 描述                 |
+| ------------- | -------------------- |
+| client.py     | BLE 设备通信         |
+| commands.py   | 高层 AT 命令         |
+| transfer.py   | 文件同步             |
+| codec.py      | 音频编码/解码        |
+| wifi.py       | WiFi 传输            |
+| progress.py   | 进度显示             |
+| utils.py      | 辅助函数             |
+| exceptions.py | 异常类               |
 
 ---
 
@@ -184,7 +184,7 @@ await cmds.set_time(
 
 ---
 
-## 录制音频
+## 音频录制
 
 ### 开始录音
 
@@ -268,7 +268,7 @@ await sync.sync(
 )
 ```
 
-### 保留设备上的文件
+### 在设备上保留文件
 
 ```python
 session_id = "20260326120000"
@@ -326,7 +326,7 @@ reSpeaker Clip 可以通过 WiFi 使用 UDP 进行通信。
 
 默认设置：
 
-| Parameter | Value       |
+| 参数     | 值          |
 | --------- | ----------- |
 | SSID      | ClipAP_XXXX |
 | Password  | 12345678    |
@@ -379,21 +379,60 @@ SDK 包含多个可直接使用的实用工具。
 
 ```bash
 clip-cli status
+```
 
+预期输出
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/status.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli version
-
+```
+```bash
 clip-cli list
+```
 
+预期输出
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/list.png" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli record --duration 60
 
+```
+预期输出
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli sync --session 20260326120000
+```
+预期输出
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
+clip-cli sync --session 20260326120000 --delete
+```
+预期输出
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli config get
+```
+预期输出
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli bookmark
+```
 
+```bash
 clip-cli terminal
 ```
+
 
 ### record.py
 
@@ -406,6 +445,9 @@ python tools/record.py --duration 60
 
 python tools/record.py --mode enhanced
 ```
+预期输出
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### sync.py
 
@@ -416,6 +458,9 @@ python tools/sync.py
 
 python tools/sync.py --all-sessions
 ```
+预期输出
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### udp_sync.py
 
@@ -426,6 +471,10 @@ python tools/udp_sync.py
 
 python tools/udp_sync.py --session 20260326120000
 ```
+
+预期输出
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### ble_terminal.py
 
@@ -447,7 +496,7 @@ python tools/decode_opus.py input.opus output.wav
 
 ## Web 界面
 
-启动内置 Web 应用。
+启动内置 Web 应用程序。
 
 BLE 模式：
 
@@ -478,7 +527,7 @@ http://localhost:5000
 
 ### REST API
 
-| Method | Endpoint             |
+| 方法  | 端点                  |
 | ------ | -------------------- |
 | GET    | /api/status          |
 | GET    | /api/version         |
@@ -526,7 +575,7 @@ except CommandError:
 
 ## 完整示例
 
-此示例演示一个典型的工作流程：
+此示例演示了一个典型的工作流程：
 
 1. 连接到设备
 2. 检查电池电量
@@ -593,7 +642,7 @@ class ClipDevice:
 
 ### ClipCommands
 
-用途：用于设备控制的高层 AT 命令。
+用途：用于设备控制的高级 AT 命令。
 
 ```python
 class ClipCommands:
@@ -655,18 +704,18 @@ class WiFiSync:
 
 ### 异常
 
-| 异常            | 描述                           |
+| Exception        | Description                    |
 | ---------------- | ------------------------------ |
 | ClipError        | 所有错误的基础异常             |
 | ConnectionError  | BLE/WiFi 连接失败              |
-| TimeoutError     | 命令超时                       |
+| TimeoutError     | 命令超时                        |
 | CommandError     | 无效或执行失败的 AT 命令       |
 
 ---
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

@@ -288,15 +288,6 @@ lerobot-calibrate \
 ```
 
 Keep it still, then press Enter until calibration is complete.
-After calibration, enter the following command to test the leader arm.
-
-```bash
-python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
-      --port /dev/ttyUSB0
-
-#If you observe terminal output similar to the following printing continuously, and when at the zero position shown above, all joint output values are 0, then leader calibration is complete.
-#shoulder_pan=    0.00  shoulder_lift=    0.00  elbow_flex=    0.00  wrist_flex=    0.00  wrist_yaw=    0.00  wrist_roll=    0.00  gripper=    0.00
-```
 
 </details>
 

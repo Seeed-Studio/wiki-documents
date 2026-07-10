@@ -21,7 +21,7 @@ updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/
 ---
 
-# Introdução ao reBot Arm B601-DM
+# Começando com o reBot Arm B601-DM
 
 ![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
@@ -35,7 +35,7 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/
 </p>
 
 <p align="center">
-  <strong>Braço Robótico de 6 DOF · Suporte a Múltiplos Motores · Solução de Cinemática · Planejamento de Trajetória · Totalmente Open Source</strong>
+  <strong>Braço Robótico 6-DOF · Suporte a Múltiplos Motores · Solucionador de Cinemática · Planejamento de Trajetória · Totalmente Open Source</strong>
 </p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -45,10 +45,12 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/
 
 O conteúdo deste guia está chegando até você à velocidade da luz — fique ligado!
 
-O projeto reBot Arm foi disponibilizado como open source no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Este guia irá conduzi-lo pelo início rápido do B601-DM, da montagem à operação.
+O projeto reBot Arm foi disponibilizado como código aberto no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Este guia irá conduzi-lo pelo início rápido do B601-DM, desde a montagem até a operação.
 
 :::tip
 Se você comprou um kit pré-montado, pule diretamente para o vídeo tutorial no **Passo 3** no final deste artigo e siga as instruções. Não é necessário gravar IDs dos motores nem calibrar as posições de zero.
+
+Foi verificado que o desempenho de máquinas virtuais é insuficiente para executar os demos e há problemas de configuração. Recomenda-se usar uma máquina física com Ubuntu para controlar o braço robótico.
 :::
 
 ## Opções de Compra
@@ -67,9 +69,9 @@ O reBot Arm B601-DM está disponível em várias configurações para atender à
 
 ## Sobre a Fonte de Alimentação
 
-1. O braço robótico não é enviado com fonte de alimentação / não inclui fonte de alimentação por padrão. Você pode conectar uma bateria por conta própria ou adquirir nossa [Fonte de Alimentação MeanWell 24V 14,6A](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html) open source ou pela [Amazon](https://www.amazon.com/MEAN-WELL-LRS-350-24-350-4W-Switchable/dp/B013ETVO12/ref=sr_1_1?crid=36B2HIB8MM2IT&dib=eyJ2IjoiMSJ9.vpZwmjb4m5KMNcsg2Kb7wr8DDWa-ryUqO5fConlxqlsGoTVB5HN2uBBnRNZI0kcACiaR5DKFiYWvIHLEUN3luZqJAzogeQkeT-fol0m835-oBBWSud1ixkGayrl5nRsF5KMgfvkwAIW949dTTpU2CWdNMrf8g43_vKWaytfX9SHeMJ1hmhS6Kab6fBgER6CgB47K_eEmoJj3KhrjJMtn980osDG-bCLniBcRAHThmXsVRVdpGPsmckGLLyaXrIGRG9plhKI-F7H8hfqW7vzGbwIV_bF8cFtRjdRm5Shtb0o.ekLYD0hsc1Uzji4qKl0Q0USpDTr92JEMQobBXl9lYD0&dib_tag=se&keywords=LRS-350-24&qid=1780021690&s=industrial&sprefix=lrs-350-24%2Cindustrial%2C696&sr=1-1&th=1). Não adquira fontes de alimentação de fabricantes sem marca ou por canais inseguros. Quaisquer riscos ou consequências decorrentes disso serão de responsabilidade do próprio indivíduo.
+1. O braço robótico não é enviado com fonte de alimentação / não inclui fonte de alimentação por padrão. Você pode conectar uma bateria por conta própria ou adquirir nossa [Fonte de Alimentação MeanWell 24V 14,6A](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html) de código aberto ou pela [Amazon](https://www.amazon.com/MEAN-WELL-LRS-350-24-350-4W-Switchable/dp/B013ETVO12/ref=sr_1_1?crid=36B2HIB8MM2IT&dib=eyJ2IjoiMSJ9.vpZwmjb4m5KMNcsg2Kb7wr8DDWa-ryUqO5fConlxqlsGoTVB5HN2uBBnRNZI0kcACiaR5DKFiYWvIHLEUN3luZqJAzogeQkeT-fol0m835-oBBWSud1ixkGayrl5nRsF5KMgfvkwAIW949dTTpU2CWdNMrf8g43_vKWaytfX9SHeMJ1hmhS6Kab6fBgER6CgB47K_eEmoJj3KhrjJMtn980osDG-bCLniBcRAHThmXsVRVdpGPsmckGLLyaXrIGRG9plhKI-F7H8hfqW7vzGbwIV_bF8cFtRjdRm5Shtb0o.ekLYD0hsc1Uzji4qKl0Q0USpDTr92JEMQobBXl9lYD0&dib_tag=se&keywords=LRS-350-24&qid=1780021690&s=industrial&sprefix=lrs-350-24%2Cindustrial%2C696&sr=1-1&th=1). Não adquira fontes de alimentação de fabricantes sem marca ou canais inseguros. Quaisquer riscos ou consequências decorrentes disso serão de responsabilidade do próprio indivíduo.
 
-Se a tensão da sua residência for 220V, ajuste a chave seletora de tensão na lateral da fonte para 230V. Se a tensão da sua residência for 110V, ajuste para 115V.
+Se a tensão da sua residência for 220V, ajuste a chave seletora de tensão na lateral da fonte de alimentação para 230V. Se a tensão da sua residência for 110V, ajuste-a para 115V.
 
 | **220V** | **110V** |
 |:---:|:---:|
@@ -80,9 +82,9 @@ Se a tensão da sua residência for 220V, ajuste a chave seletora de tensão na 
      src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100029903-gallery-6_1.jpg" />
    </div>
 
-2. Como alternativa, você pode escolher o gabinete open source para a fonte de alimentação MeanWell 24V 14,6A para montagem própria. As instruções em texto e a lista de materiais (BOM) estão em open source no [repositório GitHub](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM) (recomendado apenas para desenvolvedores com experiência relevante em montagem de fontes de alimentação).
+2. Como alternativa, você pode escolher nosso gabinete open source para a fonte de alimentação MeanWell 24V 14,6A para montagem própria. As instruções em texto e a lista de materiais (BOM) estão em código aberto no [repositório GitHub](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM) (recomendado apenas para desenvolvedores com experiência relevante em montagem de fontes de alimentação).
 
-   Vídeo de referência de montagem:
+   Vídeo de referência para montagem:
 
    <div class="video-container">
      <iframe width="900" height="600" src="https://www.youtube.com/embed/DHFA2UfQzUo?si=GYy-Z38qTUW6KPqq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -97,11 +99,11 @@ Antes da Montagem:
 - Leia atentamente as instruções a seguir para garantir um processo de montagem tranquilo.
   1. Este kit inclui vários parafusos e peças com aparência semelhante. Verifique as especificações e a orientação antes de apertar.
   2. O vídeo foi gravado no início de abril. Podem existir pequenas atualizações, mas a montagem permanece a mesma. Considere as peças enviadas como referência final.
-  3. Os parafusos enviados possuem trava-rosca aplicada. Use ferramentas adequadas ou uma parafusadeira elétrica (recomendado). Ajuste o torque para (3–6 kgf·cm) para evitar espanar. Se ocorrer espanamento, pare imediatamente e substitua ou realinhe o parafuso. Parafusos com trava-rosca espanados são difíceis de remover e podem danificar as peças.
+  3. Os parafusos enviados possuem trava-rosca aplicada. Use ferramentas adequadas ou uma parafusadeira elétrica (recomendado). Ajuste o torque para (3–6 kgf·cm) para evitar espanar. Se ocorrer espanar, pare imediatamente e substitua ou realinhe o parafuso. Parafusos com trava-rosca espanados são difíceis de remover e podem danificar as peças.
   4. Garanta a segurança durante a montagem. Evite beliscões ou ferimentos. Crianças devem estar sob supervisão.
 
   :::tip
-  Lembrete: O D4 * 7 entre o motor 5 e o motor 6 no vídeo de montagem não precisa ser instalado. Isso é um erro no vídeo. Se você comprou a versão DIY do reBot Arm B601-DM, os 7 parafusos D4 * 7 são suficientes para concluir a montagem.
+  Lembrete: o D4 * 7 entre o motor 5 e o motor 6 no vídeo de montagem não precisa ser instalado. É um erro no vídeo. Se você comprou a versão DIY do reBot Arm B601-DM, os 7 parafusos D4 * 7 são suficientes para você concluir a montagem.
   :::
 
 <div class="video-container">
@@ -110,13 +112,13 @@ Antes da Montagem:
 
 ## Passo 2: Redefinir IDs dos Motores
 
-### AI AGENT
+### AGENTE de IA
 
 :::tip
 Esta seção está em versão beta. Observe as precauções de segurança durante o uso. Se as sugestões da IA forem diferentes desta documentação, siga este guia e peça ajuda aos nossos engenheiros.
 :::
 
-Deixe um AI AGENT ajudá-lo neste processo. Copie o prompt abaixo para o seu assistente de IA:
+Deixe um AGENTE de IA ajudá-lo neste processo. Copie o prompt abaixo para o seu assistente de IA:
 
 ```text
 
@@ -124,14 +126,14 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 ```
 
-### Antes de Redefinir os IDs dos Motores:
+### Antes de Redefinir os Motores:
 
   Antes da configuração dos parâmetros dos motores, observe as seguintes preparações e regras de segurança:
 
 - Compre 2 grampos de fixação (≥3 polegadas) e uma fonte de alimentação chaveada 24V 15A com saída XT30 (use marca conhecida, sem produtos de baixa qualidade).
-- Mantenha distância ≥1 m durante a depuração/operação.
-- Não faça conexão/desconexão a quente dos motores; desligue a alimentação antes de conectar/desconectar a interface XT30 2+2.
-- Não sobrecarregue/não exceda a velocidade; verifique a fiação e os fixadores antes de ligar; evite ambientes úmidos/quentes/empoeirados.
+- Mantenha distância ≥1m durante a depuração/operação.
+- Não faça conexão/desconexão a quente dos motores; corte a alimentação antes de conectar/desconectar a interface XT30 2+2.
+- Não sobrecarregue/não exceda a velocidade; verifique a fiação e os fixadores antes da partida; evite ambientes úmidos/de alta temperatura/empoeirados.
 - Defina parâmetros de programa razoáveis e parada de emergência para evitar perda de controle.
 - **Siga rigorosamente estas regras. O vendedor não é responsável por riscos/responsabilidades decorrentes de operação ilegal ou erros pessoais.**
 
@@ -141,11 +143,11 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 - [Braço Robótico reBot Arm B601 DM × 1](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
 - [Placa Adaptadora USB-CAN × 1](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
-- [Placa de Separação de Sinal e Alimentação × 1](https://www.seeedstudio.com/XT30-2-2-Power-Separation-Board-p-6707.html)
-- Grampos de Marcenaria × 2
+- [Placa de Separação de Sinal e Potência × 1](https://www.seeedstudio.com/XT30-2-2-Power-Separation-Board-p-6707.html)
+- Grampos de marcenaria × 2
 - Cabo USB-C × 1
 - [Fonte de Alimentação 24V 15A (saída XT30) × 1](https://www.seeedstudio.com/AC-DC-Power-Adapter-IEC-60320-C14-XT30-Female-24V-4-5A-1200mm-L190-W92-5-H36mm-p-6764.html)
-- [Cabo de Alimentação-US](https://www.seeedstudio.com/reServer-AC-US-p-5052.html) \  [Cabo de Alimentação-EU](https://www.seeedstudio.com/reServer-AC-EU-p-5051.html)
+- [Cabo de Alimentação - US](https://www.seeedstudio.com/reServer-AC-US-p-5052.html) \  [Cabo de Alimentação - EU](https://www.seeedstudio.com/reServer-AC-EU-p-5051.html)
 
 #### Requisito de Computador
 
@@ -176,7 +178,7 @@ A seguir está um exemplo de operação usando o Motor 1. Certifique-se de que o
 1.Abra o software host **DM_Tools**, selecione a porta USB COM correspondente e defina a taxa de baud para `921600`. Após a conexão bem-sucedida, as informações serão exibidas na interface `Serial`.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_connect_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_damiao_tool_en.png" width="800" />
 </div>
 
 2.Use o cabo de 3 pinos para conectar o Motor 1 à placa adaptadora USB-CAN.
@@ -186,13 +188,17 @@ A seguir está um exemplo de operação usando o Motor 1. Certifique-se de que o
 4.Após a configuração, clique em `Write Parameters` para salvar os parâmetros.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_id_set_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_damiao_tool_en.png" width="800" />
 </div>
 
-5.Navegue até a interface `Debug`. Depois de garantir que o `CAN ID` e o `Master ID` estejam configurados corretamente, clique em `Enable`. O indicador do motor ficará verde fixo, indicando que o motor está habilitado. O teste do Motor 1 está concluído.
+:::tip
+The USB mode in the orange box on the left represents the method used when reading and writing motor parameters on the current settings page.
+:::
+
+5. Navegue até a interface `Debug`. Depois de garantir que o `CAN ID` e o `Master ID` estejam configurados corretamente, clique em `Enable`. O indicador do motor ficará verde fixo, indicando que o motor está habilitado. O teste do Motor 1 está concluído.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_enable_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_damiao_tool_en.png" width="800" />
 </div>
 
 :::tip
@@ -213,7 +219,7 @@ Após o teste, lembre-se de clicar em `Disable` para sair do estado habilitado.
 <iframe width="900" height="600" src="https://www.youtube.com/embed/uXuzs1qmj6A?si=lfgXXlF1awhtnvaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Etapa 3: Calibrar o reBot Arm e começar
+## Etapa 3: Calibração do reBot Arm e primeiros passos
 
 Confiamos que você concluiu a montagem do braço robótico, a inicialização do ponto zero, a configuração do ID do motor e outras etapas de configuração seguindo o vídeo. Agora você está pronto para explorar oficialmente a série de tutoriais e ferramentas que lançamos.
 
@@ -230,11 +236,29 @@ Consulte o vídeo e o tutorial em texto. Antes de controlar o braço robótico, 
 
 3. Esta ferramenta é totalmente compatível com os sistemas operacionais **Windows, Ubuntu e Mac**.
 
-### Etapa 1: Instalar o miniforge (em Windows\Ubuntu\Mac\Jetson\Pi)
+### Etapa 1: Instalar o Miniforge (no Windows\Ubuntu\macOS\Jetson\Pi)
+
+Instale o Miniforge e crie um ambiente virtual para evitar interferência de outros pacotes de ambiente.
+
+Ubuntu\Jetson\Pi:
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+ou macOS:
+```bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+bash Miniforge3-MacOSX-$(uname -m).sh
+```
+
+ou Windows:
+
+Abra a página de Release do Miniforge no seu navegador, encontre o `Miniforge3-Windows-x86_64.exe` mais recente e faça o download:
+
+```text
+https://github.com/conda-forge/miniforge/releases
 ```
 
 ### Etapa 2: Configuração do ambiente
@@ -245,7 +269,7 @@ Crie um ambiente virtual com Python 3.12:
 conda create -y -n rebot python=3.12
 ```
 
-Em seguida, ative seu ambiente virtual; você precisa fazer isso toda vez que abrir um shell para usar o rebot:
+Em seguida, ative seu ambiente virtual; você precisa fazer isso sempre que abrir um shell para usar o rebot:
 
 ```bash
 conda activate rebot
@@ -267,7 +291,7 @@ pip install motorbridge
 ```
 
 ###  Etapa 4: Conectar o rebot
-Depois de conectar o braço robótico ao seu computador por meio de um cabo USB e ligar sua fonte de alimentação, você precisa configurar permissões de acesso 666 para a porta serial. (Sistemas Windows não exigem configuração de permissão; você pode pular esta etapa.)
+Depois de conectar o braço robótico ao seu computador por meio de um cabo USB e ligar sua fonte de alimentação, você precisa configurar permissões de acesso 666 para a porta serial. (Sistemas Windows não exigem configuração de permissões; você pode pular esta etapa.)
 
 ```bash
 sudo chmod 666 /dev/ttyACM*
@@ -290,9 +314,9 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 
 ## FAQ
 ### 1. Ruído anormal alto ocorre imediatamente após a inicialização do motor
-- Esse problema geralmente ocorre quando a calibração de parâmetros é acionada acidentalmente durante a configuração do ID, o que sobrescreve parâmetros predefinidos de fábrica, como a inércia do motor. Use **DM_Tools_v.1.8.0.1.exe (somente para Windows)** disponível em:
+- Esse problema geralmente ocorre quando a calibração de parâmetros é acionada acidentalmente durante a configuração do ID, o que sobrescreve parâmetros predefinidos de fábrica, como a inércia do motor. Use **DM_Tools_v.1.8.0.1.exe (somente Windows)** disponível em:
 https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe
-Exporte os parâmetros completos de um motor intacto do mesmo modelo por meio do software host, importe esses parâmetros para a unidade com falha, atualize o respectivo ID CAN, salve os parâmetros gravados e, em seguida, prossiga com a calibração do ponto zero.
+Exporte os parâmetros completos de um motor intacto do mesmo modelo por meio do software host, importe esses parâmetros para a unidade com falha, atualize o respectivo CAN ID, salve os parâmetros gravados e, em seguida, prossiga com a calibração do ponto zero.
 
 <div align="center">
     <img width={400}
@@ -308,4 +332,4 @@ Exporte os parâmetros completos de um motor intacto do mesmo modelo por meio do
 [Parâmetros padrão do DM4340P](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4340P_Default_Parameters.txt)
 
 ### 2. Todos os motores compartilham IDs CAN idênticos
-- Ao realizar a calibração do ponto zero via **DM_Tools_v.1.8.0.1.exe (somente para Windows)**, evite clicar nos botões Read ou Set ao lado do campo CAN ID. A interface de depuração se comunica pelo barramento CAN; clicar em Set unificará o CAN ID de todos os motores conectados ao CANBUS.
+- Ao realizar a calibração do ponto zero via **DM_Tools_v.1.8.0.1.exe (somente Windows)**, evite clicar nos botões Read ou Set ao lado do campo CAN ID. A interface de depuração se comunica pelo barramento CAN; clicar em Set unificará o CAN ID de todos os motores conectados ao CANBUS.

@@ -7,7 +7,7 @@ keywords:
   - wifi
   - python
   - sdk
-image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png
 slug: /respeaker_clip_python_control
 sku: 100020126
 last_update:
@@ -379,21 +379,60 @@ General-purpose CLI.
 
 ```bash
 clip-cli status
+```
 
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/status.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli version
-
+```
+```bash
 clip-cli list
+```
 
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/list.png" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli record --duration 60
 
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli sync --session 20260326120000
+```
+Expected output
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
+clip-cli sync --session 20260326120000 --delete
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli config get
+```
+Expected output
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
 clip-cli bookmark
+```
 
+```bash
 clip-cli terminal
 ```
+
 
 ### record.py
 
@@ -406,6 +445,9 @@ python tools/record.py --duration 60
 
 python tools/record.py --mode enhanced
 ```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### sync.py
 
@@ -416,6 +458,9 @@ python tools/sync.py
 
 python tools/sync.py --all-sessions
 ```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### udp_sync.py
 
@@ -426,6 +471,10 @@ python tools/udp_sync.py
 
 python tools/udp_sync.py --session 20260326120000
 ```
+
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### ble_terminal.py
 

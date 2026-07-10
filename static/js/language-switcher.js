@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-02 17:22:35 (北京时间)
-// 多语言页面: 2362 个
+// 生成时间: 2026-07-09 17:33:54 (北京时间)
+// 多语言页面: 2373 个
 
 (function() {
   'use strict';
@@ -948,6 +948,13 @@
     "pt"
   ],
   "/deploy_dia_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/deploy_joyai_vl_interaction_on_jetson_thor": [
     "cn",
     "en",
     "es",
@@ -3502,6 +3509,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_motion_detection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_source_localization_of_recamera_gimbal": [
     "cn",
     "en",
@@ -3635,7 +3649,42 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_hardware_specifications": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_imu_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_mipi_dsi_screen_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_speaker_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_uart_usage": [
     "cn",
     "en",
     "es",
@@ -4112,6 +4161,13 @@
     "pt"
   ],
   "/License": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/lora_antenna_selection_guide": [
     "cn",
     "en",
     "es",
@@ -6058,6 +6114,13 @@
     "pt"
   ],
   "/rebot_arm_b601_rs_grasping_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_isaacsim": [
     "cn",
     "en",
     "es",
@@ -8206,6 +8269,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_work_with_lvgl": [
     "cn",
     "en",
     "es",
@@ -11180,6 +11250,13 @@
     "pt"
   ],
   "/respeaker_2_mics_pi_hat_v2_speech_recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_getting_started": [
     "cn",
     "en",
     "es",

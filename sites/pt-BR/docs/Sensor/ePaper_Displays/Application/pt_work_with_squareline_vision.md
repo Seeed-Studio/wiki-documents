@@ -3,12 +3,12 @@ description: Este artigo fornece instruções sobre como criar a interface de us
 title: Trabalhar com SquareLine Vision
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
 slug: /reterminal_e10xx_with_squareline_vision
-sidebar_position: 6
+sidebar_position: 7
 last_update:
   date: 10/29/2025
   author: Zovey
 createdAt: '2025-11-03'
-updatedAt: '2026-01-29'
+updatedAt: '2026-06-03'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_squareline_vision/
 ---
 
@@ -26,8 +26,8 @@ Também é uma ferramenta de **design + exportação de código**: você projeta
 ## Os recursos do SquareLine Vision
 
 - **Design visual de UI** – Projete interfaces bonitas e interativas visualmente com um editor de arrastar e soltar, eliminando a necessidade de criação manual de código LVGL.
-- **Prototipagem rápida embarcada** – Visualize e valide instantaneamente sua UI no desktop ou no hardware de destino, reduzindo drasticamente o tempo de iteração do design até o dispositivo.
-- **Exportação com tecnologia LVGL** – Exporte perfeitamente seus designs em código-fonte limpo baseado em LVGL, pronto para compilação em dispositivos embarcados, microcontroladores ou ambientes de simulação.
+- **Prototipagem rápida embarcada** – Visualize e valide instantaneamente sua UI no desktop ou no hardware de destino, reduzindo drasticamente o tempo de iteração entre design e dispositivo.
+- **Exportação com tecnologia LVGL** – Exporte perfeitamente seus designs em código-fonte limpo baseado em LVGL, pronto para compilar em dispositivos embarcados, microcontroladores ou ambientes de simulação.
 
 Com o SquareLine Vision, você pode ir do conceito ao protótipo de UI embarcada interativa em minutos — combinando flexibilidade de design, visualização em tempo real e saída LVGL pronta para produção para acelerar todo o ciclo de desenvolvimento do seu produto.
 
@@ -71,7 +71,7 @@ Toda a plataforma SquareLine Vision pode ser dividida em duas partes: **Launcher
 Na interface do **Launcher**, podemos ver as três funções principais a seguir:
 - projetos
 - lidar com importações
-- controlar configurações da conta
+- controlar configurações de conta
 
 Quando você começar a desenhar a UI, conhecerá cinco ferramentas:
 - sistema de hierarquia
@@ -103,7 +103,7 @@ Já oferecemos suporte aos dispositivos SenseCAP Watcher e reTerminal E1001 e E1
 :::
 
 ### Importar um projeto .slvp existente
-Se você já tiver um arquivo .slvp, poderá importá-lo diretamente como um projeto. Fornecemos dois painéis relacionados ao clima. Você pode baixá-los diretamente abaixo.
+Se você já tiver um arquivo .slvp, poderá importá-lo diretamente como um projeto. Fornecemos dois dashboards relacionados ao clima. Você pode baixá-los diretamente abaixo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -143,16 +143,16 @@ Se você já tiver um arquivo .slvp, poderá importá-lo diretamente como um pro
 
 Assim que você entrar na interface de engenharia, poderá ver quatro áreas principais:
 
-- A Região 1 é a **Hierarchy**, usada principalmente para gerenciar a estrutura dos elementos de UI. 
+- A Região 1 é a **Hierarchy**, usada principalmente para gerenciar a estrutura dos elementos da UI. 
 - A Região 2 é o **Simulator**, onde a UI é exibida e usada para visualizar os efeitos de apresentação de cada UI. 
 - A Região 3 é o **Inspector**, que fornece controles detalhados para o elemento atualmente selecionado. 
-- A Região 4 é a **Toolbar**, localizada na parte superior da interface do aplicativo, permitindo acesso fácil a muitas ferramentas e funções.
+- A Região 4 é a **Toolbar**, localizada na parte superior da interface do aplicativo, permitindo fácil acesso a muitas ferramentas e funções.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_2.png" style={{width:500, height:'auto'}}/></div>
 
 ### Design da Interface de UI
 
-O design de UI (Interface do Usuário) é crucial no desenvolvimento de produtos embarcados, pois determina diretamente a experiência do usuário. Uma interface esteticamente agradável, intuitiva e responsiva não apenas melhora a usabilidade do produto, como também aumenta seu apelo geral.
+O design da UI (User Interface) é crucial no desenvolvimento de produtos embarcados, pois determina diretamente a experiência do usuário. Uma interface esteticamente agradável, intuitiva e responsiva não apenas melhora a usabilidade do produto, como também aumenta seu apelo geral.
 
 No SquareLine Vision, você pode montar rapidamente interfaces arrastando e soltando componentes. Utilize ferramentas como Styles, Fonts, Bitmaps e Themes para controlar com precisão os efeitos visuais, criando uma experiência de usuário profissional e distinta.
 
@@ -160,7 +160,7 @@ No SquareLine Vision, você pode montar rapidamente interfaces arrastando e solt
 Este tutorial aborda apenas os controles que aparecem neste projeto. No entanto, o SquareLine Vision oferece muitas outras funcionalidades, como animações, eventos e diferentes fontes. Se você quiser explorar mais essa ferramenta, consulte [os tutoriais oficiais](https://docs.vision.squareline.io/docs/overview).
 :::
 
-#### Introdução à Hierarquia
+#### Introdução à Hierarchy
 
 Aqui você pode aninhar widgets uns dentro dos outros, criando relações pai-filho em que o widget contêiner se torna o pai e os elementos dentro dele se tornam widgets filhos. Pode-se ver que esta imagem é composta por vários contêineres, imagens e textos. Esses três controles podem ser encontrados todos na barra de ferramentas.
 
@@ -181,12 +181,12 @@ A Toolbar inclui opções para configuração do projeto, salvar seu projeto, ac
 - **Plan**: Mostra o plano de assinatura atual do usuário.
 - **Editor / Animation mode**: Alterna entre dois ambientes de trabalho distintos
 - **Widgets**: Acesse elementos de UI por meio de três menus suspensos que agrupam logicamente os componentes, facilitando a localização do widget apropriado para o seu projeto. 
-- **Undo / Redo**: Permite avançar e retroceder pelas alterações de design, apoiando a experimentação sem risco. 
+- **Undo / Redo**: Permite avançar e retroceder pelas alterações de design, oferecendo suporte à experimentação sem risco. 
 - **Play mode**: Inicia a visualização e o teste da simulação da UI.
 - **Send bug report**: Fornece acesso direto ao sistema de relatório de erros.
 - **User(s)**: Exibe todos os usuários ativos que estão trabalhando atualmente no seu projeto, apoiando esforços de design colaborativo.
 - **View options**: Você pode alternar a exibição do minimapa e inserir valores precisos de zoom em porcentagem em um campo de entrada dedicado.
-- **Version**: Exibe a versão atual do SquareLine Vision na qual seu projeto está sendo executado, garantindo que você esteja ciente do seu ambiente de software.
+- **Version**: Exibe a versão atual do SquareLine Vision em que seu projeto está sendo executado, garantindo que você esteja ciente do ambiente de software.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_6.png" style={{width:500, height:'auto'}}/></div>
 
@@ -263,9 +263,9 @@ Fornecemos três modelos existentes, cada um com uma interface de UI diferente q
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Monochrome Weather </th>
-      <th>Full Color Weather </th>
-      <th>Full Color Weather 2</th>
+      <th>Clima monocromático </th>
+      <th>Clima em cores </th>
+      <th>Clima em cores 2</th>
     </tr>
     <tr>
       <td><div align="center">
@@ -287,7 +287,7 @@ Fornecemos três modelos existentes, cada um com uma interface de UI diferente q
   </table>
 </div>
 
-- **Step 1**: Abra a pasta no VScode e aguarde até que as dependências relacionadas sejam totalmente baixadas. Após abrir o projeto, abra o arquivo `.ini` e pressione `Ctrl+S`. Nesse momento, as dependências do projeto começarão a ser baixadas automaticamente. Quando você vir `Project has been successfully updated`, isso significa que o processo de download foi concluído. Quando a palavra `successful` estiver presente, isso indicará imediatamente que a instalação foi concluída com sucesso.
+- **Step 1**: Abra a pasta no VScode e aguarde até que as dependências relacionadas sejam totalmente baixadas. Após abrir o projeto, abra o arquivo `.ini` e pressione `Ctrl+S`. Neste momento, as dependências do projeto começarão a ser baixadas automaticamente. Quando você vir `Project has been successfully updated`, isso significa que o processo de download foi concluído. Quando a palavra `successful` estiver presente, isso indicará imediatamente que a instalação foi concluída com sucesso.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_2.png" style={{width:700, height:'auto'}}/></div>
 
 
@@ -300,7 +300,7 @@ Fornecemos três modelos existentes, cada um com uma interface de UI diferente q
 
 - **Step 4**: Conecte o reTerminal ao computador usando um cabo de dados USB e selecione a porta serial apropriada para o processo de gravação. Em seguida, clique no botão `upload` para realizar o processo de gravação.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_3.png" style={{width:700, height:'auto'}}/></div>
-  Quando o seguinte conteúdo aparecer no terminal, isso indica que o processo de gravação foi bem-sucedido. Subsequentemente, o reTerminal atualizará automaticamente a imagem da tela.
+  Quando o seguinte conteúdo aparecer no terminal, isso indica que o processo de gravação foi bem-sucedido. Em seguida, o reTerminal atualizará automaticamente a imagem da tela.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_4.png" style={{width:700, height:'auto'}}/></div>
 
 ## Apresentação do resultado
@@ -320,7 +320,7 @@ Fornecemos três modelos existentes, cada um com uma interface de UI diferente q
   </table>
 </div>
 
-## Suporte técnico e discussão de produtos
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
