@@ -44,7 +44,7 @@ url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_bluetooth_lowpower/
 
 Bluetooth Low Energy (BLE) is a low-power wireless communication standard introduced in Bluetooth 4.0. Designed for intermittent small-data transmission, it enables wireless connectivity within tens of meters while maintaining an ultra-low average current consumption at the microampere level. It is widely applied in wearable devices, smart home sensors, indoor positioning and industrial IoT scenarios.
 
-Powered by the nRF54LM20A SoC, the XIAO nRF54LM20A Series supports Bluetooth LE, Matter, Thread, Zigbee and 2.4GHz proprietary protocols, delivering a peak data rate of 4 Mbps ideal for low-latency scenarios. It also features support for Bluetooth Channel Sounding and Bluetooth Mesh. This article illustrates its BLE functionality via three progressive sample programs, starting with basic broadcast Beacon transmission, and further extending to bidirectional UART communication and real-time sensor data uploading.
+Powered by the nRF54LM20A SoC, the XIAO nRF54LM20A Series supports Bluetooth LE, Matter, Thread, Zigbee and 2.4GHz proprietary protocols, delivering a peak data rate of 4 Mbps ideal for low-latency scenarios. It also features support for Bluetooth Channel Sounding and Bluetooth Mesh. This article illustrates its BLE functionality through two practical examples: basic broadcast Beacon transmission and a BLE LED Button Service (LBS) connection between Central and Peripheral devices.
 
 :::tip
 
@@ -385,7 +385,7 @@ cmake_minimum_required(VERSION 3.13.1)
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(ble-lbs-min-central)
 
-target_sources(app PRIVATE ../src/main.c)
+target_sources(app PRIVATE src/main.c)
 
 
 
@@ -897,7 +897,7 @@ cmake_minimum_required(VERSION 3.13.1)
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(ble-lbs-min-peripheral)
 
-target_sources(app PRIVATE ../src/main.c)
+target_sources(app PRIVATE src/main.c)
 
 
 
@@ -1104,33 +1104,16 @@ int main(void)
 {
 	int err;
 
-	/* #region debug-point boot-entry */
-	LOG_INF("dbg: enter main");
-	LOG_INF("dbg: led0.port=%p led0.pin=%d led_state@%p ad@%p sd@%p",
-		led0.port, led0.pin, &led_state, ad, sd);
-	/* #endregion debug-point boot-entry */
-
 	k_work_init_delayable(&blink_work, blink_handler);
-	/* #region debug-point work-init */
-	LOG_INF("dbg: blink work initialized");
-	/* #endregion debug-point work-init */
 
 	led_state = 0U;
 	if (gpio_ready(&led0)) {
-		/* #region debug-point gpio-ready */
-		LOG_INF("dbg: led gpio ready, configuring output inactive");
-		/* #endregion debug-point gpio-ready */
 		err = gpio_pin_configure_dt(&led0, GPIO_OUTPUT_INACTIVE);
 		if (err == 0) {
 			led_apply(led_state);
-			/* #region debug-point gpio-config-ok */
-			LOG_INF("dbg: led gpio configured");
-			/* #endregion debug-point gpio-config-ok */
 		}
 	}
-	/* #region debug-point bt-enable-before */
-	LOG_INF("dbg: before bt_enable");
-	/* #endregion debug-point bt-enable-before */
+
 	err = bt_enable(NULL);
 	if (err) {
 		LOG_ERR("bt enable failed: %d", err);
@@ -1139,9 +1122,6 @@ int main(void)
 
 	LOG_INF("bluetooth initialized");
 
-	/* #region debug-point adv-before */
-	LOG_INF("dbg: before bt_le_adv_start");
-	/* #endregion debug-point adv-before */
 	err = bt_le_adv_start(BT_LE_ADV_CONN_FAST_1, ad, ARRAY_SIZE(ad), sd, ARRAY_SIZE(sd));
 	if (err) {
 		LOG_ERR("advertising failed: %d", err);
