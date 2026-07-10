@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、デバイス上でIMUデータを取得する方法について簡単に紹介します。
+description: この Wiki では、デバイス上で IMU データを取得する方法について簡単に紹介します。
 title: reCamera Pro IMU の使用方法
 keywords:
   - reCamera
@@ -18,18 +18,18 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_imu_usage/
 ---
 
 # IMU の使用方法
-本デバイスに搭載されているIMUはICM-42670-Pであり、3軸加速度センサと3軸ジャイロスコープを統合した6軸センサです。ICM-42670-Pのジャイロスコープは±250 / ±500 / ±1000 / ±2000 dpsの測定レンジをサポートし、加速度センサは±2 / ±4 / ±8 / ±16 gのレンジをサポートします。内部データは16ビットの2の補数形式で出力されます。
+本デバイスに搭載されている IMU モデルは ICM-42670-P であり、3 軸加速度センサと 3 軸ジャイロスコープを統合した 6 軸センサです。ICM-42670-P のジャイロスコープは ±250 / ±500 / ±1000 / ±2000 dps の測定レンジをサポートし、加速度センサは ±2 / ±4 / ±8 / ±16 g のレンジをサポートします。内部データは 16 ビット 2 の補数形式で出力されます。
 ## データパス
-reCamera PROはIMUに標準のIIOドライバを使用しているため、IIOインターフェースを介して生データを直接取得できます。
-生データファイルはディレクトリ ***/sys/bus/iio/devices/iio:device1/*** 以下にあります。
-
+reCamera PRO は IMU に対して標準の IIO ドライバを使用しているため、IIO インターフェースを介して生データを直接取得できます。
+生データファイルは ***/sys/bus/iio/devices/iio:device1/*** ディレクトリ内にあります。
+![IMU_DATA_SAMPLE](https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO_imu_dir.png)
 ## データの読み取り
-対応する生データを読み取るには、次のコマンドを実行します。以下の例では、X軸の加速度データを読み取る方法を示します：
+対応する生データを読み取るには、次のコマンドを実行します。以下の例では、X 軸加速度データの読み取りを示します。
 ``` bash
 cat /sys/bus/iio/devices/iio:device1/in_accel_x_raw
 ```
-## Python でデータを取得
-Python を使用して簡単にIMUデータを取得できます。以下はシンプルな例です：
+## Python でデータを取得する
+Python を使用すると、IMU データを簡単に取得できます。以下は簡単なサンプルです。
 ```python
 #!/usr/bin/env python3
 DEVICE = "/sys/bus/iio/devices/iio:device1"
@@ -44,7 +44,7 @@ print(f"Gyroscope X: {gyro_x:.6f} rad/s")
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
