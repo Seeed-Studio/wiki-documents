@@ -22,7 +22,7 @@ The IMU model equipped on the device is ICM-42670-P, a 6-axis sensor integrating
 ## Data Path
 reCamera PRO uses the standard IIO driver for the IMU, so raw data can be directly retrieved via IIO interfaces.
 Raw data files can be found under the directory ***/sys/bus/iio/devices/iio:device1/***.
-
+![IMU_DATA_SAMPLE](https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO_imu_dir.png)
 ## Read Data
 Run the following command to read corresponding raw data. The example below demonstrates reading the X-axis acceleration data:
 ``` bash
