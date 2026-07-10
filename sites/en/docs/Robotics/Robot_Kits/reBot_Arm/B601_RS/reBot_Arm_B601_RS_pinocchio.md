@@ -13,13 +13,13 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_pinocchio_meshcat
 sku: 100019336
 last_update:
-  date: 2026-06-11
+  date: 2026-06-30
   author: LiJie
 translation:
   skip:
     - zh-CN
 createdAt: '2026-06-11'
-updatedAt: '2026-06-23'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 
@@ -49,30 +49,30 @@ This project combines Pinocchio's powerful computation capabilities with MeshCat
 
 ## Project Features
 
-1. **Complete Kinematics Analysis**  
+1. **Complete Kinematics Analysis**
    Supports forward kinematics (FK) and inverse kinematics (IK) calculations, enabling real-time solving of the robotic arm's end-effector pose.
 
-2. **Real-time 3D Visualization**  
+2. **Real-time 3D Visualization**
    Displays the robotic arm's state and motion trajectories in the browser through MeshCat in real time, without additional software.
 
-3. **Trajectory Planning and Tracking**  
+3. **Trajectory Planning and Tracking**
    Implements SE(3) geodesic trajectory planning, supporting CLIK (Closed-Loop Inverse Kinematics) tracking control.
 
-4. **Gravity Compensation Control**  
+4. **Gravity Compensation Control**
    Calculates joint gravity torques based on the Pinocchio dynamics model, achieving a "floating" effect for the robotic arm. Supports both basic and end-effector velocity lock versions.
 
-5. **Multi-Mode Motor Control**  
+5. **Multi-Mode Motor Control**
    Supports MIT, POS_VEL, and VEL control modes, compatible with both Damiao and Robostride motor protocols.
 
-6. **Open Source & Extensible**  
+6. **Open Source & Extensible**
    All code is open source, allowing users to customize control algorithms and visualization effects according to their needs.
 
 ## Specifications
 
-The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedstudio.com/).
+The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedstudio.com/)
 
 | Parameter | Specification |
-|-----------|-------------|
+|-----------|--------------|
 | Robot Arm Model | reBot Arm B601-RS Assembled Kit with Gripper |
 | Degrees of Freedom | 6+1 (with gripper) |
 | Reach | 754.7 mm (with gripper) / 587.5 mm (without gripper) |
@@ -159,7 +159,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### Step 2. Sync Environment (Install All Dependencies)
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git 
+git clone https://github.com/vectorBH6/reBotArm_control_py.git
 cd reBotArm_control_py
 uv sync
 ```
@@ -203,7 +203,7 @@ sudo ip link set can0 up    # Bring up can0
 
 :::
 
-#### Single Motor Console — Robostride RS06 (`0x01rs06_test.py`)
+### Single Motor Console — Robostride RS06 (`0x01rs06_test.py`)
 
 Directly use the motorbridge SDK for Robostride RS06 single motor testing. RS06 motors communicate via **CAN bus**.
 
@@ -229,24 +229,27 @@ uv run python example/0x01rs06_test.py
 | `loop` | Enter loop control mode |
 | `q` / `quit` | Quit |
 
-**Note**: Robostride motors use the CAN interface (default `can0`), with host/feedback ID defaulting to `0xFD`, During motor testing, the motor needs to be disabled first and then re-enabled to allow normal reading and control.
+**Note**: Robostride motors use the CAN interface (default `can0`), with host/feedback ID defaulting to `0xFD`. During motor testing, the motor needs to be disabled first and then re-enabled to allow normal reading and control.
 
 ---
 
-#### Zero Calibration and Angle Monitoring (`2_zero_and_read.py`)
+### Zero Calibration and Angle Monitoring (`2_zero_and_read.py`)
 
 Automatically set all joint zero positions and display joint angles in real time.
 
 **Run Command**:
 ```bash
 uv run python example/2_zero_and_read.py
+
+# Example output
+-0.12  +0.23  -6.42  +41.74  -0.45  -0.01  -0.01
 ```
 
 ---
 
-### Basic Control Tests
+## Basic Control Tests
 
-#### MIT Mode Full Joint Control (`3_mit_control.py`)
+### MIT Mode Full Joint Control (`3_mit_control.py`)
 
 All joints use MIT mode uniformly, sending control commands synchronously every cycle.
 
@@ -255,29 +258,35 @@ All joints use MIT mode uniformly, sending control commands synchronously every 
 **Run Command**:
 ```bash
 uv run python example/3_mit_control.py
-> 0 0 0 0 0 0        # Arm only
-> 0 0 0 0 0 0 2.0    # Arm + gripper
+> 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
+> state
+  pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
+> q # Exit system
 ```
+:::danger
+Note that in MIT control mode, the robotic arm moves very fast. Ensure that people and other devices are away from the arm's working radius.
+:::
 
 ---
 
-#### POS_VEL Mode Full Joint Control (`4_pos_vel_control.py`)
+### POS_VEL Mode Full Joint Control (`4_pos_vel_control.py`)
 
-All joints use POS_VEL mode uniformly, sending control commands synchronously every cycle.
-
-**Input**: All joint angles (degrees), space-separated.
+Input all joint target angles to complete motor control in POS_VEL (Position-Velocity) hybrid control mode, achieving smoother and more controllable motion when reaching target angles, reducing vibration.
 
 **Run Command**:
 ```bash
 uv run python example/4_pos_vel_control.py
-> 0 0 0 0 0 0
+> 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
+> state
+  pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
+> q # Exit system
 ```
 
 ---
 
-### Kinematics Tests
+## Kinematics Tests
 
-#### Forward Kinematics Test (`5_fk_test.py`)
+### Forward Kinematics Test (`5_fk_test.py`)
 
 Calculate the end-effector pose based on joint angles.
 
@@ -297,7 +306,7 @@ uv run python example/5_fk_test.py
 
 ---
 
-#### Inverse Kinematics Test (`6_ik_test.py`)
+### Inverse Kinematics Test (`6_ik_test.py`)
 
 Solve joint angles based on the desired end-effector pose.
 
@@ -312,12 +321,162 @@ uv run python example/6_ik_test.py
 > 0.25 0.0 0.15 0 0 0        # Position + orientation
 ```
 
+### Inverse Kinematics Control in MIT Mode (`7_arm_ik_control.py`)
+
+Use inverse kinematics (IK) in MIT mode to specify the 3D coordinates (X, Y, Z) and orientation (Euler angles) where the robotic arm end-effector should move.
+
+**Input Format**:
+- Position only: `<x> <y> <z>` (meters)
+- Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
+- Input `state`: View current actual radian values of each joint.
+- Input `end_state`: View current end-effector actual coordinates (m) and Euler angles (rad) in space.
+
+**Run Command**:
+```bash
+uv run python example/7_arm_ik_control.py
+
+#Usage A
+> 0.3 0.0 0.4 # Position only (orientation defaults to 0), move the arm end-effector to 0.3 meters forward and 0.4 meters above.
+
+#Usage B
+> 0.3 0.0 0.4 0.0 0.0 0.5 # Control both position and orientation: move to the specified position while rotating the wrist yaw angle by 0.5 radians.
+
+> ctrl + c # Exit system
+```
+:::danger
+Note that in this example code, the robotic arm moves very fast. Ensure that people and other devices are away from the arm's working radius.
+:::
+
+### Inverse Kinematics Control with Smooth Trajectory (`8_arm_traj_control.py`)
+
+Use inverse kinematics (IK) in MIT mode to automatically plan a uniform or smooth acceleration/deceleration motion trajectory within the target time, avoiding severe joint vibration.
+
+**Input Format**:
+- Position only: `<x> <y> <z>` (meters)
+- Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
+- Position + Orientation + Time (default 2.0): `<x> <y> <z> <roll> <pitch> <yaw> <time>` (degrees)
+- Input `state`: View current actual radian values of each joint.
+- Input `end_state`: View current end-effector actual coordinates (m) and Euler angles (rad) in space.
+
+**Run Command**:
+```bash
+uv run python example/8_arm_traj_control.py
+
+#Usage A
+> 0.3 0.0 0.4 # Position only, orientation defaults to 0, default movement time is 2.0 seconds
+
+#Usage B
+> 0.3 0.0 0.4 0.0 0.0 0.5 # Control both position and orientation: move to the specified position while rotating the wrist yaw angle by 0.5 radians, default movement time is 2.0 seconds
+
+#Usage C
+> 0.3 0.0 0.4 0.0 0.0 0.0 5.0 # Move the arm to the specific position and specify 5.0 seconds to slowly move there. (Note: If entering time, the preceding orientation parameters 0 0 0 cannot be omitted)
+
+> ctrl + c # Exit system
+```
+
+### Gravity Compensation Control — Basic Version (`9_gravity_compensation.py`)
+
+Use the Pinocchio dynamics model to compensate for joint gravity.
+
+**Control Law**:
+```
+tau = g(q)          — Gravity feedforward
+pos = current motor position   — Joint position follows current position
+kp = 2,  kd = 1     — Unified stiffness/damping for all joints
+```
+
+**Expected Behavior**:
+- The robotic arm can "float" at any pose
+- Will not fall due to self-weight after release
+- Can be manually moved to any position
+
+**Run Command**:
+```bash
+uv run python example/9_gravity_compensation.py
+```
+
+**Output**:
+- Display desired torque for each joint in real time (N·m)
+- Press `Ctrl+C` to stop and disconnect
+
+:::caution Return to Home Before Exiting Gravity Compensation
+When stopping the script (`Ctrl+C`), the program will **directly disable all motors**, and the robotic arm **will not automatically return to zero**. Please hold the robotic arm by hand or move it to a safe/home pose before exiting to avoid sudden joint drops that may cause collisions or damage.
+:::
+
+:::tip Adjusting Individual Joint Compensation
+If some joints are under-compensated or over-compensated due to structural friction or assembly differences, you can apply additional scaling to the corresponding element of the `tau_g` array in the code:
+
+```python
+tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually starting from 1
+# This compensation is generally only used for joints 2 and 3
+```
+
+For example, `tau_g[2] *= 1.2` means increasing the gravity compensation torque of joint 2 by 20%. It is recommended to adjust item by item based on the actual floating effect to avoid making excessively large changes at once.
+:::
+
+---
+
+### Gravity Compensation Control — End-Effector Velocity Lock Version (`10_gravity_compensation_lock.py`)
+
+Based on the basic gravity compensation, adds end-effector velocity detection and joint angle locking mechanism.
+
+**Control Law**:
+```
+tau = g(q) + integral_term    — Gravity feedforward + integral term
+pos = q_target                 — Target joint angle (locked or updated)
+kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
+```
+
+**Lock Logic**:
+- When end linear velocity `||v_ee|| < 0.04 m/s` and angular velocity `||w_ee|| < 0.08 rad/s`:
+  - Target joint angle `q_target` remains locked
+  - Robotic arm locks in current position
+- When end velocity exceeds threshold:
+  - `q_target` updates to current joint angle
+  - Allows manual pushing to change position
+
+**Expected Behavior**:
+- Robotic arm locks in current position, requiring force to change target angle
+- More stable than basic version, suitable for scenarios requiring pose maintenance
+
+**Run Command**:
+```bash
+uv run python example/10_gravity_compensation_lock.py
+```
+
+**Output**:
+- Display lock status in real time (LOCKED / UPDATE)
+- End linear velocity, angular velocity
+- Gravity compensation torque for each joint (N·m)
+- Press `Ctrl+C` to stop and disconnect
+
+:::caution Return to Home Before Exiting Gravity Compensation
+When stopping the script (`Ctrl+C`), the program will **directly disable all motors**, and the robotic arm **will not automatically return to zero**. Please hold the robotic arm by hand or move it to a safe/home pose before exiting to avoid sudden joint drops that may cause collisions or damage.
+:::
+
+:::tip Adjusting Individual Joint Compensation
+If some joints are under-compensated or over-compensated due to structural friction or assembly differences, you can apply additional scaling to the corresponding element of the `tau_g` array in the code:
+
+```python
+tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually starting from 1
+# This compensation is generally only used for joints 2 and 3
+```
+
+For example, `tau_g[2] *= 1.2` means increasing the gravity compensation torque of joint 2 by 20%. It is recommended to adjust item by item based on the actual floating effect to avoid making excessively large changes at once.
+:::
+
+**Safety Test Configuration**:
+You can modify the `ENABLED_JOINTS` list at the top of the script to enable only specified joints for safety testing:
+```python
+ENABLED_JOINTS = ["joint1"]  # Enable only joint1
+```
+
 ---
 
 ### Simulation Environment
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/traj_sim_geodesic_rs.png" />
 </div>
 
@@ -411,167 +570,24 @@ viz.update(q)  # Update robot pose
 viz.draw_path(points, "path_name", color)  # Draw path
 ```
 
----
-
-### Real-Machine Control
-
-#### IK Real-Time Control (`7_arm_ik_control.py`)
-
-Real-time end-effector control based on IK solving.
-
-**Interactive Commands**:
-| Command | Description |
-|---------|-------------|
-| `x y z [roll pitch yaw]` | Target end-effector pose |
-| `state` | View state |
-| `pos` | Current end-effector position |
-| `q/quit/exit` | Quit |
-
-**Run Command**:
-```bash
-uv run python example/7_arm_ik_control.py
-> 0.3 0.0 0.2
-> 0.3 0.1 0.25 0 0.5 0
-```
-
----
-
-#### Trajectory Planning Control (`8_arm_traj_control.py`)
-
-SE(3) geodesic trajectory planning + CLIK tracking.
-
-**Input Format**:
-```
-x y z [roll pitch yaw] [duration]
-```
-
-**Parameter Description**:
-- `x, y, z`: Target position (meters)
-- `roll, pitch, yaw`: Target orientation (radians)
-- `duration`: Motion duration (seconds), default 2.0s
-
-**Run Command**:
-```bash
-uv run python example/8_arm_traj_control.py
-> 0.3 0.0 0.3 0 0.4 0 2.0
-```
-
----
-
-#### Gravity Compensation Control — Basic Version (`9_gravity_compensation.py`)
-
-Use the Pinocchio dynamics model to compensate for joint gravity.
-
-**Control Law**:
-```
-tau = g(q)          — Gravity feedforward
-pos = current motor position   — Joint position follows current position
-kp = 2,  kd = 1     — Unified stiffness/damping for all joints
-```
-
-**Expected Behavior**:
-- The robotic arm can "float" at any pose
-- Will not fall due to self-weight after release
-- Can be manually moved to any position
-
-**Run Command**:
-```bash
-uv run python example/9_gravity_compensation.py
-```
-
-**Output**:
-- Display desired torque for each joint in real time (N·m)
-- Press `Ctrl+C` to stop and disconnect
-
-:::caution Return to Home Before Exiting Gravity Compensation
-When stopping the script (`Ctrl+C`), the program will **directly disable all motors**, and the robotic arm **will not automatically return to zero**. Please hold the robotic arm by hand or move it to a safe/home pose before exiting to avoid sudden joint drops that may cause collisions or damage.
-:::
-
-:::tip Adjusting Individual Joint Compensation
-If some joints are under-compensated or over-compensated due to structural friction or assembly differences, you can apply additional scaling to the corresponding element of the `tau_g` array in the code:
-
-```python
-tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually starting from 1
-# This compensation is generally only used for joints 2 and 3
-```
-
-For example, `tau_g[2] *= 1.2` means increasing the gravity compensation torque of joint 2 by 20%. It is recommended to adjust item by item based on the actual floating effect to avoid making excessively large changes at once.
-:::
-
----
-
-#### Gravity Compensation Control — End-Effector Velocity Lock Version (`10_gravity_compensation_lock.py`)
-
-Based on the basic gravity compensation, adds end-effector velocity detection and joint angle locking mechanism.
-
-**Control Law**:
-```
-tau = g(q) + integral_term    — Gravity feedforward + integral term
-pos = q_target                 — Target joint angle (locked or updated)
-kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
-```
-
-**Lock Logic**:
-- When end linear velocity `||v_ee|| < 0.04 m/s` and angular velocity `||w_ee|| < 0.08 rad/s`:
-  - Target joint angle `q_target` remains locked
-  - Robotic arm locks in current position
-- When end velocity exceeds threshold:
-  - `q_target` updates to current joint angle
-  - Allows manual pushing to change position
-
-**Expected Behavior**:
-- Robotic arm locks in current position, requiring force to change target angle
-- More stable than basic version, suitable for scenarios requiring pose maintenance
-
-**Run Command**:
-```bash
-uv run python example/10_gravity_compensation_lock.py
-```
-
-**Output**:
-- Display lock status in real time (LOCKED / UPDATE)
-- End linear velocity, angular velocity
-- Gravity compensation torque for each joint (N·m)
-- Press `Ctrl+C` to stop and disconnect
-
-:::caution Return to Home Before Exiting Gravity Compensation
-When stopping the script (`Ctrl+C`), the program will **directly disable all motors**, and the robotic arm **will not automatically return to zero**. Please hold the robotic arm by hand or move it to a safe/home pose before exiting to avoid sudden joint drops that may cause collisions or damage.
-:::
-
-:::tip Adjusting Individual Joint Compensation
-If some joints are under-compensated or over-compensated due to structural friction or assembly differences, you can apply additional scaling to the corresponding element of the `tau_g` array in the code:
-
-```python
-tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually starting from 1
-# This compensation is generally only used for joints 2 and 3
-```
-
-For example, `tau_g[2] *= 1.2` means increasing the gravity compensation torque of joint 2 by 20%. It is recommended to adjust item by item based on the actual floating effect to avoid making excessively large changes at once.
-:::
-
-**Safety Test Configuration**:
-You can modify the `ENABLED_JOINTS` list at the top of the script to enable only specified joints for safety testing:
-```python
-ENABLED_JOINTS = ["joint1"]  # Enable only joint1
-```
 
 ---
 
 ## FAQ
 
-- **Encounter `Permission denied` error**  
+- **Encounter `Permission denied` error**
   Make sure to run `sudo chmod 666 /dev/ttyACM0` (Damiao) or `sudo chmod 666 /dev/can0` (Robostride) to set device permissions.
 
-- **IK solving fails or results are abnormal**  
+- **IK solving fails or results are abnormal**
   Check whether the target pose is within the robotic arm's workspace and ensure joint limits are configured correctly.
 
-- **Gravity compensation effect is poor**  
+- **Gravity compensation effect is poor**
   This may be caused by structural errors and machining accuracy. The gravity compensation in this project relies on URDF and Pinocchio. You can try correcting the URDF to parameters you actually measured (you can ask AI for this step).
 
-- **Robostride motors cannot read status**  
+- **Robostride motors cannot read status**
   Internal protocol configuration issues in motorbridge may prevent RS motors from querying status like DM motors. Please judge based on actual motion effects, or try using the `ping` command to confirm normal motor communication.
 
-- **How to switch between Damiao and Robostride motor configurations**  
+- **How to switch between Damiao and Robostride motor configurations**
   Modify the `config/rebotarm_dm.yaml` (Damiao) or `config/rebotarm_rs.yaml` (Robostride) configuration file and load the corresponding configuration in the code.
 
 ---

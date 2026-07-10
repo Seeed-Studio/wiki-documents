@@ -8,8 +8,8 @@ keywords:
   - YOLO
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_getting_started
-sku: null
-sidebar_position: 12
+sku: 10003420
+sidebar_position: 1
 last_update:
   date: 06/01/2026
   author: Sizhao zhou
@@ -40,6 +40,15 @@ Before starting the configuration, please ensure that you have prepared the foll
 2. Observe the device status indicator. When the **green light is solid**, it indicates that the device has successfully booted and entered the operating state.
 
 ![System status light and cable connection diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
+
+### Status indicator explanation
+The green LED indicates the system status, while the red LED serves as the power indicator. The following table describes the device status corresponding to each state of the green LED.
+
+1. ***breathing*** : At this moment, the representative device is in the process of powering on.
+2. ***Solid on*** : The equipment is operating normally.
+3. ***off*** : Abnormal state, the core process is not running.
+4. ***100 ms blink*** : Currently in the OTA process.
+5. ***Short green blink*** : An SD card with a dirty filesystem has been detected.
 
 ---
 

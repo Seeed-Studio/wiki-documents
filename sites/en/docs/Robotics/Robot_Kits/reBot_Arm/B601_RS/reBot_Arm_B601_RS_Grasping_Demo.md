@@ -12,12 +12,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif
 slug: /rebot_arm_b601_rs_grasping_demo
 last_update:
-  date: 2026-06-17
+  date: 2026-06-30
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-06-22'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/
 ---
 
@@ -49,16 +49,16 @@ YOLO is a widely used family of real-time object detection models that can local
 
 ## Project Features
 
-1. **Direct grasp pose estimation from YOLO + OBB**  
+1. **Direct grasp pose estimation from YOLO + OBB**
    The pipeline uses detection boxes or OBB minimum-area rectangles directly and takes the short axis as the gripper opening direction, avoiding complex 3D point-cloud processing.
 
-2. **GraspNet-Baseline 6D grasp pose estimation (optional)**  
+2. **GraspNet-Baseline 6D grasp pose estimation (optional)**
    The project also supports GraspNet-Baseline (`graspnet/graspnet-baseline`) for 6D grasp pose estimation from RGB-D point clouds, with YOLO bounding boxes used to select target candidates for more complex grasping experiments.
 
-3. **Robotic arm and gripper driver integration**  
+3. **Robotic arm and gripper driver integration**
    The main grasping script is based on the robotic arm and end-pose controller from `reBotArm_control_py`, with a lightweight grasp helper for gripper opening, force-controlled grasping, and TCP pose reading.
 
-4. **Open Source and Extensible**  
+4. **Open Source and Extensible**
    All source code is open, and users can customize control algorithms and effects based on their own needs.
 
 ## Specifications
@@ -255,6 +255,19 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 
 If your system needs the full RealSense toolchain or udev rules, install `librealsense2` by following the official RealSense SDK documentation.
 
+**SDK Resource Summary**
+
+| Resource | Link |
+|------|------|
+| Gemini 2 Product Page | https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51 |
+| Development Resources | https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1 |
+| Orbbec SDK v2 | https://github.com/orbbec/OrbbecSDK_v2 |
+| SDK v2 API Documentation | https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/ |
+| pyorbbecsdk | https://github.com/orbbec/pyorbbecsdk |
+| pyorbbecsdk Documentation | https://orbbec.github.io/pyorbbecsdk/index.html |
+| ROS2 Wrapper | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main |
+| Intel RealSense SDK | https://github.com/realsenseai/librealsense |
+
 ### Step 5. Configure GraspNet (optional)
 
 You do not need GraspNet for `scripts/main.py` or `scripts/ordinary_grasp_pipeline.py`. Configure it only when you want to run `scripts/graspnet_camera_demo.py` or `scripts/grasp.py`, which require GraspNet, CUDA-enabled PyTorch, the PointNet2/knn CUDA operators, and a pretrained checkpoint.
@@ -304,19 +317,27 @@ pip install .
 cd ../../..
 ```
 
-***Note: If you follow the official graspnet-baseline repository documentation and use `python setup.py install`, CUDA / PyTorch related errors may occur. We recommend using `pip install . --no-build-isolation` so the extension is built against the PyTorch and CUDA configuration already installed in the active conda environment.***
+:::tip
+Note: If you follow the official graspnet-baseline repository documentation and use `python setup.py install`, CUDA / PyTorch related errors may occur. We recommend using `pip install . --no-build-isolation` so the extension is built against the PyTorch and CUDA configuration already installed in the active conda environment.
+:::
 
-***If building fails with `fatal error: cusparse.h: No such file or directory`, run `find $CONDA_PREFIX -name cusparse.h` and make sure the directory that contains `cusparse.h` is included in `CPATH` / `CPLUS_INCLUDE_PATH`. If you installed CUDA headers from conda `cuda-toolkit`, the include path is usually `$CONDA_PREFIX/targets/x86_64-linux/include` instead of the pip `nvidia/cu13/include` path shown above.***
+:::tip
+If building fails with `fatal error: cusparse.h: No such file or directory`, run `find $CONDA_PREFIX -name cusparse.h` and make sure the directory that contains `cusparse.h` is included in `CPATH` / `CPLUS_INCLUDE_PATH`. If you installed CUDA headers from conda `cuda-toolkit`, the include path is usually `$CONDA_PREFIX/targets/x86_64-linux/include` instead of the pip `nvidia/cu13/include` path shown above.
+:::
 
-***In addition, older GraspNet API dependencies may still use the deprecated `sklearn` package name. The `sed` command replaces it with the currently recommended `scikit-learn` package name to avoid `The 'sklearn' PyPI package is deprecated` during installation. Unless you also upgrade the older GraspNet API dependencies, keep its `numpy==1.23.4` constraint because `transforms3d==0.3.1` still uses old NumPy aliases such as `np.float`.***
+:::tip
+In addition, older GraspNet API dependencies may still use the deprecated `sklearn` package name. The `sed` command replaces it with the currently recommended `scikit-learn` package name to avoid `The 'sklearn' PyPI package is deprecated` during installation. Unless you also upgrade the older GraspNet API dependencies, keep its `numpy==1.23.4` constraint because `transforms3d==0.3.1` still uses old NumPy aliases such as `np.float`.
+:::
 
-Refer to the official graspnet-baseline repository to download the official GraspNet pretrained weight, then place `checkpoint-rs.tar` at:
+**Configure Pretrained Model**
+
+Download the official GraspNet pretrained weights from the graspnet-baseline official repository [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A), then place `checkpoint-rs.tar` at:
 
 ```bash
 sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
 ```
 
-Then verify `config/default.yaml`:
+Then verify in `config/default.yaml`:
 
 ```yaml
 graspnet:
@@ -324,6 +345,41 @@ graspnet:
 ```
 
 The `checkpoint` field supports three forms: a file name is resolved under `sdk/graspnet-baseline/checkpoints/`; a relative path is resolved from the project root; an absolute path is used directly.
+
+## Directory Structure
+
+```
+rebot_grasp/
+├── config/
+│   ├── default.yaml              # Main configuration file
+│   └── calibration/
+│       └── <camera_type>/
+│           ├── intrinsics.npz    # Camera intrinsics
+│           └── hand_eye.npz      # Hand-eye calibration results
+├── drivers/
+│   ├── camera/
+│   │   ├── base.py               # Camera abstract base class
+│   │   ├── orbbec_gemini2.py     # Gemini 2 driver
+│   │   └── realsense.py          # RealSense driver (alternative)
+│   └── robot/
+│       └── grasp_driver.py       # Lightweight grasp helper based on arm SDK
+├── calibration/
+│   ├── aruco_pose.py             # ArUco pose estimation
+│   └── hand_eye.py               # Hand-eye calibration solver
+├── utils/
+│   ├── ordinary_grasp.py         # OBB grasp pose estimation and visualization
+│   └── transforms.py             # Coordinate transformation utilities
+├── scripts/
+│   ├── main.py                   # Main grasping program
+│   ├── set.py                    # Grasp and place program
+│   ├── ordinary_grasp_pipeline.py
+│   ├── object_detection.py
+│   └── collect_handeye_eih.py
+├── sdk/
+│   ├── pyorbbecsdk/              # Orbbec SDK Python wrapper
+│   └── reBotArm_control_py/      # reBot Arm SDK
+└── environment.yml               # Recommended conda environment file
+```
 
 ## Hand-Eye Calibration
 
@@ -359,6 +415,10 @@ python scripts/collect_handeye_eih.py --manual
 ```
 
 In manual mode, the arm enters gravity-compensation mode. Move the end effector to a proper viewing angle, press `Enter` to capture, and press `c` or `q` to finish and compute the result.
+
+:::tip
+If you find that the robotic arm's grasping accuracy cannot meet your requirements after calibration, you can set the `X` (front-back), `Y` (left-right), `Z` (up-down) parameters in `config/default.yaml` under `calibration.hand_eye_compensation_m` to provide positional compensation.
+:::
 
 The calibration result is saved to:
 
@@ -466,7 +526,19 @@ Runtime keys:
 - `R`: resume live preview
 - `Q` / `Esc`: exit
 
-### 4. GraspNet camera estimation demo (optional)
+### 4. `scripts/set.py` — Grasp and Place Program
+
+Function: Grasp the banana and place it in the box.
+
+Completed flow:
+1. Camera and arm initialization, move to ready position
+2. Real-time camera preview + YOLO object detection and instance segmentation
+3. Press `G` to freeze frame, compute arm target pose via hand-eye transformation
+4. Arm moves to grasp banana and lift
+5. Arm places banana in the box and returns to initial pose
+6. Press `Q` to exit system, arm returns to zero position
+
+### 5. GraspNet camera estimation demo (optional)
 
 ```bash
 python scripts/graspnet_camera_demo.py
@@ -482,7 +554,7 @@ Key controls:
 
 After inference, Open3D can visualize the point cloud and grasp candidates.
 
-### 5. GraspNet robotic grasping program (optional)
+### 6. GraspNet robotic grasping program (optional)
 
 ```bash
 python scripts/grasp.py
@@ -584,7 +656,7 @@ If the output is `False`, fix the CUDA / PyTorch installation first. If it is `T
 - [reBot Arm B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/)
 - [reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/)
 - [Orbbec Gemini 2 Product Page](https://www.orbbec.com/products/stereo-vision-camera/gemini-2/)
-- [Orbbec Developer Resources](https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1)
+- [Orbbec Development Resources](https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
 - [Orbbec SDK v2 API Guide](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/)
 - [pyorbbecsdk Repository](https://github.com/orbbec/pyorbbecsdk)

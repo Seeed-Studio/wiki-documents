@@ -3198,6 +3198,7 @@ const sidebars = {
       label: 'Other Network Devices',
       items: [
         'Network/TTN_Gateway/The-Things-Indoor-Gateway',
+        'Network/LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
           label: 'Wio-WM6108 WiFi-Halow Devices',
@@ -4488,6 +4489,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_pinocchio',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_isaacsim',
               ]
             }
           ]

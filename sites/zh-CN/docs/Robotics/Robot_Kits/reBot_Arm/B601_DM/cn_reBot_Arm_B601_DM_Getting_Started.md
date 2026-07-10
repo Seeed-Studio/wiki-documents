@@ -170,7 +170,7 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_connect_cn.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_damiao_tool.png" />
 </div>
 
 
@@ -182,14 +182,18 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_id_set_cn.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_damiao_tool.png" />
 </div>
+
+:::tip
+左侧橙色框中的USB模式代表了当前参数设置页面读写电机参数时使用的方式
+:::
 
 5、进入到 `调试` 界面确保  `CAN ID` 与 `Master ID` 设置无误后点击 `电机使能` ，此时电机指示灯绿灯常亮进入使能状态，1号电机测试完成。
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_enable_cn.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_damiao_tool.png" />
 </div>
 
 :::tip

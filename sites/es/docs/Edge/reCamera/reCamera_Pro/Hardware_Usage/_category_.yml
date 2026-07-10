@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'Uso de hardware'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_pro_hardware_usage
+link:
+  type: generated-index
+  slug: recamera_pro_hardware_usage
+  title: Uso de hardware
+  description: Documentación de uso de hardware de reCamera Pro
