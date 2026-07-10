@@ -988,11 +988,11 @@
     {
         "product": "j501mini-agx-orin-64g",
         "l4t": "39.2.0",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB8nOmueUTRToCw6ZIYME7iAYofm7C70j6Nu9iQbRcejhU",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBraqxVv-rUQKkcwG2EXybtAUKJgIvgi77ze4eig_Hj3Ns",
         "mirrorlink": "",
-        "filename": "mfi_recomputer-mini-agx-orin-j501x-64g-7.2.0-39.2.0-2026-06-25.tar.gz",
+        "filename": "mfi_recomputer-mini-agx-orin-64g-j501-7.2.0-39.2.0-2026-07-10.tar.gz",
         "foldername": "mfi_recomputer-orin-robotics-j501",
-        "sha256": "36e2616404f9451a043797968e87755b4dc654a5683cd70c7e223cc80910ac0a"
+        "sha256": "F95E91C3BFB00D50EB999383F85949B4"
     },
     {
         "product": "j501mini-agx-orin-64g",
