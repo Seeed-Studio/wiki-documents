@@ -31,6 +31,12 @@ const excludedPaths = [
   path.join(docsDirectory, 'Cloud_Chain', 'CodeCraft', '3-community-and-publishing.md'), //6.29
   path.join(docsDirectory, 'Cloud_Chain', 'CodeCraft', '4-codecraft-for-education.md'), //6.29
   path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_lvgl.md'), //6.30
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'AI_Inference.md'), //7.9
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Device_Info.md'), //7.9
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Live_Preview.md'), //7.9
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Live_View.md'), //7.9
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Record_Settings.md'), //7.9
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Terminal.md'), //7.9
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

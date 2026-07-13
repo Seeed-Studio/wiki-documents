@@ -1,6 +1,28 @@
 const docList = [
   [
     {
+      "path": "/soarm_amazinghand_teleop",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/soarm_amazinghand/soarm_amazinghand.webp",
+      "title": "Complete Training Guide for SO-ARM with AmazingHand",
+      "date": "2026-07-12",
+      "title_cn": "SO-ARM与AmazingHand完整训练指南",
+      "title_ja": "SO-ARM と AmazingHand のための完全トレーニングガイド",
+      "title_es": "Guía completa de entrenamiento para SO-ARM con AmazingHand",
+      "title_pt": "Guia Completo de Treinamento para SO-ARM com AmazingHand"
+    },
+    {
+      "path": "/rapid_prototyping_on_jetson_with_nvidia_skills",
+      "image": "https://files.seeedstudio.com/wiki/nv_skills/banner.png",
+      "title": "Rapid Prototyping on Jetson with NVIDIA Skills",
+      "date": "2026-07-09",
+      "title_cn": "使用 NVIDIA Skills 在 Jetson 上进行快速原型开发",
+      "title_ja": "NVIDIA Skills を用いた Jetson 上での高速プロトタイピング",
+      "title_es": "Prototipado rápido en Jetson con NVIDIA Skills",
+      "title_pt": "Prototipagem Rápida no Jetson com NVIDIA Skills"
+    }
+  ],
+  [
+    {
       "path": "/deploy_joyai_vl_interaction_on_jetson_thor",
       "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/joyai_vl_interaction/webui.png",
       "title": "Deploy JoyAI-VL-Interaction on Jetson Thor",
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "reCamera と Meshtastic を使った長距離セキュリティシステムの構築",
       "title_es": "Construcción de un sistema de seguridad de largo alcance con reCamera y Meshtastic",
       "title_pt": "Construindo um Sistema de Segurança de Longo Alcance com reCamera e Meshtastic"
-    }
-  ],
-  [
-    {
-      "path": "/lora_antenna_selection_guide",
-      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/3/1/318020613_first-min_1.png",
-      "title": "LoRa Antenna Selection Guide",
-      "date": "2026-06-29",
-      "title_cn": "LoRa 天线选型指南",
-      "title_ja": "LoRa アンテナ選択ガイド",
-      "title_es": "Guía de selección de antenas LoRa",
-      "title_pt": "Guia de Seleção de Antenas LoRa"
-    },
-    {
-      "path": "/lerobot_steering_gear_debugging_tool",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp",
-      "title": "Steering Gear Debugging Tool for SO-ARM in Lerobot",
-      "date": "2026-06-29",
-      "title_cn": "Lerobot 中 SO-ARM 的舵机调试工具",
-      "title_ja": "Lerobot の SO-ARM 用ステアリングギアデバッグツール",
-      "title_es": "Herramienta de depuración de engranajes de dirección para SO-ARM en Lerobot",
-      "title_pt": "Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no Lerobot"
     }
   ]
 ];
