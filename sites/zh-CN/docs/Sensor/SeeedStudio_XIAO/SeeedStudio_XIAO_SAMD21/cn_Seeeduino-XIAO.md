@@ -10,7 +10,7 @@ last_update:
   date: 6/30/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-06-30'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -21,7 +21,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 Seeed Studio XIAO SAMD21 之前名为 Seeeduino XIAO，是 [Seeed Studio XIAO 系列的首款产品，这是一系列兼容 Arduino 的强大拇指大小开发板](https://www.seeedstudio.com/xiao-series-page)。它搭载了功能强大的 ATSAMD21G18A-MU，这是一款低功耗微控制器。另一方面，这块小板子在处理性能方面表现良好，但功耗更低。它采用超小尺寸设计，可用于可穿戴设备和小型项目。
 
-Seeed Studio XIAO SAMD21 具有 14 个引脚，可用作 11 个数字接口、11 个模拟接口、10 个 PWM 接口（d1-d10）、1 个 DAC 输出引脚 D0、1 个 SWD 焊盘接口、1 个 I2C 接口、1 个 SPI 接口、1 个 UART 接口，通过引脚复用实现串口通信指示灯（T/R）、闪烁灯（L）。LED（Power、L、RX、TX）的颜色分别为绿色、黄色、蓝色和蓝色。此外，Seeed Studio XIAO SAMD21 具有一个 Type-C 接口，可用于供电和下载代码。板上有两个复位焊盘，你可以将它们短接来复位开发板。
+Seeed Studio XIAO SAMD21 具有 14 个引脚，可用作 11 个数字接口、11 个模拟接口、10 个 PWM 接口（d1-d10）、1 个 DAC 输出引脚 D0、1 个 SWD 焊盘接口、1 个 I2C 接口、1 个 SPI 接口、1 个 UART 接口，通过引脚复用实现串口通信指示灯（T/R）、闪烁灯（L）。LED（电源、L、RX、TX）的颜色分别为绿色、黄色、蓝色和蓝色。此外，Seeed Studio XIAO SAMD21 具有一个 Type-C 接口，可用于供电和下载代码。板上有两个复位焊盘，你可以将它们短接来复位开发板。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
@@ -31,25 +31,25 @@ Seeed Studio XIAO SAMD21 具有 14 个引脚，可用作 11 个数字接口、11
 
 ## 文档
 
-关于 **Seeed Studio XIAO SAMD21** 的使用有两份文档，侧重点不同，请参考下表：
+关于 **Seeed Studio XIAO SAMD21** 的使用有两份文档，分别侧重不同的内容，请参考下表：
 
 |[**Seeed 官方文档**](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/)|[**Nanase 编写的文档**](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-by-Nanase/)|
 |---|---|
 |引脚图|接口|
-|Seeed Studio XIAO SAMD21 入门指南|Seeed Studio XIAO SAMD21 搭配 MicroSD 卡（SPI）|
-|Seeed Studio XIAO SAMD21 GPIO 使用方法|Seeed Studio XIAO SAMD21 搭配 GPS（UART）|
+|Seeed Studio XIAO SAMD21 入门指南|Seeed Studio XIAO SAMD21 与 MicroSD 卡（SPI）|
+|Seeed Studio XIAO SAMD21 GPIO 使用方法|Seeed Studio XIAO SAMD21 与 GPS（UART）|
 |Seeed Studio XIAO SAMD21 资源|单周期 IOBUS|
 
 ### 在 Seeed Studio XIAO SAMD21 上使用 CircuitPython
 
-- 从这里开始：[**CircuitPython on Seeed Studio XIAO SAMD21 **](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-CircuitPython)。
+- 从这里开始：[**在 Seeed Studio XIAO SAMD21 上使用 CircuitPython**](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-CircuitPython)。
 
 ## 特性
 
 - 强大的 CPU：ARM® Cortex®-M0+ 32 位 48MHz 微控制器（SAMD21G18），带有 256KB Flash、32KB SRAM。
-- 兼容性灵活：兼容 Arduino IDE。
-- 项目操作便捷：面包板友好。
-- 体积小巧：尺寸如拇指般小（21x17.8mm），适用于可穿戴设备和小型项目。
+- 灵活的兼容性：兼容 Arduino IDE。
+- 简化项目操作：面包板友好。
+- 小巧尺寸：拇指般大小（21x17.8mm），适用于可穿戴设备和小型项目。
 - 多种开发接口：11 个数字/模拟引脚，10 个 PWM 引脚，1 个 DAC 输出，1 个 SWD 焊盘接口，1 个 I2C 接口，1 个 UART 接口，1 个 SPI 接口。
 
 ## 规格参数
@@ -61,7 +61,7 @@ Seeed Studio XIAO SAMD21 具有 14 个引脚，可用作 11 个数字接口、11
 | **RAM** | 32KB SRAM |
 | **Flash** | 256KB Flash |
 | **接口** | GPIO 引脚 x14<br/>数字引脚 x11<br/>模拟引脚 x11<br/>DAC x1<br/>I2C x1<br/>UART x1<br/>SPI x1 |
-| **板载** | 用户 LED x1<br/>电源 LED x1<br/>串口通信状态 LED（TX/RX 指示灯）x2 |
+| **板载** | 用户 LED x1<br/>电源 LED x1<br/>串口通信状态指示灯（TX/RX 指示灯）x2 |
 | **无线连接** | / |
 | **电源** | 输入电压（Type-C）：5V<br/>输入电压（BAT）：5V |
 | **最大输出** | 5V@500mA<br/>3.3V@200mA |
@@ -70,7 +70,7 @@ Seeed Studio XIAO SAMD21 具有 14 个引脚，可用作 11 个数字接口、11
 | **尺寸** | 21×17.8mm |
 | **型号** | [Seeed Studio XIAO SAMD21（预焊接）- Seeed Studio](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html  )<br/>[Seeed Studio XIAO SAMD21 - Arduino Microcontroller - SAMD21 Cortex M0+（3 片装）- Seeed Studio](https://www.seeedstudio.com/Seeeduino-XIAO-3Pcs-p-4546.html  ) |
 
-## **硬件概述**
+## **硬件概览**
 
 ### 正面
 
@@ -87,7 +87,7 @@ MCU 的工作电压为 3.3V。如果连接到通用 I/O 引脚的输入电压高
 对于电源引脚：
 板载的 DC-DC 转换电路可以将 5V 电压转换为 3.3V，从而允许通过 VIN-PIN 和 5V-PIN 使用 5V 电源为设备供电。
 
-必须明确的是，XIAO SAMD21 背面的 VIN 和 GND 焊盘并非用于直接连接电池，尤其不是可充电锂电池（LiPo/Li-Ion）。该开发板缺少安全运行所需的关键电池管理电路。这些焊盘只是一个替代电源输入点，会绕过板载的保护二极管。如果你希望使用电池为项目供电，必须使用专用的外部电池管理模块，该模块需提供充电和保护功能，然后将该模块的稳压输出连接到 XIAO 的 5V 引脚。
+必须明确的是，XIAO SAMD21 背面的 VIN 和 GND 焊盘并非用于直接连接电池，尤其不能直接连接可充电锂电池（LiPo/Li-Ion）。该开发板缺少安全运行所需的关键电池管理电路。这些焊盘只是一个替代电源输入点，会绕过板载的保护二极管。如果你希望使用电池为项目供电，必须使用专用的外部电池管理模块，该模块需提供充电和保护功能，然后将该模块的稳压输出连接到 XIAO 的 5V 引脚。
 
 请注意使用安全，请不要撬起屏蔽罩。
 :::
@@ -144,7 +144,7 @@ Seeed Studio XIAO SAMD21 上的所有引脚都支持中断，但有两个引脚�
 
 ### 引脚复用
 
-我们不需要自己配置引脚，使用引脚后可以直接调用函数。
+我们不需要自己配置引脚，使用引脚后，你可以直接调用函数。
 
 #### 数字输入和输出
 
@@ -305,13 +305,15 @@ DAC 仅在 Arduino 引脚 A0 上可用，并通过 analogWrite(A0, `<value>`) �
 Seeed Studio XIAO SAMD21 使用的是 [**Seeed Studio XIAO SAMD21 expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 :::
 
-该示例在 A0 上产生一个正弦波输出，电压范围为 0 到 3.3V。然后使用 A1 将该输出读入其 ADC，并将其转换为 0 到 3.3V 之间的电压。
+这个示例会在 A0 上产生一个正弦波输出，电压范围为 0 到 3.3V。然后使用 A1 将该输出读入其 ADC，并将其转换为 0 到 3.3V 之间的电压。
 
-当然，你可以打开串口监视器来查看电压值的流动。但如果通过文本很难想象正弦波的形状，可以通过依次点击 Tools > Serial Plotter 来查看 Arduino 新的 Serial Plotter。  
+当然，你可以打开串口监视器来查看电压值的流动。但如果通过文本很难想象正弦波的形状，可以通过依次点击 Tools > Serial Plotter 来查看 Arduino 新的串口绘图器。
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Serial%20poltting.png" /></div>
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_DAC_wave.gif" /></div>
+
+#### DAC
 
 感谢 [Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) 提交代码，所有相关功能均由他开发并贡献。
 
@@ -319,7 +321,7 @@ Seeed Studio XIAO SAMD21 使用的是 [**Seeed Studio XIAO SAMD21 expansion boar
 #define DAC_PIN A0 // Make code a bit more legible
 float x = 0; // Value to take the sin of
 float increment = 0.02;  // Value to increment x by each time
-// Frequency of sine wave is about 1.37 Hz
+int frequency = 440; // Frequency of sine wave
 
 void setup() 
 {
@@ -365,12 +367,12 @@ void loop()
 
 :::tip
 
-有些 USB 线只能供电，不能传输数据。如果你没有 USB 线，或者不知道你的 USB 线是否可以传输数据，你可以查看 [seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html)。
+有些 USB 线只能供电，不能传输数据。如果你没有 USB 线，或者不知道你的 USB 线是否可以传输数据，可以查看 [seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html)。
 :::
 
 - 步骤 1. 准备一块 Seeed Studio XIAO SAMD21 和一根 Type-C 线。
 
-- 步骤 2. 将 Seeed Studio XIAO SAMD21 连接到你的电脑。然后黄色电源 LED 应该会亮起。
+- 步骤 2. 将 Seeed Studio XIAO SAMD21 连接到你的电脑。然后黄色电源指示灯应会亮起。
 
 ### 软件
 
@@ -400,9 +402,9 @@ void loop()
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={600} height="auto" /></p>
 
-- **步骤 3. 将 Seeeduino 添加到你的 Arduino IDE**
+- **步骤 3. 将 Seeeduino 添加到 Arduino IDE**
 
-点击 **File > Preference**，并在 Additional Boards Manager URLs 中填入以下 URL：
+点击 **File > Preference**，并在 Additional Boards Manager URLs 中填入以下链接：
 
 *https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
 
@@ -415,11 +417,11 @@ void loop()
 
 - **步骤 4. 选择你的开发板和端口**
 
-安装开发板后，点击 **Tools-> Board**，找到“**Seeed Studio XIAO**”并选择它。现在你已经在 Arduino IDE 中完成了 Seeed Studio XIAO SAMD21 开发板的设置。
+安装好开发板后，点击 **Tools-> Board**，找到“**Seeed Studio XIAO**”并选择它。现在你已经为 Arduino IDE 设置好了 Seeed Studio XIAO SAMD21 开发板。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/1.jpg" alt="pir" width={600} height="auto" /></p>
 
-在 Tools | Serial Port 菜单中选择 Arduino 开发板的串口设备。它很可能是 COM3 或更高（**COM1** 和 **COM2** 通常保留给硬件串口）。要确认的话，你可以断开 Arduino 开发板并重新打开该菜单；消失的那一项应该就是 Arduino 开发板。重新连接开发板并选择该串口。
+在 Tools | Serial Port 菜单中选择 Arduino 开发板的串口设备。它很可能是 COM3 或更高（**COM1** 和 **COM2** 通常保留给硬件串口）。要确认的话，你可以先断开 Arduino 开发板并重新打开该菜单；消失的那一项应该就是 Arduino 开发板。重新连接开发板并选择该串口。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/2.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -429,10 +431,10 @@ void loop()
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png" alt="pir" width={800} height="auto" /></p>
 
- 上传完成几秒钟后，你应该会看到板子上的 13 号引脚（L）LED 开始闪烁（橙色）。如果是这样，恭喜你！你已经成功运行 Arduino。如果遇到问题，请查看故障排除建议。
+ 上传完成几秒钟后，你应该会看到板子上的 13 号引脚（L）LED 开始闪烁（橙色）。如果是这样，恭喜你！你已经成功运行 Arduino。如果遇到问题，请参考故障排除建议。
 
 :::note
-flash 的最大容量为 8KB，更多信息请参阅资源中的 ATSAMD218A-MU 数据手册
+最大闪存容量为 8KB，更多信息请参阅资源中的 ATSAMD218A-MU 数据手册
 :::
 
 ## 示例应用
@@ -441,7 +443,7 @@ flash 的最大容量为 8KB，更多信息请参阅资源中的 ATSAMD218A-MU �
 
 - [SPI 通信接口](https://wiki.seeedstudio.com/cn/XIAO-SPI-Communication-Interface)
 
-- [如何使用 Raspberry Pi 修复变砖的 xiao](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990)。感谢 John_Doe 的分享。
+- [如何使用 Raspberry Pi 修复变砖的 XIAO](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990)。感谢 John_Doe 的分享。
 
 ## 资源
 
@@ -449,15 +451,15 @@ flash 的最大容量为 8KB，更多信息请参阅资源中的 ATSAMD218A-MU �
 - **📄[数据手册]** [Atmel SAMD21G18 数据手册](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
 - **📄[原理图]** [XIAO SAMD21 原理图](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
 - **🗃️[PCB 设计文件]** 
-  - [XIAO SAMD21 KiCad 项目](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO_SAMD21_v2.1_SCH&PCB_20260304.zip)  
-  - [XIAO SAMD21 Eagle 项目](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0.zip)
+  - [XIAO SAMD21 KiCad 工程](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO_SAMD21_v2.1_SCH&PCB_20260304.zip)  
+  - [XIAO SAMD21 Eagle 工程](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0.zip)
 - **🗃️[PCB 设计库]** 
-  - [XIAO 系列封装](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
-  - [XIAO 系列原理图符号](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+  - [XIAO 系列封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO 系列原理图符号库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[引脚分布表]** [XIAO SAMD21 引脚分布表](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-pinout_sheet.xlsx )
 
 **机械设计**
-- **📄[2D 尺寸]** [DXF 格式的 XIAO 尺寸](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_Dimension.rar )
+- **📄[2D 尺寸]** [DXF 格式的 XIAO 尺寸图](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_Dimension.rar )
 - **📄[3D 模型]** [XIAO SAMD21 3D 模型](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip )
 
 **软件与工具**
@@ -474,7 +476,7 @@ flash 的最大容量为 8KB，更多信息请参阅资源中的 ATSAMD218A-MU �
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[电子书]** [XIAO：强大性能，小巧板卡——精通 Arduino 与 TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[电子书]** [XIAO: Big Power, Small Board 掌握 Arduino 和 TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 ## 技术支持与产品讨论
 
