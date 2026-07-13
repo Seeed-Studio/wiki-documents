@@ -2151,24 +2151,20 @@ const sidebars = {
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
-        
-                {
+        {
           type: 'category',
           label: 'reSpeaker Clip',
-          //collapsed: true,
-          //collapsible: true,
-          //link: {
-            //type: 'doc',
-            //id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
-         // },
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
+          },
           items: [
-            
+            'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/respeaker_clip_python_control',
-            // add sub-docs here later
-            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
-            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
-        }, 
+        },
         {
           type: 'category',
           label: 'Applications',
@@ -4099,6 +4095,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_run_VLM_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_JoyAI_VL_Interaction_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Local_OpenClaw(Clawdbot)_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Riva_and_Llama2_on_reComputer',
@@ -4184,6 +4181,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Distributed_llama_cpp_RPC_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Jetson_SPI_Getting_Start',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Flash_PREEMPT_RT_Kernel_on_reComputer_Jetson_JetPack_6_2_1',
               ]
             },
           ]

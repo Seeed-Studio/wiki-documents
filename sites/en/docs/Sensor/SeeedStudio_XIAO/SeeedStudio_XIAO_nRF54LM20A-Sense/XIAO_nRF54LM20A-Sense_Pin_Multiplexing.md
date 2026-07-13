@@ -1,5 +1,5 @@
 ---
-title: Pin Multiplexing with Seeed Studio XIAO nRF54LM20A Sense
+title: Pin Multiplexing with XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -174,6 +174,13 @@ int main(void)
 ### Result
 
 After flashing the firmware, press the button and the buzzer will beep.And Serial port will print the status.
+
+:::tip
+
+Note to set the baud rate to 115200. If you directly open Monitor in VS, it is recommended to set the baud rate in the `.ini` file
+
+:::
+
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -898,28 +905,29 @@ According to the pinout of XIAO nRF54LM20A, P1.03 and P1.07 can be configured as
 
 ```dts
 / {
-	chosen {
-		zephyr,display = &ssd1306_128x64;
-	};
+        chosen {
+                zephyr,display = &ssd1306_128x64;
+        };
 };
 
 &i2c22 {
-	status = "okay";
-	zephyr,concat-buf-size = <2048>;
-	ssd1306_128x64: ssd1306@3c {
-		compatible = "solomon,ssd1306fb";
-		reg = <0x3c>;
-		width = <128>;
-		height = <64>;
-		segment-offset = <0>;
-		page-offset = <0>;
-		display-offset = <0>;
-		multiplex-ratio = <63>;
-		segment-remap;
-		com-invdir;
-		prechargep = <0x22>;
-	};
+        status = "okay";
+        zephyr,concat-buf-size = <2048>;
+        ssd1306_128x64: ssd1306@3c {
+                compatible = "solomon,ssd1306fb";
+                reg = <0x3c>;
+                width = <128>;
+                height = <64>;
+                segment-offset = <0>;
+                page-offset = <0>;
+                display-offset = <0>;
+                multiplex-ratio = <63>;
+                segment-remap;
+                com-invdir;
+                prechargep = <0x22>;
+        };
 };
+
 ```
 
 2. Modify the `prj.conf` file to enable I2C and display-related configurations.
@@ -927,11 +935,13 @@ According to the pinout of XIAO nRF54LM20A, P1.03 and P1.07 can be configured as
 ```
 CONFIG_STDOUT_CONSOLE=y
 CONFIG_HEAP_MEM_POOL_SIZE=16384
+CONFIG_I2C=y
 CONFIG_DISPLAY=y
 CONFIG_SSD1306=y
 CONFIG_LOG=y
 CONFIG_LOG_DEFAULT_LEVEL=4
 CONFIG_CHARACTER_FRAMEBUFFER=y
+
 ```
 
 3. Write the main function to set the display position and functions for the string.

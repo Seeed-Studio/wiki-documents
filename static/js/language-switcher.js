@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-01 17:44:37 (北京时间)
-// 多语言页面: 2360 个
+// 生成时间: 2026-07-08 10:32:55 (北京时间)
+// 多语言页面: 2365 个
 
 (function() {
   'use strict';
@@ -835,6 +835,13 @@
     "ja",
     "pt"
   ],
+  "/flash_preempt_rt_kernel_on_recomputer_jetson_jetpack_6_2_1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/gapi_getting_started-with_jetson": [
     "cn",
     "en",
@@ -941,6 +948,13 @@
     "pt"
   ],
   "/deploy_dia_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/deploy_joyai_vl_interaction_on_jetson_thor": [
     "cn",
     "en",
     "es",
@@ -3489,6 +3503,13 @@
     "pt"
   ],
   "/recamera_meshtastic_ha_security_system": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_motion_detection": [
     "cn",
     "en",
     "es",
@@ -11173,6 +11194,20 @@
     "pt"
   ],
   "/respeaker_2_mics_pi_hat_v2_speech_recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_python_control": [
     "cn",
     "en",
     "es",

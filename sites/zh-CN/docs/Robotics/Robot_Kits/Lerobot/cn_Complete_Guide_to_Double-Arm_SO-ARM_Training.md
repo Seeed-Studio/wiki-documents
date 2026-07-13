@@ -15,7 +15,6 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/cn/lerobot_double_arm_so_arm_training/
 ---
-
 import Link from '@docusaurus/Link';
 
 # 双臂 SO-ARM训练完整指南
@@ -53,7 +52,7 @@ import Link from '@docusaurus/Link';
 ### 0.2 USB 权限
 
 ```bash
-sudo chmod 666 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3 /dev/ttyACM4
+sudo chmod 666 /dev/ttyACM0 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3
 ```
 
 ## 1. 标定（关键步骤）
@@ -63,7 +62,7 @@ sudo chmod 666 /dev/ttyACM1 /dev/ttyACM2 /dev/ttyACM3 /dev/ttyACM4
 ```bash
 lerobot-calibrate \
   --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM1 \
+  --robot.port=/dev/ttyACM0 \
   --robot.id=my_awesome_bimanual_follower_left
 ```
 
@@ -72,7 +71,7 @@ lerobot-calibrate \
 ```bash
 lerobot-calibrate \
   --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM2 \
+  --robot.port=/dev/ttyACM1 \
   --robot.id=my_awesome_bimanual_follower_right
 ```
 
@@ -81,7 +80,7 @@ lerobot-calibrate \
 ```bash
 lerobot-calibrate \
   --teleop.type=so101_leader \
-  --teleop.port=/dev/ttyACM3 \
+  --teleop.port=/dev/ttyACM2 \
   --teleop.id=my_awesome_bimanual_leader_left
 ```
 
@@ -90,7 +89,7 @@ lerobot-calibrate \
 ```bash
 lerobot-calibrate \
   --teleop.type=so101_leader \
-  --teleop.port=/dev/ttyACM4 \
+  --teleop.port=/dev/ttyACM3 \
   --teleop.id=my_awesome_bimanual_leader_right
 ```
 
@@ -144,6 +143,8 @@ lerobot-teleoperate \
 
 ### 2.2 带摄像头
 
+可用 `lerobot-find-cameras opencv` 查看摄像头索引，同时可自行添加或减少摄像头。
+
 ```bash
 lerobot-teleoperate \
   --robot.type=bi_so_follower \
@@ -162,8 +163,6 @@ lerobot-teleoperate \
   --teleop.id=my_awesome_bimanual_leader \
   --display_data=true
 ```
-
-可用 `lerobot-find-cameras opencv` 查看摄像头索引。
 
 ### 安全提示
 
@@ -205,10 +204,9 @@ lerobot-record \
   --display_data=true
 ```
 
-数据会保存在 `~///bimanual_so101_task/`，结构为：
+数据会保存在 `~/.cache/huggingface/lerobot/seeed/bimanual_so101_task/`，结构为：
 
 ```text
-./datasets/bimanual_so101_task/
 ├── meta/
 │   ├── info.json
 │   ├── episodes/
@@ -315,18 +313,16 @@ python -m lerobot.scripts.lerobot_edit_dataset \
   --operation.episode_indices="[24]"
 ```
 
-删除后会原地重写数据集，原数据会备份到 `./datasets/bimanual_so101_task_old/`。确认新数据集无误后，可以手动删除备份：
+删除后会原地重写数据集，原数据会备份到 `~/.cache/huggingface/lerobot/seeed/bimanual_so101_task_old/`。确认新数据集无误后，可以手动删除备份：
 
 ```bash
-rm -rf ./datasets/bimanual_so101_task_old
+rm -rf ~/.cache/huggingface/lerobot/seeed/bimanual_so101_task_old
 ```
-
-> 注：若你使用的是修复前的 LeRobot 版本，`--root` 指向本地数据集根目录时可能会因路径解析错误而失败。当前项目中的 `lerobot_edit_dataset.py` 已针对该场景修复。
 
 #### 删除整条数据集
 
 ```bash
-rm -rf ./datasets/bimanual_so101_task
+rm -rf ~/.cache/huggingface/lerobot/seeed/bimanual_so101_task_old
 ```
 
 ---
@@ -361,9 +357,7 @@ lerobot-train \
   --policy.push_to_hub=false
 ```
 
-> 上面使用了 ACT 的默认参数（`chunk_size=100`、`dim_model=512` 等）。如果数据集较小（例如少于 50 条 episode），可以显式改小模型来降低过拟合风险，例如 `--policy.chunk_size=50 --policy.dim_model=256 --batch_size=16 --steps=30000`。
-
----
+> 上面使用了 ACT 的默认参数（`chunk_size=100`、`dim_model=512` 等）。
 
 ## 5. 真实机器人部署
 
@@ -381,8 +375,7 @@ lerobot-record \
   --robot.right_arm_config.cameras='{
     right_wrist: {"type": "opencv", "index_or_path": 4, "width": 640, "height": 480, "fps": 30}
   }' \
-  --dataset.repo_id=local/eval_bimanual_so101_task8 \
-  --dataset.root=./datasets/eval_bimanual_so101_task8 \
+  --dataset.root=seeed_eval/eval_bimanual_so101_task8 \
   --dataset.push_to_hub=false \
   --dataset.num_episodes=10 \
   --dataset.single_task="Pick the cube with left arm and hand it to right arm" \
