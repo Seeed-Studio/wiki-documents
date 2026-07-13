@@ -162,6 +162,10 @@ url: https://wiki.seeedstudio.com/robotics_page/
                   <span className="text">Complete Guide to Double-Arm SO-ARM Training</span>
                   <span className="tag recommended">New</span>
               </a>
+              <a href="/soarm_amazinghand_teleop/" className="content-card">
+                  <span className="text">Complete Training Guide for SO-ARM with AmazingHand</span>
+                  <span className="tag recommended">New</span>
+              </a>
           </div>
 
           <h3>🚗 Lekiwi</h3>
