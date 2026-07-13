@@ -1,5 +1,5 @@
 ---
-description: Comienza con SenseCAP Solar Node para Meshcore y LoRa. Guía para la instalación del dispositivo, flasheo de firmware y conexión del dispositivo.
+description: Comienza con SenseCAP Solar Node para Meshcore y LoRa. Guía para la instalación del dispositivo, flasheo del firmware y conexión del dispositivo.
 title: Comienza con MeshCore en SenseCAP Solar Node
 keywords:
   - Meshcore
@@ -13,7 +13,7 @@ last_update:
   author: Michelle Huang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/es/get_started_with_meshcore_solar_node/
-updatedAt: '2026-04-20'
+updatedAt: '2026-04-03'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -26,7 +26,7 @@ updatedAt: '2026-04-20'
 <br></br>
 
 :::danger note
-Cuando el dispositivo se encuentre en los siguientes estados, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo podría quedar inservible.
+Cuando el dispositivo se encuentre en los siguientes estados, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo puede quedar inutilizable.
 1. No ha finalizado el proceso de transmisión de mensajes
 2. Está siendo configurado
 :::
@@ -38,7 +38,7 @@ Cuando el dispositivo se encuentre en los siguientes estados, no lo reinicies ni
 Conecta tu dispositivo al ordenador con un cable USB. Asegúrate de que el cable admite transmisión de datos. 
 
 :::warning
-Mantén el cable USB conectado durante la transmisión de datos, de lo contrario el dispositivo podría dañarse.
+Mantén el cable USB conectado durante la transmisión de datos, de lo contrario el dispositivo puede dañarse.
 :::
 
 Ve a [Meshcore Web Flasher](https://meshcore.io/flasher). 
@@ -84,7 +84,7 @@ Cuando la barra de progreso esté completamente llena, indica que el flasheo ha 
 Conecta tu dispositivo al ordenador con un cable USB. Asegúrate de que el cable admite transmisión de datos. 
 
 :::warning
-Mantén el cable USB conectado durante la transmisión de datos, de lo contrario el dispositivo podría dañarse.
+Mantén el cable USB conectado durante la transmisión de datos, de lo contrario el dispositivo puede dañarse.
 :::
 
 Ve a [Meshcore Web Flasher](https://meshcore.io/flasher). 
@@ -103,15 +103,15 @@ Descarga el archivo UF2.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseFirmware.png" alt="pir" width={800} height="auto" /></p>
 
-Haz doble clic en el botón RST para entrar manualmente en modo DFU. Verás que aparece un disco llamado `Xiao-Boot` o `Solar Node` después de 10~15 s. 
+Haz doble clic en el botón RST para entrar manualmente en modo DFU. Podrás ver que aparece un disco llamado `Xiao-Boot` o `Solar Node` después de 10~15 s. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DFUMode.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco que aparece.
+Arrastra el archivo UF2 descargado al disco emergente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseDr.png" alt="pir" width={800} height="auto" /></p>
 
-El disco desaparecerá después de que el firmware se haya flasheado correctamente. En este punto no hay firmware en el dispositivo, por lo que el dispositivo `NOT` se reiniciará automáticamente.
+El disco desaparecerá después de que el firmware se haya flasheado correctamente. En este punto no hay firmware en el dispositivo, por lo que el dispositivo `NO` se reiniciará automáticamente.
 
 #### Flashear firmware
 
@@ -123,11 +123,11 @@ Descarga el archivo UF2.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FlashFirmware.png" alt="pir" width={800} height="auto" /></p>
 
-Haz doble clic en el botón RST para entrar manualmente en modo DFU. Verás que aparece un disco llamado `Xiao-Boot` o `Solar Node` después de 10~15 s. 
+Haz doble clic en el botón RST para entrar manualmente en modo DFU. Podrás ver que aparece un disco llamado `Xiao-Boot` o `Solar Node` después de 10~15 s. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DFUMode.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco que aparece.
+Arrastra el archivo UF2 descargado al disco emergente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
@@ -142,7 +142,7 @@ Antes del despliegue formal, primero prueba y configura el nodo.
 #### Ensamblar el dispositivo
 
 :::danger note
-Dado que el dispositivo se utilizará en exteriores durante períodos prolongados, evita instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para evitar la acumulación de agua. Además, asegúrate de que todos los tornillos estén bien apretados y la tapa esté correctamente instalada. Para una mejor protección impermeable, también puedes considerar aplicar medidas de sellado adicionales.
+Dado que el dispositivo se utilizará en exteriores durante períodos prolongados, evita instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para evitar la acumulación de agua. Además, asegúrate de que todos los tornillos estén bien apretados y la tapa esté correctamente instalada. Para una mejor protección contra el agua, también puedes considerar aplicar medidas de sellado adicionales.
 :::
 
 - **Lista de partes**
@@ -174,7 +174,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 5: Conecta el soporte de rótula universal.
+- Paso 5: Conecta el soporte de la rótula universal.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -197,9 +197,9 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 #### Instalar batería y módulo GPS (Opcional)
 
 :::tip
-Cuando necesites instalar o reemplazar la batería, usa batería `Button-top` 18650(3.6V).
+Cuando necesites instalar o reemplazar la batería, usa una batería `Button-top` 18650 (3.6V).
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-La versión P1-Pro tiene batería y módulo GPS integrados; para la versión P1, el usuario necesita instalar manualmente la batería y el módulo GPS si es necesario.
+La versión P1-Pro tiene batería y módulo GPS integrados; para la versión P1, el usuario necesita instalar la batería y el módulo GPS manualmente si es necesario.
 :::
 
 
@@ -219,7 +219,7 @@ La versión P1-Pro tiene batería y módulo GPS integrados; para la versión P1,
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-Asegúrate de que la carcasa esté correctamente montada y los tornillos bien apretados para mantener la estanqueidad del dispositivo.
+Asegúrate de que la carcasa esté correctamente montada y los tornillos bien apretados para mantener la impermeabilidad del dispositivo.
 :::
 
 #### (Opcional) Actualizar antena
@@ -232,7 +232,7 @@ Si necesitas una antena con mayor ganancia, recomendamos la antena [860-930MHz 3
 
 El dispositivo necesita ser activado conectando el cable USB. El LED azul de Mesh se encenderá durante unos 3 s, lo que significa que el dispositivo se ha encendido correctamente. 
 
-El LED azul de mesh no se encenderá hasta que envíe un anuncio.
+La luz LED azul de mesh no se encenderá hasta que envíe un anuncio.
 
 :::tip
 No fue hasta el lanzamiento de la versión 1.14.1 que se habilitó el botón de encendido. Mantén presionado el dispositivo durante `3s` para encender/apagar el dispositivo. Verás una luz blanca parpadear brevemente. Esto indica que el dispositivo se está encendiendo correctamente.
@@ -253,7 +253,7 @@ Cuando MeshCore se flashea en un dispositivo LoRa por primera vez, es necesario 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Cambia la región LoRa y guarda la configuración. Luego `Reboot` el dispositivo, de lo contrario la configuración no surtirá efecto.
+Cambia la región LoRa y guarda la configuración. Luego `Reboot` el dispositivo, de lo contrario la configuración no tendrá efecto.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/LoRaSettingg.png" alt="pir" width={600} height="auto" /></p>
 
@@ -272,7 +272,7 @@ Cambia la región LoRa y guarda la configuración. Luego `Reboot` el dispositivo
 
 - **Paso 2 Enviar anuncio**
 
-Haz clic en "send advert" para permitir que otros dispositivos Meshcore vean este repetidor. Entonces el repetidor podrá verse en la lista de dispositivos.
+Haz clic en "send advert" para permitir que otros dispositivos Meshcore vean este repetidor. Entonces el repetidor se podrá ver en la lista de dispositivos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertSending.png" alt="pir" width={600} height="auto" /></p>
 
@@ -296,7 +296,7 @@ Además, puedes ajustar el intervalo de transmisión de anuncios. El rango de in
 
 ### Configurar ruta
 
-Antes de añadir el repetidor a tu ruta, es posible que necesites usar el repetidor para enviar primero un anuncio. El repetidor enviará anuncios automáticamente a intervalos regulares. Este intervalo puede ser de varias horas (por defecto 3 horas). Por lo tanto, necesitas enviar anuncios manualmente o de lo contrario tendrás que esperar.
+Antes de añadir el repetidor a tu ruta, es posible que necesites usar el repetidor para enviar primero un anuncio. El repetidor enviará anuncios automáticamente a intervalos regulares. Este intervalo puede ser de varias horas (por defecto 3 horas). Así que necesitas enviar anuncios manualmente o, de lo contrario, tendrás que esperar.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
@@ -304,45 +304,17 @@ Puedes configurar manualmente la ruta de envío de mensajes. Conecta tu disposit
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
-Después de configurar la ruta, el método de transmisión cambiará a "n hop". Por ejemplo, si añades 1 repetidor en tu ruta, cambiará a 1 hop.
+Después de configurar la ruta, el método de transmisión cambiará a "n hop". Por ejemplo, si añades 1 repetidor en tu ruta, cambiará a 1 salto.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
-## Verificar que el dispositivo funciona correctamente
-
-Antes de la verificación, confirma si estás usando solo un dispositivo Solar Node o si también tienes otros dispositivos MeshCore Companion en tu configuración.
-
-Para el modo Repetidor, se espera el siguiente comportamiento:
-
-- Cuando el dispositivo está conectado por USB, puede aparecer en línea y ser configurado.
-- Después de desconectar la alimentación USB, el dispositivo cambia al modo batería y continúa funcionando como repetidor.
-- El parpadeo una vez del LED azul durante la transmisión es normal e indica actividad LoRa.
-- No se espera que el Solar Node Repeater se comporte como un dispositivo independiente conectado al teléfono, a menos que se use junto con un dispositivo Companion.
-
-Para verificar correctamente que el repetidor está funcionando, sigue este procedimiento de prueba estándar:
-
-1. Conecta el Solar Node mediante USB.
-2. Abre la página de configuración de MeshCore: [https://config.meshcore.io/](https://config.meshcore.io/).
-3. Haz clic en **Send Advert**.
-4. Comprueba desde otro dispositivo MeshCore, como un dispositivo Companion.
-5. El Solar Node debería aparecer en la lista de dispositivos.
-6. En el dispositivo Companion, abre el contacto del Solar Node Repeater y usa la función **Ping** para confirmar la comunicación.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-6.png" alt="Verify Solar Node repeater with Ping from another MeshCore device" width={700} height="auto" /></p>
-
-:::note
-La app móvil se usa principalmente con un dispositivo Companion, no directamente con un Repeater. El propio repetidor no se comportará como un accesorio de teléfono conectado por Bluetooth normal.
-:::
-
-Si el comportamiento del LED y el estado de conexión USB coinciden con la descripción anterior, esto suele indicar un funcionamiento normal del repetidor.
-
-## Preguntas frecuentes
+## Preguntas frecuentes (FAQ)
 
 ### Bucle de arranque
 
 - Motivo 
 
-Esto suele deberse a un fallo al flashear el firmware. Al flashear el firmware, mantén una conexión estable. 
+Esto suele estar causado por un fallo al flashear el firmware. Al flashear el firmware, mantén una conexión estable. 
 
 - Solución de problemas
 
@@ -356,26 +328,26 @@ El dispositivo no responde, no hay LED, no se puede emparejar con tu App.
 
 **1) El dispositivo aún puede entrar en modo DFU, entonces intenta flashear el bootloader**.
 
-#### Flashear el Bootloader
+#### Flashear el bootloader
 
 - [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** la desconectes durante el proceso de flasheo.
+Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** lo desconectes durante el proceso de flasheo.
 :::
 
 **Paso 1: Instalación de Adafruit-nrfutil**
 
 Para usuarios de Windows, presiona la tecla "Win" y la tecla "r", luego introduce "cmd" en la ventana emergente y pulsa "Enter". Esto puede abrir la línea de comandos. 
 
-Para usuarios de MAC, presiona la tecla "Command" y la tecla "Space", para que puedas abrir Spotlight. Luego introduce "termial" y pulsa "Return". Esto puede abrir la línea de comandos. 
+Para usuarios de Mac, presiona la tecla "Command" y la tecla "Space", para que puedas abrir Spotlight. Luego introduce "termial" y pulsa "Return". Esto puede abrir la línea de comandos. 
 
 **Requisitos previos**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-Comprueba en tu línea de comandos si python y pip se han instalado correctamente.
+Comprueba en tu línea de comandos si Python y pip se han instalado correctamente.
 
 ```
 python --version
@@ -385,10 +357,10 @@ python --version
 python -m pip --version
 ```
 
-Entonces deberían aparecer "Python xxx" y "pip xxx". Si no es así, intenta instalar python de nuevo.
+Entonces deberían aparecer "Python xxx" y "pip xxx". Si no es así, intenta instalar Python de nuevo.
 
 <Tabs>
-<TabItem value="pypi" label="Installing from PyPI">
+<TabItem value="pypi" label="Instalación desde PyPI">
 
 Este es el método recomendado para instalar la última versión:
 
@@ -412,9 +384,9 @@ Para usuarios de Windows, es posible que necesites añadir la ruta manualmente. 
 
 </TabItem>
 
-<TabItem value="sou" label="Installing from Source">
+<TabItem value="sou" label="Instalación desde el código fuente">
 
-Usa este método si tienes problemas instalando con PyPi o si quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
+Usa este método si tienes problemas instalando con PyPi o quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -437,7 +409,7 @@ pip3 install -r --user requirements.txt
 python3 setup.py install
 ```
 
-Si deseas instalar en directorios del sistema (generalmente no recomendado):
+Si quieres instalar en los directorios del sistema (generalmente no recomendado):
 
 ```
 sudo pip3 install -r requirements.txt
@@ -470,20 +442,20 @@ Para usuarios de Windows, por ejemplo:
 Para usuarios de Mac, por ejemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Paso 3: Flashea el bootloader**
+**Paso 3: Flashear el bootloader**
 
-En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
+En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, reemplazando el puerto correcto para tu dispositivo:
 
 - **Para Windows**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
-Cambia COMXX por tu número de puerto COM. Por ejemplo, si tu dispositivo está en el puerto COM6, cambia el comando a:
+Cambia COMXX por tu número de puerto COM. Por ejemplo, si tu dispositivo está en el com6, cambia el comando a:
 
 `adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
 
- Algunos dispositivos cambiarán su número de puerto después de que introduzcas este comando. Así que si la instalación falla, comprueba de nuevo el número de puerto.
+ Algunos dispositivos cambiarán su número de puerto después de introducir este comando. Así que si la instalación falla, vuelve a comprobar el número de puerto.
 
 
 - **Para otros**:
@@ -494,7 +466,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-Cuando hayas completado los pasos anteriores, entonces podrás [flashear el firmware de la aplicación](https://wiki.seeedstudio.com/es/get_started_with_meshcore_solar_node/#flash-erase).
+Cuando hayas completado los pasos anteriores, entonces podrás [flashear el firmware de la aplicación](https://wiki.seeedstudio.com/es/get_started_with_meshcore_solar_node/#flash-borrar).
 
 ### Calidad de la señal
 
@@ -502,13 +474,13 @@ Cuando hayas completado los pasos anteriores, entonces podrás [flashear el firm
 
 - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
 
-      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstáculos, con una interferencia mínima.
+      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con una interferencia mínima.
 
 ### Corriente de carga
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
 
-La corriente máxima de carga del Xiao nRF-52840 Plus es de 200 mA. El chip de gestión de carga CN3165 es de 0,99 A. Así que la corriente máxima de carga es de 1 A.
+La corriente máxima de carga del Xiao nRF-52840 Plus es de 200 mA. El chip de gestión de carga CN3165 es de 0,99 A. Por lo tanto, la corriente máxima de carga es de 1 A.
 
-## Recursos
-- [Tabla de cálculo de la vida útil de la batería del Solar Node](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/mesh_repeater_power_table_en1.xlsx)
+## Recurso
+- [Tabla de cálculo de la duración de la batería del nodo solar](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/mesh_repeater_power_table_en1.xlsx)

@@ -162,10 +162,6 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
                   <span className="text">双臂 SO-ARM 训练完整指南</span>
                   <span className="tag recommended">New</span>
               </a>
-              <a href="/cn/soarm_amazinghand_teleop/" className="content-card">
-                  <span className="text">SO-ARM 与 AmazingHand 完整训练指南</span>
-                  <span className="tag recommended">New</span>
-              </a>
           </div>
 
           <h3>🚗 Lekiwi移动底盘</h3>

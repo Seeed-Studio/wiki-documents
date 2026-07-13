@@ -1,50 +1,50 @@
 ---
-description: recamera_pro_device_info_cn
+description: recamera_pro_device_info
 title: 设备信息
 keywords:
   - reCamera pro
   - web ui
-slug: /recamera_pro_device_info_cn
+slug: /recamera_pro_device_info
 sku: 10003420
-sidebar_position: 13
+sidebar_position: 2
 last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
 updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/recamera_pro_device_info_cn/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_device_info/
 ---
 
-在这个界面中可以看到recamera pro的各种硬件和软件的版本信息，以及调整对应的系统设置。
+在此界面中，你可以查看 reCamera pro 的各类软硬件版本信息，并调整相应的系统设置。
 ## 基本信息
-可以在这个界面看到设备的硬件和软件的基本信息，还有系统资源的使用情况。
-<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/Pasted_image_20260707100656.png" />
+在此界面中，你可以查看设备的基础软硬件信息，以及系统资源的使用情况。
+<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_aWZqM1cZvA.png" />
 
 ## 时间设置
-这个界面可以设定recamera pro中的系统时间。
-<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/Pasted_image_20260707100824.png" />
+此界面允许你设置 reCamera pro 的系统时间。
+<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_F3jLNlVu0W.png" />
 
 ## 网络设置
-recamera pro搭载wifi模块，可以在这个界面设定网络状态。
-<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/Pasted_image_20260707100918.png" />
-连接上网络之后可以点击连接上的网络右侧的感叹号获取更详细的设备网络信息
-<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/Pasted_image_20260707101110.png" />
+reCamera pro 配备了 WiFi 模块，你可以在此界面中设置网络状态。
+<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_GJspvgAFdl.png" />
+连接网络后，你可以点击已连接网络右侧的感叹号，以获取更详细的设备网络信息。
+<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_vq4u1biblp.png" />
 
 ## 连接设置
-在这个界面中，可以配置连接recamera pro的方式，可以自行调节是否可开启ssh远程连接、HTTP设置以及串口波特率。
-<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/Pasted_image_20260707101312.png" />
+在此界面中，你可以配置如何连接到 reCamera pro，并可调整是否启用 SSH 远程连接、HTTP 设置以及串口波特率。
+<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_ZH9JMcsCen.png" />
 
 ## 系统设置
-在这个界面中可以检测设备的固件版本，选择是否更新新的固件，以及对系统进行重启、修改密码或者是恢复出厂设置。
-### 导出和导入配置
-选择导出配置后，浏览器会自动下载一个当前配置的各种设定，方便后续可以快速导入到其他的recamera pro中。
-<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/Pasted_image_20260707101652.png" />
-导入配置需要选择一个tar文件导入，也就是和导出配置时候导出的文件后缀名一致，导入之后会自动加载，等待重启之后即可更新为导入的配置的各种信息。
-<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/Pasted_image_20260707101839.png" />
+在此界面中，你可以查看设备的固件版本，选择是否更新到新固件，并可重启系统、更改密码或恢复出厂设置。
+### 导出与导入配置
+当你选择“导出配置”时，浏览器会自动下载一个包含当前各项设置的文件，方便你之后快速将其导入到其他 reCamera pro 设备中。
+<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_eBayhpwddh.png" />
+要导入配置，你需要选择一个 tar 文件进行导入，该文件与导出配置文件具有相同的扩展名。导入后会自动加载，等待重启完成后，导入的配置信息将会生效更新。
+<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_4h4p6raYPF.png" />
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
