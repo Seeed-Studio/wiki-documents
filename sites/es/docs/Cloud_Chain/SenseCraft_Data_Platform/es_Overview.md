@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Descripción general
-description: Guía de inicio rápido para SenseCraft Data Platform: gestiona tus dispositivos SenseCAP y visualiza datos de sensores con una plataforma en la nube segura y fiable.
+description: Guía de inicio rápido para SenseCraft Data Platform - gestiona tus dispositivos SenseCAP y visualiza datos de sensores con una plataforma en la nube segura y fiable.
 keywords:
   - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
