@@ -166,7 +166,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
                   <span className="text">SO-ARM と AmazingHand のトレーニング完全ガイド</span>
                   <span className="tag recommended">New</span>
               </a>
-          </div]
+          </div>
 
           <h3>🚗 Lekiwi</h3>
           <div className="card-container">
