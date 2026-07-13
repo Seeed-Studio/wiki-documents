@@ -143,7 +143,9 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 
 #### 所需软件
 
-- [软件下载链接](https://github.com/dmBots/motor-debugging-tool)
+- [DM_Tools_v.2.1.6.8.exe（仅支持 Windows 系统）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool_v2.1.6.8.zip)
+
+<!-- - [DM_Tools_v.1.8.0.1.exe（仅支持 Windows 系统）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe) -->
 
 #### 写入电机ID并测试使能
 
