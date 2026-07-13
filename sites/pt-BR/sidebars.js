@@ -4170,6 +4170,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Jetson_SPI_Getting_Start',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Flash_PREEMPT_RT_Kernel_on_reComputer_Jetson_JetPack_6_2_1',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Rapid_Prototyping_on_Jetson_with_NVIDIA_Skills',
               ]
             },
           ]
