@@ -4940,10 +4940,10 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-plugin-copy-page-button@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/docusaurus-plugin-copy-page-button/-/docusaurus-plugin-copy-page-button-0.7.0.tgz#7c6c2b5e342ad705c879e04979540dfc5fdfea68"
-  integrity sha512-2YGcDHlgGjTuemVVqSBV7C7myT3aKo7PiNIPJH1zwy0ltE41qgS+wFHmEH8202SrQaszu9DYiAFEJ/TAGAL0WQ==
+docusaurus-plugin-copy-page-button@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-copy-page-button/-/docusaurus-plugin-copy-page-button-0.8.4.tgz#f78dd7709e73a61ac31f38dedce3c5b1a6bf6c52"
+  integrity sha512-OBWmUEFIqR3BJ5giae6D518b69ZfZQ5HKrazrY2IPA6tDNX2F3m1ejeyE0oqcVcE7GVkE+K0+vJ5T+kIos8u1w==
 
 docusaurus-plugin-image-zoom@^0.1.4:
   version "0.1.4"

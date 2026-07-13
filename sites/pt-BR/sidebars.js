@@ -3192,6 +3192,7 @@ const sidebars = {
       label: 'Outros dispositivos de rede',
       items: [
         'Network/TTN_Gateway/pt_The-Things-Indoor-Gateway',
+        'Network/pt_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
           label: 'Dispositivos Wio-WM6108 WiFi-HaLow',
@@ -4169,6 +4170,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Jetson_SPI_Getting_Start',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Flash_PREEMPT_RT_Kernel_on_reComputer_Jetson_JetPack_6_2_1',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Rapid_Prototyping_on_Jetson_with_NVIDIA_Skills',
               ]
             },
           ]
@@ -4435,6 +4437,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/pt_Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/pt_Lerobot_SO100Arm_New',
             'Robotics/Robot_Kits/Lerobot/pt_Lerobot_SO_ARM101_DAMO',
+            'Robotics/Robot_Kits/Lerobot/pt_SOARM_AMAZINGHAND_TELEOP',
             'Robotics/Robot_Kits/Lerobot/pt_Lerobot_Dataset_Tool',
             'Robotics/Robot_Kits/Lerobot/pt_Steering_Gear_Debugging_Tool',
             'Robotics/Robot_Kits/Lerobot/pt_Complete_Guide_to_Double-Arm_SO-ARM_Training',
@@ -4474,6 +4477,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_pinocchio',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_isaacsim',
               ]
             }
           ]

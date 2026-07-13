@@ -1,6 +1,50 @@
 const docList = [
   [
     {
+      "path": "/soarm_amazinghand_teleop",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/soarm_amazinghand/soarm_amazinghand.webp",
+      "title": "Complete Training Guide for SO-ARM with AmazingHand",
+      "date": "2026-07-12",
+      "title_cn": "SO-ARM与AmazingHand完整训练指南",
+      "title_ja": "SO-ARM と AmazingHand のための完全トレーニングガイド",
+      "title_es": "Guía completa de entrenamiento para SO-ARM con AmazingHand",
+      "title_pt": "Guia Completo de Treinamento para SO-ARM com AmazingHand"
+    },
+    {
+      "path": "/rapid_prototyping_on_jetson_with_nvidia_skills",
+      "image": "https://files.seeedstudio.com/wiki/nv_skills/banner.png",
+      "title": "Rapid Prototyping on Jetson with NVIDIA Skills",
+      "date": "2026-07-09",
+      "title_cn": "使用 NVIDIA Skills 在 Jetson 上进行快速原型开发",
+      "title_ja": "NVIDIA Skills を用いた Jetson 上での高速プロトタイピング",
+      "title_es": "Prototipado rápido en Jetson con NVIDIA Skills",
+      "title_pt": "Prototipagem Rápida no Jetson com NVIDIA Skills"
+    }
+  ],
+  [
+    {
+      "path": "/deploy_joyai_vl_interaction_on_jetson_thor",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/joyai_vl_interaction/webui.png",
+      "title": "Deploy JoyAI-VL-Interaction on Jetson Thor",
+      "date": "2026-07-07",
+      "title_cn": "在 Jetson Thor 上部署 JoyAI-VL-Interaction",
+      "title_ja": "Jetson Thor で JoyAI-VL-Interaction をデプロイする",
+      "title_es": "Desplegar JoyAI-VL-Interaction en Jetson Thor",
+      "title_pt": "Implantar JoyAI-VL-Interaction no Jetson Thor"
+    },
+    {
+      "path": "/rebot_arm_b601_rs_isaacsim",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg",
+      "title": "Simulating reBotArm through Isaacsim",
+      "date": "2026-07-07",
+      "title_cn": "通过 Isaacsim 仿真 reBotArm",
+      "title_ja": "Isaacsim を使用した reBotArm のシミュレーション",
+      "title_es": "Simulación de reBotArm mediante Isaacsim",
+      "title_pt": "Simulando o reBotArm com o Isaacsim"
+    }
+  ],
+  [
+    {
       "path": "/recamera_motion_detection",
       "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Motion_Detection/Pasted_image_20260703155236.png",
       "title": "Motion detection for a selected area based on recamera2002",
@@ -37,7 +81,7 @@ const docList = [
       "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/double_soarm/Arm_kit.webp",
       "title": "Complete Guide to Double-Arm SO-ARM Training",
       "date": "2026-07-01",
-      "title_cn": "双臂 SO-ARM 训练完整指南",
+      "title_cn": "双臂 SO-ARM训练完整指南",
       "title_ja": "両腕 SO-ARM トレーニング完全ガイド",
       "title_es": "Guía Completa para el Entrenamiento de SO-ARM de Doble Brazo",
       "title_pt": "Guia Completo para Treinamento de SO-ARM de Dois Braços"
@@ -68,7 +112,7 @@ const docList = [
   [
     {
       "path": "/codecraft/quick-start-and-support",
-      "image": "https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-hardware-ecosystem-EN.png",
+      "image": "https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp",
       "title": "CodeCraft Quick Start & Support",
       "date": "2026-06-29",
       "title_cn": "CodeCraft 快速入门与账户支持",
@@ -85,50 +129,6 @@ const docList = [
       "title_ja": "reCamera と Meshtastic を使った長距離セキュリティシステムの構築",
       "title_es": "Construcción de un sistema de seguridad de largo alcance con reCamera y Meshtastic",
       "title_pt": "Construindo um Sistema de Segurança de Longo Alcance com reCamera e Meshtastic"
-    }
-  ],
-  [
-    {
-      "path": "/lerobot_steering_gear_debugging_tool",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp",
-      "title": "Steering Gear Debugging Tool for SO-ARM in LeRobot",
-      "date": "2026-06-29",
-      "title_cn": "Lerobot 中 SO-ARM 的舵机调试工具",
-      "title_ja": "Lerobot の SO-ARM 用ステアリングギアデバッグツール",
-      "title_es": "Herramienta de depuración de engranajes de dirección para SO-ARM en Lerobot",
-      "title_pt": "Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no Lerobot"
-    },
-    {
-      "path": "/recamera_hand_gesture",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
-      "title": "Porting the MediaPipe Hand Gesture Recognition Model to reCamera",
-      "date": "2026-06-26",
-      "title_cn": "将 MediaPipe 手势识别模型移植到 reCamera",
-      "title_ja": "MediaPipe ハンドジェスチャー認識モデルの reCamera への移植",
-      "title_es": "Migración del modelo de reconocimiento de gestos de mano de MediaPipe a reCamera",
-      "title_pt": "Portando o modelo de reconhecimento de gestos de mão do MediaPipe para a reCamera"
-    }
-  ],
-  [
-    {
-      "path": "/recamera_picoclaw",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Picoclaw&Gimbal/picoclaw_turn_led.gif",
-      "title": "Local Deployment of Picoclaw on reCamera",
-      "date": "2026-06-24",
-      "title_cn": "在reCamera上本地部署龙虾",
-      "title_ja": "reCamera 上での Picoclaw のローカルデプロイ",
-      "title_es": "Despliegue local de Picoclaw en reCamera",
-      "title_pt": "Implantação local do Picoclaw na reCamera"
-    },
-    {
-      "path": "/recomputer_jetson_robotics_j601_interfaces_usage",
-      "image": "https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg",
-      "title": "Robotics J601 carrier board Hardware Interfaces Usage",
-      "date": "2026-06-18",
-      "title_cn": "Robotics J601 载板硬件接口使用",
-      "title_ja": "Robotics J601 キャリアボード ハードウェアインターフェースの使用方法",
-      "title_es": "Uso de interfaces de hardware de la carrier board Robotics J601",
-      "title_pt": "Uso das Interfaces de Hardware da placa carrier Robotics J601"
     }
   ]
 ];

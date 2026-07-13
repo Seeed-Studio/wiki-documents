@@ -7,14 +7,14 @@ keywords:
   - VLM
   - Streaming
   - Generative AI
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/joyai_vl_interaction/webui.png
 slug: /deploy_joyai_vl_interaction_on_jetson_thor
 sku: 100060965
 last_update:
   date: 07/07/2026
   author: Youjiang
 createdAt: '2026-07-07'
-updatedAt: '2026-07-07'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/deploy_joyai_vl_interaction_on_jetson_thor/
 ---
 

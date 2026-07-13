@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-08 10:32:55 (北京时间)
-// 多语言页面: 2365 个
+// 生成时间: 2026-07-13 11:29:28 (北京时间)
+// 多语言页面: 2381 个
 
 (function() {
   'use strict';
@@ -906,6 +906,13 @@
     "pt"
   ],
   "/getting_started_with_nvstreamer": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rapid_prototyping_on_jetson_with_nvidia_skills": [
     "cn",
     "en",
     "es",
@@ -3649,7 +3656,82 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_hardware_specifications": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_imu_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_mipi_dsi_screen_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_speaker_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_uart_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_ai_inference": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_device_info": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_live_preview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_live_view": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_record_settings": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_terminal": [
     "cn",
     "en",
     "es",
@@ -4126,6 +4208,13 @@
     "pt"
   ],
   "/License": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/lora_antenna_selection_guide": [
     "cn",
     "en",
     "es",
@@ -5616,6 +5705,13 @@
     "ja",
     "pt"
   ],
+  "/soarm_amazinghand_teleop": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_follow_robot": [
     "cn",
     "en",
@@ -6072,6 +6168,13 @@
     "pt"
   ],
   "/rebot_arm_b601_rs_grasping_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_isaacsim": [
     "cn",
     "en",
     "es",
@@ -8220,6 +8323,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_work_with_lvgl": [
     "cn",
     "en",
     "es",

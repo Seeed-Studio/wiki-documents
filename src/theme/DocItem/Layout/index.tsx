@@ -17,6 +17,23 @@ import { useLocation } from '@docusaurus/router';
 import { judgeHomePath } from '../../../utils/jsUtils';
 import TopNav from '../../../components/topNav';
 import Head from '@docusaurus/Head';
+import CopyPageButton from 'docusaurus-plugin-copy-page-button/react';
+
+const CopyPageButtonAny = CopyPageButton as React.ComponentType<any>;
+
+function StableCopyPageButton() {
+  const [options, setOptions] = React.useState<Record<string, any> | null>(null);
+
+  useEffect(() => {
+    setOptions((window as any).__COPY_PAGE_BUTTON_OPTIONS__ || {});
+  }, []);
+
+  if (!options) {
+    return null;
+  }
+
+  return <CopyPageButtonAny {...options} />;
+}
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
@@ -50,11 +67,12 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
     type: docType,
   } = frontMatter as any;
 
-  const location = useLocation()
+  const location = useLocation();
+
   useEffect(() => {
     judgeHomePath();
   }, [location.pathname]);
-  
+
   return (
     <div className="row">
       {/* 添加 Head 组件用于动态 meta 标签 */}
@@ -62,9 +80,9 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         {sku && <meta name="docsearch:sku_tag" content={sku} />}
         {docType && <meta name="docsearch:doc_type_tag" content={docType} />}
       </Head>
-      
+
       {/* 添加数据属性到静态 HTML 元素 */}
-      <div 
+      <div
         className={clsx('col', !docTOC.hidden && styles.docItemCol)}
         data-sku={sku || ''}
         data-doc-type={docType || ''}
@@ -74,7 +92,17 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
           <article>
             <DocBreadcrumbs />
             <DocVersionBadge />
-            {docTOC.mobile}
+
+            {docTOC.mobile && (
+              <>
+                {docTOC.mobile}
+
+                <div className={styles.mobileCopyPageButton}>
+                  <StableCopyPageButton />
+                </div>
+              </>
+            )}
+
             <DocItemContent>{children}</DocItemContent>
             <DocItemFooter />
           </article>
@@ -85,6 +113,10 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
       <TopNav></TopNav>
       {docTOC.desktop && (
         <div className="col col--3">
+          <div className={styles.copyPageButtonWrapper}>
+            <StableCopyPageButton />
+          </div>
+
           {docTOC.desktop}
         </div>
       )}

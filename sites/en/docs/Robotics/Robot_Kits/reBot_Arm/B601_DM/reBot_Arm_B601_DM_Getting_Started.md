@@ -11,13 +11,12 @@ keywords:
   - 6 DOF
 slug: /rebot_b601_dm_getting_started
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 last_update:
-  date: 2026-04-13T00:00:00.000Z
+  date: 2026-04-13
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-07-01'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
@@ -178,7 +177,7 @@ The following is an operation example using Motor 1. Please ensure that the CAN 
 1.Open the **DM_Tools** host software, select the corresponding USB COM port, and set the baud rate to `921600`. Once connected successfully, information will be printed in the `Serial` interface.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_connect_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_damiao_tool_en.png" width="800" />
 </div>
 
 2.Use the 3-pin cable to connect Motor 1 to the USB-CAN adapter board.
@@ -188,13 +187,17 @@ The following is an operation example using Motor 1. Please ensure that the CAN 
 4.After setting, click `Write Parameters` to save the parameters.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_id_set_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_damiao_tool_en.png" width="800" />
 </div>
+
+:::tip
+The USB mode in the orange box on the left represents the method used when reading and writing motor parameters on the current settings page.
+:::
 
 5.Navigate to the `Debug` interface. After ensuring the `CAN ID` and `Master ID` are set correctly, click `Enable`. The motor indicator light will turn solid green, indicating the motor is enabled. Motor 1 testing is now complete.
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_enable_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_damiao_tool_en.png" width="800" />
 </div>
 
 :::tip

@@ -3,12 +3,12 @@ description: This article provides instructions on how to create the UI interfac
 title: Work with SquareLine Vision
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
 slug: /reterminal_e10xx_with_squareline_vision
-sidebar_position: 6
+sidebar_position: 7
 last_update:
   date: 10/29/2025
   author: Zovey
 createdAt: '2025-11-03'
-updatedAt: '2026-06-03'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_squareline_vision/
 ---
 
