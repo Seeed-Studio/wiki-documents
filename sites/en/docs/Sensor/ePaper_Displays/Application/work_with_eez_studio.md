@@ -17,7 +17,7 @@ aliases:
   - /epaper_ee04_eezstudio
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio/
-updatedAt: '2026-06-26'
+updatedAt: '2026-06-30'
 ---
 
 import Tabs from '@theme/Tabs';
