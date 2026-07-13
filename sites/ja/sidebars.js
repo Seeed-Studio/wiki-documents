@@ -4171,6 +4171,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Jetson_SPI_Getting_Start',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Flash_PREEMPT_RT_Kernel_on_reComputer_Jetson_JetPack_6_2_1',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Rapid_Prototyping_on_Jetson_with_NVIDIA_Skills',
               ]
             },
           ]
@@ -4437,6 +4438,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/ja_Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/ja_Lerobot_SO100Arm_New',
             'Robotics/Robot_Kits/Lerobot/ja_Lerobot_SO_ARM101_DAMO',
+            'Robotics/Robot_Kits/Lerobot/ja_SOARM_AMAZINGHAND_TELEOP',
             'Robotics/Robot_Kits/Lerobot/ja_Lerobot_Dataset_Tool',
             'Robotics/Robot_Kits/Lerobot/ja_Steering_Gear_Debugging_Tool',
             'Robotics/Robot_Kits/Lerobot/ja_Complete_Guide_to_Double-Arm_SO-ARM_Training',

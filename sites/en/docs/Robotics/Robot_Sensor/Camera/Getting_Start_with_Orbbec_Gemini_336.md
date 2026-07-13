@@ -15,7 +15,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp
 slug: /orbbec_gemini336
 last_update:
-  date: 2025-08-22T00:00:00.000Z
+  date: 2025-08-22
   author: Zibo
 createdAt: '2025-12-01'
 updatedAt: '2025-12-01'
