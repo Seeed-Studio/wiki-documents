@@ -5,6 +5,7 @@ keywords:
   - reComputer
   - reComputer Classic
   - J4011
+  - J4012
   - Orin Nano Developer Kit
   - BSP
   - Hybrid
@@ -13,11 +14,12 @@ keywords:
   - custom image
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic
+sku: 110110144, 110110145
 last_update:
-  date: 07/10/2026
-  author: Seeed
+  date: 07/13/2026
+  author: Zuhao
 createdAt: '2026-07-10'
-updatedAt: '2026-07-10'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/cn/make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic/
 ---
 
@@ -179,11 +181,7 @@ ls Linux_for_Tegra/kernel/dtb/tegra234-j401-*-recomputer.dtb
 ls Linux_for_Tegra/kernel/dtb/tegra234-dcb-p3767-0000-hdmi.dtbo
 ```
 
-<div align="center">
-
-![工作区验收：j401/devkit 配置与 HDMI DTB](./img/dk-to-classic/section-2-verify.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-2-verify.png"/></div>
 
 ## 2. 从 DevKit 备份完整环境
 
@@ -220,11 +218,7 @@ head -5 tools/backup_restore/images/nvpartitionmap.txt
 - `nvme0n1p1.tar.zst`（或后续转换的大 APP）体积为 **GB 级**
 - 存在 `QSPI0.img`（这是 **DevKit** 的 QSPI，后面 Hybrid 不能直接当 Classic 用）
 
-<div align="center">
-
-![备份验收：board_spec / APP / QSPI0.img](./img/dk-to-classic/section-3.3-verify.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-3.3-verify.png"/></div>
 
 建议立刻打快照：
 
@@ -248,11 +242,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
 - `mfi_jetson-orin-nano-devkit-nvme/`
 - `mfi_jetson-orin-nano-devkit-nvme.tar.gz`
 
-<div align="center">
-
-![DevKit mfi 产物目录与 tar.gz](./img/dk-to-classic/section-4-artifacts.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-4-artifacts.png"/></div>
 
 :::danger
 **仅用于再刷 DevKit。禁止刷 Classic。**
@@ -352,11 +342,7 @@ cd Linux_for_Tegra
 sudo tar czf mfi_recomputer-orin-j401.tar.gz mfi_recomputer-orin-j401
 ```
 
-<div align="center">
-
-![Classic Hybrid mfi 示例产物](./img/dk-to-classic/section-6.3-artifacts.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-6.3-artifacts.png"/></div>
 
 ## 6. 刷到 Classic J4011
 
@@ -423,19 +409,11 @@ nvcc --version
 
 **实机：model / DTB**
 
-<div align="center">
-
-![刷后 model 与 /boot DTB（SKU 0005）](./img/dk-to-classic/section-7.4.1-model-dtb.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-7.4.1-model-dtb.png"/></div>
 
 **实机：原 DevKit 安装的 CUDA 仍可用**
 
-<div align="center">
-
-![刷后 nvcc：DevKit 侧 CUDA 仍在](./img/dk-to-classic/section-7.4.1-cuda-nvcc.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-7.4.1-cuda-nvcc.png"/></div>
 
 #### 如何解读结果（SKU 0005）
 

@@ -5,6 +5,7 @@ keywords:
   - reComputer
   - reComputer Classic
   - J4011
+  - J4012
   - Orin Nano Developer Kit
   - BSP
   - Hybrid
@@ -13,11 +14,12 @@ keywords:
   - custom image
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic
+sku: 110110144, 110110145
 last_update:
-  date: 07/10/2026
-  author: Seeed
+  date: 07/13/2026
+  author: Zuhao
 createdAt: '2026-07-10'
-updatedAt: '2026-07-10'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic/
 ---
 
@@ -179,11 +181,7 @@ ls Linux_for_Tegra/kernel/dtb/tegra234-j401-*-recomputer.dtb
 ls Linux_for_Tegra/kernel/dtb/tegra234-dcb-p3767-0000-hdmi.dtbo
 ```
 
-<div align="center">
-
-![Workspace verification: j401/devkit configs and HDMI DTB](./img/dk-to-classic/section-2-verify.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-2-verify.png"/></div>
 
 ## 2. Back Up the Full DevKit Environment
 
@@ -220,11 +218,7 @@ You should see:
 - `nvme0n1p1.tar.zst` (or the later converted large APP) is **GB-scale**
 - `QSPI0.img` exists (this is **DevKit** QSPI; Hybrid must not reuse it as Classic QSPI)
 
-<div align="center">
-
-![Backup verification: board_spec / APP / QSPI0.img](./img/dk-to-classic/section-3.3-verify.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-3.3-verify.png"/></div>
 
 Recommended: snapshot immediately:
 
@@ -248,11 +242,7 @@ Artifacts:
 - `mfi_jetson-orin-nano-devkit-nvme/`
 - `mfi_jetson-orin-nano-devkit-nvme.tar.gz`
 
-<div align="center">
-
-![DevKit mfi artifacts: directory and tar.gz](./img/dk-to-classic/section-4-artifacts.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-4-artifacts.png"/></div>
 
 :::danger
 **For DevKit reflash only. Do not flash Classic with this package.**
@@ -352,11 +342,7 @@ cd Linux_for_Tegra
 sudo tar czf mfi_recomputer-orin-j401.tar.gz mfi_recomputer-orin-j401
 ```
 
-<div align="center">
-
-![Classic Hybrid mfi example artifacts](./img/dk-to-classic/section-6.3-artifacts.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-6.3-artifacts.png"/></div>
 
 ## 6. Flash to Classic J4011
 
@@ -423,19 +409,11 @@ Without sudo, `dmesg` may report `Operation not permitted`. That is a permission
 
 **On device: model / DTB**
 
-<div align="center">
-
-![Post-flash model and /boot DTB (SKU 0005)](./img/dk-to-classic/section-7.4.1-model-dtb.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-7.4.1-model-dtb.png"/></div>
 
 **On device: CUDA installed on the original DevKit still works**
 
-<div align="center">
-
-![Post-flash nvcc: DevKit CUDA still present](./img/dk-to-classic/section-7.4.1-cuda-nvcc.png)
-
-</div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/section-7.4.1-cuda-nvcc.png"/></div>
 
 #### How to Interpret Results (SKU 0005)
 
