@@ -155,7 +155,7 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 #### Software
 
-- [Software Download Link](https://github.com/dmBots/motor-debugging-tool)
+- [Enlace de descarga del software](https://github.com/dmBots/motor-debugging-tool)
 
 
 #### Escribir ID de motor y probar habilitación
