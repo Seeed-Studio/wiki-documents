@@ -12,7 +12,7 @@ last_update:
   date: 06/15/2026
   author: Brandy
 createdAt: '2025-05-13'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_ncs/
 ---
 

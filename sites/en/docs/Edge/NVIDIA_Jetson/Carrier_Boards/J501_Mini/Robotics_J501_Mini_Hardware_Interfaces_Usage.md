@@ -15,7 +15,7 @@ last_update:
   date: 07/09/2026
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-07-09'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/recomputer_j501_mini_getting_started/
 ---
 # Mini J501 Carrier Board Hardware and Getting Started

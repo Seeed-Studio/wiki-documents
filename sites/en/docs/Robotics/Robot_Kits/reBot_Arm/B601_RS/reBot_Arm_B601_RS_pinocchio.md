@@ -16,10 +16,9 @@ last_update:
   date: 2026-06-30
   author: LiJie
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-06-11'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 
