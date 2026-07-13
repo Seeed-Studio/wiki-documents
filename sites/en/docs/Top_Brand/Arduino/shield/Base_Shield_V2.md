@@ -9,7 +9,7 @@ last_update:
   author: Eico
 no_comments: false
 createdAt: '2023-02-15'
-updatedAt: '2026-01-07'
+updatedAt: '2026-07-07'
 url: https://wiki.seeedstudio.com/Base_Shield_V2/
 ---
 

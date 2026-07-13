@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-09 17:33:54 (北京时间)
-// 多语言页面: 2373 个
+// 生成时间: 2026-07-13 11:29:28 (北京时间)
+// 多语言页面: 2381 个
 
 (function() {
   'use strict';
@@ -906,6 +906,13 @@
     "pt"
   ],
   "/getting_started_with_nvstreamer": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rapid_prototyping_on_jetson_with_nvidia_skills": [
     "cn",
     "en",
     "es",
@@ -3691,6 +3698,46 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_ai_inference": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_device_info": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_live_preview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_live_view": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_record_settings": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_terminal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/configure_static_ip_on_recamera": [
     "cn",
     "en",
@@ -5652,6 +5699,13 @@
     "pt"
   ],
   "/lerobot_starai_arm": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/soarm_amazinghand_teleop": [
     "cn",
     "en",
     "es",

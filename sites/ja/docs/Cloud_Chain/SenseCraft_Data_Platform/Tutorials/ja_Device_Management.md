@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-description: SenseCAP Portal Device Management
+description: SenseCAP ポータル デバイス管理
 title: デバイス管理
 keywords:
   - Cloud and Chain
@@ -11,75 +11,82 @@ aliases:
 last_update:
   date: 02/14/2023
   author: Matthew
-createdAt: '2025-09-04'
-updatedAt: '2026-03-04'
+createdAt: '2023-03-01'
+updatedAt: '2025-06-12'
 url: https://wiki.seeedstudio.com/ja/sensecraft-data-platform/tutorials/device-management/
 ---
 
 
-ここでは、ゲートウェイ管理、ノードグループ管理、センサーノード管理など、SenseCAPデバイスを管理するためのいくつかの方法を提供しています。
+ここでは、Gateway Management、Node Group Management、Sensor Node Management を含む、SenseCAP デバイスを管理するための複数の方法を提供します。
 
 ## ゲートウェイ
 
-① EUI、周波数、ステータス、登録時間に基づいてゲートウェイをフィルタリングします。
-② ゲートウェイのリストで、EUI、名前、ステータスなどを表示します。
-③ EUIをクリックしてデバイス詳細ページに入り、基本情報、位置、バインディングなどを確認します。
+- ① EUI、周波数、ステータス、登録時間に基づいてゲートウェイをフィルタリングします。
+- ② ゲートウェイの一覧で、EUI、名前、ステータスなどを表示します。
+- ③ EUI をクリックしてデバイス詳細ページに入り、基本情報、位置情報、バインディングなどを確認します。
 
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-1.jpg)
 
 ## ノードグループ管理
 
-グループごとにデバイスを便利に管理できます。新しいグループの作成、グループの削除、または特定のグループへのデバイスの移動が可能です。
+グループごとにデバイスをまとめて管理できます。新しいグループの作成、グループの削除、デバイスを特定のグループへ移動することができます。
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-2.jpg)
 
 ## センサーノード管理
 
-センサーノードページでは、アカウントにバインドされているすべてのセンサーノードを確認できます。
-① デバイスには「LoRa」や「NB-IoT」などのタイプが含まれ、カテゴリ別に表示できます。
-② フィルタ条件で、EUI、周波数、グループ、ステータス、登録時間に応じてノードをフィルタリングします。
-③ センサーノードリストで、EUI、名前、ステータス、データタイプなどを表示します。
-④ EUIをクリックしてデバイス詳細ページに入ります。
+Sensor Node ページでは、アカウントにバインドされているすべての Sensor Node を確認できます。
+- ① デバイスには「LoRa」や「NB-IoT」などのタイプがあり、カテゴリ別に表示できます。
+- ② フィルタ条件として、EUI、周波数、グループ、ステータス、登録時間に応じてノードを絞り込みます。
+- ③ センサーノード一覧で、EUI、名前、ステータス、データタイプなどを表示します。
+- ④ EUI をクリックしてデバイス詳細ページに入ります。
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-3.jpg)
 
 ## 一般情報
 
 一般情報ページでは、デバイス名の設定、デバイスステータス、バッテリーステータス、最近のオンライン記録などを確認できます。
 
-- バッテリーステータス：「バッテリー不足」と表示される場合、バッテリーが10%を下回っていることを意味します。
-- 最近のオンライン記録：ゲートウェイは数分以内にオフラインになり、その他のデバイスは後でオフラインになります（通常は3回のアップロード間隔）。
+- バッテリーステータス：「Insufficient Battery」と表示されている場合、バッテリー残量が 10% 未満であることを意味します。
+- 最近のオンライン記録：ゲートウェイは数分以内にオフラインとなり、他のデバイスはその後（通常は 3 回分のアップロード間隔後）にオフラインになります。
 
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-4.jpg)
 
 ## チャンネル
 
-シングルチャンネルデバイス：チャンネルが1つのみで、ノードは1つのプローブのみ接続可能です（LoRaWANセンサーノードなど）。
+シングルチャネルデバイス：チャネルが 1 つだけであり、ノードは LoRaWAN Sensor Node のように 1 つのプローブにしか接続できません。
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-5.jpg)
-マルチチャンネルデバイス：複数のチャンネルを持ち、複数のセンサープローブを接続可能です（センサーハブなど）。
+マルチチャネルデバイス：複数のチャネルを備え、Sensor Hub のように複数のセンサープローブを接続できます。
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-6.jpg)
 
 ## データ
 
-各チャンネルの期間データとデバイスステータスデータを確認できます。
+各チャネルの期間データおよびデバイスステータスデータを確認できます。
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-7.jpg)
 
 ## 設定
 
-読み取り専用キー / フルアクセスキー：これはAPIと併用されます。
-デバイス設定：デバイスのデータ収集頻度を調整します。範囲は5分から43,200分です。新しい収集頻度は、デバイスが次回データをアップロードする際に有効になります。
+Only Read Key / Full Access Key：これは API と併用します。
+デバイス設定：デバイスのデータ収集間隔を 5 ～ 43,200 分の範囲で調整します。新しい収集間隔は、デバイスが次回データをアップロードするときに有効になります。
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-8.jpg)
 
-## 位置
+## 位置情報
 
-デバイスにGPS機能がある場合、位置情報はここで自動的に更新されます。
-デバイスにGPSがない場合、手動でGPSを設定できます：「位置を検索」-「地図上で点を打つ」-「住所として設定」。
+デバイスに GPS 機能がある場合、位置情報はここで自動的に更新されます。
+デバイスに GPS がない場合は、「Search location」-「Map punctuation」-「Set as address」の順に操作して、手動で GPS を設定できます。
 
 :::note
-デバイスのGPSを使用する際は、上部に遮蔽物のない屋外にデバイスを設置してください。
+デバイスの GPS を使用する場合は、上部に遮蔽物のない屋外にデバイスを設置するようにしてください。
 :::
 
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-9.jpg)
 
 ## デバイスのバインド
+新しいデバイスをバインドしたい場合は、**Dashboard** ページに移動し、**Bind Device** をクリックします。
 
-デバイスを別のアカウントに変更したり、デバイスを削除したりする場合は、このページで行うことができます。
+<div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview2.png" /></div>
+
+デバイスの EUI と KEY を入力してバインドを完了します。
+
+<div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview3.png" /></div>
+
+デバイスを別のアカウントに変更したい場合やデバイスを削除したい場合は、このページで操作できます。
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-10.jpg)

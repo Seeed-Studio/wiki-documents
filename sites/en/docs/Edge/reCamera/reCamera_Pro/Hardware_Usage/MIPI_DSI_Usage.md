@@ -13,7 +13,7 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-9'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/recamera_pro_mipi_dsi_screen_usage/
 ---
 
