@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/recamera_pro_mipi_dsi_screen_usage/
 There is a MIPI DSI interface on the rear side of the device for connecting MIPI screens.
 ## Connect the MIPI Screen
 Open the rear cover of the base board, locate the ***22PIN MIPI DSI*** interface as shown below.
-::: note
+:::note
 Please power off the device before plugging in the MIPI screen!!!
 :::
 ![BASE_BOARD_PIN](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
