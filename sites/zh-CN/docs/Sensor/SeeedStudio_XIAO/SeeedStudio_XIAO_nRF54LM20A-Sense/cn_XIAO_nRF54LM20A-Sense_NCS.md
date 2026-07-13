@@ -46,9 +46,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 介绍
 
-nRF Connect SDK（NCS）是 Nordic Semiconductor 官方的软件开发套件，构建在 Zephyr RTOS 实时操作系统之上。它为 nRF 系列芯片提供了完整、原生且高度优化的开发框架。与 PlatformIO 相比，NCS 为开发者提供了对 nRF54 系列全部硬件能力的更充分访问，包括对 Bluetooth Low Energy（BLE）、Thread、Matter 等无线协议栈的原生支持，以及更精细的电源管理和外设控制。Nordic 官方持续维护并更新该 SDK，确保与芯片固件的最佳兼容性，并能更早使用最新特性。
+nRF Connect SDK（NCS）是 Nordic Semiconductor 官方的软件开发套件，构建在 Zephyr RTOS 实时操作系统之上。它为 nRF 系列芯片提供了完整、原生且高度优化的开发框架。与 PlatformIO 相比，NCS 为开发者提供了对 nRF54 系列全部硬件能力的更全面访问，包括对 Bluetooth Low Energy（BLE）、Thread、Matter 等无线协议栈的原生支持，以及更精细的电源管理和外设控制。Nordic 官方持续维护并更新该 SDK，确保与芯片固件的最佳兼容性，并能更早使用最新特性。
 
-本教程将一步步引导你完成整个流程——从搭建 nRF Connect SDK 开发环境和安装工具链，到创建和配置你的第一个项目，最后将第一个示例程序烧录到 XIAO nRF54LM20A Sense 上并运行。
+本教程将一步步引导你完成整个流程——从搭建 nRF Connect SDK 开发环境和安装工具链，到创建和配置你的第一个项目，最后将第一个示例程序烧录到 XIAO nRF54LM20A Sense 上并运行起来。
 
 ## NCS 入门
 
@@ -137,37 +137,56 @@ nRF Connect SDK 体积较大，首次安装会花费一定时间。请在安装�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
+
+:::tip
+请确保 nRF Connect SDK（NCS）版本和 Toolchain 版本均为 3.3.0。混用不同版本可能导致构建或兼容性问题。
+:::
+
 2. 输入命令检查所需工具的版本信息。你可以逐条复制并运行这些命令进行验证。
 
 ```bash
 # Check west (project manager & build entry) version
 west --version
+#West version: v1.5.0
 
 # Check CMake (build system generator) version
 cmake --version
+#cmake version 4.2.1
 
 # Check Ninja (build executor) version
 ninja --version
+#1.13.2
 
 # Check Python (scripting runtime for west & Zephyr tools) version
 python --version
+#Python 3.11.7
 
 # Check ARM cross-compiler (Zephyr toolchain for Cortex-M) version
 arm-zephyr-eabi-gcc --version
+#arm-zephyr-eabi-gcc (Zephyr SDK 0.17.0) 12.2.0
+#Copyright (C) 2022 Free Software Foundation, Inc.
+#This is free software; see the source for copying conditions.  There is NO
+#warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 # Check OpenOCD (on-chip debugger & flasher via CMSIS-DAP) version
 openocd --version
+#Open On-Chip Debugger 0.12.0+dev-01514-g21fa2de70 (2024-02-07-19:03)
+#Licensed under GNU GPL v2
+#For bug reports, read
+#        http://openocd.org/doc/doxygen/bugs.html
 ```
 
 - 输出如下所示。如果有任何组件缺失，请重新安装工具链，并在安装过程中确保网络稳定。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/3.png" style={{width:800, height:'auto'}}/></div>
 
+
+
 ### 添加自定义板卡路径
 
-由于 XIAO nRF54LM20A 系列的板卡定义尚未合入官方 NCS 仓库，因此你需要手动添加板卡路径。
+XIAO nRF54LM20A 系列的板卡定义尚未合入官方 NCS 仓库，因此你需要手动添加板卡路径。
 
-1. 将 **platform-seeedboards** 仓库克隆到你希望的目录中。
+1. 将 **platform-seeedboards** 仓库克隆到你希望的目录。
 
 ```bash
 git clone https://github.com/Seeed-Studio/platform-seeedboards.git
@@ -191,7 +210,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_12.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-2. 将项目命名为 `blinky` 并选择存储路径。
+2. 将项目命名为 `blinky`，并选择一个存储路径。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_13.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -208,9 +227,9 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 由于 XIAO nRF54LM20A 系列使用了自定义 devicetree 和硬件引脚映射，因此需要修改若干文件。需要编辑的文件如下所示。
 
-- `main.c`：包含应用逻辑的主程序。
-- `app.overlay`：用于硬件外设配置的 devicetree overlay 文件。
-- `prj.conf`：用于启用所需 Zephyr 模块的项目配置文件。
+- `main.c`: 包含应用逻辑的主程序。
+- `app.overlay`: 用于硬件外设配置的 devicetree overlay 文件。
+- `prj.conf`: 用于启用所需 Zephyr 模块的项目配置文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_16.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -326,7 +345,7 @@ int main(void)
 
 2. 添加 **xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay**
 
-- 在 blinky 项目的根目录下创建一个 **board** 文件夹，与 src 等文件夹处于同一级目录。
+- 在 blinky 工程的根目录下创建一个 **board** 文件夹，与 src 等文件夹处于同一级目录。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_17.png" style={{width:600, height:'auto'}}/></div>
 <br/>
@@ -411,7 +430,7 @@ CONFIG_SERIAL=n
 
 本节中，我们使用 nRF Connect SDK 中的 west 工具来烧录程序。
 
-1. 使用 USB-C 线连接 XIAO nRF54LM20A Sense。打开 nRF Terminal 并输入 west 命令来烧录程序。
+1. 使用 USB-C 线连接 XIAO nRF54LM20A Sense。打开 nRF Terminal，并输入 west 命令来烧录程序。
 
 ```bash
 west flash
@@ -422,7 +441,7 @@ west flash
 
 :::tip
 
-如果要烧录的固件是由 **Add build configuration** 中创建的第一个配置文件生成的，当存在 `build` 和 `build_1` 等多个配置文件夹时，你需要指定配置路径。
+如果要烧录的固件是由 **Add build configuration** 中创建的第一个配置文件生成的，当存在 `build` 和 `build_1` 等多个配置文件夹时，需要指定配置路径。
 
 ```bash
 # examples: west flash configgration build_1
@@ -436,35 +455,44 @@ west flash --build-dir build_1
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:600, height:'auto'}}/></div>
 
 ## 常见问题
-如果你的 SDK 下载耗时过长，我们也提供了一种相对较快的下载方式
-- 步骤 1：安装 aria2
-```
+
+ **Q1：下载 nRF Connect SDK 非常慢或卡住**
+
+如果 SDK 下载非常慢或卡住，可以使用 **aria2** 通过多连接方式下载所需的安装包，然后使用 **nrfutil** 安装 SDK。
+
+**步骤 1. 安装 aria2**
+
+```bash
 brew install aria2
 ```
 
-- 步骤 2：创建下载目录
-```
+**步骤 2. 创建下载目录**
+
+```bash
 mkdir -p /opt/nordic/ncs/downloads
 ```
 
-- 步骤 3：下载 Toolchain Bundle
-```
+**步骤 3. 下载 Toolchain Bundle**
+
+```bash
 aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   -d /opt/nordic/ncs/downloads \
   -o ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz \
   "https://files.nordicsemi.cn/artifactory/NCS/external/bundles/v3/ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz"
 ```
 
-- 步骤 4：下载 nRF Connect SDK Bundle
-```
+**步骤 4. 下载 nRF Connect SDK Bundle**
+
+```bash
 aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   -d /opt/nordic/ncs/downloads \
   -o sdk-nrf-bundle-v3.3.0.tar.gz \
   "https://files.nordicsemi.cn/artifactory/ncs-src-mirror/external/sdk-nrf/v3.3.0/src.tar.gz"
 ```
 
-- 步骤 5：安装 nRF Connect SDK v3.3.0
-```
+**步骤 5. 安装 nRF Connect SDK v3.3.0**
+
+```bash
 nrfutil sdk-manager install v3.3.0 \
   --sdk-path /opt/nordic/ncs/v3.3.0 \
   --type nrf
@@ -472,7 +500,7 @@ nrfutil sdk-manager install v3.3.0 \
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供多种支持方式，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>

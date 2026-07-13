@@ -120,6 +120,10 @@ url: https://wiki.seeedstudio.com/robotics_page/
                 <span className="text">reBot B601-RS with ROS2 </span>
                 <span className="tag recommended">New</span>
               </a>
+              <a href="rebot_arm_b601_rs_isaacsim/" className="content-card">
+                <span className="text">reBot B601-RS Isaacsim Simulation</span>
+                <span className="tag recommended">New</span>
+              </a>  
           </div>
 
           <h3> 🤗 Reachy</h3>
@@ -156,6 +160,10 @@ url: https://wiki.seeedstudio.com/robotics_page/
               </a>
               <a href="/lerobot_double_arm_so_arm_training/" className="content-card">
                   <span className="text">Complete Guide to Double-Arm SO-ARM Training</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/soarm_amazinghand_teleop/" className="content-card">
+                  <span className="text">Complete Training Guide for SO-ARM with AmazingHand</span>
                   <span className="tag recommended">New</span>
               </a>
           </div>

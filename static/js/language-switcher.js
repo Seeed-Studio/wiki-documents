@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-08 10:32:55 (北京时间)
-// 多语言页面: 2365 个
+// 生成时间: 2026-07-09 17:33:54 (北京时间)
+// 多语言页面: 2373 个
 
 (function() {
   'use strict';
@@ -3649,7 +3649,42 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_hardware_specifications": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_imu_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_mipi_dsi_screen_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_speaker_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_uart_usage": [
     "cn",
     "en",
     "es",
@@ -4126,6 +4161,13 @@
     "pt"
   ],
   "/License": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/lora_antenna_selection_guide": [
     "cn",
     "en",
     "es",
@@ -6072,6 +6114,13 @@
     "pt"
   ],
   "/rebot_arm_b601_rs_grasping_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_isaacsim": [
     "cn",
     "en",
     "es",
@@ -8220,6 +8269,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_work_with_lvgl": [
     "cn",
     "en",
     "es",

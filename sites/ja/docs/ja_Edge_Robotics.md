@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-06-19'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/ja/robotics_page/
 ---
 
@@ -80,7 +80,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 
 
           <h3>🦾 reBot Arm</h3>
-            <h4> B601-DM アーム</h4>
+            <h4> B601-DM Arm</h4>
           <div className="card-container">
               <a href="/ja/rebot_b601_dm_getting_started/" className="content-card">
                 <span className="text">reBot B601-DM 入門ガイド</span>
@@ -98,7 +98,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
                 <span className="text">reBot B601-DM と ROS2</span>
               </a>
           </div>
-            <h4> B601-RS アーム</h4>
+            <h4> B601-RS Arm</h4>
           <div className="card-container">
               <a href="/ja/rebot_b601_rs_getting_started/" className="content-card">
                 <span className="text">reBot B601-RS 入門ガイド</span>
@@ -120,6 +120,10 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
                 <span className="text">reBot B601-RS と ROS2</span>
                 <span className="tag recommended">New</span>
               </a>
+              <a href="rebot_arm_b601_rs_isaacsim/" className="content-card">
+                <span className="text">reBot B601-RS Isaacsim シミュレーション</span>
+                <span className="tag recommended">New</span>
+              </a>  
           </div>
 
           <h3> 🤗 Reachy</h3>
@@ -156,6 +160,10 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
               </a>
               <a href="/ja/lerobot_double_arm_so_arm_training/" className="content-card">
                   <span className="text">両腕 SO-ARM トレーニング完全ガイド</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/ja/soarm_amazinghand_teleop/" className="content-card">
+                  <span className="text">SO-ARM と AmazingHand のトレーニング完全ガイド</span>
                   <span className="tag recommended">New</span>
               </a>
           </div>
@@ -237,8 +245,8 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
             <span className="text">Stackforce シリーズ</span>
           </a>
           <a href="/ja/robstride_control/" className="content-card">
-            <span className="text">RobStride コントロール</span>
-            <span className="tag recommended">New</span>
+            <span className="text">RobStride Control</span>
+            <span className="tag recommended">新着</span>
           </a>
       </div>
 
@@ -274,22 +282,22 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
             <span className="text">Orbbec Gemini 2</span>
           </a>
           <a href="/ja/orbbec_gemini_335lg" className="content-card">
-            <span className="text">Gemini 335Lg Depth</span>
-            <span className="tag recommended">New</span>
+            <span className="text">Gemini 335Lg Depth カメラ</span>
+            <span className="tag recommended">新着</span>
           </a>
           <a href="/ja/orbbec_gemini336" className="content-card">
-            <span className="text">Gemini 336 Depth</span>
-            <span className="tag recommended">New</span>
+            <span className="text">Gemini 336 Depth カメラ</span>
+            <span className="tag recommended">新着</span>
           </a>
           <a href="/ja/sensing_gmsl_cameras" className="content-card">
             <span className="text">SENSING GMSL2</span>
           </a>
           <a href="/ja/ac1" className="content-card">
             <span className="text">RoboSense AC1</span>
-            <span className="tag recommended">New</span>
+            <span className="tag recommended">新着</span>
           </a>
           <a href="/ja/orbbec_depth_camera_on_ros/" className="content-card">
-            <span className="text">Orbbec と ROS</span>
+            <span className="text">Orbbec と ROS の連携</span>
           </a>
           <a href="/ja/orb_slam3_orbbec_gemini2/" className="content-card">
             <span className="text">ORB-SLAM3 Gemini2</span>
@@ -303,7 +311,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 
       </div>
 
-      <strong>🎤 ボイス</strong>  
+      <strong>🎤 音声</strong>  
 
       <div className="card-container">
           <a href="/ja/ReSpeaker_Core_v2.0/" className="content-card">
@@ -337,13 +345,13 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 
       <div className="card-container">
           <a href="/ja/installing_ros1/" className="content-card">
-            <span className="text">ROS 1 インストール</span>
+            <span className="text">ROS 1 のインストール</span>
           </a>
           <a href="/ja/install_ros2_humble/" className="content-card">
-            <span className="text">ROS 2 インストール</span>
+            <span className="text">ROS 2 のインストール</span>
           </a>
           <a href="/ja/install_isaacros/" className="content-card">
-            <span className="text">Isaac ROS インストール</span>
+            <span className="text">Isaac ROS のインストール</span>
           </a>
           <a href="/ja/isaac_ros_apriltag/" className="content-card">
             <span className="text">Isaac ROS AprilTag</span>
@@ -356,7 +364,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <strong>PX4</strong>  
       <div className="card-container">
       <a href="/ja/control_px4_with_recomputer_jetson/" className="content-card">
-        <span className="text">Jetson と PX4</span>
+        <span className="text">Jetson で PX4 を制御</span>
       </a>
 
       <a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="content-card">
@@ -368,22 +376,22 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <strong>NVIDIA Isaac</strong>  
       <div className="card-container">
       <a href="/ja/install_isaaclab/" className="content-card">
-        <span className="text">Isaac Lab インストール</span>
+        <span className="text">Isaac Lab のインストール</span>
       </a>
       <a href="/ja/training_soarm101_policy_with_isaacLab/" className="content-card">
-        <span className="text">SO Arm 強化学習トレーニング</span>
-        <span className="tag recommended">New</span>
+        <span className="text">SO Arm の強化学習トレーニング</span>
+        <span className="tag recommended">新着</span>
       </a>
       <a href="/ja/simulate_soarm101_by_leisaac/" className="content-card">
-        <span className="text">SO100 Arm Isaac シミュレーション</span>
-        <span className="tag recommended">New</span>
+        <span className="text">SO100 アーム Isaac シミュレーション</span>
+        <span className="tag recommended">新着</span>
       </a>
       </div>
 
       <strong>VLA</strong>  
       <div className="card-container">
       <a href="/ja/control_robotic_arm_via_gr00t" className="content-card">
-        <span className="text">NVIDIA GR00T を用いた StarAI</span>
+        <span className="text">NVIDIA GR00T を用いた StarAI 制御</span>
       </a>
       </div>
 
@@ -409,9 +417,9 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/1.%20ROS%20Basics%208%20lectures/README.md" className="course-card">
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 8h</span></div>
+          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 8時間</span></div>
           <h3>ROS 1 基礎：全 8 講義</h3>
-          <p>ノード、トピック、サービスについて学び、基礎を習得します。</p>
+          <p>ノード、トピック、サービスなどの基本を学習します。</p>
           <span className="btn-start">学習を開始</span>
         </div>
       </a>
@@ -420,9 +428,9 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/2.%20ROS%20Robot%20Simulation%207%20Lectures/README.MD" className="course-card">
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 8h</span></div>
+          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 8時間</span></div>
           <h3>ROS 1 ロボットシミュレーション：全 7 講義</h3>
-          <p>	モデリングから自律ナビゲーションまで。</p>
+          <p>	モデリングから自律ナビゲーションまでを解説します。</p>
           <span className="btn-start">学習を開始</span>
         </div>
       </a>
@@ -431,9 +439,9 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/2.English/1.%20ROS%20Basics%208%20lectures/README.MD" className="course-card">
         <div className="course-cover c-ros2">ROS 2</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 8h</span></div>
+          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 8時間</span></div>
           <h3>ROS 2 Humble 基礎：全 8 講義</h3>
-          <p>ノード、トピック、サービスについて学び、基礎を習得します。</p>
+          <p>ノード、トピック、サービスなどの基本を学習します。</p>
           <span className="btn-start">学習を開始</span>
         </div>
       </a>
@@ -444,7 +452,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-moveit">MoveIt 1/2</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">アーム初級</span> <span>⏱️ 6h</span></div>
+          <div className="course-meta"><span className="level beg">アーム初級</span> <span>⏱️ 6時間</span></div>
           <h3>MoveIt 1/2</h3>
           <p>カスタムマニピュレータを MoveIt 1/2 にインポートし、順運動学と逆運動学を実装します。</p>
           <span className="btn-plan">プランニング</span>
@@ -455,7 +463,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-pinocchio">Pinocchio</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">アーム中級</span> <span>⏱️ 6h</span></div>
+          <div className="course-meta"><span className="level int">アーム中級</span> <span>⏱️ 6時間</span></div>
           <h3>Pinocchio</h3>
           <p>Pinocchio ロボティクスフレームワークを学び、自分のマニピュレータ向けに運動学および動力学タスクを開発します。</p>
           <span className="btn-plan">プランニング</span>
@@ -467,9 +475,9 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-isaac">ISAAC</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 12h</span></div>
+          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 12時間</span></div>
           <h3>NVIDIA Isaac Sim & Lab</h3>
-          <p>Sim2Real ワークフロー、USD パイプライン、環境構築。</p>
+          <p>Sim2Real ワークフロー、USD パイプライン、環境構築について学びます。</p>
           <span className="btn-plan">プランニング</span>
         </div>
       </a>
@@ -478,9 +486,9 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-mujoco">MuJoCo</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 10h</span></div>
+          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 10時間</span></div>
           <h3>MuJoCo 物理エンジン</h3>
-          <p>俊敏なロボット制御のための動力学モデリングとシミュレーション。</p>
+          <p>俊敏なロボット制御のためのダイナミクスモデリングとシミュレーション。</p>
           <span className="btn-plan">プランニング</span>
         </div>
       </a>
@@ -489,7 +497,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-rl">RL</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">難易度高</span> <span>⏱️ 20h</span></div>
+          <div className="course-meta"><span className="level adv">難易度高</span> <span>⏱️ 20時間</span></div>
           <h3>強化学習</h3>
           <p>PPO、DRL トレーニングパイプライン、および Jetson へのデプロイ。</p>
           <span className="btn-plan">プランニング</span>
@@ -498,34 +506,34 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 
     </div>
 
-    <!-- Section 2: Robot Applications -->
+    <!-- セクション 2: ロボットアプリケーション -->
     <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 ロボットアプリケーション</h3>
     <div className="course-grid">
 
-      <!-- Humanoid -->
+      <!-- ヒューマノイド -->
       <a href="" className="course-card">
         <div className="course-cover c-human">ヒューマノイド</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 5h</span></div>
-          <h3>小型サーボヒューマノイドロボット講座</h3>
-          <p>小型ヒューマノイドロボット向けのハードウェア駆動、モーション & ダンス振付、二次開発。</p>
-          <span className="btn-plan">プランニング</span>
+          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 5時間</span></div>
+          <h3>小型サーボヒューマノイドロボットコース</h3>
+          <p>小型ヒューマノイドロボット向けのハードウェア駆動、モーション＆ダンス振り付け、および二次開発。</p>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
 
       <!-- Lekiwi -->
       <a href="" className="course-card">
-        <div className="course-cover c-lekiwi">モバイルロボット</div>
+        <div className="course-cover c-lekiwi">移動ロボット</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 6時間</span></div>
           <h3>モバイルロボティクス（Lekiwi）</h3>
-          <p>SLAM、Navigation 2、自律巡回。</p>
+          <p>SLAM、Navigation 2、および自律巡回。</p>
           <span className="btn-plan">計画中</span>
         </div>
       </a>
 
-      <!-- Robotic Arm -->
+      <!-- ロボットアーム -->
       <a href="" className="course-card">
         <div className="course-cover c-arm">ロボットアーム</div>
         <div className="course-info">
@@ -536,12 +544,12 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
         </div>
       </a>
 
-      <!-- Wheeled-Legged -->
+      <!-- 車輪脚ロボット -->
       <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md" className="course-card">
-        <div className="course-cover c-legged">脚付き車輪ロボット</div>
+        <div className="course-cover c-legged">車輪脚ロボット</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 8時間</span></div>
-          <h3>Stackforce 脚付き車輪ロボットコース</h3>
+          <h3>Stackforce 車輪脚ロボットコース</h3>
           <p>ハイブリッドロボットのバランス制御と LQR モーションプランニング。</p>
           <span className="btn-start">学習中</span>
         </div>
@@ -567,7 +575,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 
 <style>{`
 /* =========================================
-   1. Tab Logic (CSS Only)
+   1. タブロジック（CSS のみ）
    ========================================= */
 .robotic-tab-container { width: 100%; position: relative; }
 .tab-input-hidden { display: none; }
@@ -603,7 +611,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
 /* =========================================
-   2. Hardware Styles (Original)
+   2. ハードウェアスタイル（オリジナル）
    ========================================= */
 .quick-nav-container {
   margin: 2rem 0; padding: 1rem;
@@ -659,7 +667,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2); } 70% { box-shadow: 0 0 0 4px rgba(255, 107, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); } }
 
 /* =========================================
-   3. Learning Styles
+   3. ラーニングスタイル
    ========================================= */
 .learning-intro { text-align: center; margin-bottom: 2rem; }
 .learning-intro h2 { margin-bottom: 0.5rem; background: -webkit-linear-gradient(45deg, #7b61ff, #4a90e2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -676,10 +684,10 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 }
 .course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
 
-/* Covers for different topics */
+/* 各トピック用カバー */
 .course-cover { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; color: white; letter-spacing: 1px; }
 
-/* AI & Software Colors */
+/* AI & ソフトウェアのカラー */
 .c-ros2 { background: linear-gradient(135deg, #10b981, #059669); }
 .c-ros1 { background: linear-gradient(135deg, #4b5563, #374151); }
 .c-pinocchio { background: linear-gradient(135deg, #3b82f6, #fa000c); }
@@ -724,7 +732,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
   cursor: default;
 }
 
-/* Hover 効果：Start ボタンのように色を反転させず、視線を奪わないようにしつつ暖色トーンを維持 */
+/* Hover 效果：保持暖色调，不像 Start 按钮那样反转颜色，避免抢夺视线 */
 .course-card:hover .btn-plan {
   background: #ffedd5;
   color: #c2410c;
@@ -732,7 +740,7 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
 
 
 /* =========================================
-   4. Dark Mode 対応
+   4. Dark Mode 适配
    ========================================= */
 html[data-theme='dark'] .tab-nav { background: #2f2f32; box-shadow: none; }
 html[data-theme='dark'] .tab-slider { background: #444; }
