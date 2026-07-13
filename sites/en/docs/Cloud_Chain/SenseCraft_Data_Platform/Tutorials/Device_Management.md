@@ -21,9 +21,9 @@ Here you are offered several methods to manage SenseCAP devices, including Gatew
 
 ## Gateway
 
-① Filter the gateway based on EUI, frequency, status, and registration time.
-② List of gateways, displaying EUI, name, status, and so on.
-③ Click EUI to enter the device details page to view basic information, location, binding, etc.
+- ① Filter the gateway based on EUI, frequency, status, and registration time.
+- ② List of gateways, displaying EUI, name, status, and so on.
+- ③ Click EUI to enter the device details page to view basic information, location, binding, etc.
 
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-1.jpg)
 
@@ -35,10 +35,10 @@ You can manage devices conveniently by groups. You can create new groups, delete
 ## Sensor Node Management
 
 On the Sensor Node page, you can see all the Sensor Nodes bound to your account.
-① Devices contain types such as “LoRa” and “NB-IoT” and can be viewed by category.
-② Filter criteria, according to EUI, frequency, group, status, and registration time filter node.
-③ Sensor Node list, displaying EUI, name, status, data type, and so on.
-④ Click EUI to enter the device details page.
+- ① Devices contain types such as “LoRa” and “NB-IoT” and can be viewed by category.
+- ② Filter criteria, according to EUI, frequency, group, status, and registration time filter node.
+- ③ Sensor Node list, displaying EUI, name, status, data type, and so on.
+- ④ Click EUI to enter the device details page.
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-3.jpg)
 
 ## General Information
@@ -80,6 +80,13 @@ When using the Device’s GPS, try to place the device outdoors with no shieldin
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-9.jpg)
 
 ## Bind Device
+If you want to bind a new device, go to the **Dashboard** page and click **Bind Device**.
+
+<div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview2.png" /></div>
+
+Enter the device EUI and KEY to complete the binding.
+
+<div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview3.png" /></div>
 
 If you want to change the device to another account or delete the device, you can do on this page.
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-device_management-10.jpg)
