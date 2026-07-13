@@ -256,7 +256,7 @@ MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知选项�
   <tr>
     <td>SPIO2</td>
     <td>P0.23</td>
-  </tr]
+  </tr>
   <tr>
     <td>SPIO3</td>
     <td>P1.00</td>
