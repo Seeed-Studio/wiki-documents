@@ -155,7 +155,7 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 #### ソフトウェア
 
-- [DM_Tools_v.2.1.6.8.exe（Windows のみ対応）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool_v2.1.6.8.zip)
+- [Software Download Link](https://github.com/dmBots/motor-debugging-tool)
 
 
 #### モーター ID の書き込みと有効化テスト
