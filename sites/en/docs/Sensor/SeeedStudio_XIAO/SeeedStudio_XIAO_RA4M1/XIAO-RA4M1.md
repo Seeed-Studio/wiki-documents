@@ -102,7 +102,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 | D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |       |
 | D17             | CRX0             | P102      | AN020,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |       |
 | D18             | CTX0             | P103      | AN019                               | GPIO, SPI ,ADC,UART                  |       |
-| ADC_BAT         |                  | P400      |                                     | Read the BAT voltage value           |       |
+| ADC_BAT         |                  | P015      |                                     | Read the BAT voltage value           |       |
 | Reset           |                  | RES       |                                     | RESET                                |       |
 | Boot            |                  | P201      |                                     | Enter Boot Mode                      |       |
 | RGB LED         |                  | P112      |                                     | RGB LED                              |    20   |
@@ -251,7 +251,7 @@ void loop() {
 
 Is it possible to read the battery voltage without extra components? Yes, with the XIAO RA4M1, it’s easier than ever. In previous XIAO family members, such as the [XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage), reading the battery voltage required manually connecting to A0 with a resistor.
 
-But with the XIAO RA4M1, this process is simplified. You can now directly use the `BAT_DET_PIN/P105` pin to read the battery voltage level, streamlining your design and development. Just remember to set the `BAT_READ_EN/P400` pin to high, as it’s necessary to enable battery level reading.
+But with the XIAO RA4M1, this process is simplified. You can now directly use the `BAT_DET_PIN/P015` pin to read the battery voltage level, streamlining your design and development. Just remember to set the `BAT_READ_EN/P400` pin to high, as it’s necessary to enable battery level reading.
 
 - **Step 1.** Harware Preparation
 
