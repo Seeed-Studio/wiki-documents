@@ -12,8 +12,7 @@ last_update:
   date: 11/19/2025
   author: Tienjuiwong
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-11-19'
 updatedAt: '2026-06-08'
 url: https://wiki.seeedstudio.com/robstride_control/

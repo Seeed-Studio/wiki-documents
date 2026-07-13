@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-07-01'
+updatedAt: '2026-07-12'
 url: https://wiki.seeedstudio.com/robotics_page/
 ---
 
