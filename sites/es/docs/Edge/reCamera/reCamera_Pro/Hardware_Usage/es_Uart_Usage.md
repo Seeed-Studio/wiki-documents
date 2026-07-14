@@ -1,6 +1,6 @@
 ---
 description: Este wiki proporcionará una breve introducción sobre cómo usar el puerto serie en el dispositivo para depuración y para activar la captura de fotos/vídeos/grabaciones.
-title: Uso de UART en reCamera Pro
+title: Uso de UART
 keywords:
   - reCamera
   - reCamera Pro
@@ -13,17 +13,18 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-9'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/es/recamera_pro_uart_usage/
 ---
 
-# Uso de la interfaz UART
+# Uso de la interfaz UART en reCamera Pro
 
 Hay dos puertos serie en el dispositivo: uno es el DEBUG UART dedicado a la depuración, y el otro es la interfaz UART utilizada para el disparo desde la interfaz web.
-![Diagrama de la interfaz de la placa base de hardware](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
-![Esquema del puerto de expansión](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/EXT_GPIO.jpg)
+![Hardware Base Board Interface Diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
+![Expansion Port Schematic](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/EXT_GPIO.jpg)
 
 ## Conexión del DEBUG UART
+
 La velocidad en baudios del puerto serie de depuración es 1500000, y la especificación de la interfaz de hardware es MX1.25. La secuencia de pines se muestra a continuación.
 ![DEBUG_UART_PIN](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/DEBUG_UART_PIN.jpg)
 
@@ -36,6 +37,7 @@ La velocidad en baudios del puerto serie de depuración es 1500000, y la especif
 Esta interfaz UART se utiliza como la interfaz UART para el disparo desde la interfaz web. Se puede usar para recibir datos de inferencia de IA y también para enviar comandos para activar eventos.
 
 ### Disparo por puerto serie
+
 1. Primero, prepara un cable MX1.25 de 10 pines y conéctalo a la interfaz de expansión.
 
 2. Luego, de acuerdo con la secuencia de pines en el diagrama de expansión anterior, conéctalo a tu herramienta USB a TTL. Conecta el TX del convertidor al pin RX del dispositivo y conecta el RX del convertidor al pin TX del dispositivo. Recuerda conectar también GND.
@@ -57,15 +59,16 @@ El comando de disparo solo se puede enviar en formato ASCII. No se admite el env
 :::
 
 ### Recepción de resultados de inferencia de IA
+
 1. Primero, en ***AI Inference*** -> ***Output Method***, selecciona ***Serial Port***.
 ![UART_AI_OUTPUT_CONFIG](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/UART_AI_OUTPUT_CONFIG.png)
 
 2. Abre la herramienta de puerto serie y podrás ver los resultados de salida.
 ![UART_AI_OUTPUT](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/UART_AI_OUTPUT.png)
 
-## Soporte técnico y discusión de productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diversos tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos múltiples canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diversos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos múltiples canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

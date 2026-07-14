@@ -1,6 +1,6 @@
 ---
 description: Este wiki fornecerá uma breve introdução sobre como obter os dados da IMU no dispositivo.
-title: Uso da IMU do reCamera Pro
+title: Uso da IMU
 keywords:
   - reCamera
   - reCamera Pro
@@ -13,23 +13,32 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-9'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_usage/
 ---
 
-# Uso da IMU
-O modelo de IMU equipado no dispositivo é o ICM-42670-P, um sensor de 6 eixos que integra um acelerômetro de 3 eixos e um giroscópio de 3 eixos. O giroscópio do ICM-42670-P suporta faixas de medição de ±250 / ±500 / ±1000 / ±2000 dps, enquanto o acelerômetro suporta faixas de ±2 / ±4 / ±8 / ±16 g. Seus dados internos são fornecidos no formato de complemento de dois de 16 bits.
+# Uso da IMU do reCamera Pro
+
+O modelo de IMU equipado no dispositivo é o ICM-42670-P, um sensor de 6 eixos que integra um acelerômetro de 3 eixos e um giroscópio de 3 eixos. O giroscópio do ICM-42670-P suporta faixas de medição de ±250 / ±500 / ±1000 / ±2000 dps, enquanto o acelerômetro suporta faixas de ±2 / ±4 / ±8 / ±16 g. Seus dados internos são fornecidos em formato de complemento de dois de 16 bits.
+
 ## Caminho dos dados
+
 O reCamera PRO usa o driver IIO padrão para a IMU, portanto os dados brutos podem ser obtidos diretamente por meio das interfaces IIO.
 Os arquivos de dados brutos podem ser encontrados no diretório ***/sys/bus/iio/devices/iio:device1/***.
 ![IMU_DATA_SAMPLE](https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO_imu_dir.png)
-## Ler dados
+
+## Leitura de dados
+
 Execute o seguinte comando para ler os dados brutos correspondentes. O exemplo abaixo demonstra a leitura dos dados de aceleração do eixo X:
+
 ``` bash
 cat /sys/bus/iio/devices/iio:device1/in_accel_x_raw
 ```
+
 ## Obter dados com Python
+
 Python pode ser usado para obter facilmente os dados da IMU. Abaixo está um exemplo simples:
+
 ```python
 #!/usr/bin/env python3
 DEVICE = "/sys/bus/iio/devices/iio:device1"
@@ -40,7 +49,6 @@ with open(f"{DEVICE}/in_anglvel_x_raw", "r") as f:
 gyro_x = raw * scale
 print(f"Gyroscope X: {gyro_x:.6f} rad/s")
 ```
-
 
 ## Suporte técnico e discussão sobre o produto
 
