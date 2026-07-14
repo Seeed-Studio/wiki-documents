@@ -123,6 +123,10 @@ The reSpeaker Flex ESP32 version integrates a pre-soldered XIAO ESP32S3 module o
 | **Interface** | FPC connector; cable can be routed from the side or rear |
 | **Mounting** | 2 × M3 mounting holes |
 
+:::note
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
+:::
+
 ### XIAO ESP32S3 Support 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/xiao_esp32s3.png" alt="pir" width={700} height="auto" /></p>

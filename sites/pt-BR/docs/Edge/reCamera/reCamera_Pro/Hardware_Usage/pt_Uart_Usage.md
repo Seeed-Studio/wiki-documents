@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornecerá uma breve introdução sobre como usar a porta serial no dispositivo para depuração e acionamento de captura de fotos/vídeos/gravações.
-title: Uso de UART no reCamera Pro
+description: Este wiki fornecerá uma breve introdução sobre como usar a porta serial no dispositivo para depuração e acionamento de captura/gravação de fotos/vídeos.
+title: Uso de UART
 keywords:
   - reCamera
   - reCamera Pro
@@ -13,17 +13,18 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-9'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_uart_usage/
 ---
 
-# Usando a interface UART
+# Usando a interface UART no reCamera Pro
 
-Existem duas portas seriais no dispositivo: uma é a DEBUG UART dedicada à depuração, e a outra é a interface UART usada para acionamento pela interface web.
+Há duas portas seriais no dispositivo: uma é a DEBUG UART dedicada à depuração, e a outra é a interface UART usada para acionamento pela interface web.
 ![Diagrama da interface da placa base de hardware](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
 ![Esquemático da porta de expansão](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/EXT_GPIO.jpg)
 
 ## Conectando a DEBUG UART
+
 A taxa de transmissão da porta serial de depuração é 1500000, e a especificação da interface de hardware é MX1.25. A sequência dos pinos é mostrada abaixo.
 ![DEBUG_UART_PIN](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/DEBUG_UART_PIN.jpg)
 
@@ -36,6 +37,7 @@ A taxa de transmissão da porta serial de depuração é 1500000, e a especifica
 Esta interface UART é usada como a interface UART para acionamento pela interface web. Ela pode ser usada para receber dados de inferência de IA e também pode ser usada para enviar comandos para acionar eventos.
 
 ### Acionamento pela porta serial
+
 1. Primeiro, prepare um cabo MX1.25 de 10 pinos e conecte-o à interface de expansão.
 
 2. Em seguida, de acordo com a sequência de pinos no diagrama de expansão acima, conecte-o à sua ferramenta USB-para-TTL. Conecte o TX do conversor ao pino RX do dispositivo e conecte o RX do conversor ao pino TX do dispositivo. Lembre-se também de conectar o GND.
@@ -57,6 +59,7 @@ O comando de acionamento só pode ser enviado em formato ASCII. O envio em HEX n
 :::
 
 ### Recebendo resultados de inferência de IA
+
 1. Primeiro, em ***AI Inference*** -> ***Output Method***, selecione ***Serial Port***.
 ![UART_AI_OUTPUT_CONFIG](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/UART_AI_OUTPUT_CONFIG.png)
 

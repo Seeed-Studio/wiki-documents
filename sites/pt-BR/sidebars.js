@@ -4062,6 +4062,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_industrial_vision_monitoring_on_industrial',
               ]
             },
             // Generative AI
@@ -4170,6 +4171,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Deploy_TensorRT_Edge-LLM_on_Jetpack6.2',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Jetson_SPI_Getting_Start',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Flash_PREEMPT_RT_Kernel_on_reComputer_Jetson_JetPack_6_2_1',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Rapid_Prototyping_on_Jetson_with_NVIDIA_Skills',
               ]
             },
           ]
@@ -4217,6 +4219,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/pt_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/pt_How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/pt_Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/pt_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic',
             'Edge/NVIDIA_Jetson/FAQs/pt_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/pt_Flash_JetPack_with_WSL2',
           ]
@@ -4436,6 +4439,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/pt_Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/pt_Lerobot_SO100Arm_New',
             'Robotics/Robot_Kits/Lerobot/pt_Lerobot_SO_ARM101_DAMO',
+            'Robotics/Robot_Kits/Lerobot/pt_SOARM_AMAZINGHAND_TELEOP',
             'Robotics/Robot_Kits/Lerobot/pt_Lerobot_Dataset_Tool',
             'Robotics/Robot_Kits/Lerobot/pt_Steering_Gear_Debugging_Tool',
             'Robotics/Robot_Kits/Lerobot/pt_Complete_Guide_to_Double-Arm_SO-ARM_Training',

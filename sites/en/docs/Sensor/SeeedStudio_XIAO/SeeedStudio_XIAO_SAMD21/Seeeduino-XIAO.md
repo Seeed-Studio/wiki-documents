@@ -10,7 +10,7 @@ last_update:
   date: 6/30/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-11'
 url: https://wiki.seeedstudio.com/Seeeduino-XIAO/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -307,21 +307,19 @@ The Seeed Studio XIAO SAMD21 using the [**Seeed Studio XIAO SAMD21 expansion boa
 
 This sketch produces a sine wave output on A0, with values ranging from 0 to 3.3V. Then it uses A1 to read that output into its ADC, and convert it into a voltage between 0 and 3.3V.
 
-You can, of course, open the serial monitor to view the voltage values stream by. But if the the sine wave is hard to visualize through text, check out Arduino's new Serial Plotter, by going to Tools > Serial Plotter.
+You can, of course, open the serial monitor to view the voltage values stream by. But if the the sine wave is hard to visualize through text, check out Arduino's new Serial Plotter, by going to Tools > Serial Plotter.  
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Serial%20poltting.png" /></div>
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_DAC_wave.gif" /></div>
-
-#### DAC
-
+  
 Thank you to [Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) for submitting the code, all related functionalities were developed and contributed by him.
 
 ```cpp
 #define DAC_PIN A0 // Make code a bit more legible
 float x = 0; // Value to take the sin of
 float increment = 0.02;  // Value to increment x by each time
-int frequency = 440; // Frequency of sine wave
+// Frequency of sine wave is about 1.37 Hz
 
 void setup() 
 {

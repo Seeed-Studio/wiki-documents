@@ -14,7 +14,7 @@ last_update:
   author: TienjuiWong
   date: 07/17/2025
 createdAt: '2025-07-18'
-updatedAt: '2026-02-04'
+updatedAt: '2026-07-02'
 url: https://wiki.seeedstudio.com/XIAO_IR_Mate_Smart_IR_Remote/
 ---
 
@@ -297,18 +297,15 @@ api:
 
 ota:
   platform: esphome
-  password: "15afb09b5aba7b3d6a6ba01180c60df5"  # Change this to your desired password
 
 wifi:
-  # ssid: !secret wifi_ssid
-  # password: !secret wifi_password
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
   on_connect:
     - globals.set: {id: is_wifi_connected, value: 'true'}
     - light.turn_on: rgb_light
   on_disconnect:
     - globals.set: {id: is_wifi_connected, value: 'false'}
-  ap:
-    password: "12345678"
 
 captive_portal:
 
@@ -316,15 +313,16 @@ remote_transmitter:
   id: default_ir_transmitter
   pin: GPIO3
   carrier_duty_percent: 50%
-  rmt_channel: 0
+  rmt_symbols: 48
+  non_blocking: false
 
 remote_receiver:
   id: default_ir_receiver
   pin:
     number: GPIO4
     inverted: true
-  rmt_channel: 2
   dump: raw # Keep for learning or debugging other infrared codes
+  rmt_symbols: 96
 
 # Gree Climate Control
 climate:
@@ -412,7 +410,7 @@ light:
     rgb_order: GRB
     pin: GPIO7
     num_leds: 1
-    rmt_channel: 1
+    rmt_symbols: 48
     chipset: ws2812
     name: "RGB Status Light"
     id: rgb_light

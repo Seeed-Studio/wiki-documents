@@ -1,6 +1,6 @@
 ---
 description: This wiki will provide a brief introduction on how to use the serial port on the device for debugging and triggering photo/video shooting/recordings.
-title: reCamera Pro UART Usage
+title: UART Usage
 keywords:
   - reCamera
   - reCamera Pro
@@ -13,17 +13,18 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-9'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/recamera_pro_uart_usage/
 ---
 
-# Using the UART Interface
+# Using the UART Interface on reCamera Pro
 
 There are two serial ports on the device: one is the DEBUG UART dedicated to debugging, and the other is the UART interface used for web UI triggering.
 ![Hardware Base Board Interface Diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
 ![Expansion Port Schematic](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/EXT_GPIO.jpg)
 
 ## Connecting the DEBUG UART
+
 The baud rate of the debug serial port is 1500000, and the hardware interface specification is MX1.25. The pin sequence is shown below.
 ![DEBUG_UART_PIN](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/DEBUG_UART_PIN.jpg)
 
@@ -36,6 +37,7 @@ The baud rate of the debug serial port is 1500000, and the hardware interface sp
 This UART interface is used as the UART interface for web UI triggering. It can be used to receive AI inference data, and it can also be used to send commands to trigger events.
 
 ### Serial Port Trigger
+
 1. First, prepare a 10-pin MX1.25 cable and plug it into the expansion interface.
 
 2. Then, according to the pin sequence in the expansion diagram above, connect it to your USB-to-TTL tool. Connect the TX of the converter to the RX pin of the device, and connect the RX of the converter to the TX pin of the device. Remember to connect GND as well.
@@ -57,6 +59,7 @@ The trigger command can only be sent in ASCII format. HEX sending is not support
 :::
 
 ### Receiving AI Inference Results
+
 1. First, in ***AI Inference*** -> ***Output Method***, select ***Serial Port***.
 ![UART_AI_OUTPUT_CONFIG](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/UART_AI_OUTPUT_CONFIG.png)
 

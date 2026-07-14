@@ -16,8 +16,7 @@ last_update:
   date: 12/04/2025
   author: Twelve
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-10-17'
 updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/visual_trigger_and_ai_flash/
