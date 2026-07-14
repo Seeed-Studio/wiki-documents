@@ -17,9 +17,12 @@ updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/recamera_pro_mipi_dsi_screen_usage/
 ---
 
-# Usage of MIPI DSI Interface
+# Using the MIPI DSI Interface on reCamera Pro
+
 There is a MIPI DSI interface on the rear side of the device for connecting MIPI screens.
+
 ## Connect the MIPI Screen
+
 Open the rear cover of the base board, locate the ***22PIN MIPI DSI*** interface as shown below.
 
 :::note
@@ -32,6 +35,7 @@ Locate the TCON end of the MIPI screen cable and insert it inward as shown in th
 ![CONNECT_MIPI_SCREEN](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/MIPI-DSI-ton-duan.jpg)
 
 ## Power On
+
 After connecting the MIPI screen, power on the device, and the real-time camera image will be displayed on the MIPI screen.
 ![SHOW_GIF](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/MIPI_DSI_SHOW_CAMERA.gif)
 
