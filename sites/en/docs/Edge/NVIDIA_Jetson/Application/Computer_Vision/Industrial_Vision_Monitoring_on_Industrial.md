@@ -8,12 +8,12 @@ tags:
   - reComputer
   - Industrial
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/110110191.jpg
-slug: /Industrial_Vision_Monitoring_on_Industrial
+slug: /industrial_vision_monitoring_on_industrial
 last_update:
-  date: 07/13/2026
-  author: Seeed Studio
+  date: 07/14/2026
+  author: HaoChen
 createdAt: '2026-07-13'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-14'
 url: https://wiki.seeedstudio.com/Industrial_Vision_Monitoring_on_Industrial/
 ---
 
@@ -187,6 +187,18 @@ Models download automatically on first `./run.sh`, or manually via `./scripts/do
 - Project: https://github.com/xbs0325/industrial-inspection
 - [Install Pytorch for reComputer Jetson](https://wiki.seeedstudio.com/install_torch_on_recomputer/)
 
+
 ## Tech Support & Product Discussion
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+Thank you for choosing Seeed Studio products! For technical support and product discussion, please use the following channels:
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
