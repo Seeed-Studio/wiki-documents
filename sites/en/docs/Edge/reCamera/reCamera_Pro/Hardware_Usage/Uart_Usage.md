@@ -1,6 +1,6 @@
 ---
 description: This wiki will provide a brief introduction on how to use the serial port on the device for debugging and triggering photo/video shooting/recordings.
-title: reCamera Pro UART Usage
+title: UART Usage
 keywords:
   - reCamera
   - reCamera Pro

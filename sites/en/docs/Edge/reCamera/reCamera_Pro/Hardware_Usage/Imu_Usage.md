@@ -1,6 +1,6 @@
 ---
 description: This wiki will provide a brief introduction on how to obtain the IMU data on the device.
-title: reCamera Pro IMU Usage
+title: IMU Usage
 keywords:
   - reCamera
   - reCamera Pro

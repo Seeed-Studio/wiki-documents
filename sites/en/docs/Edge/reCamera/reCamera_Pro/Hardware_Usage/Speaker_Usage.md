@@ -1,6 +1,6 @@
 ---
 description: This wiki will provide a brief introduction on how to use the speaker on the device to play audio.
-title: reCamera Pro Speaker Usage
+title: Speaker Usage
 keywords:
   - reCamera
   - reCamera Pro
