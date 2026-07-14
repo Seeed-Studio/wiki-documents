@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /SeeedStudio_XIAO_Series_Introduction
 sku: 110010004,102010388,102010428,102010448,102010469,113991054,113991114,113991115,113991254,E2024042601,102010574,102010573,102010572,102010571,102010570,102010470,102010551,102010550,102010590,102010610,102010650,102010636,102010638,102010632,102010633,102010631,102010630,102010634,102010635,102010637,102010672,102010694,102010671,102010693,102010690,102010692,101991470
 last_update:
-  date: 05/08/2026
+  date: 7/14/2026
   author: Citric
 createdAt: '2023-07-10'
 updatedAt: '2026-05-08'
@@ -55,6 +55,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <th><a href="https://www.seeedstudio.com/XIAO-nRF54L15-p-6493.html">Seeed Studio XIAO nRF54L15</a></th>
       <th><a href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html">Seeed Studio XIAO nRF54L15 Sense</a></th>
+      <th><a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-p-6841.html">Seeed Studio XIAO nRF54LM20A</a></th>
 
    </tr>
    <tr>
@@ -74,6 +75,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td align="center">101991421</td>
       <td align="center">101991422</td>
+      <td align="center">100023651</td>
    </tr>
    <tr>
       <th>Short Description</th>
@@ -92,6 +94,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td>Ultra-low power, multi-protocol 2.4 GHz, Bluetooth 6.0, Matter, Zigbee, for IoT</td>
       <td>Advanced Version of XIAO nRF54L15 With Onboard Microphone And 6-Axis IMU</td>
+      <td>Ultra-low power, multi-protocol 2.4 GHz, Bluetooth LE 6.0, Matter, Thread, Zigbee, with nPM1300 PMIC</td>
    </tr>
    <tr>
       <th>Chip</th>
@@ -110,6 +113,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td align="center">Nordic nRF54L15</td>
       <td align="center">Nordic nRF54L15</td>
+      <td align="center">Nordic nRF54LM20A</td>
 
 
    </tr>
@@ -130,6 +134,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td align="center">Dual-core <br/>one Arm Cortex‑M33 and one RISC‑V, running up to 128 MHz</td>
       <td align="center">Dual-core <br/>one Arm Cortex‑M33 and one RISC‑V, running up to 128 MHz</td>
+      <td align="center">Dual-core <br/>one Arm Cortex-M33 and one RISC-V, running up to 128 MHz</td>
    </tr>
    <tr>
       <th>RAM</th>
@@ -148,6 +153,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td align="center">256kB RAM</td>
       <td align="center">256kB RAM</td>
+      <td align="center">512KB RAM</td>
       
    </tr>
    <tr>
@@ -167,6 +173,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td align="center">1.5MB </td>
       <td align="center">1.5MB</td>
+      <td align="center">2MB NVM</td>
    </tr>
    <tr>
       <th>Flash (onboard)</th>
@@ -185,6 +192,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center">8MB</td>
    </tr>
    <tr>
       <th>Built-in Sensors</th>
@@ -202,6 +210,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center">Six-axis acceleration sensors, Microphone</td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center">IMU, Microphone</td>
+      <td align="center"><font size={"3"}>❌</font></td>
    </tr>
    <tr>
       <th>PWM/Analog Pins</th>
@@ -220,6 +229,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td align="center">16/4</td>
       <td align="center">14/4</td>
+      <td align="center">28/9</td>
       
    </tr>
    <tr>
@@ -237,6 +247,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
 
+      <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
    </tr>
@@ -257,6 +268,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
    </tr>
    <tr>
       <th>WiFi</th>
@@ -273,6 +285,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
 
+      <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
    </tr>
@@ -293,6 +306,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
    </tr>
    <tr>
       <th>Boot Button</th>
@@ -309,6 +323,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
 
+      <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
    </tr>
@@ -329,6 +344,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
    </tr>
    <tr>
       <th>Battery Charge LED and Chip</th>
@@ -345,6 +361,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       
+      <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
    </tr>
@@ -364,9 +381,10 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center">1.95μA</td>
       <td align="center">-</td>
       <td align="center">-</td>
+      <td align="center">4.76μA</td>
    </tr>
    <tr>
-      <td colspan="15" style={{textAlign: 'center', backgroundColor: '#007bff', padding: '10px'}}><a href="https://wiki.seeedstudio.com/xiao_topic_page/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Compatible Project</a></td>
+      <td colspan="16" style={{textAlign: 'center', backgroundColor: '#007bff', padding: '10px'}}><a href="https://wiki.seeedstudio.com/xiao_topic_page/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Compatible Project</a></td>
    </tr>
    <tr>
       <th>Arduino</th>
@@ -382,6 +400,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
    </tr>
@@ -402,6 +421,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
    </tr>
    <tr>
       <th>MicroPython</th>
@@ -414,6 +434,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
@@ -436,6 +457,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
    </tr>
    <tr>
       <th>Zephyr</th>
@@ -451,6 +473,7 @@ url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
    </tr>
