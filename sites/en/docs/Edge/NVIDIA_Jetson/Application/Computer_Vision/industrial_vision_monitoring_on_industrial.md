@@ -14,7 +14,7 @@ last_update:
   author: HaoChen
 createdAt: '2026-07-13'
 updatedAt: '2026-07-14'
-url: https://wiki.seeedstudio.com/Industrial_Vision_Monitoring_on_Industrial/
+url: https://wiki.seeedstudio.com/industrial_vision_monitoring_on_industrial/
 ---
 
 # Industrial Vision Monitoring on Industrial
