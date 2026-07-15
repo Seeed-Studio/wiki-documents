@@ -1,0 +1,10 @@
+position: 7 # float position is supported
+label: 'API 参考'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_pro_api_reference
+link:
+  type: generated-index
+  slug: recamera_pro_api_reference
+  title: API 参考
+  description: reCamera Pro API 参考
