@@ -360,7 +360,7 @@ module.exports = (async () => {
         })(),
       ],
       
-      'docusaurus-plugin-image-zoom',
+      path.resolve(__dirname, '../../plugins/image-zoom'),
       'docusaurus-plugin-sass',
       [
         'docusaurus-plugin-copy-page-button',
