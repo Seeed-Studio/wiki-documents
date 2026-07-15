@@ -96,7 +96,7 @@ With few exceptions (`/system/key`, `/system/login`, `/system/check`), all endpo
 Cookie: token=<JWT_TOKEN>
 ```
 
-See [Authentication](Authentication.md) for how to obtain a Token.
+See [Authentication](https://wiki.seeedstudio.com/recamera_pro_api_authentication) for how to obtain a Token.
 
 ## Error Codes
 
@@ -120,7 +120,7 @@ Common error codes:
 | `10004` | Port number out of range |
 | `10005` | Port number already in use |
 
-See [Error Codes](Error-Codes.md) for the full list.
+See [Error Codes](https://wiki.seeedstudio.com/recamera_pro_api_error_codes) for the full list.
 
 ## Technical Support and Product Discussion
 

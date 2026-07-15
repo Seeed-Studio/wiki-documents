@@ -118,9 +118,9 @@ The Token is valid for 24 hours by default (`Max-Age=86400`). After it expires, 
 
 ## Next Steps
 
-* See [Authentication](Authentication.md) for the full login and password change reference
-* See [Common Conventions](Common-Conventions.md) for response formats and field naming rules
-* See [API Reference](API-Reference/) for endpoint descriptions organized by function
+* See [Authentication](https://wiki.seeedstudio.com/recamera_pro_api_authentication) for the full login and password change reference
+* See [Common Conventions](https://wiki.seeedstudio.com/recamera_pro_api_common_conventions) for response formats and field naming rules
+* See [API Reference](https://wiki.seeedstudio.com/recamera_pro_api_reference) for endpoint descriptions organized by function
 
 ## Technical Support and Product Discussion
 
