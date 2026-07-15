@@ -361,7 +361,7 @@ names: ["Barn Swallow","Common Firecrest","Common Nightingale","Eurasian Chaffin
 これらのモデルはImageNetで訓練されており、分類用にファインチューニングされています。
 これを使用して、私たちのデータで訓練します。
 
-これは[転移学習](https://www.bestaiweb.ai/glossary/transfer-learning/)として知られているものです。
+これは[転移学習](https://web.archive.org/web/20251006174754/https://neptune.ai/blog/transfer-learning-guide-examples-for-images-and-text-in-keras)として知られているものです。
 
 私は[YOLOv8l-cls](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l-cls.pt)モデルを使用します。おそらく他のモデルでも問題なく動作するでしょうが、リアルタイムが必要ないため、速度と精度のトレードオフになります。
 
