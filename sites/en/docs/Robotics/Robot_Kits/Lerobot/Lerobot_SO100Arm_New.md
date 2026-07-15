@@ -22,11 +22,8 @@ url: https://wiki.seeedstudio.com/lerobot_so100m_new/
 import Link from '@docusaurus/Link';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ImagePreviewer from '@site/src/components/robotics/ImagePreviewer';
 
 # Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot
-
-<ImagePreviewer selector='article img' />
 
 :::tip
 This tutorial maintenance has been updated to the latest version of [lerobot](https://huggingface.co/docs/lerobot/index), if you want to refer to the tutorial of the previous version, please click [here](https://wiki.seeedstudio.com/lerobot_so100m/).
