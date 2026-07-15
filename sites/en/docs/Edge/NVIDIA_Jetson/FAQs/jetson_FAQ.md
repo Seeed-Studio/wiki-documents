@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_FAQ
 last_update:
   date: 07/15/2026
-  author: Dayu
+  author: Seraphina
 createdAt: '2025-04-11'
 updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/Jetson_FAQ/
