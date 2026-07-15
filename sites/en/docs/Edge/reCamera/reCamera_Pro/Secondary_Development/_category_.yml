@@ -2,9 +2,9 @@ position: 4 # float position is supported
 label: 'Secondary Development'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
-className: recamera_pro_the_use_of_webui
+className: recamera_pro_secondary_development
 link:
   type: generated-index
-  slug: recamera_pro_the_use_of_webui
-  title: The Use of WebUI
-  description: reCamera Pro The Use of WebUI
+  slug: recamera_pro_secondary_development
+  title: Secondary Development
+  description: Secondary Development

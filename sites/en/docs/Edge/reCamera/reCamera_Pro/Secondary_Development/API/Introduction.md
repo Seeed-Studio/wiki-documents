@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_api_introduction
 sku: 10003420
-sidebar_position: 4
+sidebar_position: 1
 last_update:
   date: 07/15/2026
   author: Sizhao zhou

@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_api_error_codes
 sku: 10003420
-sidebar_position: 3
+sidebar_position: 5
 last_update:
   date: 07/15/2026
   author: Sizhao zhou
