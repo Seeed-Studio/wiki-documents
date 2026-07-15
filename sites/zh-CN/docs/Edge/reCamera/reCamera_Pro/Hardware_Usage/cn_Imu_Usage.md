@@ -1,6 +1,6 @@
 ---
 description: 本维基将简要介绍如何在设备上获取 IMU 数据。
-title: reCamera Pro IMU 使用
+title: IMU 使用
 keywords:
   - reCamera
   - reCamera Pro
@@ -13,23 +13,32 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-9'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_usage/
 ---
 
-# IMU 使用
+# reCamera Pro IMU 使用
+
 设备上配备的 IMU 型号为 ICM-42670-P，是一款集成 3 轴加速度计和 3 轴陀螺仪的 6 轴传感器。ICM-42670-P 的陀螺仪支持 ±250 / ±500 / ±1000 / ±2000 dps 的测量范围，而加速度计支持 ±2 / ±4 / ±8 / ±16 g 的测量范围。其内部数据以 16 位二进制补码格式输出。
+
 ## 数据路径
+
 reCamera PRO 为 IMU 使用标准 IIO 驱动，因此可以通过 IIO 接口直接获取原始数据。
 原始数据文件可以在目录 ***/sys/bus/iio/devices/iio:device1/*** 下找到。
 ![IMU_DATA_SAMPLE](https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO_imu_dir.png)
+
 ## 读取数据
-运行以下命令以读取对应的原始数据。下面的示例演示如何读取 X 轴加速度数据：
+
+运行以下命令以读取对应的原始数据。下面的示例演示了读取 X 轴加速度数据：
+
 ``` bash
 cat /sys/bus/iio/devices/iio:device1/in_accel_x_raw
 ```
+
 ## 使用 Python 获取数据
+
 可以使用 Python 轻松获取 IMU 数据。下面是一个简单示例：
+
 ```python
 #!/usr/bin/env python3
 DEVICE = "/sys/bus/iio/devices/iio:device1"
@@ -40,7 +49,6 @@ with open(f"{DEVICE}/in_anglvel_x_raw", "r") as f:
 gyro_x = raw * scale
 print(f"Gyroscope X: {gyro_x:.6f} rad/s")
 ```
-
 
 ## 技术支持与产品讨论
 
