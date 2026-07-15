@@ -1,6 +1,6 @@
 ---
 description: 开始使用 ReSpeaker XVF3800 USB 4-Mic Array——一款通过 USB 或 I2C 提供语音采集和跨平台支持的高性能语音接口模块。
-title: ReSpeaker XVF3800 USB Mic Array 入门指南
+title: reSpeaker XVF3800 USB Mic Array 入门指南
 keywords:
   - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array.webp
@@ -10,7 +10,7 @@ last_update:
   date: 11/10/2025
   author: Kasun Thushara
 createdAt: '2025-08-20'
-updatedAt: '2026-06-02'
+updatedAt: '2026-07-02'
 url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/
 ---
 
@@ -38,7 +38,7 @@ ReSpeaker XVF3800 USB 4-Mic Array 是一款搭载 XMOS XVF3800 的专业级 4 �
 
 - **唯一设备序列号**：内置 SN，支持多设备部署和高级设备管理
 
-- **双工作模式**：USB 即插即用模式用于快速连接 PC，INT-Device（I2S）模式用于嵌入式系统集成——可通过 USB 或 I2C 命令配置，并通过切换固件实现
+- **双工作模式**：USB 即插即用模式可快速连接 PC，INT-Device（I2S）模式可集成到嵌入式系统中——可通过 USB 或 I2C 命令配置，并通过切换固件实现
 
 - **开源兼容性**：可与 USB 主机（Windows、macOS、Raspberry Pi OS）以及 I2S 主机（XIAO 系列、ESP32、Arduino）配合使用。
 
@@ -46,33 +46,33 @@ ReSpeaker XVF3800 USB 4-Mic Array 是一款搭载 XMOS XVF3800 的专业级 4 �
 
 - **音频质量相当或更好**：与上一代产品相比
 
-## 硬件概览
+## 硬件总览
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/no-xiao-xvf.jpg" alt="pir" width={900} height="auto" /></p>
 
 ### 主要组件
 
-| **组件 / 特性**             | **描述**                                                                                             |
+| **组件 / 特性**              | **描述**                                                                                             |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- |
 | **主音频处理器**              | **XMOS XVF3800**，负责包括 AEC、波束成形、噪声抑制等在内的音频处理。                                  |
 | **麦克风阵列**                | **四路 PDM MEMS 麦克风** 组成的环形阵列，支持 **360° 远场语音采集（5m）**。                          |
 | **音频编解码器**              | **TLV320AIC3104**，负责音频转换和输出。                                                              |
 | **RGB LED**                   | **12 颗 WS2812** 可单独寻址的 RGB LED，用于可视化反馈（如状态、语音活动）。                          |
-| **静音按键**                  | 按下可 **静音/取消静音** 麦克风输入。                                                                |
+| **静音按钮**                  | 按下可 **静音/取消静音** 麦克风输入。                                                                |
 | **静音指示 LED**              | 点亮（通常为红色）以指示音频已被静音。                                                               |
-| **复位按键**                  | 为板卡/系统提供硬件复位。                                                                            |
+| **复位按钮**                  | 为板卡/系统提供硬件复位。                                                                            |
 | **USB Type-C 接口**           | 用于 **供电和数据传输**（符合 USB Audio Class 2.0）。                                               |
 | **3.5mm AUX 耳机插孔**        | 为耳机或有源音箱提供音频输出。                                                                      |
 | **扬声器连接器**              | **JST 扬声器接口**，支持 **5W 功放扬声器**。                                                         |
 | **调试焊盘**                  | 为 **XTAG4** 或其他编程器提供调试访问。                                                              |
 | **I2C 与 I2S 排针**           | 暴露的排针用于与外部设备进行 **I2C 和 I2S 通信**。                                                   |
-| **未使用 IO 焊盘（XIAO）**    | 连接到 XIAO 模组的额外 I/O 焊盘。                                                                   |
-| **I2S 与 I2C 通信**           | 通过这些协议支持与 Raspberry Pi、PC 等外部主机连接。                                                |
+| **未使用 IO 焊盘（XIAO）**    | 连接到 XIAO 模块的额外 I/O 焊盘。                                                                   |
+| **I2S 与 I2C 通信**           | 支持通过这些协议连接到 Raspberry Pi、PC 等外部主机。                                                |
 | **USB 与 INT-Device 模式**    | 双模式工作：即插即用 USB 模式或通过 I2S 的内部 INT 设备模式。                                       |
 | **唯一序列号**                | 内置 **设备 SN**，用于标识和多设备管理。                                                             |
-| **开源兼容性**                | 可与 **Arduino、Raspberry Pi、PC/Mac** 协同工作，并兼容 **XIAO 系列**。                              |
+| **开源兼容性**                | 可与 **Arduino、Raspberry Pi、PC/Mac** 一起使用，并兼容 **XIAO 系列**。                              |
 | **高级音频特性**              | AEC、波束成形、去混响、**DoA 检测**、基于 DNN 的噪声抑制、60dB AGC。                                |
-| **可视化反馈**                | 通过 **RGB LED 模式** 和 **状态指示灯** 显示设备状态和音频活动。                                    |
+| **可视化反馈**                | 通过 **RGB LED 灯效** 和 **状态指示灯** 显示设备状态和音频活动。                                    |
 | **音频质量**                  | 与 **基于 XVF3000 的上一代设计** 相当或更佳。                                                        |
 
 :::note
@@ -93,18 +93,18 @@ ReSpeaker XVF3800 提供两个版本——一个不带 XIAO，另一个板载 XI
 
 ### GPIO 概览
 
-reSpeaker XVF3800 暴露了 3 个输入引脚（GPI）和 5 个输出引脚（GPO）用于外部控制。你可以使用它们读取按键状态，或控制静音 LED、功放或其他 LED 等硬件。
+reSpeaker XVF3800 暴露了 3 个输入引脚（GPI）和 5 个输出引脚（GPO）用于外部控制。你可以使用它们读取按键状态，或控制静音 LED、功放或 LED 等硬件。
 
-| **引脚名称** | **方向**     | **功能**                                           |
-|--------------|---------------|----------------------------------------------------|
-| X1D09        | 输入 (RO)     | 静音按键状态（释放时为高电平）                     |
-| X1D13        | 输入 (RO)     | 悬空                                               |
-| X1D34        | 输入 (RO)     | 悬空                                               |
-| X0D11        | 输出 (RW)     | 悬空                                               |
-| X0D30        | 输出 (RW)     | 静音 LED + 麦克风静音控制（高电平 = 静音）         |
-| X0D31        | 输出 (RW)     | 功放使能（低电平 = 使能）                          |
-| X0D33        | 输出 (RW)     | WS2812 LED 供电控制（高电平 = 打开）               |
-| X0D39        | 输出 (RW)     | 悬空                                               |
+| **引脚名称** | **方向** | **功能**                                             |
+|--------------|----------|------------------------------------------------------|
+| X1D09        | 输入 (RO) | 静音按键状态（释放时为高电平）                       |
+| X1D13        | 输入 (RO) | 悬空                                                 |
+| X1D34        | 输入 (RO) | 悬空                                                 |
+| X0D11        | 输出 (RW) | 悬空                                                 |
+| X0D30        | 输出 (RW) | 静音 LED + 麦克风静音控制（高电平 = 静音）          |
+| X0D31        | 输出 (RW) | 功放使能（低电平 = 使能）                           |
+| X0D33        | 输出 (RW) | WS2812 LED 供电控制（高电平 = 打开）                |
+| X0D39        | 输出 (RW) | 悬空                                                 |
 
 ## 入门指南
 
@@ -117,14 +117,14 @@ reSpeaker XVF3800 暴露了 3 个输入引脚（GPI）和 5 个输出引脚（GP
 
 ### 开箱即用
 
-#### DOA（声源到达方向）
+#### DOA（声源方向）
 
-你可以体验 LED 阵列跟随语音入射方向变化的效果。
+你可以体验 LED 阵列跟随输入语音方向变化的效果。
 
 <div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/nYxsTq_2bw4"
-          title="ReSpeaker XVF3800 即插即用：启动灯光秀与 DOA 演示"
+          title="ReSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -132,12 +132,12 @@ reSpeaker XVF3800 暴露了 3 个输入引脚（GPI）和 5 个输出引脚（GP
   </iframe>
 </div>
 
-#### 静音按键
+#### 静音按钮
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mute.jpg" alt="pir" width={600} height="auto"/></p>
 
-ReSpeaker 上的 **静音按键（Mute button）** 用于临时 **禁用麦克风阵列的语音采集**。
-按下静音按键时会发生什么？
+ReSpeaker 上的 **静音按钮** 用于临时 **禁用麦克风阵列的语音采集**。
+按下静音按钮后会发生什么？
 
 - **麦克风被静音**——外部声音将不再被采集或处理。
 - **红色 LED 会点亮**，表示 **静音模式已激活**。
@@ -147,48 +147,55 @@ ReSpeaker 上的 **静音按键（Mute button）** 用于临时 **禁用麦克�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mute.gif" alt="pir" width={600} height="auto"/></p>
 
-#### 复位按键
+#### 复位按钮
 
-复位（RST）按键提供对 XVF3800 的硬件复位——按下时会重新启动芯片，并从头重新初始化系统，就像执行了一次完整的断电重启。
+复位（RST）按钮提供对 XVF3800 的硬件复位——按下时会重新启动芯片并从头初始化系统，就像执行了一次完整的断电重启。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/reset.gif" alt="pir" width={600} height="auto"/></p>
 
 #### 扬声器连接
 
-在这里你可以看到如何根据自己的音频输出偏好，选择使用 3.5mm AUX 耳机插孔或板载 JST 扬声器接口来连接扬声器。
+你可以根据自己的音频输出偏好，通过 3.5mm AUX 耳机插孔或板载 JST 扬声器接口连接扬声器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/audio.gif" alt="pir" width={600} height="auto"/></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/speaker.jpg" alt="pir" width={600} height="auto"/></p>
 
+:::note
+
+为确保最佳的语音拾取性能以及音频算法的正常工作，请确保设备背面的麦克风端口（Mic Inlet / Sound Hole）朝向声源。麦克风端口位于印有 Seeed Studio 标志的一侧。 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/xvf3800_outlet.jpg" alt="pir" width={800} height="auto"/></p>
+:::
+
 #### 安全模式
 
-安全模式是 ReSpeaker XVF3800 上的一种特殊恢复模式，它允许你通过 USB DFU 或 I2C 为设备（如 Raspberry Pi 和 ESP32）烧录固件。如果你之前已经烧录了 I2S 固件，并希望切换回 USB 固件，可以进入安全模式，然后使用 USB DFU 重新烧录 USB 固件。
+安全模式是 ReSpeaker XVF3800 上的一种特殊恢复模式，可通过 USB DFU 或 I2C 为 Raspberry Pi、ESP32 等设备烧录固件。如果你之前已经烧录了 I2S 固件并希望切换回 USB 固件，可以进入安全模式，并使用 USB DFU 重新烧录 USB 固件。
 
 :::note
-ReSpeaker XVF3800 上的每种固件类型都支持不同的更新方式：
+ReSpeaker XVF3800 上的每种固件类型支持不同的更新方式：
 
-- **USB 固件** 仅支持 **USB DFU**，这意味着你可以通过 USB 连接更新设备。但它 **不支持 I2C DFU**。
+- **USB 固件**仅支持 **USB DFU**，这意味着你可以通过 USB 连接来更新设备。但是，它**不支持 I2C DFU**。
 
-- **I2S 固件** 则相反——它支持 **I2C DFU**，允许通过 I2C 接口进行固件更新，但 **不支持 USB DFU**。
+- **I2S 固件**则相反——它支持 **I2C DFU**，允许通过 I2C 接口进行固件更新，但**不支持 USB DFU**。
 
-- 存储在 Factory 分区中的**安全模式固件**是最灵活的。它支持**USB DFU 和 I2C DFU 两种方式**。
+- 存储在 Factory 分区中的 **Safe Mode 固件**是最灵活的。它同时支持 **USB DFU 和 I2C DFU**。
 
 :::
 
-**何时使用安全模式**
+**何时使用 Safe Mode**
 
 - 你的固件工作异常（例如 USB 未被识别、LED 未按预期点亮）。
 - 你需要重新烧录新固件，但当前固件没有响应。
 - 你不小心烧录了错误的内容并希望恢复。
 
-**如何进入安全模式**
+**如何进入 Safe Mode**
 
-- 将设备完全断电关机。
-- 按住 Mute 按钮不放。
+- 完全关闭设备电源。
+- 按住 Mute 按钮。
 - 在按住 Mute 按钮的同时，重新接通电源。
-- 红色 LED 将开始闪烁——这表明设备已进入安全模式。
-- 现在设备运行的是存储在 Factory 分区中的安全模式固件。
+- 红色 LED 将开始闪烁——这表明设备已进入 Safe Mode。
+- 此时设备运行的是存储在 Factory 分区中的 Safe Mode 固件。
 
 ### 更新固件
 
@@ -206,7 +213,7 @@ import TabItem from '@theme/TabItem';
 
 USB 固件适用于通过 USB 硬件接口与主机操作系统（如 **Windows、Linux 和 macOS**）进行通信的场景。
 
-提供两种固件变体：**respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin**，提供**2 通道**音频；以及 **respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin**，提供**6 通道**音频。两种固件版本均以 **16 kHz** 采样率和 **32 位**位深工作。
+提供两种固件变体：**respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin**，提供**2 通道**音频；以及 **respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin**，提供**6 通道**音频。两种固件版本均以 **16 kHz** 采样率和 **32 位**位深运行。
 
 你可以在[此链接](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)中查看这些固件文件
 
@@ -232,7 +239,7 @@ I2S 固件适用于设备连接到 **XIAO ESP32S3** 等微控制器主机时使�
 <TabItem value="HA" label="HA">
 
 Home Assistant 固件是另一种基于 I2S 的固件，专门为与 Home Assistant 集成而设计。该优化固件使用 2 通道音频和 48 kHz 采样率，在 Home Assistant 环境中提供更好的兼容性和性能。
-你可以在[这里](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)查看该固件
+你可以从[这里](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)查看该固件
 
 | 固件 | 通道数 | 说明 |
 |---------|----------|-------|
@@ -281,7 +288,7 @@ dfu-util -l
   - 选择 `reSpeaker 3800` 或 `reSpeaker XVF3800 4-Mic Array`  
   - 安装 **WinUSB** 驱动  
   - 重新上电设备  
-  - 再次运行 `dfu-util -l` 以确认设备已被检测到。
+  - 再次运行 `dfu-util -l` 以确认检测成功。
 
 </TabItem>
 
@@ -423,15 +430,15 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac4.png" alt="pir" width={600} height="auto"/></p>
 
 4. 点击 **OK**
-5. 可以开始录音了！
+5. 准备开始录音！
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac5.png" alt="pir" width={600} height="auto"/></p>
 
 </TabItem>
 
-<TabItem value="linux" label="Raspberry Pi / Linux">
+<TabItem value="linux" label="树莓派 / Linux">
 
-### 在 Raspberry Pi 上录音（命令行）
+### 在树莓派上录音（命令行）
 
 1. **查找声卡编号**：
 
@@ -452,7 +459,7 @@ card 4: Array [reSpeaker XVF3800 4-Mic Array], device 0: USB Audio [USB Audio]
 
 ---
 
-2. **录音（5 秒）**：
+2. **录制音频（5 秒）**：
 
 ```bash
 arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
@@ -468,7 +475,7 @@ arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 alsamixer
 ```
 
-在 alsamixer 中，使用左右方向键导航到正确的声卡设备。使用上方向键来增加音量。
+在 alsamixer 中，使用左右方向键导航到正确的声音设备。使用上方向键增加音量。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alsa.png" alt="pir" width={600} height="auto"/></p>
 
@@ -478,11 +485,11 @@ alsamixer
 aplay -D plughw:4,0 output.wav
 ```
 
-### 在 Raspberry Pi 上录音（Audacity）
+### 在树莓派上录音（Audacity）
 
 1. **安装 Pi-Apps（如果尚未安装）**
 
-在 Raspberry Pi 上打开终端。运行以下命令来安装 Pi-Apps
+在树莓派上打开终端。运行以下命令安装 Pi-Apps
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
@@ -502,7 +509,7 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 - 在 Audio Settings 窗口中：
   - 选择正确的 Recording Device（例如 reSpeaker XVF3800）。
   - 选择合适的 Playback Device（例如 reSpeaker XVF3800）。
-  - 确保 Host 设置为 ALSA，以在 Raspberry Pi 上获得最佳兼容性。
+  - 确保 Host 设置为 ALSA，以在树莓派上获得最佳兼容性。
 - 点击 OK 以应用设置。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/raspberry-audiopy.PNG" alt="pir" width={600} height="auto"/></p>
@@ -568,8 +575,8 @@ python xvf_host.py [options] command [value(s)...]
 | Option         | Description                                           |
 | -------------- | ----------------------------------------------------- |
 | `-l`, `--list` | 列出所有支持的命令及其详细信息                       |
-| `--vid`        | 设置 USB Vendor ID（默认：`0x2886`）                 |
-| `--pid`        | 设置 USB Product ID（默认：`0x001A`）                |
+| `--vid`        | 设置 USB 供应商 ID（默认：`0x2886`）                 |
+| `--pid`        | 设置 USB 产品 ID（默认：`0x001A`）                   |
 | `--values`     | 为写入命令提供数值（可选）                           |
 
 
@@ -648,7 +655,7 @@ AEC_MIC_ARRAY_GEO:
 
 我们准备了一个桌面应用，用于控制和配置你的 reSpeaker 设备。
 
-通过该应用，你可以：
+通过此应用，你可以：
 
 * 连接你的 reSpeaker 设备
 * 配置音频设置（噪声抑制、增益、AEC 和通道配置）
@@ -658,7 +665,7 @@ AEC_MIC_ARRAY_GEO:
 
 ### 安装应用
 
-从以下地址下载最新发行版：
+从以下地址下载最新版本：
 
 https://github.com/respeaker/respeaker-console/releases
 
@@ -685,14 +692,14 @@ https://github.com/respeaker/respeaker-console/releases
 
 **步骤 6：** 拔下并重新连接设备。
 
-**步骤 7：** 运行以下命令以确认设备已被检测到：
+**步骤 7：** 运行以下命令以验证设备是否被检测到：
 
 ```bash
 dfu-util -l
 ```
 
 :::note
-`dfu-util.exe` 已与应用一起打包，因此无需单独安装。
+`dfu-util.exe` 已与应用打包在一起，因此无需单独安装。
 :::
 
 ### Linux：安装 dfu-util 并配置 USB 权限
@@ -703,7 +710,7 @@ dfu-util -l
 sudo apt install dfu-util
 ```
 
-访问 USB 还需要配置 **udev** 规则。
+访问 USB 还需要一个 **udev** 规则。
 
 创建以下文件：
 
@@ -735,7 +742,7 @@ brew install dfu-util
 
 ### 使用应用
 
-安装应用后，启动它以进入 **reSpeaker Console**。
+安装应用后，启动它以访问 **reSpeaker Console**。
 
 下面我们依次介绍侧边栏中的各个部分。
 
@@ -746,12 +753,12 @@ brew install dfu-util
 1. 点击 **Scan Devices**。
 2. 应用会列出所有检测到的设备。
 3. 选择你的设备。
-4. 点击 **Connect** 以建立连接。
+4. 点击 **Connect** 建立连接。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/scan.jpg" alt="Device Connection" width={800} height="auto"/></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/connect.jpg" alt="Device Connection" width={800} height="auto"/></p>
 
-#### Audio
+#### 音频
 
 **Audio** 选项卡允许你配置和增强音频处理流水线。
 
@@ -766,7 +773,7 @@ brew install dfu-util
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/audio.jpg" alt="Audio Tab" width={800} height="auto"/></p>
 
-#### Monitor
+#### 监控
 
 **Monitor** 选项卡提供麦克风处理的实时可视化。
 
@@ -776,13 +783,13 @@ brew install dfu-util
 * 语音活动检测（VAD）
 * 波束能量水平
 
-这些指示器有助于你确认设备是否正确检测到语音。
+这些指示器有助于你验证设备是否正确检测到语音。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/monitor.jpg" alt="Monitor Tab" width={800} height="auto"/></p>
 
 #### LEDs
 
-**LEDs** 选项卡允许你自定义 LED 灯环。
+**LEDs** 选项卡可让你自定义 LED 灯环。
 
 可用功能包括：
 
@@ -795,29 +802,29 @@ brew install dfu-util
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/led.jpg" alt="LEDs Tab" width={800} height="auto"/></p>
 
-#### Parameters
+#### 参数
 
 **Parameters** 选项卡提供对所有可配置设备参数的访问。
 
-这些设置按以下类别进行组织：
+设置按以下类别进行组织，例如：
 
 * Audio
-* 声学回声消除（AEC）
-* 后处理
+* Acoustic Echo Cancellation (AEC)
+* Post Processing
 * LEDs / GPIO
-* 系统
+* System
 
-你可以通过该界面直接更新参数值。
+通过此界面，你可以直接更新参数值。
 
-每个参数都包含说明，帮助你理解其用途和推荐取值范围。
+每个参数都包含说明，帮助你了解其用途和推荐取值范围。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/parameters.jpg" alt="Parameters Tab" width={800} height="auto"/></p>
 
 ## 故障排查
 
-### 扬声器输出的回放声音是否不够大？
+### 扬声器播放声音是否不够响？
 
-如果 **ReSpeaker XVF3800** 在 Linux 上的扬声器输出音量过低，你可能需要调整 XVF3800 声卡的 **ALSA 混音器级别**。请按照以下步骤提高输出音量。
+如果 **ReSpeaker XVF3800** 在 Linux 上的扬声器输出音量过低，你可能需要调整 XVF3800 声卡的 **ALSA 混音器级别**。按照以下步骤来提高输出音量。
 
 **步骤 1：打开 ALSA Mixer**
 
@@ -830,14 +837,14 @@ brew install dfu-util
 
 **步骤 2：选择 XVF3800 声卡**
 
-1. 按 **F6** 打开声卡选择菜单。
+1. 按下 **F6** 打开声卡选择菜单。
 2. 使用 **上下方向键** 高亮选择 **XVF3800** 声卡。
-3. 按下 **Enter** 键确认选择。
+3. 按下 **Enter** 确认选择。
 
 **步骤 3：调整 PCM-1 音量**
 
-1. 使用**左右方向键**导航到 **PCM-1**。
-2. 使用**上方向键**将音量级别提高到 **100%**。
+1. 使用 **左右方向键** 导航到 **PCM-1**。
+2. 使用 **上方向键** 将音量级别提高到 **100%**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
 
@@ -852,7 +859,7 @@ brew install dfu-util
 
 **步骤 5：附加选项（使用 PulseAudio）**
 
-如果在调整 ALSA 电平后仍然无法清晰听到声音，请尝试安装 **PulseAudio Volume Control** 以进行更精细的音量调节：
+如果在调整 ALSA 级别后仍然无法清晰听到声音，可以尝试安装 **PulseAudio Volume Control** 以进行更精细的音量调节：
 
 ```bash
 sudo apt install pavucontrol -y
@@ -866,7 +873,7 @@ sudo apt install pavucontrol -y
 
 ### 刷写固件后在 Windows 中无法作为声音设备使用？
 
-打开开始菜单并输入 Device manager。找到与 reSpeaker XVF 3800 相关的设备，右键点击它们并选择 Uninstall devices。之后，重启设备（USB 拔插），Windows 会为其重新安装正确的声卡驱动程序。
+打开开始菜单并输入 Device manager。找到与 reSpeaker XVF 3800 相关的设备，右键点击它们并选择 Uninstall devices。之后，重启设备（USB 拔插），Windows 会为其重新安装正确的声卡驱动。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
@@ -878,7 +885,7 @@ sudo apt install pavucontrol -y
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
