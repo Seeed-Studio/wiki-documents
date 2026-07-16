@@ -202,7 +202,7 @@ Click `Enter DFU Mode`, there will be a serial port named `X1 xxx` displayed. Cl
 
 Connect the USB cable to your PC, press and hold the device button, then **quickly** connect the charging cable twice.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/PluginPlugout.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 </Tabs>
@@ -391,6 +391,47 @@ The buzzer is enabled by default. If you want to disable the buzzer, set `Alert 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/buzzer.png" alt="pir" width={200} height="auto" /></p>
 
+### Configure Message Alert
+
+Message Alert can be configured in `External Notification`.
+
+<Tabs>
+
+<TabItem value="aaa" label="IOS">
+
+Nevigate to `Setting` -> `External Notification`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/ExternalNotificationIOS.png" alt="pir" width={300} height="auto" /></p>
+
+You can configure to `buzzer off + vibra off`. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IONotificationOff.png" alt="pir" width={600} height="auto" /></p>
+
+Or `buzzer on + vibra on`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IOSNotificationOn.png" alt="pir" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="bbb" label="Android">
+
+Nevigate to `Setting` -> `Module Configuration` -> `External Notification`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Module_Notification_Android.png" alt="pir" width={600} height="auto" /></p>
+
+Enable `External notification enabled`, then you can configure to `buzzer only`, `vibra only` or `buzzer on + vibra on`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/NotificationSettingConfig.png" alt="pir" width={900} height="auto" /></p>
+
+Disable `External notification enabled`, then you can configure to `buzzer off + vibra off`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Notificationoff.jpg" alt="pir" width={300} height="auto" /></p>
+
+
+</TabItem>
+
+</Tabs>
+
 ## FAQ
 
 
@@ -447,7 +488,7 @@ The device will restart repeatedly, and the serial port connects and disconnects
 
 - Step 1: Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the charging cable twice
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/PluginPlugout.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
 
 The device is in DFU mode if the white LED is solid on.
 
