@@ -74,7 +74,7 @@ A highly integrated, card-sized form factor optimized around a high-capacity 110
 |**Battery Capacity**|Rechargeable lithium battery, 1100mAh|
 |**Battery Life Monitoring**|Periodic uplink battery level|
 |<p>**Charge Cable**</p><p>**(Adapter not included)**</p>|USB Type-C charging cable, 20 cm|
-|**Power Input Voltage**|4.4V|
+|**Device Power Input**|5V, 0.55A|
 |**Charging Temperature Limit**|5 to +45℃|
 
 ### Pin List
