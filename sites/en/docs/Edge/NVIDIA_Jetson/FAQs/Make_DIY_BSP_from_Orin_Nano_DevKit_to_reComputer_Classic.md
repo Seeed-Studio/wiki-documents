@@ -12,7 +12,7 @@ keywords:
   - Jetson
   - JetPack
   - custom image
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reComputer-J4012/5.png
 slug: /make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic
 sku: 110110144, 110110145
 last_update:
