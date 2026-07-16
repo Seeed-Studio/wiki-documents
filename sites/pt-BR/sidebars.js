@@ -1228,6 +1228,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/pt_XIAO_nRF54LM20A-Sense_with_MicroPython',
               ],
             },
+            {
+              type: 'category',
+              label: 'Plataforma',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/pt_XIAO_nRF54LM20A-Sense_with_Arduino',
+              ],
+            },
           ],
         },
         {
