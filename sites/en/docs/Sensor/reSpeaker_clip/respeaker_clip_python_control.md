@@ -277,6 +277,8 @@ Convert Opus recordings to WAV.
 python tools/decode_opus.py <input_file.opus> <output_file.wav>
 ```
 
+> Windows note: if decoding fails because the Opus native library cannot be found, download a prebuilt `opus.dll` from the ShiftMediaProject releases, extract it, and place `opus.dll` in your virtual environment's `Scripts` folder (for example, `D:\clip\tests\.venv\Scripts\`).
+
 ---
 
 ## Test Scripts 
