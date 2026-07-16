@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-20'
-updatedAt: '2026-06-15'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_bluetooth_lowpower/
 ---
 
@@ -42,9 +42,9 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_bluetooth_lowpower/
 </div>
 
 
-Bluetooth Low Energy（BLE）は、Bluetooth 4.0 で導入された低消費電力の無線通信規格です。断続的な少量データの送信に特化して設計されており、マイクロアンペアレベルの超低平均電流消費を維持しながら、数十メートルの範囲でワイヤレス接続を実現します。ウェアラブルデバイス、スマートホームセンサー、屋内測位、産業用 IoT などのシナリオで広く利用されています。
+Bluetooth Low Energy（BLE）は、Bluetooth 4.0 で導入された低消費電力の無線通信規格です。断続的な少量データ伝送向けに設計されており、マイクロアンペアレベルの超低平均電流消費を維持しながら、数十メートルの範囲でワイヤレス接続を実現します。ウェアラブルデバイス、スマートホームセンサー、屋内測位、産業用 IoT などのシナリオで広く利用されています。
 
-nRF54LM20A SoC を搭載した XIAO nRF54LM20A シリーズは、Bluetooth LE、Matter、Thread、Zigbee、および 2.4GHz 独自プロトコルをサポートし、低レイテンシーシナリオに最適な 4 Mbps のピークデータレートを実現します。また、Bluetooth Channel Sounding と Bluetooth Mesh にも対応しています。本記事では、2 つの実用的な例、すなわち基本的なブロードキャスト Beacon 送信と、Central デバイスと Peripheral デバイス間の BLE LED Button Service（LBS）接続を通して、その BLE 機能を説明します。
+nRF54LM20A SoC を搭載した XIAO nRF54LM20A シリーズは、Bluetooth LE、Matter、Thread、Zigbee、および 2.4GHz 独自プロトコルをサポートし、低レイテンシーシナリオに最適な 4 Mbps のピークデータレートを実現します。さらに、Bluetooth Channel Sounding と Bluetooth Mesh にも対応しています。本記事では、基本的なブロードキャスト Beacon 送信と、Central デバイスと Peripheral デバイス間の BLE LED Button Service（LBS）接続という 2 つの実用的な例を通して、その BLE 機能を説明します。
 
 :::tip
 
@@ -55,7 +55,7 @@ nRF54LM20A SoC を搭載した XIAO nRF54LM20A シリーズは、Bluetooth LE、
 
 ## ハードウェアの準備
 
-BLE LBS のサンプルを実行する場合は、開始前に少なくとも 2 枚の XIAO nRF54LM20A Sense ボードを用意してください。
+BLE LBS のサンプルを実行する場合は、作業を始める前に少なくとも 2 枚の XIAO nRF54LM20A Sense ボードを用意してください。
 
 <div className="table-center">
 <table align="center">
@@ -121,7 +121,7 @@ Seeed Studio XIAO nRF54LM20A のパッケージには、専用の 2.4 GHz アン
 
 #### ソフトウェア
 
-1. `app.overlay` で関連するデバイスツリー設定を有効にし、BLE コントローラをネイティブの Zephyr 実装に切り替えます。
+1. `app.overlay` で関連するデバイスツリー設定を有効にし、BLE コントローラを Zephyr ネイティブ実装に切り替えます。
 
 ```dts
 /* Enable Zephyr native BLE controller (LL SW Split) */
@@ -137,7 +137,7 @@ Seeed Studio XIAO nRF54LM20A のパッケージには、専用の 2.4 GHz アン
 
 ```
 
-2. `prj.conf` で関連する Bluetooth 設定を有効にし、ログ出力モードを設定して、Bluetooth デバイス名を **XIAO-Beacon** に変更します。
+2. `prj.conf` で関連する Bluetooth 設定を有効にし、ログ出力モードを設定し、Bluetooth デバイス名を **XIAO-Beacon** に変更します。
 
 ```conf
 # GPIO
@@ -199,6 +199,20 @@ LOG_MODULE_REGISTER(ble_beacon, LOG_LEVEL_INF);
 
 static uint32_t manufacturer_counter;
 
+static const uint8_t adv_flags[] __aligned(4) = {
+    BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR,
+};
+
+static const uint8_t adv_name[] __aligned(4) = CONFIG_BT_DEVICE_NAME;
+
+static uint8_t manuf_data[MANUF_DATA_SIZE] __aligned(4);
+
+static const struct bt_data ad[] __aligned(4) = {
+    BT_DATA(BT_DATA_FLAGS, adv_flags, sizeof(adv_flags)),
+    BT_DATA(BT_DATA_NAME_COMPLETE, adv_name, sizeof(adv_name) - 1),
+    BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
+};
+
 /* Power enable regulator (GPIO1_12) - must be enabled before BLE init */
 static const struct device *const power_en_dev =
     DEVICE_DT_GET(DT_NODELABEL(power_en));
@@ -206,6 +220,19 @@ static const struct device *const power_en_dev =
 static void adv_update_work_handler(struct k_work *work);
 
 static K_WORK_DELAYABLE_DEFINE(adv_update_work, adv_update_work_handler);
+
+static void fill_manuf_data(uint32_t counter)
+{
+    /* [Company ID (2B)][Counter (4B)][Custom (2B)] */
+    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
+    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
+    manuf_data[2] = (counter >> 0) & 0xFF;
+    manuf_data[3] = (counter >> 8) & 0xFF;
+    manuf_data[4] = (counter >> 16) & 0xFF;
+    manuf_data[5] = (counter >> 24) & 0xFF;
+    manuf_data[6] = 0xAA;
+    manuf_data[7] = 0xBB;
+}
 
 static int enable_power(void)
 {
@@ -230,26 +257,9 @@ static int enable_power(void)
 static void adv_update_work_handler(struct k_work *work)
 {
     int err;
-    uint8_t manuf_data[MANUF_DATA_SIZE];
 
     manufacturer_counter++;
-
-    /* Build manufacturer data: [Company ID (2B)][Counter (4B)][Custom (2B)] */
-    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
-    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-    manuf_data[2] = (manufacturer_counter >> 0) & 0xFF;
-    manuf_data[3] = (manufacturer_counter >> 8) & 0xFF;
-    manuf_data[4] = (manufacturer_counter >> 16) & 0xFF;
-    manuf_data[5] = (manufacturer_counter >> 24) & 0xFF;
-    manuf_data[6] = 0xAA;
-    manuf_data[7] = 0xBB;
-
-    const struct bt_data ad[] = {
-        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-        BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
-    };
+    fill_manuf_data(manufacturer_counter);
 
     err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
     if (err < 0) {
@@ -264,7 +274,6 @@ static void adv_update_work_handler(struct k_work *work)
 int main(void)
 {
     int err;
-    uint8_t init_data[MANUF_DATA_SIZE];
 
     LOG_INF("BLE Manufacturer Data Beacon");
 
@@ -286,21 +295,7 @@ int main(void)
     LOG_INF("BLE initialized");
 
     /* Initial advertising data with counter = 0 */
-    init_data[0] = MANUF_COMPANY_ID & 0xFF;
-    init_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-    init_data[2] = 0;
-    init_data[3] = 0;
-    init_data[4] = 0;
-    init_data[5] = 0;
-    init_data[6] = 0xAA;
-    init_data[7] = 0xBB;
-
-    const struct bt_data ad[] = {
-        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-        BT_DATA(BT_DATA_MANUFACTURER_DATA, init_data, sizeof(init_data)),
-    };
+    fill_manuf_data(0);
 
     err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
     if (err < 0) {
@@ -327,7 +322,7 @@ int main(void)
 
 1. ファームウェアを書き込んだ後、nRF Connect アプリをインストールして BLE デバイスをスキャン・検出します。
 
-同時に、主要なモバイルアプリストアで nRF Connect アプリを検索してダウンロードできます。これにより、スマートフォンで Bluetooth デバイスをスキャンして接続することができます。
+同時に、主要なモバイルアプリストアで nRF Connect アプリを検索してダウンロードすることができ、これによりスマートフォンで Bluetooth デバイスをスキャンして接続できます。
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
@@ -343,7 +338,7 @@ int main(void)
 </table>
 </div>
 
-- 取得した Manufacturer Data は 16 進数の値 `<0x0059> 0x03000000AABB` です。プログラムコードを確認すると、`0x03000000` の部分は現在のカウンタ値が 3 であることを示しています。
+- 取得された Manufacturer Data は 16 進値 `<0x0059> 0x03000000AABB` です。プログラムコードを確認すると、`0x03000000` の部分は現在のカウンタ値が 3 であることを示しています。
 
 ```c
 #define MANUF_COMPANY_ID    0x0059
@@ -886,7 +881,7 @@ monitor_speed = 115200
 ```
 
 
-##### BLE Peripheral
+##### BLE ペリフェラル
 
 1. `CMakeLists.txt` でプロジェクトを設定します。
 
@@ -1156,13 +1151,13 @@ monitor_speed = 115200
 
 #### 結果
 
-1. Peripheral 用ファームウェアを 1 枚の XIAO ボードに、Central 用ファームウェアを別のボードに書き込みます。
+1. ペリフェラル用ファームウェアを 1 枚の XIAO ボードに、セントラル用ファームウェアを別のボードに書き込みます。
 
-2. 両方のボードをリセットします。接続が確立される前は、Peripheral の LED はアドバタイジングを示すために点滅し、Central の LED はスキャン中であることを示すために点滅します。
+2. 両方のボードをリセットします。接続が確立される前は、ペリフェラルの LED はアドバタイジングを示すために点滅し、セントラルの LED はスキャン中であることを示すために点滅します。
 
-3. Central が Peripheral を検出すると、2 枚のボードは自動的に接続されます。接続が確立された後は、両方の LED の点滅が止まります。
+3. セントラルがペリフェラルを検出すると、2 枚のボードは自動的に接続されます。接続が確立された後は、両方の LED の点滅が止まります。
 
-4. Central ボード上の BOOT ボタンを押します。Central は GATT Write Characteristic を介して Peripheral に `0` または `1` を書き込み、Peripheral はそれに応じて LED を更新します。
+4. セントラルボード上の BOOT ボタンを押します。セントラルは GATT Write Characteristic を介してペリフェラルに `0` または `1` を書き込み、ペリフェラルはそれに応じて LED を更新します。
 
 <div style={{textAlign: 'center'}}>
   <img
@@ -1172,15 +1167,15 @@ monitor_speed = 115200
   />
 </div>
 
-このサンプルを通して、BLE Advertising、Scanning、自動接続、GATT サービスディスカバリ、および一方の開発ボード上のボタンを使って別の開発ボード上の LED をリモート制御するという、基本的な通信プロセスを含む、完全な BLE Central/Peripheral アプリケーションの構築方法を学ぶことができます。
+このサンプルを通して、BLE アドバタイジング、スキャン、自動接続、GATT サービスディスカバリ、そして一方の開発ボード上のボタンを使って別の開発ボード上の LED をリモート制御するという、基本的な通信プロセスを含む、完全な BLE セントラルおよびペリフェラルアプリケーションの構築方法を学ぶことができます。
 
 ## まとめ
 
-このサンプルでは、BLE Advertising、Scanning、自動接続、GATT サービスディスカバリ、および GATT Write Characteristic を介したリモート LED 制御を含む、BLE Central/Peripheral アプリケーションの構築方法を示しました。
+このサンプルでは、BLE アドバタイジング、スキャン、自動接続、GATT サービスディスカバリ、および GATT Write Characteristic を介したリモート LED 制御を含む、BLE セントラルおよびペリフェラルアプリケーションの構築方法を示しました。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
