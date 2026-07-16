@@ -4,17 +4,17 @@ title: Jetson 使用常见问题解答
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_FAQ
 last_update:
-  date: 07/15/2026
+  date: 7/5/2023
   author: Seraphina
 createdAt: '2025-04-11'
-updatedAt: '2026-07-15'
+updatedAt: '2026-06-05'
 url: https://wiki.seeedstudio.com/cn/Jetson_FAQ/
 ---
 
 
 本文档包含所有与 Jetson 系列产品相关的常见问题。如果你在使用 Jetson 时遇到任何问题，这将对你非常有帮助。
 
-#### Q1: 安装问题排查
+#### Q1: 安装故障排查
 
 详情请点击[这里](/cn/Troubleshooting_Installation)
 
@@ -34,15 +34,15 @@ url: https://wiki.seeedstudio.com/cn/Jetson_FAQ/
 
 详情请点击[这里](/cn/get_the_system_log_of_recomputer_j30_and_j40)
 
-#### Q6: Jetson 刷机过程中常见的刷机错误。
+#### Q6: Jetson 烧录过程中常见的烧录错误。
 
 详情请点击[这里](/cn/usb_timeout_during_flash)
 
-#### Q7: 刷机后无法使用 USB-A 接口、以太网接口，或者没有 HDMI 显示。
-**A:** 请检查文件完整性（例如，我们提供了 SHA256 校验和）。对于某些载板（尤其是 A60X 系列），请确保驱动补丁已成功复制/应用到 **Linux_for_tegra** 目录中。注意有些文件需要 **sudo** 权限，在复制目录时，请确保命令中包含 **-r** 参数。
+#### Q7: 烧录设备后，我无法使用 USB-A 接口、以太网接口，或者没有 HDMI 显示。
+**A:** 请检查文件完整性（例如，我们提供了 SHA256 校验和）。对于某些载板（尤其是 A60X 系列），请确保驱动补丁已成功复制/应用到 **Linux_for_tegra** 目录中。由于有些文件需要 **sudo** 权限，在复制目录时，请确保命令中包含 **-r** 参数。
 
-#### Q8: 在执行 "sudo apt-get update && sudo apt-get upgrade" 命令后，系统崩溃/无法启动/黑屏/外设驱动丢失。
-**A:** 这些问题可以归纳为：**“为什么在自定义载板上不能使用 apt upgrade 升级系统？”** 简单来说：在 **自定义/第三方** 载板上**不要**运行 apt upgrade 命令。此外，请避免运行任何包含 apt upgrade 命令的脚本，或在 Ubuntu 中使用带图形界面的更新工具。从服务器获取的 Debian 软件包并不会考虑我们自定义载板的具体设计，强制升级可能导致不兼容，从而使设备变砖。该升级流程仅与官方开发套件兼容。要解决这些问题，请按照我们的指南重新刷写 JetPack。
+#### Q8: 在执行 "sudo apt-get update && sudo apt-get upgrade" 命令后，我的系统崩溃/无法启动/黑屏/外设驱动丢失。
+**A:** 这些问题可以归结为 **“为什么在自定义载板上不能使用 apt upgrade 升级系统？”** 简单来说：在 **自定义/第三方** 载板上 **不要** 运行 apt upgrade 命令。此外，请避免运行任何包含 apt upgrade 命令的脚本，或在 Ubuntu 中使用图形界面的更新工具。服务器上的 Debian 软件包并未考虑我们自定义载板的具体设计，强行升级可能导致不兼容，从而使设备变砖。此过程仅与官方开发套件兼容。要解决这些问题，请按照我们的指南重新烧录 JetPack。
 
 #### Q9: 如果你们说不能执行 apt upgrade，那我该如何升级软件包？如果不升级软件会有安全风险吗？
 
@@ -59,8 +59,8 @@ For details, please click [here](/cn/updating_jetpack_with_ota) -->
 #### Q12: 如何在 Jetson-nano 上启用 SPI 接口？
 详情请点击[这里](/cn/enable_spi_interface_on_jetsonnano)
 
-#### Q13: 为什么有时在完成 Jetson 刷机后，系统无法从 SSD 启动？
-该问题目前在刷写 JetPack 5 时会出现，NVIDIA 已有官方文档说明。解决方案请点击[这里。](/cn/issue_of_jetpack5_failing_to_boot_from_certain_ssd)
+#### Q13: 为什么有时在完成 Jetson 烧录后，系统无法从 SSD 启动？
+该问题目前出现在烧录 JetPack 5 时，NVIDIA 已有官方文档说明。解决方案请点击[这里。](/cn/issue_of_jetpack5_failing_to_boot_from_certain_ssd)
 
 #### Q14: 如何为 Seeed 的 Jetson BSP 构建源码工程？
 详情请点击[这里](/cn/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
@@ -76,7 +76,7 @@ sudo apt-mark hold <package-name>
 sudo apt-mark hold nvidia-l4t-core
 ```
 
-#### Q16: 如果 reComputer/reServer 中没有所需的 `.ko` 驱动模块，该如何编译可用的驱动？
+#### Q16: 如果 reComputer/reServer 没有所需的 `.ko` 驱动模块，我该如何编译一个可用的驱动？
 
 详情请点击[这里](/cn/how_to_build_the_ko_module_for_seeed_jetson)
 
@@ -106,13 +106,13 @@ sudo mkdir /media/seeed/tmp-exfat   # Create a mount point
 sudo mount.exfat /dev/sda3 /media/seeed/tmp-exfat/
 ```
 
-这样就会将使用 exFAT 格式化的外置硬盘挂载到 `/media/seeed/tmp-exfat/`，从而可以在 Jetson 上正常访问。
+这会将使用 exFAT 格式化的外置硬盘挂载到 `/media/seeed/tmp-exfat/`，从而可以在 Jetson 上正常访问。
 
-#### Q18：如何在刷写镜像前对 Jetson 的磁盘进行加密？
+#### Q18：如何在烧录镜像前对 Jetson 的磁盘进行加密？
 
 详情请点击[这里](/cn/how_to_encrypt_the_disk_for_jetson)
 
-#### Q19：如何在 Jetson 上与 EtherCAT 设备建立通信？
+#### Q19：如何在 Jetson 与 EtherCAT 设备之间建立通信？
 
 详情请点击[这里](/cn/how_to_establish_the_ethercat_on_jetson)
 
@@ -124,17 +124,13 @@ sudo mount.exfat /dev/sda3 /media/seeed/tmp-exfat/
 
 详情请点击[这里](/cn/how_to_use_camera_imx219)
 
-#### Q22: JetPack 7.2 为 Jetson AGX Orin 的推理性能带来了哪些变化？
+#### Q22: JetPack 7.2 对 Jetson AGX Orin 的推理性能带来了哪些变化？
 
 详情请点击[这里](/cn/jetpack72_deep_dive)
 
-#### Q23: 升级到 JetPack 7.2 后，如何恢复 Intel AX210/AX200 或 Realtek RTL8852BE 等 Wi-Fi 模块？
-
-详情请点击[这里](/cn/jetpack72_ax210_ax200_wifi_setup_guide)
-
 ## 技术支持
 
-感谢你选择我们的产品！我们**在这里**为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们**在这里**为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
