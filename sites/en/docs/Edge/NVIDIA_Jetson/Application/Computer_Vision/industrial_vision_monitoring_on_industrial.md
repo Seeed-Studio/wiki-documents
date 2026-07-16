@@ -7,7 +7,7 @@ tags:
   - Computer Vision
   - reComputer
   - Industrial
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/110110191.jpg
+image: https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_no_helmet.png
 slug: /industrial_vision_monitoring_on_industrial
 last_update:
   date: 07/14/2026
