@@ -240,6 +240,73 @@ or Windows：
 
 请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
 
+:::tip 注意！！！
+安装驱动后，如果设备管理器中没有识别到 **PCAN-USB** 设备，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
+:::
+
+<details>
+
+<summary>PCAN 固件下载与驱动修复步骤</summary>
+
+如果安装驱动后仍然无法使用 PCAN-USB，并且设备管理器中没有识别到如下图所示的 **PCAN-USB** 设备，请下载 PCAN 固件压缩包，并按照以下步骤安装 DFU 驱动和重新烧录固件。
+
+![设备管理器识别到 PCAN-USB](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/01-pcan-usb-device.png)
+
+
+> 📦 <a href="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip" download="USB2CAN.zip">点击下载 USB2CAN.zip</a>
+
+### 安装 DFU 驱动
+
+1. 解压安装包，得到 `Dfu tool` 和 `pcan` 两个文件夹。
+
+![压缩包解压后的 Dfu tool 和 pcan 文件夹](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/02-extracted-folders.png)
+
+2. 打开 `Dfu tool` 文件夹，运行其中的 `.exe` 安装程序。安装完成后，请记录驱动所在位置，例如：
+
+```text
+C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
+```
+
+![DfuSe 工具安装程序及安装位置](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/03-dfuse-install-location.png)
+
+3. 将 USB2CAN 模块上的拨码开关切换到 **BOOT**，然后连接电脑。
+
+![USB2CAN 模块拨码开关切换到 BOOT](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/04-usb2can-boot-switch.jpg)
+
+4. 打开 **设备管理器**，找到 **其他设备 → STM32 BOOTLOADER**，右键选择 **更新驱动程序**，然后选择 **浏览我的电脑以查找驱动程序**。
+
+![设备管理器中的 STM32 BOOTLOADER](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/05-stm32-bootloader.png)
+
+![更新驱动程序并选择"浏览我的电脑以查找驱动程序"](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/06-update-driver.png)
+
+5. 将此前记录的 DfuSeDemo 驱动位置粘贴到路径框内，勾选 **包括子文件夹**，然后点击 **下一步**。
+
+![填写 DfuSeDemo 驱动路径并勾选"包括子文件夹"](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/07-driver-path.png)
+
+6. 拔出并重新插入 USB2CAN。此时，如果设备被识别为 **STM Device in DFU Mode**，则表示驱动更新成功。
+
+7. 打开 **DfuSeDemo** 软件，确认软件能够正确识别 USB2CAN 模块。
+
+![DfuSeDemo 正确识别 USB2CAN 模块](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/08-dfuse-detects-usb2can.png)
+
+### 烧录 PCAN 固件
+
+1. 在 DfuSeDemo 中点击 **Upgrade or Verify Action → Choose...**，选择解压后 `pcan` 文件夹内的固件。
+2. 点击 **Upgrade**，在弹窗中点击 **是**，等待固件烧录完成，然后退出 DfuSeDemo。
+
+![在 DfuSeDemo 中选择 pcan 固件并点击 Upgrade](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/09-select-pcan-firmware.png)
+
+![固件烧录完成提示](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/10-firmware-upgrade-complete.png)
+
+### 恢复并验证设备
+
+拔掉 USB2CAN，将拨码开关切换到 **120R**，然后重新连接电脑。打开设备管理器，如果设备已被识别为 **PCAN-USB**，则表示问题已修复，可以继续按照本教程使用。
+
+![设备管理器中成功识别到 PCAN-USB](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/11-pcan-usb-recognized.png)
+
+</details>
+
+
 <!-- ### 3.写入电机id
 
 :::tip 成品用户请跳过本步骤
@@ -302,6 +369,3 @@ or
 ```bash
 DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
-
-
-
