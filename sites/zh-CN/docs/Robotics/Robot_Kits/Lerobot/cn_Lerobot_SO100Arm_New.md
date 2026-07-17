@@ -18,6 +18,8 @@ url: https://wiki.seeedstudio.com/cn/lerobot_so100m_new/
 ---
 
 import Link from '@docusaurus/Link';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 基于 LeRobot 的 SO-ARM100 and SO-ARM101 机械臂入门教程
 
@@ -27,8 +29,8 @@ import Link from '@docusaurus/Link';
 
 [SO-10xARM](https://github.com/TheRobotStudio/SO-ARM100) 是由 [TheRobotStudio](https://www.therobotstudio.com/) 发起的一个完全开源的机器人手臂项目。它包括从动臂和领导臂手臂，并提供详细的3D打印文件和操作指南。[LeRobot](https://github.com/huggingface/lerobot/tree/main) 致力于为真实世界的机器人提供 PyTorch 中的模型、数据集和工具。其目标是降低机器人学的入门门槛，使每个人都能通过共享数据集和预训练模型进行贡献和受益。LeRobot 集成了经过验证的前沿方法，专注于模仿学习和强化学习。它提供了一套预训练模型、包含人类收集的示范数据集和仿真环境，使用户无需进行机器人组装即可开始使用。未来几周，计划在当前最具成本效益和性能的机器人上增强对真实世界机器人的支持。
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819388312&bvid=BV1H6UUBcErT&cid=34226440480&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="video-container" style={{marginBottom: '24px'}}>
+<iframe width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819388312&bvid=BV1H6UUBcErT&cid=34226440480&p=1&autoplay=1&muted=1" title="B站视频播放器" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ### 项目介绍
@@ -67,7 +69,10 @@ Seeed Studio **仅对硬件质量负责**。教程严格按官方文档更新，
 - **主臂齿轮比优化**：主臂现在采用了经过优化的齿轮比电机，无需外部减速机构，同时提升了性能。
 - **新增功能支持**：主臂现在可以实时跟随从臂动作，这对即将引入的策略尤为关键，可实现人类实时干预并修正机器动作。
 
-# 规格参数
+## 规格参数
+
+<details>
+<summary>点击查看 SO-ARM10x 规格参数</summary>
 
 本教程硬件由[矽递科技Seeed Studio](https://www.seeedstudio.com/)提供
 
@@ -134,8 +139,12 @@ Seeed Studio **仅对硬件质量负责**。教程严格按官方文档更新，
 若购买 **SO101 Arm Kit 标准版**，所有电源均为5V。若购买 **SO101 Arm Kit Pro 版**，Leader机械臂的校准及每一步骤均使用5V电源，Follower机械臂的校准及每一步骤均使用12V电源。
 :::
 
-# 材料清单（BOM）
+</details>
 
+## 材料清单（BOM）
+
+<details>
+<summary>点击查看材料清单</summary>
 
 | 部件             | 数量 | 是否包含 |
 | ---------------- | ---- | -------- |
@@ -145,6 +154,50 @@ Seeed Studio **仅对硬件质量负责**。教程严格按官方文档更新，
 | 电源适配器       | 2    | ✅       |
 | 3D打印桌面夹具   | 4    | ✅       |
 | 手臂的3D打印部件 | 1    | Option   |
+
+</details>
+
+## 3D打印参考参数
+
+<details>
+<summary>点击查看 3D 打印参考参数</summary>
+
+:::caution
+随着2025年4月28日官方发布 SO101，SO100 将不再支持打印指导，但源文件仍可在我们的 [Makerworld](https://makerworld.com/zh/models/908660) 找到。不过，对于之前购买了SO100 的用户，教程和安装方法以及代码依然兼容。SO101 的打印件也完全兼容 SO100 的电机套件安装。
+:::
+
+**第一步：选择打印机**
+
+提供的 STL 文件可以直接在许多 FDM 打印机上打印。以下是经过测试并推荐的设置，但其他设置也可能适用。
+
+- 材料：PLA+
+- 喷嘴直径与精度：0.4mm 喷嘴直径，层高 0.2mm，或 0.6mm 喷嘴直径，层高 0.4mm。
+- 填充密度：15%
+
+**第二步：设置打印机**
+
+- 确保打印机已校准且打印床水平调整正确，具体操作请参考打印机说明书。
+- 清洁打印床，确保无灰尘或油污。如果使用水或其他液体清洁打印床，请确保彻底干燥。
+- 如果打印机建议，使用标准胶棒在打印区域涂抹一层薄薄的均匀胶水，避免结块或涂抹不均。
+- 按照打印机说明书装载打印机耗材（线材）。
+- 确保打印机设置与上述推荐参数匹配（大多数打印机有多种设置选项，请选择最接近的）。
+- 设置支撑：支撑应设置为“处处需要”，但忽略与水平面小于 45 度的倾斜面。
+- 水平轴方向的螺丝孔内不应有支撑结构。
+
+**第三步：打印零件**
+
+所有关于 Leader 或 Follower 的零件都已经排版好，方便 3D 打印，且朝 Z 轴正方向摆放，以最小化支撑需求。
+
+- 对于打印床尺寸为 220mm x 220mm（如 Ender）的打印机，请打印以下文件：
+
+  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl)
+  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
+- 对于打印床尺寸为 205mm x 250mm（如 Prusa/Up）的打印机，请打印以下文件：
+
+  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
+  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
+
+</details>
 
 # 初始系统环境
 
@@ -161,67 +214,16 @@ For Jetson Orin:
 - Python 3.10
 - Torch 2.3+
 
-# 步骤目录
-
-- [A. 3D打印指南](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#3d打印指南)
-- [B. 安装Lerobot](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#安装lerobot)
-- [C. 校准舵机并组装机械臂](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#校准舵机并组装机械臂)
-- [D. 校准机械臂](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#校准机械臂)
-- [E. 遥操作](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#遥操作)
-- [F. 添加摄像头](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#添加摄像头)
-- [G. 数据集制作采集](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#数据集制作采集)
-- [H. 可视化数据集](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#可视化数据集)
-- [I. 重播一个回合](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#重播一个回合)
-- [J. 训练](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#训练)
-- [K. 评估](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#评估)
-
-## 3D打印参考参数
-
-:::caution
-随着2025年4月28日官方发布 SO101，SO100 将不再支持打印指导，但源文件仍可在我们的 [Makerworld](https://makerworld.com/zh/models/908660) 找到。不过，对于之前购买了SO100 的用户，教程和安装方法以及代码依然兼容。SO101 的打印件也完全兼容 SO100 的电机套件安装。
-:::
-
-### 第一步：选择打印机
-
-提供的 STL 文件可以直接在许多 FDM 打印机上打印。以下是经过测试并推荐的设置，但其他设置也可能适用。
-
-- 材料：PLA+
-- 喷嘴直径与精度：0.4mm 喷嘴直径，层高 0.2mm，或 0.6mm 喷嘴直径，层高 0.4mm。
-- 填充密度：15%
-
-### 第二步：设置打印机
-
-- 确保打印机已校准且打印床水平调整正确，具体操作请参考打印机说明书。
-- 清洁打印床，确保无灰尘或油污。如果使用水或其他液体清洁打印床，请确保彻底干燥。
-- 如果打印机建议，使用标准胶棒在打印区域涂抹一层薄薄的均匀胶水，避免结块或涂抹不均。
-- 按照打印机说明书装载打印机耗材（线材）。
-- 确保打印机设置与上述推荐参数匹配（大多数打印机有多种设置选项，请选择最接近的）。
-- 设置支撑：支撑应设置为“处处需要”，但忽略与水平面小于 45 度的倾斜面。
-- 水平轴方向的螺丝孔内不应有支撑结构。
-
-### 第三步：打印零件
-
-所有关于 Leader 或 Follower 的零件都已经排版好，方便 3D 打印，且朝 Z 轴正方向摆放，以最小化支撑需求。
-
-- 对于打印床尺寸为 220mm x 220mm（如 Ender）的打印机，请打印以下文件：
-
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-- 对于打印床尺寸为 205mm x 250mm（如 Prusa/Up）的打印机，请打印以下文件：
-
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
-
 ## 安装 LeRobot
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819257025&bvid=BV1r6UUBFEBM&cid=34226636693&p=1&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 需要根据你的 CUDA 版本安装 pytorch 和 torchvision 等环境。
 
+<Tabs defaultValue="Jetson">
+
+<TabItem value="Jetson" label="Jetson">
+
 1. 安装 Miniforge：
-   对于 Jetson：
 
 ```bash
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
@@ -231,7 +233,78 @@ chmod +x Miniforge3-Linux-aarch64.sh
 source ~/.bashrc
 ```
 
-或者，对于 X86 Ubuntu 22.04：
+2. 创建并激活一个新的 conda 环境用于 lerobot
+
+```bash
+conda create -y -n lerobot python=3.10 && conda activate lerobot
+```
+
+3. 克隆 Lerobot 仓库：
+
+```bash
+git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
+```
+
+4. 使用 miniforge 时，在环境中安装 ffmpeg：
+
+```bash
+conda install ffmpeg -c conda-forge
+```
+
+:::tip
+这通常会为你的平台安装使用 libsvtav1 编码器编译的 ffmpeg 7.X。如果不支持 libsvtav1（可以通过 ffmpeg -encoders 查看支持的编码器），你可以：
+
+- 【适用于所有平台】显式安装 ffmpeg 7.X：
+
+```bash
+conda install ffmpeg=7.1.1 -c conda-forge
+```
+
+- 【仅限 Linux】安装 ffmpeg 的构建依赖并从源码编译支持 libsvtav1 的 ffmpeg，并确保使用的 ffmpeg 可执行文件是正确的，可以通过 `which ffmpeg` 确认。
+
+如果你遇到以下报错，也可以使用上述命令解决。
+
+<div align="center">
+    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
+</div>
+
+:::
+
+5. 安装带有 feetech 电机依赖的 LeRobot：
+
+```bash
+cd ~/lerobot && pip install -e ".[feetech]"
+```
+
+6. 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
+
+```bash
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson Jetpack 6.0+
+conda remove opencv   # 卸载 OpenCV
+pip3 install opencv-python==4.10.0.84  # 使用 pip3 安装指定版本 OpenCV
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
+```
+
+7. 检查 Pytorch 和 Torchvision
+
+由于通过 pip 安装 lerobot 环境时会卸载原有的 Pytorch 和 Torchvision 并安装 CPU 版本，因此需要在 Python 中进行检查。
+
+```python
+python   #  终端中开启python的命令
+import torch
+print(torch.cuda.is_available())
+exit()   #  退出python
+```
+
+如果输出结果显示为 `False`，表示当前环境中的 PyTorch 是 CPU 版本。若你需要在 Jetson 上使用 GPU 版本 PyTorch 和 Torchvision，请参考[此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)进行安装。对于需要使用 GPU 训练或推理的环境，最终检查结果应为 `True`。
+
+</TabItem>
+
+<TabItem value="X86" label="X86 Ubuntu 22.04">
+
+1. 安装 Miniforge：
 
 ```bash
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
@@ -282,22 +355,24 @@ conda install ffmpeg=7.1.1 -c conda-forge
 
 5. 安装带有 feetech 电机依赖的 LeRobot：
 
+:::tip
+如果你使用的是新配置的 Ubuntu 22.04 虚拟机，尤其是最小化安装版本，系统可能默认不带 `gcc` 等 C 编译工具。此时在安装带有 feetech 电机依赖的 LeRobot 时，`evdev` Python 包可能会因为缺少 C 编译器而构建失败。
+
+可以先安装基本编译工具：
+
+```bash
+sudo apt update
+sudo apt install build-essential
+```
+
+安装完成后，重新执行 LeRobot 安装命令。
+:::
+
 ```bash
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
-6. (电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
-
-```bash
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson Jetpack 6.0+
-conda remove opencv   # 卸载 OpenCV
-pip3 install opencv-python==4.10.0.84  # 使用 pip3 安装指定版本 OpenCV
-conda install -y -c conda-forge ffmpeg
-conda uninstall numpy
-pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
-```
-
-7. 检查 Pytorch 和 Torchvision
+6. 检查 Pytorch 和 Torchvision
 
 由于通过 pip 安装 lerobot 环境时会卸载原有的 Pytorch 和 Torchvision 并安装 CPU 版本，因此需要在 Python 中进行检查。
 
@@ -308,9 +383,11 @@ print(torch.cuda.is_available())
 exit()   #  退出python
 ```
 
+如果输出结果显示为 `False`，表示当前环境中的 PyTorch 是 CPU 版本。若你需要使用 GPU 进行训练或推理，请根据[官网教程](https://pytorch.org/index.html)安装与你的 CUDA 版本匹配的 Pytorch 和 Torchvision。对于装有 NVIDIA GPU 并需要使用 GPU 的环境，最终检查结果应为 `True`。
+
 :::tip
 
-注意：NVIDIA的RTX50系列显卡需要安装CUDA 12.8 及以上版本的预览版
+注意：NVIDIA 的 RTX 50 系列显卡需要安装 CUDA 12.8 及以上版本的预览版。
 
 下载示例如下：
 
@@ -320,9 +397,9 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 
 :::
 
-如果输出结果为 False，需要根据[官网教程](https://pytorch.org/index.html)重新安装 Pytorch 和 Torchvision。
+</TabItem>
 
-如果你使用的是 Jetson 设备，请根据[此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)安装 Pytorch 和 Torchvision。
+</Tabs>
 
 ## 校准舵机并组装机械臂
 
@@ -334,16 +411,6 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 
 <summary> 散件机械臂，请按步骤进行 </summary>
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819257278&bvid=BV1r6UUBFECD&cid=34227948757&p=1&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-
-<TabItem value="SO101" label="SO101">
 
 SO101 的舵机校准初始化与 SO100 方法和代码一致，只是需要注意：SO101 的 Leader 机械臂前三个关节减速比与 SO100 不同，因此需要仔细区分并校准。
 
@@ -368,11 +435,7 @@ SO101 的舵机校准初始化与 SO100 方法和代码一致，只是需要注�
 现在你需要将 5V 或 12V 电源连接到电机总线上。对于 STS3215 7.4V 电机使用 5V 电源，对于 STS3215 12V 电机使用 12V 电源。请注意，Leader 机械臂始终使用 7.4V 电机，因此如果你同时有 12V 和 7.4V 电机，一定要使用正确的电源，否则可能会烧坏电机！然后，通过 USB 将电机总线连接到你的电脑。请注意，USB 不会为电机供电，因此电源和 USB 都必须连接。
 :::
 
-<div align="center">
-    <img width={800} src="https://files.seeedstudio.com//wiki/robotics/Sensor/Camera/Orbbec_Gemini2/gemini2_ID.png" />
-</div>
-
-***以下是代码校准步骤，请参照上图中接线舵机进行校准***
+***以下是代码校准步骤，请参照下方 Leader/Follower 舵机校准参考图进行校准***
 
 查找机械臂对应的 USB 端口
 为了找到每个机械臂正确的端口，请运行实用脚本两次：
@@ -416,19 +479,13 @@ sudo chmod 666 /dev/ttyACM1
 
 **配置舵机**
 
-:::danger
-如果你买的是SO101的标准版，则使用5V电源进行Leader舵机校准(ST-3215-C046, C044, C001).
-:::
-
+**Leader 舵机校准参考图**
 
 |                              **Leader机械臂6号舵机校准**                              |                              **Leader机械臂5号舵机校准**                              |                              **Leader机械臂4号舵机校准**                              |                              **Leader机械臂3号舵机校准**                              |                              **Leader机械臂2号舵机校准**                              |                              **Leader机械臂1号舵机校准**                              |
 | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) | ![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) | ![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
 
-:::danger
-如果你买的是SO101的Pro版，则使用12V电源进行Follower舵机校准(ST-3215-C047/ST-3215-C018)，如果是SO101标准版则使用5V进行舵机校准(ST-3215-C001).
-:::
-
+**Follower 舵机校准参考图**
 
 |                             **Follower机械臂6号舵机校准**                             |                             **Follower机械臂5号舵机校准**                             |                             **Follower机械臂4号舵机校准**                             |                             **Follower机械臂3号舵机校准**                             |                             **Follower机械臂2号舵机校准**                             |                             **Follower机械臂1号舵机校准**                             |
 | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
@@ -488,38 +545,18 @@ lerobot-setup-motors \
     --teleop.port=/dev/ttyACM0
 ```
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819257278&bvid=BV1r6UUBFECD&cid=34227948757&p=1&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-</TabItem>
-
-</Tabs>
-
 **组装教程**
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819256249&bvid=BV1k6UUBFEw4&cid=34228079335&p=1&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
 
 :::tip
 
 - SO-ARM101 双臂的组装过程与 SO-ARM100 相同。唯一的区别在于 SO-ARM101 增加了线缆夹，且主机械臂（Leader Arm）关节舵机的齿轮比不同。因此，SO100 和 SO101 都可以参考以下内容进行安装。
-- 组装前，请再次检查您的电机型号和减速比。如果您购买的是 SO100，可以忽略此步骤。如果您购买的是 SO101，请参考下表区分 F1 至 F6 和 L1 至 L6。
+- 组装前，请再次检查您的电机型号、减速比和供电电压。如果您购买的是 SO101，请参考上方舵机型号与关节对应表区分 F1 至 F6 和 L1 至 L6。
 
-:::
-
-
-| Servo Model                                | Gear Ratio | Corresponding Joints |
-| ------------------------------------------ | ---------- | -------------------- |
-| ST-3215-C044(7.4V)                         | 1:191      | L1                   |
-| ST-3215-C001(7.4V)                         | 1:345      | L2                   |
-| ST-3215-C044(7.4V)                         | 1:191      | L3                   |
-| ST-3215-C046(7.4V)                         | 1:147      | L4–L6               |
-| ST-3215-C001(7.4V) / C018(12V) / C047(12V) | 1:345      | F1–F6               |
-
-:::danger
-如果您购买的是 **SO101 机械臂套件标准版**，所有电源均为 5V。如果您购买的是 **SO101 机械臂套件专业版**，则主机械臂（Leader Arm）在每个校准和操作步骤中应使用 5V 电源，而随动臂（Follower Arm）在每个校准和操作步骤中应使用 12V 电源。
 :::
 
 **组装领导臂**
@@ -556,9 +593,10 @@ lerobot-setup-motors \
 
 ## 校准机械臂
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
 
 :::tip
 SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的参数和代码进行操作。
@@ -570,11 +608,28 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 
 接下来，你需要对你的 SO-10x 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 SO-10x 机器人上训练的神经网络在另一个机器人上也能正常工作。
 
-如果需要重新校准机械臂，有两种方案
+### 重新校准机械臂
 
-方案1：请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否则会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
+<details>
+<summary><span style={{fontSize: '1.15rem', fontWeight: 700}}>点击查看重新校准方案</span></summary>
 
-方案2：直接在终端输入校准机械臂的命令，如果机械臂曾经被校准过，则在终端出现是否进行重新校准的命令 “ Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration: “ 此时在输入 'c ' 并按下 ENTER 则进行重新校准；直接按下 ENTER 则沿用之前的校准数据。
+如果需要重新校准机械臂，有两种方案：
+
+**方案 1：删除本地校准文件后重新校准**
+
+请完全删除 `~/.cache/huggingface/lerobot/calibration/robots` 或者 `~/.cache/huggingface/lerobot/calibration/teleoperators` 下的文件并重新校准机械臂。否则可能会出现报错提示，校准的机械臂信息会存储在该目录下的 json 文件中。
+
+**方案 2：在校准命令中选择重新校准**
+
+直接在终端输入校准机械臂的命令。如果机械臂曾经被校准过，终端会出现是否进行重新校准的提示：
+
+```bash
+Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration:
+```
+
+此时输入 `c` 并按下 **Enter** 则进行重新校准；直接按下 **Enter** 则沿用之前的校准数据。
+
+</details>
 
 请通过 3 针接口连接 6 个机器人舵机的接口，并将底盘舵机连接到舵机驱动板，然后运行以下命令或 API 示例来校准机械臂：
 
@@ -626,7 +681,7 @@ lerobot-calibrate \
 
 :::
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -918,10 +973,6 @@ lerobot-find-cameras orbbec
 - USB 信息
 - 默认流配置
 
-<div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/gemini2_ID.png" />
-</div>
-
 这里需要将采集到的 `Serial number` 输入到下面调用相机命令的 `serial_number_or_name` 参数中
 
 **6. Orbbec 示例**
@@ -1111,7 +1162,7 @@ lerobot-teleoperate \
 
 ## 数据集制作采集
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819257003&bvid=BV1r6UUBFEzq&cid=34229456824&p=1&autoplay=0&autoplay=0&autoplay=0&autoplay=0" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -1309,7 +1360,7 @@ lerobot-replay \
 
 ## 训练及评估
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819256994&bvid=BV1r6UUBFEz2&cid=34229522064&p=1&autoplay=0" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -2305,15 +2356,15 @@ python -m lerobot.async_inference.robot_client \
 
 </details>
 
-<div class="video-container ">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 如果你遇到了以下报错：
 
-<div align="center">
-    <img width={1000} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/stack_bug.png" />
-</div>
+```bash
+TypeError: stack(): argument 'tensors' (position 1) must be tuple of Tensors, not Column
+```
 
 尝试运行以下命令来解决:
 
