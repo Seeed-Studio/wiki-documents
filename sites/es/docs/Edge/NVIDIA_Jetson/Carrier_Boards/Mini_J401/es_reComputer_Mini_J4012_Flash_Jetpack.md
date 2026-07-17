@@ -174,7 +174,7 @@ reComputer Mini es un pequeño ordenador de IA impulsado por el módulo NVIDIA J
     <tr>
       <td>I2C</td>
       <td colSpan={3}>2x I2C JST 4pin (3.3V)</td>
-    </tr]
+    </tr>
     <tr>
       <td>SPI</td>
       <td colSpan={3}>1x I2S JST 6pin (3.3V)</td>
