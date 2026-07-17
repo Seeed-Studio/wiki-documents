@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip
 sku: 103020312
 last_update:
-  date: 1/10/2023
+  date: 7/17/2026
   author: shuxu hu
 createdAt: '2023-01-16'
 updatedAt: '2026-04-21'
@@ -237,7 +237,6 @@ The minimum speed accuracy that the sensor is capable of detecting is 52cm/s, wh
 
 ## Resources
 
-- **[ZIP]** [Attachment of Seeed Studio Grove Base for XIAO](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.0.rar)
 - **[ZIP]** [Demo Code library](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.zip)
 - **[PDF]** [Grove DopplerRadar (BGT24LTR11) Radar module communication protocol v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
 - **[PDF]** [ETA 3410 Datasheet](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/ETA3410.pdf)
