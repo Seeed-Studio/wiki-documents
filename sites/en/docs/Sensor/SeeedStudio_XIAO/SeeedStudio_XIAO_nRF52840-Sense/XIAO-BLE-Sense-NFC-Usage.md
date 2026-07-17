@@ -627,7 +627,7 @@ Open **File > Examples > XIAO_nRF52840_NFC > xiao-nrf52840-nfc-tag-persistent** 
 
 **Key indicators:**
 
-The key indicators are the same as the Writable Tag — refer to the [Writable Tag table](#writable-tag) for the full list.
+The key indicators are the same as the Writable Tag — refer to the [Writable Tag table](#demo-2-writable-tag) for the full list.
 
 > `Storage state: previous content restored from flash` in the boot log is the core confirmation for Persistent: the data survived the power cycle. `Storage: tag content saved to flash` confirms each write was saved to Flash.
 
