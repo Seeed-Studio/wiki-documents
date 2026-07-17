@@ -162,17 +162,19 @@ In this tutorial, we are using the **Seeed Studio XIAO nRF52840** with a Nordic-
 **Front view:**
 
 <!-- TODO: Photo of antenna soldered to XIAO (front) -->
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NRF52840NFC-board-with-A-F.jpg" alt="Antenna soldered to XIAO front view" width={550} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NRF52840NFC-board-with-A-F.jpg" alt="Antenna soldered to XIAO front view" width={550} height="auto" /></p>
 
 **Back view:**
 
 <!-- TODO: Photo of antenna soldered to XIAO (back) -->
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NRF52840NFC-board-with-A-B.jpg" alt="Antenna soldered to XIAO back view" width={550} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NRF52840NFC-board-with-A-B.jpg" alt="Antenna soldered to XIAO back view" width={550} height="auto" /></p>
 
 :::caution
+
 - NFC antenna is a differential signal and has **no polarity** — either end can go to D14 or D15.
 - The two pins ship from factory as NFC antenna mode (UICR = `0xFFFFFFFF`) on **XIAO nRF52840** and **XIAO nRF52840 Sense**. On **XIAO nRF52840 Plus** and **XIAO nRF52840 Sense Plus**, they may be configured as GPIO by default — check UICR first (see [Step 1](#step-1-check-uicr-pin-configuration)).
 - It is recommended to measure DC resistance across the antenna terminals with a multimeter before soldering (usually 1–3 Ω) to confirm continuity and rule out shorts.
+
 :::
 
 ### Antenna Tuning
@@ -346,7 +348,7 @@ Open **File > Examples > XIAO_nRF52840_NFC > xiao-nrf52840-nfc-probe** and uploa
 Open Serial Monitor at **115200 baud**. The first few lines show the current UICR status:
 
 <!-- TODO: Screenshot of Serial Monitor showing UICR check PASS -->
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NRF52840NFC-nfc-probe-result.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NRF52840NFC-nfc-probe-result.png" style={{width:1000, height:'auto'}}/></div>
 
 **How to interpret the output:**
 
@@ -492,7 +494,7 @@ The phone should display a pop-up containing the link `https://seeedstudio.com`.
   </table>
 </div>
 
-> `SELECTED > 0` is the key threshold: the anti-collision flow passed and the phone recognized the Type 2 Tag. `READ > 0` means NDEF pages were actually read. The final verification is that the phone displays the full URL pop-up. 
+> `SELECTED > 0` is the key threshold: the anti-collision flow passed and the phone recognized the Type 2 Tag. `READ > 0` means NDEF pages were actually read. The final verification is that the phone displays the full URL pop-up.
 :::note
 The URL is hard-coded in the sketch. To change it, open the sketch and modify the NDEF message, then re-upload. The tag data is stored in RAM and will be lost after a power cycle.
 :::
@@ -636,9 +638,11 @@ In Step 7, the phone only **reads** the restored content — it does not write a
 :::
 
 :::note
+
 - The stored content lives in the **internal Flash filesystem** (`/nfc-tag-data.bin`), separate from the sketch area — it survives sketch re-uploads.
 - To restore the default URI at any time, send `RESET_TAG` in the Serial Monitor.
 - Flash save happens once per write session after the phone leaves the field. If you remove the phone too early, the content may be incomplete — just write again to fix it.
+
 :::
 
 :::tip
@@ -683,6 +687,7 @@ In Step 7, the phone only **reads** the restored content — it does not write a
 Special thanks to **[andriandreo](https://forum.seeedstudio.com/u/andriandreo/summary)** for the extensive real-world testing of NFC antennas (MOLEX 1462360051 and TAOGLAS FXR.07.A.DG) on the XIAO nRF52840, and to **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso/summary)** for the capacitor calculation guidance and iPhone compatibility troubleshooting.
 
 If you encounter NFC issues not covered here, you may find helpful tips in the original forum thread:
+
 - [XIAO nRF52840 NFC Antenna Insights](https://forum.seeedstudio.com/t/xiao-nrf52840-nfc-antenna-insights/277696)
 
 ## Tech Support & Product Discussion
