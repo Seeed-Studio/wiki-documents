@@ -1,21 +1,19 @@
 ---
-description: This wiki demonstrates how to connect to XIAO via HTTP on reCamera to run C++ project.
-title: reCamera connects to XIAO via HTTP
+description: This wiki demonstrates how to train classification model what you want to recognize.
+title: train classification model with SenseCraft AI
 keywords:
-  - Http
   - reCamera
-  - XIAO
-  - YOLO
-  - C++
+  - Classification model
+  - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /recamera_connects_to_xiao_via_http
+slug: /train_classification_model_online
 last_update:
-  date: 07/11/2025
-  author: Liangyuxin
+  date: 07/19/2026
+  author: yylin
 no_comments: false
-createdAt: '2025-07-16'
-updatedAt: '2025-08-18'
-url: https://wiki.seeedstudio.com/recamera_connects_to_xiao_via_http/
+createdAt: '2026-07-19'
+updatedAt: '2026-07-19'
+url: https://wiki.seeedstudio.com/train_classification_model_online/
 ---
 
 # Train Image Classification Models Online Quickly with SenseCraft AI
@@ -314,3 +312,17 @@ Before Deployment:
 - [ ] reCamera is connected to the network and bound to the current account.
 - [ ] Model and target device have been confirmed correctly.
 - [ ] A secondary validation in the actual installation environment has been planned.
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
