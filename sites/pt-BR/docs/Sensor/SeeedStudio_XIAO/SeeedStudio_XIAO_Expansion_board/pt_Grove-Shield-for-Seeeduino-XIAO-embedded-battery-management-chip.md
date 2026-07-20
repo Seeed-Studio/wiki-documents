@@ -19,9 +19,9 @@ url: https://wiki.seeedstudio.com/pt-br/Grove-Shield-for-Seeeduino-XIAO-embedded
 
 ## Visão geral
 
-Seeed Studio Grove Base for XIAO é uma placa de extensão Grove plug-and-play para **[Seeed Studio XIAO](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/)**. Com o chip de gerenciamento de bateria on-board e o pad de conexão de bateria, você pode facilmente alimentar seu Seeed Studio XIAO com bateria de lítio e recarregá-la. Os 8 conectores Grove on-board incluem dois Grove I2C e um UART. Ele atua como uma ponte entre o Seeed Studio XIAO e o sistema Grove da Seeed. O pad de conexão Flash SPI permite adicionar Flash ao Seeed Studio XIAO para expandir seu espaço de memória, proporcionando ao Seeed Studio XIAO mais possibilidades.
+Seeed Studio Grove Base for XIAO é uma placa de extensão Grove plug-and-play para **[Seeed Studio XIAO](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/)**. Com o chip de gerenciamento de bateria on-board e o pad de conexão de bateria, você pode facilmente alimentar seu Seeed Studio XIAO com uma bateria de lítio e recarregá-la. Os 8 conectores Grove on-board incluem dois Grove I2C e um UART. Ele atua como uma ponte entre o Seeed Studio XIAO e o sistema Grove da Seeed. O pad de conexão Flash SPI permite que você adicione Flash ao Seeed Studio XIAO para expandir seu espaço de memória, proporcionando ao Seeed Studio XIAO mais possibilidades.
 
-Com o chip de gerenciamento de bateria on-board e o pad de conexão de bateria, você pode facilmente alimentar seu Seeed Studio XIAO com bateria de lítio de 3,7 V e recarregá-la, tornando seus projetos, especialmente os vestíveis, mais flexíveis e portáteis. Você pode até quebrar a placa através das perfurações de ruptura na própria PCB de acordo com suas necessidades reais do projeto (apenas 25*39 mm de dimensão após a separação), tornando-a ainda menor e o peso será reduzido de 13 g para 10 g também!
+Com o chip de gerenciamento de bateria on-board e o pad de conexão de bateria, você pode facilmente alimentar seu Seeed Studio XIAO com uma bateria de lítio de 3,7 V e recarregá-la, tornando seus projetos, especialmente os vestíveis, mais flexíveis e portáteis. Você pode até quebrar a placa através das perfurações de ruptura na própria PCB de acordo com as necessidades reais do projeto (apenas 25*39 mm de dimensão após a separação), tornando-a ainda menor e o peso será reduzido de 13 g para 10 g também!
 <!-- 图有问题 
 <p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/01.png" border={0} /></a></p> -->
 
@@ -39,7 +39,7 @@ Este produto não inclui uma placa Seeed Studio XIAO, clique [here](https://www
     </a>
 </div>
 
-#### Visão geral de hardware
+#### Visão geral do hardware
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/hardware-overview.png" border={0} /></p>
 
@@ -56,13 +56,13 @@ Este produto não inclui uma placa Seeed Studio XIAO, clique [here](https://www
 - Pad de conexão Flash SPI reservado
 - Interruptor de alimentação on-board e luz indicadora de status de carregamento
 
-## Especificação
+## Especificações
 
 |Item|Valor|
 |---|---|
-|Tensão de operação|3,3 V / Bateria de lítio de 3,7 V|
+|Tensão de operação|Bateria de lítio de 3,3 V / 3,7 V|
 |Capacidade de carga|800 mA|
-|Corrente de carregamento| 500 mA (Máx)|
+|Corrente de carregamento| 500 mA (Máx.)|
 |Temperatura de operação|- 40°C a 85°C|
 |Temperatura de armazenamento|-55°C a 150°C|
 |Interface Grove|I2C *2 / UART* 1|
@@ -70,7 +70,7 @@ Este produto não inclui uma placa Seeed Studio XIAO, clique [here](https://www
 ## Aplicações
 
 - Dispositivos vestíveis
-- Protótipo rápido
+- Protótipos rápidos
 - Teste de módulos Grove
 - Projetos que exigem tamanho reduzido
 
@@ -105,7 +105,7 @@ Este produto não inclui uma placa Seeed Studio XIAO, clique [here](https://www
 |---|---|----|
 |1| DIV_OUT |Saída do divisor de frequência do BGT24LTR11 |
 |2|GND|Terra|
-|3|VCC_5V_EXT|Pino de alimentação de entrada externa +5,0 V (máximo=5,5 V)|
+|3|VCC_5V_EXT|Pino de alimentação de entrada +5,0 V externa (máximo=5,5 V)|
 |4|VTUNE|Tensão de sintonia de frequência do VCO|
 |5|IFQ_HG|Saída de sinal analógico do canal Q do BGT24LTR11 - segundo estágio de ganho|
 |6|IFI_HG|Saída de sinal analógico do canal I do BGT24LTR11 - segundo estágio de ganho|
@@ -124,7 +124,7 @@ Conecte o cabo USB e a interface do Doppler Radar na interface da placa de expan
 
 - **Passo 1.** Conecte o Doppler Radar à placa de expansão Seeed Studio XIAO com um cabo Grove.
 
-- **Passo 2.** Conecte o Seeed Studio XIAO ao PC via cabo USB.
+- **Passo 2.** Conecte o Seeed Studio XIAO ao PC por meio de um cabo USB.
 
 - **Passo 3.** Baixe o código, consulte a parte de software.
 
@@ -227,19 +227,16 @@ E se houver um objeto se aproximando do radar ou passando por ele, o resultado m
 </div>
 
 :::note
-A precisão mínima de velocidade que o sensor é capaz de detectar é 52cm/s, o que equivale a 0,52m/s, 3,6km/h e 2,23mph. Além disso, os resultados retornados pela função getSpeed() são múltiplos de 52cm/s e são valores absolutos, respectivamente.
+A precisão mínima de velocidade que o sensor é capaz de detectar é de 52cm/s, o que equivale a 0,52m/s, 3,6km/h e 2,23mph. Além disso, os resultados retornados pela função getSpeed() são múltiplos de 52cm/s e são valores absolutos, respectivamente.
 :::
-
-## Visualizador de Esquemático Online
-
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.0.rar" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div>
 
 ## Recursos
 
 - **[ZIP]** [Biblioteca de código de demonstração](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.zip)
-- **[PDF]** [Grove DopplerRadar (BGT24LTR11) Radar module communication protocol v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
+- **[PDF]** [Grove DopplerRadar (BGT24LTR11) Protocolo de comunicação do módulo de radar v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
 - **[PDF]** [ETA 3410 Datasheet](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/ETA3410.pdf)
+- **[ZIP]** [Grove Shield para Seeeduino XIAO v1.2 SCH & PCB (KiCad)](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.2_KiCad_SCH_PCB.zip)
+- **[PDF]** [Grove Shield para Seeeduino XIAO v1.0 Esquemático](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.0_SCH.pdf)
 
 ## Projeto
 
@@ -247,7 +244,7 @@ A precisão mínima de velocidade que o sensor é capaz de detectar é 52cm/s, o
 <iframe src="https://www.youtube.com/embed/-HMEW2DN6Wg" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
 </div></p>
 
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
