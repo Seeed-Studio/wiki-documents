@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-16 16:01:21 (北京时间)
-// 多语言页面: 2397 个
+// 生成时间: 2026-07-20 15:21:13 (北京时间)
+// 多语言页面: 2399 个
 
 (function() {
   'use strict';
@@ -3677,7 +3677,7 @@
     "ja",
     "pt"
   ],
-  "/recamera_pro_acoustic_lab_usage": [
+  "/recamera_pro_imu_tilt_shake_detection": [
     "cn",
     "en",
     "es",
@@ -3822,6 +3822,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_acoustic_lab_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/configure_static_ip_on_recamera": [
     "cn",
     "en",
@@ -3879,6 +3886,13 @@
     "pt"
   ],
   "/recamera_connects_to_xiao_via_http": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/train_classification_model_online": [
     "cn",
     "en",
     "es",
