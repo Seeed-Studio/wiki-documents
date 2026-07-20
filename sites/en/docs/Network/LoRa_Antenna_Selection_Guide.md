@@ -5,10 +5,10 @@ image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807
 slug: /lora_antenna_selection_guide
 sidebar_position: 0
 last_update:
-  date: 2026-06-29T12:00:00.000Z
+  date: 2026-06-29
   author: Yves
 createdAt: '2026-06-29'
-updatedAt: '2026-06-29'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/lora_antenna_selection_guide/
 ---
 

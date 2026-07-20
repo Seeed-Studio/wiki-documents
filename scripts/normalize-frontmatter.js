@@ -5,7 +5,7 @@ const path = require("path");
 const matter = require("gray-matter");
 const fg = require("fast-glob");
 const yaml = require("js-yaml");
-const { execSync } = require("child_process");
+const { execFileSync } = require("child_process");
 const cliProgress = require("cli-progress");
 
 const ROOT = process.cwd();
@@ -22,6 +22,10 @@ const LANG_RULES = [
   // { dir: path.join("sites", "pt-BR", "docs"), prefix: "/pt-br" },
 ];
 
+const commitDateCache = new Map();
+const historyEntriesCache = new Map();
+const createdAtCache = new Map();
+
 function detectLangPrefix(fileAbsPath) {
   const rel = path.relative(ROOT, fileAbsPath).split(path.sep).join("/");
   for (const r of LANG_RULES) {
@@ -31,15 +35,18 @@ function detectLangPrefix(fileAbsPath) {
   return null;
 }
 
-function runGit(cmd) {
+function runGitArgs(args, { trim = true, encoding = "utf8" } = {}) {
   try {
-    return execSync(cmd, {
+    const out = execFileSync("git", args, {
       cwd: ROOT,
       stdio: ["ignore", "pipe", "ignore"],
-      encoding: "utf8",
-    }).trim();
+      encoding,
+    });
+
+    if (encoding === "buffer") return out;
+    return trim ? String(out).trim() : String(out);
   } catch {
-    return "";
+    return encoding === "buffer" ? Buffer.alloc(0) : "";
   }
 }
 
@@ -47,73 +54,98 @@ function toRepoRelative(fileAbsPath) {
   return path.relative(ROOT, fileAbsPath).split(path.sep).join("/");
 }
 
-function shellQuoteDouble(str) {
-  return String(str).replace(/(["\\$`])/g, "\\$1");
-}
+function getGitCreatedAt(fileAbsPath) {
+  const rel = toRepoRelative(fileAbsPath);
+  if (createdAtCache.has(rel)) return createdAtCache.get(rel);
 
-function getGitTimes(fileAbsPath) {
-  const latest = runGit(`git log -1 --format=%aI -- "${shellQuoteDouble(fileAbsPath)}"`);
-
-  let first = runGit(
-    `git log --follow --diff-filter=A --format=%aI -1 -- "${shellQuoteDouble(fileAbsPath)}"`
-  );
+  let first = runGitArgs([
+    "log",
+    "--follow",
+    "--diff-filter=A",
+    "--format=%aI",
+    "-1",
+    "--",
+    fileAbsPath,
+  ]);
 
   if (!first) {
-    const all = runGit(
-      `git log --follow --format=%aI --reverse -- "${shellQuoteDouble(fileAbsPath)}"`
-    );
+    const all = runGitArgs([
+      "log",
+      "--follow",
+      "--format=%aI",
+      "--reverse",
+      "--",
+      fileAbsPath,
+    ]);
     first = all ? all.split(/\r?\n/)[0].trim() : "";
   }
 
-  return { createdAt: first, updatedAt: latest };
+  createdAtCache.set(rel, first);
+  return first;
 }
 
 /**
  * 返回文件历史条目（按新到旧）：
  * [
- *   { commit: "abc", path: "sites/en/docs/foo.md" },
- *   { commit: "def", path: "docs/foo.md" },
+ *   { commit: "abc", dateYMD: "2026-01-01", path: "sites/en/docs/foo.md" },
+ *   { commit: "def", dateYMD: "2025-01-01", path: "docs/foo.md" },
  * ]
  *
  * 关键：path 是“该 commit 下文件当时的真实路径”
  */
 function getFileHistoryEntries(fileAbsPath) {
   const rel = toRepoRelative(fileAbsPath);
+  if (historyEntriesCache.has(rel)) return historyEntriesCache.get(rel);
 
-  const out = runGit(
-    `git log --follow --format=__COMMIT__%H --name-only -- "${shellQuoteDouble(rel)}"`
-  );
+  const out = runGitArgs([
+    "log",
+    "--follow",
+    "--format=__COMMIT__%H%x09%aI",
+    "--name-only",
+    "--",
+    rel,
+  ]);
 
-  if (!out) return [];
+  if (!out) {
+    historyEntriesCache.set(rel, []);
+    return [];
+  }
 
   const lines = out.split(/\r?\n/);
   const entries = [];
   let currentCommit = null;
+  let currentDateYMD = "";
 
   for (const line of lines) {
     const trimmed = line.trim();
     if (!trimmed) continue;
 
     if (trimmed.startsWith("__COMMIT__")) {
-      currentCommit = trimmed.slice("__COMMIT__".length);
+      const payload = trimmed.slice("__COMMIT__".length);
+      const [commit, iso = ""] = payload.split("\t");
+      currentCommit = commit;
+      currentDateYMD = toYMD(iso);
       continue;
     }
 
     if (currentCommit) {
       entries.push({
         commit: currentCommit,
+        dateYMD: currentDateYMD,
         path: trimmed,
       });
       currentCommit = null;
+      currentDateYMD = "";
     }
   }
 
+  historyEntriesCache.set(rel, entries);
   return entries;
 }
 
 function getFileContentAtCommit(commit, filePathAtThatCommit) {
   try {
-    return execSync(`git show ${commit}:"${filePathAtThatCommit}"`, {
+    return execFileSync("git", ["show", `${commit}:${filePathAtThatCommit}`], {
       cwd: ROOT,
       stdio: ["ignore", "pipe", "ignore"],
       encoding: "utf8",
@@ -124,8 +156,15 @@ function getFileContentAtCommit(commit, filePathAtThatCommit) {
 }
 
 function getCommitDateYMD(commit) {
-  const iso = runGit(`git show -s --format=%aI ${commit}`);
-  return toYMD(iso);
+  if (commitDateCache.has(commit)) return commitDateCache.get(commit);
+  const iso = runGitArgs(["show", "-s", "--format=%aI", commit]);
+  const ymd = toYMD(iso);
+  commitDateCache.set(commit, ymd);
+  return ymd;
+}
+
+function getEntryDateYMD(entry) {
+  return entry?.dateYMD || getCommitDateYMD(entry.commit);
 }
 
 function toYMD(iso) {
@@ -333,18 +372,34 @@ function buildComparableFromRaw(raw) {
  * - 使用该 commit 下文件当时的真实路径来读取内容
  * - 因而支持 rename / move / 按语言拆目录
  */
-function getLastMeaningfulUpdatedAt(fileAbsPath) {
+function getLastMeaningfulUpdatedAt(fileAbsPath, { firstRawOverride } = {}) {
   const entries = getFileHistoryEntries(fileAbsPath);
 
   if (entries.length === 0) return "";
-  if (entries.length === 1) return getCommitDateYMD(entries[0].commit);
+  if (entries.length === 1) return getEntryDateYMD(entries[0]);
+
+  let carryKey = "";
+  let carryRaw = "";
 
   for (let i = 0; i < entries.length - 1; i++) {
     const newer = entries[i];
     const older = entries[i + 1];
 
-    const newerRaw = getFileContentAtCommit(newer.commit, newer.path);
+    const newerKey = `${newer.commit}\0${newer.path}`;
+    const olderKey = `${older.commit}\0${older.path}`;
+
+    let newerRaw;
+    if (i === 0 && typeof firstRawOverride === "string") {
+      newerRaw = firstRawOverride;
+    } else if (newerKey === carryKey) {
+      newerRaw = carryRaw;
+    } else {
+      newerRaw = getFileContentAtCommit(newer.commit, newer.path);
+    }
+
     const olderRaw = getFileContentAtCommit(older.commit, older.path);
+    carryKey = olderKey;
+    carryRaw = olderRaw;
 
     if (!newerRaw || !olderRaw) continue;
 
@@ -352,13 +407,56 @@ function getLastMeaningfulUpdatedAt(fileAbsPath) {
     const olderComparable = buildComparableFromRaw(olderRaw);
 
     if (newerComparable !== olderComparable) {
-      return getCommitDateYMD(newer.commit);
+      return getEntryDateYMD(newer);
     }
   }
 
   // 如果历史里所有相邻版本的差异都只落在托管字段上
   // 则认为最后一次“有效更新时间”是创建时间
-  return getCommitDateYMD(entries[entries.length - 1].commit);
+  return getEntryDateYMD(entries[entries.length - 1]);
+}
+
+/**
+ * 一次性拿到当前工作区相对 HEAD 有变化的文件。
+ * 对于完全 clean 的文件，后面可以直接认定 hasWorkingTreeMeaningfulChanges=false，
+ * 不需要再为每篇文档执行 git show HEAD:path。
+ */
+function getChangedRelSet() {
+  const dirs = LANG_RULES.map(({ dir }) => dir.split(path.sep).join("/"));
+  if (dirs.length === 0) return new Set();
+
+  try {
+    const out = execFileSync(
+      "git",
+      ["status", "--porcelain=v1", "-z", "--untracked-files=all", "--", ...dirs],
+      {
+        cwd: ROOT,
+        stdio: ["ignore", "pipe", "ignore"],
+      }
+    );
+
+    const parts = out.toString("utf8").split("\0").filter(Boolean);
+    const changed = new Set();
+
+    for (let i = 0; i < parts.length; i++) {
+      const item = parts[i];
+      if (item.length < 4) continue;
+
+      const status = item.slice(0, 2);
+      const rel = item.slice(3);
+      if (rel) changed.add(rel.split(path.sep).join("/"));
+
+      // porcelain -z 下，rename/copy 后面会额外跟一个旧路径字段，这里跳过旧路径。
+      if (status.includes("R") || status.includes("C")) {
+        i++;
+      }
+    }
+
+    return changed;
+  } catch {
+    // 如果 git status 失败，则回退到逐文件精确比较，保证功能不受影响。
+    return null;
+  }
 }
 
 /**
@@ -366,29 +464,36 @@ function getLastMeaningfulUpdatedAt(fileAbsPath) {
  * - 用于处理“你还没提交，但正文或其他 frontmatter 已经改了”的场景
  * - 若只有 createdAt / updatedAt / url / slug 不同，则不算有效变化
  */
-function hasWorkingTreeMeaningfulChanges(fileAbsPath) {
-  const currentRaw = fs.readFileSync(fileAbsPath, "utf8");
+function compareWorkingTreeWithHead(fileAbsPath, currentComparable) {
   const rel = toRepoRelative(fileAbsPath);
   const headRaw = getFileContentAtCommit("HEAD", rel);
 
-  if (!headRaw) return true;
+  if (!headRaw) {
+    return { meaningfulChanged: true, headRaw: "" };
+  }
 
-  return buildComparableFromRaw(currentRaw) !== buildComparableFromRaw(headRaw);
+  return {
+    meaningfulChanged: currentComparable !== buildComparableFromRaw(headRaw),
+    headRaw,
+  };
 }
 
-function normalizeFile(fileAbsPath, { checkOnly = false } = {}) {
+function normalizeFile(fileAbsPath, { checkOnly = false, changedRelSet = null } = {}) {
   const raw = fs.readFileSync(fileAbsPath, "utf8");
   const parsed = matter(raw);
 
   const data = { ...(parsed.data || {}) };
   const content = parsed.content || "";
 
+  const rel = toRepoRelative(fileAbsPath);
   const prefix = detectLangPrefix(fileAbsPath);
   const slug = normalizeSlug(data.slug);
-  const gitTimes = getGitTimes(fileAbsPath);
 
-  if (!data.createdAt && gitTimes.createdAt) {
-    data.createdAt = toYMD(gitTimes.createdAt);
+  if (!data.createdAt) {
+    const createdAt = getGitCreatedAt(fileAbsPath);
+    if (createdAt) {
+      data.createdAt = toYMD(createdAt);
+    }
   }
 
   if (prefix !== null && slug) {
@@ -396,10 +501,26 @@ function normalizeFile(fileAbsPath, { checkOnly = false } = {}) {
     data.slug = slug;
   }
 
-  if (hasWorkingTreeMeaningfulChanges(fileAbsPath)) {
-    data.updatedAt = todayYMD();
+  const mayHaveWorkingTreeChange = changedRelSet === null || changedRelSet.has(rel);
+
+  if (mayHaveWorkingTreeChange) {
+    const currentComparable = buildComparableFromRaw(raw);
+    const { meaningfulChanged, headRaw } = compareWorkingTreeWithHead(fileAbsPath, currentComparable);
+
+    if (meaningfulChanged) {
+      data.updatedAt = todayYMD();
+    } else {
+      const meaningfulUpdatedAt = getLastMeaningfulUpdatedAt(fileAbsPath, {
+        firstRawOverride: headRaw || raw,
+      });
+      if (meaningfulUpdatedAt) {
+        data.updatedAt = meaningfulUpdatedAt;
+      }
+    }
   } else {
-    const meaningfulUpdatedAt = getLastMeaningfulUpdatedAt(fileAbsPath);
+    const meaningfulUpdatedAt = getLastMeaningfulUpdatedAt(fileAbsPath, {
+      firstRawOverride: raw,
+    });
     if (meaningfulUpdatedAt) {
       data.updatedAt = meaningfulUpdatedAt;
     }
@@ -443,6 +564,7 @@ async function main() {
   ]);
 
   const files = await fg(patterns, { absolute: true, dot: false });
+  const changedRelSet = getChangedRelSet();
   let changedCount = 0;
 
   // 创建进度条
@@ -456,7 +578,7 @@ async function main() {
   bar.start(files.length, 0);
 
   for (const f of files) {
-    const r = normalizeFile(f, { checkOnly });
+    const r = normalizeFile(f, { checkOnly, changedRelSet });
     if (r.changed) changedCount++;
 
     bar.increment();

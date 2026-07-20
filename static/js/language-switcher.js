@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-09 17:33:54 (北京时间)
-// 多语言页面: 2373 个
+// 生成时间: 2026-07-16 16:01:21 (北京时间)
+// 多语言页面: 2397 个
 
 (function() {
   'use strict';
@@ -703,6 +703,13 @@
     "ja",
     "pt"
   ],
+  "/industrial_vision_monitoring_on_industrial": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Jetson-Nano-MaskCam": [
     "cn",
     "en",
@@ -906,6 +913,13 @@
     "pt"
   ],
   "/getting_started_with_nvstreamer": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rapid_prototyping_on_jetson_with_nvidia_skills": [
     "cn",
     "en",
     "es",
@@ -1444,6 +1458,13 @@
     "ja",
     "pt"
   ],
+  "/jetpack72_ax210_ax200_wifi_setup_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/jetpack72_deep_dive": [
     "cn",
     "en",
@@ -1459,6 +1480,13 @@
     "pt"
   ],
   "/make_diy_bsp_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic": [
     "cn",
     "en",
     "es",
@@ -3649,6 +3677,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_acoustic_lab_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_hardware_specifications": [
     "cn",
     "en",
@@ -3685,6 +3720,102 @@
     "pt"
   ],
   "/recamera_pro_uart_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_device-and-system": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_network": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_authentication": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_common_conventions": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_error_codes": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_quick_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_ai_inference": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_device_info": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_live_preview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_live_view": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_record_settings": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_terminal": [
     "cn",
     "en",
     "es",
@@ -4413,6 +4544,27 @@
     "pt"
   ],
   "/meshtastic_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/x1_get_started_for_meshtastic": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtracker_x1_intro": [
     "cn",
     "en",
     "es",
@@ -5652,6 +5804,13 @@
     "pt"
   ],
   "/lerobot_starai_arm": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/soarm_amazinghand_teleop": [
     "cn",
     "en",
     "es",
@@ -12664,6 +12823,13 @@
     "pt"
   ],
   "/xiao_nrf54lm20a_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_arduino": [
     "cn",
     "en",
     "es",

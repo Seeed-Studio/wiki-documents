@@ -6,22 +6,22 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_topic_page
 last_update:
-  date: 06/04/2026
+  date: 7/15/2026
   author: Carla Guo
 createdAt: '2023-07-07'
 updatedAt: '2026-06-04'
 url: https://wiki.seeedstudio.com/pt-br/xiao_topic_page/
 ---
 
-# EXPOSIÇÃO SEEED STUDIO XIAO
+# EXPOSIÇÃO Seeed Studio XIAO
 
-[A série Seeed Studio XIAO](https://www.seeedstudio.com/xiao-series-page), batizada com a palavra chinesa para "pequeno", é composta por minúsculas placas de desenvolvimento baseadas em várias plataformas de hardware ESP32, SAMD21, RP2040, nRF52840, RP2350 e RA4M1, MG24. Essas placas do tamanho de uma unha reúnem recursos poderosos em um formato compacto.
+[The Seeed Studio XIAO series](https://www.seeedstudio.com/xiao-series-page), nomeada a partir da palavra chinesa para "pequeno", é composta por minúsculas placas de desenvolvimento baseadas em várias plataformas de hardware ESP32, SAMD21, RP2040, nRF52840, RP2350 e RA4M1, MG24. Essas placas do tamanho de uma unha reúnem poderosos recursos em um formato compacto.
 
-Nossa equipe, junto com a comunidade, criou uma rica coleção de wikis, aplicações e documentação para facilitar o uso e o desenvolvimento. Para tornar mais eficiente para toda a comunidade localizar esses documentos úteis, estamos reunindo tudo nesta página como um índice para que você encontre rapidamente o que está procurando.
+Nossa equipe, junto com a comunidade, criou uma rica coleção de wikis, aplicações e documentação para facilitar o uso e o desenvolvimento. Para tornar mais eficiente para toda a comunidade localizar esses documentos úteis, estamos reunindo tudo nesta página como um índice para você encontrar rapidamente o que está procurando.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/xiao_topicpage/compatible_software.jpg" /></div>
 
-Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos da comunidade e, se você quiser contribuir para esse ecossistema vibrante (para preencher as partes em branco), damos as boas-vindas a [suas próprias submissões dos seus projetos exclusivos para inspirar outras pessoas na comunidade também](https://wiki.seeedstudio.com/pt-br/Contribution-Guide/).
+Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos da comunidade e, se você quiser contribuir para esse ecossistema vibrante (para preencher as partes em branco), damos as boas-vindas a [suas próprias submissões dos seus desenvolvimentos exclusivos para inspirar outras pessoas na comunidade também](https://wiki.seeedstudio.com/pt-br/Contribution-Guide/).
 
 ## Índice
 
@@ -157,7 +157,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/pt-br/XIAO_BLE/" target="_blank">Wiki de Introdução</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/pt-br/XIAO-BLE-Sense-Pin-Multiplexing/" target="_blank">Uso de Pinos</a></th>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/pt-br/XIAO-BLE-Sense-IMU-Usage/" target="_blank">Uso do IMU de 6 Eixos</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/pt-br/XIAO-BLE-Sense-IMU-Usage/" target="_blank">Uso de IMU de 6 Eixos</a></th>
   </tr>
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/pt-br/XIAO-BLE-Sense-PDM-Usage/" target="_blank">Uso de PDM</a></th>
@@ -390,7 +390,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
 <br></br>
 <div><a href="https://circuitpython.org/"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/circuitpython.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="circuitpython"><strong><a href="https://circuitpython.org/" target="_blank">CircuitPython</a></strong></span>, uma linguagem de programação projetada para simplificar a experimentação e o aprendizado de programação em placas de microcontroladores de baixo custo.
+<span id="circuitpython"><strong><a href="https://circuitpython.org/" target="_blank">CircuitPython</a></strong></span>, uma linguagem de programação projetada para simplificar experimentos e o aprendizado de programação em placas de microcontroladores de baixo custo.
 <br></br>
 <br></br>
 
@@ -434,7 +434,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
 <br></br>
 <div><a href="https://idf.espressif.com/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/espressif.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="esp_idf"><a href="https://idf.espressif.com/" target="_blank"><strong>ESP IDF</strong></a></span>, o framework oficial de desenvolvimento de IoT da Espressif para as séries de SoCs ESP32, ESP32-S e ESP32-C, fornecendo um SDK autossuficiente para qualquer desenvolvimento de aplicações genéricas nessas plataformas, usando linguagens de programação como C e C++.
+<span id="esp_idf"><a href="https://idf.espressif.com/" target="_blank"><strong>ESP IDF</strong></a></span>, o framework oficial de desenvolvimento de IoT da Espressif para as séries de SoCs ESP32, ESP32-S e ESP32-C, fornecendo um SDK autossuficiente para qualquer desenvolvimento genérico de aplicações nessas plataformas, usando linguagens de programação como C e C++.
 <br></br>
 <br></br>
 
@@ -456,7 +456,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
 <br></br>
 <div><a href="https://www.rust-lang.org/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/rust.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="rust"><strong><a href="https://www.rust-lang.org/" target="_blank">Rust</a></strong></span>, uma linguagem que capacita todos a criar software confiável e eficiente.
+<span id="rust"><strong><a href="https://www.rust-lang.org/" target="_blank">Rust</a></strong></span>, uma linguagem que capacita qualquer pessoa a criar software confiável e eficiente.
 <br></br>
 <br></br>
 
@@ -469,7 +469,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
   </tr>
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://github.com/Wumpf/Seeed-nRF52840-Sense-projects" target="_blank">XIAO nRF52840 (Sense)</a></th>
-   <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://github.com/uFerris-rs/uferris-bsp/tree/master/examples/xiao-esp32-c3" target="_blank">XIAO ESP32-C3</a></th>
             <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
  </table>
@@ -524,7 +524,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
 <br></br>
 <div><a href="https://docs.zephyrproject.org/latest/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr.png" style={{width:'auto', height:70}} /></a></div>
 
-<span id="zephyr"><strong><a href="https://docs.zephyrproject.org/latest/" target="_blank">Zephyr</a></strong></span>, um sistema operacional de tempo real (RTOS) escalável que oferece suporte a várias arquiteturas de hardware, otimizado para dispositivos com recursos limitados e desenvolvido com foco em segurança.
+<span id="zephyr"><strong><a href="https://docs.zephyrproject.org/latest/" target="_blank">Zephyr</a></strong></span>, um sistema operacional de tempo real (RTOS) escalável que suporta múltiplas arquiteturas de hardware, otimizado para dispositivos com recursos limitados e desenvolvido com foco em segurança.
 <br></br>
 <br></br>
 
@@ -577,7 +577,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
 <br></br>
 <div><a href="https://nuttx.apache.org/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/nuttxrtos.png" style={{width:'auto', height:80}} /></a></div>
 
-<span id="apache_nuttx_rtos"><strong><a href="https://nuttx.apache.org/" target="_blank">Apache NuttX RTOS</a></strong></span>, um sistema operacional de tempo real (RTOS) com ênfase na conformidade com padrões e em uma pegada reduzida
+<span id="apache_nuttx_rtos"><strong><a href="https://nuttx.apache.org/" target="_blank">Apache NuttX RTOS</a></strong></span>, um sistema operacional de tempo real (RTOS) com ênfase na conformidade com padrões e em um tamanho reduzido
 <br></br>
 <br></br>
 
@@ -623,14 +623,14 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
 <br></br>
 <div><a href="https://csa-iot.org/all-solutions/matter/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/matter.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="matter"><strong><a href="https://csa-iot.org/all-solutions/matter/" target="_blank">Matter</a></strong></span>, um protocolo padrão unificador da indústria que oferece conectividade confiável e segura para dispositivos e sistemas compatíveis.
+<span id="matter"><strong><a href="https://csa-iot.org/all-solutions/matter/" target="_blank">Matter</a></strong></span>, um protocolo padrão que unifica o setor e oferece conectividade confiável e segura para dispositivos e sistemas compatíveis.
 <br></br>
 <br></br>
 
 <div class="table-center">
  <table align="center">
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/pt-br/xiao_idf/" target="_blank">Série XIAO ESP32 (C3, S3, C6)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/pt-br/xiao_idf/" target="_blank">XIAO ESP32 Series (C3, S3, C6)</a></th>
    <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
             <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
@@ -669,7 +669,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
 <div class="table-center">
  <table align="center">
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_espnow/" target="_blank">Série XIAO ESP32 (ESP32C3, ESP32S3, ESP32S3 Sense, ESP32C6)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_espnow/" target="_blank">XIAO ESP32 Series (ESP32C3, ESP32S3, ESP32S3 Sense, ESP32C6)</a></th>
    <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
             <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
@@ -696,7 +696,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
 <br></br>
 <div><a href="https://aws.amazon.com/iot-core/sidewalk/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/amazonsidewalk.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="amazon_sidewalk"><strong><a href="https://aws.amazon.com/iot-core/sidewalk/" target="_blank">Amazon Sidewalk</a></strong></span>, uma rede de longo alcance, criptografada e gratuita para conectar, que fornece conectividade persistente para bilhões de dispositivos.
+<span id="amazon_sidewalk"><strong><a href="https://aws.amazon.com/iot-core/sidewalk/" target="_blank">Amazon Sidewalk</a></strong></span>, uma rede de longo alcance, criptografada e gratuita para conexão, que fornece conectividade persistente para bilhões de dispositivos.
 <br></br>
 <br></br>
 
@@ -727,7 +727,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
  </table>
 </div>
 
-## <span id="tinyml/embedded_machine_learningtinyml">Plataformas de TinyML/Aprendizado de Máquina Embarcado</span>
+## <span id="tinyml/embedded_machine_learningtinyml">Plataformas TinyML/Aprendizado de Máquina Embarcado</span>
 
 <br></br>
 <div><a href="https://sensecraft.seeed.cc/ai/#/home" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/sensecraft.png" style={{width:'auto', height:50}} /></a></div>
@@ -873,7 +873,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
  </table>
 </div>
 
-## <span id="other_hot_applications">Outras Aplicações em Alta</span>
+## <span id="other_hot_applications">Outros aplicativos em alta</span>
 
 <br></br>
 <div><a href="https://kno.wled.ge/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/wled.png" style={{width:'auto', height:50}} /></a></div>
@@ -895,7 +895,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
 <br></br>
 <div><a href="https://chatgpt.com/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/chatgtp.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="chatgpt"><strong><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></strong></span>, um modelo irmão do InstructGPT⁠, que é treinado para seguir uma instrução em um prompt e fornecer uma resposta detalhada.
+<span id="chatgpt"><strong><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></strong></span>, um modelo irmão do InstructGPT⁠, treinado para seguir uma instrução em um prompt e fornecer uma resposta detalhada.
 <br></br>
 <br></br>
 
@@ -943,7 +943,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
  </table>
 </div>
 
-## <span id="prototyping_tools_pcb_layout_stimulation">Ferramentas de Prototipagem (Layout de PCB e Simulação)</span>
+## <span id="prototyping_tools_pcb_layout_stimulation">Ferramentas de prototipagem (layout de PCB e simulação)</span>
 
 <br></br>
 <div><a href="https://fritzing.org/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/fritzing.png" style={{width:'auto', height:50}} /></a></div>
@@ -975,7 +975,7 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
 <br></br>
 <div><a href="https://www.flux.ai/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/flux.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="fluxai"><strong><a href="https://www.flux.ai/" target="_blank">FluxAI</a></strong></span>, uma maneira melhor de criar PCBs profissionais com um copiloto de IA.
+<span id="fluxai"><strong><a href="https://www.flux.ai/" target="_blank">FluxAI</a></strong></span>, uma maneira melhor de construir PCBs profissionais com um copiloto de IA.
 <br></br>
 <br></br>
 
@@ -1021,12 +1021,12 @@ Não conseguiríamos fazer isso sem o carinho e a contribuição que recebemos d
  </table>
 </div>
 
-## <span id="iot_clouds_and_iot_platforms">Nuvens IoT e Plataformas IoT</span>
+## <span id="iot_clouds_and_iot_platforms">Nuvens IoT e plataformas IoT</span>
 
 <br></br>
 <div><a href="https://aws.amazon.com/iot/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/awsiot.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="aws_iot"><strong><a href="https://aws.amazon.com/iot/" target="_blank">AWS IoT</a></strong></span>, permite conectar e gerenciar dispositivos com segurança, coletar e analisar dados dos dispositivos e criar e implantar soluções que geram maior valor para os negócios.
+<span id="aws_iot"><strong><a href="https://aws.amazon.com/iot/" target="_blank">AWS IoT</a></strong></span>, permite conectar e gerenciar dispositivos com segurança, coletar e analisar dados dos dispositivos e criar e implantar soluções que gerem maior valor para o negócio.
 <br></br>
 <br></br>
 
