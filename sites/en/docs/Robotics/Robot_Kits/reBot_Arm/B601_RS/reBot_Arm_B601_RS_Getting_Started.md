@@ -238,6 +238,71 @@ or Windows:
 
 Please visit [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) to install the PCAN-USB driver.
 
+:::tip Attention
+If **PCAN-USB** is not detected in Device Manager after installing the driver, expand the section below, download the PCAN firmware, and follow the recovery steps.
+:::
+
+<details>
+
+<summary>PCAN firmware download and driver recovery steps</summary>
+
+If PCAN-USB still does not work after installing the driver and Device Manager does not show the **PCAN-USB** device illustrated below, download the PCAN firmware package and follow these steps to install the DFU driver and reflash the firmware.
+
+![PCAN-USB detected in Device Manager](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/01-pcan-usb-device.png)
+
+> 📦 <a href="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip" download="USB2CAN.zip">Download USB2CAN.zip</a>
+
+### Install the DFU Driver
+
+1. Extract the downloaded package. It contains the `Dfu tool` and `pcan` folders.
+
+![Dfu tool and pcan folders extracted from the package](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/02-extracted-folders.png)
+
+2. Open the `Dfu tool` folder and run the `.exe` installer. After installation, record the driver installation path, for example:
+
+```text
+C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
+```
+
+![DfuSe installer and driver installation path](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/03-dfuse-install-location.png)
+
+3. Set the DIP switch on the USB2CAN module to **BOOT**, then connect the module to your computer.
+
+![Set the USB2CAN DIP switch to BOOT](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/04-usb2can-boot-switch.jpg)
+
+4. Open **Device Manager**, locate **Other devices → STM32 BOOTLOADER**, right-click it, select **Update driver**, and then select **Browse my computer for drivers**.
+
+![STM32 BOOTLOADER in Device Manager](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/05-stm32-bootloader.png)
+
+![Select Browse my computer for drivers](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/06-update-driver.png)
+
+5. Paste the DfuSeDemo driver path recorded earlier into the location field, select **Include subfolders**, and click **Next**.
+
+![Enter the DfuSeDemo driver path and select Include subfolders](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/07-driver-path.png)
+
+6. Disconnect and reconnect the USB2CAN module. If it is now identified as **STM Device in DFU Mode**, the driver update was successful.
+
+7. Open **DfuSeDemo** and confirm that it correctly detects the USB2CAN module.
+
+![DfuSeDemo correctly detects the USB2CAN module](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/08-dfuse-detects-usb2can.png)
+
+### Flash the PCAN Firmware
+
+1. In DfuSeDemo, click **Upgrade or Verify Action → Choose...**, and select the firmware from the extracted `pcan` folder.
+2. Click **Upgrade**, click **Yes** in the confirmation dialog, and wait for the firmware flashing process to finish. You can then close DfuSeDemo.
+
+![Select the PCAN firmware and click Upgrade in DfuSeDemo](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/09-select-pcan-firmware.png)
+
+![Firmware upgrade completed](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/10-firmware-upgrade-complete.png)
+
+### Restore and Verify the Device
+
+Disconnect the USB2CAN module, set the DIP switch to **120R**, and reconnect it to the computer. Open Device Manager. If the device is identified as **PCAN-USB**, the issue has been resolved and you can continue with this guide.
+
+![PCAN-USB successfully detected in Device Manager](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/11-pcan-usb-recognized.png)
+
+</details>
+
 <!-- ### 3. Write Motor IDs
 
 :::tip Pre-assembled kit users, please skip this step
