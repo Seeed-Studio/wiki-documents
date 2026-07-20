@@ -11,7 +11,7 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2024-07-24'
-updatedAt: '2026-06-28'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';

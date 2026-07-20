@@ -155,7 +155,7 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 #### Software
 
-- [DM_Tools_v.2.1.6.8.exe (Suporta apenas Windows)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool_v2.1.6.8.zip)
+- [Link para download do software](https://github.com/dmBots/motor-debugging-tool)
 
 
 #### Gravar ID do Motor e Testar Enable

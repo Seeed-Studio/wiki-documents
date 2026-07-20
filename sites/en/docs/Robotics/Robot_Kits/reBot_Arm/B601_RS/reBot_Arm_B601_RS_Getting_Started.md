@@ -13,13 +13,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_b601_rs_getting_started
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 last_update:
   date: 2026-05-26
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-06-27'
+updatedAt: '2026-07-07'
 url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 ---
 

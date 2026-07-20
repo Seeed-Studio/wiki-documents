@@ -1,6 +1,6 @@
 ---
 description: This wiki will provide a brief introduction on how to obtain the IMU data on the device.
-title: reCamera Pro IMU Usage
+title: IMU Usage
 keywords:
   - reCamera
   - reCamera Pro
@@ -13,23 +13,32 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-9'
+updatedAt: '2026-07-14'
 url: https://wiki.seeedstudio.com/recamera_pro_imu_usage/
 ---
 
-# IMU Usage
+# reCamera Pro IMU Usage
+
 The IMU model equipped on the device is ICM-42670-P, a 6-axis sensor integrating a 3-axis accelerometer and a 3-axis gyroscope. The gyroscope of ICM-42670-P supports measurement ranges of ±250 / ±500 / ±1000 / ±2000 dps, while the accelerometer supports ranges of ±2 / ±4 / ±8 / ±16 g. Its internal data is output in 16-bit two's complement format.
+
 ## Data Path
+
 reCamera PRO uses the standard IIO driver for the IMU, so raw data can be directly retrieved via IIO interfaces.
 Raw data files can be found under the directory ***/sys/bus/iio/devices/iio:device1/***.
 ![IMU_DATA_SAMPLE](https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO_imu_dir.png)
+
 ## Read Data
+
 Run the following command to read corresponding raw data. The example below demonstrates reading the X-axis acceleration data:
+
 ``` bash
 cat /sys/bus/iio/devices/iio:device1/in_accel_x_raw
 ```
+
 ## Retrieve Data with Python
+
 Python can be used to easily obtain IMU data. Below is a simple example:
+
 ```python
 #!/usr/bin/env python3
 DEVICE = "/sys/bus/iio/devices/iio:device1"
@@ -40,7 +49,6 @@ with open(f"{DEVICE}/in_anglvel_x_raw", "r") as f:
 gyro_x = raw * scale
 print(f"Gyroscope X: {gyro_x:.6f} rad/s")
 ```
-
 
 ## Technical Support and Product Discussion
 

@@ -12,7 +12,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-05-13'
-updatedAt: '2026-05-28'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 06/01/2026
   author: Zeller
 createdAt: '2025-06-01'
-updatedAt: '2026-06-15'
+updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_low_power/
 ---
 
@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_low_power/
   </table>
 </div>
 
-XIAO nRF54LM20A は nRF54LM20 SoC をベースとしており、超低消費電力を実現しています。その優れた低消費電力性能により、ウェアラブル機器、IoT エンドノード、リモートセンシングユニットなど、バッテリーが重要となるアプリケーションにおいて動作時間を効果的に延長できます。本ドキュメントでは、XIAO nRF54LM20A 上でさまざまな低消費電力モードを実装・展開する方法について説明します。
+XIAO nRF54LM20A は nRF54LM20 SoC をベースとしており、超低消費電力を特長とします。その優れた低消費電力性能により、ウェアラブル機器、IoT エンドノード、リモートセンシングユニットなど、バッテリーが重要となるアプリケーションでの動作時間を効果的に延長できます。本ドキュメントでは、XIAO nRF54LM20A 上でさまざまな低消費電力モードを実装・展開する方法について説明します。
 
 :::tip
 
@@ -71,8 +71,8 @@ XIAO nRF54LM20A は nRF54LM20 SoC をベースとしており、超低消費電�
 
 ## バッテリー駆動
 
-本章で実装するすべてのモードは、USB-C からの給電ではなく、XIAO nRF54LM20A 底面のパッドを介したバッテリー電源を採用しています。
-XIAO nRF54LM20A は、電源入力として 3.7V リチウムバッテリーを使用できます。配線方法については、以下の図を参照してください。
+本章で実装するすべてのモードは、USB-C からの給電ではなく、XIAO nRF54LM20A のボトムパッド経由でのバッテリー電源供給を採用しています。
+XIAO nRF54LM20A は、電源入力として 3.7V リチウムバッテリーを使用できます。配線方法については、次の図を参照してください。
 
 <div style={{textAlign: 'center'}}>
   <img
@@ -82,14 +82,14 @@ XIAO nRF54LM20A は、電源入力として 3.7V リチウムバッテリーを�
 
 :::caution
 
-はんだ付けの際は、プラス端子とマイナス端子を短絡させてバッテリーや機器を損傷させないよう十分注意してください。
-バッテリーに電力が残っている状態で、決して基板にはんだ付けしないでください。基板の回路が焼損するおそれがあります。通電中に短絡が発生すると大きなリスクを伴うため、アダプタの使用を推奨します。
+はんだ付けの際は、バッテリーや機器を損傷させる原因となるため、正極と負極をショートさせないよう十分注意してください。
+バッテリーに電力が残っている状態で、決して基板にはんだ付けしないでください。基板が焼損するおそれがあります。通電中にショートさせることは重大なリスクを伴うため、アダプタの使用を推奨します。
 
 :::
 
 ## 低消費電力モード
 
-XIAO nRF54LM20A では、System ON Sleep などの機能を用いて低消費電力モードを実装します。このモードでは、システムを動作状態に保ったまま消費電力を削減します。CPU クロックはゲートされ一時停止しますが、RAM の内容、ペリフェラルの状態、プログラムコンテキストは完全に保持され、GRTC を含む低消費電力タイマは動作し続けます。本セクションでは、`k_sleep` 関数と BLE アドバタイジングを用いて低消費電力モードを検証します。
+低消費電力モードは、XIAO nRF54LM20A 上で System ON Sleep などの機能を用いて実装されます。このモードでは、システムを動作状態に保ったまま消費電力を削減します。CPU クロックはゲートされ一時停止しますが、RAM の内容、ペリフェラルの状態、プログラムコンテキストは完全に保持され、GRTC を含む低消費電力タイマは動作し続けます。本セクションでは、`k_sleep` 関数と BLE アドバタイジングを用いて低消費電力モードを検証します。
 
 ### ソフトウェア
 
@@ -144,7 +144,7 @@ CONFIG_BT_CTLR_ASSERT_DEBUG=n
 CONFIG_BT_CTLR_ASSERT_OVERHEAD_START=n
 ```
 
-3. main.c プログラムを修正し、`k_sleep(K_SECONDS(10))` で低消費電力モードを有効にするとともに、BLE が 1 秒間隔で定期的にメッセージをブロードキャストするように設定します。
+3. main.c プログラムを修正し、`k_sleep(K_SECONDS(10))` で低消費電力モードを有効にするとともに、BLE が 1 秒間隔で定期的にメッセージをブロードキャストするよう設定します。
 
 ```c
 /*
@@ -193,9 +193,9 @@ int main(void)
 
 ### 結果
 
-ファームウェアを書き込んだ後、電力消費テスタを使用して、低消費電力状態における XIAO nRF54LM20A の動作電流を測定できます。
+ファームウェアを書き込んだ後、電力消費テスターを使用して、低消費電力状態における XIAO nRF54LM20A の動作電流を測定できます。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/low_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 同時に、Bluetooth でスキャンすると、`XIAO nRF54LM20A` という名前でアドバタイズしているデバイスを見つけることができます。
 
@@ -213,39 +213,43 @@ int main(void)
 <br/>
 :::tip
 
-上記のテスト結果は、実験室環境下で測定されたものです。値は環境や測定機器の違いにより変動する可能性があるため、実際の測定結果を参照してください。
+上記のテスト結果は、実験室環境下で測定されたものです。値は環境や測定機器の違いにより変動する場合があります。実際の測定結果を参照してください。
 
 :::
 
 ## 超低消費電力モード
 
-XIAO nRF54LM20A は System OFF によって超低消費電力モードを実現します。このモードに入ると、すべてのペリフェラルクロックが停止し、ほとんどのペリフェラルの電源が完全にオフになるため、待機電流は最小で 5 µA まで低減されます。ウェイクアップトリガには GRTC タイマまたは GPIO 割り込みが含まれます。システム状態は保持されず、ウェイクアップ後は電源再投入時と同様に動作し、プログラムは main() 関数から再スタートします。
+XIAO nRF54LM20A は System OFF によって超低消費電力モードを実現します。このモードに入ると、すべてのペリフェラルクロックが停止し、ほとんどのペリフェラルの電源が完全にオフになるため、待機電流は最小で 5 µA まで低減されます。ウェイクアップトリガには、GRTC タイマまたは GPIO 割り込みが含まれます。システム状態は保持されず、ウェイクアップ後は電源再投入時と同様に動作し、プログラムは main() 関数から再スタートします。
 
 本セクションでは、GPIO 割り込みによるウェイクアップを用いて、XIAO nRF54LM20A 上での System OFF モードの実動作性能を検証します。
 
 ### ソフトウェア
 
-この例では、Flash を手動で無効化する必要があります。そうしないと、約 15 µA の追加リーク電流が発生し、超低消費電力アプリケーションに悪影響を及ぼします。
+この例では、外部フラッシュを手動でディープパワーダウンモードに移行させ、その SPI ピンを定義済みの状態に駆動する必要があります。そうしないと、追加のリーク電流が発生する可能性があります。
 
 1. `.overlay` サフィックス付きのデバイスツリーファイルを修正します。
 
 ```dts
 &power_en {
-	// /delete-property/ regulator-boot-on;
+	/delete-property/ regulator-boot-on;
 };
 
 &pmic {
 	regulators {
 		LDO1 {
-			// /delete-property/ regulator-boot-on;
+			/delete-property/ regulator-boot-on;
 		};
 	};
 };
 
+&pmic_leds {
+	status = "disabled";
+};
+
 &py25q64 {
 	status = "okay";
-	// hold-gpios = <&gpio2 0 GPIO_ACTIVE_LOW>;
 };
+
 ```
 
 2. `prj.conf` ファイルを修正し、電源管理を含む各種設定を有効にします。
@@ -255,6 +259,7 @@ CONFIG_SERIAL=y
 CONFIG_CONSOLE=y
 CONFIG_UART_CONSOLE=y
 CONFIG_PRINTK=y
+CONFIG_BOOT_BANNER=n
 
 CONFIG_GPIO=y
 CONFIG_SPI=y
@@ -262,12 +267,15 @@ CONFIG_FLASH=y
 CONFIG_SPI_NOR=y
 
 CONFIG_PM_DEVICE=y
-CONFIG_NRFX_POWER=y
+CONFIG_PM_DEVICE_RUNTIME=y
 CONFIG_POWEROFF=y
 CONFIG_HWINFO=y
+
+CONFIG_BT=n
+
 ```
 
-3. main.c プログラムを作成し、オンボードの Boot ボタンが押されたときに、超低消費電力モードからチップをウェイクアップするようにします。
+3. main.c プログラムを作成し、オンボードの Boot ボタンが押されたときに、超低消費電力モードからチップをウェイクアップさせます。
 
 <details>
 
@@ -278,6 +286,15 @@ CONFIG_HWINFO=y
  * Copyright (c) 2019 Nordic Semiconductor ASA
  *
  * SPDX-License-Identifier: Apache-2.0
+ */
+/*
+ * Ultra-low-power System OFF demo for XIAO nRF54LM20A Sense.
+ *
+ * Confirmed board resources from the board DTS:
+ * - sw0 / BOOT: P0.09 (active low with pull-up)
+ * - External flash (PY25Q64HA) on spi00:
+ *   HOLD# P2.00, SCK P2.01, MOSI P2.02, WP# P2.03, MISO P2.04, CS# P2.05
+ * - RGB LEDs on P1.22 / P1.23 / P1.24
  */
 #include <errno.h>
 #include <inttypes.h>
@@ -291,8 +308,18 @@ CONFIG_HWINFO=y
 #include <zephyr/sys/poweroff.h>
 
 static const struct gpio_dt_spec sw0 = GPIO_DT_SPEC_GET(DT_ALIAS(sw0), gpios);
+static const struct gpio_dt_spec led_red = GPIO_DT_SPEC_GET(DT_ALIAS(led1), gpios);
+static const struct gpio_dt_spec led_blue = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
+static const struct gpio_dt_spec led_green = GPIO_DT_SPEC_GET(DT_ALIAS(led2), gpios);
+
+#if DT_NODE_EXISTS(DT_CHOSEN(zephyr_console))
 static const struct device *const cons = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
+#endif
+
+#if DT_NODE_HAS_STATUS(DT_NODELABEL(py25q64), okay)
 static const struct device *const flash_dev = DEVICE_DT_GET(DT_NODELABEL(py25q64));
+static const struct device *const flash_bus = DEVICE_DT_GET(DT_BUS(DT_NODELABEL(py25q64)));
+#endif
 
 static void print_reset_cause(uint32_t reset_cause)
 {
@@ -333,16 +360,30 @@ static int configure_gpio_wakeup(void)
 	return 0;
 }
 
+static void release_led(const struct gpio_dt_spec *led, const char *name)
+{
+	int rc;
+
+	if (!gpio_is_ready_dt(led)) {
+		return;
+	}
+
+	rc = gpio_pin_configure(led->port, led->pin, GPIO_DISCONNECTED);
+	if (rc < 0) {
+		printf("Warning: could not disconnect %s (%d)\n", name, rc);
+	}
+}
+
+static void release_led_gpios(void)
+{
+	release_led(&led_red, "red LED");
+	release_led(&led_blue, "blue LED");
+	release_led(&led_green, "green LED");
+}
+
 /*
- * SPI pin assignments for PY25Q64HA:
- *   P2.05 = CS#    -> OUTPUT HIGH  (keep flash deselected, prevent DPD wake)
- *   P2.00 = HOLD#  -> OUTPUT HIGH  (inactive)
- *   P2.03 = WP#    -> OUTPUT HIGH  (inactive)
- *   P2.01 = SCK    -> OUTPUT LOW   (deterministic level)
- *   P2.02 = MOSI   -> OUTPUT LOW   (deterministic level)
- *   P2.04 = MISO   -> INPUT PULL_DOWN (flash output, pull to known level)
- *
- * Datasheet requires all flash inputs at 0V or Vcc during DPD for 0.2uA typ.
+ * Put the external flash pins into deterministic, low-leakage states before
+ * System OFF. These pin numbers are confirmed by the board pinctrl and DTS.
  */
 static int configure_spi_pins_for_system_off(void)
 {
@@ -354,37 +395,31 @@ static int configure_spi_pins_for_system_off(void)
 		return -ENODEV;
 	}
 
-	/* CS# = HIGH: keep flash deselected */
 	rc = gpio_pin_configure(gpio2, 5, GPIO_OUTPUT_HIGH);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* HOLD# = HIGH: inactive */
 	rc = gpio_pin_configure(gpio2, 0, GPIO_OUTPUT_HIGH);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* WP# = HIGH: inactive */
 	rc = gpio_pin_configure(gpio2, 3, GPIO_OUTPUT_HIGH);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* SCK = LOW */
 	rc = gpio_pin_configure(gpio2, 1, GPIO_OUTPUT_LOW);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* MOSI = LOW */
 	rc = gpio_pin_configure(gpio2, 2, GPIO_OUTPUT_LOW);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* MISO = input with pull-down */
 	rc = gpio_pin_configure(gpio2, 4, GPIO_INPUT | GPIO_PULL_DOWN);
 	if (rc < 0) {
 		return rc;
@@ -395,116 +430,123 @@ static int configure_spi_pins_for_system_off(void)
 
 static int suspend_external_flash(void)
 {
-	const struct device *flash_bus = DEVICE_DT_GET(DT_BUS(DT_NODELABEL(py25q64)));
+	int first_error = 0;
 	int rc;
 
-	if (!device_is_ready(flash_dev)) {
-		printf("Flash device %s is not ready.\n", flash_dev->name);
-		return -ENODEV;
+#if DT_NODE_HAS_STATUS(DT_NODELABEL(py25q64), okay)
+	if (device_is_ready(flash_dev)) {
+		rc = pm_device_action_run(flash_dev, PM_DEVICE_ACTION_SUSPEND);
+		if ((rc < 0) && (first_error == 0)) {
+			first_error = rc;
+			printf("Warning: could not suspend external flash (%d)\n", rc);
+		}
+	} else {
+		first_error = -ENODEV;
+		printf("Warning: flash device is not ready; skipping driver DPD.\n");
 	}
 
-	printf("Flash device: %s\n", flash_dev->name);
-
-	/* Step 1: Suspend flash — spi-nor driver sends DPD (0xB9) automatically */
-	printf("Suspending external flash (entering DPD)...\n");
-	rc = pm_device_action_run(flash_dev, PM_DEVICE_ACTION_SUSPEND);
-	if (rc < 0) {
-		printf("Could not suspend external flash (%d)\n", rc);
-		return rc;
-	}
-	printf("External flash suspended.\n");
-
-	/* Step 2: Suspend SPI bus */
 	if (device_is_ready(flash_bus)) {
 		rc = pm_device_action_run(flash_bus, PM_DEVICE_ACTION_SUSPEND);
-		if (rc < 0) {
-			printf("Could not suspend SPI bus (%d)\n", rc);
-			return rc;
+		if ((rc < 0) && (first_error == 0)) {
+			first_error = rc;
+			printf("Warning: could not suspend SPI bus (%d)\n", rc);
 		}
-		printf("SPI bus suspended.\n");
+	} else if (first_error == 0) {
+		first_error = -ENODEV;
+		printf("Warning: flash SPI bus is not ready.\n");
 	}
+#else
+	first_error = -ENODEV;
+	printf("Warning: py25q64 is not enabled in DTS.\n");
+#endif
 
-	/* Step 3: Drive all SPI GPIOs to deterministic levels */
 	rc = configure_spi_pins_for_system_off();
-	if (rc < 0) {
-		printf("Could not configure SPI pins (%d)\n", rc);
-		return rc;
+	if ((rc < 0) && (first_error == 0)) {
+		first_error = rc;
+		printf("Warning: could not configure flash SPI pins (%d)\n", rc);
 	}
-	printf("SPI GPIO pins configured for system_off.\n");
 
-	return 0;
+	return first_error;
+}
+
+static void suspend_console_best_effort(void)
+{
+#if DT_NODE_EXISTS(DT_CHOSEN(zephyr_console))
+	int rc;
+
+	if (!device_is_ready(cons)) {
+		return;
+	}
+
+	rc = pm_device_action_run(cons, PM_DEVICE_ACTION_SUSPEND);
+	if (rc < 0) {
+		printf("Warning: could not suspend console (%d)\n", rc);
+	}
+#endif
 }
 
 int main(void)
 {
 	int rc;
-
-	if (!device_is_ready(cons)) {
-		printf("%s: console device not ready.\n", cons->name);
-		return 0;
-	}
-
-	printf("\n=== %s system off demo with PY25Q64HA ===\n", CONFIG_BOARD);
-
 	uint32_t reset_cause = 0U;
+
+	printf("\n=== %s ultra-low-power system off demo ===\n", CONFIG_BOARD);
 
 	rc = hwinfo_get_reset_cause(&reset_cause);
 	if (rc == 0) {
 		print_reset_cause(reset_cause);
 	} else {
-		printf("Could not read reset cause (%d)\n", rc);
+		printf("Warning: could not read reset cause (%d)\n", rc);
 	}
 
 	rc = configure_gpio_wakeup();
 	if (rc < 0) {
+		printf("Error: wakeup source configuration failed, aborting System OFF.\n");
 		return 0;
 	}
+
+	release_led_gpios();
 
 	rc = suspend_external_flash();
 	if (rc < 0) {
-		printf("Aborting system off because flash did not enter low power.\n");
-		return 0;
+		printf("Warning: flash low-power preparation incomplete (%d)\n", rc);
 	}
 
-	printf("Entering system off; press sw0 to restart\n");
+	printf("Entering system off; press BOOT/SW0 to restart.\n");
+	k_msleep(20);
 
-	rc = pm_device_action_run(cons, PM_DEVICE_ACTION_SUSPEND);
-	if (rc < 0) {
-		printf("Could not suspend console (%d)\n", rc);
-		return 0;
-	}
+	suspend_console_best_effort();
 
 	rc = hwinfo_clear_reset_cause();
 	if (rc < 0) {
-		printf("Could not clear reset cause (rc=%d)\n", rc);
-		return 0;
+		/* Clear failure should not stop entry into System OFF. */
+		printf("Warning: could not clear reset cause (%d)\n", rc);
 	}
 
 	sys_poweroff();
 
-	return 0;
+	while (1) {
+		k_sleep(K_FOREVER);
+	}
 }
+
 ```
 
 </details>
 
 ### 結果
 
-本デバイスは、電源投入後デフォルトで超低消費電力モードに入ります。XIAO nRF54LM20A を消費電力テスターで測定したところ、3.7 V バッテリーで給電した場合の平均動作電流は約 5.43 µA でした。
+起動後、ファームウェアはウェイクアップソースと外部ペリフェラルを準備し、その後自動的に System OFF に入ります。XIAO nRF54LM20A を消費電力テスターで測定したところ、3.7 V バッテリーで駆動した場合の平均動作電流は約 3.74 µA でした。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_4.png" style={{width:800, height:'auto'}}/></div>
-<br/>
-シリアルモニタ経由でオンボードの BOOT ボタンを押すことで、チップをウェイクアップさせ、再びディープスリープに入る前にステータス情報を出力させることができます。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/low_plus_3.77_2.png" style={{width:800, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_5.png" style={{width:800, height:'auto'}}/></div>
-<br/>
 :::tip
 
-上記のテスト結果は、実験室環境下で測定されたものです。環境や測定機器の違いにより値は変動する可能性がありますので、実際の測定性能を参照してください。
+上記のテスト結果は、実験室環境下で測定されたものです。値は環境やテスト機器の違いにより変動する場合があります。実際の測定性能を参照してください。
 
 :::
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 

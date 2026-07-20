@@ -11,13 +11,12 @@ keywords:
   - 6 DOF
 slug: /rebot_b601_dm_getting_started
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 last_update:
-  date: 2026-04-13T00:00:00.000Z
+  date: 2026-04-13
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-07-01'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
@@ -155,7 +154,7 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 #### Software
 
-- [DM_Tools_v.2.1.6.8.exe (Supports Windows Only)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool_v2.1.6.8.zip)
+- [Software Download Link](https://github.com/dmBots/motor-debugging-tool)
 
 
 #### Write Motor ID and Test Enable
