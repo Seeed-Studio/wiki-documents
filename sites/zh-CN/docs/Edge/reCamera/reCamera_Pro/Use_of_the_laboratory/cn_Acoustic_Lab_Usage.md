@@ -10,7 +10,7 @@ keywords:
   - Custom Training
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_acoustic_lab_usage
-sidebar_position: 4
+sidebar_position: 1
 last_update:
   date: 2026-07-13T00:00:00.000Z
   author: sizhaozhou
@@ -66,7 +66,7 @@ Acoustic Lab 的主界面包括以下核心区域：
 <div align="left"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Background_Noise_Slice.png" /></div>
 
 5. 点击右上角的 **Add category** 按钮添加一个声音类别并命名（例如你想要训练的声音名称）。
-6. 点击 **Record** 按钮开始录制声音样本（推荐时长：10 秒），后续步骤与第 4 步相同。
+6. 点击 **Record** 按钮开始录制声音样本（推荐时长：10 秒），后续步骤与步骤 4 相同。
 
 <div align="left"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Voice_Slice.png" /></div>
 
@@ -74,7 +74,7 @@ Acoustic Lab 的主界面包括以下核心区域：
 
 完成声音样本采集后，即可进行模型训练。
 
-1. 点击 **Hyperparameter** 按钮进入超参数设置界面（如无特殊需求，保持默认设置）。
+1. 点击 **Hyperparameter** 按钮进入超参数设置界面（如无特殊需求，保持默认设置即可）。
 2. 点击 **Train model** 按钮开始训练声音模型。
 
 <div align="left"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Train_Model.png" /></div>
@@ -114,7 +114,7 @@ Acoustic Lab 的主界面包括以下核心区域：
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多层次的支持，确保您在使用产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同偏好和需求。
+感谢您选择我们的产品！我们将为您提供多层次的支持，确保您在使用产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同用户的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

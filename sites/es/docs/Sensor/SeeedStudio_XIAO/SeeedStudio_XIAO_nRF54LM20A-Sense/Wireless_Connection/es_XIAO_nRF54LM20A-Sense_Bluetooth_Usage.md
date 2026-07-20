@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-20'
-updatedAt: '2026-06-15'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_bluetooth_lowpower/
 ---
 
@@ -49,7 +49,7 @@ Impulsada por el SoC nRF54LM20A, la Serie XIAO nRF54LM20A es compatible con Blue
 :::tip
 
 - Este tutorial se basa en el sistema de compilación PlatformIO y en Zephyr RTOS. Si no estás familiarizado con la creación de un proyecto PlatformIO para el XIAO nRF54LM20A, consulta [Getting Started with Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/).
-- Si deseas aprender más sobre el SoC nRF54LM20A y BLE, visita los siguientes enlaces: [**nRF54LM20A SoC Introduction**](https://www.nordicsemi.com/Products/nRF54LM20A) y [**Bluetooth-Low-Energy for Nordic**](https://www.nordicsemi.com/Products/Wireless/Bluetooth-Low-Energy)
+- Si deseas obtener más información sobre el SoC nRF54LM20A y BLE, visita los siguientes enlaces: [**nRF54LM20A SoC Introduction**](https://www.nordicsemi.com/Products/nRF54LM20A) y [**Bluetooth-Low-Energy for Nordic**](https://www.nordicsemi.com/Products/Wireless/Bluetooth-Low-Energy)
 
 :::
 
@@ -117,7 +117,7 @@ Esta sección presenta las funciones principales de BLE y el método de uso de B
 
 ### Beacon BLE
 
-Este ejemplo implementa un Beacon BLE en el XIAO nRF54LM20A. Tras el arranque, el dispositivo transmite continuamente paquetes de advertising que contienen Manufacturer Specific Data. El paquete incluye un contador que se incrementa una vez por segundo, lo que permite supervisar los cambios de datos en tiempo real utilizando nRF Connect.
+Este ejemplo implementa un Beacon BLE en el XIAO nRF54LM20A. Tras el arranque, el dispositivo transmite continuamente paquetes de advertising que contienen datos específicos del fabricante (Manufacturer Specific Data). El paquete incluye un contador que se incrementa una vez por segundo, lo que permite supervisar los cambios de datos en tiempo real utilizando nRF Connect.
 
 #### Software
 
@@ -199,6 +199,20 @@ LOG_MODULE_REGISTER(ble_beacon, LOG_LEVEL_INF);
 
 static uint32_t manufacturer_counter;
 
+static const uint8_t adv_flags[] __aligned(4) = {
+    BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR,
+};
+
+static const uint8_t adv_name[] __aligned(4) = CONFIG_BT_DEVICE_NAME;
+
+static uint8_t manuf_data[MANUF_DATA_SIZE] __aligned(4);
+
+static const struct bt_data ad[] __aligned(4) = {
+    BT_DATA(BT_DATA_FLAGS, adv_flags, sizeof(adv_flags)),
+    BT_DATA(BT_DATA_NAME_COMPLETE, adv_name, sizeof(adv_name) - 1),
+    BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
+};
+
 /* Power enable regulator (GPIO1_12) - must be enabled before BLE init */
 static const struct device *const power_en_dev =
     DEVICE_DT_GET(DT_NODELABEL(power_en));
@@ -206,6 +220,19 @@ static const struct device *const power_en_dev =
 static void adv_update_work_handler(struct k_work *work);
 
 static K_WORK_DELAYABLE_DEFINE(adv_update_work, adv_update_work_handler);
+
+static void fill_manuf_data(uint32_t counter)
+{
+    /* [Company ID (2B)][Counter (4B)][Custom (2B)] */
+    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
+    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
+    manuf_data[2] = (counter >> 0) & 0xFF;
+    manuf_data[3] = (counter >> 8) & 0xFF;
+    manuf_data[4] = (counter >> 16) & 0xFF;
+    manuf_data[5] = (counter >> 24) & 0xFF;
+    manuf_data[6] = 0xAA;
+    manuf_data[7] = 0xBB;
+}
 
 static int enable_power(void)
 {
@@ -230,26 +257,9 @@ static int enable_power(void)
 static void adv_update_work_handler(struct k_work *work)
 {
     int err;
-    uint8_t manuf_data[MANUF_DATA_SIZE];
 
     manufacturer_counter++;
-
-    /* Build manufacturer data: [Company ID (2B)][Counter (4B)][Custom (2B)] */
-    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
-    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-    manuf_data[2] = (manufacturer_counter >> 0) & 0xFF;
-    manuf_data[3] = (manufacturer_counter >> 8) & 0xFF;
-    manuf_data[4] = (manufacturer_counter >> 16) & 0xFF;
-    manuf_data[5] = (manufacturer_counter >> 24) & 0xFF;
-    manuf_data[6] = 0xAA;
-    manuf_data[7] = 0xBB;
-
-    const struct bt_data ad[] = {
-        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-        BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
-    };
+    fill_manuf_data(manufacturer_counter);
 
     err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
     if (err < 0) {
@@ -264,7 +274,6 @@ static void adv_update_work_handler(struct k_work *work)
 int main(void)
 {
     int err;
-    uint8_t init_data[MANUF_DATA_SIZE];
 
     LOG_INF("BLE Manufacturer Data Beacon");
 
@@ -286,21 +295,7 @@ int main(void)
     LOG_INF("BLE initialized");
 
     /* Initial advertising data with counter = 0 */
-    init_data[0] = MANUF_COMPANY_ID & 0xFF;
-    init_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-    init_data[2] = 0;
-    init_data[3] = 0;
-    init_data[4] = 0;
-    init_data[5] = 0;
-    init_data[6] = 0xAA;
-    init_data[7] = 0xBB;
-
-    const struct bt_data ad[] = {
-        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-        BT_DATA(BT_DATA_MANUFACTURER_DATA, init_data, sizeof(init_data)),
-    };
+    fill_manuf_data(0);
 
     err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
     if (err < 0) {
@@ -332,7 +327,7 @@ Mientras tanto, puedes buscar y descargar la app nRF Connect en las principales 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. Después de instalar el software, escanea el dispositivo Bluetooth llamado **XIAO-Beacon** y comprueba los Manufacturer Data recibidos. Al mismo tiempo, abre el puerto serie para ver los registros de salida.
+2. Después de instalar el software, escanea el dispositivo Bluetooth llamado **XIAO-Beacon** y comprueba los datos de fabricante recibidos (Manufacturer Data). Al mismo tiempo, abre el puerto serie para ver los registros de salida.
 
 <div className="table-center">
 <table align="center">
@@ -343,7 +338,7 @@ Mientras tanto, puedes buscar y descargar la app nRF Connect en las principales 
 </table>
 </div>
 
-- Los Manufacturer Data obtenidos son el valor hexadecimal `<0x0059> 0x03000000AABB`. Al comprobar el código del programa, el segmento `0x03000000` indica que el valor actual del contador es 3.
+- Los datos de fabricante obtenidos (Manufacturer Data) son el valor hexadecimal `<0x0059> 0x03000000AABB`. Al comprobar el código del programa, el segmento `0x03000000` indica que el valor actual del contador es 3.
 
 ```c
 #define MANUF_COMPANY_ID    0x0059
@@ -359,15 +354,15 @@ manuf_data[6] = 0xAA;
 manuf_data[7] = 0xBB;
 ```
 
-- Abre la herramienta de puerto serie y comprueba que los valores del contador se imprimen línea por línea, alcanzando el valor actual de 3.
+- Abre la herramienta de puerto serie y comprueba que los valores del contador se imprimen línea por línea, alcanzando el conteo actual el valor 3.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_beacon_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-A partir de los resultados anteriores, se puede comprender claramente el proceso de transmisión de paquetes de publicidad BLE personalizados en XIAO nRF54LM20A Sense, lo que facilita una investigación más profunda sobre las características de funcionamiento de BLE. En escenarios de aplicación específicos, se pueden adoptar los datos de publicidad para juzgar las condiciones de disparo sin establecer conexiones reales.
+A partir de los resultados anteriores, se puede comprender claramente el proceso de transmisión de paquetes de publicidad BLE personalizados en XIAO nRF54LM20A Sense, lo que facilita una investigación más profunda sobre las características de funcionamiento de BLE. En escenarios de aplicación específicos, se pueden adoptar datos de publicidad para juzgar condiciones de disparo sin establecer conexiones reales.
 
 ### BLE LBS
 
-Este ejemplo utiliza dos placas XIAO nRF54 para implementar un servicio BLE LED Button Service (LBS). Una placa actúa como un periférico BLE y anuncia un servicio LBS personalizado. La otra actúa como un central BLE, escanea el servicio, se conecta automáticamente y controla el LED del periférico a través de una característica de escritura GATT.
+Este ejemplo utiliza dos placas XIAO nRF54 para implementar un servicio BLE LED Button Service (LBS). Una placa actúa como Periférico BLE y anuncia un servicio LBS personalizado. La otra actúa como Central BLE, escanea el servicio, se conecta automáticamente y controla el LED del Periférico mediante una característica de escritura GATT (GATT Write Characteristic).
 
 No se requiere ningún archivo `app.overlay` adicional porque la definición de la placa ya proporciona los alias `led0` y `sw0` utilizados por este ejemplo.
 
@@ -1160,7 +1155,7 @@ monitor_speed = 115200
 
 2. Reinicia ambas placas. Antes de que se establezca una conexión, el LED del Periférico parpadea para indicar la publicidad, mientras que el LED del Central parpadea para indicar el escaneo.
 
-3. Una vez que el Central descubre al Periférico, las dos placas se conectan automáticamente. Después de que se establece la conexión, ambos LED dejan de parpadear.
+3. Una vez que el Central descubre el Periférico, las dos placas se conectan automáticamente. Después de que se establece la conexión, ambos LED dejan de parpadear.
 
 4. Pulsa el botón BOOT en la placa Central. El Central escribe `0` o `1` en el Periférico a través de la característica de escritura GATT, y el Periférico actualiza su LED en consecuencia.
 
@@ -1172,11 +1167,11 @@ monitor_speed = 115200
   />
 </div>
 
-A través de este ejemplo, aprenderás cómo construir una aplicación completa de Central y Periférico BLE, incluyendo publicidad BLE, escaneo, conexión automática, descubrimiento de servicios GATT y el proceso básico de comunicación usando un botón en una placa de desarrollo para controlar de forma remota el LED en otra placa de desarrollo.
+A través de este ejemplo, aprenderás cómo crear una aplicación completa de Central y Periférico BLE, incluyendo publicidad BLE, escaneo, conexión automática, descubrimiento de servicios GATT y el proceso básico de comunicación usando un botón en una placa de desarrollo para controlar de forma remota el LED en otra placa de desarrollo.
 
 ## Resumen
 
-Este ejemplo demuestra cómo construir una aplicación de Central y Periférico BLE, incluyendo publicidad BLE, escaneo, conexión automática, descubrimiento de servicios GATT y control remoto de LED a través de una característica de escritura GATT.
+Este ejemplo demuestra cómo crear una aplicación de Central y Periférico BLE, incluyendo publicidad BLE, escaneo, conexión automática, descubrimiento de servicios GATT y control remoto de LED mediante una característica de escritura GATT.
 
 ## Soporte técnico y debate sobre el producto
 

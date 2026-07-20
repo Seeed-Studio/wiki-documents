@@ -61,6 +61,8 @@ python -m src.gui.factory_calibration_tool --port1 /dev/ttyUSB0 --port2 /dev/tty
 
 ### 1. サーボが正常かどうかを確認する
 
+まず、シリアルポート選択で対応するポート番号を選択します。
+
 サーボ 1〜6 がすべて正常に検出されていれば、サーボが正しく認識されており、基本機能が動作していることを意味します。
 
 <div align="center">
@@ -175,14 +177,17 @@ python -m src.gui.factory_calibration_tool --port1 /dev/ttyUSB0 --port2 /dev/tty
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/14.png" />
 </div>
 
-まずトルクを有効にします。ワンクリックですべてのトルクを有効にすることも、単一のサーボのトルクだけを有効にすることもできます。その後、スライダーを動かしてサーボを対応する位置に移動させます。ただし、必ずゆっくり動かしてください。ロボットアームの 3D プリント部品が物理的に一部の位置を干渉するため、アームは実際には端の位置まで到達できません。可動範囲には最大値と最小値の制限があるので、スライダーを 0 や最大値まで動かさないでください。トルクを無効にすると、ロボットアームの力が抜けます。
+- 1. まずトルクを有効にします。ワンクリックですべてのトルクを有効にすることも、単一のサーボのトルクだけを有効にすることもできます。その後、スライダーを動かしてサーボを対応する位置に移動させます。ただし、必ずゆっくり動かしてください。ロボットアームの 3D プリント部品が物理的に一部の位置を干渉するため、アームは実際には端の位置まで到達できません。可動範囲には最大値と最小値の制限があるので、スライダーを 0 や最大値まで動かさないでください。トルクを無効にすると、ロボットアームの力が抜けます。
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/15.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/21.png" />
 </div>
 
 上図のように、トルクを有効にすると、対応するサーボの動きが変化します。
+
+- 2. 単一のサーボに対してニュートラルキャリブレーションを行い、サーボ内部のニュートラルおよび最大・最小位置をクリアできます
+- 3. 以下はサーボ情報です
 
 Pos: 位置
 
@@ -214,37 +219,3 @@ Status: 状態には Normal、Overcurrent、Overload が表示されます
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/16.png" />
 </div>
-
-### 7. ロボットアームキャリブレーションファイルの管理
-
-対応するフォロワーアームのキャリブレーションファイルまたはリーダーアームのキャリブレーションファイルを選択して、実行、変更、削除ができます。
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/17.png" />
-</div>
-
-### 8. 新しいロボットアームキャリブレーションファイルを作成する
-
-**GUI Calibration Wizard** をクリックし、対応するロボットアームとポート番号を選択します。
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/18.png" />
-</div>
-
-各サーボに対して、最小値、最大値、およびニュートラルのキャリブレーションを行うことができます。
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/19.png" />
-</div>
-
-まず、各サーボのニュートラル値を記録します。各サーボを図に示す位置に配置し、サーボ 1〜6 について順番に **Record Neutral Value** をクリックします。
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/20.png" />
-</div>
-
-次に、各サーボについて **Start Recording Range** をクリックし、サーボを最大および最小の範囲まで回転させてから **Stop Recording Range** をクリックします。上記の操作を各サーボに対して繰り返し、その後キャリブレーションファイルに名前を付けて保存します。

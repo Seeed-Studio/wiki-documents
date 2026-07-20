@@ -7,25 +7,25 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip
 sku: 103020312
 last_update:
-  date: 1/10/2023
+  date: 7/17/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-20'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" alt="pir" width={600} height="auto" /></p>
 
-## Visão Geral
+## Visão geral
 
-Seeed Studio Grove Base for XIAO é uma placa de extensão Grove plug-and-play para **[Seeed Studio XIAO](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/)**. Com o chip de gerenciamento de bateria onboard e o pad de conexão de bateria, você pode facilmente alimentar o seu Seeed Studio XIAO com bateria de lítio e recarregá-lo. Os 8 conectores Grove onboard incluem dois Grove I2C e um UART. Ele atua como uma ponte entre o Seeed Studio XIAO e o sistema Grove da Seeed. O pad de conexão Flash SPI permite que você adicione Flash ao Seeed Studio XIAO para expandir seu espaço de memória, proporcionando ao Seeed Studio XIAO mais possibilidades.
+Seeed Studio Grove Base for XIAO é uma placa de extensão Grove plug-and-play para **[Seeed Studio XIAO](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/)**. Com o chip de gerenciamento de bateria on-board e o pad de conexão de bateria, você pode facilmente alimentar seu Seeed Studio XIAO com bateria de lítio e recarregá-la. Os 8 conectores Grove on-board incluem dois Grove I2C e um UART. Ele atua como uma ponte entre o Seeed Studio XIAO e o sistema Grove da Seeed. O pad de conexão Flash SPI permite adicionar Flash ao Seeed Studio XIAO para expandir seu espaço de memória, proporcionando ao Seeed Studio XIAO mais possibilidades.
 
-Com o chip de gerenciamento de bateria onboard e o pad de conexão de bateria, você pode facilmente alimentar o seu Seeed Studio XIAO com bateria de lítio de 3,7 V e recarregá-lo, tornando seus projetos, especialmente os vestíveis, mais flexíveis e portáteis. Você pode até quebrar a placa através dos furos de ruptura da própria PCB de acordo com suas necessidades reais do projeto (apenas 25*39 mm de dimensão após a separação), tornando-a ainda menor e o peso seria reduzido de 13 g para 10 g também!
+Com o chip de gerenciamento de bateria on-board e o pad de conexão de bateria, você pode facilmente alimentar seu Seeed Studio XIAO com bateria de lítio de 3,7 V e recarregá-la, tornando seus projetos, especialmente os vestíveis, mais flexíveis e portáteis. Você pode até quebrar a placa através das perfurações de ruptura na própria PCB de acordo com suas necessidades reais do projeto (apenas 25*39 mm de dimensão após a separação), tornando-a ainda menor e o peso será reduzido de 13 g para 10 g também!
 <!-- 图有问题 
 <p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/01.png" border={0} /></a></p> -->
 
-Como uma placa de extensão, a Seeed Studio Grove Base for XIAO também traz para fora todos os 14 pinos do Seeed Studio XIAO, e seu interruptor de energia onboard e a luz indicadora de status de carregamento a tornam mais amigável ao usuário. O Shield ainda reserva o pad de conexão SPI-Flash para um desenvolvedor avançado que possa precisar adicionar Flash ao Seeed Studio XIAO para expandir seu espaço de memória, proporcionando ao Seeed Studio XIAO mais possibilidades.
+Como uma placa de extensão, a Seeed Studio Grove Base for XIAO também traz para fora todos os 14 pinos do Seeed Studio XIAO, e seu interruptor de alimentação on-board e o indicador de status de carregamento a tornam mais amigável ao usuário. O Shield ainda reserva o pad de conexão SPI-Flash para um desenvolvedor avançado que possa precisar adicionar Flash ao Seeed Studio XIAO para expandir seu espaço de memória, proporcionando ao Seeed Studio XIAO mais possibilidades.
 
 No formato do Seeed Studio XIAO, todas as placas Seeed Studio XIAO suportam tanto o [Grove Shield for XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) quanto a [Seeed Studio XIAO Expansion board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html). Há uma pequena diferença entre os pinos e, consultando o Pinout, é fácil de gerenciar.
 
@@ -35,32 +35,32 @@ Este produto não inclui uma placa Seeed Studio XIAO, clique [here](https://www
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira o Seu Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
-#### Visão Geral de Hardware
+#### Visão geral de hardware
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/hardware-overview.png" border={0} /></p>
 
 
-#### Descrição do Pinout
+#### Descrição do pinout
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/pinout.png" border={0} /></p>
 
 ## Características
 
-- Função de carregamento e gerenciamento de bateria de lítio onboard
-- Conectores Grove (Grove IIC x 2, Grove UART x 1), todos os 14 GPIO trazidos para fora
+- Função de carregamento e gerenciamento de bateria de lítio on-board
+- Conectores Grove ( Grove IIC x 2, Grove UART x 1 ), todos os 14 GPIO expostos
 - Design compacto e destacável
 - Pad de conexão Flash SPI reservado
-- Interruptor de energia onboard e luz indicadora de status de carregamento
+- Interruptor de alimentação on-board e luz indicadora de status de carregamento
 
-## Especificações
+## Especificação
 
 |Item|Valor|
 |---|---|
-|Tensão de operação|3,3 V / bateria de lítio de 3,7 V|
+|Tensão de operação|3,3 V / Bateria de lítio de 3,7 V|
 |Capacidade de carga|800 mA|
 |Corrente de carregamento| 500 mA (Máx)|
 |Temperatura de operação|- 40°C a 85°C|
@@ -72,9 +72,9 @@ Este produto não inclui uma placa Seeed Studio XIAO, clique [here](https://www
 - Dispositivos vestíveis
 - Protótipo rápido
 - Teste de módulos Grove
-- Projetos que exigem tamanho pequeno
+- Projetos que exigem tamanho reduzido
 
-## Plataformas Suportadas
+## Plataformas compatíveis
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -83,9 +83,9 @@ Este produto não inclui uma placa Seeed Studio XIAO, clique [here](https://www
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={200} height="auto" /></p>|
 
-## Primeiros Passos
+## Introdução
 
-### Materiais Necessários
+### Materiais necessários
 
 | Seeed Studio Seeed Studio XIAO | Grove-Doppler-Radar| Seeed Studio Grove Base for XIAO|
 |--------------|--------------|--------------|
@@ -96,7 +96,7 @@ Este produto não inclui uma placa Seeed Studio XIAO, clique [here](https://www
 
 <!-- 图有问题<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/Grove-shield-XIAO.png" border={0} /></a></p> -->
 
-#### Descrição dos pinos dos headers externos para Grove-Doppler Radar
+#### Descrição dos pinos de cabeçalho externos para o Grove-Doppler Radar
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/pin-1.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/pin-1.png" alt="pir" width={600} height="auto" /></p>
@@ -105,7 +105,7 @@ Este produto não inclui uma placa Seeed Studio XIAO, clique [here](https://www
 |---|---|----|
 |1| DIV_OUT |Saída do divisor de frequência do BGT24LTR11 |
 |2|GND|Terra|
-|3|VCC_5V_EXT|Pino de alimentação de entrada +5,0 V externa (máximo=5,5 V)|
+|3|VCC_5V_EXT|Pino de alimentação de entrada externa +5,0 V (máximo=5,5 V)|
 |4|VTUNE|Tensão de sintonia de frequência do VCO|
 |5|IFQ_HG|Saída de sinal analógico do canal Q do BGT24LTR11 - segundo estágio de ganho|
 |6|IFI_HG|Saída de sinal analógico do canal I do BGT24LTR11 - segundo estágio de ganho|
@@ -113,18 +113,18 @@ Este produto não inclui uma placa Seeed Studio XIAO, clique [here](https://www
 |8|OUT1|Pino GPIO externo (configurável pelo usuário)|
 |9|OUT2|Pino GPIO externo (configurável pelo usuário)|
 
-### Conexão de Hardware
+### Conexão de hardware
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/hardware_connection.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/hardware_connection.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::tip
-Conecte gentilmente o cabo USB e a interface do Doppler Radar na interface da placa de expansão Seeed Studio XIAO, caso contrário você pode danificar a porta.
+Conecte o cabo USB e a interface do Doppler Radar na interface da placa de expansão Seeed Studio XIAO com cuidado, caso contrário você pode danificar a porta.
 :::
 
 - **Passo 1.** Conecte o Doppler Radar à placa de expansão Seeed Studio XIAO com um cabo Grove.
 
-- **Passo 2.** Conecte o Seeed Studio XIAO ao PC via um cabo USB.
+- **Passo 2.** Conecte o Seeed Studio XIAO ao PC via cabo USB.
 
 - **Passo 3.** Baixe o código, consulte a parte de software.
 
@@ -136,15 +136,15 @@ Conecte gentilmente o cabo USB e a interface do Doppler Radar na interface da pl
 Se esta é a primeira vez que você trabalha com Arduino, recomendamos fortemente que veja [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/) antes de começar.
 :::
 
-- **Passo 1.** Baixe o [código de demonstração](https://github.com/Seeed-Studio/Seeed_Arduino_DopplerRadar).
+- **Passo 1.** Baixe o [Demo code](https://github.com/Seeed-Studio/Seeed_Arduino_DopplerRadar).
 
 - **Passo 2.** Copie todo o arquivo **Seeed_Arduino_DopplerRadar** e cole-o na pasta de bibliotecas da sua IDE Arduino.
 
-- **Passo 3.** Abra o arquivo **BGT24LTR11_DETECTION_TARGET** com a sua IDE Arduino.
+- **Passo 3.** Abra o arquivo **BGT24LTR11_DETECTION_TARGET** com sua IDE Arduino.
 
-- **Passo 4.** Envie o demo. Se você não souber como enviar o código, verifique [How to upload code](https://wiki.seeedstudio.com/pt-br/Upload_Code/).
+- **Passo 4.** Faça o upload do demo. Se você não souber como fazer o upload do código, verifique [How to upload code](https://wiki.seeedstudio.com/pt-br/Upload_Code/).
 
-#### Código de Software
+#### Código de software
 
 ```cpp
 #include "GBT24LTR11.h"
@@ -208,7 +208,7 @@ void loop() {
 ```
 
 :::success
-  Se tudo correr bem, você pode ir ao **Serial Monitor** para ver um resultado como o seguinte:
+  Se tudo correr bem, você pode ir para o **Serial Monitor** para ver um resultado como o seguinte:
 :::
 <div align="center">
   <figure>
@@ -217,7 +217,7 @@ void loop() {
   </figure>
 </div>
 
-E se houver um objeto se aproximando do radar ou passando por ele, o resultado mudará conforme abaixo:
+E se houver um objeto se aproximando do radar ou passando por ele, o resultado mudará como abaixo:
 
 <div align="center">
   <figure>
@@ -237,9 +237,8 @@ A precisão mínima de velocidade que o sensor é capaz de detectar é 52cm/s, o
 
 ## Recursos
 
-- **[ZIP]** [Anexo do Seeed Studio Grove Base para XIAO](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.0.rar)
 - **[ZIP]** [Biblioteca de código de demonstração](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.zip)
-- **[PDF]** [Grove DopplerRadar (BGT24LTR11) Protocolo de comunicação do módulo de radar v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
+- **[PDF]** [Grove DopplerRadar (BGT24LTR11) Radar module communication protocol v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
 - **[PDF]** [ETA 3410 Datasheet](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/ETA3410.pdf)
 
 ## Projeto
@@ -248,9 +247,9 @@ A precisão mínima de velocidade que o sensor é capaz de detectar é 52cm/s, o
 <iframe src="https://www.youtube.com/embed/-HMEW2DN6Wg" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
 </div></p>
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para lhe fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

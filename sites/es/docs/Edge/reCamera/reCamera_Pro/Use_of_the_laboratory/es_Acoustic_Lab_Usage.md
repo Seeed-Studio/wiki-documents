@@ -10,7 +10,7 @@ keywords:
   - Custom Training
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_acoustic_lab_usage
-sidebar_position: 4
+sidebar_position: 1
 last_update:
   date: 2026-07-13T00:00:00.000Z
   author: sizhaozhou
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/es/recamera_pro_acoustic_lab_usage/
 
 ## Introducción
 
-La reCamera Pro incorpora una plataforma local dedicada al entrenamiento de sonido llamada Acoustic Lab. A través de esta plataforma, los usuarios pueden recopilar muestras de sonido ambiental, entrenar modelos de sonido personalizados y desplegarlos como eventos activados por sonido sin necesidad de conexión a Internet. Este artículo ofrece una guía detallada de cada módulo funcional de Acoustic Lab, cubriendo el flujo de trabajo completo desde la recopilación de audio y el entrenamiento del modelo hasta su despliegue y uso.
+La reCamera Pro incorpora una plataforma local dedicada al entrenamiento de sonido llamada Acoustic Lab. A través de esta plataforma, los usuarios pueden recopilar muestras de sonido ambiental, entrenar modelos de sonido personalizados y desplegarlos como eventos activados por sonido sin necesidad de conexión a Internet. Este artículo ofrece una guía detallada de cada módulo funcional del Acoustic Lab, cubriendo el flujo de trabajo completo desde la recopilación de audio y el entrenamiento del modelo hasta el despliegue y uso.
 
 ## Acceso a la función
 
@@ -34,7 +34,7 @@ La reCamera Pro incorpora una plataforma local dedicada al entrenamiento de soni
 
 ## Descripción general de la función
 
-La interfaz principal de Acoustic Lab incluye las siguientes áreas clave:
+La interfaz principal del Acoustic Lab incluye las siguientes áreas clave:
 
 1. **Espectrograma de audio en tiempo real**: Muestra el espectro de la señal de audio capturada actualmente en tiempo real, ayudando a los usuarios a comprender las características del sonido.
 2. **Tabla de clasificación de confianza en tiempo real**: Muestra la clasificación por confianza de los sonidos ambientales actuales, ayudando a los usuarios a comprender la distribución del sonido.
@@ -51,16 +51,16 @@ Además de los modelos de sonido integrados, los usuarios pueden entrenar modelo
 
 ### Recopilación de audio
 
-1. En Acoustic Lab, haz clic en el botón **Workspace** para entrar en el espacio de trabajo.
+1. En el Acoustic Lab, haz clic en el botón **Workspace** para entrar en el espacio de trabajo.
 2. Haz clic en el botón **New workspace**, pon nombre al nuevo espacio de trabajo y luego haz clic en el botón **Create**.
 3. En el área **Dataset**, primero recopila una muestra de ruido de fondo ambiental (duración recomendada: 20 segundos). Haz clic en el botón **Background Noise**, luego haz clic en el botón **Record** para comenzar la captura. El menú desplegable junto a este permite seleccionar la fuente de entrada del micrófono; el valor predeterminado es el audio del dispositivo.
 
 <div align="left"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Background_Noise_Start.png" /></div>
 
 4. Una vez completada la recopilación, haz clic en el botón **Stop**. Luego haz clic en el botón **Slice** para dividir la muestra de ruido de fondo en segmentos de 1 segundo.
-   - (1) Especificar la parte que se recortará desde el inicio del ruido de fondo
-   - (2) Especificar la parte que se recortará desde el final del ruido de fondo
-   - (3) Dividir la muestra de ruido de fondo
+   - (1) Especifica la parte que se recortará desde el inicio del ruido de fondo
+   - (2) Especifica la parte que se recortará desde el final del ruido de fondo
+   - (3) Divide la muestra de ruido de fondo
    - (4) Área para las muestras segmentadas
 
 <div align="left"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Background_Noise_Slice.png" /></div>
@@ -72,7 +72,7 @@ Además de los modelos de sonido integrados, los usuarios pueden entrenar modelo
 
 ### Inicio del entrenamiento
 
-Una vez recopiladas las muestras de sonido, puedes proceder con el entrenamiento del modelo.
+Una vez recopiladas las muestras de sonido, puedes proceder al entrenamiento del modelo.
 
 1. Haz clic en el botón **Hyperparameter** para entrar en la interfaz de configuración de hiperparámetros (mantén los valores predeterminados a menos que tengas requisitos específicos).
 2. Haz clic en el botón **Train model** para iniciar el entrenamiento del modelo de sonido.
@@ -81,13 +81,13 @@ Una vez recopiladas las muestras de sonido, puedes proceder con el entrenamiento
 
 ## Despliegue del modelo
 
-1. En la parte inferior de la interfaz de Acoustic Lab, busca la opción **Deploy**. En la lista **MODELS**, localiza el modelo que acabas de entrenar y haz clic en él para seleccionarlo y desplegarlo.
+1. En la parte inferior de la interfaz del Acoustic Lab, busca la opción **Deploy**. En la lista **MODELS**, localiza el modelo que acabas de entrenar y haz clic en él para seleccionarlo y desplegarlo.
    - (1) Lista de modelos
    - (2) Espectrograma de audio en tiempo real
 
 <div align="left"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Voice_Model_Deploy.png" /></div>
 
-2. Vuelve a la interfaz principal de WebUI y haz clic en el botón **Record Settings** para entrar en la interfaz de configuración de grabación.
+2. Vuelve a la interfaz principal de la WebUI y haz clic en el botón **Record Settings** para entrar en la interfaz de configuración de grabación.
 3. Busca la opción **Sound Event Trigger** y haz clic en el botón **Configuration** a la derecha para entrar en la interfaz de configuración del disparador de sonido.
 4. Selecciona la categoría de sonido que acabas de entrenar y luego haz clic en el botón **Confirm** para completar la configuración del disparador de sonido.
 
@@ -99,7 +99,7 @@ Una vez recopiladas las muestras de sonido, puedes proceder con el entrenamiento
 
 - Asegúrate de que el proceso de entrenamiento haya finalizado y de que se haya generado un archivo de modelo en el espacio de trabajo.
 - Comprueba que el espacio de trabajo actual sea el mismo que se utilizó durante el entrenamiento.
-- Intenta actualizar la página de Acoustic Lab o volver a entrar en ella.
+- Intenta actualizar la página del Acoustic Lab o volver a entrar en ella.
 
 **Problema: El disparador de sonido no es sensible o se activa de forma errónea**
 

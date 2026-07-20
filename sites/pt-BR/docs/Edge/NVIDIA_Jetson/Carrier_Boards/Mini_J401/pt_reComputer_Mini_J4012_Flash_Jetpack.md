@@ -6,16 +6,16 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/recomputer-mini-1.webp
 slug: /recomputer_mini_j401_getting_started
 last_update:
-  date: 03/28/2025
+  date: 07/16/2026
   author: Dayu
 createdAt: '2023-02-16'
-updatedAt: '2026-03-19'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_mini_j401_getting_started/
 ---
 
 # Gravar JetPack na Placa Carrier J401-Mini
 
-reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson Orin Nano/Orin NX, oferecendo até 100 TOPS de desempenho de IA. Ele é equipado com uma porta PCIe na parte inferior para fornecer ricas capacidades de expansão, que também podem ser personalizadas de forma flexível. Todo o sistema é projetado para ser embutido em máquinas autônomas, como drones, robôs de patrulha, robôs de entrega etc. Pode aceitar diretamente entrada DC de 54V, podendo ser amplamente utilizado em sistemas alimentados por bateria.
+reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson Orin Nano/Orin NX, oferecendo até 100 TOPS de desempenho de IA. Ele é equipado com uma porta PCIe na parte inferior para fornecer ricas capacidades de expansão, que também podem ser personalizadas de forma flexível. Todo o sistema é projetado para ser incorporado em máquinas autônomas, como drones, robôs de patrulha, robôs de entrega, etc. Ele pode receber diretamente entrada DC de 54V, podendo ser amplamente utilizado em sistemas alimentados por bateria.
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/recomputer-mini-1.jpg"/>  
@@ -23,18 +23,18 @@ reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlY29tcHUiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjoyLCJjX3RvdGFsX3Jlc3VsdHMiOjg4LCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0ifQ%3D%3D" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
 </a></div>
 
 <!-- Buy links -->
 
 ## Recursos
 
-- **Brilhante desempenho de IA para produção:** Alcança até **100 TOPS** de desempenho de IA com baixo consumo de energia e baixa latência, construído pelo SoC NVIDIA Orin que combina a arquitetura de GPU NVIDIA Ampere™ com capacidade operacional de 64 bits, processamento avançado integrado de vídeo e imagem multifunção e Aceleradores de Deep Learning NVIDIA.
-- **Dispositivo Edge AI do tamanho da mão:** Tamanho compacto de **63mmx95mmx42mm**, apresentando um módulo NVIDIA Jetson Orin NX 16GB, placa carrier Mini J401, ventoinha e gabinete. Suporta instalação em mesa e em parede.
-- **Expansível com ricos I/Os:** Inclui até 7x USB, 1x DP 2.1, 2x CSI, 1x RJ45 para GbE, M.2 Key E, M.2 Key M, canal CAN duplo e GPIO com placa de extensão.
-- **Acelere as soluções para o mercado:** JetPack 6.0 pré-instalado em SSD NVMe de 128GB, BSP de SO Linux, compatível com o software Jetson e principais frameworks de IA.
-- **Escale para implantar:** suporta OTA e serviços de gerenciamento remoto fornecidos pela Allxon e Balena.
+- **Brilhante desempenho de IA para produção:** Alcança até **100 TOPS** de desempenho de IA com baixo consumo de energia e baixa latência, construído com o SoC NVIDIA Orin que combina a arquitetura de GPU NVIDIA Ampere™ com capacidade operacional de 64 bits, processamento avançado integrado de vídeo e imagem multifuncional e NVIDIA Deep Learning Accelerators.
+- **Dispositivo de IA de borda do tamanho da mão:** Tamanho compacto de **63mmx95mmx42mm**, com um módulo NVIDIA Jetson Orin NX 16GB, placa carrier Mini J401, ventoinha e gabinete. Suporta instalação em mesa e montagem em parede.
+- **Expansível com I/Os ricos:** Inclui até 7x USB, 1x DP 2.1, 2x CSI, 1x RJ45 para GbE, M.2 Key E, M.2 Key M, CAN de canal duplo e GPIO com placa de extensão.
+- **Acelere as soluções para o mercado:** **JetPack 6.0** pré-instalado em SSD NVMe de 128GB, BSP de sistema operacional Linux, com suporte a software Jetson e principais frameworks de IA.
+- **Escalável para implantação:** suporta OTA e serviços de gerenciamento remoto fornecidos pela Allxon e Balena.
 - **Personalização flexível:** inclui alteração de módulos de acessórios, logotipo e modificação de interfaces de hardware com base no design original do reComputer Mini J4012.
 
 ## Especificações
@@ -73,35 +73,35 @@ reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan={2}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos 64-bit<br />1.5MB L2 + 4MB L3</td>
-      <td>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos 64-bit 1.5MB L2 + 4MB L3</td>
-      <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos 64-bit 2MB L2 + 4MB L3</td>
+      <td colSpan={2}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos e 64 bits<br />1,5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos e 64 bits 1,5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos e 64 bits 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
-      <td>Frequência Máxima da CPU</td>
-      <td colSpan={2}>1.5 GHz</td>
+      <td>Frequência máxima da CPU</td>
+      <td colSpan={2}>1,5 GHz</td>
       <td colSpan={2}>2 GHz</td>
     </tr>
     <tr>
       <td>Memória</td>
       <td>4GB 64-bit LPDDR5<br />34 GB/s</td>
       <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
-      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
-      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>8GB 128-bit LPDDR5 102,4GB/s</td>
+      <td>16GB 128-bit LPDDR5 102,4GB/s</td>
     </tr>
     <tr>
-      <td>Acelerador DL</td>
+      <td>Acelerador de DL</td>
       <td colSpan={2}>/</td>
       <td>1x NVDLA v2</td>
       <td>2x NVDLA v2</td>
     </tr>
     <tr>
-      <td>Codificador de Vídeo</td>
+      <td>Codificador de vídeo</td>
       <td colSpan={2}>1080p30 suportado por 1–2 núcleos de CPU</td>
       <td colSpan={2}>1x 4K60 (H.265) | 3x 4K30 (H.265)<br />6x 1080p60 (H.265) | 12x 1080p30 (H.265)</td>
     </tr>
     <tr>
-      <td>Decodificador de Vídeo</td>
+      <td>Decodificador de vídeo</td>
       <td colSpan={2}>1x 4K60 (H.265)<br />2x 4K30 (H.265)<br />5x 1080p60 (H.265)<br />11x 1080p30 (H.265)</td>
       <td colSpan={2}>1x 8K30 (H.265)<br />2x 4K60 (H.265)<br />4x 4K30 (H.265)<br />9x 1080p60 (H.265)<br />18x 1080p30 (H.265)</td>
     </tr>
@@ -124,7 +124,7 @@ reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson
     </tr>
     <tr>
       <td>UART</td>
-      <td colSpan={3}>1x UART; 1x UART para Depuração</td>
+      <td colSpan={3}>1x UART; 1x UART para depuração</td>
     </tr>
     <tr>
       <td>Display</td>
@@ -136,15 +136,15 @@ reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson
     </tr>
     <tr>
       <td>Botão</td>
-      <td colSpan={3}>1x botão Reset; 1x botão Recovery</td>
+      <td colSpan={3}>1x botão de reset; 1x botão de recuperação</td>
     </tr>
     <tr>
-      <td>Porta de Extensão</td>
-      <td colSpan={3}>2x conectores de alta velocidade de 60 pinos (para placa de extensão)<br />1x conector de energia de 10 pinos (para placa de extensão)</td>
+      <td>Porta de extensão</td>
+      <td colSpan={3}>2x conectores de alta velocidade de 60 pinos (para placa de extensão)<br />1x conector de alimentação de 10 pinos (para placa de extensão)</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={3}>1x RTC 2-pin</td>
+      <td colSpan={3}>1x RTC 2 pinos</td>
     </tr>
     <tr>
       <td>Alimentação</td>
@@ -165,7 +165,7 @@ reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan={3}>1x CAN JST 4pin (3.3V); 1x CAN (XT30 2+2) </td>
+      <td colSpan={3}>1x CAN JST 4 pinos (3,3V); 1x CAN (XT30 2+2) </td>
     </tr>
     <tr>
       <td>Ventoinha</td>
@@ -173,15 +173,15 @@ reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson
     </tr>
     <tr>
       <td>I2C</td>
-      <td colSpan={3}>2x I2C JST 4pin (3.3V)</td>
+      <td colSpan={3}>2x I2C JST 4 pinos (3,3V)</td>
     </tr>
     <tr>
       <td>SPI</td>
-      <td colSpan={3}>1x I2S JST 6pin (3.3V)</td>
+      <td colSpan={3}>1x I2S JST 6 pinos (3,3V)</td>
     </tr>
     <tr>
       <td>Alimentação</td>
-      <td colSpan={4}>2x conector XT30 2+2 (12–54V DC)</td>
+      <td colSpan={4}>2x conectores XT30 2+2 (12–54V DC)</td>
     </tr>
     <tr>
       <td colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Outros</td>
@@ -189,29 +189,29 @@ reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson
     <tr>
       <td rowSpan={3}>Mecânico</td>
       <td >Dimensões (L x P x A)</td>
-      <td colSpan={3}>63mm * 95mm * 42mm (Sem Extensão)<br />63mm * 95mm * 66.7mm (Com Extensão)</td>
+      <td colSpan={3}>63mm * 95mm * 42mm (sem extensão)<br />63mm * 95mm * 66,7mm (com extensão)</td>
     </tr>
     <tr>
       <td>Peso</td>
-      <td colSpan={3}>345g (Sem Extensão)<br />462g (Com Extensão)</td>
+      <td colSpan={3}>345g (sem extensão)<br />462g (com extensão)</td>
     </tr>
     <tr>
       <td>Instalação</td>
       <td colSpan={3}>Mesa, montagem em parede</td>
     </tr>
     <tr>
-      <td>Temperatura de Operação</td>
+      <td>Temperatura de operação</td>
       <td colSpan={4}>-10℃ ~ 50℃</td>
     </tr>
     <tr>
       <td>Garantia</td>
-      <td colSpan={4}>1 Ano</td>
+      <td colSpan={4}>1 ano</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-## Visão Geral de Hardware
+## Visão geral do hardware
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/B1.png"/>  
@@ -229,20 +229,20 @@ reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/B4.png"/>  
 </div>
 
-## Gravar o SO JetPack
+## Gravar o sistema JetPack
 
 Aqui, mostraremos como gravar o [Jetpack 6.0](https://developer.nvidia.com/embedded/jetson-linux-archive) em um SSD NVMe conectado ao reComputer Mini.
 
-### Módulo Nvidia Jetson Suportado
+### Módulo Nvidia Jetson compatível
 
-- [Módulo NVIDIA® Jetson Orin™ Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html)
-- [Módulo NVIDIA® Jetson Orin™ Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html)
-- [Módulo NVIDIA® Jetson Orin™ NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5523.html)
-- [Módulo NVIDIA® Jetson Orin™ NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5524.html)
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5523.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5524.html)
 
 ### Pré-requisitos
 
-- Computador Host com Ubuntu
+- Computador host com Ubuntu
 - Placa Carrier reComputer J401-Mini com módulo Jetson Orin
 - Cabo USB Micro-B para transmissão de dados
 
@@ -255,7 +255,7 @@ Consulte a tabela abaixo para preparar a máquina host.
   <tbody>
     <tr>
         <td  rowspan="2"> Versão do JetPack </td>
-        <td class="dbon" colspan="3"> Versão do Ubuntu (Computador Host) </td>
+        <td class="dbon" colspan="3"> Versão do Ubuntu (computador host) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -279,7 +279,7 @@ Consulte a tabela abaixo para preparar a máquina host.
 
 :::
 
-### Preparar a Imagem do Jetpack
+### Preparar a imagem do Jetpack
 
 Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspondente ao módulo Jetson que estamos usando:
 
@@ -289,7 +289,7 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
     <tr>
       <th>Versão do Jetpack</th>
       <th>Módulo Jetson</th>
-      <th>Link de Download</th>
+      <th>Link para download</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -297,54 +297,64 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
     <tr>
       <td rowSpan={4}>5.1.3</td>
       <td>Orin Nx 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EfA7P_6gLnJAnxptIAURoCgBDF-emSfyD9uGWYY2vuFhmg?e=DF6a8l" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EfA7P_6gLnJAnxptIAURoCgBDF-emSfyD9uGWYY2vuFhmg?e=DF6a8l" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>099bf8e706468dc36600ffdb3444168<br />3cde7454646621017fc39db49c16a2c53</td>
     </tr>
     <tr>
       <td>Orin Nx 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Eew7pWvWB3RLtT5vMkVTFHABADBzxS8id4xNtrQHGcO3eg?e=drxTwI" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Eew7pWvWB3RLtT5vMkVTFHABADBzxS8id4xNtrQHGcO3eg?e=drxTwI" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>6ce30b9e212310498eee2c0a363cb35<br />14b1c607ae6a1ab403d5029115bc3a71b</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcEvOGxB9DpOuFubj-xJ1oYBixiZy4vd0t_chXQcezPy9A?e=RnX7NN" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcEvOGxB9DpOuFubj-xJ1oYBixiZy4vd0t_chXQcezPy9A?e=RnX7NN" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>b8f7a0b6d5974add33c3102824c671b<br />61ca8e278b0c5e3c38a7c5a45e251251e</td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EYi8K66PG6xOjwiU-_x3Ey4BpZhEiLFS8c_JoEDzeTVaxg?e=TkAgJV" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EYi8K66PG6xOjwiU-_x3Ey4BpZhEiLFS8c_JoEDzeTVaxg?e=TkAgJV" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>cc6efd6e4a42f099dde47e9ed71a34e<br />0981e77c50e3dc74f38338210c1f3bda0</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.0</td>
       <td>Orin Nx 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcQFCfXEWVREuzwvvBX7vRsBlr9H6HQpTBzmDw0rigIt1Q?e=IzLuYu" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcQFCfXEWVREuzwvvBX7vRsBlr9H6HQpTBzmDw0rigIt1Q?e=IzLuYu" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>7B4ABE1D1A8711D5D4E9B676DBB1E76<br />CDA35C614608CE7ECE112BC4A50E71C7C</td>
     </tr>
     <tr>
       <td>Orin Nx 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUpeLu1P7RJOv7-nqR7QbmABfmWR45xVUt95bMplpp25mQ?e=oiWB6b" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUpeLu1P7RJOv7-nqR7QbmABfmWR45xVUt95bMplpp25mQ?e=oiWB6b" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>3956B968F2BFB9FDF37D952E83DDB70<br />3980C813156919BC367CA5E23BBDEC89F</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWbSLkBX0XpIrFjkT0vndGsBysfm51HvFkBFsRnfRaWBxA?e=t7vRcH" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWbSLkBX0XpIrFjkT0vndGsBysfm51HvFkBFsRnfRaWBxA?e=t7vRcH" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>BF6921DF313B467254154BDA835C379<br />AD86D817E03D0301543B62F7CA0C9222F</td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUB7YoQeCrVHnDjsrfFaL8EBxkjRrclpDxFwDB3dJpM3xQ?e=oYHLp7" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUB7YoQeCrVHnDjsrfFaL8EBxkjRrclpDxFwDB3dJpM3xQ?e=oYHLp7" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>8941C13204A8069CE70B109B6A13EA2<br />40CBB02F69B8D4028D465134B3744BC28</td>
     </tr>
     <tr>
-      <td rowSpan={2}>6.2</td>
+      <td rowSpan={4}>6.2</td>
+      <td>Orin Nx 16GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA1HJJC33ktQoyK0gIsXfzVAa06xCduuthEw-e8AYjbbok?e=8vE7Hi" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td>TBD</td>
+    </tr>
+    <tr>
+      <td>Orin Nx 8GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAihCaTOk9jRrUmBzigqObkAQne5XwZ8j29Naz7KFMSRtE?e=i9qso0" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td>TBD</td>
+    </tr>
+    <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVjuq6G9y_5OjIxMIHFiBj0BVckYdcRQBunaXMHFBLZ3tw?e=tY89se" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVjuq6G9y_5OjIxMIHFiBj0BVckYdcRQBunaXMHFBLZ3tw?e=tY89se" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>A1C5F44B19B6C06E11AC38ABDA79AD6<br />CBFF2AAFBEEA7BF3A14B2FE08EA37267F</td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcdaeIBdGRpCp0Dev5R3o1sB2Tr4HIwjgtp3d_XX7lE9Gg?e=bxteCW" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcdaeIBdGRpCp0Dev5R3o1sB2Tr4HIwjgtp3d_XX7lE9Gg?e=bxteCW" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>23855098982DD1E05C025D3F078BCA0<br />2F396C1FB68DC58E539D83569A894571D</td>
     </tr>
   </tbody>
@@ -352,19 +362,19 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
 </div>
 
 :::danger
-O arquivo de imagem do Jetpack6 tem aproximadamente **16,7GB** de tamanho e deve levar cerca de 60 minutos para ser baixado. Aguarde gentilmente até que o download seja concluído.
+O arquivo de imagem do Jetpack6 tem aproximadamente **16,7GB** de tamanho e deve levar cerca de 60 minutos para ser baixado. Aguarde até que o download seja concluído.
 :::
 
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e íntegro.
+Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido na wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
-### Entrar no Modo Force Recovery
+### Entrar no modo Force Recovery
 
 :::info
-Antes de podermos prosseguir para as etapas de instalação, precisamos ter certeza de que a placa está em modo force recovery.
+Antes de prosseguirmos para as etapas de instalação, precisamos garantir que a placa esteja em modo force recovery.
 :::
 
 <div class="video-container">
@@ -380,13 +390,13 @@ Antes de podermos prosseguir para as etapas de instalação, precisamos ter cert
 </div>
 
 - **Passo 1.**  Conecte um cabo USB Micro-B entre a porta USB2.0 DEVICE e o PC host com Ubuntu.
-- **Passo 2.**  Use um pino e insira no orifício RECOVERY para pressionar o botão de recuperação e, enquanto o mantém pressionado.
+- **Passo 2.**  Use um pino e insira-o no orifício RECOVERY para pressionar o botão de recuperação e, enquanto o mantém pressionado.
 - **Passo 3.**  Conecte a fonte de alimentação.
 - **Passo 4.**  Solte o botão de recuperação.
 
 </details>
 
-No PC host Linux, abra uma janela do Terminal e digite o comando `lsusb`. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
+No PC host Linux, abra uma janela do Terminal e insira o comando `lsusb`. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
 
 - Para Orin NX 16GB: 0955:7323 NVidia Corp
 - Para Orin NX 8GB: 0955:7423 NVidia Corp
@@ -421,7 +431,7 @@ Disclaimer: The one-click flashing script aims to make jetpack flashing quicker.
 
 </details> -->
 
-### Gravar no Jetson Passo a Passo
+### Gravar no Jetson passo a passo
 
 **Passo 1:** Extraia o arquivo de imagem baixado no PC host com Ubuntu:
 
@@ -444,10 +454,10 @@ Você verá a seguinte saída se o processo de gravação for bem-sucedido
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-O comando de gravação pode rodar por 2-10 minutos.
+O comando de gravação pode levar de 2 a 10 minutos.
 :::
 
-**Passo 3:** Conecte o J501 a um monitor usando o conector HDMI na placa e finalize a configuração inicial:
+**Passo 3:** Conecte o J501 a um monitor usando o conector HDMI na placa e conclua a configuração inicial:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
@@ -457,7 +467,7 @@ O comando de gravação pode rodar por 2-10 minutos.
 Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 :::
 
-**Passo 4 (Opcional):** Instalar Nvidia Jetpack SDK
+**Passo 4 (Opcional):** Instalar o Nvidia Jetpack SDK
 
 Abra o terminal no dispositivo Jetson e execute os seguintes comandos:
 
@@ -466,10 +476,10 @@ sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
-## Uso das Interfaces de Hardware
+## Uso das interfaces de hardware
 
 :::info
-Se você quiser saber mais sobre as especificações detalhadas e o uso da interface de hardware, consulte [este wiki](https://wiki.seeedstudio.com/pt-br/recomputer_jetson_mini_hardware_interfaces_usage/).
+Se você quiser saber mais sobre as especificações detalhadas e o uso da interface de hardware, consulte [esta wiki](https://wiki.seeedstudio.com/pt-br/recomputer_jetson_mini_hardware_interfaces_usage/).
 :::
 
 ## Recursos
@@ -482,9 +492,9 @@ Se você quiser saber mais sobre as especificações detalhadas e o uso da inter
 - [Seeed Jetson Serials Comparision](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Jetson Devices One Page](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer a você diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja o mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

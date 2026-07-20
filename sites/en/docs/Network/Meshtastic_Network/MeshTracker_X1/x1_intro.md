@@ -12,6 +12,8 @@ last_update:
   date: 5/29/2026
   author: MichelleHuang
 url: https://wiki.seeedstudio.com/meshtracker_x1_intro/
+createdAt: '2026-07-13'
+updatedAt: '2026-07-16'
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png" alt="pir" width={800} height="auto" /></p>
@@ -74,7 +76,7 @@ A highly integrated, card-sized form factor optimized around a high-capacity 110
 |**Battery Capacity**|Rechargeable lithium battery, 1100mAh|
 |**Battery Life Monitoring**|Periodic uplink battery level|
 |<p>**Charge Cable**</p><p>**(Adapter not included)**</p>|USB Type-C charging cable, 20 cm|
-|**Power Input Voltage**|4.4V|
+|**Device Power Input**|5V, 0.55A|
 |**Charging Temperature Limit**|5 to +45℃|
 
 ### Pin List

@@ -10,12 +10,12 @@ keywords:
   - Custom Training
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_acoustic_lab_usage
-sidebar_position: 4
+sidebar_position: 1
 last_update:
-  date: 2026-07-13T00:00:00.000Z
+  date: 2026-07-13
   author: sizhaozhou
-createdAt: "2026-07-13"
-updatedAt: "2026-07-13"
+createdAt: '2026-07-13'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/recamera_pro_acoustic_lab_usage/
 ---
 

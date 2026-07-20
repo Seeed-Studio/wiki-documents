@@ -6,10 +6,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/recomputer-mini-1.webp
 slug: /recomputer_mini_j401_getting_started
 last_update:
-  date: 03/28/2025
+  date: 07/16/2026
   author: Dayu
 createdAt: '2023-02-16'
-updatedAt: '2026-01-15'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/recomputer_mini_j401_getting_started/
 ---
 
@@ -337,7 +337,17 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td>8941C13204A8069CE70B109B6A13EA2<br />40CBB02F69B8D4028D465134B3744BC28</td>
     </tr>
     <tr>
-      <td rowSpan={2}>6.2</td>
+      <td rowSpan={4}>6.2</td>
+      <td>Orin Nx 16GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA1HJJC33ktQoyK0gIsXfzVAa06xCduuthEw-e8AYjbbok?e=8vE7Hi" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td>TBD</td>
+    </tr>
+    <tr>
+      <td>Orin Nx 8GB</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAihCaTOk9jRrUmBzigqObkAQne5XwZ8j29Naz7KFMSRtE?e=i9qso0" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td>TBD</td>
+    </tr>
+    <tr>
       <td>Orin Nano 8GB</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVjuq6G9y_5OjIxMIHFiBj0BVckYdcRQBunaXMHFBLZ3tw?e=tY89se" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td>A1C5F44B19B6C06E11AC38ABDA79AD6<br />CBFF2AAFBEEA7BF3A14B2FE08EA37267F</td>
