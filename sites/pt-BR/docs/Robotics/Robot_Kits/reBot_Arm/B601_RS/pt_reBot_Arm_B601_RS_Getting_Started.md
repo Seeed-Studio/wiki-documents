@@ -250,7 +250,7 @@ Se o PCAN-USB ainda não funcionar após instalar o driver e o Gerenciador de Di
 
 ![PCAN-USB detectado no Gerenciador de Dispositivos](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/01-pcan-usb-device.png)
 
-> 📦 <a href="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip" download="USB2CAN.zip">Download USB2CAN.zip</a>
+> 📦 [Baixar USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
 
 ### Instalar o driver DFU
 
