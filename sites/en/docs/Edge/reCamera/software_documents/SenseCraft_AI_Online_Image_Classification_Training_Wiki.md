@@ -5,7 +5,7 @@ keywords:
   - reCamera
   - Classification model
   - SenseCraft AI
-image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
+image: https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-6.png
 slug: /train_classification_model_online
 last_update:
   date: 07/19/2026

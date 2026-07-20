@@ -11,6 +11,7 @@ sku: 102010448, 102010469
 last_update:
   date: 07/16/2026
   author: Morgan
+createdAt: '2023-01-16'
 ---
 
 # NFC Usage on Seeed Studio XIAO nRF52840 (Sense)
