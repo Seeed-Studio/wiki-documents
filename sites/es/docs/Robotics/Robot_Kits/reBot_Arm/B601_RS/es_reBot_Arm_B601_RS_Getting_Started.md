@@ -250,7 +250,7 @@ Si PCAN-USB sigue sin funcionar después de instalar el controlador y el Adminis
 
 ![PCAN-USB detected in Device Manager](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/01-pcan-usb-device.png)
 
-> 📦 <a href="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip" download="USB2CAN.zip">Download USB2CAN.zip</a>
+> 📦 [Descargar USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
 
 ### Instalar el controlador DFU
 

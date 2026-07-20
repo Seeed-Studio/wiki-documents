@@ -250,7 +250,7 @@ PCAN-USB ドライバをインストールするには、[pcan-usb](https://www.
 
 ![デバイスマネージャーで検出された PCAN-USB](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/01-pcan-usb-device.png)
 
-> 📦 <a href="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip" download="USB2CAN.zip">USB2CAN.zip をダウンロード</a>
+> 📦 [USB2CAN.zipをダウンロード](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
 
 ### DFU ドライバをインストールする
 
