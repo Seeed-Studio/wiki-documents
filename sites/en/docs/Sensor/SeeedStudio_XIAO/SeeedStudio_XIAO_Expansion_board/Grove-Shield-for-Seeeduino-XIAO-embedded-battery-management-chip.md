@@ -241,6 +241,8 @@ The minimum speed accuracy that the sensor is capable of detecting is 52cm/s, wh
 - **[ZIP]** [Demo Code library](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.zip)
 - **[PDF]** [Grove DopplerRadar (BGT24LTR11) Radar module communication protocol v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
 - **[PDF]** [ETA 3410 Datasheet](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/ETA3410.pdf)
+- **[ZIP]** [Grove Shield for Seeeduino XIAO v1.2 SCH & PCB (KiCad)](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.2_KiCad_SCH_PCB.zip)
+- **[PDF]** [Grove Shield for Seeeduino XIAO v1.0 Schematic](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.0_SCH.pdf)
 
 ## Project
 
