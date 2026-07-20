@@ -1,0 +1,10 @@
+position: 4 # float position is supported
+label: '二次開発'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_pro_secondary_development
+link:
+  type: generated-index
+  slug: recamera_pro_secondary_development
+  title: 二次開発
+  description: 二次開発

@@ -1,8 +1,8 @@
 ---
-description: Introdução ao SenseCAP MeshTracker X1 para Meshtastic. Este wiki apresentará os recursos, especificações, visão geral de hardware, botão, LED e lista de pinos.
+description: SenseCAP MeshTracker X1 para Meshtastic Introdução. Este wiki apresentará os recursos, especificações, visão geral de hardware, botão, LED e lista de pinos.
 title: Introdução ao SenseCAP MeshTracker X1
 keywords:
-  - Rastreador
+  - Tracker
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png
 sku: 100087698
@@ -16,19 +16,19 @@ url: https://wiki.seeedstudio.com/pt-br/meshtracker_x1_intro/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png" alt="pir" width={800} height="auto" /></p>
 
-O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla. Desenvolvido para comunicação confiável fora da rede, o MeshTracker X1 é um rastreador GPS [Meshtastic®](https://meshtastic.org/) com classificação IP66 que suporta frequências de 863–928 MHz. Alimentado pelo mais recente chip LoRa Semtech LR2021, ele oferece conectividade USB-C, até 5 dias de duração de bateria e um design compacto, pronto para uso ao ar livre.
+O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla. Desenvolvido para comunicação confiável fora da rede, o MeshTracker X1 é um rastreador GPS [Meshtastic®](https://meshtastic.org/) com classificação IP66 que suporta frequências de 863–928 MHz. Alimentado pelo mais recente chip LoRa Semtech LR2021, ele possui conectividade USB-C, até 5 dias de duração de bateria e um design compacto, pronto para uso ao ar livre.
 
 ### Recursos
 
 - **Um dispositivo Meshtastic que você realmente vai carregar** 
 
-O SenseCAP MeshTracker X1 é projetado para pessoas que precisam de comunicação confiável e compartilhamento de localização além das redes celulares — seja em ambientes externos, em grandes eventos ou durante situações de emergência. Com um formato verdadeiramente portátil e proteção robusta IP66, ele traz a conectividade Meshtastic para o uso diário e para aplicações reais em campo.
+O SenseCAP MeshTracker X1 é projetado para pessoas que precisam de comunicação confiável e compartilhamento de localização além das redes celulares — seja em ambientes externos, em grandes eventos ou durante situações de emergência. Com um formato verdadeiramente portátil e proteção robusta IP66, ele traz conectividade Meshtastic para o uso diário e para aplicações reais em campo.
 - **Rastreamento GPS de banda dupla ultrapréciso** 
 
 Alimentado por GNSS de banda dupla L1+L5 e um barômetro integrado, o MeshTracker X1 oferece posicionamento mais confiável e melhor percepção de altitude do que o GPS de banda única. Ele também é o primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla.
 - **Conectividade LoRa de próxima geração (LR2021)** 
 
-Alimentado pelo Semtech LR2021, o MeshTracker X1 oferece desempenho de RF mais forte com sensibilidade de até -141 dBm e taxas de dados FLRC de 2,6 Mbps para comunicação em malha mais rápida e confiável, criando uma base para recursos futuros como transmissão de voz e imagem.
+Alimentado pelo Semtech LR2021, o MeshTracker X1 oferece desempenho de RF mais robusto com sensibilidade de até -141 dBm e taxas de dados FLRC de 2,6 Mbps para comunicação em malha mais rápida e confiável, criando uma base para recursos futuros como transmissão de voz e imagem.
 - **Comunicação confiável de longo alcance** 
 
 Testado em 915 MHz, o MeshTracker X1 permite comunicação confiável em distâncias de até 8 km em condições de linha de visada aberta, mantendo as equipes conectadas durante aventuras ao ar livre, eventos e situações de emergência.
@@ -38,7 +38,7 @@ Fino e leve, o MeshTracker X1 é projetado para uso diário durante aventuras ao
 - **Alertas flexíveis de vibração e som** 
 
 O MeshTracker X1 oferece opções flexíveis de notificação com vibração integrada e feedback por buzzer. Mantenha-se ciente das mensagens recebidas, esteja você em um evento barulhento, pedalando ao ar livre ou explorando trilhas silenciosas onde prefere distrações mínimas.
-- **Proteção robusta IP66 para uso externo** 
+- **Proteção robusta para uso externo IP66** 
 
 Construído com proteção IP66 contra poeira e água, garantindo desempenho confiável em ambientes externos severos, como chuva, lama e trilhas empoeiradas.
 - **Conectividade USB-C** 
@@ -74,7 +74,7 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
 |**Capacidade da bateria**|Bateria de lítio recarregável, 1100mAh|
 |**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente em uplink|
 |<p>**Cabo de carregamento**</p><p>**(Adaptador não incluído)**</p>|Cabo de carregamento USB Tipo-C, 20 cm|
-|**Tensão de entrada de energia**|4.4V|
+|**Entrada de energia do dispositivo**|5V, 0.55A|
 |**Limite de temperatura de carregamento**|5 a +45℃|
 
 ### Lista de pinos

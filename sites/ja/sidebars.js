@@ -1228,6 +1228,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_with_MicroPython',
               ],
             },
+            {
+              type: 'category',
+              label: 'プラットフォーム',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_with_Arduino',
+              ],
+            },
           ],
         },
         {
@@ -4063,6 +4070,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_industrial_vision_monitoring_on_industrial',
               ]
             },
             // Generative AI

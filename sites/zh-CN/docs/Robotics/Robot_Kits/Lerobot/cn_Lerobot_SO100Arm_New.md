@@ -20,11 +20,8 @@ url: https://wiki.seeedstudio.com/cn/lerobot_so100m_new/
 import Link from '@docusaurus/Link';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ImagePreviewer from '@site/src/components/robotics/ImagePreviewer';
 
 # 基于 LeRobot 的 SO-ARM100 and SO-ARM101 机械臂入门教程
-
-<ImagePreviewer selector='article img' />
 
 :::tip
 本教程已更新至最新版 [lerobot](https://huggingface.co/docs/lerobot/index)，如需查阅旧版教程，请点击[此处](https://wiki.seeedstudio.com/cn/lerobot_so100m/)。

@@ -2,7 +2,7 @@
 description: Introducción a SenseCAP MeshTracker X1 para Meshtastic. Este wiki presentará las funciones, especificaciones, descripción general del hardware, botón, LED y lista de pines.
 title: Introducción a SenseCAP MeshTracker X1
 keywords:
-  - Tracker
+  - Rastreador
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png
 sku: 100087698
@@ -16,22 +16,22 @@ url: https://wiki.seeedstudio.com/es/meshtracker_x1_intro/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png" alt="pir" width={800} height="auto" /></p>
 
-El primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda. Diseñado para una comunicación confiable fuera de la red, MeshTracker X1 es un rastreador GPS [Meshtastic®](https://meshtastic.org/) con clasificación IP66 que admite frecuencias de 863–928 MHz. Impulsado por el último chip LoRa Semtech LR2021, cuenta con conectividad USB-C, hasta 5 días de duración de batería y un diseño compacto, listo para exteriores.
+El primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda. Diseñado para una comunicación fiable fuera de la red, MeshTracker X1 es un rastreador GPS [Meshtastic®](https://meshtastic.org/) con clasificación IP66 que admite frecuencias de 863–928 MHz. Impulsado por el último chip LoRa Semtech LR2021, cuenta con conectividad USB-C, hasta 5 días de duración de la batería y un diseño compacto y preparado para exteriores.
 
 ### Características
 
 - **Un dispositivo Meshtastic que realmente llevarás contigo** 
 
-SenseCAP MeshTracker X1 está diseñado para personas que necesitan comunicación confiable y uso compartido de ubicación más allá de las redes celulares, ya sea al aire libre, en grandes eventos o durante situaciones de emergencia. Con un factor de forma verdaderamente portátil y protección robusta IP66, lleva la conectividad Meshtastic al uso diario y a aplicaciones reales de campo.
-- **Rastreo GPS ultrapreciso de doble banda** 
+SenseCAP MeshTracker X1 está diseñado para personas que necesitan comunicación fiable y uso compartido de ubicación más allá de las redes celulares, ya sea al aire libre, en grandes eventos o durante situaciones de emergencia. Con un factor de forma verdaderamente portátil y protección robusta IP66, lleva la conectividad Meshtastic al uso diario y a aplicaciones reales de campo.
+- **Seguimiento GPS de doble banda ultrapreciso** 
 
-Impulsado por GNSS de doble banda L1+L5 y un barómetro integrado, MeshTracker X1 ofrece un posicionamiento y una conciencia de altitud más confiables que el GPS de banda única. También es el primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda.
+Impulsado por GNSS de doble banda L1+L5 y un barómetro integrado, MeshTracker X1 ofrece un posicionamiento y una conciencia de altitud más fiables que el GPS de banda única. También es el primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda.
 - **Conectividad LoRa de próxima generación (LR2021)** 
 
-Impulsado por Semtech LR2021, MeshTracker X1 ofrece un rendimiento de RF más potente con una sensibilidad de hasta -141 dBm y tasas de datos FLRC de 2,6 Mbps para una comunicación de malla más rápida y confiable, creando una base para funciones futuras como transmisión de voz e imagen.
-- **Comunicación confiable de largo alcance** 
+Impulsado por Semtech LR2021, MeshTracker X1 ofrece un rendimiento RF más potente con una sensibilidad de hasta -141 dBm y velocidades de datos FLRC de 2,6 Mbps para una comunicación mallada más rápida y fiable, creando una base para futuras funciones como transmisión de voz e imagen.
+- **Comunicación fiable de largo alcance** 
 
-Probado a 915 MHz, MeshTracker X1 permite una comunicación confiable a distancias de hasta 8 km en condiciones de línea de vista abierta, manteniendo a los equipos conectados durante aventuras al aire libre, eventos y situaciones de emergencia.
+Probado a 915 MHz, MeshTracker X1 permite una comunicación fiable a distancias de hasta 8 km en condiciones de línea de visión despejada, manteniendo a los equipos conectados durante aventuras al aire libre, eventos y situaciones de emergencia.
 - **Diseño del tamaño de una tarjeta, fácil de llevar** 
 
 Delgado y ligero, MeshTracker X1 está diseñado para llevarlo a diario durante las aventuras al aire libre. Llévalo en un cordón, sujétalo a una mochila, fíjalo a una bolsa de bicicleta o simplemente deslízalo en tu bolsillo para disfrutar de conectividad fuera de la red sin esfuerzo.
@@ -40,11 +40,11 @@ Delgado y ligero, MeshTracker X1 está diseñado para llevarlo a diario durante 
 MeshTracker X1 ofrece opciones de notificación flexibles con vibración integrada y retroalimentación mediante zumbador. Mantente al tanto de los mensajes entrantes tanto si estás en un evento ruidoso, montando al aire libre o explorando senderos tranquilos donde prefieres mínimas distracciones.
 - **Protección robusta para exteriores IP66** 
 
-Construido con protección IP66 contra el polvo y el agua, lo que garantiza un rendimiento confiable en entornos exteriores hostiles como lluvia, barro y caminos polvorientos.
+Construido con protección IP66 contra el polvo y el agua, lo que garantiza un rendimiento fiable en entornos exteriores adversos como lluvia, barro y senderos polvorientos.
 - **Conectividad USB-C** 
 
-Interfaz USB-C estándar para carga, actualizaciones de firmware y depuración, diseñada para uso robusto en exteriores y comodidad diaria.
-- **Larga duración de batería** 
+Interfaz USB-C estándar para carga, actualizaciones de firmware y depuración, diseñada para uso robusto en exteriores y comodidad en el día a día.
+- **Larga duración de la batería** 
 
 Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado en torno a una batería de alta capacidad de 1100 mAh, que ofrece hasta 5 días de funcionamiento y sigue siendo compacto y portátil para llevar al aire libre y comunicación fuera de la red.
 
@@ -63,7 +63,7 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
 |**Distancia de comunicación**|hasta 8 km|
 |**Grado de protección IP**|IP66|
 |**Dimensiones**|90\*57\*8 mm|
-|**Peso del dispositivo**|45 g|
+|**Peso del dispositivo**|45g|
 |**Temperatura de funcionamiento**|-20 a 60℃|
 |**Certificación**|CE/FCC/RoSH/TELEC|
 
@@ -71,10 +71,10 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
 
 |Elemento|Parámetro|
 | :- | :- |
-|**Capacidad de la batería**|Batería de litio recargable, 1100 mAh|
-|**Supervisión de la vida de la batería**|Nivel de batería de subida periódica|
+|**Capacidad de la batería**|Batería de litio recargable, 1100mAh|
+|**Supervisión de la vida útil de la batería**|Nivel de batería de enlace ascendente periódico|
 |<p>**Cable de carga**</p><p>**(Adaptador no incluido)**</p>|Cable de carga USB tipo C, 20 cm|
-|**Tensión de entrada de alimentación**|4,4 V|
+|**Entrada de alimentación del dispositivo**|5V, 0.55A|
 |**Límite de temperatura de carga**|5 a +45℃|
 
 ### Lista de pines
@@ -236,7 +236,7 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
     <td>P1.13</td>
   </tr>
    <tr>
-    <td rowspan="6">Flash de 8 MB</td>
+    <td rowspan="6">Flash de 8MB</td>
     <td>SPISCK</td>
     <td>P0.19</td>
     <td rowspan="6">SPI</td>
@@ -269,9 +269,9 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
 |- |- |- |
 |Pulsar una vez|Encender|Melodía ascendente|
 |Pulsar dos veces|Actualizar información de nodo/ubicación|-|
-|Pulsar tres veces|Activar/desactivar el GPS|-|
+|Pulsar tres veces|Encender/apagar el GPS|-|
 |Cuatro clics|Silenciar/reactivar temporalmente|-|
-|Pulsar y mantener durante 5 s|Apagar|Melodía descendente|
+|Pulsar y mantener durante 5s|Apagar|Melodía descendente|
 
 ### LED
 
@@ -300,7 +300,7 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
   <tr>
     <td>🔴Rojo</td>
     <td>Parpadeando</td>
-    <td>Batería baja</td>
+    <td>Baja energía</td>
   </tr>
     <tr>
     <td>⚪️blanco</td>
