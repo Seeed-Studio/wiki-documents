@@ -19,6 +19,7 @@ updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/recamera_pro_acoustic_lab_usage/
 ---
 
+# reCamera Pro Acoustic Lab Usage
 
 ## Introduction
 
