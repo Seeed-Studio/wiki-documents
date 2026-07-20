@@ -89,7 +89,7 @@ Seeed Studio のチュートリアルは、公式ドキュメントに基づい�
    reComputer Mini J4012 Orin NX 16GB プラットフォームによるデプロイをサポートします。
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 ## 初期システム環境
@@ -108,7 +108,7 @@ Seeed Studio のチュートリアルは、公式ドキュメントに基づい�
 ## LeRobot のインストール
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 CUDA バージョンに応じて、pytorch、torchvision などの環境をインストールする必要があります。
@@ -212,7 +212,7 @@ print(torch.cuda.is_available())#Should output True
 ## ロボットアームのキャリブレーション
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 次に、reBot B601-RS ロボットの電源とデータケーブルを接続し、キャリブレーションを行う必要があります。これは、リーダーアームとフォロワーアームが同じ物理位置にあるときに、同じ位置値を持つようにするためです。このキャリブレーションは、ある reBot B601-RS ロボットで学習したニューラルネットワークを別のロボットでも動作させるために不可欠です。ロボットアームを再キャリブレーションする必要がある場合は、`~/.cache/huggingface/lerobot/calibration/robots` または `~/.cache/huggingface/lerobot/calibration/teleoperators` 配下のファイルを完全に削除してから、ロボットアームを再キャリブレーションしてください。そうしないと、エラーが表示されます。ロボットアームのキャリブレーション情報は、このディレクトリ配下の JSON ファイルに保存されます。
@@ -333,7 +333,7 @@ lerobot-teleoperate \
     <iframe
         width="900"
         height="600"
-        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0"
+        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0&autoplay=0&muted=1"
         scrolling="no"
         border="0"
         frameborder="no"
@@ -698,7 +698,7 @@ lerobot-teleoperate \
 ## データセット収集
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 <details>
