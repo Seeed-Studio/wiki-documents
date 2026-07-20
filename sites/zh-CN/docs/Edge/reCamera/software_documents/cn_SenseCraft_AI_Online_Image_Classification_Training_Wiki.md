@@ -20,11 +20,11 @@ url: https://wiki.seeedstudio.com/train_classification_model_online/
 
 SenseCraft AI 提供了一套基于浏览器的图像分类模型训练工具。无需搭建本地深度学习环境，也不需要编写训练代码，只需准备不同类别的图像样本，即可在线完成数据采集、模型训练、效果预览与设备部署。
 
-在线训练入口：<https://sensecraft.seeed.cc/ai/training?trainTab=2>
+在线训练入口：[SenseCraft AI Online Training](https://sensecraft.seeed.cc/ai/training?trainTab=2)
 
 ## 功能概览
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/5d1e487134e459661c3d38260fa264c1.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/5d1e487134e459661c3d38260fa264c1.png" /></div>
 
 通过 SenseCraft AI 在线训练工具，你可以：
 
@@ -78,7 +78,7 @@ SenseCraft AI 提供了一套基于浏览器的图像分类模型训练工具。
 3. 在顶部导航中进入“模型”页面，然后选择“训练”。
 4. 在训练类型中选择“图像分类”。
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/5d1e487134e459661c3d38260fa264c1-1.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/5d1e487134e459661c3d38260fa264c1-1.png" /></div>
 
 页面主要分为三个区域：
 
@@ -90,7 +90,7 @@ SenseCraft AI 提供了一套基于浏览器的图像分类模型训练工具。
 
 系统默认提供 `Class 1` 和 `Class 2`。建议先将它们修改为容易理解的类别名称，我们这里才有用`have person` 和 `no person`演示。
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image.png" /></div>
 
 1. 点击类别名称旁的编辑图标；
 2. 输入类别名称，例如 `have person`、`no person`；
@@ -117,7 +117,7 @@ SenseCraft AI 提供了一套基于浏览器的图像分类模型训练工具。
 
 采集时不要始终保持完全相同的背景和构图，否则模型可能错误地学习背景特征，而不是目标本身。
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/093e0b5c7bdc1308aa1ba2e0c19f28bf-2.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/093e0b5c7bdc1308aa1ba2e0c19f28bf-2.png" /></div>
 
 ### 导入已有数据集
 
@@ -125,11 +125,11 @@ SenseCraft AI 提供了一套基于浏览器的图像分类模型训练工具。
 
 可以选择只导入一个类别，也就是在这个类别旁边的三个点中点击后选择导入即可。
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/3f56178d7b36c313e3d1502a0c237e1a.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/3f56178d7b36c313e3d1502a0c237e1a.png" /></div>
 
 也导入一整个模型使用的数据集，但是要求压缩为zip文件之前，是已经把各个类别的数据统一按照需要的class_name命名文件夹，一起压缩为一个zip文件，然后导入，系统会自动分配。
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/1de66a13a5b8ba14d612e61667076a43.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/1de66a13a5b8ba14d612e61667076a43.png" /></div>
 
 整理数据时，建议做到：
 
@@ -185,7 +185,7 @@ SenseCraft AI 提供了一套基于浏览器的图像分类模型训练工具。
 
 训练时间会受到类别数量、样本数量、训练配置和服务状态等因素影响。
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-1.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-1.png" /></div>
 
 > 首次使用时，建议先采用默认训练配置完成一个基线模型。确认数据和流程正确后，再根据实际效果调整高级设置。
 
@@ -210,7 +210,7 @@ SenseCraft AI 提供了一套基于浏览器的图像分类模型训练工具。
 
 有两种方式可以选择部署到recamera设备中，按照自己的需求选择即可。
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-2.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-2.png" /></div>
 
 部署前请确认：
 
@@ -221,7 +221,7 @@ SenseCraft AI 提供了一套基于浏览器的图像分类模型训练工具。
 
 部署完成后，浏览器会跳转到对应的设备界面，可以实时查看模型的运行状态。
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-4.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-4.png" /></div>
 
 这里选择的是通过usb线连接的reCamera设备的部署方式，会自动跳转到设备的默认ip地址`192.168.42.1`中，预览模型的检测结果
 

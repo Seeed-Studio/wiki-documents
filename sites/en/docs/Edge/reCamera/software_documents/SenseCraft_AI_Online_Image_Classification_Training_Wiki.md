@@ -20,11 +20,11 @@ url: https://wiki.seeedstudio.com/train_classification_model_online/
 
 SenseCraft AI offers a set of browser-based tools for training image classification models. There's no need to set up a local deep learning environment or write training code. Simply prepare images for different categories, and you can complete data collection, model training, performance preview, and device deployment online.
 
-Online Training Entrance: <https://sensecraft.seeed.cc/ai/training?trainTab=2>
+Online Training Entrance: [SenseCraft AI Online Training](https://sensecraft.seeed.cc/ai/training?trainTab=2)
 
 ## Feature Overview
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-5.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-5.png" /></div>
 
 With SenseCraft AI's online training tool, you can:
 
@@ -78,7 +78,7 @@ When collecting samples using the browser camera, you will need to allow the web
 3. Navigate to the "Models" page in the top navigation, then select "Training."
 4. Choose "Image Classification" as the training type.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-6.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-6.png" /></div>
 
 The page is mainly divided into three areas:
 
@@ -90,7 +90,7 @@ The page is mainly divided into three areas:
 
 The system provides `Class 1` and `Class 2` by default. It's recommended to rename them to easily understandable category names. We will use `have person` and `no person` for demonstration here.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-7.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-7.png" /></div>
 
 1. Click the edit icon next to the category name.
 2. Enter the category name, for example, `have person`, `no person`.
@@ -117,7 +117,7 @@ Category Naming Recommendations:
 
 When collecting, avoid maintaining the exact same background and composition at all times, as the model might mistakenly learn background features instead of the target itself.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-8.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-8.png" /></div>
 
 ### Import Existing Dataset
 
@@ -125,11 +125,11 @@ If you have already prepared your training data, you can click "Import Dataset" 
 
 You can choose to import only one category by clicking the three dots next to that category and selecting import.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-9.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-9.png" /></div>
 
 You can also import an entire dataset for a model. However, before compressing it into a zip file, you must organize the data for each category into folders named according to the required `class_name`, then compress them into a single zip file for import. The system will automatically assign them.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-10.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-10.png" /></div>
 
 When organizing data, it is recommended to:
 
@@ -185,7 +185,7 @@ After completing sample collection, proceed to "Step 2: Model Training."
 
 Training time is influenced by factors such as the number of categories, sample count, training configuration, and server status.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-11.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-11.png" /></div>
 
 > For first-time use, it's recommended to complete a baseline model using the default training configuration. After confirming the data and process are correct, adjust advanced settings based on actual performance.
 
@@ -210,7 +210,7 @@ After training is complete and validated through preview, you can select the cor
 
 There are two deployment methods to reCamera devices; choose the one that suits your needs.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-12.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-12.png" /></div>
 
 Before deploying, please confirm:
 
@@ -221,7 +221,7 @@ Before deploying, please confirm:
 
 After deployment, the browser will redirect to the corresponding device interface, where you can view the model's running status in real-time.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-4.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-4.png" /></div>
 
 The deployment method shown here is for a reCamera device connected via USB cable. It will automatically redirect to the device's default IP address `192.168.42.1` to preview the model's detection results.
 
