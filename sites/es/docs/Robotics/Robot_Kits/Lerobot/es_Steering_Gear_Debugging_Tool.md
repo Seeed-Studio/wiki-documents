@@ -61,6 +61,8 @@ python -m src.gui.factory_calibration_tool --port1 /dev/ttyUSB0 --port2 /dev/tty
 
 ### 1. Comprobar si los servos son normales
 
+Primero, selecciona el número de puerto correspondiente en la selección de puerto serie.
+
 Si los servos 1-6 se detectan todos correctamente, significa que los servos se reconocen con normalidad y que las funciones básicas están funcionando.
 
 <div align="center">
@@ -175,14 +177,17 @@ De forma predeterminada, todos los servos de la página están en sus posiciones
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/14.png" />
 </div>
 
-Primero habilita el par. Puedes habilitar todos los pares con un solo clic o habilitar el par de un solo servo, y luego deslizar el control deslizante para mover el servo a la posición correspondiente. Sin embargo, asegúrate de moverlo lentamente. Debido a que las piezas impresas del brazo robótico bloquearán físicamente ciertas posiciones, el brazo no puede alcanzar realmente las posiciones extremas; hay límites máximos y mínimos de movimiento, así que no deslices el control deslizante hasta 0 ni hasta el máximo. Después de deshabilitar el par, el brazo robótico quedará flojo.
+- 1. Primero habilita el par. Puedes habilitar todos los pares con un solo clic o habilitar el par de un solo servo, y luego deslizar el control deslizante para mover el servo a la posición correspondiente. Sin embargo, asegúrate de moverlo lentamente. Debido a que las piezas impresas del brazo robótico bloquearán físicamente ciertas posiciones, el brazo no puede alcanzar realmente las posiciones extremas; hay límites máximos y mínimos de movimiento, así que no deslices el control deslizante hasta 0 ni hasta el máximo. Después de deshabilitar el par, el brazo robótico quedará flojo.
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/15.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/21.png" />
 </div>
 
 Como se muestra arriba, después de habilitar el par, el movimiento del servo correspondiente cambiará.
+
+- 2. Puedes realizar la calibración neutra de un solo servo y borrar las posiciones neutra, máxima y mínima internas del servo
+- 3. La siguiente es la información del servo
 
 Pos: Posición
 
@@ -214,37 +219,3 @@ Se pueden restaurar los ajustes de fábrica.
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/16.png" />
 </div>
-
-### 7. Gestión de archivos de calibración del brazo robótico
-
-Puedes seleccionar el archivo de calibración correspondiente del brazo seguidor o del brazo líder para ejecutarlo, modificarlo o eliminarlo.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/17.png" />
-</div>
-
-### 8. Crear un nuevo archivo de calibración del brazo robótico
-
-Haz clic en **GUI Calibration Wizard** y selecciona el brazo robótico y el número de puerto correspondientes.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/18.png" />
-</div>
-
-Puedes realizar la calibración mínima, máxima y neutra para cada servo.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/19.png" />
-</div>
-
-Primero, registra el valor neutro de cada servo. Coloca cada servo en la posición que se muestra en la figura y luego haz clic en **Record Neutral Value** para los servos 1-6 por turno.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/20.png" />
-</div>
-
-Luego haz clic en **Start Recording Range** para cada servo, gira el servo hasta los rangos máximo y mínimo y luego haz clic en **Stop Recording Range**. Repite la operación anterior para cada servo, luego nombra el archivo de calibración y guárdalo.

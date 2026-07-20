@@ -264,14 +264,14 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
       <td rowSpan={2}>7.2</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB8nOmueUTRToCw6ZIYME7iAYofm7C70j6Nu9iQbRcejhU">Download</a></td>
-      <td>36e2616404f9451a043797968e87755b<br />4dc654a5683cd70c7e223cc80910ac0a</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBraqxVv-rUQKkcwG2EXybtAUKJgIvgi77ze4eig_Hj3Ns">Download</a></td>
+      <td>F95E91C3BFB00D50EB999383F85949B4</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBWWApb99sjSIpXABkJn_8_ARsWaA4H_RwABxIOrsPTa9M">Download</a></td>
-      <td>05d082994fd1b2ae85c5c666a621b5a6<br />e8ec178db5ce64cca516c837acca7552</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBj3DRU7fhETozDjV3BAOG2Ac69rCRZhqNqr_RXuCliXXM">Download</a></td>
+      <td>8FA6E750C2C21678168DAE377E95CE6C</td>
     </tr>
     <tr>
       <td rowSpan={2}>6.2.1</td>

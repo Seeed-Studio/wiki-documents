@@ -13,7 +13,7 @@ last_update:
   author: Michelle Huang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/
-updatedAt: '2026-04-20'
+updatedAt: '2026-07-10'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -307,6 +307,34 @@ You can manually set the message sending path. Connect you Bluetooth companion d
 After setting the path, the transmission method will be changed to "n hop". For example, if you add 1 repeater in your route, it will change to 1 hop.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
+
+## Verify That the Device Works Properly
+
+Before verification, confirm whether you are using only one Solar Node device or whether you also have other MeshCore Companion devices in your setup.
+
+For Repeater mode, the following behavior is expected:
+
+- When the device is connected via USB, it can appear online and be configured.
+- After unplugging USB power, the device switches to battery mode and continues working as a repeater.
+- The blue LED blinking once during transmission is normal and indicates LoRa activity.
+- The Solar Node Repeater is not expected to behave like a standalone phone-connected device unless it is used together with a Companion device.
+
+To properly verify that the repeater is working, follow this standard test procedure:
+
+1. Connect the Solar Node via USB.
+2. Open the MeshCore configuration page: [https://config.meshcore.io/](https://config.meshcore.io/).
+3. Click **Send Advert**.
+4. Check from another MeshCore device, such as a Companion device.
+5. The Solar Node should appear in the device list.
+6. On the Companion device, open the Solar Node Repeater contact and use the **Ping** function to confirm communication.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-6.png" alt="Verify Solar Node repeater with Ping from another MeshCore device" width={700} height="auto" /></p>
+
+:::note
+The mobile app is mainly used with a Companion device, not directly with a Repeater. The repeater itself will not behave like a normal Bluetooth-connected phone accessory.
+:::
+
+If the LED behavior and USB connection state match the description above, this usually indicates normal repeater behavior.
 
 ## FAQ
 

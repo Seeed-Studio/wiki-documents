@@ -12,15 +12,16 @@ sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 3/11/2026
   author: ZhangJiaQuan
-translation:
-  skip:
-    - zh-CN
 createdAt: '2025-06-05'
-updatedAt: '2026-07-01'
+updatedAt: '2026-07-15'
+translation:
+  skip: [zh-CN]
 url: https://wiki.seeedstudio.com/lerobot_so100m_new/
 ---
 
 import Link from '@docusaurus/Link';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot
 
@@ -32,8 +33,8 @@ This tutorial maintenance has been updated to the latest version of [lerobot](ht
 
 The [SO-10xARM](https://github.com/TheRobotStudio/SO-ARM100) is a fully open-source robotic arm project launched by [TheRobotStudio](https://www.therobotstudio.com/). It includes the follower arm and the leader robotic arm, and also provides detailed 3D printing files and operation guides. [LeRobot](https://github.com/huggingface/lerobot/tree/main) is committed to providing models, datasets and tools for real-world robotics in PyTorch. Its aim is to reduce the entry barrier of robotics, enabling everyone to contribute and benefit from sharing datasets and pretrained models. LeRobot integrates cutting-edge methodologies validated for real-world application, centering on imitation learning. It has furnished a suite of pre-trained models, datasets featuring human-gathered demonstrations, and simulation environments, enabling users to commence without the necessity of robot assembly. In the forthcoming weeks, the intention is to augment support for real-world robotics on the most cost-effective and competent robots presently accessible.
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/sD34HnAkGNc?si=hqKd_sH5Oc9sdcwd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="video-container" style={{marginBottom: '24px'}}>
+<iframe width="900" height="600" src="https://www.youtube.com/embed/sD34HnAkGNc?si=hqKd_sH5Oc9sdcwd&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Projects Introduction
@@ -71,11 +72,14 @@ Seeed Studio is only responsible for the quality of the hardware itself. The tut
 
 :::
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://www.youtube.com/embed/JrF_ymUvrqc?si=vslu5NNI-ZIzVXLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Specification
+
+<details>
+<summary>View SO-ARM10x specifications</summary>
 
 <table>
   <thead>
@@ -142,7 +146,12 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
 
 :::
 
+</details>
+
 ## Bill of Materials(BOM)
+
+<details>
+<summary>View bill of materials</summary>
 
 | Part | Amount | Included|
 |--|--|--|
@@ -152,6 +161,49 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
 | Power Supply2 | 2 | ✅ |
 | Table Clamp| 4 | ✅ |
 | 3D printed parts of the arm | 1 | Option |
+
+</details>
+
+## 3D Printing Guide
+
+<details>
+<summary>View 3D printing parameters</summary>
+
+:::caution
+Following the official update of SO101, SO100 will no longer support it and the source files will be deleted as per the official, but the source files can still be found in our [Makerworld](https://makerworld.com/zh/models/908660). However, for users who have previously purchased SO100, the tutorials and installation methods remain compatible. The print of SO101 is fully compatible with the motor kit installation of SO100.
+:::
+
+**Step 1: Choose a printer**
+
+The STL files provided are ready to print on many FDM printers. Below are the tested and suggested settings though others may work.
+
+- Material: PLA+
+- Nozzle Diameter and Precision: 0.4mm nozzle diameter at 0.2mm layer height or 0.6mm nozzle at 0.4mm layer height.
+- Infill Density: 15%  
+
+**Step 2: Set up the printer**
+
+- Ensure that the printer is calibrated and the bed level is correctly set using the printer specific instructions.
+- Clean the print bed, making sure it is free from dust, or grease. If cleaning the bed using water, or other liquid, dry the bed.
+- If your printer recommends it, use a standard glue stick and apply a thin, even layer of glue across the print area of the bed. Avoid clumping or uneven application.
+- Load the printer filament using printer specific instructions.
+- Ensure the printer settings match the ones suggested above (most printers have multiple settings so choose the ones that most closely match).
+- Set for supports everywhere but ignore slopes greater than 45 degrees to the horizontal.
+- There should be no supports in the screw holes with horizontal axes.
+
+**Step 3: Print the parts**
+
+All the parts for the leader or follower are for easy 3D printing already contained in a single file, correctly orientated for z upwards to minimize supports.
+
+- For printer bed sizes of 220mmx220mm (such as the Ender), print these files:
+  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl)
+  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
+
+- For printer bed sizes of 205mm x 250mm (such as the Prusa/Up):
+  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
+  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
+
+</details>
 
 ## Initial System Environment
 
@@ -164,78 +216,19 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
 
 **For Jetson Orin:**
 
-- Jetson JetPack 6.0 and 6.1, not support 6.1
+- Jetson JetPack 6.0 and 6.1, JetPack 6.2 is not supported yet
 - Python 3.10  
 - Torch 2.3+
-
-## Table of Contents
-
-  [A. 3D Printing Guide](https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot)
-
-  [B. Install LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot)
-
-  [C. Configure the motors](https://wiki.seeedstudio.com/lerobot_so100m_new/#configure-the-motors)
-
-  [D. Assembly](https://wiki.seeedstudio.com/lerobot_so100m_new/#assembly)
-
-  [E. Calibrate](https://wiki.seeedstudio.com/lerobot_so100m_new/#calibrate)
-
-  [F. Teleoperate](https://wiki.seeedstudio.com/lerobot_so100m_new/#teleoperate)
-
-  [G. Add cameras](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras)
-
-  [H. Record the dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset)
-
-  [I. Visualize the dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset)
-
-  [J. Replay an episode](https://wiki.seeedstudio.com/lerobot_so100m_new/#replay-an-episode)
-
-  [K. Train a policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy)
-
-  [L. Evaluate your policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#evaluate-your-policy)
-
-## 3D Printing Guide
-
-:::caution
-Following the official update of SO101, SO100 will no longer support it and the source files will be deleted as per the official, but the source files can still be found in our [Makerworld](https://makerworld.com/zh/models/908660). However, for users who have previously purchased SO100, the tutorials and installation methods remain compatible. The print of SO101 is fully compatible with the motor kit installation of SO100.
-:::
-
-### Step 1: Choose a printer
-
-The STL files provided are ready to print on many FDM printers. Below are the tested and suggested settings though others may work.
-
-- Material: PLA+
-- Nozzle Diameter and Precision: 0.4mm nozzle diameter at 0.2mm layer height or 0.6mm nozzle at 0.4mm layer height.
-- Infill Density: 15%  
-
-### Step 2: Set up the printer
-
-- Ensure that the printer is calibrated and the bed level is correctly set using the printer specific instructions.
-- Clean the print bed, making sure it is free from dust, or grease. If cleaning the bed using water, or other liquid, dry the bed.
-- If your printer recommends it, use a standard glue stick and apply a thin, even layer of glue across the print area of the bed. Avoid clumping or uneven application.
-- Load the printer filament using printer specific instructions.
-- Ensure the printer settings match the ones suggested above (most printers have multiple settings so choose the ones that most closely match).
-- Set for supports everywhere but ignore slopes greater than 45 degrees to the horizontal.
-- There should be no supports in the screw holes with horizontal axes.
-
-### Step 3: Print the parts
-
-All the parts for the leader or follower are for easy 3D printing already contained in a single file, correctly orientated for z upwards to minimize supports.
-
-- For printer bed sizes of 220mmx220mm (such as the Ender), print these files:
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-
-- For printer bed sizes of 205mm x 250mm (such as the Prusa/Up):
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
 ## Install LeRobot
 
 Environments such as pytorch and torchvision need to be installed based on your CUDA.
 
+<Tabs defaultValue="Jetson">
+
+<TabItem value="Jetson" label="Jetson">
+
 1. Install Miniforge:
-For Jetson:
 
 ```bash
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
@@ -245,7 +238,79 @@ chmod +x Miniforge3-Linux-aarch64.sh
 source ~/.bashrc
 ```
 
-Or, For X86 Ubuntu 22.04:
+2. Create and activate a fresh conda environment for lerobot
+
+```bash
+conda create -y -n lerobot python=3.10 && conda activate lerobot
+```
+
+3. Clone Lerobot:
+
+```bash
+git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
+```
+
+4. When using miniforge, install ffmpeg in your environment:
+
+```bash
+conda install ffmpeg -c conda-forge
+```
+
+:::tip
+This usually installs ffmpeg 7.X for your platform compiled with the libsvtav1 encoder. If libsvtav1 is not supported (check supported encoders with `ffmpeg -encoders`), you can:
+
+- [On any platform] Explicitly install ffmpeg 7.X using:
+
+```bash
+conda install ffmpeg=7.1.1 -c conda-forge
+```
+
+- [On Linux only] Install ffmpeg build dependencies and compile ffmpeg from source with libsvtav1, and make sure you use the corresponding ffmpeg binary to your install with `which ffmpeg`.
+
+If you encounter an error like this, you can use this command too.
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
+</div>
+
+:::
+
+5. Install LeRobot with dependencies for the feetech motors:
+
+```bash
+cd ~/lerobot && pip install -e ".[feetech]"
+```
+
+6. For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) from step 5 before executing this step):
+
+```bash
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
+conda remove opencv   # Uninstall OpenCV 
+pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # This should match torchvision
+```
+
+7. Check Pytorch and Torchvision
+
+Since installing the lerobot environment via pip will uninstall the original Pytorch and Torchvision and install the CPU versions of Pytorch and Torchvision, you need to perform a check in Python.
+
+```python
+python   # Command to start Python in the terminal
+import torch
+print(torch.cuda.is_available())
+exit()   # Exit Python
+```
+
+If the printed result is `False`, the current environment is using the CPU version of PyTorch. If you need GPU-enabled PyTorch and Torchvision on Jetson, install them according to [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson). For environments that need GPU training or inference, the final check result should be `True`.
+
+</TabItem>
+
+<TabItem value="X86" label="X86 Ubuntu 22.04">
+
+1. Install Miniforge:
 
 ```bash
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
@@ -276,7 +341,7 @@ conda install ffmpeg -c conda-forge
 ```
 
 :::tip
-This usually installs ffmpeg 7.X for your platform compiled with the libsvtav1 encoder. If libsvtav1 is not supported (check supported encoders with ffmpeg -encoders), you can:
+This usually installs ffmpeg 7.X for your platform compiled with the libsvtav1 encoder. If libsvtav1 is not supported (check supported encoders with `ffmpeg -encoders`), you can:
 
 - [On any platform] Explicitly install ffmpeg 7.X using:
 
@@ -284,7 +349,7 @@ This usually installs ffmpeg 7.X for your platform compiled with the libsvtav1 e
 conda install ffmpeg=7.1.1 -c conda-forge
 ```
 
-- [On Linux only] Install ffmpeg build dependencies and compile ffmpeg from source with libsvtav1, and make sure you use the corresponding ffmpeg binary to your install with which ffmpeg.
+- [On Linux only] Install ffmpeg build dependencies and compile ffmpeg from source with libsvtav1, and make sure you use the corresponding ffmpeg binary to your install with `which ffmpeg`.
 
 If you encounter an error like this, you can use this command too.
 
@@ -297,19 +362,21 @@ If you encounter an error like this, you can use this command too.
 
 5. Install LeRobot with dependencies for the feetech motors:
 
+:::tip
+On a newly configured Ubuntu 22.04 VM, especially a minimal installation, `gcc` and other C build tools may not be installed by default. In that case, installing LeRobot with feetech dependencies can fail because the `evdev` Python package cannot be built.
+
+Install the basic build tools first:
+
 ```bash
-cd ~/lerobot && pip install -e ".[feetech]"
+sudo apt update
+sudo apt install build-essential
 ```
 
-For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) from step 5 before executing this step):
+After installation, rerun the LeRobot installation command.
+:::
 
 ```bash
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
-conda remove opencv   # Uninstall OpenCV 
-pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
-conda install -y -c conda-forge ffmpeg
-conda uninstall numpy
-pip3 install numpy==1.26.0  # This should match torchvision
+cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
 6. Check Pytorch and Torchvision
@@ -323,6 +390,8 @@ print(torch.cuda.is_available())
 exit()   # Exit Python
 ```
 
+If the printed result is `False`, the current environment is using the CPU version of PyTorch. If you need GPU training or inference, install the Pytorch and Torchvision versions that match your CUDA version according to the [official PyTorch guide](https://pytorch.org/index.html). For environments with an NVIDIA GPU that need GPU acceleration, the final check result should be `True`.
+
 :::tip
 
 Note: NVIDIA RTX 50-series GPUs require the preview version of CUDA 12.8 or higher.
@@ -335,9 +404,9 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 
 :::
 
-If the printed result is False, you need to reinstall Pytorch and Torchvision according to the [official website tutorial](https://pytorch.org/index.html).
+</TabItem>
 
-If you are using a Jetson device, install Pytorch and Torchvision according to [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
+</Tabs>
 
 ## Configure the motors
 
@@ -347,15 +416,6 @@ If you purchased a pre-assembled robotic arm, please skip to the Calibrate secti
 <details>
 
 <summary> For kit version, please follow the steps below </summary>
-
-
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-
-<TabItem value="SO101" label="SO101">
 
 The servo calibration and initialization process for SO-ARM101 is the same as that of SO-ARM100 in terms of both method and code. However, please note that the gear ratios for the first three joints of the SO-ARM101 Leader Arm differ from those of SO-ARM100, so it’s important to distinguish and calibrate them carefully.
 
@@ -423,17 +483,13 @@ When connecting the arms, the first device plugged in will be assigned to ttyACM
 
 **Configure your motors**
 
-:::danger
-Please use a 5V power supply for calibrating Leader motors (ST-3215-C046, C044, 001).
-:::
+**Leader servo calibration reference images**
 
 | **Leader Arm Joint 6 Calibration** | **Leader Arm Joint 5 Calibration** | **Leader Arm Joint 4 Calibration** | **Leader Arm Joint 3 Calibration** | **Leader Arm Joint 2 Calibration** | **Leader Arm Joint 1 Calibration** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
 
-:::danger
-If you buy the Arm Kit version (ST-3215-C001), use a 5V power supply. If you buy the Arm Kit Pro version, please use a 12V power supply to calibrate the servo (ST-3215-C047/ST-3215-C018).
-:::
+**Follower servo calibration reference images**
 
 | **Follower Arm Joint 6 Calibration** | **Follower Arm Joint 5 Calibration** | **Follower Arm Joint 4 Calibration** | **Follower Arm Joint 3 Calibration** | **Follower Arm Joint 2 Calibration** | **Follower Arm Joint 1 Calibration** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
@@ -495,33 +551,17 @@ lerobot-setup-motors \
     --teleop.port=/dev/ttyACM0  # <- paste here the port found at previous step
 ```
 
-<div class="video-container">
+**Assembly**
+
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://www.youtube.com/embed/hbW6eFYkHTg?si=jKdpTyI8wRC-iHxO" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
-</TabItem>
-
-</Tabs>
-
-**Assembly**
 
 :::tip
 
 - The dual-arm assembly process of SO-ARM101 is the same as that of SO-ARM100. The only differences are the addition of cable clips on SO-ARM101 and the different gear ratios of the joint servos on the Leader Arm. So both SO100 and SO101 can be installed by referring to the following content
-- Before assembly, please check your motor model and reduction ratio again. If you have purchased SO100, you can ignore this step. If you have purchased SO101, please check the following table to distinguish F1 to F6 and L1 to L6.
+- Before assembly, please check your motor model, gear ratio, and power supply voltage again. If you purchased SO101, refer to the servo model and joint mapping table above to distinguish F1 to F6 and L1 to L6.
 
-:::
-
-  | Servo Model                            | Gear Ratio | Corresponding Joints         |
-|----------------------------------------|------------|------------------------------|
-| ST-3215-C044(7.4V)                            | 1:191      | L1                           |
-| ST-3215-C001(7.4V)                       | 1:345      | L2                           |
-| ST-3215-C044(7.4V)                           | 1:191      | L3                           |
-| ST-3215-C046(7.4V)                           | 1:147      | L4–L6                        |
-| ST-3215-C001(7.4V) / C018(12V) / C047(12V)             | 1:345      | F1–F6                        |
-
-:::danger
-If you purchased the **SO101 Arm Kit Standard Edition**, all power supplies are 5V. If you purchased the **SO101 Arm Kit Pro Edition**, the Leader Arm should be calibrated and operated at every step using a 5V power supply, while the Follower Arm should be calibrated and operated at every step using a 12V power supply.
 :::
 
 **Assemble Leader Arm**
@@ -566,24 +606,28 @@ If you purchased the **SO101 Arm Kit Standard Edition**, all power supplies are 
 
 Next, you need to connect the power supply and data cable to your SO-10x robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one SO-10x robot to work on another.
 
+### Recalibrate the robotic arm
+
+<details>
+<summary><span style={{fontSize: '1.15rem', fontWeight: 700}}>View recalibration options</span></summary>
+
 If you need to re-calibrate the robotic arms, there are two options available:
 
-Option 1: Clear Cache Files
+**Option 1: Delete local calibration files**
 
-Completely delete the files under ~/.cache/huggingface/lerobot/calibration/robots or ~/.cache/huggingface/lerobot/calibration/teleoperators before re-calibrating. Otherwise, the system may trigger an error prompt, as the previous calibration data is stored in JSON files within these directories.
+Completely delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` before re-calibrating. Otherwise, the system may trigger an error prompt because the previous calibration data is stored in JSON files within these directories.
 
-Option 2:
+**Option 2: Choose recalibration in the calibration command**
 
-Use the Interactive Command
-Run the calibration command directly in the terminal. If the arm has been calibrated before, the following prompt will appear
+Run the calibration command directly in the terminal. If the arm has been calibrated before, the following prompt will appear:
 
-    "Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration:"
+```bash
+Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration:
+```
 
-    Type 'c' and press ENTER to start the re-calibration.
+Type `c` and press **Enter** to start recalibration. Press **Enter** directly to keep and use the existing calibration data.
 
-    Press ENTER to keep and use the existing calibration data.
-
-Calibration Setup
+</details>
 
 Connect the 6 robot servos via the 3-pin interfaces and connect the chassis servo to the servo driver board. Then, run the following command or API example to calibrate the arm:
 
@@ -632,7 +676,7 @@ lerobot-calibrate \
 If you encounter the error “Could not connect on port '/dev/ttyACM0'. Make sure you are using the correct port., Try running lerobot-find-port” while calibrating the Leader or Follower arms, you need to grant the necessary permissions by running:`sudo chmod 666 /dev/ttyACM*`
 :::
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -716,7 +760,7 @@ The teleoperate command will automatically:
 1. Identify any missing calibrations and initiate the calibration procedure.
 2. Connect the robot and teleop device and start teleoperation.
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://www.youtube.com/embed/hnRwfcyX1ZI?si=RuzYjP_FUTK16lfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -1160,7 +1204,7 @@ pip3 install rerun-sdk==0.23
 
 :::
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://www.youtube.com/embed/EUcXlLlOjGE?si=6ncQ7o5ZFLR4PGTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -1301,7 +1345,7 @@ If Right Arrow/Left Arrow/ESC keys are unresponsive during recording:
 
 - Verify the `$DISPLAY` environment variable is set (see [pynput limitations](https://pynput.readthedocs.io/en/latest/limitations.html)).  
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=-eDB73KgUksyJXa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -1467,7 +1511,7 @@ lerobot-record \
 
 4. When encountering `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, please note that keywords like front and side in the `--robot.cameras` parameter must be strictly consistent with those used when collecting the dataset.
 
-<div class="video-container">
+<div class="video-container" style={{marginBottom: '24px'}}>
 <iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -2073,9 +2117,9 @@ This approach can use the stronger GPU of the cloud host. When network condition
 
 Security note: the LeRobot async inference pipeline has a risk related to unauthenticated gRPC + pickle deserialization. If there is important information or important services on the server, it is not recommended to expose the service directly to the Internet in a public deployment. A safer approach is to use VPN or SSH tunneling, or at least restrict the allowed source IPs in the security group to your own client public IP.
 
-### Getting started with asynchronous inference deployment
+**Getting started with asynchronous inference deployment**
 
-#### Step 1: Environment setup
+**Step 1: Environment setup**
 
 First, use pip to install the additional dependencies required for asynchronous inference. Both the client and the server need to have lerobot installed along with the extra dependencies:
 
@@ -2083,7 +2127,7 @@ First, use pip to install the additional dependencies required for asynchronous 
 pip install -e ".[async]"
 ```
 
-#### Step 2: Network configuration and checks
+**Step 2: Network configuration and checks**
 
 1. **Proxy issues**
 
@@ -2189,7 +2233,7 @@ Cloud example: run on the client side
 nc -vz <server public IP> 8080
 ```
 
-#### Step 3: Start the service
+**Step 3: Start the service**
 
 **Scenario A: Single-machine deployment**
 
@@ -2227,7 +2271,7 @@ python -m lerobot.async_inference.policy_server \
 
 In this case, when the client connects, the --server_address should be the server’s public IP address, that is, `<server public IP>:8080`.
 
-#### Step 4: Choose inference parameters
+**Step 4: Choose inference parameters**
 
 Run on the client side:
 
@@ -2327,7 +2371,7 @@ Whether to visualize the action queue size at runtime.
 
 When enabled, it allows you to see more directly whether the queue frequently hits the bottom, which helps you tune actions_per_chunk and chunk_size_threshold.
 
-#### Step 5: Adjust parameters based on robot behavior
+**Step 5: Adjust parameters based on robot behavior**
 
 In asynchronous inference, there are two additional parameters that need adjustment which do not exist in synchronous inference:
 
@@ -2359,10 +2403,9 @@ the empirical range for chunk_size_threshold is 0.5–0.7; when tuning, it is re
 
 If you encounter the following error:
 
-<div align="center">
-    <img width={1000}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/stack_bug.png" />
-</div>
+```bash
+TypeError: stack(): argument 'tensors' (position 1) must be tuple of Tensors, not Column
+```
 
 Try running the following command to resolve it:
 
