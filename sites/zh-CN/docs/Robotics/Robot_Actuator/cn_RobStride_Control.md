@@ -12,7 +12,7 @@ last_update:
   date: 11/19/2025
   author: Tienjuiwong
 createdAt: '2025-11-19'
-updatedAt: '2025-11-20'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/cn/robstride_control/
 ---
 

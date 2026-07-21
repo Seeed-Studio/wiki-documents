@@ -12,7 +12,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2023-03-01'
-updatedAt: '2025-06-12'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/cn/sensecraft-data-platform/tutorials/data-management/
 ---
 

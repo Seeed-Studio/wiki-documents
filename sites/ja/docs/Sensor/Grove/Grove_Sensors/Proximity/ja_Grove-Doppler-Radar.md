@@ -11,7 +11,7 @@ last_update:
   date: 05/28/2026
   author: gunengyu
 createdAt: '2023-01-05'
-updatedAt: '2026-01-07'
+updatedAt: '2026-05-28'
 url: https://wiki.seeedstudio.com/ja/Grove-Doppler-Radar/
 ---
 

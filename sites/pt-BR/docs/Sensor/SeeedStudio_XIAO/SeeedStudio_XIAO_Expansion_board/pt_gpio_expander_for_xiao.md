@@ -8,7 +8,7 @@ last_update:
   date: 07/09/2026
   author: Stephen Lo
 createdAt: '2023-09-19'
-updatedAt: '2026-04-29'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/pt-br/io_expander_for_xiao/
 ---
 

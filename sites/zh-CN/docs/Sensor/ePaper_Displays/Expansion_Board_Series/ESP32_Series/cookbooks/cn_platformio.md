@@ -18,7 +18,7 @@ last_update:
   date: 04/28/2026
   author: Zeller
 createdAt: '2025-10-09'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-20'
 url: https://wiki.seeedstudio.com/cn/ee04_with_platformio/
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: '本文基于开发者 lolren 为 nRF54L15 编写的 Arduino 内核开发，旨在为 XIAO nRF54L15 用户在 Arduino IDE 上进行开发提供参考教程。'
+description: 本文基于开发者 lolren 为 nRF54L15 编写的 Arduino 内核开发，旨在为 XIAO nRF54L15 用户在 Arduino IDE 上进行开发提供参考教程。
 title: 适用于 Seeed Studio XIAO nRF54L15 的 Arduino
 keywords:
   - nRF54L15

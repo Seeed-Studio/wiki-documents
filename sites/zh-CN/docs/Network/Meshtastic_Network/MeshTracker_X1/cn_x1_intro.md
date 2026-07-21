@@ -12,6 +12,8 @@ last_update:
   date: 5/29/2026
   author: MichelleHuang
 url: https://wiki.seeedstudio.com/cn/meshtracker_x1_intro/
+createdAt: '2026-07-13'
+updatedAt: '2026-07-16'
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png" alt="pir" width={800} height="auto" /></p>

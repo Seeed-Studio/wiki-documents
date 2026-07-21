@@ -14,7 +14,7 @@ last_update:
   author: ycl
 url: https://wiki.seeedstudio.com/pt-br/meshtastic_source_code_practical_tutorial_solar_node/
 createdAt: '2026-03-19'
-updatedAt: '2026-04-15'
+updatedAt: '2026-05-14'
 ---
 
 import Tabs from '@theme/Tabs';

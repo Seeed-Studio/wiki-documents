@@ -12,7 +12,7 @@ last_update:
   date: 04/10/2026
   author: Evelyn Chen & Samuel
 createdAt: '2024-11-11'
-updatedAt: '2026-04-10'
+updatedAt: '2026-04-14'
 url: https://wiki.seeedstudio.com/pt-br/recamera_getting_started/
 ---
 

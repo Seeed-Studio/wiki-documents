@@ -10,7 +10,7 @@ last_update:
   date: 05/08/2026
   author: Citric
 createdAt: '2023-07-10'
-updatedAt: '2026-07-15'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
 ---
 

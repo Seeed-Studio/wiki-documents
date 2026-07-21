@@ -13,8 +13,7 @@ last_update:
   date: 12/12/2025
   author: TienjuiWong
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-12-12'
 updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/stackforce_giant_bipedal_wheeled_robot/

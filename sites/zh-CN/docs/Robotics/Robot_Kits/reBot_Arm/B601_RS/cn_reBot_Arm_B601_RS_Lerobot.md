@@ -13,10 +13,9 @@ last_update:
   date: 2026-04-15
   author: LiuJunjie
 translation:
-  skip:
-    - [zh-CN]
+  skip: [[zh-CN]]
 createdAt: '2026-06-17'
-updatedAt: '2026-06-17'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_lerobot/
 ---
 

@@ -13,7 +13,7 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-9'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_hardware_specifications/
 ---
 

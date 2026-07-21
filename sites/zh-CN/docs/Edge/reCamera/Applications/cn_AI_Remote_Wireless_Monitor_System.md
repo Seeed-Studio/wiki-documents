@@ -10,7 +10,7 @@ sku: 102991897, 110070108
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 2
 last_update:
-  date: 2025-11-19T00:00:00.000Z
+  date: 2025-11-19
   author: John Xiang
 createdAt: '2025-11-21'
 updatedAt: '2026-01-29'

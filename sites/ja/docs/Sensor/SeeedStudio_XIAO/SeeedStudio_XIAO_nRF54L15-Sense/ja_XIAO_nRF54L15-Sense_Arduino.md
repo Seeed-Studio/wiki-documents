@@ -1,5 +1,5 @@
 ---
-description: 'この記事は、開発者 lolren によって作成された nRF54L15 向け Arduino コアに基づいて作成されており、XIAO nRF54L15 ユーザーが Arduino IDE 上で開発するための参考チュートリアルを提供することを目的としています。'
+description: この記事は、開発者 lolren によって作成された nRF54L15 向け Arduino コアに基づいて作成されており、XIAO nRF54L15 ユーザーが Arduino IDE 上で開発するための参考チュートリアルを提供することを目的としています。
 title: Seeed Studio XIAO nRF54L15 向け Arduino
 keywords:
   - nRF54L15

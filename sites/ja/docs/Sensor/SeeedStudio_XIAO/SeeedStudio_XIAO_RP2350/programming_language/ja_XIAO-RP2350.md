@@ -11,7 +11,7 @@ keywords:
 sidebar_position: 0
 last_update:
   author: Spencer
-  date: 2024-11-22T05:59:15.764Z
+  date: 2024-11-22
 createdAt: '2026-02-27'
 updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/ja/getting-started-xiao-rp2350/

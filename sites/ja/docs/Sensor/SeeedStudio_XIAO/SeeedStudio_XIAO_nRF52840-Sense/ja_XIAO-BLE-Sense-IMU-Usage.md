@@ -9,7 +9,7 @@ last_update:
   date: 7/17/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2023-07-21'
+updatedAt: '2026-07-17'
 url: https://wiki.seeedstudio.com/ja/XIAO-BLE-Sense-IMU-Usage/
 ---
 

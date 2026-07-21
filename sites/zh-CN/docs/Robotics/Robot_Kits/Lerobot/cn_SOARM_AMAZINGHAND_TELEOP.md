@@ -14,7 +14,7 @@ last_update:
   date: 2026-07-12
   author: ZhuYuan
 createdAt: '2026-07-12'
-updatedAt: '2026-07-12'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/cn/soarm_amazinghand_teleop/
 ---
 # SO-ARM与AmazingHand完整训练指南

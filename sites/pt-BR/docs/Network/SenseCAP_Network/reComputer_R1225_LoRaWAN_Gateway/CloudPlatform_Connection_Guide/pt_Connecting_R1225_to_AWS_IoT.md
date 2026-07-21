@@ -12,6 +12,9 @@ sku: 100021896,100030154,100006298,100079154
 last_update:
   date: 04/07/2026
   author: Kian
+createdAt: '2026-05-25'
+url: https://wiki.seeedstudio.com/pt-br/connecting_r1225_to_aws_iot/
+updatedAt: '2026-04-15'
 ---
 
 ## Configuração do Gateway AWS IoT

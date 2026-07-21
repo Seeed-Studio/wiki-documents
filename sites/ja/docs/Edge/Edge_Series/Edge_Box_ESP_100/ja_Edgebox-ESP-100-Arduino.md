@@ -12,7 +12,7 @@ last_update:
   date: 03/10/2023
   author: Peter Pan
 createdAt: '2023-03-17'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-15'
 url: https://wiki.seeedstudio.com/ja/Edgebox-ESP-100-Arduino/
 ---
 
