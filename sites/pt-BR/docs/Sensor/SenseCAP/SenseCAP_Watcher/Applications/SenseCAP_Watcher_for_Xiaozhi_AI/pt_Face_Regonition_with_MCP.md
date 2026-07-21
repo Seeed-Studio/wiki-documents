@@ -20,10 +20,9 @@ last_update:
   date: 04/07/2026
   author: Spencer
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-11-24'
-updatedAt: '2026-04-07'
+updatedAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/pt-br/face_regonition_with_mcp/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 09/30/2024
   author: Evelyn Chen
 createdAt: '2024-10-08'
-updatedAt: '2026-01-07'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/ja/wio_sx1262_with_xiao_esp32s3_kit/
 ---
 

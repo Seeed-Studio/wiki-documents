@@ -12,6 +12,8 @@ last_update:
   date: 07/16/2026
   author: Morgan
 createdAt: '2023-01-16'
+url: https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/
+updatedAt: '2026-07-17'
 ---
 
 # NFC Usage on Seeed Studio XIAO nRF52840 (Sense)

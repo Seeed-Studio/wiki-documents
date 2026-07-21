@@ -13,6 +13,8 @@ last_update:
   date: 6/29/2026
   author: ZhangJiaQuan
 url: https://wiki.seeedstudio.com/pt-br/lerobot_steering_gear_debugging_tool/
+createdAt: '2026-06-30'
+updatedAt: '2026-07-20'
 ---
 
 # Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no Lerobot

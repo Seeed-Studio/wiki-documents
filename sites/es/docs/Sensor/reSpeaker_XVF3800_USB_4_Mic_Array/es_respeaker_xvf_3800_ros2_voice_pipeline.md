@@ -1,6 +1,5 @@
 ---
 description: Un proyecto de TurtleSim con ROS2 controlado por voz que usa reSpeaker XVF3800 y Groq AI para convertir comandos hablados en movimiento del robot en tiempo real, giros y retroalimentación hablada.
-
 title: Canalización de voz ROS2 en reSpeaker XVF3800
 keywords:
   - reSpeaker
@@ -13,7 +12,7 @@ last_update:
   date: 5/25/2026
   author: Kasun Thushara
 createdAt: '2026-05-25'
-updatedAt: '2026-05-25'
+updatedAt: '2026-05-26'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_ros2_voice_pipeline/
 ---
 

@@ -16,8 +16,8 @@ last_update:
 translation:
   - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-05-15'
-url: https://wiki.seeedstudio.com/reachymini_sdk_javascript-sdk/
+updatedAt: '2026-05-19'
+url: https://wiki.seeedstudio.com/cn/reachymini_sdk_javascript-sdk/
 ---
 
 # JavaScript SDK和Web应用

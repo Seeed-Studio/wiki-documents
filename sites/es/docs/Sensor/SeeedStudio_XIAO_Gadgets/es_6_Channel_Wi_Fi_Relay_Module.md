@@ -15,7 +15,7 @@ last_update:
   author: Cody
   date: 07/06/2026
 createdAt: '2025-01-04'
-updatedAt: '2026-01-07'
+updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/es/6_channel_wifi_relay/
 ---
 

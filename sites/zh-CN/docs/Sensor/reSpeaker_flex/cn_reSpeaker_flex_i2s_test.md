@@ -12,7 +12,7 @@ last_update:
   date: 4/16/2025
   author: Kasun Thushara
 createdAt: '2026-04-16'
-updatedAt: '2025-04-16'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/cn/respeaker_flex_xiao_i2s/
 ---
 

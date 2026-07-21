@@ -14,7 +14,7 @@ last_update:
   date: 07/07/2026
   author: Youjiang
 createdAt: '2026-07-07'
-updatedAt: '2026-07-07'
+updatedAt: '2026-07-08'
 url: https://wiki.seeedstudio.com/ja/deploy_joyai_vl_interaction_on_jetson_thor/
 ---
 

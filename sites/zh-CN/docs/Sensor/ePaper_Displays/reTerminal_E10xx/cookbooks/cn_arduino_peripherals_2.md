@@ -1,6 +1,6 @@
 ---
 description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino 菜谱——PCF8563 RTC 读写、深度睡眠低功耗策略、PDM 麦克风音频录制到 SD 卡（E1001 / E1002 / E1003），以及电容触摸绘图（仅限 E1003）。
-title: 'Arduino 菜谱：RTC、低功耗、音频与触摸（reTerminal E 系列）'
+title: Arduino 菜谱：RTC、低功耗、音频与触摸（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals_2
 sidebar_position: 3
@@ -9,7 +9,7 @@ last_update:
   date: 05/27/2026
   author: Citric
 createdAt: '2026-05-27'
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2/
 ---
 

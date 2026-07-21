@@ -13,6 +13,8 @@ last_update:
   date: 6/29/2026
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/cn/lerobot_steering_gear_debugging_tool/
+createdAt: '2026-06-30'
+updatedAt: '2026-07-20'
 ---
 # Lerobot 中 SO-ARM 的舵机调试工具
 

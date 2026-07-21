@@ -1,5 +1,5 @@
 ---
-title:  MediaPipe ハンドジェスチャー認識モデルの reCamera への移植
+title: MediaPipe ハンドジェスチャー認識モデルの reCamera への移植
 description: 本ドキュメントでは、Google 公式の MediaPipe ハンドジェスチャー認識スイートを reCamera（Sophon/Bitmain SG200X）へ完全に移植し、「palm detection → landmark detection → embedding → classification」というパイプラインを構築して、その結果を UDP 経由で PC にストリーミングし可視化する方法を説明します。
 keywords:
   - reCamera

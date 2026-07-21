@@ -10,7 +10,7 @@ last_update:
   date: 2/22/2023
   author: jianjing Huang
 createdAt: '2023-02-28'
-updatedAt: '2026-01-07'
+updatedAt: '2026-05-08'
 url: https://wiki.seeedstudio.com/es/Grove-Mech_Keycap/
 ---
 <!-- ---

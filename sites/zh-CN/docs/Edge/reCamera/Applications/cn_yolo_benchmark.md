@@ -11,7 +11,7 @@ sku: 100029708
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/yolo-benchmark-seg.gif
 sidebar_position: 1
 last_update:
-  date: 2026-06-02T00:00:00.000Z
+  date: 2026-06-02
   author: Sizhao zhou
 createdAt: '2026-06-02'
 updatedAt: '2026-06-02'

@@ -10,7 +10,7 @@ last_update:
   date: 6/30/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';

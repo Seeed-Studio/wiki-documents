@@ -9,16 +9,14 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 自由度
-# image: 
 slug: /rebot_b601_dm_getting_started
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 last_update:
   date: 2026-04-13
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-04-13'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 ---
 

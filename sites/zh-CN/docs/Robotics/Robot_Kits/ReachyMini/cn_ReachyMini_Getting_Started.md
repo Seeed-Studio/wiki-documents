@@ -14,16 +14,13 @@ image: https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-
 slug: /reachymini_getting_started
 sku: null
 translation:
-  skip:
-    - zh-CN
-    - ja
-    - es
+  skip: [zh-CN, ja, es]
 last_update:
   date: 1/7/2026
   author: TienjuiWong
 createdAt: '2026-01-07'
-updatedAt: '2026-01-12'
-url: https://wiki.seeedstudio.com/reachymini_getting_started/
+updatedAt: '2026-05-18'
+url: https://wiki.seeedstudio.com/cn/reachymini_getting_started/
 ---
 
 <div style={{maxWidth: '800px', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'}}>

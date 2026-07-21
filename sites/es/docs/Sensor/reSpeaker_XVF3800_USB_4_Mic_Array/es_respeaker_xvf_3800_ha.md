@@ -12,7 +12,7 @@ last_update:
   date: 9/17/2025
   author: Kasun Thushara
 createdAt: '2025-07-31'
-updatedAt: '2026-04-22'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_xiao_home_assistant/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2023-02-24'
-updatedAt: '2026-03-16'
+updatedAt: '2026-06-25'
 url: https://wiki.seeedstudio.com/pt-br/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ/
 ---
 

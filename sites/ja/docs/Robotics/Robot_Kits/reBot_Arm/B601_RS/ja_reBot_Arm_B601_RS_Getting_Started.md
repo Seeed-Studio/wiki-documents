@@ -18,7 +18,7 @@ last_update:
   date: 2026-05-26
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-07-07'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/ja/rebot_b601_rs_getting_started/
 ---
 

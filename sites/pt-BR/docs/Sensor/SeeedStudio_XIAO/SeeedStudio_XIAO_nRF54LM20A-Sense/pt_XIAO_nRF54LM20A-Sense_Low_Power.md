@@ -12,7 +12,7 @@ last_update:
   date: 06/01/2026
   author: Zeller
 createdAt: '2025-06-01'
-updatedAt: '2026-07-06'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_low_power/
 ---
 

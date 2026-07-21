@@ -14,7 +14,7 @@ last_update:
   date: 05/26/2026
   author: Dayu
 createdAt: '2026-05-26'
-updatedAt: '2026-05-26'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/ja/ai_robotics_seeed_agx_orin_dev_kit_getting_started/
 ---
 

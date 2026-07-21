@@ -10,7 +10,7 @@ last_update:
   date: 12/04/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2025-09-02'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao/
 ---
 

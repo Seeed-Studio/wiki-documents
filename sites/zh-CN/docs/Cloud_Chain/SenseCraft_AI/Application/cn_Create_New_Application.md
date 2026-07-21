@@ -11,7 +11,7 @@ last_update:
   date: 03/30/2026
   author: Rida
 createdAt: '2026-03-30'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/cn/sensecraft-ai/application/create-new-application/
 ---
 # 在 SenseCraft AI 中创建新应用

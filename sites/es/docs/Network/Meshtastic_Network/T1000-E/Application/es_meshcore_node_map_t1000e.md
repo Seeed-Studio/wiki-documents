@@ -14,7 +14,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: 2026-04-3
-updatedAt: '2026-04-03'
+updatedAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/es/meshcore_node_map_t1000e/
 ---
 import Tabs from '@theme/Tabs';

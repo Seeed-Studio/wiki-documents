@@ -11,13 +11,12 @@ keywords:
   - 6 DOF
 slug: /rebot_b601_dm_getting_started
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 last_update:
-  date: 2026-04-13T00:00:00.000Z
+  date: 2026-04-13
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-07-01'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/
 ---
 

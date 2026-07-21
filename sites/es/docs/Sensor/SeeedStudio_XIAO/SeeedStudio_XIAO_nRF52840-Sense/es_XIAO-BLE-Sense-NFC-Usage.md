@@ -11,6 +11,9 @@ sku: 102010448, 102010469
 last_update:
   date: 07/16/2026
   author: Morgan
+createdAt: '2026-05-25'
+url: https://wiki.seeedstudio.com/es/XIAO-BLE-Sense-NFC-Usage/
+updatedAt: '2026-07-17'
 ---
 
 # Uso de NFC en Seeed Studio XIAO nRF52840 (Sense)
