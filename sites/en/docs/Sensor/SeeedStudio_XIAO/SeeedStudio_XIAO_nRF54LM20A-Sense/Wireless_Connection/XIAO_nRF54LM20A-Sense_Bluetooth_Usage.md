@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-20'
-updatedAt: '2026-07-10'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_bluetooth_lowpower/
 ---
 
@@ -199,6 +199,20 @@ LOG_MODULE_REGISTER(ble_beacon, LOG_LEVEL_INF);
 
 static uint32_t manufacturer_counter;
 
+static const uint8_t adv_flags[] __aligned(4) = {
+    BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR,
+};
+
+static const uint8_t adv_name[] __aligned(4) = CONFIG_BT_DEVICE_NAME;
+
+static uint8_t manuf_data[MANUF_DATA_SIZE] __aligned(4);
+
+static const struct bt_data ad[] __aligned(4) = {
+    BT_DATA(BT_DATA_FLAGS, adv_flags, sizeof(adv_flags)),
+    BT_DATA(BT_DATA_NAME_COMPLETE, adv_name, sizeof(adv_name) - 1),
+    BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
+};
+
 /* Power enable regulator (GPIO1_12) - must be enabled before BLE init */
 static const struct device *const power_en_dev =
     DEVICE_DT_GET(DT_NODELABEL(power_en));
@@ -206,6 +220,19 @@ static const struct device *const power_en_dev =
 static void adv_update_work_handler(struct k_work *work);
 
 static K_WORK_DELAYABLE_DEFINE(adv_update_work, adv_update_work_handler);
+
+static void fill_manuf_data(uint32_t counter)
+{
+    /* [Company ID (2B)][Counter (4B)][Custom (2B)] */
+    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
+    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
+    manuf_data[2] = (counter >> 0) & 0xFF;
+    manuf_data[3] = (counter >> 8) & 0xFF;
+    manuf_data[4] = (counter >> 16) & 0xFF;
+    manuf_data[5] = (counter >> 24) & 0xFF;
+    manuf_data[6] = 0xAA;
+    manuf_data[7] = 0xBB;
+}
 
 static int enable_power(void)
 {
@@ -230,26 +257,9 @@ static int enable_power(void)
 static void adv_update_work_handler(struct k_work *work)
 {
     int err;
-    uint8_t manuf_data[MANUF_DATA_SIZE];
 
     manufacturer_counter++;
-
-    /* Build manufacturer data: [Company ID (2B)][Counter (4B)][Custom (2B)] */
-    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
-    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-    manuf_data[2] = (manufacturer_counter >> 0) & 0xFF;
-    manuf_data[3] = (manufacturer_counter >> 8) & 0xFF;
-    manuf_data[4] = (manufacturer_counter >> 16) & 0xFF;
-    manuf_data[5] = (manufacturer_counter >> 24) & 0xFF;
-    manuf_data[6] = 0xAA;
-    manuf_data[7] = 0xBB;
-
-    const struct bt_data ad[] = {
-        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-        BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
-    };
+    fill_manuf_data(manufacturer_counter);
 
     err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
     if (err < 0) {
@@ -264,7 +274,6 @@ static void adv_update_work_handler(struct k_work *work)
 int main(void)
 {
     int err;
-    uint8_t init_data[MANUF_DATA_SIZE];
 
     LOG_INF("BLE Manufacturer Data Beacon");
 
@@ -286,21 +295,7 @@ int main(void)
     LOG_INF("BLE initialized");
 
     /* Initial advertising data with counter = 0 */
-    init_data[0] = MANUF_COMPANY_ID & 0xFF;
-    init_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-    init_data[2] = 0;
-    init_data[3] = 0;
-    init_data[4] = 0;
-    init_data[5] = 0;
-    init_data[6] = 0xAA;
-    init_data[7] = 0xBB;
-
-    const struct bt_data ad[] = {
-        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-        BT_DATA(BT_DATA_MANUFACTURER_DATA, init_data, sizeof(init_data)),
-    };
+    fill_manuf_data(0);
 
     err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
     if (err < 0) {

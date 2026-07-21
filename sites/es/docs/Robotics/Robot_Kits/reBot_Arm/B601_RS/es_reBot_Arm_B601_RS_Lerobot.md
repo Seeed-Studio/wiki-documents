@@ -89,7 +89,7 @@ Los tutoriales de Seeed Studio se actualizan estrictamente de acuerdo con la doc
    Admite el despliegue mediante la plataforma reComputer Mini J4012 Orin NX 16GB.
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 ## Entorno inicial del sistema
@@ -108,7 +108,7 @@ Los tutoriales de Seeed Studio se actualizan estrictamente de acuerdo con la doc
 ## Instalar LeRobot
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 Necesitas instalar pytorch, torchvision y otros entornos según tu versión de CUDA.
@@ -212,7 +212,7 @@ Si la salida es False, necesitas reinstalar Pytorch y Torchvision según el [tut
 ## Calibrar el brazo robótico
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 A continuación, debes conectar la fuente de alimentación y el cable de datos a tu robot reBot B601-RS para la calibración, a fin de garantizar que los brazos líder y seguidor tengan los mismos valores de posición cuando se encuentren en la misma posición física. Esta calibración es esencial porque permite que una red neuronal entrenada en un robot reBot B601-RS funcione en otro. Si necesitas recalibrar el brazo robótico, elimina por completo los archivos en `~/.cache/huggingface/lerobot/calibration/robots` o `~/.cache/huggingface/lerobot/calibration/teleoperators` y vuelve a calibrar el brazo robótico. De lo contrario, aparecerá un mensaje de error. La información de calibración del brazo robótico se almacenará en los archivos JSON de este directorio.
@@ -333,7 +333,7 @@ lerobot-teleoperate \
     <iframe
         width="900"
         height="600"
-        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0"
+        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0&autoplay=0&muted=1"
         scrolling="no"
         border="0"
         frameborder="no"
@@ -698,7 +698,7 @@ lerobot-teleoperate \
 ## Recopilación del conjunto de datos
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 <details>

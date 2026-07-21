@@ -277,6 +277,8 @@ python tools/ble_terminal.py
 python tools/decode_opus.py <input_file.opus> <output_file.wav>
 ```
 
+> Windows 注意事项：如果由于找不到 Opus 原生库而导致解码失败，请从 ShiftMediaProject releases 下载预编译的 `opus.dll`，将其解压，并把 `opus.dll` 放入虚拟环境的 `Scripts` 文件夹中（例如，`D:\clip\tests\.venv\Scripts\`）。
+
 ---
 
 ## 测试脚本 

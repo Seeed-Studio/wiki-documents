@@ -14,7 +14,7 @@ last_update:
   date: 07/01/2026
   author: Kasun Thushara
 createdAt: '2026-07-01'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/respeaker_clip_python_control/
 ---
 
@@ -276,6 +276,8 @@ Convert Opus recordings to WAV.
 ```bash
 python tools/decode_opus.py <input_file.opus> <output_file.wav>
 ```
+
+> Windows note: if decoding fails because the Opus native library cannot be found, download a prebuilt `opus.dll` from the ShiftMediaProject releases, extract it, and place `opus.dll` in your virtual environment's `Scripts` folder (for example, `D:\clip\tests\.venv\Scripts\`).
 
 ---
 

@@ -54,7 +54,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 本教程介绍如何通过在工作空间 `rebotarm_ros2`中运行 ROS2 实现对 reBot Arm B601-DM 的控制。该工作空间将接入Pinocchio逆运动学、轨迹规划和重力补偿功能的`reBotArm_control_py` 机械臂Python SDK 封装为 ROS2 topic、service 和 action，方便用户接入上层规划、RViz 可视化、重力补偿、夹爪控制和二次开发流程。
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1cHLU67EfN&autoplay=0" title="Bilibili video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1cHLU67EfN&autoplay=0&muted=1" title="Bilibili video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 :::note

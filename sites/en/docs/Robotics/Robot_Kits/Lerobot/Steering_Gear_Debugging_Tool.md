@@ -63,6 +63,8 @@ python -m src.gui.factory_calibration_tool --port1 /dev/ttyUSB0 --port2 /dev/tty
 
 ### 1. Check Whether the Servos Are Normal
 
+First, select the corresponding port in the serial port selection.
+
 If servos 1-6 are all detected successfully, it means the servos are recognized normally and the basic functions are working.
 
 <div align="center">
@@ -177,14 +179,17 @@ By default, all servos on the page are at their neutral positions, as shown in t
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/14.png" />
 </div>
 
-First enable torque. You can enable all torques with one click or enable torque for a single servo, then slide the slider to move the servo to the corresponding position. However, be sure to move slowly. Because the printed parts of the robotic arm will physically block certain positions, the arm cannot actually reach the edge positions; there are maximum and minimum movement limits, so do not slide the slider to 0 or to the maximum. After disabling torque, the robotic arm will go limp.
+- 1. First enable torque. You can enable all torques with one click or enable torque for a single servo, then slide the slider to move the servo to the corresponding position. However, be sure to move slowly. Because the printed parts of the robotic arm will physically block certain positions, the arm cannot actually reach the edge positions; there are maximum and minimum movement limits, so do not slide the slider to 0 or to the maximum. After disabling torque, the robotic arm will go limp.
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/15.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/21.png" />
 </div>
 
 As shown above, after enabling torque, the movement of the corresponding servo will change.
+
+- 2. You can perform neutral calibration for a single servo and clear the servo's internal neutral, maximum, and minimum positions
+- 3. The following is the servo information
 
 Pos: Position
 
@@ -216,37 +221,3 @@ Factory settings can be restored.
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/16.png" />
 </div>
-
-### 7. Robotic Arm Calibration File Management
-
-You can select the corresponding follower arm calibration file or leader arm calibration file to run, modify, or delete.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/17.png" />
-</div>
-
-### 8. Create a New Robotic Arm Calibration File
-
-Click the **GUI Calibration Wizard**, and select the corresponding robotic arm and port number.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/18.png" />
-</div>
-
-You can perform minimum, maximum, and neutral calibration for each servo.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/19.png" />
-</div>
-
-First, record the neutral value for each servo. Place each servo in the position shown in the figure, then click **Record Neutral Value** for servos 1-6 in turn.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/20.png" />
-</div>
-
-Then click **Start Recording Range** for each servo, rotate the servo to the maximum and minimum ranges, and then click **Stop Recording Range**. Repeat the above operation for each servo, then name the calibration file and save it.

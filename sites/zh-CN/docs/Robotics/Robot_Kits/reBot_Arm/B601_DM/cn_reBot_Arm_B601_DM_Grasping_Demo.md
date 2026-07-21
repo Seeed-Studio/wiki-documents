@@ -49,7 +49,7 @@ YOLO 是一类广泛使用的实时目标检测模型，能够在单次前向推
 </p>
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1VjVA6KEff&autoplay=0" title="Bilibili video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1VjVA6KEff&autoplay=0&muted=1" title="Bilibili video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -404,7 +404,7 @@ python scripts/collect_handeye_eih.py --manual
   <iframe 
     width="900" 
     height="600" 
-    src="//player.bilibili.com/player.html?bvid=BV13CTk6bErp&autoplay=0" 
+    src="//player.bilibili.com/player.html?bvid=BV13CTk6bErp&autoplay=0&muted=1" 
     title="告别抓取误差：彻底解决机械臂视觉抓取失败的困惑" 
     frameborder="0" 
     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -440,7 +440,7 @@ python scripts/collect_handeye_eih.py --manual
   <iframe 
     width="900" 
     height="600" 
-    src="//player.bilibili.com/player.html?bvid=BV1SoTv6iEwQ&autoplay=0" 
+    src="//player.bilibili.com/player.html?bvid=BV1SoTv6iEwQ&autoplay=0&muted=1" 
     title="reBot Arm B601-DM 协同双目视觉实现智能抓取开源方案" 
     frameborder="0" 
     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
