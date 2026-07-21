@@ -15,7 +15,7 @@ last_update:
   date: 2026-03-1
   author: Jackson.Li
 createdAt: '2026-03-02'
-updatedAt: '2026-03-04'
+updatedAt: '2026-06-23'
 url: https://wiki.seeedstudio.com/es/getting_started_with_ee03/
 ---
 

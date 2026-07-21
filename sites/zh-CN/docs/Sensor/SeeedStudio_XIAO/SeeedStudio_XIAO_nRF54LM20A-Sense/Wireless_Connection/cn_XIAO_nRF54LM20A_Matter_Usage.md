@@ -12,7 +12,7 @@ last_update:
   date: 05/26/2026
   author: Zeller
 createdAt: '2025-05-26'
-updatedAt: '2026-06-15'
+updatedAt: '2026-07-08'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_matter/
 ---
 

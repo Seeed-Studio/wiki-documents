@@ -9,7 +9,7 @@ last_update:
   date: 7/17/2026
   author: Jackson.Li
 createdAt: '2026-03-06'
-updatedAt: '2026-07-07'
+updatedAt: '2026-07-17'
 url: https://wiki.seeedstudio.com/es/getting_started_with_reterminal_d1001/
 ---
 

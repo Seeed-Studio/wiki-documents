@@ -16,7 +16,6 @@ last_update:
 url: https://wiki.seeedstudio.com/pt-br/em12_g_gnss_module_for_recomputer_robotics_j3011/
 createdAt: '2026-07-01'
 updatedAt: '2026-07-01'
-
 ---
 
 # Guia de Configuração do Módulo GNSS EM12-G para reComputer Robotics J3011

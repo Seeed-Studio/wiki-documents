@@ -12,7 +12,7 @@ last_update:
   date: 6/4/2026
   author: Kasun Thushara
 createdAt: '2026-06-04'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-18'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_sensecraft/
 ---
 

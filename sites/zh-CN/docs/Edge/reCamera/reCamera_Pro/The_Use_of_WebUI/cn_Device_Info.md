@@ -11,8 +11,8 @@ last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/recamera_pro_device_info_cn/
+updatedAt: '2026-07-13'
+url: https://wiki.seeedstudio.com/cn/recamera_pro_device_info_cn/
 ---
 
 在这个界面中可以看到recamera pro的各种硬件和软件的版本信息，以及调整对应的系统设置。

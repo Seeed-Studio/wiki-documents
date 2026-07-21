@@ -10,10 +10,10 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m
 sku: E24122002, 114993609, 114993608, 108090023, 108090003, 101090141, 101090142
 last_update:
-  date: 2024-12-24T00:00:00.000Z
+  date: 2024-12-24
   author: ZhuYaoHui
 createdAt: '2025-01-08'
-updatedAt: '2026-01-07'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/cn/lerobot_so100m/
 ---
 

@@ -15,7 +15,7 @@ last_update:
   date: 6/30/2026
   author: Ray
 createdAt: '2026-06-30'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_clip_getting_started/
 ---
 

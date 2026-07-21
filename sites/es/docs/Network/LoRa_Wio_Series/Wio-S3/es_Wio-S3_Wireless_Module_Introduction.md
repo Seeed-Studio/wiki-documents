@@ -13,7 +13,7 @@ last_update:
   date: 6/9/2026
   author: Janet Zhang
 createdAt: '2026-06-09'
-updatedAt: '2026-06-09'
+updatedAt: '2026-06-10'
 url: https://wiki.seeedstudio.com/es/wio-s3_wireless_module_introduction/
 ---
 

@@ -10,7 +10,7 @@ last_update:
   date: 7/17/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-04-21'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip/
 ---
 

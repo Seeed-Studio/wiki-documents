@@ -11,8 +11,7 @@ last_update:
   date: 12/25/2025
   author: Li Shanghang
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-11-27'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/stackforce_series/

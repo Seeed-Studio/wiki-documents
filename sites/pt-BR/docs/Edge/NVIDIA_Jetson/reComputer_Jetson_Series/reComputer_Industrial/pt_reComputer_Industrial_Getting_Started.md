@@ -10,7 +10,7 @@ last_update:
   date: 05/16/2023
   author: Lakshantha
 createdAt: '2025-06-05'
-updatedAt: '2026-06-27'
+updatedAt: '2026-06-29'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_Industrial_Getting_Started/
 ---
 

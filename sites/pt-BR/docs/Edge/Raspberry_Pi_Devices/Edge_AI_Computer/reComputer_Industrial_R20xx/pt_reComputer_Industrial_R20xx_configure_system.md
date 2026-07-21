@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-05-29'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_r20xx_configure_system/
 ---
 

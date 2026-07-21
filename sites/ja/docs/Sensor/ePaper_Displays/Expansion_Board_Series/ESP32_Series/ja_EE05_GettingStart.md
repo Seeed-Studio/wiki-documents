@@ -10,7 +10,7 @@ last_update:
   author: dimo
 createdAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/ja/epaper_ee05/
-updatedAt: '2026-04-27'
+updatedAt: '2026-04-28'
 ---
 
 import Tabs from '@theme/Tabs';

@@ -9,10 +9,10 @@ sku: 100029708
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/Picoclaw&Gimbal/picoclaw_turn_led.gif
 sidebar_position: 11
 last_update:
-  date: 2026-06-24T00:00:00.000Z
+  date: 2026-06-24
   author: Sizhao zhou
 createdAt: '2026-06-24'
-updatedAt: '2026-06-24'
+updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/es/recamera_picoclaw/
 ---
 

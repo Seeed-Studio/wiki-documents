@@ -14,7 +14,7 @@ last_update:
   author: Kian
 createdAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/es/connecting_r1225_to_ttn/
-updatedAt: '2026-03-30'
+updatedAt: '2026-04-03'
 ---
 # Conexión a TTN
 

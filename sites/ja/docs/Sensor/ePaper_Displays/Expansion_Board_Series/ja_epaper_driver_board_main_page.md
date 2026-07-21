@@ -8,7 +8,7 @@ last_update:
   date: 12/21/2025
   author: Allen
 createdAt: '2025-12-19'
-updatedAt: '2026-03-05'
+updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/ja/xiao_epaper_display_board_overview/
 ---
 
