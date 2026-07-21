@@ -13,7 +13,7 @@ last_update:
   author: Kasun Thushara
 createdAt: '2026-05-29'
 updatedAt: '2026-05-29'
-url: https://wiki.seeedstudio.com/cn/respeaker_flex_xiao_doa_vad
+url: https://wiki.seeedstudio.com/cn/respeaker_flex_xiao_doa_vad/
 ---
 
 ## 介绍

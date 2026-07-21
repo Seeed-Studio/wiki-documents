@@ -12,7 +12,7 @@ last_update:
   author: yylin
 no_comments: false
 createdAt: '2026-07-19'
-updatedAt: '2026-07-19'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/train_classification_model_online/
 ---
 

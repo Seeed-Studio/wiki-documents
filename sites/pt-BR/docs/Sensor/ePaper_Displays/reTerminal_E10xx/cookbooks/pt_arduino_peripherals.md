@@ -9,7 +9,7 @@ last_update:
   date: 05/21/2026
   author: Citric
 createdAt: '2026-05-15'
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals/
 ---
 

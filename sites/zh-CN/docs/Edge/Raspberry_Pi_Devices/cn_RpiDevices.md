@@ -18,7 +18,7 @@ last_update:
   date: 11/7/2025
   author: Nolan Chen
 createdAt: '2023-12-18'
-updatedAt: '2026-03-08'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/cn/raspberry-pi-devices/
 ---
 

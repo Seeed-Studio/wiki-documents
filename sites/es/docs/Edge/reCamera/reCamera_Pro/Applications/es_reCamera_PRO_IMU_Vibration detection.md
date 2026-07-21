@@ -15,10 +15,10 @@ image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_
 slug: /recamera_pro_imu_tilt_shake_detection
 sidebar_position: 1
 last_update:
-  date: 2026-06-11T00:00:00.000Z
+  date: 2026-06-11
   author: Sizhao zhou
-createdAt: "2026-06-11"
-updatedAt: "2026-06-11"
+createdAt: '2026-06-11'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/es/recamera_pro_imu_tilt_shake_detection/
 ---
 

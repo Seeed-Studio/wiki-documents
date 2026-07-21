@@ -1,13 +1,13 @@
 ---
-description: このWikiでは、Seeed reComputer J4012 Classic 上で SPI ディスプレイを接続して駆動する方法を、ST7789 SPI LCD を例に紹介します。  
-title: reComputer J4012 Classic で SPI ディスプレイを使用する  
+description: このWikiでは、Seeed reComputer J4012 Classic 上で SPI ディスプレイを接続して駆動する方法を、ST7789 SPI LCD を例に紹介します。
+title: reComputer J4012 Classic で SPI ディスプレイを使用する
 keywords:
-- Jetson
-- reComputer
-- J4012 Classic
-- SPI
-- ST7789
-- LCD  
+  - Jetson
+  - reComputer
+  - J4012 Classic
+  - SPI
+  - ST7789
+  - LCD
 image: https://files.seeedstudio.com/wiki/Jetson_SPI_Getting_Start/reComputer-J4012-Classic_SPI_picture_02.png
 slug: /jetson_spi_getting_start
 sku: 110110145
@@ -15,7 +15,7 @@ last_update:
   date: 06/08/2026
   author: HaoChen
 createdAt: '2026-06-01'
-updatedAt: '2026-06-01'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/ja/jetson_spi_getting_start/
 ---
 

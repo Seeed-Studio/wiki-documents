@@ -4,12 +4,12 @@ title: 'Recetario ESPHome: Botones, Zumbador, LED, Batería y Bajo Consumo (reTe
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 4
-sidebar_label: 'ESPHome - E/S, Batería y Energía'
+sidebar_label: ESPHome - E/S, Batería y Energía
 last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_advanced/
 ---
 

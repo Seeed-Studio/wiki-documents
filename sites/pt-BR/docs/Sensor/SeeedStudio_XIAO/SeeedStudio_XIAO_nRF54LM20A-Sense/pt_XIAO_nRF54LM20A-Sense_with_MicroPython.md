@@ -12,7 +12,7 @@ last_update:
   date: 06/22/2026
   author: Brandy
 createdAt: '2025-06-15'
-updatedAt: '2026-06-22'
+updatedAt: '2026-07-08'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_micropython/
 ---
 

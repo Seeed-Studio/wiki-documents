@@ -8,7 +8,7 @@ last_update:
   date: 01/03/2023
   author: w0x7ce
 createdAt: '2023-01-05'
-updatedAt: '2026-01-07'
+updatedAt: '2026-05-20'
 url: https://wiki.seeedstudio.com/es/reServer_J2032_Getting_Started/
 ---
 

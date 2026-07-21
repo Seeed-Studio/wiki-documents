@@ -13,7 +13,7 @@ last_update:
   date: 2/11/2026
   author: Kasun Thushara
 createdAt: '2024-04-11'
-updatedAt: '2026-03-24'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_lite_ha/
 ---
 

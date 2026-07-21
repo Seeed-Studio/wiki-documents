@@ -12,7 +12,7 @@ last_update:
   date: 1/09/2025
   author: Jiahao Li
 createdAt: '2025-01-09'
-updatedAt: '2026-04-16'
+updatedAt: '2026-06-24'
 url: https://wiki.seeedstudio.com/ja/r2000_series_getting_start/
 ---
 

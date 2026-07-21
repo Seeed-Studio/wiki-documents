@@ -13,7 +13,7 @@ last_update:
   author: Carla
 sidebar_position: 0
 createdAt: '2024-08-06'
-updatedAt: '2026-05-27'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_xiao_ra4m1/
 ---
 import Tabs from '@theme/Tabs';

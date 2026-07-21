@@ -14,10 +14,9 @@ last_update:
   date: 2026-06-17
   author: YinHaizhou
 translation:
-  skip:
-    - [zh-CN]
+  skip: [[zh-CN]]
 createdAt: '2026-06-15'
-updatedAt: '2026-06-17'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_grasping_demo/
 ---
 

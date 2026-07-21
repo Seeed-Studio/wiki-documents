@@ -11,8 +11,8 @@ last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/recamera_pro_ai_inference_cn/
+updatedAt: '2026-07-13'
+url: https://wiki.seeedstudio.com/cn/recamera_pro_ai_inference_cn/
 ---
 
 reCamera Pro 提供内置 AI 推理管理页面，用户可以直接在 Web UI 中完成模型管理、模型上传、模型转换、推理参数配置、实时推理状态查看以及推理结果输出配置。该页面适用于目标检测、工业识别、安防监控、事件触发和边缘 AI 应用开发等场景。

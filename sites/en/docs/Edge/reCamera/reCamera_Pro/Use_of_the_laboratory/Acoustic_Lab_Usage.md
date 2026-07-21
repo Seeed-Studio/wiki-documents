@@ -15,7 +15,7 @@ last_update:
   date: 2026-07-13
   author: sizhaozhou
 createdAt: '2026-07-13'
-updatedAt: '2026-07-16'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/recamera_pro_acoustic_lab_usage/
 ---
 

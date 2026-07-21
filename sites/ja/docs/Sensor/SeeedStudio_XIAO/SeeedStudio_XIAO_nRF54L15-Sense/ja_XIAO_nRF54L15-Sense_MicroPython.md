@@ -11,7 +11,7 @@ last_update:
   date: 1/15/2026
   author: Brandy
 createdAt: '2025-09-26'
-updatedAt: '2026-01-19'
+updatedAt: '2026-04-23'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_micropython/
 ---
 

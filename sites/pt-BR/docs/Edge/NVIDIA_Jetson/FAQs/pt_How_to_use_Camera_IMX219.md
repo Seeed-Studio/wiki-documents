@@ -11,7 +11,7 @@ last_update:
   date: 06/03/2026
   auther: Dongxu Jin
 createdAt: '2026-06-03'
-updatedAt: '2026-06-05'
+updatedAt: '2026-06-23'
 url: https://wiki.seeedstudio.com/pt-br/how_to_use_camera_imx219/
 ---
 

@@ -14,7 +14,7 @@ last_update:
   author: Kian
 createdAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/ja/connecting_r1225_to_chirpstack/
-updatedAt: '2026-04-15'
+updatedAt: '2026-04-29'
 ---
 ## ChirpStack の設定
 

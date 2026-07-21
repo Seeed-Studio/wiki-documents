@@ -9,7 +9,7 @@ last_update:
   date: 02/28/204
   author: Jessie
 createdAt: '2024-02-28'
-updatedAt: '2026-06-04'
+updatedAt: '2026-06-24'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP_probes_intro/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 08/15/2024
   author: Jason
 createdAt: '2024-08-21'
-updatedAt: '2025-09-11'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/pt-br/xiao_ra4m1_pin_multiplexing/
 ---
 

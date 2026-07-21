@@ -4,12 +4,12 @@ title: 'Recetario ESPHome: RTC, Tarjeta SD y Micrófono (reTerminal E Serie)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
 sidebar_position: 5
-sidebar_label: 'ESPHome - RTC, SD y Micrófono'
+sidebar_label: ESPHome - RTC, SD y Micrófono
 last_update:
   date: 06/12/2026
   author: Citric
 createdAt: '2026-06-12'
-updatedAt: '2026-06-12'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_rtc_sd_microphone/
 ---
 

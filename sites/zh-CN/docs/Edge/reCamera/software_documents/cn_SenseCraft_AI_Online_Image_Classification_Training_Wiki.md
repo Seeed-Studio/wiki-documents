@@ -12,8 +12,8 @@ last_update:
   author: yylin
 no_comments: false
 createdAt: '2026-07-19'
-updatedAt: '2026-07-19'
-url: https://wiki.seeedstudio.com/train_classification_model_online/
+updatedAt: '2026-07-20'
+url: https://wiki.seeedstudio.com/cn/train_classification_model_online/
 ---
 
 # 使用 SenseCraft AI 在线快速训练图像分类模型

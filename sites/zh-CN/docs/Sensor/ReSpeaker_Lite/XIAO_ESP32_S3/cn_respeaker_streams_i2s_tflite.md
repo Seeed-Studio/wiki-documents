@@ -1,6 +1,6 @@
 ---
 description: 使用 ReSpeaker Lite 和 TensorFlow Lite 进行关键词识别
-title: 在 reSpeaker Lite 上进行关键词识别 
+title: 在 reSpeaker Lite 上进行关键词识别
 keywords:
   - ESP32S3
   - XIAO
@@ -11,7 +11,7 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-07-03'
-updatedAt: '2024-10-09'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/cn/respeaker_streams_i2s_tflite/
 ---
 

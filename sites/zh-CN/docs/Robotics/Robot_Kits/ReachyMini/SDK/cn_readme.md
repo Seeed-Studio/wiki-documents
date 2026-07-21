@@ -16,8 +16,8 @@ last_update:
 translation:
   - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
-url: https://wiki.seeedstudio.com/reachymini_sdk_readme/
+updatedAt: '2026-05-19'
+url: https://wiki.seeedstudio.com/cn/reachymini_sdk_readme/
 ---
 
 # 构建、玩耍和创新 Reachy Mini 🤖
