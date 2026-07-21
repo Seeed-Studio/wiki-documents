@@ -135,19 +135,16 @@ ESPHome support for reTerminal E1003 is under development and will be available 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/208.png" style={{width:1000, height:'auto'}}/></div>
 
-The reTerminal E1003 hardware includes:
-
 1. **10.3-inch ePaper Display:** Touch-supported monochrome panel with 16-level grayscale and 1404×1872 resolution
 2. **Buttons:** Located at the top of the device — the **green button** manually refreshes the screen; the **two white buttons** are page up and page down for navigating between pages
 3. **Microphone:** Onboard PDM digital microphone for voice interaction applications
 4. **MicroSD Card / TF Card Slot:** For expandable storage (FAT32, up to 64 GB)
-5. **Wi-Fi Antenna Area:** Located at the bottom of the device for Wi-Fi connectivity.
-6. **Power Switch:** To turn the device on or off.
-7. **Red Power LED:** Indicates the battery charging status.
-8. **Green Status LED:** Indicates the current operational or system status.
-9. **USB-C Data and Charge Port:** For charging the device and data transmission.
-10. **Expansion Port:** Pin header providing VDD, GND, I2C, and GPIO connections for external sensors, modules, or peripherals.
-11. **Stand Mounting Screw Holes:** Threaded holes on the back of the device for securing the support stand.
+5. **Power Switch:** To turn the device on or off.
+6. **Red Power LED:** Indicates the battery charging status.
+7. **Green Status LED:** Indicates the current operational or system status.
+8. **USB-C Data and Charge Port:** For charging the device and data transmission.
+9. **Expansion Port:** Pin header providing VDD, GND, I2C, and GPIO connections for external sensors, modules, or peripherals.
+10. **Stand Mounting Screw Holes:** Threaded holes on the back of the device for securing the support stand.
 
 ## Getting Started
 
