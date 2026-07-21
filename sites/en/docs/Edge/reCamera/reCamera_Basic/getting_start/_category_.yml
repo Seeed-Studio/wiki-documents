@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'Getting Start'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reCamera_basic_getting_start
+link:
+  type: generated-index
+  slug: recamera_basic_getting_start
+  title: reCamera Basic Getting Start
+  description: Select a type you would like to learn about.
