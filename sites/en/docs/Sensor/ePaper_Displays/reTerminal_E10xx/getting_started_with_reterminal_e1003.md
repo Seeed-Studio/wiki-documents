@@ -586,6 +586,7 @@ If you see the device path in the output, the driver is correctly installed and 
 ## Resources
 
 - [reTerminal E1003 Schematic (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/202004522_reTerminal_E1003_V1.0_SCH_251231.pdf)
+- [Exterior overall 3D model STP file](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_E1003_3D.stp)
 
 ## Tech Support & Product Discussion
 
