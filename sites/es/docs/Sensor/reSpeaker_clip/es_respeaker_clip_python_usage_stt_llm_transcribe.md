@@ -35,48 +35,26 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_python_build_app/
 ## Cómo funciona
 
 1. Conéctate al Clip por BLE (predeterminado) o WiFi.
-2. Elige una pestaña y pulsa Iniciar. El audio se transmite desde el dispositivo en segundo plano mientras graba (sincronización continua, igual que la herramienta original
-   `clip-web`). La pestaña desde la que iniciaste decide la canalización
-   que se ejecuta sobre esta grabación.
-   3. Detén la grabación. Una vez que termina la sincronización final, la app:
+2. Elige una pestaña y pulsa Iniciar. El audio se transmite desde el dispositivo en segundo plano mientras graba (sincronización continua, igual que la herramienta original `clip-web`). La pestaña desde la que iniciaste decide la canalización que se ejecuta sobre esta grabación.
+3. Detén la grabación. Una vez que termina la sincronización final, la app:
    - codifica el audio combinado a `.ogg` (Opus),
    - lo convierte a un `.wav` mono de 16 kHz (mediante PyAV, no se necesita instalación separada de ffmpeg),
-   - **Pestaña Transcription:** envía el `.wav` a Groq y recibe texto plano.
-    - **Pestaña Diarization:** envía el `.wav` a Speechmatics con
-    `diarization: "speaker"`, obtiene la transcripción JSON a nivel de palabra
-      y la agrupa en turnos de hablante (`S1`, `S2`, ...).
-      - **Pestaña Summary:** envía el `.wav` a Groq para transcripción y luego
-    pasa la transcripción a la API de chat de Groq (`openai/gpt-oss-20b`) para
-      generar minutas de reunión estructuradas (título, puntos clave,
-      tareas, decisiones).
-      - envía el resultado al navegador a través del WebSocket existente.
-    4. Cada pestaña tiene su propia lista de "Recordings" (filtrada por la canalización
-   bajo la cual se grabó la sesión), con reproducción y un botón
-   Process/Re-run por grabación.
+    - **Pestaña Transcription:** envía el `.wav` a Groq y recibe texto plano.
+    - **Pestaña Diarization:** envía el `.wav` a Speechmatics con `diarization: "speaker"`, obtiene la transcripción JSON a nivel de palabra y la agrupa en turnos de hablante (`S1`, `S2`, ...).
+    - **Pestaña Summary:** envía el `.wav` a Groq para transcripción y luego pasa la transcripción a la API de chat de Groq (`openai/gpt-oss-20b`) para generar minutas de reunión estructuradas (título, puntos clave, tareas, decisiones).
+    - envía el resultado al navegador a través del WebSocket existente.
+4. Cada pestaña tiene su propia lista de "Recordings" (filtrada por la canalización bajo la cual se grabó la sesión), con reproducción y un botón Process/Re-run por grabación.
 
 
-  ## Claves de API
+## Claves de API
 
-Cada pestaña tiene su propia tarjeta de Settings: clave de Groq en las pestañas Transcription y
-Summary (compartida, se configura una vez y la usan ambas), clave de Speechmatics
-en la pestaña Diarization. Nada está codificado ni se sube al repositorio. Las claves viven en
-memoria durante la vida del proceso del servidor. Marca "Remember on this
-machine" para guardarlas también en `app/settings.local.json` (ignorado por git)
-y que sobrevivan a un reinicio.
+Cada pestaña tiene su propia tarjeta de Settings: clave de Groq en las pestañas Transcription y Summary (compartida, se configura una vez y la usan ambas), clave de Speechmatics en la pestaña Diarization. Nada está codificado ni se sube al repositorio. Las claves viven en memoria durante la vida del proceso del servidor. Marca "Remember on this machine" para guardarlas también en `app/settings.local.json` (ignorado por git) y que sobrevivan a un reinicio.
 
-- **Groq:** obtén una clave en https://console.groq.com — se usa tanto para
-  transcripción (`whisper-large-v3-turbo`, llamada síncrona única y rápida)
-  como para resumen (`openai/gpt-oss-20b` chat completions).
-  - **Speechmatics:** obtén una clave en https://portal.speechmatics.com — usa
-  la API REST por lotes con `diarization: "speaker"` (enviar → sondear →
-  obtener transcripción JSON → agrupar en turnos de hablante), punto de operación
-  `enhanced` de forma predeterminada. Consulta
-  [Batch diarization](https://docs.speechmatics.com/speech-to-text/batch/batch-diarization)
-  en su documentación.
+- **Groq:** obtén una clave en https://console.groq.com — se usa tanto para transcripción (`whisper-large-v3-turbo`, llamada síncrona única y rápida) como para resumen (`openai/gpt-oss-20b` chat completions).
+- **Speechmatics:** obtén una clave en https://portal.speechmatics.com — usa la API REST por lotes con `diarization: "speaker"` (enviar → sondear → obtener transcripción JSON → agrupar en turnos de hablante), punto de operación `enhanced` de forma predeterminada. Consulta [Batch diarization](https://docs.speechmatics.com/speech-to-text/batch/batch-diarization) en su documentación.
 
-  ## Estructura del proyecto
+## Estructura del proyecto
 
-__CODE_LINE_PLH__
 ```
 respeaker-stt-web/
 ├── clip/                   # vendored Clip SDK (BLE/WiFi device control)
@@ -94,33 +72,31 @@ respeaker-stt-web/
 │       └── index.html       # UI — three tabs, each with recording controls, settings, results
 ├── recordings/               # synced audio + meta.json + transcript.json per session (gitignored)
 └── requirements.txt
+```
 
-  ## Requisitos
+## Requisitos
 
 - Python 3.10+
-- No se necesita instalación separada de ffmpeg: la conversión a WAV usa PyAV
-  (`av` en PyPI), que incluye sus propias bibliotecas de códecs integradas,
-  también en Windows
-  - Un dispositivo reSpeaker Clip emparejado (BLE) para la grabación real:
-  esta parte no se puede probar sin el hardware
+- No se necesita instalación separada de ffmpeg: la conversión a WAV usa PyAV (`av` en PyPI), que incluye sus propias bibliotecas de códecs integradas, también en Windows
+- Un dispositivo reSpeaker Clip emparejado (BLE) para la grabación real: esta parte no se puede probar sin el hardware
 
 ## Configuración
 
-__CODE_LINE_PLH__
 ```bash
 git clone https://github.com/KasunThushara/clip-sdk-python-usage.git && cd clip-sdk-python-usage
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 python app/main.py
+```
 
 Luego abre `http://localhost:5000`.
 
 Para transporte por WiFi en lugar de BLE:
 
-__CODE_LINE_PLH__
 ```bash
 python app/main.py --transport wifi --wifi-host 192.168.4.1 --wifi-port 8089
 ```
+## Descripción general de la interfaz
 
 ### Transcription
 Añade tu clave de API de Groq. Pulsa el botón de grabación y, cuando quieras detenerla, pulsa stop.
@@ -151,4 +127,3 @@ Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos ti
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
