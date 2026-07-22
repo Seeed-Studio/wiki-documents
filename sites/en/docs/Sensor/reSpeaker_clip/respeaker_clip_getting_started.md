@@ -9,14 +9,14 @@ keywords:
   - Voice to Text
   - LLM Summary
 image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png
-slug: /respeaker_clip_getting_started
+slug: /respeaker_clip
 sku: 100020126
 last_update:
   date: 6/30/2026
   author: Ray
 createdAt: '2026-06-30'
 updatedAt: '2026-06-30'
-url: https://wiki.seeedstudio.com/respeaker_clip_getting_started/
+url: https://wiki.seeedstudio.com/respeaker_clip/
 ---
 
 # reSpeaker Clip Getting Started
@@ -468,7 +468,7 @@ The application SDK can be used for mobile app or host-side application integrat
 | --- | --- | --- |
 | iOS | Swift | Coming soon |
 | Android | Kotlin | Coming soon |
-| Desktop / Server | Python | Coming soon |
+| Desktop / Server | Python | [Available](/respeaker_clip_basic_sdk_guide) |
 
 ## Applications
 

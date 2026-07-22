@@ -2158,11 +2158,11 @@ const sidebars = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
+            id: 'Sensor/reSpeaker_Clip/respeaker_clip_getting_started',
           },
           items: [
-            'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
-            'Sensor/reSpeaker_clip/respeaker_clip_python_control',
+            'Sensor/reSpeaker_Clip/respeaker_clip_getting_started',
+            'Sensor/reSpeaker_Clip/respeaker_clip_basic_sdk_guide',
           ],
         },
         {
