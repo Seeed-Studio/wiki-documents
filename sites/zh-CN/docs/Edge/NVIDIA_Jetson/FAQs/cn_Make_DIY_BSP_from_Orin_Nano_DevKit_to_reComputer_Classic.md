@@ -325,6 +325,21 @@ sudo BOARDID=3767 BOARDSKU=0005 FAB=300 BOARDREV=V.2 CHIP_SKU=00:00:00:D5 \
 sudo cp -a tools/kernel_flash/images/internal ~/j401_qspi_internal_save
 ```
 
+:::info
+本指南实测生成的 QSPI internal（SKU 0005 / L4T 36.4.3）已上传，可直接下载使用：
+
+```bash
+wget -O j401_qspi_internal_save.tar.gz \
+  https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/dk-to-classic/j401_qspi_internal_save.tar.gz
+mkdir -p Linux_for_Tegra/tools/kernel_flash/images/internal
+tar xpf j401_qspi_internal_save.tar.gz -C Linux_for_Tegra/tools/kernel_flash/images/internal/
+```
+
+下载后放入 `Linux_for_Tegra/tools/kernel_flash/images/internal/` 即可跳过本节 QSPI 生成步骤。
+
+**复用前提**：目标板为 reComputer Classic J4011/J4012、模块 SKU 0005、L4T 36.4.3。若任一条件不符，必须按本节重新生成。
+:::
+
 ### 5.3 组装 mfi
 
 最终目录应满足：
