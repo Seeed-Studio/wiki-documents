@@ -1,54 +1,71 @@
 ---
-description: The reSpeaker Clip SDK provides a Python interface for communicating with reSpeaker Clip devices over Bluetooth Low Energy (BLE) or WiFi, enabling recording control, file synchronization, device configuration, and more.
-title: reSpeaker Clip Control with Python
+description: Systematic guide to the reSpeaker Clip Basic SDK — transports, communication protocols, recording state machine, file model, end-to-end data flow, and the Python SDK as the primary reference implementation with CLI and Web tools.
+title: reSpeaker Clip Basic SDK Guide
 keywords:
   - reSpeaker clip
-  - ble
-  - wifi
   - python
   - sdk
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png
-slug: /respeaker_clip_python_control
+  - ble
+  - wifi
+image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg
+slug: /respeaker_clip_basic_sdk_guide
 sku: 100020126
 last_update:
-  date: 07/01/2026
-  author: Kasun Thushara
-createdAt: '2026-07-01'
-updatedAt: '2026-07-16'
-url: https://wiki.seeedstudio.com/respeaker_clip_python_control/
+  date: 07/13/2026
+  author: Ray He / Kasun Thushara
+createdAt: '2026-07-13'
+updatedAt: '2026-07-13'
+url: https://wiki.seeedstudio.com/respeaker_clip_basic_sdk_guide/
 ---
 
-## Introduction
+# reSpeaker Clip Basic SDK Guide
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg" alt="reSpeaker Clip" width={800} height="auto" /></p>
 
-The reSpeaker Clip SDK provides a Python interface for communicating with reSpeaker Clip devices over Bluetooth Low Energy (BLE) or WiFi.
+> Version: matches `clip` package `__version__ = 1.0.0`  
+> Product: reSpeaker Clip wearable recorder
 
-Using this SDK you can:
+## Overview
 
-* Connect to a reSpeaker Clip
-* Read device information
-* Configure recording parameters
-* Start and stop recordings
-* Add bookmarks
-* Synchronize recordings
-* Control the device using Python
-* Use ready-made command line tools
-* Access the device through a web interface
+The reSpeaker Clip Basic SDK Guide explains how host-side applications communicate with and control the device through BLE, Wi-Fi, AT commands, GATT, and file-transfer workflows. The Python SDK is provided as the primary reference implementation, together with CLI and Web-based tools.
 
----
+This guide covers:
+
+- **Transports** — BLE and Wi-Fi/UDP communication channels.
+- **Communication protocols** — AT commands, GATT characteristics, and file-transfer framing.
+- **Recording model** — recording modes, device state machine, and file format.
+- **End-to-end data flow** — from connect to downloaded audio output.
+- **Reference implementations** — Python SDK (`clip` package), CLI tools, and a Web interface.
+
+The Basic SDK focuses on using the device's current capabilities from the host side. It does not include cloud transcription, AI summarization, account management, or mobile app services by themselves. Those workflows should be built on top of the downloaded audio files or integrated with another service. For modifying device-side behavior, protocols, audio processing, or firmware internals, refer to the [Firmware SDK documentation](#basic-sdk-and-firmware-sdk).
+
+## Where This Guide Fits
+
+If you are new to reSpeaker Clip, first read the [reSpeaker Clip Getting Started Guide](./respeaker_clip_getting_started.md).
+
+The Getting Started Guide introduces the product, target scenarios, hardware capabilities, and normal user workflows.
+
+This guide focuses on application-side development:
+
+- communicating with the device over BLE or Wi-Fi;
+- controlling recording and device configuration;
+- managing and downloading recording sessions;
+- understanding AT commands, GATT, and file-transfer protocols;
+- integrating these capabilities through Python, CLI, or Web tools.
+
+For modifying device-side behavior, protocols, audio processing, or firmware internals, refer to the [Firmware SDK documentation](#basic-sdk-and-firmware-sdk).
 
 ## Installation
 
 ### Requirements
 
-* Python 3.10+
-* Bluetooth adapter (BLE mode)
-* WiFi adapter (WiFi mode)
+- Python 3.10+
+- Bluetooth adapter (BLE mode)
+- Wi-Fi adapter (Wi-Fi mode)
 
 ### Clone the Repository
 
-you can find the github repository in [here](https://github.com/Seeed-Projects/respeaker_clip_python/tree/main)
+You can find the GitHub repository [here](https://github.com/Seeed-Projects/respeaker_clip_python/tree/main).
 
 ```bash
 git clone <repository-url>
@@ -56,12 +73,11 @@ git clone <repository-url>
 
 ### Install Dependencies
 
+After activating the virtual environment, install the required dependencies:
+
 ```bash
-#After Actiate the virtual environment
 pip install -r requirements.txt
 ```
-
----
 
 ## Project Structure
 
@@ -117,208 +133,124 @@ applications/clip/tests/
 
 ---
 
-## Command Line Tools
+## SDK Capabilities
 
-The SDK includes several ready-to-use utilities.
+The Python SDK supports the following workflows:
 
-### clip-cli -Unified CLI
+- **Configure the device**: recording mode, bitrate, complexity, auto-delete policy, OLED brightness, BLE device name, and related settings.
+- **Control recording**: start, stop, pause, resume, and add bookmarks.
+- **Manage sessions**: list, query, delete, purge, and format the SD card.
+- **Download files**: transfer recordings over BLE or Wi-Fi/UDP, with resume support.
+- **Convert audio**: re-container device raw Opus data into OGG/Opus, or decode to 16 kHz mono WAV through an Opus decoding path.
+- **Read status and events**: battery level, charging state, device state, state-machine changes, and real-time audio-visualization callbacks.
 
-#### BLE (default)
+Transport choice matters:
 
-General-purpose CLI.
+- Use BLE through `ClipDevice` for portable configuration, recording control, and small downloads.
+- Use Wi-Fi/UDP through `WiFiDevice` or `WiFiSync` for bulk downloads. It is faster and more stable for large recording sessions.
+- Recording control is BLE-only. File download works on both BLE and Wi-Fi.
 
-```bash
-tools/clip-cli.py status
+## Core Concepts
+
+### Transports
+
+| Transport | Class | Use case | Notes |
+| --- | --- | --- | --- |
+| BLE | `ClipDevice` | Configuration, recording control, session download | Portable and required for recording control. Bulk download can be slower and may drop notifications under load. |
+| Wi-Fi/UDP | `WiFiDevice` / `WiFiSync` | Bulk session download | Faster and more stable for large files. Requires enabling Wi-Fi on the device and joining `ClipAP_XXXX`. |
+
+### Recording Modes
+
+| Mode | Description |
+| --- | --- |
+| `normal` | Standard recording path without SpeexDSP noise suppression / dereverb. Device AGC, high-pass, and limiter may still be enabled by firmware. |
+| `enhanced` | Enhanced path with SpeexDSP noise suppression and dereverb enabled. |
+
+`set_mode()` accepts only `normal` and `enhanced`. `start_recording()` also accepts the aliases `stereo` and `merge`; `stereo` maps to `normal`, and `merge` maps to `enhanced`.
+
+Both modes output mono 16 kHz Opus by default.
+
+### Device State
+
+A recording is represented as a session. A session ID is usually a timestamp-style string such as `YYYYMMDDHHMMSS`.
+
+```text
+IDLE --start_recording--> RECORDING --stop_recording--> IDLE
+                              |
+                              | pause / resume
+                              v
+                            PAUSED
 ```
 
-Expected output
+Common device states include `IDLE`, `RECORDING`, `TRANSMITTING`, `PAUSED`, and `ERROR`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/status.jpg" alt="Device Connection" width={800} height="auto"/></p>
+On connection, the SDK can synchronize the device clock through `AT+TIME`. The device timezone may still differ from the host timezone.
 
-```bash
-tools/clip-cli.py version
-```
-```bash
-tools/clip-cli.py list
-```
+### File Format
 
-Expected output
+The device stores recording data as raw Opus frames, not as an OGG container. The raw format is a sequence of length-prefixed Opus frames:
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/list.png" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
-tools/clip-cli.py record --duration 60
-
-```
-Expected output
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.jpg" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
-tools/clip-cli.py sync --session 20260326120000
-```
-Expected output
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync.jpg" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
-tools/clip-cli.py sync --session 20260326120000 --delete
-```
-Expected output
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
-tools/clip-cli.py config get
-```
-Expected output
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="Device Connection" width={800} height="auto"/></p>
-
-```bash
-tools/clip-cli.py bookmark
+```text
+[2-byte little-endian length][opus frame][2-byte little-endian length][opus frame]...
 ```
 
-```bash
-tools/clip-cli.py terminal
-```
+Use `convert_to_ogg_opus()` to write a valid `.ogg` file before passing the recording to tools that expect OGG/Opus input. WAV decoding requires an Opus decoder path such as `opuslib`.
 
-Expected output
+### AT Command Protocol
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/terminal.png" alt="Device Connection" width={800} height="auto"/></p>
+- The SDK writes a UTF-8 AT string, for example `AT+MODE=enhanced`, to the CMD characteristic.
+- Responses are JSON notifications on `RESP_SEND`, for example `{"ok":true,"data":{...}}`.
+- Unsolicited events, such as state changes, look like `{"event":"state","state":"RECORDING",...}` and are dispatched through `event_callback`.
 
-#### WiFi
+### GATT Characteristics
 
-```bash
- tools/clip-cli.py wifi on
-```
-Expected output
+| Characteristic | UUID | Properties | Purpose |
+| --- | --- | --- | --- |
+| Service | `6E400001-B5A3-F393-E0A9-E50E24DCCA9E` | Primary Service | Custom BLE communication service |
+| CMD | `6E400002-B5A3-F393-E0A9-E50E24DCCA9E` | Write Without Response (Encrypted) | Central → device: write AT command strings |
+| RESP_SEND | `6E400003-B5A3-F393-E0A9-E50E24DCCA9E` | Notify (CCC Encrypted) | Device → central: JSON responses and event notifications |
+| FILE_DATA | `6E400004-B5A3-F393-E0A9-E50E24DCCA9E` | Notify (CCC Encrypted) | Device → central: binary file-transfer frame notifications |
+| AUDIO_VIS | `6E400005-B5A3-F393-E0A9-E50E24DCCA9E` | Notify (CCC Encrypted) | Device → central: real-time audio-visualization notifications |
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-on.png" alt="Device Connection" width={800} height="auto"/></p>
+### File-Transfer Protocol
 
+File data is delivered as binary frames on `FILE_DATA`.
 
-```bash
-tools/clip-cli.py --transport wifi status
-```
-Expected output
+| Frame | Type | Layout |
+| --- | --- | --- |
+| `FILE_START` | `0x10` | `type(1) + fn_len(1) + filename(N) + file_size(4, LE)` |
+| `DATA` | `0x01` | `type(1) + seq(2, LE) + len(2, LE) + data(N)` |
+| `FILE_END` | `0x11` | `type(1) + crc32(4, LE)` |
+| `TRANSFER_DONE` | `0x12` | `type(1) + sid_len(1) + session_id(N) + file_count(4, LE)` |
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-status.png" alt="Device Connection" width={800} height="auto"/></p>
+Each file is verified with CRC32. Only verified files should be treated as successfully saved.
 
+### Resume
 
+`SessionSync.sync()` is resume-aware. It can detect existing local `.opus` files, query the device's synced-file counter, compute `start_file`, and continue a previous download. Use `force=True` to start from scratch.
 
-```bash
-tools/clip-cli.py  wifi off
-```
-Expected output
+### Data Flow
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-off.png" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_data_flow.png" alt="reSpeaker Clip data flow" width={900} height="auto" /></p>
 
+## Basic SDK and Firmware SDK
 
+The reSpeaker Clip SDK is split into two layers:
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_basic_firmware.png" alt="Basic SDK vs Firmware SDK" width={900} height="auto" /></p>
 
-### record.py
+The concepts introduced in this guide (transports, protocols, state machine, data flow) are implemented on the device side by the firmware. The table below maps each Basic SDK concept to its Firmware SDK counterpart:
 
-Automatically records audio and synchronizes it.
+| Basic SDK concept | Firmware SDK counterpart |
+| --- | --- |
+| BLE / Wi-Fi transport | BLE and UDP service device-side implementation |
+| AT Command | AT Server and command registration |
+| GATT | GATT service and characteristics |
+| Recording state machine | Device recording states and event handling |
+| File transfer | Storage, chunking, CRC, and sync implementation |
+| Audio data flow | PDM → DSP → Opus → file pipeline |
 
-```bash
-python tools/record.py
-
-python tools/record.py --duration 60
-
-python tools/record.py --mode enhanced
-```
-Expected output
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="Device Connection" width={800} height="auto"/></p>
-
-### sync.py
-
-Synchronize recordings via BLE.
-
-```bash
-python tools/sync.py
-
-python tools/sync.py --all-sessions
-```
-Expected output
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="Device Connection" width={800} height="auto"/></p>
-
-### udp_sync.py
-
-Synchronize recordings via WiFi.
-
-```bash
-python tools/udp_sync.py
-
-python tools/udp_sync.py --session 20260326120000
-```
-
-Expected output
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="Device Connection" width={800} height="auto"/></p>
-
-### ble_terminal.py
-
-Interactive AT command terminal.
-
-```bash
-python tools/ble_terminal.py
-```
-Expected output
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/ble_terminal.png" alt="Device Connection" width={800} height="auto"/></p>
-
-### decode_opus.py
-
-Convert Opus recordings to WAV.
-
-```bash
-python tools/decode_opus.py <input_file.opus> <output_file.wav>
-```
-
-> Windows note: if decoding fails because the Opus native library cannot be found, download a prebuilt `opus.dll` from the ShiftMediaProject releases, extract it, and place `opus.dll` in your virtual environment's `Scripts` folder (for example, `D:\clip\tests\.venv\Scripts\`).
-
----
-
-## Test Scripts 
-
-| File | What it tests | Device? | Markers | Tests |
-|------|---------------|---------|---------|-------|
-| `test_basic.py` | Basic AT commands: VERSION, STATE, TIME, PAIR, invalid commands, error handling, reboot | Yes | — | 12 |
-| `test_config.py` | Configuration: MODE, AUTODEL, BRIGHTNESS; verifies unsupported commands (BITRATE, COMPLEXITY, CHUNKSIZE, NOISE, AGC, DEREVERB) raise `CommandError` | Yes | — | 30 |
-| `test_recording.py` | Recording control: START/STOP, MARK bookmarks, state transitions (IDLE→RECORDING→IDLE), duration tracking, session IDs | Yes | — | 13 |
-| `test_storage.py` | Storage management: LIST sessions/files, DELETE, session persistence, size accuracy, file count | Yes | stress | 21 |
-| `test_transfer.py` | File transfer: download sessions, sync, progress callbacks, concurrent downloads, cancel/resume | Yes | slow, stress | 21 |
-| `test_unit.py` | Unit tests (no hardware): dataclasses, utility functions, exceptions, opus merge, device init | No | unit | 30 |
-
-### Running tests
-
-```sh
-# All tests (requires device paired over BLE)
-pytest
-
-# Specific file
-pytest test_basic.py -v
-pytest test_config.py -v
-pytest test_recording.py -v
-pytest test_storage.py -v
-pytest test_transfer.py -v
-
-# Unit tests only (no device needed)
-pytest test_unit.py -v
-pytest -m unit
-
-# Device tests only (device required)
-pytest -m "not unit"
-
-# Exclude slow/stress tests
-pytest -m "not stress and not slow"
-
-# Quick smoke test
-pytest test_unit.py -v
-```
-
+If your goal is to add new AT commands, change GATT services, modify the recording state machine, or alter the audio processing chain, you need the Firmware SDK. The Firmware SDK documentation (firmware architecture, environment setup, build, flashing, and secondary development) is not yet available and will be published as soon as possible.
 
 ## Complete Example
 
@@ -654,6 +586,227 @@ except CommandError as e:
 
 ---
 
+## Command Line Tools
+
+The SDK includes several ready-to-use utilities.
+
+### clip-cli -Unified CLI
+
+#### BLE (default)
+
+General-purpose CLI.
+
+```bash
+tools/clip-cli.py status
+```
+
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/status.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
+tools/clip-cli.py version
+```
+```bash
+tools/clip-cli.py list
+```
+
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/list.png" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
+tools/clip-cli.py record --duration 60
+
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
+tools/clip-cli.py sync --session 20260326120000
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
+tools/clip-cli.py sync --session 20260326120000 --delete
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
+tools/clip-cli.py config get
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="Device Connection" width={800} height="auto"/></p>
+
+```bash
+tools/clip-cli.py bookmark
+```
+
+```bash
+tools/clip-cli.py terminal
+```
+
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/terminal.png" alt="Device Connection" width={800} height="auto"/></p>
+
+#### WiFi
+
+```bash
+ tools/clip-cli.py wifi on
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-on.png" alt="Device Connection" width={800} height="auto"/></p>
+
+
+```bash
+tools/clip-cli.py --transport wifi status
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-status.png" alt="Device Connection" width={800} height="auto"/></p>
+
+
+
+```bash
+tools/clip-cli.py  wifi off
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-off.png" alt="Device Connection" width={800} height="auto"/></p>
+
+
+
+
+### record.py
+
+Automatically records audio and synchronizes it.
+
+```bash
+python tools/record.py
+
+python tools/record.py --duration 60
+
+python tools/record.py --mode enhanced
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="Device Connection" width={800} height="auto"/></p>
+
+### sync.py
+
+Synchronize recordings via BLE.
+
+```bash
+python tools/sync.py
+
+python tools/sync.py --all-sessions
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="Device Connection" width={800} height="auto"/></p>
+
+### udp_sync.py
+
+Synchronize recordings via WiFi.
+
+```bash
+python tools/udp_sync.py
+
+python tools/udp_sync.py --session 20260326120000
+```
+
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="Device Connection" width={800} height="auto"/></p>
+
+### ble_terminal.py
+
+Interactive AT command terminal.
+
+```bash
+python tools/ble_terminal.py
+```
+Expected output
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/ble_terminal.png" alt="Device Connection" width={800} height="auto"/></p>
+
+### decode_opus.py
+
+Convert Opus recordings to WAV.
+
+```bash
+python tools/decode_opus.py <input_file.opus> <output_file.wav>
+```
+
+---
+
+## Web Interface
+
+Launch the built-in web application.
+
+BLE mode:
+
+```bash
+python tools/clip-web.py
+```
+
+Wi-Fi mode:
+
+```bash
+python tools/clip-web.py --transport wifi
+```
+
+Then open:
+
+```text
+http://localhost:5000
+```
+
+### Features
+
+- Device status
+- Recording control
+- Session management
+- Audio visualization
+- Configuration editor
+- Sync progress
+
+### REST API
+
+| Method | Endpoint |
+| --- | --- |
+| GET | `/api/status` |
+| GET | `/api/version` |
+| GET | `/api/sessions` |
+| POST | `/api/record/start` |
+| POST | `/api/record/stop` |
+| POST | `/api/record/bookmark` |
+| POST | `/api/sync/{id}` |
+| DELETE | `/api/sessions/{id}` |
+| GET | `/api/config` |
+| PUT | `/api/config` |
+| WS | `/ws` |
+
+## Core Modules
+
+| Module | Main purpose |
+| --- | --- |
+| `ClipDevice` | BLE connection, pairing, AT command transport, notifications, and transfer progress |
+| `ClipCommands` | High-level wrapper for device AT commands |
+| `FileTransfer` / `SessionSync` | BLE session download and resume-aware synchronization |
+| `WiFiDevice` / `WiFiSync` | Wi-Fi/UDP download workflow for larger transfers |
+| `codec` | Raw Opus frame parsing and OGG/Opus writing |
+| `utils` | Session ID parsing, formatting helpers, config loading, progress reporting, and file utilities |
+| `exceptions` | SDK-specific exception classes |
+
 ## API Reference
 
 ### ClipDevice
@@ -789,16 +942,48 @@ except CommandError as e:
 
 ---
 
+## Troubleshooting
+
+**Q1: Commands hang or time out after connecting.**  
+The command characteristic requires an encrypted BLE link. The SDK can initiate pairing, but the operating system may show a Bluetooth pairing or authorization dialog. Confirm it manually. If the connection is still stuck, remove stale bonds and reconnect.
+
+**Q2: Download reports CRC mismatch or zero files.**  
+BLE stacks may occasionally deliver duplicate notifications or drop frames under load. Disconnect, reconnect, and retry. Use `SessionSync` so the transfer can resume where possible.
+
+**Q3: Download is slow or drops halfway.**  
+Use `SessionSync` for resume-aware BLE transfer. For large recording volumes, use Wi-Fi download through `WiFiSync`: enable Wi-Fi on the Clip, join `ClipAP_XXXX`, then download over Wi-Fi.
+
+**Q4: `delete_after=True` deleted a session that did not fully download.**  
+Use the safer pattern: `sync(force=True, delete_after=False)`, verify that the local `merged_file` exists and is non-empty, then manually call `cmds.delete_session(session_id)`.
+
+**Q5: `AT+NOISE`, `AT+DEREVERB`, or `AT+AGC` returns `Unknown command`.**  
+The current firmware may not register those optional commands. The SDK keeps wrappers for compatible firmware versions. If restoring a config, `set_config_dict(..., ignore_errors=True)` can skip unsupported values.
+
+**Q6: `bleak` raises errors such as `'BleakClient' object has no attribute 'get_services'` or `'get_mtu'`.**  
+`bleak` APIs differ across versions. Use the SDK-tested dependency set after the installation package is released.
+
+**Q7: Recording is silent or quality is poor.**  
+Check microphone distance and orientation, battery level, and recording mode. `enhanced` mode can suppress noise more aggressively, which may over-process very clean speech.
+
+**Q8: The session ID timestamp does not match local time.**  
+The device clock or timezone may differ from the host. The SDK can sync time on connect. You can also call `await cmds.set_time(int(time.time()))`.
+
+**Q9: How do I convert Opus to WAV for STT or ML?**  
+Use `convert_to_ogg_opus()` for OGG/Opus output. For WAV, decode the raw Opus stream with an Opus decoder such as `opuslib`.
+
+**Q10: Logs are flooded by audio-visualization events during recording.**  
+`AUDIO_VIS` notifications fire frequently. Only register the audio-visualization callback when you need it, and keep the callback lightweight.
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
