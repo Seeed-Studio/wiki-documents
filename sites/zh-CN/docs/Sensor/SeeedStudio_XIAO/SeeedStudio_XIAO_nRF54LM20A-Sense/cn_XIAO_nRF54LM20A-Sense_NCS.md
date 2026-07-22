@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_ncs
 sku: 100018440
 last_update:
-  date: 06/15/2026
+  date: 07/22/2026
   author: Brandy
 createdAt: '2025-05-13'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_ncs/
 ---
 
@@ -48,7 +48,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 nRF Connect SDK（NCS）是 Nordic Semiconductor 官方的软件开发套件，构建在 Zephyr RTOS 实时操作系统之上。它为 nRF 系列芯片提供了完整、原生且高度优化的开发框架。与 PlatformIO 相比，NCS 为开发者提供了对 nRF54 系列全部硬件能力的更全面访问，包括对 Bluetooth Low Energy（BLE）、Thread、Matter 等无线协议栈的原生支持，以及更精细的电源管理和外设控制。Nordic 官方持续维护并更新该 SDK，确保与芯片固件的最佳兼容性，并能更早使用最新特性。
 
-本教程将一步步引导你完成整个流程——从搭建 nRF Connect SDK 开发环境和安装工具链，到创建和配置你的第一个项目，最后将第一个示例程序烧录到 XIAO nRF54LM20A Sense 上并运行起来。
+本教程将一步步引导你完成整个流程——从搭建 nRF Connect SDK 开发环境和安装工具链，到创建和配置你的第一个项目，最后将第一个示例程序烧录到 XIAO nRF54LM20A Sense 上并运行。
 
 ## NCS 入门
 
@@ -139,7 +139,7 @@ nRF Connect SDK 体积较大，首次安装会花费一定时间。请在安装�
 <br/>
 
 :::tip
-请确保 nRF Connect SDK（NCS）版本和 Toolchain 版本均为 3.3.0。混用不同版本可能导致构建或兼容性问题。
+请确保 nRF Connect SDK（NCS）版本和 Toolchain 版本均为 3.3.0。混用不同版本可能会导致构建或兼容性问题。
 :::
 
 2. 输入命令检查所需工具的版本信息。你可以逐条复制并运行这些命令进行验证。
@@ -186,7 +186,7 @@ openocd --version
 
 XIAO nRF54LM20A 系列的板卡定义尚未合入官方 NCS 仓库，因此你需要手动添加板卡路径。
 
-1. 将 **platform-seeedboards** 仓库克隆到你希望的目录。
+1. 将 **platform-seeedboards** 仓库克隆到你希望的目录中。
 
 ```bash
 git clone https://github.com/Seeed-Studio/platform-seeedboards.git
@@ -219,7 +219,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_14.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-4. 移除原有配置。此步骤是为了消除干扰，方便在下一阶段配置与 XIAO nRF54LM20A 相关的设置。（如果你的项目还没有构建记录，可以直接跳过此步骤）
+4. 移除原有配置。此步骤可以消除干扰，便于在下一阶段配置与 XIAO nRF54LM20A 相关的设置。（如果你的项目还没有构建，可以直接跳过此步骤）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_15.png" style={{width:800, height:'auto'}}/></div>
 
@@ -227,9 +227,9 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 由于 XIAO nRF54LM20A 系列使用了自定义 devicetree 和硬件引脚映射，因此需要修改若干文件。需要编辑的文件如下所示。
 
-- `main.c`: 包含应用逻辑的主程序。
-- `app.overlay`: 用于硬件外设配置的 devicetree overlay 文件。
-- `prj.conf`: 用于启用所需 Zephyr 模块的项目配置文件。
+- `main.c`：包含应用逻辑的主程序。
+- `app.overlay`：用于硬件外设配置的 devicetree overlay 文件。
+- `prj.conf`：用于启用所需 Zephyr 模块的项目配置文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_16.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -345,7 +345,7 @@ int main(void)
 
 2. 添加 **xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay**
 
-- 在 blinky 工程的根目录下创建一个 **board** 文件夹，与 src 等文件夹处于同一级目录。
+- 在 blinky 项目的根目录下创建一个 **board** 文件夹，与 src 等文件夹处于同一级目录。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_17.png" style={{width:600, height:'auto'}}/></div>
 <br/>
@@ -430,7 +430,7 @@ CONFIG_SERIAL=n
 
 本节中，我们使用 nRF Connect SDK 中的 west 工具来烧录程序。
 
-1. 使用 USB-C 线连接 XIAO nRF54LM20A Sense。打开 nRF Terminal，并输入 west 命令来烧录程序。
+1. 使用 USB-C 线连接 XIAO nRF54LM20A Sense。打开 nRF Terminal，输入 west 命令来烧录程序。
 
 ```bash
 west flash
@@ -458,12 +458,20 @@ west flash --build-dir build_1
 
  **Q1：下载 nRF Connect SDK 非常慢或卡住**
 
-如果 SDK 下载非常慢或卡住，可以使用 **aria2** 通过多连接方式下载所需的安装包，然后使用 **nrfutil** 安装 SDK。
+如果 SDK 下载非常慢或卡住，你可以使用 **aria2** 通过多连接方式下载所需的包，然后使用 **nrfutil** 安装 SDK。
 
-**步骤 1. 安装 aria2**
+### 步骤 1. 安装 aria2
+
+对于 macOS：
 
 ```bash
 brew install aria2
+```
+
+对于 Windows：
+
+```bash
+winget install aria2.aria2
 ```
 
 **步骤 2. 创建下载目录**
@@ -500,7 +508,7 @@ nrfutil sdk-manager install v3.3.0 \
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们为您提供多种支持方式，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种交流渠道，以满足不同的偏好和需求。
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
