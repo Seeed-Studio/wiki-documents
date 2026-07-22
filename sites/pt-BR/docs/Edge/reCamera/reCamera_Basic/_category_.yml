@@ -1,0 +1,10 @@
+position: 3 # float position is supported
+label: 'Documentação Básica da reCamera'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reCamera_basic_documentation
+link:
+  type: generated-index
+  slug: recamera_basic_documentation
+  title: Documentação Básica da reCamera
+  description: Aqui você encontra todo o conhecimento relacionado à reCamera Basic!
