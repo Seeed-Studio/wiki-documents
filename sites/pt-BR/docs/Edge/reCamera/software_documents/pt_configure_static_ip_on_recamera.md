@@ -13,8 +13,8 @@ sidebar_position: 9
 last_update:
   date: 04/13/2026
   author: Samuel
-createdAt: "2026-04-13"
-updatedAt: "2026-04-13"
+createdAt: '2026-04-13'
+updatedAt: '2026-04-14'
 url: https://wiki.seeedstudio.com/pt-br/configure_static_ip_on_recamera/
 ---
 

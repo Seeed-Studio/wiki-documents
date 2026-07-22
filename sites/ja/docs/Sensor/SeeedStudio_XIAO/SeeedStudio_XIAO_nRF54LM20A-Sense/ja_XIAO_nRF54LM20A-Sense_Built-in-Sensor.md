@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-06-17'
+updatedAt: '2026-07-08'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_onboard/
 ---
 
@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_onboard/
   </table>
 </div>
 
-XIAO nRF54LM20A Sense は、マルチシナリオアプリケーションをサポートする豊富なオンボードセンサーを搭載しています。姿勢認識用の 6 軸センサー LSM6DS3TR-C、PDM デジタル出力と無指向性集音に対応し、インテリジェントボイスシナリオに適したデジタル MEMS マイク MSM261DGT006 を備えています。本記事では、XIAO nRF54LM20A の豊富なオンボード周辺機能に基づく開発および使用方法を紹介します。
+XIAO nRF54LM20A Sense は、マルチシナリオのアプリケーションをサポートする豊富なオンボードセンサーを搭載しています。姿勢認識用の 6 軸センサー LSM6DS3TR-C、PDM デジタル出力と無指向性集音に対応し、インテリジェントボイスシナリオに適したデジタル MEMS マイク MSM261DGT006 を備えています。本記事では、XIAO nRF54LM20A の豊富なオンボード周辺機能に基づく開発および使用方法を紹介します。
 
 :::tip
 
@@ -51,7 +51,7 @@ XIAO nRF54LM20A Sense は、マルチシナリオアプリケーションをサ�
 
 ## ハードウェアの準備
 
-本記事は XIAO nRF54LM20A Sense をベースに開発されており、事前に関連ハードウェアを用意する必要があります。
+本記事は XIAO nRF54LM20A Sense をベースに開発されており、事前に関連ハードウェアを準備する必要があります。
 
 <div className="table-center">
 <table align="center">
@@ -80,7 +80,7 @@ XIAO nRF54LM20A Sense は、マルチシナリオアプリケーションをサ�
 
 ## IMU
 
-LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジャイロスコープを統合した 6 軸センサーで、STMicroelectronics が提供する iNEMO 慣性計測ユニット (IMU) に属します。XIAO nRF54LM20A Sense では、このセンサーは割り込みトリガによるデータ出力をサポートします。フルスケール加速度範囲は ±2/±4/±8/±16 g、角速度範囲は ±125/±250/±500/±1000/±2000 dps で、持続的な低消費電力モードをサポートしており、さまざまな動作検知シナリオに適しています。オンボードチップは I2C プロトコルを介してこのセンサーと通信し、データを取得します。
+LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジャイロスコープを統合した 6 軸センサーで、STMicroelectronics が提供する iNEMO 慣性計測ユニット（IMU）に属します。XIAO nRF54LM20A Sense では、このセンサーは割り込みトリガによるデータ出力をサポートします。加速度のフルスケールレンジは ±2/±4/±8/±16 g、角速度レンジは ±125/±250/±500/±1000/±2000 dps を備え、持続的な低消費電力モードをサポートしており、さまざまな動作検知シナリオに適しています。オンボードチップは I2C プロトコルを介してこのセンサーと通信し、データを取得します。
 :::tip
 
 - LSM6DS3TR-C の詳細については、[Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) および [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf) を参照してください。
@@ -99,24 +99,25 @@ LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジ
 
 ```dtsi
 &pmic_i2c {
-	sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
-	scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
-	status = "okay";
+        sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
+        scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
+        status = "okay";
 };
 
 &pmic {
-	regulators {
-		imu_vdd: LDO1 {
-			regulator-min-microvolt = <3300000>;
-			regulator-max-microvolt = <3300000>;
-			regulator-boot-on;
-		};
-	};
+        regulators {
+                imu_vdd: LDO1 {
+                        regulator-min-microvolt = <3300000>;
+                        regulator-max-microvolt = <3300000>;
+                        regulator-boot-on;
+                };
+        };
 };
 
 &lsm6ds3tr_c {
-	zephyr,deferred-init;
+        zephyr,deferred-init;
 };
+
 
 ```
 
@@ -127,6 +128,7 @@ CONFIG_STDOUT_CONSOLE=y
 
 CONFIG_LOG=y
 CONFIG_LOG_BACKEND_UART=y
+CONFIG_LOG_BACKEND_SHOW_COLOR=n
 CONFIG_LOG_DEFAULT_LEVEL=3
 CONFIG_MAIN_STACK_SIZE=2048
 CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
@@ -139,9 +141,10 @@ CONFIG_LSM6DSL=y
 CONFIG_LSM6DSL_TRIGGER_GLOBAL_THREAD=y
 CONFIG_CBPRINTF_FP_SUPPORT=y
 CONFIG_CBPRINTF_COMPLETE=y
+
 ```
 
-3. 取得した 3 軸デジタル加速度データと 3 軸デジタルジャイロスコープデータを USB シリアルポート経由で出力するプログラムを作成します。
+3. 取得した 3 軸デジタル加速度データと 3 軸デジタルジャイロスコープデータを USB シリアルポート経由で出力するプログラムを書きます。
 
 <details>
 
@@ -166,191 +169,191 @@ LOG_MODULE_REGISTER(zephyr_imu, LOG_LEVEL_INF);
  */
 #if defined(DT_N_NODELABEL_power_en)
 static const struct device *const power_en_dev =
-	DEVICE_DT_GET(DT_NODELABEL(power_en));
+    DEVICE_DT_GET(DT_NODELABEL(power_en));
 #endif
 
 #if defined(DT_N_NODELABEL_imu_vdd)
 static const struct device *const imu_vdd_dev =
-	DEVICE_DT_GET(DT_NODELABEL(imu_vdd));
+    DEVICE_DT_GET(DT_NODELABEL(imu_vdd));
 #endif
 
 static int enable_imu_power(void)
 {
 #if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
-	int ret;
+    int ret;
 #endif
 
 #if defined(DT_N_NODELABEL_power_en)
-	if (!device_is_ready(power_en_dev)) {
-		LOG_ERR("power_en regulator is not ready");
-		return -ENODEV;
-	}
-	ret = regulator_enable(power_en_dev);
-	if (ret < 0 && ret != -EALREADY) {
-		LOG_ERR("Failed to enable power_en: %d", ret);
-		return ret;
-	}
+    if (!device_is_ready(power_en_dev)) {
+        LOG_ERR("power_en regulator is not ready");
+        return -ENODEV;
+    }
+    ret = regulator_enable(power_en_dev);
+    if (ret < 0 && ret != -EALREADY) {
+        LOG_ERR("Failed to enable power_en: %d", ret);
+        return ret;
+    }
 #endif
 
 #if defined(DT_N_NODELABEL_imu_vdd)
-	if (!device_is_ready(imu_vdd_dev)) {
-		LOG_ERR("imu_vdd regulator is not ready");
-		return -ENODEV;
-	}
-	ret = regulator_enable(imu_vdd_dev);
-	if (ret < 0 && ret != -EALREADY) {
-		LOG_ERR("Failed to enable imu_vdd: %d", ret);
-		return ret;
-	}
+    if (!device_is_ready(imu_vdd_dev)) {
+        LOG_ERR("imu_vdd regulator is not ready");
+        return -ENODEV;
+    }
+    ret = regulator_enable(imu_vdd_dev);
+    if (ret < 0 && ret != -EALREADY) {
+        LOG_ERR("Failed to enable imu_vdd: %d", ret);
+        return ret;
+    }
 #endif
 
 #if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
-	/* Wait for power rail to stabilize */
-	k_sleep(K_MSEC(20));
+    /* Wait for power rail to stabilize */
+    k_sleep(K_MSEC(20));
 #endif
 
-	return 0;
+    return 0;
 }
 
 static inline float out_ev(struct sensor_value *val)
 {
-	return (val->val1 + (float)val->val2 / 1000000);
+    return (val->val1 + (float)val->val2 / 1000000);
 }
 
 static void fetch_and_display(const struct device *dev)
 {
-	struct sensor_value x, y, z;
-	static int trig_cnt;
+    struct sensor_value x, y, z;
+    static int trig_cnt;
 
-	trig_cnt++;
+    trig_cnt++;
 
-	/* lsm6dsl accel */
-	sensor_sample_fetch_chan(dev, SENSOR_CHAN_ACCEL_XYZ);
-	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_X, &x);
-	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
-	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
+    /* lsm6dsl accel */
+    sensor_sample_fetch_chan(dev, SENSOR_CHAN_ACCEL_XYZ);
+    sensor_channel_get(dev, SENSOR_CHAN_ACCEL_X, &x);
+    sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
+    sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
 
-	LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
-			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
+    LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
+            (double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
-	/* lsm6dsl gyro */
-	sensor_sample_fetch_chan(dev, SENSOR_CHAN_GYRO_XYZ);
-	sensor_channel_get(dev, SENSOR_CHAN_GYRO_X, &x);
-	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
-	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
+    /* lsm6dsl gyro */
+    sensor_sample_fetch_chan(dev, SENSOR_CHAN_GYRO_XYZ);
+    sensor_channel_get(dev, SENSOR_CHAN_GYRO_X, &x);
+    sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
+    sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
 
-	LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
-			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
+    LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
+            (double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
-	LOG_INF("trig_cnt:%d", trig_cnt);
+    LOG_INF("trig_cnt:%d", trig_cnt);
 }
 
 static int set_sampling_freq(const struct device *dev)
 {
-	int ret = 0;
-	struct sensor_value odr_attr;
+    int ret = 0;
+    struct sensor_value odr_attr;
 
-	/* set accel/gyro sampling frequency to 12.5 Hz */
-	odr_attr.val1 = 12;
-	odr_attr.val2 = 500000;
+    /* set accel/gyro sampling frequency to 12.5 Hz */
+    odr_attr.val1 = 12;
+    odr_attr.val2 = 500000;
 
-	ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
-			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
-	if (ret != 0) {
-		LOG_ERR("Cannot set sampling frequency for accelerometer.");
-		return ret;
-	}
+    ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
+            SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+    if (ret != 0) {
+        LOG_ERR("Cannot set sampling frequency for accelerometer.");
+        return ret;
+    }
 
-	ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
-			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
-	if (ret != 0) {
-		LOG_ERR("Cannot set sampling frequency for gyro.");
-		return ret;
-	}
+    ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
+            SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+    if (ret != 0) {
+        LOG_ERR("Cannot set sampling frequency for gyro.");
+        return ret;
+    }
 
-	return 0;
+    return 0;
 }
 
 #ifdef CONFIG_LSM6DSL_TRIGGER
 static void trigger_handler(const struct device *dev,
-			    const struct sensor_trigger *trig)
+                const struct sensor_trigger *trig)
 {
-	fetch_and_display(dev);
+    fetch_and_display(dev);
 }
 
 static void test_trigger_mode(const struct device *dev)
 {
-	struct sensor_trigger trig;
+    struct sensor_trigger trig;
 
-	if (set_sampling_freq(dev) != 0) {
-		return;
-	}
+    if (set_sampling_freq(dev) != 0) {
+        return;
+    }
 
-	trig.type = SENSOR_TRIG_DATA_READY;
-	trig.chan = SENSOR_CHAN_ACCEL_XYZ;
+    trig.type = SENSOR_TRIG_DATA_READY;
+    trig.chan = SENSOR_CHAN_ACCEL_XYZ;
 
-	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
-		LOG_ERR("Could not set sensor type and channel");
-		return;
-	}
+    if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
+        LOG_ERR("Could not set sensor type and channel");
+        return;
+    }
 
-	while (1) {
-		k_sleep(K_MSEC(1000));
-	}
+    while (1) {
+        k_sleep(K_MSEC(1000));
+    }
 }
 
 #else
 static void test_polling_mode(const struct device *dev)
 {
-	if (set_sampling_freq(dev) != 0) {
-		return;
-	}
+    if (set_sampling_freq(dev) != 0) {
+        return;
+    }
 
-	while (1) {
-		fetch_and_display(dev);
-		k_sleep(K_MSEC(1000));
-	}
+    while (1) {
+        fetch_and_display(dev);
+        k_sleep(K_MSEC(1000));
+    }
 }
 #endif
 
 int main(void)
 {
-	const struct device *const dev = DEVICE_DT_GET(IMU_NODE);
-	int ret;
+    const struct device *const dev = DEVICE_DT_GET(IMU_NODE);
+    int ret;
 
-	/* On nrf54lm20a, enable power_en + imu_vdd before accessing IMU.
-	 * On nrf54l15, these nodes don't exist; function returns immediately.
-	 */
-	ret = enable_imu_power();
-	if (ret < 0) {
-		LOG_ERR("Failed to enable IMU power: %d", ret);
-		return 0;
-	}
+    /* On nrf54lm20a, enable power_en + imu_vdd before accessing IMU.
+     * On nrf54l15, these nodes don't exist; function returns immediately.
+     */
+    ret = enable_imu_power();
+    if (ret < 0) {
+        LOG_ERR("Failed to enable IMU power: %d", ret);
+        return 0;
+    }
 
-	/* On nrf54lm20a, IMU has zephyr,deferred-init; must init manually.
-	 * On nrf54l15, device auto-inits at boot; device_is_ready() is true.
-	 */
-	if (!device_is_ready(dev)) {
-		ret = device_init(dev);
-		if (ret < 0 && ret != -EALREADY) {
-			LOG_ERR("Failed to initialize %s: %d", dev->name, ret);
-			return 0;
-		}
-	}
+    /* On nrf54lm20a, IMU has zephyr,deferred-init; must init manually.
+     * On nrf54l15, device auto-inits at boot; device_is_ready() is true.
+     */
+    if (!device_is_ready(dev)) {
+        ret = device_init(dev);
+        if (ret < 0 && ret != -EALREADY) {
+            LOG_ERR("Failed to initialize %s: %d", dev->name, ret);
+            return 0;
+        }
+    }
 
-	if (!device_is_ready(dev)) {
-		LOG_ERR("%s: device not ready.", dev->name);
-		return 0;
-	}
+    if (!device_is_ready(dev)) {
+        LOG_ERR("%s: device not ready.", dev->name);
+        return 0;
+    }
 
 #ifdef CONFIG_LSM6DSL_TRIGGER
-	LOG_INF("Testing LSM6DSL sensor in trigger mode.");
-	test_trigger_mode(dev);
+    LOG_INF("Testing LSM6DSL sensor in trigger mode.");
+    test_trigger_mode(dev);
 #else
-	LOG_INF("Testing LSM6DSL sensor in polling mode.");
-	test_polling_mode(dev);
+    LOG_INF("Testing LSM6DSL sensor in polling mode.");
+    test_polling_mode(dev);
 #endif
-	return 0;
+    return 0;
 }
 ```
 </details>
@@ -378,7 +381,7 @@ IMU の性能を直接検証したい場合は、Platform-seeedboards リポジ�
 :::tip
 
 1. シリアルモニタでデータを確認する際は、ボーレートを 115200 に設定してください。
-2. PlatformIO IDE のシリアルモニタ用に、**platformio.ini** 設定ファイル内でもボーレートを 115200 に指定してください。
+2. PlatformIO IDE のシリアルモニタ用に、**platformio.ini** 設定ファイル内でボーレートを 115200 に指定してください。
 
 ```ini
 [env:seeed-xiao-nrf54lm20a]
@@ -398,12 +401,12 @@ IMU は 3 軸加速度データを融合して、姿勢認識のためのピッ�
 
 #### Electronic Ocean
 
-これは XIAO nRF54LM20A Sense のオンボード IMU をベースにしたサンプルです。姿勢データを収集し、加速度情報を融合して、動作状態を RGB ライトパネル上にマッピングし、視覚的な海のリズム効果を実現します。
+これは XIAO nRF54LM20A Sense のオンボード IMU をベースにしたサンプルです。姿勢データを収集し、加速度情報を融合して動作状態を RGB ライトパネル上にマッピングし、視覚的な海のリズム効果を実現します。
 
 - **傾きによる水位制御** — 左右のロール傾きで水位の高さを調整
 - **波アニメーション** — 3 層の周波数を重ね合わせた波面、2D 波の伝播と端での反射効果
-- **流体慣性** — 慣性を持つ水面；急激に傾けるとオーバーシュートし、その後の揺り戻しが発生
-- **反転検出** — ボードが反転すると表示が自動的にミラー反転
+- **流体慣性** — 慣性を持つ水面；急激に傾けるとオーバーシュートし、その後チャプチャプと揺れ戻る
+- **反転検出** — ボードを反転させると表示が自動的にミラー反転
 - **ダイナミックカラー** — 各列ごとにランダムなグラデーションの海の色調に切り替え
 
 さらに、main.c 内のマクロ定義を通じて、ボードの RGB 配列設定を変更することもできます。
@@ -525,19 +528,19 @@ CONFIG_FAULT_DUMP=2
 CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
-- デバイスを振ると、海の波のビジュアルエフェクトがトリガされます。
+- デバイスを振ると、海の波のビジュアルエフェクトがトリガーされます。
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WHPSAryN-W4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div><br/>
 
-- 同時に、シリアルポートにも対応する IMU データと、現在の波の水位の高さが出力されます。
+- 同時に、シリアルポートからも対応する IMU データと現在の波の水位高さが出力されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_2.png" style={{width:800, height:'auto'}}/></div>
 
 #### IMU ウェイクアップ
 
-このルーチンでは、電源投入後に RGB のグリーンチャネルが点灯して消灯し、その後システムは超低消費電力スリープモードに入ります。ボードがタップを検出すると、割り込みによって XIAO nRF54LM20A Sense がウェイクアップします。タップイベントは記録され、シリアルポートを通じて出力されます。
+このルーチンでは、電源投入後に RGB のグリーンチャネルが点灯して消灯し、その後システムは超低消費電力スリープモードに入ります。ボードがタップを検出すると、割り込みによって XIAO nRF54LM20A Sense がウェイクアップします。タップイベントは記録され、シリアルポート経由で出力されます。
 
 IMU ウェイクアップ機能を実装するには、このルーチンをダウンロードしてください。
 
@@ -613,7 +616,7 @@ IMU ウェイクアップ機能を実装するには、このルーチンをダ�
 };
 ```
 
-3. prj.conf で IMU に関連する設定を有効にします
+3. prj.conf で関連する IMU 設定を有効にします
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -639,7 +642,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
 <br/>
-- 書き込みと電源投入後、RGB-G LED が短時間点滅します。ボード上の任意の場所をタップすると、RGB-G LED が点灯します。
+- 書き込みと電源投入後、RGB-G LED が短時間点滅します。ボード上の任意の場所をタップすると RGB-G LED が点灯します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_3_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -649,7 +652,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <br/>
 :::tip
 
-検知位置はあくまで参考値です。正確なタップ位置の認識は、IMU の融合制御アルゴリズムに依存します。
+検知位置はあくまで参考です。正確なタップ位置の認識は、IMU フュージョン制御アルゴリズムに依存します。
 
 :::
 
@@ -663,7 +666,7 @@ RTC はタイムスタンプカウントをサポートしており、電源断�
 
 1. [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) を main.c ファイルにコピーします。RTC 関数を使用してタイムスタンプを出力します。
 
-2. デバイスツリー `app.overlay` を修正して、RTC ノードを有効にします。
+2. デバイスツリー `app.overlay` を変更して RTC ノードを有効にします。
 
 ```dts
 / {
@@ -734,22 +737,22 @@ XIAO nRF54LM20A Sense には、音声入力用に MSM261DGT006 デジタル MEMS
 
 :::tip
 
-XIAO nRF54LM20A シリーズの中で、マイクを搭載しているのは XIAO nRF54M20A Sense のみであり、開発ボードの左下に配置されています。
+XIAO nRF54LM20A シリーズの中でマイクを搭載しているのは XIAO nRF54M20A Sense のみであり、開発ボードの左下隅に配置されています。
 
 :::
 
 ### 音声録音と BLE アップロード
 
-このセクションでは、音声サンプルを通じてマイク機能をデモします。具体的な手順は次のとおりです。
+このセクションでは、音声サンプルを通してマイク機能をデモします。具体的な手順は次のとおりです。
 
-- BOOT ボタンを押すと RGB-G LED が点灯し、録音を開始します。もう一度押すと録音を停止します（最大 10 秒）。
+- BOOT ボタンを押すと RGB-G LED が点灯し、録音を開始します。もう一度押すと録音が停止します（最大 10 秒）。
 - 録音後、音声ファイルは Bluetooth 経由でホストコンピュータに送信されます。送信中は RGB-G LED が点滅します。
-- Windows 上で受信用スクリプトを実行し、音声ファイルをデスクトップに保存します。
+- Windows 上で受信スクリプトを実行し、音声ファイルをデスクトップに保存します。
 - 送信完了後、RGB-G LED は消灯します。
 
 1. <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> からプログラムをコピーして `main.c` に貼り付けます。
 
-2. デバイスツリーファイル `app.overlay` を修正して、BLE ノードをバインドします。
+2. デバイスツリーファイル `app.overlay` を変更して、BLE ノードをバインドします。
 
 ```dts
 
@@ -810,7 +813,7 @@ dmic_dev: &pdm20 {
 };
 ```
 
-2. `prj.conf` ファイルを修正して、Bluetooth とマイク用の設定を有効にし、Bluetooth デバイス名を **XIAO MIC** に設定します。
+2. `prj.conf` ファイルを変更して、Bluetooth とマイク用の設定を有効にし、Bluetooth デバイス名を **XIAO MIC** に設定します。
 
 ```prj
 # Audio / DMIC
@@ -1065,7 +1068,7 @@ BLE UUID はすでに Python プログラム内で設定されているため、
 
 2. 結果を確認する
 
-- BOOT キーを押して録音を開始します。緑色の RGB LED が点灯しているときは、録音中であることを示します。マイクに向かって大きな声で話し、再度 BOOT キーを押して録音を停止します。緑色の RGB LED が点滅している場合は、オーディオファイルを送信中であることを意味します。
+- BOOT キーを押して録音を開始します。緑色の RGB LED が点灯している場合は、録音中であることを示します。マイクに向かって大きな声で話し、再度 BOOT キーを押して録音を停止します。緑色の RGB LED が点滅している場合は、オーディオファイルが送信中であることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -1080,9 +1083,9 @@ BLE UUID はすでに Python プログラム内で設定されているため、
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,6 +1,6 @@
 ---
 description: 使用 EEZ Studio 为 Seeed ePaper 产品设计专业的基于 LVGL 的界面，然后通过 PlatformIO 部署——适用于 reTerminal E 系列和 XIAO ePaper Display Board (EE04)。
-title: 使用 EEZ Studio 工作
+title: 使用 EEZ Studio 开发
 keywords:
   - ePaper 显示屏
   - EEZ Studio
@@ -17,17 +17,17 @@ aliases:
   - /epaper_ee04_eezstudio
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_eezstudio/
-updatedAt: '2026-06-26'
+updatedAt: '2026-07-09'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 使用 EEZ Studio 工作
+# 使用 EEZ Studio 开发
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" style={{width:600, height:'auto'}}/></div>
 
-本指南将引导你使用可视化设计工具 [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/) 设计专业的用户界面，生成 LVGL 代码，并通过 PlatformIO 将其部署到 Seeed ePaper 产品上。对于每一块受支持的开发板，流程都是相同的——唯一的差异是显示分辨率和开发板环境，我们会通过选项卡来区分。
+本指南将带你完成以下流程：使用可视化设计工具 [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/) 设计专业用户界面，生成 LVGL 代码，并通过 PlatformIO 将其部署到 Seeed ePaper 产品上。对于每一块受支持的开发板，流程都是相同的——唯一的差异是显示分辨率和开发板环境，我们会通过选项卡来区分。
 
 ## 兼容硬件
 
@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
     </tr>
     <tr>
       <td align="center">7.5" 单色 / 7.3" Spectra 6 / 10.3" 单色 / 13.3" Spectra 6</td>
-      <td align="center">通用驱动板 — 可搭配我们任意 24-pin 或 50-pin 的 Seeed ePaper 屏幕使用</td>
+      <td align="center">通用驱动板——可搭配我们任意 24-pin 或 50-pin 的 Seeed ePaper 屏幕使用</td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -62,19 +62,19 @@ import TabItem from '@theme/TabItem';
 
 ## 什么是 EEZ Studio？
 
-EEZ Studio 是一个现代的可视化编程和 UI 设计环境，最初为测试与测量仪器以及嵌入式设备而构建。它结合了拖拽式 GUI 设计、脚本编写和设备集成工具，使开发者、工程师和创客能够在不从零开始的情况下快速创建专业界面。
+EEZ Studio 是一个现代的可视化编程和 UI 设计环境，最初为测试与测量仪器以及嵌入式设备而构建。它将拖拽式 GUI 设计、脚本编写和设备集成工具结合在一起，使开发者、工程师和创客能够快速创建专业界面，而无需从零开始。
 
-简而言之，EEZ Studio 充当了硬件与软件之间的桥梁，使你能够更高效地设计、原型验证和部署用户体验。
+简而言之，EEZ Studio 充当了硬件与软件之间的桥梁，让你可以更高效地设计、原型验证和部署用户体验。
 
 ### 为什么要使用 EEZ Studio？
 
-- **可视化界面设计** — 使用所见即所得编辑器创建复杂 UI。
-- **快速原型开发** — 快速测试和验证设计想法。
-- **跨平台** — 构建可在多个操作系统和嵌入式目标上运行的应用。
-- **硬件集成** — 可直接连接实验室仪器、物联网设备和自定义开发板。
-- **开源** — 社区驱动的工具集，可选付费高级支持。
+- **可视化界面设计** —— 使用所见即所得编辑器创建复杂 UI。
+- **快速原型开发** —— 快速测试和验证设计想法。
+- **跨平台** —— 构建可在多个操作系统和嵌入式目标上运行的应用。
+- **硬件集成** —— 可直接连接实验室仪器、物联网设备和自定义开发板。
+- **开源** —— 社区驱动的工具集，可选付费高级支持。
 
-### EEZ Studio vs. SquareLine Studio
+### EEZ Studio 与 SquareLine Studio 的对比
 
 两者都是 GUI 设计工具，但面向的用户群体略有不同：
 
@@ -104,9 +104,9 @@ EEZ Studio 是一个现代的可视化编程和 UI 设计环境，最初为测�
             <td>闭源商业产品，需要授权许可</td>
         </tr>
         <tr>
-            <th>工作流</th>
+            <th>工作流程</th>
             <td>在同一环境中完成原型设计、仿真并控制真实设备</td>
-            <td>主要用于生成 UI 代码并编译进嵌入式工程</td>
+            <td>主要用于生成 UI 代码，再编译进嵌入式工程</td>
         </tr>
     </tbody>
 </table>
@@ -117,19 +117,19 @@ EEZ Studio 是一个现代的可视化编程和 UI 设计环境，最初为测�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/30.png" style={{width:1000, height:'auto'}}/></div>
 
-## 步骤 2：创建一个 LVGL 项目
+## 步骤 2：创建 LVGL 项目
 
 在 EEZ Studio 界面顶部点击 **CREATE**。在左侧选择 **LVGL** 模板：
 
-- **Name** — 为你的项目起一个名字（本文中我们使用 `EEZ_UI`）。
-- **LVGL Version** — 从下拉菜单中选择 `9.5.0`。
-- **Location** — 选择保存项目文件的位置。
+- **Name** —— 为你的项目命名（本文中我们使用 `EEZ_UI`）。
+- **LVGL Version** —— 从下拉框中选择 `9.5.0`。
+- **Location** —— 选择保存项目文件的位置。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/31.png" style={{width:1000, height:'auto'}}/></div>
 
 ### 项目设置
 
-点击工具栏上的 ⚙️ 图标打开项目设置（Project Settings）。
+点击工具栏上的 ⚙️ 图标打开 Project Settings（项目设置）。
 
 在 **General → Display** 下，为**你的硬件**设置分辨率：
 
@@ -141,39 +141,59 @@ EEZ Studio 是一个现代的可视化编程和 UI 设计环境，最初为测�
 
 (E1001 上的 7.5" 单色屏和 E1002 上的 7.3" Spectra 6 屏共享相同的 800×480 分辨率。)
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/32.png" style={{width:1000, height:'auto'}}/></div>
+
 </TabItem>
-<TabItem value="ee04" label="EE04 + 5.83&quot; 单色">
+<TabItem value="e1003" label="reTerminal E1003">
+
+- **Display width**: 1872
+- **Display height**: 1404
+
+(E1003 上的 10.3" 单色面板使用 1872×1404 分辨率。)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/36.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="e1004" label="reTerminal E1004">
+
+- **Display width**: 1200
+- **Display height**: 1600
+
+(E1004 上的 13.3" Spectra 6 面板使用 1200×1600 分辨率。)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/37.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="ee04" label="EE04 + 5.83&quot; mono">
 
 - **Display width**: 648
 - **Display height**: 480
 
-(请根据你插在 EE04 上的 Seeed ePaper 屏幕来匹配这些数值。下面的示例使用的是 5.83" 648×480 单色屏。)
+(请将数值设置为与你插在 EE04 上的 Seeed ePaper 屏幕相匹配。下面的示例使用的是 5.83" 648×480 单色屏。)
 
 </TabItem>
 </Tabs>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/32.png" style={{width:1000, height:'auto'}}/></div>
-
 ## 步骤 3：设计 UI
 
-UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件，并使用 **Styles**、**Fonts**、**Bitmaps**、**Themes** 和 **Groups** 来控制视觉效果，从而快速搭建界面。
+UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件快速搭建界面，并使用 **Styles**、**Fonts**、**Bitmaps**、**Themes** 和 **Groups** 来控制视觉效果。
 
 推荐的在线资源：
 
-- [Coolors](https://coolors.co/) — 配色方案生成器
-- [PeisekA](https://peiseka.com/) — 色卡
-- [iconfont](https://www.iconfont.cn/?spm=a313x.search_index.i3.3.559b3a81C6d3Cl) — 图标库
-- [Google Fonts](https://fonts.google.com/) — 免费字体
+- [Coolors](https://coolors.co/) —— 配色方案生成器
+- [PeisekA](https://peiseka.com/) —— 色卡
+- [iconfont](https://www.iconfont.cn/?spm=a313x.search_index.i3.3.559b3a81C6d3Cl) —— 图标库
+- [Google Fonts](https://fonts.google.com/) —— 免费字体
 
 右侧边栏：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/33.png" style={{width:1000, height:'auto'}}/></div>
 
-- **Styles** — 用于统一和复用界面元素的视觉属性。
-- **Bitmaps** — 背景、图标、Logo。
-- **Fonts** — 文本渲染和多语言支持。
-- **Themes** — 亮/暗等顶层主题样式。
-- **Groups** — 布局辅助工具。
+- **Styles** —— 用于统一和复用界面元素的视觉属性。
+- **Bitmaps** —— 背景、图标、Logo。
+- **Fonts** —— 文本渲染和多语言支持。
+- **Themes** —— 亮/暗等顶层主题样式。
+- **Groups** —— 布局辅助工具。
 
 ### 示例布局（Hello World + Panel + Image + Line + Label）
 
@@ -187,7 +207,7 @@ UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件，并
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/15.jpg" style={{width:900, height:'auto'}}/></div>
 
-**步骤 1.** 更改画布背景颜色——选中画布，勾选 **Color**，选择一个十六进制颜色值。
+**步骤 1.** 更改画布背景颜色——选中画布，勾选 **Color**，并选择一个十六进制颜色值。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a1.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -195,7 +215,7 @@ UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件，并
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a2.jpg" style={{width:900, height:'auto'}}/></div>
 
-**步骤 3.** 通过右侧的 **Bitmaps** 面板添加位图并命名，然后将 **Image** 组件拖到画布上并绑定你的位图。
+**步骤 3.** 通过右侧的 **Bitmaps** 面板添加位图并命名，然后将 **Image** 小部件拖到画布上并绑定你的位图。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a3.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -219,8 +239,8 @@ UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件，并
 
 在设计完成之后：
 
-1. **保存** — 按 Control + S 保存。如果你使用的是 macOS，请按 Command + S 保存。
-2. **预览** — 点击 **Run** 启动模拟器并预览 UI。
+1. **保存** —— 按 Control + S 保存。如果你使用的是 macOS，请按 Command + S 保存。
+2. **预览** —— 点击 **Run** 启动模拟器并预览 UI。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/35.png" style={{width:600, height:'auto'}}/></div>
 
@@ -232,18 +252,18 @@ UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件，并
 
 ## 步骤 5：设置 PlatformIO
 
-使用 PlatformIO 部署 EEZ Studio 的输出。PlatformIO 提供 Seeed 电子纸产品所需的项目结构、开发板环境、库依赖和构建设置。
+使用 PlatformIO 部署 EEZ Studio 的输出。PlatformIO 提供 Seeed ePaper 产品所需的项目结构、开发板环境、库依赖和构建设置。
 
-如果这是你第一次在 Seeed 电子纸产品上使用 PlatformIO，请按照下面链接的设置指南来配置你的开发环境。
+如果这是你第一次在 Seeed ePaper 产品上使用 PlatformIO，请按照下面链接的设置指南配置你的开发环境。
 
-<div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/cn/epaper_work_with_platformio/" target="_blank" rel="noopener noreferrer">
-      <strong><span><font color={'FFFFFF'} size={"4"}>PlatformIO 设置指南</font></span></strong>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/epaper_work_with_platformio/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}>PlatformIO 指南</font></span></strong>
     </a>
 </div><br />
 
 :::tip
-PlatformIO 设置指南涵盖了开发板定义、库依赖和构建配置——完成后请返回此处继续。
+PlatformIO 设置指南涵盖了开发板定义、库依赖和构建配置——完成后，请返回此处继续。
 :::
 
 ## 步骤 6：下载 EEZ Studio PlatformIO 模板
@@ -288,7 +308,7 @@ PlatformIO 设置指南涵盖了开发板定义、库依赖和构建配置——
 6. 点击 **Build** 进行编译，然后点击 **Upload** 将固件烧录到你的设备。
 
 :::tip
-该模板已经包含了你的设备所需的全部驱动和 LVGL 配置。你只需要替换 UI 文件即可。
+模板已经包含了你的设备所需的全部驱动和 LVGL 配置。你只需要替换 UI 文件即可。
 :::
 
 ### 最终界面

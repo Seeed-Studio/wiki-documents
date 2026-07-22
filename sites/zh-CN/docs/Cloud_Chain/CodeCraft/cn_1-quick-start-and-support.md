@@ -5,16 +5,26 @@ keywords:
   - CodeCraft
   - 快速入门
 sidebar_label: 1. 快速入门与账户支持
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner-ZH.webp
 slug: /codecraft/quick-start-and-support
 sidebar_position: 2
 last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/cn/codecraft/quick-start-and-support/
+createdAt: '2026-06-30'
+updatedAt: '2026-07-08'
 ---
 
 # CodeCraft 快速入门与账户支持
+
+![CodeCraft Banner](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner-ZH.webp)
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://codecraft.seeed.cc" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>立即体验 CodeCraft 🚀</font></span></strong>
+    </a>
+</div>
 
 ## 1.1 认识 CodeCraft
 

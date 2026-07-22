@@ -14,7 +14,7 @@ last_update:
   date: 06/11/2026
   author: Dayu
 createdAt: '2026-06-11'
-updatedAt: '2026-06-11'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/jetpack72_deep_dive/
 ---
 

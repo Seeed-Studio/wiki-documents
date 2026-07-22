@@ -10,7 +10,7 @@ last_update:
   date: 6/30/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-05-27'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -19,9 +19,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
 
-O Seeed Studio XIAO SAMD21, que costumava se chamar Seeeduino XIAO, é a primeira estreia da [família Seeed Studio XIAO, uma série de poderosas placas de desenvolvimento do tamanho de um polegar compatíveis com Arduino](https://www.seeedstudio.com/xiao-series-page). Ele traz o poderoso ATSAMD21G18A-MU, que é um microcontrolador de baixo consumo de energia. Por outro lado, esta pequena placa tem bom desempenho de processamento, mas consome menos energia. Ela é projetada em um tamanho minúsculo e pode ser usada para dispositivos vestíveis e projetos pequenos.
+O Seeed Studio XIAO SAMD21, que costumava ser chamado de Seeeduino XIAO, é a primeira estreia da [família Seeed Studio XIAO, uma série de poderosas placas de desenvolvimento do tamanho de um polegar compatíveis com Arduino](https://www.seeedstudio.com/xiao-series-page). Ele traz o poderoso ATSAMD21G18A-MU, que é um microcontrolador de baixo consumo de energia. Por outro lado, esta pequena placa tem bom desempenho de processamento, mas consome menos energia. Ela é projetada em um tamanho minúsculo e pode ser usada para dispositivos vestíveis e projetos pequenos.
 
-O Seeed Studio XIAO SAMD21 possui 14 pinos, que podem ser usados como 11 interfaces digitais, 11 interfaces analógicas, 10 interfaces PWM (d1-d10), 1 pino de saída DAC D0, 1 interface de pad SWD, 1 interface I2C, 1 interface SPI, 1 interface UART, indicador de comunicação serial (T/R), LED de piscar (L) por meio de multiplexação de pinos. As cores dos LEDs (Power, L, RX, TX) são verde, amarelo, azul e azul. Além disso, o Seeed Studio XIAO SAMD21 possui uma interface Type-C que pode fornecer energia e fazer o download de código. Há dois botões de reset; você pode curto-circuitá-los para reiniciar a placa.
+O Seeed Studio XIAO SAMD21 possui 14 PINs, que podem ser usados como 11 interfaces digitais, 11 interfaces analógicas, 10 interfaces PWM (d1-d10), 1 pino de saída DAC D0, 1 interface de pad SWD, 1 interface I2C, 1 interface SPI, 1 interface UART, indicador de comunicação serial (T/R), LED de piscar (L) por meio de multiplexação de pinos. As cores dos LEDs (Power, L, RX, TX) são verde, amarelo, azul e azul. Além disso, o Seeed Studio XIAO SAMD21 possui uma interface Type-C que pode fornecer energia e fazer o download de código. Existem dois botões de reset; você pode curto-circuitá-los para reiniciar a placa.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
@@ -31,7 +31,7 @@ O Seeed Studio XIAO SAMD21 possui 14 pinos, que podem ser usados como 11 interfa
 
 ## Documentações
 
-Existem dois documentos sobre o uso do **Seeed Studio XIAO SAMD21** que focam em áreas diferentes; consulte a tabela abaixo como referência:
+Existem dois documentos sobre o uso do **Seeed Studio XIAO SAMD21** que se concentram em áreas diferentes; consulte a tabela abaixo como referência:
 
 |[**Documentação da Seeed**](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/)|[**Documentação da Nanase**](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO-by-Nanase/)|
 |---|---|
@@ -47,30 +47,30 @@ Existem dois documentos sobre o uso do **Seeed Studio XIAO SAMD21** que focam em
 ## Recursos
 
 - CPU poderosa: microcontrolador ARM® Cortex®-M0+ 32 bits 48MHz (SAMD21G18) com 256KB de Flash e 32KB de SRAM.
-- Compatibilidade flexível: compatível com Arduino IDE.
-- Operação de projeto facilitada: compatível com protoboard.
-- Tamanho pequeno: tão pequeno quanto um polegar (21x17,8mm) para dispositivos vestíveis e projetos pequenos.
+- Compatibilidade flexível: Compatível com Arduino IDE.
+- Operação de projeto facilitada: Compatível com protoboard.
+- Tamanho pequeno: Tão pequeno quanto um polegar (21x17,8mm) para dispositivos vestíveis e projetos pequenos.
 - Múltiplas interfaces de desenvolvimento: 11 pinos digitais/analógicos, 10 pinos PWM, 1 saída DAC, 1 interface de pad SWD, 1 interface I2C, 1 interface UART, 1 interface SPI.
 
 ## Especificações
 
-| Nome do produto | Seeed Studio XIAO SAMD21 |
+| Nome do Produto | Seeed Studio XIAO SAMD21 |
 |-------------|-------------------------|
 | **Chipset** | [Microchip SAMD21G18](https://www.microchip.com/en-us/product/atsamd21g18 ) |
 | **Processador** | Processador ARM Cortex-M0+ rodando a até 48 MHz |
 | **RAM** | 32KB SRAM |
 | **Flash** | 256KB Flash |
-| **Interface** | Pino GPIO x14<br/>Pino digital x11<br/>Pino analógico x11<br/>DAC x1<br/>I2C x1<br/>UART x1<br/>SPI x1 |
+| **Interface** | Pino GPIO x14<br/>Pino Digital x11<br/>Pino Analógico x11<br/>DAC x1<br/>I2C x1<br/>UART x1<br/>SPI x1 |
 | **Onboard** | LED de usuário x1<br/>LED de alimentação x1<br/>LEDs de status para comunicação serial (indicadores TX/RX) x2 |
 | **Conectividade sem fio** | / |
 | **Alimentação** | Tensão de entrada (Type-C): 5V<br/>Tensão de entrada (BAT): 5V |
 | **Saída máxima** | 5V@500mA<br/>3.3V@200mA |
 | **Compatibilidade de software** | Arduino, PlatformIO, MicroPython, CircuitPython, Zephyr<br/>[Exposição para a Série XIAO - Seeed Studio Wiki](https://wiki.seeedstudio.com/pt-br/xiao_topic_page/ ) |
-| **Temperatura de trabalho** | -40 a 85°C |
+| **Temperatura de operação** | -40 a 85°C |
 | **Dimensões** | 21×17,8mm |
 | **Variantes** | [Seeed Studio XIAO SAMD21 (Pré-soldado) - Seeed Studio](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html  )<br/>[Seeed Studio XIAO SAMD21 - Arduino Microcontroller - SAMD21 Cortex M0+ (3 PCs） - Seeed Studio](https://www.seeedstudio.com/Seeeduino-XIAO-3Pcs-p-4546.html  ) |
 
-## **Visão geral de hardware**
+## **Visão geral do hardware**
 
 ### Frente
 
@@ -82,12 +82,12 @@ Existem dois documentos sobre o uso do **Seeed Studio XIAO SAMD21** que focam em
 
 :::caution
 Para pinos de I/O gerais:
-A tensão de trabalho do MCU é 3,3V. Uma tensão de entrada conectada aos pinos de I/O gerais pode causar danos ao chip se for maior que 3,3V.
+A tensão de operação do MCU é 3,3V. A tensão de entrada conectada aos pinos de I/O gerais pode causar danos ao chip se for maior que 3,3V.
 
 Para pinos de alimentação:
-O circuito conversor DC-DC integrado, capaz de transformar a tensão de 5V em 3,3V, permite alimentar o dispositivo com uma fonte de 5V via VIN-PIN e 5V-PIN.
+O circuito conversor DC-DC integrado capaz de transformar a tensão de 5V em 3,3V permite alimentar o dispositivo com uma fonte de 5V via VIN-PIN e 5V-PIN.
 
-É fundamental entender que os pads VIN e GND na parte de trás do XIAO SAMD21 não foram projetados para conectar diretamente uma bateria, especialmente uma bateria recarregável de lítio (LiPo/Li-Ion). A placa não possui o circuito essencial de gerenciamento de bateria necessário para uma operação segura. Esses pads são simplesmente um ponto alternativo de entrada de energia que ignora o diodo de proteção integrado da placa. Se você quiser alimentar seu projeto com uma bateria, deve usar um módulo externo dedicado de gerenciamento de bateria que forneça carregamento e proteção e, em seguida, conectar a saída regulada desse módulo ao pino de 5V do XIAO.
+É fundamental entender que os pads VIN e GND na parte de trás do XIAO SAMD21 não foram projetados para conectar diretamente uma bateria, especialmente uma bateria recarregável de lítio (LiPo/Li-Ion). A placa não possui o circuito essencial de gerenciamento de bateria necessário para uma operação segura. Esses pads são simplesmente um ponto alternativo de entrada de energia que ignora o diodo de proteção integrado da placa. Se você deseja alimentar seu projeto com uma bateria, deve usar um módulo externo dedicado de gerenciamento de bateria que forneça carregamento e proteção e, em seguida, conectar a saída regulada desse módulo ao pino de 5V do XIAO.
 
 Por favor, preste atenção ao usar, não levante a tampa de blindagem.
 :::
@@ -130,13 +130,13 @@ Neste ponto, o chip entra no modo Bootloader e a porta de gravação aparece nov
 
 ### Reset
 
-Se você quiser reiniciar o Seeed Studio XIAO SAMD21, execute as seguintes etapas:
+Se você quiser resetar o Seeed Studio XIAO SAMD21, execute as seguintes etapas:
 
 - Conecte o Seeed Studio XIAO SAMD21 ao seu computador.
 - Use uma pinça ou fios curtos para curto-circuitar os pinos RST **apenas uma vez**
 - Os LEDs laranja piscam e acendem.
 
-Atenção: o comportamento do LED integrado é o inverso daquele em um Arduino. No Seeed Studio XIAO SAMD21, o pino precisa ser puxado para nível baixo, enquanto em outros microcontroladores ele precisa ser puxado para nível alto.  
+Atenção: O comportamento do LED embutido é o inverso daquele em um Arduino. No Seeed Studio XIAO SAMD21, o pino precisa ser puxado para nível baixo, enquanto em outros microcontroladores ele precisa ser puxado para nível alto.  
 
 ### Interrupção
 
@@ -146,7 +146,7 @@ Todos os pinos do Seeed Studio XIAO SAMD21 suportam interrupções, mas dois pin
 
 Não precisamos configurar os pinos nós mesmos; depois de usar os pinos, você pode chamar uma função diretamente.
 
-#### Entrada e saída digitais
+#### Entrada e saída digital
 
 - Use o pino 6 como pino digital:
 
@@ -287,13 +287,13 @@ void loop (void) {
 
 Para saber como usar o QTouch, fornecemos um projeto de exemplo: [How to Make a Fruit Piano on Seeed Studio XIAO SAMD21 ’s Q-Touch Function](https://www.seeedstudio.com/blog/2020/07/20/how-to-make-a-fruit-piano-on-seeeduino-xiaos-q-touch-function-m/).
 
-#### Entrada e saída analógica
+#### Entrada e Saída Analógica
 
 Embora ainda tenha "saídas analógicas" baseadas em PWM, o SAMD21 também possui saída analógica verdadeira na forma de um conversor digital‑para‑analógico (DAC). Este módulo pode produzir uma tensão analógica entre 0 e 3,3 V. Ele pode ser usado para produzir áudio com som mais natural ou como uma espécie de "potenciômetro digital" para controlar dispositivos analógicos.
 
-O DAC está disponível apenas no pino Arduino A0 e é controlado usando analogWrite(A0, `<value>`). O DAC pode ser configurado com resolução de até 10 bits (certifique‑se de chamar [**analogWriteResolution(10)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/) na sua função setup), o que significa que valores entre 0 e 1023 definirão a tensão em algum ponto entre 0 e 3,3 V.
+O DAC está disponível apenas no pino Arduino A0 e é controlado usando analogWrite(A0, `<value>`). O DAC pode ser configurado com resolução de até 10 bits (certifique‑se de chamar [**analogWriteResolution(10)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/) no seu setup), o que significa que valores entre 0 e 1023 definirão a tensão em algum ponto entre 0 e 3,3 V.
 
-Além do DAC, os canais ADC do SAMD21 também se destacam em relação ao ATmega328: eles são equipados com resolução de até 12 bits. Isso significa que os valores de entrada analógica podem variar de 0 a 4095, representando uma tensão entre 0 e 3,3 V. Para usar os ADCs no modo de 12 bits, certifique‑se de chamar [**analogReadResolution(12)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/) na sua função setup.
+Além do DAC, os canais ADC do SAMD21 também se destacam em relação ao ATmega328: eles são equipados com resolução de até 12 bits. Isso significa que os valores de entrada analógica podem variar de 0 a 4095, representando uma tensão entre 0 e 3,3 V. Para usar os ADCs no modo de 12 bits, certifique‑se de chamar [**analogReadResolution(12)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/) no seu setup.
 
 **Plotando o DAC via Serial**
 
@@ -307,13 +307,11 @@ O Seeed Studio XIAO SAMD21 usando a [**placa de expansão Seeed Studio XIAO SAMD
 
 Este sketch produz uma onda senoidal na saída A0, com valores variando de 0 a 3,3 V. Em seguida, ele usa A1 para ler essa saída em seu ADC e convertê‑la em uma tensão entre 0 e 3,3 V.
 
-Você pode, é claro, abrir o monitor serial para ver o fluxo de valores de tensão. Mas se a onda senoidal for difícil de visualizar em forma de texto, experimente o novo Serial Plotter do Arduino, indo em Tools > Serial Plotter.
+Você pode, é claro, abrir o monitor serial para ver o fluxo de valores de tensão. Mas se a onda senoidal for difícil de visualizar em forma de texto, experimente o novo Serial Plotter do Arduino, indo em Tools > Serial Plotter.  
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Serial%20poltting.png" /></div>
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_DAC_wave.gif" /></div>
-
-#### DAC
 
 Agradecimentos a [Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) por enviar o código; todas as funcionalidades relacionadas foram desenvolvidas e contribuídas por ele.
 
@@ -321,7 +319,7 @@ Agradecimentos a [Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) por env
 #define DAC_PIN A0 // Make code a bit more legible
 float x = 0; // Value to take the sin of
 float increment = 0.02;  // Value to increment x by each time
-int frequency = 440; // Frequency of sine wave
+// Frequency of sine wave is about 1.37 Hz
 
 void setup() 
 {
@@ -367,21 +365,21 @@ void loop()
 
 :::tip
 
-Alguns cabos USB podem apenas fornecer energia e não conseguem transferir dados. Se você não tiver um cabo USB ou não souber se o seu cabo USB pode transmitir dados, você pode verificar o [seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html).
+Alguns cabos USB podem apenas fornecer energia e não transferir dados. Se você não tiver um cabo USB ou não souber se o seu cabo USB pode transmitir dados, você pode conferir o [seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html).
 :::
 
-- Passo 1. Prepare um Seeed Studio XIAO SAMD21 e um cabo Type‑C.
+- Etapa 1. Prepare um Seeed Studio XIAO SAMD21 e um cabo Type‑C.
 
-- Passo 2. Conecte o Seeed Studio XIAO SAMD21 ao seu computador. Então o LED amarelo de alimentação deve acender.
+- Etapa 2. Conecte o Seeed Studio XIAO SAMD21 ao seu computador. Então o LED amarelo de alimentação deve acender.
 
 ### Software
 
 :::note
 
-Se esta é a sua primeira vez usando o Arduino, recomendamos fortemente que você consulte [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino)
+Se esta é a sua primeira vez usando Arduino, recomendamos fortemente que você consulte [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino)
 :::
 
-- **Passo 1. Você precisa instalar o software Arduino.**
+- **Etapa 1. Você precisa instalar o software Arduino.**
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
@@ -393,16 +391,16 @@ Clique duas vezes no aplicativo Arduino (arduino.exe) que você baixou anteriorm
 
 :::note
 
-Se o software Arduino for carregado em um idioma diferente, você pode alterá‑lo na caixa de diálogo de preferências. Consulte a página [Arduino Software (IDE)](https://www.arduino.cc/en/Guide/Environment#languages) para mais detalhes.
+Se o software Arduino carregar em um idioma diferente, você pode alterá‑lo na janela de preferências. Consulte a página [Arduino Software (IDE)](https://www.arduino.cc/en/Guide/Environment#languages) para mais detalhes.
 :::
 
-- **Passo 2. Abra o exemplo Blink**  
+- **Etapa 2. Abra o exemplo Blink**  
 
 Abra o sketch de exemplo de piscar LED: **File > Examples >01.Basics > Blink**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={600} height="auto" /></p>
 
-- **Passo 3. Adicione o Seeeduino ao seu Arduino IDE**
+- **Etapa 3. Adicione o Seeeduino ao seu Arduino IDE**
 
 Clique em **File > Preference** e preencha Additional Boards Manager URLs com a URL abaixo:
 
@@ -415,7 +413,7 @@ Clique em **Tools-> Board-> Boards Manager...**, digite a palavra‑chave "**See
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-board.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-board.png" alt="pir" width={600} height="auto" /></p>
 
-- **Passo 4. Selecione sua placa e porta**
+- **Etapa 4. Selecione sua placa e porta**
 
 Depois de instalar a placa, clique em **Tools-> Board**, encontre "**Seeed Studio XIAO**" e selecione‑a. Agora você já configurou a placa Seeed Studio XIAO SAMD21 no Arduino IDE.
 
@@ -425,7 +423,7 @@ Selecione o dispositivo serial da placa Arduino no menu Tools | Serial Port. Pro
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/2.jpg" alt="pir" width={600} height="auto" /></p>
 
-- **Passo 5. Envie o programa**  
+- **Etapa 5. Envie o programa**  
 
 Agora, simplesmente clique no botão "Upload" no ambiente. Aguarde alguns segundos e, se o envio for bem‑sucedido, a mensagem "Done uploading." aparecerá na barra de status.
 
@@ -437,33 +435,33 @@ Agora, simplesmente clique no botão "Upload" no ambiente. Aguarde alguns segund
 o tamanho máximo da flash é 8KB, mais informações no datasheet ATSAMD218A-MU em recursos
 :::
 
-## O aplicativo de exemplo
+## Aplicativo de exemplo
 
 - [Como usar o Seeed Studio XIAO SAMD21 para fazer login no seu Raspberry PI](https://wiki.seeedstudio.com/pt-br/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
 
 - [Interface de comunicação SPI](https://wiki.seeedstudio.com/pt-br/XIAO-SPI-Communication-Interface)
 
-- [Como recuperar um XIAO inutilizado usando Raspberry Pi](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990). Obrigado a John_Doe por compartilhar.
+- [Como recuperar um XIAO inutilizado usando Raspberry Pi](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990). Agradecimentos a John_Doe por compartilhar.
 
 ## Recursos
 
 **Projeto de hardware**
-- **📄[Datasheet]** [Datasheet Atmel SAMD21G18](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
-- **📄[Esquemático]** [Esquemático XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
+- **📄[Datasheet]** [Atmel SAMD21G18 Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
+- **📄[Esquemático]** [Esquemático do XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
 - **🗃️[Arquivos de projeto de PCB]** 
-  - [Projeto KiCad XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO_SAMD21_v2.1_SCH&PCB_20260304.zip)  
-  - [Projeto Eagle XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0.zip)
+  - [Projeto KiCad do XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO_SAMD21_v2.1_SCH&PCB_20260304.zip)  
+  - [Projeto Eagle do XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0.zip)
 - **🗃️[Bibliotecas de projeto de PCB]** 
-  - [Footprints da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
-  - [Símbolos SCH da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Folha de pinagem]** [Folha de pinagem XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-pinout_sheet.xlsx )
+  - [Footprints da linha XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [Símbolos SCH da linha XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Folha de pinagem]** [Folha de pinagem do XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-pinout_sheet.xlsx )
 
 **Projeto mecânico**
 - **📄[Dimensões 2D]** [Dimensões do XIAO em DXF](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_Dimension.rar )
-- **📄[Modelo 3D]** [Modelo 3D XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip )
+- **📄[Modelo 3D]** [Modelo 3D do XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip )
 
 **Software e ferramentas**
-- **📄[Firmware de fábrica]** [Firmware de fábrica XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip )
+- **📄[Firmware de fábrica]** [Firmware de fábrica do XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip )
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
@@ -476,7 +474,7 @@ o tamanho máximo da flash é 8KB, mais informações no datasheet ATSAMD218A-MU
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO: Grande Potência, Placa Pequena Dominando Arduino e TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[Ebook]** [XIAO: Big Power, Small Board Dominando Arduino e TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 ## Suporte técnico e discussão sobre o produto
 

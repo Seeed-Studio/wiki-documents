@@ -1,15 +1,15 @@
 ---
-description: Este artigo irá guiá-lo para começar rapidamente com o reTerminal D1001.
+description: Este artigo irá guiá-lo para começar rapidamente a usar o reTerminal D1001.
 title: Introdução ao reTerminal D1001
 image: https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.webp
 slug: /getting_started_with_reterminal_d1001
 sku: 100058144
 sidebar_position: 2
 last_update:
-  date: 03/06/2026
+  date: 7/17/2026
   author: Jackson.Li
 createdAt: '2026-03-06'
-updatedAt: '2026-03-13'
+updatedAt: '2026-07-17'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_d1001/
 ---
 
@@ -29,15 +29,15 @@ import TabItem from '@theme/TabItem';
 ## Introdução ao produto
 
 ### Visão geral
-O reTerminal D1001 é um terminal inteligente de interação com tela grande, alimentado pelo mais recente chip de alto desempenho **ESP32-P4** da Espressif. Projetado para cenários de aplicação de AIoT que exigem exibição gráfica de alto desempenho, processamento de vídeo e interação por voz, ele aproveita o poderoso processador RISC-V dual-core de 400 MHz do ESP32-P4 e interfaces periféricas multimídia ricas para lidar facilmente com tarefas complexas de computação de borda e multimídia.
+O reTerminal D1001 é um terminal inteligente de interação com tela grande, alimentado pelo mais recente chip de alto desempenho **ESP32-P4** da Espressif. Projetado para cenários de aplicação de AIoT que exigem exibição gráfica de alto desempenho, processamento de vídeo e interação por voz, ele aproveita o poderoso processador RISC-V dual-core de 400 MHz do ESP32-P4 e as ricas interfaces de periféricos multimídia para lidar facilmente com tarefas complexas de computação de borda e multimídia.
 
 ### Principais recursos
-*   **Processamento poderoso para interfaces ricas**: Alimentado por ESP32-P4, um processador RISC-V dual-core de 32 bits com 32 MB de PSRAM, este dispositivo oferece o desempenho necessário para interfaces ricas em gráficos, interação em tempo real fluida e mais aplicações de borda.
-*   **Conectividade sem fio integrada**: A comunicação sem fio é habilitada por um ESP32-C6 onboard que suporta Wi-Fi 6, Bluetooth 5 (LE) e 802.15.4 (Zigbee/Thread/Matter). O processador principal se comunica com o subsistema de conectividade por meio de uma interface SDIO, permitindo uma rede sem fio confiável para dispositivos conectados e aplicações de IoT.
+*   **Processamento poderoso para interfaces ricas**: Alimentado pelo ESP32-P4, um processador RISC-V dual-core de 32 bits com 32 MB de PSRAM, este dispositivo oferece o desempenho necessário para interfaces ricas em gráficos, interação em tempo real suave e mais aplicações de borda.
+*   **Conectividade sem fio integrada**: A comunicação sem fio é habilitada por um ESP32-C6 onboard que suporta Wi-Fi 6, Bluetooth 5 (LE) e 802.15.4 (Zigbee/Thread/Matter). O processador principal se comunica com o subsistema de conectividade via interface SDIO, permitindo uma rede sem fio confiável para dispositivos conectados e aplicações de IoT.
 *   **Expansão celular pronta para campo**: Equipado com um slot mPCIe integrado que suporta sinais USB 2.0, o dispositivo permite conectividade 4G LTE perfeita para rede confiável em ambientes remotos. É ideal para implantações em campo, monitoramento remoto e aplicações de borda sempre conectadas, onde a comunicação sem fio estável é essencial.
-*   **Tela sensível ao toque de 8 polegadas com rico suporte a HMI**: A tela LCD capacitiva de 8 polegadas 800 × 1280, acionada via MIPI-DSI e com suporte aos modos retrato e paisagem, oferece o espaço para criar painéis de controle sofisticados, painéis de controle inteligentes e outros dispositivos embarcados centrados em UI.
-*   **Interface de câmera para desenvolvimento de visão**: Com uma câmera MIPI-CSI baseada no sensor SC2356 e suporte de até 1600 × 1200 a 30 fps, a plataforma está pronta para captura de imagem, visualização ao vivo e desenvolvimento de visão embarcada imediatamente.
-*   **Recursos de voz e áudio**: Microfones duplos e um alto-falante integrado permitem entrada de voz, captura de som e reprodução. Com cancelamento de eco suportado pelo conversor AD de áudio ES7210, o sistema ajuda a oferecer captura de voz mais clara para assistentes de IA e aplicações com comando de voz.
+*   **Tela touch de 8 polegadas com amplo suporte a IHM**: A tela LCD capacitiva de 8 polegadas 800 × 1280, acionada via MIPI-DSI e com suporte aos modos retrato e paisagem, oferece o espaço para criar painéis de controle refinados, painéis de controle inteligentes e outros dispositivos embarcados focados em UI.
+*   **Interface de câmera para desenvolvimento de visão**: Com uma câmera MIPI-CSI baseada no sensor SC2356 e suporte para até 1600 × 1200 a 30 fps, a plataforma está pronta para captura de imagem, visualização ao vivo e desenvolvimento de visão embarcada imediatamente após a saída da caixa.
+*   **Recursos de voz e áudio**: Microfones duplos e um alto-falante integrado permitem entrada de voz, captura de som e reprodução. Com cancelamento de eco suportado pelo conversor de áudio ES7210, o sistema ajuda a oferecer captura de voz mais clara para assistentes de IA e aplicações com comando de voz.
 
 ### Especificações de hardware
 
@@ -54,32 +54,32 @@ O reTerminal D1001 é um terminal inteligente de interação com tela grande, al
 | | CI de driver | 9365DA-H3 |
 | | Tipo de toque | Toque capacitivo |
 | | CI de toque | GSL3670 |
-| | Orientação | Suporte à rotação Retrato/Paisagem |
+| | Orientação | Suporte à rotação retrato/paisagem |
 | **Câmera** | Sensor | SC2356 |
 | | Tamanho da matriz ativa | 1608×1208 |
 | | Taxa de quadros máxima | (1600*1200)30fps 10bit |
 | | Interface | MIPI-CSI |
 | **Áudio** | Microfone | Microfone duplo |
 | | Alto-falante | 2W@8Ω NS4150B |
-| | CI de áudio | Codec: ES8311 <br /> Conversor AD de áudio: ES7210 |
+| | CI de áudio | Codec: ES8311 <br /> ADC de áudio: ES7210 |
 | **Comunicação sem fio** | Wi-Fi | Wi-Fi 6 (2.4GHz) |
 | | BLE | Bluetooth 5 (LE) |
 | | Celular | Mini-PCIe para 4G (opcional) |
 | | Antena | Antena onboard e antena externa |
 | **Alimentação** | Bateria | 2500mAh |
-| | Entrada de alimentação | USB Type-C 5V |
-| **Outros** | RTC | PCF8563T (suporta wake-up por interrupção temporizada) |
+| | Entrada de energia | USB Type-C 5V |
+| **Outros** | RTC | PCF8563T (suporta despertar por interrupção temporizada) |
 | | Sensor de movimento | LSM6DS3TR de seis eixos |
 
-### Visão geral de hardware
+### Visão geral do hardware
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/hardware.webp" style={{width:800, height:'auto'}}/></div>
 
 ### Aplicação
-*   **Hub central de casa inteligente**: Um dispositivo HMI tudo-em-um para gerenciar iluminação, segurança e sistemas de automação residencial.
-*   **Sistemas de interfone por vídeo**: Comunicação visual em tempo real para entradas inteligentes, campainhas e controle de acesso de segurança.
-*   **Assistentes de IA interativos**: Telas inteligentes com comando de voz que fornecem feedback visual intuitivo e controle responsivo.
+*   **Hub central de casa inteligente**: Um dispositivo IHM tudo-em-um para gerenciar iluminação, segurança e sistemas de automação residencial.
+*   **Sistemas de vídeo porteiro**: Comunicação visual em tempo real para entrada inteligente, campainhas e controle de acesso de segurança.
+*   **Assistentes de IA interativos**: Displays inteligentes com comando de voz que fornecem feedback visual intuitivo e controle responsivo.
 *   **Painéis de dados industriais**: Terminais de monitoramento profissionais para rastreamento de equipamentos em tempo real e visualização de dados comerciais.
-*   **Terminais de visão de borda**: Soluções compactas para captura de imagem, digitalização e quiosques interativos de varejo.
+*   **Terminais de visão de borda**: Soluções compactas para captura de imagem, digitalização e totens interativos de varejo.
 
 
 ## Introdução ao ESP-IDF
@@ -90,9 +90,9 @@ Esta seção orienta você na configuração do ambiente de desenvolvimento e na
 
 **Passo 1. Instalar o ESP-IDF**
 
-Use a ferramenta de instalação multiplataforma mais recente da Espressif, o **ESP-IDF Installation Manager**.
+Use a mais recente ferramenta de instalação multiplataforma da Espressif, o **ESP-IDF Installation Manager**.
 
-1.  **Baixar o ESP-IDF**: Visite a [página de download do ESP-IDF Installation Manager](https://dl.espressif.cn/dl/eim/), selecione a guia **Offline Installer**, escolha a versão para **Windows** (recomendada v5.4.2+), e clique em **Download** para obter os arquivos `.zst` e `.exe`.
+1.  **Baixar o ESP-IDF**: Visite a [página de download do ESP-IDF Installation Manager](https://dl.espressif.cn/dl/eim/), selecione a aba **Offline Installer**, escolha a versão para **Windows** (recomendada v5.4.2+), e clique em **Download** para obter os arquivos `.zst` e `.exe`.
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/1.png" style={{width:600, height:'auto'}}/></div>
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/2.png" style={{width:600, height:'auto'}}/></div>
@@ -146,30 +146,31 @@ Baixe o repositório oficial do reTerminal D1001 no GitHub.
 ### Experimente os recursos de demonstração
 Após o firmware ser gravado com sucesso, o dispositivo será reiniciado automaticamente. Você pode interagir com o dispositivo da seguinte forma:
 
-*   **Controle de energia e tela**: Pressione o botão verde por mais de 3 segundos para ligar. Pressione rapidamente o botão para desligar a tela e pressione rapidamente novamente para acordá-la.
-*   **Interação de UI fluida**: Experimente transições de deslizamento suaves e animações de abertura de aplicativos.
+*   **Controle de energia e tela**: Pressione e segure o botão verde por mais de 3 segundos para ligar. Pressione rapidamente o botão para desligar a tela e pressione rapidamente novamente para despertá-la.
+*   **Interação de UI suave**: Experimente transições de deslizamento suaves e animações de abertura de aplicativos.
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/UI.gif" style={{width:300, height:'auto'}}/></div>
 *   **Pré-visualização da câmera**: Abra o aplicativo Camera para visualizar imagens em tempo real.
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/10.jpg" style={{width:300, height:'auto'}}/></div>
-*   **Demonstração de sensores**: Gire o dispositivo para observar o efeito de rotação automática da tela ou verifique outros dados dos sensores.
+*   **Demonstração de sensores**: Gire o dispositivo para observar o efeito de rotação automática da tela ou verifique outros dados de sensores.
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/sensor.gif" style={{width:300, height:'auto'}}/></div>
 
 
 ## Recursos
 
 *   **Documentos de hardware**:
-    *   [Placa principal reTerminal D1001 V1.0 SCH & PCB](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/reTerminal_D1001_main_board_V1.0_SCH_&_PCB_251128.zip)
-    *   [Esquemático do reTerminal D1001 (PDF)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/reTerminal%20D1001_sch.pdf)
+    *   [reTerminal D1001 Main Board V1.0 SCH & PCB ](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/reTerminal_D1001_main_board_V1.0_SCH&PCB_260715.zip)
+    *   [ reTerminal D1001 Schematic (PDF) ](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/reTerminal_D1001_260715.pdf)
+    *   [Arquivo STP do modelo 3D geral do exterior](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/D1001_asm.stp)
 *   **Folhas de dados**:
-    *   [Folha de dados ESP32-P4NRW32](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/Espressif_ESP32-P4NRW32_Datasheet.pdf)
-    *   [Folha de dados ESP32-C6](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/esp32-c6_datasheet_en.pdf)
+    *   [ESP32-P4NRW32 Datasheet](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/Espressif_ESP32-P4NRW32_Datasheet.pdf)
+    *   [ESP32-C6 Datasheet](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/esp32-c6_datasheet_en.pdf)
     *   [Folha de dados do display (GJX080C13-31BY)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/GangJingXin_GJX080C13-31BY_Datasheet.pdf.pdf)
     *   [Folha de dados do sensor IMU (LSM6DS3TR)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/ST_LSM6DS3TR_Datasheet.pdf)
     *   [Folha de dados do módulo de câmera (SC2356)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/ZD2481-D1001-V2.0_Datasheet.pdf)
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

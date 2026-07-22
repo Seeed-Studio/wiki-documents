@@ -9,7 +9,7 @@ last_update:
   date: 07/14/2023
   author: Jessie
 createdAt: '2023-02-24'
-updatedAt: '2026-04-03'
+updatedAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/
 ---
 连接到 The Things Network 有两种方式：Packet forward 和 Basics™ Station。请选择一种方式来连接你的网关。

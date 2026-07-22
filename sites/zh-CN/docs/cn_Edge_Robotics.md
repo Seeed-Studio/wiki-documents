@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-02-03'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/cn/robotics_page/
 ---
 
@@ -120,6 +120,10 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
                 <span className="text">reBot B601-RS ROS2 集成</span>
                 <span className="tag recommended">New</span>
               </a>
+              <a href="/cn/rebot_arm_b601_rs_isaacsim/" className="content-card">
+                <span className="text">reBot B601-RS Isaacsim 仿真</span>
+                <span className="tag recommended">New</span>
+              </a>
           </div>
 
 
@@ -156,6 +160,10 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               </a>
               <a href="/cn/lerobot_double_arm_so_arm_training/" className="content-card">
                   <span className="text">双臂 SO-ARM 训练完整指南</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/soarm_amazinghand_teleop/" className="content-card">
+                  <span className="text">SO-ARM 与 AmazingHand 完整训练指南</span>
                   <span className="tag recommended">New</span>
               </a>
           </div>

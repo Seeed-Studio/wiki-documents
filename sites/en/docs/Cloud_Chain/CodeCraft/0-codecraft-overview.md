@@ -5,7 +5,7 @@ keywords:
   - CodeCraft
   - Vibe Coding
   - SenseCraft AI
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp
 slug: /codecraft/codecraft-overview
 sidebar_class_name: hidden
 sidebar_position: 1
@@ -14,12 +14,20 @@ last_update:
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/codecraft/codecraft-overview/
 createdAt: '2026-06-29'
-updatedAt: '2026-06-29'
+updatedAt: '2026-07-08'
 ---
 
 # CodeCraft User Guide
 
 Welcome to CodeCraft. This guide will help you quickly understand the platform, complete account preparation, and start using CodeCraft for zero-code project creation, community project reuse, and publishing your works.
+
+![CodeCraft Banner](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp)
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://codecraft.seeed.cc" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>Try CodeCraft Now 🚀</font></span></strong>
+    </a>
+</div>
 
 ## Documentation Contents
 

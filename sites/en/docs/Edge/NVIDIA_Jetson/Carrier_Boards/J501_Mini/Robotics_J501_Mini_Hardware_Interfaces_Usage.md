@@ -1,9 +1,9 @@
 ---
-description: This wiki provides a comprehensive introduction to the hardware features and interface usage of the Jetson Robotics J501-Mini carrier board. It covers detailed specifications, supported modules, setup instructions, and practical guides for using various interfaces such as M.2, Ethernet, USB, CAN, UART, DI/DO, I2S, and GMSL2 camera expansion, helping users quickly get started with robotics development on the J501-Mini platform.
-title: Flash Jetpack && Interfaces Usage
+description: This wiki provides a comprehensive introduction to the hardware features and interface usage of the Jetson Mini J501 carrier board. Designed for edge AI and robotics scenarios, it covers detailed specifications, supported modules, setup instructions, and practical guides for using interfaces such as M.2, Ethernet, USB, CAN, UART, DI/DO, I2S, and GMSL2 camera expansion.
+title: Mini J501 Flash JetPack and Interfaces Usage
 tags:
-  - J501-Robotics carrier board
-  - Flash Jetpack
+  - Mini J501 carrier board
+  - Flash JetPack
   - Robotics
   - Interfaces Usage
   - Interfaces
@@ -12,17 +12,17 @@ image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reCom
 slug: /recomputer_j501_mini_getting_started
 sku: 100020039
 last_update:
-  date: 11/04/2025
+  date: 07/09/2026
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-06-27'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/recomputer_j501_mini_getting_started/
 ---
-# Robotics J501 carrier board Hardware and Getting Started
+# Mini J501 Carrier Board Hardware and Getting Started
 
-The Robotics J501 Mini carrier is a compact, high-performance edge AI carrier board designed for advanced robotics. Compatible with NVIDIA Jetson AGX Orin modules (32GB/64GB) in MAXN mode, it delivers up to 275 TOPS of AI performance. Equipped with extensive connectivity options—including dual Gigabit Ethernet ports, M.2 slots for 5G and Wi-Fi/BT modules, 2 USB 3.2 ports, CAN, GMSL2 (via optional expansion), I2C, and UART—it serves as a powerful robotic brain capable of processing complex data from various sensors. Pre-installed with JetPack 6.2.1 and Linux BSP, it ensures seamless deployment.​
+The Mini J501 is a compact, high-performance edge AI carrier board for NVIDIA Jetson AGX Orin modules (32GB/64GB). It delivers up to 275 TOPS of AI performance in MAXN mode and provides extensive connectivity options, including dual Gigabit Ethernet ports, M.2 slots for 5G and Wi-Fi/Bluetooth modules, 2 USB 3.2 ports, CAN, GMSL2 via optional expansion, I2C, and UART. Pre-installed with JetPack 6.2.1 and Linux BSP, it supports fast deployment for edge AI applications.
 
-Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1, the  Robotics J501 Mini bridges large language model-driven decision-making with physical robotics control, such as motion planning and sensor fusion. Ideal for the rapid development of autonomous robots, it accelerates time-to-market with ready-to-use interfaces and optimized AI frameworks.
+The Mini J501 can also be used in robotics scenarios. With support for frameworks such as NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1, it can bridge model-driven decision-making with physical robotics control, including motion planning, sensor fusion, and multi-camera perception.
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg"/>
@@ -34,7 +34,7 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
     </a>
 </div>
 
-## reComputer Jetson Robotics J501-Mini Carrier Board overview
+## reComputer Jetson Mini J501 Carrier Board Overview
 
 | **Top View** |
 |:---------:|
@@ -46,7 +46,7 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
 
 ## 📝 Part List
 
-- Robotics J501-Mini Carrier Board x 1
+- Mini J501 Carrier Board x 1
 - Power Supply and JST expansion board x 1
 - XT30 to DC cable x 1
 - USB Cable, Type A to Type C x 1
@@ -177,7 +177,7 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
     </tr>
     <tr>
       <th rowSpan="1">Operating Temperature</th>
-      <td colSpan="2">-20℃~60℃ (25W Mode);<br />-20℃~55℃ (MAXN Mode);<br />(with reComputer Robotics heat sink with fan)</td>
+      <td colSpan="2">-20℃~60℃ (25W Mode);<br />-20℃~55℃ (MAXN Mode);<br />(with a compatible heat sink with fan)</td>
     </tr>
     <tr>
       <th rowSpan="1">Warranty</th>
@@ -200,7 +200,7 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
 ### Prerequisites
 
 - Ubuntu host PC
-- Robotics J501 Mini Carrier Board
+- Mini J501 Carrier Board
 - NVIDIA® Jetson AGX Orin Module
 - Nano/NX Module Active Fan
 - NVMe M.2 2280 Internal SSD
@@ -264,14 +264,14 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td rowSpan={2}>7.2</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCZEEr-Co7XSJmdL_F1Rvo9AbidOmBTdQjSspf6EXRcU9s?e=39pbm6">Download</a></td>
-      <td>36e2616404f9451a043797968e87755b<br />4dc654a5683cd70c7e223cc80910ac0a</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBraqxVv-rUQKkcwG2EXybtAUKJgIvgi77ze4eig_Hj3Ns">Download</a></td>
+      <td>F95E91C3BFB00D50EB999383F85949B4</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCepjaEexEOSb_ula7wMpDlAX61iyLzJ1B1RTHpY32mPIQ?e=sOyPdU">Download</a></td>
-      <td>05d082994fd1b2ae85c5c666a621b5a6<br />e8ec178db5ce64cca516c837acca7552</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBj3DRU7fhETozDjV3BAOG2Ac69rCRZhqNqr_RXuCliXXM">Download</a></td>
+      <td>8FA6E750C2C21678168DAE377E95CE6C</td>
     </tr>
     <tr>
       <td rowSpan={2}>6.2.1</td>
@@ -355,7 +355,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 
 ```bash
 cd mfi_xxxx
-# For example: cd mfi_recomputer-orin-robotics-j501 
+# For example: cd mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
@@ -367,7 +367,7 @@ You will see the following output if the flashing process is successful
 The flash command may run for 2-10 minutes.
 :::
 
-**Step 3:** Connect the Robotics J501-Mini to a display use the PD to HDMI adapter to connect to a display that supports HDMI input, or directly connect to a display that supports PD input using the PD cable, and finish the initial configuration setup:
+**Step 3:** Connect the Mini J501 to a display using the PD to HDMI adapter, or directly connect to a display that supports PD input using the PD cable, and finish the initial configuration setup:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
@@ -379,7 +379,7 @@ Please complete the **System Configuration** according to your needs.
 
 ## 🔌 Interfaces Usage
 
-The following will introduce the various interfaces of the Robotics j501-Mini board and how to use them.
+The following sections introduce the various interfaces of the Mini J501 board and how to use them.
 
 ## M.2 Key M
 
@@ -473,7 +473,7 @@ Bluetooth functionality is available via the M.2 Key E slot.
 
 ## Ethernet
 
-The Robotics j501-Mini carrier board features one 1Gbps and one 10Gbps RJ45 Ethernet ports for high-speed wired network connectivity.
+The Mini J501 carrier board features one 1Gbps and one 10Gbps RJ45 Ethernet port for high-speed wired network connectivity.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/ethernet-real.png"/>
@@ -496,7 +496,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 ## LED
 
-The J501 mini has two LEDs that can be controlled. The following demonstrates how to control the LEDs to be **green**, **red**, or **blue**.
+The Mini J501 has two LEDs that can be controlled. The following demonstrates how to control the LEDs to be **green**, **red**, or **blue**.
 
 <!-- <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/led.jpg"/>
@@ -530,7 +530,7 @@ The LED control effect is shown in the figure below:
 
 ## USB
 
-The Robotics j501-Mini carrier board is equipped with a variety of USB ports, including 2 USB 3.2 Type-A ports (10Gbps), a USB 3.0 Type-C port , and a USB 2.0 Type-C port for device mode/debugging, offering versatile connectivity options.
+The Mini J501 carrier board is equipped with a variety of USB ports, including 2 USB 3.2 Type-A ports (10Gbps), a USB 3.0 Type-C port , and a USB 2.0 Type-C port for device mode/debugging, offering versatile connectivity options.
 
 ### USB-A Speed Test
 
@@ -591,13 +591,13 @@ You can then control the Jetson's terminal via the serial port on another Linux 
 
 ## Fan
 
-The reComputer Jetson Robotics j501-Mini is equipped with: 
+The reComputer Jetson Mini J501 is equipped with:
 
 - 1x 4-Pin Fan Connector (12V PWM): Compatible with standard 12V PWM fans, it also supports precise speed control, making it ideal for high-performance cooling requirements.
 
 ### Hardware Connection
 
-The Robotics J501 Mini provides a standard 4-pin  header for Fan. 
+The Mini J501 provides a standard 4-pin header for Fan.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/fan0.png"/>
@@ -645,7 +645,7 @@ Additionally, we can manually set the fan speed using the `jtop` tool.
 
 CAN (Controller Area Network) is a robust vehicle bus standard that enables microcontrollers and devices to communicate with each other without a host computer.  
 
-The J501 Mini provides two CAN interfaces integrated into the JST 4-pin(GH1.25). Additionally, both CAN interfaces **support CAN-FD**, with CAN0 and CAN1 shown below:
+The Mini J501 provides two CAN interfaces integrated into the JST 4-pin(GH1.25). Additionally, both CAN interfaces **support CAN-FD**, with CAN0 and CAN1 shown below:
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can-real.png"/>
@@ -842,7 +842,7 @@ Data transmission and reception between CAN0 and CAN1 will be completed:
 
 ### GPI
 
-The Robotics J501 Mini provides a standard 6-pin JST header for GPI. 
+The Mini J501 provides a standard 6-pin JST header for GPI.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPI-real.png"/>
@@ -879,7 +879,7 @@ When a high level is read, it will return 1; when a low level is read, it will r
 
 ### GPO
 
-The Robotics J501 Mini provides a standard 6-pin JST header for GPO. 
+The Mini J501 provides a standard 6-pin JST header for GPO.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPO-real.png"/>
@@ -922,7 +922,7 @@ sudo gpioset --mode=wait 0 113=1  #set output of GPO 4 to low voltag
 
 ## UART
 
-The Robotics J501 Mini provides a standard 6-pin JST header for UART serial communication. 
+The Mini J501 provides a standard 6-pin JST header for UART serial communication.
 UART and GPO use the same JST interface. This interface defaults to GPO functionality. **If you need to switch to UART functionality, you must point to a new device tree and restart the device for the change to take effect.**
 
 
@@ -1002,7 +1002,7 @@ The RS485 interface provides a robust and noise-resistant differential communica
 
 ### Hardware Connection
 
-Robotics J501-Mini provides a JST 4-pin(GH 1.25) headers for RS485.
+The Mini J501 provides a JST 4-pin(GH 1.25) header for RS485.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/485-real.png"/>
@@ -1049,10 +1049,10 @@ The serial data transmission and reception effect is shown in the figure below:
 
 ## I2S
 
-The I2S interface provides a digital audio communication bus designed for transmitting stereo audio data between devices. The Robotics J501-Mini supports standard I2S signaling, allowing high-quality, low-latency audio input and output for applications such as voice interaction, sound localization, and real-time audio processing.
+The I2S interface provides a digital audio communication bus designed for transmitting stereo audio data between devices. The Mini J501 supports standard I2S signaling, allowing high-quality, low-latency audio input and output for applications such as voice interaction, sound localization, and real-time audio processing.
 
 ### Hardware Connection
-Robotics J501-Mini provides a 1x JST 5-Pin Connector(GH 1.25) for **I2S**. 
+The Mini J501 provides a 1x JST 5-Pin Connector(GH 1.25) for **I2S**.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/I2S-real.png"/>
@@ -1201,7 +1201,7 @@ You can see the output in the terminal when the speaker is driven normally, as s
 ## RTC
 
 
-The Robotics J501-Mini provides a standard 2-pin  header for **RTC** (3V). 
+The Mini J501 provides a standard 2-pin header for **RTC** (3V).
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/rtc0.png"/>
@@ -1230,11 +1230,11 @@ cat /sys/class/rtc/rtc0/power/runtime_status
 
 ## Extension Port - GMSL
 
-The Robotics j501-Mini carrier board features a Camera Expansion Header for GMSL extension board. It can simultaneously connect and operate four GMSL cameras at the same time.
+The Mini J501 carrier board features a Camera Expansion Header for GMSL extension board. It can simultaneously connect and operate four GMSL cameras at the same time.
 
 ### Hardware Connection
 
-Here are the Robotics j501-Mini carrier board GMSL camera expansion board connection slot(need to prepare an extension board in advance):
+Here are the Mini J501 carrier board GMSL camera expansion board connection slots (you need to prepare an extension board in advance):
 
 <div align="center">
   <img width="450" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/gmsl-real1.png"/>
@@ -1381,13 +1381,13 @@ videoconvert ! autovideosink -ev
 
 ## Display
 
-The Robotics J501 Mini is equipped with an HDMI for high-resolution display output.
+The Mini J501 is equipped with an HDMI for high-resolution display output.
 
 ## Resources
 
-- [reComputer Robotics J501-Mini Carrier Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
+- [reComputer Mini J501 Carrier Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
 
-<!-- - [reComputer Robotics J501-Mini Carrier Board Datasheet]() -->
+<!-- - [reComputer Mini J501 Carrier Board Datasheet]() -->
 
 - [Source code of Seeed's L4T](https://github.com/Seeed-Studio/Linux_for_Tegra)
 

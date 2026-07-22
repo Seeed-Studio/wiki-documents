@@ -7,11 +7,11 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /xiao_esp32c5_getting_started
 last_update:
-  date: 11/26/2025
+  date: 7/9/2026
   author: Zeller
   sidebar_position: 0
 createdAt: '2025-12-15'
-updatedAt: '2026-03-30'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/
 ---
 ## 介绍
@@ -35,7 +35,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/
  </table>
 </div>
 
-### 规格参数
+### 规格
 
 <table>
     <thead>
@@ -57,15 +57,15 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/
         </tr>
         <tr>
             <th>无线连接</th>
-            <td>**2.4 GHz & 5 GHz 双频 Wi-Fi 6** 和 Bluetooth 5（LE）</td>
+            <td>**2.4 GHz 与 5 GHz 双频 Wi-Fi 6** 和 Bluetooth 5（LE）</td>
             <td>2.4 GHz Wi-Fi 和 Bluetooth 5（LE）</td>
             <td>2.4 GHz Wi-Fi 和 Bluetooth 5（LE）</td>
             <td> 2.4 GHz Wi-Fi 6，Bluetooth 5（LE）</td>
         </tr>
         <tr>
-            <th>内存</th>
-            <td>8 MB PSRAM & 8 MB Flash</td>
-            <td>8 MB PSRAM & 8 MB Flash</td>
+            <th>存储</th>
+            <td>8 MB PSRAM 和 8 MB Flash</td>
+            <td>8 MB PSRAM 和 8 MB Flash</td>
             <td>400 KB SRAM，4 MB Flash</td>
             <td>512KB SRAM，4MB Flash</td>
         </tr>
@@ -85,17 +85,17 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/
         </tr>
         <tr>
             <th>板载按键</th>
-            <td>复位 / 启动按键</td>
-            <td>复位 / 启动按键</td>
-            <td>复位 / 启动按键</td>
-            <td>复位按键 / 启动按键</td>
+            <td>Reset / Boot 按键</td>
+            <td>Reset / Boot 按键</td>
+            <td>Reset / Boot 按键</td>
+            <td>Reset 按键 / Boot 按键</td>
         </tr>
         <tr>
             <th>板载 LED</th>
-            <td>充电 / 用户 LED</td>
-            <td>充电 / 用户 LED</td>
-            <td>充电 LED</td>
-            <td>充电 / 用户 LED</td>
+            <td>Charge / USER LED</td>
+            <td>Charge / USER LED</td>
+            <td>Charge LED</td>
+            <td>Charge / USER LED</td>
         </tr>
         <tr>
             <th>电池充电芯片</th>
@@ -116,8 +116,8 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/
 - **电池充电芯片：** 支持锂电池充放电管理。
 - **丰富的片上资源：** 384 KB 片上 SRAM，320 KB ROM
 - **超小尺寸：** 小如拇指（21x17.8mm），XIAO 系列经典外形，适用于可穿戴设备和小型项目
-- **可靠的安全特性：** 支持 AES-128/256、SHA 系列哈希、HMAC 的密码学硬件加速器，专用数字签名外设以及 Secure Boot（V2）。
-- **丰富的接口：** 1×I2C，1×SPI，2×UART，最多 11×GPIO（支持 PWM），5×ADC 通道，以及一个 JTAG（在背面焊盘）焊盘接口。
+- **可靠的安全特性：** 支持 AES-128/256、SHA 系列哈希、HMAC 的密码学硬件加速器，配备专用数字签名外设和 Secure Boot（V2）。
+- **丰富的接口：** 1×I2C、1×SPI、2×UART，最多 11×GPIO（支持 PWM）、5×ADC 通道，以及一个 JTAG（背面焊盘）焊盘接口。
 - 单面贴装器件，适合表面贴装设计
 
 ## 硬件概览
@@ -132,7 +132,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/
 
 ## 引脚映射
 
-| XIAO 引脚              | 功能      | 芯片引脚  | 复用功能                   | 描述                         |
+| XIAO 引脚              | 功能       | 芯片引脚  | 复用功能                   | 描述                         |
 | :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
 | 5V                     | VBUS       |           |                          | 电源输入/输出                |
 | GND                    |            |           |                          |                              |
@@ -154,20 +154,20 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/
 | MTMS                   |            | GPIO2     | LP_I2C_SDA, LP_GPIO2     | JTAG，ADC                    |
 | ADC_BAT                |            | GPIO6    |                          | 读取电池电压值              |
 | ADC_CRL                |            | GPIO26    |                          | 控制（启用/禁用）测量电路以节省电能。   |
-| Reset                  |            | CHIP_EN   |                          | 使能（EN）                   |
-| Boot                   |            | GPIO28    |                          | 进入启动模式                 |
+| Reset                  |            | CHIP_EN   |                          | EN                           |
+| Boot                   |            | GPIO28    |                          | 进入 Boot 模式              |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | UFL 天线                     |
-| CHARGE_LED             |            | VCC_3V3   |                          | 充电指示灯_红色              |
+| CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_红色                 |
 | USER_LED               |            | GPIO27    |                          | 用户指示灯_黄色              |
 ## 入门指南
 
-为了让你更快地上手 XIAO ESP32-C5，请先阅读下面的硬件和软件准备内容，对 XIAO 进行准备。
+为了让你更快地开始使用 XIAO ESP32-C5，请先阅读下面的硬件和软件准备内容来完成对 XIAO 的准备工作。
 
 ### 硬件
 
 你需要准备以下物品：
 
-- 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
+- 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html)
 - 1 x 电脑
 - 1 x USB Type-C 线缆
 
@@ -196,7 +196,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/
 
 ### 软件
 
-XIAO ESP32-C5 推荐使用 Arduino IDE 作为编程工具，因此在软件准备部分，你需要完成 Arduino 的安装。
+XIAO ESP32-C5 推荐使用 Arduino IDE 作为编程工具，因此在软件准备阶段你需要完成 Arduino 的安装。
 
 :::tip
 如果这是你第一次使用 Arduino，我们强烈建议你参考[Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
@@ -216,13 +216,13 @@ XIAO ESP32-C5 推荐使用 Arduino IDE 作为编程工具，因此在软件准�
 
 ### 上传程序
 
-下面我们以一个点灯程序为例。
+下面我们以一个点亮灯光的程序为例。
 
-**Step 1.** 选择 **XIAO_ESP32C5** 和端口（PORT）。如果你不知道端口，可以重新插拔 XIAO_ESP3-2C5 来查看。
+**步骤 1.** 选择 **XIAO_ESP32C5** 和端口。如果你不知道端口，可以重新插拔 XIAO_ESP3-2C5 来查看。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/select_board.png" style={{width:800, height:'auto'}}/></div>
 
-**步骤 2.** 将代码粘贴到你的 Sketch 中
+**步骤 2.** 将代码粘贴到你的草图中
 
 **LED_BUILTIN** 对应开发板上的 **L 指示灯**。
 
@@ -306,16 +306,16 @@ void setup(){
 void loop(){}
 ```
 
-如果你足够快地在 XIAO 进入深度睡眠之前打开串口监视器，那么你可以看到如下所示的消息输出。这意味着 XIAO 现在已经**进入睡眠**。然后你也可以通过按下按键来查看并唤醒它。你还可以通过观察 **L 指示灯** 的亮灭状态来检查设备是否被唤醒。一旦被唤醒，它会呈现闪烁效果。
+如果你能在 XIAO 进入深度睡眠之前足够快地打开串口监视器，那么你可以看到如下所示的消息输出。这意味着 XIAO 现在已经**睡着**了。然后你也可以通过按下按钮来查看并唤醒它。你还可以通过观察 **L 指示灯** 的亮灭状态来检查设备是否已被唤醒。一旦被唤醒，它将呈现闪烁效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-进入深度睡眠模式后，XIAO 的端口会消失，你需要将其唤醒后才能再次看到端口号！
+进入深度睡眠模式后，XIAO 的端口会消失，你需要将其唤醒才能再次看到端口号！
 :::
 
 :::caution
-XIAO ESP32-C5 支持 GPIO 唤醒和定时器唤醒。为防止在低功耗开发过程中丧失硬件调试能力并增加固件烧录难度，强烈建议将 JTAG（MTMS、MTDI、MTCK、MTDO）引脚预留为专用用途，不要将其用作深度睡眠模式的唤醒源。
+XIAO ESP32-C5 支持 GPIO 唤醒和定时器唤醒。为防止在低功耗开发过程中丧失硬件调试能力以及增加固件烧录难度，强烈建议将 JTAG（MTMS、MTDI、MTCK、MTDO）引脚预留为专用用途，不要将其用作深度睡眠模式的唤醒源。
 :::
 
 ## 电池使用
@@ -330,8 +330,8 @@ XIAO ESP32-C5 可以使用 3.7V 锂电池作为电源输入。你可以参考下
 
 **电池使用说明：**
 
-1. 请使用符合规格要求的合格电池。
-2. 使用电池时，XIAO 仍可以通过数据线连接到你的计算机设备，请放心，XIAO 内置电路保护芯片，使用安全。
+1. 请使用符合规格的合格电池。
+2. 使用电池时，XIAO 仍可通过数据线连接到你的计算机设备，请放心，XIAO 内置电路保护芯片，使用安全。
 3. 当 XIAO ESP32-C5 由电池供电时，**C 指示灯** 会点亮。你可以以此作为判断是否进行了充电管理的依据。
 
 ### 检测电池电压
@@ -367,27 +367,27 @@ void loop() {
 
   - 此函数用于从 `BAT_VOLT_PIN` 引脚读取当前模拟电压，并返回以毫伏（mV）为单位的校准电压值。
   - 与传统的 `analogRead()` 只提供原始 ADC 数值不同，`analogReadMilliVolts()` 会自动应用芯片中内置的出厂校准参数。这带来了更高的精度、更好的电压测量线性度，并且无需手动进行 ADC 到电压的换算。
-  - 在电压采样过程中，通过 `for` 循环进行**16 次重复采样**并对结果进行累加。多次采样的目的是抑制瞬态噪声和离散误差，从而提高测量稳定性。最后将累加值除以采样次数（16），以获得更平滑、更可靠的平均电压值。
+  - 在电压采样过程中，通过 `for` 循环进行**16 次重复采样**并对结果进行累加。多次采样的目的是抑制瞬时噪声和离散误差，从而提高测量稳定性。最后将累加值除以采样次数（16），以获得更平滑、更可靠的平均电压值。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
 :::tip
-根据数据手册，ESP32-C5 的有效测量范围为 0~3300 mV。因此，XIAO ESP32-C5 内置的电池电压采集电路采用两个 100K 电阻进行分压设计，从而实现对电压值的精确读取。
+根据数据手册，ESP32-C5 的有效测量范围覆盖 0~3300 mV。因此，XIAO ESP32-C5 内置的电池电压采集电路采用两个 100K 电阻进行分压设计，从而实现对电压值的精确读取。
 :::
 
 ## 资源
 
 **硬件设计**
-- **📄[数据手册]** [Espressif ESP32-C5 Datasheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf )
-- **📄[原理图]** [XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf )
-- **🗃️[PCB 设计文件]** [XIAO ESP32-C5 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip )
-- **🗃️[PCB 设计库]** 
+- **📄[Datasheet]** [Espressif ESP32-C5 数据手册](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf )
+- **📄[Schematic]** [XIAO ESP32-C5 原理图](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf )
+- **🗃️[PCB Design Files]** [XIAO ESP32-C5 KiCad 工程](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip )
+- **🗃️[PCB Design Libraries]** 
   - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip)
   - [XIAO 系列 KiCad 原理图符号库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[引脚图]** [XIAO ESP32-C5 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/XIAO_ESP32C5_Pinout.xlsx )
+- **📄[Pinout Diagram]** [XIAO ESP32-C5 引脚分布表](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/XIAO_ESP32C5_Pinout.xlsx )
 
 **结构设计**
-- **📄[3D 模型]** [XIAO ESP32-C5 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1 )
+- **📄[3D Model]** [XIAO ESP32-C5 3D 模型](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1 )
 
 ## 技术支持与产品讨论
 

@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'API'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_pro_secondary_development_api
+link:
+  type: generated-index
+  slug: recamera_pro_secondary_development_api
+  title: API
+  description: reCamera PRO API

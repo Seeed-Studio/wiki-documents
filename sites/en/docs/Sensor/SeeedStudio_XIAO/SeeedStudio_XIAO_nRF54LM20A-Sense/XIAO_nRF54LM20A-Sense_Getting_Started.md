@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Seeed Studio XIAO nRF54LM20A Sense
+title: Getting Started with XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-13'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_getting_started/
 ---
 import Tabs from '@theme/Tabs';
@@ -169,7 +169,7 @@ Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless develo
 
 - **Streamlined Development Experience**
 
-  Full support for Nordic nRF Connect SDK and PlatformIO (Zephyr) enables efficient embedded development workflows. (Note: Arduino IDE is currently not supported)
+  Full support for Nordic nRF Connect SDK and PlatformIO (Zephyr) enables efficient embedded development workflows.
 
 ## Hardware Overview
 
@@ -178,11 +178,11 @@ Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless develo
 
 ### XIAO nRF54LM20A Front
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/XIAO_front.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/XIAO_nRF54LM20A_f.png" style={{width:800, height:'auto'}}/></div>
 
 ### XIAO nRF54LM20A Back
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/XIAO_2.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/XIAO_nRF54LM20A_back.png" style={{width:800, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="XIAO nRF54LM20A Sense" label="XIAO nRF54LM20A Sense">
@@ -322,14 +322,19 @@ pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
+
 - If you have previously used Seeed Studio XIAO series boards in PlatformIO, run the command below to update:
 
+
 ```bash
-pio pkg update -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
 ```
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_1.png" style={{width:800, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/gett_start_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
+
+
 :::tip
 
 If you want to use an existing PlatformIO project, replace the content of **platformio.ini** as follows:
@@ -662,35 +667,25 @@ The XIAO nRF54LM20A Sense features an LSM6DS3TR-C IMU with a 3-axis acceleromete
 The XIAO nRF54LM20A Sense is equipped with an MSM261DGT006 digital microphone for audio capture.
 - [XIAO nRF54LM20A MIC Usage](https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_onboard/#mic)
 
-## FAQ
+### FAQ
 
-<!-- ### Issue 1: Stuck at **Reading CMake configuration** on macOS
+**Q1: What should I do if I encounter build errors after modifying the configuration files?**
 
-When compiling and uploading programs with PlatformIO on macOS, the process may get stuck at the **Reading CMake configuration** step even after network issues have been ruled out. This is usually caused by a macOS compatibility problem that prevents the Python-based `arm-none-eabi-gdb-py` tool from running correctly.
+If you previously built the project and then modified configuration files (such as `prj.conf`, `app.overlay`, or `CMakeLists.txt`), it is recommended to clean the build cache before rebuilding. This helps avoid compilation errors caused by stale or corrupted cache files.
 
-**Recommended fix:** Replace the faulty `gdb-py` file with a symbolic link.
-
-1. Navigate to the tool directory:
-   `/Users/your_name/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/bin/`
-2. Back up the original file by renaming `arm-none-eabi-gdb-py` to `arm-none-eabi-gdb-py.broken.bak`.
-3. Create a new symbolic link named `arm-none-eabi-gdb-py` that points to `arm-none-eabi-gdb`. -->
-
-1. **Build errors after modifying configuration files**
-
-If you previously built the full Zephyr project and later modified configuration files, it is recommended to clean the build cache before rebuilding and uploading. This helps avoid compilation errors caused by stale or corrupted cache files.
+Run the following command:
 
 ```shell
-pio run -t clean  // Clean command
+pio run -t clean
 ```
 
-<!-- ### Issue 3: Build errors after modifying configuration files
+---
 
-Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html). -->
+**Q2: Why do I get `zsh: command not found: openocd` after installation? (macOS)**
 
-2. **zsh: command not found: openocd after installation**
+This issue usually occurs because the OpenOCD executable directory has not been added to your system `PATH`. You can permanently add it to your `~/.zshrc` file using the following commands.
 
-When directly entering "openocd" in the terminal, the shell will only search in the directories within the PATH; if the directory has not been added yet, it will prompt that the command cannot be found. Simply add it permanently to ~/.zshrc, following the instructions below.
-This solution is for macOS users only
+> **Note:** This solution is for **macOS only**.
 
 ```shell
 echo 'export PATH="$HOME/Library/Application Support/Seeed/OpenOCD/tool-openocd/bin:$PATH"' >> ~/.zshrc
@@ -698,14 +693,25 @@ source ~/.zshrc
 openocd --version
 ```
 
-3. **What should I do if I previously downloaded Seeed Studio XIAO series boards multiple times and now the drop-down of the Platform project fails?**
+If the version number is displayed successfully, the configuration has been completed.
 
-It is recommended to clean up before trying again. Accumulated duplicate and outdated Seeed platform folders under PlatformIO local packages cause overlong file lookup paths and version conflicts, resulting in project loading failure. Clean up redundant mixed-source Seeed platform directories according to the steps below, and only retain the official platform automatically pulled by PlatformIO to avoid conflicts caused by old and incorrect directories:
-Delete all folders starting with platform-seeed- and framework-seeed-
+---
+
+**Q3: What should I do if the PlatformIO project dropdown fails after installing the Seeed Studio XIAO platform multiple times?**
+
+
+
+If you have installed different versions of the Seeed Studio XIAO PlatformIO platform multiple times, duplicate or outdated platform packages may cause version conflicts and prevent PlatformIO projects from loading correctly.
+
+It is recommended to remove all old Seeed platform packages and let PlatformIO download the latest official version automatically.
+
+Run the following command:
 
 ```shell
 rm -rf ~/.platformio/packages/platform-seeed-* ~/.platformio/packages/framework-seeed-*
 ```
+
+After cleaning up, reopen PlatformIO and rebuild your project.
 
 ## Resources
 

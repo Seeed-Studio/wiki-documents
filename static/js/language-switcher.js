@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-02 17:22:35 (北京时间)
-// 多语言页面: 2362 个
+// 生成时间: 2026-07-20 15:21:13 (北京时间)
+// 多语言页面: 2399 个
 
 (function() {
   'use strict';
@@ -703,6 +703,13 @@
     "ja",
     "pt"
   ],
+  "/industrial_vision_monitoring_on_industrial": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Jetson-Nano-MaskCam": [
     "cn",
     "en",
@@ -912,6 +919,13 @@
     "ja",
     "pt"
   ],
+  "/rapid_prototyping_on_jetson_with_nvidia_skills": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/reComputer_Jetson_Series_Resource": [
     "cn",
     "en",
@@ -948,6 +962,13 @@
     "pt"
   ],
   "/deploy_dia_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/deploy_joyai_vl_interaction_on_jetson_thor": [
     "cn",
     "en",
     "es",
@@ -1437,6 +1458,13 @@
     "ja",
     "pt"
   ],
+  "/jetpack72_ax210_ax200_wifi_setup_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/jetpack72_deep_dive": [
     "cn",
     "en",
@@ -1452,6 +1480,13 @@
     "pt"
   ],
   "/make_diy_bsp_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic": [
     "cn",
     "en",
     "es",
@@ -3502,6 +3537,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_motion_detection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_source_localization_of_recamera_gimbal": [
     "cn",
     "en",
@@ -3635,7 +3677,152 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_imu_tilt_shake_detection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_hardware_specifications": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_imu_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_mipi_dsi_screen_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_speaker_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_uart_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_device-and-system": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_network": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_authentication": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_common_conventions": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_error_codes": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_quick_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_ai_inference": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_device_info": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_live_preview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_live_view": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_record_settings": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_terminal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_acoustic_lab_usage": [
     "cn",
     "en",
     "es",
@@ -3699,6 +3886,13 @@
     "pt"
   ],
   "/recamera_connects_to_xiao_via_http": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/train_classification_model_online": [
     "cn",
     "en",
     "es",
@@ -4118,6 +4312,13 @@
     "ja",
     "pt"
   ],
+  "/lora_antenna_selection_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/semtech_lr2021_evk_getting_started": [
     "cn",
     "en",
@@ -4357,6 +4558,27 @@
     "pt"
   ],
   "/meshtastic_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/x1_get_started_for_meshtastic": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtracker_x1_intro": [
     "cn",
     "en",
     "es",
@@ -5602,6 +5824,13 @@
     "ja",
     "pt"
   ],
+  "/soarm_amazinghand_teleop": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sound_follow_robot": [
     "cn",
     "en",
@@ -6058,6 +6287,13 @@
     "pt"
   ],
   "/rebot_arm_b601_rs_grasping_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_isaacsim": [
     "cn",
     "en",
     "es",
@@ -8206,6 +8442,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_work_with_lvgl": [
     "cn",
     "en",
     "es",
@@ -11186,6 +11429,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_clip_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_clip_python_control": [
     "cn",
     "en",
@@ -12587,6 +12837,13 @@
     "pt"
   ],
   "/xiao_nrf54lm20a_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_arduino": [
     "cn",
     "en",
     "es",

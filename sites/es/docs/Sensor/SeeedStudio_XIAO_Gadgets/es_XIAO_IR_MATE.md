@@ -14,14 +14,14 @@ last_update:
   author: TienjuiWong
   date: 07/17/2025
 createdAt: '2025-07-18'
-updatedAt: '2026-02-04'
+updatedAt: '2026-07-14'
 url: https://wiki.seeedstudio.com/es/XIAO_IR_Mate_Smart_IR_Remote/
 ---
 
 
 # Primeros pasos con XIAO IR Mate Smart IR Remote (Para Home Assistant)
 
-Bienvenido a **XIAO IR Mate Smart IR Remote**\! Este dispositivo está especialmente diseñado para usuarios de Home Assistant, con el objetivo de proporcionar una solución de control remoto por infrarrojos inteligente, integrada y eficiente. A través de esta guía, aprenderás a configurar el dispositivo, conectarlo a tu red doméstica, integrarlo en Home Assistant y desbloquear todo su potencial, desde el aprendizaje básico de señales hasta el control avanzado de aire acondicionado inteligente.
+Bienvenido a **XIAO IR Mate Smart IR Remote**\! Este dispositivo está especialmente diseñado para usuarios de Home Assistant, con el objetivo de proporcionar una solución de control remoto por infrarrojos inteligente, eficiente e integrada. A través de esta guía, aprenderás cómo configurar el dispositivo, conectarlo a tu red doméstica, integrarlo en Home Assistant y desbloquear todo su potencial, desde el aprendizaje básico de señales hasta el control avanzado de aire acondicionado inteligente.
 
 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
   <img
@@ -38,7 +38,7 @@ Bienvenido a **XIAO IR Mate Smart IR Remote**\! Este dispositivo está especialm
 
 ## Introducción
 
-El **XIAO IR Mate** es un módulo compacto de infrarrojos inteligente basado en **Seeed Studio XIAO ESP32-C3**. Integra transmisión y recepción por infrarrojos, detección táctil, retroalimentación por vibración e indicación de estado. Conectado vía Wi‑Fi, puede integrarse perfectamente en tu ecosistema de hogar inteligente con Home Assistant. Su misión principal es hacer "inteligentes" todos tus electrodomésticos tradicionales que usan mandos a distancia por infrarrojos (como televisores, aires acondicionados, ventiladores, etc.) y permitirte controlarlos mediante HA para automatizaciones.
+El **XIAO IR Mate** es un módulo compacto de infrarrojos inteligente basado en **Seeed Studio XIAO ESP32-C3**. Integra transmisión y recepción por infrarrojos, detección táctil, retroalimentación por vibración e indicación de estado. Conectado vía Wi-Fi, puede integrarse perfectamente en tu ecosistema de hogar inteligente con Home Assistant. Su misión principal es hacer "inteligentes" todos tus electrodomésticos tradicionales que usan mandos a distancia por infrarrojos (como televisores, aires acondicionados, ventiladores, etc.) y permitirte controlarlos mediante HA para automatizaciones.
 
 <div style={{
   display: 'grid',
@@ -68,16 +68,16 @@ Incluye un motor de vibración y un LED indicador. Las vibraciones cortas confir
 
 - **Actualizable a un controlador de aire acondicionado inteligente avanzado**
 
-Flashea firmware personalizado para transformar IR Mate en un mando inteligente para aire acondicionado. Configura temperatura precisa, modo y velocidad del ventilador directamente en Home Assistant, con generación automática de códigos IR, eliminando el aprendizaje repetitivo.
+Flashea firmware personalizado para transformar IR Mate en un mando inteligente para aire acondicionado. Configura temperatura, modo y velocidad del ventilador con precisión directamente en Home Assistant, con generación automática de códigos IR, eliminando el aprendizaje repetitivo.
 
-- **Diseño compacto, alimentado por USB‑C**
+- **Diseño compacto, alimentado por USB-C**
 
-## Descripción del hardware
+## Descripción general del hardware
 
 Comprender los componentes básicos del dispositivo te ayudará a utilizarlo mejor:
 
-- **Controlador principal**: Seeed Studio XIAO ESP32-C3, que proporciona un rendimiento potente y conectividad Wi‑Fi.
-- **Alimentación**: Alimentado a través del puerto Type‑C integrado (5V).
+- **Controlador principal**: Seeed Studio XIAO ESP32-C3, que proporciona un rendimiento potente y conectividad Wi-Fi.
+- **Alimentación**: Alimentado a través del puerto Type-C integrado (5V).
 - **Emisor de infrarrojos**: 3 LED de infrarrojos de alta potencia (usando el pin D1), que garantizan transmisión de señal de 360° sin puntos ciegos.
 - **Receptor de infrarrojos**: 1 receptor de infrarrojos de alta precisión (usando el pin D2), para aprender señales de otros mandos.
 - **Sensor táctil**: El dispositivo integra un módulo táctil (usando el pin D3). Un solo toque activa una vibración corta (0,5 segundos) como retroalimentación de operación.
@@ -85,17 +85,17 @@ Comprender los componentes básicos del dispositivo te ayudará a utilizarlo mej
 - **LED indicador de estado**: Una luz LED (usando el pin D5) para indicar los diferentes estados de funcionamiento del dispositivo.
 - **Botón de reinicio**: Un botón físico en el dispositivo (conectado al pin D0), utilizado para reiniciar o restaurar a valores de fábrica.
 
-## Primer uso y configuración de red (firmware de fábrica)
+## Primer uso y configuración de red (Firmware de fábrica)
 
-Cuando recibas el dispositivo por primera vez, sigue estos pasos para completar la configuración inicial.
+Cuando obtengas el dispositivo por primera vez, sigue estos pasos para completar la configuración inicial.
 
 ### Paso 1: Encender
 
-Utiliza un cable USB Type‑C estándar para alimentar el dispositivo. Después del arranque, el dispositivo entrará en un estado de espera de configuración y verás el **LED blanco parpadeando a una frecuencia de 1 Hz**.
+Utiliza un cable USB Type-C estándar para alimentar el dispositivo. Después del arranque, el dispositivo entrará en un estado de espera de configuración y verás el **LED blanco parpadeando a una frecuencia de 1 Hz**.
 
 ### Paso 2: Entrar en modo de aprovisionamiento AP
 
-Cuando la red no está configurada, el dispositivo creará automáticamente un punto de acceso Wi‑Fi (AP) llamado **XIAO IR Mate** (o **Seeed_ir**, dependiendo de lo que encuentres).
+Cuando la red no está configurada, el dispositivo creará automáticamente un punto de acceso Wi-Fi (AP) llamado **XIAO IR Mate** (o **Seeed_ir**, dependiendo de lo que encuentres).
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect.png"
@@ -105,15 +105,15 @@ Cuando la red no está configurada, el dispositivo creará automáticamente un p
 
 ### Paso 3: Conectarse al punto de acceso y configurar la red
 
-1. Abre la configuración de Wi‑Fi en tu teléfono u ordenador, busca y conéctate a la red llamada **XIAO IR Mate**.
+1. Abre la configuración de Wi-Fi en tu teléfono u ordenador, busca y conéctate a la red llamada **XIAO IR Mate**.
 
 :::note
 El punto de acceso tiene una contraseña de red predeterminada de ‘12345678’.
 :::
 
-2. Tras una conexión correcta, tu dispositivo normalmente abrirá automáticamente una página de configuración. Si no lo hace, abre manualmente un navegador y visita **[http://192.168.4.1](http://192.168.4.1)**.
-3. En esta página, verás una lista de redes Wi‑Fi. Selecciona la **red Wi‑Fi de 2,4 GHz (SSID)** de tu hogar e introduce la contraseña correcta.
-4. Haz clic en "Connect" o "Save". El dispositivo intentará conectarse a la red Wi‑Fi que proporcionaste.
+2. Después de una conexión exitosa, tu dispositivo normalmente abrirá automáticamente una página de configuración. Si no lo hace, abre manualmente un navegador y visita **[http://192.168.4.1](http://192.168.4.1)**.
+3. En esta página, verás una lista de redes Wi-Fi. Selecciona la **red Wi-Fi de 2,4 GHz (SSID)** de tu hogar e introduce la contraseña correcta.
+4. Haz clic en "Connect" o "Save". El dispositivo intentará conectarse a la red Wi-Fi que proporcionaste.
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect_02.png"
@@ -121,9 +121,9 @@ El punto de acceso tiene una contraseña de red predeterminada de ‘12345678’
   style={{ display: 'block', margin: 'auto' }}
 />
 
-### Paso 4: Conexión correcta
+### Paso 4: Conexión exitosa
 
-Una vez que el dispositivo se conecte correctamente a tu red Wi‑Fi doméstica, el punto de acceso AP se apagará automáticamente y la **luz indicadora de estado quedará fija encendida**. La configuración de red ya está completa.
+Una vez que el dispositivo se conecte correctamente a tu Wi-Fi doméstico, el punto de acceso AP se apagará automáticamente y la **luz indicadora de estado quedará fija encendida**. La configuración de red ya está completa.
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect_03.png"
@@ -131,12 +131,12 @@ Una vez que el dispositivo se conecte correctamente a tu red Wi‑Fi doméstica,
   style={{ display: 'block', margin: 'auto' }}
 />
 
-## Integración con Home Assistant (firmware de fábrica)
+## Integración con Home Assistant (Firmware de fábrica)
 
 El firmware del dispositivo está basado en **ESPHome**, lo que hace que sea muy fácil integrarlo en Home Assistant.
 
-1. **Detección automática**: Asegúrate de que tu host de Home Assistant y el XIAO IR Mate estén conectados a la misma red local. Normalmente, HA detectará automáticamente los nuevos dispositivos ESPHome. Verás una notificación en **Settings \> Devices & Services** que dice "New device discovered".
-2. **Adición manual**: Si no se detecta automáticamente, puedes hacer clic en el botón **[Add Integration]** en la esquina inferior derecha, buscar **"ESPHome"** y luego introducir el nombre de host del dispositivo (por ejemplo, **xiao-ir-mate**) o la dirección IP para añadirlo manualmente.
+1. **Descubrimiento automático**: Asegúrate de que tu host de Home Assistant y el XIAO IR Mate estén conectados a la misma red local. Normalmente, HA descubrirá automáticamente los nuevos dispositivos ESPHome. Verás una notificación en **Settings \> Devices & Services** que dice "New device discovered".
+2. **Adición manual**: Si no se descubre automáticamente, puedes hacer clic en el botón **[Add Integration]** en la esquina inferior derecha, buscar **"ESPHome"** y luego introducir el nombre de host del dispositivo (por ejemplo, **xiao-ir-mate**) o la dirección IP para añadirlo manualmente.
 
 <div style={{textAlign:'center'}}>
   <img
@@ -164,7 +164,7 @@ El firmware del dispositivo está basado en **ESPHome**, lo que hace que sea muy
   />
 </div>
 
-3. **Panel del dispositivo**: Tras añadirlo correctamente, XIAO IR Mate aparecerá como un dispositivo en HA. Su panel contendrá las siguientes entidades para controlar 10 señales de infrarrojos diferentes:
+3. **Panel del dispositivo**: Después de añadirlo correctamente, el XIAO IR Mate aparecerá como un dispositivo en HA. Su panel contendrá las siguientes entidades para controlar 10 señales de infrarrojos diferentes:
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/homeassistant_07.png"
@@ -172,9 +172,9 @@ El firmware del dispositivo está basado en **ESPHome**, lo que hace que sea muy
   style={{ display: 'block', margin: 'auto' }}
 />
 
-## Detalles de las funciones principales (firmware de fábrica)
+## Detalles de las funciones principales (Firmware de fábrica)
 
-Si quieres restaurar tu dispositivo o actualizar su firmware, puedes ir a través del botón de abajo. Hemos creado una página dedicada al firmware de flasheo directo de XIAO Gadget.
+Si deseas restaurar tu dispositivo o actualizar su firmware, puedes ir a través del botón de abajo. Hemos creado una página dedicada al firmware de flasheo directo de XIAO Gadget.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://gadgets.seeed.cc/" target="_blank" rel="noopener noreferrer">
@@ -189,10 +189,10 @@ Cuando necesites enseñar al IR Mate un nuevo comando del mando a distancia, sig
 1. En el panel del dispositivo de Home Assistant, primero busca la lista desplegable de selección llamada **"Signal"**.
 2. Haz clic en la lista desplegable y selecciona la ranura de señal que quieras usar, por ejemplo, **"signal_1"**.
 3. Una vez seleccionada, busca el botón **"Learn"** y haz clic en **"PRESS"** junto a él.
-4. XIAO IR Mate entrará ahora en modo de aprendizaje y comenzará a **vibrar continuamente**, indicando que puedes empezar a emparejar.
+4. El XIAO IR Mate entrará ahora en modo de aprendizaje y comenzará a **vibrar continuamente**, indicando que puedes empezar a emparejar.
 5. Apunta tu mando original a la ventana del receptor de infrarrojos del IR Mate y pulsa brevemente el botón que quieras aprender.
-6. Después de que IR Mate reciba y registre correctamente la señal, la **vibración se detendrá**, lo que significa que el aprendizaje se ha realizado correctamente.
-7. En este punto, un indicador de estado llamado **"Is Learned Signal"** cambiará automáticamente a "ON", indicando que la ranura de señal actualmente seleccionada en la lista desplegable (es decir, "signal_1") ahora tiene una señal almacenada.
+6. Después de que el IR Mate reciba y registre la señal correctamente, la **vibración se detendrá**, lo que significa que el aprendizaje se ha realizado con éxito.
+7. En este punto, un indicador de estado llamado **"Is Learned Signal"** se pondrá automáticamente en "ON", indicando que la ranura de señal actualmente seleccionada en la lista desplegable (es decir, "signal_1") ahora tiene una señal almacenada.
 
 ### Envío de señales IR
 
@@ -230,20 +230,20 @@ Además del control desde HA, también puedes comprender y controlar el disposit
 
 ## Uso avanzado - Control inteligente de aire acondicionado
 
-El modo básico de "grabación‑reproducción" proporcionado por el firmware de fábrica es universal, pero puede resultar torpe al controlar dispositivos con múltiples estados como los aires acondicionados (temperatura, modo, velocidad del ventilador, etc.). Para lograr un control de AC más fino e inteligente, podemos flashear un firmware ESPHome especializado para transformar el XIAO IR Mate de un "repetidor de señales IR" en un verdadero "controlador inteligente de aire acondicionado".
+El modo básico de "grabación-reproducción" proporcionado por el firmware de fábrica es universal, pero puede resultar torpe al controlar dispositivos con múltiples estados como los aires acondicionados (temperatura, modo, velocidad del ventilador, etc.). Para lograr un control de aire acondicionado más fino e inteligente, podemos flashear un firmware especializado de ESPHome para transformar el XIAO IR Mate de un "repetidor de señales IR" en un verdadero "controlador inteligente de aire acondicionado".
 
-En este capítulo, usaremos un aire acondicionado Gree como ejemplo detallado, pero esto no es en absoluto la única opción. El potente ecosistema de ESPHome admite numerosas marcas de aire acondicionado, y puedes seguir fácilmente los conceptos de esta guía, realizando pequeños cambios en el código de configuración, para lograr un control inteligente de otras marcas como Midea, Daikin, Panasonic y más.
+En este capítulo, utilizaremos un aire acondicionado Gree como ejemplo detallado, pero esto no es en absoluto la única opción. El potente ecosistema de ESPHome admite numerosas marcas de aire acondicionado, y puedes seguir fácilmente los conceptos de esta guía, realizando pequeños cambios en el código de configuración, para lograr un control inteligente de otras marcas como Midea, Daikin, Panasonic y más.
 
 ### Ventajas principales
 
-- **Control con estado**: No más simples reproducciones. Puedes establecer directamente "24°C, Frío, Ventilador automático" en HA, y el dispositivo generará y enviará de inmediato el comando infrarrojo correcto.
+- **Control con estado**: No más simples reproducciones. Puedes establecer directamente "24°C, Frío, Ventilador automático" en HA, y el dispositivo generará y enviará inmediatamente el comando infrarrojo correcto.
 - **Interfaz más amigable**: Aparece como una tarjeta de Clima estándar en HA, lo que hace que la operación sea intuitiva.
 - **Ahorro de espacio**: No es necesario aprender una señal independiente para cada temperatura o modo; una sola configuración puede controlar todas las funciones del aire acondicionado.
 
 ### Requisitos previos
 
-1. **Instalar ESPHome**: Si aún no lo has hecho, instala e inicia el complemento ESPHome desde la tienda de complementos de Home Assistant.
-2. **Obtener el protocolo de tu marca de AC**: ESPHome admite muchos protocolos de marcas de AC (como Gree, Midea, Daikin, etc.). Necesitas conocer la marca de tu aire acondicionado para seleccionar el protocolo correcto.
+1. **Instalar ESPHome**: Si aún no lo has hecho, instala e inicia el complemento ESPHome desde la Tienda de complementos de Home Assistant.
+2. **Obtener el protocolo de tu marca de aire acondicionado**: ESPHome admite muchos protocolos de marcas de aire acondicionado (como Gree, Midea, Daikin, etc.). Necesitas conocer la marca de tu aire acondicionado para seleccionar el protocolo correcto.
 
 ### Flasheo de firmware personalizado
 
@@ -297,18 +297,15 @@ api:
 
 ota:
   platform: esphome
-  password: "15afb09b5aba7b3d6a6ba01180c60df5"  # Change this to your desired password
 
 wifi:
-  # ssid: !secret wifi_ssid
-  # password: !secret wifi_password
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
   on_connect:
     - globals.set: {id: is_wifi_connected, value: 'true'}
     - light.turn_on: rgb_light
   on_disconnect:
     - globals.set: {id: is_wifi_connected, value: 'false'}
-  ap:
-    password: "12345678"
 
 captive_portal:
 
@@ -316,15 +313,16 @@ remote_transmitter:
   id: default_ir_transmitter
   pin: GPIO3
   carrier_duty_percent: 50%
-  rmt_channel: 0
+  rmt_symbols: 48
+  non_blocking: false
 
 remote_receiver:
   id: default_ir_receiver
   pin:
     number: GPIO4
     inverted: true
-  rmt_channel: 2
   dump: raw # Keep for learning or debugging other infrared codes
+  rmt_symbols: 96
 
 # Gree Climate Control
 climate:
@@ -412,7 +410,7 @@ light:
     rgb_order: GRB
     pin: GPIO7
     num_leds: 1
-    rmt_channel: 1
+    rmt_symbols: 48
     chipset: ws2812
     name: "RGB Status Light"
     id: rgb_light
@@ -536,7 +534,7 @@ interval:
 
 3. **Personaliza tu configuración**
       - **Wi-Fi**: Si no utilizas archivos `!secret`, descomenta la sección `wifi:` y reemplaza `Your_WiFi_SSID` y `Your_WiFi_Password` con la información de tu propia red Wi‑Fi.
-      - **Selecciona el protocolo de CA correcto**: ¡Este es el paso más crítico\! El ejemplo usa `platform: gree`. Si tu aire acondicionado no es Gree, reemplázalo por la plataforma de tu marca. ¿Cómo encontrar las marcas compatibles? Visita la página de [Componentes de Clima de ESPHome](https://esphome.io/components/climate/index.html), que enumera todas las marcas compatibles y sus nombres de plataforma (por ejemplo, `daikin`, `midea`, `panasonic_ac`, etc.).
+      - **Selecciona el protocolo de CA correcto**: ¡Este es el paso más crítico\! El ejemplo usa `platform: gree`. Si tu aire acondicionado no es Gree, reemplázalo con la plataforma de tu marca. ¿Cómo encontrar las marcas compatibles? Visita la página de [Componentes de Clima de ESPHome](https://esphome.io/components/climate/index.html), que enumera todas las marcas compatibles y los nombres de sus plataformas (por ejemplo, `daikin`, `midea`, `panasonic_ac`, etc.).
           - Después de seleccionar la plataforma correspondiente, es posible que también necesites ajustar parámetros como `model` o los modos compatibles según la documentación de esa plataforma.
 4. **Compilar y flashear**
       - Guarda tu configuración YAML.
@@ -552,23 +550,23 @@ Después de flashear y reiniciar, tu dispositivo aparecerá en Home Assistant co
 
 ### Mirando más allá: abre tu mente
 
-¡Enhorabuena! A estas alturas ya dominas los dos usos principales del XIAO IR Mate: uno es la función lista para usar de "aprendizaje de mando universal", y el otro es el modo de "controlador de clima profesional" para un control preciso del aire acondicionado.
+¡Enhorabuena! A estas alturas ya dominas los dos usos principales del XIAO IR Mate: uno es la función "aprendizaje de mando universal" lista para usar, y el otro es el modo de "controlador de clima profesional" para un control preciso del aire acondicionado.
 
-Pero no te detengas ahí, porque esto es solo el comienzo. La verdadera diversión del XIAO IR Mate reside en su increíble flexibilidad. Piénsalo como un "bloque de construcción creativo" definido por ti, que puedes usar para crear cosas que van mucho más allá de tu imaginación. Aquí tienes dos ideas rompedoras para inspirarte:
+Pero no te detengas aquí, porque esto es solo el comienzo. La verdadera diversión del XIAO IR Mate reside en su increíble flexibilidad. Piénsalo como un "bloque de construcción creativo" definido por ti, que puedes usar para crear cosas mucho más allá de tu imaginación. Aquí tienes dos ideas que te abrirán la mente para inspirarte:
 
 #### Idea 1: Revive mandos antiguos como interruptores universales de escenas
 
 **Escenario de aplicación**
 
-Mira a tu alrededor. ¿Tienes muchos mandos antiguos sin usar por ahí? Mandos de televisores viejos, DVD o equipos de música, con muchos botones y un tacto estupendo, que ahora solo acumulan polvo en un cajón. ¿No sería genial poder usar los botones de esos mandos para controlar tus luces inteligentes, el robot aspirador o incluso complejas escenas de "bienvenida a casa"?
+Mira a tu alrededor. ¿Tienes muchos mandos antiguos sin usar por ahí? Mandos de televisores, reproductores de DVD o equipos de música antiguos, con un montón de botones y una gran sensación al tacto, que ahora solo acumulan polvo en un cajón. ¿No sería genial poder usar los botones de esos mandos para controlar tus luces inteligentes, el robot aspirador o incluso complejas escenas de "bienvenida a casa"?
 
 **Cómo funciona**
 
-La clave de esta idea es transformar el XIAO IR Mate de un "transmisor" en un "oyente". Ya no controla activamente otros dispositivos, sino que escucha en silencio las señales de cualquier mando antiguo y luego le dice a Home Assistant: "He oído una señal, ¡tú decides qué hacer!"
+La esencia de esta idea es transformar el XIAO IR Mate de un "transmisor" a un "oyente". Ya no controla activamente otros dispositivos, sino que escucha en silencio las señales de cualquier mando antiguo y luego le dice a Home Assistant: "He oído una señal, ¡tú decides qué hacer!"
 
 - **Pasos de implementación**
 
-  1. **Configura un firmware "oyente":** En tu firmware de ESPHome, la configuración principal es el componente `remote_receiver`. La única tarea del dispositivo tras encenderse es "prestar atención" a las señales IR.
+  1. **Configura un firmware de "oyente":** En tu firmware de ESPHome, la configuración principal es el componente `remote_receiver`. La única tarea del dispositivo tras encenderse es "prestar atención" a las señales IR.
 
   2. **Identifica el "código secreto" de cada botón:** Coge un mando antiguo y pulsa cualquier botón apuntando al dispositivo. En los registros de ESPHome verás el código IR único del botón (como una cadena de datos `RAW` o un código de protocolo `NEC`). Anota este "código secreto".
 
@@ -580,19 +578,19 @@ La clave de esta idea es transformar el XIAO IR Mate de un "transmisor" en un "o
 
      - Cuando detecte el **botón "Play" de un Apple Remote** -> **Enciende la luz del baño**.
 
-     - Cuando detecte el **botón "Red" del mando del DVD** -> Ejecuta la escena de "Modo Ausente".
+     - Cuando detecte el **botón "Red" del mando del DVD** -> Ejecuta la escena "Modo Ausente".
 
 - **Ventajas de este enfoque**
 
   - **Reutilización y respeto al medio ambiente:** Da nueva vida a hardware en desuso, devolviendo a la actividad residuos electrónicos, lo que ahorra dinero y es bueno para el medio ambiente.
 
-  - **Verdadera experiencia táctil de botones:** En comparación con una pantalla táctil, un mando físico con docenas de botones diferenciados y con buen tacto es más directo y satisfactorio en muchos escenarios.
+  - **Verdadera experiencia táctil de botones:** En comparación con una pantalla táctil, un mando físico con docenas de botones diferenciados y con buena sensación al pulsarlos es más directo y satisfactorio en muchos escenarios.
 
   - **Alto Factor de Aceptación de la Esposa (WAF):** Para los miembros de la familia que no están acostumbrados a las apps del móvil o a los altavoces inteligentes (como personas mayores o niños), decirles "pulsa este botón para encender la luz" es la forma de interacción más intuitiva y fácil de aprender.
 
-  - **Un "interruptor inteligente" que no necesita recargarse:** Las pilas de un mando tradicional suelen durar uno o dos años, lo que es mucho más cómodo que muchos gadgets inteligentes que necesitan recargarse con frecuencia.
+  - **Un "interruptor inteligente" que no necesita recargarse:** Las pilas de un mando tradicional suelen durar uno o dos años, lo que es mucho más cómodo que muchos dispositivos inteligentes que necesitan recargarse con frecuencia.
 
-#### **Idea 2: Crea un "botón mágico IoT" universal**
+#### **Idea 2: Crea un "botón mágico" IoT universal**
 
 **Concepto central**
 
@@ -600,41 +598,41 @@ La clave de esta idea es transformar el XIAO IR Mate de un "transmisor" en un "o
 
 - **Pasos de implementación**
 
-  1. **Haz que el botón sea solo un "reportero":** En el firmware, configura el botón táctil (para toque simple, doble toque y pulsación prolongada) para que no realice ninguna tarea específica, sino que solo envíe una "notificación de evento" a Home Assistant. Por ejemplo, con un doble toque, simplemente informa a HA: "¡Eh! ¡Me han hecho doble toque!"
+  1. **Haz que el botón sea solo un "reportero":** En el firmware, configura el botón táctil (para pulsación simple, doble pulsación, pulsación prolongada) para que no realice ninguna tarea específica, sino que solo envíe una "notificación de evento" a Home Assistant. Por ejemplo, con una doble pulsación, simplemente informa a HA: "¡Eh! ¡Me han hecho doble pulsación!"
 
   2. **Deja que HA sea el "comandante":** En Home Assistant, crea automatizaciones que escuchen específicamente estos distintos "informes" (eventos) del botón.
 
   3. **Conecta todo, haz cualquier cosa:** Una vez que HA recibe un informe, ¡puede ordenar que actúe cualquier dispositivo de tu casa!
 
-     - Recibe un informe de **"toque simple"** -> Conmuta todas las **luces Zigbee** de la casa entre encendidas y apagadas.
+     - Recibe un informe de **"pulsación simple"** -> Conmuta todas las **luces Zigbee** de la casa entre encendidas y apagadas.
 
-     - Recibe un informe de **"doble toque"** -> Ordena al **robot aspirador** que empiece a limpiar.
+     - Recibe un informe de **"doble pulsación"** -> Ordena al **robot aspirador** que empiece a limpiar.
 
      - Recibe un informe de **"pulsación prolongada"** -> Ejecuta una escena de "Modo Cine", cerrando las cortinas, atenuando las luces y encendiendo el proyector y el sistema de sonido.
 
 - **Ventajas de este enfoque**
 
-  - **Rompe fronteras, posibilidades infinitas:** Tu botón táctil deja de ser solo parte de un "mando IR" para convertirse en un interruptor físico para toda tu casa inteligente, capaz de controlar cualquier dispositivo conectado a HA.
+  - **Rompe fronteras, posibilidades infinitas:** Tu botón táctil ya no es solo parte de un "mando IR", sino un interruptor físico para toda tu casa inteligente, capaz de controlar cualquier dispositivo conectado a HA.
 
-  - **Define con flexibilidad, cambia cuando quieras:** ¿Hoy un doble toque inicia el aspirador, pero mañana quieres que reproduzca música? Solo edita la automatización en la interfaz de HA, sin necesidad de tocar el firmware.
+  - **Define con flexibilidad, cambia cuando quieras:** Hoy una doble pulsación inicia el robot aspirador, pero mañana quieres que reproduzca música. Solo tienes que editar la automatización en la interfaz de HA, sin necesidad de tocar el firmware.
 
   - **La interacción más intuitiva:** Dale a tu familia la forma más sencilla de controlar las cosas. Un botón físico con respuesta háptica suele ser mucho más cómodo y elegante que abrir una app en el móvil.
 
-En resumen, no veas el XIAO IR Mate solo como una herramienta IR. Piénsalo como un mini‑robot conectado a Wi‑Fi, con sentido del tacto y una "voz" (el emisor IR). ¡Lo que puede hacer solo está limitado por tu imaginación!
+En resumen, no veas el XIAO IR Mate solo como una herramienta IR. Piénsalo como un mini robot conectado a Wi‑Fi, con sentido del tacto y una "voz" (el emisor IR). ¡Lo que puede hacer solo está limitado por tu imaginación!
 
 ## Preguntas frecuentes (FAQ)
 
 > **P: ¿Por qué no puedo encontrar el hotspot del XIAO IR Mate en mi teléfono?**
-> **R:** Por favor, confirma que el dispositivo está correctamente alimentado mediante Type‑C. Comprueba si el LED blanco está parpadeando. Si la luz está apagada, intenta cambiar el cable o la fuente de alimentación. Si el dispositivo ya se ha configurado correctamente en una red anteriormente, no creará de nuevo un hotspot AP a menos que falle la conexión de red o se haya restablecido a valores de fábrica manteniendo pulsado el botón RESET.
+> **R:** Por favor, confirma que el dispositivo está correctamente alimentado mediante Type‑C. Comprueba si el LED blanco está parpadeando. Si la luz está apagada, intenta cambiar el cable o la fuente de alimentación. Si el dispositivo ya se ha configurado correctamente en una red antes, no creará de nuevo un hotspot AP a menos que falle la conexión de red o se haya restablecido a valores de fábrica manteniendo pulsado el botón RESET.
 
 > **P: ¿Qué debo hacer si falla el aprendizaje IR? (Firmware de fábrica)**
-> **R:** Asegúrate de que el mando original tenga suficiente batería y que lo sostengas lo más cerca posible del receptor del IR Mate (normalmente el componente negro semitransparente). Además, evita realizar el proceso de aprendizaje bajo luz intensa o cerca de otras fuentes de interferencia infrarroja.
+> **R:** Asegúrate de que el mando original tenga suficiente batería y se mantenga lo más cerca posible del receptor del IR Mate (normalmente el componente negro semitransparente). Además, evita realizar el proceso de aprendizaje bajo luz intensa o cerca de otras fuentes de interferencia infrarroja.
 
 > **P: ¿El dispositivo aparece como desconectado en HA?**
 > **R:** Comprueba que tu red Wi‑Fi doméstica funcione correctamente y que el IR Mate esté dentro del alcance de la señal Wi‑Fi. Puedes intentar pulsar brevemente el botón RESET para reiniciar el dispositivo.
 
 > **P: Después de flashear firmware personalizado, ¿cómo restauro el firmware de fábrica?**
-> **R:** Necesitarás obtener el archivo `.bin` del firmware de fábrica o su archivo fuente YAML de ESPHome, y luego flashearlo de nuevo mediante ESPHome para sobrescribir el firmware personalizado.
+> **R:** Necesitarías obtener el archivo `.bin` del firmware de fábrica o su archivo fuente YAML de ESPHome, y luego flashearlo de nuevo mediante ESPHome para sobrescribir el firmware personalizado.
 
 > **P: ¿Cómo uso las señales aprendidas (firmware de fábrica) o el control de CA (firmware avanzado) en automatizaciones?**
 > **R:** En el editor de automatizaciones o scripts de HA, elige "Call service".
@@ -646,7 +644,7 @@ En resumen, no veas el XIAO IR Mate solo como una herramienta IR. Piénsalo como
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte distintos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

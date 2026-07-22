@@ -15,7 +15,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp
 slug: /deploy_depth_anything_v3_jetson_agx_orin
 last_update:
-  date: 2026-01-09T00:00:00.000Z
+  date: 2026-01-09
   author: Zibo
 createdAt: '2026-01-09'
 updatedAt: '2026-03-20'

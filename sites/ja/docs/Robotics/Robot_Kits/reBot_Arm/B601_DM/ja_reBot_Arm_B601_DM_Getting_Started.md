@@ -11,13 +11,12 @@ keywords:
   - 6 DOF
 slug: /rebot_b601_dm_getting_started
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 last_update:
-  date: 2026-04-13T00:00:00.000Z
+  date: 2026-04-13
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-07-01'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/ja/rebot_b601_dm_getting_started/
 ---
 
@@ -155,7 +154,7 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 #### ソフトウェア
 
-- [DM_Tools_v.2.1.6.8.exe（Windows のみ対応）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool_v2.1.6.8.zip)
+- [ソフトウェアのダウンロードリンク](https://github.com/dmBots/motor-debugging-tool)
 
 
 #### モーター ID の書き込みと有効化テスト
@@ -178,7 +177,7 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 1. **DM_Tools** ホストソフトウェアを起動し、対応する USB COM ポートを選択して、ボーレートを `921600` に設定します。接続に成功すると、`Serial` インターフェースに情報が表示されます。
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_connect_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_damiao_tool_en.png" width="800" />
 </div>
 
 2. 3 ピンケーブルを使用して、Motor 1 を USB-CAN アダプタボードに接続します。
@@ -188,13 +187,17 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 4. 設定が完了したら、`Write Parameters` をクリックしてパラメータを保存します。
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_id_set_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_damiao_tool_en.png" width="800" />
 </div>
+
+:::tip
+The USB mode in the orange box on the left represents the method used when reading and writing motor parameters on the current settings page.
+:::
 
 5.`Debug`インターフェースに移動します。`CAN ID` と `Master ID` が正しく設定されていることを確認したら、`Enable` をクリックします。モーターのインジケーターランプが緑色の点灯に変わり、モーターが有効になったことを示します。これでモーター1のテストは完了です。
 
 <div align="center">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/motor_enable_en.png" width="800" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_damiao_tool_en.png" width="800" />
 </div>
 
 :::tip

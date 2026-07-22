@@ -1,5 +1,5 @@
 ---
-title:  Migración del modelo de reconocimiento de gestos de mano de MediaPipe a reCamera
+title: Migración del modelo de reconocimiento de gestos de mano de MediaPipe a reCamera
 description: Este documento describe cómo migrar completamente el conjunto oficial de reconocimiento de gestos de mano de Google MediaPipe a reCamera (Sophon/Bitmain SG200X), construyendo una canalización de "detección de palma → detección de puntos de referencia → incrustación → clasificación" y transmitiendo los resultados a un PC vía UDP para su visualización.
 keywords:
   - reCamera

@@ -7,11 +7,11 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /xiao_esp32c5_getting_started
 last_update:
-  date: 11/26/2025
+  date: 7/9/2026
   author: Zeller
   sidebar_position: 0
 createdAt: '2025-12-15'
-updatedAt: '2026-05-27'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/
 ---
 ## Introduction
@@ -167,7 +167,7 @@ To enable you to get started with the XIAO ESP32-C5 faster, please read the hard
 
 You need to prepare the following:
 
-- 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
+- 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html)
 - 1 x Computer
 - 1 x USB Type-C cable
 

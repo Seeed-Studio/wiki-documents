@@ -1,27 +1,27 @@
 ---
 title: XIAO IR Mate 智能红外遥控器快速上手
 description: |
-  一款来自 Seeed Studio 的智能红外遥控器，旨在将电视、空调等传统家电集成到你的 Home Assistant 智能家居生态系统中。
+  一款来自 Seeed Studio 的智能红外遥控器，旨在将电视、空调等传统家电无缝接入你的 Home Assistant 智能家居生态系统。
 image: https://files.seeedstudio.com/wiki/XIAO_IR_MATE/XIAO-Smart-IR-Mate.webp
 slug: /XIAO_IR_Mate_Smart_IR_Remote
 sku: 109990586
 keywords:
   - XIAO
   - Home Assistant
-  - 智能家居
+  - Smart Home
 sidebar_position: 5
 last_update:
   author: TienjuiWong
   date: 07/17/2025
 createdAt: '2025-07-18'
-updatedAt: '2026-02-04'
+updatedAt: '2026-07-14'
 url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 ---
 
 
 # XIAO IR Mate 智能红外遥控器快速上手（适用于 Home Assistant）
 
-欢迎使用 **XIAO IR Mate Smart IR Remote**！该设备专为 Home Assistant 用户设计，旨在提供无缝、高效、深度集成的智能红外遥控解决方案。通过本指南，你将学会如何完成设备的基础设置、连接家庭网络、集成到 Home Assistant 中，并逐步解锁其全部功能，从基础的红外信号学习到高级的智能空调控制。
+欢迎使用 **XIAO IR Mate Smart IR Remote**\! 这款设备专为 Home Assistant 用户设计，旨在提供无缝、高效、深度集成的智能红外遥控解决方案。通过本指南，你将学会如何完成设备的基础设置、连接家庭网络、集成到 Home Assistant 中，并逐步解锁其全部功能，从基础的红外信号学习到进阶的智能空调控制。
 
 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
   <img
@@ -38,7 +38,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 
 ## 介绍
 
-**XIAO IR Mate** 是一款基于 **Seeed Studio XIAO ESP32-C3** 的紧凑型智能红外模块。它集成了红外发射与接收、触摸感应、震动反馈以及状态指示功能。通过 Wi-Fi 连接，它可以完美融入你的 Home Assistant 智能家居生态系统。其核心使命是让所有使用红外遥控器的传统家电（如电视、空调、电风扇等）变得“智能”，并通过 HA 进行自动化控制。
+**XIAO IR Mate** 是一款基于 **Seeed Studio XIAO ESP32-C3** 的紧凑型智能红外模块。它集成了红外发射与接收、触摸感应、震动反馈以及状态指示功能。通过 Wi-Fi 连接后，可以完美融入你的 Home Assistant 智能家居生态系统。它的核心使命是让所有使用红外遥控器的传统家电（如电视、空调、电风扇等）变得“智能”，并通过 HA 进行自动化控制。
 
 <div style={{
   display: 'grid',
@@ -60,15 +60,15 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 
 - **强大的红外学习与发射能力**
 
-配备三颗高功率红外发射器，实现 360° 全向覆盖，并搭载高灵敏度接收器。支持从标准遥控器学习最多 10 组红外指令（例如控制投影仪、空调、定时器等），可在 Home Assistant 中一键回放。
+配备三颗高功率红外发射器，实现 360° 全向覆盖，并搭载高灵敏度接收器。支持学习多达 10 组来自标准遥控器的红外指令（例如控制投影仪、空调、定时器等），可在 Home Assistant 中一键回放。
 
 - **直观的物理交互反馈**
 
-内置震动马达和 LED 指示灯。短震动用于确认操作，长震动表示进入学习模式，而 LED 用于显示网络状态，简化设备的安装与故障排查。
+内置震动马达和 LED 指示灯。短震动用于确认操作，长震动表示进入学习模式，LED 用于显示网络状态，简化设备的安装与故障排查。
 
 - **可升级为强大的智能空调控制器**
 
-通过烧录自定义固件，可以将 IR Mate 升级为智能空调遥控器。在 Home Assistant 中直接设置精确温度、模式和风速，由系统自动生成红外码，无需重复学习。
+通过烧录自定义固件，你可以将 IR Mate 升级为智能空调遥控器。在 Home Assistant 中直接设置精确温度、模式和风速，由系统自动生成红外码，无需重复学习。
 
 - **小巧设计，USB-C 供电**
 
@@ -108,12 +108,12 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 1. 打开手机或电脑的 Wi-Fi 设置，搜索并连接名称为 **XIAO IR Mate** 的网络。
 
 :::note
-该热点的默认网络密码为 ‘12345678’。
+该热点的默认密码为 ‘12345678’。
 :::
 
 2. 连接成功后，你的设备通常会自动弹出配置页面。如果没有，请手动打开浏览器并访问 **[http://192.168.4.1](http://192.168.4.1)**。
 3. 在该页面中，你会看到可用 Wi-Fi 网络列表。请选择你家中的 **2.4GHz Wi-Fi 网络（SSID）**，并输入正确的密码。
-4. 点击 "Connect" 或 "Save"。设备将尝试连接你提供的 Wi-Fi 网络。
+4. 点击 "Connect" 或 "Save"。设备将尝试连接到你提供的 Wi-Fi 网络。
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect_02.png"
@@ -123,7 +123,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 
 ### 步骤 4：连接成功
 
-当设备成功连接到你的家庭 Wi-Fi 后，AP 热点会自动关闭，且 **状态指示灯会常亮**。至此，网络配置完成。
+当设备成功连接到家庭 Wi-Fi 后，AP 热点会自动关闭，且 **状态指示灯会常亮**。此时网络配置已完成。
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect_03.png"
@@ -135,7 +135,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 
 设备固件基于 **ESPHome**，因此非常容易集成到 Home Assistant 中。
 
-1. **自动发现**：确保你的 Home Assistant 主机与 XIAO IR Mate 连接在同一局域网中。通常情况下，HA 会自动发现新的 ESPHome 设备。你会在 **Settings \> Devices & Services** 中看到一条 “New device discovered” 的通知。
+1. **自动发现**：确保你的 Home Assistant 主机与 XIAO IR Mate 连接在同一局域网内。通常情况下，HA 会自动发现新的 ESPHome 设备。你会在 **Settings \> Devices & Services** 中看到 “New device discovered” 的通知。
 2. **手动添加**：如果没有被自动发现，你可以点击右下角的 **[Add Integration]** 按钮，搜索 **"ESPHome"**，然后输入设备的主机名（例如 **xiao-ir-mate**）或 IP 地址进行手动添加。
 
 <div style={{textAlign:'center'}}>
@@ -164,7 +164,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
   />
 </div>
 
-3. **设备面板**：添加成功后，XIAO IR Mate 会作为一个设备出现在 HA 中。其设备面板中将包含以下实体，用于控制 10 组不同的红外信号：
+3. **设备面板**：添加成功后，XIAO IR Mate 会作为一个设备出现在 HA 中。其设备面板中会包含以下实体，用于控制 10 组不同的红外信号：
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/homeassistant_07.png"
@@ -174,11 +174,11 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 
 ## 核心功能详解（出厂固件）
 
-如果你想恢复设备或更新固件，可以通过下方按钮跳转。我们专门为 XIAO Gadget 直刷固件创建了一个页面。
+如果你需要恢复设备或更新固件，可以通过下方按钮跳转。我们为 XIAO Gadget 直刷固件专门创建了一个页面。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://gadgets.seeed.cc/" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 烧录固件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Flash the Firmwave</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -189,7 +189,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 1. 在 Home Assistant 的设备面板中，首先找到名为 **"Signal"** 的下拉选择列表。
 2. 点击下拉列表，选择你想使用的信号槽，例如 **"signal_1"**。
 3. 选择完成后，找到 **"Learn"** 按钮，并点击其旁边的 **"PRESS"**。
-4. 此时 XIAO IR Mate 会进入学习模式，并开始 **持续震动**，表示你可以开始配对。
+4. XIAO IR Mate 此时会进入学习模式，并开始 **持续震动**，表示你可以开始配对。
 5. 将原始遥控器对准 IR Mate 的红外接收窗口，短按你希望学习的按键。
 6. 当 IR Mate 成功接收并记录该信号后，**震动会停止**，表示学习成功。
 7. 此时，一个名为 **"Is Learned Signal"** 的状态指示会自动变为 "ON"，表示当前下拉列表中选中的信号槽（即 "signal_1"）已经存储了信号。
@@ -198,9 +198,9 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 
 一旦成功学习了某个信号，你就可以在任何时候发送它。
 
-1. 在 **"Signal"** 下拉列表中，确保你已选择想要发送的信号槽，例如 **"signal_1"**。
+1. 在 **"Signal"** 下拉列表中，确保已选择你希望发送的信号槽，例如 **"signal_1"**。
 2. 找到 **"Send"** 按钮，并点击其旁边的 **"PRESS"**。
-3. XIAO IR Mate 会通过其 3 个红外发射器立即发送当前所选槽中存储的信号。
+3. XIAO IR Mate 将通过其 3 个红外发射器立即发送当前所选槽中存储的信号。
 4. **注意**：如果你在下拉列表中选择了一个从未学习过信号的信号槽，点击发送按钮将不会产生任何效果。
 
 <img
@@ -211,7 +211,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 
 ## 物理交互与状态指示
 
-除了通过 HA 控制，你还可以通过物理交互来了解和控制设备。
+除了通过 HA 控制外，你还可以通过物理交互来了解和控制设备。
 
 ### 状态指示灯（白色 LED）
 
@@ -221,7 +221,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 ### 震动反馈
 
 - **短震动（100ms）**：用于一般操作确认，例如触摸设备时。
-- **长震动（500ms）**：用于重要状态提醒，例如进入学习模式或执行出厂重置时。
+- **长震动（500ms）**：用于重要状态提示，例如进入学习模式或执行出厂重置。
 
 ### RESET 按钮
 
@@ -230,15 +230,15 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 
 ## 高级用法 - 智能空调控制
 
-出厂固件提供的基础“录制-回放”模式具有通用性，但在控制空调这类具有多种状态（温度、模式、风速等）的设备时会显得笨拙。为了实现更精细、更智能的空调控制，我们可以烧录一份专用的 ESPHome 固件，将 XIAO IR Mate 从一个“红外信号中继器”变成真正的“智能空调控制器”。
+出厂固件提供的基础“录制-回放”模式具有通用性，但在控制空调这类具有多种状态（温度、模式、风速等）的设备时会显得笨拙。为了实现更精细、更智能的空调控制，我们可以烧录专用的 ESPHome 固件，将 XIAO IR Mate 从一个“红外信号中继器”升级为真正的“智能空调控制器”。
 
-本章节中，我们将以格力空调为详细示例，但这绝不是唯一选择。ESPHome 强大的生态系统支持众多空调品牌，你可以轻松按照本指南中的思路，仅对配置代码做少量修改，就能实现对美的、大金、松下等其他品牌的智能控制。
+本章节将以格力空调为详细示例，但这绝不是唯一选择。ESPHome 强大的生态系统支持众多空调品牌，你可以轻松按照本指南中的思路，仅对配置代码做少量修改，就能实现对美的、大金、松下等其他品牌空调的智能控制。
 
 ### 核心优势
 
-- **有状态控制**：不再只是简单回放。你可以在 HA 中直接设置“24°C，制冷，自动风”，设备会立即生成并发送正确的红外指令。
+- **有状态控制**：不再只是简单回放。你可以在 HA 中直接设置“24°C、制冷、自动风”，设备会立即生成并发送正确的红外指令。
 - **更友好的界面**：在 HA 中以标准气候（Climate）卡片的形式呈现，操作直观。
-- **节省空间**：无需为每个温度或模式单独学习信号；一份配置即可控制空调的全部功能。
+- **节省空间**：无需为每个温度或模式单独学习信号；一套配置即可控制空调的全部功能。
 
 ### 前置条件
 
@@ -249,12 +249,12 @@ url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 
 1. **创建新的设备配置**
       - 在 HA 中打开 ESPHome 界面。
-      - 点击右下角的 **"+ NEW DEVICE"** 按钮，在弹出的窗口中点击 **"Continue"**。
+      - 点击右下角的 **"+ NEW DEVICE"** 按钮，在弹出窗口中点击 **"Continue"**。
       - 为你的设备命名（例如 **xiao-ir-ac-controller**），然后将开发板类型选择为 **Seeed Studio XIAO ESP32C3**。
 2. **编辑配置文件**
       - 点击新建设备卡片上的 **EDIT** 按钮，进入 YAML 配置编辑器。
       - 删除编辑器中的所有默认内容。
-      - 将下面的代码**完整复制并粘贴**到编辑器中：
+      - **完整复制并粘贴**下方的代码到编辑器中：
 
 <Details>
 
@@ -297,18 +297,15 @@ api:
 
 ota:
   platform: esphome
-  password: "15afb09b5aba7b3d6a6ba01180c60df5"  # Change this to your desired password
 
 wifi:
-  # ssid: !secret wifi_ssid
-  # password: !secret wifi_password
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
   on_connect:
     - globals.set: {id: is_wifi_connected, value: 'true'}
     - light.turn_on: rgb_light
   on_disconnect:
     - globals.set: {id: is_wifi_connected, value: 'false'}
-  ap:
-    password: "12345678"
 
 captive_portal:
 
@@ -316,15 +313,16 @@ remote_transmitter:
   id: default_ir_transmitter
   pin: GPIO3
   carrier_duty_percent: 50%
-  rmt_channel: 0
+  rmt_symbols: 48
+  non_blocking: false
 
 remote_receiver:
   id: default_ir_receiver
   pin:
     number: GPIO4
     inverted: true
-  rmt_channel: 2
   dump: raw # Keep for learning or debugging other infrared codes
+  rmt_symbols: 96
 
 # Gree Climate Control
 climate:
@@ -412,7 +410,7 @@ light:
     rgb_order: GRB
     pin: GPIO7
     num_leds: 1
-    rmt_channel: 1
+    rmt_symbols: 48
     chipset: ws2812
     name: "RGB Status Light"
     id: rgb_light
@@ -537,34 +535,34 @@ interval:
 3. **自定义你的配置**
       - **Wi-Fi**：如果你不使用 `!secret` 文件，请取消注释 `wifi:` 部分，并将 `Your_WiFi_SSID` 和 `Your_WiFi_Password` 替换为你自己的 Wi-Fi 信息。
       - **选择正确的空调协议**：这是最关键的一步！示例中使用的是 `platform: gree`。如果你的空调不是格力，请将其替换为你品牌对应的平台。如何查找支持的品牌？请访问 [ESPHome Climate Components](https://esphome.io/components/climate/index.html) 页面，其中列出了所有支持的品牌及其平台名称（例如 `daikin`、`midea`、`panasonic_ac` 等）。
-          - 选择对应平台后，你还可能需要根据该平台的文档，对 `model` 或支持的模式等参数进行微调。
+          - 选择对应的平台后，你可能还需要根据该平台的文档，对 `model` 或支持的模式等参数进行微调。
 4. **编译并烧录**
       - 保存你的 YAML 配置。
       - 通过 USB 线将 XIAO IR Mate 连接到运行 HA 的电脑。
       - 点击设备卡片上的 **INSTALL** 按钮。
       - 选择 **"Plug into this computer"** 选项。
-      - ESPHome 会编译固件并通过浏览器将其烧录到你的设备。按照屏幕提示完成整个过程。
+      - ESPHome 会编译固件，并通过浏览器将其烧录到你的设备。按照屏幕提示完成整个过程。
       - 烧录成功后，设备会自动重启并连接到你配置的 Wi-Fi。
 
 ### 在 Home Assistant 中的使用
 
-烧录并重启后，你的设备会作为一个新的气候实体出现在 Home Assistant 中（例如 `climate.gree_air_conditioner`）。你可以在仪表盘中添加一个 "Thermostat Card" 来获得一个功能完整的空调控制面板，让你像使用原生智能空调一样自由调节温度、模式、风速和扫风！
+烧录并重启后，你的设备会作为一个新的气候实体（例如 `climate.gree_air_conditioner`）出现在 Home Assistant 中。你可以在仪表盘中添加一个 “Thermostat Card”（恒温器卡片），即可获得一个功能完整的空调控制面板，让你像使用原生智能空调一样自由调节温度、模式、风速和扫风！
 
 ### 更多展望：打开你的脑洞
 
-恭喜你！到目前为止，你已经掌握了 XIAO IR Mate 的两大核心用法：一个是开箱即用的“万能遥控学习”功能，另一个是用于精确空调控制的“专业气候控制器”模式。
+恭喜你！到这里，你已经掌握了 XIAO IR Mate 的两大核心用法：一个是开箱即用的“万能遥控学习”功能，另一个是用于精确空调控制的“专业气候控制器”模式。
 
-但不要止步于此，因为这仅仅是个开始！XIAO IR Mate 真正的乐趣在于它惊人的灵活性。把它想象成一个由你定义的“创意积木”，你可以用它搭建远超你想象的各种玩法。下面是两个打开思路的点子，供你参考：
+但不要止步于此，因为这仅仅是开始！XIAO IR Mate 真正的乐趣在于它惊人的灵活性。把它想象成一个由你定义的“创意积木”，你可以用它搭建远超你想象的各种玩法。下面是两个打开思路的点子，供你参考：
 
-#### 点子 1：让旧遥控器“复活”，变身万能场景开关
+#### 点子 1：让旧遥控器复活，变身万能场景开关
 
 **应用场景**
 
-环顾一下你周围，你是否有很多闲置的旧遥控器？老电视、DVD 或音响的遥控器，按键多、手感好，如今却只是在抽屉里吃灰。如果你能用这些遥控器上的按键来控制智能灯、扫地机器人，甚至复杂的“回家模式”场景，是不是很酷？
+环顾一下你周围，你是否有很多闲置的旧遥控器？老电视、DVD 或音响的遥控器，按键多、手感好，如今却只是在抽屉里吃灰。如果你能用这些遥控器上的按键来控制智能灯、扫地机器人，甚至是复杂的“回家模式”场景，是不是很酷？
 
 **工作原理**
 
-这个点子的核心，是把 XIAO IR Mate 从一个“发射器”变成一个“监听器”。它不再主动控制其他设备，而是安静地监听任何旧遥控器发出的信号，然后告诉 Home Assistant：“我听到一个信号，你来决定要做什么！”
+这个点子的核心，是把 XIAO IR Mate 从一个“发射器”变成一个“监听者”。它不再主动控制其他设备，而是安静地监听任何旧遥控器发出的信号，然后告诉 Home Assistant：“我听到一个信号，你来决定要做什么！”
 
 - **实现步骤**
 
@@ -576,27 +574,27 @@ interval:
 
   4. **定义动作：** 这个规则的动作可以是任何事情！例如：
 
-     - 当检测到 **电视遥控器的“音量 +”按键** -> **启动扫地机器人** 开始清扫。
+     - 当检测到 **电视遥控器的 “音量 +” 按键** -> **启动扫地机器人** 开始清扫。
 
-     - 当检测到 **Apple Remote 的“播放”按键** -> **打开浴室灯**。
+     - 当检测到 **Apple Remote 的 “Play” 按键** -> **打开浴室灯**。
 
-     - 当检测到 **DVD 遥控器上的“红色”按键** -> 执行“离家模式”场景。
+     - 当检测到 **DVD 遥控器的 “红色” 按键** -> 执行“离家模式”场景。
 
 - **这种玩法的优势**
 
   - **旧物改造，环保节约：** 让闲置硬件焕发第二春，把电子垃圾重新利用起来，既省钱又环保。
 
-  - **真实的按键触感体验：** 相比触摸屏，一个拥有几十个清晰分区、手感扎实的实体遥控器，在很多场景下更直接、更爽快。
+  - **真实的按键触感体验：** 相比触摸屏，一个拥有几十个清晰分区、手感扎实的物理遥控器，在很多场景下更直接、更爽快。
 
-  - **高“家属接受度”（WAF）：** 对于不习惯用手机 App 或智能音箱的家人（如老人或小孩），告诉他们“按这个键就能开灯”，是最直观、最容易上手的交互方式。
+  - **高 WAF（家庭成员接受度）：** 对于不习惯用手机 App 或智能音箱的家人（如老人或小孩），告诉他们“按这个键就能开灯”，是最直观、最容易上手的交互方式。
 
-  - **不需要充电的“智能开关”：** 传统遥控器的电池往往能用一两年，比很多需要频繁充电的智能小玩意儿方便得多。
+  - **不需要充电的“智能开关”：** 传统遥控器的电池往往能用一两年，比很多需要频繁充电的智能小玩意方便得多。
 
-#### **点子 2：打造一个万能的“IoT 魔法按钮”**
+#### **点子 2：打造一个万能的 “IoT 魔法按钮”**
 
 **核心理念**
 
-设备上的触摸按键，真的只能用来控制红外吗？当然不是！我们可以把它变成一个可以控制家中**任何东西**的魔法按钮。关键在于“解耦”——彻底将“按下按钮”这个物理动作，与“实际发生什么”这个智能行为分离开来。
+设备上的触摸按键，真的只能用来控制红外吗？当然不是！我们可以把它变成一个可以控制家里**任何东西**的魔法按钮。关键在于“解耦”——彻底将“按下按钮”这个物理动作，与“实际发生什么”这个智能行为分离开来。
 
 - **实现步骤**
 
@@ -608,9 +606,9 @@ interval:
 
      - 收到 **“单击”** 上报 -> 切换家中所有 **Zigbee 灯** 的开/关状态。
 
-     - 收到 **“双击”** 上报 -> 命令 **扫地机器人** 开始清扫。
+     - 收到 **“双击”** 上报 -> 指令 **扫地机器人** 开始清扫。
 
-     - 收到 **“长按”** 上报 -> 执行“观影模式”场景，拉上窗帘、调暗灯光、打开投影仪和音响。
+     - 收到 **“长按”** 上报 -> 执行“观影模式”场景，拉上窗帘、调暗灯光、打开投影和音响。
 
 - **这种玩法的优势**
 
@@ -618,9 +616,9 @@ interval:
 
   - **灵活定义，随时更改：** 今天双击是启动扫地机，明天你想改成播放音乐？只需在 HA 界面里改一下自动化规则，完全不用动固件。
 
-  - **最直观的交互方式：** 给家人提供最简单的控制方式。带有触觉反馈的实体按键，往往比打开手机 App 操作更方便、更优雅。
+  - **最直观的交互方式：** 给家人提供最简单的控制方式。带有触觉反馈的物理按键，往往比打开手机 App 操作更方便、更优雅。
 
-总之，不要只把 XIAO IR Mate 看作一个红外工具。把它想象成一个连上 Wi-Fi、拥有触觉和“声音”（红外发射器）的小机器人。它能做什么，唯一的限制就是你的想象力！
+总之，不要只把 XIAO IR Mate 看作一个红外工具。把它想象成一个连上 Wi-Fi、拥有触觉和“声音”（红外发射器）的迷你机器人。它能做什么，唯一的限制就是你的想象力！
 
 ## 常见问题（FAQ）
 
@@ -628,16 +626,16 @@ interval:
 > **答：** 请确认设备已通过 Type-C 正常供电，并检查白色 LED 是否在闪烁。如果指示灯不亮，请尝试更换数据线或电源适配器。如果设备之前已经成功配置过网络，在网络连接正常的情况下，它不会再次创建 AP 热点，除非网络连接失败，或者你通过长按 RESET 按钮进行了恢复出厂设置。
 
 > **问：如果红外学习失败怎么办？（出厂固件）**
-> **答：** 请确保原遥控器电量充足，并尽可能靠近 IR Mate 的接收端（通常是黑色半透明元件）进行操作。同时避免在强光环境下或其他红外干扰源附近进行学习。
+> **答：** 请确保原遥控器电量充足，并尽可能靠近 IR Mate 的接收端（通常是黑色半透明元件）进行学习。同时避免在强光环境下或其他红外干扰源附近进行学习操作。
 
 > **问：设备在 HA 中显示离线？**
-> **答：** 请检查家中的 Wi-Fi 是否工作正常，并确认 IR Mate 处于 Wi-Fi 信号覆盖范围内。你可以尝试短按 RESET 按钮重启设备。
+> **答：** 请检查家中 Wi-Fi 是否工作正常，并确认 IR Mate 处于 Wi-Fi 信号覆盖范围内。你可以尝试短按 RESET 按钮重启设备。
 
 > **问：刷入自定义固件后，如何恢复出厂固件？**
 > **答：** 你需要获取出厂固件的 `.bin` 文件或其 ESPHome YAML 源文件，然后通过 ESPHome 再次烧录，以覆盖自定义固件。
 
 > **问：如何在自动化中使用学习到的信号（出厂固件）或空调控制（高级固件）？**
-> **答：** 在 HA 的自动化或脚本编辑器中，选择 "Call service"。
+> **答：** 在 HA 的自动化或脚本编辑器中，选择 “Call service”（调用服务）。
 
 ## 资源
 
@@ -646,7 +644,7 @@ interval:
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

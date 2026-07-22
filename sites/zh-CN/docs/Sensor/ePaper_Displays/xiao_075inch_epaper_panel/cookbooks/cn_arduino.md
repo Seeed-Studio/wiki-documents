@@ -13,6 +13,7 @@ last_update:
   author: Allen
 createdAt: '2025-03-27'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_arduino/
 ---
 
 # Arduino 使用手册：XIAO 7.5" ePaper Panel

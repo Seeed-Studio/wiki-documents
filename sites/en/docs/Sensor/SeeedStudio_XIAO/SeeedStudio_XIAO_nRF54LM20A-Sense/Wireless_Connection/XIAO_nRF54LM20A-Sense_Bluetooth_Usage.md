@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-20'
-updatedAt: '2026-06-15'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_bluetooth_lowpower/
 ---
 
@@ -44,18 +44,18 @@ url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_bluetooth_lowpower/
 
 Bluetooth Low Energy (BLE) is a low-power wireless communication standard introduced in Bluetooth 4.0. Designed for intermittent small-data transmission, it enables wireless connectivity within tens of meters while maintaining an ultra-low average current consumption at the microampere level. It is widely applied in wearable devices, smart home sensors, indoor positioning and industrial IoT scenarios.
 
-Powered by the nRF54LM20A SoC, the XIAO nRF54LM20A Seires supports Bluetooth LE, Matter, Thread, Zigbee and 2.4GHz proprietary protocols, delivering a peak data rate of 4 Mbps ideal for low-latency scenarios. It also features support for Bluetooth Channel Sounding and Bluetooth Mesh. This article illustrates its BLE functionality via three progressive sample programs, starting with basic broadcast Beacon transmission, and further extending to bidirectional UART communication and real-time sensor data uploading.
+Powered by the nRF54LM20A SoC, the XIAO nRF54LM20A Series supports Bluetooth LE, Matter, Thread, Zigbee and 2.4GHz proprietary protocols, delivering a peak data rate of 4 Mbps ideal for low-latency scenarios. It also features support for Bluetooth Channel Sounding and Bluetooth Mesh. This article illustrates its BLE functionality through two practical examples: basic broadcast Beacon transmission and a BLE LED Button Service (LBS) connection between Central and Peripheral devices.
 
 :::tip
 
-- This tutorial is developed based on the PlatformIO build system and Zephyr RTOS.If you are not familiar with creating a project for the XIAO nRF54LM20A under PlatformIO, you can jump to [Getting Sarted With Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/xiao_nrf54lm20a_getting_started/)
+- This tutorial is based on the PlatformIO build system and Zephyr RTOS. If you are not familiar with creating a PlatformIO project for the XIAO nRF54LM20A, refer to [Getting Started with Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/xiao_nrf54lm20a_getting_started/).
 - If you would like to learn more about the nRF54LM20A SoC and BLE, please visit the links below: [**nRF54LM20A SoC Introduction**](https://www.nordicsemi.com/Products/nRF54LM20A) and [**Bluetooth-Low-Energy for Nordic**](https://www.nordicsemi.com/Products/Wireless/Bluetooth-Low-Energy)
 
 :::
 
-## Hardware Preperation
+## Hardware Preparation
 
-Before starting the routine implementation, you need to prepare at least one XIAO nRF54LM20A Sense.
+Before getting started, prepare at least two XIAO nRF54LM20A Sense boards if you plan to run the BLE LBS example.
 
 <div className="table-center">
 <table align="center">
@@ -90,7 +90,7 @@ The connection method is shown below:
 
 ### Antenna Installation
 
-Inside the packaging of the Seeed Studio XIAO nRF54LM20A, there is a dedicated Wi-Fi/BT Antenna connector. For optimal WiFi/Bluetooth signal strength, you need to take out the antenna included in the package and attach it to the connector.
+The Seeed Studio XIAO nRF54LM20A package includes a dedicated 2.4 GHz antenna. For optimal Bluetooth performance, attach the supplied antenna to the onboard antenna connector.
 <!--  -->
 <div class="table-center">
  <table>
@@ -117,35 +117,33 @@ This section introduces core BLE features and the usage method of BLE on XIAO nR
 
 ### BLE Beacon
 
-This project realizes a BLE Beacon function on XIAO nRF54LM20A. The device keeps broadcasting advertising packets carrying Manufacturer Specific Data after power-up. The packet contains a counter value that increases every second, and real-time data variation can be checked via nRF Connect.
+This example implements a BLE Beacon on the XIAO nRF54LM20A. After startup, the device continuously broadcasts advertising packets containing Manufacturer Specific Data. The packet includes a counter that increments once per second, allowing the data changes to be monitored in real time using nRF Connect.
 
 #### Software
 
 1. Relevant device tree configurations shall be enabled in `app.overlay` to switch the BLE controller to native Zephyr implementation.
 
 ```dts
-/* Disable Nordic SoftDevice Controller (not available in mainline Zephyr) */
-&bt_hci_sdc {
-	status = "disabled";
-};
-
 /* Enable Zephyr native BLE controller (LL SW Split) */
 &bt_hci_controller {
-	status = "okay";
+        status = "okay";
 };
 
 / {
-	chosen {
-		zephyr,bt-hci = &bt_hci_controller;
-	};
+        chosen {
+                zephyr,bt-hci = &bt_hci_controller;
+        };
 };
+
 ```
 
 2. Enable relevant Bluetooth configurations in `prj.conf`, set the log output mode, and rename the Bluetooth device name to **XIAO-Beacon**.
 
-```prj
+```conf
 # GPIO
 CONFIG_GPIO=y
+# XIAO nRF54LM20A can fault early with the MPU enabled in this toolchain/board package.
+CONFIG_ARM_MPU=n
 # Regulator (for power_en)
 CONFIG_REGULATOR=y
 # Logging
@@ -160,6 +158,10 @@ CONFIG_UART_NRFX_UARTE_ENHANCED_RX=y
 CONFIG_BT=y
 CONFIG_BT_PERIPHERAL=y
 CONFIG_BT_DEVICE_NAME="XIAO-Beacon"
+# Avoid GCC 8.2 rejecting the controller's optimized assert inline asm path.
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+CONFIG_BT_CTLR_ASSERT_DEBUG=n
+CONFIG_BT_CTLR_ASSERT_OVERHEAD_START=n
 # Disable auto-procedures to avoid LL Procedure Collision on nRF54L
 CONFIG_BT_AUTO_PHY_UPDATE=n
 CONFIG_BT_DATA_LEN_UPDATE=n
@@ -169,9 +171,10 @@ CONFIG_HEAP_MEM_POOL_SIZE=8192
 CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
 # Assert level
 CONFIG_ASSERT=y
+
 ```
 
-3. Write codes inside main.c, customize the data transmission format and content.
+3. Implement the advertising data format and update logic in `main.c`.
 
 <details>
 
@@ -196,125 +199,120 @@ LOG_MODULE_REGISTER(ble_beacon, LOG_LEVEL_INF);
 
 static uint32_t manufacturer_counter;
 
+static const uint8_t adv_flags[] __aligned(4) = {
+    BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR,
+};
+
+static const uint8_t adv_name[] __aligned(4) = CONFIG_BT_DEVICE_NAME;
+
+static uint8_t manuf_data[MANUF_DATA_SIZE] __aligned(4);
+
+static const struct bt_data ad[] __aligned(4) = {
+    BT_DATA(BT_DATA_FLAGS, adv_flags, sizeof(adv_flags)),
+    BT_DATA(BT_DATA_NAME_COMPLETE, adv_name, sizeof(adv_name) - 1),
+    BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
+};
+
 /* Power enable regulator (GPIO1_12) - must be enabled before BLE init */
 static const struct device *const power_en_dev =
-	DEVICE_DT_GET(DT_NODELABEL(power_en));
+    DEVICE_DT_GET(DT_NODELABEL(power_en));
 
 static void adv_update_work_handler(struct k_work *work);
 
 static K_WORK_DELAYABLE_DEFINE(adv_update_work, adv_update_work_handler);
 
+static void fill_manuf_data(uint32_t counter)
+{
+    /* [Company ID (2B)][Counter (4B)][Custom (2B)] */
+    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
+    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
+    manuf_data[2] = (counter >> 0) & 0xFF;
+    manuf_data[3] = (counter >> 8) & 0xFF;
+    manuf_data[4] = (counter >> 16) & 0xFF;
+    manuf_data[5] = (counter >> 24) & 0xFF;
+    manuf_data[6] = 0xAA;
+    manuf_data[7] = 0xBB;
+}
+
 static int enable_power(void)
 {
-	int ret;
+    int ret;
 
-	if (!device_is_ready(power_en_dev)) {
-		LOG_ERR("power_en regulator is not ready");
-		return -ENODEV;
-	}
+    if (!device_is_ready(power_en_dev)) {
+        LOG_ERR("power_en regulator is not ready");
+        return -ENODEV;
+    }
 
-	ret = regulator_enable(power_en_dev);
-	if (ret < 0 && ret != -EALREADY) {
-		LOG_ERR("Failed to enable power_en: %d", ret);
-		return ret;
-	}
+    ret = regulator_enable(power_en_dev);
+    if (ret < 0 && ret != -EALREADY) {
+        LOG_ERR("Failed to enable power_en: %d", ret);
+        return ret;
+    }
 
-	k_sleep(K_MSEC(20));
-	LOG_INF("Power rail enabled");
-	return 0;
+    k_sleep(K_MSEC(20));
+    LOG_INF("Power rail enabled");
+    return 0;
 }
 
 static void adv_update_work_handler(struct k_work *work)
 {
-	int err;
-	uint8_t manuf_data[MANUF_DATA_SIZE];
+    int err;
 
-	manufacturer_counter++;
+    manufacturer_counter++;
+    fill_manuf_data(manufacturer_counter);
 
-	/* Build manufacturer data: [Company ID (2B)][Counter (4B)][Custom (2B)] */
-	manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
-	manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-	manuf_data[2] = (manufacturer_counter >> 0) & 0xFF;
-	manuf_data[3] = (manufacturer_counter >> 8) & 0xFF;
-	manuf_data[4] = (manufacturer_counter >> 16) & 0xFF;
-	manuf_data[5] = (manufacturer_counter >> 24) & 0xFF;
-	manuf_data[6] = 0xAA;
-	manuf_data[7] = 0xBB;
+    err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
+    if (err < 0) {
+        LOG_ERR("Failed to update advertising data (err %d)", err);
+    } else {
+        LOG_INF("Manufacturer counter: %u", manufacturer_counter);
+    }
 
-	const struct bt_data ad[] = {
-		BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-		BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-			sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-		BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
-	};
-
-	err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
-	if (err < 0) {
-		LOG_ERR("Failed to update advertising data (err %d)", err);
-	} else {
-		LOG_INF("Manufacturer counter: %u", manufacturer_counter);
-	}
-
-	k_work_schedule(&adv_update_work, K_SECONDS(1));
+    k_work_schedule(&adv_update_work, K_SECONDS(1));
 }
 
 int main(void)
 {
-	int err;
-	uint8_t init_data[MANUF_DATA_SIZE];
+    int err;
 
-	LOG_INF("BLE Manufacturer Data Beacon");
+    LOG_INF("BLE Manufacturer Data Beacon");
 
-	/* Enable board power rail before BLE initialization */
-	err = enable_power();
-	if (err < 0) {
-		LOG_ERR("Power enable failed (err %d)", err);
-		return err;
-	}
+    /* Enable board power rail before BLE initialization */
+    err = enable_power();
+    if (err < 0) {
+        LOG_ERR("Power enable failed (err %d)", err);
+        return err;
+    }
 
-	LOG_INF("Initializing BLE...");
+    LOG_INF("Initializing BLE...");
 
-	err = bt_enable(NULL);
-	if (err < 0) {
-		LOG_ERR("Bluetooth enable failed (err %d)", err);
-		return err;
-	}
+    err = bt_enable(NULL);
+    if (err < 0) {
+        LOG_ERR("Bluetooth enable failed (err %d)", err);
+        return err;
+    }
 
-	LOG_INF("BLE initialized");
+    LOG_INF("BLE initialized");
 
-	/* Initial advertising data with counter = 0 */
-	init_data[0] = MANUF_COMPANY_ID & 0xFF;
-	init_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-	init_data[2] = 0;
-	init_data[3] = 0;
-	init_data[4] = 0;
-	init_data[5] = 0;
-	init_data[6] = 0xAA;
-	init_data[7] = 0xBB;
+    /* Initial advertising data with counter = 0 */
+    fill_manuf_data(0);
 
-	const struct bt_data ad[] = {
-		BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-		BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-			sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-		BT_DATA(BT_DATA_MANUFACTURER_DATA, init_data, sizeof(init_data)),
-	};
+    err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
+    if (err < 0) {
+        LOG_ERR("Advertising failed to start (err %d)", err);
+        return err;
+    }
 
-	err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
-	if (err < 0) {
-		LOG_ERR("Advertising failed to start (err %d)", err);
-		return err;
-	}
+    LOG_INF("BLE advertising started");
 
-	LOG_INF("BLE advertising started");
+    /* Schedule counter update after 1 second */
+    k_work_schedule(&adv_update_work, K_SECONDS(1));
 
-	/* Schedule counter update after 1 second */
-	k_work_schedule(&adv_update_work, K_SECONDS(1));
+    for (;;) {
+        k_sleep(K_FOREVER);
+    }
 
-	for (;;) {
-		k_sleep(K_FOREVER);
-	}
-
-	return 0;
+    return 0;
 }
 ```
 
@@ -322,9 +320,9 @@ int main(void)
 
 #### Result
 
-1. After uploading the firwmare, install the nRF Connect app to scan and detect BLE devices.
+1. After flashing the firmware, install the nRF Connect app to scan and detect BLE devices.
 
-Meanwhile, you can search and download the nRF Connect app in major mobile app stores, which allows your phone to search for and connect to Bluetooth device.
+Meanwhile, you can search and download the nRF Connect app in major mobile app stores, which allows your phone to scan for and connect to Bluetooth devices.
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
@@ -362,51 +360,64 @@ manuf_data[7] = 0xBB;
 <br/>
 From the above results, the process of transmitting custom BLE advertising packets on XIAO nRF54LM20A Sense can be clearly understood, which facilitates further research on BLE operating characteristics. In specific application scenarios, advertising data can be adopted to judge trigger conditions without establishing actual connections.
 
-### BLE UART
+### BLE LBS
 
-This example demonstrates how to establish a bidirectional data channel via BLE on the XIAO nRF54LM20A Sense. Based on the Nordic UART Service (NUS), it realizes basic interaction that mobile phones send string data to the device for echo feedback. Meanwhile, the device reports the status counter once per second through Notify, illustrating two core BLE GATT data transmission modes: Write and Notify.
+This example uses two XIAO nRF54 boards to implement a BLE LED Button Service (LBS). One board acts as a BLE Peripheral and advertises a custom LBS service. The other acts as a BLE Central, scans for the service, connects automatically, and controls the LED on the Peripheral through a GATT Write Characteristic.
+
+No additional `app.overlay` file is required because the board definition already provides the `led0` and `sw0` aliases used by this example.
 
 #### Software
 
-1. Relevant device tree configurations shall be enabled in `app.overlay` to switch the BLE controller to native Zephyr implementation.
+##### BLE Central
 
-```dts
-/*
- * BLE UART (NUS) overlay for XIAO nRF54LM20A.
- */
+1. Configure the project in `CMakeLists.txt`.
 
-&bt_hci_sdc {
-	status = "disabled";
-};
+```cmake
 
-&bt_hci_controller {
-	status = "okay";
-};
+# SPDX-License-Identifier: Apache-2.0
 
-/ {
-	chosen {
-		zephyr,bt-hci = &bt_hci_controller;
-	};
-};
-```
+cmake_minimum_required(VERSION 3.13.1)
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+project(ble-lbs-min-central)
 
-2. Enable Bluetooth-related configurations in prj.conf
+target_sources(app PRIVATE src/main.c)
+
+
 
 ```
-# Standard output and console
-CONFIG_STDOUT_CONSOLE=y
-CONFIG_CBPRINTF_FP_SUPPORT=y
 
-# Logging
+2. Enable Bluetooth-related configurations in `prj.conf`
+
+```conf
+CONFIG_GPIO=y
+CONFIG_SERIAL=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=y
+CONFIG_PRINTK=y
+
 CONFIG_LOG=y
+CONFIG_LOG_BACKEND_UART=y
+CONFIG_LOG_BUFFER_SIZE=2048
 
-# Bluetooth peripheral
 CONFIG_BT=y
-CONFIG_BT_PERIPHERAL=y
-CONFIG_BT_DEVICE_NAME="XIAO BLE UART"
+CONFIG_BT_CENTRAL=y
+CONFIG_BT_OBSERVER=y
+CONFIG_BT_GATT_CLIENT=y
+CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
+CONFIG_BT_DEVICE_NAME="zephyr_ble_lbs_central"
+
+CONFIG_BT_BUF_ACL_RX_SIZE=255
+CONFIG_BT_BUF_ACL_TX_SIZE=251
+CONFIG_BT_BUF_CMD_TX_SIZE=255
+CONFIG_BT_BUF_EVT_DISCARDABLE_SIZE=255
+CONFIG_BT_L2CAP_TX_MTU=247
+
+CONFIG_MAIN_STACK_SIZE=4096
+CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
+
 ```
 
-3. Set up subscription logic and data feedback mechanism in `main.c`
+3. Implement the BLE application logic in `main.c`.
 
 
 <details>
@@ -414,112 +425,669 @@ CONFIG_BT_DEVICE_NAME="XIAO BLE UART"
 <summary>main.c</summary>
 
 ```c
-#include <stdio.h>
-#include <string.h>
-
 #include <zephyr/kernel.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/logging/log.h>
+#include <zephyr/sys/atomic.h>
+
 #include <zephyr/bluetooth/bluetooth.h>
 #include <zephyr/bluetooth/conn.h>
-#include <zephyr/bluetooth/gatt.h>
+#include <zephyr/bluetooth/hci.h>
 #include <zephyr/bluetooth/uuid.h>
-#include <zephyr/logging/log.h>
+#include <zephyr/bluetooth/gatt.h>
 
-LOG_MODULE_REGISTER(ble_uart, LOG_LEVEL_INF);
+#include <string.h>
 
-#define DEVICE_NAME     CONFIG_BT_DEVICE_NAME
-#define DEVICE_NAME_LEN (sizeof(DEVICE_NAME) - 1)
+LOG_MODULE_REGISTER(app, LOG_LEVEL_INF);
 
-/* NUS UUIDs — same as Nordic UART Service but defined here to avoid
- * the NUS library's STRUCT_SECTION_ITERABLE dependency.
- */
-#define BT_UUID_NUS_SRV_VAL \
-	BT_UUID_128_ENCODE(0x6e400001, 0xb5a3, 0xf393, 0xe0a9, 0xe50e24dcca9e)
-#define BT_UUID_NUS_RX_CHAR_VAL \
-	BT_UUID_128_ENCODE(0x6e400002, 0xb5a3, 0xf393, 0xe0a9, 0xe50e24dcca9e)
-#define BT_UUID_NUS_TX_CHAR_VAL \
-	BT_UUID_128_ENCODE(0x6e400003, 0xb5a3, 0xf393, 0xe0a9, 0xe50e24dcca9e)
+#define BT_UUID_LBS_MIN_VAL BT_UUID_128_ENCODE(0x8e7f1a23, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120002)
+#define BT_UUID_LBS_MIN BT_UUID_DECLARE_128(BT_UUID_LBS_MIN_VAL)
 
-#define BT_UUID_NUS_SRV BT_UUID_DECLARE_128(BT_UUID_NUS_SRV_VAL)
-#define BT_UUID_NUS_TX  BT_UUID_DECLARE_128(BT_UUID_NUS_TX_CHAR_VAL)
-#define BT_UUID_NUS_RX  BT_UUID_DECLARE_128(BT_UUID_NUS_RX_CHAR_VAL)
+#define BT_UUID_LBS_MIN_WRITE_VAL \
+	BT_UUID_128_ENCODE(0x8e7f1a24, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120002)
+#define BT_UUID_LBS_MIN_WRITE BT_UUID_DECLARE_128(BT_UUID_LBS_MIN_WRITE_VAL)
 
-static struct bt_conn *current_conn;
-static uint32_t notify_counter;
-static bool notify_enabled;
+#define LED0_NODE DT_ALIAS(led0)
+#define SW0_NODE DT_ALIAS(sw0)
 
-extern const struct bt_gatt_service_static nus_svc;
+static const struct gpio_dt_spec led0 = GPIO_DT_SPEC_GET_OR(LED0_NODE, gpios, {0});
+static const struct gpio_dt_spec sw0 = GPIO_DT_SPEC_GET_OR(SW0_NODE, gpios, {0});
 
-static void nus_ccc_cfg_changed(const struct bt_gatt_attr *attr, uint16_t value)
+static struct bt_conn *default_conn;
+static struct bt_conn *discover_conn;
+static struct bt_gatt_discover_params discover_params;
+static struct bt_gatt_write_params write_params;
+static struct gpio_callback sw0_cb;
+static struct k_work button_work;
+static struct k_work_delayable debounce_work;
+static struct k_work_delayable blink_work;
+static atomic_t write_busy;
+
+static uint16_t svc_start_handle;
+static uint16_t svc_end_handle;
+static uint16_t write_handle;
+static uint8_t remote_led_state;
+static uint8_t blink_led_state;
+static bool blink_active;
+
+static bool gpio_ready(const struct gpio_dt_spec *spec)
 {
-	notify_enabled = (value == BT_GATT_CCC_NOTIFY);
-	if (notify_enabled) {
-		LOG_INF("BLE notify enabled");
+	return spec->port != NULL && device_is_ready(spec->port);
+}
+
+static void status_led_apply(uint8_t value)
+{
+	if (!gpio_ready(&led0)) {
+		return;
+	}
+
+	(void)gpio_pin_set_dt(&led0, value ? 1 : 0);
+}
+
+static void blink_handler(struct k_work *work)
+{
+	ARG_UNUSED(work);
+
+	if (!blink_active) {
+		return;
+	}
+
+	blink_led_state = blink_led_state ? 0U : 1U;
+	status_led_apply(blink_led_state);
+	k_work_reschedule(&blink_work, K_MSEC(500));
+}
+
+static int init_status_led(void)
+{
+	int err;
+
+	k_work_init_delayable(&blink_work, blink_handler);
+
+	if (!gpio_ready(&led0)) {
+		return -ENODEV;
+	}
+
+	err = gpio_pin_configure_dt(&led0, GPIO_OUTPUT_INACTIVE);
+	if (err) {
+		return err;
+	}
+
+	status_led_apply(0U);
+	return 0;
+}
+
+static void start_blink(void)
+{
+	if (!gpio_ready(&led0)) {
+		return;
+	}
+
+	blink_active = true;
+	k_work_reschedule(&blink_work, K_NO_WAIT);
+}
+
+static void stop_blink(void)
+{
+	blink_active = false;
+	(void)k_work_cancel_delayable(&blink_work);
+	blink_led_state = 0U;
+	status_led_apply(0U);
+}
+
+static bool ad_has_uuid(struct bt_data *data, void *user_data)
+{
+	bool *found = user_data;
+	struct bt_uuid_128 uuid;
+
+	if (data->type != BT_DATA_UUID128_ALL && data->type != BT_DATA_UUID128_SOME) {
+		return true;
+	}
+
+	if ((data->data_len % 16U) != 0U) {
+		return true;
+	}
+
+	for (size_t i = 0; i < data->data_len; i += 16U) {
+		memcpy(uuid.val, &data->data[i], 16U);
+		uuid.uuid.type = BT_UUID_TYPE_128;
+		if (bt_uuid_cmp(&uuid.uuid, BT_UUID_LBS_MIN) == 0) {
+			*found = true;
+			return false;
+		}
+	}
+
+	return true;
+}
+
+static void start_scan(void);
+
+static void device_found(const bt_addr_le_t *addr, int8_t rssi, uint8_t type,
+			 struct net_buf_simple *ad)
+{
+	bool found = false;
+	int err;
+
+	ARG_UNUSED(rssi);
+
+	if (default_conn != NULL) {
+		return;
+	}
+
+	if (type != BT_GAP_ADV_TYPE_ADV_IND &&
+	    type != BT_GAP_ADV_TYPE_ADV_DIRECT_IND &&
+	    type != BT_GAP_ADV_TYPE_ADV_SCAN_IND &&
+	    type != BT_GAP_ADV_TYPE_SCAN_RSP) {
+		return;
+	}
+
+	bt_data_parse(ad, ad_has_uuid, &found);
+	if (!found) {
+		return;
+	}
+
+	{
+		char addr_str[BT_ADDR_LE_STR_LEN];
+
+		bt_addr_le_to_str(addr, addr_str, sizeof(addr_str));
+		LOG_INF("LBS adv matched from %s (type=0x%02x)", addr_str, type);
+	}
+
+	err = bt_le_scan_stop();
+	if (err) {
+		LOG_WRN("scan stop failed: %d", err);
+	}
+
+	err = bt_conn_le_create(addr, BT_CONN_LE_CREATE_CONN, BT_LE_CONN_PARAM_DEFAULT,
+				&default_conn);
+	if (err) {
+		LOG_ERR("create conn failed: %d", err);
+		start_scan();
 	} else {
-		LOG_INF("BLE notify disabled");
+		LOG_INF("connecting to matching peripheral");
 	}
 }
 
-static ssize_t nus_rx_write(struct bt_conn *conn,
-			    const struct bt_gatt_attr *attr,
-			    const void *buf, uint16_t len,
-			    uint16_t offset, uint8_t flags)
+static void start_scan(void)
 {
-	char rx_buf[128] = {0};
-	char tx_buf[256] = {0};
+	int err = bt_le_scan_start(BT_LE_SCAN_ACTIVE, device_found);
 
-	if (len > sizeof(rx_buf) - 1) {
-		len = sizeof(rx_buf) - 1;
+	if (err) {
+		LOG_ERR("scan start failed: %d", err);
+		return;
 	}
-	memcpy(rx_buf, buf, len);
-	rx_buf[len] = '\0';
 
-	LOG_INF("RX data: %s", rx_buf);
+	LOG_INF("scanning");
+}
 
-	snprintf(tx_buf, sizeof(tx_buf), "echo: %s", rx_buf);
-	LOG_INF("TX echo: %s", rx_buf);
-
-	int ret = bt_gatt_notify(conn, &nus_svc.attrs[1], tx_buf, strlen(tx_buf));
-	if (ret) {
-		LOG_ERR("BLE notify failed");
-		LOG_ERR("Error code: %d", ret);
+static uint8_t discover_func(struct bt_conn *conn, const struct bt_gatt_attr *attr,
+			     struct bt_gatt_discover_params *params)
+{
+	if (attr == NULL) {
+		LOG_INF("discover complete (attr=NULL) write_handle=0x%04x", write_handle);
+		memset(params, 0, sizeof(*params));
+		if (discover_conn) {
+			bt_conn_unref(discover_conn);
+			discover_conn = NULL;
+		}
+		return BT_GATT_ITER_STOP;
 	}
+
+	if (params->type == BT_GATT_DISCOVER_PRIMARY) {
+		const struct bt_gatt_service_val *svc = attr->user_data;
+
+		svc_start_handle = attr->handle;
+		svc_end_handle = svc->end_handle;
+		LOG_INF("primary svc found: start=0x%04x end=0x%04x",
+			svc_start_handle, svc_end_handle);
+
+		memset(params, 0, sizeof(*params));
+		/* Discover all characteristics in the service, then match the write
+		 * characteristic in code. Filtering by the 128-bit UUID at ATT level
+		 * can return nothing even when the characteristic exists.
+		 */
+		params->uuid = NULL;
+		params->func = discover_func;
+		params->start_handle = svc_start_handle + 1U;
+		params->end_handle = svc_end_handle;
+		params->type = BT_GATT_DISCOVER_CHARACTERISTIC;
+
+		if (bt_gatt_discover(conn, params)) {
+			LOG_ERR("characteristic discover failed");
+		}
+
+		return BT_GATT_ITER_STOP;
+	}
+
+	if (params->type == BT_GATT_DISCOVER_CHARACTERISTIC) {
+		const struct bt_gatt_chrc *chrc = attr->user_data;
+		char uuid_str[37];
+
+		bt_uuid_to_str(chrc->uuid, uuid_str, sizeof(uuid_str));
+		LOG_INF("chrc: value_handle=0x%04x props=0x%02x uuid=%s",
+			chrc->value_handle, chrc->properties, uuid_str);
+
+		if (bt_uuid_cmp(chrc->uuid, BT_UUID_LBS_MIN_WRITE) == 0) {
+			write_handle = chrc->value_handle;
+			LOG_INF("write handle found: 0x%04x", write_handle);
+			return BT_GATT_ITER_STOP;
+		}
+	}
+
+	return BT_GATT_ITER_CONTINUE;
+}
+
+static void discover_lbs_service(struct bt_conn *conn)
+{
+	svc_start_handle = 0U;
+	svc_end_handle = 0U;
+	write_handle = 0U;
+
+	if (discover_conn) {
+		bt_conn_unref(discover_conn);
+	}
+
+	discover_conn = bt_conn_ref(conn);
+
+	memset(&discover_params, 0, sizeof(discover_params));
+	discover_params.uuid = BT_UUID_LBS_MIN;
+	discover_params.func = discover_func;
+	discover_params.start_handle = BT_ATT_FIRST_ATTRIBUTE_HANDLE;
+	discover_params.end_handle = BT_ATT_LAST_ATTRIBUTE_HANDLE;
+	discover_params.type = BT_GATT_DISCOVER_PRIMARY;
+
+	if (bt_gatt_discover(conn, &discover_params)) {
+		LOG_ERR("service discover failed");
+	} else {
+		LOG_INF("discovering LBS service");
+	}
+}
+
+static void write_cb(struct bt_conn *conn, uint8_t err, struct bt_gatt_write_params *params)
+{
+	ARG_UNUSED(conn);
+	ARG_UNUSED(params);
+
+	atomic_set(&write_busy, 0);
+
+	if (err) {
+		LOG_ERR("write failed: 0x%02x", err);
+		return;
+	}
+
+	LOG_INF("write ok");
+}
+
+static void button_work_handler(struct k_work *work)
+{
+	uint8_t next_state;
+	int err;
+
+	ARG_UNUSED(work);
+
+	if (default_conn == NULL || write_handle == 0U) {
+		return;
+	}
+
+	if (!atomic_cas(&write_busy, 0, 1)) {
+		return;
+	}
+
+	next_state = remote_led_state ? 0U : 1U;
+	remote_led_state = next_state;
+	LOG_INF("button press -> write 0x%02x", remote_led_state);
+
+	write_params.handle = write_handle;
+	write_params.offset = 0U;
+	write_params.data = &remote_led_state;
+	write_params.length = sizeof(remote_led_state);
+	write_params.func = write_cb;
+
+	err = bt_gatt_write(default_conn, &write_params);
+	if (err) {
+		atomic_set(&write_busy, 0);
+		LOG_ERR("write start failed: %d", err);
+	} else {
+		LOG_INF("write started");
+	}
+}
+
+static void debounce_handler(struct k_work *work)
+{
+	ARG_UNUSED(work);
+
+	if (gpio_pin_get_dt(&sw0) > 0) {
+		LOG_INF("button debounced");
+		k_work_submit(&button_work);
+	}
+}
+
+static void sw0_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins)
+{
+	ARG_UNUSED(dev);
+	ARG_UNUSED(cb);
+	ARG_UNUSED(pins);
+
+	k_work_reschedule(&debounce_work, K_MSEC(30));
+}
+
+static int init_button(void)
+{
+	int err;
+
+	if (!gpio_ready(&sw0)) {
+		return -ENODEV;
+	}
+
+	err = gpio_pin_configure_dt(&sw0, GPIO_INPUT);
+	if (err) {
+		return err;
+	}
+
+	k_work_init(&button_work, button_work_handler);
+	k_work_init_delayable(&debounce_work, debounce_handler);
+
+	gpio_init_callback(&sw0_cb, sw0_isr, BIT(sw0.pin));
+	err = gpio_add_callback(sw0.port, &sw0_cb);
+	if (err) {
+		return err;
+	}
+
+	return gpio_pin_interrupt_configure_dt(&sw0, GPIO_INT_EDGE_TO_ACTIVE);
+}
+
+static void connected(struct bt_conn *conn, uint8_t err)
+{
+	if (err) {
+		LOG_ERR("connect failed: 0x%02x %s", err, bt_hci_err_to_str(err));
+		if (default_conn) {
+			bt_conn_unref(default_conn);
+			default_conn = NULL;
+		}
+		start_scan();
+		return;
+	}
+
+	LOG_INF("connected");
+	stop_blink();
+	discover_lbs_service(conn);
+}
+
+static void disconnected(struct bt_conn *conn, uint8_t reason)
+{
+	ARG_UNUSED(conn);
+
+	LOG_INF("disconnected: 0x%02x %s", reason, bt_hci_err_to_str(reason));
+
+	if (default_conn) {
+		bt_conn_unref(default_conn);
+		default_conn = NULL;
+	}
+
+	write_handle = 0U;
+	atomic_set(&write_busy, 0);
+	start_blink();
+	start_scan();
+}
+
+BT_CONN_CB_DEFINE(conn_callbacks) = {
+	.connected = connected,
+	.disconnected = disconnected,
+};
+
+int main(void)
+{
+	int err;
+
+	remote_led_state = 0U;
+
+	err = init_status_led();
+	if (err) {
+		LOG_WRN("status led init failed: %d", err);
+	}
+
+	err = init_button();
+	if (err) {
+		LOG_WRN("button init failed: %d", err);
+	}
+
+	err = bt_enable(NULL);
+	if (err) {
+		LOG_ERR("bt enable failed: %d", err);
+		return err;
+	}
+
+	LOG_INF("bluetooth initialized");
+	start_blink();
+	start_scan();
+
+	for (;;) {
+		k_sleep(K_FOREVER);
+	}
+}
+
+```
+</details>
+
+4. Configure the PlatformIO project in `platformio.ini`.
+```ini
+[env:seeed-xiao-nrf54lm20a]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+framework = zephyr
+board = seeed-xiao-nrf54lm20a
+platform_packages =
+  platformio/toolchain-gccarmnoneeabi@~1.90201.0
+monitor_speed = 115200
+
+```
+
+
+##### BLE Peripheral
+
+1. Configure the project in `CMakeLists.txt`.
+
+```cmake
+# SPDX-License-Identifier: Apache-2.0
+
+cmake_minimum_required(VERSION 3.13.1)
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+project(ble-lbs-min-peripheral)
+
+target_sources(app PRIVATE src/main.c)
+
+
+
+```
+
+2. Enable Bluetooth-related configurations in `prj.conf`
+
+```conf
+CONFIG_GPIO=y
+CONFIG_SERIAL=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=y
+CONFIG_PRINTK=y
+
+CONFIG_LOG=y
+CONFIG_LOG_BACKEND_UART=y
+CONFIG_LOG_BUFFER_SIZE=2048
+
+CONFIG_BT=y
+CONFIG_BT_PERIPHERAL=y
+CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
+CONFIG_BT_DEVICE_NAME="zephyr_ble_lbs"
+
+CONFIG_MAIN_STACK_SIZE=4096
+CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
+
+
+
+```
+
+3.  Implement the BLE application logic in `main.c`.
+
+<details>
+
+<summary>main.c</summary>
+
+```c
+#include <zephyr/kernel.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/logging/log.h>
+
+#include <zephyr/bluetooth/bluetooth.h>
+#include <zephyr/bluetooth/conn.h>
+#include <zephyr/bluetooth/hci.h>
+#include <zephyr/bluetooth/uuid.h>
+#include <zephyr/bluetooth/gatt.h>
+
+LOG_MODULE_REGISTER(app, LOG_LEVEL_INF);
+
+#define BT_UUID_LBS_MIN_VAL BT_UUID_128_ENCODE(0x8e7f1a23, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120002)
+
+#define BT_UUID_LBS_MIN_WRITE_VAL \
+	BT_UUID_128_ENCODE(0x8e7f1a24, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120002)
+
+#define BT_UUID_LBS_MIN_READ_VAL \
+	BT_UUID_128_ENCODE(0x8e7f1a25, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120003)
+
+static const struct bt_uuid_128 lbs_min_uuid __aligned(4) =
+	BT_UUID_INIT_128(BT_UUID_LBS_MIN_VAL);
+static const struct bt_uuid_128 lbs_min_write_uuid __aligned(4) =
+	BT_UUID_INIT_128(BT_UUID_LBS_MIN_WRITE_VAL);
+static const struct bt_uuid_128 lbs_min_read_uuid __aligned(4) =
+	BT_UUID_INIT_128(BT_UUID_LBS_MIN_READ_VAL);
+
+#define BT_UUID_LBS_MIN ((const struct bt_uuid *)&lbs_min_uuid.uuid)
+#define BT_UUID_LBS_MIN_WRITE ((const struct bt_uuid *)&lbs_min_write_uuid.uuid)
+#define BT_UUID_LBS_MIN_READ ((const struct bt_uuid *)&lbs_min_read_uuid.uuid)
+
+#define LED0_NODE DT_ALIAS(led0)
+
+static const struct gpio_dt_spec led0 = GPIO_DT_SPEC_GET_OR(LED0_NODE, gpios, {0});
+static struct k_work_delayable blink_work;
+static uint8_t led_state __aligned(4);
+static uint8_t blink_led_state __aligned(4);
+static bool blink_active;
+
+static bool gpio_ready(const struct gpio_dt_spec *spec)
+{
+	return spec->port != NULL && device_is_ready(spec->port);
+}
+
+static void led_apply(uint8_t value)
+{
+	if (!gpio_ready(&led0)) {
+		return;
+	}
+
+	(void)gpio_pin_set_dt(&led0, value ? 1 : 0);
+}
+
+static void blink_handler(struct k_work *work)
+{
+	ARG_UNUSED(work);
+
+	if (!blink_active) {
+		return;
+	}
+
+	blink_led_state = blink_led_state ? 0U : 1U;
+	led_apply(blink_led_state);
+	k_work_reschedule(&blink_work, K_MSEC(500));
+}
+
+static void start_blink(void)
+{
+	if (!gpio_ready(&led0)) {
+		return;
+	}
+
+	blink_active = true;
+	k_work_reschedule(&blink_work, K_NO_WAIT);
+}
+
+static void stop_blink(void)
+{
+	blink_active = false;
+	(void)k_work_cancel_delayable(&blink_work);
+	blink_led_state = 0U;
+	led_apply(led_state);
+}
+
+static ssize_t read_led(struct bt_conn *conn, const struct bt_gatt_attr *attr,
+			void *buf, uint16_t len, uint16_t offset)
+{
+	const uint8_t *value = attr->user_data;
+
+	return bt_gatt_attr_read(conn, attr, buf, len, offset, value, sizeof(*value));
+}
+
+static ssize_t write_led(struct bt_conn *conn, const struct bt_gatt_attr *attr,
+			 const void *buf, uint16_t len, uint16_t offset, uint8_t flags)
+{
+	uint8_t value;
+
+	ARG_UNUSED(conn);
+	ARG_UNUSED(attr);
+	ARG_UNUSED(flags);
+
+	if (len != 1U) {
+		return BT_GATT_ERR(BT_ATT_ERR_INVALID_ATTRIBUTE_LEN);
+	}
+
+	if (offset != 0U) {
+		return BT_GATT_ERR(BT_ATT_ERR_INVALID_OFFSET);
+	}
+
+	value = ((const uint8_t *)buf)[0];
+	if (value != 0U && value != 1U) {
+		return BT_GATT_ERR(BT_ATT_ERR_VALUE_NOT_ALLOWED);
+	}
+
+	led_state = value;
+	led_apply(led_state);
+	LOG_INF("remote led state=%u", led_state);
 
 	return len;
 }
 
-BT_GATT_SERVICE_DEFINE(nus_svc,
-	BT_GATT_PRIMARY_SERVICE(BT_UUID_NUS_SRV),
-	BT_GATT_CHARACTERISTIC(BT_UUID_NUS_TX,
-		BT_GATT_CHRC_NOTIFY,
-		BT_GATT_PERM_NONE,
-		NULL, NULL, NULL),
-	BT_GATT_CCC(nus_ccc_cfg_changed,
-		BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),
-	BT_GATT_CHARACTERISTIC(BT_UUID_NUS_RX,
-		BT_GATT_CHRC_WRITE | BT_GATT_CHRC_WRITE_WITHOUT_RESP,
-		BT_GATT_PERM_WRITE,
-		NULL, nus_rx_write, NULL),
+BT_GATT_SERVICE_DEFINE(lbs_min_svc,
+	BT_GATT_PRIMARY_SERVICE(BT_UUID_LBS_MIN),
+	BT_GATT_CHARACTERISTIC(BT_UUID_LBS_MIN_WRITE, BT_GATT_CHRC_WRITE,
+			       BT_GATT_PERM_WRITE, NULL, write_led, NULL),
+	BT_GATT_CHARACTERISTIC(BT_UUID_LBS_MIN_READ, BT_GATT_CHRC_READ,
+			       BT_GATT_PERM_READ, read_led, NULL, &led_state),
 );
+
+static const struct bt_data ad[] __aligned(4) = {
+	BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
+	BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
+		sizeof(CONFIG_BT_DEVICE_NAME) - 1),
+};
+
+static const struct bt_data sd[] __aligned(4) = {
+	BT_DATA_BYTES(BT_DATA_UUID128_ALL, BT_UUID_LBS_MIN_VAL),
+};
 
 static void connected(struct bt_conn *conn, uint8_t err)
 {
+	ARG_UNUSED(conn);
+
 	if (err) {
-		LOG_ERR("Connection failed, error code: %d", err);
+		LOG_ERR("connect failed: 0x%02x %s", err, bt_hci_err_to_str(err));
 		return;
 	}
 
-	current_conn = bt_conn_ref(conn);
-	LOG_INF("Device connected");
+	LOG_INF("connected");
+	stop_blink();
 }
 
 static void disconnected(struct bt_conn *conn, uint8_t reason)
 {
-	LOG_INF("Device disconnected, reason: %d", reason);
-	if (current_conn) {
-		bt_conn_unref(current_conn);
-		current_conn = NULL;
-	}
-	notify_enabled = false;
+	ARG_UNUSED(conn);
+
+	LOG_INF("disconnected: 0x%02x %s", reason, bt_hci_err_to_str(reason));
+	start_blink();
 }
 
 BT_CONN_CB_DEFINE(conn_callbacks) = {
@@ -527,657 +1095,83 @@ BT_CONN_CB_DEFINE(conn_callbacks) = {
 	.disconnected = disconnected,
 };
 
-static void notify_work_handler(struct k_work *work);
-
-static K_WORK_DELAYABLE_DEFINE(notify_work, notify_work_handler);
-
-static void notify_work_handler(struct k_work *work)
+int main(void)
 {
-	if (current_conn && notify_enabled) {
-		char msg[64];
+	int err;
 
-		notify_counter++;
-		snprintf(msg, sizeof(msg), "status counter: %u", notify_counter);
+	k_work_init_delayable(&blink_work, blink_handler);
 
-		LOG_INF("Notify counter: %u", notify_counter);
-
-		int ret = bt_gatt_notify(current_conn, &nus_svc.attrs[1],
-					  msg, strlen(msg));
-		if (ret) {
-			LOG_ERR("BLE notify failed");
-			LOG_ERR("Error code: %d", ret);
+	led_state = 0U;
+	if (gpio_ready(&led0)) {
+		err = gpio_pin_configure_dt(&led0, GPIO_OUTPUT_INACTIVE);
+		if (err == 0) {
+			led_apply(led_state);
 		}
 	}
 
-	k_work_schedule(&notify_work, K_SECONDS(1));
-}
-
-static const struct bt_data ad[] = {
-	BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-	BT_DATA(BT_DATA_NAME_COMPLETE, DEVICE_NAME, DEVICE_NAME_LEN),
-};
-
-int main(void)
-{
-	int ret;
-
-	LOG_INF("BLE UART (NUS) example for XIAO nRF54LM20A");
-	LOG_INF("BLE initialization started");
-
-	ret = bt_enable(NULL);
-	if (ret) {
-		LOG_ERR("Bluetooth init failed");
-		LOG_ERR("Error code: %d", ret);
-		return 0;
+	err = bt_enable(NULL);
+	if (err) {
+		LOG_ERR("bt enable failed: %d", err);
+		return err;
 	}
-	LOG_INF("Bluetooth initialized");
 
-	ret = bt_le_adv_start(BT_LE_ADV_CONN_FAST_1, ad, ARRAY_SIZE(ad), NULL, 0);
-	if (ret) {
-		LOG_ERR("Advertising start failed");
-		LOG_ERR("Error code: %d", ret);
-		return 0;
+	LOG_INF("bluetooth initialized");
+
+	err = bt_le_adv_start(BT_LE_ADV_CONN_FAST_1, ad, ARRAY_SIZE(ad), sd, ARRAY_SIZE(sd));
+	if (err) {
+		LOG_ERR("advertising failed: %d", err);
+		return err;
 	}
-	LOG_INF("BLE advertising started");
 
-	k_work_schedule(&notify_work, K_SECONDS(1));
+	LOG_INF("advertising");
+	start_blink();
 
-	while (1) {
+	for (;;) {
 		k_sleep(K_FOREVER);
 	}
-
-	return 0;
 }
+
+
 ```
 
 </details>
 
-#### Result
+4. Configure the PlatformIO project in `platformio.ini`.
+```ini
+[env:seeed-xiao-nrf54lm20a]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+framework = zephyr
+board = seeed-xiao-nrf54lm20a
+platform_packages =
+  platformio/toolchain-gccarmnoneeabi@~1.90201.0
+monitor_speed = 115200
 
-1. After uploading the firwmare, install the nRF Connect app to scan and detect BLE devices.
 
-Meanwhile, you can search and download the nRF Connect app in major mobile app stores, which allows your phone to search for and connect to Bluetooth device.
-
-- Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
-- IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
-
-2. 下载软件后，扫描并查蓝牙设备**XIAO BLE UART**,按照下面步骤连接
-
-<div className="table-center">
-<table align="center">
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_1.jpg" style={{width:300, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_2.jpg" style={{width:300, height:'auto'}}/></div></td>
- </tr>
-</table>
-</div>
-
-3. Follow the steps below to enable Notify subscription.
-
-- Locate Nordic UART Service in the service list, expand TX Characteristic and click the Notify subscribe button to receive count information sent by XIAO nRF54LM20A Sense.
-
-<div className="table-center">
-<table align="center">
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_3.jpg" style={{width:300, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_4.jpg" style={{width:300, height:'auto'}}/></div></td>
- </tr>
-</table>
-</div>
-
-- Open the serial port log, where the enable status of Notify and current counter value will be printed.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_7.png" style={{width:800, height:'auto'}}/></div>
-
-4. Send data to demonstrate the effect of received data forwarding.
-
-- Expand the RX Characteristic, click the **Write** button, input a string such as `hello World` and send it to XIAO nRF54LM20A Sense. Meanwhile, the forwarded string can be received via TX Characteristic.
-
-<div className="table-center">
-<table align="center">
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_5.jpg" style={{width:300, height:'auto'}}/></div></td>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_5_1.jpg" style={{width:300, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_6.jpg" style={{width:300, height:'auto'}}/></div></td>
- </tr>
-</table>
-</div>
-
-- Open the serial port assistant, and it will print the received and sent data.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_uart_8.png" style={{width:800, height:'auto'}}/></div>
-<br/>
-In this section, you will gain a basic understanding of the **BLE Notify subscription mechanism**, as well as the **data reception and forwarding mechanism**. In certain specific scenarios, combining Bluetooth connectivity with **sensor-triggered control** allows the device to function as a **custom controller usable offline**.
-
-### BLE Sensor
-
-This section implements the function of real-time BLE-based IMU motion data reporting on XIAO nRF54LM20A Sense. After the program starts, the device automatically enables BLE advertising. Users can connect to the device and subscribe to Notify via nRF Connect on mobile phones to receive real-time X/Y/Z acceleration data. The on-board LED lights up when the resultant acceleration exceeds the preset threshold and turns off when below the threshold, realizing basic motion detection and visual indication.
-
-:::tip
-
-The XIAO nRF54LM20A series is equipped with the LSM6DS3TR-C six-axis sensor. Refer to [Usage of Built-in Sensors for XIAO nRF54LM20A Sense](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_1.jpg).
-
-:::
-
-#### Software
-
-1. Enable relevant device tree configurations in `app.overlay`.
-
-```dts
-/*
- * BLE Sensor overlay for XIAO nRF54LM20A.
- *
- * Enables nPM1300 PMIC LDO1 (imu_vdd) at 3.3V for IMU power,
- * and marks IMU for deferred initialization so the application
- * can enable power before the sensor driver probes.
- *
- * nRF54LM20A does not have rfsw_pwr / vbat_pwr regulators.
- *
- * BLE: The board DTS sets zephyr,bt-hci = &bt_hci_sdc (Nordic SDC),
- * but SDC is not available in the PlatformIO SDK. We keep the node
- * label (so the chosen reference stays valid) but change its
- * compatible string to the Zephyr open-source split LL driver.
- */
-
-&pmic_i2c {
-	sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
-	scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
-	status = "okay";
-};
-
-&pwm20 {
-	status = "disabled";
-};
-
-&green_led {
-	gpios = <&gpio1 24 GPIO_ACTIVE_LOW>;
-};
-
-&pmic {
-	regulators {
-		imu_vdd: LDO1 {
-			regulator-min-microvolt = <3300000>;
-			regulator-max-microvolt = <3300000>;
-			regulator-boot-on;
-		};
-	};
-};
-
-&lsm6ds3tr_c {
-	wakeup-source;
-	zephyr,deferred-init;
-};
-
-/* Replace SDC compatible with Zephyr open-source split LL */
-&bt_hci_sdc {
-	compatible = "zephyr,bt-hci-ll-sw-split";
-};
 ```
-
-2. Enable the IMU configuration and set the Bluetooth device name to **XIAO-IMU**.
-
-```prj
-# Standard output
-CONFIG_STDOUT_CONSOLE=y
-CONFIG_CBPRINTF_FP_SUPPORT=y
-
-# Logging
-CONFIG_LOG=y
-CONFIG_LOG_BACKEND_UART=y
-CONFIG_LOG_DEFAULT_LEVEL=3
-
-# I2C and Sensor drivers
-CONFIG_I2C=y
-CONFIG_SENSOR=y
-CONFIG_LSM6DSL=y
-CONFIG_LSM6DSL_ACCEL_ODR=1
-CONFIG_MFD=y
-
-# Regulator support (nPM1300 on nrf54lm20a)
-CONFIG_REGULATOR=y
-
-# GPIO for LED
-CONFIG_GPIO=y
-
-# BLE
-CONFIG_BT=y
-CONFIG_BT_PERIPHERAL=y
-CONFIG_BT_DEVICE_NAME="XIAO-IMU"
-CONFIG_BT_DEVICE_APPEARANCE=0
-CONFIG_BT_MAX_CONN=1
-CONFIG_BT_MAX_PAIRED=1
-CONFIG_BT_LL_SW_SPLIT=y
-
-# BLE buffer configuration for reliable notify
-CONFIG_BT_BUF_ACL_TX_COUNT=5
-
-# Increased stack sizes for BLE + sensor processing
-CONFIG_MAIN_STACK_SIZE=4096
-CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=2048
-
-# Enable Zephyr Power Management
-CONFIG_PM=y
-CONFIG_PM_DEVICE=y
-```
-
-3. Write the IMU reading logic and Notify subscription mechanism in main.c.
-
-<details>
-
-<summary>main.c</summary>
-
-```c
-#include <stdio.h>
-#include <math.h>
-#include <zephyr/kernel.h>
-#include <zephyr/device.h>
-#include <zephyr/drivers/gpio.h>
-#include <zephyr/drivers/sensor.h>
-#include <zephyr/drivers/regulator.h>
-#include <zephyr/logging/log.h>
-
-#include <zephyr/bluetooth/bluetooth.h>
-#include <zephyr/bluetooth/gatt.h>
-#include <zephyr/bluetooth/hci.h>
-#include <zephyr/bluetooth/uuid.h>
-
-LOG_MODULE_REGISTER(ble_imu, LOG_LEVEL_INF);
-
-/*===========================================================================*/
-/* Device Definitions                                                        */
-/*===========================================================================*/
-
-#define IMU_NODE DT_ALIAS(imu0)
-
-static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(DT_NODELABEL(green_led), gpios);
-
-/*===========================================================================*/
-/* Configurable Parameters                                                    */
-/*===========================================================================*/
-
-/* Motion threshold in m/s^2 - acceleration vector magnitude */
-#define MOTION_THRESHOLD  12.0f
-
-/* BLE notify interval in milliseconds */
-#define NOTIFY_INTERVAL_MS 100
-
-/*===========================================================================*/
-/* nRF54LM20A IMU Power Management                                           */
-/*===========================================================================*/
-
-#if defined(DT_N_NODELABEL_power_en)
-static const struct device *const power_en_dev =
-	DEVICE_DT_GET(DT_NODELABEL(power_en));
-#endif
-
-#if defined(DT_N_NODELABEL_imu_vdd)
-static const struct device *const imu_vdd_dev =
-	DEVICE_DT_GET(DT_NODELABEL(imu_vdd));
-#endif
-
-static int enable_imu_power(void)
-{
-#if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
-	int ret;
-#endif
-
-#if defined(DT_N_NODELABEL_power_en)
-	if (!device_is_ready(power_en_dev)) {
-		LOG_ERR("power_en regulator is not ready");
-		return -ENODEV;
-	}
-	ret = regulator_enable(power_en_dev);
-	if (ret < 0 && ret != -EALREADY) {
-		LOG_ERR("Failed to enable power_en: %d", ret);
-		return ret;
-	}
-#endif
-
-#if defined(DT_N_NODELABEL_imu_vdd)
-	if (!device_is_ready(imu_vdd_dev)) {
-		LOG_ERR("imu_vdd regulator is not ready");
-		return -ENODEV;
-	}
-	ret = regulator_enable(imu_vdd_dev);
-	if (ret < 0 && ret != -EALREADY) {
-		LOG_ERR("Failed to enable imu_vdd: %d", ret);
-		return ret;
-	}
-#endif
-
-#if defined(DT_N_NODELABEL_power_en) || defined(DT_N_NODELABEL_imu_vdd)
-	k_sleep(K_MSEC(20));
-#endif
-
-	return 0;
-}
-
-/*===========================================================================*/
-/* BLE GATT Service: IMU Acceleration Data                                   */
-/*===========================================================================*/
-
-/* Custom 128-bit UUIDs for the IMU service and data characteristic */
-#define BT_UUID_IMU_SERVICE_VAL \
-	BT_UUID_128_ENCODE(0x00000001, 0x1234, 0x5678, 0x9abc, 0xdef012345678)
-#define BT_UUID_IMU_DATA_VAL \
-	BT_UUID_128_ENCODE(0x00000002, 0x1234, 0x5678, 0x9abc, 0xdef012345678)
-
-static struct bt_uuid_128 imu_svc_uuid = BT_UUID_INIT_128(
-	BT_UUID_IMU_SERVICE_VAL);
-static struct bt_uuid_128 imu_data_uuid = BT_UUID_INIT_128(
-	BT_UUID_IMU_DATA_VAL);
-
-static bool notify_enabled;
-static struct bt_conn *current_conn;
-
-static void imu_data_ccc_cfg_changed(const struct bt_gatt_attr *attr,
-				     uint16_t value)
-{
-	notify_enabled = (value & BT_GATT_CCC_NOTIFY);
-	LOG_INF("Notify %s", notify_enabled ? "enabled" : "disabled");
-}
-
-/* CCC user data — defined separately to avoid GCC 8.x compound literal issues */
-static struct bt_gatt_ccc_managed_user_data imu_ccc_data =
-	BT_GATT_CCC_MANAGED_USER_DATA_INIT(imu_data_ccc_cfg_changed, NULL, NULL);
-
-/* GATT Service definition — auto-registered via iterable section */
-BT_GATT_SERVICE_DEFINE(imu_svc,
-	BT_GATT_PRIMARY_SERVICE(&imu_svc_uuid),
-	BT_GATT_CHARACTERISTIC(&imu_data_uuid.uuid,
-		BT_GATT_CHRC_NOTIFY,
-		BT_GATT_PERM_NONE,
-		NULL, NULL, NULL),
-	BT_GATT_CCC_MANAGED(&imu_ccc_data,
-		BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),
-);
-
-/*===========================================================================*/
-/* BLE Connection Callbacks                                                  */
-/*===========================================================================*/
-
-static void connected(struct bt_conn *conn, uint8_t err)
-{
-	if (err) {
-		LOG_ERR("Connection failed (err %u)", err);
-		return;
-	}
-	current_conn = bt_conn_ref(conn);
-	LOG_INF("Device connected");
-}
-
-static void disconnected(struct bt_conn *conn, uint8_t reason)
-{
-	if (current_conn) {
-		bt_conn_unref(current_conn);
-		current_conn = NULL;
-	}
-	notify_enabled = false;
-	LOG_INF("Device disconnected (reason %u)", reason);
-}
-
-BT_CONN_CB_DEFINE(conn_callbacks) = {
-	.connected = connected,
-	.disconnected = disconnected,
-};
-
-/*===========================================================================*/
-/* BLE Initialization                                                        */
-/*===========================================================================*/
-
-static int ble_init(void)
-{
-	int ret;
-
-	ret = bt_enable(NULL);
-	if (ret) {
-		LOG_ERR("BLE init failed (err %d)", ret);
-		return ret;
-	}
-	LOG_INF("BLE initialized");
-
-	ret = bt_le_adv_start(BT_LE_ADV_CONN_NAME, NULL, 0, NULL, 0);
-	if (ret) {
-		LOG_ERR("BLE advertising start failed (err %d)", ret);
-		return ret;
-	}
-	LOG_INF("BLE advertising started");
-
-	return 0;
-}
-
-/*===========================================================================*/
-/* IMU Data Reading                                                          */
-/*===========================================================================*/
-
-static float sv_to_float(const struct sensor_value *val)
-{
-	return (float)val->val1 + (float)val->val2 / 1000000.0f;
-}
-
-static int imu_read_accel(const struct device *dev,
-			  float *x, float *y, float *z)
-{
-	struct sensor_value sv_x, sv_y, sv_z;
-	int ret;
-
-	ret = sensor_sample_fetch(dev);
-	if (ret) {
-		LOG_ERR("IMU sample fetch failed: %d", ret);
-		return ret;
-	}
-
-	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_X, &sv_x);
-	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &sv_y);
-	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &sv_z);
-
-	*x = sv_to_float(&sv_x);
-	*y = sv_to_float(&sv_y);
-	*z = sv_to_float(&sv_z);
-
-	return 0;
-}
-
-static float compute_accel_magnitude(float x, float y, float z)
-{
-	return sqrtf(x * x + y * y + z * z);
-}
-
-/*===========================================================================*/
-/* LED Control                                                               */
-/*===========================================================================*/
-
-static void led_set(bool on)
-{
-	static bool current_state;
-
-	if (on == current_state) {
-		return;
-	}
-	current_state = on;
-	gpio_pin_set_dt(&led, on ? 1 : 0);
-	LOG_INF("LED %s", on ? "ON" : "OFF");
-}
-
-/*===========================================================================*/
-/* BLE Notify                                                                */
-/*===========================================================================*/
-
-static int ble_send_imu_data(float x, float y, float z)
-{
-	char buf[64];
-	int len;
-	int ret;
-
-	if (!notify_enabled || !current_conn) {
-		return -EAGAIN;
-	}
-
-	len = snprintf(buf, sizeof(buf), "X:%.1f Y:%.1f Z:%.1f",
-		       (double)x, (double)y, (double)z);
-	if (len < 0 || len >= (int)sizeof(buf)) {
-		LOG_ERR("Notify payload formatting failed");
-		return -ENOMEM;
-	}
-
-	ret = bt_gatt_notify(NULL, &imu_svc.attrs[1], buf, len);
-	if (ret && ret != -EAGAIN) {
-		LOG_ERR("BLE notify failed: %d", ret);
-	}
-	return ret;
-}
-
-/*===========================================================================*/
-/* Main                                                                      */
-/*===========================================================================*/
-
-int main(void)
-{
-	const struct device *imu_dev = DEVICE_DT_GET(IMU_NODE);
-	float accel_x, accel_y, accel_z;
-	float magnitude;
-	bool motion_active = false;
-	int ret;
-
-	/* LED initialization */
-	if (!gpio_is_ready_dt(&led)) {
-		LOG_ERR("LED device not found");
-		return 0;
-	}
-	gpio_pin_configure_dt(&led, GPIO_OUTPUT_INACTIVE);
-
-	LOG_INF("XIAO nRF54LM20A BLE + IMU Sensor starting...");
-
-	/* LED blink on startup */
-	gpio_pin_set_dt(&led, 1);
-	k_sleep(K_MSEC(250));
-	gpio_pin_set_dt(&led, 0);
-
-	/* Enable IMU power (regulators on nRF54LM20A) */
-	ret = enable_imu_power();
-	if (ret < 0) {
-		LOG_ERR("Failed to enable IMU power: %d", ret);
-		return 0;
-	}
-
-	/* Initialize IMU (deferred-init on nRF54LM20A) */
-	if (!device_is_ready(imu_dev)) {
-		ret = device_init(imu_dev);
-		if (ret < 0 && ret != -EALREADY) {
-			LOG_ERR("Failed to init IMU device: %d", ret);
-			return 0;
-		}
-	}
-
-	if (!device_is_ready(imu_dev)) {
-		LOG_ERR("IMU device not ready");
-		return 0;
-	}
-	LOG_INF("IMU sensor initialized: %s", imu_dev->name);
-
-	/* Initialize BLE */
-	ret = ble_init();
-	if (ret < 0) {
-		LOG_ERR("Failed to initialize BLE: %d", ret);
-		return 0;
-	}
-
-	LOG_INF("Setup complete. Starting IMU + BLE notify loop.");
-	LOG_INF("Motion threshold: %.1f m/s^2",
-		(double)MOTION_THRESHOLD);
-	LOG_INF("Notify interval: %d ms", NOTIFY_INTERVAL_MS);
-
-	/* Main loop: read IMU, check motion, control LED, send notify */
-	while (1) {
-		ret = imu_read_accel(imu_dev, &accel_x, &accel_y, &accel_z);
-		if (ret) {
-			LOG_ERR("IMU read failed. Error code: %d", ret);
-			k_sleep(K_MSEC(NOTIFY_INTERVAL_MS));
-			continue;
-		}
-
-		magnitude = compute_accel_magnitude(accel_x, accel_y, accel_z);
-
-		LOG_INF("IMU X=%.2f Y=%.2f Z=%.2f",
-			(double)accel_x, (double)accel_y, (double)accel_z);
-
-		/* Motion threshold detection */
-		if (!motion_active && magnitude > MOTION_THRESHOLD) {
-			motion_active = true;
-			led_set(true);
-			LOG_INF("Motion threshold triggered (mag=%.2f)",
-				(double)magnitude);
-		} else if (motion_active && magnitude <= MOTION_THRESHOLD) {
-			motion_active = false;
-			led_set(false);
-			LOG_INF("Motion below threshold (mag=%.2f)",
-				(double)magnitude);
-		}
-
-		/* Send IMU data via BLE notify if subscribed */
-		ret = ble_send_imu_data(accel_x, accel_y, accel_z);
-		if (ret && ret != -EAGAIN) {
-			LOG_ERR("BLE send failed: %d", ret);
-		}
-
-		k_sleep(K_MSEC(NOTIFY_INTERVAL_MS));
-	}
-
-	return 0;
-}
-```
-
-</details>
 
 #### Result
 
-1. After uploading the firwmare, install the nRF Connect app to scan and detect BLE devices.
+1. Flash the Peripheral firmware to one XIAO board and the Central firmware to another.
 
-Meanwhile, you can search and download the nRF Connect app in major mobile app stores, which allows your phone to search for and connect to Bluetooth device.
+2. Reset both boards. Before a connection is established, the Peripheral LED blinks to indicate advertising, while the Central LED blinks to indicate scanning.
 
-- Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
-- IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
+3. Once the Central discovers the Peripheral, the two boards connect automatically. After the connection is established, both LEDs stop blinking.
 
-2. After launching the software, scan for the Bluetooth device **XIAO BLE IMU** and connect it following the steps below.
+4. Press the BOOT button on the Central board. The Central writes either `0` or `1` to the Peripheral through the GATT Write Characteristic, and the Peripheral updates its LED accordingly.
 
-<div className="table-center">
-<table align="center">
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_imu_1_1.jpg" style={{width:300, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_imu_2.jpg" style={{width:300, height:'auto'}}/></div></td>
- </tr>
-</table>
+<div style={{textAlign: 'center'}}>
+  <img
+    src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/ble_2.gif"
+    alt="BLE LBS communication between two XIAO boards"
+    style={{width: 600, height: 'auto'}}
+  />
 </div>
 
-3. Subscribe to and receive IMU data from XIAO nRF54LM20A Sense via the Notify subscription mechanism in nRF Connect.
-
-<div className="table-center">
-<table align="center">
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_imu_3.jpg" style={{width:300, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_imu_4_1.jpg" style={{width:300, height:'auto'}}/></div></td>
- </tr>
-</table>
-</div>
-
-- Open the serial port tool to check the data format and confirm the subscription is enabled.
-
-<div className="table-center"> <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_imu_5.png" style={{width:800, height:'auto'}}/></div></td></div>
-
-4. Shake the XIAO nRF54LM20A Sense to trigger the threshold alarm mechanism.
-
-- The threshold alarm value can be modified via macro definition. The default static value of standard gravitational acceleration on Earth is 9.8 m/s².
-
-```c
-/* Motion threshold in m/s^2 - acceleration vector magnitude */
-#define MOTION_THRESHOLD  12.0f
-```
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_imu_6.gif" style={{width:800, height:'auto'}}/></div>
+Through this example, you will learn how to build a complete BLE Central and Peripheral application, including BLE Advertising, Scanning, Auto Connection, GATT Service Discovery, and the basic communication process of using a button on one development board to remotely control the LED on another development board.
 
 ## Summary
 
-Through the above examples, you will gain a solid understanding of BLE application on XIAO nRF54LM20A. Feel free to design your own creative projects and share your achievements.
+This example demonstrates how to build a BLE Central and Peripheral application, including BLE advertising, scanning, automatic connection, GATT service discovery, and remote LED control through a GATT Write Characteristic.
 
 ## Tech Support & Product Discussion
 

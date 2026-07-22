@@ -12,7 +12,7 @@ last_update:
   date: 3/24/2026
   author: Kasun Thushara
 createdAt: '2026-03-24'
-updatedAt: '2026-06-17'
+updatedAt: '2026-06-18'
 url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_picovoice/
 ---
 

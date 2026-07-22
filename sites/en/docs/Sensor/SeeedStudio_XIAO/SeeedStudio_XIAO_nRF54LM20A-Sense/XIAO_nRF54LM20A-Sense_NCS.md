@@ -1,5 +1,5 @@
 ---
-title: NRF Connect SDK with Seeed Studio XIAO nRF54LM20A Sense
+title: NRF Connect SDK with XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -12,7 +12,7 @@ last_update:
   date: 06/15/2026
   author: Brandy
 createdAt: '2025-05-13'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_ncs/
 ---
 
@@ -137,31 +137,50 @@ After the installation finishes, the integrated environment for the nRF Connect 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
+
+:::tip
+Please make sure that both the nRF Connect SDK (NCS) version and the Toolchain version are 3.3.0. Mixing different versions may cause build or compatibility issues.
+:::
+
 2. Enter commands to check the version information of required tools. You can copy and run the commands one by one for verification.
 
 ```bash
 # Check west (project manager & build entry) version
 west --version
+#West version: v1.5.0
 
 # Check CMake (build system generator) version
 cmake --version
+#cmake version 4.2.1
 
 # Check Ninja (build executor) version
 ninja --version
+#1.13.2
 
 # Check Python (scripting runtime for west & Zephyr tools) version
 python --version
+#Python 3.11.7
 
 # Check ARM cross-compiler (Zephyr toolchain for Cortex-M) version
 arm-zephyr-eabi-gcc --version
+#arm-zephyr-eabi-gcc (Zephyr SDK 0.17.0) 12.2.0
+#Copyright (C) 2022 Free Software Foundation, Inc.
+#This is free software; see the source for copying conditions.  There is NO
+#warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 # Check OpenOCD (on-chip debugger & flasher via CMSIS-DAP) version
 openocd --version
+#Open On-Chip Debugger 0.12.0+dev-01514-g21fa2de70 (2024-02-07-19:03)
+#Licensed under GNU GPL v2
+#For bug reports, read
+#        http://openocd.org/doc/doxygen/bugs.html
 ```
 
 - The output is shown below. If any components are missing, reinstall the toolchain and ensure a stable network during installation.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/3.png" style={{width:800, height:'auto'}}/></div>
+
+
 
 ### Add Custom Board Path
 
@@ -436,35 +455,44 @@ west flash --build-dir build_1
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:600, height:'auto'}}/></div>
 
 ## FAQ
-If your SDK download takes too long, we also provide a relatively fast download method
-- Step 1: Install aria2
-```
+
+ **Q1: Downloading the nRF Connect SDK is very slow or gets stuck**
+
+If the SDK download is very slow or gets stuck, you can use **aria2** to download the required packages with multiple connections, and then install the SDK using **nrfutil**.
+
+**Step 1. Install aria2**
+
+```bash
 brew install aria2
 ```
 
-- Step 2: Create the download directory
-```
+**Step 2. Create the download directory**
+
+```bash
 mkdir -p /opt/nordic/ncs/downloads
 ```
 
-- Step 3: Download the Toolchain Bundle
-```
+**Step 3. Download the Toolchain Bundle**
+
+```bash
 aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   -d /opt/nordic/ncs/downloads \
   -o ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz \
   "https://files.nordicsemi.cn/artifactory/NCS/external/bundles/v3/ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz"
 ```
 
-- Step 4: Download the nRF Connect SDK Bundle
-```
+**Step 4. Download the nRF Connect SDK Bundle**
+
+```bash
 aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   -d /opt/nordic/ncs/downloads \
   -o sdk-nrf-bundle-v3.3.0.tar.gz \
   "https://files.nordicsemi.cn/artifactory/ncs-src-mirror/external/sdk-nrf/v3.3.0/src.tar.gz"
 ```
 
-- Step 5: Install nRF Connect SDK v3.3.0
-```
+**Step 5. Install nRF Connect SDK v3.3.0**
+
+```bash
 nrfutil sdk-manager install v3.3.0 \
   --sdk-path /opt/nordic/ncs/v3.3.0 \
   --type nrf

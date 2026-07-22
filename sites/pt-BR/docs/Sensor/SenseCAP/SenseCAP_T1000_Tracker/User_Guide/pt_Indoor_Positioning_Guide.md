@@ -12,7 +12,7 @@ last_update:
   date: 10/20/2023
   author: Jessie
 createdAt: '2023-10-19'
-updatedAt: '2026-01-07'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/pt-br/IPS_For_SenseCAP_T1000_Traker/
 ---
 

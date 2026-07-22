@@ -5,16 +5,26 @@ keywords:
   - CodeCraft
   - Quick Start
 sidebar_label: 1. Inicio rápido y soporte
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp
 slug: /codecraft/quick-start-and-support
 sidebar_position: 2
 last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/es/codecraft/quick-start-and-support/
+createdAt: '2026-06-30'
+updatedAt: '2026-07-08'
 ---
 
 # Inicio rápido y soporte de CodeCraft
+
+![CodeCraft Banner](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp)
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://codecraft.seeed.cc" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>Prueba CodeCraft ahora 🚀</font></span></strong>
+    </a>
+</div>
 
 ## 1.1 Introducción a CodeCraft
 

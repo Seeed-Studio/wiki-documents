@@ -11,53 +11,61 @@ keywords:
 slug: /rebot_arm_b601_dm_pinocchio_meshcat
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-17T00:00:00.000Z
+  date: 2026-06-30
   author: LiuJunjie
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-03-24'
-updatedAt: '2026-06-16'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
 # Introducción a Pinocchio y MeshCat para reBot Arm B601-DM
 
+<p align="center">
+    <a href="./LICENSE">
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
+    </a>
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
+    <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
+</p>
+
+<p align="center">
+  <strong>Brazo robótico de 6 GDL · Soporte multi-motor · Solucionador de cinemática · Planificación de trayectorias · Totalmente de código abierto</strong>
+</p>
+
+
 ![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
+
 :::tip
-Este código de ejemplo se puede usar para controlar los motores o las posturas del brazo robótico, incluyendo control de un solo motor, pruebas y control de cinemática directa/inversa, ajuste de la posición cero del brazo y lectura del ángulo del motor, sistema de visualización MeshCat y más.
+Este código de ejemplo se puede usar para controlar los motores o las poses del brazo robótico, incluyendo control de un solo motor, control y prueba de cinemática directa/inversa, ajuste de la posición cero del brazo y lectura del ángulo del motor, sistema de visualización MeshCat y más.
 :::
+
 
 [Pinocchio](https://github.com/stack-of-tasks/pinocchio) es una biblioteca de código abierto para análisis y optimización de dinámica en robótica. Proporciona cinemática directa/inversa eficiente, cálculos dinámicos y capacidades de planificación de trayectorias. [MeshCat](https://github.com/rdeits/meshcat) es una herramienta de visualización 3D basada en la web que puede mostrar en tiempo real el estado del robot y las trayectorias de movimiento.
 
 Este proyecto combina las potentes capacidades de cálculo de Pinocchio con la visualización intuitiva de MeshCat, proporcionando un conjunto completo de herramientas de análisis cinemático y depuración para reBot Arm B601-DM.
 
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-</a></div>
-
-
 ---
 
 ## Características del proyecto
 
-1. **Análisis cinemático completo**  
-   Compatible con cálculos de Cinemática Directa (FK) y Cinemática Inversa (IK), capaz de resolver en tiempo real la postura del efector final del brazo robótico.
+1. **Análisis cinemático completo**
+   Soporta cálculos de Cinemática Directa (FK) y Cinemática Inversa (IK), capaz de resolver en tiempo real la pose del efector final del brazo robótico.
 
-2. **Visualización 3D en tiempo real**  
-   Muestra en tiempo real el estado del brazo robótico y las trayectorias de movimiento mediante MeshCat en el navegador, sin necesidad de software adicional.
+2. **Visualización 3D en tiempo real**
+   Muestra en tiempo real el estado del brazo robótico y las trayectorias de movimiento a través de MeshCat en el navegador, sin necesidad de software adicional.
 
-3. **Planificación y seguimiento de trayectorias**  
-   Implementa planificación de trayectorias geodésicas en SE(3), compatible con control de seguimiento CLIK (Cinemática Inversa en Bucle Cerrado).
+3. **Planificación y seguimiento de trayectorias**
+   Implementa planificación de trayectorias geodésicas en SE(3), soportando control de seguimiento CLIK (Cinemática Inversa en Bucle Cerrado).
 
-4. **Control con compensación de gravedad**  
+4. **Control de compensación de gravedad**
    Calcula el par de gravedad de las articulaciones basado en el modelo dinámico de Pinocchio, logrando el efecto de “flotación” del brazo robótico.
 
-5. **Código abierto y extensible**  
-   Todo el código es de código abierto, lo que permite a los usuarios personalizar algoritmos de control y efectos de visualización según sus necesidades.
+5. **Código abierto y extensible**
+   Todo el código es de código abierto, permitiendo a los usuarios personalizar algoritmos de control y efectos de visualización según sus necesidades.
 
 ## Especificaciones
 
@@ -77,7 +85,7 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
     </tr>
     <tr>
       <td>Grados de libertad</td>
-      <td>6-DOF + pinza</td>
+      <td>6 GDL + pinza</td>
     </tr>
     <tr>
       <td>Modelo de motor</td>
@@ -89,7 +97,7 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
     </tr>
     <tr>
       <td>Tensión de funcionamiento</td>
-      <td>24V CC</td>
+      <td>24 V CC</td>
     </tr>
     <tr>
       <td>Método de control</td>
@@ -97,7 +105,7 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
     </tr>
     <tr>
       <td>Rango de temperatura de funcionamiento recomendado</td>
-      <td>0°C ～ 40°C</td>
+      <td>0°C ~ 40°C</td>
     </tr>
   </tbody>
 </table>
@@ -108,17 +116,12 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
 |--|--|--|
 | Brazo robótico reBot Arm B601-DM | 1 | ✅ |
 | Puente serie USB2CAN | 1 | ✅ |
-| Adaptador de corriente (24V) | 1 | ✅ |
+| Adaptador de corriente (24 V) | 1 | ✅ |
 | Cable USB-C | 1 | ✅ |
 | Pinza | 1 | ✅ |
 
-:::caution
-Seeed Studio **solo es responsable de la calidad del hardware**. El tutorial se actualiza en estricta conformidad con la documentación oficial. Si encuentras problemas de software o de entorno que no puedas resolver, consulta primero las Preguntas Frecuentes (FAQ) al final del documento, o contacta con atención al cliente para unirte al grupo de comunicación SeeedStudio Lerobot y realizar consultas.
-:::
 
----
-
-## Requisitos de entorno
+## Requisitos del entorno
 
 | Elemento | Requisito |
 |------|-------------|
@@ -148,7 +151,6 @@ uv sync
 `uv sync` creará automáticamente un entorno virtual (si no existe) e instalará todas las dependencias según `pyproject.toml` y `uv.lock`.
 :::
 
----
 
 ## Introducción a las herramientas de depuración
 
@@ -163,7 +165,6 @@ sudo chmod 666 /dev/ttyACM0
 sudo chmod 666 /dev/can0
 ```
 :::
-
 ### Consola de control de un solo motor (`0x01damiao_test.py`)
 
 Prueba directa de un solo motor usando el SDK de motorbridge.
@@ -179,14 +180,21 @@ uv run python example/0x01damiao_test.py
 | `enable` / `disable` | Habilitar/Deshabilitar motor |
 | `set_zero` | Establecer posición cero |
 | `state` | Ver estado |
-| `mode mit` | Modo MIT |
-| `mode posvel` | Modo Posición-Velocidad, se pueden añadir parámetros PID |
-| `mode vel` | Modo de velocidad pura |
+| `ping` | Hacer ping al motor para obtener respuesta |
+| `clear_error` | Borrar errores del motor |
+| `mode <mit/posvel/vel>` | Cambiar modo de control |
+| `mit <pos> [vel] [kp] [kd]` | Comando en modo MIT |
+| `posvel <pos> [vlim]` | Comando en modo POS_VEL |
+| `vel <velocity>` | Comando en modo de velocidad pura |
+| `read_param <id> [type]` | Leer parámetros del motor |
+| `write_param <id> <value> [type]` | Escribir parámetros del motor |
+| `loop` | Entrar en modo de control en bucle |
+| `q` / `quit` | Salir |
 ---
 
 ### Calibración de cero y monitorización de ángulo (`2_zero_and_read.py`)
 
-Establece automáticamente el cero de todas las articulaciones y muestra en tiempo real los ángulos articulares.
+Establece automáticamente los ceros de todas las articulaciones y muestra los ángulos de las articulaciones en tiempo real.
 
 **Cómo ejecutar**:
 ```bash
@@ -214,7 +222,7 @@ Ten en cuenta que en el modo de control MIT, el brazo robótico se mueve muy rá
 
 ### Modo de control Posición-Velocidad (`4_pos_vel_control.py`)
 
-Introduce ángulos objetivo para todas las articulaciones para completar el control del motor en modo de control híbrido POS_VEL (Posición-Velocidad), logrando un movimiento más suave y controlable al alcanzar los ángulos objetivo, reduciendo la vibración.
+Introduce ángulos objetivo para todas las articulaciones para completar el control del motor en modo híbrido POS_VEL (Posición-Velocidad), logrando un movimiento más suave y controlable al alcanzar los ángulos objetivo, reduciendo la vibración.
 
 **Cómo ejecutar**:
 ```bash
@@ -231,7 +239,7 @@ uv run python example/4_pos_vel_control.py
 
 ### Prueba de cinemática directa (`5_fk_test.py`)
 
-Calcular la postura del efector final en función de los ángulos articulares.
+Calcular la pose del efector final en función de los ángulos de las articulaciones.
 
 **Entrada**: 6 ángulos articulares (grados)
 
@@ -266,7 +274,7 @@ uv run python example/5_fk_test.py
 
 ### Prueba de cinemática inversa (`6_ik_test.py`)
 
-Resolver los ángulos articulares en función de la postura deseada del efector final.
+Resolver los ángulos articulares en función de la pose deseada del efector final.
 
 **Formato de entrada**:
 - Solo posición: `<x> <y> <z>` (metros)
@@ -319,7 +327,7 @@ Usa cinemática inversa (IK) en modo MIT para especificar las coordenadas 3D (X,
 - Solo posición: `<x> <y> <z>` (metros)
 - Posición + orientación: `<x> <y> <z> <roll> <pitch> <yaw>` (grados)
 - Introducir `state`: Ver los valores radianes reales actuales de cada articulación.
-- Introducir `end_state`: Ver las coordenadas reales actuales (m) y los ángulos de Euler (rad) del efector final en el espacio.
+- Introducir `end_state`: Ver las coordenadas reales actuales del efector final (m) y los ángulos de Euler (rad) en el espacio.
 
 **Cómo ejecutar**:
 ```bash
@@ -339,12 +347,12 @@ Ten en cuenta que en este código de ejemplo, el brazo robótico se mueve muy r�
 
 ### Control de cinemática inversa con trayectoria suave (`8_arm_traj_control.py`)
 
-Utiliza cinemática inversa (IK) en modo MIT para planificar automáticamente una trayectoria de movimiento con aceleración/desaceleración uniforme o suave dentro del tiempo objetivo, evitando fuertes vibraciones en las articulaciones.
+Utiliza cinemática inversa (IK) en modo MIT para planificar automáticamente una trayectoria de movimiento de aceleración/desaceleración uniforme o suave dentro del tiempo objetivo, evitando fuertes vibraciones en las articulaciones.
 
 **Formato de entrada**:
 - Solo posición: `<x> <y> <z>` (metros)
-- Posición + Orientación: `<x> <y> <z> <roll> <pitch> <yaw>` (grados)
-- Posición + Orientación + Tiempo (por defecto 2.0): `<x> <y> <z> <roll> <pitch> <yaw> <time>` (grados)
+- Posición + orientación: `<x> <y> <z> <roll> <pitch> <yaw>` (grados)
+- Posición + orientación + tiempo (por defecto 2.0): `<x> <y> <z> <roll> <pitch> <yaw> <time>` (grados)
 - Introduce `state`: Ver los valores actuales en radianes de cada articulación.
 - Introduce `end_state`: Ver las coordenadas reales actuales del efector final (m) y los ángulos de Euler (rad) en el espacio.
 
@@ -367,15 +375,15 @@ uv run python example/8_arm_traj_control.py
 
 ## Pruebas de compensación de gravedad
 
-### Control de compensación de gravedad (`9_gravity_compensation.py`)
+### Control de compensación de gravedad — Versión básica (`9_gravity_compensation.py`)
 
-Compensa la gravedad de las articulaciones utilizando el modelo dinámico de Pinocchio.
+Utiliza el modelo dinámico Pinocchio para compensar la gravedad de las articulaciones.
 
 **Ley de control**:
 ```
 tau = g(q)          — Gravity feedforward
 pos = current motor position   — Joint position follows current position
-kp = 2, kd = 1     — Uniform stiffness/damping for all joints
+kp = 2,  kd = 1     — Unified stiffness/damping for all joints
 ```
 
 **Comportamiento esperado**:
@@ -392,24 +400,44 @@ uv run python example/9_gravity_compensation.py
 - Visualización en tiempo real del par deseado para cada articulación (N·m)
 - Pulsa `Ctrl+C` para detener y desconectar
 
-### Control de compensación de gravedad con alta amortiguación (`10_gravity_compensation_lock.py`)
+:::caution Vuelve a la posición inicial antes de salir de la compensación de gravedad
+Al detener el script (`Ctrl+C`), el programa **deshabilitará directamente todos los motores**, y el brazo robótico **no volverá automáticamente a cero**. Sujeta el brazo robótico con la mano o muévelo a una postura segura/inicial antes de salir para evitar caídas repentinas de las articulaciones que puedan causar colisiones o daños.
+:::
 
-Control de compensación de gravedad que resiste fuerzas externas leves.
+:::tip Ajuste de la compensación de articulaciones individuales
+Si algunas articulaciones están subcompensadas o sobrecompensadas debido a fricción estructural o diferencias de montaje, puedes aplicar un factor de escala adicional al elemento correspondiente del array `tau_g` en el código:
+
+```python
+tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually starting from 1
+# This compensation is generally only used for joints 2 and 3
+```
+
+Por ejemplo, `tau_g[2] *= 1.2` significa aumentar en un 20% el par de compensación de gravedad de la articulación 2. Se recomienda ajustar elemento por elemento según el efecto de flotación real para evitar realizar cambios excesivamente grandes de una sola vez.
+:::
+
+
+### Control de compensación de gravedad — Versión con bloqueo de velocidad del efector final (`10_gravity_compensation_lock.py`)
+
+Basado en la compensación de gravedad básica, añade detección de velocidad del efector final y un mecanismo de bloqueo de ángulo articular.
 
 **Ley de control**:
-
-Nota: Cuando una persona empuja el brazo con suficiente fuerza de modo que la velocidad lineal del efector final > 0.04 m/s o la velocidad angular > 0.08 rad/s, se desbloquea y actualiza el ángulo objetivo en tiempo real.
-
 ```
-tau = g(q) + integral term  — Gravity feedforward with integral accumulation to eliminate static friction and residual gravity dead zone
-pos = target lock angle   — When end-effector velocity is below threshold, target angle locks at current position
-kp = 8.0, kd = 1.0  — Increased stiffness to 8.0 in locked state, providing stronger resistance to disturbance and positioning constraint
+tau = g(q) + integral_term    — Gravity feedforward + integral term
+pos = q_target                 — Target joint angle (locked or updated)
+kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
 ```
+
+**Lógica de bloqueo**:
+- Cuando la velocidad lineal del extremo `||v_ee|| < 0.04 m/s` y la velocidad angular `||w_ee|| < 0.08 rad/s`:
+  - El ángulo articular objetivo `q_target` permanece bloqueado
+  - El brazo robótico se bloquea en la posición actual
+- Cuando la velocidad del extremo supera el umbral:
+  - `q_target` se actualiza al ángulo articular actual
+  - Permite empujar manualmente para cambiar la posición
 
 **Comportamiento esperado**:
-  - Bloqueo al soltar: Cuando el brazo se mueve manualmente a una posición y se suelta, se bloquea inmediatamente con firmeza en su lugar, resolviendo perfectamente el problema de la caída lenta y el pequeño desplazamiento.
-  - Sin desplazamiento ante empujones ligeros: Sacudidas leves, ráfagas de viento o toques accidentales no pueden mover el brazo.
-  - Movible con fuerza: Solo cuando se empuja con suficiente fuerza como para superar el umbral de velocidad se desbloqueará y se moverá de forma complaciente.
+- El brazo robótico se bloquea en la posición actual, requiriendo fuerza para cambiar el ángulo objetivo
+- Más estable que la versión básica, adecuada para escenarios que requieren mantenimiento de la postura
 
 **Cómo ejecutar**:
 ```bash
@@ -417,28 +445,53 @@ uv run python example/10_gravity_compensation_lock.py
 ```
 
 **Salida**:
-- Visualización en tiempo real del estado actual (muestra `LOCKED` para el estado bloqueado, `UPDATE` para el estado de arrastre desbloqueado).
-- Impresión sincronizada de la velocidad lineal en tiempo real del efector final (m/s), velocidad angular (rad/s) y par de gravedad de cada articulación (N·m).
+- Visualización en tiempo real del estado de bloqueo (LOCKED / UPDATE)
+- Velocidad lineal del extremo, velocidad angular
+- Par de compensación de gravedad para cada articulación (N·m)
 - Pulsa `Ctrl+C` para detener y desconectar
 
-## Entorno de simulación
+:::caution Vuelve a la posición inicial antes de salir de la compensación de gravedad
+Al detener el script (`Ctrl+C`), el programa **deshabilitará directamente todos los motores**, y el brazo robótico **no volverá automáticamente a cero**. Sujeta el brazo robótico con la mano o muévelo a una postura segura/inicial antes de salir para evitar caídas repentinas de las articulaciones que puedan causar colisiones o daños.
+:::
+
+:::tip Ajuste de la compensación de articulaciones individuales
+Si algunas articulaciones están subcompensadas o sobrecompensadas debido a fricción estructural o diferencias de montaje, puedes aplicar un factor de escala adicional al elemento correspondiente del array `tau_g` en el código:
+
+```python
+tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually starting from 1
+# This compensation is generally only used for joints 2 and 3
+```
+
+Por ejemplo, `tau_g[2] *= 1.2` significa aumentar en un 20% el par de compensación de gravedad de la articulación 2. Se recomienda ajustar elemento por elemento según el efecto de flotación real para evitar realizar cambios excesivamente grandes de una sola vez.
+:::
+
+**Configuración de prueba de seguridad**:
+Puedes modificar la lista `ENABLED_JOINTS` en la parte superior del script para habilitar solo las articulaciones especificadas para las pruebas de seguridad:
+```python
+ENABLED_JOINTS = ["joint1"]  # Enable only joint1
+```
+
+---
+
+### Entorno de simulación
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/traj_sim_geodesic.png" />
 </div>
 
+
 #### Simulación de cinemática directa (`sim/fk_sim.py`)
 
-Simulación interactiva de cinemática directa, visualiza la postura del brazo robótico introduciendo ángulos de articulación en MeshCat.
+Simulación interactiva de cinemática directa, visualiza la postura del brazo robótico introduciendo ángulos articulares en MeshCat.
 
-**Uso**:
+**Cómo ejecutar**:
 ```bash
 uv run python example/sim/fk_sim.py
 ```
 
 **Comandos interactivos**:
-- Introduce 6 ángulos de articulación (grados), separados por espacios
+- Introduce 6 ángulos articulares (grados), separados por espacios
 - Ejemplo: `0 0 0 0 0 0`
 - Ejemplo: `45 -30 15 -60 90 -180`
 - `q`/`quit`/`exit`: Salir
@@ -452,16 +505,16 @@ uv run python example/sim/fk_sim.py
 
 #### Simulación de cinemática inversa (`sim/ik_sim.py`)
 
-Simulación interactiva de cinemática inversa, resuelve automáticamente los ángulos de articulación a partir de la postura objetivo y la visualiza.
+Simulación interactiva de cinemática inversa, resuelve automáticamente los ángulos articulares a partir de la postura objetivo y la visualiza.
 
-**Uso**:
+**Cómo ejecutar**:
 ```bash
 uv run python example/sim/ik_sim.py
 ```
 
 **Formato de entrada**:
 - Solo posición: `x y z` (metros)
-- Posición+Orientación: `x y z roll pitch yaw` (radianes)
+- Posición+orientación: `x y z roll pitch yaw` (radianes)
 
 **Ejemplo**:
 ```bash
@@ -470,7 +523,7 @@ uv run python example/sim/ik_sim.py
 ```
 
 **Características**:
-- Juicio automático de la convergencia de IK
+- Juicio automático de la convergencia de la IK
 - Muestra el número de iteraciones y el error
 - Actualizaciones en tiempo real de la postura del robot
 
@@ -480,19 +533,19 @@ uv run python example/sim/ik_sim.py
 
 Simulación de planificación de trayectoria basada en geodésicas en SE(3), incluyendo seguimiento CLIK y reproducción de animaciones en MeshCat.
 
-**Uso**:
+**Cómo ejecutar**:
 ```bash
 uv run python example/sim/traj_sim.py
 ```
 
 **Comandos interactivos**:
 - Entrada: `x y z [roll pitch yaw]` (metros/radianes)
-- Pulsa Enter para usar la configuración predeterminada
+- Pulsa Intro para usar la configuración por defecto
 - `q`: Salir
 
 **Características**:
 - Planificación desde la posición actual hasta la posición objetivo
-- Utiliza un perfil de trayectoria de mínimo tirón (minimum jerk)
+- Uso de un perfil de trayectoria de mínimo tirón (minimum jerk)
 - Visualización en tiempo real de las estadísticas de la trayectoria
 - Reproducción completa de la animación de la trayectoria en MeshCat
 - Muestra la trayectoria de referencia (gris) y la trayectoria real (verde)
@@ -501,7 +554,7 @@ uv run python example/sim/traj_sim.py
 
 #### Herramienta de visualización (`sim/visualizer.py`)
 
-Wrapper del visualizador MeshCat, que proporciona una interfaz unificada de visualización del robot.
+[LINE_214>Wrapper de visualización de MeshCat, que proporciona una interfaz unificada de visualización del robot.
 
 **Características principales**:
 - Cargar el modelo URDF y mostrar el robot
@@ -519,29 +572,23 @@ viz.draw_path(points, "path_name", color)  # Draw path
 
 ---
 
-## Preguntas frecuentes
+## Preguntas frecuentes (FAQ)
 
-- **Aparece el error `Permission denied`**  
+- **Aparece el error `Permission denied`**
   Asegúrate de haber ejecutado `sudo chmod 666 /dev/ttyACM0` o `sudo chmod 666 /dev/can0` para establecer los permisos del dispositivo.
 
-- **La resolución de IK falla o los resultados son anormales**  
+- **La resolución de IK falla o los resultados son anormales**
   Comprueba si la postura objetivo está dentro del espacio de trabajo del brazo robótico y asegúrate de que la configuración de los límites articulares sea correcta.
 
-- **El efecto de la compensación de gravedad no es bueno**  
-  Esto puede deberse a errores estructurales y precisión de mecanizado. La compensación de gravedad de este proyecto depende de urdf y pinocchio. Puedes intentar corregir el urdf con tus parámetros medidos reales (puedes pedir ayuda a una IA para este paso).
+- **El efecto de la compensación de gravedad no es bueno**
+  Esto puede deberse a errores estructurales y a la precisión del mecanizado. La compensación de gravedad de este proyecto depende de URDF y Pinocchio. Puedes intentar corregir el URDF según tus parámetros medidos reales (puedes pedir ayuda a una IA para este paso).
 
 ---
 
-## Licencia
-
-Este proyecto es de código abierto bajo la **Licencia MIT**.
-
----
-
-## Contáctanos
+## Contacto
 
 - **Soporte técnico**: [Submit Issue](https://github.com/vectorBH6/reBotArm_control_py/issues)
-- **Repositorio**: [GitHub](https://github.com/vectorBH6/reBotArm_control_py)
+- **Repositorio del proyecto**: [GitHub](https://github.com/vectorBH6/reBotArm_control_py)
 - **Foro**: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ---
@@ -555,5 +602,5 @@ Este proyecto es de código abierto bajo la **Licencia MIT**.
 ---
 
 <div align="center">
-  <strong>Si este proyecto te ayuda, ¡por favor danos una estrella!</strong>
+  <strong>Si este proyecto te ayuda, ¡por favor danos una estrella (Star)!</strong>
 </div>

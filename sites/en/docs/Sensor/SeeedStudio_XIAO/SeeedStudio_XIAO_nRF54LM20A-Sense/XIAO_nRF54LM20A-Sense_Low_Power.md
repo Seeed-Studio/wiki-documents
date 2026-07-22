@@ -12,7 +12,7 @@ last_update:
   date: 06/01/2026
   author: Zeller
 createdAt: '2025-06-01'
-updatedAt: '2026-06-15'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_low_power/
 ---
 
@@ -96,15 +96,10 @@ Low-power mode is implemented on the XIAO nRF54LM20A using functions such as Sys
 1. Modify the device tree file ending with `.overlay`.
 
 ```dts
-/* Switch BT HCI from Nordic SDC (needs nrfxlib binary) to Zephyr SW controller */
 / {
     chosen {
         zephyr,bt-hci = &bt_hci_controller;
     };
-};
-
-&bt_hci_sdc {
-    status = "disabled";
 };
 
 &bt_hci_controller {
@@ -123,12 +118,14 @@ Low-power mode is implemented on the XIAO nRF54LM20A using functions such as Sys
         };
     };
 };
+
 ```
 
 2. Modify the `prj.conf` configuration file to enable system power management settings.
 
 ```conf
 CONFIG_GPIO=y
+CONFIG_ARM_MPU=n
 CONFIG_NRFX_POWER=y
 CONFIG_POWEROFF=y
 CONFIG_HWINFO=y
@@ -142,6 +139,9 @@ CONFIG_PM_DEVICE_RUNTIME=y
 CONFIG_BT=y
 CONFIG_BT_BROADCASTER=y
 CONFIG_BT_DEVICE_NAME="XIAO nRF54LM20A"
+CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
+CONFIG_BT_CTLR_ASSERT_DEBUG=n
+CONFIG_BT_CTLR_ASSERT_OVERHEAD_START=n
 ```
 
 3. Modify the main.c program, enable low-power mode with `k_sleep(K_SECONDS(10))` and configure BLE to broadcast messages periodically at a 1-second interval.
@@ -195,7 +195,7 @@ int main(void)
 
 After flashing the firmware, we can use a power consumption tester to measure the operating current of the XIAO nRF54LM20A under low-power conditions.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/low_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 Meanwhile, you can scan via Bluetooth and find the device advertising under the name `XIAO nRF54LM20A`.
 
@@ -225,27 +225,31 @@ This section verifies the practical performance of System OFF mode on the XIAO n
 
 ### Software
 
-In this example, the Flash must be disabled manually; otherwise, it will introduce an additional leakage current of approximately 15 µA and negatively impact ultra-low-power applications.
+In this example, the external flash must be manually placed into deep power-down mode, and its SPI pins must be driven to defined states; otherwise, it may introduce additional leakage current.
 
 1. Modify the device tree file with the `.overlay` suffix.
 
 ```dts
 &power_en {
-	// /delete-property/ regulator-boot-on;
+	/delete-property/ regulator-boot-on;
 };
 
 &pmic {
 	regulators {
 		LDO1 {
-			// /delete-property/ regulator-boot-on;
+			/delete-property/ regulator-boot-on;
 		};
 	};
 };
 
+&pmic_leds {
+	status = "disabled";
+};
+
 &py25q64 {
 	status = "okay";
-	// hold-gpios = <&gpio2 0 GPIO_ACTIVE_LOW>;
 };
+
 ```
 
 2. Modify the `prj.conf` file to enable configurations including power management.
@@ -255,6 +259,7 @@ CONFIG_SERIAL=y
 CONFIG_CONSOLE=y
 CONFIG_UART_CONSOLE=y
 CONFIG_PRINTK=y
+CONFIG_BOOT_BANNER=n
 
 CONFIG_GPIO=y
 CONFIG_SPI=y
@@ -262,9 +267,12 @@ CONFIG_FLASH=y
 CONFIG_SPI_NOR=y
 
 CONFIG_PM_DEVICE=y
-CONFIG_NRFX_POWER=y
+CONFIG_PM_DEVICE_RUNTIME=y
 CONFIG_POWEROFF=y
 CONFIG_HWINFO=y
+
+CONFIG_BT=n
+
 ```
 
 3. Write the main.c program to wake the chip from ultra-low power mode when the onboard Boot button is pressed.
@@ -279,6 +287,15 @@ CONFIG_HWINFO=y
  *
  * SPDX-License-Identifier: Apache-2.0
  */
+/*
+ * Ultra-low-power System OFF demo for XIAO nRF54LM20A Sense.
+ *
+ * Confirmed board resources from the board DTS:
+ * - sw0 / BOOT: P0.09 (active low with pull-up)
+ * - External flash (PY25Q64HA) on spi00:
+ *   HOLD# P2.00, SCK P2.01, MOSI P2.02, WP# P2.03, MISO P2.04, CS# P2.05
+ * - RGB LEDs on P1.22 / P1.23 / P1.24
+ */
 #include <errno.h>
 #include <inttypes.h>
 #include <stdio.h>
@@ -291,8 +308,18 @@ CONFIG_HWINFO=y
 #include <zephyr/sys/poweroff.h>
 
 static const struct gpio_dt_spec sw0 = GPIO_DT_SPEC_GET(DT_ALIAS(sw0), gpios);
+static const struct gpio_dt_spec led_red = GPIO_DT_SPEC_GET(DT_ALIAS(led1), gpios);
+static const struct gpio_dt_spec led_blue = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
+static const struct gpio_dt_spec led_green = GPIO_DT_SPEC_GET(DT_ALIAS(led2), gpios);
+
+#if DT_NODE_EXISTS(DT_CHOSEN(zephyr_console))
 static const struct device *const cons = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
+#endif
+
+#if DT_NODE_HAS_STATUS(DT_NODELABEL(py25q64), okay)
 static const struct device *const flash_dev = DEVICE_DT_GET(DT_NODELABEL(py25q64));
+static const struct device *const flash_bus = DEVICE_DT_GET(DT_BUS(DT_NODELABEL(py25q64)));
+#endif
 
 static void print_reset_cause(uint32_t reset_cause)
 {
@@ -333,16 +360,30 @@ static int configure_gpio_wakeup(void)
 	return 0;
 }
 
+static void release_led(const struct gpio_dt_spec *led, const char *name)
+{
+	int rc;
+
+	if (!gpio_is_ready_dt(led)) {
+		return;
+	}
+
+	rc = gpio_pin_configure(led->port, led->pin, GPIO_DISCONNECTED);
+	if (rc < 0) {
+		printf("Warning: could not disconnect %s (%d)\n", name, rc);
+	}
+}
+
+static void release_led_gpios(void)
+{
+	release_led(&led_red, "red LED");
+	release_led(&led_blue, "blue LED");
+	release_led(&led_green, "green LED");
+}
+
 /*
- * SPI pin assignments for PY25Q64HA:
- *   P2.05 = CS#    -> OUTPUT HIGH  (keep flash deselected, prevent DPD wake)
- *   P2.00 = HOLD#  -> OUTPUT HIGH  (inactive)
- *   P2.03 = WP#    -> OUTPUT HIGH  (inactive)
- *   P2.01 = SCK    -> OUTPUT LOW   (deterministic level)
- *   P2.02 = MOSI   -> OUTPUT LOW   (deterministic level)
- *   P2.04 = MISO   -> INPUT PULL_DOWN (flash output, pull to known level)
- *
- * Datasheet requires all flash inputs at 0V or Vcc during DPD for 0.2uA typ.
+ * Put the external flash pins into deterministic, low-leakage states before
+ * System OFF. These pin numbers are confirmed by the board pinctrl and DTS.
  */
 static int configure_spi_pins_for_system_off(void)
 {
@@ -354,37 +395,31 @@ static int configure_spi_pins_for_system_off(void)
 		return -ENODEV;
 	}
 
-	/* CS# = HIGH: keep flash deselected */
 	rc = gpio_pin_configure(gpio2, 5, GPIO_OUTPUT_HIGH);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* HOLD# = HIGH: inactive */
 	rc = gpio_pin_configure(gpio2, 0, GPIO_OUTPUT_HIGH);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* WP# = HIGH: inactive */
 	rc = gpio_pin_configure(gpio2, 3, GPIO_OUTPUT_HIGH);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* SCK = LOW */
 	rc = gpio_pin_configure(gpio2, 1, GPIO_OUTPUT_LOW);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* MOSI = LOW */
 	rc = gpio_pin_configure(gpio2, 2, GPIO_OUTPUT_LOW);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* MISO = input with pull-down */
 	rc = gpio_pin_configure(gpio2, 4, GPIO_INPUT | GPIO_PULL_DOWN);
 	if (rc < 0) {
 		return rc;
@@ -395,109 +430,116 @@ static int configure_spi_pins_for_system_off(void)
 
 static int suspend_external_flash(void)
 {
-	const struct device *flash_bus = DEVICE_DT_GET(DT_BUS(DT_NODELABEL(py25q64)));
+	int first_error = 0;
 	int rc;
 
-	if (!device_is_ready(flash_dev)) {
-		printf("Flash device %s is not ready.\n", flash_dev->name);
-		return -ENODEV;
+#if DT_NODE_HAS_STATUS(DT_NODELABEL(py25q64), okay)
+	if (device_is_ready(flash_dev)) {
+		rc = pm_device_action_run(flash_dev, PM_DEVICE_ACTION_SUSPEND);
+		if ((rc < 0) && (first_error == 0)) {
+			first_error = rc;
+			printf("Warning: could not suspend external flash (%d)\n", rc);
+		}
+	} else {
+		first_error = -ENODEV;
+		printf("Warning: flash device is not ready; skipping driver DPD.\n");
 	}
 
-	printf("Flash device: %s\n", flash_dev->name);
-
-	/* Step 1: Suspend flash — spi-nor driver sends DPD (0xB9) automatically */
-	printf("Suspending external flash (entering DPD)...\n");
-	rc = pm_device_action_run(flash_dev, PM_DEVICE_ACTION_SUSPEND);
-	if (rc < 0) {
-		printf("Could not suspend external flash (%d)\n", rc);
-		return rc;
-	}
-	printf("External flash suspended.\n");
-
-	/* Step 2: Suspend SPI bus */
 	if (device_is_ready(flash_bus)) {
 		rc = pm_device_action_run(flash_bus, PM_DEVICE_ACTION_SUSPEND);
-		if (rc < 0) {
-			printf("Could not suspend SPI bus (%d)\n", rc);
-			return rc;
+		if ((rc < 0) && (first_error == 0)) {
+			first_error = rc;
+			printf("Warning: could not suspend SPI bus (%d)\n", rc);
 		}
-		printf("SPI bus suspended.\n");
+	} else if (first_error == 0) {
+		first_error = -ENODEV;
+		printf("Warning: flash SPI bus is not ready.\n");
 	}
+#else
+	first_error = -ENODEV;
+	printf("Warning: py25q64 is not enabled in DTS.\n");
+#endif
 
-	/* Step 3: Drive all SPI GPIOs to deterministic levels */
 	rc = configure_spi_pins_for_system_off();
-	if (rc < 0) {
-		printf("Could not configure SPI pins (%d)\n", rc);
-		return rc;
+	if ((rc < 0) && (first_error == 0)) {
+		first_error = rc;
+		printf("Warning: could not configure flash SPI pins (%d)\n", rc);
 	}
-	printf("SPI GPIO pins configured for system_off.\n");
 
-	return 0;
+	return first_error;
+}
+
+static void suspend_console_best_effort(void)
+{
+#if DT_NODE_EXISTS(DT_CHOSEN(zephyr_console))
+	int rc;
+
+	if (!device_is_ready(cons)) {
+		return;
+	}
+
+	rc = pm_device_action_run(cons, PM_DEVICE_ACTION_SUSPEND);
+	if (rc < 0) {
+		printf("Warning: could not suspend console (%d)\n", rc);
+	}
+#endif
 }
 
 int main(void)
 {
 	int rc;
-
-	if (!device_is_ready(cons)) {
-		printf("%s: console device not ready.\n", cons->name);
-		return 0;
-	}
-
-	printf("\n=== %s system off demo with PY25Q64HA ===\n", CONFIG_BOARD);
-
 	uint32_t reset_cause = 0U;
+
+	printf("\n=== %s ultra-low-power system off demo ===\n", CONFIG_BOARD);
 
 	rc = hwinfo_get_reset_cause(&reset_cause);
 	if (rc == 0) {
 		print_reset_cause(reset_cause);
 	} else {
-		printf("Could not read reset cause (%d)\n", rc);
+		printf("Warning: could not read reset cause (%d)\n", rc);
 	}
 
 	rc = configure_gpio_wakeup();
 	if (rc < 0) {
+		printf("Error: wakeup source configuration failed, aborting System OFF.\n");
 		return 0;
 	}
+
+	release_led_gpios();
 
 	rc = suspend_external_flash();
 	if (rc < 0) {
-		printf("Aborting system off because flash did not enter low power.\n");
-		return 0;
+		printf("Warning: flash low-power preparation incomplete (%d)\n", rc);
 	}
 
-	printf("Entering system off; press sw0 to restart\n");
+	printf("Entering system off; press BOOT/SW0 to restart.\n");
+	k_msleep(20);
 
-	rc = pm_device_action_run(cons, PM_DEVICE_ACTION_SUSPEND);
-	if (rc < 0) {
-		printf("Could not suspend console (%d)\n", rc);
-		return 0;
-	}
+	suspend_console_best_effort();
 
 	rc = hwinfo_clear_reset_cause();
 	if (rc < 0) {
-		printf("Could not clear reset cause (rc=%d)\n", rc);
-		return 0;
+		/* Clear failure should not stop entry into System OFF. */
+		printf("Warning: could not clear reset cause (%d)\n", rc);
 	}
 
 	sys_poweroff();
 
-	return 0;
+	while (1) {
+		k_sleep(K_FOREVER);
+	}
 }
+
 ```
 
 </details>
 
 ### Result
 
-The device enters ultra-low power mode by default after power-on. The XIAO nRF54LM20A is measured with a power consumption tester, yielding an average operating current of approximately 5.43 µA when powered by a 3.7 V battery.
+After startup, the firmware prepares the wakeup source and external peripherals, then automatically enters System OFF. The XIAO nRF54LM20A is measured with a power consumption tester, yielding an average operating current of approximately 3.74 µA when powered by a 3.7 V battery.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_4.png" style={{width:800, height:'auto'}}/></div>
-<br/>
-By pressing the onboard BOOT button via a serial monitor, you can wake up the chip to print status information before it re-enters deep sleep.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/low_plus_3.77_2.png" style={{width:800, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_5.png" style={{width:800, height:'auto'}}/></div>
-<br/>
 :::tip
 
 The above test results are measured under laboratory conditions. Values may vary with different environments and test instruments; refer to actual measured performance.

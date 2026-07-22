@@ -13,9 +13,9 @@ keywords:
 sidebar_position: 2
 last_update:
   author: Cody
-  date: 01/04/2025
+  date: 07/06/2026
 createdAt: '2025-01-04'
-updatedAt: '2026-01-07'
+updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/6_channel_wifi_relay/
 ---
 
@@ -245,6 +245,8 @@ Voltages exceeding 24V may cause electric shock or burns, especially in cases of
 ## Resources
 
 - **GitHub Repository**: Access the ESPHome Firmware at the [Seeed Studio 6 Channel Relay Module GitHub page](https://github.com/Seeed-Projects/6-Channel_Relay_based_on_XIAO_ESP32C6).
+- **📄[Schematic]** [ 6-Channel Wi-Fi Relay Module Schematic](https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/202004205_PCBA;6-Channel-Wi-Fi-5V-DC-Relay_SCH_PDF.pdf)
+- **🗃️[PCB Design Files]** [ 6-Channel Wi-Fi Relay Module KiCad Project](https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/202004205_PCBA;6-Channel-Wi-Fi-5V-DC-Relay-SCH.zip)
 
 ## Tech Support & Product Discussion
 
