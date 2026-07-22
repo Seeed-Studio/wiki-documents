@@ -490,7 +490,7 @@ reTerminal E1003 配备了一个 6 针扩展排针（J2），为添加外部传�
 			<td>-</td>
 			<td>地</td>
 			<td>公共地参考</td>
-		</tr]
+		</tr>
 		<tr>
 			<td>3</td>
 			<td>ESP_IO47</td>
