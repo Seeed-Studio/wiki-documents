@@ -1,19 +1,19 @@
 ---
 description: This is the overview for features, specifications, hardware interface and partlist.
-title: reCamera 2002 Series
+title: Hardware and Specs
 keywords:
   - Edge
   - reCamera
   - Hardware overview
 image: https://files.seeedstudio.com/wiki/reCamera/image.webp
-slug: /recamera_2002_series_hardware_and_specs
+slug: /recamera_hardware_and_specs
 sidebar_position: 2
 last_update:
   date: 02/18/2025
   author: Parker Hu
 createdAt: '2024-12-20'
 updatedAt: '2025-12-05'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/hardware_and_specs/recamera_2002_series_hardware_and_specs
+url: https://wiki.seeedstudio.com/recamera_hardware_and_specs/
 ---
 
 # reCamera Overview
