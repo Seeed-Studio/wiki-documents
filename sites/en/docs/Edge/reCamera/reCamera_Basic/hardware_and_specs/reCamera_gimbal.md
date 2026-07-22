@@ -1,23 +1,19 @@
 ---
-description: This is the overview of recamera gimbal for features, specifications, hardware interface and partlist.
-title: Hardware and Specs
+description: This is the overview for features, specifications, hardware interface and partlist.
+title: reCamera Gimbal
 keywords:
   - Edge
-  - AI
   - reCamera
-  - reCamera Gimbal
-  - blushless motor
   - Hardware overview
-image: https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.webp
+image: https://files.seeedstudio.com/wiki/reCamera/image.webp
 slug: /recamera_gimbal_hardware_and_specs
-sku: 108990119,108990120,E20245041001
 sidebar_position: 2
 last_update:
-  date: 03/27/2025
-  author: Evelyn Chen
-createdAt: '2025-03-28'
-updatedAt: '2026-01-07'
-url: https://wiki.seeedstudio.com/recamera_gimbal_hardware_and_specs/
+  date: 02/18/2025
+  author: Parker Hu
+createdAt: '2024-12-20'
+updatedAt: '2025-12-05'
+url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/hardware_and_specs/recamera_gimbal_hardware_and_specs
 ---
 
 # reCamera Gimbal Overview
