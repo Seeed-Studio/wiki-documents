@@ -82,7 +82,7 @@ reCamera 是一款开源、体积小巧的 AI 相机，可编程且可定制，�
             <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
                 <p><span data-font-family="Montserrat">256MB</span></p>
             </td>
-        </tr]
+        </tr>
         <tr>
             <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
                 <p><span data-font-family="Montserrat">视频编码</span></p>

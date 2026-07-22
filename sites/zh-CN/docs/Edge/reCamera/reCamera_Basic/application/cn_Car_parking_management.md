@@ -158,7 +158,7 @@ url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/ai_park
 </div>
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/test4.jpg" />
-</div]
+</div>
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/test5.jpg" />
 </div>

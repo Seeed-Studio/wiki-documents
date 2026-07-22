@@ -1,5 +1,5 @@
 ---
-description: Crea un sistema de seguridad de largo alcance usando reCamera y Meshtastic: envía de forma inalámbrica alertas de detección por IA a Home Assistant a través de una red mallada LoRa
+description: Crea un sistema de seguridad de largo alcance usando reCamera y Meshtastic - envía de forma inalámbrica alertas de detección por IA a Home Assistant a través de una red mallada LoRa
 title: Creación de un sistema de seguridad de largo alcance con reCamera y Meshtastic
 keywords:
   - Edge AI

@@ -139,7 +139,7 @@ A reCamera é uma câmera de IA minúscula e de código aberto, programável e p
             <td style={{width: '35.7271%'}} colspan="1" rowspan="1" width="210">
                 <p><span data-font-family="Montserrat">WIFI2.4G/5G BT4.2/5.0</span></p>
             </td>
-        </tr]
+        </tr>
         <tr>
             <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
                 <p><span data-font-family="Montserrat">USB</span></p>
