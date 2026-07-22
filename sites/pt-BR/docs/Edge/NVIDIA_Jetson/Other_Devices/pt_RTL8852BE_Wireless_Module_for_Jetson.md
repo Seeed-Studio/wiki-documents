@@ -14,7 +14,9 @@ last_update:
   date: 4/14/2026
   author: Zibo
 createdAt: '2026-04-14'
-updatedAt: '2026-04-14'
+updatedAt: '2026-06-23'
+sku: 100042928
+url: https://wiki.seeedstudio.com/pt-br/rtl8852be_wireless_module_for_jetson/
 ---
 
 <div align="center">
@@ -23,7 +25,7 @@ updatedAt: '2026-04-14'
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/RTL8822CE-WIFI-Module-p-6313.html" target="_blank">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/RTL8852BE-WIFI-Module-M-2-Key-E-p-6835.html" target="_blank">
     <strong>
       <span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span>
     </strong>
@@ -65,7 +67,7 @@ O RTL8852BE é um módulo sem fio M.2 Wi-Fi 6 (802.11ax) baseado no chipset Real
     </tr>
     <tr>
       <td>Antena</td>
-      <td>Conecta-se às antenas externas por meio de conector MHF4</td>
+      <td>Conecta às antenas externas por meio de conector MHF4</td>
     </tr>
     <tr>
       <td>Dimensão</td>
@@ -168,7 +170,7 @@ O nome da interface pode variar dependendo da versão do JetPack:
 - JetPack 5: normalmente `wlan0`
 - JetPack 6: pode aparecer como `wlP1p1s0`
 
-Ajuste o nome da interface nos comandos abaixo conforme necessário. Use o seguinte comando para descobrir:
+Ajuste o nome da interface nos comandos abaixo de acordo. Use o seguinte comando para descobrir:
 ```bash
 ifconfig
 ```
@@ -188,7 +190,7 @@ sudo iw dev wlan0 scan | grep -E "SSID|freq"
 
 Substitua `wlan0` pelo nome real da sua interface, se for diferente.
 
-### Conectar-se a uma Rede WiFi
+### Conectar a uma Rede WiFi
 
 ```bash
 sudo nmcli device wifi connect "YOUR_SSID" password "YOUR_PASSWORD" ifname wlan0
@@ -227,7 +229,7 @@ bluetoothctl
 </div>
 ## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

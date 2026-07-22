@@ -1,16 +1,16 @@
 ---
-description: Primeros Pasos con SenseCAP Vision AI V2
-title: Primeros Pasos con SenseCAP Vision AI V2
+description: Primeros pasos con SenseCAP Vision AI V2
+title: Primeros pasos con SenseCAP Vision AI V2
 keywords:
   - SenseCAP A1102 - LoRaWAN® Vision AI Sensor
 image: https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/top.webp
 slug: /sensecap_a1102
 sidebar_position: 1
 last_update:
-  date: 3/12/2025
-  author: Zeke
-createdAt: '2025-09-03'
-updatedAt: '2025-09-03'
+  date: 6/9/2026
+  author: Janet
+createdAt: '2025-01-03'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/es/sensecap_a1102/
 ---
 
@@ -18,33 +18,33 @@ url: https://wiki.seeedstudio.com/es/sensecap_a1102/
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-A1102-LoRaWAN-Vision-AI-Sensor-p-6347.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>
 
 ## Introducción
 
-TinyML modelos de IA localmente, transmitiendo solo resultados de inferencia vía LoRaWAN® (863-928MHz) para mayor privacidad y eficiencia energética. Operando a resolución 480×480 con 10 FPS, viene con tres modelos pre-desplegados para detección humana, conteo de personas y lectura de medidores, mientras ofrece acceso sin código a más de 300 modelos pre-entrenados o entrenamiento de modelos personalizados a través de la plataforma [SenseCraft AI](https://sensecraft.seeed.cc/ai/#/home). También soporta despliegue de modelos desde los frameworks [TensorFlow Lite](https://www.tensorflow.org/) y [PyTorch](https://pytorch.org/). Los usuarios pueden configurar el dispositivo y las bandas de frecuencia vía la [SenseCraft App](https://sensecap-mate-download.seeed.cn/), y desplegar el sensor con clasificación IP66 en entornos interiores o exteriores adversos. Con una batería integrada, lo hace ideal para diversas aplicaciones de IA que requieren comunicación de largo alcance.
+Modelos TinyML de IA de forma local, transmitiendo solo los resultados de la inferencia a través de LoRaWAN® (863-928MHz) para mejorar la privacidad y la eficiencia energética. Funcionando a una resolución de 480×480 con 10 FPS, viene con tres modelos preimplementados para detección de personas, conteo de personas y lectura de medidores, mientras ofrece acceso sin código a más de 300 modelos preentrenados o entrenamiento de modelos personalizados a través de la plataforma [SenseCraft AI](https://sensecraft.seeed.cc/ai/#/home). También admite la implementación de modelos desde los frameworks [TensorFlow Lite](https://www.tensorflow.org/) y [PyTorch](https://pytorch.org/). Los usuarios pueden configurar el dispositivo y las bandas de frecuencia mediante la [SenseCraft App](https://sensecap-mate-download.seeed.cn/), y desplegar el sensor con clasificación IP66 en entornos interiores o exteriores hostiles. Con una batería integrada, lo que lo hace ideal para diversas aplicaciones de IA que requieren comunicación de largo alcance.
 
 ## Características
 
-- Cámara de IA Edge Avanzada: Equipada con un potente procesador de cámara de visión basado en MCU que realiza inferencia local a resolución 480×480 a 10 FPS. Al transmitir solo resultados de inferencia, asegura la privacidad de datos y minimiza el uso de ancho de banda de red.
+- Cámara avanzada de Edge AI: Equipada con un potente procesador de cámara de visión basado en MCU que realiza inferencia local a una resolución de 480×480 a 10 FPS. Al transmitir solo los resultados de la inferencia, garantiza la privacidad de los datos y minimiza el uso del ancho de banda de la red.
 
-- Despliegue y Entrenamiento de Modelos de IA Sin Código: Pre-cargado con tres modelos de IA en dispositivo (detección humana, conteo de personas y lectura de medidores) para aplicaciones de visión listas para usar. Se integra nativamente con SenseCraft AI, una plataforma basada en web que ofrece más de 300 modelos pre-entrenados para despliegue instantáneo y un flujo de trabajo de entrenamiento simple de 3 pasos para modelos de clasificación y detección. Esto permite entrenamiento y despliegue rápido de modelos sin experiencia en codificación. Además, los dispositivos también soportan modelos de IA personalizados convertidos desde los frameworks TensorFlow y PyTorch para despliegue edge.
+- Implementación y entrenamiento de modelos de IA sin código: Viene precargada con tres modelos de IA en el dispositivo (detección de personas, conteo de personas y lectura de medidores) para aplicaciones de visión listas para usar. Se integra de forma nativa con SenseCraft AI, una plataforma web que ofrece más de 300 modelos preentrenados para implementación instantánea y un flujo de trabajo de entrenamiento sencillo en 3 pasos para modelos de clasificación y detección. Esto permite un entrenamiento y una implementación rápidos de modelos sin necesidad de experiencia en programación. Además, los dispositivos también admiten modelos de IA personalizados convertidos desde los frameworks TensorFlow y PyTorch para implementación en el borde.
 
-- Conectividad LoRaWAN®: Soporta bandas de frecuencia globales (863-928 MHz) con rango de transmisión hasta 10 km en condiciones óptimas, habilitando comunicación confiable de larga distancia.
+- Conectividad LoRaWAN®: Admite bandas de frecuencia globales (863-928 MHz) con un alcance de transmisión de hasta 10 km en condiciones óptimas, lo que permite una comunicación fiable a larga distancia.
 
-- 2 Opciones de Energía y Vida de Batería: Equipado con una batería SOCl2 de 19Ah tamaño D y también compatible con suministro de energía DC externo vía caja de conexiones opcional.
+- 2 opciones de alimentación y vida útil de la batería: Equipado con una batería SOCl2 tipo D de 19Ah y también compatible con una fuente de alimentación de CC externa a través de una caja de conexiones opcional.
 
-- Durabilidad Ambiental Clasificación IP66: Cuenta con protección clasificada IP66 contra ingreso de polvo y chorros de agua fuertes. Opera confiablemente en temperaturas de 0°C a 70°C, adecuado para diversos despliegues interiores y exteriores.
+- Durabilidad ambiental con clasificación IP66: Presenta protección con clasificación IP66 contra la entrada de polvo y chorros de agua fuertes. Funciona de forma fiable a temperaturas de 0°C a 70°C, adecuado para diversos despliegues en interiores y exteriores.
 
-- Integración SenseCraft Cloud: Incluye la aplicación móvil SenseCraft Mate y portal web para fácil configuración de dispositivo, gestión de dispositivos y visualización rápida de datos. Cuenta con soporte de API abierta y acceso de prueba GRATUITO de 3 meses, es compatible con plataformas IoT de terceros.
+- Integración con SenseCraft Cloud: Incluye la aplicación móvil SenseCraft Mate y un portal web para una fácil configuración del dispositivo, gestión del dispositivo y visualización rápida de datos. Cuenta con compatibilidad con API abierta y acceso de prueba GRATUITO durante 3 meses, y es compatible con plataformas IoT de terceros.
 
 ## Especificación
 
 <table align="center">
  <tr>
-     <th>Modelo del Producto</th>
+     <th>Modelo de producto</th>
         <th>SenseCAP A1102</th>
  </tr>
  <tr>
@@ -59,70 +59,70 @@ TinyML modelos de IA localmente, transmitiendo solo resultados de inferencia ví
         <th>Cámara</th>
         <td align="center">
             <strong>Módulo:</strong>OV5647<br />
-            <strong>Tamaño del lente:</strong>1/4"<br />
-            <strong>Distancia focal:</strong>3.4 mm (ajustable)<br />
+            <strong>Tamaño de lente:</strong>1/4"<br />
+            <strong>Longitud focal:</strong>3.4 mm (ajustable)<br />
             <strong>Resolución:</strong> 2592 × 1944 píxeles<br />
-            <strong>Tamaño del píxel:</strong> 1.4 µm × 1.4 µm<br />
+            <strong>Tamaño de píxel:</strong> 1.4 µm × 1.4 µm<br />
             <strong>Velocidad de fotogramas máxima:</strong> 1080p @ 30 fps, 720p @ 60 fps<br />
             <strong>FOV:</strong>62°
         </td>
     </tr>
     <tr>
-     <th>Ejecución e Inferencia del Modelo</th>
+     <th>Ejecución e inferencia de modelos</th>
         <th>480 * 480  >10 fps</th> 
     </tr>
     <tr>
         <th>Transmisión LoRaWAN®</th>
         <td align="center">
-        <strong>Protocolo:</strong> LoRaWAN v1.0.3 Clase A<br />
+        <strong>Protocolo:</strong> LoRaWAN v1.0.3 Class A<br />
         <strong>Frecuencia LoRaWAN®:</strong> IN865/EU868/US915/AU915/ AS923<br />
-        <strong>Distancia de Comunicación:</strong> 2 a 10km (dependiendo del entorno)<br />
-        <strong>Potencia Máxima Transmitida:</strong> 19dBm<br />
+        <strong>Distancia de comunicación:</strong> 2 a 10km (dependiendo del entorno)<br />
+        <strong>Potencia máxima transmitida:</strong> 19dBm<br />
         </td>
     </tr>
     <tr>
-        <th>Fuente de Alimentación</th>
+        <th>Fuente de alimentación</th>
         <td align="center">
-        Batería integrada o DC 12V/1A (con cableado de caja de conexiones externa)
+        Batería integrada o CC 12V/1A (con cableado de caja de conexiones externa)
         </td>
     </tr>
  <tr>
-     <th>Consumo de Energía</th>
+     <th>Consumo de energía</th>
         <th>102mA</th>
  </tr>
  <tr>
        <th>Batería</th>
         <td align="center">
         <strong>Capacidad:</strong> 19Ah (no recargable)<br />
-        <strong>Tipo:</strong> Batería SOCl2 estándar tamaño D<br />
+        <strong>Tipo:</strong> Batería estándar SOCl2 tamaño D<br />
         </td>
  </tr>
  <tr>
-     <th>Memoria de Almacenamiento Local</th>
-        <th>Tarjeta MicroSD de 8GB (Clase 10) para almacenar hasta 20,000 imágenes con marca de tiempo y soporta exportación</th>
+     <th>Memoria de almacenamiento local</th>
+        <th>Tarjeta MicroSD de 8GB (Clase 10) para almacenar hasta 20,000 imágenes con marca de tiempo y admite exportación </th>
  </tr>
  <tr>
-     <th>Clasificación IP</th>
+     <th>Grado de protección IP</th>
         <th>IP66</th>
  </tr>
  <tr>
-     <th>Temperatura de Operación</th>
+     <th>Temperatura de funcionamiento</th>
         <th>0-70 °C</th>
  </tr>
  <tr>
-     <th>Humedad de Operación</th>
+     <th>Humedad de funcionamiento</th>
         <th>0-100% RH (sin condensación)</th>
  </tr>
  <tr>
-     <th>Longitud del Cable</th>
+     <th>Longitud del cable</th>
         <th>2 metros</th>
  </tr>
  <tr>
-     <th>Peso del Dispositivo</th>
+     <th>Peso del dispositivo</th>
         <th>719g</th>
  </tr>
  <tr>
-     <th>Dimensiones del Dispositivo</th>
+     <th>Dimensiones del dispositivo</th>
         <td align="center">
         <strong>Cámara:</strong>180mm*75mm*70mm<br />
         <strong>DTU: </strong> 144.5mm*63mm*57mm<br />
@@ -130,54 +130,75 @@ TinyML modelos de IA localmente, transmitiendo solo resultados de inferencia ví
  </tr>
 </table>
 
-## Opciones de Alimentación
+## Opciones de alimentación
 
-- Opción 1: El SenseCAP A1102 opera en modo cíclico utilizando una batería Li-SOCl2 tipo D de 19Ah incorporada. La batería está disponible comercialmente para un fácil reemplazo y permite el despliegue independiente en exteriores sin requerir alimentación externa.
+- Opción 1: El SenseCAP A1102 funciona en modo cíclico utilizando una batería interna Li-SOCl2 tipo D de 19Ah. La batería está disponible comercialmente para un fácil reemplazo y permite el despliegue autónomo en exteriores sin necesidad de alimentación externa.
 
-- Opción 2: El SenseCAP A1102 soporta operación constante a través de una conexión de alimentación de 12V DC. Se necesita una caja de conexiones adicional compatible para una instalación y ensamblaje sencillos.
+- Opción 2: El SenseCAP A1102 admite funcionamiento constante mediante una conexión a una fuente de alimentación de CC de 12V. Se necesita una caja de conexiones adicional a juego para una instalación y montaje sencillos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/39.png" style={{width:900, height:'auto'}}/></div>
 
-## Descripción General del Hardware
+## Descripción general del hardware
 
-- Foto de la Placa
+- Foto de la placa
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/38.png" style={{width:900, height:'auto'}}/></div>
 
-## Conectar a LoraWAN®
+## Conectar a la LoraWAN®
 
-LoRaWAN® (Long Range Wide Area Network) es un protocolo de comunicación inalámbrica diseñado para comunicaciones de bajo consumo y largo alcance entre dispositivos IoT (Internet de las Cosas) y gateways. Utiliza espectro de radio sin licencia en la banda Industrial, Científica y Médica (ISM), típicamente a 868 MHz en Europa y 915 MHz en Estados Unidos. LoRaWAN® proporciona una solución de bajo costo y eficiente en energía para conectar dispositivos IoT a largas distancias. La tecnología permite comunicación bidireccional entre dispositivos y gateways, y soporta un rango de velocidades de datos para acomodar diferentes tipos de aplicaciones.
+LoRaWAN® (Long Range Wide Area Network) es un protocolo de comunicación inalámbrica diseñado para comunicaciones de bajo consumo y largo alcance entre dispositivos IoT (Internet of Things) y gateways. Utiliza espectro de radio sin licencia en la banda Industrial, Científica y Médica (ISM), normalmente a 868 MHz en Europa y 915 MHz en Estados Unidos. LoRaWAN® proporciona una solución de bajo coste y alta eficiencia energética para conectar dispositivos IoT a largas distancias. La tecnología permite comunicación bidireccional entre dispositivos y gateways, y admite una variedad de tasas de datos para adaptarse a diferentes tipos de aplicaciones.
 
-## Cómo Seleccionar Gateway y LoraWAN®
+## Cómo seleccionar Gateway y LoraWAN®
 
-Se requiere cobertura de red LoRaWAN® al usar sensores, hay dos opciones.
+Se requiere cobertura de red LoRaWAN® al utilizar sensores, hay dos opciones.
 ![p21](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/4.png)
 
-## Cómo usar el Sensor
+## Cómo usar el sensor
 
-Además de conectarse directamente a una computadora para ver datos de detección en tiempo real, también puedes transmitir estos datos a través de LoraWAN® y finalmente subirlos a la [plataforma en la nube SenseCAP](https://sensecap.seeed.cc/) o una plataforma en la nube de terceros. En la plataforma en la nube SenseCAP, puedes ver los datos en un ciclo y mostrarlos gráficamente a través de tu teléfono móvil o computadora. La plataforma en la nube SenseCAP y la App SenseCAP Mate usan el mismo sistema de cuentas.
+Además de conectarse directamente a un ordenador para ver los datos de detección en tiempo real, también puedes transmitir estos datos a través de LoraWAN® y finalmente subirlos a la [plataforma en la nube SenseCAP](https://sensecap.seeed.cc/) o a una plataforma en la nube de terceros. En la plataforma en la nube SenseCAP, puedes ver los datos de forma cíclica y mostrarlos gráficamente a través de tu teléfono móvil u ordenador. La plataforma en la nube SenseCAP y la SenseCAP Mate App utilizan el mismo sistema de cuentas.
 
-Dado que nuestro enfoque aquí es describir el proceso de entrenamiento del modelo, no entraremos en los detalles de la visualización de datos de la plataforma en la nube. ¡Pero si estás interesado, siempre puedes visitar la plataforma en la nube SenseCAP para probar agregar dispositivos y ver datos. Es una excelente manera de obtener una mejor comprensión de las capacidades de la plataforma!
+Dado que nuestro enfoque aquí es describir el proceso de entrenamiento del modelo, no entraremos en detalles sobre la visualización de datos en la plataforma en la nube. Pero si te interesa, siempre puedes visitar la plataforma en la nube SenseCAP para probar a añadir dispositivos y ver datos. ¡Es una excelente manera de comprender mejor las capacidades de la plataforma!
 
 ![p22](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/11.png)
 
-## FAQ
+## Registros Modbus
 
-**¿Cuáles son las configuraciones ideales de cámara para la captura de imágenes?**
+| Registro | Dirección | Tipo de dato | Acceso | Descripción |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dirección del dispositivo** | 0x0000 | uint16_t | R/W | Dirección del dispositivo Modbus. Predeterminado = 1, máximo = 247, configurable |
+| **Baud Rate** | 0x0001 | uint16_t | R/W | Baud rate de Modbus. Predeterminado = 96 (significa 9600). Configurable. De forma predeterminada solo admite 8N1 |
+| **Versión del dispositivo** | 0x0002 | uint32_t | R | Información de la versión del dispositivo |
+| **ID del dispositivo** | 0x8000 | uint32_t | R | ID del dispositivo |
+| **Resultado 1** | 0x1000 | int32_t | R | Ejemplo: 1800 significa 1.8 (Objetivo 1: confianza 80) |
+| **Resultado 2** | 0x1002 | int32_t | R |  |
+| **Resultado 3** | 0x1004 | int32_t | R |  |
+| **Resultado 4** | 0x1006 | int32_t | R |  |
+| **Resultado 5** | 0x1008 | int32_t | R |  |
+| **Resultado 6** | 0x100A | int32_t | R |  |
+| **Resultado 7** | 0x100C | int32_t | R |  |
+| **Resultado 8** | 0x100E | int32_t | R |  |
 
-- Para una cámara de 5 megapíxeles, se recomienda capturar imágenes dentro de un rango de 1m a 5m para lograr una calidad de imagen óptima. Durante la captura de imágenes, asegúrate de que la cámara esté directamente enfrentando al sujeto, con iluminación suficiente (sin deslumbramiento o sobreexposición), y evita movimiento significativo o vibración.
+## Preguntas frecuentes
 
-**¿Qué tan lejos puede la cámara SenseCAP Vision AI detectar objetos y lograr buenos resultados?**
+**¿Cuáles son los ajustes ideales de la cámara para la captura de imágenes?**
 
-- Basado en nuestras pruebas con un modelo de detección humana, la cámara puede lograr un nivel de confianza del 70% para resultados dentro de un rango de 1m a 5m.
+- Para una cámara de 5 megapíxeles, se recomienda capturar imágenes dentro de un rango de 1 m a 5 m para lograr una calidad de imagen óptima. Durante la captura de imágenes, asegúrate de que la cámara esté directamente frente al sujeto, con iluminación suficiente (sin reflejos ni sobreexposición) y evita movimientos o vibraciones significativos.
+
+**¿A qué distancia puede la cámara SenseCAP Vision AI detectar objetos y obtener buenos resultados?**
+
+- Según nuestras pruebas con un modelo de detección de personas, la cámara puede alcanzar un nivel de confianza del 70% para resultados dentro de un rango de 1 m a 5 m.
+
+**¿Cuáles son las diferencias entre SenseCAP A1102 y SenseCAP A1101?**
+
+- El SenseCAP A1102 tiene un rendimiento más potente en comparación con el [SenseCAP A1101](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html), ofreciendo mejores capacidades de Vision AI, más modelos y frameworks compatibles, y la capacidad de transmitir imágenes de fotogramas clave vía Wi‑Fi (requiere que los usuarios desarrollen firmware basado en la XIAO).
 
 **¿Es posible reemplazar la cámara o tener una versión personalizada del sensor SenseCAP Vision AI?**
 
-- Sí, si tienes un requerimiento de gran volumen, por favor contáctanos en sensecap@seeed.cc.
+- Sí, si tienes un requisito de gran volumen, ponte en contacto con nosotros en sensecap@seeed.cc.
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

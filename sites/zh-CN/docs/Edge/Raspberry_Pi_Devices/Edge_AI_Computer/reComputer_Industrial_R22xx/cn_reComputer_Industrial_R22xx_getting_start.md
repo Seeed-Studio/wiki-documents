@@ -13,7 +13,7 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-04-21'
+updatedAt: '2026-06-23'
 url: https://wiki.seeedstudio.com/cn/recomputer_industrial_r22xx_getting_start/
 ---
 
@@ -967,7 +967,7 @@ reComputer Industrial R2000 支持丰富的扩展模块和配件，适用于多�
       </tr>
       <tr>
         <td>LTE Cat 4 EC25-EMGA-Mini-PCIe 模块 - 适用于马来西亚</td>
-        [LINE[LINE_127]        <td>113991234</td>
+        <td>113991234</td>
       </tr>
       <tr>
         <td>LTE Cat 4 EC25-JFA-mini-PCIe</td>

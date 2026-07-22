@@ -1,6 +1,6 @@
 ---
-description: Este documento te llevará de la mano desde cero para construir un sistema inteligente de brazo robótico que "escucha y se mueve". Incluso si nunca has tocado un brazo robótico ni hecho desarrollo de hardware, ¡mientras sigas los pasos podrás reproducir este proyecto con éxito!
-title: Controlar reBot Arm usando la voz con reSpeaker Flex
+description: Este documento te llevará de la mano desde cero para construir un sistema de brazo robótico inteligente que "escucha y se mueve". Incluso si nunca has tocado un brazo robótico ni hecho desarrollo de hardware, mientras sigas los pasos, ¡podrás reproducir este proyecto con éxito!
+title: Controlar reBot Arm usando la voz con reSpeaker
 keywords:
   - reSpeaker
   - python
@@ -14,51 +14,153 @@ last_update:
   date: 5/22/2026
   author: wuxinrui
 createdAt: '2026-05-22'
-updatedAt: '2026-05-22'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/control_rebot_arm_using_voice_with_respeaker_flex/
 ---
 
 
-# Controlar reBot Arm usando la voz con reSpeaker Flex
+# Controlar reBot Arm usando la voz con reSpeaker 
 
 >
 
-> Este documento te llevará de la mano desde cero para construir un sistema inteligente de brazo robótico que "escucha y se mueve". Incluso si nunca has tocado un brazo robótico ni hecho desarrollo de hardware, mientras sigas los pasos podrás reproducir este proyecto con éxito.
+> Este documento te llevará de la mano desde cero para construir un sistema de brazo robótico inteligente que "escucha y se mueve". Incluso si nunca has tocado un brazo robótico ni hecho desarrollo de hardware, mientras sigas los pasos, ¡podrás reproducir este proyecto con éxito!
 
 ## Hardware necesario
 
-<table align="center">
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
   <tr>
-    <th>reSpeaker Flex XVF3800 Circular</th>
     <th>reBot Arm B601-DM</th>
-
   </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg" style={{width:500, height:'auto'}}/></div></td>
 
-  </tr>
   <tr>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-      </a>
-    </div></td>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
+
+</div>
+
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      O
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+
 
 ## 1. Descripción general del proyecto
 
 ### 1.1 ¿Qué es este proyecto?
 
-Este proyecto es un **sistema inteligente de control de brazo robótico impulsado por voz**. Imagina esta escena:
+Este proyecto es un **sistema de control de brazo robótico inteligente impulsado por voz**. Imagina esta escena:
 
->🎬**Demostración de escenario**
+>🎬**Demostración del escenario**
 
 > Cuando le dices "hola" al brazo robótico sobre la mesa, el brazo robótico girará inmediatamente hacia tu dirección y asentirá como un humano. Cuando dices "baila", se balancea alegremente. Si vas al otro lado de la habitación y aplaudes, inmediatamente "oirá" la dirección del sonido y girará para mirarte: ¡este es el robot inteligente que queremos construir!
 
@@ -81,12 +183,12 @@ El sistema proporciona dos modos de funcionamiento principales, que puedes elegi
 
 ### 1.3 ¿Cómo funciona el sistema?
 
-Describamos la arquitectura de todo el sistema en términos sencillos:
+Describe la arquitectura de todo el sistema en términos sencillos:
 
 ```
 You speak / make a sound
       ↓
-[ reSpeaker Flex ] —— An array composed of 4 "ears" can hear and determine the direction of sound.
+[ reSpeaker ] —— An array composed of 4 "ears" can hear and determine the direction of sound.
       ↓
 [ Ubuntu ] —— 
       ↓
@@ -101,7 +203,7 @@ Un diagrama de arquitectura más especializado se describe de la siguiente maner
 
 **Capa de hardware** (dispositivos que puedes tocar):
 
-- reSpeaker Flex (matriz de 4 micrófonos con controlador XIAO ESP32S3)  
+- reSpeaker (matriz de 4 micrófonos con controlador XIAO ESP32S3)  
 
 - reBot Arm B601-DM (manipulador de 6 GDL)  
 
@@ -123,11 +225,11 @@ Un diagrama de arquitectura más especializado se describe de la siguiente maner
 
 - Comprensión de intención con Llama-3.3 (Groq Cloud)
 
-- Planificación de movimiento con interpolación (control local suavizado)
+- Planificación de interpolación de movimiento (control local suavizado)
 
 **Capa de aplicación** (donde puedes ver el efecto):
 
-- Modo de seguimiento DOA, modo de control por voz, animación de espera con respiración, síntesis de voz
+- Modo de seguimiento DOA, modo de control por voz, animación de espera con respiración, difusión de voz
 
 ---
 
@@ -135,16 +237,16 @@ Un diagrama de arquitectura más especializado se describe de la siguiente maner
 
 ### 2.1 ¿Qué necesitas preparar?
 
-Antes de comenzar, asegúrate de tener listo todo el hardware siguiente. Si es la primera vez que entras en contacto con este tipo de proyecto, se recomienda comprar directamente el paquete completo para evitar problemas de compatibilidad.
+Antes de comenzar, asegúrate de tener listo todo el siguiente hardware. Si es la primera vez que entras en contacto con este tipo de proyecto, se recomienda comprar directamente el paquete completo para evitar problemas de compatibilidad.
 
 | Componente | Modelo | Cantidad | Características aproximadas | Recomendaciones de compra |
 |-----|-----|-----|-----|-----|
 | Brazo mecánico | reBot Arm B601-DM | 1 juego | El "cuerpo" que ejecuta las acciones | Oficial de Seeed Studio |
-| Matriz de micrófonos | reSpeaker Flex XVF3800 | 1 | Escucha el sonido y determina la dirección | Oficial de Seeed Studio |
+| Matriz de micrófonos | reSpeaker  XVF3800 | 1 | Escucha el sonido y determina la dirección | Oficial de Seeed Studio |
 | PC principal | PC con Ubuntu 22.04 | 1 | Ejecuta el "cerebro" del programa | Arquitectura x86_64 |
-| Cable USB | USB-A a USB-C | 2 | Conecta los dispositivos | Generalmente incluido con el dispositivo |
-| Mordaza de carpintería | 3 pulgadas o más | 2 | Fija la base del brazo mecánico | Ferretería o incluido en el kit |
-| Fuente de alimentación | 24V 15A (interfaz XT30) | 1 | Alimenta el brazo mecánico | Generalmente incluida en el paquete |
+| Cable USB | USB-A a USB-C | 2 | Dispositivos conectados | Generalmente incluido con el dispositivo |
+| Mordaza de carpintería | 3 pulgadas o más | 2 | Fija la base del brazo mecánico | Ferretería o incluida en el juego |
+| Fuente de alimentación | 24V 15A (interfaz XT30) | 1 | Suministra energía al brazo mecánico | Generalmente incluida en el paquete |
 
 ### 2.2 Breve introducción de cada hardware
 
@@ -164,31 +266,31 @@ Este es un brazo mecánico de escritorio con **7 "articulaciones"** (llamadas pr
 | J6 | Guiñada de muñeca | Ajuste de la dirección de la muñeca | ± 85.9 ° |
 | J7 | Pinza | Agarra objetos | Control de apertura y cierre |
 
-💡**Puedes entenderlo así**: J1 es como la rotación de la cintura de una persona, J2 como la elevación del hombro, J3 como la flexión del codo, J4/J5/J6 como las distintas rotaciones de la muñeca, y J7 como un dedo. Combinando estas articulaciones, el brazo robótico puede realizar movimientos muy ricos.
+💡**Puedes entenderlo así**: J1 es como la rotación de la cintura de una persona, J2 es como la elevación del hombro, J3 es como la flexión del codo, J4/J5/J6 son como las diversas rotaciones de la muñeca, y J6 es como un dedo. Combinando estas articulaciones, el brazo robótico puede realizar movimientos muy ricos.
 
-⚠**Advertencia de montaje**: Si compras un kit de piezas que necesitas montar tú mismo, presta especial atención:
+⚠**Advertencia de montaje**: Si compras piezas que necesitan ser ensambladas por ti mismo, presta especial atención:
 
 - El kit contiene una gran cantidad de tornillos y piezas estructurales, y algunas piezas son muy similares en apariencia
 
-- **Se recomienda encarecidamente usar un destornillador eléctrico**, con el par ajustado a un rango medio-bajo (3 ~ 6 kgf.cm)
+- **Se recomienda encarecidamente usar un destornillador eléctrico**, ajustando el par a un rango medio-bajo (3 ~ 6kgf.cm)
 
 - Un par excesivo puede provocar fácilmente que **el tornillo se pase de rosca**
 
-- Presta atención a la seguridad durante el montaje para evitar pellizcos o aplastamientos en las manos
+- Presta atención a la seguridad durante el montaje para evitar pellizcos y aplastamientos en las manos
 
-#### 2.2.2 Matriz de micrófonos reSpeaker Flex XVF3800
+#### 2.2.2 Matriz de micrófonos reSpeaker 
 
 Este es un módulo inteligente de procesamiento de voz con **4 micrófonos**, cuyas características principales son:
 
-- **Diseño dividido**: la placa principal y la placa de la matriz de micrófonos se pueden separar, lo que te permite disponerlas de forma flexible en distintos dispositivos
+- **Diseño dividido**: la placa principal y la placa de la matriz de micrófonos se pueden separar, lo que te permite disponerlas de forma flexible en diferentes dispositivos
 
-- **Captación de 360 °**: los 4 micrófonos están dispuestos en anillo y pueden recibir sonido desde todas las direcciones
+- **Captación de 360 °**: los 4 micrófonos están dispuestos en un anillo, pudiendo recibir sonido desde todas las direcciones
 
 - **Procesamiento inteligente integrado**: integra el chip XMOS XVF3800, con funciones de cancelación de eco, supresión de ruido, localización de fuente sonora (DOA), entre otras
 
 - **Interfaz USB dual**: dispone de dos modos de conexión: interfaz USB-C e interfaz con conector de bloqueo PH2.0
 
-- **Amplificador de potencia integrado**: puede accionar directamente un altavoz de 10 W (a través de la interfaz JST)
+- **Amplificador de potencia integrado**: puede impulsar directamente un altavoz de 10W (a través de la interfaz JST)
 
 **Componentes principales**:
 
@@ -197,15 +299,15 @@ Este es un módulo inteligente de procesamiento de voz con **4 micrófonos**, cu
 | Chip XMOS XVF3800 | El "cerebro" responsable de todo el procesamiento de audio |
 | Códec TLV320AIC3104 | Convierte señales de sonido analógicas en señales digitales |
 | Interfaz FPC de 24 pines | Conecta la placa de matriz de micrófonos y la placa principal |
-| Interfaz USB-C | Conecta al ordenador, transmite audio y alimentación |
+| Interfaz USB-C | Conecta al ordenador, transmite audio y energía |
 | Conector de auriculares de 3,5 mm | Permite conectar auriculares para monitorización |
-| Conector de altavoz JST | Permite conectar altavoces externos |
+| Conector de altavoz JST | Se puede conectar a altavoces externos |
 
-💡**Comprensión por analogía**: Puedes pensar en él como un "oído muy fino": no solo tiene 4 oídos para escuchar sonidos desde todas las direcciones, sino que también puede analizar de qué dirección viene el sonido y filtrar el ruido, centrándose solo en el sonido que quieres escuchar.
+💡**Comprensión análoga**: Puedes pensar en él como una "oreja a favor del viento": no solo tiene 4 oídos para escuchar el sonido desde todas las direcciones, sino que también puede analizar de qué dirección proviene el sonido y filtrar el ruido, centrándose solo en el sonido que quieres escuchar.
 
 #### 2.2.3 Ordenador con Ubuntu 22.04
 
-Ubuntu es un sistema operativo libre y de código abierto (similar a Windows, pero más popular entre los desarrolladores). Requisitos para este proyecto:
+Ubuntu es un sistema operativo libre y de código abierto (similar a Windows, pero más popular entre los desarrolladores). Requisitos de este proyecto:
 
 - **Sistema operativo**: Ubuntu 22.04 LTS (versión de 64 bits)
 
@@ -219,9 +321,9 @@ Ubuntu es un sistema operativo libre y de código abierto (similar a Windows, pe
 
 - Disco duro: 50 GB de espacio libre
 
-- Red: debe poder acceder a Internet (se usa para llamar a la IA en la nube)
+- Red: puede acceder a Internet (se usa para llamar a la IA en la nube)
 
-💡**¿Y si tu ordenador tiene sistema Windows?**
+💡**¿Qué pasa si tu ordenador tiene sistema Windows?**
 
 Tienes dos opciones:
 
@@ -231,9 +333,9 @@ Tienes dos opciones:
 
 Tutorial de instalación de Ubuntu 22.04: [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
 
-### 2.3 Diagrama de conexión del hardware
+### 2.3 Diagrama de conexión de hardware
 
-Antes de comenzar, familiarízate con cómo deben conectarse todos los dispositivos. La conexión general es muy sencilla, solo se necesitan dos cables USB:
+Antes de comenzar, familiarízate con cómo deben conectarse todos los dispositivos. La conexión general es muy sencilla, solo se requieren dos cables USB:
 
 ```
           ┌─────────────────────────────────────┐
@@ -253,7 +355,7 @@ Antes de comenzar, familiarízate con cómo deben conectarse todos los dispositi
                 │        │
           ┌─────┴──┐  ┌─┴──────────┐
           │reSpeaker│  │ reBot Arm  │
-          │ Flex   │  │ B601-DM    │
+          │         │  │ B601-DM    │
        │(Microphone) │  │ (Robot Arm)   │
           │        │  │            │
     │ 4-Microphone Array │  │ 7DOF    │
@@ -266,19 +368,19 @@ Antes de comenzar, familiarízate con cómo deben conectarse todos los dispositi
 
 **Pasos de conexión**:
 
-1. Conecta el reSpeaker Flex al ordenador mediante un cable USB-C
+1. Conecta el reSpeaker al ordenador mediante un cable USB-C
 
 2. Conecta el reBot Arm al ordenador mediante un cable USB-C
 
-3. (Opcional) conecta altavoces o auriculares al conector de salida de audio del reSpeaker Flex
+3. (Opcional) conecta altavoces o auriculares al conector de salida de audio del reSpeaker
 
-4. Asegúrate de que el ordenador está conectado a Internet
+4. Asegúrate de que el ordenador esté conectado a Internet
 
 ---
 
 ## 3. Preparación del entorno
 
-Antes de instalar el software, necesitamos confirmar si el entorno de tu sistema cumple los requisitos. Abre la terminal de Ubuntu (Terminal, similar al "símbolo del sistema" de Windows) y sigue los pasos siguientes para comprobar uno por uno.
+Antes de instalar el software, necesitamos confirmar si el entorno de tu sistema cumple los requisitos. Abre la terminal de Ubuntu (Terminal, similar al "símbolo del sistema" de Windows) y luego sigue los pasos siguientes para comprobar uno por uno.
 
 ### 3.1 Confirmar versión de Ubuntu
 
@@ -297,7 +399,7 @@ Release:        22.04
 Codename:       jammy
 ```
 
-💡**¿Qué pasa si no se muestra Ubuntu 22.04?**
+💡**¿Qué pasa si no muestra Ubuntu 22.04?**
 
 - Si es Ubuntu 20.04 u otras versiones, se recomienda actualizar a 22.04, porque este proyecto se ha probado en esta versión
 
@@ -320,11 +422,11 @@ Siempre que la versión sea **3.10.x** (x es cualquier número).
 
 💡**¿Qué pasa si no es Python 3.10?**
 
-No te preocupes, más adelante usaremos Miniforge para crear un entorno especial de Python 3.10, lo que no afectará al Python predeterminado del sistema.
+No te preocupes, más adelante usaremos Miniforge para crear un entorno especial de Python 3.10, lo cual no afectará al Python predeterminado del sistema.
 
 ### 3.3 Comprobar puerto USB
 
-Antes de conectar el hardware, asegúrate de que el ordenador puede reconocer normalmente el dispositivo USB:
+Antes de conectar el hardware, asegúrate de que el ordenador pueda reconocer normalmente el dispositivo USB:
 
 ```bash
 # View the list of currently connected USB devices
@@ -341,7 +443,7 @@ Bus 002 Device 005: ID 1234:5678 STMicroelectronics Virtual COM Port  ← Robot 
 
 💡**¿Qué pasa si no veo el dispositivo?**
 
-No te asustes, puede que el dispositivo aún no se haya conectado. Continúa con el siguiente paso y vuelve para comprobarlo después de instalar el software.
+No te asustes, puede que el dispositivo aún no se haya conectado. Continúa con el siguiente paso y vuelve a comprobar después de instalar el software.
 
 ### 3.4 Comprobar conexión de red
 
@@ -361,7 +463,7 @@ PING baidu.com (xxx.xxx.xxx.xxx) 56(84) bytes of data.
 
 💡**¿Y si no puedes acceder a Internet?**
 
-El modo de voz requiere conexión a la red para llamar a la Groq API, asegúrate de que la red sea fluida. Si se trata de una red de campus/empresa, puede ser necesaria una configuración de proxy adicional (se explicará más adelante).
+El modo de voz requiere conexión a la red para llamar a la Groq API, asegúrate de que la red sea fluida. Si se trata de una red de campus/empresa, puede que se requiera una configuración de proxy adicional (se explicará más adelante).
 
 ---
 
@@ -391,7 +493,7 @@ wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforg
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-El asistente de instalación aparece después de la ejecución:
+Después de la ejecución aparecerá el asistente de instalación:
 
 1. Pulsa 'Enter' para ver el acuerdo de licencia
 
@@ -401,7 +503,7 @@ El asistente de instalación aparece después de la ejecución:
 
 4. Escribe 'yes' para inicializar conda (recomendado)
 
-Después de que la instalación se complete, **cierra la ventana de terminal actual y abre una nueva terminal** para que la variable de entorno surta efecto.
+Después de completar la instalación, **cierra la ventana de terminal actual y abre una nueva terminal** para que la variable de entorno surta efecto.
 
 ✅**Verificar instalación**:
 
@@ -410,7 +512,7 @@ Después de que la instalación se complete, **cierra la ventana de terminal act
 conda --version
 ```
 
-Salida esperada: 'conda 24.x. x' (el número de versión puede ser diferente, siempre que se pueda mostrar la versión, la instalación es correcta)
+Salida esperada: 'conda 24.x.x' (el número de versión puede ser diferente, mientras se pueda mostrar la versión, la instalación se ha realizado correctamente)
 
 ### 4.2 Paso 2: Clonar la base de código del proyecto
 
@@ -450,15 +552,15 @@ El proyecto proporciona un archivo 'environment.yml' que enumera todos los paque
 conda env create -f environment.yml
 ```
 
-Este proceso puede tardar **10-30 minutos**, dependiendo de la velocidad de tu red. Automáticamente:
+Este proceso puede tardar **10-30 minutos**, dependiendo de la velocidad de tu red. Hará automáticamente lo siguiente:
 
-- Creará un entorno Python 3.10.2 llamado 'flex'
+- Crear un entorno Python 3.10.2 llamado 'flex'
 
-- Instalará pinocchio, numpy y otras bibliotecas de computación científica desde el canal conda-forge
+- Instalar pinocchio, numpy y otras bibliotecas de computación científica desde el canal conda-forge
 
-- Instalará pyusb para la comunicación USB
+- Instalar pyusb para la comunicación USB
 
-✅**Señal de instalación correcta** (las últimas líneas se ven así):
+✅**Señal de instalación exitosa** (las últimas líneas se ven así):
 
 ```
 Executing transaction: ... done
@@ -480,7 +582,7 @@ Executing transaction: ... done
 conda activate flex
 ```
 
-✅**Indicador de activación correcta**: aparece '(flex)' delante del prompt de la terminal:
+✅**Indicador de activación exitosa**: aparece '(flex)' delante del prompt de la terminal:
 
 ```bash
 (flex) user@computer:~/reBot-Arm-reSpeaker-Flex$
@@ -499,7 +601,7 @@ sudo apt-get update && sudo apt-get install -y ffmpeg
 
 ffmpeg es una herramienta de procesamiento de audio y vídeo; este proyecto la utiliza para procesar archivos de audio después de la síntesis de voz. En pocas palabras, es "para permitir que el ordenador reproduzca y procese sonido".
 
-✅**Señal de instalación correcta**:
+✅**Señal de instalación exitosa**:
 
 ```
 ffmpeg is already the newest version (x.x.x).
@@ -512,11 +614,11 @@ ffmpeg is already the newest version (x.x.x).
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-**¿Por qué necesitas uv?**
+**¿Por qué necesitas UV?**
 
-uv es una herramienta de gestión de paquetes de Python muy rápida que puede utilizarse para instalar paquetes en formato pip. La biblioteca 'motorbridge' utilizada en el proyecto necesita instalarse a través de uv.
+uv es una herramienta de gestión de paquetes de Python muy rápida que se puede utilizar para instalar paquetes en formato pip. La biblioteca 'motorbridge' utilizada en el proyecto necesita instalarse a través de uv.
 
-✅**Después de que la instalación sea correcta**, cierra la terminal y vuelve a abrirla.
+✅**Después de que la instalación sea exitosa**, cierra la terminal y vuelve a abrirla.
 
 ### 4.7 Paso 7: Clonar la biblioteca de control del brazo robótico
 
@@ -531,7 +633,7 @@ cd reBotArm_control_py
 uv sync
 ```
 
-✅**Salida esperada**: Muestra el progreso de la instalación sin informar de ningún error.
+✅**Salida esperada**: Muestra el progreso de la instalación sin informar ningún error.
 
 ### 4.8 Paso 8: Configurar variables de entorno PYTHONPATH
 
@@ -542,9 +644,9 @@ export PYTHONPATH="$PWD:$PYTHONPATH"
 
 **¿Qué significa eso?**
 
-Cuando Python importa una biblioteca, busca en el directorio especificado por PYTHONPATH. Este comando le dice a Python que "además de la ruta de búsqueda predeterminada, busque también en este directorio".
+Cuando Python importa una biblioteca, busca en el directorio especificado por PYTHONPATH. Este comando le dice a Python que "busque en este directorio además de la ruta de búsqueda predeterminada".
 
-⚠️ **Recordatorio importante**: 'export PYTHONPATH' ¡Esta configuración **quedará inválida cada vez que se cierre la terminal**! Necesitas:
+⚠️ **Recordatorio importante**: 'export PYTHONPATH' ¡Esta configuración **se volverá inválida cada vez que se cierre la terminal**! Necesitas:
 
 **Esquema A (temporal, para ejecutar cada vez)**: Ejecutar manualmente el comando export anterior cada vez que se abra una nueva terminal
 
@@ -560,33 +662,33 @@ source ~/.bashrc
 
 ### 4.9 Paso 9: Configurar permisos del puerto serie
 
-Para que el usuario actual pueda acceder al dispositivo serie USB (utilizado para comunicarse con el brazo robótico), necesitas configurar permisos:
+Para que el usuario actual pueda acceder al dispositivo serie USB (utilizado para comunicarse con el brazo robótico), es necesario configurar permisos:
 
 ```bash
 # Set USB serial device permissions (to allow the current user to access without sudo)
 sudo chmod 666 /dev/ttyACM*
 ```
 
-✅**No se debe informar de ningún error después de la ejecución**.
+✅**No se debe informar ningún error después de la ejecución**.
 
 💡**¿Por qué necesitas esto?**
 
 El sistema Linux tiene una gestión de permisos estricta para los dispositivos de hardware. De forma predeterminada, los usuarios normales no pueden acceder directamente a los dispositivos serie. Este comando permite que todos los usuarios lean y escriban en estos dispositivos.
 
-⚠️ **Esta configuración quedará inválida después de reiniciar**. Si quieres que sea permanente, puedes añadir tu usuario al grupo 'dialout':
+⚠️ **Esta configuración será inválida después de reiniciar**. Si quieres que sea permanente, puedes añadir tus usuarios al grupo 'dialout':
 
 ```bash
 # Add the current user to the dialout group (permanently resolve the permission issue)
 sudo usermod -a -G dialout $USER
 ```
 
-La modificación requiere **cerrar sesión e iniciar sesión de nuevo** para que surta efecto.
+La modificación requiere **cerrar sesión y volver a iniciarla** para que surta efecto.
 
-### 4.10 Paso 10: Configurar la Groq API Key
+### 4.10 Paso 10: Configurar la clave de API de Groq
 
-Este proyecto utiliza el servicio de IA en la nube de Groq para el reconocimiento de voz y la comprensión de intenciones. Necesitas registrar una cuenta de Groq y obtener la API Key.
+Este proyecto utiliza el servicio de IA en la nube de Groq para el reconocimiento de voz y la comprensión de intenciones. Necesitas registrar una cuenta de Groq y obtener la clave de API.
 
-**Para obtener la API Key**:
+**Para obtener la clave de API**:
 
 1. Abre el navegador y visita https://console.groq.com/keys
 
@@ -596,7 +698,7 @@ Este proyecto utiliza el servicio de IA en la nube de Groq para el reconocimient
 
 4. Copia la clave generada (el formato es similar a 'gsk_xxxxxxxxxxxx)
 
-**Configura la API Key en el código**:
+**Configura la clave de API en el código**:
 
 ```bash
 # First return to the main project directory
@@ -615,25 +717,25 @@ VOICE_CFG = {
 }
 ```
 
-Reemplaza '"12345678"' con la API Key que acabas de copiar, por ejemplo:
+Reemplaza '"12345678"' con la clave de API que acabas de copiar, por ejemplo:
 
 ```python
     "api_key": "gsk_aBcDeFgHiJkLmNoPqRsTuVwXyZ",
 ```
 
-Guarda el archivo: pulsa 'Ctrl O', luego 'Enter', y después 'Ctrl X' para salir.
+Guarda el archivo: Presiona 'Ctrl O', luego 'Enter', y después 'Ctrl X' para salir.
 
 ⚠️ **Recordatorio de seguridad**:
 
-- **No** compartas tu API Key en un repositorio de código público o foro
+- **No** compartas tu clave de API en un repositorio de código público o foro
 
-- **No** envíes capturas de pantalla de la API Key a redes sociales
+- **No** envíes capturas de pantalla de la clave de API a redes sociales
 
-- Si la API Key se filtra, elimínala en la consola de Groq y genera una nueva.
+- Si la clave de API se filtra, elimínala en la consola de Groq y genera una nueva.
 
 ### 4.11 Paso 11: Configuración de proxy de red (si es necesario)
 
-Si estás en la China continental o en ciertos entornos de red, es posible que no puedas acceder directamente a los servicios de Groq. Pruébalo primero:
+Si estás en China continental o en ciertos entornos de red, es posible que no puedas acceder directamente a los servicios de Groq. Pruébalo primero:
 
 ```bash
 # Test whether Groq can be accessed
@@ -642,7 +744,7 @@ ping console.groq.com -c 3
 
 Si puedes recibir una respuesta (muestra el tiempo), significa que la red es normal y puedes omitir este paso.
 
-Si aparece 'unknown host' o 'Request Timeout', es necesario configurar el proxy.
+Si se muestra 'unknown host' o 'Request Timeout', es necesario configurar el proxy.
 
 **Cómo configurar el proxy**:
 
@@ -663,41 +765,41 @@ Por ejemplo, si tu dirección de proxy es 'http:// 192.168.4.7:7897':
 
 💡**¿Cómo sé mi dirección de proxy?**
 
-- Si usas Clash: normalmente es 'http:// 127.0.0.1:7890'
+- Si usas Clash: normalmente en 'http:// 127.0.0.1:7890'
 
-- Si usas v2rayN: normalmente es 'http:// 127.0.0.1:10809'
+- Si usas v2rayN: normalmente en 'http:// 127.0.0.1:10809'
 
-- Si es un servidor proxy de LAN: pregunta al administrador de red
+- Si es un servidor proxy de LAN: Pregunta al administrador de red
 
 - El formato del proxy suele ser: 'http:// dirección IP: número de puerto'
 
 ---
 
-## 5. Conexión y montaje del hardware
+## 5. conexión y montaje del hardware
 
-### 5.1 Pasos de conexión del hardware
+### 5.1 pasos de conexión del hardware
 
-Ahora que todo el software se ha instalado, conectemos el hardware.
+Ahora que todo el software ha sido instalado, conectemos el hardware.
 
-**Paso 1: Conectar reSpeaker Flex**
+**Paso 1: Conectar reSpeaker**
 
-1. Conecta reSpeaker Flex al ordenador con un cable USB-A a USB-C
+1. Conecta reSpeaker al ordenador con un cable USB-A a USB-C
 
-2. Después de la conexión, la luz indicadora en el reSpeaker Flex debería encenderse
+2. Después de la conexión, el indicador luminoso en el reSpeaker debería encenderse
 
 3. Introduce 'lsusb' en la terminal y deberías poder ver el dispositivo de Seeed Studio.
 
 **Paso 2: Conectar el reBot Arm**
 
-1. Asegúrate de que la base del brazo mecánico esté firmemente fijada al escritorio con una mordaza de carpintería
+1. Asegúrate de que la base del brazo mecánico se haya fijado firmemente en el escritorio con una mordaza de carpintería
 
 2. Conecta el brazo robótico al ordenador con un cable USB-A a USB-C
 
-3. Conecta la fuente de alimentación de 24 V (interfaz XT30), pero **no enciendas todavía**
+3. Conecta la fuente de alimentación de 24V (interfaz XT30), pero **no enciendas todavía**
 
-⚠️ **Lista de comprobación de seguridad antes de encender**:
+⚠️ **Lista de verificación de seguridad antes de encender**:
 
-- [ ] La base del brazo mecánico está firmemente fijada (sujeta con una mordaza de carpintería)
+- [ ] La base del brazo mecánico se ha fijado firmemente (sujeta con una mordaza de carpintería)
 
 - [ ] No hay obstáculos en el rango de movimiento del brazo robótico
 
@@ -707,9 +809,9 @@ Ahora que todo el software se ha instalado, conectemos el hardware.
 
 - [ ] Cableado de la fuente de alimentación correcto
 
-**PASO 3: ENCENDIDO**
+**PASO 3: ENCENDER E INICIAR**
 
-1. Después de la comprobación, enciende el interruptor de alimentación de 24 V
+1. Después de la comprobación, enciende el interruptor de alimentación de 24V
 
 2. El brazo mecánico emitirá un ligero sonido de encendido del motor
 
@@ -748,25 +850,25 @@ ls -la /dev/ttyACM0
 crw-rw-rw- 1 root dialout 188, 0 ... /dev/ttyUSB0
 ```
 
-💡**¿No puedes ver el dispositivo?**
+💡**¿Si no puedes ver el dispositivo?**
 
 - Comprueba si el cable USB está bien conectado
 
 - Intenta cambiar a otro puerto USB
 
-- Comprueba si el cable es de datos (algunos cables solo cargan y no pueden transmitir datos)
+- Comprueba si el cable es un cable de datos (algunos cables solo pueden cargar y no transmitir datos)
 
-- Consulta la [9. guía de resolución de problemas](#9-guía-de-resolución-de-problemas-faq)
+- consulta la [9. guía de resolución de problemas](#9-guía-de-resolución-de-problemas-faq)
 
 ---
 
-## 6. Primera ejecución
+## 6. primera ejecución
 
-### 6.1 Verificación antes de la operación
+### Verificación antes de la operación 6.1
 
-Antes del inicio oficial, hagamos algunas verificaciones sencillas para asegurarnos de que todos los componentes funcionen correctamente.
+Antes del inicio oficial, hagamos algunas verificaciones simples para asegurarnos de que todos los componentes funcionen correctamente.
 
-#### Verificación 1: Comprobar dependencias de Python
+#### Validación 1: Comprobar dependencias de Python
 
 Asegúrate de estar en el entorno 'flex' y en el directorio principal del proyecto:
 
@@ -787,7 +889,7 @@ python -c "import usb.core; import numpy; print('pyusb + numpy OK')"
 pyusb + numpy OK
 ```
 
-#### Verificación 2: Validar la librería del brazo robótico
+#### Validación 2: Validar la biblioteca del brazo robótico
 
 ```bash
 # Ensure that PYTHONPATH is set
@@ -803,7 +905,7 @@ python -c "from reBotArm_control_py.actuator import RobotArm; print('Robot Arm L
 Robot Arm Library OK
 ```
 
-💡**¿El error es 'ModuleNotFoundError'?**
+💡**¿Si el error es 'ModuleNotFoundError'?**
 
 Significa que PYTHONPATH no está configurado correctamente. Por favor confirma:
 
@@ -827,11 +929,11 @@ arecord -D plughw:2,0 -c 6 -r 16000 -f S16_LE -d 3 /tmp/test.wav
 aplay -D plughw:2,0 /tmp/test.wav
 ```
 
-Si puedes oír el sonido grabado, la matriz de micrófonos funciona correctamente.
+Si puedes escuchar el sonido grabado, la matriz de micrófonos está funcionando correctamente.
 
 ### 6.2 Procedimiento de inicio
 
-Después de pasar todas las verificaciones, ¡se puede iniciar el programa oficialmente!
+Después de que todas las verificaciones se hayan superado, ¡se puede iniciar oficialmente el programa!
 
 ```bash
 # Ensure in the flex environment
@@ -856,7 +958,7 @@ Please enter the mode number (1 or 2):
 
 En este momento, introduce '1' para entrar en el modo de seguimiento de fuente de sonido DOA, o introduce '2' para entrar en el modo de control por voz.
 
-#### Especificar directamente el modo al iniciar
+#### Especificar directamente el modo de inicio
 
 También puedes especificar el modo directamente en el comando de inicio, omitiendo el menú de selección:
 
@@ -872,7 +974,7 @@ python sound_tracking_arm.py --mode voice
 
 #### Prueba del modo DOA
 
-Cuando se selecciona el modo 1, el programa:
+Cuando se selecciona el Modo 1, el programa:
 
 1. Inicializa el dispositivo USB
 
@@ -886,7 +988,7 @@ Cuando se selecciona el modo 1, el programa:
 
 - Realiza movimientos de asentimiento
 
-- Luego vuelve al estado de espera
+- Luego vuelve a espera
 
 #### Prueba del modo de voz
 
@@ -894,13 +996,13 @@ Cuando se selecciona el modo 2, el programa:
 
 1. Inicializa todos los componentes
 
-2. Espera a que pulses Enter
+2. Espera a que presiones Enter
 
 **Método de prueba**:
 
 1. Pulsa la tecla 'Enter'
 
-2. Después de ver el aviso de "recording", di "hello" o "say hello"
+2. Después de ver el mensaje de "recording", di "hello" o "say hello"
 
 3. Espera unos 5 segundos
 
@@ -910,17 +1012,17 @@ Cuando se selecciona el modo 2, el programa:
 
 - El brazo mecánico realiza la acción de saludo
 
-- Oyes la respuesta por voz
+- Escuchas la respuesta de la locución de voz
 
 ---
 
 ## 7. Explicación detallada de la función
 
-### 7.1 Modo 1: modo de seguimiento de fuente de sonido DOA
+### 7.1 modo 1: modo de seguimiento de fuente de sonido DOA
 
 #### ¿Qué es DOA?
 
-El nombre completo de DOA es **Direction of Arrival** (dirección de llegada de la onda sonora), que en pocas palabras es: **juzgar desde qué dirección viene el sonido**. Así como tú puedes usar ambos oídos para determinar aproximadamente si el sonido está a la izquierda o a la derecha, reSpeaker Flex utiliza cuatro micrófonos para calcular la dirección del sonido con mayor precisión.
+El nombre completo de DOA es **Direction of Arrival** (dirección de llegada de la onda sonora), que en pocas palabras es: **juzgar desde qué dirección viene el sonido**. Así como puedes usar ambos oídos para determinar aproximadamente si el sonido está a la izquierda o a la derecha, reSpeaker usa cuatro micrófonos para calcular la dirección del sonido con mayor precisión.
 
 #### Flujo de trabajo
 
@@ -929,7 +1031,7 @@ Start the system
     ↓
 Initialize USB device
     ↓
-Connect reSpeaker Flex ←──→ Connect reBot Arm
+Connect reSpeaker  ←──→ Connect reBot Arm
     ↓
 Loop Execution:
     ├─ Read DOA angle data (0°~360°)
@@ -951,11 +1053,11 @@ Exit (Press Ctrl+C)
 
 **Cola de búfer de ángulo de 4 fotogramas**
 
-Imagina que estás escuchando a una persona en movimiento hablar, y si cada fotograma (unos 50 milisegundos) de cambio de ángulo impulsa directamente el brazo robótico, este temblará y vibrará. El sistema utiliza un "búfer circular" para almacenar los datos de ángulo DOA de los últimos 4 fotogramas y luego promedia para que el movimiento sea más suave.
+Imagina que estás escuchando a una persona en movimiento hablar, y si cada fotograma (unos 50 milisegundos) de cambio angular impulsa directamente el brazo robótico, este temblará y vibrará. El sistema utiliza un "búfer circular" para almacenar los datos del ángulo DOA de los últimos 4 fotogramas y luego promedia para que el movimiento sea más suave.
 
 **Filtro de suavizado por similitud de coseno**
 
-A veces el micrófono juzgará mal la dirección (como un ruido repentino). Este filtro comprobará si los ángulos de los últimos fotogramas son "coherentes": si la diferencia es demasiado grande, puede ser un juicio erróneo y no responderá. Igual que cuando oyes un sonido, confirmarás la dirección antes de girar la cabeza.
+A veces el micrófono juzgará mal la dirección (como por un ruido repentino). Este filtro comprobará si los ángulos de los últimos fotogramas son "coherentes"; si la diferencia es demasiado grande, puede tratarse de un juicio erróneo y no responderá. Igual que cuando oyes un sonido, confirmarás la dirección antes de girar la cabeza.
 
 **Umbral de disparo**
 
@@ -1009,12 +1111,12 @@ Analysis results
 
 | Tipo de instrucción | Ejemplo de frase | Acción ejecutada | Descripción |
 |-----|-----|-----|-----|
-| girar a la izquierda | "girar a la izquierda"/"mirar a la izquierda"/"girar a la izquierda" | la base del brazo robótico gira 45 grados hacia la izquierda | el ángulo se puede ajustar mediante parámetros |
-| girar a la derecha | "girar a la derecha"/"mirar a la derecha"/"girar a la derecha" | la base del brazo robótico gira 45 grados hacia la derecha | igual que arriba |
-| saludo | "di hola"/"hola"/"hi" | realizar un saludo con inclinación de cabeza | asiente dos veces seguidas |
-| despedida con la mano | "saluda con la mano"/"di adiós"/"adiós" | realizar un gesto de despedida con la mano | agita la mano 2 veces a izquierda y derecha |
-| volver a cero | "volver a la posición inicial"/"restablecer"/"volver a cero" | todas las articulaciones vuelven a la posición cero | volver a la postura inicial |
-| detener | "detente"/"no te muevas"/"para" | detener ahora la acción actual | comando de parada de emergencia |
+| girar a la izquierda | "turn left"/"look left"/"turn left" | la base del brazo robótico gira 45 grados hacia la izquierda | el ángulo se puede ajustar mediante parámetros |
+| girar a la derecha | "turn right"/"look right"/"turn right" | la base del brazo robótico gira 45 grados hacia la derecha | igual que arriba |
+| saludo | "say hello"/"hello"/"hi" | realiza un saludo con asentimiento | asiente dos veces seguidas |
+| saludar con la mano | "Wave"/"Say Goodbye"/"Bye" | realiza un gesto de despedida con la mano | agita la mano 2 veces a izquierda y derecha |
+| volver a cero | "return to initial position"/"reset"/"return to zero" | todas las articulaciones vuelven a la posición cero | vuelve a la postura inicial |
+| detener | "Stop"/"Don't move"/"Stop" | detiene la acción actual inmediatamente | comando de parada de emergencia |
 
 #### Ejemplo de interacción
 
@@ -1052,9 +1154,9 @@ $ python sound_tracking_arm.py --mode voice
 
 #### ¿Cómo entiende la IA tus palabras?
 
-El proyecto utiliza un Prompt bien diseñado que permite a un modelo de lenguaje grande (Llama-3.3-70B) entender diversas expresiones en lenguaje natural y traducirlas en instrucciones estructuradas.
+El proyecto utiliza un Prompt bien diseñado que permite a un modelo de lenguaje grande (Llama-3.3-70B) comprender diversas expresiones en lenguaje natural y traducirlas en instrucciones estructuradas.
 
-Por ejemplo, si dices "ayúdame a girar la cabeza hacia la izquierda", la IA lo entenderá así:
+Por ejemplo, si dices "help me turn my head to the left", la IA lo entenderá así:
 
 ```json
 {"action": "turn_left", "params": {"angle": 45}, "reply": "Okay, turning left."}
@@ -1076,13 +1178,13 @@ python sound_tracking_arm.py [Parameter]
 
 | Parámetro | Corto | Predeterminado | Descripción |
 |-----|-----|-----|-----|
-| '-- mode' | '-m' | 'doa' | Modo de operación: 'doa' (seguimiento de fuente de sonido) o 'voice' (control por voz) |
-| '-- device' | '-d' | '0' | ID de dispositivo reSpeaker Flex USB |
+| '-- mode' | '-m' | 'doa' | Modo de funcionamiento: 'doa' (seguimiento de fuente de sonido) o 'voice' (control por voz) |
+| '-- device' | '-d' | '0' | ID de dispositivo USB de reSpeaker |
 | '-- port' | '-p' | '/dev/ttyUSB0' | Ruta del dispositivo de puerto serie del brazo mecánico |
-| '-- threshold' | '-t' | '15' | Umbral de activación del ángulo DOA (en grados) |
-| '-- cooldown' | '-c' | '3' | Tiempo de enfriamiento de la acción (en segundos) |
+| '-- threshold' | '-t' | '15' | Umbral de disparo del ángulo DOA (en grados) |
+| '-- cooldown' | '-c' | '3' | Período de enfriamiento de la acción (en segundos) |
 | '-- buffer-size' | '-B ' | '4' | Fotogramas del búfer de ángulo DOA |
-| '-- groq-key' | '-k' | 'None' | Groq API Key (también se puede configurar por código) |
+| '-- groq-key' | '-k' | 'None' | Clave de API de Groq (también se puede configurar por código) |
 | '-- tts-voice' | '-v' | 'zh-CN-XiaoxiaoNeural | Voz de Edge-TTS |
 | '-- debug' | - | 'False' | Habilitar salida de registro de depuración |
 
@@ -1098,7 +1200,7 @@ python sound_tracking_arm.py
 python sound_tracking_arm.py --mode voice
 ```
 
-#### Ajustar la sensibilidad DOA
+#### Ajustar la sensibilidad del DOA
 
 ```bash
 # Increase the trigger threshold (requires a larger change in sound direction to respond, reducing false triggers)
@@ -1139,7 +1241,7 @@ python sound_tracking_arm.py --mode voice --tts-voice zh-CN-XiaoxiaoMultilingual
 
 Lista completa de voces compatibles con Edge-TTS:[https://github.com/rany2/edge-tts#changing-the-voice](https://github.com/rany2/edge-tts#changing-the-voice)
 
-#### Habilitar modo de depuración
+#### Habilitar el modo de depuración
 
 ```bash
 # Enable detailed log output (helpful for troubleshooting)
@@ -1150,13 +1252,13 @@ python sound_tracking_arm.py --debug
 
 ## 9. guía de resolución de problemas FAQ
 
-Esta sección recopila los problemas y soluciones más comunes encontrados por usuarios principiantes. Si no puedes encontrar tu problema aquí, comprueba si la conexión de hardware es correcta y luego revisa el mensaje de error que muestra el terminal.
+Esta sección recopila los problemas y soluciones más comunes que encuentran los usuarios principiantes. Si no puedes encontrar tu problema aquí, comprueba si la conexión de hardware es correcta y luego revisa el mensaje de error que muestra el terminal.
 
 ### 9.1 problemas en la fase de instalación
 
 #### P1: 'conda command not found'
 
-**Problema**: Después de instalar Miniforge, al introducir el comando 'conda' aparece el aviso de que no se puede encontrar.
+**Problema**: Después de instalar Miniforge, al introducir el comando 'conda' aparece el mensaje de que no se encuentra.
 
 **Causa**: La variable de entorno no está configurada correctamente.
 
@@ -1205,7 +1307,7 @@ conda update conda
 
 #### P3: 'uv: command not found'
 
-**Problema**: Después de instalar uv, el sistema indica que no se puede encontrar el comando.
+**Problema**: Después de instalar uv, el sistema no puede encontrar el comando.
 
 **Solución**:
 
@@ -1218,9 +1320,9 @@ echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-#### P4: 'uv sync' informó de un error
+#### P4: 'uv sync' informó un error
 
-**Problema**: No se pudo ejecutar 'uv sync' en el directorio 'reBotArm_control_py.
+**Problema**: Falló la ejecución de 'uv sync' en el directorio 'reBotArm_control_py.
 
 **Posibles causas**:
 
@@ -1241,9 +1343,9 @@ cd ~/reBotArm_control_py
 python --version  # 应该是 3.10.x
 ```
 
-### 9.2 Problemas de reconocimiento de dispositivos USB
+### 9.2 Problema de reconocimiento de dispositivo USB
 
-#### P5: 'lsusb' no muestra reSpeaker Flex
+#### P5: 'lsusb' no ve reSpeaker
 
 **Pasos de diagnóstico**:
 
@@ -1267,7 +1369,7 @@ dmesg | tail -20
 lsusb -v -d 2886:
 ```
 
-#### P6: 'lsusb' no muestra el brazo
+#### P6: 'lsusb' no ve el brazo
 
 **Pasos de diagnóstico**:
 
@@ -1275,9 +1377,9 @@ lsusb -v -d 2886:
 
 2. Confirma que la alimentación del brazo robótico está encendida (interruptor de alimentación de 24V)
 
-3. Comprueba si el indicador de alimentación está encendido
+3. Comprueba si el indicador de encendido está encendido
 
-4. Ver los registros del sistema:
+4. Ver registros del sistema:
 
 ```bash
 dmesg | grep -i "ttyUSB\|ttyACM\|usb"
@@ -1339,7 +1441,7 @@ python -c "import sys; print(sys.path)"
 
 #### P10: 'libusb-1.0.so. 0: cannot open shared object file'
 
-**Problema**: Falta la biblioteca del sistema libusb.
+**Problema**: Falta la biblioteca de sistema libusb.
 
 **Solución**:
 
@@ -1352,7 +1454,7 @@ sudo apt-get install -y libusb-1.0-0-dev
 conda install -c conda-forge libusb
 ```
 
-### 9.4 problemas de red/API
+### 9.4 Problemas de red/API
 
 #### P11: 'Groq API Key not set'
 
@@ -1360,7 +1462,7 @@ conda install -c conda-forge libusb
 
 **Solución**:
 
-1. Comprueba si el VOICE_CFG["api_key"] en "sound_tracking_arm.py" ha sido modificado
+1. Comprueba si VOICE_CFG["api_key"] en "sound_tracking_arm.py" ha sido modificado
 
 2. Confirma que el formato de la API Key es correcto (debe comenzar con 'gsk_')
 
@@ -1370,7 +1472,7 @@ conda install -c conda-forge libusb
 export GROQ_API_KEY="gsk_xxxxxxxxxxxx"
 ```
 
-#### P12: Cuando 'Connection error' o 'Timeout' llama a Groq API
+#### P12: Cuando 'Connection error' o 'Timeout' al llamar a Groq API
 
 **Problema**: No se puede conectar con el servidor de Groq.
 
@@ -1384,7 +1486,7 @@ ping console.groq.com -c 3
 
 2. - - Si el ping falla, necesitas configurar un proxy **:
 
-Edita el 'VOICE_CFG en 'sound_tracking_arm.py ':
+Edita 'VOICE_CFG en 'sound_tracking_arm.py ':
 
 ```python
 proxy": "http://your proxy IP:port",  # e.g., "http://127.0.0.1:7890
@@ -1399,7 +1501,7 @@ curl -x http://your_proxy_IP:port https://console.groq.com
 
 #### P13: 'Rate limit exceeded' / 'Quota exceeded'
 
-**Problema**: La frecuencia de llamadas a la API supera el límite o la cuota se ha agotado.
+**Problema**: La frecuencia de llamadas a la API supera el límite o se ha agotado la cuota.
 
 **Solución**:
 
@@ -1425,7 +1527,7 @@ aplay -l
 # If the device is not visible, you may need to configure the default audio output.
 ```
 
-### 9.5 problema del brazo mecánico
+### 9.5 Problema del brazo mecánico
 
 #### P15: El brazo mecánico no responde/no se mueve
 
@@ -1466,7 +1568,7 @@ python sound_tracking_arm.py --port /dev/ttyUSB1
 
 2. Hay obstáculos en el rango de movimiento: despeja el espacio de movimiento
 
-3. Ángulo de articulación anormal: intenta restablecerlo: di "volver a la posición inicial" o reinicia el programa
+3. Ángulo articular anormal: intenta restablecerlo: di "volver a la posición inicial" o reinicia el programa
 
 #### P17: Calentamiento anormal del motor
 
@@ -1474,7 +1576,7 @@ python sound_tracking_arm.py --port /dev/ttyUSB1
 
 **Posibles causas**:
 
-- El brazo mecánico está bloqueado por una fuerza externa y el motor sigue ejerciendo fuerza
+- El brazo mecánico está bloqueado por una fuerza externa y el motor sigue haciendo fuerza
 
 - Movimiento demasiado rápido
 
@@ -1488,7 +1590,7 @@ python sound_tracking_arm.py --port /dev/ttyUSB1
 
 3. Reduce la frecuencia de movimiento
 
-### 9.6 problemas relacionados con el audio
+### 9.6 Problemas relacionados con el audio
 
 #### P18: No hay sonido en la grabación del micrófono
 
@@ -1514,7 +1616,7 @@ cat /proc/asound/cards
 arecord -D plughw:2,0 -c 6 -r 16000 -f S16_LE -d 3 /tmp/test.wav
 ```
 
-4. **Comprueba si la matriz de micrófonos está correctamente conectada**: Confirma que el cable FPC está bien enchufado
+4. **Comprueba si la matriz de micrófonos está conectada correctamente**: Confirma que el cable FPC está bien conectado
 
 #### P19: Ángulo DOA no estable/saltos
 
@@ -1526,9 +1628,9 @@ arecord -D plughw:2,0 -c 6 -r 16000 -f S16_LE -d 3 /tmp/test.wav
 
 3. **Fuerte interferencia de fuentes de sonido cercanas**: Aléjate de ventiladores, altavoces y otros equipos
 
-4. Ajusta el umbral de disparo: Sube el parámetro '-- threshold'.
+4. Ajusta el umbral de disparo: Aumenta el parámetro '-- threshold'.
 
-### 9.7 otras preguntas
+### 9.7 Otras preguntas
 
 #### P20: Ctrl C no puede salir
 
@@ -1554,7 +1656,7 @@ killall python
 
 #### P22: Cómo empezar de nuevo por completo
 
-Si quieres reconfigurar desde cero:
+Si quieres volver a configurar desde cero:
 
 ```bash
 # 1. Delete Conda Environment
@@ -1570,95 +1672,95 @@ rm -rf ~/reBotArm_control_py
 
 ---
 
-## 10. precauciones de seguridad
+## 10. Precauciones de seguridad
 
-⚠️ **Al utilizar este producto, asegúrate de leer detenidamente todas las siguientes instrucciones de seguridad. Un manejo inadecuado puede provocar daños en el equipo o lesiones personales.**
+⚠️ **Cuando utilices este producto, asegúrate de leer atentamente todas las siguientes instrucciones de seguridad. Un uso inadecuado puede provocar daños en el equipo o lesiones personales.**
 
-### 10.1 seguridad del brazo mecánico
+### 10.1 Seguridad del brazo mecánico
 
 #### Reglas básicas de seguridad
 
 | Regla | Descripción | Consecuencias |
 |-----|-----|-----|
-| No mover el brazo mecánico a la fuerza | La articulación del brazo mecánico está accionada por un motor de precisión, y la rotación manual forzada puede causar daños en los engranajes | Daño del motor, alto coste de mantenimiento |
-| Garantizar que el rango de movimiento esté libre de obstáculos | Antes de la operación, comprueba que no haya personas, paredes u otros objetos en el rango de movimiento del brazo robótico | Las colisiones causan daños al brazo robótico o a los objetos circundantes |
-| Desenchufar el cable USB en caso de emergencia | En caso de emergencia, desenchufa inmediatamente el cable USB del brazo mecánico para cortar la señal de control | El brazo mecánico deja de moverse |
+| No muevas el brazo mecánico a la fuerza | La articulación del brazo mecánico está accionada por un motor de precisión, y la rotación manual forzada puede causar daños en los engranajes | Daño del motor, alto coste de mantenimiento |
+| Asegura que el rango de movimiento esté libre de obstáculos | Antes de la operación, comprueba que no haya personas, paredes u otros objetos en el rango de movimiento del brazo robótico | Las colisiones causan daños al brazo robótico o a los objetos circundantes |
+| Desconecta el cable USB en caso de emergencia | En caso de emergencia, desconecta inmediatamente el cable USB del brazo mecánico para cortar la señal de control | El brazo mecánico deja de moverse |
 | La carga no debe superar los 1500g | No sujetes objetos que superen 1,5kg con las pinzas | Daño por sobrecarga del motor |
-| Mantener una distancia de seguridad de 1,5m | Mantén una distancia de al menos 1,5m cuando el brazo robótico esté en funcionamiento | Evitar lesiones por colisión |
+| Mantén una distancia de seguridad de 1,5m | Mantén una distancia de al menos 1,5m cuando el brazo robótico esté en funcionamiento | Evitar lesiones por colisión |
 
 #### Límites de ángulo de las articulaciones
 
-El sistema tiene protección de límite de articulación incorporada, la siguiente tabla es solo de referencia. Ten en cuenta que en el código se utiliza la unidad de radianes (rad).
+El sistema tiene protección integrada de límite de articulación, la siguiente tabla es para referencia. Ten en cuenta que en el código se utiliza la unidad de radianes (rad).
 
 | Articulación | Nombre | Mín (Ángulo) | Máx (Ángulo) | Descripción |
 |-----|-----|-----|-----|-----|
 | J1 | Rotación de la base | -149.0 ° | 149.0 ° | Rotación horizontal, rango máximo |
 | J2 | Inclinación del hombro | -206.3 ° | 0 ° | Pluma hacia arriba, solo hacia arriba |
-| J3 | Inclinación del codo | -206.3 ° | 0 ° | Antebrazo extendido, solo hacia delante |
+| J3 | Inclinación del codo | -206.3 ° | 0 ° | Antebrazo extendido, solo hacia adelante |
 | J4 | Rotación de la muñeca | -85.9 ° | 85.9 ° | Rotación del extremo izquierda y derecha |
 | J5 | Inclinación de la muñeca | -85.9 ° | 85.9 ° | Balanceo del extremo arriba y abajo |
-| J6 | Guiñada de la muñeca | -85.9 ° | 85.9 ° | Ajuste de la dirección del extremo |
-| J7 | Apertura y cierre de la pinza | -320.9 | 0 | Control de la pinza, el número negativo es abrir |
+| J6 | Guiñada de la muñeca | -85.9 ° | 85.9 ° | Dirección de ajuste fino del extremo |
+| J7 | Apertura y cierre de la garra | -320.9 | 0 | Control de la garra, el número negativo es abrir |
 
-### 10.2 seguridad eléctrica
+### 10.2 Seguridad eléctrica
 
-- **No enchufar ni desenchufar con tensión**: Antes de enchufar o desenchufar la interfaz de alimentación XT30 2 2, se debe apagar primero la alimentación
+- **No enchufar ni desenchufar con tensión**: Antes de enchufar y desenchufar la interfaz de alimentación XT30 2 2, primero se debe apagar la alimentación
 
-- **No conectar/desconectar el motor en caliente**: No enchufes ni desenchufes el cable del motor cuando la alimentación esté encendida
+- **No conectar en caliente el motor**: No enchufes ni desenchufes el cable del motor cuando la alimentación esté encendida
 
-- **Usar la fuente de alimentación correcta**: Solo se puede utilizar una fuente de alimentación de 24V 15A, el uso de otras fuentes puede causar daños al equipo
+- **Usar la fuente de alimentación correcta**: Solo se puede usar una fuente de alimentación de 24V 15A, usar otras fuentes puede causar daños al equipo
 
-- **Evitar entornos húmedos**: No utilizar en entornos húmedos, polvorientos y de alta temperatura
+- **Evitar ambientes húmedos**: No usar en entornos húmedos, polvorientos y de alta temperatura
 
 - **Comprobar el cable**: Antes de usar, comprueba si el cable de alimentación y la línea de señal están intactos y sin daños
 
-### 10.3 seguridad del entorno de uso
+### 10.3 Seguridad del entorno de uso
 
 - **Los menores deben usarlo bajo la supervisión de un adulto**: el brazo mecánico tiene cierta fuerza, un uso inadecuado puede causar lesiones
 
 - **Banco de trabajo estable**: Asegúrate de que el brazo robótico esté fijado en una mesa horizontal estable
 
-- **Espacio suficiente**: Reserva al menos 1 metro de espacio seguro alrededor del brazo robótico
+- **Espacio suficiente**: Se debe reservar al menos 1 metro de espacio seguro alrededor del brazo robótico
 
-- **Buena iluminación**: Facilita la observación del estado de funcionamiento del brazo robótico
+- **Buena iluminación**: Facilita observar el estado de funcionamiento del brazo robótico
 
 - **Mantenerse alejado de fuentes de agua**: El equipo electrónico y el agua no deben entrar en contacto
 
-### 10.4 instrucciones de seguridad para el reinicio del motor
+### 10.4 Instrucciones de seguridad para el reinicio del motor
 
 Antes de reiniciar el motor:
 
-- 2 útiles de sujeción (tamaño ≥ 3 pulgadas)
+- 2 útiles de fijación (tamaño ≥ 3 pulgadas)
 
 - Mantener una distancia de seguridad de al menos 1 m durante la puesta en marcha y el funcionamiento
 
-- Está prohibido conectar/desconectar el motor en caliente; se debe desconectar la alimentación antes de enchufar o desenchufar la interfaz XT30 2 2
+- Está prohibido conectar en caliente el motor; se debe desconectar la alimentación antes de enchufar y desenchufar la interfaz XT30 2 2
 
 - Prohibir la sobrecarga del motor y el funcionamiento a exceso de velocidad
 
 - Comprobar el cableado y los elementos de fijación antes de arrancar el equipo
 
-- No utilizar en entornos húmedos, de alta temperatura o polvorientos
+- No usar en entornos húmedos, de alta temperatura o polvorientos
 
 ---
 
 ## 11. Introducción a los principios técnicos
 
-Esta sección presenta brevemente los principios técnicos centrales implicados en el proyecto para ayudar a los usuarios interesados a comprender la "magia que hay detrás". No es necesario comprenderlo por completo para utilizar este producto.
+Esta sección presenta brevemente los principios técnicos centrales implicados en el proyecto para ayudar a los usuarios interesados a entender la "magia que hay detrás". No es necesario comprenderlo por completo para usar este proyecto.
 
-### 11.1 principio de localización de la fuente sonora DOA
+### 11.1 Principio de localización de fuente sonora DOA
 
 #### Pregunta: ¿Cómo saber de qué dirección viene el sonido?
 
-reSpeaker Flex tiene 4 micrófonos dispuestos en un anillo. Cuando el sonido proviene de una determinada dirección, hay una ligera diferencia en el tiempo de llegada a los distintos micrófonos (llamada "diferencia de tiempo" o TDOA).
+reSpeaker tiene 4 micrófonos dispuestos en un anillo. Cuando el sonido proviene de cierta dirección, hay una ligera diferencia en el tiempo de llegada a los distintos micrófonos (llamada "diferencia de tiempo" o TDOA).
 
-**Explicación popular**: Igual que cuando cierras los ojos, si alguien aplaude a tu izquierda, tu oído izquierdo lo oirá primero y tu oído derecho lo oirá un poco más tarde. Basándose en esta diferencia de tiempo, el cerebro puede saber que el sonido está a la izquierda.
+**Explicación popular**: Igual que cuando cierras los ojos, si alguien aplaude a tu izquierda, tu oído izquierdo escuchará primero y tu oído derecho escuchará un poco más tarde. Basándose en esta diferencia de tiempo, el cerebro puede saber que el sonido está a la izquierda.
 
-El chip XVF3800 integrado en reSpeaker Flex se utiliza para lo siguiente:
+El chip XVF3800 integrado en reSpeaker hace precisamente esto:
 
-1. 4 micrófonos al mismo tiempo
+1. Recibe 4 micrófonos al mismo tiempo
 
-2. El chip analiza la diferencia de fase/tiempo de 4 señales
+2. El chip analiza la diferencia de fase/diferencia de tiempo de las 4 señales
 
 3. Calcula la dirección (0 ° ~ 360 °) de la que es más probable que provenga el sonido.
 
@@ -1666,19 +1768,19 @@ El chip XVF3800 integrado en reSpeaker Flex se utiliza para lo siguiente:
 
 ### 11.2 Proceso de reconocimiento de voz
 
-#### Pregunta: ¿Cómo se convierte lo que dices en palabras?
+#### Pregunta: ¿Cómo convertir lo que dices en palabras?
 
 El proyecto utiliza el modelo Whisper de OpenAI y usa llamadas de API aceleradas de Groq. El proceso general es:
 
-1. **Grabación**: se recopilan 6 canales de audio de 16kHz con `arecord` desde la matriz de micrófonos
+1. **Grabación**: se recogen 6 canales de audio de 16kHz mediante arecord desde la matriz de micrófonos
 
-2. **Preprocesamiento**: usar NumPy para extraer el primer canal (la señal después del beamforming), normalizar y amplificar la ganancia
+2. **Preprocesamiento**: Usar NumPy para extraer el primer canal (la señal después del beamforming), normalizar y amplificar la ganancia
 
-3. **Subida**: subir el archivo de audio procesado al servidor de Groq
+3. **Subida**: Subir el archivo de audio procesado al servidor de Groq
 
-4. Reconocimiento: el modelo Whisper transcribe las formas de onda de audio en texto.
+4. Reconocimiento: El modelo Whisper transcribe las formas de onda de audio en texto.
 
-5. **Devolución**: obtener el resultado del reconocimiento (por ejemplo, "turn left")
+5. **Devolución**: Obtener el resultado del reconocimiento (por ejemplo, "gira a la izquierda")
 
 El modelo Whisper es uno de los modelos de reconocimiento de voz más avanzados, admite múltiples idiomas y tiene una alta precisión de reconocimiento.
 
@@ -1690,7 +1792,7 @@ El proyecto utiliza el gran modelo de lenguaje Llama-3.3-70B de Meta, llamado a 
 
 **Tecnología central**: Ingeniería de prompts
 
-En el código, damos a la IA una "plantilla de instrucciones" detallada y le decimos:
+En el código, damos a la IA una "plantilla de instrucciones" detallada y le indicamos:
 
 - Qué acciones se pueden realizar (girar a la izquierda, girar a la derecha, saludar, etc.)
 
@@ -1718,7 +1820,7 @@ Por ejemplo, cuando el usuario dice "ayúdame a girar la cabeza hacia la izquier
 
 **Cinemática (Kinematics)**:
 
-El núcleo del control del brazo robótico es la cinemática: dado el ángulo de articulación objetivo, calcular la posición del extremo del brazo robótico en el espacio (cinemática directa); o, a la inversa, dada la posición objetivo del extremo, calcular cuánto debe girar cada articulación (cinemática inversa).
+El núcleo del control del brazo robótico es la cinemática: dado el ángulo de articulación objetivo, calcular la posición del extremo del brazo robótico en el espacio (cinemática directa); o, a la inversa, dado la posición objetivo del extremo, calcular cuánto debe girar cada articulación (cinemática inversa).
 
 El proyecto utiliza la biblioteca **Pinocchio** para cálculos cinemáticos y planificación de trayectorias.
 
@@ -1733,7 +1835,7 @@ ease = -(math.cos(math.pi * t) - 1) / 2.0
 
 Esto hace que el brazo robótico comience acelerando lentamente y desacelere lentamente antes de detenerse, como un movimiento humano natural.
 
-**Protección de límites de articulación**:
+**Protección de límite de articulación**:
 
 Todos los ángulos de articulación objetivo se recortan dentro de un rango seguro:
 
@@ -1751,7 +1853,7 @@ Esto garantiza que el brazo robótico no exceda los límites físicos, evitando 
 
 | Recurso | Enlace | Descripción |
 |-----|-----|-----|
-| Repositorio principal del proyecto | https://github.com/xr686/reBot-Arm-reSpeaker-Flex | Programa maestro de control por voz |
+| Repositorio principal del proyecto | https://github.com/xr686/reBot-Arm-reSpeaker-Flex | Programa maestro de control por sonido |
 | Biblioteca de control del brazo robótico | https://github.com/vectorBH6/reBotArm_control_py | Biblioteca de control del brazo robótico en Python |
 | reBot Arm Oficial | https://www.rebotix.com/ | Sitio web oficial del brazo robótico |
 | Seeed Studio | https://www.seeedstudio.com/ | Compra de reSpeaker Flex y soporte técnico |
@@ -1784,7 +1886,7 @@ Esto garantiza que el brazo robótico no exceda los límites físicos, evitando 
 | Artículos de Whisper | https://arxiv.org/abs/2212.04356 | Artículos técnicos de reconocimiento de voz |
 | Modelo Llama | https://ai.meta.com/llama/ | Modelo de lenguaje grande oficial |
 
-### 12.5 Recursos de aprendizaje de tecnología
+### 12.5 Recursos de aprendizaje tecnológico
 
 | Temas | Recursos recomendados |
 |-----|-----|
@@ -1793,11 +1895,11 @@ Esto garantiza que el brazo robótico no exceda los límites físicos, evitando 
 | Conceptos básicos de Ubuntu | https://ubuntu.com/tutorials/command-line-for-beginners |
 | Conceptos básicos de Git | https://www.progit.cc/ |
 | Introducción a la robótica | Modern Robotics (Kevin Lynch) |
-| Introducción al reconocimiento de voz | Curso de Deep Learning de Andrew Ng - Sequence Model |
+| Introducción al reconocimiento de voz | Curso de Deep Learning de Andrew Ng - Modelo de secuencia |
 
 ### 12.6 Comunidad y soporte
 
-- **GitHub Issues**: si encuentras un problema que no está cubierto por este documento, puedes enviar un Issue en el repositorio GitHub del proyecto.
+- **GitHub Issues**: Si encuentras un problema que no está cubierto por este documento, puedes enviar un Issue en el repositorio GitHub del proyecto.
 
 - **Foro de Seeed Studio**:https://forum.seeedstudio.com/ (discusiones técnicas relacionadas con reSpeaker)
 
@@ -1805,29 +1907,29 @@ Esto garantiza que el brazo robótico no exceda los límites físicos, evitando 
 
 ---
 
-## Palabras finales
+## Escrito al final
 
-¡Felicidades por haber llegado al final del documento! Si sigues esta Wiki paso a paso, creo que habrás construido con éxito tu propio sistema de brazo robótico de voz inteligente.
+¡Felicidades por haber llegado al final del documento! Si sigues esta Wiki paso a paso, creo que has construido con éxito tu propio sistema de brazo robótico de voz inteligente.
 
 Este proyecto implica tecnologías de procesamiento de sonido, interacción de voz con IA, control de movimiento de robots y otros campos, y es un buen proyecto de práctica integral para principiantes. Espero que puedas seguir explorando lo siguiente:
 
 - Intenta modificar los comandos de voz para añadir más acciones personalizadas
 
-- Ajusta los parámetros de DOA para que el seguimiento de la fuente de sonido sea más sensible
+- Ajusta los parámetros DOA para que el seguimiento de la fuente sonora sea más sensible
 
 - Explora el despliegue del proyecto en dispositivos embebidos como Raspberry Pi
 
-- Añade un módulo de visión para que el brazo robótico pueda "ver"
+- Añade un módulo de visión para que el brazo robótico "vea"
 
-Si tienes alguna pregunta o sugerencia, eres bienvenido a enviar tus comentarios a través de GitHub Issue. ¡Diviértete!🤖
+Si tienes cualquier pregunta o sugerencia, eres bienvenido a enviar tus comentarios a través de GitHub Issue. ¡Diviértete!🤖
 
 ---
 
-> **Descargo de responsabilidad**: este documento se basa en el código de código abierto del proyecto y es solo para referencia. El funcionamiento del brazo mecánico es peligroso, por favor comprende completamente las precauciones de seguridad antes de operar. El autor no se hace responsable de ningún daño al equipo o lesiones personales causadas por el uso de este documento.
+> **Descargo de responsabilidad**: Este documento se basa en el código de fuente abierta del proyecto y es solo para referencia. La operación del brazo mecánico es peligrosa, por favor comprenda completamente las precauciones de seguridad antes de operarlo. El autor no es responsable de ningún daño al equipo ni de lesiones personales causadas por el uso de este documento.
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerle diferentes tipos de soporte para garantizar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

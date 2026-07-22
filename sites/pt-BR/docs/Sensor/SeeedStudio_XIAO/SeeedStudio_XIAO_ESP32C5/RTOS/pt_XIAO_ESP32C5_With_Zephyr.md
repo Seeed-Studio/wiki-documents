@@ -12,7 +12,7 @@ last_update:
   date: 4/28/2026
   author: Zeller
 createdAt: '2026-04-28'
-updatedAt: '2026-04-30'
+updatedAt: '2026-05-06'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_with_zephyr/
 ---
 

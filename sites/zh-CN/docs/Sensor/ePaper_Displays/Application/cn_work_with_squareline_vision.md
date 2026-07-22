@@ -3,12 +3,12 @@ description: 本文提供了在 SquareLine 上为 reTerminal E 系列纸屏创�
 title: 使用 SquareLine Vision
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
 slug: /reterminal_e10xx_with_squareline_vision
-sidebar_position: 4
+sidebar_position: 7
 last_update:
   date: 10/29/2025
   author: Zovey
 createdAt: '2025-11-03'
-updatedAt: '2026-01-29'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_squareline_vision/
 ---
 
@@ -18,16 +18,16 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_squareline_vision/
 
 ## 介绍
 
-当你想要打造自己的智能终端时，一定希望这台设备拥有一个美观优雅的用户界面。 [LVGL](https://lvgl.io/) 可以实现这一点。它是目前最流行的免费开源嵌入式图形库，可为任意 MCU、MPU 和显示类型创建精美的 UI。借助该库，你可以创建大量漂亮的嵌入式用户界面。尤其是在使用我们的 reTerminal E 系列电子纸产品时，一个吸引人的界面是不可或缺的组成部分。然而，编写 LVGL 库代码本身也是一项非常复杂的工作。因此，本教程主要介绍一款编辑器，它允许你通过拖拽控件的方式简单地绘制 UI。所见即所得（WYSIWYG，What You See Is What You Get）的创作方式可以更好地把握最终呈现效果，并且在绘制完 UI 后，你可以将其导出为 LVGL 的 UI 文件，从而大大简化开发者的开发流程。这款工具的名称是 SquareLine Vision，是一款面向 LVGL 的可视化前端工具。
+当你想要打造自己的智能终端时，一定希望这台设备拥有一个美观优雅的用户界面。 [LVGL](https://lvgl.io/) 可以实现这一点。它是目前最流行的免费开源嵌入式图形库，可为任意 MCU、MPU 和显示类型创建精美的 UI。借助该库，你可以创建大量漂亮的嵌入式用户界面。尤其是在使用我们的 reTerminal E 系列电子纸产品时，一个吸引人的界面是不可或缺的组成部分。然而，编写 LVGL 库代码本身也是一项非常复杂的工作。因此，本教程主要介绍一款编辑器，它允许你通过拖拽控件的方式来绘制 UI。所见即所得（WYSIWYG，What You See Is What You Get）的创作方式可以更好地把握最终呈现效果，并且在绘制完 UI 后，你可以将其导出为 LVGL 的 UI 文件，从而大大简化开发者的开发流程。这款工具的名称是 SquareLine Vision，是一款面向 LVGL 的可视化前端工具。
 
-[SquareLine Vision](https://vision.squareline.io/) 是一个基于浏览器（Web）或 Web 兼容环境的 UI 开发环境，专注于为嵌入式系统（如带屏幕的设备）快速设计用户界面（UI）。
+[SquareLine Vision](https://vision.squareline.io/) 是一个基于浏览器（Web）或 Web 兼容环境的 UI 开发环境，专门用于快速为嵌入式系统（例如带屏幕的设备）设计用户界面（UI）。
 它同时也是一款**设计 + 导出代码**工具：你在平台上完成界面设计，然后即可将设计导出为在嵌入式设备上运行的代码或资源。 
 
 ## SquareLine Vision 的特性
 
-- **可视化 UI 设计** – 通过拖拽式编辑器直观地设计美观、交互式界面，无需手动编写 LVGL 代码。
+- **可视化 UI 设计** – 通过拖拽式编辑器以可视化方式设计美观、交互式界面，无需手动编写 LVGL 代码。
 - **快速嵌入式原型开发** – 可在桌面或目标硬件上即时预览和验证 UI，大幅缩短从设计到设备的迭代时间。
-- **基于 LVGL 的导出** – 将你的设计无缝导出为干净的、基于 LVGL 的源代码，可直接在嵌入式设备、微控制器或仿真环境中编译运行。
+- **基于 LVGL 的导出** – 将设计无缝导出为干净的、基于 LVGL 的源代码，可直接在嵌入式设备、微控制器或仿真环境中编译运行。
 
 借助 SquareLine Vision，你可以在几分钟内从概念走到可交互的嵌入式 UI 原型——将设计灵活性、实时预览以及可量产的 LVGL 输出结合起来，加速整个产品开发周期。
 
@@ -77,14 +77,14 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_squareline_vision/
 - 层级系统
 - 屏幕管理
 - 样式选项
-- 各种组件类型
+- 各类组件（widget）类型
 - 如何利用事件、触发器和动作
 
-当你对平台的整体组织结构和工具有清晰的理解后，将对你制作个人项目非常有帮助。接下来，我将基于我们的 reTerminal E1002 创建一个项目。
+当你对平台的整体组织结构和工具有清晰的认识后，将会对你制作个人项目有很大帮助。接下来，我将基于我们的 reTerminal E1002 创建一个项目。
 
 ## 创建项目
 
-### 启动一个新的 LVGL 项目
+### 新建一个 LVGL 项目
 
 在 SquareLine Vision Launcher 界面的顶部，点击 `Create new` 按钮。然后选择 `Seeed Studio` 来查看我们的产品。选择 `reTerminal E1002` 来创建一个项目。
 该项目的固定设置为：
@@ -99,7 +99,7 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_squareline_vision/
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Launcher_2.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-我们已经支持 SenseCAP Watcher 以及 reTerminal E1001 和 E1002 设备。未来，我们还将支持 Seeed Studio 的更多产品。
+我们已经支持 SenseCAP Watcher 以及 reTerminal E1001 和 E1002 设备。未来我们还会支持 Seeed Studio 的更多产品。
 :::
 
 ### 导入已有的 .slvp 项目
@@ -110,7 +110,7 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_squareline_vision/
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>单色天气界面</th>
+      <th>黑白天气界面</th>
       <th>全彩天气界面</th>
       <th>全彩天气界面 2</th>
     </tr>
@@ -152,9 +152,9 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_squareline_vision/
 
 ### UI 界面设计
 
-UI（用户界面）设计在嵌入式产品开发中至关重要，它直接决定了用户体验。一个美观、直观且响应迅速的界面，不仅能提升产品的易用性，还能增强整体吸引力。
+UI（用户界面）设计在嵌入式产品开发中至关重要，它直接决定了用户体验。一个美观、直观且响应迅速的界面，不仅能提升产品的可用性，还能增强产品的整体吸引力。
 
-在 SquareLine Vision 中，你可以通过拖拽组件快速搭建界面。利用 Styles、Fonts、Bitmaps 和 Themes 等工具精细控制视觉效果，打造专业且独特的用户体验。
+在 SquareLine Vision 中，你可以通过拖拽组件的方式快速搭建界面。利用 Styles、Fonts、Bitmaps 和 Themes 等工具精细控制视觉效果，打造专业且具有独特风格的用户体验。
 
 :::tip
 本教程只涵盖本项目中出现的控件。然而，SquareLine Vision 还提供了许多其他功能，例如动画、事件以及不同的字体。如果你想进一步探索这款工具，请参考[官方教程](https://docs.vision.squareline.io/docs/overview)。
@@ -168,7 +168,7 @@ UI（用户界面）设计在嵌入式产品开发中至关重要，它直接决
 
 #### Inspector 简介
 
-此面板允许你查看和修改屏幕、容器、小部件以及其他 UI 元素的属性。此外，不同类型的小部件还可能有各自的特殊设置。当我选择“background img”时，我可以在 Inspector 中看到与该 img 相关的所有组件。
+此面板允许你查看和修改屏幕、容器、小部件以及其他 UI 元素的属性。此外，不同类型的小部件可能会有各自的特殊设置。当我选择“background img”时，我可以在 Inspector 中看到与该 img 相关的所有组件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_5.png" style={{width:500, height:'auto'}}/></div>
 
@@ -176,17 +176,17 @@ UI（用户界面）设计在嵌入式产品开发中至关重要，它直接决
 
 Toolbar 包含项目配置、保存项目、访问帮助、报告问题、修改项目视图、下载项目代码以及在 SquareLine Vision 中直接以播放模式启动项目等选项。
 
-- **Menu**：在这里，你可以访问保存工作、导出项目、调整项目设置以及返回启动器界面的功能。
+- **Menu**：在这里，你可以使用保存工作、导出项目、调整项目设置以及返回启动器界面的功能。
 - **Project name**：显示当前项目的名称。
 - **Plan**：显示用户当前的订阅计划。
 - **Editor / Animation mode**：在两种不同的工作环境之间切换。
-- **Widgets**：通过三个下拉菜单访问 UI 元素，这些菜单按逻辑对组件进行分组，便于你为项目快速找到合适的小部件。 
-- **Undo / Redo**：允许在设计更改中向后和向前回退，支持无风险的试验。 
+- **Widgets**：通过三个下拉菜单访问 UI 元素，这些菜单按逻辑对组件进行分组，便于为你的项目找到合适的小部件。
+- **Undo / Redo**：允许在设计更改中向后和向前回退，支持无风险的尝试。
 - **Play mode**：启动预览并测试 UI 模拟。
 - **Send bug report**：提供直接访问错误报告系统的入口。
 - **User(s)**：显示当前在你的项目中活动的所有用户，以支持协同设计。
-- **View options**：你可以切换小地图显示，并在专用输入框中输入精确的缩放百分比。
-- **Version**：显示你的项目当前运行的 SquareLine Vision 版本，确保你了解自己的软件环境。
+- **View options**：你可以切换小地图显示，并在专用输入框中输入精确的缩放百分比值。
+- **Version**：显示你的项目当前运行的 SquareLine Vision 版本，以确保你了解自己的软件环境。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_6.png" style={{width:500, height:'auto'}}/></div>
 
@@ -238,14 +238,14 @@ GUI 子系统的主接口。提供以下高级功能：
 E1002 的主控模块是 ESP32-S3。如果你想使用 PlatformIO 为 reTerminal E 系列电子纸显示屏进行编程，你需要在 `.ini` 文件中设置支持 ESP32 的选项。
 
 :::tip
-如果这是你第一次使用 PlatformIO，我们强烈建议你参考[Getting Started with PlatformIO](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32s3.html)。
+如果这是你第一次使用 PlatformIO，我们强烈建议你参考 [Getting Started with PlatformIO](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32s3.html)。
 :::
 
 ### 使用示例
 
 ### PlatformIO 设置
 
-- **Step 1**：在官网下载并安装 [PlatformIO](https://platformio.org/platformio-ide)。如果你还没有安装 PlatformIO 软件，可以点击上方链接进行下载。
+- **Step 1**：在官网下载并安装 [PlatformIO](https://platformio.org/platformio-ide)。如果你还没有安装 PlatformIO 软件，可以点击上方链接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_1.png" style={{width:500, height:'auto'}}/></div>
 
@@ -275,7 +275,7 @@ E1002 的主控模块是 ESP32-S3。如果你想使用 PlatformIO 为 reTerminal
       </div></td>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/weather_7_fix.zip" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" classNameName="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处获取</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处获取</button></p>
         </a>
       </div></td>
       <td><div align="center">
@@ -287,7 +287,7 @@ E1002 的主控模块是 ESP32-S3。如果你想使用 PlatformIO 为 reTerminal
   </table>
 </div>
 
-- **Step 1**：在 VScode 中打开该文件夹，并等待相关依赖全部下载完成。打开项目后，打开 `.ini` 文件并按下 `Ctrl+S`。此时，项目的依赖会自动开始下载。当你看到 `Project has been successfully updated` 时，表示下载过程已经完成。当出现 `successful` 这个单词时，就说明安装已经成功完成。
+- **Step 1**：在 VScode 中打开该文件夹，并等待相关依赖全部下载完成。打开项目后，打开 `.ini` 文件并按下 `Ctrl+S`。此时，项目的依赖会自动开始下载。当你看到 `Project has been successfully updated` 时，表示下载过程已经完成。当出现 `successful` 这个单词时，就会立即表明安装已经成功完成。
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_2.png" style={{width:700, height:'auto'}}/></div>
 
 

@@ -11,7 +11,7 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2024-07-24'
-updatedAt: '2026-05-15'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -100,39 +100,6 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-### Connect via Website
-
-If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now.
-
-  Step 1: Open the Website
-
-[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite.
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
-
-  Step 2: Add the new device
-  
-    Click "+ New Connection". 
-
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
-
-    There are two ways to connect. You can choose your preferred method.
-
- Method 1: Via Bluetooth
-  
-    Choose bluetooth method. Choose the device ID in the pop-up window.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
-
- Method 2: Via Serial
-
-    Choose serial method. Open the device manager to see which port the device is connected to. Choose that port in the pop-up window.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
-
-    Your device will be shown in the list. Click to connect. If the connection succeed, you can see the device status directly on the website.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
-
-## Configuration
-
 ### Configure the LoRa
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
@@ -166,7 +133,40 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
 
-### (Optional) Configure Sensor
+## Advanced Configuration
+
+### Connect via Website
+
+If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now.
+
+  Step 1: Open the Website
+
+[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite.
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  Step 2: Add the new device
+  
+    Click "+ New Connection". 
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    There are two ways to connect. You can choose your preferred method.
+
+ Method 1: Via Bluetooth
+  
+    Choose bluetooth method. Choose the device ID in the pop-up window.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ Method 2: Via Serial
+
+    Choose serial method. Open the device manager to see which port the device is connected to. Choose that port in the pop-up window.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    Your device will be shown in the list. Click to connect. If the connection succeed, you can see the device status directly on the website.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
+
+### Configure Sensor
 
 |Sensor|Description|
 |-|-|
@@ -225,59 +225,69 @@ Check [External Notification Config](https://meshtastic.org/docs/configuration/m
 After you update the device configuration, the device will restart, which may take some time.
 :::
 
-### (Optional) Configure Ringtone
+### Configure Ringtone
 
 Navigate to `Settings` -> `Ringtone Config`, then enter the RTTTL ringtone string you want to use for external notifications.
 
+<Tabs>
+<TabItem value="ios" label="IOS App">
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
 
-You can paste one of the following RTTTL examples directly:
+</TabItem>
 
-**The Legend of Zelda: Item Get**
+<TabItem value="android" label="Android App">
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/ringtonex1.png" alt="pir" width={900} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+<Tabs>
+<TabItem value="13" label="The Legend of Zelda: Item Get">
 
 ```plain
 24:d=16,o=5,b=120:g,c6,d6,2g6
 ```
+</TabItem>
 
-**Super Mario Theme (Short)**
+<TabItem value="14" label="Super Mario Theme (Short)">
 
 ```plain
 24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
 ```
+</TabItem>
 
-**Mario Coin**
+<TabItem value="15" label="Mario Coin">
 
 ```plain
 24:d=8,o=6,b=200:b,e7
 ```
+</TabItem>
 
-**Mario Power-Up**
-
-```plain
-powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
-```
-
-**Nokia Ringtone**
+<TabItem value="16" label="Nokia Ringtone">
 
 ```plain
 24:d=4,o=5,b=180:8e6,8d6,f#,g#,8c#6,8b,d,e,8b,8a,c#,e,2a
 ```
+</TabItem>
 
-**Morse Code CQ**
+<TabItem value="17" label="Mario Power-Up">
+
+```plain
+powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
+```
+</TabItem>
+
+<TabItem value="18" label="Morse Code CQ">
 
 ```plain
 24:d=16,o=6,b=120:8c,p,c,p,8c,p,c,4p,8c,p,8c,p,c,p,8c,8p
 ```
+</TabItem>
 
-**Demo Video**
+</Tabs>
 
-<div class="video-container">
-<video width="100%" height="500" controls>
-  <source src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/08242BD2-2694-4E8E-8190-8EB6806319B6.MOV" type="video/mp4" />
-</video>
-</div>
-
-### (Optional) Configure GPS
+### Configure GPS
 
 Please set GPS enabled. You can adjust the update inerval and broadcast interval to obtain a more up-to-date location information.
 
@@ -287,7 +297,7 @@ For IOS, please turn on the `Accurate Location`. Otherwise, the positioning may 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
-### (Optional) Configure Buzzer
+### Configure Buzzer
 
 The buzzer is enabled by default. If you want to disable the buzzer, set `Alert Message buzzer`, `Alert bell buzzer` and `Use PWM bizzer` as the following screenshot.
 
@@ -398,17 +408,15 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 
 ### Device never turns on
 
-- Charge the device for 1~2 hours
+- The device may appear to be powered off when the LED indicator and buzzer are not activated. Before performing the above steps, it is recommended to `check the following parameters`:
 
-- Unplug the USB cable, then hold the button down and plug the usb cable back in while continuing to hold the button for 5 seconds.
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={600} height="auto" /></p>
 
-- Change the charging cable
+- Use a known working USB cable to `charge the device` continuously for 1–2 hours to ensure the battery has sufficient power to wake up the system.
 
-- Sometimes it looks like turning off, but in fact it is because the LED and the buzzer have not been activated. Check the following parameters:
-
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
-
-- If still no luck, press and hold the device button, then connect the charging cable, see whether or not the a disk pop out in your PC. If so, [click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#device-bricked) to re-install the bootloader
+- If the device still does not respond after charging, `perform a hard reset` as followed: Unplug the USB cable. Press and hold the button, then plug in the USB cable while keeping the button pressed. Hold for approximately 3 seconds, then release it. This forces a system reset.
+ 
+ - If still no luck, try `re-install the bootloader`. Connect a USB cable to a computer. Hold the device button, then connect the device to the computer, see whether or not the a disk pop out in your PC. If so, [re-install the bootloader](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-bootloader).
 
 ### Device stuck in boot loop
 
@@ -619,6 +627,30 @@ When you have completed the above steps, then you can follow this [step](https:/
 
  Check if the port is correct, or try another port.
 
+### Unable to Communicate on the Primary Channel
+
+If the device cannot communicate with nearby nodes or send messages, first check that the LoRa region and modem preset match the surrounding nodes. You should also check whether the default **PSK** has been changed. A different PSK on the primary channel will prevent the device from communicating with other nodes on that channel.
+
+The easiest way to find this issue is through the mobile app. Open the app, connect to the target device, then navigate to `Settings` -> `Channels`. Select the primary channel and check the **PSK** value. If it is different from the surrounding nodes, update it to the same PSK and save the channel settings.
+
+<Tabs>
+<TabItem value="ios" label="IOS App">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problems_ios.png" alt="Check primary channel PSK in the iOS app" width={500} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="android" label="Android App">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problem_and.png" alt="Check primary channel PSK in the Android app" width={900} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+**Solution**
+
+If you are not sure which settings were changed, restore the device to its default settings by following the [Factory Reset](https://wiki.seeedstudio.com/sensecap_t1000_e/#factory-reset) guide. If only the PSK was changed, set it back to `AQ==`.
+
 ### Device automatically turn off
 
 #### Description
@@ -649,9 +681,7 @@ NodeDB is the local database that stores information about nodes discovered in t
 
 Open the app and connect to the target device. Go to **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDBmerge.png" alt="Device settings and Reset NodeDB button in the app" width={600} height="auto" /></p>
 
 #### Exchange User Info
 

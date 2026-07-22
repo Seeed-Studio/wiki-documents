@@ -1,6 +1,6 @@
 ---
-description: Página preliminar de primeiros passos para a placa carrier reComputer Robotics J601 projetada para módulos NVIDIA Jetson AGX Thor.
-title: Primeiros Passos com reComputer Robotics J601
+description: Página preliminar de introdução para a placa carrier reComputer Robotics J601 projetada para módulos NVIDIA Jetson AGX Thor.
+title: Introdução ao reComputer Robotics J601
 keywords:
   - reComputer Robotics J601
   - AGX Thor
@@ -14,23 +14,23 @@ last_update:
   date: 04/24/2026
   author: Dayu
 createdAt: '2026-04-24'
-updatedAt: '2026-04-24'
+updatedAt: '2026-07-02'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
-# Primeiros Passos com reComputer Robotics J601
+# Introdução ao reComputer Robotics J601
 
 :::note
-Esta página é um rascunho preliminar para a futura placa carrier reComputer Robotics J601 para módulos NVIDIA Jetson AGX Thor. As especificações, o suporte de software, os conjuntos de acessórios e os detalhes mecânicos ainda estão sujeitos a alterações.
+Esta página é um rascunho preliminar para a futura placa carrier reComputer Robotics J601 para módulos NVIDIA Jetson AGX Thor. Especificações, suporte de software, conjuntos de acessórios e detalhes mecânicos ainda estão sujeitos a alterações.
 :::
 
 <div align="center">
   <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
 </div>
 
-A reComputer Robotics J601 é uma placa carrier voltada para robótica para módulos NVIDIA Jetson AGX Thor. Ela é destinada a cargas de trabalho de IA incorporada de alto desempenho e controle robótico que exigem rede de alta velocidade, E/S industriais, expansão de câmera GMSL e entrada DC de ampla faixa em um formato compacto de placa carrier.
+O reComputer Robotics J601 é uma placa carrier focada em robótica para módulos NVIDIA Jetson AGX Thor. Ele é destinado a cargas de trabalho de IA incorporada de alto desempenho e controle robótico que exigem rede de alta velocidade, E/S industriais, expansão de câmera GMSL e entrada DC de ampla faixa em um formato compacto de placa carrier.
 
-## Recursos Preliminares
+## Recursos preliminares
 
 - Suporte para módulo **NVIDIA Jetson AGX Thor**
 - Slot **M.2 Key M** para SSD NVMe 2280
@@ -39,10 +39,10 @@ A reComputer Robotics J601 é uma placa carrier voltada para robótica para mód
 - Ethernet de alta velocidade com suporte planejado a **PTP** e **EtherCAT**
 - E/S ricas para robótica, incluindo **CAN**, **RS-232/422/485**, **DI/DO**, **I2C**, **I2S**, **SPI** e **GPIO**
 - **Expansão GMSL** para até **8 câmeras**
-- Entrada **DC de 19 V a 48 V** de ampla faixa por meio de **XT30**
+- Entrada DC de ampla faixa **19V a 48V** através de **XT30**
 - Plataforma de software alvo: **JetPack 7**
 
-## Especificações Preliminares
+## Especificações preliminares
 
 A tabela a seguir mantém intencionalmente apenas as partes mais claras da definição atual de hardware e deixa os itens ainda não definidos como TBD.
 
@@ -67,7 +67,7 @@ A tabela a seguir mantém intencionalmente apenas as partes mais claras da defin
     </tr>
     <tr>
       <td>USB</td>
-      <td>Até 4x USB 3.2 Tipo A (Host), 1x USB 2.0 Tipo C (UART de depuração / Modo dispositivo), 1x USB 3.0 Tipo C para gravação</td>
+      <td>Até 4x USB 3.2 Tipo-A (Host), 1x USB 2.0 Tipo-C (Debug UART / Modo Device), 1x USB 3.0 Tipo-C para gravação</td>
     </tr>
     <tr>
       <td>Display</td>
@@ -75,7 +75,7 @@ A tabela a seguir mantém intencionalmente apenas as partes mais claras da defin
     </tr>
     <tr>
       <td>Resfriamento</td>
-      <td>1x conector de ventoinha de 4 pinos (PWM 12 V); placa carrier e ventoinha estão planejadas para serem vendidas separadamente</td>
+      <td>1x conector de ventoinha de 4 pinos (12V PWM); placa carrier e ventoinha devem ser vendidos separadamente</td>
     </tr>
     <tr>
       <td>Câmera</td>
@@ -87,7 +87,7 @@ A tabela a seguir mantém intencionalmente apenas as partes mais claras da defin
     </tr>
     <tr>
       <td>Serial</td>
-      <td>2x RS-232/422/485 via DB9, 1x RS-232/422/485 via DB9, 1x RS-485 via JST de 4 pinos</td>
+      <td>1x RS-232/422/485 (conector DB9), 1x RS-485 (conector JST)</td>
     </tr>
     <tr>
       <td>E/S digitais</td>
@@ -99,11 +99,11 @@ A tabela a seguir mantém intencionalmente apenas as partes mais claras da defin
     </tr>
     <tr>
       <td>Expansão de baixa velocidade</td>
-      <td>1x I2C, 1x SPI, GPIO via conector JST/cabeçalho de pinos</td>
+      <td>1x I2C, 1x SPI, GPIO via JST/cabeçalho de pinos</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x RTC de 2 pinos</td>
+      <td>1x RTC 2 pinos</td>
     </tr>
     <tr>
       <td>Botões</td>
@@ -115,11 +115,11 @@ A tabela a seguir mantém intencionalmente apenas as partes mais claras da defin
     </tr>
     <tr>
       <td>Entrada de energia</td>
-      <td>XT30, DC de 19 V a 48 V</td>
+      <td>XT30, 19V a 48V DC</td>
     </tr>
     <tr>
       <td>Corrente / Potência</td>
-      <td>Corrente máxima de 10 A, definição de potência do sistema de 160 W</td>
+      <td>Corrente máxima de 10A, definição de potência do sistema de 160W</td>
     </tr>
     <tr>
       <td>Temperatura de operação</td>
@@ -141,14 +141,14 @@ A tabela a seguir mantém intencionalmente apenas as partes mais claras da defin
 </table>
 </div>
 
-## Definição de LED e Botão
+## Definição de LED e botões
 
 ### Botões
 
 | Botão | Pino | Sinal | Tipo | Descrição |
 | --- | --- | --- | --- | --- |
 | RECOVERY | 240 | - | CMOS-5V | Usado para recuperação do sistema / fluxo de configuração de baixo nível |
-| RESET | 239 | SYS_RESET* | Dreno aberto, 1,8 V | Puxar para nível baixo para reiniciar o módulo; quando a alimentação do módulo estiver pronta, o nível alto pode ser usado como habilitação de alimentação da placa carrier |
+| RESET | 239 | SYS_RESET* | Dreno aberto, 1,8V | Puxar para nível baixo para reiniciar o módulo; quando a alimentação do módulo estiver pronta, o nível alto pode ser usado como habilitação de alimentação da placa carrier |
 
 ### Indicadores LED
 
@@ -165,7 +165,7 @@ A tabela a seguir mantém intencionalmente apenas as partes mais claras da defin
 - Capacidade Ethernet planejada: **EtherCAT**
 - Guia detalhado de gravação, pacote BSP e etapas de validação: **TBD**
 
-## Adaptação de Câmera Planejada
+## Adaptação de câmera planejada
 
 A lista de requisitos atual inclui os seguintes modelos de câmera GMSL:
 
@@ -175,7 +175,7 @@ A lista de requisitos atual inclui os seguintes modelos de câmera GMSL:
 - Senyun `SG8S-AR0820C-5300-G2A`
 - Orbbec `335LG`
 
-## Projeto Térmico
+## Projeto térmico
 
 Esta placa carrier é destinada ao uso dentro de carcaças de robôs humanóides, onde os clientes podem projetar sua própria solução térmica. A Seeed planeja fornecer orientações de projeto térmico para implantação baseada em AGX Thor.
 
@@ -183,19 +183,19 @@ Documento de referência:
 
 - `Jetson_Thor_Thermal_DG_TDG12271001_v1.0.pdf`
 
-## Lista de Embalagem Preliminar
+## Lista de embalagem preliminar
 
 ### Acessórios
 
 - Cabo XT30 para DC, 200 mm x 1
 - Chicotes de fios soltos JST, 100 mm x 10
-- Cabo USB Tipo C para Tipo A, 1 m x 1
+- Cabo USB Tipo-C para Tipo-A, 1 m x 1
 - Parafuso para Key E x 1
 - Parafuso para Key M x 1
 - Parafuso para Key B x 1
 - Parafusos para AGX Thor SOM x 4
-- Suportes para sustentação da placa carrier x 4
-- Parafusos para suportes x 4
+- Suportes (studs) para sustentação da placa carrier x 4
+- Parafusos para os suportes x 4
 - Manual do usuário x 1
 
 ### Embalagem
@@ -203,7 +203,7 @@ Documento de referência:
 - Caixa para transporte aéreo
 - Bandeja interna para a placa carrier e acessórios
 - Manual do usuário na parte superior com uma camada adicional de espuma
-- Estilo de embalagem semelhante ao da mini placa carrier J501
+- Estilo de embalagem semelhante ao da placa carrier mini J501
 
 ## Recursos
 
@@ -211,7 +211,7 @@ Documento de referência:
 - Guia de gravação: TBD
 - Notas de lançamento do BSP: TBD
 
-## Suporte Técnico
+## Suporte técnico
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível.
 

@@ -12,7 +12,7 @@ last_update:
   date: 12/24/2024
   author: Jiahaoli
 createdAt: '2024-08-28'
-updatedAt: '2026-01-07'
+updatedAt: '2026-06-24'
 url: https://wiki.seeedstudio.com/raspberry_pi_5_uses_pcie_hat_dual_hat/
 ---
 
@@ -276,11 +276,24 @@ sudo nano /boot/firmware/config.txt
 dtparam=pciex1
 dtparam=pciex1_gen=3
 dtoverlay=pciex1-compat-pi5,no-mip,mmio-hi 
-
 ```
 
 </TabItem>
 </Tabs>
+
+### Fix M.2 Dual Hat Driver
+
+After flashing a fresh OS image, install the `pcie-fix.dtbo` overlay to fix the M.2 Dual Hat Driver.
+
+Enter the flashed OS and run the following commands in the terminal:
+
+```shell
+cd /tmp
+wget https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo
+sudo cp pcie-fix.dtbo /boot/firmware/overlays/
+echo "dtoverlay=pcie-fix" | sudo tee -a /boot/firmware/config.txt
+sudo reboot
+```
 
 ### Speed Benchmark
 

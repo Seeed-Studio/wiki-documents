@@ -10,7 +10,7 @@ last_update:
   date: 12/18/2025
   author: Michelle Huang
 createdAt: '2025-05-23'
-updatedAt: '2025-12-18'
+updatedAt: '2026-06-29'
 url: https://wiki.seeedstudio.com/pt-br/wio_tracker_l1_node/
 ---
 
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/pt-br/wio_tracker_l1_node/
             <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora </font></span></strong>
     </a>
 </div>
-A Série Wio Tracker L1 é um nó [Meshtastic®](https://meshtastic.org/) de baixo consumo e alta extensibilidade, com LoRa (862–930 MHz), nRF52840 para processamento eficiente e um módulo GPS L76K para rastreamento de localização preciso. Projetado para flexibilidade, ele é compatível com telas OLED e E-Ink, bem como com painéis solares e alimentação por bateria, tornando-o ideal para uma ampla gama de aplicações de IoT e fora da rede.
+A Série Wio Tracker L1 é um nó [Meshtastic®](https://meshtastic.org/) de baixo consumo e alta extensibilidade, com LoRa (862–930 MHz), nRF52840 para processamento eficiente e um módulo GPS L76K para rastreamento de localização preciso. Projetada para flexibilidade, ela é compatível com telas OLED e E-Ink, bem como com painéis solares e alimentação por bateria, tornando-a ideal para uma ampla gama de aplicações de IoT e fora da rede.
 
 ## Modelo da Série L1
 
@@ -43,7 +43,7 @@ A Série Wio Tracker L1 está disponível em 4 versões — escolha a que melhor
 |Link de Compra|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/Wio-Tracker-L1-Lite-p-6455.html)</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html)</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html)</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/Wio-Tracker-L1-E-ink-p-6456.html)</p>|
 |LoRa|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |GPS|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-|Tela|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>OLED de 1,3 polegadas</p><br/><p style={{textAlign: 'center'}}>Resolução: 128 × 64 pixels</p>|<p style={{textAlign: 'center'}}>OLED de 1,3 polegadas</p><br/><p style={{textAlign: 'center'}}>Resolução: 128 × 64 pixels</p>|<p style={{textAlign: 'center'}}>E-ink de 2,13 polegadas</p><br/><p style={{textAlign: 'center'}}>Resolução: 122 × 250 pixels</p>|
+|Tela|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>OLED de 1,3 polegada</p><br/><p style={{textAlign: 'center'}}>Resolução: 128 × 64 pixels</p>|<p style={{textAlign: 'center'}}>OLED de 1,3 polegada</p><br/><p style={{textAlign: 'center'}}>Resolução: 128 × 64 pixels</p>|<p style={{textAlign: 'center'}}>E-ink de 2,13 polegadas</p><br/><p style={{textAlign: 'center'}}>Resolução: 122 × 250 pixels</p>|
 |Conector Solar+Bateria|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>Bateria interna de 2000mAh</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |Carcaça|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>-</p>|
 
@@ -52,13 +52,13 @@ A Série Wio Tracker L1 está disponível em 4 versões — escolha a que melhor
 ### Recursos
 
 - **Pré-gravado com firmware Meshtastic**
-Pronto para uso imediato com firmware Meshtastic pré-instalado para uma configuração simples.
+Pronto para uso imediatamente, com firmware Meshtastic pré-instalado para uma configuração simples.
 
 - **Três Opções de Alimentação**
 Suporta carregamento rápido Type-C, entrada solar e alimentação por bateria de íon de lítio para implantação flexível em vários ambientes — ideal para aplicações externas e móveis.
 
 - **Suporte Flexível a Telas**
-Telas opcionais OLED de 1,3 polegadas e E-Ink de 2,13 polegadas, oferecendo opções de exibição versáteis para diferentes necessidades de consumo de energia e retorno visual.
+Telas opcionais OLED de 1,3 polegada e E-Ink de 2,13 polegadas, oferecendo opções de exibição versáteis para diferentes necessidades de consumo de energia e retorno visual.
 
 - **Alta Expansibilidade**
 Totalmente compatível com o ecossistema Grove e inclui cabeçalhos PTH e uma interface de depuração SWD para expansão de hardware personalizada e desenvolvimento avançado.
@@ -102,21 +102,21 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
     <td colspan="1">Plated Through Hole（PTH）: UART/IIC/GPIO/Analógico</td>
   </tr>
   <tr>
-    <td colspan="1">Pads de solda reservados para SWD</td>
+    <td colspan="1">Ilhas de solda reservadas para SWD</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">Entrada de Energia</td>
     <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Painel Solar (2,0mm 2p): 5V — 1A</td>
+    <td colspan="1">Painel Solar (2P-2,0mm): 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Bateria de Lítio (1mm 2p JST): 3,7V — 1A</td>
+    <td colspan="1">Bateria de Lítio (2P-1,25mm): 3,7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">[Tela OLED](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
-    <td colspan="1">Tamanho: 1,3 polegadas</td>
+    <td colspan="1">Tamanho: 1,3 polegada</td>
   </tr>
   <tr>
     <td colspan="1">Resolução: 128 × 64 pixels</td>

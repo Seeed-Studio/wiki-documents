@@ -12,7 +12,7 @@ last_update:
   date: 8/1/2025
   author: LiShanghang
 createdAt: '2025-07-31'
-updatedAt: '2026-01-03'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/cn/starai_arm_ros_moveit/
 ---
 
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/cn/starai_arm_ros_moveit/
 
 # Starai Arm 机械臂ROS2 Moveit 使用教程
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603406916070&bvid=BV1HmUrBGEN6&cid=34225391454&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603406916070&bvid=BV1HmUrBGEN6&cid=34225391454&p=1&autoplay=0&muted=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 | **跟随臂 Viola** | **领导臂 Violin** | **跟随臂 Cello** |

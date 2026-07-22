@@ -9,7 +9,7 @@ last_update:
   date: 05/09/2026
   author: dimo
 createdAt: '2026-03-18'
-updatedAt: '2026-05-27'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/
 ---
 import Tabs from '@theme/Tabs';
@@ -24,6 +24,16 @@ import TabItem from '@theme/TabItem';
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
+
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
 
 ## Introduction
 
@@ -75,7 +85,7 @@ ESPHome support for reTerminal E1003 is under development and will be available 
 		</tr>
 		<tr>
 			<td align="center"><strong>Micro SD Card</strong></td>
-			<td align="center">Supports microSD cards up to 32 GB (FAT32)</td>
+			<td align="center">Supports microSD cards up to 64 GB (FAT32)</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Wireless Connectivity</strong></td>
@@ -125,18 +135,16 @@ ESPHome support for reTerminal E1003 is under development and will be available 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/208.png" style={{width:1000, height:'auto'}}/></div>
 
-1. **Screen Refresh Button:** Located at the top of the device for manual screen refresh.
-2. **Page Up and Down Buttons:** Located at the top of the device for navigating between pages.
-3. **Wi-Fi Antenna Area:** Located at the bottom of the device for Wi-Fi connectivity.
-4. **MicroSD Card / TF Card Slot:** For expandable storage (FAT32, up to 32GB).
+1. **10.3-inch ePaper Display:** Touch-supported monochrome panel with 16-level grayscale and 1404×1872 resolution
+2. **Buttons:** Located at the top of the device — the **green button** manually refreshes the screen; the **two white buttons** are page up and page down for navigating between pages
+3. **Microphone:** Onboard PDM digital microphone for voice interaction applications
+4. **MicroSD Card / TF Card Slot:** For expandable storage (FAT32, up to 64 GB)
 5. **Power Switch:** To turn the device on or off.
 6. **Red Power LED:** Indicates the battery charging status.
 7. **Green Status LED:** Indicates the current operational or system status.
 8. **USB-C Data and Charge Port:** For charging the device and data transmission.
 9. **Expansion Port:** Pin header providing VDD, GND, I2C, and GPIO connections for external sensors, modules, or peripherals.
 10. **Stand Mounting Screw Holes:** Threaded holes on the back of the device for securing the support stand.
-11. **3D-Printed Support Stand:** The included stand accessory for holding the device upright on a flat surface.
-12. **Stand Mounting Screws:** Screws used to fasten the support stand to the device.
 
 ## Getting Started
 
@@ -164,8 +172,8 @@ The stand provides a fixed viewing angle and cannot be adjusted. This fixed posi
 **Step 3.** (Optional) Insert a microSD card if you plan to use the device as a digital photo frame or need additional storage.
 
 :::note
-The reTerminal E Series ePaper Display only supports MicroSD cards up to 32GB in FAT32 format.  
-The 32GB SD card is formatted as exFAT by default. After formatting it to FAT32, it can be successfully mounted and used to store images.
+The reTerminal E1003 supports microSD cards up to **64 GB** in FAT32 format.  
+Cards larger than 32 GB are often formatted as exFAT by default. After formatting to FAT32, they can be mounted and used to store images.
 :::
 
 **Step 4.** (Optional) Install USB drivers if needed:
@@ -398,7 +406,7 @@ For everything else — detailed editor operations, tips, and release notes — 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/233.png" style={{width:700, height:'auto'}}/></div>
 
-The refresh button at the top of the device serves several functions:
+The refresh button at the top of the device (green) serves several functions:
 
 - **Single Press**: Manually refreshes the display and checks for new content from the SenseCraft platform. The buzzer will beep once to confirm the action. This button is also commonly used to wake up the device when it has gone to sleep and a dashboard refresh is not immediately available.
 
@@ -406,7 +414,7 @@ The refresh button at the top of the device serves several functions:
 
 ### Navigation Buttons
 
-The left and right buttons allow you to navigate between multiple pages if your dashboard contains more than one page:
+The two white page buttons at the top of the device allow you to navigate between multiple pages if your dashboard contains more than one page:
 
 - **Left Button**: Navigate to the previous page
 
@@ -543,6 +551,37 @@ The 6-pin expansion header (J2) has the following pinout:
 - The device will automatically attempt to reconnect to known networks
 - When reconnected, the Wi-Fi disconnection icon will disappear
 - If unable to reconnect, follow the Network Reset procedure above
+
+### Q5: Cannot Find Serial Port (COM) on macOS
+
+If your Mac doesn't recognize the reTerminal via USB, follow this compact guide to install the CH340/CH340K driver:
+
+**Step 1. Download and Install the Driver**
+Download the driver from the [official WCH page](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) and run `CH34xVCPDriver.pkg`. 
+:::tip
+If macOS blocks the installation, go to **System Settings → Privacy & Security**, scroll to find the blocked WCH software, and click **Allow**.
+:::
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/02_installer_welcome.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/03_install_success.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Step 2. Enable Driver Extension (Critical)**
+Open the **CH34xVCPDriver** app from Launchpad, click **Install**, then go to **System Settings → General → Login Items & Extensions → Driver Extensions**. Toggle **CH34xVCPDriver Extensions** to **ON** (blue).
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Step 3. Connect and Verify**
+Ensure the device **power switch is ON** and use a **data USB-C cable** (not charge-only). Open Terminal and run:
+```bash
+ls /dev/tty.wch*
+# Expected output: /dev/tty.wchusbserialxxx
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/06_check%20installation.jpg" style={{width:500, height:'auto'}}/></div>
+
+If you see the device path in the output, the driver is correctly installed and your reTerminal is ready for use!
 
 ## Resources
 

@@ -1,10 +1,10 @@
-position: 2 # float position is supported
-label: 'T1000-E Tracker'
+position: 3 # float position is supported
+label: 'Rastreador T1000-E'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
 className: t1000_e_tracker
 link:
   type: generated-index
   slug: t1000_e_tracker_meshtastic
-  title: T1000-E Tracker
-  description: Aplicativo T1000-E Tracker Meshtastic.
+  title: Rastreador T1000-E
+  description: Aplicativo Meshtastic do Rastreador T1000-E.

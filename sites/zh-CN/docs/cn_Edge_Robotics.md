@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-02-03'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/cn/robotics_page/
 ---
 
@@ -78,15 +78,11 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <div className="category-group">
         <div className="category-card robot-kits">
 
-          <h3>🦾 reBot机械臂</h3>
+          <h3>🦾 reBot 机械臂</h3>
+            <h4> B601-DM 机械臂</h4>
           <div className="card-container">
-              <a href="/cn/rebot_b601_rs_getting_started/" className="content-card">
-                <span className="text">reBot B601-RS 快速开始</span>
-                <span className="tag recommended">New</span>
-              </a>
               <a href="/cn/rebot_b601_dm_getting_started/" className="content-card">
                 <span className="text">reBot B601-DM 快速开始</span>
-                <span className="tag recommended">New</span>
               </a>
               <a href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
                 <span className="text">reBot B601-DM 与 Pinocchio</span>
@@ -101,6 +97,35 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
                 <span className="text">reBot B601-DM ROS2 集成</span>
               </a>
           </div>
+
+            <h4> B601-RS 机械臂</h4>
+          <div className="card-container">
+              <a href="/cn/rebot_b601_rs_getting_started/" className="content-card">
+                <span className="text">reBot B601-RS 快速开始</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_lerobot/" className="content-card">
+                <span className="text">reBot B601-RS 与 LeRobot</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot B601-RS 与 Pinocchio</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-RS 视觉夹取 Demo</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_ros2_integration" className="content-card">
+                <span className="text">reBot B601-RS ROS2 集成</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_isaacsim/" className="content-card">
+                <span className="text">reBot B601-RS Isaacsim 仿真</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
 
           <h3>🤗 Reachy</h3>
           <div className="card-container">
@@ -127,6 +152,18 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               </a>
               <a href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
                   <span className="text">SO101 与 NVIDIA GR00T</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">Lerobot 中 SO-ARM 的舵机调试工具</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/lerobot_double_arm_so_arm_training/" className="content-card">
+                  <span className="text">双臂 SO-ARM 训练完整指南</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/soarm_amazinghand_teleop/" className="content-card">
+                  <span className="text">SO-ARM 与 AmazingHand 完整训练指南</span>
                   <span className="tag recommended">New</span>
               </a>
           </div>

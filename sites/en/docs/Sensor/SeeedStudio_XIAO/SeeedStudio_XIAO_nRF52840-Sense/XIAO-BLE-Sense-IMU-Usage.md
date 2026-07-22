@@ -6,10 +6,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-IMU-Usage
 last_update:
-  date: 1/11/2023
+  date: 7/17/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2023-07-21'
+updatedAt: '2026-07-17'
 url: https://wiki.seeedstudio.com/XIAO-BLE-Sense-IMU-Usage/
 ---
 
@@ -20,10 +20,6 @@ url: https://wiki.seeedstudio.com/XIAO-BLE-Sense-IMU-Usage/
 **Note**
 
 - **Seeed Studio XIAO nRF52840** is not equipped with this IMU module.
-- The IMU function will perform better when we use the "Seeed nrf52 mbed-enabled Boards Library", so we highly recommon that.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new7.png" alt="pir" width={600} height="auto" /></p>
-
 
 ## View accelerometer, gyroscope and temperature data on serial monitor
 

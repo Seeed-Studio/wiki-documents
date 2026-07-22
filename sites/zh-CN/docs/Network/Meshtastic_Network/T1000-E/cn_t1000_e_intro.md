@@ -10,7 +10,7 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-09-05'
-updatedAt: '2025-09-29'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/cn/t1000_e_intro/
 ---
 
@@ -105,3 +105,4 @@ url: https://wiki.seeedstudio.com/cn/t1000_e_intro/
 |开机|先常亮后快速闪烁|
 |DFU 模式|常亮|
 |工作中|随机闪烁|
+|充电中|以 0.5 Hz 闪烁，每秒切换一次|

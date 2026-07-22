@@ -10,7 +10,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-02'
-updatedAt: '2026-03-20'
+updatedAt: '2026-05-12'
 url: https://wiki.seeedstudio.com/pt-br/Tricycle_Bot/
 ---
 

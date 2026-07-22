@@ -1,18 +1,18 @@
 ---
-description: Este artículo describe principalmente cómo utilizar el sitio web de Lopaka para crear interfaces de usuario exquisitas y aplicarlas en la reTerminal E Serie.
+description: Este artículo describe principalmente cómo utilizar el sitio web de Lopaka para crear interfaces de usuario exquisitas y aplicarlas en la serie reTerminal E.
 title: Trabajar con Lopaka
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /reterminal_e10xx_with_lopaka
-sidebar_position: 5
+sidebar_position: 9
 last_update:
   date: 9/12/2025
   author: Martin
 createdAt: '2025-09-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_lopaka/
 ---
 
-# Pantalla de tinta electrónica de reTerminal E Serie trabajando con Lopaka
+# Pantalla de tinta electrónica de la Serie reTerminal E trabajando con Lopaka
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -22,7 +22,7 @@ Este tutorial se basa en reTerminal E1002. Sin embargo, también se puede aplica
 
 ## Introducción
 
-Para completar este tutorial, prepara uno de los siguientes dispositivos reTerminal E Serie:
+Para completar este tutorial, prepara uno de los siguientes dispositivos de la Serie reTerminal E:
 
 <div class="table-center">
   <table align="center">
@@ -51,13 +51,13 @@ Para completar este tutorial, prepara uno de los siguientes dispositivos reTermi
 
 ## Preparación del entorno
 
-Para programar la pantalla de tinta electrónica reTerminal E Serie con Arduino, necesitas configurar el Arduino IDE con soporte para ESP32.
+Para programar la pantalla de tinta electrónica de la Serie reTerminal E con Arduino, necesitas configurar el IDE de Arduino con soporte para ESP32.
 
 :::tip
 Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-### Configuración de Arduino IDE
+### Configuración del IDE de Arduino
 
 **Paso 1.** Descarga e instala el [Arduino IDE](https://www.arduino.cc/en/software) y ejecuta la aplicación Arduino.
 
@@ -65,13 +65,13 @@ Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consu
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
-      <strong><span><font color={'FFFFFF'} size={"4"}>Descargar Arduino IDE</font></span></strong>
+      <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
     </a>
 </div><br />
 
-**Paso 2.** Añade el soporte de la placa ESP32 al Arduino IDE.
+**Paso 2.** Añade el soporte de la placa ESP32 al IDE de Arduino.
 
-En Arduino IDE, ve a **File > Preferences** y añade la siguiente URL en el campo "Additional Boards Manager URLs":
+En el IDE de Arduino, ve a **File > Preferences** y añade la siguiente URL en el campo "Additional Boards Manager URLs":
 
 ```url
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -85,7 +85,7 @@ Navega a **Tools > Board > Boards Manager**, busca "esp32" e instala el paquete 
 
 Ve a **Tools > Board > ESP32 Arduino** y selecciona **XIAO_ESP32S3**.
 
-**Paso 5.** Conecta tu pantalla de tinta electrónica reTerminal E Serie a tu ordenador usando un cable USB-C.
+**Paso 5.** Conecta la pantalla de tinta electrónica de la Serie reTerminal E a tu ordenador usando un cable USB-C.
 
 **Paso 6.** Selecciona el puerto correcto en **Tools > Port**.
 
@@ -97,7 +97,7 @@ Lopaka es un editor gráfico diseñado específicamente para el desarrollo de gr
 
 - **[Go to Lopaka](https://lopaka.app/)**
 
-  Puedes registrarte usando una cuenta de Google o GitHub.
+  Puedes registrarte usando una cuenta de Google o de GitHub.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_1.png" style={{width:800, height:'auto'}}/>
 <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Interfaz principal de Lopaka</em></p>
@@ -109,8 +109,8 @@ Haz clic en "NEW PROJECT" para crear un nuevo proyecto. A continuación, aparece
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_3.png" style={{width:800, height:'auto'}}/></div>
 
 - **Titile**: Nombre del proyecto, yo selecciono hello
-- **Platform**: La plataforma que elegiste para el desarrollo; la reTeerminal E Serie utiliza AdfruitGFX Color.
-- **Screen**: La selección del tamaño de la pantalla. Haz clic en "Custom" para personalizar el tamaño. El tamaño de la pantalla de la reTeerminal E Serie es 800×480.
+- **Platform**: La plataforma que elegiste para el desarrollo; la serie reTerminal E utiliza AdfruitGFX Color.
+- **Screen**: La selección del tamaño de la pantalla. Haz clic en "Custom" para personalizar el tamaño. El tamaño de pantalla de la serie reTerminal E es 800×480.
 - **Background**: El color de fondo de la pantalla es negro por defecto. Para lograr una mejor visualización, lo he cambiado a amarillo.
 Luego haz clic en "SUBMIT" para crear el proyecto.
 
@@ -152,20 +152,20 @@ De izquierda a derecha
 
 #### Añadir biblioteca
 
-Usaremos la biblioteca Seeed_GFX, que proporciona soporte completo para varios dispositivos de pantalla de Seeed Studio.
+Usaremos la biblioteca Seeed_GFX, que proporciona soporte completo para varios dispositivos de visualización de Seeed Studio.
 
 **Paso 1.** Descarga la biblioteca Seeed_GFX desde GitHub:
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Descargar la biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-**Paso 2.** Instala la biblioteca añadiendo el archivo ZIP en Arduino IDE. Ve a **Sketch > Include Library > Add .ZIP Library** y selecciona el archivo ZIP descargado.
+**Paso 2.** Instala la biblioteca añadiendo el archivo ZIP en el IDE de Arduino. Ve a **Sketch > Include Library > Add .ZIP Library** y selecciona el archivo ZIP descargado.
 
 :::note
-Si has instalado previamente la biblioteca TFT_eSPI, es posible que debas eliminarla temporalmente o cambiarle el nombre en la carpeta de bibliotecas de Arduino para evitar conflictos, ya que Seeed_GFX es un fork de TFT_eSPI con funciones adicionales para pantallas de Seeed Studio.
+Si has instalado previamente la biblioteca TFT_eSPI, es posible que tengas que eliminarla temporalmente o cambiarle el nombre en la carpeta de bibliotecas de Arduino para evitar conflictos, ya que Seeed_GFX es un fork de TFT_eSPI con funciones adicionales para las pantallas de Seeed Studio.
 :::
 
 ### Programación de reTerminal E1002
@@ -199,7 +199,7 @@ Si estás utilizando el reTerminal E1001, entonces debes copiar el siguiente có
 **Paso 5.** procedimiento de modificación
 
 - Copia el código CODE de la página de Lopaka en el entorno de Arduino.
-- Reemplaza la minúscula "epaper" por "tft", abre la búsqueda global usando Ctrl + F, introduce "epaper", luego haz clic en `Aa` para cambiar a búsqueda que no distinga mayúsculas y minúsculas, después introduce "tft" y haz clic en "Global Replace"
+- Reemplaza la minúscula "epaper" por "tft", abre la búsqueda global usando Ctrl + F, introduce "epaper", luego haz clic en `Aa` para cambiar a búsqueda que no distingue mayúsculas y minúsculas, después introduce "tft" y haz clic en "Reemplazar globalmente"
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -332,7 +332,7 @@ Para completar este tutorial, prepara dispositivos reTerminal E1002:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_0.png" style={{width:800, height:'auto'}}/></div>
 
-- Ajustar parámetro <br/>
+- Parámetro de ajuste <br/>
 
     Ajusta el tamaño adecuado. Yo lo configuré en 300×300, luego ajusté el Brillo y otros parámetros para que la imagen fuera más clara y después la importé.<br/>
 
@@ -426,7 +426,7 @@ Si estás utilizando la versión gratuita de Lopaka, las imágenes importadas so
 
 #### Ejemplo dibujado a mano
 
-Aquí se dibujó a mano una imagen de Super Mario. También puedes crear tu propio dibujo según tus propias ideas
+Aquí, se dibujó a mano una imagen de Super Mario. También puedes crear tu propio dibujo según tus propias ideas
 
 ##### Hardware
 

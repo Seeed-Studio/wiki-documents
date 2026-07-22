@@ -3,12 +3,12 @@ description: Este artículo proporciona instrucciones sobre cómo crear la inter
 title: Trabajar con SquareLine Vision
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
 slug: /reterminal_e10xx_with_squareline_vision
-sidebar_position: 4
+sidebar_position: 7
 last_update:
   date: 10/29/2025
   author: Zovey
 createdAt: '2025-11-03'
-updatedAt: '2026-01-29'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_squareline_vision/
 ---
 
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_squareline_vision/
 
 ## Introducción
 
-Cuando quieras crear tu propio terminal inteligente, sin duda esperarás que este dispositivo tenga una interfaz de usuario atractiva y elegante. [LVGL](https://lvgl.io/) puede lograrlo. Es la biblioteca gráfica embebida gratuita y de código abierto más popular para crear interfaces de usuario atractivas para cualquier tipo de MCU, MPU y pantalla. Con esta biblioteca, puedes crear una gran cantidad de interfaces de usuario embebidas y atractivas. Especialmente cuando utilizas nuestros productos de papel electrónico reTerminal E Serie, una interfaz atractiva es una parte indispensable. Sin embargo, escribir el código de la biblioteca LVGL también es una tarea muy complicada. Por lo tanto, este tutorial se centra principalmente en presentar un editor que te permite dibujar la interfaz de usuario simplemente arrastrando y soltando controles. El método de creación WYSIWYG (What You See Is What You Get) permite captar mejor el efecto de presentación final y, después de dibujar la interfaz de usuario, puedes exportarla como archivos de interfaz de usuario de LVGL, lo que simplifica enormemente el proceso de desarrollo para los desarrolladores. El nombre de esta herramienta es SquareLine Vision, es una herramienta visual de front-end para LVGL.
+Cuando quieras crear tu propio terminal inteligente, sin duda esperarás que este dispositivo tenga una interfaz de usuario atractiva y elegante. [LVGL](https://lvgl.io/) puede lograrlo. Es la biblioteca gráfica embebida gratuita y de código abierto más popular para crear interfaces de usuario atractivas para cualquier tipo de MCU, MPU y pantalla. Con esta biblioteca, puedes crear una gran cantidad de interfaces de usuario embebidas y atractivas. Especialmente cuando utilizas nuestros productos de papel electrónico reTerminal E Serie, una interfaz atractiva es una parte indispensable. Sin embargo, escribir el código de la biblioteca LVGL también es una tarea muy complicada. Por lo tanto, este tutorial tiene como objetivo principal presentar un editor que te permite dibujar la interfaz de usuario simplemente arrastrando y soltando controles. El método de creación WYSIWYG (What You See Is What You Get) permite captar mejor el efecto de presentación final y, después de dibujar la interfaz de usuario, puedes exportarla como archivos de interfaz de usuario de LVGL, lo que simplifica enormemente el proceso de desarrollo para los desarrolladores. El nombre de esta herramienta es SquareLine Vision, es una herramienta visual de front-end para LVGL.
 
 [SquareLine Vision](https://vision.squareline.io/) es un entorno de desarrollo de interfaces de usuario basado en el navegador (Web) o en un entorno compatible con la Web, dedicado a diseñar rápidamente interfaces de usuario (UI) para sistemas embebidos (como dispositivos con pantallas).
 También es una herramienta de **diseño + exportación de código**: diseñas la interfaz en la plataforma y luego puedes exportar el diseño como código o recursos para ejecutarlo en dispositivos embebidos. 
@@ -26,14 +26,14 @@ También es una herramienta de **diseño + exportación de código**: diseñas l
 ## Las características de SquareLine Vision
 
 - **Diseño visual de UI** – Diseña interfaces hermosas e interactivas de forma visual con un editor de arrastrar y soltar, eliminando la necesidad de crear manualmente código LVGL.
-- **Prototipado rápido embebido** – Previsualiza y valida al instante tu interfaz de usuario en el escritorio o en el hardware de destino, reduciendo drásticamente el tiempo de iteración del diseño al dispositivo.
+- **Prototipado embebido rápido** – Obtén una vista previa e intenta tu interfaz de usuario al instante en el escritorio o en el hardware de destino, reduciendo drásticamente el tiempo de iteración del diseño al dispositivo.
 - **Exportación impulsada por LVGL** – Exporta sin problemas tus diseños a código fuente limpio basado en LVGL, listo para compilarse en dispositivos embebidos, microcontroladores o entornos de simulación.
 
 Con SquareLine Vision, puedes pasar de un concepto a un prototipo de interfaz de usuario embebida interactiva en cuestión de minutos, combinando flexibilidad de diseño, vista previa en tiempo real y salida LVGL lista para producción para acelerar todo tu ciclo de desarrollo de producto.
 
 ### Materiales necesarios
 
-Para completar este tutorial, prepara uno de los siguientes dispositivos reTerminal E Serie, el E1001 es monocromático y el E1002 es a todo color:
+Para completar este tutorial, prepara uno de los siguientes dispositivos reTerminal E Serie, E1001 es monocromático y E1002 es a todo color:
 
 <div class="table-center">
   <table align="center">
@@ -65,7 +65,7 @@ Para completar este tutorial, prepara uno de los siguientes dispositivos reTermi
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_7.png" style={{width:600, height:'auto'}}/></div>
 
-### Introducción de componentes
+### Introducción a los componentes
 
 Toda la plataforma SquareLine Vision se puede dividir en dos partes: **Launcher** y la **Interfaz de la aplicación**.
 En la interfaz de **Launcher**, podemos ver las siguientes tres funciones principales:
@@ -80,14 +80,14 @@ Cuando empieces a dibujar la interfaz de usuario, conocerás cinco herramientas:
 - varios tipos de widgets
 - cómo aprovechar eventos, disparadores y acciones
 
-Cuando tengas una comprensión clara de la estructura organizativa general y de las herramientas de la plataforma, será de gran ayuda para la realización de tu proyecto personal. A continuación, crearé un proyecto basado en nuestro reTerminal E1002.
+Cuando tengas una comprensión clara de la estructura organizativa general y de las herramientas de la plataforma, será de gran ayuda para la creación de tu proyecto personal. A continuación, crearé un proyecto basado en nuestra reTerminal E1002.
 
 ## Crear un proyecto
 
 ### Iniciar un nuevo proyecto LVGL
 
-En la parte superior de la interfaz Launcher de SquareLine Vision, haz clic en el botón `Create new`. Luego, selecciona `Seeed Studio` para ver nuestros productos. Elige el `reTerminal E1002` para crear un proyecto.
-Los ajustes fijos de este proyecto son:
+En la parte superior de la interfaz Launcher de SquareLine Vision, haz clic en el botón `Create new`. Luego, selecciona `Seeed Studio` para ver nuestros productos. Elige `reTerminal E1002` para crear un proyecto.
+La configuración fija de este proyecto es:
 - `Resolution`: 800x480
 - `Offset`: 0(x), 0(y)
 - `Rotation`: 0°
@@ -103,7 +103,7 @@ Hemos dado soporte a los dispositivos SenseCAP Watcher y reTerminal E1001 y E100
 :::
 
 ### Importar un proyecto .slvp existente
-Si ya tienes un archivo .slvp, puedes importarlo directamente como proyecto. Hemos proporcionado dos paneles relacionados con el clima. Puedes descargarlos directamente a continuación.
+Si ya tienes un archivo .slvp, puedes importarlo directamente como un proyecto. Hemos proporcionado dos paneles relacionados con el clima. Puedes descargarlos directamente a continuación.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -152,12 +152,12 @@ Una vez que entres en la interfaz de ingeniería, podrás ver cuatro áreas prin
 
 ### Diseño de la interfaz de usuario
 
-El diseño de la interfaz de usuario (UI) es crucial en el desarrollo de productos embebidos, ya que determina directamente la experiencia del usuario. Una interfaz estética, intuitiva y con buena respuesta no solo mejora la usabilidad del producto, sino que también aumenta su atractivo general.
+El diseño de la interfaz de usuario (UI) es crucial en el desarrollo de productos embebidos, ya que determina directamente la experiencia del usuario. Una interfaz estéticamente agradable, intuitiva y con buena respuesta no solo mejora la usabilidad del producto, sino que también aumenta su atractivo general.
 
-En SquareLine Vision, puedes ensamblar rápidamente interfaces arrastrando y soltando componentes. Utiliza herramientas como Styles, Fonts, Bitmaps y Themes para controlar con precisión los efectos visuales y crear una experiencia de usuario profesional y distintiva.
+En SquareLine Vision, puedes ensamblar rápidamente interfaces arrastrando y soltando componentes. Utiliza herramientas como Styles, Fonts, Bitmaps y Themes para controlar con precisión los efectos visuales, creando una experiencia de usuario profesional y distintiva.
 
 :::tip
-Este tutorial solo cubre los controles que aparecen en este proyecto. Sin embargo, SquareLine Vision ofrece muchas otras funcionalidades, como animaciones, eventos y diferentes fuentes. Si quieres explorar más esta herramienta, consulta [los tutoriales oficiales](https://docs.vision.squareline.io/docs/overview).
+Este tutorial solo cubre los controles que aparecen en este proyecto. Sin embargo, SquareLine Vision ofrece muchas otras funcionalidades, como animaciones, eventos y diferentes fuentes. Si deseas explorar más esta herramienta, consulta [los tutoriales oficiales](https://docs.vision.squareline.io/docs/overview).
 :::
 
 #### Introducción a Hierarchy
@@ -182,11 +182,11 @@ La barra de herramientas incluye opciones para la configuración del proyecto, g
 - **Modo Editor / Animación**: Alterna entre dos entornos de trabajo distintos.
 - **Widgets**: Accede a los elementos de la interfaz de usuario a través de tres menús desplegables que agrupan lógicamente los componentes, lo que facilita localizar el widget adecuado para tu proyecto. 
 - **Deshacer / Rehacer**: Permite retroceder y avanzar a través de los cambios de diseño, lo que favorece la experimentación sin riesgo. 
-- **Modo de reproducción**: Inicia la vista previa y prueba la simulación de la interfaz de usuario.
+- **Modo de reproducción**: Inicia la vista previa y prueba la simulación de la interfaz.
 - **Enviar informe de error**: Proporciona acceso directo al sistema de reporte de errores.
 - **Usuario(s)**: Muestra todos los usuarios activos que están trabajando actualmente en tu proyecto, lo que favorece los esfuerzos de diseño colaborativo.
-- **Opciones de vista**: Puedes alternar la visualización del minimapa e introducir valores de zoom precisos en un campo de entrada dedicado.
-- **Versión**: Muestra la versión actual de SquareLine Vision en la que se está ejecutando tu proyecto, asegurando que conozcas tu entorno de software.
+- **Opciones de vista**: Puedes alternar la visualización del minimapa e introducir valores de porcentaje de zoom precisos en un campo de entrada dedicado.
+- **Versión**: Muestra la versión actual de SquareLine Vision en la que se está ejecutando tu proyecto, garantizando que conozcas tu entorno de software.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_6.png" style={{width:500, height:'auto'}}/></div>
 
@@ -235,7 +235,7 @@ Interfaz principal para el subsistema de GUI. Proporciona funciones de alto nive
 
 ## Grabación del programa
 
-El módulo de control principal del E1002 es el ESP32-S3. Si quieres programar la pantalla de tinta electrónica de la serie reTerminal E usando PlatformIO, necesitas configurar la opción para admitir ESP32 en el archivo `.ini`.
+El módulo de control principal del E1002 es el ESP32-S3. Si quieres programar la pantalla de tinta electrónica de la serie reTerminal E usando PlatformIO, necesitas configurar la opción para soportar ESP32 en el archivo `.ini`.
 
 :::tip
 Si es la primera vez que usas PlatformIO, te recomendamos encarecidamente que consultes [Getting Started with PlatformIO](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32s3.html).
@@ -252,7 +252,7 @@ Si es la primera vez que usas PlatformIO, te recomendamos encarecidamente que co
 - **Paso 2**: Busca `platformio` en las extensiones de VScode. El primer icono que aparece es el que necesitas. Solo haz clic en `Install` para iniciar la descarga.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_5.png" style={{width:700, height:'auto'}}/></div>
 
-- **Paso 3**: Abre el plugin PlatformIO en secuencia. Luego, haz clic en el botón `Open` y selecciona el proyecto local de PlatformIO haciendo clic en `Open Project` para abrirlo.
+- **Paso 3**: Abre el plugin de PlatformIO en secuencia. Luego, haz clic en el botón `Open` y selecciona el proyecto local de PlatformIO haciendo clic en `Open Project` para abrirlo.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_6.png" style={{width:700, height:'auto'}}/></div>
 
 
@@ -263,8 +263,8 @@ Hemos proporcionado tres plantillas existentes, cada una con una interfaz de usu
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Clima monocromático </th>
-      <th>Clima a todo color </th>
+      <th>Clima monocromo</th>
+      <th>Clima a todo color</th>
       <th>Clima a todo color 2</th>
     </tr>
     <tr>

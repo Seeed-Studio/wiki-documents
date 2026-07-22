@@ -12,7 +12,7 @@ last_update:
   date: 05/06/2025
   author: Jiahao Li
 createdAt: '2025-05-13'
-updatedAt: '2026-01-07'
+updatedAt: '2026-06-23'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_ai_industrial_r2135_getting_start/
 ---
 
@@ -395,7 +395,7 @@ Se o hub USB estiver funcionando corretamente, você deverá ver seus detalhes l
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_SIM.jpeg" style={{width:800, height:'auto'}}/></div>
 
-[LINE_17>O equipamento da série reComputer AI Industrial R2135 inclui um slot interno para cartão SIM padrão, que é usado para instalar um cartão SIM padrão para obter sinais 4G.
+O equipamento da série reComputer AI Industrial R2135 inclui um slot interno para cartão SIM padrão, que é usado para instalar um cartão SIM padrão para obter sinais 4G.
 As diferenças de tamanho entre os cartões SIM padrão, Micro SIM e Nano SIM são as seguintes:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/sim_card.jpg" /></div>

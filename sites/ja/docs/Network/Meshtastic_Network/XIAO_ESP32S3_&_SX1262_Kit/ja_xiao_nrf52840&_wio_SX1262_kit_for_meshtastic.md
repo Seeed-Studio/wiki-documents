@@ -9,7 +9,7 @@ last_update:
   date: 12/11/2025
   author: Michelle Huang
 createdAt: '2025-03-13'
-updatedAt: '2026-01-07'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf52840&_wio_SX1262_kit_for_meshtastic/
 ---
 
@@ -178,7 +178,6 @@ import TabItem from '@theme/TabItem';
 - **[LBR]** [Seeed Studio XIAO nRF52840 Eagle フットプリント](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-footprint-eagle.lbr)
 - **[XLSX]** [Seeed Studio XIAO nRF52840 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
 - 🔗 **[Kicad]** [Seeed Studio XIAO nRF52840 フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- **[RAR]** [Wio SX-1262 for XIAO 3D ファイル](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
 - **[PDF]** [Xiao nRF52840 と互換性のある SX1262 の回路図](https://files.seeedstudio.com/products/113010003/Wio-SX1262%20for%20XIAO%20V1.0.pdf)
 - **[PDF]** [Wio SX-1262 モジュールデータシート](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf
 )

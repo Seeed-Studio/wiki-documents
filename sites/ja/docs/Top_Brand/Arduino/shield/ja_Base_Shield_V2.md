@@ -5,22 +5,21 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Base_Shield_V2
 sku: 103030000
 last_update:
-  date: 05/15/2025
+  date: 7/7/2026
   author: Eico
 no_comments: false
-createdAt: '2025-05-27'
-updatedAt: '2026-01-07'
+createdAt: '2023-02-15'
+updatedAt: '2026-07-07'
 url: https://wiki.seeedstudio.com/ja/Base_Shield_V2/
 ---
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Base_Shield_v2-1.png" alt="pir" width={600} height="auto" /></p>
 
-Arduino Unoはこれまでで最も人気のあるArduinoボードですが、プロジェクトで多くのセンサーやLEDを必要とする場合、ジャンパーワイヤーが混乱してしまうことがあります。Base Shieldを作成した目的は、ブレッドボードやジャンパーワイヤーを取り除くことです。Base Shield上の豊富なGroveコネクタを使用することで、Arduino UnoにすべてのGroveモジュールを簡単に追加できます！Base Shield V2のピン配置はArduino Uno R3と同じです。
+Arduino Uno はこれまでで最も人気のある Arduino ボードですが、プロジェクトで多くのセンサーや LED を必要とする場合、ジャンパワイヤが散らかってしまい、時にはイライラすることがあります。Base Shield を作成した目的は、ブレッドボードとジャンパワイヤから解放されることです。ベースボード上の豊富な Grove コネクタにより、すべての Grove モジュールを Arduino Uno に簡単に追加できます！Base Shield V2 のピン配置は Arduino Uno R3 と同じです。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/base-shield-v13-p-1378.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -35,17 +34,17 @@ Arduino Unoはこれまでで最も人気のあるArduinoボードですが、�
   </tr>
   <tr>
     <td><h4>Base Shield V1.2</h4></td>
-    <td><h4>初期リリース</h4></td>
+    <td><h4>初版</h4></td>
     <td><h4>2011年10月</h4></td>
   </tr>
   <tr>
     <td><h4>Base Shield V1.3</h4></td>
-    <td><h4>Groveコネクタのレイアウトと数量を変更</h4></td>
+    <td><h4>Grove コネクタのレイアウトと数量を変更</h4></td>
     <td><h4>2012年8月</h4></td>
   </tr>  
   <tr>
     <td><h4>Base Shield V2.0</h4></td>
-    <td><h4>Groveコネクタのレイアウトと数量を変更し、3.3Vと5Vの両方を有効にする電源スイッチを追加</h4></td>
+    <td><h4>Grove コネクタのレイアウトと数量を変更し、3.3V と 5V の両方を有効にできる電源スイッチを追加。</h4></td>
     <td><h4>2014年3月</h4></td>
   </tr>
   </tbody></table>
@@ -56,7 +55,7 @@ Arduino Unoはこれまでで最も人気のあるArduinoボードですが、�
   <tbody>
   <tr>
     <td><h3>パラメータ</h3></td>
-    <td><h3>値/範囲</h3></td>
+    <td><h3>値 / 範囲</h3></td>
   </tr>
   <tr>
     <td><h4>動作電圧</h4></td>
@@ -75,55 +74,55 @@ Arduino Unoはこれまでで最も人気のあるArduinoボードですが、�
     <td><h4>7</h4></td>
   </tr>
   <tr>
-    <td><h4>UARTポート</h4></td>
+    <td><h4>UART ポート</h4></td>
     <td><h4>1</h4></td>
   </tr>
   <tr>
-    <td><h4>I2Cポート</h4></td>
+    <td><h4>I2C ポート</h4></td>
     <td><h4>1</h4></td>
   </tr>
   <tr>
     <td><h4>サイズ</h4></td>
-    <td><h4>69mm x 53mm</h4></td>
+    <td><h4>69mm x53mm</h4></td>
   </tr>
   </tbody></table>
 
 ## 対応ボード
 
-Base Shieldは以下のボードでテストされ、完全に互換性があります：
+Base Shield は以下のボードでテストされており、完全に互換性があります：
 
-- Arduino Uno（すべてのリビジョン）/ Seeeduino（V4 & V4.2）
-- Arduino Mega / Seeeduino Mega
-- Arduino Zero（M0）/ Seeeduino Lorawan
-- Arduino Leonardo / Seeeduino Lite
+- Arduino Uno（全リビジョン）/Seeeduino（V4 & V4.2）
+- Arduino Mega/Seeeduino Mega
+- Arduino Zero（M0）/Seeeduino Lorawan
+- Arduino Leonardo/Seeeduino Lite
 - Arduino 101
 - Arduino Due 3.3V
 - Intel Edison 5V
 - Linkit One
 
 :::caution
-Grove Base ShieldのデフォルトのI2CピンはD70/D71ですが、Arduino DUEのデフォルトのI2C WireはD20/D21として定義されています。そのため、両方を一緒に使用する場合、`Wire`定義を使用すると拡張ボードのI2Cピンを正しく使用できません。`Wire1`を使用する必要があります。
+Grove Base Shield のデフォルトの I2C ピンは D70/D71 ですが、Arduino DUE のデフォルトの I2C `Wire` は D20/D21 として定義されています。そのため、両方を一緒に使用する場合、`Wire` 定義を使用すると拡張ボードの I2C ピンを正しく使用できません。`Wire1` を使用する必要があります。
 :::
 
 ## ハードウェア概要
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Base_Shield_V2/img/hardware_overview.jpg" alt="pir" width={600} height="auto" /></p>
 
-- **1-アナログポート**: A0, A1, A2, A3の4つのアナログポートを含む。
-- **2-デジタルポート**: D2, D3, D4, D5, D6, D7, D8の7つのデジタルポートを含む。
-- **3-UARTポート**: 1つのUARTポート。
-- **4-I2Cポート**: 4つのI2Cポート。
-- **5-電源スイッチ**: Arduino UNOとBase Shield v2を使用する場合はスイッチを5V位置に切り替えます。Seeeduino ArchとBase Shield v2を使用する場合はスイッチを3.3V位置に切り替えます。
-- **6-リセットボタン**: Arduinoボードをリセットします。
-- **7-PWR LED**: 電源がオンになると緑色のLEDが点灯します。
-- **8-P1, P2**: Seeeduino V3とBase Shield v2を使用する場合、P1とP2のパッドをはんだ付けしてください。
-- **寸法**: 2.1 * 2.7インチ  
+- **1-アナログポート**：4 つのアナログポート A0、A1、A2、A3 を含みます。
+- **2-デジタルポート**：7 つのデジタルポート D2、D3、D4、D5、D6、D7、D8 を含みます。
+- **3-UART ポート**：UART ポートを 1 つ備えています。
+- **4-I2C ポート**：I2C ポートを 4 つ備えています。
+- **5-電源スイッチ**：Arduino UNO と Base Shield v2 を使用する場合は、スイッチを 5V の位置にしてください。Seeeduino Arch と Base Shield v2 を使用する場合は、スイッチを 3.3V にしてください。
+- **6-リセットボタン**：Arduino ボードをリセットします。
+- **7-PWR LED**：電源投入時に緑色の LED が点灯します。
+- **8-P1, P2**：Base Shield v2 を Seeeduino V3 と一緒に使用する場合は、パッド P1 と P2 をはんだ付けしてください。
+- **寸法**：2.1 × 2.7 インチ  
 
-## はじめに
+## 入門ガイド
 
 ### ハードウェア
 
-- ステップ 1. 以下のものを準備してください：
+- ステップ 1. 以下のものを準備します：
 
 <table align="center">
   <tbody>
@@ -140,35 +139,35 @@ Grove Base ShieldのデフォルトのI2CピンはD70/D71ですが、Arduino DUE
     <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Base_Shield_V2/img/button_s.jpg" alt="pir" width={200} height="auto" /></p></td>
   </tr>
   <tr>
-    <td><h4><a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank"><span>今すぐ購入</span></a></h4></td>
-    <td><h4><a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank"><span>今すぐ購入</span></a></h4></td>
-    <td><h4><a href="https://www.seeedstudio.com/Grove-Buzzer-p-768.html" target="_blank"><span>今すぐ購入</span></a></h4></td>
-    <td><h4><a href="https://www.seeedstudio.com/category/Grove-Button-p-766.html" target="_blank"><span>今すぐ購入</span></a></h4></td>
+    <td><h4><a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank"><span>今すぐ入手</span></a></h4></td>
+    <td><h4><a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank"><span>今すぐ入手</span></a></h4></td>
+    <td><h4><a href="https://www.seeedstudio.com/Grove-Buzzer-p-768.html" target="_blank"><span>今すぐ入手</span></a></h4></td>
+    <td><h4><a href="https://www.seeedstudio.com/category/Grove-Button-p-766.html" target="_blank"><span>今すぐ入手</span></a></h4></td>
   </tr>  
   </tbody></table>
 
 - ステップ 2. Grove - Buzzer を Base Shield のポート D3 に接続します。
 - ステップ 3. Grove - Button を Base Shield のポート D2 に接続します。
-- ステップ 4. Base Shield を Seeeduino に差し込みます。
-- ステップ 5. USB ケーブルを使用して Seeeduino を PC に接続します。
+- ステップ 4. Base Shield を Seeeduino に挿し込みます。
+- ステップ 5. Seeeduino を USB ケーブルで PC に接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Base_Shield_v2-3.png" alt="pir" width={600} height="auto" /></p>
 
 ### ソフトウェア
 
-- ステップ 1. 以下のコードを Arduino IDE にコピーし、Seeeduino にアップロードします。
+- ステップ 1. 下記のコードを Arduino IDE にコピーし、Seeeduino に書き込みます。
 
 ```cpp
-const int button = 2;       // ボタンを接続
-const int buzzer = 3;       // ブザーを接続
+const int button = 2;       // connect a button
+const int buzzer = 3;       // connect a buzzer
 void setup()
 {
-    pinMode(button, INPUT); // ボタンを入力デバイスとして設定
-    pinMode(buzzer, OUTPUT);   // LEDを出力デバイスとして設定
+    pinMode(button, INPUT); //set button as an INPUT device
+    pinMode(buzzer, OUTPUT);   //set LED as an OUTPUT device
 }
 void loop()
 {
-    int btn = digitalRead(button); // ボタンの状態を読み取る
+    int btn = digitalRead(button); //read the status of the button
     digitalWrite(buzzer, btn);
     delay(10);
 }
@@ -178,7 +177,7 @@ void loop()
 
 ## FAQ
 
-Base Shield V2 に関するすべての FAQ を確認するには、[こちら](http://support.seeedstudio.com/knowledgebase/articles/1826443-base-shield-v2-sku-103030000)をクリックしてください。
+すべての Base Shield V2 に関する FAQ を見るには[こちら](http://support.seeedstudio.com/knowledgebase/articles/1826443-base-shield-v2-sku-103030000)をクリックしてください。
 
 ## 回路図オンラインビューア
 
@@ -188,31 +187,21 @@ Base Shield V2 に関するすべての FAQ を確認するには、[こちら](
 ## リソース
 
 - **[PDF]** [Wiki PDF をダウンロード](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base_Shield_V2_WiKi.pdf)
-- **[Eagle]** [Base Shield V2 SCH](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_SCH.zip)
-- **[Eagle]** [Base Shield V2 PCB](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_PCB.zip)
-- **[PDF]** [Base Shield V2 SCH](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_SCH.pdf)
-- **[PDF]** [Base Shield V2 PCB](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_PCB.pdf)
+- **[Eagle]** [Base Shiled V2 回路図（SCH）](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_SCH.zip)
+- **[Eagle]** [Base Shiled V2 基板（PCB）](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_PCB.zip)
+- **[PDF]** [Base Shiled V2 回路図（SCH）](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_SCH.pdf)
+- **[PDF]** [Base Shiled V2 基板（PCB）](https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2_PCB.pdf)
 
-## プロジェクト
+## 技術サポートと製品ディスカッション
 
-**Smart Plant IoT**: Helium と Microsoft Azure IoT を活用して植物の自動給水と健康状態の追跡を行うプロジェクト。
-
-<iframe frameBorder={0} height="327.5" scrolling="no" src="https://project.seeedstudio.com/Nyceane/smart-plant-iot-59cbc3/embed" width={350} />
-
-**ソーラーパワー環境モニタリングキット**: 空気質、音量、湿度、温度をモニタリングするためのソーラーパワーを利用したオープンソースキット。
-
-<iframe frameBorder={0} height="327.5" scrolling="no" src="https://project.seeedstudio.com/taifur/solar-powered-environmental-monitoring-kit-b1d03d/embed" width={350} />
-
-## 技術サポート & 製品ディスカッション
-
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、できるだけスムーズな体験を提供できるよう、さまざまなサポートをご用意しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,5 +1,5 @@
 ---
-description: Guía para grabar el firmware repetidor MeshCore en el ESP32S3 mediante Web USB, junto con la configuración de la app para la región LoRa y el ajuste de la ruta.
+description: Guía para flashear el firmware repetidor MeshCore en el ESP32S3 mediante Web USB, junto con la configuración de la app para la región LoRa y el ajuste de la ruta.
 title: Primeros pasos con ESP32 MeshCore
 keywords:
   - Meshcore
@@ -12,7 +12,7 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-04-20'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/es/get_started_with_esp32s3_meshcore/
 ---
 
@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/es/get_started_with_esp32s3_meshcore/
 
 <br></br>
 
-## Grabación del firmware
+## Flasheo de firmware
 
 Conecta tu dispositivo al ordenador con un cable USB. Asegúrate de que el cable admite transmisión de datos. 
 
@@ -42,7 +42,7 @@ Elige `Seeed Studio Xiao S3 Wio` en el grupo `Community Firmware`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ScreenShot_2026-04-20_140721_194.png" alt="pir" width={800} height="auto" /></p>
 
-Elige `Repeater`. Si quieres grabar otro firmware, por favor [haz clic aquí](https://docs.meshcore.io/) para ver el tutorial.
+Elige `Repeater`. Si quieres flashear otro firmware, por favor [haz clic aquí](https://docs.meshcore.io/) para ver el tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/RepeaterFirmware.png" alt="pir" width={800} height="auto" /></p>
 
@@ -51,7 +51,7 @@ Selecciona la versión de firmware.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/FirmwareVersion.png" alt="pir" width={600} height="auto" /></p>
 
-Mientras mantienes pulsado el botón `Boot(B)`, pulsa el botón `Reset(R)` para entrar en modo de grabación.
+Mientras mantienes pulsado el botón `Boot(B)`, pulsa el botón `Reset(R)` para entrar en modo de flasheo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/RB.png" alt="pir" width={300} height="auto" /></p>
 
@@ -59,7 +59,7 @@ Elige `Erase device `, luego haz clic en `Flash` y selecciona el puerto serie ll
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Flash1.png" alt="pir" width={800} height="auto" /></p>
 
-Cuando la barra de progreso esté completamente llena, indica que la grabación ha finalizado. Entonces el dispositivo se reiniciará automáticamente.
+Cuando la barra de progreso esté completamente llena, indica que el flasheo se ha completado. Entonces el dispositivo se reiniciará automáticamente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/FlashigComplete.png" alt="pir" width={800} height="auto" /></p>
 
@@ -80,7 +80,7 @@ El siguiente diagrama muestra el mapeo de pines B2B entre XIAO ESP32S3 y Wio-SX1
 El SX-1262 compatible solo se puede comprar dentro del kit.
 :::
 
-### (Opcional) Conectado a una batería
+### (Opcional) Conectado a la batería
 
 El XIAO ESP32S3 tiene un chip de gestión de energía integrado que permite alimentar el XIAO ESP32S3 de forma independiente usando una batería o cargar la batería a través del puerto USB del XIAO ESP32S3.
 
@@ -159,7 +159,7 @@ La placa de expansión sería una buena herramienta para la conexión y aplicaci
 
 ### Configuración inicial
 
-Cuando el firmware de repetidor MeshCore se graba en un dispositivo MeshCore por primera vez, es necesario configurar la frecuencia del dispositivo para que utilice la frecuencia que es legal en tu país o región.
+Cuando el firmware de repetidor MeshCore se flashea en un dispositivo MeshCore por primera vez, es necesario configurar la frecuencia del dispositivo para que utilice la frecuencia que es legal en tu país o región.
 
 [Haz clic aquí](https://config.meshcore.io/) para configurar el repetidor.
 
@@ -200,7 +200,7 @@ Después de iniciar sesión, puedes ver la página de configuración. Ahora pued
 
 ### Configurar ruta
 
-Antes de añadir el repetidor a tu ruta, es posible que primero necesites usar el repetidor para enviar un anuncio. El repetidor enviará anuncios automáticamente a intervalos regulares. Este intervalo puede ser de varias horas (por defecto 3 horas). Así que necesitas enviar el anuncio manualmente o, de lo contrario, tendrás que esperar.
+Antes de añadir el repetidor a tu ruta, es posible que necesites usar el repetidor para enviar primero un anuncio. El repetidor enviará anuncios automáticamente a intervalos regulares. Este intervalo puede ser de varias horas (por defecto 3 horas). Así que necesitas enviar el anuncio manualmente o, de lo contrario, tendrás que esperar.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/SendAdvert.png" alt="pir" width={800} height="auto" /></p>
 
@@ -312,15 +312,71 @@ Además, puedes ajustar el intervalo de difusión de anuncios. El rango de inter
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
+## Preguntas frecuentes
+
+### El dispositivo pierde la configuración guardada después de un corte de energía
+
+Si el nombre del dispositivo, la Región LoRa u otros ajustes parecen haberse guardado correctamente en la aplicación pero desaparecen después de apagar el dispositivo, comprueba si la tabla de particiones de la memoria flash del ESP32-S3 es anormal.
+
+Puedes usar [ESPConnect](https://thelastoutpostworkshop.github.io/ESPConnect/) para inspeccionar la tabla de particiones de la memoria flash del ESP32-S3. ESPConnect solo es aplicable a dispositivos ESP y no se puede usar con dispositivos nRF52840.
+
+1. Abre ESPConnect y selecciona una velocidad en baudios de `115200`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-2.png" alt="Selección de velocidad en baudios en ESPConnect" width={800} height="auto" /></p>
+
+2. Haz clic en **Connect**, luego selecciona **USB JTAG/serial debug unit**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-3.png" alt="Seleccionar unidad de depuración USB JTAG serial en ESPConnect" width={600} height="auto" /></p>
+
+3. Después de que el dispositivo esté conectado, abre la página **Partitions**.
+4. Comprueba si `spiffs` existe en la lista de particiones.
+
+Si la tabla de particiones es anormal, la página **Partitions** de ESPConnect puede mostrar solo:
+
+- `nvs`
+- `phy_init`
+- `factory`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-4.png" alt="Tabla de particiones de ESPConnect sin SPIFFS" width={800} height="auto" /></p>
+
+Sin embargo, el firmware oficial MeshCore v1.15 `merged.bin` debería incluir:
+
+- `nvs`
+- `otadata`
+- `app0`
+- `app1`
+- `spiffs` 1.5 MB
+- `coredump`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-5.png" alt="Tabla de particiones de ESPConnect con SPIFFS" width={800} height="auto" /></p>
+
+MeshCore v1.15 escribe el nombre del dispositivo y la configuración de Región en `/new_prefs` en SPIFFS. Si la partición `spiffs` no existe, estos ajustes solo se mantienen en la RAM. La aplicación móvil puede mostrar que la configuración se guardó correctamente, pero se perderá después de quitar la alimentación.
+
+Esto suele ocurrir cuando se flashea el archivo de firmware normal, por ejemplo:
+
+```text
+Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26.bin
+```
+
+En su lugar, se debe flashear el firmware completo combinado, por ejemplo:
+
+```text
+Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26-merged.bin
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-1.png" alt="Opciones de descarga del flasheador MeshCore para firmware normal y combinado" width={800} height="auto" /></p>
+
+Para solucionar este problema, borra el dispositivo y vuelve a flashear la versión de firmware combinada.
+
 ## Recursos
-- **[PDF]**[El diagrama esquemático del SX1262 compatible con Xiao ESP32-S3](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
+- **[PDF]**[Diagrama esquemático del SX1262 compatible con Xiao ESP32-S3](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
 - **[PDF]**[Hoja de datos del módulo Wio-SX1262](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf)
-- **[RAR]**[Archivo 3D de Wio-SX1262 para XIAO](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
+- **[RAR]**[Archivo 3D de Wio-SX1262 para XlAO](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
 - **[PDF]** [Esquemático de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 - [Biblioteca Kicad del kit XIAO ESP32S3](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20Wio%20SX1262%20for%20XIAO%20ESP32S3)
 - **[STEP]** [Modelo 3D de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip)
 - **[ZIP]** [Bibliotecas Eagle de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
-- **[DXF]** [Dimensiones de Seeed Studio XIAO ESP32S3 en DXF](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
+- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
 - **[LBR]** [Huella Eagle de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed-Studio-XIAO-ESP32S3-footprint-eagle.lbr)
 - **[ZIP]** [Firmware de fábrica de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip)
 - **[XLSX]** [Hoja de pines de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
@@ -330,7 +386,7 @@ Además, puedes ajustar el intervalo de difusión de anuncios. El rango de inter
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO: Big Power, Small Board Dominando Arduino y TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 ## Soporte técnico y debate sobre el producto
 
 Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.

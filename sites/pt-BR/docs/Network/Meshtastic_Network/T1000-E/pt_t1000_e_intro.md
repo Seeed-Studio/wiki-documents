@@ -10,7 +10,7 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-09-05'
-updatedAt: '2025-09-29'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/pt-br/t1000_e_intro/
 ---
 
@@ -105,3 +105,4 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 |Ligar|Acende e depois pisca rapidamente|
 |Modo DFU|Aceso continuamente|
 |Em funcionamento|Pisca aleatoriamente|
+|Carregando|Pisca a 0,5 Hz, alternando a cada segundo|

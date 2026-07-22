@@ -10,7 +10,7 @@ last_update:
   date: 12/18/2025
   author: Michelle Huang
 createdAt: '2025-05-23'
-updatedAt: '2025-12-18'
+updatedAt: '2026-06-29'
 url: https://wiki.seeedstudio.com/es/wio_tracker_l1_node/
 ---
 
@@ -26,7 +26,7 @@ La Serie Wio Tracker L1 es un nodo [Meshtastic®](https://meshtastic.org/) de ba
 ## Modelo de la Serie L1
 
 :::tip
-La Serie Wio Tracker L1 está disponible en 4 versiones; elige la que mejor se adapte a tus necesidades.
+La Serie Wio Tracker L1 está disponible en 4 versiones: elige la que mejor se adapte a tus necesidades.
 :::
 
 ### Introducción a la Serie
@@ -44,7 +44,7 @@ La Serie Wio Tracker L1 está disponible en 4 versiones; elige la que mejor se a
 |LoRa|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |GPS|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |Pantalla|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>OLED de 1,3 pulgadas</p><br/><p style={{textAlign: 'center'}}>Resolución: 128 × 64 píxeles</p>|<p style={{textAlign: 'center'}}>OLED de 1,3 pulgadas</p><br/><p style={{textAlign: 'center'}}>Resolución: 128 × 64 píxeles</p>|<p style={{textAlign: 'center'}}>E-ink de 2,13 pulgadas</p><br/><p style={{textAlign: 'center'}}>Resolución: 122 × 250 píxeles</p>|
-|Conector Solar+Batería|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>Batería integrada de 2000 mAh</p>|<p style={{textAlign: 'center'}}>✅</p>|
+|Conector Solar+Batería|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>Batería integrada de 2000mAh</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |Carcasa|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>-</p>|
 
 ## Descripción general
@@ -55,7 +55,7 @@ La Serie Wio Tracker L1 está disponible en 4 versiones; elige la que mejor se a
 Listo para usar nada más sacarlo de la caja con firmware Meshtastic preinstalado para una configuración sin complicaciones.
 
 - **Tres opciones de alimentación**
-Admite carga rápida Type-C, entrada solar y alimentación mediante batería de ion-litio para un despliegue flexible en diversos entornos; ideal para aplicaciones al aire libre y móviles.
+Admite carga rápida Type-C, entrada solar y alimentación mediante batería de ion-litio para un despliegue flexible en diversos entornos, ideal para aplicaciones al aire libre y móviles.
 
 - **Compatibilidad flexible con pantallas**
 Pantallas opcionales OLED de 1,3 pulgadas y E-Ink de 2,13 pulgadas, que ofrecen opciones de visualización versátiles para diferentes necesidades de consumo de energía y retroalimentación visual.
@@ -63,7 +63,7 @@ Pantallas opcionales OLED de 1,3 pulgadas y E-Ink de 2,13 pulgadas, que ofrecen 
 - **Alta capacidad de expansión**
 Totalmente compatible con el ecosistema Grove e incluye cabeceras PTH e interfaz de depuración SWD para expansión de hardware personalizada y desarrollo avanzado.
 
-### Especificaciones
+### Especificación
 
 :::tip
 Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador de batería, que convierte la interfaz de 1 mm en una interfaz de 2 mm. Esto te ofrece más opciones de baterías.
@@ -73,7 +73,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
   <tr>
     <th colspan="1">Procesador</th>
     <th colspan="1">
-      Nordic nRF52840<br />ARM® Cortex®-M4 con FPU hasta 64 MHz
+      Nordic nRF52840<br />ARM® Cortex®-M4 con FPU funciona hasta 64 MHz
     </th>
   </tr>
   <tr>
@@ -82,10 +82,10 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
   </tr>
   <tr>
     <td colspan="1" rowspan="3">Inalámbrico</td>
-    <td colspan="1">LoRa: Basado en <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>, admite 862-930 MHz</td>
+    <td colspan="1">LoRa: Basado en <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>, admite 862-930MHz</td>
   </tr>
    <tr>
-  <td colspan="1">Antena LoRa para L1 Pro: 3 dBi</td>
+  <td colspan="1">Antena LoRa para L1 Pro: 3dBi</td>
   </tr>
   <tr>
     <td colspan="1">Bluetooth 5.0</td>
@@ -102,17 +102,17 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">Plated Through Hole（PTH）: UART/IIC/GPIO/Analógico</td>
   </tr>
   <tr>
-    <td colspan="1">Pads de soldadura reservados para SWD</td>
+    <td colspan="1">Almohadillas de soldadura reservadas para SWD</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">Entrada de alimentación</td>
-    <td colspan="1">USB Type-C: 5 V — 1 A</td>
+    <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Panel solar (2,0 mm 2p): 5 V — 1 A</td>
+    <td colspan="1">Panel solar (2P-2.0mm): 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Batería de litio (1 mm 2p JST): 3,7 V — 1 A</td>
+    <td colspan="1">Batería de litio (2P-1.25mm): 3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">[Pantalla OLED](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
@@ -122,7 +122,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">Resolución: 128 × 64 píxeles</td>
   </tr>
   <tr>
-    <td colspan="1">Área activa (mm): 34,5 × 23,0</td>
+    <td colspan="1">Área activa (mm): 34.5 × 23.0</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">[Pantalla E-Ink](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
@@ -132,7 +132,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">Resolución: 122 × 250 píxeles</td>
   </tr>
   <tr>
-    <td colspan="1">Área activa (mm): 48,55 × 23,7046</td>
+    <td colspan="1">Área activa (mm): 48.55 × 23.7046</td>
   </tr>
   <tr>
     <td colspan="1">Certificación</td>

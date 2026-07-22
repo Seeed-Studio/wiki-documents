@@ -12,7 +12,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-01-09'
-updatedAt: '2026-03-10'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r2000_flash_os/
 ---
 # reComputer Industrial R20xx OS のフラッシュ
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r2000_flash_os/
     </a>
 </div>
 
-reComputer Industrial R20xx シリーズは Raspberry Pi CM5 と Hailo-8 AI アクセラレータを搭載したコンパクトなエッジ AI システムで、リアルタイムのマルチチャネル画像処理向けに 26 TOPS の性能を発揮します。クアッドコア Cortex-A76 CPU、最大 16GB RAM、64GB eMMC、および多彩なインターフェースにより、産業用 AI アプリケーションへのシームレスな統合を実現します。
+reComputer Industrial R20xx シリーズは Raspberry Pi CM5 と Hailo-8 AI アクセラレータを搭載したコンパクトなエッジ AI システムで、リアルタイムのマルチチャネル映像処理向けに 26 TOPS を提供します。クアッドコア Cortex-A76 CPU、最大 16GB RAM、64GB eMMC、および多彩なインターフェースにより、産業用 AI アプリケーションへのシームレスな統合を実現します。
 
 ## ハードウェア要件
 
@@ -55,28 +55,29 @@ reComputer Industrial R20xx シリーズは Raspberry Pi CM5 と Hailo-8 AI ア�
 
 ### Windows ホストコンピュータの場合
 
-- **Step 1.** 以下のリンクをクリックしてデバイスの[イメージファイル](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)をダウンロードします
+- **Step 1.** 下記リンクをクリックしてデバイスの[イメージファイル](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)をダウンロードします
 一番下のものを選択し、日付のリンクをクリックしてダウンロードします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_1.png" style={{width:800, height:'auto'}}/></div>
 
 - **Step 2.** **[こちら](https://www.raspberrypi.org/software/)** から **Raspberry Pi Imager** ソフトウェアをダウンロードします
 
-- **Step 3.** Raspberry Pi Imager ソフトウェアを開きます
+- **Step 3.** Raspberry Pi Imager ソフトウェアを開き、Device で "Raspberry Pi 5" を選択し、"Next" をクリックします
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/Raspberry_Pi_device.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 4.** キーボードで **CTRL + SHIFT + X** を押して **Advanced options** ウィンドウを開きます
+- **Step 4.** 下にスクロールして **Use custom** をクリックします 
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/use_custom.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 5.** **CHOOSE OS** をクリックし、ダウンロードしたイメージファイルを選択します。
+- **Step 5.** その後、先ほどダウンロードしたイメージファイルを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_5.png" alt="pir" width="800" height="auto"/></p>
 
-イメージの書き込みが成功するまで続けてください。
+- **Step 6.** 
+その後、イメージの書き込みを開始できます。処理が正常に完了するまでお待ちください。
 
-USB-C ポートを抜き、再度ブートボタンを押して電源をオン/オフします。システムに正常にログインできれば、イメージは正常に書き込まれており、通常どおり使用できます。
+USB-C ポートを抜き、再度ブートボタンを押してから電源をオン/オフします。システムに正常にログインできれば、イメージの書き込みは成功しており、通常どおり使用できます。
 
 ### MAC ホストコンピュータの場合
 
@@ -101,11 +102,11 @@ USB-C ポートを抜き、再度ブートボタンを押して電源をオン/�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="800" height="auto"/></p>
 
-**NOTE:** **Other general purpose OS** に移動することで、**64-bit Ubuntu** など他の OS を選択できます
+**NOTE:** **Other general purpose OS** に進むことで、**64-bit Ubuntu** など他の OS を選択できます
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
-または、次のリンクを使用してイメージファイルをダウンロードできます：
+または、このリンクを使用してイメージファイルをダウンロードすることもできます：
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
@@ -148,11 +149,11 @@ rpi-imager
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
 
-**NOTE:** **Other general purpose OS** に移動することで、**64-bit Ubuntu** など他の OS を選択できます
+**NOTE:** **Other general purpose OS** に進むことで、**64-bit Ubuntu** など他の OS を選択できます
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
-または、次のリンクを使用してイメージファイルをダウンロードできます：
+または、このリンクを使用してイメージファイルをダウンロードすることもできます：
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
@@ -170,7 +171,7 @@ rpi-imager
 
 ### EEPROM の更新
 
-*この方法は SSD を搭載し、emmc からデバイスを正常に起動できている場合に有効です。システムが最新の Raspberry Pi システム（Bookworm 以降）であり、RPi 5 ファームウェアが 2023-12-06（12 月 6 日）以降に更新されていることを確認してください。そうでない場合、NVME 関連の設定を認識しない可能性があります。*
+*この方法は SSD を搭載し、emmc からデバイスを正常に起動できている場合に有効です。システムが最新の Raspberry Pi システム（Bookworm 以降）であり、RPi 5 のファームウェアが 2023-12-06（12 月 6 日）以降に更新されていることを確認してください。そうでない場合、NVME 関連の設定を認識しない可能性があります。*
 
 **Step 1**: Raspberry Pi システムが最新（Bookworm 以降）であることを確認し、次のコマンドを入力して RPi 5 ファームウェアを更新します：
 
@@ -191,7 +192,7 @@ rpi-imager
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_3.png" alt="pir" width="800" height="auto" /></div>
 
-ここでは `No` を選択します - `latest` ブートローダーを使用したいからです。
+ここでは `No` を選択します。`latest` ブートローダーを使用したいからです。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_4.png" alt="pir" width="800" height="auto" /></div>
 
@@ -203,13 +204,13 @@ rpi-imager
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_6.png" alt="pir" width="800" height="auto" /></div>
 
-**Step 2**：メイン画面で **Applications** =>**Accessories** =>**SD Card Copier** をクリックし、**SD Card Copier** プログラムを実行して、下図のように OS を NVME SSD にコピーします。
+**Step 2**：メイン画面で **Applications** => **Accessories** => **SD Card Copier** をクリックし、**SD Card Copier** プログラムを実行して、下図のように OS を NVME SSD にコピーします。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/copy.gif" alt="pir" width="800" height="auto" /></div>
 
 ### Raspberry Pi を NVMe SSD から起動するように設定する
 
-SD カードスロットに簡単にアクセスできる場合は、Pi の電源を切り、SD カードを取り出すことで（すべてが期待どおりに動作していれば）次回起動時に自動的に NVMe ドライブから起動するはずです。SD カードをそのままにして NVMe から起動したい場合は、ブート順序を変更する必要があります。
+SD カードスロットに簡単にアクセスできる場合は、Pi の電源を切り、SD カードを取り外すことで（すべてが期待どおりに動作していれば）次回起動時に自動的に NVMe ドライブから起動するはずです。SD カードをそのまま挿した状態で NVMe から起動したい場合は、ブート順を変更する必要があります。
 
 **Step 1**: 次のコマンドを入力します：
 
@@ -224,15 +225,15 @@ SD カードスロットに簡単にアクセスできる場合は、Pi の電�
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_2.png" alt="pir" width="800" height="auto" /></div>
 
-**Step 3**:`NVMe/USB Boot` を選択し、Enter キーを押します：
+**ステップ 3**：`NVMe/USB Boot` を選択し、Enter キーを押します：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_3.png" alt="pir" width="800" height="auto" /></div>
 
-設定が確認されます。Enter キーを押します：
+設定内容が確認されます。Enter キーを押します：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="800" height="auto" /></div>
 
-**ステップ 4**：`Back` を選択するか Esc キーを押して最初の画面に戻ります。次に、右カーソルキーを使って Finish に移動します。
+**ステップ 4**：`Back` を選択するか Esc キーを押して最初の画面に戻ります。その後、右カーソルキーを使って Finish に移動します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_5.png" alt="pir" width="800" height="auto" /></div>
 
@@ -240,7 +241,7 @@ SD カードスロットに簡単にアクセスできる場合は、Pi の電�
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="800" height="auto" /></div>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 

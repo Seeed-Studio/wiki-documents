@@ -14,21 +14,21 @@ last_update:
   date: 04/24/2026
   author: Dayu
 createdAt: '2026-04-24'
-updatedAt: '2026-04-24'
+updatedAt: '2026-07-02'
 url: https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
 # reComputer Robotics J601 入門ガイド
 
 :::note
-このページは、NVIDIA Jetson AGX Thor モジュール向けの今後発売予定の reComputer Robotics J601 キャリアボードに関する予備ドラフトです。仕様、ソフトウェアサポート、アクセサリバンドル、およびメカニカル仕様は今後変更される可能性があります。
+このページは、NVIDIA Jetson AGX Thor モジュール向けの今後発売予定の reComputer Robotics J601 キャリアボードに関する予備ドラフトです。仕様、ソフトウェアサポート、アクセサリバンドル、およびメカニカルの詳細は今後変更される可能性があります。
 :::
 
 <div align="center">
   <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
 </div>
 
-reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けのロボティクス特化型キャリアボードです。高速ネットワーキング、産業用 I/O、GMSL カメラ拡張、および広い範囲の DC 入力を、コンパクトなキャリアボードフォームファクタで必要とする高性能エンボディド AI およびロボット制御ワークロードを対象としています。
+reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けのロボティクス特化型キャリアボードです。高速ネットワーキング、産業用 I/O、GMSL カメラ拡張、およびコンパクトなキャリアボードフォームファクタでの広範囲 DC 入力を必要とする、高性能なエンボディド AI およびロボット制御ワークロードを対象としています。
 
 ## 予備的な特長
 
@@ -44,25 +44,25 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
 
 ## 予備的な仕様
 
-以下の表では、現在のハードウェア定義のうち明確な部分のみを意図的に記載し、未確定項目は TBD としています。
+以下の表では、現在のハードウェア定義のうち明確な部分のみを意図的に記載し、未確定の項目は TBD としています。
 
 <div class="table-center">
 <table>
   <tbody>
     <tr>
-      <td>モジュール</td>
+      <td>Module</td>
       <td>NVIDIA Jetson AGX Thor x 1</td>
     </tr>
     <tr>
-      <td>ストレージ</td>
-      <td>1x M.2 Key M（M.2 NVMe 2280 SSD 用）</td>
+      <td>Storage</td>
+      <td>1x M.2 Key M for M.2 NVMe 2280 SSD</td>
     </tr>
     <tr>
-      <td>ネットワーキング</td>
-      <td>Ethernet の定義は進行中。現時点の計画では、PTP および EtherCAT 対応の高速 RJ45 ポートを含みます。</td>
+      <td>Networking</td>
+      <td>Ethernet の定義は進行中であり、暫定プランには PTP および EtherCAT 対応の高速 RJ45 ポートが含まれます</td>
     </tr>
     <tr>
-      <td>無線拡張</td>
+      <td>Wireless Expansion</td>
       <td>1x M.2 Key E（Wi-Fi/Bluetooth 用）、1x M.2 Key B（5G 用）、1x Nano SIM</td>
     </tr>
     <tr>
@@ -70,15 +70,15 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
       <td>最大 4x USB 3.2 Type-A（ホスト）、1x USB 2.0 Type-C（Debug UART / デバイスモード）、1x USB 3.0 Type-C（フラッシング用）</td>
     </tr>
     <tr>
-      <td>ディスプレイ</td>
+      <td>Display</td>
       <td>1x HDMI</td>
     </tr>
     <tr>
-      <td>冷却</td>
-      <td>1x 4 ピンファンコネクタ（12V PWM）。キャリアボードとファンは別売りとなる予定です。</td>
+      <td>Cooling</td>
+      <td>1x 4 ピンファンコネクタ（12V PWM）；キャリアボードとファンは別売りとなる予定です</td>
     </tr>
     <tr>
-      <td>カメラ</td>
+      <td>Camera</td>
       <td>GMSL 拡張、最大 8 台のカメラ</td>
     </tr>
     <tr>
@@ -86,19 +86,19 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
       <td>4x CAN（JST コネクタ経由）</td>
     </tr>
     <tr>
-      <td>シリアル</td>
-      <td>2x RS-232/422/485（DB9 経由）、1x RS-232/422/485（DB9 経由）、1x RS-485（JST 4 ピン経由）</td>
+      <td>Serial</td>
+      <td>1x RS-232/422/485（DB9 コネクタ）、1x RS-485（JST コネクタ）</td>
     </tr>
     <tr>
-      <td>デジタル I/O</td>
+      <td>Digital I/O</td>
       <td>4x DI および 4x DO（JST 端子コネクタ経由）</td>
     </tr>
     <tr>
-      <td>オーディオ</td>
+      <td>Audio</td>
       <td>1x I2S、2x アンプ出力、1x マイク入力</td>
     </tr>
     <tr>
-      <td>低速拡張</td>
+      <td>Low-speed Expansion</td>
       <td>1x I2C、1x SPI、GPIO（JST/ピンヘッダ経由）</td>
     </tr>
     <tr>
@@ -106,36 +106,36 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
       <td>1x RTC 2 ピン</td>
     </tr>
     <tr>
-      <td>ボタン</td>
+      <td>Buttons</td>
       <td>Recovery および Reset</td>
     </tr>
     <tr>
-      <td>LED</td>
+      <td>LEDs</td>
       <td>PWR、ACT、およびユーザー定義 RGB LED</td>
     </tr>
     <tr>
-      <td>電源入力</td>
+      <td>Power Input</td>
       <td>XT30、19V ～ 48V DC</td>
     </tr>
     <tr>
-      <td>電流 / 電力</td>
+      <td>Current / Power</td>
       <td>最大電流 10A、システム電力定義 160W</td>
     </tr>
     <tr>
-      <td>動作温度</td>
+      <td>Operating Temperature</td>
       <td>-10°C ～ +60°C</td>
     </tr>
     <tr>
-      <td>湿度</td>
+      <td>Humidity</td>
       <td>10% ～ 95% RH</td>
     </tr>
     <tr>
-      <td>認証</td>
+      <td>Certification</td>
       <td>CE、FCC、RoHS、目標 EMI クラス：Class A</td>
     </tr>
     <tr>
-      <td>メカニカル</td>
-      <td>キャリアボードサイズの目標：150 mm x 130 mm 以内</td>
+      <td>Mechanical</td>
+      <td>キャリアボードサイズの目標値：150 mm x 130 mm 以内</td>
     </tr>
   </tbody>
 </table>
@@ -145,18 +145,18 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
 
 ### ボタン
 
-| ボタン | ピン | 信号 | タイプ | 説明 |
+| Button | Pin | Signal | Type | Description |
 | --- | --- | --- | --- | --- |
 | RECOVERY | 240 | - | CMOS-5V | システムリカバリ / 低レベル設定フローに使用 |
-| RESET | 239 | SYS_RESET* | オープンドレイン、1.8V | Low に引き下げるとモジュールをリセット。モジュール電源が準備完了のとき、High レベルはキャリアボード電源イネーブルとして使用可能。 |
+| RESET | 239 | SYS_RESET* | オープンドレイン、1.8V | Low に引き下げるとモジュールをリセット；モジュール電源が準備完了のとき、High レベルはキャリアボード電源イネーブルとして使用可能 |
 
 ### LED インジケータ
 
-| LED | 色 | 状態 | 説明 |
+| LED | Color | Status | Description |
 | --- | --- | --- | --- |
-| PWR | 緑 | On | デバイスが電源に接続されています |
-| PWR | 緑 | Off | デバイスが電源に接続されていません |
-| ACT | 緑 | 点滅 | SSD アクティビティ |
+| PWR | Green | On | デバイスが電源に接続されています |
+| PWR | Green | Off | デバイスが電源に接続されていません |
+| ACT | Green | Flashing | SSD アクティビティ |
 | USER | R / G / B | TBD | ユーザー定義の動作 |
 
 ## ソフトウェア
@@ -187,7 +187,7 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
 
 ### アクセサリ
 
-- XT30 から DC へのケーブル、200 mm x 1
+- XT30 to DC ケーブル、200 mm x 1
 - JST バラ線ハーネス、100 mm x 10
 - USB Type-C to Type-A ケーブル、1 m x 1
 - Key E 用ネジ x 1
@@ -198,22 +198,22 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
 - スタッド用ネジ x 4
 - ユーザーマニュアル x 1
 
-### パッケージ
+### パッケージング
 
 - エアプレーンボックス
 - キャリアボードおよびアクセサリ用インナートレイ
 - 追加のフォーム層付きで一番上に配置されたユーザーマニュアル
-- mini J501 キャリアボードと同様のパッケージスタイル
+- mini J501 キャリアボードと同様のパッケージングスタイル
 
 ## リソース
 
-- 詳細なハードウェアレイアウト：TBD
+- 詳細なハードウェイアウト：TBD
 - フラッシングガイド：TBD
 - BSP リリースノート：TBD
 
 ## 技術サポート
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

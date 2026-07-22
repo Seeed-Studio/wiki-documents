@@ -1,6 +1,6 @@
 ---
 description: Home Assitant 语音助手系统
-title: Home Assitant 语音助手系统
+title: Home Assitant reSpeaker Lite 语音助手系统
 keywords:
   - ESP32S3
   - XIAO
@@ -13,7 +13,7 @@ last_update:
   date: 2/11/2026
   author: Kasun Thushara
 createdAt: '2024-04-11'
-updatedAt: '2026-03-24'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/cn/respeaker_lite_ha/
 ---
 
@@ -66,7 +66,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_flashing.gif" alt="pir" width={800} height="auto" /></p>
 
-更多信息请参考此[链接](https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/#update-firmware)
+更多信息请参考此[链接](https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/#更新固件)
 
 :::note
 为了使用用户按键和静音按键，你需要将用户按键焊接到 D2，将静音按键焊接到 D3。
@@ -82,7 +82,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 ## 安装 ESPHome Builder 
 
-**Settings → Add-ons → 点击 Add-on Store → 安装 ESPHome Device Builder** 插件。
+**Settings → Add-ons → Click on Add-on Store → Install ESPHome Device Builder** 插件。
 
 进入 **Home Assistant > Settings > Add-ons**。
 
@@ -92,7 +92,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
 
-在 **Official add-ons** 下搜索并安装 **ESPHome Device Builder**。
+在 **Official add-ons** 下，搜索并安装 **ESPHome Device Builder**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -134,7 +134,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 选择你新建的设备条目并点击 **EDIT**。
 
 :::note
-更新后的 YAML 文件可以在此处找到。在某些情况下，最新的 ESPHome 版本可能会导致兼容性问题。请参考原始[仓库](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration/blob/main/config/common/respeaker-satellite-base.yaml)
+更新后的 YAML 文件可以在此处找到。在某些情况下，最新版本的 ESPHome 可能会导致兼容性问题。请参考原始[仓库](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration/blob/main/config/common/respeaker-satellite-base.yaml)
 :::
 
 <details>
@@ -1531,7 +1531,7 @@ debug:
 
 连接成功后，点击 **INSTALL**
 
-选择你刚刚下载的 .bin 文件。
+选择刚刚下载的 .bin 文件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/bin_file_choose.png" alt="pir" width={600} height="auto" /></p>
 
@@ -1547,7 +1547,7 @@ debug:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/device_services.png" alt="pir" width={700} height="auto" /></p>
 
-你应该会看到 **ESPHome** 被列为已发现的集成。
+你应该能看到 **ESPHome** 被列为已发现的集成。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/discover_esp_1.png" alt="pir" width={700} height="auto" /></p>
@@ -1569,7 +1569,7 @@ debug:
 
 设置过程很简单，你可以利用一个月的免费试用来探索其全部功能。
 
-你可以登录 Nabu Cloud 并配置语音助手，因为它相对容易设置且提供快速的性能。
+你可以登录 Nabu Cloud 并配置语音助手，因为它相对容易设置且性能快速。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_2.png" alt="pir" width={700} height="auto" /></p>
 
@@ -1591,7 +1591,7 @@ debug:
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

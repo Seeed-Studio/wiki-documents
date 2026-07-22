@@ -1,6 +1,6 @@
 ---
-description: Robot Kiwi-drive controlado por voz usando Raspberry Pi, XIAO ESP32, ReSpeaker Lite y embeddings de voz para un control robótico inteligente y manos libres.
-title: Añade interacción por voz a tu robot LeKiwi con reSpeaker Flex
+description: Robot Kiwi-drive controlado por voz usando Raspberry Pi, XIAO ESP32, ReSpeaker Lite y embeddings de voz para un control robótico inteligente manos libres.
+title: Añade interacción por voz a tu robot LeKiwi con reSpeaker
 keywords:
   - reSpeaker flex
   - LeKiwi
@@ -12,8 +12,8 @@ last_update:
   date: 04/28/2026
   author: Kasun Thushara
 createdAt: '2026-04-28'
-updatedAt: '2026-04-28'
-url: https://wiki.seeedstudio.com/es/respeaker_flex_introduction/
+updatedAt: '2026-06-15'
+url: https://wiki.seeedstudio.com/es/respeaker_flex_lekiwi/
 ---
 
 
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_introduction/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png" alt="pir" width={800} height="auto" /></p>
 
-¡Controla un robot Kiwi-drive de 3 ruedas con tu voz! Este proyecto combina un Seeed Studio XIAO ESP32 (controlador de motores) con una Raspberry Pi (cerebro de procesamiento de voz), mejorado con el reSpeaker Flex para captura de audio de alta calidad y Voice Embeddings para una interacción de voz más inteligente y personalizada. Usando comandos en lenguaje natural, puedes conducir, girar y controlar el robot completamente manos libres con mayor precisión y capacidad de respuesta.
+¡Controla un robot Kiwi-drive de 3 ruedas con tu voz! Este proyecto combina un Seeed Studio XIAO ESP32 (controlador de motor) con una Raspberry Pi (cerebro de procesamiento de voz), mejorado por el reSpeaker para una captura de audio de alta calidad y Voice Embeddings para una interacción por voz más inteligente y personalizada. Usando comandos en lenguaje natural, puedes conducir, girar y controlar el robot completamente manos libres con mayor precisión y capacidad de respuesta.
 
 ## Hardware necesario
 
@@ -29,14 +29,12 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_introduction/
   <tr>
     <th>Kit LeKiwi</th>
     <th>XIAO ESP32S3</th>
-    <th>reSpeaker Flex XVF3800 Circular</th>
     <th>Raaspberry pi 5</th>
 
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114090065-lekiwi-kit_1.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102010634-seeed-studio-xiao-esp32s3-_pre-soldered_-45font_1.jpg" style={{width:500, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
 
   </tr>
@@ -52,11 +50,6 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_introduction/
       </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
       </a>
@@ -64,9 +57,93 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_introduction/
   </tr>
 </table>
 
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 300, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      O
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 300, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+
 ## Servicios
 
-- [**Groq**](https://groq.com/) cuenta: el nivel gratuito es suficiente para comenzar
+- [**Groq**](https://groq.com/) cuenta: el nivel gratuito es suficiente para empezar
 
 ## Cómo funciona
 
@@ -83,7 +160,7 @@ You speak → Wake word detected → Audio recorded → Whisper STT → LLaMA LL
 
 ---
 
-## Preparar el XIAO ESP32 (controlador de motores)
+## Preparar el XIAO ESP32 (controlador de motor)
 
 El ESP32 ejecuta el sketch de Arduino que mueve físicamente las tres ruedas usando **cinemática Kiwi-drive**. Recibe comandos serie de un solo carácter (`w`, `s`, `a`, `d`, etc.) desde la Raspberry Pi y los traduce en velocidades de motor coordinadas.
 
@@ -100,9 +177,9 @@ El sketch espera servos con ID **1, 2, 3**. Antes de montar tu robot, conecta ca
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/hardware_lekiwi_1.png" alt="pir" width={800} height="auto" /></p>
 
-Sigue el video tutorial oficial de Seeed Studio para montar el chasis, colocar las ruedas y cablear los servos:
+Sigue el vídeo tutorial oficial de Seeed Studio para montar el chasis, colocar las ruedas y cablear los servos:
 
- [Tutorial de montaje de LeKiwi](https://wiki.seeedstudio.com/es/lerobot_lekiwi/#assembly)
+ [Tutorial de montaje de LeKiwi](https://wiki.seeedstudio.com/es/lerobot_lekiwi/#montaje)
 
 :::info
 Solo necesitas completar el **montaje físico**; omite cualquier paso sobre clonar el repositorio de GitHub de LeRobot, ya que este proyecto utiliza una configuración diferente.
@@ -115,12 +192,12 @@ El sketch (`lekiwi_motor_control.ino`) hace lo siguiente:
 - Inicializa los tres servos en **modo de posición**, los centra y luego cambia al **modo rueda (rotación continua)**
 - Escucha en el puerto serie USB comandos de un solo carácter
 - Usa **cinemática Kiwi-drive** para calcular la velocidad correcta para cada rueda
-- Solo admite **modo de empuje** (impulso corto y luego parada automática)
+- Solo admite **modo empuje** (impulso corto y luego parada automática)
 **Referencia de comandos serie:**
 
 | Tecla | Acción |
 |-----|--------|
-| `w` | Empuje hacia adelante |
+| `w` | Empuje hacia delante |
 | `s` | Empuje hacia atrás |
 | `a` | Empuje giro a la izquierda |
 | `d` | Empuje giro a la derecha |
@@ -463,9 +540,9 @@ void loop() {
 
 </details>
 
-## Preparar la Raspberry Pi (Voice Brain)
+## Preparar la Raspberry Pi (Cerebro de Voz)
 
-### Paso 1 — Consigue una clave de API de Groq
+### Paso 1 — Obtén una clave de API de Groq
 
 1. Regístrate en [console.groq.com](https://console.groq.com/)
 2. Crea una nueva clave de API y cópiala — la necesitarás en el Paso 4
@@ -502,7 +579,7 @@ Esto descarga el modelo preentrenado **"Hey Jarvis"** (y otros) desde openwakewo
 
 ### Paso 5 — Encuentra el índice de tu micrófono
 
-Conecta tu **ReSpeaker Flex** por USB y luego ejecuta:
+Conecta tu **reSpeaker** por USB y luego ejecuta:
 
 ```bash
 python3 list_mics.py
@@ -591,21 +668,21 @@ Ahora di **"Hey Jarvis"** y da una orden de movimiento.
 
 ### Comandos de ejemplo
 
-> "Hey Jarvis, avanza"
+> "Hey Jarvis, move forward"
 
-> "Hey Jarvis, gira a la izquierda"
+> "Hey Jarvis, turn left"
 
-> "Hey Jarvis, desplázate a la derecha"
+> "Hey Jarvis, strafe right"
 
-> "Hey Jarvis, para"
+> "Hey Jarvis, stop"
 
-> "Hey Jarvis, ¿qué puedes hacer?"
+> "Hey Jarvis, what can you do?"
 
 ---
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

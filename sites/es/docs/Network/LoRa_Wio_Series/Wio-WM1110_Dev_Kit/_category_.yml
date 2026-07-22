@@ -1,10 +1,10 @@
-position: 5 # float position is supported
-label: 'Kit de Desarrollo Wio-WM1110'
+position: 6 # float position is supported
+label: 'Kit de desarrollo Wio-WM1110'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
 className: wio_wm1110_dev_kit
 link:
   type: generated-index
   slug: wio_wm1110_dev_kit_class
-  title: Kit de Desarrollo Wio-WM1110
-  description: Documentación del Producto Kit de Desarrollo Wio-WM1110.
+  title: Kit de desarrollo Wio-WM1110
+  description: Documentación del producto Kit de desarrollo Wio-WM1110.

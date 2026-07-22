@@ -1,6 +1,6 @@
 ---
-description: Primeros pasos con Wio Tracker L1 Serie
-title: Primeros pasos con Wio Tracker L1
+description: Comenzar con Wio Tracker L1 Serie
+title: Comenzar con Wio Tracker L1
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
@@ -11,7 +11,7 @@ last_update:
   date: 3/13/2026
   author: Michelle Huang
 createdAt: '2025-06-17'
-updatedAt: '2026-05-15'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
@@ -23,9 +23,9 @@ La Serie Wio Tracker L1 comparte el mismo marco de hardware. Aunque la guía en 
 
 ## Tutorial en video
 
-### Parte 1 Desempaquetado
+### Parte 1 Unboxing
 
-Cuando uses los modelos L1, L1 Lite o L1 E-Ink por primera vez, después de conectarlos a la fuente de alimentación USB, levanta el interruptor de encendido hacia arriba para encenderlos.
+Cuando utilices los modelos L1, L1 Lite o L1 E-Ink por primera vez, después de conectarlos a la fuente de alimentación USB, levanta el interruptor de encendido hacia arriba para encenderlos.
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -49,12 +49,12 @@ Por favor, `don't use NRF-OTA` para actualizar el firmware, puede hacer que el d
 
 #### Joystick de cuatro direcciones
 
-El firmware del L1 E-Ink actualmente no es compatible con el joystick de cuatro direcciones. Si quieres usar el joystick, compra otros modelos.
+El `latest Alpha firmware` del firmware L1 E-Ink actualmente es compatible con el joystick de cuatro direcciones. Si quieres usar el joystick, por favor [haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#Parte-2-Flasheo-de-firmware) para actualizar el firmware. 
 
 #### Barra de menú
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
-Solo el firmware 2.7 es compatible con la barra de menú. Si quieres usar la barra de menú, sigue el [Tutorial de flasheo de firmware](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#parte-2-flasheo-de-firmware) para actualizar el firmware.
+Solo el firmware 2.7 es compatible con la barra de menú. Si quieres usar la barra de menú, sigue el [Tutorial de flasheo de firmware](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#Parte-2-Flasheo-de-firmware) para actualizar el firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 #### Zumbador
@@ -85,9 +85,9 @@ Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> All enab
 ## Primeros pasos
 
 :::danger note
-Cuando el dispositivo esté en los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo puede quedar inservible.
+Cuando el dispositivo se encuentre en los estados siguientes, por favor no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo puede quedar inservible.
 
-1. No ha terminado el proceso de transmisión de mensajes
+1. No ha finalizado el proceso de transmisión de mensajes
 2. Está siendo configurado
 :::
 
@@ -115,14 +115,14 @@ Enciende el dispositivo, haz clic en `Enter DFU Mode`, aparecerá un puerto seri
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 a la unidad DFU. El firmware debería flashearse después de que el archivo se descargue y el dispositivo se reinicie.
+Arrastra el archivo UF2 a la unidad DFU. El firmware debería flashearse después de que el archivo se haya copiado y el dispositivo se reinicie.
 
 ### Encender el dispositivo
 
 Conecta el cable USB para activar el dispositivo. Levanta el interruptor de encendido hacia arriba para encenderlo.
 
 :::tip
-Si el dispositivo no responde cuando presionas el botón, cárgalo primero. No uses un cargador de carga rápida.
+Si el dispositivo no responde cuando presionas el botón, por favor cárgalo primero. No uses un cargador de carga rápida.
 :::
 
 ### Conectar mediante la app
@@ -132,7 +132,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="App de iOS">
 
 - Selecciona el dispositivo de destino en el panel de Bluetooth.
 
@@ -144,7 +144,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="App Android">
+<TabItem value="android" label="App de Android">
 
 - Haz clic en `+` y elige el dispositivo de destino.
 
@@ -157,9 +157,44 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
+### Configurar el LoRa
+
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
+
+<Tabs>
+<TabItem value="ios" label="App de iOS">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="android" label="App de Android">
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+**Lista de regiones**
+
+|**Código de región**|**Descripción**|**Rango de frecuencia (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
+| :-: | :-: | :-: | :-: | :-: |
+|UNSET|Sin establecer|N/A|N/A|N/A|
+|US|Estados Unidos|902.0 - 928.0|100|30|
+|EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
+
+Consulta [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para obtener una lista más completa.
+
+:::info
+**EU_868** debe cumplir con una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
+:::
+
+Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para adaptarlo a tus necesidades.
+
+## Configuración avanzada
+
 ### Conectar mediante el sitio web
 
-Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio web, ahora puedes conectar el dispositivo al [Sitio web de Meshtastic](https://client.meshtastic.org/messages/broadcast/0).
+Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio web, ahora puedes conectar el dispositivo al [sitio web de Meshtastic](https://client.meshtastic.org/messages/broadcast/0).
 
   Paso 1: Abrir el sitio web
 
@@ -179,7 +214,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
     Elige el método Bluetooth. Elige el ID del dispositivo en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
- Método 2: Vía puerto serie
+ Método 2: Vía serie
 
     Elige el método serie. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
@@ -188,46 +223,13 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
-### Configurar el LoRa
+### Configurar el GPS
 
-Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias usa tu dispositivo y debe configurarse según tu ubicación regional.
-
-<Tabs>
-<TabItem value="ios" label="App IOS">
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
-
-</TabItem>
-
-<TabItem value="android" label="App Android">
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
-
-</TabItem>
-</Tabs>
-
-**Lista de regiones**
-
-|**Código de región**|**Descripción**|**Rango de frecuencia (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
-| :-: | :-: | :-: | :-: | :-: |
-|UNSET|Sin establecer|N/A|N/A|N/A|
-|US|Estados Unidos|902.0 - 928.0|100|30|
-|EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
-
-Consulta [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para obtener una lista más completa.
-
-:::info
-**EU_868** debe cumplir una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
-:::
-
-Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para adaptarlas a tus necesidades.
-
-### Configurar GPS
-
-Activa el GPS. Puedes ajustar el intervalo de actualización y el intervalo de difusión para obtener información de ubicación más actualizada.
+Por favor, activa el GPS. Puedes ajustar el intervalo de actualización y el intervalo de transmisión para obtener información de ubicación más actualizada.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-En IOS, activa `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
+Para IOS, por favor activa la `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -308,65 +310,84 @@ La pantalla OLED mostrará los datos del sensor si activas `on screen`.
 ### Teclado virtual
 
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
-¡La versión de firmware 2.7 ahora es compatible con el teclado virtual! Puedes escribir mensajes directamente en el dispositivo para comunicarte con otro dispositivo. Sigue el [Flash Firmware Tutorial](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para actualizar el firmware.
+¡La versión de firmware 2.7 ahora admite teclado virtual! Puedes escribir mensajes directamente en el dispositivo para comunicarte con otro dispositivo. Sigue el [tutorial de flasheo de firmware](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para actualizar el firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
-### (Opcional) Configurar tono de llamada
+### Configurar tono de llamada
 
-Ve a `Settings` -> `Ringtone Config` y luego introduce la cadena de tono RTTTL que quieras usar para las notificaciones externas.
+Ve a `Settings` -> `Ringtone Config`, luego introduce la cadena de tono RTTTL que quieras usar para las notificaciones externas.
+
+<Tabs>
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
 
-Puedes pegar directamente uno de los siguientes ejemplos de RTTTL:
+</TabItem>
 
-**The Legend of Zelda: Item Get**
+<TabItem value="android" label="Android App">
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/ringtonex1.png" alt="pir" width={900} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+<Tabs>
+<TabItem value="13" label="The Legend of Zelda: Item Get">
 
 ```plain
 24:d=16,o=5,b=120:g,c6,d6,2g6
 ```
+</TabItem>
 
-**Super Mario Theme (Short)**
+<TabItem value="14" label="Super Mario Theme (Short)">
 
 ```plain
 24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
 ```
+</TabItem>
 
-**Mario Coin**
+<TabItem value="15" label="Mario Coin">
 
 ```plain
 24:d=8,o=6,b=200:b,e7
 ```
+</TabItem>
 
-**Mario Power-Up**
-
-```plain
-powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
-```
-
-**Nokia Ringtone**
+<TabItem value="16" label="Nokia Ringtone">
 
 ```plain
 24:d=4,o=5,b=180:8e6,8d6,f#,g#,8c#6,8b,d,e,8b,8a,c#,e,2a
 ```
+</TabItem>
 
-**Morse Code CQ**
+<TabItem value="17" label="Mario Power-Up">
+
+```plain
+powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
+```
+</TabItem>
+
+<TabItem value="18" label="Morse Code CQ">
 
 ```plain
 24:d=16,o=6,b=120:8c,p,c,p,8c,p,c,4p,8c,p,8c,p,c,p,8c,8p
 ```
+</TabItem>
+
+</Tabs>
+
 ## Preguntas frecuentes (FAQ)
 
 ### Dispositivo bloqueado e instalación del bootloader
 
 **Descripción:**
 
-El dispositivo no responde, no hay LED y no se puede emparejar con tu App. Si encuentras que el dispositivo está completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
+El dispositivo no responde, no hay LED, no se puede emparejar con tu aplicación. Si encuentras que el dispositivo está completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
 
 :::danger note
 Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** lo desconectes durante el proceso de flasheo.
 :::
 
-- Paso 1: [Haz clic aquí para descargar el Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+- Paso 1: [Haz clic aquí para descargar el bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 
 - Paso 2: Entra en modo DFU
 
@@ -380,24 +401,48 @@ Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable
 
 - Paso 4: Flashea el firmware
 
-  Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) para flashear el firmware de la aplicación. Puede que necesites [entrar en modo DFU manualmente](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+  Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) para flashear el firmware de la aplicación. Es posible que necesites [entrar en modo DFU manualmente](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 ### No se puede entrar en DFU y entrar en modo DFU manualmente
 
-Conecta el dispositivo a tu PC y pulsa dos veces el botón `Reset`. El LED amarillo permanecerá encendido de forma fija y aparecerá en tu PC una nueva unidad USB llamada `Tracker L1`.
+Conecta el dispositivo a tu PC, pulsa dos veces el botón `Reset`. El LED amarillo permanecerá encendido de forma fija y aparecerá en tu PC una nueva unidad USB llamada `Tracker L1`.
 
 ### Salir del modo DFU
 
-Pulsa una vez el botón `Reset` para salir del modo DFU.
+Pulsa el botón `Reset` una vez para salir del modo DFU.
+
+### No se puede comunicar en el canal primario
+
+Si el dispositivo no puede comunicarse con los nodos cercanos o enviar mensajes, primero comprueba que la región LoRa y el preajuste del módem coinciden con los nodos circundantes. También debes comprobar si la **PSK** predeterminada se ha cambiado. Una PSK diferente en el canal primario impedirá que el dispositivo se comunique con otros nodos en ese canal.
+
+La forma más sencilla de encontrar este problema es a través de la aplicación móvil. Abre la aplicación, conéctate al dispositivo de destino y luego ve a `Settings` -> `Channels`. Selecciona el canal primario y comprueba el valor de **PSK**. Si es diferente al de los nodos circundantes, actualízalo al mismo PSK y guarda la configuración del canal.
+
+<Tabs>
+<TabItem value="ios" label="IOS App">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problems_ios.png" alt="Check primary channel PSK in the iOS app" width={500} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="android" label="Android App">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problem_and.png" alt="Check primary channel PSK in the Android app" width={900} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+**Solución**
+
+Si no estás seguro de qué ajustes se cambiaron, restaura el dispositivo a su configuración predeterminada siguiendo la guía de [restablecimiento de fábrica](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#factory-reset). Si solo se cambió la PSK, vuelve a establecerla en `AQ==`.
 
 ### El dispositivo se apaga automáticamente
 
 #### Descripción
 
-- Después de encender el dispositivo, se apagará o reiniciará automáticamente al cabo de un rato.
-- El registro del puerto serie funciona durante un rato y luego se detiene.
+- Después de encender el dispositivo, se apagará o reiniciará automáticamente después de un tiempo.
+- El registro del puerto serie funcionó durante un tiempo y luego se detuvo.
 
- Esto puede deberse a reiniciar o apagar el dispositivo manualmente y a la fuerza cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
+ Esto posiblemente sea causado por reiniciar o apagar el dispositivo de forma manual y forzada cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
 
 #### Solución de problemas
 
@@ -405,36 +450,34 @@ Pulsa una vez el botón `Reset` para salir del modo DFU.
 
 ### Restablecimiento de fábrica
 
-Si quieres restaurar la configuración predeterminada, puedes hacer un restablecimiento de fábrica. Hay dos métodos para hacerlo.
+Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para realizar el restablecimiento de fábrica.
 
 - [haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para ver el vídeo. Necesitas realizar un borrado de la memoria flash y luego volver a flashear el firmware más reciente.
 
-- Haz clic en el botón `Factory Reset` en la App. El dispositivo se reiniciará automáticamente con la configuración de fábrica.
+- Haz clic en el botón `Factory Reset` en la app. El dispositivo se reiniciará automáticamente con la configuración de fábrica.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### Fallo en mensaje directo
+### Error en mensaje directo
 
 #### Restablecer NodeDB
 
-NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con un determinado nodo, puede deberse a que tu NodeDB haya almacenado información obsoleta de ese nodo. Necesitarás actualizarla.
+NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con cierto nodo, puede deberse a que tu NodeDB haya almacenado información desactualizada de ese nodo. Necesitarás actualizarla.
 
 Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDBmerge.png" alt="Configuración del dispositivo y botón Reset NodeDB en la app" width={600} height="auto" /></p>
 
 #### Intercambiar información de usuario
 
-Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos de la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
+Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo en Configuración" width={300} height="auto" /></p>
 
 #### Regenerar clave privada
 
-Dos nodos necesitan conocer su clave privada entre sí para poder comunicarse. Si un nodo sigue fallando en la transmisión de mensajes privados, intenta regenerar su clave privada.
+Dos nodos necesitan conocer su clave privada entre sí para poder comunicarse entre ellos. Si un nodo sigue fallando en la transmisión de mensajes privados, intenta regenerar la clave privada para él.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada de dispositivo en Configuración" width={600} height="auto" /></p>
 
 Reinicia el dispositivo defectuoso para que la configuración surta efecto.
 
@@ -444,11 +487,11 @@ Después de la regeneración de la clave, el otro dispositivo necesita volver a 
 
 ### Calidad de la señal
 
-- **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con una SNR inferior a -10 dB indica un rendimiento deficiente.
+- **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
 
 - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
 
-      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con una interferencia mínima.
+      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstáculos, con una interferencia mínima.
 
 ### Antena compatible
 

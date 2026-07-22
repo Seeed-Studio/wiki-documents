@@ -13,12 +13,12 @@ keywords:
 slug: /rebot_arm_b601_dm_ros2_integration
 sku: 100065783, 100095532
 last_update:
-  date: 2026-05-22
+  date: 2026-05-29
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-05-22'
+updatedAt: '2026-07-07'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/
 ---
 
@@ -28,13 +28,20 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/
   <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </p>
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+<br />
+
 <p align="center">
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
     <img src="https://img.shields.io/badge/ROS2-Humble | Jazzy-blue.svg" alt="ROS2 Humble | Jazzy" />
     <img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python Version" />
-    <img src="https://img.shields.io/badge/Version-v0.2.2-brightgreen.svg" alt="Version v0.2.2" />
+    <img src="https://img.shields.io/badge/Version-v0.2.3-brightgreen.svg" alt="Version v0.2.3" />
     <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
 </p>
 
@@ -160,6 +167,14 @@ Please refer to the official ROS2 documentation:
 - [ROS2 Jazzy Ubuntu Installation](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
 - [ROS2 Humble Ubuntu Installation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 
+:::tip
+
+If you are using Ubuntu 24.04, you should install ROS 2 Jazzy.
+
+If you are using Ubuntu 22.04, you should install ROS 2 Humble.
+
+:::
+
 ### Step 2. Install Build Tools and ROS Dependencies
 
 Install colcon, pip, Git, and the ROS packages required by this workspace:
@@ -244,11 +259,7 @@ rebotarmcontroller MoveToPose
 ## Quick Start
 
 :::caution
-Before using the robot, note the following: **The arm controller has a high
-degree of freedom. Before enabling the controller or powering the arm, make
-sure the workspace is clear of people and obstacles. Review every motion
-command carefully to avoid accidents. Dangerous operation is strictly
-prohibited; you are responsible for any consequences.**
+Before using the robot, note the following: **The arm controller has a high degree of freedom. Before enabling the controller or powering the arm, make sure the workspace is clear of people and obstacles. Review every motion command carefully to avoid accidents. Dangerous operation is strictly prohibited; you are responsible for any consequences.**
 :::
 
 ### Start the Full System
@@ -260,11 +271,19 @@ The full bringup launches:
 - Optional RViz
 
 ```bash
-cd ~/seeed/rebotarm_ros2
-source /opt/ros/jazzy/setup.bash
+cd your/path/to/rebotarm_ros2
 source install/setup.bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0  #Do not open the RViz visualization interface when starting communication
 ```
+
+:::tip
+Every time you open a new terminal, you need to run the following two commands first
+
+```bash
+cd your/path/to/rebotarm_ros2
+source install/setup.bash
+```
+:::
 
 If your serial port is not `/dev/ttyACM0`, replace it with the actual device name:
 
@@ -275,7 +294,7 @@ ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM1
 ### Start RViz Visualization
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0 use_rviz:=true
+ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0 use_rviz:=true   #Open the RViz visualization interface when starting communication
 ```
 
 If the model appears too small in RViz, adjust the view from the `Views` panel on the left:
@@ -290,7 +309,7 @@ If the model appears too small in RViz, adjust the view from the `Views` panel o
 If URDF and RViz are not needed:
 
 ```bash
-ros2 launch rebotarm_bringup driver_only.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
 ```
 
 You can also run the node directly:
@@ -298,6 +317,10 @@ You can also run the node directly:
 ```bash
 ros2 run rebotarmcontroller reBotArmController
 ```
+
+:::tip
+Unlike `driver.launch.py`, which passes configuration files from `rebotarm_bringup/config`, running the controller directly falls back to the default SDK arm configuration. For normal use, launching through ROS is recommended.
+:::
 
 ## ROS2 Namespace
 
@@ -399,8 +422,7 @@ ros2 service call /rebotarm/disable std_srvs/srv/Trigger
 All examples assume that `reBotArmController` is already running:
 
 ```bash
-cd ~/seeed/rebotarm_ros2
-source /opt/ros/jazzy/setup.bash
+cd your/path/to/rebotarm_ros2
 source install/setup.bash
 ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
 ```
@@ -512,9 +534,7 @@ Low-level command topics are intended for debugging and experiments. They do not
 
 ## MoveIt 2
 
-MoveIt 2 is the motion planning framework used here for inverse kinematics,
-collision checking, trajectory planning and execution. The demos are separated
-into their own package so application flows stay isolated from the base driver.
+MoveIt 2 is the motion planning framework used here for inverse kinematics, collision checking, trajectory planning and execution. The demos are separated into their own package so application flows stay isolated from the base driver.
 For more details, see the official [MoveIt 2 Documentation](https://moveit.picknik.ai/main/index.html).
 
 MoveIt-related content is split into two packages:
@@ -524,32 +544,28 @@ MoveIt-related content is split into two packages:
 | `rebotarm_moveit_config` | Robot model, SRDF, kinematics, joint limits, controller and RViz config |
 | `rebotarm_moveit_demos` | Application demos based on MoveIt 2 |
 
-The MoveIt environment uses simulated hardware through `ros2_control` and
-`move_group` for planning and execution. It is intended for validating the
-model, IK, trajectory planning and demo flow in RViz.
+The MoveIt environment uses simulated hardware through `ros2_control` and `move_group` for planning and execution. It is intended for validating the model, IK, trajectory planning and demo flow in RViz.
 
-This repository also supports real hardware. Before connecting real hardware,
-make sure the arm zero configuration, joint directions, joint limits, velocity
-limits and gripper range are all correct, or keep the default repository
-configuration.
+This repository also supports real hardware. Before connecting real hardware, make sure the arm zero configuration, joint directions, joint limits, velocity limits and gripper range are all correct, or keep the default repository configuration.
 
 ### MoveIt Environment Setup
 
-Make sure the ROS2 environment is available first. You can install packages for
-the currently sourced ROS distribution through `ROS_DISTRO`:
+Make sure the ROS2 environment is available first. You can install packages for the currently sourced ROS distribution through `ROS_DISTRO`:
 
 ```bash
 sudo apt update
 sudo apt install -y \
   ros-${ROS_DISTRO}-moveit \
   ros-${ROS_DISTRO}-moveit-configs-utils \
+  ros-${ROS_DISTRO}-moveit-kinematics \
+  ros-${ROS_DISTRO}-moveit-planners-ompl \
+  ros-${ROS_DISTRO}-moveit-simple-controller-manager \
   ros-${ROS_DISTRO}-ros2-control \
   ros-${ROS_DISTRO}-ros2-controllers \
   ros-${ROS_DISTRO}-xacro
 ```
 
-The MoveIt config and demos are included in this workspace. After installing
-dependencies, rebuild the workspace:
+The MoveIt config and demos are included in this workspace. After installing dependencies, rebuild the workspace:
 
 ```bash
 cd your/path/to/rebotarm_ros2
@@ -573,8 +589,7 @@ rebotarm_moveit_demos pick_place
 
 ### Use MoveIt
 
-MoveIt planning can be used through the RViz GUI or through ROS nodes, in both
-simulation and real scenes.
+MoveIt planning can be used through the RViz GUI or through ROS nodes, in both simulation and real scenes.
 
 #### Use MoveIt in simulation
 
@@ -596,8 +611,7 @@ By default this starts:
 - `gripper_controller`
 - RViz with the MoveIt MotionPlanning plugin
 
-RViz opens automatically and loads the robot URDF model. You can control motion
-through the panel on the left side of the GUI.
+RViz opens automatically and loads the robot URDF model. You can control motion through the panel on the left side of the GUI.
 
 To run the MoveIt environment without RViz:
 
@@ -607,8 +621,7 @@ ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
 
 #### Use MoveIt with reBotArm hardware
 
-For the real robot, first start the controller with the hardware interface
-instead of the virtual controller, then start the hardware MoveIt environment:
+For the real robot, first start the controller with the hardware interface instead of the virtual controller, then start the hardware MoveIt environment:
 
 ```bash
 ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
@@ -622,9 +635,7 @@ source install/setup.bash
 ros2 launch rebotarm_moveit_config hardware.launch.py
 ```
 
-To repeat: before running any demo on real hardware, make sure the workspace is
-clear of people and obstacles, verify the planned path in RViz, and be ready to
-stop the controller at any time.
+To repeat: before running any demo on real hardware, make sure the workspace is clear of people and obstacles, verify the planned path in RViz, and be ready to stop the controller at any time.
 
 ### Run the draw-square demo
 

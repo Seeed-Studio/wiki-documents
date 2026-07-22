@@ -11,7 +11,7 @@ last_update:
   date: 03/26/2026
   author: Kasun Thushara
 createdAt: '2026-03-26'
-updatedAt: '2026-05-26'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/respeaker_flex_introduction/
 ---
 # Getting Started with reSpeaker Flex
@@ -148,6 +148,13 @@ The system supports two interchangeable microphone array configurations: a **cir
 | **Interface** | FPC connector; cable can be routed from the side or rear |
 | **Mounting** | 2 × M3 mounting holes |
 
+
+:::note
+
+To ensure optimal voice pickup performance and proper operation of the audio algorithms, please make sure the Microphone Port (Mic Inlet / Sound Hole) on the back side of the device is facing toward the sound source. The microphone port is located on the side with the Seeed Studio logo printed on it. 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
+:::
+
 ### XIAO ESP32S3 Support
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/xiao_esp32s3.png" alt="pir" width={700} height="auto" /></p>
@@ -224,7 +231,7 @@ Here you can see how to connect speakers using either the 3.5mm AUX headphone ja
 
 #### Safe Mode
 
-**Safe Mode** is a special recovery mode on the **reSpeaker Flex** that allows you to flash firmware via **USB DFU** or I2C for devices like the Raspberry Pi and **ESP32**.
+**Safe Mode** is a special recovery mode on the **reSpeaker Flex** that allows you to flash firmware via **USB DFU** or I2C for devices like  **ESP32**.
 
 If you've previously flashed the **I2S firmware** and want to switch back to the **USB firmware**, you can enter **Safe Mode** and reflash the USB firmware using **USB DFU**.
 
@@ -256,8 +263,7 @@ If you've previously flashed the **I2S firmware** and want to switch back to the
 - **Power off** the device completely.
 - **Press and hold the Boot button**.
 - While holding the **Boot button, reconnect the power.**
-- The **red LED will start blinking**, confirming that the device has entered **Safe Mode.**
-Now the device is running the **Safe Mode firmware stored in the Factory partition.**
+Use the DFU util command line tool to check the DFU partitions; see the **Install DFU Util** section below for more details.
 
 ### Update firmware
 

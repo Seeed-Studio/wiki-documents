@@ -1,39 +1,50 @@
 ---
-description: Livro de receitas Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — leitura/gravação do RTC PCF8563, estratégias de baixo consumo com deep sleep e gravação de áudio do microfone PDM no cartão SD (apenas E1001 / E1002 / E1003).
-title: 'Livro de Receitas Arduino: RTC, Baixo Consumo & Áudio (reTerminal E Série)'
+description: Livro de receitas Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — leitura/gravação do RTC PCF8563, estratégias de baixo consumo com deep sleep, gravação de áudio do microfone PDM no cartão SD (E1001 / E1002 / E1003) e desenho com toque capacitivo (apenas E1003).
+title: 'Livro de Receitas Arduino: RTC, Baixo Consumo, Áudio e Toque (reTerminal E Series)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals_2
 sidebar_position: 3
-sidebar_label: Arduino – RTC, Energia & Áudio
+sidebar_label: Arduino – RTC, Energia, Áudio e Toque
 last_update:
   date: 05/27/2026
   author: Citric
 createdAt: '2026-05-27'
-updatedAt: '2026-05-27'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals_2/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Livro de Receitas Arduino: RTC, Baixo Consumo & Áudio (reTerminal E Série)
+# Livro de Receitas Arduino: RTC, Baixo Consumo, Áudio e Toque (reTerminal E Series)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" style={{width:600, height:'auto'}}/></div>
 
-:::tip Outros livros de receitas desta linha de produtos
-- **[Livro de Receitas Arduino: Tela ePaper](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino)** — renderização de texto, gráficos e imagens na tela ePaper.
-- **[Livro de Receitas Arduino: Periféricos Embarcados](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals)** — LED, buzzer, botões, sensor SHT4x, monitor de bateria, cartão microSD e o pipeline de imagens do cartão SD.
+:::tip Teste os demos sem configurar um ambiente de desenvolvimento
+Se você quiser visualizar rapidamente os resultados do projeto ou testar o firmware demo básico antes de configurar um ambiente de desenvolvimento, abra o **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Você pode escolher um dispositivo reTerminal E Series compatível e gravar o firmware de demonstração diretamente a partir de um navegador.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
+:::tip Outros livros de receitas desta série
+- **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino)** — renderização de texto, gráficos e imagens na tela de ePaper.
+- **[Arduino Cookbook: Onboard Peripherals](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals)** — LED, buzzer, botões, sensor SHT4x, monitor de bateria, cartão microSD e o pipeline de imagens via cartão SD.
 :::
 
 ## Introdução
 
-Este é o segundo livro de receitas de periféricos para o reTerminal E Série. Enquanto o [primeiro livro de receitas de periféricos](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals) cobre os periféricos básicos de E/S (LED, buzzer, botões, SHT4x, bateria, cartão SD), esta página aprofunda em três tópicos mais avançados:
+Este é o segundo livro de receitas de periféricos para a reTerminal E Series. Enquanto o [primeiro livro de receitas de periféricos](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals) cobre os periféricos básicos de E/S (LED, buzzer, botões, SHT4x, bateria, cartão SD), esta página aprofunda em quatro tópicos mais avançados:
 
-- **Relógio de Tempo Real (RTC)** — o chip RTC **PCF8563** embarcado, alimentado por uma bateria tipo moeda CR1220, que mantém a hora mesmo quando a bateria principal é removida.
+- **Relógio de Tempo Real (RTC)** — o chip RTC **PCF8563** onboard, alimentado por uma bateria tipo moeda CR1220, que mantém a hora mesmo quando a bateria principal é removida.
 - **Modos de Baixo Consumo** — deep sleep, light sleep e estratégias de despertar por GPIO para estender a vida útil da bateria de dias para meses.
-- **Microfone PDM** — captura de áudio através do microfone digital PDM embarcado (apenas E1001 / E1002 / E1003; o E1004 não possui microfone) e salvamento de arquivos WAV no cartão microSD.
+- **Microfone PDM** — captura de áudio através do microfone digital PDM onboard (apenas E1001 / E1002 / E1003; o E1004 não possui microfone) e salvamento de arquivos WAV no cartão microSD.
+- **Tela sensível ao toque** — uso do painel de toque capacitivo onboard no E1003 (modelo de 10,3") para desenhar pontos na tela de ePaper. Apenas o E1003 possui painel de toque.
 
-Todos os sketches de exemplo deste livro de receitas vêm do repositório [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) e **não exigem instalação de bibliotecas adicionais** — tudo utiliza as APIs internas do ESP32.
+Todos os sketches de exemplo deste livro de receitas vêm do repositório [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D). Os sketches de RTC, baixo consumo e microfone **não exigem instalação adicional de bibliotecas** — tudo usa as APIs internas do ESP32. O sketch de toque requer a biblioteca **Seeed_GFX**.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D" target="_blank">
@@ -43,7 +54,7 @@ Todos os sketches de exemplo deste livro de receitas vêm do repositório [OSHW-
 
 ### Materiais Necessários
 
-Este livro de receitas se aplica ao reTerminal E Série. Escolha qualquer dispositivo que você tenha em mãos:
+Este livro de receitas se aplica à reTerminal E Series. Escolha o dispositivo que você tiver em mãos:
 
 <div class="table-center">
   <table align="center">
@@ -88,14 +99,14 @@ Este livro de receitas se aplica ao reTerminal E Série. Escolha qualquer dispos
 
 Antes de executar qualquer exemplo abaixo, você já deve ter:
 
-- A **IDE Arduino** instalada com o **pacote de placas ESP32** (≥ 3.0 para microfone PDM) e a placa **XIAO_ESP32S3** selecionada.
+- A **IDE Arduino** instalada com o **pacote de placas ESP32** (≥ 3.0 para o microfone PDM) e a placa **XIAO_ESP32S3** selecionada.
 - **PSRAM** configurada como **OPI PSRAM** e **Flash** configurada como **8 MB** no menu Tools.
 - Um **cabo de dados USB-C** funcional e a porta serial correta selecionada.
-- Verificado que você consegue gravar um sketch básico no dispositivo — veja a preparação do ambiente em [Livro de Receitas Arduino: Tela ePaper](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino#preparação-do-ambiente) se você ainda não fez isso.
+- Verificado que você consegue gravar um sketch básico no dispositivo — veja a preparação do ambiente em [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino#preparação-do-ambiente) se ainda não tiver feito isso.
 
-Todos os sketches deste livro de receitas imprimem informações de depuração através de `Serial1` nos pinos **GPIO44 (RX) / GPIO43 (TX)** a **115200 baud** — esta é a ponte USB-UART de transporte, **não** o USB-CDC `Serial` que a IDE Arduino abre automaticamente. Abra o Monitor Serial da Arduino IDE e selecione a porta e taxa de baud correspondentes para acompanhar.
+Todos os sketches deste livro de receitas imprimem informações de depuração através de `Serial1` nos pinos **GPIO44 (RX) / GPIO43 (TX)** a **115200 baud** — esta é a ponte USB-UART de transporte, **não** o `Serial` USB-CDC que a IDE Arduino abre automaticamente. Abra o Monitor Serial da Arduino IDE e selecione a porta e taxa de baud correspondentes para acompanhar.
 
-### Visão Geral de Compatibilidade de Hardware
+### Visão Geral da Compatibilidade de Hardware
 
 Nem todos os recursos deste livro de receitas estão disponíveis em todos os quatro modelos. A tabela abaixo resume o que você pode usar:
 
@@ -130,9 +141,16 @@ Nem todos os recursos deste livro de receitas estão disponíveis em todos os qu
       <td>✅</td>
     </tr>
     <tr>
-      <td>Gravação com Microfone PDM</td>
+      <td>Gravação com microfone PDM</td>
       <td>✅</td>
       <td>✅</td>
+      <td>✅</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Painel de toque capacitivo</td>
+      <td>❌</td>
+      <td>❌</td>
       <td>✅</td>
       <td>❌</td>
     </tr>
@@ -141,7 +159,7 @@ Nem todos os recursos deste livro de receitas estão disponíveis em todos os qu
 
 ## Relógio de Tempo Real (RTC)
 
-Todo modelo da linha reTerminal E Série inclui um chip de relógio de tempo real **PCF8563** da NXP, com seu próprio cristal de 32,768 kHz e um suporte para **bateria tipo moeda CR1220** que mantém o relógio funcionando mesmo quando a bateria principal é removida ou totalmente descarregada.
+Todo modelo da reTerminal E Series inclui um chip de relógio de tempo real **PCF8563** da NXP, com seu próprio cristal de 32,768 kHz e um suporte para **bateria tipo moeda CR1220** que mantém o tempo correndo mesmo quando a bateria principal é removida ou totalmente descarregada.
 
 :::warning Bateria não incluída — instale você mesmo
 A bateria tipo moeda CR1220 **não** é enviada com o dispositivo. Você precisa comprar uma bateria CR1220 separadamente e instalá-la antes que o RTC possa manter a hora entre ciclos de energia.
@@ -149,7 +167,7 @@ A bateria tipo moeda CR1220 **não** é enviada com o dispositivo. Você precisa
 
 ### Instalando a Bateria CR1220
 
-O suporte da bateria CR1220 está localizado na **parte de trás da placa de circuito (PCB)**. As etapas de desmontagem diferem ligeiramente entre os modelos:
+O suporte da bateria CR1220 está localizado na **parte de trás da PCB**. As etapas de desmontagem diferem ligeiramente entre os modelos:
 
 <Tabs>
 <TabItem value="e1001_e1002" label="E1001 / E1002" default>
@@ -164,7 +182,7 @@ Desconecte o cabo USB-C e certifique-se de que o dispositivo esteja completament
 
 **Passo 2 — Remova a tampa traseira**
 
-Remova os quatro parafusos no painel traseiro e retire a tampa traseira para expor a PCB.
+Remova os quatro parafusos no painel traseiro e retire a tampa de trás para expor a PCB.
 
 **Passo 3 — Localize o suporte da bateria**
 
@@ -176,7 +194,7 @@ Coloque a bateria CR1220 no suporte com o **lado positivo (+) voltado para cima*
 
 **Passo 5 — Refaça a montagem**
 
-Recoloque a tampa traseira e aperte os quatro parafusos. O RTC agora está alimentado pela bateria e manterá a hora mesmo quando a alimentação principal for desconectada.
+Recoloque a tampa traseira e aperte os quatro parafusos. O RTC agora é alimentado pela bateria e manterá a hora mesmo quando a alimentação principal estiver desconectada.
 
 </TabItem>
 <TabItem value="e1003" label="E1003">
@@ -191,11 +209,11 @@ Desconecte o cabo USB-C e certifique-se de que o dispositivo esteja completament
 
 **Passo 2 — Remova a tampa traseira**
 
-Remova os parafusos no painel traseiro e retire a tampa traseira para expor a PCB.
+Remova os parafusos do painel traseiro e retire a tampa traseira para expor a placa de circuito impresso (PCB).
 
 **Passo 3 — Localize o suporte da bateria**
 
-Encontre o suporte da bateria tipo moeda CR1220 na PCB (marcado como `BT2` ou `CR1220`).
+Encontre o suporte para bateria tipo moeda CR1220 na PCB (marcado como `BT2` ou `CR1220`).
 
 **Passo 4 — Insira a bateria**
 
@@ -203,7 +221,7 @@ Coloque a bateria CR1220 no suporte com o **lado positivo (+) voltado para cima*
 
 **Passo 5 — Refaça a montagem**
 
-Recoloque a tampa traseira e aperte os parafusos. O RTC agora está alimentado pela bateria e manterá a hora mesmo quando a alimentação principal for desconectada.
+Recoloque a tampa traseira e aperte os parafusos. O RTC agora é alimentado pela bateria e manterá a hora mesmo quando a alimentação principal estiver desconectada.
 
 </TabItem>
 <TabItem value="e1004" label="E1004">
@@ -212,25 +230,25 @@ Recoloque a tampa traseira e aperte os parafusos. O RTC agora está alimentado p
 <iframe style={{width:'80%', aspectRatio:'16/9'}} src="https://files.seeedstudio.com/wiki/reterminal_e10xx/res/rtc_1004.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-**Etapa 1 — Desligue o dispositivo**
+**Passo 1 — Desligue o dispositivo**
 
 Desconecte o cabo USB-C e certifique-se de que o dispositivo esteja completamente desligado.
 
-**Etapa 2 — Remova a tampa traseira**
+**Passo 2 — Remova a tampa traseira**
 
-Remova os parafusos ao redor do perímetro do painel traseiro e levante cuidadosamente a tampa traseira para expor a placa de circuito (PCB).
+Remova os parafusos ao redor do perímetro do painel traseiro e retire cuidadosamente a tampa traseira para expor a placa de circuito impresso (PCB).
 
-**Etapa 3 — Localize o suporte da bateria**
+**Passo 3 — Localize o suporte da bateria**
 
 Encontre o suporte para bateria tipo moeda CR1220 na PCB (marcado como `BT2` ou `CR1220`).
 
-**Etapa 4 — Insira a bateria**
+**Passo 4 — Insira a bateria**
 
 Coloque a bateria CR1220 no suporte com o **lado positivo (+) voltado para cima**. Pressione suavemente até que ela se encaixe no lugar.
 
-**Etapa 5 — Refaça a montagem**
+**Passo 5 — Refaça a montagem**
 
-Recoloque a tampa traseira e aperte todos os parafusos. O RTC agora possui bateria de backup e manterá a hora mesmo quando a alimentação principal estiver desconectada.
+Recoloque a tampa traseira e aperte todos os parafusos. O RTC agora é alimentado pela bateria e manterá a hora mesmo quando a alimentação principal estiver desconectada.
 
 </TabItem>
 </Tabs>
@@ -249,7 +267,7 @@ Recoloque a tampa traseira e aperte todos os parafusos. O RTC agora possui bater
     </tr>
     <tr>
       <td>Barramento</td>
-      <td>I2C — endereço <strong>0x51</strong> (fixo em silício)</td>
+      <td>I2C — endereço <strong>0x51</strong> (fixo no silício)</td>
     </tr>
     <tr>
       <td>SCL</td>
@@ -269,7 +287,7 @@ Recoloque a tampa traseira e aperte todos os parafusos. O RTC agora possui bater
     </tr>
     <tr>
       <td>Sinalizador VL</td>
-      <td>Definido pelo chip quando a tensão da bateria de backup está muito baixa; indica que a hora não é confiável</td>
+      <td>Definido pelo chip quando a tensão da bateria de backup está muito baixa; indica que a hora é pouco confiável</td>
     </tr>
   </table>
 </div>
@@ -718,7 +736,7 @@ void loop()
 
 O código segue uma sequência de inicialização em 5 etapas em `setup()`:
 
-1. **Inicializar o barramento I2C** a 400 kHz nos GPIO19 (SDA) / GPIO20 (SCL) — os pinos I2C padrão do reTerminal, compartilhados com o sensor SHT4x.
+1. **Inicializar o barramento I2C** a 400 kHz nos GPIO19 (SDA) / GPIO20 (SCL) — os pinos I2C padrão do reTerminal compartilhados com o sensor SHT4x.
 2. **Sondar o PCF8563** no endereço 0x51 para verificar se o chip está respondendo.
 3. **Inicializar o chip** — limpar o bit STOP (para que o oscilador funcione), limpar os flags de alarme e desabilitar o pino CLKOUT para economizar energia.
 4. **Decidir se deve ajustar a hora** — o PCF8563 possui um **flag VL (Voltage Low)** que é definido automaticamente quando a tensão da bateria de backup cai demais. Se VL estiver definido (primeira inicialização ou bateria substituída), o código grava a hora inicial; caso contrário, mantém a hora armazenada.
@@ -762,7 +780,7 @@ Se a bateria de backup estiver esgotada ou ausente, você verá o aviso `[VL: ba
 
 ## Modos de baixo consumo
 
-O ESP32-S3 suporta vários estados de energia. Os dois mais úteis para aplicações de ePaper alimentadas por bateria são **deep sleep** e **light sleep**:
+O ESP32-S3 oferece vários estados de energia. Os dois mais úteis para aplicações de ePaper alimentadas por bateria são **deep sleep** e **light sleep**:
 
 <div class="table-center">
   <table align="center">
@@ -784,7 +802,7 @@ O ESP32-S3 suporta vários estados de energia. Os dois mais úteis para aplicaç
     </tr>
     <tr>
       <td><strong>Light Sleep</strong></td>
-      <td>Pausada</td>
+      <td>Pausado</td>
       <td>Desligado</td>
       <td>Retida</td>
       <td>Ligado</td>
@@ -888,7 +906,7 @@ void loop()
 ### Como o código funciona
 
 1. **`setup()` inicia** — incrementa o contador de inicializações `RTC_DATA_ATTR` (essa variável é mantida no domínio de memória RTC do ESP32-S3, portanto sobrevive ao deep sleep).
-2. **Imprime o status** — mostra a contagem de inicializações e o motivo pelo qual o chip acordou (botão GPIO vs reset por energização).
+2. **Imprime o status** — mostra a contagem de inicializações e por que o chip acordou (botão GPIO vs reset por energização).
 3. **Aguarda** `SLEEP_DELAY_SEC` segundos (padrão 5) — isso lhe dá tempo para ler a saída serial.
 4. **Configura a fonte de despertar** — `esp_sleep_enable_ext1_wakeup()` registra o pino do botão (KEY0). O nível de despertar é `LOW` porque os botões são ativos em nível baixo com pull-ups de hardware.
 5. **Habilita o pull-up do RTC** — os pull-ups GPIO normais são desabilitados durante o deep sleep. `rtc_gpio_pullup_en()` usa o pull-up do domínio RTC para manter a linha do botão em nível ALTO enquanto estiver dormindo.
@@ -946,7 +964,7 @@ Um padrão comum para aplicações com ePaper é:
 2. **Ler o RTC** para marcação de tempo.
 3. **Ler sensores** (SHT4x, bateria, etc.).
 4. **Conectar ao Wi-Fi** e buscar dados — se necessário.
-5. **Atualizar o display de ePaper** com as novas informações.
+5. **Atualizar o display ePaper** com as novas informações.
 6. **Voltar para deep sleep** até o próximo despertar agendado.
 
 Para adicionar um **despertar por timer** além do despertar por botão, basta adicionar:
@@ -992,10 +1010,10 @@ Os reTerminal E1001 / E1002 / E1003 incluem um microfone digital **PDM (Pulse De
   </table>
 </div>
 
-Os pinos são os mesmos nos E1001, E1002 e E1003. O pino de habilitação de alimentação do microfone (`GPIO38`) controla um chaveador de carga (TPS22916CYFPR) — você **deve** acioná‑lo em nível ALTO antes de gravar e pode colocá‑lo em nível BAIXO depois para economizar energia.
+Os pinos são os mesmos nos E1001, E1002 e E1003. O pino de habilitação de alimentação do microfone (`GPIO38`) controla um chaveador de carga (TPS22916CYFPR) — você **deve** colocá-lo em nível ALTO antes de gravar e pode colocá-lo em nível BAIXO depois para economizar energia.
 
 :::note Arduino ESP32 ≥ 3.0 necessário
-O sketch usa a API ESP-IDF 5.x PDM-RX (`driver/i2s_pdm.h`), que só está disponível na versão 3.0 ou superior do core Arduino ESP32. Certifique‑se de que o pacote da sua placa esteja atualizado.
+O sketch usa a API ESP-IDF 5.x PDM-RX (`driver/i2s_pdm.h`), que só está disponível na versão 3.0 ou superior do core Arduino ESP32. Certifique-se de que o pacote da sua placa esteja atualizado.
 :::
 
 ### Sketch completo: MicRecordToSD
@@ -1406,15 +1424,15 @@ void loop()
 1. **Piscar na inicialização** — o LED onboard pisca 3 vezes para confirmar que foi ligado.
 2. **Montar o cartão SD** — liga o slot SD via `PIN_SD_EN`, inicializa o barramento HSPI e chama `SD.begin()`.
 3. **Inicializar o microfone PDM** — este é um processo em 4 etapas:
-   - **Ligar** o microfone via `PIN_MIC_PWR_EN` (GPIO38) — aciona o switch de carga TPS22916 em nível ALTO.
+   - **Ligar** o microfone via `PIN_MIC_PWR_EN` (GPIO38) — aciona o interruptor de carga TPS22916 em nível ALTO.
    - **Criar um canal I2S** usando `i2s_new_channel()`.
    - **Configurar o modo PDM-RX** com `i2s_channel_init_pdm_rx_mode()` — define a taxa de amostragem, profundidade de bits (16 bits), modo mono e pinos GPIO.
    - **Habilitar e aquecer** — `i2s_channel_enable()` inicia o clock, depois 3 buffers DMA são lidos e descartados para permitir que o filtro de dizimação sigma-delta se estabilize.
 
 **Loop de gravação (`loop()`):**
 
-1. **Debounce do botão** — lê KEY0 com uma janela de debounce de 50 ms. Na borda de descida (pressionado):
-   - Se não estiver gravando → **inicia** a gravação (cria o arquivo WAV, grava um cabeçalho de espaço reservado).
+1. **Debounce do botão** — lê o KEY0 com uma janela de debounce de 50 ms. Na borda de descida (pressionado):
+   - Se não estiver gravando → **inicia** a gravação (cria o arquivo WAV, escreve o cabeçalho de espaço reservado).
    - Se estiver gravando → **para** a gravação (reescreve o cabeçalho com o tamanho real, fecha o arquivo).
 2. **Captura de áudio** — `i2s_channel_read()` lê um buffer DMA (512 amostras = 1024 bytes) por vez com um timeout de 200 ms. Os dados são gravados diretamente no cartão SD.
 3. **Parada automática** — se `MAX_RECORD_SECS` for atingido, a gravação é interrompida automaticamente.
@@ -1422,7 +1440,7 @@ void loop()
 
 ### Configuração específica do modelo
 
-O sketch exige que você descomente **um** `#define` na seção USER CONFIGURATION:
+O sketch exige que você descomente **uma** `#define` na seção USER CONFIGURATION:
 
 | Modelo | `#define` | pino SD_EN | pino do LED |
 |---|---|---|---|
@@ -1434,10 +1452,10 @@ O sketch exige que você descomente **um** `#define` na seção USER CONFIGURATI
 Para instruções sobre como inserir e formatar o cartão microSD, consulte a seção **[Using the MicroSD Card](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals#using-the-microsd-card)** no primeiro cookbook de periféricos.
 
 :::note
-A reTerminal E Series suporta cartões microSD de até **64 GB**, formatados como **FAT32**.
+A reTerminal E Series é compatível com cartões microSD de até **64 GB**, formatados como **FAT32**.
 :::
 
-:::tip E1004 é enviado com um cartão SD pré-instalado
+:::tip E1004 vem com um cartão SD pré-instalado
 A reTerminal **E1004** vem com um cartão microSD já inserido. Você não precisa comprar ou instalar um separadamente. Para outros modelos (E1001 / E1002 / E1003), você precisa inserir um cartão por conta própria.
 :::
 
@@ -1471,13 +1489,443 @@ Preparação rápida:
 <!-- TODO: Insert serial monitor screenshot here -->
 <!-- TODO: Insert photo of SD card with WAV files on PC -->
 
+## Tela sensível ao toque (apenas E1003)
+
+:::caution Recurso exclusivo da E1003
+O painel capacitivo sensível ao toque está disponível apenas na **reTerminal E1003** (modelo de 10,3"). As E1001, E1002 e E1004 **não** possuem painel sensível ao toque. Se você estiver usando qualquer modelo diferente da E1003, pule esta seção.
+:::
+
+A reTerminal E1003 possui um controlador de toque capacitivo **GT911** conectado via I2C. Combinado com o display ePaper em escala de cinza de 16 níveis, você pode criar aplicações interativas que respondem a toques na tela.
+
+### Visão geral do hardware
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>Parâmetro</th>
+      <th>Valor</th>
+    </tr>
+    <tr>
+      <td>Controlador de toque</td>
+      <td>GT911 (Goodix)</td>
+    </tr>
+    <tr>
+      <td>Barramento</td>
+      <td>I2C0 — endereço <strong>0x5D</strong> ou <strong>0x14</strong> (detectado automaticamente)</td>
+    </tr>
+    <tr>
+      <td>SDA</td>
+      <td>GPIO19</td>
+    </tr>
+    <tr>
+      <td>SCL</td>
+      <td>GPIO20</td>
+    </tr>
+    <tr>
+      <td>INT</td>
+      <td>GPIO2</td>
+    </tr>
+    <tr>
+      <td>RESET</td>
+      <td>GPIO48</td>
+    </tr>
+    <tr>
+      <td>Resolução do painel</td>
+      <td>1872 × 1404 px</td>
+    </tr>
+  </table>
+</div>
+
+O controlador de toque compartilha o mesmo barramento I2C (GPIO19/GPIO20) com o RTC PCF8563 e o sensor SHT4x.
+
+### Sketch completo: E1003_TouchDraw
+
+O sketch completo está disponível no repositório: [`examples/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/E1003_TouchDraw).
+
+<details>
+<summary>Clique para expandir o código completo de E1003_TouchDraw.ino</summary>
+
+```cpp
+#include <Arduino.h>
+#include <Wire.h>
+
+#include "driver.h"
+#include "TFT_eSPI.h"
+#include "TouchMapper.h"
+
+// ---------- Serial status logs (carrier USB-UART bridge) ----------
+#define PIN_SERIAL_RX       44
+#define PIN_SERIAL_TX       43
+#define LOG                 Serial1
+
+// ---------- E1003 touch pins from the schematic ----------
+#define PIN_I2C_SDA         19
+#define PIN_I2C_SCL         20
+#define PIN_TOUCH_INT        2
+#define PIN_TOUCH_RESET     48
+
+// ---------- GT911 register map ----------
+#define GT911_ADDR_1      0x5D
+#define GT911_ADDR_2      0x14
+#define GT911_REG_COMMAND 0x8040
+#define GT911_REG_PRODUCT 0x8140
+#define GT911_REG_STATUS  0x814E
+#define GT911_REG_POINT1  0x814F
+#define GT911_REG_MAX_X   0x8048
+
+#define TOUCH_POLL_MS       30
+#define DRAW_MIN_MS        450
+#define DRAW_MIN_DELTA_PX   12
+#define DOT_RADIUS          10
+
+#define E1003_PANEL_WIDTH   1872
+#define E1003_PANEL_HEIGHT  1404
+
+// Set to 1 only when the panel has obvious ghosting and you want a slow
+// black-white cleanup before the example screen appears. Normal boot uses one
+// refresh in drawStartupScreen().
+#define STRONG_BOOT_CLEAR    0
+
+static EPaper display_;
+
+static uint8_t s_touchAddr = 0;
+static uint16_t s_touchMaxX = 1;
+static uint16_t s_touchMaxY = 1;
+static uint16_t s_lastRawX = 0;
+static uint16_t s_lastRawY = 0;
+static bool s_haveLastPoint = false;
+static TouchDisplayPoint s_lastPoint = {0, 0};
+static TouchDisplayPoint s_displaySize = {E1003_PANEL_WIDTH, E1003_PANEL_HEIGHT};
+static bool s_displayReady = false;
+static unsigned long s_lastPollMs = 0;
+static unsigned long s_lastDrawMs = 0;
+
+static void updateDisplaySize()
+{
+  resolveDisplaySize(static_cast<uint16_t>(display_.width()),
+                     static_cast<uint16_t>(display_.height()),
+                     E1003_PANEL_WIDTH,
+                     E1003_PANEL_HEIGHT,
+                     &s_displaySize);
+}
+
+static bool i2cRead16(uint8_t addr, uint16_t reg, uint8_t* buf, size_t len)
+{
+  Wire.beginTransmission(addr);
+  Wire.write(static_cast<uint8_t>(reg >> 8));
+  Wire.write(static_cast<uint8_t>(reg & 0xFF));
+  if (Wire.endTransmission(false) != 0) return false;
+
+  const uint8_t got = Wire.requestFrom(addr, static_cast<uint8_t>(len));
+  if (got != len) return false;
+
+  for (size_t i = 0; i < len; i++) {
+    buf[i] = static_cast<uint8_t>(Wire.read());
+  }
+  return true;
+}
+
+static bool i2cWrite16(uint8_t addr, uint16_t reg, uint8_t value)
+{
+  Wire.beginTransmission(addr);
+  Wire.write(static_cast<uint8_t>(reg >> 8));
+  Wire.write(static_cast<uint8_t>(reg & 0xFF));
+  Wire.write(value);
+  return Wire.endTransmission() == 0;
+}
+
+static void resetTouchController()
+{
+  pinMode(PIN_TOUCH_INT, INPUT);
+  pinMode(PIN_TOUCH_RESET, OUTPUT);
+
+  digitalWrite(PIN_TOUCH_RESET, LOW);
+  delay(20);
+  digitalWrite(PIN_TOUCH_RESET, HIGH);
+  delay(120);
+}
+
+static bool probeGt911(uint8_t addr)
+{
+  uint8_t product[4] = {};
+  if (!i2cRead16(addr, GT911_REG_PRODUCT, product, sizeof(product))) {
+    return false;
+  }
+  LOG.printf("[touch] GT9xx found at 0x%02X, product: %c%c%c%c\n",
+             addr, product[0], product[1], product[2], product[3]);
+  return true;
+}
+
+static void readTouchLimits()
+{
+  uint8_t raw[4] = {};
+  if (!i2cRead16(s_touchAddr, GT911_REG_MAX_X, raw, sizeof(raw))) {
+    s_touchMaxX = s_displaySize.x;
+    s_touchMaxY = s_displaySize.y;
+    return;
+  }
+
+  const uint16_t maxX = static_cast<uint16_t>(raw[0] | (raw[1] << 8));
+  const uint16_t maxY = static_cast<uint16_t>(raw[2] | (raw[3] << 8));
+
+  if (maxX > 0 && maxY > 0) {
+    s_touchMaxX = maxX;
+    s_touchMaxY = maxY;
+  }
+
+  LOG.printf("[touch] Touch range: %u x %u, display: %u x %u\n",
+             s_touchMaxX, s_touchMaxY, s_displaySize.x, s_displaySize.y);
+}
+
+static bool initTouch()
+{
+  resetTouchController();
+
+  if (probeGt911(GT911_ADDR_1)) {
+    s_touchAddr = GT911_ADDR_1;
+  } else if (probeGt911(GT911_ADDR_2)) {
+    s_touchAddr = GT911_ADDR_2;
+  } else {
+    LOG.println("[touch] GT9xx touch controller not found.");
+    return false;
+  }
+
+  readTouchLimits();
+  i2cWrite16(s_touchAddr, GT911_REG_COMMAND, 0x00);
+  i2cWrite16(s_touchAddr, GT911_REG_STATUS, 0x00);
+  pinMode(PIN_TOUCH_INT, INPUT_PULLUP);
+  LOG.println("[touch] Ready.");
+  return true;
+}
+
+static bool readTouchPoint(TouchDisplayPoint* point)
+{
+  uint8_t status = 0;
+  if (!i2cRead16(s_touchAddr, GT911_REG_STATUS, &status, 1)) {
+    LOG.println("[touch] Failed to read GT911 status register.");
+    return false;
+  }
+
+  const int intLevel = digitalRead(PIN_TOUCH_INT);
+  const uint8_t pointCount = status & 0x0F;
+  if (!gt911StatusRequestsRead(status, intLevel)) {
+    return false;
+  }
+
+  uint8_t raw[8] = {};
+  const bool ok = i2cRead16(s_touchAddr, GT911_REG_POINT1, raw, sizeof(raw));
+  i2cWrite16(s_touchAddr, GT911_REG_STATUS, 0x00);
+  if (!ok) {
+    LOG.println("[touch] Failed to read GT911 point data.");
+    return false;
+  }
+
+  if (pointCount == 0 && (raw[1] == 0 && raw[2] == 0 && raw[3] == 0 && raw[4] == 0)) {
+    return false;
+  }
+
+  const uint16_t rawX = static_cast<uint16_t>(raw[1] | (raw[2] << 8));
+  const uint16_t rawY = static_cast<uint16_t>(raw[3] | (raw[4] << 8));
+  s_lastRawX = rawX;
+  s_lastRawY = rawY;
+  const bool mapped = mapTouchToDisplay(rawX, rawY, s_touchMaxX, s_touchMaxY,
+                                        s_displaySize.x,
+                                        s_displaySize.y,
+                                        point);
+  return mapped;
+}
+
+static bool shouldDrawPoint(const TouchDisplayPoint& point)
+{
+  const unsigned long now = millis();
+  if (!s_haveLastPoint) return true;
+  if (now - s_lastDrawMs < DRAW_MIN_MS) return false;
+
+  const int dx = abs(static_cast<int>(point.x) - static_cast<int>(s_lastPoint.x));
+  const int dy = abs(static_cast<int>(point.y) - static_cast<int>(s_lastPoint.y));
+  return dx >= DRAW_MIN_DELTA_PX || dy >= DRAW_MIN_DELTA_PX;
+}
+
+static void drawStartupScreen(bool touchReady)
+{
+  if (!s_displayReady) return;
+
+  display_.fillSprite(TFT_WHITE);
+  display_.setTextDatum(TC_DATUM);
+  display_.setTextColor(TFT_BLACK, TFT_WHITE, true);
+  display_.setTextSize(5);
+  display_.drawString("E1003 Touch Draw", display_.width() / 2, 90);
+
+  display_.setTextSize(3);
+  display_.drawString(touchReady ? "Tap anywhere to draw dots." : "Touch controller not found.",
+                      display_.width() / 2, 180);
+  display_.drawFastHLine(80, 260, display_.width() - 160, TFT_BLACK);
+  display_.update();
+}
+
+static void drawPoint(const TouchDisplayPoint& point)
+{
+  if (!s_displayReady) return;
+
+  display_.fillCircle(point.x, point.y, DOT_RADIUS, TFT_BLACK);
+  display_.drawCircle(point.x, point.y, DOT_RADIUS + 4, TFT_GRAY_6);
+  display_.update();
+  LOG.printf("[touch] raw=(%u,%u) screen=(%u,%u)\n",
+             s_lastRawX, s_lastRawY, point.x, point.y);
+
+  s_lastPoint = point;
+  s_haveLastPoint = true;
+  s_lastDrawMs = millis();
+}
+
+static bool setupDisplay()
+{
+  LOG.printf("[display] PSRAM found: %s, free PSRAM: %u bytes\n",
+             psramFound() ? "yes" : "no",
+             static_cast<unsigned>(ESP.getFreePsram()));
+
+  if (!psramFound()) {
+    LOG.println("[display] ERROR: enable Tools -> PSRAM -> OPI PSRAM.");
+    return false;
+  }
+
+  display_.begin();
+  updateDisplaySize();
+
+  if (display_.width() == 0 || display_.height() == 0) {
+    LOG.println("[display] ERROR: 1-bit ePaper buffer was not created.");
+    return false;
+  }
+
+#if STRONG_BOOT_CLEAR
+  LOG.println("[display] Clearing old ePaper image...");
+  display_.fillScreen(TFT_BLACK);
+  display_.update();
+  delay(800);
+
+  display_.fillScreen(TFT_WHITE);
+  display_.update();
+  delay(800);
+#endif
+
+  display_.initGrayMode(GRAY_LEVEL16);
+  updateDisplaySize();
+
+  if (display_.width() == 0 || display_.height() == 0) {
+    LOG.println("[display] ERROR: 16-gray ePaper buffer was not created.");
+    return false;
+  }
+
+  LOG.printf("[display] Ready: %u x %u\n", s_displaySize.x, s_displaySize.y);
+  return true;
+}
+
+void setup()
+{
+  LOG.begin(115200, SERIAL_8N1, PIN_SERIAL_RX, PIN_SERIAL_TX);
+  delay(100);
+
+  LOG.println("========================================");
+  LOG.println("  E1003_TouchDraw - reTerminal E1003");
+  LOG.println("========================================");
+
+  s_displayReady = setupDisplay();
+  s_touchMaxX = s_displaySize.x;
+  s_touchMaxY = s_displaySize.y;
+
+  Wire.begin(PIN_I2C_SDA, PIN_I2C_SCL);
+  Wire.setClock(400000UL);
+
+  const bool touchReady = initTouch();
+  drawStartupScreen(touchReady);
+
+  if (!s_displayReady) {
+    LOG.println("[hint] Display is not ready; check PSRAM and Seeed_GFX setup.");
+  }
+}
+
+void loop()
+{
+  if (s_touchAddr == 0) {
+    delay(1000);
+    return;
+  }
+
+  const unsigned long now = millis();
+  if (now - s_lastPollMs < TOUCH_POLL_MS) return;
+  s_lastPollMs = now;
+
+  TouchDisplayPoint point = {};
+  if (readTouchPoint(&point) && shouldDrawPoint(point)) {
+    drawPoint(point);
+  }
+}
+```
+
+</details>
+
+### Como o código funciona
+
+**Sequência de inicialização (`setup()`):**
+
+1. **Inicializar o display ePaper** — `setupDisplay()` verifica a disponibilidade de PSRAM (necessária para o buffer de quadro 1872×1404), cria o objeto EPaper e alterna para o **modo de 16 níveis de cinza** para um desenho mais suave.
+2. **Inicializar o I2C** a 400 kHz nos GPIO19/GPIO20 — o mesmo barramento usado pelo RTC PCF8563 e pelo sensor SHT4x.
+3. **Resetar e sondar o GT911** — o controlador de toque é resetado por hardware via GPIO48 e então sondado em dois possíveis endereços I2C (0x5D e 0x14). O sketch detecta automaticamente em qual endereço o chip responde.
+4. **Ler a resolução do toque** — consulta os registradores internos max-X/max-Y do GT911 para obter a faixa de coordenadas de toque.
+5. **Desenhar a tela de inicialização** — exibe "E1003 Touch Draw" e uma mensagem no ePaper.
+
+**Loop de varredura do toque (`loop()`):**
+
+1. **Verificar a cada 30 ms** — lê o registrador de status do GT911 para checar se um novo evento de toque está disponível.
+2. **Ler as coordenadas de toque** — extrai os valores brutos de X/Y dos registradores de dados de ponto do GT911 e depois os mapeia para coordenadas de display usando `mapTouchToDisplay()` (que leva em conta qualquer diferença entre a resolução do toque e a resolução do display).
+3. **Debounce e verificação de distância** — um novo ponto só é desenhado se:
+   - Pelo menos 450 ms tiverem se passado desde o último desenho, **ou**
+   - O ponto de toque tiver se movido pelo menos 12 pixels em relação ao último ponto desenhado.
+4. **Desenhar no ePaper** — `fillCircle()` desenha um ponto preto sólido, `drawCircle()` adiciona um anel de halo cinza e então `update()` envia o buffer de quadro para o painel ePaper.
+
+:::note ePaper refresh latency
+Cada chamada de `update()` aciona uma atualização completa do ePaper, o que leva cerca de **1–2 segundos** no painel E1003. Isso é normal — ePaper não é um display de atualização rápida. A lógica de debounce (`DRAW_MIN_MS = 450 ms`) foi projetada para evitar sobrecarregar o painel com solicitações de atualização.
+:::
+
+### Pré-requisitos
+
+Antes de executar este sketch:
+
+1. Instale a biblioteca **Seeed_GFX** via Arduino Library Manager.
+2. Defina **PSRAM** como **OPI PSRAM** no menu Tools — sem PSRAM, o buffer de display não pode ser alocado e `display_.width()` retornará 0.
+3. Defina **Flash Size** para **8 MB**.
+4. Selecione a placa **XIAO_ESP32S3**.
+
+### Saída esperada
+
+```
+========================================
+  E1003_TouchDraw - reTerminal E1003
+========================================
+[display] PSRAM found: yes, free PSRAM: 8159232 bytes
+[display] Ready: 1872 x 1404
+[touch] GT9xx found at 0x5D, product: 911
+[touch] Touch range: 1872 x 1404, display: 1872 x 1404
+[touch] Ready.
+```
+
+Após tocar na tela:
+
+```
+[touch] raw=(468,302) screen=(468,302)
+[touch] raw=(920,756) screen=(920,756)
+[touch] raw=(1400,1100) screen=(1400,1100)
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/247.png" style={{width:600, height:'auto'}}/></div>
+
 ## Solução de problemas
 
 ### P1: A saída serial ainda é visível em deep sleep — isso significa que o sketch de baixo consumo não está funcionando?
 
 Isso é normal e **não** significa que o deep sleep falhou.
 
-A saída serial que você vê é tratada pelo **chip bridge USB-UART da placa carrier** (não pelo próprio ESP32-S3). O chip bridge é alimentado diretamente pela conexão USB, portanto permanece ativo independentemente de o ESP32-S3 estar acordado ou em modo de suspensão profunda. Na verdade, isso é uma escolha de projeto deliberada — garante que você sempre possa ver a saída serial e enviar novo firmware mesmo que o dispositivo entre em um ciclo rápido de deep sleep.
+A saída serial que você vê é tratada pelo **chip bridge USB-UART da placa base** (não pelo próprio ESP32-S3). O chip bridge é alimentado diretamente pela conexão USB, portanto permanece ativo independentemente de o ESP32-S3 estar acordado ou em modo de suspensão. Na verdade, isso é uma escolha de projeto deliberada — garante que você sempre possa ver a saída serial e enviar novo firmware mesmo que o dispositivo entre em um ciclo rápido de deep sleep.
 
 Para confirmar que o deep sleep está realmente ativo, verifique o log serial:
 
@@ -1493,32 +1941,32 @@ Para confirmar que o deep sleep está realmente ativo, verifique o log serial:
 
 Você não precisa alterar nada — basta enviar o sketch como está.
 
-Em uma placa nova, o flag interno VL (Voltage Low) do PCF8563 é sempre `1` porque a bateria nunca alimentou o relógio. O sketch lê VL=1 na inicialização e grava automaticamente o timestamp de compilação no RTC.
+Em uma placa nova, o sinal interno VL (Voltage Low) do PCF8563 é sempre `1` porque a bateria nunca alimentou o relógio. O sketch lê VL=1 na inicialização e grava automaticamente o timestamp de compilação no RTC.
 
-Confirme que sua USER CONFIGURATION está assim:
+Confirme que a sua USER CONFIGURATION está assim:
 
 ```cpp
 #define USE_COMPILE_TIME     // ← enabled ✓
 // #define FORCE_SET_TIME   // ← keep commented ✓
 ```
 
-→ Clique em **Upload** → Pronto.
+→ Clique em **Upload** → Concluído.
 
 </TabItem>
-<TabItem value="scenario2" label="Reinicializar / religar">
+<TabItem value="scenario2" label="Reinicializar / Ligar novamente">
 
-**Cenário:** A placa já estava em funcionamento, então foi reiniciada ou teve a alimentação desligada e ligada novamente.
+**Cenário:** A placa já estava em funcionamento e foi reiniciada ou teve a alimentação desligada e ligada novamente.
 
 Você não precisa fazer nada — apenas ligue.
 
-A bateria CR1220 mantém o PCF8563 funcionando enquanto a alimentação principal está desligada. Na inicialização, o sketch lê VL=0 (bateria em bom estado) e pula a gravação, preservando a hora armazenada. A saída serial mostrará a hora correta imediatamente.
+A bateria CR1220 mantém o PCF8563 funcionando enquanto a alimentação principal está desligada. Na inicialização, o sketch lê VL=0 (bateria em bom estado) e ignora a gravação, preservando a hora armazenada. A saída serial mostrará a hora correta imediatamente.
 
 </TabItem>
 <TabItem value="scenario3" label="Recalibrar">
 
 **Cenário:** A hora do RTC está errada e precisa ser recalibrada.
 
-**Etapa 1 — Forçar sobrescrita.** Descomente `FORCE_SET_TIME`, depois envie:
+**Passo 1 — Forçar sobrescrita.** Descomente `FORCE_SET_TIME` e então envie:
 
 ```cpp
 #define USE_COMPILE_TIME
@@ -1527,7 +1975,7 @@ A bateria CR1220 mantém o PCF8563 funcionando enquanto a alimentação principa
 
 → Clique em **Upload** → A hora agora é forçada para o timestamp de compilação.
 
-**Etapa 2 — Desativar a sobrescrita forçada.** Em seguida, comente novamente e envie de novo:
+**Passo 2 — Desativar a sobrescrita forçada.** Imediatamente comente novamente e envie de novo:
 
 ```cpp
 #define USE_COMPILE_TIME
@@ -1542,7 +1990,7 @@ A bateria CR1220 mantém o PCF8563 funcionando enquanto a alimentação principa
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

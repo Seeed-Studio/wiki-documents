@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'Wio-S3'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: wio-s3
+link:
+  type: generated-index
+  slug: wio_s3_class
+  title: Wio-S3
+  description: Wio-S3 产品文档。

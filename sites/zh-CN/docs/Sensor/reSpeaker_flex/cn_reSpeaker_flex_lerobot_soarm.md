@@ -1,6 +1,6 @@
 ---
-description: 使用 LeRobot、Groq Whisper 语音转文本、LLaMA 3 和 openwakeword，在 Nvidia 或 Ubuntu 上实现语音控制 SO-ARM100 机械臂。
-title: 使用 reSpeaker Flex 为你的 SO-ARM10x 添加语音交互
+description: 使用 LeRobot、Groq Whisper STT、LLaMA 3 和 openwakeword，在 Nvidia 或 Ubuntu 上实现语音控制的 SO-ARM100 机械臂。
+title: 使用 reSpeaker 为你的 SO-ARM10x 添加语音交互
 keywords:
   - reSpeaker flex
   - xvf3800
@@ -11,7 +11,7 @@ last_update:
   date: 05/19/2026
   author: Kasun Thushara
 createdAt: '2026-05-19'
-updatedAt: '2026-05-19'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/cn/respeaker_flex_soarm/
 ---
 
@@ -28,24 +28,17 @@ LeRobot SO-ARM 语音控制器让你可以使用由 AI 驱动的自然语音指�
 <table align="center">
   <tr>
     <th>SO-ARM101</th>
-    <th>reSpeaker Flex XVF3800 Circular</th>
     <th>reComputer Super J4012</th>
 
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-100046482-so-arm-101-assembled-kit-pro.jpg" style={{width:500, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg" style={{width:500, height:'auto'}}/></div></td>
 
   </tr>
   <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM-101-Assembled-Kit-Pro-p-6691.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
     </div></td>
@@ -57,6 +50,91 @@ LeRobot SO-ARM 语音控制器让你可以使用由 AI 驱动的自然语音指�
   </tr>
 </table>
 
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      或
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                立即获取 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                立即获取 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+
 ## 工作原理
 
 ```
@@ -67,7 +145,7 @@ You speak → Wake word detected → Audio recorded → Whisper STT → LLaMA LL
 
 | 服务 | 用途 | 费用 |
 |---------|---------|------|
-| [Groq](https://groq.com/) | Whisper 语音转文本、LLaMA 大语言模型、Orpheus 文本转语音 | 免费套餐即可满足需求 |
+| [Groq](https://groq.com/) | Whisper STT、LLaMA LLM、Orpheus TTS | 免费套餐已足够 |
 
 
 ## 第 1 部分 — 安装 LeRobot
@@ -121,7 +199,7 @@ pip install -e ".[feetech]"
 
 ### 查找 USB 端口
 
-插入每个机械臂，然后运行这个工具来识别每个端口对应哪只机械臂：
+插入每个机械臂，然后运行此工具来识别每个端口对应哪只机械臂：
 
 ```bash
 lerobot-find-port
@@ -168,7 +246,7 @@ python download_model.py
 
 ### 查找你的麦克风索引
 
-插入你的 ReSpeaker Flex，然后运行：
+插入你的 reSpeaker，然后运行：
 
 ```bash
 python list_mics.py
@@ -215,7 +293,7 @@ MIC_INDEX=1
 python read_positions.py
 ```
 
-脚本会在你移动机械臂时打印实时归一化关节数值。当你对姿态满意时，按下 **Ctrl+C**，最终位置会被打印出来供你复制。
+当你移动机械臂时，脚本会实时打印归一化的关节数值。当你对姿态满意时，按下 **Ctrl+C**，最终位置会被打印出来供你复制。
 
 ### 步骤 2 — 将姿态添加到 `robot_arm.py`
 
@@ -233,7 +311,7 @@ python read_positions.py
 }),
 ```
 
-对于动画手势（例如挥手），使用姿态列表——每一步之间会以 `ARM_GESTURE_DELAY` 为间隔依次执行：
+对于动画手势（例如挥手），使用姿态列表——每一步之间会以 `ARM_GESTURE_DELAY` 作为间隔运行：
 
 ```python
 "wave_hi": [
@@ -245,7 +323,7 @@ python read_positions.py
 
 ### 步骤 3 — 在 `llm.py` 中更新 LLM 系统提示词
 
-将你的新动作添加到有效动作列表和触发规则中，让 LLM 知道它的存在：
+将你的新动作添加到有效动作列表和触发规则中，这样 LLM 才能识别它：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/llm_ss.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -282,7 +360,7 @@ python pipeline.py
 [WakeWord] Listening for 'hey jarvis' ...
 ```
 
-现在说出 **"Hey Jarvis"**，然后给出一条指令！
+现在说出 **"Hey Jarvis"**，然后给出指令吧！
 
 ### 示例语音指令
 
@@ -319,21 +397,21 @@ examples/voice_arm/
 
 ## 配置参考
 
-| 变量 | 默认值 | 说明 |
+| 变量 | 默认值 | 描述 |
 |---|---|---|
 | `GROQ_API_KEY` | *(required)* | 你的 Groq API 密钥 |
 | `WAKEWORD_MODEL` | `hey jarvis` | 唤醒词短语 |
 | `MIC_INDEX` | `1` | PyAudio 设备索引 |
 | `WAKEWORD_THRESHOLD` | `0.5` | 检测灵敏度（0.0–1.0） |
-| `WAKEWORD_COOLDOWN` | `2` | 再次触发之间的秒数 |
+| `WAKEWORD_COOLDOWN` | `2` | 重新触发之间的秒数 |
 | `RECORDING_SECONDS` | `3` | 唤醒词后录音时长 |
 | `LLM_MODEL` | `llama-3.1-8b-instant` | Groq LLM 模型 |
 | `STT_MODEL` | `whisper-large-v3-turbo` | Groq Whisper 模型 |
 | `TTS_VOICE` | `autumn` | 语音输出所用的声音 |
-| `ARM_PORT` | `/dev/ttyACM0` | 从动机械臂 USB 端口 |
-| `ARM_ID` | `my_awesome_follower_arm` | 机械臂 ID（与校准文件名一致） |
+| `ARM_PORT` | `/dev/ttyACM0` | 跟随机械臂 USB 端口 |
+| `ARM_ID` | `my_awesome_follower_arm` | 机械臂 ID（需与标定文件名匹配） |
 | `ARM_MOVE_DELAY` | `1.5` | 姿态移动后等待的秒数 |
-| `ARM_GESTURE_DELAY` | `0.4` | 手势序列各步骤之间的秒数 |
+| `ARM_GESTURE_DELAY` | `0.4` | 手势序列步骤之间的秒数 |
 
 ---
 
@@ -346,25 +424,25 @@ sudo apt-get install -y portaudio19-dev
 ```
 
 **唤醒词从未被触发**
-再次运行 `list_mics.py` 并确认 `MIC_INDEX` 与你的 ReSpeaker 匹配。尝试将 `WAKEWORD_THRESHOLD` 降低到 `0.3`。在距离麦克风约 1 米内清晰地说话。
+再次运行 `list_mics.py` 并确认 `MIC_INDEX` 与 ReSpeaker 匹配。尝试将 `WAKEWORD_THRESHOLD` 降低到 `0.3`。在距离麦克风约 1 米内清晰说话。
 
-**执行指令后机械臂不动**
-检查 `ARM_PORT` 是否正确（`lerobot-find-port`）。确认校准文件存在于 `~/.cache/huggingface/lerobot/calibration/robots/so_follower/<ARM_ID>.json`。
+**机械臂在接收指令后不移动**
+检查 `ARM_PORT` 是否正确（`lerobot-find-port`）。确认标定文件存在于 `~/.cache/huggingface/lerobot/calibration/robots/so_follower/<ARM_ID>.json`。
 
 **机械臂移动到错误位置**
-`ACTION_MAP` 中的默认姿态值只是初始估计。运行 `read_positions.py`，将机械臂物理移动到期望姿态，然后把打印出的数值复制到 `robot_arm.py` 中。
+`ACTION_MAP` 中的默认姿态值只是初始估计。运行 `read_positions.py`，将机械臂物理移动到期望姿态，然后将打印出的数值复制到 `robot_arm.py` 中。
 
 **TTS / STT 报错**
-仔细检查 `GROQ_API_KEY` 是否已在 `config.env` 中配置。Groq 的免费层有速率限制——如果遇到错误，请在指令之间等待几秒钟。
+仔细检查 `GROQ_API_KEY` 是否已在 `config.env` 中配置。Groq 免费层有速率限制——如果遇到错误，请在指令之间等待几秒钟。
 
-**有声音输出但听起来失真**
+**音频可以播放但听起来失真**
 在 Raspberry Pi 上，通过 `raspi-config` → System Options → Audio 将音频输出设置为正确的设备。
 
 ---
 
 ## 致谢
 
-基于以下项目构建：
+构建基于：
 - [LeRobot](https://github.com/huggingface/lerobot) — Hugging Face 推出的开源机器人框架
 - [SO-ARM100](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/) — Seeed Studio 推出的低成本开源机械臂
 - [openwakeword](https://github.com/dscripka/openWakeWord) — 本地唤醒词检测

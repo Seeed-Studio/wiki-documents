@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-05-26'
+updatedAt: '2026-07-12'
 url: https://wiki.seeedstudio.com/robotics_page/
 ---
 
@@ -80,29 +80,51 @@ url: https://wiki.seeedstudio.com/robotics_page/
 
 
           <h3>🦾 reBot Arm</h3>
+            <h4> B601-DM Arm</h4>
           <div className="card-container">
-              <a href="/rebot_b601_rs_getting_started/" className="content-card">
-                <span className="text">reBot B601-RS Getting Started</span>
-                <span className="tag recommended">New</span>
-              </a>
               <a href="/rebot_b601_dm_getting_started/" className="content-card">
-                <span className="text">reBot B601-DM Getting Started</span>
-                <span className="tag recommended">New</span>
+                <span className="text">reBot B601-DM Getting Start</span>
               </a>
               <a href="/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
-                <span className="text">reBot with Pinocchio</span>
+                <span className="text">reBot B601-DM with Pinocchio</span>
               </a>
               <a href="/rebot_arm_b601_dm_lerobot/" className="content-card">
-                <span className="text">reBot with LeRobot</span>
+                <span className="text">reBot B601-DM with LeRobot</span>
               </a>
               <a href="/rebot_arm_b601_dm_grasping_demo/" className="content-card">
-                <span className="text">reBot Visual Graspng Demo</span>
+                <span className="text">reBot B601-DM with GraspNet Demo</span>
               </a>
               <a href="/rebot_arm_b601_dm_ros2_integration/" className="content-card">
-                <span className="text">reBot B601-DM ROS2 Integration</span>
+                <span className="text">reBot B601-DM wit ROS2</span>
               </a>
           </div>
-
+            <h4> B601-RS Arm</h4>
+          <div className="card-container">
+              <a href="/rebot_b601_rs_getting_started/" className="content-card">
+                <span className="text">reBot B601-RS Getting Start</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_lerobot/" className="content-card">
+                <span className="text">reBot B601-RS with LeRobot</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot B601-RS with Pinocchio</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-RS with GraspNet</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_ros2_integration" className="content-card">
+                <span className="text">reBot B601-RS with ROS2 </span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="rebot_arm_b601_rs_isaacsim/" className="content-card">
+                <span className="text">reBot B601-RS Isaacsim Simulation</span>
+                <span className="tag recommended">New</span>
+              </a>  
+          </div>
 
           <h3> 🤗 Reachy</h3>
           <div className="card-container">
@@ -130,6 +152,18 @@ url: https://wiki.seeedstudio.com/robotics_page/
               </a>
               <a href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
                   <span className="text">SO101 with NVIDIA GR00T</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">Steering Gear Debugging Tool</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/lerobot_double_arm_so_arm_training/" className="content-card">
+                  <span className="text">Complete Guide to Double-Arm SO-ARM Training</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/soarm_amazinghand_teleop/" className="content-card">
+                  <span className="text">Complete Training Guide for SO-ARM with AmazingHand</span>
                   <span className="tag recommended">New</span>
               </a>
           </div>

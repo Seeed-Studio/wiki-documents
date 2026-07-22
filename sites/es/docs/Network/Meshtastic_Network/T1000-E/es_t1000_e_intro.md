@@ -10,7 +10,7 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-09-05'
-updatedAt: '2025-09-29'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/es/t1000_e_intro/
 ---
 
@@ -105,3 +105,4 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 |Encender|Se enciende y luego parpadea rápidamente|
 |Modo DFU|Encendido fijo|
 |Funcionando|Parpadeo aleatorio|
+|Cargando|Parpadea a 0,5 Hz, alternando cada segundo|

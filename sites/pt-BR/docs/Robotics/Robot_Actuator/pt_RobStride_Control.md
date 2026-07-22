@@ -12,10 +12,9 @@ last_update:
   date: 11/19/2025
   author: Tienjuiwong
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-11-19'
-updatedAt: '2026-02-27'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/pt-br/robstride_control/
 ---
 
@@ -60,10 +59,10 @@ A Biblioteca de Controle RobStride é uma biblioteca de controle de motor de alt
 ### Vantagens Técnicas
 
 - **Alto desempenho**: Comunicação SocketCAN direta sem sobrecarga de middleware
-- **Segurança de memória**: A implementação em Rust fornece garantias de segurança de memória
-- **Controle em tempo real**: A implementação em C++ atinge frequência de controle de 200Hz
-- **Facilidade de uso**: A implementação em Python fornece uma interface interativa amigável
-- **Amigável para sistemas embarcados**: A implementação em Arduino é adequada para ambientes com recursos limitados
+- **Segurança de memória**: Implementação em Rust fornece garantias de segurança de memória
+- **Controle em tempo real**: Implementação em C++ atinge frequência de controle de 200Hz
+- **Facilidade de uso**: Implementação em Python fornece interface interativa amigável
+- **Amigável para sistemas embarcados**: Implementação em Arduino adequada para ambientes com recursos limitados
 
 ---
 
@@ -71,13 +70,13 @@ A Biblioteca de Controle RobStride é uma biblioteca de controle de motor de alt
 
 | Modelo | Torque Máximo | Velocidade Máxima | Faixa de KP | Faixa de KD |
 |--------|------------|-----------|----------|----------|
-| [**RS-00**](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  | 17 Nm | 50 rad/s | 500.0 | 5.0 |
-| [**RS-01**](https://www.seeedstudio.com/Robostride-01-Actuator-p-6773.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| [**RS-02**](https://www.seeedstudio.com/Robostride-02-Actuator-p-6665.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| [**RS-03**](https://www.seeedstudio.com/Robostride-03-Actuator-p-6774.html)  | 60 Nm | 50 rad/s | 5000.0| 100.0|
-| [**RS-04**](https://www.seeedstudio.com/Robostride-04-Actuator-p-6775.html)  | 120 Nm| 15 rad/s | 5000.0| 100.0|
-| [**RS-05**](https://www.seeedstudio.com/Robostride-05-Actuator-p-6666.html)  | 17 Nm | 33 rad/s | 500.0 | 5.0 |
-| [**RS-06**](https://www.seeedstudio.com/Robostride-06-Actuator-p-6668.html)  | 60 Nm | 20 rad/s | 5000.0| 100.0|
+| [**RS-00**](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  | 14 Nm | 315 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-01**](https://www.seeedstudio.com/Robostride-01-Actuator-p-6773.html)  | 17 Nm | 315 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-02**](https://www.seeedstudio.com/Robostride-02-Actuator-p-6665.html)  | 17 Nm | 410 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-03**](https://www.seeedstudio.com/Robostride-03-Actuator-p-6774.html)  | 60 Nm | 195 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
+| [**RS-04**](https://www.seeedstudio.com/Robostride-04-Actuator-p-6775.html)  | 120 Nm| 200 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
+| [**RS-05**](https://www.seeedstudio.com/Robostride-05-Actuator-p-6666.html)  | 5.5 Nm | 480 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-06**](https://www.seeedstudio.com/Robostride-06-Actuator-p-6668.html)  | 36 Nm | 480 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
 
 ---
 
@@ -114,17 +113,17 @@ graph TB
 #### 1. Modo MIT (Modo 0)
 - **Características**: Controle direto de torque com alta velocidade de resposta
 - **Casos de uso**: Aplicações que exigem resposta rápida
-- **Parâmetros de controle**: P, D, T, Posição, Velocidade
+- **Parâmetros de Controle**: P, D, T, Posição, Velocidade
 
 #### 2. Modo de Posição (Modo 1)
 - **Características**: Controle de malha fechada de posição com posicionamento preciso
 - **Casos de uso**: Posicionamento de precisão, controle de juntas de robôs
-- **Parâmetros de controle**: Posição, Velocidade, Torque Máximo
+- **Parâmetros de Controle**: Posição, Velocidade, Torque Máximo
 
 #### 3. Modo de Velocidade (Modo 2)
 - **Características**: Controle de malha fechada de velocidade com regulação estável
 - **Casos de uso**: Aplicações que exigem velocidade constante
-- **Parâmetros de controle**: Velocidade, Torque Máximo
+- **Parâmetros de Controle**: Velocidade, Torque Máximo
 
 ---
 
@@ -254,7 +253,7 @@ while True:
 
 ## Implementação em C++
 
-### Compilar
+### Build
 
 ```bash
 cd cpp
@@ -336,7 +335,7 @@ sudo ./build/robstride-mit-position 1
 
 ## Implementação em Rust
 
-### Compilar
+### Build
 
 ```bash
 cd rust
@@ -530,7 +529,7 @@ void loop() {
 | Campo | Tamanho | Descrição |
 |-------|------|-------------|
 | ID | 29 bits | Identificador de quadro estendido |
-| DLC | 4 bits | Comprimento de dados (fixo em 8) |
+| DLC | 4 bits | Comprimento dos dados (fixado em 8) |
 | Data | 8 bytes | Dados de controle |
 | CRC | 16 bits | Verificação de redundância cíclica |
 
@@ -624,7 +623,7 @@ mlockall(MCL_CURRENT | MCL_FUTURE);
 | Linguagem | Frequência de controle | Uso de CPU | Latência | Uso de memória |
 |----------|-------------------|-----------|---------|--------------|
 | Python | 50-100Hz | 15-20% | 2-5ms | ~50MB |
-| C++ | 200Hz | 5-8% | 0,5-1ms | ~10MB |
+| C++ | 200Hz | 5-8% | 0.5-1ms | ~10MB |
 | Rust | 150Hz | 8-12% | 1-2ms | ~8MB |
 | Arduino | 100Hz | 40-60% | 1-3ms | ~2KB |
 

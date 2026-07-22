@@ -1,6 +1,6 @@
 ---
 description: Voice Assistant System for Home Assitant
-title: Voice Assistant System for Home Assitant
+title: Voice Assistant System for Home Assitant reSpeaker Lite
 keywords:
   - ESP32S3
   - XIAO
@@ -13,7 +13,7 @@ last_update:
   date: 2/11/2026
   author: Kasun Thushara
 createdAt: '2024-04-11'
-updatedAt: '2026-03-24'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/respeaker_lite_ha/
 ---
 

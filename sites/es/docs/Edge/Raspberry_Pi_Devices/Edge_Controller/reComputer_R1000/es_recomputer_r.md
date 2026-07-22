@@ -11,7 +11,7 @@ last_update:
   date: 09/15/2025
   author: Kasun Thushara
 createdAt: '2024-05-10'
-updatedAt: '2026-04-21'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/es/recomputer_r/
 ---
 
@@ -765,24 +765,25 @@ Para probar la funcionalidad del reloj en tiempo real (RTC), sigue estos pasos:
 ```bash
 sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
+```
 
 2. Establece la hora a las 12:00 PM del 20 de marzo de 2024:
 
-__CODE_LINE_PLH__
 ```bash
 sudo hwclock --set --date "2024-03-20 12:00:00"
+```
 
 3. Sincroniza la hora del RTC con el sistema:
 
-__CODE_LINE_PLH__
 ```bash
 sudo hwclock --hctosys
+```
 
 4. Comprueba la hora del RTC:
 
-__CODE_LINE_PLH__
 ```bash
 sudo hwclock -r
+```
 
 Este comando leerá y mostrará la hora almacenada en el RTC.
 5. Desconecta la fuente de alimentación del RTC, espera unos minutos, vuelve a conectarla y comprueba de nuevo la hora del RTC para ver si ha conservado la hora correcta.
@@ -795,21 +796,20 @@ Para realizar una prueba del watchdog, sigue estos pasos:
 
 1. Instala el software del watchdog:
 
-__CODE_LINE_PLH__
 ```bash
 sudo apt install watchdog 
+```
 
 2. Edita el archivo de configuración del watchdog:
 
-__CODE_LINE_PLH__
 ```bash
 # make sure you install vim already, if haven't, can install by the command below
 sudo apt-get install vim
 sudo vim /etc/watchdog.conf
+```
 
 Modifica la configuración de la siguiente manera:
 
-__CODE_LINE_PLH__
 ```bash
 watchdog-device  = /dev/watchdog
 # Uncomment and edit this line for hardware timeout values that differ
