@@ -1,5 +1,5 @@
 ---
-description: Este tutorial presenta cómo utilizar Pinocchio y MeshCat para el análisis y la visualización de cinemática en el brazo robótico reBot Arm B601-RS.
+description: Este tutorial presenta cómo usar Pinocchio y MeshCat para el análisis y la visualización de cinemática en el brazo robótico reBot Arm B601-RS.
 title: Introducción a Pinocchio y MeshCat para reBot Arm B601-RS
 keywords:
   - Pinocchio
@@ -13,7 +13,7 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_pinocchio_meshcat
 sku: 100019336
 last_update:
-  date: 2026-06-30
+  date: 2026-07-22
   author: LiJie
 translation:
   skip: [zh-CN]
@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_pinocchio_meshcat/
 
 [Pinocchio](https://github.com/stack-of-tasks/pinocchio) es una biblioteca de código abierto para el análisis y la optimización de la dinámica de robots. Proporciona cinemática directa/inversa eficiente, cálculo de dinámica y planificación de trayectorias. [MeshCat](https://github.com/rdeits/meshcat) es una herramienta de visualización 3D basada en la web que puede mostrar en tiempo real los estados del robot y las trayectorias de movimiento.
 
-Este proyecto combina las potentes capacidades de cálculo de Pinocchio con la visualización intuitiva de MeshCat, proporcionando un conjunto completo de herramientas de análisis y depuración de cinemática para reBot Arm B601-RS.
+Este proyecto combina las potentes capacidades de cálculo de Pinocchio con la visualización intuitiva de MeshCat, proporcionando un conjunto completo de herramientas de análisis y depuración de cinemática para el reBot Arm B601-RS.
 
 
 ---
@@ -52,13 +52,13 @@ Este proyecto combina las potentes capacidades de cálculo de Pinocchio con la v
    Soporta cálculos de cinemática directa (FK) y cinemática inversa (IK), permitiendo resolver en tiempo real la pose del efector final del brazo robótico.
 
 2. **Visualización 3D en tiempo real**
-   Muestra en el navegador, a través de MeshCat y en tiempo real, el estado del brazo robótico y las trayectorias de movimiento, sin necesidad de software adicional.
+   Muestra en el navegador, a través de MeshCat y en tiempo real, el estado del brazo robótico y las trayectorias de movimiento, sin software adicional.
 
 3. **Planificación y seguimiento de trayectorias**
    Implementa planificación de trayectorias geodésicas en SE(3), soportando control de seguimiento CLIK (Cinemática Inversa en Bucle Cerrado).
 
 4. **Control de compensación de gravedad**
-   Calcula los pares de gravedad de las articulaciones basándose en el modelo dinámico de Pinocchio, logrando un efecto de “flotación” para el brazo robótico. Soporta tanto la versión básica como la versión con bloqueo de velocidad del efector final.
+   Calcula los pares de gravedad de las articulaciones basándose en el modelo dinámico de Pinocchio, logrando un efecto de “flotación” para el brazo robótico. Soporta versiones básica y con bloqueo de velocidad del efector final.
 
 5. **Control de motor en múltiples modos**
    Soporta modos de control MIT, POS_VEL y VEL, compatible con los protocolos de motor Damiao y Robostride.
@@ -123,7 +123,7 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
 | Interfaz de control | CAN @ 1 Mbps | |
 | Interfaz de depuración | UART @ 921600 bps | |
 | Modos de control | Modo MIT / Modo de velocidad / Modo de posición / Modo de par | |
-| Protección | Protección contra sobretemperatura: la temperatura del termistor del motor supera los 145°C<br />Protección contra subtensión: tensión del motor por debajo de la tensión de protección de 12V | |
+| Protección | Protección contra sobretemperatura: la temperatura del termistor del motor supera 145°C<br />Protección contra subtensión: tensión del motor por debajo de la tensión de protección 12V | |
 
 ## Lista de materiales (BOM)
 
@@ -144,6 +144,10 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
 | **Sistema operativo** | Ubuntu 22.04+ |
 | **Interfaz de comunicación** | Interfaz CAN (can0) |
 | **Fuente de alimentación** | CC 48V 15A |
+
+:::caution
+Mientras el brazo robótico está ejecutando ejemplos, debe operar dentro del 70% del espacio de trabajo de alcance del brazo. Permanecer fuera del espacio de trabajo durante un período prolongado hará que el motor de la segunda articulación entre en protección por bloqueo, lo que provocará la caída del brazo.
+:::
 
 ---
 
@@ -169,7 +173,7 @@ uv sync
 
 ### Paso 3. Modificar el archivo de configuración para la versión RS
 
-Esta Wiki es para **reBot Arm B601-RS**. Antes de ejecutar cualquier ejemplo, cambia la configuración de hardware en `config/rebotarm.yaml` de la versión DM a la versión RS:
+Este Wiki es para **reBot Arm B601-RS**. Antes de ejecutar cualquier ejemplo, cambia la configuración de hardware en `config/rebotarm.yaml` de la versión DM a la versión RS:
 
 ```yaml
 # Before modification
@@ -180,14 +184,14 @@ hardware_yaml: "rebotarm_rs.yaml"
 ```
 
 :::caution
-Si no se modifica esta configuración, el programa se comunicará utilizando el protocolo de motor Damiao, lo que hará que los motores RS no se reconozcan o no funcionen correctamente.
+Si no se modifica esta configuración, el programa se comunicará usando el protocolo de motor Damiao, lo que hará que los motores RS no puedan ser reconocidos ni funcionar correctamente.
 :::
 
 
 ### Herramientas de depuración
 
 :::tip Configuración del canal CAN
-Antes de ejecutar ejemplos de control en máquina real y depurar motores, debes configurar el canal CAN (para PCAN-USB, es necesario configurarlo de nuevo después de reconectar el dispositivo):
+Antes de ejecutar ejemplos de control en máquina real y depurar motores, necesitas configurar el canal CAN (para PCAN-USB, es necesario configurarlo de nuevo después de reconectar):
 
 ```bash
 # PCAN-USB should usually appear directly as can0 or can1
@@ -196,7 +200,7 @@ ip -br link
 
 # If can0 appears, set the bitrate
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000 
 sudo ip link set can0 up    # Bring up can0
 ```
 
@@ -204,7 +208,7 @@ sudo ip link set can0 up    # Bring up can0
 
 ### Consola de un solo motor — Robostride RS06 (`0x01rs06_test.py`)
 
-Utiliza directamente el SDK de motorbridge para las pruebas de un solo motor Robostride RS06. Los motores RS06 se comunican mediante **bus CAN**.
+Usa directamente el SDK de motorbridge para pruebas de un solo motor Robostride RS06. Los motores RS06 se comunican mediante **bus CAN**.
 
 **Comando de ejecución**:
 ```bash
@@ -228,7 +232,7 @@ uv run python example/0x01rs06_test.py
 | `loop` | Entrar en modo de control en bucle |
 | `q` / `quit` | Salir |
 
-**Nota**: Los motores Robostride utilizan la interfaz CAN (por defecto `can0`), con ID de host/retroalimentación por defecto `0xFD`. Durante las pruebas del motor, es necesario deshabilitar primero el motor y luego volver a habilitarlo para permitir la lectura y el control normales.
+**Nota**: Los motores Robostride usan la interfaz CAN (`can0` por defecto), con el ID de host/feedback por defecto en `0xFD`. Durante las pruebas del motor, es necesario deshabilitar primero el motor y luego volver a habilitarlo para permitir la lectura y el control normales.
 
 ---
 
@@ -246,13 +250,13 @@ uv run python example/2_zero_and_read.py
 
 ---
 
-## Pruebas de control básicas
+## Pruebas de control básico
 
 ### Control completo de articulaciones en modo MIT (`3_mit_control.py`)
 
-Todas las articulaciones utilizan de forma uniforme el modo MIT, enviando comandos de control de manera síncrona en cada ciclo.
+Todas las articulaciones usan de forma uniforme el modo MIT, enviando comandos de control de manera síncrona en cada ciclo.
 
-**Entrada**: Todos los ángulos de las articulaciones (grados), separados por espacios. Si se configura la pinza, se requiere un ángulo adicional para la pinza.
+**Entrada**: Todos los ángulos de las articulaciones (grados), separados por espacios. Si la pinza está configurada, se requiere un ángulo adicional para la pinza.
 
 **Comando de ejecución**:
 ```bash
@@ -270,7 +274,7 @@ Ten en cuenta que en el modo de control MIT, el brazo robótico se mueve muy rá
 
 ### Control completo de articulaciones en modo POS_VEL (`4_pos_vel_control.py`)
 
-Introduce todos los ángulos objetivo de las articulaciones para completar el control del motor en el modo híbrido POS_VEL (Posición-Velocidad), logrando un movimiento más suave y controlable al alcanzar los ángulos objetivo, reduciendo la vibración.
+Introduce todos los ángulos objetivo de las articulaciones para completar el control del motor en modo híbrido POS_VEL (Posición-Velocidad), logrando un movimiento más suave y controlable al alcanzar los ángulos objetivo, reduciendo la vibración.
 
 **Comando de ejecución**:
 ```bash
@@ -322,13 +326,13 @@ uv run python example/6_ik_test.py
 
 ### Control de cinemática inversa en modo MIT (`7_arm_ik_control.py`)
 
-Utiliza cinemática inversa (IK) en modo MIT para especificar las coordenadas 3D (X, Y, Z) y la orientación (ángulos de Euler) a las que debe moverse el efector final del brazo robótico.
+Usa cinemática inversa (IK) en modo MIT para especificar las coordenadas 3D (X, Y, Z) y la orientación (ángulos de Euler) a las que debe moverse el efector final del brazo robótico.
 
 **Formato de entrada**:
 - Solo posición: `<x> <y> <z>` (metros)
-- Posición + Orientación: `<x> <y> <z> <roll> <pitch> <yaw>` (grados)
-- Introduce `state`: Ver los valores actuales en radianes de cada articulación.
-- Introduce `end_state`: Ver las coordenadas actuales reales del efector final (m) y los ángulos de Euler (rad) en el espacio.
+- Posición + orientación: `<x> <y> <z> <roll> <pitch> <yaw>` (grados)
+- Introduce `state`: Ver los valores radianes reales actuales de cada articulación.
+- Introduce `end_state`: Ver las coordenadas reales actuales del efector final (m) y los ángulos de Euler (rad) en el espacio.
 
 **Comando de ejecución**:
 ```bash
@@ -348,14 +352,14 @@ Ten en cuenta que en este código de ejemplo, el brazo robótico se mueve muy r�
 
 ### Control de cinemática inversa con trayectoria suave (`8_arm_traj_control.py`)
 
-Utiliza cinemática inversa (IK) en modo MIT para planificar automáticamente una trayectoria de movimiento con aceleración/desaceleración uniforme o suave dentro del tiempo objetivo, evitando fuertes vibraciones en las articulaciones.
+Usa cinemática inversa (IK) en modo MIT para planificar automáticamente una trayectoria de movimiento de aceleración/desaceleración uniforme o suave dentro del tiempo objetivo, evitando fuertes vibraciones en las articulaciones.
 
 **Formato de entrada**:
 - Solo posición: `<x> <y> <z>` (metros)
-- Posición + Orientación: `<x> <y> <z> <roll> <pitch> <yaw>` (grados)
-- Posición + Orientación + Tiempo (por defecto 2.0): `<x> <y> <z> <roll> <pitch> <yaw> <time>` (grados)
-- Introduce `state`: Ver los valores actuales en radianes de cada articulación.
-- Introduce `end_state`: Ver las coordenadas actuales reales del efector final (m) y los ángulos de Euler (rad) en el espacio.
+- Posición + orientación: `<x> <y> <z> <roll> <pitch> <yaw>` (grados)
+- Posición + orientación + tiempo (por defecto 2.0): `<x> <y> <z> <roll> <pitch> <yaw> <time>` (grados)
+- Introduce `state`: Ver los valores radianes reales actuales de cada articulación.
+- Introduce `end_state`: Ver las coordenadas reales actuales del efector final (m) y los ángulos de Euler (rad) en el espacio.
 
 **Comando de ejecución**:
 ```bash
@@ -375,7 +379,7 @@ uv run python example/8_arm_traj_control.py
 
 ### Control de compensación de gravedad — Versión básica (`9_gravity_compensation.py`)
 
-Utiliza el modelo dinámico Pinocchio para compensar la gravedad de las articulaciones.
+Usa el modelo dinámico Pinocchio para compensar la gravedad de las articulaciones.
 
 **Ley de control**:
 ```
@@ -398,8 +402,8 @@ uv run python example/9_gravity_compensation.py
 - Muestra en tiempo real el par deseado para cada articulación (N·m)
 - Pulsa `Ctrl+C` para detener y desconectar
 
-:::caution Vuelve a la posición inicial antes de salir de la compensación de gravedad
-Al detener el script (`Ctrl+C`), el programa **deshabilitará directamente todos los motores**, y el brazo robótico **no volverá automáticamente a cero**. Sujeta el brazo robótico con la mano o muévelo a una pose segura/inicial antes de salir para evitar caídas repentinas de las articulaciones que puedan causar colisiones o daños.
+:::caution Regresar a Home antes de salir de la compensación de gravedad
+Al detener el script (`Ctrl+C`), el programa **deshabilitará directamente todos los motores**, y el brazo robótico **no regresará automáticamente a cero**. Sujeta el brazo robótico con la mano o muévelo a una pose segura/home antes de salir para evitar caídas repentinas de las articulaciones que puedan causar colisiones o daños.
 :::
 
 :::tip Ajuste de la compensación de articulaciones individuales
@@ -417,7 +421,7 @@ Por ejemplo, `tau_g[2] *= 1.2` significa aumentar en un 20% el par de compensaci
 
 ### Control de compensación de gravedad — Versión con bloqueo de velocidad del efector final (`10_gravity_compensation_lock.py`)
 
-Basado en la compensación de gravedad básica, añade detección de velocidad del efector final y un mecanismo de bloqueo de ángulo de articulación.
+Basado en la compensación de gravedad básica, añade detección de velocidad del efector final y un mecanismo de bloqueo de ángulo articular.
 
 **Ley de control**:
 ```
@@ -427,11 +431,11 @@ kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
 ```
 
 **Lógica de bloqueo**:
-- Cuando la velocidad lineal del efector final `||v_ee|| < 0.04 m/s` y la velocidad angular `||w_ee|| < 0.08 rad/s`:
-  - El ángulo de articulación objetivo `q_target` permanece bloqueado
+- Cuando la velocidad lineal del extremo `||v_ee|| < 0.04 m/s` y la velocidad angular `||w_ee|| < 0.08 rad/s`:
+  - El ángulo articular objetivo `q_target` permanece bloqueado
   - El brazo robótico se bloquea en la posición actual
-- Cuando la velocidad del efector final supera el umbral:
-  - `q_target` se actualiza al ángulo de articulación actual
+- Cuando la velocidad del extremo supera el umbral:
+  - `q_target` se actualiza al ángulo articular actual
   - Permite empujar manualmente para cambiar la posición
 
 **Comportamiento esperado**:
@@ -445,12 +449,12 @@ uv run python example/10_gravity_compensation_lock.py
 
 **Salida**:
 - Muestra en tiempo real el estado de bloqueo (LOCKED / UPDATE)
-- Velocidad lineal del efector final, velocidad angular
+- Velocidad lineal del extremo, velocidad angular
 - Par de compensación de gravedad para cada articulación (N·m)
 - Pulsa `Ctrl+C` para detener y desconectar
 
-:::caution Vuelve a la posición inicial antes de salir de la compensación de gravedad
-Al detener el script (`Ctrl+C`), el programa **deshabilitará directamente todos los motores**, y el brazo robótico **no volverá automáticamente a cero**. Sujeta el brazo robótico con la mano o muévelo a una pose segura/inicial antes de salir para evitar caídas repentinas de las articulaciones que puedan causar colisiones o daños.
+:::caution Regresar a Home antes de salir de la compensación de gravedad
+Al detener el script (`Ctrl+C`), el programa **deshabilitará directamente todos los motores**, y el brazo robótico **no regresará automáticamente a cero**. Sujeta el brazo robótico con la mano o muévelo a una pose segura/home antes de salir para evitar caídas repentinas de las articulaciones que puedan causar colisiones o daños.
 :::
 
 :::tip Ajuste de la compensación de articulaciones individuales
@@ -482,7 +486,7 @@ ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 
 #### Simulación de cinemática directa (`sim/fk_sim.py`)
 
-Simulación interactiva de cinemática directa, visualizando la pose del brazo robótico en MeshCat introduciendo ángulos de articulación.
+Simulación interactiva de cinemática directa, visualizando la pose del brazo robótico en MeshCat introduciendo ángulos articulares.
 
 **Comando de ejecución**:
 ```bash
@@ -490,21 +494,21 @@ uv run python example/sim/fk_sim.py
 ```
 
 **Comandos interactivos**:
-- Introduce 6 ángulos de articulación (grados), separados por espacios
+- Introduce 6 ángulos articulares (grados), separados por espacios
 - Ejemplo: `0 0 0 0 0 0`
 - Ejemplo: `45 -30 15 -60 90 -180`
 - `q`/`quit`/`exit`: Salir
 
-**Funciones**:
+**Características**:
 - Muestra en tiempo real la posición y orientación del efector final
-- Admite entrada continua para probar diferentes poses
+- Soporta entrada continua para probar diferentes poses
 - Muestra información de pose formateada
 
 ---
 
 #### Simulación de cinemática inversa (`sim/ik_sim.py`)
 
-Simulación interactiva de cinemática inversa, resolviendo automáticamente los ángulos de articulación y visualizándolos para una pose objetivo.
+Simulación interactiva de cinemática inversa, resolviendo automáticamente los ángulos articulares y visualizándolos para una pose objetivo.
 
 **Comando de ejecución**:
 ```bash
@@ -513,7 +517,7 @@ uv run python example/sim/ik_sim.py
 
 **Formato de entrada**:
 - Solo posición: `x y z` (metros)
-- Posición + Orientación: `x y z roll pitch yaw` (radianes)
+- Posición + orientación: `x y z roll pitch yaw` (radianes)
 
 **Ejemplo**:
 ```bash
@@ -521,10 +525,10 @@ uv run python example/sim/ik_sim.py
 > 0.25 0.0 0.25 0 0 0        # Position + orientation
 ```
 
-**Funciones**:
+**Características**:
 - Determina automáticamente si la IK converge
 - Muestra el número de iteraciones y el error
-- Actualiza en tiempo real la pose del robot
+- Actualiza la pose del robot en tiempo real
 
 ---
 
@@ -542,9 +546,9 @@ uv run python example/sim/traj_sim.py
 - Pulsa Enter directamente para usar la configuración por defecto
 - `q`: Salir
 
-**Funciones**:
+**Características**:
 - Planifica desde la posición actual hasta la pose objetivo
-- Utiliza un perfil de trayectoria de mínimo tirón (minimum jerk)
+- Usa un perfil de trayectoria de mínimo tirón (minimum jerk)
 - Muestra estadísticas de la trayectoria en tiempo real
 - Reproduce la animación completa de la trayectoria en MeshCat
 - Muestra la trayectoria de referencia (gris) y la trayectoria real (verde)
@@ -559,7 +563,7 @@ Wrapper del visualizador MeshCat, que proporciona una interfaz unificada de visu
 - Cargar el modelo URDF y mostrar el robot
 - Dibujar trayectorias polilínea 3D (referencia/real)
 - Mostrar la pose objetivo de IK (ejes de tres colores + esfera)
-- Admitir reproducción de animaciones de trayectorias articulares
+- Soportar reproducción de animaciones de trayectorias articulares
 
 **Ejemplo de uso**:
 ```python
@@ -578,16 +582,19 @@ viz.draw_path(points, "path_name", color)  # Draw path
   Asegúrate de ejecutar `sudo chmod 666 /dev/ttyACM0` (Damiao) o `sudo chmod 666 /dev/can0` (Robostride) para establecer los permisos del dispositivo.
 
 - **La resolución de IK falla o los resultados son anormales**
-  Comprueba si la pose objetivo está dentro del espacio de trabajo del brazo robótico y asegúrate de que los límites de las articulaciones estén configurados correctamente.
+  Comprueba si la pose objetivo está dentro del espacio de trabajo del brazo robótico y asegúrate de que los límites articulares estén configurados correctamente.
 
 - **El efecto de compensación de gravedad es deficiente**
-  Esto puede deberse a errores estructurales y a la precisión del mecanizado. La compensación de gravedad en este proyecto se basa en URDF y Pinocchio. Puedes intentar corregir el URDF con los parámetros que realmente hayas medido (puedes pedir ayuda a una IA para este paso).
+  Esto puede deberse a errores estructurales y precisión de mecanizado. La compensación de gravedad en este proyecto se basa en URDF y Pinocchio. Puedes intentar corregir el URDF con los parámetros que realmente hayas medido (puedes pedir ayuda a una IA para este paso).
 
 - **Los motores Robostride no pueden leer el estado**
-  Los problemas de configuración del protocolo interno en motorbridge pueden impedir que los motores RS consulten el estado como los motores DM. Por favor, júzgalo según los efectos de movimiento reales, o intenta usar el comando `ping` para confirmar la comunicación normal con los motores.
+  Los problemas de configuración del protocolo interno en motorbridge pueden impedir que los motores RS consulten el estado como los motores DM. Por favor, juzga según los efectos reales del movimiento o intenta usar el comando `ping` para confirmar la comunicación normal del motor.
 
-- **Cómo cambiar entre las configuraciones de motores Damiao y Robostride**
+- **Cómo cambiar entre las configuraciones de motor Damiao y Robostride**
   Modifica el archivo de configuración `config/rebotarm_dm.yaml` (Damiao) o `config/rebotarm_rs.yaml` (Robostride) y carga la configuración correspondiente en el código.
+
+- **Si el brazo robótico permanece inmóvil más allá del 70% del espacio de trabajo de alcance del brazo durante un período prolongado, el motor de la segunda articulación entrará en protección por bloqueo**  
+  Apaga y enciende el brazo robótico; el error de protección por bloqueo del motor de la segunda articulación se borrará automáticamente.
 
 ---
 
@@ -601,8 +608,8 @@ viz.draw_path(points, "path_name", color)  # Draw path
 
 ## Documentos de referencia
 
-- [Pinocchio Official Documentation](https://stack-of-tasks.github.io/pinocchio/)
-- [MeshCat Official Documentation](https://github.com/rdeits/meshcat)
+- [Documentación oficial de Pinocchio](https://stack-of-tasks.github.io/pinocchio/)
+- [Documentación oficial de MeshCat](https://github.com/rdeits/meshcat)
 - [motorbridge SDK](https://github.com/motorbridge/motorbridge)
 
 ---
