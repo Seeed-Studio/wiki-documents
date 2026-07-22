@@ -1,19 +1,23 @@
 ---
 description: This is the overview for features, specifications, hardware interface and partlist.
-title: reCamera HQ POE
+title: Hardware and Specs
 keywords:
   - Edge
   - reCamera
-  - Hardware overview
-image: https://files.seeedstudio.com/wiki/reCamera/image.webp
-slug: /reCamera_hq_poe_hardware_and_specs
+  - reCamera HQ POE
+  - POE
+  - HQ
+  - M12
+image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
+slug: /recamera_hq_poe_hardware
+sku: 100041077, 100074316, 100018917, 100029708
 sidebar_position: 2
 last_update:
-  date: 02/18/2025
+  date: 09/25/2025
   author: Parker Hu
-createdAt: '2024-12-20'
-updatedAt: '2025-12-05'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/hardware_and_specs/reCamera_hq_poe_hardware_and_specs
+createdAt: '2025-10-24'
+updatedAt: '2026-01-07'
+url: https://wiki.seeedstudio.com/recamera_hq_poe_hardware/
 ---
 
 # reCamera HQ POE Overview

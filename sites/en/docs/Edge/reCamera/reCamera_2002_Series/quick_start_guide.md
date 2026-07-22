@@ -1,11 +1,11 @@
 ---
-description: Getting Started with reCamera 2002 Series
+description: Getting Started with reCamera
 title: Quick Start Guide
 keywords:
   - Edge
   - reCamera
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /recamera_2002_series_quick_start_guide
+slug: /recamera_getting_started
 sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899
 sidebar_position: 1
 last_update:
@@ -13,10 +13,10 @@ last_update:
   author: Evelyn Chen & Samuel
 createdAt: '2024-11-11'
 updatedAt: '2026-04-13'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/getting_start/recamera_2002_series_quick_start_guide
+url: https://wiki.seeedstudio.com/recamera_getting_started/
 ---
 
-# reCamera 2002 Series Quick Start Guide
+# reCamera Quick Start Guide
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" /></div>
 

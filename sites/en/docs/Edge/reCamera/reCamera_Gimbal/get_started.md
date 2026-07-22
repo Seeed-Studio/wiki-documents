@@ -1,6 +1,6 @@
 ---
 description: Getting Started with reCamera Gimbal
-title: reCamera Gimbal
+title: Quick Start Guide
 keywords:
   - AI
   - reCamera
@@ -14,7 +14,7 @@ last_update:
   author: Dawn Yao
 createdAt: '2025-02-27'
 updatedAt: '2026-01-07'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/getting_start/recamera_gimbal_getting_started
+url: https://wiki.seeedstudio.com/recamera_gimbal_getting_started/
 ---
 
 # Getting Started with reCamera Gimbal
