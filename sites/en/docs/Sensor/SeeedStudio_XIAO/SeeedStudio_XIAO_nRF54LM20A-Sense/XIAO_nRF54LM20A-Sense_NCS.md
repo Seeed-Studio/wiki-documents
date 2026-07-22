@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_ncs
 sku: 100018440
 last_update:
-  date: 06/15/2026
+  date: 07/22/2026
   author: Brandy
 createdAt: '2025-05-13'
 updatedAt: '2026-07-10'
@@ -460,10 +460,18 @@ west flash --build-dir build_1
 
 If the SDK download is very slow or gets stuck, you can use **aria2** to download the required packages with multiple connections, and then install the SDK using **nrfutil**.
 
-**Step 1. Install aria2**
+### Step 1. Install aria2
+
+For macOS:
 
 ```bash
 brew install aria2
+```
+
+For Windows:
+
+```bash
+winget install aria2.aria2
 ```
 
 **Step 2. Create the download directory**
