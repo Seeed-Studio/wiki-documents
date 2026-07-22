@@ -1,5 +1,5 @@
 position: 1 # float position is supported
-label: 'reCamera Baise Getting Start'
+label: 'Getting Start'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
 className: reCamera_basic_getting_start
