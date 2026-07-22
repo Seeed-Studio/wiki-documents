@@ -1,6 +1,6 @@
 ---
 description: Getting Started with reCamera HQ POE
-title: Quick Start Guide
+title: reCamera HQ POE Quick Start Guide
 keywords:
   - Edge
   - reCamera
@@ -17,9 +17,9 @@ last_update:
   author: Parker Hu
 createdAt: '2023-02-16'
 updatedAt: '2026-01-07'
-url: https://wiki.seeedstudio.com/recamera_hq_poe_getting_started/
+url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/getting_start/recamera_hq_poe_getting_started/
 ---
-# reCamera HQ POE Getting Started Guide
+# reCamera HQ POE Quick Start Guide
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" /></div>
 
