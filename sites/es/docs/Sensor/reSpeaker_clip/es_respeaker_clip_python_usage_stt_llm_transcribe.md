@@ -1,12 +1,13 @@
 ---
-description: Aprende cómo crear tus propias aplicaciones con el SDK de reSpeaker Clip usando Python. Este tutorial cubre comunicación BLE y Wi‑Fi, control de grabación de audio, sincronización de archivos, configuración del dispositivo y más.
+description: Aprende a crear tus propias aplicaciones para reSpeaker Clip con el SDK de Python para flujos de trabajo de transcripción, diarización y resumen. Este tutorial cubre comunicación por BLE y Wi‑Fi, grabación de audio, sincronización de archivos, configuración del dispositivo y más.
 
-title: Crea tu propia app para reSpeaker Clip con transcripción/diarización/resumen usando el SDK de Python
+title: Crea tu propia app para reSpeaker Clip con transcripción, diarización y resumen usando el SDK de Python
 keywords:
   - reSpeaker clip
-  - ble
-  - wifi
-  - python
+  - Transcribir
+  - diarización
+  - STT
+  - Resumen
   - sdk
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png
 slug: /respeaker_clip_python_build_app
@@ -24,7 +25,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_python_build_app/
 **reSpeaker STT Web** transforma el reSpeaker Clip en un asistente de voz y de reuniones inteligente con IA, conectando hardware de audio embebido con tecnologías modernas web y de IA en la nube. Usando BLE o Wi‑Fi, sincroniza continuamente las grabaciones desde el dispositivo y las procesa mediante potentes canalizaciones de IA de voz y lenguaje. Con flujos de trabajo dedicados para **transcripción de voz, diarización de hablantes y resúmenes de reuniones generados por IA**, los usuarios pueden convertir conversaciones en información estructurada y accionable. Desarrollado con Python y una arquitectura modular, el proyecto proporciona una base flexible para que desarrolladores e ingenieros embebidos creen aplicaciones de voz e IA de próxima generación con el reSpeaker Clip.
 
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_32_1.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html" target="_blank">
@@ -39,7 +40,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_python_build_app/
 3. Detén la grabación. Una vez que termina la sincronización final, la app:
    - codifica el audio combinado a `.ogg` (Opus),
    - lo convierte a un `.wav` mono de 16 kHz (mediante PyAV, no se necesita instalación separada de ffmpeg),
-    - **Pestaña Transcription:** envía el `.wav` a Groq y recibe texto plano.
+    - **Pestaña Transcription:** envía el `.wav` a Groq y recibe texto plano de vuelta.
     - **Pestaña Diarization:** envía el `.wav` a Speechmatics con `diarization: "speaker"`, obtiene la transcripción JSON a nivel de palabra y la agrupa en turnos de hablante (`S1`, `S2`, ...).
     - **Pestaña Summary:** envía el `.wav` a Groq para transcripción y luego pasa la transcripción a la API de chat de Groq (`openai/gpt-oss-20b`) para generar minutas de reunión estructuradas (título, puntos clave, tareas, decisiones).
     - envía el resultado al navegador a través del WebSocket existente.
@@ -48,10 +49,10 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_python_build_app/
 
 ## Claves de API
 
-Cada pestaña tiene su propia tarjeta de Settings: clave de Groq en las pestañas Transcription y Summary (compartida, se configura una vez y la usan ambas), clave de Speechmatics en la pestaña Diarization. Nada está codificado ni se sube al repositorio. Las claves viven en memoria durante la vida del proceso del servidor. Marca "Remember on this machine" para guardarlas también en `app/settings.local.json` (ignorado por git) y que sobrevivan a un reinicio.
+Cada pestaña tiene su propia tarjeta de Settings: clave de Groq en las pestañas Transcription y Summary (compartida, se configura una vez y la usan ambas), clave de Speechmatics en la pestaña Diarization. Nada está codificado de forma fija ni se sube al repositorio. Las claves viven en memoria durante la vida del proceso del servidor. Marca "Remember on this machine" para guardarlas también en `app/settings.local.json` (incluido en `.gitignore`) para que sobrevivan a un reinicio.
 
 - **Groq:** obtén una clave en https://console.groq.com — se usa tanto para transcripción (`whisper-large-v3-turbo`, llamada síncrona única y rápida) como para resumen (`openai/gpt-oss-20b` chat completions).
-- **Speechmatics:** obtén una clave en https://portal.speechmatics.com — usa la API REST por lotes con `diarization: "speaker"` (enviar → sondear → obtener transcripción JSON → agrupar en turnos de hablante), punto de operación `enhanced` de forma predeterminada. Consulta [Batch diarization](https://docs.speechmatics.com/speech-to-text/batch/batch-diarization) en su documentación.
+- **Speechmatics:** obtén una clave en https://portal.speechmatics.com — usa la API REST por lotes con `diarization: "speaker"` (enviar → sondear → obtener transcripción JSON → agrupar en turnos de hablante), punto de operación `enhanced` por defecto. Consulta [Batch diarization](https://docs.speechmatics.com/speech-to-text/batch/batch-diarization) en su documentación.
 
 ## Estructura del proyecto
 
@@ -78,7 +79,7 @@ respeaker-stt-web/
 
 - Python 3.10+
 - No se necesita instalación separada de ffmpeg: la conversión a WAV usa PyAV (`av` en PyPI), que incluye sus propias bibliotecas de códecs integradas, también en Windows
-- Un dispositivo reSpeaker Clip emparejado (BLE) para la grabación real: esta parte no se puede probar sin el hardware
+- Un dispositivo reSpeaker Clip emparejado (BLE) para la grabación real; esta parte no se puede probar sin el hardware
 
 ## Configuración
 
