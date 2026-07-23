@@ -12,7 +12,7 @@ last_update:
   date: 04/8/2026
   author: Kasun Thushara
 createdAt: '2026-04-08'
-updatedAt: '2026-07-14'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/es/respeaker_flex_xiao_introduction/
 ---
 
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_xiao_introduction/
 
 ## Descripción general
 
-La versión reSpeaker Flex ESP32 integra un módulo XIAO ESP32S3 pre-soldado en la placa principal, proporcionando conectividad Wi-Fi y Bluetooth integrada para control inalámbrico y procesamiento en el borde. Impulsado por el procesador de voz XMOS XVF3800, el sistema mantiene la misma arquitectura modular donde la placa de matriz de micrófonos se conecta a la placa principal mediante un cable FPC flexible de 24 pines, lo que permite una colocación flexible dentro de las carcasas de los dispositivos. Es compatible tanto con matrices de 4 micrófonos circulares como lineales, lo que permite una captura omnidireccional de 360° o una captación direccional frontal. El sistema puede funcionar a través de USB (UAC 2.0) o I2S, mientras que el ESP32S3 integrado habilita conectividad IoT, control local e integración más sencilla con aplicaciones embebidas.
+La versión reSpeaker Flex ESP32 integra un módulo XIAO ESP32S3 pre-soldado en la placa central, proporcionando conectividad Wi-Fi y Bluetooth integrada para control inalámbrico y procesamiento en el borde. Impulsado por el procesador de voz XMOS XVF3800, el sistema mantiene la misma arquitectura modular donde la placa de matriz de micrófonos se conecta a la placa central mediante un cable FPC flexible de 24 pines, lo que permite una colocación flexible dentro de las carcasas de los dispositivos. Es compatible tanto con matrices de 4 micrófonos circulares como lineales, lo que permite una captura omnidireccional de 360° o una captación direccional frontal. El sistema puede funcionar a través de USB (UAC 2.0) o I2S, mientras que el ESP32S3 integrado habilita conectividad IoT, control local e integración más sencilla con aplicaciones embebidas.
 
 
 <table align="center">
@@ -53,9 +53,9 @@ La versión reSpeaker Flex ESP32 integra un módulo XIAO ESP32S3 pre-soldado en 
 
 ## Características 
 
-- **Diseño modular dividido**: La placa principal y la placa de matriz de micrófonos están físicamente separadas, conectadas mediante un cable plano FPC para una colocación flexible en cualquier chasis de producto
+- **Diseño modular dividido**: La placa central y la placa de matriz de micrófonos están físicamente separadas, conectadas mediante un cable plano FPC para una colocación flexible en cualquier chasis de producto
 
-- **Elección de configuraciones de micrófonos**: Cambia entre una matriz circular de 4 micrófonos (captación de 360°, separación de 44 mm) o una matriz lineal de 4 micrófonos (directividad frontal de 180°, separación de 33 mm) usando la misma placa principal
+- **Elección de configuraciones de micrófonos**: Cambia entre la matriz circular de 4 micrófonos (captación de 360°, separación de 44 mm) o la matriz lineal de 4 micrófonos (directividad frontal de 180°, separación de 33 mm) usando la misma placa central
 
 - **Procesamiento de audio XMOS XVF3800**: Conjunto completo de AEC, AGC, DoA, conformación de haz multicanal, VAD, supresión de ruido y desreverberación
 
@@ -77,7 +77,7 @@ La versión reSpeaker Flex ESP32 integra un módulo XIAO ESP32S3 pre-soldado en 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/main.jpg" alt="pir" width={800} height="auto" /></p>
 
 
-### Placa principal
+### Placa central
 
 | Componente / Característica | Descripción |
 |--------------------|------------|
@@ -87,16 +87,16 @@ La versión reSpeaker Flex ESP32 integra un módulo XIAO ESP32S3 pre-soldado en 
 | **Puerto USB-C** | Audio UAC 2.0, actualización de firmware DFU y alimentación |
 | **Puerto PH2.0** | Conector con pestillo de bloqueo; proporciona el mismo audio UAC 2.0 y soporte DFU que el puerto USB-C |
 | **Conector AUX de 3,5 mm** | Salida de auriculares lateral impulsada desde el DAC integrado |
-| **Conector JST para altavoz** | Conector de montaje vertical que acciona altavoces de hasta 10W a 4Ω; pad de soldadura reservado para conexión de altavoz cableada |
+| **Conector JST para altavoz** | Conector de montaje vertical que acciona altavoces de hasta 10W a 4Ω; se conserva una almohadilla de soldadura para conexión de altavoz cableada |
 | **Terminal de alimentación externa** | Suministra 12V a todo el sistema y admite cargas de altavoz de 10W (prioridad P1) |
 | **Botón RST** | Reinicio por hardware para el XVF3800 |
 | **Botón SafeMode (Boot)** | Mantener pulsado durante el encendido para entrar en modo seguro para recuperación de firmware |
 | **LED PWR** | Indicador verde de encendido |
-| **Pad de depuración** | Pad reservado para XMOS XTAG4 (no soldado en fábrica) |
-| **Cabeceras de E/S XMOS 3800** | Pines y pads expuestos para I2C, I2S, 5V/GND, pines de altavoz y E/S restante del XVF3800 |
+| **Almohadilla de depuración** | Almohadilla reservada para XMOS XTAG4 (no soldada en fábrica) |
+| **Cabeceras de E/S XMOS 3800** | Pines y almohadillas expuestos para I2C, I2S, 5V/GND, pines de altavoz y E/S restantes del XVF3800 |
 | **Orificios de montaje** | 4 × orificios de montaje M3 |
 | **XIAO ESP32S3** | Admite soldar XIAO ESP32S3 cuando se utiliza como dispositivo host |
-| **GPIO de XIAO ESP32S3** | Los GPIO restantes pueden utilizarse para E/S y expansión de periféricos |
+| **GPIO de XIAO ESP32S3** | Los GPIO restantes se pueden usar para E/S y expansión de periféricos |
 
 ### Placa de matriz circular 
 
@@ -106,7 +106,7 @@ La versión reSpeaker Flex ESP32 integra un módulo XIAO ESP32S3 pre-soldado en 
 |--------------------|------------|
 | **Micrófonos** | 4× micrófonos PDM MEMS con separación de 44 mm dispuestos en un diseño circular |
 | **Patrón de captación** | Captura de audio omnidireccional de 360° |
-| **Interfaz** | Conector FPC a la placa principal |
+| **Interfaz** | Conector FPC a la placa central |
 | **Montaje** | 3 × orificios de montaje M3 para fijación a carcasa o alojamiento |
 
 
@@ -120,12 +120,9 @@ La versión reSpeaker Flex ESP32 integra un módulo XIAO ESP32S3 pre-soldado en 
 |--------------------|------------|
 | **Micrófonos** | 4× micrófonos PDM MEMS con separación de 33 mm dispuestos en un diseño lineal |
 | **Patrón de captación** | Patrón de captación frontal de aproximadamente 180°, con el sonido trasero suprimido |
-| **Interfaz** | Conector FPC; el cable puede enrutarse desde el lateral o la parte trasera |
+| **Interfaz** | Conector FPC; el cable se puede enrutar desde el lateral o la parte trasera |
 | **Montaje** | 2 × orificios de montaje M3 |
 
-:::note
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
-:::
 
 ### Compatibilidad con XIAO ESP32S3 
 
@@ -133,13 +130,13 @@ La versión reSpeaker Flex ESP32 integra un módulo XIAO ESP32S3 pre-soldado en 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/header_pinout.jpg" alt="pir" width={800} height="auto" /></p>
 
 
-La placa principal de reSpeaker Flex incluye una huella dedicada para soldar un módulo Seeed Studio XIAO ESP32S3, habilitando conectividad Wi-Fi y Bluetooth además de la cadena de procesamiento de audio del XVF3800. Los SKU que incluyen XIAO (-C4-1 y -L4-1) se envían con este módulo preinstalado; los SKU base (-C4-0 y -L4-0) dejan la huella sin poblar.
-Cuando se monta el XIAO, se establecen las siguientes conexiones entre este y el XVF3800:
+La placa central de reSpeaker Flex incluye una huella dedicada para soldar un módulo Seeed Studio XIAO ESP32S3, habilitando conectividad Wi-Fi y Bluetooth además de la cadena de procesamiento de audio del XVF3800. Los SKU que incluyen XIAO (-C4-1 y -L4-1) se envían con este módulo preinstalado; los SKU base (-C4-0 y -L4-0) dejan la huella sin poblar.
+Cuando se monta el XIAO, se establecen las siguientes conexiones entre él y el XVF3800:
 
 - **Bus I2S** — bus dual (reproducción y grabación) con BCLK, MCLK y LRCLK compartidos para transmisión de audio en ambas direcciones
 - **Bus I2C** — para leer y escribir parámetros de configuración del XVF3800 desde el XIAO
 - **Línea RST** — el XIAO puede activar un reinicio por hardware en el XVF3800 mediante un pin de E/S dedicado
-- **E/S restante de XIAO** — llevada a cabeceras/pads de pines etiquetados para expansión por parte del usuario
+- **E/S restantes de XIAO** — llevadas a cabeceras/pads de pines etiquetados para expansión por parte del usuario
 
 ### Cabecera de pines 
 
@@ -156,9 +153,9 @@ La interfaz de matriz de micrófonos FPC es un conector de 24 pines y paso de 0,
 
 | Pin | Nombre de señal | Tipo | Descripción de la función | Notas |
 |-----|------------|------|----------------------|-------|
-| 1 | MIC_VDD | Alimentación | Fuente de alimentación de micrófono | Alimentación de 3,3V |
-| 2 | MIC_VDD | Alimentación | Fuente de alimentación de micrófono | Pin doble para mayor estabilidad de alimentación |
-| 3 | GND | GND | Tierra de retorno de alimentación | GND de alimentación |
+| 1 | MIC_VDD | Alimentación | Fuente de alimentación del micrófono | Alimentación de 3,3V |
+| 2 | MIC_VDD | Alimentación | Fuente de alimentación del micrófono | Pin doble para mayor estabilidad de alimentación |
+| 3 | GND | GND | Tierra de retorno de alimentación | Tierra de alimentación |
 | 4 | MIC_CLK | Out | Señal de reloj global | Señal principal, 2–4 MHz |
 | 5 | GND | GND | Tierra de apantallamiento del reloj | Tierra dedicada para el reloj |
 | 6 | MIC_D1 | In | Línea de datos 1 | Micrófono CH1 |
@@ -183,15 +180,20 @@ La interfaz de matriz de micrófonos FPC es un conector de 24 pines y paso de 0,
 
 ## Primeros pasos
 
+:::note
+Para garantizar un rendimiento óptimo de captación de voz y el funcionamiento adecuado de los algoritmos de audio, asegúrate de que el Puerto de Micrófono (Entrada de Micrófono / Orificio de Sonido) en la parte trasera del dispositivo esté orientado hacia la fuente de sonido. El puerto de micrófono se encuentra en el lado donde está impreso el logotipo de Seeed Studio. 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
+:::
+
 ### Preparación de hardware 
 
-- Cable USB Tipo-C 
+- Cable USB tipo C 
 - Ordenador host o Raspberry Pi 
 
 
 ### Flashear el firmware I2S 
 
-Para usar reSpeaker Flex con XIAO ESP32S3, asegúrate de que el firmware de reSpeaker Flex sea la versión `I2S`. Consulta Firmware Flash para flashear el firmware `I2S` más reciente. Visita la [sección](https://wiki.seeedstudio.com/es/respeaker_flex_introduction/#actualizar-firmware)
+Para usar reSpeaker Flex con XIAO ESP32S3, asegúrate de que el firmware de reSpeaker Flex sea la versión `I2S`. Consulta Firmware Flash para flashear el firmware `I2S` más reciente. Visita esta [sección](https://wiki.seeedstudio.com/es/respeaker_flex_introduction/#actualizar-firmware)
 
 
 :::note
@@ -202,7 +204,7 @@ Normalmente, el reSpeaker Flex con el XIAO ESP32S3 viene con firmware de fábric
 
 ### Instalar Arduino IDE
 
-Descarga e instala la versión estable de Arduino IDE según tu sistema operativo
+Descarga e instala la versión estable de Arduino IDE de acuerdo con tu sistema operativo
 
  <div className="download_arduino_container" style={{ textAlign: 'center' }}>
   <a
@@ -212,7 +214,7 @@ Descarga e instala la versión estable de Arduino IDE según tu sistema operativ
     rel="noopener noreferrer"
     style={{ textDecoration: 'none', color: '#FFFFFF', fontSize: '1.25rem' }}
   >
-    <strong>Download Arduino IDE</strong>
+    <strong>Descargar Arduino IDE</strong>
   </a>
 </div>
 
@@ -222,7 +224,7 @@ Descarga e instala la versión estable de Arduino IDE según tu sistema operativ
 
 Para iniciar el proceso de instalación usando el Gestor de placas, sigue estos pasos:
 
-- Instala la versión actual de Arduino IDE a nivel 1.8 o posterior. La versión actual está en el sitio web [arduino.cc](https://www.arduino.cc/en/Main/Software).
+- Instala la versión actual de Arduino IDE aguas arriba en el nivel 1.8 o posterior. La versión actual está en el sitio web de [arduino.cc](https://www.arduino.cc/en/Main/Software).
 
 - Inicia Arduino y abre la ventana de `Settings`.
 
