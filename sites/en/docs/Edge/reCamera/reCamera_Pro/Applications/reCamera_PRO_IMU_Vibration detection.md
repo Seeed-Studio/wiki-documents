@@ -33,6 +33,7 @@ This article explains how to use the reCamera Pro's onboard six-axis inertial me
 ## Hardware Preparation
 - one reCamera Pro
 
+<div align="center">
 <table align="center">
  <tr>
   <th>reCamera Pro</th>
@@ -48,6 +49,7 @@ This article explains how to use the reCamera Pro's onboard six-axis inertial me
   </div></td>
  </tr>
 </table>
+</div>
 
 
 
