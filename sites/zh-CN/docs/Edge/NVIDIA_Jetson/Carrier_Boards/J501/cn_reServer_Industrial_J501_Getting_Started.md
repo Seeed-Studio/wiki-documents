@@ -62,7 +62,7 @@ J501 载板是一款功能强大的扩展板，支持 NVIDIA Jetson AGX Orin 模
     <tr>
       <td>SATA</td>
       <td> 2x SATA III 6.0Gbps at 30 Hz </td>
-    </tr]
+    </tr>
     <tr>
       <td>SIM</td>
       <td> 1x Nano SIM 卡槽 </td>
