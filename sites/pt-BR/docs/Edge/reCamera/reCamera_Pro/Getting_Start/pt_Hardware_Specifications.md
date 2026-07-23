@@ -1,5 +1,5 @@
 ---
-description: Este guia apresentará os recursos de hardware e as interfaces do dispositivo.
+description: Este guia apresentará os recursos de hardware e interfaces do dispositivo.
 title: Especificações de Hardware do reCamera Pro
 keywords:
   - reCamera
@@ -31,15 +31,25 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_pro_hardware_specifications/
 | Entrada de Áudio | Microfone de eletreto x2 |
 | Fonte de Alimentação | Suporta gerenciamento de carga e descarga de bateria de lítio de 7,4V, entrada DC (12V~24V, conector barril 5525), alimentação PoE |
 | Rede e Conectividade Sem Fio | Wi-Fi 5.2, Bluetooth 5.2, Ethernet de 1000Mbps |
-| Interfaces | Type-C de função completa (OTG), UART de depuração, CAN ×2, MIPI DSI de 22 PINs, GPIO ×2, IO digital de 12–24V ×2 |
+| Interfaces | Type-C de função completa (OTG), UART de depuração, CAN ×2, MIPI DSI de 22 PINs, GPIO ×2 |
 
 # Diagrama de Interface de Hardware
-![Diagrama de Interface de Hardware](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
 
+## vista traseira
+![Diagrama de Interface de Hardware](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
+![Conector de Expansão](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Expansion_CON.jpg)
+![UART de Depuração](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Debug_Uart.jpg)
+
+## vista lateral
+![Vista Lateral](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Side.png)
+
+
+## vista frontal
+![Vista Frontal](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Front_cover.png)
 
 ## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos múltiplos canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
