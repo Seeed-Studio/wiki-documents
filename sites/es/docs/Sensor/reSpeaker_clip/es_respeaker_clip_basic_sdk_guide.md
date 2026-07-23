@@ -1,5 +1,5 @@
 ---
-description: Guía sistemática del reSpeaker Clip Basic SDK: transportes, protocolos de comunicación, máquina de estados de grabación, modelo de archivos, flujo de datos de extremo a extremo y el SDK de Python como implementación de referencia principal con herramientas CLI y Web.
+description: Guía sistemática del reSpeaker Clip Basic SDK - transportes, protocolos de comunicación, máquina de estados de grabación, modelo de archivos, flujo de datos de extremo a extremo y el SDK de Python como implementación de referencia principal con herramientas CLI y Web.
 title: Guía del reSpeaker Clip Basic SDK
 keywords:
   - reSpeaker clip
