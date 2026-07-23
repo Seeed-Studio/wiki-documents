@@ -30,7 +30,7 @@ url: https://wiki.seeedstudio.com/es/recamera_pro_hardware_specifications/
 | Salida de audio | Altavoz de 8 ohmios con potencia nominal de 1W |
 | Entrada de audio | Micrófono de electreto x2 |
 | Fuente de alimentación | Admite gestión de carga y descarga de batería de litio de 7,4V, entrada de CC (12V~24V, conector cilíndrico 5525), alimentación PoE |
-| Red y conectividad inalámbrica | Wi-Fi 5.2, Bluetooth 5.2, Ethernet de 1000 Mbps |
+| Red y conectividad inalámbrica | Wi-Fi 5.2, Bluetooth 5.2, Ethernet de 1000Mbps |
 | Interfaces | Type-C de función completa (OTG), UART de depuración, CAN ×2, MIPI DSI de 22 pines, GPIO ×2 |
 
 # Diagrama de interfaces de hardware

@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_hardware_specifications/
 | --- | --- |
 | プロセッサ | RV1126B |
 | CPU | 1.2GHz クアッドコア Cortex-A53 |
-| NPU | 3 TOPS、混在 INT8/INT16 演算をサポート |
+| NPU | 3 TOPS、INT8/INT16 混在演算をサポート |
 | メモリ | LPDDR4 2GB / 4GB |
 | ストレージ | 16GB eMMC、SD カードスロット（最大 512GB） |
 | カメラ | SC850SL (4K@30FPS) |
@@ -49,7 +49,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_hardware_specifications/
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

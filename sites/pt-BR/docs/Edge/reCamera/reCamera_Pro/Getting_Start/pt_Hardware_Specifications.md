@@ -1,5 +1,5 @@
 ---
-description: Este guia apresentará os recursos de hardware e interfaces do dispositivo.
+description: Este guia apresentará os recursos de hardware e as interfaces do dispositivo.
 title: Especificações de Hardware do reCamera Pro
 keywords:
   - reCamera
@@ -31,7 +31,7 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_pro_hardware_specifications/
 | Entrada de Áudio | Microfone de eletreto x2 |
 | Fonte de Alimentação | Suporta gerenciamento de carga e descarga de bateria de lítio de 7,4V, entrada DC (12V~24V, conector barril 5525), alimentação PoE |
 | Rede e Conectividade Sem Fio | Wi-Fi 5.2, Bluetooth 5.2, Ethernet de 1000Mbps |
-| Interfaces | Type-C de função completa (OTG), UART de depuração, CAN ×2, MIPI DSI de 22 PINs, GPIO ×2 |
+| Interfaces | Type-C de função completa (OTG), UART de depuração, CAN ×2, MIPI DSI de 22 pinos, GPIO ×2 |
 
 # Diagrama de Interface de Hardware
 
@@ -49,7 +49,7 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_pro_hardware_specifications/
 
 ## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos múltiplos canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

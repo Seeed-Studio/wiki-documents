@@ -5,10 +5,10 @@ keywords:
   - reCamera
   - reCamera Pro
   - IMU
-  - ジャイロスコープ
+  - Gyroscope
   - ICM-42670-P
-  - 傾き検出
-  - 振動検出
+  - Tilt Detection
+  - Shake Detection
   - ALSA
   - aplay
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO-IMU-Detect.gif
@@ -67,7 +67,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_imu_tilt_shake_detection/
 
 ## オンボードジャイロスコープのデータ取得
 
-reCamera Pro の Linux 環境では IIO（Industrial I/O）ドライバを使用しており、センサーデータと設定は sysfs インターフェースを通じて公開され、ユーザ空間アプリケーションからアクセスできます。センサーデータのパスは次のとおりです：
+reCamera Pro の Linux 環境では IIO（Industrial I/O）ドライバを使用しており、センサーデータと設定を sysfs インターフェース経由で公開することで、ユーザ空間アプリケーションからアクセスできるようになっています。センサーデータのパスは次のとおりです：
 
 ```
 /sys/bus/iio/devices/iio:device1
@@ -89,7 +89,7 @@ cat /sys/bus/iio/devices/iio:device1/in_anglvel_x_raw
 
 ## オンボードスピーカーの使用
 
-reCamera Pro のオンボードスピーカーは、標準的な Linux ALSA ドライバを介して制御されます。次のコマンドで現在のサウンドカードデバイスを確認できます：
+reCamera Pro のオンボードスピーカーは、標準的な Linux ALSA ドライバによって制御されます。現在のサウンドカードデバイスは、次のコマンドで確認できます：
 
 ```bash
 aplay -l
@@ -104,7 +104,7 @@ aplay test.wav
 ```
 
 :::note
-`aplay` は ALSA の PCM プレーヤーです。PCM/WAV 形式のデータのみを再生でき、MP3 をデコードすることはできません。次のコマンドを使用して MP3 を WAV 形式に変換できます：
+`aplay` は ALSA の PCM プレーヤーです。PCM/WAV 形式のデータのみを再生でき、MP3 をデコードすることはできません。MP3 を WAV 形式に変換するには、次のコマンドを使用できます：
 
 ```bash
 ffmpeg -i test.mp3 test.wav
@@ -117,7 +117,7 @@ ffmpeg -i test.mp3 test.wav
 
 ### ジャイロスコープデータの取得
 
-以下は、X 軸ジャイロスコープデータを収集する方法を示す最小限の関数例です。この関数を拡張して、他の軸のデータも取得できます。
+以下は、X 軸ジャイロスコープデータを取得する方法を示す最小限の関数例です。この関数を拡張して、他の軸のデータも取得できるようにできます。
 
 ```python
 #!/usr/bin/env python3
@@ -178,7 +178,7 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 ```
 
 :::note
-1. プログラムは初回実行時にキャリブレーションを行います。`main.py` を実行する前に、デバイスが安定して設置されていることを確認してください。再キャリブレーションが必要な場合（デフォルトのキャリブレーション時間は 3 秒）、次を実行します：
+1. プログラムは初回実行時にキャリブレーション処理を行います。`main.py` を実行する前に、デバイスが安定して設置されていることを確認してください。再キャリブレーションが必要な場合（デフォルトのキャリブレーション時間は 3 秒）、次を実行します：
 
 ```bash
 ./main.py --force-calib
@@ -200,7 +200,7 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

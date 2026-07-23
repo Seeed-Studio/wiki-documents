@@ -1,5 +1,5 @@
 ---
-description: NVIDIA Jetson AGX Thor モジュール向けに設計された reComputer Robotics J601 キャリアボードの、予備的な入門ページです。
+description: NVIDIA Jetson AGX Thor モジュール向けに設計された reComputer Robotics J601 キャリアボードの、予備的なスタートガイドページです。
 title: reComputer Robotics J601 入門ガイド
 keywords:
   - reComputer Robotics J601
@@ -14,7 +14,7 @@ last_update:
   date: 04/24/2026
   author: Dayu
 createdAt: '2026-04-24'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_robotics_j601_carrie
   <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
 </div>
 
-reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けのロボティクス特化型キャリアボードです。高速ネットワーキング、産業用 I/O、GMSL カメラ拡張、およびコンパクトなキャリアボードフォームファクタでの広範囲 DC 入力を必要とする、高性能なエンボディド AI およびロボット制御ワークロードを対象としています。
+reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けのロボティクスに特化したキャリアボードです。高速ネットワーキング、産業用 I/O、GMSL カメラ拡張、およびコンパクトなキャリアボードフォームファクタでの広範囲 DC 入力を必要とする、高性能なエンボディド AI およびロボット制御ワークロードを対象としています。
 
 ## 予備的な特長
 
@@ -44,41 +44,41 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
 
 ## 予備的な仕様
 
-以下の表では、現在のハードウェア定義のうち明確な部分のみを意図的に記載し、未確定の項目は TBD としています。
+次の表では、現在のハードウェア定義のうち明確になっている部分のみを意図的に記載し、未確定の項目は TBD としています。
 
 <div class="table-center">
 <table>
   <tbody>
     <tr>
-      <td>Module</td>
+      <td>モジュール</td>
       <td>NVIDIA Jetson AGX Thor x 1</td>
     </tr>
     <tr>
-      <td>Storage</td>
-      <td>1x M.2 Key M for M.2 NVMe 2280 SSD</td>
+      <td>ストレージ</td>
+      <td>1x M.2 Key M（M.2 NVMe 2280 SSD 用）</td>
     </tr>
     <tr>
-      <td>Networking</td>
-      <td>Ethernet の定義は進行中であり、暫定プランには PTP および EtherCAT 対応の高速 RJ45 ポートが含まれます</td>
+      <td>ネットワーキング</td>
+      <td>Ethernet の定義は進行中。暫定プランとして、PTP および EtherCAT 対応の高速 RJ45 ポートを含む予定</td>
     </tr>
     <tr>
-      <td>Wireless Expansion</td>
+      <td>無線拡張</td>
       <td>1x M.2 Key E（Wi-Fi/Bluetooth 用）、1x M.2 Key B（5G 用）、1x Nano SIM</td>
     </tr>
     <tr>
       <td>USB</td>
-      <td>最大 4x USB 3.2 Type-A（ホスト）、1x USB 2.0 Type-C（Debug UART / デバイスモード）、1x USB 3.0 Type-C（フラッシング用）</td>
+      <td>最大 4x USB 3.2 Type-A（ホスト）、1x USB 2.0 Type-C（デバッグ UART / デバイスモード）、1x USB 3.0 Type-C（フラッシング用）</td>
     </tr>
     <tr>
-      <td>Display</td>
+      <td>ディスプレイ</td>
       <td>1x HDMI</td>
     </tr>
     <tr>
-      <td>Cooling</td>
-      <td>1x 4 ピンファンコネクタ（12V PWM）；キャリアボードとファンは別売りとなる予定です</td>
+      <td>冷却</td>
+      <td>1x 4 ピンファンコネクタ（12V PWM）。キャリアボードとファンは別売りとなる予定</td>
     </tr>
     <tr>
-      <td>Camera</td>
+      <td>カメラ</td>
       <td>GMSL 拡張、最大 8 台のカメラ</td>
     </tr>
     <tr>
@@ -86,19 +86,19 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
       <td>4x CAN（JST コネクタ経由）</td>
     </tr>
     <tr>
-      <td>Serial</td>
+      <td>シリアル</td>
       <td>1x RS-232/422/485（DB9 コネクタ）、1x RS-485（JST コネクタ）</td>
     </tr>
     <tr>
-      <td>Digital I/O</td>
+      <td>デジタル I/O</td>
       <td>4x DI および 4x DO（JST 端子コネクタ経由）</td>
     </tr>
     <tr>
-      <td>Audio</td>
+      <td>オーディオ</td>
       <td>1x I2S、2x アンプ出力、1x マイク入力</td>
     </tr>
     <tr>
-      <td>Low-speed Expansion</td>
+      <td>低速拡張</td>
       <td>1x I2C、1x SPI、GPIO（JST/ピンヘッダ経由）</td>
     </tr>
     <tr>
@@ -106,36 +106,36 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
       <td>1x RTC 2 ピン</td>
     </tr>
     <tr>
-      <td>Buttons</td>
-      <td>Recovery および Reset</td>
+      <td>ボタン</td>
+      <td>リカバリおよびリセット</td>
     </tr>
     <tr>
-      <td>LEDs</td>
+      <td>LED</td>
       <td>PWR、ACT、およびユーザー定義 RGB LED</td>
     </tr>
     <tr>
-      <td>Power Input</td>
+      <td>電源入力</td>
       <td>XT30、19V ～ 48V DC</td>
     </tr>
     <tr>
-      <td>Current / Power</td>
+      <td>電流 / 電力</td>
       <td>最大電流 10A、システム電力定義 160W</td>
     </tr>
     <tr>
-      <td>Operating Temperature</td>
+      <td>動作温度</td>
       <td>-10°C ～ +60°C</td>
     </tr>
     <tr>
-      <td>Humidity</td>
+      <td>湿度</td>
       <td>10% ～ 95% RH</td>
     </tr>
     <tr>
-      <td>Certification</td>
+      <td>認証</td>
       <td>CE、FCC、RoHS、目標 EMI クラス：Class A</td>
     </tr>
     <tr>
-      <td>Mechanical</td>
-      <td>キャリアボードサイズの目標値：150 mm x 130 mm 以内</td>
+      <td>メカニカル</td>
+      <td>目標キャリアボードサイズ：150 mm x 130 mm 以内</td>
     </tr>
   </tbody>
 </table>
@@ -145,18 +145,18 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
 
 ### ボタン
 
-| Button | Pin | Signal | Type | Description |
+| ボタン | ピン | 信号 | タイプ | 説明 |
 | --- | --- | --- | --- | --- |
 | RECOVERY | 240 | - | CMOS-5V | システムリカバリ / 低レベル設定フローに使用 |
-| RESET | 239 | SYS_RESET* | オープンドレイン、1.8V | Low に引き下げるとモジュールをリセット；モジュール電源が準備完了のとき、High レベルはキャリアボード電源イネーブルとして使用可能 |
+| RESET | 239 | SYS_RESET* | オープンドレイン、1.8V | Low に引き下げるとモジュールをリセット。モジュール電源が準備完了のとき、High レベルをキャリアボードの電源イネーブルとして使用可能 |
 
 ### LED インジケータ
 
-| LED | Color | Status | Description |
+| LED | 色 | 状態 | 説明 |
 | --- | --- | --- | --- |
-| PWR | Green | On | デバイスが電源に接続されています |
-| PWR | Green | Off | デバイスが電源に接続されていません |
-| ACT | Green | Flashing | SSD アクティビティ |
+| PWR | 緑 | On | デバイスが電源に接続されています |
+| PWR | 緑 | Off | デバイスが電源に接続されていません |
+| ACT | 緑 | 点滅 | SSD アクティビティ |
 | USER | R / G / B | TBD | ユーザー定義の動作 |
 
 ## ソフトウェア
@@ -167,7 +167,7 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
 
 ## 計画中のカメラ対応
 
-現在の要件リストには、以下の GMSL カメラモデルが含まれています：
+現在の要件リストには、次の GMSL カメラモデルが含まれています：
 
 - Senyun `SG3S-ISX031C-GMSL2F`
 - Senyun `SG2-AR0233C-5200-G2A`
@@ -177,7 +177,7 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
 
 ## 熱設計
 
-このキャリアボードはヒューマノイドロボットの筐体内での使用を想定しており、顧客側で独自の熱ソリューションを設計する場合があります。Seeed は、AGX Thor ベースの展開向けに熱設計ガイダンスを提供する予定です。
+このキャリアボードは、顧客が独自の熱ソリューションを設計することを想定したヒューマノイドロボット筐体内での使用を目的としています。Seeed は、AGX Thor ベースの展開向けに熱設計ガイダンスを提供する予定です。
 
 参考ドキュメント：
 
@@ -203,7 +203,13 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
 - エアプレーンボックス
 - キャリアボードおよびアクセサリ用インナートレイ
 - 追加のフォーム層付きで一番上に配置されたユーザーマニュアル
-- mini J501 キャリアボードと同様のパッケージングスタイル
+- mini J501 キャリアボードと同様のパッケージスタイル
+
+## ハードウェアインターフェースの使用方法
+
+:::info
+ハードウェアインターフェースの詳細な仕様と使用方法についてさらに知りたい場合は、[この wiki](https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j601_interfaces_usage/) を参照してください。
+:::
 
 ## リソース
 
@@ -213,7 +219,7 @@ reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けの�
 
 ## 技術サポート
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

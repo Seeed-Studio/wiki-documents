@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection/
 
 ## 介绍
 
-本文介绍如何使用 reCamera Pro 板载的六轴惯性测量单元（IMU）——ICM-42670-P 陀螺仪——来实现设备的倾斜与晃动检测。当设备发生倾斜或晃动时，系统会通过板载扬声器播放相应的语音警告。通过本教程，你将学习如何通过 Linux IIO 驱动读取原始陀螺仪数据，如何使用 ALSA 音频驱动播放警告音，并最终整合出一个完整的检测与告警程序。
+本文介绍如何使用 reCamera Pro 板载的六轴惯性测量单元（IMU）——ICM-42670-P 陀螺仪——来实现设备的倾斜与晃动检测。当设备发生倾斜或晃动时，系统会通过板载扬声器播放相应的语音警告。通过本教程，你将学习如何通过 Linux IIO 驱动读取原始陀螺仪数据，如何使用 ALSA 音频驱动播放警告音，并最终集成一个完整的检测与告警程序。
 
 ## 硬件准备
 - 一台 reCamera Pro
@@ -44,7 +44,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection/
  <tr>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-Pro-2GB.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Buy Now 🖱️</font></span></strong>
    </a>
   </div></td>
  </tr>
@@ -59,11 +59,11 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection/
 
 ### 晃动检测
 
-当任一轴向的角速度数据绝对值超过预设阈值时，即判定为晃动。
+当任一轴的角速度数据绝对值超过预设阈值时，即判定为晃动。
 
 ### 倾斜检测
 
-当任一轴向的角速度数据绝对值超过预设阈值时，即判定为倾斜。
+当任一轴的角速度数据绝对值超过预设阈值时，即判定为倾斜。
 
 ## 板载陀螺仪数据采集
 
@@ -113,7 +113,7 @@ ffmpeg -i test.mp3 test.wav
 
 ## 基础实现代码
 
-在了解了如何读取原始陀螺仪数据以及播放音频之后，我们开始编写代码来实现完整功能。
+现在我们已经了解了如何读取原始陀螺仪数据以及如何播放音频，接下来编写代码实现完整功能。
 
 ### 陀螺仪数据采集
 
@@ -137,7 +137,7 @@ print(f"Gyroscope X: {gyro_x:.6f} rad/s")
 
 ### 音频播放
 
-当设备触发倾斜或晃动时，需要播放相应的语音警告。下面的代码演示了如何使用 Python 播放音频：
+当设备触发倾斜或晃动时，需要播放相应的语音警告。下面的代码演示如何使用 Python 播放音频：
 
 ```python
 #!/usr/bin/env python3
@@ -155,7 +155,7 @@ subprocess.run([
 ### 最终实现代码
 
 - 当设备被晃动时，将播放 **“警告：请勿晃动设备”**。
-- 当设备发生倾斜时，将播放 **“警告：设备已倾倒。请立即检查设备状态以防止发生意外”**。
+- 当设备发生倾倒时，将播放 **“警告：设备已倾倒。请立即检查设备状态以防止发生意外”**。
 
 相关代码可从 [reCamera_PRO_IMU_Detect](https://drive.google.com/drive/folders/1-3RTc0urrzMJVWGHqnLKwSMuZavLV9O0?usp=drive_link) 下载。
 
@@ -200,7 +200,7 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同偏好和需求。
+感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
