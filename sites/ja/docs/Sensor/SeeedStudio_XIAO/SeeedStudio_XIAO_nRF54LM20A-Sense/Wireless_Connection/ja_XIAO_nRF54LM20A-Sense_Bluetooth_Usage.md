@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-20'
-updatedAt: '2026-07-10'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_bluetooth_lowpower/
 ---
 

@@ -14,11 +14,10 @@ last_update:
   date: 05/15/2026
   author: Tienjuiwong
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-05-15'
-url: https://wiki.seeedstudio.com/reachymini_sdk_apps/
+updatedAt: '2026-05-19'
+url: https://wiki.seeedstudio.com/cn/reachymini_sdk_apps/
 ---
 
 # 构建和发布应用

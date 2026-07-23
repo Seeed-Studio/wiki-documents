@@ -13,6 +13,8 @@ last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/cn/codecraft/codecraft-overview/
+createdAt: '2026-06-30'
+updatedAt: '2026-07-08'
 ---
 
 # CodeCraft 用户指南

@@ -10,7 +10,7 @@ last_update:
   date: 10/11/2025
   author: Twelve
 createdAt: '2023-08-14'
-updatedAt: '2026-01-07'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker/Introduction/
 ---
 

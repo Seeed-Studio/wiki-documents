@@ -13,7 +13,7 @@ last_update:
   date: 10/13/2025
   author: LiShanghang
 createdAt: '2025-07-25'
-updatedAt: '2026-01-07'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/cn/lerobot_starai_arm/
 ---
 
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/cn/lerobot_starai_arm/
 # 基于 LeRobot 的 StarAI 机械臂入门教程
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603406916070&bvid=BV1HmUrBGEN6&cid=34225391454&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603406916070&bvid=BV1HmUrBGEN6&cid=34225391454&p=1&autoplay=0&muted=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 | **跟随臂 Viola** | **领导臂 Violin** | **跟随臂 Cello** |
@@ -226,7 +226,7 @@ UC-01 转接板 开关：
 </div>
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603473957143&bvid=BV1XNUkBfEBz&cid=34225917561&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603473957143&bvid=BV1XNUkBfEBz&cid=34225917561&p=1&autoplay=0&muted=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ### 手臂端口设置
@@ -303,7 +303,7 @@ sudo chmod 666 /dev/ttyUSB*
 机械臂开箱到遥操作视频可参考：
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603473957143&bvid=BV1XNUkBfEBz&cid=34225917561&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603473957143&bvid=BV1XNUkBfEBz&cid=34225917561&p=1&autoplay=0&muted=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
@@ -403,7 +403,7 @@ lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_
 ## 遥控操作
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603473957143&bvid=BV1XNUkBfEBz&cid=34225917561&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603473957143&bvid=BV1XNUkBfEBz&cid=34225917561&p=1&autoplay=0&muted=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 将手臂移动至图上位置待机。

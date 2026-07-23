@@ -15,10 +15,10 @@ image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_
 slug: /recamera_pro_imu_tilt_shake_detection
 sidebar_position: 1
 last_update:
-  date: 2026-06-11T00:00:00.000Z
+  date: 2026-06-11
   author: Sizhao zhou
-createdAt: "2026-06-11"
-updatedAt: "2026-06-11"
+createdAt: '2026-06-11'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_tilt_shake_detection/
 ---
 
@@ -28,11 +28,12 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_tilt_shake_detection/
 
 ## Introdução
 
-Este artigo explica como usar a unidade de medição inercial (IMU) de seis eixos integrada da reCamera Pro — o giroscópio ICM-42670-P — para implementar detecção de inclinação e agitação do dispositivo. Quando o dispositivo é inclinado ou agitado, o sistema reproduz avisos de voz correspondentes pelo alto-falante integrado. Por meio deste tutorial, você aprenderá como ler dados brutos do giroscópio via driver IIO do Linux, reproduzir sons de aviso usando o driver de áudio ALSA e, por fim, integrar um programa completo de detecção e alerta.
+Este artigo explica como usar a unidade de medição inercial (IMU) de seis eixos integrada da reCamera Pro — o giroscópio ICM-42670-P — para implementar a detecção de inclinação e agitação do dispositivo. Quando o dispositivo é inclinado ou agitado, o sistema reproduz avisos de voz correspondentes pelo alto-falante integrado. Por meio deste tutorial, você aprenderá como ler dados brutos do giroscópio via driver IIO do Linux, reproduzir sons de aviso usando o driver de áudio ALSA e, por fim, integrar um programa completo de detecção e alerta.
 
 ## Preparação de Hardware
 - uma reCamera Pro
 
+<div align="center">
 <table align="center">
  <tr>
   <th>reCamera Pro</th>
@@ -48,12 +49,13 @@ Este artigo explica como usar a unidade de medição inercial (IMU) de seis eixo
   </div></td>
  </tr>
 </table>
+</div>
 
 
 
 ## Princípio de Implementação
 
-Coletando dados brutos de velocidade angular do giroscópio integrado (ICM-42670-P), o sistema determina se o dispositivo foi inclinado ou agitado. A implementação atual usa uma lógica simples baseada em limiar, que pode ser otimizada posteriormente de acordo com os requisitos reais.
+Ao coletar dados brutos de velocidade angular do giroscópio integrado (ICM-42670-P), o sistema determina se o dispositivo foi inclinado ou agitado. A implementação atual usa uma lógica simples baseada em limiar, que pode ser otimizada posteriormente de acordo com os requisitos reais.
 
 ### Detecção de Agitação
 
@@ -109,7 +111,7 @@ ffmpeg -i test.mp3 test.wav
 ```
 :::
 
-## Código de Implementação Básico
+## Código de Implementação Básica
 
 Agora que entendemos como ler dados brutos do giroscópio e reproduzir áudio, vamos escrever o código para implementar toda a funcionalidade.
 
@@ -182,7 +184,7 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 ./main.py --force-calib
 ```
 
-2. Ver visualização de ajuda de uso do código:
+2. Ver ajuda de uso do código:
 
 ```bash
 ./main.py --help

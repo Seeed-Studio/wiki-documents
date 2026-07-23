@@ -13,6 +13,8 @@ last_update:
   date: 6/29/2026
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/cn/lerobot_steering_gear_debugging_tool/
+createdAt: '2026-06-30'
+updatedAt: '2026-07-20'
 ---
 # Lerobot 中 SO-ARM 的舵机调试工具
 
@@ -61,6 +63,8 @@ python -m src.gui.factory_calibration_tool --port1 /dev/ttyUSB0 --port2 /dev/tty
 ## 二、开始使用（适用主臂和从臂）
 
 ### 1\.检测舵机是否正常
+
+首先在串口选择上选择相应的端口号
 
 如若1\-6号舵机均成功检测，则说明舵机正常被识别，基本功能正常
 
@@ -176,14 +180,17 @@ python -m src.gui.factory_calibration_tool --port1 /dev/ttyUSB0 --port2 /dev/tty
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/14.png" />
 </div>
 
-首先开启力矩，可一键开启所有力矩或单个舵机力矩，即可滑动进度条使得舵机达到相应的位置，但需要注意缓慢移动，而且由于舵机实际上的打印件会卡住相应的位置，所以实际上没法到达边缘位置，会有最大运动地方和最小运动地方，所以不能将进度条滑为0或最大。 关闭力矩后机械臂会软下。
+- 1.首先开启力矩，可一键开启所有力矩或单个舵机力矩，即可滑动进度条使得舵机达到相应的位置，但需要注意缓慢移动，而且由于舵机实际上的打印件会卡住相应的位置，所以实际上没法到达边缘位置，会有最大运动地方和最小运动地方，所以不能将进度条滑为0或最大。 关闭力矩后机械臂会软下。
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/15.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/21.png" />
 </div>
 
 根据上图所示，开启力矩后运动相应的舵机会有变化
+
+- 2.可以对单个舵机进行中位校准和清除舵机内部中位和最大最小位
+- 3.以下是舵机信息
 
 Pos：位置
 
@@ -215,37 +222,3 @@ Status：状态会显示正常或过流，过载
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/16.png" />
 </div>
-
-### 7\.机械臂校准文件管理
-
-可选择相应的从动臂校准文件或领导臂校准文件进行运行、修改、删除
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/17.png" />
-</div>
-
-### 8\.创建新的机械臂校准文件
-
-点击GUI校准向导，选择相应的机械臂和端口号
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/18.png" />
-</div>
-
-可对每一个舵机进行最小、最大、中位校准
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/19.png" />
-</div>
-
-首先，先对每一个舵机进行中位值记录，将每个舵机放置如图所示位置，然后对1\-6号舵机依次点击记录中位值
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/20.png" />
-</div>
-
-而后对每个舵机点击开始记录范围，旋转舵机到最大范围和最小范围，而后点击停止记录范围，每个舵机重复如上操作后对校准文件进行命名后保存校准文件

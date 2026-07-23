@@ -17,7 +17,7 @@ last_update:
   date: 06/05/2026
   author: Dayu
 createdAt: '2026-06-04'
-updatedAt: '2026-06-05'
+updatedAt: '2026-06-08'
 url: https://wiki.seeedstudio.com/es/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer/
 ---
 

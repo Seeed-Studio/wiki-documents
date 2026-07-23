@@ -14,7 +14,7 @@ last_update:
   date: 05/26/2026
   author: Lorraine
 createdAt: '2026-05-26'
-updatedAt: '2026-05-26'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/es/jetson_developtool_flash_firmware/
 ---
 

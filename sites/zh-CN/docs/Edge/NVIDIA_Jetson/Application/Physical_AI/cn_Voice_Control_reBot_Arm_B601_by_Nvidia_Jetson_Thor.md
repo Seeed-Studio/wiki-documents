@@ -9,7 +9,7 @@ last_update:
   author: youjiang
 createdAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/cn/voice_control_rebot_arm/
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-16'
 ---
 
 # 使用 Nvidia Jetson Thor 语音控制 reBot Arm B601

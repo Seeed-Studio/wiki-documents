@@ -15,7 +15,7 @@ last_update:
   author: Citric
 createdAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/pt-br/epaper_work_with_zephyr/
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-01'
 ---
 
 # Trabalhar com Zephyr

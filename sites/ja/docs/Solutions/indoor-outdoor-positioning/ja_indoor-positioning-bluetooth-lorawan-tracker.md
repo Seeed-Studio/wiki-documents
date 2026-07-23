@@ -15,7 +15,7 @@ last_update:
   date: 05/31/2026
   author: Spencer
 createdAt: '2025-09-10'
-updatedAt: '2026-05-31'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/ja/solutions/indoor-positioning-bluetooth-lorawan-tracker/
 ---
 

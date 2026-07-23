@@ -16,11 +16,10 @@ last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
-url: https://wiki.seeedstudio.com/reachymini_sdk_gstreamer-installation/
+updatedAt: '2026-05-18'
+url: https://wiki.seeedstudio.com/cn/reachymini_sdk_gstreamer-installation/
 ---
 
 # 📡 GStreamer安装

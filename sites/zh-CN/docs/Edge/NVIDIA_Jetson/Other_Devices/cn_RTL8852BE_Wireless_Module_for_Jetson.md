@@ -14,7 +14,7 @@ last_update:
   date: 4/14/2026
   author: Zibo
 createdAt: '2026-04-14'
-updatedAt: '2026-04-14'
+updatedAt: '2026-06-23'
 sku: 100042928
 url: https://wiki.seeedstudio.com/cn/rtl8852be_wireless_module_for_jetson/
 ---

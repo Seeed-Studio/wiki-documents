@@ -11,7 +11,7 @@ last_update:
   date: 06/11/2024
   author: Bruno
 createdAt: '2025-05-30'
-updatedAt: '2025-09-23'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/cn/train_and_deploy_a_custom_classification_model_with_yolov8/
 ---
 

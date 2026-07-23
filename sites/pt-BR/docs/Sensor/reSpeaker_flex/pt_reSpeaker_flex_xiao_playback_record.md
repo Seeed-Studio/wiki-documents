@@ -13,7 +13,7 @@ last_update:
   author: Kasun Thushara
 createdAt: '2026-05-28'
 updatedAt: '2026-05-28'
-url: https://wiki.seeedstudio.com/pt-br/respeaker_flex_xiao_playback_record/
+url: https://wiki.seeedstudio.com/pt-br/respeaker_flex_xiao_record_playback/
 ---
 
 # Gravar e Reproduzir Áudio do reSpeaker Flex Usando I2S

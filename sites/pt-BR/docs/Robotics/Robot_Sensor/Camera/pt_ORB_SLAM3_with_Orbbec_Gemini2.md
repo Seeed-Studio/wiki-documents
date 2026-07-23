@@ -13,7 +13,7 @@ image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/
 slug: /orb_slam3_orbbec_gemini2
 sku: 101090144, 100071398
 last_update:
-  date: 2025-08-21T00:00:00.000Z
+  date: 2025-08-21
   author: Zibo
 createdAt: '2025-08-21'
 updatedAt: '2026-03-20'

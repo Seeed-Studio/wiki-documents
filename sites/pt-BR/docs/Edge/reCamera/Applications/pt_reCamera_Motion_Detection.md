@@ -12,7 +12,7 @@ last_update:
   date: 07/03/2026
   author: Qiyao Lin
 createdAt: '2026-07-03'
-updatedAt: '2026-07-03'
+updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/pt-br/recamera_motion_detection/
 ---
 

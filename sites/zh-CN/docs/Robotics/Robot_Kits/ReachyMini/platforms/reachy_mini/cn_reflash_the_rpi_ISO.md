@@ -15,11 +15,10 @@ last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-02-27'
-url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_reflash_the_rpi_iso/
+updatedAt: '2026-05-18'
+url: https://wiki.seeedstudio.com/cn/reachymini_platforms_reachy_mini_reflash_the_rpi_iso/
 ---
 
 # 高级：重新刷写Raspberry Pi OS镜像

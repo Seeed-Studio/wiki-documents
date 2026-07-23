@@ -10,7 +10,7 @@ last_update:
   date: 07/02/2026
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-03'
 url: https://wiki.seeedstudio.com/ja/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 12/23/2024
   author: Joshua Lee
 createdAt: '2024-12-24'
-updatedAt: '2024-12-24'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/ja/respeaker_2_mics_pi_hat_v2_speech_recognition/
 ---
 

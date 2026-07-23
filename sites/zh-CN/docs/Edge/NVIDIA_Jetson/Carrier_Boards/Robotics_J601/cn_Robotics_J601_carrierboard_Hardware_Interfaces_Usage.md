@@ -16,7 +16,8 @@ last_update:
   date: 06/18/2026
   author: Zibo
 createdAt: '2026-06-18'
-updatedAt: '2026-06-18'
+updatedAt: '2026-07-02'
+url: https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j601_interfaces_usage/
 ---
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';

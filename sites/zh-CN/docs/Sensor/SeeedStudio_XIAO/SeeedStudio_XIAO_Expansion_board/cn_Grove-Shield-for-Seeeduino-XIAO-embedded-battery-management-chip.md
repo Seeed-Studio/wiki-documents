@@ -10,7 +10,7 @@ last_update:
   date: 7/17/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-04-21'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/cn/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip/
 ---
 
@@ -19,18 +19,18 @@ url: https://wiki.seeedstudio.com/cn/Grove-Shield-for-Seeeduino-XIAO-embedded-ba
 
 ## 概述
 
-Seeed Studio Grove Base for XIAO 是一款即插即用的 **[Seeed Studio XIAO](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/)** Grove 扩展板。借助板载电池管理芯片和电池焊盘，你可以轻松使用锂电池为 Seeed Studio XIAO 供电并为其充电。板载 8 个 Grove 接口，其中包括 2 个 Grove I2C 和 1 个 UART。它充当 Seeed Studio XIAO 与 Seeed Grove 系统之间的桥梁。Flash SPI 焊盘允许你为 Seeed Studio XIAO 增加 Flash 以扩展其存储空间，为 Seeed Studio XIAO 提供更多可能性。
+Seeed Studio Grove Base for XIAO 是一款适用于 **[Seeed Studio XIAO](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/)** 的即插即用 Grove 扩展板。借助板载电池管理芯片和电池焊盘，你可以轻松使用锂电池为 Seeed Studio XIAO 供电并对其充电。板载 8 个 Grove 接口，其中包括 2 个 Grove I2C 和 1 个 UART。它充当 Seeed Studio XIAO 与 Seeed Grove 系统之间的桥梁。Flash SPI 焊盘允许你为 Seeed Studio XIAO 增加 Flash 以扩展其存储空间，为 Seeed Studio XIAO 提供更多可能性。
 
-借助板载电池管理芯片和电池焊盘，你可以轻松使用 3.7V 锂电池为 Seeed Studio XIAO 供电并为其充电，使你的项目，尤其是可穿戴项目，更加灵活且便携。你甚至可以根据项目的实际需求，通过板载 PCB 预留断点将电路板掰开（断开后尺寸仅为 25*39mm），使其变得更小更轻，重量也会从 13g 降至 10g！
+借助板载电池管理芯片和电池焊盘，你可以轻松使用 3.7V 锂电池为 Seeed Studio XIAO 供电并对其充电，使你的项目，尤其是可穿戴项目，更加灵活便携。你甚至可以根据项目的实际需求，通过板载 PCB 预留的断开孔将电路板掰断（断开后尺寸仅为 25*39mm），使其变得更小更轻，重量也会从 13g 降低到 10g！
 <!-- 图有问题 
 <p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/01.png" border={0} /></a></p> -->
 
-作为一块扩展板，Seeed Studio Grove Base for XIAO 还引出了 Seeed Studio XIAO 的全部 14 个引脚，并配备了板载电源开关和充电状态指示灯，使其更加易于使用。该 Shield 甚至为高级开发者预留了 SPI-Flash 焊盘，可根据需要为 Seeed Studio XIAO 增加 Flash 以扩展其存储空间，为 Seeed Studio XIAO 提供更多可能性。
+作为一块扩展板，Seeed Studio Grove Base for XIAO 还引出了 Seeed Studio XIAO 的全部 14 个引脚，并配备了板载电源开关和充电状态指示灯，使其更加易于使用。该 Shield 甚至为高级开发者预留了 SPI-Flash 焊盘，以便在需要时为 Seeed Studio XIAO 增加 Flash 来扩展其存储空间，为 Seeed Studio XIAO 提供更多可能性。
 
-由于采用 Seeed Studio XIAO 的外形规格，所有 Seeed Studio XIAO 板卡都同时支持 [Grove Shield for XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeed Studio XIAO Expansion board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)。引脚之间存在轻微差异，参考引脚图即可轻松处理。
+由于采用 Seeed Studio XIAO 外形尺寸，所有 Seeed Studio XIAO 板都同时支持 [Grove Shield for XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeed Studio XIAO Expansion board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)。引脚之间存在轻微差异，参考引脚图即可轻松进行管理。
 
 :::note
-本产品不包含 Seeed Studio XIAO 板卡，如需购买，请点击[这里](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)。
+本产品不包含 Seeed Studio XIAO 开发板，如需购买，请点击[这里](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -52,7 +52,7 @@ Seeed Studio Grove Base for XIAO 是一款即插即用的 **[Seeed Studio XIAO](
 
 - 板载锂电池充电与管理功能
 - Grove 接口（Grove IIC x 2，Grove UART x 1），全部 14 个 GPIO 引出
-- 紧凑且可断开的设计
+- 紧凑且可掰断设计
 - 预留 Flash SPI 焊盘
 - 板载电源开关和充电状态指示灯
 
@@ -133,7 +133,7 @@ Seeed Studio Grove Base for XIAO 是一款即插即用的 **[Seeed Studio XIAO](
 ### 软件
 
 :::note
-如果这是你第一次使用 Arduino，我们强烈建议你在开始之前先阅读 [Getting Started with Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是你第一次使用 Arduino，我们强烈建议你在开始之前先阅读[Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
 
 - **步骤 1.** 下载[示例代码](https://github.com/Seeed-Studio/Seeed_Arduino_DopplerRadar)。
@@ -142,7 +142,7 @@ Seeed Studio Grove Base for XIAO 是一款即插即用的 **[Seeed Studio XIAO](
 
 - **步骤 3.** 使用 Arduino IDE 打开 **BGT24LTR11_DETECTION_TARGET** 文件。
 
-- **步骤 4.** 上传示例程序。如果你不知道如何上传代码，请查看 [How to upload code](https://wiki.seeedstudio.com/cn/Upload_Code/)。
+- **步骤 4.** 上传示例程序。如果你不知道如何上传代码，请查看[如何上传代码](https://wiki.seeedstudio.com/cn/Upload_Code/)。
 
 #### 软件代码
 
@@ -208,7 +208,7 @@ void loop() {
 ```
 
 :::success
-  如果一切顺利，你可以打开 **Serial Monitor** 查看如下结果：
+  如果一切顺利，你可以打开 **Serial Monitor**，看到如下结果：
 :::
 <div align="center">
   <figure>
@@ -227,19 +227,16 @@ void loop() {
 </div>
 
 :::note
-该传感器可检测到的最低速度精度为 52cm/s，即 0.52m/s、3.6km/h 和 2.23mph。此外，函数 getSpeed() 返回的结果是 52cm/s 的整数倍，并且为相应的绝对值。
+该传感器能够检测到的最低速度精度为 52cm/s，即 0.52m/s、3.6km/h 和 2.23mph。此外，函数 getSpeed() 返回的结果是 52cm/s 的倍数，并且是相应的绝对值。
 :::
-
-## 原理图在线查看器
-
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.0.rar" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div>
 
 ## 资源
 
 - **[ZIP]** [示例代码库](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.zip)
 - **[PDF]** [Grove DopplerRadar (BGT24LTR11) 雷达模块通信协议 v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
 - **[PDF]** [ETA 3410 数据手册](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/ETA3410.pdf)
+- **[ZIP]** [Grove Shield for Seeeduino XIAO v1.2 原理图和 PCB（KiCad）](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.2_KiCad_SCH_PCB.zip)
+- **[PDF]** [Grove Shield for Seeeduino XIAO v1.0 原理图](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.0_SCH.pdf)
 
 ## 项目
 
@@ -249,7 +246,7 @@ void loop() {
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-16 16:01:21 (北京时间)
-// 多语言页面: 2397 个
+// 生成时间: 2026-07-22 17:53:45 (北京时间)
+// 多语言页面: 2421 个
 
 (function() {
   'use strict';
@@ -3586,13 +3586,6 @@
     "ja",
     "pt"
   ],
-  "/recamera_network_connection": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/wifi_halow_getting_started": [
     "cn",
     "en",
@@ -3600,14 +3593,161 @@
     "ja",
     "pt"
   ],
-  "/recamera_hardware_and_specs": [
+  "/ai_human_detection_meshtastic_broadcast_bak": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_getting_started": [
+  "/ai_remote_wireless_monitor_system_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_voice_assitant_with_recamera_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_parking_slot_monitoring_demo_with_recamera_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_for_home_assistant_with_recamera_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_for_n8n_with_recamera_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_in_Telegram_work_with_recamera_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_in_Wechat_work_with_recamera_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_hand_gesture_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/integration_of_real-time_heat_map_with_grafana_data_dashboard_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/use_cpenclaw_to_control_the_recamera_gimbal_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_picoclaw_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_qrcode_udp_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_meshtastic_ha_security_system_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_motion_detection_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sound_source_localization_of_recamera_gimbal_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rtsp_to_webrtc_with_recamera_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_udp_face_analysis_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/use_the_motion-sensing_function_of_recamera_to_play_games_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/using_stream_deck_to_control_recamera_gimbal_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_benchmarking_bak": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_network_connection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_2002_series_quick_start_guide": [
     "cn",
     "en",
     "es",
@@ -3615,13 +3755,6 @@
     "pt"
   ],
   "/recamera_warranty": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_gimbal_getting_started": [
     "cn",
     "en",
     "es",
@@ -3642,13 +3775,6 @@
     "ja",
     "pt"
   ],
-  "/recamera_gimbal_hardware_and_specs": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/recamera_pid_adjustment": [
     "cn",
     "en",
@@ -3656,7 +3782,7 @@
     "ja",
     "pt"
   ],
-  "/recamera_hq_poe_hardware": [
+  "/recamera_gimbal_getting_started": [
     "cn",
     "en",
     "es",
@@ -3677,7 +3803,98 @@
     "ja",
     "pt"
   ],
-  "/recamera_pro_acoustic_lab_usage": [
+  "/recamera_2002_series_hardware_and_specs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_gimbal_hardware_and_specs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reCamera_hq_poe_hardware_and_specs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/configure_static_ip_on_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_develop_with_c_cpp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_develop_with_node-red": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_linux_fundamentals": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/make_the_cpp_program_auto_start_on_boot": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_os_structure": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_os_version_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/real_time_yolo_object_detection_using_recamera_based_on_cpp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_connects_to_xiao_via_http": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/train_classification_model_online": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_imu_tilt_shake_detection": [
     "cn",
     "en",
     "es",
@@ -3822,63 +4039,7 @@
     "ja",
     "pt"
   ],
-  "/configure_static_ip_on_recamera": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_develop_with_c_cpp": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_develop_with_node-red": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_linux_fundamentals": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/make_the_cpp_program_auto_start_on_boot": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_os_structure": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_os_version_control": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/real_time_yolo_object_detection_using_recamera_based_on_cpp": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_connects_to_xiao_via_http": [
+  "/recamera_pro_acoustic_lab_usage": [
     "cn",
     "en",
     "es",
@@ -11415,14 +11576,20 @@
     "ja",
     "pt"
   ],
-  "/respeaker_clip_getting_started": [
+  "/respeaker_clip_basic_sdk_guide": [
+    "cn",
+    "en",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/respeaker_clip_python_control": [
+  "/respeaker_clip_python_build_app": [
     "cn",
     "en",
     "es",
