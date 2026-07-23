@@ -18,7 +18,7 @@ last_update:
   author: HaoChen
 sku: 100042928, 114993556, 100020039
 createdAt: '2026-06-15'
-updatedAt: '2026-06-17'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/es/recomputer_mini_j501_wifi_module_installation/
 ---
 
@@ -41,7 +41,7 @@ El **reComputer Mini J501** utiliza la **placa carrier Robotics J501 Mini** con 
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-J501-Carrier-Board-with-GMSL-Bundle-for-Jetson-AGX-Orintm.html" target="_blank">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-J5012-with-GMSL-Extension-p-6878.html" target="_blank">
     <strong>
       <span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span>
     </strong>

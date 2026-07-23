@@ -10,7 +10,7 @@ slug: /platformio_wio_e5
 toc_max_heading_level: 4
 sidebar_position: 1
 last_update:
-  date: 2024-01-26T06:59:58.390Z
+  date: 2024-01-26
   author: Spencer
 createdAt: '2025-08-07'
 updatedAt: '2025-08-12'

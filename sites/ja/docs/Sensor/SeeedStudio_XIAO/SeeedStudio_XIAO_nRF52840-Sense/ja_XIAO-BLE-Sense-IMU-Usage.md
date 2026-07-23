@@ -1,56 +1,52 @@
 ---
-description: Seeed Studio XIAO nRF52840 Senseでの6軸IMU使用方法
-title: XIAO nRF52840 SenseのIMU使用方法
+description: Seeed Studio XIAO nRF52840 Sense における 6 軸 IMU の使用方法
+title: XIAO nRF52840 Sense 用 IMU の使い方
 keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-IMU-Usage
 last_update:
-  date: 1/11/2023
+  date: 7/17/2026
   author: shuxu hu
-createdAt: '2025-05-27'
-updatedAt: '2025-09-11'
+createdAt: '2023-01-16'
+updatedAt: '2026-07-17'
 url: https://wiki.seeedstudio.com/ja/XIAO-BLE-Sense-IMU-Usage/
 ---
 
-# Seeed Studio XIAO nRF52840 Senseでの6軸IMU使用方法
+# Seeed Studio XIAO nRF52840 Sense における 6 軸 IMU の使用方法
 
-**Seeed Studio XIAO nRF52840 Sense**には、**3軸加速度計**と**3軸ジャイロスコープ**を含む高精度な**6軸慣性測定ユニット（IMU）**が搭載されています。このモジュールには**内蔵温度センサー**も含まれています。このモジュールがあなたのTinyMLプロジェクトに大いに役立つと確信しています。このwikiでは、このボード上でのIMUの基本的な使用方法を紹介します。
+**Seeed Studio XIAO nRF52840 Sense** には高精度の **6 軸慣性計測ユニット (IMU)** が搭載されており、**3 軸加速度センサ** と **3 軸ジャイロスコープ** が含まれています。また、このモジュールには **内蔵温度センサ** も備わっています。このモジュールは TinyML プロジェクトに大いに役立つと考えています。本 Wiki では、このボード上で IMU を使用するための基本について紹介します。
 
 **注意**
 
-- **Seeed Studio XIAO nRF52840**にはこのIMUモジュールは搭載されていません。
-- IMU機能は「Seeed nrf52 mbed-enabled Boards Library」を使用する際により良いパフォーマンスを発揮するため、こちらを強く推奨します。
+- **Seeed Studio XIAO nRF52840** にはこの IMU モジュールは搭載されていません。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new7.png" alt="pir" width={600} height="auto" /></p>
+## シリアルモニタで加速度、ジャイロスコープ、温度データを表示する
 
+この例では、Seeed Studio XIAO nRF52840 Sense から取得した加速度、ジャイロスコープ、温度データを Arduino シリアルモニタ上で表示します。
 
-## シリアルモニターで加速度計、ジャイロスコープ、温度データを表示
-
-この例では、Seeed Studio XIAO nRF52840 Senseからの加速度計、ジャイロスコープ、温度データをArduino シリアルモニターで表示します。
-
-- **ステップ 1**. [Seeed_Arduino_LSM6DS3 Library](https://github.com/Seeed-Studio/Seeed_Arduino_LSM6DS3)をzipファイルとしてダウンロードします
+- **Step 1**. [Seeed_Arduino_LSM6DS3 ライブラリを zip ファイルとしてダウンロード](https://github.com/Seeed-Studio/Seeed_Arduino_LSM6DS3)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/LSM6DS3-github-zip.png" alt="pir" width={1000} height="auto" /></p>
 
 
-- **ステップ 2**. Arduino IDEを開き、`スケッチ > ライブラリをインクルード > .ZIP形式のライブラリをインストール...`に移動し、ダウンロードしたzipファイルを開きます。
+- **Step 2**. Arduino IDE を開き、`Sketch > Include Library > Add .ZIP Library...` に移動して、ダウンロードした zip ファイルを開きます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/add-zip.png" alt="pir" width={600} height="auto" /></p>
 
 
-- **ステップ 3.** `ファイル > スケッチ例 > Accelerometer And Gyroscope LSM6DS3 > HighLevelExample`に移動して**HighLevelExample**を開きます
+- **Step 3.** `File > Examples > Accelerometer And Gyroscope LSM6DS3 > HighLevelExample` に移動して **HighLevelExample** を開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/IMU-install.png" alt="pir" width={550} height="auto" /></p>
 
 
-- **ステップ 4.** コードをアップロードし、**シリアルモニター**を開きます
+- **Step 4.** コードを書き込んで **Serial Monitor** を開きます
 
-**注意:** コードをアップロードした後、Arduinoウィンドウの右上角にある**シリアルモニター**をクリックするまで自動的に実行されません。
+**Note:** コードを書き込んだだけでは自動的には実行されません。Arduino ウィンドウ右上の **Serial Monitor** をクリックして初めて実行されます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/IMU-example-output.png" alt="pir" width={600} height="auto" /></p>
 
-これで、上記のようにシリアルモニターに加速度計、ジャイロスコープ、温度データが順次表示されます！
+これで、上図のようにシリアルモニタ上に加速度、ジャイロスコープ、温度データが次々と表示されるのが確認できます。
 
 ## さらに詳しく
 
-より多くの例を試したい場合は、`ファイル > スケッチ例 > Accelerometer And Gyroscope LSM6DS3`に移動し、**Accelerometer And Gyroscope LSM6DS3**の下にあるすべての例を確認してください。
+さらに多くのサンプルを試したい場合は、`File > Examples > Accelerometer And Gyroscope LSM6DS3` に移動し、**Accelerometer And Gyroscope LSM6DS3** 配下のすべてのサンプルを確認してください。

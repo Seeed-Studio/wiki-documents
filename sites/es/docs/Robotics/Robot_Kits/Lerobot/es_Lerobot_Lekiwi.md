@@ -13,8 +13,7 @@ last_update:
   date: 8/8/2025
   author: LiShanghang
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-09-03'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/lerobot_lekiwi/

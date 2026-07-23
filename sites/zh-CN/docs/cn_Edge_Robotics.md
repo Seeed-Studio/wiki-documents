@@ -15,7 +15,7 @@ last_update:
   date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-07-04'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/cn/robotics_page/
 ---
 
@@ -33,25 +33,245 @@ import '/src/css/robotics-page-style.css';
       <h2>不知道从哪篇文档开始？先选择你手上的机器人套件</h2>
       <p>这里按照 Seeed Studio 不同机器人产品整理了推荐学习路径。无论你是第一次拿到机器人，还是准备做遥操作、ROS2、仿真、AI 训练或真实部署，都可以先找到对应产品，再按照 Step 1、Step 2、Step 3 的顺序完成上手和进阶开发。</p>
     </div>
-    <div className="hero-tips">
-      <div><strong>刚拿到设备</strong><span>先完成开箱、接线、供电、驱动和基础运动测试</span></div>
-      <div><strong>准备开发应用</strong><span>继续学习 SDK、LeRobot、ROS2、视觉夹取或移动控制</span></div>
-      <div><strong>想做 AI 机器人</strong><span>进入仿真、数据采集、GR00T、VLA 和强化学习方向</span></div>
-    </div>
-  </section>
 
-  <nav className="quick-nav" aria-label="Robotics page quick navigation">
-    <a href="#robot-kits">📦 机器人套件</a>
-    <a href="#actuators">⚙️ 关节执行器</a>
-    <a href="#sensors">👁️ 传感器</a>
-    <a href="#software">💻 软件生态</a>
-  </nav>
+    <div className="nav-grid">
 
-  <section className="kit-index-panel" aria-label="快速选择机器人套件">
-    <div className="section-title-row compact-title">
-      <div>
-        <span className="section-kicker">Choose a Kit</span>
-        <h2>快速选择你的学习路径</h2>
+      <h2 id="robot-kits">📦 机器人套件</h2>
+
+      <div className="category-group">
+        <div className="category-card robot-kits">
+
+          <h3>🦾 reBot 机械臂</h3>
+            <h4> B601-DM 机械臂</h4>
+          <div className="card-container">
+              <a href="/cn/rebot_b601_dm_getting_started/" className="content-card">
+                <span className="text">reBot B601-DM 快速开始</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot B601-DM 与 Pinocchio</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_dm_lerobot/" className="content-card">
+                <span className="text">reBot B601-DM 与 LeRobot</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_dm_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-DM 视觉夹取 Demo</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_dm_ros2_integration/" className="content-card">
+                <span className="text">reBot B601-DM ROS2 集成</span>
+              </a>
+          </div>
+
+            <h4> B601-RS 机械臂</h4>
+          <div className="card-container">
+              <a href="/cn/rebot_b601_rs_getting_started/" className="content-card">
+                <span className="text">reBot B601-RS 快速开始</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_lerobot/" className="content-card">
+                <span className="text">reBot B601-RS 与 LeRobot</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot B601-RS 与 Pinocchio</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-RS 视觉夹取 Demo</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_ros2_integration" className="content-card">
+                <span className="text">reBot B601-RS ROS2 集成</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_rs_isaacsim/" className="content-card">
+                <span className="text">reBot B601-RS Isaacsim 仿真</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+
+          <h3>🤗 Reachy</h3>
+          <div className="card-container">
+              <a href="/cn/reachymini_getting_started" className="content-card">
+                <span className="text">Reachy Mini上手使用</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🤗 SO-Arm机械臂</h3>
+          <div className="card-container">
+              <a href="/cn/lerobot_so100m_new/" className="content-card">
+                <span className="text">SO100/101 机械臂</span>
+              </a>
+              <a href="/cn/simulate_soarm101_by_leisaac/" className="content-card">
+                <span className="text">SO10x 机械臂与 LeIsaac</span>
+              </a>
+              <a href="/cn/control_robotic_arm_via_phospho/" className="content-card">
+                <span className="text">Phospho Lerobot</span>
+              </a>
+              <a href="/cn/training_soarm101_policy_with_isaacLab/" className="content-card">
+                  <span className="text">So Arm 强化学习</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
+                  <span className="text">SO101 与 NVIDIA GR00T</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">Lerobot 中 SO-ARM 的舵机调试工具</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/lerobot_double_arm_so_arm_training/" className="content-card">
+                  <span className="text">双臂 SO-ARM 训练完整指南</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/soarm_amazinghand_teleop/" className="content-card">
+                  <span className="text">SO-ARM 与 AmazingHand 完整训练指南</span>
+                  <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🚗 Lekiwi移动底盘</h3>
+          <div className="card-container">
+              <a href="/cn/lerobot_lekiwi/" className="content-card">
+                <span className="text">Lekiwi 移动底盘</span>
+              </a>
+              <a href="/cn/sound_follow_robot/" className="content-card">
+                <span className="text">Lekiwi 声音跟随</span>
+              </a>
+          </div>
+
+          <h3>🦾 StarAI机械臂</h3>
+          <div className="card-container">
+              <a href="/cn/lerobot_starai_arm/" className="content-card">
+                <span className="text">StarAI 机械臂</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/starai_arm_ros_moveit/" className="content-card">
+                <span className="text">StarAI 机械臂 MoveIt 2</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/control_robotic_arm_via_gr00t" className="content-card">
+                <span className="text">StarAI 与 NVIDIA GR00T</span>
+              </a>
+          </div>
+
+          <h3>🦿 轮足</h3>
+          <div className="card-container">
+              <a href="/cn/StackForce_Mini_Wheeled_Legged_Robot" className="content-card">
+                <span className="text">小轮足机器人</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🖐️ 灵巧手</h3>
+          <div className="card-container">
+              <a href="/cn/hand_amazinghand/" className="content-card">
+                <span className="text">AmazingHand</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🦀 末端执行器</h3>
+          <div className="card-container">
+              <a href="/cn/dm_gripper/" className="content-card">
+                <span className="text">DM 夹爪</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+        </div>
+      </div>
+
+      <h2 id="actuators">⚙️ 执行器</h2>
+
+      <div className="category-group">
+      <div className="category-card actuators">
+
+      <div className="card-container">
+          <a href="/cn/myactuator_series/" className="content-card">
+            <span className="text">MyActuator X 系列</span>
+          </a>
+          <a href="/cn/damiao_series/" className="content-card">
+            <span className="text">Damiao DM43 系列</span>
+          </a>
+          <a href="/cn/feetech_servo/" className="content-card">
+            <span className="text">Feetech STS3215 舵机</span>
+          </a>
+          <a href="/cn/hightorque_control" className="content-card">
+            <span className="text">HighTorque 系列</span>
+          </a>
+          <a href="/cn/fashionstar_servo/" className="content-card">
+            <span className="text">Fashionstar 系列</span>
+          </a>
+          <a href="/cn/stackforce_series/" className="content-card">
+            <span className="text">Stackforce 系列</span>
+          </a>
+          <a href="/cn/robstride_control/" className="content-card">
+            <span className="text">RobStride 控制</span>
+            <span className="tag recommended">New</span>
+          </a>
+      </div>
+
+      </div>
+      </div>
+
+      <h2 id="sensors">👁️ 传感器</h2>
+
+      <div className="category-group">
+      <div className="category-card sensors">
+
+      <strong>📡 LiDAR</strong>  
+
+      <div className="card-container">
+          <a href="/cn/robosense_lidar/" className="content-card">
+            <span className="text">RoboSense</span>
+          </a>
+          <a href="/cn/mid360/" className="content-card">
+            <span className="text">Livox MID360</span>
+          </a>
+          <a href="/cn/a_loam/" className="content-card">
+            <span className="text">A-LOAM 算法</span>
+          </a>
+          <a href="/cn/slamtec/" className="content-card">
+            <span className="text">Slamtec 系列</span>
+          </a>
+      </div>
+
+      <strong>📷 相机</strong>  
+
+      <div className="card-container">
+          <a href="/cn/orbbec_gemini2/" className="content-card">
+            <span className="text">Orbbec Gemini 2</span>
+          </a>
+          <a href="/cn/orbbec_gemini_335lg" className="content-card">
+            <span className="text">Gemini 335Lg 深度相机</span>
+            <span className="tag recommended">New</span>
+          </a>
+          <a href="/cn/orbbec_gemini336" className="content-card">
+            <span className="text">Gemini 336 深度相机</span>
+            <span className="tag recommended">New</span>
+          </a>
+          <a href="/cn/sensing_gmsl_cameras" className="content-card">
+            <span className="text">SENSING GMSL2 相机</span>
+          </a>
+          <a href="/cn/ac1" className="content-card">
+            <span className="text">RoboSense AC1</span>
+            <span className="tag recommended">New</span>
+          </a>
+          <a href="/cn/orbbec_depth_camera_on_ros/" className="content-card">
+            <span className="text">Orbbec 与 ROS</span>
+          </a>
+          <a href="/cn/orb_slam3_orbbec_gemini2/" className="content-card">
+            <span className="text">ORB-SLAM3 与 Gemini2</span>
+          </a>
+          <a href="/cn/csi_camera_on_ros/" className="content-card">
+            <span className="text">Jetson 上的 CSI 相机</span>
+          </a>
+          <a href="/cn/pycuvslam_recomputer_robotics/" className="content-card">
+            <span className="text">PyCuVSLAM</span>
+          </a>
+
       </div>
       <p>所有产品卡片默认折叠，选择你手上的套件后，再展开对应学习计划。</p>
     </div>

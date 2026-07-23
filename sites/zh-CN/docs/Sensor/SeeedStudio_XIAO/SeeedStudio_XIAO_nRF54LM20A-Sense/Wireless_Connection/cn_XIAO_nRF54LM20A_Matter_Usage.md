@@ -12,7 +12,7 @@ last_update:
   date: 05/26/2026
   author: Zeller
 createdAt: '2025-05-26'
-updatedAt: '2026-05-27'
+updatedAt: '2026-07-08'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_matter/
 ---
 
@@ -44,9 +44,9 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_matter/
 
 ## 介绍
 
-由 nRF54LM20A SoC 提供算力支持，XIAO nRF54LM20A 系列支持 Bluetooth LE、Matter、Thread、Zigbee 和 2.4GHz 私有协议，提供高达 4 Mbps 的峰值数据速率，非常适合低延迟场景。
+由 nRF54LM20A SoC 提供动力，XIAO nRF54LM20A 系列支持 Bluetooth LE、Matter、Thread、Zigbee 和 2.4GHz 私有协议，在低延迟场景下可提供高达 4 Mbps 的峰值数据速率。
 
-本教程使用两块 XIAO nRF54LM20A 开发板来验证 Matter 联网：一块作为连接到 Home Assistant 的边界路由器，另一块作为 Matter 设备加入 Thread 网络，并在 Home Assistant 仪表盘上显示模拟的温湿度数据。
+本教程使用两块 XIAO nRF54LM20A 开发板来验证 Matter 网络：一块作为连接到 Home Assistant 的边界路由器，另一块作为 Matter 设备加入 Thread 网络，并在 Home Assistant 仪表盘上显示模拟的温湿度数据。
 
 ***感谢作者 [@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/) 为本 WiKi 提供的思路***
 
@@ -63,11 +63,11 @@ Matter（原名 CHIP）是由 Connectivity Standards Alliance（CSA）开发的�
 - 在 IP 网络（Wi-Fi/Ethernet/Thread）上的跨厂商互操作性
 - 标准化的设备类型（例如灯具、门锁、恒温器）
 - 使用二维码/NFC 的安全配网
-- 采用 Distributed Compliance Ledger (DCL) 的端到端加密
+- 采用分布式合规账本（DCL）的端到端加密
 
 ### 什么是 OpenThread
 
-OpenThread 是 Thread 网络协议的开源实现。它使用 IEEE 802.15.4 射频技术，为物联网设备创建低功耗、安全的 Mesh 网络。其主要特性包括：
+OpenThread 是 Thread 网络协议的开源实现。它使用 IEEE 802.15.4 射频技术为物联网设备创建低功耗、安全的 Mesh 网络。其主要特性包括：
 
 - 内置 IPv6 支持（6LoWPAN）
 - 自组织网络拓扑
@@ -83,17 +83,17 @@ OpenThread 是 Thread 网络协议的开源实现。它使用 IEEE 802.15.4 射�
 Thread：
 
 - Thread 是一种为互联家庭设备设计的低功耗无线 Mesh 网络协议。它为设备之间以及与互联网之间的通信提供了一种可靠且安全的方式。
-- Thread 创建了一个本地网络，即使互联网断开，设备之间也能相互通信。
+- Thread 创建了一个本地网络，即使互联网断开，设备之间也仍然可以相互通信。
 
 Matter：
 
-- Matter 是一个应用层协议，运行在 Thread、Wi-Fi 和 Ethernet 等网络协议之上。它旨在简化并统一智能家居生态系统，确保来自不同厂商的设备能够无缝协同工作。
+- Matter 是一个位于 Thread、Wi-Fi 和 Ethernet 等网络协议之上的应用层协议。它旨在简化并统一智能家居生态系统，确保来自不同厂商的设备能够无缝协同工作。
 - Matter 定义了设备在应用层如何通信和交互，重点关注互操作性、安全性和易用性。
 
 Thread 与 Matter 之间的连接：
 
 - Matter 可以使用 Thread 作为其底层网络协议之一。这意味着使用 Matter 协议的设备可以在 Thread 网络上进行通信。
-- Matter 与 Thread 的结合，使得智能家居生态系统更加健壮、安全且具备互操作性，设备能够在本地高效地进行通信。
+- Matter 与 Thread 的结合，使得智能家居生态系统更加健壮、安全且具有互操作性，设备可以在本地高效地进行通信。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/HA_OpenThread/TOPPLOGY.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -139,7 +139,7 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，可让你�
 ## 蓝牙天线
 
 该开发板使用外置蓝牙天线。为确保更好的蓝牙信号质量并提升蓝牙使用体验，建议安装蓝牙天线。
-连接方式如下图所示：
+连接方式如下所示：
 
 <div style={{textAlign: 'center'}}>
   <img
@@ -179,7 +179,7 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，可让你�
 
 :::tip
 
-本教程基于 VS Code 和 nRF Connect 扩展。如果你对它们还不熟悉，可以参考 [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_ncs/)
+本教程基于 VS Code 和 nRF Connect 扩展。如果你对它们还不熟悉，可以参考 [XIAO nRF54LM20A nRFConnect SDK Usage](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_ncs/#getting-started-with-ncs)
 
 :::
 
@@ -195,47 +195,67 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，可让你�
 
 ```dts
 &uart20 {
-	current-speed = <1000000>;
-	status = "okay";
-	hw-flow-control;
+        current-speed = <1000000>;
+        status = "okay";
+        hw-flow-control;
 };
 
 / {
-	chosen {
-		zephyr,ot-uart = &uart20;
-	};
+        chosen {
+                zephyr,ot-uart = &uart20;
+        };
 };
 
 &pmic_i2c {
-	status = "disabled";
+        status = "disabled";
+};
+
+&pmic {
+        status = "disabled";
+
+        charger {
+                status = "disabled";
+        };
+
+        regulators {
+                status = "disabled";
+
+                LDO1 {
+                        status = "disabled";
+                };
+        };
 };
 ```
 
 - xiao_nrf54lm20a_nrf54lm20a_cpuapp.conf。
 
 ```conf
+#
+# Copyright (c) 2025 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
 CONFIG_SPI_NOR=n
 
 # Increase Main and shell stack sizes to avoid stack overflow
 # while using CRACEN
 CONFIG_MAIN_STACK_SIZE=2048
-
-CONFIG_I2C_GPIO=n
-CONFIG_MFD_NPM13XX=n
-CONFIG_NPM13XX_CHARGER=n
 ```
 
 3. 构建并启用配置。
 
 - 配置并构建项目。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_4.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-1.png" style={{width:800, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-2.png" style={{width:800, height:'auto'}}/></div>
 
 - 使用 `west flash` 烧录固件。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_5.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter_9_mt5.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-4. 为了在 Home Assistant 中检测到该设备，将已刷写协处理器固件的 XIAO nRF54LM20A 通过 USB-C 连接到 Home Assistant Green。
+4. 要在 Home Assistant 中检测到该设备，请将已烧录 Coprocessor 固件的 XIAO nRF54LM20A 通过 USB-C 连接到 Home Assistant Green。
 
 - 打开 Add-on store，找到 Open Thread Border Router 并进行配置。你会看到名为 XIAO nRF54LM20A 的设备；配置波特率和其他参数，然后保存设置。
 
@@ -245,11 +265,11 @@ CONFIG_NPM13XX_CHARGER=n
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_7.png" style={{width:800, height:'auto'}}/></div>
 
-- 你可以在 Log 中查看配置状态——如下图所示表示配置成功。
+- 你可以在 Log 中查看配置状态——如下面的图所示，配置成功。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_8.png" style={{width:800, height:'auto'}}/></div>
 
-- 前往 Settings -> Thread 以发现设备，设备通常命名为 `ha-thread-c6c8`。
+- 前往 Settings -> Thread 来发现设备，通常其名称为 `ha-thread-c6c8`。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_9.png" style={{width:800, height:'auto'}}/></div>
 
@@ -261,11 +281,11 @@ CONFIG_NPM13XX_CHARGER=n
 
 2. 修改设备树文件和配置文件。
 
-- 由于 XIAO nRF54LM20A 与 Nordic 官方评估板之间存在硬件差异，需要对设备树和配置文件进行修改。官方评估板配备了外部 MX25R64 Flash 芯片，而 XIAO nRF54LM20A 使用的是 PY25Q64；因此必须进行相应调整。
+- 由于 XIAO nRF54LM20A 与 Nordic 官方评估板之间存在硬件差异，因此需要修改设备树和配置文件。官方评估板配备了外部 MX25R64 Flash 芯片，而 XIAO nRF54LM20A 使用的是 PY25Q64；必须进行相应调整。
 
 - 需要添加的文件如下所示：
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_11.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-8.png" style={{width:350, height:'auto'}}/></div>
 
 文件路径：~/boards：
 
@@ -585,13 +605,19 @@ external_flash:
 
 </details>
 
+:::tip
+
+对于最后两个文件，你需要自行创建文件并粘贴代码
+
+:::
+
 #### 新增文件用途说明
 
 <table>
   <thead>
     <tr>
-      <th>文件</th>
-      <th>说明</th>
+      <th>File</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
@@ -603,7 +629,7 @@ external_flash:
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay</code></td>
       <td>
-        <strong>外部 Flash 方案：</strong>启用 PY25Q64 SPI NOR Flash 作为 OTA 次级分区；<br/>
+        <strong>外部 Flash 版本：</strong>启用 PY25Q64 SPI NOR Flash 作为 OTA 次要分区；<br/>
         启用 wdt31 看门狗；<br/>
         声明 <code>nordic,pm-ext-flash</code> 以便 Partition Manager 能识别外部 Flash。
       </td>
@@ -611,8 +637,8 @@ external_flash:
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.overlay</code></td>
       <td>
-        <strong>内部 Flash 方案：</strong>禁用 PY25Q64（降低 BOM 成本和功耗）；<br/>
-        将 OTA 次级分区放置在内部 RRAM 中；<br/>
+        <strong>内部 Flash 版本：</strong>禁用 PY25Q64（降低 BOM 成本和功耗）；<br/>
+        将 OTA 次要分区放置在内部 RRAM 中；<br/>
         启用 wdt31 看门狗。
       </td>
     </tr>
@@ -625,8 +651,8 @@ external_flash:
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp.conf</code></td>
       <td>
         <strong>外部 Flash — Kconfig：</strong>启用用于访问 PY25Q64 的 SPI/SPI_NOR 驱动；<br/>
-        设置 <code>BOOT_MAX_IMG_SECTORS=512</code> 以支持大固件；<br/>
-        启用无 tick 内核（tickless kernel）。
+        将 <code>BOOT_MAX_IMG_SECTORS=512</code> 设置为支持大固件；<br/>
+        启用无滴答内核（tickless kernel）。
       </td>
     </tr>
     <tr>
@@ -639,33 +665,33 @@ external_flash:
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.conf</code></td>
       <td>
-        <strong>内部 Flash — Kconfig：</strong>禁用 SPI/SPI_NOR；<br/>
-        禁用调试输出（<code>PRINTK=n</code>、<code>ASSERT=n</code>），以减小 MCUboot 在 40 KB 分区中的大小；<br/>
+        <strong>内部 Flash — Kconfig：</strong> 禁用 SPI/SPI_NOR；<br/>
+        禁用调试输出（<code>PRINTK=n</code>, <code>ASSERT=n</code>）以减小 MCUboot 在 40 KB 分区中的大小；<br/>
         设置 <code>BOOT_MAX_IMG_SECTORS=512</code>。
       </td>
     </tr>
     <tr>
       <td><code>xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.overlay</code></td>
       <td>
-        <strong>内部 Flash — DTS Overlay：</strong>禁用 PY25Q64，确保 MCUboot 仅使用内部 Flash。
+        <strong>内部 Flash — DTS Overlay：</strong> 禁用 PY25Q64，确保 MCUboot 仅使用内部 Flash。
       </td>
     </tr>
 
     <tr>
       <td colspan="2"><strong>3. 静态分区文件（<code>pm_static_*.yml</code>）</strong><br/>
-      为 Partition Manager 提供静态分区表，定义 MCUboot、APP、OTA、出厂数据和设置的完整 Flash 布局。</td>
+      Partition Manager 的静态分区表，用于定义 MCUboot、APP、OTA、出厂数据和设置的完整 Flash 布局。</td>
     </tr>
     <tr>
       <td><code>pm_static_xiao_nrf54lm20a_nrf54lm20a_cpuapp.yml</code></td>
       <td>
-        <strong>外部 Flash 版本：</strong><code>mcuboot_secondary</code>（OTA 镜像）位于外部 Flash（PY25Q64）上；<br/>
+        <strong>外部 Flash 版本：</strong> <code>mcuboot_secondary</code>（OTA 镜像）位于外部 Flash（PY25Q64）上；<br/>
         APP 可用大小为 <code>0x1E2800</code>（约 1.9 MB）。
       </td>
     </tr>
     <tr>
       <td><code>pm_static_xiao_nrf54lm20a_nrf54lm20a_cpuapp_internal.yml</code></td>
       <td>
-        <strong>内部 Flash 版本：</strong><code>mcuboot_secondary</code> 位于内部 Flash 上；<br/>
+        <strong>内部 Flash 版本：</strong> <code>mcuboot_secondary</code> 位于内部 Flash 上；<br/>
         MCUboot 缩减为 <code>0xA000</code>（40 KB）；<br/>
         APP 缩减为 <code>0x125800</code>（约 1.2 MB）；<br/>
         OTA 镜像需要压缩。
@@ -675,15 +701,17 @@ external_flash:
   </tbody>
 </table>
 
-#### 将固件烧录到设备
+
+
+#### 将固件烧录并下载到设备
 
 - 继续进行构建配置。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_12_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-3.png" style={{width:800, height:'auto'}}/></div>
 
 - 选择另一块 XIAO nRF54LM20A 作为目标设备，启动 OpenTerminal，并使用 `west flash` 命令烧录固件。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_12.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-4.png" style={{width:800, height:'auto'}}/></div>
 
 ### 使用 Home Assistant App 连接 Matter 设备
 
@@ -691,15 +719,15 @@ external_flash:
 
 - 在 NCS 开发环境中，打开 nRF Serial Terminal。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_13.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-5.2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 - 界面顶部会弹出串口列表；选择对应 XIAO nRF54LM20A 的串口。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_14.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-6.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 - Matter 设备信息和配对二维码链接将通过串口日志输出。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/mt_15.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/matter-7.2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 - 直接点击二维码链接，或将链接复制到浏览器中打开。
 
@@ -723,7 +751,7 @@ external_flash:
     </tr>
 </table>
 
-4. 可以在 Home Assistant 的浏览器仪表盘中查看 Matter 设备信息。
+4. 可以在 Home Assistant 的浏览器仪表盘上查看 Matter 设备信息。
 
 <table align="center">
     <tr>
@@ -743,7 +771,7 @@ external_flash:
 
 ## 总结
 
-通过以上步骤，我们使用两块 XIAO nRF54LM20A 模组搭建了一个 Matter over Thread 网络，并成功将该网络连接到 Home Assistant。Matter 协议支持接入更广泛的传感器类型，而上述演示仅模拟了温湿度数据采集。在集成其他传感器设备时，请确认 Matter 规范中是否定义了匹配的 Cluster。更多详情请参考官方文档 [Home Assistant Matter](https://www.home-assistant.io/integrations/matter)。
+按照上述步骤，我们已经使用两块 XIAO nRF54LM20A 模块搭建了一个基于 Thread 的 Matter 网络，并成功将该网络连接到 Home Assistant。Matter 协议支持接入更广泛类型的传感器，而上述演示仅模拟了温湿度数据采集。在集成其他传感器设备时，请确认 Matter 规范中是否定义了匹配的 Cluster。更多详情请参考官方文档 [Home Assistant Matter](https://www.home-assistant.io/integrations/matter)。
 
 ## 技术支持与产品讨论
 

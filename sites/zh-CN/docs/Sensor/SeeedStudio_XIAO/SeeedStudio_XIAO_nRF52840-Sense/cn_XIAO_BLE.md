@@ -7,10 +7,10 @@ image: https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg
 slug: /XIAO_BLE
 sku: 102010448, 102010469, 102010632, 102010631, 102010672, 102010694, 101991463, 101991465
 last_update:
-  date: 2025-04-17T00:00:00.000Z
+  date: 2025-04-17
   author: Clara
 createdAt: '2023-01-16'
-updatedAt: '2026-04-23'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/cn/XIAO_BLE/
 ---
 import Tabs from '@theme/Tabs';

@@ -14,9 +14,10 @@ last_update:
   date: 6/29/2026
   author: ZhuYuan
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 url: https://wiki.seeedstudio.com/ja/lerobot_double_arm_so_arm_training/
+createdAt: '2026-07-01'
+updatedAt: '2026-07-07'
 ---
 
 import Link from '@docusaurus/Link';

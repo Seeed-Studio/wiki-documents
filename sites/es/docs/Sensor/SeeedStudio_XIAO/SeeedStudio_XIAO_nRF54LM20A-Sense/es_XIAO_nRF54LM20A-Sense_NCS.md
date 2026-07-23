@@ -1,5 +1,5 @@
 ---
-title: NRF Connect SDK con Seeed Studio XIAO nRF54LM20A Sense
+title: NRF Connect SDK con XIAO nRF54LM20A Sense
 description: ''
 keywords:
   - xiao
@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_ncs
 sku: 100018440
 last_update:
-  date: 06/15/2026
+  date: 07/22/2026
   author: Brandy
 createdAt: '2025-05-13'
-updatedAt: '2026-06-15'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_ncs/
 ---
 
@@ -125,7 +125,7 @@ Descarga según el sistema que estés utilizando [VS Code](https://code.visualst
 
 Para nRF Connect SDK v3.3.0, la instalación preempaquetada incluye tanto el código del SDK como la toolchain correspondiente. No necesitas instalar la toolchain por separado.
 
-El nRF Connect SDK es bastante grande y la instalación inicial llevará algún tiempo. Asegúrate de tener una conexión de red estable durante la instalación para evitar fallos.
+El nRF Connect SDK es bastante grande y la instalación inicial tomará algo de tiempo. Asegúrate de tener una conexión de red estable durante la instalación para evitar fallos.
 
 :::
 
@@ -137,31 +137,50 @@ Una vez finalizada la instalación, el entorno integrado para nRF Connect SDK se
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
+
+:::tip
+Asegúrate de que tanto la versión de nRF Connect SDK (NCS) como la versión de la Toolchain sean 3.3.0. Mezclar versiones diferentes puede causar problemas de compilación o compatibilidad.
+:::
+
 2. Introduce comandos para comprobar la información de versión de las herramientas necesarias. Puedes copiar y ejecutar los comandos uno por uno para la verificación.
 
 ```bash
 # Check west (project manager & build entry) version
 west --version
+#West version: v1.5.0
 
 # Check CMake (build system generator) version
 cmake --version
+#cmake version 4.2.1
 
 # Check Ninja (build executor) version
 ninja --version
+#1.13.2
 
 # Check Python (scripting runtime for west & Zephyr tools) version
 python --version
+#Python 3.11.7
 
 # Check ARM cross-compiler (Zephyr toolchain for Cortex-M) version
 arm-zephyr-eabi-gcc --version
+#arm-zephyr-eabi-gcc (Zephyr SDK 0.17.0) 12.2.0
+#Copyright (C) 2022 Free Software Foundation, Inc.
+#This is free software; see the source for copying conditions.  There is NO
+#warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 # Check OpenOCD (on-chip debugger & flasher via CMSIS-DAP) version
 openocd --version
+#Open On-Chip Debugger 0.12.0+dev-01514-g21fa2de70 (2024-02-07-19:03)
+#Licensed under GNU GPL v2
+#For bug reports, read
+#        http://openocd.org/doc/doxygen/bugs.html
 ```
 
 - La salida se muestra a continuación. Si falta algún componente, vuelve a instalar la toolchain y asegúrate de tener una red estable durante la instalación.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/3.png" style={{width:800, height:'auto'}}/></div>
+
+
 
 ### Añadir ruta de placa personalizada
 
@@ -206,7 +225,7 @@ En esta sección, modificaremos un proyecto de ejemplo en blanco.
 
 ### Escribir el programa Blinky
 
-Dado que la serie XIAO nRF54LM20A cuenta con un devicetree y asignaciones de pines de hardware personalizados, es necesario modificar varios archivos. Los archivos que se deben editar se enumeran a continuación.
+Dado que la serie XIAO nRF54LM20A cuenta con devicetree y asignaciones de pines de hardware personalizadas, es necesario modificar varios archivos. Los archivos que se deben editar se enumeran a continuación.
 
 - `main.c`: Programa principal que contiene la lógica de la aplicación.
 - `app.overlay`: Archivo overlay de devicetree para la configuración de periféricos de hardware.
@@ -398,7 +417,7 @@ CONFIG_SERIAL=n
 
 :::tip
 
-Si `xiao_nrf54lm20a/nrf54lm20a/cpuapp` no se puede encontrar aquí, comprueba si la ruta se añadió correctamente en la sección [Add Custom Board Path](#Add-Custom-Board-Path).
+Si `xiao_nrf54lm20a/nrf54lm20a/cpuapp` no se puede encontrar aquí, comprueba si la ruta se añadió correctamente en la sección [Add Custom Board Path](#add-custom-board-path).
 
 :::
 
@@ -422,7 +441,7 @@ west flash
 
 :::tip
 
-Si el firmware que se va a flashear se genera a partir del primer archivo de configuración creado en **Add build configuration**, debes especificar la ruta de configuración cuando existan varias carpetas de configuración como `build` y `build_1`.
+Si el firmware que se va a flashear se genera a partir del primer archivo de configuración creado en **Add build configuration**, debes especificar la ruta de configuración cuando existan múltiples carpetas de configuración como `build` y `build_1`.
 
 ```bash
 # examples: west flash configgration build_1
@@ -431,40 +450,57 @@ west flash --build-dir build_1
 
 :::
 
-### Observar el resultado
+### Observa el resultado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:600, height:'auto'}}/></div>
 
-## Preguntas frecuentes (FAQ)
-Si la descarga de tu SDK tarda demasiado, también proporcionamos un método de descarga relativamente rápido
-- Paso 1: Instalar aria2
-```
+## Preguntas frecuentes
+
+ **P1: Descargar el nRF Connect SDK es muy lento o se queda atascado**
+
+Si la descarga del SDK es muy lenta o se queda atascada, puedes usar **aria2** para descargar los paquetes necesarios con múltiples conexiones y luego instalar el SDK usando **nrfutil**.
+
+### Paso 1. Instalar aria2
+
+Para macOS:
+
+```bash
 brew install aria2
 ```
 
-- Paso 2: Crear el directorio de descarga
+Para Windows:
+
+```bash
+winget install aria2.aria2
 ```
+
+**Paso 2. Crear el directorio de descarga**
+
+```bash
 mkdir -p /opt/nordic/ncs/downloads
 ```
 
-- Paso 3: Descargar el Toolchain Bundle
-```
+**Paso 3. Descargar el Toolchain Bundle**
+
+```bash
 aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   -d /opt/nordic/ncs/downloads \
   -o ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz \
   "https://files.nordicsemi.cn/artifactory/NCS/external/bundles/v3/ncs-toolchain-aarch64-macos-0c0f19d91c.tar.gz"
 ```
 
-- Paso 4: Descargar el nRF Connect SDK Bundle
-```
+**Paso 4. Descargar el nRF Connect SDK Bundle**
+
+```bash
 aria2c -c -x 16 -s 16 -k 1M --file-allocation=none \
   -d /opt/nordic/ncs/downloads \
   -o sdk-nrf-bundle-v3.3.0.tar.gz \
   "https://files.nordicsemi.cn/artifactory/ncs-src-mirror/external/sdk-nrf/v3.3.0/src.tar.gz"
 ```
 
-- Paso 5: Instalar nRF Connect SDK v3.3.0
-```
+**Paso 5. Instalar nRF Connect SDK v3.3.0**
+
+```bash
 nrfutil sdk-manager install v3.3.0 \
   --sdk-path /opt/nordic/ncs/v3.3.0 \
   --type nrf

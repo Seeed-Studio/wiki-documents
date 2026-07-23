@@ -14,7 +14,7 @@ last_update:
   date: 06/02/2026
   author: Seeed Studio
 createdAt: '2026-06-02'
-updatedAt: '2026-06-02'
+updatedAt: '2026-06-03'
 url: https://wiki.seeedstudio.com/pt-br/wio_tracker_l1_3d_enclosure/
 ---
 

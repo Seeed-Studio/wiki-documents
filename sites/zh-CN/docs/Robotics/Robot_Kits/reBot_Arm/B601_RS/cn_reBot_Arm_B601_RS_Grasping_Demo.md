@@ -14,10 +14,9 @@ last_update:
   date: 2026-06-17
   author: YinHaizhou
 translation:
-  skip:
-    - [zh-CN]
+  skip: [[zh-CN]]
 createdAt: '2026-06-15'
-updatedAt: '2026-06-17'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_grasping_demo/
 ---
 
@@ -255,6 +254,19 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 
 如果系统需要完整的 RealSense 工具链或 udev 规则，请参考 RealSense SDK 官方文档安装 `librealsense2`。
 
+**SDK 资料汇总**
+
+| 资料 | 链接 |
+|------|------|
+| Gemini 2 产品页 | https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51 |
+| 开发资料总链接 | https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1 |
+| Orbbec SDK v2 | https://github.com/orbbec/OrbbecSDK_v2 |
+| SDK v2 API 文档 | https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/ |
+| pyorbbecsdk | https://github.com/orbbec/pyorbbecsdk |
+| pyorbbecsdk 文档 | https://orbbec.github.io/pyorbbecsdk/index.html |
+| ROS2 Wrapper | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main |
+| Intel RealSense SDK | https://github.com/realsenseai/librealsense 
+
 ### 步骤 5. 配置 GraspNet（可选）
 
 如果只运行 `scripts/main.py` 或 `scripts/ordinary_grasp_pipeline.py`，不需要配置 GraspNet。只有在运行 `scripts/graspnet_camera_demo.py` 或 `scripts/grasp.py` 时，才需要准备 GraspNet、CUDA 版 PyTorch、PointNet2/knn CUDA 算子和预训练权重。
@@ -304,13 +316,21 @@ pip install .
 cd ../../..
 ```
 
-***注：如果直接参考graspnet-baseline官方仓库文档使用 `python setup.py install` 可能报 CUDA / PyTorch 相关错误，建议使用 `pip install . --no-build-isolation`，让扩展在当前 conda 环境中复用已安装的 PyTorch 与 CUDA 配置进行编译。***
+:::tip
+注：如果直接参考graspnet-baseline官方仓库文档使用 `python setup.py install` 可能报 CUDA / PyTorch 相关错误，建议使用 `pip install . --no-build-isolation`，让扩展在当前 conda 环境中复用已安装的 PyTorch 与 CUDA 配置进行编译。
+:::
 
-***如果编译时报 `fatal error: cusparse.h: No such file or directory`，先运行 `find $CONDA_PREFIX -name cusparse.h`，并把包含 `cusparse.h` 的目录加入 `CPATH` / `CPLUS_INCLUDE_PATH`。如果 CUDA 头文件来自 conda `cuda-toolkit`，路径通常是 `$CONDA_PREFIX/targets/x86_64-linux/include`，而不是上面示例里的 pip `nvidia/cu13/include` 路径。***
+:::tip
+如果编译时报 `fatal error: cusparse.h: No such file or directory`，先运行 `find $CONDA_PREFIX -name cusparse.h`，并把包含 `cusparse.h` 的目录加入 `CPATH` / `CPLUS_INCLUDE_PATH`。如果 CUDA 头文件来自 conda `cuda-toolkit`，路径通常是 `$CONDA_PREFIX/targets/x86_64-linux/include`，而不是上面示例里的 pip `nvidia/cu13/include` 路径。
+:::
 
-***此外，GraspNet API 的旧版依赖中可能仍使用已弃用的 `sklearn` 包名， `sed` 命令会将其替换为当前推荐的 `scikit-learn`，避免安装时报 `The 'sklearn' PyPI package is deprecated`。除非同步升级 GraspNet API 的旧依赖，否则建议保留其 `numpy==1.23.4` 约束，因为 `transforms3d==0.3.1` 仍使用 `np.float` 等旧 NumPy 别名。***
+:::tip
+此外，GraspNet API 的依赖中可能仍使用 `sklearn` 包名。上面的 `sed` 命令会将 `sklearn` 替换为 `scikit-learn`，避免安装时出现包名提示。除非同步调整 GraspNet API 的依赖栈，否则建议保留其 `numpy==1.23.4` 约束，因为 `transforms3d==0.3.1` 仍使用 `np.float` 等 NumPy 别名。
+:::
 
-参考 graspnet-baseline 官方仓库下载 GraspNet 官方预训练权重后，将 `checkpoint-rs.tar` 放到：
+**配置预训练模型**
+
+在graspnet-baseline 官方仓库下载 GraspNet 官方预训练权重[Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view)、[Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A)，将 下载好的`checkpoint-rs.tar` 放到：
 
 ```bash
 sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
@@ -324,6 +344,41 @@ graspnet:
 ```
 
 `checkpoint` 支持三种写法：仅文件名会自动从 `sdk/graspnet-baseline/checkpoints/` 查找；相对路径会按项目根目录解析；绝对路径会直接使用。
+
+## 目录结构
+
+```
+rebot_grasp/
+├── config/
+│   ├── default.yaml              # 主配置文件
+│   └── calibration/
+│       └── <camera_type>/
+│           ├── intrinsics.npz    # 相机内参
+│           └── hand_eye.npz      # 手眼标定结果
+├── drivers/
+│   ├── camera/
+│   │   ├── base.py               # 相机抽象基类
+│   │   ├── orbbec_gemini2.py     # Gemini 2 驱动
+│   │   └── realsense.py          # RealSense 驱动（备用）
+│   └── robot/
+│       └── grasp_driver.py       # 基于机械臂 SDK 的轻量抓取辅助
+├── calibration/
+│   ├── aruco_pose.py             # ArUco 位姿估计
+│   └── hand_eye.py               # 手眼标定求解
+├── utils/
+│   ├── ordinary_grasp.py         # OBB 抓取姿态估计与可视化
+│   └── transforms.py             # 坐标变换工具
+├── scripts/
+│   ├── main.py                   # 主抓取程序
+│   ├── set.py                    # 抓取与放置程序
+│   ├── ordinary_grasp_pipeline.py
+│   ├── object_detection.py
+│   └── collect_handeye_eih.py
+├── sdk/
+│   ├── pyorbbecsdk/              # Orbbec SDK Python 封装
+│   └── reBotArm_control_py/      # reBot Arm SDK
+└── environment.yml               # 推荐的 conda 环境文件
+```
 
 ## 手眼标定
 
@@ -359,6 +414,10 @@ python scripts/collect_handeye_eih.py --manual
 ```
 
 手动模式下，机械臂会进入重力补偿状态。你可以将末端推到合适视角后按 `Enter` 采集，按 `c` 或 `q` 结束并计算结果。
+
+:::tip
+如果您在校准之后发现机械臂的抓取精度无法满足需求，可以设置`config/default.yaml`参数 `calibration.hand_eye_compensation_m`中的 `X（前后）、Y（左右）、Z（高低）` 参数给予位置补偿。
+:::
 
 标定结果保存到：
 
@@ -461,7 +520,19 @@ robot:
 - `R`：恢复实时预览
 - `Q` / `Esc`：退出程序
 
-### 4. GraspNet 相机估计 Demo（可选）
+### 4. `scripts/set.py` — 抓取与放置程序
+
+功能效果：将香蕉抓取并放置到盒子里面
+
+完成流程：
+1. 相机与机械臂初始化，移动到预备点位
+2. 实时相机预览 + YOLO 目标检测与实例分割
+3. 按 `G` 冻结帧，经手眼变换计算机械臂目标位姿
+4. 机械臂移动抓取香蕉并抬高
+5. 机械臂将香蕉放置在盒子内，并回归初始姿态
+6. 按 `Q` 退出系统，机械臂回归零点
+
+### 5. GraspNet 相机估计 Demo（可选）
 
 ```bash
 python scripts/graspnet_camera_demo.py
@@ -477,7 +548,7 @@ python scripts/graspnet_camera_demo.py
 
 推理后可通过 Open3D 查看点云与夹取候选。
 
-### 5. GraspNet 机械臂抓取程序（可选）
+### 6. GraspNet 机械臂抓取程序（可选）
 
 ```bash
 python scripts/grasp.py

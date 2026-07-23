@@ -14,10 +14,9 @@ last_update:
   date: 2026-04-17
   author: LiuJunjie
 translation:
-  skip:
-    - [zh-CN]
+  skip: [[zh-CN]]
 createdAt: '2026-03-24'
-updatedAt: '2026-03-25'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
@@ -329,10 +328,36 @@ sudo chmod 666 /dev/can0`}
 </CodeBlock>
   </details>
 
-  <details className="content-details">
-    <summary>MIT 控制模式（3_mit_control.py）</summary>
+# 或设置 CAN 设备权限（如 can0）
+sudo chmod 666 /dev/can0
+```
+:::
+### 单电机控制台 (`0x01damiao_test.py`)
 
-    输入所有关节的目标角度，将 MIT 控制模式下完成各电机的控制，通常用于力控、阻抗控制或需要高动态响应的场景。
+直接使用 motorbridge SDK 进行单电机测试。
+
+**运行方式**：
+```bash
+uv run python example/0x01damiao_test.py
+```
+
+**交互命令**：
+| 命令 | 说明 |
+|------|------|
+| `enable` / `disable` | 使能/去使能 |
+| `set_zero` | 设置软件零位 |
+| `state` | 查看当前状态 |
+| `ping` | Ping 电机获取响应 |
+| `clear_error` | 清除电机错误 |
+| `mode <mit/posvel/vel>` | 切换控制模式 |
+| `mit <pos> [vel] [kp] [kd]` | MIT 模式指令 |
+| `posvel <pos> [vlim]` | POS_VEL 模式指令 |
+| `vel <velocity>` | 纯速度模式指令 |
+| `read_param <id> [type]` | 读取电机参数 |
+| `write_param <id> <value> [type]` | 写入电机参数 |
+| `loop` | 进入循环控制模式 |
+| `q` / `quit` | 退出 |
+---
 
     **运行方式：**
 
@@ -530,8 +555,7 @@ sudo chmod 666 /dev/can0`}
 # 用法B
 > 0.3 0.0 0.4 0.0 0.0 0.5 # 同时控制位置和姿态：走到指定位置，同时手腕偏航角旋转 0.5 弧度，移动时间默认为 2.0 秒
 
-# 用法C
-> 0.3 0.0 0.4 0.0 0.0 0.0 5.0 # 让机械臂走到特定位置，并指定用 5.0 秒 的时间慢慢挪过去。(注意：如果要输时间，前方的姿态参数 0 0 0 不能省略)
+### 重力补偿控制 — 基础版 (`9_gravity_compensation.py`)
 
 > ctrl + c # 退出系统`}
 </CodeBlock>
@@ -568,10 +592,8 @@ sudo chmod 666 /dev/can0`}
 <CodeBlock language="text">
 {`tau = g(q)          — 重力前馈
 pos = 当前电机位置   — 关节位置跟随当前位置
-kp = 2, kd = 1     — 所有关节统一刚度/阻尼`}
-</CodeBlock>
-
-    **预期行为：**
+kp = 2,  kd = 1     — 所有关节统一刚度/阻尼
+```
 
     - 机械臂可以在任意姿态下“漂浮”
     - 松开后不会因自重坠落
@@ -583,38 +605,77 @@ kp = 2, kd = 1     — 所有关节统一刚度/阻尼`}
 {`uv run python example/9_gravity_compensation.py`}
 </CodeBlock>
 
-    **输出：**
+:::caution 退出重力补偿前务必归位
+停止脚本（`Ctrl+C`）时，程序会**直接失能所有电机**，机械臂**不会自动回到零点**。请在退出前用手扶住机械臂或先将其移动到安全/归零姿态，避免关节突然下落造成碰撞或损伤。
+:::
 
-    - 实时显示各关节期望力矩（N·m）
-    - 按 `Ctrl+C` 停止并断开连接
-  </details>
+:::tip 单独调节各关节补偿力度
+如果某些关节因结构摩擦或装配差异导致补偿不足/过补偿，可以在代码中对 `tau_g` 数组的对应元素进行额外缩放：
 
-  <details className="content-details">
-    <summary>高阻尼重力补偿控制（10_gravity_compensation_lock.py）</summary>
+```python
+tau_g[x] *= y  # x 为关节电机 id，y 为补偿力度系数，一般从 1 开始调整
+#此补偿一般只在关节2和3使用
+```
 
-    抵抗轻微外力的重力补偿控制。
+例如 `tau_g[2] *= 1.2` 表示将第 2 个关节的重力补偿力矩增大 20%。建议根据实际漂浮效果逐项微调，避免一次性改动过大。
+:::
 
-    **控制律：**
 
-    注：当人用力推机械臂，末端线速度 &gt; 0.04 m/s 或角速度 &gt; 0.08 rad/s 时，解锁并实时更新目标角度。
+### 重力补偿控制 — 末端速度锁止版 (`10_gravity_compensation_lock.py`)
 
-<CodeBlock language="text">
-{`tau = g(q) + 积分项  — 重力前馈，并引入积分累计消除静摩擦力和残余重力死区
-pos = 目标锁定角度   — 当末端移动速度低于阈值时，目标角度锁死在当前点
-kp = 8.0, kd = 1.0  — 锁定状态下刚度提升至 8.0，提供更坚固的抗干扰和定位约束`}
-</CodeBlock>
+在基础重力补偿的基础上，加入末端执行器速度检测与关节角度锁定机制。
 
-    **预期行为：**
+**控制律**：
+```
+tau = g(q) + integral_term    — 重力前馈 + 积分项
+pos = q_target                 — 目标关节角度（锁定或更新）
+kp = 8.0,  kd = 1.0           — 增强刚度/阻尼
+```
+
+**锁止逻辑**：
+- 当末端线速度 `||v_ee|| < 0.04 m/s` 且角速度 `||w_ee|| < 0.08 rad/s` 时：
+  - 目标关节角度 `q_target` 保持锁定
+  - 机械臂锁止在当前位置
+- 当末端速度超过阈值时：
+  - `q_target` 更新为当前关节角度
+  - 允许手动推动改变位置
+
+**预期行为**：
+- 机械臂锁止在当前位置，用力推才能改变目标角度
+- 比基础版更稳定，适合需要保持姿态的场景
 
     - 松手即锁死：将机械臂用手掰到某个位置一旦松手，会立刻在原地死死锁住，能完美解决缓缓下坠和微小漂移的问题。
     - 轻推不发生位移：轻微的晃动、风吹或外力触碰无法让机械臂移位。
     - 用力即可拖动：只有用一定的力气推它、打破速度阈值后，才会解锁并顺从地滑动。
 
-    **运行方式：**
+**输出**：
+- 实时显示锁定状态（LOCKED / UPDATE）
+- 末端线速度、角速度
+- 各关节重力补偿力矩（N·m）
+- 按 `Ctrl+C` 停止并断开连接
 
-<CodeBlock language="bash">
-{`uv run python example/10_gravity_compensation_lock.py`}
-</CodeBlock>
+:::caution 退出重力补偿前务必归位
+停止脚本（`Ctrl+C`）时，程序会**直接失能所有电机**，机械臂**不会自动回到零点**。请在退出前用手扶住机械臂或先将其移动到安全/归零姿态，避免关节突然下落造成碰撞或损伤。
+:::
+
+:::tip 单独调节各关节补偿力度
+如果某些关节因结构摩擦或装配差异导致补偿不足/过补偿，可以在代码中对 `tau_g` 数组的对应元素进行额外缩放：
+
+```python
+tau_g[x] *= y  # x 为关节电机 id，y 为补偿力度系数，一般从 1 开始调整
+#此补偿一般只在关节2和3使用
+```
+
+例如 `tau_g[2] *= 1.2` 表示将第 2 个关节的重力补偿力矩增大 20%。建议根据实际漂浮效果逐项微调，避免一次性改动过大。
+:::
+
+**安全测试配置**：
+可通过修改脚本顶部的 `ENABLED_JOINTS` 列表，仅使能指定关节进行安全测试：
+```python
+ENABLED_JOINTS = ["joint1"]  # 仅使能 joint1
+```
+
+---
 
     **输出：**
 

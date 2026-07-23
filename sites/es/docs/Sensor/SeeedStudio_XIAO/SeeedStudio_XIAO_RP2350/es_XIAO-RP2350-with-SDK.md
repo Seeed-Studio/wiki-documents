@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-rp2350-c-cpp-sdk
 sidebar_position: 4
 last_update:
-  date: 2024-08-14T06:27:29.006Z
+  date: 2024-08-14
   author: Spencer
 createdAt: '2024-08-06'
 updatedAt: '2025-09-10'

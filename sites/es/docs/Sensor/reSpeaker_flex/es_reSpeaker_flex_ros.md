@@ -12,7 +12,7 @@ last_update:
   date: 5/27/2026
   author: Kasun Thushara
 createdAt: '2026-05-27'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-18'
 url: https://wiki.seeedstudio.com/es/respeaker_flex_ros2_voice_pipeline/
 ---
 

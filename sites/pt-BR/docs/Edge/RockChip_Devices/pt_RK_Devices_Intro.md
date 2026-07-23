@@ -11,7 +11,7 @@ last_update:
   date: 3/9/2026
   author: Nolan Chen
 createdAt: 2026-3-9
-updatedAt: '2026-03-19'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/pt-br/rockchip-devices/
 ---
 

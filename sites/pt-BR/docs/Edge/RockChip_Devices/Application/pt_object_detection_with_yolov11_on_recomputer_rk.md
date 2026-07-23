@@ -11,7 +11,7 @@ last_update:
   author: Nolan Chen
 no_comments: false
 createdAt: 2026-3-9
-updatedAt: '2026-03-16'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/pt-br/object_detection_with_yolov11_on_recomputer_rk/
 ---
 

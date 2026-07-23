@@ -13,10 +13,9 @@ last_update:
   date: 2026-04-15
   author: LiuJunjie
 translation:
-  skip:
-    - [zh-CN]
+  skip: [[zh-CN]]
 createdAt: '2026-04-09'
-updatedAt: '2026-04-09'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
 ---
 
@@ -169,52 +168,15 @@ import CodeBlock from '@theme/CodeBlock';
     <div><strong>兼容 NVIDIA 平台</strong><span>支持通过 reComputer Mini J4012 Orin NX 16GB 等 Jetson 平台进行部署。</span></div>
   </div>
 
-  <details className="content-details">
-    <summary>搭建属于你的 reBot 机械臂</summary>
-
-    我们提供五种套件方案：
-
-    - **机械臂本体电机套件**：仅包含机械臂所需的电机与线束。
-    - **机械臂本体结构件套件**：仅包含机械结构零部件。
-    - **夹持器完整套件**：包含夹持器的电机、线束及结构件。
-    - **整机完整套件**：包含机械臂本体与夹持器全套组件。
-    - **成品组装机械臂**：已完成组装的成品机械臂。
-
-    reBot-DevArm 和 reComputer Jetson AI 智能机器人套件无缝结合了高精度的机器人手臂控制与强大的 AI 计算平台，提供了全面的机器人开发解决方案。该套件基于 Jetson Orin 或 AGX Orin 平台，结合 reBot-DevArm 和 LeRobot AI 框架，为用户提供适用于教育、科研和工业自动化等多种场景的智能机器人系统。
-
-    本维基提供了 reBot-DevArm 调试教程，并在 LeRobot 框架内实现数据收集和训练。
-  </details>
-
-  :::caution
-  Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或环境问题，请先查阅文末 FAQ，或者联系客服加入 Seeed Studio LeRobot 交流群询问，也可以在这里询问：[LeRobot GitHub](https://github.com/huggingface/lerobot) 或 [Discord 频道](https://discord.gg/8TnwDdjFGU)。
-  :::
-
-  <details className="content-details">
-    <summary>查看项目介绍视频</summary>
-    <div className="video-container">
-      <iframe
-        loading="lazy"
-        width="900"
-        height="600"
-        src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1&mute=1&danmaku=0"
-        title="reBot project introduction video"
-        frameBorder="0"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
-    </div>
-  </details>
-</section>
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 初始系统环境
 
-<section id="environment" className="section-card">
-  <div className="section-title">
-    <span>Environment</span>
-    <h2>初始系统环境</h2>
-    <p>需要根据你的 CUDA 版本安装 PyTorch 和 Torchvision 等环境。建议优先在 Ubuntu 物理机上完成数据采集和训练流程。</p>
-  </div>
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
   <div className="env-grid">
     <div>
@@ -407,8 +369,9 @@ print(torch.cuda.is_available())  # 输出结果应该为 True`}
     </div>
   </details>
 
-  接下来，你需要对你的 reBot B601-DM 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。  
-  这个校准过程至关重要，因为它可以让在一个 reBot B601-DM 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除 `~/.cache/huggingface/lerobot/calibration/robots` 或者 `~/.cache/huggingface/lerobot/calibration/teleoperators` 下的文件并重新校准机械臂，否则会出现报错提示，校准的机械臂信息会存储在该目录下的 json 文件中。
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
   <h3>1. 授予接口权限</h3>
 
@@ -524,26 +487,20 @@ sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）`}
     --robot.can_adapter=damiao \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
-    --teleop.id=rebot_arm_102_leader`}
-</CodeBlock>
-
-  <details className="content-details">
-    <summary>查看遥操作演示视频</summary>
-    <div className="video-container">
-      <iframe
-        loading="lazy"
-        width="900"
-        height="600"
-        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&autoplay=0&muted=1&mute=1&danmaku=0"
-        title="reBot teleoperation demo video"
-        frameBorder="0"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
-    </div>
-  </details>
-</section>
+    --teleop.id=rebot_arm_102_leader
+```
+<div class="video-container">
+    <iframe 
+        width="900" 
+        height="600" 
+        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0&autoplay=0&muted=1" 
+        scrolling="no" 
+        border="0" 
+        frameborder="no" 
+        framespacing="0" 
+        allowfullscreen="true">
+    </iframe>
+</div>
 
 ## 添加摄像头
 
@@ -899,23 +856,26 @@ Camera #0:
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
-    --display_data=true`}
-</CodeBlock>
+    --display_data=true
+```
 
-    :::danger
-    遥操作过程中如果主从臂电源脱落、电源接触不良或信号线脱落，必须先停止代码，让机械臂恢复到初始 0 点位置，再重新上电运行程序，避免数据错乱导致机械臂失控造成危险。
-    :::
-  </details>
-</section>
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
-## 数据集制作与采集
+</details>
 
-<section id="record-dataset" className="section-card">
-  <div className="section-title">
-    <span>Step 5</span>
-    <h2>数据集制作与采集</h2>
-    <p>先从一个简单、稳定、重复性高的任务开始，例如“抓取黑色方块并放入盒子”。</p>
-  </div>
+## 数据集制作采集
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
+
+<details>
 
   <div className="safety-alert compact">
     <div className="safety-alert-icon">⚠️</div>

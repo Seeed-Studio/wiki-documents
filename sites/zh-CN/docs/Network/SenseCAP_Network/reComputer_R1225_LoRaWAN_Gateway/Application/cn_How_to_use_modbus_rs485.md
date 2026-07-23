@@ -12,6 +12,9 @@ sku: 100021896,100030154,100006298,100079154
 last_update:
   date: 04/14/2026
   author: Kian
+createdAt: '2026-05-25'
+url: https://wiki.seeedstudio.com/cn/how_to_use_modbus_rs485_with_r1225/
+updatedAt: '2026-04-30'
 ---
 
 ## 介绍

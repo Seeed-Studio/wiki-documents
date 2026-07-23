@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/06/2026
+  date: 07/20/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-07-06'
+updatedAt: '2026-07-20'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,75 +18,87 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 6th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 20th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [CodeCraft Quick Start & Support](https://wiki.seeedstudio.com/codecraft/quick-start-and-support/)
+### [Get Started with MeshTracker X1](https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-hardware-ecosystem-EN.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-CodeCraft is an AI programming assistant designed specifically for hardware scenarios. You only need to describe what you want in natural language, and CodeCraft can generate executable hardware programs for you. It is suitable for users who want to quickly complete hardware creation without setting up a development environment from scratch.
-
-</div>
-
-### [Building a Long-Range Security System with reCamera and Meshtastic](https://wiki.seeedstudio.com/recamera_meshtastic_ha_security_system/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/demo_show.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This tutorial provides a highly geeky "network-free security" solution: leverage the powerful edge AI computing power of **reCamera PoE** for real-time human detection. Once a target is detected, immediately trigger the **XIAO ESP32S3 + Wio-SX1262 module (transmitter)** via the underlying hardware pins. The alert signal is converted into low-frequency radio waves, traversing kilometers of complex terrain to be captured by the indoor **Wio-SX1262 receiver**, and seamlessly translated into MQTT messages pushed to your local **Home Assistant (HA)** system.  
+This guide walks you through getting started with the SenseCAP MeshTracker X1 for Meshtastic, covering Bluetooth pairing, LoRa configuration, firmware flashing, GPS and notification settings, as well as troubleshooting common device issues.
 
 </div>
 
-### [Steering Gear Debugging Tool for SO-ARM in Lerobot](https://wiki.seeedstudio.com/lerobot_steering_gear_debugging_tool/)
+### [Seeed Studio XIAO nRF54LM20A Sense with Arduino](https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_arduino/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/debug_tool.webp" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-Studio-XIAO-nRF54LM20A-Sense.webp" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The Steering Gear Debugging Tool (Seeed_RoboController) is a graphical debugging tool for Lerobot/SO-ARM robotic arms. With this tool, you can quickly detect servo status, recalibrate servo IDs, write neutral values, control individual servos, and manage robotic arm calibration files, making it easier to assemble, debug, and maintain the leader and follower arms.
+This section walks you through the required hardware and software preparation for Arduino development. By following the steps below, you will set up your development environment, configure the Arduino IDE, and prepare your XIAO board for programming. Once the setup is complete, you can quickly build, upload, and test the provided example sketches.
 
 </div>
 
-### [reSpeaker Clip Control with Python](https://wiki.seeedstudio.com/respeaker_clip_python_control/)
+### [Using reCamera Pro's Onboard IMU for Tilt and Shake Detection](https://wiki.seeedstudio.com/recamera_pro_imu_tilt_shake_detection/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO-IMU-Detect.gif" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document explains how to use Python to control the reSpeaker Clip device, covering connection setup, recording control, file synchronization, and CLI/Web UI usage.
+This article explains how to use the reCamera Pro's onboard six-axis inertial measurement unit (IMU) — the ICM-42670-P gyroscope — to implement device tilt and shake detection. When the device is tilted or shaken, the system will play corresponding voice warnings through the onboard speaker. Through this tutorial, you will learn how to read raw gyroscope data via the Linux IIO driver, play warning sounds using the ALSA audio driver, and ultimately integrate a complete detection and alert program.
 
 </div>
 
-### [EM12-G GNSS Module Setup Guide for reComputer Robotics J3011](https://wiki.seeedstudio.com/em12_g_gnss_module_for_recomputer_robotics_j3011/)
+### [Train Image Classification Models Online Quickly with SenseCraft AI](https://wiki.seeedstudio.com/train_classification_model_online/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/GNSS_for_jetson/2.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-5.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The EM12-G is a multi-constellation GNSS receiver module designed for positioning applications. It uses a standard M.2 Key B form factor and is compatible with embedded computing platforms such as NVIDIA Jetson and Raspberry Pi. This guide uses the J401 carrier board on reComputer Robotics J3011 as an example to show how to install, power on, and configure the EM12-G GNSS positioning module.
+SenseCraft AI offers a set of browser-based tools for training image classification models. There's no need to set up a local deep learning environment or write training code. Simply prepare images for different categories, and you can complete data collection, model training, performance preview, and device deployment online.
+
+Online Training Entrance: [SenseCraft AI Online Training](https://sensecraft.seeed.cc/ai/training?trainTab=2)
 
 </div>
 
-### [Flash a PREEMPT_RT Linux Real-Time Kernel on Seeed reComputer Jetson with JetPack 6.2.1](https://wiki.seeedstudio.com/flash_preempt_rt_kernel_on_recomputer_jetson_jetpack_6_2_1/)
+### [reCamera Pro Acoustic Lab Usage](https://wiki.seeedstudio.com/recamera_pro_acoustic_lab_usage/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RT_for_jetson/5.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png" alt="pir" width={500} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-A real-time kernel, also known as a PREEMPT_RT kernel, is a Linux kernel variant with enhanced real-time scheduling capabilities. Its main purpose is to reduce scheduling latency and improve task execution determinism, rather than increase raw computing performance. This guide is based on the official NVIDIA Jetson Linux R36.4.4 BSP. It merges the Seeed R36.4.4 BSP, cross-compiles the PREEMPT_RT kernel, and flashes the system to the NVMe SSD of a Seeed Jetson device.
+The reCamera Pro features a dedicated local sound training platform called the Acoustic Lab. Through this platform, users can collect environmental sound samples, train custom sound models, and deploy them as sound-triggered events without needing an internet connection. This article provides a detailed walkthrough of each functional module in the Acoustic Lab, covering the complete workflow from audio collection and model training to deployment and usage.
 
 </div>
 
-<!-- ## Existing Wiki Updated
+### [JetPack 7.2 Wireless Module Setup Guide](https://wiki.seeedstudio.com/jetpack72_ax210_ax200_wifi_setup_guide/)
 
-### [Meshtastic Firmware Source Code Practical Tutorial](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/AX210Wi-Fi/jp72-ax210.png" alt="pir" width={800} height="auto" /></p>
 
-We have added a new project: [Project B – XIAO ESP32S3 Environmental Telemetry Node](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/#project-b-xiao-esp32s3-environmental-telemetry-node). -->
+<div style={{ textAlign: "justify" }}>
+
+This guide explains how to restore Wi-Fi connectivity on Seeed Jetson devices running JetPack 7.2 by installing the required drivers and firmware for Intel AX210/AX200 and Realtek RTL8852BE wireless modules.
+
+</div>
+
+### [Industrial Vision Monitoring on Industrial](https://wiki.seeedstudio.com/industrial_vision_monitoring_on_industrial/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_no_helmet.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+Industrial vision AI enables real-time worksite safety monitoring by detecting worker presence, PPE compliance, and unsafe behaviors directly at the edge. This wiki demonstrates a reference solution on Seeed Industrial Jetson devices, using a USB camera for live browser streaming, YOLO for person and PPE detection, and a VLM for behavior hazard analysis. Both model types are replaceable, making the repository a flexible starting point for custom deployments.
+
+</div>
+
+## Existing Wiki Updated
+
+### [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/)
+
+We have updated the [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/) guide with the new XIAO_nRF52840_NFC library, expanded antenna tuning instructions, setup verification, and practical NFC tag examples.
 
 ## The Efforts of Contributor
 
@@ -226,5 +238,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.6.15th](/Seeed_Elderly/weekly_wiki/2026/wiki260615)
 - [weekly wiki on 2026.6.22nd](/Seeed_Elderly/weekly_wiki/2026/wiki260622)
 - [weekly wiki on 2026.6.29th](/Seeed_Elderly/weekly_wiki/2026/wiki260629)
+- [weekly wiki on 2026.7.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260706)
+- [weekly wiki on 2026.7.13rd](/Seeed_Elderly/weekly_wiki/2026/wiki260713)
 
 </details>

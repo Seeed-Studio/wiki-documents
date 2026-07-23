@@ -17,10 +17,9 @@ last_update:
   date: 2026-06-10
   author: YinHaizhou
 translation:
-  skip:
-    - [zh-CN]
+  skip: [[zh-CN]]
 createdAt: '2026-06-10'
-updatedAt: '2026-06-10'
+updatedAt: '2026-07-07'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/
 ---
 

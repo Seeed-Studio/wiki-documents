@@ -15,7 +15,7 @@ last_update:
   date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-07-04'
+updatedAt: '2026-07-12'
 url: https://wiki.seeedstudio.com/robotics_page/
 ---
 
@@ -33,25 +33,154 @@ import '/src/css/robotics-page-style.css';
       <h2>Not sure which guide to read first? Start with the robot kit in your hands.</h2>
       <p>This page reorganizes Seeed Studio robotics documentation into product-based learning paths. Whether you are unboxing your first robot or preparing for teleoperation, ROS2, simulation, AI training, or real-world deployment, start by choosing your robot kit, then follow the recommended steps from hardware bring-up to advanced development.</p>
     </div>
-    <div className="hero-tips">
-      <div><strong>New users</strong><span>Start with unboxing, wiring, power, drivers, and basic motion checks</span></div>
-      <div><strong>Application builders</strong><span>Continue with SDKs, LeRobot, ROS2, visual grasping, or mobile control</span></div>
-      <div><strong>AI robotics users</strong><span>Move into simulation, data collection, GR00T, VLA, and reinforcement learning</span></div>
-    </div>
-  </section>
 
-  <nav className="quick-nav" aria-label="Robotics page quick navigation">
-    <a href="#robot-kits">📦 Robot Kits</a>
-    <a href="#actuators">⚙️ Joint Actuators</a>
-    <a href="#sensors">👁️ Sensors</a>
-    <a href="#software">💻 Software Ecosystem</a>
-  </nav>
+    <div className="nav-grid">
 
-  <section className="kit-index-panel" aria-label="Choose a robotics learning path">
-    <div className="section-title-row compact-title">
-      <div>
-        <span className="section-kicker">Choose a Kit</span>
-        <h2>Quickly choose your learning path</h2>
+      <h2 id="robot-kits">📦 Robot Kits</h2>
+
+      <div className="category-group">
+        <div className="category-card robot-kits">
+
+
+          <h3>🦾 reBot Arm</h3>
+            <h4> B601-DM Arm</h4>
+          <div className="card-container">
+              <a href="/rebot_b601_dm_getting_started/" className="content-card">
+                <span className="text">reBot B601-DM Getting Start</span>
+              </a>
+              <a href="/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot B601-DM with Pinocchio</span>
+              </a>
+              <a href="/rebot_arm_b601_dm_lerobot/" className="content-card">
+                <span className="text">reBot B601-DM with LeRobot</span>
+              </a>
+              <a href="/rebot_arm_b601_dm_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-DM with GraspNet Demo</span>
+              </a>
+              <a href="/rebot_arm_b601_dm_ros2_integration/" className="content-card">
+                <span className="text">reBot B601-DM wit ROS2</span>
+              </a>
+          </div>
+            <h4> B601-RS Arm</h4>
+          <div className="card-container">
+              <a href="/rebot_b601_rs_getting_started/" className="content-card">
+                <span className="text">reBot B601-RS Getting Start</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_lerobot/" className="content-card">
+                <span className="text">reBot B601-RS with LeRobot</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot B601-RS with Pinocchio</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-RS with GraspNet</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/rebot_arm_b601_rs_ros2_integration" className="content-card">
+                <span className="text">reBot B601-RS with ROS2 </span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="rebot_arm_b601_rs_isaacsim/" className="content-card">
+                <span className="text">reBot B601-RS Isaacsim Simulation</span>
+                <span className="tag recommended">New</span>
+              </a>  
+          </div>
+
+          <h3> 🤗 Reachy</h3>
+          <div className="card-container">
+              <a href="/reachymini_getting_started" className="content-card">
+                <span className="text">Reachy Mini Getting Started</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+
+          <h3>🤗 SO-Arm</h3>
+          <div className="card-container">
+              <a href="/lerobot_so100m_new/" className="content-card">
+                <span className="text">SO100/101 Arm</span>
+              </a>
+              <a href="/simulate_soarm101_by_leisaac/" className="content-card">
+                <span className="text">SO10x Arm with LeIsaac</span>
+              </a>
+              <a href="/control_robotic_arm_via_phospho/" className="content-card">
+                <span className="text">Phospho Lerobot</span>
+              </a>
+              <a href="/training_soarm101_policy_with_isaacLab/" className="content-card">
+                  <span className="text">So Arm RL Training</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
+                  <span className="text">SO101 with NVIDIA GR00T</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/lerobot_steering_gear_debugging_tool/" className="content-card">
+                  <span className="text">Steering Gear Debugging Tool</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/lerobot_double_arm_so_arm_training/" className="content-card">
+                  <span className="text">Complete Guide to Double-Arm SO-ARM Training</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/soarm_amazinghand_teleop/" className="content-card">
+                  <span className="text">Complete Training Guide for SO-ARM with AmazingHand</span>
+                  <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🚗 Lekiwi</h3>
+          <div className="card-container">
+              <a href="/lerobot_lekiwi/" className="content-card">
+                <span className="text">Lekiwi Mobile Base</span>
+              </a>
+              <a href="/sound_follow_robot/" className="content-card">
+                <span className="text">Lekiwi Sound Follow</span>
+              </a>
+          </div>
+
+          <h3>🦾 StarAI Arm</h3>
+          <div className="card-container">
+              <a href="/lerobot_starai_arm/" className="content-card">
+                <span className="text">StarAI Robotic Arm</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/starai_arm_ros_moveit/" className="content-card">
+                <span className="text">StarAI Arm MoveIt 2</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/control_robotic_arm_via_gr00t" className="content-card">
+                <span className="text">StarAI with NVIDIA GR00T</span>
+              </a>
+          </div>
+
+          <h3>🦿Legged Wheel</h3>
+          <div className="card-container">
+              <a href="/StackForce_Mini_Wheeled_Legged_Robot" className="content-card">
+                <span className="text">Mini Wheeled-Legged Robot</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🖐️ Hand</h3>
+          <div className="card-container">
+              <a href="/hand_amazinghand/" className="content-card">
+                <span className="text">AmazingHand</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🦀 End Effectors</h3>
+          <div className="card-container">
+              <a href="/dm_gripper/" className="content-card">
+                <span className="text">DM Gripper</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+        </div>
       </div>
       <p>All product cards are collapsed by default. Pick the kit in your hands, then expand the matching learning path.</p>
     </div>

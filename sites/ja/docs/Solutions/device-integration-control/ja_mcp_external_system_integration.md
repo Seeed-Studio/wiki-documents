@@ -22,7 +22,7 @@ tags:
   - mcp
   - agents
 createdAt: '2025-12-01'
-updatedAt: '2026-04-07'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/ja/mcp_external_system_integration/
 ---
 

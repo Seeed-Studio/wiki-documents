@@ -4,12 +4,12 @@ title: 'ESPHome クックブック: RTC、SD カード & マイク (reTerminal E
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
 sidebar_position: 5
-sidebar_label: 'ESPHome - RTC, SD & Microphone'
+sidebar_label: ESPHome - RTC, SD & Microphone
 last_update:
   date: 06/12/2026
   author: Citric
 createdAt: '2026-06-12'
-updatedAt: '2026-06-12'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone/
 ---
 

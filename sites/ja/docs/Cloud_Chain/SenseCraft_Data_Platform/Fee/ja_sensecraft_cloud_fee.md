@@ -12,7 +12,7 @@ last_update:
   date: 4/10/2026
   author: Janet
 createdAt: '2024-08-16'
-updatedAt: '2026-04-10'
+updatedAt: '2026-04-13'
 url: https://wiki.seeedstudio.com/ja/sensecraft-fee/sensecraft-cloud-fee/
 ---
 

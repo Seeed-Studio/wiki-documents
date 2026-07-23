@@ -9,16 +9,14 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 自由度
-# image:
 slug: /rebot_b601_dm_getting_started
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 last_update:
   date: 2026-04-13
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-04-13'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 ---
 
@@ -28,46 +26,11 @@ import CodeBlock from '@theme/CodeBlock';
 
 # reBot Arm B601-DM 快速入门
 
-<div className="rebot-page">
-
-<section className="doc-hero">
-  <div>
-    <span className="eyebrow">Seeed Studio Robotics Wiki</span>
-    <h2>从开箱、组装到校准，让 reBot Arm B601-DM 安全动起来</h2>
-    <p>
-      本指南将帮助您快速上手 reBot Arm B601-DM 机械臂，包括产品介绍、电源检查、机械结构组装、
-      电机 ID 与 Master ID 写入、零点校准、MotorBridge 软件配置，以及常见问题处理。
-    </p>
-    <div className="hero-actions">
-      <a href="#start-path">选择上手路线</a>
-      <a href="#power">检查电源</a>
-      <a href="#motorbridge">直接进入 MotorBridge</a>
-    </div>
-  </div>
-  <div className="hero-card">
-    <strong>推荐阅读方式</strong>
-    <span>成品套件用户：跳过机械组装和电机 ID 写入，直接从 Step 3 开始。</span>
-    <span>散件套件用户：请严格按照 Step 1 → Step 2 → Step 3 顺序完成。</span>
-    <span>推荐使用 Ubuntu 物理机控制机械臂，避免虚拟机 USB 映射和性能问题。</span>
-  </div>
-</section>
-
-<div className="safety-alert">
-  <div className="safety-alert-icon">⚠️</div>
-  <div className="safety-alert-content">
-    <strong>安全警告：运行前请清空机械臂工作空间</strong>
-    <p>
-      在运行任何会驱动机械臂运动的程序前，请务必清空机械臂工作空间 1 米范围内 
-      的贵重物品、易碎物品、工具、线缆和其他无关物体。调试和运行过程中，人员禁止靠近机械臂运动范围。
-    </p>
-    <ul>
-      <li>机械臂上电后，请勿用手触碰关节、电机、连杆、夹爪或末端工具。</li>
-      <li>运行校准、遥操作、IK 控制、轨迹控制、重力补偿、MoveIt、LeRobot 数据采集或视觉抓取 Demo 前，请确保机械臂已固定牢靠。</li>
-      <li>请保持至少 1 米安全距离，并确保周围人员了解机械臂可能突然运动。</li>
-      <li>如出现异常运动、异响、抖动、线缆松动、电源接触不良或通信中断，请立即停止程序并断电检查。</li>
-      <li>插拔电机线、CAN 线、USB2CAN / PCAN-USB、XT30 或电源接口前，必须先断开电源。</li>
-    </ul>
-  </div>
+  2. 选择我们开源的24V14.6AMeanWell电源外壳进行自组装，文字步骤和BOM在[github仓库](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/readme_zh.md/#%E5%85%B3%E4%BA%8E%E7%94%B5%E6%BA%90)中开源（只推荐有过相关电源组装经验的开发者使用）
+  组装参考视频：
+  
+  <div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116798867506587&bvid=BV1mLjm6xEzn&cid=39341657580&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
@@ -130,21 +93,107 @@ import CodeBlock from '@theme/CodeBlock';
   :::
 </section>
 
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116418964097678&bvid=BV1zPdzBEE1R&cid=37577427530&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-## 项目介绍
+## 第二步：写入电机ID及零点
 
-<section id="overview" className="section-card">
-  <div className="section-title">
-    <span>Overview</span>
-    <h2>项目介绍</h2>
-    <p>
-      reBot Arm 项目已经在 <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank">GitHub</a> 上开源。
-      本文将带领你快速入门 B601-DM，从组装到使用。
-    </p>
-  </div>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601" />
-</p>
+### AI AGNET
+
+:::tip
+该部分内容处于测试阶段，请在使用过程中注意安全操作，并且AI如果给出的提示与本文内容不符，请以本文为准，并向我们的工程师取得帮助
+:::
+
+尝试让AI AGENT来协助你完成这一过程,将下方提示词复制给你的 AI 助手
+
+```text
+
+请参考 AGENTS.md（https://github.com/Welt-liu/reBot-B601-RS-Skills/blob/main/zh/AGENTS.md）中的流程，帮助用户完成新机械臂的初始化。
+
+```
+
+### 电机复位前须知
+
+在进行电机参数配置前，请留意以下准备事项与安全规范：
+
+- 自备2个工装夹具（尺寸≥3英寸）以及一台24V 15A、XT30输出开关电源（请选用正规品牌产品，严禁使用劣质电源）。
+- 调试与操作过程中，请保持至少1米安全距离。
+- 禁止电机热插拔；插拔XT30 2+2接口前必须断开电源。
+- 禁止电机超载、超速运行；设备启动前检查线路接线与紧固件；请勿在潮湿、高温、多尘环境下使用。
+- 需设置合理的程序参数与急停功能，防止设备失控。
+- **请严格遵守以上规范。因违规操作、人为失误造成的一切风险与损失，卖家不承担任何责任。**
+
+### 准备清单
+
+#### 硬件设备
+
+- [reBot Arm B601 DM 机械臂 × 1](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
+- [USB-CAN 转接板 × 1](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
+- [信号电源隔离板 × 1](https://www.seeedstudio.com/XT30-2-2-Power-Separation-Board-p-6707.html)
+- 木工夹具 × 2
+- USB-C 数据线 × 1
+- [24V 15A 电源（XT30 输出）× 1](https://www.seeedstudio.com/AC-DC-Power-Adapter-IEC-60320-C14-XT30-Female-24V-4-5A-1200mm-L190-W92-5-H36mm-p-6764.html)
+- [美规电源线](https://www.seeedstudio.com/reServer-AC-US-p-5052.html) \ [欧规电源线](https://www.seeedstudio.com/reServer-AC-EU-p-5051.html)
+
+#### 电脑配置要求
+
+- 双系统个人电脑（Windows + Ubuntu / macOS）
+
+#### 所需软件
+
+- [软件下载链接](https://github.com/dmBots/motor-debugging-tool)
+
+#### 写入电机ID并测试使能
+
+按照表格中的参数设置各关节电机对应的 CAN ID 与 Master ID
+| 电机编号 | CAN ID | Master ID | 
+|:---|:---:|:---:|
+| 1号电机 | 0x01 | 0x11 |
+| 2号电机 | 0x02 | 0x12 |
+| 3号电机 | 0x03 | 0x13 |
+| 4号电机 | 0x04 | 0x14 |
+| 5号电机 | 0x05 | 0x15 |
+| 6号电机 | 0x06 | 0x16 |
+| 7号电机 | 0x07 | 0x17 |
+
+:::danger
+
+下面以1号电机作为操作示例，注意各关节电机的 CAN ID 与 Master ID 一定要根据上面的表格设置正确参数
+
+:::
+
+1、打开 DM_Tools 上位机软件，选择 USB 对应的 COM 串口号，波特率设置为 `921600` ，连接成功后 `串口` 界面会有信息打印。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_damiao_tool.png" />
+</div>
+
+
+2、使用 3pin 线将 1 号电机与 USB-CAN 转接板连接
+
+3、连接完成后进入 `参数设置界面`  ，点击 `读参数` 将 `CAN ID` 设置为 `0x01` ，`Master ID` 设置为 `0x11`
+
+4、设置完成后点击 `写参数` 完成参数写入
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_damiao_tool.png" />
+</div>
+
+:::tip
+左侧橙色框中的USB模式代表了当前参数设置页面读写电机参数时使用的方式
+:::
+
+5、进入到 `调试` 界面确保  `CAN ID` 与 `Master ID` 设置无误后点击 `电机使能` ，此时电机指示灯绿灯常亮进入使能状态，1号电机测试完成。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_damiao_tool.png" />
+</div>
+
+:::tip
 
   <p align="center">
     <a href="./LICENSE">
@@ -184,12 +233,9 @@ import CodeBlock from '@theme/CodeBlock';
 
 ## 电源检查
 
-<section id="power" className="section-card warning-section">
-  <div className="section-title">
-    <span>Before Power On</span>
-    <h2>关于电源：上电前必须检查</h2>
-    <p>机械臂在发货时并未配备电源 / 默认情况下不带电源。请使用正规品牌 24V 电源，并根据所在地区电压设置电源侧面拨码。</p>
-  </div>
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116440455775862&bvid=BV1r9d1BuESN&cid=37680973414&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
   :::danger
   切勿使用杂牌或不安全渠道购买的电源。若因电源选择不当造成风险，后果需由个人承担。插拔 XT30 或电机线之前必须断开电源。
@@ -263,10 +309,9 @@ import CodeBlock from '@theme/CodeBlock';
     <div><strong>安全操作</strong><span>组装过程中请注意夹手、砸伤风险，儿童需在家长或监护人陪同下完成。</span></div>
   </div>
 
-  <div className="callout warning">
-    <strong>防松螺丝提醒：</strong>
-    <p>正式出货螺丝涂了防松胶。若出现滑丝风险，请立刻更换螺丝或重新对准后再拧。防松螺丝滑丝后可能无法用滑丝取出器取出，严重时会报废整个零件。</p>
-  </div>
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116440455775355&bvid=BV1r9d1BuE6w&cid=37680974119&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
   :::tip
   提醒：组装视频中 5 号电机和 6 号电机之间的 D4 × 7 不需要进行安装，是视频介绍错误。如果您购买的是散件版本的 reBot Arm B601-DM，7 颗 D4 × 7 足够完成组装。
