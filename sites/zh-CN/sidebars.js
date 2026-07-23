@@ -2164,7 +2164,7 @@ const sidebars = {
           },
           items: [
             'Sensor/reSpeaker_clip/cn_respeaker_clip_getting_started',
-            'Sensor/reSpeaker_clip/cn_respeaker_clip_python_control',
+            'Sensor/reSpeaker_clip/cn_respeaker_clip_basic_sdk_guide',
           ],
         },
         {
