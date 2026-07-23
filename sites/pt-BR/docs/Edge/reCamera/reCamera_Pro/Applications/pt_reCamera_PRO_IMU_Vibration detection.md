@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_tilt_shake_detection/
 
 ## Introdução
 
-Este artigo explica como usar a unidade de medição inercial (IMU) de seis eixos integrada da reCamera Pro — o giroscópio ICM-42670-P — para implementar detecção de inclinação e agitação do dispositivo. Quando o dispositivo é inclinado ou agitado, o sistema reproduz avisos de voz correspondentes pelo alto-falante integrado. Por meio deste tutorial, você aprenderá como ler dados brutos do giroscópio via driver IIO do Linux, reproduzir sons de aviso usando o driver de áudio ALSA e, por fim, integrar um programa completo de detecção e alerta.
+Este artigo explica como usar a unidade de medição inercial (IMU) de seis eixos integrada da reCamera Pro — o giroscópio ICM-42670-P — para implementar a detecção de inclinação e agitação do dispositivo. Quando o dispositivo é inclinado ou agitado, o sistema reproduz avisos de voz correspondentes pelo alto-falante integrado. Por meio deste tutorial, você aprenderá como ler dados brutos do giroscópio via driver IIO do Linux, reproduzir sons de aviso usando o driver de áudio ALSA e, por fim, integrar um programa completo de detecção e alerta.
 
 ## Preparação de Hardware
 - uma reCamera Pro
@@ -55,7 +55,7 @@ Este artigo explica como usar a unidade de medição inercial (IMU) de seis eixo
 
 ## Princípio de Implementação
 
-Coletando dados brutos de velocidade angular do giroscópio integrado (ICM-42670-P), o sistema determina se o dispositivo foi inclinado ou agitado. A implementação atual usa uma lógica simples baseada em limiar, que pode ser otimizada posteriormente de acordo com os requisitos reais.
+Ao coletar dados brutos de velocidade angular do giroscópio integrado (ICM-42670-P), o sistema determina se o dispositivo foi inclinado ou agitado. A implementação atual usa uma lógica simples baseada em limiar, que pode ser otimizada posteriormente de acordo com os requisitos reais.
 
 ### Detecção de Agitação
 
@@ -89,7 +89,7 @@ O resultado da execução é mostrado abaixo:
 
 ## Uso do Alto-falante Integrado
 
-O alto-falante integrado da reCamera Pro é controlado via driver padrão ALSA do Linux. Você pode visualizar os dispositivos de placa de som atuais com o seguinte comando:
+O alto-falante integrado da reCamera Pro é controlado por meio do driver padrão ALSA do Linux. Você pode visualizar os dispositivos de placa de som atuais com o seguinte comando:
 
 ```bash
 aplay -l
@@ -111,7 +111,7 @@ ffmpeg -i test.mp3 test.wav
 ```
 :::
 
-## Código de Implementação Básico
+## Código de Implementação Básica
 
 Agora que entendemos como ler dados brutos do giroscópio e reproduzir áudio, vamos escrever o código para implementar toda a funcionalidade.
 
@@ -178,7 +178,7 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 ```
 
 :::note
-1. O programa realizará uma operação de calibração na primeira execução. Certifique-se de que o dispositivo esteja colocado de forma estável antes de executar `main.py`. Se for necessário recalibrar (a duração padrão da calibração é de 3 segundos), execute:
+1. O programa executará uma operação de calibração na primeira execução. Certifique-se de que o dispositivo esteja colocado de forma estável antes de executar `main.py`. Se for necessário recalibrar (a duração padrão da calibração é de 3 segundos), execute:
 
 ```bash
 ./main.py --force-calib

@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/es/recamera_pro_imu_tilt_shake_detection/
 
 ## Introducción
 
-Este artículo explica cómo utilizar la unidad de medición inercial (IMU) de seis ejes integrada en la reCamera Pro — el giroscopio ICM-42670-P — para implementar la detección de inclinación y sacudidas del dispositivo. Cuando el dispositivo se inclina o se sacude, el sistema reproducirá los avisos de voz correspondientes a través del altavoz integrado. A través de este tutorial, aprenderás cómo leer datos brutos del giroscopio mediante el controlador IIO de Linux, reproducir sonidos de advertencia usando el controlador de audio ALSA e integrar finalmente un programa completo de detección y alerta.
+Este artículo explica cómo utilizar la unidad de medición inercial (IMU) de seis ejes integrada en la reCamera Pro — el giroscopio ICM-42670-P — para implementar la detección de inclinación y sacudidas del dispositivo. Cuando el dispositivo se inclina o se sacude, el sistema reproducirá avisos de voz correspondientes a través del altavoz integrado. A través de este tutorial, aprenderás cómo leer datos brutos del giroscopio mediante el controlador IIO de Linux, reproducir sonidos de advertencia usando el controlador de audio ALSA y, en última instancia, integrar un programa completo de detección y alerta.
 
 ## Preparación de hardware
 - una reCamera Pro
@@ -111,7 +111,7 @@ ffmpeg -i test.mp3 test.wav
 ```
 :::
 
-## Código de implementación básico
+## Código de implementación básica
 
 Ahora que entendemos cómo leer datos brutos del giroscopio y reproducir audio, escribamos el código para implementar toda la funcionalidad.
 
@@ -137,7 +137,7 @@ print(f"Gyroscope X: {gyro_x:.6f} rad/s")
 
 ### Reproducción de audio
 
-Cuando el dispositivo desencadena una inclinación o una sacudida, es necesario reproducir un aviso de voz correspondiente. El siguiente código muestra cómo reproducir audio usando Python:
+Cuando el dispositivo detecta una inclinación o una sacudida, es necesario reproducir un aviso de voz correspondiente. El siguiente código muestra cómo reproducir audio usando Python:
 
 ```python
 #!/usr/bin/env python3
@@ -154,8 +154,8 @@ subprocess.run([
 
 ### Código de implementación final
 
-- Cuando el dispositivo se sacude, reproducirá **"Advertencia: No sacuda el dispositivo"**.
-- Cuando el dispositivo se inclina, reproducirá **"Advertencia: El equipo se ha volcado. Por favor, compruebe inmediatamente el estado del equipo para evitar cualquier accidente"**.
+- Cuando el dispositivo se sacude, reproducirá **"Warning: Do not shake the device"**.
+- Cuando el dispositivo se inclina, reproducirá **"Warning: The equipment has toppled over. Please immediately check the equipment status to prevent any accidents"**.
 
 El código correspondiente se puede descargar desde [reCamera_PRO_IMU_Detect](https://drive.google.com/drive/folders/1-3RTc0urrzMJVWGHqnLKwSMuZavLV9O0?usp=drive_link).
 
@@ -194,8 +194,8 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 ## Solución de problemas
 
 - **No se pueden leer los datos del giroscopio**: Verifica que la ruta `/sys/bus/iio/devices/iio:device1` exista y que el archivo `in_anglvel_x_raw` sea legible. Si la ruta no existe, es posible que el controlador IIO no esté cargado; comprueba los módulos del kernel.
-- **Fallo en la reproducción de audio**: Confirma que el archivo de audio esté en formato WAV y que el comando `aplay` esté disponible. Si el altavoz no emite sonido, comprueba la configuración de volumen de ALSA.
-- **Fallo en la calibración**: Asegúrate de que el dispositivo esté inmóvil y nivelado durante la calibración. Si el tiempo de calibración es insuficiente, utiliza `--force-calib` para recalibrar.
+- **Fallo en la reproducción de audio**: Confirma que el archivo de audio esté en formato WAV y que el comando `aplay` esté disponible. Si el altavoz no emite sonido, revisa la configuración de volumen de ALSA.
+- **Fallo en la calibración**: Asegúrate de que el dispositivo esté inmóvil y nivelado durante la calibración. Si el tiempo de calibración no es suficiente, utiliza `--force-calib` para recalibrar.
 
 
 ## Soporte técnico y debate sobre el producto

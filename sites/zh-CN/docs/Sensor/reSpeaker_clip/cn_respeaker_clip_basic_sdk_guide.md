@@ -1,5 +1,5 @@
 ---
-description: reSpeaker Clip Basic SDK 的系统化指南——传输方式、通信协议、录音状态机、文件模型、端到端数据流，以及作为主要参考实现的 Python SDK（包含 CLI 和 Web 工具）。
+description: reSpeaker Clip Basic SDK 的系统化指南——传输方式、通信协议、录音状态机、文件模型、端到端数据流，以及以 Python SDK 为主的参考实现（包含 CLI 和 Web 工具）。
 title: reSpeaker Clip Basic SDK 指南
 keywords:
   - reSpeaker clip
@@ -22,24 +22,24 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_basic_sdk_guide/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg" alt="reSpeaker Clip" width={800} height="auto" /></p>
 
-> 版本：与 `clip` 包 `__version__ = 1.0.0` 匹配  
+> 版本：与 `clip` 包 `__version__ = 1.0.0` 保持一致  
 > 产品：reSpeaker Clip 可穿戴录音设备
 
 ## 概述
 
-reSpeaker Clip Basic SDK 指南解释了主机端应用如何通过 BLE、Wi-Fi、AT 命令、GATT 和文件传输工作流与设备通信并控制设备。Python SDK 作为主要参考实现提供，同时配有 CLI 和基于 Web 的工具。
+reSpeaker Clip Basic SDK 指南解释了主机端应用如何通过 BLE、Wi-Fi、AT 命令、GATT 和文件传输工作流与设备通信并进行控制。Python SDK 作为主要参考实现，同时提供 CLI 和基于 Web 的工具。
 
 本指南涵盖：
 
 - **传输方式** —— BLE 和 Wi-Fi/UDP 通信通道。
 - **通信协议** —— AT 命令、GATT 特征值以及文件传输帧格式。
 - **录音模型** —— 录音模式、设备状态机和文件格式。
-- **端到端数据流** —— 从连接到下载音频输出的全过程。
+- **端到端数据流** —— 从连接到下载音频输出的完整流程。
 - **参考实现** —— Python SDK（`clip` 包）、CLI 工具和 Web 界面。
 
-Basic SDK 侧重于从主机端使用设备当前的能力。它本身不包含云端转写、AI 总结、账号管理或移动应用服务。这些工作流应基于已下载的音频文件构建，或与其他服务集成。若要修改设备端行为、协议、音频处理或固件内部实现，请参考[固件 SDK 文档](#basic-sdk-和-firmware-sdk)。
+Basic SDK 重点在于从主机端使用设备当前具备的能力。它本身不包含云端转写、AI 总结、账号管理或移动应用服务。这些工作流应基于已下载的音频文件构建，或与其他服务集成。若要修改设备端行为、协议、音频处理或固件内部实现，请参考[固件 SDK 文档](#basic-sdk-和-firmware-sdk)。
 
-## 本指南的定位
+## 本指南所处的位置
 
 如果你是第一次接触 reSpeaker Clip，请先阅读 [reSpeaker Clip 入门指南](/cn/respeaker_clip)。
 
@@ -140,11 +140,11 @@ Python SDK 支持以下工作流：
 - **配置设备**：录音模式、比特率、复杂度、自动删除策略、OLED 亮度、BLE 设备名及相关设置。
 - **控制录音**：开始、停止、暂停、恢复以及添加书签。
 - **管理会话**：列出、查询、删除、清理以及格式化 SD 卡。
-- **下载文件**：通过 BLE 或 Wi-Fi/UDP 传输录音，支持断点续传。
-- **转换音频**：将设备原始 Opus 数据重新封装为 OGG/Opus，或通过 Opus 解码路径解码为 16 kHz 单声道 WAV。
+- **下载文件**：通过 BLE 或 Wi-Fi/UDP 传输录音，并支持断点续传。
+- **转换音频**：将设备的原始 Opus 数据重新封装为 OGG/Opus，或通过 Opus 解码路径解码为 16 kHz 单声道 WAV。
 - **读取状态和事件**：电池电量、充电状态、设备状态、状态机变化以及实时音频可视化回调。
 
-传输方式的选择很重要：
+传输方式的选择非常重要：
 
 - 通过 `ClipDevice` 使用 BLE 进行便携式配置、录音控制和小文件下载。
 - 通过 `WiFiDevice` 或 `WiFiSync` 使用 Wi-Fi/UDP 进行批量下载。对于大型录音会话，它更快且更稳定。
@@ -157,13 +157,13 @@ Python SDK 支持以下工作流：
 | Transport | Class | Use case | Notes |
 | --- | --- | --- | --- |
 | BLE | `ClipDevice` | 配置、录音控制、会话下载 | 便携且录音控制必需。批量下载可能较慢，并且在高负载下可能丢失通知。 |
-| Wi-Fi/UDP | `WiFiDevice` / `WiFiSync` | 批量会话下载 | 对于大文件更快且更稳定。需要在设备上启用 Wi-Fi 并连接到 `ClipAP_XXXX`。 |
+| Wi-Fi/UDP | `WiFiDevice` / `WiFiSync` | 批量会话下载 | 对于大文件更快、更稳定。需要在设备上启用 Wi-Fi 并连接到 `ClipAP_XXXX`。 |
 
 ### 录音模式
 
 | Mode | Description |
 | --- | --- |
-| `normal` | 标准录音路径，不启用 SpeexDSP 降噪/去混响。设备 AGC、高通和限幅器可能仍由固件启用。 |
+| `normal` | 标准录音路径，不启用 SpeexDSP 降噪/去混响。设备 AGC、高通和限幅器仍可能由固件启用。 |
 | `enhanced` | 启用 SpeexDSP 降噪和去混响的增强路径。 |
 
 `set_mode()` 只接受 `normal` 和 `enhanced`。`start_recording()` 还接受别名 `stereo` 和 `merge`；`stereo` 映射到 `normal`，`merge` 映射到 `enhanced`。
@@ -172,7 +172,7 @@ Python SDK 支持以下工作流：
 
 ### 设备状态
 
-一次录音被表示为一个会话。会话 ID 通常是一个类似时间戳的字符串，例如 `YYYYMMDDHHMMSS`。
+一次录音被表示为一个会话。会话 ID 通常是一个时间戳风格的字符串，例如 `YYYYMMDDHHMMSS`。
 
 ```text
 IDLE --start_recording--> RECORDING --stop_recording--> IDLE
@@ -184,11 +184,11 @@ IDLE --start_recording--> RECORDING --stop_recording--> IDLE
 
 常见的设备状态包括 `IDLE`、`RECORDING`、`TRANSMITTING`、`PAUSED` 和 `ERROR`。
 
-在连接时，SDK 可以通过 `AT+TIME` 同步设备时钟。设备时区可能仍然与主机时区不同。
+在连接时，SDK 可以通过 `AT+TIME` 同步设备时钟。设备时区仍可能与主机时区不同。
 
 ### 文件格式
 
-设备将录音数据存储为原始 Opus 帧，而不是 OGG 容器。原始格式是一个长度前缀的 Opus 帧序列：
+设备将录音数据存储为原始 Opus 帧，而不是 OGG 容器。原始格式是由长度前缀的 Opus 帧序列组成：
 
 ```text
 [2-byte little-endian length][opus frame][2-byte little-endian length][opus frame]...
@@ -214,7 +214,7 @@ IDLE --start_recording--> RECORDING --stop_recording--> IDLE
 
 ### 文件传输协议
 
-文件数据以二进制帧的形式在 `FILE_DATA` 上传输。
+文件数据以二进制帧的形式在 `FILE_DATA` 上发送。
 
 | Frame | Type | Layout |
 | --- | --- | --- |
@@ -227,7 +227,7 @@ IDLE --start_recording--> RECORDING --stop_recording--> IDLE
 
 ### 断点续传
 
-`SessionSync.sync()` 具备断点续传能力。它可以检测已有的本地 `.opus` 文件，查询设备的已同步文件计数器，计算 `start_file`，并继续之前的下载。使用 `force=True` 可从头开始。
+`SessionSync.sync()` 具备断点续传能力。它可以检测已有的本地 `.opus` 文件，查询设备的已同步文件计数，计算 `start_file`，并继续之前的下载。使用 `force=True` 可从头开始。
 
 ### 数据流
 
@@ -235,7 +235,7 @@ IDLE --start_recording--> RECORDING --stop_recording--> IDLE
 
 ## 基础 SDK 和固件 SDK
 
-reSpeaker Clip SDK 被划分为两层：
+reSpeaker Clip SDK 被拆分为两层：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_basic_firmware.png" alt="Basic SDK vs Firmware SDK" width={900} height="auto" /></p>
 
@@ -260,7 +260,7 @@ reSpeaker Clip SDK 被划分为两层：
 2. 检查电池电量
 3. 将录音模式设置为增强
 4. 开始一次 10 秒录音
-5. 在录音过程中添加书签
+5. 在录音中途添加书签
 6. 停止录音
 7. 将会话文件同步到 `recordings/<session_id>/`
 
@@ -419,7 +419,7 @@ session_id = await cmds.start_recording("normal")   # returns str (session ID)
 await cmds.stop_recording()                          # returns dict with session info
 ```
 
-> `"normal"` 为单声道，`"enhanced"` 启用 DSP 预处理（降噪、AGC）。
+> `"normal"` 为单声道，`"enhanced"` 启用 DSP 预处理（噪声抑制、AGC）。
 
 #### 暂停 / 恢复录音
 
@@ -477,7 +477,7 @@ await sync.sync(
 )
 ```
 
-#### 同步后保留设备上的文件
+#### 同步后在设备上保留文件
 
 ```python
 await sync.sync(
@@ -528,12 +528,12 @@ await cmds.set_config_dict({
 
 ### WiFi 通信
 
-当 Clip 的 AP 启用时，可以通过 WiFi UDP 进行通信。
+当 Clip 的 AP 被启用时，可以通过 WiFi UDP 进行通信。
 
 | 参数 | 值           |
 |-----------|-----------------|
 | SSID      | `ClipAP_XXXX`   |
-| Password  | `12345678`（默认） |
+| Password  | `12345678` (默认) |
 | IP        | `192.168.4.1`   |
 | Port      | `8089`          |
 
@@ -594,7 +594,7 @@ SDK 包含多个开箱即用的实用工具。
 
 #### BLE（默认）
 
-通用命令行工具。
+通用 CLI。
 
 ```bash
 tools/clip-cli.py status
@@ -635,14 +635,14 @@ tools/clip-cli.py sync --session 20260326120000 --delete
 ```
 预期输出
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="设备连接" width={800} height="auto"/></p>
 
 ```bash
 tools/clip-cli.py config get
 ```
 预期输出
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="设备连接" width={800} height="auto"/></p>
 
 ```bash
 tools/clip-cli.py bookmark
@@ -654,7 +654,7 @@ tools/clip-cli.py terminal
 
 预期输出
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/terminal.png" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/terminal.png" alt="设备连接" width={800} height="auto"/></p>
 
 #### WiFi
 
@@ -663,7 +663,7 @@ tools/clip-cli.py terminal
 ```
 预期输出
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-on.png" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-on.png" alt="设备连接" width={800} height="auto"/></p>
 
 
 ```bash
@@ -671,7 +671,7 @@ tools/clip-cli.py --transport wifi status
 ```
 预期输出
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-status.png" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-status.png" alt="设备连接" width={800} height="auto"/></p>
 
 
 
@@ -680,7 +680,7 @@ tools/clip-cli.py  wifi off
 ```
 预期输出
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-off.png" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-off.png" alt="设备连接" width={800} height="auto"/></p>
 
 
 
@@ -698,7 +698,7 @@ python tools/record.py --mode enhanced
 ```
 预期输出
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="设备连接" width={800} height="auto"/></p>
 
 ### sync.py
 
@@ -711,7 +711,7 @@ python tools/sync.py --all-sessions
 ```
 预期输出
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="设备连接" width={800} height="auto"/></p>
 
 ### udp_sync.py
 
@@ -725,7 +725,7 @@ python tools/udp_sync.py --session 20260326120000
 
 预期输出
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="设备连接" width={800} height="auto"/></p>
 
 ### ble_terminal.py
 
@@ -736,7 +736,7 @@ python tools/ble_terminal.py
 ```
 预期输出
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/ble_terminal.png" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/ble_terminal.png" alt="设备连接" width={800} height="auto"/></p>
 
 ### decode_opus.py
 
@@ -781,7 +781,7 @@ http://localhost:5000
 
 ### REST API
 
-| Method | Endpoint |
+| 方法 | 端点 |
 | --- | --- |
 | GET | `/api/status` |
 | GET | `/api/version` |
@@ -797,11 +797,11 @@ http://localhost:5000
 
 ## 核心模块
 
-| Module | Main purpose |
+| 模块 | 主要用途 |
 | --- | --- |
 | `ClipDevice` | BLE 连接、配对、AT 命令传输、通知和传输进度 |
 | `ClipCommands` | 设备 AT 命令的高级封装 |
-| `FileTransfer` / `SessionSync` | 通过 BLE 下载会话并支持断点续传的同步 |
+| `FileTransfer` / `SessionSync` | 通过 BLE 下载会话以及支持断点续传的同步 |
 | `WiFiDevice` / `WiFiSync` | 适用于大体积传输的 Wi-Fi/UDP 下载流程 |
 | `codec` | 原始 Opus 帧解析和 OGG/Opus 写入 |
 | `utils` | 会话 ID 解析、格式化辅助函数、配置加载、进度报告和文件工具 |
@@ -813,7 +813,7 @@ http://localhost:5000
 
 ***BLE 设备通信与连接管理。***
 
-| Signature | Returns | Notes |
+| 签名 | 返回值 | 说明 |
 |-----------|---------|-------|
 | `ClipDevice(address=None, name_filter="Clip", debug=False)` | `ClipDevice` | 当 `address` 为 `None` 时自动发现 |
 | `await connect(timeout=10.0, sync_time=True, lazy_device_name=False)` | `None` | 重试 3 次；`sync_time` 自动设置设备时钟 |
@@ -827,22 +827,22 @@ http://localhost:5000
 
 ***高级 AT 命令接口。***
 
-| Signature | Returns | Notes |
+| 签名 | 返回值 | 说明 |
 |-----------|---------|-------|
 | `await get_version()` | `VersionInfo` | `.firmware`、`.hardware`、`.sdk`、`.build` |
 | `await get_state()` | `DeviceState` | `.state`、`.battery`、`.mode`、`.bitrate`、`.charging`、`.free_space` |
 | `await get_time()` | `int` | Unix 时间戳 |
 | `await set_time(timestamp)` | `bool` | 转换为 `AT+TIME=<ts>` |
-| `await get_pairing_status()` | `Dict[str, Any]` | BLE 配对状态和对端地址 |
+| `await get_pairing_status()` | `Dict[str, Any]` | BLE 配对状态 + 对端地址 |
 | `await reboot()` | `None` | 设备重启 |
 | **录音** | | |
 | `await start_recording(mode="normal")` | `str` | `mode`：normal、enhanced、stereo、merge。返回会话 ID。 |
-| `await stop_recording()` | `Dict[str, Any]` | 会话摘要；在设备未录音时也能优雅处理 |
+| `await stop_recording()` | `Dict[str, Any]` | 会话摘要；在设备未录音时也能正常处理 |
 | `await pause_recording()` | `bool` | |
 | `await resume_recording()` | `bool` | |
 | `await add_bookmark()` | `BookmarkInfo` | `.offset` 为自会话开始起的秒数 |
 | `await get_bookmarks(session_id, fetch_all=True)` | `List[BookmarkInfo]` | 分页，自动获取所有页 |
-| `await get_bookmarks_count(session_id)` | `int` | 快速计数，无详细信息 |
+| `await get_bookmarks_count(session_id)` | `int` | 快速计数，不含详情 |
 | **会话** | | |
 | `await list_sessions(page=1, per_page=10)` | `List[SessionInfo]` | `.id`、`.files`、`.size`、`.synced_files`、`.mode` |
 | `await list_all_sessions(per_page=15)` | `List[SessionInfo]` | 自动分页获取全部 |
@@ -874,14 +874,14 @@ http://localhost:5000
 | `await resume_transfer()` | `bool` | |
 | `await cancel_transfer()` | `bool` | |
 | **WiFi / USB** | | |
-| `await wifi_on()` | `bool` | nRF7002 初始化超时时间超过 20 秒 |
+| `await wifi_on()` | `bool` | 为 nRF7002 初始化预留 20+ 秒超时 |
 | `await wifi_off()` | `bool` | |
 | `await get_wifi_status()` | `Dict[str, Any]` | `.running`、`.ssid`、`.clients` |
 | `await usb_on()` | `bool` | CDC + MSC |
 | `await usb_off()` | `bool` | |
 | `await get_usb_status()` | `bool` | |
 | **辅助函数** | | |
-| `await ensure_idle()` | `None` | 如有需要会停止录音；最多重试 5 次 |
+| `await ensure_idle()` | `None` | 如有需要则停止录音；最多重试 5 次 |
 | `await wait_for_state(target, timeout=10.0)` | `bool` | 轮询直到状态匹配 |
 | `await wait_for_recording_to_start(timeout=5.0)` | `bool` | |
 | `await wait_for_recording_to_stop(timeout=5.0)` | `bool` | |
@@ -891,7 +891,7 @@ http://localhost:5000
 
 ***支持断点续传的 BLE 文件同步。***
 
-| Signature | Returns | Notes |
+| 签名 | 返回值 | 说明 |
 |-----------|---------|-------|
 | `SessionSync(device, commands=None)` | `SessionSync` | 扩展自 `FileTransfer` |
 | `await sync(session_id, output_dir, delete_after=False, continuous=False, force=False, progress_callback=None, session_info=None, start_file=None)` | `Dict[str, Any]` | 自动检测断点续传；返回 `file_count`、`total_size`、`files`、`merged_file` |
@@ -903,7 +903,7 @@ http://localhost:5000
 
 ***WiFi UDP 传输（异步）——兼容 `ClipDevice.send_command`。***
 
-| Signature | Returns | Notes |
+| 签名 | 返回值 | 说明 |
 |-----------|---------|-------|
 | `WiFiDevice(host="192.168.4.1", port=8089, timeout=10.0)` | `WiFiDevice` | |
 | `await connect(timeout=None)` | `None` | 启动接收和心跳工作线程 |
@@ -914,7 +914,7 @@ http://localhost:5000
 
 ### WiFiSync
 
-***WiFi UDP 文件同步（阻塞/同步——不需要异步）。***
+***WiFi UDP 文件同步（阻塞/同步——无需异步）。***
 
 | 签名 | 返回值 | 说明 |
 |-----------|---------|-------|
@@ -945,34 +945,34 @@ http://localhost:5000
 ## 故障排查
 
 **Q1：连接后命令挂起或超时。**  
-命令特征需要加密的 BLE 链路。SDK 可以发起配对，但操作系统可能会弹出蓝牙配对或授权对话框。请手动确认。如果连接仍然卡住，请删除陈旧的绑定记录并重新连接。
+命令特征需要加密的 BLE 链路。SDK 可以发起配对，但操作系统可能会弹出蓝牙配对或授权对话框。请手动确认。如果连接仍然卡住，请删除陈旧的绑定并重新连接。
 
-**Q2：下载报告 CRC 不匹配或文件数为 0。**  
-在高负载下，BLE 协议栈有时会重复发送通知或丢帧。请断开连接、重新连接并重试。使用 `SessionSync`，这样传输可以在可能的情况下从中断处恢复。
+**Q2：下载报告 CRC 不匹配或文件数为零。**  
+在高负载下，BLE 协议栈有时会重复发送通知或丢帧。断开连接，重新连接并重试。使用 `SessionSync`，这样传输可以在可能的情况下从中断处恢复。
 
 **Q3：下载速度很慢或中途掉线。**  
 使用 `SessionSync` 进行支持恢复的 BLE 传输。对于大量录音数据，请通过 `WiFiSync` 使用 Wi-Fi 下载：在 Clip 上启用 Wi-Fi，连接到 `ClipAP_XXXX`，然后通过 Wi-Fi 下载。
 
 **Q4：`delete_after=True` 删除了一个未完全下载的会话。**  
-请使用更安全的模式：`sync(force=True, delete_after=False)`，确认本地 `merged_file` 存在且非空，然后手动调用 `cmds.delete_session(session_id)`。
+使用更安全的模式：`sync(force=True, delete_after=False)`，确认本地 `merged_file` 已存在且非空，然后手动调用 `cmds.delete_session(session_id)`。
 
 **Q5：`AT+NOISE`、`AT+DEREVERB` 或 `AT+AGC` 返回 `Unknown command`。**  
-当前固件可能没有注册这些可选命令。SDK 保留了与兼容固件版本对应的封装。如果在恢复配置时遇到这种情况，可以使用 `set_config_dict(..., ignore_errors=True)` 跳过不受支持的值。
+当前固件可能没有注册这些可选命令。SDK 保留了与兼容固件版本对应的封装。如果在恢复配置，`set_config_dict(..., ignore_errors=True)` 可以跳过不支持的配置项。
 
 **Q6：`bleak` 抛出 `'BleakClient' object has no attribute 'get_services'` 或 `'get_mtu'` 等错误。**  
 不同版本的 `bleak` API 存在差异。请在安装包发布后使用 SDK 测试过的依赖集合。
 
 **Q7：录音没有声音或音质较差。**  
-检查麦克风距离和朝向、电池电量以及录音模式。`enhanced` 模式可以更强力地抑制噪声，这可能会对非常干净的语音过度处理。
+检查麦克风距离和朝向、电池电量以及录音模式。`enhanced` 模式可以更强地抑制噪声，可能会对非常干净的语音过度处理。
 
 **Q8：会话 ID 的时间戳与本地时间不匹配。**  
 设备时钟或时区可能与主机不同。SDK 可以在连接时同步时间。你也可以调用 `await cmds.set_time(int(time.time()))`。
 
 **Q9：如何将 Opus 转换为 WAV 以用于 STT 或 ML？**  
-使用 `convert_to_ogg_opus()` 生成 OGG/Opus 输出。对于 WAV，请使用诸如 `opuslib` 之类的 Opus 解码器对原始 Opus 流进行解码。
+使用 `convert_to_ogg_opus()` 生成 OGG/Opus 输出。对于 WAV，请使用 `opuslib` 等 Opus 解码器对原始 Opus 流进行解码。
 
 **Q10：录音时日志被音频可视化事件刷屏。**  
-`AUDIO_VIS` 通知会频繁触发。仅在需要时注册音频可视化回调，并保持回调逻辑尽可能轻量。
+`AUDIO_VIS` 通知触发非常频繁。仅在需要时注册音频可视化回调，并保持回调逻辑尽量轻量。
 
 ## 技术支持与产品讨论
 
