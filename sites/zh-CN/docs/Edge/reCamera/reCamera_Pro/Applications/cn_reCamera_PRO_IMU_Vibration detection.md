@@ -28,11 +28,12 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection/
 
 ## 介绍
 
-本文介绍如何使用 reCamera Pro 板载的六轴惯性测量单元（IMU）——ICM-42670-P 陀螺仪——来实现设备倾斜与晃动检测。当设备发生倾斜或晃动时，系统会通过板载扬声器播放相应的语音警告。通过本教程，你将学习如何通过 Linux IIO 驱动读取原始陀螺仪数据、使用 ALSA 音频驱动播放警告音，并最终整合出一个完整的检测与告警程序。
+本文介绍如何使用 reCamera Pro 板载的六轴惯性测量单元（IMU）——ICM-42670-P 陀螺仪——来实现设备的倾斜与晃动检测。当设备发生倾斜或晃动时，系统会通过板载扬声器播放相应的语音警告。通过本教程，你将学习如何通过 Linux IIO 驱动读取原始陀螺仪数据，如何使用 ALSA 音频驱动播放警告音，并最终整合出一个完整的检测与告警程序。
 
 ## 硬件准备
 - 一台 reCamera Pro
 
+<div align="center">
 <table align="center">
  <tr>
   <th>reCamera Pro</th>
@@ -43,11 +44,12 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection/
  <tr>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-Pro-2GB.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Buy Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
    </a>
   </div></td>
  </tr>
 </table>
+</div>
 
 
 
@@ -111,11 +113,11 @@ ffmpeg -i test.mp3 test.wav
 
 ## 基础实现代码
 
-在了解了如何读取原始陀螺仪数据和播放音频之后，我们来编写代码实现完整功能。
+在了解了如何读取原始陀螺仪数据以及播放音频之后，我们开始编写代码来实现完整功能。
 
 ### 陀螺仪数据采集
 
-下面是一个最小函数示例，演示如何采集 X 轴陀螺仪数据。你可以在此基础上扩展以获取其他轴的数据。
+下面是一个最小函数示例，用于演示如何采集 X 轴陀螺仪数据。你可以在此基础上扩展以获取其他轴的数据。
 
 ```python
 #!/usr/bin/env python3
@@ -135,7 +137,7 @@ print(f"Gyroscope X: {gyro_x:.6f} rad/s")
 
 ### 音频播放
 
-当设备触发倾斜或晃动时，需要播放相应的语音警告。下面的代码演示如何使用 Python 播放音频：
+当设备触发倾斜或晃动时，需要播放相应的语音警告。下面的代码演示了如何使用 Python 播放音频：
 
 ```python
 #!/usr/bin/env python3
@@ -153,7 +155,7 @@ subprocess.run([
 ### 最终实现代码
 
 - 当设备被晃动时，将播放 **“警告：请勿晃动设备”**。
-- 当设备发生倾倒时，将播放 **“警告：设备已倾倒。请立即检查设备状态以防止发生意外”**。
+- 当设备发生倾斜时，将播放 **“警告：设备已倾倒。请立即检查设备状态以防止发生意外”**。
 
 相关代码可从 [reCamera_PRO_IMU_Detect](https://drive.google.com/drive/folders/1-3RTc0urrzMJVWGHqnLKwSMuZavLV9O0?usp=drive_link) 下载。
 
