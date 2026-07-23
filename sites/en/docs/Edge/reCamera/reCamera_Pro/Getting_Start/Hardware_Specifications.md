@@ -31,11 +31,21 @@ url: https://wiki.seeedstudio.com/recamera_pro_hardware_specifications/
 | Audio Input | Electret microphone x2 |
 | Power Supply | Supports 7.4V lithium battery charge & discharge management, DC input (12V~24V, 5525 barrel connector), PoE power supply |
 | Network & Wireless Connectivity | Wi-Fi 5.2, Bluetooth 5.2, 1000Mbps Ethernet |
-| Interfaces | Full-function Type-C (OTG), Debug UART, CAN ×2, 22PIN MIPI DSI, GPIO ×2, 12–24V digital IO ×2 |
+| Interfaces | Full-function Type-C (OTG), Debug UART, CAN ×2, 22PIN MIPI DSI, GPIO ×2 |
 
 # Hardware Interface Diagram
-![Hardware Interface Diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
 
+## back view
+![Hardware Interface Diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
+![Expansion CONN](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Expansion_CON.jpg)
+![Debug UART](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Debug_Uart.jpg)
+
+## side view
+![Side View](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Side.png)
+
+
+## front view
+![Front View](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Front_cover.png)
 
 ## Technical Support and Product Discussion
 
