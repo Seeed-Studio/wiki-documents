@@ -205,6 +205,12 @@ Reference document:
 - User manual on top with an additional foam layer
 - Packaging style similar to the mini J501 carrier board
 
+## Hardware Interfaces Usage
+
+:::info
+If you want to learn more about the detailed specifications and usage of the hardware interfaces, please refer to [this wiki](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j601_interfaces_usage/).
+:::
+
 ## Resources
 
 - Detailed hardware layout: TBD
