@@ -1,6 +1,6 @@
 ---
-description: 面向 Seeed Jetson 全系列开发板的跨平台（Windows/Linux/macOS）调试指南，涵盖串口调试、启动日志分析、系统监控以及刷机/恢复。
-title: Seeed Jetson 跨平台调试指南
+description: 面向 Seeed Studio Jetson 载板的跨平台（Windows/Linux/macOS）串口调试指南，涵盖串口调试、系统监控以及刷机/恢复。
+title: Seeed Jetson 串口调试指南
 keywords:
   - jetson
   - debug
@@ -10,11 +10,11 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /jetson_debug_guide
 last_update:
-  date: 03/19/2026
-  author: Seeed Studio
+  date: 07/23/2026
+  author: Zuhao
 createdAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/cn/jetson_debug_guide/
-updatedAt: '2026-03-20'
+updatedAt: '2026-07-23'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -26,36 +26,16 @@ import TabItem from '@theme/TabItem';
   <div style={{padding: '2.5rem 1.5rem', borderRadius: '18px', background: 'radial-gradient(900px circle at 85% 25%, rgba(141,194,21,0.35), transparent 55%), radial-gradient(900px circle at 15% 20%, rgba(0,58,74,0.28), transparent 60%), linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)), var(--ifm-background-surface-color)', border: '1px solid rgba(141,194,21,0.35)', boxShadow: '0 18px 44px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.06) inset', textAlign: 'center'}}>
     <h1 style={{margin: 0, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', lineHeight: 1.1}}>
       <span style={{fontSize: '2.2rem', filter: 'drop-shadow(0 6px 14px rgba(141,194,21,0.35))'}}>🔧</span>
-      <span style={{fontSize: '2.2rem', fontWeight: 800}}>Jetson 跨平台调试指南</span>
+      <span style={{fontSize: '2.2rem', fontWeight: 800}}>Jetson 串口调试指南</span>
     </h1>
     <p style={{margin: '0.75rem auto 0', maxWidth: '60ch', fontSize: '1.05rem', color: 'var(--ifm-font-color-base)', opacity: 0.92}}>
-      面向 Seeed Studio 全系列 Jetson 载板，覆盖 Windows / Linux / macOS 平台，<br/>
-      从串口调试到系统监控，一站式解决黑屏、无法启动、刷机异常等核心问题。
+      面向 Seeed Studio Jetson 载板，覆盖 Windows / Linux / macOS 平台，<br/>
+      从串口调试到系统监控，协助解决黑屏、无法启动、刷机异常等核心问题。
     </p>
   </div>
 </div>
 
-## 🎯 文档概览
-
-本指南专为 **Seeed Jetson 全系列载板** 设计，结合 NVIDIA 官方调试规范与 Seeed 硬件特性，提供统一的跨平台调试方案。
-
-覆盖范围：**串口调试** · **启动日志分析** · **系统监控** · **硬件级追踪** · **刷机与恢复**
-
-:::info 支持的硬件
-reComputer Super / Classic / Mini / Robotics · reComputer Industrial · reServer Industrial · J501 系列
-:::
-
-## 📚 官方核心参考资源
-
-| 序号 | 资源名称 | 链接 | 核心价值 |
-|:---:|---|---|---|
-| 1 | Jetson Linux Developer Guide | [NVIDIA Official](https://developer.nvidia.com/embedded/jetson-linux) | 系统架构、启动流程、UART 配置 |
-| 2 | Jetson 硬件规格 / 原理图 | [NVIDIA Download Center](https://developer.nvidia.com/embedded/downloads) | 调试接口引脚定义、电压标准 |
-| 3 | Seeed Studio Wiki | [Seeed Official](https://wiki.seeedstudio.com/cn/) | Seeed 载板调试口位置、接口说明 |
-| 4 | NVIDIA SDK Manager | [NVIDIA Official](https://developer.nvidia.com/sdk-manager) | 图形化刷机、环境部署 |
-| 5 | CoreSight 硬件调试文档 | Jetson Linux Debug 章节 | Arm 硬件追踪、崩溃分析 |
-
-## 🛠️ 调试前提条件
+## 调试前提条件
 
 ### 硬件准备
 
@@ -63,256 +43,351 @@ reComputer Super / Classic / Mini / Robotics · reComputer Industrial · reServe
 - USB 数据线（根据载板型号选择 USB-C 或 Micro-B）/ 3.3V USB 转 UART 模块
 - 主机电脑（任意 Windows / Linux / macOS）
 
-### 软件工具（跨平台）
+### 推荐的软件工具
 
 | 系统 | 推荐工具 |
 |---|---|
-| **Windows** | PuTTY / MobaXterm / Device Manager |
-| **Linux** | `screen` / `minicom` / `picocom` |
-| **macOS** | `screen` / `minicom` |
+| **Windows** | PuTTY / MobaXterm 等 |
+| **Linux** | `screen` / `minicom` / `picocom` 等 |
+| **macOS** | `screen` / `minicom` 等 |
 
-## 🔌 UART 串口调试（核心）
+:::note 系统说明
+本文中的 Linux 命令基于 **Ubuntu 22.04 LTS** 测试，其他发行版可能需要调整包管理器（如 `dnf`、`pacman`）或路径配置。
+:::
+
+## UART 串口调试（核心）
 
 UART 串口是 Jetson 调试的**底层入口**，可查看完整 Bootloader 与内核启动日志，解决黑屏、无法启动、串口被占用等核心问题。
 
 :::danger 电压警告
 所有 Seeed Jetson 调试口均为 **3.3V 电平**，**严禁使用 5V 模块**，否则会造成设备永久损坏！
+
+板载 USB-C 调试口已集成电平转换，直接用 USB 数据线连接即可。
 :::
 
 ### 各系列调试口连接方式
 
-请选择你的设备系列，查看对应的调试口位置与连接方式：
+可以在 [reComputer 系列介绍](/cn/reComputer_Intro/) 页面，找到对应的设备型号，查看其调试口（Debug Port）位置，然后使用 USB 数据线将调试口连接到主机即可。
 
-<Tabs groupId="product-series">
-<TabItem value="super" label="🟢 reComputer Super" default>
-
-**支持型号**：reComputer Super J4012 / J4011 / J3011 / J3010
-
-**调试口类型**：板载 **USB-C 调试口**
-
-**连接方式**：
-1. 使用一根 **USB Type-C** 数据线，将载板调试口直接连接到主机 USB 口
-2. 无需额外 UART 模块，即插即用
-
-<div style={{textAlign: 'center', margin: '1em 0'}}>
-  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super" />
-</div>
-
-:::tip 调试口位置
-Super 系列调试口位于机箱侧面的 USB-C 接口处，丝印标记为 `DEBUG` 或 `UART`。连接后，主机会识别为串口设备。
+:::warning USB 数据线要求
+必须使用**支持数据传输的 USB 数据线**，而非仅供电的充电线。部分廉价 USB-C 线仅供电不传数据，会导致设备管理器中无法识别串口。如果连接后主机无任何反应，请优先更换 USB 线缆。
 :::
 
-</TabItem>
-<TabItem value="classic" label="🔵 reComputer Classic">
+### USB 转串口芯片与驱动
 
-**支持型号**：reComputer J4012 / J4011 / J3011 / J3010（含 B 版本）
+Seeed Jetson 载板的调试口使用不同的 USB 转串口芯片，各芯片在不同操作系统上的驱动支持情况如下：
 
-**调试口类型**：J14 排针 **UART 调试排针**
+| 芯片型号 | USB VID | Windows | Linux | macOS |
+|---|---|---|---|---|
+| **Silicon Labs CP210x** | `10C4` | 需安装 [VCP 驱动](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) | 内核自带 | 需安装 VCP 驱动 |
+| **WCH CH340/CH343** | `1A86` | 需安装 [WCH 驱动](https://www.wch.cn/downloads/CH343SER_EXE.html) | 内核自带 | 需安装 WCH 驱动 |
+| **FTDI FT232** | `0403` | 需安装 [FTDI 驱动](https://ftdichip.com/drivers/vcp-drivers/) | 内核自带 | macOS 12+ 内置 |
 
-**连接方式**：
-1. 准备一个 **3.3V USB 转 UART** 模块
-2. 参考排针引脚定义连接各引脚：
-   - **TX（Pin 9）** → 主机 RX
-   - **RX（Pin 10）** → 主机 TX
-   - **GND（Pin 6）** → 公共地
-
-<div style={{textAlign: 'center', margin: '1em 0'}}>
-  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg" alt="reComputer Classic" />
-</div>
-
-**J401 载板引脚定义**：
-
-| 引脚 | 功能 | 引脚 | 功能 |
-|:---:|---|:---:|---|
-| 1 | PWR BTN | 7 | AUTO ON |
-| 2 | GND | 8 | DIS |
-| 3 | FC REC | 9 | **UART TXD** |
-| 4 | GND | 10 | **UART RXD** |
-| 5 | SYS RET | 11 | LED + |
-| 6 | **GND** | 12 | LED - |
-
-:::tip USB-C 替代方案
-Classic 系列同样提供 USB Type-C DEVICE 口，部分固件版本支持通过直接 USB-C 连接进行调试，请根据实际情况选择。
+:::tip 快速判断芯片型号
+- **Windows**：设备管理器中查看 `Ports (COM & LPT)` 下的设备名称
+- **Linux**：执行 `lsusb` 查看 `ID xxxx:xxxx` 字段
+- **macOS**：系统信息 → USB → 查看 USB 设备树
 :::
 
-</TabItem>
-<TabItem value="mini" label="🟡 reComputer Mini">
+### 串口识别与连接（波特率：115200）
 
-**支持型号**：reComputer Mini J4012 / J4011 / J3011 / J3010
-
-**调试口类型**：板载 **USB Micro-B 调试口**
-
-**连接方式**：
-1. 使用一根 **USB Micro-B** 数据线，将载板 USB2.0 DEVICE 口连接到主机
-2. 无需额外 UART 模块
-
-<div style={{textAlign: 'center', margin: '1em 0'}}>
-  <img width={600} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg" alt="reComputer Mini" />
-</div>
-
-<div style={{textAlign: 'center', margin: '1em 0'}}>
-  <img width={600} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini_rec.png" alt="reComputer Mini Interface" />
-</div>
-
-</TabItem>
-<TabItem value="robotics" label="🤖 reComputer Robotics">
-
-**支持型号**：reComputer Robotics J4012 / J4011 / J3011 / J3010
-
-**调试口类型**：板载 **USB Type-C 调试口**
-
-**连接方式**：
-1. 使用一根 **USB Type-C** 数据线，将载板连接到主机
-2. 无需额外 UART 模块
-
-<div style={{textAlign: 'center', margin: '1em 0'}}>
-  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics" />
-</div>
-
-</TabItem>
-<TabItem value="industrial" label="🏭 reComputer Industrial">
-
-**支持型号**：reComputer Industrial J4012 / J4011 / J3011 / J3010 / J2012 / J2011
-
-**调试口类型**：板载 **USB Type-C 调试口**
-
-**连接方式**：
-1. 使用一根 **USB Type-C** 数据线，将载板 USB2.0 DEVICE 口连接到主机
-2. 无需额外 UART 模块
-
-<div style={{textAlign: 'center', margin: '1em 0'}}>
-  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg" alt="reComputer Industrial" />
-</div>
-
-</TabItem>
-<TabItem value="reserver" label="🖥️ reServer Industrial">
-
-**支持型号**：reServer Industrial J4012 / J4011 / J3011 / J3010
-
-**调试口类型**：板载 **USB Type-C 调试口**（DEVICE 口）
-
-**连接方式**：
-1. 使用一根 **USB Type-C** 数据线，将 DEVICE 口连接到主机
-2. 无需额外 UART 模块
-
-<div style={{textAlign: 'center', margin: '1em 0'}}>
-  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110247-reserver-industrial-j4012-first.jpg" alt="reServer Industrial" />
-</div>
-
-</TabItem>
-<TabItem value="j501" label="⚡ J501 Series">
-
-**支持型号**：reServer Industrial J501 / reComputer Robotics J501 Mini / reComputer Robotics J501（AGX Orin 32GB/64GB）
-
-**调试口类型**：板载 **USB Type-C 调试口**
-
-**连接方式**：
-1. 使用一根 **USB Type-C** 数据线，将载板连接到主机
-2. 无需额外 UART 模块
-
-<div style={{textAlign: 'center', margin: '1em 0'}}>
-  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" alt="J501 Series" />
-</div>
-
-</TabItem>
-</Tabs>
-
-### 跨平台串口识别
-
-连接调试线后，在主机上识别对应的串口设备：
+连接调试线后，在主机上识别对应的串口设备并建立连接：
 
 <Tabs groupId="host-os">
 <TabItem value="windows" label="Windows" default>
 
-打开 **Device Manager** → 展开 **Ports (COM & LPT)** → 查找 `USB Serial Port` 对应的 COM 号（例如 `COM3`）。
+**识别端口**：按 `Win + R`，输入 `powershell`，回车打开终端，执行以下命令：
+
+```powershell
+Get-PnpDevice | Where-Object { $_.FriendlyName -match 'COM' } | Select-Object FriendlyName, Status | Format-Table -AutoSize
+```
+
+该命令通过 Windows 即插即用（PnP）接口检索所有名称中包含 `COM` 的设备，并显示其友好名称和连接状态。输出示例：
+
+```text
+FriendlyName                                  Status
+------------                                  ------
+Silicon Labs CP210x USB to UART Bridge (COM8) OK
+```
+
+其中 `Silicon Labs CP210x USB to UART Bridge (COM8)` 即为 Jetson 调试口对应的串口设备，端口号为 `COM8`。
+
+:::tip 设备管理器替代方案
+也可通过设备管理器（`Win + X` → 设备管理器）查看，展开 **Ports (COM & LPT)** 节点。但部分 USB 转串口设备在驱动未正确安装时不会出现在该节点下，可能显示在 **其他设备** 中并带有黄色感叹号，此时命令行方式更为可靠。
+:::
+
+**驱动安装（如设备未识别）**：
+
+如果 PowerShell 输出中**没有 CP210x / Silicon Labs 字样**，说明驱动未安装。用以下命令按 USB VID 检索设备（不受驱动是否安装影响）：
+
+```powershell
+Get-PnpDevice | Where-Object { $_.InstanceId -match 'VID_10C4' } | Select-Object FriendlyName, Status | Format-List
+```
+
+如果 `Status` 显示为 `Error`，需下载并安装 Silicon Labs CP210x VCP 驱动：
+
+```powershell
+# 下载并解压 CP210x VCP 驱动
+Invoke-WebRequest -Uri "https://www.silabs.com/documents/public/software/CP210x_VCP_Windows.zip" -OutFile "$env:TEMP\CP210x_VCP_Windows.zip" -UseBasicParsing
+Expand-Archive -Path "$env:TEMP\CP210x_VCP_Windows.zip" -DestinationPath "$env:TEMP\CP210x_VCP_Windows" -Force
+
+# 静默安装（会弹出 UAC 提示，点击「是」即可）
+Start-Process -FilePath "$env:TEMP\CP210x_VCP_Windows\CP210x_VCP_Windows\CP210xVCPInstaller_x64.exe" -ArgumentList "/s" -Verb RunAs -Wait
+```
+
+安装后重新运行识别命令，确认 `Status` 变为 `OK`。
+
+:::tip 其他芯片驱动
+如果你的载板使用其他 USB 转串口芯片，请下载对应驱动：
+- **CH343**（VID:1A86）：[CH343 驱动下载](https://www.wch.cn/downloads/CH343SER_EXE.html)
+- **FT232**（VID:0403）：[FTDI VCP 驱动下载](https://ftdichip.com/drivers/vcp-drivers/)
+:::
+
+**串口连接（PuTTY）**：若未安装 PuTTY，先通过 winget 安装：
+
+```powershell
+winget install PuTTY.PuTTY
+```
+
+安装后重启终端，执行以下命令直接以串口模式启动 PuTTY：
+
+```cmd
+putty -serial COM8 -sercfg 115200
+```
+
+将 `COM8` 替换为实际识别到的端口号。连接后按一次回车即可看到登录提示。
+
+**串口连接（MobaXterm GUI）**：
+
+MobaXterm 是一款功能强大的 Windows 终端工具，支持串口连接，适合偏好图形界面的用户。下载地址：[https://mobaxterm.mobatek.net/download.html](https://mobaxterm.mobatek.net/download.html)
+
+操作步骤：
+1. 打开 MobaXterm，点击工具栏 **Session** 按钮
+2. 选择 **Serial**（串口）
+3. **Serial port** 选择 `COM8`（即前面识别到的端口）
+4. 确认波特率为 `115200`，数据位 8，停止位 1，无校验
+5. 点击 **OK** 建立连接
+
+![MobaXterm 串口设置界面](https://files.seeedstudio.com/wiki/jetson_debug_guide/mobaxterm_serial_settings.png)
+
+连接后按一次回车触发登录提示，输入用户名 `seeed`，密码 `seeed` 即可登录。
+
+![MobaXterm 串口登录界面](https://files.seeedstudio.com/wiki/jetson_debug_guide/mobaxterm_serial_login.jpg)
+
+:::tip MobaXterm 优势
+MobaXterm 支持标签页管理、内置 SFTP 文件传输、可保存会话配置，适合反复调试场景。
+:::
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
+**识别端口**：
+
 ```bash
-ls /dev/ttyACM* /dev/ttyUSB*
+# 查看 USB 设备列表，找到对应的 UART Bridge 芯片
+lsusb
+```
+
+输出示例（关键行）：
+
+```text
+Bus 003 Device 005: ID 10c4:ea60 Silicon Labs CP210x UART Bridge
+```
+
+```bash
+# 查看内核识别到的串口设备节点
+dmesg | grep -i ttyUSB
+```
+
+```text
+[ 1234.567890] usb 3-1: cp210x converter now attached to ttyUSB0
+```
+
+```bash
+# 确认设备节点存在
+ls -l /dev/ttyUSB*
+```
+
+```text
+crw-rw---- 1 root dialout 188, 0  7月 22 19:00 /dev/ttyUSB0
 ```
 
 通常显示为 `/dev/ttyACM0` 或 `/dev/ttyUSB0`。
 
-</TabItem>
-<TabItem value="macos" label="macOS">
+**串口连接（screen）**：
 
 ```bash
-ls /dev/cu.usbmodem* /dev/tty.usbserial*
-```
+# 安装 screen（如未安装）
+sudo apt install screen
 
-</TabItem>
-</Tabs>
+# 连接串口
+sudo screen /dev/ttyUSB0 115200
 
-### ModemManager 串口占用问题修复（Linux）
-
-:::warning Linux 特有问题
-Linux 主机上的 `ModemManager` 服务会误占用 Jetson 调试串口，导致连接失败。
-:::
-
-```bash
-# Troubleshoot port occupation
-sudo lsof /dev/ttyACM0
-
-# Temporarily stop service (recommended)
-sudo systemctl stop ModemManager
-
-# Permanently disable (when 4G/5G module is not needed)
-sudo systemctl disable ModemManager
-```
-
-**配置 udev 规则（免 sudo 访问串口）**：
-
-```bash
-sudo vim /etc/udev/rules.d/99-tegra-serial.rules
-```
-
-添加以下内容：
-
-```text
-SUBSYSTEM=="tty", ATTRS{idVendor}=="0955", MODE="0660", GROUP="plugdev", TAG+="uaccess"
-```
-
-```bash
-sudo udevadm control --reload-rules && sudo udevadm trigger
-```
-
-### 串口连接（波特率：115200）
-
-<Tabs groupId="host-os">
-<TabItem value="windows" label="Windows" default>
-
-使用 **PuTTY**：
-1. 选择 `Serial` 连接类型
-2. 输入 COM 号（例如 `COM3`）
-3. 将波特率设置为 `115200`
-4. 点击 `Open`
-
-或者使用 **MobaXterm**：New Serial Session → 选择 COM 端口 → 波特率 `115200`
-
-</TabItem>
-<TabItem value="linux" label="Linux">
-
-```bash
-screen /dev/ttyACM0 115200
+# 带日志记录的连接
+sudo screen -L -Logfile /tmp/serial.log /dev/ttyUSB0 115200
 ```
 
 退出 `screen` 快捷键：先按 `Ctrl+A`，然后按 `K`，确认 `y`。
 
+**串口连接（picocom）**：
+
+```bash
+# 安装 picocom
+sudo apt install picocom
+
+# 连接串口
+sudo picocom -b 115200 /dev/ttyUSB0
+
+# 带日志记录的连接（记录所有输入输出到文件）
+sudo picocom -b 115200 --logfile /tmp/serial.log /dev/ttyUSB0
+```
+
+退出 `picocom`：按 `Ctrl+A` 然后按 `Ctrl+X`。
+
+**串口权限设置**：
+
+Linux 系统下，串口设备默认属于 `dialout` 组，普通用户需要加入该组才能免 `sudo` 访问。
+
+```bash
+# 方法1: 将用户加入 dialout 组（永久生效，需重新登录或重启）
+sudo usermod -aG dialout $USER
+
+# 方法2: 每次使用 sudo 访问（临时）
+sudo picocom -b 115200 /dev/ttyUSB0
+
+# 方法3: 配置 udev 规则（推荐，免 sudo）
+sudo bash -c 'echo "SUBSYSTEM==\"tty\", ATTRS{idVendor}==\"10c4\", MODE=\"0660\", GROUP=\"dialout\", TAG+=\"uaccess\"" > /etc/udev/rules.d/99-tegra-serial.rules'
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+:::tip idVendor 说明
+上方 udev 规则中 `idVendor=="10c4"` 对应 Silicon Labs CP210x 芯片。若使用其他芯片（如 CH340 `1a86`、FTDI `0403`），需替换为对应的 VID。
+:::
+
+:::warning ModemManager 串口占用
+Linux 主机上的 `ModemManager` 服务可能误占用 Jetson 调试串口，导致连接失败或无输出。如果连接后无响应，执行以下命令释放：
+
+```bash
+sudo systemctl stop ModemManager
+sudo systemctl disable ModemManager
+```
+:::
+
 </TabItem>
 <TabItem value="macos" label="macOS">
 
+**识别端口**：
+
 ```bash
-screen /dev/cu.usbmodemXXX 115200
+# 查看所有串口设备（cu.* 用于连接，tty.* 用于监控）
+ls /dev/cu.* /dev/tty.*
 ```
 
-将 `XXX` 替换为实际的设备编号。
+输出示例：
+
+```text
+/dev/cu.SLAB_USBtoUART     /dev/tty.SLAB_USBtoUART
+```
+
+:::tip cu.* 与 tty.* 的区别
+- `/dev/cu.*`（Call-Up）：用于从主机向外连接设备，**推荐使用**
+- `/dev/tty.*`：用于呼叫进入（如调制解调器），会等待 DCD 信号
+:::
+
+也可通过 **系统信息**（`Cmd + Space` → "系统信息" → USB）查看已连接的 USB 设备。
+
+**串口连接（screen）**：
+
+macOS 自带 `screen` 命令，无需额外安装：
+
+```bash
+# 连接串口
+screen /dev/cu.SLAB_USBtoUART 115200
+```
+
+退出 `screen` 快捷键：先按 `Ctrl+A`，然后按 `K`，确认 `y`。
+
+**串口连接（minicom）**：
+
+如需更多功能（如文件传输、配置保存），可安装 `minicom`：
+
+```bash
+# 通过 Homebrew 安装
+brew install minicom
+
+# 连接串口
+minicom -D /dev/cu.SLAB_USBtoUART -b 115200
+
+# 首次使用可进入配置界面
+minicom -s
+```
+
+退出 `minicom`：按 `Ctrl+A` 然后按 `X`，选择 `Yes` 确认。
+
+:::tip 驱动安装
+部分 USB 转串口芯片在 macOS 上需要手动安装驱动：
+- **Silicon Labs CP210x**：[VCP 驱动下载](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
+- **CH340/CH343**：[WCH 官方驱动下载](https://www.wch.cn/downloads/CH343SER_EXE.html)
+- **FTDI FT232**：macOS 12+ 已内置驱动，通常无需额外安装
+:::
+
+:::warning macOS 权限问题
+如果连接时提示 `Permission denied`，可能是 macOS 的 TCC（透明度、同意与控制）机制阻止了终端访问串口设备。解决方法：
+1. 使用 `sudo` 运行：`sudo screen /dev/cu.SLAB_USBtoUART 115200`
+2. 或在 **系统设置 → 隐私与安全性** 中允许终端访问串行端口
+:::
 
 </TabItem>
 </Tabs>
 
-## 🚀 系统启动与内核调试
+连接后按回车，如果 Jetson 已开机将看到登录提示：
+
+```text
+seeed-desktop login:
+```
+
+输入用户名和密码登录（默认用户名 `seeed`，密码 `seeed`）。
+
+### 串口参数参考
+
+| 参数 | 值 |
+|---|---|
+| 设备节点 | `/dev/ttyUSB0`（Linux） / `COMx`（Windows） |
+| USB 芯片 | Silicon Labs CP210x UART Bridge (10c4:ea60) 等常见芯片 |
+| 波特率 | `115200` |
+| 数据位 | 8 |
+| 停止位 | 1 |
+| 校验 | None |
+| 流控 | None |
+
+### 非交互式批量执行命令
+
+通过管道自动发送命令并记录输出，适合脚本化操作：
+
+```bash
+# 批量发送多条命令
+echo "seeed" | sudo -S bash -c '
+rm -f /tmp/serial.log
+(sleep 0.5
+printf "uname -a\n"; sleep 1
+printf "cat /etc/nv_tegra_release\n"; sleep 1
+printf "lsusb\n"; sleep 2
+printf "free -h\n"; sleep 1
+sleep 1
+) | timeout 10 picocom -b 115200 --logfile /tmp/serial.log /dev/ttyUSB0 2>&1
+cat /tmp/serial.log
+' < /dev/null 2>&1
+```
+
+**参数说明**：
+- `sleep 0.5`：等待 picocom 初始化
+- `printf "cmd\n"`：发送命令（含换行符）
+- `sleep N`：等待命令执行完成（复杂命令需更长时间）
+- `timeout 10`：picocom 最大运行时间
+- `--logfile`：记录所有串口输入输出
+- `< /dev/null`：防止 sudo 密码干扰 bash stdin
+
+## 系统启动与内核调试
 
 通过 UART 串口，你可以完整捕获 Jetson 启动日志，用于定位启动卡死、内核崩溃等问题。
 
@@ -339,6 +414,23 @@ sudo vim /boot/extlinux/extlinux.conf
 2. 找到 `APPEND` 行，**删除** `quiet`，**添加** `ignore_loglevel`
 3. 重启后，即可通过串口查看完整内核日志
 
+启动配置文件示例（`extlinux.conf`）：
+
+```text
+TIMEOUT 30
+DEFAULT primary
+
+MENU TITLE L4T boot options
+
+LABEL primary
+      MENU LABEL primary kernel
+      LINUX /boot/Image
+      FDT /boot/dtb/tegra234-p3768-0000+p3767-0005-nv-super.dtb
+      INITRD /boot/initrd
+      OVERLAYS /boot/tegra234-p3767-camera-p3768-imx477-quad-seeed.dtbo
+      APPEND ${cbootargs} root=PARTUUID=71ff5c5e-33ca-40de-a4ac-34e8fb444c56 rw rootwait rootfstype=ext4 mminit_loglevel=4 console=ttyTCU0,115200 firmware_class.path=/etc/firmware fbcon=map:0 nospectre_bhb video=efifb:off console=tty0
+```
+
 :::tip 远程场景
 如果可以通过 SSH 连接，也可以直接查看内核日志：
 
@@ -349,7 +441,231 @@ journalctl -k -f
 
 :::
 
-## 📊 系统监控与高级硬件调试
+### 内核日志查看
+
+通过串口或 SSH 查看内核日志：
+
+```bash
+# 查看最近的内核日志
+sudo dmesg | tail -30
+```
+
+输出示例：
+
+```text
+[   16.578803] nvidia-modeset: Loading NVIDIA UNIX Open Kernel Mode Setting Driver for aarch64  540.4.0
+[   16.591774] [drm] [nvidia-drm] [GPU ID 0x00020000] Loading driver
+[   16.894182] [drm] Initialized nvidia-drm 0.0.0 20160202 for 13800000.display on minor 1
+[   18.949172] IPv6: ADDRCONF(NETDEV_CHANGE): wlP7p1s0: link becomes ready
+[   25.658172] pwm-tegra-tachometer 39c0000.tachometer: Tachometer Overflow is detected
+```
+
+## 系统信息查询
+
+通过串口连接后，可以执行以下命令查看 Jetson 系统信息。
+
+### 内核版本
+
+```bash
+uname -a
+```
+
+```text
+Linux seeed-desktop 5.15.148-rt-tegra #1 SMP PREEMPT_RT Fri Jun 26 14:21:16 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+```
+
+### L4T / JetPack 版本
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+```text
+# R36 (release), REVISION: 4.3, GCID: 38968081, BOARD: generic, EABI: aarch64, DATE: Wed Jan  8 01:49:37 UTC 2025
+# KERNEL_VARIANT: oot
+TARGET_USERSPACE_LIB_DIR=nvidia
+TARGET_USERSPACE_LIB_DIR_PATH=usr/lib/aarch64-linux-gnu/nvidia
+```
+
+### 设备树信息
+
+```bash
+# 设备树型号
+cat /proc/device-tree/model | tr -d '\0'; echo
+```
+
+```text
+NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super
+```
+
+```bash
+# 设备树兼容字符串
+cat /proc/device-tree/compatible | tr -d '\0'; echo
+```
+
+```text
+nvidia,p3768-0000+p3767-0005-supernvidia,p3767-0005nvidia,tegra234
+```
+
+### 操作系统版本
+
+```bash
+cat /etc/lsb-release
+```
+
+```text
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=22.04
+DISTRIB_CODENAME=jammy
+DISTRIB_DESCRIPTION="Ubuntu 22.04.5 LTS"
+```
+
+```bash
+hostname
+```
+
+```text
+seeed-desktop
+```
+
+## 硬件信息查询
+
+通过串口连接后，可以执行以下命令查看 Jetson 硬件信息。
+
+### USB 设备
+
+```bash
+lsusb
+```
+
+```text
+Bus 002 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 005: ID 0bda:c822 Realtek Semiconductor Corp. Bluetooth Radio
+Bus 001 Device 003: ID 1a40:0101 Terminus Technology Inc. Hub
+Bus 001 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) Hub Controller
+Bus 001 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+```
+
+### PCI 设备
+
+```bash
+lspci
+```
+
+```text
+0001:00:00.0 PCI bridge: NVIDIA Corporation Device 229e (rev a1)
+0001:01:00.0 Ethernet controller: Microchip Technology / SMSC Device 7430 (rev 11)
+0004:00:00.0 PCI bridge: NVIDIA Corporation Device 229c (rev a1)
+0004:01:00.0 Non-Volatile memory controller: Phison Electronics Corporation PS5013 E13 NVMe Controller (rev 01)
+0007:00:00.0 PCI bridge: NVIDIA Corporation Device 229a (rev a1)
+0007:01:00.0 Network controller: Realtek Semiconductor Co., Ltd. RTL8822CE 802.11ac PCIe Wireless Network Adapter
+0008:00:00.0 PCI bridge: NVIDIA Corporation Device 229c (rev a1)
+0008:01:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 15)
+```
+
+### CPU 信息
+
+```bash
+lscpu | head -25
+```
+
+```text
+Architecture:                       aarch64
+CPU op-mode(s):                     32-bit, 64-bit
+Byte Order:                         Little Endian
+CPU(s):                             6
+On-line CPU(s) list:                0-5
+Vendor ID:                          ARM
+Model name:                         Cortex-A78AE
+Model:                              1
+Thread(s) per core:                 1
+Core(s) per cluster:                3
+Socket(s):                          -
+Cluster(s):                         2
+Stepping:                           r0p1
+CPU max MHz:                        1728.0000
+CPU min MHz:                        115.2000
+BogoMIPS:                           62.50
+L1d cache:                          384 KiB (6 instances)
+L1i cache:                          384 KiB (6 instances)
+L2 cache:                           1.5 MiB (6 instances)
+L3 cache:                           4 MiB (2 instances)
+NUMA node(s):                       1
+NUMA node0 CPU(s):                  0-5
+```
+
+### 内存
+
+```bash
+free -h
+```
+
+```text
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       559Mi       6.1Gi        29Mi       766Mi       6.7Gi
+Swap:          3.7Gi          0B       3.7Gi
+```
+
+### 磁盘使用
+
+```bash
+df -h
+```
+
+```text
+Filesystem       Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1   116G   18G   93G  16% /
+tmpfs            3.8G   84K  3.8G   1% /dev/shm
+tmpfs            1.5G   27M  1.5G   2% /run
+tmpfs            5.0M  4.0K  5.0M   1% /run/lock
+/dev/nvme0n1p10   63M  110K   63M   1% /boot/efi
+```
+
+### 块设备
+
+```bash
+lsblk
+```
+
+```text
+NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0          7:0    0     4K  1 loop /snap/bare/5
+loop1          7:1    0 188.5M  1 loop /snap/chromium/3478
+...
+nvme0n1      259:0    0 119.2G  0 disk
+├─nvme0n1p1  259:1    0 117.8G  0 part /
+├─nvme0n1p2  259:2    0   128M  0 part
+├─nvme0n1p3  259:3    0   768K  0 part
+...
+└─nvme0n1p15 259:15   0 479.5M  0 part
+```
+
+### NVMe 分区表
+
+```bash
+sudo fdisk -l /dev/nvme0n1 | head -30
+```
+
+```text
+Disk /dev/nvme0n1: 119.24 GiB, 128035676160 bytes, 250069680 sectors
+Disk model: NHESR128GTLEW-I3C-2
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 56FD10F7-6157-4F81-92CE-652E0183C667
+
+Device            Start       End   Sectors   Size Type
+/dev/nvme0n1p1  3050048 250069639 247019592 117.8G Microsoft basic data
+/dev/nvme0n1p2       40    262183    262144   128M Microsoft basic data
+...
+/dev/nvme0n1p10  821800    952871    131072    64M EFI System
+...
+```
+
+## 系统监控与高级硬件调试
 
 ### tegrastats — 实时系统监控
 
@@ -363,6 +679,12 @@ tegrastats
 tegrastats --interval 1000 --stop 10
 ```
 
+输出示例：
+
+```text
+07-22-2026 19:16:38 RAM 629/7621MB (lfb 3x4MB) SWAP 0/3811MB (cached 0MB) CPU [2%@1036,0%@1036,0%@1036,0%@1036,0%@729,0%@729] GR3D_FREQ 0% cpu@36.031C soc2@35.5C soc0@36.125C gpu@36.5C tj@36.812C soc1@36.812C VDD_IN 4625mW/4625mW VDD_CPU_GPU_CV 527mW/527mW VDD_SOC 1379mW/1379mW
+```
+
 ### jtop — 增强型可视化监控
 
 `jtop` 提供交互式 TUI 界面。安装方法：
@@ -373,7 +695,61 @@ sudo systemctl restart jtop.service
 jtop
 ```
 
-### CoreSight 硬件级调试（高级）
+### 设备树文件
+
+查看当前使用的设备树文件：
+
+```bash
+ls /boot/dtb/
+```
+
+```text
+kernel_tegra234-p3768-0000+p3767-0005-nv.dtb
+tegra234-p3768-0000+p3767-0005-nv-super.dtb
+```
+
+### NVIDIA 软件包
+
+查看已安装的 NVIDIA 软件包：
+
+```bash
+dpkg -l | grep nvidia | head -20
+```
+
+```text
+ii  nvidia-cuda                                6.2.1+b38                                   arm64        NVIDIA CUDA Meta Package
+ii  nvidia-cuda-dev                            6.2.1+b38                                   arm64        NVIDIA CUDA dev Meta Package
+ii  nvidia-l4t-3d-core                         36.4.3-20250107174145                       arm64        NVIDIA GL EGL Package
+ii  nvidia-l4t-apt-source                      36.4.3-20250107174145                       arm64        NVIDIA L4T apt source list debian package
+ii  nvidia-l4t-bootloader                      36.4.3-20250107174145                       arm64        NVIDIA Bootloader Package
+ii  nvidia-l4t-camera                          36.4.3-20250107174145                       arm64        NVIDIA Camera Package
+ii  nvidia-l4t-configs                         36.4.3-20250107174145                       arm64        NVIDIA configs debian package
+ii  nvidia-l4t-core                            36.4.3-20250107174145                       arm64        NVIDIA Core Package
+ii  nvidia-l4t-cuda                            36.4.3-20250107174145                       arm64        NVIDIA CUDA Package
+ii  nvidia-l4t-cuda-utils                      36.4.3-20250107174145                       arm64        NVIDIA CUDA utilities
+ii  nvidia-l4t-firmware                        36.4.3-20250107174145                       arm64        NVIDIA Firmware Package
+ii  nvidia-l4t-gstreamer                       36.4.3-20250107174145                       arm64        NVIDIA GST Application files
+ii  nvidia-l4t-init                            36.4.3-20250107174145                       arm64        NVIDIA Init debian package
+ii  nvidia-l4t-jetson-io                       36.4.3-20250107174145                       arm64        NVIDIA Jetson.IO debian package
+```
+
+### MTD / QSPI 设备
+
+```bash
+cat /proc/mtd 2>/dev/null || echo no-mtd
+ls /dev/mtd* 2>/dev/null || echo no-mtd-dev
+```
+
+```text
+dev:    size   erasesize  name
+no-mtd-dev
+```
+
+:::info
+部分设备没有 MTD 设备节点，QSPI 闪存不通过 `/dev/mtd` 暴露。
+:::
+
+### CoreSight 硬件级调试
 
 用于分析**难以复现的崩溃、性能瓶颈**，基于 OpenCSD + perf 工具：
 
@@ -389,41 +765,54 @@ perf report --stdio --dump
 CoreSight 支持 STM（System Trace Macrocell），可以高效替代 `printk` 软件调试。详细配置请参考 [NVIDIA 官方调试文档](https://developer.nvidia.com/embedded/jetson-linux)。
 :::
 
-## 🔄 刷机与恢复
+## 网络与内核模块
 
-当系统崩溃或无法启动时，可以使用官方工具重新刷机。
-
-:::tip 快速刷机指南
-详细刷机步骤请参考 **[Flashing Jetson Linux](/cn/flash/jetpack_to_selected_product)** 页面，其中提供了完整的设备专用刷机指南，包括：
-- BSP 下载与校验
-- 环境准备
-- 各设备专用刷机步骤
-- 常见问题排查
-:::
-
-### 恢复模式验证
-
-刷机前，请确保设备已进入恢复模式。在 Ubuntu 主机上执行：
+### 网络接口
 
 ```bash
-lsusb
+ip addr show
 ```
 
-如果输出中包含以下任一 ID，则说明设备已进入恢复模式：
+```text
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+2: enP8p1s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether 3c:6d:66:5d:a8:2c brd ff:ff:ff:ff:ff:ff
+3: can0: <NOARP,ECHO> mtu 16 qdisc noop state DOWN group default qlen 10
+    link/can
+4: wlP7p1s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 6c:d5:52:cc:9a:1d brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.116/23 brd 192.168.7.255 scope global noprefixroute wlP7p1s0
+```
 
-| 模块 | USB ID |
-|---|---|
-| Orin NX 16GB | `0955:7323` |
-| Orin NX 8GB | `0955:7423` |
-| Orin Nano 8GB | `0955:7523` |
-| Orin Nano 4GB | `0955:7623` |
-| AGX Orin 32GB | `0955:7223` |
-| AGX Orin 64GB | `0955:7023` |
-| Xavier NX | `0955:7e19` |
+### 已加载内核模块
 
-:::info 进入恢复模式
-不同设备进入恢复模式的方法不同。请在 **[Flashing Jetson Linux](/cn/flash/jetpack_to_selected_product)** 页面中参考对应设备的详细步骤。
-:::
+```bash
+lsmod | head -30
+```
+
+```text
+Module                  Size  Used by
+nvidia_drm             94208  1
+nvidia_modeset       1302528  5 nvidia_drm
+lzo_rle                16384  36
+lzo_compress           16384  1 lzo_rle
+zram                   28672  12
+zsmalloc               36864  1 zram
+nvme_fabrics           24576  0
+ramoops                28672  0
+reed_solomon           20480  1 ramoops
+bridge                270336  0
+...
+snd_soc_tegra210_admaif   131072  1
+snd_soc_tegra186_asrc    40960  1
+snd_soc_tegra_pcm      16384  1 snd_soc_tegra210_admaif
+```
+
+## 刷机与恢复
+
+当系统崩溃或无法启动时，可以使用官方工具重新刷机。详细刷机步骤请参考 **[Flashing Jetson Linux](/cn/flash/jetpack_to_selected_product)** 页面，其中涵盖 BSP 下载、环境准备、各设备专用刷机步骤及常见问题排查。
 
 ### 刷机调试日志
 
@@ -438,38 +827,39 @@ lsusb
 - 如需协助，请收集完整日志并联系技术支持
 :::
 
-## ❓ 常见问题排查
+## 常见问题排查
 
 <div className="card margin-bottom--lg" style={{borderLeft: '4px solid #f59e0b'}}>
   <div className="card__body">
 
 | 问题 | 排查方向 |
 |---|---|
-| **串口连接失败** | 检查 ModemManager 服务、USB 线缆、端口号、电压标准（3.3V） |
+| **串口连接失败** | 检查 USB 线缆、端口号、电压标准（3.3V） |
 | **无启动日志** | 确认调试口连接正确；移除内核 `quiet` 启动参数 |
 | **刷机失败** | 优先查看 UART 串口日志；确认载板型号与 JetPack 版本匹配 |
-| **串口权限不足** | 配置 udev 规则；`sudo usermod -aG plugdev $USER` |
+| **串口权限不足** | Linux: 将用户加入 `dialout` 组；`sudo usermod -aG dialout $USER` |
+| **串口被 ModemManager 占用** | `sudo systemctl stop ModemManager`；或永久禁用 |
 | **设备无法进入恢复模式** | 检查跳线/按键是否正确；尝试更换 USB 线或端口 |
 
   </div>
 </div>
 
-## 📎 附录：官方资源
+## 附录：官方资源
 
 <div className="row margin-bottom--xl">
   <div className="col col--4">
     <div className="card height--full">
       <div className="card__header">
-        <h3>📖 开发者指南</h3>
+        <h3>NVIDIA Developer</h3>
       </div>
       <div className="card__body">
-        <p>NVIDIA Jetson Linux 官方开发者指南，包含系统架构、启动流程、调试配置等内容。</p>
+        <p>NVIDIA 官方开发者门户，包含 Jetson 平台的技术文档、SDK 下载与开发资源。</p>
       </div>
       <div className="card__footer">
-        <a href="https://developer.nvidia.com/embedded/jetson-linux" target="_blank" rel="noopener noreferrer"
+        <a href="https://developer.nvidia.com/" target="_blank" rel="noopener noreferrer"
           className="button button--block"
           style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
-          <span>Jetson Linux 指南</span>
+          <span>NVIDIA Developer</span>
           <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
         </a>
       </div>
@@ -479,16 +869,16 @@ lsusb
   <div className="col col--4">
     <div className="card height--full">
       <div className="card__header">
-        <h3>🌱 Seeed Wiki</h3>
+        <h3>Jetson 开发工具教程</h3>
       </div>
       <div className="card__body">
-        <p>Seeed Studio 官方 Wiki，包含全系列载板的硬件接口说明与使用教程。</p>
+        <p>Seeed Studio 提供的 Jetson 开发工具概述与使用教程。</p>
       </div>
       <div className="card__footer">
-        <a href="https://wiki.seeedstudio.com/cn/" target="_blank" rel="noopener noreferrer"
+        <a href="https://wiki.seeedstudio.com/cn/jetson_developtool_overview/" target="_blank" rel="noopener noreferrer"
           className="button button--block"
           style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
-          <span>Seeed Studio Wiki</span>
+          <span>Jetson 开发工具教程</span>
           <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
         </a>
       </div>
@@ -498,16 +888,16 @@ lsusb
   <div className="col col--4">
     <div className="card height--full">
       <div className="card__header">
-        <h3>🔧 SDK Manager</h3>
+        <h3>reComputer Jetson for Beginners</h3>
       </div>
       <div className="card__body">
-        <p>NVIDIA 官方图形化刷机与 SDK 环境部署工具。</p>
+        <p>面向初学者的 reComputer Jetson 入门项目，包含丰富的示例与教程。</p>
       </div>
       <div className="card__footer">
-        <a href="https://developer.nvidia.com/sdk-manager" target="_blank" rel="noopener noreferrer"
+        <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" target="_blank" rel="noopener noreferrer"
           className="button button--block"
           style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
-          <span>NVIDIA SDK Manager</span>
+          <span>GitHub 项目</span>
           <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
         </a>
       </div>
@@ -515,16 +905,16 @@ lsusb
   </div>
 </div>
 
-## 🤝 技术支持与产品交流
+## 技术支持与产品交流
 
 感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用过程中拥有顺畅的体验。
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div className="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div className="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
 </div>
