@@ -149,11 +149,7 @@ The system supports two interchangeable microphone array configurations: a **cir
 | **Mounting** | 2 × M3 mounting holes |
 
 
-:::note
 
-To ensure optimal voice pickup performance and proper operation of the audio algorithms, please make sure the Microphone Port (Mic Inlet / Sound Hole) on the back side of the device is facing toward the sound source. The microphone port is located on the side with the Seeed Studio logo printed on it. 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
-:::
 
 ### XIAO ESP32S3 Support
 
@@ -218,6 +214,11 @@ The FPC mic array interface is a 24-pin, 0.5mm pitch connector with a locking la
 ### Software Preparation
 
 ### Out of Box Usage
+
+:::note
+To ensure optimal voice pickup performance and proper operation of the audio algorithms, please make sure the Microphone Port (Mic Inlet / Sound Hole) on the back side of the device is facing toward the sound source. The microphone port is located on the side with the Seeed Studio logo printed on it. 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
+:::
 
 #### Reset
 
