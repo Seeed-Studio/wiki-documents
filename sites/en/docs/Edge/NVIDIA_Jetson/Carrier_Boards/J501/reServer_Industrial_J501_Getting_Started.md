@@ -389,6 +389,12 @@ sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
+## Hardware Interfaces Usage
+
+:::info
+If you want to learn more about the detailed specifications and usage of the hardware interfaces, please refer to [this wiki](https://wiki.seeedstudio.com/j501_carrier_board_interfaces_usage/).
+:::
+
 ## Resources
 
 - [reServer Industrial J501 Carrier Board Datasheet](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_Industrial_J501_Carrier_Board_Datasheet.pdf)
