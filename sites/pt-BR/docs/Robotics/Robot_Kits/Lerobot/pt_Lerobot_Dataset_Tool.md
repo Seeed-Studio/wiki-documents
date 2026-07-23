@@ -13,8 +13,7 @@ last_update:
   date: 2/11/2026
   author: ZhangJiaQuan
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-03-02'
 updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/lerobot_dataset_tool/

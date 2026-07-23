@@ -1,0 +1,10 @@
+position: 6 # float position is supported
+label: 'Uso del laboratorio'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_pro_use_of_the_laboratory
+link:
+  type: generated-index
+  slug: recamera_pro_use_of_the_laboratory
+  title: Uso del laboratorio
+  description: Documentación sobre el uso del laboratorio de reCamera Pro

@@ -14,7 +14,7 @@ last_update:
   date: 8/7/2025
   author: Kasun Thushara
 createdAt: '2025-08-08'
-updatedAt: '2025-08-18'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_edge_impulse/
 ---
 

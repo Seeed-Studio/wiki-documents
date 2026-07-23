@@ -15,7 +15,7 @@ last_update:
   date: 07/09/2026
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-07-09'
+updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/ja/recomputer_j501_mini_getting_started/
 ---
 # Mini J501 キャリアボード ハードウェアと入門

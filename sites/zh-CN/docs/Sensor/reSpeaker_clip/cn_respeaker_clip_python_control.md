@@ -14,7 +14,7 @@ last_update:
   date: 07/01/2026
   author: Kasun Thushara
 createdAt: '2026-07-01'
-updatedAt: '2026-07-01'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/cn/respeaker_clip_python_control/
 ---
 
@@ -276,6 +276,8 @@ python tools/ble_terminal.py
 ```bash
 python tools/decode_opus.py <input_file.opus> <output_file.wav>
 ```
+
+> Windows 注意事项：如果由于找不到 Opus 原生库而导致解码失败，请从 ShiftMediaProject releases 下载预编译的 `opus.dll`，将其解压，并把 `opus.dll` 放入虚拟环境的 `Scripts` 文件夹中（例如，`D:\clip\tests\.venv\Scripts\`）。
 
 ---
 

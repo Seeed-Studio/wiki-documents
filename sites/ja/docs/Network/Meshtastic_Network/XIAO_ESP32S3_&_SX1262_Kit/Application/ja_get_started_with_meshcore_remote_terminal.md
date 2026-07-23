@@ -15,7 +15,7 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-04-07'
+updatedAt: '2026-04-29'
 url: https://wiki.seeedstudio.com/ja/get_started_with_meshcore_remote_terminal/
 ---
 この wiki では、[Remote Terminal for MeshCore](https://github.com/jkingsman/Remote-Terminal-for-MeshCore)（RemoteTerm）を紹介し、[MeshCore](https://meshcore.io/) デバイスがメッセージを送信するためのインターフェースを提供します。このチュートリアルでは、[Seeed XIAO ESP32S3 & SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) をコンパニオン無線機として使用し、[Raspberry Pi Zero 2W](https://www.seeedstudio.com/Raspberry-Pi-Zero-2-W-p-5197.html) 上で RemoteTerm を実行するための基本的なセットアップを説明します。これにより、パワーユーザー向けのコンパクトなオールインワン MeshCore ソリューションが実現します。

@@ -10,7 +10,7 @@ last_update:
   date: 12/18/2025
   author: Michelle Huang
 createdAt: '2025-05-23'
-updatedAt: '2026-04-20'
+updatedAt: '2026-06-29'
 url: https://wiki.seeedstudio.com/ja/wio_tracker_l1_node/
 ---
 

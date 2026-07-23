@@ -12,6 +12,8 @@ last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/es/codecraft/community-and-publishing/
+createdAt: '2026-06-30'
+updatedAt: '2026-06-30'
 ---
 
 # Comunidad y publicación de CodeCraft

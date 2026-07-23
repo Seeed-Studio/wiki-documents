@@ -12,7 +12,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics_2.webp
 slug: /recomputer_ethercat_communication
 last_update:
-  date: 2025-09-05T00:00:00.000Z
+  date: 2025-09-05
   author: Zibo
 createdAt: '2025-09-05'
 updatedAt: '2025-09-25'

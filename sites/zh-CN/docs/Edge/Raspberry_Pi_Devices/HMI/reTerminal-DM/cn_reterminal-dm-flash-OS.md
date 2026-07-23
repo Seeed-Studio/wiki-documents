@@ -12,7 +12,7 @@ last_update:
   date: 04/23/2023
   author: Peter Pan
 createdAt: '2023-04-24'
-updatedAt: '2026-01-07'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/cn/reterminal-dm-flash-OS/
 ---
 # 将 Raspbian 操作系统刷写到 reTerminal DM 的 eMMC

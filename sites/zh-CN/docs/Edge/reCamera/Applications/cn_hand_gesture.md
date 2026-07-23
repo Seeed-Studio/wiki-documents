@@ -1,5 +1,5 @@
 ---
-title:  将 MediaPipe 手势识别模型移植到 reCamera
+title: 将 MediaPipe 手势识别模型移植到 reCamera
 description: 本文档介绍如何将 Google 官方 MediaPipe 手势识别套件完整移植到 reCamera（Sophon/Bitmain SG200X）上，构建“手掌检测 → 关键点检测 → 特征嵌入 → 分类”的推理流水线，并通过 UDP 将结果流式传输到 PC 进行可视化。
 keywords:
   - reCamera

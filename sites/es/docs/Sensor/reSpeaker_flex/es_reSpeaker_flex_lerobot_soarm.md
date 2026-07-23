@@ -1,6 +1,6 @@
 ---
 description: Brazo robótico SO-ARM100 controlado por voz usando LeRobot, Groq Whisper STT, LLaMA 3 y openwakeword en Nvidia o Ubuntu.
-title: Añade interacción por voz a tu SO-ARM10x con reSpeaker 
+title: Añade interacción por voz a tu SO-ARM10x con reSpeaker
 keywords:
   - reSpeaker flex
   - xvf3800
@@ -11,7 +11,7 @@ last_update:
   date: 05/19/2026
   author: Kasun Thushara
 createdAt: '2026-05-19'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/respeaker_flex_soarm/
 ---
 

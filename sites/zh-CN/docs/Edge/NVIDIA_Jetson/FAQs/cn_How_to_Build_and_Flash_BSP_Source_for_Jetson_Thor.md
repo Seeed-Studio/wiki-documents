@@ -14,7 +14,7 @@ last_update:
   date: 04/14/2026
   author: Dayu
 createdAt: '2026-04-14'
-updatedAt: '2026-04-14'
+updatedAt: '2026-05-25'
 url: https://wiki.seeedstudio.com/cn/how_to_build_and_flash_bsp_source_for_jetson_thor/
 ---
 

@@ -14,7 +14,7 @@ last_update:
   date: 06/01/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-06-16'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/ja/recamera_pro_getting_started/
 ---
 

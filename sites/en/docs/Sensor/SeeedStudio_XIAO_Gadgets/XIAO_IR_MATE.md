@@ -14,7 +14,7 @@ last_update:
   author: TienjuiWong
   date: 07/17/2025
 createdAt: '2025-07-18'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-14'
 url: https://wiki.seeedstudio.com/XIAO_IR_Mate_Smart_IR_Remote/
 ---
 

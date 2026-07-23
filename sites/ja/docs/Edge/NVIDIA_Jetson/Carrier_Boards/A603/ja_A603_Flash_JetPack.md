@@ -12,7 +12,7 @@ last_update:
   date: 04/19/2023
   author: Lakshantha
 createdAt: '2023-04-17'
-updatedAt: '2026-06-29'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/ja/reComputer_A603_Flash_System/
 ---
 

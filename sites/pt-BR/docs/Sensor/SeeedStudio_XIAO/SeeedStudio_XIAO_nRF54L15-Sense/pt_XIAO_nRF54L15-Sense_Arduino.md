@@ -1,5 +1,5 @@
 ---
-description: 'Este artigo foi desenvolvido com base no core Arduino para nRF54L15 escrito pelo desenvolvedor lolren, com o objetivo de fornecer tutoriais de referência para usuários do XIAO nRF54L15 desenvolverem na Arduino IDE.'
+description: Este artigo foi desenvolvido com base no core Arduino para nRF54L15 escrito pelo desenvolvedor lolren, com o objetivo de fornecer tutoriais de referência para usuários do XIAO nRF54L15 desenvolverem na Arduino IDE.
 title: Arduino para Seeed Studio XIAO nRF54L15
 keywords:
   - nRF54L15

@@ -12,6 +12,8 @@ last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/es/codecraft/quick-start-and-support/
+createdAt: '2026-06-30'
+updatedAt: '2026-07-08'
 ---
 
 # Inicio rápido y soporte de CodeCraft

@@ -1,6 +1,6 @@
 ---
 description: LeRobot、Groq Whisper STT、LLaMA 3、openwakeword を Nvidia または Ubuntu 上で使用して、音声操作が可能な SO-ARM100 ロボットアームを実現します。
-title: reSpeaker で SO-ARM10x に音声インタラクションを追加する 
+title: reSpeaker で SO-ARM10x に音声インタラクションを追加する
 keywords:
   - reSpeaker flex
   - xvf3800
@@ -11,7 +11,7 @@ last_update:
   date: 05/19/2026
   author: Kasun Thushara
 createdAt: '2026-05-19'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/ja/respeaker_flex_soarm/
 ---
 

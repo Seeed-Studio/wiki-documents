@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-20'
-updatedAt: '2026-06-15'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_bluetooth_lowpower/
 ---
 
@@ -42,7 +42,7 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_bluetooth_lowpower/
 </div>
 
 
-Bluetooth Low Energy (BLE) é um padrão de comunicação sem fio de baixo consumo introduzido no Bluetooth 4.0. Projetado para transmissão intermitente de pequenos volumes de dados, ele permite conectividade sem fio em dezenas de metros enquanto mantém um consumo médio de corrente ultrabaixo em nível de microampères. É amplamente aplicado em dispositivos vestíveis, sensores de casa inteligente, posicionamento interno e cenários de IoT industrial.
+Bluetooth Low Energy (BLE) é um padrão de comunicação sem fio de baixo consumo introduzido no Bluetooth 4.0. Projetado para transmissão intermitente de pequenos dados, ele permite conectividade sem fio em dezenas de metros enquanto mantém um consumo médio de corrente ultrabaixo em nível de microampères. É amplamente aplicado em dispositivos vestíveis, sensores de casa inteligente, posicionamento interno e cenários de IoT industrial.
 
 Alimentada pelo SoC nRF54LM20A, a série XIAO nRF54LM20A oferece suporte a Bluetooth LE, Matter, Thread, Zigbee e protocolos proprietários de 2,4 GHz, fornecendo uma taxa de dados de pico de 4 Mbps ideal para cenários de baixa latência. Ela também oferece suporte a Bluetooth Channel Sounding e Bluetooth Mesh. Este artigo ilustra sua funcionalidade BLE por meio de dois exemplos práticos: transmissão básica de Beacon de broadcast e uma conexão BLE LED Button Service (LBS) entre dispositivos Central e Peripheral.
 
@@ -77,7 +77,7 @@ Antes de começar, prepare pelo menos duas placas XIAO nRF54LM20A Sense se você
 
 ## Antena Bluetooth
 
-Esta placa utiliza uma antena Bluetooth externa. Para garantir melhor qualidade de sinal Bluetooth e aprimorar sua experiência de uso de Bluetooth, é recomendada a instalação de uma antena Bluetooth.
+Esta placa usa uma antena Bluetooth externa. Para garantir melhor qualidade de sinal Bluetooth e aprimorar sua experiência de uso de Bluetooth, é recomendável instalar uma antena Bluetooth.
 O método de conexão é mostrado abaixo:
 
 <div style={{textAlign: 'center'}}>
@@ -95,7 +95,7 @@ O pacote Seeed Studio XIAO nRF54LM20A inclui uma antena dedicada de 2,4 GHz. Par
 <div class="table-center">
  <table>
   <tr>
-   <th>Antena FPC 2,4GHz A-04 para XIAO nRF54 Series</th>
+   <th>Antena FPC 2,4GHz A-04 para XIAO nRF54 Série</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100039813-2.4ghz-fpc-antenna-_1.86dbi_-for-xiao-nrf54l15.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -199,6 +199,20 @@ LOG_MODULE_REGISTER(ble_beacon, LOG_LEVEL_INF);
 
 static uint32_t manufacturer_counter;
 
+static const uint8_t adv_flags[] __aligned(4) = {
+    BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR,
+};
+
+static const uint8_t adv_name[] __aligned(4) = CONFIG_BT_DEVICE_NAME;
+
+static uint8_t manuf_data[MANUF_DATA_SIZE] __aligned(4);
+
+static const struct bt_data ad[] __aligned(4) = {
+    BT_DATA(BT_DATA_FLAGS, adv_flags, sizeof(adv_flags)),
+    BT_DATA(BT_DATA_NAME_COMPLETE, adv_name, sizeof(adv_name) - 1),
+    BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
+};
+
 /* Power enable regulator (GPIO1_12) - must be enabled before BLE init */
 static const struct device *const power_en_dev =
     DEVICE_DT_GET(DT_NODELABEL(power_en));
@@ -206,6 +220,19 @@ static const struct device *const power_en_dev =
 static void adv_update_work_handler(struct k_work *work);
 
 static K_WORK_DELAYABLE_DEFINE(adv_update_work, adv_update_work_handler);
+
+static void fill_manuf_data(uint32_t counter)
+{
+    /* [Company ID (2B)][Counter (4B)][Custom (2B)] */
+    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
+    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
+    manuf_data[2] = (counter >> 0) & 0xFF;
+    manuf_data[3] = (counter >> 8) & 0xFF;
+    manuf_data[4] = (counter >> 16) & 0xFF;
+    manuf_data[5] = (counter >> 24) & 0xFF;
+    manuf_data[6] = 0xAA;
+    manuf_data[7] = 0xBB;
+}
 
 static int enable_power(void)
 {
@@ -230,26 +257,9 @@ static int enable_power(void)
 static void adv_update_work_handler(struct k_work *work)
 {
     int err;
-    uint8_t manuf_data[MANUF_DATA_SIZE];
 
     manufacturer_counter++;
-
-    /* Build manufacturer data: [Company ID (2B)][Counter (4B)][Custom (2B)] */
-    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
-    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-    manuf_data[2] = (manufacturer_counter >> 0) & 0xFF;
-    manuf_data[3] = (manufacturer_counter >> 8) & 0xFF;
-    manuf_data[4] = (manufacturer_counter >> 16) & 0xFF;
-    manuf_data[5] = (manufacturer_counter >> 24) & 0xFF;
-    manuf_data[6] = 0xAA;
-    manuf_data[7] = 0xBB;
-
-    const struct bt_data ad[] = {
-        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-        BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
-    };
+    fill_manuf_data(manufacturer_counter);
 
     err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
     if (err < 0) {
@@ -264,7 +274,6 @@ static void adv_update_work_handler(struct k_work *work)
 int main(void)
 {
     int err;
-    uint8_t init_data[MANUF_DATA_SIZE];
 
     LOG_INF("BLE Manufacturer Data Beacon");
 
@@ -286,21 +295,7 @@ int main(void)
     LOG_INF("BLE initialized");
 
     /* Initial advertising data with counter = 0 */
-    init_data[0] = MANUF_COMPANY_ID & 0xFF;
-    init_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-    init_data[2] = 0;
-    init_data[3] = 0;
-    init_data[4] = 0;
-    init_data[5] = 0;
-    init_data[6] = 0xAA;
-    init_data[7] = 0xBB;
-
-    const struct bt_data ad[] = {
-        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-        BT_DATA(BT_DATA_MANUFACTURER_DATA, init_data, sizeof(init_data)),
-    };
+    fill_manuf_data(0);
 
     err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
     if (err < 0) {
@@ -325,14 +320,14 @@ int main(void)
 
 #### Resultado
 
-1. Após gravar o firmware, instale o app nRF Connect para escanear e detectar dispositivos BLE.
+1. Após gravar o firmware, instale o aplicativo nRF Connect para escanear e detectar dispositivos BLE.
 
-Enquanto isso, você pode buscar e baixar o app nRF Connect nas principais lojas de aplicativos móveis, o que permite que seu telefone escaneie e se conecte a dispositivos Bluetooth.
+Enquanto isso, você pode pesquisar e baixar o app nRF Connect nas principais lojas de aplicativos móveis, o que permite que seu telefone procure e se conecte a dispositivos Bluetooth.
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. Após instalar o software, escaneie o dispositivo Bluetooth chamado **XIAO-Beacon** e verifique os dados de fabricante recebidos (Manufacturer Data). Ao mesmo tempo, abra a porta serial para visualizar os logs de saída.
+2. Após instalar o software, procure pelo dispositivo Bluetooth chamado **XIAO-Beacon** e verifique os dados de fabricante (Manufacturer Data) recebidos. Ao mesmo tempo, abra a porta serial para visualizar os logs de saída.
 
 <div className="table-center">
 <table align="center">
@@ -363,11 +358,11 @@ manuf_data[7] = 0xBB;
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_beacon_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-A partir dos resultados acima, o processo de transmissão de pacotes de advertising BLE personalizados no XIAO nRF54LM20A Sense pode ser claramente compreendido, o que facilita pesquisas adicionais sobre as características de operação do BLE. Em cenários de aplicação específicos, os dados de advertising podem ser adotados para julgar condições de disparo sem estabelecer conexões reais.
+A partir dos resultados acima, o processo de transmissão de pacotes de advertising BLE personalizados no XIAO nRF54LM20A Sense pode ser claramente compreendido, o que facilita pesquisas adicionais sobre as características de operação do BLE. Em cenários de aplicação específicos, os dados de advertising podem ser usados para julgar condições de disparo sem estabelecer conexões reais.
 
 ### BLE LBS
 
-Este exemplo usa duas placas XIAO nRF54 para implementar um serviço BLE de LED e botão (LED Button Service, LBS). Uma placa atua como um periférico BLE e faz advertising de um serviço LBS personalizado. A outra atua como um dispositivo central BLE, escaneia o serviço, conecta-se automaticamente e controla o LED no periférico por meio de uma característica de escrita GATT (GATT Write Characteristic).
+Este exemplo usa duas placas XIAO nRF54 para implementar um serviço BLE LED Button Service (LBS). Uma placa atua como um periférico BLE e faz advertising de um serviço LBS personalizado. A outra atua como um dispositivo central BLE, procura pelo serviço, conecta-se automaticamente e controla o LED no periférico por meio de uma característica de escrita GATT (GATT Write Characteristic).
 
 Nenhum arquivo `app.overlay` adicional é necessário porque a definição da placa já fornece os aliases `led0` e `sw0` usados por este exemplo.
 
@@ -886,7 +881,7 @@ monitor_speed = 115200
 ```
 
 
-##### BLE Peripheral
+##### Periférico BLE
 
 1. Configure o projeto em `CMakeLists.txt`.
 
@@ -1156,13 +1151,13 @@ monitor_speed = 115200
 
 #### Resultado
 
-1. Grave o firmware Peripheral em uma placa XIAO e o firmware Central em outra.
+1. Grave o firmware do Periférico em uma placa XIAO e o firmware do Central em outra.
 
-2. Redefina ambas as placas. Antes que uma conexão seja estabelecida, o LED do Peripheral pisca para indicar advertising, enquanto o LED do Central pisca para indicar scanning.
+2. Redefina ambas as placas. Antes que uma conexão seja estabelecida, o LED do Periférico pisca para indicar a publicidade, enquanto o LED do Central pisca para indicar a varredura.
 
-3. Quando o Central descobrir o Peripheral, as duas placas se conectarão automaticamente. Após a conexão ser estabelecida, ambos os LEDs param de piscar.
+3. Assim que o Central descobrir o Periférico, as duas placas se conectam automaticamente. Após a conexão ser estabelecida, ambos os LEDs param de piscar.
 
-4. Pressione o botão BOOT na placa Central. O Central grava `0` ou `1` no Peripheral por meio da GATT Write Characteristic, e o Peripheral atualiza seu LED de acordo.
+4. Pressione o botão BOOT na placa Central. O Central grava `0` ou `1` no Periférico por meio da GATT Write Characteristic, e o Periférico atualiza seu LED de acordo.
 
 <div style={{textAlign: 'center'}}>
   <img
@@ -1172,13 +1167,13 @@ monitor_speed = 115200
   />
 </div>
 
-Por meio deste exemplo, você aprenderá como construir uma aplicação completa de BLE Central e Peripheral, incluindo BLE Advertising, Scanning, Auto Connection, GATT Service Discovery e o processo básico de comunicação usando um botão em uma placa de desenvolvimento para controlar remotamente o LED em outra placa de desenvolvimento.
+Por meio deste exemplo, você aprenderá como construir uma aplicação completa de Central e Periférico BLE, incluindo BLE Advertising, Scanning, Auto Connection, GATT Service Discovery e o processo básico de comunicação usando um botão em uma placa de desenvolvimento para controlar remotamente o LED em outra placa de desenvolvimento.
 
 ## Resumo
 
-Este exemplo demonstra como construir uma aplicação BLE Central e Peripheral, incluindo BLE advertising, scanning, conexão automática, descoberta de serviço GATT e controle remoto de LED por meio de uma GATT Write Characteristic.
+Este exemplo demonstra como construir uma aplicação de Central e Periférico BLE, incluindo publicidade BLE, varredura, conexão automática, descoberta de serviço GATT e controle remoto de LED por meio de uma GATT Write Characteristic.
 
-## Suporte Técnico & Discussão de Produtos
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

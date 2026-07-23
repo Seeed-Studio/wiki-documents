@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'Hardware e especificações'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reCamera_basic_getting_start
+link:
+  type: generated-index
+  slug: recamera_basicardware_and_specs
+  title: Hardware e especificações básicas do reCamera
+  description: Selecione um tipo de produto sobre o qual você gostaria de aprender.
