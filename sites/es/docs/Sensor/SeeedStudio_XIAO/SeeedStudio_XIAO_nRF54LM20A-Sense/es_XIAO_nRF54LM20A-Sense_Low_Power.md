@@ -12,7 +12,7 @@ last_update:
   date: 06/01/2026
   author: Zeller
 createdAt: '2025-06-01'
-updatedAt: '2026-06-15'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_low_power/
 ---
 
@@ -41,11 +41,11 @@ url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_low_power/
   </table>
 </div>
 
-El XIAO nRF54LM20A está basado en el SoC nRF54LM20 y se caracteriza por un consumo de energía ultrabajo. Su excelente rendimiento de bajo consumo prolonga de forma efectiva el tiempo de funcionamiento del dispositivo en aplicaciones críticas para batería, como wearables, nodos finales de IoT y unidades de sensado remoto. Este documento describe cómo implementar y desplegar varios modos de bajo consumo en el XIAO nRF54LM20A.
+El XIAO nRF54LM20A está construido alrededor del SoC nRF54LM20 y presenta un consumo de energía ultrabajo. Su excelente rendimiento de bajo consumo extiende de forma efectiva el tiempo de funcionamiento del dispositivo para aplicaciones críticas en batería, como wearables, nodos finales de IoT y unidades de sensado remoto. Este documento describe cómo implementar y desplegar varios modos de bajo consumo en el XIAO nRF54LM20A.
 
 :::tip
 
-Este tutorial se ha desarrollado sobre la base del sistema de compilación PlatformIO y Zephyr RTOS. Si no estás familiarizado con la creación de un proyecto para el XIAO nRF54LM20A en PlatformIO, puedes ir a [Getting Sarted With Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/).
+Este tutorial se desarrolla sobre la base del sistema de compilación PlatformIO y Zephyr RTOS. Si no estás familiarizado con la creación de un proyecto para el XIAO nRF54LM20A en PlatformIO, puedes ir a [Getting Sarted With Seeed Studio XIAO nRF54LM20A](https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_getting_started/).
 
 :::
 
@@ -89,7 +89,7 @@ Si la batería tiene carga, nunca la sueldes a la placa, ya que esto puede quema
 
 ## Modo de bajo consumo
 
-El modo de bajo consumo se implementa en el XIAO nRF54LM20A utilizando funciones como System ON Sleep. En este modo, se reduce el consumo de energía mientras el sistema permanece operativo. El reloj de la CPU se bloquea y se suspende, pero el contenido de la RAM, los estados de los periféricos y el contexto del programa se conservan por completo, y los temporizadores de bajo consumo, incluido el GRTC, siguen funcionando. Esta sección verifica el modo de bajo consumo con la función `k_sleep` y la publicidad BLE.
+El modo de bajo consumo se implementa en el XIAO nRF54LM20A utilizando funciones como System ON Sleep. En este modo, el consumo de energía se reduce mientras el sistema permanece operativo. El reloj de la CPU se bloquea y se suspende, pero el contenido de la RAM, los estados de los periféricos y el contexto del programa se conservan por completo, y los temporizadores de bajo consumo, incluido el GRTC, siguen funcionando. Esta sección verifica el modo de bajo consumo con la función `k_sleep` y la publicidad BLE.
 
 ### Software
 
@@ -193,11 +193,11 @@ int main(void)
 
 ### Resultado
 
-Después de flashear el firmware, podemos utilizar un medidor de consumo para medir la corriente de funcionamiento del XIAO nRF54LM20A en condiciones de bajo consumo.
+Después de grabar el firmware, podemos utilizar un medidor de consumo para medir la corriente de funcionamiento del XIAO nRF54LM20A en condiciones de bajo consumo.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/low_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-Mientras tanto, puedes escanear mediante Bluetooth y encontrar el dispositivo anunciándose con el nombre `XIAO nRF54LM20A`.
+Mientras tanto, puedes escanear mediante Bluetooth y encontrar el dispositivo emitiendo anuncios bajo el nombre `XIAO nRF54LM20A`.
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
@@ -213,7 +213,7 @@ Mientras tanto, puedes escanear mediante Bluetooth y encontrar el dispositivo an
 <br/>
 :::tip
 
-Los resultados de prueba anteriores se miden en condiciones de laboratorio. Los valores pueden variar con diferentes entornos e instrumentos de prueba; consulta el rendimiento medido en la práctica.
+Los resultados de prueba anteriores se miden en condiciones de laboratorio. Los valores pueden variar con diferentes entornos e instrumentos de prueba; consulta el rendimiento realmente medido.
 
 :::
 
@@ -221,31 +221,35 @@ Los resultados de prueba anteriores se miden en condiciones de laboratorio. Los 
 
 El XIAO nRF54LM20A alcanza el modo de ultrabajo consumo mediante System OFF. Al entrar en este modo, todos los relojes de los periféricos se detienen y la mayoría de los periféricos se apagan por completo, lo que da como resultado una corriente en espera tan baja como 5 µA. Los desencadenantes de activación incluyen el temporizador GRTC o interrupciones GPIO. El estado del sistema no se conserva; después de la activación, el chip se comporta como si se hubiera ciclado la alimentación y el programa se reinicia desde la función main().
 
-Esta sección verifica el rendimiento práctico del modo System OFF en el XIAO nRF54LM20A utilizando el despertar por interrupción GPIO.
+Esta sección verifica el rendimiento práctico del modo System OFF en el XIAO nRF54LM20A utilizando la activación por interrupción GPIO.
 
 ### Software
 
-En este ejemplo, la Flash debe deshabilitarse manualmente; de lo contrario, introducirá una corriente de fuga adicional de aproximadamente 15 µA y afectará negativamente a las aplicaciones de ultrabajo consumo.
+En este ejemplo, la memoria flash externa debe colocarse manualmente en modo de apagado profundo, y sus pines SPI deben forzarse a estados definidos; de lo contrario, puede introducir corriente de fuga adicional.
 
 1. Modifica el archivo del árbol de dispositivos con el sufijo `.overlay`.
 
 ```dts
 &power_en {
-	// /delete-property/ regulator-boot-on;
+	/delete-property/ regulator-boot-on;
 };
 
 &pmic {
 	regulators {
 		LDO1 {
-			// /delete-property/ regulator-boot-on;
+			/delete-property/ regulator-boot-on;
 		};
 	};
 };
 
+&pmic_leds {
+	status = "disabled";
+};
+
 &py25q64 {
 	status = "okay";
-	// hold-gpios = <&gpio2 0 GPIO_ACTIVE_LOW>;
 };
+
 ```
 
 2. Modifica el archivo `prj.conf` para habilitar configuraciones que incluyen la gestión de energía.
@@ -255,6 +259,7 @@ CONFIG_SERIAL=y
 CONFIG_CONSOLE=y
 CONFIG_UART_CONSOLE=y
 CONFIG_PRINTK=y
+CONFIG_BOOT_BANNER=n
 
 CONFIG_GPIO=y
 CONFIG_SPI=y
@@ -262,9 +267,12 @@ CONFIG_FLASH=y
 CONFIG_SPI_NOR=y
 
 CONFIG_PM_DEVICE=y
-CONFIG_NRFX_POWER=y
+CONFIG_PM_DEVICE_RUNTIME=y
 CONFIG_POWEROFF=y
 CONFIG_HWINFO=y
+
+CONFIG_BT=n
+
 ```
 
 3. Escribe el programa main.c para despertar el chip del modo de ultrabajo consumo cuando se pulse el botón Boot integrado.
@@ -279,6 +287,15 @@ CONFIG_HWINFO=y
  *
  * SPDX-License-Identifier: Apache-2.0
  */
+/*
+ * Ultra-low-power System OFF demo for XIAO nRF54LM20A Sense.
+ *
+ * Confirmed board resources from the board DTS:
+ * - sw0 / BOOT: P0.09 (active low with pull-up)
+ * - External flash (PY25Q64HA) on spi00:
+ *   HOLD# P2.00, SCK P2.01, MOSI P2.02, WP# P2.03, MISO P2.04, CS# P2.05
+ * - RGB LEDs on P1.22 / P1.23 / P1.24
+ */
 #include <errno.h>
 #include <inttypes.h>
 #include <stdio.h>
@@ -291,8 +308,18 @@ CONFIG_HWINFO=y
 #include <zephyr/sys/poweroff.h>
 
 static const struct gpio_dt_spec sw0 = GPIO_DT_SPEC_GET(DT_ALIAS(sw0), gpios);
+static const struct gpio_dt_spec led_red = GPIO_DT_SPEC_GET(DT_ALIAS(led1), gpios);
+static const struct gpio_dt_spec led_blue = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
+static const struct gpio_dt_spec led_green = GPIO_DT_SPEC_GET(DT_ALIAS(led2), gpios);
+
+#if DT_NODE_EXISTS(DT_CHOSEN(zephyr_console))
 static const struct device *const cons = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
+#endif
+
+#if DT_NODE_HAS_STATUS(DT_NODELABEL(py25q64), okay)
 static const struct device *const flash_dev = DEVICE_DT_GET(DT_NODELABEL(py25q64));
+static const struct device *const flash_bus = DEVICE_DT_GET(DT_BUS(DT_NODELABEL(py25q64)));
+#endif
 
 static void print_reset_cause(uint32_t reset_cause)
 {
@@ -333,16 +360,30 @@ static int configure_gpio_wakeup(void)
 	return 0;
 }
 
+static void release_led(const struct gpio_dt_spec *led, const char *name)
+{
+	int rc;
+
+	if (!gpio_is_ready_dt(led)) {
+		return;
+	}
+
+	rc = gpio_pin_configure(led->port, led->pin, GPIO_DISCONNECTED);
+	if (rc < 0) {
+		printf("Warning: could not disconnect %s (%d)\n", name, rc);
+	}
+}
+
+static void release_led_gpios(void)
+{
+	release_led(&led_red, "red LED");
+	release_led(&led_blue, "blue LED");
+	release_led(&led_green, "green LED");
+}
+
 /*
- * SPI pin assignments for PY25Q64HA:
- *   P2.05 = CS#    -> OUTPUT HIGH  (keep flash deselected, prevent DPD wake)
- *   P2.00 = HOLD#  -> OUTPUT HIGH  (inactive)
- *   P2.03 = WP#    -> OUTPUT HIGH  (inactive)
- *   P2.01 = SCK    -> OUTPUT LOW   (deterministic level)
- *   P2.02 = MOSI   -> OUTPUT LOW   (deterministic level)
- *   P2.04 = MISO   -> INPUT PULL_DOWN (flash output, pull to known level)
- *
- * Datasheet requires all flash inputs at 0V or Vcc during DPD for 0.2uA typ.
+ * Put the external flash pins into deterministic, low-leakage states before
+ * System OFF. These pin numbers are confirmed by the board pinctrl and DTS.
  */
 static int configure_spi_pins_for_system_off(void)
 {
@@ -354,37 +395,31 @@ static int configure_spi_pins_for_system_off(void)
 		return -ENODEV;
 	}
 
-	/* CS# = HIGH: keep flash deselected */
 	rc = gpio_pin_configure(gpio2, 5, GPIO_OUTPUT_HIGH);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* HOLD# = HIGH: inactive */
 	rc = gpio_pin_configure(gpio2, 0, GPIO_OUTPUT_HIGH);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* WP# = HIGH: inactive */
 	rc = gpio_pin_configure(gpio2, 3, GPIO_OUTPUT_HIGH);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* SCK = LOW */
 	rc = gpio_pin_configure(gpio2, 1, GPIO_OUTPUT_LOW);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* MOSI = LOW */
 	rc = gpio_pin_configure(gpio2, 2, GPIO_OUTPUT_LOW);
 	if (rc < 0) {
 		return rc;
 	}
 
-	/* MISO = input with pull-down */
 	rc = gpio_pin_configure(gpio2, 4, GPIO_INPUT | GPIO_PULL_DOWN);
 	if (rc < 0) {
 		return rc;
@@ -395,118 +430,125 @@ static int configure_spi_pins_for_system_off(void)
 
 static int suspend_external_flash(void)
 {
-	const struct device *flash_bus = DEVICE_DT_GET(DT_BUS(DT_NODELABEL(py25q64)));
+	int first_error = 0;
 	int rc;
 
-	if (!device_is_ready(flash_dev)) {
-		printf("Flash device %s is not ready.\n", flash_dev->name);
-		return -ENODEV;
+#if DT_NODE_HAS_STATUS(DT_NODELABEL(py25q64), okay)
+	if (device_is_ready(flash_dev)) {
+		rc = pm_device_action_run(flash_dev, PM_DEVICE_ACTION_SUSPEND);
+		if ((rc < 0) && (first_error == 0)) {
+			first_error = rc;
+			printf("Warning: could not suspend external flash (%d)\n", rc);
+		}
+	} else {
+		first_error = -ENODEV;
+		printf("Warning: flash device is not ready; skipping driver DPD.\n");
 	}
 
-	printf("Flash device: %s\n", flash_dev->name);
-
-	/* Step 1: Suspend flash — spi-nor driver sends DPD (0xB9) automatically */
-	printf("Suspending external flash (entering DPD)...\n");
-	rc = pm_device_action_run(flash_dev, PM_DEVICE_ACTION_SUSPEND);
-	if (rc < 0) {
-		printf("Could not suspend external flash (%d)\n", rc);
-		return rc;
-	}
-	printf("External flash suspended.\n");
-
-	/* Step 2: Suspend SPI bus */
 	if (device_is_ready(flash_bus)) {
 		rc = pm_device_action_run(flash_bus, PM_DEVICE_ACTION_SUSPEND);
-		if (rc < 0) {
-			printf("Could not suspend SPI bus (%d)\n", rc);
-			return rc;
+		if ((rc < 0) && (first_error == 0)) {
+			first_error = rc;
+			printf("Warning: could not suspend SPI bus (%d)\n", rc);
 		}
-		printf("SPI bus suspended.\n");
+	} else if (first_error == 0) {
+		first_error = -ENODEV;
+		printf("Warning: flash SPI bus is not ready.\n");
 	}
+#else
+	first_error = -ENODEV;
+	printf("Warning: py25q64 is not enabled in DTS.\n");
+#endif
 
-	/* Step 3: Drive all SPI GPIOs to deterministic levels */
 	rc = configure_spi_pins_for_system_off();
-	if (rc < 0) {
-		printf("Could not configure SPI pins (%d)\n", rc);
-		return rc;
+	if ((rc < 0) && (first_error == 0)) {
+		first_error = rc;
+		printf("Warning: could not configure flash SPI pins (%d)\n", rc);
 	}
-	printf("SPI GPIO pins configured for system_off.\n");
 
-	return 0;
+	return first_error;
+}
+
+static void suspend_console_best_effort(void)
+{
+#if DT_NODE_EXISTS(DT_CHOSEN(zephyr_console))
+	int rc;
+
+	if (!device_is_ready(cons)) {
+		return;
+	}
+
+	rc = pm_device_action_run(cons, PM_DEVICE_ACTION_SUSPEND);
+	if (rc < 0) {
+		printf("Warning: could not suspend console (%d)\n", rc);
+	}
+#endif
 }
 
 int main(void)
 {
 	int rc;
-
-	if (!device_is_ready(cons)) {
-		printf("%s: console device not ready.\n", cons->name);
-		return 0;
-	}
-
-	printf("\n=== %s system off demo with PY25Q64HA ===\n", CONFIG_BOARD);
-
 	uint32_t reset_cause = 0U;
+
+	printf("\n=== %s ultra-low-power system off demo ===\n", CONFIG_BOARD);
 
 	rc = hwinfo_get_reset_cause(&reset_cause);
 	if (rc == 0) {
 		print_reset_cause(reset_cause);
 	} else {
-		printf("Could not read reset cause (%d)\n", rc);
+		printf("Warning: could not read reset cause (%d)\n", rc);
 	}
 
 	rc = configure_gpio_wakeup();
 	if (rc < 0) {
+		printf("Error: wakeup source configuration failed, aborting System OFF.\n");
 		return 0;
 	}
+
+	release_led_gpios();
 
 	rc = suspend_external_flash();
 	if (rc < 0) {
-		printf("Aborting system off because flash did not enter low power.\n");
-		return 0;
+		printf("Warning: flash low-power preparation incomplete (%d)\n", rc);
 	}
 
-	printf("Entering system off; press sw0 to restart\n");
+	printf("Entering system off; press BOOT/SW0 to restart.\n");
+	k_msleep(20);
 
-	rc = pm_device_action_run(cons, PM_DEVICE_ACTION_SUSPEND);
-	if (rc < 0) {
-		printf("Could not suspend console (%d)\n", rc);
-		return 0;
-	}
+	suspend_console_best_effort();
 
 	rc = hwinfo_clear_reset_cause();
 	if (rc < 0) {
-		printf("Could not clear reset cause (rc=%d)\n", rc);
-		return 0;
+		/* Clear failure should not stop entry into System OFF. */
+		printf("Warning: could not clear reset cause (%d)\n", rc);
 	}
 
 	sys_poweroff();
 
-	return 0;
+	while (1) {
+		k_sleep(K_FOREVER);
+	}
 }
+
 ```
 
 </details>
 
 ### Resultado
 
-El dispositivo entra en modo de ultra bajo consumo de forma predeterminada después de encenderse. El XIAO nRF54LM20A se mide con un probador de consumo de energía, obteniendo una corriente de funcionamiento promedio de aproximadamente 5,43 µA cuando se alimenta con una batería de 3,7 V.
+Después del arranque, el firmware prepara la fuente de activación y los periféricos externos, luego entra automáticamente en System OFF. El XIAO nRF54LM20A se mide con un probador de consumo de energía, obteniendo una corriente de funcionamiento media de aproximadamente 3,74 µA cuando se alimenta con una batería de 3,7 V.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_4.png" style={{width:800, height:'auto'}}/></div>
-<br/>
-Al presionar el botón BOOT integrado a través de un monitor serie, puedes despertar el chip para imprimir información de estado antes de que vuelva a entrar en sueño profundo.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/low_plus_3.77_2.png" style={{width:800, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/low_power_5.png" style={{width:800, height:'auto'}}/></div>
-<br/>
 :::tip
 
-Los resultados de prueba anteriores se miden en condiciones de laboratorio. Los valores pueden variar según diferentes entornos e instrumentos de prueba; consulta el rendimiento realmente medido.
+Los resultados de la prueba anterior se miden en condiciones de laboratorio. Los valores pueden variar según diferentes entornos e instrumentos de prueba; consulte el rendimiento realmente medido.
 
 :::
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerle diferentes tipos de soporte y garantizar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

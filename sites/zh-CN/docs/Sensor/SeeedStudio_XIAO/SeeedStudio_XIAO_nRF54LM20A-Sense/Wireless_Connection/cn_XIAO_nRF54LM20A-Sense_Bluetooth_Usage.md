@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-20'
-updatedAt: '2026-06-15'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_bluetooth_lowpower/
 ---
 
@@ -44,7 +44,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_bluetooth_lowpower/
 
 Bluetooth Low Energy（BLE）是 Bluetooth 4.0 中引入的一种低功耗无线通信标准。它专为间歇性的小数据传输而设计，可在数十米范围内实现无线连接，同时将平均电流消耗保持在微安级的超低水平。BLE 被广泛应用于可穿戴设备、智能家居传感器、室内定位以及工业物联网场景。
 
-得益于 nRF54LM20A SoC，XIAO nRF54LM20A 系列支持 Bluetooth LE、Matter、Thread、Zigbee 和 2.4GHz 私有协议，能够提供高达 4 Mbps 的峰值数据速率，非常适合低延迟场景。同时，它还支持 Bluetooth Channel Sounding 和 Bluetooth Mesh。本文将通过两个实用示例来展示其 BLE 功能：基础广播 Beacon 发送，以及 Central 与 Peripheral 设备之间的 BLE LED Button Service（LBS）连接。
+得益于 nRF54LM20A SoC，XIAO nRF54LM20A 系列支持 Bluetooth LE、Matter、Thread、Zigbee 和 2.4GHz 私有协议，在低延迟场景下可提供高达 4 Mbps 的峰值数据速率。它还支持 Bluetooth Channel Sounding 和 Bluetooth Mesh。本文通过两个实用示例来展示其 BLE 功能：基础广播 Beacon 发送，以及 Central 与 Peripheral 设备之间的 BLE LED Button Service（LBS）连接。
 
 :::tip
 
@@ -75,9 +75,9 @@ Bluetooth Low Energy（BLE）是 Bluetooth 4.0 中引入的一种低功耗无线
 </table>
 </div>
 
-## Bluetooth 天线
+## 蓝牙天线
 
-该开发板使用外置 Bluetooth 天线。为了确保更好的 Bluetooth 信号质量并提升你的 Bluetooth 使用体验，建议安装 Bluetooth 天线。
+该开发板使用外置蓝牙天线。为确保更好的蓝牙信号质量并提升你的蓝牙使用体验，建议安装蓝牙天线。
 连接方式如下所示：
 
 <div style={{textAlign: 'center'}}>
@@ -90,7 +90,7 @@ Bluetooth Low Energy（BLE）是 Bluetooth 4.0 中引入的一种低功耗无线
 
 ### 天线安装
 
-Seeed Studio XIAO nRF54LM20A 的包装中包含一根专用的 2.4 GHz 天线。为了获得最佳的 Bluetooth 性能，请将随附天线连接到板载天线连接器上。
+Seeed Studio XIAO nRF54LM20A 的包装中包含一根专用的 2.4 GHz 天线。为了获得最佳的蓝牙性能，请将随附天线连接到板载天线连接器上。
 <!--  -->
 <div class="table-center">
  <table>
@@ -113,11 +113,11 @@ Seeed Studio XIAO nRF54LM20A 的包装中包含一根专用的 2.4 GHz 天线。
 
 ## 应用
 
-本节将通过实际案例介绍 BLE 的核心特性，以及在 XIAO nRF54LM20A Sense 上使用 BLE 的方法。
+本节将通过实际案例介绍 BLE 的核心特性以及在 XIAO nRF54LM20A Sense 上使用 BLE 的方法。
 
 ### BLE Beacon
 
-本示例在 XIAO nRF54LM20A 上实现一个 BLE Beacon。启动后，设备会持续广播包含 Manufacturer Specific Data 的广播数据包。数据包中包含一个每秒自增一次的计数器，可通过 nRF Connect 实时监控数据变化。
+本示例在 XIAO nRF54LM20A 上实现一个 BLE Beacon。启动后，设备会持续广播包含 Manufacturer Specific Data 的广播数据包。数据包中包含一个每秒递增一次的计数器，可通过 nRF Connect 实时监控数据变化。
 
 #### 软件
 
@@ -199,6 +199,20 @@ LOG_MODULE_REGISTER(ble_beacon, LOG_LEVEL_INF);
 
 static uint32_t manufacturer_counter;
 
+static const uint8_t adv_flags[] __aligned(4) = {
+    BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR,
+};
+
+static const uint8_t adv_name[] __aligned(4) = CONFIG_BT_DEVICE_NAME;
+
+static uint8_t manuf_data[MANUF_DATA_SIZE] __aligned(4);
+
+static const struct bt_data ad[] __aligned(4) = {
+    BT_DATA(BT_DATA_FLAGS, adv_flags, sizeof(adv_flags)),
+    BT_DATA(BT_DATA_NAME_COMPLETE, adv_name, sizeof(adv_name) - 1),
+    BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
+};
+
 /* Power enable regulator (GPIO1_12) - must be enabled before BLE init */
 static const struct device *const power_en_dev =
     DEVICE_DT_GET(DT_NODELABEL(power_en));
@@ -206,6 +220,19 @@ static const struct device *const power_en_dev =
 static void adv_update_work_handler(struct k_work *work);
 
 static K_WORK_DELAYABLE_DEFINE(adv_update_work, adv_update_work_handler);
+
+static void fill_manuf_data(uint32_t counter)
+{
+    /* [Company ID (2B)][Counter (4B)][Custom (2B)] */
+    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
+    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
+    manuf_data[2] = (counter >> 0) & 0xFF;
+    manuf_data[3] = (counter >> 8) & 0xFF;
+    manuf_data[4] = (counter >> 16) & 0xFF;
+    manuf_data[5] = (counter >> 24) & 0xFF;
+    manuf_data[6] = 0xAA;
+    manuf_data[7] = 0xBB;
+}
 
 static int enable_power(void)
 {
@@ -230,26 +257,9 @@ static int enable_power(void)
 static void adv_update_work_handler(struct k_work *work)
 {
     int err;
-    uint8_t manuf_data[MANUF_DATA_SIZE];
 
     manufacturer_counter++;
-
-    /* Build manufacturer data: [Company ID (2B)][Counter (4B)][Custom (2B)] */
-    manuf_data[0] = MANUF_COMPANY_ID & 0xFF;
-    manuf_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-    manuf_data[2] = (manufacturer_counter >> 0) & 0xFF;
-    manuf_data[3] = (manufacturer_counter >> 8) & 0xFF;
-    manuf_data[4] = (manufacturer_counter >> 16) & 0xFF;
-    manuf_data[5] = (manufacturer_counter >> 24) & 0xFF;
-    manuf_data[6] = 0xAA;
-    manuf_data[7] = 0xBB;
-
-    const struct bt_data ad[] = {
-        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-        BT_DATA(BT_DATA_MANUFACTURER_DATA, manuf_data, sizeof(manuf_data)),
-    };
+    fill_manuf_data(manufacturer_counter);
 
     err = bt_le_adv_update_data(ad, ARRAY_SIZE(ad), NULL, 0);
     if (err < 0) {
@@ -264,7 +274,6 @@ static void adv_update_work_handler(struct k_work *work)
 int main(void)
 {
     int err;
-    uint8_t init_data[MANUF_DATA_SIZE];
 
     LOG_INF("BLE Manufacturer Data Beacon");
 
@@ -286,21 +295,7 @@ int main(void)
     LOG_INF("BLE initialized");
 
     /* Initial advertising data with counter = 0 */
-    init_data[0] = MANUF_COMPANY_ID & 0xFF;
-    init_data[1] = (MANUF_COMPANY_ID >> 8) & 0xFF;
-    init_data[2] = 0;
-    init_data[3] = 0;
-    init_data[4] = 0;
-    init_data[5] = 0;
-    init_data[6] = 0xAA;
-    init_data[7] = 0xBB;
-
-    const struct bt_data ad[] = {
-        BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-        BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-        BT_DATA(BT_DATA_MANUFACTURER_DATA, init_data, sizeof(init_data)),
-    };
+    fill_manuf_data(0);
 
     err = bt_le_adv_start(BT_LE_ADV_NCONN, ad, ARRAY_SIZE(ad), NULL, 0);
     if (err < 0) {
@@ -325,14 +320,14 @@ int main(void)
 
 #### 结果
 
-1. 在烧录固件后，安装 nRF Connect 应用以扫描和检测 BLE 设备。
+1. 在烧录固件后，安装 nRF Connect 应用以扫描并检测 BLE 设备。
 
 同时，你可以在各大手机应用商店中搜索并下载 nRF Connect 应用，它可以让你的手机扫描并连接蓝牙设备。
 
-- Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
-- IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
+- Android：[nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
+- IOS：[nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-2. 安装软件后，扫描名为 **XIAO-Beacon** 的蓝牙设备，并检查接收到的 Manufacturer Data。同时，打开串口以查看输出日志。
+2. 安装软件后，扫描名为 **XIAO-Beacon** 的蓝牙设备，并查看接收到的 Manufacturer Data。同时，打开串口以查看输出日志。
 
 <div className="table-center">
 <table align="center">
@@ -359,21 +354,21 @@ manuf_data[6] = 0xAA;
 manuf_data[7] = 0xBB;
 ```
 
-- 打开串口工具，检查计数器的数值是否逐行打印，当前计数应达到 3。
+- 打开串口工具，可以看到计数器的数值被一行一行地打印出来，当前计数已达到 3。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ble_beacon_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-从上述结果可以清晰地了解在 XIAO nRF54LM20A Sense 上发送自定义 BLE 广播数据包的过程，这有助于进一步研究 BLE 的工作特性。在具体应用场景中，可以通过广播数据来判断触发条件，而无需建立实际连接。
+从以上结果可以清晰地了解在 XIAO nRF54LM20A Sense 上发送自定义 BLE 广播数据包的过程，这有助于进一步研究 BLE 的工作特性。在具体应用场景中，可以通过广播数据来判断触发条件，而无需建立实际连接。
 
 ### BLE LBS
 
-本示例使用两块 XIAO nRF54 开发板来实现 BLE LED Button Service（LBS）。一块板作为 BLE Peripheral，广播自定义的 LBS 服务；另一块板作为 BLE Central，扫描该服务并自动连接，然后通过 GATT 写特征来控制 Peripheral 上的 LED。
+本示例使用两块 XIAO nRF54 开发板来实现 BLE LED Button Service（LBS）。一块板作为 BLE 外设，广播自定义的 LBS 服务；另一块板作为 BLE 中心设备，扫描该服务并自动连接，然后通过 GATT 写特征来控制外设上的 LED。
 
 不需要额外的 `app.overlay` 文件，因为开发板定义中已经提供了本示例所使用的 `led0` 和 `sw0` 别名。
 
 #### 软件
 
-##### BLE Central
+##### BLE 中心设备
 
 1. 在 `CMakeLists.txt` 中配置工程。
 
@@ -1160,7 +1155,7 @@ monitor_speed = 115200
 
 2. 重置两块开发板。在建立连接之前，外设的 LED 会闪烁以指示正在广播，而中心的 LED 会闪烁以指示正在扫描。
 
-3. 一旦中心发现外设，两块开发板会自动连接。连接建立后，两块板上的 LED 都会停止闪烁。
+3. 一旦中心发现外设，两块开发板会自动建立连接。连接建立后，两块板上的 LED 都会停止闪烁。
 
 4. 按下中心板上的 BOOT 按钮。中心通过 GATT 写特征向外设写入 `0` 或 `1`，外设会相应更新其 LED 状态。
 
@@ -1172,7 +1167,7 @@ monitor_speed = 115200
   />
 </div>
 
-通过这个示例，你将学习如何构建一个完整的 BLE 中心和外设应用，包括 BLE 广播、扫描、自动连接、GATT 服务发现，以及使用一块开发板上的按钮远程控制另一块开发板上 LED 的基本通信流程。
+通过本示例，你将学习如何构建一个完整的 BLE 中心和外设应用，包括 BLE 广播、扫描、自动连接、GATT 服务发现，以及使用一块开发板上的按钮远程控制另一块开发板上 LED 的基本通信流程。
 
 ## 总结
 
@@ -1180,7 +1175,7 @@ monitor_speed = 115200
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

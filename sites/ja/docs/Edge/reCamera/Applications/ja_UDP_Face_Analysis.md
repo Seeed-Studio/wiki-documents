@@ -17,7 +17,7 @@ last_update:
   date: 04/30/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-05-06'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/ja/recamera_udp_face_analysis/
 ---
 

@@ -8,7 +8,7 @@ last_update:
   date: 05/27/2026
   author: Carla
 createdAt: '2024-10-30'
-updatedAt: '2026-05-27'
+updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/cn/xiao_rp2350_arduino/
 ---
 import Tabs from '@theme/Tabs';

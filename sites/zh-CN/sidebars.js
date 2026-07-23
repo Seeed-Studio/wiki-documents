@@ -1228,6 +1228,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_with_MicroPython',
               ],
             },
+            {
+              type: 'category',
+              label: '平台',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_with_Arduino',
+              ],
+            },
           ],
         },
         {
@@ -2157,7 +2164,7 @@ const sidebars = {
           },
           items: [
             'Sensor/reSpeaker_clip/cn_respeaker_clip_getting_started',
-            'Sensor/reSpeaker_clip/cn_respeaker_clip_python_control',
+            'Sensor/reSpeaker_clip/cn_respeaker_clip_basic_sdk_guide',
           ],
         },
         {
@@ -2213,7 +2220,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_openclaw',
-
+                'Sensor/reSpeaker_clip/cn_respeaker_clip_python_usage_stt_llm_transcribe',
               ],
             },
           ],
@@ -4064,6 +4071,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_industrial_vision_monitoring_on_industrial',
               ]
             },
             // Generative AI

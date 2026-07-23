@@ -1,6 +1,6 @@
 ---
 description: Detección de palabras clave con ReSpeaker Lite y TensorFlow Lite
-title: Detección de palabras clave en reSpeaker Lite 
+title: Detección de palabras clave en reSpeaker Lite
 keywords:
   - ESP32S3
   - XIAO
@@ -11,7 +11,7 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-07-03'
-updatedAt: '2024-10-09'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/es/respeaker_streams_i2s_tflite/
 ---
 

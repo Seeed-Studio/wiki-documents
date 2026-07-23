@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_ncs
 sku: 100018440
 last_update:
-  date: 06/15/2026
+  date: 07/22/2026
   author: Brandy
 createdAt: '2025-05-13'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_ncs/
 ---
 
@@ -50,7 +50,7 @@ nRF Connect SDK (NCS) は、Zephyr RTOS リアルタイムオペレーティン�
 
 このチュートリアルでは、nRF Connect SDK 開発環境のセットアップとツールチェーンのインストールから、最初のプロジェクトの作成と設定、そして最初のサンプルプログラムを XIAO nRF54LM20A Sense に書き込んで実行を確認するまで、全体のプロセスをステップバイステップで案内します。
 
-## NCS の使用を開始する
+## NCS を使い始める
 
 ### ハードウェアの準備
 
@@ -133,7 +133,7 @@ nRF Connect SDK はかなり大きいため、初回インストールには時�
 
 インストールが完了すると、nRF Connect SDK 用の統合環境が自動的にセットアップされます。以降の開発をスムーズに進めるため、この段階で環境を検証することをお勧めします。
 
-1. nRF Connect SDK に内蔵されているターミナル **nRF Terminal** を起動します。
+1. nRF Connect SDK に内蔵されているターミナルである **nRF Terminal** を起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -142,7 +142,7 @@ nRF Connect SDK はかなり大きいため、初回インストールには時�
 nRF Connect SDK (NCS) のバージョンとツールチェーンのバージョンがどちらも 3.3.0 であることを必ず確認してください。異なるバージョンを混在させると、ビルドや互換性の問題が発生する可能性があります。
 :::
 
-2. 必要なツールのバージョン情報を確認するためのコマンドを入力します。以下のコマンドを 1 つずつコピーして実行し、検証できます。
+2. 必要なツールのバージョン情報を確認するためのコマンドを入力します。以下のコマンドを 1 行ずつコピーして実行し、検証できます。
 
 ```bash
 # Check west (project manager & build entry) version
@@ -194,7 +194,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_9.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-2. VS Code の左下にある **Settings** を開きます。
+2. VS Code 左下の **Settings** を開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_10.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -214,7 +214,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_13.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-3. 作成が完了したら、複製されたプロジェクトを開きます。
+3. 作成が完了したら、コピーされたプロジェクトを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_14.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -402,7 +402,7 @@ int main(void)
 
 </details>
 
-3. prj.conf ファイルを変更して、対応する設定を有効にします。
+3. prj.conf ファイルを修正して、対応する設定を有効にします。
 
 ```conf
 CONFIG_GPIO=y
@@ -410,7 +410,7 @@ CONFIG_PWM=y
 CONFIG_SERIAL=n
 ```
 
-1. 拡張機能の APPLICATIONS セクションに移動し、Add build configuration を選択します。SDK とツールチェーンのバージョンを確認します。Board Target を xiao_nrf54lm20a/nrf54lm20a/cpuapp に設定し、ベース設定ファイルを prj.conf に設定します。ページを下にスクロールし、Generate and Build をクリックして対応する設定ファイルを生成します。
+1. 拡張機能の APPLICATIONS セクションに移動し、Add build configuration を選択します。SDK とツールチェーンのバージョンを確認します。Board Target を xiao_nrf54lm20a/nrf54lm20a/cpuapp に設定し、ベース設定ファイルを prj.conf に設定します。ページを下までスクロールし、Generate and Build をクリックして対応する設定ファイルを生成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/4_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -460,10 +460,18 @@ west flash --build-dir build_1
 
 SDK のダウンロードが非常に遅い、または途中で止まってしまう場合は、**aria2** を使用して複数接続で必要なパッケージをダウンロードし、その後 **nrfutil** を使用して SDK をインストールできます。
 
-**ステップ 1. aria2 をインストールする**
+### ステップ 1. aria2 をインストールする
+
+macOS の場合：
 
 ```bash
 brew install aria2
+```
+
+Windows の場合：
+
+```bash
+winget install aria2.aria2
 ```
 
 **ステップ 2. ダウンロードディレクトリを作成する**
@@ -500,7 +508,7 @@ nrfutil sdk-manager install v3.3.0 \
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>

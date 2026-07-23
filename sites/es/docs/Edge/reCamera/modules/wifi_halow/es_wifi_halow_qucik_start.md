@@ -10,10 +10,10 @@ sku: 100063704
 image: https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/getting_start/wifi_halow_log.jpg
 sidebar_position: 1
 last_update:
-  date: 2026-06-02T00:00:00.000Z
+  date: 2026-06-02
   author: Sizhao zhou
 createdAt: '2026-06-02'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/es/wifi_halow_getting_started/
 ---
 

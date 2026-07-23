@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_pin_multiplexing/
 ---
 
@@ -47,11 +47,11 @@ XIAO nRF54LM20A 具有丰富的引脚资源，原生支持使用 Digital、Analo
 :::tip
 
 本教程基于 PlatformIO 构建系统和 Zephyr RTOS 开发。
-如果你还不熟悉在 PlatformIO 下为 XIAO nRF54LM20A 创建项目，可以跳转到 [Getting Sarted With Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/)
+如果你还不熟悉如何在 PlatformIO 下为 XIAO nRF54LM20A 创建项目，可以跳转到 [Getting Sarted With Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/)
 
 :::
 
-## 数字量
+## 数字引脚
 
 数字引脚主要通过输出高低电平，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细阐述 XIAO nRF54LM20A 上数字引脚的底层驱动逻辑和实际调用方式。
 
@@ -173,7 +173,7 @@ int main(void)
 
 ### 结果
 
-烧录固件后，按下按钮，蜂鸣器会发出滴答声，同时串口会打印状态。
+烧录固件后，按下按钮，蜂鸣器会发出滴声，同时串口会打印状态。
 
 :::tip
 
@@ -203,7 +203,7 @@ PWM 是一种基于数字输出 GPIO 实现的定时波形输出功能。它以�
  </tr>
     <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
@@ -308,7 +308,7 @@ CONFIG_PRINTK=y
 CONFIG_UART_CONSOLE=y
 ```
 
-3. 编写 main.c 程序以实现 PWM 舵机控制功能，并配置 PWM 周期等参数。
+3. 编写 main.c 程序，实现 PWM 舵机控制功能，并配置 PWM 周期等参数。
 
 ```cpp
 /*
@@ -393,17 +393,17 @@ int main(void)
 
 ### 结果
 
-固件烧录完成后，舵机以 33 弧度每秒的速度从 0° 旋转到 180°，然后再旋转回 0°。
+固件烧录完成后，舵机将以 33 弧度每秒的速度从 0° 旋转到 180°，然后再旋转回 0°。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.gif" style={{width:800, height:'auto'}}/></div>
 
-同时，会通过 USB 串口打印当前舵机角度。
+同时，当前舵机角度会通过 USB 串口打印输出。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_2.png" style={{width:800, height:'auto'}}/></div>
 
 ## 模拟量
 
-模拟量 I/O 基于模数转换器（ADC），主要用于采集外部传感器输出的连续模拟电压信号。获取原始数字采样值（Raw Data）后，可通过特定的线性或非线性转换算法映射为实际工程测量值。该功能广泛应用于电池电压采样，以及对土壤湿度、环境温度等物理量的实时监测场景。
+模拟量 I/O 基于模数转换器（ADC），主要用于采集外部传感器输出的连续模拟电压信号。获取原始数字采样值（Raw Data）后，可通过特定的线性或非线性转换算法映射为实际工程测量值。该功能广泛应用于电池电压采样，以及对土壤湿度、环境温度等物理量的实时监测等场景。
 
 ### 硬件准备
 
@@ -420,7 +420,7 @@ int main(void)
  </tr>
     <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
@@ -502,7 +502,7 @@ CONFIG_PRINTK=y
 CONFIG_UART_CONSOLE=y
 ```
 
-3. 编写 main.c 程序，使用 P1.00 引脚作为模拟输入引脚，并每隔 500ms 通过 USB 串口输出读取到的数值。
+3. 编写 main.c 程序，将 P1.00 引脚作为模拟输入引脚，并每隔 500ms 通过 USB 串口输出读取到的数值。
 
 ```cpp
 /*
@@ -564,7 +564,7 @@ int main(void)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_3.jpg" style={{width:800, height:'auto'}}/></div>
 <br/>
-在电脑上打开串口助手，观察输出的数值。
+在电脑上打开串口助手，观察输出数值。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_4.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -587,7 +587,7 @@ int main(void)
 
 ## UART
 
-通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预先约定的波特率来实现数据的异步收发。在物理连线方面，只需将设备的 TX 和 RX 引脚交叉连接并共地，即可建立全双工数据链路。由于硬件成本极低且支持同时收发数据，UART 被广泛应用于嵌入式系统中的控制台日志输出、模块化外设调试以及低带宽点对点数据通信。
+通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预先约定的波特率来实现数据的异步发送与接收。在物理连线方面，只需将设备的 TX 与 RX 引脚交叉连接并共地，即可建立全双工数据链路。由于硬件成本极低且支持收发同时进行，UART 被广泛应用于嵌入式系统中的控制台日志输出、模块化外设调试以及低带宽点对点数据通信等场景。
 
 ### 硬件准备
 
@@ -602,7 +602,7 @@ int main(void)
  </tr>
     <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
@@ -616,7 +616,7 @@ int main(void)
 
 ### 软件准备
 
-根据 XIAO nRF54LM20A 的引脚分布，P1.08 和 P1.09 可分别被选作串口通信的 TX 和 RX 引脚。
+根据 XIAO nRF54LM20A 的引脚分布，P1.08 和 P1.09 可分别选择为串口通信的 TX 和 RX 引脚。
 
 :::tip
 
@@ -848,7 +848,7 @@ int main(void)
 
 ### 结果
 
-1. 按照下表顺序进行接线
+1. 按照表格顺序进行接线
 
 | XIAO nRF54LM20A | CH340 |
 | --------------- | ----- |
@@ -879,7 +879,7 @@ I2C 是一种同步、半双工的数据通信协议。它通过 SCL 时钟线�
  </tr>
     <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
@@ -893,7 +893,7 @@ I2C 是一种同步、半双工的数据通信协议。它通过 SCL 时钟线�
 
 ### 软件准备
 
-根据 XIAO nRF54LM20A 的引脚分布，P1.03 和 P1.07 可以被配置为 I2C 引脚。
+根据 XIAO nRF54LM20A 的引脚分布，P1.03 和 P1.07 可以配置为 I2C 引脚。
 
 :::tip
 
@@ -944,7 +944,7 @@ CONFIG_CHARACTER_FRAMEBUFFER=y
 
 ```
 
-3. 编写主函数以设置字符串的显示位置和功能。
+3. 编写主函数，为字符串设置显示位置和功能。
 
 <details>
 
@@ -1112,7 +1112,7 @@ int main(void) {
 
 ## SPI
 
-SPI 是一种高速、同步、全双工的通信协议。与异步通信不同，SPI 依赖专用的 SCLK 时钟线来实现精确的数据同步。它通常采用由 MOSI、MISO 和片选 CS/SS 引脚组成的经典四线硬件拓扑结构。凭借独立的数据发送和接收通道以及较高的总线时钟频率，SPI 具备出色的数据吞吐能力。它被广泛应用于对带宽要求较高的外设驱动场景，例如 Flash 和 SD 卡等大容量存储设备、高分辨率高刷新率的屏幕显示，以及高频采样传感器。
+SPI 是一种高速、同步、全双工的通信协议。与异步通信不同，SPI 依赖专用的 SCLK 时钟线实现精确的数据同步。它通常采用由 MOSI、MISO 和片选 CS/SS 引脚组成的经典四线硬件拓扑结构。凭借独立的数据发送和接收通道以及较高的总线时钟频率，SPI 具备出色的数据吞吐能力。它被广泛应用于对带宽要求较高的外设驱动场景，例如 Flash 和 SD 卡等大容量存储设备、高分辨率高刷新率的屏幕显示，以及高频采样传感器。
 
 ### 硬件准备
 
@@ -1127,7 +1127,7 @@ SPI 是一种高速、同步、全双工的通信协议。与异步通信不同�
  </tr>
     <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
@@ -1426,7 +1426,7 @@ int main(void)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

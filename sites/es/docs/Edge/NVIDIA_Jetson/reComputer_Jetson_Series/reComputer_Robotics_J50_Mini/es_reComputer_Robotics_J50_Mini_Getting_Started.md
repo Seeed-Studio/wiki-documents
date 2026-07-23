@@ -13,8 +13,8 @@ last_update:
   date: 05/12/2026
   author: Dayu
 createdAt: '2026-05-12'
-updatedAt: '2026-05-12'
-url: https://wiki.seeedstudio.com/es/ai_robotics_recomputer_robotics_j50_mini_getting_started/
+updatedAt: '2026-05-13'
+url: https://wiki.seeedstudio.com/es/recomputer_robotics_j50_mini_getting_started/
 ---
 
 # Primeros pasos con reComputer Robotics J50 Mini

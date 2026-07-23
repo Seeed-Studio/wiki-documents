@@ -14,6 +14,9 @@ sidebar_position: 6
 last_update:
   date: 06/30/2026
   author: Citric
+createdAt: '2026-07-09'
+url: https://wiki.seeedstudio.com/ja/epaper_work_with_lvgl/
+updatedAt: '2026-07-08'
 ---
 
 # LVGL を使う

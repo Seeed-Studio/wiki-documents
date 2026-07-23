@@ -15,11 +15,10 @@ last_update:
   date: 05/15/2026
   author: Tienjuiwong
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-05-15'
-url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_get_started/
+updatedAt: '2026-05-19'
+url: https://wiki.seeedstudio.com/cn/reachymini_platforms_reachy_mini_get_started/
 ---
 
 # Reachy Mini（无线版）- 设置指南

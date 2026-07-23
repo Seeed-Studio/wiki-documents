@@ -231,7 +231,7 @@ function buildUrl(prefix, slug) {
 function dumpFrontmatter(data) {
   let dumped = yaml.dump(data, {
     noRefs: true,
-    lineWidth: 1000,
+    lineWidth: -1,
   }).trimEnd();
 
   dumped = keepLastUpdateDateYMD(dumped, data);

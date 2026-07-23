@@ -14,6 +14,7 @@ last_update:
   author: Allen
 createdAt: '2025-03-25'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_esphome/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -4,10 +4,10 @@ title: FAQs for Jetson Usage
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_FAQ
 last_update:
-  date: 7/5/2023
+  date: 07/15/2026
   author: Seraphina
 createdAt: '2025-04-11'
-updatedAt: '2026-06-11'
+updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/Jetson_FAQ/
 ---
 
@@ -127,6 +127,10 @@ For details, please click [here](/how_to_use_camera_imx219)
 #### Q22: What changes does JetPack 7.2 bring to Jetson AGX Orin inference performance?
 
 For details, please click [here](/jetpack72_deep_dive)
+
+#### Q23: How to restore Wi-Fi modules such as Intel AX210/AX200 or Realtek RTL8852BE after upgrading to JetPack 7.2?
+
+For details, please click [here](/jetpack72_ax210_ax200_wifi_setup_guide)
 
 ## Tech support
 

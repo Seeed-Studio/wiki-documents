@@ -10,7 +10,7 @@ last_update:
   date: 6/29/2023
   author: Lakshantha
 createdAt: '2024-04-08'
-updatedAt: '2026-04-20'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_J30_40_with_Jetson_getting_start/
 ---
 

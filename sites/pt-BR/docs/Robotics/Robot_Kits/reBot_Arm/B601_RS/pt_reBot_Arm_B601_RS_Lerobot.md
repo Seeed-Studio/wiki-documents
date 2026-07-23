@@ -11,13 +11,12 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_lerobot
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-15T00:00:00.000Z
+  date: 2026-04-15
   author: LiuJunjie
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-06-17'
-updatedAt: '2026-06-17'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_lerobot/
 ---
 
@@ -89,7 +88,7 @@ Os tutoriais da Seeed Studio são rigorosamente atualizados de acordo com a docu
    Suporta implantação por meio da plataforma reComputer Mini J4012 Orin NX 16GB.
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 ## Ambiente inicial do sistema
@@ -108,7 +107,7 @@ Os tutoriais da Seeed Studio são rigorosamente atualizados de acordo com a docu
 ## Instalar o LeRobot
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 Você precisa instalar pytorch, torchvision e outros ambientes com base na sua versão do CUDA.
@@ -212,7 +211,7 @@ Se a saída for False, você precisa reinstalar Pytorch e Torchvision de acordo 
 ## Calibrar o braço robótico
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 Em seguida, você precisa conectar a fonte de alimentação e o cabo de dados ao seu robô reBot B601-RS para calibração, a fim de garantir que os braços líder e seguidor tenham os mesmos valores de posição quando estiverem na mesma posição física. Esta calibração é essencial porque permite que uma rede neural treinada em um robô reBot B601-RS funcione em outro. Se você precisar recalibrar o braço robótico, exclua completamente os arquivos em `~/.cache/huggingface/lerobot/calibration/robots` ou `~/.cache/huggingface/lerobot/calibration/teleoperators` e recalibre o braço robótico. Caso contrário, aparecerá uma mensagem de erro. As informações de calibração do braço robótico serão armazenadas nos arquivos JSON neste diretório.
@@ -333,7 +332,7 @@ lerobot-teleoperate \
     <iframe
         width="900"
         height="600"
-        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0"
+        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0&autoplay=0&muted=1"
         scrolling="no"
         border="0"
         frameborder="no"
@@ -698,7 +697,7 @@ lerobot-teleoperate \
 ## Coleta de conjunto de dados
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 <details>

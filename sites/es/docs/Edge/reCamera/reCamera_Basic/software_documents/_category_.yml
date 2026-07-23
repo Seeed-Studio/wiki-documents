@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: 'Documentos de software'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_software
+link:
+  type: generated-index
+  slug: recamera_software_docs
+  title: Documentos básicos de desarrollo de software de reCamera
+  description: La reCamera es un dispositivo listo para usar inmediatamente después del arranque. Viene con un sistema reCamera OS estable que admite actualizaciones de firmware OTA. Además, la plataforma de IA SenseCraft y Node-RED están integrados en el dispositivo para ofrecer una experiencia de implementación más sencilla. Esta integración ofrece a los desarrolladores principiantes una experiencia de programación modular basada en nodos de Node-RED. Para los desarrolladores avanzados, también están disponibles el desarrollo profundo basado en Linux y Python para experimentar y personalizar. Damos una cálida bienvenida a los desarrolladores con experiencia en JavaScript, C/C++, Python, sistema operativo Linux, buildroot, así como a entusiastas, estudiantes y principiantes, a participar en un mayor desarrollo y explorar aplicaciones.

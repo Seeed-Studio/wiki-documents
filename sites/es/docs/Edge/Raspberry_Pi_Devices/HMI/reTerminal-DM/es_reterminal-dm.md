@@ -11,7 +11,7 @@ last_update:
   date: 12/15/2025
   author: David Du
 createdAt: '2023-04-23'
-updatedAt: '2026-01-28'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/es/reterminal-dm/
 ---
 

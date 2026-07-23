@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: '应用'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_pro_applications
+link:
+  type: generated-index
+  slug: recamera_pro_applications
+  title: 应用
+  description: reCamera Pro 应用文档

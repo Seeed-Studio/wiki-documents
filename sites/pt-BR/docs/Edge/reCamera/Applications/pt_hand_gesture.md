@@ -1,5 +1,5 @@
 ---
-title:  Portando o modelo de reconhecimento de gestos de mão do MediaPipe para a reCamera
+title: Portando o modelo de reconhecimento de gestos de mão do MediaPipe para a reCamera
 description: Este documento descreve como portar completamente o conjunto oficial de reconhecimento de gestos de mão do Google MediaPipe para a reCamera (Sophon/Bitmain SG200X), construindo um pipeline de "detecção da palma → detecção de pontos de referência → incorporação → classificação" e transmitindo os resultados para um PC via UDP para visualização.
 keywords:
   - reCamera

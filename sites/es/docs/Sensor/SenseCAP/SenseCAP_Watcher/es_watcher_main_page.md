@@ -9,7 +9,7 @@ last_update:
   date: 6/12/2026
   author: Citric
 createdAt: '2024-06-21'
-updatedAt: '2026-01-07'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/es/watcher/
 ---
 

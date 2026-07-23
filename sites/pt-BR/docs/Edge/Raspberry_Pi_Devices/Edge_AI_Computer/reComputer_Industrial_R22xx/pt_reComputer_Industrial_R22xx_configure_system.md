@@ -13,7 +13,7 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-04-24'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_r22xx_configure_system/
 ---
 

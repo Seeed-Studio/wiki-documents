@@ -1228,6 +1228,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_with_MicroPython',
               ],
             },
+            {
+              type: 'category',
+              label: 'プラットフォーム',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_with_Arduino',
+              ],
+            },
           ],
         },
         {
@@ -2157,7 +2164,7 @@ const sidebars = {
           },
           items: [
             'Sensor/reSpeaker_clip/ja_respeaker_clip_getting_started',
-            'Sensor/reSpeaker_clip/ja_respeaker_clip_python_control',
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_basic_sdk_guide',
           ],
         },
         {
@@ -2213,7 +2220,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_openclaw',
-
+                'Sensor/reSpeaker_clip/ja_respeaker_clip_python_usage_stt_llm_transcribe',
               ],
             },
           ],
@@ -4063,6 +4070,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_industrial_vision_monitoring_on_industrial',
               ]
             },
             // Generative AI
@@ -4219,6 +4227,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/ja_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/ja_How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/ja_Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/ja_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic',
             'Edge/NVIDIA_Jetson/FAQs/ja_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/ja_Flash_JetPack_with_WSL2',
           ]
