@@ -41,7 +41,7 @@ Basic SDK 重点在于从主机端使用设备当前具备的能力。它本身�
 
 ## 本指南所处的位置
 
-如果你是第一次接触 reSpeaker Clip，请先阅读 [reSpeaker Clip 入门指南](./respeaker_clip_getting_started.md)。
+如果你是第一次接触 reSpeaker Clip，请先阅读 [reSpeaker Clip 入门指南](/cn/respeaker_clip)。
 
 入门指南介绍了产品、目标场景、硬件能力以及普通用户的使用流程。
 

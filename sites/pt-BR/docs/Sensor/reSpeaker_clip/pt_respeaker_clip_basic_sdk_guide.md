@@ -41,7 +41,7 @@ O Basic SDK se concentra em usar as capacidades atuais do dispositivo a partir d
 
 ## Onde este guia se encaixa
 
-Se você é novo no reSpeaker Clip, leia primeiro o [Guia de Introdução ao reSpeaker Clip](./respeaker_clip_getting_started.md).
+Se você é novo no reSpeaker Clip, leia primeiro o [Guia de Introdução ao reSpeaker Clip](/pt-br/respeaker_clip).
 
 O Guia de Introdução apresenta o produto, cenários-alvo, capacidades de hardware e fluxos de trabalho normais do usuário.
 

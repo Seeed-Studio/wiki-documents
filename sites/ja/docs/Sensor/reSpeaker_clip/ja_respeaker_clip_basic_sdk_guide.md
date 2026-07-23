@@ -41,7 +41,7 @@ Basic SDK は、ホスト側からデバイスの現在の機能を利用する�
 
 ## 本ガイドの位置付け
 
-reSpeaker Clip を初めて使用する場合は、まず [reSpeaker Clip Getting Started Guide](./respeaker_clip_getting_started.md) をお読みください。
+reSpeaker Clip を初めて使用する場合は、まず [reSpeaker Clip Getting Started Guide](/ja/respeaker_clip) をお読みください。
 
 Getting Started Guide では、製品、ターゲットシナリオ、ハードウェア機能、通常のユーザーワークフローについて紹介しています。
 

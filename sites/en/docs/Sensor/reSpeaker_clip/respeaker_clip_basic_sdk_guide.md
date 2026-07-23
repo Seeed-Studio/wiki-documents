@@ -41,7 +41,7 @@ The Basic SDK focuses on using the device's current capabilities from the host s
 
 ## Where This Guide Fits
 
-If you are new to reSpeaker Clip, first read the [reSpeaker Clip Getting Started Guide](./respeaker_clip_getting_started.md).
+If you are new to reSpeaker Clip, first read the [reSpeaker Clip Getting Started Guide](/respeaker_clip).
 
 The Getting Started Guide introduces the product, target scenarios, hardware capabilities, and normal user workflows.
 
