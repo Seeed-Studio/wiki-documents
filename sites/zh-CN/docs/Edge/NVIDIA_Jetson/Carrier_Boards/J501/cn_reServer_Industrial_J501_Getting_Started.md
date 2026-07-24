@@ -1,5 +1,5 @@
 ---
-description: 本维基介绍 J501 载板的功能，并说明如何将 Jetpack 系统烧录到 J501 载板上。
+description: 本维基介绍 J501 载板的特性，并说明如何将 Jetpack 系统烧录到 J501 载板上。
 title: 烧录 Jetpack
 keywords:
   - reServer
@@ -27,7 +27,7 @@ url: https://wiki.seeedstudio.com/cn/reserver_j501_getting_started/
   </a>
 </div>
 
-J501 载板是一款功能强大的扩展板，支持 NVIDIA Jetson AGX Orin 模块。它具备丰富的数据端口和扩展接口，充分释放 AGX Orin 模块的全部性能。同时，它支持添加 GMSL 扩展以连接多达 8 个 GMSL 摄像头。
+J501 载板是一款功能强大的扩展板，支持 NVIDIA Jetson AGX Orin 模块。它具备丰富的数据端口和扩展接口，能够充分释放 AGX Orin 模块的全部性能。同时，它支持添加 GMSL 扩展，可连接多达 8 个 GMSL 摄像头。
 
 ## 特性
 
@@ -111,10 +111,10 @@ J501 载板是一款功能强大的扩展板，支持 NVIDIA Jetson AGX Orin 模
     <tr>
       <td> 电源 </td>
       <td> 电源供应 </td>
-      <td> DC 12V-36V 2 针端子块（附带 24V/5A 电源适配器）</td>
+      <td> DC 12V-36V 2 针端子（附带 24V/5A 电源适配器）</td>
     </tr>
     <tr>
-      <td rowSpan={3}> 机械规格 </td>
+      <td rowSpan={3}> 机械结构 </td>
       <td> 尺寸 (宽 x 深) </td>
       <td> 176 x 163mm（不含模块）</td>
     </tr>
@@ -157,7 +157,7 @@ J501 载板是一款功能强大的扩展板，支持 NVIDIA Jetson AGX Orin 模
 :::info
 
 我们建议你使用物理 Ubuntu 主机设备，而不是虚拟机。
-请参考下表准备主机电脑。
+请参考下表准备主机设备。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
@@ -317,7 +317,7 @@ jetpack5 镜像文件大小约为 **4.5GB**，下载大约需要 15 分钟。Jet
 
 <details>
 
-<summary> Step-by-Step </summary>
+<summary> 分步说明 </summary>
 
 **步骤 1.** 按住强制恢复按钮不要松开。
 
@@ -370,14 +370,14 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 刷写命令可能会运行 2-10 分钟。
 :::
 
-**步骤 3：** 使用板载 HDMI 接口将 J501 连接到显示器，并完成初始配置设置：
+**步骤 3：** 使用板载的 HDMI 接口将 J501 连接到显示器，并完成初始配置设置：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-请根据您的需求完成 **System Configuration**。
+请根据您的需求完成 **系统配置（System Configuration）**。
 :::
 
 **步骤 4（可选）：** 安装 Nvidia Jetpack SDK
@@ -388,6 +388,12 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 sudo apt update
 sudo apt install nvidia-jetpack
 ```
+
+## 硬件接口使用
+
+:::info
+如果您想进一步了解硬件接口的详细规格和使用方法，请参考[本 wiki](https://wiki.seeedstudio.com/cn/j501_carrier_board_interfaces_usage/)。
+:::
 
 ## 资源
 
@@ -401,7 +407,7 @@ sudo apt install nvidia-jetpack
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
