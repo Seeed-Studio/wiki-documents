@@ -91,7 +91,7 @@ A highly integrated, card-sized form factor optimized around a high-capacity 110
 |**Buzzer**|1\* buzzer to indicate status|
 |**Button**|1\* button to operate|
 |**Motor**|1\* DRV2605L|
-| **Air Pressure**| Range: 300–1100 hPa<br/>Accuracy: ±0.03 hPa<br/>Resolution: 0.06 Pa |
+| **Air Pressure Sensor**<br/>Temperature can be read by the air pressure sensor| Air Pressure Range: 300–1100 hPa<br/>Air Pressure Accuracy: ±0.03 hPa<br/>Air Pressure Resolution: 0.06 Pa<br/>Temperature Range:-40-85°C<br/>Temperature Accuracy: ± 1°C<br/>Temperature Resolution: 0.0006 °C |
 | **6-Axis Sensor** |Future Version|
 | **3-Axis Magnetometer** | Future Version |
 |**Antenna**|Internal (GNSS/LoRa/Bluetooth)|
