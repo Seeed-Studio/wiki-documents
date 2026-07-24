@@ -9,7 +9,7 @@ keywords:
   - STT
   - Summary
   - sdk
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg
 slug: /respeaker_clip_python_build_app
 sku: 100020126
 last_update:

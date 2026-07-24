@@ -42,6 +42,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Acoustic_Lab_Usage.md'), //7.13
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'MeshTracker_X1', 'x1_intro.md'), //7.13
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Use_of_the_laboratory', 'Acoustic_Lab_Usage.md'), //7.13
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super.md'), //7.22
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
