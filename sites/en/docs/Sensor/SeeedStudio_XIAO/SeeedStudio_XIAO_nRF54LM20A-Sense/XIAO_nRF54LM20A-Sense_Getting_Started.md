@@ -169,7 +169,7 @@ Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless develo
 
 - **Streamlined Development Experience**
 
-  Full support for Nordic nRF Connect SDK and PlatformIO (Zephyr) enables efficient embedded development workflows. (Note: Arduino IDE is currently not supported)
+  Full support for Nordic nRF Connect SDK and PlatformIO (Zephyr) enables efficient embedded development workflows.
 
 ## Hardware Overview
 
