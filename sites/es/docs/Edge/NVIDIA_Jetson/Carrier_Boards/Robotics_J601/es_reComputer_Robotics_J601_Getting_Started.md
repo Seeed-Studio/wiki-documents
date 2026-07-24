@@ -1,5 +1,5 @@
 ---
-description: Página preliminar de introducción para la carrier board reComputer Robotics J601 diseñada para módulos NVIDIA Jetson AGX Thor.
+description: Página preliminar de introducción para la placa carrier reComputer Robotics J601 diseñada para módulos NVIDIA Jetson AGX Thor.
 title: Introducción a reComputer Robotics J601
 keywords:
   - reComputer Robotics J601
@@ -14,21 +14,21 @@ last_update:
   date: 04/24/2026
   author: Dayu
 createdAt: '2026-04-24'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/es/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
 # Introducción a reComputer Robotics J601
 
 :::note
-Esta página es un borrador preliminar para la próxima carrier board reComputer Robotics J601 para módulos NVIDIA Jetson AGX Thor. Las especificaciones, el soporte de software, los kits de accesorios y los detalles mecánicos aún están sujetos a cambios.
+Esta página es un borrador preliminar de la próxima placa carrier reComputer Robotics J601 para módulos NVIDIA Jetson AGX Thor. Las especificaciones, el soporte de software, los paquetes de accesorios y los detalles mecánicos aún están sujetos a cambios.
 :::
 
 <div align="center">
   <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
 </div>
 
-La reComputer Robotics J601 es una carrier board enfocada en robótica para módulos NVIDIA Jetson AGX Thor. Está pensada para cargas de trabajo de IA encarnada y control robótico de alto rendimiento que requieren redes de alta velocidad, E/S industriales, expansión de cámaras GMSL y entrada de CC de amplio rango en un factor de forma compacto de carrier board.
+La reComputer Robotics J601 es una placa carrier enfocada en robótica para módulos NVIDIA Jetson AGX Thor. Está pensada para cargas de trabajo de IA encarnada y control robótico de alto rendimiento que requieren redes de alta velocidad, E/S industriales, expansión de cámaras GMSL y entrada de CC de amplio rango en un factor de forma compacto de placa carrier.
 
 ## Características preliminares
 
@@ -44,7 +44,7 @@ La reComputer Robotics J601 es una carrier board enfocada en robótica para mód
 
 ## Especificaciones preliminares
 
-La siguiente tabla mantiene intencionadamente solo las partes más claras de la definición de hardware actual y deja los elementos no definidos como TBD.
+La siguiente tabla mantiene intencionadamente solo las partes más claras de la definición actual del hardware y deja los elementos no resueltos como TBD.
 
 <div class="table-center">
 <table>
@@ -59,7 +59,7 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
     </tr>
     <tr>
       <td>Red</td>
-      <td>Definición de Ethernet en progreso; el plan preliminar incluye puertos RJ45 de alta velocidad con soporte PTP y EtherCAT</td>
+      <td>Definición de Ethernet en progreso; el plan preliminar incluye puertos RJ45 de alta velocidad con soporte para PTP y EtherCAT</td>
     </tr>
     <tr>
       <td>Expansión inalámbrica</td>
@@ -67,7 +67,7 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
     </tr>
     <tr>
       <td>USB</td>
-      <td>Hasta 4x USB 3.2 Tipo A (Host), 1x USB 2.0 Tipo C (UART de depuración / modo dispositivo), 1x USB 3.0 Tipo C para flasheo</td>
+      <td>Hasta 4x USB 3.2 Tipo A (Host), 1x USB 2.0 Tipo C (UART de depuración / Modo dispositivo), 1x USB 3.0 Tipo C para flasheo</td>
     </tr>
     <tr>
       <td>Pantalla</td>
@@ -75,7 +75,7 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
     </tr>
     <tr>
       <td>Refrigeración</td>
-      <td>1x conector de ventilador de 4 pines (PWM de 12V); se prevé vender la carrier board y el ventilador por separado</td>
+      <td>1x conector de ventilador de 4 pines (12V PWM); se prevé vender la placa carrier y el ventilador por separado</td>
     </tr>
     <tr>
       <td>Cámara</td>
@@ -135,7 +135,7 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
     </tr>
     <tr>
       <td>Mecánico</td>
-      <td>Tamaño objetivo de la carrier board dentro de 150 mm x 130 mm</td>
+      <td>Tamaño objetivo de la placa carrier dentro de 150 mm x 130 mm</td>
     </tr>
   </tbody>
 </table>
@@ -148,7 +148,7 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
 | Botón | Pin | Señal | Tipo | Descripción |
 | --- | --- | --- | --- | --- |
 | RECOVERY | 240 | - | CMOS-5V | Se utiliza para la recuperación del sistema / flujo de configuración de bajo nivel |
-| RESET | 239 | SYS_RESET* | Drenaje abierto, 1.8V | Tirar a nivel bajo para reiniciar el módulo; cuando la alimentación del módulo está lista, el nivel alto se puede usar como habilitación de alimentación de la carrier board |
+| RESET | 239 | SYS_RESET* | Drenaje abierto, 1.8V | Poner a nivel bajo para reiniciar el módulo; cuando la alimentación del módulo está lista, el nivel alto se puede usar como habilitación de alimentación de la placa carrier |
 
 ### Indicadores LED
 
@@ -156,14 +156,14 @@ La siguiente tabla mantiene intencionadamente solo las partes más claras de la 
 | --- | --- | --- | --- |
 | PWR | Verde | On | El dispositivo está conectado a la alimentación |
 | PWR | Verde | Off | El dispositivo no está conectado a la alimentación |
-| ACT | Verde | Flashing | Actividad del SSD |
+| ACT | Verde | Parpadeando | Actividad del SSD |
 | USER | R / G / B | TBD | Comportamiento definido por el usuario |
 
 ## Software
 
 - Línea base de software prevista: **JetPack 7**
-- Capacidad Ethernet prevista: **EtherCAT**
-- Guía detallada de flasheo, paquete BSP y pasos de validación: **TBD**
+- Capacidad de Ethernet prevista: **EtherCAT**
+- Guía de flasheo detallada, paquete BSP y pasos de validación: **TBD**
 
 ## Adaptación de cámaras prevista
 
@@ -177,7 +177,7 @@ La lista de requisitos actual incluye los siguientes modelos de cámaras GMSL:
 
 ## Diseño térmico
 
-Esta carrier board está pensada para su uso dentro de carcasas de robots humanoides, donde los clientes pueden diseñar su propia solución térmica. Seeed planea proporcionar una guía de diseño térmico para despliegues basados en AGX Thor.
+Esta placa carrier está pensada para su uso dentro de carcasas de robots humanoides, donde los clientes pueden diseñar su propia solución térmica. Seeed planea proporcionar una guía de diseño térmico para despliegues basados en AGX Thor.
 
 Documento de referencia:
 
@@ -187,27 +187,33 @@ Documento de referencia:
 
 ### Accesorios
 
-- Cable XT30 a DC, 200 mm x 1
+- Cable XT30 a CC, 200 mm x 1
 - Arnés de cables sueltos JST, 100 mm x 10
 - Cable USB Tipo C a Tipo A, 1 m x 1
 - Tornillo para Key E x 1
 - Tornillo para Key M x 1
 - Tornillo para Key B x 1
 - Tornillos para AGX Thor SOM x 4
-- Espaciadores para soporte de la carrier board x 4
+- Espaciadores para soporte de la placa carrier x 4
 - Tornillos para espaciadores x 4
 - Manual de usuario x 1
 
 ### Embalaje
 
 - Caja para transporte aéreo
-- Bandeja interior para la carrier board y los accesorios
+- Bandeja interior para la placa carrier y los accesorios
 - Manual de usuario en la parte superior con una capa adicional de espuma
-- Estilo de embalaje similar al de la mini carrier board J501
+- Estilo de embalaje similar al de la placa carrier mini J501
+
+## Uso de las interfaces de hardware
+
+:::info
+Si quieres obtener más información sobre las especificaciones detalladas y el uso de las interfaces de hardware, consulta [este wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_robotics_j601_interfaces_usage/).
+:::
 
 ## Recursos
 
-- Diseño detallado de hardware: TBD
+- Diseño detallado del hardware: TBD
 - Guía de flasheo: TBD
 - Notas de la versión del BSP: TBD
 

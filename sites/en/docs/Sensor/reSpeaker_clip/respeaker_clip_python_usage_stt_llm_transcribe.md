@@ -1,12 +1,13 @@
 ---
-description: Learn how to build your own applications with the reSpeaker Clip SDK using Python. This tutorial covers BLE and Wi-Fi communication, audio recording control, file synchronization, device configuration, and more.
+description: Learn how to build your own reSpeaker Clip applications with the Python SDK for transcription, diarization, and summary workflows. This tutorial covers BLE and Wi-Fi communication, audio recording, file synchronization, device configuration, and more.
 
-title: Build Your Own App for reSpeaker Clip with Transcription/Diarization/Summary Using Python SDK
+title: Build Your Own App for reSpeaker Clip with Transcription, Diarization, and Summary Using Python SDK
 keywords:
   - reSpeaker clip
-  - ble
-  - wifi
-  - python
+  - Transcribe
+  - diarization
+  - STT
+  - Summary
   - sdk
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png
 slug: /respeaker_clip_python_build_app
@@ -24,7 +25,7 @@ url: https://wiki.seeedstudio.com/respeaker_clip_python_build_app/
 **reSpeaker STT Web** transforms the reSpeaker Clip into an intelligent, AI-powered voice and meeting assistant, connecting embedded audio hardware with modern web and cloud AI technologies. Using BLE or Wi-Fi, it continuously synchronizes recordings from the device and processes them through powerful speech and language AI pipelines. With dedicated workflows for **speech transcription, speaker diarization, and AI-generated meeting summaries**, users can turn conversations into structured, actionable information. Built with Python and a modular architecture, the project provides a flexible foundation for developers and embedded engineers to build next-generation voice and AI applications with the reSpeaker Clip.
 
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_32_1.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html" target="_blank">
