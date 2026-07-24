@@ -14,7 +14,7 @@ last_update:
   date: 04/24/2026
   author: Dayu
 createdAt: '2026-04-24'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
@@ -33,18 +33,18 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
 ## 初步特性
 
 - 支持 **NVIDIA Jetson AGX Thor** 模组
-- 用于 NVMe 2280 SSD 的 **M.2 Key M** 插槽
-- 用于 Wi-Fi/Bluetooth 模组的 **M.2 Key E** 插槽
-- 用于 5G 模组的 **M.2 Key B** 插槽，并支持 **Nano SIM**
+- **M.2 Key M** 插槽，用于 NVMe 2280 SSD
+- **M.2 Key E** 插槽，用于 Wi-Fi/Bluetooth 模组
+- **M.2 Key B** 插槽，用于 5G 模组，并支持 **Nano SIM**
 - 高速以太网，计划支持 **PTP** 和 **EtherCAT**
 - 丰富的机器人 I/O，包括 **CAN**、**RS-232/422/485**、**DI/DO**、**I2C**、**I2S**、**SPI** 和 **GPIO**
 - **GMSL 扩展**，最多支持 **8 路摄像头**
-- 通过 **XT30** 提供宽范围 **19V 至 48V 直流** 输入
+- 通过 **XT30** 提供宽范围 **19V 至 48V DC** 输入
 - 目标软件平台：**JetPack 7**
 
 ## 初步规格
 
-下表有意仅保留当前硬件定义中较为明确的部分，将尚未确定的项目保留为 TBD。
+下表有意仅保留当前硬件定义中较为明确的部分，尚未确定的项目保留为 TBD。
 
 <div class="table-center">
 <table>
@@ -59,15 +59,15 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
     </tr>
     <tr>
       <td>网络</td>
-      <td>以太网定义仍在进行中；初步计划包括支持 PTP 和 EtherCAT 的高速 RJ45 接口</td>
+      <td>以太网定义仍在进行中；初步计划包括带 PTP 和 EtherCAT 支持的高速 RJ45 接口</td>
     </tr>
     <tr>
       <td>无线扩展</td>
-      <td>1x M.2 Key E（用于 Wi-Fi/Bluetooth），1x M.2 Key B（用于 5G），1x Nano SIM</td>
+      <td>1x M.2 Key E 用于 Wi-Fi/Bluetooth，1x M.2 Key B 用于 5G，1x Nano SIM</td>
     </tr>
     <tr>
       <td>USB</td>
-      <td>最多 4x USB 3.2 Type-A（主机），1x USB 2.0 Type-C（调试 UART / 设备模式），1x USB 3.0 Type-C（用于刷机）</td>
+      <td>最多 4x USB 3.2 Type-A（Host），1x USB 2.0 Type-C（调试 UART / 设备模式），1x USB 3.0 Type-C 用于刷机</td>
     </tr>
     <tr>
       <td>显示</td>
@@ -87,7 +87,7 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
     </tr>
     <tr>
       <td>串口</td>
-      <td>1x RS-232/422/485（DB9 连接器），1x RS-485（JST 连接器）</td>
+      <td>1x RS-232/422/485（DB9 接口），1x RS-485（JST 接口）</td>
     </tr>
     <tr>
       <td>数字 I/O</td>
@@ -99,7 +99,7 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
     </tr>
     <tr>
       <td>低速扩展</td>
-      <td>1x I2C，1x SPI，通过 JST/排针提供 GPIO</td>
+      <td>1x I2C，1x SPI，GPIO 通过 JST/排针提供</td>
     </tr>
     <tr>
       <td>RTC</td>
@@ -110,12 +110,12 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
       <td>Recovery 和 Reset</td>
     </tr>
     <tr>
-      <td>指示灯</td>
+      <td>LED</td>
       <td>PWR、ACT 和用户自定义 RGB LED</td>
     </tr>
     <tr>
       <td>电源输入</td>
-      <td>XT30，19V 至 48V 直流</td>
+      <td>XT30，19V 至 48V DC</td>
     </tr>
     <tr>
       <td>电流 / 功率</td>
@@ -141,7 +141,7 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
 </table>
 </div>
 
-## 指示灯与按键定义
+## LED 与按键定义
 
 ### 按键
 
@@ -150,13 +150,13 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
 | RECOVERY | 240 | - | CMOS-5V | 用于系统恢复 / 底层配置流程 |
 | RESET | 239 | SYS_RESET* | 开漏，1.8V | 拉低以复位模组；当模组电源就绪时，高电平可用作载板电源使能 |
 
-### 指示灯
+### LED 指示灯
 
-| 指示灯 | 颜色 | 状态 | 描述 |
+| LED | 颜色 | 状态 | 描述 |
 | --- | --- | --- | --- |
 | PWR | 绿色 | On | 设备已连接电源 |
 | PWR | 绿色 | Off | 设备未连接电源 |
-| ACT | 绿色 | Flashing | SSD 活动状态 |
+| ACT | 绿色 | 闪烁 | SSD 活动状态 |
 | USER | R / G / B | TBD | 用户自定义行为 |
 
 ## 软件
@@ -201,9 +201,15 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
 ### 包装
 
 - 飞机盒
-- 用于放置载板和配件的内托盘
+- 用于放置载板和配件的内托
 - 顶部放置用户手册，并增加一层泡棉
 - 包装风格与 mini J501 载板类似
+
+## 硬件接口使用说明
+
+:::info
+如果你想进一步了解硬件接口的详细规格和使用方法，请参考[本 Wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j601_interfaces_usage/)。
+:::
 
 ## 资源
 
@@ -213,7 +219,7 @@ reComputer Robotics J601 是一款面向机器人应用的 NVIDIA Jetson AGX Tho
 
 ## 技术支持
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
