@@ -454,6 +454,11 @@ The flash command may run for 2-10 minutes.
 Please complete the **System Configuration** according to your needs.
 :::
 
+## Hardware Interfaces Usage
+
+:::info
+If you want to learn more about the detailed specifications and usage of the hardware interfaces, please refer to [this wiki](https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/).
+:::
 
 ## Resources
 
