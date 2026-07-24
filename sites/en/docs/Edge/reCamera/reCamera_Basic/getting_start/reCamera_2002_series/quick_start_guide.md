@@ -12,8 +12,8 @@ last_update:
   date: 04/10/2026
   author: Evelyn Chen & Samuel
 createdAt: '2024-11-11'
-updatedAt: '2026-04-13'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/getting_start/recamera_2002_series_quick_start_guide
+updatedAt: '2026-07-21'
+url: https://wiki.seeedstudio.com/recamera_2002_series_quick_start_guide/
 ---
 
 # reCamera 2002 Series Quick Start Guide

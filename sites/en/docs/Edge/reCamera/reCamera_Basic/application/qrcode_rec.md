@@ -15,7 +15,7 @@ last_update:
   author: QiYao Lin
 createdAt: '2026-06-15'
 updatedAt: '2026-07-08'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/recamera_qrcode_udp_bak/
+url: https://wiki.seeedstudio.com/recamera_qrcode_udp_bak/
 ---
 
 # Real-Time QR Code Recognition on reCamera

@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-13'
-updatedAt: '2026-07-10'
+updatedAt: '2026-07-21'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_getting_started/
 ---
 import Tabs from '@theme/Tabs';

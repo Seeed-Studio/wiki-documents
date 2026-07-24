@@ -14,7 +14,7 @@ last_update:
   author: Xinrui Wu
 createdAt: '2026-03-27'
 updatedAt: '2026-05-07'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/use_cpenclaw_to_control_the_recamera_gimbal_bak/
+url: https://wiki.seeedstudio.com/use_cpenclaw_to_control_the_recamera_gimbal_bak/
 ---
 
 
