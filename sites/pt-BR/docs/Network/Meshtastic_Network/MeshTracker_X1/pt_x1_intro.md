@@ -288,7 +288,7 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
   <tr>
     <td>SPIO1</td>
     <td>P0.22</td>
-  </tr]
+  </tr>
   <tr>
     <td>SPIO2</td>
     <td>P0.23</td>
