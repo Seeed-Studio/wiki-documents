@@ -197,7 +197,7 @@ sftp> put myfile.txt /home/user/Documents/
 
 ## **7.Hardware Command**
 
-You can refer to this [documentation](https://wiki.seeedstudio.com/recamera_hardware_and_specs/#hardware-interface) to control the hardware on the recamera device.
+You can refer to this [documentation](https://wiki.seeedstudio.com/recamera_basicardware_and_specs/) to control the hardware on the recamera device.
 
 ## Tech Support & Product Discussion
 
