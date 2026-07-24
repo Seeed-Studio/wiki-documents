@@ -4157,6 +4157,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Build_and_Flash_Yocto_for_reComputer_Super',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Develop_reComputer_Jetson_using_Clawdbot',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Gapi-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_alwaysAI-Jetson-Getting-Started',

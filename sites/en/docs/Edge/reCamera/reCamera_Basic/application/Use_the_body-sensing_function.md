@@ -14,7 +14,7 @@ last_update:
   author: Xinrui Wu
 createdAt: '2025-11-27'
 updatedAt: '2026-04-20'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/use_the_motion-sensing_function_of_recamera_to_play_games_bak/
+url: https://wiki.seeedstudio.com/use_the_motion-sensing_function_of_recamera_to_play_games_bak/
 ---
 
 # Play Subway Surfers with body sensor control

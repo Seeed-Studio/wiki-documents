@@ -1,6 +1,28 @@
 const docList = [
   [
     {
+      "path": "/build_and_flash_yocto_for_recomputer_super",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png",
+      "title": "Build and Flash a Yocto Image for reComputer Super",
+      "date": "2026-07-24",
+      "title_cn": "为 reComputer Super 构建并烧录 Yocto 镜像",
+      "title_ja": "reComputer Super 向け Yocto イメージのビルドとフラッシュ",
+      "title_es": "Crear y flashear una imagen Yocto para reComputer Super",
+      "title_pt": "Compilar e Gravar uma Imagem Yocto para o reComputer Super"
+    },
+    {
+      "path": "/respeaker_clip_python_build_app",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg",
+      "title": "Build Your Own App for reSpeaker Clip with Transcription, Diarization, and Summary Using Python SDK",
+      "date": "2026-07-21",
+      "title_cn": "使用 Python SDK 为 reSpeaker Clip 构建具备转写、说话人分离和摘要功能的自定义应用",
+      "title_ja": "Python SDK を使用して reSpeaker Clip 向けに文字起こし・話者分離・要約対応の独自アプリを構築する",
+      "title_es": "Crea tu propia app para reSpeaker Clip con transcripción, diarización y resumen usando el SDK de Python",
+      "title_pt": "Crie seu próprio app para reSpeaker Clip com transcrição, diarização e resumo usando o SDK Python"
+    }
+  ],
+  [
+    {
       "path": "/train_classification_model_online",
       "image": "https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-6.png",
       "title": "Train Image Classification Models Online Quickly with SenseCraft AI",
@@ -33,6 +55,18 @@ const docList = [
       "title_pt": "Comece a usar o MeshTracker X1"
     },
     {
+      "path": "/respeaker_clip_basic_sdk_guide",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png",
+      "title": "reSpeaker Clip Basic SDK Guide",
+      "date": "2026-07-13",
+      "title_cn": "reSpeaker Clip Basic SDK 指南",
+      "title_ja": "reSpeaker Clip Basic SDK ガイド",
+      "title_es": "Guía del reSpeaker Clip Basic SDK",
+      "title_pt": "Guia do reSpeaker Clip Basic SDK"
+    }
+  ],
+  [
+    {
       "path": "/soarm_amazinghand_teleop",
       "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/soarm_amazinghand/soarm_amazinghand.webp",
       "title": "Complete Training Guide for SO-ARM with AmazingHand",
@@ -41,18 +75,6 @@ const docList = [
       "title_ja": "SO-ARM と AmazingHand のための完全トレーニングガイド",
       "title_es": "Guía completa de entrenamiento para SO-ARM con AmazingHand",
       "title_pt": "Guia Completo de Treinamento para SO-ARM com AmazingHand"
-    }
-  ],
-  [
-    {
-      "path": "/make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-J4012/5.png",
-      "title": "Make DIY BSP from Orin Nano DevKit to reComputer Classic",
-      "date": "2026-07-10",
-      "title_cn": "从 Orin Nano DevKit 制作 DIY BSP 并适配 reComputer Classic",
-      "title_ja": "Orin Nano DevKit から reComputer Classic へ DIY BSP を作成する",
-      "title_es": "Crear un BSP DIY desde Orin Nano DevKit a reComputer Classic",
-      "title_pt": "Criar BSP DIY do Orin Nano DevKit para o reComputer Classic"
     },
     {
       "path": "/rapid_prototyping_on_jetson_with_nvidia_skills",
@@ -89,12 +111,12 @@ const docList = [
   ],
   [
     {
-      "path": "/recamera_motion_detection",
+      "path": "/recamera_motion_detection_bak",
       "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Motion_Detection/Pasted_image_20260703155236.png",
       "title": "Motion detection for a selected area based on recamera2002",
       "date": "2026-07-03",
       "title_cn": "基于 recamera2002 的选定区域运动检测",
-      "title_ja": "recamera2002 に基づく選択エリアの動体検知",
+      "title_ja": "recamera2002 をベースにした選択エリアの動体検知",
       "title_es": "Detección de movimiento para un área seleccionada basada en recamera2002",
       "title_pt": "Detecção de movimento para uma área selecionada baseada em recamera2002"
     },
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "JetPack 6.2.1 を搭載した Seeed reComputer Jetson に PREEMPT_RT Linux リアルタイムカーネルをフラッシュする",
       "title_es": "Flashear un kernel Linux en tiempo real PREEMPT_RT en Seeed reComputer Jetson con JetPack 6.2.1",
       "title_pt": "Gravar um kernel Linux em tempo real PREEMPT_RT em um Seeed reComputer Jetson com JetPack 6.2.1"
-    }
-  ],
-  [
-    {
-      "path": "/em12_g_gnss_module_for_recomputer_robotics_j3011",
-      "image": "https://files.seeedstudio.com/wiki/GNSS_for_jetson/2.png",
-      "title": "EM12-G GNSS Module Setup Guide for reComputer Robotics J3011",
-      "date": "2026-07-01",
-      "title_cn": "适用于 reComputer Robotics J3011 的 EM12-G GNSS 模块设置指南",
-      "title_ja": "reComputer Robotics J3011 向け EM12-G GNSS モジュールセットアップガイド",
-      "title_es": "Guía de configuración del módulo GNSS EM12-G para reComputer Robotics J3011",
-      "title_pt": "Guia de Configuração do Módulo GNSS EM12-G para reComputer Robotics J3011"
-    },
-    {
-      "path": "/lerobot_double_arm_so_arm_training",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/double_soarm/Arm_kit.webp",
-      "title": "Complete Guide to Double-Arm SO-ARM Training",
-      "date": "2026-07-01",
-      "title_cn": "双臂 SO-ARM训练完整指南",
-      "title_ja": "両腕 SO-ARM トレーニング完全ガイド",
-      "title_es": "Guía Completa para el Entrenamiento de SO-ARM de Doble Brazo",
-      "title_pt": "Guia Completo para Treinamento de SO-ARM de Dois Braços"
     }
   ]
 ];

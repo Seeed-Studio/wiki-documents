@@ -14,7 +14,7 @@ last_update:
   author: Qiyao Lin
 createdAt: '2026-07-03'
 updatedAt: '2026-07-06'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/recamera_motion_detection_bak/
+url: https://wiki.seeedstudio.com/recamera_motion_detection_bak/
 ---
 
 ## I. Project Introduction
