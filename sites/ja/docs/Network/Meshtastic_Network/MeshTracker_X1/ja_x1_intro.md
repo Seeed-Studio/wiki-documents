@@ -1,10 +1,10 @@
 ---
 description: Meshtastic 向け SenseCAP MeshTracker X1 の紹介。この Wiki では、機能、仕様、ハードウェア概要、ボタン、LED、およびピン一覧を紹介します。
-title: SenseCAP MeshTracker X1 の紹介
+title: SenseCAP MeshTracker X1 入門
 keywords:
-  - トラッカー
+  - Tracker
   - Meshtastic
-image: https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png
 sku: 100087698
 slug: /meshtracker_x1_intro
 sidebar_position: 0
@@ -16,36 +16,66 @@ createdAt: '2026-07-13'
 updatedAt: '2026-07-16'
 ---
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png" alt="pir" width={900} height="auto" /></p>
 
-世界初のカードサイズ Meshtastic デバイスで、デュアルバンド GPS を搭載しています。オフグリッド環境での信頼性の高い通信のために設計された MeshTracker X1 は、863～928 MHz の周波数に対応する IP66 等級の [Meshtastic®](https://meshtastic.org/) GPS トラッカーです。最新の Semtech LR2021 LoRa チップを搭載し、USB-C 接続、最長 5 日間のバッテリー駆動、コンパクトで屋外使用に適したデザインを備えています。
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-meshtracker-x1-meshtastic-gps-tracker-p-6935.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 </font></span></strong>
+    </a>
+</div>
+
+世界初のカードサイズ Meshtastic デバイスで、デュアルバンド GPS を搭載しています。オフグリッド環境での信頼性の高い通信のために設計された MeshTracker X1 は、863～928 MHz の周波数に対応する IP66 等級の [Meshtastic®](https://meshtastic.org/) GPS トラッカーです。最新の Semtech LR2021 LoRa チップを搭載し、USB-C 接続、最長 5 日間のバッテリー駆動、そしてコンパクトで屋外使用に適したデザインを備えています。
 
 ### 特長
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **実際に持ち歩ける Meshtastic デバイス** 
 
-SenseCAP MeshTracker X1 は、アウトドア、大規模イベント、緊急時など、セルラーネットワークの範囲外でも信頼できる通信と位置共有を必要とする人のために設計されています。真に携帯しやすいフォームファクタと堅牢な IP66 保護により、Meshtastic 接続を日常の持ち歩きや実際のフィールド利用に持ち込みます。
+- **本当に持ち歩ける Meshtastic デバイス** 
+
+SenseCAP MeshTracker X1 は、アウトドア、大規模イベント、緊急時など、セルラー網の外でも信頼できる通信と位置共有を必要とする人のために設計されています。真に携帯しやすいフォームファクタと堅牢な IP66 保護により、Meshtastic 接続を日常の持ち歩きや実際のフィールド利用に持ち込みます。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
+
 - **超高精度デュアルバンド GPS トラッキング** 
 
-デュアルバンド L1+L5 GNSS と内蔵気圧センサーにより、MeshTracker X1 はシングルバンド GPS よりも高い信頼性の位置情報と高度認識を実現します。また、デュアルバンド GPS を搭載した世界初のカードサイズ Meshtastic デバイスでもあります。
+デュアルバンド L1+L5 GNSS と内蔵気圧センサにより、MeshTracker X1 はシングルバンド GPS よりも高い信頼性の位置情報と高度認識を実現します。また、デュアルバンド GPS を搭載した世界初のカードサイズ Meshtastic デバイスでもあります。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
+
 - **次世代 LoRa 接続（LR2021）** 
 
-Semtech LR2021 によって駆動される MeshTracker X1 は、最大 -141 dBm の感度と 2.6 Mbps の FLRC データレートにより、より強力な RF 性能と高速で信頼性の高いメッシュ通信を実現し、音声や画像伝送など将来の機能の基盤を築きます。
+Semtech LR2021 によって駆動される MeshTracker X1 は、最大 -141 dBm の感度と 2.6 Mbps の FLRC データレートにより、より強力な RF 性能を発揮し、より高速で信頼性の高いメッシュ通信を実現します。これにより、音声や画像伝送など将来の機能の基盤を築きます。
+
 - **信頼性の高い長距離通信** 
 
 915 MHz でのテストにおいて、MeshTracker X1 は見通しの良い環境で最大 8 km の距離で信頼性の高い通信を可能にし、アウトドアアクティビティ、イベント、緊急時にチームの接続を維持します。
-- **カードサイズ設計で持ち運びが容易** 
 
-薄型かつ軽量な MeshTracker X1 は、アウトドアアクティビティ中の日常的な携帯を想定して設計されています。ネックストラップで身に着けたり、バックパックに取り付けたり、自転車バッグに固定したり、ポケットにそのまま入れて、手軽にオフグリッド接続を利用できます。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Dazzaristance.jpg" alt="pir" width={900} height="auto" /></p>
+
+- **カードサイズ設計で持ち運びが簡単** 
+
+スリムで軽量な MeshTracker X1 は、アウトドアアドベンチャーの際の日常携行を想定して設計されています。ネックストラップで身に着けたり、バックパックに取り付けたり、自転車バッグに固定したり、ポケットにそのまま入れて、手軽にオフグリッド接続を利用できます。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg" alt="pir" width={900} height="auto" /></p>
+
 - **柔軟なバイブレーション & サウンドアラート** 
 
-MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟な通知オプションを提供します。騒がしいイベント中や屋外走行中、あるいは静かなトレイルを歩いていて通知を控えめにしたい場合でも、受信メッセージに気づくことができます。
-- **IP66 準拠の堅牢な屋外保護** 
+MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟な通知オプションを提供します。騒がしいイベント中でも、屋外走行中でも、あるいは静かなトレイルを歩いていて気を散らしたくない場合でも、受信メッセージに気付きやすくなります。
 
-防塵・防水の IP66 等級保護構造により、雨、泥、ほこりっぽいトレイルなど、過酷な屋外環境でも信頼性の高い動作を保証します。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
+
+- **IP66 の堅牢な屋外保護** 
+
+防塵・防水の IP66 等級構造により、雨、泥、ほこりっぽいトレイルなど、過酷な屋外環境でも信頼性の高い動作を保証します。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
+
 - **USB-C 接続** 
+https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
+標準的な USB-C インターフェースにより、充電、ファームウェア更新、デバッグが可能で、堅牢な屋外使用と日常の利便性の両立を図っています。
 
-充電、ファームウェア更新、デバッグ用の標準 USB-C インターフェースを備え、屋外でのタフな使用と日常の利便性の両立を図っています。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
+
 - **長時間バッテリー駆動** 
 
 高容量 1100mAh バッテリーを中心に最適化された高集積カードサイズフォームファクタにより、コンパクトで携帯性を保ちながら、アウトドアでの携行やオフグリッド通信において最長 5 日間の連続動作を実現します。
@@ -61,13 +91,16 @@ MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟�
 |**ブザー**|ステータス表示用ブザー 1 個|
 |**ボタン**|操作用ボタン 1 個|
 |**モーター**|1\* DRV2605L|
+| **気圧センサ**<br/>気圧センサから温度も読み取れます| 気圧範囲：300–1100 hPa<br/>気圧精度：±0.03 hPa<br/>気圧分解能：0.06 Pa<br/>温度範囲：-40～85°C<br/>温度精度：± 1°C<br/>温度分解能：0.0006 °C |
+| **6 軸センサ** |将来バージョン|
+| **3 軸磁力計** | 将来バージョン |
 |**アンテナ**|内蔵（GNSS/LoRa/Bluetooth）|
 |**通信距離**|最大 8 km|
 |**IP 等級**|IP66|
 |**寸法**|90\*57\*8 mm|
 |**デバイス重量**|45g|
 |**動作温度**|-20 ～ 60℃|
-|**認証**|CE/FCC/RoSH/TELEC|
+|**認証**|CE/FCC/RoHS/TELEC|
 
 **バッテリー**
 
@@ -77,6 +110,7 @@ MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟�
 |**バッテリー寿命モニタリング**|バッテリーレベルの定期アップリンク|
 |<p>**充電ケーブル**</p><p>**（アダプターは付属しません）**</p>|USB Type-C 充電ケーブル、20 cm|
 |**デバイス電源入力**|5V、0.55A|
+|**バッテリー電源入力**|4.4V、0.22A|
 |**充電温度範囲**|5 ～ +45℃|
 
 ### ピン一覧
@@ -103,7 +137,7 @@ MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟�
     <td>P0.28</td>
   </tr>
   <tr>
-    <td>センサー PWR EN</td>
+    <td>センサ PWR EN</td>
     <td>-</td>
     <td>P1.07</td>
     <td>GPIO</td>
@@ -130,7 +164,7 @@ MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟�
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="2">気圧センサー</td>
+    <td rowspan="2">気圧センサ</td>
     <td>SCL</td>
     <td>P1.14</td>
     <td rowspan="2">IIC</td>
@@ -140,7 +174,7 @@ MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟�
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="3">6 軸センサー（将来バージョン）</td>
+    <td rowspan="3">6 軸センサ（将来バージョン）</td>
     <td>INT</td>
     <td>P1.02</td>
     <td>GPIO</td>
@@ -155,7 +189,7 @@ MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟�
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="3">3 軸センサー（将来バージョン）</td>
+    <td rowspan="3">3 軸センサ（将来バージョン）</td>
     <td>INT</td>
     <td>P1.12</td>
     <td>GPIO</td>
@@ -283,7 +317,7 @@ MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟�
     <th colspan="1">デバイス状態</th>
   </tr>
   <tr>
-    <td rowspan="4">🟢緑</td>
+    <td rowspan="4">🟢green</td>
     <td>点灯</td>
     <td>デバイス起動中</td>
   </tr>
@@ -300,12 +334,12 @@ MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟�
     <td>充電完了</td>
   </tr>
   <tr>
-    <td>🔴赤</td>
+    <td>🔴Red</td>
     <td>点滅</td>
-    <td>バッテリー残量低下</td>
+    <td>低電力</td>
   </tr>
     <tr>
-    <td>⚪️白</td>
+    <td>⚪️white</td>
     <td>点灯</td>
     <td>DFU モード／ブートローダーモード</td>
   </tr>
@@ -313,7 +347,7 @@ MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟�
 
 ### ハードウェア図
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardWareOverview.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagramBu.png" alt="pir" width={900} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram.png" alt="pir" width={900} height="auto" /></p>
 
