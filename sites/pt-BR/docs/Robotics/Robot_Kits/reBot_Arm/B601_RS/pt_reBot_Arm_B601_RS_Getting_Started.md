@@ -303,6 +303,77 @@ Desconecte o módulo USB2CAN, ajuste o DIP switch para **120R** e reconecte-o ao
 
 </details>
 
+<details>
+<summary>PCAN Passos de download de firmware e reparo de driver - Ubuntu</summary>
+
+Usuários de Ubuntu consultem este guia
+
+1.> 📦 [Clique para baixar USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.Altere USB2CAN para BOOT
+
+3.Por favor extraia o USB2CAN.zip do passo 1, e coloque flash_pcan_ubuntu.sh e pcan_canable_hw.bin (de dentro do USB2CAN.zip) no mesmo diretório
+
+[Clique para baixar flash_pcan_ubuntu.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
+
+Se transferir de outro computador (por exemplo scp):
+
+```text
+scp flash_pcan_ubuntu.sh pcan_canable_hw.bin seeed@seu_IP_do_Ubuntu:~/Downloads/
+```
+Ou simplesmente copie para um pendrive e conecte na máquina Ubuntu — contanto que os arquivos terminem em ~/Downloads, no diretório atual, ou /tmp, o script os encontrará automaticamente.
+
+4.Execute:
+
+```text
+bash flash_pcan_ubuntu.sh
+```
+
+Digite sua senha; aguarde a conclusão
+
+Após concluir, altere de volta para "120R"
+
+Reconecte o USB.
+
+</details>
+
+<details>
+<summary>PCAN Passos de download de firmware e reparo de driver - MAC</summary>
+
+Usuários de MAC consultem este guia
+
+1.> 📦 [Clique para baixar USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.Altere USB2CAN para BOOT
+
+3.Por favor extraia o USB2CAN.zip do passo 1, e coloque flash_pcan_mac.sh e pcan_canable_hw.bin (de dentro do USB2CAN.zip) no mesmo diretório
+
+[Clique para baixar flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
+
+Se transferir de outro computador (por exemplo scp):
+
+```text
+scp flash_pcan_mac.sh pcan_canable_hw.bin seeed@seu_IP_do_MAC:~/Downloads/
+```
+
+Ou simplesmente copie para um pendrive e conecte na MAC — contanto que os arquivos terminem em ~/Downloads, no diretório atual, ou /tmp, o script os encontrará automaticamente.
+
+4.Execute:
+
+```text
+bash /Users/"seu_nome_de_usuário"/Downloads/flash_pcan_mac.sh "/Users/"seu_nome_de_usuário"/Downloads/pcan_canable_hw.bin"
+```
+
+O comando acima assume que os arquivos estão no caminho de downloads do Mac; ajuste conforme o seu caminho real
+
+Digite sua senha; aguarde a conclusão
+
+Após concluir, altere de volta para "120R"
+
+Reconecte o USB.
+
+</details>
+
 <!-- ### 3. Write Motor IDs
 
 :::tip Pre-assembled kit users, please skip this step
