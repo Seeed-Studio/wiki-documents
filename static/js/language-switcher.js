@@ -10400,7 +10400,7 @@
     "ja",
     "pt"
   ],
-  "/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35": [
+  "/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35": [
     "cn",
     "en",
     "es",

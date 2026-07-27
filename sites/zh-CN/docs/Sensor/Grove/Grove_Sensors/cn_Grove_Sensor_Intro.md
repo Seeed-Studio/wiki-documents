@@ -84,7 +84,7 @@ Grove 传感器是由 Seeed Studio 推出的模块化传感器，它是 Grove �
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong></a>
-    <a class="get_one_now_item" href="/cn/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong></a>
+    <a class="get_one_now_item" href="/cn/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong></a>
 </div>
 
 #### Grove - 温湿度传感器 Pro (DHT22)

@@ -764,7 +764,7 @@
     "/es/Grove-Gesture_v1.0/",
     "/es/Grove-I2C-Hub-6Port/",
     "/es/Grove-I2C_ADC/",
-    "/es/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/",
+    "/es/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/",
     "/es/Grove-I2C_Hub/",
     "/es/Grove-IMU_10DOF/",
     "/es/Grove-IMU_10DOF_v2.0/",
@@ -9141,15 +9141,15 @@
     },
     {
       "title": "Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) | Seeed Studio Wiki",
-      "keepPathname": "/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/",
+      "keepPathname": "/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/es/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/",
-        "/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/"
+        "/es/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/",
+        "/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/"
       ],
       "others": [
-        "/es/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/"
+        "/es/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/"
       ]
     },
     {
