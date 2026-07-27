@@ -194,9 +194,10 @@ Em seguida, abra `https://motorbridge.github.io/motorbridge-studio/` no seu nave
         marginTop: '24px'
     }}
 >
-    <a [LINE_197]        href="/pt-br/rebot_arm_b601_dm_lerobot/"
+    <a
+        href="/pt-br/rebot_arm_b601_dm_lerobot/"
         style={{
-        textDecoration: 'none',
+            textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -204,22 +205,21 @@ Em seguida, abra `https://motorbridge.github.io/motorbridge-studio/` no seu nave
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-            }}
-        >
-    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-        <img
-            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
                 alt="LeRobot for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-                />
-            </div>
+            />
+        </div>
         <div style={{padding: '18px'}}>
-        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-            Primeiros passos com o reBot Arm B601-DM no LeRobot
-                </h3>
-            </div>
-        </a>
-    <a
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Primeiros passos com o reBot Arm B601-DM no LeRobot
+            </h3>
+        </div>
+    </a>
     <a
         href="/rebot_arm_b601_dm_grasping_demo/"
         style={{
@@ -246,9 +246,10 @@ Em seguida, abra `https://motorbridge.github.io/motorbridge-studio/` no seu nave
             </h3>
         </div>
     </a>
-    <a [LINE_26]        href="/pt-br/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
+    <a
+        href="/pt-br/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
         style={{
-        textDecoration: 'none',
+            textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -256,99 +257,102 @@ Em seguida, abra `https://motorbridge.github.io/motorbridge-studio/` no seu nave
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-            }}
-        >
-    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-        <img
-            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
                 alt="Controle o reBot Arm com NemoClaw no Nvidia Jetson Thor"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-                />
-            </div>
+            />
+        </div>
         <div style={{padding: '18px'}}>
-        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-            Controle o reBot Arm com NemoClaw no Nvidia Jetson Thor
-                </h3>
-            </div>
-        </a>
-    <a [LINE_52]        href="/pt-br/voice_control_rebot_arm/"
-    style={{
-        textDecoration: 'none',
-        color: 'inherit',
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Controle o reBot Arm com NemoClaw no Nvidia Jetson Thor
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/pt-br/voice_control_rebot_arm/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
             overflow: 'hidden',
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-            }}
-            >
+        }}
+    >
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-    <img
-        src="https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_controlled_rebot_arm/cover_page.png"
-            alt="Controle de voz do reBot Arm B601 pelo Nvidia Jetson Thor"
+            <img
+                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_controlled_rebot_arm/cover_page.png"
+                alt="Controle de voz do reBot Arm B601 pelo Nvidia Jetson Thor"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-                />
-                </div>
-            <div style={{padding: '18px'}}>
-        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-        Controle de voz do reBot Arm B601 pelo Nvidia Jetson Thor
+            />
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Controle de voz do reBot Arm B601 pelo Nvidia Jetson Thor
             </h3>
-                </div>
-            </a>
-        <a [LINE_78]        href="/pt-br/rebot_arm_b601_rs_ros2_integration/"
-    style={{
-    textDecoration: 'none',
-        color: 'inherit',
-        border: '1px solid #d9d9d9',
+        </div>
+    </a>
+    <a
+        href="/pt-br/rebot_arm_b601_rs_ros2_integration/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
             borderRadius: '16px',
             overflow: 'hidden',
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-            }}
-            >
-            <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-        <img
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
-        alt="Integração do reBot Arm B601-RS com ROS2"
-            style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-                />
-                </div>
-                <div style={{padding: '18px'}}>
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
+                alt="Integração do reBot Arm B601-RS com ROS2"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-        Integração do reBot Arm B601-RS com ROS2
-        </h3>
-            </div>
-                </a>
-            <a [LINE_104]        href="/pt-br/rebot_arm_b601_rs_isaacsim/"
+                Integração do reBot Arm B601-RS com ROS2
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/pt-br/rebot_arm_b601_rs_isaacsim/"
         style={{
-    textDecoration: 'none',
-    color: 'inherit',
-        border: '1px solid #d9d9d9',
-        borderRadius: '16px',
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
             overflow: 'hidden',
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-            }}
-            >
-            <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
             <img
-        src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"
-    alt="Simulando o reBotArm com Isaacsim"
-        style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+                src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"
+                alt="Simulando o reBotArm com Isaacsim"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
             />
-                </div>
-                <div style={{padding: '18px'}}>
-                <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-            Simulando o reBotArm com Isaacsim
-        </h3>
         </div>
-            </a>
-                </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Simulando o reBotArm com Isaacsim
+            </h3>
+        </div>
+    </a>
+</div>
 
-        ## Suporte técnico e discussão sobre o produto
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
@@ -358,10 +362,6 @@ Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tip
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div>
-
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
