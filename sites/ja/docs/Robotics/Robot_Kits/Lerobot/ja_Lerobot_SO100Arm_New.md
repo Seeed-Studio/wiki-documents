@@ -981,7 +981,7 @@ pip install -r requirements.txt`}
     --teleop.type=so101_leader \\
     --teleop.port=/dev/ttyACM1 \\
     --teleop.id=my_awesome_leader_arm`}
-</CodeBlock]
+</CodeBlock>
 
 teleoperate コマンドは自動的に以下を行います：
 
@@ -1791,7 +1791,7 @@ SO100 と SO101 のコードは互換性があります。SO100 のユーザー�
   --dataset.repo_id=seeed/eval_test123 \\
   --dataset.single_task="Put lego brick into the transparent box" \\
   --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model`}
-</CodeBlock]
+</CodeBlock>
 
 1. `--policy.path` パラメータは、ポリシー学習結果の重みファイルへのパスを示します（例：`outputs/train/act_so101_test/checkpoints/last/pretrained_model`）。モデル学習結果の重みファイルを Hub にアップロードした場合は、モデルリポジトリ（例：`\${HF_USER}/act_so100_test`）を使用することもできます。
 

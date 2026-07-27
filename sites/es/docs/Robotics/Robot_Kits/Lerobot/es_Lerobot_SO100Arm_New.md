@@ -1731,7 +1731,7 @@ Para entrenar una política que controle tu robot, utiliza el script [lerobot-tr
   --wandb.enable=false \\
   --policy.push_to_hub=false\\
   --steps=300000`}
-</CodeBlock]
+</CodeBlock>
 
 :::tip
 

@@ -1511,7 +1511,7 @@ Registre 5 episódios e faça upload do seu dataset para o hub:
     --dataset.push_to_hub=true \\
     --dataset.episode_time_s=30 \\
     --dataset.reset_time_s=30`}
-</CodeBlock]
+</CodeBlock>
 
 Você verá muitas linhas aparecendo como esta:
 
