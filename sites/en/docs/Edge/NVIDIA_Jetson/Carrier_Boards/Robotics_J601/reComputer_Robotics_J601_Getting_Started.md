@@ -28,14 +28,7 @@ import TabItem from '@theme/TabItem';
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg"/>
 </div>
 
-The reComputer J601 is a compact yet powerful edge AI carrier board for
-Jetson AGX Thor, delivering up to 2070 TFLOPS.
-Built for development and production, it features M.2 Key E/M/B, 4x 10Gb RJ45,
-4×USB 3.2, HDMI 2.1, 8×GMSL, and various IO's, ensuring seamless integration.
-It can be served as brain of humanoid. Supporting LLM & Physical AI
-frameworks like NVIDIA Isaac, Hugging Face, PyTorch, and ROS2/1, it bridges AI
-and robotics. With optimized real-time processing, it runs vision AI,
-transformers, and multimodal models, unlocking advanced AI for edge devices.
+The reComputer J601 is a compact yet powerful edge AI carrier board for Jetson AGX Thor, delivering up to 2070 TFLOPS. Built for development and production, it features M.2 Key E/M/B, 4x 10Gb RJ45, 4×USB 3.2, HDMI 2.1, 8×GMSL, and various IO's, ensuring seamless integration. It can be served as brain of humanoid. Supporting LLM & Physical AI frameworks like NVIDIA Isaac, Hugging Face, PyTorch, and ROS2/1, it bridges AI and robotics. With optimized real-time processing, it runs vision AI, transformers, and multimodal models, unlocking advanced AI for edge devices.
 
 ## Features
 
