@@ -1,221 +1,368 @@
 ---
-description: Página preliminar de introdução para a placa carrier reComputer Robotics J601 projetada para módulos NVIDIA Jetson AGX Thor.
+description: Introdução à placa carrier reComputer Robotics J601 para módulos NVIDIA Jetson AGX Thor.
 title: Introdução ao reComputer Robotics J601
+sidebar_label: Gravar JetPack
 keywords:
   - reComputer Robotics J601
   - AGX Thor
   - Jetson
-  - Placa Carrier
-  - Robótica
+  - Carrier Board
+  - Robotics
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
 last_update:
-  date: 04/24/2026
-  author: Dayu
+  date: 07/23/2026
+  author: HaoChen
 createdAt: '2026-04-24'
-updatedAt: '2026-07-01'
+updatedAt: '2026-07-23'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Introdução ao reComputer Robotics J601
 
-:::note
-Esta página é um rascunho preliminar para a futura placa carrier reComputer Robotics J601 para módulos NVIDIA Jetson AGX Thor. Especificações, suporte de software, conjuntos de acessórios e detalhes mecânicos ainda estão sujeitos a alterações.
-:::
-
 <div align="center">
-  <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg"/>
 </div>
 
-A reComputer Robotics J601 é uma placa carrier focada em robótica para módulos NVIDIA Jetson AGX Thor. Ela é destinada a cargas de trabalho de IA incorporada de alto desempenho e controle robótico que exigem rede de alta velocidade, E/S industrial, expansão de câmera GMSL e entrada DC de ampla faixa em um formato compacto de placa carrier.
+O reComputer J601 é uma placa carrier de borda de IA compacta e poderosa para
+Jetson AGX Thor, oferecendo até 2070 TFLOPS.
+Projetada para desenvolvimento e produção, possui M.2 Key E/M/B, 4x 10Gb RJ45,
+4×USB 3.2, HDMI 2.1, 8×GMSL e vários IOs, garantindo integração perfeita.
+Ela pode servir como o cérebro de um robô humanoide. Com suporte a frameworks de LLM e IA Física
+como NVIDIA Isaac, Hugging Face, PyTorch e ROS2/1, faz a ponte entre IA
+e robótica. Com processamento em tempo real otimizado, executa visão computacional,
+transformers e modelos multimodais, liberando IA avançada para dispositivos de borda.
 
-## Recursos preliminares
+## Recursos
 
-- Suporte para módulo **NVIDIA Jetson AGX Thor**
-- Slot **M.2 Key M** para SSD NVMe 2280
-- Slot **M.2 Key E** para módulo Wi-Fi/Bluetooth
-- Slot **M.2 Key B** para módulo 5G e suporte a **Nano SIM**
-- Ethernet de alta velocidade com suporte planejado a **PTP** e **EtherCAT**
-- E/S rica para robótica incluindo **CAN**, **RS-232/422/485**, **DI/DO**, **I2C**, **I2S**, **SPI** e **GPIO**
-- **Expansão GMSL** para até **8 câmeras**
-- Entrada DC de ampla faixa **19V a 48V** através de **XT30**
-- Plataforma de software alvo: **JetPack 7**
+- Suporta módulos **NVIDIA Jetson AGX Thor T5000 e T4000**
+- Até **2070 TFLOPS** de desempenho de IA
+- Até **4x 10GbE RJ45** portas
+- **4x USB 3.2 Type-A** portas com até 10Gbps
+- Saída de vídeo **HDMI 2.1**
+- **M.2 Key M** para SSD PCIe Gen 4 NVMe 2280
+- **M.2 Key E** para módulos Wi-Fi M.2 2230
+- **M.2 Key B** para módulos 4G/5G
+- Até **8x câmeras GMSL2** por meio de dois conectores Mini-Fakra e placas de extensão GMSL
+- I/O para robótica incluindo CAN isolado, RS-232/422/485, I2C, I2S, GPI e GPO
+- Entrada DC ampla de **19V a 48V** através de XT30
+- Plataforma de software: **JetPack 7.1**
 
-## Especificações preliminares
-
-A tabela a seguir mantém intencionalmente apenas as partes mais claras da definição atual de hardware e deixa os itens ainda não definidos como TBD.
+## Especificações
 
 <div class="table-center">
 <table>
   <tbody>
     <tr>
-      <td>Módulo</td>
-      <td>NVIDIA Jetson AGX Thor x 1</td>
+      <td>Compatibilidade de módulo</td>
+      <td>NVIDIA Jetson AGX Thor T5000 / T4000</td>
     </tr>
     <tr>
-      <td>Armazenamento</td>
-      <td>1x M.2 Key M para SSD M.2 NVMe 2280</td>
-    </tr>
-    <tr>
-      <td>Rede</td>
-      <td>Definição de Ethernet em andamento; plano preliminar inclui portas RJ45 de alta velocidade com suporte a PTP e EtherCAT</td>
-    </tr>
-    <tr>
-      <td>Expansão sem fio</td>
-      <td>1x M.2 Key E para Wi-Fi/Bluetooth, 1x M.2 Key B para 5G, 1x Nano SIM</td>
-    </tr>
-    <tr>
-      <td>USB</td>
-      <td>Até 4x USB 3.2 Tipo-A (Host), 1x USB 2.0 Tipo-C (Debug UART / Modo Device), 1x USB 3.0 Tipo-C para gravação</td>
+      <td>Tamanho da PCB</td>
+      <td>168 mm x 155 mm (sem o módulo Jetson AGX Thor)</td>
     </tr>
     <tr>
       <td>Display</td>
-      <td>1x HDMI</td>
+      <td>1x HDMI 2.1</td>
     </tr>
     <tr>
-      <td>Resfriamento</td>
-      <td>1x conector de ventoinha de 4 pinos (12V PWM); placa carrier e ventoinha devem ser vendidos separadamente</td>
+      <td>USB</td>
+      <td>4x USB 3.2 Type-A (10Gbps, Host), 1x USB 2.0 Type-C (Debug), 1x USB 3.0 Type-C (Recovery)</td>
     </tr>
     <tr>
-      <td>Câmera</td>
-      <td>Expansão GMSL, até 8 câmeras</td>
+      <td>Ethernet</td>
+      <td>4x RJ45 10GbE com T5000; 3x RJ45 10GbE com T4000</td>
     </tr>
     <tr>
-      <td>CAN</td>
-      <td>4x CAN via conectores JST</td>
+      <td>M.2 Key M</td>
+      <td>1x M.2 Key M para SSD PCIe Gen 4 NVMe 2280</td>
     </tr>
+    <tr>
+      <td>M.2 Key E</td>
+      <td>1x M.2 Key E para módulo Wi-Fi M.2 2230</td>
+    </tr>
+    <tr>
+      <td>M.2 Key B</td>
+      <td>1x M.2 Key B para módulo 4G/5G</td>
+    [LINE[90]    </tr>
     <tr>
       <td>Serial</td>
-      <td>1x RS-232/422/485 (conector DB9), 1x RS-485 (conector JST)</td>
+      <td>1x RS-232/422/485 (conector DB9)</td>
     </tr>
     <tr>
-      <td>E/S digital</td>
-      <td>4x DI e 4x DO via conectores terminais JST</td>
+      <td>Portas JST</td>
+      <td>4x CAN com T5000 ou 2x CAN com T4000, 1x RS-485, 1x I2S, 1x I2C, 4x GPI e 4x GPO</td>
     </tr>
     <tr>
       <td>Áudio</td>
-      <td>1x I2S, 2x saídas de amplificador, 1x entrada de microfone</td>
+      <td>1x entrada de microfone e 1x saída de áudio</td>
     </tr>
     <tr>
-      <td>Expansão de baixa velocidade</td>
-      <td>1x I2C, 1x SPI, GPIO via JST/pin header</td>
+      <td>Ventoinha</td>
+      <td>1x conector de ventoinha de 4 pinos (12V PWM)</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x RTC 2 pinos</td>
-    </tr>
-    <tr>
-      <td>Botões</td>
-      <td>Recovery e Reset</td>
+      <td>1x header RTC de 2 pinos</td>
     </tr>
     <tr>
       <td>LEDs</td>
-      <td>PWR, ACT e LED RGB definido pelo usuário</td>
+      <td>1x LED PWR verde, 1x LED SSD verde e 1x LED USR RGB</td>
     </tr>
     <tr>
-      <td>Entrada de energia</td>
-      <td>XT30, 19V a 48V DC</td>
+      <td>Botões</td>
+      <td>1x botão Recovery e 1x botão Reset</td>
     </tr>
     <tr>
-      <td>Corrente / Potência</td>
-      <td>Corrente máxima de 10A, definição de potência do sistema de 160W</td>
+      <td>GMSL</td>
+      <td>2x conectores Mini-Fakra para até 8x câmeras GMSL2</td>
     </tr>
     <tr>
       <td>Temperatura de operação</td>
-      <td>-10°C a +60°C</td>
+      <td>-10°C a 60°C com pasta térmica; -10°C a 55°C com almofada térmica</td>
     </tr>
     <tr>
-      <td>Umidade</td>
-      <td>10% a 95% UR</td>
+      <td>Fonte de alimentação</td>
+      <td>XT30, 19V a 48V DC</td>
     </tr>
     <tr>
-      <td>Certificação</td>
-      <td>CE, FCC, RoHS, classe EMI alvo: Classe A</td>
-    </tr>
-    <tr>
-      <td>Mecânico</td>
-      <td>Tamanho alvo da placa carrier dentro de 150 mm x 130 mm</td>
+      <td>JetPack</td>
+      <td>JetPack 7.1</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-## Definição de LED e botões
+## Visão geral de hardware
 
-### Botões
+| **Vista lateral 1** |
+|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_04.jpg) |
+| **Vista lateral 2** |
+| ![fig2](https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_05.jpg) |
+| **Vista inferior** |
+| ![fig3](https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_06.jpg) |
 
-| Botão | Pino | Sinal | Tipo | Descrição |
-| --- | --- | --- | --- | --- |
-| RECOVERY | 240 | - | CMOS-5V | Usado para recuperação do sistema / fluxo de configuração de baixo nível |
-| RESET | 239 | SYS_RESET* | Dreno aberto, 1,8V | Puxar para nível baixo para reiniciar o módulo; quando a alimentação do módulo estiver pronta, o nível alto pode ser usado como habilitação de alimentação da placa carrier |
+## Gravar JetPack
 
-### Indicadores LED
+Aqui, mostraremos como gravar o JetPack em um SSD NVMe conectado ao reComputer Robotics J6014 / J6015. Ambos os dispositivos usam a placa carrier J601, e o procedimento de gravação é o mesmo.
 
-| LED | Cor | Status | Descrição |
-| --- | --- | --- | --- |
-| PWR | Verde | On | O dispositivo está conectado à alimentação |
-| PWR | Verde | Off | O dispositivo não está conectado à alimentação |
-| ACT | Verde | Piscando | Atividade do SSD |
-| USER | R / G / B | TBD | Comportamento definido pelo usuário |
+### Módulo compatível
 
-## Software
+- Módulo NVIDIA Jetson T4000
+- Módulo NVIDIA Jetson T5000
 
-- Base de software planejada: **JetPack 7**
-- Capacidade Ethernet planejada: **EtherCAT**
-- Guia detalhado de gravação, pacote BSP e etapas de validação: **TBD**
+### Pré-requisitos
 
-## Adaptação de câmera planejada
-
-A lista de requisitos atual inclui os seguintes modelos de câmera GMSL:
-
-- Senyun `SG3S-ISX031C-GMSL2F`
-- Senyun `SG2-AR0233C-5200-G2A`
-- Senyun `SG2-IMX390C-5200-G2A`
-- Senyun `SG8S-AR0820C-5300-G2A`
-- Orbbec `335LG`
-
-## Projeto térmico
-
-Esta placa carrier é destinada ao uso dentro de carcaças de robôs humanóides, onde os clientes podem projetar sua própria solução térmica. A Seeed planeja fornecer orientações de projeto térmico para implantação baseada em AGX Thor.
-
-Documento de referência:
-
-- `Jetson_Thor_Thermal_DG_TDG12271001_v1.0.pdf`
-
-## Lista de embalagem preliminar
-
-### Acessórios
-
-- Cabo XT30 para DC, 200 mm x 1
-- Chicotes de fios soltos JST, 100 mm x 10
-- Cabo USB Tipo-C para Tipo-A, 1 m x 1
-- Parafuso para Key E x 1
-- Parafuso para Key M x 1
-- Parafuso para Key B x 1
-- Parafusos para AGX Thor SOM x 4
-- Suportes para sustentação da placa carrier x 4
-- Parafusos para suportes x 4
-- Manual do usuário x 1
-
-### Embalagem
-
-- Caixa para transporte aéreo
-- Bandeja interna para a placa carrier e acessórios
-- Manual do usuário na parte superior com uma camada adicional de espuma
-- Estilo de embalagem semelhante ao da placa carrier mini J501
-
-## Uso das interfaces de hardware
+- PC host com Ubuntu
+- reComputer Robotics J6014 ou J6015
+- SSD NVMe M.2 2280 interno
+- Cabo de transmissão de dados USB Type-C
+- Pelo menos 220 GB de armazenamento livre no PC host
 
 :::info
-Se você quiser saber mais sobre as especificações detalhadas e o uso das interfaces de hardware, consulte [este wiki](https://wiki.seeedstudio.com/pt-br/recomputer_jetson_robotics_j601_interfaces_usage/).
+Recomendamos usar um host Ubuntu físico em vez de uma máquina virtual. O Seeed Jetson DevelopTool também oferece suporte ao Windows por meio do WSL2, mas um host Ubuntu nativo proporciona a experiência de gravação mais confiável.
+
+<table style={{textAlign: 'center'}}>
+  <tbody>
+    <tr>
+        <td  rowspan="2"> Versão do JetPack </td>
+        <td class="dbon" colspan="3"> Versão do Ubuntu (computador host) </td>
+    </tr>
+    <tr>
+        <td > 20.04 </td>
+        <td > 22.04 </td>
+        <td > 24.04 </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.1</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+    </tr>
+  </tbody>
+</table>
+
+:::
+
+### Escolher um método de gravação
+
+Selecione abaixo o fluxo de trabalho gráfico do Seeed Jetson DevelopTool ou o fluxo de trabalho via linha de comando.
+
+<Tabs groupId="j601-flashing-method">
+
+<TabItem value="software" label="Gravação por software" default>
+
+O Seeed Jetson DevelopTool fornece um fluxo de trabalho gráfico guiado que baixa, verifica, extrai e grava o firmware sem exigir comandos de BSP. Instale a ferramenta seguindo o [guia de instalação do Seeed Jetson DevelopTool](/pt-br/jetson_developtool_installation).
+
+#### Tutorial em vídeo
+
+<div class="video-container">
+<iframe width="1071" height="803" src="https://www.youtube.com/embed/O2rlSOdYujE" title="Flash Jetpack for reCompurer J601 by Jetson Develop Tool!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+#### Fluxo de trabalho de gravação por software
+
+<details>
+
+<summary> Passo a passo </summary>
+
+**Passo 1.** Inicie o Seeed Jetson DevelopTool e abra o **Flash Center**. Selecione **reComputer J601** e **JetPack 7.1 (L4T 38.4.0)**.
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_07.jpg"/></div>
+
+**Passo 2.** Conecte o PC host à **porta de gravação USB 3.0 Type-C**. Pressione e segure o botão **RECOVERY**, conecte a fonte de alimentação DC de 19V a 48V através do XT30 e solte o botão após dois segundos.
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_08.jpg"/></div>
+
+**Passo 3.** Clique em **Detect Device**. Confirme que o módulo Jetson conectado foi detectado (por exemplo, **AGX Thor T5000**) e clique em **Next**.
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_09.jpg"/></div>
+
+**Passo 4.** Clique em **Download / Prepare BSP**. A ferramenta baixa o firmware, verifica o checksum SHA256 e extrai o BSP automaticamente.
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_10.jpg"/></div>
+
+**Passo 5.** Clique em **Start Flash** e aguarde até que a interface informe que a gravação foi concluída. Não desconecte a fonte de alimentação nem o cabo USB durante esse processo.
+
+:::caution
+A gravação apaga os dados no SSD NVMe de destino. Faça backup dos dados importantes antes de começar.
+:::
+
+**Passo 6.** Conecte o reComputer Robotics J601 a um monitor HDMI e conclua a configuração inicial do sistema.
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+</details>
+
+</TabItem>
+
+<TabItem value="command-line" label="Gravação via linha de comando">
+
+#### Preparar a imagem do JetPack
+
+Baixe a imagem do sistema que corresponde ao seu módulo Jetson. Ambos os produtos usam a mesma placa carrier J601; escolha a imagem de acordo com o módulo instalado na sua placa:
+
+<div class="table-center">
+<table style={{textAlign: 'center', tableLayout: 'fixed', width: '100%'}}>
+  <colgroup>
+    <col style={{width: '14%'}} />
+    <col style={{width: '20%'}} />
+    <col style={{width: '18%'}} />
+    <col style={{width: '14%'}} />
+    <col style={{width: '34%'}} />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Versão do JetPack</th>
+      <th>Módulo Jetson</th>
+      <th>Produto</th>
+      <th>Link para download</th>
+      <th>SHA256</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7.1 (L4T 38.4.0)</td>
+      <td>AGX Thor T5000</td>
+      <td>reComputer Robotics J6015</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAq5ofKK9Y1RaCzAfJ8-3J4ARhePBbGBc-mcjQ1bNAP0bY?e=CbmAN9" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td style={{overflowWrap: 'anywhere'}}>3f75780b43f6559bc950b6a97aa38fd6f61d4d001cce870bdfb498f64e6d18e5</td>
+    </tr>
+    <tr>
+      <td>7.1 (L4T 38.4.0)</td>
+      <td>AGX Thor T4000</td>
+      <td>reComputer Robotics J6014</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBofCO4bWF9SLdbLQE1V8DgAS1tW6-UmQGEH3ULOZ7W16o?e=zdnK3s" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td style={{overflowWrap: 'anywhere'}}>c63eddfe7005a088ab439c64fb5d3bf9a52b85d62d377c6a4bf829295f7222ef</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+:::danger
+Os arquivos de imagem do JetPack são grandes e podem levar cerca de 60 minutos para serem baixados. Aguarde o término do download antes de extrair o arquivo compactado.
+:::
+
+Para verificar o firmware baixado, execute `sha256sum <file>` no host Ubuntu e compare o resultado com o valor SHA256 na tabela.
+
+⚙️ **Todos os arquivos `.dts` e outros códigos-fonte das placas carrier Jetson da Seeed podem ser baixados em** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra).
+
+#### Entrar no modo Force Recovery
+
+:::info
+Antes de fazer o flash, certifique-se de que a placa esteja em modo Force Recovery.
+:::
+
+**Passo 1.** Conecte o PC host com Ubuntu à **porta USB 3.0 Type-C de gravação** usando um cabo de dados USB Type-C.
+
+<div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_03.jpg"/></div>
+
+**Passo 2.** Pressione e segure o botão **RECOVERY**.
+
+**Passo 3.** Conecte a fonte de alimentação (19V a 48V DC através do conector XT30).
+
+**Passo 4.** Solte o botão **RECOVERY** após dois segundos.
+
+**Passo 5.** No PC host, execute `lsusb`. A seguinte entrada confirma que a placa está em modo Force Recovery:
+
+- Jetson AGX Thor: **0955:7026 NVIDIA Corp.**
+
+<div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg"/></div>
+
+#### Fazer flash no Jetson
+
+**Passo 1.** Extraia a imagem baixada:
+
+```bash
+cd <path-to-image>
+sudo tar xpf mfi_xxxx.tar.gz
+# Example:
+# sudo tar xpf mfi_recomputer-robo-agx-thor-j601x-7.1.0-38.4.0-YYYY-MM-DD.tar.gz
+```
+
+**Passo 2.** Grave o JetPack no SSD NVMe:
+
+```bash
+cd mfi_xxxx
+# Example: cd mfi_recomputer-robo-agx-thor-j601x
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+O comando de gravação geralmente leva de 2 a 10 minutos. A saída a seguir indica uma gravação bem-sucedida:
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+**Passo 3.** Conecte o reComputer Robotics J601 a um monitor HDMI e conclua a configuração inicial do sistema.
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+</TabItem>
+
+</Tabs>
+
+:::info
+Conclua a **Configuração do Sistema** de acordo com suas necessidades após a primeira inicialização.
 :::
 
 ## Recursos
 
-- Layout detalhado de hardware: TBD
-- Guia de gravação: TBD
-- Notas de versão do BSP: TBD
+- [Datasheet da placa carrier reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_J601_datasheet.pdf)
+- [Esquemático da placa carrier reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20J601%20Carrier%20Board_V1.0_SCH_260612.pdf)
+- [Arquivo 3D do reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_J601.stp)
+- [Catálogo de produtos Seeed NVIDIA Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Casos de sucesso Seeed NVIDIA Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [One Pager do Seeed Jetson AGX](https://files.seeedstudio.com/wiki/reComputer-Jetson/seeed_jetson_agx_new_series.pdf)
+- [Código-fonte do BSP Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
+- [Página do produto da placa carrier reComputer J601](https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thor-p-6937.html)
 
 ## Suporte técnico
 
