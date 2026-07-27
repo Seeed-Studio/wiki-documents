@@ -28,14 +28,7 @@ import TabItem from '@theme/TabItem';
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg"/>
 </div>
 
-reComputer J601 是一款紧凑而强大的边缘 AI 载板，适用于
-Jetson AGX Thor，最高可提供 2070 TFLOPS 的算力。
-它既适用于开发也适用于量产，配备 M.2 Key E/M/B、4 路 10Gb RJ45、
-4 路 USB 3.2、HDMI 2.1、8 路 GMSL 以及多种 IO，确保无缝集成。
-它可以作为人形机器人的“大脑”。支持 NVIDIA Isaac、Hugging Face、PyTorch 和 ROS2/1 等 LLM 与物理智能
-框架，实现 AI 与机器人之间的桥接。通过优化的实时处理能力，它可以运行视觉 AI、
-Transformer 和多模态模型，为边缘设备解锁先进 AI 能力。
-transformers, and multimodal models, unlocking advanced AI for edge devices.
+reComputer J601 是一款紧凑而强大的边缘 AI 载板，适用于Jetson AGX Thor，最高可提供 2070 TFLOPS 的算力。它既适用于开发也适用于量产，配备 M.2 Key E/M/B、4 路 10Gb RJ45、4 路 USB 3.2、HDMI 2.1、8 路 GMSL 以及多种 IO，确保无缝集成。它可以作为人形机器人的“大脑”。支持 NVIDIA Isaac、Hugging Face、PyTorch 和 ROS2/1 等 LLM 与物理智能框架，实现 AI 与机器人之间的桥接。通过优化的实时处理能力，它可以运行视觉 AI、Transformer 和多模态模型，为边缘设备解锁先进 AI 能力。
 
 ## 特性
 

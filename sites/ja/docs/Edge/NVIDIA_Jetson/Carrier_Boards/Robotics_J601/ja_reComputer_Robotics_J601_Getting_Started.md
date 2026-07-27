@@ -28,13 +28,7 @@ import TabItem from '@theme/TabItem';
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg"/>
 </div>
 
-reComputer J601 は、Jetson AGX Thor 向けのコンパクトかつ高性能なエッジ AI キャリアボードで、
-最大 2070 TFLOPS の性能を発揮します。
-開発および量産用途向けに設計されており、M.2 Key E/M/B、4x 10Gb RJ45、
-4×USB 3.2、HDMI 2.1、8×GMSL、各種 I/O を備え、シームレスな統合を実現します。
-ヒューマノイドロボットのブレインとして使用することができます。NVIDIA Isaac、Hugging Face、PyTorch、ROS2/1 などの LLM & Physical AI
-フレームワークをサポートし、AI とロボティクスをつなぎます。最適化されたリアルタイム処理により、ビジョン AI、
-トランスフォーマー、およびマルチモーダルモデルを実行し、エッジデバイス向けの高度な AI を実現します。
+reComputer J601 は、Jetson AGX Thor 向けのコンパクトかつ高性能なエッジ AI キャリアボードで、最大 2070 TFLOPS の性能を発揮します。開発および量産用途向けに設計されており、M.2 Key E/M/B、4x 10Gb RJ45、4×USB 3.2、HDMI 2.1、8×GMSL、各種 I/O を備え、シームレスな統合を実現します。ヒューマノイドロボットのブレインとして使用することができます。NVIDIA Isaac、Hugging Face、PyTorch、ROS2/1 などの LLM & Physical AI フレームワークをサポートし、AI とロボティクスをつなぎます。最適化されたリアルタイム処理により、ビジョン AI、トランスフォーマー、およびマルチモーダルモデルを実行し、エッジデバイス向けの高度な AI を実現します。
 
 ## 特長
 
@@ -290,7 +284,6 @@ Jetson モジュールに対応したシステムイメージをダウンロー�
 :::danger
 JetPack イメージファイルは大容量のため、ダウンロードに約 60 分かかる場合があります。アーカイブを展開する前に、ダウンロードが完了するまでお待ちください。
 :::
-
 
 ダウンロードしたファームウェアを検証するには、Ubuntu ホスト上で `sha256sum <file>` を実行し、その結果を表の SHA256 値と比較します。
 

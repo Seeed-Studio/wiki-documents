@@ -28,14 +28,7 @@ import TabItem from '@theme/TabItem';
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg"/>
 </div>
 
-O reComputer J601 é uma placa carrier de borda de IA compacta e poderosa para
-Jetson AGX Thor, oferecendo até 2070 TFLOPS.
-Projetada para desenvolvimento e produção, possui M.2 Key E/M/B, 4x 10Gb RJ45,
-4×USB 3.2, HDMI 2.1, 8×GMSL e vários IOs, garantindo integração perfeita.
-Ela pode servir como o cérebro de um robô humanoide. Com suporte a frameworks de LLM e IA Física
-como NVIDIA Isaac, Hugging Face, PyTorch e ROS2/1, faz a ponte entre IA
-e robótica. Com processamento em tempo real otimizado, executa visão computacional,
-transformers e modelos multimodais, liberando IA avançada para dispositivos de borda.
+O reComputer J601 é uma placa carrier de borda de IA compacta e poderosa para Jetson AGX Thor, oferecendo até 2070 TFLOPS. Projetada para desenvolvimento e produção, possui M.2 Key E/M/B, 4x 10Gb RJ45, 4×USB 3.2, HDMI 2.1, 8×GMSL e vários IOs, garantindo integração perfeita. Ela pode servir como o cérebro de um robô humanoide. Com suporte a frameworks de LLM e IA Física como NVIDIA Isaac, Hugging Face, PyTorch e ROS2/1, faz a ponte entre IA e robótica. Com processamento em tempo real otimizado, executa visão computacional, transformers e modelos multimodais, liberando IA avançada para dispositivos de borda.
 
 ## Recursos
 
@@ -88,7 +81,7 @@ transformers e modelos multimodais, liberando IA avançada para dispositivos de 
     <tr>
       <td>M.2 Key B</td>
       <td>1x M.2 Key B para módulo 4G/5G</td>
-    [LINE[90]    </tr>
+    </tr>
     <tr>
       <td>Serial</td>
       <td>1x RS-232/422/485 (conector DB9)</td>
