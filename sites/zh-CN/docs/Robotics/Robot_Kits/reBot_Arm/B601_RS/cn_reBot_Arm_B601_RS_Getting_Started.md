@@ -305,6 +305,72 @@ C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
 
 </details>
 
+<details>
+
+<summary>PCAN 固件下载与驱动修复步骤-Ubuntu</summary>
+Ubuntu 用户请参考本指南
+
+1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.USB2CAN 拨到 BOOT
+
+3.请将第一步的USB2CAN.zip压缩包解压，将flash_pcan_ubuntu.sh 和 USB2CAN.zip里面的pcan_canable_hw.bin 放同一目录
+
+[点击下载 flash_pcan_ubuntu.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
+
+如果是从别的电脑传过去的（比如 scp）：
+
+```text
+scp flash_pcan.sh pcan_canable_hw.bin seeed@你的Ubuntu的IP:~/Downloads/
+```
+或者直接拖进优盘再插到 Ubuntu 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+
+4.执行：
+
+```text
+bash flash_pcan_ubuntu.sh
+```
+ 输入密码；等待完成
+
+完成后重新拨回"120R"
+
+重新插 USB。
+</details>
+
+<details>
+
+<summary>PCAN 固件下载与驱动修复步骤-MAC</summary>
+MAC 用户请参考本指南
+
+1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.USB2CAN 拨到 BOOT
+
+3.请将第一步的USB2CAN.zip压缩包解压，将flash_pcan_mac.sh 和 USB2CAN.zip里面的pcan_canable_hw.bin 放同一目录
+
+[点击下载 flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
+
+如果是从别的电脑传过去的（比如 scp）：
+
+```text
+scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
+```
+
+或者直接拖进优盘再插到 MAC 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+
+4.执行：
+
+```text
+ bash /Users/"你的用户名"/Downloads/pcan_flash_mac.sh "/Users/"你的用户名"/Downloads/pcan_canable_hw.bin"
+```
+以上命令为文件放置在mac下载路径，按实际路径更改
+
+输入密码；等待完成
+
+完成后重新拨回"120R"
+
+重新插 USB。
+</details>
 
 <!-- ### 3.写入电机id
 
