@@ -303,6 +303,77 @@ USB2CAN モジュールを取り外し、DIP スイッチを **120R** に設定�
 
 </details>
 
+<details>
+<summary>PCAN ファームウェアダウンロードとドライバ修復手順 - Ubuntu</summary>
+
+Ubuntu ユーザーはこちらのガイドを参照してください
+
+1.> 📦 [クリックして USB2CAN.zip をダウンロード](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.USB2CAN を BOOT に切り替えてください
+
+3.手順1の USB2CAN.zip を解凍し、flash_pcan_ubuntu.sh と USB2CAN.zip 内の pcan_canable_hw.bin を同じディレクトリに配置してください
+
+[クリックして flash_pcan_ubuntu.sh をダウンロード](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
+
+別のパソコンから転送する場合（例：scp）：
+
+```text
+scp flash_pcan_ubuntu.sh pcan_canable_hw.bin seeed@あなたのUbuntuのIP:~/Downloads/
+```
+または USB メモリにコピーして Ubuntu マシンに挿してコピーしても構いません — ファイルが ~/Downloads、カレントディレクトリ、または /tmp のいずれかにあれば、スクリプトが自動的に見つけます。
+
+4.実行：
+
+```text
+bash flash_pcan_ubuntu.sh
+```
+
+パスワードを入力してください；完了までお待ちください
+
+完了後、「120R」に戻してください
+
+USB を挿し直してください。
+
+</details>
+
+<details>
+<summary>PCAN ファームウェアダウンロードとドライバ修復手順 - MAC</summary>
+
+MAC ユーザーはこちらのガイドを参照してください
+
+1.> 📦 [クリックして USB2CAN.zip をダウンロード](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.USB2CAN を BOOT に切り替えてください
+
+3.手順1の USB2CAN.zip を解凍し、flash_pcan_mac.sh と USB2CAN.zip 内の pcan_canable_hw.bin を同じディレクトリに配置してください
+
+[クリックして flash_pcan_mac.sh をダウンロード](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
+
+別のパソコンから転送する場合（例：scp）：
+
+```text
+scp flash_pcan_mac.sh pcan_canable_hw.bin seeed@あなたのMACのIP:~/Downloads/
+```
+
+または USB メモリにコピーして MAC に挿してコピーしても構いません — ファイルが ~/Downloads、カレントディレクトリ、または /tmp のいずれかにあれば、スクリプトが自動的に見つけます。
+
+4.実行：
+
+```text
+bash /Users/"あなたのユーザー名"/Downloads/flash_pcan_mac.sh "/Users/"あなたのユーザー名"/Downloads/pcan_canable_hw.bin"
+```
+
+上記のコマンドはファイルが Mac のダウンロードパスに配置されていることを前提としています。実際のパスに合わせて変更してください
+
+パスワードを入力してください；完了までお待ちください
+
+完了後、「120R」に戻してください
+
+USB を挿し直してください。
+
+</details>
+
 <!-- ### 3. モーター ID の書き込み
 
 :::tip 組立済みキットのユーザーは、この手順をスキップしてください
