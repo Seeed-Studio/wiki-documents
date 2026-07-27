@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-06-23'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
 ---
 
@@ -20,10 +20,10 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
 ## はじめに
 
 新時代の Physical AI のためのオールインワン Embodied AI 開発プラットフォームです。
-生成 AI が単に「世界を理解する」段階から、積極的に「世界とインタラクションする」段階へと進化するにつれ、ロボティクス開発は新たな時代 ― Physical AI ― に突入しています。
-開発者、研究者、教育者が Embodied AI の世界へ踏み出すスピードを加速させるため、Seeed Studio は完全オープンソースの reBot Arm B601 と最先端の NVIDIA Jetson Developer Kit を組み合わせ、強力な次世代ロボティクス開発バンドルを提供します。
+生成 AI が単に「世界を理解する」段階から、積極的に「世界とインタラクションする」段階へと進化するにつれ、ロボティクス開発は新たな時代、すなわち Physical AI へと突入しています。
+Embodied AI への取り組みを加速させたい開発者、研究者、教育者を支援するため、Seeed Studio は完全オープンソースの reBot Arm B601 と最先端の NVIDIA Jetson Developer Kit を組み合わせ、強力な次世代ロボティクス開発バンドルを提供します。
 
-このバンドルは、高精度なロボットマニピュレーション機能だけでなく、マルチモーダル AI モデルや Vision-Language Model（VLM）、リアルタイムロボット推論をエッジでローカル実行するために必要な大規模 AI 演算能力も提供します。
+このバンドルは、高精度なロボットマニピュレーション機能だけでなく、マルチモーダル AI モデルや Vision-Language Model（VLM）、リアルタイムロボット推論をエッジでローカル実行するために必要な大規模な AI 計算能力も提供します。
 学習・研究から迅速なプロトタイピング、実運用まで、次世代のインテリジェントロボットを構築するための完全なプラットフォームです。
 
 <div class="table-center">
@@ -131,17 +131,17 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
 
 完全な Embodied AI 開発プラットフォーム
 
-従来のロボティクス開発には、しばしば次のような制約があります。
+従来のロボティクス開発には、しばしば次のような制約があります：
 
 1. クローズドなハードウェアエコシステム
-2. 不十分な AI 演算能力
+2. 不十分な AI 計算能力
 3. 断片化されたソフトウェアスタック
 4. 高い開発ハードル
 5. 実世界の Physical AI シナリオの検証が困難
 
 reBot Arm × Jetson バンドルは、これらの課題を解決するために設計されています。
 
-このバンドルにより、次のものが得られます。
+このバンドルにより、次のものが得られます：
 
 1. 完全オープンソースの 6+1 自由度ロボットアームプラットフォーム
 2. GPU 搭載の NVIDIA フラッグシップエッジ AI コンピューティングプラットフォーム
@@ -171,7 +171,7 @@ uv pip install motorbridge
 
 ### WebUI
 
-Nvidia Jetson 上で次のコマンドを実行します。
+Nvidia Jetson 上で次のコマンドを実行します：
 
 ```bash
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
@@ -194,10 +194,9 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
         marginTop: '24px'
     }}
 >
-    <a
-        href="/ja/rebot_arm_b601_dm_lerobot/"
+    <a [LINE_197]        href="/ja/rebot_arm_b601_dm_lerobot/"
         style={{
-            textDecoration: 'none',
+        textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -205,23 +204,24 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-        }}
-    >
-        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-            <img
-                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
+            }}
+        >
+    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
                 alt="LeRobot for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-            />
-        </div>
+                />
+            </div>
         <div style={{padding: '18px'}}>
-            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                LeRobot で reBot Arm B601-DM を始める
-            </h3>
-        </div>
-    </a>
+        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+            LeRobot で reBot Arm B601-DM を始める
+                </h3>
+            </div>
+        </a>
     <a
-        href="/ja/rebot_arm_b601_dm_grasping_demo/"
+    <a
+        href="/rebot_arm_b601_dm_grasping_demo/"
         style={{
             textDecoration: 'none',
             color: 'inherit',
@@ -236,20 +236,19 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
             <img
                 src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png"
-                alt="reBot Arm B601-DM 用ビジュアル把持デモ"
+                alt="reBot Arm B601-DM のビジュアルグラスピングデモ"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
             />
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                reBot Arm B601-DM ビジュアル把持デモ
+                reBot Arm B601-DM ビジュアルグラスピングデモ
             </h3>
         </div>
     </a>
-    <a
-        href="/ja/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
+    <a [LINE_26]        href="/ja/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
         style={{
-            textDecoration: 'none',
+        textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -257,26 +256,101 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-        }}
-    >
-        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-            <img
-                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
+            }}
+        >
+    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
                 alt="Nvidia Jetson Thor 上の NemoClaw で reBot Arm を制御"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-            />
-        </div>
+                />
+            </div>
         <div style={{padding: '18px'}}>
-            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Nvidia Jetson Thor 上の NemoClaw で reBot Arm を制御
+        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+            Nvidia Jetson Thor 上の NemoClaw で reBot Arm を制御
+                </h3>
+            </div>
+        </a>
+    <a [LINE_52]        href="/ja/voice_control_rebot_arm/"
+    style={{
+        textDecoration: 'none',
+        color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+            }}
+            >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+    <img
+        src="https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_controlled_rebot_arm/cover_page.png"
+            alt="Nvidia Jetson Thor による reBot Arm B601 の音声制御"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+                />
+                </div>
+            <div style={{padding: '18px'}}>
+        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+        Nvidia Jetson Thor による reBot Arm B601 の音声制御
             </h3>
+                </div>
+            </a>
+        <a [LINE_78]        href="/ja/rebot_arm_b601_rs_ros2_integration/"
+    style={{
+    textDecoration: 'none',
+        color: 'inherit',
+        border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+            }}
+            >
+            <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
+        alt="reBot Arm B601-RS ROS2 統合"
+            style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+                />
+                </div>
+                <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+        reBot Arm B601-RS ROS2 統合
+        </h3>
+            </div>
+                </a>
+            <a [LINE_104]        href="/ja/rebot_arm_b601_rs_isaacsim/"
+        style={{
+    textDecoration: 'none',
+    color: 'inherit',
+        border: '1px solid #d9d9d9',
+        borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+            }}
+            >
+            <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+        src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"
+    alt="Isaacsim を通じた reBotArm のシミュレーション"
+        style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+                </div>
+                <div style={{padding: '18px'}}>
+                <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+            Isaacsim を通じた reBotArm のシミュレーション
+        </h3>
         </div>
-    </a>
-</div>
+            </a>
+                </div>
 
-## 技術サポートと製品ディスカッション
+        ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
@@ -284,6 +358,10 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
 </div>
 
 <div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

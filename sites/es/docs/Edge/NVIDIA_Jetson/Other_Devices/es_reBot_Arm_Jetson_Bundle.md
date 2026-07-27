@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-06-23'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/es/rebot_arm_jetson_bundle/
 ---
 
@@ -21,9 +21,9 @@ url: https://wiki.seeedstudio.com/es/rebot_arm_jetson_bundle/
 
 Una plataforma de desarrollo de IA incorporada todo en uno para la nueva era de la IA física.
 A medida que la IA generativa evoluciona de simplemente “entender el mundo” a “interactuar con el mundo” de forma activa, el desarrollo de la robótica está entrando en una nueva era: la IA física.
-Para ayudar a desarrolladores, investigadores y educadores a acelerar su camino hacia la IA incorporada, Seeed Studio combina el reBot Arm B601 totalmente de código abierto con el vanguardista Kit de Desarrollo NVIDIA Jetson para crear un potente kit de desarrollo robótico de próxima generación.
+Para ayudar a desarrolladores, investigadores y educadores a acelerar su camino hacia la IA incorporada, Seeed Studio combina el reBot Arm B601 totalmente de código abierto con el vanguardista NVIDIA Jetson Developer Kit para crear un potente kit de desarrollo de robótica de próxima generación.
 
-Este kit no solo ofrece capacidades precisas de manipulación robótica, sino también la enorme potencia de cómputo de IA necesaria para ejecutar modelos de IA multimodal, modelos de visión y lenguaje (VLM) e inferencia robótica en tiempo real localmente en el borde.
+Este kit no solo ofrece capacidades precisas de manipulación robótica, sino también la enorme potencia de cómputo de IA necesaria para ejecutar modelos de IA multimodales, modelos de visión y lenguaje (VLM) e inferencia robótica en tiempo real de forma local en el edge.
 Es una plataforma completa para construir la próxima ola de robots inteligentes, desde el aprendizaje y la investigación hasta la creación rápida de prototipos y el despliegue.
 
 <div class="table-center">
@@ -75,7 +75,7 @@ Es una plataforma completa para construir la próxima ola de robots inteligentes
         </td>
     </tr>
     <tr>
-        <th> Kit de Desarrollo NVIDIA® Jetson AGX Thor™ </th>
+        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
         <th> reComputer Classic J3011 </th>
     </tr>
     <tr>
@@ -124,7 +124,7 @@ Es una plataforma completa para construir la próxima ola de robots inteligentes
 </div>
 
 :::danger
-Aquí usamos el NVIDIA Jetson Thor como ejemplo para demostrar cómo controlar rápidamente el brazo robótico reBot Arm B601 con Jetson. También puedes elegir otros dispositivos Jetson según tus necesidades específicas.
+Aquí usamos el NVIDIA Jetson Thor como ejemplo para mostrar cómo controlar rápidamente el brazo robótico reBot Arm B601 con Jetson. También puedes elegir otros dispositivos Jetson según tus necesidades específicas.
 :::
 
 ## ¿Por qué este kit?
@@ -137,17 +137,17 @@ El desarrollo robótico tradicional suele presentar varias limitaciones:
 2. Potencia de cómputo de IA insuficiente
 3. Pilas de software fragmentadas
 4. Altas barreras de desarrollo
-5. Dificultad para validar escenarios reales de IA física
+5. Dificultad para validar escenarios de IA física en el mundo real
 
 El kit reBot Arm × Jetson está diseñado para resolver estos desafíos.
 
-Con este kit, obtienes:
+Con este kit obtienes:
 
 1. Una plataforma de brazo robótico totalmente de código abierto con 6+1 GDL
-2. La plataforma insignia de cómputo de IA en el borde de NVIDIA impulsada por GPU
+2. La plataforma insignia de cómputo de IA en el edge de NVIDIA impulsada por GPU
 3. Compatibilidad nativa con ROS1, ROS2, Isaac Sim y LeRobot
 4. Preparado para flujos de trabajo de IA multimodal e IA generativa
-5. Un entorno unificado para educación, investigación y creación de prototipos de robótica con IA
+5. Un entorno unificado para educación, investigación y creación de prototipos de robótica de IA
 
 ## Primeros pasos
 
@@ -177,7 +177,7 @@ Ejecuta este comando en Nvidia Jetson:
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
 ```
 
-Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador y verás la siguiente página. Desde esta interfaz, puedes ajustar los parámetros del motor, comprobar el estado del brazo robótico y realizar otras operaciones.
+Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador y verás la siguiente página. Desde esta interfaz puedes ajustar los parámetros del motor, comprobar el estado del brazo robótico y realizar otras operaciones.
 
 <div align="center">
     <img width={900}
@@ -194,10 +194,9 @@ Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador 
         marginTop: '24px'
     }}
 >
-    <a
-        href="/es/rebot_arm_b601_dm_lerobot/"
+    <a [LINE_197]        href="/es/rebot_arm_b601_dm_lerobot/"
         style={{
-            textDecoration: 'none',
+        textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -205,23 +204,24 @@ Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador 
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-        }}
-    >
-        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-            <img
-                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
+            }}
+        >
+    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
                 alt="LeRobot for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-            />
-        </div>
+                />
+            </div>
         <div style={{padding: '18px'}}>
-            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Primeros pasos con reBot Arm B601-DM en LeRobot
-            </h3>
-        </div>
-    </a>
+        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+            Primeros pasos con reBot Arm B601-DM en LeRobot
+                </h3>
+            </div>
+        </a>
     <a
-        href="/es/rebot_arm_b601_dm_grasping_demo/"
+    <a
+        href="/rebot_arm_b601_dm_grasping_demo/"
         style={{
             textDecoration: 'none',
             color: 'inherit',
@@ -246,10 +246,9 @@ Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador 
             </h3>
         </div>
     </a>
-    <a
-        href="/es/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
+    <a [LINE_26]        href="/es/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
         style={{
-            textDecoration: 'none',
+        textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -257,26 +256,101 @@ Luego, abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador 
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-        }}
-    >
-        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-            <img
-                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
-                alt="Controla reBot Arm con NemoClaw en Nvidia Jetson Thor"
+            }}
+        >
+    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
+                alt="Controlar reBot Arm con NemoClaw en Nvidia Jetson Thor"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-            />
-        </div>
+                />
+            </div>
         <div style={{padding: '18px'}}>
-            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Controla reBot Arm con NemoClaw en Nvidia Jetson Thor
+        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+            Controlar reBot Arm con NemoClaw en Nvidia Jetson Thor
+                </h3>
+            </div>
+        </a>
+    <a [LINE_52]        href="/es/voice_control_rebot_arm/"
+    style={{
+        textDecoration: 'none',
+        color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+            }}
+            >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+    <img
+        src="https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_controlled_rebot_arm/cover_page.png"
+            alt="Control por voz de reBot Arm B601 con Nvidia Jetson Thor"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+                />
+                </div>
+            <div style={{padding: '18px'}}>
+        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+        Control por voz de reBot Arm B601 con Nvidia Jetson Thor
             </h3>
+                </div>
+            </a>
+        <a [LINE_78]        href="/es/rebot_arm_b601_rs_ros2_integration/"
+    style={{
+    textDecoration: 'none',
+        color: 'inherit',
+        border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+            }}
+            >
+            <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
+        alt="Integración de reBot Arm B601-RS con ROS2"
+            style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+                />
+                </div>
+                <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+        Integración de reBot Arm B601-RS con ROS2
+        </h3>
+            </div>
+                </a>
+            <a [LINE_104]        href="/es/rebot_arm_b601_rs_isaacsim/"
+        style={{
+    textDecoration: 'none',
+    color: 'inherit',
+        border: '1px solid #d9d9d9',
+        borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+            }}
+            >
+            <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+        src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"
+    alt="Simulación de reBotArm mediante Isaacsim"
+        style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+                </div>
+                <div style={{padding: '18px'}}>
+                <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+            Simulación de reBotArm mediante Isaacsim
+        </h3>
         </div>
-    </a>
-</div>
+            </a>
+                </div>
 
-## Soporte técnico y debate sobre el producto
+        ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
@@ -284,6 +358,10 @@ Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes t
 </div>
 
 <div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
