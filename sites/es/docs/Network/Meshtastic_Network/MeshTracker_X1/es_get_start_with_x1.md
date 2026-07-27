@@ -4,7 +4,7 @@ title: Comienza con MeshTracker X1
 keywords:
   - Rastreador
   - Meshtastic
-image: https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png
 slug: /x1_get_started_for_meshtastic
 sku: 100087698
 sidebar_position: 1
@@ -32,7 +32,7 @@ Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ma
 Pulsa una vez para encender el dispositivo. Sonará una melodía ascendente y el LED verde 🟢 permanecerá encendido durante aproximadamente 1 s.
 
 :::tip
-Si el dispositivo no responde cuando pulsas el botón, cárgalo primero. No utilices un cargador de carga rápida.
+Si el dispositivo no responde cuando presionas el botón, cárgalo primero. No utilices un cargador de carga rápida.
 ::: 
 
 ### Apagar el dispositivo
@@ -153,7 +153,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
     <th colspan="1">Respuesta del dispositivo</th>
   </tr>
   <tr>
-   <td>Pulsar una vez (apagado)</td>
+   <td>Un clic (apagado)</td>
     <td>Dispositivo encendiéndose</td>
   </tr>
   <tr>
@@ -177,7 +177,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 ## Flashear firmware
 
 :::caution note
-Por favor, `don't use OTA` para actualizar el firmware, ya que puede hacer que el dispositivo quede completamente inutilizable. Para información detallada, por favor [haz clic aquí](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ota/)
+Por favor, `no uses OTA` para actualizar el firmware, ya que puede hacer que el dispositivo quede completamente inutilizable. Para información detallada, por favor [haz clic aquí](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ota/)
 :::
 #### Paso 1: Entrar en modo DFU
 
@@ -200,7 +200,7 @@ Haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `X1 xxx`. Haz c
 
 <TabItem value="method2" label="Manually Enter">
 
-Conecta el cable USB a tu PC, mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces.
+Conecta el cable USB a tu PC, mantén presionado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -212,13 +212,13 @@ El LED blanco ⚪️ permanecerá fijo si el X1 está en modo DFU. Y debería ap
 
 #### Paso 2: Borrado de la memoria flash
 
-Antes de flashear el firmware, ¡bórralo primero!
+Antes de flashear el firmware, ¡primero bórralo!
 
 Haz clic en el símbolo de `trash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EraseX11.png" alt="pir" width={800} height="auto" /></p>
 
-Descarga el firmware de borrado y cópialo en la unidad.
+Descarga el firmware de borrado y cópialo a la unidad.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/FlashFirmwareX11.png" alt="pir" width={800} height="auto" /></p>
 
@@ -230,7 +230,7 @@ Selecciona el firmware más reciente y descarga el archivo `UF2`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/FlashClick.png" alt="pir" width={800} height="auto" /></p>
 
-Copia el archivo UF2 en la unidad DFU. El firmware debería flashearse después de que se copie el archivo y el dispositivo se reinicie.
+Copia el archivo UF2 a la unidad DFU. El firmware debería flashearse después de que se copie el archivo y el dispositivo se reinicie.
 
 ## Tutorial avanzado
 
@@ -273,7 +273,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
 
 <TabItem value="12" label="Serial">
 
-    Elige el método serie. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
+    Elige el método serial. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
 </TabItem>
@@ -310,7 +310,7 @@ Ve a `Settings` -> `External Notification` -> Activa `GPIO` -> Configura `Output
 
 <TabItem value="android" label="Aplicación Android">
 
-Ve a `Settings` -> `External Notification` -> Habilita `GPIO` -> Configura `Output Pin GPIO`.
+Ve a `Settings` -> `External Notification` -> Activa `GPIO` -> Configura `Output Pin GPIO`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-an.png" alt="pir" width={500} height="auto" /></p>
 
@@ -387,7 +387,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### Configurar zumbador
 
-El zumbador está habilitado de forma predeterminada. Si quieres deshabilitar el zumbador, configura `Alert Message buzzer`, `Alert bell buzzer` y `Use PWM buzzer` como se muestra en la siguiente captura de pantalla.
+El zumbador está activado de forma predeterminada. Si quieres desactivar el zumbador, configura `Alert Message buzzer`, `Alert bell buzzer` y `Use PWM buzzer` como se muestra en la siguiente captura de pantalla.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/buzzer.png" alt="pir" width={200} height="auto" /></p>
 
@@ -419,11 +419,11 @@ Ve a `Setting` -> `Module Configuration` -> `External Notification`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Module_Notification_Android.png" alt="pir" width={600} height="auto" /></p>
 
-Habilita `External notification enabled`, luego puedes configurar `buzzer only`, `vibra only` o `buzzer on + vibra on`.
+Activa `External notification enabled`, luego puedes configurar `buzzer only`, `vibra only` o `buzzer on + vibra on`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/NotificationSettingConfig.png" alt="pir" width={900} height="auto" /></p>
 
-Deshabilita `External notification enabled`, luego puedes configurar `buzzer off + vibra off`.
+Desactiva `External notification enabled`, luego puedes configurar `buzzer off + vibra off`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Notificationoff.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -490,10 +490,10 @@ El dispositivo se reiniciará repetidamente y el puerto serie se conectará y de
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
 
-El dispositivo está en modo DFU si el LED blanco permanece encendido de forma fija.
+El dispositivo está en modo DFU si el LED blanco permanece encendido de forma continua.
 
 :::note
-Para entrar correctamente en el modo DFU, debes realizar esta operación rápidamente. Puede que necesites intentarlo varias veces.
+Para entrar correctamente en el modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
 :::
 
 - Paso 2: Borrar la Flash
@@ -553,7 +553,7 @@ Esta es la ubicación de instalación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Para usuarios de Windows, puede que necesites añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se indica a continuación:
+Para usuarios de Windows, es posible que tengas que añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se indica a continuación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -607,7 +607,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Nota: Los siguientes comandos usan `python3`; sin embargo, si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de Windows de Python 3.x todavía usa el nombre python.exe
+Nota: Los siguientes comandos usan `python3`; sin embargo, si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de Windows de Python 3.x sigue usando el nombre python.exe
 
 Para instalar en el espacio de usuario en tu directorio personal:
 
@@ -630,7 +630,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-Para generar un binario ejecutable autónomo de la utilidad (Windows y MacOS), ejecuta estos comandos:
+Para generar un binario ejecutable auto-contenido de la utilidad (Windows y MacOS), ejecuta estos comandos:
 
 ```
 pip3 install pyinstaller
@@ -647,7 +647,7 @@ Cópialo o muévelo a otro lugar para tu comodidad, como un directorio en tu %PA
 
 Conecta tu dispositivo a tu PC y comprueba el número de puerto.
 
-Para usuarios de Windows, abre el administrador de dispositivos y ve a "port"; el número de puerto que aparece tras la conexión del dispositivo es el número de puerto del dispositivo.
+Para usuarios de Windows, abre el administrador de dispositivos y ve a "port"; el número de puerto que aparece después de la conexión del dispositivo es el número de puerto del dispositivo.
 
 Para usuarios de Mac, por ejemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
@@ -657,7 +657,7 @@ Para usuarios de Windows, por ejemplo:
 
 **Paso 3: Flashea el bootloader**
 
-En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
+En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, reemplazando el puerto correcto para tu dispositivo:
 
 - **Para Windows**:
 
@@ -665,7 +665,7 @@ En la terminal o símbolo del sistema, navega al directorio donde descargaste el
 adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-Por favor, cambia COMXX por tu número de COM. Por ejemplo, si tu dispositivo está en com6, cambia el comando a:
+Por favor cambia COMXX por tu número de COM. Por ejemplo, si tu dispositivo está en com6, cambia el comando a:
 
 `adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
@@ -720,7 +720,7 @@ Si quieres restaurar la configuración predeterminada, puedes hacer un restablec
 
 - [Haz clic aquí](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#step-2-flash-erase) para borrar la flash del dispositivo y luego volver a flashear el firmware más reciente.
 
-- Haz clic en el botón `Factory Reset` en la app. El dispositivo se reiniciará automáticamente con la configuración de fábrica. 
+- Haz clic en el botón `Factory Reset` en la aplicación. El dispositivo se reiniciará automáticamente con la configuración de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### Fallo de mensaje directo
@@ -729,7 +729,7 @@ Si quieres restaurar la configuración predeterminada, puedes hacer un restablec
 
 NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con un determinado nodo, podría deberse a que tu nodeDB ha almacenado información obsoleta de ese nodo. Necesitarás actualizarla.
 
-Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
+Abre la aplicación y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
@@ -737,7 +737,7 @@ Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device*
 
 #### Intercambiar información de usuario
 
-Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
+Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la aplicación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
