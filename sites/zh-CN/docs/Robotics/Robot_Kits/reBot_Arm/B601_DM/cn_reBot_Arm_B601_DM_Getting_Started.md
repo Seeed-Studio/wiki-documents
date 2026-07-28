@@ -13,10 +13,10 @@ slug: /rebot_b601_dm_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-04-13
+  date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-07-20'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 ---
 
@@ -91,6 +91,16 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
   :::tip
   提醒：组装视频中5号电机和6号电机之间的 D4 * 7 不需要进行安装，是视频介绍错误，如果您购买的是散件版本的 reBot Arm B601-DM ，7颗 D4 * 7 足够您来完成组装
   :::
+
+:::tip
+组装机械臂时，请不要忘记连接电机1到2之间的这根线束，具体位置如下图高亮处所示。接线时，请务必先让当前电机失能并断开电源，避免热插拔或误操作导致电机参数异常。
+
+
+<div align="center">
+    <img width={200}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1to2_ID_set.jpg" />
+</div>
+:::
 
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116418964097678&bvid=BV1zPdzBEE1R&cid=37577427530&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -206,8 +216,6 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 | **1号电机使能效果** | **2号电机使能效果** | **3号电机使能效果** | **4号电机使能效果** | **5号电机使能效果** | **6号电机使能效果** | **7号电机使能效果** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_Enable.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_Enable.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_Enable.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/4_Enable.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/5_Enable.jpg" width="4000" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/6_Enable.jpg" width="4000" /> |  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/7_Enable2.jpg" width="4000" /> |
-
-
 
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116440455775862&bvid=BV1r9d1BuESN&cid=37680973414&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -327,3 +335,9 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
   2. 电机所有CANID变成了一样？
     - 在用[DM_Tools_v.1.8.0.1.exe（仅支持 Windows 系统）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe)校准零点的时候千完别点CANID旁边的读取和设置两个按钮，调试的页面是通过CAN通讯链路完成的，如果点了设置，会把CANBUS上所有的电机设置成同一个CAN
 
+## 风险告知及免责声明
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
+</div>

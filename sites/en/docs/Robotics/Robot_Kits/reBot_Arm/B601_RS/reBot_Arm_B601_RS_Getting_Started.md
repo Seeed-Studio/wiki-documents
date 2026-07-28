@@ -15,10 +15,10 @@ slug: /rebot_b601_rs_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-05-26
+  date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-07-20'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 ---
 
@@ -44,7 +44,6 @@ url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 
 The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). This guide will take you through the quick start of B601-RS, from assembly to operation.
 The content of this guide is racing towards you at the speed of light — stay tuned.
-
 
 ## About Power Supply
 
@@ -436,4 +435,9 @@ or
 DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
 
+## Safety Disclaimer and Risk Notice
 
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+</div>

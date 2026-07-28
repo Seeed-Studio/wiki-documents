@@ -13,10 +13,10 @@ slug: /rebot_b601_dm_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-04-13
+  date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
@@ -104,6 +104,16 @@ Before Assembly:
   :::tip
   Reminder: The D4 * 7 between motor 5 and motor 6 in the assembly video does not need to be installed. It's a mistake in the video. If you bought the DIY version of the reBot Arm B601-DM, the 7 D4 * 7 screws are enough for you to complete the assembly.
   :::
+
+:::tip
+When assembling the robotic arm, do not forget to connect the cable harness between Motor 1 and Motor 2. The exact position is highlighted in the image below. Before switching the 3-pin cable connection, make sure the current motor is disabled and the power is disconnected to avoid hot-plugging or incorrect operation that may cause abnormal motor parameters.
+
+
+<div align="center">
+    <img width={200}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1to2_ID_set.jpg" />
+</div>
+:::
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/rfTQoFCfnMc?si=KkEfY0NePxC96Xdu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -332,3 +342,10 @@ Export complete parameters from an intact motor of the same model via the host s
 
 ### 2. All motors share identical CAN IDs
 - When performing zero-point calibration via **DM_Tools_v.1.8.0.1.exe (Windows-only)**, avoid clicking the Read or Set buttons next to the CAN ID field. The debug interface communicates over the CAN bus; clicking Set will unify the CAN ID for every motor connected on the CANBUS.
+
+## Safety Disclaimer and Risk Notice
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+</div>
