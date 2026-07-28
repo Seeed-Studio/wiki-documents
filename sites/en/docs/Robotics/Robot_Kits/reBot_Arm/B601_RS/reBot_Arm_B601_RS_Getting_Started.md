@@ -15,10 +15,10 @@ slug: /rebot_b601_rs_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-05-26
+  date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-07-20'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 ---
 
@@ -45,6 +45,14 @@ url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). This guide will take you through the quick start of B601-RS, from assembly to operation.
 The content of this guide is racing towards you at the speed of light — stay tuned.
 
+## Safety Disclaimer and Risk Notice
+
+<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+</div>
 
 ## About Power Supply
 
@@ -436,4 +444,27 @@ or
 DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
 
+#### Initialize RS Motor Control Parameters
 
+:::warning Complete parameter initialization before first use
+
+Most reBot Arm B601-RS examples run in MIT mode. Native Position (`pos_vel`) mode directly uses the position-loop gain `loc_kp` and maximum velocity `vel_max`. Its motion behavior is also affected by the speed-loop gain `spd_kp` and acceleration parameter `acc_rad`. If the recommended B601-RS parameters have not been initialized, or if the parameters saved on each joint are inconsistent, Position mode may show abnormal response, speed, or acceleration and deceleration behavior.
+
+First select `rebot-arm-robstride` under **Robot Model** in [MotorBridge Studio](https://motorbridge.github.io/motorbridge-studio/), scan and confirm that Joints 1-7 are all online, and complete the robotic arm zero calibration described above. Then perform the following steps:
+
+1. Click **Read Parameters** to read the parameters currently saved on all online joints. This operation only reads data and does not modify the motors. Wait until the page reports that the control parameters have been read successfully, and retain the current values as a record.
+2. Click **Apply Default Template** and confirm that the page reports the reBot Arm RobStride default parameter template has been applied to Joints 1-7. This operation only loads the recommended values into the page; it does not write them to the motors yet.
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/en_b601_rs_motorbridge_read_params.png" alt="Read the B601-RS motor parameters and apply the default template" />
+</div>
+
+3. Click **Write Parameters**. Confirm that the robotic arm is safely supported and that no people or obstacles are nearby, then confirm the write operation in the dialog. Do not disconnect the power or plug or unplug motor cables while parameters are being written.
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/en_b601_rs_motorbridge_write_params.png" alt="Confirm writing the B601-RS motor parameters" />
+</div>
+
+4. After writing is complete, MotorBridge Studio automatically reads the parameters back. Initialization is successful when the page reports that the post-write readback verification matches.
+
+:::
