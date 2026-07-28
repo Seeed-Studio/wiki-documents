@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-06-23'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/rebot_arm_jetson_bundle/
 ---
 
@@ -269,6 +269,84 @@ Then, Open `https://motorbridge.github.io/motorbridge-studio/` in your browser, 
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
                 Control reBot Arm with NemoClaw on Nvidia Jetson Thor
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/voice_control_rebot_arm/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_controlled_rebot_arm/cover_page.png"
+                alt="Voice Control reBot Arm B601 by Nvidia Jetson Thor"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Voice Control reBot Arm B601 by Nvidia Jetson Thor
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/rebot_arm_b601_rs_ros2_integration/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
+                alt="reBot Arm B601-RS ROS2 Integration"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                reBot Arm B601-RS ROS2 Integration
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/rebot_arm_b601_rs_isaacsim/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"
+                alt="Simulating reBotArm through Isaacsim"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Simulating reBotArm through Isaacsim
             </h3>
         </div>
     </a>
