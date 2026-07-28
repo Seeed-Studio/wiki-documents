@@ -172,14 +172,14 @@ panel_custom:
 The version number in `module_url` (e.g., `?v=13`) must match the version number in the `panel.js` file. If the version numbers do not match, the browser may load an old cache, causing the panel not to display.
 :::
 
-### Step 4: Restart Home Assistant
+#### Step 4: Restart Home Assistant
 
 Restart HA to apply the configuration:
 
 - Web interface: Settings -> System -> Power icon (top right) -> Restart
 - Command line (Docker): `docker restart homeassistant`
 
-### Step 5: Verify the Deployment
+#### Step 5: Verify the Deployment
 
 1. After the restart is complete, the **reCamera** tab (with a camera icon) should appear in the HA sidebar.
 2. Click on it to see the chat interface, with a **Connected** status in the top right corner.
