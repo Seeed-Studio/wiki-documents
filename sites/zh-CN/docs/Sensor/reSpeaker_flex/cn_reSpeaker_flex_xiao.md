@@ -1,6 +1,6 @@
 ---
-description: reSpeaker Flex 是一款强大的模块化语音系统，采用 XMOS XVF3800，配备可互换的环形和线性 4 麦克风阵列，可实现精确的 360° 或定向音频采集——非常适合机器人和智能设备。
-title: reSpeaker Flex 与 Xiao ESP32S3 入门指南
+description: reSpeaker Flex 是一款强大的模块化语音系统，搭载 XMOS XVF3800，配备可互换的环形和线性 4 麦克风阵列，可实现精确的 360° 或定向音频采集——非常适合机器人和智能设备。
+title: 使用 Xiao ESP32S3 的 reSpeaker Flex 入门
 keywords:
   - reSpeaker flex
   - xvf3800
@@ -12,7 +12,7 @@ last_update:
   date: 04/8/2026
   author: Kasun Thushara
 createdAt: '2026-04-08'
-updatedAt: '2026-07-14'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/cn/respeaker_flex_xiao_introduction/
 ---
 
@@ -20,13 +20,13 @@ url: https://wiki.seeedstudio.com/cn/respeaker_flex_xiao_introduction/
 
 ## 概述
 
-reSpeaker Flex ESP32 版本在核心板上集成了预焊接的 XIAO ESP32S3 模块，提供内置 Wi-Fi 和 Bluetooth 连接，用于无线控制和边缘处理。系统由 XMOS XVF3800 语音处理器驱动，保持相同的模块化架构，麦克风阵列板通过柔性的 24 针 FPC 线缆连接到核心板，便于在设备外壳内部灵活布置。它支持环形和线性两种 4 麦克风阵列，可实现 360° 全向拾音或定向前向拾音。系统可通过 USB（UAC 2.0）或 I2S 工作，而集成的 ESP32S3 则实现 IoT 连接、本地控制以及与嵌入式应用的更简便集成。
+reSpeaker Flex ESP32 版本在核心板上集成了预焊接的 XIAO ESP32S3 模块，为无线控制和边缘处理提供了内置 Wi-Fi 和 Bluetooth 连接。系统由 XMOS XVF3800 语音处理器驱动，保持相同的模块化架构，麦克风阵列板通过柔性的 24 针 FPC 线缆连接到核心板，便于在设备外壳内部灵活布置。它支持环形和线性两种 4 麦克风阵列，可实现 360° 全向采集或前向定向拾音。系统可以通过 USB（UAC 2.0）或 I2S 工作，而集成的 ESP32S3 则实现 IoT 连接、本地控制以及与嵌入式应用的更简便集成。
 
 
 <table align="center">
   <tr>
-    <th>搭配 XIAO ESP32S3 的 reSpeaker Flex XVF3800 线性阵列 </th>
-    <th>搭配 XIAO ESP32S3 的 reSpeaker Flex XVF3800 环形阵列</th>
+    <th>reSpeaker Flex XVF3800 线性阵列，搭配 XIAO ESP32S3 </th>
+    <th>reSpeaker Flex XVF3800 环形阵列，搭配 XIAO ESP32S3</th>
 
   </tr>
   <tr>
@@ -53,21 +53,21 @@ reSpeaker Flex ESP32 版本在核心板上集成了预焊接的 XIAO ESP32S3 模
 
 ## 特性 
 
-- **分体式模块化设计**：核心板与麦克风阵列板物理分离，通过 FPC 软排线连接，可在任意产品机壳内灵活放置
+- **分体式模块化设计**：核心板和麦克风阵列板物理分离，通过 FPC 软排线连接，可在任意产品机壳内灵活放置
 
-- **多种麦克风配置选择**：在同一核心板上可切换环形 4 麦阵列（360° 拾音，44mm 间距）或线性 4 麦阵列（180° 前向指向性，33mm 间距）
+- **多种麦克风配置选择**：在同一核心板上可互换环形 4 麦阵列（360° 拾音，44mm 间距）或线性 4 麦阵列（180° 前向指向性，33mm 间距）
 
 - **XMOS XVF3800 音频处理**：完整支持 AEC、AGC、DoA、多通道波束成形、VAD、噪声抑制和混响消除
 
-- **双工作模式**：USB UAC 2.0，可即插即用连接 PC 和 SBC；I2S 模式，可直接嵌入式集成
+- **双工作模式**：USB UAC 2.0，可即插即用连接 PC 和 SBC；I2S 模式用于直接嵌入式集成
 
-- **双 USB 连接方式**：USB-C 接口和 PH2.0 锁扣接口均支持 UAC 2.0 音频和 DFU 固件升级
+- **双 USB 连接**：USB-C 接口和 PH2.0 锁扣接口均支持 UAC 2.0 音频和 DFU 固件升级
 
-- **板载扬声器功放**：通过 JST 接口驱动 10W 4 欧姆扬声器，并提供 3.5mm AUX 耳机输出
+- **板载功放**：通过 JST 接口驱动 10W、4 欧姆扬声器，并提供 3.5mm AUX 耳机输出
 
-- **XIAO ESP32S3 支持**：预焊接模块提供 Wi-Fi/Bluetooth，I2S 和 I2C 总线直接连接到 XVF3800，用于无线控制和音频转发
+- **XIAO ESP32S3 支持**：预焊接模块提供 Wi-Fi/Bluetooth 功能，I2S 和 I2C 总线直接连接 XVF3800，用于无线控制和音频转发
 
-- **固件灵活性**：双 USB 固件版本（2 通道和 6 通道）、I2S 固件、通过 dfu-util 进行 DFU 升级，以及断电后配置保持
+- **固件灵活性**：双 USB 固件版本（2 通道和 6 通道）、I2S 固件、通过 dfu-util 进行 DFU 升级，并在断电后保持配置
 
 - **Python SDK**：可通过 Python 调整录音格式、音量、算法参数和通道路由
 
@@ -86,10 +86,10 @@ reSpeaker Flex ESP32 版本在核心板上集成了预焊接的 XIAO ESP32S3 模
 | **FPC 麦克风阵列接口** | 24 针带锁扣 FPC 连接器，支持最多 8 麦阵列和 2 路 GPIO 线 |
 | **USB-C 接口** | UAC 2.0 音频、DFU 固件升级和供电 |
 | **PH2.0 接口** | 带锁扣连接器；提供与 USB-C 接口相同的 UAC 2.0 音频和 DFU 支持 |
-| **3.5 mm AUX 插孔** | 侧向出线耳机输出，由板载 DAC 驱动 |
+| **3.5 mm AUX 插孔** | 侧向耳机输出，由板载 DAC 驱动 |
 | **扬声器 JST 接口** | 直立安装连接器，可驱动最高 10W、4Ω 扬声器；保留焊盘以便硬连线扬声器连接 |
-| **外部电源端子** | 为整个系统提供 12V 供电并支持 10W 扬声器负载（P1 优先级） |
-| **RST 按钮** | XVF3800 的硬件复位按钮 |
+| **外部电源端子** | 为整个系统提供 12V 供电并支持 10W 扬声器负载（P1 优先） |
+| **RST 按钮** | XVF3800 的硬件复位 |
 | **SafeMode（启动）按钮** | 上电时按住可进入安全模式进行固件恢复 |
 | **PWR 指示灯** | 绿色电源指示灯 |
 | **调试焊盘** | 预留 XMOS XTAG4 焊盘（出厂未焊接） |
@@ -106,8 +106,8 @@ reSpeaker Flex ESP32 版本在核心板上集成了预焊接的 XIAO ESP32S3 模
 |--------------------|------------|
 | **麦克风** | 4× PDM MEMS 麦克风，44 mm 间距，环形排布 |
 | **拾音模式** | 360° 全向音频采集 |
-| **接口** | 连接到核心板的 FPC 连接器 |
-| **安装方式** | 3 × M3 安装孔，用于固定在外壳或机箱上 |
+| **接口** | 通过 FPC 连接器连接到核心板 |
+| **安装** | 3 × M3 安装孔，用于固定在外壳或机箱上 |
 
 
 
@@ -121,11 +121,8 @@ reSpeaker Flex ESP32 版本在核心板上集成了预焊接的 XIAO ESP32S3 模
 | **麦克风** | 4× PDM MEMS 麦克风，33 mm 间距，线性排布 |
 | **拾音模式** | 约 180° 的前向拾音模式，后向声音被抑制 |
 | **接口** | FPC 连接器；线缆可从侧面或背面走线 |
-| **安装方式** | 2 × M3 安装孔 |
+| **安装** | 2 × M3 安装孔 |
 
-:::note
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
-:::
 
 ### XIAO ESP32S3 支持 
 
@@ -133,7 +130,7 @@ reSpeaker Flex ESP32 版本在核心板上集成了预焊接的 XIAO ESP32S3 模
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/header_pinout.jpg" alt="pir" width={800} height="auto" /></p>
 
 
-reSpeaker Flex 核心板包含一个专用焊盘，用于焊接 Seeed Studio XIAO ESP32S3 模块，在 XVF3800 音频处理链路之上实现 Wi-Fi 和 Bluetooth 连接。包含 XIAO 的 SKU（-C4-1 和 -L4-1）会预装该模块；基础 SKU（-C4-0 和 -L4-0）则保留焊盘未焊接。
+reSpeaker Flex 核心板包含专用焊盘，可焊接 Seeed Studio XIAO ESP32S3 模块，在 XVF3800 音频处理链路之上实现 Wi-Fi 和 Bluetooth 连接。包含 XIAO 的 SKU（-C4-1 和 -L4-1）出厂已预装该模块；基础 SKU（-C4-0 和 -L4-0）则保留焊盘未焊接。
 当安装了 XIAO 后，它与 XVF3800 之间会建立如下连接：
 
 - **I2S 总线** — 双总线（播放和录制），共享 BCLK、MCLK 和 LRCLK，用于双向音频流传输
@@ -150,7 +147,7 @@ reSpeaker Flex 核心板包含一个专用焊盘，用于焊接 Seeed Studio XIA
 
 ### 24 FPC 线缆 
 
-FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包装盒中附带的 20cm FPC 软排线与该连接器配套。
+FPC 麦克风阵列接口为 24 针、0.5mm 间距带锁扣连接器，包装盒内附带的 20cm FPC 软排线已与该连接器配套。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/24_fpc_cable.png" alt="pir" width={600} height="auto" /></p>
 
@@ -183,6 +180,11 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 
 ## 入门指南
 
+:::note
+为确保最佳语音拾取性能以及音频算法的正常运行，请确保设备背面上的麦克风端口（Mic Inlet / Sound Hole）朝向声源。麦克风端口位于印有 Seeed Studio 标志的一侧。 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
+:::
+
 ### 硬件准备 
 
 - USB Type-c 线缆 
@@ -195,14 +197,14 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 
 
 :::note
-通常情况下，搭载 XIAO ESP32S3 的 reSpeaker Flex 出厂时已预烧录配置为 I2S 版本的固件。
+通常情况下，搭配 XIAO ESP32S3 的 reSpeaker Flex 出厂时已预装配置为 I2S 版本的固件。
 :::
 
 ## 软件准备
 
 ### 安装 Arduino IDE
 
-请根据你的操作系统下载并安装稳定版本的 Arduino IDE
+根据你的操作系统下载并安装稳定版本的 Arduino IDE
 
  <div className="download_arduino_container" style={{ textAlign: 'center' }}>
   <a
@@ -212,7 +214,7 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
     rel="noopener noreferrer"
     style={{ textDecoration: 'none', color: '#FFFFFF', fontSize: '1.25rem' }}
   >
-    <strong>Download Arduino IDE</strong>
+    <strong>下载 Arduino IDE</strong>
   </a>
 </div>
 
@@ -220,13 +222,13 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 
 #### 安装 Arduino-ESP32
 
-要通过开发板管理器开始安装流程，请按照以下步骤操作：
+要通过开发板管理器开始安装过程，请按照以下步骤操作：
 
-- 安装当前上游版本的 Arduino IDE，版本需为 1.8 或更高。当前版本可在 [arduino.cc](https://www.arduino.cc/en/Main/Software) 网站获取。
+- 安装当前上游 Arduino IDE 1.8 或更高版本。当前版本可在 [arduino.cc](https://www.arduino.cc/en/Main/Software) 网站获取。
 
 - 启动 Arduino 并打开 `Settings` 窗口。
 
-- 在 Additional Board Manager URLs 字段中输入上述任一发行链接。你可以添加多个 URL，用逗号分隔。
+- 在 Additional Board Manager URLs 字段中输入上述其中一个发布链接。你可以添加多个 URL，用逗号分隔。
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -243,12 +245,12 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 ### 支持库 
 
 :::note
-请安装 [Arduino Audio Tools library](https://github.com/pschatzmann/arduino-audio-tools)，以便运行提供的示例。
+请安装 [Arduino Audio Tools library](https://github.com/pschatzmann/arduino-audio-tools) 以运行提供的示例。
 :::
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

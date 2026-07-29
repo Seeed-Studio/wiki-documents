@@ -15,7 +15,7 @@ last_update:
   author: Xinrui Wu
 createdAt: '2025-12-22'
 updatedAt: '2026-05-07'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/integration_of_real-time_heat_map_with_grafana_data_dashboard_bak/
+url: https://wiki.seeedstudio.com/integration_of_real-time_heat_map_with_grafana_data_dashboard_bak/
 ---
 
 # Integration of real-time heat map with Grafana data dashboard

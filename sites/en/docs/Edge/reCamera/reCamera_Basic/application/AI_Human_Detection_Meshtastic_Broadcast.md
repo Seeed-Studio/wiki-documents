@@ -15,8 +15,8 @@ last_update:
   date: 2026-01-28
   author: John Xiang
 createdAt: '2026-01-28'
-updatedAt: '2026-02-11'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/ai_human_detection_meshtastic_broadcast_bak/
+updatedAt: '2026-07-24'
+url: https://wiki.seeedstudio.com/ai_human_detection_meshtastic_broadcast_bak/
 ---
 
 ## Introduction
@@ -58,7 +58,7 @@ To achieve this demo, we need to configure the reCamera and two Mesh nodes diffe
 
 ### reCamera Configuration
 :::warning
-Please ensure that the reCamera baseboard you have is the PoE version, as only the PoE version of reCamera has GPIO interfaces. Regarding the differences between the standard version and the PoE version of reCamera, please refer to [reCamera 2002(w) 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/recamera_hardware_and_specs/) and [reCamera HQ PoE 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/recamera_hq_poe_hardware/).
+Please ensure that the reCamera baseboard you have is the PoE version, as only the PoE version of reCamera has GPIO interfaces. Regarding the differences between the standard version and the PoE version of reCamera, please refer to [reCamera 2002(w) 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/recamera_2002_series_hardware_and_specs/) and [reCamera HQ PoE 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/reCamera_hq_poe_hardware_and_specs/).
 
 If you have purchased the PoE version of reCamera - [reCamera HQ PoE 8GB/64GB](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-8GB-p-6558.html) you can use it directly to reproduce this demo.
 

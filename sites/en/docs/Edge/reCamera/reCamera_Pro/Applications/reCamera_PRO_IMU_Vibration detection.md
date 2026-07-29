@@ -18,7 +18,7 @@ last_update:
   date: 2026-06-11
   author: Sizhao zhou
 createdAt: '2026-06-11'
-updatedAt: '2026-07-16'
+updatedAt: '2026-07-23'
 url: https://wiki.seeedstudio.com/recamera_pro_imu_tilt_shake_detection/
 ---
 
@@ -33,6 +33,7 @@ This article explains how to use the reCamera Pro's onboard six-axis inertial me
 ## Hardware Preparation
 - one reCamera Pro
 
+<div align="center">
 <table align="center">
  <tr>
   <th>reCamera Pro</th>
@@ -48,6 +49,7 @@ This article explains how to use the reCamera Pro's onboard six-axis inertial me
   </div></td>
  </tr>
 </table>
+</div>
 
 
 

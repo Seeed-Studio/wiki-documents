@@ -11,7 +11,7 @@ last_update:
   date: 08/19/2024
   author: Youjiang
 createdAt: '2024-08-19'
-updatedAt: '2026-05-13'
+updatedAt: '2026-07-23'
 url: https://wiki.seeedstudio.com/reserver_j501_getting_started/
 ---
 
@@ -388,6 +388,12 @@ Please open the terminal on the Jetson device and execute the following commands
 sudo apt update
 sudo apt install nvidia-jetpack
 ```
+
+## Hardware Interfaces Usage
+
+:::info
+If you want to learn more about the detailed specifications and usage of the hardware interfaces, please refer to [this wiki](https://wiki.seeedstudio.com/j501_carrier_board_interfaces_usage/).
+:::
 
 ## Resources
 

@@ -13,12 +13,12 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_pinocchio_meshcat
 sku: 100019336
 last_update:
-  date: 2026-06-30
+  date: 2026-07-22
   author: LiJie
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-11'
-updatedAt: '2026-07-09'
+updatedAt: '2026-07-22'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 
@@ -145,6 +145,10 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 | **Communication Interface** | CAN interface (can0) |
 | **Power Supply** | DC 48V 15A |
 
+:::caution
+While the robotic arm is running examples, it must operate within 70% of the arm's reach workspace. Staying outside the workspace for an extended period will cause the second joint motor to enter stall protection, resulting in the arm dropping.
+:::
+
 ---
 
 ## Installation Steps
@@ -196,7 +200,7 @@ ip -br link
 
 # If can0 appears, set the bitrate
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000 
 sudo ip link set can0 up    # Bring up can0
 ```
 
@@ -588,6 +592,9 @@ viz.draw_path(points, "path_name", color)  # Draw path
 
 - **How to switch between Damiao and Robostride motor configurations**
   Modify the `config/rebotarm_dm.yaml` (Damiao) or `config/rebotarm_rs.yaml` (Robostride) configuration file and load the corresponding configuration in the code.
+
+- **If the robotic arm remains stationary beyond 70% of the arm's reach workspace for an extended period, the second joint motor will enter stall protection**  
+  Power cycle the robotic arm; the second joint motor stall protection error will clear automatically.
 
 ---
 

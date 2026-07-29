@@ -15,7 +15,7 @@ last_update:
   author: John Xiang
 createdAt: '2025-12-31'
 updatedAt: '2026-01-29'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/ai_parking_slot_monitoring_demo_with_recamera_bak/
+url: https://wiki.seeedstudio.com/ai_parking_slot_monitoring_demo_with_recamera_bak/
 ---
 
 # AI Parking Management Demo with reCamera

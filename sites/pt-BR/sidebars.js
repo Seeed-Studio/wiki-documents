@@ -2163,7 +2163,7 @@ const sidebars = {
           },
           items: [
             'Sensor/reSpeaker_clip/pt_respeaker_clip_getting_started',
-            'Sensor/reSpeaker_clip/pt_respeaker_clip_python_control',
+            'Sensor/reSpeaker_clip/pt_respeaker_clip_basic_sdk_guide',
           ],
         },
         {
@@ -3842,7 +3842,11 @@ const sidebars = {
                   type: 'category',
                   label: 'Placa carrier J601-Robotics',
                   items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_reComputer_Robotics_J601_Getting_Started',
+                    {
+                      type: 'doc',
+                      id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_reComputer_Robotics_J601_Getting_Started',
+                      label: 'Flash Jetpack',
+                    },
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
@@ -4157,6 +4161,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/pt_Developer_Tools',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Build_and_Flash_Yocto_for_reComputer_Super',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Develop_reComputer_Jetson_using_Clawdbot',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Gapi-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_alwaysAI-Jetson-Getting-Started',
@@ -4226,7 +4231,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/pt_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/pt_How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/pt_Make_DIY_BSP_for_Jetson',
-            'Edge/NVIDIA_Jetson/FAQs/pt_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic',
+            'Edge/NVIDIA_Jetson/FAQs/pt_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super',
             'Edge/NVIDIA_Jetson/FAQs/pt_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/pt_Flash_JetPack_with_WSL2',
           ]
