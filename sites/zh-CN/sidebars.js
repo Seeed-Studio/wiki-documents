@@ -2164,7 +2164,7 @@ const sidebars = {
           },
           items: [
             'Sensor/reSpeaker_clip/cn_respeaker_clip_getting_started',
-            'Sensor/reSpeaker_clip/cn_respeaker_clip_python_control',
+            'Sensor/reSpeaker_clip/cn_respeaker_clip_basic_sdk_guide',
           ],
         },
         {
@@ -4227,7 +4227,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/cn_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/cn_How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/cn_Make_DIY_BSP_for_Jetson',
-            'Edge/NVIDIA_Jetson/FAQs/cn_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic',
+            'Edge/NVIDIA_Jetson/FAQs/cn_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super',
             'Edge/NVIDIA_Jetson/FAQs/cn_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/cn_Flash_JetPack_with_WSL2',
           ]

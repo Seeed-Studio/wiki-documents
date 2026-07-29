@@ -24,18 +24,28 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_hardware_specifications/
 | CPU | 1.2GHz 四核 Cortex-A53 |
 | NPU | 3 TOPS，支持混合 INT8/INT16 计算 |
 | 内存 | LPDDR4 2GB / 4GB |
-| 存储 | 16GB eMMC，SD 卡插槽（最大 512GB） |
+| 存储 | 16GB eMMC，SD 卡槽（最大 512GB） |
 | 摄像头 | SC850SL（4K@30FPS） |
 | IMU | 6 轴 IMU（ICM-42670-P）传感器（3 轴加速度计 + 3 轴陀螺仪） |
 | 音频输出 | 8 欧姆扬声器，额定功率 1W |
 | 音频输入 | 驻极体麦克风 ×2 |
 | 电源 | 支持 7.4V 锂电池充放电管理，DC 输入（12V~24V，5525 圆孔电源接口），PoE 供电 |
 | 网络与无线连接 | Wi-Fi 5.2，Bluetooth 5.2，1000Mbps 以太网 |
-| 接口 | 全功能 Type-C（OTG）、调试 UART、CAN ×2、22PIN MIPI DSI、GPIO ×2、12–24V 数字 IO ×2 |
+| 接口 | 全功能 Type-C（OTG）、调试 UART、CAN ×2、22PIN MIPI DSI、GPIO ×2 |
 
 # 硬件接口示意图
-![硬件接口示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
 
+## 背面视图
+![硬件接口示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
+![扩展连接器](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Expansion_CON.jpg)
+![调试 UART](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Debug_Uart.jpg)
+
+## 侧面视图
+![侧面视图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Side.png)
+
+
+## 正面视图
+![正面视图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Front_cover.png)
 
 ## 技术支持与产品讨论
 

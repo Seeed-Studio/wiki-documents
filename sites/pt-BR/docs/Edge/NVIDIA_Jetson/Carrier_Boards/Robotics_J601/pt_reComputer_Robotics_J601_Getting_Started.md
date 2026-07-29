@@ -14,7 +14,7 @@ last_update:
   date: 04/24/2026
   author: Dayu
 createdAt: '2026-04-24'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
@@ -28,7 +28,7 @@ Esta página é um rascunho preliminar para a futura placa carrier reComputer Ro
   <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
 </div>
 
-O reComputer Robotics J601 é uma placa carrier focada em robótica para módulos NVIDIA Jetson AGX Thor. Ele é destinado a cargas de trabalho de IA incorporada de alto desempenho e controle robótico que exigem rede de alta velocidade, E/S industriais, expansão de câmera GMSL e entrada DC de ampla faixa em um formato compacto de placa carrier.
+A reComputer Robotics J601 é uma placa carrier focada em robótica para módulos NVIDIA Jetson AGX Thor. Ela é destinada a cargas de trabalho de IA incorporada de alto desempenho e controle robótico que exigem rede de alta velocidade, E/S industrial, expansão de câmera GMSL e entrada DC de ampla faixa em um formato compacto de placa carrier.
 
 ## Recursos preliminares
 
@@ -37,7 +37,7 @@ O reComputer Robotics J601 é uma placa carrier focada em robótica para módulo
 - Slot **M.2 Key E** para módulo Wi-Fi/Bluetooth
 - Slot **M.2 Key B** para módulo 5G e suporte a **Nano SIM**
 - Ethernet de alta velocidade com suporte planejado a **PTP** e **EtherCAT**
-- E/S ricas para robótica, incluindo **CAN**, **RS-232/422/485**, **DI/DO**, **I2C**, **I2S**, **SPI** e **GPIO**
+- E/S rica para robótica incluindo **CAN**, **RS-232/422/485**, **DI/DO**, **I2C**, **I2S**, **SPI** e **GPIO**
 - **Expansão GMSL** para até **8 câmeras**
 - Entrada DC de ampla faixa **19V a 48V** através de **XT30**
 - Plataforma de software alvo: **JetPack 7**
@@ -90,7 +90,7 @@ A tabela a seguir mantém intencionalmente apenas as partes mais claras da defin
       <td>1x RS-232/422/485 (conector DB9), 1x RS-485 (conector JST)</td>
     </tr>
     <tr>
-      <td>E/S digitais</td>
+      <td>E/S digital</td>
       <td>4x DI e 4x DO via conectores terminais JST</td>
     </tr>
     <tr>
@@ -99,7 +99,7 @@ A tabela a seguir mantém intencionalmente apenas as partes mais claras da defin
     </tr>
     <tr>
       <td>Expansão de baixa velocidade</td>
-      <td>1x I2C, 1x SPI, GPIO via JST/cabeçalho de pinos</td>
+      <td>1x I2C, 1x SPI, GPIO via JST/pin header</td>
     </tr>
     <tr>
       <td>RTC</td>
@@ -194,8 +194,8 @@ Documento de referência:
 - Parafuso para Key M x 1
 - Parafuso para Key B x 1
 - Parafusos para AGX Thor SOM x 4
-- Suportes (studs) para sustentação da placa carrier x 4
-- Parafusos para os suportes x 4
+- Suportes para sustentação da placa carrier x 4
+- Parafusos para suportes x 4
 - Manual do usuário x 1
 
 ### Embalagem
@@ -205,11 +205,17 @@ Documento de referência:
 - Manual do usuário na parte superior com uma camada adicional de espuma
 - Estilo de embalagem semelhante ao da placa carrier mini J501
 
+## Uso das interfaces de hardware
+
+:::info
+Se você quiser saber mais sobre as especificações detalhadas e o uso das interfaces de hardware, consulte [este wiki](https://wiki.seeedstudio.com/pt-br/recomputer_jetson_robotics_j601_interfaces_usage/).
+:::
+
 ## Recursos
 
 - Layout detalhado de hardware: TBD
 - Guia de gravação: TBD
-- Notas de lançamento do BSP: TBD
+- Notas de versão do BSP: TBD
 
 ## Suporte técnico
 
