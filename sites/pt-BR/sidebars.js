@@ -4541,6 +4541,11 @@ const sidebars = {
                   id: 'Robotics/Robot_Kits/ReachyMini/development_cases/pt_home_assistant',
                   label: 'Integração com Home Assistant',
                 },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/pt_reachymini_voice_control_soarm',
+                  label: 'Controle por voz do Reachy Mini para o SO-ARM',
+                },
               ],
             },
             {
