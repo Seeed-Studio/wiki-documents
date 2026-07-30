@@ -18,7 +18,7 @@ updatedAt: '2026-07-19'
 url: https://wiki.seeedstudio.com/Edge/reCamera/reCamera_Basic/ai_model_deployment/recamera_model_export_online/
 ---
 
-# Convert and deploy a custom YOLO detection model in the reCamera web interface.
+# Convert and deploy a custom YOLO detection model in the reCamera web interface
 
 reCamera's web management interface provides built-in cloud-based model conversion functionality. After training or fine-tuning a YOLO detection model, users can directly upload and export the ONNX model without needing to configure TPU-MLIR, Docker, or other model conversion environments locally.
 
@@ -28,12 +28,12 @@ After uploading, the system will automatically convert the ONNX model into one t
 
 The following operations can be performed through the reCamera web interface:
 
-* Upload the trained or fine-tuned YOLO Detect ONNX model;
-* Use Seeed's cloud services to automatically convert models;
-* Convert ONNX models to reCamera-supported versions. `.cvimodel` Format;
-* Download the converted model file;
-* Apply the model directly to the current reCamera;
-* Preview the target detection results in real time in the Dashboard.
+- Upload the trained or fine-tuned YOLO Detect ONNX model;
+- Use Seeed's cloud services to automatically convert models;
+- Convert ONNX models to reCamera-supported versions. `.cvimodel` Format;
+- Download the converted model file;
+- Apply the model directly to the current reCamera;
+- Preview the target detection results in real time in the Dashboard.
 
 The entire process does not require users to install a model conversion toolchain locally, making it suitable for quickly validating and deploying custom object detection models.
 
@@ -43,9 +43,9 @@ This feature is currently primarily designed for YOLO series object detection mo
 
 Please confirm before uploading:
 
-* The model has been exported in ONNX format;
-* ONNX models use fixed input dimensions;
-* The model can be executed normally in the local ONNX Runtime environment.
+- The model has been exported in ONNX format;
+- ONNX models use fixed input dimensions;
+- The model can be executed normally in the local ONNX Runtime environment.
 
 > This feature is primarily used for the YOLO Detect model. Classification, instance segmentation, pose estimation, and rotated bounding box detection models may use different output structures and may not be directly deployable through the current conversion process.
 
@@ -100,9 +100,9 @@ After entering the **Model Conversion** page, you can see the models that have b
 
 The models on the page typically provide the following operations:
 
-* `Download`Download the converted model;
-* `Use`Set the model as the currently used model;
-* Delete button: Deletes the corresponding model record.
+- `Download`Download the converted model;
+- `Use`Set the model as the currently used model;
+- Delete button: Deletes the corresponding model record.
 
 ---
 
@@ -111,7 +111,6 @@ The models on the page typically provide the following operations:
 Click the **Upload Model** button on the page, and in the file selection window, select the YOLO ONNX model you want to convert.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/ai_model_deployment/model_export_cvimodel_online/image-1.png" /></div>
-
 
 After selecting the file, click "Open," and the model will begin uploading.
 
@@ -127,10 +126,10 @@ During the conversion, you can see:
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/ai_model_deployment/model_export_cvimodel_online/image-2.png" /></div>
 
-* Model name;
-* Upload time;
-* Current conversion progress;
-* `Stop Model Conversion` Button.
+- Model name;
+- Upload time;
+- Current conversion progress;
+- `Stop Model Conversion` Button.
 
 Please ensure a stable network connection for reCamera until the model conversion is complete.
 
@@ -157,11 +156,11 @@ Click **Download** to download the converted model to your local computer for sa
 
 The downloaded file can be used for:
 
-* Model backup;
-* Customize the reCamera application;
-* Node-RED model nodes;
-* C/C++ inference program;
-* Subsequent offline deployment.
+- Model backup;
+- Customize the reCamera application;
+- Node-RED model nodes;
+- C/C++ inference program;
+- Subsequent offline deployment.
 
 ### Using the model
 
@@ -197,23 +196,22 @@ The browser will then take you to the model preview and device control page.
 
 In the Preview area, you can see:
 
-* The name of the model currently in use;
-* IoU threshold;
-* Confidence threshold;
-* Live camera feed;
-* Object detection bounding box;
-* Detection category name;
-* Detect confidence level.
+- The name of the model currently in use;
+- IoU threshold;
+- Confidence threshold;
+- Live camera feed;
+- Object detection bounding box;
+- Detection category name;
+- Detect confidence level.
 
 For example, when a person is detected, the screen will display:
-
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/ai_model_deployment/model_export_cvimodel_online/image-5.png" /></div>
 
 in:
 
-* `person` Indicates the detection category;
-* `91` This indicates a detection confidence level of approximately 91%.
+- `person` Indicates the detection category;
+- `91` This indicates a detection confidence level of approximately 91%.
 
 ---
 
@@ -234,11 +232,11 @@ Alternatively, you can stop the current conversion task and upload again.
 
 Common causes include:
 
-* The ONNX model contains operators that are not currently supported;
-* The model uses dynamic input dimensions;
-* The model output structure has been customized.
-* The ONNX exported version or Opset is incompatible;
-* The model file is corrupted.
+- The ONNX model contains operators that are not currently supported;
+- The model uses dynamic input dimensions;
+- The model output structure has been customized.
+- The ONNX exported version or Opset is incompatible;
+- The model file is corrupted.
 
 It is recommended to re-export the model and prioritize using fixed input dimensions:
 
@@ -263,3 +261,17 @@ Please confirm:
 5. Are the camera node and model node correctly connected?
 
 If necessary, the process can be redeployed or the Dashboard page can be refreshed.
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
