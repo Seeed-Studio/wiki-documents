@@ -85,6 +85,7 @@ with ReachyMini() as mini:
 * **[构建和发布应用](/reachymini_sdk_apps)**：创建、测试、发布和调试Reachy Mini应用。
 * **[核心概念](/reachymini_sdk_core-concept)**：架构、坐标系统和安全限制。
 * **[教程](/reachymini_examples_minimal_demo)**：实践示例逐步学习SDK。
+* **[Home Assistant 集成](/reachymini_development_cases_home_assistant)**：通过HACS将Reachy Mini接入Home Assistant智能家居。
 * 📂 [**浏览示例文件夹**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
 
 ## 🛠 硬件概述
