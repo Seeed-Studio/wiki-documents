@@ -86,6 +86,7 @@ with ReachyMini() as mini:
 * **[核心概念](/reachymini_sdk_core-concept)**：架构、坐标系统和安全限制。
 * **[教程](/reachymini_examples_minimal_demo)**：实践示例逐步学习SDK。
 * **[Home Assistant 集成](/reachymini_development_cases_home_assistant)**：通过HACS将Reachy Mini接入Home Assistant智能家居。
+* **[Reachy Mini 语音控制 SO-ARM](/reachymini_development_cases_gripper_voice_control)**：通过对话应用用语音控制SO-ARM从臂爪夹开合。
 * 📂 [**浏览示例文件夹**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
 
 ## 🛠 硬件概述
