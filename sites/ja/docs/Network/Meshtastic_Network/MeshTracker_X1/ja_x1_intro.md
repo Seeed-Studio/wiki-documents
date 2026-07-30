@@ -1,6 +1,6 @@
 ---
 description: Meshtastic 向け SenseCAP MeshTracker X1 の紹介。この Wiki では、機能、仕様、ハードウェア概要、ボタン、LED、およびピン一覧を紹介します。
-title: SenseCAP MeshTracker X1 入門
+title: SenseCAP MeshTracker X1 の紹介
 keywords:
   - Tracker
   - Meshtastic
@@ -24,27 +24,27 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-世界初のカードサイズ Meshtastic デバイスで、デュアルバンド GPS を搭載しています。オフグリッド環境での信頼性の高い通信のために設計された MeshTracker X1 は、863～928 MHz の周波数に対応する IP66 等級の [Meshtastic®](https://meshtastic.org/) GPS トラッカーです。最新の Semtech LR2021 LoRa チップを搭載し、USB-C 接続、最長 5 日間のバッテリー駆動、そしてコンパクトで屋外使用に適したデザインを備えています。
+世界初のカードサイズ Meshtastic デバイスで、デュアルバンド GPS を搭載しています。オフグリッド環境での信頼性の高い通信のために設計された MeshTracker X1 は、IP66 等級の [Meshtastic®](https://meshtastic.org/) GPS トラッカーで、863–928 MHz の周波数帯をサポートします。最新の Semtech LR2021 LoRa チップを搭載し、USB-C 接続、最長 5 日間のバッテリー駆動、屋外使用に適したコンパクトなデザインを備えています。
 
 ### 特長
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
 
 
-- **本当に持ち歩ける Meshtastic デバイス** 
+- **実際に持ち歩ける Meshtastic デバイス** 
 
-SenseCAP MeshTracker X1 は、アウトドア、大規模イベント、緊急時など、セルラー網の外でも信頼できる通信と位置共有を必要とする人のために設計されています。真に携帯しやすいフォームファクタと堅牢な IP66 保護により、Meshtastic 接続を日常の持ち歩きや実際のフィールド利用に持ち込みます。
+SenseCAP MeshTracker X1 は、アウトドア、大規模イベント、緊急時など、携帯電話ネットワークの外でも信頼できる通信と位置情報共有を必要とする人のために設計されています。真に携帯しやすいフォームファクタと堅牢な IP66 保護により、Meshtastic 接続を日常の持ち歩きや実際のフィールド利用に持ち込みます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **超高精度デュアルバンド GPS トラッキング** 
 
-デュアルバンド L1+L5 GNSS と内蔵気圧センサにより、MeshTracker X1 はシングルバンド GPS よりも高い信頼性の位置情報と高度認識を実現します。また、デュアルバンド GPS を搭載した世界初のカードサイズ Meshtastic デバイスでもあります。
+デュアルバンド L1+L5 GNSS と内蔵気圧センサにより、MeshTracker X1 はシングルバンド GPS よりも高い信頼性の位置測位と高度認識を実現します。また、デュアルバンド GPS を搭載した世界初のカードサイズ Meshtastic デバイスでもあります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **次世代 LoRa 接続（LR2021）** 
 
-Semtech LR2021 によって駆動される MeshTracker X1 は、最大 -141 dBm の感度と 2.6 Mbps の FLRC データレートにより、より強力な RF 性能を発揮し、より高速で信頼性の高いメッシュ通信を実現します。これにより、音声や画像伝送など将来の機能の基盤を築きます。
+Semtech LR2021 によって駆動される MeshTracker X1 は、最大 -141 dBm の感度と 2.6 Mbps の FLRC データレートにより、より強力な RF 性能を発揮し、より高速で信頼性の高いメッシュ通信を実現します。これにより、音声や画像伝送など将来の機能の基盤を構築します。
 
 - **信頼性の高い長距離通信** 
 
@@ -52,49 +52,50 @@ Semtech LR2021 によって駆動される MeshTracker X1 は、最大 -141 dBm 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Dazzaristance.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **カードサイズ設計で持ち運びが簡単** 
+- **カードサイズのデザインで持ち運びやすい** 
 
-スリムで軽量な MeshTracker X1 は、アウトドアアドベンチャーの際の日常携行を想定して設計されています。ネックストラップで身に着けたり、バックパックに取り付けたり、自転車バッグに固定したり、ポケットにそのまま入れて、手軽にオフグリッド接続を利用できます。
+スリムで軽量な MeshTracker X1 は、アウトドアアクティビティ中の毎日の持ち歩き用に設計されています。ネックストラップで身に着けたり、バックパックに取り付けたり、自転車バッグに固定したり、ポケットにそのまま入れて、手軽にオフグリッド接続を利用できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **柔軟なバイブレーション & サウンドアラート** 
 
-MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟な通知オプションを提供します。騒がしいイベント中でも、屋外走行中でも、あるいは静かなトレイルを歩いていて気を散らしたくない場合でも、受信メッセージに気付きやすくなります。
+MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟な通知オプションを提供します。騒がしいイベント中や屋外走行中、あるいは静かなトレイルを散策していて気を散らしたくない場合でも、受信メッセージに気付きやすくなります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **IP66 の堅牢な屋外保護** 
 
-防塵・防水の IP66 等級構造により、雨、泥、ほこりっぽいトレイルなど、過酷な屋外環境でも信頼性の高い動作を保証します。
+IP66 等級の防塵・防水保護構造により、雨、泥、ほこりっぽいトレイルなど、過酷な屋外環境でも信頼性の高い動作を保証します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **USB-C 接続** 
-https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
-標準的な USB-C インターフェースにより、充電、ファームウェア更新、デバッグが可能で、堅牢な屋外使用と日常の利便性の両立を図っています。
+標準的な USB-C インターフェースにより、充電、ファームウェア更新、デバッグが可能で、堅牢な屋外使用と日常の利便性の両方に対応します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **長時間バッテリー駆動** 
 
-高容量 1100mAh バッテリーを中心に最適化された高集積カードサイズフォームファクタにより、コンパクトで携帯性を保ちながら、アウトドアでの携行やオフグリッド通信において最長 5 日間の連続動作を実現します。
+高容量 1100mAh バッテリーを中心に最適化された高集積のカードサイズフォームファクタにより、コンパクトで携帯性を保ちながら、アウトドアでの持ち歩きやオフグリッド通信において最長 5 日間の連続動作を実現します。
 
 
 ### 仕様
 
 **一般**
 
-|**ネットワークプロトコル**|LoRa (863-928 MHz)、Bluetooth (v5.0)|
+|項目|パラメータ|
 | :- | :- |
+|**メインコントローラ**|Nordic nRF52840|
+|**無線**|Bluetooth (v5.0)|
+|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>最大送信電力: 22dBm|
 |**LED**|1\* RGB|
-|**ブザー**|ステータス表示用ブザー 1 個|
-|**ボタン**|操作用ボタン 1 個|
+|**ブザー**|ステータスを示す 1\* ブザー|
+|**ボタン**|操作用 1\* ボタン|
 |**モーター**|1\* DRV2605L|
-| **気圧センサ**<br/>気圧センサから温度も読み取れます| 気圧範囲：300–1100 hPa<br/>気圧精度：±0.03 hPa<br/>気圧分解能：0.06 Pa<br/>温度範囲：-40～85°C<br/>温度精度：± 1°C<br/>温度分解能：0.0006 °C |
-| **6 軸センサ** |将来バージョン|
-| **3 軸磁力計** | 将来バージョン |
-|**アンテナ**|内蔵（GNSS/LoRa/Bluetooth）|
+| **気圧**|範囲: 300–1100 hPa<br/>精度: ±0.03 hPa<br/>分解能: 0.06 Pa|
+| **温度**<br/>(温度は気圧センサから取得)| 範囲:-40-85°C<br/>精度: ± 1°C<br/>分解能: 0.0006 °C |
+|**アンテナ**|内蔵 (GNSS/LoRa/Bluetooth)|
 |**通信距離**|最大 8 km|
 |**IP 等級**|IP66|
 |**寸法**|90\*57\*8 mm|
@@ -107,11 +108,13 @@ https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
 |項目|パラメータ|
 | :- | :- |
 |**バッテリー容量**|充電式リチウムバッテリー、1100mAh|
-|**バッテリー寿命モニタリング**|バッテリーレベルの定期アップリンク|
-|<p>**充電ケーブル**</p><p>**（アダプターは付属しません）**</p>|USB Type-C 充電ケーブル、20 cm|
-|**デバイス電源入力**|5V、0.55A|
-|**バッテリー電源入力**|4.4V、0.22A|
+|**バッテリー寿命モニタリング**|バッテリーレベルを定期的にアップリンク|
+|**充電プロトコル**|USB Type-C|
+|**デバイス電源入力**|5V, 0.55A|
+|**バッテリー電源入力**|4.4V, 0.22A|
 |**充電温度範囲**|5 ～ +45℃|
+
+X1 は製品シリーズへと発展する可能性があり、将来発売される新製品には、追加のセンサ（3 軸センサ、6 軸磁力計など）が搭載される予定です。
 
 ### ピン一覧
 
@@ -304,9 +307,9 @@ https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
 |ボタン操作|説明|ブザー|
 |- |- |- |
 |1 回押す|電源オン|上昇メロディー|
-|2 回押す|ノード／位置情報を更新|-|
-|3 回押す|GPS のオン／オフを切り替え|-|
-|4 回クリック|一時的にミュート／ミュート解除|-|
+|2 回押す|ノード/位置情報を更新|-|
+|3 回押す|GPS のオン/オフを切り替え|-|
+|4 回クリック|一時的にミュート/ミュート解除|-|
 |5 秒間長押し|電源オフ|下降メロディー|
 
 ### LED
@@ -317,7 +320,7 @@ https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
     <th colspan="1">デバイス状態</th>
   </tr>
   <tr>
-    <td rowspan="4">🟢green</td>
+    <td rowspan="4">🟢緑</td>
     <td>点灯</td>
     <td>デバイス起動中</td>
   </tr>
@@ -334,14 +337,14 @@ https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
     <td>充電完了</td>
   </tr>
   <tr>
-    <td>🔴Red</td>
+    <td>🔴赤</td>
     <td>点滅</td>
     <td>低電力</td>
   </tr>
     <tr>
-    <td>⚪️white</td>
+    <td>⚪️白</td>
     <td>点灯</td>
-    <td>DFU モード／ブートローダーモード</td>
+    <td>DFU モード/ブートローダーモード</td>
   </tr>
 </table>
 
@@ -349,7 +352,7 @@ https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagramBu.png" alt="pir" width={900} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram729.png" alt="pir" width={900} height="auto" /></p>
 
 ### リソース
 

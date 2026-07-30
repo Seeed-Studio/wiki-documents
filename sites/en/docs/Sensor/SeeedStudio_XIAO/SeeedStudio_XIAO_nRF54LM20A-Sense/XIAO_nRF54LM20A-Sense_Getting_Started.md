@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_getting_started
 sku: 100018440
 last_update:
-  date: 05/13/2026
+  date: 07/27/2026
   author: Zeller
 createdAt: '2025-05-13'
 updatedAt: '2026-07-21'
@@ -410,9 +410,9 @@ This tutorial is developed based on Zephyr RTOS. The project consists of three c
 #define PWM_PERIOD_NS 1000000U
 #define STEP_TIME_MS 500
 
-#define LED_R_NODE DT_ALIAS(pwm_led1)
+#define LED_R_NODE DT_ALIAS(pwm_led0)
 #define LED_G_NODE DT_ALIAS(pwm_led2)
-#define LED_B_NODE DT_ALIAS(pwm_led0)
+#define LED_B_NODE DT_ALIAS(pwm_led1)
 
 #if !DT_NODE_EXISTS(LED_R_NODE) || !DT_NODE_EXISTS(LED_G_NODE) || !DT_NODE_EXISTS(LED_B_NODE)
 #error "This RGB blink demo expects pwm-led0/pwm-led1/pwm-led2 devicetree aliases"
@@ -512,8 +512,8 @@ The devicetree overlay file does not exist in the newly created blank sample. Yo
  * Device tree overlay for XIAO nRF54LM20A RGB LED PWM demo.
  *
  * PWM20 peripheral is used for RGB LED control:
- *   - Channel 0: P1.22 (Blue LED)  -> pwm_led0
- *   - Channel 1: P1.23 (Red LED)   -> pwm_led1
+ *   - Channel 0: P1.22 (Red LED)   -> pwm_led0
+ *   - Channel 1: P1.23 (Blue LED)  -> pwm_led1
  *   - Channel 2: P1.24 (Green LED) -> pwm_led2
  */
 
@@ -526,17 +526,17 @@ The devicetree overlay file does not exist in the newly created blank sample. Yo
 		compatible = "pwm-leds";
 
 		pwm_led0: pwm_led_0 {
-			pwms = <&pwm20 0 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
-			label = "Blue LED";
-		};
-
-		pwm_led1: pwm_led_1 {
-			pwms = <&pwm20 1 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+			pwms = <&pwm20 0 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
 			label = "Red LED";
 		};
 
+		pwm_led1: pwm_led_1 {
+			pwms = <&pwm20 1 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+			label = "Blue LED";
+		};
+
 		pwm_led2: pwm_led_2 {
-			pwms = <&pwm20 2 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+			pwms = <&pwm20 2 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
 			label = "Green LED";
 		};
 	};
