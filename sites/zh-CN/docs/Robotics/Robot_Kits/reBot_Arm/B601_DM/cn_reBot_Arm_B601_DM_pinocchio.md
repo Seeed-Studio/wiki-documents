@@ -142,7 +142,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### 步骤 2. 同步环境（安装所有依赖）
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
 cd reBotArm_control_py
 uv sync
 ```
@@ -211,7 +211,7 @@ uv run python example/2_zero_and_read.py
 **运行方式**：
 ```bash
 uv run python example/3_mit_control.py
-> 30 0 0 0 0 0 # 控制1号电机正转30度
+> 30 0 0 0 0 0 0 # 控制1号电机正转30度
 > state
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # 退出系统
@@ -227,7 +227,7 @@ uv run python example/3_mit_control.py
 **运行方式**：
 ```bash
 uv run python example/4_pos_vel_control.py
-> 30 0 0 0 0 0 # 控制1号电机正转30度
+> 30 0 0 0 0 0 0 # 控制1号电机正转30度
 > state
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # 退出系统
@@ -339,7 +339,7 @@ uv run python example/7_arm_ik_control.py
 #用法B
 > 0.3 0.0 0.4 0.0 0.0 0.5 #同时控制位置和姿态：走到指定位置，同时手腕偏航角旋转 0.5 弧度。
 
-> ctrl + c # 退出系统
+> ctrl + c # 回到零点并退出系统
 ```
 :::danger
 注意，在该实例代码下机械臂的速度会很快，需要保证人或其他设备远离机械臂的工作半径。
@@ -369,7 +369,7 @@ uv run python example/8_arm_traj_control.py
 #用法C
 > 0.3 0.0 0.4 0.0 0.0 0.0 5.0 #让机械臂走到特定位置，并指定用 5.0 秒 的时间慢慢挪过去。(注意：如果要输时间，前方的姿态参数 0 0 0 不能省略)
 
-> ctrl + c # 退出系统
+> ctrl + c # 回到零点并退出系统
 ```
 ---
 

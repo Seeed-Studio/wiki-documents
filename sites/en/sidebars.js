@@ -1970,6 +1970,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_udp_streaming',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_http',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_mqtt_stream',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_websockets',
                   ],
                 },
                 {
@@ -4541,6 +4542,19 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/vibe-code-with-your-agent',
               label: 'Vibe Code with Your Agent',
+            },
+            {
+              type: 'category',
+              label: 'Development Cases',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/home_assistant',
+                  label: 'Home Assistant Integration',
+                },
+              ],
             },
             {
               type: 'category',
