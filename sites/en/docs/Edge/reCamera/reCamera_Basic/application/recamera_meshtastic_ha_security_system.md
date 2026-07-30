@@ -16,7 +16,7 @@ last_update:
   author: Sizhao Zhou
 createdAt: '2026-06-29'
 updatedAt: '2026-06-30'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/recamera_meshtastic_ha_security_system_bak/
+url: https://wiki.seeedstudio.com/recamera_meshtastic_ha_security_system_bak/
 ---
 
 # Building a Long-Range Security System with reCamera and Meshtastic  

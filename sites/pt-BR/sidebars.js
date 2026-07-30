@@ -3842,7 +3842,11 @@ const sidebars = {
                   type: 'category',
                   label: 'Placa carrier J601-Robotics',
                   items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_reComputer_Robotics_J601_Getting_Started',
+                    {
+                      type: 'doc',
+                      id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_reComputer_Robotics_J601_Getting_Started',
+                      label: 'Flash Jetpack',
+                    },
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
@@ -4157,6 +4161,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/pt_Developer_Tools',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Build_and_Flash_Yocto_for_reComputer_Super',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Develop_reComputer_Jetson_using_Clawdbot',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Gapi-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_alwaysAI-Jetson-Getting-Started',

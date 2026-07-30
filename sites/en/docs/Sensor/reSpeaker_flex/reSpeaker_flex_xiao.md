@@ -12,7 +12,7 @@ last_update:
   date: 04/8/2026
   author: Kasun Thushara
 createdAt: '2026-04-08'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-23'
 url: https://wiki.seeedstudio.com/respeaker_flex_xiao_introduction/
 ---
 

@@ -14,7 +14,7 @@ last_update:
   date: 2/14/2025
   author: Parker Hu & Dawn Yao
 createdAt: '2025-02-14'
-updatedAt: '2026-03-16'
+updatedAt: '2025-04-08'
 url: https://wiki.seeedstudio.com/pt-br/recamera_linux_fundamentals/
 ---
 # Fundamentos de Linux
@@ -25,19 +25,19 @@ Linux é um sistema operacional de código aberto, semelhante ao Unix, que ganho
 
 ### Principais recursos do Linux:
 
-- **Gratuito e de código aberto**: o código-fonte do Linux está disponível gratuitamente e os usuários podem modificá-lo conforme suas necessidades.
-- **Multitarefa**: o Linux oferece suporte à execução simultânea de vários aplicativos.
-- **Segurança**: é conhecido por seus recursos de segurança robustos, como permissões de arquivos, gerenciamento de usuários e SELinux.
-- **Portabilidade**: o Linux pode ser executado em uma variedade de arquiteturas de hardware.
+- **Gratuito e de código aberto**: O código-fonte do Linux está disponível gratuitamente, e os usuários podem modificá-lo conforme suas necessidades.
+- **Multitarefa**: O Linux suporta a execução de vários aplicativos simultaneamente.
+- **Segurança**: É conhecido por seus recursos de segurança robustos, como permissões de arquivos, gerenciamento de usuários e SELinux.
+- **Portabilidade**: O Linux pode ser executado em uma variedade de arquiteturas de hardware.
 
 ## **2. Introdução ao sistema de arquivos Linux**
 
-O Linux organiza seus arquivos e diretórios em uma estrutura hierárquica. No topo dessa estrutura está o diretório raiz `/` e, a partir dele, outros diretórios se ramificam.
+O Linux organiza seus arquivos e diretórios em uma estrutura hierárquica. No topo dessa estrutura está o diretório raiz `/`, e a partir dele, outros diretórios se ramificam.
 
 ### Diretórios principais no sistema de arquivos Linux:
 
 - `/`: Diretório raiz. É o ponto de partida do sistema de arquivos Linux.
-- `/home`: Diretórios home dos usuários. Cada usuário possui um subdiretório aqui (por exemplo, `/home/user`).
+- `/home`: Diretórios pessoais dos usuários. Cada usuário tem um subdiretório aqui (por exemplo, `/home/user`).
 - `/etc`: Arquivos de configuração do sistema.
 - `/bin`: Arquivos binários e comandos essenciais.
 - `/var`: Dados variáveis, como logs e bancos de dados.
@@ -46,7 +46,7 @@ O Linux organiza seus arquivos e diretórios em uma estrutura hierárquica. No t
 
 ## **3. Uso do terminal e da linha de comando**
 
-O terminal é uma ferramenta poderosa para interagir com o sistema operacional Linux. Ele permite que os usuários emitam comandos para executar diversas tarefas.
+O terminal é uma ferramenta poderosa para interagir com o sistema operacional Linux. Ele permite que os usuários emitam comandos para executar várias tarefas.
 
 **Abrindo o terminal:**
 
@@ -71,34 +71,34 @@ command [options] [arguments]
 
 Por exemplo, `ls -l /home/recamera` listará todos os arquivos no diretório `/home/recamera` em formato longo.
 
-## **4. Usuário recamera && root**
+## **4.Usuário recamera && root**
 
-Na primeira vez que você usa a recamera, redefine a senha padrão da recamera, que também é a senha usada para fazer login no terminal.
+Na primeira vez que você usa a recamera, você redefine a senha padrão da recamera, que também é a senha usada para fazer login no terminal.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/linux_fundamentals/image-1.png" /></div>
 
 :::note
 
-Quando a senha é inserida no terminal, o conteúdo não será exibido. Pressione `Enter` para executar depois que a senha for inserida.
+Quando a senha é digitada no terminal, o conteúdo não será exibido. Pressione `Enter` para executar após inserir a senha.
 
 :::
 
-O problema de permissões insuficientes ocorre em algumas operações especiais. Para executar o comando, você precisa adicionar sudo antes de executá-lo. Ou mude para o usuário `root` para executar todos os comandos no sistema.
+O problema de permissões insuficientes ocorre em algumas operações especiais. Para executar o comando, você precisa adicionar sudo antes de executar o comando. Ou mudar para o usuário `root` para executar todos os comandos no sistema.
 
 O usuário root não tem uma senha definida por padrão; use este comando para definir uma senha.
 
 - `sudo passwd root`:Alterar a senha de um usuário
-- `su root`:Trocar para o usuário root.
+- `su root`:Mudar para o usuário root.
 
 :::note
 
-O usuário root pode modificar arquivos relacionados ao sistema, o que pode levar à falha do sistema. Por favor, opere com cautela.
+O usuário root pode modificar arquivos relacionados ao sistema, o que pode levar a falhas no sistema. Por favor, opere com cautela.
 
 :::
 
-## **5. Comandos básicos do Linux**
+## **5. Comandos básicos de Linux**
 
-A seguir estão alguns comandos básicos e seus usos:
+Aqui estão alguns comandos básicos e seus usos:
 
 ### Gerenciamento de arquivos e diretórios:
 
@@ -127,16 +127,16 @@ A seguir estão alguns comandos básicos e seus usos:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/linux_fundamentals/image-2.png" /></div>
 - `df`: Exibe o uso do espaço em disco.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/linux_fundamentals/image-3.png" /></div>
-- `free`: Mostra o uso da memória.
+- `free`: Mostra o uso de memória.
 - `uname -r`: Exibe a versão do kernel.
 
 ## 6.Transferência de arquivos
 
-O Linux oferece vários métodos para transferir arquivos entre sistemas, seja em uma rede local ou pela internet. A seguir estão as ferramentas e protocolos comuns usados para transferência de arquivos no Linux.
+O Linux oferece vários métodos para transferir arquivos entre sistemas, seja em uma rede local ou pela internet. Abaixo estão as ferramentas e protocolos comuns usados para transferência de arquivos no Linux.
 
 ### **Usando SCP (Secure Copy Protocol)**
 
-SCP permite copiar arquivos com segurança entre um host local e um host remoto ou entre dois hosts remotos.
+SCP permite copiar arquivos com segurança entre uma máquina local e um host remoto ou entre dois hosts remotos.
 
 #### Comandos básicos do SCP:
 
@@ -160,7 +160,7 @@ SCP permite copiar arquivos com segurança entre um host local e um host remoto 
 
 #### Exemplo:
 
-Para copiar um arquivo do seu computador local para um servidor remoto:
+Para copiar um arquivo da sua máquina local para um servidor remoto:
 
 ```bash
 scp myfile.txt recamera@192.168.1.100:/home/recamera/
@@ -168,7 +168,7 @@ scp myfile.txt recamera@192.168.1.100:/home/recamera/
 
 ### **Usando SFTP (Secure File Transfer Protocol)**
 
-SFTP é outro método seguro de transferência de arquivos e opera sobre SSH. Ele permite que você gerencie arquivos interativamente em um servidor remoto.
+SFTP é outro método seguro de transferência de arquivos e opera sobre SSH. Ele permite gerenciar arquivos de forma interativa em um servidor remoto.
 
 #### Comandos básicos do SFTP:
 
@@ -180,11 +180,11 @@ SFTP é outro método seguro de transferência de arquivos e opera sobre SSH. El
 
 2. Depois de conectado, use os seguintes comandos:
 
-   - `ls`: Listar arquivos no diretório remoto.
-   - `cd [directory]`: Alterar o diretório remoto.
-   - `get [file]`: Baixar um arquivo do servidor remoto para a máquina local.
-   - `put [file]`: Enviar um arquivo da máquina local para o servidor remoto.
-   - `exit`: Encerrar a sessão SFTP.
+   - `ls`: Lista arquivos no diretório remoto.
+   - `cd [directory]`: Altera o diretório remoto.
+   - `get [file]`: Baixa um arquivo do servidor remoto para a máquina local.
+   - `put [file]`: Envia um arquivo da máquina local para o servidor remoto.
+   - `exit`: Encerra a sessão SFTP.
 
 #### Exemplo:
 
@@ -197,9 +197,9 @@ sftp> put myfile.txt /home/user/Documents/
 
 ## **7.Comando de hardware**
 
-Você pode consultar esta [documentação](https://wiki.seeedstudio.com/pt-br/recamera_hardware_and_specs/#hardware-interface) para controlar o hardware no dispositivo recamera.
+Você pode consultar esta [documentação](https://wiki.seeedstudio.com/pt-br/recamera_basicardware_and_specs/) para controlar o hardware no dispositivo recamera.
 
-## Suporte técnico & discussão sobre o produto
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

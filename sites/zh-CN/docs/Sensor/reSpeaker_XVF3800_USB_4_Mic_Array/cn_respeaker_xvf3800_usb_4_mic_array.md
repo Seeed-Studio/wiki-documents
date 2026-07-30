@@ -881,6 +881,7 @@ sudo apt install pavucontrol -y
 
 ## 资源
 
+- [ReSpeaker XVF3800 2D 文件](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf3800_2d_mechanical_drawing.pdf)
 - [ReSpeaker XVF3800 3D 文件](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
 - [ReSpeaker XVF3800 3D-外壳-上部 文件](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
 - [ReSpeaker XVF3800 3D-外壳-下部 文件](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)

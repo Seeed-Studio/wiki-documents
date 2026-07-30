@@ -12,7 +12,7 @@ last_update:
   date: 8/20/2025
   author: Kasun Thushara
 createdAt: '2025-07-16'
-updatedAt: '2026-04-20'
+updatedAt: '2026-07-23'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/
 ---
 

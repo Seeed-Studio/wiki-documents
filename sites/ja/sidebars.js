@@ -3843,7 +3843,11 @@ const sidebars = {
                   type: 'category',
                   label: 'J601-Robotics キャリアボード',
                   items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/ja_reComputer_Robotics_J601_Getting_Started',
+                    {
+                      type: 'doc',
+                      id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/ja_reComputer_Robotics_J601_Getting_Started',
+                      label: 'Flash Jetpack',
+                    },
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/ja_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
@@ -4158,6 +4162,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Build_and_Flash_Yocto_for_reComputer_Super',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Develop_reComputer_Jetson_using_Clawdbot',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Gapi-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_alwaysAI-Jetson-Getting-Started',
