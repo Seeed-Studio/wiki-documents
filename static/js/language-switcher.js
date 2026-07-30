@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-30 11:19:23 (北京时间)
-// 多语言页面: 2405 个
+// 生成时间: 2026-07-30 17:29:16 (北京时间)
+// 多语言页面: 2406 个
 
 (function() {
   'use strict';
@@ -5937,6 +5937,13 @@
     "pt"
   ],
   "/reachymini_development_cases_home_assistant": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_development_cases_gripper_voice_control": [
     "cn",
     "en",
     "es",
