@@ -4565,6 +4565,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: '开发案例集成',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/cn_home_assistant',
+                  label: 'Home Assistant 集成',
+                },
+              ],
+            },
+            {
+              type: 'category',
               label: 'Reachy Mini (无线版)',
               collapsible: true,
               collapsed: false,
