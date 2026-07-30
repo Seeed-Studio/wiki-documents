@@ -4531,6 +4531,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Casos de desenvolvimento',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/pt_home_assistant',
+                  label: 'Integração com Home Assistant',
+                },
+              ],
+            },
+            {
+              type: 'category',
               label: 'Reachy Mini (sem fio)',
               collapsible: true,
               collapsed: false,

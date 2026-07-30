@@ -4532,6 +4532,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: '開発事例',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/ja_home_assistant',
+                  label: 'Home Assistant 連携',
+                },
+              ],
+            },
+            {
+              type: 'category',
               label: 'Reachy Mini (Wireless)',
               collapsible: true,
               collapsed: false,
