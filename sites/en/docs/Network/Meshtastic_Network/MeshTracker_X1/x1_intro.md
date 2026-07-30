@@ -71,7 +71,6 @@ Built with IP66-rated protection against dust and water, ensuring reliable perfo
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **USB-C Connectivity** 
-https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
 Standard USB-C interface for charging, firmware updates, and debugging, designed for rugged outdoor use and everyday convenience.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
@@ -85,15 +84,17 @@ A highly integrated, card-sized form factor optimized around a high-capacity 110
 
 **General**
 
-|**Network protocol**|LoRa (863-928 MHz), Bluetooth (v5.0)|
+|Item|Parameter|
 | :- | :- |
+|**Main Controller**|Nordic nRF52840|
+|**Wireless**|Bluetooth (v5.0)|
+|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>MAX TX Power: 22dBm|
 |**LED**|1\* RGB|
 |**Buzzer**|1\* buzzer to indicate status|
 |**Button**|1\* button to operate|
 |**Motor**|1\* DRV2605L|
-| **Air Pressure Sensor**<br/>Temperature can be read by the air pressure sensor| Air Pressure Range: 300–1100 hPa<br/>Air Pressure Accuracy: ±0.03 hPa<br/>Air Pressure Resolution: 0.06 Pa<br/>Temperature Range:-40-85°C<br/>Temperature Accuracy: ± 1°C<br/>Temperature Resolution: 0.0006 °C |
-| **6-Axis Sensor** |Future Version|
-| **3-Axis Magnetometer** | Future Version |
+| **Air Pressure**|Range: 300–1100 hPa<br/>Accuracy: ±0.03 hPa<br/>Resolution: 0.06 Pa|
+| **Temperature**<br/>(Temperature is read from barometer)| Range:-40-85°C<br/>Accuracy: ± 1°C<br/>Resolution: 0.0006 °C |
 |**Antenna**|Internal (GNSS/LoRa/Bluetooth)|
 |**Communication Distance**|up to 8 km|
 |**IP Rating**|IP66|
@@ -108,10 +109,12 @@ A highly integrated, card-sized form factor optimized around a high-capacity 110
 | :- | :- |
 |**Battery Capacity**|Rechargeable lithium battery, 1100mAh|
 |**Battery Life Monitoring**|Periodic uplink battery level|
-|<p>**Charge Cable**</p><p>**(Adapter not included)**</p>|USB Type-C charging cable, 20 cm|
+|**Charging Protocol**|USB Type-C|
 |**Device Power Input**|5V, 0.55A|
 |**Battery Power Input**|4.4V, 0.22A|
 |**Charging Temperature Limit**|5 to +45℃|
+
+X1 might be developed into a product series, in which new products to be launched in the future will be equipped with additional sensors (3-axis sensors, six-axis magnetometers etc.).
 
 ### Pin List
 
@@ -349,7 +352,7 @@ A highly integrated, card-sized form factor optimized around a high-capacity 110
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagramBu.png" alt="pir" width={900} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram729.png" alt="pir" width={900} height="auto" /></p>
 
 ### Resource
 
