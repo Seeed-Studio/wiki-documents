@@ -4554,6 +4554,11 @@ const sidebars = {
                   id: 'Robotics/Robot_Kits/ReachyMini/development_cases/home_assistant',
                   label: 'Home Assistant Integration',
                 },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/reachymini_voice_control_soarm',
+                  label: 'Reachy Mini Voice Control for SO-ARM',
+                },
               ],
             },
             {

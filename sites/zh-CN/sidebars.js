@@ -4575,6 +4575,11 @@ const sidebars = {
                   id: 'Robotics/Robot_Kits/ReachyMini/development_cases/cn_home_assistant',
                   label: 'Home Assistant 集成',
                 },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/cn_reachymini_voice_control_soarm',
+                  label: 'Reachy Mini 语音控制 SO-ARM',
+                },
               ],
             },
             {
