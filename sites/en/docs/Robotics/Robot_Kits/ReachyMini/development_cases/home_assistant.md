@@ -15,7 +15,7 @@ createdAt: '2026-07-29'
 updatedAt: '2026-07-29'
 url: https://wiki.seeedstudio.com/cn/reachymini_development_cases_home_assistant/
 ---
-# Home Assistant integration
+# Reachy Mini Home Assistant integration
 
 Want Reachy Mini to control your smart home devices — Mi Home (Xiaomi), Aqara, Midea, Haier, and more (such as refrigerators and air conditioners)? This project explains in detail how to control them with Reachy Mini, no code required. You can even hand this document directly to an AI and let it install and set everything up for you.
 

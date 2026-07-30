@@ -15,7 +15,7 @@ createdAt: '2026-07-29'
 updatedAt: '2026-07-29'
 url: https://wiki.seeedstudio.com/cn/reachymini_development_cases_home_assistant/
 ---
-# Home Assistant 集成
+# Reachy Mini 的 Home Assistant 集成
 
 你是否想让 Reachy Mini 控制米家、Aqara、美的、海尔等智能家居设备（如冰箱、空调等）？此项目详细说明了如何使用 Reachy Mini 无代码实现控制，你可以直接将此文档交给 AI，让 AI 帮你安装并实现这一功能。
 
