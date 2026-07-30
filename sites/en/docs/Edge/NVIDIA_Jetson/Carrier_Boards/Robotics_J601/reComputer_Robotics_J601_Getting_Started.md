@@ -15,7 +15,7 @@ last_update:
   date: 07/23/2026
   author: HaoChen
 createdAt: '2026-04-24'
-updatedAt: '2026-07-23'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
