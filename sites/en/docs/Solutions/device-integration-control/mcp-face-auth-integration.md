@@ -122,10 +122,10 @@ In the reference implementation these are `mcp/warehouse_mcp.py` (tool layer plu
 
 For getting the device itself on the network and paired with an agent, see [SenseCAP Watcher for Xiaozhi AI](/sensecap_watcher_for_xiaozhi_ai).
 
-:::info Two axes that are easy to confuse
-`mode` selects **where inference runs** — `local` (on the device) or `lan` (on an external service). `verify_frequency` selects **how often** verification happens — `always` or once per conversation (`session`).
+:::info Two independent settings
+`mode` selects **where inference runs** — `local` (on the device) or `lan` (on an external service). `verify_frequency` selects **how often** verification happens — `always`, or once per conversation (`session`).
 
-An older column named `verify_mode` (`session` / `interface`) still exists in the database for rollback purposes, but the verification path no longer reads it. Ignore it, and disregard any older document that presents it as the live switch.
+They are orthogonal: any combination is valid.
 :::
 
 ## Try It Before You Build
