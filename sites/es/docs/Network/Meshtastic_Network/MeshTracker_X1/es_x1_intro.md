@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-El primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda. Diseñado para una comunicación fiable fuera de la red, MeshTracker X1 es un rastreador GPS [Meshtastic®](https://meshtastic.org/) con clasificación IP66 que admite frecuencias de 863–928 MHz. Impulsado por el último chip LoRa Semtech LR2021, incorpora conectividad USB-C, hasta 5 días de duración de la batería y un diseño compacto, listo para exteriores.
+El primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda. Diseñado para una comunicación fiable fuera de la red celular, MeshTracker X1 es un rastreador GPS [Meshtastic®](https://meshtastic.org/) con clasificación IP66 que admite frecuencias de 863–928 MHz. Impulsado por el último chip LoRa Semtech LR2021, incorpora conectividad USB-C, hasta 5 días de autonomía de batería y un diseño compacto, listo para exteriores.
 
 ### Características
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -32,11 +32,11 @@ El primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de
 
 - **Un dispositivo Meshtastic que realmente llevarás contigo** 
 
-SenseCAP MeshTracker X1 está diseñado para personas que necesitan comunicación fiable y uso compartido de ubicación más allá de las redes celulares, ya sea al aire libre, en grandes eventos o durante situaciones de emergencia. Con un factor de forma verdaderamente portátil y protección robusta IP66, lleva la conectividad Meshtastic al uso diario y a aplicaciones reales de campo.
+SenseCAP MeshTracker X1 está diseñado para personas que necesitan comunicación fiable y uso compartido de ubicación más allá de las redes celulares, ya sea al aire libre, en grandes eventos o durante situaciones de emergencia. Con un factor de forma verdaderamente portátil y protección robusta IP66, lleva la conectividad Meshtastic al uso diario y a escenarios reales de campo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **Seguimiento GPS de doble banda ultrapreciso** 
+- **Seguimiento GPS ultrapreciso de doble banda** 
 
 Impulsado por GNSS de doble banda L1+L5 y un barómetro integrado, MeshTracker X1 ofrece un posicionamiento y una conciencia de altitud más fiables que el GPS de banda única. También es el primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda.
 
@@ -44,7 +44,7 @@ Impulsado por GNSS de doble banda L1+L5 y un barómetro integrado, MeshTracker X
 
 - **Conectividad LoRa de próxima generación (LR2021)** 
 
-Impulsado por Semtech LR2021, MeshTracker X1 ofrece un rendimiento RF más potente con una sensibilidad de hasta -141 dBm y tasas de datos FLRC de 2,6 Mbps para una comunicación mallada más rápida y fiable, creando una base para futuras funciones como transmisión de voz e imagen.
+Impulsado por Semtech LR2021, MeshTracker X1 ofrece un rendimiento RF más potente con una sensibilidad de hasta -141 dBm y velocidades de datos FLRC de 2,6 Mbps para una comunicación en malla más rápida y fiable, creando una base para futuras funciones como transmisión de voz e imagen.
 
 - **Comunicación fiable de largo alcance** 
 
@@ -60,40 +60,41 @@ Delgado y ligero, MeshTracker X1 está diseñado para llevarlo a diario durante 
 
 - **Alertas flexibles de vibración y sonido** 
 
-MeshTracker X1 ofrece opciones de notificación flexibles con vibración integrada y retroalimentación mediante zumbador. Mantente al tanto de los mensajes entrantes tanto si estás en un evento ruidoso, montando al aire libre o explorando senderos tranquilos donde prefieres mínimas distracciones.
+MeshTracker X1 ofrece opciones de notificación flexibles con vibración integrada y avisos mediante zumbador. Mantente al tanto de los mensajes entrantes tanto si estás en un evento ruidoso, montando al aire libre o explorando senderos tranquilos donde prefieres mínimas distracciones.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **Protección robusta IP66 para exteriores** 
 
-Construido con protección IP66 contra el polvo y el agua, garantiza un rendimiento fiable en entornos exteriores adversos como lluvia, barro y senderos polvorientos.
+Construido con protección IP66 contra el polvo y el agua, garantiza un rendimiento fiable en entornos exteriores adversos como lluvia, barro y caminos polvorientos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **Conectividad USB-C** 
-https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
-Interfaz USB-C estándar para carga, actualizaciones de firmware y depuración, diseñada para uso robusto en exteriores y comodidad en el día a día.
+Interfaz USB-C estándar para carga, actualizaciones de firmware y depuración, diseñada tanto para uso robusto en exteriores como para la comodidad del día a día.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **Mayor duración de la batería** 
+- **Autonomía de batería prolongada** 
 
-Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado en torno a una batería de alta capacidad de 1100 mAh, que ofrece hasta 5 días de funcionamiento y sigue siendo compacto y portátil para llevar al aire libre y para comunicación fuera de la red.
+Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado en torno a una batería de alta capacidad de 1100 mAh, que ofrece hasta 5 días de funcionamiento y sigue siendo compacto y portátil para llevarlo al aire libre y para comunicación fuera de la red.
 
 
-### Especificaciones
+### Especificación
 
 **General**
 
-|**Protocolo de red**|LoRa (863-928 MHz), Bluetooth (v5.0)|
+|Elemento|Parámetro|
 | :- | :- |
+|**Controlador principal**|Nordic nRF52840|
+|**Inalámbrico**|Bluetooth (v5.0)|
+|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>Potencia TX MÁX: 22dBm|
 |**LED**|1\* RGB|
 |**Zumbador**|1\* zumbador para indicar el estado|
 |**Botón**|1\* botón para operar|
 |**Motor**|1\* DRV2605L|
-| **Sensor de presión de aire**<br/>La temperatura se puede leer mediante el sensor de presión de aire| Rango de presión de aire: 300–1100 hPa<br/>Precisión de presión de aire: ±0,03 hPa<br/>Resolución de presión de aire: 0,06 Pa<br/>Rango de temperatura: -40-85°C<br/>Precisión de temperatura: ± 1°C<br/>Resolución de temperatura: 0,0006 °C |
-| **Sensor de 6 ejes** |Versión futura|
-| **Magnetómetro de 3 ejes** | Versión futura |
+| **Presión de aire**|Rango: 300–1100 hPa<br/>Precisión: ±0.03 hPa<br/>Resolución: 0.06 Pa|
+| **Temperatura**<br/>(La temperatura se lee desde el barómetro)| Rango:-40-85°C<br/>Precisión: ± 1°C<br/>Resolución: 0.0006 °C |
 |**Antena**|Interna (GNSS/LoRa/Bluetooth)|
 |**Distancia de comunicación**|hasta 8 km|
 |**Grado de protección IP**|IP66|
@@ -108,10 +109,12 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
 | :- | :- |
 |**Capacidad de la batería**|Batería de litio recargable, 1100mAh|
 |**Supervisión de la vida de la batería**|Nivel de batería en enlace ascendente periódico|
-|<p>**Cable de carga**</p><p>**(Adaptador no incluido)**</p>|Cable de carga USB Type-C, 20 cm|
+|**Protocolo de carga**|USB Type-C|
 |**Entrada de alimentación del dispositivo**|5V, 0.55A|
 |**Entrada de alimentación de la batería**|4.4V, 0.22A|
 |**Límite de temperatura de carga**|5 a +45℃|
+
+Es posible que X1 se desarrolle como una serie de productos, en la que los nuevos productos que se lancen en el futuro estarán equipados con sensores adicionales (sensores de 3 ejes, magnetómetros de seis ejes, etc.).
 
 ### Lista de pines
 
@@ -149,7 +152,7 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
     <td>GPIO</td>
   </tr>
   <tr>
-    <td rowspan="3">Controlador de motor</td>
+    <td rowspan="3">Controlador del motor</td>
     <td>EN</td>
     <td>P1.05</td>
     <td>GPIO</td>
@@ -307,7 +310,7 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
 |Pulsar dos veces|Actualizar información de nodo/ubicación|-|
 |Pulsar tres veces|Activar/desactivar el GPS|-|
 |Cuatro clics|Silenciar/reactivar temporalmente|-|
-|Mantener pulsado durante 5s|Apagar|Melodía descendente|
+|Pulsar y mantener durante 5s|Apagar|Melodía descendente|
 
 ### LED
 
@@ -336,7 +339,7 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
   <tr>
     <td>🔴Rojo</td>
     <td>Parpadeando</td>
-    <td>Baja energía</td>
+    <td>Batería baja</td>
   </tr>
     <tr>
     <td>⚪️blanco</td>
@@ -349,8 +352,8 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagramBu.png" alt="pir" width={900} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram729.png" alt="pir" width={900} height="auto" /></p>
 
-### Recurso
+### Recursos
 
 [Informe de prueba de batería](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)

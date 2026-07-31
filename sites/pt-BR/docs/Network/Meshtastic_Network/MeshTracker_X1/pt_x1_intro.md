@@ -2,7 +2,7 @@
 description: SenseCAP MeshTracker X1 para Meshtastic Introdução. Este wiki apresentará os recursos, especificações, visão geral de hardware, botão, LED e lista de pinos.
 title: Introdução ao SenseCAP MeshTracker X1
 keywords:
-  - Tracker
+  - Rastreador
   - Meshtastic
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png
 sku: 100087698
@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla. Desenvolvido para comunicação confiável fora da rede, o MeshTracker X1 é um rastreador GPS [Meshtastic®](https://meshtastic.org/) com classificação IP66 que suporta frequências de 863–928 MHz. Alimentado pelo mais recente chip LoRa Semtech LR2021, ele possui conectividade USB-C, até 5 dias de duração de bateria e um design compacto, pronto para uso ao ar livre.
+O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla. Desenvolvido para comunicação confiável fora da rede celular, o MeshTracker X1 é um rastreador GPS [Meshtastic®](https://meshtastic.org/) com classificação IP66 que suporta frequências de 863–928 MHz. Alimentado pelo mais recente chip LoRa Semtech LR2021, ele oferece conectividade USB-C, até 5 dias de duração de bateria e um design compacto, pronto para uso ao ar livre.
 
 ### Recursos
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -32,19 +32,19 @@ O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de b
 
 - **Um dispositivo Meshtastic que você realmente vai carregar** 
 
-O SenseCAP MeshTracker X1 é projetado para pessoas que precisam de comunicação confiável e compartilhamento de localização além das redes celulares — seja em ambientes externos, em grandes eventos ou durante situações de emergência. Com um formato verdadeiramente portátil e proteção robusta IP66, ele leva a conectividade Meshtastic para o uso diário e para o campo de verdade.
+O SenseCAP MeshTracker X1 é projetado para pessoas que precisam de comunicação confiável e compartilhamento de localização além das redes celulares — seja em ambientes externos, em grandes eventos ou durante situações de emergência. Com um formato verdadeiramente portátil e proteção robusta IP66, ele leva a conectividade Meshtastic para o uso diário e para aplicações reais em campo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **Rastreamento GPS de banda dupla ultrapréciso** 
 
-Alimentado por GNSS de banda dupla L1+L5 e um barômetro integrado, o MeshTracker X1 oferece posicionamento mais confiável e percepção de altitude do que o GPS de banda única. Ele também é o primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla.
+Alimentado por GNSS de banda dupla L1+L5 e um barômetro integrado, o MeshTracker X1 oferece posicionamento mais confiável e melhor percepção de altitude do que o GPS de banda única. Ele também é o primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **Conectividade LoRa de próxima geração (LR2021)** 
 
-Alimentado pelo Semtech LR2021, o MeshTracker X1 oferece desempenho de RF mais forte com sensibilidade de até -141 dBm e taxas de dados FLRC de 2,6 Mbps para comunicação em malha mais rápida e confiável, criando uma base para recursos futuros como transmissão de voz e imagem.
+Alimentado pelo Semtech LR2021, o MeshTracker X1 oferece desempenho de RF mais forte com sensibilidade de até -141 dBm e taxas de dados FLRC de 2,6 Mbps para comunicação em malha mais rápida e confiável, criando a base para recursos futuros como transmissão de voz e imagem.
 
 - **Comunicação confiável de longo alcance** 
 
@@ -71,7 +71,6 @@ Construído com proteção IP66 contra poeira e água, garantindo desempenho con
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **Conectividade USB-C** 
-https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
 Interface USB-C padrão para carregamento, atualizações de firmware e depuração, projetada para uso robusto ao ar livre e conveniência no dia a dia.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
@@ -85,18 +84,20 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
 
 **Geral**
 
-|**Protocolo de rede**|LoRa (863-928 MHz), Bluetooth (v5.0)|
+|Item|Parâmetro|
 | :- | :- |
+|**Controlador Principal**|Nordic nRF52840|
+|**Sem fio**|Bluetooth (v5.0)|
+|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>Potência máxima de TX: 22dBm|
 |**LED**|1\* RGB|
-|**Buzzer**|1\* buzzer para indicar o status|
+|**Buzzer**|1\* buzzer para indicar status|
 |**Botão**|1\* botão para operar|
 |**Motor**|1\* DRV2605L|
-| **Sensor de pressão de ar**<br/>A temperatura pode ser lida pelo sensor de pressão de ar| Faixa de pressão de ar: 300–1100 hPa<br/>Precisão da pressão de ar: ±0,03 hPa<br/>Resolução da pressão de ar: 0,06 Pa<br/>Faixa de temperatura: -40-85°C<br/>Precisão da temperatura: ± 1°C<br/>Resolução da temperatura: 0,0006 °C |
-| **Sensor de 6 eixos** |Versão futura|
-| **Magnetômetro de 3 eixos** | Versão futura |
+| **Pressão do ar**|Faixa: 300–1100 hPa<br/>Precisão: ±0,03 hPa<br/>Resolução: 0,06 Pa|
+| **Temperatura**<br/>(A temperatura é lida a partir do barômetro)| Faixa:-40-85°C<br/>Precisão: ± 1°C<br/>Resolução: 0,0006 °C |
 |**Antena**|Interna (GNSS/LoRa/Bluetooth)|
 |**Distância de comunicação**|até 8 km|
-|**Classificação IP**|IP66|
+|**Grau de proteção IP**|IP66|
 |**Dimensões**|90\*57\*8 mm|
 |**Peso do dispositivo**|45g|
 |**Temperatura de operação**|-20 a 60℃|
@@ -107,11 +108,13 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
 |Item|Parâmetro|
 | :- | :- |
 |**Capacidade da bateria**|Bateria de lítio recarregável, 1100mAh|
-|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente|
-|<p>**Cabo de carregamento**</p><p>**(Adaptador não incluído)**</p>|Cabo de carregamento USB Type-C, 20 cm|
+|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente em uplink|
+|**Protocolo de carregamento**|USB Type-C|
 |**Entrada de energia do dispositivo**|5V, 0,55A|
 |**Entrada de energia da bateria**|4,4V, 0,22A|
 |**Limite de temperatura de carregamento**|5 a +45℃|
+
+O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a serem lançados no futuro serão equipados com sensores adicionais (sensores de 3 eixos, magnetômetros de seis eixos etc.).
 
 ### Lista de pinos
 
@@ -164,7 +167,7 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="2">Sensor de pressão de ar</td>
+    <td rowspan="2">Sensor de pressão do ar</td>
     <td>SCL</td>
     <td>P1.14</td>
     <td rowspan="2">IIC</td>
@@ -304,7 +307,7 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
 |Ação do botão|Descrição|Buzzer|
 |- |- |- |
 |Pressionar uma vez|Ligar|Melodia ascendente|
-|Pressionar duas vezes|Atualizar informações do nó/localização|-|
+|Pressionar duas vezes|Atualizar informações de nó/localização|-|
 |Pressionar três vezes|Ligar/desligar o GPS|-|
 |Quatro cliques|Silenciar/reativar temporariamente|-|
 |Pressionar e segurar por 5s|Desligar|Melodia descendente|
@@ -334,7 +337,7 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
     <td>Totalmente carregado</td>
   </tr>
   <tr>
-    <td>🔴Vermelho</td>
+    <td>🔴vermelho</td>
     <td>Piscando</td>
     <td>Baixa energia</td>
   </tr>
@@ -349,7 +352,7 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagramBu.png" alt="pir" width={900} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram729.png" alt="pir" width={900} height="auto" /></p>
 
 ### Recurso
 
