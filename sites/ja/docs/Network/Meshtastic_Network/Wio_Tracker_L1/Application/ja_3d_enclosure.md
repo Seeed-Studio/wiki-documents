@@ -1,5 +1,5 @@
 ---
-description: Wio Tracker L1 シリーズ向けコミュニティ製 3D エンクロージャおよびデバイス設計プロジェクト
+description: Wio Tracker L1 シリーズ向けコミュニティ製 3D エンクロージャおよび筐体デザインプロジェクト
 title: 3D エンクロージャ
 keywords:
   - Meshtastic
@@ -14,13 +14,13 @@ last_update:
   date: 06/02/2026
   author: Seeed Studio
 createdAt: '2026-06-02'
-updatedAt: '2026-06-03'
+updatedAt: '2026-06-02'
 url: https://wiki.seeedstudio.com/ja/wio_tracker_l1_3d_enclosure/
 ---
 
 # 3D エンクロージャ
 
-このページでは、Wio Tracker L1 シリーズをベースにしたコミュニティ製 3D エンクロージャおよびデバイス設計プロジェクトをまとめています。
+このページでは、Wio Tracker L1 シリーズをベースにしたコミュニティ製 3D エンクロージャおよび筐体デザインプロジェクトをまとめています。
 
 ## L1
 
@@ -130,6 +130,29 @@ Wio Tracker L1 を中心に構築された自立型オフグリッド Meshtastic
 
 <p style={{textAlign: 'center', fontSize: '0.85rem'}}><strong>出典：</strong> <a href="https://www.hackster.io/pasquale887/skysense-the-perfect-flying-laboratory-bb39db" target="_blank" rel="noopener noreferrer">SkySense - The Perfect Flying Laboratory</a></p>
 
-Wio Tracker L1 を用いて構築された気球搭載型フライングラボで、環境センシング、GPS トラッキング、画像取得、LoRa テレメトリを組み合わせ、低コストな空中実験を可能にします。
+Wio Tracker L1 を用いて構築された気球搭載型フライングラボで、環境センシング、GPS トラッキング、画像取得、LoRa テレメトリを組み合わせ、低コストな空中実験を実現します。
 
 **製作者：** [pasquale887](https://www.hackster.io/pasquale887)
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

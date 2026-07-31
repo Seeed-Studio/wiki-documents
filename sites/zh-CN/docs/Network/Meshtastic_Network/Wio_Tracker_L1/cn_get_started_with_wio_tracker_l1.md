@@ -1,6 +1,6 @@
 ---
-description: 开始使用 Wio Tracker L1 系列
-title: 开始使用 Wio Tracker L1
+description: Wio Tracker L1 系列快速上手
+title: Wio Tracker L1 快速上手
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::tip
-Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L1 Pro 的，但它同样适用于 L1 系列中的所有其他产品。
+Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L1 Pro 的，但同样适用于 L1 系列中的所有其他产品。
 :::
 
 ## 视频教程
@@ -49,7 +49,7 @@ Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L
 
 #### 四向摇杆
 
-L1 E-Ink 固件的`最新 Alpha 固件`目前支持四向摇杆。如果你想使用摇杆，请[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#第-2-部分-固件烧录)升级固件。 
+L1 E-Ink 固件的`最新 Alpha 固件`目前支持四向摇杆。如果你想使用摇杆，请[点击此处](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#第-2-部分-固件烧录)升级固件。
 
 #### 菜单栏
 
@@ -62,9 +62,9 @@ L1 E-Ink 固件的`最新 Alpha 固件`目前支持四向摇杆。如果你想�
 如果你想打开或关闭蜂鸣器，请先将`固件更新`到`2.7`版本。因为只有 2.7 版本固件才有菜单栏。
 
 - 打开蜂鸣器
-Setting（齿轮形状图标） -> Notification -> Buzzer Action -> Disable
+Setting（齿轮形状图标）-> Notification -> Buzzer Action -> Disable
 - 关闭蜂鸣器
-Setting（齿轮形状图标） -> Notification -> Buzzer Action -> All enabled
+Setting（齿轮形状图标）-> Notification -> Buzzer Action -> All enabled
 
 <div class="table-center">
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -88,7 +88,7 @@ Setting（齿轮形状图标） -> Notification -> Buzzer Action -> All enabled
 当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
 
 1. 尚未完成消息传输过程
-2. 正在配置中
+2. 正在被配置
 :::
 
 ### 烧录固件
@@ -99,23 +99,23 @@ Setting（齿轮形状图标） -> Notification -> Buzzer Action -> All enabled
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
-对于 L1、L1 Lite 和 L1 Pro，选择目标设备为 `Seeed Wio Tracker L1` 并选择最新固件，然后点击 `Flash`。
+对于 L1、L1 Lite 和 L1 Pro，将目标设备选择为 `Seeed Wio Tracker L1` 并选择最新固件，然后点击 `Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
-对于 L1 E-Ink，选择目标设备为 `Seeed Wio Tracker L1 E-Ink` 并选择最新固件，然后点击 `Flash`。
+对于 L1 E-Ink，将目标设备选择为 `Seeed Wio Tracker L1 E-Ink` 并选择最新固件，然后点击 `Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%201.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
-打开设备，点击 `Enter DFU Mode`，会出现一个名为 `Tracker L1` 的串口，点击并连接它，此时应显示一个名为 `Tracker L1` 的驱动器。
+打开设备，点击 `Enter DFU Mode`，会出现一个名为 `Tracker L1` 的串口，点击并连接它，此时应会显示一个名为 `Tracker L1` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件拖到 DFU 驱动器中。文件下载完成并且设备重启后，固件就会被烧录。
+将 UF2 文件拖入 DFU 驱动器。文件下载完成并且设备重启后，固件就会被烧录。
 
 ### 启动设备
 
@@ -138,7 +138,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- 在显示屏上输入代码，然后点击 `OK` 连接设备。
+- 在显示屏上输入验证码，然后点击 `OK` 连接设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -150,7 +150,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- 输入代码（默认代码为 `123456`），然后点击 `OK` 连接设备。
+- 输入验证码（默认验证码为 `123456`），然后点击 `OK` 连接设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -185,7 +185,7 @@ import TabItem from '@theme/TabItem';
 更多完整列表请参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当你的设备达到该限制时，将会停止发射，直到再次被允许。
 :::
 
 现在你已经在设备上设置了 LoRa 区域，可以继续配置任意[LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/)以满足你的需求。
@@ -198,12 +198,12 @@ import TabItem from '@theme/TabItem';
 
   步骤 1：打开网站
 
-[点击这里](https://client.meshtastic.org/messages/broadcast/0)进入网站。
+[点击此处](https://client.meshtastic.org/messages/broadcast/0)进入网站。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   步骤 2：添加新设备
 
-    点击 “+ New Connection”。 
+    点击 "+ New Connection"。
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
@@ -216,7 +216,7 @@ import TabItem from '@theme/TabItem';
 
  方法 2：通过串口
 
-    选择串口方式。打开设备管理器查看设备连接到哪个端口。在弹出的窗口中选择该端口。
+    选择串口方式。打开设备管理器查看设备连接的是哪个端口。在弹出的窗口中选择该端口。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
     你的设备会显示在列表中。点击进行连接。如果连接成功，你可以直接在网页上看到设备状态。
@@ -229,7 +229,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-对于 IOS，请打开 `Accurate Location`。否则，定位可能会有偏差。
+对于 IOS，请打开 `Accurate Location`。否则，定位可能会出现偏差。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -310,7 +310,7 @@ import TabItem from '@theme/TabItem';
 ### 虚拟键盘
 
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
-2.7 版本固件现在支持虚拟键盘！你可以直接在设备上输入消息，与其他设备进行通信。请按照 [Flash Firmware Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 更新固件。
+2.7 版本固件现在已经支持虚拟键盘！你可以直接在设备上输入消息，与其他设备进行通信。请按照 [Flash Firmware Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-固件烧录) 更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ### 配置铃声
@@ -338,7 +338,7 @@ import TabItem from '@theme/TabItem';
 ```
 </TabItem>
 
-<TabItem value="14" label="超级马里奥主题曲（短版）">
+<TabItem value="14" label="超级马里奥主题（短版）">
 
 ```plain
 24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
@@ -359,7 +359,7 @@ import TabItem from '@theme/TabItem';
 ```
 </TabItem>
 
-<TabItem value="17" label="马里奥能量提升">
+<TabItem value="17" label="马里奥加力量">
 
 ```plain
 powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
@@ -377,7 +377,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ## 常见问题（FAQ）
 
-### 设备变砖 & Bootloader 安装
+### 设备变砖与 Bootloader 安装
 
 **问题描述：**
 
@@ -403,7 +403,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
   完成以上步骤后，你可以按照这个[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)来烧录应用固件。你可能需要[手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
-### 无法进入 DFU & 手动进入 DFU 模式
+### 无法进入 DFU 及手动进入 DFU 模式
 
 将设备连接到电脑，双击 `Reset` 按钮。黄色 LED 将保持常亮，并且在电脑上会出现一个名为 `Tracker L1` 的新 USB 驱动器。
 
@@ -413,7 +413,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### 无法在主信道上通信
 
-如果设备无法与附近节点通信或发送消息，首先检查 LoRa 区域和调制解调器预设是否与周围节点匹配。你还应该检查默认的 **PSK** 是否被更改。在主信道上使用不同的 PSK 会导致设备无法与该信道上的其他节点通信。
+如果设备无法与附近节点通信或发送消息，首先检查 LoRa 区域和调制解调器预设是否与周围节点一致。你还应该检查默认的 **PSK** 是否被更改。在主信道上使用不同的 PSK 会导致设备无法与该信道上的其他节点通信。
 
 发现此问题的最简单方法是通过手机应用。打开 App，连接到目标设备，然后导航到 `Settings` -> `Channels`。选择主信道并检查 **PSK** 值。如果它与周围节点不同，请将其更新为相同的 PSK，并保存信道设置。
 
@@ -433,7 +433,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 **解决方案**
 
-如果你不确定修改了哪些设置，请按照 [Factory Reset](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#factory-reset) 指南将设备恢复为默认设置。如果只更改了 PSK，请将其重新设置为 `AQ==`。
+如果你不确定修改了哪些设置，请按照 [Factory Reset](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#factory-reset) 指南将设备恢复到默认设置。如果只更改了 PSK，请将其重新设置为 `AQ==`。
 
 ### 设备自动关机
 
@@ -446,13 +446,13 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 #### 故障排查
 
-[click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
+[click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-固件烧录) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过两种方法来进行恢复出厂设置。
+如果你想恢复到默认设置，可以执行出厂重置。你可以通过两种方法进行出厂重置。
 
-- [click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
+- [click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-固件烧录) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
 
 - 在应用中点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
@@ -469,13 +469,13 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 #### 交换用户信息
 
-每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换各自的节点信息，才能相互通信。如果你无法与列表中的另一个节点收发私信，可以在应用中手动触发它们交换信息。
+每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换各自的节点信息，才能相互通信。如果你无法与列表中的某个节点收发私信，可以在应用中手动提示它们交换信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="设置中的设备条目" width={300} height="auto" /></p>
 
 #### 重新生成私钥
 
-两个节点需要彼此知道对方的私钥，才能相互通信。如果某个节点在私信传输中持续失败，请尝试为其重新生成私钥。
+两个节点需要彼此知道对方的私钥，才能相互通信。如果某个节点在私信传输中总是失败，请尝试为其重新生成私钥。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="设置中的设备条目" width={600} height="auto" /></p>
 
@@ -491,7 +491,7 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的区域使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰较小的区域使用设备。
 
 ### 兼容天线
 
@@ -509,9 +509,26 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 - [CE 认证](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
 - [功耗测试与电池寿命计算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 
-<JetsonLeadQuote
-  buttonText="Request Quote of Customization"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="Request Quote for XIAO"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
+
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

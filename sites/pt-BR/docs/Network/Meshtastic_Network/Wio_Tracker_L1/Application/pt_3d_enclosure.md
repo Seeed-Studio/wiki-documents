@@ -14,13 +14,13 @@ last_update:
   date: 06/02/2026
   author: Seeed Studio
 createdAt: '2026-06-02'
-updatedAt: '2026-06-03'
+updatedAt: '2026-06-02'
 url: https://wiki.seeedstudio.com/pt-br/wio_tracker_l1_3d_enclosure/
 ---
 
 # Gabinete 3D
 
-Esta página reúne projetos comunitários de gabinetes 3D e design de dispositivos baseados na série Wio Tracker L1.
+Esta página reúne projetos comunitários de gabinetes 3D e designs de dispositivos baseados na série Wio Tracker L1.
 
 ## L1
 
@@ -54,7 +54,7 @@ Um comunicador Meshtastic dobrável baseado no Wio Tracker L1, com teclado físi
 
 <p style={{textAlign: 'center', fontSize: '0.85rem'}}><strong>Fonte:</strong> <a href="https://www.hackster.io/Milliam/lorider-the-meshatastic-0cffeb" target="_blank" rel="noopener noreferrer">LoRider- the Meshatastic</a></p>
 
-Um rastreador Meshtastic compacto montado em bicicleta, construído com Wio Tracker L1, projetado para rastreamento por GPS, alertas antifurto, função de farol dianteiro e uso discreto no dia a dia.
+Um rastreador Meshtastic compacto montado em bicicleta, construído com Wio Tracker L1, projetado para rastreamento GPS, alertas antifurto, função de farol dianteiro e uso discreto no dia a dia.
 
 **Quem fez:** [Miriam Choi](https://www.hackster.io/Milliam)
 
@@ -74,7 +74,7 @@ Um gateway Meshtastic híbrido baseado no Wio Tracker L1, projetado para coletar
 
 <p style={{textAlign: 'center', fontSize: '0.85rem'}}><strong>Fonte:</strong> <a href="https://www.hackster.io/jrbanks777/seeedpod-ultimate-77168f" target="_blank" rel="noopener noreferrer">SEEEDpod Ultimate</a></p>
 
-Um ecossistema modular de nós Meshtastic construído em torno do Wio Tracker L1, projetado para implantação off-grid, portabilidade urbana e uso diário como backup com opções de energia autossustentáveis.
+Um ecossistema modular de nós Meshtastic construído em torno do Wio Tracker L1, projetado para implantação off-grid, portabilidade urbana e uso diário como backup, com opções de energia autossustentáveis.
 
 **Quem fez:** [Jack](https://www.hackster.io/jrbanks777)
 
@@ -84,13 +84,13 @@ Um ecossistema modular de nós Meshtastic construído em torno do Wio Tracker L1
 
 <p style={{textAlign: 'center', fontSize: '0.85rem'}}><strong>Fonte:</strong> <a href="https://www.hackster.io/fernando-doutel/dual-wio-tracker-l1-portable-solar-station-e3fcc1" target="_blank" rel="noopener noreferrer">Dual Solar Charging Station for Wio Tracker L1</a></p>
 
-Uma estação solar portátil robusta projetada para carregar dois nós Wio Tracker L1 em qualquer lugar, permitindo também a integração de sensores Grove para monitoramento off-grid e comunicação de emergência.
+Uma estação solar portátil robusta projetada para carregar dois nós Wio Tracker L1 em qualquer lugar, além de permitir a integração de sensores Grove para monitoramento off-grid e comunicação de emergência.
 
 **Quem fez:** [Fernando Doutel](https://www.hackster.io/fernando-doutel)
 
 ## E-ink
 
-### Meshy: Um Case 3D Robusto para Wio Tracker L1 E-ink
+### Meshy: Um Case Robusto Impresso em 3D para Wio Tracker L1 E-ink
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki%20images/3d%20Enclosure/6.23dimage7.png" alt="Meshy 3D-printed case for Wio Tracker L1 E-ink" width={800} height="auto" /></p>
 
@@ -108,7 +108,7 @@ Este é um case protetor impresso em 3D para o Wio Tracker L1 E-ink, projetado p
 
 <p style={{textAlign: 'center', fontSize: '0.85rem'}}><strong>Fonte:</strong> <a href="https://www.hackster.io/alleycat/acos-meshpack-pro-l1-for-meshtastic-1ec031" target="_blank" rel="noopener noreferrer">[ACOS] MeshPack Pro L1 for Meshtastic</a></p>
 
-Um gabinete modular e robusto impresso em 3D para o Wio Tracker L1, projetado para transformar a placa em um dispositivo Meshtastic portátil mais durável e personalizável.
+Um gabinete robusto e modular impresso em 3D para o Wio Tracker L1, projetado para transformar a placa em um dispositivo Meshtastic portátil mais durável e personalizável.
 
 **Quem fez:** [Alley Cat](https://www.hackster.io/alleycat)
 
@@ -122,7 +122,7 @@ Um comunicador Meshtastic off-grid autônomo construído em torno do Wio Tracker
 
 **Quem fez:** [Bastiaan Slee](https://www.hackster.io/bastiaan-slee)
 
-## Lite
+## Suporte Técnico e Discussão de Produto
 
 ### SkySense Flying Lab
 
@@ -130,6 +130,29 @@ Um comunicador Meshtastic off-grid autônomo construído em torno do Wio Tracker
 
 <p style={{textAlign: 'center', fontSize: '0.85rem'}}><strong>Fonte:</strong> <a href="https://www.hackster.io/pasquale887/skysense-the-perfect-flying-laboratory-bb39db" target="_blank" rel="noopener noreferrer">SkySense - The Perfect Flying Laboratory</a></p>
 
-Um laboratório voador transportado por balão construído com Wio Tracker L1, combinando sensoriamento ambiental, rastreamento por GPS, captura de imagens e telemetria LoRa para experimentos aéreos de baixo custo.
+Um laboratório voador transportado por balão construído com Wio Tracker L1, combinando sensoriamento ambiental, rastreamento GPS, captura de imagens e telemetria LoRa para experimentos aéreos de baixo custo.
 
 **Quem fez:** [pasquale887](https://www.hackster.io/pasquale887)
+
+## Suporte Técnico e Discussão de Produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>
