@@ -8,14 +8,14 @@ keywords:
   - edge AI
   - large language model
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/-/1-e26020301-recomputer-jetson-agx-orin_-developer-kit-gmsl-bundle.jpg
-slug: /jetpack72_deep_dive
+slug: /jetpack72_deep_dive_bk
 sku: E26020301
 last_update:
   date: 06/11/2026
   author: Dayu
 createdAt: '2026-06-11'
 updatedAt: '2026-06-12'
-url: https://wiki.seeedstudio.com/jetpack72_deep_dive/
+url: https://wiki.seeedstudio.com/jetpack72_deep_dive_bk/
 ---
 
 # JetPack 7.2 Deep Dive: What Changes for Jetson AGX Orin Inference?

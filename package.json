@@ -7,7 +7,7 @@
     "setup:links": "node scripts/setup-links.js",
     "remove:links": "node scripts/remove-links.js",
     "start": "yarn start:all",
-    "start:en": "yarn setup:links && yarn --cwd sites/en start --port 3000",
+    "start:en": "yarn setup:links && cross-env CHOKIDAR_USEPOLLING=true WATCHPACK_POLLING=true yarn --cwd sites/en start --port 3000",
     "start:cn": "yarn setup:links && yarn --cwd sites/zh-CN start --port 3001",
     "start:ja": "yarn setup:links && yarn --cwd sites/ja start --port 3002",
     "start:es": "yarn setup:links && yarn --cwd sites/es start --port 3003",
