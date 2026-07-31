@@ -1,6 +1,6 @@
 ---
-description: XIAO nRF52840 & Wio-SX1262 Kit をベースにした Meshtastic
-title: XIAO nRF52840 & Wio-SX1262 Kit ではじめよう
+description: XIAO nRF52840 & Wio-SX1262 Kit を用いた Meshtastic
+title: XIAO nRF52840 & Wio-SX1262 Kit で始める
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-kit.webp
 slug: /xiao_nrf52840&_wio_SX1262_kit_for_meshtastic
 sidebar_position: 2
@@ -9,7 +9,7 @@ last_update:
   date: 12/11/2025
   author: Michelle Huang
 createdAt: '2025-03-13'
-updatedAt: '2026-06-12'
+updatedAt: '2026-06-09'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf52840&_wio_SX1262_kit_for_meshtastic/
 ---
 
@@ -39,11 +39,11 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 
 | **製品** | **仕様** |  
 | :- | :- |  
-| [XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html) | **MCU:** Nordic nRF52840  <br /> **コア:** ARM® Cortex®-M4（FPU 搭載）、最大 64 MHz |  
-| [Wio-SX1262](https://www.seeedstudio.com/Wio-SX1262-for-XIAO-p-6379.html) | **LoRa モジュール:** Semtech SX1262  <br /> **周波数:** 862&#126;930MHz |  
+| [XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html) | **MCU：** Nordic nRF52840  <br /> **コア：** ARM® Cortex®-M4（FPU 搭載）、最大 64 MHz |  
+| [Wio-SX1262](https://www.seeedstudio.com/Wio-SX1262-for-XIAO-p-6379.html) | **LoRa モジュール：** Semtech SX1262  <br /> **周波数：** 862&#126;930MHz |  
 | **無線** | Bluetooth 5.0 / NFC |  
-| **インターフェース** | **XIAO nRF52840:**  <br /> - 1x UART、1x I²C、1x SPI（SX1262 に接続）  <br /> - 1x NFC、1x SWD、11x GPIO（PWM）  <br /> - 6x ADC  <br /> **Wio-SX1262:**  <br />  - 1x SPI（XIAO nRF52840 に接続） |  
-| **電源** | **入力電圧:**  <br /> - Type-C: 5V  <br /> - バッテリー（BAT）: 4.2V  <br /> **バッテリー充電電流:** 50mA / 100mA  <br /> **待機時消費電力:** &lt;5µA |  
+| **インターフェース** | **XIAO nRF52840：**  <br /> - 1x UART、1x I²C、1x SPI（SX1262 に接続）  <br /> - 1x NFC、1x SWD、11x GPIO（PWM）  <br /> - 6x ADC  <br /> **Wio-SX1262：**  <br />  - 1x SPI（XIAO nRF52840 に接続） |  
+| **電源** | **入力電圧：**  <br /> - Type-C：5V  <br /> - バッテリー（BAT）：4.2V  <br /> **バッテリー充電電流：** 50mA / 100mA  <br /> **待機時消費電力：** &lt;5µA |  
 | **動作温度** | -40°C &#126; 65°C |  
 | **寸法** | 21 x 17.8mm |  
 
@@ -63,7 +63,7 @@ XIAO nRF52840 & Wio-SX1262 Kit にはあらかじめ Meshtastic ファームウ�
 ファームウェアの更新には `don't use NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
 :::
 
-**動画による手順説明：**
+**動画による手順：**
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -77,7 +77,7 @@ XIAO nRF52840 & Wio-SX1262 Kit にはあらかじめ Meshtastic ファームウ�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/filw-flash.png" alt="pir" width={800} height="auto" /></p>
 
-`Enter DFU Mode` をクリックすると、`XIAO-xxx` という名前のシリアルポートが表示されます。それをクリックして接続すると、`XIAO-xxx` という名前のドライブが表示されるはずです。
+`Enter DFU Mode` をクリックすると、`XIAO-xxx` という名前のシリアルポートが表示されるので、それをクリックして接続します。`XIAO-xxx` という名前のドライブが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -96,7 +96,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOS アプリ">
+<TabItem value="ios" label="iOS アプリ">
 
 - Bluetooth パネルで対象デバイスを選択します。
 
@@ -123,10 +123,10 @@ import TabItem from '@theme/TabItem';
 
 ### パラメータを設定する
 
-メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御するもので、お住まいの地域に合わせて設定してください。
+メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯を制御するもので、お住まいの地域に合わせて設定してください。
 
 <Tabs>
-<TabItem value="ios" label="IOS アプリ">
+<TabItem value="ios" label="iOS アプリ">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
@@ -156,20 +156,20 @@ import TabItem from '@theme/TabItem';
 
 #### GNSS センサー設定
 
-[L76K GNSS Module](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) を接続してトラッカーを作成します。
+[L76K GNSS Module](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) を接続して、トラッカーを作成します。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image_102010710.gif" alt="pir" width={600} height="auto" /></p>
 
 
 ### 互換性のある SX-1262
-[Click here](https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html) から、単体販売されている SX1262 を入手できます。
+[別売りの SX1262 を入手するにはこちらをクリック](https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html)してください。
 
 ## リソース
 ### ファイルリソース
 
 - **[PDF]** [Xiao リファレンスデザイン](https://files.seeedstudio.com/wiki/XIAO/XIAO-Reference-Design.pdf)
-- **[PDF]** [Seeed Studio XlAO nRF52840 BLE 通信距離テストレポート](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf)
-- **[ZIP]** [Seeed Studio XlAO nRF52840 CE |FCC|MIC](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-CE-FCC-MIC.zip)
+- **[PDF]** [Seeed Studio XIAO nRF52840 BLE 通信距離テストレポート](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf)
+- **[ZIP]** [Seeed Studio XIAO nRF52840 CE |FCC|MIC](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-CE-FCC-MIC.zip)
 - **[PDF]** [nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf)
 - **[PDF]** [Seeed Studio XIAO nRF52840 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
 - **[ZIP]** [Seeed Studio XIAO nRF52840 KiCAD ファイル](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_SCH&PCB.zip)
@@ -188,17 +188,17 @@ import TabItem from '@theme/TabItem';
 
 - **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルを提供しています。
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div>
-

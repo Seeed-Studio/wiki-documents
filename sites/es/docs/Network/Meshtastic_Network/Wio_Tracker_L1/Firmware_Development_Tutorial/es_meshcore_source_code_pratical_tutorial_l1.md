@@ -41,14 +41,14 @@ Después de la instalación, normalmente aparece un icono con forma de hormiga e
 
 ### Preparación del proyecto
 
-Abre una carpeta en la que quieras tu proyecto. Abre la carpeta en la terminal. [Haz clic aquí](https://github.com/meshcore-dev/MeshCore) para hacer git clone del proyecto.
+Abre una carpeta en la que quieras tener tu proyecto. Abre la carpeta en la terminal. [Haz clic aquí](https://github.com/meshcore-dev/MeshCore) para hacer git clone del proyecto.
 
-Abre VSCode, luego haz clic en el icono de PlatformIO, elige `select a folder`. Elige la carpeta en la que clonaste el proyecto.
+Abre VSCode, luego haz clic en el icono de PlatformIO y elige `select a folder`. Elige la carpeta donde clonaste el proyecto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/pickfolder.png" style={{width:700, height:'auto'}}/></div>
 
 
-PlatformIO instalará automáticamente las dependencias necesarias. Después de que la instalación tenga éxito, podrás ver `Project has been successfully updated`
+PlatformIO instalará automáticamente las dependencias necesarias. Después de que la instalación se complete correctamente, podrás ver `Project has been successfully updated`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/SucessfullyUpdate.png" style={{width:700, height:'auto'}}/></div>
 
@@ -64,7 +64,7 @@ Encuentra el entorno para tu placa de destino. Toma L1 Pro companion como ejempl
 
 Entonces PlatformIO preparará las dependencias necesarias para la placa.
 
-Cambia tu código. Se recomienda modificar el archivo `variant.h` para tu placa.
+Cambia tu código. Se recomienda cambiar el archivo `variant.h` para tu placa.
 
 Después de completar la codificación, ejecuta el siguiente comando para compilar el código y convertirlo en un archivo uf2.
 
@@ -73,13 +73,13 @@ pio run -e WioTrackerL1_companion_radio_ble
 pio run -e WioTrackerL1_companion_radio_ble -t create_uf2
 ```
 
-Luego haz doble clic en el botón RST para entrar en modo DFU. Arrastra el archivo uf2 al disco que aparece. El archivo uf2 debería encontrarse en `.pio\build\WioTrackerL1_companion_radio_ble`
+Luego haz doble clic en el botón RST para entrar en modo DFU. Arrastra el archivo uf2 al disco emergente. El archivo uf2 se puede encontrar en `.pio\build\WioTrackerL1_companion_radio_ble`
 
 ### Ejemplo
 
 #### Control de pantalla de usuario
 
-Este ejemplo muestra cómo modificar la visualización de la interfaz de usuario de L1 Pro. Elimina la visualización de mensajes en la pantalla y muestra "Test" constantemente. 
+Este ejemplo muestra cómo modificar la pantalla de la interfaz de usuario de L1 Pro. Elimina el mensaje que se muestra en la pantalla y muestra "Test" constantemente. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Displayy.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -103,7 +103,7 @@ Compílalo y flashea el archivo uf2 en tu L1 Pro.
 - Usa el rastreador de Issues
 - Usa un título claro (por ejemplo, "Crash when calling begin() with invalid pin")
 - Describe los pasos exactos para reproducirlo
-- Incluye tu placa, versión del IDE, versión de la librería y fragmento de código relevante
+- Incluye tu placa, versión del IDE, versión de la librería y el fragmento de código relevante
 - Adjunta un sketch de ejemplo mínimo y completo si es posible
 
 **2. Sugerir mejoras / nuevas funciones**
@@ -112,20 +112,20 @@ Compílalo y flashea el archivo uf2 en tu L1 Pro.
 - Describe tu API / comportamiento ideal (los ejemplos de código son muy útiles)
 **3. Enviar cambios de código (Pull Requests)**
 ### Pequeñas correcciones 
-(erratas, comentarios, ejemplos, pequeñas correcciones de errores)
+(errores tipográficos, comentarios, ejemplos, pequeñas correcciones de bugs)
 → Simplemente abre un pull request — no es necesario un issue previo
 
-### Cambios mayores / nuevas funciones
+### Cambios más grandes / nuevas funciones
 1. Abre primero un issue para discutir la idea
 2. Obtén una aprobación general del/los mantenedor(es)
-3. Haz fork del repositorio desde la rama 'dev' y crea tu rama (fix/xxx, feature/yyy, docs/whatever)
+3. Haz fork del repositorio desde la rama 'dev' y crea tu rama (fix/xxx, feature/yyy, docs/loquesea)
 4. Realiza tus cambios
 5. Actualiza o añade ejemplos cuando sea apropiado
 6. Añade/actualiza comentarios en el código
 7. Envía el pull request
 
 ### Directrices para Pull Requests
-- Una función / corrección = un pull request (los PR pequeños son más fáciles y rápidos de revisar)
+- Una función / corrección = un pull request (los PR más pequeños son más fáciles y rápidos de revisar)
 - Usa mensajes de commit descriptivos
   Bueno: Fix I2C timeout handling on ESP32
   Malo: update
@@ -133,11 +133,26 @@ Compílalo y flashea el archivo uf2 en tu L1 Pro.
 - Si cambias la API pública, actualiza README.md y library.properties
 - Las nuevas funciones deben incluir un sketch de ejemplo en examples/
 ### Estilo de código
-Por favor sigue el estilo C++ existente (según el .clang-format)
+Por favor, sigue el estilo C++ existente (según .clang-format)
 
 - Sangría de 2 espacios (sin tabs)
 - camelCase para funciones y variables
 - UpperCamelCase / PascalCase para nombres de clases
 - Constantes #define en MAYÚSCULAS
 - Mantén las líneas < ~100 caracteres cuando sea razonable
-(Pero la consistencia con el código existente es más importante que las reglas estrictas)
+(Pero la coherencia con el código existente es más importante que las reglas estrictas)
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

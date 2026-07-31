@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 
 ## Pré-requisitos
 
-### Ferramenta Necessária
+### Ferramenta necessária
 
 Antes de começar, prepare as seguintes ferramentas:
 
@@ -29,41 +29,41 @@ Antes de começar, prepare as seguintes ferramentas:
 2. [Python 3](https://www.python.org/downloads/)
 3. [VS Code](https://code.visualstudio.com/)
 
-### Instalar o PlatformIO
+### Instalar PlatformIO
 
 Pesquise por `PlatformIO` no marketplace de Extensões do VS Code e instale-o.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image7.png)
 
-Após a instalação, um ícone em forma de formiga geralmente aparece na barra de ferramentas à esquerda.
+Após a instalação, normalmente um ícone em forma de formiga aparece na barra de ferramentas à esquerda.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image8.png)
 
-### Preparação do Projeto
+### Preparação do projeto
 
-Abra uma pasta onde você quer colocar seu projeto. Abra a pasta no terminal. [Clique aqui](https://github.com/meshcore-dev/MeshCore) para dar git clone no projeto.
+Abra uma pasta na qual você deseja ter o seu projeto. Abra a pasta no terminal. [Clique aqui](https://github.com/meshcore-dev/MeshCore) para clonar o projeto com git.
 
-Abra o VSCode, depois clique no ícone do PlatformIO, escolha `select a folder`. Escolha a pasta na qual você fez o clone do projeto.
+Abra o VSCode, clique no ícone do PlatformIO e escolha `select a folder`. Escolha a pasta em que você clonou o projeto.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/pickfolder.png)
 
-O PlatformIO instalará automaticamente as dependências necessárias. Após a instalação bem-sucedida, você verá `Project has been successfully updated`
+O PlatformIO instalará automaticamente as dependências necessárias. Após a instalação ser concluída com sucesso, você verá `Project has been successfully updated`
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/SucessfullyUpdate.png)
 
-## Desenvolvimento do Firmware
+## Desenvolvimento de Firmware
 
-### Tutorial de Desenvolvimento
+### Tutorial de desenvolvimento
 
-Encontre o ambiente para sua placa de destino. Tome o repetidor de nó solar como exemplo:
+Encontre o ambiente para a sua placa de destino. Tome o repetidor de nó solar como exemplo:
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/BoardSelection.png)
 
-Então o PlatformIO preparará as dependências necessárias para a placa.
+Então o PlatformIO irá preparar as dependências necessárias para a placa.
 
-Altere seu código. Recomenda-se alterar o arquivo `variant.h` da sua placa.
+Altere o seu código. Recomenda-se alterar o arquivo `variant.h` da sua placa.
 
-Depois de completar a codificação, execute o comando a seguir para compilar o código e convertê-lo em arquivo uf2.
+Após concluir a codificação, execute o seguinte comando para compilar o código e convertê-lo em um arquivo uf2.
 
 ``` bash
 pio run -e SenseCap_Solar_repeater
@@ -74,7 +74,7 @@ Em seguida, clique duas vezes no botão RST para entrar no modo DFU. Arraste o a
 
 ### Exemplo
 
-#### Controle da Luz do Usuário
+#### Controle da luz do usuário
 
 Este exemplo mostra como escrever um loop de piscar para a luz do usuário. Copie o código a seguir para `/examples/simple_repeater/main.cpp`
 
@@ -105,49 +105,64 @@ e escreva o loop:
 
 Compile-o e grave o arquivo uf2 no seu nó solar.
 
-## (Avançado) Antes de Enviar PR
+## (Avançado) Envio de PR
 
 Obrigado por considerar contribuir para o projeto MeshCore! Como você pode contribuir?
-**1. Reportando Bugs**
+**1. Reportar bugs**
 
 - Use o rastreador de Issues
 - Use um título claro (por exemplo, "Crash when calling begin() with invalid pin")
 - Descreva exatamente os passos para reproduzir
 - Inclua sua placa, versão da IDE, versão da biblioteca e trecho de código relevante
-- Anexe um exemplo mínimo completo, se possível
+- Anexe um sketch de exemplo mínimo e completo, se possível
 
-**2. Sugerindo Melhorias / Novos Recursos**
+**2. Sugerir melhorias / novos recursos**
 - Abra uma issue com o prefixo [Feature request]
 - Explique o caso de uso → que problema isso resolveria?
-- Descreva sua API / comportamento ideal (exemplos de código ajudam bastante)
-**3. Enviando Mudanças de Código (Pull Requests)**
+- Descreva sua API / comportamento ideal (exemplos de código são muito úteis)
+**3. Enviar alterações de código (Pull Requests)**
 ### Pequenas correções 
 (erros de digitação, comentários, exemplos, pequenas correções de bugs)
-→ Basta abrir um pull request — não é necessário criar issue antes
+→ Basta abrir um pull request — não é necessário abrir issue antes
 
-### Mudanças maiores / novos recursos
+### Alterações maiores / novos recursos
 1. Abra primeiro uma issue para discutir a ideia
-2. Obtenha um sinal positivo geral do(s) mantenedor(es)
-3. Faça fork do repositório a partir do branch 'dev' e crie seu branch (fix/xxx, feature/yyy, docs/whatever)
+2. Obtenha um sinal positivo aproximado (👍) dos mantenedores
+3. Faça fork do repositório a partir do branch 'dev' e crie o seu branch (fix/xxx, feature/yyy, docs/whatever)
 4. Faça suas alterações
 5. Atualize ou adicione exemplos quando apropriado
 6. Adicione/atualize comentários no código
 7. Envie o pull request
 
-### Diretrizes para Pull Request
-- Uma funcionalidade / correção = um pull request (PRs menores são mais fáceis e rápidos de revisar)
+### Diretrizes para Pull Requests
+- Um recurso / correção = um pull request (PRs menores são mais fáceis e rápidos de revisar)
 - Use mensagens de commit descritivas
   Bom: Fix I2C timeout handling on ESP32
   Ruim: update
 - Faça referência a qualquer issue relacionada (Fixes #123, Closes #89, etc.)
 - Se você alterar a API pública, atualize README.md e library.properties
-- Novos recursos devem incluir um exemplo em examples/
-### Estilo de Código
-Por favor, siga o estilo C++ existente (de acordo com o .clang-format)
+- Novos recursos devem incluir um sketch de exemplo em examples/
+### Estilo de código
+Por favor, siga o estilo C++ existente (conforme o .clang-format)
 
 - Recuo de 2 espaços (sem tabs)
 - camelCase para funções e variáveis
-- UpperCamelCase / PascalCase para nomes de classe
-- Constantes com #define em ALL_CAPS
-- Mantenha as linhas com < ~100 caracteres quando possível
+- UpperCamelCase / PascalCase para nomes de classes
+- Constantes #define em ALL_CAPS
+- Mantenha as linhas com < ~100 caracteres quando for razoável
 (Mas a consistência com o código existente é mais importante do que regras rígidas)
+
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

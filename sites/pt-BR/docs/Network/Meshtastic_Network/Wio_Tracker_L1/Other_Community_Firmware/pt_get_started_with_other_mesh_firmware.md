@@ -11,7 +11,7 @@ last_update:
   date: 3/4/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-04-20'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/pt-br/get_started_with_other_mesh_firmware/
 ---
 
@@ -29,7 +29,7 @@ url: https://wiki.seeedstudio.com/pt-br/get_started_with_other_mesh_firmware/
 
 ### Método 1 via Web Flasher
 
-Conecte seu dispositivo ao computador com um cabo USB. Certifique‑se de que o cabo suporta transmissão de dados.
+Conecte seu dispositivo ao computador com um cabo USB. Certifique-se de que o cabo suporta transmissão de dados.
 
 :::warning
 Mantenha o cabo USB conectado durante a transmissão de dados, caso contrário o dispositivo pode ser danificado.
@@ -71,7 +71,7 @@ Quando a barra de progresso estiver completamente preenchida, isso indica que a 
 
 ### Método 2 Arrastar e soltar
 
-Conecte seu dispositivo ao computador com um cabo USB. Certifique‑se de que o cabo suporta transmissão de dados.
+Conecte seu dispositivo ao computador com um cabo USB. Certifique-se de que o cabo suporta transmissão de dados.
 
 :::warning
 Mantenha o cabo USB conectado durante a transmissão de dados, caso contrário o dispositivo pode ser danificado.
@@ -127,10 +127,10 @@ O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento n�
 
 ### Ligar o dispositivo
 
-Levante o interruptor de energia para ligá‑lo.
+Empurre o interruptor de energia para cima para ligá-lo.
 
 :::tip
-Se o dispositivo não responder quando você pressionar o botão, carregue‑o primeiro. Não use carregador de carga rápida.
+Se o dispositivo não responder quando você pressionar o botão, por favor carregue-o primeiro. Não use carregador de carga rápida.
 :::
 
 ### Obter o APP
@@ -145,14 +145,14 @@ Clique em `Connect` e escolha o dispositivo de destino. O ID de dispositivo padr
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DeviceConnectAn.png" alt="pir" width={600} height="auto" /></p>
 
-Digite o código PIN exibido na tela do dispositivo e clique em `Pair` para conectar o dispositivo.
+Digite o código PIN exibido na tela do dispositivo e depois clique em `Pair` para conectar o dispositivo.
 
 :::tip
 Se a conexão falhar, abra a lista de Bluetooth do seu telefone e `forget` ou `Unpair` o dispositivo. Em seguida, tente conectar novamente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Unpair.jpg" alt="pir" width={300} height="auto" /></p>
 :::
 
-### Conectar via interface web (BLE)
+### Conectar via interface web（BLE）
 
 1. Abra o [MeshCore Web App](https://app.meshcore.nz/) e clique no ícone **Settings**.
 
@@ -162,7 +162,7 @@ Se a conexão falhar, abra a lista de Bluetooth do seu telefone e `forget` ou `U
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue2.png" alt="pir" width={600} height="auto" /></p>
 
-3. Na janela pop‑up de Bluetooth do sistema, selecione seu dispositivo (por exemplo, MeshCore-xxxxxx) e clique em **Pair**.
+3. Na janela pop-up de Bluetooth do sistema, selecione seu dispositivo (por exemplo, MeshCore-xxxxxx) e clique em **Pair**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue3.png" alt="pir" width={600} height="auto" /></p>
 
@@ -183,7 +183,7 @@ Em seguida, reinicie o dispositivo, caso contrário a configuração não terá 
 
 **Lista de regiões**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**Código da região**|**Descrição**|**Faixa de frequência (MHz)**|**Ciclo de trabalho (%)**|**Limite de potência (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Não definido|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
@@ -193,9 +193,9 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
 
 ### Configurar GPS
 
-Se você quiser usar o GPS, ative‑o.
+Se você quiser usar o GPS, ative-o.
 
-Você pode ir ao APP em `Position Settings` para ativar o GPS. Ou pode ir à página de GPS do dispositivo e pressionar o joystick de quatro direções para ligar ou desligar o GPS.
+Você pode ir ao APP `Position Settings` para ativar o GPS. Ou pode ir à página de GPS do dispositivo e pressionar o joystick de quatro direções para ligar ou desligar o GPS.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/GPSSetting.png" alt="pir" width={500} height="auto" /></p>
 
@@ -218,13 +218,13 @@ MeshCore permite que você transmita manualmente seu nome, posição e chave pú
 - **Zero hop** significa que seu anúncio é transmitido para qualquer pessoa que possa ouvi-lo, e é só isso.
 - **Flooded** significa que ele é transmitido e depois repetido por todos os repetidores que o ouvirem.
 
-Você pode enviar anúncios no APP. Você também pode enviar anúncios diretamente na página de anúncio do dispositivo.
+Você pode enviar anúncios no aplicativo. Você também pode enviar anúncios diretamente na página de anúncio do dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Advert.png" alt="pir" width={500} height="auto" /></p>
 
 ### Mensagem pública
 
-Depois de configurar o LoRa, você pode enviar mensagens no canal primário. Todas as pessoas próximas na mesma faixa de frequência irão ouvi-las.
+Depois de configurar o LoRa, você pode enviar mensagens no canal primário. Todas as pessoas próximas na mesma faixa de frequência irão ouvi-la.
 
 ### Mensagem privada
 
@@ -236,10 +236,10 @@ Os dois dispositivos só estabelecem uma conexão quando ambos tiverem recebido 
 
 **Descrição:**
 
-O dispositivo não está respondendo, nenhum LED, não é possível parear com seu aplicativo. Se você achar que o dispositivo está completamente morto após gravar seu próprio firmware, você também pode tentar reinstalar o bootloader.
+O dispositivo não está respondendo, nenhum LED, não é possível parear com o seu aplicativo. Se você achar que o dispositivo está completamente morto após gravar seu próprio firmware, você também pode tentar reinstalar o bootloader.
 
 :::danger note
-Quando estiver gravando o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
+Quando você estiver gravando o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
 :::
 
 - Passo 1: [Clique aqui para baixar o Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
@@ -271,7 +271,7 @@ Pressione o botão `User` uma vez para sair do modo DFU.
 #### Descrição
 
 - Após o dispositivo ligar, ele irá desligar ou reiniciar automaticamente depois de um tempo.
-- O log da porta serial roda por um tempo e depois para.
+- O log da porta serial executa por um tempo e depois para.
 
  Isso pode ser causado por reiniciar ou desligar manualmente e à força o dispositivo quando ele está nos seguintes estados: sem terminar o processo de transmissão de mensagens, sendo configurado......
 
@@ -290,9 +290,9 @@ Se você quiser restaurar as configurações padrão, pode fazer a restauração
 
 ### Qualidade do sinal
 
-- **SNR** reflete a qualidade do link de comunicação. Dispositivos normais geralmente operam acima de -7 dB. Um dispositivo com SNR menor que -10 dB indica baixo desempenho.
+- **SNR** reflete a qualidade do link de comunicação. Dispositivos normais geralmente operam acima de -7 dB. Um dispositivo com SNR inferior a -10 dB indica baixo desempenho.
 
-- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI menor que -115 dBm é considerado como tendo baixo desempenho.
+- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo baixo desempenho.
 
     Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
@@ -311,3 +311,18 @@ Se você precisar substituir a antena do L1 Pro, [clique aqui](https://www.seeed
 - [Certificação FCC](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [Certificação CE](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
 - [Teste de consumo de energia e cálculo da vida útil da bateria](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>
