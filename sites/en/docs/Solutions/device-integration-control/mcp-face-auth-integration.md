@@ -111,15 +111,17 @@ In the reference implementation these are `mcp/warehouse_mcp.py` (tool layer plu
 
 ### Hardware
 
-**SenseCAP Watcher is the central device** and is required on both paths. It captures the voice command, and its Himax WiseEye2 vision co-processor is what recognizes the operator. Everything else on this page is software you run on hardware you already own — except the optional inference box on Path 2.
+Two pieces. **SenseCAP Watcher** is the device people talk to and the camera that recognizes them — always required. A **compute box** on the same LAN runs the recognition service, and is what you add when you go past a pilot.
 
-|SenseCAP Watcher for XiaoZhi|
-|:---:|
-|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-100051523-sensecap-watcher-xiaozhi-en.jpg" alt="SenseCAP Watcher for XiaoZhi" width={300} height="auto" />|
-|ESP32-S3 with a Himax WiseEye2 vision co-processor<br/>Camera, microphone and speaker · 1.45-inch touchscreen<br/>Wi-Fi 2.4 GHz and BLE 5 · Grove I2C expansion|
-|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-Watcher-XIAOZHI-EN-p-6532.html)</p>|
+|SenseCAP Watcher for XiaoZhi<br/>*the device on the floor*|A compute box<br/>*the recognition service*|
+|:---:|:---:|
+|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-100051523-sensecap-watcher-xiaozhi-en.jpg" alt="SenseCAP Watcher for XiaoZhi" width={280} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image-_r235.jpeg" alt="reComputer AI Industrial R2135-12" width={280} height="auto" />|
+|ESP32-S3 with a Himax WiseEye2 vision co-processor<br/>Camera, microphone and speaker · 1.45-inch touchscreen<br/>Wi-Fi 2.4 GHz and BLE 5 · Grove I2C expansion|Runs the face model your enrollment and matching use<br/>Lifts the 20-person ceiling and adds anti-spoofing<br/>Pick the tier that fits — [options below](#choosing-a-compute-box)|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-Watcher-XIAOZHI-EN-p-6532.html)</p>|<p style={{textAlign: 'center'}}>[See the options](#choosing-a-compute-box)</p>|
 
-For getting the device itself on the network and paired with an agent, see [SenseCAP Watcher for Xiaozhi AI](/sensecap_watcher_for_xiaozhi_ai).
+Strictly speaking the compute box is optional: the Watcher can match faces on its own NPU, which is enough for a pilot. In practice that mode caps you at 20 people per device and cannot tell a face from a photograph of one, so production deployments almost always add the box. [Part 2](#part-2--choose-your-verification-path) covers the trade in full.
+
+For getting the Watcher on the network and paired with an agent, see [SenseCAP Watcher for Xiaozhi AI](/sensecap_watcher_for_xiaozhi_ai).
 
 ## Try It Before You Build
 
@@ -338,17 +340,17 @@ Your backend obtains an image, posts it to `/infer`, and cosine-matches the retu
 The reference default is a cosine threshold of `0.45`, chosen for its bundled 128-D model. That number is meaningless in a different embedding space. Measure the score distribution of your own model on genuine and impostor pairs before picking a threshold, and allow a per-rule override so high-value operations can demand a stricter match.
 :::
 
-#### Recommended Compute Boxes
+#### Choosing a Compute Box
 
-The inference service is a plain HTTP service, so any machine on the LAN that can run your model will do. These are the complete, ready-to-deploy systems we recommend for it.
+The inference service is a plain HTTP service, so any machine on the LAN that can run your model will do. These are the ready-to-deploy systems, cheapest first.
 
-|reComputer Robotics J4012|reComputer Industrial R2135-12|reComputer AI Industrial R2135-12|
-|------------------|--------------------------|-----------------------|
-|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics J4012" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image_6.jpg" alt="reComputer Industrial R2135-12" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image-_r235.jpeg" alt="reComputer AI Industrial R2135-12" width={300} height="auto" />|
-|NVIDIA Jetson Orin NX<br/>Up to 100 TOPS · 16GB LPDDR5<br/>Highest headroom, largest models|Raspberry Pi CM5 + Hailo-8<br/>26 TOPS · 8GB · 32GB eMMC<br/>Fanless, -20 to 65 °C|Raspberry Pi CM5 + Hailo-8<br/>26 TOPS · 8GB · 32GB eMMC<br/>Fanless, IP40, most affordable|
-|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html)</p>|
+|reComputer RK3576-30|reComputer RK3588-30|reComputer AI Industrial R2135-12|reComputer Robotics J4012|
+|------------------|--------------------------|-----------------------|-----------------------|
+|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-rk3576.jpg" alt="reComputer RK3576-30" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image-_r235.jpeg" alt="reComputer AI Industrial R2135-12" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics J4012" width={300} height="auto" />|
+|Rockchip RK3576<br/>6 TOPS NPU · 8GB LPDDR5<br/>2x GbE — entry point|Rockchip RK3588<br/>6 TOPS NPU · 8GB LPDDR5<br/>2x 2.5GbE, faster cores|Raspberry Pi CM5 + Hailo-8<br/>26 TOPS · 8GB · 32GB eMMC<br/>Fanless, IP40, -20 to 65 °C|NVIDIA Jetson Orin NX<br/>Up to 100 TOPS · 16GB LPDDR5<br/>Largest models, multi-site|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)</p>|
 
-Choose the Jetson system when you want to run a large embedding model or serve several sites from one box. Choose either R2135 when the box sits in a plant room or on a wall in a warehouse — both are fanless and rated for industrial temperatures.
+Face recognition is a light workload, so the entry boxes are genuinely enough for a single site — both Rockchip models carry the same 6 TOPS NPU, and the RK3588 buys you faster cores and 2.5GbE rather than more inference throughput. Step up to the R2135 when the box lives on a plant floor and needs to be fanless and sealed, and to the Jetson when you want a larger model or several sites served from one machine.
 
 #### Going Fully On-Premises
 
