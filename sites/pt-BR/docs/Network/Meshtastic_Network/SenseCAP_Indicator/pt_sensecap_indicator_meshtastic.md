@@ -233,7 +233,15 @@ Se você não conectou o módulo GPS, desative a função de GPS no App `Meshtas
 
 ## Suporte Técnico e Discussão de Produtos
 
-<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
     <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>

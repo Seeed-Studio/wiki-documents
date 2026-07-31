@@ -105,13 +105,14 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
 
 **Batería**
 
-|Elemento|Parámetro|
+|Elemento|Parámetro|s
 | :- | :- |
-|**Capacidad de la batería**|Batería de litio recargable, 1100mAh|
-|**Supervisión de la vida de la batería**|Nivel de batería de enlace ascendente periódico|
+|**Capacidad de la batería**|Batería LCD recargable, 1100mAh|
+|**Monitoreo del nivel de la batería**|Transmisión periódica del nivel de la batería|
 |**Protocolo de carga**|USB Type-C|
 |**Entrada de alimentación del dispositivo**|5V, 0.55A|
 |**Entrada de alimentación de la batería**|4.4V, 0.22A|
+|**Voltaje de corte con carga completa**|4.37V|
 |**Límite de temperatura de carga**|5 a +45℃|
 
 Es posible que X1 se desarrolle en una serie de productos, en la que los nuevos productos que se lancen en el futuro estarán equipados con sensores adicionales (sensores de 3 ejes, magnetómetros de seis ejes, etc.).
@@ -360,7 +361,15 @@ Es posible que X1 se desarrolle en una serie de productos, en la que los nuevos 
 
 ## Soporte técnico y debate sobre el producto
 
-<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
     <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>

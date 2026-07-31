@@ -105,14 +105,15 @@ MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知选项�
 
 **电池**
 
-|项目|参数|
+|项目|参数|s
 | :- | :- |
-|**电池容量**|可充电锂电池，1100mAh|
-|**电池寿命监测**|周期性上报电池电量|
+|**电池容量**|可充电 LCD 电池，1100mAh|
+|**电池电量监测**|定期上报电池电量|
 |**充电协议**|USB Type-C|
-|**设备电源输入**|5V，0.55A|
-|**电池电源输入**|4.4V，0.22A|
-|**充电温度范围**|5 至 +45℃|
+|**设备电源输入**|5V, 0.55A|
+|**电池电源输入**|4.4V, 0.22A|
+|**充满电截止电压**|4.37V|
+|**充电温度限制**|5 至 +45℃|
 
 X1 未来可能发展为一个产品系列，后续推出的新产品将配备更多传感器（3 轴传感器、六轴磁力计等）。
 
@@ -360,7 +361,15 @@ X1 未来可能发展为一个产品系列，后续推出的新产品将配备�
 
 ## 技术支持与产品讨论
 
-<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
     <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
