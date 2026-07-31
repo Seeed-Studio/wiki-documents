@@ -1,6 +1,6 @@
 ---
-description: Introducción a la Red Meshtastic®
-title: Introducción a la Red Meshtastic®
+description: Introducción a la red Meshtastic®
+title: Introducción a la red Meshtastic®
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,38 +9,38 @@ sidebar_position: 1
 last_update:
   date: 12/11/2025
   author: Michelle
-createdAt: '2025-09-03'
+createdAt: '2024-06-17'
 updatedAt: '2025-12-11'
 url: https://wiki.seeedstudio.com/es/meshtastic_introduction/
 ---
 
 
-[Meshtastic®](https://meshtastic.org/) es una red de malla descentralizada, fuera de la red y de código abierto, construida para funcionar en dispositivos asequibles y de bajo consumo, que te permite usar radios LoRa económicas como una plataforma de comunicación de largo alcance fuera de la red en áreas sin infraestructura de comunicaciones existente o confiable.
+[Meshtastic®](https://meshtastic.org/) es una red mallada descentralizada, fuera de la red y de código abierto, creada para funcionar en dispositivos de bajo consumo y bajo costo. Permite utilizar radios LoRa económicas como una plataforma de comunicación de largo alcance fuera de la red en áreas sin infraestructura de comunicaciones existente o confiable.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/T1000-E-_-05.jpg" alt="pir" width={800} height="auto" /></p>
 
 ## Características
 
-- Largo alcance (récord de 254km por kboxlabs)
-- No se requiere teléfono para comunicación en malla
-- Comunicación descentralizada - no se requiere enrutador dedicado
-- Comunicación encriptada
-- Excelente duración de batería
-- Enviar y recibir mensajes de texto entre miembros de la malla
-- Características de ubicación basadas en GPS opcionales
+- Largo alcance (récord de 254 km por kboxlabs)
+- No se requiere teléfono para la comunicación en malla
+- Comunicación descentralizada: no se requiere un router dedicado
+- Comunicación cifrada
+- Excelente duración de la batería
+- Envía y recibe mensajes de texto entre los miembros de la malla
+- Funciones opcionales de localización basadas en GPS
 - ¡Y más!
 
-## Cómo Funciona
+## Cómo funciona
 
-Meshtastic utiliza LoRa, un protocolo de radio de largo alcance, que es ampliamente accesible en la mayoría de las regiones sin necesidad de licencias o certificaciones adicionales, a diferencia de las operaciones de radio HAM.
+Meshtastic utiliza LoRa, un protocolo de radio de largo alcance, que es ampliamente accesible en la mayoría de las regiones sin necesidad de licencias o certificaciones adicionales, a diferencia de las operaciones de radioaficionado (HAM).
 
-Estas radios están diseñadas para retransmitir los mensajes que reciben, formando una red de malla. Esta configuración asegura que cada miembro del grupo, incluyendo aquellos a la mayor distancia, pueda recibir mensajes. Dependiendo de la configuración empleada, la red de malla Meshtastic puede soportar hasta 100 dispositivos simultáneamente.
+Estas radios están diseñadas para retransmitir los mensajes que reciben, formando una red mallada. Esta configuración garantiza que todos los miembros del grupo, incluidos aquellos a la mayor distancia, puedan recibir mensajes. Dependiendo de la configuración empleada, la red mallada de Meshtastic puede admitir hasta 100 dispositivos simultáneamente.
 
-Además, las radios Meshtastic pueden emparejarse con un solo teléfono, permitiendo a amigos y familiares enviar mensajes directamente a tu radio específica. Es importante tener en cuenta que cada dispositivo es capaz de soportar una conexión de solo un usuario a la vez.
+Además, las radios Meshtastic se pueden emparejar con un solo teléfono, lo que permite que amigos y familiares envíen mensajes directamente a tu radio específica. Es importante tener en cuenta que cada dispositivo es capaz de admitir la conexión de un solo usuario a la vez."
 
-¡Haz clic [aquí](https://meshtastic.org/docs/) para aprender más sobre la red Meshtastic!
+Haz clic [aquí](https://meshtastic.org/docs/) para obtener más información sobre la red Meshtastic.
 
-## Hardware Soportado
+## Hardware compatible
 
 - [SenseCAP Card Tracker T1000-E for Meshtastic](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)
 
@@ -57,5 +57,20 @@ Además, las radios Meshtastic pueden emparejarse con un solo teléfono, permiti
 - [Tracker Dev Kit for Meshtastic® – Wio Tracker 1110](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Kit-for-Meshtastic.html)
 
 :::note
-Meshtastic® es una marca registrada de Meshtastic LLC. Los componentes de software de Meshtastic se publican bajo varias licencias, consulta GitHub para más detalles. No se proporciona garantía - úsalo bajo tu propio riesgo.
+Meshtastic® es una marca registrada de Meshtastic LLC. Los componentes de software de Meshtastic se publican bajo varias licencias; consulta GitHub para más detalles. No se ofrece ninguna garantía: úsalo bajo tu propia responsabilidad.
 :::
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

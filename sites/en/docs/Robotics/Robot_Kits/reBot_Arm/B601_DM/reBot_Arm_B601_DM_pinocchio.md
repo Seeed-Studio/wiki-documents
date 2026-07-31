@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-03-24'
-updatedAt: '2026-07-09'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
@@ -142,7 +142,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### Step 2. Sync Environment (Install All Dependencies)
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
 cd reBotArm_control_py
 uv sync
 ```
@@ -211,7 +211,7 @@ Input target angles for all joints to complete motor control in MIT control mode
 **How to Run**:
 ```bash
 uv run python example/3_mit_control.py
-> 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
+> 30 0 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
 > state
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
@@ -227,7 +227,7 @@ Input target angles for all joints to complete motor control in POS_VEL (Positio
 **How to Run**:
 ```bash
 uv run python example/4_pos_vel_control.py
-> 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
+> 30 0 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
 > state
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
@@ -339,7 +339,7 @@ uv run python example/7_arm_ik_control.py
 #Usage B
 > 0.3 0.0 0.4 0.0 0.0 0.5 # Control both position and orientation: move to the specified position while rotating the wrist yaw angle by 0.5 radians.
 
-> ctrl + c # Exit system
+> ctrl + c # Return to zero position and exit system
 ```
 :::danger
 Note that in this example code, the robotic arm moves very fast. Ensure that people and other devices are away from the arm's working radius.
@@ -369,7 +369,7 @@ uv run python example/8_arm_traj_control.py
 #Usage C
 > 0.3 0.0 0.4 0.0 0.0 0.0 5.0 # Move the arm to the specific position and specify 5.0 seconds to slowly move there. (Note: If entering time, the preceding orientation parameters 0 0 0 cannot be omitted)
 
-> ctrl + c # Exit system
+> ctrl + c # Return to zero position and exit system
 ```
 ---
 

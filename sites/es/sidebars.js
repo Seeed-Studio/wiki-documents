@@ -1964,6 +1964,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_udp_streaming',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_http',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_mqtt_stream',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_websockets',
                   ],
                 },
                 {
@@ -4528,6 +4529,24 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/es_vibe-code-with-your-agent',
               label: 'Programa con tu agente',
+            },
+            {
+              type: 'category',
+              label: 'Casos de desarrollo',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/es_home_assistant',
+                  label: 'Integración con Home Assistant',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/es_reachymini_voice_control_soarm',
+                  label: 'Control por voz de Reachy Mini para SO-ARM',
+                },
+              ],
             },
             {
               type: 'category',

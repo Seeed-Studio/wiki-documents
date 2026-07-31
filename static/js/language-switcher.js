@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-27 17:42:17 (北京时间)
-// 多语言页面: 2401 个
+// 生成时间: 2026-07-30 17:29:16 (北京时间)
+// 多语言页面: 2406 个
 
 (function() {
   'use strict';
@@ -3425,6 +3425,13 @@
     "ja",
     "pt"
   ],
+  "/wifi_halow_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_model_conversion": [
     "cn",
     "en",
@@ -3439,14 +3446,14 @@
     "ja",
     "pt"
   ],
-  "/recamera_on_device_models": [
+  "/recamera_model_export_online": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/wifi_halow_getting_started": [
+  "/recamera_on_device_models": [
     "cn",
     "en",
     "es",
@@ -3748,6 +3755,13 @@
     "pt"
   ],
   "/train_classification_model_online": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_ha_sound_alert": [
     "cn",
     "en",
     "es",
@@ -5916,6 +5930,20 @@
     "pt"
   ],
   "/reachymini_api_utils": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_development_cases_home_assistant": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_development_cases_gripper_voice_control": [
     "cn",
     "en",
     "es",
@@ -11857,6 +11885,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_xiao_volume": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_xiao_websocket_audio_stream": [
     "cn",
     "en",
     "es",

@@ -1,5 +1,5 @@
 ---
-description: Un tutorial práctico para configurar el entorno del código fuente del firmware de Meshtastic, compilar el t1000_e y grabar el firmware.
+description: Un tutorial práctico para configurar el entorno del código fuente del firmware de Meshtastic, compilar el t1000_e y flashear el firmware.
 title: Tutorial de desarrollo con el código fuente de Meshtastic
 keywords:
   - Meshtastic
@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 
 # Tutorial práctico del código fuente del firmware de Meshtastic
 
-Este tutorial está pensado para usuarios que acaban de empezar con el código fuente del firmware de Meshtastic. Incluye flujos de trabajo habituales tanto para Windows como para macOS. El objetivo es sencillo: clonar el repositorio oficial, completar una compilación correcta, hacer un cambio sencillo en la interfaz de usuario y grabar el firmware modificado en el dispositivo para su verificación.
+Este tutorial está pensado para usuarios que acaban de empezar con el código fuente del firmware de Meshtastic. Incluye flujos de trabajo habituales tanto para Windows como para macOS. El objetivo es sencillo: clonar el repositorio oficial, completar una compilación correcta, hacer un cambio sencillo en la interfaz de usuario y flashear el firmware modificado al dispositivo para su verificación.
 
 Si ya estás familiarizado con Git, Python o PlatformIO, puedes omitir las secciones correspondientes e ir directamente a la parte práctica.
 
@@ -49,7 +49,7 @@ Abre la página oficial de descarga de Git para Windows:
 
 El instalador normalmente comienza a descargarse automáticamente cuando abres la página. Una vez completada la descarga, haz doble clic en el instalador y sigue el asistente de instalación.
 
-Durante la instalación, el paso más importante es **ajustar tu variable de entorno PATH**. Elige:
+Durante la instalación, el paso más importante es **Adjusting your PATH environment**. Elige:
 
 **Git from the command line and also from 3rd-party software**
 
@@ -59,7 +59,7 @@ Para las demás opciones, los valores predeterminados suelen ser suficientes. Si
 
 Espera hasta que finalice la instalación.
 
-Después de la instalación, **cierra todas las ventanas actuales de PowerShell y terminales de VS Code**, luego abre una nueva ventana de PowerShell y ejecuta:
+Después de la instalación, **cierra todas las ventanas actuales de PowerShell y terminal de VS Code**, luego abre una nueva ventana de PowerShell y ejecuta:
 
 ```plain
 & "C:\Program Files\Git\cmd\git.exe" --version
@@ -227,13 +227,13 @@ Si prefieres usar `python` y `pip`, puedes configurar alias de shell por tu cuen
 
 ### 3. Instalar PlatformIO
 
-Este paso puede resultar menos amigable para principiantes porque PlatformIO descarga muchas dependencias automáticamente y la instalación puede llevar algo de tiempo. Si aparecen errores durante la instalación, normalmente es mejor esperar con paciencia y solucionar los problemas uno por uno. Usar herramientas de IA para ayudar a inspeccionar los mensajes de error también puede ahorrar tiempo.
+Este paso puede resultar menos amigable para principiantes porque PlatformIO descarga muchas dependencias automáticamente y la instalación puede llevar algo de tiempo. Si aparecen errores durante la instalación, normalmente es mejor esperar con paciencia e ir solucionando los problemas uno por uno. Usar herramientas de IA para ayudar a inspeccionar los mensajes de error también puede ahorrar tiempo.
 
-Busca `PlatformIO` en el marketplace de extensiones de VS Code e instálalo.
+Busca `PlatformIO` en el marketplace de Extensiones de VS Code e instálalo.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image7.png)
 
-Después de la instalación, normalmente aparece un icono con forma de hormiga en la barra de herramientas izquierda.
+Después de la instalación, normalmente aparece un icono con forma de hormiga en la barra de herramientas de la izquierda.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image8.png)
 
@@ -286,7 +286,7 @@ Si los comandos se completan con normalidad, el repositorio se ha clonado correc
 
 ### 5. Práctica práctica
 
-En esta etapa, no te apresures a editar el código. Primero, asegúrate de que el proyecto pueda ejecutar correctamente todo el proceso de compilación.
+En esta etapa, no te apresures a editar el código. Primero asegúrate de que el proyecto pueda pasar correctamente por todo el proceso de compilación.
 
 Se recomienda comenzar con tres tareas:
 
@@ -294,7 +294,7 @@ Se recomienda comenzar con tres tareas:
 2. Revisar `platformio.ini`
 3. Encontrar el entorno de compilación para tu placa de destino
 
-Un detalle importante: no te centres solo en el `platformio.ini` de la raíz. En realidad, incluye archivos de configuración adicionales, por ejemplo:
+Un detalle importante: no te centres solo en el `platformio.ini` raíz. En realidad incluye archivos de configuración adicionales, por ejemplo:
 
 ```plain
 extra_configs =
@@ -322,11 +322,11 @@ Si solo quieres completar una práctica mínima de extremo a extremo, céntrate 
 
 1. Instalar Git, Python 3, VS Code y PlatformIO.
 2. Clonar el repositorio `meshtastic/firmware` e inicializar los submódulos.
-3. Usar `pio run -e seeed_wio_tracker_L1` para confirmar que el proyecto original compila correctamente.
+3. Usar `pio run -e seeed_wio_tracker_L1` para confirmar que el proyecto original se compila correctamente.
 4. Modificar la lógica de visualización en `src/graphics/SharedUIDisplay.cpp`.
-5. Volver a compilar el firmware y grabar el archivo UF2 generado en el dispositivo para su verificación.
+5. Volver a compilar el firmware y flashear el archivo UF2 generado al dispositivo para su verificación.
 
-**Paso 1: Confirmar que el proyecto compila correctamente**
+**Paso 1: Confirmar que el proyecto se compila correctamente**
 
 Aquí usamos la CLI de PlatformIO Core para compilar.
 
@@ -432,7 +432,7 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image15.png)
 
-Si la compilación pasa en este punto, la salida de tu firmware se ha generado correctamente.
+Si la compilación pasa en este punto, tu firmware se ha generado correctamente.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image16.png)
 
@@ -454,7 +454,7 @@ Si sigues rastreando la lógica de visualización, la mayor parte del código re
 - `src/graphics/`
 - `src/graphics/draw/`
 
-La forma exacta en que lo modifiques depende de tu capacidad para leer el código fuente. Aquí comenzamos con un ejemplo muy sencillo: modificar la interfaz de inicio.
+La forma exacta en que lo modifiques depende de tu capacidad para leer el código fuente. Aquí comenzamos con un ejemplo muy sencillo: modificar la interfaz de la pantalla de inicio.
 
 **Cambio 1: Registrar el borde derecho del texto de la batería**
 
@@ -526,7 +526,7 @@ int headerLabelRight = timeX - 4;
 
 `src/graphics/SharedUIDisplay.cpp:263`
 
-Esta parte gestiona el área utilizada por la hora, correo, silencio y otros iconos en el lado derecho. Añadí `headerLabelRight` para limitar el máximo borde derecho del texto central y evitar que se superponga con el contenido del lado derecho.
+Esta parte gestiona el área utilizada por los iconos de hora, correo, silencio y otros en el lado derecho. Añadí `headerLabelRight` para limitar el límite derecho máximo del texto central y evitar que se superponga con el contenido del lado derecho.
 
 **Cambio 4: Dibujar una etiqueta personalizada cuando el título está vacío**
 
@@ -659,12 +659,12 @@ Luego selecciona el archivo de firmware que acabas de compilar y flashea el disp
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image20.png)
 
-En este punto, el ejercicio práctico con el código fuente de Meshtastic está completo. Has pasado por todo el flujo de trabajo: configuración del entorno, clonación del repositorio, descubrimiento de la configuración de la placa, compilación del firmware, modificación de la lógica de visualización y verificación final del flasheo.
+En este punto, el ejercicio práctico del código fuente de Meshtastic está completo. Has pasado por todo el flujo de trabajo: configuración del entorno, clonación del repositorio, descubrimiento de la configuración de la placa, compilación del firmware, modificación de la lógica de visualización y verificación final del flasheo.
 
 Si quieres ir más allá, puedes seguir explorando estas direcciones:
 
 1. Modificar más elementos en la pantalla de inicio
-2. Ajustar el comportamiento de los botones, GPS, Bluetooth y otros módulos
+2. Ajustar el comportamiento de los botones, el GPS, el Bluetooth y otros módulos
 3. Añadir un `variant` independiente para tu propia placa
 4. Seguir rastreando las relaciones entre `src/`, `variants/` y `boards/`
 
@@ -673,7 +673,7 @@ Si quieres ir más allá, puedes seguir explorando estas direcciones:
 **El comando `git` no está disponible**
 
 - En Windows, primero comprueba si Git se ha añadido a `PATH`.
-- En macOS, ejecuta primero `git --version`. Si el sistema te pide instalar las Command Line Tools, sigue la indicación.
+- En macOS, ejecuta primero `git --version`. Si el sistema te pide que instales las Command Line Tools, sigue la indicación.
 
 **`python3` o `pip3` no están disponibles**
 
@@ -698,10 +698,25 @@ git submodule update --init --recursive
 **La primera compilación tarda demasiado**
 
 - Es normal que la primera compilación descargue muchas dependencias.
-- Si parece que se queda atascada durante demasiado tiempo, intenta instalar primero los paquetes por separado:
+- Si parece bloqueada durante demasiado tiempo, intenta instalar primero los paquetes por separado:
 
 ```bash
 pio pkg install -e seeed_wio_tracker_L1
 ```
 
 Luego ejecuta la compilación de nuevo.
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

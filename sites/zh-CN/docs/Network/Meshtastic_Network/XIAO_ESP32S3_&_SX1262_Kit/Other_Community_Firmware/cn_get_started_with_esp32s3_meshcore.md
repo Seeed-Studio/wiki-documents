@@ -12,13 +12,13 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/cn/get_started_with_esp32s3_meshcore/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png" alt="pir" width={800} height="auto" /></p>
 
-[MeshCore](https://meshcore.io/) 是一个开源系统，用于实现基于 LoRa Mesh 硬件的安全文本通信。你可以使用 MeshCore 中继器和 MeshCore 伴随节点来搭建你的 MeshCore 网络。[XIAO ESP32S3 & Wio-SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) 是一个用于开发 MeshCore 节点的灵活解决方案。
+[MeshCore](https://meshcore.io/) 是一个开源系统，用于实现基于 LoRa Mesh 硬件的安全文本通信。你可以使用 MeshCore 中继器和 MeshCore 伴随节点来构建你的 MeshCore 网络。[XIAO ESP32S3 & Wio-SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) 是开发 MeshCore 节点的灵活解决方案。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
@@ -30,7 +30,7 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_esp32s3_meshcore/
 
 ## 固件烧录
 
-使用 USB 线将你的设备连接到电脑。请确保该线缆支持数据传输。
+使用 USB 线将设备连接到电脑。请确保该线缆支持数据传输。
 
 :::warning
 在数据传输过程中请保持 USB 线缆连接，否则设备可能会损坏。
@@ -82,7 +82,7 @@ SX-1262 可以通过 B2B 接口连接到 Xiao ESP32-S3。SX-1262 使用 SPI 与 
 
 ### （可选）连接电池
 
-XIAO ESP32S3 内置电源管理芯片，可让 XIAO ESP32S3 使用电池独立供电，或通过 XIAO ESP32S3 的 USB 口为电池充电。
+XIAO ESP32S3 内置电源管理芯片，可使 XIAO ESP32S3 通过电池独立供电，或通过 XIAO ESP32S3 的 USB 口为电池充电。
 
 如果你想为 XIAO 连接电池，我们建议你购买合格的可充电 `3.7V lithium` 电池，并带有 `protection circuit`。焊接电池时，请注意区分正负极。电源负极应为靠近 USB 口的一侧，电源正极为远离 USB 口的一侧。
 
@@ -92,7 +92,7 @@ XIAO ESP32S3 内置电源管理芯片，可让 XIAO ESP32S3 使用电池独立�
 
 ### （可选）连接扩展板
 
-扩展板是一个很好的连接工具，也便于进行额外应用，例如轻松添加 Grove 传感器和模块。
+扩展板是一个很好的连接工具，并可用于额外的应用，例如轻松添加 Grove 传感器和模块。
 
 <table align="center">
   <tbody>
@@ -184,9 +184,9 @@ import TabItem from '@theme/TabItem';
 
 然后你就可以开始测试你自己的 Mesh 网络了。
 
-### 发送 Advert
+### 发送广播
 
-点击 "send advert" 以使其他 Meshcore 设备能够看到该中继器。然后该中继器就可以在设备列表中被看到。
+点击 "send advert" 以使其他 Meshcore 设备能够看到此中继器。然后该中继器就可以在设备列表中被看到。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/SendAdvert.png" alt="pir" width={800} height="auto" /></p>
 
@@ -196,19 +196,19 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Admin.png" alt="pir" width={800} height="auto" /></p>
 
-登录后，你可以看到配置页面。现在你可以在手机 APP 上调整中继器的配置。
+登录后，你可以看到配置页面。现在你可以在 hone APP 上调整中继器的配置。
 
 ### 设置路径
 
-在将中继器添加到你的路由之前，你可能需要先使用中继器发送 advert。中继器会以固定间隔自动发送 advert。该间隔可能是数小时（默认 3 小时）。因此你需要手动发送 advert，否则就需要等待。
+在将中继器添加到你的路由之前，你可能需要先使用中继器发送广播。中继器会以固定间隔自动发送广播。该间隔可能是数小时（默认 3 小时）。因此你需要手动发送广播，否则就需要等待。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/SendAdvert.png" alt="pir" width={800} height="auto" /></p>
 
-你可以手动设置消息发送路径。将你的蓝牙伴随设备连接到手机 APP，打开一个私信窗口。然后你就可以选择已发现的中继器来组成你的路径。
+你可以手动设置消息发送路径。将你的蓝牙伴随设备连接到手机 APP。打开一个私信窗口。然后你可以选择已发现的中继器来组成你的路径。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
-设置路径后，传输方式会变为 “n hop”。例如，如果你在路由中添加了 1 个中继器，它就会变为 1 hop。
+设置路径后，传输方式会变为 “n hop”。例如，如果你在路由中添加 1 个中继器，它就会变为 1 hop。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
@@ -304,7 +304,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Coonection.png" style={{width:800, height:'auto'}}/></div>
 
-然后登录管理端以启用 GPS。
+然后登录管理页面以启用 GPS。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -316,7 +316,7 @@ import TabItem from '@theme/TabItem';
 
 ### 设备断电后丢失已保存的设置
 
-如果设备名称、LoRa 区域或其他设置在应用中看起来已成功保存，但在设备断电后消失，请检查 ESP32-S3 的 Flash 分区表是否异常。
+如果设备名称、LoRa 区域或其他设置在应用中看起来已成功保存，但设备断电后又消失，请检查 ESP32-S3 的 Flash 分区表是否异常。
 
 你可以使用 [ESPConnect](https://thelastoutpostworkshop.github.io/ESPConnect/) 检查 ESP32-S3 的 Flash 存储分区表。ESPConnect 仅适用于 ESP 设备，不能用于 nRF52840 设备。
 
@@ -350,15 +350,15 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-5.png" alt="ESPConnect partition table with SPIFFS" width={800} height="auto" /></p>
 
-MeshCore v1.15 会将设备名称和区域设置写入 SPIFFS 中的 `/new_prefs`。如果不存在 `spiffs` 分区，这些设置只会保存在 RAM 中。手机应用可能会显示设置已成功保存，但在断电后会丢失。
+MeshCore v1.15 会将设备名称和区域设置写入 SPIFFS 中的 `/new_prefs`。如果不存在 `spiffs` 分区，这些设置只会保存在 RAM 中。手机应用可能会显示设置已成功保存，但断电后就会丢失。
 
-这通常发生在刷写了普通固件文件时，例如：
+这通常发生在刷入了普通固件文件时，例如：
 
 ```text
 Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26.bin
 ```
 
-相反，应刷写完整的合并固件，例如：
+相反，应刷入完整的合并固件，例如：
 
 ```text
 Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26-merged.bin
@@ -366,7 +366,7 @@ Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26-merged.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-1.png" alt="MeshCore flasher download options for normal and merged firmware" width={800} height="auto" /></p>
 
-要解决此问题，请擦除设备并重新刷写合并固件版本。
+要解决此问题，请擦除设备并重新刷入合并固件版本。
 
 ## 资源
 - **[PDF]**[兼容 Xiao ESP32-S3 的 SX1262 原理图](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
@@ -380,23 +380,25 @@ Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26-merged.bin
 - **[LBR]** [Seeed Studio XIAO ESP32S3 Eagle 封装](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed-Studio-XIAO-ESP32S3-footprint-eagle.lbr)
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 出厂固件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip)
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 引脚分布表](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
-- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32S3 封装库](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32S3 封装 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 - [外壳 3D 文件](https://www.thingiverse.com/thing:6888371)
 ## 课程资源
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO: Big Power, Small Board 掌握 Arduino 和 TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[电子书]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>

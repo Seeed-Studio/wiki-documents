@@ -1,5 +1,5 @@
 ---
-description: 本指南介绍如何使用 Meshtastic Node Map 显示 Meshtastic 设备的位置。
+description: 本指南介绍如何使用 Meshtastic Node Map 显示 Meshtastic 设备在地图上的位置。
 title: Meshtastic 节点地图
 keywords:
   - Meshtastic
@@ -14,7 +14,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: '2026-03-19'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/cn/meshtastic_node_map_esp32s3/
 ---
 
@@ -22,7 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-本指南介绍如何使用 [Wio Tracker L1 Pro](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) 和 [T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) 设备，在 Meshtastic Node Map 上显示 [Meshtastic](https://meshtastic.org/docs/introduction/) 设备的位置，前提是这些设备已经刷入 Meshtastic 固件。
+本指南介绍如何在 Meshtastic Node Map 上显示 [Meshtastic](https://meshtastic.org/docs/introduction/) 设备的位置，使用 [Wio Tracker L1 Pro](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) 和 [T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) 设备，前提是这些设备已经刷入 Meshtastic 固件。
 
 ## Meshtastic 网络监控简介
 
@@ -30,7 +30,7 @@ Meshtastic Node Map 是一个在线界面，用于在地图上可视化 Meshtast
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" style={{width:900, height:'auto'}}/></div>
 
-Meshtastic 设备会通过 MQTT 定期向 Meshtastic 服务器上报其位置。Node Map 获取这些报告，并显示每个节点的位置、路径和信号范围。设备可以通过以下方式上报位置：
+Meshtastic 设备会通过 MQTT 定期向 Meshtastic 服务器上报其位置。Node Map 会获取这些报告，并显示每个节点的位置、路径和信号范围。设备可以通过以下方式上报位置：
 
 - **直接通过 MapReport：** 设备直接向服务器发送位置信息。
 - **通过其他节点间接上报：** 位置信息通过邻近节点中继。
@@ -55,13 +55,13 @@ Meshtastic Node Map 非常适合：
 ### 配置
 
 **LoRa 设置**
-   - 将设备配置为适合你所在地区的 LoRa 频段。
+   - 将设备配置为符合所在地区的正确 LoRa 频段。
    - 启用 **OK to MQTT** 以允许上报。
 
 **MQTT 设置**
    - 在设备上启用 MQTT。
    - 使用默认的 Meshtastic 服务器、用户名和密码。
-   - 启用 **MapReport** 并勾选 **I agree**。根据你的需求选择上报间隔。
+   - 启用 **MapReport** 并勾选 **I agree**。根据需要选择上报间隔。
 
 ### 查看设备位置
 
@@ -101,3 +101,18 @@ Meshtastic Node Map 非常适合：
 点击任意节点即可查看：设备的详细信息、信号范围、历史路径以及之前的位置更新。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/LiamPosition.png" style={{width:600, height:'auto'}}/></div>
+
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

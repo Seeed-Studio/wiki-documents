@@ -1965,6 +1965,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_udp_streaming',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_http',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_mqtt_stream',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_websockets',
                   ],
                 },
                 {
@@ -4562,6 +4563,24 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_conversation',
               label: 'Reachy Mini接入豆包大模型API',
+            },
+            {
+              type: 'category',
+              label: '开发案例集成',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/cn_home_assistant',
+                  label: 'Home Assistant 集成',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/cn_reachymini_voice_control_soarm',
+                  label: 'Reachy Mini 语音控制 SO-ARM',
+                },
+              ],
             },
             {
               type: 'category',
