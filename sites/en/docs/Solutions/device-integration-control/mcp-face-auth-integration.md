@@ -26,11 +26,7 @@ url: https://wiki.seeedstudio.com/solutions/mcp-face-auth-integration/
 ---
 
 :::note[Notice]
-Face recognition processes biometric data, which is specially regulated in many places — the EU and UK under GDPR, Illinois under BIPA, and elsewhere. Employee biometrics at work can also engage labour law and works-council consultation.
-
-Because you build and host this side yourself, **you are the data controller**. Plan for it deliberately: lawful basis and consent for each enrolled person, a retention and deletion path, and a decision about whether to keep enrollment photographs. This page recommends keeping the source image so the roster can be re-computed when the model changes — that is an operational convenience with a privacy cost, and it is your call, not a default to inherit. Embeddings are numeric, but they are still personal data.
-
-Get this reviewed before you enroll a single real person.
+Face recognition processes biometric data, which is specially regulated in many places — GDPR in the EU and UK, BIPA in Illinois, and elsewhere. Have your deployment reviewed before you enroll a real person; see [Biometric Data](#5-biometric-data) for what falls to you.
 :::
 
 ## Overview
@@ -374,7 +370,7 @@ Take the J4012 for a single-station site, the Mini J5012 when the box also has t
 
 ## Part 3 — What You Implement
 
-Four pieces live on your side. The reference implementation has all four, so treat this section as a map of what to read and reproduce.
+Five pieces live on your side. The reference implementation covers the first four, so treat this section as a map of what to read and reproduce.
 
 ### 1. The Verification Endpoint
 
@@ -492,6 +488,15 @@ Three constraints, and the third is the whole point:
 1. **It must be nullable.** When verification is disabled, or no rule requires it, the value is `NULL`.
 2. **Store the name, not a foreign key** — a snapshot, so the record still reads correctly after the person is deleted.
 3. **Never merge it with the operator field the model fills in.** That field reflects what the speaker *said* and can be false. This one is what the camera *saw*. Merging them collapses a trusted value into an untrusted one and throws away the only distinction that makes face verification worth building.
+
+### 5. Biometric Data
+
+Because you build and host this side, **you are the data controller**. Four decisions to make deliberately rather than inherit:
+
+- **Lawful basis and consent** for each enrolled person. Employee biometrics at work can also engage labour law and works-council consultation in some jurisdictions.
+- **Retention and deletion.** Deleting a person must remove their embeddings, not just deactivate a row.
+- **Whether to keep enrollment photographs.** This page recommends keeping the source image so the roster can be re-computed when the model changes. That is an operational convenience with a privacy cost — your call, and worth making explicitly.
+- **Treat embeddings as personal data.** They are numeric, but they identify a person and are regulated as such in most jurisdictions.
 
 ## A Trap Worth Knowing
 
