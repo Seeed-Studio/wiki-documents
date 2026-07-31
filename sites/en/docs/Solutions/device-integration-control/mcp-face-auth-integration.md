@@ -62,7 +62,7 @@ Voice control without identity is an audit gap. These are the properties that cl
     <ul class="info-list">
         <li class="info-item">
             <div class="info-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
             </div>
             <div class="info-content">
                 <h3>Identity That Cannot Be Spoken</h3>
@@ -71,7 +71,7 @@ Voice control without identity is an audit gap. These are the properties that cl
         </li>
         <li class="info-item">
             <div class="info-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
             </div>
             <div class="info-content">
                 <h3>A Working Reference, Not a Black Box</h3>
@@ -80,7 +80,7 @@ Voice control without identity is an audit gap. These are the properties that cl
         </li>
         <li class="info-item">
             <div class="info-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 21v-1.5M12 5.25v13.5m-3.75-13.5v13.5m-3.75-13.5v13.5m11.25-13.5v13.5m3.75-13.5v13.5m-1.5-13.5H9.75v13.5h9.75V5.25z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 21v-1.5M12 5.25v13.5m-3.75-13.5v13.5m-3.75-13.5v13.5m11.25-13.5v13.5m3.75-13.5v13.5m-1.5-13.5H9.75v13.5h9.75V5.25z" /></svg>
             </div>
             <div class="info-content">
                 <h3>Runs With or Without a Compute Box</h3>
@@ -89,7 +89,7 @@ Voice control without identity is an audit gap. These are the properties that cl
         </li>
         <li class="info-item">
             <div class="info-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
             </div>
             <div class="info-content">
                 <h3>Per-Operation Enforcement</h3>
@@ -110,15 +110,33 @@ Put the verification gate in the **MCP tool layer**, above your business logic. 
 
 In the reference implementation these are `mcp/warehouse_mcp.py` (tool layer plus the `_enforce_face()` gate), `mcp/mcp_pipe.py` (transport), and the backend's `/api/face/verify-mcp` with the orchestrator and matcher behind it.
 
+### Hardware
+
+**SenseCAP Watcher is the central device** and is required on both paths. It captures the voice command, and its Himax WiseEye2 vision co-processor is what recognizes the operator. Everything else on this page is software you run on hardware you already own — except the optional inference box on Path 2.
+
+|SenseCAP Watcher for XiaoZhi|
+|:---:|
+|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-100051523-sensecap-watcher-xiaozhi-en.jpg" alt="SenseCAP Watcher for XiaoZhi" width={300} height="auto" />|
+|ESP32-S3 with a Himax WiseEye2 vision co-processor<br/>Camera, microphone and speaker · 1.45-inch touchscreen<br/>Wi-Fi 2.4 GHz and BLE 5 · Grove I2C expansion|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-Watcher-XIAOZHI-EN-p-6532.html)</p>|
+
+For getting the device itself on the network and paired with an agent, see [SenseCAP Watcher for Xiaozhi AI](/sensecap_watcher_for_xiaozhi_ai).
+
 :::info Two axes that are easy to confuse
 `mode` selects **where inference runs** — `local` (on the device) or `lan` (on an external service). `verify_frequency` selects **how often** verification happens — `always` or once per conversation (`session`).
 
 An older column named `verify_mode` (`session` / `interface`) still exists in the database for rollback purposes, but the verification path no longer reads it. Ignore it, and disregard any older document that presents it as the live switch.
 :::
 
-## Part 1 — Build Your MCP Server
+## Try It Before You Build
 
-Start by running the reference implementation. Seeing it work end to end takes minutes and answers most design questions before you write anything.
+You do not have to read code to find out whether this fits your product. There are three ways in, in increasing order of effort.
+
+**Use the hosted instance.** Register yourself at [warehouse.seeed.cn](https://warehouse.seeed.cn/) and you are talking to a running deployment. Pair a Watcher with it and you can exercise the whole voice and face flow without installing anything. This is the fastest way to see what your own product would feel like.
+
+**Deploy the reference design.** The [Smart Warehouse reference design](https://www.seeed.cc/solutions/reference-designs/smart_warehouse) packages the same system for one-click deployment, so you get a private instance to experiment against.
+
+**Run it yourself.** When you are ready to look inside and start adapting:
 
 ```bash
 git clone https://github.com/suharvest/warehouse_system.git
@@ -126,7 +144,17 @@ cd warehouse_system
 docker-compose -f docker-compose.prod.yml up -d
 ```
 
-Then decide how much of it to reuse. There are two honest options.
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/smart_warehouse" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 🚀 Smart Warehouse Reference Design</font></span></strong></a>
+</div>
+
+:::note Face verification needs a private deployment
+Face recognition is off by default in cloud and hosted builds and is enabled per deployment. If you are evaluating the face flow specifically, plan on the reference design or a self-hosted instance rather than a shared one.
+:::
+
+## Part 1 — Build Your MCP Server
+
+Once you have seen it work, decide how much of it to reuse. There are two honest options.
 
 ### Option A — Reuse the Bridge, Swap the Data Source
 
@@ -216,9 +244,28 @@ The Watcher matches faces itself. The backend pushes a compact face library to t
 - The device holds at most **20 people**. This is a hard limit of the on-device store, not a licensing choice.
 - The push targets **port 80** on the device address regardless of the port recorded for it, and the receiving endpoint is unauthenticated. Treat the device network as trusted, or isolate it.
 
+#### You Still Need an Embedding Source
+
+Matching happens on the device, but *enrollment* does not. Something has to turn each photo into an embedding, and it must be the **same model the device runs** — an embedding from any other face model lands in a different vector space and will never match, no matter how good that model is.
+
+So this path is not "no inference on your side". It is "inference only at enrollment, and it must be bit-compatible with the firmware".
+
+The reference implementation solves this with a host-side mirror of the device pipeline: SCRFD-500M for detection, then MobileFaceNet-128D for the embedding, both INT8 TFLite, executed through `ai-edge-litert` with a reference op resolver so the result is bit-exact against the on-device NPU. It emits 128-D `float32` — 512 raw bytes, not L2-normalized, since the matcher normalizes on read — under the tag `we2-mfnr6-128-v1`.
+
+Two ways to use it when you build your own system:
+
+- **In-process**, as the reference does — import it and call it during enrollment. Nothing is exposed on the network.
+- **As a small HTTP service**, which the reference can also do: set `FACE_WE2_SIMULATOR_ENABLED=1` and it mounts `POST /api/face/we2/infer` and `GET /api/face/we2/health`, speaking the *same* `/infer` contract as an external compute box.
+
+That second option is worth noticing, because it makes both paths uniform: your enrollment code always talks to a `face_rec_api`-shaped endpoint, and only the URL changes when you move from Path 1 to Path 2.
+
+:::caution Two deployment gotchas
+The simulator routes carry **no authentication** — never expose that port beyond your own backend. And the INT8 runtime has no musl wheel, so the container needs a glibc base image; Alpine will fail to install it.
+:::
+
 #### The Flow You Build
 
-**1. Enroll each operator.** Take one or more photos per person, turn each into an embedding, and store it against that person. The reference implementation computes embeddings in-process for this path, so no external service is involved.
+**1. Enroll each operator.** Take one or more photos per person, turn each into an embedding with the WE2-compatible model above, and store it against that person.
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/face-enroll.png" alt="enrollment dialog in the reference implementation: photo upload and warehouse scope"/>
@@ -500,6 +547,7 @@ MobileFaceNet, 128 dimensions, INT8, running on the Himax WE2 co-processor, publ
 
 - [warehouse_system on GitHub](https://github.com/suharvest/warehouse_system) — the reference implementation. Start with `mcp/README.md` for the integration layer, `mcp/providers/base.py` for the adapter contract, and the backend's face orchestrator for the verification logic
 - [Bring Voice AI to Your Business System (MCP)](/mcp_external_system_integration) — the MCP bridge setup this page builds on
+- [Face Recognition with MCP](/face_regonition_with_mcp) — the device-level walkthrough: flashing the firmware, standing up a Hailo-accelerated recognition service, and managing the face database
 - [MCP Endpoint Setup Guide](/mcp_endpoint) — creating and managing MCP endpoints
 - [Model Context Protocol](https://github.com/modelcontextprotocol) — protocol specification
 
