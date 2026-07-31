@@ -105,13 +105,14 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
 
 **Bateria**
 
-|Item|Parâmetro|
+|Item|Parâmetro|s
 | :- | :- |
-|**Capacidade da bateria**|Bateria de lítio recarregável, 1100mAh|
-|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente|
+|**Capacidade da bateria**|Bateria LCD recarregável, 1100mAh|
+|**Monitoramento do nível da bateria**|Envio periódico do nível da bateria|
 |**Protocolo de carregamento**|USB Type-C|
-|**Entrada de energia do dispositivo**|5V, 0,55A|
-|**Entrada de energia da bateria**|4,4V, 0,22A|
+|**Entrada de alimentação do dispositivo**|5V, 0.55A|
+|**Entrada de alimentação da bateria**|4.4V, 0.22A|
+|**Tensão de corte com carga completa**|4.37V|
 |**Limite de temperatura de carregamento**|5 a +45℃|
 
 O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a serem lançados no futuro serão equipados com sensores adicionais (sensores de 3 eixos, magnetômetros de seis eixos etc.).
@@ -360,7 +361,15 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
 
 ## Suporte Técnico e Discussão sobre o Produto
 
-<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
     <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
