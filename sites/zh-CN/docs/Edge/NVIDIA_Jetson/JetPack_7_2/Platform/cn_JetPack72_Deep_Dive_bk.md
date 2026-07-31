@@ -8,14 +8,14 @@ keywords:
   - 边缘 AI
   - 大语言模型
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/-/1-e26020301-recomputer-jetson-agx-orin_-developer-kit-gmsl-bundle.jpg
-slug: /jetpack72_deep_dive
+slug: /jetpack72_deep_dive_bk
 sku: E26020301
 last_update:
   date: 06/11/2026
   author: Dayu
 createdAt: '2026-06-11'
 updatedAt: '2026-06-12'
-url: https://wiki.seeedstudio.com/cn/jetpack72_deep_dive/
+url: https://wiki.seeedstudio.com/cn/jetpack72_deep_dive_bk/
 ---
 
 # JetPack 7.2 深度解析：Jetson AGX Orin 推理发生了哪些变化？
@@ -36,11 +36,11 @@ Seeed 使用的测试平台是 reComputer Jetson AGX Orin Developer Kit GMSL Bun
 
 ## 常见问题
 
-#### Q1: JetPack 7.2 对 Jetson 用户的主要变化是什么？
+#### Q1: 对 Jetson 用户来说，JetPack 7.2 的主要变化是什么？
 
-JetPack 7.2 通过更新的 Jetson Linux 基础、Ubuntu 24.04、CUDA 13、更新的 AI 运行时组件，以及在内存效率和 Agentic AI 工作流方面的平台级改进，推动了 Jetson 软件栈的升级。
+JetPack 7.2 通过更新的 Jetson Linux 基础、Ubuntu 24.04、CUDA 13、更新的 AI 运行时组件，以及在内存效率和 Agentic AI 工作流方面的平台级改进，将 Jetson 软件栈向前推进了一步。
 
-对于 Jetson AGX Orin 32GB 用户，其中一个最重要的变化是 Seeed 测试中使用的新高性能功耗模式。当载板的供电和散热设计能够支撑时，该模式允许同一模组以更高的 GPU 频率运行，并提供更高的 AI 吞吐量。
+对于 Jetson AGX Orin 32GB 用户来说，其中一个最重要的变化是 Seeed 测试中使用的新高性能功耗模式，在载板供电和散热设计能够支持的前提下，它允许同一模块以更高的 GPU 频率运行，并提供更高的 AI 吞吐量。
 
 :::note
 请始终查看 NVIDIA 发布说明和 Seeed BSP 发布说明，以确认目标载板和镜像所支持的精确组件版本。
@@ -52,7 +52,7 @@ Seeed 使用 JetPack 6.2 和 JetPack 7.2 软件环境以及相同的大语言模
 
 | 项目 | JetPack 6.2 测试 | JetPack 7.2 测试 |
 | --- | --- | --- |
-| 模组 | Jetson AGX Orin 32GB | Jetson AGX Orin 32GB |
+| 模块 | Jetson AGX Orin 32GB | Jetson AGX Orin 32GB |
 | 测试设备 | AGX Orin 32GB Developer Kit | reComputer J5011 |
 | Jetson Linux | L4T 36.4.3 | L4T 39.2 |
 | Ubuntu | 22.04 | 24.04 |
@@ -67,7 +67,7 @@ Seeed 使用 JetPack 6.2 和 JetPack 7.2 软件环境以及相同的大语言模
 
 | 指标 | JetPack 6.2 | JetPack 7.2 | 观察到的变化 |
 | --- | --- | --- | --- |
-| 模型加载后内存占用 | 24.6 GB / 30 GB | 14.7 GB / 30 GB | 降低约 40% |
+| 模型加载后内存 | 24.6 GB / 30 GB | 14.7 GB / 30 GB | 降低约 40% |
 | 推理期间 GPU 频率 | 930 MHz | 1.36 GHz | 更高的加速频率 |
 | 提示处理 | 18.2 tokens/s | 25.8 tokens/s | 约快 41.8% |
 | Token 生成 | 4.3 tokens/s | 5.5 tokens/s | 约快 27.9% |
@@ -84,17 +84,17 @@ Seeed 使用 JetPack 6.2 和 JetPack 7.2 软件环境以及相同的大语言模
 
 #### Q5: 我是否应该将 Jetson 设备升级到 JetPack 7.2？
 
-可以先参考下表：
+可以将下表作为起点参考：
 
 | 场景 | 建议 |
 | --- | --- |
-| 新的 Jetson AGX Orin 项目 | 如果所需的 BSP、驱动和应用栈已就绪，可考虑直接从 JetPack 7.2 起步。 |
-| 现有 JetPack 6.x 项目 | 迁移前请验证内核模块、CUDA 依赖、TensorRT 引擎、相机驱动和外设驱动。 |
-| 受内存限制的 LLM 或 VLM 负载 | JetPack 7.2 值得评估，因为测得的内存占用降低有助于运行更大的模型或多服务流水线。 |
+| 新的 Jetson AGX Orin 项目 | 如果所需的 BSP、驱动和应用栈已经可用，可考虑直接从 JetPack 7.2 起步。 |
+| 现有 JetPack 6.x 项目 | 在迁移前验证内核模块、CUDA 依赖、TensorRT 引擎、相机驱动和外设驱动。 |
+| 受内存限制的 LLM 或 VLM 负载 | JetPack 7.2 值得评估，因为测得的内存占用降低可以让更大的模型或多服务流水线更易运行。 |
 | 使用自定义载板的量产系统 | 不要仅通过运行 `apt upgrade` 来升级。请使用经过验证的完整镜像，或 Seeed 官方支持的 OTA 路径。 |
 
 :::caution
-更高的性能模式会提高功耗和散热需求。在启用高功耗模式前，请确认载板、电源适配器、机箱以及散热设计能够持续支撑目标负载。
+更高的性能模式会提高功耗和散热需求。在启用高功耗模式之前，请确认载板、电源适配器、机箱以及散热设计能够持续支撑目标负载。
 :::
 
 #### Q6: 如何使用 Seeed Jetson DevelopTool 升级到 JetPack 7.2？
@@ -105,9 +105,9 @@ Seeed Jetson DevelopTool 为 Jetson 固件下载、烧录、设备连接和 OTA 
   <img width={800} src="https://files.seeedstudio.com/wiki/flash-page.png" />
 </div>
 
-对于 JetPack 6.x 到 JetPack 7.x 这类大版本迁移，除非 Seeed 明确为你的具体产品和源镜像提供了经过验证的 OTA 路径，否则建议执行完整烧录。
+对于 JetPack 6.x 到 JetPack 7.x 这类大版本迁移，除非 Seeed 明确为你的具体产品和源镜像提供了经过验证的 OTA 路径，否则推荐执行完整烧录。
 
-关于 JetPack 7.2 完整的烧录与 OTA 决策流程、DevelopTool 视频、验证命令和迁移检查清单，请参阅 [Flash and OTA Upgrade to JetPack 7.2](/cn/flash_and_ota_jetpack_7.2/)。
+关于 JetPack 7.2 烧录与 OTA 的完整决策流程、DevelopTool 视频、验证命令和迁移检查清单，请参阅 [Flash and OTA Upgrade to JetPack 7.2](/cn/flash_and_ota_jetpack_7.2/)。
 
 通用工作流程：
 
@@ -116,15 +116,15 @@ Seeed Jetson DevelopTool 为 Jetson 固件下载、烧录、设备连接和 OTA 
 3. 选择与 JetPack 7.2 匹配的目标 L4T 或 JetPack 版本。
 4. 通过工具下载并解压 BSP 包。
 5. 将 Jetson 设备置于 Force Recovery Mode。
-6. 在主机 PC 上检测到该设备。
+6. 从主机 PC 上检测到该设备。
 7. 开始烧录并等待设备重启。
 8. 完成首次开机设置并验证系统版本。
 
-有关该工具的更多信息，请参阅 [Seeed Jetson DevelopTool](https://github.com/Seeed-Projects/Seeed-Jetson-DevelopTool)。
+有关该工具的更多详情，请参阅 [Seeed Jetson DevelopTool](https://github.com/Seeed-Projects/Seeed-Jetson-DevelopTool)。
 
 #### Q7: 升级后我应该验证哪些内容？
 
-在烧录或升级完成后，在运行生产负载之前，请验证以下项目：
+在烧录或升级完成后，在运行生产负载之前请验证以下项目：
 
 - JetPack、L4T、CUDA、cuDNN 和 TensorRT 版本。
 - 负载下的 GPU 频率、电源模式和散热行为。
@@ -142,7 +142,7 @@ Seeed Jetson DevelopTool 为 Jetson 固件下载、烧录、设备连接和 OTA 
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
