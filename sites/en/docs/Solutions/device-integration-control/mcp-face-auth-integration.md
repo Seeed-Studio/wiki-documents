@@ -61,7 +61,7 @@ The device solves the second problem. SenseCAP Watcher carries a vision co-proce
 The recognition can run in two places, and choosing between them is the main decision this page helps you make.
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/excalidraw-architecture.png" alt="MCP integration architecture"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/mcp-face-architecture.png" alt="Watcher captures voice and face, SenseCraft routes the MCP call, your MCP server applies the face gate before reaching your backend"/>
 </div>
 
 ## Features
