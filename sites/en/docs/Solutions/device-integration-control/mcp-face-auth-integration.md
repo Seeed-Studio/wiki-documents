@@ -1,6 +1,6 @@
 ---
-description: Build an MCP server for your own warehouse or business platform using our open-source implementation as the reference, and use the device's face recognition to verify who performed each operation.
-title: Build an MCP Server for Your Platform, with Face-Verified Operations
+description: Add face verification to voice-controlled operations on your own warehouse or business platform, so every command is attributed to the operator the camera recognized rather than the name that was spoken.
+title: Bring Voice AI to Your Business System with Face Verification
 keywords:
   - MCP
   - Face Recognition
