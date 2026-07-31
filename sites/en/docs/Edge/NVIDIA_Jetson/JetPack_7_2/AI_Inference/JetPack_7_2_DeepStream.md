@@ -358,3 +358,17 @@ Extend the [Industrial Vision Monitoring on JetPack 7.2](/industrial_vision_moni
 - [DeepStream Agentic Skills Reference](https://docs.nvidia.com/metropolis/deepstream/9.1/text/AgenticSkillsReference.html)
 - [Inference Builder MCP Server](https://docs.nvidia.com/metropolis/deepstream/9.1/text/InferenceBuilder_MCP_Server.html)
 - [LLM/VLM Inference Plugin](https://docs.nvidia.com/metropolis/deepstream/9.1/text/DS_plugin_gst-nvvllmvlm.html)
+
+## Tech Support & Product Discussion
+
+Thank you for choosing Seeed Studio products! For technical support and product discussion, please use the following channels:
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

@@ -261,3 +261,17 @@ The [JetPack 7.2 Deep Dive](/jetpack72_deep_dive_bk/) recorded memory after load
 - Restore the pristine BSP source and reflash if a carveout or device-tree change causes boot or peripheral failures.
 - Revert SWIOTLB changes if DMA errors appear or usage approaches the configured pool.
 - Keep the last known-good TensorRT engine and model configuration until the optimized configuration passes acceptance testing.
+
+## Tech Support & Product Discussion
+
+Thank you for choosing Seeed Studio products! For technical support and product discussion, please use the following channels:
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

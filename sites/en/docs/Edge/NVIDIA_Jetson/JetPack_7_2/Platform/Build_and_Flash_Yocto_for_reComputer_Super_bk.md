@@ -367,3 +367,15 @@ At this point, the host is waiting for the Jetson initrd to expose a temporary U
 - [Seeed tegra-demo-distro repository](https://github.com/jjjadand/seeed-tegra-demo-distro)
 - [Yocto Project Quick Build](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)
 - [OE4T meta-tegra documentation](https://oe4t.github.io/)
+
+Thank you for choosing Seeed Studio products! For technical support and product discussion, please use the following channels:
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
