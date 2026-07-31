@@ -12,7 +12,7 @@ sidebar_position: 1
 slug: /getting_started_with_ee02
 sku: 100067144
 last_update:
-  date: 2025-12-20
+  date: 12/20/2025
   author: Allen
 createdAt: '2025-12-19'
 updatedAt: '2026-04-27'
