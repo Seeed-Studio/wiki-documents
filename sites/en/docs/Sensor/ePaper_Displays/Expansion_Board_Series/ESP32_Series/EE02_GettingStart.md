@@ -65,13 +65,13 @@ Similar to its sibling, the EE04 (designed for smaller screens), the EE02 offers
 
 | Item | Description |
 | :--- | :--- |
-| **Controller** | ESP32-S3 |
+| **Controller** | XIAO ESP32-S3 Plus |
 | **Supported Screen Size** | 13.3-inch E-ink Display |
 | **Connectivity** | Wi-Fi 802.11 b/g/n, Bluetooth 5.0 (LE) |
 | **Power Supply** | 5V via USB Type-C |
 | **Operating Voltage** | 3.3V |
 | **Interface** | USB Type-C, FPC connector for E-ink |
-| **Dimensions** | 80x40 mm |
+| **Dimensions** | 80x43 mm |
 | **Operating Temperature** | -20°C to 70°C |
 
 ### Application
