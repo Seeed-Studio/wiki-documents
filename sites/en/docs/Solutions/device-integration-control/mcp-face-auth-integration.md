@@ -36,7 +36,7 @@ This guide is for solution providers and software vendors who already run their 
 You do not adopt our platform to do this. You build an **MCP server for your own system**, and the reference for how to build it is our warehouse platform, which is open source:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://github.com/suharvest/warehouse_system" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📦 warehouse_system on GitHub</font></span></strong></a>
+  <a class="get_one_now_item" href="https://github.com/suharvest/warehouse_system" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub 🖱️</font></span></strong></a>
 </div>
 
 Read it, run it, copy the parts you need. It is a complete working example of everything described below: the MCP tool layer, the face verification gate, the enrollment store, and the admin screens that configure them.
@@ -134,7 +134,11 @@ You do not have to read code to find out whether this fits your product. There a
 
 **Use the hosted instance.** Register yourself at [warehouse.seeed.cn](https://warehouse.seeed.cn/) and you are talking to a running deployment. Pair a Watcher with it and you can exercise the whole voice and face flow without installing anything. This is the fastest way to see what your own product would feel like.
 
-**Deploy the reference design.** The [Smart Warehouse reference design](https://www.seeed.cc/solutions/reference-designs/smart_warehouse) packages the same system for one-click deployment, so you get a private instance to experiment against.
+**Deploy the reference design.** The Smart Warehouse reference design packages the same system for one-click deployment, so you get a private instance to experiment against.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/smart_warehouse" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Reference Design 🖱️</font></span></strong></a>
+</div>
 
 **Run it yourself.** When you are ready to look inside and start adapting:
 
@@ -143,10 +147,6 @@ git clone https://github.com/suharvest/warehouse_system.git
 cd warehouse_system
 docker-compose -f docker-compose.prod.yml up -d
 ```
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/smart_warehouse" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 🚀 Smart Warehouse Reference Design</font></span></strong></a>
-</div>
 
 :::note Face verification needs a private deployment
 Face recognition is off by default in cloud and hosted builds and is enabled per deployment. If you are evaluating the face flow specifically, plan on the reference design or a self-hosted instance rather than a shared one.
@@ -210,7 +210,7 @@ Constraints that come from the voice context, all of them learned the hard way:
 The full bridge walkthrough — obtaining an MCP endpoint from SenseCraft, creating an API key, starting the bridge and testing with voice — is on the companion page:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/mcp_external_system_integration/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Bring Voice AI to Your Business System</font></span></strong></a>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/mcp_external_system_integration/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> MCP Setup Guide 🖱️</font></span></strong></a>
 </div>
 
 ## Part 2 — Choose Your Verification Path
