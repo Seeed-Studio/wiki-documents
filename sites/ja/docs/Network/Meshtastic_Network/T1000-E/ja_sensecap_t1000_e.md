@@ -62,7 +62,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ### デバイスの電源を入れる
 
-ボタンを 1 回押してデバイスの電源を入れると、上昇するメロディーが鳴り、LED ライトが約 1 秒間点灯します。
+ボタンを 1 回押してデバイスの電源を入れます。上昇するメロディーが鳴り、LED ライトが約 1 秒間点灯します。
 
 :::tip
 ボタンを押してもデバイスが反応しない場合は、まず充電してください。急速充電器は使用しないでください。
@@ -102,7 +102,7 @@ import TabItem from '@theme/TabItem';
 
 ### LoRa を設定する
 
-メッシュ上で通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、お住まいの地域に合わせて設定する必要があります。
+メッシュ上で通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯を制御し、お住まいの地域に合わせて設定する必要があります。
 
 <Tabs>
 <TabItem value="ios" label="IOS アプリ">
@@ -131,7 +131,7 @@ import TabItem from '@theme/TabItem';
 **EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスで LoRa リージョンを設定したら、ニーズに合わせて任意の [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) を続けて構成できます。
+デバイスで LoRa リージョンを設定したので、ニーズに合わせて任意の [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) を続けて構成できます。
 
 ## 詳細設定
 
@@ -141,16 +141,16 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 
   ステップ 1: Web サイトを開く
 
-[ここをクリック](https://client.meshtastic.org/messages/broadcast/0)して Web サイトに移動します。
+[ここをクリック](https://client.meshtastic.org/messages/broadcast/0) して Web サイトに移動します。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   ステップ 2: 新しいデバイスを追加する
 
-    "+ New Connection" をクリックします。 
+    「+ New Connection」をクリックします。 
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    接続方法は 2 通りあります。お好みの方法を選択できます。
+    接続方法は 2 通りあります。お好みの方法を選択してください。
 
  方法 1: Bluetooth 経由
 
@@ -162,7 +162,7 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
     シリアル方法を選択します。デバイスマネージャーを開き、デバイスがどのポートに接続されているかを確認します。ポップアップウィンドウでそのポートを選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    デバイスがリストに表示されます。クリックして接続します。接続に成功すると、Web サイト上でデバイスのステータスを直接確認できます。
+    デバイスが一覧に表示されます。クリックして接続します。接続が成功すると、Web サイト上でデバイスのステータスを直接確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
@@ -198,7 +198,7 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 
 ||タイプ|出力 PIN|
 |-|-|-|
-|Buzzer|PWM ブザー|25|
+|ブザー|PWM ブザー|25|
 |LED|-|24|
 
 <Tabs>
@@ -219,7 +219,7 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 </TabItem>
 </Tabs>
 
-詳細については [External Notification Config](https://meshtastic.org/docs/configuration/module/external-notification/) を確認してください。
+詳細については、[External Notification Config](https://meshtastic.org/docs/configuration/module/external-notification/) を確認してください。
 
 :::tip
 デバイス設定を更新した後、デバイスは再起動します。これには少し時間がかかる場合があります。
@@ -250,14 +250,14 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 ```
 </TabItem>
 
-<TabItem value="14" label="スーパーマリオ テーマ（ショート）">
+<TabItem value="14" label="スーパーマリオのテーマ（ショート）">
 
 ```plain
 24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
 ```
 </TabItem>
 
-<TabItem value="15" label="マリオ コイン">
+<TabItem value="15" label="マリオコイン">
 
 ```plain
 24:d=8,o=6,b=200:b,e7
@@ -271,7 +271,7 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 ```
 </TabItem>
 
-<TabItem value="17" label="マリオ パワーアップ">
+<TabItem value="17" label="マリオパワーアップ">
 
 ```plain
 powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
@@ -289,7 +289,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### GPS を設定する
 
-GPS を有効にしてください。より最新の位置情報を取得するために、更新間隔とブロードキャスト間隔を調整できます。
+GPS を有効にしてください。更新間隔とブロードキャスト間隔を調整して、より最新の位置情報を取得できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
@@ -334,28 +334,28 @@ T1000-E ファームウェア以外のファームウェアを絶対に書き込
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Flash%20Firmware.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 :::caution note
-ファームウェアを書き込む前に、`T1000-E for Meshtastic` を購入したことを必ず確認してください。Meshtastic をサポートしていない他のトラッカーモデルにはファームウェアを書き込まないでください。また、ファームウェアの更新に `don't use NRF-OTA` を使用しないでください。デバイスが完全に動作しなくなる可能性があります。
+ファームウェアを書き込む前に、`T1000-E for Meshtastic` を購入したことを必ず確認してください。Meshtastic をサポートしていない他のトラッカーモデルにはファームウェアを書き込まないでください。また、ファームウェアの更新に `NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
 :::
 #### ステップ 1: DFU モードに入る
 
 <Tabs>
-<TabItem value="method1" label="方法 1">
+<TabItem value="method1" label="Method 1">
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。
 
-デバイスを PC に接続し、デバイスとして `Seeed Card Tracker T1000-E` を選択して最新のファームウェアを選び、`Flash` をクリックします。
+デバイスを PC に接続し、デバイスを `Seeed Card Tracker T1000-E` に設定して最新のファームウェアを選択し、`Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-2.png" alt="pir" width={800} height="auto" /></p>
 
-`Enter DFU Mode` をクリックすると、`T1000-E xxx` という名前のシリアルポートが表示されます。それをクリックして接続すると、緑色の LED が点灯し、`T1000-E` という名前のドライバが表示されるはずです。
+`Enter DFU Mode` をクリックすると、`T1000-E xxx` という名前のシリアルポートが表示されます。それをクリックして接続すると、緑色の LED が点灯し、`T1000-E` という名前のドライブが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-serial.png" alt="pir" width={800} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="method2" label="方法 2">
+<TabItem value="method2" label="Method 2">
 
-USB ケーブルを PC に接続し、デバイスボタンを押し続けたまま、**素早く** 充電ケーブルを 2 回接続します。緑色の LED が点灯し、`T1000-E` という名前のドライバが表示されるはずです。
+USB ケーブルを PC に接続し、デバイスボタンを押し続けたまま、**素早く** 充電ケーブルを 2 回接続します。緑色の LED が点灯し、`T1000-E` という名前のドライブが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -394,7 +394,7 @@ UF2 ファイルを DFU ドライブにコピーします。ファイルのコ�
 
  [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。<br/>
 
- `Open Serial Monitor` をクリックし、デバイスを PC に接続してシリアルログを確認し、キーワード `using nodenum` を探します。
+ `Open Serial Monitor` をクリックし、デバイスを PC に接続してシリアルログを確認し、`using nodenum` というキーワードを探します。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -408,15 +408,15 @@ UF2 ファイルを DFU ドライブにコピーします。ファイルのコ�
 
 ### デバイスの電源が入らない
 
-- LED インジケータとブザーが動作していない場合、デバイスの電源が切れているように見えることがあります。上記の手順を実行する前に、`check the following parameters` を確認することをお勧めします：
+- LED インジケータとブザーが動作していない場合、デバイスの電源が切れているように見えることがあります。上記の手順を実行する前に、`以下のパラメータを確認する` ことをお勧めします：
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={600} height="auto" /></p>
 
-- 動作確認済みの USB ケーブルを使用して、バッテリーにシステムを起動するのに十分な電力が供給されるように、1〜2 時間連続して `charge the device` してください。
+- 動作確認済みの USB ケーブルを使用して、バッテリーにシステムを起動するのに十分な電力が供給されるように、1〜2 時間連続して `デバイスを充電` してください。
 
-- 充電後もデバイスが反応しない場合は、次の手順で `perform a hard reset` を行ってください。USB ケーブルを抜きます。ボタンを押し続けたまま、ボタンを押した状態で USB ケーブルを接続します。約 3 秒間押し続けてから離します。これによりシステムが強制的にリセットされます。
+- 充電後もデバイスが反応しない場合は、次の手順で `ハードリセットを実行` してください。USB ケーブルを抜きます。ボタンを押し続けたまま、ボタンを押したままで USB ケーブルを接続します。約 3 秒間押し続けてから離します。これによりシステムが強制的にリセットされます。
 
- - それでも解決しない場合は、`re-install the bootloader` を試してください。USB ケーブルをコンピュータに接続します。デバイスボタンを押し続けたまま、デバイスをコンピュータに接続し、PC にディスクが表示されるかどうかを確認します。表示された場合は、[re-install the bootloader](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-3-flash-firmware) を行ってください。
+ - それでも解決しない場合は、`ブートローダーを再インストール` してみてください。USB ケーブルをコンピュータに接続します。デバイスボタンを押し続けたまま、デバイスをコンピュータに接続し、PC にディスクが表示されるかどうか確認します。表示された場合は、[ブートローダーを再インストール](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase) してください。
 
 ### デバイスがブートループに陥る
 
@@ -455,7 +455,7 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 </div>
 
 :::danger note
-ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み中に **絶対に** 取り外さないでください。
+ブートローダーを書き込んでいる間は、ケーブル接続が安定していることを確認し、書き込みプロセス中に **絶対に** 取り外さないでください。
 :::
 
 **ステップ 1: Adafruit-nrfutil のインストール**
@@ -482,7 +482,7 @@ python -m pip --version
 その後、"Python xxx" と "pip xxx" が表示されるはずです。表示されない場合は、Python を再インストールしてみてください。
 
 <Tabs>
-<TabItem value="pypi" label="PyPI からインストール">
+<TabItem value="pypi" label="Installing from PyPI">
 
 これは推奨される方法で、最新バージョンをインストールします：
 
@@ -496,7 +496,7 @@ pip3 install --user adafruit-nrfutil
 python -m pip show adafruit-nrfutil
 ```
 
-これがインストール場所です：
+これはインストール場所です：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
@@ -506,9 +506,9 @@ Windows ユーザーは、パスを手動で追加する必要がある場合が
 
 </TabItem>
 
-<TabItem value="sou" label="ソースからインストール">
+<TabItem value="sou" label="Installing from Source">
 
-PyPi でのインストールに問題がある場合や、ツールを変更したい場合はこの方法を使用します。まずこのリポジトリをクローンし、そのフォルダに移動します。
+PyPi でのインストールに問題がある場合やツールを変更したい場合は、この方法を使用します。まずこのリポジトリをクローンし、そのフォルダに移動します。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -531,7 +531,7 @@ pip3 install -r --user requirements.txt
 python3 setup.py install
 ```
 
-システムディレクトリにインストールしたい場合（一般的には推奨されません）：
+システムディレクトリにインストールしたい場合（一般的には非推奨）：
 
 ```
 sudo pip3 install -r requirements.txt
@@ -554,23 +554,23 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 </TabItem>
 </Tabs>
 
-**ステップ2：ポート番号を確認する**
+**ステップ2: ポート番号を確認する**
 
 デバイスを PC に接続し、ポート番号を確認します。
 
 Windows ユーザーの場合は、デバイスマネージャーを開き「ポート」に移動します。デバイス接続後に新しく表示されたポート番号が、そのデバイスのポート番号です。
 
-Mac ユーザーの場合、例えば：
+Mac ユーザーの場合、例えば次のようになります：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-Windows ユーザーの場合、例えば：
+Windows ユーザーの場合、例えば次のようになります：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-**ステップ3：ブートローダーを書き込む**
+**ステップ3: ブートローダーを書き込む**
 
-ターミナルまたはコマンドプロンプトで、ダウンロードしたブートローダー zip パッケージがあるディレクトリに移動し、以下のコマンドを実行します。その際、デバイスに合った正しいポートに置き換えてください：
+ターミナルまたはコマンドプロンプトで、ダウンロードしたブートローダー zip パッケージがあるディレクトリに移動し、以下のコマンドを実行します。その際、デバイスに合った正しいポートに置き換えてください。
 
-- **Windows の場合**：
+- **Windows の場合**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
@@ -580,9 +580,9 @@ COMXX を実際の COM 番号に変更してください。例えば、デバイ
 
 `adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- このコマンドを入力した後、一部のデバイスではポート番号が変わることがあります。インストールに失敗した場合は、再度ポート番号を確認してください。
+ このコマンドを入力すると、一部のデバイスではポート番号が変わることがあります。インストールに失敗した場合は、再度ポート番号を確認してください。
 
-- **その他の OS の場合**：
+- **その他の OS の場合**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
@@ -590,7 +590,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-上記の手順を完了したら、この[ステップ](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#flash-the-application-firmware)に従ってアプリケーションファームウェアを書き込むことができます。
+上記の手順が完了したら、この[手順](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#flash-the-application-firmware)に従ってアプリケーションファームウェアを書き込むことができます。
 
 **2) デバイスが DFU モードに入れないが、シリアルポートは検出できる場合**
 
@@ -599,7 +599,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 - ボーレートを `1200` に設定します。
 
 - デバイスを接続します。
-   接続するときに LED が一瞬点滅します。LED が点灯したままになるまでこれを繰り返してください。これはデバイスが DFU モードに戻れたことを意味します。その後、[ブートローダーの書き込み](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#flash-the-bootloader) -> [フラッシュの消去](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase) -> [ファームウェアの書き込み](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-3-flash-firmware) を行います。
+   接続するとライトが一瞬点滅します。ライトが点灯したままになるまでこれを繰り返してください。ライトが点灯したままになれば、デバイスは DFU モードに戻ることができたという意味です。その後、[ブートローダーの書き込み](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#flash-the-bootloader) -> [フラッシュの消去](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase) -> [ファームウェアの書き込み](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-3-flash-firmware) を行ってください。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -607,11 +607,11 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 **3) デバイスが DFU モードに入れず、シリアルポートも表示されない場合**
 
-- デバイスボタンを押し続けたまま充電ケーブルを接続します。PC にディスクが表示された後、シリアルポートが見える場合があります。
+- デバイスボタンを押し続けたまま、充電ケーブルを接続します。PC にディスクが表示されたら、シリアルポートが見える場合があります。
 
 - それでもうまくいかない場合は、充電ケーブルを外し、バッテリーが完全に放電するまで数日間デバイスを放置してから、再度充電ケーブルを接続し、ペアリングを試してください。
 
-**4) 上記のいずれの手順でも解決しない場合は、テクニカルサポート（support@sensecapmx.com）にお問い合わせください。**
+**4) 上記のいずれの手順でも解決しない場合は、テクニカルサポート support@sensecapmx.com までご連絡ください。**
 
 ### ファームウェアの書き込みに失敗する
 
@@ -619,7 +619,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- デバイスが DFU モードになっているか確認してください。DFU モード中は緑色の LED が点灯し続けます。
+ デバイスが DFU モードになっているか確認してください。DFU モード中は緑色のライトが点灯し続けます。
 
 - **シリアルポートを開けない**
 
@@ -662,7 +662,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 #### トラブルシューティング
 
- [ここをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase)してフラッシュ消去を実行します。
+ [ここをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase)してフラッシュ消去を実行してください。
 
 ### Factory Reset
 
@@ -679,7 +679,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 NodeDB は、現在の Mesh ネットワークで検出されたノードに関する情報を保存するローカルデータベースです。特定のノードと通信できない状況に遭遇した場合、そのノードに対して NodeDB に古い情報が保存されている可能性があります。更新する必要があります。
 
-アプリを開いて対象デバイスに接続します。**Settings**->**Device**->**Device Config**->**Reset NodeDB** に移動します。
+アプリを開いて対象デバイスに接続します。**Settings**->**Device**->**Device Config**->**Reset NodeDB** に進みます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDBmerge.png" alt="Device settings and Reset NodeDB button in the app" width={600} height="auto" /></p>
 
@@ -691,14 +691,14 @@ NodeDB は、現在の Mesh ネットワークで検出されたノードに関�
 
 #### 秘密鍵の再生成
 
-2 つのノードが互いに通信できるようにするには、お互いの秘密鍵を知っている必要があります。あるノードがプライベートメッセージの送信に失敗し続ける場合は、そのノードの秘密鍵を再生成してみてください。
+2 つのノードが互いに通信できるようにするには、お互いの秘密鍵を知っている必要があります。あるノードがプライベートメッセージ送信に失敗し続ける場合は、そのノードの秘密鍵を再生成してみてください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
-設定を有効にするために、不具合のあるデバイスを再起動してください。鍵を再生成した後は、他のデバイスがそのノードに再接続する必要があります。そのため、他のデバイスのノードリストからそのノードを削除しておくとよいでしょう。
+不具合のあるデバイスを再起動して設定を有効にします。鍵を再生成した後は、他のデバイスがそのノードに再接続する必要があります。そのため、他のデバイスのノードリストからそのノードを削除しておくとよいでしょう。
 
 :::note
-他の LoRa チップとの通信に関する詳細は、こちらを参照してください：[link](https://meshtastic.org/docs/hardware/devices/seeed-studio/sensecap/card-tracker/)
+他の LoRa チップとの通信に関する詳細は、こちらを参照してください: [link](https://meshtastic.org/docs/hardware/devices/seeed-studio/sensecap/card-tracker/)
 
 :::
 
@@ -720,23 +720,25 @@ NodeDB は、現在の Mesh ネットワークで検出されたノードに関�
 - [SenseCAP T1000 Tracker データシート](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
-<JetsonLeadQuote
-  buttonText="Request Quote of Customization"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="Request Quote for XIAO"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
-
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お客様それぞれの好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>

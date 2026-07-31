@@ -107,6 +107,8 @@ Seeed Jetson DevelopTool provides a guided workflow for Jetson firmware download
 
 For a major-version migration such as JetPack 6.x to JetPack 7.x, a full flash is recommended unless Seeed explicitly provides a validated OTA path for your exact product and source image.
 
+For the complete JetPack 7.2 flashing and OTA decision flow, DevelopTool video, verification commands, and migration checklist, see [Flash and OTA Upgrade to JetPack 7.2](/flash_and_ota_jetpack_7.2/).
+
 General workflow:
 
 1. Install and open Seeed Jetson DevelopTool.

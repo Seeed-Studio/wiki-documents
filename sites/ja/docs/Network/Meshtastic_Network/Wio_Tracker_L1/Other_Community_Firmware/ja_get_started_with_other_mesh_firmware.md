@@ -1,6 +1,6 @@
 ---
-description: Web USB またはドラッグ＆ドロップで Wio Tracker L1 Pro に MeshCore ファームウェアを書き込む方法と、LoRa リージョン、GPS、メッセージ送信のためのアプリ設定ガイド。
-title: Wio Tracker L1 Pro で MeshCore を使い始める
+description: Web USB またはドラッグ＆ドロップで Wio Tracker L1 Pro に MeshCore ファームウェアを書き込み、LoRa リージョン、GPS、メッセージ送信のためのアプリ設定を行うためのガイドです。
+title: Wio Tracker L1 Pro で MeshCore をはじめよう
 keywords:
   - Meshcore
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
@@ -11,7 +11,7 @@ last_update:
   date: 3/4/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-04-20'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/
 ---
 
@@ -41,7 +41,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1ProMeshcoreSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
+`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。ほかのファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -65,7 +65,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 `Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから `Flash` をクリックし、DFU モードに正常に入っていることを確認してください。
 
-進行バーが最後まで埋まったら、Flash が完了したことを示します。その後、デバイスは自動的に再起動します。
+進行バーが最後まで埋まれば、Flash が完了したことを示します。その後、デバイスは自動的に再起動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
@@ -83,7 +83,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1ProMeshcoreSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
+`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。ほかのファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -101,7 +101,7 @@ RST ボタンをダブルクリックして DFU モードに手動で入りま�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-ファームウェアの書き込みが正常に完了するとディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
+ファームウェアの書き込みが正常に完了すると、そのディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
 
 #### ファームウェアの書き込み
 
@@ -121,7 +121,7 @@ RST ボタンをダブルクリックして DFU モードに手動で入りま�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1FlashDragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-ファームウェアの書き込みが正常に完了するとディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは NOT 自動的には再起動しません。
+ファームウェアの書き込みが正常に完了すると、そのディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
 
 ## 設定
 
@@ -175,7 +175,7 @@ Google Store または Apple Store からダウンロードします。または
 
 ### LoRa の設定
 
-メッシュ通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯を制御し、あなたの地域に合わせて設定する必要があります。
+メッシュ通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯を制御し、お住まいの地域に合わせて設定する必要があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
 
@@ -189,13 +189,13 @@ Google Store または Apple Store からダウンロードします。または
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868 MHz|869.4 - 869.65|10|27|
 
-これでデバイスの LoRa リージョンを設定できたので、必要に応じて任意の[LoRa パラメータ](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-一般)の設定を続けることができます。
+これでデバイスの LoRa リージョンを設定できたので、必要に応じて任意の[LoRa パラメータ](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general)の設定を続けることができます。
 
 ### GPS の設定
 
 GPS を使用したい場合は、有効に設定してください。
 
-APP の `Position Settings` に移動して GPS を有効にできます。または、デバイスの GPS ページに移動し、4 方向ジョイスティックを押して GPS をオンまたはオフにすることもできます。
+APP の `Position Settings` に移動して GPS を有効にできます。または、デバイスの GPS ページに移動し、四方向ジョイスティックを押して GPS をオンまたはオフにすることもできます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/GPSSetting.png" alt="pir" width={500} height="auto" /></p>
 
@@ -213,9 +213,9 @@ APP の `Position Settings` に移動して GPS を有効にできます。ま�
 
 ### アドバート
 
-MeshCoreでは、なりすまし防止のために署名された、名前・位置情報・公開暗号鍵を手動でブロードキャストできます。アドバートボタンをクリックすると、そのデータがLoRa経由でブロードキャストされます。MeshCoreではこれをアドバートと呼びます。アドバートには「ゼロホップ」と「フラッド」の2つの方法があります。
+MeshCoreでは、なりすまし防止のために署名された、名前・位置情報・公開暗号鍵を手動でブロードキャストできます。アドバートボタンをクリックすると、そのデータをLoRa経由でブロードキャストします。MeshCoreではこれをアドバートと呼びます。アドバートには「ゼロホップ」と「フラッド」の2つの方法があります。
 
-- **ゼロホップ** は、あなたのアドバートが届く範囲の相手に一度だけブロードキャストされ、それで終了することを意味します。
+- **ゼロホップ** は、あなたのアドバートが届く範囲のすべての相手に一度だけブロードキャストされ、それで終了することを意味します。
 - **フラッド** は、一度ブロードキャストされた後、それを受信したすべてのリピーターによって繰り返し送信されることを意味します。
 
 アプリ上でアドバートを送信できます。また、デバイスのアドバートページから直接アドバートを送信することもできます。
@@ -224,11 +224,11 @@ MeshCoreでは、なりすまし防止のために署名された、名前・位
 
 ### 公開メッセージ
 
-LoRaを設定した後、プライマリチャンネルでメッセージを送信できます。同じ周波数帯にいる近くの人は全員、そのメッセージを受信します。
+LoRaを設定した後、プライマリチャンネルでメッセージを送信できます。同じ周波数帯にいる近くのすべての人がそれを受信します。
 
 ### プライベートメッセージ
 
-2台のデバイスは、互いのアドバートを両方とも受信したときにのみ接続を確立します。
+2台のデバイスは、お互いのアドバートを両方とも受信したときにのみ接続を確立します。
 
 ## FAQ
 
@@ -239,14 +239,14 @@ LoRaを設定した後、プライマリチャンネルでメッセージを送�
 デバイスが反応せず、LEDも点灯せず、アプリとペアリングできません。独自のファームウェアを書き込んだ後にデバイスが完全に動作しなくなった場合は、ブートローダーを再インストールしてみてください。
 
 :::danger note
-ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で**絶対に**取り外さないでください。
+ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で**絶対に**切断しないでください。
 :::
 
 - ステップ1: [ここをクリックしてブートローダーをダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 
 - ステップ2: DFUモードに入る
 
-  RSTボタンをダブルクリックしてDFUモードに入ります。"Tracker L1" という名前のディスクが表示されます。
+  RSTボタンをダブルクリックしてDFUモードに入ります。ディスク名「Tracker L1」が表示されます。
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
 
@@ -273,17 +273,17 @@ LoRaを設定した後、プライマリチャンネルでメッセージを送�
 - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。
 - シリアルポートログがしばらく動作した後に停止します。
 
- これは、メッセージ送信プロセスが完了していない、設定中であるなど、以下の状態にあるときにデバイスを手動で強制的に再起動または電源オフしたことが原因である可能性があります。
+ これは、メッセージ送信プロセスが完了していない、設定中であるなど、以下の状態のときにデバイスを手動で強制的に再起動または電源オフしたことが原因の可能性があります。
 
 #### トラブルシューティング
 
 [Flash Erase](https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/#フラッシュ-イレース-1) でファームウェアを消去します。
 
-### 工場出荷時設定へのリセット
+### 工場出荷時リセット
 
-デフォルト設定に戻したい場合は、ファクトリーリセットを実行できます。ファクトリーリセットを行う方法は2つあります。
+デフォルト設定に戻したい場合は、工場出荷時リセットを実行できます。工場出荷時リセットを行う方法は2つあります。
 
-- [Flash Erase](https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/#フラッシュ-イレース-1) でファームウェアを消去します。
+- [Flash Erase](https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/#フラッシュ-イレース-1) でファームウェアを消去する
 
 - アプリ上の `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FactoryReset.jpg" alt="pir" width={400} height="auto" /></p>
@@ -294,11 +294,11 @@ LoRaを設定した後、プライマリチャンネルでメッセージを送�
 
 - **RSSI** は、デバイスとその周囲の環境の両方によって決まります。通常のデバイスは、一般的に -110 dBm より高い値で動作します。RSSI が -115 dBm 未満のデバイスは、性能が低いと見なされます。
 
-    最良の信号効果を得るために、開けた障害物の少ない場所で、干渉が最小限となる環境でデバイスを使用してください。
+    最良の信号効果を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
 
 ### 対応アンテナ
 
-L1 Pro用のアンテナ交換が必要な場合は、[click here](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) から入手できます。
+L1 Pro用のアンテナ交換が必要な場合は、[ここをクリック](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)して入手してください。
 
 ## リソース
 
@@ -307,7 +307,30 @@ L1 Pro用のアンテナ交換が必要な場合は、[click here](https://www.s
 - [(V2 新しい4方向ジョイスティック) 3Dプリント参照ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [L1 エンクロージャーデザインチャレンジ](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
 - [外形ファイル](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
-- [TELEC認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
-- [FCC認証](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
-- [CE認証](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
-- [消費電力テストとバッテリー寿命計算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+- [TELEC 認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
+- [FCC 認証](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
+- [CE 認証](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
+- [消費電力テストおよびバッテリー寿命計算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

@@ -1,11 +1,11 @@
 ---
-description: 一篇实用教程，讲解如何搭建 Meshtastic 固件源代码环境、编译太阳能节点并烧录固件。
-title: Meshtastic 源代码开发实用教程
+description: 一篇关于搭建 Meshtastic 固件源代码环境、编译太阳能节点并烧录固件的实用教程。
+title: Meshtastic 源代码开发教程
 keywords:
   - Meshtastic
-  - 源代码
+  - Source Code
   - PlatformIO
-  - 太阳能节点
+  - Solar Node
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png
 slug: /meshtastic_source_code_practical_tutorial_solar_node
 sidebar_position: 4
@@ -24,15 +24,15 @@ import TabItem from '@theme/TabItem';
 
 本教程面向刚开始接触 Meshtastic 固件源代码的用户，涵盖 Windows 和 macOS 的常见工作流程。目标很简单：克隆官方仓库，完成一次成功的构建，做一个简单的 UI 修改，并将修改后的固件烧录到设备上进行验证。
 
-如果你已经熟悉 Git、Python 或 PlatformIO，可以跳过对应章节，直接进入上手实战部分。
+如果你已经熟悉 Git、Python 或 PlatformIO，可以跳过对应章节，直接进入上手实践部分。
 
 :::tip
-本指南同时给出了 Windows 和 macOS 的常用命令。大部分截图仍然来自 Windows 环境，但在 macOS 上的整体流程非常相似。
+本指南包含 Windows 和 macOS 的常用命令。大部分截图仍然来自 Windows 环境，但在 macOS 上的整体流程非常相似。
 :::
 
 ## 前置准备
 
-在开始之前，请先准备好以下工具：
+在开始之前，请准备以下工具：
 
 1. Git
 2. Python 3
@@ -48,9 +48,9 @@ import TabItem from '@theme/TabItem';
 
 [Git for Windows](https://git-scm.com/install/windows)
 
-通常在你打开页面后，安装程序会自动开始下载。下载完成后，双击安装程序并按照安装向导进行操作。
+通常在你打开页面时安装程序会自动开始下载。下载完成后，双击安装程序并按照安装向导进行操作。
 
-在安装过程中，最重要的一步是 **调整 PATH 环境变量**。请选择：
+在安装过程中，最重要的一步是**调整 PATH 环境变量**。请选择：
 
 **Git from the command line and also from 3rd-party software**
 
@@ -105,7 +105,7 @@ C:\Program Files\Git\bin
 
 保存后，你仍然需要：
 
-- 关闭 **所有** PowerShell 窗口
+- 关闭**所有** PowerShell 窗口
 - 重新打开 PowerShell
 
 然后运行：
@@ -130,7 +130,7 @@ git --version
 xcode-select --install
 ```
 
-2. 如果还没有安装 Homebrew，请先安装：
+2. 如果还没有安装 Homebrew，请先安装它：
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -142,20 +142,20 @@ xcode-select --install
 brew install git
 ```
 
-4. 查看已安装的版本：
+4. 检查已安装的版本：
 
 ```bash
 git --version
 ```
 
-如果终端已经返回了有效的 Git 版本信息，就不需要再次安装。
+如果终端已经返回了有效的 Git 版本，则无需再次安装。
 
 </TabItem>
 </Tabs>
 
 **配置你的 Git 身份信息**
 
-接下来配置 Git 用户信息。请将示例中的值替换为你自己的姓名和邮箱地址：
+接下来，配置你的 Git 用户信息。将示例值替换为你自己的姓名和邮箱地址：
 
 ```plain
 git config --global user.name "your name"
@@ -184,7 +184,7 @@ winget search --id Python.Python.3.13 --source winget
 winget install -e --id Python.Python.3.13 --source winget
 ```
 
-如果第一条命令可以找到 Python，第二条命令通常就能直接安装。
+如果第一个命令可以找到 Python，第二个命令通常就能直接安装它。
 
 安装完成后，关闭终端并重新打开，然后运行：
 
@@ -201,7 +201,7 @@ pip --version
 
 <TabItem value="macos" label="macOS">
 
-macOS 通常已经自带一个 Python 环境。在安装新版本之前，先检查 `python3` 和 `pip3` 是否已经可用：
+macOS 通常已经自带一个 Python 环境。在安装新版本之前，先检查是否已经可以使用 `python3` 和 `pip3`：
 
 ```bash
 python3 --version
@@ -221,7 +221,7 @@ python3 --version
 pip3 --version
 ```
 
-如果你更习惯使用 `python` 和 `pip`，可以自行设置 shell 别名。但在 macOS 上，使用 `python3` 和 `pip3` 通常更可靠。
+如果你更习惯使用 `python` 和 `pip`，可以自行设置 shell 别名。不过在 macOS 上，使用 `python3` 和 `pip3` 通常更可靠。
 
 </TabItem>
 </Tabs>
@@ -253,7 +253,7 @@ cd firmware
 git submodule update --init
 ```
 
-如果你的项目目录在其他盘符或路径下，请先切换到对应位置。
+如果你的项目目录在其他磁盘或不同路径下，请先切换到对应位置。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image9.png)
 
@@ -274,7 +274,7 @@ cd firmware
 git submodule update --init
 ```
 
-如果 `~/workplace` 还不存在，请先创建：
+如果 `~/workplace` 还不存在，请先创建它：
 
 ```bash
 mkdir -p ~/workplace
@@ -285,15 +285,15 @@ mkdir -p ~/workplace
 </TabItem>
 </Tabs>
 
-仓库准备好之后，你可以继续下面两个实践项目中的任意一个。项目 A 侧重于 `Wio Tracker L1` 的 UI 自定义；项目 B 侧重于基于 Meshtastic 的 `XIAO ESP32S3` 环境遥测。
+仓库准备好之后，你可以继续进行下面两个实践项目中的任意一个。项目 A 侧重于 `Wio Tracker L1` 的 UI 自定义；项目 B 侧重于基于 Meshtastic 的 `XIAO ESP32S3` 环境遥测。
 
 ## 项目 A：Wio Tracker L1 UI 自定义
 
 ### 实战练习
 
-在这个阶段，不要急于修改代码。首先要确保项目能够顺利跑通完整的构建流程。
+在这个阶段，不要急于修改代码。首先要确保项目可以完整地跑通一次构建流程。
 
-建议从三个任务开始：
+建议从以下三个任务开始：
 
 1. 打开 `firmware`
 2. 查看 `platformio.ini`
@@ -310,7 +310,7 @@ extra_configs =
 
 这意味着真正的板级环境定义通常位于 `variants/.../platformio.ini` 下。
 
-在确认目标开发板时，特别留意这两个目录：
+在确认目标开发板时，特别留意以下两个目录：
 
 - `variants/`
 - `boards/`
@@ -321,7 +321,7 @@ extra_configs =
 
 这表明，在 Meshtastic 中，**Wio Tracker L1 / L1 Pro 的构建目标是** `seeed_wio_tracker_L1`。
 
-**最小修改流程概览**
+**最小修改实践总结**
 
 如果你只想完成一次最小化的端到端实践，请关注以下关键步骤：
 
@@ -390,8 +390,8 @@ pio pkg install -e seeed_wio_tracker_L1
 这种方式有几个好处：
 
 - 它只安装依赖，而不会立刻开始完整构建。
-- 它能更容易看出是哪个软件包导致了问题。
-- 错误信息通常更聚焦，也更容易排查。
+- 它可以更容易看出是哪个软件包导致了问题。
+- 错误信息通常更集中，也更容易排查。
 
 依赖安装完成后，运行：
 
@@ -415,7 +415,7 @@ pio run -e seeed_wio_tracker_L1 -v
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image14.png)
 
-依赖安装完成后，再次运行正常构建：
+依赖安装完成后，再次运行正常的构建命令：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -452,7 +452,7 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image17.png)
 
-从这些配置文件中可以看到，L1 定义了 `HAS_SCREEN` 和 `USE_SSD1306`。这意味着它使用的是标准 OLED 显示管线，而不是无屏配置，也不是 E-Ink 方案。
+从这些配置文件中可以看到，L1 定义了 `HAS_SCREEN` 和 `USE_SSD1306`。这意味着它使用的是标准的 OLED 显示管线，而不是无屏幕配置，也不是电子墨水方案。
 
 如果继续追踪显示逻辑，大部分相关代码位于：
 
@@ -478,7 +478,7 @@ int batteryTextEndX = batteryX - 1;
 
 `src/graphics/SharedUIDisplay.cpp:157`
 
-这里增加了 `batteryTextEndX`，用于记录电池百分比文本的结束位置。这样后续在电池信息后追加自定义文本会更方便。
+这里新增了 `batteryTextEndX`，用于记录电池百分比文本的结束位置。这样后续在电池信息后追加自定义文本会更方便。
 
 **修改 2：在绘制电池百分比时计算右边界**
 
@@ -516,7 +516,7 @@ if (chargePercent != 101) {
 
 `src/graphics/SharedUIDisplay.cpp:204`
 
-这段代码位于电池百分比绘制逻辑内部。除了正常显示电池电量外，它还会计算文本区域的右边界，以便在电池信息后放置自定义标签。
+这段代码位于电池百分比绘制逻辑内部。它在正常显示电量的同时，也计算文本区域的右边界，以便在电池信息后放置自定义标签。
 
 **修改 3：为右侧图标区域预留边界**
 
@@ -531,7 +531,7 @@ int headerLabelRight = timeX - 4;
 
 `src/graphics/SharedUIDisplay.cpp:263`
 
-这部分处理右侧时间、邮件、静音等图标所占用的区域。我添加了 `headerLabelRight` 来限制中间文本的最大右边界，防止与右侧内容重叠。
+这部分处理右侧时间、邮件、静音等图标所占用的区域。我添加了 `headerLabelRight`，用于限制中间文本的最大右边界，避免与右侧内容重叠。
 
 **修改 4：在标题为空时绘制自定义标签**
 
@@ -554,7 +554,7 @@ if (titleStr && titleStr[0] == '\0') {
 
 `src/graphics/SharedUIDisplay.cpp:350`
 
-这是本次修改的核心逻辑。它只适用于 `SEEED_WIO_TRACKER_L1`，并显式排除了 E-Ink 版本。它会在电池信息与时间显示之间的空白区域，将 `made by AE` 文本居中显示。
+这是本次修改的核心逻辑。它只适用于 `SEEED_WIO_TRACKER_L1`，并显式排除了电子墨水版本。它会在电池信息和时间显示之间的空白区域，将 `made by AE` 文本居中显示。
 
 **修改 5：处理不显示时间的分支**
 
@@ -566,7 +566,7 @@ int headerLabelRight = screenW - xOffset - 2;
 
 `src/graphics/SharedUIDisplay.cpp:377`
 
-这是在没有时间值显示时使用的分支。这里同样需要加入边界控制。
+这是在没有时间值显示时使用的分支。这里同样需要加入相同的边界控制。
 
 ```cpp
 #if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
@@ -594,7 +594,7 @@ int headerLabelRight = screenW - xOffset - 2;
 
 **步骤 3：构建你自己的固件**
 
-完成修改后，返回项目根目录，再次构建相同的目标：
+完成修改后，回到项目根目录，再次构建相同的目标：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -616,7 +616,7 @@ pio run -e seeed_wio_tracker_L1
 </TabItem>
 </Tabs>
 
-显示逻辑已经改变，但构建目标仍然是同一个：
+显示逻辑已经改变，但构建目标仍然保持不变：
 
 ```plain
 seeed_wio_tracker_L1
@@ -642,7 +642,7 @@ D:\workplace\firmware\.pio\build\seeed_wio_tracker_L1\
 </TabItem>
 </Tabs>
 
-你需要确认已被更新的文件是：
+你需要确认已经更新的文件是：
 
 ```plain
 firmware-seeed_wio_tracker_L1-*.uf2
@@ -664,7 +664,7 @@ firmware-seeed_wio_tracker_L1-*.uf2
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image20.png)
 
-至此，Meshtastic 源码实战练习已经完成。你已经走完了完整流程：环境搭建、仓库克隆、板卡配置探索、固件编译、显示逻辑修改以及最终烧录验证。
+至此，Meshtastic 源码实战练习已经完成。你已经走完了完整流程：环境搭建、仓库克隆、板卡配置查找、固件编译、显示逻辑修改以及最终烧录验证。
 
 如果你想更进一步，可以继续探索以下方向：
 
@@ -673,7 +673,7 @@ firmware-seeed_wio_tracker_L1-*.uf2
 3. 为你自己的板子添加一个独立的 `variant`
 4. 继续追踪 `src/`、`variants/` 和 `boards/` 之间的关系
 
-如果你想要一个更偏向功能的源码级示例，请继续查看下面的项目 B。它基于 `XIAO ESP32S3 + Wio-SX1262 + SHT40` 构建了一个专用的环境遥测节点。与上面 Wio Tracker L1 的 UI 修改相比，这一部分更关注默认配置、遥测节奏以及两个节点之间的真实 Mesh 验证。
+如果你想要一个更偏向功能的源码级示例，请继续查看下面的项目 B。它基于 `XIAO ESP32S3 + Wio-SX1262 + SHT40` 构建一个专用的环境遥测节点。与上面 Wio Tracker L1 的 UI 修改相比，这一部分更关注默认配置、遥测节奏以及两个节点之间的真实 Mesh 验证。
 
 ## 项目 B：XIAO ESP32S3 环境遥测节点
 
@@ -684,7 +684,7 @@ firmware-seeed_wio_tracker_L1-*.uf2
 **远程传感器节点**
 
 - 从 `SHT40` 读取温度和湿度
-- 使用 Meshtastic 环境遥测
+- 使用 Meshtastic 环境遥测功能
 - 将遥测数据发送到 Mesh 中
 - 将 Mesh 发送间隔改为 `60s`
 - 跳过首次启动时的交互式区域设置
@@ -727,7 +727,7 @@ XIAO ESP32S3 + Wio-SX1262 + SHT40 -> Meshtastic LoRa -> XIAO ESP32S3 + Wio-SX126
 - `I2C address = 0x44`
 - `GPIO5 / GPIO6` 是当前可用的 I2C 接线对
 
-下图展示了远程节点上实际使用的接线方式：
+下图展示了远程节点上实际使用的接线：
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image1.png)
 
@@ -740,7 +740,7 @@ XIAO ESP32S3 + Wio-SX1262 + SHT40 -> Meshtastic LoRa -> XIAO ESP32S3 + Wio-SX126
 
 ### 修改远程节点的 Meshtastic 固件
 
-本项目的目标环境是：
+本项目的目标环境为：
 
 ```plain
 seeed-xiao-s3
@@ -773,7 +773,7 @@ build_flags =
 这三个标志的作用如下：
 
 - 默认启用环境遥测
-- 将默认区域设置为 `US`，这样首次启动不再停在区域选择界面
+- 将默认区域设置为 `US`，因此首次启动不再停在区域选择界面
 - 将默认设备角色设置为 `SENSOR`
 
 遥测时序的更改是在 `EnvironmentTelemetry.h` 和 `EnvironmentTelemetry.cpp` 中实现的，而不是在 `platformio.ini` 中。
@@ -784,8 +784,8 @@ build_flags =
 - 设备以区域 `US` 启动
 - 设备以角色 `SENSOR` 启动
 - Mesh 环境遥测每 `60s` 发送一次
-- `path=phone` 和 `path=mesh` 会分别记录日志
-- 只有在实际 mesh 发送成功后才会更新 mesh 发送时间戳
+- `path=phone` 和 `path=mesh` 分别记录日志
+- 仅在实际 mesh 发送成功后才更新 mesh 发送时间戳
 
 预期的 mesh 分发日志如下所示：
 
@@ -795,13 +795,13 @@ Environment telemetry dispatch path=mesh dest=0xffffffff interval_mesh_s=60
 
 ### 配置附近的网关节点
 
-使用附近的 Meshtastic 设备作为同一 mesh 上的 `CLIENT`。在远程节点开始发送遥测后，确认网关可以接收到：
+在同一 mesh 上使用附近的 Meshtastic 设备作为 `CLIENT`。在远程节点开始发送遥测后，确认网关可以接收到：
 
 - `TELEMETRY_APP`
 - `environmentMetrics.temperature`
 - `environmentMetrics.relativeHumidity`
 
-如果网关在测试期间一直尝试连接 Wi-Fi，请使用 Meshtastic CLI 禁用 Wi-Fi。将 `<gateway_port>` 替换为你的实际串口，例如 Windows 上的 `COMx` 或 macOS 上的 `/dev/cu.usbmodem...`。
+如果网关在测试期间一直尝试连接 Wi-Fi，请使用 Meshtastic CLI 禁用 Wi-Fi。将 `<gateway_port>` 替换为你实际的串口，例如 Windows 上的 `COMx` 或 macOS 上的 `/dev/cu.usbmodem...`。
 
 ```bash
 meshtastic --port <gateway_port> --set network.wifi_enabled false
@@ -811,7 +811,7 @@ meshtastic --port <gateway_port> --set network.wifi_enabled false
 
 **步骤 1：复制修改后的文件**
 
-在构建之前，将三个修改过的文件复制到 Meshtastic `2.7.20` 或 `2.7.21` 源码树中：
+在构建之前，将三个修改后的文件复制到你的 Meshtastic `2.7.20` 或 `2.7.21` 源码树中：
 
 | 包中的文件 | 替换 Meshtastic 源码树中的这个文件 |
 | --- | --- |
@@ -899,7 +899,7 @@ pio device monitor -p /dev/cu.usbmodem3030F917FF281 -b 115200
 </TabItem>
 </Tabs>
 
-查找类似如下的日志：
+留意如下日志：
 
 ```plain
 Environment telemetry dispatch path=mesh dest=0xffffffff interval_mesh_s=60
@@ -951,13 +951,13 @@ meshtastic --port <gateway_port> --set network.wifi_enabled false
 
 **步骤 6：在手机应用中确认**
 
-烧录完成后，使用 Meshtastic 手机应用连接远程节点，确认可以看到环境数据。然后将应用连接到同一 mesh 上的另一台设备，并检查 `Nodes` 视图，以确认传感器数值已通过 mesh 被接收。
+烧录完成后，使用 Meshtastic 手机应用连接远程节点，并确认可以看到环境数据。然后将应用连接到同一 mesh 上的另一台设备，在 `Nodes` 视图中检查传感器数值是否通过 mesh 被接收。
 
 在远程传感器节点上，你应该可以在应用中直接看到环境遥测数值：
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image9.png)
 
-在附近节点上，当读数通过 mesh 转发后，同样的数值应出现在 `Nodes` 视图中：
+在附近节点上，这些读数在通过 mesh 转发后，应出现在 `Nodes` 视图中：
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image10.png)
 
@@ -965,9 +965,9 @@ meshtastic --port <gateway_port> --set network.wifi_enabled false
 
 ### 项目目标
 
-这个紧凑的示例聚焦于一个非常小但很容易感知的源码级自定义：将默认的 T1000-E 开机和关机声音替换为更干净的自定义提示音。
+这个紧凑的示例聚焦于一个非常小但容易感知的源码级自定义：将默认的 T1000-E 开机和关机声音替换为更干净的自定义提示音。
 
-与项目 A 和项目 B 相比，本项目只修改一个源文件、两个函数。它很好地展示了如何在不影响 Meshtastic 其余代码库的情况下，进行板级特定的行为更改。
+与项目 A 和项目 B 相比，本项目只修改一个源文件、两个函数。它很好地展示了如何在不影响其余 Meshtastic 代码库的情况下，进行板级特定行为的更改。
 
 ### 修改 `buzz.cpp`
 
@@ -986,18 +986,18 @@ meshtastic --port <gateway_port> --set network.wifi_enabled false
 
 - `TRACKER_T1000_E` 使用自定义开机提示音
 - `TRACKER_T1000_E` 使用匹配的自定义关机提示音
-- 所有其他 Meshtastic 开发板仍然在现有的 `#else` 路径中遵循原始默认旋律
+- 所有其他 Meshtastic 开发板仍然在现有的 `#else` 分支中遵循原始默认旋律
 
-这意味着更改在设计上刻意保持范围狭窄。它只为一块开发板定制用户体验，同时保留其他所有受支持目标的原始行为。
+这意味着更改在范围上是刻意收窄的。它为一块开发板定制了用户体验，同时保留了其他所有受支持目标的原始行为。
 
 在我的本地测试版本中，开机旋律被改为更像手机的上行提示音，而关机旋律被改为与之匹配的下行提示音。
 
-如果你想更清晰地记录这次修改，只需截取一张在同一视图中同时包含这两个函数的截图即可：
+如果你想更清晰地记录这项修改，只需截取一张在同一视图中同时包含这两个函数的截图即可：
 
 - `playStartMelody()` 中的 `#if defined(TRACKER_T1000_E)` 代码块
 - `playShutdownMelody()` 中的 `#if defined(TRACKER_T1000_E)` 代码块
 
-这一张截图已经同时说明了代码改动和特定开发板的适用范围，因此不需要再单独放一张图片来解释其他开发板不受影响。
+这一张截图已经同时说明了代码更改和特定开发板的适用范围，因此不需要单独再放一张图片来解释其他开发板不受影响。
 
 ### 构建与验证
 
@@ -1013,7 +1013,7 @@ pio run -e tracker-t1000-e
 
 1. 打开设备电源，确认新的开机提示音会播放。
 2. 关闭设备电源，确认对应的关机提示音会播放。
-3. 如果可能，将新的声音与原始默认提示音进行对比，这样更容易分辨差异。
+3. 如果可能，将新的声音与原始默认旋律进行对比，这样更容易分辨差异。
 
 ### 建议配图
 
@@ -1021,7 +1021,7 @@ pio run -e tracker-t1000-e
 
 1. 一张 `buzz.cpp` 截图，在同一画面中显示 `playStartMelody()` 和 `playShutdownMelody()`
 2. 一张终端截图，显示 `pio run -e tracker-t1000-e` 成功执行
-3. 一张真实设备验证图片或一段短视频，展示 T1000-E 开机或关机测试
+3. 一张真实设备验证图片或一段短视频，展示 T1000-E 的开机或关机测试
 
 如果在测试过程中蜂鸣器没有发声，首先检查设备的蜂鸣器模式是否已启用。在 `playTones()` 中，当蜂鸣器被禁用或设置为仅通知模式时，代码会提前返回。
 
@@ -1034,7 +1034,7 @@ pio run -e tracker-t1000-e
 
 **`python3` 或 `pip3` 不可用**
 
-- 在 Windows 上，确认安装 Python 时已添加到 `PATH`，或者重新打开终端再试一次。
+- 在 Windows 上，确认安装 Python 时已添加到 `PATH`，或者重新打开终端后再试一次。
 - 在 macOS 上，先检查是否已经存在 `python3` / `pip3`，只有在确实缺失时才使用 Homebrew 安装 Python。
 
 **`pio` 命令不可用**
@@ -1043,9 +1043,9 @@ pio run -e tracker-t1000-e
 - 如果命令仍然不可用，重启 VS Code 和终端，然后再试一次。
 - 如有必要，重新安装 PlatformIO 扩展，并确认 PlatformIO Core 已正确初始化。
 
-**执行 `git submodule update --init` 后代码仍然不完整**
+**执行 `git submodule update --init` 后代码看起来仍然不完整**
 
-- 首先确认你当前所在目录是 `firmware` 仓库的根目录。
+- 首先确保你当前位于 `firmware` 仓库的根目录。
 - 如果网络连接不稳定，请使用以下命令重试：
 
 ```bash
@@ -1055,7 +1055,7 @@ git submodule update --init --recursive
 **第一次构建耗时过长**
 
 - 第一次构建需要下载大量依赖，这是正常现象。
-- 如果看起来长时间没有进展，可以先单独安装相关软件包：
+- 如果看起来长时间没有进度，可以先单独安装相关软件包：
 
 ```bash
 pio pkg install -e seeed_wio_tracker_L1
@@ -1065,24 +1065,24 @@ pio pkg install -e seeed_wio_tracker_L1
 
 **Web 客户端没有显示完整的环境遥测数据**
 
-- 当前 Meshtastic Web Client 尚未提供完整的远程环境遥测 UI。
+- 目前 Meshtastic Web Client 尚未提供完整的远程环境遥测 UI。
 - `Messages` / `Broadcast` 页面是用于聊天流量的，而不是专门的遥测页面。
-- 如果数值没有出现在那里，并不意味着网状网络链路一定失败。
+- 如果数值没有出现在那里，并不意味着 mesh 链路一定已经失败。
 
-**在手机上看到数据并不能证明发生了网状转发**
+**在手机上看到数据并不能证明发生了 mesh 转发**
 
 - 在直接连接的手机上看到刷新后的数值，只能证明本地手机到设备的链路是正常的。
-- 这并不能自动证明环境遥测数据已经被转发进网状网络。
-- 要确认真正的网状转发，请在日志中检查以下条目：
+- 这并不能自动证明环境遥测数据已经被转发进 mesh。
+- 要确认真正的 mesh 转发，请在日志中检查以下条目：
 - `Environment telemetry dispatch path=mesh ...`
 - `TELEMETRY_APP`
 - `environmentMetrics.temperature`
 - `environmentMetrics.relativeHumidity`
 
-**`seeed-xiao-s3` 构建在首次设置时失败**
+**在首次设置时 `seeed-xiao-s3` 构建失败**
 
 - 第一次安装依赖可能会花费较长时间，这是正常的。
-- 如果目标环境构建失败，请先安装相关软件包，然后执行一次详细构建（verbose build）：
+- 如果目标环境构建失败，请先安装相关软件包，然后执行一次详细输出的构建：
 
 ```bash
 pio pkg install -e seeed-xiao-s3
@@ -1094,3 +1094,25 @@ pio run -e seeed-xiao-s3 -v
 ```bash
 pio run -e seeed-xiao-s3
 ```
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

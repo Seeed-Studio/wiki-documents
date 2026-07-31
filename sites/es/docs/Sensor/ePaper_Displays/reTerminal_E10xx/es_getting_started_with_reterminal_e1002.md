@@ -573,7 +573,7 @@ Si ves que el dispositivo no está cargando, intenta sustituir la cabeza de carg
 - [Esquemático del reTerminal E1002 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004321_reTerminal_E1002_V1_2_SCH_251120.pdf)
 - [Hoja de datos del ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [Documentación de la plataforma SenseCraft HMI](https://wiki.seeedstudio.com/es/sensecraft_hmi_overview)
-- [Archivo STP del modelo 3D general del exterior](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
+- [Archivo STP del modelo 3D general del exterior](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_E1001_E1002_3D.stp)
 <!-- - [GitHub Repository](/es/getting_started_with_reterminal_e1002) -->
 
 ## Soporte técnico y debate sobre el producto
