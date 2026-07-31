@@ -35,40 +35,23 @@ Get this reviewed before you enroll a single real person.
 
 ## Overview
 
-What we supply is a small robot that stands on your customer's floor, holds a conversation, and knows who it is talking to.
+What we supply is a small robot that stands on your customer's floor, holds a conversation, and knows who it is talking to. An operator walks up with their hands full, says "stock out forty units of the M16 bearings," and the transaction lands in your system attributed to the person the camera recognized — not to whatever name was spoken.
 
-An operator walks up with their hands full and says "stock out forty units of the M16 bearings." The device hears it, recognizes their face, and the transaction lands in your system attributed to the person the camera saw — not to whatever name was spoken. No terminal, no scanner, no keyboard.
-
-This is a hardware and software product, not a protocol. You are not assembling a voice pipeline out of parts: the microphone array, the wake word, speech recognition, the language model, speech synthesis, and the face recognition all come together and are already tuned to work in a noisy room. There is also a fully on-premises build, for customers whose answer to "does audio leave our network?" has to be no.
-
-What is left for you is the part only you can do — connecting it to your product.
-
-This guide is for solution providers and software vendors who already run their own warehouse or business platform. You do not adopt our platform to do this. You build an **MCP server in front of your own system**, and the reference for how to build it is our warehouse platform, which is open source:
+Microphone array, wake word, speech, language model and face recognition arrive as one tuned product, with a fully on-premises build for customers whose audio cannot leave the site. What is left is the part only you can do: connecting it to your platform. That connection is an **MCP server in front of your own system** — you do not adopt our platform. The reference for building one is our warehouse platform, MIT-licensed and open source:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://github.com/suharvest/warehouse_system" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub 🖱️</font></span></strong></a>
 </div>
 
-Read it, run it, copy the parts you need. It is MIT-licensed and is a complete working example of everything described below: the MCP tool layer, the face verification gate, the enrollment store, and the admin screens that configure them.
-
-Three names appear throughout, so it is worth fixing them now:
-
-- **MCP** — the Model Context Protocol, the open standard by which a language model calls your functions. Your integration is an MCP server.
-- **XiaoZhi** — the open-source voice assistant stack the Watcher runs. It handles wake word, speech, and deciding which of your MCP tools to call.
-- **SenseCraft** — Seeed's platform where you register a device and obtain the MCP endpoint that connects it to your server.
-
-Two problems have to be solved, and this page treats them separately:
-
-1. **Reach.** Your platform must expose its business logic to the device as [MCP](https://github.com/modelcontextprotocol) tools. The companion page [Bring Voice AI to Your Business System (MCP)](/mcp_external_system_integration) walks through the bridge end to end.
-2. **Trust.** Once an operator can change stock by speaking, you need to know *who spoke*. A voice command carries no identity. The name a language model writes into a record is whatever the speaker claimed, and saying someone else's name is enough to forge it.
-
-The device solves the second problem. SenseCAP Watcher carries a vision co-processor that recognizes the person in front of it. Your MCP server asks the device who that is, and refuses the operation when the answer is wrong or missing.
-
-The recognition can run in two places, and choosing between them is the main decision this page helps you make.
+Face recognition is the load-bearing piece, because a voice command carries no identity: the name a language model writes into a record is whatever the speaker claimed, and saying someone else's name is enough to forge it. Recognition can run in two places, and choosing between them is the main decision this page helps you make.
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/mcp-face-architecture.png" alt="Watcher captures voice and face, SenseCraft routes the MCP call, your MCP server applies the face gate before reaching your backend"/>
 </div>
+
+:::info Three names in that diagram
+**MCP** is the [Model Context Protocol](https://github.com/modelcontextprotocol), the open standard by which a language model calls your functions. **XiaoZhi** is the open-source voice assistant stack the Watcher runs — wake word, speech, and deciding which of your tools to call. **SenseCraft** is where you register a device and get the MCP endpoint that connects it to your server.
+:::
 
 ## Features
 
