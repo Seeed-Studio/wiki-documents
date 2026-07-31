@@ -35,9 +35,15 @@ Get this reviewed before you enroll a single real person.
 
 ## Overview
 
-This guide is for solution providers and software vendors who already run their own warehouse or business platform and want to drive it by voice on Seeed devices.
+What we supply is a small robot that stands on your customer's floor, holds a conversation, and knows who it is talking to.
 
-You do not adopt our platform to do this. You build an **MCP server for your own system**, and the reference for how to build it is our warehouse platform, which is open source:
+An operator walks up with their hands full and says "stock out forty units of the M16 bearings." The device hears it, recognizes their face, and the transaction lands in your system attributed to the person the camera saw — not to whatever name was spoken. No terminal, no scanner, no keyboard.
+
+This is a hardware and software product, not a protocol. You are not assembling a voice pipeline out of parts: the microphone array, the wake word, speech recognition, the language model, speech synthesis, and the face recognition all come together and are already tuned to work in a noisy room. There is also a fully on-premises build, for customers whose answer to "does audio leave our network?" has to be no.
+
+What is left for you is the part only you can do — connecting it to your product.
+
+This guide is for solution providers and software vendors who already run their own warehouse or business platform. You do not adopt our platform to do this. You build an **MCP server in front of your own system**, and the reference for how to build it is our warehouse platform, which is open source:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://github.com/suharvest/warehouse_system" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub 🖱️</font></span></strong></a>
@@ -259,27 +265,11 @@ Both paths use the same enrollment records, rules and audit log, and nothing in 
 
 The Watcher matches faces itself. The backend pushes a compact face library to the device over the LAN, the device stores it in flash, and at verification time the backend asks the device who it is currently looking at.
 
-#### How It Behaves
-
-- Enrolled embeddings are quantized to `fp16` and pushed to the device, 256 bytes per person. The database keeps the canonical `float32` copy.
-- The model tag is fixed at `we2-mfnr6-128-v1` on both sides. Enrollments carrying any other tag are filtered out of the push, which produces an empty library rather than an error — so if a push reports zero faces, check the tag first.
-- The device holds at most **20 people**. This is a hard limit of the on-device store, not a licensing choice.
-- The push targets **port 80** on the device address regardless of the port recorded for it, and the receiving endpoint is unauthenticated. Treat the device network as trusted, or isolate it.
-
 #### You Still Need an Embedding Source
 
-Matching happens on the device, but *enrollment* does not. Something has to turn each photo into an embedding, and it must be the **same model the device runs** — an embedding from any other face model lands in a different vector space and will never match, no matter how good that model is.
+Matching happens on the device, but *enrollment* does not. Something has to turn each photo into an embedding, and it must come from the **same model the device runs** — an embedding from any other face model lands in a different vector space and will never match, however good that model is. So this path is not "no inference on your side"; it is "inference only at enrollment, and it must be bit-compatible with the firmware".
 
-So this path is not "no inference on your side". It is "inference only at enrollment, and it must be bit-compatible with the firmware".
-
-The reference implementation solves this with a host-side mirror of the device pipeline: SCRFD-500M for detection, then MobileFaceNet-128D for the embedding, both INT8 TFLite, executed through `ai-edge-litert` with a reference op resolver so the result is bit-exact against the on-device NPU. It emits 128-D `float32` — 512 raw bytes, not L2-normalized, since the matcher normalizes on read — under the tag `we2-mfnr6-128-v1`.
-
-Two ways to use it when you build your own system:
-
-- **In-process**, as the reference does — import it and call it during enrollment. Nothing is exposed on the network.
-- **As a small HTTP service**, which the reference can also do: set `FACE_WE2_SIMULATOR_ENABLED=1` and it mounts `POST /api/face/we2/infer` and `GET /api/face/we2/health`, speaking the *same* `/infer` contract as an external compute box.
-
-That second option is worth noticing, because it makes both paths uniform: your enrollment code always talks to a `face_rec_api`-shaped endpoint, and only the URL changes when you move from Path 1 to Path 2.
+The reference implementation ships a host-side mirror of the device pipeline that is bit-exact against the on-device NPU, published under the model tag `we2-mfnr6-128-v1`. Use it either in-process during enrollment, or as a small HTTP service — set `FACE_WE2_SIMULATOR_ENABLED=1` and it speaks the *same* `/infer` contract as an external compute box, which keeps your enrollment code identical across both paths.
 
 :::caution Two deployment gotchas
 The simulator routes carry **no authentication** — never expose that port beyond your own backend. And the INT8 runtime has no musl wheel, so the container needs a glibc base image; Alpine will fail to install it.
@@ -377,23 +367,17 @@ The inference service is a plain HTTP service, so any machine on the LAN that ca
 
 Choose the Jetson system when you want to run a large embedding model or serve several sites from one box. Choose either R2135 when the box sits in a plant room or on a wall in a warehouse — both are fanless and rated for industrial temperatures.
 
-#### Running the Whole Stack On-Premises
+#### Going Fully On-Premises
 
-The boxes above handle face recognition locally, but by default the *voice* half — speech recognition and the language model that decides which tool to call — runs in the cloud through SenseCraft. For most customers that is fine. For regulated industries, defence, or any customer whose answer to "does audio leave our network?" must be *no*, it is a hard blocker.
-
-That stack can also run entirely on your own hardware. It is a larger undertaking than face verification alone — you host speech recognition, the language model, and text-to-speech yourself — and it needs a substantially bigger box, because those models must sit in memory alongside the face model. Memory capacity, not TOPS, is the constraint that decides this.
+The boxes above cover face recognition. By default the *voice* half — speech recognition, the language model that picks the tool, speech synthesis — runs in the cloud. For customers whose answer to "does audio leave our network?" must be no, we also supply that whole pipeline to run on site, on a larger box that hosts it alongside the face model. Memory capacity, not TOPS, is what decides the sizing.
 
 |reComputer Mini J5012 with GMSL|NVIDIA Jetson AGX Thor Developer Kit|
 |------------------|--------------------------|
 |<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/0/-/0-100020407-recomputer-mini-j5011-with-gmsl-64g_1.jpg" alt="reComputer Mini J5012 with GMSL" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image-kit-3.png" alt="NVIDIA Jetson AGX Thor Developer Kit" width={300} height="auto" />|
-|Jetson AGX Orin 64GB<br/>64GB LPDDR5 · 64GB eMMC<br/>19-48V input, 10GbE, sealed industrial chassis|Jetson AGX Thor, Blackwell GPU<br/>128GB LPDDR5X at 273GB/s<br/>Headroom for a larger model and longer context|
+|Jetson AGX Orin 64GB<br/>64GB LPDDR5 · 64GB eMMC<br/>Wide-voltage input, 10GbE, sealed industrial chassis|Jetson AGX Thor, Blackwell GPU<br/>128GB LPDDR5X at 273GB/s<br/>Headroom for a larger model and longer context|
 |<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Mini-J5012-with-GMSL-Extension-p-6878.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html)</p>|
 
-Pick the Mini J5012 when the box has to survive a plant floor — wide-voltage input, industrial I/O, sealed enclosure. Pick Thor when you want the largest model you can serve from one machine and a rack or cabinet is available.
-
-:::tip Data residency is a selling point, not just a constraint
-If you sell into regulated sectors, "no audio, imagery or transcript ever leaves the site" is often worth more to the customer than any feature on this page. It is worth scoping the fully-local build even if you ship the cloud version first.
-:::
+Take the Mini J5012 when the box has to survive a plant floor, and Thor when you want the largest model one machine can serve. Either way this is a combined hardware and software offering — [talk to us](mailto:solution@seeed.cc) about the on-site build rather than assembling it yourself.
 
 ## Part 3 — What You Implement
 
@@ -555,35 +539,27 @@ Then override `base_url` in your Provider's constructor, as in [Part 1](#option-
 
 ## FAQ
 
-### 1. Every tool returns `face_auth_denied:http_404`, including queries
+### 1. A push reports zero faces sent
 
-`api_base_url` is pointing at a backend that has no `/api/face/verify-mcp`. Apply the split-field configuration above. This is by far the most common integration failure.
+The face library is filtered by model tag. Only enrollments carrying `we2-mfnr6-128-v1` are eligible for an on-device push, so enrollments created against a remote endpoint with a different tag are silently excluded — re-enroll, or let the background re-computation finish.
 
-### 2. A push reports zero faces sent
-
-The face library is filtered by model tag. Enrollments must carry `we2-mfnr6-128-v1` to be eligible for an on-device push. Enrollments created against a remote endpoint with a different tag are excluded — re-enroll, or let the background re-computation finish.
-
-### 3. `actual_operator` is always empty in our records
+### 2. `actual_operator` is always empty in our records
 
 Expected when no rule requires a face for that operation, or when verification is switched off. Create a rule for the operation to start recording it.
 
-### 4. We swapped in our own data source but writes still land in the reference database
+### 3. We swapped in our own data source but writes still land in the reference database
 
-The reference tool layer falls back to its default Provider on any error and logs a warning rather than failing loudly. Check the MCP log for that warning — and see the warning in [Option A](#option-a--reuse-the-bridge-swap-the-data-source) about changing this behaviour before you ship.
+The reference tool layer falls back to its default Provider on any error and logs a warning rather than failing loudly. Check the MCP log for that warning — and see [Option A](#option-a--reuse-the-bridge-swap-the-data-source) on changing this behaviour before you ship.
 
-### 5. Verification is slow or intermittently denied
+### 4. Verification is slow or intermittently denied
 
 Three timeouts bound the chain: 18 seconds from the MCP client to the backend, 10 seconds from the backend to a remote inference service, and roughly 6.5 to 8 seconds from the backend to the device. These are ceilings, not typical latencies — measure your own, because this is a person standing at a terminal waiting. If your inference service approaches 10 seconds, reduce the model size or the image resolution.
 
-### 6. Can we verify once per conversation instead of per operation?
+### 5. Can we verify once per conversation instead of per operation?
 
 Yes. Set the verification frequency to `session` and the first successful check is cached for that conversation, up to a 10-minute ceiling.
 
 Understand what you are trading: for those 10 minutes, every operation in the conversation is attributed to the person matched once at the start. Anyone who continues that conversation inherits the identity. Use `session` where the win is avoiding repeated prompts during a long picking run, and `always` wherever an individual operation must be independently proven.
-
-### 7. Which face model does the device use?
-
-MobileFaceNet, 128 dimensions, INT8, running on the Himax WE2 co-processor, published as `we2-mfnr6-128-v1`. The tag is hard-coded on both the backend and the firmware; a mismatch rejects the whole batch.
 
 ## Resources
 
