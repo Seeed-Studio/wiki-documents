@@ -18,17 +18,17 @@ url: https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/
 
 :::danger note
 Cuando el dispositivo se encuentre en cualquiera de los estados siguientes, no lo reinicies manualmente ni lo apagues. De lo contrario, el dispositivo podría quedar inutilizable.
-1. No haber finalizado el proceso de transmisión de mensajes
-2. Estar en proceso de configuración
+1. No ha finalizado el proceso de transmisión de mensajes
+2. Está siendo configurado
 :::
-## Comenzar
+## Comienza
 
 Antes del despliegue formal, primero prueba y configura el nodo.
 
 ### Flashear firmware
 
 :::caution note
-No utilices `NRF-OTA` para actualizar el firmware, ya que podría hacer que el dispositivo deje de responder por completo.
+No uses `NRF-OTA` para actualizar el firmware, ya que podría hacer que el dispositivo deje de responder por completo.
 Antes de flashear el firmware, ejecuta primero el paso de borrado del flash.
 :::
 
@@ -46,7 +46,7 @@ Descarga y copia el firmware de borrado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-Haz clic en `Enter DFU Mode`, selecciona y conéctate al puerto serie llamado `XIAO-xxx`, y debería aparecer una unidad llamada `XIAO-xxx`. Copia el firmware de borrado a esa unidad.
+Haz clic en `Enter DFU Mode`, selecciona y conéctate al puerto serie llamado `XIAO-xxx`, y debería aparecer una unidad llamada `XIAO-xxx`. Copia el firmware de borrado en la unidad.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -62,7 +62,7 @@ Descarga el archivo UF2 y entra en modo DFU. Arrastra el archivo UF2 a la unidad
 ### Instalar batería y módulo GPS (opcional)
 
 :::tip
-Cuando necesites instalar o reemplazar la batería, utiliza una batería 18650 (3,6 V) de `button-top`.
+Cuando necesites instalar o reemplazar la batería, usa una batería 18650 (3,6 V) de `button-top`.
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
 La versión P1-Pro tiene una batería y un módulo GPS integrados. Para la versión P1, los usuarios deben instalar manualmente la batería y el módulo GPS si es necesario.
 :::
@@ -84,19 +84,19 @@ La versión P1-Pro tiene una batería y un módulo GPS integrados. Para la versi
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-Asegúrate de que la carcasa esté correctamente montada y los tornillos bien apretados para mantener la integridad de impermeabilidad del dispositivo.
+Asegúrate de que la carcasa esté correctamente montada y los tornillos bien apretados para mantener la estanqueidad del dispositivo.
 :::
 
 ### Encender el dispositivo
 
-El dispositivo debe activarse conectando el cable USB antes del primer uso. Si la luz azul de Mesh parpadea, el dispositivo se ha encendido correctamente, como se muestra en el siguiente video:
+El dispositivo debe activarse conectando el cable USB antes del primer uso. Si la luz azul de Mesh parpadea, el dispositivo se ha encendido correctamente, como se muestra en el siguiente vídeo:
 
 <div class="table-center">
 <iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 :::tip
-Si el dispositivo no responde cuando presionas el botón, cárgalo primero. No utilices un cargador rápido.
+Si el dispositivo no responde cuando presionas el botón, cárgalo primero. No uses un cargador rápido.
 :::
 
 ### Conectar mediante la app
@@ -138,7 +138,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el cliente 
 
   Paso 1: Abre el sitio web
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) para ir al sitio web.
+[Haz clic aquí](https://client.meshtastic.org/messages/broadcast/0) para ir al sitio web.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   Paso 2: Añadir el nuevo dispositivo 
@@ -165,7 +165,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el cliente 
 
 ### Configurar LoRa
 
-Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias usa tu dispositivo y debe configurarse según tu ubicación regional.
 
 <Tabs>
 <TabItem value="ios" label="App para iOS">
@@ -184,17 +184,17 @@ Para empezar a comunicarte a través de la malla, debes establecer tu región. E
 
 |**Código de región**|**Descripción**|**Rango de frecuencias (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Sin configurar|N/A|N/A|N/A|
+|UNSET|Sin establecer|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
-Consulta [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para obtener una lista más completa.
+Consulta [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para ver una lista más completa.
 
 :::info
-**EU_868** debe cumplir una limitación de ciclo de trabajo por hora del 10 %, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que vuelva a estar permitido.
+**EU_868** debe cumplir una limitación de ciclo de trabajo por hora del 10 %, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
 :::
 
-Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para adaptarlo a tus necesidades.
+Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) según tus necesidades.
 
 ### Configurar GPS
 
@@ -210,11 +210,11 @@ En iOS, activa `Accurate Location`. De lo contrario, el posicionamiento puede se
 
 |Acción del botón|Descripción|
 |--|--|
-|Pulsar PWR durante 3 s|Encender|
-|Pulsar PWR dos veces|Actualizar información de nodo/ubicación|
-|Pulsar PWR tres veces|Activar/desactivar el GPS|
-|Pulsar PWR durante 5 s|Apagar|
-|Pulsar RST dos veces|Entrar manualmente en DFU|
+|Presiona PWR durante 3 s|Encender|
+|Presiona PWR dos veces|Actualizar información de nodo/ubicación|
+|Presiona PWR tres veces|Activar/desactivar el GPS|
+|Presiona PWR durante 5 s|Apagar|
+|Presiona RST dos veces|Entrar manualmente en DFU|
 
 ## Instalación
 
@@ -272,9 +272,9 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### Guía completa de instalación
+### Guía de instalación completa
 
-- Puedes completar todo el proceso de instalación e inicialización mediante un vídeo.
+- Puedes completar todo el proceso de instalación e inicialización mediante un video.
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -282,7 +282,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 
 ### Añadir sensores al Solar Node (Opcional)
 
-- Puedes instalar tu sensor siguiendo este vídeo.
+- Puedes instalar tu sensor siguiendo este video.
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -307,7 +307,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
   <tr>
     <td>Temperatura y humedad</td>
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
-  </tr>
+  </tr]
   <tr>
     <td>Temperatura, humedad y presión</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
@@ -325,9 +325,9 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 
 ### Actualizar la antena (Opcional)
 
-- Puedes sustituir la antena por una de fibra de vidrio viendo este vídeo.
+- Puedes sustituir la antena por una de fibra de vidrio viendo este video.
 
-Si necesitas una antena con mayor ganancia, recomendamos la antena de [fibra de vidrio de 860-930MHz 3dBi](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) y la antena de [fibra de vidrio de 902-928MHz 5.8dBi](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html).
+Si necesitas una antena con mayor ganancia, recomendamos la antena [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) y la antena [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html).
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -365,7 +365,7 @@ Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable
 
 Para usuarios de Windows, presiona la tecla "Win" y la tecla "R", luego introduce "cmd" en la ventana emergente y presiona "Enter". Esto abre la línea de comandos.
 
-Para usuarios de Mac, presiona la tecla "Command" y la tecla "Espacio" para abrir Spotlight. Luego introduce "terminal" y presiona "Return". Esto abre la línea de comandos.
+Para usuarios de Mac, presiona la tecla "Command" y la tecla "Space" para abrir Spotlight. Luego introduce "terminal" y presiona "Return". Esto abre la línea de comandos.
 
 **Requisitos previos**
 
@@ -498,20 +498,20 @@ Cuando hayas completado los pasos anteriores, sigue este [paso](https://wiki.see
 
 ### No se puede comunicar en el canal primario
 
-Si el dispositivo no puede comunicarse con los nodos cercanos o enviar mensajes, primero verifica que la región LoRa y el preset del módem coincidan con los nodos circundantes. También debes comprobar si se ha cambiado el **PSK** predeterminado. Un PSK diferente en el canal primario impedirá que el dispositivo se comunique con otros nodos en ese canal.
+Si el dispositivo no puede comunicarse con los nodos cercanos o enviar mensajes, primero comprueba que la región LoRa y el preset del módem coincidan con los nodos circundantes. También debes comprobar si se ha cambiado el **PSK** predeterminado. Un PSK diferente en el canal primario impedirá que el dispositivo se comunique con otros nodos en ese canal.
 
 La forma más sencilla de encontrar este problema es a través de la aplicación móvil. Abre la app, conéctate al dispositivo de destino y luego navega a `Settings` -> `Channels`. Selecciona el canal primario y comprueba el valor de **PSK**. Si es diferente al de los nodos circundantes, actualízalo al mismo PSK y guarda la configuración del canal.
 
 <Tabs>
 <TabItem value="ios" label="App de IOS">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problems_ios.png" alt="Check primary channel PSK in the iOS app" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problems_ios.png" alt="Comprobar el PSK del canal primario en la app de iOS" width={500} height="auto" /></p>
 
 </TabItem>
 
 <TabItem value="android" label="App de Android">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problem_and.png" alt="Check primary channel PSK in the Android app" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problem_and.png" alt="Comprobar el PSK del canal primario en la app de Android" width={900} height="auto" /></p>
 
 </TabItem>
 </Tabs>
@@ -536,7 +536,7 @@ Si no estás seguro de qué ajustes se cambiaron, restaura el dispositivo a su c
 
 ### Restablecimiento de fábrica
 
-Si deseas restaurar la configuración predeterminada, puedes realizar un restablecimiento de fábrica. Hay dos métodos para hacer el restablecimiento de fábrica.
+Si quieres restaurar la configuración predeterminada, puedes realizar un restablecimiento de fábrica. Hay dos métodos para hacer el restablecimiento de fábrica.
 
 - [Haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-erase) para realizar un borrado de la flash y luego vuelve a flashear el firmware más reciente.
 
@@ -547,7 +547,7 @@ Si deseas restaurar la configuración predeterminada, puedes realizar un restabl
 
 #### Restablecer NodeDB
 
-NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con cierto nodo, podría deberse a que tu nodedB ha almacenado información desactualizada para ese nodo. Necesitarás actualizarla.
+NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con un determinado nodo, puede deberse a que tu nodedB haya almacenado información obsoleta de ese nodo. Necesitarás actualizarla.
 
 NodeDB almacena detalles como:
 
@@ -559,19 +559,19 @@ NodeDB almacena detalles como:
 
 Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDBmerge.png" alt="Device settings and Reset NodeDB button in the app" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDBmerge.png" alt="Ajustes del dispositivo y botón Reset NodeDB en la app" width={600} height="auto" /></p>
 
 #### Intercambiar información de usuario
 
 Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre sí. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo en Settings" width={300} height="auto" /></p>
 
 #### Regenerar clave privada
 
 Dos nodos necesitan conocer su clave privada entre sí para poder comunicarse entre sí. Si un nodo sigue fallando en la transmisión de mensajes privados, intenta regenerar la clave privada para él.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada de dispositivo en Settings" width={600} height="auto" /></p>
 
 Reinicia el dispositivo defectuoso para que la configuración surta efecto.
 
@@ -620,9 +620,9 @@ Las cifras siguientes son solo de referencia; el consumo real puede variar segú
 
 - **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
 
-- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Un dispositivo normal suele funcionar por encima de -110 dBm. Se considera que un dispositivo con un RSSI inferior a -115 dBm tiene un rendimiento deficiente.
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Se considera que un dispositivo con un RSSI inferior a -115 dBm tiene un rendimiento deficiente.
 
-      Para lograr el mejor rendimiento de señal, utiliza el dispositivo en un área abierta y sin obstrucciones con una interferencia mínima.
+      Para lograr el mejor rendimiento de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con interferencias mínimas.
 
 ### Corriente de carga
 
@@ -630,5 +630,20 @@ Las cifras siguientes son solo de referencia; el consumo real puede variar segú
 
 La corriente máxima de carga de Xiao nRF-52840 Plus es de 200 mA. El chip de gestión de carga CN3165 admite 0.99 A. Por lo tanto, la corriente máxima de carga es de 1 A.
 
-## Recurso
+## Recursos
 - [Tabla de cálculo de vida útil de la batería del Solar Node](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

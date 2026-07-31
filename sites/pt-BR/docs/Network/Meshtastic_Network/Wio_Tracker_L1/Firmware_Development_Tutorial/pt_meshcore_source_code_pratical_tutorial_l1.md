@@ -1,6 +1,6 @@
 ---
-description: Um tutorial prático para configurar o ambiente do código‑fonte do firmware MeshCore, compilar o Tracker L1 e gravar o firmware.
-title: Tutorial de Desenvolvimento do Código‑Fonte do MeshCore
+description: Um tutorial prático para configurar o ambiente do código-fonte do firmware MeshCore, compilar o Tracker L1 e gravar o firmware.
+title: Tutorial de Desenvolvimento do Código-Fonte do MeshCore
 keywords:
   - MeshCore
   - Source Code
@@ -41,9 +41,9 @@ Após a instalação, normalmente um ícone em forma de formiga aparece na barra
 
 ### Preparação do projeto
 
-Abra uma pasta onde você deseja ter o seu projeto. Abra a pasta no terminal. [Clique aqui](https://github.com/meshcore-dev/MeshCore) para clonar o projeto com git.
+Abra uma pasta onde você deseja colocar seu projeto. Abra a pasta no terminal. [Clique aqui](https://github.com/meshcore-dev/MeshCore) para clonar o projeto com git.
 
-Abra o VSCode, depois clique no ícone do PlatformIO, escolha `select a folder`. Escolha a pasta onde você clonou o projeto.
+Abra o VSCode, clique no ícone do PlatformIO e escolha `select a folder`. Escolha a pasta em que você clonou o projeto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/pickfolder.png" style={{width:700, height:'auto'}}/></div>
 
@@ -57,16 +57,16 @@ O PlatformIO instalará automaticamente as dependências necessárias. Após a i
 
 ### Tutorial de desenvolvimento
 
-Encontre o ambiente para a sua placa alvo. Tome o L1 Pro companion como exemplo:
+Encontre o ambiente para a sua placa de destino. Tome o L1 Pro companion como exemplo:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/L1Board.jpg" style={{width:800, height:'auto'}}/></div>
 
 
 Então o PlatformIO irá preparar as dependências necessárias para a placa.
 
-Altere o seu código. É recomendado alterar o arquivo `variant.h` para a sua placa.
+Altere seu código. Recomenda-se alterar o arquivo `variant.h` para a sua placa.
 
-Após completar a codificação, execute o seguinte comando para compilar o código e convertê-lo em um arquivo uf2.
+Após concluir a codificação, execute o seguinte comando para compilar o código e convertê-lo em um arquivo uf2.
 
 ``` bash
 pio run -e WioTrackerL1_companion_radio_ble
@@ -113,12 +113,12 @@ Obrigado por considerar contribuir para o projeto MeshCore! Como você pode cont
 **3. Enviar alterações de código (Pull Requests)**
 ### Pequenas correções 
 (erros de digitação, comentários, exemplos, pequenas correções de bugs)
-→ Basta abrir um pull request — não é necessário criar issue antes
+→ Basta abrir um pull request — não é necessário abrir issue antes
 
 ### Alterações maiores / novos recursos
 1. Abra primeiro uma issue para discutir a ideia
-2. Obtenha um sinal positivo geral do(s) mantenedor(es)
-3. Faça um fork do repositório a partir da branch 'dev' e crie a sua branch (fix/xxx, feature/yyy, docs/whatever)
+2. Obtenha um sinal positivo aproximado do(s) mantenedor(es)
+3. Faça fork do repositório a partir do branch 'dev' e crie seu branch (fix/xxx, feature/yyy, docs/whatever)
 4. Faça suas alterações
 5. Atualize ou adicione exemplos quando apropriado
 6. Adicione/atualize comentários no código
@@ -138,6 +138,21 @@ Por favor, siga o estilo C++ existente (conforme o .clang-format)
 - Recuo de 2 espaços (sem tabs)
 - camelCase para funções e variáveis
 - UpperCamelCase / PascalCase para nomes de classes
-- Constantes `#define` em ALL_CAPS
+- Constantes #define em ALL_CAPS
 - Mantenha as linhas com < ~100 caracteres quando possível
 (Mas a consistência com o código existente é mais importante do que regras rígidas)
+
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

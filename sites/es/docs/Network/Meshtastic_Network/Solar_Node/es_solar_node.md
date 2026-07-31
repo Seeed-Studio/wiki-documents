@@ -37,7 +37,7 @@ El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
 
 ### Características
 
-- Integrado con un panel solar de 5W y admite baterías externas (que deben ser proporcionadas por los propios usuarios).
+- Integrado con un panel solar de 5 W y admite baterías externas (que deben ser proporcionadas por los propios usuarios).
 - El dispositivo viene con el firmware Meshtastic preinstalado de fábrica. Puede integrarse perfectamente en el ecosistema Meshtastic.
 - Compatible con el ecosistema Grove y admite la conexión plug-and-play de sensores como sensores de temperatura y humedad, sensores de luz, etc.
 - Es adecuado para uso prolongado en exteriores.
@@ -109,7 +109,7 @@ El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
     <td>Encendido/apagado</td>
   </tr>
   <tr>
-    <td>Restablecer</td>
+    <td>Reinicio</td>
   </tr>
   <tr>
     <td>Definido por el usuario</td>
@@ -150,7 +150,7 @@ El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
   </tr>
   <tr>
     <td><b>Certificación</b></td>
-    <td>FCC, CE</td>
+    <td>FCC、CE</td>
   </tr>
   <tr>
     <td><b>Dimensiones</b></td>
@@ -172,3 +172,18 @@ El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
 **Diagrama**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>
