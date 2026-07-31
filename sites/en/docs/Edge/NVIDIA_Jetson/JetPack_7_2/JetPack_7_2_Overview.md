@@ -127,14 +127,14 @@ JetPack 7.2 expands the Jetson developer workflow beyond manual setup by making 
 | --- | --- |
 | [Build and Flash a Yocto Image for reComputer Super](/build_and_flash_yocto_for_recomputer_super_bk/) | Reproducible OpenEmbedded/Yocto image construction for a production-oriented Jetson Linux deployment. |
 
-## CUDA 13, TensorRT, and Edge AI
+## AI Deployment & Applications
 
 | Resource | Coverage |
 | --- | --- |
 | [Deploy TensorRT Edge-LLM on JetPack 7.2](/deploy_tensorrt_edge_llm_on_jetpack7.2/) | JetPack 7.2 model export, Orin/Thor build targets, engine generation, and C++ inference. |
 | [Industrial Vision Monitoring on JetPack 7.2](/industrial_vision_monitoring_on_industrial_bk/) | YOLO and VLM monitoring verified on reComputer Industrial and reServer Industrial with L4T 39.2. |
 | [DeepStream on JetPack 7.2](/jetpack_7_2_deepstream/) | DeepStream 9.1 installation, agentic skills, natural-language pipeline authoring, VLM integration, migration, and memory planning. |
-| [Deploy Full-Weight GR00T N1.7 on JetPack 7.2 and AGX Orin](/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin/) | **Planned:** full-checkpoint TensorRT deployment for Physical AI on AGX Orin. |
+| [Deploy Full-Weight GR00T N1.7 on JetPack 7.2 and AGX Orin](/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin/) | Validated seven-engine TensorRT deployment, numerical verification, offline inference, and portable path configuration for AGX Orin. |
 
 Serialized engines and custom TensorRT plugins must be rebuilt on the target JetPack 7.2 software stack.
 
