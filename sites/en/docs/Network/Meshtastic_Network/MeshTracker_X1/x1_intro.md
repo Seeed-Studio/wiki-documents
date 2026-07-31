@@ -13,7 +13,7 @@ last_update:
   author: MichelleHuang
 url: https://wiki.seeedstudio.com/meshtracker_x1_intro/
 createdAt: '2026-07-13'
-updatedAt: '2026-07-29'
+updatedAt: '2026-07-16'
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png" alt="pir" width={900} height="auto" /></p>
@@ -357,3 +357,18 @@ X1 might be developed into a product series, in which new products to be launche
 ### Resource
 
 [Battery Test Report](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+
+## Tech Support & Product Discussion
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>
