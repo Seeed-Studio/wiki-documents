@@ -105,7 +105,7 @@ A highly integrated, card-sized form factor optimized around a high-capacity 110
 
 **Battery**
 
-|Item|Parameter|s
+|Item|Parameter|
 | :- | :- |
 |**Battery Capacity**|Rechargeable high-voltage battery, 1100mAh|
 |**Battery Life Monitoring**|Periodic uplink battery level|
@@ -115,7 +115,7 @@ A highly integrated, card-sized form factor optimized around a high-capacity 110
 |**Fully-charged cut-off voltage**|4.37V|
 |**Charging Temperature Limit**|5 to +45℃|
 
-X1 might be developed into a product series, in which new products to be launched in the future will be equipped with additional sensors (3-axis sensors, six-axis magnetometers etc.).
+X1 might be developed into a product series, in which new product models to be launched in the future will be equipped with additional sensors (3-axis sensors, six-axis magnetometers etc.).
 
 ### Pin List
 
