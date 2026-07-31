@@ -26,7 +26,11 @@ url: https://wiki.seeedstudio.com/solutions/mcp-face-auth-integration/
 ---
 
 :::note[Notice]
-Face recognition processes biometric data. Before deploying this in production, confirm that your use case complies with local privacy regulations, and obtain consent from the people you enroll. Face templates are stored as numeric embeddings, but they remain personal data in most jurisdictions.
+Face recognition processes biometric data, which is specially regulated in many places — the EU and UK under GDPR, Illinois under BIPA, and elsewhere. Employee biometrics at work can also engage labour law and works-council consultation.
+
+Because you build and host this side yourself, **you are the data controller**. Plan for it deliberately: lawful basis and consent for each enrolled person, a retention and deletion path, and a decision about whether to keep enrollment photographs. This page recommends keeping the source image so the roster can be re-computed when the model changes — that is an operational convenience with a privacy cost, and it is your call, not a default to inherit. Embeddings are numeric, but they are still personal data.
+
+Get this reviewed before you enroll a single real person.
 :::
 
 ## Overview
@@ -39,7 +43,13 @@ You do not adopt our platform to do this. You build an **MCP server for your own
   <a class="get_one_now_item" href="https://github.com/suharvest/warehouse_system" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub 🖱️</font></span></strong></a>
 </div>
 
-Read it, run it, copy the parts you need. It is a complete working example of everything described below: the MCP tool layer, the face verification gate, the enrollment store, and the admin screens that configure them.
+Read it, run it, copy the parts you need. It is MIT-licensed and is a complete working example of everything described below: the MCP tool layer, the face verification gate, the enrollment store, and the admin screens that configure them.
+
+Three names appear throughout, so it is worth fixing them now:
+
+- **MCP** — the Model Context Protocol, the open standard by which a language model calls your functions. Your integration is an MCP server.
+- **XiaoZhi** — the open-source voice assistant stack the Watcher runs. It handles wake word, speech, and deciding which of your MCP tools to call.
+- **SenseCraft** — Seeed's platform where you register a device and obtain the MCP endpoint that connects it to your server.
 
 Two problems have to be solved, and this page treats them separately:
 
@@ -122,19 +132,13 @@ In the reference implementation these are `mcp/warehouse_mcp.py` (tool layer plu
 
 For getting the device itself on the network and paired with an agent, see [SenseCAP Watcher for Xiaozhi AI](/sensecap_watcher_for_xiaozhi_ai).
 
-:::info Two independent settings
-`mode` selects **where inference runs** — `local` (on the device) or `lan` (on an external service). `verify_frequency` selects **how often** verification happens — `always`, or once per conversation (`session`).
-
-They are orthogonal: any combination is valid.
-:::
-
 ## Try It Before You Build
 
 You do not have to read code to find out whether this fits your product. There are three ways in, in increasing order of effort.
 
-**Use the hosted instance.** Register yourself at [warehouse.seeed.cn](https://warehouse.seeed.cn/) and you are talking to a running deployment. Pair a Watcher with it and you can exercise the whole voice and face flow without installing anything. This is the fastest way to see what your own product would feel like.
+**Use the hosted instance — for the voice half.** Register yourself at [warehouse.seeed.cn](https://warehouse.seeed.cn/) and you are talking to a running deployment. Pair a Watcher with it and you can exercise the voice-to-inventory flow without installing anything. Note that **face verification is switched off on shared deployments**, so this shows you the voice experience, not the identity one.
 
-**Deploy the reference design.** The Smart Warehouse reference design packages the same system for one-click deployment, so you get a private instance to experiment against.
+**Deploy the reference design — for the face half.** The Smart Warehouse reference design packages the same system for one-click deployment. Because it is a private instance, face verification can be enabled, so this is the shortest path to seeing the actual subject of this page working.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/smart_warehouse" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Reference Design 🖱️</font></span></strong></a>
@@ -179,8 +183,14 @@ class MyWmsProvider(BaseProvider):
 
 Implement six required methods — `resolve_name`, `query_stock`, `stock_in`, `stock_out`, `search`, `get_today_statistics` — plus two optional ones, `query_batch` and `move_batch_location`.
 
-:::caution Take the signatures from the code, not from the prose
-The tool layer passes these arguments **positionally**. Copy each signature from `mcp/providers/base.py`. Several documents still show `stock_in` and `stock_out` with a single `reason` parameter; it has since been split into `reason_category` and `reason_note`, and further parameters were added. A signature that does not match raises `TypeError` on the first call.
+:::caution Take the signatures from `mcp/providers/base.py`
+The tool layer passes these arguments **positionally**, so copy each signature from the code rather than from any prose description. A signature that does not match raises `TypeError` on the first call.
+:::
+
+:::danger Change the error behaviour before you ship
+The reference tool layer falls back to its built-in default Provider whenever yours fails to load or raises — network blip, missing file, bad config — and logs a warning instead of failing loudly. In the reference that is a convenience. In your product it is data misrouting: a transient error sends your customer's inventory writes to the wrong database, silently.
+
+Make adapter failure fail loudly and refuse the operation. This is the one piece of reference behaviour you should not copy.
 :::
 
 ### Option B — Write Your Own MCP Server
@@ -217,20 +227,32 @@ The full bridge walkthrough — obtaining an MCP endpoint from SenseCraft, creat
 
 Both paths look identical to your MCP tools — same verification call, same verdict. They differ in where the face matching happens, and therefore in roster size, robustness and hardware cost.
 
+Two settings control this, and they are independent:
+
+- **`mode`** — *where* inference runs: `local` (on the device) or `lan` (on a service you run).
+- **`verify_frequency`** — *how often* verification happens: `always`, or once per conversation (`session`).
+
+Any combination is valid.
+
 | | Path 1 — On-Device | Path 2 — External Compute Box |
 | :--- | :--- | :--- |
 | `mode` value | `local` | `lan` |
 | Where matching runs | Himax WE2 NPU inside SenseCAP Watcher | Your LAN inference service |
 | Extra hardware | None | One compute box per site |
-| Enrolled people per device | **20 maximum** | No fixed limit |
-| Face model | MobileFaceNet, 128-D, INT8 | Your choice |
-| Anti-spoofing / liveness | Not available | Supported, if your service reports it |
-| Works without LAN access to the device | No | Yes, when the device supplies the frame |
-| Match threshold | Tenant-wide | Tenant-wide, with per-rule override |
-| Best for | Small teams, one shift, fast pilots | Larger rosters, stricter checks, multiple sites |
+| Enrolled people | **20 per device**, a hard limit of the on-device store | No fixed limit |
+| Face model | MobileFaceNet, 128-D, INT8 — fixed | Your choice |
+| Anti-spoofing / liveness | **Not available** | Supported, if your service reports it |
+| Match threshold | Global | Global, with per-rule override |
+| Best for | Pilots and small single-shift teams | Production, larger rosters, multiple sites |
+
+:::caution Path 1 has no liveness detection, and that decides most deployments
+The on-device matcher compares faces; it cannot tell a face from a photograph of that face. Anyone holding up a printed photo of an authorised operator passes. That is acceptable for a pilot or a low-threat environment, but it is not an anti-fraud control — and deterring deliberate misattribution is usually the reason this feature gets funded.
+
+Combined with the 20-person ceiling, this means **most production deployments end up on Path 2**. Treat Path 1 as the way to prove the workflow, not as the cheap version of the finished system.
+:::
 
 :::tip Start local, move to LAN later
-Both paths use the same enrollment records, rules and audit log, so the switch is a configuration change rather than a migration. Keep the source image alongside each embedding and you can re-compute the roster against a new model in the background when you move. Nothing in your MCP tools changes.
+Both paths use the same enrollment records, rules and audit log, and nothing in your MCP tools changes when you switch. The move is not free, though: a different model means a different `model_tag`, so every enrolled embedding has to be re-computed. Keep the source image alongside each embedding and that becomes a background job rather than re-enrolling everyone.
 :::
 
 ### Path 1 — On-Device Verification
@@ -354,6 +376,24 @@ The inference service is a plain HTTP service, so any machine on the LAN that ca
 |<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html)</p>|
 
 Choose the Jetson system when you want to run a large embedding model or serve several sites from one box. Choose either R2135 when the box sits in a plant room or on a wall in a warehouse — both are fanless and rated for industrial temperatures.
+
+#### Running the Whole Stack On-Premises
+
+The boxes above handle face recognition locally, but by default the *voice* half — speech recognition and the language model that decides which tool to call — runs in the cloud through SenseCraft. For most customers that is fine. For regulated industries, defence, or any customer whose answer to "does audio leave our network?" must be *no*, it is a hard blocker.
+
+That stack can also run entirely on your own hardware. It is a larger undertaking than face verification alone — you host speech recognition, the language model, and text-to-speech yourself — and it needs a substantially bigger box, because those models must sit in memory alongside the face model. Memory capacity, not TOPS, is the constraint that decides this.
+
+|reComputer Mini J5012 with GMSL|NVIDIA Jetson AGX Thor Developer Kit|
+|------------------|--------------------------|
+|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/0/-/0-100020407-recomputer-mini-j5011-with-gmsl-64g_1.jpg" alt="reComputer Mini J5012 with GMSL" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image-kit-3.png" alt="NVIDIA Jetson AGX Thor Developer Kit" width={300} height="auto" />|
+|Jetson AGX Orin 64GB<br/>64GB LPDDR5 · 64GB eMMC<br/>19-48V input, 10GbE, sealed industrial chassis|Jetson AGX Thor, Blackwell GPU<br/>128GB LPDDR5X at 273GB/s<br/>Headroom for a larger model and longer context|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Mini-J5012-with-GMSL-Extension-p-6878.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html)</p>|
+
+Pick the Mini J5012 when the box has to survive a plant floor — wide-voltage input, industrial I/O, sealed enclosure. Pick Thor when you want the largest model you can serve from one machine and a rack or cabinet is available.
+
+:::tip Data residency is a selling point, not just a constraint
+If you sell into regulated sectors, "no audio, imagery or transcript ever leaves the site" is often worth more to the customer than any feature on this page. It is worth scoping the fully-local build even if you ship the cloud version first.
+:::
 
 ## Part 3 — What You Implement
 
@@ -529,15 +569,17 @@ Expected when no rule requires a face for that operation, or when verification i
 
 ### 4. We swapped in our own data source but writes still land in the reference database
 
-The reference tool layer falls back to its default Provider on any error — network failure, missing file, load exception — and logs a warning rather than failing loudly. Check the MCP log for that warning first.
+The reference tool layer falls back to its default Provider on any error and logs a warning rather than failing loudly. Check the MCP log for that warning — and see the warning in [Option A](#option-a--reuse-the-bridge-swap-the-data-source) about changing this behaviour before you ship.
 
 ### 5. Verification is slow or intermittently denied
 
-Three separate timeouts apply: 18 seconds from the MCP client to the backend, 10 seconds from the backend to a remote inference endpoint, and roughly 6.5 to 8 seconds from the backend to the device. The slowest link governs. If your inference service is close to 10 seconds, reduce the model size or the image resolution.
+Three timeouts bound the chain: 18 seconds from the MCP client to the backend, 10 seconds from the backend to a remote inference service, and roughly 6.5 to 8 seconds from the backend to the device. These are ceilings, not typical latencies — measure your own, because this is a person standing at a terminal waiting. If your inference service approaches 10 seconds, reduce the model size or the image resolution.
 
 ### 6. Can we verify once per conversation instead of per operation?
 
-Yes. Set the verification frequency to `session`. The first successful check is cached for the conversation, up to a 10-minute ceiling. Use `always` when every individual operation must be independently proven.
+Yes. Set the verification frequency to `session` and the first successful check is cached for that conversation, up to a 10-minute ceiling.
+
+Understand what you are trading: for those 10 minutes, every operation in the conversation is attributed to the person matched once at the start. Anyone who continues that conversation inherits the identity. Use `session` where the win is avoiding repeated prompts during a long picking run, and `always` wherever an individual operation must be independently proven.
 
 ### 7. Which face model does the device use?
 
