@@ -112,6 +112,7 @@ A highly integrated, card-sized form factor optimized around a high-capacity 110
 |**Charging Protocol**|USB Type-C|
 |**Device Power Input**|5V, 0.55A|
 |**Battery Power Input**|4.4V, 0.22A|
+|**Fully-charged cut-off voltage**|4.37V|
 |**Charging Temperature Limit**|5 to +45℃|
 
 X1 might be developed into a product series, in which new products to be launched in the future will be equipped with additional sensors (3-axis sensors, six-axis magnetometers etc.).
@@ -360,7 +361,15 @@ X1 might be developed into a product series, in which new products to be launche
 
 ## Tech Support & Product Discussion
 
-<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
     <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
