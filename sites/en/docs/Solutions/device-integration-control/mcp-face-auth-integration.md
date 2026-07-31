@@ -578,7 +578,3 @@ Understand what you are trading: for those 10 minutes, every operation in the co
 <a href="mailto:solution@seeed.cc" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-## CHANGELOG
-
-- **07/31/2026** — Initial release.
