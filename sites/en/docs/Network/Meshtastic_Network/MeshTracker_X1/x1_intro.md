@@ -107,7 +107,7 @@ A highly integrated, card-sized form factor optimized around a high-capacity 110
 
 |Item|Parameter|s
 | :- | :- |
-|**Battery Capacity**|Rechargeable LCO battery, 1100mAh|
+|**Battery Capacity**|Rechargeable high-voltage battery, 1100mAh|
 |**Battery Life Monitoring**|Periodic uplink battery level|
 |**Charging Protocol**|USB Type-C|
 |**Device Power Input**|5V, 0.55A|
