@@ -13,7 +13,7 @@ last_update:
   author: Xinrui Wu
 createdAt: '2025-11-20'
 updatedAt: '2026-04-20'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/getting_started_for_n8n_with_recamera_bak/
+url: https://wiki.seeedstudio.com/getting_started_for_n8n_with_recamera_bak/
 ---
 # Getting started for n8n with reCamera
 

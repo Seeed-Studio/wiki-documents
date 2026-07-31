@@ -1970,6 +1970,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_udp_streaming',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_http',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_mqtt_stream',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_websockets',
                   ],
                 },
                 {
@@ -2226,6 +2227,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe',
+                'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe_memory',
               ],
             },
           ],
@@ -3848,7 +3850,11 @@ const sidebars = {
                   type: 'category',
                   label: 'J601-Robotics Carrier Board',
                   items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/reComputer_Robotics_J601_Getting_Started',
+                    {
+                      type: 'doc',
+                      id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/reComputer_Robotics_J601_Getting_Started',
+                      label: 'Flash Jetpack',
+                    },
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
@@ -4601,6 +4607,24 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/vibe-code-with-your-agent',
               label: 'Vibe Code with Your Agent',
+            },
+            {
+              type: 'category',
+              label: 'Development Cases',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/home_assistant',
+                  label: 'Home Assistant Integration',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/reachymini_voice_control_soarm',
+                  label: 'Reachy Mini Voice Control for SO-ARM',
+                },
+              ],
             },
             {
               type: 'category',

@@ -15,7 +15,7 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-06-02'
 updatedAt: '2026-06-16'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/recamera_benchmarking_bak/
+url: https://wiki.seeedstudio.com/recamera_benchmarking_bak/
 ---
 
 # YOLO11n Edge Benchmarking on reCamera

@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 
 ### 必要なツール
 
-始める前に、以下のツールを用意してください：
+始める前に、次のツールを準備してください：
 
 1. [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 2. [Python 3](https://www.python.org/downloads/)
@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
 ### PlatformIO のインストール
 
-VS Code の Extensions マーケットプレイスで `PlatformIO` を検索してインストールします。
+VS Code の拡張機能マーケットプレイスで `PlatformIO` を検索してインストールします。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image7.png)
 
@@ -41,9 +41,9 @@ VS Code の Extensions マーケットプレイスで `PlatformIO` を検索し�
 
 ### プロジェクトの準備
 
-プロジェクトを配置したいフォルダーを開きます。ターミナルでそのフォルダーを開きます。[ここをクリック](https://github.com/meshcore-dev/MeshCore)してプロジェクトを git clone します。
+プロジェクトを配置したいフォルダを開きます。ターミナルでそのフォルダを開きます。[ここをクリック](https://github.com/meshcore-dev/MeshCore)してプロジェクトを git clone します。
 
-VSCode を開き、platform IO アイコンをクリックし、`select a folder` を選択します。clone したプロジェクトのフォルダーを選択します。
+VSCode を開き、PlatformIO アイコンをクリックして `select a folder` を選択します。クローンしたプロジェクトのフォルダを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/pickfolder.png" style={{width:700, height:'auto'}}/></div>
 
@@ -57,12 +57,12 @@ PlatformIO は必要な依存関係を自動的にインストールします。
 
 ### 開発チュートリアル
 
-対象ボード用の environment（環境）を見つけます。ここでは L1 Pro companion を例にします：
+ターゲットボード用の environment を探します。ここでは L1 Pro companion を例に説明します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/L1Board.jpg" style={{width:800, height:'auto'}}/></div>
 
 
-その後、PlatformIO がそのボードに必要な依存関係を準備します。
+その後、PlatformIO がボードに必要な依存関係を準備します。
 
 コードを変更します。ボード用の `variant.h` ファイルを変更することを推奨します。
 
@@ -73,11 +73,11 @@ pio run -e WioTrackerL1_companion_radio_ble
 pio run -e WioTrackerL1_companion_radio_ble -t create_uf2
 ```
 
-次に、RST ボタンを素早く 2 回クリックして DFU モードに入ります。ポップアップしたディスクに uf2 ファイルをドラッグします。uf2 ファイルは `.pio\build\WioTrackerL1_companion_radio_ble` にあります。
+次に RST ボタンをダブルクリックして DFU モードに入ります。ポップアップしたディスクに uf2 ファイルをドラッグします。uf2 ファイルは `.pio\build\WioTrackerL1_companion_radio_ble` にあります。
 
 ### 例
 
-#### ユーザー表示の制御
+#### ユーザーディスプレイ制御
 
 この例では、L1 Pro の UI 表示をどのように変更するかを示します。画面上のメッセージ表示を削除し、「Test」を常に表示するようにします。
 
@@ -93,51 +93,74 @@ pio run -e WioTrackerL1_companion_radio_ble -t create_uf2
 ```
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/L1Display.jpg" style={{width:800, height:'auto'}}/></div>
 
-これをコンパイルし、生成された uf2 ファイルを L1 Pro に書き込みます。
+コンパイルして、uf2 ファイルを L1 Pro に書き込みます。
 
-## （上級）PR の提出
+## （上級）PR 提出
 
 MeshCore プロジェクトへの貢献をご検討いただきありがとうございます！どのように貢献できますか？
 **1. バグ報告**
 
-- Issues トラッカーを使用してください
-- わかりやすいタイトルを付けてください（例："Crash when calling begin() with invalid pin"）
-- 再現するための手順を正確に記述してください
-- 使用しているボード、IDE バージョン、ライブラリバージョン、および関連するコードスニペットを含めてください
-- 可能であれば、最小限かつ完全なサンプルスケッチを添付してください
+- Issues トラッカーを使用する
+- わかりやすいタイトルを付ける（例："Crash when calling begin() with invalid pin"）
+- 再現手順を正確に記述する
+- 使用しているボード、IDE バージョン、ライブラリバージョン、および関連するコードスニペットを含める
+- 可能であれば、最小限かつ完全なサンプルスケッチを添付する
 
-**2. 機能拡張・新機能の提案**
-- [Feature request] というプレフィックスを付けて issue を作成してください
-- ユースケースを説明してください → この提案はどのような問題を解決しますか？
-- 理想的な API / 挙動を記述してください（コード例があると非常に助かります）
+**2. 機能改善 / 新機能の提案**
+- [Feature request] というプレフィックスを付けて issue を作成する
+- ユースケースを説明する → どのような問題を解決しますか？
+- 理想的な API / 挙動を記述する（コード例があると非常に役立ちます）
 **3. コード変更の提出（Pull Request）**
 ### 小さな修正
-（タイポ、コメント、サンプル、軽微なバグ修正）
-→ 事前に issue を立てる必要はありません。直接 pull request を作成してください。
+（誤字、コメント、サンプル、小さなバグ修正）
+→ 事前に issue を立てる必要はありません。Pull Request をそのまま作成してください。
 
-### 大きな変更・新機能
-1. まず issue を立ててアイデアを議論します
-2. メンテナーからおおまかな👍（賛同）を得ます
-3. 'dev' ブランチからリポジトリを fork し、自分のブランチ（fix/xxx, feature/yyy, docs/whatever）を作成します
-4. 変更を加えます
-5. 必要に応じてサンプルコードを更新または追加します
-6. コード内のコメントを追加・更新します
-7. Pull request を送信します
+### 大きな変更 / 新機能
+1. まず issue を作成してアイデアを議論する
+2. メンテナーから大まかな 👍 をもらう
+3. 'dev' ブランチからリポジトリを fork し、自分のブランチを作成する（fix/xxx, feature/yyy, docs/whatever）
+4. 変更を加える
+5. 必要に応じてサンプルを更新または追加する
+6. コード内のコメントを追加 / 更新する
+7. Pull Request を送信する
 
 ### Pull Request のガイドライン
-- 1 機能 / 1 修正につき 1 つの pull request（小さい PR の方がレビューしやすく、早くマージできます）
-- 説明的なコミットメッセージを使用してください
+- 1 つの機能 / 修正につき 1 つの Pull Request（小さい PR の方がレビューしやすく、早くなります）
+- 説明的なコミットメッセージを使用する
   良い例: Fix I2C timeout handling on ESP32
   悪い例: update
-- 関連する issue があれば参照してください（Fixes #123, Closes #89 など）
-- 公開 API を変更した場合は、README.md と library.properties を更新してください
-- 新機能には examples/ 内のサンプルスケッチを含めてください
+- 関連する issue があれば参照する（Fixes #123, Closes #89 など）
+- 公開 API を変更した場合は、README.md と library.properties を更新する
+- 新機能には examples/ 内のサンプルスケッチを含めること
 ### コーディングスタイル
-.clang-format に従い、既存の C++ スタイルに従ってください
+.clang-format に従い、既存の C++ スタイルに従ってください。
 
 - インデントはスペース 2 つ（タブは使用しない）
-- 関数名や変数名には camelCase を使用
+- 関数および変数には camelCase を使用
 - クラス名には UpperCamelCase / PascalCase を使用
 - #define の定数は ALL_CAPS を使用
-- 可能であれば 1 行はおおよそ 100 文字未満に抑える
+- 可能な範囲で 1 行をおおよそ 100 文字未満に保つ
 （ただし、厳密なルールよりも既存コードとの一貫性を優先します）
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

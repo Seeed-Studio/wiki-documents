@@ -11,7 +11,7 @@ last_update:
   date: 03/26/2026
   author: Kasun Thushara
 createdAt: '2026-03-26'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/respeaker_flex_introduction/
 ---
 # Getting Started with reSpeaker Flex
@@ -229,6 +229,16 @@ The reset (RST) button provides a hardware reset for the reSpeaker Flex when pre
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/speaker-connection .jpg" alt="pir" width={600} height="auto" /></p>
 
 Here you can see how to connect speakers using either the 3.5mm AUX headphone jack or the onboard JST speaker interface, depending on your audio output preference.
+
+#### FPC Connection
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/fpc-cable-orientation.png" alt="pir" width={600} height="auto" /></p>
+
+Before connecting the FPC cable, identify the contact side and stiffener side. When inserting the cable into the MIC Connector, make sure the exposed contacts are facing the metal contacts inside the connector, while the stiffener side faces outward.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/fpc-cable-connection.png" alt="pir" width={600} height="auto" /></p>
+
+Open the locking tab on the MIC Connector, insert the FPC cable with the correct orientation, and close the tab to secure the connection.
 
 #### Safe Mode
 
@@ -715,11 +725,12 @@ Open the start menu and type Device manager. Find  related reSpeaker Flex device
 
 ## Resources
 
-[reSpeaker Flex XVF3800 Circular step file](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)
-
-[reSpeaker Flex XVF3800 Linear step file](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
-
-[reSpeaker Flex XVF3800 Core Board Step](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
+- [reSpeaker Flex XVF3800 Circular 2D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_2d.dxf)
+- [reSpeaker Flex XVF3800 Linear 2D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear_2d.dxf)
+- [reSpeaker Flex XVF3800 Core Board 2D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate_2d.dxf)
+- [reSpeaker Flex XVF3800 Circular 3D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)
+- [reSpeaker Flex XVF3800 Linear 3D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
+- [reSpeaker Flex XVF3800 Core Board 3D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
 
 
 

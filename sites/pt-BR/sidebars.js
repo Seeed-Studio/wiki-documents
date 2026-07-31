@@ -1964,6 +1964,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_udp_streaming',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_http',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_mqtt_stream',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_websockets',
                   ],
                 },
                 {
@@ -2220,6 +2221,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/pt_respeaker_clip_python_usage_stt_llm_transcribe',
+                'Sensor/reSpeaker_clip/pt_respeaker_clip_python_usage_stt_llm_transcribe_memory',
               ],
             },
           ],
@@ -3842,7 +3844,11 @@ const sidebars = {
                   type: 'category',
                   label: 'Placa carrier J601-Robotics',
                   items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_reComputer_Robotics_J601_Getting_Started',
+                    {
+                      type: 'doc',
+                      id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_reComputer_Robotics_J601_Getting_Started',
+                      label: 'Flash Jetpack',
+                    },
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
@@ -4157,6 +4163,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/pt_Developer_Tools',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Build_and_Flash_Yocto_for_reComputer_Super',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Develop_reComputer_Jetson_using_Clawdbot',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Gapi-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_alwaysAI-Jetson-Getting-Started',
@@ -4523,6 +4530,24 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/pt_vibe-code-with-your-agent',
               label: 'Programe com seu agente',
+            },
+            {
+              type: 'category',
+              label: 'Casos de desenvolvimento',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/pt_home_assistant',
+                  label: 'Integração com Home Assistant',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/pt_reachymini_voice_control_soarm',
+                  label: 'Controle por voz do Reachy Mini para o SO-ARM',
+                },
+              ],
             },
             {
               type: 'category',

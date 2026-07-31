@@ -15,10 +15,10 @@ slug: /rebot_b601_rs_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-05-26
+  date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-07-20'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/
 ---
 
@@ -45,6 +45,14 @@ url: https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/
 reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)上开源了，本文将带领你快速入门B601-RS，从组装到使用。
 本文的内容正在光速赶来，各位敬请期待。
 
+## 风险告知及免责声明
+
+<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+</div>
 
 ## 关于电源
 
@@ -305,6 +313,72 @@ C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
 
 </details>
 
+<details>
+
+<summary>PCAN 固件下载与驱动修复步骤-Ubuntu</summary>
+Ubuntu 用户请参考本指南
+
+1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.USB2CAN 拨到 BOOT
+
+3.请将第一步的USB2CAN.zip压缩包解压，将flash_pcan_ubuntu.sh 和 USB2CAN.zip里面的pcan_canable_hw.bin 放同一目录
+
+[点击下载 flash_pcan_ubuntu.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
+
+如果是从别的电脑传过去的（比如 scp）：
+
+```text
+scp flash_pcan.sh pcan_canable_hw.bin seeed@你的Ubuntu的IP:~/Downloads/
+```
+或者直接拖进优盘再插到 Ubuntu 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+
+4.执行：
+
+```text
+bash flash_pcan_ubuntu.sh
+```
+ 输入密码；等待完成
+
+完成后重新拨回"120R"
+
+重新插 USB。
+</details>
+
+<details>
+
+<summary>PCAN 固件下载与驱动修复步骤-MAC</summary>
+MAC 用户请参考本指南
+
+1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.USB2CAN 拨到 BOOT
+
+3.请将第一步的USB2CAN.zip压缩包解压，将flash_pcan_mac.sh 和 USB2CAN.zip里面的pcan_canable_hw.bin 放同一目录
+
+[点击下载 flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
+
+如果是从别的电脑传过去的（比如 scp）：
+
+```text
+scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
+```
+
+或者直接拖进优盘再插到 MAC 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+
+4.执行：
+
+```text
+ bash /Users/"你的用户名"/Downloads/pcan_flash_mac.sh "/Users/"你的用户名"/Downloads/pcan_canable_hw.bin"
+```
+以上命令为文件放置在mac下载路径，按实际路径更改
+
+输入密码；等待完成
+
+完成后重新拨回"120R"
+
+重新插 USB。
+</details>
 
 <!-- ### 3.写入电机id
 
@@ -368,3 +442,28 @@ or
 ```bash
 DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
+
+#### 初始化 RS 电机控制参数
+
+:::warning 首次使用时请完成参数初始化
+
+reBot Arm B601-RS 的大多数示例使用 MIT 模式运行。原生 Position（`pos_vel`）模式会直接使用位置环增益 `loc_kp` 和最大速度 `vel_max`，其运动效果也与速度环增益 `spd_kp`、加速度参数 `acc_rad` 有关。如果未初始化 reBot Arm B601-RS 的推荐参数，或各关节保存的参数不一致，使用位置模式时可能出现响应、速度或加减速效果异常。
+
+请先在 [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) 的“机械臂型号”中选择 `rebot-arm-robstride`，扫描并确认 1～7 号关节全部在线，并按照前文完成机械臂校零，然后再执行以下操作：
+
+1. 点击 **读取参数**，读取所有在线关节当前保存的参数。该操作只读取参数，不会修改电机中的数据。请等待页面提示“控制参数读取完成”，并保留当前参数作为记录。
+2. 点击 **套用默认模板**，确认页面提示“已套用 reBot Arm RobStride 默认参数模板（1～7 关节）”。此操作只将推荐值加载到页面中，尚未写入电机。
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/b601_rs_motorbridge_read_params.png" alt="读取 B601-RS 电机参数并套用默认模板" />
+</div>
+
+3. 点击 **写入参数**，确认机械臂已安全支撑、周围无人员或障碍物，并在弹窗中确认写入。请勿在写入过程中断电或插拔电机线。
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/b601_rs_motorbridge_write_params.png" alt="确认写入 B601-RS 电机参数" />
+</div>
+
+4. 写入完成后，MotorBridge Studio 会自动回读参数。页面显示“写入后回读校验一致”即表示初始化成功。
+
+:::

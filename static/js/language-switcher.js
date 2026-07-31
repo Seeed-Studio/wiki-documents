@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-22 17:53:45 (北京时间)
-// 多语言页面: 2421 个
+// 生成时间: 2026-07-30 17:29:16 (北京时间)
+// 多语言页面: 2406 个
 
 (function() {
   'use strict';
@@ -800,6 +800,13 @@
     "ja",
     "pt"
   ],
+  "/build_and_flash_yocto_for_recomputer_super": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Cochl.Sense-Jetson-Getting-Started": [
     "cn",
     "en",
@@ -1486,7 +1493,7 @@
     "ja",
     "pt"
   ],
-  "/make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic": [
+  "/make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic_and_super": [
     "cn",
     "en",
     "es",
@@ -3418,6 +3425,13 @@
     "ja",
     "pt"
   ],
+  "/wifi_halow_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_model_conversion": [
     "cn",
     "en",
@@ -3432,161 +3446,14 @@
     "ja",
     "pt"
   ],
+  "/recamera_model_export_online": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_on_device_models": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ai_human_detection_meshtastic_broadcast": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ai_remote_wireless_monitor_system": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ai_voice_assitant_with_recamera": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ai_parking_slot_monitoring_demo_with_recamera": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/getting_started_for_home_assistant_with_recamera": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/getting_started_for_n8n_with_recamera": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/getting_started_in_Telegram_work_with_recamera": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/getting_started_in_Wechat_work_with_recamera": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_hand_gesture": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/use_cpenclaw_to_control_the_recamera_gimbal": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_picoclaw": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_qrcode_udp": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_meshtastic_ha_security_system": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_motion_detection": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sound_source_localization_of_recamera_gimbal": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/rtsp_to_webrtc_with_recamera": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_udp_face_analysis": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/use_the_motion-sensing_function_of_recamera_to_play_games": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/using_stream_deck_to_control_recamera_gimbal": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_benchmarking": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/wifi_halow_getting_started": [
     "cn",
     "en",
     "es",
@@ -3888,6 +3755,13 @@
     "pt"
   ],
   "/train_classification_model_online": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_ha_sound_alert": [
     "cn",
     "en",
     "es",
@@ -6056,6 +5930,20 @@
     "pt"
   ],
   "/reachymini_api_utils": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_development_cases_home_assistant": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_development_cases_gripper_voice_control": [
     "cn",
     "en",
     "es",
@@ -10540,7 +10428,7 @@
     "ja",
     "pt"
   ],
-  "/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35": [
+  "/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35": [
     "cn",
     "en",
     "es",
@@ -11579,6 +11467,7 @@
   "/respeaker_clip_basic_sdk_guide": [
     "cn",
     "en",
+    "es",
     "ja",
     "pt"
   ],
@@ -11996,6 +11885,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_xiao_volume": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_xiao_websocket_audio_stream": [
     "cn",
     "en",
     "es",

@@ -14,7 +14,7 @@ last_update:
   date: 2/14/2025
   author: Parker Hu & Dawn Yao
 createdAt: '2025-02-14'
-updatedAt: '2025-04-08'
+updatedAt: '2026-07-24'
 url: https://wiki.seeedstudio.com/recamera_linux_fundamentals/
 ---
 # Linux Fundamentals
@@ -197,7 +197,7 @@ sftp> put myfile.txt /home/user/Documents/
 
 ## **7.Hardware Command**
 
-You can refer to this [documentation](https://wiki.seeedstudio.com/recamera_hardware_and_specs/#hardware-interface) to control the hardware on the recamera device.
+You can refer to this [documentation](https://wiki.seeedstudio.com/recamera_basicardware_and_specs/) to control the hardware on the recamera device.
 
 ## Tech Support & Product Discussion
 

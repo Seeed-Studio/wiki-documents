@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-06-23'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
 ---
 
@@ -20,8 +20,8 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
 ## 介绍
 
 面向物理 AI 新时代的一体化具身智能开发平台。
-随着生成式 AI 从简单的“理解世界”发展到主动“与世界交互”，机器人开发正迈入一个全新的时代：物理 AI。
-为了帮助开发者、研究人员和教育工作者加速踏入具身智能领域，Seeed Studio 将完全开源的 reBot Arm B601 与前沿的 NVIDIA Jetson 开发套件相结合，打造出一款强大的下一代机器人开发套装。
+随着生成式 AI 从单纯“理解世界”发展到主动“与世界交互”，机器人开发正迈入一个全新的时代：物理 AI。
+为了帮助开发者、研究人员和教育工作者加速迈入具身智能领域，Seeed Studio 将完全开源的 reBot Arm B601 与前沿的 NVIDIA Jetson 开发套件相结合，打造出强大的下一代机器人开发套装。
 
 该套装不仅提供高精度的机器人操作能力，还具备运行多模态 AI 模型、视觉语言模型（VLM）以及在边缘本地进行实时机器人推理所需的强大 AI 计算能力。
 它是一个完整的平台，可用于构建新一代智能机器人——从学习与研究到快速原型开发与部署。
@@ -131,25 +131,25 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
 
 一个完整的具身智能开发平台
 
-传统的机器人开发通常存在以下几个限制：
+传统的机器人开发通常存在以下限制：
 
-1. 封闭的硬件生态
+1. 封闭的硬件生态系统
 2. 不足的 AI 计算能力
 3. 支离破碎的软件栈
 4. 较高的开发门槛
 5. 难以验证真实世界的物理 AI 场景
 
-reBot Arm × Jetson 套装正是为了解决这些挑战而设计的。
+reBot Arm × Jetson 套装正是为解决这些挑战而设计。
 
 通过这个套装，你将获得：
 
 1. 一个完全开源的 6+1 自由度机械臂平台
 2. 由 GPU 提供算力的 NVIDIA 旗舰边缘 AI 计算平台
 3. 对 ROS1、ROS2、Isaac Sim 和 LeRobot 的原生支持
-4. 对多模态 AI 和生成式 AI 工作流的即开即用支持
+4. 为多模态 AI 和生成式 AI 工作流做好准备
 5. 一个统一的环境，用于教育、研究和 AI 机器人原型开发
 
-## 入门指南
+## 入门
 
 ### 硬件连接
 
@@ -177,7 +177,7 @@ uv pip install motorbridge
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
 ```
 
-然后，在浏览器中打开 `https://motorbridge.github.io/motorbridge-studio/`，你将看到如下页面。通过该界面，你可以调整电机参数、查看机械臂状态以及执行其他操作。
+然后在浏览器中打开 `https://motorbridge.github.io/motorbridge-studio/`，你将看到如下页面。通过该界面，你可以调整电机参数、查看机械臂状态以及执行其他操作。
 
 <div align="center">
     <img width={900}
@@ -197,7 +197,7 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
     <a
         href="/cn/rebot_arm_b601_dm_lerobot/"
         style={{
-            textDecoration: 'none',
+        textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -205,15 +205,15 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-        }}
-    >
-        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-            <img
-                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
+            }}
+        >
+    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
                 alt="LeRobot for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-            />
-        </div>
+                />
+            </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
                 在 LeRobot 中使用 reBot Arm B601-DM 的入门指南
@@ -221,7 +221,7 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
         </div>
     </a>
     <a
-        href="/cn/rebot_arm_b601_dm_grasping_demo/"
+        href="/rebot_arm_b601_dm_grasping_demo/"
         style={{
             textDecoration: 'none',
             color: 'inherit',
@@ -272,11 +272,89 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
             </h3>
         </div>
     </a>
+    <a
+        href="/cn/voice_control_rebot_arm/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_controlled_rebot_arm/cover_page.png"
+                alt="通过 Nvidia Jetson Thor 语音控制 reBot Arm B601"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                通过 Nvidia Jetson Thor 语音控制 reBot Arm B601
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/cn/rebot_arm_b601_rs_ros2_integration/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
+                alt="reBot Arm B601-RS ROS2 集成"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                reBot Arm B601-RS ROS2 集成
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/cn/rebot_arm_b601_rs_isaacsim/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"
+                alt="通过 Isaacsim 仿真 reBotArm"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                通过 Isaacsim 仿真 reBotArm
+            </h3>
+        </div>
+    </a>
 </div>
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
