@@ -36,19 +36,6 @@ The validated workflow performs offline inference with a local LeRobot dataset. 
   <img width={1000} src="https://files.seeedstudio.com/wiki/other/agx-orin-gr00t-front.png" alt="GR00T N1.7 full TensorRT deployment on Jetson AGX Orin" />
 </div>
 
-<div className="video-container">
-  <iframe
-    width="800"
-    height="450"
-    src="https://www.youtube.com/embed/H3rQHnB-gaI"
-    title="GR00T N1.7 full TensorRT inference on JetPack 7.2 and Jetson AGX Orin"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  />
-</div>
-
 ## Project Repository
 
 The JetPack 7.2 implementation, conversion scripts, runtime changes, and original deployment notes are available in the following repository:
@@ -544,6 +531,23 @@ Done
 The validated warm inference time was **0.2755 seconds per 16-action prediction chunk**, or approximately **3.63 chunks per second**. This result applies to the tested checkpoint, dataset shape, engine configuration, and AGX Orin operating conditions.
 
 The script's MSE and MAE values compare model predictions with recorded dataset actions. They are not TensorRT conversion-error metrics; use the cosine verification stage for PyTorch-versus-TensorRT agreement.
+
+### Full-TensorRT Inference Demo
+
+The following video demonstrates the completed GR00T N1.7 TensorRT workflow running on JetPack 7.2 and Jetson AGX Orin.
+
+<div className="video-container">
+  <iframe
+    width="800"
+    height="450"
+    src="https://www.youtube.com/embed/H3rQHnB-gaI"
+    title="GR00T N1.7 full TensorRT inference on JetPack 7.2 and Jetson AGX Orin"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  />
+</div>
 
 ## 11. Safe Warnings
 
