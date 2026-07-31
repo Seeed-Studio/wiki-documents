@@ -639,8 +639,8 @@ D:\workplace\firmware\.pio\build\seeed_wio_tracker_L1\
 ~/workplace/firmware/.pio/build/seeed_wio_tracker_L1/
 ```
 
-</TabItem]
-</Tabs]
+</TabItem>
+</Tabs>
 
 更新されていることを確認すべきファイルは次のとおりです：
 

@@ -387,7 +387,7 @@ Depois que as dependências forem instaladas, execute:
 pio run -e seeed_wio_tracker_L1 -v
 ```
 
-</TabItem]
+</TabItem>
 
 <TabItem value="macos" label="macOS">
 

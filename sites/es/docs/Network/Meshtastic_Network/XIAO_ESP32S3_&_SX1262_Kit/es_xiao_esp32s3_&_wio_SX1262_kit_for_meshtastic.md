@@ -107,7 +107,7 @@ El siguiente diagrama muestra el mapeo de pines B2B entre XIAO ESP32S3 y Wio-SX1
 
 <div style={{textAlign:'center'}}>
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="B2B pin mapping between XIAO ESP32S3 and Wio-SX1262"/>
-}</div>
+</div>
 :::warning
 El SX-1262 compatible solo se puede comprar dentro del kit.
 :::
