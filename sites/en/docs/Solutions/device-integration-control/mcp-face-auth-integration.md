@@ -1,6 +1,6 @@
 ---
-description: Connect your own WMS, ERP or SaaS platform to Seeed voice AI devices through MCP, and use the device's built-in face recognition to record who actually performed each operation.
-title: Add Face-Verified Operations to Your Platform via MCP
+description: Build an MCP server for your own warehouse or business platform using our open-source implementation as the reference, and use the device's face recognition to verify who performed each operation.
+title: Build an MCP Server for Your Platform, with Face-Verified Operations
 keywords:
   - MCP
   - Face Recognition
@@ -31,16 +31,24 @@ Face recognition processes biometric data. Before deploying this in production, 
 
 ## Overview
 
-This guide is for solution providers and software vendors who already have a working platform — a WMS, ERP, CRM or a custom backend — and want to add voice operation on Seeed devices without rebuilding their product.
+This guide is for solution providers and software vendors who already run their own warehouse or business platform and want to drive it by voice on Seeed devices.
 
-Two problems have to be solved separately, and this page treats them separately:
+You do not adopt our platform to do this. You build an **MCP server for your own system**, and the reference for how to build it is our warehouse platform, which is open source:
 
-1. **Reach.** Your platform needs to expose its business logic to the device. That is the [Model Context Protocol (MCP)](https://github.com/modelcontextprotocol) layer, and it is covered in depth by the companion page [Bring Voice AI to Your Business System (MCP)](/mcp_external_system_integration).
-2. **Trust.** Once an operator can change your inventory by speaking, you need to know *who spoke*. A voice command carries no identity. The name the language model writes into a record is whatever the speaker claimed — it can be faked by simply saying a different name.
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://github.com/suharvest/warehouse_system" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📦 warehouse_system on GitHub</font></span></strong></a>
+</div>
 
-The device solves the second problem. SenseCAP Watcher carries a vision co-processor that recognizes the person in front of it, and the platform turns that recognition into a verified operator name attached to every gated operation. Your platform receives that name as a single string.
+Read it, run it, copy the parts you need. It is a complete working example of everything described below: the MCP tool layer, the face verification gate, the enrollment store, and the admin screens that configure them.
 
-There are two ways to run the recognition, and choosing between them is the main decision this page helps you make.
+Two problems have to be solved, and this page treats them separately:
+
+1. **Reach.** Your platform must expose its business logic to the device as [MCP](https://github.com/modelcontextprotocol) tools. The companion page [Bring Voice AI to Your Business System (MCP)](/mcp_external_system_integration) walks through the bridge end to end.
+2. **Trust.** Once an operator can change stock by speaking, you need to know *who spoke*. A voice command carries no identity. The name a language model writes into a record is whatever the speaker claimed, and saying someone else's name is enough to forge it.
+
+The device solves the second problem. SenseCAP Watcher carries a vision co-processor that recognizes the person in front of it. Your MCP server asks the device who that is, and refuses the operation when the answer is wrong or missing.
+
+The recognition can run in two places, and choosing between them is the main decision this page helps you make.
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/excalidraw-architecture.png" alt="MCP integration architecture"/>
@@ -66,8 +74,8 @@ Voice control without identity is an audit gap. These are the properties that cl
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
             </div>
             <div class="info-content">
-                <h3>One Column of Schema Change</h3>
-                <p>All biometric tables — subjects, embeddings and audit logs — stay on the Seeed side. Only a verified name crosses into your database, so adopting face verification costs you a single nullable column, or nothing at all if you choose not to store it.</p>
+                <h3>A Working Reference, Not a Black Box</h3>
+                <p>The entire platform is open source — tool layer, verification gate, embedding store and admin screens. You are not integrating against a specification you cannot inspect; you are copying code that already runs.</p>
             </div>
         </li>
         <li class="info-item">
@@ -93,12 +101,14 @@ Voice control without identity is an audit gap. These are the properties that cl
 
 ## System Architecture
 
-The verification gate sits in the **MCP tool layer**, above your Provider. Every gated tool calls the gate first and only then calls your code. This is what makes the guarantee hold regardless of what your Provider does.
+Put the verification gate in the **MCP tool layer**, above your business logic. Every gated tool calls the gate first and only then touches your data. Keeping it there — rather than inside each business method — is what makes the guarantee hold uniformly.
 
 - **SenseCAP Watcher** captures the voice command and, depending on the path you choose, either performs face matching on its own NPU or supplies a camera frame on request.
-- **The MCP tool layer** (`warehouse_mcp.py`) exposes the business tools. Before executing any gated tool, it posts to `/api/face/verify-mcp` and honours the verdict. The policy is **fail-closed**: anything other than an explicit allow blocks the operation.
-- **The Seeed backend** owns the enrolled people, their embeddings, the rules, and the audit log. It returns a verdict and, on success, the matched person's name.
-- **Your Provider** is a small Python class that maps six business methods onto your existing REST API. It receives the verified name as an ordinary argument.
+- **Your MCP server** exposes your business operations as tools. Before executing a gated tool, it asks your verification endpoint and honours the verdict. The policy must be **fail-closed**: anything other than an explicit allow blocks the operation.
+- **Your backend** owns the enrolled people, their embeddings, the rules, and the audit log, and answers the verification call with a verdict plus the matched person's name.
+- **Your existing business API** is untouched. The MCP server is a new front door, not a rewrite.
+
+In the reference implementation these are `mcp/warehouse_mcp.py` (tool layer plus the `_enforce_face()` gate), `mcp/mcp_pipe.py` (transport), and the backend's `/api/face/verify-mcp` with the orchestrator and matcher behind it.
 
 :::info Two axes that are easy to confuse
 `mode` selects **where inference runs** — `local` (on the device) or `lan` (on an external service). `verify_frequency` selects **how often** verification happens — `always` or once per conversation (`session`).
@@ -106,9 +116,21 @@ The verification gate sits in the **MCP tool layer**, above your Provider. Every
 An older column named `verify_mode` (`session` / `interface`) still exists in the database for rollback purposes, but the verification path no longer reads it. Ignore it, and disregard any older document that presents it as the live switch.
 :::
 
-## Part 1 — Connect Your Platform
+## Part 1 — Build Your MCP Server
 
-Face verification is layered on top of a working MCP connection, so set that up first. The short version: you write one Python class, and the bridge, the tool definitions and the voice prompt engineering are reused as-is.
+Start by running the reference implementation. Seeing it work end to end takes minutes and answers most design questions before you write anything.
+
+```bash
+git clone https://github.com/suharvest/warehouse_system.git
+cd warehouse_system
+docker-compose -f docker-compose.prod.yml up -d
+```
+
+Then decide how much of it to reuse. There are two honest options.
+
+### Option A — Reuse the Bridge, Swap the Data Source
+
+If your domain is warehousing, the fastest path is to keep the reference tool layer and write one adapter class. You inherit the tool definitions, the voice prompt engineering — disambiguation, candidate read-back, quantity confirmation — and the face gate, and you change only where the data comes from.
 
 ```python
 from .base import BaseProvider
@@ -127,13 +149,37 @@ class MyWmsProvider(BaseProvider):
         return {"Authorization": f"Bearer {self._token}"}
 ```
 
-Your class implements six required methods — `resolve_name`, `query_stock`, `stock_in`, `stock_out`, `search`, `get_today_statistics` — plus two optional ones, `query_batch` and `move_batch_location`.
+Implement six required methods — `resolve_name`, `query_stock`, `stock_in`, `stock_out`, `search`, `get_today_statistics` — plus two optional ones, `query_batch` and `move_batch_location`.
 
 :::caution Take the signatures from the code, not from the prose
-The tool layer passes these arguments **positionally**. Copy each signature from `mcp/providers/base.py` in the repository. Several older documents still show `stock_in` and `stock_out` with a single `reason` parameter; it has since been split into `reason_category` and `reason_note`, and further parameters were added. A signature that does not match raises `TypeError` at the first call.
+The tool layer passes these arguments **positionally**. Copy each signature from `mcp/providers/base.py`. Several documents still show `stock_in` and `stock_out` with a single `reason` parameter; it has since been split into `reason_category` and `reason_note`, and further parameters were added. A signature that does not match raises `TypeError` on the first call.
 :::
 
-The full walkthrough — obtaining an MCP endpoint from SenseCraft, deploying the backend, creating an API key, starting the bridge and testing with voice — is on the companion page:
+### Option B — Write Your Own MCP Server
+
+If your domain is not warehousing, the six methods will not fit. Define your own tools with FastMCP and keep only `mcp_pipe.py` as the transport. You then implement the face gate yourself — see [Part 3](#part-3--what-you-implement).
+
+```python
+@mcp.tool()
+def check_order_status(order_id: str) -> dict:
+    """
+    Check the status of a customer order.
+    Use this when the user asks about order tracking or delivery status.
+
+    Args:
+        order_id: The unique order identifier (e.g., "ORD-2024-001")
+    """
+    return api_get(f"/orders/{order_id}/status")
+```
+
+Constraints that come from the voice context, all of them learned the hard way:
+
+- **Never call `print()`.** stdio is the protocol channel; anything written to stdout corrupts the JSON-RPC framing. Use `logging`, which goes to stderr.
+- **Keep return values small.** A language model reads them aloud. Stay near 1 KB; oversized payloads hit the WebSocket frame limit and drop the connection.
+- **The docstring is the tool's user interface.** The model decides when to call a tool and how to fill its arguments from that text. Describe intent, not just types.
+- **Restart after every change.** The tool list is reported once, at handshake.
+
+The full bridge walkthrough — obtaining an MCP endpoint from SenseCraft, creating an API key, starting the bridge and testing with voice — is on the companion page:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/mcp_external_system_integration/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Bring Voice AI to Your Business System</font></span></strong></a>
@@ -141,7 +187,7 @@ The full walkthrough — obtaining an MCP endpoint from SenseCraft, deploying th
 
 ## Part 2 — Choose Your Verification Path
 
-Both paths present the same interface to your Provider. They differ in where the face matching happens, and therefore in roster size, robustness and hardware cost.
+Both paths look identical to your MCP tools — same verification call, same verdict. They differ in where the face matching happens, and therefore in roster size, robustness and hardware cost.
 
 | | Path 1 — On-Device | Path 2 — External Compute Box |
 | :--- | :--- | :--- |
@@ -156,7 +202,7 @@ Both paths present the same interface to your Provider. They differ in where the
 | Best for | Small teams, one shift, fast pilots | Larger rosters, stricter checks, multiple sites |
 
 :::tip Start local, move to LAN later
-The two paths share the same enrollment records, rules and audit log. Switching is a configuration change in the admin UI — the platform re-computes existing enrollments against the new model in the background. Nothing in your MCP tools or your database changes.
+Both paths use the same enrollment records, rules and audit log, so the switch is a configuration change rather than a migration. Keep the source image alongside each embedding and you can re-compute the roster against a new model in the background when you move. Nothing in your MCP tools changes.
 :::
 
 ### Path 1 — On-Device Verification
@@ -170,24 +216,24 @@ The Watcher matches faces itself. The backend pushes a compact face library to t
 - The device holds at most **20 people**. This is a hard limit of the on-device store, not a licensing choice.
 - The push targets **port 80** on the device address regardless of the port recorded for it, and the receiving endpoint is unauthenticated. Treat the device network as trusted, or isolate it.
 
-#### Setting It Up
+#### The Flow You Build
 
-**1. Enroll each operator.** Upload one or more photos per person. In `local` mode the embeddings are computed in-process, so no external service is required.
-
-<div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/face-enroll.png" alt="enrolling a face from the admin UI"/>
-</div>
-
-**2. Register the physical device** under your MCP connection with its LAN IP address, then push the face library to it. The device list sits under each agent connection, and the push button is on the device row.
+**1. Enroll each operator.** Take one or more photos per person, turn each into an embedding, and store it against that person. The reference implementation computes embeddings in-process for this path, so no external service is involved.
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/mcp-devices-push.png" alt="physical device registered under an MCP connection, with the push-faces action"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/face-enroll.png" alt="enrollment dialog in the reference implementation: photo upload and warehouse scope"/>
 </div>
 
-**3. Create a rule** for each operation you want gated. See [Which Operations Can Be Gated](#which-operations-can-be-gated) below.
+**2. Register each physical device** with its LAN IP, then push the face library to it. Your system needs somewhere to record device addresses and a push action per device.
 
-:::caution The device must be reachable from the backend
-Verification asks the device directly. If the backend cannot reach it, the result is a denial, not a bypass. Private IP addresses are required — loopback, link-local and reserved ranges are rejected when registering a device.
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/mcp-devices-push.png" alt="physical device registered under an agent connection, with a push-faces action"/>
+</div>
+
+**3. Ask the device at verification time** using `GET /api/face/current-speaker` — see [The Device Wire Protocol](#2-the-device-wire-protocol).
+
+:::caution The device must be reachable from your backend
+Verification asks the device directly. If your backend cannot reach it, the correct result is a denial, not a bypass. Reject public, loopback and link-local addresses when registering a device — a face gate that can be pointed at an attacker-controlled host is not a gate.
 :::
 
 ### Path 2 — External Compute Box
@@ -239,21 +285,15 @@ Behaviour to be aware of:
 
 - When several faces are returned, the one with the highest `det_score` is used.
 - Returning `"live": false` blocks the operation as a spoof attempt.
-- The embedding dimension is not fixed by the platform, but it must stay constant for a given `model_tag`. Matching is scoped by tag, so changing your model means publishing a new tag.
-- Change the model tag and existing enrollments are automatically re-computed from their stored source images in the background.
+- The embedding dimension is yours to choose, but it must stay constant for a given `model_tag`. Matching is scoped by tag, so changing your model means publishing a new tag.
+- Keep the source image with each enrollment. When the tag changes, that is what lets you re-compute the whole roster in the background instead of re-enrolling everyone.
 
-#### Configuring It
+#### The Flow You Build
 
-In the admin UI, set the recognition mode to the LAN device option, enter the base URL of your service, and use the connection test — it calls `/health` and reports the model tag it found. The threshold and verification frequency sit alongside it.
-
-<div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/face-config-verify-mode.png" alt="recognition mode, verification frequency, confidence threshold and remote endpoint"/>
-</div>
-
-The endpoint field and its connection test are hidden when the mode is set to on-device, since no external service is involved in that path.
+Your backend obtains an image, posts it to `/infer`, and cosine-matches the returned embedding against your enrolled roster, scoped to the matching `model_tag`. Store the endpoint URL and its token as configuration, and give operators a connection test that calls `/health` and reports the model tag it found — see [The Configuration Surface](#3-the-configuration-surface).
 
 :::caution Match the threshold to your model
-The default cosine threshold is `0.45`. That value was chosen for the bundled 128-D model and is not meaningful for a different embedding space. Measure the score distribution of your own model on genuine and impostor pairs before trusting the default, and set a per-rule override for high-value operations.
+The reference default is a cosine threshold of `0.45`, chosen for its bundled 128-D model. That number is meaningless in a different embedding space. Measure the score distribution of your own model on genuine and impostor pairs before picking a threshold, and allow a per-rule override so high-value operations can demand a stricter match.
 :::
 
 #### Recommended Compute Boxes
@@ -268,88 +308,35 @@ The inference service is a plain HTTP service, so any machine on the LAN that ca
 
 Choose the Jetson system when you want to run a large embedding model or serve several sites from one box. Choose either R2135 when the box sits in a plant room or on a wall in a warehouse — both are fanless and rated for industrial temperatures.
 
-## Part 3 — What Reaches Your System
+## Part 3 — What You Implement
 
-This is the part that decides how much work the integration is for you, and the answer is: very little.
+Four pieces live on your side. The reference implementation has all four, so treat this section as a map of what to read and reproduce.
 
-### You Build No Biometric Tables
+### 1. The Verification Endpoint
 
-People, embeddings, rules and the audit trail all live on the Seeed side. Exactly one value crosses the boundary into your Provider — the verified operator's name, as a string:
+Your MCP server calls one endpoint before every gated tool, and your backend answers it. Keep the shape below and the reference tool layer works against your system unchanged.
 
-```text
-face matches "Zhang San"  →  actual_operator="Zhang San"  →  your Provider.stock_in(...)
+Request:
+
+```jsonc
+POST /api/face/verify-mcp
+{
+  "operation": "stock_out",        // required — the rule key
+  "warehouse_id": 1,
+  "request_id": "…",               // for audit correlation
+  "image_b64": "…",                // server-inference path
+  "embedding_b64": "…",            // or a precomputed embedding
+  "embedding_model_tag": "…",
+  "device_id": "…"                 // from the transport, never from the model
+}
 ```
 
-You have three options:
-
-| Option | What you do | Result |
-| :--- | :--- | :--- |
-| **Ignore it** | Accept the `actual_operator` argument and discard it | Zero schema change. Operations are still blocked when a rule requires a face; the full audit trail remains queryable in the Seeed admin UI |
-| **Store it** (recommended) | Add one column to your transaction table | Verified identity lands in your own records |
-| **Map it** | Write it into an existing "handled by" column | Acceptable, but see the warning below |
-
-Even if you store nothing, every decision is recorded on the Seeed side with the matched person, the confidence score, the verdict and the reason — so the audit trail exists whether or not your database participates.
-
-<div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/face-audit-log.png" alt="face authentication audit log showing matched person, confidence and verdict per operation"/>
-</div>
-
-To store the name yourself, add one column:
-
-```sql
--- Snapshot of the operator name resolved by face recognition.
-ALTER TABLE <your_inventory_transactions>
-  ADD COLUMN actual_operator VARCHAR(255) NULL;
-```
-
-Three constraints:
-
-1. **It must be nullable.** When face verification is disabled, or a rule does not require it, the value is `NULL`.
-2. **Store the name, not a foreign key.** Your database has no copy of the subject table, so an ID would be meaningless to you.
-3. **Never merge it with `operator`.** `operator` is written by the language model and reflects what the speaker said — it can be wrong or deliberately false. `actual_operator` is the result of face matching. Merging them destroys the only distinction that makes the feature worth having.
-
-### Which Operations Can Be Gated
-
-Rules are keyed by operation name, scoped per warehouse, and carry an optional allow-list and threshold override. They are evaluated on the server and take effect as soon as they are saved — nothing needs to be pushed to the device.
-
-<div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/face-rules.png" alt="per-operation face rules with warehouse scope, allow-list and threshold override"/>
-</div>
-
-| Rule key | Covers |
-| :--- | :--- |
-| `stock_in` | Stock-in |
-| `stock_out` | Stock-out |
-| `move_batch_location` | Batch relocation |
-| `query` | All read tools — stock query, batch query, search, daily statistics |
-
-An empty allow-list means every enrolled and active person is accepted. A non-empty one restricts the operation to those subjects; anyone else is denied even on a confident match.
-
-:::caution Two rule keys in the admin UI do nothing
-The rule editor currently offers `transfer` and `adjust`. No MCP tool emits either name, so rules created for them never fire. Conversely `move_batch_location`, which **is** enforced, cannot be selected in the UI — create that rule through `POST /api/face/rules` directly.
-:::
-
-### REST Endpoints You Can Drive
-
-If you want to manage enrollment from your own admin UI instead of ours, these are available. Authenticate with `X-API-Key`.
-
-| Purpose | Endpoint | Required scope |
-| :--- | :--- | :--- |
-| Create / list / update / delete a person | `POST GET PUT DELETE /api/face/subjects` | `FACE:ADMIN` |
-| Enroll photos or precomputed embeddings | `POST /api/face/enrollments` | `FACE:ADMIN` |
-| List / delete enrollments | `GET DELETE /api/face/enrollments` | `FACE:ADMIN` |
-| Manage rules | `GET POST PUT DELETE /api/face/rules` | `FACE:ADMIN` |
-| Read / write face configuration | `GET PUT /api/face/config` | `FACE:ADMIN` |
-| Test a remote inference endpoint | `POST /api/face/test-connection` | `FACE:ADMIN` |
-| Read the audit log | `GET /api/face/logs` | `FACE:ADMIN` |
-| Verify a face for an operation | `POST /api/face/verify-mcp` | `FACE:WRITE` |
-
-The verification call returns a fixed shape:
+Response — always these five keys:
 
 ```jsonc
 {
   "status": "pass" | "deny" | "skipped",
-  "failure_reason": "…" ,          // null when it passed cleanly
+  "failure_reason": "…",           // null when it passed cleanly
   "confidence": 0.87,
   "matched_subject_id": 12,
   "matched_subject_name": "Zhang San"
@@ -358,38 +345,126 @@ The verification call returns a fixed shape:
 
 `pass` and `skipped` allow the operation; `deny` blocks it.
 
-## The One Mistake Everyone Makes
+:::caution Fail closed, and mind the budget
+Treat every error — 404, timeout, malformed body — as `deny`, never as an allow. And keep your handler well under the **18-second** client timeout; past that the caller records a transport failure and denies anyway. Budget for the device round trip inside it: roughly 6.5 s to read the current speaker, 8 s to pull a frame, 10 s to reach a LAN inference service.
+:::
 
-The face gate and your Provider read the **same** `api_base_url` configuration field.
+Two `status` values that matter for adoption: return `skipped` when the feature is off or no rule requires a face for that operation. That makes the gate transparent, so you can ship the MCP server first and turn verification on later without touching tool code.
 
-Point `api_base_url` at your own WMS — which looks like the obvious thing to do — and the gate starts looking for `/api/face/verify-mcp` on your server. It is not there, the 404 is treated as a denial, and because the policy is fail-closed **every tool stops working, including read-only queries**.
+### 2. The Device Wire Protocol
+
+This is the part you cannot derive from your own system, because it is spoken by the device firmware. Three endpoints, all over plain HTTP on the LAN.
+
+**Push the face library** (Path 1 only) — `POST http://<device-ip>:80/api/face/batch-update`. Note the port is fixed at 80.
+
+```jsonc
+{
+  "model_tag": "we2-mfnr6-128-v1",
+  "embedding_format": "fp16",
+  "faces": [{"name": "Zhang San", "subject_id": 12, "embedding_b64": "…"}],
+  "match_threshold": 45,              // int, 0-100
+  "identify_mode": "local",           // or "lan"
+  "identify_endpoint": "…",
+  "identify_token": "…",
+  "pull_token": "…"                   // per-device, you generate it
+}
+```
+
+Embeddings go on the wire as `fp16` — 256 bytes for 128 dimensions — while your database keeps the canonical `float32`. A mismatched `model_tag` rejects the whole batch.
+
+**Read the current speaker** — `GET http://<device-ip>/api/face/current-speaker?fresh=0`, header `X-Face-Token: <pull_token>`, returns `{valid, name, subject_id, similarity, mode, age_ms}`. Require `valid` to be strictly true.
+
+**Pull a camera frame** — `GET http://<device-ip>/api/face/capture`, same header, returns `image/jpeg`.
+
+:::caution The push endpoint is unauthenticated
+`batch-update` has no auth on the device side. Anyone on the same network can overwrite the face library. Put these devices on a trusted or isolated segment.
+:::
+
+### 3. The Configuration Surface
+
+Someone has to choose the mode, the threshold and which operations require a face. You need screens for this. The reference implementation's screens are shown here **as an illustration of the decisions your own UI must expose** — you are not logging into ours.
+
+Recognition mode, verification frequency, confidence threshold and the remote endpoint:
+
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/face-config-verify-mode.png" alt="recognition mode, verification frequency, confidence threshold and remote endpoint"/>
+</div>
+
+Per-operation rules, scoped by warehouse, with an allow-list and an optional threshold override:
+
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/face-rules.png" alt="per-operation face rules with warehouse scope, allow-list and threshold override"/>
+</div>
+
+A rule set worth copying:
+
+| Rule key | Covers |
+| :--- | :--- |
+| `stock_in` | Stock-in |
+| `stock_out` | Stock-out |
+| `move_batch_location` | Batch relocation |
+| `query` | All read operations — stock query, batch query, search, statistics |
+
+An empty allow-list means every enrolled and active person is accepted. A non-empty one restricts the operation to those people, so a confident match on anyone else is still denied.
+
+### 4. The Audit Trail
+
+Log every decision, not just the failures — the passes are what prove an operation was authorised. Record the matched person, the confidence, the verdict and the reason.
+
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/face-audit-log.png" alt="face authentication audit log showing matched person, confidence and verdict per operation"/>
+</div>
+
+In your transaction table, keep the verified name in its own column:
+
+```sql
+-- Snapshot of the operator name resolved by face recognition.
+ALTER TABLE <your_inventory_transactions>
+  ADD COLUMN actual_operator VARCHAR(255) NULL;
+```
+
+Three constraints, and the third is the whole point:
+
+1. **It must be nullable.** When verification is disabled, or no rule requires it, the value is `NULL`.
+2. **Store the name, not a foreign key** — a snapshot, so the record still reads correctly after the person is deleted.
+3. **Never merge it with the operator field the model fills in.** That field reflects what the speaker *said* and can be false. This one is what the camera *saw*. Merging them collapses a trusted value into an untrusted one and throws away the only distinction that makes face verification worth building.
+
+## A Trap Worth Knowing
+
+In the reference implementation the face gate and the data Provider read the **same** `api_base_url` configuration field.
+
+Point `api_base_url` at your own system without also implementing `/api/face/verify-mcp` there, and the gate gets a 404. Because the policy is fail-closed, **every tool stops working, including read-only queries** — a confusing failure, since nothing about the symptom points at face recognition.
 
 | `api_base_url` points at | Gate result | Consequence |
 | :--- | :--- | :--- |
-| Your WMS, no `/face/verify-mcp` | `deny` · `http_404` | All tools blocked |
+| Your system, no `/face/verify-mcp` | `deny` · `http_404` | All tools blocked |
 | An unreachable address | `deny` · `transport_error` | All tools blocked |
-| Empty string | `skipped` · `no_api_base` | Tools run, but your Provider also loses its base URL |
-| The Seeed backend | Decided by your rules | Correct |
+| Empty string | `skipped` · `no_api_base` | Tools run, but the Provider loses its base URL too |
+| A backend that implements the endpoint | Decided by your rules | Correct |
 
-**The fix: give each one its own field.** Leave `api_base_url` pointing at the Seeed backend and read your own address from a custom key.
+Two ways out. Implement the endpoint in your own backend, which is the destination anyway — return a constant `skipped` stub at first if you are not ready to verify:
+
+```python
+@app.post("/api/face/verify-mcp")
+def verify_mcp():
+    return {"status": "skipped", "failure_reason": "feature_disabled",
+            "confidence": None, "matched_subject_id": None,
+            "matched_subject_name": None}
+```
+
+Or split the fields, keeping `api_base_url` for the gate and reading your own address from a custom key:
 
 ```yaml
 provider: "my_wms"
-api_base_url: "http://localhost:2124/api"              # reserved for the face gate
+api_base_url: "http://your-backend:2124/api"           # serves the face gate
 auth:
   type: api_key
-  key: "wh_xxx"                                        # Seeed API key
-wms_base_url: "https://your-wms.example.com/api/v1"    # your system
+  key: "wh_xxx"
+wms_base_url: "https://your-wms.example.com/api/v1"    # your business API
 wms_token: "your-token"
 ```
 
-Then override `base_url` in your Provider's constructor, exactly as shown in [Part 1](#part-1--connect-your-platform). The two credential sets stay independent and no core code changes.
-
-:::tip If you do not want face verification at all
-Connect to the Seeed backend and simply create no rules. The gate returns `skipped` and becomes transparent. You do not need to disable anything.
-:::
-
-Two further options exist for deployments that do not use the Seeed backend at all: implement `/api/face/verify-mcp` yourself and return a constant `skipped` stub, or leave `api_base_url` empty and use the split-field pattern above. Keep any implementation of your own well under the **18-second** client timeout, or it will be treated as a transport failure and denied.
+Then override `base_url` in your Provider's constructor, as in [Part 1](#option-a--reuse-the-bridge-swap-the-data-source). The two credential sets stay independent.
 
 ## FAQ
 
@@ -403,11 +478,11 @@ The face library is filtered by model tag. Enrollments must carry `we2-mfnr6-128
 
 ### 3. `actual_operator` is always empty in our records
 
-Expected when no rule requires a face for that operation, or when the feature is disabled for the tenant. Create a rule for the operation to start recording it.
+Expected when no rule requires a face for that operation, or when verification is switched off. Create a rule for the operation to start recording it.
 
-### 4. We switched to our ERP but data still lands in the local database
+### 4. We swapped in our own data source but writes still land in the reference database
 
-The MCP layer falls back to the default provider on any error — network failure, missing file, load exception — and logs a warning. Check the MCP log for that warning first.
+The reference tool layer falls back to its default Provider on any error — network failure, missing file, load exception — and logs a warning rather than failing loudly. Check the MCP log for that warning first.
 
 ### 5. Verification is slow or intermittently denied
 
@@ -423,9 +498,9 @@ MobileFaceNet, 128 dimensions, INT8, running on the Himax WE2 co-processor, publ
 
 ## Resources
 
+- [warehouse_system on GitHub](https://github.com/suharvest/warehouse_system) — the reference implementation. Start with `mcp/README.md` for the integration layer, `mcp/providers/base.py` for the adapter contract, and the backend's face orchestrator for the verification logic
 - [Bring Voice AI to Your Business System (MCP)](/mcp_external_system_integration) — the MCP bridge setup this page builds on
 - [MCP Endpoint Setup Guide](/mcp_endpoint) — creating and managing MCP endpoints
-- [Warehouse System Repository](https://github.com/suharvest/warehouse_system) — source, Provider base class and examples
 - [Model Context Protocol](https://github.com/modelcontextprotocol) — protocol specification
 
 ## Technical Support
