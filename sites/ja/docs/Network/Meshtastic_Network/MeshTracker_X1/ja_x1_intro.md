@@ -105,14 +105,15 @@ IP66 等級の防塵・防水性能により、雨、泥、ほこりっぽいト
 
 **バッテリー**
 
-|項目|パラメータ|
+|項目|パラメータ|s
 | :- | :- |
-|**バッテリー容量**|充電式リチウムバッテリー、1100mAh|
-|**バッテリー寿命モニタリング**|バッテリーレベルを定期的にアップリンク|
+|**バッテリー容量**|充電式 LCD バッテリー、1100mAh|
+|**バッテリー残量監視**|バッテリー残量を定期的にアップリンク送信|
 |**充電プロトコル**|USB Type-C|
 |**デバイス電源入力**|5V, 0.55A|
 |**バッテリー電源入力**|4.4V, 0.22A|
-|**充電温度範囲**|5 ～ +45℃|
+|**満充電カットオフ電圧**|4.37V|
+|**充電温度制限**|5～+45℃|
 
 X1 は製品シリーズへと発展する可能性があり、今後発売される新製品には、追加のセンサ（3 軸センサ、6 軸磁力計など）が搭載される予定です。
 
@@ -360,7 +361,15 @@ X1 は製品シリーズへと発展する可能性があり、今後発売さ�
 
 ## 技術サポート & 製品ディスカッション
 
-<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
     <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
