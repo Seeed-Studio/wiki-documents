@@ -1,5 +1,5 @@
 ---
-description: XIAO ESP32S3 & Wio-SX1262 Kit をベースにした Meshtastic MQTT ゲートウェイ設定チュートリアルです。遠距離ネットワークをブリッジしてグローバルメッセージングを可能にし、メッシュ信号が弱いときのバックアップとなり、インターネット経由でより高速なメッセージ配信を実現します。
+description: XIAO ESP32S3 & Wio-SX1262 Kit をベースにした Meshtastic MQTT ゲートウェイ設定チュートリアル。グローバルメッセージングを可能にし、メッシュ信号が弱いときのバックアップを提供し、インターネット経由でより高速なメッセージ配信を実現します。
 title: MQTT ゲートウェイのセットアップ
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 ## なぜ Meshtastic + mqtt が必要なのか
 
-MQTT を Meshtastic と統合することで、離れたネットワーク同士をブリッジし、オフグリッド通信を拡張できます。これにより、グローバルなメッセージングが可能になり、メッシュ信号が弱いときのバックアップとなり、インターネット経由でより高速なメッセージ配信を実現します。遠隔地や緊急時の利用に最適です。
+MQTT を Meshtastic と統合することで、離れたネットワーク同士をブリッジし、オフグリッド通信を拡張できます。これによりグローバルなメッセージングが可能になり、メッシュ信号が弱いときのバックアップとなり、インターネット経由でより高速なメッセージ配信を実現します。遠隔地や緊急時の利用に最適です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTFramework.png" style={{width:900, height:'auto'}}/></div>
 
@@ -28,7 +28,7 @@ Meshtastic ゲートウェイを構築するには、LoRa と Wifi の両方を�
 
 <table align="center">
 <tbody><tr>
-<th>Meshtastic & LoRa 用 XIAO ESP32S3 & Wio-SX1262 キット</th>
+<th>Meshtastic & LoRa 用 XIAO ESP32S3 & Wio-SX1262 Kit</th>
 <th>（オプション）L76K GNSS モジュール</th>
 </tr>
 <tr>
@@ -53,9 +53,9 @@ Meshtastic ゲートウェイを構築するには、LoRa と Wifi の両方を�
 
 ### バッテリーへの接続
 
-XIAO ESP32S3 には電源管理チップが内蔵されており、バッテリーを使用して XIAO ESP32S3 を単独で給電したり、XIAO ESP32S3 の USB ポート経由でバッテリーを充電したりできます。
+XIAO ESP32S3 には電源管理チップが内蔵されており、バッテリーを使用して XIAO ESP32S3 に単独で給電したり、XIAO ESP32S3 の USB ポートを介してバッテリーを充電したりすることができます。
 
-XIAO 用にバッテリーを接続したい場合は、`3.7V lithium` の `protection circuit` 付きの、認証済み充電式バッテリーの購入を推奨します。バッテリーをはんだ付けする際は、必ず正極と負極を正しく区別してください。電源の負極端子は USB ポートに最も近い側であり、電源の正極端子は USB ポートから離れた側になります。
+XIAO 用にバッテリーを接続したい場合は、認証済みの充電式 `3.7V lithium` バッテリーで `protection circuit` 付きのものを購入することをお勧めします。バッテリーをはんだ付けする際は、必ず正極と負極を区別してください。電源の負極端子は USB ポートに最も近い側であり、電源の正極端子は USB ポートから離れた側になります。
 
 <div class="table-center">
 <iframe width="730" height="420" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -78,17 +78,17 @@ SX-1262 は B2B インターフェースを介して Xiao ESP32-S3 に接続で�
 
 **1**: まずブラウザを開き、https://flasher.meshtastic.org/# にアクセスします。Chrome または Edge ブラウザが必要です。
 
-**2**: 次に、適切な USB ケーブルを使用してデバイスを PC に接続します。必要に応じて電源を切り、USB ケーブルを挿す間 **BOOT ボタンを押し続けて** ください。
+**2**: 次に、適切な USB ケーブルを使用してデバイスを PC に接続します。電源を切ったうえで、USB ケーブルを挿す間 **BOOT ボタンを押し続ける** 必要がある場合があります。
 
-**3**: 表示される手順に従って、後続の書き込み操作を行います。Device は "**Seeed XIAO S3**"、Firmware は **最新** のものを選択し、"**Flash**" をクリックします。以前のファームウェアを上書きしたい場合は、"**Full Erase and Install**" にチェックを入れることを忘れないでください。
+**3**: その後のフラッシュ操作を行うために、表示される手順に従います。Device は "**Seeed XIAO S3**"、Firmware は **最新** のものを選択し、"**Flash**" をクリックします。以前のファームウェアを上書きしたい場合は、"**Full Erase and Install**" にチェックを入れることを忘れないでください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/flashfirmware1.gif" style={{width:700, height:'auto'}}/></div>
 
 ### ステップ2 デバイス ID を確認する
 
-デバイス ID は通常、MAC アドレスの末尾 4 桁です。シリアルポートモニタを開いて確認できます。
+デバイス ID は通常、MAC アドレスの下 4 桁です。シリアルポートモニタを開いて確認できます。
 
-USB ケーブルでデバイスを接続します。その後、[ここをクリック](https://flasher.meshtastic.org/#)して Meshtastic Web フラッシャーに移動します。`Open the serial port monitor` をクリックします。Device として `Seeed XIAO S3` または `Tiny USB XXX` を選択します。
+USB ケーブルでデバイスを接続します。その後、[click here](https://flasher.meshtastic.org/#) をクリックして Meshtastic Web Flasher に移動します。`Open the serial port monitor` をクリックします。Device として `Seeed XIAO S3` または `Tiny USB XXX` を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/OpenSerialPortMonitor.png" style={{width:600, height:'auto'}}/></div>
 
@@ -111,18 +111,18 @@ Meshtastic Android アプリを開き、Bluetooth 経由でデバイスに接続
 - 地域を UNSET から自分の国／地域に変更します（例：ヨーロッパなら EU868、アメリカなら US など）。
 - `OK to MQTT` を選択します
 - Send をクリックします
-- デバイスは自動的に再起動して再接続します。自動的に再起動および再接続されます。これには 30 秒〜2 分ほどかかる場合があります。
+- デバイスは自動的に再起動して再接続します。自動的に再起動して再接続します。これには 30 秒から 2 分ほどかかる場合があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTLoRaConfiguration.jpg" style={{width:350, height:'auto'}}/></div>
 
 **2. MQTT 設定**
 
-- 既定の `MQTT Address`(mqtt.meshtastic.org)、`User name`(meshdev)、`Password`(large4cats) をそのまま使用できます。 
+- 既定の `MQTT Address`(mqtt.meshtastic.org)、`User name`(meshdev)、`Password`(large4cats) を使用できます。 
 - `MQTT Enabled` を選択します
 - `MQTT Client Proxy Enabled` を選択します
 - （オプション）他の mqtt ユーザーに地図上で自分を表示させたい場合は、`Map Reporting` と `I agree` を選択してください。
 - Send をクリックします
-- デバイスは自動的に再起動して再接続します。自動的に再起動および再接続されます。これには 30 秒〜2 分ほどかかる場合があります。
+- デバイスは自動的に再起動して再接続します。自動的に再起動して再接続します。これには 30 秒から 2 分ほどかかる場合があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTSetting.jpg" style={{width:350, height:'auto'}}/></div>
 
@@ -147,7 +147,7 @@ Meshtastic Android アプリを開き、Bluetooth 経由でデバイスに接続
 
 **5. アプリ接続**
 
-これでデバイスは Bluetooth 経由では接続できなくなりましたが、ネットワーク経由で接続できます。
+これでデバイスは Bluetooth 経由では接続できませんが、ネットワーク経由で接続できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -159,18 +159,18 @@ Meshtastic Android アプリを開き、Bluetooth 経由でデバイスに接続
 - 地域を UNSET から自分の国／地域に変更します（例：ヨーロッパなら EU868、アメリカなら US など）。
 - `OK to MQTT` を選択します
 - Send をクリックします
-- デバイスは自動的に再起動して再接続します。自動的に再起動および再接続されます。これには 30 秒〜2 分ほどかかる場合があります。
+- デバイスは自動的に再起動して再接続します。自動的に再起動して再接続します。これには 30 秒から 2 分ほどかかる場合があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTLoRa.png" style={{width:350, height:'auto'}}/></div>
 
 **2. MQTT 設定**
 
-- 既定の `MQTT Address`(mqtt.meshtastic.org)、`User name`(meshdev)、`Password`(large4cats) をそのまま使用できます。 
+- 既定の `MQTT Address`(mqtt.meshtastic.org)、`User name`(meshdev)、`Password`(large4cats) を使用できます。 
 - `MQTT Enabled` を選択します
 - `MQTT Client Proxy Enabled` を選択します
 - （オプション）他の mqtt ユーザーに地図上で自分を表示させたい場合は、`Map Reporting` と `I agree` を選択してください。
 - Send をクリックします
-- デバイスは自動的に再起動して再接続します。自動的に再起動および再接続されます。これには 30 秒〜2 分ほどかかる場合があります。
+- デバイスは自動的に再起動して再接続します。自動的に再起動して再接続します。これには 30 秒から 2 分ほどかかる場合があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTSetting.png" style={{width:350, height:'auto'}}/></div>
 
@@ -195,7 +195,7 @@ Meshtastic Android アプリを開き、Bluetooth 経由でデバイスに接続
 
 **5. アプリ接続**
 
-これでデバイスは Bluetooth 経由では接続できなくなりましたが、ネットワーク経由で接続できます。
+これでデバイスは Bluetooth 経由では接続できませんが、ネットワーク経由で接続できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTConnect.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -210,3 +210,25 @@ Meshtastic Android アプリを開き、Bluetooth 経由でデバイスに接続
 
 ESP32S3 MQTT ゲートウェイと同じ周波数帯の別の Meshtastic デバイスがある場合、そのデバイスも ESP32S3 を介してインターネット上の他の人とメッセージを送受信できます。
 
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

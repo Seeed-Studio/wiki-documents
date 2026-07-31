@@ -38,7 +38,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-Impulsada por **XIAO nRF52840 Plus**, la placa de pantalla EN05 es compatible con una amplia gama de pantallas ePaper de 24 pines. Incorpora un puerto de extensión de E/S para conectar sensores adicionales, conector de batería JST de 2,0 mm con interruptor de encendido, CI de carga integrado y tres botones de usuario. Es ideal para proyectos de ePaper de ultra bajo consumo, como tarjetas de identificación inteligentes, etiquetas de precio electrónicas, señalización para salas de reuniones y paneles de información portátiles.
+Impulsada por **XIAO nRF52840 Plus**, la placa de pantalla EN05 es compatible con una amplia gama de pantallas ePaper de 24 pines. Incorpora un puerto de extensión de E/S para conectar sensores adicionales, conector de batería JST de 2,0 mm con interruptor de alimentación, CI de carga integrado y tres botones de usuario. Es ideal para proyectos de ePaper de ultra bajo consumo, como insignias inteligentes con nombre, etiquetas de precio electrónicas, señalización de salas de reuniones y paneles de información portátiles.
 
 ### Características
 
@@ -54,8 +54,8 @@ Impulsada por **XIAO nRF52840 Plus**, la placa de pantalla EN05 es compatible co
 |---|---|
 | **Procesador** | XIAO nRF52840 Plus |
 | **Inalámbrico** | Bluetooth 5.0 |
-| **Conector ePaper** | SPI FPC 24 pines 0,5 mm |
-| **Conector de batería** | JST 2,0 mm (batería Li 3,7 V) |
+| **Conector ePaper** | SPI FPC de 24 pines 0,5 mm |
+| **Conector de batería** | JST 2,0 mm (batería de litio de 3,7 V) |
 | **Interruptor** | Interruptor deslizante de alimentación por hardware |
 | **Botones** | 1x botón de reinicio (montado lateralmente) <br/> 3x botón de usuario (montado lateralmente) |
 | **Grosor de PCB** | 1,2 mm |
@@ -67,12 +67,12 @@ Impulsada por **XIAO nRF52840 Plus**, la placa de pantalla EN05 es compatible co
 La EN05 es compatible con una variedad de pantallas ePaper SPI de 24 pines, incluidas, entre otras:
 
 - [Pantalla E-paper de 1,54 pulgadas - Matriz de puntos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [Pantalla E-Paper de 2,13 pulgadas - Flexible monocroma 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [Pantalla E-Paper de 2,13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [Pantalla E-paper de 2,9 pulgadas - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [Pantalla E-Paper de 4,2 pulgadas - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [Pantalla E-Paper de 4,26 pulgadas - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [Pantalla E-paper de 5,83 pulgadas - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [E-Paper de 2,13 pulgadas - Flexible monocromo 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [E-Paper de 2,13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [E-paper de 2,9 pulgadas - Monocromo 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [E-Paper de 4,2 pulgadas - Monocromo 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [E-Paper de 4,26 pulgadas - Monocromo 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [E-paper de 5,83 pulgadas - Monocromo 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
 - [Pantalla ePaper monocroma de 7,5 pulgadas con 800x480 píxeles](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 
 
@@ -115,7 +115,7 @@ Después de descargar la biblioteca, ve a **Sketch** -> **Include Library** -> *
 
 ## Primeros pasos
 
-Aquí usamos una pantalla monocroma de 7,5 pulgadas como ejemplo. Los pasos son idénticos para otras pantallas compatibles; solo necesitas seleccionar el identificador de tamaño de pantalla adecuado en el controlador.
+Aquí usamos una pantalla monocroma de 7,5 pulgadas como ejemplo. Los pasos son idénticos para otras pantallas compatibles; simplemente necesitas seleccionar el identificador de tamaño de pantalla adecuado en el controlador.
 
 ### Configurar y grabar el programa
 Selecciona el ejemplo que se muestra en la figura
@@ -129,7 +129,7 @@ Crea un nuevo archivo "driver.h" y pega ese código en él. El código debería 
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN05
 ```
 
-Después de eso, ve a **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** y **Tools** -> **Port** -> **Select the port your board is connected to**.
+Después de eso, ve a **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Plus** y **Tools** -> **Port** -> **Select the port your board is connected to**.
 
 Luego haz clic en **Upload** para subir el código.
 ¡Ahora verás la respuesta en tu pantalla ePaper!
@@ -145,7 +145,7 @@ Luego haz clic en **Upload** para subir el código.
 ## Solución de problemas
 
 **P1: La pantalla no muestra nada después de subir el código.**
-- **Comprueba el cable FPC**: Asegúrate de que el cable FPC de la pantalla ePaper esté insertado en la orientación correcta y bien bloqueado en el conector.
+- **Comprueba el cable FPC**: Asegúrate de que el cable FPC de la pantalla ePaper esté insertado con la orientación correcta y bloqueado firmemente en el conector.
 - **Verifica la configuración del controlador**: Vuelve a comprobar `driver.h` para asegurarte de que se haya seleccionado el `BOARD_SCREEN_COMBO` correcto para el tamaño específico de tu pantalla.
 
 **P2: La placa no se enciende cuando se conecta a una batería.**
@@ -154,7 +154,7 @@ Luego haz clic en **Upload** para subir el código.
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
