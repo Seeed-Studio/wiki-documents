@@ -15,7 +15,7 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-04-29'
+updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/pt-br/get_started_with_meshcore_remote_terminal/
 ---
 Este wiki apresentará o [Remote Terminal for MeshCore](https://github.com/jkingsman/Remote-Terminal-for-MeshCore) (RemoteTerm) para fornecer uma interface para dispositivos [MeshCore](https://meshcore.io/) transmitirem mensagens. Este tutorial fornece uma configuração básica para executar o RemoteTerm em um Raspberry Pi usando o [Seeed XIAO ESP32S3 & SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) como rádio auxiliar e o [Raspberry Pi Zero 2W](https://www.seeedstudio.com/Raspberry-Pi-Zero-2-W-p-5197.html) para uma solução MeshCore compacta e tudo‑em‑um para usuários avançados!
@@ -84,12 +84,12 @@ Além do hardware principal, aqui estão os acessórios necessários:
 ### Configuração do Pi
 
 - [Clique aqui](https://www.raspberrypi.com/software/) para baixar o Raspberry Pi Imager
-- Abra o Imager e selecione o modelo do seu Raspberry Pi e selecione "Raspberry Pi OS Lite (64 bit)"
+- Abra o imager, selecione o modelo do seu Raspberry Pi e selecione "Raspberry Pi OS Lite (64 bit)"
 - Configure o SSH com uma senha, ou chave se desejar, e configure a conexão Wi‑Fi
 - Conecte o ESP32 MeshCore ao [Raspberry Pi](https://www.seeedstudio.com/Raspberry-Pi-Zero-2-W-p-5197.html) 
 
 :::warning
-garantindo que o nó ESP32 LoRa Mesh esteja conectado à porta `USB`, não à porta `POWER` 
+garantindo que o nó Mesh ESP32 LoRa esteja conectado à porta `USB`, não à porta `POWER` 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/USB.png" style={{width:900, height:'auto'}}/></div>
 :::
 
@@ -150,7 +150,7 @@ O RemoteTerm faz o gerenciamento **completo** do rádio, o que significa que, um
 
 **Configuração de hotspot (opcional)**
 
-Isto é opcional e recomendado apenas para rádios que serão usados longe da sua casa. Esta configuração desconectará o rádio do Wi‑Fi da sua casa, mas o configurará para começar a transmitir seu próprio Wi‑Fi para que ele possa ser acessado sem uma conexão com a internet.
+Isto é opcional e recomendado apenas para rádios que serão usados longe da sua casa. Esta configuração desconectará o rádio do Wi‑Fi da sua casa, mas o configurará para começar a transmitir seu próprio Wi‑Fi para que possa ser acessado sem conexão à internet.
 
 - Configurar um hotspot
 
@@ -179,20 +179,20 @@ A tela principal do RemoteTerm mostra uma lista de canais, repetidores e servido
 
 Acima da lista de contatos há um conjunto de ferramentas:
 
-|Item geral          |Função|
+|General Item          |Function|
 |---------------|-------------------------|
 |Packet Feed   |Uma exibição de pacotes brutos recebidos à medida que chegam|
 |Node Map      |Visualizar a localização dos nós|
 |Mesh Visualizer|Uma representação 3D personalizável de nós e tráfego em tempo real|
 |Trace          |Executar rastreamentos multi‑hop entre repetidores para obter informações de intensidade de sinal|
 |Message Search |Pesquisar o histórico de canais e mensagens por palavras ou frases|
-|Channel Finder |O localizador de canais encontra nomes de canais para pacotes ouvidos mas não descriptografados|
+|Channel Finder |O localizador de canais encontra nomes de canais para pacotes ouvidos, mas não descriptografados|
 
 ### Mensagens (Canais)
 
 Para criar ou entrar em um canal, clique no botão 'Add Channel/Contact” no canto superior esquerdo do menu principal do aplicativo. Canais privados, identificados apenas pela sua chave, ou canais Hashtag, identificados pelo seu nome como uma #hashtag, podem ser acessados a partir do menu que aparece.
 
-O canal Public é adicionado automaticamente a todas as novas instâncias do RemoteTerm. Sua malha local provavelmente terá sua cota de canais ativos: Public, #test ou #testing, e #bots ou #bot podem ser bons lugares para começar ou encontrar pessoas que possam apontar para boas salas locais para iniciantes.
+O canal Public é adicionado automaticamente a todas as novas instâncias do RemoteTerm. Sua malha local provavelmente terá sua parcela de canais ativos: Public, #test ou #testing, e #bots ou #bot podem ser bons lugares para começar ou encontrar pessoas que possam apontar para boas salas locais para iniciantes.
 
 Quando um canal é selecionado, a tela ficará parecida com isto:
 
@@ -200,13 +200,13 @@ Quando um canal é selecionado, a tela ficará parecida com isto:
 
 Na barra de status:
 
-|Ícone|Função|
+|Icon|Function|
 |---------------|---------------|
 |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/bell.png" style={{width:50, height:'auto'}}/></div>|Configura notificações, seja como notificações na área de trabalho (que exigem que o navegador esteja aberto) ou Web Push (que podem ser entregues mesmo quando o navegador está fechado). Isso requer um contexto HTTPS confiável (os certificados snakeoil disponíveis no instalador podem ou não ser suficientes para permitir notificações, dependendo do seu sistema operacional e navegador)|
 |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/earth.png" style={{width:50, height:'auto'}}/></div>|Habilita substituições de roteamento regionais, que limitam o escopo regional do rádio quando ele envia mensagens apenas neste canal. Usuários com configurações de região correspondentes ou diferentes poderão ver ou ignorar automaticamente suas mensagens, respectivamente|
 |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/chevrons-left-right.png" style={{width:50, height:'auto'}}/></div>|Permite substituições de largura de salto por canal, separadas do padrão do seu rádio|
 |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/star.png" style={{width:50, height:'auto'}}/></div>|Adiciona ou remove um canal dos seus favoritos|
-|<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/trash-2.png" style={{width:50, height:'auto'}}/></div>|Exclui o canal, mas mantém as mensagens históricas se você optar por adicioná‑lo novamente depois|
+|<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/trash-2.png" style={{width:50, height:'auto'}}/></div>|Exclui o canal, mas mantém as mensagens históricas se você decidir adicioná‑lo novamente depois|
 |Room Key|Fornece a chave MeshCore para a sala em questão|
 
 No canto superior esquerdo está o nome do canal com um ícone de informações; você pode clicar nele para ver informações sobre o canal, como quão ativo ele é, quem está enviando mensagens e sua chave (que você também pode ver clicando no texto "Show key" na barra de status superior):
@@ -221,16 +221,16 @@ O envio de mensagens diretas funciona de forma semelhante às mensagens de canal
 |---------------|---------------|
 |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/route.png" style={{width:50, height:'auto'}}/></div>|Envia uma sonda roteada para o contato para descobrir um caminho de roteamento mais ideal para as mensagens seguirem|
 |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/trace.png" style={{width:50, height:'auto'}}/></div>|Envia um rastreamento direto para o contato, com dados de SNR remoto e local|
-|<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/bell.png" style={{width:50, height:'auto'}}/></div>|Configura notificações, seja como notificações de desktop (que exigem que o navegador esteja aberto) ou Web Push (que podem ser entregues mesmo quando o navegador está fechado). Isso requer um contexto HTTPS confiável (os certificados snakeoil disponíveis no instalador podem ou não ser suficientes para permitir notificações, dependendo do seu sistema operacional e navegador)|
+|<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/bell.png" style={{width:50, height:'auto'}}/></div>|Configura notificações, seja como notificações na área de trabalho (que exigem que o navegador esteja aberto) ou Web Push (que podem ser entregues mesmo quando o navegador está fechado). Elas exigem um contexto HTTPS confiável (os certificados snakeoil disponíveis no instalador podem ou não ser suficientes para permitir notificações, dependendo do seu sistema operacional e navegador)|
 |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/star.png" style={{width:50, height:'auto'}}/></div>|Adiciona ou remove um contato dos seus favoritos|
 |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/trash-2.png" style={{width:50, height:'auto'}}/></div>|Exclui a conversa, mas mantém as mensagens históricas se você optar por adicioná-la novamente depois|
-|Chave do Contato|Fornece a chave MeshCore para o contato em questão e informações sobre quando ele foi ouvido pela última vez (anúncio, mensagem, etc.) e o método (direto, ou qual caminho o pacote percorreu)|
+|Chave do Contato|Fornece a chave MeshCore para o contato em questão e informações sobre quando ele foi ouvido pela última vez (anúncio, mensagem, etc.) e o método (direto ou qual caminho o pacote percorreu)|
 
-De forma semelhante aos canais, você pode clicar no ícone de informações ou no nome na barra superior de um contato selecionado para ver análises do contato
+De forma semelhante aos canais, você pode clicar no ícone de informações ou no nome na barra superior de um contato selecionado para ver análises desse contato
 
 ## MQTT e Automação
 
-RemoteTerm se destaca ao fornecer integrações ricas para sistemas automatizados. As integrações executam ações quando pacotes de certos tipos são ouvidos (por exemplo, quando uma mensagem é enviada em um canal ou uma DM é recebida). Isso inclui:
+RemoteTerm se destaca ao fornecer integrações ricas para sistemas automatizados. As integrações executam ações quando pacotes de determinados tipos são ouvidos (por exemplo, quando uma mensagem é enviada em um canal ou uma DM é recebida). Elas incluem:
 
 - MQTT, encaminhando pacotes via MQTT para:
   - Brokers privados
@@ -238,10 +238,10 @@ RemoteTerm se destaca ao fornecer integrações ricas para sistemas automatizado
   - Home Assistant
 - Webhooks, enviando requisições GET ou POST para uma URL específica com dados da mensagem
 - Apprise, uma ferramenta flexível de distribuição de notificações que pode encaminhar para Discord, Telegram, SMS, e-mail etc.
-- Colocar pacotes ou mensagens em filas Amazon SQS
+- Colocação de pacotes ou mensagens em filas Amazon SQS
 - Bots em Python
 
-### Configurar para Mapeamento de Malha da Comunidade
+### Configuração para Mapeamento de Malha da Comunidade
 
 Mostrar a localização dos nós MeshCore, padrões de fluxo de mensagens e quebras de conectividade, etc. — pode ser útil para a comunidade na construção da rede MeshCore. Para fornecer essa visualização de depuração, agregadores da comunidade ingerem um fluxo de pacotes brutos de *observadores*.
 
@@ -276,12 +276,12 @@ Agora, navegue para este [link](https://analyzer.letsmesh.net/my-nodes). Em cerc
 RemoteTerm fornece uma interface para programar seus próprios bots. Bots consistem em código Python simples que é executado sempre que uma mensagem é recebida de um contato ou canal. 
 
 :::warning
-Bots geram tráfego automatizado em resposta a outras mensagens. Isso significa que é *sua* responsabilidade garantir que os bots sejam cuidadosamente escritos para evitar inundar a malha ou entrar em loop infinito. 
+Bots geram tráfego automatizado em resposta a outras mensagens. Isso significa que é *sua* responsabilidade garantir que os bots sejam cuidadosamente escritos para evitar inundar a malha ou entrar em loops infinitos. 
 :::
 
-#### Configurar um Bot Simples de Rolagem de Dados
+#### Configure um Bot Simples de Rolagem de Dados
 
-Aqui está um tutorial guiando você a construir um bot com capacidades simples de rolagem de dados, solicitado em forma padrão (por exemplo, "3d6" significa rolar 3 dados de seis lados). Aqui estão os passos simples:
+Aqui está um tutorial guiando você a construir um bot com capacidades simples de rolagem de dados, solicitadas em forma padrão (por exemplo, "3d6" significa rolar 3 dados de seis lados). Aqui estão os passos simples:
 
 1. No RemoteTerm, navegue até "Settings" e clique em "MQTT & Automation".
 2. Clique em "Add Integration" e escolha "Python Bot" na lista à esquerda.
@@ -324,7 +324,7 @@ Usando outro rádio, navegue até a sala **#bot** e solicite uma rolagem de dado
 
 Se você não vir a resposta como esperado, pode verificar os logs do servidor do seu contêiner Docker para ver se há algum erro relatado quando o código Python é executado.
 
-#### Configurar um Bot de Largura de Caminho
+#### Configure um Bot de Largura de Caminho
 
 O firmware MeshCore v1.14+ trouxe grandes mudanças em como as mensagens atravessam a malha; pacotes que atravessam roteadores compatíveis agora podem carregar identificadores de salto multibyte. 
 
@@ -363,7 +363,7 @@ def bot(**kwargs) -> str | list[str] | None:
 
 ### Encaminhar Mensagens de Canal MeshCore para o Discord
 
-[Apprise](https://appriseit.com/) é um serviço de notificação flexível suportado pelo RemoteTerm. O Apprise permite que você escolha um ou muitos entre centenas de serviços de notificação para os quais enviar mensagens de canal ou diretas, desde Discord até Telegram, SMS, e-mail e muito mais.
+[Apprise](https://appriseit.com/) é um serviço de notificação flexível suportado pelo RemoteTerm. O Apprise permite que você escolha um ou muitos entre centenas de serviços de notificação para os quais enviar mensagens de canal ou diretas, desde Discord e Telegram até SMS, e-mail e muito mais.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/Aprise.png" style={{width:900, height:'auto'}}/></div>  
 
 Como exemplo, usaremos o Apprise para encaminhar todas as mensagens em um canal MeshCore específico para o Discord via RemoteTerm.
@@ -379,7 +379,7 @@ Como exemplo, usaremos o Apprise para encaminhar todas as mensagens em um canal 
 7. Clique em "Create".
 8. Adicione uma URL de notificação na entrada. De acordo com a [documentação do Discord do Apprise](https://appriseit.com/services/discord/), ela deve ter o formato `discord://{WebhookID}/{WebhookToken}/`. Use o WebhookID e o WebhookToken da URL copiada. 
 9. Escolha se deseja preservar a identidade do usuário usando o nome e o avatar configurados quando disponíveis.
-10. Escolha se deseja incluir dados de rota no caminho na mensagem (recomendado desativar)
+10. Escolha se deseja incluir dados de rota na mensagem (recomenda-se desativar)
 11. Selecione os contatos/canais que você gostaria de encaminhar para o Discord e clique em "Save as Enabled".
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/discord_configured.png" style={{width:900, height:'auto'}}/></div>  
 
@@ -394,12 +394,12 @@ Para aproveitar o rastreamento de telemetria de repetidores, você precisará in
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/enrolled_repeater.png" style={{width:900, height:'auto'}}/></div>   
 
 :::tip
-A busca automatizada de telemetria de repetidores tem um intervalo personalizável; você pode escolher uma frequência que varia de uma vez por hora a uma vez por dia, com a restrição de que buscas automatizadas não podem exceder 24 em um período de 24 horas. 
+A busca automatizada de telemetria de repetidores possui um intervalo personalizável; você pode escolher uma frequência que varia de uma vez por hora a uma vez por dia, com a restrição de que buscas automatizadas não podem exceder 24 em um período de 24 horas. 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/repeatertelemetryintervalcustomization.png" style={{width:900, height:'auto'}}/></div> 
 
 :::
 
-Depois de configurar seus repetidores rastreados conforme desejado e o MQTT Discovery estiver ativado no Home Assistant, você poderá configurar uma integração no RemoteTerm para iniciar o fluxo de dados.
+Depois de configurar seus repetidores rastreados como desejar e o MQTT Discovery estiver ativado no Home Assistant, você poderá configurar uma integração no RemoteTerm para iniciar o fluxo de dados.
 
 1. No RemoteTerm, navegue até "Settings" e clique em "MQTT & Automation".
 2. Clique em "Add Integration" e escolha "Home Assistant MQTT Discovery" na lista à esquerda.
@@ -407,7 +407,7 @@ Depois de configurar seus repetidores rastreados conforme desejado e o MQTT Disc
 4. Insira as informações do seu broker MQTT, incluindo host e porta, e configuração de nome de usuário/senha/TLS, se aplicável.
 5. Escolha os contatos a serem rastreados via localização GPS de anúncios no Home Assistant.
 6. Selecione os repetidores com telemetria rastreada que você deseja ver no Home Assistant.
-7. Escolha o escopo de mensagens para gatilhos dentro do Home Assistant.
+7. Escolha o escopo de mensagens para disparos (triggers) dentro do Home Assistant.
 8. Clique em "Save as Enabled".
 
  Observe que a tela de configuração de integração do RemoteTerm fornece os tópicos/entidades exatos criados nos menus suspensos "What gets created in Home Assistant" e "Published Topic Summary".
@@ -415,7 +415,7 @@ Depois de configurar seus repetidores rastreados conforme desejado e o MQTT Disc
 :::warning
 Contatos e repetidores rastreados criarão entidades no Home Assistant; você pode querer limitar sua seleção apenas aos contatos que lhe interessam para evitar poluir o Home Assistant.
 
-Eventos de mensagem *não* criam entidades e são usados apenas para gatilhos; em geral, não há problema em permitir que todas as mensagens fluam para o Home Assistant.
+Eventos de mensagem *não* criam entidades e são usados apenas para disparos; em geral, não há problema em permitir que todas as mensagens fluam para o Home Assistant.
 :::
 
 
@@ -425,9 +425,24 @@ Para visualizar as novas entidades, faça login na interface web do Home Assista
 Clique nelas para ver suas métricas disponíveis. Para repetidores, serão exibidas as métricas mais recentes disponíveis e não obsoletas; se você tiver ativado recentemente a busca automatizada de telemetria, talvez seja necessário aguardar até oito horas para que todos os campos de telemetria de repetidores e rádios sejam preenchidos no Home Assistant.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/example.png" style={{width:900, height:'auto'}}/></div> 
 
-Para orientações adicionais de configuração, consulte o arquivo [README_HA.md](https://github.com/jkingsman/Remote-Terminal-for-MeshCore/blob/main/README_HA.md) no repositório do RemoteTerm. Por exemplo, seguir as instruções em "[Full monitoring dashboard with message feed](https://github.com/jkingsman/Remote-Terminal-for-MeshCore/blob/main/README_HA.md#full-monitoring-dashboard-with-message-feed)" fornecerá um dashboard como este:
+Para orientações adicionais de configuração, consulte o arquivo [README_HA.md](https://github.com/jkingsman/Remote-Terminal-for-MeshCore/blob/main/README_HA.md) no repositório do RemoteTerm. Por exemplo, seguir as instruções em "[Full monitoring dashboard with message feed](https://github.com/jkingsman/Remote-Terminal-for-MeshCore/blob/main/README_HA.md#full-monitoring-dashboard-with-message-feed)" fornecerá um painel como este:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/example_ha_dashboard.png" style={{width:900, height:'auto'}}/></div> 
 
 ## Próximas etapas
 
-Mantenha-se atualizado com o desenvolvimento do RemoteTerm ou tire dúvidas entrando no [Discord oficial do MeshCore](https://discord.gg/mr3Pt5s5V9) e acompanhando o [tópico de desenvolvimento do RemoteTerm](https://discord.com/channels/1343693475589263471/1477723940951429330). A base de código é atualizada com frequência e você pode encontrar a versão mais recente no [Changelog](https://github.com/jkingsman/Remote-Terminal-for-MeshCore/blob/main/CHANGELOG.md) e, claro, o RemoteTerm é gratuito, sem anúncios e open source para sempre — dê uma estrela para ele no [GitHub](https://github.com/jkingsman/Remote-Terminal-for-MeshCore).
+Mantenha-se atualizado com o desenvolvimento do RemoteTerm ou tire dúvidas entrando no [Discord oficial do MeshCore](https://discord.gg/mr3Pt5s5V9) e acompanhando o [tópico de desenvolvimento do RemoteTerm](https://discord.com/channels/1343693475589263471/1477723940951429330). A base de código é atualizada com frequência e você pode encontrar a versão mais recente no [Changelog](https://github.com/jkingsman/Remote-Terminal-for-MeshCore/blob/main/CHANGELOG.md) e, claro, o RemoteTerm é gratuito, sem anúncios e de código aberto para sempre — dê uma estrela para ele no [GitHub](https://github.com/jkingsman/Remote-Terminal-for-MeshCore).
+
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

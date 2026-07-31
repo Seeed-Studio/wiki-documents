@@ -21,17 +21,17 @@ import TabItem from '@theme/TabItem';
 
 # Meshtastic ファームウェア ソースコード実践チュートリアル
 
-このチュートリアルは、Meshtastic ファームウェアのソースコードをこれから触り始めるユーザーを対象としています。Windows と macOS の両方で共通するワークフローを含んでいます。目的はシンプルで、公式リポジトリをクローンし、ビルドを一度成功させ、UI を 1 か所だけ簡単に変更し、その変更済みファームウェアをデバイスに書き込んで動作を確認することです。
+このチュートリアルは、Meshtastic ファームウェアのソースコードをこれから触り始めるユーザーを対象としています。Windows と macOS の両方で共通するワークフローを含んでいます。目的はシンプルで、公式リポジトリをクローンし、ビルドを成功させ、UI を 1 か所だけ簡単に変更し、その変更済みファームウェアをデバイスに書き込んで動作を確認することです。
 
 すでに Git、Python、または PlatformIO に慣れている場合は、該当するセクションを飛ばして、ハンズオンのパートに直接進んでも構いません。
 
 :::tip
-このガイドには、Windows と macOS の両方で共通して使えるコマンドを掲載しています。スクリーンショットの多くは Windows 環境で撮影していますが、macOS での全体的なワークフローもほぼ同じです。
+このガイドには、Windows と macOS の両方で共通して使えるコマンドを掲載しています。スクリーンショットの多くは Windows 環境で撮影したものですが、macOS での全体的なワークフローもほぼ同じです。
 :::
 
 ## 事前準備
 
-始める前に、次のツールを用意してください。
+始める前に、次のツールを用意してください：
 
 1. Git
 2. Python 3
@@ -43,13 +43,13 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-公式の Git for Windows ダウンロードページを開きます。
+公式の Git for Windows ダウンロードページを開きます：
 
 [Git for Windows](https://git-scm.com/install/windows)
 
 ページを開くと、通常はインストーラのダウンロードが自動的に始まります。ダウンロードが完了したら、インストーラをダブルクリックしてセットアップウィザードに従います。
 
-インストール中で最も重要なステップは **PATH 環境変数の調整** です。次を選択してください。
+インストール中で最も重要なステップは **PATH 環境変数の調整** です。次を選択します：
 
 **Git from the command line and also from 3rd-party software**
 
@@ -59,7 +59,7 @@ import TabItem from '@theme/TabItem';
 
 インストールが完了するまで待ちます。
 
-インストール後、**現在開いている PowerShell と VS Code のターミナルウィンドウをすべて閉じてから**、新しく PowerShell を開き、次を実行します。
+インストール後、**現在開いている PowerShell と VS Code のターミナルウィンドウをすべて閉じてから**、新しく PowerShell ウィンドウを開き、次を実行します：
 
 ```plain
 & "C:\Program Files\Git\cmd\git.exe" --version
@@ -71,7 +71,7 @@ Git のバージョン番号が表示されれば、Git は正常にインスト
 
 **`git` コマンドがまだ使えない場合**
 
-まず PowerShell で次のコマンドを実行し、Git のデフォルトのインストールパスを確認できます。
+まず PowerShell で次のコマンドを実行し、Git のデフォルトのインストールパスを確認できます：
 
 ```plain
 $gitCmd = "C:\Program Files\Git\cmd"
@@ -91,7 +91,7 @@ Write-Host $gitBin
 3. 開いて **Environment Variables** をクリック
 4. **System variables** の下にある `Path` を探す
 5. **Edit** をクリック
-6. **New** をクリックして、次の 2 つのパスを追加します。
+6. **New** をクリックして、次の 2 つのパスを追加します：
 
 ```plain
 C:\Program Files\Git\cmd
@@ -102,12 +102,12 @@ C:\Program Files\Git\bin
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image4.png)
 
-保存後、次の操作も必要です。
+保存後、次の操作も必要です：
 
 - **すべての** PowerShell ウィンドウを閉じる
 - PowerShell を再度開く
 
-そのうえで次を実行します。
+そのうえで次を実行します：
 
 ```plain
 git --version
@@ -121,27 +121,27 @@ git --version
 
 <TabItem value="macos" label="macOS">
 
-macOS では Git をインストールする方法が複数ありますが、Homebrew を使うのが一般的に最も簡単です。
+macOS では、Git をインストールする方法が複数ありますが、Homebrew を使うのが一般的に最も簡単です：
 
-1. まず Command Line Tools をインストールします。
+1. まず Command Line Tools をインストールします：
 
 ```bash
 xcode-select --install
 ```
 
-2. Homebrew がまだインストールされていない場合は、先にインストールします。
+2. Homebrew がまだインストールされていない場合は、先にインストールします：
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-3. Git をインストールします。
+3. Git をインストールします：
 
 ```bash
 brew install git
 ```
 
-4. インストールされたバージョンを確認します。
+4. インストールされたバージョンを確認します：
 
 ```bash
 git --version
@@ -154,14 +154,14 @@ git --version
 
 **Git のユーザー情報を設定する**
 
-次に、Git のユーザー情報を設定します。サンプルの値を自分の名前とメールアドレスに置き換えてください。
+次に、Git のユーザー情報を設定します。サンプルの値を自分の名前とメールアドレスに置き換えてください：
 
 ```plain
 git config --global user.name "your name"
 git config --global user.email "your mail@gmail.com"
 ```
 
-その後、次を実行します。
+その後、次を実行します：
 
 ```plain
 git config --global --list
@@ -176,7 +176,7 @@ git config --global --list
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-ターミナルで次のコマンドを実行します。
+ターミナルで次のコマンドを実行します：
 
 ```plain
 winget search --id Python.Python.3.13 --source winget
@@ -185,7 +185,7 @@ winget install -e --id Python.Python.3.13 --source winget
 
 最初のコマンドで Python が見つかる場合、通常は 2 つ目のコマンドでそのままインストールされます。
 
-インストール後、ターミナルを閉じて再度開き、次を実行します。
+インストール後、ターミナルを閉じて再度開き、次を実行します：
 
 ```plain
 python --version
@@ -200,36 +200,36 @@ pip --version
 
 <TabItem value="macos" label="macOS">
 
-macOS には、すでに Python 環境が含まれていることがよくあります。新しいバージョンをインストールする前に、`python3` と `pip3` がすでに利用可能かどうかを確認してください。
+macOS には、すでに Python 環境が含まれていることがよくあります。新しいバージョンをインストールする前に、`python3` と `pip3` がすでに利用可能かどうかを確認します：
 
 ```bash
 python3 --version
 pip3 --version
 ```
 
-利用できない場合、またはより新しいバージョンが必要な場合は、Homebrew で Python をインストールします。
+利用できない場合、またはより新しいバージョンが必要な場合は、Homebrew で Python をインストールします：
 
 ```bash
 brew install python
 ```
 
-インストール後、ターミナルを開き直して次を実行します。
+インストール後、ターミナルを開き直して次を実行します：
 
 ```bash
 python3 --version
 pip3 --version
 ```
 
-`python` や `pip` を使いたい場合は、自分でシェルエイリアスを設定しても構いません。ただし macOS では、`python3` と `pip3` を使う方が一般的により確実です。
+もし `python` や `pip` を使いたい場合は、自分でシェルエイリアスを設定できます。ただし macOS では、`python3` と `pip3` を使う方が一般的により確実です。
 
 </TabItem>
 </Tabs>
 
 ### 3. PlatformIO をインストールする
 
-このステップは、PlatformIO が多くの依存関係を自動的にダウンロードし、インストールに時間がかかるため、初心者には少しとっつきにくく感じられるかもしれません。インストール中にエラーが出た場合は、基本的には焦らず、1 つずつ問題を切り分けて対処するのがよいでしょう。エラーメッセージの確認には、AI ツールを活用すると時間の節約にもなります。
+このステップは、PlatformIO が多くの依存関係を自動的にダウンロードし、インストールに時間がかかるため、初心者にはやや分かりにくく感じられるかもしれません。インストール中にエラーが出た場合は、基本的には焦らず、1 つずつ問題を切り分けて対処するのがよいです。エラーメッセージの確認には、AI ツールを活用すると時間の節約にもなります。
 
-VS Code の Extensions マーケットプレイスで `PlatformIO` を検索し、インストールします。
+VS Code の拡張機能マーケットプレイスで `PlatformIO` を検索し、インストールします。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image7.png)
 
@@ -244,7 +244,7 @@ Meshtastic 公式のファームウェアリポジトリは `meshtastic/firmware
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-作業ディレクトリのターミナルで次のコマンドを実行します。
+作業ディレクトリのターミナルで次のコマンドを実行します：
 
 ```plain
 git clone https://github.com/meshtastic/firmware.git
@@ -264,7 +264,7 @@ git submodule update --init
 
 <TabItem value="macos" label="macOS">
 
-作業ディレクトリのターミナルで次のコマンドを実行します。
+作業ディレクトリのターミナルで次のコマンドを実行します：
 
 ```bash
 cd ~/workplace
@@ -273,7 +273,7 @@ cd firmware
 git submodule update --init
 ```
 
-まだ `~/workplace` が存在しない場合は、先に作成します。
+もし `~/workplace` がまだ存在しない場合は、先に作成します：
 
 ```bash
 mkdir -p ~/workplace
@@ -286,15 +286,15 @@ mkdir -p ~/workplace
 
 ### 5. ハンズオン実践
 
-この段階では、まだコードの編集を急がないでください。まずはプロジェクトが一通りビルドプロセスを最後まで正常に通過できることを確認します。
+この段階では、まだコードの編集を急がないでください。まずはプロジェクトが最後までビルドプロセスを正常に通過できることを確認します。
 
-最初は次の 3 つのタスクから始めることをおすすめします。
+最初に次の 3 つのタスクから始めることをおすすめします：
 
 1. `firmware` を開く
 2. `platformio.ini` を確認する
 3. 対象ボード用のビルド環境を探す
 
-重要なポイントが 1 つあります。ルートの `platformio.ini` だけに注目しないでください。実際には、次のような追加の設定ファイルを `include` しています。
+重要なポイントが 1 つあります。ルートの `platformio.ini` だけに注目しないでください。実際には、次のような追加の設定ファイルをインクルードしています：
 
 ```plain
 extra_configs =
@@ -305,20 +305,20 @@ extra_configs =
 
 つまり、実際のボードレベルの環境定義は、通常 `variants/.../platformio.ini` 以下に配置されています。
 
-対象ボードを特定する際は、次の 2 つのディレクトリに特に注意してください。
+対象ボードを特定する際は、次の 2 つのディレクトリに特に注意してください：
 
 - `variants/`
 - `boards/`
 
-ここでは、例として **Wio Tracker L1 Pro** をターゲットにします。
+ここでは、例として **Wio Tracker L1 Pro** をターゲットとします。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image11.png)
 
-これにより、Meshtastic において **Wio Tracker L1 / L1 Pro のビルドターゲットが** `seeed_wio_tracker_L1` であることが分かります。
+この表示から、Meshtastic において **Wio Tracker L1 / L1 Pro のビルドターゲットは** `seeed_wio_tracker_L1` であることが分かります。
 
-**最小限の変更内容のまとめ**
+**最小限の変更のまとめ**
 
-最小限のエンドツーエンドの練習だけを完了したい場合は、次のキーとなるステップに集中してください。
+もし、最小限のエンドツーエンドの一連の流れだけを完了したい場合は、次のキーとなるステップに集中してください：
 
 1. Git、Python 3、VS Code、PlatformIO をインストールする。
 2. `meshtastic/firmware` リポジトリをクローンし、サブモジュールを初期化する。
@@ -326,13 +326,13 @@ extra_configs =
 4. `src/graphics/SharedUIDisplay.cpp` 内の表示ロジックを変更する。
 5. ファームウェアを再ビルドし、生成された UF2 ファイルをデバイスに書き込んで動作を確認する。
 
-**ステップ 1: プロジェクトが正常にビルドできることを確認する**
+**ステップ 1：プロジェクトが正常にビルドできることを確認する**
 
 ここでは、ビルドに PlatformIO Core CLI を使用します。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png)
 
-最初のビルドでは、次のコマンドを実行することをおすすめします。
+最初のビルドでは、次のコマンドを実行することをおすすめします：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -356,11 +356,11 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image13.png)
 
-画面が上のスクリーンショットと同じような状態になれば、ビルドプロセスは正しく開始されています。最初のビルドは時間がかかることが多いので、気長に待ちましょう。
+画面が上のスクリーンショットと同様であれば、ビルドプロセスは正しく開始されています。最初のビルドには時間がかかることが多いので、気長に待ちましょう。
 
 **ビルドが失敗した場合**
 
-ビルドが失敗したときは、まず PlatformIO に現在の環境で必要な依存関係をインストールさせることができます。
+ビルドが失敗したときは、まず PlatformIO に現在の環境で必要な依存関係をインストールさせることができます：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -449,12 +449,12 @@ pio run -e seeed_wio_tracker_L1
 
 これらの設定ファイルから、L1 が `HAS_SCREEN` と `USE_SSD1306` を定義していることが分かります。つまり、スクリーンなし構成でも E-Ink ソリューションでもなく、標準的な OLED ディスプレイパイプラインを使用しているということです。
 
-さらに表示ロジックを追っていくと、関連コードのほとんどは次の場所にあります：
+表示ロジックをさらに追っていくと、関連コードのほとんどは次の場所にあります：
 
 - `src/graphics/`
 - `src/graphics/draw/`
 
-具体的にどう変更するかは、ソースコードを読む力に依存します。ここではごく簡単な例として、ホーム画面の UI を変更するところから始めます。
+具体的にどのように変更するかは、ソースコードを読む力に依存します。ここでは、ホーム画面の UI を変更するという、とても簡単な例から始めます。
 
 **変更 1: バッテリーテキストの右端を記録する**
 
@@ -473,7 +473,7 @@ int batteryTextEndX = batteryX - 1;
 
 `src/graphics/SharedUIDisplay.cpp:157`
 
-ここでは `batteryTextEndX` を追加し、バッテリー残量テキストの終端位置を記録しています。これにより、後でバッテリー情報の後ろにカスタムテキストを追加しやすくなります。
+ここでは、バッテリー残量テキストの終端位置を記録する `batteryTextEndX` を追加しています。これにより、後でバッテリー情報の後ろにカスタムテキストを追加しやすくなります。
 
 **変更 2: バッテリー残量描画時に右端境界を計算する**
 
@@ -511,7 +511,7 @@ if (chargePercent != 101) {
 
 `src/graphics/SharedUIDisplay.cpp:204`
 
-このコードはバッテリー残量描画ロジックの内部にあります。バッテリーレベルを通常どおり表示するだけでなく、テキスト領域の右端境界も計算し、その後にカスタムラベルを配置できるようにしています。
+このコードは、バッテリー残量を描画するロジックの中にあります。バッテリーレベルを通常どおり表示するだけでなく、テキスト領域の右端境界も計算し、バッテリー情報の後ろにカスタムラベルを配置できるようにしています。
 
 **変更 3: 右側のアイコン領域用に境界を確保する**
 
@@ -526,7 +526,7 @@ int headerLabelRight = timeX - 4;
 
 `src/graphics/SharedUIDisplay.cpp:263`
 
-この部分は、右側の時刻、メール、ミュートなどのアイコンが使用する領域を処理します。ここでは `headerLabelRight` を追加し、中央テキストの最大右端境界を制限して、右側コンテンツとの重なりを防いでいます。
+この部分は、右側の時刻、メール、ミュートなどのアイコンが使用する領域を処理します。中央テキストの最大右端境界を制限し、右側のコンテンツと重ならないようにするために `headerLabelRight` を追加しました。
 
 **変更 4: タイトルが空のときにカスタムラベルを描画する**
 
@@ -549,7 +549,7 @@ if (titleStr && titleStr[0] == '\0') {
 
 `src/graphics/SharedUIDisplay.cpp:350`
 
-ここが変更の中核となるロジックです。`SEEED_WIO_TRACKER_L1` のみに適用され、E-Ink バリアントは明示的に除外しています。バッテリー情報と時刻表示の間の空白に、`made by AE` というテキストを中央揃えで表示します。
+これは変更の中核となるロジックです。`SEEED_WIO_TRACKER_L1` にのみ適用され、E-Ink バリアントは明示的に除外しています。バッテリー情報と時刻表示の間の空白に、`made by AE` というテキストを中央揃えで表示します。
 
 **変更 5: 時刻が表示されない分岐を処理する**
 
@@ -561,7 +561,7 @@ int headerLabelRight = screenW - xOffset - 2;
 
 `src/graphics/SharedUIDisplay.cpp:377`
 
-ここは時刻値が表示されない場合に使われる分岐です。同じ境界制御をここにも追加する必要があります。
+これは時刻値が表示されない場合に使われる分岐です。ここにも同じ境界制御を追加する必要があります。
 
 ```cpp
 #if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
@@ -581,7 +581,7 @@ int headerLabelRight = screenW - xOffset - 2;
 
 `src/graphics/SharedUIDisplay.cpp:426`
 
-これは、時刻なし分岐で `made by AE` を描画する実装です。
+これは、時刻がない分岐で `made by AE` を描画する実装です。
 
 完全なコードはこちらで確認できます：
 
@@ -589,7 +589,7 @@ int headerLabelRight = screenW - xOffset - 2;
 
 **ステップ 3: 自分のファームウェアをビルドする**
 
-変更が終わったら、プロジェクトルートに戻り、同じターゲットを再度ビルドします：
+変更が完了したら、プロジェクトルートに戻り、同じターゲットを再度ビルドします：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -659,11 +659,11 @@ firmware-seeed_wio_tracker_L1-*.uf2
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image20.png)
 
-これで、Meshtastic ソースコードの実践演習は完了です。環境構築、リポジトリのクローン、ボード設定の調査、ファームウェアのコンパイル、表示ロジックの変更、最終的な書き込み検証まで、一連のワークフローを一通り体験しました。
+この時点で、Meshtastic ソースコードの実践演習は完了です。環境構築、リポジトリのクローン、ボード設定の調査、ファームウェアのコンパイル、表示ロジックの変更、最終的な書き込み検証まで、一連のワークフローを一通り体験しました。
 
 さらに先に進みたい場合は、次のような方向性を引き続き探求できます：
 
-1. ホーム画面上の要素をさらに変更する
+1. ホーム画面上のより多くの要素を変更する
 2. ボタン、GPS、Bluetooth などのモジュールの動作を調整する
 3. 自分のボード用に独立した `variant` を追加する
 4. `src/`、`variants/`、`boards/` 間の関係を引き続きトレースする
@@ -673,18 +673,18 @@ firmware-seeed_wio_tracker_L1-*.uf2
 **`git` コマンドが使用できない**
 
 - Windows の場合、まず Git が `PATH` に追加されているか確認します。
-- macOS の場合、まず `git --version` を実行します。システムから Command Line Tools のインストールを求められたら、指示に従ってください。
+- macOS の場合、まず `git --version` を実行します。Command Line Tools のインストールを求められたら、指示に従ってインストールします。
 
 **`python3` または `pip3` が使用できない**
 
-- Windows の場合、Python が `PATH` に追加されているか確認するか、ターミナルを開き直して再試行します。
+- Windows の場合、Python が `PATH` に追加されていることを確認するか、ターミナルを開き直して再試行します。
 - macOS の場合、まず `python3` / `pip3` が既に存在するか確認し、必要な場合にのみ Homebrew で Python をインストールします。
 
 **`pio` コマンドが使用できない**
 
 - まず `pio --version` を実行します。
 - それでもコマンドが使用できない場合は、VS Code とターミナルを再起動してから再試行します。
-- 必要であれば、PlatformIO 拡張機能を再インストールし、PlatformIO Core が正しく初期化されていることを確認します。
+- 必要に応じて、PlatformIO 拡張機能を再インストールし、PlatformIO Core が正しく初期化されていることを確認します。
 
 **`git submodule update --init` の後もコードが不完全に見える**
 
@@ -705,3 +705,18 @@ pio pkg install -e seeed_wio_tracker_L1
 ```
 
 その後、もう一度ビルドを実行します。
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

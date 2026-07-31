@@ -24,11 +24,11 @@ import TabItem from '@theme/TabItem';
 
 ## Meshtastic ネットワークモニターの概要
 
-Meshtastic Node Map は、Meshtastic デバイスの位置を地図上に可視化するオンラインインターフェースです。メッシュネットワーク内のデバイスのリアルタイムな位置を監視でき、ネットワークのカバレッジや接続状況を把握するのに役立ちます。
+Meshtastic Node Map は、Meshtastic デバイスの位置を地図上に可視化するオンラインインターフェースです。これにより、メッシュネットワーク内のデバイスのリアルタイムな位置を監視でき、ネットワークのカバレッジや接続状況を把握するのに役立ちます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" style={{width:900, height:'auto'}}/></div>
 
-Meshtastic デバイスは、MQTT を介して定期的に Meshtastic サーバーへ位置情報を報告します。Node Map はこれらのレポートを取得し、各ノードの位置、経路、電波到達範囲を表示します。デバイスは次の方法で位置情報を報告できます：
+Meshtastic デバイスは、MQTT を介して定期的に Meshtastic サーバーへ自分の位置情報を報告します。Node Map はこれらのレポートを取得し、各ノードの位置、経路、電波到達範囲を表示します。デバイスは次の方法で位置情報を報告できます：
 
 - **MapReport による直接報告:** デバイスが位置情報をサーバーへ直接送信します。
 - **他のノード経由の間接報告:** 近隣ノードを経由して位置情報が中継されます。
@@ -39,14 +39,14 @@ Meshtastic Node Map は次のような用途に最適です：
 
 - ハイキング、サイクリング、遠征などのアウトドアアクティビティ。
 - 分散配置された IoT デバイスの遠隔監視。
-- セルラーネットワークに依存せずに資産やチームメンバーを追跡。
+- 携帯電話ネットワークに依存せずに資産やチームメンバーを追跡する用途。
 
 ### 一般的な Meshtastic Node Map
 
 | Node Map | 特徴 | 最適なユーザー | 備考 |
 |----------|----------|-----------|-------|
 | [MeshMap](https://meshmap.net/) | リアルタイムノード追跡、メッシュ経路表示、電波到達範囲表示 | 一般ユーザー、初心者 | シンプルなインターフェース、デフォルトの Meshtastic サーバーを使用 |
-| [Liam Cottle's Meshtastic Map](https://meshtastic.liamcottle.net/) | リアルタイム追跡、履歴経路表示、電波到達範囲表示 | 上級ユーザー、データ分析 | カスタム MQTT サーバーを使用 |
+| [Liam Cottle's Meshtastic Map](https://meshtastic.liamcottle.net/) | リアルタイム追跡、履歴経路表示、電波到達範囲表示 | 上級ユーザー、データ解析 | カスタム MQTT サーバーを使用 |
 
 ## MeshMap を使い始める
 
@@ -67,7 +67,7 @@ Web ブラウザで **MeshMap** を開きます: [MeshMap Link](https://meshmap.
 
 地図上にすべてのノードが表示されます。**via MapReport** として報告されるノードは、デバイスからの直接更新です。**via other nodes** として報告されるノードは、中継された更新です。
 
-任意のノードをクリックすると、詳細情報（デバイス ID、バッテリーレベルなど）、メッシュ経路、電波カバレッジを確認できます。
+任意のノードをクリックすると、詳細情報（デバイス ID、バッテリーレベルなど）、メッシュ経路、電波カバレッジを表示できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1_MQTT_MAP.png" style={{width:900, height:'auto'}}/></div>
 
@@ -96,6 +96,21 @@ Web ブラウザで **MeshMap** を開きます: [MeshMap Link](https://meshmap.
 
 Web ブラウザで **Liam Cottle's Meshtastic Map** を開きます: [Liam Cottle's Map Link](https://meshtastic.liamcottle.net/)。地図上にすべてのノードが表示されます。
 
-任意のノードをクリックすると、デバイスの詳細情報、電波到達範囲、履歴経路および過去の位置更新を確認できます。
+任意のノードをクリックすると、デバイスに関する詳細情報、電波到達範囲、履歴経路、過去の位置更新を表示できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1Liam.png" style={{width:600, height:'auto'}}/></div>
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

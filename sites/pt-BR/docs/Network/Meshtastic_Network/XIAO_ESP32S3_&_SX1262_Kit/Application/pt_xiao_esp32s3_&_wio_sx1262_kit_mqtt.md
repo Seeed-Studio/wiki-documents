@@ -1,5 +1,5 @@
 ---
-description: Tutorial de configuração de Gateway MQTT Meshtastic baseado no Kit XIAO ESP32S3 & Wio-SX1262. Permite mensagens globais, fornece backup quando o sinal da malha está fraco e garante entrega mais rápida de mensagens via internet.
+description: Tutorial de configuração de gateway MQTT Meshtastic baseado no XIAO ESP32S3 & Wio-SX1262 Kit. Permite mensagens globais, fornece um backup quando os sinais da malha estão fracos e garante entrega mais rápida de mensagens via internet.
 title: Configurando um Gateway MQTT
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
@@ -24,7 +24,7 @@ Integrar MQTT com Meshtastic estende a comunicação off-grid ao fazer a ponte e
 
 ## Preparação de hardware
 
-Configurar um Gateway Meshtastic requer um dispositivo que possa rodar tanto LoRa quanto Wifi. Além disso, se você quiser compartilhar a localização do seu gateway via mqtt, pode adicionar um módulo GPS.
+Configurar um Gateway Meshtastic requer um dispositivo que possa executar tanto LoRa quanto Wi-Fi. Além disso, se você quiser compartilhar a localização do seu gateway via mqtt, pode adicionar um módulo GPS.
 
 <table align="center">
 <tbody><tr>
@@ -38,12 +38,12 @@ Configurar um Gateway Meshtastic requer um dispositivo que possa rodar tanto LoR
 <tr>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Compre agora🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank" rel="noopener noreferrer">
-<strong><span><font color={'FFFFFF'} size={"4"}> Saiba mais🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 </tr>
@@ -55,7 +55,7 @@ Configurar um Gateway Meshtastic requer um dispositivo que possa rodar tanto LoR
 
 O XIAO ESP32S3 possui um chip de gerenciamento de energia integrado que permite que o XIAO ESP32S3 seja alimentado de forma independente usando uma bateria ou que carregue a bateria pela porta USB do XIAO ESP32S3.
 
-Se você quiser conectar a bateria ao XIAO, recomendamos que compre uma bateria recarregável `3.7V lithium` qualificada com `protection circuit`. Ao soldar a bateria, tenha cuidado para distinguir entre os terminais positivo e negativo. O terminal negativo da fonte de alimentação deve ser o lado mais próximo da porta USB, e o terminal positivo da fonte de alimentação é o lado mais distante da porta USB.
+Se você quiser conectar a bateria ao XIAO, recomendamos que você compre uma bateria recarregável `3.7V lithium` qualificada com `protection circuit`. Ao soldar a bateria, tenha cuidado para distinguir entre os terminais positivo e negativo. O terminal negativo da fonte de alimentação deve ser o lado mais próximo da porta USB, e o terminal positivo da fonte de alimentação é o lado mais distante da porta USB.
 
 <div class="table-center">
 <iframe width="730" height="420" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -63,7 +63,7 @@ Se você quiser conectar a bateria ao XIAO, recomendamos que compre uma bateria 
 
 ### Conectado ao SX-1262
 
-O SX-1262 pode ser conectado ao Xiao ESP32-S3 via interface B2B. O SX-1262 usa SPI para se comunicar com o Xiao ESP32-S3.
+O SX-1262 pode ser conectado ao Xiao ESP32-S3 por meio da interface B2B. O SX-1262 usa SPI para se comunicar com o Xiao ESP32-S3.
 :::warning
 O SX-1262 compatível só pode ser comprado dentro do kit.
 :::
@@ -96,13 +96,13 @@ Verifique o ID do seu dispositivo no log da porta serial. Por exemplo, o log aba
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/DEviceIDD.png" style={{width:600, height:'auto'}}/></div>
 
-### Etapa 3: Conexão do app
+### Etapa 3: Conexão do aplicativo
 
-Abra o app Meshtastic para Android e conecte-se ao seu dispositivo via Bluetooth. O código PIN padrão é 123456
+Abra o aplicativo Meshtastic para Android e conecte-se ao seu dispositivo via Bluetooth. O código PIN padrão é 123456
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/ConnectionESP32S33.png" style={{width:600, height:'auto'}}/></div>
 
-### Etapa 4: Configurar o Gateway Mesh-mqtt do Xiao ESP32S3
+### Etapa 4: Configurar o gateway Mesh-mqtt do Xiao ESP32S3
 
 <Tabs>
 <TabItem value="pypi" label="Android">
@@ -110,7 +110,7 @@ Abra o app Meshtastic para Android e conecte-se ao seu dispositivo via Bluetooth
 **1. Configuração LoRa**
 - altere a região de UNSET para o seu país/região (por exemplo, EU868 para Europa, US para EUA, etc.).
 - Escolha `OK to MQTT`
-- Clique em Enviar
+- Clique em Send
 - O dispositivo reinicia e reconecta automaticamente. O dispositivo será reiniciado e reconectado automaticamente. Isso pode levar de 30 s a 2 min.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTLoRaConfiguration.jpg" style={{width:350, height:'auto'}}/></div>
@@ -121,7 +121,7 @@ Abra o app Meshtastic para Android e conecte-se ao seu dispositivo via Bluetooth
 - Escolha `MQTT Enabled`
 - Escolha `MQTT Client Proxy Enabled`
 - (Opcional) Se você quiser que outros usuários mqtt vejam você no mapa, selecione `Map Reporting` e `I agree`.
-- Clique em Enviar
+- Clique em Send
 - O dispositivo reinicia e reconecta automaticamente. O dispositivo será reiniciado e reconectado automaticamente. Isso pode levar de 30 s a 2 min.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTSetting.jpg" style={{width:350, height:'auto'}}/></div>
@@ -130,22 +130,22 @@ Abra o app Meshtastic para Android e conecte-se ao seu dispositivo via Bluetooth
 **3. Configuração do canal**
 
 - ative `Uplink enabled` e `Downlink enabled` para o seu canal primário
-- Clique em Enviar
+- Clique em Send
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UPLINKDOWNLINK.jpg" style={{width:350, height:'auto'}}/></div>
 
 
 **4. Configuração de rede**
 
-Após essa configuração, seu dispositivo não poderá mais se conectar ao seu app via Bluetooth. Mas ele poderá se conectar ao seu app via rede.
+Após essa configuração, seu dispositivo não poderá mais se conectar ao seu aplicativo via Bluetooth. Mas ele poderá se conectar ao seu aplicativo via rede.
 
-- Preencha o SSID (nome do Wifi) e a senha do Wifi. O wifi que você pretende usar deve ser 2.4G.
-- Clique em Enviar
+- Preencha o SSID (nome do Wi-Fi) e a senha do Wi-Fi. O Wi-Fi que você pretende usar deve ser 2.4G.
+- Clique em Send
 - O dispositivo reinicia automaticamente. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTNetwork.jpg" style={{width:350, height:'auto'}}/></div> 
 
-**5. Conexão do app**
+**5. Conexão do aplicativo**
 
 Agora seu dispositivo não pode ser conectado via Bluetooth. Mas você pode se conectar via rede.
 
@@ -158,7 +158,7 @@ Agora seu dispositivo não pode ser conectado via Bluetooth. Mas você pode se c
 **1. Configuração LoRa**
 - altere a região de UNSET para o seu país/região (por exemplo, EU868 para Europa, US para EUA, etc.).
 - Escolha `OK to MQTT`
-- Clique em Enviar
+- Clique em Send
 - O dispositivo reinicia e reconecta automaticamente. O dispositivo será reiniciado e reconectado automaticamente. Isso pode levar de 30 s a 2 min.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTLoRa.png" style={{width:350, height:'auto'}}/></div>
@@ -169,7 +169,7 @@ Agora seu dispositivo não pode ser conectado via Bluetooth. Mas você pode se c
 - Escolha `MQTT Enabled`
 - Escolha `MQTT Client Proxy Enabled`
 - (Opcional) Se você quiser que outros usuários mqtt vejam você no mapa, selecione `Map Reporting` e `I agree`.
-- Clique em Enviar
+- Clique em Send
 - O dispositivo reinicia e reconecta automaticamente. O dispositivo será reiniciado e reconectado automaticamente. Isso pode levar de 30 s a 2 min.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTSetting.png" style={{width:350, height:'auto'}}/></div>
@@ -178,22 +178,22 @@ Agora seu dispositivo não pode ser conectado via Bluetooth. Mas você pode se c
 **3. Configuração do canal**
 
 - ative `Uplink enabled` e `Downlink enabled` para o seu canal primário
-- Clique em Enviar
+- Clique em Send
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTChanel.png" style={{width:350, height:'auto'}}/></div>
 
 
 **4. Configuração de rede**
 
-Após essa configuração, seu dispositivo não poderá mais se conectar ao seu app via Bluetooth. Mas ele poderá se conectar ao seu app via rede.
+Após essa configuração, seu dispositivo não poderá mais se conectar ao seu aplicativo via Bluetooth. Mas ele poderá se conectar ao seu aplicativo via rede.
 
-- Preencha o SSID (nome do Wifi) e a senha do Wifi. O wifi que você pretende usar deve ser 2.4G.
-- Clique em Enviar
+- Preencha o SSID (nome do Wi-Fi) e a senha do Wi-Fi. O Wi-Fi que você pretende usar deve ser 2.4G.
+- Clique em Send
 - O dispositivo reinicia automaticamente. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMTTNestwork.png" style={{width:350, height:'auto'}}/></div> 
 
-**5. Conexão do app**
+**5. Conexão do aplicativo**
 
 Agora seu dispositivo não pode ser conectado via Bluetooth. Mas você pode se conectar via rede.
 
@@ -210,3 +210,17 @@ Agora você pode se comunicar com outras pessoas pela internet.
 
 Se você tiver outro dispositivo Meshtastic que esteja na mesma faixa de frequência que o Gateway MQTT ESP32S3, ele também poderá transmitir mensagens via ESP32S3 com outras pessoas na internet.
 
+## Suporte Técnico e Discussão de Produtos
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

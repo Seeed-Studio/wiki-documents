@@ -1,8 +1,8 @@
 ---
-description: SenseCAP MeshTracker X1 para Meshtastic Introdução. Este wiki apresentará os recursos, especificações, visão geral de hardware, botão, LED e lista de pinos.
+description: Introdução ao SenseCAP MeshTracker X1 para Meshtastic. Este wiki apresentará os recursos, especificações, visão geral do hardware, botão, LED e lista de pinos.
 title: Introdução ao SenseCAP MeshTracker X1
 keywords:
-  - Rastreador
+  - Tracker
   - Meshtastic
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png
 sku: 100087698
@@ -108,7 +108,7 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
 |Item|Parâmetro|
 | :- | :- |
 |**Capacidade da bateria**|Bateria de lítio recarregável, 1100mAh|
-|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente em uplink|
+|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente|
 |**Protocolo de carregamento**|USB Type-C|
 |**Entrada de energia do dispositivo**|5V, 0,55A|
 |**Entrada de energia da bateria**|4,4V, 0,22A|
@@ -307,7 +307,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
 |Ação do botão|Descrição|Buzzer|
 |- |- |- |
 |Pressionar uma vez|Ligar|Melodia ascendente|
-|Pressionar duas vezes|Atualizar informações de nó/localização|-|
+|Pressionar duas vezes|Atualizar informações do nó/localização|-|
 |Pressionar três vezes|Ligar/desligar o GPS|-|
 |Quatro cliques|Silenciar/reativar temporariamente|-|
 |Pressionar e segurar por 5s|Desligar|Melodia descendente|
@@ -357,3 +357,18 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
 ### Recurso
 
 [Relatório de Teste da Bateria](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+
+## Suporte Técnico e Discussão sobre o Produto
+
+<p style={{textAlign: 'center'}}><a href="https://www.facebook.com/groups/1755190828846458" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Banner_QRCode_FB.jpg" border="0" /></a></p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>
