@@ -344,13 +344,13 @@ The reference default is a cosine threshold of `0.45`, chosen for its bundled 12
 
 The inference service is a plain HTTP service, so any machine on the LAN that can run your model will do. These are the ready-to-deploy systems, cheapest first.
 
-|reComputer RK3576-30|reComputer RK3588-30|reComputer AI Industrial R2135-12|reComputer Robotics J4012|
-|------------------|--------------------------|-----------------------|-----------------------|
-|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-rk3576.jpg" alt="reComputer RK3576-30" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image-_r235.jpeg" alt="reComputer AI Industrial R2135-12" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics J4012" width={300} height="auto" />|
-|Rockchip RK3576<br/>6 TOPS NPU · 8GB LPDDR5<br/>2x GbE — entry point|Rockchip RK3588<br/>6 TOPS NPU · 8GB LPDDR5<br/>2x 2.5GbE, faster cores|Raspberry Pi CM5 + Hailo-8<br/>26 TOPS · 8GB · 32GB eMMC<br/>IP40, -20 to 65 °C, DIN rail|NVIDIA Jetson Orin NX<br/>Up to 100 TOPS · 16GB LPDDR5<br/>Largest models, multi-site|
-|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)</p>|
+|reComputer RK3576-30|reComputer RK3588-30|reComputer AI Industrial R2135-12|
+|------------------|--------------------------|-----------------------|
+|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-rk3576.jpg" alt="reComputer RK3576-30" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image-_r235.jpeg" alt="reComputer AI Industrial R2135-12" width={300} height="auto" />|
+|Rockchip RK3576<br/>6 TOPS NPU · 8GB LPDDR5<br/>2x GbE — entry point|Rockchip RK3588<br/>6 TOPS NPU · 8GB LPDDR5<br/>2x 2.5GbE, faster cores|Raspberry Pi CM5 + Hailo-8<br/>26 TOPS · 8GB · 32GB eMMC<br/>IP40, -20 to 65 °C, DIN rail|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html)</p>|
 
-Face recognition is a light workload, so the entry boxes are genuinely enough for a single site — both Rockchip models carry the same 6 TOPS NPU, and the RK3588 buys you faster cores and 2.5GbE rather than more inference throughput. Step up to the R2135 for a dedicated Hailo accelerator in a DIN-rail industrial enclosure, and to the Jetson when you want a larger model or several sites served from one machine.
+Face recognition is a light workload, so the entry boxes are genuinely enough for a single site — both Rockchip models carry the same 6 TOPS NPU, and the RK3588 buys you faster cores and 2.5GbE rather than more inference throughput. Step up to the R2135 for a dedicated Hailo accelerator in a DIN-rail industrial enclosure.
 
 :::note Watch the product names when you order
 In this family, a name containing **AI Industrial** is actively cooled, and the plain **Industrial** line is fanless. They differ by one word and are otherwise near-identical. The box in the table above has a fan; if the deployment needs passive cooling, order [reComputer Industrial R2135-12](https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html) instead, which ships the same Hailo-8 with a fanless enclosure.
@@ -360,13 +360,17 @@ In this family, a name containing **AI Industrial** is actively cooled, and the 
 
 The boxes above cover face recognition. By default the *voice* half — speech recognition, the language model that picks the tool, speech synthesis — runs in the cloud. For customers whose answer to "does audio leave our network?" must be no, we also supply that whole pipeline to run on site, on a larger box that hosts it alongside the face model. Memory capacity, not TOPS, is what decides the sizing.
 
-|reComputer Mini J5012 with GMSL|NVIDIA Jetson AGX Thor Developer Kit|
-|------------------|--------------------------|
-|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/0/-/0-100020407-recomputer-mini-j5011-with-gmsl-64g_1.jpg" alt="reComputer Mini J5012 with GMSL" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image-kit-3.png" alt="NVIDIA Jetson AGX Thor Developer Kit" width={300} height="auto" />|
-|Jetson AGX Orin 64GB<br/>64GB LPDDR5 · 64GB eMMC<br/>19-48V input, 10GbE, GMSL and CAN|Jetson AGX Thor, Blackwell GPU<br/>128GB LPDDR5X at 273GB/s<br/>Headroom for a larger model and longer context|
-|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Mini-J5012-with-GMSL-Extension-p-6878.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html)</p>|
+|reComputer Robotics J4012|reComputer Mini J5012 with GMSL|NVIDIA Jetson AGX Thor Developer Kit|
+|------------------|--------------------------|-----------------------|
+|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics J4012" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/0/-/0-100020407-recomputer-mini-j5011-with-gmsl-64g_1.jpg" alt="reComputer Mini J5012 with GMSL" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image-kit-3.png" alt="NVIDIA Jetson AGX Thor Developer Kit" width={300} height="auto" />|
+|Jetson Orin NX 16GB<br/>Up to 100 TOPS · 16GB LPDDR5<br/>**One conversation at a time**|Jetson AGX Orin 64GB<br/>64GB LPDDR5 · 64GB eMMC<br/>19-48V input, 10GbE, GMSL and CAN|Jetson AGX Thor, Blackwell GPU<br/>128GB LPDDR5X at 273GB/s<br/>Largest model, longest context|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/reComputer-Mini-J5012-with-GMSL-Extension-p-6878.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html)</p>|
 
-Take the Mini J5012 when the box has to run off vehicle or plant power and talk to industrial buses, and Thor when you want the largest model one machine can serve. Either way this is a combined hardware and software offering — [talk to us](mailto:solution@seeed.cc) about the on-site build rather than assembling it yourself.
+:::caution The J4012 runs the stack, but only one session at a time
+16 GB holds the whole pipeline, so a single Watcher works well. It does not serve concurrent conversations — a second operator talking to a second device at the same moment is what it cannot do. Size for the number of devices that will be in use simultaneously, not the number installed.
+:::
+
+Take the J4012 for a single-station site, the Mini J5012 when the box also has to run off vehicle or plant power and talk to industrial buses, and Thor when you want concurrency and the largest model one machine can serve. Either way this is a combined hardware and software offering — [talk to us](mailto:solution@seeed.cc) about the on-site build rather than assembling it yourself.
 
 ## Part 3 — What You Implement
 
