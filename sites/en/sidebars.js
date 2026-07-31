@@ -4257,7 +4257,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'CUDA 13 & Edge AI',
+              label: 'AI Deployment & Applications',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Deploy_TensorRT_Edge-LLM_on_Jetpack7.2',
                 'Edge/NVIDIA_Jetson/JetPack_7_2/AI_Inference/industrial_vision_monitoring_on_industrial_bk',

@@ -127,7 +127,7 @@ JetPack 7.2 expands the Jetson developer workflow beyond manual setup by making 
 | --- | --- |
 | [Build and Flash a Yocto Image for reComputer Super](/build_and_flash_yocto_for_recomputer_super_bk/) | Reproducible OpenEmbedded/Yocto image construction for a production-oriented Jetson Linux deployment. |
 
-## CUDA 13, TensorRT, and Edge AI
+## AI Deployment & Applications
 
 | Resource | Coverage |
 | --- | --- |
