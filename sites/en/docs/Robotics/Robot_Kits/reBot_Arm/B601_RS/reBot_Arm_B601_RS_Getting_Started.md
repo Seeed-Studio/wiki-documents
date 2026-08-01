@@ -197,7 +197,7 @@ pip install motorbridge
 
 Get the PCAN-USB device working on the CAN bus at 1Mbps for robotic arm communication.
 
-Ubuntu:
+#### Ubuntu:
 
 ```bash
 # The kit includes PCAN-USB, which should normally show up as can0 or can1
@@ -210,7 +210,7 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 ```
 
-or macOS:
+#### macOS:
 
 If libPCBUSB.dylib cannot be loaded, install PCBUSB first:
 ```zsh
@@ -242,11 +242,11 @@ motorbridge-cli --help
 python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
 ```
 
-or Windows:
+#### Windows:
 
 Please visit [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) to install the PCAN-USB driver.
 
-or Jetson:
+#### Jetson:
   [peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
 
 - Remove brltty
