@@ -196,7 +196,7 @@ pip install motorbridge
 
 让 PCAN-USB 设备以 1Mbps 速率工作在 CAN 总线上，供机械臂通信使用
 
-Ubuntu\Jetson\树莓派：
+#### Ubuntu\Jetson\树莓派：
 
 ```bash
 #套件里是 PCAN-USB，通常应该直接出现 can0 或 can1
@@ -209,7 +209,7 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 ```
 
-如果是 macOS:
+#### 如果是 macOS:
 
 libPCBUSB.dylib 无法加载，请先安装 PCBUSB
 
@@ -243,20 +243,20 @@ python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK
 ```
 
 
-如果是 Windows：
+#### 如果是 Windows：
 
 请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
 
 如果是 Jetson（Jetpack 6.x）:
 下载文件：[peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
 
-### 移除 brltty
+- 移除 brltty
 在 Jetson 设备上，brltty 可能占用 leader（主机）所使用的 USB 串口，请先卸载：
 ```bash
 sudo apt remove -y brltty
 ```
 
-### 安装依赖
+-  安装依赖
 ```bash
 sudo apt update
 sudo apt install -y \
@@ -274,7 +274,7 @@ sudo apt install -y \
 ls -l /lib/modules/$(uname -r)/build
 ```
 
-### 编译 PEAK SocketCAN 驱动
+-  编译 PEAK SocketCAN 驱动
 下载并解压 PEAK Linux Driver 9.2.0，进入源码目录：
 ```bash
 tar -xvf peak-linux-driver-9.2.0.tar.gz
@@ -291,7 +291,7 @@ make netdev
 netdev 模式会将 PCAN-USB 注册为 Linux SocketCAN 网络接口。
 **不要直接执行 `make`**。直接执行 `make` 会编译 chardev 模式；而 LeRobot 和 motorbridge-cli 需要使用 SocketCAN 接口。
 
-### 安装并加载驱动
+- 安装并加载驱动
 安装驱动：
 ```bash
 sudo make install
@@ -316,7 +316,7 @@ can1             DOWN           <NOARP,ECHO>
 .....
 ```
 
-### 查询机械臂对应的 PCAN 接口编号
+- 查询机械臂对应的 PCAN 接口编号
 ```bash
 for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
 ```
@@ -325,7 +325,7 @@ for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver"
 can2
 ```
 
-### 永久配置 `pcan_refresh` 命令
+- 永久配置 `pcan_refresh` 命令
 Linux 环境变量重启后会失效，且 PCAN 接口编号可能发生变动。更稳妥的方案是永久定义一个刷新函数，每次打开终端后执行。
 
 将以下函数追加写入 `~/.bashrc`：
