@@ -209,7 +209,7 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 ```
 
-or macOS:
+如果是 macOS:
 
 libPCBUSB.dylib 无法加载，请先安装 PCBUSB
 
@@ -243,9 +243,116 @@ python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK
 ```
 
 
-or Windows：
+如果是 Windows：
 
 请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
+
+如果是 Jetson（Jetpack 6.x）:
+下载文件：[peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
+
+### 移除 brltty
+在 Jetson 设备上，brltty 可能占用 leader（主机）所使用的 USB 串口，请先卸载：
+```bash
+sudo apt remove -y brltty
+```
+
+### 安装依赖
+```bash
+sudo apt update
+sudo apt install -y \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    libpopt-dev \
+    can-utils \
+    ethtool \
+    nvidia-l4t-kernel-headers
+```
+确认当前内核头文件目录存在：
+```bash
+ls -l /lib/modules/$(uname -r)/build
+```
+
+### 编译 PEAK SocketCAN 驱动
+下载并解压 PEAK Linux Driver 9.2.0，进入源码目录：
+```bash
+tar -xvf peak-linux-driver-9.2.0.tar.gz
+cd ~/peak-linux-driver-9.2.0
+```
+清理旧编译产物：
+```bash
+make clean
+```
+使用 netdev 模式编译：
+```bash
+make netdev
+```
+netdev 模式会将 PCAN-USB 注册为 Linux SocketCAN 网络接口。
+**不要直接执行 `make`**。直接执行 `make` 会编译 chardev 模式；而 LeRobot 和 motorbridge-cli 需要使用 SocketCAN 接口。
+
+### 安装并加载驱动
+安装驱动：
+```bash
+sudo make install
+sudo depmod -a
+```
+加载 pcan 内核模块：
+```bash
+sudo modprobe pcan
+```
+设置开机自动加载模块：
+```bash
+echo pcan | sudo tee /etc/modules-load.d/pcan.conf
+```
+验证驱动已正常加载：
+```bash
+ip -br link | grep can
+```
+正常输出示例：
+```
+can0             DOWN           <NOARP,ECHO>
+can1             DOWN           <NOARP,ECHO>
+.....
+```
+
+### 查询机械臂对应的 PCAN 接口编号
+```bash
+for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
+```
+命令列出的接口即为 PEAK PCAN-USB 设备，示例：
+```
+can2
+```
+
+### 永久配置 `pcan_refresh` 命令
+Linux 环境变量重启后会失效，且 PCAN 接口编号可能发生变动。更稳妥的方案是永久定义一个刷新函数，每次打开终端后执行。
+
+将以下函数追加写入 `~/.bashrc`：
+```bash
+grep -q '^pcan_refresh()' ~/.bashrc || cat >> ~/.bashrc <<'EOF'
+
+pcan_refresh() {
+    local iface
+    iface=$(sudo setup-pcan-if) || return 1
+    export PCAN_IF="$iface"
+    echo "PCAN_IF=$PCAN_IF"
+}
+EOF
+```
+```bash
+source ~/.bashrc
+```
+每次重启设备、重新插拔 PCAN-USB 后执行：
+```bash
+pcan_refresh
+```
+执行成功输出：
+```
+PCAN_IF=can1
+```
+后续所有命令请使用 `$PCAN_IF`，不要硬编码 `can1`、`can2` 这类固定编号。
+
 
 :::tip 注意！！！
 安装驱动后，如果设备管理器中没有识别到 **PCAN-USB** 设备，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
