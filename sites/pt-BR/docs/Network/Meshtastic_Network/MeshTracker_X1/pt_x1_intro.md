@@ -1,5 +1,5 @@
 ---
-description: Introdução ao SenseCAP MeshTracker X1 para Meshtastic. Este wiki apresentará os recursos, especificações, visão geral de hardware, botão, LED e lista de pinos.
+description: SenseCAP MeshTracker X1 para Meshtastic Introdução. Este wiki apresentará os recursos, especificações, visão geral de hardware, botão, LED e lista de pinos.
 title: Introdução ao SenseCAP MeshTracker X1
 keywords:
   - Tracker
@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla. Desenvolvido para comunicação confiável fora da rede celular, o MeshTracker X1 é um rastreador GPS [Meshtastic®](https://meshtastic.org/) com classificação IP66 que suporta frequências de 863–928 MHz. Alimentado pelo mais recente chip LoRa Semtech LR2021, ele oferece conectividade USB-C, até 5 dias de duração de bateria e um design compacto, pronto para uso ao ar livre.
+O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla. Desenvolvido para comunicação confiável fora da rede celular, o MeshTracker X1 é um rastreador GPS [Meshtastic®](https://meshtastic.org/) com classificação IP66 que suporta frequências de 863–928 MHz. Alimentado pelo mais recente chip LoRa Semtech LR2021, ele possui conectividade USB-C, até 5 dias de duração de bateria e um design compacto, pronto para uso ao ar livre.
 
 ### Recursos
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -38,7 +38,7 @@ O SenseCAP MeshTracker X1 é projetado para pessoas que precisam de comunicaçã
 
 - **Rastreamento GPS de banda dupla ultrapréciso** 
 
-Alimentado por GNSS de banda dupla L1+L5 e um barômetro integrado, o MeshTracker X1 oferece posicionamento mais confiável e melhor percepção de altitude do que o GPS de banda única. Ele também é o primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla.
+Alimentado por GNSS de banda dupla L1+L5 e um barômetro integrado, o MeshTracker X1 oferece posicionamento mais confiável e percepção de altitude superior em comparação com GPS de banda única. Ele também é o primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -54,7 +54,7 @@ Testado em 915 MHz, o MeshTracker X1 permite comunicação confiável em distân
 
 - **Design do tamanho de um cartão, fácil de carregar** 
 
-Fino e leve, o MeshTracker X1 é projetado para uso diário durante aventuras ao ar livre. Use-o em um cordão, prenda-o a uma mochila, fixe-o em uma bolsa de bicicleta ou simplesmente coloque-o no bolso para uma conectividade fora da rede sem esforço.
+Fino e leve, o MeshTracker X1 é projetado para ser carregado no dia a dia durante aventuras ao ar livre. Use-o em um cordão, prenda-o a uma mochila, fixe-o em uma bolsa de bicicleta ou simplesmente coloque-o no bolso para uma conectividade fora da rede sem esforço.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -105,26 +105,26 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
 
 **Bateria**
 
-|Item|Parâmetro|s
+|Item|Parâmetro|
 | :- | :- |
-|**Capacidade da bateria**|Bateria recarregável LCO, 1100mAh|
-|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente|
+|**Capacidade da bateria**|Bateria recarregável de alta voltagem, 1100mAh|
+|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente em uplink|
 |**Protocolo de carregamento**|USB Type-C|
 |**Entrada de energia do dispositivo**|5V, 0,55A|
 |**Entrada de energia da bateria**|4,4V, 0,22A|
 |**Tensão de corte totalmente carregada**|4,37V|
 |**Limite de temperatura de carregamento**|5 a +45℃|
 
-O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a serem lançados no futuro serão equipados com sensores adicionais (sensores de 3 eixos, magnetômetros de seis eixos etc.).
+O X1 pode ser desenvolvido em uma linha de produtos, na qual novos modelos a serem lançados no futuro serão equipados com sensores adicionais (sensores de 3 eixos, magnetômetros de seis eixos etc.).
 
 ### Lista de pinos
 
 <table>
   <tr>
-    <th>Component</th>
-    <th>Pin</th>
-    <th>Pin No.</th>
-    <th>Protocol</th>
+    <th>Componente</th>
+    <th>Pino</th>
+    <th>Nº do pino</th>
+    <th>Protocolo</th>
   </tr>
   <tr>
     <td rowspan="3">LED</td>
@@ -153,7 +153,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>GPIO</td>
   </tr>
   <tr>
-    <td rowspan="3">Motor Driver</td>
+    <td rowspan="3">Driver do motor</td>
     <td>EN</td>
     <td>P1.05</td>
     <td>GPIO</td>
@@ -168,7 +168,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="2">Air Pressure Sensor</td>
+    <td rowspan="2">Sensor de pressão do ar</td>
     <td>SCL</td>
     <td>P1.14</td>
     <td rowspan="2">IIC</td>
@@ -178,7 +178,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="3">6-axis Sensor (Future Version)</td>
+    <td rowspan="3">Sensor de 6 eixos (versão futura)</td>
     <td>INT</td>
     <td>P1.02</td>
     <td>GPIO</td>
@@ -193,7 +193,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="3">3-axis Sensor (Future Version)</td>
+    <td rowspan="3">Sensor de 3 eixos (versão futura)</td>
     <td>INT</td>
     <td>P1.12</td>
     <td>GPIO</td>
@@ -208,7 +208,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>P1.15</td>
   </tr>
   <tr>
-    <td>Button</td>
+    <td>Botão</td>
     <td>-</td>
     <td>P0.06</td>
     <td>GPIO</td>
@@ -276,7 +276,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>P1.13</td>
   </tr>
    <tr>
-    <td rowspan="6">8MB Flash</td>
+    <td rowspan="6">Flash de 8MB</td>
     <td>SPISCK</td>
     <td>P0.19</td>
     <td rowspan="6">SPI</td>
@@ -308,7 +308,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
 |Ação do botão|Descrição|Buzzer|
 |- |- |- |
 |Pressionar uma vez|Ligar|Melodia ascendente|
-|Pressionar duas vezes|Atualizar informações de nó/localização|-|
+|Pressionar duas vezes|Atualizar informações do nó/localização|-|
 |Pressionar três vezes|Ligar/desligar o GPS|-|
 |Quatro cliques|Silenciar/reativar temporariamente|-|
 |Pressionar e segurar por 5s|Desligar|Melodia descendente|
@@ -338,7 +338,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>Totalmente carregado</td>
   </tr>
   <tr>
-    <td>🔴vermelho</td>
+    <td>🔴Vermelho</td>
     <td>Piscando</td>
     <td>Baixa energia</td>
   </tr>
