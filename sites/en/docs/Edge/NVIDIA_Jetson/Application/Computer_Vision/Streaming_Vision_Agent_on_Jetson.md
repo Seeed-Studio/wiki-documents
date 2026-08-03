@@ -153,11 +153,15 @@ python script/orin_smoke.py --vlm qwen3vl-2b --seconds 20 \
 
 Short clips on Seeed files CDN showing rolling memory and Ask answers in the live UI.
 
+<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_01.mp4" controls width="800"></video>
+
 <video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_02.mp4" controls width="800"></video>
 
-<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_04.mp4" controls width="800"></video>
+<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_03.mp4" controls width="800"></video>
 
-<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_05.mp4" controls width="800"></video>
+:::note
+In some Ask turns (see the clips and evidence thumbnails above), the text answer may name one object while the retrieved evidence JPEG / clip shows a **different** object from an earlier moment in the rolling window. That is expected with a short dual-2B memory demo: retrieval can attach the nearest visual evidence rather than a perfect identity match. Prefer center-framed, one-object-at-a-time interactions for cleaner results.
+:::
 
 ## What You Should See
 
@@ -165,7 +169,7 @@ Short clips on Seeed files CDN showing rolling memory and Ask answers in the liv
 | --- | --- |
 | Steady desk view | Live frame + status pills; episodic / visual counters increase over time |
 | Place / remove an object (e.g. earphone case) in center view | Episodic event after confirmation; Ask can answer “what was just put down?” |
-| Ask “刚才放了什么？” | Answer cites timeline / facts; optional evidence JPEG or clip |
+| Ask “What was just put down?” | Answer cites timeline / facts; optional evidence JPEG or clip |
 
 Recognition uses center-biased triggers and FULL + CENTER crop panels to reduce distraction from hands / mouse at the image edge.
 
