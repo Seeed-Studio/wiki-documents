@@ -58,7 +58,7 @@ Lastly, the home page showcases the "Sharing Vision AI Models" feature, which en
 
 ### Sign up
 
-1. Enter your name and valid email,and then click **get capcha**
+1. Enter your name and valid email,and then click **get captcha**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img/1.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -90,7 +90,7 @@ The validity period of the verification code is 10min, please complete the reset
 
 ### Change password
 
-1. Visist user account page and click "Change your password" button.
+1. Visit user account page and click "Change your password" button.
 
 2. Enter the old password and new password to change password.
 
@@ -181,7 +181,7 @@ SenseCraft AI is a platform that supports content co-creation for developers and
 - Model Name
 - Model Excerpt: A simple description of the model
 - Model Introduction：detailed description of the model
-- Model Deployment Perparation：Pre-requisite for model deployment, not required
+- Model Deployment Preparation：Pre-requisite for model deployment, not required
 - Supported Device:Choose which device the model will be deployed on, currently the platform supports Jetson devices, XIAO ESP32-S3, etc.
 - Model Inference Example Image ：Upload an image of the model's inference results
 
@@ -196,7 +196,7 @@ SenseCraft AI is a platform that supports content co-creation for developers and
 | --- | --- |
 | Model Format | 1 The correct format for the model<br />2 Option:ONNX, Tensor RT, Pytorch<br />3 Platform will support more model formats |
 | Task | 1 The task type of the model<br />2 Option:Detection,Classification,Segment,Pose |
-| AI Framework | 1 The AI framework of the model<br />2 Option:YOLOV5,YOLOV8,FOMO,ModileNetV2,PFLD<br />3 Platform will support more AI framwork |
+| AI Framework | 1 The AI framework of the model<br />2 Option:YOLOV5,YOLOV8,FOMO,MobileNetV2,PFLD<br />3 Platform will support more AI framework |
 | Classes | 1 Classes or labels that the model categorizes for a specific task or problem<br />2 Please make sure the class id and class name matches correctly. |
 | Model File | Upload a model file in the format of your choice. |
 | Model Precision | 1 model precision<br />2 Option:Int8,Float16,Float32 |

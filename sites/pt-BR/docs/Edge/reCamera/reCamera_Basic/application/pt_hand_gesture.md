@@ -8,7 +8,7 @@ keywords:
   - Inferência em TPU
   - Quantização INT8
   - Transmissão UDP
-slug: /recamera_hand_gesture_bak
+slug: /recamera_hand_gesture
 sku: 102991897, 100029708, 108990120
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 18
@@ -17,7 +17,7 @@ last_update:
   author: Xuanjun Zhu
 createdAt: '2026-06-26'
 updatedAt: '2026-06-26'
-url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/recamera_hand_gesture_bak/
+url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/recamera_hand_gesture/
 ---
 
 # Portando o modelo de reconhecimento de gestos de mão do MediaPipe para a reCamera

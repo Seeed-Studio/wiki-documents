@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/es/wio_tracker_l1_node/
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora </font></span></strong>
     </a>
 </div>
-La Serie Wio Tracker L1 es un nodo [Meshtastic®](https://meshtastic.org/) de bajo consumo y alta extensibilidad que incorpora LoRa (862–930 MHz), el nRF52840 para un procesamiento eficiente y un módulo GPS L76K para un seguimiento de ubicación preciso. Diseñada para ofrecer flexibilidad, es compatible con pantallas OLED y E-Ink, así como con paneles solares y alimentación por batería, lo que la hace ideal para una amplia gama de aplicaciones IoT y fuera de la red.
+La Serie Wio Tracker L1 es un nodo Meshtastic® de bajo consumo y alta extensibilidad que incorpora LoRa (862–930 MHz), el nRF52840 para un procesamiento eficiente y un módulo GPS L76K para un seguimiento de ubicación preciso. Diseñada para ofrecer flexibilidad, es compatible con pantallas OLED y E-Ink, así como con paneles solares y alimentación por batería, lo que la hace ideal para una amplia gama de aplicaciones IoT y fuera de la red.
 
 ## Modelo de la Serie L1
 
@@ -37,7 +37,7 @@ La Serie Wio Tracker L1 está disponible en 4 versiones; elige la que mejor se a
 
 ### Comparación de Versiones
 
-|Nombre del producto|Wio Tracker L1 Lite|Wio Tracker L1|Wio Tracker L1 Pro|Wio Tracker L1 E-Ink|
+|Nombre del Producto|Wio Tracker L1 Lite|Wio Tracker L1|Wio Tracker L1 Pro|Wio Tracker L1 E-Ink|
 |------------------|------------------|--------------------------|-----------------------|-----------------------|
 |Imagen|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993653-wio-tracker-l1-lite.jpg" alt="pir" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993648-wio-tracker-l1.jpg" alt="pir" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993649-wio-tracker-l1-pro.jpg" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/L1-e-ink.png" alt="pir" width={300} height="auto" />|
 |Enlace de compra|<p style={{textAlign: 'center'}}>[Consigue uno ahora!](https://www.seeedstudio.com/Wio-Tracker-L1-Lite-p-6455.html)</p>|<p style={{textAlign: 'center'}}>[Consigue uno ahora!](https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html)</p>|<p style={{textAlign: 'center'}}>[Consigue uno ahora!](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html)</p>|<p style={{textAlign: 'center'}}>[Consigue uno ahora!](https://www.seeedstudio.com/Wio-Tracker-L1-E-ink-p-6456.html)</p>|
@@ -47,33 +47,33 @@ La Serie Wio Tracker L1 está disponible en 4 versiones; elige la que mejor se a
 |Conector Solar+Batería|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>Batería integrada de 2000mAh</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |Carcasa|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>-</p>|
 
-## Descripción general
+## Descripción General
 
 ### Características
 
 - **Viene pregrabado con firmware Meshtastic**
 Listo para usar nada más sacarlo de la caja con firmware Meshtastic preinstalado para una configuración sin complicaciones.
 
-- **Tres opciones de alimentación**
+- **Tres Opciones de Alimentación**
 Admite carga rápida Type-C, entrada solar y alimentación mediante batería de ion-litio para un despliegue flexible en diversos entornos; ideal para aplicaciones al aire libre y móviles.
 
-- **Compatibilidad flexible de pantalla**
+- **Compatibilidad Flexible de Pantalla**
 Pantallas opcionales OLED de 1,3 pulgadas y E-Ink de 2,13 pulgadas, que ofrecen opciones de visualización versátiles para diferentes necesidades de consumo de energía y retroalimentación visual.
 
-- **Alta capacidad de expansión**
+- **Alta Expansibilidad**
 Totalmente compatible con el ecosistema Grove e incluye cabeceras PTH e interfaz de depuración SWD para expansión de hardware personalizada y desarrollo avanzado.
 
 ### Especificación
 
 :::tip
-Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador de batería, que convierte la interfaz de 1 mm en una interfaz de 2 mm. Esto te ofrece más opciones de baterías.
+Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador de batería, que convierte la interfaz de 1mm en una interfaz de 2mm. Esto te ofrece más opciones para baterías.
 :::
 
 <table>
   <tr>
     <th colspan="1">Procesador</th>
     <th colspan="1">
-      Nordic nRF52840<br />ARM® Cortex®-M4 con FPU hasta 64 MHz
+      Nordic nRF52840<br />ARM® Cortex®-M4 con FPU funciona hasta 64 MHz
     </th>
   </tr>
   <tr>
@@ -102,17 +102,17 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">Plated Through Hole（PTH）: UART/IIC/GPIO/Analógico</td>
   </tr>
   <tr>
-    <td colspan="1">Pads de soldadura reservados para SWD</td>
+    <td colspan="1">Almohadillas de soldadura reservadas para SWD</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">Entrada de alimentación</td>
+    <td colspan="1" rowspan="3">Entrada de Alimentación</td>
     <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Panel solar (2P-2.0mm): 5V — 1A</td>
+    <td colspan="1">Panel Solar (2P-2.0mm): 5V — 1A (no exceder 5V)</td>
   </tr>
   <tr>
-    <td colspan="1">Batería de litio (2P-1.25mm): 3.7V — 1A</td>
+    <td colspan="1">Batería de Litio (2P-1.25mm): 3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">[Pantalla OLED](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
@@ -122,7 +122,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">Resolución: 128 × 64 píxeles</td>
   </tr>
   <tr>
-    <td colspan="1">Área activa (mm): 34.5 × 23.0</td>
+    <td colspan="1">Área Activa (mm): 34.5 × 23.0</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">[Pantalla E-Ink](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
@@ -132,7 +132,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">Resolución: 122 × 250 píxeles</td>
   </tr>
   <tr>
-    <td colspan="1">Área activa (mm): 48.55 × 23.7046</td>
+    <td colspan="1">Área Activa (mm): 48.55 × 23.7046</td>
   </tr>
   <tr>
     <td colspan="1">Certificación</td>
@@ -140,7 +140,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
   </tr>
 </table>
 
-### Descripción general del hardware
+### Descripción General del Hardware
 
 **Wio Tracker L1**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio_tracker-l1.png" alt="pir" width={800} height="auto" /></p>
@@ -155,7 +155,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>
 
-## Soporte técnico y debate sobre el producto
+## Soporte Técnico y Debate sobre el Producto
 
 <p style={{textAlign: 'center'}}>
   <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
