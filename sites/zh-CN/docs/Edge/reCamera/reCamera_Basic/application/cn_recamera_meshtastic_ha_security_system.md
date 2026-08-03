@@ -8,7 +8,7 @@ keywords:
   - LoRa
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/demo_show.gif
-slug: /recamera_meshtastic_ha_security_system_bak
+slug: /recamera_meshtastic_ha_security_system
 sku: 100029708
 sidebar_position: 13
 last_update:
@@ -16,7 +16,7 @@ last_update:
   author: Sizhao Zhou
 createdAt: '2026-06-29'
 updatedAt: '2026-06-30'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_meshtastic_ha_security_system_bak/
+url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_meshtastic_ha_security_system/
 ---
 
 # 使用 reCamera 和 Meshtastic 构建远距离安防系统  

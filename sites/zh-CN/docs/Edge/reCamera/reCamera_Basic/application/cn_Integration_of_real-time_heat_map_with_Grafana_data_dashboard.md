@@ -7,7 +7,7 @@ keywords:
   - Grafana
   - InfluxDB
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/headmap.gif
-slug: /integration_of_real-time_heat_map_with_grafana_data_dashboard_bak
+slug: /integration_of_real-time_heat_map_with_grafana_data_dashboard
 sku: 102991896, 108990119, 100029708
 sidebar_position: 10
 last_update:
@@ -15,7 +15,7 @@ last_update:
   author: Xinrui Wu
 createdAt: '2025-12-22'
 updatedAt: '2026-05-07'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/integration_of_real-time_heat_map_with_grafana_data_dashboard_bak/
+url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/integration_of_real-time_heat_map_with_grafana_data_dashboard/
 ---
 
 # 实时热力图与 Grafana 数据看板的集成

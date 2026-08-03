@@ -5,7 +5,7 @@ keywords:
   - Wifi Halow
   - reCamera
   - detecção de borda com IA
-slug: /ai_remote_wireless_monitor_system_bak
+slug: /ai_remote_wireless_monitor_system
 sku: 102991897, 110070108
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 2
@@ -14,7 +14,7 @@ last_update:
   author: John Xiang
 createdAt: '2025-11-21'
 updatedAt: '2026-01-29'
-url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/ai_remote_wireless_monitor_system_bak/
+url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/ai_remote_wireless_monitor_system/
 ---
 
 # Sistema de monitoramento remoto sem fio com IA baseado em reCamera e Wifi Halow
