@@ -6,7 +6,7 @@ keywords:
   - Telegram
   - n8n
 image: https://files.seeedstudio.com/wiki/reCamera/Telegram_24.png
-slug: /getting_started_in_Telegram_work_with_recamera_bak
+slug: /getting_started_in_Telegram_work_with_recamera
 sku: 102991896, 108990119, 100029708
 sidebar_position: 9
 last_update:
@@ -14,7 +14,7 @@ last_update:
   author: Xinrui Wu
 createdAt: '2025-11-20'
 updatedAt: '2026-04-20'
-url: https://wiki.seeedstudio.com/getting_started_in_Telegram_work_with_recamera_bak/
+url: https://wiki.seeedstudio.com/getting_started_in_Telegram_work_with_recamera/
 ---
 
 
