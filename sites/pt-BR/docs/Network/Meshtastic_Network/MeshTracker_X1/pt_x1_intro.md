@@ -1,5 +1,5 @@
 ---
-description: Introdução ao SenseCAP MeshTracker X1 para Meshtastic. Este wiki apresentará os recursos, especificações, visão geral do hardware, botão, LED e lista de pinos.
+description: Introdução ao SenseCAP MeshTracker X1 para Meshtastic. Este wiki apresentará os recursos, especificações, visão geral de hardware, botão, LED e lista de pinos.
 title: Introdução ao SenseCAP MeshTracker X1
 keywords:
   - Tracker
@@ -44,7 +44,7 @@ Alimentado por GNSS de banda dupla L1+L5 e um barômetro integrado, o MeshTracke
 
 - **Conectividade LoRa de próxima geração (LR2021)** 
 
-Alimentado pelo Semtech LR2021, o MeshTracker X1 oferece desempenho de RF mais forte com sensibilidade de até -141 dBm e taxas de dados FLRC de 2,6 Mbps para comunicação em malha mais rápida e confiável, criando a base para recursos futuros como transmissão de voz e imagem.
+Alimentado pelo Semtech LR2021, o MeshTracker X1 oferece desempenho de RF mais forte com sensibilidade de até -141 dBm e taxas de dados FLRC de 2,6 Mbps para comunicação em malha mais rápida e confiável, criando uma base para recursos futuros como transmissão de voz e imagem.
 
 - **Comunicação confiável de longo alcance** 
 
@@ -54,7 +54,7 @@ Testado em 915 MHz, o MeshTracker X1 permite comunicação confiável em distân
 
 - **Design do tamanho de um cartão, fácil de carregar** 
 
-Fino e leve, o MeshTracker X1 é projetado para ser carregado no dia a dia durante aventuras ao ar livre. Use-o em um cordão, prenda-o a uma mochila, fixe-o em uma bolsa de bicicleta ou simplesmente coloque-o no bolso para uma conectividade fora da rede sem esforço.
+Fino e leve, o MeshTracker X1 é projetado para uso diário durante aventuras ao ar livre. Use-o em um cordão, prenda-o a uma mochila, fixe-o em uma bolsa de bicicleta ou simplesmente coloque-o no bolso para uma conectividade fora da rede sem esforço.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -80,7 +80,7 @@ Interface USB-C padrão para carregamento, atualizações de firmware e depuraç
 Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de uma bateria de alta capacidade de 1100mAh, oferecendo até 5 dias de funcionamento, mantendo-se compacto e portátil para uso ao ar livre e comunicação fora da rede.
 
 
-### Especificação
+### Especificações
 
 **Geral**
 
@@ -107,12 +107,12 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
 
 |Item|Parâmetro|s
 | :- | :- |
-|**Capacidade da bateria**|Bateria LCD recarregável, 1100mAh|
-|**Monitoramento do nível da bateria**|Envio periódico do nível da bateria|
+|**Capacidade da bateria**|Bateria recarregável LCO, 1100mAh|
+|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente|
 |**Protocolo de carregamento**|USB Type-C|
-|**Entrada de alimentação do dispositivo**|5V, 0.55A|
-|**Entrada de alimentação da bateria**|4.4V, 0.22A|
-|**Tensão de corte com carga completa**|4.37V|
+|**Entrada de energia do dispositivo**|5V, 0,55A|
+|**Entrada de energia da bateria**|4,4V, 0,22A|
+|**Tensão de corte totalmente carregada**|4,37V|
 |**Limite de temperatura de carregamento**|5 a +45℃|
 
 O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a serem lançados no futuro serão equipados com sensores adicionais (sensores de 3 eixos, magnetômetros de seis eixos etc.).
@@ -121,10 +121,10 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
 
 <table>
   <tr>
-    <th>Componente</th>
-    <th>Pino</th>
-    <th>Nº do pino</th>
-    <th>Protocolo</th>
+    <th>Component</th>
+    <th>Pin</th>
+    <th>Pin No.</th>
+    <th>Protocol</th>
   </tr>
   <tr>
     <td rowspan="3">LED</td>
@@ -153,7 +153,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>GPIO</td>
   </tr>
   <tr>
-    <td rowspan="3">Driver do motor</td>
+    <td rowspan="3">Motor Driver</td>
     <td>EN</td>
     <td>P1.05</td>
     <td>GPIO</td>
@@ -168,7 +168,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="2">Sensor de pressão do ar</td>
+    <td rowspan="2">Air Pressure Sensor</td>
     <td>SCL</td>
     <td>P1.14</td>
     <td rowspan="2">IIC</td>
@@ -178,7 +178,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="3">Sensor de 6 eixos (versão futura)</td>
+    <td rowspan="3">6-axis Sensor (Future Version)</td>
     <td>INT</td>
     <td>P1.02</td>
     <td>GPIO</td>
@@ -193,7 +193,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="3">Sensor de 3 eixos (versão futura)</td>
+    <td rowspan="3">3-axis Sensor (Future Version)</td>
     <td>INT</td>
     <td>P1.12</td>
     <td>GPIO</td>
@@ -208,7 +208,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>P1.15</td>
   </tr>
   <tr>
-    <td>Botão</td>
+    <td>Button</td>
     <td>-</td>
     <td>P0.06</td>
     <td>GPIO</td>
@@ -276,7 +276,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>P1.13</td>
   </tr>
    <tr>
-    <td rowspan="6">Flash de 8MB</td>
+    <td rowspan="6">8MB Flash</td>
     <td>SPISCK</td>
     <td>P0.19</td>
     <td rowspan="6">SPI</td>
@@ -308,7 +308,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
 |Ação do botão|Descrição|Buzzer|
 |- |- |- |
 |Pressionar uma vez|Ligar|Melodia ascendente|
-|Pressionar duas vezes|Atualizar informações do nó/localização|-|
+|Pressionar duas vezes|Atualizar informações de nó/localização|-|
 |Pressionar três vezes|Ligar/desligar o GPS|-|
 |Quatro cliques|Silenciar/reativar temporariamente|-|
 |Pressionar e segurar por 5s|Desligar|Melodia descendente|
@@ -357,9 +357,9 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
 
 ### Recurso
 
-[Relatório de Teste da Bateria](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+[Relatório de teste da bateria](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
 
-## Suporte Técnico e Discussão sobre o Produto
+## Suporte técnico e discussão sobre o produto
 
 <p style={{textAlign: 'center'}}>
   <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
