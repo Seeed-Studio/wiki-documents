@@ -9,7 +9,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-05-13'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1001/
 ---
 import Tabs from '@theme/Tabs';
@@ -586,7 +586,7 @@ ls /dev/tty.wch*
 - [reTerminal E1001 原理图 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004307_reTerminal_E1001_V1_2_SCH_251120.pdf)
 - [ESP32-S3 数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [SenseCraft HMI 平台文档](https://wiki.seeedstudio.com/cn/sensecraft_hmi_overview)
-- [外壳整体 3D 模型 STP 文件](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
+- [外壳整体 3D 模型 STP 文件](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_E1001_E1002_3D.stp)
 <!-- - [GitHub Repository](/cn/getting_started_with_reterminal_e1001) -->
 
 ## 技术支持与产品讨论

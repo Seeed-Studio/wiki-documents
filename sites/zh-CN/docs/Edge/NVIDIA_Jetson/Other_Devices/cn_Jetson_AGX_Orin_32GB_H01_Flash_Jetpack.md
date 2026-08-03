@@ -10,7 +10,7 @@ last_update:
   date: 07/02/2026
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-03'
 url: https://wiki.seeedstudio.com/cn/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/
 ---
 
@@ -459,7 +459,8 @@ sudo ./apply_binaries.sh
 
 ```bash
 cd ..
-tar xf 605_jp72.tbz2
+mkdir -p 605_jp72/Linux_for_Tegra
+tar xf 605_jp72.tbz2 -C 605_jp72/Linux_for_Tegra/
 sudo cp -r 605_jp72/Linux_for_Tegra/* Linux_for_Tegra/
 ```
 

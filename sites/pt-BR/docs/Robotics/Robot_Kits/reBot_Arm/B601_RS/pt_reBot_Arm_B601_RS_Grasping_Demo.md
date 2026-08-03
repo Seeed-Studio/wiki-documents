@@ -17,7 +17,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_grasping_demo/
 ---
 
@@ -389,7 +389,7 @@ Antes de executar o script de calibração, ative e verifique a interface CAN:
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ip -details link show can0
 ```

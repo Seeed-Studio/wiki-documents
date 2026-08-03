@@ -13,7 +13,7 @@ last_update:
   author: Kasun Thushara
 createdAt: '2026-05-28'
 updatedAt: '2026-05-28'
-url: https://wiki.seeedstudio.com/cn/respeaker_flex_xiao_playback_record/
+url: https://wiki.seeedstudio.com/cn/respeaker_flex_xiao_udp_streaming/
 ---
 
 ## 概述

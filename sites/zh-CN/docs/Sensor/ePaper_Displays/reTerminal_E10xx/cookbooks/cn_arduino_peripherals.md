@@ -1,6 +1,6 @@
 ---
 description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino 菜谱——包含板载硬件外设示例，如 LED、蜂鸣器、三个用户按键、SHT4x 温湿度传感器、电池监测、microSD 卡，以及一个端到端图像处理流水线（JPEG / BMP / PNG → 抖动 → 电子纸）覆盖全部四种面板版本。
-title: 'Arduino 菜谱：板载外设（reTerminal E 系列）'
+title: Arduino 菜谱：板载外设（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals
 sidebar_position: 2
@@ -9,7 +9,7 @@ last_update:
   date: 05/21/2026
   author: Citric
 createdAt: '2026-05-15'
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals/
 ---
 

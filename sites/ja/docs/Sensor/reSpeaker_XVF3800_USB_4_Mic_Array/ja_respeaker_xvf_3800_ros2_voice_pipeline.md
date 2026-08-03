@@ -1,6 +1,5 @@
 ---
 description: reSpeaker XVF3800 と Groq AI を使用して、音声コマンドをリアルタイムのロボット移動、回転動作、および音声フィードバックに変換する、音声制御 ROS2 TurtleSim プロジェクト。
-
 title: reSpeaker XVF3800 上の ROS2 音声パイプライン
 keywords:
   - reSpeaker
@@ -13,7 +12,7 @@ last_update:
   date: 5/25/2026
   author: Kasun Thushara
 createdAt: '2026-05-25'
-updatedAt: '2026-05-25'
+updatedAt: '2026-05-26'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_ros2_voice_pipeline/
 ---
 

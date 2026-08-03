@@ -12,7 +12,7 @@ last_update:
   date: 2/4/2026
   author: Janet
 createdAt: '2026-01-09'
-updatedAt: '2026-02-04'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/es/t1000e_for_lorawan_introduction/
 ---
 

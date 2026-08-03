@@ -10,7 +10,7 @@ last_update:
   date: 12/18/2025
   author: Michelle Huang
 createdAt: '2025-05-23'
-updatedAt: '2026-04-20'
+updatedAt: '2026-06-28'
 url: https://wiki.seeedstudio.com/es/wio_tracker_l1_node/
 ---
 
@@ -26,7 +26,7 @@ La Serie Wio Tracker L1 es un nodo [Meshtastic®](https://meshtastic.org/) de ba
 ## Modelo de la Serie L1
 
 :::tip
-La Serie Wio Tracker L1 está disponible en 4 versiones: elige la que mejor se adapte a tus necesidades.
+La Serie Wio Tracker L1 está disponible en 4 versiones; elige la que mejor se adapte a tus necesidades.
 :::
 
 ### Introducción a la Serie
@@ -55,9 +55,9 @@ La Serie Wio Tracker L1 está disponible en 4 versiones: elige la que mejor se a
 Listo para usar nada más sacarlo de la caja con firmware Meshtastic preinstalado para una configuración sin complicaciones.
 
 - **Tres opciones de alimentación**
-Admite carga rápida Type-C, entrada solar y alimentación mediante batería de ion-litio para un despliegue flexible en diversos entornos, ideal para aplicaciones al aire libre y móviles.
+Admite carga rápida Type-C, entrada solar y alimentación mediante batería de ion-litio para un despliegue flexible en diversos entornos; ideal para aplicaciones al aire libre y móviles.
 
-- **Compatibilidad flexible con pantallas**
+- **Compatibilidad flexible de pantalla**
 Pantallas opcionales OLED de 1,3 pulgadas y E-Ink de 2,13 pulgadas, que ofrecen opciones de visualización versátiles para diferentes necesidades de consumo de energía y retroalimentación visual.
 
 - **Alta capacidad de expansión**
@@ -73,11 +73,11 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
   <tr>
     <th colspan="1">Procesador</th>
     <th colspan="1">
-      Nordic nRF52840<br />ARM® Cortex®-M4 con FPU funciona hasta 64 MHz
+      Nordic nRF52840<br />ARM® Cortex®-M4 con FPU hasta 64 MHz
     </th>
   </tr>
   <tr>
-    <td colspan="1">Memoria integrada</td>
+    <td colspan="1">Memoria en chip</td>
     <td colspan="1">1 MB flash y 256 kB RAM</td>
   </tr>
   <tr>
@@ -102,7 +102,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">Plated Through Hole（PTH）: UART/IIC/GPIO/Analógico</td>
   </tr>
   <tr>
-    <td colspan="1">Almohadillas de soldadura reservadas para SWD</td>
+    <td colspan="1">Pads de soldadura reservados para SWD</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">Entrada de alimentación</td>
@@ -154,3 +154,26 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
 **Diagrama**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

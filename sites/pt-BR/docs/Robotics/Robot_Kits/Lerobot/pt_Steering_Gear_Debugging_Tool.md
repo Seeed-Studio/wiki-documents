@@ -13,6 +13,8 @@ last_update:
   date: 6/29/2026
   author: ZhangJiaQuan
 url: https://wiki.seeedstudio.com/pt-br/lerobot_steering_gear_debugging_tool/
+createdAt: '2026-06-30'
+updatedAt: '2026-07-20'
 ---
 
 # Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no Lerobot
@@ -60,6 +62,8 @@ python -m src.gui.factory_calibration_tool --port1 /dev/ttyUSB0 --port2 /dev/tty
 ## 2. Primeiros Passos (Aplicável ao Braço Líder e ao Braço Seguidor)
 
 ### 1. Verificar se os Servos Estão Normais
+
+Primeiro, selecione o número da porta correspondente na seleção de porta serial.
 
 Se os servos 1-6 forem todos detectados com sucesso, significa que os servos são reconhecidos normalmente e as funções básicas estão funcionando.
 
@@ -175,14 +179,17 @@ Por padrão, todos os servos na página estão em suas posições neutras, como 
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/14.png" />
 </div>
 
-Primeiro habilite o torque. Você pode habilitar todos os torques com um clique ou habilitar o torque para um único servo e, em seguida, deslizar o controle deslizante para mover o servo para a posição correspondente. No entanto, certifique-se de mover lentamente. Como as peças impressas do braço robótico bloqueiam fisicamente certas posições, o braço não pode realmente alcançar as posições de borda; existem limites máximos e mínimos de movimento, portanto, não deslize o controle deslizante para 0 nem para o máximo. Após desabilitar o torque, o braço robótico ficará solto.
+- 1. Primeiro habilite o torque. Você pode habilitar todos os torques com um clique ou habilitar o torque para um único servo e, em seguida, deslizar o controle deslizante para mover o servo para a posição correspondente. No entanto, certifique-se de mover lentamente. Como as peças impressas do braço robótico bloqueiam fisicamente certas posições, o braço não pode realmente alcançar as posições de borda; existem limites máximos e mínimos de movimento, portanto, não deslize o controle deslizante para 0 nem para o máximo. Após desabilitar o torque, o braço robótico ficará solto.
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/15.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/21.png" />
 </div>
 
 Como mostrado acima, após habilitar o torque, o movimento do servo correspondente mudará.
+
+- 2. Você pode realizar a calibração neutra de um único servo e limpar as posições neutra, máxima e mínima internas do servo
+- 3. A seguir estão as informações do servo
 
 Pos: Posição
 
@@ -214,37 +221,3 @@ As configurações de fábrica podem ser restauradas.
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/16.png" />
 </div>
-
-### 7. Gerenciamento de Arquivos de Calibração do Braço Robótico
-
-Você pode selecionar o arquivo de calibração correspondente do braço seguidor ou do braço líder para executar, modificar ou excluir.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/17.png" />
-</div>
-
-### 8. Criar um Novo Arquivo de Calibração do Braço Robótico
-
-Clique em **GUI Calibration Wizard** e selecione o braço robótico e o número da porta correspondentes.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/18.png" />
-</div>
-
-Você pode realizar calibração mínima, máxima e neutra para cada servo.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/19.png" />
-</div>
-
-Primeiro, registre o valor neutro de cada servo. Coloque cada servo na posição mostrada na figura e clique em **Record Neutral Value** para os servos 1-6, um de cada vez.
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/20.png" />
-</div>
-
-Em seguida, clique em **Start Recording Range** para cada servo, gire o servo até os intervalos máximo e mínimo e clique em **Stop Recording Range**. Repita a operação acima para cada servo, depois nomeie o arquivo de calibração e salve-o.

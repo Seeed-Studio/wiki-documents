@@ -9,28 +9,28 @@ keywords:
   - 音声からテキストへ
   - LLM 要約
 image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png
-slug: /respeaker_clip_getting_started
+slug: /respeaker_clip
 sku: 100020126
 last_update:
   date: 6/30/2026
   author: Ray
 createdAt: '2026-06-30'
-updatedAt: '2026-06-30'
-url: https://wiki.seeedstudio.com/ja/respeaker_clip_getting_started/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/ja/respeaker_clip/
 ---
 
 # reSpeaker Clip 入門ガイド
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png" alt="reSpeaker Clip" width={600} height="auto" /></p>
 
-reSpeaker Clip は、リテール、会議、インタビュー、教室、サービス研修など、高品質な音声録音とその後のコンテンツ整理が求められるシナリオ向けに設計されたオープンなウェアラブル AI レコーダーです。デュアル PDM マイクによる 360 度全指向性で最大 3 m の収音、単体での録音、モバイルでのファイル管理、AI 文字起こし、AI 要約を統合し、現場での録音から構造化されたコンテンツまでの一連のワークフローを完結できるよう支援します。
+reSpeaker Clip は、リテール、会議、インタビュー、教室、サービス研修など、高品質な音声録音とその後のコンテンツ整理を必要とするシナリオ向けに設計されたオープンなウェアラブル AI レコーダーです。デュアル PDM マイクによる 360 度全指向性・最大 3 m の収音、単体での録音、モバイルでのファイル管理、AI 文字起こし、AI 要約を統合し、現場録音から構造化コンテンツまでの一連のワークフローを完結できるよう支援します。
 
-reSpeaker Clip は、オープンハードウェアかつ開発者フレンドリーな製品としても設計されています。オープンソースのファームウェア、デモアプリ、SDK サポートを提供し、開発者はデバイスの動作やアプリケーションワークフローをカスタマイズできます。エンタープライズは、社内のオフィスシステム、プライベートにデプロイした LLM、または音声解析パイプラインと統合し、自社のデータセキュリティ要件を満たす音声 AI アプリケーションを構築できます。
+reSpeaker Clip は、オープンハードウェアかつ開発者フレンドリーな製品としても設計されています。オープンソースのファームウェア、デモアプリ、SDK サポートを提供し、開発者はデバイスの動作やアプリケーションワークフローをカスタマイズできます。エンタープライズは、社内の業務システム、プライベートにデプロイした LLM、音声解析パイプラインと統合し、自社のデータセキュリティ要件を満たす音声 AI アプリケーションを構築することもできます。
 
 reSpeaker Clip は SenseCraft Voice App とクラウドサービスと連携し、ローカルまたはクラウドの AI モデルとも統合できます。アプリを通じて、ユーザーはデバイスのペアリング、録音管理、ファイルのエクスポート、音声の文字起こし、AI 要約の生成、テンプレートのカスタマイズ、Q&A 検索を行うことができます。
 
 :::note
-本ドキュメントは reSpeaker Clip 用の初期 Wiki 草案です。一部の SDK URL、プロトコルドキュメント、リソースパッケージリンクは、製品資料が確定した後に追加されます。
+本ドキュメントは reSpeaker Clip 用の初期版 Wiki ドラフトです。一部の SDK URL、プロトコルドキュメント、リソースパッケージリンクは、製品資料が確定した後に追加されます。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -41,19 +41,19 @@ reSpeaker Clip は SenseCraft Voice App とクラウドサービスと連携し�
 
 ## 製品概要
 
-reSpeaker Clip は、オープンなウェアラブル AI レコーダーとして位置付けられています。ポータブルな録音デバイスとしてだけでなく、エンタープライズのサービス研修、インタビュー記録、議事録、現場コミュニケーションの振り返りのための音声データ入力ポイントとしても使用できます。
+reSpeaker Clip は、オープンなウェアラブル AI レコーダーとして位置付けられています。ポータブルな録音デバイスとしてだけでなく、エンタープライズのサービス研修、インタビュー記録、議事録作成、現場コミュニケーションの振り返りのための音声データ入力ポイントとしても利用できます。
 
-本デバイスはコンパクトなウェアラブル形状を採用し、2GB の内蔵ストレージを備えているため、スマートフォンに依存せず単体で録音できます。また、プログラム可能な 0.5 インチ OLED ディスプレイとバイブレーションフィードバックを備え、画面・ボタン・触覚フィードバックを通じて録音ステータスの素早い確認、重要な区間のマーキング、録音ワークフローの切り替えを行うことができます。
+本デバイスはコンパクトなウェアラブル形状を採用し、2GB の内蔵ストレージを搭載しているため、スマートフォンに依存せず単体で録音できます。また、プログラム可能な 0.5 インチ OLED ディスプレイとバイブレーションフィードバックを備え、画面・ボタン・触覚フィードバックを通じて録音ステータスの素早い確認、重要な区間のマーキング、録音ワークフローの切り替えを行うことができます。
 
 ### 主な特長
 
-- **360 度収音、最大 3 m**：高性能なデュアル PDM マイクにより、会議、インタビュー、リテールでの会話など、複数話者のシナリオに対応した全指向性収音をサポートします。
+- **360 度収音、最大 3 m**：高性能なデュアル PDM マイクにより、会議、インタビュー、リテールでの会話など、複数話者のシナリオに対応した全方位収音をサポートします。
 - **2 種類の録音ワークフロー**：日常のウェアラブルメモから複数人の会議まで、環境に応じて適切な録音動作を選択できます。
 - **単体録音とローカルストレージ**：内蔵 2GB ストレージにより、スマートフォンが近くになくてもスタンドアロンレコーダーとして動作します。
-- **OLED ディスプレイとバイブレーションフィードバック**：0.5 インチ OLED ディスプレイにデバイスステータスが表示され、バイブレーションフィードバックにより録音操作を直感的に行えます。
-- **オープンファームウェアと SDK**：開発者はデバイスの動作、ボタンロジック、表示内容、アプリ側ワークフローをカスタマイズできます。
-- **AI 文字起こしと要約**：クラウドまたはローカルの AI モデルを使用して、音声からテキストへの変換、AI ノート、議事録作成、音声 Q&A を行えます。
-- **エンタープライズ統合に対応**：社内システムやプライベートにデプロイした LLM と接続し、データセキュリティとカスタマイズが求められるワークフローに対応できます。
+- **OLED ディスプレイとバイブレーションフィードバック**：0.5 インチ OLED ディスプレイでデバイスステータスを表示し、バイブレーションフィードバックにより直感的な録音操作が可能です。
+- **オープンファームウェアと SDK**：開発者はデバイスの動作、ボタンロジック、表示内容、アプリケーション側ワークフローをカスタマイズできます。
+- **AI 文字起こしと要約**：クラウドまたはローカルの AI モデルを用いて、音声からテキストへの変換、AI ノート、議事録作成、音声 Q&A を行えます。
+- **エンタープライズ統合に対応**：社内システムやプライベートにデプロイした LLM と接続し、データセキュリティとカスタマイズを要するワークフローに対応できます。
 
 ### 仕様
 
@@ -83,7 +83,7 @@ reSpeaker Clip は、オープンなウェアラブル AI レコーダーとし�
 | 収音距離 | 最大 3 m |
 | オーディオ出力 | ノイズ低減モノラルオーディオ |
 | 圧縮オーディオ形式 | Opus モノラル、32 kbps |
-| オーディオ保存 | 2GB で圧縮音声を約 250 時間以上保存可能 |
+| オーディオ保存容量 | 2GB で圧縮音声を約 250 時間以上保存可能 |
 | 連続録音時間 | 14～18 時間 |
 
 #### 物理パラメータ
@@ -104,7 +104,7 @@ reSpeaker Clip は、オープンなウェアラブル AI レコーダーとし�
 - リテールサービスの録音および研修振り返り
 - 会議、インタビュー、授業などの長時間音声録音
 - 顧客コミュニケーション、営業訪問、サービス品質検査などのビジネスシナリオ
-- 音声コンテンツを構造化されたテキストや要約に変換する必要があるワークフロー
+- 音声コンテンツを構造化テキストや要約に変換する必要があるワークフロー
 
 ### コア機能
 
@@ -123,7 +123,7 @@ reSpeaker Clip は、オープンなウェアラブル AI レコーダーとし�
 
 ### ハードウェア概要
 
-reSpeaker Clip は、ポータブルなクリップスタイルのフォームファクタを採用しています。上面には OLED ディスプレイ、デュアルマイク、アクションボタンが統合されています。底面と充電ベースの両方にマグネット式充電端子があり、充電ベースは USB-C で給電されるため、デスクトップ充電とウェアラブル録音を簡単に切り替えることができます。
+reSpeaker Clip は、ポータブルなクリップスタイルのフォームファクタを採用しています。上面には OLED ディスプレイ、デュアルマイク、アクションボタンを統合しています。底面と充電ベースの両方にマグネット式充電端子があり、充電ベースは USB-C で給電されるため、デスクトップ充電とウェアラブル録音を簡単に切り替えることができます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_hardware_cropped.jpg" alt="reSpeaker Clip hardware overview" width={680} height="auto" /></p>
 
@@ -140,14 +140,14 @@ reSpeaker Clip は、ポータブルなクリップスタイルのフォーム�
     </thead>
     <tbody>
       <tr>
-        <td>reSpeaker Clip デバイス</td>
+        <td>reSpeaker Clip 本体</td>
         <td style={{textAlign: 'center'}}>1</td>
         <td>ポータブル録音デバイス</td>
       </tr>
       <tr>
         <td>マグネット式ラペルクリップ</td>
         <td style={{textAlign: 'center'}}>1</td>
-        <td>衣服にデバイスを装着するために使用</td>
+        <td>衣服にデバイスを装着するため</td>
       </tr>
       <tr>
         <td>マグネットパッチ</td>
@@ -157,17 +157,17 @@ reSpeaker Clip は、ポータブルなクリップスタイルのフォーム�
       <tr>
         <td>充電ベース</td>
         <td style={{textAlign: 'center'}}>1</td>
-        <td>デバイスを充電するために使用</td>
+        <td>デバイスを充電するため</td>
       </tr>
       <tr>
         <td>0.5 m Type-C ケーブル</td>
         <td style={{textAlign: 'center'}}>1</td>
-        <td>充電ベースに電源を供給するために使用</td>
+        <td>充電ベースに電源を供給するため</td>
       </tr>
       <tr>
         <td>ネックストラップ</td>
         <td style={{textAlign: 'center'}}>1</td>
-        <td>首から下げて装着するために使用</td>
+        <td>首から下げて装着するため</td>
       </tr>
     </tbody>
   </table>
@@ -202,7 +202,7 @@ reSpeaker Clip は、マグネット装着、ラペルクリップ、ネック�
 #### デバイスを接続する
 
 1. SenseCraft Voice App を開き、サインインします。
-2. デバイス側面のボタンを長押しして電源を入れ、接続可能な状態になるまで待ちます。
+2. デバイス側面のボタンを長押しして電源を入れ、デバイスが接続待機状態になるまで待ちます。
 3. アプリのホーム画面で **Add Device** をタップします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_add_device.jpg" alt="Tap Add Device" width={320} height="auto" /></p>
@@ -218,12 +218,12 @@ reSpeaker Clip は、マグネット装着、ラペルクリップ、ネック�
 6. ペアリング完了後、アプリの指示に従って残りのセットアップを完了します。
 
 :::tip
-アプリがデバイスを見つけられない場合は、まずデバイスの電源が入っており、バッテリー残量が十分であることを確認してください。バッテリーが少ない場合は、再度ペアリングする前にデバイスを充電してください。また、デバイスが Bluetooth ペアリング状態になっていることを確認し、携帯電話をデバイスに近づけてから再度スキャンしてください。
+アプリがデバイスを見つけられない場合は、まずデバイスの電源が入っており、バッテリー残量が十分であることを確認してください。バッテリーが少ない場合は、再度ペアリングする前にデバイスを充電してください。また、デバイスが Bluetooth ペアリング状態になっていることを確認し、携帯電話をデバイスに近づけて、再度スキャンしてください。
 :::
 
 ### 録音操作
 
-reSpeaker Clip は、側面ボタンで録音を素早く操作できます。
+reSpeaker Clip は側面ボタンで録音を素早く操作できます。
 
 - ボタンを長押しすると録音の開始／停止ができます。
 - 録音中にボタンを短く 1 回押すと、現在の区間を重要としてマークします。
@@ -240,23 +240,23 @@ reSpeaker Clip は、側面ボタンで録音を素早く操作できます。
 - 音声のトリミング
 - Wi-Fi または BLE 経由でのファイル転送
 - 音声またはテキスト結果のエクスポート
-- マークした重要な区間の表示
+- マークした重要区間の表示
 
 ### AI 機能
 
-reSpeaker Clip は、SenseCraft Voice App とクラウドサービスと連携して、音声のインテリジェント処理を行うことができます。
+reSpeaker Clip は SenseCraft Voice App とクラウドサービスと連携して、音声のインテリジェント処理を行うことができます。
 
 #### STT / LLM サービス設定の確認
 
-音声文字起こし、AI 要約、Q&A 検索を使用する前に、アプリ下部の **AI CONFIG** ページを開き、**STT Service** と **LLM Service** の両方が設定されていることを確認してください。STT サービスは音声文字起こしに使用され、LLM サービスは要約生成と Q&A 処理に使用されます。
+音声文字起こし、AI 要約、または Q&A 検索を使用する前に、アプリ下部の **AI CONFIG** ページを開き、**STT Service** と **LLM Service** の両方が設定されていることを確認してください。STT サービスは音声文字起こしに使用され、LLM サービスは要約生成と Q&A 処理に使用されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_ai_config_stt.jpg" alt="STT サービス設定を確認する" width={320} height="auto" /></p>
 
-**STT Service** に `Not configured` と表示されている場合は、STT Service 右側の設定項目をタップして STT Providers ページに入り、使用する文字起こしサービスに応じて Provider、Base URL、API Key、Language を入力します。**Test Connection** をタップし、テストに成功したら **Save Configuration** をタップします。
+**STT Service** に `Not configured` と表示されている場合は、STT Service 右側の設定項目をタップして STT Providers ページに入ります。利用する文字起こしサービスに応じて、Provider、Base URL、API Key、Language を入力します。**Test Connection** をタップし、テストに成功したら **Save Configuration** をタップします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_stt_provider_form.png" alt="STT サービス設定を入力して保存する" width={320} height="auto" /></p>
 
-**LLM Service** に `Not configured` と表示されている場合は、続けて LLM Providers ページに進み、**Add New Configuration** または右上の `+` ボタンをタップして新しいサービス設定を追加します。
+**LLM Service** に `Not configured` と表示されている場合は、LLM Providers ページに進み、**Add New Configuration** または右上の `+` ボタンをタップして新しいサービス設定を追加します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_llm_provider_add.jpg" alt="LLM サービス設定を追加する" width={320} height="auto" /></p>
 
@@ -266,13 +266,13 @@ API Key、Base URL、Model Name を入力したら、**Test Connection** をタ�
 
 #### 音声文字起こし
 
-録音をアップロードまたは同期した後、ファイル一覧で処理したい録音をタップして録音詳細ページに入ります。録音にまだ文字起こしがない場合、このページには **Transcribe & Summarize** ボタンが表示されます。それをタップして文字起こしと要約の設定ページに入ります。
+録音をアップロードまたは同期した後、ファイル一覧から処理したい録音をタップして録音詳細ページに入ります。録音にまだ文字起こしがない場合、ページには **Transcribe & Summarize** ボタンが表示されます。これをタップして文字起こしと要約の設定ページに入ります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_transcribe_entry.png" alt="録音を開き、Transcribe & Summarize をタップする" width={320} height="auto" /></p>
 
 #### AI 要約
 
-**Transcribe & Summarize** ページでは、要約テンプレートを選択し、Audio Language、STT Model、LLM Model を確認できます。テンプレートは、会議要約、授業要約、日常会話要約など、要約出力の構成を制御します。設定を確認したら、**Generate Now** をタップして文字起こしと要約を開始します。
+**Transcribe & Summarize** ページでは、要約テンプレートを選択し、Audio Language、STT Model、LLM Model を確認できます。テンプレートは会議要約、授業要約、日常会話要約など、要約出力の構成を制御します。設定を確認したら、**Generate Now** をタップして文字起こしと要約を開始します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_transcribe_summary_options.png" alt="テンプレートを選択して文字起こしと要約を開始する" width={320} height="auto" /></p>
 
@@ -282,7 +282,7 @@ API Key、Base URL、Model Name を入力したら、**Test Connection** をタ�
 
 ### デバイス管理
 
-アプリ内でデバイスの状態を表示および管理できます。
+アプリ内でデバイスの状態を確認および管理できます。
 
 - バッテリー監視
 - ファームウェアバージョンの確認
@@ -292,22 +292,22 @@ API Key、Base URL、Model Name を入力したら、**Test Connection** をタ�
 
 ### ファームウェア更新ガイド
 
-reSpeaker Clip は、デバッグプローブを必要としない 2 つのファームウェア更新方法をサポートしています：
+reSpeaker Clip は、デバッグプローブを必要としない 2 つのファームウェア更新方法をサポートします：
 
 1. **Bluetooth OTA**：BLE を介してファームウェアパッケージをデバイスに送信します。日常的なアップデートに適しています。
 2. **リカバリーモード書き込み**：デバイスを USB シリアルリカバリーモードにして、USB シリアルポート経由でファームウェアパッケージを転送します。
 
-どちらの方法も、MCUboot の mcumgr Simple Management Protocol (SMP) を使用します。Bluetooth OTA は BLE トランスポートを使用し、リカバリーモード書き込みは USB CDC-ACM シリアルトランスポートを使用します。reSpeaker Clip は `dfu-util` などのネイティブ USB DFU フローは使用しません。
+どちらの方法も MCUboot の mcumgr Simple Management Protocol (SMP) を使用します。Bluetooth OTA は BLE トランスポートを使用し、リカバリーモード書き込みは USB CDC-ACM シリアルトランスポートを使用します。reSpeaker Clip は `dfu-util` などのネイティブ USB DFU フローは使用しません。
 
 #### ファームウェアファイルの種類
 
 ファームウェアリリースには、次のファイルが含まれる場合があります：
 
-| ファイル種別 | 説明 | 用途 |
+| File Type | Description | Usage |
 | --- | --- | --- |
-| `clip-<version>-*-single.*` | 単一アプリケーションパーティションの更新パッケージで、Clip SDK / アプリパーティションのみを更新する場合に適しています | USB シリアル DFU |
+| `clip-<version>-*-single.*` | Clip SDK / アプリパーティションのみを更新するのに適した、単一アプリケーションパーティションの更新パッケージ | USB シリアル DFU |
 | `clip-<version>-*-signed.bin` | 署名付きアプリケーションファームウェアイメージ | USB シリアル DFU、BLE OTA |
-| `clip-<version>-*-ota.zip` | 複数イメージの更新パッケージで、通常はアプリとネットワークコアを含みます | USB シリアル DFU、BLE OTA |
+| `clip-<version>-*-ota.zip` | 通常はアプリとネットワークコアを含むマルチイメージ更新パッケージ | USB シリアル DFU、BLE OTA |
 | `clip-<version>-*-merged.hex` | MCUboot、アプリ、ネットワークコアを含むフルイメージ | J-Link などのデバッガが必要 |
 | `clip-<version>-*-merged_CPUNET.hex` | ネットワークコアイメージのみ | J-Link などのデバッガが必要 |
 
@@ -315,7 +315,7 @@ reSpeaker Clip は、デバッグプローブを必要としない 2 つのフ�
 
 #### 方法 1: Bluetooth OTA
 
-Bluetooth OTA は、デバイスが正常に起動し、BLE を通じて携帯電話から検出できる場合に適しています。OTA にはモバイル版 nRF Connect アプリの使用を推奨します。nRF Connect for Desktop の BLE ツールは、通常、別途 Nordic BLE アダプタが必要です。
+Bluetooth OTA は、デバイスが正常に起動し、BLE を通じて携帯電話から検出できる場合に適しています。OTA にはモバイル版 nRF Connect アプリの使用を推奨します。デスクトップ版 nRF Connect の BLE ツールは、通常、別途 Nordic BLE アダプタが必要です。
 
 基本的なワークフロー：
 
@@ -328,7 +328,7 @@ Bluetooth OTA は、デバイスが正常に起動し、BLE を通じて携帯�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_ble_ota_dfu_button.png" alt="モバイル版 nRF Connect で DFU ボタンをタップする" width={320} height="auto" /></p>
 
-7. デフォルトの **Test and Confirm** モードのままにして **OK** をタップし、アップデートを開始します。
+7. デフォルトの **Test and Confirm** モードのまま **OK** をタップしてアップデートを開始します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_ble_ota_mode.png" alt="Bluetooth OTA で Test and Confirm を選択する" width={320} height="auto" /></p>
 
@@ -341,17 +341,17 @@ OTA 中は携帯電話をデバイスの近くに保ち、nRF Connect をバッ�
 
 #### 方法 2: リカバリーモード書き込み
 
-リカバリーモードは、開発者向けの USB 書き込みモードです。MCUboot / mcumgr SMP プロトコルを使用して、USB CDC-ACM シリアルポート経由でファームウェアを転送します。`nrfutil mcu-manager` コマンドラインワークフローの使用を推奨します。
+リカバリーモードは開発者向けの USB 書き込みモードです。MCUboot / mcumgr SMP プロトコルを使用して、USB CDC-ACM シリアルポート経由でファームウェアを転送します。`nrfutil mcu-manager` コマンドラインワークフローの使用を推奨します。
 
 ##### リカバリーモードに入る
 
-リカバリーモードは、MCUboot USB シリアルリカバリーを通じて書き込み機能を提供します。リカバリーモードに入るには：
+リカバリーモードは MCUboot USB シリアルリカバリーを通じて書き込み機能を提供します。リカバリーモードに入るには：
 
 1. USB ケーブルがデータ転送に対応していることを確認します。
 2. USB ケーブルを充電ベースに接続します。
 3. reSpeaker Clip を充電ベースに載せ、充電端子がしっかり接続されるように本体を軽くひねります。
-4. 画面に USB／充電アイコンが表示されたら、画面に **Recovery Mode** が表示されるまで **Action Button** を長押しします。
-5. **Recovery Mode** が表示されたら、デバイスは USB シリアルリカバリーモードに正常に入っており、次のようなシリアルポートとして認識されます：
+4. 画面に USB／充電アイコンが表示されたら、画面に **Recovery Mode** が表示されるまで **Action Button** を押し続けます。
+5. **Recovery Mode** が表示されたら、デバイスは USB シリアルリカバリーモードに正常に入っており、シリアルポートとして認識されます：
    - Windows: `COMx`
    - macOS: `/dev/cu.usbmodem*`
    - Linux: `/dev/ttyACM0`
@@ -365,7 +365,7 @@ Ports           COM10, vcom: 0
 Traits          serialPorts, usb
 ```
 
-書き込みには、まず `vcom: 1` に対応するシリアルポート（上の例では `COM11` など）を試してください。接続やアップロードに失敗する場合は、もう一方のシリアルポートを試してください。
+書き込みの際は、まず `vcom: 1` に対応するシリアルポート（上記の例では `COM11` など）を試してください。接続やアップロードに失敗する場合は、もう一方のシリアルポートを試してください。
 
 :::note
 リカバリーモードには USB/VBUS 検出が必要です。このモードに入る前に、充電ベースの端子がしっかり接続されていることを確認してください。画面に USB／充電アイコンが表示されない場合、物理的にはベースに載っていても、実際には USB に接続されていない可能性があります。
@@ -375,7 +375,7 @@ Traits          serialPorts, usb
 
 nrfutil は Nordic のコマンドラインツールです。バージョン 8.x 以降を使用し、`mcu-manager` プラグインをインストールしてください。
 
-新しいバージョンの nrfutil はサブコマンドプラグイン方式を採用しています。初回使用時は、`device` と `mcu-manager` サブコマンドをインストールします：
+新しいバージョンの nrfutil はサブコマンドプラグイン機構を使用します。初回使用時は、`device` と `mcu-manager` サブコマンドをインストールします：
 
 ```bash
 nrfutil install device
@@ -420,7 +420,7 @@ nrfutil mcu-manager serial image-upload \
 nrfutil mcu-manager serial reset --serial-port COMx
 ```
 
-`COMx` を、Windows デバイスマネージャーまたは `nrfutil device list` に表示される実際のシリアルポートに置き換えてください。デバイスが複数の `vcom` ポートとして表示される場合は、まず `vcom: 1` に対応するポートを試してください。接続またはアップロードに失敗した場合は、別のポートに切り替えて再試行してください。macOS / Linux では `/dev/cu.usbmodem*` または `/dev/ttyACM0` を使用します。
+`COMx` は、Windows デバイスマネージャーまたは `nrfutil device list` に表示される実際のシリアルポートに置き換えてください。デバイスが複数の `vcom` ポートとして表示される場合は、まず `vcom: 1` に対応するポートを試してください。接続またはアップロードに失敗した場合は、別のポートに切り替えて再試行してください。macOS / Linux では `/dev/cu.usbmodem*` または `/dev/ttyACM0` を使用します。
 
 :::tip
 書き込みの進行状況が 100% のままでツールが自動的に終了しない場合は、デバイスを何度も抜き差ししないでください。次を実行します：
@@ -434,7 +434,7 @@ nrfutil mcu-manager serial reset --serial-port COMx
 
 #### その他のファームウェア更新方法
 
-デバッガを用いた書き込みや、より詳細なリカバリーモードでのトラブルシューティング方法については、reSpeaker Clip 高度なファームウェア更新ガイド（近日公開）を参照してください。
+デバッガを用いた書き込みや、より詳細なリカバリーモードのトラブルシューティング方法については、reSpeaker Clip Advanced Firmware Update Guide（近日公開）を参照してください。
 
 ## 開発ガイド
 
@@ -450,15 +450,15 @@ reSpeaker Clip のファームウェアは nRF Connect SDK / Zephyr RTOS 上に�
 
 開発の観点から見ると、ファームウェアは主に次のレイヤに分かれます：
 
-- **アプリケーションレイヤ**：イベントディスパッチ、AT Server、ボタン処理、およびユーザーインタラクション状態を処理します。
-- **サービスレイヤ**：BLE / UDP トランスポート抽象化、ファイル転送、設定管理、および NVS ストレージを処理します。
-- **処理レイヤ**：音声キャプチャ、SpeexDSP ノイズリダクション / ダイナミックレンジ処理、および Opus エンコードを処理します。
+- **アプリケーションレイヤ**：イベントディスパッチ、AT サーバー、ボタン処理、ユーザーインタラクション状態を処理します。
+- **サービスレイヤ**：BLE / UDP トランスポート抽象化、ファイル転送、設定管理、NVS ストレージを処理します。
+- **処理レイヤ**：音声キャプチャ、SpeexDSP ノイズリダクション / ダイナミックレンジ処理、Opus エンコードを処理します。
 - **ハードウェア抽象化レイヤ**：PDM マイク、SD FAT32、BLE、Wi-Fi、PMIC などのハードウェア機能をカプセル化します。
 - **Zephyr RTOS カーネル**：`k_msgq`、`k_sem`、`k_mutex`、`k_thread`、`k_mem_slab` などのカーネルプリミティブを提供します。
 
 一般的な開発ワークフローは次のとおりです：Zephyr / nRF Connect SDK 環境をセットアップし、reSpeaker Clip ファームウェアプロジェクトを取得し、ボードターゲットと設定ファイルを確認し、ファームウェアをビルドして書き込み、シリアルログを確認し、最後に SenseCraft Voice App または BLE / Wi-Fi プロトコルを通じて録音、ファイル同期、ファームウェア更新を検証します。
 
-ファームウェアアーキテクチャ、環境構築、ビルド、書き込み、および二次開発の詳細については、reSpeaker Clip ファームウェア開発ガイド（近日公開）を参照してください。
+ファームウェアアーキテクチャ、環境構築、ビルド、書き込み、二次開発の詳細については、reSpeaker Clip Firmware Development Guide（近日公開）を参照してください。
 
 ### アプリケーション SDK
 
@@ -468,27 +468,27 @@ reSpeaker Clip のファームウェアは nRF Connect SDK / Zephyr RTOS 上に�
 | --- | --- | --- |
 | iOS | Swift | Coming soon |
 | Android | Kotlin | Coming soon |
-| デスクトップ / サーバー | Python | Coming soon |
+| デスクトップ / サーバー | Python | [Available](/ja/respeaker_clip_basic_sdk_guide) |
 
 ## アプリケーション
 
-reSpeaker Clip は B 向けビジネスシナリオで利用でき、企業のツールチェーンと統合することで、音声キャプチャと文字起こしから、インテリジェントな要約、業務システムへのアーカイブまでの一連のワークフローを構築できます。
+reSpeaker Clip は B 向けビジネスシナリオで利用でき、エンタープライズのツールチェーンと統合することで、音声キャプチャと文字起こしから、インテリジェントな要約、業務システムへのアーカイブまでの完全なワークフローを構築できます。
 
 ### 小売サービス研修
 
-小売の販売・サービススタッフは reSpeaker Clip を装着して顧客との会話を録音できます。会話後、AI が録音から顧客要件の要約と実行可能な ToDo リストを生成し、チームのサービス品質、フォローアップ効率、成約率の向上に役立ちます。
+小売の販売・サービススタッフは reSpeaker Clip を装着して顧客との会話を録音できます。会話後、AI が録音から顧客要件の要約と実行可能な ToDo リストを生成し、チームのサービス品質、フォローアップ効率、コンバージョン率の向上に役立ちます。
 
 ### 会議議事録
 
-会議シーンでは、reSpeaker Clip の 360 度全方位集音により複数人のディスカッションをカバーできます。ユーザーは録音中にボタンで重要な瞬間にマークを付けることができ、会議後に自動的に構造化された議事録、ハイライト、アクションアイテムを生成できます。
+会議シーンでは、reSpeaker Clip の 360 度全方位集音により複数人のディスカッションをカバーできます。ユーザーは録音中にボタンで重要な瞬間にマークを付けることができ、会議後には自動的に構造化された議事録、ハイライト、アクションアイテムを生成できます。
 
 ### インタビューとリサーチ
 
-ユーザーインタビュー、市場調査、顧客訪問などの場面で、reSpeaker Clip は生の音声データを取得し、録音を検索・振り返り可能なテキスト資料に整理するのに役立ちます。
+ユーザーインタビュー、市場調査、顧客訪問などにおいて、reSpeaker Clip は生の音声データを取得し、録音を検索・振り返り可能なテキスト資料に整理するのに役立ちます。
 
-### 企業向けカスタマイズ
+### エンタープライズ向けカスタマイズ
 
-企業はオープンな SDK を利用して、reSpeaker Clip を社内のオフィスシステム、CRM、ナレッジベース、プロジェクト管理ツール、あるいはプライベートにデプロイした LLM と統合できます。データコンプライアンス要件を持つ組織は、専用の AI 音声アシスタントやプライベートな音声分析ワークフローを構築することもできます。
+企業はオープンな SDK を利用して、reSpeaker Clip を社内のオフィスシステム、CRM、ナレッジベース、プロジェクト管理ツール、あるいはプライベートにデプロイした LLM と統合できます。データコンプライアンス要件のある組織は、専用の AI 音声アシスタントやプライベートな音声分析ワークフローを構築することもできます。
 
 ## Q&A
 
@@ -498,7 +498,7 @@ reSpeaker Clip は B 向けビジネスシナリオで利用でき、企業の�
 
 - デバイスが充電ベースに正しく設置されており、マグネット接点がずれていないことを確認します。
 - USB-C ケーブルと電源アダプタが正常に動作しているか確認します。
-- デバイス底面および充電ベース側のマグネット充電接点を清掃し、ホコリや異物による接触不良を防ぎます。
+- デバイス底面および充電ベース上のマグネット充電接点を清掃し、ホコリや異物による接触不良を防ぎます。
 - 10 分間充電してから、もう一度電源ボタンを長押しします。
 - それでもデバイスが反応しない場合は、デバイスの状態を記録し、テクニカルサポートに連絡してください。
 
@@ -508,7 +508,7 @@ reSpeaker Clip は B 向けビジネスシナリオで利用でき、企業の�
 
 - デバイスの電源が入っており、他のスマートフォンに接続されていないことを確認します。
 - スマートフォンで Bluetooth 権限を有効にし、SenseCraft Voice App に Bluetooth の使用を許可します。
-- スマートフォンをデバイスに近づけて再スキャンします。
+- スマートフォンをデバイスに近づけて、再度スキャンします。
 - スマートフォンのシステム Bluetooth リストから古い reSpeaker Clip のペアリング記録を削除し、再度ペアリングします。
 - デバイスとアプリを再起動してから、もう一度お試しください。
 
@@ -524,7 +524,7 @@ reSpeaker Clip は B 向けビジネスシナリオで利用でき、企業の�
 
 ### Wi-Fi プロビジョニングに失敗する
 
-デバイスが Wi-Fi プロビジョニングを完了できない場合は、次の点を確認してください：
+デバイスが Wi-Fi プロビジョニングを完了できない場合は、次を確認してください：
 
 - Wi-Fi 名とパスワードが正しいこと。
 - ルーターが新しいデバイスをブロックしていないこと。
@@ -538,7 +538,7 @@ SenseCraft Voice App がデバイスを見つけられない場合は、次を�
 
 - デバイスの電源が入っており、接続待機状態であることを確認します。
 - アプリに Bluetooth、位置情報、または近くのデバイスの権限が付与されていることを確認します。
-- スマートフォンをデバイスに近づけて再スキャンします。
+- スマートフォンをデバイスに近づけて、再度スキャンします。
 - アプリを終了して再度開きます。
 - reSpeaker Clip を再起動し、もう一度デバイスを追加します。
 
@@ -557,16 +557,16 @@ OTA またはファームウェア更新に失敗した場合は、次を試し�
 | リソース | リンク |
 | --- | --- |
 | 製品ページ | [reSpeaker Clip Wearable AI Recorder](https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html) |
-| SenseCraft Voice App ダウンロード | [ダウンロードページ](https://sensecraft-voice-download.seeed.cc/) |
+| SenseCraft Voice App ダウンロード | [Download Page](https://sensecraft-voice-download.seeed.cc/) |
 | ファームウェアダウンロード | Coming soon |
 | SDK リポジトリ | Coming soon |
-| ユーザーマニュアル | <a href="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_user_manual.pdf" target="_blank" rel="noopener noreferrer">reSpeaker Clip ユーザーマニュアル</a> |
+| ユーザーマニュアル | <a href="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_user_manual.pdf" target="_blank" rel="noopener noreferrer">reSpeaker Clip User Manual</a> |
 | データシート | Coming soon |
 | メカニカル図面 | Coming soon |
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

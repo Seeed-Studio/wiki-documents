@@ -1,6 +1,6 @@
 ---
 description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino 菜谱——使用 Seeed_GFX 和 GxEPD2 库从 Arduino 驱动电子纸显示屏，包括 Hello World 示例，以及在 E1001 上实现 4 级灰度、在 E1003 上实现 16 级灰度。
-title: 'Arduino 菜谱：电子纸显示屏 (reTerminal E 系列)'
+title: Arduino 菜谱：电子纸显示屏 (reTerminal E 系列)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
@@ -9,7 +9,7 @@ last_update:
   date: 05/15/2026
   author: dimo
 createdAt: '2025-08-21'
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';

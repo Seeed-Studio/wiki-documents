@@ -1,5 +1,5 @@
 ---
-description: Guía para flashear el firmware repetidor MeshCore en el ESP32S3 mediante Web USB, junto con la configuración de la app para la región LoRa y el ajuste de la ruta.
+description: Guía para flashear el firmware de repetidor MeshCore en el ESP32S3 mediante Web USB, junto con la configuración de la app para la región LoRa y el ajuste de la ruta.
 title: Primeros pasos con ESP32 MeshCore
 keywords:
   - Meshcore
@@ -12,7 +12,7 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-04-23'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/es/get_started_with_esp32s3_meshcore/
 ---
 
@@ -55,7 +55,7 @@ Mientras mantienes pulsado el botón `Boot(B)`, pulsa el botón `Reset(R)` para 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/RB.png" alt="pir" width={300} height="auto" /></p>
 
-Elige `Erase device `, luego haz clic en `Flash` y selecciona el puerto serie llamado `Xiao xxx` o `debug unit xxx`
+Elige `Erase device `, luego haz clic en `Flash` y elige el puerto serie llamado `Xiao xxx` o `debug unit xxx`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Flash1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -74,7 +74,7 @@ El SX-1262 se puede conectar al Xiao ESP32-S3 mediante la interfaz B2B. El SX-12
 El siguiente diagrama muestra el mapeo de pines B2B entre XIAO ESP32S3 y Wio-SX1262.
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="B2B pin mapping between XIAO ESP32S3 and Wio-SX1262"/>
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="Mapeo de pines B2B entre XIAO ESP32S3 y Wio-SX1262"/>
 </div>
 :::warning
 El SX-1262 compatible solo se puede comprar dentro del kit.
@@ -179,7 +179,7 @@ Cambia la región LoRa y guarda la configuración. Entonces el dispositivo se re
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
 :::info
-**EU_868** debe cumplir una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
+**EU_868** tiene que cumplir una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
 :::
 
 Entonces puedes empezar a probar tu propia red Mesh.
@@ -200,11 +200,11 @@ Después de iniciar sesión, puedes ver la página de configuración. Ahora pued
 
 ### Configurar ruta
 
-Antes de añadir el repetidor a tu ruta, es posible que necesites usar el repetidor para enviar primero un anuncio. El repetidor enviará anuncios automáticamente a intervalos regulares. Este intervalo puede ser de varias horas (por defecto 3 horas). Así que necesitas enviar el anuncio manualmente o, de lo contrario, tendrás que esperar.
+Antes de añadir el repetidor a tu ruta, es posible que primero necesites usar el repetidor para enviar un anuncio. El repetidor enviará anuncios automáticamente a intervalos regulares. Este intervalo puede ser de varias horas (por defecto 3 horas). Así que necesitas enviar anuncios manualmente o, de lo contrario, tendrás que esperar.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/SendAdvert.png" alt="pir" width={800} height="auto" /></p>
 
-Puedes configurar manualmente la ruta de envío de mensajes. Conecta tu dispositivo compañero Bluetooth a la app de tu teléfono. Abre una ventana de mensaje privado. Entonces podrás elegir el repetidor detectado para formar tu ruta.
+Puedes configurar manualmente la ruta de envío de mensajes. Conecta tu dispositivo compañero Bluetooth a la app de tu teléfono. Abre una ventana de mensaje privado. Entonces podrás elegir el repetidor descubierto para formar tu ruta.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -324,9 +324,9 @@ Puedes usar [ESPConnect](https://thelastoutpostworkshop.github.io/ESPConnect/) p
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-2.png" alt="Selección de velocidad en baudios en ESPConnect" width={800} height="auto" /></p>
 
-2. Haz clic en **Connect**, luego selecciona **USB JTAG/serial debug unit**.
+2. Haz clic en **Connect** y luego selecciona **USB JTAG/serial debug unit**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-3.png" alt="Seleccionar unidad de depuración USB JTAG serial en ESPConnect" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-3.png" alt="Seleccionar USB JTAG serial debug unit en ESPConnect" width={600} height="auto" /></p>
 
 3. Después de que el dispositivo esté conectado, abre la página **Partitions**.
 4. Comprueba si `spiffs` existe en la lista de particiones.
@@ -364,7 +364,7 @@ En su lugar, se debe flashear el firmware completo combinado, por ejemplo:
 Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26-merged.bin
 ```
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-1.png" alt="Opciones de descarga del flasheador MeshCore para firmware normal y combinado" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-1.png" alt="Opciones de descarga del flasher MeshCore para firmware normal y combinado" width={800} height="auto" /></p>
 
 Para solucionar este problema, borra el dispositivo y vuelve a flashear la versión de firmware combinada.
 
@@ -379,24 +379,34 @@ Para solucionar este problema, borra el dispositivo y vuelve a flashear la versi
 - **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
 - **[LBR]** [Huella Eagle de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed-Studio-XIAO-ESP32S3-footprint-eagle.lbr)
 - **[ZIP]** [Firmware de fábrica de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip)
-- **[XLSX]** [Hoja de pines de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
+- **[XLSX]** [Hoja de distribución de pines de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 - 🔗 **[Kicad]** [Huella de Seeed Studio XIAO ESP32S3](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 - [Archivo 3D de la carcasa](https://www.thingiverse.com/thing:6888371)
 ## Recursos del curso
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[Ebook]** [XIAO: Big Power, Small Board Dominando Arduino y TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>

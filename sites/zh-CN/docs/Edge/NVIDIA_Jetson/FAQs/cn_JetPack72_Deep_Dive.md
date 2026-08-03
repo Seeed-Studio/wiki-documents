@@ -14,7 +14,7 @@ last_update:
   date: 06/11/2026
   author: Dayu
 createdAt: '2026-06-11'
-updatedAt: '2026-06-11'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/cn/jetpack72_deep_dive/
 ---
 
@@ -38,7 +38,7 @@ Seeed 使用的测试平台是 reComputer Jetson AGX Orin Developer Kit GMSL Bun
 
 #### Q1: JetPack 7.2 对 Jetson 用户的主要变化是什么？
 
-JetPack 7.2 通过更新的 Jetson Linux 基线、Ubuntu 24.04、CUDA 13、更新的 AI 运行时组件，以及在内存效率和 Agentic AI 工作流方面的平台级改进，推动了 Jetson 软件栈的升级。
+JetPack 7.2 通过更新的 Jetson Linux 基础、Ubuntu 24.04、CUDA 13、更新的 AI 运行时组件，以及在内存效率和 Agentic AI 工作流方面的平台级改进，推动了 Jetson 软件栈的升级。
 
 对于 Jetson AGX Orin 32GB 用户，其中一个最重要的变化是 Seeed 测试中使用的新高性能功耗模式。当载板的供电和散热设计能够支撑时，该模式允许同一模组以更高的 GPU 频率运行，并提供更高的 AI 吞吐量。
 
@@ -88,13 +88,13 @@ Seeed 使用 JetPack 6.2 和 JetPack 7.2 软件环境以及相同的大语言模
 
 | 场景 | 建议 |
 | --- | --- |
-| 新的 Jetson AGX Orin 项目 | 如果所需的 BSP、驱动和应用栈已经可用，可考虑直接从 JetPack 7.2 起步。 |
+| 新的 Jetson AGX Orin 项目 | 如果所需的 BSP、驱动和应用栈已就绪，可考虑直接从 JetPack 7.2 起步。 |
 | 现有 JetPack 6.x 项目 | 迁移前请验证内核模块、CUDA 依赖、TensorRT 引擎、相机驱动和外设驱动。 |
-| 受内存限制的 LLM 或 VLM 负载 | JetPack 7.2 值得评估，因为测得的内存占用降低可以让更大的模型或多服务流水线更易运行。 |
+| 受内存限制的 LLM 或 VLM 负载 | JetPack 7.2 值得评估，因为测得的内存占用降低有助于运行更大的模型或多服务流水线。 |
 | 使用自定义载板的量产系统 | 不要仅通过运行 `apt upgrade` 来升级。请使用经过验证的完整镜像，或 Seeed 官方支持的 OTA 路径。 |
 
 :::caution
-更高的性能模式会提高功耗和散热需求。在启用高功耗模式之前，请确认载板、电源适配器、机箱以及散热设计能够持续支撑目标负载。
+更高的性能模式会提高功耗和散热需求。在启用高功耗模式前，请确认载板、电源适配器、机箱以及散热设计能够持续支撑目标负载。
 :::
 
 #### Q6: 如何使用 Seeed Jetson DevelopTool 升级到 JetPack 7.2？
@@ -105,30 +105,32 @@ Seeed Jetson DevelopTool 为 Jetson 固件下载、烧录、设备连接和 OTA 
   <img width={800} src="https://files.seeedstudio.com/wiki/flash-page.png" />
 </div>
 
-对于 JetPack 6.x 到 JetPack 7.x 这类大版本迁移，除非 Seeed 明确为你的具体产品和源镜像提供了经过验证的 OTA 路径，否则建议执行完整刷机。
+对于 JetPack 6.x 到 JetPack 7.x 这类大版本迁移，除非 Seeed 明确为你的具体产品和源镜像提供了经过验证的 OTA 路径，否则建议执行完整烧录。
 
-通用流程：
+关于 JetPack 7.2 完整的烧录与 OTA 决策流程、DevelopTool 视频、验证命令和迁移检查清单，请参阅 [Flash and OTA Upgrade to JetPack 7.2](/cn/flash_and_ota_jetpack_7.2/)。
+
+通用工作流程：
 
 1. 安装并打开 Seeed Jetson DevelopTool。
 2. 选择 Jetson 产品或载板型号。
 3. 选择与 JetPack 7.2 匹配的目标 L4T 或 JetPack 版本。
 4. 通过工具下载并解压 BSP 包。
 5. 将 Jetson 设备置于 Force Recovery Mode。
-6. 从主机电脑上检测到该设备。
-7. 开始刷机并等待设备重启。
+6. 在主机 PC 上检测到该设备。
+7. 开始烧录并等待设备重启。
 8. 完成首次开机设置并验证系统版本。
 
-有关该工具的更多详情，请参考 [Seeed Jetson DevelopTool](https://github.com/Seeed-Projects/Seeed-Jetson-DevelopTool)。
+有关该工具的更多信息，请参阅 [Seeed Jetson DevelopTool](https://github.com/Seeed-Projects/Seeed-Jetson-DevelopTool)。
 
 #### Q7: 升级后我应该验证哪些内容？
 
-在刷机或升级完成后，在运行生产负载之前，请验证以下项目：
+在烧录或升级完成后，在运行生产负载之前，请验证以下项目：
 
 - JetPack、L4T、CUDA、cuDNN 和 TensorRT 版本。
 - 负载下的 GPU 频率、电源模式和散热行为。
 - 摄像头、GMSL、以太网、CAN、USB、M.2 以及其他外设接口。
 - 自定义内核模块和 out-of-tree 驱动。
-- AI 框架兼容性，包括 PyTorch、TensorRT 引擎、llama.cpp 构建以及 CUDA 扩展。
+- AI 框架兼容性，包括 PyTorch、TensorRT 引擎、llama.cpp 构建和 CUDA 扩展。
 - 电源与温度稳定性的长时间压力测试。
 
 ## 资源

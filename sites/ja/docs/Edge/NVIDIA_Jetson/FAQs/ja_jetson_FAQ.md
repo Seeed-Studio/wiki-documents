@@ -1,32 +1,32 @@
 ---
-description: Jetson に関するよくある質問
+description: Jetson-FAQ
 title: Jetson 使用に関する FAQ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_FAQ
 last_update:
-  date: 07/14/2026
+  date: 07/15/2026
   author: Seraphina
 createdAt: '2025-04-11'
-updatedAt: '2026-07-14'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/ja/Jetson_FAQ/
 ---
 
 
-このドキュメントには、Jetson シリーズ製品に関連するすべてのよくある質問が含まれています。Jetson を使用中に何らかの問題に直面している場合に非常に役立ちます。
+このドキュメントには、Jetson シリーズ製品に関するよくある質問がすべて含まれています。Jetson を使用中に問題が発生している場合に非常に役立ちます。
 
 #### Q1: インストールのトラブルシューティング
 
 詳細については[こちら](/ja/Troubleshooting_Installation)をクリックしてください
 
-#### Q2: 受け取った reComputer の eMMC の残り容量が約 2GB しかありません。容量不足の問題をどのように解決すればよいですか？
+#### Q2: 受け取った reComputer の eMMC の空き容量が約 2GB しかありません。容量不足の問題をどのように解決すればよいですか？
 
 詳細については[こちら](/ja/solution_of_insufficient_space)をクリックしてください
 
-#### Q3: reComputer と VEYE カメラの互換性の問題をどのように解決しますか？
+#### Q3: reComputer と VEYE カメラの互換性の問題をどのように解決すればよいですか？
 
 詳細については[こちら](/ja/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera)をクリックしてください
 
-#### Q4: IMX477 カメラと A603 キャリアボードの互換性の問題をどのように解決しますか？
+#### Q4: IMX477 カメラと A603 キャリアボードの互換性の問題をどのように解決すればよいですか？
 
 詳細については[こちら](/ja/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board)をクリックしてください
 
@@ -34,15 +34,15 @@ url: https://wiki.seeedstudio.com/ja/Jetson_FAQ/
 
 詳細については[こちら](/ja/get_the_system_log_of_recomputer_j30_and_j40)をクリックしてください
 
-#### Q6: Jetson のフラッシュ中によく発生する書き込みエラー
+#### Q6: Jetson のフラッシュ中によく発生するフラッシュエラー
 
 詳細については[こちら](/ja/usb_timeout_during_flash)をクリックしてください
 
 #### Q7: デバイスをフラッシュした後、USB-A ポートや Ethernet ポートが使えない、または HDMI に表示が出ません。
-**A:** ファイルの完全性を確認してください（例えば、当社は SHA256 チェックサムを提供しています）。一部のキャリアボード（特に A60X シリーズ）では、ドライバパッチが **Linux_for_tegra** ディレクトリに正しくコピー／適用されていることを確認してください。**sudo** 権限が必要なファイルもあり、ディレクトリをコピーする際には、コマンドに **-r** パラメータが含まれていることを確認してください。
+**A:** ファイルの完全性を確認してください（例えば、当社は SHA256 チェックサムを提供しています）。一部のキャリアボード（特に A60X シリーズ）では、ドライバパッチが **Linux_for_tegra** ディレクトリに正しくコピー／適用されていることを確認してください。**sudo** 権限が必要なファイルもあり、ディレクトリをコピーする際は、コマンドに **-r** パラメータが含まれていることを確認してください。
 
-#### Q8: "sudo apt-get update && sudo apt-get upgrade" コマンドを実行した後、システムがクラッシュした／起動できない／画面が真っ黒になる／周辺機器ドライバが失われました。
-**A:** これらの問題は、**「なぜカスタムキャリアボードで apt upgrade によるシステムアップグレードを行ってはいけないのか？」** という問いに集約できます。結論としては：**絶対に** **カスタム／サードパーティ製** キャリアボード上で apt upgrade コマンドを実行しないでください。さらに、apt upgrade コマンドを含むスクリプトの実行や、Ubuntu の GUI アップデータツールの使用も避けてください。サーバから配布される Debian パッケージは、当社カスタムボードの特定の設計を考慮しておらず、強制的にアップグレードすると非互換が発生し、デバイスが起動不能になる可能性があります。このプロセスは公式 devkit にのみ対応しています。これらの問題を解決するには、当社のガイドに従って JetPack を再フラッシュしてください。
+#### Q8: "sudo apt-get update && sudo apt-get upgrade" コマンドを実行した後、システムがクラッシュ／起動不能／ブラックスクリーン／周辺機器ドライバが消失しました。
+**A:** これらの問題は、**「なぜカスタムキャリアボードで apt upgrade によるシステムアップグレードを行ってはいけないのか？」**という問いに集約できます。結論としては：**絶対に** **カスタム／サードパーティ** キャリアボード上で apt upgrade コマンドを実行しないでください。さらに、apt upgrade コマンドを含むスクリプトの実行や、Ubuntu の GUI アップデータツールの使用も避けてください。サーバから配布される Debian パッケージは、当社カスタムボードの設計を考慮しておらず、強制的にアップグレードすると非互換が発生し、デバイスがブリックする可能性があります。このプロセスは公式 devkit にのみ対応しています。これらの問題を解決するには、当社のガイドに従って JetPack を再フラッシュしてください。
 
 #### Q9: apt upgrade を実行できないと言われましたが、ソフトウェアパッケージはどのようにアップグレードすればよいですか？ソフトウェアをアップグレードしないとセキュリティリスクはありますか？
 
@@ -52,7 +52,7 @@ url: https://wiki.seeedstudio.com/ja/Jetson_FAQ/
 
 For details, please click [here](/ja/updating_jetpack_with_ota) -->
 
-#### Q11: Seeed は NVIDIA の Jetson BSP に対してどのような変更を行っていますか。
+#### Q11: Seeed は NVIDIA の Jetson BSP にどのような変更を加えていますか。
 
 詳細については[こちら](/ja/differences_of_l4t_between_seeed_and_nvidia)をクリックしてください
 
@@ -60,13 +60,13 @@ For details, please click [here](/ja/updating_jetpack_with_ota) -->
 詳細については[こちら](/ja/enable_spi_interface_on_jetsonnano)をクリックしてください
 
 #### Q13: Jetson でフラッシュ処理を完了した後、SSD からシステムが起動しないことがあるのはなぜですか？
-この問題は現在、JetPack 5 をフラッシュした際に発生しており、NVIDIA によって公式に文書化されています。解決策については[こちら](/ja/issue_of_jetpack5_failing_to_boot_from_certain_ssd)をクリックしてください。
+この問題は現在、JetPack 5 をフラッシュする際に発生しており、NVIDIA によって公式に文書化されています。解決策については[こちら](/ja/issue_of_jetpack5_failing_to_boot_from_certain_ssd)をクリックしてください。
 
 #### Q14: Seeed の Jetson BSP 用ソースコードプロジェクトをビルドするにはどうすればよいですか？
 詳細については[こちら](/ja/how_to_build_the_source_code_project_for_seeed_jetson_bsp)をクリックしてください
 
-#### Q15: なぜ reComputer/reServer で `apt upgrade` コマンドを実行できないのですか？
-**reComputer/reServer** のカーネルとドライバはカスタマイズされています。`apt upgrade` コマンドを実行すると、カーネルやドライバ関連のパッケージの一部が NVIDIA 公式のリソースに置き換えられ、ソフトウェアの互換性問題を引き起こす可能性があります。<mark>したがって、サードパーティ製の Jetson プラットフォームでは `apt upgrade` を実行しないでください。</mark>
+#### Q15: なぜ reComputer/reServer で `apt upgrade` コマンドを実行してはいけないのですか？
+**reComputer/reServer** のカーネルとドライバはカスタマイズされています。`apt upgrade` コマンドを実行すると、カーネルやドライバ関連のパッケージの一部が NVIDIA 公式のリソースに置き換えられ、ソフトウェアの互換性問題を引き起こす可能性があります。<mark>したがって、サードパーティ製 Jetson プラットフォームでは `apt upgrade` を実行しないでください。</mark>
 
 関連する APT ソースをロックするには、以下の手順を参照してください。こうすることで、誤って apt upgrade を実行してしまった場合でも、影響を最小限に抑えることができます。
 ```bash
@@ -108,7 +108,7 @@ sudo mount.exfat /dev/sda3 /media/seeed/tmp-exfat/
 
 これにより、exFAT でフォーマットされた外付けドライブが `/media/seeed/tmp-exfat/` にマウントされ、Jetson 上で通常どおりアクセスできるようになります。
 
-#### Q18：Jetson のイメージを書き込む前にディスクを暗号化するにはどうすればよいですか？
+#### Q18：Jetson のイメージをフラッシュする前にディスクを暗号化するにはどうすればよいですか？
 
 詳細については[こちら](/ja/how_to_encrypt_the_disk_for_jetson)をクリックしてください
 
@@ -116,7 +116,7 @@ sudo mount.exfat /dev/sda3 /media/seeed/tmp-exfat/
 
 詳細については[こちら](/ja/how_to_establish_the_ethercat_on_jetson)をクリックしてください
 
-#### Q20：Jetson カーネルに関連するものは何も変更していないのに、起動時に Jetson が UUID 関連のエラーを報告し、その後リカバリターミナルに入ってしまいます。
+#### Q20：Jetson カーネルに関連する変更は何も行っていないのに、起動時に Jetson が UUID 関連のエラーを報告し、その後リカバリターミナルに入ってしまいます。
 
 この問題の解決策については、[こちら](/ja/deal_the_issue_of_UUID)をクリックしてください
 
@@ -128,13 +128,13 @@ sudo mount.exfat /dev/sda3 /media/seeed/tmp-exfat/
 
 詳細については[こちら](/ja/jetpack72_deep_dive)をクリックしてください
 
-#### Q23: JetPack 7.2 にアップグレードした後、Intel AX210/AX200 Wi-Fi をどのように復旧させればよいですか？
+#### Q23: JetPack 7.2 にアップグレードした後、Intel AX210/AX200 や Realtek RTL8852BE などの Wi-Fi モジュールをどのように復旧すればよいですか？
 
 詳細については[こちら](/ja/jetpack72_ax210_ax200_wifi_setup_guide)をクリックしてください
 
 ## 技術サポート
 
-当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じてお選びいただける複数のコミュニケーションチャネルを提供しています。
+当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -13,7 +13,7 @@ last_update:
   author: William Zhang
 no_comments: false
 createdAt: '2024-06-27'
-updatedAt: '2026-04-17'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/cn/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/
 ---
 

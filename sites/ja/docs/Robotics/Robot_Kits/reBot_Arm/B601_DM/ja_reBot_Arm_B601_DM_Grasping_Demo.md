@@ -17,7 +17,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-07'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -372,7 +372,7 @@ hardware_yaml: rebotarm_rs.yaml
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ip -details link show can0
 ```

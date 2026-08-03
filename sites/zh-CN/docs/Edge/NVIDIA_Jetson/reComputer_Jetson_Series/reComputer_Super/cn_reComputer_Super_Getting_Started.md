@@ -3,7 +3,7 @@ description: reComputer Super 入门指南
 title: reComputer Super 入门指南
 keywords:
   - reComputer Super
-  - reComputer Super Getting Started
+  - reComputer Super 入门指南
   - Super
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /recomputer_jetson_super_getting_started
@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-06-26'
+updatedAt: '2026-06-27'
 url: https://wiki.seeedstudio.com/cn/recomputer_jetson_super_getting_started/
 ---
 
@@ -24,9 +24,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   <img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png"/>  
 </div>
 
-reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性能方面带来高达 1.7 倍的提升，达到 157 TOPS。该系列包含搭载 Jetson Orin Nano（11410311、11410312）和 Jetson Orin NX（11410313、11410314）的型号。
+reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性能上带来高达 1.7 倍的提升，达到 157 TOPS。该系列包含搭载 Jetson Orin Nano（11410311, 11410312）和 Jetson Orin NX（11410313, 11410314）的型号。
 它面向开发与量产双重场景设计，集成了丰富的接口，包括 M.2 Key E/M、双 RJ45 以太网、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI 和 CAN。预装 Jetpack 6.2 和 Linux OS BSP，可实现开箱即用、快速推向市场。
-它还支持广泛的 LLM 与 Physical AI 框架，例如 NVIDIA、Hugging Face、ONNX、PyTorch 和 ROS2/1，可在边缘侧无缝运行，并将这些多模态能力与机器人应用相结合，助力 Physical AI 开发。
+它还支持广泛的 LLM 与 Physical AI 框架，例如 NVIDIA、Hugging Face、ONNX、PyTorch 和 ROS2/1，可在边缘侧无缝运行，并将这些多模态能力与机器人应用相结合，助力丰富的 Physical AI 开发。
 
 :::note
 可定制选项：Logo 品牌定制、包装和固件烧录。
@@ -37,12 +37,12 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>立即定制 ➜</font></span></strong></a>
 </div>
 
-## 主要特性  
+## 关键特性  
 
 ### 🚀 ​**性能提升**  
 
 - 相比 reComputer Classic，​**AI 性能提升 1.7 倍**，可提供 ​**157 TOPS**  
-- 由 ​**Jetson Orin Nano**（型号：11410311、11410312）和 ​**Jetson Orin NX**（型号：11410313、11410314）驱动  
+- 由 ​**Jetson Orin Nano**（型号：11410311, 11410312）和 ​**Jetson Orin NX**（型号：11410313, 11410314）驱动  
 
 ### 🔌 ​**丰富的连接与接口**  
 
@@ -53,13 +53,13 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 
 ### 🛠️ ​**面向开发与量产**  
 
-- 预装 ​**Jetpack 6.2** 和 ​**Linux OS BSP**，支持开箱部署  
-- 与以下框架无缝集成边缘 AI：  
+- 预装 ​**Jetpack 6.2** 和 ​**Linux OS BSP**，开箱即可部署  
+- 与以下框架实现无缝边缘 AI 集成：  
   - ​**NVIDIA**、​**Hugging Face**、​**ONNX**、​**PyTorch**  
   - 面向机器人应用的 ​**ROS2/1**  
 - 支持 ​**多模态 AI** 和 ​**Physical AI** 开发  
 
-### 🤖 ​**面向边缘 AI 与机器人优化**  
+### 🤖 ​**针对边缘 AI 与机器人优化**  
 
 - 在边缘侧融合 ​**LLM（大语言模型）** 能力与 ​**Physical AI**  
 - 非常适合机器人、工业自动化和实时 AI 推理  
@@ -73,7 +73,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 
 - ​**Jetson Orin Nano**：12V 5A（5525 圆孔电源接口）  
 - ​**Jetson Orin NX**：19V 4.74A（5525 圆孔电源接口）  
-- 始终使用 ​**官方适配器** 并满足供电要求。  
+- 始终使用 ​**官方适配器**，并满足电源需求。  
 
 #### 2. ​**交流电源线**  
 
@@ -81,7 +81,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 
 #### 3. ​**配件**  
 
-- 仅使用 ​**官方推荐** 的配件（如摄像头、无线模块），以获得最佳性能与兼容性。
+- 仅使用 ​**官方推荐** 的配件（如摄像头、无线模块），以获得最佳性能和兼容性。
 
 :::
 
@@ -145,7 +145,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>视频编码器</td>
-      <td colSpan={2}>1080p30，由 1–2 个 CPU 核心支持</td>
+      <td colSpan={2}>由 1-2 个 CPU 核心支持 1080p30</td>
       <td colSpan={2}>1x 4K60（H.265）| 3x 4K30（H.265）<br />6x 1080p60（H.265）| 12x 1080p30（H.265）</td>
     </tr>
     <tr>
@@ -155,7 +155,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>CSI</td>
-      <td colSpan={5}>最多支持 4 路摄像头<br />（通过虚拟通道可达 8 路）<br />8 通道 MIPI CSI-2<br />D-PHY 2.1（最高 20Gbps）</td>
+      <td colSpan={5}>最多支持 4 路摄像头<br />(通过虚拟通道可达 8 路)<br />8 通道 MIPI CSI-2<br />D-PHY 2.1（最高 20Gbps）</td>
     </tr>
     <tr>
       <td>机械尺寸</td>
@@ -166,7 +166,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>存储</td>
-      <td colSpan={4}>1x M.2 KEY M PCIe（内置 1 块 M.2 NVMe 2280 128G SSD）</td>
+      <td colSpan={4}>1x M.2 KEY M PCIe（包含 128G M.2 NVMe 2280 SSD）</td>
     </tr>
     <tr>
       <td rowSpan={3}>网络</td>
@@ -228,7 +228,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>电源</td>
-      <td colSpan={4}>12–19V 5525 圆孔直流电源接口 </td>
+      <td colSpan={4}>12-19V 5525 圆孔直流电源接口 </td>
     </tr>
     <tr>
       <td>Jetpack 版本</td>
@@ -252,7 +252,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>认证</td>
-      <td colSpan={4}>CE、FCC、RoHS、REACH、Telec、KC、振动测试（GB/T 2423）</td>
+      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, 振动测试（GB/T 2423）</td>
     </tr>
   </tbody>
 </table>
@@ -307,7 +307,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
   </tbody>
 </table>
 
-<p><strong>注意：</strong>对于 JetPack 7.2，Ubuntu 24.04 仅支持刷写和目标端组件安装；如果需要主机开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
+<p><strong>Note:</strong> 对于 JetPack 7.2，Ubuntu 24.04 仅支持刷机和目标端组件安装。如果需要主机端开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
 
 :::
 
@@ -373,13 +373,13 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 </div>
 
 :::danger
-JetPack 镜像文件较大，下载可能需要约 60 分钟。请耐心等待下载完成。
+JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等待下载完成。
 :::
 
 :::info
-要验证已下载固件的完整性，可以对比 SHA256 哈希值。
+为了验证已下载固件的完整性，您可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与本 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取已下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
 :::
 
 ### 进入强制恢复模式
@@ -400,9 +400,9 @@ JetPack 镜像文件较大，下载可能需要约 60 分钟。请耐心等待�
 
 **步骤 2.** 连接电源线，为 reComputer Super 上电。
 
-**步骤 3.** 使用 USB Type-C 数据线将 Super 连接到 Ubuntu 主机电脑。
+**步骤 3.** 使用 USB Type-C 数据传输线将 Super 连接到 Ubuntu 主机电脑。
 
-**步骤 4.** 在 Linux 主机电脑上打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据你使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
+**步骤 4.** 在 Linux 主机电脑上，打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据您使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
 
 - 对于 Orin NX 16GB：**0955:7323 NVidia Corp**
 - 对于 Orin NX 8GB：**0955:7423 NVidia Corp**
@@ -419,29 +419,29 @@ JetPack 镜像文件较大，下载可能需要约 60 分钟。请耐心等待�
 
 ### 刷写到 Jetson
 
-**步骤 1：** 解压下载的镜像文件：
+**步骤 1：** 解压已下载的镜像文件：
 
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# JetPack 6.2 示例: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
-# JetPack 7.2 示例: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
+# For JetPack 6.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
+# For JetPack 7.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
 ```
 
 **步骤 2：** 执行以下命令，将 JetPack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
-# 示例: cd mfi_recomputer-orin-super-j401
+# For example: cd mfi_recomputer-orin-super-j401
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-如果刷写过程成功，你将看到如下输出
+如果刷写过程成功，您将看到如下输出
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-刷写命令可能会运行 2-10 分钟。
+刷写命令可能需要运行 2-10 分钟。
 :::
 
 **步骤 3：** 使用 HDMI 线连接显示器，并完成 reComputer Super 系统的初始化配置：
@@ -451,13 +451,18 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 </div>
 
 :::info
-请根据你的需求完成 **System Configuration**。
+请根据您的需求完成 **系统配置（System Configuration）**。
 :::
 
+## 硬件接口使用
+
+:::info
+如果您想进一步了解硬件接口的详细规格和使用方法，请参考[本 wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/)。
+:::
 
 ## 资源
 
-- [reComputer Super 规格书](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
+- [reComputer Super 数据手册](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
 - [原理图](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
 - [3D 文件](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
 - [机械文档 - reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
@@ -474,7 +479,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

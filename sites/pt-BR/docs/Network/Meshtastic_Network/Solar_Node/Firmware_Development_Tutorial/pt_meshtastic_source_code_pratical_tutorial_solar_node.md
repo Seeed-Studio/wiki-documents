@@ -3,9 +3,9 @@ description: Um tutorial prático para configurar o ambiente do código-fonte do
 title: Tutorial de Desenvolvimento com Código-Fonte do Meshtastic
 keywords:
   - Meshtastic
-  - Código-fonte
+  - Source Code
   - PlatformIO
-  - Nó Solar
+  - Solar Node
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png
 slug: /meshtastic_source_code_practical_tutorial_solar_node
 sidebar_position: 4
@@ -14,7 +14,7 @@ last_update:
   author: ycl
 url: https://wiki.seeedstudio.com/pt-br/meshtastic_source_code_practical_tutorial_solar_node/
 createdAt: '2026-03-19'
-updatedAt: '2026-04-15'
+updatedAt: '2026-05-14'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 # Tutorial Prático do Código-Fonte do Firmware Meshtastic
 
-Este tutorial é destinado a usuários que estão começando a trabalhar com o código-fonte do firmware Meshtastic. Ele inclui fluxos de trabalho comuns tanto para Windows quanto para macOS. O objetivo é simples: clonar o repositório oficial, concluir uma compilação bem-sucedida, fazer uma alteração simples na interface do usuário e gravar o firmware modificado no dispositivo para verificação.
+Este tutorial é destinado a usuários que estão começando a trabalhar com o código-fonte do firmware Meshtastic. Ele inclui fluxos de trabalho comuns tanto para Windows quanto para macOS. O objetivo é simples: clonar o repositório oficial, concluir uma compilação bem-sucedida, fazer uma pequena alteração na interface do usuário e gravar o firmware modificado no dispositivo para verificação.
 
 Se você já está familiarizado com Git, Python ou PlatformIO, pode pular as seções correspondentes e ir diretamente para a parte prática.
 
@@ -195,7 +195,7 @@ pip --version
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image6.png)
 
-Se os números de versão forem exibidos, o Python e o pip estão prontos para uso.
+Se forem exibidos números de versão, o Python e o pip estão prontos para uso.
 
 </TabItem>
 
@@ -289,7 +289,7 @@ Depois que o repositório estiver pronto, você pode continuar com qualquer um d
 
 ## Projeto A: Personalização da interface do Wio Tracker L1
 
-### Prática hands-on
+### Prática passo a passo
 
 Neste estágio, não tenha pressa em editar o código. Primeiro, certifique-se de que o projeto consegue executar todo o processo de compilação com sucesso.
 
@@ -299,7 +299,7 @@ Recomenda-se começar com três tarefas:
 2. Verificar `platformio.ini`
 3. Encontrar o ambiente de compilação para sua placa de destino
 
-Um detalhe importante: não se concentre apenas no `platformio.ini` da raiz. Ele na verdade inclui arquivos de configuração adicionais, por exemplo:
+Um detalhe importante: não foque apenas no `platformio.ini` da raiz. Ele na verdade inclui arquivos de configuração adicionais, por exemplo:
 
 ```plain
 extra_configs =
@@ -315,7 +315,7 @@ Ao identificar a placa de destino, preste atenção especial a estes dois diret�
 - `variants/`
 - `boards/`
 
-Aqui usamos o **Wio Tracker L1 Pro** como placa de destino de exemplo.
+Aqui usamos o **Wio Tracker L1 Pro** como exemplo de alvo.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image11.png)
 
@@ -333,7 +333,7 @@ Se você só quiser concluir uma prática mínima de ponta a ponta, concentre-se
 
 **Etapa 1: Confirmar que o projeto compila com sucesso**
 
-Aqui usamos o PlatformIO Core CLI para compilar.
+Aqui usamos a CLI do PlatformIO Core para compilar.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png)
 
@@ -443,9 +443,9 @@ Se a compilação passar neste ponto, a saída do firmware foi gerada com sucess
 
 **Etapa 2: Modificar o código**
 
-**Prática 1: Modificar a exibição da interface**
+**Prática 1: Modificar a interface de exibição (UI)**
 
-Comece rastreando a implementação da exibição a partir da configuração em nível de placa. Você pode primeiro verificar:
+Comece rastreando a implementação da tela a partir da configuração em nível de placa. Você pode primeiro verificar:
 
 - `variants/nrf52840/seeed_wio_tracker_L1/platformio.ini`
 - `variants/nrf52840/seeed_wio_tracker_L1/variant.h`
@@ -459,7 +459,7 @@ Se você continuar rastreando a lógica de exibição, a maior parte do código 
 - `src/graphics/`
 - `src/graphics/draw/`
 
-Exatamente como você o modifica depende da sua capacidade de ler o código-fonte. Aqui começamos com um exemplo bem simples: modificar a interface da tela inicial.
+A forma exata de modificá-lo depende da sua capacidade de ler o código-fonte. Aqui começamos com um exemplo bem simples: modificar a interface da tela inicial.
 
 **Alteração 1: Registrar a borda direita do texto da bateria**
 
@@ -592,7 +592,7 @@ Você pode encontrar o código completo aqui:
 
 [📎SharedUIDisplay.cpp](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/code/SharedUIDisplay.cpp)
 
-**Etapa 3: Compile seu próprio firmware**
+**Etapa 3: Compilar o seu próprio firmware**
 
 Depois de terminar a modificação, volte para a raiz do projeto e compile o mesmo alvo novamente:
 
@@ -664,7 +664,7 @@ Em seguida, selecione o arquivo de firmware que você acabou de compilar e grave
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image20.png)
 
-Neste ponto, o exercício prático com o código-fonte do Meshtastic está concluído. Você passou por todo o fluxo de trabalho: configuração do ambiente, clonagem do repositório, descoberta da configuração da placa, compilação do firmware, modificação da lógica de exibição e verificação final da gravação.
+Neste ponto, o exercício prático com o código-fonte do Meshtastic está concluído. Você percorreu todo o fluxo de trabalho: configuração do ambiente, clonagem do repositório, descoberta da configuração da placa, compilação do firmware, modificação da lógica de exibição e verificação final da gravação.
 
 Se quiser ir além, você pode continuar explorando estas direções:
 
@@ -673,15 +673,15 @@ Se quiser ir além, você pode continuar explorando estas direções:
 3. Adicionar um `variant` independente para a sua própria placa
 4. Continuar rastreando as relações entre `src/`, `variants/` e `boards/`
 
-Se você quiser um exemplo em nível de código-fonte mais orientado a recursos, continue para o Projeto B abaixo. Ele constrói um nó dedicado de telemetria ambiental com `XIAO ESP32S3 + Wio-SX1262 + SHT40`. Em comparação com a modificação de interface do Wio Tracker L1 acima, esta parte foca em configuração padrão, temporização de telemetria e verificação real de malha entre dois nós.
+Se você quiser um exemplo em nível de código-fonte mais orientado a recursos, continue para o Projeto B abaixo. Ele constrói um nó dedicado de telemetria ambiental com `XIAO ESP32S3 + Wio-SX1262 + SHT40`. Em comparação com a modificação de UI do Wio Tracker L1 acima, esta parte se concentra em configuração padrão, temporização de telemetria e verificação real de malha entre dois nós.
 
-## Projeto B: nó de telemetria ambiental XIAO ESP32S3
+## Projeto B: nó de telemetria ambiental com XIAO ESP32S3
 
 ### Objetivo do projeto
 
 Este exemplo avançado usa dois dispositivos Meshtastic na mesma malha.
 
-**Nó sensor remoto**
+**Nó de sensor remoto**
 
 - Ler temperatura e umidade do `SHT40`
 - Usar telemetria ambiental do Meshtastic
@@ -809,7 +809,7 @@ meshtastic --port <gateway_port> --set network.wifi_enabled false
 
 ### Compilar, gravar e verificar
 
-**Etapa 1: Copiar os arquivos modificados**
+**Passo 1: Copiar os arquivos modificados**
 
 Antes de compilar, copie os três arquivos modificados para a sua árvore de código-fonte do Meshtastic `2.7.20` ou `2.7.21`:
 
@@ -828,7 +828,7 @@ Se você copiar os arquivos com um gerenciador de arquivos gráfico, o prompt de
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image5.png)
 
-**Etapa 2: Compilar o firmware remoto**
+**Passo 2: Compilar o firmware remoto**
 
 A partir da raiz do firmware Meshtastic, execute:
 
@@ -838,7 +838,7 @@ pio run -e seeed-xiao-s3
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image6.png)
 
-**Etapa 3: Enviar para o nó remoto**
+**Passo 3: Enviar para o nó remoto**
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -875,7 +875,7 @@ Depois que o envio terminar, o PlatformIO deve indicar uma gravação bem-sucedi
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image8.png)
 
-**Etapa 4: Monitorar os logs seriais**
+**Passo 4: Monitorar os logs seriais**
 
 Use o monitor serial do PlatformIO para verificar tanto o nó remoto quanto o gateway próximo.
 
@@ -907,7 +907,7 @@ Send: relative_humidity=...
 Send: ... temperature=...
 ```
 
-**Etapa 5: Validar com o CLI do Meshtastic**
+**Passo 5: Validar com o CLI do Meshtastic**
 
 Instale primeiro o CLI:
 
@@ -949,7 +949,7 @@ Concentre-se em:
 - `environmentMetrics.temperature`
 - `environmentMetrics.relativeHumidity`
 
-**Etapa 6: Confirmar no aplicativo móvel**
+**Passo 6: Confirmar no aplicativo móvel**
 
 Após a gravação, conecte-se ao nó remoto com o aplicativo móvel Meshtastic e confirme que os dados ambientais estão visíveis. Em seguida, conecte o aplicativo a outro dispositivo na mesma malha e verifique a visualização `Nodes` para confirmar que os valores do sensor estão sendo recebidos pela malha.
 
@@ -988,7 +988,7 @@ Essa estrutura é importante porque mantém a personalização isolada ao alvo `
 - `TRACKER_T1000_E` usa o som personalizado correspondente de desligamento
 - Todas as outras placas Meshtastic ainda seguem a melodia padrão original no caminho `#else` existente
 
-Isso significa que a alteração é intencionalmente de escopo estreito. Ela personaliza a experiência do usuário para uma placa, enquanto preserva o comportamento original para todos os outros alvos suportados.
+Isso significa que a alteração é intencionalmente limitada em escopo. Ela personaliza a experiência do usuário para uma placa, enquanto preserva o comportamento original para todos os outros alvos suportados.
 
 Na minha versão de teste local, a melodia de inicialização é alterada para um som ascendente mais parecido com o de um telefone, e a melodia de desligamento é alterada para um som descendente correspondente.
 
@@ -1017,13 +1017,13 @@ Depois que a compilação passar, grave o firmware no T1000-E e verifique o resu
 
 ### Imagens sugeridas
 
-Para manter o Projeto C curto e legível, geralmente três imagens são suficientes:
+Para manter o Projeto C curto e legível, três imagens geralmente são suficientes:
 
 1. Uma captura de tela de `buzz.cpp` mostrando `playStartMelody()` e `playShutdownMelody()` no mesmo quadro
 2. Uma captura de tela do terminal mostrando que `pio run -e tracker-t1000-e` foi concluído com sucesso
 3. Uma imagem de verificação em dispositivo real ou um pequeno vídeo mostrando o teste de ligar ou desligar o T1000-E
 
-Se o buzzer não tocar durante o teste, primeiro verifique se o modo de buzzer do dispositivo está ativado. Em `playTones()`, o código retorna imediatamente quando o buzzer está desativado ou definido para modo somente notificação.
+Se o buzzer não tocar durante o teste, primeiro verifique se o modo do buzzer do dispositivo está ativado. Em `playTones()`, o código retorna antecipadamente quando o buzzer está desativado ou definido para modo somente notificação.
 
 ## Problemas comuns
 
@@ -1094,3 +1094,25 @@ pio run -e seeed-xiao-s3 -v
 ```bash
 pio run -e seeed-xiao-s3
 ```
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

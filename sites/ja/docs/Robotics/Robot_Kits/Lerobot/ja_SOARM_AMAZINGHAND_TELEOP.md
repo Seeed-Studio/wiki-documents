@@ -14,10 +14,9 @@ last_update:
   date: 2026-07-12
   author: ZhuYuan
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-07-12'
-updatedAt: '2026-07-12'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/ja/soarm_amazinghand_teleop/
 ---
 

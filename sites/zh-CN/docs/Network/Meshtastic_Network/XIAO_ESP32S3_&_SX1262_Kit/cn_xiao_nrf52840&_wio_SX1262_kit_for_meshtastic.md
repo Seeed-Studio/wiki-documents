@@ -9,7 +9,7 @@ last_update:
   date: 12/11/2025
   author: Michelle Huang
 createdAt: '2025-03-13'
-updatedAt: '2026-01-07'
+updatedAt: '2026-06-09'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf52840&_wio_SX1262_kit_for_meshtastic/
 ---
 
@@ -32,7 +32,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 
 - **多功能微控制器**：集成 Nordic nRF52840 芯片，带 FPU，最高运行频率 64 MHz，板载多种开发接口，支持 Arduino / CircuitPython / Micropython
 - **强大的 LoRa 性能**：基于 Semtech SX1262 的远距离 LoRa，支持 868/915 MHz 频段。
-- **双核通信**：同时支持 Bluetooth 和 LoRa 双模，实现跨域互联。
+- **双核通信**：支持蓝牙和 LoRa 双模通信，实现跨域互联。
 - 尺寸仅为 **8mm × 22mm × 23mm**，采用一体化天线设计。
 
 ### 规格参数
@@ -47,7 +47,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 | **工作温度** | -40°C &#126; 65°C |  
 | **尺寸** | 21 x 17.8mm |  
 
-### 引脚分布
+### 引脚定义
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/imageXIAO_nRF52840-2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -55,9 +55,9 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 
 ## 快速上手
 
-XIAO nRF52840 & Wio-SX1262 套件已预刷入 Meshtastic 固件，可帮助你快速开始使用。
+XIAO nRF52840 & Wio-SX1262 套件预装了 Meshtastic 固件，可帮助你快速开始使用。
 
-### 刷写固件
+### 烧录固件
 
 :::caution note
 请 `don't use NRF-OTA` 来更新固件，否则可能导致设备完全损坏。
@@ -71,7 +71,7 @@ XIAO nRF52840 & Wio-SX1262 套件已预刷入 Meshtastic 固件，可帮助你�
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
-将套件连接到电脑，在设备选项中选择 `Seeed` → `Seeed XIAO nRF52840 Kit`，并选择最新固件，然后点击 `Flash`。
+将套件连接到电脑，在设备中选择 `Seeed` → `Seeed XIAO nRF52840 Kit`，并选择最新固件，然后点击 `Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-device.png" alt="pir" width={800} height="auto" /></p>
 
@@ -81,7 +81,7 @@ XIAO nRF52840 & Wio-SX1262 套件已预刷入 Meshtastic 固件，可帮助你�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件拖入 DFU 盘。文件拷贝完成并设备重启后，固件就会被刷写完成。
+将 UF2 文件拖入 DFU 盘。文件拷贝完成并设备重启后，固件即会被烧录。
 
 ### 查看节点名称
 
@@ -98,7 +98,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="IOS App">
 
-- 在 Bluetooth 面板中选择目标设备。
+- 在蓝牙面板中选择目标设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
@@ -123,7 +123,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置参数
 
-为了开始在 Mesh 网络中通信，你必须先设置所在区域。该设置会控制设备使用的频率范围，应根据你所在的地区进行设置。
+为了开始在 Mesh 网络中通信，你必须先设置所在区域。该设置会控制设备使用的频率范围，应根据你所在的地区进行配置。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -146,17 +146,17 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-更多完整列表请参考 [各国家 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/)。
+更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
 **EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当你的设备达到该限制时，将会停止发射，直到再次被允许。
 :::
 
-现在你已经在设备上设置好了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/)。
+现在你已经在设备上设置好了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
 
 #### GNSS 传感器配置
 
-连接一个 [L76K GNSS 模块](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) 来制作一个追踪器。
+连接一个 [L76K GNSS Module](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) 来制作一个追踪器。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image_102010710.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -176,10 +176,10 @@ import TabItem from '@theme/TabItem';
 - **[ZIP]** [Seeed Studio XIAO nRF52840 Eagle 文件](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_KiCAD.zip)
 - **[DXF]** [Seeed Studio XIAO nRF52840 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip)
 - **[LBR]** [Seeed Studio XIAO nRF52840 Eagle 封装库](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-footprint-eagle.lbr)
-- **[XLSX]** [Seeed Studio XIAO nRF52840 引脚分布表](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
+- **[XLSX]** [Seeed Studio XIAO nRF52840 引脚表](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
 - 🔗 **[Kicad]** [Seeed Studio XIAO nRF52840 封装库](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 - **[PDF]** [与 Xiao nRF52840 兼容的 SX1262 原理图](https://files.seeedstudio.com/products/113010003/Wio-SX1262%20for%20XIAO%20V1.0.pdf)
-- **[PDF]** [Wio SX-1262 模块数据手册](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf
+- **[PDF]** [Wio SX-1262 模组数据手册](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf
 )
 
 ### 课程资源
@@ -190,15 +190,23 @@ import TabItem from '@theme/TabItem';
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div>
-

@@ -348,7 +348,7 @@ The colors of the picture should be consistent with the standard colors of the d
 |5.65-inch E-paper -  Sevencolor 600x480        | black, white, red, yellow, blue, green, orange|
 |5.83-inch E-paper - Monocolor 648x480          | pure black and white          |
 |7.5-inch E-paper - Monocolor 800x480           | pure black and white          |
-|7.5-inch E-paper - Tri-Color 800x480           | pure black and white          |
+|7.5-inch E-paper - Tri-Color 800x480           | black, white and red          |
 
 </div>
 

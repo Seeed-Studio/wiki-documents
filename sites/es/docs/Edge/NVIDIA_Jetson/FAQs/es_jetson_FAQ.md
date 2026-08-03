@@ -4,21 +4,21 @@ title: Preguntas frecuentes sobre el uso de Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_FAQ
 last_update:
-  date: 07/14/2026
+  date: 07/15/2026
   author: Seraphina
 createdAt: '2025-04-11'
-updatedAt: '2026-07-14'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/es/Jetson_FAQ/
 ---
 
 
-Este documento contiene todas las preguntas frecuentes relacionadas con los productos de la serie Jetson. Será de gran ayuda si estás teniendo algún problema al usar Jetson.
+Este documento contiene todas las preguntas frecuentes relacionadas con los productos de la serie Jetson. Esto será muy útil si estás teniendo algún problema al usar Jetson.
 
 #### P1: Solución de problemas de instalación
 
 Para más detalles, haz clic [aquí](/es/Troubleshooting_Installation)
 
-#### P2: El espacio restante en la eMMC del reComputer recibido es de solo unos 2GB, ¿cómo resolver el problema de espacio insuficiente?
+#### P2: El espacio restante en la eMMC del reComputer recibido es de solo unos 2 GB, ¿cómo resolver el problema de espacio insuficiente?
 
 Para más detalles, haz clic [aquí](/es/solution_of_insufficient_space)
 
@@ -39,12 +39,12 @@ Para más detalles, haz clic [aquí](/es/get_the_system_log_of_recomputer_j30_an
 Para más detalles, haz clic [aquí](/es/usb_timeout_during_flash)
 
 #### P7: No puedo usar el puerto USB-A, el puerto Ethernet o no hay visualización HDMI después de flashear el dispositivo.
-**R:** Verifica la integridad de los archivos (por ejemplo, proporcionamos las sumas de verificación SHA256). Para algunas placas carrier (especialmente la serie A60X), asegúrate de que el parche del controlador se haya copiado/aplicado correctamente en el directorio **Linux_for_tegra**. Hay archivos que requieren permisos de **sudo**, y cuando copies directorios, asegúrate de que el parámetro **-r** esté incluido en tu comando.
+**R:** Verifica la integridad de los archivos (por ejemplo, proporcionamos las sumas de verificación SHA256); para algunas placas carrier (especialmente la serie A60X), asegúrate de que el parche del controlador se haya copiado/aplicado correctamente en el directorio **Linux_for_tegra**. Hay archivos que requieren permisos de **sudo**, y cuando copies directorios, asegúrate de que el parámetro **-r** esté incluido en tu comando.
 
-#### P8: Mi sistema se bloqueó/no puede arrancar/pantalla en negro/perdió controladores de periféricos después de ejecutar los comandos "sudo apt-get update && sudo apt-get upgrade".
+#### P8: Mi sistema se bloqueó/no puede arrancar/pantalla negra/perdió controladores de periféricos después de ejecutar los comandos "sudo apt-get update && sudo apt-get upgrade".
 **R:** Estos problemas se pueden resumir como **"¿Por qué no puedo actualizar el sistema con apt upgrade en placas carrier personalizadas?"** La respuesta corta es: **No** ejecutes el comando apt upgrade en placas carrier **personalizadas/de terceros**. Además, evita ejecutar cualquier script que incluya comandos apt upgrade o usar herramientas de actualización GUI en Ubuntu. Los paquetes Debian del servidor no tienen en cuenta el diseño específico de nuestras placas personalizadas, y forzar la actualización puede causar incompatibilidades que podrían dejar tu dispositivo inservible. Este proceso solo es compatible con el kit de desarrollo oficial. Para resolver estos problemas, sigue nuestra guía para volver a flashear JetPack.
 
-#### P9: ¿Cómo puedo actualizar los paquetes de software si me dijeron que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?
+#### P9: ¿Cómo puedo actualizar los paquetes de software si me dices que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?
 
 Para más detalles, haz clic [aquí](/es/upgrade_software_packages_for_jetson)
 
@@ -62,13 +62,13 @@ Para más detalles, haz clic [aquí](/es/enable_spi_interface_on_jetsonnano)
 #### P13: ¿Por qué a veces, después de completar el proceso de flasheo en Jetson, el sistema no arranca desde el SSD?
 Este problema ocurre actualmente al flashear JetPack 5, y NVIDIA lo ha documentado oficialmente. Para la solución, haz clic [aquí.](/es/issue_of_jetpack5_failing_to_boot_from_certain_ssd)
 
-#### P14: ¿Cómo compilar el proyecto de código fuente para el BSP de Jetson de Seeed?
+#### P14: ¿Cómo compilar el proyecto de código fuente para el BSP Jetson de Seeed?
 Para más detalles, haz clic [aquí](/es/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
 
 #### P15: ¿Por qué no se puede ejecutar el comando `apt upgrade` en reComputer/reServer?
 Los kernels y controladores de **reComputer/reServer** están personalizados. Si se ejecuta el comando `apt upgrade`, algunos paquetes relacionados con el kernel y los controladores pueden ser reemplazados por los recursos oficiales de NVIDIA, lo que podría causar problemas de compatibilidad de software. <mark>Por lo tanto, no ejecutes `apt upgrade` en ninguna plataforma Jetson de terceros.</mark>
 
-Puedes consultar las siguientes instrucciones para bloquear las fuentes APT relevantes. De esta manera, si apt upgrade se ejecuta accidentalmente, el impacto se minimizará:
+Puedes consultar las siguientes instrucciones para bloquear las fuentes APT relevantes. De este modo, si apt upgrade se ejecuta accidentalmente, el impacto se minimizará:
 ```bash
 sudo apt-mark hold <package-name>
 
@@ -80,7 +80,7 @@ sudo apt-mark hold nvidia-l4t-core
 
 Para más detalles, haz clic [aquí](/es/how_to_build_the_ko_module_for_seeed_jetson)
 
-#### P17：¿Cómo puedo montar un disco duro externo formateado con exFAT en Jetson (JetPack 6)?
+#### P17：¿Cómo puedo montar en Jetson (JetPack 6) un disco duro externo formateado con exFAT?
 
 Primero, instala las dependencias:
 ```
@@ -88,7 +88,7 @@ sudo apt install build-essential autoconf automake libtool pkg-config
 sudo apt install git libfuse-dev
 ```
 
-Luego clona y compila el controlador exFAT desde el código fuente:
+Luego clona y compila desde el código fuente el controlador exFAT:
 ```
 git clone https://github.com/relan/exfat
 cd exfat
@@ -112,11 +112,11 @@ Esto monta la unidad externa formateada en exFAT en `/media/seeed/tmp-exfat/` pa
 
 Para más detalles, haz clic [aquí](/es/how_to_encrypt_the_disk_for_jetson)
 
-#### P19：¿Cómo establecer la comunicación entre Jetson y dispositivos EtherCAT?
+#### P19：¿Cómo establecer comunicación entre Jetson y dispositivos EtherCAT?
 
 Para más detalles, haz clic [aquí](/es/how_to_establish_the_ethercat_on_jetson)
 
-#### P20： No modifiqué nada relacionado con el kernel de Jetson, pero durante el arranque Jetson informó un error relacionado con el UUID y luego entró en el terminal de recuperación.
+#### P20： No modifiqué nada relacionado con el kernel de Jetson, pero durante el arranque Jetson informó un error relacionado con el UUID y luego entró en la terminal de recuperación.
 
 Solución para este problema: haz clic [aquí](/es/deal_the_issue_of_UUID)
 
@@ -128,7 +128,7 @@ Para más detalles, haz clic [aquí](/es/how_to_use_camera_imx219)
 
 Para más detalles, haz clic [aquí](/es/jetpack72_deep_dive)
 
-#### P23: ¿Cómo restaurar el Wi-Fi Intel AX210/AX200 después de actualizar a JetPack 7.2?
+#### P23: ¿Cómo restaurar módulos Wi‑Fi como Intel AX210/AX200 o Realtek RTL8852BE después de actualizar a JetPack 7.2?
 
 Para más detalles, haz clic [aquí](/es/jetpack72_ax210_ax200_wifi_setup_guide)
 

@@ -14,7 +14,7 @@ last_update:
   date: 06/17/2026
   author: David Du
 createdAt: '2026-06-17'
-updatedAt: '2026-06-17'
+updatedAt: '2026-06-18'
 url: https://wiki.seeedstudio.com/cn/update_internal_lr1110_firmware/
 ---
 

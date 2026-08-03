@@ -1,780 +1,397 @@
 ---
-description: Este tópico apresenta a documentação de produtos de Robótica da Seeed Studio e cursos de aprendizado.
+description: Documentação e trilhas de aprendizado de robótica da Seeed Studio.
 title: Robótica
 keywords:
   - robotics
   - nvidia
   - ros
   - isaac
+  - lerobot
   - learning
   - reinforcement learning
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /robotics_page
 last_update:
-  date: 05/29/2025
+  date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-07-01'
+updatedAt: '2026-07-04'
 url: https://wiki.seeedstudio.com/pt-br/robotics_page/
 ---
+
+import '/src/css/robotics-page-style.css';
 
 # 🤖 Robótica
 
 > *"A ciência de hoje é a tecnologia de amanhã." - Edward Teller*
 
-<div className="robotic-tab-container">
+<div className="robotics-page">
 
-  <input type="radio" id="tab-hardware" name="robo-tabs" defaultChecked className="tab-input-hidden" />
-  <input type="radio" id="tab-learning" name="robo-tabs" className="tab-input-hidden" />
+  <section className="hero-panel">
+    <div>
+      <span className="eyebrow">Seeed Studio Robotics Wiki</span>
+      <h2>Comece com o seu kit de robô</h2>
+      <p>Encontre o caminho de robótica da Seeed Studio certo para você, por produto. Escolha seu kit e siga as etapas desde a configuração até o desenvolvimento avançado.</p>
+    </div>
+    <div className="hero-tips">
+      <div><strong>Novo dispositivo</strong><span>Desembale, faça a fiação, ligue, instale drivers e teste o movimento</span></div>
+      <div><strong>Crie aplicações</strong><span>Use SDKs, LeRobot, ROS2, visão ou controle móvel</span></div>
+      <div><strong>Robótica com IA</strong><span>Explore simulação, coleta de dados, GR00T, VLA e RL</span></div>
+    </div>
+  </section>
 
-  <!-- 顶部 Tab 切换条 -->
-  <div className="tab-nav-wrapper">
-    <nav className="tab-nav">
-      <label htmlFor="tab-hardware" className="tab-item">
-        <span className="icon">📦</span>
-        <span className="text">Wiki de Hardware</span>
-      </label>
-      <label htmlFor="tab-learning" className="tab-item">
-        <span className="icon">🎓</span>
-        <span className="text">Centro de Aprendizado</span>
-        <span className="badge">Novo</span>
-      </label>
-      <div className="tab-slider"></div>
-    </nav>
+  <nav className="quick-nav" aria-label="Robotics page quick navigation">
+    <a href="#robot-kits">📦 Kits de robô</a>
+    <a href="#actuators">⚙️ Atuadores de junta</a>
+    <a href="#sensors">👁️ Sensores</a>
+    <a href="#software">💻 Ecossistema de software</a>
+  </nav>
+
+  <section className="kit-index-panel" aria-label="Quick robot kit selection">
+    <div className="section-title-row compact-title">
+      <div>
+        <span className="section-kicker">Escolha um kit</span>
+        <h2>Escolha sua trilha de aprendizado</h2>
+      </div>
+      <p>Os cartões ficam recolhidos por padrão. Abra o seu kit para ver a trilha correspondente.</p>
+    </div>
+    <div className="kit-index-grid">
+      <a href="#rebot-rs"><span>🦾</span><strong>B601-RS</strong><small>Trilha do braço robótico RobStride</small></a>
+      <a href="#rebot-dm"><span>🦾</span><strong>B601-DM</strong><small>Trilha do braço robótico Damiao</small></a>
+      <a href="#soarm"><span>🤗</span><strong>SO100 / SO101</strong><small>Trilha LeRobot de baixo custo</small></a>
+      <a href="#starai"><span>🦾</span><strong>StarAI</strong><small>ROS2 / MoveIt / GR00T</small></a>
+      <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>Chassi móvel e demonstrações de aplicações</small></a>
+      <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>Trilha de robô com rodas e pernas</small></a>
+      <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>Trilha de robô interativo de mesa</small></a>
+    </div>
+  </section>
+
+  <section id="robot-kits" className="section-block">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Comece aqui</span>
+        <h2>📦 Kits de robô</h2>
+      </div>
+      <p>Cada trilha começa com a configuração de hardware e depois avança para SDK, ROS, simulação e aplicações de IA.</p>
+    </div>
+
+    <div className="product-stack">
+
+<details id="rebot-rs" className="product-card rebot">
+  <summary>
+    <div className="product-head">
+      <span className="product-icon">🦾</span>
+      <div>
+        <h3>reBot B601-RS Robotic Arm</h3>
+        <span>Para teleoperação, preensão visual, ROS2 e coleta de dados de IA</span>
+      </div>
+    </div>
+    <span className="summary-action">Expandir plano de aprendizado</span>
+  </summary>
+  <div className="product-body">
+    <div className="product-meta-grid">
+      <div><strong>Recomendado para</strong><span>Usuários iniciantes do reBot Arm</span></div>
+      <div><strong>Objetivo de aprendizado</strong><span>Executar teleoperação, preensão visual e ROS2</span></div>
+      <div><strong>Ordem recomendada</strong><span>Quick Start → LeRobot → Pinocchio → Visual Grasping → ROS2</span></div>
+    </div>
+    <div className="learning-steps">
+      <a className="step-card" href="/pt-br/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Quick Start</b><small>Desembale, faça a fiação, ligue, verifique os drivers e teste o movimento básico.</small></div><em>Obrigatório para iniciantes</em></a>
+      <a className="step-card" href="/pt-br/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>LeRobot Teleoperation and Data Collection</b><small>Colete dados de teleoperação para aprendizado por imitação e IA incorporada.</small></div><em>Coleta de dados</em></a>
+      <a className="step-card" href="/pt-br/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio Kinematics Visualization</b><small>Explore o modelo do braço, juntas, quadros e cinemática.</small></div><em>Controle avançado</em></a>
+      <a className="step-card" href="/pt-br/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Use visão e geração de pose de preensão para pegar objetos reais.</small></div><em>Demonstração de aplicação</em></a>
+      <a className="step-card" href="/pt-br/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Conecte o braço ao ROS2 para percepção, planejamento e simulação.</small></div><em>Integração de sistema</em></a>
+      <a className="step-card" href="/pt-br/rebot_arm_b601_rs_isaacsim/"><span className="step-index">6</span><div><b>ROS2 Integration</b><small>Simule o braço no Isaac Sim e sincronize com o robô real.</small></div><em>Simulação</em></a>
+    </div>
+  </div>
+</details>
+
+<details id="rebot-dm" className="product-card rebot">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🦾</span>
+    <div>
+      <h3>reBot B601-DM Robotic Arm</h3>
+      <span>Para controle baseado em Damiao, LeRobot, Pinocchio e ROS2</span>
+    </div>
+  </div>
+  <span className="summary-action">Expandir plano de aprendizado</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>Recomendado para</strong><span>Usuários B601-DM e coleta de dados de IA</span></div>
+    <div><strong>Objetivo de aprendizado</strong><span>Configurar drivers, cinemática, LeRobot e preensão</span></div>
+    <div><strong>Ordem recomendada</strong><span>Quick Start → LeRobot → Pinocchio → Visual Grasping → ROS2</span></div>
+  </div>
+<div className="learning-steps">
+  <a className="step-card" href="/pt-br/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Quick Start</b><small>Verifique alimentação, CAN, drivers e movimento básico.</small></div><em>Obrigatório para iniciantes</em></a>
+
+  <a className="step-card" href="/pt-br/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>LeRobot Data Collection</b><small>Registre dados de teleoperação para aprendizado por imitação.</small></div><em>Dados de IA</em></a>
+
+  <a className="step-card" href="/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio and Meshcat</b><small>Carregue modelos, visualize movimento e aprenda cinemática.</small></div><em>Noções básicas de controle</em></a>
+
+  <a className="step-card" href="/pt-br/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine o braço e a visão para preensão no mundo real.</small></div><em>Demonstração de aplicação</em></a>
+
+  <a className="step-card" href="/pt-br/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Use ROS2 com MoveIt, percepção e aplicações de sistema.</small></div><em>Integração de sistema</em></a>
+</div>
+</div>
+</details>
+
+<details id="soarm" className="product-card soarm">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🤗</span>
+    <div>
+      <h3>SO100 / SO101 Robotic Arm</h3>
+      <span>Trilha de baixo custo para LeRobot, simulação, RL e GR00T/VLA</span>
+    </div>
+  </div>
+  <span className="summary-action">Expandir plano de aprendizado</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>Recomendado para</strong><span>Aprendizes de LeRobot e IA incorporada de baixo custo</span></div>
+    <div><strong>Objetivo de aprendizado</strong><span>Aprender servos, simulação, RL, GR00T e braços duplos</span></div>
+    <div><strong>Ordem recomendada</strong><span>Getting Started → Servo Debugging → Simulation → Isaac Lab → GR00T → Dual Arms</span></div>
+  </div>
+  <div className="learning-steps">
+    <a className="step-card" href="/pt-br/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 Quick Start</b><small>Instale o hardware, conecte, calibre e execute um teste básico.</small></div><em>Obrigatório para iniciantes</em></a>
+    <a className="step-card" href="/pt-br/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Servo Debugging Tool</b><small>Verifique ID do servo, direção, ponto zero e comunicação.</small></div><em>Noções básicas de solução de problemas</em></a>
+    <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">3</span><div><b>SO101 and NVIDIA GR00T</b><small>Ajuste fino modelos VLA e faça o deploy no Jetson.</small></div><em>VLA avançado</em></a>
+    <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>Dual-Arm SO-ARM Training</b><small>Colete dados, treine e execute tarefas com dois braços.</small></div><em>Tarefas complexas</em></a>
+    <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM with Amazing Hand Dexterous Hand</b><small>Combine SO-ARM101 com Amazing Hand para LeRobot.</small></div><em>Integração de mão hábil</em></a>
+    <a className="step-card" href="/pt-br/simulate_soarm101_by_leisaac/"><span className="step-index">6</span><div><b>LeIsaac Simulation</b><small>Prepare-se para Sim2Real com modelos e tarefas simulados.</small></div><em>Noções básicas de simulação</em></a>
+    <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Isaac Lab Reinforcement Learning</b><small>Treine políticas em simulação e revise o design de recompensas.</small></div><em>Treinamento avançado</em></a>
+    <a className="step-card optional" href="/pt-br/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b><small>Experimente plataformas de terceiros para coleta de dados e treinamento.</small></div><em>Extensão opcional</em></a>
+  </div>
+</div>
+</details>
+
+<details id="starai" className="product-card starai">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🦾</span>
+    <div>
+      <h3>StarAI Robotic Arm</h3>
+      <span>Para controle básico, MoveIt 2, planejamento ROS2 e GR00T</span>
+    </div>
+  </div>
+  <span className="summary-action">Expandir plano de aprendizado</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>Recomendado para</strong><span>Demonstrações de planejamento ROS2 e controle com IA</span></div>
+    <div><strong>Objetivo de aprendizado</strong><span>Executar controle básico, MoveIt 2 e GR00T</span></div>
+    <div><strong>Ordem recomendada</strong><span>Início Rápido → MoveIt 2 → GR00T</span></div>
+  </div>
+  <div className="learning-steps">
+    <a className="step-card" href="/pt-br/lerobot_starai_arm/"><span className="step-index">1</span><div><b>Início Rápido do Braço Robótico StarAI</b><small>Conecte o hardware, execute o controle básico e teste exemplos.</small></div><em>Obrigatório para iniciantes</em></a>
+    <a className="step-card" href="/pt-br/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>Planejamento de Movimento com MoveIt 2</b><small>Importe modelos e planeje trajetórias com o MoveIt 2.</small></div><em>ROS2 avançado</em></a>
+    <a className="step-card" href="/pt-br/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI e NVIDIA GR00T</b><small>Construa controle de braço robótico com LLMs / VLA.</small></div><em>Controle com IA</em></a>
+  </div>
+</div>
+</details>
+
+<details id="lekiwi" className="product-card lekiwi">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🚗</span>
+    <div>
+      <h3>Lekiwi Mobile Chassis</h3>
+      <span>Para controle de chassi e demonstrações de seguimento de som</span>
+    </div>
+  </div>
+  <span className="summary-action">Expandir plano de aprendizado</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>Recomendado para</strong><span>Usuários de chassi móvel pela primeira vez</span></div>
+    <div><strong>Objetivo de aprendizado</strong><span>Executar controle de chassi e demonstrações de seguimento de som</span></div>
+    <div><strong>Observação</strong><span>Etapas ROS2 removidas; apenas o caminho do produto atual permanece</span></div>
+  </div>
+  <div className="learning-steps">
+    <a className="step-card" href="/pt-br/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Início Rápido do Lekiwi Mobile Chassis</b><small>Monte, conecte, teste o movimento e verifique a segurança.</small></div><em>Obrigatório para iniciantes</em></a>
+    <a className="step-card" href="/pt-br/sound_follow_robot/"><span className="step-index">2</span><div><b>Demonstração de Seguimento de Som</b><small>Use entrada de som para conduzir uma demonstração móvel interativa.</small></div><em>Demonstração de aplicação</em></a>
+  </div>
+</div>
+</details>
+
+<details id="stackforce" className="product-card stackforce">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🦿</span>
+    <div>
+      <h3>StackForce Mini Wheeled-Legged Robot</h3>
+      <span>Para controle com rodas e pernas, equilíbrio e planejamento de movimento</span>
+    </div>
+  </div>
+  <span className="summary-action">Expandir plano de aprendizado</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>Recomendado para</strong><span>Estudantes de robôs móveis e com rodas e pernas</span></div>
+    <div><strong>Objetivo de aprendizado</strong><span>Aprender estrutura, lógica de controle e movimento básico</span></div>
+    <div><strong>Ordem recomendada</strong><span>Início Rápido → Princípios de Controle → Depuração de Movimento</span></div>
+  </div>
+  <div className="learning-steps">
+    <a className="step-card" href="/pt-br/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>Início Rápido do StackForce Mini</b><small>Conheça o hardware, faça a implantação básica e teste o movimento.</small></div><em>Curso de sistema</em></a>
+  </div>
+</div>
+</details>
+
+<details id="reachy" className="product-card reachy">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🤗</span>
+    <div>
+      <h3>Reachy Mini</h3>
+      <span>Para HRI de mesa, agentes, SDK, simulação e IA</span>
+    </div>
+  </div>
+  <span className="summary-action">Expandir plano de aprendizado</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>Recomendado para</strong><span>Interação com robô de mesa e demonstrações de agentes</span></div>
+    <div><strong>Objetivo de aprendizado</strong><span>Começar com o básico, depois SDK, IA e solução de problemas</span></div>
+    <div><strong>Documentação</strong><span>Organizada do básico à plataforma, SDK, IA e solução de problemas</span></div>
   </div>
 
-  <!-- ==================== Tab 1: 硬件文档==================== -->
-  <div className="tab-content content-hardware">
-
-    <div className="quick-nav-container">
-      <nav className="quick-nav">
-        <a href="#robot-kits" className="nav-item">
-          <span className="icon">📦</span>
-          <span className="text">Kits de Robô</span>
-          <div className="hover-effect"></div>
-        </a>
-        <a href="#actuators" className="nav-item">
-          <span className="icon">⚙️</span>
-          <span className="text">Atuadores de Junta</span>
-          <div className="hover-effect"></div>
-        </a>
-        <a href="#sensors" className="nav-item">
-          <span className="icon">👁️</span>
-          <span className="text">Sensores</span>
-          <div className="hover-effect"></div>
-        </a>
-        <a href="#software" className="nav-item">
-          <span className="icon">💻</span>
-          <span className="text">Software</span>
-          <div className="hover-effect"></div>
-        </a>
-      </nav>
-    </div>
-
-    <div className="nav-grid">
-
-      <h2 id="robot-kits">📦 Kits de Robô</h2>
-
-      <div className="category-group">
-        <div className="category-card robot-kits">
-
-
-          <h3>🦾 reBot Arm</h3>
-            <h4> B601-DM Arm</h4>
-          <div className="card-container">
-              <a href="/pt-br/rebot_b601_dm_getting_started/" className="content-card">
-                <span className="text">Introdução ao reBot B601-DM</span>
-              </a>
-              <a href="/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
-                <span className="text">reBot B601-DM com Pinocchio</span>
-              </a>
-              <a href="/pt-br/rebot_arm_b601_dm_lerobot/" className="content-card">
-                <span className="text">reBot B601-DM com LeRobot</span>
-              </a>
-              <a href="/pt-br/rebot_arm_b601_dm_grasping_demo/" className="content-card">
-                <span className="text">reBot B601-DM com demonstração GraspNet</span>
-              </a>
-              <a href="/pt-br/rebot_arm_b601_dm_ros2_integration/" className="content-card">
-                <span className="text">reBot B601-DM com ROS2</span>
-              </a>
+<div className="reachy-path-grid">
+            <div className="mini-track">
+              <h4>① Conheça o produto primeiro</h4>
+              <a href="/pt-br/reachymini_intro/">Introdução ao Produto Reachy Mini</a>
+              <a href="/pt-br/reachymini_getting_started/">Guia de Introdução ao ReachyMini</a>
+            </div>
+            <div className="mini-track">
+              <h4>② Escolha sua plataforma</h4>
+              <a href="/pt-br/reachymini_platforms_simulation_get_started/">Início Rápido da Simulação</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_get_started/">Guia de Configuração Sem Fio do Reachy Mini</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_usage/">Usando o Reachy Mini</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_hardware/">Folha de Dados de Hardware do Reachy Mini</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_lite_get_started/">Guia de Configuração do Reachy Mini Lite</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_lite_usage/">Usando o Reachy Mini Lite</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_lite_hardware/">Folha de Dados de Hardware do Reachy Mini Lite</a>
+            </div>
+            <div className="mini-track">
+              <h4>③ SDK e fundamentos de desenvolvimento</h4>
+              <a href="/pt-br/reachymini_sdk_readme/">Reachy Mini SDK</a>
+              <a href="/pt-br/reachymini_sdk_installation/">Guia de Instalação</a>
+              <a href="/pt-br/reachymini_sdk_quickstart/">Guia de Início Rápido</a>
+              <a href="/pt-br/reachymini_sdk_python-sdk/">Referência do Python SDK</a>
+              <a href="/pt-br/reachymini_sdk_core-concept/">Conceitos Centrais e Arquitetura</a>
+              <a href="/pt-br/reachymini_sdk_media-architecture/">Arquitetura de Mídia</a>
+              <a href="/pt-br/reachymini_sdk_gstreamer-installation/">Instalação do GStreamer</a>
+              <a href="/pt-br/reachymini_sdk_javascript-sdk/">JavaScript SDK e Aplicações Web</a>
+            </div>
+            <div className="mini-track">
+              <h4>④ Aplicações e integração de IA</h4>
+              <a href="/pt-br/reachymini_sdk_integration/">Integração e Aplicações</a>
+              <a href="/pt-br/reachymini_sdk_apps/">Criar e Publicar Aplicações</a>
+              <a href="/pt-br/reachymini_conversation/">Integrar a API Doubao LLM</a>
+              <a href="/pt-br/reachymini_vibe-code-with-your-agent/">Vibe Coding com um Agente</a>
+              <a href="/pt-br/reachymini_agents/">Guia de Desenvolvimento para Agentes de IA</a>
+            </div>
+            <div className="mini-track">
+              <h4>⑤ Mídia, sistema e operações avançadas</h4>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_media_advanced_controls/">Controles Avançados de Mídia Sem Fio</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_lite_media_advanced_controls/">Controles Avançados de Mídia do Lite</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_lite_wizard/">Use o Dynamixel Wizard para Ler Parâmetros do Motor</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_development_workflow/">Fluxo de Trabalho de Desenvolvimento Sem Fio</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_install_daemon_from_branch/">Instalar o Daemon a partir de um Branch Específico</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_reflash_the_rpi_iso/">Regravar a Imagem do Sistema Operacional do Raspberry Pi</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_reset/">Redefinir via Bluetooth</a>
+            </div>
+            <div className="mini-track">
+              <h4>⑥ Tutoriais de exemplo</h4>
+              <a href="/pt-br/reachymini_examples_minimal_demo/">Demonstração Mínima</a>
+              <a href="/pt-br/reachymini_examples_goto_interpolation_playground/">Playground de Interpolação Goto</a>
+              <a href="/pt-br/reachymini_examples_look_at/">Olhar para uma Imagem</a>
+              <a href="/pt-br/reachymini_examples_mini_head_position_gui/">GUI de Posição da Cabeça</a>
+              <a href="/pt-br/reachymini_examples_joy_controller/">Controlador de Joystick</a>
+              <a href="/pt-br/reachymini_examples_imu/">Exemplo de IMU</a>
+              <a href="/pt-br/reachymini_examples_custom_media_manager/">Gerenciador de Mídia Personalizado</a>
+              <a href="/pt-br/reachymini_examples_reachy_compliant_demo/">Demonstração de Modo Compliant</a>
+              <a href="/pt-br/reachymini_examples_recorded_moves/">Movimentos Gravados</a>
+              <a href="/pt-br/reachymini_examples_rerun_viewer/">Visualizador Rerun</a>
+              <a href="/pt-br/reachymini_examples_sequence/">Demonstração de Sequência</a>
+              <a href="/pt-br/reachymini_examples_sound_doa/">Direção de Chegada do Som</a>
+              <a href="/pt-br/reachymini_examples_sound_play/">Reprodução de Som</a>
+              <a href="/pt-br/reachymini_examples_sound_record/">Gravação de Som</a>
+              <a href="/pt-br/reachymini_examples_take_picture/">Tirar uma Foto</a>
+            </div>
+            <div className="mini-track">
+              <h4>⑦ Solução de problemas e manutenção</h4>
+              <a href="/pt-br/reachymini_troubleshooting/">Solução de Problemas e FAQ</a>
+              <a href="/pt-br/reachymini_troubleshooting_motors_diagnosis/">Diagnóstico e Solução de Problemas de Motores</a>
+              <a href="/pt-br/reachymini_troubleshooting_change_mic_fpc_cable/">Substituir o Cabo FPC do Microfone</a>
+              <a href="/pt-br/reachymini_troubleshooting_spherical_joints_maintenance/">Manutenção das Juntas Esféricas</a>
+              <a href="/pt-br/reachymini_troubleshooting_roadmap/">Roteiro do Reachy Mini</a>
+            </div>
+            <div className="mini-track">
+              <h4>⑧ Referência de API</h4>
+              <a href="/pt-br/reachymini_api_reachymini/">Referência da ReachyMini API</a>
+              <a href="/pt-br/reachymini_api_rest-api/">Referência da REST API</a>
+              <a href="/pt-br/reachymini_api_daemon/">Daemon API</a>
+              <a href="/pt-br/reachymini_api_motion/">Motion API</a>
+              <a href="/pt-br/reachymini_api_media/">Media API</a>
+              <a href="/pt-br/reachymini_api_apps/">Referência da Applications API</a>
+              <a href="/pt-br/reachymini_api_tools/">Referência da Tools API</a>
+              <a href="/pt-br/reachymini_api_utils/">Referência da Utilities API</a>
+            </div>
           </div>
-            <h4> B601-RS Arm</h4>
-          <div className="card-container">
-              <a href="/pt-br/rebot_b601_rs_getting_started/" className="content-card">
-                <span className="text">Introdução ao reBot B601-RS</span>
-                <span className="tag recommended">Novo</span>
-              </a>
-              <a href="/pt-br/rebot_arm_b601_rs_lerobot/" className="content-card">
-                <span className="text">reBot B601-RS com LeRobot</span>
-                <span className="tag recommended">Novo</span>
-              </a>
-              <a href="/pt-br/rebot_arm_b601_rs_pinocchio_meshcat/" className="content-card">
-                <span className="text">reBot B601-RS com Pinocchio</span>
-                <span className="tag recommended">Novo</span>
-              </a>
-              <a href="/pt-br/rebot_arm_b601_rs_grasping_demo/" className="content-card">
-                <span className="text">reBot B601-RS com GraspNet</span>
-                <span className="tag recommended">Novo</span>
-              </a>
-              <a href="/pt-br/rebot_arm_b601_rs_ros2_integration" className="content-card">
-                <span className="text">reBot B601-RS com ROS2 </span>
-                <span className="tag recommended">Novo</span>
-              </a>
-              <a href="rebot_arm_b601_rs_isaacsim/" className="content-card">
-                <span className="text">Simulação reBot B601-RS Isaacsim</span>
-                <span className="tag recommended">Novo</span>
-              </a>  
-          </div>
-
-          <h3> 🤗 Reachy</h3>
-          <div className="card-container">
-              <a href="/pt-br/reachymini_getting_started" className="content-card">
-                <span className="text">Introdução ao Reachy Mini</span>
-                <span className="tag recommended">Novo</span>
-              </a>
-          </div>
-
-
-          <h3>🤗 SO-Arm</h3>
-          <div className="card-container">
-              <a href="/pt-br/lerobot_so100m_new/" className="content-card">
-                <span className="text">Braço SO100/101</span>
-              </a>
-              <a href="/pt-br/simulate_soarm101_by_leisaac/" className="content-card">
-                <span className="text">Braço SO10x com LeIsaac</span>
-              </a>
-              <a href="/pt-br/control_robotic_arm_via_phospho/" className="content-card">
-                <span className="text">Phospho Lerobot</span>
-              </a>
-              <a href="/pt-br/training_soarm101_policy_with_isaacLab/" className="content-card">
-                  <span className="text">Treinamento RL do braço SO</span>
-                  <span className="tag recommended">Novo</span>
-              </a>
-              <a href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
-                  <span className="text">SO101 com NVIDIA GR00T</span>
-                  <span className="tag recommended">Novo</span>
-              </a>
-              <a href="/pt-br/lerobot_steering_gear_debugging_tool/" className="content-card">
-                  <span className="text">Ferramenta de Depuração de Engrenagem de Direção</span>
-                  <span className="tag recommended">Novo</span>
-              </a>
-              <a href="/pt-br/lerobot_double_arm_so_arm_training/" className="content-card">
-                  <span className="text">Guia completo de treinamento de braço duplo SO-ARM</span>
-                  <span className="tag recommended">Novo</span>
-              </a>
-              <a href="/pt-br/soarm_amazinghand_teleop/" className="content-card">
-                  <span className="text">Guia completo de treinamento para SO-ARM com AmazingHand</span>
-                  <span className="tag recommended">Novo</span>
-              </a>
-          </div>
-
-          <h3>🚗 Lekiwi</h3>
-          <div className="card-container">
-              <a href="/pt-br/lerobot_lekiwi/" className="content-card">
-                <span className="text">Base Móvel Lekiwi</span>
-              </a>
-              <a href="/pt-br/sound_follow_robot/" className="content-card">
-                <span className="text">Lekiwi Seguidor de Som</span>
-              </a>
-          </div>
-
-          <h3>🦾 StarAI Arm</h3>
-          <div className="card-container">
-              <a href="/pt-br/lerobot_starai_arm/" className="content-card">
-                <span className="text">Braço Robótico StarAI</span>
-                <span className="tag recommended">Novo</span>
-              </a>
-              <a href="/pt-br/starai_arm_ros_moveit/" className="content-card">
-                <span className="text">StarAI Arm MoveIt 2</span>
-                <span className="tag recommended">Novo</span>
-              </a>
-              <a href="/pt-br/control_robotic_arm_via_gr00t" className="content-card">
-                <span className="text">StarAI com NVIDIA GR00T</span>
-              </a>
-          </div>
-
-          <h3>🦿Legged Wheel</h3>
-          <div className="card-container">
-              <a href="/pt-br/StackForce_Mini_Wheeled_Legged_Robot" className="content-card">
-                <span className="text">Mini Robô com Rodas e Pernas</span>
-                <span className="tag recommended">Novo</span>
-              </a>
-          </div>
-
-          <h3>🖐️ Mão</h3>
-          <div className="card-container">
-              <a href="/pt-br/hand_amazinghand/" className="content-card">
-                <span className="text">AmazingHand</span>
-                <span className="tag recommended">Novo</span>
-              </a>
-          </div>
-
-          <h3>🦀 Efetores Finais</h3>
-          <div className="card-container">
-              <a href="/pt-br/dm_gripper/" className="content-card">
-                <span className="text">Garra DM</span>
-                <span className="tag recommended">Novo</span>
-              </a>
-          </div>
-
         </div>
-      </div>
-
-      <h2 id="actuators">⚙️ Atuadores</h2>
-
-      <div className="category-group">
-      <div className="category-card actuators">
-
-      <div className="card-container">
-          <a href="/pt-br/myactuator_series/" className="content-card">
-            <span className="text">Série MyActuator X</span>
-          </a>
-          <a href="/pt-br/damiao_series/" className="content-card">
-            <span className="text">Série Damiao DM43</span>
-          </a>
-          <a href="/pt-br/feetech_servo/" className="content-card">
-            <span className="text">Servo Feetech STS3215</span>
-          </a>
-          <a href="/pt-br/hightorque_control" className="content-card">
-            <span className="text">Série HighTorque</span>
-          </a>
-          <a href="/pt-br/fashionstar_servo/" className="content-card">
-            <span className="text">Série Fashionstar</span>
-          </a>
-          <a href="/pt-br/stackforce_series/" className="content-card">
-            <span className="text">Série Stackforce</span>
-          </a>
-          <a href="/pt-br/robstride_control/" className="content-card">
-            <span className="text">Controle RobStride</span>
-            <span className="tag recommended">Novo</span>
-          </a>
-      </div>
-
-      </div>
-      </div>
-
-      <h2 id="sensors">👁️ Sensores</h2>
-
-      <div className="category-group">
-      <div className="category-card sensors">
-
-      <strong>📡 LiDAR</strong>  
-
-      <div className="card-container">
-          <a href="/pt-br/robosense_lidar/" className="content-card">
-            <span className="text">RoboSense</span>
-          </a>
-          <a href="/pt-br/mid360/" className="content-card">
-            <span className="text">MID360</span>
-          </a>
-          <a href="/pt-br/a_loam/" className="content-card">
-            <span className="text">Algoritmo A-LOAM</span>
-          </a>
-          <a href="/pt-br/slamtec/" className="content-card">
-            <span className="text">Linha Slamtec</span>
-          </a>
-      </div>
-
-      <strong>📷 Câmera</strong>  
-
-      <div className="card-container">
-          <a href="/pt-br/orbbec_gemini2/" className="content-card">
-            <span className="text">Orbbec Gemini 2</span>
-          </a>
-          <a href="/pt-br/orbbec_gemini_335lg" className="content-card">
-            <span className="text">Gemini 335Lg Depth</span>
-            <span className="tag recommended">Novo</span>
-          </a>
-          <a href="/pt-br/orbbec_gemini336" className="content-card">
-            <span className="text">Gemini 336 Depth</span>
-            <span className="tag recommended">Novo</span>
-          </a>
-          <a href="/pt-br/sensing_gmsl_cameras" className="content-card">
-            <span className="text">SENSING GMSL2</span>
-          </a>
-          <a href="/pt-br/ac1" className="content-card">
-            <span className="text">RoboSense AC1</span>
-            <span className="tag recommended">Novo</span>
-          </a>
-          <a href="/pt-br/orbbec_depth_camera_on_ros/" className="content-card">
-            <span className="text">Orbbec com ROS</span>
-          </a>
-          <a href="/pt-br/orb_slam3_orbbec_gemini2/" className="content-card">
-            <span className="text">ORB-SLAM3 Gemini2</span>
-          </a>
-          <a href="/pt-br/csi_camera_on_ros/" className="content-card">
-            <span className="text">Câmera CSI no Jetson</span>
-          </a>
-          <a href="/pt-br/pycuvslam_recomputer_robotics/" className="content-card">
-            <span className="text">PyCuVSLAM</span>
-          </a>
-
-      </div>
-
-      <strong>🎤 Voz</strong>  
-
-      <div className="card-container">
-          <a href="/pt-br/ReSpeaker_Core_v2.0/" className="content-card">
-            <span className="text">ReSpeaker Core v2.0</span>
-          </a>
-          <a href="/pt-br/ReSpeaker_Mic_Array_v2.0/" className="content-card">
-            <span className="text">ReSpeaker Mic Array v2.0</span>
-          </a>
-      </div>
-
-      <strong>🧭 IMU</strong>  
-
-      <div className="card-container">
-          <a href="/pt-br/hexfellow_y200/" className="content-card">
-            <span className="text">HEXFELLOW Y200</span>
-          </a>
-          <a href="/pt-br/wheeltec_imu/" className="content-card">
-            <span className="text">WHEELTEC IMU</span>
-          </a>
-      </div>
-
-      </div>
-      </div>
-
-      <h2 id="software">💻 Software</h2>
-
-      <div className="category-group">
-      <div className="category-card software">
-
-      <strong>Ecossistema ROS</strong>  
-
-      <div className="card-container">
-          <a href="/pt-br/installing_ros1/" className="content-card">
-            <span className="text">Instalação do ROS 1</span>
-          </a>
-          <a href="/pt-br/install_ros2_humble/" className="content-card">
-            <span className="text">Instalação do ROS 2</span>
-          </a>
-          <a href="/pt-br/install_isaacros/" className="content-card">
-            <span className="text">Instalação do Isaac ROS</span>
-          </a>
-          <a href="/pt-br/isaac_ros_apriltag/" className="content-card">
-            <span className="text">Isaac ROS AprilTag</span>
-          </a>
-          <a href="/pt-br/isaac_ros_visual_slam/" className="content-card">
-            <span className="text">Isaac ROS V-SLAM</span>
-          </a>
-      </div>
-
-      <strong>PX4</strong>  
-      <div className="card-container">
-      <a href="/pt-br/control_px4_with_recomputer_jetson/" className="content-card">
-        <span className="text">PX4 com Jetson</span>
-      </a>
-
-      <a href="/pt-br/object_tracking_with_reComputer_jetson_and_pX4/" className="content-card">
-        <span className="text">Rastreamento de Objetos (PX4)</span>
-      </a>
-
-      </div>
-
-      <strong>NVIDIA Isaac</strong>  
-      <div className="card-container">
-      <a href="/pt-br/install_isaaclab/" className="content-card">
-        <span className="text">Instalação do Isaac Lab</span>
-      </a>
-      <a href="/pt-br/training_soarm101_policy_with_isaacLab/" className="content-card">
-        <span className="text">Treinamento RL do braço SO</span>
-        <span className="tag recommended">Novo</span>
-      </a>
-      <a href="/pt-br/simulate_soarm101_by_leisaac/" className="content-card">
-        <span className="text">Simulação do braço SO100 no Isaac</span>
-        <span className="tag recommended">Novo</span>
-      </a>
-      </div>
-
-      <strong>VLA</strong>  
-      <div className="card-container">
-      <a href="/pt-br/control_robotic_arm_via_gr00t" className="content-card">
-        <span className="text">StarAI com NVIDIA GR00T</span>
-      </a>
-      </div>
-
-      </div>
-      </div>
+      </details>
 
     </div>
-  </div> 
+  </section>
 
-  <!-- ==================== Tab 2: 学习中心 (Learning) ==================== -->
-  <div className="tab-content content-learning">
-
-    <div className="learning-intro">
-        <h2>🎓 Academia de Robótica</h2>
-        <p>Currículo abrangente cobrindo ROS, simulação, aprendizado por reforço e controle avançado de robôs.</p>
+  <section id="actuators" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Referência</span>
+        <h2>⚙️ Atuadores de Junta</h2>
+      </div>
+      <p>Para depuração de motores, protocolos de comunicação e solução de problemas de juntas.</p>
     </div>
-
-    <!-- Section 1: Core Software -->
-    <h3 className="course-section-title">💻 Software Principal e Simulação</h3>
-    <div className="course-grid">
-
-      <!-- ROS Basics: 8 Lectures -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/1.%20ROS%20Basics%208%20lectures/README.md" className="course-card">
-        <div className="course-cover c-ros1">ROS 1</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 8h</span></div>
-          <h3>Noções básicas de ROS 1: 8 aulas</h3>
-          <p>Aprenda sobre nós, tópicos, serviços e conceitos básicos.</p>
-          <span className="btn-start">Aprender</span>
-        </div>
-      </a>
-
-      <!-- ROS Robot Simulation: 7 Lectures -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/2.%20ROS%20Robot%20Simulation%207%20Lectures/README.MD" className="course-card">
-        <div className="course-cover c-ros1">ROS 1</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 8h</span></div>
-          <h3>Simulação de robô ROS 1: 7 aulas.</h3>
-          <p>	Do modelamento à navegação autônoma.</p>
-          <span className="btn-start">Aprender</span>
-        </div>
-      </a>
-
-      <!-- ROS 2 -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/2.English/1.%20ROS%20Basics%208%20lectures/README.MD" className="course-card">
-        <div className="course-cover c-ros2">ROS 2</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level int">Intermediário</span> <span>⏱️ 8h</span></div>
-          <h3>Noções básicas de ROS 2 Humble: 8 aulas</h3>
-          <p>Aprenda sobre nós, tópicos, serviços e conceitos básicos.</p>
-          <span className="btn-start">Aprender</span>
-        </div>
-      </a>
-
-
-
-      <!-- Moveit2 -->
-      <a href="" className="course-card">
-        <div className="course-cover c-moveit">MoveIt 1/2</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level beg">Braço iniciante</span> <span>⏱️ 6h</span></div>
-          <h3>MoveIt 1/2</h3>
-          <p>Importe um manipulador personalizado no MoveIt 1/2 e implemente cinemática direta e inversa</p>
-          <span className="btn-plan">Planejamento</span>
-        </div>
-      </a>
-
-      <!-- Pinocchio -->
-      <a href="" className="course-card">
-        <div className="course-cover c-pinocchio">Pinocchio</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level int">Braço intermediário</span> <span>⏱️ 6h</span></div>
-          <h3>Pinocchio</h3>
-          <p>Aprenda o framework de robótica Pinocchio e desenvolva tarefas de cinemática e dinâmica para o seu próprio manipulador</p>
-          <span className="btn-plan">Planejamento</span>
-        </div>
-      </a>
-
-
-      <!-- Isaac Sim -->
-      <a href="" className="course-card">
-        <div className="course-cover c-isaac">ISAAC</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level adv">Avançado</span> <span>⏱️ 12h</span></div>
-          <h3>NVIDIA Isaac Sim & Lab</h3>
-          <p>Fluxos de trabalho Sim2Real, pipelines USD e criação de ambientes.</p>
-          <span className="btn-plan">Planejamento</span>
-        </div>
-      </a>
-
-      <!-- MuJoCo -->
-      <a href="" className="course-card">
-        <div className="course-cover c-mujoco">MuJoCo</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level adv">Avançado</span> <span>⏱️ 10h</span></div>
-          <h3>Motor de física MuJoCo</h3>
-          <p>Modelagem de dinâmica e simulação para controle ágil de robôs.</p>
-          <span className="btn-plan">Planejamento</span>
-        </div>
-      </a>
-
-      <!-- Reinforcement Learning -->
-      <a href="" className="course-card">
-        <div className="course-cover c-rl">RL</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level adv">Difícil</span> <span>⏱️ 20h</span></div>
-          <h3>Aprendizado por Reforço</h3>
-          <p>Pipelines de treinamento PPO, DRL e implantação no Jetson.</p>
-          <span className="btn-plan">Planejamento</span>
-        </div>
-      </a>
-
+    <div className="resource-grid">
+      <a href="/pt-br/myactuator_series/">MyActuator X Série</a>
+      <a href="/pt-br/damiao_series/">Damiao DM43 Série</a>
+      <a href="/pt-br/feetech_servo/">Feetech STS3215 Servo</a>
+      <a href="/pt-br/hightorque_control/">HighTorque Série</a>
+      <a href="/pt-br/fashionstar_servo/">Fashionstar Série</a>
+      <a href="/pt-br/stackforce_series/">Stackforce Série</a>
+      <a href="/pt-br/robstride_control/">RobStride Controle</a>
     </div>
+  </section>
 
-    <!-- Section 2: Robot Applications -->
-    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 Aplicações de Robôs</h3>
-    <div className="course-grid">
-
-      <!-- Humanoid -->
-      <a href="" className="course-card">
-        <div className="course-cover c-human">Humanoide</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 5h</span></div>
-          <h3>Curso de Robôs Humanoides com Micro Servos</h3>
-          <p>Acionamento de hardware, coreografia de movimento e dança, e desenvolvimento secundário para pequenos robôs humanoides.</p>
-          <span className="btn-plan">Planejamento</span>
-        </div>
-      </a>
-
-
-      <!-- Lekiwi -->
-      <a href="" className="course-card">
-        <div className="course-cover c-lekiwi">Robô Móvel</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 6h</span></div>
-          <h3>Robótica Móvel (Lekiwi)</h3>
-          <p>SLAM, Navigation 2 e patrulhamento autônomo.</p>
-          <span className="btn-plan">Planejamento</span>
-        </div>
-      </a>
-
-      <!-- Robotic Arm -->
-      <a href="" className="course-card">
-        <div className="course-cover c-arm">Braço Robótico</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level int">Intermediário</span> <span>⏱️ 15h</span></div>
-          <h3>Curso do Sistema StarAI Arm</h3>
-          <p>Manipulador StarAI 6+1 DOF: cinemática, dinâmica, aprendizado por imitação e aprendizado por reforço avançado baseado em VLA</p>
-          <span className="btn-plan">Planejamento</span>
-        </div>
-      </a>
-
-      <!-- Wheeled-Legged -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md" className="course-card">
-        <div className="course-cover c-legged">Robô com Rodas e Pernas</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level int">Intermediário</span> <span>⏱️ 8h</span></div>
-          <h3>Curso de Robôs com Rodas e Pernas Stackforce</h3>
-          <p>Controle de equilíbrio e planejamento de movimento LQR para robôs híbridos.</p>
-          <span className="btn-start">Aprendendo</span>
-        </div>
-      </a>
-
-      <!-- ReachyMini -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ReachyMini_Tutorial/2.English/README.md" className="course-card">
-        <div className="course-cover c-reachy">Robô de Mesa</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level adv">Avançado</span> <span>⏱️ 8h</span></div>
-          <h3>Tutorial ReachyMini com 13 Aulas</h3>
-          <p>Curso sistemático sobre operação básica, tutoriais de interface e desenvolvimento secundário do ReachyMini</p>
-          <span className="btn-start">Aprendendo</span>
-        </div>
-      </a>
-
-
+  <section id="sensors" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Referência</span>
+        <h2>👁️ Sensores</h2>
+      </div>
+      <p>Para apreensão visual, SLAM, interação por voz e percepção do estado do robô.</p>
     </div>
+    <div className="resource-columns">
+      <div><h4>📡 LiDAR</h4><a href="/pt-br/robosense_lidar/">RoboSense</a><a href="/pt-br/mid360/">Livox MID360</a><a href="/pt-br/a_loam/">Algoritmo A-LOAM</a><a href="/pt-br/slamtec/">Slamtec Série</a></div>
+      <div><h4>📷 Câmeras</h4><a href="/pt-br/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/pt-br/orbbec_gemini_335lg/">Câmera de Profundidade Gemini 335Lg</a><a href="/pt-br/orbbec_gemini336">Câmera de Profundidade Gemini 336</a><a href="/pt-br/sensing_gmsl_cameras">Câmera SENSING GMSL2</a><a href="/pt-br/ac1">RoboSense AC1</a><a href="/pt-br/orbbec_depth_camera_on_ros/">Orbbec e ROS</a><a href="/pt-br/orb_slam3_orbbec_gemini2/">ORB-SLAM3 e Gemini2</a><a href="/pt-br/csi_camera_on_ros/">Câmera CSI no Jetson</a><a href="/pt-br/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
+      <div><h4>🎤 Voz</h4><a href="/pt-br/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/pt-br/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>🧭 IMU</h4><a href="/pt-br/hexfellow_y200/">HEXFELLOW Y200</a><a href="/pt-br/wheeltec_imu/">WHEELTEC IMU</a></div>
+    </div>
+  </section>
 
-  </div> 
+  <section id="software" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Referência</span>
+        <h2>💻 Ecossistema de Software</h2>
+      </div>
+      <p>Após a configuração, avance para ROS, Isaac, PX4 ou VLA.</p>
+    </div>
+    <div className="resource-columns">
+      <div><h4>Ecossistema ROS</h4><a href="/pt-br/installing_ros1/">Instalação do ROS 1</a><a href="/pt-br/install_ros2_humble/">Instalação do ROS 2</a><a href="/pt-br/install_isaacros/">Instalação do Isaac ROS</a><a href="/pt-br/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/pt-br/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
+      <div><h4>NVIDIA Isaac</h4><a href="/pt-br/install_isaaclab/">Instalação do Isaac Lab</a><a href="/pt-br/training_soarm101_policy_with_isaacLab/">Aprendizado por Reforço do Braço SO</a><a href="/pt-br/simulate_soarm101_by_leisaac/">Braço Robótico SO100 com IsaacSim</a></div>
+      <div><h4>PX4 / VLA</h4><a href="/pt-br/control_px4_with_recomputer_jetson/">PX4 e Jetson</a><a href="/pt-br/object_tracking_with_reComputer_jetson_and_pX4/">Rastreamento de Objetos com PX4</a><a href="/pt-br/control_robotic_arm_via_gr00t/">StarAI e NVIDIA GR00T</a></div>
+    </div>
+  </section>
 
-</div> 
-
-<style>{`
-/* =========================================
-   1. Tab Logic (CSS Only)
-   ========================================= */
-.robotic-tab-container { width: 100%; position: relative; }
-.tab-input-hidden { display: none; }
-.tab-nav-wrapper { display: flex; justify-content: center; margin-bottom: 2rem; margin-top: 1rem; }
-.tab-nav {
-  position: relative; display: flex; background: #f1f3f5; border-radius: 100px;
-  padding: 5px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); user-select: none;
-}
-.tab-item {
-  position: relative; z-index: 2; padding: 10px 30px; font-weight: 600; color: #666;
-  cursor: pointer; transition: color 0.3s ease; display: flex; align-items: center; gap: 8px; font-size: 1rem; margin: 0;
-}
-.tab-item .icon { font-size: 1.2rem; }
-.badge {
-  background: #ff4757; color: white; font-size: 0.6rem; padding: 2px 6px;
-  border-radius: 10px; margin-left: 5px; position: relative; top: -1px;
-}
-.tab-slider {
-  position: absolute; top: 5px; bottom: 5px; left: 5px; width: calc(50% - 5px);
-  background: white; border-radius: 100px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); z-index: 1;
-}
-
-#tab-hardware:checked ~ .tab-nav-wrapper .tab-nav .tab-slider { transform: translateX(0); }
-#tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #4a90e2; }
-#tab-learning:checked ~ .tab-nav-wrapper .tab-nav .tab-slider { transform: translateX(100%); }
-#tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #7b61ff; }
-
-.tab-content { display: none; animation: fadeIn 0.4s ease; }
-#tab-hardware:checked ~ .content-hardware { display: block; }
-#tab-learning:checked ~ .content-learning { display: block; }
-
-@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-
-/* =========================================
-   2. Hardware Styles (Original)
-   ========================================= */
-.quick-nav-container {
-  margin: 2rem 0; padding: 1rem;
-  background: radial-gradient(at 10% 20%, #f0fdf4 0%, transparent 50%), radial-gradient(at 90% 80%, #f0f7ff 0%, transparent 50%), white;
-  border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: none;
-}
-.quick-nav { display: flex; justify-content: space-around; gap: 1rem; }
-.nav-item {
-  position: relative; padding: 0.8rem 1.5rem; border-radius: 12px; display: flex; margin: 6px 6px;
-  flex-direction: column; align-items: center; text-decoration: none !important; color: #333;
-  font-weight: 500; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); z-index: 1; width: 100%;
-}
-.nav-item .icon { font-size: 1.8rem; margin-bottom: 0.5rem; transition: transform 0.3s; }
-.nav-item .text { font-size: 0.95rem; white-space: nowrap; }
-.nav-item .hover-effect {
-  position: absolute; bottom: 0; left: 0; width: 100%; height: 0;
-  background: linear-gradient(135deg, #4a90e2 0%, #50e3c2 100%);
-  border-radius: 12px; transition: height 0.3s ease; z-index: -1;
-}
-.nav-item:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); color: white; }
-.nav-item:hover .icon { transform: scale(1.2) rotate(10deg); }
-.nav-item:hover .hover-effect { height: 100%; }
-
-.nav-grid { display: block; gap: 2rem; margin-top: 2rem; }
-.category-group { margin-bottom: 2.5rem; }
-.category-card {
-  position: relative; padding: 1.8rem; border-radius: 16px; background: white;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; overflow: hidden; border: 1px solid transparent;
-}
-.category-card::before { content: ""; position: absolute; top: 0; left: 0; width: 6px; height: 100%; }
-.robot-kits::before { background: linear-gradient(to bottom, #4a90e2, #50e3c2); }
-.actuators::before { background: linear-gradient(to bottom, #50e3c2, #a0e3c2); }
-.sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
-.software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
-
-.card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 12px; margin-bottom: 1.5rem; }
-.content-card {
-  display: flex; align-items: center; justify-content: space-between; padding: 10px 16px;
-  background: #f9fafb; border: 1px solid transparent; border-radius: 8px; text-decoration: none !important;
-  color: var(--ifm-font-color-base); font-weight: 500; font-size: 0.9rem; transition: all 0.25s ease; position: relative; overflow: hidden;
-}
-.content-card .text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 8px; z-index: 2; }
-.content-card:hover {
-  background: #fff; border-color: #4a90e2; box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
-  transform: translateY(-2px); color: #4a90e2;
-}
-.content-card::after { content: ""; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: #4a90e2; transition: width 0.2s ease; }
-.content-card:hover::after { width: 4px; }
-
-.tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; font-weight: 700; text-transform: uppercase; flex-shrink: 0; z-index: 2; }
-.recommended { background: rgba(255, 107, 107, 0.1); color: #ff6b6b; border: 1px solid rgba(255, 107, 107, 0.2); animation: pulse 2s infinite; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2); } 70% { box-shadow: 0 0 0 4px rgba(255, 107, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); } }
-
-/* =========================================
-   3. Learning Styles
-   ========================================= */
-.learning-intro { text-align: center; margin-bottom: 2rem; }
-.learning-intro h2 { margin-bottom: 0.5rem; background: -webkit-linear-gradient(45deg, #7b61ff, #4a90e2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.learning-intro p { color: #666; max-width: 600px; margin: 0 auto; }
-
-.course-section-title {
-  margin: 1.5rem 0 1rem; font-size: 1.2rem; font-weight: 700; color: #444; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;
-}
-
-.course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-.course-card {
-  background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  text-decoration: none !important; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #eee; display: flex; flex-direction: column;
-}
-.course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-
-/* Covers for different topics */
-.course-cover { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; color: white; letter-spacing: 1px; }
-
-/* AI & Software Colors */
-.c-ros2 { background: linear-gradient(135deg, #10b981, #059669); }
-.c-ros1 { background: linear-gradient(135deg, #4b5563, #374151); }
-.c-pinocchio { background: linear-gradient(135deg, #3b82f6, #fa000c); }
-.c-moveit { background: linear-gradient(135deg, #f90306, #ea000c); }
-.c-isaac { background: linear-gradient(135deg, #76b900, #366e00); }
-.c-rl { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
-.c-mujoco { background: linear-gradient(135deg, #f97316, #ea580c); }
-
-/* Cores da plataforma robótica */
-.c-arm { background: linear-gradient(135deg, #3b82f6, #2563eb); }
-.c-legged { background: linear-gradient(135deg, #eab308, #ca8a04); }
-.c-human { background: linear-gradient(135deg, #ec4899, #db2777); }
-.c-reachy { background: linear-gradient(135deg, #14b8a6, #0d9488); }
-.c-lekiwi { background: linear-gradient(135deg, #06b6d4, #0891b2); }
-.c-gray { background: #eee; color: #aaa; }
-
-.course-info { padding: 1rem; flex-grow: 1; display: flex; flex-direction: column; }
-.course-meta { display: flex; justify-content: space-between; font-size: 0.75rem; color: #888; margin-bottom: 0.5rem; }
-.level { font-weight: 700; text-transform: uppercase; }
-.beg { color: #059669; } .int { color: #d97706; } .adv { color: #dc2626; }
-
-.course-info h3 { font-size: 1.1rem; margin: 0 0 0.5rem 0; color: #1f2937; line-height: 1.3; }
-.course-info p { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 1.5rem; flex-grow: 1; }
-
-.btn-start {
-  display: block; text-align: center; padding: 8px 0; background:  #ecfdf5; color: #059669; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
-}
-.course-card:hover .btn-start { background: #10b981; color: white; }
-
-.btn-plan {
-  display: block; 
-  text-align: center; 
-  padding: 8px 0; 
-  font-weight: 600; 
-  font-size: 0.9rem; 
-  border-radius: 8px; 
-  transition: all 0.2s;
-
-  /* Design diferenciado */
-  background: #fff7ed; /* Fundo laranja extremamente claro */
-  color: #ea580c;      /* Texto laranja um pouco mais escuro */
-  cursor: default;
-}
-
-/* Efeito de hover: mantém o tom quente, diferente do botão Start que inverte as cores, para evitar roubar a atenção visual */
-.course-card:hover .btn-plan {
-  background: #ffedd5;
-  color: #c2410c;
-}
-
-
-/* =========================================
-   4. Adaptação ao modo escuro
-   ========================================= */
-html[data-theme='dark'] .tab-nav { background: #2f2f32; box-shadow: none; }
-html[data-theme='dark'] .tab-slider { background: #444; }
-html[data-theme='dark'] .tab-item { color: #aaa; }
-html[data-theme='dark'] #tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #60a5fa; }
-html[data-theme='dark'] #tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #a78bfa; }
-
-/* Modo escuro de hardware */
-html[data-theme='dark'] .quick-nav-container { background: linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); border: none; }
-html[data-theme='dark'] .nav-item { color: #e5e7eb; background: rgb(47, 50, 57); box-shadow: 0 2px 4px rgba(0,0,0,0.4); }
-html[data-theme='dark'] .category-card { background: #1b1b1d; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border-color: #303033; }
-html[data-theme='dark'] .content-card { background: #242526; color: #e5e7eb; border-color: #303033; }
-html[data-theme='dark'] .content-card:hover { background: #2f2f32; border-color: #60a5fa; color: #60a5fa; }
-html[data-theme='dark'] .content-card::after { background: #60a5fa; }
-html[data-theme='dark'] .recommended { background: rgba(255, 107, 107, 0.15); color: #ff8e8e; border-color: rgba(255, 142, 142, 0.3); }
-html[data-theme='dark'] h2, html[data-theme='dark'] h3 { color: #f9fafb; }
-
-/* Modo escuro de aprendizado */
-html[data-theme='dark'] .course-card { background: #1b1b1d; border-color: #303033; }
-html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
-html[data-theme='dark'] .course-info p { color: #9ca3af; }
-html[data-theme='dark'] .btn-start { background: #2f2f32; color: #60a5fa; }
-html[data-theme='dark'] .course-card:hover .btn-start { background: #60a5fa; color: white; }
-html[data-theme='dark'] .btn-plan { background: #2f2f32; color: #ea580c; }
-html[data-theme='dark'] .course-card:hover .btn-plan { background: #ea580c; color: white; }
-html[data-theme='dark'] .learning-section-title { color: #ccc; border-bottom-color: #444; }
-
-@media (max-width: 768px) {
-  .quick-nav { flex-direction: column; gap: 0.5rem; }
-  .nav-item { flex-direction: row; justify-content: start; padding: 0.8rem 1rem; }
-  .nav-item .icon { margin-bottom: 0; margin-right: 0.8rem; }
-  .card-container, .course-grid { grid-template-columns: 1fr; }
-  .category-card { padding: 1.2rem; }
-  .tab-nav { width: 100%; }
-  .tab-item { padding: 10px 15px; font-size: 0.9rem; flex: 1; justify-content: center; }
-}
-`}</style>
+</div>

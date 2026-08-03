@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'Gimbal de reCamera'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reCamera_basic_getting_start
+link:
+  type: generated-index
+  slug: recamera_gimbal_getting_start
+  title: Introducción a la serie reCamera 2002
+  description: Guía de inicio rápido para reCamera Gimbal.

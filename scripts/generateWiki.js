@@ -19,6 +19,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'Seeed_Elderly', 'weekly_wiki'), // weekly wiki 的历史目录
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Secondary_Development', 'API'), // 暂时排除 reCamera Pro 的 API 目录
 
   // 排除指定文档
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_use_Camera_IMX219.md'), //6.3
@@ -37,6 +38,11 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Live_View.md'), //7.9
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Record_Settings.md'), //7.9
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Terminal.md'), //7.9
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'JetPack72_AX210_AX200_WiFi_Setup_Guide.md'), //7.15
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Acoustic_Lab_Usage.md'), //7.13
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'MeshTracker_X1', 'x1_intro.md'), //7.13
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Use_of_the_laboratory', 'Acoustic_Lab_Usage.md'), //7.13
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super.md'), //7.22
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

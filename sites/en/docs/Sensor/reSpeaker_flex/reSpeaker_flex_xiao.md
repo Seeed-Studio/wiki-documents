@@ -12,7 +12,7 @@ last_update:
   date: 04/8/2026
   author: Kasun Thushara
 createdAt: '2026-04-08'
-updatedAt: '2026-04-10'
+updatedAt: '2026-07-23'
 url: https://wiki.seeedstudio.com/respeaker_flex_xiao_introduction/
 ---
 
@@ -123,9 +123,6 @@ The reSpeaker Flex ESP32 version integrates a pre-soldered XIAO ESP32S3 module o
 | **Interface** | FPC connector; cable can be routed from the side or rear |
 | **Mounting** | 2 × M3 mounting holes |
 
-:::note
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
-:::
 
 ### XIAO ESP32S3 Support 
 
@@ -182,6 +179,11 @@ The FPC mic array interface is a 24-pin, 0.5mm pitch connector with a locking la
 | 24 | GND | GND | GPIO shielding ground | Absorbs GPIO noise |
 
 ## Getting Started
+
+:::note
+To ensure optimal voice pickup performance and proper operation of the audio algorithms, please make sure the Microphone Port (Mic Inlet / Sound Hole) on the back side of the device is facing toward the sound source. The microphone port is located on the side with the Seeed Studio logo printed on it. 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
+:::
 
 ### Hardware Preparation 
 

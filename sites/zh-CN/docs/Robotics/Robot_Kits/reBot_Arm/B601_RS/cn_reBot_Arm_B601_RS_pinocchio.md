@@ -12,13 +12,12 @@ keywords:
 slug: /rebot_arm_b601_rs_pinocchio_meshcat
 sku: 100019336
 last_update:
-  date: 2026-06-11
+  date: 2026-07-22
   author: LiJie
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-06-11'
-updatedAt: '2026-06-11'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 
@@ -145,6 +144,10 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_pinocchio_meshcat/
 | **通信接口** | CAN 接口 (can0) |
 | **电源要求** | DC 48V 15A |
 
+:::caution
+机械臂在运行示例时机械臂需要在70%以内的臂展工作空间内工作，超出工作空间长时间停留会出现二号关节电机进入堵转保护，导致机械臂掉落。
+:::
+
 ---
 
 ## 安装步骤
@@ -196,7 +199,7 @@ ip -br link
 
 #如果出现 can0，再设置 bitrate
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000 
 sudo ip link set can0 up    #拉起can0
 ```
 
@@ -588,6 +591,9 @@ viz.draw_path(points, "path_name", color)  # 绘制路径
 
 - **如何切换 Damiao 和 Robostride 电机配置**  
   修改 `config/rebotarm_dm.yaml`（达妙）或 `config/rebotarm_rs.yaml`（Robostride）配置文件，并在代码中加载对应的配置。
+
+- **机械臂在超过70%的臂展工作空间，长时间停出现二号关节电机进入堵转保护**  
+  将机械臂重新断电上电启动，二号关节电机堵转保护错误会自动清除。
 
 ---
 

@@ -4,20 +4,19 @@ title: Introdução ao Pinocchio e MeshCat para reBot Arm B601-DM
 keywords:
   - Pinocchio
   - MeshCat
-  - Robotic Arm
-  - Robot
+  - Braço Robótico
+  - Robô
   - LeRobot
-  - Kinematics
+  - Cinemática
 slug: /rebot_arm_b601_dm_pinocchio_meshcat
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
   date: 2026-06-30
   author: LiuJunjie
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-03-24'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
@@ -98,7 +97,7 @@ O hardware para este tutorial é fornecido pela [Seeed Studio](https://www.seeed
     </tr>
     <tr>
       <td>Tensão de Operação</td>
-      <td>24V DC</td>
+      <td>24V CC</td>
     </tr>
     <tr>
       <td>Método de Controle</td>
@@ -134,7 +133,7 @@ O hardware para este tutorial é fornecido pela [Seeed Studio](https://www.seeed
 
 ## Etapas de Instalação
 
-### Etapa 1. Instalar uv (se ainda não estiver instalado)
+### Etapa 1. Instalar uv (se não estiver instalado)
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -143,7 +142,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### Etapa 2. Sincronizar Ambiente (Instalar Todas as Dependências)
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
 cd reBotArm_control_py
 uv sync
 ```
@@ -212,7 +211,7 @@ Insira ângulos alvo para todas as juntas para concluir o controle do motor no m
 **Como Executar**:
 ```bash
 uv run python example/3_mit_control.py
-> 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
+> 30 0 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
 > state
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
@@ -223,12 +222,12 @@ Observe que, no modo de controle MIT, o braço robótico se move muito rápido. 
 
 ### Modo de Controle Posição-Velocidade (`4_pos_vel_control.py`)
 
-Insira ângulos alvo para todas as juntas para concluir o controle do motor no modo híbrido POS_VEL (Posição-Velocidade), obtendo um movimento mais suave e controlável ao atingir os ângulos alvo, reduzindo vibrações.
+Insira ângulos alvo para todas as juntas para concluir o controle do motor no modo híbrido POS_VEL (Posição-Velocidade), obtendo um movimento mais suave e controlável ao atingir os ângulos alvo, reduzindo a vibração.
 
 **Como Executar**:
 ```bash
 uv run python example/4_pos_vel_control.py
-> 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
+> 30 0 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
 > state
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
@@ -247,7 +246,7 @@ Calcular a pose do efetuador final com base nos ângulos das juntas.
 **Saída**:
 - Posição do efetuador final (X, Y, Z) — Unidade: metros
 - Matriz de rotação (3×3)
-- Ângulos de Euler (rolagem/tangagem/giro) — Unidade: graus
+- Ângulos de Euler (rolagem/tangagem/guiñada) — Unidade: graus
 
 **Exemplo**:
 ```bash
@@ -322,13 +321,13 @@ uv run python example/6_ik_test.py
 ```
 ### Controle de Cinemática Inversa em Modo MIT (`7_arm_ik_control.py`)
 
-Use cinemática inversa (IK) em modo MIT para especificar as coordenadas 3D (X, Y, Z) e a orientação (ângulos de Euler) para onde o efetuador final do braço robótico deve se mover.
+Use cinemática inversa (IK) no modo MIT para especificar as coordenadas 3D (X, Y, Z) e a orientação (ângulos de Euler) para onde o efetuador final do braço robótico deve se mover.
 
 **Formato de Entrada**:
 - Apenas posição: `<x> <y> <z>` (metros)
 - Posição + Orientação: `<x> <y> <z> <roll> <pitch> <yaw>` (graus)
 - Digite `state`: Ver os valores atuais em radianos de cada junta.
-- Digite `end_state`: Ver as coordenadas atuais reais (m) e os ângulos de Euler (rad) do efetuador final no espaço.
+- Digite `end_state`: Ver as coordenadas reais atuais (m) e ângulos de Euler (rad) do efetuador final no espaço.
 
 **Como Executar**:
 ```bash
@@ -340,15 +339,15 @@ uv run python example/7_arm_ik_control.py
 #Usage B
 > 0.3 0.0 0.4 0.0 0.0 0.5 # Control both position and orientation: move to the specified position while rotating the wrist yaw angle by 0.5 radians.
 
-> ctrl + c # Exit system
+> ctrl + c # Return to zero position and exit system
 ```
 :::danger
-Observe que neste código de exemplo, o braço robótico se move muito rápido. Certifique-se de que pessoas e outros dispositivos estejam fora do raio de trabalho do braço.
+Observe que, neste código de exemplo, o braço robótico se move muito rápido. Certifique-se de que pessoas e outros dispositivos estejam fora do raio de trabalho do braço.
 :::
 
 ### Controle de Cinemática Inversa com Trajetória Suave (`8_arm_traj_control.py`)
 
-Use cinemática inversa (IK) no modo MIT para planejar automaticamente uma trajetória de movimento com aceleração/desaceleração uniforme ou suave dentro do tempo alvo, evitando vibração severa das juntas.
+Use cinemática inversa (IK) no modo MIT para planejar automaticamente uma trajetória de movimento com aceleração/desaceleração uniforme ou suave dentro do tempo-alvo, evitando vibração severa das juntas.
 
 **Formato de entrada**:
 - Apenas posição: `<x> <y> <z>` (metros)
@@ -370,7 +369,7 @@ uv run python example/8_arm_traj_control.py
 #Usage C
 > 0.3 0.0 0.4 0.0 0.0 0.0 5.0 # Move the arm to the specific position and specify 5.0 seconds to slowly move there. (Note: If entering time, the preceding orientation parameters 0 0 0 cannot be omitted)
 
-> ctrl + c # Exit system
+> ctrl + c # Return to zero position and exit system
 ```
 ---
 
@@ -388,7 +387,7 @@ kp = 2,  kd = 1     — Unified stiffness/damping for all joints
 ```
 
 **Comportamento esperado**:
-- O braço pode “flutuar” em qualquer pose
+- O braço pode "flutuar" em qualquer pose
 - Não cairá devido ao próprio peso quando solto
 - Pode ser movido manualmente para qualquer posição
 
@@ -532,7 +531,7 @@ uv run python example/sim/ik_sim.py
 
 #### Simulação de Planejamento de Trajetória (`sim/traj_sim.py`)
 
-Simulação de planejamento de trajetória baseada em geodésicas SE(3), incluindo rastreamento CLIK e reprodução de animação no MeshCat.
+Simulação de planejamento de trajetória baseada em geodésicas em SE(3), incluindo rastreamento CLIK e reprodução de animação no MeshCat.
 
 **Como executar**:
 ```bash

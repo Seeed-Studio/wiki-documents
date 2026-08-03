@@ -3,7 +3,7 @@ description: Introducción para reComputer Super
 title: Introducción a reComputer Super
 keywords:
   - reComputer Super
-  - Introducción a reComputer Super
+  - reComputer Super Introducción
   - Super
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /recomputer_jetson_super_getting_started
@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-06-26'
+updatedAt: '2026-06-27'
 url: https://wiki.seeedstudio.com/es/recomputer_jetson_super_getting_started/
 ---
 
@@ -24,7 +24,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   <img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png"/>  
 </div>
 
-La reComputer Super Serie potencia la reComputer Classic, ofreciendo hasta un aumento de 1,7x hasta 157 TOPS en rendimiento de IA. Incluye modelos con Jetson Orin Nano (11410311, 11410312) y Jetson Orin NX (11410313, 11410314).
+La Serie reComputer Super potencia la reComputer Classic, ofreciendo hasta un aumento de 1,7x hasta 157 TOPS en rendimiento de IA. Incluye modelos con Jetson Orin Nano (11410311, 11410312) y Jetson Orin NX (11410313, 11410314).
 Diseñada tanto para desarrollo como para producción, viene con una amplia gama de interfaces, incluyendo M.2 Key E/M, doble Ethernet RJ45, Mini-PCIe, 4xUSB 3.2, HDMI 2.1, 4xCSI y CAN. Con Jetpack 6.2 y Linux OS BSP preinstalados, permite una entrada inmediata al mercado.
 También es compatible con una amplia gama de frameworks de LLM y Physical AI, como NVIDIA, Hugging Face, ONNX, PyTorch y ROS2/1 en el edge de forma fluida, incluso combinando estas capacidades multimodales con aplicaciones de robótica para enriquecer el desarrollo de Physical AI.
 
@@ -34,14 +34,14 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong></a>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personalizar ahora ➜</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personaliza ahora ➜</font></span></strong></a>
 </div>
 
 ## Características clave  
 
 ### 🚀 ​**Impulso de rendimiento**  
 
-- ​**Impulso de rendimiento de IA de 1,7x** sobre reComputer Classic, ofreciendo ​**157 TOPS**  
+- ​**Aumento de rendimiento de IA de 1,7x** sobre reComputer Classic, ofreciendo ​**157 TOPS**  
 - Impulsado por ​**Jetson Orin Nano** (Modelos: 11410311, 11410312) y ​**Jetson Orin NX** (Modelos: 11410313, 11410314)  
 
 ### 🔌 ​**Conectividad e interfaces ricas**  
@@ -51,7 +51,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 - ​**4x USB 3.2**, ​**HDMI 2.1**, ​**4x CSI** (Interfaz Serie de Cámara)  
 - Compatibilidad con ​**bus CAN** para aplicaciones industriales/robóticas  
 
-### 🛠️ ​**Lista para desarrollo y producción**  
+### 🛠️ ​**Listo para desarrollo y producción**  
 
 - ​**Jetpack 6.2** y ​**Linux OS BSP** preinstalados para despliegue inmediato  
 - Integración fluida de IA en el edge con frameworks:  
@@ -59,7 +59,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
   - ​**ROS2/1** para aplicaciones de robótica  
 - Compatible con desarrollo de ​**IA multimodal** y ​**Physical AI**  
 
-### 🤖 ​**Optimizada para Edge AI y robótica**  
+### 🤖 ​**Optimizado para Edge AI y robótica**  
 
 - Combina las capacidades de ​**LLM (Large Language Model)** con ​**Physical AI** en el edge  
 - Ideal para robótica, automatización industrial e inferencia de IA en tiempo real  
@@ -77,7 +77,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 #### 2. ​**Cable de alimentación de CA**  
 
-- Utiliza cables trébol ​**específicos de la región**.  
+- Utiliza cables tipo trébol ​**específicos de la región**.  
 
 #### 3. ​**Accesorios**  
 
@@ -91,7 +91,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-      <th colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Jetson Orin Super System on Module</th>
+      <th colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Módulo de sistema Jetson Orin Super</th>
     </tr>
     <tr>
       <th>Especificaciones</th>
@@ -121,21 +121,21 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan={2}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos y 64 bits<br />1.5MB L2 + 4MB L3</td>
-      <td>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos y 64 bits 1.5MB L2 + 4MB L3</td>
+      <td colSpan={2}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos y 64 bits<br />1,5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos y 64 bits 1,5MB L2 + 4MB L3</td>
       <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos y 64 bits 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Frecuencia máxima de CPU</td>
-      <td colSpan={2}>1.7 GHz (MAXN_SUPER)</td>
+      <td colSpan={2}>1,7 GHz (MAXN_SUPER)</td>
       <td colSpan={2}>2 GHz</td>
     </tr>
     <tr>
       <td>Memoria</td>
       <td>4GB 64-bit LPDDR5<br />34 GB/s</td>
       <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
-      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
-      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>8GB 128-bit LPDDR5 102,4GB/s</td>
+      <td>16GB 128-bit LPDDR5 102,4GB/s</td>
     </tr>
     <tr>
       <td>Acelerador DL</td>
@@ -159,7 +159,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>Mecánico</td>
-      <td colSpan={5}>69.6mm x 45mm<br />Conector SO-DIMM de 260 pines</td>
+      <td colSpan={5}>69,6mm x 45mm<br />Conector SO-DIMM de 260 pines</td>
     </tr>
     <tr>
       <th colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Placa portadora</th>
@@ -262,10 +262,10 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 ### Módulo compatible
 
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
+- [Módulo NVIDIA® Jetson Orin™ Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
+- [Módulo NVIDIA® Jetson Orin™ Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
+- [Módulo NVIDIA® Jetson Orin™ NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
+- [Módulo NVIDIA® Jetson Orin™ NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
 ### Requisitos previos
 
@@ -282,7 +282,7 @@ Consulta la siguiente tabla para preparar la máquina host.
   <tbody>
     <tr>
         <td  rowspan="2"> Versión de JetPack </td>
-        <td class="dbon" colspan="4"> Versión de Ubuntu (Ordenador host) </td>
+        <td class="dbon" colspan="4"> Versión de Ubuntu (ordenador host) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -307,7 +307,7 @@ Consulta la siguiente tabla para preparar la máquina host.
   </tbody>
 </table>
 
-<p><strong>Nota:</strong> Para JetPack 7.2, Ubuntu 24.04 solo es compatible para flasheo e instalación de componentes en el dispositivo de destino. Utiliza Ubuntu 20.04 o 22.04 si necesitas componentes de desarrollo en el host.</p>
+<p><strong>Nota:</strong> Para JetPack 7.2, Ubuntu 24.04 solo es compatible para flasheo e instalación de componentes en el lado de destino. Utiliza Ubuntu 20.04 o 22.04 si necesitas componentes de desarrollo en el host.</p>
 
 :::
 
@@ -379,7 +379,7 @@ Los archivos de imagen de JetPack son grandes y pueden tardar alrededor de 60 mi
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, se confirma que el firmware que descargaste está completo e intacto.
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
 :::
 
 ### Entrar en modo de recuperación forzada
@@ -428,7 +428,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For JetPack 7.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
 ```
 
-**Paso 2:** Ejecuta el siguiente comando para flashear el sistema jetpack en el SSD NVMe:
+**Paso 2:** Ejecuta el siguiente comando para flashear el sistema JetPack en el SSD NVMe:
 
 ```bash
 cd mfi_xxxx
@@ -444,7 +444,7 @@ Verás la siguiente salida si el proceso de flasheo se realiza correctamente
 El comando de flasheo puede ejecutarse durante 2-10 minutos.
 :::
 
-**Paso 3:** Conecta el monitor usando un cable HDMI y completa la configuración de inicialización del sistema de reComputer Super:
+**Paso 3:** Conecta el monitor usando un cable HDMI y completa la configuración de inicialización del sistema de la reComputer Super:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
@@ -454,6 +454,11 @@ El comando de flasheo puede ejecutarse durante 2-10 minutos.
 Por favor, completa la **Configuración del sistema** según tus necesidades.
 :::
 
+## Uso de interfaces de hardware
+
+:::info
+Si quieres obtener más información sobre las especificaciones detalladas y el uso de las interfaces de hardware, consulta [esta wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_super_hardware_interfaces_usage/).
+:::
 
 ## Recursos
 
@@ -474,7 +479,7 @@ Por favor, completa la **Configuración del sistema** según tus necesidades.
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

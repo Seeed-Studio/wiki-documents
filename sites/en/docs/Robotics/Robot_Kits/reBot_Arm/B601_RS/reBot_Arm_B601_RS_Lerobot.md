@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-17'
-updatedAt: '2026-07-07'
+updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/
 ---
 
@@ -88,7 +88,7 @@ Seeed Studio tutorials are strictly updated according to official documentation.
    Supports deployment via the reComputer Mini J4012 Orin NX 16GB platform.
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 ## Initial System Environment
@@ -107,7 +107,7 @@ Seeed Studio tutorials are strictly updated according to official documentation.
 ## Install LeRobot
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 You need to install pytorch, torchvision and other environments based on your CUDA version.
@@ -144,8 +144,8 @@ The lerobot repository already has a pyproject.toml. Create a conda environment 
 ```bash
 cd ~/rebot_lerobot
 
-# Create conda environment (Python 3.12)
-conda create -y -n lerobot python=3.12
+# Create conda environment (Python 3.10)
+conda create -y -n lerobot python=3.10
 
 # Activate environment
 conda activate lerobot
@@ -211,7 +211,7 @@ If the output is False, you need to reinstall Pytorch and Torchvision according 
 ## Calibrate the Robotic Arm
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 Next, you need to connect the power supply and data cable to your reBot B601-RS robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one reBot B601-RS robot to work on another. If you need to recalibrate the robotic arm, please completely delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, an error prompt will appear. The calibration information for the robotic arm will be stored in the JSON files under this directory.
@@ -228,7 +228,7 @@ B601-RS only needs to be calibrated once after assembly. Here is the calibration
 
 # follower
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 
 lerobot-calibrate \
@@ -242,6 +242,25 @@ lerobot-calibrate \
       <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_0pos.jpg" />
   </div>
+
+If you use Jetson (Jetpack 6.x), please use the following instructions to find the CAN port number corresponding to your Jetson.
+
+```bash
+for i in /sys/class/net/can*; do
+    [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"
+done
+```
+
+output:
+
+```
+cam2  # also maybe can0,can1,can x
+```
+
+The port number for all subsequent follower commands must match the output here.
+
+If your Jetson lacks the PCAN driver, communication will consistently fail. Refer to the Jetson PCAN driver installation guide in the [Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/#3pcan-usb) section.
+
 
 ### Calibrate the Leader Arm
 
@@ -313,7 +332,7 @@ First grant permissions to the serial ports:
 sudo chmod 666 /dev/ttyUSB*
 # follower
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
@@ -332,7 +351,7 @@ lerobot-teleoperate \
     <iframe
         width="900"
         height="600"
-        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0"
+        src="https://player.bilibili.com/player.html?bvid=BV1A6JM62EeK&page=1&high_quality=1&danmaku=0&autoplay=0&muted=1"
         scrolling="no"
         border="0"
         frameborder="no"
@@ -697,7 +716,7 @@ lerobot-teleoperate \
 ## Dataset Collection
 
 <!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 <details>

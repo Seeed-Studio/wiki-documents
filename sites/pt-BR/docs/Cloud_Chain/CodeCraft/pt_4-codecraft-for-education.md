@@ -12,6 +12,8 @@ last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/pt-br/codecraft/codecraft-for-education/
+createdAt: '2026-06-30'
+updatedAt: '2026-06-30'
 ---
 
 # CodeCraft para Educação

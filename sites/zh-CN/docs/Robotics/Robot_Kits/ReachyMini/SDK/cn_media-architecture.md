@@ -17,8 +17,8 @@ last_update:
 translation:
   - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
-url: https://wiki.seeedstudio.com/reachymini_sdk_media-architecture/
+updatedAt: '2026-05-19'
+url: https://wiki.seeedstudio.com/cn/reachymini_sdk_media-architecture/
 ---
 
 # 媒体架构

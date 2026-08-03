@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/13/2026
+  date: 07/27/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-27'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,67 +18,35 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 13th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 27th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [reTerminal E Series ePaper Display Work with LVGL](https://wiki.seeedstudio.com/epaper_work_with_lvgl/)
+### [Build Your Own App for reSpeaker Clip with Transcription, Diarization, and Summary Using Python SDK](https://wiki.seeedstudio.com/respeaker_clip_python_build_app/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/262.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-LVGL is an open-source graphics library for embedded devices. It provides ready-made UI components such as labels, panels, bars, and layout tools, so you can build a structured interface in C/C++ without drawing every pixel manually. This guide creates a simple **LVGL ePaper status panel** with PlatformIO. The example uses **reTerminal E1001** as the default target, and keeps separate PlatformIO environments for reTerminal E1002, E1003, and E1004.
-
-</div>
-
-### [Deploy JoyAI-VL-Interaction on Jetson Thor](https://wiki.seeedstudio.com/deploy_joyai_vl_interaction_on_jetson_thor/)
-
-<div class="video-container">
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/iyxkqZrzvHs" title="deploy joyai vl interaction on jetson thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[JoyAI-VL-Interaction](https://github.com/jd-opensource/JoyAI-VL-Interaction) is an open real-time video-language interaction system. It combines a streaming VLM backend, a browser-based WebUI, optional ASR/TTS services, and a long-context memory pipeline so the model can watch a live scene and respond at the right moment. This wiki shows how to deploy JoyAI-VL-Interaction on NVIDIA Jetson AGX Thor, focusing on the minimal real-time video-language interaction stack for single-GPU edge deployment.
+**reSpeaker STT Web** transforms the reSpeaker Clip into an intelligent, AI-powered voice and meeting assistant, connecting embedded audio hardware with modern web and cloud AI technologies. Using BLE or Wi-Fi, it continuously synchronizes recordings from the device and processes them through powerful speech and language AI pipelines. With dedicated workflows for **speech transcription, speaker diarization, and AI-generated meeting summaries**, users can turn conversations into structured, actionable information. Built with Python and a modular architecture, the project provides a flexible foundation for developers and embedded engineers to build next-generation voice and AI applications with the reSpeaker Clip.
 
 </div>
 
-### [Simulating reBotArm through Isaacsim](https://wiki.seeedstudio.com/rebot_arm_b601_rs_isaacsim/)
+### [Build and Flash a Yocto Image for reComputer Super](https://wiki.seeedstudio.com/build_and_flash_yocto_for_recomputer_super/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-reBot-Isaacsim is an NVIDIA Isaac Sim simulation project designed specifically for the reBotArm. It leverages Isaac Sim's high-fidelity physics engine to accurately replicate the kinematic characteristics and gripper coordination logic of the robot arm in a virtual environment, providing an independent simulation-only environment for control algorithm development, trajectory planning verification, and communication protocol testing.
-
-</div>
-
-### [Rapid Prototyping on Jetson with NVIDIA Skills](https://wiki.seeedstudio.com/rapid_prototyping_on_jetson_with_nvidia_skills/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/nv_skills/banner.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document demonstrates how to rapidly prototype edge AI applications on NVIDIA Jetson using NVIDIA Skills, covering environment setup, device diagnostics, application development, validation, and packaging.
-
-</div>
-
-### [Complete Training Guide for SO-ARM with AmazingHand](https://wiki.seeedstudio.com/soarm_amazinghand_teleop/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/soarm_amazinghand/soarm_amazinghand.webp" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This document explains how to combine the SO-ARM101 follower arm with the AmazingHand dexterous hand and perform teleoperation using LeRobot.
+This guide builds a Seeed Yocto image for **reComputer Super J401 with a Jetson Orin NX 16GB module** and flashes it to the Jetson NVMe drive. The example uses `seeed-image-jetson-development`. This image provides a target-side development environment with CUDA Toolkit and `nvcc`, CUDA/cuDNN/TensorRT/VPI/OpenCV development files, build and debug tools, NVIDIA samples, and test packages.
 
 </div>
 
 <!-- ## Existing Wiki Updated
 
-### [Meshtastic Firmware Source Code Practical Tutorial](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)
+### [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/)
 
-We have added a new project: [Project B – XIAO ESP32S3 Environmental Telemetry Node](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/#project-b-xiao-esp32s3-environmental-telemetry-node). -->
+We have updated the [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/) guide with the new XIAO_nRF52840_NFC library, expanded antenna tuning instructions, setup verification, and practical NFC tag examples. -->
 
 ## The Efforts of Contributor
 
@@ -218,6 +186,8 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.6.15th](/Seeed_Elderly/weekly_wiki/2026/wiki260615)
 - [weekly wiki on 2026.6.22nd](/Seeed_Elderly/weekly_wiki/2026/wiki260622)
 - [weekly wiki on 2026.6.29th](/Seeed_Elderly/weekly_wiki/2026/wiki260629)
-- [weekly wiki on 2026.7.03rd](/Seeed_Elderly/weekly_wiki/2026/wiki260706)
+- [weekly wiki on 2026.7.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260706)
+- [weekly wiki on 2026.7.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260713)
+- [weekly wiki on 2026.7.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260720)
 
 </details>

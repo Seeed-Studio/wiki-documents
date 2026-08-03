@@ -15,7 +15,7 @@ last_update:
   date: 05/27/2026
   author: FanWenhan
 translation:
-  skip: [es,ja,pt,en]
+  skip: [es, ja, pt, en]
 createdAt: '2026-05-27'
 updatedAt: '2026-06-08'
 url: https://wiki.seeedstudio.com/cn/reachymini_conversation/

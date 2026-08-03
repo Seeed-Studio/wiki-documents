@@ -10,7 +10,7 @@ last_update:
   date: 12/18/2025
   author: Michelle Huang
 createdAt: '2025-05-23'
-updatedAt: '2026-04-20'
+updatedAt: '2026-06-28'
 url: https://wiki.seeedstudio.com/pt-br/wio_tracker_l1_node/
 ---
 
@@ -21,12 +21,12 @@ url: https://wiki.seeedstudio.com/pt-br/wio_tracker_l1_node/
             <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora </font></span></strong>
     </a>
 </div>
-A Série Wio Tracker L1 é um nó [Meshtastic®](https://meshtastic.org/) de baixo consumo e alta extensibilidade, com LoRa (862–930 MHz), nRF52840 para processamento eficiente e um módulo GPS L76K para rastreamento de localização preciso. Projetada para flexibilidade, ela é compatível com telas OLED e E-Ink, bem como com painéis solares e alimentação por bateria, tornando-a ideal para uma ampla gama de aplicações de IoT e fora da rede.
+A Série Wio Tracker L1 é um nó [Meshtastic®](https://meshtastic.org/) de baixo consumo e alta extensibilidade, com LoRa (862–930 MHz), nRF52840 para processamento eficiente e um módulo GPS L76K para rastreamento de localização preciso. Projetado para flexibilidade, ele é compatível com telas OLED e E-Ink, bem como painéis solares e alimentação por bateria, tornando-o ideal para uma ampla gama de aplicações de IoT e fora da rede.
 
 ## Modelo da Série L1
 
 :::tip
-A Série Wio Tracker L1 está disponível em 4 versões — escolha a que melhor se adapta às suas necessidades.
+A Série Wio Tracker L1 está disponível em 4 versões — escolha a que melhor atende às suas necessidades.
 :::
 
 ### Introdução à Série
@@ -52,10 +52,10 @@ A Série Wio Tracker L1 está disponível em 4 versões — escolha a que melhor
 ### Recursos
 
 - **Pré-gravado com firmware Meshtastic**
-Pronto para uso imediatamente, com firmware Meshtastic pré-instalado para uma configuração simples.
+Pronto para uso imediato, com firmware Meshtastic pré-instalado para uma configuração simples e contínua.
 
 - **Três Opções de Alimentação**
-Suporta carregamento rápido Type-C, entrada solar e alimentação por bateria de íon de lítio para implantação flexível em vários ambientes — ideal para aplicações externas e móveis.
+Suporta carregamento rápido via Type-C, entrada solar e alimentação por bateria de íon de lítio para implantação flexível em vários ambientes — ideal para aplicações externas e móveis.
 
 - **Suporte Flexível a Telas**
 Telas opcionais OLED de 1,3 polegada e E-Ink de 2,13 polegadas, oferecendo opções de exibição versáteis para diferentes necessidades de consumo de energia e retorno visual.
@@ -77,11 +77,11 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
     </th>
   </tr>
   <tr>
-    <td colspan="1">Memória interna</td>
-    <td colspan="1">1 MB de flash e 256 kB de RAM</td>
+    <td colspan="1">Memória On-chip</td>
+    <td colspan="1">1 MB flash e 256 kB RAM</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">Sem fio</td>
+    <td colspan="1" rowspan="3">Sem Fio</td>
     <td colspan="1">LoRa: Baseado em <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>, suporta 862-930MHz</td>
   </tr>
    <tr>
@@ -102,7 +102,7 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
     <td colspan="1">Plated Through Hole（PTH）: UART/IIC/GPIO/Analógico</td>
   </tr>
   <tr>
-    <td colspan="1">Ilhas de solda reservadas para SWD</td>
+    <td colspan="1">Pads de solda reservados para SWD</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">Entrada de Energia</td>
@@ -122,7 +122,7 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
     <td colspan="1">Resolução: 128 × 64 pixels</td>
   </tr>
   <tr>
-    <td colspan="1">Área ativa (mm): 34,5 × 23,0</td>
+    <td colspan="1">Área Ativa (mm): 34,5 × 23,0</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">[Tela E-Ink](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
@@ -132,7 +132,7 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
     <td colspan="1">Resolução: 122 × 250 pixels</td>
   </tr>
   <tr>
-    <td colspan="1">Área ativa (mm): 48,55 × 23,7046</td>
+    <td colspan="1">Área Ativa (mm): 48,55 × 23,7046</td>
   </tr>
   <tr>
     <td colspan="1">Certificação</td>
@@ -140,7 +140,7 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
   </tr>
 </table>
 
-### Visão Geral do Hardware
+### Visão Geral de Hardware
 
 **Wio Tracker L1**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio_tracker-l1.png" alt="pir" width={800} height="auto" /></p>
@@ -154,3 +154,26 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
 **Diagrama**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>
+
+## Suporte Técnico e Discussão sobre o Produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

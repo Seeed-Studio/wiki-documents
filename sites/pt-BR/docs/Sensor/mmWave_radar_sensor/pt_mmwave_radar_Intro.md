@@ -10,7 +10,7 @@ last_update:
   date: 03/28/2025
   author: Hugo
 createdAt: '2023-07-20'
-updatedAt: '2026-03-20'
+updatedAt: '2026-05-12'
 url: https://wiki.seeedstudio.com/pt-br/mmwave_radar_Intro/
 ---
 

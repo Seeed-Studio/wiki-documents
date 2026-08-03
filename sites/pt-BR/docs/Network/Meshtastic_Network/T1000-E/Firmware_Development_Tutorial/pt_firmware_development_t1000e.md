@@ -3,7 +3,7 @@ description: Um tutorial prático para configurar o ambiente do código-fonte do
 title: Tutorial de Desenvolvimento com Código-Fonte do Meshtastic
 keywords:
   - Meshtastic
-  - Source Code
+  - Código-Fonte
   - PlatformIO
   - T1000-E
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png
@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 
 # Tutorial Prático do Código-Fonte do Firmware Meshtastic
 
-Este tutorial é destinado a usuários que estão começando a trabalhar com o código-fonte do firmware Meshtastic. Ele inclui fluxos de trabalho comuns tanto para Windows quanto para macOS. O objetivo é simples: clonar o repositório oficial, concluir uma compilação bem-sucedida, fazer uma alteração simples na interface do usuário e gravar o firmware modificado no dispositivo para verificação.
+Este tutorial é destinado a usuários que estão começando a trabalhar com o código-fonte do firmware Meshtastic. Ele inclui fluxos de trabalho comuns tanto para Windows quanto para macOS. O objetivo é simples: clonar o repositório oficial, concluir uma compilação bem-sucedida, fazer uma pequena alteração na interface do usuário e gravar o firmware modificado no dispositivo para verificação.
 
 Se você já está familiarizado com Git, Python ou PlatformIO, pode pular as seções correspondentes e ir diretamente para a parte prática.
 
@@ -49,7 +49,7 @@ Abra a página oficial de download do Git para Windows:
 
 O instalador geralmente começa a ser baixado automaticamente quando você abre a página. Após a conclusão do download, clique duas vezes no instalador e siga o assistente de instalação.
 
-Durante a instalação, o passo mais importante é **ajustar a variável de ambiente PATH**. Escolha:
+Durante a instalação, a etapa mais importante é **ajustar a variável de ambiente PATH**. Escolha:
 
 **Git from the command line and also from 3rd-party software**
 
@@ -57,7 +57,7 @@ Para as outras opções, os valores padrão geralmente são suficientes. Basta c
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image1.png)
 
-Aguarde até que a instalação termine.
+Aguarde até que a instalação seja concluída.
 
 Após a instalação, **feche todas as janelas atuais do PowerShell e terminais do VS Code**, depois abra uma nova janela do PowerShell e execute:
 
@@ -121,7 +121,7 @@ Se um número de versão aparecer, a instalação está concluída.
 
 <TabItem value="macos" label="macOS">
 
-No macOS, o Git pode ser instalado de mais de uma forma, mas usar o Homebrew geralmente é a opção mais fácil:
+No macOS, o Git pode ser instalado de mais de uma forma, mas usar o Homebrew geralmente é a opção mais simples:
 
 1. Instale primeiro as Command Line Tools:
 
@@ -152,7 +152,7 @@ Se o seu terminal já retornar uma versão válida do Git, você não precisa in
 </TabItem>
 </Tabs>
 
-**Configure sua identidade do Git**
+**Configurar sua identidade do Git**
 
 Em seguida, configure suas informações de usuário do Git. Substitua os valores de exemplo pelo seu próprio nome e endereço de e-mail:
 
@@ -183,7 +183,7 @@ winget search --id Python.Python.3.13 --source winget
 winget install -e --id Python.Python.3.13 --source winget
 ```
 
-Se o primeiro comando conseguir encontrar o Python, o segundo normalmente deve instalá-lo diretamente.
+Se o primeiro comando conseguir encontrar o Python, o segundo normalmente deverá instalá-lo diretamente.
 
 Após a instalação, feche o terminal e abra-o novamente, depois execute:
 
@@ -220,7 +220,7 @@ python3 --version
 pip3 --version
 ```
 
-Se você preferir usar `python` e `pip`, pode definir aliases no shell por conta própria. No macOS, porém, usar `python3` e `pip3` costuma ser a opção mais confiável.
+Se você preferir usar `python` e `pip`, pode definir aliases no shell por conta própria. No macOS, porém, usar `python3` e `pip3` geralmente é a opção mais confiável.
 
 </TabItem>
 </Tabs>
@@ -284,7 +284,7 @@ Se os comandos forem concluídos normalmente, o repositório foi clonado com suc
 </TabItem>
 </Tabs>
 
-### 5. Prática hands-on
+### 5. Prática prática (hands-on)
 
 Neste estágio, não tenha pressa em editar o código. Primeiro, certifique-se de que o projeto consegue passar com sucesso por todo o processo de compilação.
 
@@ -294,7 +294,7 @@ Recomenda-se começar com três tarefas:
 2. Verificar `platformio.ini`
 3. Encontrar o ambiente de compilação para sua placa de destino
 
-Um detalhe importante: não se concentre apenas no `platformio.ini` da raiz. Ele na verdade inclui arquivos de configuração adicionais, por exemplo:
+Um detalhe importante: não foque apenas no `platformio.ini` da raiz. Ele na verdade inclui arquivos de configuração adicionais, por exemplo:
 
 ```plain
 extra_configs =
@@ -314,11 +314,11 @@ Aqui usamos o **Wio Tracker L1 Pro** como placa de destino de exemplo.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image11.png)
 
-Isso mostra que, no Meshtastic, **o alvo de compilação para Wio Tracker L1 / L1 Pro é** `seeed_wio_tracker_L1`.
+Isso mostra que, no Meshtastic, **o alvo de compilação para o Wio Tracker L1 / L1 Pro é** `seeed_wio_tracker_L1`.
 
 **Resumo da modificação mínima**
 
-Se você só quiser concluir uma prática mínima de ponta a ponta, concentre-se nestes passos principais:
+Se você só quiser concluir uma prática mínima de ponta a ponta, concentre-se nestas etapas principais:
 
 1. Instalar Git, Python 3, VS Code e PlatformIO.
 2. Clonar o repositório `meshtastic/firmware` e inicializar os submódulos.
@@ -326,9 +326,9 @@ Se você só quiser concluir uma prática mínima de ponta a ponta, concentre-se
 4. Modificar a lógica de exibição em `src/graphics/SharedUIDisplay.cpp`.
 5. Recompilar o firmware e gravar o arquivo UF2 gerado no dispositivo para verificação.
 
-**Passo 1: Confirmar que o projeto compila com sucesso**
+**Etapa 1: Confirmar que o projeto compila com sucesso**
 
-Aqui usamos o PlatformIO Core CLI para compilar.
+Aqui usamos a CLI do PlatformIO Core para compilar.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png)
 
@@ -356,7 +356,7 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image13.png)
 
-Se a interface estiver semelhante à captura de tela acima, o processo de compilação foi iniciado corretamente. A primeira compilação costuma levar um tempo, então seja paciente.
+Se a interface estiver semelhante à captura de tela acima, o processo de compilação foi iniciado corretamente. A primeira compilação geralmente leva um tempo, então tenha paciência.
 
 **Se a compilação falhar**
 
@@ -382,11 +382,11 @@ pio pkg install -e seeed_wio_tracker_L1
 </TabItem>
 </Tabs>
 
-Esta abordagem tem vários benefícios:
+Essa abordagem tem vários benefícios:
 
 - Ela instala apenas as dependências, sem iniciar imediatamente uma compilação completa.
 - Ela facilita ver qual pacote está causando o problema.
-- As mensagens de erro geralmente são mais focadas e mais fáceis de depurar.
+- As mensagens de erro geralmente são mais focadas e fáceis de depurar.
 
 Depois que as dependências forem instaladas, execute:
 
@@ -410,7 +410,7 @@ pio run -e seeed_wio_tracker_L1 -v
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image14.png)
 
-Quando a instalação das dependências estiver concluída, execute novamente a compilação normal:
+Quando a instalação das dependências terminar, execute novamente a compilação normal:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -432,7 +432,7 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image15.png)
 
-Se a compilação passar neste ponto, a saída do firmware foi gerada com sucesso.
+Se a compilação passar neste ponto, o firmware de saída terá sido gerado com sucesso.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image16.png)
 
@@ -526,7 +526,7 @@ int headerLabelRight = timeX - 4;
 
 `src/graphics/SharedUIDisplay.cpp:263`
 
-Esta parte lida com a área usada pelos ícones de hora, e-mail, mudo e outros ícones no lado direito. Eu adicionei `headerLabelRight` para limitar o limite máximo à direita do texto central e evitar sobreposição com o conteúdo do lado direito.
+Esta parte lida com a área usada pelos ícones de hora, correio, mudo e outros ícones no lado direito. Eu adicionei `headerLabelRight` para limitar o limite máximo à direita do texto central e evitar sobreposição com o conteúdo do lado direito.
 
 **Alteração 4: Desenhar um rótulo personalizado quando o título estiver vazio**
 
@@ -549,7 +549,7 @@ if (titleStr && titleStr[0] == '\0') {
 
 `src/graphics/SharedUIDisplay.cpp:350`
 
-Esta é a lógica central da modificação. Ela se aplica apenas a `SEEED_WIO_TRACKER_L1` e exclui explicitamente a variante de E-Ink. Ela centraliza o texto `made by AE` no espaço em branco entre as informações da bateria e a exibição da hora.
+Esta é a lógica central da modificação. Ela se aplica apenas a `SEEED_WIO_TRACKER_L1` e exclui explicitamente a variante E-Ink. Ela centraliza o texto `made by AE` no espaço em branco entre as informações da bateria e a exibição da hora.
 
 **Alteração 5: Tratar o ramo em que nenhuma hora é exibida**
 
@@ -611,7 +611,7 @@ pio run -e seeed_wio_tracker_L1
 </TabItem>
 </Tabs>
 
-A lógica de exibição foi alterada, mas o alvo de compilação ainda é o mesmo:
+A lógica de exibição foi alterada, mas o alvo de compilação continua o mesmo:
 
 ```plain
 seeed_wio_tracker_L1
@@ -649,7 +649,7 @@ Depois que a compilação estiver concluída, abra a página oficial de gravaç�
 
 [Meshtastic Flasher](https://flasher.meshtastic.org/)
 
-Na maioria dos casos, você deve realizar primeiro uma operação de apagamento.
+Na maioria dos casos, você deve executar primeiro uma operação de apagamento.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image18.png)
 
@@ -678,7 +678,7 @@ Se quiser ir além, você pode continuar explorando estas direções:
 **`python3` ou `pip3` não está disponível**
 
 - No Windows, confirme se o Python foi adicionado ao `PATH` ou reabra o terminal e tente novamente.
-- No macOS, primeiro verifique se `python3` / `pip3` já existem e instale o Python com o Homebrew somente se necessário.
+- No macOS, primeiro verifique se `python3` / `pip3` já existe e instale o Python com o Homebrew somente se necessário.
 
 **O comando `pio` não está disponível**
 
@@ -697,11 +697,34 @@ git submodule update --init --recursive
 
 **A primeira compilação leva muito tempo**
 
-- É normal que a primeira compilação baixe muitas dependências.
-- Se parecer travado por muito tempo, tente instalar os pacotes separadamente primeiro:
+- É normal que a primeira compilação faça o download de muitas dependências.
+- Se parecer travada por muito tempo, tente instalar os pacotes separadamente primeiro:
 
 ```bash
 pio pkg install -e seeed_wio_tracker_L1
 ```
 
 Em seguida, execute a compilação novamente.
+
+## Suporte Técnico e Discussão de Produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

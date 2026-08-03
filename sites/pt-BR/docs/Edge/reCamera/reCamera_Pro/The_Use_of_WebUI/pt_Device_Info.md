@@ -11,7 +11,7 @@ last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-09'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_device_info/
 ---
 

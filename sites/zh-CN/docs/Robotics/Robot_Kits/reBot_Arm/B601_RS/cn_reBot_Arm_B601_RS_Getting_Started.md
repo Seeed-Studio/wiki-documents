@@ -13,15 +13,18 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_b601_rs_getting_started
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 last_update:
-  date: 2026-05-26
+  date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-06-16'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/
 ---
+import '/src/css/rebot-wiki-style.css';
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # reBot Arm B601-RS 快速入门
 
@@ -46,6 +49,14 @@ url: https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/
 reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)上开源了，本文将带领你快速入门B601-RS，从组装到使用。
 本文的内容正在光速赶来，各位敬请期待。
 
+## 风险告知及免责声明
+
+<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+</div>
 
 ## 关于电源
 
@@ -65,7 +76,7 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
   组装参考视频：
   
   <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116793196675417&bvid=BV15i7K69EnQ&cid=39314066536&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116793196675417&bvid=BV15i7K69EnQ&cid=39314066536&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
@@ -111,34 +122,38 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 使用请参考视频和文字教程,在控制机械臂运动之前，需要重新设置一次零点。
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1MEJV6TELk&p=1" title="Bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1MEJV6TELk&p=1&autoplay=0&muted=1" title="Bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 
 ### 1.安装 Miniforge（建议）（支持 Windows\Ubuntu\macOS\Jetson\树莓派）
 
 1.安装miniforge，创建虚拟环境，避免其他环境包的干扰导致demo运行失败。
-
-Ubuntu\Jetson\树莓派:
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\Jetson\树莓派">
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
+</TabItem>
+<TabItem value="macOS" label="macOS">
 
-or macOS:
 ```bash
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
 bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
-or windows:
-
+</TabItem>
+<TabItem value="windows" label="windows">
 在浏览器中打开 Miniforge 的 Release 页面，找到最新版本的 `Miniforge3-Windows-x86_64.exe` 点击下载：
 
 ```text
 https://github.com/conda-forge/miniforge/releases
 ```
+
+</TabItem>
+</Tabs>
 
 2.创建 Python 3.12 版本虚拟环境：
 
@@ -189,7 +204,8 @@ pip install motorbridge
 
 让 PCAN-USB 设备以 1Mbps 速率工作在 CAN 总线上，供机械臂通信使用
 
-Ubuntu\Jetson\树莓派：
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\树莓派">
 
 ```bash
 #套件里是 PCAN-USB，通常应该直接出现 can0 或 can1
@@ -198,12 +214,131 @@ ip -br link
 
 #如果出现 can0，再设置 bitrate
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-or macOS:
+</TabItem>
 
+<TabItem value="Jetson" label="Jetson">
+
+下载文件：[peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
+
+- 移除 brltty
+在 Jetson 设备上，brltty 可能占用 leader（主机）所使用的 USB 串口，请先卸载：
+```bash
+sudo apt remove -y brltty
+```
+
+-  安装依赖
+```bash
+sudo apt update
+sudo apt install -y \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    libpopt-dev \
+    can-utils \
+    ethtool \
+    nvidia-l4t-kernel-headers
+```
+确认当前内核头文件目录存在：
+```bash
+ls -l /lib/modules/$(uname -r)/build
+```
+
+-  编译 PEAK SocketCAN 驱动
+下载并解压 PEAK Linux Driver 9.2.0，进入源码目录：
+```bash
+tar -xvf peak-linux-driver-9.2.0.tar.gz
+cd ~/peak-linux-driver-9.2.0
+```
+清理旧编译产物：
+```bash
+make clean
+```
+使用 netdev 模式编译：
+```bash
+make netdev
+```
+netdev 模式会将 PCAN-USB 注册为 Linux SocketCAN 网络接口。
+**不要直接执行 `make`**。直接执行 `make` 会编译 chardev 模式；而 LeRobot 和 motorbridge-cli 需要使用 SocketCAN 接口。
+
+- 安装并加载驱动
+安装驱动：
+```bash
+sudo make install
+sudo depmod -a
+```
+加载 pcan 内核模块：
+```bash
+sudo modprobe pcan
+```
+设置开机自动加载模块：
+```bash
+echo pcan | sudo tee /etc/modules-load.d/pcan.conf
+```
+验证驱动已正常加载：
+```bash
+ip -br link | grep can
+```
+正常输出示例：
+```
+can0             DOWN           <NOARP,ECHO>
+can1             DOWN           <NOARP,ECHO>
+.....
+```
+
+- 查询机械臂对应的 PCAN 接口编号
+```bash
+for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
+```
+命令列出的接口即为 PEAK PCAN-USB 设备，示例：
+```
+can2
+```
+
+- 永久配置 `pcan_refresh` 命令
+Linux 环境变量重启后会失效，且 PCAN 接口编号可能发生变动。更稳妥的方案是永久定义一个刷新函数，每次打开终端后执行。
+
+将以下函数追加写入 `~/.bashrc`：
+```bash
+grep -q '^pcan_refresh()' ~/.bashrc || cat >> ~/.bashrc <<'EOF'
+
+pcan_refresh() {
+    local iface
+    iface=$(sudo setup-pcan-if) || return 1
+    export PCAN_IF="$iface"
+    echo "PCAN_IF=$PCAN_IF"
+}
+EOF
+```
+```bash
+source ~/.bashrc
+```
+每次重启设备、重新插拔 PCAN-USB 后执行：
+```bash
+pcan_refresh
+```
+执行成功输出：
+```
+PCAN_IF=can1
+```
+后续所有命令请使用 `$PCAN_IF`，不要硬编码 `can1`、`can2` 这类固定编号。
+
+```bash
+sudo modprobe peak_usb
+ip -br link
+
+#如果出现 $PCAN_IF ，再设置 bitrate
+sudo ip link set $PCAN_IF down 2>/dev/null
+sudo ip link set $PCAN_IF type can bitrate 1000000 restart-ms 100
+sudo ip link set $PCAN_IF up
+```
+
+</TabItem>
+<TabItem value="macos" label="macos">
 libPCBUSB.dylib 无法加载，请先安装 PCBUSB
 
 ```bash
@@ -235,10 +370,156 @@ motorbridge-cli --help
 python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
 ```
 
-
-or Windows：
+</TabItem>
+<TabItem value="windows" label="windows">
 
 请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
+
+</TabItem>
+
+
+
+</Tabs>
+
+
+
+
+
+
+
+
+:::tip 注意！！！
+电脑安装驱动后，发现pcan设备固件错误，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
+:::
+
+<details>
+
+<summary>PCAN 固件下载与驱动修复步骤</summary>
+
+如果安装驱动后仍然无法使用 PCAN-USB，并且设备管理器中没有识别到如下图所示的 **PCAN-USB** 设备，请下载 PCAN 固件压缩包，并按照以下步骤安装 DFU 驱动和重新烧录固件。
+
+![设备管理器识别到 PCAN-USB](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/01-pcan-usb-device.png)
+
+
+> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+### 安装 DFU 驱动
+
+1. 解压安装包，得到 `Dfu tool` 和 `pcan` 两个文件夹。
+
+![压缩包解压后的 Dfu tool 和 pcan 文件夹](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/02-extracted-folders.png)
+
+2. 打开 `Dfu tool` 文件夹，运行其中的 `.exe` 安装程序。安装完成后，请记录驱动所在位置，例如：
+
+```text
+C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
+```
+
+![DfuSe 工具安装程序及安装位置](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/03-dfuse-install-location.png)
+
+3. 将 USB2CAN 模块上的拨码开关切换到 **BOOT**，然后连接电脑。
+
+![USB2CAN 模块拨码开关切换到 BOOT](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/04-usb2can-boot-switch.jpg)
+
+4. 打开 **设备管理器**，找到 **其他设备 → STM32 BOOTLOADER**，右键选择 **更新驱动程序**，然后选择 **浏览我的电脑以查找驱动程序**。
+
+![设备管理器中的 STM32 BOOTLOADER](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/05-stm32-bootloader.png)
+
+![更新驱动程序并选择"浏览我的电脑以查找驱动程序"](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/06-update-driver.png)
+
+5. 将此前记录的 DfuSeDemo 驱动位置粘贴到路径框内，勾选 **包括子文件夹**，然后点击 **下一步**。
+
+![填写 DfuSeDemo 驱动路径并勾选"包括子文件夹"](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/07-driver-path.png)
+
+6. 拔出并重新插入 USB2CAN。此时，如果设备被识别为 **STM Device in DFU Mode**，则表示驱动更新成功。
+
+7. 打开 **DfuSeDemo** 软件，确认软件能够正确识别 USB2CAN 模块。
+
+![DfuSeDemo 正确识别 USB2CAN 模块](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/08-dfuse-detects-usb2can.png)
+
+### 烧录 PCAN 固件
+
+1. 在 DfuSeDemo 中点击 **Upgrade or Verify Action → Choose...**，选择解压后 `pcan` 文件夹内的固件。
+2. 点击 **Upgrade**，在弹窗中点击 **是**，等待固件烧录完成，然后退出 DfuSeDemo。
+
+![在 DfuSeDemo 中选择 pcan 固件并点击 Upgrade](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/09-select-pcan-firmware.png)
+
+![固件烧录完成提示](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/10-firmware-upgrade-complete.png)
+
+### 恢复并验证设备
+
+拔掉 USB2CAN，将拨码开关切换到 **120R**，然后重新连接电脑。打开设备管理器，如果设备已被识别为 **PCAN-USB**，则表示问题已修复，可以继续按照本教程使用。
+
+![设备管理器中成功识别到 PCAN-USB](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/11-pcan-usb-recognized.png)
+
+</details>
+
+<details>
+
+<summary>PCAN 固件下载与驱动修复步骤-Ubuntu</summary>
+Ubuntu 用户请参考本指南
+
+1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.USB2CAN 拨到 BOOT
+
+3.请将第一步的USB2CAN.zip压缩包解压，将flash_pcan_ubuntu.sh 和 USB2CAN.zip里面的pcan_canable_hw.bin 放同一目录
+
+[点击下载 flash_pcan_ubuntu.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
+
+如果是从别的电脑传过去的（比如 scp）：
+
+```text
+scp flash_pcan.sh pcan_canable_hw.bin seeed@你的Ubuntu的IP:~/Downloads/
+```
+或者直接拖进优盘再插到 Ubuntu 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+
+4.执行：
+
+```text
+bash flash_pcan_ubuntu.sh
+```
+ 输入密码；等待完成
+
+完成后重新拨回"120R"
+
+重新插 USB。
+</details>
+
+<details>
+
+<summary>PCAN 固件下载与驱动修复步骤-MAC</summary>
+MAC 用户请参考本指南
+
+1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.USB2CAN 拨到 BOOT
+
+3.请将第一步的USB2CAN.zip压缩包解压，将flash_pcan_mac.sh 和 USB2CAN.zip里面的pcan_canable_hw.bin 放同一目录
+
+[点击下载 flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
+
+如果是从别的电脑传过去的（比如 scp）：
+
+```text
+scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
+```
+
+或者直接拖进优盘再插到 MAC 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+
+4.执行：
+
+```text
+ bash /Users/"你的用户名"/Downloads/pcan_flash_mac.sh "/Users/"你的用户名"/Downloads/pcan_canable_hw.bin"
+```
+以上命令为文件放置在mac下载路径，按实际路径更改
+
+输入密码；等待完成
+
+完成后重新拨回"120R"
+
+重新插 USB。
+</details>
 
 <!-- ### 3.写入电机id
 
@@ -303,5 +584,27 @@ or
 DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
 
+#### 初始化 RS 电机控制参数
 
+:::warning 首次使用时请完成参数初始化
 
+reBot Arm B601-RS 的大多数示例使用 MIT 模式运行。原生 Position（`pos_vel`）模式会直接使用位置环增益 `loc_kp` 和最大速度 `vel_max`，其运动效果也与速度环增益 `spd_kp`、加速度参数 `acc_rad` 有关。如果未初始化 reBot Arm B601-RS 的推荐参数，或各关节保存的参数不一致，使用位置模式时可能出现响应、速度或加减速效果异常。
+
+请先在 [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) 的“机械臂型号”中选择 `rebot-arm-robstride`，扫描并确认 1～7 号关节全部在线，并按照前文完成机械臂校零，然后再执行以下操作：
+
+1. 点击 **读取参数**，读取所有在线关节当前保存的参数。该操作只读取参数，不会修改电机中的数据。请等待页面提示“控制参数读取完成”，并保留当前参数作为记录。
+2. 点击 **套用默认模板**，确认页面提示“已套用 reBot Arm RobStride 默认参数模板（1～7 关节）”。此操作只将推荐值加载到页面中，尚未写入电机。
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/b601_rs_motorbridge_read_params.png" alt="读取 B601-RS 电机参数并套用默认模板" />
+</div>
+
+3. 点击 **写入参数**，确认机械臂已安全支撑、周围无人员或障碍物，并在弹窗中确认写入。请勿在写入过程中断电或插拔电机线。
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/b601_rs_motorbridge_write_params.png" alt="确认写入 B601-RS 电机参数" />
+</div>
+
+4. 写入完成后，MotorBridge Studio 会自动回读参数。页面显示“写入后回读校验一致”即表示初始化成功。
+
+:::

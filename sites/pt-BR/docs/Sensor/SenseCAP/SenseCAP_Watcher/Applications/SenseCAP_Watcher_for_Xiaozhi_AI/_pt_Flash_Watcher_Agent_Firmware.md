@@ -14,8 +14,7 @@ last_update:
   date: 12/04/2025
   author: Twelve
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-03-04'
 updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/flash_watcher_agent_firmware/

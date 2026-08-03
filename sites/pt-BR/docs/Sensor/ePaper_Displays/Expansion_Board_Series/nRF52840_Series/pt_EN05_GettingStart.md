@@ -10,7 +10,7 @@ last_update:
   author: dimo
 createdAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/pt-br/epaper_en05/
-updatedAt: '2026-04-27'
+updatedAt: '2026-04-28'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -42,10 +42,10 @@ Alimentada pelo **XIAO nRF52840 Plus**, a placa de display EN05 é compatível c
 
 ### Recursos
 
-- **Alimentada por XIAO nRF52840 Plus:** Funciona imediatamente quando conectada a um display ePaper compatível, com interface NFC onboard para toque‑para‑configurar, parear ou acionar atualizações de conteúdo.
+- **Alimentada pelo XIAO nRF52840 Plus:** Funciona imediatamente quando conectada a um display ePaper compatível, com interface NFC onboard para toque‑para‑configurar, parear ou acionar atualizações de conteúdo.
 - **Suporte versátil a displays:** Compatível com uma ampla gama de displays ePaper de 24 pinos, oferecendo suporte a displays ePaper de 24 pinos para diferentes requisitos de projeto.
 - **Porta de extensão de IO:** Permite a conexão de sensores adicionais, como sensores de temperatura e umidade, para funcionalidade aprimorada.
-- **Conector de bateria com chave:** Fornece uma conexão de bateria simples e integra uma chave, permitindo gerenciamento de energia eficiente e economia de energia.
+- **Conector de bateria com chave:** Fornece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
 - **Compatível com várias plataformas de software:** Quer você prefira programar com Arduino, Platform IO, ESPHome e outros, esta placa controladora oferece suporte a ambas as abordagens, proporcionando máxima flexibilidade para seus projetos.
 
 ### Especificações
@@ -60,7 +60,7 @@ Alimentada pelo **XIAO nRF52840 Plus**, a placa de display EN05 é compatível c
 | **Botões** | 1x botão de reset (montado na lateral) <br/> 3x botões de usuário (montados na lateral) |
 | **Espessura da PCB** | 1,2 mm |
 
-## Visão geral de hardware
+## Visão geral do hardware
 
 ### Displays ePaper compatíveis
 
@@ -77,7 +77,7 @@ A EN05 é compatível com diversos displays ePaper SPI de 24 pinos, incluindo, m
 
 
 
-## Visão geral de software
+## Visão geral do software
 
 ### Instalar a biblioteca Seeed GFX
 
@@ -95,7 +95,7 @@ Baixe e instale a biblioteca Seeed GFX a partir do GitHub.
 </a>
 </div>
 
-Role para baixo e abra este link.
+Role a página para baixo e abra este link.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -129,7 +129,7 @@ Crie um novo arquivo "driver.h" e cole esse código nele. O código deve ficar a
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN05
 ```
 
-Depois disso, vá em **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**.
+Depois disso, vá em **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Plus** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**.
 
 Em seguida, clique em **Upload** para enviar o código.
 Agora você verá o resultado na sua tela ePaper!
@@ -144,9 +144,9 @@ Agora você verá o resultado na sua tela ePaper!
 
 ## Solução de problemas
 
-**P1: A tela não exibe nada após o upload do código.**
+**P1: A tela não exibe nada após o envio do código.**
 - **Verifique o cabo FPC**: Certifique-se de que o cabo FPC do ePaper esteja inserido na orientação correta e bem travado no conector.
-- **Verifique a configuração do driver**: Confira novamente o `driver.h` para garantir que o `BOARD_SCREEN_COMBO` correto esteja selecionado para o tamanho específico da sua tela.
+- **Verifique a configuração do driver**: Confira novamente `driver.h` para garantir que o `BOARD_SCREEN_COMBO` correto esteja selecionado para o tamanho específico da sua tela.
 
 **P2: A placa não liga quando conectada a uma bateria.**
 - **Chave de hardware**: Verifique se a chave deslizante de alimentação na placa está alternada para a posição ON.

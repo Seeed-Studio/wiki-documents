@@ -17,10 +17,9 @@ last_update:
   date: 2026-06-10
   author: YinHaizhou
 translation:
-  skip:
-    - [zh-CN]
+  skip: [[zh-CN]]
 createdAt: '2026-06-10'
-updatedAt: '2026-06-10'
+updatedAt: '2026-07-07'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/
 ---
 
@@ -106,7 +105,7 @@ ip -br link
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ip -details link show can0
 ```
@@ -712,7 +711,7 @@ ip -details link show can0
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 

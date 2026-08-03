@@ -1,5 +1,5 @@
 ---
-description: このチュートリアルでは、ロボットアーム reBot Arm B601-DM 上で、Pinocchio と MeshCat を用いた運動学解析および可視化の方法を紹介します。
+description: このチュートリアルでは、reBot Arm B601-DM ロボットアームで Pinocchio と MeshCat を用いた運動学解析と可視化の方法を紹介します。
 title: reBot Arm B601-DM 向け Pinocchio と MeshCat 入門
 keywords:
   - Pinocchio
@@ -14,10 +14,9 @@ last_update:
   date: 2026-06-30
   author: LiuJunjie
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-03-24'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
@@ -47,7 +46,7 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_pinocchio_meshcat/
 
 [Pinocchio](https://github.com/stack-of-tasks/pinocchio) は、ロボットの動力学解析と最適化のためのオープンソースライブラリです。効率的な順／逆運動学、動力学計算、および軌道計画機能を提供します。[MeshCat](https://github.com/rdeits/meshcat) は、ロボットの状態や動作軌跡をリアルタイムに表示できる Web ベースの 3D 可視化ツールです。
 
-本プロジェクトは、Pinocchio の強力な計算機能と MeshCat の直感的な可視化を組み合わせ、reBot Arm B601-DM 向けに、運動学解析とデバッグのための完全なツールセットを提供します。
+本プロジェクトは、Pinocchio の強力な計算機能と MeshCat の直感的な可視化を組み合わせ、reBot Arm B601-DM 向けに完全な運動学解析およびデバッグツール一式を提供します。
 
 ---
 
@@ -57,7 +56,7 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_pinocchio_meshcat/
    順運動学（FK）および逆運動学（IK）計算をサポートし、ロボットアームのエンドエフェクタ姿勢をリアルタイムに求めることができます。
 
 2. **リアルタイム 3D 可視化**
-   ブラウザ上の MeshCat を通じて、ロボットアームの状態と動作軌跡をリアルタイムに表示でき、追加ソフトウェアは不要です。
+   ブラウザ上の MeshCat を通じてロボットアームの状態と動作軌跡をリアルタイムに表示し、追加ソフトウェアは不要です。
 
 3. **軌道計画とトラッキング**
    SE(3) 測地線軌道計画を実装し、CLIK（Closed-Loop Inverse Kinematics）トラッキング制御をサポートします。
@@ -70,7 +69,7 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_pinocchio_meshcat/
 
 ## 仕様
 
-このチュートリアルで使用するハードウェアは、[Seeed Studio](https://www.seeedstudio.com/) によって提供されています。
+このチュートリアルで使用するハードウェアは [Seeed Studio](https://www.seeedstudio.com/) によって提供されています。
 
 <table>
   <thead>
@@ -128,7 +127,7 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_pinocchio_meshcat/
 |------|-------------|
 | **Python** | 3.10+ |
 | **オペレーティングシステム** | Ubuntu 22.04+ |
-| **通信インターフェース** | USB2CAN シリアルブリッジ または CAN インターフェース |
+| **通信インターフェース** | USB2CAN シリアルブリッジまたは CAN インターフェース |
 
 ---
 
@@ -143,7 +142,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### ステップ 2. 環境を同期（すべての依存関係をインストール）
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
 cd reBotArm_control_py
 uv sync
 ```
@@ -168,7 +167,7 @@ sudo chmod 666 /dev/can0
 :::
 ### 単一モータ制御コンソール（`0x01damiao_test.py`）
 
-motorbridge SDK を使用して、単一モータの直接テストを行います。
+motorbridge SDK を使用して単一モータを直接テストします。
 
 **実行方法**:
 ```bash
@@ -193,9 +192,9 @@ uv run python example/0x01damiao_test.py
 | `q` / `quit` | 終了 |
 ---
 
-### ゼロ点キャリブレーションと角度モニタリング（`2_zero_and_read.py`）
+### ゼロキャリブレーションと角度モニタリング（`2_zero_and_read.py`）
 
-すべての関節のゼロ点を自動的に設定し、関節角度をリアルタイムに表示します。
+すべての関節のゼロ位置を自動的に設定し、関節角度をリアルタイムに表示します。
 
 **実行方法**:
 ```bash
@@ -212,23 +211,23 @@ uv run python example/2_zero_and_read.py
 **実行方法**:
 ```bash
 uv run python example/3_mit_control.py
-> 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
+> 30 0 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
 > state
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
 ```
 :::danger
-MIT 制御モードでは、ロボットアームが非常に高速で動作することに注意してください。人や他の機器がアームの動作半径内に入らないよう、十分に離れていることを確認してください。
+MIT 制御モードではロボットアームが非常に高速で動作することに注意してください。人や他の機器がアームの動作半径内に入らないようにしてください。
 :::
 
 ### 位置・速度ハイブリッド制御モード（`4_pos_vel_control.py`）
 
-すべての関節に対して目標角度を入力し、POS_VEL（位置・速度）ハイブリッド制御モードでモータ制御を行います。目標角度に到達する際の動作を、より滑らかで制御しやすくし、振動を低減します。
+すべての関節に対して目標角度を入力し、POS_VEL（Position-Velocity）ハイブリッド制御モードでモータ制御を行います。目標角度に到達する際の動作をより滑らかで制御しやすくし、振動を低減します。
 
 **実行方法**:
 ```bash
 uv run python example/4_pos_vel_control.py
-> 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
+> 30 0 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
 > state
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
@@ -327,7 +326,7 @@ MIT モードで逆運動学（IK）を使用し、ロボットアームのエ�
 **入力形式**:
 - 位置のみ: `<x> <y> <z>`（メートル）
 - 位置 + 姿勢: `<x> <y> <z> <roll> <pitch> <yaw>`（度）
-- `state` を入力: 各関節の現在の実際のラジアン値を表示。
+- `state` を入力: 各関節の現在の実ラジアン値を表示。
 - `end_state` を入力: 空間内での現在のエンドエフェクタ実座標（m）とオイラー角（rad）を表示。
 
 **実行方法**:
@@ -340,24 +339,24 @@ uv run python example/7_arm_ik_control.py
 #Usage B
 > 0.3 0.0 0.4 0.0 0.0 0.5 # Control both position and orientation: move to the specified position while rotating the wrist yaw angle by 0.5 radians.
 
-> ctrl + c # Exit system
+> ctrl + c # Return to zero position and exit system
 ```
 :::danger
-このサンプルコードでは、ロボットアームが非常に高速で動作します。人や他の機器がアームの動作半径内に入らないようにしてください。
+このサンプルコードでは、ロボットアームが非常に高速で動作することに注意してください。人や他の機器がアームの動作半径内に入らないようにしてください。
 :::
 
 ### 逆運動学制御とスムーズな軌道生成（`8_arm_traj_control.py`）
 
 MIT モードで逆運動学（IK）を使用して、目標時間内で一様またはスムーズな加減速の動作軌道を自動的に計画し、関節の激しい振動を回避します。
 
-**入力形式**：
-- 位置のみ：`<x> <y> <z>`（メートル）
-- 位置 + 姿勢：`<x> <y> <z> <roll> <pitch> <yaw>`（度）
-- 位置 + 姿勢 + 時間（デフォルト 2.0）：`<x> <y> <z> <roll> <pitch> <yaw> <time>`（度）
-- `state` を入力：各関節の現在の実際のラジアン値を表示。
-- `end_state` を入力：現在のエンドエフェクタの実際の空間座標（m）とオイラー角（rad）を表示。
+**入力形式**:
+- 位置のみ: `<x> <y> <z>`（メートル）
+- 位置 + 姿勢: `<x> <y> <z> <roll> <pitch> <yaw>`（度）
+- 位置 + 姿勢 + 時間（デフォルト 2.0）: `<x> <y> <z> <roll> <pitch> <yaw> <time>`（度）
+- `state` を入力: 各関節の現在の実ラジアン値を表示。
+- `end_state` を入力: 空間内の現在のエンドエフェクタ実座標（m）とオイラー角（rad）を表示。
 
-**実行方法**：
+**実行方法**:
 ```bash
 uv run python example/8_arm_traj_control.py
 
@@ -370,7 +369,7 @@ uv run python example/8_arm_traj_control.py
 #Usage C
 > 0.3 0.0 0.4 0.0 0.0 0.0 5.0 # Move the arm to the specific position and specify 5.0 seconds to slowly move there. (Note: If entering time, the preceding orientation parameters 0 0 0 cannot be omitted)
 
-> ctrl + c # Exit system
+> ctrl + c # Return to zero position and exit system
 ```
 ---
 
@@ -380,94 +379,94 @@ uv run python example/8_arm_traj_control.py
 
 Pinocchio の動力学モデルを使用して、関節の重力を補償します。
 
-**制御則**：
+**制御則**:
 ```
 tau = g(q)          — Gravity feedforward
 pos = current motor position   — Joint position follows current position
 kp = 2,  kd = 1     — Unified stiffness/damping for all joints
 ```
 
-**期待される動作**：
-- アームは任意の姿勢で「浮いている」ようになります
-- 手を離しても自重で落下しません
-- 手で任意の位置に動かすことができます
+**期待される動作**:
+- アームが任意の姿勢で「浮いている」ようになる
+- 手を離しても自重で落下しない
+- 手で任意の位置に動かすことができる
 
-**実行方法**：
+**実行方法**:
 ```bash
 uv run python example/9_gravity_compensation.py
 ```
 
-**出力**：
+**出力**:
 - 各関節の目標トルクをリアルタイム表示（N·m）
 - `Ctrl+C` を押して停止および切断
 
-:::caution 重力補償を終了する前にホームに戻す
-スクリプトを停止する際（`Ctrl+C`）、プログラムは**すべてのモーターを直接無効化**し、ロボットアームは**自動的にゼロ位置へは戻りません**。関節が急に落下して衝突や損傷を引き起こさないよう、終了前に必ずロボットアームを手で支えるか、安全／ホーム姿勢に移動させてください。
+:::caution 重力補償を終了する前にホームに戻してください
+スクリプトを停止する際（`Ctrl+C`）、プログラムは**すべてのモータを直接無効化**し、ロボットアームは**自動的にゼロ位置へは戻りません**。関節が急に落下して衝突や破損を引き起こさないよう、終了前に必ずロボットアームを手で支えるか、安全／ホーム姿勢に移動させてください。
 :::
 
 :::tip 個別関節の補償調整
-構造的な摩擦や組み立て誤差により、一部の関節で重力補償が不足または過剰になる場合は、コード内の `tau_g` 配列の該当要素に追加のスケーリングを適用できます：
+構造的な摩擦や組み立て誤差により、一部の関節で重力補償が不足または過剰になる場合は、コード内の `tau_g` 配列の該当要素に追加のスケーリングを適用できます:
 
 ```python
 tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually starting from 1
 # This compensation is generally only used for joints 2 and 3
 ```
 
-例えば、`tau_g[2] *= 1.2` は、2 番目の関節の重力補償トルクを 20% 増加させることを意味します。一度に大きく変更しすぎないよう、実際のフローティング状態を見ながら項目ごとに調整することを推奨します。
+例えば、`tau_g[2] *= 1.2` は、関節 2 の重力補償トルクを 20% 増加させることを意味します。一度に大きく変更しすぎないよう、実際の浮遊状態を見ながら項目ごとに調整することを推奨します。
 :::
 
 
-### 重力補償制御 — エンドエフェクタ速度ロック版（`10_gravity_compensation_lock.py`）
+### 重力補償制御 — エンドエフェクタ速度ロックバージョン（`10_gravity_compensation_lock.py`）
 
 基本的な重力補償に基づき、エンドエフェクタ速度検出と関節角ロック機構を追加します。
 
-**制御則**：
+**制御則**:
 ```
 tau = g(q) + integral_term    — Gravity feedforward + integral term
 pos = q_target                 — Target joint angle (locked or updated)
 kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
 ```
 
-**ロックロジック**：
-- エンドの並進速度 `||v_ee|| < 0.04 m/s` かつ角速度 `||w_ee|| < 0.08 rad/s` のとき：
+**ロックロジック**:
+- エンドの並進速度 `||v_ee|| < 0.04 m/s` かつ角速度 `||w_ee|| < 0.08 rad/s` のとき:
   - 目標関節角 `q_target` はロックされたまま
   - ロボットアームは現在位置にロックされる
-- エンド速度がしきい値を超えたとき：
+- エンド速度がしきい値を超えたとき:
   - `q_target` が現在の関節角に更新される
   - 手で押して位置を変更できる
 
-**期待される動作**：
-- ロボットアームは現在位置にロックされ、目標角度を変えるには力が必要
-- 基本バージョンより安定しており、姿勢保持が必要なシナリオに適しています
+**期待される動作**:
+- ロボットアームが現在位置にロックされ、目標角度を変えるには力が必要
+- 基本バージョンより安定しており、姿勢維持が必要なシナリオに適する
 
-**実行方法**：
+**実行方法**:
 ```bash
 uv run python example/10_gravity_compensation_lock.py
 ```
 
-**出力**：
+**出力**:
 - ロック状態（LOCKED / UPDATE）をリアルタイム表示
 - エンドの並進速度・角速度
 - 各関節の重力補償トルク（N·m）
 - `Ctrl+C` を押して停止および切断
 
-:::caution 重力補償を終了する前にホームに戻す
-スクリプトを停止する際（`Ctrl+C`）、プログラムは**すべてのモーターを直接無効化**し、ロボットアームは**自動的にゼロ位置へは戻りません**。関節が急に落下して衝突や損傷を引き起こさないよう、終了前に必ずロボットアームを手で支えるか、安全／ホーム姿勢に移動させてください。
+:::caution 重力補償を終了する前にホームに戻してください
+スクリプトを停止する際（`Ctrl+C`）、プログラムは**すべてのモータを直接無効化**し、ロボットアームは**自動的にゼロ位置へは戻りません**。関節が急に落下して衝突や破損を引き起こさないよう、終了前に必ずロボットアームを手で支えるか、安全／ホーム姿勢に移動させてください。
 :::
 
 :::tip 個別関節の補償調整
-構造的な摩擦や組み立て誤差により、一部の関節で重力補償が不足または過剰になる場合は、コード内の `tau_g` 配列の該当要素に追加のスケーリングを適用できます：
+構造的な摩擦や組み立て誤差により、一部の関節で重力補償が不足または過剰になる場合は、コード内の `tau_g` 配列の該当要素に追加のスケーリングを適用できます:
 
 ```python
 tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually starting from 1
 # This compensation is generally only used for joints 2 and 3
 ```
 
-例えば、`tau_g[2] *= 1.2` は、2 番目の関節の重力補償トルクを 20% 増加させることを意味します。一度に大きく変更しすぎないよう、実際のフローティング状態を見ながら項目ごとに調整することを推奨します。
+例えば、`tau_g[2] *= 1.2` は、関節 2 の重力補償トルクを 20% 増加させることを意味します。一度に大きく変更しすぎないよう、実際の浮遊状態を見ながら項目ごとに調整することを推奨します。
 :::
 
-**安全テスト設定**：
-スクリプト先頭の `ENABLED_JOINTS` リストを変更することで、安全テストのために指定した関節のみを有効化できます：
+**安全テスト用設定**:
+スクリプト先頭の `ENABLED_JOINTS` リストを変更することで、安全テストのために指定した関節のみを有効化できます:
 ```python
 ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 ```
@@ -484,46 +483,46 @@ ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 
 #### 順運動学シミュレーション（`sim/fk_sim.py`）
 
-対話型の順運動学シミュレーションで、MeshCat 上で関節角を入力してロボットアームの姿勢を可視化します。
+対話的な順運動学シミュレーションで、MeshCat 上で関節角度を入力してロボットアームの姿勢を可視化します。
 
-**実行方法**：
+**実行方法**:
 ```bash
 uv run python example/sim/fk_sim.py
 ```
 
-**インタラクティブコマンド**：
-- 6 つの関節角（度）をスペース区切りで入力
-- 例：`0 0 0 0 0 0`
-- 例：`45 -30 15 -60 90 -180`
-- `q`/`quit`/`exit`：終了
+**インタラクティブコマンド**:
+- 6 つの関節角度（度）をスペース区切りで入力
+- 例: `0 0 0 0 0 0`
+- 例: `45 -30 15 -60 90 -180`
+- `q`/`quit`/`exit`: 終了
 
-**機能**：
+**機能**:
 - エンドエフェクタの位置と姿勢をリアルタイム表示
-- 連続入力により、さまざまな姿勢をテスト可能
+- 連続入力によりさまざまな姿勢をテスト可能
 - 整形された姿勢情報の出力
 
 ---
 
 #### 逆運動学シミュレーション（`sim/ik_sim.py`）
 
-対話型の逆運動学シミュレーションで、目標姿勢から関節角を自動的に求めて可視化します。
+対話的な逆運動学シミュレーションで、目標姿勢から関節角度を自動的に解き、可視化します。
 
-**実行方法**：
+**実行方法**:
 ```bash
 uv run python example/sim/ik_sim.py
 ```
 
-**入力形式**：
-- 位置のみ：`x y z`（メートル）
-- 位置 + 姿勢：`x y z roll pitch yaw`（ラジアン）
+**入力形式**:
+- 位置のみ: `x y z`（メートル）
+- 位置 + 姿勢: `x y z roll pitch yaw`（ラジアン）
 
-**例**：
+**例**:
 ```bash
 > 0.25 0.0 0.25              # Position only
 > 0.25 0.0 0.25 0 0 0        # Position+Orientation
 ```
 
-**機能**：
+**機能**:
 - IK 収束の自動判定
 - 反復回数と誤差の表示
 - ロボット姿勢のリアルタイム更新
@@ -534,22 +533,22 @@ uv run python example/sim/ik_sim.py
 
 SE(3) 測地線に基づく軌道計画シミュレーションで、CLIK 追従と MeshCat アニメーション再生を含みます。
 
-**実行方法**：
+**実行方法**:
 ```bash
 uv run python example/sim/traj_sim.py
 ```
 
-**インタラクティブコマンド**：
-- 入力：`x y z [roll pitch yaw]`（メートル／ラジアン）
+**インタラクティブコマンド**:
+- 入力: `x y z [roll pitch yaw]`（メートル／ラジアン）
 - Enter キーでデフォルト設定を使用
-- `q`：終了
+- `q`: 終了
 
-**機能**：
+**機能**:
 - 現在位置から目標位置までの軌道を計画
 - 最小ジャーク軌道プロファイルを使用
 - 軌道統計情報をリアルタイム表示
 - MeshCat で完全な軌道アニメーションを再生
-- 参照軌道（灰色）と実軌道（緑色）を表示
+- 参照経路（灰色）と実経路（緑色）を表示
 
 ---
 
@@ -557,13 +556,13 @@ uv run python example/sim/traj_sim.py
 
 MeshCat ビジュアライザのラッパーで、統一されたロボット表示インターフェースを提供します。
 
-**主な機能**：
-- URDF モデルを読み込み、ロボットを表示
-- 3D ポリライン軌道（参照／実軌道）を描画
+**主な機能**:
+- URDF モデルを読み込みロボットを表示
+- 3D ポリライン経路（参照／実経路）を描画
 - IK 目標姿勢を表示（三色軸 + 球）
 - 関節軌道アニメーションの再生をサポート
 
-**使用例**：
+**使用例**:
 ```python
 from example.sim.visualizer import Visualizer
 viz = Visualizer()
@@ -588,9 +587,9 @@ viz.draw_path(points, "path_name", color)  # Draw path
 
 ## 連絡先
 
-- **技術サポート**：[Submit Issue](https://github.com/vectorBH6/reBotArm_control_py/issues)
-- **プロジェクトリポジトリ**：[GitHub](https://github.com/vectorBH6/reBotArm_control_py)
-- **フォーラム**：[Seeed Studio Forum](https://forum.seeedstudio.com/)
+- **技術サポート**: [Submit Issue](https://github.com/vectorBH6/reBotArm_control_py/issues)
+- **プロジェクトリポジトリ**: [GitHub](https://github.com/vectorBH6/reBotArm_control_py)
+- **フォーラム**: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ---
 

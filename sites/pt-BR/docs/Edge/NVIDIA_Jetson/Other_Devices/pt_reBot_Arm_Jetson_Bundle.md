@@ -1,6 +1,6 @@
 ---
 description: ....
-title: Pacote reBot Arm Jetson
+title: reBot Arm Jetson Bundle
 tags:
   - reBot Arm
   - reComputer Jetson
@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-06-09'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_jetson_bundle/
 ---
 
@@ -19,11 +19,11 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_arm_jetson_bundle/
 
 ## Introdução
 
-Uma plataforma de desenvolvimento de IA incorporada tudo-em-um para a nova era da IA física.
-À medida que a IA generativa evolui de simplesmente “entender o mundo” para “interagir com o mundo” ativamente, o desenvolvimento em robótica está entrando em uma nova era: IA física.
-Para ajudar desenvolvedores, pesquisadores e educadores a acelerar sua jornada em IA incorporada, a Seeed Studio combina o reBot Arm B601 totalmente open source com o avançado Kit de Desenvolvimento NVIDIA Jetson para criar um poderoso pacote de próxima geração para desenvolvimento em robótica.
+Uma plataforma de desenvolvimento de IA incorporada tudo-em-um para a nova era da IA Física.
+À medida que a IA generativa evolui de simplesmente “entender o mundo” para “interagir com o mundo” ativamente, o desenvolvimento em robótica está entrando em uma nova era: IA Física.
+Para ajudar desenvolvedores, pesquisadores e educadores a acelerar sua jornada em IA incorporada, a Seeed Studio combina o reBot Arm B601 totalmente open source com o avançado NVIDIA Jetson Developer Kit para criar um poderoso bundle de desenvolvimento de robótica de próxima geração.
 
-Este pacote oferece não apenas capacidades precisas de manipulação robótica, mas também o enorme poder de computação de IA necessário para executar modelos de IA multimodais, modelos de visão e linguagem (VLMs) e inferência robótica em tempo real localmente na borda.
+Este bundle oferece não apenas capacidades precisas de manipulação robótica, mas também o enorme poder de computação de IA necessário para executar modelos de IA multimodais, modelos visão-linguagem (VLMs) e inferência robótica em tempo real localmente na borda.
 É uma plataforma completa para construir a próxima onda de robôs inteligentes — desde aprendizado e pesquisa até prototipagem rápida e implantação.
 
 <div class="table-center">
@@ -49,7 +49,7 @@ Este pacote oferece não apenas capacidades precisas de manipulação robótica,
             <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
                     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
-                        <strong><span><font color={'FFFFFF'} size={"4"}> Início rápido </font></span></strong>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Início Rápido </font></span></strong>
                     </a>
                 </div>
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -63,7 +63,7 @@ Este pacote oferece não apenas capacidades precisas de manipulação robótica,
             <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
                     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
-                        <strong><span><font color={'FFFFFF'} size={"4"}> Início rápido </font></span></strong>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Início Rápido </font></span></strong>
                     </a>
                 </div>
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -75,7 +75,7 @@ Este pacote oferece não apenas capacidades precisas de manipulação robótica,
         </td>
     </tr>
     <tr>
-        <th> Kit de Desenvolvimento NVIDIA® Jetson AGX Thor™ </th>
+        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
         <th> reComputer Classic J3011 </th>
     </tr>
     <tr>
@@ -95,7 +95,7 @@ Este pacote oferece não apenas capacidades precisas de manipulação robótica,
             <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
                     <a class="get_one_now_item" href="https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/quick_start.html" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
-                        <strong><span><font color={'FFFFFF'} size={"4"}> Início rápido </font></span></strong>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Início Rápido </font></span></strong>
                     </a>
                 </div>
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -109,7 +109,7 @@ Este pacote oferece não apenas capacidades precisas de manipulação robótica,
             <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', gap:'10px', flexWrap:'wrap'}}>
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
                     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/reComputer_J30_40_with_Jetson_getting_start/" style={{display:'inline-block', width:'150px', maxWidth:'100%'}}>
-                        <strong><span><font color={'FFFFFF'} size={"4"}> Início rápido </font></span></strong>
+                        <strong><span><font color={'FFFFFF'} size={"4"}> Início Rápido </font></span></strong>
                     </a>
                 </div>
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -127,7 +127,7 @@ Este pacote oferece não apenas capacidades precisas de manipulação robótica,
 Aqui, usamos o NVIDIA Jetson Thor como exemplo para demonstrar como controlar rapidamente o braço robótico reBot Arm B601 com o Jetson. Você também pode escolher outros dispositivos Jetson com base em suas necessidades específicas.
 :::
 
-## Por que este pacote?
+## Por que este bundle?
 
 Uma plataforma completa de desenvolvimento de IA incorporada
 
@@ -137,11 +137,11 @@ O desenvolvimento tradicional em robótica geralmente apresenta várias limitaç
 2. Poder de computação de IA insuficiente
 3. Pilhas de software fragmentadas
 4. Altas barreiras de desenvolvimento
-5. Dificuldade em validar cenários reais de IA física
+5. Dificuldade em validar cenários reais de IA Física
 
-O Pacote reBot Arm × Jetson foi projetado para resolver esses desafios.
+O reBot Arm × Jetson Bundle foi projetado para resolver esses desafios.
 
-Com este pacote, você obtém:
+Com este bundle, você obtém:
 
 1. Uma plataforma de braço robótico totalmente open source com 6+1 DoF
 2. A principal plataforma de computação de IA de borda da NVIDIA, alimentada por GPU
@@ -154,7 +154,7 @@ Com este pacote, você obtém:
 ### Conexão de hardware
 
 1. Consulte [este guia](https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/) para montar o braço robótico.
-2. Use um adaptador USB-para-CAN para conectar o braço robótico ao NVIDIA Jetson por meio da interface Type-C.
+2. Use um adaptador USB-para-CAN para conectar o braço robótico ao NVIDIA Jetson pela interface Type-C.
 
 ### Instalar driver do braço com um clique
 
@@ -197,7 +197,7 @@ Em seguida, abra `https://motorbridge.github.io/motorbridge-studio/` no seu nave
     <a
         href="/pt-br/rebot_arm_b601_dm_lerobot/"
         style={{
-        textDecoration: 'none',
+            textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -221,7 +221,7 @@ Em seguida, abra `https://motorbridge.github.io/motorbridge-studio/` no seu nave
         </div>
     </a>
     <a
-        href="/pt-br/rebot_arm_b601_dm_grasping_demo/"
+        href="/rebot_arm_b601_dm_grasping_demo/"
         style={{
             textDecoration: 'none',
             color: 'inherit',
@@ -269,6 +269,84 @@ Em seguida, abra `https://motorbridge.github.io/motorbridge-studio/` no seu nave
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
                 Controle o reBot Arm com NemoClaw no Nvidia Jetson Thor
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/pt-br/voice_control_rebot_arm/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_controlled_rebot_arm/cover_page.png"
+                alt="Controle de voz do reBot Arm B601 pelo Nvidia Jetson Thor"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Controle de voz do reBot Arm B601 pelo Nvidia Jetson Thor
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/pt-br/rebot_arm_b601_rs_ros2_integration/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
+                alt="Integração do reBot Arm B601-RS com ROS2"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Integração do reBot Arm B601-RS com ROS2
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/pt-br/rebot_arm_b601_rs_isaacsim/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            background: '#443f3f',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
+            display: 'block'
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"
+                alt="Simulando o reBotArm com Isaacsim"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                Simulando o reBotArm com Isaacsim
             </h3>
         </div>
     </a>

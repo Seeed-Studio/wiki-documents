@@ -9,7 +9,7 @@ last_update:
   date: 7/15/2026
   author: Carla Guo
 createdAt: '2023-07-07'
-updatedAt: '2026-06-04'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/ja/xiao_topic_page/
 ---
 
@@ -704,7 +704,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_topic_page/
  <table align="center">
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/ja/xiao-ble-sidewalk/" target="_blank">XIAO nRF52840</a></th>
-   [LINE[25]]   <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
+   <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
             <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
  </table>

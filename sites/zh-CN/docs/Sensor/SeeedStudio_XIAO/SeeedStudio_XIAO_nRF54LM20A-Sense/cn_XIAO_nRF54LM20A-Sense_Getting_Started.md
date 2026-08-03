@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_getting_started
 sku: 100018440
 last_update:
-  date: 05/13/2026
+  date: 07/27/2026
   author: Zeller
 createdAt: '2025-05-13'
-updatedAt: '2026-06-30'
+updatedAt: '2026-07-21'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/
 ---
 import Tabs from '@theme/Tabs';
@@ -76,7 +76,7 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM2
     </tr>
     <tr>
       <td><strong>PMIC / 电池</strong></td>
-      <td colspan="2">用于电源调节和电池充电的 nPM1300 PMIC</td>
+      <td colspan="2">nPM1300 PMIC，用于电源调节和电池充电</td>
     </tr>
     <tr>
       <td><strong>接口</strong></td>
@@ -133,9 +133,9 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM2
       <td><strong>低功耗模式 (3.7V@2A)</strong></td>
       <td>/</td>
       <td>
-        轻睡眠：~9.96µA<br/>
-        深度睡眠（系统关闭）：~4.76µA<br/>
-        深度睡眠（系统关闭，GRTC 唤醒）：~4.92µA<br/>
+        轻睡眠：约 9.96µA<br/>
+        深度睡眠（系统关闭）：约 4.76µA<br/>
+        深度睡眠（系统关闭，GRTC 唤醒）：约 4.92µA<br/>
         船运模式：0.33µA
       </td>
     </tr>
@@ -165,11 +165,11 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM2
 
 - **超低功耗效率**
 
-  基于 Nordic nRF54LM20A 和 nPM1300 PMIC，XIAO nRF54LM20A Sense 在电池供电（BAT）下实现了仅 4.76 µA 的实测深度睡眠电流。结合 nPM1300 PMIC 及其 0.33 µA 的船运模式 BAT 电流，在无线工作状态下，以 3.7 V 模拟电池输入、发射功率设置为 +8 dBm 时，其平均电流仅为 3.87 mA，非常适合长寿命电池供电的传感应用、可穿戴设备以及始终在线的物联网设备。
+  基于 Nordic nRF54LM20A 和 nPM1300 PMIC，XIAO nRF54LM20A Sense 在电池供电（BAT）下实现了仅 4.76 µA 的实测深度睡眠电流。结合 nPM1300 PMIC 及其 0.33 µA 船运模式 BAT 电流，在无线工作状态下，以 3.7 V 模拟电池输入、发射功率设置为 +8 dBm 时，其平均电流仅为 3.87 mA，非常适合长寿命电池供电的传感应用、可穿戴设备以及始终在线的物联网设备。
 
 - **精简的开发体验**
 
-  对 Nordic nRF Connect SDK 和 PlatformIO（Zephyr）的完整支持，可实现高效的嵌入式开发流程。（注意：当前不支持 Arduino IDE）
+  对 Nordic nRF Connect SDK 和 PlatformIO（Zephyr）的完整支持，使嵌入式开发流程更加高效。
 
 ## 硬件概览
 
@@ -204,11 +204,11 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM2
 | :------------: | :------------: | :-------------------------------: | :-------------------------------------------------------------------------- |
 | **电源引脚**   |                |                                   |                                                                             |
 | VBUS           | VBUS           | -                                 | 5V 电源输入/输出                                                             |
-| GND            | GND            | -                                 | 地                                                                           |
+| GND            | GND            | -                                 | 地                                                                          |
 | 3V3            | 3V3-OUT        | -                                 | 3.3V 电源输出                                                                |
 | BAT+           | BAT+           | -                                 | 电池输入（通过 I²C 由 nPM1300 监测）                                         |
 | BAT-           | BAT-           | -                                 | 电池负极端子                                                                 |
-| SHPHLD         | SHPHLD         | -                                 | PMIC 船运/休眠模式控制（超低功耗出厂状态）                                  |
+| SHPHLD         | SHPHLD         | -                                 | PMIC 船运/休眠模式控制（超低功耗运输状态）                                   |
 | **系统与控制引脚** |             |                                   |                                                                             |
 | RESET          | RESET          | -                                 | 板级复位                                                                     |
 | SWCLK          | SWCLK          | nRF54LM20A SWCLK / SAMD11 SWCLK   | 串行线时钟（用于 nRF54 和 SAMD11）                                           |
@@ -410,9 +410,9 @@ board = seeed-xiao-nrf54lm20a
 #define PWM_PERIOD_NS 1000000U
 #define STEP_TIME_MS 500
 
-#define LED_R_NODE DT_ALIAS(pwm_led1)
+#define LED_R_NODE DT_ALIAS(pwm_led0)
 #define LED_G_NODE DT_ALIAS(pwm_led2)
-#define LED_B_NODE DT_ALIAS(pwm_led0)
+#define LED_B_NODE DT_ALIAS(pwm_led1)
 
 #if !DT_NODE_EXISTS(LED_R_NODE) || !DT_NODE_EXISTS(LED_G_NODE) || !DT_NODE_EXISTS(LED_B_NODE)
 #error "This RGB blink demo expects pwm-led0/pwm-led1/pwm-led2 devicetree aliases"
@@ -499,7 +499,7 @@ int main(void)
 
 2. 添加 app.overlay 文件
 
-在新建的空白示例中不存在 Devicetree 覆盖文件，你需要在 zephyr 目录下添加该文件。
+在新创建的空白示例中不存在 Devicetree 覆盖文件，你需要在 zephyr 目录下添加该文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_7.png" style={{width:800, height:'auto'}}/></div>
 
@@ -512,8 +512,8 @@ int main(void)
  * Device tree overlay for XIAO nRF54LM20A RGB LED PWM demo.
  *
  * PWM20 peripheral is used for RGB LED control:
- *   - Channel 0: P1.22 (Blue LED)  -> pwm_led0
- *   - Channel 1: P1.23 (Red LED)   -> pwm_led1
+ *   - Channel 0: P1.22 (Red LED)   -> pwm_led0
+ *   - Channel 1: P1.23 (Blue LED)  -> pwm_led1
  *   - Channel 2: P1.24 (Green LED) -> pwm_led2
  */
 
@@ -526,17 +526,17 @@ int main(void)
 		compatible = "pwm-leds";
 
 		pwm_led0: pwm_led_0 {
-			pwms = <&pwm20 0 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
-			label = "Blue LED";
-		};
-
-		pwm_led1: pwm_led_1 {
-			pwms = <&pwm20 1 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+			pwms = <&pwm20 0 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
 			label = "Red LED";
 		};
 
+		pwm_led1: pwm_led_1 {
+			pwms = <&pwm20 1 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+			label = "Blue LED";
+		};
+
 		pwm_led2: pwm_led_2 {
-			pwms = <&pwm20 2 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+			pwms = <&pwm20 2 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
 			label = "Green LED";
 		};
 	};
@@ -577,13 +577,13 @@ pio run -e seeed-xiao-nrf54lm20a -t upload -v
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_9.png" style={{width:800, height:'auto'}}/></div>
 
-### 观察运行效果
+### 观察效果
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:800, height:'auto'}}/></div>
 
 ## 蓝牙天线
 
-本开发板使用外置蓝牙天线。为了获得更好的蓝牙信号质量并提升你的蓝牙使用体验，建议安装蓝牙天线。
+本开发板使用外置蓝牙天线。为了确保更好的蓝牙信号质量并提升你的蓝牙使用体验，建议安装蓝牙天线。
 连接方式如下图所示：
 
 <div style={{textAlign: 'center'}}>
@@ -621,7 +621,7 @@ XIAO nRF54LM20A 支持使用 3.7V 锂电池作为电源输入。你可以参考�
 
 ### 电池电压检测
 
-XIAO nRF54LM20A 集成了电池电压检测功能，核心是利用 nPM1300-CAA 负载开关高效管理电池电量测量。本指南将重点分析电池检测的软件实现**（尤其是 main.c 代码）**，并指导你如何在 PlatformIO 环境中轻松部署和使用该功能，从而避免直接使用 Zephyr NCS SDK 的复杂性。
+XIAO nRF54LM20A 集成了电池电压检测功能，核心是利用 nPM1300-CAA 负载开关高效管理电池电量测量。本指南将重点分析电池检测的软实现 **（尤其是 main.c 代码）**，并指导你如何在 PlatformIO 环境中轻松部署和使用该功能，从而避免直接使用 Zephyr NCS SDK 带来的复杂性。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_10.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -630,7 +630,7 @@ XIAO nRF54LM20A 集成了电池电压检测功能，核心是利用 nPM1300-CAA 
 
 nPM1300-CAA 芯片的作用：
 
-nPM1300-CAA 是一款高度集成的电源管理 IC（PMIC），用于替代 TPS22916 的简单负载开关功能。它不仅负责控制电池电压切换以实现低功耗监测，还集成了充电、稳压以及精确的电量估算（通过电压、电流、温度）功能，从而最大化 nRF54LM20A 的电池寿命。
+nPM1300-CAA 是一款高度集成的电源管理 IC（PMIC），用于替代 TPS22916 的简单负载开关功能。它不仅负责控制电池电压的切换以实现低功耗监控，还集成了充电、稳压以及精确的电量计量（通过电压、电流、温度），以最大化 nRF54LM20A 的电池寿命。
 
 
 
@@ -646,7 +646,7 @@ nPM1300-CAA 是一款高度集成的电源管理 IC（PMIC），用于替代 TPS
 
 ## 外设概览
 
-该开发板上的外设电路包括一个 IMU 和一个麦克风。你可以在下图中看到它们的位置：
+本板载的外设电路包括一个 IMU 和一个麦克风。你可以在下图中看到它们的位置：
 
 <div style={{textAlign: 'center'}}>
   <img
@@ -664,7 +664,7 @@ XIAO nRF54LM20A Sense 搭载了一颗 LSM6DS3TR-C IMU，集成 3 轴加速度计
 
 ## MIC
 
-XIAO nRF54LM20A Sense 配备了一颗 MSM261DGT006 数字麦克风，用于音频采集。
+XIAO nRF54LM20A Sense 配备了一颗 MSM261DGT006 数字麦克风用于音频采集。
 - [XIAO nRF54LM20A MIC 使用方法](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/#mic)
 
 ### 常见问题
@@ -683,7 +683,7 @@ pio run -t clean
 
 **Q2：为什么安装后会出现 `zsh: command not found: openocd`？（macOS）**
 
-此问题通常是因为 OpenOCD 可执行文件所在目录尚未添加到系统的 `PATH` 中。你可以使用以下命令将其永久添加到 `~/.zshrc` 文件中。
+这个问题通常是因为 OpenOCD 可执行文件所在目录没有添加到系统的 `PATH` 中。你可以使用以下命令将其永久添加到 `~/.zshrc` 文件中。
 
 > **注意：** 此解决方案仅适用于 **macOS**。
 
@@ -701,7 +701,7 @@ openocd --version
 
 
 
-如果你多次安装了不同版本的 Seeed Studio XIAO PlatformIO 平台，重复或过期的平台包可能会导致版本冲突，从而使 PlatformIO 项目无法正常加载。
+如果你多次安装了不同版本的 Seeed Studio XIAO PlatformIO 平台，重复或过期的平台包可能会导致版本冲突，从而使 PlatformIO 项目无法正确加载。
 
 建议删除所有旧的 Seeed 平台包，让 PlatformIO 自动下载最新的官方版本。
 

@@ -2,9 +2,9 @@
 description: Comienza con SenseCAP MeshTracker X1 para Meshtastic. Este tutorial presentará la guía de configuración y la guía de preguntas frecuentes para el dispositivo
 title: Comienza con MeshTracker X1
 keywords:
-  - Tracker
+  - Rastreador
   - Meshtastic
-image: https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png
 slug: /x1_get_started_for_meshtastic
 sku: 100087698
 sidebar_position: 1
@@ -12,7 +12,7 @@ last_update:
   date: 7/13/2026
   author: Michelle Huang
 createdAt: '2026-07-13'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-24'
 url: https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -181,7 +181,7 @@ Por favor, `no uses OTA` para actualizar el firmware, ya que puede hacer que el 
 :::
 #### Paso 1: Entrar en modo DFU
 
-Entra en DFU a través del web flasher. Si esto falla muchas veces, entra en DFU manualmente.
+Entra en DFU mediante el web flasher. Si esto falla muchas veces, entra en DFU manualmente.
 
 <Tabs>
 <TabItem value="method1" label="Via Web Flasher">
@@ -202,17 +202,17 @@ Haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `X1 xxx`. Haz c
 
 Conecta el cable USB a tu PC, mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/PluginPlugout.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 </Tabs>
 
-El LED blanco ⚪️ permanecerá fijo si el X1 está en modo DFU. Y debería aparecer una unidad llamada `X1` en tu ordenador.
+El LED blanco ⚪️ permanecerá fijo si X1 está en modo DFU. Y debería aparecer una unidad llamada `X1` en tu ordenador.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1DriveMAC.png" alt="pir" width={300} height="auto" /></p>
 
 #### Paso 2: Borrado de la memoria flash
 
-Antes de flashear el firmware, ¡primero bórralo!
+Antes de flashear el firmware, ¡bórralo primero!
 
 Haz clic en el símbolo de `trash`.
 
@@ -236,11 +236,11 @@ Copia el archivo UF2 en la unidad DFU. El firmware debería flashearse después 
 
 ### Configurar GPS
 
-Por favor, activa el GPS. Puedes ajustar el intervalo de actualización y el intervalo de difusión para obtener información de ubicación más actualizada.
+Activa la opción de GPS. Puedes ajustar el intervalo de actualización y el intervalo de difusión para obtener información de ubicación más actualizada.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-Para IOS, por favor activa la `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
+Para IOS, activa `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -387,11 +387,52 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### Configurar zumbador
 
-El zumbador está habilitado de forma predeterminada. Si quieres desactivar el zumbador, configura `Alert Message buzzer`, `Alert bell buzzer` y `Use PWM buzzer` como se muestra en la siguiente captura de pantalla.
+El zumbador está habilitado de forma predeterminada. Si quieres deshabilitar el zumbador, configura `Alert Message buzzer`, `Alert bell buzzer` y `Use PWM buzzer` como se muestra en la siguiente captura de pantalla.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/buzzer.png" alt="pir" width={200} height="auto" /></p>
 
-## Preguntas frecuentes
+### Configurar alerta de mensajes
+
+La alerta de mensajes se puede configurar en `External Notification`.
+
+<Tabs>
+
+<TabItem value="aaa" label="IOS">
+
+Ve a `Setting` -> `External Notification`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/ExternalNotificationIOS.png" alt="pir" width={300} height="auto" /></p>
+
+Puedes configurar `buzzer off + vibra off`. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IONotificationOff.png" alt="pir" width={600} height="auto" /></p>
+
+O `buzzer on + vibra on`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IOSNotificationOn.png" alt="pir" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="bbb" label="Android">
+
+Ve a `Setting` -> `Module Configuration` -> `External Notification`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Module_Notification_Android.png" alt="pir" width={600} height="auto" /></p>
+
+Habilita `External notification enabled`, luego puedes configurar `buzzer only`, `vibra only` o `buzzer on + vibra on`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/NotificationSettingConfig.png" alt="pir" width={900} height="auto" /></p>
+
+Deshabilita `External notification enabled`, luego puedes configurar `buzzer off + vibra off`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Notificationoff.jpg" alt="pir" width={300} height="auto" /></p>
+
+
+</TabItem>
+
+</Tabs>
+
+## Preguntas frecuentes (FAQ)
 
 
 ### Cómo comprobar el ID del dispositivo
@@ -433,11 +474,11 @@ Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
 - Usa un cable USB que sepas que funciona para `cargar el dispositivo` de forma continua durante 1–2 horas para asegurarte de que la batería tenga suficiente energía para activar el sistema.
 
-- Si el dispositivo sigue sin responder después de la carga, `realiza un reinicio forzado` de la siguiente manera: Desconecta el cable USB. Mantén pulsado el botón y luego conecta el cable USB mientras mantienes pulsado el botón. Manténlo durante aproximadamente 3 segundos y luego suéltalo. Esto fuerza un reinicio del sistema.
+- Si el dispositivo sigue sin responder después de la carga, `realiza un restablecimiento completo` de la siguiente manera: Desconecta el cable USB. Mantén pulsado el botón y luego conecta el cable USB mientras mantienes pulsado el botón. Manténlo durante aproximadamente 3 segundos y luego suéltalo. Esto fuerza un reinicio del sistema.
 
  - Si aún así no hay suerte, conecta un cable USB a un ordenador. Mantén pulsado el botón del dispositivo y luego conecta el dispositivo al ordenador, comprueba si aparece o no un disco en tu PC. Si es así, vuelve a instalar el bootloader
 
-### Dispositivo atascado en un bucle de arranque
+### El dispositivo se queda atascado en un bucle de arranque
 
 **Descripción:**
 
@@ -447,9 +488,9 @@ El dispositivo se reiniciará repetidamente y el puerto serie se conectará y de
 
 - Paso 1: Intenta entrar en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/PluginPlugout.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
 
-El dispositivo está en modo DFU si el LED blanco permanece encendido de forma fija.
+El dispositivo está en modo DFU si el LED blanco permanece encendido de forma continua.
 
 :::note
 Para entrar correctamente en el modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
@@ -552,21 +593,21 @@ adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Cuando hayas completado los pasos anteriores, puedes seguir este [step](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#flash-firmware) para flashear el firmware de la aplicación.
+Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#flash-firmware) para flashear el firmware de la aplicación.
 
 </TabItem>
 
 <TabItem value="m3" label="Instalar desde el código fuente">
 
 
-Utiliza este método si tienes problemas para instalar con PyPi o quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
+Utiliza este método si tienes problemas instalando con PyPi o si quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Nota: Los siguientes comandos usan `python3`; sin embargo, si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de Python 3.x en Windows sigue usando el nombre python.exe
+Nota: Los siguientes comandos usan `python3`; sin embargo, si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de Windows de Python 3.x sigue usando el nombre python.exe
 
 Para instalar en el espacio de usuario en tu directorio personal:
 
@@ -575,7 +616,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-Si obtienes errores de permisos al ejecutar `pip3 install`, tu `pip3` es antiguo o está configurado para intentar instalar en los directorios del sistema. En ese caso, usa la opción `--user`:
+Si obtienes errores de permisos al ejecutar `pip3 install`, tu `pip3` es antiguo o está configurado para intentar instalar en los directorios del sistema. En ese caso, usa la bandera `--user`:
 
 ```
 pip3 install -r --user requirements.txt
@@ -589,7 +630,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-Para generar un binario ejecutable autónomo de la utilidad (Windows y MacOS), ejecuta estos comandos:
+Para generar un binario ejecutable auto-contenido de la utilidad (Windows y MacOS), ejecuta estos comandos:
 
 ```
 pip3 install pyinstaller
@@ -600,7 +641,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
 Encontrarás el .exe en `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` (con `.exe` si estás en Windows).
-Cópialo o muévelo a otro lugar para tu comodidad, como a un directorio en tu %PATH%.
+Cópialo o muévelo a otro lugar para tu comodidad, como un directorio en tu %PATH%.
 
 **Paso 2: Comprueba tu número de puerto**
 
@@ -616,7 +657,7 @@ Para usuarios de Windows, por ejemplo:
 
 **Paso 3: Flashear el bootloader**
 
-En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
+En la terminal o en el símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
 
 - **Para Windows**:
 
@@ -651,13 +692,13 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 - Ajusta la velocidad en baudios a `1200`.
 
 - Conecta el dispositivo.
-   La luz parpadeará brevemente cuando lo conectes. Sigue intentándolo hasta que la luz permanezca encendida, lo que significa que el dispositivo puede volver al modo DFU; luego [flashea el bootloader](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#bootloader-installation) -> [borra la flash](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#step-2-flash-erase) -> [flashea el firmware](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#step-3-flash-firmware).
+   La luz parpadeará brevemente cuando lo conectes. Sigue intentándolo hasta que la luz permanezca encendida, lo que significa que el dispositivo puede volver al modo DFU, luego [flashea el bootloader](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#bootloader-installation) -> [borra la flash](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#step-2-flash-erase) -> [flashea el firmware](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#step-3-flash-firmware).
 
 **3) El dispositivo no puede entrar en modo DFU y no se muestra ningún puerto serie**
 
-- Mantén pulsado el botón del dispositivo y luego conecta el cable de carga. Después de que aparezca un disco en tu PC, podrás ver el puerto serie.
+- Mantén pulsado el botón del dispositivo y luego conecta el cable de carga. Después de que aparezca un disco en tu PC, es posible que veas el puerto serie.
 
-- Si aún así no hay suerte, desconecta el cable de carga y deja el dispositivo unos días hasta que la batería se agote por completo; luego conecta el cable de carga e intenta emparejarlo de nuevo.
+- Si aún así no hay suerte, desconecta el cable de carga y deja el dispositivo unos días hasta que la batería se agote por completo, luego conecta el cable de carga e intenta emparejarlo de nuevo.
 
 **4) Si ninguno de los pasos anteriores funciona, contacta con el soporte técnico: support@sensecapmx.com**
 
@@ -665,10 +706,10 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 
 - **Descripción del fenómeno**
 
- - Después de encender el dispositivo, se apagará o reiniciará automáticamente al cabo de un rato. 
+ - Después de que el dispositivo se enciende, se apagará o reiniciará automáticamente después de un tiempo. 
  - El registro del puerto serie funciona durante un tiempo y luego se detiene.
 
- Esto puede deberse a reiniciar o apagar manualmente y a la fuerza el dispositivo cuando este se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
+ Esto posiblemente se deba a reiniciar o apagar manualmente y a la fuerza el dispositivo cuando este se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
 
 - **Solución de problemas**
 
@@ -682,11 +723,11 @@ Si quieres restaurar la configuración predeterminada, puedes hacer un restablec
 - Haz clic en el botón `Factory Reset` en la app. El dispositivo se reiniciará automáticamente con la configuración de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### Fallo de mensaje directo
+### Fallo en el mensaje directo
 
 #### Restablecer NodeDB
 
-NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con un determinado nodo, puede deberse a que tu NodeDB haya almacenado información obsoleta de ese nodo. Necesitarás actualizarla.
+NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con cierto nodo, podría deberse a que tu NodeDB ha almacenado información desactualizada para ese nodo. Necesitarás actualizarla.
 
 Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
@@ -696,7 +737,7 @@ Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device*
 
 #### Intercambiar información de usuario
 
-Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos de la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
+Cada nodo enviará periódicamente su propia información de nodo, permitiendo que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
@@ -709,36 +750,37 @@ Dos nodos necesitan conocer su clave privada entre sí para poder comunicarse en
 Reinicia el dispositivo defectuoso para que la configuración surta efecto.
 
 :::note
-Después de la regeneración de la clave, otros dispositivos deben volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos del otro dispositivo.
+Después de la regeneración de la clave, otros dispositivos necesitan volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos del otro dispositivo.
 :::
 
 ### Calidad de la señal
 
   - **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
 
-  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Se considera que un dispositivo con un RSSI inferior a -115 dBm tiene un rendimiento deficiente. 
+  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente. 
 
-      Para conseguir el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstáculos, con una interferencia mínima.
+      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstáculos, con una interferencia mínima.
 
-## Recursos
-
-<JetsonLeadQuote
-  buttonText="Request Quote of Customization"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="Request Quote for XIAO"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>

@@ -13,7 +13,7 @@ last_update:
   author: Michelle Huang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/es/get_started_with_meshcore_solar_node/
-updatedAt: '2026-04-20'
+updatedAt: '2026-07-10'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -33,7 +33,7 @@ Cuando el dispositivo se encuentre en los siguientes estados, no lo reinicies ni
 
 ## Flasheo de firmware
 
-### Método 1 mediante Web Flasher
+### Método 1 a través de Web Flasher
 
 Conecta tu dispositivo al ordenador con un cable USB. Asegúrate de que el cable admite transmisión de datos. 
 
@@ -51,7 +51,7 @@ Elige `Repeater`. Si quieres flashear otro firmware, por favor [haz clic aquí](
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
-#### Borrado de la Flash
+#### Borrado de Flash
 
 Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "Solar Node" o "TinyUSB serial". Luego haz clic en `Erase Flash` y elige el puerto serie.
 
@@ -75,7 +75,7 @@ Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "P1 Pro" o "TinyUSB"
 
 Si has hecho clic en `Flash` pero no hay respuesta, haz clic en `Enter DFU` de nuevo y luego haz clic en `Flash` para asegurarte de que has entrado correctamente en DFU.
 
-Cuando la barra de progreso esté completamente llena, indica que el flasheo ha finalizado. Entonces el dispositivo se reiniciará automáticamente.
+Cuando la barra de progreso esté completamente llena, indica que el flasheo se ha completado. Entonces el dispositivo se reiniciará automáticamente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
@@ -97,7 +97,7 @@ Elige `Repeater`. Si quieres flashear otro firmware, por favor [haz clic aquí](
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
-#### Borrado de la Flash
+#### Borrado de Flash
 
 Descarga el archivo UF2.
 
@@ -111,7 +111,7 @@ Arrastra el archivo UF2 descargado al disco que aparece.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseDr.png" alt="pir" width={800} height="auto" /></p>
 
-El disco desaparecerá después de que el firmware se haya flasheado correctamente. En este punto no hay firmware en el dispositivo, por lo que el dispositivo `NOT` se reiniciará automáticamente.
+El disco desaparecerá después de que el firmware se haya flasheado correctamente. En este punto no hay firmware en el dispositivo, por lo que el dispositivo `NO` se reiniciará automáticamente.
 
 #### Flashear firmware
 
@@ -142,7 +142,7 @@ Antes del despliegue formal, primero prueba y configura el nodo.
 #### Ensamblar el dispositivo
 
 :::danger note
-Dado que el dispositivo se utilizará en exteriores durante períodos prolongados, evita instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para evitar la acumulación de agua. Además, asegúrate de que todos los tornillos estén bien apretados y la tapa esté correctamente instalada. Para una mejor protección impermeable, también puedes considerar aplicar medidas de sellado adicionales.
+Dado que el dispositivo se utilizará en exteriores durante períodos prolongados, evita instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para evitar la acumulación de agua. Además, asegúrate de que todos los tornillos estén bien apretados y la tapa esté correctamente instalada. Para mejorar la protección impermeable, también puedes considerar aplicar medidas de sellado adicionales.
 :::
 
 - **Lista de partes**
@@ -174,7 +174,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 5: Conecta el soporte de rótula universal.
+- Paso 5: Conecta el soporte de la rótula universal.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -199,7 +199,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 :::tip
 Cuando necesites instalar o reemplazar la batería, usa batería `Button-top` 18650(3.6V).
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-La versión P1-Pro tiene batería y módulo GPS integrados; para la versión P1, el usuario necesita instalar manualmente la batería y el módulo GPS si es necesario.
+La versión P1-Pro tiene batería y módulo GPS integrados; para la versión P1, el usuario necesita instalar la batería y el módulo GPS manualmente si es necesario.
 :::
 
 
@@ -222,7 +222,7 @@ La versión P1-Pro tiene batería y módulo GPS integrados; para la versión P1,
 Asegúrate de que la carcasa esté correctamente montada y los tornillos bien apretados para mantener la estanqueidad del dispositivo.
 :::
 
-#### (Opcional) Actualizar antena
+#### (Optional) Upgrate atenna
 
 - Puedes reemplazar la antena por una de fibra de vidrio viendo este video.
 
@@ -230,7 +230,7 @@ Si necesitas una antena con mayor ganancia, recomendamos la antena [860-930MHz 3
 
 ### Encender el dispositivo
 
-El dispositivo necesita ser activado conectando el cable USB. El LED azul de Mesh se encenderá durante unos 3 s, lo que significa que el dispositivo se ha encendido correctamente. 
+El dispositivo debe activarse conectando el cable USB. El LED azul de Mesh se encenderá durante unos 3 s, lo que significa que el dispositivo se ha encendido correctamente. 
 
 El LED azul de mesh no se encenderá hasta que envíe un anuncio.
 
@@ -259,7 +259,7 @@ Cambia la región LoRa y guarda la configuración. Luego `Reboot` el dispositivo
 
 **Lista de regiones**
 
-|**Código de región**|**Descripción**|**Rango de frecuencia (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
+|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Sin configurar|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
@@ -290,13 +290,13 @@ Si quieres mostrar la posición del repetidor, puedes habilitar el GPS.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
 
-Además, puedes ajustar el intervalo de transmisión de anuncios. El rango de intervalo de `auto zero hop advert` es de 60-240 minutos. El rango de intervalo de `auto flood advert` es de 3-168 horas. 
+Además, puedes ajustar el intervalo de difusión de anuncios. El intervalo de `auto zero hop advert` es de 60-240 min. El intervalo de `auto flood advert` es de 3-168 horas. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
 ### Configurar ruta
 
-Antes de añadir el repetidor a tu ruta, es posible que necesites usar el repetidor para enviar primero un anuncio. El repetidor enviará anuncios automáticamente a intervalos regulares. Este intervalo puede ser de varias horas (por defecto 3 horas). Por lo tanto, necesitas enviar anuncios manualmente o de lo contrario tendrás que esperar.
+Antes de añadir el repetidor a tu ruta, es posible que primero necesites usar el repetidor para enviar anuncios. El repetidor enviará anuncios automáticamente a intervalos regulares. Este intervalo puede ser de varias horas (por defecto 3 horas). Por lo tanto, necesitas enviar anuncios manualmente o de lo contrario tendrás que esperar.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
@@ -334,7 +334,7 @@ Para verificar correctamente que el repetidor está funcionando, sigue este proc
 La app móvil se usa principalmente con un dispositivo Companion, no directamente con un Repeater. El propio repetidor no se comportará como un accesorio de teléfono conectado por Bluetooth normal.
 :::
 
-Si el comportamiento del LED y el estado de conexión USB coinciden con la descripción anterior, esto suele indicar un funcionamiento normal del repetidor.
+Si el comportamiento del LED y el estado de la conexión USB coinciden con la descripción anterior, esto suele indicar un comportamiento normal del repetidor.
 
 ## Preguntas frecuentes
 
@@ -356,7 +356,7 @@ El dispositivo no responde, no hay LED, no se puede emparejar con tu App.
 
 **1) El dispositivo aún puede entrar en modo DFU, entonces intenta flashear el bootloader**.
 
-#### Flashear el Bootloader
+#### Flashear el bootloader
 
 - [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
@@ -368,14 +368,14 @@ Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable
 
 Para usuarios de Windows, presiona la tecla "Win" y la tecla "r", luego introduce "cmd" en la ventana emergente y pulsa "Enter". Esto puede abrir la línea de comandos. 
 
-Para usuarios de MAC, presiona la tecla "Command" y la tecla "Space", para que puedas abrir Spotlight. Luego introduce "termial" y pulsa "Return". Esto puede abrir la línea de comandos. 
+Para usuarios de MAC, presiona la tecla "Command" y la tecla "Space", de modo que puedas abrir Spotlight. Luego introduce "termial" y pulsa "Return". Esto puede abrir la línea de comandos. 
 
 **Requisitos previos**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-Comprueba en tu línea de comandos si python y pip se han instalado correctamente.
+Comprueba en tu línea de comandos si Python y pip se han instalado correctamente.
 
 ```
 python --version
@@ -385,7 +385,7 @@ python --version
 python -m pip --version
 ```
 
-Entonces deberían aparecer "Python xxx" y "pip xxx". Si no es así, intenta instalar python de nuevo.
+Entonces deberían aparecer "Python xxx" y "pip xxx". Si no es así, intenta instalar Python de nuevo.
 
 <Tabs>
 <TabItem value="pypi" label="Installing from PyPI">
@@ -479,7 +479,7 @@ En la terminal o símbolo del sistema, navega al directorio donde descargaste el
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
-Cambia COMXX por tu número de puerto COM. Por ejemplo, si tu dispositivo está en el puerto COM6, cambia el comando a:
+Por favor, cambia COMXX por tu número de puerto COM. Por ejemplo, si tu dispositivo está en COM6, cambia el comando a:
 
 `adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
 
@@ -512,3 +512,26 @@ La corriente máxima de carga del Xiao nRF-52840 Plus es de 200 mA. El chip de g
 
 ## Recursos
 - [Tabla de cálculo de la vida útil de la batería del Solar Node](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/mesh_repeater_power_table_en1.xlsx)
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>
