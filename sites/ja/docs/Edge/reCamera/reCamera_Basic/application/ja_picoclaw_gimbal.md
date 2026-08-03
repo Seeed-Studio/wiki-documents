@@ -4,7 +4,7 @@ description: このアプリケーションケースでは、reCamera 上で Pic
 keywords:
   - reCamera
   - エッジ AI
-slug: /recamera_picoclaw_bak
+slug: /recamera_picoclaw
 sku: 100029708
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/Picoclaw&Gimbal/picoclaw_turn_led.gif
 sidebar_position: 11
@@ -13,7 +13,7 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-06-24'
 updatedAt: '2026-06-24'
-url: https://wiki.seeedstudio.com/ja/reCamera/reCamera_Basic/application/recamera_picoclaw_bak/
+url: https://wiki.seeedstudio.com/ja/reCamera/reCamera_Basic/application/recamera_picoclaw/
 ---
 
 
