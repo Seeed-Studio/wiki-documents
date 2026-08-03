@@ -197,7 +197,7 @@ pip install motorbridge
 
 Get the PCAN-USB device working on the CAN bus at 1Mbps for robotic arm communication.
 
-Ubuntu\Jetson\Raspberry Pi:
+#### Ubuntu:
 
 ```bash
 # The kit includes PCAN-USB, which should normally show up as can0 or can1
@@ -210,7 +210,7 @@ sudo ip link set can0 type can bitrate 1000000 restart-ms 100
 sudo ip link set can0 up
 ```
 
-or macOS:
+#### macOS:
 
 If libPCBUSB.dylib cannot be loaded, install PCBUSB first:
 ```zsh
@@ -242,13 +242,123 @@ motorbridge-cli --help
 python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
 ```
 
-or Windows:
+#### Windows:
 
 Please visit [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) to install the PCAN-USB driver.
+
+#### Jetson:
+  [peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
+
+- Remove brltty
+On Jetson, brltty may occupy the USB serial port used by the leader. Remove it first:
+```bash
+sudo apt remove -y brltty
+```
+
+- Install Dependencies
+```bash
+sudo apt update
+sudo apt install -y \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    libpopt-dev \
+    can-utils \
+    ethtool \
+    nvidia-l4t-kernel-headers
+```
+Verify that the current kernel headers directory exists:
+```bash
+ls -l /lib/modules/$(uname -r)/build
+```
+
+- Compile the PEAK SocketCAN Driver
+Download and extract PEAK Linux Driver 9.2.0, then enter the source directory:
+```bash
+tar -xvf peak-linux-driver-9.2.0.tar.gz
+cd ~/peak-linux-driver-9.2.0
+```
+Clean previous build artifacts:
+```bash
+make clean
+```
+Compile in netdev mode:
+```bash
+make netdev
+```
+Netdev mode registers PCAN-USB as a Linux SocketCAN network interface.
+Do **not** use plain `make`. Plain `make` builds chardev mode, while LeRobot and motorbridge-cli rely on SocketCAN interfaces.
+
+- Install and Load the Driver
+Install the driver:
+```bash
+sudo make install
+sudo depmod -a
+```
+Load the pcan kernel module:
+```bash
+sudo modprobe pcan
+```
+Enable automatic loading on boot:
+```bash
+echo pcan | sudo tee /etc/modules-load.d/pcan.conf
+```
+Confirm the driver is loaded:
+```bash
+ip -br link | grep can
+```
+Expected output:
+```
+can0             DOWN           <NOARP,ECHO>
+can1             DOWN           <NOARP,ECHO>
+.....
+```
+
+- Find which PCAN interface corresponds to your robotic arm
+```bash
+for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
+```
+Interfaces listed here are PEAK PCAN-USB devices, e.g.:
+```
+can2
+```
+
+- Persist the `pcan_refresh` command
+Linux environment variables do not survive reboot, and PCAN interface numbering may change. A more reliable approach is to permanently define a refresh function and run it after opening a terminal.
+
+Append the function to `~/.bashrc`:
+```bash
+grep -q '^pcan_refresh()' ~/.bashrc || cat >> ~/.bashrc <<'EOF'
+
+pcan_refresh() {
+    local iface
+    iface=$(sudo setup-pcan-if) || return 1
+    export PCAN_IF="$iface"
+    echo "PCAN_IF=$PCAN_IF"
+}
+EOF
+```
+```bash
+source ~/.bashrc
+```
+Run this after rebooting or re-plugging PCAN-USB:
+```bash
+pcan_refresh
+```
+On success, it outputs:
+```
+PCAN_IF=can1
+```
+Use `$PCAN_IF` in all subsequent commands instead of hardcoding `can1` or `can2`.
+
+---
 
 :::tip Attention
 If **PCAN-USB** is not detected in Device Manager after installing the driver, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
+
+
 
 <details>
 

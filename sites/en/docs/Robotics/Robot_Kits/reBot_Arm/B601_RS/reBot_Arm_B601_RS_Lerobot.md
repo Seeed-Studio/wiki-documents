@@ -144,8 +144,8 @@ The lerobot repository already has a pyproject.toml. Create a conda environment 
 ```bash
 cd ~/rebot_lerobot
 
-# Create conda environment (Python 3.12)
-conda create -y -n lerobot python=3.12
+# Create conda environment (Python 3.10)
+conda create -y -n lerobot python=3.10
 
 # Activate environment
 conda activate lerobot
@@ -242,6 +242,25 @@ lerobot-calibrate \
       <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_0pos.jpg" />
   </div>
+
+If you use Jetson (Jetpack 6.x), please use the following instructions to find the CAN port number corresponding to your Jetson.
+
+```bash
+for i in /sys/class/net/can*; do
+    [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"
+done
+```
+
+output:
+
+```
+cam2  # also maybe can0,can1,can x
+```
+
+The port number for all subsequent follower commands must match the output here.
+
+If your Jetson lacks the PCAN driver, communication will consistently fail. Refer to the Jetson PCAN driver installation guide in the [Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/#3pcan-usb) section.
+
 
 ### Calibrate the Leader Arm
 
