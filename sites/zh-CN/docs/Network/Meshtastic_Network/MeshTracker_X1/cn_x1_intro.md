@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-全球首款卡片尺寸、支持双频 GPS 的 Meshtastic 设备。MeshTracker X1 专为可靠的离网通信而打造，是一款支持 863–928 MHz 频段、具备 IP66 防护等级的 [Meshtastic®](https://meshtastic.org/) GPS 追踪器。其采用最新的 Semtech LR2021 LoRa 芯片，具备 USB-C 连接、最长 5 天电池续航，以及紧凑且适用于户外的设计。
+全球首款卡片尺寸、支持双频 GPS 的 Meshtastic 设备。MeshTracker X1 专为可靠的离网通信而打造，是一款支持 863–928 MHz 频段、具备 IP66 防护等级的 [Meshtastic®](https://meshtastic.org/) GPS 追踪器。其采用最新的 Semtech LR2021 LoRa 芯片，具备 USB-C 连接、最长 5 天电池续航，以及紧凑且适合户外使用的设计。
 
 ### 特性
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -32,13 +32,13 @@ updatedAt: '2026-07-16'
 
 - **一款你真的会随身携带的 Meshtastic 设备** 
 
-SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖之外实现可靠通信和位置共享的人群设计——无论是在户外、在大型活动现场，还是在紧急情况下。凭借真正便携的外形和坚固的 IP66 防护，它将 Meshtastic 连接带入日常随身携带和真实野外应用场景。
+SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖范围之外实现可靠通信和位置共享的人群设计——无论是在户外、在大型活动现场，还是在紧急情况下。凭借真正便携的外形和坚固的 IP66 防护，它将 Meshtastic 连接带入日常随身携带和真实野外应用场景。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **超高精度双频 GPS 追踪** 
 
-得益于双频 L1+L5 GNSS 和内置气压计，MeshTracker X1 相比单频 GPS 提供更可靠的定位和高度感知能力。它也是全球首款卡片尺寸、支持双频 GPS 的 Meshtastic 设备。
+得益于双频 L1+L5 GNSS 和内置气压计，MeshTracker X1 相比单频 GPS 提供更可靠的定位和高度感知能力。它也是全球首款采用双频 GPS 的卡片尺寸 Meshtastic 设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -52,15 +52,15 @@ SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖之外实现可靠通�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Dazzaristance.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **卡片尺寸设计，便于携带** 
+- **卡片尺寸设计，轻松携带** 
 
-MeshTracker X1 机身纤薄轻巧，专为户外活动中的日常随身携带而设计。你可以将其挂在挂绳上、固定在背包上、绑在车包上，或直接放入口袋中，轻松实现离网连接。
+MeshTracker X1 机身纤薄轻巧，专为户外探险时的日常随身携带而设计。你可以将其挂在挂绳上、固定在背包上、绑在车包上，或直接放入口袋中，轻松实现离网连接。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **灵活的振动与声音提醒** 
 
-MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知选项。无论你身处嘈杂的活动现场、户外骑行途中，还是在希望尽量减少干扰的安静小径上，都能及时感知收到的新消息。
+MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知方式。无论你身处嘈杂的活动现场、户外骑行途中，还是在希望尽量减少干扰的安静小径上，都能及时感知到新消息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -88,7 +88,7 @@ MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知选项�
 | :- | :- |
 |**主控制器**|Nordic nRF52840|
 |**无线**|Bluetooth (v5.0)|
-|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>最大发电功率：22dBm|
+|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>最大发射功率：22dBm|
 |**LED**|1\* RGB|
 |**蜂鸣器**|1\* 蜂鸣器用于状态指示|
 |**按键**|1\* 按键用于操作|
@@ -105,17 +105,17 @@ MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知选项�
 
 **电池**
 
-|项目|参数|s
+|项目|参数|
 | :- | :- |
-|**电池容量**|可充电 LCD 电池，1100mAh|
-|**电池电量监测**|定期上报电池电量|
+|**电池容量**|可充电高压电池，1100mAh|
+|**电池寿命监测**|周期性上行电池电量|
 |**充电协议**|USB Type-C|
-|**设备电源输入**|5V, 0.55A|
-|**电池电源输入**|4.4V, 0.22A|
-|**充满电截止电压**|4.37V|
-|**充电温度限制**|5 至 +45℃|
+|**设备电源输入**|5V，0.55A|
+|**电池电源输入**|4.4V，0.22A|
+|**充满截止电压**|4.37V|
+|**充电温度范围**|5 至 +45℃|
 
-X1 未来可能发展为一个产品系列，后续推出的新产品将配备更多传感器（3 轴传感器、六轴磁力计等）。
+X1 未来可能发展为一个产品系列，后续推出的新产品型号将配备更多传感器（3 轴传感器、六轴磁力计等）。
 
 ### 引脚列表
 
@@ -307,10 +307,10 @@ X1 未来可能发展为一个产品系列，后续推出的新产品将配备�
 
 |按键操作|说明|蜂鸣器|
 |- |- |- |
-|单击一次|开机|上升音调|
-|单击两次|更新节点/位置信息|-|
-|单击三次|打开/关闭 GPS|-|
-|连续点击四次|临时静音/取消静音|-|
+|单击|开机|上升音调|
+|双击|更新节点/位置信息|-|
+|三击|打开/关闭 GPS|-|
+|四击|临时静音/取消静音|-|
 |长按 5 秒|关机|下降音调|
 
 ### LED
