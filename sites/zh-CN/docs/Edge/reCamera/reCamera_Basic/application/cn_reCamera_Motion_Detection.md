@@ -6,7 +6,7 @@ keywords:
   - 运动检测
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/Motion_Detection/Pasted_image_20260703155236.png
-slug: /recamera_motion_detection_bak
+slug: /recamera_motion_detection
 sku: 102991897, 100029708, 108990120
 sidebar_position: 13
 last_update:
@@ -14,7 +14,7 @@ last_update:
   author: Qiyao Lin
 createdAt: '2026-07-03'
 updatedAt: '2026-07-06'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_motion_detection_bak/
+url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_motion_detection/
 ---
 
 ## I. 项目介绍

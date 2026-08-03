@@ -8,7 +8,7 @@ keywords:
   - TPU Inference
   - INT8 Quantization
   - UDP Streaming
-slug: /recamera_hand_gesture_bak
+slug: /recamera_hand_gesture
 sku: 102991897, 100029708, 108990120
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 18
@@ -17,7 +17,7 @@ last_update:
   author: Xuanjun Zhu
 createdAt: '2026-06-26'
 updatedAt: '2026-06-26'
-url: https://wiki.seeedstudio.com/reCamera/reCamera_Basic/application/recamera_hand_gesture_bak/
+url: https://wiki.seeedstudio.com/recamera_hand_gesture/
 ---
 
 # Porting the MediaPipe Hand Gesture Recognition Model to reCamera

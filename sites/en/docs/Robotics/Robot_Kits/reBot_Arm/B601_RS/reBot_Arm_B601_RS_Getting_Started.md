@@ -15,12 +15,17 @@ slug: /rebot_b601_rs_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-05-26
+  date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-07-20'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 ---
+
+import '/src/css/rebot-wiki-style.css';
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Getting Started with reBot Arm B601-RS
 
@@ -45,6 +50,14 @@ url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). This guide will take you through the quick start of B601-RS, from assembly to operation.
 The content of this guide is racing towards you at the speed of light — stay tuned.
 
+## Safety Disclaimer and Risk Notice
+
+<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+</div>
 
 ## About Power Supply
 
@@ -119,26 +132,32 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 
 1. Install Miniforge and create a virtual environment to avoid conflicts with other environment packages that could cause demo failures.
 
-Ubuntu\Jetson\Raspberry Pi:
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\Jetson\Raspberry Pi">
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
+</TabItem>
+<TabItem value="macOS" label="macOS">
 
-or macOS:
 ```bash
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
 bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
-or Windows:
+</TabItem>
+<TabItem value="windows" label="windows">
 
 Open the Miniforge Release page in your browser, find the latest version of `Miniforge3-Windows-x86_64.exe` and click to download:
 
 ```text
 https://github.com/conda-forge/miniforge/releases
 ```
+
+</TabItem>
+</Tabs>
 
 2. Create a Python 3.12 virtual environment:
 
@@ -189,7 +208,8 @@ pip install motorbridge
 
 Get the PCAN-USB device working on the CAN bus at 1Mbps for robotic arm communication.
 
-Ubuntu\Jetson\Raspberry Pi:
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\Raspberry Pi">
 
 ```bash
 # The kit includes PCAN-USB, which should normally show up as can0 or can1
@@ -198,11 +218,131 @@ ip -br link
 
 # If can0 appears, set the bitrate
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-or macOS:
+</TabItem>
+
+<TabItem value="Jetson" label="Jetson">
+
+Download the file: [peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
+
+- Remove brltty
+On Jetson, brltty may occupy the USB serial port used by the leader. Remove it first:
+```bash
+sudo apt remove -y brltty
+```
+
+- Install Dependencies
+```bash
+sudo apt update
+sudo apt install -y \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    libpopt-dev \
+    can-utils \
+    ethtool \
+    nvidia-l4t-kernel-headers
+```
+Verify that the current kernel headers directory exists:
+```bash
+ls -l /lib/modules/$(uname -r)/build
+```
+
+- Compile the PEAK SocketCAN Driver
+Download and extract PEAK Linux Driver 9.2.0, then enter the source directory:
+```bash
+tar -xvf peak-linux-driver-9.2.0.tar.gz
+cd ~/peak-linux-driver-9.2.0
+```
+Clean previous build artifacts:
+```bash
+make clean
+```
+Compile in netdev mode:
+```bash
+make netdev
+```
+Netdev mode registers PCAN-USB as a Linux SocketCAN network interface.
+Do **not** use plain `make`. Plain `make` builds chardev mode, while LeRobot and motorbridge-cli rely on SocketCAN interfaces.
+
+- Install and Load the Driver
+Install the driver:
+```bash
+sudo make install
+sudo depmod -a
+```
+Load the pcan kernel module:
+```bash
+sudo modprobe pcan
+```
+Enable automatic loading on boot:
+```bash
+echo pcan | sudo tee /etc/modules-load.d/pcan.conf
+```
+Confirm the driver is loaded:
+```bash
+ip -br link | grep can
+```
+Expected output:
+```
+can0             DOWN           <NOARP,ECHO>
+can1             DOWN           <NOARP,ECHO>
+.....
+```
+
+- Find which PCAN interface corresponds to your robotic arm
+```bash
+for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
+```
+Interfaces listed here are PEAK PCAN-USB devices, e.g.:
+```
+can2
+```
+
+- Persist the `pcan_refresh` command
+Linux environment variables do not survive reboot, and PCAN interface numbering may change. A more reliable approach is to permanently define a refresh function and run it after opening a terminal.
+
+Append the function to `~/.bashrc`:
+```bash
+grep -q '^pcan_refresh()' ~/.bashrc || cat >> ~/.bashrc <<'EOF'
+
+pcan_refresh() {
+    local iface
+    iface=$(sudo setup-pcan-if) || return 1
+    export PCAN_IF="$iface"
+    echo "PCAN_IF=$PCAN_IF"
+}
+EOF
+```
+```bash
+source ~/.bashrc
+```
+Run this after rebooting or re-plugging PCAN-USB:
+```bash
+pcan_refresh
+```
+On success, it outputs:
+```
+PCAN_IF=can1
+```
+Use `$PCAN_IF` in all subsequent commands instead of hardcoding `can1` or `can2`.
+
+```bash
+sudo modprobe peak_usb
+ip -br link
+
+# If $PCAN_IF appears, set the bitrate
+sudo ip link set $PCAN_IF down 2>/dev/null
+sudo ip link set $PCAN_IF type can bitrate 1000000 restart-ms 100
+sudo ip link set $PCAN_IF up
+```
+
+</TabItem>
+<TabItem value="macos" label="macos">
 
 If libPCBUSB.dylib cannot be loaded, install PCBUSB first:
 ```zsh
@@ -234,13 +374,22 @@ motorbridge-cli --help
 python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
 ```
 
-or Windows:
+</TabItem>
+<TabItem value="windows" label="windows">
 
 Please visit [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) to install the PCAN-USB driver.
+
+</TabItem>
+
+
+
+</Tabs>
 
 :::tip Attention
 If **PCAN-USB** is not detected in Device Manager after installing the driver, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
+
+
 
 <details>
 
@@ -300,6 +449,77 @@ C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
 Disconnect the USB2CAN module, set the DIP switch to **120R**, and reconnect it to the computer. Open Device Manager. If the device is identified as **PCAN-USB**, the issue has been resolved and you can continue with this guide.
 
 ![PCAN-USB successfully detected in Device Manager](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/11-pcan-usb-recognized.png)
+
+</details>
+
+<details>
+<summary>PCAN Firmware Download & Driver Repair Steps - Ubuntu</summary>
+
+Ubuntu users please refer to this guide
+
+1.> 📦 [Click to download USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.Switch USB2CAN to BOOT
+
+3.Please extract the USB2CAN.zip from step 1, and place flash_pcan_ubuntu.sh and pcan_canable_hw.bin (from inside USB2CAN.zip) in the same directory
+
+[Click to download flash_pcan_ubuntu.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
+
+If transferring from another computer (e.g. scp):
+
+```text
+scp flash_pcan_ubuntu.sh pcan_canable_hw.bin seeed@your_Ubuntu_IP:~/Downloads/
+```
+Or simply copy it onto a USB flash drive and plug it into the Ubuntu machine — as long as the files end up in ~/Downloads, the current directory, or /tmp, the script will find them automatically.
+
+4.Execute:
+
+```text
+bash flash_pcan_ubuntu.sh
+```
+
+Enter your password; wait for completion
+
+After completion, switch back to "120R"
+
+Re-plug the USB.
+
+</details>
+
+<details>
+<summary>PCAN Firmware Download & Driver Repair Steps - MAC</summary>
+
+MAC users please refer to this guide
+
+1.> 📦 [Click to download USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.Switch USB2CAN to BOOT
+
+3.Please extract the USB2CAN.zip from step 1, and place flash_pcan_mac.sh and pcan_canable_hw.bin (from inside USB2CAN.zip) in the same directory
+
+[Click to download flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
+
+If transferring from another computer (e.g. scp):
+
+```text
+scp flash_pcan_mac.sh pcan_canable_hw.bin seeed@your_MAC_IP:~/Downloads/
+```
+
+Or simply copy it onto a USB flash drive and plug it into the MAC — as long as the files end up in ~/Downloads, the current directory, or /tmp, the script will find them automatically.
+
+4.Execute:
+
+```text
+bash /Users/"your_username"/Downloads/flash_pcan_mac.sh "/Users/"your_username"/Downloads/pcan_canable_hw.bin"
+```
+
+The above command assumes the files are placed in the Mac Downloads path; adjust according to your actual path
+
+Enter your password; wait for completion
+
+After completion, switch back to "120R"
+
+Re-plug the USB.
 
 </details>
 
@@ -365,4 +585,27 @@ or
 DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
 
+#### Initialize RS Motor Control Parameters
 
+:::warning Complete parameter initialization before first use
+
+Most reBot Arm B601-RS examples run in MIT mode. Native Position (`pos_vel`) mode directly uses the position-loop gain `loc_kp` and maximum velocity `vel_max`. Its motion behavior is also affected by the speed-loop gain `spd_kp` and acceleration parameter `acc_rad`. If the recommended B601-RS parameters have not been initialized, or if the parameters saved on each joint are inconsistent, Position mode may show abnormal response, speed, or acceleration and deceleration behavior.
+
+First select `rebot-arm-robstride` under **Robot Model** in [MotorBridge Studio](https://motorbridge.github.io/motorbridge-studio/), scan and confirm that Joints 1-7 are all online, and complete the robotic arm zero calibration described above. Then perform the following steps:
+
+1. Click **Read Parameters** to read the parameters currently saved on all online joints. This operation only reads data and does not modify the motors. Wait until the page reports that the control parameters have been read successfully, and retain the current values as a record.
+2. Click **Apply Default Template** and confirm that the page reports the reBot Arm RobStride default parameter template has been applied to Joints 1-7. This operation only loads the recommended values into the page; it does not write them to the motors yet.
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/en_b601_rs_motorbridge_read_params.png" alt="Read the B601-RS motor parameters and apply the default template" />
+</div>
+
+3. Click **Write Parameters**. Confirm that the robotic arm is safely supported and that no people or obstacles are nearby, then confirm the write operation in the dialog. Do not disconnect the power or plug or unplug motor cables while parameters are being written.
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/en_b601_rs_motorbridge_write_params.png" alt="Confirm writing the B601-RS motor parameters" />
+</div>
+
+4. After writing is complete, MotorBridge Studio automatically reads the parameters back. Initialization is successful when the page reports that the post-write readback verification matches.
+
+:::

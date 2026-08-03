@@ -8,7 +8,7 @@ keywords:
   - Jetson Orin NX
   - CUDA
   - Jetson Linux
-image: https://files.seeedstudio.com/wiki/yocto/yocto-bootup.jpg
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png
 slug: /build_and_flash_yocto_for_recomputer_super
 last_update:
   date: 2026-07-24

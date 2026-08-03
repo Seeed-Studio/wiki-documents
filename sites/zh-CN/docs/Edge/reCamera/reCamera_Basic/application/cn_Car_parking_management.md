@@ -6,7 +6,7 @@ keywords:
   - reCamera
   - AI 边缘视觉
   - 智慧停车
-slug: /ai_parking_slot_monitoring_demo_with_recamera_bak
+slug: /ai_parking_slot_monitoring_demo_with_recamera
 sku: 100029708,102991896
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 3
@@ -15,7 +15,7 @@ last_update:
   author: John Xiang
 createdAt: '2025-12-31'
 updatedAt: '2026-01-29'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/ai_parking_slot_monitoring_demo_with_recamera_bak/
+url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/ai_parking_slot_monitoring_demo_with_recamera/
 ---
 
 # 使用 reCamera 的 AI 停车管理演示

@@ -10,7 +10,7 @@ keywords:
   - 边缘 AI
   - YOLO
 image: https://files.seeedstudio.com/wiki/reCamera/recamera-udp-face-show.gif
-slug: /recamera_udp_face_analysis_bak
+slug: /recamera_udp_face_analysis
 sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899,108990119,108990120,E20245041001,100018917, 100041077, 100029708, 100074316
 sidebar_position: 12
 last_update:
@@ -18,7 +18,7 @@ last_update:
   author: Samuel
 createdAt: '2026-04-30'
 updatedAt: '2026-06-12'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_udp_face_analysis_bak/
+url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_udp_face_analysis/
 ---
 
 # 使用 reCamera 进行 UDP 人脸分析

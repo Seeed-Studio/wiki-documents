@@ -1,5 +1,5 @@
 ---
-description: 开始使用 SenseCAP Solar Node（适用于 Meshtastic 与 LoRa）
+description: 开始使用 SenseCAP Solar Node（适用于 Meshtastic 和 LoRa）
 title: 开始使用 SenseCAP Solar Node
 keywords:
   - Meshtastic
@@ -42,11 +42,11 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/FlashEraseIcon.png" alt="pir" width={800} height="auto" /></p>
 
-下载并拷贝擦除固件。
+下载并复制擦除固件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-点击 `Enter DFU Mode`，选择并连接名为 `XIAO-xxx` 的串口，此时应出现一个名为 `XIAO-xxx` 的磁盘。将擦除固件拷贝到该磁盘中。
+点击 `Enter DFU Mode`，选择并连接名为 `XIAO-xxx` 的串口，此时应出现一个名为 `XIAO-xxx` 的磁盘。将擦除固件复制到该磁盘中。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -54,10 +54,10 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/
 
 #### 烧录应用固件
 
-选择你需要的固件版本，点击 `flash`。
+选择你需要的固件版本。点击 `flash`。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-下载 UF2 文件并进入 DFU 模式，将 UF2 文件拖入 DFU 磁盘。文件拷贝完成并设备重启后，固件即会被烧录。
+下载 UF2 文件并进入 DFU 模式。将 UF2 文件拖入 DFU 磁盘。文件复制完成并设备重启后，固件即会被烧录。
 
 ### 安装电池和 GPS 模块（可选）
 
@@ -84,7 +84,7 @@ P1-Pro 版本内置电池和 GPS 模块。对于 P1 版本，如有需要，用�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-请确保外壳安装到位且螺丝拧紧，以保持设备的防水性能。
+请确保外壳安装到位且螺丝拧紧，以保证设备的防水性能。
 :::
 
 ### 启动设备
@@ -96,7 +96,7 @@ P1-Pro 版本内置电池和 GPS 模块。对于 P1 版本，如有需要，用�
 </div>
 
 :::tip
-如果按下按键后设备没有响应，请先为其充电。不要使用快充充电器。
+如果按下按键后设备没有反应，请先为其充电。不要使用快充充电器。
 :::
 
 ### 通过 App 连接
@@ -110,11 +110,11 @@ import TabItem from '@theme/TabItem';
 
 - 在蓝牙面板中选择目标设备。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/device_select123.jpeg" alt="pir" width={300} height="auto" /></p>
 
 - 输入配对码（默认配对码为 `123456`），然后点击 `OK` 连接设备。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/pairing_code123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -165,12 +165,12 @@ import TabItem from '@theme/TabItem';
 
 ### 配置 LoRa
 
-为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置会控制设备使用的频率范围，应根据你所在的地区进行设置。
+为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
 
 <Tabs>
 <TabItem value="ios" label="iOS App">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_LoRa123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -182,7 +182,7 @@ import TabItem from '@theme/TabItem';
 
 **区域列表**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**区域代码**|**描述**|**频率范围 (MHz)**|**占空比 (%)**|**功率限制 (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未设置|N/A|N/A|N/A|
 |US|美国|902.0 - 928.0|100|30|
@@ -191,10 +191,10 @@ import TabItem from '@theme/TabItem';
 更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许发射为止。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到该限制时，你的设备将停止发射，直到再次被允许发射为止。
 :::
 
-现在你已经在设备上设置好了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
+现在你已经在设备上设置了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
 
 ### 配置 GPS
 
@@ -202,7 +202,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-对于 iOS，请打开 `Accurate Location`。否则，定位可能会不准确。
+对于 iOS，请打开 `Accurate Location`。否则，定位可能不准确。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -219,7 +219,7 @@ import TabItem from '@theme/TabItem';
 ## 安装
 
 :::danger note
-由于设备将长时间在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝已牢固拧紧且外壳安装到位。若需要更高的防水性能，你也可以考虑额外进行密封处理。
+由于设备将长期在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝已牢固拧紧且上盖安装到位。为了进一步提升防水性能，你也可以考虑额外进行密封处理。
 :::
 
 - **部件清单**
@@ -230,13 +230,13 @@ import TabItem from '@theme/TabItem';
 
 ### 分步安装指南
 
-- 步骤 1：使用垫片和螺丝将部件 1 固定在设备底部。
+- 步骤 1：使用垫圈和螺丝将部件 1 固定在设备底部。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- 步骤 2：使用螺丝将万向节（部件 2）与支架（部件 3）连接起来。
+- 步骤 2：使用螺丝连接万向节（部件 2）和支架（部件 3）。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -248,7 +248,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- 步骤 4：在合适的位置安装箍圈。
+- 步骤 4：在合适的位置安装箍环。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -288,7 +288,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-- 以下传感器已验证可与设备上的 Grove 接口兼容。
+- 以下传感器已验证与设备上的 Grove 接口兼容。
 
 <table>
   <tr>
@@ -327,7 +327,7 @@ import TabItem from '@theme/TabItem';
 
 - 你可以通过观看此视频，将天线更换为玻璃纤维天线。
 
-如果你需要增益更高的天线，我们推荐 [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) 天线和 [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) 天线。
+如果你需要更高增益的天线，我们推荐 [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) 天线和 [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) 天线。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -343,7 +343,7 @@ import TabItem from '@theme/TabItem';
 
 - 故障排查
 
-[Click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware) 重新烧录固件。
+[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware) 重新烧录固件。
 
 ### 设备变砖
 
@@ -351,14 +351,14 @@ import TabItem from '@theme/TabItem';
 
 设备无响应，LED 不亮，且无法与你的应用配对。
 
-**1）设备仍然可以进入 DFU 模式，则尝试烧录 Bootloader。**
+**1）设备仍然可以进入 DFU 模式，则尝试烧录 bootloader。**
 
 #### 烧录 Bootloader
 
 - [Bootloader 下载](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-在烧录 Bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
+在烧录 bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
 :::
 
 **步骤 1：安装 Adafruit-nrfutil**
@@ -386,7 +386,7 @@ python -m pip --version
 然后应该会出现 "Python xxx" 和 "pip xxx"。如果没有，请尝试重新安装 Python。
 
 <Tabs>
-<TabItem value="pypi" label="从 PyPI 安装">
+<TabItem value="pypi" label="通过 PyPI 安装">
 
 这是安装最新版本的推荐方法：
 
@@ -405,14 +405,14 @@ python -m pip show adafruit-nrfutil
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-对于 Windows 用户，你可能需要手动添加路径。复制上一步显示的安装位置，然后按如下方式添加：
+对于 Windows 用户，你可能需要手动添加该路径。复制上一步显示的安装位置，然后按如下方式添加：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
 
 </TabItem>
 
-<TabItem value="sou" label="从源码安装">
+<TabItem value="sou" label="通过源码安装">
 
 如果你在使用 PyPI 安装时遇到问题，或者想要修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
 
@@ -470,9 +470,9 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 以 Mac 用户为例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**步骤 3：烧录 Bootloader**
+**步骤 3：烧录 bootloader**
 
-在终端或命令提示符中，导航到你下载 Bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
+在终端或命令提示符中，导航到你下载 bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备对应的端口：
 
 - **适用于 Windows**：
 
@@ -498,7 +498,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 ### 无法在主信道上通信
 
-如果设备无法与附近的节点通信或发送消息，首先检查 LoRa 区域和调制解调器预设是否与周围节点一致。你还应检查默认的 **PSK** 是否被更改。主信道上的 PSK 不同会导致设备无法与该信道上的其他节点通信。
+如果设备无法与附近的节点通信或发送消息，首先检查 LoRa 区域和调制解调器预设是否与周围节点一致。你还应该检查默认的 **PSK** 是否被更改。在主信道上使用不同的 PSK 会导致设备无法与该信道上的其他节点通信。
 
 发现此问题的最简单方法是通过手机应用。打开应用，连接到目标设备，然后导航到 `Settings` -> `Channels`。选择主信道并检查 **PSK** 值。如果它与周围节点不同，请将其更新为相同的 PSK 并保存信道设置。
 
@@ -559,11 +559,11 @@ NodeDB 存储的详细信息包括：
 
 打开应用并连接到目标设备。前往 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDBmerge.png" alt="应用中的设备设置和 Reset NodeDB 按钮" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/sending_failed123.png" alt="应用中的设备设置和 Reset NodeDB 按钮" width={600} height="auto" /></p>
 
 #### 交换用户信息
 
-每个节点都会定期发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的另一个节点发送或接收私信，可以在应用中手动提示它们交换信息。
+每个节点都会定期发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的某个节点收发私信，可以在应用中手动提示它们交换信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Settings 中的设备条目" width={300} height="auto" /></p>
 
@@ -576,7 +576,7 @@ NodeDB 存储的详细信息包括：
 重启故障设备以使配置生效。
 
 :::note
-重新生成密钥后，其他设备需要重新连接该节点。因此，最好在其他设备的节点列表中删除该节点。
+在重新生成密钥后，其他设备需要重新与该节点连接。因此，最好在其他设备的节点列表中删除该节点。
 :::
 
 :::tip
@@ -591,7 +591,7 @@ NodeDB 存储的详细信息包括：
 功耗主要取决于数据传输频率和 GPS 更新速率等因素。
 下列数据仅供参考；实际功耗可能会因实际使用情况而有所不同。
 
-- **关机休眠模式功耗**
+- **关机睡眠模式功耗**
 
 |描述|功耗|
 |---|---|
@@ -632,3 +632,26 @@ Xiao nRF-52840 Plus 的最大充电电流为 200 mA。CN3165 充电管理芯片�
 
 ## 资源
 - [Solar Node 电池寿命计算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

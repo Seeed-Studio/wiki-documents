@@ -4,7 +4,7 @@ title: Comienza con MeshTracker X1
 keywords:
   - Rastreador
   - Meshtastic
-image: https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png
 slug: /x1_get_started_for_meshtastic
 sku: 100087698
 sidebar_position: 1
@@ -12,13 +12,13 @@ last_update:
   date: 7/13/2026
   author: Michelle Huang
 createdAt: '2026-07-13'
-updatedAt: '2026-07-16'
+updatedAt: '2026-07-24'
 url: https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
-Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies manualmente ni lo apagues. De lo contrario, el dispositivo puede quedar inutilizable.
+Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo puede quedar inutilizable.
 1. No ha finalizado el proceso de transmisión de mensajes
 2. Está siendo configurado
 :::
@@ -177,11 +177,11 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 ## Flashear firmware
 
 :::caution note
-Por favor, `don't use OTA` para actualizar el firmware, ya que puede hacer que el dispositivo quede completamente inutilizable. Para información detallada, por favor [haz clic aquí](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ota/)
+Por favor, `no uses OTA` para actualizar el firmware, ya que puede hacer que el dispositivo quede completamente inutilizable. Para información detallada, por favor [haz clic aquí](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ota/)
 :::
 #### Paso 1: Entrar en modo DFU
 
-Entra en DFU a través del web flasher. Si esto falla muchas veces, entra en DFU manualmente.
+Entra en DFU mediante el web flasher. Si esto falla muchas veces, entra en DFU manualmente.
 
 <Tabs>
 <TabItem value="method1" label="Via Web Flasher">
@@ -207,7 +207,7 @@ Conecta el cable USB a tu PC, mantén pulsado el botón del dispositivo y luego 
 </TabItem>
 </Tabs>
 
-El LED blanco ⚪️ permanecerá fijo si el X1 está en modo DFU. Y debería aparecer una unidad llamada `X1` en tu ordenador.
+El LED blanco ⚪️ permanecerá fijo si X1 está en modo DFU. Y debería aparecer una unidad llamada `X1` en tu ordenador.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1DriveMAC.png" alt="pir" width={300} height="auto" /></p>
 
 #### Paso 2: Borrado de la memoria flash
@@ -236,11 +236,11 @@ Copia el archivo UF2 en la unidad DFU. El firmware debería flashearse después 
 
 ### Configurar GPS
 
-Por favor, activa el GPS. Puedes ajustar el intervalo de actualización y el intervalo de difusión para obtener información de ubicación más actualizada.
+Activa la opción de GPS. Puedes ajustar el intervalo de actualización y el intervalo de difusión para obtener información de ubicación más actualizada.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-Para IOS, por favor activa la `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
+Para IOS, activa `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -432,7 +432,7 @@ Deshabilita `External notification enabled`, luego puedes configurar `buzzer off
 
 </Tabs>
 
-## Preguntas frecuentes
+## Preguntas frecuentes (FAQ)
 
 
 ### Cómo comprobar el ID del dispositivo
@@ -490,10 +490,10 @@ El dispositivo se reiniciará repetidamente y el puerto serie se conectará y de
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
 
-El dispositivo está en modo DFU si el LED blanco permanece encendido de forma fija.
+El dispositivo está en modo DFU si el LED blanco permanece encendido de forma continua.
 
 :::note
-Para entrar correctamente en el modo DFU, debes realizar esta operación rápidamente. Puede que necesites intentarlo varias veces.
+Para entrar correctamente en el modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
 :::
 
 - Paso 2: Borrar la Flash
@@ -597,7 +597,7 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 
 </TabItem>
 
-<TabItem value="m3" label="Install from Source">
+<TabItem value="m3" label="Instalar desde el código fuente">
 
 
 Utiliza este método si tienes problemas instalando con PyPi o si quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
@@ -607,7 +607,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Nota: Los siguientes comandos usan `python3`; sin embargo, si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de Windows de Python 3.x todavía usa el nombre python.exe
+Nota: Los siguientes comandos usan `python3`; sin embargo, si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de Windows de Python 3.x sigue usando el nombre python.exe
 
 Para instalar en el espacio de usuario en tu directorio personal:
 
@@ -630,7 +630,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-Para generar un binario ejecutable autónomo de la utilidad (Windows y MacOS), ejecuta estos comandos:
+Para generar un binario ejecutable auto-contenido de la utilidad (Windows y MacOS), ejecuta estos comandos:
 
 ```
 pip3 install pyinstaller
@@ -647,7 +647,7 @@ Cópialo o muévelo a otro lugar para tu comodidad, como un directorio en tu %PA
 
 Conecta tu dispositivo a tu PC y comprueba el número de puerto.
 
-Para usuarios de Windows, abre el administrador de dispositivos y ve a "port"; el número de puerto que aparece tras la conexión del dispositivo es el número de puerto del dispositivo.
+Para usuarios de Windows, abre el administrador de dispositivos y ve a "port"; el número de puerto que aparece tras conectar el dispositivo es el número de puerto del dispositivo.
 
 Para usuarios de Mac, por ejemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
@@ -655,9 +655,9 @@ Para usuarios de Mac, por ejemplo:
 Para usuarios de Windows, por ejemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-**Paso 3: Flashea el bootloader**
+**Paso 3: Flashear el bootloader**
 
-En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
+En la terminal o en el símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
 
 - **Para Windows**:
 
@@ -665,11 +665,11 @@ En la terminal o símbolo del sistema, navega al directorio donde descargaste el
 adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-Por favor, cambia COMXX por tu número de COM. Por ejemplo, si tu dispositivo está en com6, cambia el comando a:
+Cambia COMXX por tu número de COM. Por ejemplo, si tu dispositivo está en com6, cambia el comando a:
 
 `adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- Algunos dispositivos cambiarán su número de puerto después de que introduzcas este comando. Así que si la instalación falla, comprueba de nuevo el número de puerto.
+ Algunos dispositivos cambiarán su número de puerto después de introducir este comando. Así que si la instalación falla, comprueba de nuevo el número de puerto.
 
 - **Para otros**:
 
@@ -706,8 +706,8 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 
 - **Descripción del fenómeno**
 
- - Después de encender el dispositivo, se apagará o reiniciará automáticamente al cabo de un rato. 
- - El registro del puerto serie funcionó durante un tiempo y luego se detuvo.
+ - Después de que el dispositivo se enciende, se apagará o reiniciará automáticamente después de un tiempo. 
+ - El registro del puerto serie funciona durante un tiempo y luego se detiene.
 
  Esto posiblemente se deba a reiniciar o apagar manualmente y a la fuerza el dispositivo cuando este se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
 
@@ -723,11 +723,11 @@ Si quieres restaurar la configuración predeterminada, puedes hacer un restablec
 - Haz clic en el botón `Factory Reset` en la app. El dispositivo se reiniciará automáticamente con la configuración de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### Fallo de mensaje directo
+### Fallo en el mensaje directo
 
 #### Restablecer NodeDB
 
-NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con un determinado nodo, podría deberse a que tu nodeDB ha almacenado información obsoleta de ese nodo. Necesitarás actualizarla.
+NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con cierto nodo, podría deberse a que tu NodeDB ha almacenado información desactualizada para ese nodo. Necesitarás actualizarla.
 
 Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
@@ -737,7 +737,7 @@ Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device*
 
 #### Intercambiar información de usuario
 
-Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
+Cada nodo enviará periódicamente su propia información de nodo, permitiendo que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
@@ -757,29 +757,30 @@ Después de la regeneración de la clave, otros dispositivos necesitan volver a 
 
   - **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
 
-  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Se considera que un dispositivo con un RSSI inferior a -115 dBm tiene un rendimiento deficiente. 
+  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente. 
 
       Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstáculos, con una interferencia mínima.
 
-## Recursos
-
-<JetsonLeadQuote
-  buttonText="Request Quote of Customization"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="Request Quote for XIAO"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>

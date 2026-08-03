@@ -24,22 +24,22 @@ Este guia explica como exibir as localizações de dispositivos [Meshtastic](htt
 
 ## Introdução aos Monitores de Rede Meshtastic
 
-O Mapa de Nós Meshtastic é uma interface online que visualiza as localizações dos dispositivos Meshtastic em um mapa. Ele ajuda os usuários a monitorar as posições em tempo real dos dispositivos em uma rede mesh, fornecendo uma visão sobre a cobertura e a conectividade da rede.
+O Mapa de Nós Meshtastic é uma interface online que visualiza as localizações de dispositivos Meshtastic em um mapa. Ele ajuda os usuários a monitorar as posições em tempo real dos dispositivos em uma rede mesh, fornecendo uma visão da cobertura e conectividade da rede.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" style={{width:900, height:'auto'}}/></div>
 
-Os dispositivos Meshtastic periodicamente reportam sua localização para um servidor Meshtastic via MQTT. O Mapa de Nós recupera esses relatórios e exibe a posição, a rota e o alcance do sinal de cada nó. Os dispositivos podem reportar sua localização:
+Os dispositivos Meshtastic relatam periodicamente sua localização a um servidor Meshtastic via MQTT. O Mapa de Nós recupera esses relatórios e exibe a posição, rota e alcance de sinal de cada nó. Os dispositivos podem relatar sua localização:
 
-- **Diretamente via MapReport:** o dispositivo envia os dados de localização diretamente para o servidor.
-- **Indiretamente via outros nós:** a localização é retransmitida por nós vizinhos.
+- **Diretamente via MapReport:** O dispositivo envia os dados de localização diretamente para o servidor.
+- **Indiretamente via outros nós:** A localização é retransmitida por nós vizinhos.
 
 **Casos de Uso Adequados**
 
 Os Mapas de Nós Meshtastic são ideais para:
 
-- Aventuras ao ar livre, como trilhas, ciclismo ou expedições.
+- Atividades ao ar livre, como trilhas, ciclismo ou expedições.
 - Monitoramento remoto de dispositivos IoT distribuídos.
-- Rastreamento de ativos ou membros da equipe sem depender de redes celulares.
+- Rastreamento de ativos ou membros de equipe sem depender de redes celulares.
 
 ### Mapas de Nós Meshtastic Comuns
 
@@ -53,21 +53,21 @@ Os Mapas de Nós Meshtastic são ideais para:
 ### Configuração
 
 **Configurações LoRa**
-   - Configure seu dispositivo para a banda de frequência LoRa correta para a sua região.
-   - Ative **OK to MQTT** para permitir o reporte.
+   - Configure seu dispositivo para a banda de frequência LoRa correta para sua região.
+   - Ative **OK to MQTT** para permitir o envio de relatórios.
 
 **Configurações MQTT**
    - Ative MQTT no seu dispositivo.
-   - Use o servidor Meshtastic padrão, nome de usuário e senha.
+   - Use o servidor, nome de usuário e senha padrão do Meshtastic.
    - Ative **MapReport** e marque **I agree**. Selecione o intervalo de relatório de acordo com suas necessidades.
 
 ### Visualizando as Localizações dos Dispositivos
 
-Abra o **MeshMap** no seu navegador: [MeshMap Link](https://meshmap.net/). 
+Abra o **MeshMap** no seu navegador: [Link do MeshMap](https://meshmap.net/). 
 
-Você verá todos os nós no mapa. Nós reportados **via MapReport** são atualizações diretas do dispositivo. Nós reportados **via outros nós** são atualizações retransmitidas.
+Você verá todos os nós no mapa. Nós relatados **via MapReport** são atualizações diretas do dispositivo. Nós relatados **via outros nós** são atualizações retransmitidas.
 
-Clique em qualquer nó para ver informações detalhadas (ID do dispositivo, nível da bateria, etc.), rota mesh e cobertura de sinal
+Clique em qualquer nó para ver informações detalhadas (ID do dispositivo, nível de bateria, etc.), rota mesh e cobertura de sinal
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMapPositionDisplay.png" style={{width:900, height:'auto'}}/></div>
 
@@ -94,8 +94,31 @@ Clique em qualquer nó para ver informações detalhadas (ID do dispositivo, ní
 
 ### Visualizando as Localizações dos Dispositivos
 
-Abra o **Mapa Meshtastic de Liam Cottle** no seu navegador: [Liam Cottle's Map Link](https://meshtastic.liamcottle.net/). Você verá todos os nós exibidos no mapa.
+Abra o **Mapa Meshtastic de Liam Cottle** no seu navegador: [Link do Mapa de Liam Cottle](https://meshtastic.liamcottle.net/). Você verá todos os nós exibidos no mapa.
 
-Clique em qualquer nó para ver: informações detalhadas sobre o dispositivo, alcance do sinal, rotas históricas e atualizações de localização anteriores
+Clique em qualquer nó para ver: informações detalhadas sobre o dispositivo, alcance de sinal, rotas históricas e atualizações de localização anteriores
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/LiamPosition.png" style={{width:600, height:'auto'}}/></div>
+
+## Suporte Técnico & Discussão de Produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

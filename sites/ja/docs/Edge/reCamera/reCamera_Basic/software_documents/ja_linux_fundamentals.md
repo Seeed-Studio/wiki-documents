@@ -1,6 +1,6 @@
 ---
-description: reCamera用の基本的なLinuxコマンド
-title: Linux基礎
+description: reCamera 向けの基本的な Linux コマンド
+title: Linux 基礎
 keywords:
   - Edge
   - reCamera
@@ -13,58 +13,57 @@ sidebar_position: 4
 last_update:
   date: 2/14/2025
   author: Parker Hu & Dawn Yao
-createdAt: '2025-05-27'
-updatedAt: '2025-09-25'
+createdAt: '2025-02-14'
+updatedAt: '2025-04-08'
 url: https://wiki.seeedstudio.com/ja/recamera_linux_fundamentals/
 ---
-# Linux基礎
+# Linux 基礎
 
-## **1. Linuxシステムの紹介**
+## **1. Linux システムの概要**
 
-Linuxは、信頼性、柔軟性、パフォーマンスにより広く採用されているオープンソースのUnix系オペレーティングシステムです。サーバー、デスクトップ、モバイルデバイス、組み込みシステムで広く使用されています。
+Linux はオープンソースの Unix 系オペレーティングシステムであり、その信頼性、柔軟性、パフォーマンスの高さから広く採用されています。サーバー、デスクトップ、モバイルデバイス、組み込みシステムなどで広く利用されています。
 
-### Linuxの主な特徴：
+### Linux の主な特徴:
 
-- **フリーでオープンソース**: Linuxのソースコードは無料で利用でき、ユーザーは要件に応じて変更することができます。
-- **マルチタスク**: Linuxは複数のアプリケーションを同時に実行することをサポートしています。
-- **セキュリティ**: ファイル権限、ユーザー管理、SELinuxなどの堅牢なセキュリティ機能で知られています。
-- **移植性**: Linuxは様々なハードウェアアーキテクチャで動作できます。
+- **無料かつオープンソース**：Linux のソースコードは無償で公開されており、ユーザーは自分の要件に応じて修正できます。
+- **マルチタスク**：Linux は複数のアプリケーションを同時に実行することをサポートします。
+- **セキュリティ**：ファイルパーミッション、ユーザー管理、SELinux など、堅牢なセキュリティ機能で知られています。
+- **移植性**：Linux はさまざまなハードウェアアーキテクチャ上で動作できます。
 
-## **2. Linuxファイルシステムの紹介**
+## **2. Linux ファイルシステムの概要**
 
-Linuxはファイルとディレクトリを階層構造で整理しています。この構造の最上位にはルートディレクトリ`/`があり、そこから他のディレクトリが分岐しています。
+Linux はファイルとディレクトリを階層構造で整理します。この構造の最上位にはルートディレクトリ `/` があり、そこから他のディレクトリが枝分かれしています。
 
-### Linuxファイルシステムの主要ディレクトリ：
+### Linux ファイルシステムの主なディレクトリ:
 
-- `/`: ルートディレクトリ。Linuxファイルシステムの起点です。
-- `/home`: ユーザーのホームディレクトリ。すべてのユーザーはここにサブディレクトリを持ちます（例：`/home/user`）。
+- `/`: ルートディレクトリ。Linux ファイルシステムの起点です。
+- `/home`: ユーザーのホームディレクトリ。各ユーザーはここにサブディレクトリを持ちます（例：`/home/user`）。
 - `/etc`: システムの設定ファイル。
-- `/bin`: 必須のバイナリファイルとコマンド。
+- `/bin`: 重要なバイナリファイルとコマンド。
 - `/var`: ログやデータベースなどの可変データ。
 - `/tmp`: 一時ファイル。
 - `/dev`: ハードウェアコンポーネントを表すデバイスファイル。
 
 ## **3. ターミナルとコマンドラインの使用**
 
-ターミナルはLinuxオペレーティングシステムと対話するための強力なツールです。ユーザーが様々なタスクを実行するためのコマンドを発行することができます。
+ターミナルは Linux オペレーティングシステムと対話するための強力なツールです。さまざまな作業を行うためのコマンドを実行できます。
 
 **ターミナルを開く：**
 
 - アクセスアドレス：http://192.168.42.1/#/terminal（デフォルトのユーザー名とパスワード：`recamera`）
-- ssh[ツール](https://mobaxterm.mobatek.net/)を使用してリモートでログインします。
-以下のコマンドを使用してreCameraにリモートでアクセスできます：
-
+- ssh [tool](https://mobaxterm.mobatek.net/) を介してリモートログインします。
+次のコマンドを使用して、reCamera にリモートアクセスできます：
 ```
 ssh recamera@recamera.local
 ```
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/ssh_connection.png" /></div>
 
-次に```Enter```を押すと、reCameraをリモートで制御できるようになります。
+その後 ```Enter``` を押すと、reCamera をリモートで操作できるようになります。
 
-### 基本的なコマンドライン構造：
+### 基本的なコマンドライン構造:
 
-Linuxのコマンドは一般的な構造に従います：
+Linux のコマンドは一般的に次のような構造に従います：
 
 ```bash
 command [options] [arguments]
@@ -72,36 +71,36 @@ command [options] [arguments]
 
 例えば、`ls -l /home/recamera` は `/home/recamera` ディレクトリ内のすべてのファイルを詳細形式で一覧表示します。
 
-## **4.ユーザー再カメラ && root**
+## **4.User recamera と root**
 
-recameraを初めて使用する際は、デフォルトのrecameraパスワードをリセットします。これはターミナルにログインする際に使用するパスワードでもあります。
+recamera を初めて使用する際に、デフォルトの recamera パスワードをリセットします。このパスワードはターミナルにログインする際にも使用されます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/linux_fundamentals/image-1.png" /></div>
 
 :::note
 
-ターミナルでパスワードを入力する際、内容は表示されません。パスワード入力後、`Enter`を押して実行してください。
+ターミナルでパスワードを入力しても、内容は表示されません。パスワード入力後に `Enter` を押して実行してください。
 
 :::
 
-一部の特別な操作では権限不足の問題が発生します。コマンドを実行するには、コマンド実行前にsudoを追加する必要があります。または`root`ユーザーに切り替えて、システム内のすべてのコマンドを実行します。
+一部の特殊な操作では、権限不足の問題が発生します。コマンドを実行するには、コマンドの前に sudo を付けて実行する必要があります。または、`root` ユーザーに切り替えて、システム内のすべてのコマンドを実行します。
 
-rootユーザーはデフォルトでパスワードが設定されていません。このコマンドを使用してパスワードを設定してください。
+root ユーザーにはデフォルトではパスワードが設定されていません。次のコマンドを使用してパスワードを設定します。
 
-- `sudo passwd root`:ユーザーのパスワードを変更
-- `su root`:rootユーザーに切り替え
+- `sudo passwd root`: ユーザーのパスワードを変更します。
+- `su root`: root ユーザーに切り替えます。
 
 :::note
 
-rootユーザーはシステム関連ファイルを変更でき、システム障害を引き起こす可能性があります。慎重に操作してください。
+root ユーザーはシステム関連ファイルを変更できるため、システム障害を引き起こす可能性があります。十分注意して操作してください。
 
 :::
 
-## **5. 基本的なLinuxコマンド**
+## **5. 基本的な Linux コマンド**
 
-以下は基本的なコマンドとその使用方法です：
+ここでは、いくつかの基本的なコマンドとその使い方を紹介します：
 
-### ファイルとディレクトリ管理
+### ファイルおよびディレクトリ管理:
 
 - `pwd`: 現在の作業ディレクトリを表示します。
 - `ls`: 現在のディレクトリ内のファイルとディレクトリを一覧表示します。
@@ -110,57 +109,56 @@ rootユーザーはシステム関連ファイルを変更でき、システム�
 - `rm [file]`: ファイルを削除します。
 - `rmdir [directory]`: 空のディレクトリを削除します。
 
-### ファイル権限と所有権
+### ファイルのパーミッションと所有権:
 
-- `chmod [permissions] [file]`: ファイルの権限を変更します。
+- `chmod [permissions] [file]`: ファイルのパーミッションを変更します。
 - `chown [owner] [file]`: ファイルの所有者を変更します。
 
-### ファイル操作
+### ファイル操作:
 
 - `cp [source] [destination]`: ファイルまたはディレクトリをコピーします。
 - `mv [source] [destination]`: ファイルまたはディレクトリを移動または名前変更します。
 - `cat [file]`: ファイルの内容を表示します。
 - `nano [file]`: テキストエディタ（Nano）でファイルを開きます。
 
-### システム情報
+### システム情報:
 
-- `top`: リアルタイムのシステムプロセスとリソース使用状況を表示します。
-
+- `top`: システムプロセスとリソース使用状況をリアルタイムで表示します。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/linux_fundamentals/image-2.png" /></div>
-- `df`: ディスク容量使用状況を表示します。
+- `df`: ディスク使用量を表示します。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/linux_fundamentals/image-3.png" /></div>
-- `free`: メモリ使用状況を表示します。
+- `free`: メモリ使用量を表示します。
 - `uname -r`: カーネルバージョンを表示します。
 
 ## 6.ファイル転送
 
-Linuxは、ローカルネットワークやインターネット経由でシステム間でファイルを転送するための複数の方法を提供しています。以下は、Linuxでファイル転送に使用される一般的なツールとプロトコルです。
+Linux では、ローカルネットワークやインターネット経由でシステム間のファイルを転送するための、いくつかの方法が用意されています。以下は、Linux でファイル転送に使用される一般的なツールとプロトコルです。
 
 ### **SCP（Secure Copy Protocol）の使用**
 
-SCPを使用すると、ローカルホストとリモートホスト間、または2つのリモートホスト間でファイルを安全にコピーできます。
+SCP を使用すると、ローカルホストとリモートホスト間、または 2 つのリモートホスト間でファイルを安全にコピーできます。
 
-#### 基本的なSCPコマンド
+#### 基本的な SCP コマンド:
 
-- ローカルからリモートにファイルをコピー:
+- ローカルからリモートへファイルをコピー：
 
   ```bash
   scp [file] username@remote_host:/path/to/destination
   ```
 
-- リモートからローカルにファイルをコピーする：
+- リモートからローカルへファイルをコピー：
 
   ```bash
   scp username@remote_host:/path/to/file /local/destination
   ```
 
-- ディレクトリをコピーする（再帰的コピーには `-r` フラグを使用）：
+- ディレクトリをコピー（再帰的コピーには `-r` フラグを使用）：
 
   ```bash
   scp -r [directory] username@remote_host:/path/to/destination
   ```
 
-#### 例：
+#### 例:
 
 ローカルマシンからリモートサーバーにファイルをコピーするには：
 
@@ -170,25 +168,25 @@ scp myfile.txt recamera@192.168.1.100:/home/recamera/
 
 ### **SFTP（Secure File Transfer Protocol）の使用**
 
-SFTPはファイル転送のもう一つの安全な方法で、SSH上で動作します。リモートサーバー上のファイルを対話的に管理することができます。
+SFTP は、SSH 上で動作するもう 1 つの安全なファイル転送方法です。リモートサーバー上のファイルを対話的に管理できます。
 
-#### 基本的なSFTPコマンド：
+#### 基本的な SFTP コマンド:
 
-1. SFTPセッションを開始する：
+1. SFTP セッションを開始：
 
    ```bash
    sftp username@remote_host
    ```
 
-2. 接続後、以下のコマンドを使用します：
+2. 接続後、次のコマンドを使用します：
 
    - `ls`: リモートディレクトリ内のファイルを一覧表示します。
    - `cd [directory]`: リモートディレクトリを変更します。
-   - `get [file]`: リモートサーバーからローカルマシンにファイルをダウンロードします。
-   - `put [file]`: ローカルマシンからリモートサーバーにファイルをアップロードします。
-   - `exit`: SFTPセッションを終了します。
+   - `get [file]`: リモートサーバーからローカルマシンへファイルをダウンロードします。
+   - `put [file]`: ローカルマシンからリモートサーバーへファイルをアップロードします。
+   - `exit`: SFTP セッションを終了します。
 
-#### 例：
+#### 例:
 
 リモートサーバーにファイルをアップロードするには：
 
@@ -199,18 +197,18 @@ sftp> put myfile.txt /home/user/Documents/
 
 ## **7.ハードウェアコマンド**
 
-recameraデバイス上のハードウェアを制御するには、この[ドキュメント](https://wiki.seeedstudio.com/ja/recamera_hardware_and_specs/#hardware-interface)を参照してください。
+recamera デバイス上のハードウェアを制御するには、この[ドキュメント](https://wiki.seeedstudio.com/ja/recamera_basicardware_and_specs/)を参照してください。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
