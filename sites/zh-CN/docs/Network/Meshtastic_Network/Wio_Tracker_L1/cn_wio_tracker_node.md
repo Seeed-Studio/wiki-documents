@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/cn/wio_tracker_l1_node/
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 </font></span></strong>
     </a>
 </div>
-Wio Tracker L1 系列是一款低功耗、高可扩展性的 [Meshtastic®](https://meshtastic.org/) 节点，具备 LoRa（862–930 MHz）、用于高效处理的 nRF52840，以及用于精准定位追踪的 L76K GPS 模块。其设计灵活，支持 OLED 和 E-Ink 显示屏，以及太阳能板和电池供电，非常适合广泛的物联网和离网应用场景。
+Wio Tracker L1 系列是一款低功耗、高可扩展性的 [Meshtastic®](https://meshtastic.org/) 节点，具备 LoRa（862–930 MHz）、用于高效处理的 nRF52840，以及用于精准定位追踪的 L76K GPS 模块。它以灵活性为设计理念，支持 OLED 和 E-Ink 显示屏，以及太阳能板和电池供电，非常适合广泛的物联网和离网应用场景。
 
 ## L1 系列型号
 
@@ -52,7 +52,7 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
 ### 特性
 
 - **预刷入 Meshtastic 固件**
-开箱即用，预装 Meshtastic 固件，便于无缝设置。
+开箱即用，预装 Meshtastic 固件，便于无缝配置。
 
 - **三重供电选项**
 支持 Type-C 快速充电、太阳能输入和锂电池供电，可在多种环境中灵活部署——非常适合户外和移动应用。
@@ -73,12 +73,12 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
   <tr>
     <th colspan="1">处理器</th>
     <th colspan="1">
-      Nordic nRF52840<br />ARM® Cortex®-M4 带 FPU，最高运行频率 64 MHz
+      Nordic nRF52840<br />ARM® Cortex®-M4 with FPU runs up to 64 MHz
     </th>
   </tr>
   <tr>
     <td colspan="1">片上存储器</td>
-    <td colspan="1">1 MB Flash 和 256 kB RAM</td>
+    <td colspan="1">1 MB flash 和 256 kB RAM</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">无线</td>
@@ -109,13 +109,13 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
     <td colspan="1">USB Type-C：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">太阳能板（2P-2.0mm）：5V — 1A</td>
+    <td colspan="1">太阳能板（2P-2.0mm）：5V — 1A（不要超过 5V）</td>
   </tr>
   <tr>
     <td colspan="1">锂电池（2P-1.25mm）：3.7V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">[OLED Screen](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
+    <td colspan="1" rowspan="3">[OLED 屏幕](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
     <td colspan="1">尺寸：1.3 英寸</td>
   </tr>
   <tr>
@@ -125,7 +125,7 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
     <td colspan="1">有效显示区域（mm）：34.5 × 23.0</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">[E-Ink Screen](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
+    <td colspan="1" rowspan="3">[E-Ink 屏幕](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
     <td colspan="1">尺寸：2.13 英寸</td>
   </tr>
   <tr>
@@ -140,7 +140,7 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
   </tr>
 </table>
 
-### 硬件概览
+### 硬件总览
 
 **Wio Tracker L1**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio_tracker-l1.png" alt="pir" width={800} height="auto" /></p>
