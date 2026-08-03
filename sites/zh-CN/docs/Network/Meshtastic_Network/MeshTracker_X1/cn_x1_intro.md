@@ -32,35 +32,35 @@ updatedAt: '2026-07-16'
 
 - **一款你真的会随身携带的 Meshtastic 设备** 
 
-SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖范围之外实现可靠通信和位置共享的人群而设计——无论是在户外、在大型活动现场，还是在紧急情况下。凭借真正便携的外形和坚固的 IP66 防护，它将 Meshtastic 连接带入日常随身携带和真实野外应用场景。
+SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖范围之外实现可靠通信和位置共享的人群设计——无论是在户外、在大型活动现场，还是在紧急情况下。凭借真正便携的外形和坚固的 IP66 防护，它将 Meshtastic 连接带入日常随身携带和真实野外应用场景。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **超高精度双频 GPS 追踪** 
 
-借助双频 L1+L5 GNSS 和内置气压计，MeshTracker X1 相比单频 GPS 提供更可靠的定位和高度感知能力。它也是全球首款卡片尺寸、支持双频 GPS 的 Meshtastic 设备。
+得益于双频 L1+L5 GNSS 和内置气压计，MeshTracker X1 相比单频 GPS 提供更可靠的定位和高度感知能力。它也是全球首款采用双频 GPS 的卡片尺寸 Meshtastic 设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **新一代 LoRa 连接（LR2021）** 
 
-得益于 Semtech LR2021，MeshTracker X1 提供更强的射频性能，灵敏度高达 -141 dBm，并支持 2.6 Mbps 的 FLRC 数据速率，实现更快速、更可靠的 Mesh 通信，为未来的语音、图像传输等功能奠定基础。
+得益于 Semtech LR2021，MeshTracker X1 提供更强的射频性能，灵敏度高达 -141 dBm，并支持 2.6 Mbps 的 FLRC 数据速率，实现更快速、更可靠的 Mesh 通信，为未来的语音和图像传输等功能奠定基础。
 
 - **可靠的远距离通信** 
 
-在 915 MHz 频段测试中，MeshTracker X1 在开阔视距条件下可实现最长 8 km 的可靠通信距离，让团队在户外探险、活动和紧急情况下始终保持互联。
+在 915 MHz 频段测试中，MeshTracker X1 在开阔视距条件下可实现最长 8 km 的可靠通信距离，让团队在户外探险、活动和紧急情况下始终保持联络。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Dazzaristance.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **卡片尺寸设计，轻松携带** 
 
-MeshTracker X1 机身纤薄轻巧，专为户外探险时的日常随身携带而设计。你可以将其挂在挂绳上、固定在背包上、安装在车包上，或直接放入口袋中，轻松实现离网连接。
+MeshTracker X1 机身纤薄轻巧，专为户外探险时的日常随身携带而设计。你可以将其挂在挂绳上、固定在背包上、绑在车包上，或直接放入口袋中，轻松实现离网连接。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **灵活的振动与声音提醒** 
 
-MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知选项。无论你身处嘈杂的活动现场、户外骑行途中，还是在希望尽量减少干扰的安静小径上，都能及时获知新消息。
+MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知方式。无论你身处嘈杂的活动现场、户外骑行途中，还是在希望尽量减少干扰的安静小径上，都能及时感知到新消息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -88,7 +88,7 @@ MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知选项�
 | :- | :- |
 |**主控制器**|Nordic nRF52840|
 |**无线**|Bluetooth (v5.0)|
-|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>最大发电功率：22dBm|
+|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>最大发射功率：22dBm|
 |**LED**|1\* RGB|
 |**蜂鸣器**|1\* 蜂鸣器用于状态指示|
 |**按键**|1\* 按键用于操作|
@@ -105,17 +105,17 @@ MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知选项�
 
 **电池**
 
-|项目|参数|s
+|项目|参数|
 | :- | :- |
-|**电池容量**|可充电 LCO 电池，1100mAh|
-|**电池寿命监测**|周期性上报电池电量|
+|**电池容量**|可充电高压电池，1100mAh|
+|**电池寿命监测**|周期性上行电池电量|
 |**充电协议**|USB Type-C|
 |**设备电源输入**|5V，0.55A|
 |**电池电源输入**|4.4V，0.22A|
 |**充满截止电压**|4.37V|
 |**充电温度范围**|5 至 +45℃|
 
-X1 未来可能发展为一个产品系列，后续推出的新产品将配备更多传感器（3 轴传感器、六轴磁力计等）。
+X1 未来可能发展为一个产品系列，后续推出的新产品型号将配备更多传感器（3 轴传感器、六轴磁力计等）。
 
 ### 引脚列表
 
@@ -321,7 +321,7 @@ X1 未来可能发展为一个产品系列，后续推出的新产品将配备�
     <th colspan="1">设备状态</th>
   </tr>
   <tr>
-    <td rowspan="4">🟢green</td>
+    <td rowspan="4">🟢绿色</td>
     <td>常亮</td>
     <td>设备开机中</td>
   </tr>
@@ -338,12 +338,12 @@ X1 未来可能发展为一个产品系列，后续推出的新产品将配备�
     <td>已充满</td>
   </tr>
   <tr>
-    <td>🔴Red</td>
+    <td>🔴红色</td>
     <td>闪烁</td>
     <td>电量低</td>
   </tr>
     <tr>
-    <td>⚪️white</td>
+    <td>⚪️白色</td>
     <td>常亮</td>
     <td>DFU 模式/Bootloader 模式</td>
   </tr>

@@ -66,7 +66,7 @@ MeshTracker X1 ofrece opciones de notificación flexibles con vibración integra
 
 - **Protección robusta IP66 para exteriores** 
 
-Construido con protección IP66 contra el polvo y el agua, lo que garantiza un rendimiento fiable en entornos exteriores adversos como lluvia, barro y senderos polvorientos.
+Construido con protección IP66 contra el polvo y el agua, garantiza un rendimiento fiable en entornos exteriores adversos como lluvia, barro y senderos polvorientos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -75,9 +75,9 @@ Interfaz USB-C estándar para carga, actualizaciones de firmware y depuración, 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **Mayor duración de la batería** 
+- **Larga duración de batería** 
 
-Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado en torno a una batería de alta capacidad de 1100 mAh, que ofrece hasta 5 días de funcionamiento y sigue siendo compacto y portátil para llevarlo al aire libre y para comunicación fuera de la red.
+Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado en torno a una batería de alta capacidad de 1100mAh, que ofrece hasta 5 días de funcionamiento y sigue siendo compacto y portátil para llevar al aire libre y para comunicación fuera de la red.
 
 
 ### Especificación
@@ -88,7 +88,7 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
 | :- | :- |
 |**Controlador principal**|Nordic nRF52840|
 |**Inalámbrico**|Bluetooth (v5.0)|
-|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>Potencia TX MÁX: 22 dBm|
+|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>Potencia TX MÁX: 22dBm|
 |**LED**|1\* RGB|
 |**Zumbador**|1\* zumbador para indicar el estado|
 |**Botón**|1\* botón para operar|
@@ -99,23 +99,23 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
 |**Distancia de comunicación**|hasta 8 km|
 |**Grado de protección IP**|IP66|
 |**Dimensiones**|90\*57\*8 mm|
-|**Peso del dispositivo**|45 g|
+|**Peso del dispositivo**|45g|
 |**Temperatura de funcionamiento**|-20 a 60℃|
 |**Certificación**|CE/FCC/RoHS/TELEC|
 
 **Batería**
 
-|Elemento|Parámetro|s
+|Elemento|Parámetro|
 | :- | :- |
-|**Capacidad de la batería**|Batería recargable LCO, 1100 mAh|
+|**Capacidad de la batería**|Batería recargable de alto voltaje, 1100mAh|
 |**Supervisión de la vida de la batería**|Nivel de batería en enlace ascendente periódico|
 |**Protocolo de carga**|USB Type-C|
 |**Entrada de alimentación del dispositivo**|5V, 0.55A|
 |**Entrada de alimentación de la batería**|4.4V, 0.22A|
-|**Tensión de corte completamente cargada**|4.37V|
+|**Voltaje de corte completamente cargado**|4.37V|
 |**Límite de temperatura de carga**|5 a +45℃|
 
-Es posible que X1 se desarrolle como una serie de productos, en la que los nuevos productos que se lancen en el futuro estarán equipados con sensores adicionales (sensores de 3 ejes, magnetómetros de seis ejes, etc.).
+Es posible que X1 se desarrolle como una serie de productos, en la que los nuevos modelos de productos que se lanzarán en el futuro estarán equipados con sensores adicionales (sensores de 3 ejes, magnetómetros de seis ejes, etc.).
 
 ### Lista de pines
 
@@ -276,7 +276,7 @@ Es posible que X1 se desarrolle como una serie de productos, en la que los nuevo
     <td>P1.13</td>
   </tr>
    <tr>
-    <td rowspan="6">Flash de 8 MB</td>
+    <td rowspan="6">Flash de 8MB</td>
     <td>SPISCK</td>
     <td>P0.19</td>
     <td rowspan="6">SPI</td>
@@ -309,9 +309,9 @@ Es posible que X1 se desarrolle como una serie de productos, en la que los nuevo
 |- |- |- |
 |Pulsar una vez|Encender|Melodía ascendente|
 |Pulsar dos veces|Actualizar información de nodo/ubicación|-|
-|Pulsar tres veces|Activar/desactivar el GPS|-|
+|Pulsar tres veces|Encender/apagar el GPS|-|
 |Cuatro clics|Silenciar/reactivar temporalmente|-|
-|Pulsar y mantener durante 5 s|Apagar|Melodía descendente|
+|Pulsar y mantener durante 5s|Apagar|Melodía descendente|
 
 ### LED
 
