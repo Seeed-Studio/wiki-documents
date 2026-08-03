@@ -228,7 +228,7 @@ O B601-RS só precisa ser calibrado uma vez após a montagem. Aqui está o coman
 
 # follower
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 
 lerobot-calibrate \
@@ -332,7 +332,7 @@ Primeiro conceda permissões às portas seriais:
 sudo chmod 666 /dev/ttyUSB*
 # follower
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
