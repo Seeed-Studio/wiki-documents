@@ -160,7 +160,7 @@ sudo modprobe can_dev
 sudo ip link set can0 down
 
 # Configure CAN interface parameters
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 
 # Start interface
 sudo ip link set can0 up

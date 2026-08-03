@@ -228,7 +228,7 @@ B601-RS only needs to be calibrated once after assembly. Here is the calibration
 
 # follower
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 
 lerobot-calibrate \
@@ -332,7 +332,7 @@ First grant permissions to the serial ports:
 sudo chmod 666 /dev/ttyUSB*
 # follower
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
