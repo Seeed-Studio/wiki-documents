@@ -61,14 +61,10 @@ Ask   ──► retrieve memory ──► Qwen3-VL-2B answer
 
 | Item | Configuration |
 | --- | --- |
-| **Devices** | [reComputer Mini / AGX Orin](https://www.seeedstudio.com/reComputer-Mini-J501-Carrier-Board-for-Jetson-AGX-Orin-p-6606.html) and other Jetson AGX Orin platforms |
-| **Verified** | reComputer Mini · AGX Orin **64GB** · **JetPack 7.2** (L4T 39.2.0) |
+| **Devices** | [reComputer J501 Mini](https://www.seeedstudio.com/reComputer-Mini-J501-Carrier-Board-for-Jetson-AGX-Orin-p-6606.html) |
+| **Verified** | reComputer J501 Mini · **JetPack 7.2** (L4T 39.2.0) |
 | **RAM / Disk** | 64 GB RAM recommended · ≥50 GB free disk for models + venv |
 | **Camera** | USB UVC / V4L2 (`/dev/video0`) |
-
-:::note
-Tested on **JetPack 7.2**. Do **not** use desktop `uv sync` / cu128 / flash-attn stacks on Orin — use the Jetson setup script in the repository.
-:::
 
 ## Installation
 
@@ -155,13 +151,9 @@ python script/orin_smoke.py --vlm qwen3vl-2b --seconds 20 \
 
 ## Demo Results
 
-Short demo clips on Seeed files CDN. Open each player to scrub and read UI text (MP4, typically a few MB each).
-
-<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_01.mp4" controls width="800"></video>
+Short clips on Seeed files CDN showing rolling memory and Ask answers in the live UI.
 
 <video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_02.mp4" controls width="800"></video>
-
-<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_03.mp4" controls width="800"></video>
 
 <video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_04.mp4" controls width="800"></video>
 
@@ -200,7 +192,6 @@ Recognition uses center-biased triggers and FULL + CENTER crop panels to reduce 
 ## Resources
 
 - Project: https://github.com/xbs0325/Streaming-Vision-Agent-Orin
-- [Install Pytorch for reComputer Jetson](https://wiki.seeedstudio.com/install_torch_on_recomputer/)
 
 ## Inspiration & Acknowledgments
 
