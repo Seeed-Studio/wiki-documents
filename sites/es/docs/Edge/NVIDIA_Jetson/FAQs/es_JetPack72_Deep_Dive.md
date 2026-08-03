@@ -14,7 +14,7 @@ last_update:
   date: 06/11/2026
   author: Dayu
 createdAt: '2026-06-11'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/es/jetpack72_deep_dive/
 ---
 
@@ -40,10 +40,10 @@ La plataforma de prueba utilizada por Seeed es el reComputer Jetson AGX Orin Dev
 
 JetPack 7.2 hace avanzar la pila de software de Jetson con una base Jetson Linux más reciente, Ubuntu 24.04, CUDA 13, componentes de runtime de IA actualizados y mejoras a nivel de plataforma para la eficiencia de memoria y los flujos de trabajo de IA agentica.
 
-Para los usuarios de Jetson AGX Orin 32GB, uno de los cambios más importantes es el nuevo modo de energía de alto rendimiento utilizado en la prueba de Seeed, que permite que el mismo módulo funcione a una frecuencia de GPU más alta y ofrezca un mayor rendimiento de IA cuando el diseño de potencia y térmico de la placa carrier puede soportarlo.
+Para los usuarios de Jetson AGX Orin 32GB, uno de los cambios más importantes es el nuevo modo de energía de alto rendimiento utilizado en la prueba de Seeed, que permite que el mismo módulo funcione a una frecuencia de GPU más alta y ofrezca un mayor rendimiento de IA cuando el diseño de potencia y térmico de la placa portadora puede soportarlo.
 
 :::note
-Consulta siempre las notas de la versión de NVIDIA y las notas de la versión del BSP de Seeed para conocer las versiones exactas de los componentes compatibles con tu placa carrier e imagen de destino.
+Consulta siempre las notas de la versión de NVIDIA y las notas de la versión del BSP de Seeed para conocer las versiones exactas de los componentes compatibles con tu placa portadora e imagen de destino.
 :::
 
 #### P2: ¿Qué hardware y software comparó Seeed?
@@ -90,11 +90,11 @@ Utiliza la siguiente tabla como punto de partida:
 | --- | --- |
 | Nuevo proyecto con Jetson AGX Orin | Considera comenzar con JetPack 7.2 si el BSP, los controladores y la pila de aplicaciones necesarios están disponibles. |
 | Proyecto existente con JetPack 6.x | Valida los módulos del kernel, dependencias de CUDA, motores TensorRT, controladores de cámara y controladores de periféricos antes de la migración. |
-| Cargas de trabajo LLM o VLM limitadas por memoria | Vale la pena evaluar JetPack 7.2 porque la reducción de memoria medida puede facilitar la ejecución de modelos más grandes o de canalizaciones con múltiples servicios. |
-| Sistema en producción con placa carrier personalizada | No actualices solo ejecutando `apt upgrade`. Utiliza una imagen completa validada o una ruta OTA oficialmente soportada por Seeed. |
+| Cargas de trabajo LLM o VLM limitadas por memoria | Vale la pena evaluar JetPack 7.2 porque la reducción de memoria medida puede facilitar la ejecución de modelos más grandes o canalizaciones de múltiples servicios. |
+| Sistema en producción con placa portadora personalizada | No actualices solo ejecutando `apt upgrade`. Utiliza una imagen completa validada o una ruta OTA oficialmente soportada por Seeed. |
 
 :::caution
-Los modos de mayor rendimiento incrementan los requisitos de potencia y térmicos. Antes de habilitar un modo de alta potencia, confirma que la placa carrier, el adaptador de corriente, la carcasa y el diseño de disipación de calor pueden sostener la carga de trabajo objetivo.
+Los modos de mayor rendimiento incrementan los requisitos de potencia y térmicos. Antes de habilitar un modo de alta potencia, confirma que la placa portadora, el adaptador de corriente, la carcasa y el diseño de disipación de calor pueden sostener la carga de trabajo objetivo.
 :::
 
 #### P6: ¿Cómo puedo actualizar a JetPack 7.2 con Seeed Jetson DevelopTool?
@@ -107,11 +107,13 @@ Seeed Jetson DevelopTool proporciona un flujo de trabajo guiado para la descarga
 
 Para una migración de versión principal como de JetPack 6.x a JetPack 7.x, se recomienda un flasheo completo a menos que Seeed proporcione explícitamente una ruta OTA validada para tu producto e imagen de origen exactos.
 
+Para el flujo completo de decisión de flasheo y OTA de JetPack 7.2, el video de DevelopTool, los comandos de verificación y la lista de comprobación de migración, consulta [Flash and OTA Upgrade to JetPack 7.2](/es/flash_and_ota_jetpack_7.2/).
+
 Flujo de trabajo general:
 
 1. Instala y abre Seeed Jetson DevelopTool.
-2. Selecciona el producto Jetson o el modelo de placa carrier.
-3. Selecciona la versión de L4T o JetPack que coincida con JetPack 7.2.
+2. Selecciona el producto Jetson o el modelo de placa portadora.
+3. Selecciona la versión de L4T o JetPack de destino que coincida con JetPack 7.2.
 4. Descarga y extrae el paquete BSP desde la herramienta.
 5. Pon el dispositivo Jetson en Force Recovery Mode.
 6. Detecta el dispositivo desde el PC host.
@@ -126,7 +128,7 @@ Después de flashear o actualizar, verifica los siguientes elementos antes de ej
 
 - Versiones de JetPack, L4T, CUDA, cuDNN y TensorRT.
 - Frecuencia de GPU, modo de energía y comportamiento térmico bajo carga.
-- Interfaces de cámara, GMSL, Ethernet, CAN, USB, M.2 y otros periféricos.
+- Cámara, GMSL, Ethernet, CAN, USB, M.2 y otras interfaces periféricas.
 - Módulos de kernel personalizados y controladores out-of-tree.
 - Compatibilidad del framework de IA, incluyendo PyTorch, motores TensorRT, compilaciones de llama.cpp y extensiones CUDA.
 - Pruebas de estrés de larga duración para la estabilidad de potencia y temperatura.
@@ -140,7 +142,7 @@ Después de flashear o actualizar, verifica los siguientes elementos antes de ej
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

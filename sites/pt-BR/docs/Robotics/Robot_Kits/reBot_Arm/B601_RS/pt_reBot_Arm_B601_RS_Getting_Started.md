@@ -58,7 +58,7 @@ O conteúdo deste guia está chegando até você à velocidade da luz — fique 
 
 1. O braço robótico não é enviado com uma fonte de alimentação / não inclui uma fonte de alimentação por padrão. Você pode conectar uma bateria por conta própria ou adquirir nossa [Fonte de Alimentação MeanWell 48V 12.5A open source](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html) ou pela [Amazon](https://www.amazon.com/LRS-600-48-Switching-Upgrade-Version-SE-600-48/dp/B0BV5XFYNS/ref=sr_1_1?crid=2MK5Y1UI66CW9&dib=eyJ2IjoiMSJ9.FAt8rrpVeLIbeU2px5Bpe3WU2xsHpE3Kw1Fc6ZdPBFrIpRsaASOwU1dL9jPUNnpXO5u67hvlSXTsKCXH7jehZ8VWfiSFbcHmsVhJY_ua86iPUltJFeWlT9LIXphFER27jHWGnaJb2NdRIpPBMVdae8qgIllUI1J-Q8pZranpyjkkiJP2RmiEdhUBXTvvH3-vhk8z2uhf7BJrGW7hjRbjyCO7WHwwBQ3tMcnEKwto2doy9qus35djHRzODSFPbMuiA66PdgPuib4VL1aQghehDEiceMIpTUiCHHeRHfpB71M._yrosm8mVfpUq-5PjNTLSaYPgv8Dot6YbQTaGULjlLQ&dib_tag=se&keywords=LRS-600-48&qid=1781762081&s=electronics&sprefix=lrs-600-48%2Celectronics%2C351&sr=1-1). Não adquira fontes de alimentação de fabricantes sem marca ou por canais inseguros. Quaisquer riscos ou consequências decorrentes disso serão de responsabilidade do indivíduo.
 
-Se a tensão da sua residência for 220V, ajuste a chave seletora de tensão na lateral da fonte de alimentação para 230V. Se a tensão da sua residência for 110V, altere para 115V.
+Se a tensão da sua residência for 220V, ajuste o seletor de tensão na lateral da fonte de alimentação para 230V. Se a tensão da sua residência for 110V, ajuste-o para 115V.
 
 | **220V** | **110V** |
 |:---:|:---:|
@@ -212,7 +212,7 @@ sudo ip link set can0 up
 
 #### macOS:
 
-Se `libPCBUSB.dylib` não puder ser carregado, instale primeiro o PCBUSB:
+Se `libPCBUSB.dylib` não puder ser carregada, instale primeiro o PCBUSB:
 ```zsh
 curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
   https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
@@ -244,7 +244,115 @@ python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK
 
 #### Windows:
 
-Acesse [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) para instalar o driver PCAN-USB.
+Visite [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) para instalar o driver PCAN-USB.
+
+ou Jetson:
+  [peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
+
+- Remover brltty
+No Jetson, o brltty pode ocupar a porta serial USB usada pelo líder. Remova-o primeiro:
+```bash
+sudo apt remove -y brltty
+```
+
+- Instalar dependências
+```bash
+sudo apt update
+sudo apt install -y \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    libpopt-dev \
+    can-utils \
+    ethtool \
+    nvidia-l4t-kernel-headers
+```
+Verifique se o diretório de cabeçalhos do kernel atual existe:
+```bash
+ls -l /lib/modules/$(uname -r)/build
+```
+
+- Compilar o driver PEAK SocketCAN
+Baixe e extraia o PEAK Linux Driver 9.2.0 e, em seguida, entre no diretório do código-fonte:
+```bash
+tar -xvf peak-linux-driver-9.2.0.tar.gz
+cd ~/peak-linux-driver-9.2.0
+```
+Limpe artefatos de compilação anteriores:
+```bash
+make clean
+```
+Compile no modo netdev:
+```bash
+make netdev
+```
+O modo netdev registra o PCAN-USB como uma interface de rede Linux SocketCAN.
+**Não** use `make` simples. O `make` simples compila o modo chardev, enquanto o LeRobot e o motorbridge-cli dependem de interfaces SocketCAN.
+
+- Instalar e carregar o driver
+Instale o driver:
+```bash
+sudo make install
+sudo depmod -a
+```
+Carregue o módulo de kernel pcan:
+```bash
+sudo modprobe pcan
+```
+Habilite o carregamento automático na inicialização:
+```bash
+echo pcan | sudo tee /etc/modules-load.d/pcan.conf
+```
+Confirme que o driver está carregado:
+```bash
+ip -br link | grep can
+```
+Saída esperada:
+```
+can0             DOWN           <NOARP,ECHO>
+can1             DOWN           <NOARP,ECHO>
+.....
+```
+
+- Descobrir qual interface PCAN corresponde ao seu braço robótico
+```bash
+for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
+```
+As interfaces listadas aqui são dispositivos PEAK PCAN-USB, por exemplo:
+```
+can2
+```
+
+- Tornar persistente o comando `pcan_refresh`
+Variáveis de ambiente Linux não sobrevivem a reinicializações, e a numeração das interfaces PCAN pode mudar. Uma abordagem mais confiável é definir permanentemente uma função de atualização e executá-la após abrir um terminal.
+
+Anexe a função ao `~/.bashrc`:
+```bash
+grep -q '^pcan_refresh()' ~/.bashrc || cat >> ~/.bashrc <<'EOF'
+
+pcan_refresh() {
+    local iface
+    iface=$(sudo setup-pcan-if) || return 1
+    export PCAN_IF="$iface"
+    echo "PCAN_IF=$PCAN_IF"
+}
+EOF
+```
+```bash
+source ~/.bashrc
+```
+Execute isto após reiniciar ou reconectar o PCAN-USB:
+```bash
+pcan_refresh
+```
+Em caso de sucesso, a saída será:
+```
+PCAN_IF=can1
+```
+Use `$PCAN_IF` em todos os comandos subsequentes em vez de fixar `can1` ou `can2` no código.
+
+---
 
 #### Jetson:
   [peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
@@ -428,7 +536,7 @@ Usuários Ubuntu, consulte este guia
 
 1.> 📦 [Clique para baixar USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
 
-2. Mude o USB2CAN para BOOT
+2. Altere o USB2CAN para BOOT
 
 3. Extraia o USB2CAN.zip do passo 1 e coloque `flash_pcan_ubuntu.sh` e `pcan_canable_hw.bin` (de dentro do USB2CAN.zip) no mesmo diretório
 
@@ -449,7 +557,7 @@ bash flash_pcan_ubuntu.sh
 
 Digite sua senha; aguarde a conclusão
 
-Após a conclusão, mude de volta para "120R"
+Após a conclusão, altere de volta para "120R"
 
 Reconecte o USB.
 
@@ -462,13 +570,13 @@ Usuários MAC, consulte este guia
 
 1.> 📦 [Clique para baixar USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
 
-2. Mude o USB2CAN para BOOT
+2. Altere o USB2CAN para BOOT
 
 3.Por favor, extraia o USB2CAN.zip do passo 1 e coloque `flash_pcan_mac.sh` e `pcan_canable_hw.bin` (de dentro de USB2CAN.zip) no mesmo diretório
 
 [Clique para baixar flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
 
-Se estiver transferindo de outro computador (por exemplo, scp):
+Se estiver transferindo de outro computador (por exemplo, via scp):
 
 ```text
 scp flash_pcan_mac.sh pcan_canable_hw.bin seeed@your_MAC_IP:~/Downloads/

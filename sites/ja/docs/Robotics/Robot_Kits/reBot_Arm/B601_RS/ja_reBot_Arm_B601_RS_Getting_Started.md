@@ -1,5 +1,5 @@
 ---
-description: このガイドでは、reBot Arm B601-RS の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む入門方法を説明します。
+description: このガイドでは、reBot Arm B601-RS の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む入門手順を説明します。
 title: reBot Arm B601-RS クイックスタート
 keywords:
   - reBot
@@ -91,11 +91,11 @@ reBot Arm プロジェクトは [GitHub](https://github.com/Seeed-Projects/reBot
 
 ## ステップ 2: ロボットアームのキャリブレーションと起動
 
-1. **MotorBridge** プラットフォームを活用しましょう。このプラットフォームは、モーターの種類を継続的に拡張できるワンストップの包括的ソリューションであり、[Damiao モーター](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride モーター](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[Hightorque モーター](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[Myactuator モーター](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow などをカバーしています。また、reBot のような継続的にアップデートされるロボットアーム製品とも互換性があります。プラットフォームは初心者にも使いやすく、開発者向けには機能が完全に一致した Python SDK も提供しています。
+1. **MotorBridge** プラットフォームを活用しましょう。このプラットフォームは、モーターの種類を継続的に拡張可能なワンストップ総合ソリューションであり、[Damiao モーター](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride モーター](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[Hightorque モーター](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[Myactuator モーター](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow などをカバーしています。また、reBot のような継続的にアップデートされるロボットアーム製品にも対応しています。プラットフォームは初心者にも扱いやすく、開発者向けには同等機能を備えた Python SDK も提供しています。
 
 2. reBot ロボットアーム向けに特別に最適化された MotorBridge の新機能と詳細を体験してください。ワンクリックのゼロ点キャリブレーション、パラメータ書き込み、UI を介したドラッグ＆ドロップによるモーター制御、組み込みのモデル可視化インターフェースなどが含まれます。
 
-3. このツールは **Windows、Ubuntu、macOS** オペレーティングシステムに完全対応しています。
+3. このツールは **Windows、Ubuntu、macOS** の各オペレーティングシステムに完全対応しています。
 
 :::tip
 1. 仮想マシンの性能ではデモを実行するのに不十分であり、設定上の問題も確認されています。ロボットアームの制御には Ubuntu の物理マシンを使用することを推奨します。
@@ -125,7 +125,7 @@ Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-A
 
 ### 1. Miniforge をインストールする（推奨）（Windows\Ubuntu\macOS\Jetson\Raspberry Pi 対応）
 
-1. Miniforge をインストールし、仮想環境を作成して、他の環境パッケージとの競合によるデモ失敗を避けます。
+1. Miniforge をインストールし、仮想環境を作成して、他の環境パッケージとの競合によるデモ失敗を防ぎます。
 
 Ubuntu\Jetson\Raspberry Pi:
 
@@ -134,13 +134,13 @@ wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforg
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-または macOS:
+or macOS:
 ```bash
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
 bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
-または Windows:
+or Windows:
 
 ブラウザで Miniforge の Release ページを開き、最新版の `Miniforge3-Windows-x86_64.exe` を探してクリックし、ダウンロードします。
 
@@ -174,7 +174,7 @@ https://github.com/conda-forge/miniforge/releases
 conda create -y -n rebot python=3.12
 ```
 
-3. 仮想環境をアクティブ化します。**reBot 関連の機能を使用するためには、ターミナルを開くたびにこのアクティベーションコマンドを再実行する必要があります。**
+3. 仮想環境を有効化します。**reBot 関連の機能を使用するためには、ターミナルを開くたびにこの有効化コマンドを再度実行する必要があります。**
 
 ```bash
 conda activate rebot
@@ -326,6 +326,114 @@ can2
 
 - `pcan_refresh` コマンドを永続化
 Linux の環境変数は再起動後に保持されず、PCAN インターフェースの番号も変わる可能性があります。より確実な方法は、リフレッシュ関数を永続的に定義し、ターミナルを開いた後に実行することです。
+
+関数を `~/.bashrc` に追記します：
+```bash
+grep -q '^pcan_refresh()' ~/.bashrc || cat >> ~/.bashrc <<'EOF'
+
+pcan_refresh() {
+    local iface
+    iface=$(sudo setup-pcan-if) || return 1
+    export PCAN_IF="$iface"
+    echo "PCAN_IF=$PCAN_IF"
+}
+EOF
+```
+```bash
+source ~/.bashrc
+```
+再起動後、または PCAN-USB を再接続した後に、次を実行します：
+```bash
+pcan_refresh
+```
+成功すると、次のように出力されます：
+```
+PCAN_IF=can1
+```
+以降のすべてのコマンドでは、`can1` や `can2` をハードコードする代わりに `$PCAN_IF` を使用してください。
+
+---
+
+または Jetson：
+  [peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
+
+- brltty を削除
+Jetson では、brltty がリーダーが使用する USB シリアルポートを占有している場合があります。まずこれを削除します：
+```bash
+sudo apt remove -y brltty
+```
+
+- 依存関係をインストール
+```bash
+sudo apt update
+sudo apt install -y \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    libpopt-dev \
+    can-utils \
+    ethtool \
+    nvidia-l4t-kernel-headers
+```
+現在のカーネルヘッダディレクトリが存在することを確認します：
+```bash
+ls -l /lib/modules/$(uname -r)/build
+```
+
+- PEAK SocketCAN ドライバをコンパイル
+PEAK Linux Driver 9.2.0 をダウンロードして展開し、ソースディレクトリに入ります：
+```bash
+tar -xvf peak-linux-driver-9.2.0.tar.gz
+cd ~/peak-linux-driver-9.2.0
+```
+以前のビルド成果物をクリーンアップします：
+```bash
+make clean
+```
+netdev モードでコンパイルします：
+```bash
+make netdev
+```
+netdev モードでは、PCAN-USB が Linux SocketCAN ネットワークインターフェースとして登録されます。
+プレーンな `make` は使用しないでください。プレーンな `make` は chardev モードをビルドしますが、LeRobot と motorbridge-cli は SocketCAN インターフェースに依存しています。
+
+- ドライバのインストールと読み込み
+ドライバをインストールします：
+```bash
+sudo make install
+sudo depmod -a
+```
+pcan カーネルモジュールを読み込みます：
+```bash
+sudo modprobe pcan
+```
+起動時に自動で読み込まれるように有効化します：
+```bash
+echo pcan | sudo tee /etc/modules-load.d/pcan.conf
+```
+ドライバが読み込まれていることを確認します：
+```bash
+ip -br link | grep can
+```
+期待される出力：
+```
+can0             DOWN           <NOARP,ECHO>
+can1             DOWN           <NOARP,ECHO>
+.....
+```
+
+- ロボットアームに対応する PCAN インターフェースを特定
+```bash
+for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
+```
+ここに表示されるインターフェースは PEAK PCAN-USB デバイスです。例：
+```
+can2
+```
+
+- `pcan_refresh` コマンドを永続化
+Linux の環境変数は再起動後に保持されず、PCAN インターフェース番号も変わる可能性があります。より信頼性の高い方法として、リフレッシュ関数を永続的に定義し、ターミナルを開いた後に実行します。
 
 関数を `~/.bashrc` に追記します：
 ```bash
