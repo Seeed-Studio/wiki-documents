@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/pt-br/jetpack_7_2_resource_hub/
 
 ![Capa do Hub de Recursos do JetPack 7.2](https://files.seeedstudio.com/wiki/other/jp72-front.png)
 
-Esta página organiza os recursos do JetPack 7.2 atualmente disponíveis para produtos NVIDIA Jetson da Seeed Studio. Use-a como ponto de partida para entender a nova pilha de software, selecionar uma imagem compatível, migrar um projeto existente do JetPack 6.x, restaurar drivers de periféricos e implantar cargas de trabalho de IA otimizadas.
+Esta página organiza os recursos do JetPack 7.2 atualmente disponíveis para produtos NVIDIA Jetson da Seeed Studio. Use-a como ponto de partida para entender a nova pilha de software, selecionar uma imagem compatível, migrar um projeto existente em JetPack 6.x, restaurar drivers de periféricos e implantar cargas de trabalho de IA otimizadas.
 
 :::info
 JetPack 7.2 usa **Jetson Linux 39.2**, um sistema de arquivos raiz **Ubuntu 24.04** e **kernel Linux 6.8**. O NVIDIA Jetson Linux 39.2 oferece suporte às famílias de plataformas **Jetson Orin** e **Jetson Thor**.
@@ -35,7 +35,7 @@ JetPack 7.2 é mais do que uma atualização de sistema operacional. Ele estende
 ### IA agentic e fluxos de trabalho de desenvolvimento
 
 - **Pronto para NVIDIA NemoClaw**: o JetPack 7.2 fornece as dependências de plataforma necessárias para instalação do NemoClaw com um único comando e orquestração de modelos local ou em nuvem.
-- **Habilidades de agente Jetson**: a NVIDIA fornece fluxos de trabalho reutilizáveis no lado do dispositivo e do BSP para personalização do Jetson Linux, otimização de memória, benchmarking de modelos, seleção de pacotes e prototipagem de aplicações.
+- **Habilidades de agente no Jetson**: a NVIDIA fornece fluxos de trabalho reutilizáveis no lado do dispositivo e do BSP para personalização do Jetson Linux, otimização de memória, benchmarking de modelos, seleção de pacotes e prototipagem de aplicações.
 - **Implantação nativa em nuvem**: a pilha JetPack continua a oferecer suporte a fluxos de trabalho de desenvolvimento e implantação conteinerizados para serviços de borda.
 
 ### Arquitetura de plataforma
@@ -51,7 +51,7 @@ JetPack 7.2 é mais do que uma atualização de sistema operacional. Ele estende
 ### Desempenho, memória e isolamento
 
 - **Jetson AGX Orin 32GB Super Mode**: o JetPack 7.2 adiciona o modo de energia `MAXN_SUPER` para configurações compatíveis do Jetson AGX Orin 32GB.
-- **Fluxos de trabalho de eficiência de memória**: as habilidades de agente Jetson podem auditar e reduzir partições reservadas do bootloader, reservas do kernel e consumo desnecessário de memória em espaço de usuário.
+- **Fluxos de trabalho de eficiência de memória**: as habilidades de agente do Jetson podem auditar e reduzir partições reservadas do bootloader, reservas de kernel e consumo desnecessário de memória em espaço de usuário.
 - **GPU Multi-Instance no Jetson Thor**: MIG está disponível como prévia de tecnologia em configurações Jetson Thor T5000 compatíveis para execução isolada de múltiplas cargas de trabalho.
 
 :::warning
@@ -64,7 +64,7 @@ Alguns recursos do JetPack 7.2 são específicos da plataforma. O comportamento 
 | --- | --- | --- |
 | Jetson Linux | 39.2 | Reconstrua módulos de kernel out-of-tree e personalizações de BSP. |
 | Sistema de arquivos raiz | Ubuntu 24.04 | Revalide nomes de pacotes, repositórios, ambientes Python e serviços de sistema. |
-| Kernel Linux | 6.8 | Reconstrua drivers de câmera, Wi-Fi, fieldbus e periféricos personalizados com os novos cabeçalhos. |
+| Kernel Linux | 6.8 | Reconstrua drivers de câmera, Wi-Fi, fieldbus e periféricos personalizados com os novos headers. |
 | Geração CUDA | CUDA 13 | Reconstrua aplicações CUDA e não reutilize binários do JetPack 6.x sem validação. |
 | Engines TensorRT | Pilha TensorRT do JetPack 7.2 | Reconstrua engines TensorRT serializadas na pilha de software de destino. |
 | Plataformas compatíveis | Jetson Orin e Jetson Thor | Use o BSP correto, flags de toolchain e suporte de precisão para a arquitetura de GPU de destino. |
@@ -77,11 +77,11 @@ Esta coleção é intencionalmente limitada ao material do JetPack 7.2. Artigos 
 | --- | --- |
 | Arquitetura de software unificada Orin e Thor | [Plataforma Unificada, ISO e SBSA](/pt-br/jetpack_7_2_unified_platform_iso_sbsa/) **(planejado)** |
 | Migração para Ubuntu 24.04, Linux 6.8 e CUDA 13 | [Análise Detalhada do JetPack 7.2](/pt-br/jetpack72_deep_dive_bk/) e [Guia de Migração](/pt-br/jetpack_6_to_7_2_migration_playbook/) **(planejado)** |
-| IA agentic e habilidades Jetson reutilizáveis | [Prototipagem Rápida com Habilidades NVIDIA](/pt-br/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) e [NemoClaw no Jetson Thor](/pt-br/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) |
+| IA agentic e habilidades reutilizáveis no Jetson | [Prototipagem Rápida com Habilidades NVIDIA](/pt-br/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) e [NemoClaw no Jetson Thor](/pt-br/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) |
 | Yocto | [Construir e Gravar uma Imagem Yocto](/pt-br/build_and_flash_yocto_for_recomputer_super_bk/) |
 | Inferência de maior desempenho com TensorRT Edge-LLM | [Implantar TensorRT Edge-LLM no JetPack 7.2](/pt-br/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
-| Menor uso de memória do sistema e de LLM | [Otimização de Memória do JetPack 7.2](/pt-br/jetpack_7_2_memory_optimization/) |
-| DeepStream 9.1 e fluxos de trabalho de vídeo em linguagem natural | [DeepStream no JetPack 7.2](/pt-br/jetpack_7_2_deepstream/) |
+| Menor uso de memória do sistema e de LLM | [Otimização de Memória no JetPack 7.2](/pt-br/jetpack_7_2_memory_optimization/) |
+| DeepStream 9.1 e fluxos de vídeo em linguagem natural | [DeepStream no JetPack 7.2](/pt-br/jetpack_7_2_deepstream/) |
 | AGX Orin `MAXN_SUPER` e Thor MIG | [MAXN_SUPER e MIG](/pt-br/jetpack_7_2_maxn_super_and_mig/) **(planejado)** |
 | Transição de drivers para o kernel 6.8 | [Configuração de Módulo Sem Fio no JetPack 7.2](/pt-br/jetpack72_ax210_ax200_wifi_setup_guide_bk/) e [Compatibilidade de Câmera e Multimídia](/pt-br/jetpack_7_2_camera_multimedia_compatibility/) **(planejado)** |
 
@@ -90,10 +90,10 @@ Esta coleção é intencionalmente limitada ao material do JetPack 7.2. Artigos 
 | Recurso | Cobertura |
 | --- | --- |
 | [Análise Detalhada do JetPack 7.2](/pt-br/jetpack72_deep_dive_bk/) | Mudanças de plataforma, comparação com JetPack 6.2, impacto na migração e resultados de inferência no AGX Orin. |
-| [Gravação de Imagem e Atualização OTA para JetPack 7.2](/pt-br/flash_and_ota_jetpack_7.2/) | Gravação limpa, requisitos de OTA baseada em imagem, verificação de versão e escolha de implantação. |
+| [Gravar Imagem e Atualizar via OTA para JetPack 7.2](/pt-br/flash_and_ota_jetpack_7.2/) | Gravação limpa, requisitos de OTA baseada em imagem, verificação de versão e escolha de implantação. |
 | [Guia de Migração do JetPack 6.x para JetPack 7.2](/pt-br/jetpack_6_to_7_2_migration_playbook/) | **Planejado:** backup, reconstrução de dependências, testes de aceitação, rollback e migração de frota. |
-| [Plataforma Unificada, ISO e SBSA do JetPack 7.2](/pt-br/jetpack_7_2_unified_platform_iso_sbsa/) | **Planejado:** instalação unificada, diferenças entre Orin/Thor e comportamento SBSA do Thor. |
-| [JetPack 7.2 MAXN_SUPER e MIG](/pt-br/jetpack_7_2_maxn_super_and_mig/) | **Planejado:** modo de desempenho do AGX Orin e isolamento de cargas de trabalho no Thor. |
+| [Plataforma Unificada, ISO e SBSA do JetPack 7.2](/pt-br/jetpack_7_2_unified_platform_iso_sbsa/) | **Planejado:** instalação unificada, diferenças entre Orin/Thor e comportamento SBSA no Thor. |
+| [MAXN_SUPER e MIG no JetPack 7.2](/pt-br/jetpack_7_2_maxn_super_and_mig/) | **Planejado:** modo de desempenho no AGX Orin e isolamento de cargas de trabalho no Thor. |
 
 ## Drivers do kernel 6.8 e multimídia
 
@@ -106,20 +106,20 @@ Esta coleção é intencionalmente limitada ao material do JetPack 7.2. Artigos 
 Módulos de kernel, drivers de câmera, binários de device-tree e engines TensorRT do JetPack 6.x não devem ser reutilizados diretamente no JetPack 7.2. Reconstrua-os na pilha de software Jetson Linux 39.2.
 :::
 
-## IA agentic e habilidades Jetson
+## IA agentic e habilidades no Jetson
 
 O JetPack 7.2 expande o fluxo de trabalho do desenvolvedor Jetson além da configuração manual, tornando habilidades de agente reutilizáveis e aplicações agentic locais partes de primeira classe do ecossistema.
 
 | Recurso | Papel no ecossistema |
 | --- | --- |
-| [Prototipagem Rápida no Jetson com Habilidades NVIDIA](/pt-br/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) | Inspeção do dispositivo, verificações de compatibilidade, análise de memória, preparação de ambiente, construção de protótipo e empacotamento. |
-| [Controlar o reBot Arm B601 com NemoClaw no Jetson Thor](/pt-br/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) | Percepção local, raciocínio com LLM, execução de ferramentas, gerenciamento de serviços e controle de IA física na plataforma JetPack 7. |
+| [Prototipagem Rápida no Jetson com Habilidades NVIDIA](/pt-br/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) | Inspeção do dispositivo, verificações de compatibilidade, análise de memória, preparação de ambiente, construção de protótipos e empacotamento. |
+| [Controlar o reBot Arm B601 com NemoClaw no Jetson Thor](/pt-br/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) | Percepção local, raciocínio com LLM, execução de ferramentas, gerenciamento de serviços e controle físico de IA na plataforma JetPack 7. |
 
 ## Eficiência de memória
 
 | Recurso | Cobertura |
 | --- | --- |
-| [Otimização de Memória do JetPack 7.2](/pt-br/jetpack_7_2_memory_optimization/) | Auditoria baseada em habilidades, recuperação de BSP headless/sem câmera, segurança SWIOTLB, quantização, controle de KV-cache e inferência de LLM com menor memória. |
+| [Otimização de Memória no JetPack 7.2](/pt-br/jetpack_7_2_memory_optimization/) | Auditoria baseada em habilidades, recuperação de BSP headless/sem câmera, segurança SWIOTLB, quantização, controle de KV-cache e inferência de LLM com menor uso de memória. |
 
 ## Yocto
 
@@ -127,14 +127,14 @@ O JetPack 7.2 expande o fluxo de trabalho do desenvolvedor Jetson além da confi
 | --- | --- |
 | [Construir e Gravar uma Imagem Yocto para reComputer Super](/pt-br/build_and_flash_yocto_for_recomputer_super_bk/) | Construção de imagem OpenEmbedded/Yocto reproduzível para uma implantação Jetson Linux orientada à produção. |
 
-## CUDA 13, TensorRT e IA de borda
+## Implantação de IA & aplicações
 
 | Recurso | Cobertura |
 | --- | --- |
-| [Implantar TensorRT Edge-LLM no JetPack 7.2](/pt-br/deploy_tensorrt_edge_llm_on_jetpack7.2/) | Exportação de modelos no JetPack 7.2, alvos de build Orin/Thor, geração de engine e inferência em C++. |
+| [Implantar TensorRT Edge-LLM no JetPack 7.2](/pt-br/deploy_tensorrt_edge_llm_on_jetpack7.2/) | Exportação de modelos no JetPack 7.2, alvos de build Orin/Thor, geração de engines e inferência em C++. |
 | [Monitoramento de Visão Industrial no JetPack 7.2](/pt-br/industrial_vision_monitoring_on_industrial_bk/) | Monitoramento com YOLO e VLM verificado no reComputer Industrial e reServer Industrial com L4T 39.2. |
 | [DeepStream no JetPack 7.2](/pt-br/jetpack_7_2_deepstream/) | Instalação do DeepStream 9.1, habilidades agentic, criação de pipelines em linguagem natural, integração com VLM, migração e planejamento de memória. |
-| [Implantar GR00T N1.7 Completo no JetPack 7.2 e AGX Orin](/pt-br/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin/) | **Planejado:** implantação TensorRT de checkpoint completo para IA Física no AGX Orin. |
+| [Implantar GR00T N1.7 Completo no JetPack 7.2 e AGX Orin](/pt-br/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin/) | Implantação TensorRT validada com sete engines, verificação numérica, inferência offline e configuração de caminhos portável para AGX Orin. |
 
 Engines serializadas e plugins TensorRT personalizados devem ser reconstruídos na pilha de software JetPack 7.2 de destino.
 
@@ -160,7 +160,7 @@ Engines serializadas e plugins TensorRT personalizados devem ser reconstruídos 
 ## Referências oficiais da NVIDIA
 
 - [NVIDIA JetPack](https://developer.nvidia.com/embedded/jetpack)
-- [Notas de lançamento do Jetson Linux 39.2](https://docs.nvidia.com/jetson/archives/r39.2/ReleaseNotes/Jetson_Linux_Release_Notes_r39.2.pdf)
+- [Notas de versão do Jetson Linux 39.2](https://docs.nvidia.com/jetson/archives/r39.2/ReleaseNotes/Jetson_Linux_Release_Notes_r39.2.pdf)
 - [Guia do desenvolvedor do Jetson Linux 39.2](https://docs.nvidia.com/jetson/archives/r39.2/DeveloperGuide/index.html)
 - [Documentação do TensorRT Edge-LLM](https://nvidia.github.io/TensorRT-Edge-LLM/)
 - [Modelos compatíveis com TensorRT Edge-LLM](https://nvidia.github.io/TensorRT-Edge-LLM/user_guide/getting_started/supported-models.html)

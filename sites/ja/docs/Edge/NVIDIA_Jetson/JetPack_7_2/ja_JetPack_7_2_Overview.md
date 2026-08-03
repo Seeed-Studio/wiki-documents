@@ -1,5 +1,5 @@
 ---
-description: Seeed Studio NVIDIA Jetson デバイス向け JetPack 7.2 リソースを分類したハブページです。新しいプラットフォーム機能、マイグレーションガイド、フラッシュ、ドライバ、開発ツール、推論、およびアプリケーションを網羅します。
+description: Seeed Studio NVIDIA Jetson デバイス向けの JetPack 7.2 リソースを分類したハブページです。新しいプラットフォーム機能、マイグレーションガイド、フラッシュ、ドライバ、開発ツール、推論、およびアプリケーションを網羅します。
 title: JetPack 7.2 リソースハブ
 keywords:
   - NVIDIA Jetson
@@ -34,8 +34,8 @@ JetPack 7.2 は単なるオペレーティングシステムのアップデー�
 
 ### エージェント型 AI と開発者ワークフロー
 
-- **NVIDIA NemoClaw 対応**: JetPack 7.2 は、ワンコマンドでの NemoClaw インストールとローカル／クラウドでのモデルオーケストレーションに必要なプラットフォーム依存関係を提供します。
-- **Jetson エージェントスキル**: NVIDIA は、Jetson Linux カスタマイズ、メモリ最適化、モデルベンチマーク、パッケージ選定、アプリケーション試作のための、デバイス側および BSP 側の再利用可能なワークフローを提供します。
+- **NVIDIA NemoClaw 対応**: JetPack 7.2 は、ワンコマンドでの NemoClaw インストールとローカルまたはクラウドでのモデルオーケストレーションに必要なプラットフォーム依存関係を提供します。
+- **Jetson エージェントスキル**: NVIDIA は、Jetson Linux のカスタマイズ、メモリ最適化、モデルベンチマーク、パッケージ選定、アプリケーションプロトタイピングのための、デバイス側および BSP 側の再利用可能なワークフローを提供します。
 - **クラウドネイティブなデプロイ**: JetPack スタックは、エッジサービス向けのコンテナ化された開発およびデプロイワークフローを引き続きサポートします。
 
 ### プラットフォームアーキテクチャ
@@ -50,7 +50,7 @@ JetPack 7.2 は単なるオペレーティングシステムのアップデー�
 
 ### パフォーマンス、メモリ、分離
 
-- **Jetson AGX Orin 32GB Super モード**: JetPack 7.2 は、サポートされる Jetson AGX Orin 32GB 構成向けに `MAXN_SUPER` 電力モードを追加します。
+- **Jetson AGX Orin 32GB Super Mode**: JetPack 7.2 は、サポートされる Jetson AGX Orin 32GB 構成向けに `MAXN_SUPER` 電力モードを追加します。
 - **メモリ効率ワークフロー**: Jetson エージェントスキルは、ブートローダーのカーブアウト、カーネル予約領域、および不要なユーザ空間メモリ消費を監査・削減できます。
 - **Jetson Thor 上の Multi-Instance GPU**: MIG は、サポートされる Jetson Thor T5000 構成において、ワークロード分離されたマルチワークロード実行のためのテクノロジプレビューとして利用可能です。
 
@@ -66,7 +66,7 @@ JetPack 7.2 は単なるオペレーティングシステムのアップデー�
 | ルートファイルシステム | Ubuntu 24.04 | パッケージ名、リポジトリ、Python 環境、システムサービスを再検証します。 |
 | Linux カーネル | 6.8 | 新しいヘッダに対してカメラ、Wi-Fi、フィールドバス、およびカスタム周辺機器ドライバを再ビルドします。 |
 | CUDA 世代 | CUDA 13 | CUDA アプリケーションを再ビルドし、検証なしに JetPack 6.x バイナリを再利用しないでください。 |
-| TensorRT エンジン | JetPack 7.2 TensorRT スタック | 対象ソフトウェアスタック上でシリアライズ済み TensorRT エンジンを再ビルドします。 |
+| TensorRT エンジン | JetPack 7.2 TensorRT スタック | 対象ソフトウェアスタック上でシリアライズされた TensorRT エンジンを再ビルドします。 |
 | サポートプラットフォーム | Jetson Orin および Jetson Thor | 対象 GPU アーキテクチャに対して、正しい BSP、ツールチェーンフラグ、および精度サポートを使用します。 |
 
 ## JetPack 7.2 エコシステムマップ
@@ -89,7 +89,7 @@ JetPack 7.2 は単なるオペレーティングシステムのアップデー�
 
 | リソース | カバレッジ |
 | --- | --- |
-| [JetPack 7.2 Deep Dive](/ja/jetpack72_deep_dive_bk/) | プラットフォーム変更、JetPack 6.2 との比較、マイグレーションへの影響、AGX Orin での推論結果。 |
+| [JetPack 7.2 Deep Dive](/ja/jetpack72_deep_dive_bk/) | プラットフォームの変更、JetPack 6.2 との比較、マイグレーションへの影響、AGX Orin の推論結果。 |
 | [Flash and OTA Upgrade to JetPack 7.2](/ja/flash_and_ota_jetpack_7.2/) | クリーンフラッシュ、イメージベース OTA 要件、バージョン検証、およびデプロイ方法の選択。 |
 | [JetPack 6.x to JetPack 7.2 Migration Playbook](/ja/jetpack_6_to_7_2_migration_playbook/) | **予定:** バックアップ、依存関係の再ビルド、受け入れテスト、ロールバック、およびフリートマイグレーション。 |
 | [JetPack 7.2 Unified Platform, ISO, and SBSA](/ja/jetpack_7_2_unified_platform_iso_sbsa/) | **予定:** 統合インストール、Orin/Thor の違い、および Thor の SBSA 挙動。 |
@@ -110,7 +110,7 @@ JetPack 6.x のカーネルモジュール、カメラドライバ、デバイ�
 
 JetPack 7.2 は、再利用可能なエージェントスキルとローカルなエージェント型アプリケーションをエコシステムの第一級要素とすることで、Jetson 開発者ワークフローを手動セットアップの範囲を超えて拡張します。
 
-| リソース | エコシステム内での役割 |
+| リソース | エコシステム内の役割 |
 | --- | --- |
 | [Rapid Prototyping on Jetson with NVIDIA Skills](/ja/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) | デバイス検査、互換性チェック、メモリ解析、環境準備、プロトタイプ構築、およびパッケージング。 |
 | [Control reBot Arm B601 with NemoClaw on Jetson Thor](/ja/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) | JetPack 7 プラットフォーム上でのローカル知覚、LLM 推論、ツール実行、サービス管理、およびフィジカル AI 制御。 |
@@ -119,33 +119,33 @@ JetPack 7.2 は、再利用可能なエージェントスキルとローカル�
 
 | リソース | カバレッジ |
 | --- | --- |
-| [JetPack 7.2 Memory Optimization](/ja/jetpack_7_2_memory_optimization/) | スキルベースの監査、ヘッドレス／カメラなし BSP の回収、SWIOTLB セーフティ、量子化、KV キャッシュ制御、および低メモリ LLM 推論。 |
+| [JetPack 7.2 Memory Optimization](/ja/jetpack_7_2_memory_optimization/) | スキルベースの監査、ヘッドレス/カメラなし BSP の回収、SWIOTLB セーフティ、量子化、KV キャッシュ制御、および低メモリ LLM 推論。 |
 
 ## Yocto
 
-| リソース | エコシステム内での役割 |
+| リソース | エコシステム内の役割 |
 | --- | --- |
 | [Build and Flash a Yocto Image for reComputer Super](/ja/build_and_flash_yocto_for_recomputer_super_bk/) | 本番指向の Jetson Linux デプロイメント向けの、再現性の高い OpenEmbedded/Yocto イメージ構築。 |
 
-## CUDA 13、TensorRT、およびエッジ AI
+## AI デプロイ & アプリケーション
 
 | リソース | カバレッジ |
 | --- | --- |
 | [Deploy TensorRT Edge-LLM on JetPack 7.2](/ja/deploy_tensorrt_edge_llm_on_jetpack7.2/) | JetPack 7.2 モデルエクスポート、Orin/Thor ビルドターゲット、エンジン生成、および C++ 推論。 |
-| [Industrial Vision Monitoring on JetPack 7.2](/ja/industrial_vision_monitoring_on_industrial_bk/) | reComputer Industrial および reServer Industrial 上で L4T 39.2 を用いて検証された YOLO および VLM モニタリング。 |
-| [DeepStream on JetPack 7.2](/ja/jetpack_7_2_deepstream/) | DeepStream 9.1 のインストール、エージェントスキル、自然言語パイプラインの作成、VLM 統合、マイグレーション、およびメモリ計画。 |
-| [Deploy Full-Weight GR00T N1.7 on JetPack 7.2 and AGX Orin](/ja/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin/) | **予定:** AGX Orin 上での Physical AI 向けフルチェックポイント TensorRT デプロイ。 |
+| [Industrial Vision Monitoring on JetPack 7.2](/ja/industrial_vision_monitoring_on_industrial_bk/) | reComputer Industrial および reServer Industrial 上で L4T 39.2 とともに検証された YOLO および VLM モニタリング。 |
+| [DeepStream on JetPack 7.2](/ja/jetpack_7_2_deepstream/) | DeepStream 9.1 のインストール、エージェントスキル、自然言語によるパイプライン記述、VLM 統合、マイグレーション、およびメモリ計画。 |
+| [Deploy Full-Weight GR00T N1.7 on JetPack 7.2 and AGX Orin](/ja/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin/) | AGX Orin 向けに検証された 7 エンジン TensorRT デプロイ、数値検証、オフライン推論、およびポータブルなパス構成。 |
 
-シリアライズ済みエンジンおよびカスタム TensorRT プラグインは、対象の JetPack 7.2 ソフトウェアスタック上で再ビルドする必要があります。
+シリアライズされたエンジンおよびカスタム TensorRT プラグインは、対象の JetPack 7.2 ソフトウェアスタック上で再ビルドする必要があります。
 
 ## まだ予約中のカバレッジ
 
-| JetPack 7.2 機能 | 予約ページ |
+| JetPack 7.2 機能 | 予約済みページ |
 | --- | --- |
 | 完全な JetPack 6.x マイグレーションとロールバック | [Migration Playbook](/ja/jetpack_6_to_7_2_migration_playbook/) |
 | 統合 ISO、Orin/Thor の分岐、および SBSA | [Unified Platform, ISO, and SBSA](/ja/jetpack_7_2_unified_platform_iso_sbsa/) |
 | `MAXN_SUPER`、MIG、およびパフォーマンス分離 | [MAXN_SUPER and MIG](/ja/jetpack_7_2_maxn_super_and_mig/) |
-| CSI/GMSL およびアクセラレーテッドマルチメディア | [Camera and Multimedia Compatibility](/ja/jetpack_7_2_camera_multimedia_compatibility/) |
+| CSI/GMSL とアクセラレーテッドマルチメディア | [Camera and Multimedia Compatibility](/ja/jetpack_7_2_camera_multimedia_compatibility/) |
 
 ## 推奨マイグレーション順序
 

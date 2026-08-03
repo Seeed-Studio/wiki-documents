@@ -30,11 +30,11 @@ JetPack 7.2 utiliza **Jetson Linux 39.2**, un sistema de archivos raíz **Ubuntu
 
 ## ¿Qué hay de nuevo en JetPack 7.2?
 
-JetPack 7.2 es más que una actualización del sistema operativo. Extiende la arquitectura de software JetPack 7 a Jetson Orin y añade capacidades de plataforma para IA agentiva, personalización de Linux para producción, optimización de memoria y una inferencia de borde de mayor rendimiento.
+JetPack 7.2 es más que una actualización del sistema operativo. Amplía la arquitectura de software JetPack 7 a Jetson Orin y añade capacidades de plataforma para IA agentiva, personalización de Linux para producción, optimización de memoria y una inferencia de borde de mayor rendimiento.
 
 ### IA agentiva y flujos de trabajo para desarrolladores
 
-- **Preparación para NVIDIA NemoClaw**: JetPack 7.2 proporciona las dependencias de plataforma necesarias para la instalación de NemoClaw con un solo comando y la orquestación de modelos locales o en la nube.
+- **Preparación para NVIDIA NemoClaw**: JetPack 7.2 proporciona las dependencias de plataforma necesarias para la instalación de NemoClaw con un solo comando y la orquestación de modelos local o en la nube.
 - **Habilidades de agente para Jetson**: NVIDIA proporciona flujos de trabajo reutilizables del lado del dispositivo y del lado del BSP para la personalización de Jetson Linux, optimización de memoria, evaluación comparativa de modelos, selección de paquetes y creación de prototipos de aplicaciones.
 - **Despliegue nativo en la nube**: La pila JetPack sigue siendo compatible con flujos de trabajo de desarrollo y despliegue en contenedores para servicios en el borde.
 
@@ -50,9 +50,9 @@ JetPack 7.2 es más que una actualización del sistema operativo. Extiende la ar
 
 ### Rendimiento, memoria y aislamiento
 
-- **Modo Súper de Jetson AGX Orin 32GB**: JetPack 7.2 añade el modo de energía `MAXN_SUPER` para configuraciones compatibles de Jetson AGX Orin 32GB.
-- **Flujos de trabajo de eficiencia de memoria**: Las habilidades de agente para Jetson pueden auditar y reducir las particiones reservadas del gestor de arranque, las reservas del kernel y el consumo innecesario de memoria en espacio de usuario.
-- **GPU Multi-Instancia en Jetson Thor**: MIG está disponible como vista previa tecnológica en configuraciones compatibles de Jetson Thor T5000 para la ejecución aislada de múltiples cargas de trabajo.
+- **Jetson AGX Orin 32GB Super Mode**: JetPack 7.2 añade el modo de energía `MAXN_SUPER` para configuraciones compatibles de Jetson AGX Orin 32GB.
+- **Flujos de trabajo de eficiencia de memoria**: Las habilidades de agente para Jetson pueden auditar y reducir las reservas del gestor de arranque, las reservas del kernel y el consumo innecesario de memoria en espacio de usuario.
+- **GPU Multi-Instance en Jetson Thor**: MIG está disponible como vista previa tecnológica en configuraciones compatibles de Jetson Thor T5000 para la ejecución aislada de múltiples cargas de trabajo.
 
 :::warning
 Algunas funciones de JetPack 7.2 son específicas de la plataforma. El comportamiento específico de MIG y SBSA se aplica a Jetson Thor, mientras que `MAXN_SUPER` se aplica a configuraciones compatibles de Jetson AGX Orin 32GB. Confirma el módulo, la placa portadora, el BSP, la fuente de alimentación y el diseño térmico antes de habilitar un nuevo modo de energía o aceleración.
@@ -64,8 +64,8 @@ Algunas funciones de JetPack 7.2 son específicas de la plataforma. El comportam
 | --- | --- | --- |
 | Jetson Linux | 39.2 | Reconstruir los módulos de kernel fuera del árbol y las personalizaciones del BSP. |
 | Sistema de archivos raíz | Ubuntu 24.04 | Revalidar nombres de paquetes, repositorios, entornos de Python y servicios del sistema. |
-| Kernel de Linux | 6.8 | Reconstruir los controladores de cámara, Wi-Fi, bus de campo y periféricos personalizados con los nuevos encabezados. |
-| Generación de CUDA | CUDA 13 | Reconstruir las aplicaciones CUDA y no reutilizar binarios de JetPack 6.x sin validación. |
+| Kernel de Linux | 6.8 | Reconstruir controladores de cámara, Wi‑Fi, bus de campo y periféricos personalizados con los nuevos encabezados. |
+| Generación CUDA | CUDA 13 | Reconstruir las aplicaciones CUDA y no reutilizar binarios de JetPack 6.x sin validación. |
 | Motores TensorRT | Pila TensorRT de JetPack 7.2 | Reconstruir los motores TensorRT serializados en la pila de software de destino. |
 | Plataformas compatibles | Jetson Orin y Jetson Thor | Usar el BSP correcto, las banderas de la toolchain y la compatibilidad de precisión para la arquitectura GPU de destino. |
 
@@ -82,7 +82,7 @@ Esta colección se limita intencionadamente al material de JetPack 7.2. Los art�
 | Inferencia de mayor rendimiento con TensorRT Edge-LLM | [Desplegar TensorRT Edge-LLM en JetPack 7.2](/es/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
 | Menor uso de memoria del sistema y de LLM | [Optimización de memoria en JetPack 7.2](/es/jetpack_7_2_memory_optimization/) |
 | DeepStream 9.1 y flujos de trabajo de vídeo en lenguaje natural | [DeepStream en JetPack 7.2](/es/jetpack_7_2_deepstream/) |
-| `MAXN_SUPER` en AGX Orin y MIG en Thor | [MAXN_SUPER y MIG](/es/jetpack_7_2_maxn_super_and_mig/) **(planificado)** |
+| AGX Orin `MAXN_SUPER` y Thor MIG | [MAXN_SUPER y MIG](/es/jetpack_7_2_maxn_super_and_mig/) **(planificado)** |
 | Transición de controladores al kernel 6.8 | [Configuración del módulo inalámbrico en JetPack 7.2](/es/jetpack72_ax210_ax200_wifi_setup_guide_bk/) y [Compatibilidad de cámara y multimedia](/es/jetpack_7_2_camera_multimedia_compatibility/) **(planificado)** |
 
 ## Flasheo y OTA
@@ -90,7 +90,7 @@ Esta colección se limita intencionadamente al material de JetPack 7.2. Los art�
 | Recurso | Cobertura |
 | --- | --- |
 | [Análisis detallado de JetPack 7.2](/es/jetpack72_deep_dive_bk/) | Cambios de plataforma, comparación con JetPack 6.2, impacto en la migración y resultados de inferencia en AGX Orin. |
-| [Flasheo y actualización OTA a JetPack 7.2](/es/flash_and_ota_jetpack_7.2/) | Flasheo limpio, requisitos de OTA basada en imagen, verificación de versión y elección de despliegue. |
+| [Flasheo y actualización OTA a JetPack 7.2](/es/flash_and_ota_jetpack_7.2/) | Requisitos para flasheo limpio y OTA basada en imágenes, verificación de versión y elección de despliegue. |
 | [Guía de migración de JetPack 6.x a JetPack 7.2](/es/jetpack_6_to_7_2_migration_playbook/) | **Planificado:** copia de seguridad, reconstrucción de dependencias, pruebas de aceptación, reversión y migración de flotas. |
 | [Plataforma unificada, ISO y SBSA de JetPack 7.2](/es/jetpack_7_2_unified_platform_iso_sbsa/) | **Planificado:** instalación unificada, diferencias entre Orin/Thor y comportamiento SBSA en Thor. |
 | [JetPack 7.2 MAXN_SUPER y MIG](/es/jetpack_7_2_maxn_super_and_mig/) | **Planificado:** modo de rendimiento en AGX Orin y aislamiento de cargas de trabajo en Thor. |
@@ -99,11 +99,11 @@ Esta colección se limita intencionadamente al material de JetPack 7.2. Los art�
 
 | Recurso | Cobertura |
 | --- | --- |
-| [Guía de configuración del módulo inalámbrico en JetPack 7.2](/es/jetpack72_ax210_ax200_wifi_setup_guide_bk/) | Recuperación de controladores y firmware en JetPack 7.2 para Intel AX210/AX200 y Realtek RTL8852BE. |
+| [Guía de configuración de módulos inalámbricos en JetPack 7.2](/es/jetpack72_ax210_ax200_wifi_setup_guide_bk/) | Recuperación de controladores y firmware de JetPack 7.2 para Intel AX210/AX200 y Realtek RTL8852BE. |
 | [Compatibilidad de cámara y multimedia en JetPack 7.2](/es/jetpack_7_2_camera_multimedia_compatibility/) | **Planificado:** CSI, GMSL, Argus, V4L2, GStreamer, códecs y validación multicámara. |
 
 :::warning
-Los módulos de kernel, controladores de cámara, binarios de device-tree y motores TensorRT de JetPack 6.x no deben reutilizarse directamente en JetPack 7.2. Reconstrúyelos sobre la pila de software Jetson Linux 39.2.
+Los módulos de kernel, controladores de cámara, binarios de device‑tree y motores TensorRT de JetPack 6.x no deben reutilizarse directamente en JetPack 7.2. Reconstrúyelos sobre la pila de software Jetson Linux 39.2.
 :::
 
 ## IA agentiva y habilidades para Jetson
@@ -113,7 +113,7 @@ JetPack 7.2 amplía el flujo de trabajo del desarrollador de Jetson más allá d
 | Recurso | Rol en el ecosistema |
 | --- | --- |
 | [Creación rápida de prototipos en Jetson con NVIDIA Skills](/es/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) | Inspección del dispositivo, comprobaciones de compatibilidad, análisis de memoria, preparación del entorno, construcción de prototipos y empaquetado. |
-| [Controlar el brazo reBot B601 con NemoClaw en Jetson Thor](/es/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) | Percepción local, razonamiento con LLM, ejecución de herramientas, gestión de servicios y control de IA física en la plataforma JetPack 7. |
+| [Controlar el brazo reBot B601 con NemoClaw en Jetson Thor](/es/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) | Percepción local, razonamiento con LLM, ejecución de herramientas, gestión de servicios y control físico‑IA en la plataforma JetPack 7. |
 
 ## Eficiencia de memoria
 
@@ -127,14 +127,14 @@ JetPack 7.2 amplía el flujo de trabajo del desarrollador de Jetson más allá d
 | --- | --- |
 | [Compilar y flashear una imagen Yocto para reComputer Super](/es/build_and_flash_yocto_for_recomputer_super_bk/) | Construcción reproducible de imágenes OpenEmbedded/Yocto para un despliegue de Jetson Linux orientado a producción. |
 
-## CUDA 13, TensorRT e IA en el borde
+## Despliegue de IA y aplicaciones
 
 | Recurso | Cobertura |
 | --- | --- |
-| [Desplegar TensorRT Edge-LLM en JetPack 7.2](/es/deploy_tensorrt_edge_llm_on_jetpack7.2/) | Exportación de modelos en JetPack 7.2, objetivos de compilación para Orin/Thor, generación de motores e inferencia en C++. |
+| [Desplegar TensorRT Edge-LLM en JetPack 7.2](/es/deploy_tensorrt_edge_llm_on_jetpack7.2/) | Exportación de modelos en JetPack 7.2, objetivos de compilación Orin/Thor, generación de motores e inferencia en C++. |
 | [Supervisión de visión industrial en JetPack 7.2](/es/industrial_vision_monitoring_on_industrial_bk/) | Supervisión con YOLO y VLM verificada en reComputer Industrial y reServer Industrial con L4T 39.2. |
 | [DeepStream en JetPack 7.2](/es/jetpack_7_2_deepstream/) | Instalación de DeepStream 9.1, habilidades agentivas, creación de canalizaciones en lenguaje natural, integración de VLM, migración y planificación de memoria. |
-| [Desplegar GR00T N1.7 completo en JetPack 7.2 y AGX Orin](/es/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin/) | **Planificado:** despliegue TensorRT de checkpoint completo para IA física en AGX Orin. |
+| [Desplegar GR00T N1.7 completo en JetPack 7.2 y AGX Orin](/es/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin/) | Despliegue validado de TensorRT con siete motores, verificación numérica, inferencia sin conexión y configuración de rutas portables para AGX Orin. |
 
 Los motores serializados y los plugins TensorRT personalizados deben reconstruirse en la pila de software JetPack 7.2 de destino.
 
@@ -150,9 +150,9 @@ Los motores serializados y los plugins TensorRT personalizados deben reconstruir
 ## Orden de migración recomendado
 
 1. Confirma que el producto Seeed de destino tiene un BSP o una imagen de JetPack 7.2.
-2. Haz una copia de seguridad de los datos de la aplicación, archivos de calibración, volúmenes de contenedores y fuentes de device-tree personalizadas.
+2. Haz una copia de seguridad de los datos de la aplicación, archivos de calibración, volúmenes de contenedores y fuentes de device‑tree personalizadas.
 3. Flashea JetPack 7.2 y valida el arranque, el almacenamiento, la red y el modo de recuperación.
-4. Restaura los controladores externos al árbol de Wi-Fi, cámara, CAN, EtherCAT u otros con compilaciones para JetPack 7.2.
+4. Restaura los controladores externos al árbol para Wi‑Fi, cámara, CAN, EtherCAT u otros con compilaciones para JetPack 7.2.
 5. Reconstruye las aplicaciones CUDA, los plugins TensorRT y los motores TensorRT.
 6. Valida la aplicación en el modo de energía original antes de habilitar `MAXN_SUPER` u otros modos de rendimiento.
 7. Registra el uso de memoria, la temperatura, el consumo de energía, la latencia y el rendimiento antes de poner el dispositivo en producción.
