@@ -6,7 +6,7 @@ keywords:
   - reCamera
   - AI Edge Vision
   - Smart Parking
-slug: /ai_parking_slot_monitoring_demo_with_recamera_bak
+slug: /ai_parking_slot_monitoring_demo_with_recamera
 sku: 100029708,102991896
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 3
@@ -15,7 +15,7 @@ last_update:
   author: John Xiang
 createdAt: '2025-12-31'
 updatedAt: '2026-01-29'
-url: https://wiki.seeedstudio.com/ai_parking_slot_monitoring_demo_with_recamera_bak/
+url: https://wiki.seeedstudio.com/ai_parking_slot_monitoring_demo_with_recamera/
 ---
 
 # AI Parking Management Demo with reCamera

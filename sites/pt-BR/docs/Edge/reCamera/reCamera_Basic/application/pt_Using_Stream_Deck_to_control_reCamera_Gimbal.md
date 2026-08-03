@@ -4,7 +4,7 @@ description: Este wiki demonstra como controlar o reCamera Gimbal usando um Stre
 keywords:
   - reCamera Gimbal
   - Controle sensorial
-slug: /using_stream_deck_to_control_recamera_gimbal_bak
+slug: /using_stream_deck_to_control_recamera_gimbal
 sku: 100029708
 image: https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_stream-deck-demo_show.gif
 sidebar_position: 1
@@ -13,7 +13,7 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-05-22'
 updatedAt: '2026-06-01'
-url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/using_stream_deck_to_control_recamera_gimbal_bak/
+url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/using_stream_deck_to_control_recamera_gimbal/
 ---
 
 ## Introdução
