@@ -1,6 +1,6 @@
 ---
-description: 开始使用 Wio Tracker L1 系列
-title: 开始使用 Wio Tracker L1
+description: Wio Tracker L1 系列快速上手
+title: Wio Tracker L1 快速上手
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::tip
-Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L1 Pro 的，但它同样适用于 L1 系列中的所有其他产品。
+Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L1 Pro 的，但同样适用于 L1 系列中的所有其他产品。
 :::
 
 ## 视频教程
@@ -49,12 +49,12 @@ Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L
 
 #### 四向摇杆
 
-L1 E-Ink 固件的 `latest Alpha firmware` 目前支持四向摇杆。如果你想使用摇杆，请[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#第-2-部分-固件烧录)升级固件。 
+L1 E-Ink 固件的 `latest Alpha firmware` 目前支持四向摇杆。如果你想使用摇杆，请[点击此处](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#第-2-部分-固件烧录)升级固件。
 
 #### 菜单栏
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
-只有 2.7 固件支持菜单栏。如果你想使用菜单栏，请按照[固件烧录教程](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#第-2-部分-固件烧录)更新固件。
+只有 2.7 固件支持菜单栏。如果你想使用菜单栏，请按照[固件烧录教程](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#第-2-部分-固件烧录)来更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 #### 蜂鸣器
@@ -62,9 +62,9 @@ L1 E-Ink 固件的 `latest Alpha firmware` 目前支持四向摇杆。如果你�
 如果你想打开或关闭蜂鸣器，请先将 `update the firmware` 到 `2.7` 版本。因为只有 2.7 版本固件才有菜单栏。
 
 - 打开蜂鸣器
-Setting（齿轮形图标）-> Notification -> Buzzer Action -> Disable
+Setting（齿轮形状图标）-> Notification -> Buzzer Action -> Disable
 - 关闭蜂鸣器
-Setting（齿轮形图标）-> Notification -> Buzzer Action -> All enabled
+Setting（齿轮形状图标）-> Notification -> Buzzer Action -> All enabled
 
 <div class="table-center">
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -85,7 +85,7 @@ Setting（齿轮形图标）-> Notification -> Buzzer Action -> All enabled
 ## 开始使用
 
 :::danger note
-当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
+当设备处于以下状态时，请不要手动重启或关机。否则设备可能会损坏。
 
 1. 尚未完成消息传输过程
 2. 正在配置中
@@ -115,9 +115,9 @@ Setting（齿轮形图标）-> Notification -> Buzzer Action -> All enabled
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件拖入 DFU 驱动器。文件下载完成并且设备重启后，固件就会被烧录。
+将 UF2 文件拖入 DFU 驱动器。文件下载完成并且设备重启后，固件就会被烧录完成。
 
-### 打开设备电源
+### 启动设备
 
 连接 USB 线以激活设备。将电源开关向上拨动以开机。
 
@@ -136,11 +136,11 @@ import TabItem from '@theme/TabItem';
 
 - 在蓝牙面板中选择目标设备。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/device_select123.jpeg" alt="pir" width={300} height="auto" /></p>
 
-- 在显示屏上输入代码，然后点击 `OK` 连接设备。
+- 在显示屏上输入验证码，然后点击 `OK` 连接设备。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/pairing_code123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -150,7 +150,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-choose-new.png" alt="pir" width={600} height="auto" /></p>
 
-- 输入代码（默认代码为 `123456`），然后点击 `OK` 连接设备。
+- 输入验证码（默认验证码为 `123456`），然后点击 `OK` 连接设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-click-ok-new.png" alt="pir" width={300} height="auto" /></p>
 
@@ -159,12 +159,12 @@ import TabItem from '@theme/TabItem';
 
 ### 配置 LoRa
 
-为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
+为了开始通过 Mesh 进行通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_LoRa123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -182,10 +182,10 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
+更多内容请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当你的设备达到该限制时，将会停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
 :::
 
 现在你已经在设备上设置了 LoRa 区域，可以继续配置任意[LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/)以满足你的需求。
@@ -198,12 +198,12 @@ import TabItem from '@theme/TabItem';
 
   步骤 1：打开网站
 
-[点击这里](https://client.meshtastic.org/messages/broadcast/0) 进入网站。
+[点击此处](https://client.meshtastic.org/messages/broadcast/0) 进入网站。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   步骤 2：添加新设备
 
-    点击 “+ New Connection”。 
+    点击 "+ New Connection"。
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
@@ -278,7 +278,7 @@ import TabItem from '@theme/TabItem';
 
 - 启用 Telemetry 以获取传感器数据。如果你想在 OLED 屏幕上显示传感器数据，请启用 `on screen`
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryIOS.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/temp_sensor123.png" alt="pir" width={900} height="auto" /></p>
 
 </TabItem>
 
@@ -298,29 +298,29 @@ import TabItem from '@theme/TabItem';
 ### 屏幕连接
 
 - 电子墨水屏（E-Ink Screen）
-  [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的电子墨水屏。
+  [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的电子墨水屏。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - OLED 屏幕
-[点击这里](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) 获取兼容的 OLED 屏幕。目前使用的 OLED 驱动为 SSD1306。
+[Click here](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) 获取兼容的 OLED 屏幕。目前使用的 OLED 驱动为 SSD1306。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 ### 虚拟键盘
 
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
-2.7 版本固件现在已经支持虚拟键盘！你可以直接在设备上输入消息，与其他设备进行通信。请按照 [Flash Firmware Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 更新固件。
+2.7 版本固件现在支持虚拟键盘！你可以直接在设备上输入消息，与其他设备进行通信。请按照 [Flash Firmware Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ### 配置铃声
 
-进入 `Settings` -> `Ringtone Config`，然后输入你想用于外部通知的 RTTTL 铃声字符串。
+导航到 `Settings` -> `Ringtone Config`，然后输入你想用于外部通知的 RTTTL 铃声字符串。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_ringtone123.png" alt="pir" width={500} height="auto" /></p>
 
 </TabItem>
 
@@ -387,7 +387,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 在烧录 bootloader 时，请确保线缆连接稳定，并且在烧录过程中 **不要** 断开连接。
 :::
 
-- 步骤 1：[点击这里下载 Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+- 步骤 1：[Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 
 - 步骤 2：进入 DFU 模式
 
@@ -401,11 +401,11 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 - 步骤 4：烧录固件
 
-  完成以上步骤后，你可以按照这个[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)来烧录应用固件。你可能需要[手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+  完成以上步骤后，你可以按照此[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)烧录应用固件。你可能需要[手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 ### 无法进入 DFU 及手动进入 DFU 模式
 
-将设备连接到电脑，双击按下 `Reset` 按钮。黄色 LED 将保持常亮，并且在电脑上会出现一个名为 `Tracker L1` 的新 USB 驱动器。
+将设备连接到电脑，双击 `Reset` 按钮。黄色 LED 将保持常亮，并且在电脑上会出现一个名为 `Tracker L1` 的新 USB 驱动器。
 
 ### 退出 DFU 模式
 
@@ -413,9 +413,9 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### 无法在主信道上通信
 
-如果设备无法与附近节点通信或发送消息，首先检查 LoRa 区域和调制解调器预设是否与周围节点一致。你还应该检查默认的 **PSK** 是否被更改。在主信道上使用不同的 PSK 会导致设备无法与该信道上的其他节点通信。
+如果设备无法与附近节点通信或发送消息，首先检查 LoRa 区域和调制解调器预设是否与周围节点一致。你还应检查默认的 **PSK** 是否被更改。主信道上不同的 PSK 会导致设备无法与该信道上的其他节点通信。
 
-发现此问题的最简单方法是通过手机应用。打开 App，连接到目标设备，然后进入 `Settings` -> `Channels`。选择主信道并检查 **PSK** 值。如果它与周围节点不同，请将其更新为相同的 PSK，并保存信道设置。
+发现此问题的最简单方法是通过手机应用。打开应用，连接到目标设备，然后导航到 `Settings` -> `Channels`。选择主信道并检查 **PSK** 值。如果它与周围节点不同，请将其更新为相同的 PSK，并保存信道设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -442,17 +442,17 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 - 设备开机后，过一段时间会自动关机或重启。
 - 串口日志运行一段时间后停止。
 
- 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息发送过程、正在配置中等……
+ 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中等……
 
 #### 故障排查
 
-[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
+[click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你有两种方法可以进行恢复出厂设置。
+如果你想恢复为默认设置，可以执行恢复出厂设置。你可以通过两种方法进行恢复出厂设置。
 
-- [点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
+- [click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
 
 - 在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
@@ -461,28 +461,28 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 #### NodeDB 重置
 
-NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中保存了该节点的过期信息，你需要对其进行更新。
+NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中保存了该节点的过时信息，你需要对其进行更新。
 
 打开 App 并连接到目标设备。依次进入 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDBmerge.png" alt="Device settings and Reset NodeDB button in the app" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/sending_failed123.png" alt="Device settings and Reset NodeDB button in the app" width={600} height="auto" /></p>
 
 #### 交换用户信息
 
-每个节点会定期发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换各自的节点信息，才能相互通信。如果你无法与列表中的某个节点收发私信，可以在 App 中手动触发它们交换信息。
+每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的某个节点收发私信，可以在 App 中手动触发它们交换信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### 重新生成私钥
 
-两个节点需要彼此知道对方的私钥，才能相互通信。如果某个节点在私信传输中总是失败，请尝试为它重新生成私钥。
+两个节点需要彼此知道对方的私钥，才能相互通信。如果某个节点在私信传输中持续失败，请尝试为其重新生成私钥。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
 重启故障设备以使配置生效。
 
 :::note
-在重新生成密钥后，其他设备需要重新与该节点连接。因此，最好在其他设备的节点列表中删除该节点。
+在重新生成密钥后，其他设备需要重新连接该节点。因此，最好在其他设备的节点列表中删除该节点。
 :::
 
 ### 信号质量
@@ -491,11 +491,11 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的区域使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰较小的环境中使用设备。
 
 ### 兼容天线
 
-如果你需要为 L1 Pro 更换天线，[点击这里](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)获取一个。
+如果你需要为 L1 Pro 更换天线，[点击这里](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) 获取一个。
 
 ## 资源
 

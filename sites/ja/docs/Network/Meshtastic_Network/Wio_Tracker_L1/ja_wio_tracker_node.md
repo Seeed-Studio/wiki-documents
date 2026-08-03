@@ -1,6 +1,6 @@
 ---
-description: Wio Tracker L1 入門
-title: Wio Tracker L1 入門
+description: Wio Tracker L1 の概要
+title: Wio Tracker L1 の概要
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.webp
@@ -21,12 +21,12 @@ url: https://wiki.seeedstudio.com/ja/wio_tracker_l1_node/
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 </font></span></strong>
     </a>
 </div>
-Wio Tracker L1 シリーズは、LoRa（862–930 MHz）、効率的な処理を行う nRF52840、そして高精度な位置情報取得のための L76K GPS モジュールを搭載した、低消費電力かつ高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードです。柔軟性を重視した設計により、OLED や E-Ink ディスプレイ、ソーラーパネルおよびバッテリー電源に対応しており、幅広い IoT やオフグリッド用途に最適です。
+Wio Tracker L1 シリーズは、LoRa（862～930 MHz）、高効率な処理を行う nRF52840、そして高精度な位置情報取得のための L76K GPS モジュールを搭載した、低消費電力かつ高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードです。柔軟性を重視した設計により、OLED や E-Ink ディスプレイ、ソーラーパネルおよびバッテリー電源に対応しており、幅広い IoT やオフグリッド用途に最適です。
 
 ## L1 シリーズのモデル
 
 :::tip
-Wio Tracker L1 シリーズは 4 つのバージョンが用意されており、ニーズに最も適したものを選択できます。
+Wio Tracker L1 シリーズは 4 つのバージョンが用意されており、用途に最も適したものを選択できます。
 :::
 
 ### シリーズ紹介
@@ -61,7 +61,7 @@ Type-C 急速充電、ソーラー入力、リチウムイオンバッテリー�
 1.3 インチ OLED と 2.13 インチ E-Ink のオプション画面に対応し、消費電力や視覚的フィードバックのニーズに応じて多様な表示方法を選択できます。
 
 - **高い拡張性**
-Grove エコシステムと完全な互換性があり、PTH ヘッダおよび SWD デバッグインターフェースを備えているため、カスタムハードウェア拡張や高度な開発が可能です。
+Grove エコシステムと完全互換であり、PTH ヘッダおよび SWD デバッグインターフェースを備えているため、カスタムハードウェア拡張や高度な開発が可能です。
 
 ### 仕様
 
@@ -82,7 +82,7 @@ Grove エコシステムと完全な互換性があり、PTH ヘッダおよび 
   </tr>
   <tr>
     <td colspan="1" rowspan="3">無線</td>
-    <td colspan="1">LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a> ベース、862–930MHz 対応</td>
+    <td colspan="1">LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a> をベースとし、862～930MHz に対応</td>
   </tr>
    <tr>
   <td colspan="1">L1 Pro 用 LoRa アンテナ：3dBi</td>
@@ -109,7 +109,7 @@ Grove エコシステムと完全な互換性があり、PTH ヘッダおよび 
     <td colspan="1">USB Type-C：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">ソーラーパネル（2P-2.0mm）：5V — 1A</td>
+    <td colspan="1">ソーラーパネル（2P-2.0mm）：5V — 1A（5V を超えないこと）</td>
   </tr>
   <tr>
     <td colspan="1">リチウムバッテリー（2P-1.25mm）：3.7V — 1A</td>

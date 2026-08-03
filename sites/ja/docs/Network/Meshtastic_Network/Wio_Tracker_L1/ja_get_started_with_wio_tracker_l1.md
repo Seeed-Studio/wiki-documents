@@ -34,7 +34,7 @@ L1、L1 Lite または L1 E-Ink モデルを初めて使用する場合は、USB
 ### パート 2 ファームウェア書き込み
 
 :::caution note
-ファームウェアを更新する際は、`don't use NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
+ファームウェアの更新には `don't use NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
 :::
 
 <div class="video-container">
@@ -59,7 +59,7 @@ L1 E-Ink ファームウェアの `latest Alpha firmware` は現在、4 方向�
 
 #### ブザー
 
-ブザーをオンまたはオフにしたい場合は、まずファームウェアをバージョン `2.7` に `update the firmware` してください。メニューバーがあるのは 2.7 バージョンのファームウェアのみです。
+ブザーをオンまたはオフにしたい場合は、まずファームウェアをバージョン `2.7` に `update the firmware` してください。2.7 バージョンのファームウェアのみがメニューバーを備えているためです。
 
 - ブザーをオンにする
 Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action -> Disable
@@ -70,7 +70,7 @@ Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action 
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### パート 4 スマートフォン接続
+### パート 4 スマートフォンとの接続
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/OFtUwN3z0tI?si=9zr3j-hLuoj0-CXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -91,31 +91,31 @@ Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action 
 2. 設定中である
 :::
 
-### ファームウェアを書き込む
+### ファームウェアの書き込み
 
 :::caution note
-ファームウェアを更新する際は、`don't use NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
+ファームウェアの更新には `don't use NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
 :::
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。
 
-L1、L1 Lite および L1 Pro の場合、ターゲットデバイスとして `Seeed Wio Tracker L1` を選択し、最新のファームウェアを選んでから `Flash` をクリックします。
+L1、L1 Lite および L1 Pro の場合は、ターゲットデバイスとして `Seeed Wio Tracker L1` を選択し、最新のファームウェアを選んでから `Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
-L1 E-Ink の場合、ターゲットデバイスとして `Seeed Wio Tracker L1 E-Ink` を選択し、最新のファームウェアを選んでから `Flash` をクリックします。
+L1 E-Ink の場合は、ターゲットデバイスとして `Seeed Wio Tracker L1 E-Ink` を選択し、最新のファームウェアを選んでから `Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%201.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
-デバイスの電源を入れ、`Enter DFU Mode` をクリックします。`Tracker L1` という名前のシリアルポートが表示されるので、それをクリックして接続します。`Tracker L1` という名前のドライブが表示されるはずです。
+デバイスの電源を入れ、`Enter DFU Mode` をクリックします。`Tracker L1` という名前のシリアルポートが表示されるので、それをクリックして接続すると、`Tracker L1` という名前のドライブが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2 ファイルを DFU ドライブにドラッグします。ファイルのコピーが完了し、デバイスが再起動すると、ファームウェアの書き込みが完了します。
+UF2 ファイルを DFU ドライブにドラッグします。ファイルのコピー完了後、デバイスが再起動するとファームウェアの書き込みが完了します。
 
 ### デバイスの電源を入れる
 
@@ -136,11 +136,11 @@ import TabItem from '@theme/TabItem';
 
 - Bluetooth パネルでターゲットデバイスを選択します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/device_select123.jpeg" alt="pir" width={300} height="auto" /></p>
 
-- ディスプレイに表示されるコードを入力し、`OK` をクリックしてデバイスに接続します。
+- ディスプレイに表示されているコードを入力し、`OK` をクリックしてデバイスに接続します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/pairing_code123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -164,7 +164,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="ios" label="IOS アプリ">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_LoRa123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -176,7 +176,7 @@ import TabItem from '@theme/TabItem';
 
 **リージョン一覧**
 
-|**リージョンコード**|**説明**|**周波数範囲 (MHz)**|**デューティサイクル (%)**|**出力制限 (dBm)**|
+|**リージョンコード**|**説明**|**周波数帯域 (MHz)**|**デューティサイクル (%)**|**出力制限 (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未設定|N/A|N/A|N/A|
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
@@ -188,9 +188,9 @@ import TabItem from '@theme/TabItem';
 **EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-これでデバイスの LoRa リージョンを設定できたので、必要に応じて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を設定し続けることができます。
+これでデバイス上の LoRa リージョンを設定できたので、必要に応じて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
 
-## 高度な設定
+## 詳細設定
 
 ### Web サイト経由で接続する
 
@@ -203,20 +203,20 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 
   ステップ 2: 新しいデバイスを追加する
 
-    "+ New Connection" をクリックします。 
+    「+ New Connection」をクリックします。 
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    接続方法は 2 通りあります。好みの方法を選択できます。
+    接続方法は 2 通りあります。お好みの方法を選択できます。
 
  方法 1: Bluetooth 経由
 
-    bluetooth 方法を選択します。ポップアップウィンドウでデバイス ID を選択します。
+    Bluetooth 方法を選択します。ポップアップウィンドウでデバイス ID を選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
  方法 2: シリアル経由
 
-    serial 方法を選択します。デバイスマネージャーを開き、デバイスがどのポートに接続されているかを確認します。ポップアップウィンドウでそのポートを選択します。
+    シリアル方法を選択します。デバイスマネージャーを開き、デバイスがどのポートに接続されているかを確認します。ポップアップウィンドウでそのポートを選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
     デバイスがリストに表示されます。クリックして接続します。接続に成功すると、ウェブサイト上でデバイスのステータスを直接確認できます。
@@ -229,7 +229,7 @@ GPS を有効にしてください。より最新の位置情報を取得する�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-IOS の場合は、`Accurate Location` をオンにしてください。そうしないと、位置がずれる可能性があります。
+iOS の場合は、`Accurate Location` をオンにしてください。そうしないと、位置がずれる可能性があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -237,7 +237,7 @@ IOS の場合は、`Accurate Location` をオンにしてください。そう�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/SensorConnection.jpg" alt="pir" width={700} height="auto" /></p>
 
-Grove インターフェースを介してデバイスにセンサーを追加できます。以下のセンサーは、本デバイス上の Grove インターフェースとの互換性が確認されています。
+Grove インターフェースを介してデバイスにセンサーを追加できます。以下のセンサーは、デバイス上の Grove インターフェースとの互換性が確認されています。
 
 <table>
   <tr>
@@ -276,15 +276,15 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 
 <TabItem value="ios" label="IOS">
 
-- Telemetry を有効にしてセンサーデータを取得します。OLED 画面にセンサーデータを表示したい場合は、`on screen` を有効にしてください
+- Telemetry を有効にしてセンサーデータを取得します。センサーデータを OLED 画面に表示したい場合は、`on screen` を有効にします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryIOS.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/temp_sensor123.png" alt="pir" width={900} height="auto" /></p>
 
 </TabItem>
 
 <TabItem value="Android" label="Android">
 
-- Telemetry を有効にしてセンサーデータを取得します。OLED 画面にセンサーデータを表示したい場合は、`on screen` を有効にしてください
+- Telemetry を有効にしてセンサーデータを取得します。センサーデータを OLED 画面に表示したい場合は、`on screen` を有効にします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryAndroid.png" alt="pir" width={900} height="auto" /></p>
 
@@ -310,7 +310,7 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 ### バーチャルキーボード
 
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
-バージョン 2.7 のファームウェアではバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力し、他のデバイスと通信できます。ファームウェアを更新するには、[Flash Firmware Tutorial](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) に従ってください。
+バージョン 2.7 のファームウェアではバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力して、他のデバイスと通信できます。ファームウェアを更新するには、[Flash Firmware Tutorial](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) に従ってください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ### 着信音の設定
@@ -320,7 +320,7 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_ringtone123.png" alt="pir" width={500} height="auto" /></p>
 
 </TabItem>
 
@@ -338,14 +338,14 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 ```
 </TabItem>
 
-<TabItem value="14" label="スーパーマリオ テーマ（ショート）">
+<TabItem value="14" label="スーパーマリオのテーマ（ショート）">
 
 ```plain
 24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
 ```
 </TabItem>
 
-<TabItem value="15" label="マリオ コイン">
+<TabItem value="15" label="マリオコイン">
 
 ```plain
 24:d=8,o=6,b=200:b,e7
@@ -359,7 +359,7 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 ```
 </TabItem>
 
-<TabItem value="17" label="マリオ パワーアップ">
+<TabItem value="17" label="マリオパワーアップ">
 
 ```plain
 powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
@@ -377,11 +377,11 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ## FAQ
 
-### デバイスがブリックした & ブートローダーのインストール
+### デバイスがブリックした場合 & ブートローダーのインストール
 
 **説明：**
 
-デバイスが反応せず、LED も点灯せず、アプリとペアリングできません。独自のファームウェアを書き込んだ後にデバイスが完全に動作しなくなった場合は、ブートローダーの再インストールも試すことができます。
+デバイスが反応せず、LED も点灯せず、アプリとペアリングできません。独自のファームウェアを書き込んだ後にデバイスが完全に動作しなくなった場合は、ブートローダーを再インストールしてみてください。
 
 :::danger note
 ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で **絶対に** 取り外さないでください。
@@ -409,13 +409,13 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### DFU モードの終了
 
-DFU モードを終了するには、`Reset` ボタンを 1 回押します。
+`Reset` ボタンを 1 回押して DFU モードを終了します。
 
 ### プライマリチャンネルで通信できない
 
-デバイスが近くのノードと通信できない、またはメッセージを送信できない場合は、まず LoRa リージョンとモデムプリセットが周囲のノードと一致しているか確認してください。また、デフォルトの **PSK** が変更されていないかも確認する必要があります。プライマリチャンネルで PSK が異なると、そのチャンネル上の他のノードと通信できなくなります。
+デバイスが近くのノードと通信できない、またはメッセージを送信できない場合は、まず LoRa リージョンとモデムプリセットが周囲のノードと一致しているか確認してください。また、デフォルトの **PSK** が変更されていないかも確認する必要があります。プライマリチャンネルで PSK が異なると、そのチャンネル上の他のノードとデバイスが通信できなくなります。
 
-この問題を見つける最も簡単な方法はモバイルアプリを使用することです。アプリを開き、対象デバイスに接続してから、`Settings` -> `Channels` に移動します。プライマリチャンネルを選択し、**PSK** の値を確認します。周囲のノードと異なる場合は、同じ PSK に更新し、チャンネル設定を保存してください。
+この問題を見つける最も簡単な方法はモバイルアプリを使用することです。アプリを開き、対象デバイスに接続してから、`Settings` -> `Channels` に移動します。プライマリチャンネルを選択し、**PSK** の値を確認します。周囲のノードと異なる場合は、同じ PSK に更新してチャンネル設定を保存してください。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -433,53 +433,53 @@ DFU モードを終了するには、`Reset` ボタンを 1 回押します。
 
 **解決策**
 
-どの設定が変更されたか分からない場合は、[Factory Reset](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#factory-reset) ガイドに従って、デバイスをデフォルト設定に復元してください。PSK のみが変更された場合は、`AQ==` に戻してください。
+どの設定が変更されたかわからない場合は、[Factory Reset](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#factory-reset) ガイドに従って、デバイスをデフォルト設定に復元してください。PSK のみが変更された場合は、`AQ==` に戻してください。
 
 ### デバイスが自動的に電源オフになる
 
 #### 説明
 
 - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。
-- シリアルポートログがしばらく動作した後、停止します。
+- シリアルポートログがしばらく動作した後に停止します。
 
- これは、メッセージ送信プロセスが完了していない、設定中であるなど、以下の状態にあるときに、デバイスを手動かつ強制的に再起動または電源オフしたことが原因である可能性があります。
+ これは、メッセージ送信プロセスが完了していない、設定中であるなど、デバイスが以下の状態にあるときに、手動で強制的に再起動または電源オフしたことが原因の可能性があります。
 
 #### トラブルシューティング
 
 [click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) をクリックして動画を確認してください。フラッシュの消去を実行し、その後最新のファームウェアを書き込み直す必要があります。
 
-### 工場出荷時設定へのリセット
+### Factory Reset
 
-デフォルト設定に戻したい場合は、ファクトリーリセットを実行できます。ファクトリーリセットを行う方法は 2 つあります。
+デフォルト設定に戻したい場合は、Factory Reset を実行できます。Factory Reset を行う方法は 2 つあります。
 
 - [click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) をクリックして動画を確認してください。フラッシュの消去を実行し、その後最新のファームウェアを書き込み直す必要があります。
 
 - アプリで `Factory Reset` ボタンをクリックします。デバイスは自動的に工場出荷時の設定で再起動します。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### ダイレクトメッセージの失敗
+### ダイレクトメッセージ失敗
 
-#### NodeDB のリセット
+#### NodeDB リセット
 
-NodeDB は、現在の Mesh ネットワークで検出されたノードに関する情報を保存するローカルデータベースです。特定のノードと通信できない状況に遭遇した場合、そのノードに対して NodeDB に古い情報が保存されている可能性があります。その場合は更新する必要があります。
+NodeDB は、現在のメッシュネットワーク内で検出されたノードに関する情報を保存するローカルデータベースです。特定のノードと通信できない状況に遭遇した場合、そのノードに対して NodeDB に古い情報が保存されている可能性があります。その場合は更新する必要があります。
 
-アプリを開き、対象デバイスに接続します。**Settings**->**Device**->**Device Config**->**Reset NodeDB** に進みます。
+アプリを開いて対象デバイスに接続します。**Settings**->**Device**->**Device Config**->**Reset NodeDB** に進みます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDBmerge.png" alt="アプリ内のデバイス設定と Reset NodeDB ボタン" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/sending_failed123.png" alt="Device settings and Reset NodeDB button in the app" width={600} height="auto" /></p>
 
 #### ユーザー情報の交換
 
-各ノードは定期的に自分自身のノード情報を送信し、メッシュ内の他のノードがそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、互いのノード情報を交換する必要があります。リスト内の別のノードとプライベートメッセージの送受信ができない場合は、アプリで手動で情報交換を促すことができます。
+各ノードは定期的に自分自身のノード情報を送信し、メッシュ内の他のノードがそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、互いのノード情報を交換する必要があります。リスト上の別のノードとプライベートメッセージの送受信ができない場合は、アプリで手動で情報交換を促すことができます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="設定内のデバイス項目" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### 秘密鍵の再生成
 
 2 つのノードが互いに通信できるようにするには、互いの秘密鍵を知っている必要があります。あるノードがプライベートメッセージの送信に失敗し続ける場合は、そのノードの秘密鍵を再生成してみてください。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="設定内のデバイス項目" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
-不具合のあるデバイスを再起動して、設定を有効にします。
+設定を有効にするため、不具合のあるデバイスを再起動します。
 
 :::note
 鍵を再生成した後は、他のデバイスがそのノードに再接続する必要があります。そのため、他のデバイスのノードリストからそのノードを削除しておくことをお勧めします。
@@ -493,9 +493,9 @@ NodeDB は、現在の Mesh ネットワークで検出されたノードに関�
 
       最良の信号効果を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
 
-### 対応アンテナ
+### 互換アンテナ
 
-L1 Pro 用のアンテナ交換が必要な場合は、[こちらをクリック](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)して入手してください。
+L1 Pro 用にアンテナの交換が必要な場合は、[こちらをクリック](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)して入手してください。
 
 ## リソース
 
