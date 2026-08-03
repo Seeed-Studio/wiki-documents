@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.w
 slug: /sensecap_indicator_meshtastic
 sku: 114993532
 last_update:
-  date: 12/3/2024
-  author: Michelle Huang
+  date: 07/31/2026
+  author: Advent Jiang
 createdAt: '2024-10-29'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/sensecap_indicator_meshtastic/
@@ -31,7 +31,7 @@ url: https://wiki.seeedstudio.com/pt-br/sensecap_indicator_meshtastic/
     </a>
 </div>
 
-SenseCAP Indicator é um dispositivo com tela sensível ao toque de 4 polegadas projetado para [Meshtastic®](https://meshtastic.org/), alimentado por dois MCUs, o ESP32 e o RP2040, e que oferece suporte a Wi‑Fi, BLE e LoRa®. É uma poderosa plataforma de desenvolvimento de IoT de código aberto.
+SenseCAP Indicator é um dispositivo com tela sensível ao toque de 4 polegadas projetado para o [Meshtastic®](https://meshtastic.org/), alimentado por dois MCUs, o ESP32 e o RP2040, e que oferece suporte a Wi‑Fi, BLE e LoRa®. É uma poderosa plataforma de desenvolvimento de IoT de código aberto.
 
 ## Introdução
 
@@ -41,31 +41,31 @@ SenseCAP Indicator é um dispositivo com tela sensível ao toque de 4 polegadas 
 - **MCUs duplos e GPIOs abundantes:** Equipado com poderosos MCUs duplos ESP32S3 e RP2040 e mais de 400 GPIOs compatíveis com Grove para opções flexíveis de expansão.<br/>
 - **Hub LoRa® local para conectividade IoT:** Integrado com o chip LoRa® Semtech SX1262, o dispositivo pode ser convertido em um gateway LoRaWAN® de canal único por meio de um tutorial. Alternativamente, conecte dispositivos LoRa® a plataformas IoT populares como Matter via Wi‑Fi.<br/>
 - **Plataforma totalmente open source:** Aproveite o amplo ecossistema open source de ESP32 e Raspberry Pi para infinitas possibilidades de aplicação.<br/>
-- **Adequado para múltiplos cenários de aplicação:** Pode ser usado como um nó Meshtastic de mesa ou de carro, bem como um gateway LoRaWAN® de canal único.
+- **Adequado para múltiplos cenários de aplicação:** Pode ser usado como um nó de mesa Meshtastic ou um nó veicular, bem como um gateway LoRaWAN® de canal único.
 
 ### Especificações
 
-|Tela|3,95 polegadas, tela sensível ao toque capacitiva RGB|
+|Screen|Tela sensível ao toque RGB capacitiva de 3,95 polegadas|
 | :- | :- |
-|**Resolução da tela**|480 x 480 pixels|
-|**Fonte de alimentação**|5V-DC, 1A|
-|**Bateria**|N/A|
-|**Processador**|<p>**ESP32-S3:** Xtensa® dual-core 32-bit até 240 MHz</p><p>**RP2040:** Dual ARM Cortex-M0+ até 133MHz</p>|
+|**Screen Resolution**|480 x 480 pixels|
+|**Power Supply**|5V-DC, 1A|
+|**Battery**|N/A|
+|**Processor**|<p>**ESP32-S3:** Xtensa® dual-core 32-bit até 240 MHz</p><p>**RP2040:** Dual ARM Cortex-M0+ até 133MHz</p>|
 |**Flash**|<p>**ESP32-S3:** 8MB</p><p>**RP2040:** 2MB</p>|
-|**Armazenamento externo**|Suporta cartão Micro SD de até 32GB (não incluído)|
-|**Wi‑Fi**|802.11b/g/n, 2,4GHz|
+|**External Storage**|Suporta cartão Micro SD de até 32GB (não incluído)|
+|**Wi-Fi**|802.11b/g/n, 2,4GHz|
 |**Bluetooth**|Bluetooth 5.0 LE|
 |**LoRa(SX1262**)|Suporta 862-930MHz|
-|**Buzzer(Ainda não desenvolvido)**|MLT-8530, frequência de ressonância: 2700Hz|
-|**Certificação**|CE/FCC|
+|**Buzzer(Not developed yet)**|MLT-8530, frequência de ressonância: 2700Hz|
+|**Certification**|CE/FCC|
 
 ### Visão geral do hardware
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/HO-114993532.png" alt="pir" width={800} height="auto" /></p>
 
-## Primeiros passos
+## Introdução
 :::danger note
-Quando o dispositivo estiver nos estados abaixo, não reinicie nem desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
+Quando o dispositivo estiver em um dos estados abaixo, não reinicie nem desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
 1. Não tiver concluído o processo de transmissão de mensagem
 2. Estiver sendo configurado
 :::
@@ -94,7 +94,7 @@ Pressione e segure o botão enquanto conecta o cabo USB.
 
 Ative a opção `Full Erase and Install` e clique em `Erase Flash and Install`.
 
-Serão exibidas 2 portas; selecione a `USB serial port` e clique em `Connect`.
+Serão exibidas 2 portas, selecione a `USB serial port` e clique em `Connect`.
 
 :::caution note
 Selecione a opção `USB Serial`, não a INDICATOR RP2040.
@@ -151,11 +151,11 @@ import TabItem from '@theme/TabItem';
 
 - Clique em `+` e escolha o dispositivo de destino.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-choose-new.png" alt="pir" width={600} height="auto" /></p>
 
 - Digite o código (o código padrão é `123456`) e clique em `OK` para conectar o dispositivo.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-click-ok-new.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
 </Tabs>
@@ -172,14 +172,14 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 </TabItem>
 
 <TabItem value="android" label="App Android">
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-region-new.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
 </Tabs>
 
 **Lista de regiões**
 
-|**Código da região**|**Descrição**|**Faixa de frequência (MHz)**|**Ciclo de trabalho (%)**|**Limite de potência (dBm)**|
+|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Não definido|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
@@ -188,7 +188,7 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para uma lista mais abrangente.
 
 :::info
-**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto com base em uma janela contínua de 1 hora. Seu dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
+**EU_868** deve obedecer a uma limitação de duty cycle horário de 10%, calculada a cada minuto em uma janela contínua de 1 hora. Seu dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
@@ -217,7 +217,7 @@ O uso do teclado na versão 2.5.xx (o firmware de fábrica é v2.5.11) e nas ver
 
 #### Parte RP2040
 
-RP2040 ainda não foi desenvolvido, portanto as funções de `buzzer`/`SD card`/`map` ainda não estão disponíveis. Estamos trabalhando com o Meshtastic para otimizá-lo.
+O RP2040 ainda não foi desenvolvido, portanto as funções de `buzzer`/`SD card`/`map` ainda não estão disponíveis. Estamos trabalhando com o Meshtastic para otimizá-lo.
 
 #### Seleção de função (Role)
 
@@ -231,7 +231,7 @@ Se você não conectou o módulo GPS, desative a função de GPS no App `Meshtas
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-module.png" alt="pir" width={600} height="auto" /></p>
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte Técnico e Discussão de Produto
 
 <p style={{textAlign: 'center'}}>
   <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
