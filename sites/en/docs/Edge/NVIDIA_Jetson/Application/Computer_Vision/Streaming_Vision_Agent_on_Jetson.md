@@ -9,6 +9,7 @@ tags:
   - Jetson
   - Multimodal Memory
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/computer_vision.webp
+sku: 100020039, 100094378
 slug: /streaming_vision_agent_on_jetson
 last_update:
   date: 08/03/2026
