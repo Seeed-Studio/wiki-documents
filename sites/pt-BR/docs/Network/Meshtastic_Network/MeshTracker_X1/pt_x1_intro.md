@@ -1,5 +1,5 @@
 ---
-description: Introdução ao SenseCAP MeshTracker X1 para Meshtastic. Este wiki apresentará os recursos, especificações, visão geral do hardware, botão, LED e lista de pinos.
+description: SenseCAP MeshTracker X1 para Meshtastic Introdução. Este wiki apresentará os recursos, especificações, visão geral de hardware, botão, LED e lista de pinos.
 title: Introdução ao SenseCAP MeshTracker X1
 keywords:
   - Tracker
@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla. Desenvolvido para comunicação confiável fora da rede celular, o MeshTracker X1 é um rastreador GPS [Meshtastic®](https://meshtastic.org/) com classificação IP66 que suporta frequências de 863–928 MHz. Alimentado pelo mais recente chip LoRa Semtech LR2021, ele oferece conectividade USB-C, até 5 dias de duração de bateria e um design compacto, pronto para uso ao ar livre.
+O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla. Desenvolvido para comunicação confiável fora da rede celular, o MeshTracker X1 é um rastreador GPS [Meshtastic®](https://meshtastic.org/) com classificação IP66 que suporta frequências de 863–928 MHz. Alimentado pelo mais recente chip LoRa Semtech LR2021, ele possui conectividade USB-C, até 5 dias de duração de bateria e um design compacto, pronto para uso ao ar livre.
 
 ### Recursos
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -38,13 +38,13 @@ O SenseCAP MeshTracker X1 é projetado para pessoas que precisam de comunicaçã
 
 - **Rastreamento GPS de banda dupla ultrapréciso** 
 
-Alimentado por GNSS de banda dupla L1+L5 e um barômetro integrado, o MeshTracker X1 oferece posicionamento mais confiável e melhor percepção de altitude do que o GPS de banda única. Ele também é o primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla.
+Alimentado por GNSS de banda dupla L1+L5 e um barômetro integrado, o MeshTracker X1 oferece posicionamento mais confiável e percepção de altitude superior em comparação com GPS de banda única. Ele também é o primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **Conectividade LoRa de próxima geração (LR2021)** 
 
-Alimentado pelo Semtech LR2021, o MeshTracker X1 oferece desempenho de RF mais forte com sensibilidade de até -141 dBm e taxas de dados FLRC de 2,6 Mbps para comunicação em malha mais rápida e confiável, criando a base para recursos futuros como transmissão de voz e imagem.
+Alimentado pelo Semtech LR2021, o MeshTracker X1 oferece desempenho de RF mais forte com sensibilidade de até -141 dBm e taxas de dados FLRC de 2,6 Mbps para comunicação em malha mais rápida e confiável, criando uma base para recursos futuros como transmissão de voz e imagem.
 
 - **Comunicação confiável de longo alcance** 
 
@@ -80,7 +80,7 @@ Interface USB-C padrão para carregamento, atualizações de firmware e depuraç
 Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de uma bateria de alta capacidade de 1100mAh, oferecendo até 5 dias de funcionamento, mantendo-se compacto e portátil para uso ao ar livre e comunicação fora da rede.
 
 
-### Especificação
+### Especificações
 
 **Geral**
 
@@ -105,17 +105,17 @@ Um formato altamente integrado, do tamanho de um cartão, otimizado em torno de 
 
 **Bateria**
 
-|Item|Parâmetro|s
+|Item|Parâmetro|
 | :- | :- |
-|**Capacidade da bateria**|Bateria LCD recarregável, 1100mAh|
-|**Monitoramento do nível da bateria**|Envio periódico do nível da bateria|
+|**Capacidade da bateria**|Bateria recarregável de alta voltagem, 1100mAh|
+|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente em uplink|
 |**Protocolo de carregamento**|USB Type-C|
-|**Entrada de alimentação do dispositivo**|5V, 0.55A|
-|**Entrada de alimentação da bateria**|4.4V, 0.22A|
-|**Tensão de corte com carga completa**|4.37V|
+|**Entrada de energia do dispositivo**|5V, 0,55A|
+|**Entrada de energia da bateria**|4,4V, 0,22A|
+|**Tensão de corte totalmente carregada**|4,37V|
 |**Limite de temperatura de carregamento**|5 a +45℃|
 
-O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a serem lançados no futuro serão equipados com sensores adicionais (sensores de 3 eixos, magnetômetros de seis eixos etc.).
+O X1 pode ser desenvolvido em uma linha de produtos, na qual novos modelos a serem lançados no futuro serão equipados com sensores adicionais (sensores de 3 eixos, magnetômetros de seis eixos etc.).
 
 ### Lista de pinos
 
@@ -338,7 +338,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
     <td>Totalmente carregado</td>
   </tr>
   <tr>
-    <td>🔴vermelho</td>
+    <td>🔴Vermelho</td>
     <td>Piscando</td>
     <td>Baixa energia</td>
   </tr>
@@ -357,9 +357,9 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos produtos a se
 
 ### Recurso
 
-[Relatório de Teste da Bateria](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+[Relatório de teste da bateria](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
 
-## Suporte Técnico e Discussão sobre o Produto
+## Suporte técnico e discussão sobre o produto
 
 <p style={{textAlign: 'center'}}>
   <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">

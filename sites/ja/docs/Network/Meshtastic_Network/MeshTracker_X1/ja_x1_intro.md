@@ -1,5 +1,5 @@
 ---
-description: Meshtastic 向け SenseCAP MeshTracker X1 の紹介。この Wiki では、機能、仕様、ハードウェア概要、ボタン、LED、およびピン一覧について説明します。
+description: Meshtastic 向け SenseCAP MeshTracker X1 の紹介。この Wiki では、機能、仕様、ハードウェア概要、ボタン、LED、およびピン一覧を紹介します。
 title: SenseCAP MeshTracker X1 入門
 keywords:
   - Tracker
@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-世界初のカードサイズ Meshtastic デバイスであり、デュアルバンド GPS を搭載しています。オフグリッド環境での信頼性の高い通信のために設計された MeshTracker X1 は、IP66 等級の [Meshtastic®](https://meshtastic.org/) GPS トラッカーで、863–928 MHz の周波数帯をサポートします。最新の Semtech LR2021 LoRa チップを搭載し、USB-C 接続、最長 5 日間のバッテリー駆動、屋外使用に適したコンパクトなデザインを備えています。
+世界初のカードサイズ Meshtastic デバイスで、デュアルバンド GPS を搭載しています。オフグリッド環境での信頼性の高い通信のために設計された MeshTracker X1 は、IP66 等級の [Meshtastic®](https://meshtastic.org/) GPS トラッカーで、863–928 MHz の周波数帯をサポートします。最新の Semtech LR2021 LoRa チップを搭載し、USB-C 接続、最長 5 日間のバッテリー駆動、コンパクトで屋外使用に適したデザインを備えています。
 
 ### 特長
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -32,13 +32,13 @@ updatedAt: '2026-07-16'
 
 - **本当に持ち歩ける Meshtastic デバイス** 
 
-SenseCAP MeshTracker X1 は、アウトドア、大規模イベント、緊急時など、セルラー網の外でも信頼できる通信と位置共有を必要とする人のために設計されています。真に携帯しやすいフォームファクタと堅牢な IP66 保護により、Meshtastic 接続を日常の携行品や実際のフィールド利用へと拡張します。
+SenseCAP MeshTracker X1 は、アウトドア、大規模イベント、緊急時など、携帯電話ネットワークの外でも信頼できる通信と位置情報共有を必要とする人のために設計されています。真にポータブルなフォームファクタと堅牢な IP66 保護により、Meshtastic 接続を日常の携行品や実際のフィールド利用へと拡張します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **超高精度デュアルバンド GPS トラッキング** 
 
-デュアルバンド L1+L5 GNSS と内蔵気圧センサにより、MeshTracker X1 はシングルバンド GPS よりも高い信頼性の位置情報と高度認識を実現します。また、デュアルバンド GPS を搭載した世界初のカードサイズ Meshtastic デバイスでもあります。
+デュアルバンド L1+L5 GNSS と内蔵気圧センサにより、MeshTracker X1 はシングルバンド GPS よりも高い信頼性の位置測位と高度認識を実現します。また、デュアルバンド GPS を搭載した世界初のカードサイズ Meshtastic デバイスでもあります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -60,24 +60,24 @@ Semtech LR2021 によって駆動される MeshTracker X1 は、最大 -141 dBm 
 
 - **柔軟なバイブレーション & サウンドアラート** 
 
-MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟な通知オプションを提供します。騒がしいイベント会場、屋外でのライド中、あるいは静かなトレイルであまり邪魔されたくない場合でも、受信メッセージに気付きやすくなります。
+MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟な通知オプションを提供します。騒がしいイベント会場、屋外でのライド中、あるいは静かなトレイルを歩いていてあまり邪魔されたくない場合でも、受信メッセージに気付きやすくなります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **IP66 準拠の堅牢な屋外保護** 
+- **IP66 の堅牢な屋外保護** 
 
-IP66 等級の防塵・防水性能により、雨、泥、ほこりっぽいトレイルなど、過酷な屋外環境でも信頼性の高い動作を保証します。
+IP66 等級の防塵・防水保護構造により、雨、泥、ほこりっぽいトレイルなど、過酷な屋外環境でも信頼性の高い動作を保証します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **USB-C 接続** 
-標準的な USB-C インターフェースにより、充電、ファームウェア更新、デバッグが可能で、屋外でのタフな使用と日常の利便性の両立を図っています。
+標準的な USB-C インターフェースにより、充電、ファームウェア更新、デバッグが可能で、堅牢な屋外利用と日常の利便性の両立を図っています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **長時間バッテリー駆動** 
 
-高容量 1100mAh バッテリーを中心に最適化された高集積カードサイズフォームファクタにより、コンパクトで携帯性を保ちながら、アウトドアでの携行やオフグリッド通信において最長 5 日間の連続動作を実現します。
+高容量 1100mAh バッテリーを中心に最適化された高集積カードサイズフォームファクタにより、コンパクトで携帯性を保ちながら、屋外での携行やオフグリッド通信において最長 5 日間の連続動作を実現します。
 
 
 ### 仕様
@@ -90,8 +90,8 @@ IP66 等級の防塵・防水性能により、雨、泥、ほこりっぽいト
 |**無線**|Bluetooth (v5.0)|
 |**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>最大送信電力: 22dBm|
 |**LED**|1\* RGB|
-|**ブザー**|ステータスを示す 1\* ブザー|
-|**ボタン**|操作用 1\* ボタン|
+|**ブザー**|ステータス表示用ブザー 1 個|
+|**ボタン**|操作用ボタン 1 個|
 |**モーター**|1\* DRV2605L|
 | **気圧**|範囲: 300–1100 hPa<br/>精度: ±0.03 hPa<br/>分解能: 0.06 Pa|
 | **温度**<br/>(温度は気圧センサから取得)| 範囲:-40-85°C<br/>精度: ± 1°C<br/>分解能: 0.0006 °C |
@@ -105,17 +105,17 @@ IP66 等級の防塵・防水性能により、雨、泥、ほこりっぽいト
 
 **バッテリー**
 
-|項目|パラメータ|s
+|項目|パラメータ|
 | :- | :- |
-|**バッテリー容量**|充電式 LCD バッテリー、1100mAh|
-|**バッテリー残量監視**|バッテリー残量を定期的にアップリンク送信|
+|**バッテリー容量**|充電式高電圧バッテリー、1100mAh|
+|**バッテリー寿命モニタリング**|バッテリーレベルを定期的にアップリンク|
 |**充電プロトコル**|USB Type-C|
 |**デバイス電源入力**|5V, 0.55A|
 |**バッテリー電源入力**|4.4V, 0.22A|
 |**満充電カットオフ電圧**|4.37V|
-|**充電温度制限**|5～+45℃|
+|**充電温度範囲**|5 ～ +45℃|
 
-X1 は製品シリーズへと発展する可能性があり、今後発売される新製品には、追加のセンサ（3 軸センサ、6 軸磁力計など）が搭載される予定です。
+X1 は製品シリーズへと発展する可能性があり、将来発売される新しい製品モデルには、追加のセンサ（3 軸センサ、6 軸磁力計など）が搭載される予定です。
 
 ### ピン一覧
 
@@ -141,7 +141,7 @@ X1 は製品シリーズへと発展する可能性があり、今後発売さ�
     <td>P0.28</td>
   </tr>
   <tr>
-    <td>センサ PWR EN</td>
+    <td>Sensor PWR EN</td>
     <td>-</td>
     <td>P1.07</td>
     <td>GPIO</td>
@@ -178,7 +178,7 @@ X1 は製品シリーズへと発展する可能性があり、今後発売さ�
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="3">6 軸センサ (将来バージョン)</td>
+    <td rowspan="3">6 軸センサ（将来バージョン）</td>
     <td>INT</td>
     <td>P1.02</td>
     <td>GPIO</td>
@@ -193,7 +193,7 @@ X1 は製品シリーズへと発展する可能性があり、今後発売さ�
     <td>P1.15</td>
   </tr>
   <tr>
-    <td rowspan="3">3 軸センサ (将来バージョン)</td>
+    <td rowspan="3">3 軸センサ（将来バージョン）</td>
     <td>INT</td>
     <td>P1.12</td>
     <td>GPIO</td>
