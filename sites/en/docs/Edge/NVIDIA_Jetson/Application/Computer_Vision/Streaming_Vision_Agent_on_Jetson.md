@@ -12,7 +12,7 @@ image: https://files.seeedstudio.com/wiki/reComputer-Jetson/computer_vision.webp
 slug: /streaming_vision_agent_on_jetson
 last_update:
   date: 08/03/2026
-  author: Seeed
+  author: HaoChen
 updatedAt: '2026-08-03'
 ---
 
@@ -22,7 +22,7 @@ updatedAt: '2026-08-03'
 
 Most Jetson vision demos stop at **single-frame** detection (each frame is independent) or **short offline clip** understanding (run a VLM once over a few seconds of recorded video). Neither keeps state across a continuous live stream, so after an object leaves the view — or after the clip ends — you usually cannot ask “what just happened a moment ago?” with evidence. A **Streaming Vision Agent** keeps a short **online rolling** multimodal memory on the edge — visual embeddings, episodic events, and semantic facts — and answers questions with evidence frames and clips while the camera is still running.
 
-This wiki deploys a real-time demo on Seeed Jetson devices (verified on **reComputer Mini · Jetson AGX Orin 64GB · JetPack 7.2**). A USB camera feeds a browser UI; two independent **Qwen3-VL-2B** instances handle recognition and Ask so answering does not block background memory writes.
+This wiki deploys a real-time demo on Seeed Jetson devices (verified on **reComputer Mini J5012 · JetPack 7.2**). A USB camera feeds a browser UI; two independent **Qwen3-VL-2B** instances handle recognition and Ask so answering does not block background memory writes.
 
 :::tip
 The design is **inspired by** [WorldMM](https://worldmm.github.io) (CVPR 2026) multimodal memory ideas. This demo targets an **online rolling window** on Jetson — it is **not** a reproduction of the paper’s offline EgoLife benchmarks. See [Inspiration & acknowledgments](#inspiration--acknowledgments).
