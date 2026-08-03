@@ -13,6 +13,7 @@ slug: /streaming_vision_agent_on_jetson
 last_update:
   date: 08/03/2026
   author: Seeed
+updatedAt: '2026-08-03'
 ---
 
 # Streaming Vision Agent on Jetson
@@ -151,6 +152,20 @@ Short capture + pipeline check:
 python script/orin_smoke.py --vlm qwen3vl-2b --seconds 20 \
   --vlm2vec-base "$WORLDMM_MODELS/Qwen2-VL-2B-Instruct"
 ```
+
+## Demo Results
+
+Short demo clips on Seeed files CDN. Open each player to scrub and read UI text (MP4, typically a few MB each).
+
+<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_01.mp4" controls width="800"></video>
+
+<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_02.mp4" controls width="800"></video>
+
+<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_03.mp4" controls width="800"></video>
+
+<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_04.mp4" controls width="800"></video>
+
+<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_05.mp4" controls width="800"></video>
 
 ## What You Should See
 
