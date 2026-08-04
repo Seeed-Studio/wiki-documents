@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-description: Guia rápido da API HTTP
-title: Guia rápido da API HTTP
+description: Obtenha uma chave de acesso à API da SenseCraft Data Platform e faça sua primeira requisição HTTP à API.
+title: Introdução rápida à API HTTP
 keywords:
   - HTTP API
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -12,41 +12,45 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-03-01'
-updatedAt: '2026-03-13'
+updatedAt: '2025-07-10'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-data-platform/api/http-api/quick-start/
 ---
 
-## Pré-requisito
-  Se você não tiver uma conta, registre-se no SenseCAP Portal.
+## Pré-requisitos
+
+Se você ainda não tem uma conta, registre-se na SenseCraft Data Platform (anteriormente SenseCAP Portal) no serviço da sua região:
+
   - [China Station](https://sensecap.seeed.cn)
-  - [China Station](https://sensecap.seeed.cc)
+  - [Global Station](https://sensecap.seeed.cc)
 
 :::note
-   Dispositivos LoRaWAN são usados com a Estação Global
+Dispositivos LoRaWAN são usados com a Global Station.
 :::
 
 ## Obter uma Access Key
 
-1. Faça login no SenseCAP Portal.
-2. Navegue até “Security/Access API keys”
-3. Clique em “Create Access Key”
-4. Clique em “API ID” e obtenha o “API ID” e as “Access API keys” após inserir a senha.
+1. Faça login na SenseCraft Data Platform.
+2. Navegue até `Security` → `Access API keys`.
+3. Clique em `Create Access Key`.
+4. Digite sua senha e, em seguida, copie o `API ID` e a `Access API Key`.
 
-![](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/1.png)
+![Página Access API keys na SenseCraft Data Platform](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/1.png)
 
-![](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/2.png)
+![Janela API ID e Access API Key](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/2.png)
 
 
-## Obter todos os Grupos de Dispositivos
-Use curl para fazer uma solicitação HTTP. O exemplo a seguir chama a API para obter todos os Grupos de Dispositivos da conta.
+## Obter todos os grupos de dispositivos
+Use curl para fazer uma requisição HTTP. O exemplo a seguir obtém todos os grupos de dispositivos da conta.
 
 - username = API ID
 - password = Access API keys
 
+```bash
 curl --user "username":"password" \
-     https://sensecap.seeed.cc/openapi/list_groups
+  https://sensecap.seeed.cc/openapi/list_groups
+```
 
-Você deve substituir e pelos valores que obteve anteriormente. O comando irá gerar uma saída como a seguinte
+Substitua `username` e `password` pelo API ID e pela Access API Key obtidos acima. O comando retorna uma resposta semelhante à seguinte:
 
 ```cpp
 {
@@ -68,7 +72,7 @@ Você deve substituir e pelos valores que obteve anteriormente. O comando irá g
 }
 ```
 
-## Suporte Técnico & Discussão sobre Produtos
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
