@@ -32,7 +32,7 @@ Welcome to **reCamera Pro**. This guide will assist you in completing the hardwa
 
 Before starting the configuration, please ensure that you have prepared the following hardware:
 * **Data Cable**: A USB Type-C cable with data transmission capabilities (do not use a cable that only supports charging).
-* **Power Supply**: A DC power cable (specification requirements: **12V, 1A**, the standard factory power supply is: 12V, 2A).
+* **Power Supply**: A DC power cable (specification requirements: **12V, 1A**, the standard factory power supply is: 12V, 3A).
 
 ### Connection Steps
 
