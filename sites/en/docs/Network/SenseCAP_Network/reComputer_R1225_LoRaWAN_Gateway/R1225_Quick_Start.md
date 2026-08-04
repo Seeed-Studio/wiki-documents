@@ -43,6 +43,8 @@ It's worth noting that the PoE module provided with the reComputer R1225 is comp
 
 ## Access the SenseCAP Gateway OS
 
+The **SenseCAP Gateway OS** is a multi‑protocol IoT gateway operating system designed for industrial indoor scenarios. Built on OpenWrt, it delivers a standardized software foundation that encompasses three core capabilities: LoRaWAN gateway functionality, industrial bus data acquisition, and building compliance reporting. You can also access the source code on our GitHub via the link [**HERE**](https://github.com/Seeed-Studio/SenseCAP-Gateway-OS).
+
 ### Access via router
 
 - Step 1: Connect your R1225 to an Ethernet cable, and connect your PC to the same router
