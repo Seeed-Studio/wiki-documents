@@ -62,7 +62,7 @@ If you need to replace the device's currently running model, the SenseCrfat AI p
 If you need to push the inference results from the device to your own MQTT service or the Sensecraft Data platform, please configure Wi-Fi and MQTT. Next, we will use the Sensecraft Data platform as an example.
 
 1. Enter a valid 2.4G Wi-Fi.
-2. Access the [SenseCraft Data platform](https://sensecap.seeed.cc/portal/#/login) and log in.
+2. Access the [SenseCraft Data platform](https://sensecap.seeed.cc/portal/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_portal#/login) and log in.
 
 :::note
 

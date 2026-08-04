@@ -21,7 +21,7 @@ updatedAt: '2026-07-08'
 ![CodeCraft Banner](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://codecraft.seeed.cc" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Try CodeCraft Now 🚀</font></span></strong>
     </a>
 </div>
@@ -155,8 +155,8 @@ CodeCraft memberships can be purchased through multiple channels. Pricing, promo
 
 | Purchase Path | Steps | Use Case |
 | :--- | :--- | :--- |
-| CodeCraft Home Purchase | 1. Visit https://codecraft.seeed.cc/pricing<br/>2. Select a plan<br/>3. Complete payment | Users comparing plans |
-| Workspace Upgrade | 1. Visit https://codecraft.seeed.cc/workspace<br/>2. Click Settings<br/>3. Go to Billing<br/>4. Purchase plan | Existing users upgrading |
+| CodeCraft Home Purchase | 1. Visit [https://codecraft.seeed.cc/pricing/](https://codecraft.seeed.cc/pricing?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_pricing)<br/>2. Select a plan<br/>3. Complete payment | Users comparing plans |
+| Workspace Upgrade | 1. Visit [https://codecraft.seeed.cc/workspace](https://codecraft.seeed.cc/workspace?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_workspace)<br/>2. Click Settings<br/>3. Go to Billing<br/>4. Purchase plan | Existing users upgrading |
 
 > Both methods activate the same membership under the same account.
 
@@ -173,7 +173,7 @@ CodeCraft memberships can be purchased through multiple channels. Pricing, promo
 
 If you obtain a redemption code from Taobao, official store, or promotions:
 
-1. Open https://codecraft.seeed.cc
+1. Open [https://codecraft.seeed.cc](https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home)
 2. Log in
 3. Enter workspace
 4. Click Settings
@@ -196,7 +196,7 @@ You can view subscription status, balance, redemption records, and usage in sett
 
 Steps:
 
-1. Open workspace: https://codecraft.seeed.cc/workspace
+1. Open workspace: [https://codecraft.seeed.cc/workspace](https://codecraft.seeed.cc/workspace?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_workspace)
 2. Click Settings
 3. Select Billing or Usage
 
