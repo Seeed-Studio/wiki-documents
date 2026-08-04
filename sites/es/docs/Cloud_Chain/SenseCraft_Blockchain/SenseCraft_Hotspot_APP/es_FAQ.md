@@ -30,7 +30,7 @@ No, la App SenseCAP inicia sesión con la cuenta del Dashboard SenseCAP y agrega
 **¿Puedo incorporar un SenseCAP MX Hotspot a mi billetera Helium a través de la App SenseCAP Hotspot？**
 ========================================================================================================
 
-Esto se puede hacer con la última versión de la [**App SenseCAP**](https://www.sensecapmx.com/docs/sesnecap-hotspot-app/download-app/).
+Esto se puede hacer con la última versión de la [**App SenseCAP Hotspot**](https://www.sensecapmx.com/docs/sesnecap-hotspot-app/download-app/).
 
 **¿Puedo gestionar hotspots de otros fabricantes en la App SenseCAP Hotspot?**
 =================================================================================
