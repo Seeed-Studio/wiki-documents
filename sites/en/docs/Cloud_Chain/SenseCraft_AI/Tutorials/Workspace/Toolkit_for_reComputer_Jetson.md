@@ -14,7 +14,7 @@ last_update:
   date: 08/16/2024
   author: Frank
 createdAt: '2024-08-21'
-updatedAt: '2026-05-07'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-jetson/
 ---
 

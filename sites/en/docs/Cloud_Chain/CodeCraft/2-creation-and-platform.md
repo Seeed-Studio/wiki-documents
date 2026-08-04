@@ -13,7 +13,7 @@ last_update:
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/codecraft/creation-and-platform/
 createdAt: '2026-06-29'
-updatedAt: '2026-06-29'
+updatedAt: '2026-08-04'
 ---
 
 # CodeCraft Creation & Platform
