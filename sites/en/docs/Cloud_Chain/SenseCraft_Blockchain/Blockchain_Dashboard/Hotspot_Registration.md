@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/sensecraft-blockchain/blockchain-dashboard/hot
 **How To Register Hotspots With Helium Wallet**
 ===============================================
 
--  Please login to the SenseCAP Dashboard by visiting [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+-  Please login to the SenseCAP Dashboard by visiting [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_dashboard)
 -  Ensure your "Helium APP" is the latest version and login to your Helium wallet.
 
 You can download the latest version by visiting the [**Android Store**](https://play.google.com/store/apps/details?id=com.helium.wallet&hl=en_US) or the [**iOS Store**](https://apps.apple.com/app/id1450463605).
@@ -57,7 +57,7 @@ If your wallet was successfully linked, you will see the message below. **You ar
 
 ![SenseCAP Hotspot Registration 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-6-1.png)
 
-- Log-in to the dashboard ⇒ [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+- Log-in to the dashboard ⇒ [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_dashboard)
 - Enter the credentials you created during registration and log in
 - Navigate to “Hotspot” on the left menu column
 - Click "Add new Hotspot"

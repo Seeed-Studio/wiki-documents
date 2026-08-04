@@ -23,7 +23,7 @@ The SenseCAP M1 dashboard is designed to help you monitor your Hotspot and give 
 **Dashboard Registration**
 ==========================
 
-1. Visit [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+1. Visit [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_dashboard)
 2. Click the "**Register**" button below.  
     1. You will have the option to create an account OR register/login with your Discord Account.
 3. Enter the details required to begin creating your account.
@@ -37,7 +37,7 @@ The SenseCAP M1 dashboard is designed to help you monitor your Hotspot and give 
 **Dashboard Login**
 ===================
 
-1. Visit [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+1. Visit [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_dashboard)
 2. Enter the credentials you created during the registration process OR login with your Discord account details (whichever you've selected during the registration process)
 3. Congratulations, you've successfully logged in.
 

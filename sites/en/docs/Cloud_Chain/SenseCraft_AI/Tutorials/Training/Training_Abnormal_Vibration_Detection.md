@@ -42,7 +42,7 @@ The solution consists of 3 hardware modules.
 
 ### Software Setup
 
-1. Open your browser and visit <a href="https://sensecraft.seeed.cc/ai/home" target="_blank">**SenseCraft AI**</a>.
+1. Open your browser and visit <a href="https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home" target="_blank">**SenseCraft AI**</a>.
 2. Log in with your account (register if you don't have one).
 3. Enter the **XIAO ESP32S3 Sense** workspace and select **"Vibration"**.
 
