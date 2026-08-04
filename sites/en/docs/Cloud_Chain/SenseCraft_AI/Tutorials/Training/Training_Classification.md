@@ -10,7 +10,7 @@ last_update:
   date: 12/03/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2025-08-18'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-training-classification/
 ---
 
