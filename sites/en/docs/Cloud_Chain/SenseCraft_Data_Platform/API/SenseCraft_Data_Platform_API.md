@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: SenseCAP API Introduction
+description: Choose the SenseCraft Data Platform API for device management, historical data access, or real-time device message subscriptions.
 title: SenseCraft Data Platform API Introduction
 keywords:
   - Cloud and Chain
@@ -18,13 +18,19 @@ url: https://wiki.seeedstudio.com/sensecraft-data-platform/sensecraft-data-platf
 
 # SenseCraft Data Platform API Introduction
 
+![SenseCraft Data Platform API overview](https://sensecap-docs.seeed.cc/images/open_api/introduction.png)
 
-=============================
+The SenseCraft Data Platform API, formerly documented as the SenseCAP API, enables applications to manage supported IoT devices and access their data.
 
-![](https://sensecap-docs.seeed.cc/images/open_api/introduction.png)
+## Choose an API
 
-SenseCAP API is for users to manage IoT devices and data. It combines three types of API methods: HTTP protocol, MQTT protocol, and Websocket protocol.
+| Goal | API | Start here |
+| --- | --- | --- |
+| Manage devices and groups, or retrieve current and historical data | HTTP API | [HTTP API Quickstart](/sensecraft-data-platform/api/http-api/quick-start/) |
+| Review HTTP request, response, and authentication details | HTTP API | [HTTP API Access Guide](/sensecraft-data-platform/api/http-api/http-api-access-guide/) |
+| Subscribe to real-time device messages | Data OpenStream API | [Data OpenStream API Quickstart](/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_quickstart/) |
+| Review connection details, topics, and the publish-subscribe model | Data OpenStream API | [Data OpenStream API Reference](/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_reference/) |
 
-*   With HTTP API, users can manage LoRa and NB-IoT devices, to get RAW data or historical data.
-*   With MQTT API, users can subscribe to the sensor’s real-time measurement data through the MQTT protocol.
-*   With Websocket API, users can get real-time measurement data of sensors through Websocket protocol.
+The Data OpenStream API supports MQTT and MQTT over WebSocket for real-time message subscriptions. Use the Data OpenStream API Reference for the current host, port, authentication, and topic details.
+
+See [API Pricing for SenseCraft Data Platform](/sensecraft-fee/sensecraft-data-platform-api-pricing/) for billing rules and examples.
