@@ -1,7 +1,7 @@
 ---
 sidebar_position: 12
 description: SenseCraft AI Jetson
-title: reComputer Jetson 用ツールキット
+title: reComputer Jetson 向けツールキット
 keywords:
   - Cloud and Chain
   - SenseCraft
@@ -18,9 +18,9 @@ updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-jetson/
 ---
 
-SenseCraft AI-Jetson は、NVIDIA Jetson エッジ AI デバイス向けに設計された開発ツールキットおよびプラットフォームです。"Quickstart Script" を実行するだけで、事前に読み込まれた動画と AI モデルを用いたサンプルアプリケーションを確認できるインタラクティブなユーザーインターフェースが表示されます。独自の USB カメラや IP カメラを追加したい場合も、数回クリックするだけで簡単に追加できます。
+SenseCraft AI-Jetson は、NVIDIA Jetson エッジ AI デバイス向けに設計された開発ツールキットおよびプラットフォームです。"Quickstart Script" を実行するだけで、事前に読み込まれたビデオと AI モデルを使用したサンプルアプリケーションを表示できるインタラクティブなユーザーインターフェースが表示されます。USB カメラや IP カメラを追加したい場合は、数回クリックするだけで簡単に追加できます。
 
-標準で提供されるさまざまな組み込み AI モデルに加えて、SenseCraft AI プラットフォーム上の多数の公開モデルにアクセスでき、特定のシナリオ向けに AI モデルをダウンロードしてデプロイし、ニーズに基づいたパーソナライズされた AI ソリューションを作成できます。SenseCraft AI はビジョン AI のインテリジェントな意思決定パートナーとして、シンプルで柔軟かつ効率的な推論およびソリューション構築機能を提供します。
+すぐに使えるさまざまな組み込み AI モデルに加えて、SenseCraft AI プラットフォーム上の多数の公開モデルにアクセスでき、特定のシナリオ向けに AI モデルをダウンロードしてデプロイし、ニーズに基づいたパーソナライズされた AI ソリューションを作成できます。SenseCraft AI はビジョン AI のインテリジェントな意思決定パートナーとして、シンプルで柔軟かつ効率的な推論およびソリューション構築機能を提供します。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/video.gif)
 
@@ -47,16 +47,16 @@ SenseCraft AI-Jetson は、NVIDIA Jetson エッジ AI デバイス向けに設�
 bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai-setup.sh)
 ```
 
-3. アプリケーションのインストール中に、以下のオプション設定を行う必要があります。必要に応じて設定してください
+3. アプリケーションのインストール中に、次のオプション設定を行う必要があります。必要に応じて設定してください
 
 - **[Optional] Enable jetson_clocks script to maximize Jetson performance by setting max frequency to CPU, GPU, and EMC clocks? [y/n] (default: y): y**<br />
-CPU、GPU、EMC クロックの静的な最大周波数を設定することで Jetson の性能を最大化する `jetson_clocks` スクリプトを提供します。
+CPU、GPU、EMC クロックの最大周波数を静的に設定することで Jetson の性能を最大化する `jetson_clocks` スクリプトを提供します。
 
 - **[Optional] Save space by uninstalling some unnecessary packages like libreoffice, change the size of the Swap Memory? (/swapfile) [y/n] (default: n): n**<br />
 メモリが不足している場合（特に Jetson Nano）、プログラムを正常に動作させるために Swap を有効にすることをお勧めします。
 
 - **[Optional] Do you want to create or change the size of the Swap Memory? (/swapfile)?**<br />
-Nano の性能をより引き出すには、Swap を有効にしてください。
+Nano の性能をより引き出すには、Swap をオンにしてください。
 
 - **[Optional] Use external · to store the Docker data directory? (for docker images & volumes)?**<br />
 
@@ -70,7 +70,7 @@ Nano の性能をより引き出すには、Swap を有効にしてください�
 
 ### **新しいモデルのデプロイ**
 
-1. “AI Models“ ページにアクセスし、必要な AI モデルを選択します<br />
+1. 「AI Models」ページにアクセスし、必要な AI モデルを選択します<br />
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/36.png)
 
@@ -82,11 +82,11 @@ Nano の性能をより引き出すには、Swap を有効にしてください�
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/38.png)
 
-4. オンラインのデバイスを 1 台選択します
+4. オンラインのデバイスを 1 つ選択します
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/39.png)
 
-5. AI モデルには動画ストリームの適用が必要です。ストリームがない場合は、まず有効なストリームを追加してください。Model zoo はストリーム情報を直接デバイスに送信します。
+5. AI モデルにはビデオストリームの適用が必要です。ストリームがない場合は、まず有効なストリームを追加してください。Model zoo はストリーム情報を直接デバイスに送信します。
 
 :::note
 ストリーム情報の詳細な説明については Streams Management を確認してください
@@ -96,13 +96,13 @@ Nano の性能をより引き出すには、Swap を有効にしてください�
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/41.png)
 
-6. AI モデルとストリーム情報をデバイスに送信します。AI モデルのデプロイには数分かかるため、現在のページを離れて数分後にデバイス側でデプロイ済みの AI モデルを確認できます
+6. AI モデルとストリーム情報をデバイスに送信します。AI モデルのデプロイには数分かかるため、現在のページを離れて数分後にデバイスにアクセスし、デプロイされた AI モデルを確認できます。
 
-### **Streams 管理**
+### **ストリーム管理**
 
-SenseCraft AI-Jetson は複数の動画ストリームの追加をサポートしており、必要に応じて USB カメラや IP カメラを追加できます。
+SenseCraft AI-Jetson は複数のビデオストリームの追加をサポートしており、必要に応じて USB カメラや IP カメラを追加できます。
 
-追加できる動画ストリームの数は、デバイスの CPU およびメモリリソースに依存します。デバイスのリソース使用状況に注意してください。
+追加できるビデオストリームの数は、デバイスの CPU およびメモリリソースに依存します。デバイスのリソース使用状況に注意してください。
 
 #### **ストリームの追加**
 
@@ -110,22 +110,22 @@ SenseCraft AI-Jetson は複数の動画ストリームの追加をサポート�
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/42.png)
 
-2. 新しい動画ストリームの有効な情報を設定します。詳細は以下の表を確認してください<br />
+2. 新しいビデオストリームの有効な情報を設定します。詳細は以下の表を確認してください<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/43.png)
 
 | **項目** | **内容** |
 | --- | --- |
-| **Stream Name** | 1 このストリーム用のカスタム名<br />2 空欄にはできません |
-| **Video Type** | 1 Ip camera：IP カメラへアクセスします。有効な RTSP URL を入力する必要があります<br />2 Usb camera：USB カメラをデバイスに接続すると自動的に USB を認識し、その後 Video Path で正しい USB カメラを選択します。 |
-| **Video Path** | Video Path。形式は "Video Type" によって決まります。誤っている場合はデフォルト動画が使用されます。 |
+| **Stream Name** | 1 このストリーム用のカスタム名。<br />2 空欄にはできません |
+| **Video Type** | 1 Ip camera：IP カメラへアクセスします。有効な rtsp URL を入力する必要があります<br />2 Usb camera：USB カメラをデバイスに接続すると、自動的に USB を認識し、その後 Video Path で正しい USB カメラを選択します。 |
+| **Video Path** | Video Path。"Video Type" によって形式が決まります。間違っている場合はデフォルトのビデオが使用されます。 |
 | **Device AI Model** | 1 すでにデバイスにダウンロードされている AI モデルを選択します<br />2 デバイスに AI モデルがない場合は、AI Models ページに移動してモデルをデバイスにダウンロードしてください。 |
-| **Confidence Threshold** | 1 検出のためのオブジェクト信頼度しきい値<br />2 形式: float [0, 1] |
-| **IoU Threshold** | 1 IoU は、予測されたバウンディングボックスと正解のバウンディングボックスの精度を評価するために使用されます2 形式: float [0, 1] |
-| **FPS** | 1 ストリームのフレームレート（Frames per second）<br />2 形式: INT [1,60] |
-| **Quality** | 1 出力ストリームの画質。デフォルト: 50<br />2 形式: int [0,100] |
-| **Maximum Detections** | 1 1 画像あたりの最大検出数。デフォルト: 3002 形式: int [0,1000] |
-| **Display Frame Rate** | 1 ストリームのフレームレートを表示するかどうか<br />2 形式: Bool [True,False]<br />● True: FPS を表示<br />● False: FPS を表示しない |
-| **Display Clock** | 1 時刻を表示するかどうか<br />2 形式: Bool [True,False]<br />● True: 時刻を表示<br />● False: 時刻を表示しない |
+| **Confidence Threshold** | 1 検出のためのオブジェクト信頼度しきい値。<br />2 形式：float [0, 1] |
+| **IoU Threshold** | 1 IoU は、予測されたバウンディングボックスの精度を真のバウンディングボックスと比較して評価するために使用されます2 形式：float [0, 1] |
+| **FPS** | 1 ストリームのフレームレート（Frames per second）<br />2 形式：INT [1,60] |
+| **Quality** | 1 出力ストリームの画質。デフォルト：50<br />2 形式：int [0,100] |
+| **Maximum Detections** | 1 1 画像あたりの最大検出数。デフォルト：3002 形式：int [0,1000] |
+| **Display Frame Rate** | 1 ストリームのフレームレートを表示するかどうか<br />2 形式：Bool [True,False]<br />● True: FPS を表示<br />● False: FPS を表示しない |
+| **Display Clock** | 1 時刻を表示するかどうか<br />2 形式：Bool [True,False]<br />● True: 時刻を表示<br />● False: 時刻を表示しない |
 
 3. "Save" ボタンをクリックし、ホームページに戻って新しいストリームと AI 検出結果を確認します。
 
@@ -147,11 +147,11 @@ SenseCraft AI-Jetson は複数の動画ストリームの追加をサポート�
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/47.png)
 
-### **設定**
+### **Settings**
 
 #### **About**
 
-デバイス情報です。詳細は以下の表を確認してください <br />
+デバイス情報です。詳細は以下の表を確認してください<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/48.png)
 
 | **項目** | **内容** |
@@ -165,14 +165,14 @@ SenseCraft AI-Jetson は複数の動画ストリームの追加をサポート�
 | **Swap** | デバイスの Swap |
 | **Disk usage** | デバイスのディスク使用量 |
 | **Cuda version** | デバイスにインストールされている Cuda のバージョン |
-| **Jetpack version** | デバイスにインストールされている JetPack のバージョン |
+| **Jetpack version** | デバイスにインストールされている Jetpack のバージョン |
 
 #### **SenseCraft AI プラットフォームへのバインド**
 
-SenseCraft AI for Jetson はエッジ AI 向けに設計されています。AI 推論と動画ストリーム処理はデバイス上でローカルに実行されます。より多くの AI モデルをダウンロードする必要がある場合にのみ、デバイスを [SenseCraft AI プラットフォーム](https://sensecraft.seeed.cc/ai) にバインドする必要があります。ダウンロード後はデバイスを削除できます。
+SenseCraft AI for Jetson はエッジ AI 向けに設計されています。AI 推論とビデオストリーム処理はデバイス上でローカルに実行されます。より多くの AI モデルをダウンロードする必要がある場合にのみ、デバイスを [SenseCraft AI platform](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) にバインドする必要があります。ダウンロード後はデバイスを削除できます。
 
-1. [SenseCraft AI](https://sensecraft.seeed.cc/ai) にアクセスします。<br />
-2. 有効なメールアドレスで登録します。SenseCraft AI アカウントは SenseCAP Cloud アカウントと共通であり、すでにお持ちの場合はそのままログインできます。
+1. [SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) にアクセスします。<br />
+2. 有効なメールアドレスで登録します。SenseCraft AI アカウントは SenseCAP Cloud アカウントと同じです。すでにお持ちの場合は、そのままログインできます。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/49.png)
 
@@ -181,9 +181,9 @@ SenseCraft AI for Jetson はエッジ AI 向けに設計されています。AI 
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/50.png)
 
-5. デバイス側の SenseCraft AI アプリケーションに戻ります。"Bind to SenseCraft AI platform" をクリックすると、アプリケーションにバインドコードと一時名が表示されます。
+5. デバイスの SenseCraft AI アプリケーションに戻ります。"Bind to SenseCraft AI platform" をクリックすると、アプリケーションにバインドコードと一時名が表示されます。
 
-- Bind Code: デバイスのバインドを完了するには、[SenseCraft AI プラットフォーム](https://sensecraft.seeed.cc/ai) 上で正しく有効なバインドコードを入力します。<br />
+- Bind Code: デバイスのバインドを完了するには、[SenseCraft AI platform](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) 上で正しく有効なバインドコードを入力します。<br />
 - Temporary Name: バインドコードが重複している場合は、正しい一時名を入力する必要があります。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/51.png)
@@ -199,7 +199,7 @@ SenseCraft AI for Jetson はエッジ AI 向けに設計されています。AI 
 
 #### **Ubind**
 
-AI プラットフォーム上でデバイスをリモート管理する必要がなくなった場合は、AI プラットフォームのアカウントからデバイスを削除できます。デバイス側またはプラットフォーム側のどちらからでもバインド解除が可能です<br />
+AI プラットフォーム上でデバイスをリモート管理する必要がなくなった場合は、AI プラットフォームのアカウントからデバイスを削除できます。デバイス側またはプラットフォーム側のどちらからでもバインド解除できます<br />
 
 - AI model zoo からデバイスのバインドを解除するには、"Delete" をクリックします<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/59.png)
@@ -211,11 +211,11 @@ AI プラットフォーム上でデバイスをリモート管理する必要�
 
 SenseCraft AI アプリのアップデートは自動更新と手動更新に分類されており、ニーズに応じて設定できます。
 
-**自動更新**: 5 分ごとにアップデートを確認し、新しいバージョンが検出されると情報が自動的に更新され、手動で行う必要はありません。
+**Automatic update**: 5 分ごとにアップデートを確認し、新しいバージョンが検出されると情報が自動的に更新され、手動で行う必要はありません。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/56.png)
 
-**手動更新**: 手動でアップデートを確認し、新しいバージョンが検出されたら Update ボタンをクリックして更新します
+**手動アップデート**：手動でアップデートを確認し、新しいバージョンが検出されたら Update ボタンをクリックしてアップデートします
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/57.png)
 
@@ -223,7 +223,7 @@ SenseCraft AI アプリのアップデートは自動更新と手動更新に分
 
 ## **技術サポート**
 
-**SenseCAP Indicator でお困りですか？私たちがサポートします！**
+**SenseCAP Indicator についてお困りですか？私たちがサポートします！**
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

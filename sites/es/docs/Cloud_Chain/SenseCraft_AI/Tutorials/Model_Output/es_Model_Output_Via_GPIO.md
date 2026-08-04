@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-outpu
 
 # Configuración de la salida del modelo y GPIO en SenseCraft AI para XIAO ESP32S3 Sense
 
-Este artículo de la wiki proporciona una guía paso a paso sobre cómo configurar la salida del modelo y los ajustes de GPIO para la placa XIAO ESP32S3 Sense usando la plataforma SenseCraft AI. Siguiendo estas instrucciones, aprenderás cómo activar cambios de nivel en los GPIO basados en condiciones de eventos específicas detectadas por tu modelo entrenado.
+Este artículo de la wiki proporciona una guía paso a paso sobre cómo configurar la salida del modelo y los ajustes de GPIO para la placa XIAO ESP32S3 Sense utilizando la plataforma SenseCraft AI. Siguiendo estas instrucciones, aprenderás cómo activar cambios de nivel en los GPIO basados en condiciones de eventos específicas detectadas por tu modelo entrenado.
 
 ## Requisitos previos
 
@@ -24,14 +24,14 @@ Antes de comenzar, asegúrate de contar con lo siguiente:
 
 1. Placa XIAO ESP32S3 Sense
 2. Cable de datos USB-C
-3. Placa base de expansión para XIAO con OLED
+3. Expansion Board Base for XIAO with OLED
 4. Grove LED
 
 <div class="table-center">
   <table align="center">
     <tr>
       <th>XIAO ESP32S3 Sense</th>
-      <th>Placa base de expansión para XIAO con OLED</th>
+      <th>Expansion Board Base for XIAO with OLED</th>
       <th>Grove LED</th>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ Antes de comenzar, asegúrate de contar con lo siguiente:
 
 ## Paso 1. Accede al espacio de trabajo de XIAO ESP32S3 Sense y conecta el dispositivo
 
-Accede al espacio de trabajo de XIAO ESP32S3 Sense a través de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, o utiliza el [enlace directo al espacio de trabajo](https://sensecraft.seeed.cc/ai/device/local/32).
+Accede al espacio de trabajo de XIAO ESP32S3 Sense a través de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, o utiliza el [enlace directo al espacio de trabajo](https://sensecraft.seeed.cc/ai/device/local/32).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -75,7 +75,7 @@ Antes de continuar, asegúrate de que tu placa XIAO ESP32S3 Sense tenga un model
 
 - [Uso de un modelo para XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/es/sensecraft_ai_pretrained_models_for_xiao/)
 
-Si quieres usar tu propio modelo entrenado, puedes consultar los dos wikis siguientes.
+Si quieres utilizar tu propio modelo entrenado, puedes consultar los dos wikis siguientes.
 
 - [Tipo de entrenamiento - Clasificación](https://wiki.seeedstudio.com/es/sensecraft_ai_training_classification/)
 - [Tipo de entrenamiento - Detección de objetos](https://wiki.seeedstudio.com/es/sensecraft_ai_training_object_detection/)
@@ -98,7 +98,7 @@ Aparecerá un cuadro de diálogo que te pedirá introducir varios parámetros qu
 
 - **Confidence**: Establece el nivel mínimo de confianza requerido para que la detección del objeto active el cambio de GPIO. Este valor va de 1 a 100, siendo 100 la confianza más alta.
 
-- **GPIO**: Selecciona el pin GPIO específico en la XIAO ESP32S3 Sense que quieres controlar. Las opciones disponibles incluyen GPIO1(DO), GPIO2(D1), etc.
+- **GPIO**: Selecciona el pin GPIO específico en la XIAO ESP32S3 Sense que deseas controlar. Las opciones disponibles incluyen GPIO1(DO), GPIO2(D1), etc.
 
 - **Default Status**: Elige el estado predeterminado del pin GPIO seleccionado. Las opciones incluyen "Low Level" y "High Level".
 
@@ -110,7 +110,7 @@ Después de configurar las condiciones de activación deseadas, haz clic en el b
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/48.png" style={{width:1000, height:'auto'}}/></div>
 
-La placa XIAO ahora ejecutará el comando y podrás observar el efecto en el Grove LED conectado a través de la placa base de expansión para XIAO con Grove OLED.
+La placa XIAO ahora ejecutará el comando y podrás observar el efecto en el Grove LED conectado a través de la Expansion Board Base for XIAO with Grove OLED.
 
 :::caution
 Ten en cuenta que la funcionalidad de salida GPIO depende de la conexión basada en la web entre la plataforma SenseCraft AI y tu placa XIAO ESP32S3 Sense. Si la conexión se pierde o se interrumpe, la función de cambio de nivel de GPIO basada en la detección del modelo dejará de funcionar. Asegúrate de mantener una conexión estable durante todo el proceso.
@@ -118,7 +118,7 @@ Ten en cuenta que la funcionalidad de salida GPIO depende de la conexión basada
 
 ## Conclusión
 
-Siguiendo esta guía paso a paso, has aprendido cómo configurar la salida del modelo y los ajustes de GPIO en la plataforma SenseCraft AI para la placa XIAO ESP32S3 Sense. Ahora puedes activar cambios de nivel en los GPIO basados en condiciones de eventos específicas detectadas por tu modelo entrenado. Esta funcionalidad abre una amplia gama de posibilidades para crear proyectos y aplicaciones interactivas usando la XIAO ESP32S3 Sense y SenseCraft AI. Recuerda mantener una conexión estable entre la plataforma web y tu dispositivo para un funcionamiento sin interrupciones.
+Siguiendo esta guía paso a paso, has aprendido cómo configurar la salida del modelo y los ajustes de GPIO en la plataforma SenseCraft AI para la placa XIAO ESP32S3 Sense. Ahora puedes activar cambios de nivel en los GPIO basados en condiciones de eventos específicas detectadas por tu modelo entrenado. Esta funcionalidad abre una amplia gama de posibilidades para crear proyectos y aplicaciones interactivas utilizando la XIAO ESP32S3 Sense y SenseCraft AI. Recuerda mantener una conexión estable entre la plataforma web y tu dispositivo para un funcionamiento sin interrupciones.
 
 ## Soporte técnico y debate sobre el producto
 

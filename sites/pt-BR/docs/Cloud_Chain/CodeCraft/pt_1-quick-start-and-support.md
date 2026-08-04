@@ -4,7 +4,7 @@ title: Início Rápido e Suporte do CodeCraft
 keywords:
   - CodeCraft
   - Quick Start
-sidebar_label: 1. Quick Start & Support
+sidebar_label: 1. Início Rápido e Suporte
 image: https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp
 slug: /codecraft/quick-start-and-support
 sidebar_position: 2
@@ -12,7 +12,7 @@ last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/pt-br/codecraft/quick-start-and-support/
-createdAt: '2026-06-30'
+createdAt: '2026-06-29'
 updatedAt: '2026-07-08'
 ---
 
@@ -21,8 +21,8 @@ updatedAt: '2026-07-08'
 ![CodeCraft Banner](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://codecraft.seeed.cc" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Experimente o CodeCraft agora 🚀</font></span></strong>
+    <a class="get_one_now_item" href="https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>Experimente o CodeCraft Agora 🚀</font></span></strong>
     </a>
 </div>
 
@@ -32,7 +32,7 @@ updatedAt: '2026-07-08'
 
 CodeCraft é um assistente de programação com IA projetado especificamente para cenários de hardware. Você só precisa descrever o que deseja em linguagem natural, e o CodeCraft pode gerar programas de hardware executáveis para você.
 
-Ele é adequado para usuários que desejam concluir rapidamente a criação de hardware sem configurar um ambiente de desenvolvimento do zero. Seja você estudante, professor, maker ou iniciante em programação de hardware, é possível concluir todo o processo da ideia à execução por meio de conversas.
+Ele é adequado para usuários que desejam concluir rapidamente criações de hardware sem configurar um ambiente de desenvolvimento do zero. Seja você estudante, professor, maker ou iniciante em programação de hardware, pode concluir todo o processo da ideia à execução por meio de conversas.
 
 ### 1.1.2 Da Ideia à Execução em Quatro Etapas
 
@@ -73,10 +73,10 @@ Comparado com ferramentas gerais de codificação com IA, o CodeCraft é mais fo
 
 As capacidades centrais do CodeCraft incluem:
 
-| Fluxo de Trabalho Tradicional de Desenvolvimento (Muito Complexo ❌) | Capacidades Centrais do CodeCraft (Muito Simples ✅) |
+| Fluxo de Trabalho de Desenvolvimento Tradicional (Muito Complexo ❌) | Capacidades Centrais do CodeCraft (Muito Simples ✅) |
 | :--- | :--- |
-| ❌ Instalar IDEs grandes | ✨ Zero instalação: totalmente baseado na web, nenhum cliente necessário |
-| ❌ Configurar ambientes complexos | ✨ Zero configuração: nenhum driver ou configuração de ambiente necessária |
+| ❌ Instalar IDEs grandes | ✨ Zero instalação: totalmente baseado na web, sem necessidade de cliente |
+| ❌ Configurar ambientes complexos | ✨ Zero configuração: sem necessidade de drivers ou configuração de ambiente |
 | ❌ Escrever código do zero | 🤖 Nativo em IA: entende pinos e sensores, gera diretamente código de hardware |
 | ❌ Gerenciar toolchains complexas | ☁️ Compilação em nuvem: compilação totalmente automatizada no backend |
 | ❌ Exportação e gravação manuais | 🚀 Gravação com um clique: envio direto para o dispositivo |
@@ -88,10 +88,10 @@ As capacidades centrais do CodeCraft incluem:
 
 O CodeCraft se integra perfeitamente ao ecossistema de hardware da Seeed Studio e oferece suporte aos seguintes dispositivos:
 
-* **Wio Terminal**: Uma placa de desenvolvimento tudo-em-um com tela de 2,4 polegadas, vários sensores e suporte a Wi-Fi e Bluetooth.
-* **XIAO ESP32S3 Sense**: Uma placa de desenvolvimento compacta com câmera e microfone, adequada para projetos de IA de visão e voz.
+* **Wio Terminal**: Uma placa de desenvolvimento tudo-em-um com display de 2,4 polegadas, vários sensores e suporte a Wi-Fi e Bluetooth.
+* **XIAO ESP32S3 Sense**: Uma placa de desenvolvimento compacta com câmera e microfone, adequada para projetos de visão e voz com IA.
 * **Grove Beginner Kit**: Uma placa tudo-em-um com módulos integrados, sem necessidade de fiação, ideal para iniciantes e educação.
-* **300+ Sensores Grove**: Suporta detecção de movimento, monitoramento ambiental, saída de exibição, controle de atuação, detecção de luz e som e imagem.
+* **300+ Sensores Grove**: Suporta detecção de movimento, monitoramento ambiental, saída de display, controle de atuação, detecção de luz e som e imagem.
 
 ---
 
@@ -145,7 +145,7 @@ O CodeCraft oferece diferentes planos de assinatura para atender a diversas nece
 | Pro | Estudantes, entusiastas | Adequado para aprendizado, projetos e uso moderado |
 | Max | Professores, makers, desenvolvedores | Cota maior para ensino, desenvolvimento e uso intenso |
 
-> Preços, cotas e validade podem variar dependendo de promoções ou canais de compra. Consulte a página oficial de compra para detalhes.
+> Preços, cotas e validade podem variar dependendo de promoções ou canais de compra. Consulte a página oficial de compra para mais detalhes.
 
 ### 1.3.2 Métodos de Compra
 
@@ -155,17 +155,17 @@ As assinaturas do CodeCraft podem ser adquiridas por vários canais. Preços, pr
 
 | Caminho de Compra | Etapas | Caso de Uso |
 | :--- | :--- | :--- |
-| Compra na Página Inicial do CodeCraft | 1. Acesse https://codecraft.seeed.cc/pricing<br/>2. Selecione um plano<br/>3. Conclua o pagamento | Usuários comparando planos |
-| Upgrade pelo Workspace | 1. Acesse https://codecraft.seeed.cc/workspace<br/>2. Clique em Settings<br/>3. Vá para Billing<br/>4. Compre o plano | Usuários existentes fazendo upgrade |
+| Compra na Página Inicial do CodeCraft | 1. Visite [https://codecraft.seeed.cc/pricing/](https://codecraft.seeed.cc/pricing?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_pricing)<br/>2. Selecione um plano<br/>3. Conclua o pagamento | Usuários comparando planos |
+| Upgrade pelo Workspace | 1. Visite [https://codecraft.seeed.cc/workspace](https://codecraft.seeed.cc/workspace?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_workspace)<br/>2. Clique em Settings<br/>3. Vá para Billing<br/>4. Compre um plano | Usuários existentes fazendo upgrade |
 
 > Ambos os métodos ativam a mesma assinatura na mesma conta.
 
-#### Método 2: Loja Seeed Studio (CN e Global)
+#### Método 2: Loja Seeed Studio (China e Global)
 
 | Caminho de Compra | Etapas | Caso de Uso |
 | :--- | :--- | :--- |
-| [Loja Seeed Studio no Taobao](https://item.taobao.com/item.htm?id=1061524473439&skuId=6270812574966&spm=a213gs.v2success.0.0.17b14831MkryRQ) | 1. Compre na loja oficial do Taobao<br/>2. Receba o código de resgate<br/>3. Insira na página de cobrança do CodeCraft | Usuários domésticos, compras educacionais |
-| [Loja Oficial Seeed Studio](https://www.seeedstudio.com/CodeCraft-Hardware-focused-AI-Coding-Assistant-for-Wio-Terminal-Grove-Beginner-Kit-XIAO-ESP32.html) | 1. Compre na loja oficial<br/>2. Receba o código de resgate<br/>3. Ative na página de cobrança do CodeCraft | Usuários internacionais, instituições |
+| [Loja Seeed Studio no Taobao](https://item.taobao.com/item.htm?id=1061524473439&skuId=6270812574966&spm=a213gs.v2success.0.0.17b14831MkryRQ) | 1. Compre na loja oficial do Taobao<br/>2. Receba o código de resgate<br/>3. Insira-o na página de cobrança do CodeCraft | Usuários domésticos, compras educacionais |
+| [Loja Oficial Seeed Studio](https://www.seeedstudio.com/CodeCraft-Hardware-focused-AI-Coding-Assistant-for-Wio-Terminal-Grove-Beginner-Kit-XIAO-ESP32.html) | 1. Compre na loja oficial<br/>2. Receba o código de resgate<br/>3. Ative-o na página de cobrança do CodeCraft | Usuários internacionais, instituições |
 
 ---
 
@@ -173,7 +173,7 @@ As assinaturas do CodeCraft podem ser adquiridas por vários canais. Preços, pr
 
 Se você obtiver um código de resgate pelo Taobao, loja oficial ou promoções:
 
-1. Abra https://codecraft.seeed.cc
+1. Abra [https://codecraft.seeed.cc](https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home)
 2. Faça login
 3. Entre no workspace
 4. Clique em Settings
@@ -192,11 +192,11 @@ Observações:
 
 ## 1.4 Gerenciamento de Cobrança e Uso
 
-Você pode visualizar o status da assinatura, saldo, registros de resgate e uso nas configurações.
+Você pode visualizar o status da assinatura, saldo, registros de resgate e uso em Settings.
 
 Etapas:
 
-1. Abra o workspace: https://codecraft.seeed.cc/workspace
+1. Abra o workspace: [https://codecraft.seeed.cc/workspace](https://codecraft.seeed.cc/workspace?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_workspace)
 2. Clique em Settings
 3. Selecione Billing ou Usage
 
@@ -228,30 +228,30 @@ Professores e instituições devem monitorar o uso regularmente para fins de pla
 
 ---
 
-## 1.5 Ajuda e Suporte
+## 1.5 Ajuda e suporte
 
 ### 1.5.1 FAQ
 
 **P: Por que meu código de resgate é inválido?**  
-R: Verifique a correção, o status de uso e a conta em que você fez login.
+R: Verifique a correção, o status de uso e o login da conta.
 
-**P: Não recebi o código após comprar no Taobao.**  
+**P: Não recebi o código após a compra no Taobao.**  
 R: Verifique os detalhes do pedido ou entre em contato com o suporte da loja.
 
 **P: A assinatura não foi ativada após o resgate?**  
 R: Atualize a página ou faça login novamente. Se ainda estiver inválido, entre em contato com o suporte com as informações do pedido.
 
-### 1.5.2 Contatar o Suporte
+### 1.5.2 Contatar o suporte
 
-#### Suporte Técnico
+#### Suporte técnico
 
 * Clique em “Contact Us” nas configurações do workspace
 * Acompanhe as atualizações beta para novos recursos
-* Instituições podem solicitar códigos de sala de aula e personalização
+* As instituições podem solicitar códigos de sala de aula e personalização
 * Compra de hardware: https://seeedstudio.com  
 
 ![Contact Us](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/contact-us-EN.png)
 
-#### Suporte Adicional
+#### Suporte adicional
 
 ![Professional Support](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/Professional-Support-EN.png)
