@@ -39,7 +39,7 @@ SenseCraft App é um aplicativo móvel para visualização de dados e gerenciame
 
 SenseCraft App está disponível nas versões para iOS e Android.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_1.png" alt="SenseCraft App download options" width={600} height="auto" /></p>
+[Baixe o aplicativo SenseCraft na Central de Downloads oficial da SenseCraft](https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_app).
 
 ## Conta
 
