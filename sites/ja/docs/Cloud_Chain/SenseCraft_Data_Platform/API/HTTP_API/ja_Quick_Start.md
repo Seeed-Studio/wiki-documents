@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: HTTP API クイックスタート
+description: SenseCraft Data Platform API のアクセスキーを取得し、最初の HTTP API リクエストを実行します。
 title: HTTP API クイックスタート
 keywords:
   - HTTP API
@@ -11,42 +11,46 @@ aliases:
 last_update:
   date: 1/13/2023
   author: shuxu hu
-createdAt: '2025-09-04'
-updatedAt: '2026-03-04'
+createdAt: '2023-03-01'
+updatedAt: '2025-07-10'
 url: https://wiki.seeedstudio.com/ja/sensecraft-data-platform/api/http-api/quick-start/
 ---
 
 ## 前提条件
-  アカウントをお持ちでない場合は、SenseCAP Portal にご登録ください。
-  - [China Station](https://sensecap.seeed.cn)
-  - [China Station](https://sensecap.seeed.cc)
+
+アカウントをお持ちでない場合は、お住まいの地域のサービスで SenseCraft Data Platform（旧 SenseCAP Portal）に登録してください：
+
+  - [中国ステーション](https://sensecap.seeed.cn)
+  - [グローバルステーション](https://sensecap.seeed.cc)
 
 :::note
-   LoRaWAN デバイスは Global Station で使用されます
+LoRaWAN デバイスはグローバルステーションで使用されます。
 :::
 
-## アクセスキーの取得
+## アクセスキーを取得する
 
-1. SenseCAP Portal にログインします。
-2. 「Security/Access API keys」に移動します
-3. 「Create Access Key」をクリックします
-4. 「API ID」をクリックし、パスワードを入力後に「API ID」と「Access API keys」を取得します。
+1. SenseCraft Data Platform にログインします。
+2. `Security` → `Access API keys` に移動します。
+3. `Create Access Key` をクリックします。
+4. パスワードを入力し、`API ID` と `Access API Key` をコピーします。
 
-![](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/1.png)
+![SenseCraft Data Platform の Access API keys ページ](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/1.png)
 
-![](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/2.png)
+![API ID と Access API Key のダイアログ](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/2.png)
 
 
-## すべてのデバイスグループの取得
-curl を使用して HTTP リクエストを作成します。以下の例では、API を呼び出してアカウント配下のすべてのデバイスグループを取得します。
+## すべてのデバイスグループを取得する
+curl を使用して HTTP リクエストを送信します。次の例では、アカウント配下のすべてのデバイスグループを取得します。
 
 - username = API ID
 - password = Access API keys
 
+```bash
 curl --user "username":"password" \
-     https://sensecap.seeed.cc/openapi/list_groups
+  https://sensecap.seeed.cc/openapi/list_groups
+```
 
-先ほど取得したものに置き換えてください。コマンドは以下のような出力を行います
+上で取得した API ID と Access API Key で `username` と `password` を置き換えます。コマンドは次のようなレスポンスを返します：
 
 ```cpp
 {
@@ -68,9 +72,9 @@ curl --user "username":"password" \
 }
 ```
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

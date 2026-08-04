@@ -1,35 +1,35 @@
 ---
-description: 探索 Seeed 的 SenseCraft Cloud 服务——一款功能强大、工业级的平台，专为高效数据管理、实时运行和可扩展的 IoT 应用而设计。了解更多 SenseCraft 如何支持您的工业 IoT 云端部署。
-title: Cloud
+description: 探索 Seeed 的 SenseCraft Cloud 服务——一款功能强大、工业级的平台，专为高效数据管理、实时运营和可扩展的 IoT 应用而设计。了解更多 SenseCraft 如何支持您的工业 IoT 云端部署。
+title: 云
 keywords:
   - SenseCraft Matrix
   - SenseCraft
   - SenseCraft AI
   - SenseCraft Cloud
-  - 工业 IoT 云
-  - 数据管理
-  - 设备管理
-  - 实时运行
+  - Industrial IoT Cloud
+  - Data Management
+  - Device management
+  - Real-Time Operations
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Cloud
 last_update:
   date: 06/06/2025
   author: Jancee
 createdAt: '2023-01-05'
-updatedAt: '2026-03-23'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/cn/Cloud/
 ---
 
 
-云服务是关键组成部分，用于承载来自计算板的处理后数据管理，并为用户提供实时操作能力。本页将介绍 Seeed 的工业级 SenseCraft 云服务，以及其他面向多样化工业 IoT 需求的云服务应用。通过强大的云基础设施，Seeed 使用户能够安全地存储、分析和利用处理后的数据，促进数据驱动的决策制定，并在各个领域提升运营效率。
+云服务是关键组成部分，用于承载来自计算板的处理后数据管理，并为用户提供实时操作能力。本页将介绍 Seeed 的工业级 SenseCraft 云服务，以及其他面向多样化工业 IoT 需求的云服务应用。通过强大的云基础设施，Seeed 赋能用户安全地存储、分析和利用处理后的数据，促进数据驱动的决策制定，并在各个领域提升运营效率。
 
 ## SenseCraft 云服务
 
-<strong><font color={'8DC215'} size={"4"}>本节重点介绍 Seeed Studio 提供的不同云服务，这些服务针对多种工业 IoT 应用进行了定制。您可以在以下几个方面进一步探索：</font></strong>
+<strong><font color={'8DC215'} size={"4"}>本节重点介绍 Seeed Studio 提供的不同云服务，这些服务针对多种工业 IoT 应用进行了定制。您可以在以下几个方面进一步了解：</font></strong>
 
 - SenseCraft 生态系统与云服务目录。
 - 各云产品的数据与设备管理使用说明
-- 各类连接用途的 API
+- 用于各种连接目的的 API
 - 云服务简介
 
 ### SenseCraft 数据平台 / 区块链仪表盘
@@ -43,7 +43,7 @@ url: https://wiki.seeedstudio.com/cn/Cloud/
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP MX 仪表盘</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCraft MX 仪表盘</font></div>
             <a href="/cn/sensecraft-blockchain/blockchain-dashboard/dashboard-basics" target="_blank"><span><font color={'FFFFFF'} size={"2"}>仪表盘基础</font></span></a>
             <br/>
             <a href="/cn/sensecraft-blockchain/blockchain-dashboard/dashboard-registration" target="_blank"><span><font color={'FFFFFF'} size={"2"}>仪表盘注册</font></span></a>
@@ -99,29 +99,31 @@ url: https://wiki.seeedstudio.com/cn/Cloud/
 <br />
 <br />
 
-### SenseCraft APP
+### SenseCraft App
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft App</font></div>
-            <p>SenseCraft App 用于在手机上配置、构建和管理传感器，并展示来自 SenseCraft 数据平台的数据。</p>
+            <p>SenseCraft App 用于在手机上配置和管理传感器，并显示来自 SenseCraft 数据平台的数据。</p>
             <br/>
-            > <a href="/cn/sensecraft-app/overview#download" target="_blank"><span><font color={'FFFFFF'} size={"3"}>下载</font></span></a> / <a href="/cn/sensecraft-app/overview#config" target="_blank"><span><font color={'FFFFFF'} size={"3"}>绑定设备</font></span></a> / <a href="/cn/sensecraft-app/overview#account" target="_blank"><span><font color={'FFFFFF'} size={"3"}>账户</font></span></a> / <a href="/cn/sensecraft-app/overview#user" target="_blank"><span><font color={'FFFFFF'} size={"3"}>用户</font></span></a>
+            > <a href="/cn/sensecraft-app/overview#download" target="_blank"><span><font color={'FFFFFF'} size={"3"}>下载</font></span></a> / <a href="/cn/sensecraft-app/overview#device" target="_blank"><span><font color={'FFFFFF'} size={"3"}>绑定设备</font></span></a> / <a href="/cn/sensecraft-app/overview#account" target="_blank"><span><font color={'FFFFFF'} size={"3"}>账户</font></span></a> / <a href="/cn/sensecraft-app/overview#user" target="_blank"><span><font color={'FFFFFF'} size={"3"}>用户</font></span></a>
     </div>
 </div>
 
 <br />
 <br />
 
-### SenseCraft AI
+<a id="sensecraft-ai"></a>
+
+### AI Advisor
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft AI</font></div>
-            <p>可以在 SenseCraft 数据平台和 SenseCraft App 中访问 SenseCraft AI。</p>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>AI Advisor</font></div>
+            <p>AI Advisor 使用来自 SenseCraft 数据平台的传感器数据，为支持的场景提供建议。</p>
             <br/>
-            > <a href="/cn/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>入门指南</font></span></a>
-            > <a href="/cn/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>连接 XIAO ESP32-C3</font></span></a>
+            > <a href="/cn/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>AI Advisor</font></span></a>
+            > <a href="/cn/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>种植建议示例</font></span></a>
     </div>
 </div>
 

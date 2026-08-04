@@ -31,9 +31,8 @@ Bienvenido a **reCamera Pro**. Esta guía le ayudará a completar la conexión d
 ## 1. Conexión de hardware
 
 Antes de comenzar la configuración, asegúrese de haber preparado el siguiente hardware:
-
-- **Cable de datos**: Un cable USB Type-C con capacidad de transmisión de datos (no utilice un cable que solo admita carga).
-- **Fuente de alimentación**: Un cable de alimentación de CC (requisitos de especificación: **12V, 1A**, la fuente de alimentación estándar de fábrica es: 12V, 2A).
+* **Cable de datos**: Un cable USB Type-C con capacidad de transmisión de datos (no utilice un cable que solo admita carga).
+* **Fuente de alimentación**: Un cable de alimentación de CC (requisitos de especificación: **12V, 1A**, la fuente de alimentación estándar de fábrica es: 12V, 3A).
 
 ### Pasos de conexión
 
