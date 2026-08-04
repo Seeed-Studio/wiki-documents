@@ -72,7 +72,7 @@ Before attempting to log in to the Web interface, please ensure the USB Type-C c
 ![Web login and main interface diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip Common Troubleshooting
-If the page fails to load after entering `192.168.42.1` under the Windows system, please jump directly to the [5. Frequently Asked Questions and Troubleshooting (FAQ)](#4-frequently-asked-questions-and-troubleshootingfaq) section at the bottom of this document to perform a network adapter check.
+If the page fails to load after entering `192.168.42.1` under the Windows system, please jump directly to the [5. Frequently Asked Questions and Troubleshooting (FAQ)](#5-frequently-asked-questions-and-troubleshootingfaq) section at the bottom of this document to perform a network adapter check.
 :::
 
 ---

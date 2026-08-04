@@ -72,7 +72,7 @@ Antes de intentar iniciar sesión en la interfaz web, asegúrese de que el cable
 ![Diagrama de inicio de sesión web e interfaz principal](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip Solución de problemas comunes
-Si la página no se carga después de introducir `192.168.42.1` en el sistema Windows, vaya directamente a la sección [5. Frequently Asked Questions and Troubleshooting (FAQ)](#4-frequently-asked-questions-and-troubleshootingfaq) al final de este documento para realizar una comprobación del adaptador de red.
+Si la página no se carga después de introducir `192.168.42.1` en el sistema Windows, vaya directamente a la sección [5. Frequently Asked Questions and Troubleshooting (FAQ)](#5-frequently-asked-questions-and-troubleshootingfaq) al final de este documento para realizar una comprobación del adaptador de red.
 :::
 
 ---

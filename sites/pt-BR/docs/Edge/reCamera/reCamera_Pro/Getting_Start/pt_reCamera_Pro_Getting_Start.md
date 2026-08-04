@@ -72,7 +72,7 @@ Antes de tentar fazer login na interface Web, certifique-se de que o cabo USB Ty
 ![Diagrama de login Web e interface principal](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip Solução de Problemas Comuns
-Se a página não carregar após digitar `192.168.42.1` no sistema Windows, vá diretamente para a seção [5. Perguntas Frequentes e Solução de Problemas (FAQ)](#4-perguntas-frequentes-e-solução-de-problemasfaq) no final deste documento para realizar uma verificação do adaptador de rede.
+Se a página não carregar após digitar `192.168.42.1` no sistema Windows, vá diretamente para a seção [5. Perguntas Frequentes e Solução de Problemas (FAQ)](#5-perguntas-frequentes-e-solução-de-problemasfaq) no final deste documento para realizar uma verificação do adaptador de rede.
 :::
 
 ---

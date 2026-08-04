@@ -72,7 +72,7 @@ reCamera Pro 内置直观的 Web 管理系统，您可以通过浏览器直接�
 ![Web 登录与主界面示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip 常见故障排查
-如果在 Windows 系统下输入 `192.168.42.1` 后页面无法加载，请直接跳转到本文档底部的 [5. 常见问题与故障排查（FAQ）](#4-常见问题与故障排查faq) 章节进行网卡检查。
+如果在 Windows 系统下输入 `192.168.42.1` 后页面无法加载，请直接跳转到本文档底部的 [5. 常见问题与故障排查（FAQ）](#5-常见问题与故障排查faq) 章节进行网卡检查。
 :::
 
 ---
