@@ -1,5 +1,5 @@
 ---
-description: Descubre los servicios en la nube SenseCraft de Seeed: una potente plataforma de nivel industrial diseñada para una gestión eficiente de datos, operaciones en tiempo real y aplicaciones IoT escalables. Más información sobre cómo SenseCraft admite tu implementación de nube IoT industrial.
+description: Descubre los servicios en la nube SenseCraft de Seeed - una potente plataforma de nivel industrial diseñada para una gestión eficiente de datos, operaciones en tiempo real y aplicaciones IoT escalables. Más información sobre cómo SenseCraft admite tu implementación de nube IoT industrial.
 title: Nube
 keywords:
   - SenseCraft Matrix
