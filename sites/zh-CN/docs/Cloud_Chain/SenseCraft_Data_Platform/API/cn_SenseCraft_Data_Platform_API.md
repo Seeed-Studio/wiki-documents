@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-description: SenseCAP API Introduction
-title: SenseCraft 数据平台 API 介绍
+description: 选择 SenseCraft Data Platform API 以进行设备管理、历史数据访问或实时设备消息订阅。
+title: SenseCraft Data Platform API 简介
 keywords:
   - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -11,20 +11,26 @@ aliases:
 last_update:
   date: 02/14/2023
   author: Matthew
-createdAt: '2025-08-07'
-updatedAt: '2026-03-04'
+createdAt: '2023-02-24'
+updatedAt: '2025-07-04'
 url: https://wiki.seeedstudio.com/cn/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api/
 ---
 
-# SenseCraft 数据平台 API 介绍
+# SenseCraft Data Platform API 简介
 
+![SenseCraft Data Platform API overview](https://sensecap-docs.seeed.cc/images/open_api/introduction.png)
 
-=============================
+SenseCraft Data Platform API 之前在文档中称为 SenseCAP API，它使应用能够管理受支持的物联网设备并访问其数据。
 
-![](https://sensecap-docs.seeed.cc/images/open_api/introduction.png)
+## 选择一个 API
 
-SenseCAP API 供用户管理物联网设备和数据。它结合了三种类型的 API 方法：HTTP 协议、MQTT 协议和 Websocket 协议。
+| 目标 | API | 从这里开始 |
+| --- | --- | --- |
+| 管理设备和分组，或获取当前和历史数据 | HTTP API | [HTTP API 快速入门](/cn/sensecraft-data-platform/api/http-api/quick-start/) |
+| 查看 HTTP 请求、响应和认证的详细信息 | HTTP API | [HTTP API 访问指南](/cn/sensecraft-data-platform/api/http-api/http-api-access-guide/) |
+| 订阅实时设备消息 | Data OpenStream API | [Data OpenStream API 快速入门](/cn/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_quickstart/) |
+| 查看连接详情、主题以及发布-订阅模型 | Data OpenStream API | [Data OpenStream API 参考](/cn/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_reference/) |
 
-*   通过 HTTP API，用户可以管理 LoRa 和 NB-IoT 设备，获取原始数据或历史数据。
-*   通过 MQTT API，用户可以通过 MQTT 协议订阅传感器的实时测量数据。
-*   通过 Websocket API，用户可以通过 Websocket 协议获取传感器的实时测量数据。
+Data OpenStream API 支持 MQTT 和基于 WebSocket 的 MQTT，用于实时消息订阅。请使用 Data OpenStream API 参考以获取当前主机、端口、认证和主题的详细信息。
+
+有关计费规则和示例，请参阅 [SenseCraft Data Platform 的 API 计费](/cn/sensecraft-fee/sensecraft-data-platform-api-pricing/)。
