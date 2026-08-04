@@ -3,7 +3,7 @@ description: Crea proyectos de hardware sin código con CodeCraft, selecciona el
 title: Creación y Plataforma de CodeCraft
 keywords:
   - CodeCraft
-  - Creación
+  - Creation
 sidebar_label: 2. Creación y Plataforma
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /codecraft/creation-and-platform
@@ -12,8 +12,8 @@ last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/es/codecraft/creation-and-platform/
-createdAt: '2026-06-30'
-updatedAt: '2026-06-30'
+createdAt: '2026-06-29'
+updatedAt: '2026-06-29'
 ---
 
 # Creación y Plataforma de CodeCraft
@@ -28,7 +28,7 @@ CodeCraft es una plataforma de programación conversacional basada en la web. No
 
 El flujo de trabajo básico es el siguiente:
 
-1. Visita https://codecraft.seeed.cc
+1. Visita [https://codecraft.seeed.cc](https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home)
 2. Inicia sesión en tu cuenta
 3. Selecciona tu placa de desarrollo
 4. Describe la funcionalidad que quieres implementar
@@ -47,7 +47,7 @@ En el espacio de trabajo, selecciona tu dispositivo. El hardware de nivel inicia
 - XIAO ESP32S3 Sense  
 - Grove Beginner Kit  
 
-Además de lo anterior, CodeCraft también es compatible con una gama más amplia de dispositivos en el ecosistema de hardware de Seeed Studio. Puedes elegir placas de desarrollo, sensores o módulos de expansión según las necesidades de tu proyecto. Después de seleccionar el hardware, CodeCraft genera código y documentación optimizados adaptados a las capacidades del dispositivo.
+Además de lo anterior, CodeCraft también es compatible con una gama más amplia de dispositivos en el ecosistema de hardware de Seeed Studio. Puedes elegir placas de desarrollo, sensores o módulos de expansión según las necesidades de tu proyecto. Después de seleccionar el hardware, CodeCraft genera código y documentación optimizados y adaptados a las capacidades del dispositivo.
 
 ![Ilustración de la página de selección de hardware](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/HardwareEco-EN.png)
 
@@ -73,13 +73,13 @@ Este ejemplo te guía para crear un temporizador Pomodoro basado en Wio Terminal
 
 Puedes introducir:
 
-> Crea un programa de temporizador Pomodoro para Wio Terminal. Requisitos:
-> 1. Mostrar una cuenta regresiva en tiempo real en formato mm:ss.
-> 2. Establecer el tiempo de enfoque en 25 minutos y el tiempo de descanso en 5 minutos.
-> 3. El botón A inicia o pausa el temporizador.
-> 4. El botón B reinicia el temporizador.
-> 5. El botón C cambia entre los modos de enfoque y descanso.
-> 6. Mostrar un mensaje de recordatorio cuando el temporizador termine.
+> Please create a Pomodoro timer program for Wio Terminal. Requirements:
+> 1. Display a real-time countdown in mm:ss format.
+> 2. Set focus time to 25 minutes and break time to 5 minutes.
+> 3. Button A starts or pauses the timer.
+> 4. Button B resets the timer.
+> 5. Button C switches between focus and break modes.
+> 6. Show a reminder message when the timer ends.
 
 <!--![Pomodoro Prompt Input Interface](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/POMODORO-TIMER-PROMPT-EN.png)-->
 
@@ -88,7 +88,7 @@ Puedes introducir:
 #### 2.2.1.3 Flashear al hardware
 
 1. Conecta el Wio Terminal a tu ordenador usando un cable USB.  
-2. Sigue las instrucciones en pantalla para entrar en el modo de flasheo.  
+2. Sigue las instrucciones en pantalla para entrar en modo de flasheo.  
 3. Haz clic en el botón “Connect and Flash” en CodeCraft.  
 4. Espera a que la carga se complete.
 
@@ -100,7 +100,7 @@ Puedes introducir:
 
 Si quieres modificar el proyecto, puedes seguir diciéndole a CodeCraft:
 
-> Cambia el tiempo de enfoque a 45 minutos y el tiempo de descanso a 10 minutos.
+> Please change the focus time to 45 minutes and the break time to 10 minutes.
 
 CodeCraft actualizará el código y generará una nueva versión según tu solicitud.
 
@@ -120,13 +120,13 @@ Este ejemplo te guía para crear un proyecto de parpadeo de LED basado en ESP32.
 
 Puedes introducir:
 
-> Crea un programa de parpadeo de LED para ESP32. Requisitos:
-> 1. Usar el LED integrado.
-> 2. Conmutar el LED cada 0,2 segundos.
-> 3. Cuando el LED esté ON, enviar “LED ON” por serie.
-> 4. Cuando el LED esté OFF, enviar “LED OFF” por serie.
-> 5. Establecer la velocidad en baudios de la serie en 115200.
-> 6. Ejecutarse de forma continua.
+> Please create an LED blinking program for ESP32. Requirements:
+> 1. Use the onboard LED.
+> 2. Toggle the LED every 0.2 seconds.
+> 3. When LED is ON, send “LED ON” via serial.
+> 4. When LED is OFF, send “LED OFF” via serial.
+> 5. Set serial baud rate to 115200.
+> 6. Run continuously.
 
 <!--![ESP32 Prompt Input Interface](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/ESP32-Light-Prompt-EN.png)-->
 
@@ -150,7 +150,7 @@ Puedes introducir:
 
 Si quieres modificar el proyecto, puedes seguir diciéndole a CodeCraft:
 
-> Cambia el intervalo de parpadeo del LED a 1 segundo y muestra el conteo de parpadeos en la salida serie.
+> Please change the LED blinking interval to 1 second and display the blink count in the serial output.
 
 CodeCraft actualizará el código y generará una nueva versión.
 
@@ -170,13 +170,13 @@ Este ejemplo te guía para crear un proyecto de LED controlado por botón usando
 
 Puedes introducir:
 
-> Crea un “interruptor de LED controlado por botón” usando Grove Beginner Kit. Requisitos:
-> 1. Usar el botón integrado para controlar el LED integrado.
-> 2. Encender el LED cuando se pulse el botón.
-> 3. Apagar el LED cuando se suelte el botón.
-> 4. Imprimir el estado del botón por serie en tiempo real.
-> 5. Enviar “Pressed” cuando se pulse el botón.
-> 6. Enviar “Released” cuando se suelte el botón.
+> Please create a “button-controlled LED switch” using Grove Beginner Kit. Requirements:
+> 1. Use the onboard button to control the onboard LED.
+> 2. Turn on the LED when the button is pressed.
+> 3. Turn off the LED when the button is released.
+> 4. Print button status via serial in real time.
+> 5. Send “Pressed” when the button is pressed.
+> 6. Send “Released” when the button is released.
 
 <!--![Grove Beginner Kit Prompt Interface](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Grove-Beginner-Kit-Prompt-EN.png)-->
 
@@ -198,7 +198,7 @@ Antes de flashear, comprueba si se requieren controladores:
 3. Haz clic en el botón “Connect and Flash”.  
 4. Espera a que la carga se complete.  
 5. Pulsa y suelta el botón integrado y observa el comportamiento del LED.  
-6. Abre el monitor serie y confirma que aparezcan “Pressed” y “Released”.  
+6. Abre el monitor serie y confirma que aparecen “Pressed” y “Released”.  
    (Nota: Asegúrate de que la velocidad en baudios del código coincida con la de la herramienta de depuración).
 
 ![Salida del monitor serie de Grove Beginner Kit](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Beginner-Kit-Serial-Debugger-EN.png)
@@ -209,7 +209,7 @@ Antes de flashear, comprueba si se requieren controladores:
 
 Si quieres modificar el proyecto, puedes seguir diciéndole a CodeCraft:
 
-> Haz que el zumbador suene una vez cuando se pulse el botón y muestra el número de pulsaciones del botón en la salida serie.
+> Please make the buzzer sound once when the button is pressed and display the number of button presses in the serial output.
 
 CodeCraft actualizará el código y generará una nueva versión.
 
@@ -221,7 +221,7 @@ CodeCraft actualizará el código y generará una nueva versión.
 R: Comprueba si el cable USB admite transmisión de datos y asegúrate de que la placa de desarrollo esté en el modo de flasheo correcto.
 
 **P: ¿Qué debo hacer si se producen errores de compilación?**  
-R: Revisa la información de depuración del espacio de trabajo y asegúrate de que la velocidad en baudios, el modelo de hardware y la configuración del sensor sean correctos.
+R: Revisa la información de depuración del espacio de trabajo y asegúrate de que la velocidad en baudios, el modelo de hardware y la configuración de los sensores sean correctos.
 
 **P: ¿Dónde puedo encontrar más ejemplos de proyectos?**  
-R: Visita la SenseCraft AI Application Gallery: https://sensecraft.seeed.cc/ai/application
+R: Visita la Galería de Aplicaciones de SenseCraft AI: [https://sensecraft.seeed.cc/ai/application](https://sensecraft.seeed.cc/ai/application?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_app_square)

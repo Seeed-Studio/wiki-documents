@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-description: XIAO ESP32S3 Sense用のモデルの使用方法
-title: XIAO ESP32S3 Sense用のモデルの使用
+description: XIAO ESP32S3 Sense でモデルを使用する方法
+title: XIAO ESP32S3 Sense でモデルを使用する
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/14.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-xiao
 aliases:
@@ -9,24 +9,24 @@ aliases:
 last_update:
   date: 12/02/2024
   author: Citric
-createdAt: '2025-09-04'
-updatedAt: '2026-03-04'
+createdAt: '2024-12-02'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-xiao/
 ---
 
-# XIAO ESP32S3 Sense用のモデルの使用
+# XIAO ESP32S3 Sense でモデルを使用する
 
-SenseCraft AIは、様々なデバイスと互換性のあるAIモデルの豊富なリポジトリを提供する強力なプラットフォームです。開発者や愛好家が、自分のハードウェア上で異なるAIモデルを簡単にデプロイし、実験することを可能にします。この包括的なチュートリアルでは、XIAO ESP32S3 SenseボードでSenseCraft AIモデルを使用し、モデルの出力をプレビューするプロセスをガイドします。また、モデルの性能を理解し最適化するために、いくつかの重要な概念と設定についても詳しく説明します。
+SenseCraft AI は、さまざまなデバイスに対応した多数の AI モデルを提供する強力なプラットフォームです。開発者や愛好家は、ハードウェア上でさまざまな AI モデルを簡単にデプロイし、試すことができます。この包括的なチュートリアルでは、XIAO ESP32S3 Sense ボード上で SenseCraft AI モデルを使用し、その出力をプレビューする手順を順を追って説明します。また、モデルの性能を理解し最適化するのに役立つ、いくつかの重要な概念や設定についても掘り下げて解説します。
 
-## 前提条件
+## 事前準備
 
-開始する前に、以下のものが揃っていることを確認してください：
+始める前に、以下のものを用意してください。
 
-- **XIAO ESP32S3 Senseボード**：これは、ESP32-S3マイクロコントローラーの力と様々なセンサーおよび周辺機器を組み合わせた、コンパクトで多用途な開発ボードです。
+- **XIAO ESP32S3 Sense ボード**: ESP32-S3 マイコンの性能と、各種センサーや周辺機能を組み合わせた、コンパクトで多用途な開発ボードです。
 
-- **USB-Cケーブル**：プログラミングと電源供給のために、XIAO ESP32S3 Senseボードをコンピューターに接続するためのUSBケーブルが必要です。
+- **USB-C ケーブル**: XIAO ESP32S3 Sense ボードをコンピュータに接続し、書き込みと電源供給を行うための USB ケーブルが必要です。
 
-- **SenseCraft AIモデルリポジトリウェブページへのアクセス**：安定したインターネット接続があり、SenseCraft AIウェブサイトにアクセスできることを確認してください。
+- **SenseCraft AI モデルリポジトリ Web ページへのアクセス**: 安定したインターネット接続を用意し、SenseCraft AI の Web サイトにアクセスできることを確認してください。
 
 <div class="table-center">
   <table align="center">
@@ -39,113 +39,112 @@ SenseCraft AIは、様々なデバイスと互換性のあるAIモデルの豊�
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
-
 </div>
 
-## ステップ1. XIAO ESP32S3 Sense用のモデルをフィルタリング
+## ステップ 1. XIAO ESP32S3 Sense 用モデルのフィルタリング
 
-Webブラウザを開き、SenseCraft AIモデルリポジトリにアクセスします。
+Web ブラウザを開き、SenseCraft AI モデルリポジトリにアクセスします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/model" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>ワンクリック直接アクセス 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_model_library#/model" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>ワンクリックで直接アクセス 🖱️</font></span></strong>
     </a>
 </div><br />
 
-モデルリポジトリページには、さまざまなデバイスとアプリケーション向けの幅広いAIモデルが表示されます。
+モデルリポジトリのページには、さまざまなデバイスやアプリケーション向けに利用可能な幅広い AI モデルが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/13.png" style={{width:1000, height:'auto'}}/></div>
 
-Webページの左サイドバーで、**Supported Devices**セクションを見つけます。デバイスのリストから、**XIAO ESP32S3 Sense**をクリックして、お使いの特定のデバイスと互換性のあるモデルをフィルタリングします。
+Web ページ左側のサイドバーで、**Supported Devices** セクションを探します。デバイス一覧から **XIAO ESP32S3 Sense** をクリックし、お使いのデバイスに対応したモデルだけが表示されるようにフィルタリングします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/14.png" style={{width:1000, height:'auto'}}/></div>
 
-このステップにより、XIAO ESP32S3 Senseボードにデプロイして実行できるモデルのみが表示されるようになります。
+このステップにより、XIAO ESP32S3 Sense ボードにデプロイして実行できるモデルのみが表示されるようになります。
 
-## ステップ2. モデルを選択
+## ステップ 2. モデルを選択する
 
-このチュートリアルでは、例として**Face Detection**モデルを使用します。ただし、お客様の興味や要件に基づいて、他のモデルも自由に探索・実験してください。
+このチュートリアルでは例として **Face Detection** モデルを使用します。ただし、興味や要件に応じて、他のモデルを自由に探索・試用して構いません。
 
-**Face Detection**モデルをクリックして、専用ページを開きます。
+**Face Detection** モデルをクリックして、その専用ページを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/15.png" style={{width:1000, height:'auto'}}/></div>
 
-モデルページでは、説明、モデル精度、モデル形式など、モデルに関する詳細情報を確認できます。
+モデルのページには、説明、モデル精度、モデル形式など、モデルに関する詳細情報が記載されています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/16.png" style={{width:1000, height:'auto'}}/></div>
 
-モデルのページで、ページ上部にある**Deploy Model**ボタンをクリックします。
+モデルのページで、ページ上部にある **Deploy Model** ボタンをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/17.png" style={{width:1000, height:'auto'}}/></div>
 
-この操作により、選択したモデルのデプロイメントプロセスが開始され、XIAO ESP32S3 Senseボードにダウンロードして実行する準備が整います。
+この操作により、選択したモデルのデプロイプロセスが開始され、XIAO ESP32S3 Sense ボードにダウンロードして実行するための準備が行われます。
 
-## ステップ3. デバイスを接続
+## ステップ 3. デバイスを接続する
 
-Deploy Modelボタンをクリックした後、デプロイメントページの下に表示される**Connect Device**ボタンをクリックします。
+Deploy Model ボタンをクリックした後、デプロイページ下部に表示される **Connect Device** ボタンをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/18.png" style={{width:1000, height:'auto'}}/></div>
 
-新しいページが開きます。この時点で、XIAO ESP32S3 SenseをUSB-Cケーブルでコンピュータに接続してください。
+新しいページが開きます。この時点で、XIAO ESP32S3 Sense を USB-C ケーブルでコンピュータに接続してください。
 
-デバイス接続ページでは、名前とモデルIDを含むモデル情報の概要が表示されます。詳細を注意深く確認して、XIAO ESP32S3 Senseボード用に正しいモデルが選択されていることを確認してください。情報が正確であれば、**Confirm**ボタンをクリックしてモデルのデプロイメントを続行します。
+デバイス接続ページには、モデル名やモデル ID など、モデル情報の概要が表示されます。XIAO ESP32S3 Sense ボード用に正しいモデルが選択されているかを確認するため、内容をよく確認してください。情報に問題がなければ、**Confirm** ボタンをクリックしてモデルのデプロイを続行します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/19.png" style={{width:1000, height:'auto'}}/></div>
 
-モデル情報を確認した後、XIAOボード用のシリアルポートを選択するよう求めるウィンドウがポップアップ表示されます。シリアルポートは、コンピュータとXIAO ESP32S3 Senseボード間の通信チャネルです。XIAO ESP32S3 Senseに対応する正しいポート番号を選択してください。不明な場合は、オペレーティングシステムのデバイスマネージャーまたはボードのドキュメントを参照して、正しいポートを特定できます。
+モデル情報を確認すると、XIAO ボード用のシリアルポートを選択するよう求めるウィンドウがポップアップ表示されます。シリアルポートは、コンピュータと XIAO ESP32S3 Sense ボード間の通信チャネルです。お使いの XIAO ESP32S3 Sense に対応する正しいポート番号を選択してください。不明な場合は、OS のデバイスマネージャやボードのドキュメントを参照して、正しいポートを特定してください。
 
-**Connect**ボタンをクリックして、コンピュータとXIAOボード間の接続を確立します。
+**Connect** ボタンをクリックして、コンピュータと XIAO ボード間の接続を確立します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/20.png" style={{width:1000, height:'auto'}}/></div>
 
 ## ステップ 4. モデルのアップロード
 
-接続が確立されると、選択されたモデルがXIAOボードへのダウンロードを開始します。モデルのアップロードプロセスは、モデルのサイズとインターネット接続の速度によって約1〜2分かかる場合があります。このステップでは、必要なモデルファイルと依存関係がXIAO ESP32S3 Senseボードに転送され、AIモデルをローカルで実行する準備が整います。
+接続が確立されると、選択したモデルの XIAO ボードへのダウンロードが開始されます。モデルのアップロードには、モデルのサイズやインターネット接続速度にもよりますが、おおよそ 1～2 分ほどかかる場合があります。このステップでは、必要なモデルファイルや依存関係が XIAO ESP32S3 Sense ボードに転送され、AI モデルをローカルで実行するための準備が行われます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/21.png" style={{width:1000, height:'auto'}}/></div>
 
-## ステップ 5. モデルプレビュー
+## ステップ 5. モデルのプレビュー
 
-モデルのアップロードが成功すると、プレビュー機能が自動的に開始されます。プレビューウィンドウには、XIAO ESP32S3 Senseのカメラからのリアルタイム映像フィードが表示され、モデルの検出結果が映像にオーバーレイされます。顔検出モデルの場合、映像ストリーム内で検出された顔の周りに境界ボックスが描画されます。各境界ボックスは、モデルが識別した顔を表します。プレビュー機能により、モデルの出力をリアルタイムで確認でき、その性能の即座の視覚的フィードバックを得ることができます。
+モデルのアップロードが完了すると、自動的にプレビューフィーチャーが起動します。プレビューウィンドウには、XIAO ESP32S3 Sense のカメラからのリアルタイム映像と、その上に重ねて表示されるモデルの検出結果が表示されます。Face Detection モデルの場合、ビデオストリーム内で検出された顔の周囲にバウンディングボックスが描画されます。各バウンディングボックスは、モデルが認識した 1 つの顔を表します。プレビューフィーチャーにより、モデルの出力をリアルタイムで確認でき、その性能を即座に視覚的にフィードバックとして得ることができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/22.png" style={{width:1000, height:'auto'}}/></div>
 
 ## モデルの微調整（オプション）
 
-1. モデルの性能を最適化したり、特定の用途に適応させたい場合は、プレビューセクションの下にある利用可能なオプションを使用してモデルの設定を微調整できます。
+1. モデルの性能を最適化したり、特定のユースケースに合わせて調整したい場合は、プレビューセクションの下にあるオプションを使ってモデル設定を微調整できます。
 
-2. 調整できる2つの重要なパラメータは、「信頼度閾値」と「Intersection over Union（IoU）閾値」です。
+2. 調整可能な重要なパラメータとして、「Confidence Threshold」と「Intersection over Union (IoU) Threshold」の 2 つがあります。
 
-   - **信頼度閾値**: この値は、モデルが検出を有効と見なすために必要な最小信頼度レベルを決定します。信頼度閾値が高いほど検出数は少なくなりますが確実性が高くなり、閾値が低いほど検出数は多くなりますが偽陽性が含まれる可能性があります。
+   - **Confidence Threshold**: この値は、検出結果を有効と見なすために必要な最小の信頼度を決定します。Confidence Threshold を高く設定すると、検出数は少なくなりますが確度は高くなり、低く設定すると検出数は増えますが誤検出が含まれる可能性があります。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/confi.gif" style={{width:600, height:'auto'}}/></div>
 
-   - **IoU閾値**: IoUは、予測された境界ボックスと正解境界ボックス間の重複を測定する指標です。物体検出の精度を決定するために使用されます。IoU閾値は、検出が真陽性と見なされるために必要な最小IoU値を設定します。この閾値を調整することで、モデルの精度と再現率を微調整できます。
+   - **IoU Threshold**: IoU は、予測されたバウンディングボックスと正解のバウンディングボックスとの重なり具合を測る指標です。物体検出の精度を判断するために使用されます。IoU Threshold は、検出結果を真陽性と見なすために必要な最小 IoU 値を設定します。このしきい値を調整することで、モデルの適合率（precision）と再現率（recall）を微調整することができます。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/iou.gif" style={{width:600, height:'auto'}}/></div>
 
-3. 信頼度閾値とIoU閾値の異なる値を試して、顔を正確に検出することと偽陽性を最小化することの最適なバランスを見つけてください。最適な設定は、特定のアプリケーションや画像・映像フィードの特性によって異なる場合があります。
+3. Confidence Threshold と IoU Threshold の値をさまざまに変えて試し、顔を正確に検出しつつ誤検出を最小限に抑える最適なバランスを見つけてください。最適な設定は、具体的なアプリケーションや画像・ビデオフィードの特性によって異なる場合があります。
 
 ## まとめ
 
-おめでとうございます！XIAO ESP32S3 SenseボードにSenseCraft AI顔検出モデルを正常にデプロイし、その出力をプレビューし、モデルの性能を微調整する方法を学びました。
+おめでとうございます！SenseCraft AI の Face Detection モデルを XIAO ESP32S3 Sense ボードに正常にデプロイし、その出力をプレビューし、さらにモデルの性能を微調整する方法を学びました。
 
-このチュートリアルで説明した手順に従うことで、XIAO ESP32S3 Sense上でSenseCraft AIリポジトリで利用可能な様々なAIモデルを簡単に探索し、実験することができます。SenseCraft AIプラットフォームは、ユーザーフレンドリーなインターフェースと幅広いモデルの選択肢を提供し、初心者から経験豊富な開発者まで利用しやすくなっています。
+このチュートリアルで説明した手順に従うことで、SenseCraft AI リポジトリで提供されているさまざまな AI モデルを、XIAO ESP32S3 Sense 上で簡単に探索・試用できます。SenseCraft AI プラットフォームは、初心者から経験豊富な開発者まで利用しやすいユーザーフレンドリーなインターフェースと、豊富なモデル群を提供しています。
 
-サポートされているモデル、その機能、利用可能な追加設定オプションについての詳細情報は、SenseCraft AIとXIAO ESP32S3 Senseボードが提供するドキュメントとリソースを参照してください。
+対応モデルやその機能、利用可能な追加設定オプションなどの詳細については、SenseCraft AI および XIAO ESP32S3 Sense ボードが提供するドキュメントやリソースを参照してください。
 
-他のモデルを探索し、異なる設定を試し、特定のプロジェクトやアプリケーションに適応させることを自由に行ってください。SenseCraft AIとXIAO ESP32S3 Senseボードの組み合わせにより、可能性は無限大です。
+他のモデルを試したり、さまざまな設定を実験したりして、特定のプロジェクトやアプリケーションに合わせてカスタマイズしてみてください。SenseCraft AI と XIAO ESP32S3 Sense ボードを組み合わせれば、その可能性は無限大です。
 
-XIAO ESP32S3 Sense上でSenseCraft AIモデルを使った実験と創作を楽しんでください！
+SenseCraft AI モデルを XIAO ESP32S3 Sense で使って、ぜひ実験や創作を楽しんでください！
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
