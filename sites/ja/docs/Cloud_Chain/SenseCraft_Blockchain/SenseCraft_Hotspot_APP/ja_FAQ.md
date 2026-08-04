@@ -30,7 +30,7 @@ url: https://wiki.seeedstudio.com/ja/sensecraft-blockchain/sensecraft-hotspot-ap
 **SenseCAP Hotspot App経由でSenseCAP MX HotspotをHeliumウォレットにオンボードできますか？**
 =====================================================================================
 
-これは最新バージョンの[**SenseCAP App**](https://www.sensecapmx.com/docs/sesnecap-hotspot-app/download-app/)で実行できます。
+これは最新バージョンの[**SenseCAP Hotspot App**](https://www.sensecapmx.com/docs/sesnecap-hotspot-app/download-app/)で実行できます。
 
 **SenseCAP Hotspot Appで他のメーカーのホットスポットを管理できますか？**
 ===============================================================
