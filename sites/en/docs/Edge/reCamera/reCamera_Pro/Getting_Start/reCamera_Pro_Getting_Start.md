@@ -101,7 +101,14 @@ At this point, you can safely **unplug the USB Type-C cable** to achieve full wi
 
 ---
 
-## 4. Frequently Asked Questions and Troubleshooting (FAQ)
+## 4. Resetting the Device
+There are two methods to restore the device to its factory settings:
+1. Press and hold the side button for about 15 seconds until a prompt sound is heard, indicating that the device has entered the reset mode. At this point, simply wait for the green status light to remain on continuously to re-login to the device.
+2. Through the Web management interface, click on **Device Info** -> **System Settings** -> **Factory Reset** to reset the device.
+![Factory reset diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-Pro_reset_Device.jpg)
+
+
+## 5. Frequently Asked Questions and Troubleshooting (FAQ)
 
 ### Q1: What should I do if I cannot enter the login interface via 192.168.42.1 under the Windows system?
 
