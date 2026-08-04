@@ -47,7 +47,7 @@ Before proceeding, ensure that you have the following:
 
 ## Step 1. Access the XIAO ESP32S3 Sense Workspace and connect the device
 
-Access the XIAO ESP32S3 Sense workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/32).
+Access the XIAO ESP32S3 Sense workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/32).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 

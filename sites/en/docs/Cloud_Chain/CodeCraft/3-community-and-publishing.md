@@ -28,7 +28,7 @@ This document explains how to browse community projects in the Application Galle
 
 ## 3.1 Application Gallery & Community Projects
 
-In the SenseCraft AI [Application Gallery](https://sensecraft.seeed.cc/ai/application), you can complete the entire workflow from inspiration discovery to project publishing in one place.
+In the SenseCraft AI [Application Gallery](https://sensecraft.seeed.cc/ai/application?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_app_square), you can complete the entire workflow from inspiration discovery to project publishing in one place.
 
 ![CodeCraft Community Projects](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/3-community-and-publishing/codecraft-community-EN.png)
 
@@ -89,7 +89,7 @@ Before publishing, prepare the following materials:
 
 ### 3.3.1 Go to SenseCraft AI
 
-Open the [SenseCraft AI Application Gallery](https://sensecraft.seeed.cc/ai/application). You can create a new application from scratch or clone an existing one for modification and republishing.
+Open the [SenseCraft AI Application Gallery](https://sensecraft.seeed.cc/ai/application?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_app_square). You can create a new application from scratch or clone an existing one for modification and republishing.
 
 ---
 
