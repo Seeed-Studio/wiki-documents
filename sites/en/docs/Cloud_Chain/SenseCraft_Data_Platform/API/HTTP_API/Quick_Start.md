@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: HTTP API Quickstart
+description: Get a SenseCraft Data Platform API access key and make your first HTTP API request.
 title: HTTP API Quickstart
 keywords:
   - HTTP API
@@ -17,36 +17,40 @@ url: https://wiki.seeedstudio.com/sensecraft-data-platform/api/http-api/quick-st
 ---
 
 ## Prerequisite
-  if you do not have an account, please register for the SenseCAP Portal.
+
+If you do not have an account, register for SenseCraft Data Platform (formerly SenseCAP Portal) on the service for your region:
+
   - [China Station](https://sensecap.seeed.cn)
-  - [China Station](https://sensecap.seeed.cc)
+  - [Global Station](https://sensecap.seeed.cc)
 
 :::note
-   LoRaWAN devices are used with Global Station
+LoRaWAN devices are used with the Global Station.
 :::
 
 ## Get an Access Key
 
-1. Login the SenseCAP Portal.
-2. Navigate to “Security/Access API keys”
-3. Click “Create Access Key”
-4. Click “API ID”, and get the “API ID” and “Access API keys” after entering the password.
+1. Log in to SenseCraft Data Platform.
+2. Navigate to `Security` → `Access API keys`.
+3. Click `Create Access Key`.
+4. Enter your password, then copy the `API ID` and `Access API Key`.
 
-![](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/1.png)
+![Access API keys page in SenseCraft Data Platform](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/1.png)
 
-![](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/2.png)
+![API ID and Access API Key dialog](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_API/2.png)
 
 
 ## Get all the Device Groups
-Use curl to make an HTTP request.The following example calls the API to get all the Device Groups under the account.
+Use curl to make an HTTP request. The following example gets all device groups under the account.
 
 - username = API ID
 - password = Access API keys
 
+```bash
 curl --user "username":"password" \
-     https://sensecap.seeed.cc/openapi/list_groups
+  https://sensecap.seeed.cc/openapi/list_groups
+```
 
-You should replace and with the one you got before. The command will output like the following
+Replace `username` and `password` with the API ID and Access API Key obtained above. The command returns a response similar to the following:
 
 ```cpp
 {
