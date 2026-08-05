@@ -405,7 +405,7 @@ Agora você deverá ver a temperatura e a umidade exibidas na tela OLED, semelha
 
 **Passo 2.** Conecte o Grove 16x2 LCD (Branco em Azul) à porta I2C1 do Grove Shield.
 
-**Passo 3.** Conecte o Grove Sensor de Temperatura e Umidade V2.0 (DHT20) à porta D18 do Grove Shield.
+**Passo 3.** Conecte o Grove Sensor de Temperatura e Umidade V2.0 (DHT20) à porta I2C0 do Grove Shield.
 
 **Passo 4.** Conecte o Grove Shield ao Pi Pico.
 
@@ -450,7 +450,7 @@ while True:
    - [DHT20.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht/DHT20.py)
    - [lcd1602.py](https://files.seeedstudio.com/wiki/Grove-16x2_LCD--White_on_Blue/lcd1602.py)
 
-3. Abra **DHT20.py** no Thonny IDE, clique em `File -> Save As -> MicroPython device` e salve o arquivo com o nome **DHT20.py** no seu dispositivo.
+3. Abra **DHT20.py** no Thonny IDE, clique em `File -> Save As -> MicroPython device` e salve o arquivo com o nome **dht20.py** no seu dispositivo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/saveas.png" style={{width:750, height:'auto'}}/></div>
 

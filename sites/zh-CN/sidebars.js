@@ -2166,6 +2166,29 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/cn_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/cn_respeaker_clip_basic_sdk_guide',
+            {
+              type: 'category',
+              label: '固件 SDK',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/cn_respeaker_clip_firmware_quick_start',
+                  label: '快速入门',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/cn_respeaker_clip_firmware_development_guide',
+                  label: '开发指南',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/cn_respeaker_clip_customization_at_command',
+                  label: '自定义 AT 命令',
+                },
+              ],
+            },
           ],
         },
         {
@@ -4560,6 +4583,7 @@ const sidebars = {
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_ROS2_Integration',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_pinocchio',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_isaacsim',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_control_mit',
               ]
             }
           ]

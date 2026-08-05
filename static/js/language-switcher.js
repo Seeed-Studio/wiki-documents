@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-03 11:40:17 (北京时间)
-// 多语言页面: 2424 个
+// 生成时间: 2026-08-05 13:42:13 (北京时间)
+// 多语言页面: 2428 个
 
 (function() {
   'use strict';
@@ -739,6 +739,13 @@
     "pt"
   ],
   "/Security_Scan": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/streaming_vision_agent_on_jetson": [
     "cn",
     "en",
     "es",
@@ -3572,147 +3579,147 @@
     "ja",
     "pt"
   ],
-  "/ai_human_detection_meshtastic_broadcast_bak": [
+  "/ai_human_detection_meshtastic_broadcast": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/ai_remote_wireless_monitor_system_bak": [
+  "/ai_remote_wireless_monitor_system": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/ai_voice_assitant_with_recamera_bak": [
+  "/ai_voice_assitant_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/ai_parking_slot_monitoring_demo_with_recamera_bak": [
+  "/ai_parking_slot_monitoring_demo_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/getting_started_for_home_assistant_with_recamera_bak": [
+  "/getting_started_for_home_assistant_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/getting_started_for_n8n_with_recamera_bak": [
+  "/getting_started_for_n8n_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/getting_started_in_Telegram_work_with_recamera_bak": [
+  "/getting_started_in_Telegram_work_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/getting_started_in_Wechat_work_with_recamera_bak": [
+  "/getting_started_in_Wechat_work_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_hand_gesture_bak": [
+  "/recamera_hand_gesture": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/integration_of_real-time_heat_map_with_grafana_data_dashboard_bak": [
+  "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/use_cpenclaw_to_control_the_recamera_gimbal_bak": [
+  "/use_cpenclaw_to_control_the_recamera_gimbal": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_picoclaw_bak": [
+  "/recamera_picoclaw": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_qrcode_udp_bak": [
+  "/recamera_qrcode_udp": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_meshtastic_ha_security_system_bak": [
+  "/recamera_meshtastic_ha_security_system": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_motion_detection_bak": [
+  "/recamera_motion_detection": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/sound_source_localization_of_recamera_gimbal_bak": [
+  "/sound_source_localization_of_recamera_gimbal": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rtsp_to_webrtc_with_recamera_bak": [
+  "/rtsp_to_webrtc_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_udp_face_analysis_bak": [
+  "/recamera_udp_face_analysis": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/use_the_motion-sensing_function_of_recamera_to_play_games_bak": [
+  "/use_the_motion-sensing_function_of_recamera_to_play_games": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/using_stream_deck_to_control_recamera_gimbal_bak": [
+  "/using_stream_deck_to_control_recamera_gimbal": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_benchmarking_bak": [
+  "/recamera_benchmarking": [
     "cn",
     "en",
     "es",
@@ -11577,6 +11584,27 @@
     "pt"
   ],
   "/respeaker_clip_basic_sdk_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_customization_at_command": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_firmware_development_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_firmware_quick_start": [
     "cn",
     "en",
     "es",
