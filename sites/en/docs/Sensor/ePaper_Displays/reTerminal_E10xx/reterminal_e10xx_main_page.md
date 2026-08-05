@@ -403,7 +403,7 @@ Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-
 			<td align="center">✅</td>
 			<td align="center">✅ <em>(mono mode)</em></td>
 			<td align="center">✅</td>
-			<td align="center">✅</td>
+			<td align="center">✅ <em>(mono mode)</em></td>
 		</tr>
 	</table>
 </div>
