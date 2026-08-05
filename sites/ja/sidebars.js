@@ -2166,6 +2166,29 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/ja_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/ja_respeaker_clip_basic_sdk_guide',
+            {
+              type: 'category',
+              label: 'ファームウェア SDK',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_firmware_quick_start',
+                  label: 'はじめに',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_firmware_development_guide',
+                  label: '開発ガイド',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_customization_at_command',
+                  label: 'カスタム AT コマンド',
+                },
+              ],
+            },
           ],
         },
         {
