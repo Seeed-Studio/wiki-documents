@@ -1,6 +1,6 @@
 ---
 description: Grove Shield / Grove Starter Kit para Raspberry Pi Pico
-title: Kit Básico Grove para Raspberry Pi Pico
+title: Grove Basic Kit para Raspberry Pi Pico
 keywords:
   - Pi_Pico
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,7 +10,7 @@ last_update:
   date: 1/11/2023
   author: jianjing Huang
 createdAt: '2023-01-12'
-updatedAt: '2026-02-25'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Starter-Kit-for-Raspberry-Pi-Pico/
 ---
 
@@ -20,13 +20,13 @@ import TabItem from '@theme/TabItem';
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Pico_hardware.png)
 
-O Raspberry Pi Pico é uma nova e popular placa de microcontrolador de baixo custo e alto desempenho, então como integrar sensores Grove a ele? O Grove Shield resolve perfeitamente esse problema.
+O Raspberry Pi Pico é uma nova e popular placa de microcontrolador de baixo custo e alto desempenho, então como integrar o sensor Grove a ela? O Grove Shield resolveu perfeitamente esse problema.
 
-O Grove Shield for Pi Pico v1.0 é um shield plug-and-play para Raspberry Pi Pico que integra vários tipos de conectores Grove, incluindo 2*I2C, 3*Analógico, 2*UART, 3*portas Digitais, interface de depuração SWD e pino SPI, chave seletora de alimentação 3,3 V/5 V. Ele permite criar protótipos e projetos de forma fácil e rápida, sem jumpers e protoboard, para que você possa explorar possibilidades infinitas com o Pico. A placa shield é uma placa adicional empilhável que atua como uma ponte entre o Pi Pico e o sistema Grove da Seeed.
+O Grove Shield for Pi Pico v1.0 é um shield plug-and-play para Raspberry Pi Pico que integra vários tipos de conectores Grove, incluindo 2*I2C, 3*Analógico, 2*UART, 3*portas Digitais, interface de depuração SWD e pino SPI, chave de alimentação selecionável 3,3 V/5 V. Ele permite construir protótipos e projetos de forma fácil e rápida, sem fio jumper e protoboard, para que você possa explorar possibilidades infinitas com o Pico. A placa shield é uma placa de expansão empilhável que atua como uma ponte entre o Pi Pico e o sistema Grove da Seeed.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -34,19 +34,19 @@ O Grove Shield for Pi Pico v1.0 é um shield plug-and-play para Raspberry Pi Pic
 
 | Parâmetro             | Valor/Faixa  |
 |-----------------------|--------------|
-| Tensão de operação    | 3,3/5 V      |
+| Tensão de operação    | 3.3/5V       |
 | Temperatura de operação | -25℃ a +85℃ |
 | Portas analógicas     | 3            |
 | Portas digitais       | 3            |
 | Portas UART           | 2            |
 | Portas I2C            | 2            |
-| Tamanho               | 56 mm x 56 mm|
+| Tamanho               | 56mm x56mm   |
 
-## Placas compatíveis
+## Placas Compatíveis
 
 O Base Shield foi testado e é totalmente compatível com o [Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html).
 
-## Visão geral do hardware
+## Visão Geral do Hardware
 
 ![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/hardwareoverview.png)
 
@@ -54,23 +54,23 @@ O Base Shield foi testado e é totalmente compatível com o [Pi Pico](https://ww
 - **2-Portas digitais**: inclui 3 portas digitais, D16, D18, D20.
 - **3-Porta UART**: 2 portas UART.
 - **4-Portas I2C**: 2 portas I2C.
-- **5-Chave de alimentação**: chave seletora de alimentação 5 V/3,3 V.
+- **5-Chave de alimentação**: chave de alimentação selecionável 5V/3.3V.
 - **6-Porta SPI**: 1 porta spi0.
 
-- **Dimensões**: 56 mm * 56 mm  
+- **Dimensões**: 56mm * 56mm  
 
-## Primeiros passos
+## Primeiros Passos
 
-### Projeto 1: Sons diferentes de um buzzer
+### Projeto 1: Sons Diferentes de um Buzzer
 
-#### Materiais necessários
+#### Materiais Necessários
 
 **Passo 1.** Prepare os seguintes itens:
 
 | Pi Pico | Grove Shield for Pi Pico | Grove - Buzzer | Grove - Rotary Angle Sensor |
 |---------|--------------------------|----------------|-----------------------------|
 | ![Pi Pico](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg) | ![Grove Shield for Pi Pico](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png) | ![Grove Buzzer](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png) | ![Grove Rotary Angle Sensor](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/rotary.png) |
-| [Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) | [Adquira agora](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html) | [Adquira agora](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) | [Adquira agora](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html) |
+| [Compre AGORA](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) | [Compre AGORA](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html) | [Compre AGORA](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) | [Compre AGORA](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html) |
 
 **Passo 2.** Conecte o Grove Buzzer à porta A1 do Grove Shield.
 
@@ -80,9 +80,9 @@ O Base Shield foi testado e é totalmente compatível com o [Pi Pico](https://ww
 
 **Passo 5.** Conecte o Pi Pico ao seu PC usando um cabo USB.
 
-![Hardware Setup](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/hardwareconnection.jpg)
+![Configuração de Hardware](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/hardwareconnection.jpg)
 
-#### Configuração de software
+#### Configuração de Software
 
 **Passo 1.** Baixe o Thonny IDE:
 
@@ -117,14 +117,14 @@ Você pode instalar o Thonny de diferentes maneiras, dependendo do seu sistema:
   sudo dnf install thonny
   ```
 
-**Passo 2.** Abra o Thonny e conecte seu computador ao Raspberry Pi Pico. No Thonny, vá ao menu **Run**, selecione **Select Interpreter** e escolha "**MicroPython (Raspberry Pi Pico)**" na lista suspensa. Em seguida, selecione a porta COM do seu Pi Pico.
+**Passo 2.** Abra o Thonny e conecte seu computador ao Raspberry Pi Pico. No Thonny, vá ao menu **Run**, selecione **Select Interpreter** e escolha "**MicroPython (Raspberry Pi Pico)**" na lista. Em seguida, selecione a porta COM do seu Pi Pico.
 
 **Nota**: Se você não vir "**MicroPython (Raspberry Pi Pico)**" na lista de interpretadores, certifique-se de que tem instalada a versão mais recente do Thonny.
 
-![Interpreter Selection](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/interpreter.png)
-![COM Port Selection](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/comport.png)
+![Seleção do Interpretador](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/interpreter.png)
+![Seleção da Porta COM](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/comport.png)
 
-**Passo 3.** Se o Raspberry Pi Pico estiver conectado e executando MicroPython, o Thonny deve se conectar automaticamente ao REPL. Agora, copie o código a seguir para o Thonny IDE e pressione o botão verde **Run**.
+**Passo 3.** Se o Raspberry Pi Pico estiver conectado e executando MicroPython, o Thonny deverá se conectar automaticamente ao REPL. Agora, copie o seguinte código para o Thonny IDE e pressione o botão verde **Run**.
 
 ```python
 from machine import Pin, PWM, ADC
@@ -147,14 +147,14 @@ while True:
     sleep(0.05)
 ```
 
-Agora, gire o **Grove Rotary Angle Sensor** e você ouvirá sons diferentes do buzzer à medida que ajusta o ângulo.
+Agora, gire o **Grove Rotary Angle Sensor** e você ouvirá sons diferentes do buzzer conforme ajustar o ângulo.
 
-### Projeto 2: Detectando temperatura e umidade
+### Projeto 2: Detectando Temperatura e Umidade
 
 <Tabs>
 <TabItem  value="Old" label="Opção 1: DHT11 e SSD1315" default>
 
-#### Materiais necessários
+#### Materiais Necessários
 
 **Passo 1.** Prepare os seguintes itens:
 
@@ -175,22 +175,22 @@ Agora, gire o **Grove Rotary Angle Sensor** e você ouvirá sons diferentes do b
     <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora 🖱️</font></span></strong>
     </a>
    </div></td>
     </tr>
@@ -205,11 +205,11 @@ Agora, gire o **Grove Rotary Angle Sensor** e você ouvirá sons diferentes do b
 
 **Passo 5.** Conecte o Pi Pico ao seu PC usando um cabo USB.
 
-#### Configuração de software
+#### Configuração de Software
 
 Consulte a seção de software do Demo 1.
 
-1. Copie o código a seguir para o Thonny IDE:
+1. Copie o seguinte código para o Thonny IDE:
 
 ```python
 from ssd1306 import SSD1306_I2C
@@ -231,7 +231,7 @@ while True:
     sleep(0.5)
 ```
 
-2. Baixe os seguintes arquivos Python necessários para sua máquina local:
+2. Baixe os seguintes arquivos Python necessários para a sua máquina local:
    - [ssd1306.py](https://github.com/micropython/micropython-lib/blob/master/micropython/drivers/display/ssd1306/ssd1306.py)
 
 ```python title=dht11.py
@@ -349,7 +349,7 @@ class DHT(object):
 
 4. Repita o mesmo processo para salvar **ssd1306.py** no seu dispositivo MicroPython.
 
-#### Executando o projeto
+#### Executando o Projeto
 
 Depois que ambos os arquivos forem salvos no seu dispositivo MicroPython, execute o código de demonstração pressionando o botão verde **Run** no Thonny.
 
@@ -360,7 +360,7 @@ Agora você deverá ver a temperatura e a umidade exibidas na tela OLED, semelha
 </TabItem>
 <TabItem value="New" label="Opção 2: DHT20 e LCD1602" default>
 
-#### Materiais necessários
+#### Materiais Necessários
 
 **Passo 1.** Prepare os seguintes itens:
 
@@ -369,7 +369,7 @@ Agora você deverá ver a temperatura e a umidade exibidas na tela OLED, semelha
     <tr>
         <th>Pi Pico</th>
         <th>Grove Shield para Pi Pico</th>
-        <th>Grove 16x2 LCD (Branco sobre Azul)</th>
+        <th>Grove 16x2 LCD (Branco em Azul)</th>
         <th>Grove Sensor de Temperatura e Umidade V2.0 (DHT20)</th>
     </tr>
     <tr>
@@ -403,15 +403,15 @@ Agora você deverá ver a temperatura e a umidade exibidas na tela OLED, semelha
     </table>
 </div>
 
-**Passo 2.** Conecte o Grove 16x2 LCD (Branco sobre Azul) à porta I2C1 do Grove Shield.
+**Passo 2.** Conecte o Grove 16x2 LCD (Branco em Azul) à porta I2C1 do Grove Shield.
 
-**Passo 3.** Conecte o Grove Sensor de Temperatura e Umidade V2.0 (DHT20) à porta D18 do Grove Shield.
+**Passo 3.** Conecte o Grove Sensor de Temperatura e Umidade V2.0 (DHT20) à porta I2C0 do Grove Shield.
 
 **Passo 4.** Conecte o Grove Shield ao Pi Pico.
 
 **Passo 5.** Conecte o Pi Pico ao seu PC usando um cabo USB.
 
-#### Configuração de software
+#### Configuração de Software
 
 Consulte a seção de software do Demo 1.
 
@@ -446,11 +446,11 @@ while True:
     sleep(1)
 ```
 
-2. Baixe os seguintes arquivos Python necessários para o seu computador local:
+2. Baixe os seguintes arquivos Python necessários para a sua máquina local:
    - [DHT20.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht/DHT20.py)
    - [lcd1602.py](https://files.seeedstudio.com/wiki/Grove-16x2_LCD--White_on_Blue/lcd1602.py)
 
-3. Abra **DHT20.py** no Thonny IDE, clique em `File -> Save As -> MicroPython device` e salve o arquivo com o nome **DHT20.py** no seu dispositivo.
+3. Abra **DHT20.py** no Thonny IDE, clique em `File -> Save As -> MicroPython device` e salve o arquivo com o nome **dht20.py** no seu dispositivo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/saveas.png" style={{width:750, height:'auto'}}/></div>
 
@@ -460,7 +460,7 @@ while True:
 
 4. Repita o mesmo processo para salvar **lcd1602.py** no seu dispositivo MicroPython.
 
-#### Executando o projeto
+#### Executando o Projeto
 
 Depois que ambos os arquivos forem salvos no seu dispositivo MicroPython, execute o código de demonstração pressionando o botão verde **Run** no Thonny.
 
@@ -473,7 +473,7 @@ Agora você deverá ver a temperatura e a umidade exibidas na tela OLED, semelha
 
 ### Projeto 3: Controlando LED e Relé
 
-#### Materiais necessários
+#### Materiais Necessários
 
 - Passo 1. Prepare os itens abaixo:
 
@@ -486,13 +486,13 @@ Agora você deverá ver a temperatura e a umidade exibidas na tela OLED, semelha
 - Passo 3. Conecte o Grove LED à porta D16 do Base Shield.
 - Passo 4. Conecte o Grove Relay à porta D20 do Base Shield.
 - Passo 5. Conecte o Grove Shield para Pi Pico ao Pi Pico.
-- Passo 6. Conecte o Pi Pico ao PC por meio de um cabo USB.
+- Passo 6. Conecte o Pi Pico ao PC através de um cabo USB.
 
 #### Software
 
 Consulte a parte de software do demo1.
 
-Copie primeiro o código abaixo para o Thonny IDE.
+Copie o código abaixo para o Thonny IDE primeiro.
 
 ```python showLineNumbers
 from machine import Pin
@@ -515,13 +515,13 @@ while True:
 
 Agora clique no botão verde para executar o código de demonstração.
 
-Em seguida, você pode pressionar o Grove button para controlar o LED e o relé ligando e desligando.
+Em seguida, você pode pressionar o Grove button para controlar o LED e o relé abrindo e fechando.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/demo3.jpg)
 
-### Projeto 4: Cores piscando
+### Projeto 4: Cores Piscando
 
-#### Materiais necessários
+#### Materiais Necessários
 
 - Passo 1. Prepare os itens abaixo:
 
@@ -532,13 +532,13 @@ Em seguida, você pode pressionar o Grove button para controlar o LED e o relé 
 
 - Passo 2. Conecte o RGB LED WS2813 mini à porta 18 do Base Shield.
 - Passo 3. Conecte o Grove Shield para Pi Pico ao Pi Pico.
-- Passo 4. Conecte o Pi Pico ao PC por meio de um cabo USB.
+- Passo 4. Conecte o Pi Pico ao PC através de um cabo USB.
 
 #### Software
 
 Consulte a parte de software do demo1.
 
-Copie primeiro o código abaixo para o Thonny IDE.
+Copie o código abaixo para o Thonny IDE primeiro.
 
 ```python showLineNumbers
 from ws2812 import WS2812
@@ -573,14 +573,14 @@ led.rainbow_cycle(0)
 
 ```
 
-Em seguida, faça o download de [ws2812.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/ws2812.py) para o seu computador local. Use o Thonny para abrir ws2812.py, clique em file->save as->MicroPython device.
+Em seguida, baixe o [ws2812.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/ws2812.py) para o seu computador local. Use o Thonny para abrir ws2812.py, clique em file->save as->MicroPython device.
 
-Digite **ws2812.py** na coluna File name, clique em "ok", então o arquivo será salvo em File->Open->MicroPython device.
+Digite **ws2812.py** na coluna File name, clique em "ok" e então o arquivo será salvo em File->Open->MicroPython device.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/ws2813savelocal.png)
 
-Depois de salvar os arquivos no seu dispositivo MicroPython, clique no botão verde para executar o código de demonstração.
-Então você poderá ver o LED RGB WS2813 mini piscando belas cores como abaixo.
+Depois de salvar os arquivos no seu dispositivo MicroPython, clique agora no botão verde para executar o código de demonstração.
+Então você verá o mini LED RGB WS2813 piscar em belas cores como abaixo.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/ws2813mini.gif)
 
@@ -588,7 +588,7 @@ Então você poderá ver o LED RGB WS2813 mini piscando belas cores como abaixo.
 
 #### Materiais Necessários
 
-- Passo 1. Prepare os itens abaixo:
+- Passo 1. Prepare os seguintes itens:
 
 | Pi Pico | Grove Shield for Pi Pico| grove sound sensor |Grove light sensor|Grove-16x2 LCD|
 |--------------|-------------|-----------------|-----------------|-----------------|
@@ -599,13 +599,13 @@ Então você poderá ver o LED RGB WS2813 mini piscando belas cores como abaixo.
 - Passo 3. Conecte o Grove light à porta A1 do Base Shield.
 - Passo 4. Conecte o Grove 16X2 lcd à porta I2C1 do Base Shield.
 - Passo 5. Conecte o Grove Shield for Pi Pico ao Pi Pico.
-- Passo 6. Conecte o Pi Pico ao PC através de um cabo USB.
+- Passo 6. Conecte o Pi Pico ao PC por meio de um cabo USB.
 
 #### Software
 
 Por favor, consulte a parte de software do demo1.
 
-Copie primeiro o código abaixo para o Thonny IDE.
+Primeiro, copie o código abaixo para o Thonny IDE.
 
 ```python
 #from lcd1602 import LCD1602_RGB  #LCD1602 RGB grove
@@ -637,18 +637,18 @@ while True:
 
 ```
 
-Em seguida, faça o download de [LCD1602.py](https://files.seeedstudio.com/wiki/Grove-16x2_LCD--White_on_Blue/lcd1602.py) para o seu computador local. Use o Thonny para abrir LCD1602.py, clique em file->save as->MicroPython device.
+Em seguida, baixe o [LCD1602.py](https://files.seeedstudio.com/wiki/Grove-16x2_LCD--White_on_Blue/lcd1602.py) para o seu computador local. Use o Thonny para abrir LCD1602.py, clique em file->save as->MicroPython device.
 
-Digite **LCD1602.py** na coluna File name, clique em "ok", então o arquivo será salvo em File->Open->MicroPython device.
+Digite **LCD1602.py** na coluna File name, clique em "ok" e então o arquivo será salvo em File->Open->MicroPython device.
 
 :::note
-Neste exemplo, a versão do LCD1602 que estamos usando é uma versão com retroiluminação monocromática. Se você precisar controlar a versão com retroiluminação em cores completas do LCD1602, confira as funções neste arquivo de biblioteca para aprender como usá-la.
+Neste exemplo, a versão do LCD1602 que estamos usando é uma versão com luz de fundo monocromática. Se você precisar controlar a versão com luz de fundo em cores completas do LCD1602, verifique as funções neste arquivo de biblioteca para aprender como usá-la.
 :::
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/lcdlightsound.png)
 
-Depois de salvar os arquivos no seu dispositivo MicroPython, clique no botão verde para executar o código de demonstração.
-Então você poderá obter os dados do sound sensor e do light sensor como abaixo.
+Depois de salvar os arquivos no seu dispositivo MicroPython, clique agora no botão verde para executar o código de demonstração.
+Então você poderá obter os dados do sensor de som e do sensor de luz como abaixo.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/demo5.jpg)
 
@@ -656,7 +656,7 @@ Então você poderá obter os dados do sound sensor e do light sensor como abaix
 
 #### Materiais Necessários
 
-- Passo 1. Prepare os itens abaixo:
+- Passo 1. Prepare os seguintes itens:
 
 | Pi Pico | Grove Shield for Pi Pico| grove servo |Grove Mini Fan|Grove mini pir motion sensor|
 |--------------|-------------|-----------------|-----------------|-----------------|
@@ -667,13 +667,13 @@ Então você poderá obter os dados do sound sensor e do light sensor como abaix
 - Passo 3. Conecte o Grove Mini fan à porta D16 do Base Shield.
 - Passo 4. Conecte o Grove Mini pir motion sensor à porta D18 do Base Shield.
 - Passo 5. Conecte o Grove Shield for Pi Pico ao Pi Pico.
-- Passo 6. Conecte o Pi Pico ao PC através de um cabo USB.
+- Passo 6. Conecte o Pi Pico ao PC por meio de um cabo USB.
 
 #### Software
 
 Por favor, consulte a parte de software do demo1.
 
-Copie primeiro o código abaixo para o Thonny IDE.
+Primeiro, copie o código abaixo para o Thonny IDE.
 
 ```python
 from machine import Pin,ADC,PWM
@@ -711,11 +711,11 @@ while True:
 ```
 
 Agora clique no botão verde para executar o código de demonstração.
-Então você poderá ver o Grove Mini Fan e o Grove servo funcionando quando suas mãos passarem pelo sensor pir, como abaixo.
+Então você verá o Grove Mini Fan e o Grove servo funcionarem quando sua mão passar pelo sensor pir, como abaixo.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/tutieshi_480x272_3s.gif)
 
-## Visualizador Online de Esquemático
+## Visualizador de Esquemático Online
 
 <div className="altium-ecad-viewer" data-project-src="https:///files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/res/Grove_Shield_for_Pi_Pico.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
@@ -730,11 +730,11 @@ Então você poderá ver o Grove Mini Fan e o Grove servo funcionando quando sua
 
 <div align="center"><img width = "{400}" src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/book.png"/></div>
 
-- **[ZIP]** [Guia para Iniciantes do Raspberry Pi Pico Baseado em MicroPython](https://files.seeedstudio.com/Seeed_EDU/Course_documents/Beginner's-Guide-for-Raspberry-Pi-Pico.zip)
-- **[ZIP]** [Códigos](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Codes.rar)
-- **[ZIP]** [Bibliotecas](https:///files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Libraries.rar)
+- **[ZIP]** [Beginners Guide of Raspberry Pi Pico Based on MicroPython](https://files.seeedstudio.com/Seeed_EDU/Course_documents/Beginner's-Guide-for-Raspberry-Pi-Pico.zip)
+- **[ZIP]** [Codes](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Codes.rar)
+- **[ZIP]** [Libraries](https:///files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Libraries.rar)
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico & Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
