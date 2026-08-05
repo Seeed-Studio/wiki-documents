@@ -235,8 +235,8 @@ Use the quick guide below to narrow down to one model. If multiple rows apply, t
 		</tr>
 		<tr>
 			<td>Want a TRMNL E-Ink dashboard</td>
-			<td align="center"><strong>E1001 / E1002 / E1003</strong></td>
-			<td>All three are officially supported. E1002 currently runs in monochrome mode under TRMNL.</td>
+			<td align="center"><strong>E1001 / E1002 / E1003 / E1004</strong></td>
+			<td>All four models are supported. E1002 and E1004 have color panels but currently run in monochrome mode under TRMNL.</td>
 		</tr>
 		<tr>
 			<td>Battery life is the single most important factor</td>
@@ -402,8 +402,8 @@ Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-
 			<td>Deploy E-Ink dashboards through the TRMNL platform.</td>
 			<td align="center">✅</td>
 			<td align="center">✅ <em>(mono mode)</em></td>
-			<td align="center">—</td>
-			<td align="center">—</td>
+			<td align="center">✅</td>
+			<td align="center">✅ <em>(mono mode)</em></td>
 		</tr>
 	</table>
 </div>
