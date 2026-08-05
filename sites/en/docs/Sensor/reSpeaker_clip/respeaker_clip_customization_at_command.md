@@ -22,20 +22,17 @@ url: https://wiki.seeedstudio.com/respeaker_clip_customization_at_command/
 
 # Customization: Add a Custom AT Command
 
-A concrete, end-to-end walkthrough of adding a **new** AT command to the Clip
-firmware. We add a trivial-but-real command, `AT+ECHO=<msg>`, that replies:
+A concrete, end-to-end walkthrough of adding a **new** AT command to the Clip firmware. We add a trivial-but-real command, `AT+ECHO=<msg>`, that replies:
 
 ```json
 {"ok":true,"data":{"echo":"<msg>"}}\n
 ```
 
-The same recipe scales to real commands that touch config, storage, audio, or
-the event system.
+The same recipe scales to real commands that touch config, storage, audio, or the event system.
 
 ## AI prompt
 
-You can copy this prompt into an AI coding agent to reproduce the same
-customization workflow in the firmware repository:
+You can copy this prompt into an AI coding agent to reproduce the same customization workflow in the firmware repository:
 
 ```text
 You are working in the reSpeaker Clip firmware repository.
@@ -90,9 +87,7 @@ AT+ECHO=          -> {"ok":false,"msg":"Missing message"}
 AT+ECHO           -> {"ok":false,"msg":"Use AT+ECHO=<msg>"}
 ```
 
-It is intentionally minimal: one SET command with a small EXEC usage hint, no
-side effects, verifiable on all three transports. `ECHO` does not collide with
-any registered command (see the registry in `at_commands_register()` below).
+It is intentionally minimal: one SET command with a small EXEC usage hint, no side effects, verifiable on all three transports. `ECHO` does not collide with any registered command (see the registry in `at_commands_register()` below).
 
 ## 2. Current data flow
 
@@ -111,21 +106,12 @@ transport (BLE / UDP / USB CDC)
 
 Two points matter for the customizer:
 
-- **Parsing is shared.** `parse_command()` (at_server.c) owns the `AT+NAME=args`
-  grammar and the `=`, `?` type detection. You never parse the `AT+` prefix
-  yourself — your handler receives `ctx->args` already split out.
-- **Responses are auto-routed.** The `SEND_RESPONSE()` macro in
-  `at_server.c` dispatches by the command's originating transport:
-  `TRANSPORT_TYPE_USB` -> `usb_cdc_send_response()`,
-  `TRANSPORT_TYPE_UDP` -> `transport_udp_send_response()`,
-  otherwise -> `transport_send_to(item->transport_type, ...)`. Your handler
-  only fills the response buffer; it does **no** transport work, and the same
-  JSON goes out identically over BLE, UDP, and USB.
+- **Parsing is shared.** `parse_command()` (at_server.c) owns the `AT+NAME=args` grammar and the `=`, `?` type detection. You never parse the `AT+` prefix yourself — your handler receives `ctx->args` already split out.
+- **Responses are auto-routed.** The `SEND_RESPONSE()` macro in `at_server.c` dispatches by the command's originating transport: `TRANSPORT_TYPE_USB` -> `usb_cdc_send_response()`, `TRANSPORT_TYPE_UDP` -> `transport_udp_send_response()`, otherwise -> `transport_send_to(item->transport_type, ...)`. Your handler only fills the response buffer; it does **no** transport work, and the same JSON goes out identically over BLE, UDP, and USB.
 
 ## 3. Extension point: the registration pattern
 
-Everything below is quoted from real source. The contract lives in
-`applications/clip/include/at_server.h`.
+Everything below is quoted from real source. The contract lives in `applications/clip/include/at_server.h`.
 
 ### 3.1 The handler signature
 
@@ -146,10 +132,7 @@ struct at_cmd_ctx {
 };
 ```
 
-`ctx->type` is one of `AT_CMD_TYPE_TEST` (0), `AT_CMD_TYPE_SET` (1),
-`AT_CMD_TYPE_EXEC` (2) — also `AT_CMD_TYPE_READ` (3, same as TEST). Args live
-in `ctx->args` (already past the `=`). A real handler using exactly this shape
-is `cmd_mode_handler` (at_commands.c:422):
+`ctx->type` is one of `AT_CMD_TYPE_TEST` (0), `AT_CMD_TYPE_SET` (1), `AT_CMD_TYPE_EXEC` (2) — also `AT_CMD_TYPE_READ` (3, same as TEST). Args live in `ctx->args` (already past the `=`). A real handler using exactly this shape is `cmd_mode_handler` (at_commands.c:422):
 
 ```c
 static int cmd_mode_handler(struct at_cmd_ctx *ctx, char *response, size_t len)
@@ -184,16 +167,10 @@ Behavior (read from its body):
 
 - Emits `{"ok":true` or `{"ok":false`.
 - If `message` is non-NULL, appends `,"msg":"<message>"`.
-- If `data` is non-NULL, appends `,"data":<data>` **verbatim** — `data` must
-  be a **complete JSON object** you formatted yourself (e.g. `{"echo":"hello"}`),
-  **not** a bare value or a format string. This is the common gotcha.
-- Closes with `}\n` and returns the total length; returns `AT_ERR_NOMEM` on
-  truncation. The server thread treats `ret < 0` as an error and substitutes
-  `at_server_err_msg(-ret)`.
+- If `data` is non-NULL, appends `,"data":<data>` **verbatim** — `data` must be a **complete JSON object** you formatted yourself (e.g. `{"echo":"hello"}`), **not** a bare value or a format string. This is the common gotcha.
+- Closes with `}\n` and returns the total length; returns `AT_ERR_NOMEM` on truncation. The server thread treats `ret < 0` as an error and substitutes `at_server_err_msg(-ret)`.
 
-So the response shape is fixed: success -> `{"ok":true,...,"data":{...}}`,
-failure -> `{"ok":false,...,"msg":"..."}`. There are no numeric error codes and
-no `error` field (see [protocol.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/protocol.md)).
+So the response shape is fixed: success -> `{"ok":true,...,"data":{...}}`, failure -> `{"ok":false,...,"msg":"..."}`. There are no numeric error codes and no `error` field (see [protocol.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/protocol.md)).
 
 ### 3.3 The command struct and registration
 
@@ -240,9 +217,7 @@ Only one source file: `applications/clip/src/at_commands.c`.
 
 ### 4.1 Add the handler
 
-Place it among the other `static int cmd_*_handler(...)` definitions (the
-existing handlers sit above `at_commands_register()`). Modeled on
-`cmd_mode_handler`:
+Place it among the other `static int cmd_*_handler(...)` definitions (the existing handlers sit above `at_commands_register()`). Modeled on `cmd_mode_handler`:
 
 ```c
 /* ECHO Command Handler - customization example.
@@ -265,18 +240,11 @@ static int cmd_echo_handler(struct at_cmd_ctx *ctx, char *response, size_t len)
 }
 ```
 
-> **Gotcha for real commands:** `ctx->args` is raw user input. Interpolating it
-> with `%s` (as the trivial example does) lets a `"` in the message break the
-> JSON. For any command that accepts free-form strings, validate/escape the
-> input first. The shipped commands that use `%s` (e.g. `MODE`, `LOG`) do so
-> only against a fixed enumeration they already checked.
+> **Gotcha for real commands:** `ctx->args` is raw user input. Interpolating it with `%s` (as the trivial example does) lets a `"` in the message break the JSON. For any command that accepts free-form strings, validate/escape the input first. The shipped commands that use `%s` (e.g. `MODE`, `LOG`) do so only against a fixed enumeration they already checked.
 
 ### 4.2 Register it
 
-Inside `at_commands_register(void)` (at_commands.c:1761) — the single init
-function that registers every command and is itself called once from
-`main.c` (`at_commands_register()` at main.c:286). Add the block alongside the
-others (e.g. right after the `LOG` block near at_commands.c:2030):
+Inside `at_commands_register(void)` (at_commands.c:1761) — the single init function that registers every command and is itself called once from `main.c` (`at_commands_register()` at main.c:286). Add the block alongside the others (e.g. right after the `LOG` block near at_commands.c:2030):
 
 ```c
 /* ECHO - echo a message back (customization example) */
@@ -289,33 +257,21 @@ err = at_server_register_cmd(&echo_cmd);
 if (err) return err;
 ```
 
-`AT_CMD_EXEC` is required because the handler intentionally returns a friendly
-usage message for bare `AT+ECHO`. If the registration only uses `AT_CMD_SET`,
-the dispatcher rejects `AT+ECHO` before the handler can run. Because the server
-auto-routes the response (Section 2), no BLE/UDP/USB code changes are needed.
+`AT_CMD_EXEC` is required because the handler intentionally returns a friendly usage message for bare `AT+ECHO`. If the registration only uses `AT_CMD_SET`, the dispatcher rejects `AT+ECHO` before the handler can run. Because the server auto-routes the response (Section 2), no BLE/UDP/USB code changes are needed.
 
 ## 5. Compatibility impact
 
-Adding a command is **additive** — existing commands and their JSON shapes are
-untouched. Keep the response contract intact:
+Adding a command is **additive** — existing commands and their JSON shapes are untouched. Keep the response contract intact:
 
 - Success: `{"ok":true,"data":{...}}`
 - Failure: `{"ok":false,"msg":"..."}`
-- No numeric error codes, no request ID, no `error` field. (See
-  [protocol.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/protocol.md).)
+- No numeric error codes, no request ID, no `error` field. (See [protocol.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/protocol.md).)
 
-If the new command should also be reachable from the host tooling, you need
-**Python SDK parity**, not just firmware. Per the `skills/clip-sdk/` rule, read
-the current `at_commands.c` registrations before changing the SDK, and treat
-`docs/protocol.md` + firmware source as the protocol contract — update both the
-SDK (in `sdk/`) and `protocol.md` when the firmware contract changes. Do not
-emulate removed legacy commands (`BITRATE`, `COMPLEXITY`, `NOISE`, `AGC`,
-`DEREVERB`, `PURGE`).
+If the new command should also be reachable from the host tooling, you need **Python SDK parity**, not just firmware. Per the `skills/clip-sdk/` rule, read the current `at_commands.c` registrations before changing the SDK, and treat `docs/protocol.md` + firmware source as the protocol contract — update both the SDK (in `sdk/`) and `protocol.md` when the firmware contract changes. Do not emulate removed legacy commands (`BITRATE`, `COMPLEXITY`, `NOISE`, `AGC`, `DEREVERB`, `PURGE`).
 
 ## 6. Build
 
-Source the NCS v3.3.0 environment, set the module path as an env var (Kconfig
-discovery runs before CMake), then build:
+Source the NCS v3.3.0 environment, set the module path as an env var (Kconfig discovery runs before CMake), then build:
 
 ```sh
 source ~/ncs/v3.3.0/zephyr/zephyr-env.sh
@@ -324,13 +280,11 @@ export ZEPHYR_EXTRA_MODULES=$(pwd)
 west build --build-dir build-clip --pristine --board clip/nrf5340/cpuapp applications/clip
 ```
 
-Per `CLAUDE.md`, the project builds with **zero warnings** — fix any compiler
-warning before committing. (The handler above introduces none.)
+Per `CLAUDE.md`, the project builds with **zero warnings** — fix any compiler warning before committing. (The handler above introduces none.)
 
 ## 7. On-device verify
 
-Flash (note: `west flash --reset` does not work on this board — reset
-separately):
+Flash (note: `west flash --reset` does not work on this board — reset separately):
 
 ```sh
 west flash --build-dir build-clip && nrfutil device reset
@@ -349,41 +303,42 @@ AT+ECHO           -> {"ok":false,"msg":"Use AT+ECHO=<msg>"}
 AT+ECHO=          -> {"ok":false,"msg":"Missing message"}
 ```
 
-**UDP** (WiFi AP mode — send `AT+WIFI=on` over BLE first, then join the returned
-SSID/password and target `192.168.4.1:8089`):
+**UDP** (WiFi AP mode — send `AT+WIFI=on` over BLE first, then join the returned SSID/password and target `192.168.4.1:8089`):
 
 ```sh
 python applications/clip/tests/tools/udp_terminal.py
 AT+ECHO=hello
 ```
 
-**USB CDC** (open the CDC-ACM serial port; USB must be enabled first via
-`AT+USB=on` over BLE, or hold the user button while plugging in):
+**USB CDC** (open the CDC-ACM serial port; USB must be enabled first via `AT+USB=on` over BLE, or hold the user button while plugging in):
 
 ```sh
 AT+ECHO=hello
 ```
 
-The response string must match byte-for-byte across all three. Also confirm no
-existing command regressed — e.g. `AT+GSTAT`, `AT+MODE?`, `AT+VERSION`.
+The response string must match byte-for-byte across all three. Also confirm no existing command regressed — e.g. `AT+GSTAT`, `AT+MODE?`, `AT+VERSION`.
 
 ## 8. Recovery
 
-If the new build misbehaves, recover over USB serial DFU (1200-baud trigger
-into MCUboot recovery, PID `0x8069`), BLE OTA, or a programmer — see
-[usb_dfu.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/usb_dfu.md). The bootloader partition is never touched by an app
-OTA; the signature is verified by MCUboot.
+If the new build misbehaves, recover over USB serial DFU (1200-baud trigger into MCUboot recovery, PID `0x8069`), BLE OTA, or a programmer — see [usb_dfu.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/usb_dfu.md). The bootloader partition is never touched by an app OTA; the signature is verified by MCUboot.
 
 ## Related
 
-- Source: [at_commands.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_commands.c) (handlers + `at_commands_register()`),
-  [at_server.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_server.c) (`parse_command`,
-  `at_server_register_cmd`, `SEND_RESPONSE`), [at_server.h](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/include/at_server.h)
-  (struct/flag/typedef contract).
-- Protocol: [protocol.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/protocol.md) (AT command spec + response contract),
-  [architecture.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/architecture.md) (transport/event system).
-- Python parity: [skills/clip-sdk/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-sdk/) (SDK source in `sdk/`,
-  command-registration/protocol-doc rules), [skills/clip-dev/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/)
-  (firmware-dev skill — audio/build/ble-at/storage/wifi-udp/mcuboot/power/display/hardware references).
-- Build/flash/power/pitfalls: [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md), [custom_app_guide.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/custom_app_guide.md),
-  [usb_dfu.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/usb_dfu.md).
+- Source: [at_commands.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_commands.c) (handlers + `at_commands_register()`), [at_server.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_server.c) (`parse_command`, `at_server_register_cmd`, `SEND_RESPONSE`), [at_server.h](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/include/at_server.h) (struct/flag/typedef contract).
+- Protocol: [protocol.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/protocol.md) (AT command spec + response contract), [architecture.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/architecture.md) (transport/event system).
+- Python parity: [skills/clip-sdk/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-sdk/) (SDK source in `sdk/`, command-registration/protocol-doc rules), [skills/clip-dev/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) (firmware-dev skill — audio/build/ble-at/storage/wifi-udp/mcuboot/power/display/hardware references).
+- Build/flash/power/pitfalls: [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md), [custom_app_guide.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/custom_app_guide.md), [usb_dfu.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/docs/usb_dfu.md).
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
