@@ -1,5 +1,5 @@
 ---
-description: Systematic guide to the reSpeaker Clip Basic SDK — transports, communication protocols, recording state machine, file model, end-to-end data flow, and the Python SDK as the primary reference implementation with CLI and Web tools.
+description: "Systematic guide to the reSpeaker Clip Basic SDK — transports, communication protocols, recording state machine, file model, end-to-end data flow, and the Python SDK as the primary reference implementation with CLI and Web tools."
 title: reSpeaker Clip Basic SDK Guide
 keywords:
   - reSpeaker clip
@@ -37,7 +37,7 @@ This guide covers:
 - **End-to-end data flow** — from connect to downloaded audio output.
 - **Reference implementations** — Python SDK (`clip` package), CLI tools, and a Web interface.
 
-The Basic SDK focuses on using the device's current capabilities from the host side. It does not include cloud transcription, AI summarization, account management, or mobile app services by themselves. Those workflows should be built on top of the downloaded audio files or integrated with another service. For modifying device-side behavior, protocols, audio processing, or firmware internals, refer to the [Firmware SDK documentation](#basic-sdk-and-firmware-sdk).
+The Basic SDK focuses on using the device's current capabilities from the host side. It does not include cloud transcription, AI summarization, account management, or mobile app services by themselves. Those workflows should be built on top of the downloaded audio files or integrated with another service.
 
 ## Where This Guide Fits
 
@@ -53,7 +53,28 @@ This guide focuses on application-side development:
 - understanding AT commands, GATT, and file-transfer protocols;
 - integrating these capabilities through Python, CLI, or Web tools.
 
-For modifying device-side behavior, protocols, audio processing, or firmware internals, refer to the [Firmware SDK documentation](#basic-sdk-and-firmware-sdk).
+## Basic SDK and Firmware SDK
+
+The reSpeaker Clip SDK is split into two layers:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_basic_firmware.png" alt="Basic SDK vs Firmware SDK" width={900} height="auto" /></p>
+
+The concepts introduced in this guide (transports, protocols, state machine, data flow) are implemented on the device side by the firmware. The table below maps each Basic SDK concept to its Firmware SDK counterpart:
+
+| Basic SDK concept | Firmware SDK counterpart |
+| --- | --- |
+| BLE / Wi-Fi transport | BLE and UDP service device-side implementation |
+| AT Command | AT Server and command registration |
+| GATT | GATT service and characteristics |
+| Recording state machine | Device recording states and event handling |
+| File transfer | Storage, chunking, CRC, and sync implementation |
+| Audio data flow | PDM -> DSP -> Opus -> file pipeline |
+
+If your goal is to add new AT commands, change GATT services, modify the recording state machine, or alter the audio processing chain, use the Firmware SDK:
+
+- [Getting Started with the reSpeaker Clip Firmware SDK](/respeaker_clip_firmware_quick_start/) covers environment setup, build, flash, and smoke testing.
+- [reSpeaker Clip Firmware Development Guide](/respeaker_clip_firmware_development_guide/) explains the firmware architecture, protocol internals, update and recovery paths, validation, production release, and AI-assisted development.
+- [Customization: Add a Custom AT Command](/respeaker_clip_customization_at_command/) walks through adding and validating a new AT command.
 
 ## Installation
 
@@ -152,6 +173,21 @@ Transport choice matters:
 
 ## Core Concepts
 
+This section describes the host-side view used by the Basic SDK. For the
+device-side implementation details, see the matching Firmware Development Guide
+sections:
+
+| Basic SDK topic | Detailed firmware explanation |
+| --- | --- |
+| Transports | [Communication Protocol](/respeaker_clip_firmware_development_guide/#communication-protocol) |
+| Recording modes | [Recording Modes](/respeaker_clip_firmware_development_guide/#recording-modes) |
+| Device state | [Event and State Model](/respeaker_clip_firmware_development_guide/#event-and-state-model) |
+| File format and sessions | [Session, Chunking, and Storage Model](/respeaker_clip_firmware_development_guide/#session-chunking-and-storage-model) |
+| AT command protocol | [AT Command Grammar](/respeaker_clip_firmware_development_guide/#at-command-grammar), [JSON Response Contract](/respeaker_clip_firmware_development_guide/#json-response-contract), and [Registered Command Reference](/respeaker_clip_firmware_development_guide/#registered-command-reference) |
+| GATT characteristics | [BLE GATT Service](/respeaker_clip_firmware_development_guide/#ble-gatt-service) |
+| File transfer and resume | [UDP Frame Types](/respeaker_clip_firmware_development_guide/#udp-frame-types) and [Session and File Addressing](/respeaker_clip_firmware_development_guide/#session-and-file-addressing) |
+| End-to-end data flow | [System Architecture](/respeaker_clip_firmware_development_guide/#system-architecture) and [Audio Pipeline](/respeaker_clip_firmware_development_guide/#audio-pipeline) |
+
 ### Transports
 
 | Transport | Class | Use case | Notes |
@@ -232,25 +268,6 @@ Each file is verified with CRC32. Only verified files should be treated as succe
 ### Data Flow
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_data_flow.png" alt="reSpeaker Clip data flow" width={900} height="auto" /></p>
-
-## Basic SDK and Firmware SDK
-
-The reSpeaker Clip SDK is split into two layers:
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_basic_firmware.png" alt="Basic SDK vs Firmware SDK" width={900} height="auto" /></p>
-
-The concepts introduced in this guide (transports, protocols, state machine, data flow) are implemented on the device side by the firmware. The table below maps each Basic SDK concept to its Firmware SDK counterpart:
-
-| Basic SDK concept | Firmware SDK counterpart |
-| --- | --- |
-| BLE / Wi-Fi transport | BLE and UDP service device-side implementation |
-| AT Command | AT Server and command registration |
-| GATT | GATT service and characteristics |
-| Recording state machine | Device recording states and event handling |
-| File transfer | Storage, chunking, CRC, and sync implementation |
-| Audio data flow | PDM → DSP → Opus → file pipeline |
-
-If your goal is to add new AT commands, change GATT services, modify the recording state machine, or alter the audio processing chain, you need the Firmware SDK. The Firmware SDK documentation (firmware architecture, environment setup, build, flashing, and secondary development) is not yet available and will be published as soon as possible.
 
 ## Complete Example
 
