@@ -6,7 +6,7 @@ keywords:
   - FAQ
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_faqs
-sku: 
+sku: 10003420
 sidebar_position: 1
 last_update:
   date: 2026-08-05T00:00:00.000Z
