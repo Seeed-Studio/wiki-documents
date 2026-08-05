@@ -39,7 +39,7 @@ SenseCraft App は、データの可視化とデバイス管理のためのモ�
 
 SenseCraft App は iOS 版と Android 版の両方が利用可能です。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_1.png" alt="SenseCraft App download options" width={600} height="auto" /></p>
+[SenseCraft 公式ダウンロードセンターから SenseCraft アプリをダウンロードしてください](https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_app)。
 
 ## アカウント
 

@@ -18,7 +18,7 @@ updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-jetson/
 ---
 
-SenseCraft AI-Jetson es un kit de desarrollo y una plataforma diseñada para dispositivos NVIDIA Jetson Edge AI. Simplemente ejecuta el "Quickstart Script" y se te presentará una interfaz de usuario interactiva para ver una aplicación de ejemplo con un video precargado y un modelo de IA precargado. Si quieres añadir tu propia cámara USB o cámara IP, ¡puedes hacerlo fácilmente con unos pocos clics!
+SenseCraft AI-Jetson es un kit de desarrollo y una plataforma diseñada para dispositivos NVIDIA Jetson Edge AI. Simplemente ejecuta el "Quickstart Script" y se te presentará una interfaz de usuario interactiva para ver una aplicación de ejemplo con un vídeo precargado y un modelo de IA precargado. Si quieres añadir tu propia cámara USB o cámara IP, ¡puedes hacerlo fácilmente con unos pocos clics!
 
 Además de los diversos modelos de IA integrados que ofrecemos listos para usar, puedes acceder a una gran cantidad de modelos públicos en la plataforma SenseCraft AI y podrás descargar e implementar modelos de IA para escenarios específicos y crear soluciones de IA personalizadas según tus necesidades. SenseCraft AI es tu socio de toma de decisiones inteligente para visión por IA, proporcionándote capacidades de inferencia y creación de soluciones simples, flexibles y eficientes.
 
@@ -29,7 +29,7 @@ Además de los diversos modelos de IA integrados que ofrecemos listos para usar,
 **Requisitos de hardware**
 
 - Dispositivo NVIDIA Jetson
-- Conectividad a Internet vía Ethernet/WiFi
+- Conectividad a Internet mediante Ethernet/WiFi
 - Pantalla
 
 **Requisitos de software**
@@ -53,10 +53,10 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 proporciona el script jetson_clocks para maximizar el rendimiento de Jetson estableciendo una frecuencia máxima estática para los relojes de CPU, GPU y EMC.
 
 - **[Opcional] ¿Ahorrar espacio desinstalando algunos paquetes innecesarios como libreoffice, cambiar el tamaño de la memoria Swap? (/swapfile) [y/n] (predeterminado: n): n**<br />
-En caso de memoria insuficiente (especialmente Jetson Nano), es mejor habilitar el swap para garantizar el funcionamiento normal del programa.
+En caso de memoria insuficiente (especialmente en Jetson Nano), es mejor habilitar swap para garantizar el funcionamiento normal del programa.
 
 - **[Opcional] ¿Quieres crear o cambiar el tamaño de la memoria Swap? (/swapfile)?**<br />
-Para obtener un mejor rendimiento de Nano, activa el Swap.
+Para obtener un mejor rendimiento de Nano, activa Swap.
 
 - **[Opcional] ¿Usar almacenamiento externo · para guardar el directorio de datos de Docker? (para imágenes y volúmenes de Docker)?**<br />
 
@@ -78,7 +78,7 @@ El programa de edge AI requiere un mínimo de 32G de espacio de almacenamiento p
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/37.png)
 
-3. Revisa el read me para asegurarte de que el dispositivo tenga instalado SenseCraft AI-Jetson y que el modelo de IA se adapte al tipo de dispositivo.
+3. Revisa el read me para asegurarte de que el dispositivo tiene instalado SenseCraft AI-Jetson y de que el modelo de IA se adapta al tipo de dispositivo.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/38.png)
 
@@ -86,7 +86,7 @@ El programa de edge AI requiere un mínimo de 32G de espacio de almacenamiento p
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/39.png)
 
-5. El modelo de IA necesita aplicar un flujo de video; si no hay flujo, añade primero un flujo válido. Model zoo enviará la información del flujo directamente al dispositivo.
+5. El modelo de IA necesita aplicar un flujo de vídeo; si no hay flujo, añade primero un flujo válido. Model zoo enviará la información del flujo directamente al dispositivo.
 
 :::note
 para más información sobre flujos, consulta Streams Management
@@ -98,32 +98,32 @@ para más información sobre flujos, consulta Streams Management
 
 6. Envía el modelo de IA y la información del flujo al dispositivo. La implementación del modelo de IA tarda unos minutos, por lo que puedes salir de la página actual e ir al dispositivo después de unos minutos para ver el modelo de IA implementado
 
-### **Gestión de flujos**
+### **Gestión de Streams**
 
-SenseCraft AI-Jetson admite añadir múltiples flujos de video y admite añadir cámara USB y cámara IP según tus necesidades.
+SenseCraft AI-Jetson admite añadir múltiples flujos de vídeo y admite añadir cámaras USB y cámaras IP según tus necesidades.
 
-El número de flujos de video que se pueden añadir depende de los recursos de CPU y memoria del dispositivo. Presta atención al uso de recursos del dispositivo.
+El número de flujos de vídeo que se pueden añadir depende de los recursos de CPU y memoria del dispositivo. Presta atención al uso de recursos del dispositivo.
 
-#### **Añadir flujo**
+#### **Añadir Stream**
 
 1. Visita la página Streams y haz clic en el icono +<br />
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/42.png)
 
-2. Configura la información válida del nuevo flujo de video, consulta la tabla siguiente para más detalles<br />
+2. Configura la información válida del nuevo flujo de vídeo, consulta la tabla siguiente para más detalles<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/43.png)
 
 | **Campos** | **Contenido** |
 | --- | --- |
 | **Stream Name** | 1 Nombre personalizado para este flujo.<br />2 No puede estar vacío |
-| **Video Type** | 1 Ip camera: Accede a una cámara IP, necesitas introducir una URL rtsp válida<br />2 Usb camera: Conecta la cámara USB al dispositivo, reconoce automáticamente el USB y luego selecciona la cámara USB correcta en la ruta de video. |
-| **Video Path** | Ruta de video, el formato lo decide "Video Type"; si es incorrecto, se usará el video predeterminado. |
-| **Device AI Model** | 1 Selecciona un modelo de IA que ya se haya descargado en el dispositivo<br />2 Si no hay ningún modelo de IA en tu dispositivo, ve a la página AI Models para descargar el modelo a tu dispositivo. |
+| **Video Type** | 1 Ip camera: Accede a una cámara IP, necesitas introducir una URL rtsp válida<br />2 Usb camera: Conecta la cámara USB al dispositivo, reconoce automáticamente el USB y luego selecciona la cámara USB correcta en la ruta de vídeo. |
+| **Video Path** | Ruta de vídeo, el formato lo decide "Video Type"; si es incorrecto, se utilizará el vídeo predeterminado. |
+| **Device AI Model** | 1 Selecciona un modelo de IA que ya se haya descargado en el dispositivo<br />2 Si no hay ningún modelo de IA en tu dispositivo, ve a la página AI Models para descargar el modelo en tu dispositivo. |
 | **Confidence Threshold** | 1 Umbral de confianza del objeto para la detección.<br />2 Formato: float [0, 1] |
 | **IoU Threshold** | 1 IoU se utiliza para evaluar la precisión de los cuadros delimitadores predichos en comparación con los cuadros delimitadores reales2 Formato: float [0, 1] |
 | **FPS** | 1 Fotogramas por segundo del flujo<br />2 Formato: INT [1,60] |
 | **Quality** | 1 Calidad del flujo de salida.  Predeterminado: 50<br />2 Formato: int [0,100] |
-| **Maximum Detections** | 1 número máximo de detecciones por imagen. Predeterminado:3002 Formato: int [0,1000] |
+| **Maximum Detections** | 1 número máximo de detecciones por imagen. Predeterminado: 3002 Formato: int [0,1000] |
 | **Display Frame Rate** | 1 Si se muestra la tasa de fotogramas del flujo<br />2 Formato: Bool [True,False]<br />● True: mostrar FPS<br />● False: no mostrar FPS |
 | **Display Clock** | 1 Si se muestra la hora<br />2 Formato: Bool [True,False]<br />● True: mostrar hora<br />● False: no mostrar hora |
 
@@ -133,7 +133,7 @@ El número de flujos de video que se pueden añadir depende de los recursos de C
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/45.png)
 
-#### **Eliminar flujo**
+#### **Eliminar Stream**
 
 Ve a los detalles del flujo y haz clic en el icono "Delete" para eliminar el flujo<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/46.png)
@@ -143,7 +143,7 @@ Ve a los detalles del flujo y haz clic en el icono "Delete" para eliminar el flu
 Gestiona todos los modelos de IA que se han descargado en el dispositivo.
 
 - El modelo de IA mostrará el nombre del flujo que utiliza el modelo.<br />
-- Los modelos de IA que no se usan en ningún flujo se pueden eliminar<br />
+- Los modelos de IA que no se utilizan en ningún flujo se pueden eliminar<br />
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/47.png)
 
@@ -169,9 +169,9 @@ La información del dispositivo, para más información consulta la siguiente ta
 
 #### **Vincular a la plataforma SenseCraft AI**
 
-SenseCraft AI para Jetson está diseñado para edge AI. La inferencia de IA y el procesamiento de flujos de video se realizan localmente en el dispositivo. Solo si necesitas descargar más modelos de IA necesitas vincular el dispositivo a la [plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai); puedes eliminar el dispositivo una vez descargados.
+SenseCraft AI para Jetson está diseñado para edge AI. La inferencia de IA y el procesamiento de flujos de vídeo se realizan localmente en el dispositivo. Solo si necesitas descargar más modelos de IA necesitas vincular el dispositivo a la [plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home); puedes eliminar el dispositivo una vez descargados.
 
-1. Visita [SenseCraft AI](https://sensecraft.seeed.cc/ai).<br />
+1. Visita [SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home).<br />
 2. Regístrate con una dirección de correo electrónico válida. La cuenta de SenseCraft AI es la misma que la cuenta de SenseCAP Cloud; si ya tienes una, puedes iniciar sesión directamente.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/49.png)
@@ -183,7 +183,7 @@ SenseCraft AI para Jetson está diseñado para edge AI. La inferencia de IA y el
 
 5. Vuelve a la aplicación SenseCraft AI del dispositivo. Haz clic en "Bind to SenseCraft AI platform", y entonces la aplicación mostrará el código de vinculación y el nombre temporal.
 
-- Bind Code: introduce el código de vinculación correcto y válido en la [plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai) para terminar de vincular el dispositivo.<br />
+- Bind Code: introduce el código de vinculación correcto y válido en la [plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) para terminar de vincular el dispositivo.<br />
 - Temporary Name: si el código de vinculación está duplicado, entonces necesitas introducir el nombre temporal correcto.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/51.png)
@@ -197,9 +197,9 @@ SenseCraft AI para Jetson está diseñado para edge AI. La inferencia de IA y el
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/54.png)
 
-#### **Desvincular**
+#### **Ubind**
 
-Si no necesitas gestionar tu dispositivo de forma remota en la plataforma de IA puedes eliminar el dispositivo de la cuenta de tu plataforma de IA. Puedes desvincularlo desde el dispositivo o desde la plataforma<br />
+Si no necesitas gestionar tu dispositivo de forma remota en la plataforma de IA, puedes eliminar el dispositivo de la cuenta de tu plataforma de IA. Puedes desvincularlo desde el dispositivo o desde la plataforma<br />
 
 - Desvincula el dispositivo del AI mode zoo, haz clic en "Delete"<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/59.png)
@@ -215,7 +215,7 @@ Las actualizaciones de la aplicación SenseCraft AI se dividen en actualizacione
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/56.png)
 
-**Actualización manual**: busca actualizaciones manualmente y haz clic en el botón Update para actualizar cuando se detecte una nueva versión
+**Actualización manual**: comprueba manualmente si hay actualizaciones y haz clic en el botón Update para actualizar cuando se detecte una nueva versión
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/57.png)
 

@@ -13,7 +13,7 @@ last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/es/codecraft/codecraft-overview/
-createdAt: '2026-06-30'
+createdAt: '2026-06-29'
 updatedAt: '2026-07-08'
 ---
 
@@ -24,7 +24,7 @@ Bienvenido a CodeCraft. Esta guía te ayudará a comprender rápidamente la plat
 ![CodeCraft Banner](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://codecraft.seeed.cc" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Prueba CodeCraft ahora 🚀</font></span></strong>
     </a>
 </div>
@@ -40,7 +40,7 @@ Esta sección incluye:
 - Introducción a CodeCraft
 - Preparación e inicio de sesión
 - Compra y activación de la membresía de CodeCraft
-- Facturación y gestión del uso
+- Facturación y gestión de uso
 - Ayuda y soporte
 
 ### [2. Creación y plataforma](/es/codecraft/creation-and-platform)
@@ -54,7 +54,7 @@ Esta sección incluye:
 - Selección de hardware
 - Descripción de los requisitos del proyecto
 - Generación de código, flasheo y depuración
-- Ejemplos de proyectos: Temporizador Pomodoro, Temporizador Pomodoro en la Terminal, LED de corazón parpadeante con ESP32S3 y LED controlado por botón con el Kit para principiantes
+- Ejemplos de proyectos: Temporizador Pomodoro, Temporizador Pomodoro en el terminal, LED de corazón parpadeante con ESP32S3 y LED controlado por botón con el Beginner Kit
 
 ### [3. Comunidad y publicación](/es/codecraft/community-and-publishing)
 
@@ -77,4 +77,4 @@ Recomendado para usuarios que desean aplicar CodeCraft en la enseñanza, el dise
 Esta sección incluye:
 
 - Solución educativa completa
-- Gestión de profesores y estudiantes y soporte del flujo de trabajo de enseñanza
+- Gestión de profesores y estudiantes y soporte al flujo de trabajo de enseñanza

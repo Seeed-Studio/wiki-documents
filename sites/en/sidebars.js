@@ -2171,6 +2171,29 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/respeaker_clip_basic_sdk_guide',
+            {
+              type: 'category',
+              label: 'Firmware SDK',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_firmware_quick_start',
+                  label: 'Getting Started',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_firmware_development_guide',
+                  label: 'Development Guide',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_customization_at_command',
+                  label: 'Custom AT Command',
+                },
+              ],
+            },
           ],
         },
         {

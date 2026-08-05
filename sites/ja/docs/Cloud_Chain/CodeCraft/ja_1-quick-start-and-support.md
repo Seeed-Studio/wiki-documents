@@ -1,5 +1,5 @@
 ---
-description: CodeCraft の開始方法、ログイン、メンバーシップの購入と有効化、請求と使用状況の管理、ヘルプとサポートの見つけ方について説明します。
+description: CodeCraft の使い方を開始し、ログイン、メンバーシップの購入と有効化、請求と使用状況の管理、ヘルプとサポートの見つけ方について説明します。
 title: CodeCraft クイックスタート & サポート
 keywords:
   - CodeCraft
@@ -12,45 +12,45 @@ last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/ja/codecraft/quick-start-and-support/
-createdAt: '2026-06-30'
+createdAt: '2026-06-29'
 updatedAt: '2026-07-08'
 ---
 
 # CodeCraft クイックスタート & サポート
 
-![CodeCraft Banner](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp)
+![CodeCraft バナー](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://codecraft.seeed.cc" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>CodeCraft を今すぐ体験 🚀</font></span></strong>
+    <a class="get_one_now_item" href="https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ CodeCraft を試す 🚀</font></span></strong>
     </a>
 </div>
 
 ## 1.1 CodeCraft の概要
 
-### 1.1.1 「こうしたい」と言うだけで動く
+### 1.1.1 「やりたいことを話すだけで動く」
 
 CodeCraft は、ハードウェアシナリオに特化して設計された AI プログラミングアシスタントです。やりたいことを自然言語で説明するだけで、CodeCraft が実行可能なハードウェアプログラムを生成してくれます。
 
 開発環境をゼロから構築することなく、素早くハードウェア制作を完了したいユーザーに適しています。学生、教師、メイカー、ハードウェアプログラミング初心者のいずれであっても、会話を通じてアイデアから実行までの全プロセスを完了できます。
 
-### 1.1.2 アイデアから実行まで 4 ステップ
+### 1.1.2 アイデアから実行までの 4 ステップ
 
 <!--![CodeCraft Workflow](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-how-it-works.png)-->
 
 CodeCraft の基本的なワークフローはとてもシンプルです：
 
-1. **Describe**  
-   「ポモドーロタイマーを作る」「開発ボードで温度と湿度を検知する」といったように、自然言語でアイデアを説明します。
+1. **Describe（説明）**  
+   「ポモドーロタイマーを作る」や「開発ボードで温度と湿度を検知する」といったように、自然言語でアイデアを説明します。
 
-2. **Generate**  
-   CodeCraft が説明に基づいて、実行可能なコードとプロジェクトドキュメントを自動生成します。
+2. **Generate（生成）**  
+   CodeCraft が、あなたの説明に基づいて実行可能なコードとプロジェクトドキュメントを自動生成します。
 
-3. **Flash**  
+3. **Flash（書き込み）**  
    Web 経由のワンクリックで、プログラムを開発ボードに書き込みます。
 
-4. **Share**  
-   完成後、プロジェクトを SenseCraft AI コミュニティに公開し、再利用や共有ができます。
+4. **Share（共有）**  
+   完成後は、プロジェクトを SenseCraft AI コミュニティに公開し、再利用や共有ができます。
 
 ### 1.1.3 CodeCraft はあなたのハードウェアを理解します
 
@@ -76,22 +76,22 @@ CodeCraft のコア機能には次のものが含まれます：
 | 従来の開発ワークフロー（複雑すぎる ❌） | CodeCraft のコア機能（とてもシンプル ✅） |
 | :--- | :--- |
 | ❌ 大規模な IDE をインストール | ✨ インストール不要：完全 Web ベースでクライアント不要 |
-| ❌ 複雑な環境構築 | ✨ 設定不要：ドライバや環境構築は一切不要 |
+| ❌ 複雑な環境設定 | ✨ 設定不要：ドライバや環境構築は一切不要 |
 | ❌ コードをゼロから記述 | 🤖 AI ネイティブ：ピンやセンサーを理解し、ハードウェアコードを直接生成 |
 | ❌ 複雑なツールチェーンの管理 | ☁️ クラウドコンパイル：バックエンドで完全自動コンパイル |
 | ❌ 手動での書き出しと書き込み | 🚀 ワンクリック書き込み：デバイスへ直接アップロード |
-| ❌ 孤立した開発 | 🌐 コミュニティ共有：SenseCraft AI を通じてプロジェクトを公開・再利用 |
+| ❌ 個別で孤立した開発 | 🌐 コミュニティ共有：SenseCraft AI を通じてプロジェクトを公開・再利用 |
 
 ### 1.1.5 対応ハードウェアエコシステム
 
-![CodeCraft Hardware Ecosystem](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-hardware-ecosystem-EN.png)
+![CodeCraft ハードウェアエコシステム](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-hardware-ecosystem-EN.png)
 
 CodeCraft は Seeed Studio のハードウェアエコシステムとシームレスに統合されており、次のデバイスをサポートします：
 
-* **Wio Terminal**: 2.4 インチディスプレイ、各種センサー、Wi-Fi、Bluetooth を備えたオールインワン開発ボード。
-* **XIAO ESP32S3 Sense**: カメラとマイクを搭載したコンパクトな開発ボードで、AI ビジョンや音声プロジェクトに適しています。
-* **Grove Beginner Kit**: モジュール一体型のオールインワンボードで、配線不要。初心者や教育用途に最適です。
-* **300+ Grove センサー**: 動作検知、環境モニタリング、ディスプレイ出力、アクチュエータ制御、光・音センシング、イメージングに対応。
+* **Wio Terminal**：2.4 インチディスプレイ、複数のセンサー、Wi-Fi、Bluetooth を備えたオールインワン開発ボード。
+* **XIAO ESP32S3 Sense**：カメラとマイクを搭載したコンパクトな開発ボードで、AI ビジョンや音声プロジェクトに適しています。
+* **Grove Beginner Kit**：モジュール一体型のオールインワンボードで、配線不要。初心者や教育用途に最適です。
+* **300+ Grove センサー**：動きの検知、環境モニタリング、ディスプレイ出力、アクチュエータ制御、光・音のセンシング、イメージングに対応。
 
 ---
 
@@ -109,25 +109,25 @@ CodeCraft は複数のログイン方法を提供しています。開発者、�
 * Apple ログイン
 * Bazaar ログイン（Seeed Studio 公式ストアアカウント）
 
-複数デバイス間でプロジェクトやクラウドデータを同期できるよう、普段から使用しているログイン方法を利用することをおすすめします。
+デバイス間でプロジェクトやクラウドデータを同期できるよう、普段から使用しているログイン方法を利用することをおすすめします。
 
-![Sign-up / Log-in](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/Sign-up-Log-in-EN.png)
+![サインアップ / ログイン](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/Sign-up-Log-in-EN.png)
 
 ### 1.2.2 クラスコードでのログイン
 
-CodeCraft は教育シナリオ向けに、クラスコードでのログインにも対応しています。
+CodeCraft は、教育シナリオ向けに設計されたクラスコードでのログインにも対応しています。
 
 クラスコードログインを利用すると、学生は登録を行わずに、教師が割り当てたクラス環境に直接入ることができます。
 
 手順：
 
-1. ログイン画面で「クラスコードでログイン」を選択します。
+1. ログイン画面で「Classroom Code Login」を選択します。
 2. 教師から提供されたクラスコードを入力します。
 3. クラス環境に入り、CodeCraft の利用を開始します。
 
-クラスコードは通常、教師または学校から提供されます。教育用途のニーズについては、サポートに連絡するか、CodeCraft 教育ソリューションのページをご覧ください。
+クラスコードは通常、教師または学校から提供されます。教育用途での利用については、サポートに連絡するか、CodeCraft 教育ソリューションのページをご覧ください。
 
-![Classroom Code Login](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/Class-Code-Login-EN.png)
+![クラスコードログイン](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/Class-Code-Login-EN.png)
 
 ---
 
@@ -135,7 +135,7 @@ CodeCraft は教育シナリオ向けに、クラスコードでのログイン�
 
 ### 1.3.1 サブスクリプションプラン
 
-![CodeCraft Subscription Plans](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-plans-EN.jpg)
+![CodeCraft サブスクリプションプラン](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-plans-EN.jpg)
 
 CodeCraft は、さまざまな利用ニーズに対応する複数のサブスクリプションプランを提供しています。利用頻度、プロジェクト規模、AI 生成の要件に応じて選択できます。
 
@@ -145,26 +145,26 @@ CodeCraft は、さまざまな利用ニーズに対応する複数のサブス�
 | Pro | 学生、ホビーユーザー | 学習、プロジェクト、適度な利用に最適 |
 | Max | 教師、メイカー、開発者 | 授業、開発、ヘビーユース向けの高いクォータ |
 
-> 価格、クォータ、有効期間は、プロモーションや購入チャネルによって異なる場合があります。詳細は公式購入ページをご確認ください。
+> 価格、クォータ、有効期間は、プロモーションや購入チャネルによって異なる場合があります。詳細は公式の購入ページをご確認ください。
 
 ### 1.3.2 購入方法
 
-CodeCraft メンバーシップは複数のチャネルから購入できます。価格、プロモーション、有効期間はチャネルによって異なる場合があります。
+CodeCraft のメンバーシップは複数のチャネルから購入できます。価格、プロモーション、有効期間はチャネルによって異なる場合があります。
 
-#### 方法 1: 公式サイトで購入
+#### 方法 1：公式サイトで購入
 
 | 購入経路 | 手順 | ユースケース |
 | :--- | :--- | :--- |
-| CodeCraft ホームから購入 | 1. https://codecraft.seeed.cc/pricing にアクセス<br/>2. プランを選択<br/>3. 支払いを完了 | プランを比較したいユーザー |
-| ワークスペースからアップグレード | 1. https://codecraft.seeed.cc/workspace にアクセス<br/>2. Settings をクリック<br/>3. Billing に進む<br/>4. プランを購入 | 既存ユーザーのアップグレード |
+| CodeCraft ホームから購入 | 1. [https://codecraft.seeed.cc/pricing/](https://codecraft.seeed.cc/pricing?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_pricing) にアクセス<br/>2. プランを選択<br/>3. 支払いを完了 | プランを比較したいユーザー |
+| ワークスペースからアップグレード | 1. [https://codecraft.seeed.cc/workspace](https://codecraft.seeed.cc/workspace?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_workspace) にアクセス<br/>2. Settings をクリック<br/>3. Billing に進む<br/>4. プランを購入 | 既存ユーザーのアップグレード |
 
 > どちらの方法でも、同じアカウントに同一のメンバーシップが有効化されます。
 
-#### 方法 2: Seeed Studio ストア（中国国内 & グローバル）
+#### 方法 2：Seeed Studio ストア（中国国内 & グローバル）
 
 | 購入経路 | 手順 | ユースケース |
 | :--- | :--- | :--- |
-| [Seeed Studio Taobao 店](https://item.taobao.com/item.htm?id=1061524473439&skuId=6270812574966&spm=a213gs.v2success.0.0.17b14831MkryRQ) | 1. 公式 Taobao 店で購入<br/>2. 引き換えコードを受け取る<br/>3. CodeCraft の請求ページで入力 | 国内ユーザー、教育機関での調達 |
+| [Seeed Studio 淘宝公式ストア](https://item.taobao.com/item.htm?id=1061524473439&skuId=6270812574966&spm=a213gs.v2success.0.0.17b14831MkryRQ) | 1. 公式淘宝ストアで購入<br/>2. 引き換えコードを受け取る<br/>3. CodeCraft の請求ページで入力 | 中国国内ユーザー、教育機関での調達 |
 | [Seeed Studio 公式ストア](https://www.seeedstudio.com/CodeCraft-Hardware-focused-AI-Coding-Assistant-for-Wio-Terminal-Grove-Beginner-Kit-XIAO-ESP32.html) | 1. 公式ストアで購入<br/>2. 引き換えコードを受け取る<br/>3. CodeCraft の請求ページで有効化 | 海外ユーザー、各種団体 |
 
 ---
@@ -173,7 +173,7 @@ CodeCraft メンバーシップは複数のチャネルから購入できます�
 
 Taobao、公式ストア、またはプロモーションから引き換えコードを入手した場合：
 
-1. https://codecraft.seeed.cc を開きます
+1. [https://codecraft.seeed.cc](https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home) を開きます
 2. ログインします
 3. ワークスペースに入ります
 4. Settings をクリックします
@@ -186,7 +186,7 @@ Taobao、公式ストア、またはプロモーションから引き換えコ�
 * 各コードは通常 1 回のみ使用可能です。
 * 引き換え前に、正しいアカウントであることを確認してください。
 * 有効期間は注文内容に依存します。
-* 有効化されない場合は、ページを更新するか再ログインしてください。
+* 反映されない場合は、ページを更新するか再ログインしてください。
 
 ---
 
@@ -196,13 +196,13 @@ Taobao、公式ストア、またはプロモーションから引き換えコ�
 
 手順：
 
-1. ワークスペースを開く：https://codecraft.seeed.cc/workspace
-2. Settings をクリック
-3. Billing または Usage を選択
+1. ワークスペースを開きます：[https://codecraft.seeed.cc/workspace](https://codecraft.seeed.cc/workspace?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_workspace)
+2. Settings をクリックします
+3. Billing または Usage を選択します
 
 ### 1.4.1 請求管理
 
-![Billing Interface](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/billing-interface-EN.png)
+![請求インターフェース](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/billing-interface-EN.png)
 
 次の内容を確認できます：
 
@@ -214,17 +214,17 @@ Taobao、公式ストア、またはプロモーションから引き換えコ�
 
 ### 1.4.2 使用状況の管理
 
-![Usage Interface](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/Usage-Interface-EN.png)
+![使用状況インターフェース](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/Usage-Interface-EN.png)
 
 次の内容を確認できます：
 
-* 日次または週次の AI 利用量
-* 残りクォータ
+* 毎日または毎週の AI 利用状況
+* 残りのクォータ
 * リセット時間
-* 追加の使用設定
-* 使用履歴
+* 追加の利用設定
+* 利用履歴
 
-教師や教育機関は、計画のために定期的に使用状況を確認することをおすすめします。
+教師や教育機関は、計画のために定期的に利用状況を確認する必要があります。
 
 ---
 
@@ -233,22 +233,22 @@ Taobao、公式ストア、またはプロモーションから引き換えコ�
 ### 1.5.1 FAQ
 
 **Q: 引き換えコードが無効なのはなぜですか？**  
-A: コードの正しさ、使用状況、ログインしているアカウントを確認してください。
+A: 正しく入力されているか、使用状況、およびアカウントへのログイン状態を確認してください。
 
 **Q: Taobao で購入しましたが、コードを受け取っていません。**  
-A: 注文詳細を確認するか、店舗サポートにお問い合わせください。
+A: 注文詳細を確認するか、店舗サポートに連絡してください。
 
 **Q: 引き換え後にサブスクリプションが有効化されません。**  
-A: ページを更新するか再ログインしてください。それでも無効な場合は、注文情報とともにサポートにお問い合わせください。
+A: 画面を更新するか、再ログインしてください。まだ無効な場合は、注文情報とともにサポートに連絡してください。
 
 ### 1.5.2 サポートへの連絡
 
 #### 技術サポート
 
-* ワークスペースの設定画面で「Contact Us」をクリック
-* 新機能のベータ版アップデートをフォロー
-* 教育機関はクラスコードやカスタマイズをリクエスト可能
-* ハードウェア購入：https://seeedstudio.com  
+* ワークスペース設定で「Contact Us」をクリックします
+* 新機能のためにベータ版の更新情報をフォローします
+* 教育機関は教室用コードやカスタマイズを依頼できます
+* ハードウェア購入: https://seeedstudio.com  
 
 ![Contact Us](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/contact-us-EN.png)
 

@@ -18,9 +18,9 @@ url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-outpu
 
 この Wiki では、SenseCraft AI プラットフォームを使用して XIAO ESP32S3 Sense ボードのモデル出力と GPIO 設定を行う手順をステップバイステップで説明します。これらの手順に従うことで、学習済みモデルが検出した特定のイベント条件に基づいて GPIO レベルの変化をトリガーする方法を学ぶことができます。
 
-## 前提条件
+## 事前準備
 
-始める前に、以下を用意してください。
+開始する前に、以下を用意してください：
 
 1. XIAO ESP32S3 Sense ボード
 2. USB-C データケーブル
@@ -61,7 +61,7 @@ url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-outpu
 
 ## ステップ 1. XIAO ESP32S3 Sense ワークスペースへアクセスしデバイスを接続する
 
-**[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`** の順に進んで XIAO ESP32S3 Sense ワークスペースにアクセスするか、[ワークスペースへの直接リンク](https://sensecraft.seeed.cc/ai/device/local/32)を使用します。
+**[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`** の順にクリックして XIAO ESP32S3 Sense ワークスペースにアクセスするか、[ワークスペースへの直接リンク](https://sensecraft.seeed.cc/ai/device/local/32)を使用します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -71,7 +71,7 @@ USB-C ケーブルを使用して、XIAO ESP32S3 Sense ボードをコンピュ�
 
 ## ステップ 2. XIAO ESP32S3 Sense にモデルがロードされていることを確認する
 
-先に進む前に、XIAO ESP32S3 Sense ボードに学習済みモデルがロードされていることを確認してください。まだモデルをロードしていない場合は、SenseCraft AI のドキュメントを参照して、デバイスにモデルを学習・デプロイする方法を確認してください。
+次に進む前に、XIAO ESP32S3 Sense ボードに学習済みモデルがロードされていることを確認してください。まだモデルをロードしていない場合は、SenseCraft AI のドキュメントを参照して、デバイスにモデルを学習およびデプロイする方法を確認してください。
 
 - [XIAO ESP32S3 Sense 用モデルの使用](https://wiki.seeedstudio.com/ja/sensecraft_ai_pretrained_models_for_xiao/)
 
@@ -90,19 +90,19 @@ USB-C ケーブルを使用して、XIAO ESP32S3 Sense ボードをコンピュ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/46.png" style={{width:800, height:'auto'}}/></div>
 
-ダイアログボックスが表示され、GPIO レベルを変更するためのトリガー条件として機能する各種パラメータの入力を求められます。これらのパラメータには次のものが含まれます。
+ダイアログボックスが表示され、GPIO レベルを変更するためのトリガー条件として使用される各種パラメータの入力を求められます。これらのパラメータには次のものが含まれます：
 
-- **Object**: モデルが検出したときに GPIO レベルを変更する対象オブジェクトを指定します。たとえば、顔が検出されたときに GPIO を変化させたい場合は「face」とします。
+- **Object**: GPIO レベルの変更をトリガーするために、モデルが検出すべきオブジェクトを指定します。たとえば、顔が検出されたときに GPIO を変化させたい場合は「face」とします。
 
-- **Condition**: トリガーが発生するために満たす必要がある条件を選択します。「Greater than」「Less than」「Equal to」などのオプションがあります。たとえば「Greater than」を選択すると、検出されたオブジェクトの信頼度が指定値より大きい場合に GPIO が変化します。
+- **Condition**: トリガーが発生するために満たす必要がある条件を選択します。"Greater than"、"Less than"、"Equal to" などのオプションがあります。たとえば "Greater than" を選択すると、検出されたオブジェクトの信頼度が指定した値より大きい場合に GPIO が変化します。
 
 - **Confidence**: オブジェクト検出が GPIO 変更をトリガーするために必要な最小信頼度を設定します。この値は 1 から 100 の範囲で、100 が最も高い信頼度です。
 
 - **GPIO**: 制御したい XIAO ESP32S3 Sense 上の特定の GPIO ピンを選択します。利用可能なオプションには GPIO1(DO)、GPIO2(D1) などがあります。
 
-- **Default Status**: 選択した GPIO ピンのデフォルト状態を選択します。「Low Level」と「High Level」のオプションがあります。
+- **Default Status**: 選択した GPIO ピンのデフォルト状態を選択します。"Low Level" と "High Level" のオプションがあります。
 
-- **Active Status**: トリガー条件が満たされたときに GPIO ピンが変化すべき状態を指定します。「Low Level」と「High Level」のオプションがあります。
+- **Active Status**: トリガー条件が満たされたときに GPIO ピンが変化すべき状態を指定します。"Low Level" と "High Level" のオプションがあります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/47.png" style={{width:600, height:'auto'}}/></div>
 
@@ -118,11 +118,11 @@ GPIO 出力機能は、SenseCraft AI プラットフォームと XIAO ESP32S3 Se
 
 ## まとめ
 
-このステップバイステップガイドに従うことで、SenseCraft AI プラットフォーム上で XIAO ESP32S3 Sense ボードのモデル出力と GPIO 設定を行う方法を学びました。これにより、学習済みモデルが検出した特定のイベント条件に基づいて GPIO レベルの変化をトリガーできるようになりました。この機能により、XIAO ESP32S3 Sense と SenseCraft AI を使用して、インタラクティブなプロジェクトやアプリケーションを幅広く作成することが可能になります。シームレスな動作のために、Web プラットフォームとデバイス間の接続を安定して保つことを忘れないでください。
+このステップバイステップガイドに従うことで、SenseCraft AI プラットフォーム上で XIAO ESP32S3 Sense ボードのモデル出力と GPIO 設定を行う方法を学びました。これにより、学習済みモデルが検出した特定のイベント条件に基づいて GPIO レベルの変化をトリガーできるようになりました。この機能により、XIAO ESP32S3 Sense と SenseCraft AI を使用して、インタラクティブなプロジェクトやアプリケーションを幅広く作成することが可能になります。シームレスに動作させるために、Web プラットフォームとデバイス間の接続を安定して保つことを忘れないでください。
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択できる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

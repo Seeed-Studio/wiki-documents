@@ -12,7 +12,7 @@ last_update:
   date: 1/7/2026
   author: Janet
 createdAt: '2024-07-26'
-updatedAt: '2026-03-23'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft-app/overview/
 ---
 
@@ -39,7 +39,7 @@ SenseCraft App is a mobile application for data visualization and device managem
 
 SenseCraft App is available in both iOS and Android versions.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_1.png" alt="SenseCraft App download options" width={600} height="auto" /></p>
+[Download SenseCraft App from the official SenseCraft Download Center](https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_app).
 
 ## Account
 
