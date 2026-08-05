@@ -447,10 +447,10 @@ while True:
 ```
 
 2. Download the following required Python files to your local machine:
-   - [dht20.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht/DHT20.py)
+   - [DHT20.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht/DHT20.py)
    - [lcd1602.py](https://files.seeedstudio.com/wiki/Grove-16x2_LCD--White_on_Blue/lcd1602.py)
 
-3. Open **dht20.py** in Thonny IDE, click `File -> Save As -> MicroPython device`, and save the file with the name **dht20.py** on your device.
+3. Open **DHT20.py** in Thonny IDE, click `File -> Save As -> MicroPython device`, and save the file with the name **dht20.py** on your device.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/saveas.png" style={{width:750, height:'auto'}}/></div>
 
