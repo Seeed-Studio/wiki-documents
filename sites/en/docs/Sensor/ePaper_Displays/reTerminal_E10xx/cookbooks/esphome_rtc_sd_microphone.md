@@ -1805,8 +1805,6 @@ display:
       it.printf(30, 295, id(font_small), BLACK, "SD: DET GPIO15 / EN GPIO16");
 ```
 
-```
-
 </TabItem>
 </Tabs>
 
