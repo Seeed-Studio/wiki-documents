@@ -163,7 +163,7 @@ O reSpeaker Clip utiliza um formato portátil em estilo clipe. A parte superior 
         <td>Cabo Type‑C de 0,5 m</td>
         <td style={{textAlign: 'center'}}>1</td>
         <td>Para alimentar a base de carregamento</td>
-      </tr]
+      </tr>
       <tr>
         <td>Cordão de pescoço</td>
         <td style={{textAlign: 'center'}}>1</td>
