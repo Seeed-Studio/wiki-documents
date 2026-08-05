@@ -1,5 +1,5 @@
 ---
-description: reSpeaker Clip Basic SDK の体系的なガイド — トランスポート、通信プロトコル、録音ステートマシン、ファイルモデル、エンドツーエンドのデータフロー、および CLI と Web ツールを備えた Python SDK を主なリファレンス実装として解説します。
+description: "reSpeaker Clip Basic SDK の体系的なガイド — トランスポート、通信プロトコル、録音ステートマシン、ファイルモデル、エンドツーエンドのデータフロー、および CLI と Web ツールを備えた Python SDK（主要なリファレンス実装）について説明します。"
 title: reSpeaker Clip Basic SDK ガイド
 keywords:
   - reSpeaker clip
@@ -7,14 +7,14 @@ keywords:
   - sdk
   - ble
   - wifi
-image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png
 slug: /respeaker_clip_basic_sdk_guide
 sku: 100020126
 last_update:
   date: 07/13/2026
   author: Ray He / Kasun Thushara
 createdAt: '2026-07-13'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-24'
 url: https://wiki.seeedstudio.com/ja/respeaker_clip_basic_sdk_guide/
 ---
 
@@ -27,43 +27,64 @@ url: https://wiki.seeedstudio.com/ja/respeaker_clip_basic_sdk_guide/
 
 ## 概要
 
-reSpeaker Clip Basic SDK ガイドでは、ホスト側アプリケーションが BLE、Wi-Fi、AT コマンド、GATT、ファイル転送ワークフローを通じてデバイスと通信し制御する方法を説明します。Python SDK は主なリファレンス実装として提供されており、CLI および Web ベースのツールも含まれます。
+reSpeaker Clip Basic SDK ガイドでは、ホスト側アプリケーションが BLE、Wi-Fi、AT コマンド、GATT、およびファイル転送ワークフローを通じてデバイスと通信し制御する方法を説明します。Python SDK は主要なリファレンス実装として提供されており、CLI および Web ベースのツールも含まれます。
 
-本ガイドでは次の内容を扱います：
+このガイドでは次の内容を扱います：
 
 - **トランスポート** — BLE および Wi-Fi/UDP 通信チャネル。
-- **通信プロトコル** — AT コマンド、GATT キャラクタリスティック、ファイル転送フレーミング。
-- **録音モデル** — 録音モード、デバイスステートマシン、ファイルフォーマット。
+- **通信プロトコル** — AT コマンド、GATT キャラクタリスティック、およびファイル転送フレーミング。
+- **録音モデル** — 録音モード、デバイスステートマシン、およびファイル形式。
 - **エンドツーエンドのデータフロー** — 接続から音声出力のダウンロードまで。
-- **リファレンス実装** — Python SDK（`clip` パッケージ）、CLI ツール、Web インターフェース。
+- **リファレンス実装** — Python SDK（`clip` パッケージ）、CLI ツール、および Web インターフェース。
 
-Basic SDK は、ホスト側からデバイスの現在の機能を利用することに焦点を当てています。クラウド文字起こし、AI 要約、アカウント管理、モバイルアプリ単体のサービスは含まれません。これらのワークフローは、ダウンロードした音声ファイルの上に構築するか、別のサービスと統合して実現してください。デバイス側の動作、プロトコル、音声処理、ファームウェア内部を変更する場合は、[Firmware SDK ドキュメント](#basic-sdk-と-firmware-sdk)を参照してください。
+Basic SDK は、ホスト側からデバイスの現在の機能を利用することに焦点を当てています。クラウド文字起こし、AI 要約、アカウント管理、モバイルアプリサービス自体は含まれません。これらのワークフローは、ダウンロードした音声ファイルの上に構築するか、別のサービスと統合して実現してください。
 
 ## 本ガイドの位置付け
 
-reSpeaker Clip を初めて使用する場合は、まず [reSpeaker Clip Getting Started Guide](/ja/respeaker_clip) をお読みください。
+reSpeaker Clip を初めて使用する場合は、まず [reSpeaker Clip 入門ガイド](/ja/respeaker_clip) をお読みください。
 
-Getting Started Guide では、製品、ターゲットシナリオ、ハードウェア機能、通常のユーザーワークフローについて紹介しています。
+入門ガイドでは、製品、ターゲットシナリオ、ハードウェア機能、および通常のユーザーワークフローを紹介します。
 
 本ガイドはアプリケーション側の開発に焦点を当てています：
 
-- BLE または Wi-Fi 経由でデバイスと通信すること；
-- 録音およびデバイス設定を制御すること；
-- 録音セッションを管理およびダウンロードすること；
-- AT コマンド、GATT、ファイル転送プロトコルを理解すること；
-- これらの機能を Python、CLI、または Web ツールから統合すること。
+- BLE または Wi-Fi 経由でデバイスと通信する；
+- 録音およびデバイス設定を制御する；
+- 録音セッションを管理およびダウンロードする；
+- AT コマンド、GATT、およびファイル転送プロトコルを理解する；
+- これらの機能を Python、CLI、または Web ツールを通じて統合する。
 
-デバイス側の動作、プロトコル、音声処理、ファームウェア内部を変更する場合は、[Firmware SDK ドキュメント](#basic-sdk-と-firmware-sdk)を参照してください。
+## Basic SDK と Firmware SDK
+
+reSpeaker Clip SDK は 2 つのレイヤーに分かれています：
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_basic_firmware.png" alt="Basic SDK vs Firmware SDK" width={900} height="auto" /></p>
+
+本ガイドで紹介する概念（トランスポート、プロトコル、ステートマシン、データフロー）は、ファームウェアによってデバイス側に実装されています。以下の表は、各 Basic SDK の概念を Firmware SDK 側の対応要素にマッピングしたものです：
+
+| Basic SDK の概念 | Firmware SDK 側の対応要素 |
+| --- | --- |
+| BLE / Wi-Fi トランスポート | デバイス側の BLE および UDP サービス実装 |
+| AT コマンド | AT サーバーおよびコマンド登録 |
+| GATT | GATT サービスおよびキャラクタリスティック |
+| 録音ステートマシン | デバイスの録音状態およびイベント処理 |
+| ファイル転送 | ストレージ、チャンク分割、CRC、および同期の実装 |
+| 音声データフロー | PDM -> DSP -> Opus -> ファイルパイプライン |
+
+新しい AT コマンドの追加、GATT サービスの変更、録音ステートマシンの修正、または音声処理チェーンの変更が目的の場合は、Firmware SDK を使用してください：
+
+- [reSpeaker Clip Firmware SDK 入門](/ja/respeaker_clip_firmware_quick_start/) では、環境構築、ビルド、フラッシュ、およびスモークテストについて説明します。
+- [reSpeaker Clip Firmware 開発ガイド](/ja/respeaker_clip_firmware_development_guide/) では、ファームウェアアーキテクチャ、プロトコル内部、更新およびリカバリパス、検証、本番リリース、および AI 支援開発について説明します。
+- [カスタマイズ：カスタム AT コマンドの追加](/ja/respeaker_clip_customization_at_command/) では、新しい AT コマンドの追加と検証の手順を解説します。
 
 ## インストール
 
 ### 必要条件
 
 - Python 3.10 以上
-- Bluetooth アダプタ（BLE モード）
-- Wi-Fi アダプタ（Wi-Fi モード）
+- Bluetooth アダプター（BLE モード）
+- Wi-Fi アダプター（Wi-Fi モード）
 
-### リポジトリをクローンする
+### リポジトリのクローン
 
 GitHub リポジトリは[こちら](https://github.com/Seeed-Projects/respeaker_clip_python/tree/main)にあります。
 
@@ -71,7 +92,7 @@ GitHub リポジトリは[こちら](https://github.com/Seeed-Projects/respeaker
 git clone <repository-url>
 ```
 
-### 依存関係をインストールする
+### 依存関係のインストール
 
 仮想環境を有効化した後、必要な依存関係をインストールします：
 
@@ -120,16 +141,16 @@ applications/clip/tests/
 
 ### SDK モジュール
 
-| Module        | Description              |
+| モジュール        | 説明                     |
 | ------------- | ------------------------ |
-| client.py     | BLE デバイス通信 |
-| commands.py   | 高レベル AT コマンド   |
-| transfer.py   | ファイル同期     |
-| codec.py      | 音声エンコード/デコード  |
-| wifi.py       | WiFi トランスポート           |
-| progress.py   | 進行状況表示         |
-| utils.py      | ヘルパー関数         |
-| exceptions.py | 例外クラス        |
+| client.py     | BLE デバイス通信         |
+| commands.py   | 高レベル AT コマンド     |
+| transfer.py   | ファイル同期             |
+| codec.py      | 音声エンコード／デコード |
+| wifi.py       | WiFi トランスポート      |
+| progress.py   | 進行状況表示             |
+| utils.py      | ヘルパー関数             |
+| exceptions.py | 例外クラス               |
 
 ---
 
@@ -137,42 +158,57 @@ applications/clip/tests/
 
 Python SDK は次のワークフローをサポートします：
 
-- **デバイスを設定**：録音モード、ビットレート、複雑度、自動削除ポリシー、OLED 輝度、BLE デバイス名、および関連設定。
-- **録音を制御**：開始、停止、一時停止、再開、ブックマークの追加。
-- **セッションを管理**：一覧表示、クエリ、削除、パージ、SD カードのフォーマット。
-- **ファイルをダウンロード**：BLE または Wi-Fi/UDP 経由で録音を転送し、レジュームをサポート。
-- **音声を変換**：デバイスの生の Opus データを OGG/Opus コンテナに再格納するか、Opus デコードパスを通じて 16 kHz モノラル WAV にデコード。
-- **ステータスとイベントを読み取る**：バッテリーレベル、充電状態、デバイス状態、ステートマシンの変化、リアルタイム音声可視化コールバック。
+- **デバイスの設定**：録音モード、ビットレート、複雑度、自動削除ポリシー、OLED 輝度、BLE デバイス名、および関連設定。
+- **録音の制御**：開始、停止、一時停止、再開、ブックマークの追加。
+- **セッションの管理**：一覧表示、クエリ、削除、パージ、および SD カードのフォーマット。
+- **ファイルのダウンロード**：録音を BLE または Wi-Fi/UDP 経由で転送し、レジュームにも対応。
+- **音声の変換**：デバイスの生の Opus データを OGG/Opus に再コンテナ化するか、Opus デコード経路を通じて 16 kHz モノラル WAV にデコード。
+- **ステータスとイベントの読み取り**：バッテリーレベル、充電状態、デバイス状態、ステートマシンの変化、およびリアルタイムのオーディオ可視化コールバック。
 
 トランスポートの選択は重要です：
 
 - ポータブルな設定、録音制御、小規模なダウンロードには `ClipDevice` を介した BLE を使用します。
-- 大量ダウンロードには `WiFiDevice` または `WiFiSync` を介した Wi-Fi/UDP を使用します。大きな録音セッションに対して高速かつ安定しています。
-- 録音制御は BLE のみです。ファイルダウンロードは BLE と Wi-Fi の両方で動作します。
+- 大量ダウンロードには `WiFiDevice` または `WiFiSync` を介した Wi-Fi/UDP を使用します。大きな録音セッションに対して、より高速かつ安定しています。
+- 録音制御は BLE のみ対応です。ファイルダウンロードは BLE と Wi-Fi の両方で動作します。
 
 ## コアコンセプト
 
+このセクションでは、Basic SDK が使用するホスト側の見方について説明します。デバイス側の
+実装の詳細については、対応する Firmware 開発ガイドの
+各セクションを参照してください：
+
+| Basic SDK のトピック | 詳細なファームウェア解説 |
+| --- | --- |
+| トランスポート | [Communication Protocol](/ja/respeaker_clip_firmware_development_guide/#communication-protocol) |
+| 録音モード | [Recording Modes](/ja/respeaker_clip_firmware_development_guide/#recording-modes) |
+| デバイス状態 | [Event and State Model](/ja/respeaker_clip_firmware_development_guide/#event-and-state-model) |
+| ファイル形式とセッション | [Session, Chunking, and Storage Model](/ja/respeaker_clip_firmware_development_guide/#session-chunking-and-storage-model) |
+| AT コマンドプロトコル | [AT Command Grammar](/ja/respeaker_clip_firmware_development_guide/#at-command-grammar)、[JSON Response Contract](/ja/respeaker_clip_firmware_development_guide/#json-response-contract)、および [Registered Command Reference](/ja/respeaker_clip_firmware_development_guide/#registered-command-reference) |
+| GATT キャラクタリスティック | [BLE GATT Service](/ja/respeaker_clip_firmware_development_guide/#ble-gatt-service) |
+| ファイル転送とレジューム | [UDP Frame Types](/ja/respeaker_clip_firmware_development_guide/#udp-frame-types) および [Session and File Addressing](/ja/respeaker_clip_firmware_development_guide/#session-and-file-addressing) |
+| エンドツーエンドのデータフロー | [System Architecture](/ja/respeaker_clip_firmware_development_guide/#system-architecture) および [Audio Pipeline](/ja/respeaker_clip_firmware_development_guide/#audio-pipeline) |
+
 ### トランスポート
 
-| Transport | Class | Use case | Notes |
+| トランスポート | クラス | ユースケース | 備考 |
 | --- | --- | --- | --- |
-| BLE | `ClipDevice` | 設定、録音制御、セッションダウンロード | ポータブルであり、録音制御に必須。大量ダウンロードでは遅くなったり、負荷時に通知がドロップする可能性があります。 |
-| Wi-Fi/UDP | `WiFiDevice` / `WiFiSync` | 大量セッションのダウンロード | 大きなファイルに対して高速かつ安定。デバイスで Wi-Fi を有効にし、`ClipAP_XXXX` に接続する必要があります。 |
+| BLE | `ClipDevice` | 設定、録音制御、セッションのダウンロード | ポータブルであり、録音制御に必須。大量ダウンロードでは遅くなったり、負荷が高いと通知がドロップする場合があります。 |
+| Wi-Fi/UDP | `WiFiDevice` / `WiFiSync` | セッションの一括ダウンロード | 大きなファイルに対してより高速かつ安定。デバイス側で Wi-Fi を有効にし、`ClipAP_XXXX` に接続する必要があります。 |
 
 ### 録音モード
 
-| Mode | Description |
+| モード | 説明 |
 | --- | --- |
-| `normal` | SpeexDSP ノイズ抑制 / デリバーブなしの標準録音パス。デバイスの AGC、ハイパス、リミッターはファームウェアによって有効になっている場合があります。 |
-| `enhanced` | SpeexDSP ノイズ抑制およびデリバーブが有効な拡張パス。 |
+| `normal` | SpeexDSP ノイズ抑制／残響除去なしの標準録音パス。デバイスの AGC、ハイパス、およびリミッターは、ファームウェアによって有効化されている場合があります。 |
+| `enhanced` | SpeexDSP ノイズ抑制および残響除去を有効にした拡張パス。 |
 
-`set_mode()` は `normal` と `enhanced` のみを受け付けます。`start_recording()` はエイリアスとして `stereo` と `merge` も受け付けます；`stereo` は `normal` に、`merge` は `enhanced` にマッピングされます。
+`set_mode()` が受け付けるのは `normal` と `enhanced` のみです。`start_recording()` はエイリアスとして `stereo` と `merge` も受け付けます；`stereo` は `normal` に、`merge` は `enhanced` にマッピングされます。
 
-どちらのモードもデフォルトでモノラル 16 kHz Opus を出力します。
+両方のモードは、デフォルトでモノラル 16 kHz の Opus を出力します。
 
 ### デバイス状態
 
-録音はセッションとして表現されます。セッション ID は通常、`YYYYMMDDHHMMSS` のようなタイムスタンプ形式の文字列です。
+録音はセッションとして表されます。セッション ID は通常、`YYYYMMDDHHMMSS` のようなタイムスタンプ形式の文字列です。
 
 ```text
 IDLE --start_recording--> RECORDING --stop_recording--> IDLE
@@ -186,9 +222,9 @@ IDLE --start_recording--> RECORDING --stop_recording--> IDLE
 
 接続時に、SDK は `AT+TIME` を通じてデバイスの時計を同期できます。デバイスのタイムゾーンはホストのタイムゾーンと異なる場合があります。
 
-### ファイルフォーマット
+### ファイル形式
 
-デバイスは録音データを OGG コンテナではなく生の Opus フレームとして保存します。生フォーマットは、長さ付きの Opus フレームのシーケンスです：
+デバイスは録音データを OGG コンテナではなく、生の Opus フレームとして保存します。生フォーマットは、長さ付きの Opus フレームのシーケンスです：
 
 ```text
 [2-byte little-endian length][opus frame][2-byte little-endian length][opus frame]...
@@ -204,60 +240,41 @@ IDLE --start_recording--> RECORDING --stop_recording--> IDLE
 
 ### GATT キャラクタリスティック
 
-| Characteristic | UUID | Properties | Purpose |
+| キャラクタリスティック | UUID | プロパティ | 用途 |
 | --- | --- | --- | --- |
-| Service | `6E400001-B5A3-F393-E0A9-E50E24DCCA9E` | Primary Service | カスタム BLE 通信サービス |
+| サービス | `6E400001-B5A3-F393-E0A9-E50E24DCCA9E` | Primary Service | カスタム BLE 通信サービス |
 | CMD | `6E400002-B5A3-F393-E0A9-E50E24DCCA9E` | Write Without Response (Encrypted) | セントラル → デバイス：AT コマンド文字列の書き込み |
 | RESP_SEND | `6E400003-B5A3-F393-E0A9-E50E24DCCA9E` | Notify (CCC Encrypted) | デバイス → セントラル：JSON 応答およびイベント通知 |
-| FILE_DATA | `6E400004-B5A3-F393-E0A9-E50E24DCCA9E` | Notify (CCC Encrypted) | デバイス → セントラル：バイナリファイル転送フレーム通知 |
+| FILE_DATA | `6E400004-B5A3-F393-E0A9-E50E24DCCA9E` | Notify (CCC Encrypted) | デバイス → セントラル：バイナリファイル転送フレームの通知 |
 | AUDIO_VIS | `6E400005-B5A3-F393-E0A9-E50E24DCCA9E` | Notify (CCC Encrypted) | デバイス → セントラル：リアルタイム音声可視化通知 |
 
 ### ファイル転送プロトコル
 
 ファイルデータは `FILE_DATA` 上のバイナリフレームとして送信されます。
 
-| Frame | Type | Layout |
+| フレーム | 種類 | レイアウト |
 | --- | --- | --- |
 | `FILE_START` | `0x10` | `type(1) + fn_len(1) + filename(N) + file_size(4, LE)` |
 | `DATA` | `0x01` | `type(1) + seq(2, LE) + len(2, LE) + data(N)` |
 | `FILE_END` | `0x11` | `type(1) + crc32(4, LE)` |
 | `TRANSFER_DONE` | `0x12` | `type(1) + sid_len(1) + session_id(N) + file_count(4, LE)` |
 
-各ファイルは CRC32 で検証されます。検証済みファイルのみを正常に保存されたものとして扱うべきです。
+各ファイルは CRC32 で検証されます。検証済みのファイルのみを、正常に保存されたものとして扱う必要があります。
 
 ### レジューム
 
-`SessionSync.sync()` はレジューム対応です。既存のローカル `.opus` ファイルを検出し、デバイスの同期済みファイルカウンタをクエリし、`start_file` を計算して、以前のダウンロードを継続できます。最初からやり直すには `force=True` を使用します。
+`SessionSync.sync()` はレジュームに対応しています。既存のローカル `.opus` ファイルを検出し、デバイスの同期済みファイルカウンタを問い合わせ、`start_file` を計算して、以前のダウンロードを継続できます。最初からやり直すには `force=True` を使用します。
 
 ### データフロー
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_data_flow.png" alt="reSpeaker Clip data flow" width={900} height="auto" /></p>
 
-## Basic SDK と Firmware SDK
-
-reSpeaker Clip SDK は 2 つのレイヤーに分かれています：
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_basic_firmware.png" alt="Basic SDK vs Firmware SDK" width={900} height="auto" /></p>
-
-このガイドで紹介した概念（トランスポート、プロトコル、ステートマシン、データフロー）は、デバイス側ではファームウェアによって実装されています。以下の表は、各 Basic SDK の概念と Firmware SDK における対応関係を示しています：
-
-| Basic SDK の概念 | Firmware SDK における対応 |
-| --- | --- |
-| BLE / Wi-Fi トランスポート | デバイス側の BLE および UDP サービス実装 |
-| AT コマンド | AT サーバーとコマンド登録 |
-| GATT | GATT サービスとキャラクタリスティック |
-| 録音ステートマシン | デバイスの録音状態とイベント処理 |
-| ファイル転送 | ストレージ、チャンク分割、CRC、および同期の実装 |
-| オーディオデータフロー | PDM → DSP → Opus → ファイルパイプライン |
-
-新しい AT コマンドの追加、GATT サービスの変更、録音ステートマシンの修正、またはオーディオ処理チェーンの変更が目的の場合は、Firmware SDK が必要です。Firmware SDK のドキュメント（ファームウェアアーキテクチャ、環境構築、ビルド、書き込み、二次開発）はまだ公開されておらず、準備が整い次第公開されます。
-
 ## 完全なサンプル
 
 このサンプルは典型的なワークフローを示します：
 
-1. BLE による自動接続
-2. バッテリーレベルの確認
+1. BLE で自動接続
+2. バッテリー残量を確認
 3. 録音モードを enhanced に設定
 4. 10 秒間の録音を開始
 5. 録音中にブックマークを追加
@@ -409,7 +426,7 @@ await cmds.set_time(int(time.time()))      # returns True
 
 ---
 
-### 音声録音
+### 音声の録音
 
 #### 録音の開始 / 停止
 
@@ -419,7 +436,7 @@ session_id = await cmds.start_recording("normal")   # returns str (session ID)
 await cmds.stop_recording()                          # returns dict with session info
 ```
 
-> `"normal"` はモノラル、`"enhanced"` は DSP の前処理（ノイズ抑制、AGC）を有効にします。
+> `"normal"` はモノラル、`"enhanced"` は DSP 前処理（ノイズ抑制、AGC）を有効にします。
 
 #### 録音の一時停止 / 再開
 
@@ -428,7 +445,7 @@ await cmds.pause_recording()
 await cmds.resume_recording()
 ```
 
-#### ブックマークの追加（録音中）
+#### ブックマークを追加（録音中）
 
 ```python
 bookmark = await cmds.add_bookmark()
@@ -455,7 +472,7 @@ for s in sessions:
     print(s.id, s.files, s.size)
 ```
 
-#### セッションの同期（BLE）
+#### セッションを同期（BLE）
 
 ```python
 from pathlib import Path
@@ -498,7 +515,7 @@ results = await sync.sync_all(Path("recordings"))
 ### 設定管理
 
 
-#### パラメータの設定（動作コマンド）
+#### パラメータを設定（動作コマンド）
 
 ```python
 await cmds.set_mode("enhanced")          # normal | enhanced
@@ -506,7 +523,7 @@ await cmds.set_auto_delete(7)            # days (0-30), pass -1 to disable
 await cmds.set_brightness(128)           # 0-255
 ```
 
-#### パラメータの読み取り
+#### パラメータを読み取る
 
 ```python
 mode        = await cmds.get_mode()          # returns str
@@ -528,12 +545,12 @@ await cmds.set_config_dict({
 
 ### WiFi 通信
 
-Clip は AP が有効なとき、WiFi UDP 経由で通信できます。
+Clip は、AP が有効なときに WiFi UDP 経由で通信できます。
 
 | パラメータ | 値           |
 |-----------|-----------------|
 | SSID      | `ClipAP_XXXX`   |
-| Password  | `12345678`（デフォルト） |
+| Password  | `12345678` (default) |
 | IP        | `192.168.4.1`   |
 | Port      | `8089`          |
 
@@ -562,11 +579,11 @@ sync.download_session(session_id, Path("recordings"))
 sync.disconnect()
 ```
 
-> `WiFiSync` は**同期的**（ブロッキングソケット）であり、`async`/`await` は不要です。
+> `WiFiSync` は**同期的**（ブロッキングソケット）です — `async`/`await` は不要です。
 
 ---
 
-### エラーハンドリング
+### エラー処理
 
 ```python
 from clip import ConnectionError, TimeoutError, CommandError
@@ -590,7 +607,7 @@ except CommandError as e:
 
 SDK には、すぐに使えるユーティリティがいくつか含まれています。
 
-### clip-cli - 統合 CLI
+### clip-cli -統合 CLI
 
 #### BLE（デフォルト）
 
@@ -635,14 +652,14 @@ tools/clip-cli.py sync --session 20260326120000 --delete
 ```
 期待される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="デバイス接続" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/delete.jpg" alt="Device Connection" width={800} height="auto"/></p>
 
 ```bash
 tools/clip-cli.py config get
 ```
 期待される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="デバイス接続" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/get_set.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ```bash
 tools/clip-cli.py bookmark
@@ -654,7 +671,7 @@ tools/clip-cli.py terminal
 
 期待される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/terminal.png" alt="デバイス接続" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/terminal.png" alt="Device Connection" width={800} height="auto"/></p>
 
 #### WiFi
 
@@ -663,7 +680,7 @@ tools/clip-cli.py terminal
 ```
 期待される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-on.png" alt="デバイス接続" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-on.png" alt="Device Connection" width={800} height="auto"/></p>
 
 
 ```bash
@@ -671,7 +688,7 @@ tools/clip-cli.py --transport wifi status
 ```
 期待される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-status.png" alt="デバイス接続" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-status.png" alt="Device Connection" width={800} height="auto"/></p>
 
 
 
@@ -680,7 +697,7 @@ tools/clip-cli.py  wifi off
 ```
 期待される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-off.png" alt="デバイス接続" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/wifi-off.png" alt="Device Connection" width={800} height="auto"/></p>
 
 
 
@@ -698,7 +715,7 @@ python tools/record.py --mode enhanced
 ```
 期待される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="デバイス接続" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/recording.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### sync.py
 
@@ -711,7 +728,7 @@ python tools/sync.py --all-sessions
 ```
 期待される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="デバイス接続" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/sync_tools.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### udp_sync.py
 
@@ -725,7 +742,7 @@ python tools/udp_sync.py --session 20260326120000
 
 期待される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="デバイス接続" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/udp_sync.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### ble_terminal.py
 
@@ -736,7 +753,7 @@ python tools/ble_terminal.py
 ```
 期待される出力
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/ble_terminal.png" alt="デバイス接続" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/sdk/ble_terminal.png" alt="Device Connection" width={800} height="auto"/></p>
 
 ### decode_opus.py
 
@@ -775,7 +792,7 @@ http://localhost:5000
 - デバイスステータス
 - 録音コントロール
 - セッション管理
-- 音声の可視化
+- オーディオの可視化
 - 設定エディタ
 - 同期進行状況
 
@@ -816,7 +833,7 @@ http://localhost:5000
 | シグネチャ | 戻り値 | 備考 |
 |-----------|---------|-------|
 | `ClipDevice(address=None, name_filter="Clip", debug=False)` | `ClipDevice` | `address` が `None` の場合は自動検出 |
-| `await connect(timeout=10.0, sync_time=True, lazy_device_name=False)` | `None` | 3 回リトライ；`sync_time` はデバイス時計を自動設定 |
+| `await connect(timeout=10.0, sync_time=True, lazy_device_name=False)` | `None` | 3 回リトライ；sync_time はデバイスの時計を自動設定 |
 | `await disconnect()` | `None` | すべての BLE 通知を停止 |
 | `await send_command(command, timeout=10.0)` | `dict` | AT コマンドを送信し、JSON レスポンスを取得 |
 | `is_connected` | `bool` | プロパティ — `_connected` と `client.is_connected` の両方を確認 |
@@ -833,20 +850,20 @@ http://localhost:5000
 | `await get_state()` | `DeviceState` | `.state`, `.battery`, `.mode`, `.bitrate`, `.charging`, `.free_space` |
 | `await get_time()` | `int` | Unix タイムスタンプ |
 | `await set_time(timestamp)` | `bool` | `AT+TIME=<ts>` に変換 |
-| `await get_pairing_status()` | `Dict[str, Any]` | BLE ペアリング状態とピアアドレス |
+| `await get_pairing_status()` | `Dict[str, Any]` | BLE ペアリングステータス + ピアアドレス |
 | `await reboot()` | `None` | デバイスを再起動 |
 | **録音** | | |
-| `await start_recording(mode="normal")` | `str` | `mode`: normal, enhanced, stereo, merge。セッション ID を返す。 |
+| `await start_recording(mode="normal")` | `str` | `mode`: normal, enhanced, stereo, merge。セッション ID を返します。 |
 | `await stop_recording()` | `Dict[str, Any]` | セッション概要；デバイスが録音中でない場合も適切に処理 |
 | `await pause_recording()` | `bool` | |
 | `await resume_recording()` | `bool` | |
-| `await add_bookmark()` | `BookmarkInfo` | `.offset` はセッション開始からの秒数 |
+| `await add_bookmark()` | `BookmarkInfo` | セッション開始からの `.offset`（秒） |
 | `await get_bookmarks(session_id, fetch_all=True)` | `List[BookmarkInfo]` | ページネーション対応、すべてのページを自動取得 |
 | `await get_bookmarks_count(session_id)` | `int` | 詳細なしの高速カウント |
 | **セッション** | | |
 | `await list_sessions(page=1, per_page=10)` | `List[SessionInfo]` | `.id`, `.files`, `.size`, `.synced_files`, `.mode` |
-| `await list_all_sessions(per_page=15)` | `List[SessionInfo]` | すべてのページを自動処理 |
-| `await get_session_info(session_id)` | `SessionInfo` | `synced_files` カウントを含む |
+| `await list_all_sessions(per_page=15)` | `List[SessionInfo]` | すべてを自動ページング |
+| `await get_session_info(session_id)` | `SessionInfo` | `synced_files` 数を含む |
 | `await list_session_files(session_id)` | `List[str]` | セッション内のすべてのファイル名 |
 | `await delete_session(session_id)` | `bool` | |
 | `await purge_all_sessions()` | `bool` | |
@@ -889,14 +906,14 @@ http://localhost:5000
 
 ### SessionSync
 
-***再開サポート付き BLE ファイル同期。***
+***再開機能をサポートした BLE 経由のファイル同期。***
 
 | シグネチャ | 戻り値 | 備考 |
 |-----------|---------|-------|
 | `SessionSync(device, commands=None)` | `SessionSync` | `FileTransfer` を拡張 |
-| `await sync(session_id, output_dir, delete_after=False, continuous=False, force=False, progress_callback=None, session_info=None, start_file=None)` | `Dict[str, Any]` | 再開は自動検出；`file_count`, `total_size`, `files`, `merged_file` を返す |
+| `await sync(session_id, output_dir, delete_after=False, continuous=False, force=False, progress_callback=None, session_info=None, start_file=None)` | `Dict[str, Any]` | 再開は自動検出される；`file_count`、`total_size`、`files`、`merged_file` を返す |
 | `await sync_all(output_dir, delete_after=False, progress_callback=None)` | `List[Dict]` | すべてのセッションを同期 |
-| `await download_session(session_id, output_dir, progress_callback=None, stop_recording=False, continuous=False, timeout=300.0, start_file=None, session_info=None)` | `Dict[str, Any]` | 低レベル；`session.json` と `bookmarks.json` も保存 |
+| `await download_session(session_id, output_dir, progress_callback=None, stop_recording=False, continuous=False, timeout=300.0, start_file=None, session_info=None)` | `Dict[str, Any]` | 低レベル；`session.json` + `bookmarks.json` も保存 |
 | `await cancel()` | `None` | スレッドセーフなキャンセル |
 
 ### WiFiDevice
@@ -906,22 +923,22 @@ http://localhost:5000
 | シグネチャ | 戻り値 | 備考 |
 |-----------|---------|-------|
 | `WiFiDevice(host="192.168.4.1", port=8089, timeout=10.0)` | `WiFiDevice` | |
-| `await connect(timeout=None)` | `None` | 受信およびハートビートワーカースレッドを開始 |
+| `await connect(timeout=None)` | `None` | 受信 + ハートビートのワーカースレッドを開始 |
 | `await disconnect()` | `None` | |
-| `await send_command(command, timeout=None)` | `dict` | JSON 解析された AT レスポンス |
+| `await send_command(command, timeout=None)` | `dict` | JSON 解析された AT 応答 |
 | `is_connected` | `bool` | プロパティ |
 | `await __aenter__()` / `await __aexit__()` | — | 非同期コンテキストマネージャ |
 
 ### WiFiSync
 
-***WiFi UDP ファイル同期（ブロッキング／同期型 — 非同期処理は不要）。***
+***WiFi UDP ファイル同期（ブロッキング/同期的 — async は不要）。***
 
 | シグネチャ | 戻り値 | 備考 |
 |-----------|---------|-------|
 | `WiFiSync(host="192.168.4.1", port=8089, timeout=120.0)` | `WiFiSync` | |
 | `connect()` | `bool` | ブロッキング |
 | `disconnect()` | `None` | |
-| `download_session(session_id, output_dir, convert_ogg=True, start_file=None, delete_after=False, progress_callback=None, cancel_after=None)` | `bool` | CRC 検証済み；tqdm 進行表示；'c' キーでキャンセル |
+| `download_session(session_id, output_dir, convert_ogg=True, start_file=None, delete_after=False, progress_callback=None, cancel_after=None)` | `bool` | CRC 検証済み；tqdm 進捗；'c' キーでキャンセル |
 | `list_sessions()` | `List[dict]` | ページネーション対応 |
 | `delete_session(session_id)` | `bool` | |
 
@@ -930,12 +947,12 @@ http://localhost:5000
 | 例外 | 基底クラス | 説明 |
 |-----------|------|-------------|
 | `ClipError` | `Exception` | すべてのライブラリエラーの基底クラス |
-| `ConnectionError` | `ClipError` | BLE または WiFi 接続失敗 |
-| `DisconnectedError` | `ClipError` | 予期しない切断 |
-| `CommandError` | `ClipError` | AT コマンドがエラーを返した；`.command` 属性あり |
-| `TransferError` | `ClipError` | ファイル転送処理に失敗 |
-| `TimeoutError` | `ClipError` | コマンド／転送がタイムアウト |
-| `ResponseError` | `ClipError` | 無効または予期しない応答 |
+| `ConnectionError` | `ClipError` | BLE または WiFi 接続の失敗 |
+| `DisconnectedError` | `ClipError` | 想定外の切断 |
+| `CommandError` | `ClipError` | AT コマンドがエラーを返した；`.command` 属性を持つ |
+| `TransferError` | `ClipError` | ファイル転送処理が失敗 |
+| `TimeoutError` | `ClipError` | コマンド/転送がタイムアウト |
+| `ResponseError` | `ClipError` | 無効または想定外の応答 |
 | `StateError` | `ClipError` | 操作に対してデバイスの状態が不適切 |
 
 
@@ -945,10 +962,10 @@ http://localhost:5000
 ## トラブルシューティング
 
 **Q1: 接続後にコマンドがハングしたりタイムアウトします。**  
-コマンドキャラクタリスティックには暗号化された BLE リンクが必要です。SDK はペアリングを開始できますが、OS が Bluetooth のペアリングまたは認可ダイアログを表示する場合があります。手動で承認してください。接続が依然として固まる場合は、古いボンド情報を削除して再接続してください。
+コマンドキャラクタリスティックには暗号化された BLE リンクが必要です。SDK はペアリングを開始できますが、OS が Bluetooth のペアリングまたは認証ダイアログを表示する場合があります。その場合は手動で承認してください。接続が依然として固まる場合は、古いボンド情報を削除してから再接続してください。
 
 **Q2: ダウンロードで CRC 不一致またはファイル数 0 が報告されます。**  
-BLE スタックは、負荷が高いときに通知を重複して届けたりフレームを落としたりすることがあります。切断してから再接続し、再試行してください。`SessionSync` を使用すると、可能な場合は転送を途中から再開できます。
+BLE スタックは、負荷が高いときに重複した通知を届けたりフレームを落としたりすることがあります。切断してから再接続し、再試行してください。可能な限り転送を再開できるように、`SessionSync` を使用してください。
 
 **Q3: ダウンロードが遅い、または途中で切断されます。**  
 再開対応の BLE 転送には `SessionSync` を使用してください。大量の録音データには、`WiFiSync` を使った Wi-Fi ダウンロードを利用します：Clip で Wi-Fi を有効にし、`ClipAP_XXXX` に接続してから Wi-Fi 経由でダウンロードします。
@@ -956,27 +973,27 @@ BLE スタックは、負荷が高いときに通知を重複して届けたり�
 **Q4: `delete_after=True` により、完全にダウンロードされていないセッションが削除されました。**  
 より安全なパターンを使用してください：`sync(force=True, delete_after=False)` を実行し、ローカルの `merged_file` が存在し空でないことを確認してから、手動で `cmds.delete_session(session_id)` を呼び出します。
 
-**Q5: `AT+NOISE`、`AT+DEREVERB`、`AT+AGC` が `Unknown command` を返します。**  
-現在のファームウェアでは、これらのオプションコマンドが登録されていない場合があります。SDK は互換性のあるファームウェアバージョン向けにラッパーを保持しています。設定を復元する場合、`set_config_dict(..., ignore_errors=True)` を使うと未対応の値をスキップできます。
+**Q5: `AT+NOISE`、`AT+DEREVERB`、または `AT+AGC` が `Unknown command` を返します。**  
+現在のファームウェアでは、これらのオプションコマンドが登録されていない可能性があります。SDK は互換性のあるファームウェアバージョン向けにラッパーを保持しています。設定を復元する場合、`set_config_dict(..., ignore_errors=True)` を使うとサポートされていない値をスキップできます。
 
-**Q6: `bleak` が `'BleakClient' object has no attribute 'get_services'` や `'get_mtu'` などのエラーを投げます。**  
+**Q6: `bleak` が `'BleakClient' object has no attribute 'get_services'` や `'get_mtu'` のようなエラーを投げます。**  
 `bleak` の API はバージョンによって異なります。インストールパッケージがリリースされた後は、SDK でテスト済みの依存関係セットを使用してください。
 
 **Q7: 録音が無音、または音質が悪いです。**  
-マイクの距離と向き、バッテリー残量、録音モードを確認してください。`enhanced` モードはノイズをより積極的に抑制するため、非常にクリアな音声を過度に処理してしまう場合があります。
+マイクの距離と向き、バッテリー残量、録音モードを確認してください。`enhanced` モードはノイズをより積極的に抑制するため、非常にクリアな音声では処理が過剰になる場合があります。
 
 **Q8: セッション ID のタイムスタンプがローカル時間と一致しません。**  
-デバイスの時計またはタイムゾーンがホストと異なる可能性があります。SDK は接続時に時刻を同期できます。`await cmds.set_time(int(time.time()))` を呼び出すこともできます。
+デバイスの時計またはタイムゾーンがホストと異なる可能性があります。SDK は接続時に時刻を同期できます。また、`await cmds.set_time(int(time.time()))` を呼び出すこともできます。
 
 **Q9: STT や ML 用に Opus を WAV に変換するにはどうすればよいですか？**  
 OGG/Opus 出力には `convert_to_ogg_opus()` を使用してください。WAV にするには、`opuslib` などの Opus デコーダで生の Opus ストリームをデコードします。
 
 **Q10: 録音中にログがオーディオ可視化イベントであふれます。**  
-`AUDIO_VIS` 通知は高頻度で発生します。必要なときだけオーディオ可視化コールバックを登録し、コールバック処理は軽量に保ってください。
+`AUDIO_VIS` 通知は高頻度で発生します。必要なときにのみオーディオ可視化コールバックを登録し、コールバックは軽量に保ってください。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
