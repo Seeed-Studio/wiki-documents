@@ -5,7 +5,7 @@ keywords:
   - reCamera Pro
   - FAQ
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /reCamera_Pro_FAQs
+slug: /reCamera_Pro_faqs
 sku: 
 sidebar_position: 1
 last_update:
@@ -13,7 +13,7 @@ last_update:
   author: Sizhaozhou
 createdAt: "2026-08-05"
 updatedAt: "2026-08-05"
-url: https://wiki.seeedstudio.com/reCamera_Pro_FAQs/
+url: https://wiki.seeedstudio.com/reCamera_Pro_faqs/
 ---
 
 # reCamera Pro FAQ
