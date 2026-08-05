@@ -9,10 +9,10 @@ sku: 100017057,100073581
 sidebar_position: 3
 sidebar_label: ESPHome - Display
 last_update:
-  date: 04/28/2026
+  date: 08/05/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-06-16'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome/
 ---
 
@@ -22,15 +22,17 @@ import TabItem from '@theme/TabItem';
 # ESPHome Cookbook - Display Basics: reTerminal E Series
 
 :::tip Read the main ESPHome guide first
-This page is the **reTerminal E Series-specific ESPHome display cookbook**. The shared boilerplate — picking a flashing path, the generic YAML skeleton, connecting to Home Assistant — lives in **[Work with ESPHome](/epaper_work_with_esphome)**. Skim that first if you're new to ESPHome on Seeed ePaper. For buttons, buzzer, LED, battery, SHT4x, and deep sleep, see the [I/O, battery, and low-power cookbook](/reterminal_e10xx_with_esphome_advanced). For RTC, microSD card detect, and microphone setup, see the [RTC, SD card, and microphone cookbook](/reterminal_e10xx_with_esphome_rtc_sd_microphone).
+This page is the **reTerminal E Series-specific ESPHome display cookbook**. The shared boilerplate — picking a flashing path, the generic YAML skeleton, connecting to Home Assistant — lives in **[Work with ESPHome](/epaper_work_with_esphome)**. Skim that first if you're new to ESPHome on Seeed ePaper. For buttons, buzzer, LED, battery, SHT4x, and deep sleep, see the [I/O, battery, touch, and low-power cookbook](/reterminal_e10xx_with_esphome_advanced). For RTC, microSD card detect, and microphone setup, see the [RTC, SD card, and microphone cookbook](/reterminal_e10xx_with_esphome_rtc_sd_microphone).
 :::
 
-:::tip Try demos without setting up a development environment
-If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+:::tip Generate ESPHome YAML or flash demos in the browser
+Want a ready-made ESPHome configuration without assembling every pin by hand? Open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**, choose the **ESPHome** card, pick your device (E1001 / E1002 / E1003 / E1004), then check the onboard features you need — display, buttons, battery, sensors, RTC, SD card, microphone, touch, deep sleep, and more. The Hub generates matching ESPHome YAML you can copy or download into your ESPHome dashboard.
+
+The same Hub can also flash demo firmware directly from the browser (desktop Chrome or Edge). For the shared ESPHome workflow, see **[Work with ESPHome](/epaper_work_with_esphome)**.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Hub 🖱️</font></span></strong>
     </a>
 </div><br />
 :::
@@ -89,17 +91,19 @@ Before the tutorial content of this article begins, you may need to have the fol
 
 ### Materials Required
 
+:::tip Supported models
+This cookbook covers **reTerminal E1001, E1002, E1003, and E1004**. Choose the matching tab in each example for your device. E1003 and E1004 require **ESPHome 2026.7.0 or later**.
+:::
+
 <div class="table-center">
   <table align="center">
     <tr>
       <th>reTerminal E1001</th>
       <th>reTerminal E1002</th>
-      <th>Home Assistant Green</th>
     </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/145.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/146.jpg" style={{width:250, height:'auto'}}/></div></td>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/ha.png" style={{width:210, height:'auto'}}/></div></td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -112,6 +116,44 @@ Before the tutorial content of this article begins, you may need to have the fol
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
       </div></td>
+    </tr>
+  </table>
+</div>
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>reTerminal E1003</th>
+      <th>reTerminal E1004</th>
+    </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/2-reTerminal-E1003-Epaper-Display.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2-reterminal-e1004-epaper-display.jpg" style={{width:250, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+    </tr>
+  </table>
+</div>
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>Home Assistant Green</th>
+    </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/ha.png" style={{width:210, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -124,6 +166,30 @@ Before the tutorial content of this article begins, you may need to have the fol
 Home Assistant Green is the easiest and most privacy-focused way to automate your home. It offers an effortless setup and allows you to control all the smart devices with just one system, where all the data is stored locally by default. This board benefits from the thriving Home Assistant ecosystem and it will be improved every month by open source.
 
 We recommend using Home Assistant Green as the Home Assistant host for this tutorial, or you can use any Home Assistant host with a Supervisor.
+
+### Generate your first ESPHome YAML (recommended)
+
+Before you copy the cookbook snippets below, you can build a complete, device-matched configuration in one place:
+
+**Step 1.** Open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** in desktop Chrome or Edge.
+
+**Step 2.** Select the **ESPHome** platform card, then pick your reTerminal model (E1001 / E1002 / E1003 / E1004).
+
+**Step 3.** In the setup step, check the features available on your device — for example display, buttons, buzzer, LED, battery, SHT4x, RTC, microSD, microphone, touch (E1003), or deep sleep.
+
+**Step 4.** Generate the YAML, then use **Copy to clipboard** or **Download file** and import it into your ESPHome dashboard.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/257.png" style={{width:1000, height:'auto'}}/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Open Firmware Hub 🖱️</font></span></strong>
+    </a>
+</div><br />
+
+:::tip
+The Firmware Hub fills in board, bus, and peripheral pins for you. Use this cookbook when you want to learn each drawing or display example step by step, or when you customize the generated YAML. The full shared workflow is documented in **[Work with ESPHome](/epaper_work_with_esphome)**.
+:::
 
 :::tip install Home Assistant
 We have also written how to install Home Assistant for some of Seeed Studio products, please refer to them.
@@ -250,6 +316,88 @@ display:
 ```
 
 </TabItem>
+
+<TabItem value="For E1003" label="For E1003">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later for the `it8951` display platform.
+:::
+
+```yaml
+# define font to display words
+font:
+  - file: "gfonts://Inter@700"
+    id: myFont
+    size: 24
+
+# OPI PSRAM is required for the E1003 framebuffer
+psram:
+  mode: octal
+
+# define SPI interface
+spi:
+  id: epaper_spi_bus
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+  miso_pin: GPIO8
+
+display:
+  - platform: it8951
+    id: epaper_display
+    spi_id: epaper_spi_bus
+    model: seeed-reterminal-e1003
+    update_interval: 300s
+    full_update_every: 30
+    grayscale: true
+    dithering: true
+    update_mode: GC16
+    transform:
+      mirror_x: true
+      mirror_y: false
+    lambda: |-
+      it.print(0, 0, id(myFont), Color::BLACK, "Hello World!");
+```
+
+</TabItem>
+
+
+<TabItem value="For E1004" label="For E1004">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later for the `seeed-reterminal-e1004` model.
+:::
+
+```yaml
+# define font to display words
+font:
+  - file: "gfonts://Inter@700"
+    id: myFont
+    size: 24
+
+# OPI PSRAM is required for the E1004 framebuffer
+psram:
+  mode: octal
+
+# define SPI interface
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: epaper_spi
+    model: seeed-reterminal-e1004
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      # const auto RED     = Color(255, 0,   0,   0);
+      # const auto GREEN   = Color(0,   255, 0,   0);
+      # const auto BLUE    = Color(0,   0,   255, 0);
+      # const auto YELLOW  = Color(255, 255, 0,   0);
+      it.print(0, 0, id(myFont), BLACK, "Hello World!");
+```
+
+</TabItem>
+
 </Tabs>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/36.png" style={{width:1000, height:'auto'}}/></div>
@@ -425,6 +573,94 @@ When you see the feedback like the following image, it means the code is running
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/144.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
+
+<TabItem value="For E1003" label="For E1003">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later.
+:::
+
+```yaml
+font:
+  - file: "gfonts://Inter@700"
+    id: myFont
+    size: 24
+
+psram:
+  mode: octal
+
+spi:
+  id: epaper_spi_bus
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+  miso_pin: GPIO8
+
+display:
+  - platform: it8951
+    id: epaper_display
+    spi_id: epaper_spi_bus
+    model: seeed-reterminal-e1003
+    update_interval: 300s
+    full_update_every: 30
+    grayscale: true
+    dithering: true
+    update_mode: GC16
+    transform:
+      mirror_x: true
+      mirror_y: false
+    lambda: |-
+      it.rectangle(10, 10, 100, 50, Color::BLACK);
+      it.rectangle(150, 10, 50, 50, Color::BLACK);
+      it.circle(250, 35, 25, Color::BLACK);
+      it.filled_rectangle(10, 80, 100, 50, Color::BLACK);
+      it.filled_rectangle(150, 80, 50, 50, Color::BLACK);
+      it.filled_circle(250, 105, 25, Color::BLACK);
+```
+
+</TabItem>
+
+
+<TabItem value="For E1004" label="For E1004">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later.
+:::
+
+```yaml
+font:
+  - file: "gfonts://Inter@700"
+    id: myFont
+    size: 24
+
+psram:
+  mode: octal
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: epaper_spi
+    model: seeed-reterminal-e1004
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto GREEN   = Color(0,   255, 0,   0);
+      const auto BLUE    = Color(0,   0,   255, 0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+      const auto WHITE   = Color(255, 255, 255, 0);
+
+      it.rectangle(10, 10, 100, 50, BLACK);
+      it.rectangle(150, 10, 50, 50, RED);
+      it.circle(250, 35, 25, GREEN);
+      it.filled_rectangle(10, 80, 100, 50, BLUE);
+      it.filled_rectangle(150, 80, 50, 50, YELLOW);
+      it.filled_circle(250, 105, 25, WHITE);
+```
+
+</TabItem>
+
 </Tabs>
 
 Due to space constraints, we will not elaborate too much on the drawing methods and principles of other patterns, if necessary, the reader is recommended to read [ESPHome in this part of the detailed examples](https://esphome.io/components/display/).
@@ -615,6 +851,131 @@ display:
 ```
 
 </TabItem>
+
+<TabItem value="For E1003" label="For E1003">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later.
+:::
+
+```yaml
+# Example ESPHome configuration to retrieve weather data
+# Get info from HA, as string format
+text_sensor:
+  - platform: homeassistant
+    entity_id: weather.home
+    id: myWeather
+    internal: true
+  - platform: homeassistant
+    entity_id: weather.home
+    id: myTemperature
+    attribute: "temperature"
+    internal: true
+
+# Get info from HA, as float format
+sensor:
+  - platform: homeassistant
+    entity_id: weather.home
+    id: myWindBearing
+    attribute: "wind_bearing"
+    internal: true
+
+font:
+  - file: "gfonts://Inter@700"
+    id: myFont
+    size: 24
+
+psram:
+  mode: octal
+
+spi:
+  id: epaper_spi_bus
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+  miso_pin: GPIO8
+
+display:
+  - platform: it8951
+    id: epaper_display
+    spi_id: epaper_spi_bus
+    model: seeed-reterminal-e1003
+    update_interval: 300s
+    full_update_every: 30
+    grayscale: true
+    dithering: true
+    update_mode: GC16
+    transform:
+      mirror_x: true
+      mirror_y: false
+    lambda: |-
+      ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
+      ESP_LOGD("epaper", "temperature: %s", id(myTemperature).state.c_str());
+      ESP_LOGD("epaper", "pressure: %.1f", id(myWindBearing).state);
+      it.printf(100, 100, id(myFont), Color::BLACK, "%s", id(myWeather).state.c_str());
+      it.printf(100, 150, id(myFont), Color::BLACK, "%s", id(myTemperature).state.c_str());
+      it.printf(100, 200, id(myFont), Color::BLACK, "%.1f", id(myWindBearing).state);
+```
+
+</TabItem>
+
+
+<TabItem value="For E1004" label="For E1004">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later.
+:::
+
+```yaml
+# Example ESPHome configuration to retrieve weather data
+# Get info from HA, as string format
+text_sensor:
+  - platform: homeassistant
+    entity_id: weather.home
+    id: myWeather
+    internal: true
+  - platform: homeassistant
+    entity_id: weather.home
+    id: myTemperature
+    attribute: "temperature"
+    internal: true
+
+# Get info from HA, as float format
+sensor:
+  - platform: homeassistant
+    entity_id: weather.home
+    id: myWindBearing
+    attribute: "wind_bearing"
+    internal: true
+
+font:
+  - file: "gfonts://Inter@700"
+    id: myFont
+    size: 24
+
+psram:
+  mode: octal
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: epaper_spi
+    model: seeed-reterminal-e1004
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+
+      ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
+      ESP_LOGD("epaper", "temperature: %s", id(myTemperature).state.c_str());
+      ESP_LOGD("epaper", "pressure: %.1f", id(myWindBearing).state);
+      it.printf(100, 100, id(myFont), BLACK, "%s", id(myWeather).state.c_str());
+      it.printf(100, 150, id(myFont), BLACK, "%s", id(myTemperature).state.c_str());
+      it.printf(100, 200, id(myFont), BLACK, "%.1f", id(myWindBearing).state);
+```
+
+</TabItem>
+
 </Tabs>
 
 After compiling the above code and uploading it to your device, you may first see **NaN** displayed on the screen, please don't worry, this is normal. This is due to the fact that the device has not yet been added to the Home Assistant environment, so reTerminal has not yet been able to acquire Home Assistant data. We just need to follow the steps below to add the device.
@@ -754,6 +1115,101 @@ display:
 ```
 
 </TabItem>
+
+<TabItem value="For E1003" label="For E1003">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later.
+:::
+
+```yaml
+# define font to display words
+font:
+  - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
+    id: font_mdi_large
+    size: 200        # Large icon size
+    glyphs: &mdi-weather-glyphs
+      - "\U000F0595" # weather-cloudy icon
+      - "\U000F0592" # weather-hail icon
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_mdi_medium   # Medium icon size
+    size: 40
+    glyphs: *mdi-weather-glyphs
+
+psram:
+  mode: octal
+
+spi:
+  id: epaper_spi_bus
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+  miso_pin: GPIO8
+
+display:
+  - platform: it8951
+    id: epaper_display
+    spi_id: epaper_spi_bus
+    model: seeed-reterminal-e1003
+    update_interval: 300s
+    full_update_every: 30
+    grayscale: true
+    dithering: true
+    update_mode: GC16
+    transform:
+      mirror_x: true
+      mirror_y: false
+    lambda: |-
+      it.printf(100, 200, id(font_mdi_medium), Color::BLACK, TextAlign::CENTER, "\U000F0595");
+      it.printf(400, 200, id(font_mdi_large), Color::BLACK, TextAlign::CENTER, "\U000F0592");
+```
+
+</TabItem>
+
+
+<TabItem value="For E1004" label="For E1004">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later.
+:::
+
+```yaml
+# define font to display words
+font:
+  - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
+    id: font_mdi_large
+    size: 200        # Large icon size
+    glyphs: &mdi-weather-glyphs
+      - "\U000F0595" # weather-cloudy icon
+      - "\U000F0592" # weather-hail icon
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_mdi_medium   # Medium icon size
+    size: 40
+    glyphs: *mdi-weather-glyphs
+
+psram:
+  mode: octal
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: epaper_spi
+    model: seeed-reterminal-e1004
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto GREEN   = Color(0,   255, 0,   0);
+      const auto BLUE    = Color(0,   0,   255, 0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+
+      it.printf(100, 200, id(font_mdi_medium), RED, TextAlign::CENTER, "\U000F0595");
+      it.printf(400, 200, id(font_mdi_large), GREEN, TextAlign::CENTER, "\U000F0592");
+```
+
+</TabItem>
+
 </Tabs>
 
 :::note
@@ -916,6 +1372,79 @@ display:
 ```
 
 </TabItem>
+
+<TabItem value="For E1003" label="For E1003">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later. E1003 uses a 16-level grayscale panel — prefer `GRAYSCALE` image type and a larger resize for the 1872×1404 panel when needed.
+:::
+
+```yaml
+image:
+  - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
+    id: myImage
+    type: GRAYSCALE                         # Grayscale for the E1003 16-level panel
+    resize: 800x480                         # Start with a smaller size for a quick test
+
+psram:
+  mode: octal
+
+spi:
+  id: epaper_spi_bus
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+  miso_pin: GPIO8
+
+display:
+  - platform: it8951
+    id: epaper_display
+    spi_id: epaper_spi_bus
+    model: seeed-reterminal-e1003
+    update_interval: 300s
+    full_update_every: 30
+    grayscale: true
+    dithering: true
+    update_mode: GC16
+    transform:
+      mirror_x: true
+      mirror_y: false
+    lambda: |-
+      it.image(0, 0, id(myImage));          # Display image at position (0,0)
+```
+
+</TabItem>
+
+
+<TabItem value="For E1004" label="For E1004">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later.
+:::
+
+```yaml
+image:
+  - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
+    id: myImage
+    type: RGB565                            # RGB565 works for colorful e-ink
+    resize: 800x480                         # Start with a smaller size for a quick test
+
+psram:
+  mode: octal
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: epaper_spi
+    model: seeed-reterminal-e1004
+    update_interval: 300s
+    lambda: |-
+      it.image(0, 0, id(myImage));          # Display image at position (0,0)
+```
+
+</TabItem>
+
 </Tabs>
 
 Step 6. Save your configuration and upload it to your reTerminal E Series. When the update completes, your e-paper display will show the image.
@@ -981,7 +1510,8 @@ By combining images with text and other display elements covered in previous exa
 
 This article focuses on connecting the display and drawing content on the ePaper screen. Continue with these ESPHome cookbooks when you want to use the rest of the onboard hardware:
 
-- **[ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power](/reterminal_e10xx_with_esphome_advanced)** - user buttons, buzzer feedback, onboard LED, battery monitoring, SHT4x sensor, deep sleep, and multi-page dashboards.
+- **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** - generate a full ESPHome YAML by selecting your device and checking onboard features, or flash demo firmware from the browser.
+- **[ESPHome Cookbook: Buttons, Buzzer, LED, Battery, Touch & Low Power](/reterminal_e10xx_with_esphome_advanced)** - user buttons, buzzer feedback, onboard LED, battery monitoring, SHT4x sensor, capacitive touch (E1003), deep sleep, and multi-page dashboards.
 - **[ESPHome Cookbook: RTC, SD Card & Microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone)** - PCF8563 RTC time sync, microSD card power/detect pins, and onboard PDM microphone initialization.
 
 ## FAQ

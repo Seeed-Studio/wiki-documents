@@ -1,33 +1,35 @@
 ---
-description: ESPHome cookbook for reTerminal E1001 / E1002 / E1003 / E1004 - buttons, buzzer, onboard LED, battery monitoring, SHT4x sensor, deep sleep, and multi-page dashboards.
-title: 'ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power (reTerminal E Series)'
+description: ESPHome cookbook for reTerminal E1001 / E1002 / E1003 / E1004 - buttons, buzzer, onboard LED, battery monitoring, SHT4x sensor, capacitive touch (E1003), deep sleep, and multi-page dashboards.
+title: 'ESPHome Cookbook: Buttons, Buzzer, LED, Battery, Touch & Low Power (reTerminal E Series)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 4
-sidebar_label: ESPHome - I/O, Battery & Power
+sidebar_label: ESPHome - I/O, Battery, Touch & Power
 last_update:
-  date: 04/28/2026
+  date: 08/05/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-06-16'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power (reTerminal E Series)
+# ESPHome Cookbook: Buttons, Buzzer, LED, Battery, Touch & Low Power (reTerminal E Series)
 
 :::tip Prerequisites
-This page assumes you've already worked through the [ESPHome display cookbook for reTerminal E Series](/reterminal_e10xx_with_esphome) (device on Wi-Fi, Home Assistant integration online, first dashboard rendered). For the platform-level YAML skeleton and Home Assistant integration steps, see [Work with ESPHome](/epaper_work_with_esphome). For RTC, microSD card detect, and microphone setup, see [ESPHome Cookbook: RTC, SD Card & Microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone).
+This page assumes you've already worked through the [ESPHome display cookbook for reTerminal E Series](/reterminal_e10xx_with_esphome) (device on Wi-Fi, Home Assistant integration online, first dashboard rendered). For the platform-level YAML skeleton and Home Assistant integration steps, see [Work with ESPHome](/epaper_work_with_esphome). For RTC, microSD card detect, and microphone setup, see [ESPHome Cookbook: RTC, SD Card & Microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone). Capacitive touch (GT911) is covered later on this page and applies to **reTerminal E1003** only.
 :::
 
-:::tip Try demos without setting up a development environment
-If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+:::tip Generate ESPHome YAML or flash demos in the browser
+Want a ready-made ESPHome configuration without assembling every pin by hand? Open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**, choose the **ESPHome** card, pick your device (E1001 / E1002 / E1003 / E1004), then check the onboard features you need — display, buttons, battery, sensors, RTC, SD card, microphone, touch, deep sleep, and more. The Hub generates matching ESPHome YAML you can copy or download into your ESPHome dashboard.
+
+The same Hub can also flash demo firmware directly from the browser (desktop Chrome or Edge). For the shared ESPHome workflow, see **[Work with ESPHome](/epaper_work_with_esphome)**.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Hub 🖱️</font></span></strong>
     </a>
 </div><br />
 :::
@@ -44,13 +46,19 @@ The reTerminal E Series ePaper Display includes several hardware components that
 
 - Buzzer (GPIO45)
 
-- Battery level monitoring (GPIO1 for voltage)
+- Battery level monitoring (GPIO1 for voltage; enable pin differs by model)
 
-- On-board LED (GPIO6)
+- On-board LED (GPIO6 on E1001/E1002, GPIO16 on E1003, GPIO48 on E1004)
 
 - Temperature and humidity sensor (I²C interface)
 
+- Capacitive touchscreen (GT911 on **reTerminal E1003** only)
+
 Let's explore how to use each of these components in practical applications.
+
+:::tip Supported models & ESPHome version
+Examples on this page cover **E1001 / E1002 / E1003 / E1004**. For E1003 and E1004 display drivers, use **ESPHome 2026.7.0 or later**.
+:::
 
 ## reTerminal E Series ePaper Display Hardware Component Control
 
@@ -61,6 +69,15 @@ Let's explore how to use each of the hardware components on the reTerminal E Ser
 This example demonstrates how to use the three buttons on your reTerminal E Series ePaper Display to control functions and provide visual feedback with the on-board LED.
 
 You can use this example by copying the code below and pasting it after the `captive_portal` code line in your Yaml file.
+
+:::note Onboard LED pin by model
+- **E1001 / E1002**: `GPIO6`
+- **E1003**: `GPIO16`
+- **E1004**: `GPIO48`
+
+Update the `output` pin in the snippet above to match your device.
+:::
+
 
 ```yaml
 # Button configuration
@@ -197,6 +214,13 @@ You can adjust the `frequency` parameter to change the tone of the buzzer. Highe
 
 The reTerminal E Series ePaper Display can monitor its battery level through the analog input on GPIO1. Here's how to set it up:
 
+:::caution Battery measurement enable pin by model
+To measure the battery level, you must turn on the battery enable output before reading GPIO1. Use the pin that matches your device:
+
+- **E1001 / E1002 / E1004**: `GPIO21`
+- **E1003**: `GPIO40`
+:::
+
 ```yaml
 esphome:
   name: reterminal-e10xx
@@ -283,9 +307,6 @@ This configuration:
 - Converts the voltage to a battery percentage using a calibration curve
 - Makes both the raw voltage and the percentage available in Home Assistant
 
-:::caution
-To measure the battery level, you need to enable the **GPIO21** pin. Otherwise it is not possible to read the battery voltage value from GPIO1.
-:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/46.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -468,6 +489,112 @@ display:
 ```
 
 </TabItem>
+
+<TabItem value="For E1003" label="For E1003">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later. Adjust the `viewport` size if you want a capture closer to the native 1872×1404 panel.
+:::
+
+```yaml
+
+……
+psram:
+  mode: octal
+  speed: 80MHz
+
+……
+
+captive_portal:
+
+spi:
+  id: epaper_spi_bus
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+  miso_pin: GPIO8
+
+http_request:
+  verify_ssl: false
+  timeout: 20s
+  watchdog_timeout: 25s
+
+online_image:
+  - id: dashboard_image
+    format: PNG
+    type: GRAYSCALE
+    buffer_size: 65536
+    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
+    update_interval: 1min
+    on_download_finished:
+      - component.update: epaper_display
+
+display:
+  - platform: it8951
+    id: epaper_display
+    spi_id: epaper_spi_bus
+    model: seeed-reterminal-e1003
+    update_interval: never
+    full_update_every: 30
+    grayscale: true
+    dithering: true
+    update_mode: GC16
+    transform:
+      mirror_x: true
+      mirror_y: false
+    lambda: |-
+      it.image(0, 0, id(dashboard_image));
+```
+
+</TabItem>
+
+
+<TabItem value="For E1004" label="For E1004">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later. Adjust the `viewport` size if you want a capture closer to the native 1200×1600 panel.
+:::
+
+```yaml
+
+……
+psram:
+  mode: octal
+  speed: 80MHz
+
+……
+
+captive_portal:
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+http_request:
+  verify_ssl: false
+  timeout: 20s
+  watchdog_timeout: 25s
+
+online_image:
+  - id: dashboard_image
+    format: PNG
+    type: RGB565
+    buffer_size: 65536
+    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480
+    update_interval: 1min
+    on_download_finished:
+      - component.update: epaper_display
+
+display:
+  - platform: epaper_spi
+    id: epaper_display
+    model: seeed-reterminal-e1004
+    update_interval: never
+    lambda: |-
+      it.image(0, 0, id(dashboard_image));
+```
+
+</TabItem>
+
 </Tabs>
 
 :::caution
@@ -597,6 +724,129 @@ display:
 ```
 
 </TabItem>
+
+<TabItem value="For E1003" label="For E1003">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later. This example wakes from the right green button on **GPIO3**.
+:::
+
+```yaml
+globals:
+  - id: sleep_counter
+    type: int
+    restore_value: yes  # Use RTC storage to maintain counter during sleep
+    initial_value: '0'
+
+# Deep sleep configuration
+deep_sleep:
+  id: deep_sleep_1
+  run_duration: 30s  # Device remains awake for 30 seconds
+  sleep_duration: 5min  # Then sleeps for 5 minutes
+  esp32_ext1_wakeup:
+    pins:
+      - number: GPIO3
+        allow_other_uses: true
+        mode: INPUT_PULLUP
+    mode: ANY_LOW
+
+interval:
+  - interval: 29s  # Schedule sleep just before run_duration ends
+    then:
+      - logger.log: "Entering deep sleep now..."
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font1
+    size: 24
+
+psram:
+  mode: octal
+
+spi:
+  id: epaper_spi_bus
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+  miso_pin: GPIO8
+
+display:
+  - platform: it8951
+    id: epaper_display
+    spi_id: epaper_spi_bus
+    model: seeed-reterminal-e1003
+    update_interval: 5min
+    full_update_every: 30
+    grayscale: true
+    dithering: true
+    update_mode: GC16
+    transform:
+      mirror_x: true
+      mirror_y: false
+    lambda: |-
+      id(sleep_counter) += 1;
+      ESP_LOGD("main", "Wakeup count: %d", id(sleep_counter));
+      it.printf(100, 100, id(font1), Color::BLACK, "Wakeup count: %d", id(sleep_counter));
+```
+
+</TabItem>
+
+
+<TabItem value="For E1004" label="For E1004">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later. This example wakes from the front direction button on **GPIO4**.
+:::
+
+```yaml
+globals:
+  - id: sleep_counter
+    type: int
+    restore_value: yes  # Use RTC storage to maintain counter during sleep
+    initial_value: '0'
+
+# Deep sleep configuration
+deep_sleep:
+  id: deep_sleep_1
+  run_duration: 30s  # Device remains awake for 30 seconds
+  sleep_duration: 5min  # Then sleeps for 5 minutes
+  esp32_ext1_wakeup:
+    pins:
+      - number: GPIO4
+        allow_other_uses: true
+        mode: INPUT_PULLUP
+    mode: ANY_LOW
+
+interval:
+  - interval: 29s  # Schedule sleep just before run_duration ends
+    then:
+      - logger.log: "Entering deep sleep now..."
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font1
+    size: 24
+
+psram:
+  mode: octal
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: epaper_spi
+    id: epaper_display
+    model: seeed-reterminal-e1004
+    update_interval: 5min
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      id(sleep_counter) += 1;
+      ESP_LOGD("main", "Wakeup count: %d", id(sleep_counter));
+      it.printf(100, 100, id(font1), BLACK, "Wakeup count: %d", id(sleep_counter));
+```
+
+</TabItem>
+
 </Tabs>
 
 This configuration:
@@ -1270,6 +1520,674 @@ display:
 ```
 
 </TabItem>
+
+<TabItem value="For E1003" label="For E1003">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later. This comprehensive example uses the E1003 pin map (LED `GPIO16`, SD enable `GPIO39`, battery enable `GPIO40`, wake `GPIO3`).
+:::
+
+```yaml
+esphome:
+  name: reterminal_e1003
+  friendly_name: reTerminal_E1003
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: bsp_sd_enable
+      - output.turn_on: bsp_battery_enable
+      - delay: 200ms
+      - component.update: battery_voltage
+      - component.update: battery_level
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: esp-idf
+
+psram:
+  mode: octal
+
+# Enable logging
+logger:
+  hardware_uart: UART0
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "REPLACE_WITH_YOUR_API_KEY"
+
+ota:
+  - platform: esphome
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "reTerminal-E1003"
+    password: "ChangeMe123"
+
+captive_portal:
+
+# Deep-sleep, wake by GPIO4
+deep_sleep:
+  id: deep_sleep_1
+  run_duration: 1min
+  sleep_duration: 60min
+  wakeup_pin: GPIO3          # Right green button
+  wakeup_pin_mode: INVERT_WAKEUP
+
+# I²C
+i2c:
+  scl: GPIO20
+  sda: GPIO19
+
+# Fonts
+font:
+  - file: "gfonts://Inter@700"
+    id: small_font
+    size: 24
+  - file: "gfonts://Inter@700"
+    id: mid_font
+    size: 36
+  - file: "gfonts://Inter@700"
+    id: big_font
+    size: 180
+  - file: "gfonts://Inter@700"
+    id: time_font
+    size: 96      # for the big time display
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_mdi_large
+    size: 70
+    glyphs:
+      - "\U000F050F"  # thermometer
+      - "\U000F058E"  # humidity
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_bat_icon
+    size: 24
+    glyphs:
+      - "\U000F007A"  # mdi-battery-10
+      - "\U000F007B"  # mdi-battery-20
+      - "\U000F007C"  # mdi-battery-30
+      - "\U000F007D"  # mdi-battery-40
+      - "\U000F007E"  # mdi-battery-50
+      - "\U000F007F"  # mdi-battery-60
+      - "\U000F0080"  # mdi-battery-70
+      - "\U000F0081"  # mdi-battery-80
+      - "\U000F0082"  # mdi-battery-90
+      - "\U000F0079"  # mdi-battery
+
+globals:
+  - id: page_index
+    type: int
+    restore_value: true
+    initial_value: '0'
+  - id: battery_glyph
+    type: std::string
+    restore_value: no
+    initial_value: "\"\\U000F0079\""   # default full battery
+
+sensor:
+  - platform: sht4x
+    temperature:
+      name: "Temperature"
+      id: temp_sensor
+    humidity:
+      name: "Relative Humidity"
+      id: hum_sensor
+  - platform: adc
+    pin: GPIO1
+    name: "Battery Voltage"
+    id: battery_voltage
+    update_interval: 60s
+    attenuation: 12db
+    filters:
+      - multiply: 2.0
+  - platform: template
+    name: "Battery Level"
+    id: battery_level
+    unit_of_measurement: "%"
+    icon: "mdi:battery"
+    device_class: battery
+    state_class: measurement
+    lambda: 'return id(battery_voltage).state;'
+    update_interval: 60s
+    on_value:
+      then:
+        - lambda: |-
+            int pct = int(x);
+            if (pct <= 10)      id(battery_glyph) = "\U000F007A";
+            else if (pct <= 20) id(battery_glyph) = "\U000F007B";
+            else if (pct <= 30) id(battery_glyph) = "\U000F007C";
+            else if (pct <= 40) id(battery_glyph) = "\U000F007D";
+            else if (pct <= 50) id(battery_glyph) = "\U000F007E";
+            else if (pct <= 60) id(battery_glyph) = "\U000F007F";
+            else if (pct <= 70) id(battery_glyph) = "\U000F0080";
+            else if (pct <= 80) id(battery_glyph) = "\U000F0081";
+            else if (pct <= 90) id(battery_glyph) = "\U000F0082";
+            else                id(battery_glyph) = "\U000F0079";
+    filters:
+      - calibrate_linear:
+          - 4.15 -> 100.0
+          - 3.96 -> 90.0
+          - 3.91 -> 80.0
+          - 3.85 -> 70.0
+          - 3.80 -> 60.0
+          - 3.75 -> 50.0
+          - 3.68 -> 40.0
+          - 3.58 -> 30.0
+          - 3.49 -> 20.0
+          - 3.41 -> 10.0
+          - 3.30 -> 5.0
+          - 3.27 -> 0.0
+      - clamp:
+          min_value: 0
+          max_value: 100
+
+output:
+  - platform: gpio
+    pin: GPIO16
+    id: bsp_led
+    inverted: true
+  - platform: gpio
+    pin: GPIO39
+    id: bsp_sd_enable
+  - platform: gpio
+    pin: GPIO40
+    id: bsp_battery_enable
+
+# Onboard LED
+light:
+  - platform: binary
+    name: "Onboard LED"
+    output: bsp_led
+    id: onboard_led
+    
+binary_sensor:
+  - platform: gpio    # Next page
+    pin:
+      number: GPIO3
+      mode: INPUT_PULLUP
+      inverted: true
+    id: key1
+    name: "Key1"
+    on_press:
+      then:
+        - lambda: |-
+            id(page_index) = (id(page_index) + 1) % 2;
+            id(epaper_display).update();
+
+  - platform: gpio     # Prev page
+    pin:
+      number: GPIO5
+      mode: INPUT_PULLUP
+      inverted: true
+    id: key2
+    name: "Key2"
+    on_press:
+      then:
+        - lambda: |-
+            id(page_index) = (id(page_index) - 1 + 2) % 2;
+            id(epaper_display).update();
+
+  # - platform: gpio
+  #   pin:
+  #     number: GPIO4
+  #     mode: INPUT_PULLUP
+  #     inverted: true
+  #   id: key2
+  #   name: "Key2"
+  #   on_press:
+  #     then:
+  #       - lambda: |-
+  #           id(page_index) = (id(page_index) - 1 + 3) % 3;
+  #           id(epaper_display).update();
+
+# Home Assistant time
+time:
+  - platform: homeassistant
+    id: ha_time
+
+# SPI bus for IT8951 (replaces the simple SPI block above)
+spi:
+  id: epaper_spi_bus
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+  miso_pin: GPIO8
+
+# e-paper (10.3" 16-level grayscale, IT8951)
+display:
+  - platform: it8951
+    id: epaper_display
+    spi_id: epaper_spi_bus
+    model: seeed-reterminal-e1003
+    update_interval: never
+    full_update_every: 30
+    grayscale: true
+    dithering: true
+    update_mode: GC16
+    transform:
+      mirror_x: true
+      mirror_y: false
+    lambda: |-
+      // ----------  PAGE 0  ----------
+      if (id(page_index) == 0) {
+        const int scr_w = 800;
+        const int scr_h = 480;
+
+        // Battery in upper-right corner
+        it.printf(670, 13, id(font_bat_icon), Color::BLACK, "%s", id(battery_glyph).c_str());
+        it.printf(700, 10, id(small_font), Color::BLACK, "%.0f%%", id(battery_level).state);
+
+        //line
+        it.filled_rectangle(400, 100, 2, 280, Color::BLACK);
+
+        // Convert °C to °F
+        float temp_f = id(temp_sensor).state * 9.0 / 5.0 + 32.0;
+
+        // ---------------------------------------------------------
+        // Horizontal split: two 400 px columns
+        const int col_w = scr_w / 2;
+
+        const int icon_y   = 100;   // Icon baseline
+        const int value_y  = 220;   // Number baseline
+        const int unit_y   = 300;   // Unit baseline
+        const int label_y  = 380;   // Text label baseline
+
+        const int icon_size = 70;   // icon font size
+        const int val_size  = 120;  // number font size
+        const int unit_size = 44;   // unit font size
+        const int label_size= 36;   // label font size
+
+        // --- Left column : Temperature -----------------------------
+        const int left_mid = col_w / 2 - 30;   // 200 px
+
+        // Icon
+        it.printf(left_mid, icon_y, id(font_mdi_large), Color::BLACK, TextAlign::CENTER, "\U000F050F");
+        // Value
+        it.printf(left_mid, value_y, id(big_font), Color::BLACK, TextAlign::CENTER, "%.0f", temp_f);
+        // Unit
+        it.printf(left_mid + 150, unit_y, id(mid_font), Color::BLACK, TextAlign::CENTER, "°F");
+        // Label
+        it.printf(left_mid, label_y, id(mid_font), Color::BLACK, TextAlign::CENTER, "Temperature");
+
+        // --- Right column : Humidity -------------------------------
+        const int right_mid = col_w + col_w / 2;   // 600 px
+
+        // Icon
+        it.printf(right_mid, icon_y, id(font_mdi_large), Color::BLACK, TextAlign::CENTER, "\U000F058E");
+        // Value
+        it.printf(right_mid, value_y, id(big_font), Color::BLACK, TextAlign::CENTER, "%.0f", id(hum_sensor).state);
+        // Unit
+        it.printf(right_mid + 150, unit_y, id(mid_font), Color::BLACK, TextAlign::CENTER, "%%");
+        // Label
+        it.printf(right_mid, label_y, id(mid_font), Color::BLACK, TextAlign::CENTER, "Humidity");
+      }
+      // ----------  PAGE 1  ----------
+      else{
+        // Battery top-right
+        it.printf(670, 13, id(font_bat_icon), Color::BLACK, "%s", id(battery_glyph).c_str());
+        it.printf(700, 10, id(small_font), Color::BLACK, "%.0f%%", id(battery_level).state);
+
+        auto now = id(ha_time).now();
+        struct tm timeinfo = now.to_c_tm();
+
+        // centering time HH:MM
+        char timeStr[6];
+        strftime(timeStr, sizeof(timeStr), "%H:%M", &timeinfo);
+        it.printf(400, 180, id(time_font), Color::BLACK, TextAlign::CENTER, timeStr);
+
+        // Date: Day of week
+        const char *weekday[] = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
+        const char *wday = weekday[timeinfo.tm_wday];
+
+        // Date: month - day
+        char dateStr[12];
+        strftime(dateStr, sizeof(dateStr), "%b %d", &timeinfo);  // e.g. Jun 15
+
+        // Day of the week + date below the time
+        it.printf(400, 280, id(mid_font), Color::BLACK, TextAlign::CENTER, "%s, %s", wday, dateStr);
+      }
+
+```
+
+</TabItem>
+
+
+<TabItem value="For E1004" label="For E1004">
+
+:::tip
+Please update your ESPHome version to **2026.7.0** or later. This comprehensive example uses the E1004 pin map (LED `GPIO48`, SD enable `GPIO16`, battery enable `GPIO21`, wake `GPIO4`).
+:::
+
+```yaml
+esphome:
+  name: reterminal_e1004
+  friendly_name: reTerminal_E1004
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: bsp_sd_enable
+      - output.turn_on: bsp_battery_enable
+      - delay: 200ms
+      - component.update: battery_voltage
+      - component.update: battery_level
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: esp-idf
+
+psram:
+  mode: octal
+
+# Enable logging
+logger:
+  hardware_uart: UART0
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "REPLACE_WITH_YOUR_API_KEY"
+
+ota:
+  - platform: esphome
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "reTerminal-E1004"
+    password: "ChangeMe123"
+
+captive_portal:
+
+# Deep-sleep, wake by GPIO4
+deep_sleep:
+  id: deep_sleep_1
+  run_duration: 1min
+  sleep_duration: 60min
+  wakeup_pin: GPIO4          # Right white button
+  wakeup_pin_mode: INVERT_WAKEUP
+
+# SPI / I²C
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+i2c:
+  scl: GPIO20
+  sda: GPIO19
+
+# Fonts
+font:
+  - file: "gfonts://Inter@700"
+    id: small_font
+    size: 24
+  - file: "gfonts://Inter@700"
+    id: mid_font
+    size: 36
+  - file: "gfonts://Inter@700"
+    id: big_font
+    size: 180
+  - file: "gfonts://Inter@700"
+    id: time_font
+    size: 96      # for the big time display
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_mdi_large
+    size: 70
+    glyphs:
+      - "\U000F050F"  # thermometer
+      - "\U000F058E"  # humidity
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_bat_icon
+    size: 24
+    glyphs:
+      - "\U000F007A"  # mdi-battery-10
+      - "\U000F007B"  # mdi-battery-20
+      - "\U000F007C"  # mdi-battery-30
+      - "\U000F007D"  # mdi-battery-40
+      - "\U000F007E"  # mdi-battery-50
+      - "\U000F007F"  # mdi-battery-60
+      - "\U000F0080"  # mdi-battery-70
+      - "\U000F0081"  # mdi-battery-80
+      - "\U000F0082"  # mdi-battery-90
+      - "\U000F0079"  # mdi-battery
+
+globals:
+  - id: page_index
+    type: int
+    restore_value: true
+    initial_value: '0'
+  - id: battery_glyph
+    type: std::string
+    restore_value: no
+    initial_value: "\"\\U000F0079\""   # default full battery
+
+sensor:
+  - platform: sht4x
+    temperature:
+      name: "Temperature"
+      id: temp_sensor
+    humidity:
+      name: "Relative Humidity"
+      id: hum_sensor
+  - platform: adc
+    pin: GPIO1
+    name: "Battery Voltage"
+    id: battery_voltage
+    update_interval: 60s
+    attenuation: 12db
+    filters:
+      - multiply: 2.0
+  - platform: template
+    name: "Battery Level"
+    id: battery_level
+    unit_of_measurement: "%"
+    icon: "mdi:battery"
+    device_class: battery
+    state_class: measurement
+    lambda: 'return id(battery_voltage).state;'
+    update_interval: 60s
+    on_value:
+      then:
+        - lambda: |-
+            int pct = int(x);
+            if (pct <= 10)      id(battery_glyph) = "\U000F007A";
+            else if (pct <= 20) id(battery_glyph) = "\U000F007B";
+            else if (pct <= 30) id(battery_glyph) = "\U000F007C";
+            else if (pct <= 40) id(battery_glyph) = "\U000F007D";
+            else if (pct <= 50) id(battery_glyph) = "\U000F007E";
+            else if (pct <= 60) id(battery_glyph) = "\U000F007F";
+            else if (pct <= 70) id(battery_glyph) = "\U000F0080";
+            else if (pct <= 80) id(battery_glyph) = "\U000F0081";
+            else if (pct <= 90) id(battery_glyph) = "\U000F0082";
+            else                id(battery_glyph) = "\U000F0079";
+    filters:
+      - calibrate_linear:
+          - 4.15 -> 100.0
+          - 3.96 -> 90.0
+          - 3.91 -> 80.0
+          - 3.85 -> 70.0
+          - 3.80 -> 60.0
+          - 3.75 -> 50.0
+          - 3.68 -> 40.0
+          - 3.58 -> 30.0
+          - 3.49 -> 20.0
+          - 3.41 -> 10.0
+          - 3.30 -> 5.0
+          - 3.27 -> 0.0
+      - clamp:
+          min_value: 0
+          max_value: 100
+
+output:
+  - platform: gpio
+    pin: GPIO48
+    id: bsp_led
+    inverted: true
+  - platform: gpio
+    pin: GPIO16
+    id: bsp_sd_enable
+  - platform: gpio
+    pin: GPIO21
+    id: bsp_battery_enable
+
+# Onboard LED
+light:
+  - platform: binary
+    name: "Onboard LED"
+    output: bsp_led
+    id: onboard_led
+    
+binary_sensor:
+  - platform: gpio    # Next page
+    pin:
+      number: GPIO3
+      mode: INPUT_PULLUP
+      inverted: true
+    id: key1
+    name: "Key1"
+    on_press:
+      then:
+        - lambda: |-
+            id(page_index) = (id(page_index) + 1) % 2;
+            id(epaper_display).update();
+
+  - platform: gpio     # Prev page
+    pin:
+      number: GPIO5
+      mode: INPUT_PULLUP
+      inverted: true
+    id: key2
+    name: "Key2"
+    on_press:
+      then:
+        - lambda: |-
+            id(page_index) = (id(page_index) - 1 + 2) % 2;
+            id(epaper_display).update();
+
+  # - platform: gpio
+  #   pin:
+  #     number: GPIO4
+  #     mode: INPUT_PULLUP
+  #     inverted: true
+  #   id: key2
+  #   name: "Key2"
+  #   on_press:
+  #     then:
+  #       - lambda: |-
+  #           id(page_index) = (id(page_index) - 1 + 3) % 3;
+  #           id(epaper_display).update();
+
+# Home Assistant time
+time:
+  - platform: homeassistant
+    id: ha_time
+
+# e-paper
+display:
+  - platform: epaper_spi
+    id: epaper_display
+    model: seeed-reterminal-e1004
+    update_interval: never
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto GREEN   = Color(0,   255, 0,   0);
+      const auto BLUE    = Color(0,   0,   255, 0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+
+      // ----------  PAGE 0  ----------
+      if (id(page_index) == 0) {
+        const int scr_w = 800;
+        const int scr_h = 480;
+
+        // Battery in upper-right corner
+        it.printf(670, 13, id(font_bat_icon), GREEN, "%s", id(battery_glyph).c_str());
+        it.printf(700, 10, id(small_font), GREEN, "%.0f%%", id(battery_level).state);
+
+        //line
+        it.filled_rectangle(400, 100, 2, 280, BLACK);
+
+        // Convert °C to °F
+        float temp_f = id(temp_sensor).state * 9.0 / 5.0 + 32.0;
+
+        // ---------------------------------------------------------
+        // Horizontal split: two 400 px columns
+        const int col_w = scr_w / 2;
+
+        const int icon_y   = 100;   // Icon baseline
+        const int value_y  = 220;   // Number baseline
+        const int unit_y   = 300;   // Unit baseline
+        const int label_y  = 380;   // Text label baseline
+
+        const int icon_size = 70;   // icon font size
+        const int val_size  = 120;  // number font size
+        const int unit_size = 44;   // unit font size
+        const int label_size= 36;   // label font size
+
+        // --- Left column : Temperature -----------------------------
+        const int left_mid = col_w / 2 - 30;   // 200 px
+
+        // Icon
+        it.printf(left_mid, icon_y, id(font_mdi_large), BLUE, TextAlign::CENTER, "\U000F050F");
+        // Value
+        it.printf(left_mid, value_y, id(big_font), BLUE, TextAlign::CENTER, "%.0f", temp_f);
+        // Unit
+        it.printf(left_mid + 150, unit_y, id(mid_font), RED, TextAlign::CENTER, "°F");
+        // Label
+        it.printf(left_mid, label_y, id(mid_font), RED, TextAlign::CENTER, "Temperature");
+
+        // --- Right column : Humidity -------------------------------
+        const int right_mid = col_w + col_w / 2;   // 600 px
+
+        // Icon
+        it.printf(right_mid, icon_y, id(font_mdi_large), YELLOW, TextAlign::CENTER, "\U000F058E");
+        // Value
+        it.printf(right_mid, value_y, id(big_font), YELLOW, TextAlign::CENTER, "%.0f", id(hum_sensor).state);
+        // Unit
+        it.printf(right_mid + 150, unit_y, id(mid_font), GREEN, TextAlign::CENTER, "%%");
+        // Label
+        it.printf(right_mid, label_y, id(mid_font), GREEN, TextAlign::CENTER, "Humidity");
+      }
+      // ----------  PAGE 1  ----------
+      else{
+        // Battery top-right
+        it.printf(670, 13, id(font_bat_icon), BLUE, "%s", id(battery_glyph).c_str());
+        it.printf(700, 10, id(small_font), BLUE, "%.0f%%", id(battery_level).state);
+
+        auto now = id(ha_time).now();
+        struct tm timeinfo = now.to_c_tm();
+
+        // centering time HH:MM
+        char timeStr[6];
+        strftime(timeStr, sizeof(timeStr), "%H:%M", &timeinfo);
+        it.printf(400, 180, id(time_font), BLUE, TextAlign::CENTER, timeStr);
+
+        // Date: Day of week
+        const char *weekday[] = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
+        const char *wday = weekday[timeinfo.tm_wday];
+
+        // Date: month - day
+        char dateStr[12];
+        strftime(dateStr, sizeof(dateStr), "%b %d", &timeinfo);  // e.g. Jun 15
+
+        // Day of the week + date below the time
+        it.printf(400, 280, id(mid_font), YELLOW, TextAlign::CENTER, "%s, %s", wday, dateStr);
+      }
+
+```
+
+</TabItem>
+
 </Tabs>
 
 </details>
@@ -1288,6 +2206,69 @@ This example implements:
 4. **Hardware Initialization**: SD card and battery monitoring circuits are enabled on boot
 5. **Temperature and Humidity Display**: Using the onboard SHT4x sensor via I²C
 6. **Dynamic Icons**: Material Design Icons change based on sensor values
+
+
+## Capacitive Touch (reTerminal E1003 only)
+
+:::note E1003 only
+The GT911 capacitive touchscreen is available on **reTerminal E1003**. reTerminal E1001, E1002, and E1004 do not include this touch controller, so skip this section on those models.
+:::
+
+reTerminal E1003 uses a **GT911** touch controller on the shared I2C bus. In ESPHome you attach it to the `it8951` display with the `touchscreen` component, then log or act on touch events.
+
+### Wiring summary
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>Function</th>
+      <th>Pin / Bus</th>
+    </tr>
+    <tr>
+      <td>Touch interrupt</td>
+      <td><code>GPIO2</code></td>
+    </tr>
+    <tr>
+      <td>Touch reset</td>
+      <td><code>GPIO48</code></td>
+    </tr>
+    <tr>
+      <td>I2C</td>
+      <td>SDA <code>GPIO19</code>, SCL <code>GPIO20</code> (shared with SHT4x / PCF8563)</td>
+    </tr>
+  </table>
+</div>
+
+### Minimal touch example
+
+Add the following after your E1003 display configuration (the `display` block must use `id: epaper_display`). Requires **ESPHome 2026.7.0** or later.
+
+```yaml
+i2c:
+  scl: GPIO20
+  sda: GPIO19
+
+touchscreen:
+  - platform: gt911
+    id: e1003_touch
+    display: epaper_display
+    interrupt_pin: GPIO2
+    reset_pin: GPIO48
+    transform:
+      mirror_x: true
+    on_touch:
+      - logger.log:
+          format: "Touch: x=%d, y=%d"
+          args: ["touch.x", "touch.y"]
+```
+
+### What you should see
+
+1. Flash an E1003 configuration that includes both the `it8951` display and the `gt911` touchscreen blocks.
+2. Open the ESPHome logs over USB (`logger` with `hardware_uart: UART0`).
+3. Tap the panel — you should see `Touch: x=..., y=...` lines in the log.
+
+You can extend `on_touch` with automations such as page changes, button-like hotspots, or Home Assistant events. Keep `transform.mirror_x: true` aligned with the E1003 display transform so touch coordinates match what you draw on screen.
 
 ## FAQ
 

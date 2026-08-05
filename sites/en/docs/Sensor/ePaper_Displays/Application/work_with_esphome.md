@@ -22,12 +22,12 @@ updatedAt: '2026-06-16'
 
 # Work with ESPHome
 
-:::tip Try demos without setting up a development environment
-If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+:::tip Generate ESPHome YAML or flash demos in the browser
+The fastest way to start is the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Choose the **ESPHome** card, pick your device, check the onboard features you want (display, buttons, battery, sensors, RTC, SD card, microphone, touch, deep sleep, and more), then copy or download the generated YAML into your ESPHome dashboard. The same Hub can also flash demo firmware from the browser (desktop Chrome or Edge).
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Hub 🖱️</font></span></strong>
     </a>
 </div><br />
 :::
@@ -57,7 +57,7 @@ Every Seeed ePaper product on the [main hub page](/seeed_epaper_displays) that h
       <td>XIAO ESP32-S3</td>
       <td>
         <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome/">Display basics, HA integration & drawing</a><br/>
-        <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/">Buttons, buzzer, LED, battery, SHT4x & deep sleep</a><br/>
+        <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/">Buttons, buzzer, LED, battery, touch (E1003), SHT4x & deep sleep</a><br/>
         <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone/">RTC, SD card & microphone</a>
       </td>
     </tr>
@@ -263,7 +263,7 @@ You can now drag the entities into a Lovelace dashboard, or — much more intere
 This page intentionally stops at the boilerplate. The product-specific YAML, peripheral examples, and end-to-end recipes live in each product's cookbook:
 
 - **[reTerminal E Series — ESPHome Display](/reterminal_e10xx_with_esphome)** — first dashboard, Wi-Fi setup, and ePaper drawing examples for E1001/E1002/E1003/E1004.
-- **[reTerminal E Series — ESPHome I/O, Battery & Power](/reterminal_e10xx_with_esphome_advanced)** — buttons, buzzer, onboard LED, battery monitoring, SHT4x sensor, deep sleep, and multi-page dashboards.
+- **[reTerminal E Series — ESPHome I/O, Battery, Touch & Power](/reterminal_e10xx_with_esphome_advanced)** — buttons, buzzer, onboard LED, battery monitoring, SHT4x sensor, capacitive touch (E1003), deep sleep, and multi-page dashboards.
 - **[reTerminal E1001 / E1002 — ESPHome RTC, SD & Microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone)** — PCF8563 RTC time sync, microSD card power/detect pins, and onboard PDM microphone setup.
 - **[EE04 driver board — ESPHome](/EE04_with_esphome_advanced)** — full Home Assistant integration on the XIAO ESP32-S3 + EE04 + your choice of ePaper screen.
 - **[XIAO 7.5" ePaper Panel — ESPHome](/xiao_075inch_epaper_panel_esphome)** — minimal ESP32-C3 dashboard.
