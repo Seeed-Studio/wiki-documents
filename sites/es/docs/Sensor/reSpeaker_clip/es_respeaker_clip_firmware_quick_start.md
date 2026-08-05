@@ -39,7 +39,7 @@ No todas las tareas necesitan trabajo de firmware. Elige la ruta que coincida co
 | Quieres… | Usa esto | ¿Toca firmware? |
 |---|---|---|
 | Controlar la grabación y descargar archivos desde un host o teléfono | **SDK básico** ([sdk/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/sdk/)) o **SDKs móviles** ([mobile/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/mobile/)) | No |
-| Modificar la canalización de audio, AT/GATT, botón/OLED/háptico, energía o hardware | **SDK de firmware** (esta guía + la [Guía de desarrollo de firmware](./respeaker_clip_firmware_development_guide.md)) | Sí |
+| Modificar la canalización de audio, AT/GATT, botón/OLED/háptico, energía o hardware | **SDK de firmware** (esta guía + la [Guía de desarrollo de firmware](/es/respeaker_clip_firmware_development_guide)) | Sí |
 | Hacer que un agente de IA modifique el repositorio dentro de las restricciones reales del firmware | habilidad [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) | Sí |
 
 El SDK básico y los SDKs móviles se comunican con el Clip por BLE y por el AP Wi-Fi del dispositivo y no requieren código fuente de firmware. Son la ruta admitida para la integración de aplicaciones.
@@ -63,7 +63,7 @@ El SDK básico y los SDKs móviles se comunican con el Clip por BLE y por el AP 
 | Transferencia de archivos (BLE + Wi-Fi UDP) | Sí (`AT+DOWNLOAD/CANCEL`) | Sí | Sí (`transport.c`, `transfer.c`) |
 | Flujo de audio en tiempo real por BLE | No (solo notificación de nivel de energía) | N/A | Fuera de alcance |
 
-La lista completa de comandos AT registrados, tramas de protocolo, arquitectura, matriz de validación y detalles de producción/lanzamiento se encuentra en la [Guía de desarrollo de firmware](./respeaker_clip_firmware_development_guide.md); esta página solo resume lo que necesitas para empezar.
+La lista completa de comandos AT registrados, tramas de protocolo, arquitectura, matriz de validación y detalles de producción/lanzamiento se encuentra en la [Guía de desarrollo de firmware](/es/respeaker_clip_firmware_development_guide); esta página solo resume lo que necesitas para empezar.
 
 ## Hechos sobre el modo de grabación y la canalización de audio
 
@@ -315,7 +315,7 @@ MCUboot verifica la firma RSA y arranca la nueva app; la partición del bootload
 
 ## Dónde ir a continuación
 
-- **Arquitectura del sistema, protocolo, actualización/recuperación, validación, producción** → [Firmware Development Guide](./respeaker_clip_firmware_development_guide.md) (la referencia completa).
+- **Arquitectura del sistema, protocolo, actualización/recuperación, validación, producción** → [Firmware Development Guide](/es/respeaker_clip_firmware_development_guide) (la referencia completa).
 - **Compilación / flasheo / alimentación / trampas (referencia completa)** → [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md).
 - **Apps de ejemplo para copiar** → [samples/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/samples/).
 - **Desarrollo asistido por IA** → [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) — carga esta skill en tu agente de IA. Su `SKILL.md` más nueve referencias ya codifican las restricciones reales del proyecto, incluyendo que **no existen comandos en tiempo de ejecución para bitrate, complejidad del códec, AGC, supresión de ruido ni desreverberación**: el modo de audio es solo `normal` o `enhanced`.

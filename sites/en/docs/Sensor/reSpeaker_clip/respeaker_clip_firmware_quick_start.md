@@ -39,7 +39,7 @@ Not every task needs firmware work. Pick the path that matches your goal:
 | You want to… | Use this | Touches firmware? |
 |---|---|---|
 | Control recording and download files from a host or phone | **Basic SDK** ([sdk/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/sdk/)) or **mobile SDKs** ([mobile/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/mobile/)) | No |
-| Modify the audio pipeline, AT/GATT, button/OLED/haptic, power, or hardware | **Firmware SDK** (this guide + the [Firmware Development Guide](./respeaker_clip_firmware_development_guide.md)) | Yes |
+| Modify the audio pipeline, AT/GATT, button/OLED/haptic, power, or hardware | **Firmware SDK** (this guide + the [Firmware Development Guide](/respeaker_clip_firmware_development_guide)) | Yes |
 | Have an AI agent modify the repo within the firmware's real constraints | [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) skill | Yes |
 
 The Basic and mobile SDKs talk to the Clip over BLE and the device Wi-Fi AP and require no firmware source. They are the supported path for app integration.
@@ -63,7 +63,7 @@ The Basic and mobile SDKs talk to the Clip over BLE and the device Wi-Fi AP and 
 | File transfer (BLE + Wi-Fi UDP) | Yes (`AT+DOWNLOAD/CANCEL`) | Yes | Yes (`transport.c`, `transfer.c`) |
 | BLE real-time audio stream | No (energy-level notify only) | N/A | Out of scope |
 
-The full registered AT command list, protocol frames, architecture, validation matrix, and production/release details live in the [Firmware Development Guide](./respeaker_clip_firmware_development_guide.md) — this page only summarizes what you need to get started.
+The full registered AT command list, protocol frames, architecture, validation matrix, and production/release details live in the [Firmware Development Guide](/respeaker_clip_firmware_development_guide) — this page only summarizes what you need to get started.
 
 ## Recording Mode and Audio Pipeline Facts
 
@@ -315,7 +315,7 @@ MCUboot verifies the RSA signature and boots the new app; the bootloader partiti
 
 ## Where to Go Next
 
-- **System architecture, protocol, update/recovery, validation, production** → [Firmware Development Guide](./respeaker_clip_firmware_development_guide.md) (the comprehensive reference).
+- **System architecture, protocol, update/recovery, validation, production** → [Firmware Development Guide](/respeaker_clip_firmware_development_guide) (the comprehensive reference).
 - **Build / flash / power / pitfalls (full reference)** → [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md).
 - **Example apps to copy** → [samples/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/samples/).
 - **AI-assisted development** → [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) — load this skill in your AI agent. Its `SKILL.md` plus nine references already encode the project's real constraints, including that **runtime commands for bitrate, codec complexity, AGC, noise suppression, and dereverb do not exist** — audio mode is `normal` or `enhanced` only.

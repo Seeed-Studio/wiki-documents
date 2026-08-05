@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_clip_firmware_development_guide/
 
 # reSpeaker Clip ファームウェア開発ガイド
 
-reSpeaker Clip デバイス側ファームウェアの包括的なリファレンスです。どのように構成されているか、どの AT/GATT/UDP プロトコルを話すか、どのようにビルド・更新・リカバリ・検証・出荷されるかを説明します。クリーンなマシンからビルドしてスモークテストまでの手順については、[Getting Started with the reSpeaker Clip Firmware SDK](./respeaker_clip_firmware_quick_start.md) を参照してください。ビルド／フラッシュ／電源／落とし穴の完全版については、[CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md) を参照してください。
+reSpeaker Clip デバイス側ファームウェアの包括的なリファレンスです。どのように構成されているか、どの AT/GATT/UDP プロトコルを話すか、どのようにビルド・更新・リカバリ・検証・出荷されるかを説明します。クリーンなマシンからビルドしてスモークテストまでの手順については、[Getting Started with the reSpeaker Clip Firmware SDK](/ja/respeaker_clip_firmware_quick_start) を参照してください。ビルド／フラッシュ／電源／落とし穴の完全版については、[CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md) を参照してください。
 
 チェックアウトされたファームウェアソースが唯一の正典であり、このガイドはそれを要約したものです。両者が食い違う場合は、ソースを優先します。
 
@@ -438,7 +438,7 @@ Give the modification plan first; do not edit code yet.
 
 ## 関連リソース
 
-- [Getting Started with the reSpeaker Clip Firmware SDK](./respeaker_clip_firmware_quick_start.md) — ビルドからスモークテストまでのパス
+- [Getting Started with the reSpeaker Clip Firmware SDK](/ja/respeaker_clip_firmware_quick_start) — ビルドからスモークテストまでのパス
 - [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md) — ビルド / フラッシュ / 電力 / 落とし穴の完全なリファレンス
 - [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) — ファームウェア AI 開発スキル
 - ソース： [clip_event.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/clip_event.c)（ステートマシン）、[audio.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/audio.c)（DSP / Opus）、[at_commands.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_commands.c)（AT レジストリ）、[at_server.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_server.c)（パース / ルーティング）、[transfer.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/transfer.c)（転送エンジン）、[transport.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/transport.c)（トランスポート抽象化）、[storage.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/storage.c)（セッション / SD ライフサイクル）、[main.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/main.c)（初期化順序）

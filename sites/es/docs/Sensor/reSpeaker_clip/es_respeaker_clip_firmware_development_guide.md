@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_firmware_development_guide/
 
 # Guía de Desarrollo de Firmware de reSpeaker Clip
 
-La referencia completa para el firmware del lado del dispositivo de reSpeaker Clip: cómo está construido, el protocolo AT/GATT/UDP que utiliza, cómo se compila, actualiza, recupera, valida y envía. Para el flujo desde compilación hasta prueba de humo en una máquina limpia, consulta [Getting Started with the reSpeaker Clip Firmware SDK](./respeaker_clip_firmware_quick_start.md); para información completa sobre compilación/flasheo/energía/posibles problemas, consulta [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md).
+La referencia completa para el firmware del lado del dispositivo de reSpeaker Clip: cómo está construido, el protocolo AT/GATT/UDP que utiliza, cómo se compila, actualiza, recupera, valida y envía. Para el flujo desde compilación hasta prueba de humo en una máquina limpia, consulta [Getting Started with the reSpeaker Clip Firmware SDK](/es/respeaker_clip_firmware_quick_start); para información completa sobre compilación/flasheo/energía/posibles problemas, consulta [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md).
 
 El código fuente del firmware descargado es la referencia autorizada; esta guía lo resume. Cuando haya discrepancias, el código fuente prevalece.
 
@@ -438,7 +438,7 @@ Give the modification plan first; do not edit code yet.
 
 ## Recursos relacionados
 
-- [Primeros pasos con el SDK de firmware de reSpeaker Clip](./respeaker_clip_firmware_quick_start.md) — ruta de compilación a prueba rápida
+- [Primeros pasos con el SDK de firmware de reSpeaker Clip](/es/respeaker_clip_firmware_quick_start) — ruta de compilación a prueba rápida
 - [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md) — referencia completa de compilación/flasheo/energía/puntos problemáticos
 - [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) — skill de desarrollo de firmware con IA
 - Fuente: [clip_event.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/clip_event.c) (máquina de estados), [audio.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/audio.c) (DSP/Opus), [at_commands.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_commands.c) (registro AT), [at_server.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_server.c) (análisis/enrutamiento), [transfer.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/transfer.c) (motor de transferencia), [transport.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/transport.c) (abstracción de transporte), [storage.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/storage.c) (sesiones/ciclo de vida de la SD), [main.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/main.c) (orden de inicialización)

@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_clip_firmware_development_guid
 
 # Guia de Desenvolvimento de Firmware do reSpeaker Clip
 
-A referência abrangente para o firmware do lado do dispositivo reSpeaker Clip: como ele é estruturado, o protocolo AT/GATT/UDP que ele utiliza, como é construído, atualizado, recuperado, validado e enviado. Para o caminho de build até smoke test a partir de uma máquina limpa, consulte [Getting Started with the reSpeaker Clip Firmware SDK](./respeaker_clip_firmware_quick_start.md); para detalhes completos de build/flash/energia/armadilhas, consulte [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md).
+A referência abrangente para o firmware do lado do dispositivo reSpeaker Clip: como ele é estruturado, o protocolo AT/GATT/UDP que ele utiliza, como é construído, atualizado, recuperado, validado e enviado. Para o caminho de build até smoke test a partir de uma máquina limpa, consulte [Getting Started with the reSpeaker Clip Firmware SDK](/pt-br/respeaker_clip_firmware_quick_start); para detalhes completos de build/flash/energia/armadilhas, consulte [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md).
 
 O código-fonte do firmware obtido via checkout é a referência autoritativa; este guia o resume. Quando houver divergência, o código-fonte prevalece.
 
@@ -438,7 +438,7 @@ Give the modification plan first; do not edit code yet.
 
 ## Recursos relacionados
 
-- [Introdução ao reSpeaker Clip Firmware SDK](./respeaker_clip_firmware_quick_start.md) — caminho de build até smoke test
+- [Introdução ao reSpeaker Clip Firmware SDK](/pt-br/respeaker_clip_firmware_quick_start) — caminho de build até smoke test
 - [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md) — referência completa de build/flash/energia/armadilhas
 - [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) — skill de desenvolvimento de firmware com IA
 - Fonte: [clip_event.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/clip_event.c) (máquina de estados), [audio.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/audio.c) (DSP/Opus), [at_commands.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_commands.c) (registro AT), [at_server.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_server.c) (parse/roteamento), [transfer.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/transfer.c) (motor de transferência), [transport.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/transport.c) (abstração de transporte), [storage.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/storage.c) (ciclos de sessões/SD), [main.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/main.c) (ordem de inicialização)

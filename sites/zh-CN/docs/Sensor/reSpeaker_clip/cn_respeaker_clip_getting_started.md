@@ -563,7 +563,7 @@ reSpeaker Clip 可用于 To B 业务场景，并与企业工具链集成，形�
 | 产品页面 | [reSpeaker Clip 可穿戴 AI 录音笔](https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html) |
 | SenseCraft Voice App 下载 | [下载页面](https://sensecraft-voice-download.seeed.cc/) |
 | 固件下载 | 即将推出 |
-| 固件 SDK 文档 | [固件 SDK 入门](./respeaker_clip_firmware_quick_start.md) |
+| 固件 SDK 文档 | [固件 SDK 入门](/cn/respeaker_clip_firmware_quick_start) |
 | SDK 仓库 | [reSpeaker Clip GitHub](https://github.com/Seeed-Studio/reSpeaker_Clip) |
 | 用户手册 | <a href="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_user_manual.pdf" target="_blank" rel="noopener noreferrer">reSpeaker Clip 用户手册</a> |
 | 数据手册 | 即将推出 |

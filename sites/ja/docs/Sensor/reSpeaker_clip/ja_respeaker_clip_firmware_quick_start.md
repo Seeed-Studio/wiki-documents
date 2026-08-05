@@ -39,7 +39,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_clip_firmware_quick_start/
 | やりたいこと | 使うもの | ファームウェアに触れる？ |
 |---|---|---|
 | ホストやスマホから録音を制御し、ファイルをダウンロードしたい | **Basic SDK**（[sdk/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/sdk/)）または **モバイル SDK**（[mobile/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/mobile/)） | いいえ |
-| オーディオパイプライン、AT/GATT、ボタン/OLED/ハプティクス、電源、またはハードウェアを変更したい | **Firmware SDK**（本ガイド + [Firmware Development Guide](./respeaker_clip_firmware_development_guide.md)） | はい |
+| オーディオパイプライン、AT/GATT、ボタン/OLED/ハプティクス、電源、またはハードウェアを変更したい | **Firmware SDK**（本ガイド + [Firmware Development Guide](/ja/respeaker_clip_firmware_development_guide)） | はい |
 | AI エージェントに、ファームウェアの実際の制約内でリポジトリを変更させたい | [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) スキル | はい |
 
 Basic SDK とモバイル SDK は、BLE とデバイスの Wi-Fi AP 経由で Clip と通信し、ファームウェアソースを必要としません。アプリ統合のためにサポートされているパスです。
@@ -63,7 +63,7 @@ Basic SDK とモバイル SDK は、BLE とデバイスの Wi-Fi AP 経由で Cl
 | ファイル転送（BLE + Wi-Fi UDP） | はい（`AT+DOWNLOAD/CANCEL`） | はい | はい（`transport.c`, `transfer.c`） |
 | BLE リアルタイムオーディオストリーム | いいえ（エネルギーレベル通知のみ） | 該当なし | 対象外 |
 
-登録済み AT コマンド一覧、プロトコルフレーム、アーキテクチャ、検証マトリクス、および量産/リリースの詳細は、[Firmware Development Guide](./respeaker_clip_firmware_development_guide.md) に記載されています — このページは、開始に必要な内容だけを要約したものです。
+登録済み AT コマンド一覧、プロトコルフレーム、アーキテクチャ、検証マトリクス、および量産/リリースの詳細は、[Firmware Development Guide](/ja/respeaker_clip_firmware_development_guide) に記載されています — このページは、開始に必要な内容だけを要約したものです。
 
 ## 録音モードとオーディオパイプラインに関する事実
 
@@ -315,7 +315,7 @@ MCUboot は RSA 署名を検証し、新しいアプリを起動します；ブ�
 
 ## 次に進むには
 
-- **システムアーキテクチャ、プロトコル、更新／リカバリ、検証、生産** → [Firmware Development Guide](./respeaker_clip_firmware_development_guide.md)（包括的なリファレンス）。
+- **システムアーキテクチャ、プロトコル、更新／リカバリ、検証、生産** → [Firmware Development Guide](/ja/respeaker_clip_firmware_development_guide)（包括的なリファレンス）。
 - **ビルド／フラッシュ／電源／落とし穴（完全なリファレンス）** → [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md)。
 - **コピーして使えるサンプルアプリ** → [samples/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/samples/)。
 - **AI 支援開発** → [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) — このスキルをあなたの AI エージェントに読み込んでください。その `SKILL.md` と 9 つのリファレンスには、すでにこのプロジェクトの実際の制約がエンコードされています。そこには、**ビットレート、コーデック複雑度、AGC、ノイズ抑圧、残響除去のランタイムコマンドは存在せず** — オーディオモードは `normal` か `enhanced` のみであることも含まれます。

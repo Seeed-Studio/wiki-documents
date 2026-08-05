@@ -563,7 +563,7 @@ OTA またはファームウェア更新に失敗した場合は、次を試し�
 | 製品ページ | [reSpeaker Clip Wearable AI Recorder](https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html) |
 | SenseCraft Voice App ダウンロード | [Download Page](https://sensecraft-voice-download.seeed.cc/) |
 | ファームウェアダウンロード | Coming soon |
-| ファームウェア SDK ドキュメント | [Getting Started with the Firmware SDK](./respeaker_clip_firmware_quick_start.md) |
+| ファームウェア SDK ドキュメント | [Getting Started with the Firmware SDK](/ja/respeaker_clip_firmware_quick_start) |
 | SDK リポジトリ | [reSpeaker Clip GitHub](https://github.com/Seeed-Studio/reSpeaker_Clip) |
 | ユーザーマニュアル | <a href="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_user_manual.pdf" target="_blank" rel="noopener noreferrer">reSpeaker Clip User Manual</a> |
 | データシート | Coming soon |

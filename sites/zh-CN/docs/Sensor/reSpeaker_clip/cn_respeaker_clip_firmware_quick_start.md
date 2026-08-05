@@ -39,7 +39,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_firmware_quick_start/
 | 你想要… | 使用这个 | 会涉及固件吗？ |
 |---|---|---|
 | 从主机或手机控制录音并下载文件 | **Basic SDK**（[sdk/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/sdk/)）或 **移动端 SDK**（[mobile/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/mobile/)） | 否 |
-| 修改音频处理链、AT/GATT、按键/OLED/震动、电源或硬件 | **Firmware SDK**（本指南 + [固件开发指南](./respeaker_clip_firmware_development_guide.md)） | 是 |
+| 修改音频处理链、AT/GATT、按键/OLED/震动、电源或硬件 | **Firmware SDK**（本指南 + [固件开发指南](/cn/respeaker_clip_firmware_development_guide)） | 是 |
 | 让一个 AI agent 在固件真实约束内修改仓库 | [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) skill | 是 |
 
 Basic 和移动端 SDK 通过 BLE 和设备的 Wi-Fi AP 与 Clip 通信，不需要固件源码。它们是应用集成的推荐路径。
@@ -63,7 +63,7 @@ Basic 和移动端 SDK 通过 BLE 和设备的 Wi-Fi AP 与 Clip 通信，不需
 | 文件传输（BLE + Wi-Fi UDP） | 是（`AT+DOWNLOAD/CANCEL`） | 是 | 是（`transport.c`、`transfer.c`） |
 | BLE 实时音频流 | 否（仅能量级通知） | 不适用 | 不在范围内 |
 
-完整的已注册 AT 命令列表、协议帧、架构、验证矩阵以及量产/发布细节，请参见 [固件开发指南](./respeaker_clip_firmware_development_guide.md)——本页只总结你入门所需的内容。
+完整的已注册 AT 命令列表、协议帧、架构、验证矩阵以及量产/发布细节，请参见 [固件开发指南](/cn/respeaker_clip_firmware_development_guide)——本页只总结你入门所需的内容。
 
 ## 录音模式与音频处理链要点
 
@@ -315,7 +315,7 @@ MCUboot 会验证 RSA 签名并启动新应用；引导加载程序分区不会�
 
 ## 接下来去做什么
 
-- **系统架构、协议、更新/恢复、验证、量产** → [固件开发指南](./respeaker_clip_firmware_development_guide.md)（完整参考）。
+- **系统架构、协议、更新/恢复、验证、量产** → [固件开发指南](/cn/respeaker_clip_firmware_development_guide)（完整参考）。
 - **构建 / 烧录 / 功耗 / 踩坑（完整参考）** → [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md)。
 - **可供拷贝的示例应用** → [samples/](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/samples/)。
 - **AI 辅助开发** → [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) ——在你的 AI agent 中加载此 skill。它的 `SKILL.md` 加上九个参考文档已经编码了该项目的真实约束条件，其中包括：**不存在用于比特率、编码复杂度、AGC、噪声抑制和去混响的运行时命令**——音频模式只有 `normal` 或 `enhanced`。

@@ -563,7 +563,7 @@ Se a atualização OTA ou de firmware falhar, tente o seguinte:
 | Página do Produto | [reSpeaker Clip Wearable AI Recorder](https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html) |
 | Download do SenseCraft Voice App | [Página de Download](https://sensecraft-voice-download.seeed.cc/) |
 | Download de Firmware | Em breve |
-| Documentação do Firmware SDK | [Introdução ao Firmware SDK](./respeaker_clip_firmware_quick_start.md) |
+| Documentação do Firmware SDK | [Introdução ao Firmware SDK](/pt-br/respeaker_clip_firmware_quick_start) |
 | Repositório do SDK | [reSpeaker Clip GitHub](https://github.com/Seeed-Studio/reSpeaker_Clip) |
 | Manual do Usuário | <a href="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_user_manual.pdf" target="_blank" rel="noopener noreferrer">Manual do Usuário do reSpeaker Clip</a> |
 | Datasheet | Em breve |

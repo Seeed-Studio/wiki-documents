@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_firmware_development_guide/
 
 # reSpeaker Clip 固件开发指南
 
-这是 reSpeaker Clip 设备端固件的完整参考：它是如何构成的、它使用的 AT/GATT/UDP 协议、如何构建、更新、恢复、验证以及发布。关于从一台干净机器开始的“构建到冒烟测试”路径，请参见 [Getting Started with the reSpeaker Clip Firmware SDK](./respeaker_clip_firmware_quick_start.md)；关于完整的构建/烧录/供电/坑点，请参见 [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md)。
+这是 reSpeaker Clip 设备端固件的完整参考：它是如何构成的、它使用的 AT/GATT/UDP 协议、如何构建、更新、恢复、验证以及发布。关于从一台干净机器开始的“构建到冒烟测试”路径，请参见 [Getting Started with the reSpeaker Clip Firmware SDK](/cn/respeaker_clip_firmware_quick_start)；关于完整的构建/烧录/供电/坑点，请参见 [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md)。
 
 检出的固件源码是权威来源；本指南对其进行总结。当两者不一致时，以源码为准。
 
@@ -438,7 +438,7 @@ Give the modification plan first; do not edit code yet.
 
 ## 相关资源
 
-- [Getting Started with the reSpeaker Clip Firmware SDK](./respeaker_clip_firmware_quick_start.md) — 从构建到冒烟测试的路径
+- [Getting Started with the reSpeaker Clip Firmware SDK](/cn/respeaker_clip_firmware_quick_start) — 从构建到冒烟测试的路径
 - [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md) — 完整的构建 / 烧录 / 功耗 / 踩坑参考
 - [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) — 固件 AI 开发技能
 - 源码：[clip_event.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/clip_event.c)（状态机）、[audio.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/audio.c)（DSP/Opus）、[at_commands.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_commands.c)（AT 注册表）、[at_server.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_server.c)（解析 / 路由）、[transfer.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/transfer.c)（传输引擎）、[transport.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/transport.c)（传输抽象）、[storage.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/storage.c)（会话 / SD 生命周期）、[main.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/main.c)（初始化顺序）
