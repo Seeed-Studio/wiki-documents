@@ -1,6 +1,6 @@
 ---
 description: 本教程介绍如何使用 rebot_control 通过 MotorBridge 与 CAN 总线，对 reBot Arm B601-RS 进行 MIT 位置控制，含夹爪、温度保护与安全回零。
-title: reBot Arm B601-RS 入门 MIT 位置控制（rebot_control）
+title: reBot Arm B601-RS 入门 MIT 位置控制
 keywords:
   - reBot
   - B601-RS
@@ -16,7 +16,7 @@ slug: /rebot_arm_b601_rs_mit_control
 sku: 100019336
 last_update:
   date: 2026-08-04
-  author: LAN-GER
+  author: LiJie
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-04'
@@ -24,7 +24,7 @@ updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_mit_control/
 ---
 
-# reBot Arm B601-RS 的 MIT 位置控制入门指南（rebot_control）
+# reBot Arm B601-RS MIT 位置控制入门指南
 
 <p align="center">
     <a href="https://github.com/LAN-GER/rebot_control/blob/main/LICENSE">
@@ -118,7 +118,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_mit_control/
 | 安全回零 / 紧急失能 | ✅ |
 | YAML 配置 | ✅ |
 | Python 库调用 | ✅ |
-| 正/逆运动学（Pinocchio） | ❌（见 [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)） |
+| 正/逆运动学（Pinocchio） | ❌（见 [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py)） |
 | MeshCat 仿真 | ❌（见上方仓库） |
 
 ### 关节电机参数
@@ -317,6 +317,10 @@ python3 examples/quick_start.py
 
 流程：`start()` → `set_max_speeds()` → `set_joint_angles()` → **等待到位** → `stop()`。
 
+<div class="video-container">
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/quick_start/quick_start.mp4" title="视频演示 - 快速开始" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ---
 
 ### 2. 指定配置文件（`custom_config.py`）
@@ -343,6 +347,10 @@ python3 examples/monitor_status.py
 - **目标 vs 发送**：发送角度会滞后于目标（限速平滑）。
 - **温度**：读 `arm.last_temperatures` 即可，无需自己轮询 CAN。
 
+<div class="video-container">
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/monitor_status/monitor_status.mp4" title="视频演示 - 运行中监控状态" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ---
 
 ### 4. 单关节微调与夹爪（`single_joint_adjust.py`）
@@ -359,6 +367,10 @@ python3 examples/single_joint_adjust.py
 
 `joint_id`：1–6 为臂关节，**7 为夹爪（CAN ID 7）**。
 
+<div class="video-container">
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/single_joint_adjust/single_joint_adjust.mp4" title="视频演示 - 单关节微调与夹爪" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ---
 
 ### 5. 读取实际位置（`read_joint_angles.py`）
@@ -372,6 +384,10 @@ python3 examples/read_joint_angles.py
 :::tip
 `read_joint_angles()` 会同步访问 CAN，不宜极高频调用。监控下发进度用 `get_command_angles()`。
 :::
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/read_joint_angles/read_joint_angles.mp4" title="视频演示 - 读取实际位置" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
@@ -389,6 +405,10 @@ python3 examples/stop_options.py emergency    # 紧急失能，不回零
 :::danger
 `no_return` / `emergency` 会让机械臂停在非零姿态并失能，请确认周围安全、必要时用手扶住。
 :::
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/stop_options/stop_options.mp4" title="视频演示 - 安全停止选项" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
@@ -415,6 +435,10 @@ python3 examples/mit_position_control.py
 :::danger
 MIT 模式下机械臂仍可能较快运动。请保证人员与设备远离工作半径，并限制在约 70% 工作空间内。
 :::
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/mit_position_control/mit_position_control.mp4" title="视频演示 - 完整参数演示" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
@@ -502,7 +526,7 @@ arm.set_joint_angle(GRIPPER_JOINT_ID, 180.0)  # 夹爪 = J7
   控制环通信失败时程序会**紧急失能且不回零**，避免在错误通信下继续运动。
 
 - **与 Pinocchio / MeshCat / 重力补偿教程的关系**  
-  本仓库专注 MIT 位置控制接口。运动学、轨迹仿真与重力补偿请参考：[reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py) 及 Seeed Wiki《Pinocchio 与 MeshCat 入门》。
+  本仓库专注 MIT 位置控制接口。运动学、轨迹仿真与重力补偿请参考：[reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) 及 Seeed Wiki《Pinocchio 与 MeshCat 入门》。
 
 ---
 
@@ -517,6 +541,6 @@ arm.set_joint_angle(GRIPPER_JOINT_ID, 180.0)  # 夹爪 = J7
 ## 参考文档
 
 - [MotorBridge SDK](https://github.com/motorbridge/motorbridge)
-- [reBotArm_control_py（运动学 / 仿真 / 重力补偿）](https://github.com/vectorBH6/reBotArm_control_py)
+- [reBotArm_control_py（运动学 / 仿真 / 重力补偿）](https://github.com/Seeed-Projects/reBotArm_control_py)
 - [RobStride 电机相关文档](https://www.seeedstudio.com/)
 - 本仓库中文 README：`README_zh.md`
