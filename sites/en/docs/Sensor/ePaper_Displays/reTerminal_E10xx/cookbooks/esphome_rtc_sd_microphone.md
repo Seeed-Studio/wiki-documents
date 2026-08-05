@@ -551,6 +551,7 @@ wifi:
 captive_portal:
 
 spi:
+  id: epaper_spi_bus
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
@@ -648,6 +649,7 @@ wifi:
 captive_portal:
 
 spi:
+  id: epaper_spi_bus
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
@@ -749,6 +751,7 @@ wifi:
 captive_portal:
 
 spi:
+  id: epaper_spi_bus
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
@@ -854,6 +857,7 @@ wifi:
 captive_portal:
 
 spi:
+  id: epaper_spi_bus
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
@@ -912,7 +916,7 @@ display:
 
 This configuration:
 
-- Enables SD card power through `GPIO16`.
+- Enables SD card power through `GPIO16` (E1001 / E1002 / E1004) or `GPIO39` (E1003).
 - Reads the card-detect signal from `GPIO15`.
 - Shows the card state on the ePaper screen.
 - Exposes `SD Card Detected` to Home Assistant as a binary sensor.
@@ -1274,6 +1278,7 @@ wifi:
 captive_portal:
 
 spi:
+  id: epaper_spi_bus
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
@@ -1417,6 +1422,7 @@ wifi:
 captive_portal:
 
 spi:
+  id: epaper_spi_bus
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
@@ -1565,6 +1571,7 @@ wifi:
 captive_portal:
 
 spi:
+  id: epaper_spi_bus
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
@@ -1642,8 +1649,8 @@ display:
       mirror_y: false
     lambda: |-
       it.printf(400, 20, id(font_medium), Color::BLACK, TextAlign::TOP_CENTER,
-                "reTerminal E1002 Hardware Status");
-      it.line(20, 60, 780, 60, BLACK);
+                "reTerminal E1003 Hardware Status");
+      it.line(20, 60, 780, 60, Color::BLACK);
 
       auto now = id(rtc_time).now();
       if (now.is_valid()) {
@@ -1662,7 +1669,7 @@ display:
 
       it.printf(30, 215, id(font_medium), Color::BLACK, "PDM Mic: initialized");
       it.printf(30, 265, id(font_small), Color::BLACK, "RTC: I2C address 0x51");
-      it.printf(30, 295, id(font_small), Color::BLACK, "SD: DET GPIO15 / EN GPIO16");
+      it.printf(30, 295, id(font_small), Color::BLACK, "SD: DET GPIO15 / EN GPIO39");
       it.printf(30, 325, id(font_small), Color::BLACK, "Mic: CLK GPIO42 / DATA GPIO41 / EN GPIO38");
 ```
 
@@ -1671,7 +1678,7 @@ display:
 <TabItem value="For E1004" label="For E1004">
 
 :::tip
-Please update your ESPHome version to **2026.7.0** or later.
+Please update your ESPHome version to **2026.7.0** or later. reTerminal E1004 does not include an onboard PDM microphone, so this status demo covers RTC and microSD only.
 :::
 
 ```yaml
@@ -1682,7 +1689,6 @@ esphome:
     priority: 600
     then:
       - output.turn_on: bsp_sd_enable
-      - output.turn_on: mic_power_enable
       - delay: 200ms
       - pcf8563.read_time:
       - component.update: epaper_display
@@ -1724,17 +1730,10 @@ i2c:
   scl: GPIO20
   sda: GPIO19
 
-i2s_audio:
-  i2s_lrclk_pin: GPIO42
-
 output:
   - platform: gpio
     pin: GPIO16
     id: bsp_sd_enable
-
-  - platform: gpio
-    pin: GPIO38
-    id: mic_power_enable
 
 time:
   - platform: pcf8563
@@ -1747,13 +1746,6 @@ time:
       then:
         - pcf8563.write_time:
         - component.update: epaper_display
-
-microphone:
-  - platform: i2s_audio
-    id: onboard_mic
-    adc_type: external
-    pdm: true
-    i2s_din_pin: GPIO41
 
 binary_sensor:
   - platform: gpio
@@ -1790,7 +1782,7 @@ display:
       const auto RED = Color(255, 0, 0, 0);
 
       it.printf(400, 20, id(font_medium), BLACK, TextAlign::TOP_CENTER,
-                "reTerminal E1002 Hardware Status");
+                "reTerminal E1004 Hardware Status");
       it.line(20, 60, 780, 60, BLACK);
 
       auto now = id(rtc_time).now();
@@ -1808,10 +1800,11 @@ display:
         it.printf(30, 155, id(font_medium), RED, "SD Card: not detected");
       }
 
-      it.printf(30, 215, id(font_medium), BLUE, "PDM Mic: initialized");
+      it.printf(30, 215, id(font_medium), BLUE, "PDM Mic: not available on E1004");
       it.printf(30, 265, id(font_small), BLACK, "RTC: I2C address 0x51");
       it.printf(30, 295, id(font_small), BLACK, "SD: DET GPIO15 / EN GPIO16");
-      it.printf(30, 325, id(font_small), BLACK, "Mic: CLK GPIO42 / DATA GPIO41 / EN GPIO38");
+```
+
 ```
 
 </TabItem>
@@ -1819,7 +1812,7 @@ display:
 
 </details>
 
-When the firmware is running, the screen shows the RTC time, SD card state, and microphone initialization status on one page.
+When the firmware is running, the screen shows the RTC time and SD card state on one page. Models with an onboard PDM microphone (E1001 / E1002 / E1003) also show microphone initialization status; E1004 shows that the microphone is not available.
 
 The following image shows the expected result on reTerminal E1002. The same demo pattern works across the reTerminal E Series. Choose the matching device tab above. Monochrome / grayscale panels (E1001, E1003) and color panels (E1002, E1004) differ mainly in the display platform and color drawing API.
 
