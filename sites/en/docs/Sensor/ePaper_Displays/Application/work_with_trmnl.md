@@ -1,24 +1,25 @@
 ---
-description: Use TRMNL with any compatible Seeed ePaper product - reTerminal E1001, E1002, E1003, TRMNL 7.5" (OG) DIY Kit, or XIAO 7.5" ePaper Panel.
+description: Use TRMNL with any compatible Seeed ePaper product - reTerminal E1001, E1002, E1003, E1004, TRMNL 7.5" (OG) DIY Kit, or XIAO 7.5" ePaper Panel.
 title: Work with TRMNL
 keywords:
   - ePaper display
   - TRMNL
   - reTerminal
   - reTerminal E1003
+  - reTerminal E1004
   - XIAO
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.webp
 slug: /reterminal_e10xx_trmnl
 sidebar_position: 3
 last_update:
-  date: 06/22/2026
+  date: 08/05/2026
   author: dimo
 aliases:
   - /ogdiy_kit_works_with_trmnl
   - /xiao_7_5_inch_epaper_panel_with_trmnl
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/
-updatedAt: '2026-06-22'
+updatedAt: '2026-08-05'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -31,7 +32,7 @@ import TabItem from '@theme/TabItem';
 This guide is the single source of truth for using **TRMNL** with any compatible Seeed ePaper product. Pick your hardware once at each step that needs it, and the rest of the workflow is identical.
 
 :::caution Hardware support
-TRMNL officially supports the **reTerminal E1001**, **reTerminal E1002**, **reTerminal E1003**, **TRMNL 7.5" (OG) DIY Kit**, and **XIAO 7.5" ePaper Panel**. On the **E1002** content is currently rendered in **monochrome mode** — full-color rendering is planned for a future release. The **E1003** capacitive touch panel is available under SenseCraft HMI firmware only; TRMNL firmware uses the physical buttons on the device.
+TRMNL officially supports the **reTerminal E1001**, **reTerminal E1002**, **reTerminal E1003**, **reTerminal E1004**, **TRMNL 7.5" (OG) DIY Kit**, and **XIAO 7.5" ePaper Panel**. The **E1002** and **E1004** have full-color Spectra™ 6 panels, but TRMNL firmware renders their content in **monochrome mode**. The **E1003** capacitive touch panel is available under SenseCraft HMI firmware only; TRMNL firmware uses the physical buttons on the device.
 :::
 
 ## What is [TRMNL](https://trmnl.app/)?
@@ -57,17 +58,14 @@ At its core, TRMNL is built on the philosophy that technology should enhance our
     <tr>
       <th>reTerminal E1001</th>
       <th>reTerminal E1002</th>
-      <th>reTerminal E1003</th>
     </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/145.jpg" style={{width:160, height:'auto'}}/></div></td>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/146.jpg" style={{width:160, height:'auto'}}/></div></td>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/2-reTerminal-E1003-Epaper-Display.jpg" style={{width:160, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/145.jpg" style={{width:200, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/146.jpg" style={{width:200, height:'auto'}}/></div></td>
     </tr>
     <tr>
       <td align="center">7.5" Monochrome<br/>Integrated terminal</td>
       <td align="center">7.3" Spectra 6 (Color)<br/>Integrated terminal<br/>Mono mode in TRMNL</td>
-      <td align="center">10.3" Monochrome<br/>16-level grayscale<br/>Integrated terminal</td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -80,8 +78,32 @@ At its core, TRMNL is built on the philosophy that technology should enhance our
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
       </div></td>
+    </tr>
+  </table>
+</div>
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>reTerminal E1003</th>
+      <th>reTerminal E1004</th>
+    </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/2-reTerminal-E1003-Epaper-Display.jpg" style={{width:200, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2-reterminal-e1004-epaper-display.jpg" style={{width:200, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+      <td align="center">10.3" Monochrome<br/>16-level grayscale<br/>Integrated terminal</td>
+      <td align="center">13.3" Spectra 6 (Color)<br/>Integrated terminal<br/>Mono mode in TRMNL</td>
+    </tr>
+    <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
       </div></td>
@@ -151,7 +173,7 @@ If you encounter any issues, contact the TRMNL team directly at [team@usetrmnl.c
 The reTerminal E Series and the XIAO 7.5" Panel are pre-assembled — you only need to power them on. The TRMNL DIY Kit requires assembly.
 
 <Tabs groupId="trmnl-hardware">
-<TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003" default>
+<TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003 / E1004" default>
 
 The reTerminal E Series is fully integrated. Just connect the USB-C cable, slide the power switch to **ON**, and power it on. No assembly steps are needed.
 
@@ -245,10 +267,11 @@ The TRMNL Web Flasher works directly in the browser and supports every device on
 3. Pick the firmware that matches your hardware:
 
 <Tabs groupId="trmnl-hardware">
-<TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003" default>
+<TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003 / E1004" default>
 
 - **reTerminal E1001 / E1002**: use **FW 1.6.7 or newer** for Seeed compatibility.
 - **reTerminal E1003**: select **reTerminal E1003** in the firmware list and use **FW 1.8.7 or newer**.
+- **reTerminal E1004**: select **reTerminal E1004** in the firmware list and use **FW 1.8.10 or newer**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/258.png" style={{width:700, height:'auto'}}/></div>
 
@@ -272,7 +295,7 @@ Use **FW 1.5.12 or newer** for Seeed compatibility on the XIAO 7.5" ePaper Panel
 ### Method 2: Flash via reTerminal E-Series Firmware Flasher (reTerminal E Series only)
 
 :::info
-This method is only applicable to **reTerminal E1001 / E1002 / E1003**. The reTerminal E-Series Firmware Flasher provides TRMNL firmware packages for these three reTerminal E Series devices.
+This method is applicable to **reTerminal E1001 / E1002 / E1003 / E1004**. (**FW 1.8.10** and newer).
 :::
 
 :::caution Prefer Method 1 for newer TRMNL firmware
@@ -284,7 +307,7 @@ Use [Method 1: TRMNL Web Flasher](#method-1-trmnl-web-flasher-recommended) first
 <details>
 <summary>Click to expand the reTerminal E-Series Firmware Flasher steps</summary>
 
-1. Visit the [reTerminal E-Series Firmware Flasher](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/).
+1. Visit the [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/). For a direct E1004 TRMNL entry, you can also open the [E1004 TRMNL 1.8.10 Hub link](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/?platform=trmnl&device=E1004&firmware=TRMNL_reTerminal_E1004&version=1.8.10).
 
 2. In **Select platform**, choose the **TRMNL** card from the official platform section.
 
@@ -293,8 +316,9 @@ Use [Method 1: TRMNL Web Flasher](#method-1-trmnl-web-flasher-recommended) first
    - **reTerminal E1001**
    - **reTerminal E1002**
    - **reTerminal E1003**
+   - **reTerminal E1004**
 
-4. On the second page, review the available TRMNL firmware version for your selected device.
+4. On the second page, review the available TRMNL firmware version for your selected device (for E1004, use **1.8.10 or newer**).
 
 5. Connect your device to the computer with a USB data cable.
 
@@ -310,8 +334,10 @@ For the first installation, select **Erase flash + flash** so the device starts 
 Make sure the power switch is **ON**. If the device is asleep and the flash does not start, press the **Refresh** button on the top of the unit to wake it, then retry.
 :::
 
-:::note reTerminal E1002 display behavior
-The reTerminal E1002 uses a full-color ePaper screen, but TRMNL firmware currently renders content in monochrome mode. During Wi-Fi provisioning, the E1002 AP screen shows a compact layout with the TRMNL logo in the lower-right corner. When you see this screen, search for and connect to the E1002 hotspot, then continue with the same Wi-Fi setup flow as the other devices.
+:::note reTerminal E1002 / E1004 display behavior
+The reTerminal E1002 uses a full-color ePaper screen, but TRMNL firmware currently renders E1002 content in monochrome mode. During Wi-Fi provisioning, the E1002 AP screen shows a compact layout with the TRMNL logo in the lower-right corner. When you see this screen, search for and connect to the E1002 hotspot, then continue with the same Wi-Fi setup flow as the other devices.
+
+The reTerminal E1004 also uses a full-color Spectra™ 6 panel, but TRMNL firmware likewise renders its content in monochrome mode. Pick **reTerminal E1004** in the flasher so the correct panel is used.
 :::
 
 After flashing is complete, continue to [Step 4: Connect Device to Wi-Fi](#step-4-connect-device-to-wi-fi).
@@ -329,11 +355,14 @@ After flashing is complete, continue to [Step 4: Connect Device to Wi-Fi](#step-
      ```
 
    :::tip
-   Sometimes our PRs to TRMNL upstream are still under review. If you want the latest Seeed-side patches, use the Seeed mirror instead:
+   Sometimes our PRs to TRMNL upstream are still under review. If you want the latest Seeed-side patches, use the Seeed-maintained source snapshots in the [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) repository instead:
 
    ```bash
-   git clone https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project.git
+   git clone https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D.git
    ```
+
+   - For **reTerminal E1001 / E1002 / E1003**, use [`examples/official/TRMNL`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/official/TRMNL).
+   - For **reTerminal E1004**, use the dedicated [`examples/official/TRMNL_E1004`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/official/TRMNL_E1004) project.
    :::
 
 2. **Install [PlatformIO](https://platformio.org/)** as a VS Code extension or via the command line.
@@ -343,13 +372,14 @@ After flashing is complete, continue to [Step 4: Connect Device to Wi-Fi](#step-
 4. **Select the correct PlatformIO environment** for your hardware:
 
    <Tabs groupId="trmnl-hardware">
-   <TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003" default>
+   <TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003 / E1004" default>
 
    In `platformio.ini`:
 
    - For **reTerminal E1001**, select the `seeed_reTerminal_E1001` environment.
    - For **reTerminal E1002**, select the `seeed_reTerminal_E1002` environment (TRMNL renders content in monochrome on E1002).
    - For **reTerminal E1003**, select the `TRMNL_X_E1003` environment in the [official TRMNL firmware repository](https://github.com/usetrmnl/trmnl-firmware).
+   - For **reTerminal E1004**, open the dedicated [`examples/official/TRMNL_E1004`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/official/TRMNL_E1004) PlatformIO project and select the `seeed_reTerminal_E1004` environment (firmware ID `TRMNL_reTerminal_E1004`).
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/26.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -391,7 +421,7 @@ The Wi-Fi provisioning workflow is identical for all supported hardware.
 After flashing the TRMNL firmware and powering on your device, it will automatically enter provisioning mode if it is not yet connected to Wi-Fi.
 
 <Tabs groupId="trmnl-hardware">
-<TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003" default>
+<TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003 / E1004" default>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/161.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -478,12 +508,14 @@ Always keep both options disabled to ensure stable operation.
 ## Buttons Usage
 
 <Tabs groupId="trmnl-hardware">
-<TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002" default>
+<TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1004" default>
 
 The reTerminal E1001 and E1002 expose a single user-facing button under TRMNL firmware:
 
 - **Green Button — long press 5 s**: enter Wi-Fi reconfiguration mode.
 - **Reset button**: single click to reboot the device.
+
+The reTerminal E1004 uses the front physical buttons under TRMNL firmware. Use those buttons to wake or refresh the panel, and slide the power switch **OFF** then **ON** to reboot. For Wi-Fi reconfiguration, follow the same long-press / provisioning flow shown on the device screen after a factory flash or network reset.
 
 </TabItem>
 <TabItem value="reterminal-e1003" label="reTerminal E1003">
@@ -640,16 +672,18 @@ Put the XIAO into BootLoader mode to recover:
 
 Special thanks to the entire **TRMNL team** for their strong support and invaluable help across this integration. In particular we want to thank **Bogdan**, **Ryan Kulp**, **Fr3d**, **Schappi**, and all other team members for their dedication throughout development and documentation.
 
-Their expertise made this integration possible and greatly improved the experience for the reTerminal E Series (E1001, E1002, and E1003), TRMNL DIY Kit, and XIAO 7.5" ePaper Panel communities.
+Their expertise made this integration possible and greatly improved the experience for the reTerminal E Series (E1001, E1002, E1003, and E1004), TRMNL DIY Kit, and XIAO 7.5" ePaper Panel communities.
 
 ## Resources
 
 <Tabs groupId="trmnl-hardware">
-<TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003" default>
+<TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003 / E1004" default>
 
-- **[GitHub]** [Seeed_TRMNL_Eink_Project](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
+- **[GitHub]** [TRMNL firmware source for E1001 / E1002 / E1003](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/official/TRMNL)
+- **[GitHub]** [TRMNL firmware source for E1004](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/official/TRMNL_E1004)
 - **[GitHub]** [Official TRMNL firmware](https://github.com/usetrmnl/trmnl-firmware)
 - **[Wiki]** [Getting Started with reTerminal E1003](/getting_started_with_reterminal_e1003)
+- **[Wiki]** [Getting Started with reTerminal E1004](/getting_started_with_reterminal_e1004)
 
 </TabItem>
 <TabItem value="trmnl-diy-kit" label="TRMNL DIY Kit">
