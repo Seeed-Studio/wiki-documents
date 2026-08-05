@@ -1,5 +1,5 @@
 ---
-description: Guía de referencia para controlar cualquier producto Seeed ePaper compatible con ESPHome y Home Assistant: flujo de trabajo con YAML, esqueleto genérico y dónde encontrar el cookbook de cada producto.
+description: Guía de referencia para controlar cualquier producto Seeed ePaper compatible con ESPHome y Home Assistant - flujo de trabajo con YAML, esqueleto genérico y dónde encontrar el cookbook de cada producto.
 title: Trabajar con ESPHome
 keywords:
   - Pantalla ePaper

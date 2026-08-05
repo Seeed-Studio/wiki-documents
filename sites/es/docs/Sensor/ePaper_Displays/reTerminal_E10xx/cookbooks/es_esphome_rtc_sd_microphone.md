@@ -1,5 +1,5 @@
 ---
-description: Recetario de ESPHome para reTerminal E1001 / E1002 / E1003 / E1004: demostraciones independientes para sincronización de hora del RTC PCF8563, detección de tarjeta microSD, inicialización del micrófono PDM integrado y un panel combinado de estado de hardware.
+description: Recetario de ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - demostraciones independientes para sincronización de hora del RTC PCF8563, detección de tarjeta microSD, inicialización del micrófono PDM integrado y un panel combinado de estado de hardware.
 title: 'Recetario ESPHome: RTC, Tarjeta SD y Micrófono (reTerminal E Serie)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
