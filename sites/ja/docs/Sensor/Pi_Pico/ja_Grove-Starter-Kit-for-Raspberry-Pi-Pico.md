@@ -9,8 +9,8 @@ sku: 102110537, 110061282, 102110545, 103100142, 110061283
 last_update:
   date: 1/11/2023
   author: jianjing Huang
-createdAt: '2025-05-27'
-updatedAt: '2026-02-27'
+createdAt: '2023-01-12'
+updatedAt: '2026-02-25'
 url: https://wiki.seeedstudio.com/ja/Grove-Starter-Kit-for-Raspberry-Pi-Pico/
 ---
 
@@ -20,9 +20,9 @@ import TabItem from '@theme/TabItem';
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Pico_hardware.png)
 
-Raspberry Pi Pico は、低コストで高性能な新しい人気のマイコンボードです。では、これに Grove センサをどのように接続すればよいのでしょうか？Grove シールドがこの問題を完璧に解決します。
+Raspberry Pi Pico は、低コストで高性能な新しい人気のマイコンボードです。では、Grove センサーをどのように統合すればよいのでしょうか？Grove シールドがこの問題を完璧に解決します。
 
-Grove Shield for Pi Pico v1.0 は、Raspberry Pi Pico 向けのプラグアンドプレイシールドで、2 つの I2C、3 つのアナログ、2 つの UART、3 つのデジタルポート、SWD デバッグインターフェースと SPI ピン、3.3V/5V 切り替え可能な電源スイッチなど、さまざまな Grove コネクタを統合しています。ジャンパワイヤやブレッドボードを使わずに、簡単かつ素早くプロトタイプやプロジェクトを構築でき、Pico の無限の可能性を探求できます。このシールドボードはスタッカブルなアドオンボードで、Pi Pico と Seeed の Grove システムをつなぐブリッジとして機能します。
+Grove Shield for Pi Pico v1.0 は、Raspberry Pi Pico 向けのプラグアンドプレイシールドで、2 つの I2C、3 つのアナログ、2 つの UART、3 つのデジタルポート、SWD デバッグインターフェースと SPI ピン、3.3V/5V 切り替え可能な電源スイッチなど、さまざまな種類の Grove コネクタを統合しています。ジャンパワイヤやブレッドボードを使わずに、簡単かつ迅速にプロトタイプやプロジェクトを構築でき、Pico の無限の可能性を探求できます。このシールドボードはスタッカブルなアドオンボードで、Pi Pico と Seeed の Grove システムをつなぐブリッジとして機能します。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html" target="_blank">
@@ -44,7 +44,7 @@ Grove Shield for Pi Pico v1.0 は、Raspberry Pi Pico 向けのプラグアン�
 
 ## 対応ボード
 
-Base Shield は [Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) でテストされており、完全に互換性があります。
+Base Shield はテスト済みで、[Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) と完全な互換性があります。
 
 ## ハードウェア概要
 
@@ -63,14 +63,14 @@ Base Shield は [Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.h
 
 ### プロジェクト 1: ブザーから異なる音を出す
 
-#### 必要な部材
+#### 必要な材料
 
-**ステップ 1.** 次のアイテムを用意します:
+**ステップ 1.** 次のものを用意します:
 
 | Pi Pico | Grove Shield for Pi Pico | Grove - Buzzer | Grove - Rotary Angle Sensor |
 |---------|--------------------------|----------------|-----------------------------|
 | ![Pi Pico](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg) | ![Grove Shield for Pi Pico](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png) | ![Grove Buzzer](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png) | ![Grove Rotary Angle Sensor](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/rotary.png) |
-| [今すぐ入手](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) | [今すぐ入手](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html) | [今すぐ入手](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) | [今すぐ入手](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html) |
+| [Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) | [Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html) | [Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) | [Get ONE Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html) |
 
 **ステップ 2.** Grove Buzzer を Grove Shield の A1 ポートに接続します。
 
@@ -78,7 +78,7 @@ Base Shield は [Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.h
 
 **ステップ 4.** Grove Shield を Pi Pico に挿し込みます。
 
-**ステップ 5.** Pi Pico を USB ケーブルで PC に接続します。
+**ステップ 5.** USB ケーブルを使って Pi Pico を PC に接続します。
 
 ![Hardware Setup](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/hardwareconnection.jpg)
 
@@ -124,7 +124,7 @@ Base Shield は [Pi Pico](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.h
 ![Interpreter Selection](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/interpreter.png)
 ![COM Port Selection](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/comport.png)
 
-**ステップ 3.** Raspberry Pi Pico が接続されており MicroPython が動作していれば、Thonny は自動的に REPL に接続します。次に、以下のコードを Thonny IDE にコピーし、緑色の **Run** ボタンを押します。
+**ステップ 3.** Raspberry Pi Pico が接続されていて MicroPython が動作していれば、Thonny は自動的に REPL に接続します。次に、以下のコードを Thonny IDE にコピーし、緑色の **Run** ボタンを押します。
 
 ```python
 from machine import Pin, PWM, ADC
@@ -147,16 +147,16 @@ while True:
     sleep(0.05)
 ```
 
-ここで **Grove Rotary Angle Sensor** を回転させると、角度を変えるにつれてブザーから異なる音が聞こえます。
+ここで **Grove Rotary Angle Sensor** を回すと、角度を調整するにつれてブザーから異なる音が聞こえます。
 
 ### プロジェクト 2: 温度と湿度の検出
 
 <Tabs>
 <TabItem  value="Old" label="オプション 1: DHT11 と SSD1315" default>
 
-#### 必要な部材
+#### 必要な材料
 
-**ステップ 1.** 次のアイテムを用意します:
+**ステップ 1.** 次のものを用意します:
 
 <div class="table-center">
  <table align="center" style={{width: 950, height: "auto", overflowX: 'scroll', textAlign: 'left',}}>
@@ -203,11 +203,11 @@ while True:
 
 **ステップ 4.** Grove Shield を Pi Pico に挿し込みます。
 
-**ステップ 5.** Pi Pico を USB ケーブルで PC に接続します。
+**ステップ 5.** USB ケーブルを使って Pi Pico を PC に接続します。
 
 #### ソフトウェアのセットアップ
 
-ソフトウェアについては Demo 1 のセクションを参照してください。
+ソフトウェアについては、デモ 1 のソフトウェアセクションを参照してください。
 
 1. 次のコードを Thonny IDE にコピーします:
 
@@ -231,7 +231,7 @@ while True:
     sleep(0.5)
 ```
 
-2. 次の必要な Python ファイルをローカルマシンにダウンロードします:
+2. 以下の必要な Python ファイルをローカルマシンにダウンロードします:
    - [ssd1306.py](https://github.com/micropython/micropython-lib/blob/master/micropython/drivers/display/ssd1306/ssd1306.py)
 
 ```python title=dht11.py
@@ -353,7 +353,7 @@ class DHT(object):
 
 両方のファイルを MicroPython デバイスに保存したら、Thonny の緑色の **Run** ボタンを押してデモコードを実行します。
 
-すると、次の画像のように、OLED 画面に温度と湿度が表示されるはずです：
+これで、以下の画像のように、OLED 画面に温度と湿度が表示されるはずです：
 
 ![OLED Display Output](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/oled1.jpg)
 
@@ -362,7 +362,7 @@ class DHT(object):
 
 #### 必要な部材
 
-**ステップ 1.** 次のアイテムを準備します：
+**Step 1.** 次のものを準備します：
 
 <div class="table-center">
  <table align="center" style={{width: 950, height: "auto", overflowX: 'scroll', textAlign: 'left',}}>
@@ -403,13 +403,13 @@ class DHT(object):
     </table>
 </div>
 
-**ステップ 2.** Grove 16x2 LCD (White on Blue) を Grove Shield の I2C1 ポートに接続します。
+**Step 2.** Grove 16x2 LCD (White on Blue) を Grove Shield の I2C1 ポートに接続します。
 
-**ステップ 3.** Grove Temperature & Humidity Sensor V2.0 (DHT20) を Grove Shield の D18 ポートに接続します。
+**Step 3.** Grove Temperature & Humidity Sensor V2.0 (DHT20) を Grove Shield の D18 ポートに接続します。
 
-**ステップ 4.** Grove Shield を Pi Pico に挿し込みます。
+**Step 4.** Grove Shield を Pi Pico に挿し込みます。
 
-**ステップ 5.** USB ケーブルを使って Pi Pico を PC に接続します。
+**Step 5.** USB ケーブルを使って Pi Pico を PC に接続します。
 
 #### ソフトウェアのセットアップ
 
@@ -464,7 +464,7 @@ while True:
 
 両方のファイルを MicroPython デバイスに保存したら、Thonny の緑色の **Run** ボタンを押してデモコードを実行します。
 
-すると、次の画像のように、OLED 画面に温度と湿度が表示されるはずです：
+これで、以下の画像のように、OLED 画面に温度と湿度が表示されるはずです：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/oled_output.jpg" style={{width:750, height:'auto'}}/></div>
 
@@ -475,22 +475,22 @@ while True:
 
 #### 必要な部材
 
-- ステップ 1. 次のものを準備します：
+- Step 1. 次のものを準備します：
 
 | Pi Pico | Grove Shield for Pi Pico|  Grove-button |Grove-LED|Grove relay|
 |--------------|-------------|-----------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Button/img/button_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/ledsocket.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Relay/img/Thumbnail.jpg)|
-|[今すぐ入手](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-Button-p-766.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-LED-Pack-p-4364.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-LED-Pack-p-4364.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
 
-- ステップ 2. Grove button を Base Shield のデジタルピン 18 に接続します。
-- ステップ 3. Grove led を Base Shield の D16 ポートに接続します。
-- ステップ 4. Grove Relay を Base Shield の D20 ポートに接続します。
-- ステップ 5. Grove Shield for Pi Pico を Pi Pico に挿し込みます。
-- ステップ 6. USB ケーブルを使って Pi Pico を PC に接続します。
+- Step 2. Grove ボタンを Base Shield のデジタルピン 18 に接続します。
+- Step 3. Grove LED を Base Shield の D16 ポートに接続します。
+- Step 4. Grove Relay を Base Shield の D20 ポートに接続します。
+- Step 5. Grove Shield for Pi Pico を Pi Pico に挿し込みます。
+- Step 6. USB ケーブルを使って Pi Pico を PC に接続します。
 
 #### ソフトウェア
 
-ソフトウェアについては demo1 のセクションを参照してください。
+demo1 のソフトウェアの部分を参照してください。
 
 まず、以下のコードを Thonny IDE にコピーします。
 
@@ -515,7 +515,7 @@ while True:
 
 それでは、緑色のボタンをクリックしてデモコードを実行してください。
 
-その後、Grove button を押すことで、LED とリレーのオン／オフを制御できます。
+その後、Grove ボタンを押すことで、LED とリレーのオン／オフを制御できます。
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/demo3.jpg)
 
@@ -523,20 +523,20 @@ while True:
 
 #### 必要な部材
 
-- ステップ 1. 次のものを準備します：
+- Step 1. 次のものを準備します：
 
 | Pi Pico | Grove Shield for Pi Pico|  RGB LED WS2813 mini |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/redrgb.png)|
-|[今すぐ入手](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-RGB-LED-WS2813-Mini-p-4269.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-RGB-LED-WS2813-Mini-p-4269.html)|
 
-- ステップ 2. RGB LED WS2813 mini を Base Shield のポート 18 に接続します。
-- ステップ 3. Grove Shield for Pi Pico を Pi Pico に挿し込みます。
-- ステップ 4. USB ケーブルを使って Pi Pico を PC に接続します。
+- Step 2. RGB LED WS2813 mini を Base Shield の 18 番ポートに接続します。
+- Step 3. Grove Shield for Pi Pico を Pi Pico に挿し込みます。
+- Step 4. USB ケーブルを使って Pi Pico を PC に接続します。
 
 #### ソフトウェア
 
-ソフトウェアについては demo1 のセクションを参照してください。
+demo1 のソフトウェアの部分を参照してください。
 
 まず、以下のコードを Thonny IDE にコピーします。
 
@@ -586,24 +586,24 @@ File name 欄に **ws2812.py** と入力し、"ok" をクリックすると、Fi
 
 ### プロジェクト 5: 音と光の検出
 
-#### 必要な材料
+#### 必要な部材
 
 - ステップ 1. 以下のものを準備します：
 
-| Pi Pico | Grove Shield for Pi Pico| grove sound sensor |Grove light sensor|Grove-16x2 LCD|
+| Pi Pico | Grove Shield for Pi Pico| grove サウンドセンサ |Grove 光センサ|Grove-16x2 LCD|
 |--------------|-------------|-----------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/page_small_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/img/light_sensor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/perspective.jpg)|
 |[今すぐ入手](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-16-x-2-LCD-Black-on-Yellow.html)|
 
-- ステップ 2. Grove sound sensor を Base Shield のアナログピン 0 に接続します。
-- ステップ 3. Grove light を Base Shield のポート A1 に接続します。
-- ステップ 4. Grove 16X2 lcd を Base Shield のポート I2C1 に接続します。
+- ステップ 2. Grove サウンドセンサを Base Shield のアナログピン 0 に接続します。
+- ステップ 3. Grove 光センサを Base Shield のポート A1 に接続します。
+- ステップ 4. Grove 16X2 LCD を Base Shield のポート I2C1 に接続します。
 - ステップ 5. Grove Shield for Pi Pico を Pi Pico に挿し込みます。
 - ステップ 6. Pi Pico を USB ケーブルで PC に接続します。
 
 #### ソフトウェア
 
-demo1 のソフトウェアの部分を参照してください。
+demo1 のソフトウェアの項目を参照してください。
 
 まず、以下のコードを Thonny IDE にコピーします。
 
@@ -642,36 +642,36 @@ while True:
 File name 欄に **LCD1602.py** と入力し、"ok" をクリックすると、File->Open->MicroPython device にファイルが保存されます。
 
 :::note
-この例では、使用している LCD1602 のバージョンは単色バックライト版です。フルカラー・バックライト版の LCD1602 を制御する必要がある場合は、このライブラリファイル内の関数を確認して、その使い方を学んでください。
+この例で使用している LCD1602 のバージョンは単色バックライト版です。フルカラー・バックライト版の LCD1602 を制御する必要がある場合は、このライブラリファイル内の関数を確認して、その使い方を学んでください。
 :::
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/lcdlightsound.png)
 
 ファイルを MicroPython デバイスに保存したら、緑色のボタンをクリックしてデモコードを実行してください。
-すると、下図のように sound sensor と light sensor のデータを取得できます。
+すると、下図のようにサウンドセンサと光センサのデータを取得できます。
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/demo5.jpg)
 
 ### プロジェクト 6: 動きの検出
 
-#### 必要な材料
+#### 必要な部材
 
 - ステップ 1. 以下のものを準備します：
 
-| Pi Pico | Grove Shield for Pi Pico| grove servo |Grove Mini Fan|Grove mini pir motion sensor|
+| Pi Pico | Grove Shield for Pi Pico| grove サーボ |Grove Mini ファン|Grove mini PIR モーションセンサ|
 |--------------|-------------|-----------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Servo/img/Grove%20Servo_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/groveminifan.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/minipir.png)|
 |[今すぐ入手](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-Mini-Fan-p-1819.html)|[今すぐ入手](https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html)|
 
-- ステップ 2. Grove servo を Base Shield のアナログピン 1 に接続します。
-- ステップ 3. Grove Mini fan を Base Shield のポート D16 に接続します。
-- ステップ 4. Grove Mini pir motion sensor を Base Shield のポート D18 に接続します。
+- ステップ 2. Grove サーボを Base Shield のアナログピン 1 に接続します。
+- ステップ 3. Grove Mini ファンを Base Shield のポート D16 に接続します。
+- ステップ 4. Grove Mini PIR モーションセンサを Base Shield のポート D18 に接続します。
 - ステップ 5. Grove Shield for Pi Pico を Pi Pico に挿し込みます。
 - ステップ 6. Pi Pico を USB ケーブルで PC に接続します。
 
 #### ソフトウェア
 
-demo1 のソフトウェアの部分を参照してください。
+demo1 のソフトウェアの項目を参照してください。
 
 まず、以下のコードを Thonny IDE にコピーします。
 
@@ -711,7 +711,7 @@ while True:
 ```
 
 それでは、緑色のボタンをクリックしてデモコードを実行してください。
-すると、下図のように、手を pir sensor の前でさっと動かすと grove mini fan と grove servo が動作します。
+すると、下図のように、手を PIR センサの前でさっと動かすと Grove Mini ファンと Grove サーボが動作します。
 
 ![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/tutieshi_480x272_3s.gif)
 
@@ -730,13 +730,13 @@ while True:
 
 <div align="center"><img width = "{400}" src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/book.png"/></div>
 
-- **[ZIP]** [Beginners Guide of Raspberry Pi Pico Based on MicroPython](https://files.seeedstudio.com/Seeed_EDU/Course_documents/Beginner's-Guide-for-Raspberry-Pi-Pico.zip)
-- **[ZIP]** [Codes](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Codes.rar)
-- **[ZIP]** [Libraries](https:///files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Libraries.rar)
+- **[ZIP]** [MicroPython に基づく Raspberry Pi Pico ビギナーズガイド](https://files.seeedstudio.com/Seeed_EDU/Course_documents/Beginner's-Guide-for-Raspberry-Pi-Pico.zip)
+- **[ZIP]** [コード](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Codes.rar)
+- **[ZIP]** [ライブラリ](https:///files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Libraries.rar)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

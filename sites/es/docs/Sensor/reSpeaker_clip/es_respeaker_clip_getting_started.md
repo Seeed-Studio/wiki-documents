@@ -23,14 +23,14 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png" alt="reSpeaker Clip" width={600} height="auto" /></p>
 
-reSpeaker Clip es una grabadora de IA portátil y abierta diseñada para retail, reuniones, entrevistas, aulas, formación en servicios y otros escenarios que requieren grabación de voz de alta calidad y organización posterior del contenido. Integra micrófonos PDM duales para captación omnidireccional de 360 grados hasta 3 metros, grabación independiente, gestión de archivos en el móvil, transcripción con IA y resumen con IA, ayudando a los usuarios a completar el flujo de trabajo completo desde la grabación in situ hasta el contenido estructurado.
+reSpeaker Clip es una grabadora de IA portátil y abierta diseñada para comercio minorista, reuniones, entrevistas, aulas, formación en servicio y otros escenarios que requieren grabación de voz de alta calidad y organización posterior del contenido. Integra micrófonos PDM duales para captación omnidireccional de 360 grados hasta 3 metros, grabación independiente, gestión de archivos en el móvil, transcripción con IA y resumen con IA, ayudando a los usuarios a completar todo el flujo de trabajo desde la grabación in situ hasta el contenido estructurado.
 
-reSpeaker Clip también está diseñada como un producto de hardware abierto y amigable para desarrolladores. Proporciona firmware de código abierto, una app de demostración y compatibilidad con SDK, lo que permite a los desarrolladores personalizar el comportamiento del dispositivo y los flujos de trabajo de la aplicación. Las empresas también pueden integrarlo con sistemas internos de oficina, LLM desplegados de forma privada o canalizaciones de analítica de voz para crear aplicaciones de voz con IA que cumplan sus requisitos de seguridad de datos.
+reSpeaker Clip también está diseñada como un producto de hardware abierto y amigable para desarrolladores. Proporciona firmware de código abierto, una aplicación de demostración y compatibilidad con SDK, lo que permite a los desarrolladores personalizar el comportamiento del dispositivo y los flujos de trabajo de la aplicación. Las empresas también pueden integrarlo con sistemas internos de oficina, LLM desplegados de forma privada o canalizaciones de análisis de voz para crear aplicaciones de voz con IA que cumplan sus requisitos de seguridad de datos.
 
-reSpeaker Clip funciona con la app SenseCraft Voice y servicios en la nube, y también puede integrarse con modelos de IA locales o en la nube. A través de la app, los usuarios pueden emparejar el dispositivo, gestionar grabaciones, exportar archivos, transcribir audio, generar resúmenes con IA, personalizar plantillas y realizar recuperación de información mediante preguntas y respuestas.
+reSpeaker Clip funciona con la aplicación SenseCraft Voice y servicios en la nube, y también puede integrarse con modelos de IA locales o en la nube. A través de la aplicación, los usuarios pueden emparejar el dispositivo, gestionar grabaciones, exportar archivos, transcribir audio, generar resúmenes con IA, personalizar plantillas y realizar recuperación de preguntas y respuestas.
 
 :::note
-Este documento es un borrador inicial de la Wiki para reSpeaker Clip. Algunas URL del SDK, documentos de protocolo y enlaces a paquetes de recursos se añadirán después de que se confirmen los materiales del producto.
+Este documento es un borrador inicial de Wiki para reSpeaker Clip. Algunas URL de SDK, documentos de protocolo y enlaces a paquetes de recursos se añadirán después de que se confirmen los materiales del producto.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -41,13 +41,13 @@ Este documento es un borrador inicial de la Wiki para reSpeaker Clip. Algunas UR
 
 ## Descripción del producto
 
-reSpeaker Clip está posicionado como una grabadora de IA portátil y abierta. Puede utilizarse no solo como un dispositivo de grabación portátil, sino también como un punto de entrada de datos de voz para formación en servicios empresariales, registros de entrevistas, actas de reuniones y revisión de comunicaciones in situ.
+reSpeaker Clip está posicionada como una grabadora de IA portátil y abierta. No solo puede utilizarse como un dispositivo de grabación portátil, sino también como un punto de entrada de datos de voz para formación en servicio empresarial, registros de entrevistas, actas de reuniones y revisión de comunicaciones in situ.
 
 El dispositivo utiliza un factor de forma compacto y portátil con clip e incluye 2 GB de almacenamiento interno, lo que le permite grabar de forma independiente sin depender de un teléfono. También incorpora una pantalla OLED programable de 0,5 pulgadas y retroalimentación por vibración, ayudando a los usuarios a comprobar rápidamente el estado de la grabación, marcar segmentos importantes y cambiar entre flujos de trabajo de grabación mediante la pantalla, el botón y la retroalimentación háptica.
 
 ### Características clave
 
-- **Captación de 360 grados, hasta 3 metros**: Los micrófonos PDM duales de alto rendimiento admiten captación omnidireccional para reuniones, entrevistas, conversaciones en retail y otros escenarios con múltiples interlocutores.
+- **Captación de 360 grados, hasta 3 metros**: Los micrófonos PDM duales de alto rendimiento admiten captación omnidireccional para reuniones, entrevistas, conversaciones en comercios y otros escenarios con múltiples interlocutores.
 - **Doble flujo de trabajo de grabación**: Selecciona el comportamiento de grabación adecuado según el entorno, desde notas diarias portátiles hasta reuniones con varias personas.
 - **Grabación independiente y almacenamiento local**: El almacenamiento integrado de 2 GB permite que el dispositivo funcione como una grabadora autónoma incluso cuando el teléfono no está cerca.
 - **Pantalla OLED y retroalimentación por vibración**: La pantalla OLED de 0,5 pulgadas muestra el estado del dispositivo, mientras que la retroalimentación por vibración hace que el control de la grabación sea más intuitivo.
@@ -57,7 +57,7 @@ El dispositivo utiliza un factor de forma compacto y portátil con clip e incluy
 
 ### Especificaciones
 
-Esta sección resume las especificaciones de hardware, audio, físicas y relacionadas con la batería de reSpeaker Clip.
+Esta sección resume las especificaciones relacionadas con hardware, audio, parámetros físicos y batería de reSpeaker Clip.
 
 #### Especificaciones de hardware
 
@@ -69,13 +69,13 @@ Esta sección resume las especificaciones de hardware, audio, físicas y relacio
 | Salida de audio | Audio con reducción de ruido |
 | Conectividad | Bluetooth (BLE 5.3),<br />Wi‑Fi (para exportación de audio de alta velocidad) |
 | Almacenamiento interno | 2 GB (almacena aprox. 250+ horas<br />de audio comprimido) |
-| Autonomía de la batería | 14-18 horas de grabación continua |
+| Autonomía de la batería | 14‑18 horas de grabación continua |
 | Interacción | Botón de acción, motor de vibración |
 | Interfaz de carga | Magnética de 4 pines |
 
 #### Parámetros de audio
 
-| Elemento | Parámetro |
+| Ítem | Parámetro |
 | --- | --- |
 | Micrófono | Micrófonos PDM duales |
 | Frecuencia de muestreo | Hasta 16 kHz |
@@ -84,11 +84,11 @@ Esta sección resume las especificaciones de hardware, audio, físicas y relacio
 | Salida de audio | Audio mono con reducción de ruido |
 | Formato de audio comprimido | Opus mono, 32 kbps |
 | Almacenamiento de audio | 2 GB almacenan aprox. 250+ horas de audio comprimido |
-| Tiempo de grabación continua | 14-18 horas |
+| Tiempo de grabación continua | 14‑18 horas |
 
 #### Parámetros físicos
 
-| Elemento | Parámetro |
+| Ítem | Parámetro |
 | --- | --- |
 | Pantalla | OLED de 0,5 pulgadas 88*48 |
 | Almacenamiento interno | 2 GB |
@@ -97,13 +97,13 @@ Esta sección resume las especificaciones de hardware, audio, físicas y relacio
 | Interfaz de carga | Magnética de 4 pines |
 | Entrada de alimentación de la base de carga | USB‑C |
 | Métodos de uso | Fijación magnética, clip de solapa, cordón para el cuello |
-| Nota sobre temperatura | Evita el uso en temperaturas extremas de -20°C a 60°C |
+| Nota sobre temperatura | Evita el uso en temperaturas extremas de -20 °C a 60 °C |
 
 ### Escenarios objetivo
 
-- Grabación de servicio en retail y revisión de formación
+- Grabación de servicio minorista y revisión de formación
 - Grabación de audio de larga duración para reuniones, entrevistas y clases
-- Comunicación con clientes, visitas de ventas, inspección de calidad del servicio y otros escenarios de negocio
+- Comunicación con clientes, visitas de ventas, inspección de calidad de servicio y otros escenarios empresariales
 - Flujos de trabajo que necesitan convertir contenido de voz en texto estructurado y resúmenes
 
 ### Capacidades principales
@@ -118,22 +118,22 @@ Esta sección resume las especificaciones de hardware, audio, físicas y relacio
 - Resumen con IA y extracción estructurada
 - Múltiples métodos de uso
 - Gestión de archivos desde el móvil
-- Compatibilidad con la app y el servicio en la nube SenseCraft Voice
-- Firmware de código abierto, app de demostración y compatibilidad con SDK
+- Compatibilidad con la aplicación y el servicio en la nube SenseCraft Voice
+- Firmware de código abierto, aplicación de demostración y compatibilidad con SDK
 
 ### Descripción general del hardware
 
-reSpeaker Clip utiliza un factor de forma portátil con clip. La parte superior integra una pantalla OLED, micrófonos duales y un botón de acción. La parte inferior y la base de carga incluyen contactos de carga magnéticos. La base de carga se alimenta mediante USB‑C, lo que facilita cambiar entre carga en escritorio y grabación portátil.
+reSpeaker Clip utiliza un factor de forma portátil con clip. La parte superior integra una pantalla OLED, micrófonos duales y un Botón de Acción. La parte inferior y la base de carga incluyen contactos de carga magnéticos. La base de carga se alimenta mediante USB‑C, lo que facilita cambiar entre carga en escritorio y grabación portátil.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_hardware_cropped.jpg" alt="Descripción general del hardware de reSpeaker Clip" width={680} height="auto" /></p>
 
-### Contenido de la caja
+### Contenido del paquete
 
 <div style={{width: '100%', overflowX: 'auto'}}>
   <table style={{display: 'table', width: '680px', maxWidth: '100%', margin: '0 auto'}}>
     <thead>
       <tr>
-        <th>Elemento</th>
+        <th>Ítem</th>
         <th style={{textAlign: 'center'}}>Cantidad</th>
         <th>Descripción</th>
       </tr>
@@ -175,7 +175,7 @@ reSpeaker Clip utiliza un factor de forma portátil con clip. La parte superior 
 
 ## Inicio rápido
 
-Esta sección presenta el flujo de trabajo básico desde la preparación del dispositivo y la conexión de la app hasta la grabación y el resumen con IA. Para el primer uso, sigue los pasos en orden.
+Esta sección presenta el flujo de trabajo básico desde la preparación del dispositivo y la conexión de la aplicación hasta la grabación y el resumen con IA. Para el primer uso, sigue los pasos en orden.
 
 ### Preparación del dispositivo
 
@@ -187,27 +187,27 @@ Esta sección presenta el flujo de trabajo básico desde la preparación del dis
 
 ### Métodos de uso
 
-reSpeaker Clip admite tres métodos de uso: fijación magnética, clip de solapa y cordón para el cuello. Elige el método más adecuado para reuniones, entrevistas, formación en servicios o grabación en movimiento.
+reSpeaker Clip admite tres métodos de uso: fijación magnética, clip de solapa y cordón para el cuello. Elige el método más adecuado para reuniones, entrevistas, formación en servicio o grabación en movimiento.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_wearing_methods.jpg" alt="Métodos de uso de reSpeaker Clip" width={640} height="auto" /></p>
 
-### App SenseCraft Voice
+### Aplicación SenseCraft Voice
 
-#### Descargar la app
+#### Descargar la aplicación
 
-Escanea el siguiente código QR con tu teléfono, o abre la [página de descarga de la app SenseCraft Voice](https://sensecraft-voice-download.seeed.cc/) para descargar e instalar la app.
+Escanea el siguiente código QR con tu teléfono, o abre la [página de descarga de la aplicación SenseCraft Voice](https://sensecraft-voice-download.seeed.cc/) para descargar e instalar la aplicación.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_download_qr.png" alt="Código QR de descarga de la app SenseCraft Voice" width={360} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_download_qr.png" alt="Código QR de descarga de la aplicación SenseCraft Voice" width={360} height="auto" /></p>
 
 #### Conectar el dispositivo
 
-1. Abre la app SenseCraft Voice e inicia sesión.
+1. Abre la aplicación SenseCraft Voice e inicia sesión.
 2. Mantén pulsado el botón lateral del dispositivo para encenderlo y luego espera hasta que el dispositivo esté listo para conectarse.
-3. Toca **Add Device** en la página de inicio de la app.
+3. Toca **Add Device** en la página de inicio de la aplicación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_add_device.jpg" alt="Toca Add Device" width={320} height="auto" /></p>
 
-4. La app busca automáticamente dispositivos cercanos. Haz coincidir el identificador que se muestra en el dispositivo con el nombre del dispositivo que se muestra en la app, como `Clip EAE0`. Después de confirmar que los nombres coinciden, toca **Connect** para el dispositivo correspondiente.
+4. La aplicación busca automáticamente dispositivos cercanos. Haz coincidir el identificador que se muestra en el dispositivo con el nombre del dispositivo que se muestra en la aplicación, como `Clip EAE0`. Después de confirmar que los nombres coinciden, toca **Connect** para el dispositivo correspondiente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_scan_device.jpg" alt="Selecciona y conéctate al dispositivo reSpeaker Clip correspondiente" width={320} height="auto" /></p>
 
@@ -266,7 +266,7 @@ Después de rellenar API Key, Base URL y Model Name, toca **Test Connection**. U
 
 #### Transcripción de audio
 
-Después de subir o sincronizar una grabación, toca la grabación que quieras procesar en la lista de archivos para entrar en la página de detalles de la grabación. Si la grabación aún no tiene transcripción, la página muestra un botón **Transcribe & Summarize**. Tócalo para entrar en la página de configuración de transcripción y resumen.
+Después de subir o sincronizar una grabación, toca la grabación que quieras procesar en la lista de archivos para entrar en la página de detalles de la grabación. Si la grabación aún no tiene transcripción, la página mostrará un botón **Transcribe & Summarize**. Tócalo para entrar en la página de configuración de transcripción y resumen.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_transcribe_entry.png" alt="Open a recording and tap Transcribe & Summarize" width={320} height="auto" /></p>
 
@@ -278,13 +278,13 @@ En la página **Transcribe & Summarize**, puedes seleccionar una plantilla de re
 
 #### Recuperación de preguntas y respuestas con IA
 
-Los usuarios pueden realizar recuperación de preguntas y respuestas basada en la transcripción de la grabación, como consultar tareas, puntos en el tiempo, problemas de producto o comentarios de clientes mencionados en una reunión.
+Los usuarios pueden realizar recuperación de preguntas y respuestas basada en la transcripción de la grabación, por ejemplo, consultando tareas, puntos en el tiempo, problemas de producto o comentarios de clientes mencionados en una reunión.
 
 ### Gestión del dispositivo
 
 En la app, puedes ver y gestionar el estado del dispositivo.
 
-- Monitorización de la batería
+- Monitorización de batería
 - Comprobación de la versión de firmware
 - Actualización OTA
 - Desvinculación del dispositivo
@@ -294,10 +294,10 @@ En la app, puedes ver y gestionar el estado del dispositivo.
 
 reSpeaker Clip admite dos métodos de actualización de firmware que no requieren un programador de depuración:
 
-1. **Bluetooth OTA**: Envía el paquete de firmware al dispositivo a través de BLE. Es adecuado para actualizaciones diarias.
-2. **Flasheo en modo Recovery**: Pon el dispositivo en modo de recuperación serie USB y transfiere el paquete de firmware a través de un puerto serie USB.
+1. **Bluetooth OTA**: Envía el paquete de firmware al dispositivo mediante BLE. Es adecuado para actualizaciones diarias.
+2. **Flasheo en modo de recuperación**: Pon el dispositivo en modo de recuperación serie USB y transfiere el paquete de firmware a través de un puerto serie USB.
 
-Ambos métodos utilizan el protocolo Simple Management Protocol (SMP) de MCUboot mcumgr. Bluetooth OTA utiliza transporte BLE, mientras que el flasheo en modo Recovery utiliza transporte serie USB CDC-ACM. reSpeaker Clip no utiliza flujos nativos de USB DFU como `dfu-util`.
+Ambos métodos utilizan el protocolo Simple Management Protocol (SMP) mcumgr de MCUboot. Bluetooth OTA utiliza transporte BLE, mientras que el flasheo en modo de recuperación utiliza transporte serie USB CDC-ACM. reSpeaker Clip no utiliza flujos nativos de USB DFU como `dfu-util`.
 
 #### Tipos de archivos de firmware
 
@@ -311,11 +311,11 @@ Las versiones de firmware pueden incluir los siguientes archivos:
 | `clip-<version>-*-merged.hex` | Imagen completa que incluye MCUboot, app y núcleo de red | Requiere un depurador como J-Link |
 | `clip-<version>-*-merged_CPUNET.hex` | Solo imagen del núcleo de red | Requiere un depurador como J-Link |
 
-Para actualizaciones regulares por Bluetooth OTA, utiliza primero `-ota.zip`. Para flasheo de desarrollador mediante el modo Recovery, da preferencia a los paquetes de firmware con el sufijo `single`. Los cambios típicos del Clip SDK solo afectan a la partición de la aplicación y no requieren actualizar el núcleo de red. `-merged.hex` y `-merged_CPUNET.hex` se utilizan principalmente para desarrollo, producción o flasheo basado en depurador.
+Para actualizaciones regulares por Bluetooth OTA, utiliza primero `-ota.zip`. Para flasheo de desarrollador mediante el modo de recuperación, da preferencia a los paquetes de firmware con el sufijo `single`. Los cambios típicos del Clip SDK solo afectan a la partición de la aplicación y no requieren actualizar el núcleo de red. `-merged.hex` y `-merged_CPUNET.hex` se utilizan principalmente para desarrollo, producción o flasheo basado en depurador.
 
 #### Método 1: Bluetooth OTA
 
-Bluetooth OTA es adecuado cuando el dispositivo puede arrancar normalmente y puede ser descubierto por un teléfono a través de BLE. Se recomienda usar la app móvil nRF Connect para OTA. La herramienta BLE en nRF Connect for Desktop normalmente requiere un adaptador BLE adicional de Nordic.
+Bluetooth OTA es adecuado cuando el dispositivo puede arrancar normalmente y puede ser descubierto por un teléfono mediante BLE. Se recomienda usar la app móvil nRF Connect para OTA. La herramienta BLE en nRF Connect for Desktop normalmente requiere un adaptador BLE Nordic adicional.
 
 Flujo de trabajo básico:
 
@@ -336,16 +336,16 @@ Flujo de trabajo básico:
 9. Vuelve a conectarte al dispositivo y comprueba la versión de firmware.
 
 :::tip
-Durante la OTA, mantén el teléfono cerca del dispositivo, no envíes nRF Connect a segundo plano y asegúrate de que el dispositivo no esté conectado a la SenseCraft Voice App al mismo tiempo.
+Durante la OTA, mantén el teléfono cerca del dispositivo, no envíes nRF Connect al segundo plano y asegúrate de que el dispositivo no esté conectado a la SenseCraft Voice App al mismo tiempo.
 :::
 
-#### Método 2: Flasheo en modo Recovery
+#### Método 2: flasheo en modo de recuperación
 
-El modo Recovery es un modo de flasheo USB orientado a desarrolladores. Transfiere firmware a través de un puerto serie USB CDC-ACM utilizando el protocolo MCUboot / mcumgr SMP. Se recomienda usar el flujo de trabajo de línea de comandos `nrfutil mcu-manager`.
+El modo de recuperación es un modo de flasheo USB orientado a desarrolladores. Transfiere firmware a través de un puerto serie USB CDC-ACM utilizando el protocolo MCUboot / mcumgr SMP. Se recomienda usar el flujo de trabajo de línea de comandos `nrfutil mcu-manager`.
 
-##### Entrar en modo Recovery
+##### Entrar en modo de recuperación
 
-El modo Recovery proporciona capacidad de flasheo mediante la recuperación serie USB de MCUboot. Para entrar en él:
+El modo de recuperación proporciona capacidad de flasheo mediante la recuperación serie USB de MCUboot. Para entrar en él:
 
 1. Confirma que el cable USB admite transferencia de datos.
 2. Conecta el cable USB a la base de carga.
@@ -368,14 +368,14 @@ Traits          serialPorts, usb
 Para el flasheo, prueba primero el puerto serie correspondiente a `vcom: 1`, como `COM11` en el ejemplo anterior. Si la conexión o la carga fallan, prueba con el otro puerto serie.
 
 :::note
-El modo Recovery requiere detección USB/VBUS. Antes de entrar en este modo, asegúrate de que los contactos de la base de carga estén firmemente conectados. Si la pantalla no muestra un icono de USB / carga, es posible que el dispositivo esté físicamente colocado en la base pero no esté realmente conectado por USB.
+El modo de recuperación requiere detección USB/VBUS. Antes de entrar en este modo, asegúrate de que los contactos de la base de carga estén firmemente conectados. Si la pantalla no muestra un icono de USB / carga, es posible que el dispositivo esté físicamente colocado en la base pero no esté realmente conectado por USB.
 :::
 
 ##### Flashear con nrfutil mcu-manager
 
 nrfutil es la herramienta de línea de comandos de Nordic. Usa la versión 8.x o posterior e instala el plugin `mcu-manager`.
 
-Las versiones más recientes de nrfutil utilizan un mecanismo de subcomandos mediante plugins. Para el primer uso, instala los subcomandos `device` y `mcu-manager`:
+Las versiones más recientes de nrfutil utilizan un mecanismo de plugins de subcomandos. Para el primer uso, instala los subcomandos `device` y `mcu-manager`:
 
 ```bash
 nrfutil install device
@@ -414,13 +414,13 @@ nrfutil mcu-manager serial image-upload \
     --serial-port COMx
 ```
 
-Después de subir, reinicia el dispositivo para aplicar el nuevo firmware:
+Después de la carga, reinicia el dispositivo para aplicar el nuevo firmware:
 
 ```bash
 nrfutil mcu-manager serial reset --serial-port COMx
 ```
 
-Sustituye `COMx` por el puerto serie real que se muestra en el Administrador de dispositivos de Windows o en `nrfutil device list`. Si el dispositivo muestra varios puertos `vcom`, prueba primero el puerto correspondiente a `vcom: 1`. Si la conexión o la carga falla, cambia al otro puerto y vuelve a intentarlo. En macOS / Linux, usa `/dev/cu.usbmodem*` o `/dev/ttyACM0`.
+Sustituye `COMx` por el puerto serie real que se muestra en el Administrador de dispositivos de Windows o en `nrfutil device list`. Si el dispositivo muestra varios puertos `vcom`, prueba primero el puerto correspondiente a `vcom: 1`. Si la conexión o la carga falla, cambia al otro puerto e inténtalo de nuevo. En macOS / Linux, usa `/dev/cu.usbmodem*` o `/dev/ttyACM0`.
 
 :::tip
 Si el progreso de flasheo se queda en 100% y la herramienta no sale automáticamente, no desconectes y vuelvas a conectar el dispositivo repetidamente. Ejecuta:
@@ -434,7 +434,7 @@ Luego comprueba la versión de firmware después de que el dispositivo se reinic
 
 #### Más métodos de actualización de firmware
 
-Para métodos de flasheo basados en depurador o más métodos de resolución de problemas en modo Recovery, consulta la Guía avanzada de actualización de firmware de reSpeaker Clip (próximamente).
+Para métodos de flasheo basados en depurador o más métodos de solución de problemas en modo Recovery, consulta la Guía avanzada de actualización de firmware de reSpeaker Clip (próximamente).
 
 ## Guía de desarrollo
 
@@ -456,13 +456,13 @@ Desde la perspectiva del desarrollo, el firmware se divide principalmente en las
 - **Capa de abstracción de hardware**: Encapsula el micrófono PDM, SD FAT32, BLE, Wi-Fi, PMIC y otras capacidades de hardware.
 - **Kernel Zephyr RTOS**: Proporciona primitivas de kernel como `k_msgq`, `k_sem`, `k_mutex`, `k_thread` y `k_mem_slab`.
 
-Un flujo de trabajo de desarrollo típico es: configurar el entorno Zephyr / nRF Connect SDK, obtener el proyecto de firmware de reSpeaker Clip, confirmar la placa objetivo y los archivos de configuración, compilar y flashear el firmware, comprobar los registros serie y, por último, verificar la grabación, la sincronización de archivos y la actualización de firmware a través de la SenseCraft Voice App o de los protocolos BLE / Wi-Fi.
+Un flujo de trabajo de desarrollo típico es: configurar el entorno Zephyr / nRF Connect SDK, obtener el proyecto de firmware de reSpeaker Clip, confirmar la tarjeta objetivo y los archivos de configuración, compilar y flashear el firmware, comprobar los registros serie y, por último, verificar la grabación, la sincronización de archivos y la actualización de firmware a través de la app SenseCraft Voice o de los protocolos BLE / Wi-Fi.
 
 Para más detalles sobre la arquitectura del firmware, la configuración del entorno, la compilación, el flasheo y el desarrollo secundario, consulta la Guía de desarrollo de firmware de reSpeaker Clip (próximamente).
 
-### SDK de aplicaciones
+### SDK de aplicación
 
-El SDK de aplicaciones se puede utilizar para la integración de aplicaciones móviles o aplicaciones del lado host.
+El SDK de aplicación se puede utilizar para la integración de aplicaciones móviles o aplicaciones del lado host.
 
 | Plataforma | Lenguaje | Estado |
 | --- | --- | --- |
@@ -472,11 +472,11 @@ El SDK de aplicaciones se puede utilizar para la integración de aplicaciones m�
 
 ## Aplicaciones
 
-reSpeaker Clip se puede utilizar en escenarios de negocio To B e integrarse con cadenas de herramientas empresariales, formando un flujo de trabajo completo desde la captura y transcripción de audio hasta la resumización inteligente y el archivado en sistemas de negocio.
+reSpeaker Clip se puede utilizar en escenarios de negocio To B e integrarse con cadenas de herramientas empresariales, formando un flujo de trabajo completo desde la captura y transcripción de audio hasta el resumen inteligente y el archivado en sistemas de negocio.
 
 ### Formación en servicios de retail
 
-El personal de ventas y servicio de retail puede llevar reSpeaker Clip para grabar conversaciones con clientes. Después de la conversación, la IA puede generar resúmenes de los requisitos del cliente y listas de tareas accionables a partir de la grabación, ayudando a los equipos a mejorar la calidad del servicio, la eficiencia de seguimiento y las tasas de conversión.
+El personal de ventas y servicio de retail puede llevar reSpeaker Clip para grabar conversaciones con clientes. Después de la conversación, la IA puede generar resúmenes de los requisitos del cliente y listas de tareas accionables a partir de la grabación, ayudando a los equipos a mejorar la calidad del servicio, la eficiencia del seguimiento y las tasas de conversión.
 
 ### Actas de reuniones
 
@@ -486,7 +486,7 @@ En escenarios de reuniones, la captación omnidireccional de 360 grados de reSpe
 
 Para entrevistas de usuarios, estudios de mercado y visitas a clientes, reSpeaker Clip ayuda a capturar datos de voz en bruto y a organizar las grabaciones en materiales de texto que se pueden buscar y revisar.
 
-### Personalización para empresas
+### Personalización empresarial
 
 Las empresas pueden utilizar el SDK abierto para integrar reSpeaker Clip con sistemas internos de oficina, CRM, bases de conocimiento, herramientas de gestión de proyectos o LLM desplegados de forma privada. Las organizaciones con requisitos de cumplimiento de datos también pueden crear asistentes de voz con IA dedicados y flujos de trabajo privados de analítica de voz.
 
@@ -496,33 +496,33 @@ Las empresas pueden utilizar el SDK abierto para integrar reSpeaker Clip con sis
 
 Si el dispositivo no se puede encender o cargar, comprueba lo siguiente:
 
-- Confirma que el dispositivo está colocado correctamente en la base de carga y que los contactos magnéticos no están desalineados.
+- Confirma que el dispositivo está correctamente colocado en la base de carga y que los contactos magnéticos no están desalineados.
 - Comprueba si el cable USB-C y el adaptador de corriente funcionan correctamente.
 - Limpia los contactos magnéticos de carga en la parte inferior del dispositivo y en la base de carga para evitar que el polvo u objetos extraños afecten al contacto.
 - Carga durante 10 minutos y luego mantén pulsado el botón de encendido de nuevo.
 - Si el dispositivo sigue sin responder, registra el estado del dispositivo y ponte en contacto con el soporte técnico.
 
-### Error de emparejamiento Bluetooth
+### Fallo en el emparejamiento Bluetooth
 
 Si el teléfono no puede emparejarse con reSpeaker Clip, prueba lo siguiente:
 
 - Confirma que el dispositivo está encendido y no está conectado a otro teléfono.
-- Activa los permisos de Bluetooth en tu teléfono y permite que la SenseCraft Voice App use Bluetooth.
+- Activa los permisos de Bluetooth en tu teléfono y permite que la app SenseCraft Voice use Bluetooth.
 - Acerca el teléfono al dispositivo y vuelve a escanear.
 - Elimina los registros de emparejamiento antiguos de reSpeaker Clip de la lista de Bluetooth del sistema del teléfono y vuelve a emparejar.
-- Reinicia el dispositivo y la app y vuelve a intentarlo.
+- Reinicia el dispositivo y la app, y vuelve a intentarlo.
 
 ### Transferencia de archivos de grabación interrumpida
 
 Si se interrumpe la transferencia de un archivo de grabación, comprueba lo siguiente:
 
-- Mantén el teléfono y el dispositivo cerca el uno del otro.
+- Mantén el teléfono y el dispositivo cerca uno del otro.
 - Confirma que el dispositivo tiene suficiente batería.
 - Comprueba si la conectividad Wi-Fi o BLE es estable.
 - Mantén la app ejecutándose en primer plano.
 - Vuelve a conectar el dispositivo y transfiere el archivo de nuevo. Para archivos grandes, utiliza un entorno Wi-Fi estable.
 
-### Error en la provisión de Wi-Fi
+### Fallo en la provisión de Wi-Fi
 
 Si el dispositivo no puede completar la provisión de Wi-Fi, confirma lo siguiente:
 
@@ -534,7 +534,7 @@ Si el dispositivo no puede completar la provisión de Wi-Fi, confirma lo siguien
 
 ### La app no puede encontrar el dispositivo
 
-Si la SenseCraft Voice App no puede encontrar el dispositivo, prueba lo siguiente:
+Si la app SenseCraft Voice no puede encontrar el dispositivo, prueba lo siguiente:
 
 - Confirma que el dispositivo está encendido y listo para conectarse.
 - Confirma que se han concedido a la app los permisos de Bluetooth, ubicación o dispositivos cercanos.
@@ -542,12 +542,12 @@ Si la SenseCraft Voice App no puede encontrar el dispositivo, prueba lo siguient
 - Cierra y vuelve a abrir la app.
 - Reinicia reSpeaker Clip y añade el dispositivo de nuevo.
 
-### Error en la actualización de firmware
+### Fallo en la actualización de firmware
 
-Si la actualización OTA o de firmware falla, prueba lo siguiente:
+Si la OTA o la actualización de firmware falla, prueba lo siguiente:
 
 - Asegúrate de que el dispositivo tiene suficiente batería y no lo apagues durante la actualización.
-- Mantén estables la conexión entre el teléfono, el dispositivo y la red.
+- Mantén estables el teléfono, el dispositivo y la conexión de red.
 - No cierres la app ni cambies de red durante la actualización.
 - Si el dispositivo aún puede arrancar con normalidad después de la actualización fallida, abre la app e inicia la actualización de nuevo.
 - Si el dispositivo no puede arrancar con normalidad, sigue la documentación posterior sobre modo de recuperación o flasheo de firmware y ponte en contacto con el soporte técnico.
@@ -557,7 +557,7 @@ Si la actualización OTA o de firmware falla, prueba lo siguiente:
 | Recurso | Enlace |
 | --- | --- |
 | Página del producto | [reSpeaker Clip Wearable AI Recorder](https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html) |
-| Descarga de SenseCraft Voice App | [Página de descarga](https://sensecraft-voice-download.seeed.cc/) |
+| Descarga de la app SenseCraft Voice | [Página de descarga](https://sensecraft-voice-download.seeed.cc/) |
 | Descarga de firmware | Próximamente |
 | Repositorio del SDK | Próximamente |
 | Manual de usuario | <a href="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_user_manual.pdf" target="_blank" rel="noopener noreferrer">Manual de usuario de reSpeaker Clip</a> |
