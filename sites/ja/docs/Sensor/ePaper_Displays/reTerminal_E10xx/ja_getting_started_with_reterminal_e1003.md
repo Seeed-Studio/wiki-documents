@@ -511,7 +511,7 @@ reTerminal E1003 には 6 ピンの拡張ヘッダ（J2）が搭載されてお�
 			<td>GPIO20</td>
 			<td>GPIO/I2C SCL</td>
 			<td>GPIO または I2C クロック信号</td>
-		</tr]
+		</tr>
 		<tr>
 			<td>6</td>
 			<td>ESP_IO19/I2C0_SDA</td>
