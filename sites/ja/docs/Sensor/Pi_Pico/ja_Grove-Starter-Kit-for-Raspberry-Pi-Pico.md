@@ -405,7 +405,7 @@ class DHT(object):
 
 **ステップ 2.** Grove 16x2 LCD (White on Blue) を Grove Shield の I2C1 ポートに接続します。
 
-**ステップ 3.** Grove Temperature & Humidity Sensor V2.0 (DHT20) を Grove Shield の D18 ポートに接続します。
+**ステップ 3.** Grove Temperature & Humidity Sensor V2.0 (DHT20) を Grove Shield の I2C0 ポートに接続します。
 
 **ステップ 4.** Grove Shield を Pi Pico に挿し込みます。
 
@@ -450,7 +450,7 @@ while True:
    - [DHT20.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht/DHT20.py)
    - [lcd1602.py](https://files.seeedstudio.com/wiki/Grove-16x2_LCD--White_on_Blue/lcd1602.py)
 
-3. Thonny IDE で **DHT20.py** を開き、`File -> Save As -> MicroPython device` をクリックして、デバイス上に **DHT20.py** という名前で保存します。
+3. Thonny IDE で **DHT20.py** を開き、`File -> Save As -> MicroPython device` をクリックして、デバイス上に **dht20.py** という名前で保存します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/saveas.png" style={{width:750, height:'auto'}}/></div>
 
