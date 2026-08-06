@@ -176,25 +176,25 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 ## **Hardware Overview**
 
 <Tabs>
-<TabItem value="XIAO SMAD21" label="XIAO SMAD21" default>
+<TabItem value="XIAO SAMD21" label="XIAO SAMD21" default>
 
-### XIAO SMAD21 Front
+### XIAO SAMD21 Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_SAMD21_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### XIAO SMAD21 Back
+### XIAO SAMD21 Back
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_SAMD21_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 </TabItem>
 
-<TabItem value="XIAO SMAD21 Plus" label="XIAO SMAD21 Plus">
+<TabItem value="XIAO SAMD21 Plus" label="XIAO SAMD21 Plus">
 
-### XIAO SMAD21 Plus Front
+### XIAO SAMD21 Plus Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-SAMD21-Plus-Front.png" style={{width:1000, height:'auto'}}/></div>
 
-### XIAO SMAD21 Plus Back
+### XIAO SAMD21 Plus Back
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-SAMD21-Plus-Back.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -411,7 +411,7 @@ On the XIAO SAMD21 Plus, the L (LED) pin has been removed. It is replaced by the
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/gst_1.png" alt="pir" width={800} height="auto" /></p>
 
-- 安装 Adafruit_NeoPixel 库，更新到最新版本
+- Install the Adafruit_NeoPixel library and update it to the latest version.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/gst_2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -491,9 +491,6 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 ## Pin Multiplexing
 
 We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
-
-:::tip
-:::
 
 ### Digital Input and Output
 
@@ -706,11 +703,11 @@ void loop()
 
 :::note
 
-Only the XIAO SMAD21 Plus features a BAT battery connector on its back side, please take note.
+Only the XIAO SAMD21 Plus features a BAT battery connector on its back side, please take note.
 
 :::
 
-The XIAO SMAD21 Plus is capable of using a 3.7V lithium battery as the power supply input. You can refer to the following diagram for the wiring method.
+The XIAO SAMD21 Plus is capable of using a 3.7V lithium battery as the power supply input. You can refer to the following diagram for the wiring method.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/battery.png" style={{width:800, height:'auto'}}/></div>
 <br/>

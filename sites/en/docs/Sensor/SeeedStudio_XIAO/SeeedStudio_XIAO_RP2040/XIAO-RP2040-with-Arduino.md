@@ -38,7 +38,7 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg" /></div>
 
-- Step 2. If the **RPI-RP2** disk is shown on the PC and the Power LED on the Seeed Studio XIAO RP2040 is turned on, the connnection is complete.
+- Step 2. If the **RPI-RP2** disk is shown on the PC and the Power LED on the Seeed Studio XIAO RP2040 is turned on, the connection is complete.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
@@ -63,11 +63,11 @@ https://github.com/earlephilhower/arduino-pico/releases/download/global/package_
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/5.png"/></div>
 
-Navigate to **Tools-> Board-> Boards Manager...**, type the keyword **arduino-pico** in the searching blank. Select the lastest version of **Raspberry Pi Pico/RP2040/RP2350** and install it.
+Navigate to **Tools-> Board-> Boards Manager...**, type the keyword **arduino-pico** in the searching blank. Select the latest version of **Raspberry Pi Pico/RP2040/RP2350** and install it.
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/arduino_2.png"/></div>
 
-- **Step 4.** Select your board and port.如果要显示出串口，一般需要您进入 BOOT 模式[Hardware Setup](#hardware-setup)
+- **Step 4.** Select your board and port. If the serial port is not shown, enter BOOT mode first. See [Hardware Setup](#hardware-setup).
 
 - **Step 5.** Open the Blink example by navigating **"File --> Examples --->01.Basics --> Blink"**
 
@@ -266,7 +266,7 @@ First, we need to add a third-party library.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
-Type the keyword **Adafruit_NeoPixel** library in Ardunio library Manager and install the lastest version.
+Type the keyword **Adafruit_NeoPixel** library in Arduino Library Manager and install the latest version.
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/boardurl6.png" /></div>
 
@@ -347,7 +347,7 @@ We are going use PIN 5 as the SCL pin and PIN 4 as the SDA pin.
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
-Type the keyword "U8G2" library in Ardunio library Manager and install the lastest version.
+Type the keyword "U8G2" library in Arduino Library Manager and install the latest version.
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/boardurl7.png" /></div>
 
@@ -400,11 +400,11 @@ We are going use PIN 8 as the SCK pin, PIN 9 as the MISO pin and PIN10 as the MO
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
-Type the keyword "Adafruit_GFX" library in Ardunio library Manager and install the lastest version.
+Type the keyword "Adafruit_GFX" library in Arduino Library Manager and install the latest version.
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/board10.png" /></div>
 
-Type the keyword "Adafruit_SSD1306" library in Ardunio library Manager and install the lastest version.
+Type the keyword "Adafruit_SSD1306" library in Arduino Library Manager and install the latest version.
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl11.png" /></div>
 

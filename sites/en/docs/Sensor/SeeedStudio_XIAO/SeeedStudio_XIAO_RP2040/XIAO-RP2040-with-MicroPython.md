@@ -43,7 +43,7 @@ First, we are going to connect the Seeed Studio XIAO RP2040 to the computer and 
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png" /></div>
 
-- **Step 4**. Chose the **Interpreter** interface and select the device as **MicroPython(Raspberry Pi Pico)** and the port as **Try to detect prot automatically**
+- **Step 4**. Chose the **Interpreter** interface and select the device as **MicroPython(Raspberry Pi Pico)** and the port as **Try to detect port automatically**
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_9.png" /></div>
 
@@ -92,7 +92,7 @@ If it works well, you will see the LED light turn on and off once a second. And 
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_13.png" /></div>
 
-The connection is commplete and now we can proceed to the other projects.
+The connection is complete and now we can proceed to the other projects.
 
 ### Connect Seeed XIAO Studio XIAO RP2040 Plus
 
