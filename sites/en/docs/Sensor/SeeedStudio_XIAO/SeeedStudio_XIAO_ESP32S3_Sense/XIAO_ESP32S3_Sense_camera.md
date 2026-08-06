@@ -447,6 +447,12 @@ Here is the Arduino program for this project.
 #define CAMERA_MODEL_XIAO_ESP32S3 // Has PSRAM
 
 #include "camera_pins.h"
+#include "ESP32_OV5640_AF.h"   // OV5640 自动对焦库 (github.com/0015/ESP32-OV5640-AF)
+
+OV5640 ov5640 = OV5640();
+
+#define OV5640_AF_FOCUS_FRAMESIZE FRAMESIZE_SXGA // Wiki: AF 对焦需 >=1280x1024
+#define OV5640_FOCUS_TIMEOUT_MS  8000
 
 unsigned long lastCaptureTime = 0; // Last shooting time
 int imageCount = 1;                // File Counter
@@ -472,7 +478,7 @@ void photo_save(const char * fileName) {
 
 // SD card write file
 void writeFile(fs::FS &fs, const char * path, uint8_t * data, size_t len){
-    Serial.printf("Writing file: %s\n", path);
+    Serial.printf("Writing file: %s\r\n", path);
 
     File file = fs.open(path, FILE_WRITE);
     if(!file){
@@ -485,6 +491,23 @@ void writeFile(fs::FS &fs, const char * path, uint8_t * data, size_t len){
         Serial.println("Write failed");
     }
     file.close();
+}
+
+// 等待 OV5640 连续自动对焦收敛 (FW_STATUS == 0x10 FOCUSED)
+bool waitForOv5640Focus() {
+  const uint32_t started = millis();
+  uint8_t status = 0;
+  while (millis() - started < OV5640_FOCUS_TIMEOUT_MS) {
+    status = ov5640.getFWStatus();
+    if (status == 0x10) {
+      Serial.printf("OV5640 focus settled: FW_STATUS=0x%02X\n", status);
+      return true;
+    }
+    delay(100);
+  }
+  Serial.printf("ERROR: OV5640 focus not settled within %u ms; last FW_STATUS=0x%02X\n",
+                OV5640_FOCUS_TIMEOUT_MS, status);
+  return false;
 }
 
 void setup() {
@@ -547,6 +570,32 @@ void setup() {
   
   camera_sign = true; // Camera initialization check passes
 
+  // --- OV5640 自动对焦初始化（出厂固件缺失的关键步骤，否则镜头默认失焦） ---
+  sensor_t *s = esp_camera_sensor_get();
+  if (s && s->id.PID == OV5640_PID) {
+    Serial.println("OV5640 detected, initializing auto-focus...");
+    // 切到 SXGA 做对焦（AF 固件需要 >=1280x1024 才能评估对比度）
+    if (s->set_framesize(s, OV5640_AF_FOCUS_FRAMESIZE) != 0) {
+      Serial.println("WARN: cannot set SXGA for AF focus, captures will be out of focus");
+    } else if (!ov5640.start(s)) {
+      Serial.println("WARN: OV5640 CHIPID check failed, AF skipped");
+      s->set_framesize(s, config.frame_size); // 恢复拍摄分辨率
+    } else {
+      int r1 = ov5640.focusInit();                       // 灌入对焦固件，0=成功
+      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;  // 启用连续自动对焦
+      Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
+      if (r1 == 0 && r2 == 0 && waitForOv5640Focus()) {
+        Serial.println("OV5640 AF ready.");
+      } else {
+        Serial.println("ERROR: OV5640 AF setup failed; captures will be out of focus.");
+      }
+      // 恢复到拍摄分辨率
+      if (s->set_framesize(s, config.frame_size) != 0) {
+        Serial.println("WARN: cannot restore capture framesize");
+      }
+    }
+  }
+
   // Initialize SD card
   if(!SD.begin(21)){
     Serial.println("Card Mount Failed");
@@ -587,7 +636,7 @@ void loop() {
       char filename[32];
       sprintf(filename, "/image%d.jpg", imageCount);
       photo_save(filename);
-      Serial.printf("Saved picture：%s\n", filename);
+      Serial.printf("Saved picture: %s\r\n", filename);
       Serial.println("Photos will begin in one minute, please be ready.");
       imageCount++;
       lastCaptureTime = now;
@@ -717,7 +766,7 @@ We recommend that you remove the camera module first to avoid scratching the cam
 You can find the complete program code and the required dependency files below this link.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/round_display_take_picture" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/round_display_take_picture_fix" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -725,16 +774,52 @@ You can find the complete program code and the required dependency files below t
 Here is the Arduino program for this project.
 
 ```c
+/*
+ * This code was adapted from the original, developed by Seeed Studio:
+ * https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#project-i-making-a-handheld-camera
+ *
+ * Important changes:
+ *  - It is not necessary to to cut off J3 on the XIAO ESP32S3 Sense expansion board.
+ *  It is possible to use the XIAO's SD Card Reader. For that you need use SD_CS_PIN as 21.
+ *
+ * - The camera buffer data should be captured as RGB565 (raw image) with a 240x240 frame size
+ * to be displayed on the round display. This raw image should be converted to jpeg before save
+ * in the SD card. This can be done with the line:
+ * esp_err_t ret = frame2jpg(fb, 12, &out_buf, &out_len);
+ *
+ * - The XCLK_FREQ_HZ should be reduced from 20KHz to 10KHz in order to prevent
+ * the message "no EV-VSYNC-OVF message" that appears on Serial Monitor (probably due the time
+ * added for JPEG conversion.
+ *
+ * Adapted by MRovai @02June23
+ *
+ * 通用 OV5640 自动对焦补丁（仅对 OV5640 生效，定焦模组 OV3660/NT99141 等自动跳过）：
+ *  - esp_camera_init 后判 PID == OV5640_PID 才做 focusInit / autoFocusMode
+ *  - RGB565 模式下不切 SXGA（会撑爆 fb 缓冲），依赖 OV5640 内部全尺寸做对焦评估
+*/
+
 #include <Arduino.h>
 #include <TFT_eSPI.h>
 #include <SPI.h>
 #include "esp_camera.h"
+#include "ESP32_OV5640_AF.h"   // OV5640 自动对焦库 (github.com/0015/ESP32-OV5640-AF)，仅 OV5640 生效
 #include "FS.h"
 #include "SD.h"
-#include "SPI.h"
 
 #define CAMERA_MODEL_XIAO_ESP32S3 // Has PSRAM
 #define TOUCH_INT D7
+
+/*
+ * NOTE: Since the XIAO EPS32S3 Sense is designed with three pull-up resistors
+ * R4~R6 connected to the SD card slot, and the round display also has
+ * pull-up resistors, the Round Display SD card cannot be read when both
+ * are used at the same time. To solve this problem, we need to cut off
+ * J3 on the XIAO ESP32S3 Sense expansion board.
+ * https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#preliminary-preparation
+ */
+
+#define SD_CS_PIN 21 // ESP32S3 Sense SD Card Reader
+//#define SD_CS_PIN D2 // XIAO Round Display SD Card Reader
 
 #include "camera_pins.h"
 
@@ -748,6 +833,27 @@ bool camera_sign = false;          // Check camera status
 bool sd_sign = false;              // Check sd status
 
 TFT_eSPI tft = TFT_eSPI();
+
+// --- OV5640 AF（仅 OV5640 模组生效） ---
+OV5640 ov5640 = OV5640();
+#define OV5640_FOCUS_TIMEOUT_MS 8000
+
+// 等待 OV5640 连续自动对焦收敛 (FW_STATUS == 0x10 FOCUSED)
+bool waitForOv5640Focus() {
+  const uint32_t started = millis();
+  uint8_t status = 0;
+  while (millis() - started < OV5640_FOCUS_TIMEOUT_MS) {
+    status = ov5640.getFWStatus();
+    if (status == 0x10) {
+      Serial.printf("OV5640 focus settled: FW_STATUS=0x%02X\n", status);
+      return true;
+    }
+    delay(100);
+  }
+  Serial.printf("WARN: OV5640 focus not settled within %u ms; last FW_STATUS=0x%02X\n",
+                OV5640_FOCUS_TIMEOUT_MS, status);
+  return false;
+}
 
 // SD card write file
 void writeFile(fs::FS &fs, const char * path, uint8_t * data, size_t len){
@@ -777,9 +883,10 @@ bool display_is_pressed(void)
 }
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(115200);
-//  while(!Serial);
+  delay(300);
+  Serial.println();
+  Serial.println("==== round_display_take_picture_fix ====");
 
   // Camera pinout
   camera_config_t config;
@@ -801,35 +908,15 @@ void setup() {
   config.pin_sscb_scl = SIOC_GPIO_NUM;
   config.pin_pwdn = PWDN_GPIO_NUM;
   config.pin_reset = RESET_GPIO_NUM;
-  config.xclk_freq_hz = 20000000;
-//  config.frame_size = FRAMESIZE_UXGA;
+  config.xclk_freq_hz = 10000000; // Reduced XCLK_FREQ_HZ from 20KHz to 10KHz (no EV-VSYNC-OVF message)
   config.frame_size = FRAMESIZE_240X240;
-//  config.pixel_format = PIXFORMAT_JPEG; // for streaming
   config.pixel_format = PIXFORMAT_RGB565;
   config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
-  config.fb_location = CAMERA_FB_IN_PSRAM;
+  // RGB565 240×240 用内部 DRAM 单缓冲：TFT_eSPI 的 SPI DMA 能直接读 DRAM，
+  // 读 PSRAM 会导致 pushColors 崩（见 Setup66 + PSRAM 组合的问题记录）
+  config.fb_location = CAMERA_FB_IN_DRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
-  
-  // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
-  //                      for larger pre-allocated frame buffer.
-  if(config.pixel_format == PIXFORMAT_JPEG){
-    if(psramFound()){
-      config.jpeg_quality = 10;
-      config.fb_count = 2;
-      config.grab_mode = CAMERA_GRAB_LATEST;
-    } else {
-      // Limit the frame size when PSRAM is not available
-      config.frame_size = FRAMESIZE_SVGA;
-      config.fb_location = CAMERA_FB_IN_DRAM;
-    }
-  } else {
-    // Best option for face detection/recognition
-    config.frame_size = FRAMESIZE_240X240;
-#if CONFIG_IDF_TARGET_ESP32S3
-    config.fb_count = 2;
-#endif
-  }
 
   // camera init
   esp_err_t err = esp_camera_init(&config);
@@ -840,13 +927,39 @@ void setup() {
   Serial.println("Camera ready");
   camera_sign = true; // Camera initialization check passes
 
+  // --- OV5640 自动对焦初始化（仅 OV5640，定焦模组跳过） ---
+  // 出厂固件缺失的关键步骤：esp_camera_init 不做 AF，OV5640 默认失焦。
+  // RGB565 模式不切 SXGA（会撑爆 fb 缓冲），依赖 OV5640 内部全尺寸做对焦评估。
+  sensor_t *s = esp_camera_sensor_get();
+  if (s && s->id.PID == OV5640_PID) {
+    Serial.println("OV5640 detected, initializing auto-focus...");
+    if (!ov5640.start(s)) {
+      Serial.println("WARN: OV5640 CHIPID check failed, AF skipped");
+    } else {
+      int r1 = ov5640.focusInit();                       // 灌入对焦固件，0=成功
+      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;  // 启用连续自动对焦
+      Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
+      if (r1 == 0 && r2 == 0) {
+        waitForOv5640Focus();
+      } else {
+        Serial.println("ERROR: OV5640 AF setup failed; captures will be out of focus.");
+      }
+    }
+  } else {
+    Serial.printf("PID=0x%04X (not OV5640), AF skipped - fixed-focus module works as-is.\n",
+                  s ? s->id.PID : 0);
+  }
+
   // Display initialization
   tft.init();
+  pinMode(TFT_BL, OUTPUT);
+  digitalWrite(TFT_BL, HIGH);  // 开背光
   tft.setRotation(1);
   tft.fillScreen(TFT_WHITE);
 
-  // Initialize SD card
-  if(!SD.begin(D2)){
+  // Initialize SD card - Card Reader under the camera (21)
+  // Change to D2 for using Display Card Reader
+  if(!SD.begin(SD_CS_PIN)){
     Serial.println("Card Mount Failed");
     return;
   }
@@ -870,7 +983,6 @@ void setup() {
   }
 
   sd_sign = true; // sd initialization check passes
-
 }
 
 void loop() {
@@ -882,25 +994,35 @@ void loop() {
       Serial.println("Failed to get camera frame buffer");
       return;
     }
-    
+
     if(display_is_pressed()){
       Serial.println("display is touched");
       char filename[32];
       sprintf(filename, "/image%d.jpg", imageCount);
-      // Save photo to file
-      writeFile(SD, filename, fb->buf, fb->len);
-      Serial.printf("Saved picture：%s\n", filename);
-      imageCount++;
+
+      // RGB565 -> JPEG, then save to SD
+      size_t out_len = 0;
+      uint8_t* out_buf = NULL;
+      esp_err_t ret = frame2jpg(fb, 12, &out_buf, &out_len);
+      if (ret != ESP_OK) {
+        Serial.println("JPEG conversion failed");
+      } else {
+        // Save photo to file
+        writeFile(SD, filename, out_buf, out_len);
+        Serial.printf("Saved picture: %s\n", filename);
+        imageCount++;
+        free(out_buf);
+      }
     }
-  
-    // Decode JPEG images
+
+    // Draw image on the round display
     uint8_t* buf = fb->buf;
     uint32_t len = fb->len;
     tft.startWrite();
     tft.setAddrWindow(0, 0, camera_width, camera_height);
     tft.pushColors(buf, len);
     tft.endWrite();
-      
+
     // Release image buffer
     esp_camera_fb_return(fb);
 
@@ -1178,24 +1300,51 @@ Here is the Arduino program for this project.
 
 ```cpp
 #include "esp_camera.h"
+#include "ESP32_OV5640_AF.h"   // OV5640 自动对焦库 (仅 OV5640 生效)
 #include <WiFi.h>
 
-#define CAMERA_MODEL_XIAO_ESP32S3 // Has PSRAM
+//
+// WARNING!!! PSRAM IC required for UXGA resolution and high JPEG quality
+//            Ensure ESP32 Wrover Module or other board with PSRAM is selected
+//            Partial images will be transmitted if image exceeds buffer size
+//
+//            You must select partition scheme from the board menu that has at least 3MB APP space.
+//            Face Recognition is DISABLED for ESP32 and ESP32-S2, because it takes up from 15
+//            seconds to process single frame. Face Detection is ENABLED if PSRAM is enabled as well
 
+// ===================
+// Select camera model
+// ===================
+#define CAMERA_MODEL_XIAO_ESP32S3 // Has PSRAM
 #include "camera_pins.h"
 
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char* ssid = "**********";
-const char* password = "**********";
+const char *ssid = "**********";
+const char *password = "**********";
 
 void startCameraServer();
 void setupLedFlash(int pin);
 
+// --- OV5640 AF（仅 OV5640 模组生效，定焦模组 OV3660/NT99141 等自动跳过） ---
+OV5640 ov5640 = OV5640();
+#define OV5640_AF_FOCUS_FRAMESIZE FRAMESIZE_SXGA  // AF 对焦评估需 >=1280x1024
+#define OV5640_FOCUS_TIMEOUT_MS 8000
+bool waitForOv5640Focus() {
+  const uint32_t started = millis();
+  uint8_t status = 0;
+  while (millis() - started < OV5640_FOCUS_TIMEOUT_MS) {
+    status = ov5640.getFWStatus();
+    if (status == 0x10) { Serial.printf("OV5640 focus settled: FW_STATUS=0x%02X\n", status); return true; }
+    delay(100);
+  }
+  Serial.printf("WARN: OV5640 focus not settled; last FW_STATUS=0x%02X\n", status);
+  return false;
+}
+
 void setup() {
   Serial.begin(115200);
-  while(!Serial);
   Serial.setDebugOutput(true);
   Serial.println();
 
@@ -1214,23 +1363,23 @@ void setup() {
   config.pin_pclk = PCLK_GPIO_NUM;
   config.pin_vsync = VSYNC_GPIO_NUM;
   config.pin_href = HREF_GPIO_NUM;
-  config.pin_sscb_sda = SIOD_GPIO_NUM;
-  config.pin_sscb_scl = SIOC_GPIO_NUM;
+  config.pin_sccb_sda = SIOD_GPIO_NUM;
+  config.pin_sccb_scl = SIOC_GPIO_NUM;
   config.pin_pwdn = PWDN_GPIO_NUM;
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
   config.frame_size = FRAMESIZE_UXGA;
-  config.pixel_format = PIXFORMAT_JPEG; // for streaming
+  config.pixel_format = PIXFORMAT_JPEG;  // for streaming
   //config.pixel_format = PIXFORMAT_RGB565; // for face detection/recognition
   config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
-  
+
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
-  if(config.pixel_format == PIXFORMAT_JPEG){
-    if(psramFound()){
+  if (config.pixel_format == PIXFORMAT_JPEG) {
+    if (psramFound()) {
       config.jpeg_quality = 10;
       config.fb_count = 2;
       config.grab_mode = CAMERA_GRAB_LATEST;
@@ -1247,6 +1396,11 @@ void setup() {
 #endif
   }
 
+#if defined(CAMERA_MODEL_ESP_EYE)
+  pinMode(13, INPUT_PULLUP);
+  pinMode(14, INPUT_PULLUP);
+#endif
+
   // camera init
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
@@ -1254,17 +1408,40 @@ void setup() {
     return;
   }
 
-  sensor_t * s = esp_camera_sensor_get();
+  sensor_t *s = esp_camera_sensor_get();
+  // --- OV5640 自动对焦初始化（仅 OV5640，定焦模组跳过） ---
+  if (s && s->id.PID == OV5640_PID) {
+    Serial.println("OV5640 detected, initializing auto-focus...");
+    if (s->set_framesize(s, OV5640_AF_FOCUS_FRAMESIZE) == 0 && ov5640.start(s)) {
+      int r1 = ov5640.focusInit();
+      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;
+      Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
+      if (r1 == 0 && r2 == 0) waitForOv5640Focus();
+      s->set_framesize(s, config.frame_size);  // 恢复
+    } else {
+      Serial.println("WARN: OV5640 AF setup failed, skipped");
+      s->set_framesize(s, config.frame_size);
+    }
+  }
   // initial sensors are flipped vertically and colors are a bit saturated
   if (s->id.PID == OV3660_PID) {
-    s->set_vflip(s, 1); // flip it back
-    s->set_brightness(s, 1); // up the brightness just a bit
-    s->set_saturation(s, -2); // lower the saturation
+    s->set_vflip(s, 1);        // flip it back
+    s->set_brightness(s, 1);   // up the brightness just a bit
+    s->set_saturation(s, -2);  // lower the saturation
   }
   // drop down frame size for higher initial frame rate
-  if(config.pixel_format == PIXFORMAT_JPEG){
+  if (config.pixel_format == PIXFORMAT_JPEG) {
     s->set_framesize(s, FRAMESIZE_QVGA);
   }
+
+#if defined(CAMERA_MODEL_M5STACK_WIDE) || defined(CAMERA_MODEL_M5STACK_ESP32CAM)
+  s->set_vflip(s, 1);
+  s->set_hmirror(s, 1);
+#endif
+
+#if defined(CAMERA_MODEL_ESP32S3_EYE)
+  s->set_vflip(s, 1);
+#endif
 
 // Setup LED FLash if LED pin is defined in camera_pins.h
 #if defined(LED_GPIO_NUM)
