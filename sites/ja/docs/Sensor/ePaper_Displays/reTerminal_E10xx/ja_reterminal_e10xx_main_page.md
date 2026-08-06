@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/
 
 reTerminal E シリーズは、Seeed Studio による ESP32-S3 搭載の ePaper ディスプレイ端末ファミリーで、**常時表示・低消費電力の情報表示** に特化して設計されています。ラインナップは 4 つのモデル — **E1001, E1002, E1003, E1004** — からなり、7.3 インチから 13.3 インチまでのモノクロおよびフルカラーのパネルをカバーし、タッチ操作対応や数か月単位のバッテリー駆動オプションも用意されています。すべて同じソフトウェアスタック（SenseCraft HMI、Home Assistant / ESPHome、Arduino など）を共有しているため、一度覚えれば、あとは用途に合ったフォームファクタを選ぶだけです。
 
-電力を継続的に消費する従来型ディスプレイとは異なり、reTerminal E シリーズはコンテンツを再描画するときにのみ電流を消費するため、デジタルフォトフレーム、スマートホームダッシュボード、小売サイネージ、会議室ボード、教室ディスプレイなど、常時表示が求められる用途に最適です。
+電力を継続的に消費する従来のディスプレイとは異なり、reTerminal E シリーズはコンテンツを再描画するときだけ電流を消費するため、デジタルフォトフレーム、スマートホームダッシュボード、小売サイネージ、会議室ボード、教室ディスプレイなど、常時表示が求められる用途に最適です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -209,7 +209,7 @@ reTerminal E シリーズは、Seeed Studio による ESP32-S3 搭載の ePaper 
 			<th align="center">理由</th>
 		</tr>
 		<tr>
-			<td>最低コスト / テキスト中心の情報ボード / 高速な部分リフレッシュ</td>
+			<td>最も低コスト / テキスト中心の情報ボード / 高速な部分リフレッシュ</td>
 			<td align="center"><strong>E1001</strong></td>
 			<td>7.5インチのモノクロ4階調グレースケール、部分更新対応、リフレッシュレート 2～5 秒。</td>
 		</tr>
@@ -226,7 +226,7 @@ reTerminal E シリーズは、Seeed Studio による ESP32-S3 搭載の ePaper 
 		<tr>
 			<td>最大サイズで最も高精細な、フォトフレームグレードのカラー表示</td>
 			<td align="center"><strong>E1004</strong></td>
-			<td>13.3インチ Spectra™ 6 フルカラー、1200×1600、5000 mAh バッテリー、16 GB microSD をあらかじめ搭載。</td>
+			<td>13.3インチ Spectra™ 6 フルカラー、1200×1600、5000 mAhバッテリー、16 GB microSDプリインストール。</td>
 		</tr>
 		<tr>
 			<td>今すぐ Home Assistant / ESPHome 連携が必要</td>
@@ -390,7 +390,7 @@ SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準�
 			<td align="center">✅</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone">ESPHome — RTC、SD &amp; マイク</a></td>
+			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone">ESPHome — RTC, SD &amp; Microphone</a></td>
 			<td>PCF8563 RTC の時刻同期、microSD カード検出、およびオンボード PDM マイクのセットアップ。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -512,9 +512,9 @@ SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準�
 
 – 受信アンテナの向きまたは設置場所を変更する。
 
-– 機器と受信機の間の距離を離す。
+– 機器と受信機の距離を離す。
 
-– 受信機が接続されている回路とは異なる回路のコンセントに本機器を接続する。
+– 受信機が接続されている回路とは異なる回路のコンセントに機器を接続する。
 
 – 販売店または経験豊富なラジオ / テレビ技術者に相談する。本機器は、管理されていない環境に対して規定された FCC の放射線曝露制限に適合しています。本機器は、放射部と人体との距離が最低 20cm 以上となるように設置および使用してください。
 

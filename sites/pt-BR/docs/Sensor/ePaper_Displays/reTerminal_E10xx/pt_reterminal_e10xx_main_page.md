@@ -1,5 +1,5 @@
 ---
-description: Este artigo é uma página de coleção para a reTerminal E Series.
+description: Este artigo é uma página de coleção para a linha reTerminal E.
 title: reTerminal E Series
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /reterminal_e10xx_main_page
@@ -129,7 +129,7 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 			<td align="center">32 MB Flash<br/>microSD até 32 GB</td>
 			<td align="center">32 MB Flash<br/>microSD até 32 GB</td>
 			<td align="center">32 MB Flash<br/>microSD até 32 GB</td>
-			<td align="center">32 MB Flash<br/>microSD até 32 GB<br/>(<strong>16 GB incluídos</strong>)</td>
+			<td align="center">32 MB Flash<br/>microSD até 32 GB<br/>(<strong>16 GB incluído</strong>)</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Wireless</strong></td>
@@ -189,10 +189,10 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 		</tr>
 		<tr>
 			<td align="center"><strong>MSRP</strong></td>
-			<td align="center">&#36;69.00</td>
-			<td align="center">&#36;99.00</td>
-			<td align="center">&#36;159.90</td>
-			<td align="center">&#36;279.90</td>
+			<td align="center">&#36;69,00</td>
+			<td align="center">&#36;99,00</td>
+			<td align="center">&#36;159,90</td>
+			<td align="center">&#36;279,90</td>
 		</tr>
 	</table>
 </div>
@@ -204,7 +204,7 @@ Use o guia rápido abaixo para reduzir a escolha a um modelo. Se várias linhas 
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th align="center">Se a sua prioridade é…</th>
+			<th align="center">Se sua prioridade é…</th>
 			<th align="center">Modelo recomendado</th>
 			<th align="center">Por quê</th>
 		</tr>
@@ -287,7 +287,7 @@ O reTerminal E1002 possui um vibrante display ePaper colorido de 7,3 polegadas c
 
 - Display ePaper colorido de 7,3 polegadas com tecnologia ACeP
 - Resolução de 800×480
-- Representação de cores rica mantendo baixo consumo de energia
+- Representação de cores ricas mantendo baixo consumo de energia
 - Perfeito para galerias, dashboards coloridos e aplicações voltadas para o visual
 
 ## reTerminal E1003
@@ -350,7 +350,7 @@ O reTerminal E1004 possui um display ePaper colorido de 13,3 polegadas e até 6 
 Todo dispositivo da reTerminal E Series é enviado com o firmware **SenseCraft HMI** pronto para uso, para que você possa começar sem escrever uma única linha de código. O aplicativo web cuida do login, design do dashboard e implantação over-the-air para o seu dispositivo:
 
 - **AI Generator** — descreva um dashboard em texto simples e deixe a IA organizá-lo para você.
-- **Gallery** — envie imagens e apresentações de slides diretamente para o painel para casos de uso de porta-retratos digital.
+- **Gallery** — envie imagens e apresentações de slides diretamente para o painel para casos de uso como porta-retratos digitais.
 - **Canvas** — arraste e solte widgets para criar dashboards personalizados.
 - **RSS / Web Content** — traga notícias, clima, calendário ou qualquer feed da web em tempo real para a tela.
 - **Interação por toque** — totalmente suportada no E1003 a partir do firmware HMI v1.1.2.
@@ -520,7 +520,7 @@ Nota: Este equipamento foi testado e considerado em conformidade com os limites 
 
 ## Suporte Técnico & Discussão sobre o Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -152,7 +152,7 @@ Los cuatro modelos comparten la misma plataforma ESP32-S3, conectividad inalámb
 		</tr>
 		<tr>
 			<td align="center"><strong>Supervisión de batería</strong></td>
-			<td align="center" colspan="4">✅ supervisión del voltaje de la batería integrada</td>
+			<td align="center" colspan="4">✅ supervisión integrada del voltaje de la batería</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Entrada de alimentación</strong></td>
@@ -259,7 +259,7 @@ Utiliza la siguiente guía rápida para reducir la elección a un solo modelo. S
   </a>
 </div><br />
 
-El reTerminal E1001 incorpora una pantalla ePaper monocroma de 7,5 pulgadas con capacidad de escala de grises de 4 niveles. Con su resolución de 800×480, ofrece texto nítido e imágenes claras consumiendo muy poca energía. La pantalla monocroma es perfecta para aplicaciones en las que la legibilidad del texto y la duración de la batería son prioridades.
+El reTerminal E1001 incorpora una pantalla ePaper monocroma de 7,5 pulgadas con capacidad de escala de grises de 4 niveles. Con su resolución de 800×480, ofrece texto nítido e imágenes claras con un consumo de energía mínimo. La pantalla monocroma es perfecta para aplicaciones en las que la legibilidad del texto y la duración de la batería son prioridades.
 
 ### Características clave
 
@@ -287,7 +287,7 @@ El reTerminal E1002 incorpora una vibrante pantalla ePaper a todo color de 7,3 p
 
 - Pantalla ePaper a todo color de 7,3 pulgadas con tecnología ACeP
 - Resolución de 800×480
-- Representación de color rica manteniendo un bajo consumo de energía
+- Rica representación de color manteniendo un bajo consumo de energía
 - Perfecto para galerías, paneles de control coloridos y aplicaciones orientadas a lo visual
 
 ## reTerminal E1003
@@ -460,7 +460,7 @@ Más allá de SenseCraft HMI, la reTerminal E Serie se integra con varias plataf
 			<th>E1004</th>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino">Arduino — pantalla ePaper</a></td>
+			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino">Arduino — Pantalla ePaper</a></td>
 			<td>Renderiza texto, gráficos e imágenes en la pantalla ePaper con las bibliotecas Seeed_GFX o GxEPD2.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -468,7 +468,7 @@ Más allá de SenseCraft HMI, la reTerminal E Serie se integra con varias plataf
 			<td align="center">✅</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals">Arduino — periféricos integrados</a></td>
+			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals">Arduino — Periféricos Integrados</a></td>
 			<td>Controla el LED integrado, el zumbador, tres botones de usuario, el sensor SHT4x, el monitor de batería y la tarjeta microSD.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -487,7 +487,7 @@ Más allá de SenseCraft HMI, la reTerminal E Serie se integra con varias plataf
 </div>
 
 :::tip
-¿Buscas las instrucciones de inicio por dispositivo (unboxing, configuración de Wi‑Fi, actualización de firmware)? Ve al Wiki del producto enlazado en la matriz anterior:
+¿Buscas las instrucciones de inicio por dispositivo (unboxing, configuración de Wi-Fi, actualización de firmware)? Ve al Wiki del producto enlazado en la matriz anterior:
 [E1001](https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1001) ·
 [E1002](https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1002) ·
 [E1003](https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1003) ·
@@ -498,7 +498,7 @@ Más allá de SenseCraft HMI, la reTerminal E Serie se integra con varias plataf
 
 - [Documentación de SenseCraft HMI](https://wiki.seeedstudio.com/es/sensecraft_hmi_overview/)
 - [Hoja de datos del ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-- [Certificado de radio de reTerminal MIC](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_MIC_Radio_Certificate.pdf)
+- [Certificado de Radio de reTerminal MIC](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_MIC_Radio_Certificate.pdf)
 
 ## Aviso de la FCC
 

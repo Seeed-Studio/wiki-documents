@@ -34,7 +34,7 @@ reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 的电子纸显示终端产�
 
 ## 产品矩阵一览
 
-四款型号，一个生态系统。可根据 **屏幕尺寸**、**彩色或黑白**、**是否触控** 和 **电池续航** 来选择：
+四款型号，一个生态系统。可按 **屏幕尺寸**、**彩色或黑白**、**触控** 和 **电池续航** 来选择：
 
 <div class="table-center">
   <table align="center">
@@ -336,7 +336,7 @@ reTerminal E1004 配备 13.3 英寸全彩电子纸显示屏，电池续航最长
 - ESP32-S3 平台，支持 SenseCraft HMI 无代码开发
 - 兼容 Home Assistant / ESPHome、Arduino 和 ESP-IDF
 
-## SenseCraft HMI — 默认无代码平台
+## SenseCraft HMI — 默认零代码平台
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
