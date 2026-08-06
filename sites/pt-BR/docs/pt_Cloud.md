@@ -132,7 +132,7 @@ SenseCraft reúne softwares para criar aplicações de IA e hardware, treinar ro
           loading="lazy"
           style={{ width: '100%', height: '220px', objectFit: 'contain', display: 'block', padding: '1rem' }}
         />
-      </div]
+      </div>
       <div className="card__body">
         <div className="badge badge--info margin-bottom--sm">Desenvolver</div>
         <h3 id="recomputer-ai-lab">reComputer AI Lab</h3>
