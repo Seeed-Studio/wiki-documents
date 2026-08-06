@@ -14,7 +14,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: 2026-04-3
-updatedAt: '2026-04-07'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/meshcore_node_map_t1000e/
 ---
 import Tabs from '@theme/Tabs';
@@ -68,3 +68,26 @@ You can see device name, role and configuration information. So by using this ma
 For advanced users, it is possible to build a custom Node Map frontend. It is recommended to use the following workfolow: 
 
 [Normal MeshCore Node] → [Mesh Nodes set with MQTT] → [Backend API / Database] → [Frontend Map UI]
+
+## Tech Support & Product Discussion
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

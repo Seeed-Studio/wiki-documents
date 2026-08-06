@@ -23,22 +23,22 @@ SenseCAP M1 ダッシュボードは、Hotspot を監視し、包括的な概要
 **ダッシュボード登録**
 ==========================
 
-1. [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/) にアクセスします。
-2. 下の「**Register**」ボタンをクリックします。  
+1. [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_dashboard) にアクセスします
+2. 下の "**Register**" ボタンをクリックします。  
     1. アカウントを新規作成するか、Discord アカウントで登録 / ログインするかを選択できます。
 3. アカウント作成を開始するために必要な情報を入力します。
-4. 「**Email Address**」を入力したら、「**Get Captcha**」をクリックする必要があります。
-    1. システムは、そのメールアカウントの所有権を確認するために、登録したメールアドレス宛てに「**one-time code**」を送信します。
+4. "**Email Address**" を入力したら、"**Get Captcha**" をクリックする必要があります。
+    1. システムは、そのメールアカウントの所有権を確認するために、登録したメールアドレス宛に “**one-time code**” を送信します。
     2. 受信トレイからコードを取得するための時間は **60 秒** です。
-5. 「**one-time code**」を入力したら、「**Register**」をクリックすると、Hotspot をリモートで監視するための登録が完了します。
+5. "**one-time code**" を入力したら、"**Register**" をクリックすると、Hotspot をリモートで監視するための登録が完了します。
 
 ![SenseCAP ダッシュボード登録](https://www.sensecapmx.com/wp-content/uploads/2022/07/register-dash-new.png)
 
 **ダッシュボードログイン**
 ===================
 
-1. [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/) にアクセスします。
-2. 登録プロセス中に作成した認証情報を入力するか、Discord アカウント情報でログインします（登録プロセス中に選択した方法のいずれか）。
+1. [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_dashboard) にアクセスします
+2. 登録プロセス中に作成した認証情報を入力するか、（登録プロセス中に選択した方法に応じて）Discord アカウント情報でログインします
 3. おめでとうございます。正常にログインできました。
 
 ![SenseCAP ダッシュボードログイン](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-sign-in-new.png)

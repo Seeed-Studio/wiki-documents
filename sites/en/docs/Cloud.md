@@ -16,7 +16,7 @@ last_update:
   date: 06/06/2025
   author: Jancee
 createdAt: '2023-01-05'
-updatedAt: '2026-03-20'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/Cloud/
 ---
 
@@ -99,29 +99,31 @@ Cloud services are a vital component that enable processed data management from 
 <br />
 <br />
 
-### SenseCraft APP
+### SenseCraft App
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft App</font></div>
-            <p>SenseCraft App is used on mobile phones to config, build, and manage sensors, and display data from SenseCraft Data Platform.</p>
+            <p>SenseCraft App is used on mobile phones to configure and manage sensors and display data from SenseCraft Data Platform.</p>
             <br/>
-            > <a href="/sensecraft-app/overview#download" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="/sensecraft-app/overview#config" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Bind Devices</font></span></a> / <a href="/sensecraft-app/overview#account" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Account</font></span></a> / <a href="/sensecraft-app/overview#user" target="_blank"><span><font color={'FFFFFF'} size={"3"}>User</font></span></a>
+            > <a href="/sensecraft-app/overview#download" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="/sensecraft-app/overview#device" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Bind Devices</font></span></a> / <a href="/sensecraft-app/overview#account" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Account</font></span></a> / <a href="/sensecraft-app/overview#user" target="_blank"><span><font color={'FFFFFF'} size={"3"}>User</font></span></a>
     </div>
 </div>
 
 <br />
 <br />
 
-### SenseCraft AI
+<a id="sensecraft-ai"></a>
+
+### AI Advisor
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft AI</font></div>
-            <p>SenseCraft AI can be accessed on the SenseCraft Data Platform and SenseCraft App.</p>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>AI Advisor</font></div>
+            <p>AI Advisor uses sensor data from SenseCraft Data Platform to provide recommendations for supported scenarios.</p>
             <br/>
-            > <a href="/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Getting Started</font></span></a>
-            > <a href="/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Connecting XIAO ESP32-C3</font></span></a>
+            > <a href="/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>AI Advisor</font></span></a>
+            > <a href="/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Planting Advice Example</font></span></a>
     </div>
 </div>
 

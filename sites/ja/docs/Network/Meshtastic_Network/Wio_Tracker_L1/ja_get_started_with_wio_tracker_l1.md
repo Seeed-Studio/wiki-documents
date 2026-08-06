@@ -1,5 +1,5 @@
 ---
-description: Wio Tracker L1 シリーズを使い始める
+description: Wio Tracker L1 シリーズの使用を開始する
 title: Wio Tracker L1 を使い始める
 keywords:
   - Meshtastic
@@ -8,8 +8,8 @@ slug: /get_started_with_meshtastic_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 07/31/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
 updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::tip
-Wio Tracker L1 シリーズは同じハードウェアフレームワークを共有しています。動画ガイドは L1 Pro 向けですが、L1 シリーズの他のすべての製品にも適用できます。
+Wio Tracker L1 シリーズは同じハードウェアフレームワークを共有しています。ビデオガイドは L1 Pro 向けですが、L1 シリーズの他のすべての製品にも適用できます。
 :::
 
 ## ビデオチュートリアル
@@ -34,14 +34,14 @@ L1、L1 Lite または L1 E-Ink モデルを初めて使用する場合は、USB
 ### パート 2 ファームウェア書き込み
 
 :::caution note
-ファームウェアを更新する際は、`don't use NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
+ファームウェアの更新には `don't use NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
 :::
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### パート 3 デバイスの使い方
+### パート 3 デバイスの使用方法
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Q97w2ompPtI?si=yLbAgE4cBbT6NbHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -59,7 +59,7 @@ L1 E-Ink ファームウェアの `latest Alpha firmware` は現在、4 方向�
 
 #### ブザー
 
-ブザーをオンまたはオフにしたい場合は、まずファームウェアをバージョン `2.7` に `update the firmware` してください。メニューバーがあるのは 2.7 バージョンのファームウェアのみだからです。
+ブザーをオンまたはオフにしたい場合は、まずファームウェアをバージョン `2.7` に `update the firmware` してください。2.7 バージョンのファームウェアのみがメニューバーを備えているためです。
 
 - ブザーをオンにする
 Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action -> Disable
@@ -70,7 +70,7 @@ Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action 
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### パート 4 スマートフォン接続
+### パート 4 スマートフォンとの接続
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/OFtUwN3z0tI?si=9zr3j-hLuoj0-CXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -91,10 +91,10 @@ Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action 
 2. 設定中である
 :::
 
-### ファームウェアを書き込む
+### ファームウェアの書き込み
 
 :::caution note
-ファームウェアを更新する際は、`don't use NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
+ファームウェアの更新には `don't use NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
 :::
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。
@@ -111,11 +111,11 @@ L1 E-Ink の場合は、ターゲットデバイスとして `Seeed Wio Tracker 
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
-デバイスの電源を入れ、`Enter DFU Mode` をクリックします。`Tracker L1` という名前のシリアルポートが表示されるので、それをクリックして接続します。`Tracker L1` という名前のドライブが表示されるはずです。
+デバイスの電源を入れ、`Enter DFU Mode` をクリックします。`Tracker L1` という名前のシリアルポートが表示されるので、それをクリックして接続すると、`Tracker L1` という名前のドライブが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2 ファイルを DFU ドライブにドラッグします。ファイルのコピーが完了し、デバイスが再起動すると、ファームウェアの書き込みが完了します。
+UF2 ファイルを DFU ドライブにドラッグします。ファイルのコピー完了後、デバイスが再起動するとファームウェアの書き込みが完了します。
 
 ### デバイスの電源を入れる
 
@@ -136,11 +136,11 @@ import TabItem from '@theme/TabItem';
 
 - Bluetooth パネルでターゲットデバイスを選択します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/device_select123.jpeg" alt="pir" width={300} height="auto" /></p>
 
-- ディスプレイに表示されるコードを入力し、`OK` をクリックしてデバイスに接続します。
+- ディスプレイに表示されているコードを入力し、`OK` をクリックしてデバイスに接続します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/pairing_code123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -148,35 +148,35 @@ import TabItem from '@theme/TabItem';
 
 - `+` をクリックし、ターゲットデバイスを選択します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-choose-new.png" alt="pir" width={600} height="auto" /></p>
 
 - コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスに接続します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-click-ok-new.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
 </Tabs>
 
 ### LoRa を設定する
 
-メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、自分がいる地域に合わせて設定する必要があります。
+メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、自分の地域に合わせて設定する必要があります。
 
 <Tabs>
 <TabItem value="ios" label="IOS アプリ">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_LoRa123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
 <TabItem value="android" label="Android アプリ">
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-region-new.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
 </Tabs>
 
 **リージョン一覧**
 
-|**Region Code**|**説明**|**周波数帯域 (MHz)**|**デューティサイクル (%)**|**出力制限 (dBm)**|
+|**リージョンコード**|**説明**|**周波数帯域 (MHz)**|**デューティサイクル (%)**|**出力制限 (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未設定|N/A|N/A|N/A|
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
@@ -185,12 +185,12 @@ import TabItem from '@theme/TabItem';
 より包括的な一覧については、[LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
 :::info
-**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、ローリング 1 時間ベースで毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-これでデバイスの LoRa リージョンを設定できたので、自分のニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
+これでデバイス上の LoRa リージョンを設定できたので、必要に応じて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
 
-## 高度な設定
+## 詳細設定
 
 ### Web サイト経由で接続する
 
@@ -198,16 +198,16 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 
   ステップ 1: Web サイトを開く
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) をクリックして Web サイトに移動します。
+[ここをクリック](https://client.meshtastic.org/messages/broadcast/0)して Web サイトに移動します。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   ステップ 2: 新しいデバイスを追加する
 
-    "+ New Connection" をクリックします。 
+    「+ New Connection」をクリックします。 
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    接続方法は 2 通りあります。好みの方法を選択できます。
+    接続方法は 2 通りあります。お好みの方法を選択できます。
 
  方法 1: Bluetooth 経由
 
@@ -229,7 +229,7 @@ GPS を有効にしてください。より最新の位置情報を取得する�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-IOS の場合は、`Accurate Location` をオンにしてください。そうしないと、位置がずれる可能性があります。
+iOS の場合は、`Accurate Location` をオンにしてください。そうしないと、位置がずれる可能性があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -276,15 +276,15 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 
 <TabItem value="ios" label="IOS">
 
-- Telemetry を有効にしてセンサーデータを取得します。OLED 画面にセンサーデータを表示したい場合は、`on screen` を有効にします
+- Telemetry を有効にしてセンサーデータを取得します。センサーデータを OLED 画面に表示したい場合は、`on screen` を有効にします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryIOS.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/temp_sensor123.png" alt="pir" width={900} height="auto" /></p>
 
 </TabItem>
 
 <TabItem value="Android" label="Android">
 
-- Telemetry を有効にしてセンサーデータを取得します。OLED 画面にセンサーデータを表示したい場合は、`on screen` を有効にします
+- Telemetry を有効にしてセンサーデータを取得します。センサーデータを OLED 画面に表示したい場合は、`on screen` を有効にします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryAndroid.png" alt="pir" width={900} height="auto" /></p>
 
@@ -303,7 +303,7 @@ Grove インターフェースを介してデバイスにセンサーを追加�
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - OLED スクリーン
-[Click here](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) をクリックして、互換性のある OLED スクリーンを入手してください。現在の OLED ドライバーは SSD1306 です。
+[Click here](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) をクリックして、互換性のある OLED スクリーンを入手してください。現在の OLED ドライバは SSD1306 です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -320,7 +320,7 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_ringtone123.png" alt="pir" width={500} height="auto" /></p>
 
 </TabItem>
 
@@ -338,14 +338,14 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 ```
 </TabItem>
 
-<TabItem value="14" label="スーパーマリオ テーマ（ショート）">
+<TabItem value="14" label="スーパーマリオのテーマ（ショート）">
 
 ```plain
 24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
 ```
 </TabItem>
 
-<TabItem value="15" label="マリオ コイン">
+<TabItem value="15" label="マリオコイン">
 
 ```plain
 24:d=8,o=6,b=200:b,e7
@@ -359,7 +359,7 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 ```
 </TabItem>
 
-<TabItem value="17" label="マリオ パワーアップ">
+<TabItem value="17" label="マリオパワーアップ">
 
 ```plain
 powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
@@ -377,7 +377,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ## FAQ
 
-### デバイスがブリックした & ブートローダーのインストール
+### デバイスがブリックした場合 & ブートローダーのインストール
 
 **説明：**
 
@@ -415,7 +415,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 デバイスが近くのノードと通信できない、またはメッセージを送信できない場合は、まず LoRa リージョンとモデムプリセットが周囲のノードと一致しているか確認してください。また、デフォルトの **PSK** が変更されていないかも確認する必要があります。プライマリチャンネルで PSK が異なると、そのチャンネル上の他のノードとデバイスが通信できなくなります。
 
-この問題を見つける最も簡単な方法はモバイルアプリを使用することです。アプリを開き、対象デバイスに接続してから、`Settings` -> `Channels` に移動します。プライマリチャンネルを選択し、**PSK** の値を確認します。周囲のノードと異なる場合は、同じ PSK に更新し、チャンネル設定を保存してください。
+この問題を見つける最も簡単な方法はモバイルアプリを使用することです。アプリを開き、対象デバイスに接続してから、`Settings` -> `Channels` に移動します。プライマリチャンネルを選択し、**PSK** の値を確認します。周囲のノードと異なる場合は、同じ PSK に更新してチャンネル設定を保存してください。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -442,15 +442,15 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。
 - シリアルポートログがしばらく動作した後に停止します。
 
- これは、メッセージ送信プロセスが完了していない、設定中であるなど、デバイスが次の状態にあるときに、手動で強制的に再起動または電源オフしたことが原因である可能性があります。
+ これは、メッセージ送信プロセスが完了していない、設定中であるなど、デバイスが以下の状態にあるときに、手動で強制的に再起動または電源オフしたことが原因の可能性があります。
 
 #### トラブルシューティング
 
 [click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) をクリックして動画を確認してください。フラッシュの消去を実行し、その後最新のファームウェアを書き込み直す必要があります。
 
-### 工場出荷時設定へのリセット
+### Factory Reset
 
-デフォルト設定に戻したい場合は、ファクトリーリセットを実行できます。ファクトリーリセットを行う方法は 2 つあります。
+デフォルト設定に戻したい場合は、Factory Reset を実行できます。Factory Reset を行う方法は 2 つあります。
 
 - [click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) をクリックして動画を確認してください。フラッシュの消去を実行し、その後最新のファームウェアを書き込み直す必要があります。
 
@@ -461,25 +461,25 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 #### NodeDB リセット
 
-NodeDB は、現在のメッシュネットワーク内で検出されたノードに関する情報を保存するローカルデータベースです。特定のノードと通信できない状況に遭遇した場合、そのノードに対する情報が nodedB に古い状態で保存されている可能性があります。その場合は更新する必要があります。
+NodeDB は、現在のメッシュネットワーク内で検出されたノードに関する情報を保存するローカルデータベースです。特定のノードと通信できない状況に遭遇した場合、そのノードに対して NodeDB に古い情報が保存されている可能性があります。その場合は更新する必要があります。
 
 アプリを開いて対象デバイスに接続します。**Settings**->**Device**->**Device Config**->**Reset NodeDB** に進みます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDBmerge.png" alt="アプリ内のデバイス設定と Reset NodeDB ボタン" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/sending_failed123.png" alt="Device settings and Reset NodeDB button in the app" width={600} height="auto" /></p>
 
 #### ユーザー情報の交換
 
 各ノードは定期的に自分自身のノード情報を送信し、メッシュ内の他のノードがそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、互いのノード情報を交換する必要があります。リスト上の別のノードとプライベートメッセージの送受信ができない場合は、アプリで手動で情報交換を促すことができます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="設定内のデバイス項目" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### 秘密鍵の再生成
 
 2 つのノードが互いに通信できるようにするには、互いの秘密鍵を知っている必要があります。あるノードがプライベートメッセージの送信に失敗し続ける場合は、そのノードの秘密鍵を再生成してみてください。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="設定内のデバイス項目" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
-不具合のあるデバイスを再起動して、設定を有効にします。
+設定を有効にするため、不具合のあるデバイスを再起動します。
 
 :::note
 鍵を再生成した後は、他のデバイスがそのノードに再接続する必要があります。そのため、他のデバイスのノードリストからそのノードを削除しておくことをお勧めします。
@@ -499,7 +499,7 @@ L1 Pro 用にアンテナの交換が必要な場合は、[こちらをクリッ
 
 ## リソース
 
-- [ブートローダ](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+- [ブートローダー](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) 3D プリント参照ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
 - [(V2 新しい 4 方向ジョイスティック) 3D プリント参照ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [L1 エンクロージャーデザインチャレンジ](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
@@ -509,9 +509,26 @@ L1 Pro 用にアンテナの交換が必要な場合は、[こちらをクリッ
 - [CE 認証](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
 - [消費電力テストとバッテリー寿命計算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 
-<JetsonLeadQuote
-  buttonText="カスタマイズの見積もりを依頼"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="XIAO の見積もりを依頼"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

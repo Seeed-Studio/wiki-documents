@@ -8,10 +8,10 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.w
 slug: /sensecap_indicator_meshtastic
 sku: 114993532
 last_update:
-  date: 12/3/2024
-  author: Michelle Huang
+  date: 07/31/2026
+  author: Advent Jiang
 createdAt: '2024-10-29'
-updatedAt: '2026-01-07'
+updatedAt: '2026-08-03'
 url: https://wiki.seeedstudio.com/sensecap_indicator_meshtastic/
 ---
 
@@ -151,11 +151,11 @@ import TabItem from '@theme/TabItem';
 
 - Click `+` and choose the target device.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-choose-new.png" alt="pir" width={600} height="auto" /></p>
 
 - Enter the code(default code is `123456`) and then click `OK` to connect the device.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-click-ok-new.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
 </Tabs>
@@ -172,7 +172,7 @@ In order to start communicating over the mesh, you must set your region. This se
 </TabItem>
 
 <TabItem value="android" label="Android App">
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/an-region-new.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
 </Tabs>
@@ -230,3 +230,26 @@ DO NOT select the `Repeater` role, which will cause the device to repeatedly reb
 If you didn't connect the GPS module, please disable the GPS function in the `Meshtastic` App, otherwise the device will keep trying to find the GPS module, which will cause the device to take a long time to boot up the screen.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-module.png" alt="pir" width={600} height="auto" /></p>
+
+## Tech Support & Product Discussion
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

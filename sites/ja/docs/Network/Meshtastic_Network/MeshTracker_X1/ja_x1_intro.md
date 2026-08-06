@@ -1,6 +1,6 @@
 ---
 description: Meshtastic 向け SenseCAP MeshTracker X1 の紹介。この Wiki では、機能、仕様、ハードウェア概要、ボタン、LED、およびピン一覧を紹介します。
-title: SenseCAP MeshTracker X1 の紹介
+title: SenseCAP MeshTracker X1 入門
 keywords:
   - Tracker
   - Meshtastic
@@ -24,15 +24,15 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-世界初のカードサイズ Meshtastic デバイスで、デュアルバンド GPS を搭載しています。オフグリッド環境での信頼性の高い通信のために設計された MeshTracker X1 は、IP66 等級の [Meshtastic®](https://meshtastic.org/) GPS トラッカーで、863–928 MHz の周波数帯をサポートします。最新の Semtech LR2021 LoRa チップを搭載し、USB-C 接続、最長 5 日間のバッテリー駆動、屋外使用に適したコンパクトなデザインを備えています。
+世界初のカードサイズ Meshtastic デバイスで、デュアルバンド GPS を搭載しています。オフグリッド環境での信頼性の高い通信のために設計された MeshTracker X1 は、IP66 等級の [Meshtastic®](https://meshtastic.org/) GPS トラッカーで、863–928 MHz の周波数帯をサポートします。最新の Semtech LR2021 LoRa チップを搭載し、USB-C 接続、最長 5 日間のバッテリー駆動、コンパクトで屋外使用に適したデザインを備えています。
 
 ### 特長
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
 
 
-- **実際に持ち歩ける Meshtastic デバイス** 
+- **本当に持ち歩ける Meshtastic デバイス** 
 
-SenseCAP MeshTracker X1 は、アウトドア、大規模イベント、緊急時など、携帯電話ネットワークの外でも信頼できる通信と位置情報共有を必要とする人のために設計されています。真に携帯しやすいフォームファクタと堅牢な IP66 保護により、Meshtastic 接続を日常の持ち歩きや実際のフィールド利用に持ち込みます。
+SenseCAP MeshTracker X1 は、アウトドア、大規模イベント、緊急時など、携帯電話ネットワークの外でも信頼できる通信と位置情報共有を必要とする人のために設計されています。真にポータブルなフォームファクタと堅牢な IP66 保護により、Meshtastic 接続を日常の携行品や実際のフィールド利用へと拡張します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -54,13 +54,13 @@ Semtech LR2021 によって駆動される MeshTracker X1 は、最大 -141 dBm 
 
 - **カードサイズのデザインで持ち運びやすい** 
 
-スリムで軽量な MeshTracker X1 は、アウトドアアクティビティ中の毎日の持ち歩き用に設計されています。ネックストラップで身に着けたり、バックパックに取り付けたり、自転車バッグに固定したり、ポケットにそのまま入れて、手軽にオフグリッド接続を利用できます。
+スリムで軽量な MeshTracker X1 は、アウトドアアクティビティ中の毎日の携行に適した設計です。ネックストラップで身に着けたり、バックパックに取り付けたり、自転車バッグに固定したり、ポケットにそのまま入れて、手軽にオフグリッド接続を利用できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **柔軟なバイブレーション & サウンドアラート** 
 
-MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟な通知オプションを提供します。騒がしいイベント中や屋外走行中、あるいは静かなトレイルを散策していて気を散らしたくない場合でも、受信メッセージに気付きやすくなります。
+MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟な通知オプションを提供します。騒がしいイベント会場、屋外でのライド中、あるいは静かなトレイルを歩いていてあまり邪魔されたくない場合でも、受信メッセージに気付きやすくなります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -71,13 +71,13 @@ IP66 等級の防塵・防水保護構造により、雨、泥、ほこりっぽ
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **USB-C 接続** 
-標準的な USB-C インターフェースにより、充電、ファームウェア更新、デバッグが可能で、堅牢な屋外使用と日常の利便性の両方に対応します。
+標準的な USB-C インターフェースにより、充電、ファームウェア更新、デバッグが可能で、堅牢な屋外利用と日常の利便性の両立を図っています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **長時間バッテリー駆動** 
 
-高容量 1100mAh バッテリーを中心に最適化された高集積のカードサイズフォームファクタにより、コンパクトで携帯性を保ちながら、アウトドアでの持ち歩きやオフグリッド通信において最長 5 日間の連続動作を実現します。
+高容量 1100mAh バッテリーを中心に最適化された高集積カードサイズフォームファクタにより、コンパクトで携帯性を保ちながら、屋外での携行やオフグリッド通信において最長 5 日間の連続動作を実現します。
 
 
 ### 仕様
@@ -90,8 +90,8 @@ IP66 等級の防塵・防水保護構造により、雨、泥、ほこりっぽ
 |**無線**|Bluetooth (v5.0)|
 |**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>最大送信電力: 22dBm|
 |**LED**|1\* RGB|
-|**ブザー**|ステータスを示す 1\* ブザー|
-|**ボタン**|操作用 1\* ボタン|
+|**ブザー**|ステータス表示用ブザー 1 個|
+|**ボタン**|操作用ボタン 1 個|
 |**モーター**|1\* DRV2605L|
 | **気圧**|範囲: 300–1100 hPa<br/>精度: ±0.03 hPa<br/>分解能: 0.06 Pa|
 | **温度**<br/>(温度は気圧センサから取得)| 範囲:-40-85°C<br/>精度: ± 1°C<br/>分解能: 0.0006 °C |
@@ -107,14 +107,15 @@ IP66 等級の防塵・防水保護構造により、雨、泥、ほこりっぽ
 
 |項目|パラメータ|
 | :- | :- |
-|**バッテリー容量**|充電式リチウムバッテリー、1100mAh|
+|**バッテリー容量**|充電式高電圧バッテリー、1100mAh|
 |**バッテリー寿命モニタリング**|バッテリーレベルを定期的にアップリンク|
 |**充電プロトコル**|USB Type-C|
 |**デバイス電源入力**|5V, 0.55A|
 |**バッテリー電源入力**|4.4V, 0.22A|
+|**満充電カットオフ電圧**|4.37V|
 |**充電温度範囲**|5 ～ +45℃|
 
-X1 は製品シリーズへと発展する可能性があり、将来発売される新製品には、追加のセンサ（3 軸センサ、6 軸磁力計など）が搭載される予定です。
+X1 は製品シリーズへと発展する可能性があり、将来発売される新しい製品モデルには、追加のセンサ（3 軸センサ、6 軸磁力計など）が搭載される予定です。
 
 ### ピン一覧
 
@@ -140,7 +141,7 @@ X1 は製品シリーズへと発展する可能性があり、将来発売さ�
     <td>P0.28</td>
   </tr>
   <tr>
-    <td>センサ PWR EN</td>
+    <td>Sensor PWR EN</td>
     <td>-</td>
     <td>P1.07</td>
     <td>GPIO</td>
@@ -339,7 +340,7 @@ X1 は製品シリーズへと発展する可能性があり、将来発売さ�
   <tr>
     <td>🔴赤</td>
     <td>点滅</td>
-    <td>低電力</td>
+    <td>バッテリー残量低下</td>
   </tr>
     <tr>
     <td>⚪️白</td>
@@ -357,3 +358,26 @@ X1 は製品シリーズへと発展する可能性があり、将来発売さ�
 ### リソース
 
 [バッテリーテストレポート](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

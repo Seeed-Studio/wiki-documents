@@ -1,8 +1,8 @@
 ---
-description: Espaço de Trabalho Grove Vision AI v2 na Plataforma SenseCraft AI
-title: Espaço de Trabalho Grove Vision AI v2 na Plataforma SenseCraft AI
+description: Workspace Grove Vision AI v2 na plataforma SenseCraft AI
+title: Workspace Grove Vision AI v2 na plataforma SenseCraft AI
 keywords:
-  - Cloud and Chain
+  - Nuvem e Cadeia
   - SenseCraft
   - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -14,11 +14,11 @@ last_update:
   date: 08/22/2024
   author: Frank
 createdAt: '2024-08-21'
-updatedAt: '2026-03-13'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/grove-vision-ai-v2-workspace/
 ---
 
-## Primeiros Passos
+## Introdução
 
 ### Conectar Grove-Vision AI v2
 
@@ -26,7 +26,7 @@ url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/grove-vision-ai-v2-workspa
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image10.png)
 
-2. Conecte o Grove - Vision AI V2 ao seu computador via USB e selecione a unidade de depuração USB Single/serial para conectar
+2. Conecte o Grove - Vision AI V2 ao seu computador via USB e selecione a unidade de depuração USB Single/serial para conectar.
 
 :::note
 
@@ -34,35 +34,35 @@ Use Chrome, Opera ou Edge para implantar modelos de IA no XIAO ESP32S3 Sense e n
 
 :::
 
-3. Depois de conectado ao dispositivo, ele lerá as informações do dispositivo, as informações do modelo e executará o modelo para inferência. Os usuários podem ajustar as configurações de Confidence e IoU para refinar a precisão da inferência do modelo.
+3. Depois que o dispositivo estiver conectado, ele lerá as informações do dispositivo, as informações do modelo e executará o modelo para inferência. Os usuários podem ajustar as configurações de Confidence e IoU para refinar a precisão da inferência do modelo.
 
-- Confidence：Confidence refere-se ao nível de certeza ou probabilidade atribuído por um modelo às suas previsões
-- IoU：IoU é usado para avaliar a precisão das caixas delimitadoras previstas em comparação com as caixas delimitadoras verdadeiras
+- Confidence: Confidence refere-se ao nível de certeza ou probabilidade atribuído por um modelo às suas previsões
+- IoU: IoU é usado para avaliar a precisão das caixas delimitadoras previstas em comparação com as caixas delimitadoras reais
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image11.png)
 
-### Substituir Modelo de IA
+### Substituir modelo de IA
 
 Se você precisar substituir o modelo que está sendo executado atualmente no dispositivo, a plataforma SenseCrfat AI oferece duas maneiras de fazer isso
 
-1. Selecionar um modelo disponível publicamente na plataforma SenseCraft AI ou um modelo na conta do usuário para substituí-lo.
+1. Selecione um modelo disponível publicamente na plataforma SenseCraft AI ou um modelo na conta do usuário para substituí-lo.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image12.png)
 
-2. Enviar diretamente um modelo para substituição.
+2. Envie diretamente um modelo para substituição.
 
-- Model Name：digite um nome
-- Model File ：Envie um modelo no formato tflite
-- ID Object: Classe de reconhecimento do modelo
+- Model Name: insira um nome
+- Model File: envie um modelo no formato tflite
+- ID Object: classe de reconhecimento do modelo
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image13.png)
 
-### Configration
+### Configuração
 
 Se você precisar enviar os resultados de inferência do dispositivo para o seu próprio serviço MQTT ou para a plataforma Sensecraft Data, configure o Wi-Fi e o MQTT. Em seguida, usaremos a plataforma Sensecraft Data como exemplo.
 
-1. Insira um Wi-Fi 2.4G válido.
-2. Acesse a [plataforma SenseCraft Data](https://sensecap.seeed.cc/portal/#/login) e faça login.
+1. Insira um Wi-Fi 2,4G válido.
+2. Acesse a [plataforma SenseCraft Data](https://sensecap.seeed.cc/portal/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_portal#/login) e faça login.
 
 :::note
 
@@ -77,15 +77,15 @@ Você pode usar a mesma conta para fazer login tanto no Sensecraft AI quanto na 
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image15.png)
 
-5. Após a criação do dispositivo, clique em "connect" e copie e cole sequencialmente Host, Port, clientId, Username e Password.
+5. Depois que o dispositivo for criado, clique em "connect" e, em seguida, copie e cole Host, Port, clientId, Username e Password na sequência.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image16.jpg)
 
-6. Depois de preencher o formulário, clique no botão Save. Quando o dispositivo tiver aplicado as alterações com sucesso, vá para a página Process. Você verá o IP Address e o Service Status: MQTT connected.
+6. Após preencher o formulário, clique no botão Save. Quando o dispositivo aplicar as alterações com sucesso, vá para a página Process. Você verá o IP Address e o Service Status: MQTT connected.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image17.png)
 
-7. Agora você pode retornar à página Development Kit da plataforma Sensecraft Data. Clique no EUI do dispositivo para entrar nos detalhes do dispositivo, onde poderá ver os resultados de inferência.
+7. Agora você pode retornar à página Development Kit da plataforma Sensecraft Data. Clique no EUI do dispositivo para entrar nos detalhes do dispositivo, onde você poderá ver os resultados de inferência.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image18.png)
 
@@ -95,31 +95,31 @@ Defina uma condição para que, quando o alvo detectado atender aos critérios, 
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image19.png)
 
-Exemplo: Se o dispositivo detectar Face e a confiança for maior que 43, acenda o LED amarelo do dispositivo
+Exemplo: se o dispositivo detectar Face e a confiança for maior que 43, acenda o LED amarelo do dispositivo
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image20.png)
 
 ### Treinar
 
-SenseCraft AI integra YoLo-World para gerar rapidamente modelos de IA de classe única com base na classe de entrada do usuário, que podem ser implantados diretamente em dispositivos Grove-Vision AI v2.
+SenseCraft AI integra YoLo-World para gerar rapidamente modelos de IA de classe única com base na classe inserida pelo usuário, que podem ser implantados diretamente em dispositivos Grove-Vision AI v2.
 
-### Geração Rápida
+### Geração rápida
 
 1. Insira a classe, clique no botão Quick Generate e aguarde a geração do modelo.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image21.png)
 
-2. Após o modelo ser gerado, você pode selecionar o modelo e clicar no botão Deploy to device para gravar o modelo gerado no dispositivo.
+2. Após a geração do modelo, você pode selecionar o modelo e clicar no botão Deploy to device para gravar o modelo gerado no dispositivo.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image22.jpg)
 
-3. Visualizar o resultado da inferência
+3. Visualize o resultado da inferência
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image23.png)
 
-### Capturar para Treinar
+### Capture to Train
 
-O modelo gerado rapidamente pode não ter alta precisão. Você pode clicar em Capture para Train para tirar e coletar imagens do alvo. Envie as imagens coletadas para o Yolo-World para treinamento otimizado. O modelo otimizado terá melhor precisão.
+O modelo gerado rapidamente pode não ter alta precisão. Você pode clicar em Capture to Train para tirar e coletar imagens do alvo. Envie as imagens coletadas para o Yolo-World para treinamento otimizado. O modelo otimizado terá melhor precisão.
 
 1. Use a câmera Grove-Vision AI v2 para mirar no alvo e clique no botão Capture para coletar imagens.
 
@@ -137,7 +137,7 @@ O modelo gerado rapidamente pode não ter alta precisão. Você pode clicar em C
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image27.png)
 
-## **Suporte Técnico**
+## **Suporte técnico**
 
 **Precisa de ajuda com o seu SenseCAP Indicator? Estamos aqui para ajudar você!**
 

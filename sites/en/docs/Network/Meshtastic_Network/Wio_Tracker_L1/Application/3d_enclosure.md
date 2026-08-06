@@ -14,7 +14,7 @@ last_update:
   date: 06/02/2026
   author: Seeed Studio
 createdAt: '2026-06-02'
-updatedAt: '2026-06-02'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/wio_tracker_l1_3d_enclosure/
 ---
 
@@ -133,3 +133,26 @@ A self-contained off-grid Meshtastic communicator built around Wio Tracker L1, c
 A balloon-borne flying laboratory built with Wio Tracker L1, combining environmental sensing, GPS tracking, image capture, and LoRa telemetry for low-cost aerial experiments.
 
 **Who made it:** [pasquale887](https://www.hackster.io/pasquale887)
+
+## Tech Support & Product Discussion
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

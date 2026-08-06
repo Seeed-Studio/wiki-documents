@@ -2166,6 +2166,29 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/cn_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/cn_respeaker_clip_basic_sdk_guide',
+            {
+              type: 'category',
+              label: '固件 SDK',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/cn_respeaker_clip_firmware_quick_start',
+                  label: '快速入门',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/cn_respeaker_clip_firmware_development_guide',
+                  label: '开发指南',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/cn_respeaker_clip_customization_at_command',
+                  label: '自定义 AT 命令',
+                },
+              ],
+            },
           ],
         },
         {
@@ -2222,6 +2245,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/cn_respeaker_clip_python_usage_stt_llm_transcribe',
+                'Sensor/reSpeaker_clip/cn_respeaker_clip_python_usage_stt_llm_transcribe_memory',
               ],
             },
           ],
@@ -4077,6 +4101,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_industrial_vision_monitoring_on_industrial',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Streaming_Vision_Agent_on_Jetson',
               ]
             },
             // Generative AI
@@ -4189,6 +4214,70 @@ const sidebars = {
               ]
             },
           ]
+        },
+        // JetPack 7.2
+        {
+          type: 'category',
+          label: 'JetPack 7.2',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Edge/NVIDIA_Jetson/JetPack_7_2/cn_JetPack_7_2_Overview',
+          },
+          items: [
+            {
+              type: 'category',
+              label: '刷写与 OTA',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/cn_JetPack72_Deep_Dive_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Flashing_OTA/cn_Flash_and_OTA_JetPack_7_2',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Migration/cn_JetPack_6_to_7_Migration_Playbook',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/cn_JetPack_7_2_Unified_Platform_ISO_SBSA',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/cn_JetPack_7_2_MAXN_SUPER_and_MIG',
+              ],
+            },
+            {
+              type: 'category',
+              label: '内核与多媒体',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Drivers/cn_JetPack72_AX210_AX200_WiFi_Setup_Guide_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Drivers/cn_JetPack_7_2_Camera_and_Multimedia_Compatibility',
+              ],
+            },
+            {
+              type: 'category',
+              label: '智能体 AI 与技能',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Agentic_AI/cn_Rapid_Prototyping_on_Jetson_with_NVIDIA_Skills_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Agentic_AI/cn_Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor_bk',
+              ],
+            },
+            {
+              type: 'category',
+              label: '内存优化',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/cn_JetPack_7_2_Memory_Optimization',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Yocto',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/cn_Build_and_Flash_Yocto_for_reComputer_Super_bk',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'AI 部署与应用',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/cn_Deploy_TensorRT_Edge-LLM_on_Jetpack7.2',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/AI_Inference/cn_industrial_vision_monitoring_on_industrial_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/AI_Inference/cn_JetPack_7_2_DeepStream',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Application/cn_Deploy_Full_Weight_GR00T_N1_7_TensorRT_on_AGX_Orin',
+              ],
+            },
+          ],
         },
         // Seeed Jetson DevelopTool
         {
@@ -4494,6 +4583,7 @@ const sidebars = {
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_ROS2_Integration',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_pinocchio',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_isaacsim',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_control_mit',
               ]
             }
           ]
@@ -4574,6 +4664,11 @@ const sidebars = {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/development_cases/cn_home_assistant',
                   label: 'Home Assistant 集成',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/cn_reachymini_voice_control_soarm',
+                  label: 'Reachy Mini 语音控制 SO-ARM',
                 },
               ],
             },

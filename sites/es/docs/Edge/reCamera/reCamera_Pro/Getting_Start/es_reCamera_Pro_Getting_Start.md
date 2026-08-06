@@ -32,7 +32,7 @@ Bienvenido a **reCamera Pro**. Esta guía le ayudará a completar la conexión d
 
 Antes de comenzar la configuración, asegúrese de haber preparado el siguiente hardware:
 * **Cable de datos**: Un cable USB Type-C con capacidad de transmisión de datos (no utilice un cable que solo admita carga).
-* **Fuente de alimentación**: Un cable de alimentación de CC (requisitos de especificación: **12V, 1A**, la fuente de alimentación estándar de fábrica es: 12V, 2A).
+* **Fuente de alimentación**: Un cable de alimentación de CC (requisitos de especificación: **12V, 1A**, la fuente de alimentación estándar de fábrica es: 12V, 3A).
 
 ### Pasos de conexión
 
@@ -42,6 +42,7 @@ Antes de comenzar la configuración, asegúrese de haber preparado el siguiente 
 ![Diagrama de la luz de estado del sistema y conexión de cables](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
 ### Explicación del indicador de estado
+
 El LED verde indica el estado del sistema, mientras que el LED rojo sirve como indicador de alimentación. La siguiente tabla describe el estado del dispositivo correspondiente a cada estado del LED verde.
 
 1. ***breathing*** : En este momento, representa que el dispositivo está en proceso de encendido.
@@ -70,7 +71,7 @@ Antes de intentar iniciar sesión en la interfaz web, asegúrese de que el cable
 ![Diagrama de inicio de sesión web e interfaz principal](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip Solución de problemas comunes
-Si la página no se carga después de introducir `192.168.42.1` en el sistema Windows, vaya directamente a la sección [4. Frequently Asked Questions and Troubleshooting (FAQ)](#4-frequently-asked-questions-and-troubleshootingfaq) al final de este documento para realizar una comprobación del adaptador de red.
+Si la página no se carga después de introducir `192.168.42.1` en el sistema Windows, vaya directamente a la sección [5. Frequently Asked Questions and Troubleshooting (FAQ)](#5-frequently-asked-questions-and-troubleshootingfaq) al final de este documento para realizar una comprobación del adaptador de red.
 :::
 
 ---
@@ -101,7 +102,15 @@ En este punto, puede **desconectar el cable USB Type-C** de forma segura para lo
 
 ---
 
-## 4. Preguntas frecuentes y solución de problemas (FAQ)
+## 4. Restablecimiento del dispositivo
+
+Existen dos métodos para restaurar el dispositivo a la configuración de fábrica:
+
+1. Mantenga pulsado el botón lateral durante aproximadamente 15 segundos, hasta que escuche un sonido de aviso que indique que el dispositivo ha entrado en el modo de restablecimiento. A continuación, espere hasta que la luz verde de estado permanezca encendida de forma continua para volver a iniciar sesión en el dispositivo.
+2. En la interfaz de administración web, haga clic en **Información del dispositivo** -> **Configuración del sistema** -> **Restablecimiento de fábrica** para restablecer el dispositivo.
+![Diagrama de restablecimiento de fábrica](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-Pro_reset_Device.jpg)
+
+## 5. Preguntas frecuentes y solución de problemas (FAQ)
 
 ### P1: ¿Qué debo hacer si no puedo entrar en la interfaz de inicio de sesión mediante 192.168.42.1 en el sistema Windows?
 
@@ -115,14 +124,13 @@ Si no puede abrir la interfaz web después de conectar el cable Type-C, normalme
 6. Asegúrese de que la configuración tenga marcadas **Obtain an IP address automatically** y **Obtain DNS server address automatically**.
 7. Haga clic en OK para guardar la configuración y vuelva a acceder a `192.168.42.1` en el navegador.
 
-<video 
-  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/reCamera-Pro-network_config.mp4" 
-  controls 
-  width="100%" 
+<video
+  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/reCamera-Pro-network_config.mp4"
+  controls
+  width="100%"
   preload="metadata">
   Su navegador no admite la reproducción de este vídeo.
 </video>
-
 
 ### P2: Después de conectar la reCamera al ordenador mediante el cable USB, el ordenador no pudo acceder a Internet
 

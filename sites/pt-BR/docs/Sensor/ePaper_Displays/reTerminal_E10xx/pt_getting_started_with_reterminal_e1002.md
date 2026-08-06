@@ -573,7 +573,7 @@ Se você perceber que o dispositivo não está carregando, tente substituir o ca
 - [Esquemático do reTerminal E1002 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004321_reTerminal_E1002_V1_2_SCH_251120.pdf)
 - [Datasheet do ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [Documentação da Plataforma SenseCraft HMI](https://wiki.seeedstudio.com/pt-br/sensecraft_hmi_overview)
-- [Arquivo STP do modelo 3D geral do exterior](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
+- [Arquivo STP do modelo 3D geral do exterior](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_E1001_E1002_3D.stp)
 <!-- - [GitHub Repository](/pt-br/getting_started_with_reterminal_e1002) -->
 
 ## Suporte Técnico & Discussão sobre o Produto
