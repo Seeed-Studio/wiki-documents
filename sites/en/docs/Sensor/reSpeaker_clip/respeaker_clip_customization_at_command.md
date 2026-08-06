@@ -1,6 +1,6 @@
 ---
-description: "A concrete, end-to-end walkthrough of adding a new AT command to the Clip"
-title: "Customization: Add a Custom AT Command"
+description: A concrete, end-to-end walkthrough of adding a new AT command to the Clip
+title: 'Customization: Add a Custom AT Command'
 keywords:
   - reSpeaker clip
   - firmware
@@ -16,7 +16,7 @@ last_update:
   date: 07/27/2026
   author: Ray
 createdAt: '2026-07-27'
-updatedAt: '2026-07-27'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/respeaker_clip_customization_at_command/
 ---
 

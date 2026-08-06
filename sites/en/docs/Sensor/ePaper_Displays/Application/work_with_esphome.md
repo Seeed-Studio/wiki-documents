@@ -17,7 +17,7 @@ last_update:
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/epaper_work_with_esphome/
-updatedAt: '2026-06-16'
+updatedAt: '2026-08-05'
 ---
 
 # Work with ESPHome

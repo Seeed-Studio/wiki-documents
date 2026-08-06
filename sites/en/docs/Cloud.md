@@ -16,7 +16,7 @@ last_update:
   date: 06/06/2025
   author: Jancee
 createdAt: '2023-01-05'
-updatedAt: '2026-03-20'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/Cloud/
 ---
 
