@@ -32,7 +32,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 The Seeed Studio XIAO SAMD21, which used to be named Seeeduino XIAO, is the first debut of the [Seeed Studio XIAO family, a series of powerful thumb-size dev boards compatible with Arduino](https://www.seeedstudio.com/xiao-series-page). It carries the powerful ATSAMD21G18A-MU which is a low-power microcontroller. On the other hand, this little board has good performance in processing but needs less power. It is designed in a tiny size and can be used for wearable devices and small projects.
 
-Seeed Studio XIAO SAMD21 has 14 PINs, which can be used for 11 digital interfaces, 11 mock interfaces, 10 PWM interfaces (d1-d10), 1 DAC output pin D0, 1 SWD pad interface, 1 I2C interface, 1 SPI interface, 1 UART interface, Serial communication indicator (T/R), Blink light (L) through pin multiplexing. The colors of LEDs(Power, L,RX,TX) are green, yellow, blue, and blue. Moreover, Seeed Studio XIAO SAMD21 has a Type-C interface that can supply power and download code. There are two reset buttons, you can short-connect them to reset the board.
+Seeed Studio XIAO SAMD21 has 14 PINs, which can be used for 11 digital interfaces, 11 analog interfaces, 10 PWM interfaces (d1-d10), 1 DAC output pin D0, 1 SWD pad interface, 1 I2C interface, 1 SPI interface, 1 UART interface, Serial communication indicator (T/R), Blink light (L) through pin multiplexing. The colors of LEDs(Power, L,RX,TX) are green, yellow, blue, and blue. Moreover, Seeed Studio XIAO SAMD21 has a Type-C interface that can supply power and download code. There are two reset buttons, you can short-connect them to reset the board.
 
 Powered by Microchip's SAMD21G18A ARM Cortex-M0+ 32-bit processor, XIAO SAMD21 Plus brings enhanced flexibility and expandability to the tiny and versatile XIAO SAMD21. While maintaining all the powerful features including Arduino, MicroPython, and PlatformIO compatibility, the Plus variant features redesigned castellations and backside pad layout, offering 16 additional GPIOs, integrated Li-ion battery management, dedicated Reset and Boot buttons, and an onboard programmable WS2812 RGB LED. It is ideal for advanced IoT projects, battery-powered wearables, embedded applications, and production-ready SoM designs.
 
@@ -54,7 +54,7 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 ## Features
 
 - Powerful MCU: Microchip ATSAMD21G18A Arm® Cortex®-M0+ processor at 48 MHz, with 256 KB Flash, 32 KB SRAM, and native USB support.
-- Expanded I/O: XIAO SAMD21 Plus retains the standard 11-pin XIAO interface and adds 16 GPIOs through 1.27 mm backside SMD castellations, with PWM, DAC, I2C, UART, SPI, I2S, and SWD support.
+- Expanded I/O: XIAO SAMD21 Plus retains the standard 14-pin XIAO layout and adds 16 GPIOs through 1.27 mm backside SMD castellations, with PWM, DAC, I2C, UART, SPI, I2S, and SWD support.
 - Integrated Power Management: Supports direct Li-ion battery connection, onboard charging, backflow protection, and charge-status indication.
 - Flexible Development: Compatible with Arduino IDE, PlatformIO, CircuitPython, and TinyGo.
 - Compact and Ecosystem-Ready: Maintains the 21 × 17.8 mm breadboard-friendly XIAO form factor while adopting the standardized XIAO Plus backside layout for expansion boards and custom carrier designs.
@@ -146,9 +146,13 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
     </tr>
     <tr>
       <th>Power</th>
-      <td colspan="2">
+      <td>
         Input Voltage (Type-C): 5 V<br />
-        Input Voltage (BAT): 5 V
+        BAT Input: Not supported
+      </td>
+      <td>
+        Input Voltage (Type-C): 5 V<br />
+        BAT Input: 3.7 V single-cell Li-ion/LiPo battery
       </td>
     </tr>
     <tr>
@@ -325,7 +329,7 @@ All pins on Seeed Studio XIAO SAMD21 support interrupts, but two pins cannot be 
 
 - Seeed Studio XIAO SAMD21 x1
 - Computer x1
-- USB typc cable x1
+- USB Type-C cable x1
 
 :::tip
 
@@ -400,7 +404,7 @@ Now, simply click the **Upload** button in the environment. Wait a few seconds a
  A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
 
 :::note
-the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet in resourses
+The maximum flash size is 8 KB. For more information, refer to the ATSAMD21G18A-MU datasheet in the resources section.
 :::
 
 #### XIAO SAMD21 Plus Blink
@@ -485,7 +489,7 @@ void loop() {
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/gst_3.gif" alt="pir" width={600} height="auto" /></p>
 
 :::note
-the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet in resourses
+The maximum flash size is 8 KB. For more information, refer to the ATSAMD21G18A-MU datasheet in the resources section.
 :::
 
 ## Pin Multiplexing

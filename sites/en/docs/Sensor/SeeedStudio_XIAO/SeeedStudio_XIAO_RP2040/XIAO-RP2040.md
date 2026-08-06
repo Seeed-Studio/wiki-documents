@@ -119,7 +119,7 @@ Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board.
         User LED × 1<br/>
         Power LED × 1<br/>
         Green LED × 1<br/>
-        Bule LED × 1<br/>
+        Blue LED × 1<br/>
         Red LED × 1<br/>
         RGB LED × 1<br/>
         Reset Button × 1<br/>
