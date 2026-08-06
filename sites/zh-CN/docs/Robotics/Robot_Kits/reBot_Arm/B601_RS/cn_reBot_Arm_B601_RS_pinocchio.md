@@ -65,77 +65,23 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_pinocchio_meshcat/
 6. **开源 & 可扩展**  
    所有代码开源，支持用户根据需求自定义控制算法和可视化效果。
 
-## 规格参数
-
 本教程硬件由 [矽递科技 Seeed Studio](https://www.seeedstudio.com/) 提供
 
-| 参数 | 规格 |
-|------|------|
-| 机械臂型号 | reBot Arm B601-RS Assembled Kit with Gripper |
-| 自由度 | 6+1 (含夹爪) |
-| 活动半径 | 754.7 mm (含夹爪) / 587.5 mm (无夹爪) |
-| 负载能力 | 额定负载 2.5 kg / 最大负载 5 kg |
-| 关节运动范围 | J1: ±150° / J2: 220° ~ 0° / J3: 220° ~ 0° / J4: ±90° / J5: ±90° / J6: ±180° / 夹爪: 345° ~ 0° |
-| 重复定位精度 | 0.1 mm |
-| 自重 | 6.7 kg |
-| 伺服电机 | RobStride 06 × 3 / RobStride 00 × 4 |
-| 通信方式 | CAN Bus @ 1 Mbps |
-| 工作电压 | DC 48V |
-| 电源 | DC 48V 15A |
-| 工作温度 | -20°C ~ 50°C |
-| 控制方式 | PC |
-
-### 支持的软件平台
-
-| 平台 | 支持状态 |
-|------|---------|
-| ROS1 | ✅ |
-| MoveIt1 | ✅ |
-| ROS2 | ✅ |
-| MoveIt2 | ✅ |
-| Python | ✅ |
-| LeRobot | ✅ |
-| Isaac Sim | ✅ |
-| Pinocchio | ✅ |
-
-### 关节电机参数
-
-| 参数 | RobStride 00 | RobStride 06 |
-|------|-------------|--------------|
-| 额定电压 | 48V | 48V |
-| 额定电流 | 4.7 Apk ± 10% | 14.3 Apk ± 10% |
-| 峰值电流 | 15.5 Apk ± 10% | 57 Apk ± 10% |
-| 额定扭矩 | 5 N.m | 11 N.m |
-| 峰值扭矩 | 14 N.m | 36 N.m |
-| 额定转速 | 100 rpm ± 10% | 100 rpm ± 10% |
-| 空载最大转速 | 315 rpm ± 10% | 480 rpm ± 10% |
-| 减速比 | 10 : 1 | 9 : 1 |
-| 极对数 | 28 | — |
-| 电机电感 | 750 ± 20 μH | 0.165 mH ± 10% |
-| 线电阻 | 1.5 ± 10% Ω | 0.23 ± 10% Ω |
-| 外径 | 57 mm | 82 mm |
-| 高度 | 51 ± 1 mm | 49 ± 0.5 mm |
-| 电机重量 | 310 g ± 3 g | 621 g |
-| 编码器分辨率 | 14 bit (单圈绝对值) | |
-| 编码器数量 | 2 | |
-| 编码器类型 | 磁编码器（单圈） | |
-| 控制接口 | CAN @ 1 Mbps | |
-| 调试接口 | UART @ 921600 bps | |
-| 控制模式 | MIT Mode / Speed Mode / Position Mode / Torque Mode | |
-| 保护功能 | 过温保护：电机热敏电阻温度超过 145°C<br />欠压保护：电机电压低于保护电压 12V | |
-
-## 材料清单（BOM）
-
-| 部件 | 数量 | 是否包含 |
-|--|--|--|
-| reBot Arm B601-RS 机械臂 | 1 | ✅ |
-| CANABLE | 1 | ✅ |
-| 电源适配器 (DC 48V 15A) | 1 | ✅ |
-| USB-C 线缆 | 1 | ✅ |
-| 夹爪 | 1 | ✅ |
 
 
 ## 环境要求
+
+:::caution 前置要求 — 请先完成机械臂快速入门
+开始本教程前，请**务必**先完整跑通 **[reBot Arm B601-RS 快速入门](/rebot_b601_rs_getting_started)** 文档，至少包含以下前置步骤：
+
+- 机械臂开箱、接线与上电自检
+- CAN 通道建立（`can0` @ 1 Mbps）
+- 所有关节的零点初始化
+
+本教程默认机械臂已在 CAN 总线正常响应、关节零点已标定，且操作人员熟悉**70% 臂展工作空间**的安全限制。跳过快速入门直接上手本教程。
+
+机械臂在运行示例时机械臂需要在70%以内的臂展工作空间内工作，超出工作空间长时间停留会出现二号关节电机进入堵转保护，导致机械臂掉落。
+:::
 
 | 项目 | 要求 |
 |------|------|
@@ -143,10 +89,6 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_pinocchio_meshcat/
 | **操作系统** | Ubuntu 22.04+ |
 | **通信接口** | CAN 接口 (can0) |
 | **电源要求** | DC 48V 15A |
-
-:::caution
-机械臂在运行示例时机械臂需要在70%以内的臂展工作空间内工作，超出工作空间长时间停留会出现二号关节电机进入堵转保护，导致机械臂掉落。
-:::
 
 ---
 
@@ -161,7 +103,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### 步骤 2. 同步环境（安装所有依赖）
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git 
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git 
 cd reBotArm_control_py
 uv sync
 ```
@@ -187,7 +129,7 @@ hardware_yaml: "rebotarm_rs.yaml"
 :::
 
 
-### 调试工具
+### can 设置 & 调试工具
 
 :::tip can通道设置
 运行实机控制示例和调试电机前，需要设置can通道（PCAN-USB有重新插拔需要再次配置此项）：
@@ -205,7 +147,10 @@ sudo ip link set can0 up    #拉起can0
 
 :::
 
-### 单电机控制台 — Robostride RS06 (`0x01rs06_test.py`)
+<details>
+<summary>调试用工具（仅异常情况使用）</summary>
+
+**单电机控制台 — Robostride RS06 (`0x01rs06_test.py`)**
 
 直接使用 motorbridge SDK 进行 Robostride RS06 单电机测试。RS06 电机通过 **CAN 总线** 通信。
 
@@ -235,7 +180,7 @@ uv run python example/0x01rs06_test.py
 
 ---
 
-### 零点校准与角度监控 (`2_zero_and_read.py`)
+**零点校准与角度监控 (`2_zero_and_read.py`)**
 
 自动设置所有关节零点，实时显示关节角度。
 
@@ -248,6 +193,101 @@ uv run python example/2_zero_and_read.py
 ```
 
 ---
+</details>
+
+## 调节 MIT / POS_VEL 控制器参数 {#tune-controller-params}
+
+本节说明**如何修改**机械臂各关节在 **MIT 模式** 与 **POS_VEL 模式**下的控制器参数，以及修改后如何让改动生效。
+
+:::tip 本节只讲「在哪里改 / 怎么改」，不讲「该改多少」
+合适的参数只能通过**实测整定**得到。本节只介绍：参数存放在哪里、每个字段控制什么、修改后如何让改动生效并验证。具体整定策略（如试凑法、Ziegler‑Nichols 等）请自行学习。
+:::
+
+### 配置文件位置
+
+| 硬件版本 | 电机配置文件 | 切换入口 |
+|---|---|---|
+| **reBot Arm B601-RS**（本文档） | `config/rebotarm_rs.yaml` | `config/rebotarm.yaml` 中设置 `hardware_yaml: "rebotarm_rs.yaml"` |
+| **reBot Arm B601-DM** | `config/rebotarm_dm.yaml` | `config/rebotarm.yaml` 中设置 `hardware_yaml: "rebotarm_dm.yaml"` |
+
+:::caution 不要直接编辑 `rebotarm.yaml`
+该文件只包含 `hardware_yaml: ...` 一行；电机参数全部在 `rebotarm_rs.yaml` / `rebotarm_dm.yaml` 里。
+:::
+
+### 配置文件结构
+
+每个关节都是一个独立条目，按**控制模式**分组：
+
+```yaml
+joints:
+  - name: joint1
+    motor_id: 0x01
+    feedback_id: 0xFD
+    model: "rs-06"
+    vendor: "robstride"
+    MIT:
+      kp: 50.0
+      kd: 3.0
+    POS_VEL:
+      vel_kp: 12.0
+      vel_ki: 0.1
+      pos_kp: 13.0
+      vlim: 10.0
+  # ... joint2 ~ joint6 同结构 ...
+```
+
+定位规则：
+
+- **按关节名定位**：要修改哪个关节，就找到 `- name: jointX` 那一段；
+- **按模式定位**：在该 joint 段下，`MIT:` 子表放 MIT 模式参数，`POS_VEL:` 子表放 POS_VEL 模式参数；
+- **当前模式决定下发哪组**：脚本里通过 `mode mit` / `mode posvel` 切换，电机实际收到的是对应子表下的参数。
+
+### MIT 模式字段含义
+
+| 字段 | 作用 |
+|---|---|
+| `kp` | 位置环比例增益：跟踪目标位置的「硬度」。 |
+| `kd` | 速度环阻尼增益：抑制位置误差带来的振荡。 |
+
+### POS_VEL 模式字段含义
+
+| 字段 | 作用 |
+|---|---|
+| `vel_kp` | 速度环比例增益。 |
+| `vel_ki` | 速度环积分增益。 |
+| `pos_kp` | 位置环比例增益（与 `vlim` 联动实现位置‑速度混合控制）。 |
+| `vlim` | 速度上限，限制最大运动速度。 |
+
+:::warning 字段定义因厂商而异
+Damiao（DM）与 Robostride（RS）电机的协议层单位不同，**同一字段名下的「大小」没有跨厂商可比性**。修改 RS 的 `vel_kp` 与修改 DM 的 `vel_kp` 含义不同，请按各自 yaml 内的字段顺序理解，不要跨配置文件做数值类比。
+:::
+
+### 修改流程
+
+1. **关闭所有运行中的脚本**。电机处于使能状态时改 YAML 不会立即生效，且容易出现不一致行为。
+2. **编辑对应的 yaml 文件**：
+   ```bash
+   # 以 RS 为例
+   vim config/rebotarm_rs.yaml
+   ```
+   - 只改你需要调整的关节（如 `joint1`），不要动其他无关关节；
+   - 同一关节内只改需要调整的模式（MIT 或 POS_VEL），不要无意义地改两个模式的字段。
+3. **保持 YAML 缩进**：每级缩进 2 空格，键值对用 `: ` 分隔。写错缩进会导致 `yaml.safe_load` 解析失败，所有参数回落到默认值。
+4. **保存后重启脚本**。YAML 在脚本启动时一次性读取，**运行时修改不会立即生效**。
+5. **单关节验证**：建议先用 demo3（MIT）/ demo4（POS_VEL）之类的脚本对**单个关节**小幅运动验证改动效果，再做整臂测试。
+
+### 验证改动是否生效
+
+- **运行时观察**：在 demo3 / demo4 中使能电机 → `state` 查看状态；若参数没变化或电机表现与改前完全一样，说明 YAML 改错或被默认配置覆盖。
+- **YAML 自检**：用 Python 直接解析并打印某关节的字段，确认就是你刚改的值：
+  ```bash
+  uv run python -c "import yaml; print(yaml.safe_load(open('config/rebotarm_rs.yaml'))['joints'][0])"
+  ```
+- **快速回滚**：直接 `git checkout config/rebotarm_rs.yaml` 即可恢复仓库默认参数。
+
+:::caution 不要一次跨多关节大幅调整
+多关节同时大幅改动 `kp` / `kd` 后，若某关节方向或极性填错，整臂可能瞬间出现抖动、过流甚至撞限位。请**逐关节、逐模式、小步迭代**。
+:::
 
 ## 基础控制测试
 
@@ -266,12 +306,23 @@ uv run python example/3_mit_control.py
 > q # 退出系统
 ```
 :::danger
-注意，在MIT控制模式下，机械臂的速度会很快，需要保证人或其他设备远离机械臂的工作半径。
+本示例**没有路径规划与速度规划**，输入的目标关节角度过大会让电机以很快的速度运动，甚至**直接触发电机过流保护**。建议：
+
+- 先输入**小角度**验证效果（例如单个关节只动 5~10 度），确认电机响应与方向无误后再逐步放大；
+- 本节**没有内置的平滑轨迹版本**，若需要在多次目标之间平稳过渡，请谨慎控制目标与到位节奏，或参考后续的 [平滑轨迹的逆运动学控制 (8_arm_traj_control.py)](#demo8-traj-control) 把最小 jerk / 加减速规划的思路移植进自己的脚本；
+- 运行时人或其他设备务必远离机械臂工作半径。
 :::
 
 ---
 
-### POS_VEL 模式全关节控制 (`4_pos_vel_control.py`)
+<details>
+<summary>POS_VEL 模式全关节控制（reBot RS 通常不推荐，按需查看）</summary>
+
+:::warning 适用性提示
+对于 **reBot Arm B601-RS** 而言，POS_VEL（位置‑速度）模式需要**单独调参**才能获得较好的使用效果（默认参数下表现通常不如 MIT 模式平滑）。因此在常规流程中**不推荐使用**该模式，但出于部分用户确有此需求，**保留该 demo 供按需参考与调参**。如果无特殊场景，建议直接使用上面的 MIT 模式示例。
+:::
+
+**POS_VEL 模式全关节控制 (`4_pos_vel_control.py`)**
 
 输入所有关节的目标角度，将在POS_VEL（位置-速度）混合控制模式下完成各电机的控制，在到达指定角度时运动得更加平稳、可控，减少震动。
 
@@ -285,6 +336,7 @@ uv run python example/4_pos_vel_control.py
 ```
 
 ---
+</details>
 
 ## 运动学测试
 
@@ -338,18 +390,22 @@ uv run python example/6_ik_test.py
 uv run python example/7_arm_ik_control.py
 
 #用法A
-> 0.3 0.0 0.4 # 仅控制位置（姿态默认为0），让机械臂末端走到前方 0.3 米，上方 0.4 米的位置。
+> 0.3 0.0 0.3 # 仅控制位置（姿态默认为0），让机械臂末端走到前方 0.3 米，上方 0.3 米的位置。
 
 #用法B
-> 0.3 0.0 0.4 0.0 0.0 0.5 #同时控制位置和姿态：走到指定位置，同时手腕偏航角旋转 0.5 弧度。
+> 0.3 0.0 0.3 0.0 0.0 0.5 #同时控制位置和姿态：走到指定位置，同时手腕偏航角旋转 0.5 弧度。
 
 > ctrl + c # 退出系统
 ```
 :::danger
-注意，在该实例代码下机械臂的速度会很快，需要保证人或其他设备远离机械臂的工作半径。
+本示例**没有路径规划与速度规划**，输入的目标角度过大会直接让电机以很快的速度运动，甚至**直接触发电机过流保护**。建议：
+
+- 先输入**小角度**验证效果（例如让末端在当前位置附近只动 5~10 cm），确认姿态与方向无误后再逐步放大；
+- 如需在两次目标之间平滑过渡，请直接跳到下一节的 [平滑轨迹的逆运动学控制 (8_arm_traj_control.py)](#demo8-traj-control) 使用带最小 jerk / 加减速规划的版本；
+- 运行时人或其他设备务必远离机械臂工作半径。
 :::
 
-### 平滑轨迹的逆运动学控制 (`8_arm_traj_control.py`)
+### 平滑轨迹的逆运动学控制 (`8_arm_traj_control.py`) {#demo8-traj-control}
 
 在 MIT 模式下使用逆运动学（IK），在目标时间内自动规划出一条匀速或带平滑加减速的运动轨迹，避免了关节剧烈抖动。
 
@@ -375,6 +431,10 @@ uv run python example/8_arm_traj_control.py
 
 > ctrl + c # 退出系统
 ```
+
+:::tip 位姿偏差怎么办？
+如果运行本示例时发现**读取到的末端位姿**与**下发的目标位姿**存在偏差，且**该位姿本身是可达的**（不在工作空间外、不是奇异位姿），那么问题很可能出在 MIT / POS_VEL 控制器的参数上。此时请参考前面的 [调节 MIT / POS_VEL 控制器参数](#tune-controller-params) 章节，按"单关节、逐模式、小步迭代"的方式手动整定 `kp` / `kd` 等参数；整定完成后再回到本示例验证。
+:::
 
 ### 重力补偿控制 — 基础版 (`9_gravity_compensation.py`)
 
