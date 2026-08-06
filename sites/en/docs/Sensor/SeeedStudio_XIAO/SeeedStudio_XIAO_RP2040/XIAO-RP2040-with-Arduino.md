@@ -13,15 +13,15 @@ updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/
 ---
 
-# **Seeed Studio XIAO RP2040 with Arduino**
+# Seeed Studio XIAO RP2040 with Arduino
 
 This is the page that we are going to connect the Seeed Studio XIAO RP2040 and program with Arduino. There will be several projects about Pin Multiplexing as well.
 
-## **Getting Started**
+## Getting Started
 
 First, we are going to connect the Seeed Studio XIAO RP2040 to the computer and upload a simple code from Arduino to check whether the board is functioning well.
 
-### **Hardware Setup**
+### Hardware Setup
 
 **Materials required:**
 
@@ -38,15 +38,18 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg" /></div>
 
-- Step 2. If the "RPI-RP2" disk is shown on the PC and the Power LED on the Seeed Studio XIAO RP2040 is turned on, the connnection is complete.
+- Step 2. If the **RPI-RP2** disk is shown on the PC and the Power LED on the Seeed Studio XIAO RP2040 is turned on, the connection is complete.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
-### **Software Setup**
+### Software Setup
 
 - **Step 1.** Download and Install the latest version of Arduino IDE according to your operating system
 
-<p style={{textAlign: 'center'}}><a href="https://www.arduino.cc/en/software"target="_blank"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/Download_IDE.png" /></a></p>
+  <div class="download_arduino_container" style={{textAlign: 'center'}}>
+      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
+  </div>
+  <br></br>
 
 - **Step 2.** Launch the Arduino application.
 
@@ -54,24 +57,17 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 Navigate to **File** > **Preferences**, and fill **Additional Boards Manager URLs** with the url below:
 
-`https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`
+```URL
+https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+```
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/5.png"/></div>
 
-Navigate to **Tools-> Board-> Boards Manager...**, type the keyword "**RP2040**" in the searching blank. Select the lastest version of "Raspberry Pi Pico/RP2040" and install it.
+Navigate to **Tools-> Board-> Boards Manager...**, type the keyword **arduino-pico** in the searching blank. Select the latest version of **Raspberry Pi Pico/RP2040/RP2350** and install it.
 
-:::note Attention
+<div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/arduino_2.png"/></div>
 
-The on-board package named **Seeed XIAO RP2040 is no longer available**, please do not download and use it!
-
-Install the "Raspberry Pi Pico/RP2040" package, which includes the "Seeed XIAO RP2040" board.
-
-<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/3.png"/></div>
-:::
-
-<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/2.png"/></div>
-
-- **Step 4.** Select your board and port.
+- **Step 4.** Select your board and port. If the serial port is not shown, enter BOOT mode first. See [Hardware Setup](#hardware-setup).
 
 - **Step 5.** Open the Blink example by navigating **"File --> Examples --->01.Basics --> Blink"**
 
@@ -99,11 +95,11 @@ Once uploaded, you should be able to see the pin 25 Green (USER) LED on the boar
 If uploading the Arduino program fails, try holding down the "BOOT" button and then clicking the "RUN" button. At this point, Seeed Studio XIAO RP2040 will enter boot mode (your computer will load a removable disk), and you will be able to upload the Arduino program again.
 :::
 
-## **Pin Multiplexing on the Seeed Studio XIAO RP2040**
+## Pin Multiplexing on the Seeed Studio XIAO RP2040
 
 The Seeed Studio XIAO RP2040 contains 11 digital pins, 4 analog pins, 11 PWM Pins,1 I2C interface, 1 UART interface, 1 SPI interface, 1 SWD Bonding pad interface. We are going to provide the tutorials about these interfaces to make it helpful for your projects.
 
-### **Digital**
+### Digital
 
 Connect a pushbutton to Pin D0 and an LED to Pin 25. Then upload the following code to control the ON/OFF of LED using the pushbutton.
 
@@ -139,7 +135,7 @@ void loop() {
 }
 ```
 
-### **Analog**
+### Analog
 
 Connect a potentiometer to Pin A0 and an LED to Pin 25. Then upload the following code to control the blinking interval of the LED by rotating the potentiometer knob.
 
@@ -166,7 +162,7 @@ int sensorValue = analogRead(sensorPin);
 }
 ```
 
-### **Serial**
+### Serial
 
 Use pin D6 as the TX pin of UART and pin D7 as RX pin of UART to send the "Hello World!" message
 
@@ -182,15 +178,95 @@ void loop() {
 }
 ```
 
-### **RGB LED**
+### Three-Color Indicator LEDs
 
-Pin 11 is the enable pin of RGB LED. You can light up the RGB LED by setting the Pin 11 high. Here we are going to make it go flash. First, we need to add a third-party library.
+On the XIAO RP2040, next to the power indicator are three discrete single-color LEDs.GPIO17 controls the red LED, GPIO16 controls the green LED, and GPIO25 controls the blue LED.Macro definitions are listed below.
+
+```c
+#define PIN_LED_R      (17u)
+#define PIN_LED_G      (16u)
+#define PIN_LED_B      (25u)
+```
+
+Reference code
+
+```cpp
+/*
+ * RP2040 RGB LED tutorial
+ *
+ * LED_R: GPIO17
+ * LED_G: GPIO16
+ * LED_B: GPIO25
+ *
+ * This example assumes each LED turns on when its GPIO is HIGH.
+ * If your hardware is active-low, swap HIGH and LOW in setLed().
+ */
+
+
+// Turn on one LED at a time and turn the other two LEDs off.
+void setLed(uint8_t pin)
+{
+  digitalWrite(PIN_LED_R, LOW);
+  digitalWrite(PIN_LED_G, LOW);
+  digitalWrite(PIN_LED_B, LOW);
+
+  digitalWrite(pin, HIGH);
+}
+
+void setup()
+{
+  // Configure the three LED GPIO pins as outputs.
+  pinMode(PIN_LED_R, OUTPUT);
+  pinMode(PIN_LED_G, OUTPUT);
+  pinMode(PIN_LED_B, OUTPUT);
+
+  // Start with all LEDs turned off.
+  digitalWrite(PIN_LED_R, LOW);
+  digitalWrite(PIN_LED_G, LOW);
+  digitalWrite(PIN_LED_B, LOW);
+}
+
+void loop()
+{
+  // Show red, green, and blue in sequence.
+  setLed(PIN_LED_R);
+  delay(500);
+
+  setLed(PIN_LED_G);
+  delay(500);
+
+  setLed(PIN_LED_B);
+  delay(500);
+}
+```
+
+- The LEDs will be lit sequentially.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/third_led.gif" style={{width:400, height:'auto'}}/></div><br />
+
+### RGB LED
+
+:::caution
+
+The RGB LEDs may cause eye strain or injury if operated at excessive brightness; proper eye protection is recommended.
+
+:::
+
+On the XIAO RP2040 series, GPIO11 (NEOPIXEL_POWER) serves as the enable pin, while GPIO12 (PIN_NEOPIXEL) controls RGB color output. Follow the steps below for usage.
+
+:::tip
+
+The XIAO RP2040 is equipped with an SMD Round Lens RGB LED, whereas the XIAO RP2040 Plus uses an SMD Flat Top RGB LED.
+
+:::
+
+First, we need to add a third-party library.
 
 - **Step 1.** Open Arduino IDE, navigate to `Sketch > Include Library > Manage Libraries...` to search the library.
 
-<div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
-Type the keyword "Adafruit_NeoPixel" library in Ardunio library Manager and install the lastest version.
+Type the keyword **Adafruit_NeoPixel** library in Arduino Library Manager and install the latest version.
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/boardurl6.png" /></div>
 
@@ -199,48 +275,65 @@ Type the keyword "Adafruit_NeoPixel" library in Ardunio library Manager and inst
 ```cpp
 #include <Adafruit_NeoPixel.h>
 
-int Power = 11;
-int PIN  = 12;
 #define NUMPIXELS 1
 
-Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   pixels.begin();
-  pinMode(Power,OUTPUT);
-  digitalWrite(Power, HIGH);
 
+  pinMode(NEOPIXEL_POWER, OUTPUT);
+  digitalWrite(NEOPIXEL_POWER, HIGH);
+
+// Set overall brightness (0~255)
+// Recommended eye-friendly range: 10~50
+  pixels.setBrightness(50);
 }
 
-void loop() { 
+
+void loop() {
+
   pixels.clear();
   pixels.setPixelColor(0, pixels.Color(15, 25, 205));
-  delay(400);
   pixels.show();
+  delay(400);
+
+
   pixels.clear();
   pixels.setPixelColor(0, pixels.Color(103, 25, 205));
-  delay(400);
   pixels.show();
+  delay(400);
+
+
   pixels.clear();
   pixels.setPixelColor(0, pixels.Color(233, 242, 205));
-  delay(400);
   pixels.show();
+  delay(400);
+
+
   pixels.clear();
   pixels.setPixelColor(0, pixels.Color(233, 23, 23));
-  delay(400);
   pixels.show();
+  delay(400);
+
+
   pixels.clear();
   pixels.setPixelColor(0, pixels.Color(12, 66, 101));
+  pixels.show();
   delay(400);
+
+
+  pixels.clear();
   pixels.show();
   delay(500);
-
 }
 ```
 
 The RGB LED will display rainbow color.
 
-### **I2C**
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/rgb_led.gif" /></div>
+
+### I2C
 
 Here we are going to connect the Seeed Studio XIAO RP2040 with [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) through IIC and display "Hello world".
 
@@ -254,7 +347,7 @@ We are going use PIN 5 as the SCL pin and PIN 4 as the SDA pin.
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
-Type the keyword "U8G2" library in Ardunio library Manager and install the lastest version.
+Type the keyword "U8G2" library in Arduino Library Manager and install the latest version.
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/boardurl7.png" /></div>
 
@@ -293,7 +386,7 @@ Results are shown as:
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl8.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl8.png" alt="pir" width={600} height="auto" /></p>
 
-### **SPI**
+### SPI
 
 Here we are going to connect [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) through SPI and display "Hello World". The OLED display supports both IIC and SPI communication and yet the default communication mode is IIC. It is essential to [change the IIC function to the SPI function](https://wiki.seeedstudio.com//Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/) before strarting.
 
@@ -307,11 +400,11 @@ We are going use PIN 8 as the SCK pin, PIN 9 as the MISO pin and PIN10 as the MO
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
-Type the keyword "Adafruit_GFX" library in Ardunio library Manager and install the lastest version.
+Type the keyword "Adafruit_GFX" library in Arduino Library Manager and install the latest version.
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/board10.png" /></div>
 
-Type the keyword "Adafruit_SSD1306" library in Ardunio library Manager and install the lastest version.
+Type the keyword "Adafruit_SSD1306" library in Arduino Library Manager and install the latest version.
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl11.png" /></div>
 
