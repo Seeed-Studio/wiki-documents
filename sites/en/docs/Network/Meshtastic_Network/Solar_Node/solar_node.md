@@ -11,7 +11,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-04-08'
-updatedAt: '2026-05-29'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/meshtastic_solar_node/
 ---
 

@@ -15,6 +15,8 @@ last_update:
   date: 08/03/2026
   author: HaoChen
 updatedAt: '2026-08-03'
+createdAt: '2026-08-03'
+url: https://wiki.seeedstudio.com/streaming_vision_agent_on_jetson/
 ---
 
 # Streaming Vision Agent on Jetson

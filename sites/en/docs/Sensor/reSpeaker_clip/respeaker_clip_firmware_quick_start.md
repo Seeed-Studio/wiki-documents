@@ -1,5 +1,5 @@
 ---
-description: "End-to-end path from a clean machine to a reSpeaker Clip that boots, records, and is controllable from the host SDK — the baseline before custom or AI-assisted firmware work, and how to decide whether firmware work is the right path."
+description: End-to-end path from a clean machine to a reSpeaker Clip that boots, records, and is controllable from the host SDK — the baseline before custom or AI-assisted firmware work, and how to decide whether firmware work is the right path.
 title: Getting Started with the reSpeaker Clip Firmware SDK
 keywords:
   - reSpeaker clip
@@ -16,7 +16,7 @@ last_update:
   date: 07/28/2026
   author: Ray
 createdAt: '2026-07-28'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/respeaker_clip_firmware_quick_start/
 ---
 
