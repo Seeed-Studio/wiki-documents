@@ -1,144 +1,160 @@
 ---
-description: Discover Seeed’s SenseCraft Cloud services — a powerful, industrial-grade platform designed for efficient data management, real-time operations, and scalable IoT applications. Learn more about how SenseCraft supports your industrial IoT cloud deployment.
-title: Cloud
+description: Choose the right SenseCraft product for edge AI, hardware coding, robotics, IoT data, dashboards, fleet management, and SenseCAP MX, then open the relevant platform, download, or guide.
+title: SenseCraft Products and User Guides
 keywords:
-  - SenseCraft Matrix
   - SenseCraft
   - SenseCraft AI
-  - SenseCraft Cloud
-  - Industrial IoT Cloud
-  - Data Management
-  - Device management
-  - Real-Time Operations
+  - CodeCraft
+  - reComputer AI Lab
+  - SenseCraft Robotics
+  - SenseCraft Data Platform
+  - SenseCraft App
+  - SenseCraft Seeedash
+  - SenseCraft HMI
+  - SenseCraft Fleet
+  - SenseCAP MX
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Cloud
 last_update:
-  date: 06/06/2025
+  date: 08/06/2026
   author: Jancee
 createdAt: '2023-01-05'
-updatedAt: '2026-03-20'
+updatedAt: '2026-08-06'
 url: https://wiki.seeedstudio.com/Cloud/
 ---
 
+# SenseCraft Products and User Guides
 
-Cloud services are a vital component that enable processed data management from computing boards and provide users with real-time operations. This page introduces Seeed’s industrial-grade SenseCraft cloud services, along with other cloud service applications tailored for diverse industrial IoT needs. Through a robust cloud infrastructure, Seeed empowers users to securely store, analyze, and leverage processed data, facilitating data-driven decision-making and enhancing operational efficiency across various domains.
+SenseCraft is Seeed Studio's family of software and cloud services for creating AI applications, programming hardware, working with robotics, connecting devices and data, designing dashboards, and operating edge fleets. Use this page to choose the product that matches your goal and then open its platform, download, quick start, or documentation.
 
-## SenseCraft Cloud Service
+:::tip Not sure where to start?
+Choose the outcome you want in the table below. Product names and links on this page follow the current SenseCraft product catalog; older names that still appear in some guides are explained near the end of the page.
+:::
 
-<strong><font color={'8DC215'} size={"4"}>This section highlights different cloud services offered by Seeed Studio, tailored for various industrial IoT applications. You can explore more in the following areas:</font></strong>
+## Choose by goal
 
-- Catalogue of SenseCraft ecosystem and cloud services.
-- Instructions for data and device management for each cloud product
-- APIs for various connection purposes
-- Introduction to cloud services
+| I want to... | Start with | First step |
+| --- | --- | --- |
+| Deploy a pretrained model or train an edge AI model | **SenseCraft AI** | [Read the Wiki overview](/sensecraft-ai/overview/) or [open SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) |
+| Turn a natural-language idea into a hardware project | **CodeCraft** | [Read the CodeCraft user guide](/codecraft/codecraft-overview/) or [open CodeCraft](https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home) |
+| Find models and conversion tools for reComputer devices | **reComputer AI Lab** | [Open reComputer AI Lab](https://sensecraft.seeed.cc/ai-lab/?lang=en&utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=ai_lab_home) |
+| Prepare a robotic-arm data collection and training workflow | **SenseCraft Robotics** | [Explore SenseCraft Robotics](https://sensecraft.seeed.cc/en/robotics?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_home) |
+| Connect SenseCAP sensors or gateways and manage their data | **SenseCraft Data Platform** | [Follow the platform quick start](/cloud/sensecraft-data/sensecraft-data-platform/overview/) |
+| Configure supported devices and view sensor data on a phone | **SenseCraft App** | [Read the App overview](/sensecraft-app/overview/) or [download the App](https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_app) |
+| Design dashboards and deploy them to supported displays | **SenseCraft Seeedash** | [Open the design platform](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home) |
+| Deploy applications and operate a group of edge devices | **SenseCraft Fleet** | [Follow the Fleet quick start](https://seeed-fleet.com/docs?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_quick_start) |
+| Find an industry solution rather than assemble products myself | **SenseCraft Solution** | [Browse Seeed industry solutions](https://www.seeed.cc/solutions) |
+| Manage supported SenseCAP MX decentralized-network devices | **SenseCAP MX** | [Open the SenseCAP MX documentation](https://www.sensecapmx.com/docs/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_docs) |
 
-### SenseCraft Data Platform / Blockchain Dashboard
+## Create AI and hardware applications
 
-<div class="title_container">
-    <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft Data Platform</font></div>
-            <p class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>The SenseCraft Data Platform provides data monitoring for SenseCAP sensor nodes and gateways.</font></p>
-    </div>
-</div>
+### SenseCraft AI
 
-<div class="intro_container">
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP MX Dashboard</font></div>
-            <a href="/sensecraft-blockchain/blockchain-dashboard/dashboard-basics" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Dashboard Basics</font></span></a>
-            <br/>
-            <a href="/sensecraft-blockchain/blockchain-dashboard/dashboard-registration" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Dashboard Registration</font></span></a>
-            <br/>
-            <a href="/sensecraft-blockchain/blockchain-dashboard/hotspot-registration" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Hotspot Registration</font></span></a>
-            <br/>
-    </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCraft Data Management</font></div>
-            <a href="/sensecraft-data-platform/tutorials/data-management#table" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Detailed Data in Table View</font></span></a>
-            <br/>
-            <a href="/sensecraft-data-platform/tutorials/data-management#graph" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Graphical Data in Graph View</font></span></a>
-            <br/>
-            <a href="/sensecraft-data-platform/tutorials/data-management#check-account-info" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Account Information</font></span></a>
-            <br/>
-    </div>
-</div>
+Use SenseCraft AI to explore pretrained models, train supported model types, create AI applications, and deploy compatible models to Seeed edge AI hardware.
 
-<div class="independent_container">
-    <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCraft Device Management</font></div>
-            <a href="/sensecraft-data-platform/tutorials/device-management#gateway" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>SenseCAP Gateways</strong> - View EUI, Name, Status, and more.</font></span></a>
-            <br/>
-            <a href="/sensecraft-data-platform/tutorials/device-management#node-group-management" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>SenseCAP Node Groups</strong> - Manage devices conveniently by groups.</font></span></a>
-            <br/>
-            <a href="/sensecraft-data-platform/tutorials/device-management#sensor-node-management" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>SenseCAP Sensor Nodes</strong> - View EUI, Name, Status, Data Type, and more.</font></span></a>
-            <br/>
-            <a href="/sensecraft-data-platform/tutorials/device-management#general-information" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>General Device Information</strong> - Battery status, recent online records, and more.</font></span></a>
-            <br/>
-            <a href="/sensecraft-data-platform/tutorials/device-management#settings" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Settings</strong> - Adjust data collection frequency and other settings.</font></span></a>
-            <br/>
-            <a href="/sensecraft-data-platform/tutorials/device-management#location" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Device Location</strong></font></span></a>
-            /
-            <a href="/sensecraft-data-platform/tutorials/device-management#bind-device" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Device Binding</strong></font></span></a>
-            /
-            <a href="/sensecraft-data-platform/tutorials/device-management#channel" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Device Channels</strong></font></span></a>
-            /
-            <a href="/sensecraft-data-platform/tutorials/device-management#data" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Device Data</strong></font></span></a>
-    </div>
-</div>
+- [Wiki overview](/sensecraft-ai/overview/)
+- [Open SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)
+- [Browse the Model Library](https://sensecraft.seeed.cc/ai/model?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_model_library)
+- [Train AI models](https://sensecraft.seeed.cc/ai/training?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_training)
+- [Explore the Application Square](https://sensecraft.seeed.cc/ai/application?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_app_square)
 
-### SenseCAP HotSpot APP
+### CodeCraft
 
-<div class="title_container">
-    <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP MX Blockchain App</font></div>
-            <p>The SenseCAP HotSpot App is used on mobile phones to manage LoRaWAN hotspots.</p>
-            <br/>
-            > <a href="/sensecraft-blockchain/sensecraft-hotspot-app/download-app" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-management" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Hotspot Management</font></span></a> / <a href="/sensecraft-blockchain/sensecraft-hotspot-app/remote-reboot" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Remote Reboot</font></span></a> / <a href="/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-onboarding" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Hotspot Onboarding</font></span></a>
-    </div>
-</div>
+Use CodeCraft when you want a hardware-focused AI coding assistant to turn a project idea into code that runs on supported devices. Start with the guide if you need account, membership, hardware selection, creation, publishing, or support information.
 
-<br />
-<br />
+- [CodeCraft user guide](/codecraft/codecraft-overview/)
+- [Quick Start and Support](/codecraft/quick-start-and-support/)
+- [Open CodeCraft](https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home)
+- [Open the CodeCraft Workspace](https://codecraft.seeed.cc/workspace?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_workspace)
+
+### reComputer AI Lab
+
+Use reComputer AI Lab when you are developing on reComputer platforms and need ready-to-use AI models, model conversion tools, tutorials, or device-focused developer resources.
+
+- [Open reComputer AI Lab](https://sensecraft.seeed.cc/ai-lab/?lang=en&utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=ai_lab_home)
+- [Browse AI models](https://sensecraft.seeed.cc/ai-lab/models?lang=en&utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=ai_lab_models)
+- [Open conversion tools](https://sensecraft.seeed.cc/ai-lab/tools?lang=en&utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=ai_lab_tools)
+- [Read tutorials](https://sensecraft.seeed.cc/ai-lab/tutorials?lang=en&utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=ai_lab_docs)
+
+## Build physical AI and robotics workflows
+
+### SenseCraft Robotics
+
+SenseCraft Robotics is the starting point for supported robotic-arm workflows, including guided setup, data collection, cloud training, and validation.
+
+- [Explore SenseCraft Robotics](https://sensecraft.seeed.cc/en/robotics?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_home)
+- [Open the Download Center](https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_download)
+
+## Connect devices and manage IoT data
+
+### SenseCraft Data Platform
+
+SenseCraft Data Platform is the current name for the product previously called SenseCAP Portal. Use it to bind and manage supported SenseCAP devices, view sensor data, manage access keys, and start API-based integrations.
+
+- [Platform quick start](/cloud/sensecraft-data/sensecraft-data-platform/overview/)
+- [Open SenseCraft Data Platform](https://sensecap.seeed.cc/portal/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_portal)
+- [Device Management guide](/sensecraft-data-platform/tutorials/device-management/)
+- [Data Management guide](/sensecraft-data-platform/tutorials/data-management/)
+- [API introduction](/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api/)
+- [AI Advisor application](/sensecraft-data-platform/applications/ai-advisor/)
 
 ### SenseCraft App
 
-<div class="title_container">
-    <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft App</font></div>
-            <p>SenseCraft App is used on mobile phones to configure and manage sensors and display data from SenseCraft Data Platform.</p>
-            <br/>
-            > <a href="/sensecraft-app/overview#download" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="/sensecraft-app/overview#device" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Bind Devices</font></span></a> / <a href="/sensecraft-app/overview#account" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Account</font></span></a> / <a href="/sensecraft-app/overview#user" target="_blank"><span><font color={'FFFFFF'} size={"3"}>User</font></span></a>
-    </div>
-</div>
+SenseCraft App is the mobile companion for configuring supported devices, viewing sensor data, changing supported settings, and reviewing events. It is not the same product as SenseCAP Hotspot App.
 
-<br />
-<br />
+- [SenseCraft App overview](/sensecraft-app/overview/)
+- [Download SenseCraft App](https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_app)
 
-<a id="sensecraft-ai"></a>
+## Design dashboards and device interfaces
 
-### AI Advisor
+### SenseCraft Seeedash (formerly SenseCraft HMI)
 
-<div class="title_container">
-    <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>AI Advisor</font></div>
-            <p>AI Advisor uses sensor data from SenseCraft Data Platform to provide recommendations for supported scenarios.</p>
-            <br/>
-            > <a href="/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>AI Advisor</font></span></a>
-            > <a href="/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Planting Advice Example</font></span></a>
-    </div>
-</div>
+SenseCraft Seeedash is the current name announced for SenseCraft HMI. Use it to create visual pages and dashboards and deploy them to supported display devices. Existing platform URLs and parts of the documentation may still use the SenseCraft HMI name during the transition.
 
-<br />
-<br />
+- [Open the design platform](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
+- [Open the Canvas workspace](https://sensecraft.seeed.cc/hmi/workspace/page?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_canvas)
+- [Read the current product documentation](https://sensecraft-hmi-docs.seeed.cc/en/overview/)
+- [Check supported hardware](https://sensecraft-hmi-docs.seeed.cc/en/supported_hardware/)
+- [Read release notes](https://sensecraft-hmi-docs.seeed.cc/en/release-notes/)
 
-### SenseCAP Data Platform - API
+## Deploy and operate at scale
 
-<div class="title_container">
-    <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft Data Platform - API</font></div>
-            <p>The SenseCraft Data Platform API supports device and data management.</p>
-            <br/>
-            > <a href="https://sensecap-docs.seeed.cc/pdf/sensecap_opanapi_document_en.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download PDF</font></span></a> / <a href="/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api" target="_blank"><span><font color={'FFFFFF'} size={"3"}>API Introduction</font></span></a> / <a href="/sensecraft-fee/sensecraft-data-platform-api-pricing" target="_blank"><span><font color={'FFFFFF'} size={"3"}>API Pricing</font></span></a>
-    </div>
-</div>
+### SenseCraft Fleet
 
-<br />
+Use SenseCraft Fleet to manage edge AI devices, deploy applications, and work with an application catalog across a fleet. This product covers device and application operations; robotic-arm training workflows belong to SenseCraft Robotics.
+
+- [Open SenseCraft Fleet](https://seeed-fleet.com?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_home)
+- [Browse available applications](https://seeed-fleet.com/apps?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_apps)
+- [Follow the quick start](https://seeed-fleet.com/docs?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_quick_start)
+
+### SenseCraft Solution
+
+Start with SenseCraft Solution when you are looking for an industry deployment or a complete scenario rather than selecting individual products first.
+
+- [Browse Seeed industry solutions](https://www.seeed.cc/solutions)
+
+## Manage SenseCAP MX decentralized-network devices
+
+### SenseCAP MX
+
+SenseCAP MX covers supported gateways and devices for decentralized-network applications. Use its own product documentation and dashboard for product-specific workflows.
+
+- [SenseCAP MX home](https://www.sensecapmx.com/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_home)
+- [Browse products](https://www.sensecapmx.com/product/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_products)
+- [Read SenseCAP MX documentation](https://www.sensecapmx.com/docs/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_docs)
+- [Open the Hotspot Dashboard](https://status.sensecapmx.cloud?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_dashboard)
+- [Read the SenseCAP Hotspot App FAQ](/sensecraft-blockchain/sensecraft-hotspot-app/faq/)
+
+:::note Product and app names
+- **SenseCraft Data Platform** was previously called **SenseCAP Portal**.
+- **SenseCraft App** was previously called **SenseCAP Mate App**.
+- **SenseCraft Seeedash** was previously called **SenseCraft HMI**; some current URLs and documentation still use `HMI`.
+- **SenseCAP Hotspot App** is separate from SenseCraft App and is used for supported SenseCAP MX hotspot workflows.
+:::
+
+## Need additional help?
+
+- For current product availability and commercial information, use the product site linked in the relevant section.
+- For setup and technical procedures, start with the Wiki or product documentation link.
+- For community help, visit the [Seeed Studio Forum](https://forum.seeedstudio.com/c/sensecraft).
+- For product or account support, use the [Seeed Studio contact page](https://www.seeedstudio.com/contacts).
