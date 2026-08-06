@@ -105,7 +105,7 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 			<td align="center">❌</td>
 			<td align="center">✅</td>
 			<td align="center">❌</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>Taxa de atualização</strong></td>
 			<td align="center">2–5 s</td>

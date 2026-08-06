@@ -1,5 +1,5 @@
 ---
-description: Usa TRMNL con cualquier producto Seeed ePaper compatible: reTerminal E1001, E1002, E1003, E1004, TRMNL 7.5" (OG) DIY Kit o XIAO 7.5" ePaper Panel.
+description: Usa TRMNL con cualquier producto Seeed ePaper compatible - reTerminal E1001, E1002, E1003, E1004, TRMNL 7.5" (OG) DIY Kit o XIAO 7.5" ePaper Panel.
 title: Trabajar con TRMNL
 keywords:
   - pantalla ePaper
