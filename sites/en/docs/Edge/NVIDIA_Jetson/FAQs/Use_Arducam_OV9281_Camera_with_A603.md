@@ -104,9 +104,6 @@ Ranges: `exposure` 1 to 65523, `analogue_gain` 100 to 1500. Also available: `tri
 
 While the approach was tested with the OV9281 B0223, it should apply to other Jetvariety modules on the A603, since the Jetvariety design puts the mode logic in the camera's onboard controller rather than the device tree.
 
-## Tech Support & Product Discussion
-
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
