@@ -175,7 +175,7 @@ Seeed Studio XIAO RP2040 は Seeed Studio XIAO 拡張ボードと互換性があ
         <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-Pre-Soldered-p-6333.html">
           Seeed Studio XIAO RP2040 端子はんだ付け済み
         </a>
-      </td]
+      </td>
       <td>Seeed Studio XIAO RP2040 Plus</td>
     </tr>
   </tbody>
