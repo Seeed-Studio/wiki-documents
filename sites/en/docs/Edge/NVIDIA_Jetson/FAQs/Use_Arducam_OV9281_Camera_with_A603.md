@@ -10,7 +10,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Use_Arducam_OV9281_Camera_with_A603_Jetson_Carrier_Board
 last_update:
-  date: 08/07/2026
+  date: 07/08/2026
   author: Jonathan van der Maas
 ---
 
