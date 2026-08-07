@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-07-27 17:42:17 (北京时间)
-// 多语言页面: 2401 个
+// 生成时间: 2026-08-03 11:40:17 (北京时间)
+// 多语言页面: 2424 个
 
 (function() {
   'use strict';
@@ -1543,6 +1543,118 @@
     "pt"
   ],
   "/flash/jetpack_to_selected_product": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rapid_prototyping_on_jetson_with_nvidia_skills_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/industrial_vision_monitoring_on_industrial_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack_7_2_deepstream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/deploy_tensorrt_edge_llm_on_jetpack7.2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack72_ax210_ax200_wifi_setup_guide_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack_7_2_camera_multimedia_compatibility": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/flash_and_ota_jetpack_7.2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack_7_2_resource_hub": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack_6_to_7_2_migration_playbook": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack_7_2_memory_optimization": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/build_and_flash_yocto_for_recomputer_super_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack72_deep_dive_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack_7_2_maxn_super_and_mig": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack_7_2_unified_platform_iso_sbsa": [
     "cn",
     "en",
     "es",
@@ -3425,6 +3537,13 @@
     "ja",
     "pt"
   ],
+  "/wifi_halow_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_model_conversion": [
     "cn",
     "en",
@@ -3439,14 +3558,14 @@
     "ja",
     "pt"
   ],
-  "/recamera_on_device_models": [
+  "/recamera_model_export_online": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/wifi_halow_getting_started": [
+  "/recamera_on_device_models": [
     "cn",
     "en",
     "es",
@@ -3748,6 +3867,13 @@
     "pt"
   ],
   "/train_classification_model_online": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_ha_sound_alert": [
     "cn",
     "en",
     "es",
@@ -5916,6 +6042,20 @@
     "pt"
   ],
   "/reachymini_api_utils": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_development_cases_home_assistant": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_development_cases_gripper_voice_control": [
     "cn",
     "en",
     "es",
@@ -11457,6 +11597,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_clip_python_build_app_with_memory": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_doa_vad": [
     "cn",
     "en",
@@ -11857,6 +12004,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_xiao_volume": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_xiao_websocket_audio_stream": [
     "cn",
     "en",
     "es",
@@ -15363,6 +15517,13 @@
     "pt"
   ],
   "/ha_dify_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/mcp-face-auth-integration": [
     "cn",
     "en",
     "es",

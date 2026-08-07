@@ -12,7 +12,7 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/ja/get_started_with_esp32s3_meshcore/
 ---
 
@@ -55,11 +55,11 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/RB.png" alt="pir" width={300} height="auto" /></p>
 
-`Erase device ` を選択し、その後 `Flash` をクリックして、`Xiao xxx` または `debug unit xxx` という名前のシリアルポートを選択します。
+`Erase device ` を選択し、`Flash` をクリックして、`Xiao xxx` または `debug unit xxx` という名前のシリアルポートを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Flash1.png" alt="pir" width={800} height="auto" /></p>
 
-進行バーが最後まで埋まったら、Flash が完了したことを示します。その後、デバイスは自動的に再起動します。
+プログレスバーが最後まで埋まったら、Flash が完了したことを示します。その後、デバイスは自動的に再起動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/FlashigComplete.png" alt="pir" width={800} height="auto" /></p>
 
@@ -74,17 +74,17 @@ SX-1262 は B2B インターフェースを介して Xiao ESP32-S3 に接続で�
 次の図は、XIAO ESP32S3 と Wio-SX1262 間の B2B ピンマッピングを示しています。
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="XIAO ESP32S3 と Wio-SX1262 間の B2B ピンマッピング"/>
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="B2B pin mapping between XIAO ESP32S3 and Wio-SX1262"/>
 </div>
 :::warning
-互換性のある SX-1262 はキット内でのみ購入できます。
+対応する SX-1262 は、このキットの中でのみ購入できます。
 :::
 
 ### （オプション）バッテリーへの接続
 
 XIAO ESP32S3 には電源管理チップが内蔵されており、バッテリーを使用して XIAO ESP32S3 を単独で給電したり、XIAO ESP32S3 の USB ポートを介してバッテリーを充電したりできます。
 
-XIAO 用にバッテリーを接続したい場合は、`3.7V lithium` の `protection circuit` 付きの、認証済み充電式バッテリーを購入することをお勧めします。バッテリーをはんだ付けする際は、必ず正極と負極を区別してください。電源の負極は USB ポートに最も近い側であり、電源の正極は USB ポートから離れた側になります。
+XIAO 用にバッテリーを接続したい場合は、`3.7V lithium` の `protection circuit` 付きの、認定された充電式バッテリーを購入することをお勧めします。バッテリーをはんだ付けする際は、必ず正極と負極を区別してください。電源の負極端子は USB ポートに最も近い側であり、電源の正極端子は USB ポートから離れた側になります。
 
 <div class="table-center">
 <iframe width="730" height="420" src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/Xiao%20Esp32S3%20Battery%20Connection.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -97,7 +97,7 @@ XIAO 用にバッテリーを接続したい場合は、`3.7V lithium` の `prot
 <table align="center">
   <tbody>
     <tr>
-      <th>Meshtastic 用 XIAO ESP32S3 & Wio-SX1262 キット</th>
+      <th>XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic</th>
       <th>（オプション）拡張ボード</th>
     </tr>
     <tr>
@@ -159,9 +159,9 @@ XIAO 用にバッテリーを接続したい場合は、`3.7V lithium` の `prot
 
 ### 初期設定
 
-MeshCore リピーターファームウェアを MeshCore デバイスに初めて書き込む場合、その国や地域で合法な周波数を利用できるように、デバイスの周波数を設定する必要があります。
+MeshCore リピーターファームウェアを MeshCore デバイスに初めて書き込むときは、そのデバイスが自分の国や地域で合法な周波数を使用するように、デバイスの周波数を設定する必要があります。
 
-リピーターを設定するには [Click here](https://config.meshcore.io/) をクリックしてください。
+[Click here](https://config.meshcore.io/) をクリックしてリピーターを設定します。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -196,7 +196,7 @@ LoRa リージョンを変更して設定を保存します。その後、デバ
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Admin.png" alt="pir" width={800} height="auto" /></p>
 
-ログイン後、設定ページが表示されます。ここから hone アプリでリピーターの設定を調整できます。
+ログイン後、設定ページが表示されます。ここから hone APP 上でリピーターの設定を調整できます。
 
 ### パスの設定
 
@@ -204,7 +204,7 @@ LoRa リージョンを変更して設定を保存します。その後、デバ
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/SendAdvert.png" alt="pir" width={800} height="auto" /></p>
 
-メッセージ送信パスを手動で設定できます。Bluetooth コンパニオンデバイスをスマートフォンアプリに接続し、プライベートメッセージウィンドウを開きます。その後、検出されたリピーターを選択してパスを構成できます。
+メッセージ送信パスを手動で設定できます。Bluetooth コンパニオンデバイスをスマートフォンの APP に接続します。プライベートメッセージウィンドウを開き、検出されたリピーターを選択してパスを構成します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -219,8 +219,8 @@ MeshCore ノードマップ上にリピーターの位置を表示したい場�
 <table align="center">
   <tbody>
     <tr>
-      <th>Meshtastic 用 XIAO ESP32S3 & Wio-SX1262 キット</th>
-      <th>ケース付き XIAO ESP32S3 & Wio-SX1262 キット</th>
+      <th>XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic</th>
+      <th>XIAO ESP32S3 & Wio-SX1262 Kit with casing</th>
       <th>（オプション）L76K GNSS モジュール</th>
     </tr>
     <tr>
@@ -358,7 +358,7 @@ MeshCore v1.15 は、デバイス名とリージョン設定を SPIFFS 内の `/
 Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26.bin
 ```
 
-代わりに、次のような完全なマージドファームウェアを書き込む必要があります：
+その代わりに、次のような完全なマージドファームウェアを書き込む必要があります：
 
 ```text
 Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26-merged.bin
@@ -369,14 +369,14 @@ Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26-merged.bin
 この問題を解決するには、デバイスを消去してから、マージドファームウェア版を書き込み直してください。
 
 ## リソース
-- **[PDF]**[Xiao ESP32-S3 と互換性のある SX1262 の回路図](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
+- **[PDF]**[Xiao ESP32-S3 互換 SX1262 の回路図](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
 - **[PDF]**[Wio-SX1262 モジュール データシート](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf)
 - **[RAR]**[Wio-SX1262 for XlAO 3D ファイル](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
 - **[PDF]** [Seeed Studio XIAO ESP32S3 回路図](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 - [XIAO ESP32S3 キット Kicad ライブラリ](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20Wio%20SX1262%20for%20XIAO%20ESP32S3)
 - **[STEP]** [Seeed Studio XIAO ESP32S3 3D モデル](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip)
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Eagle ライブラリ](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
-- **[DXF]** [Seeed Studio XIAO ESP32S3 DXF 寸法図](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
+- **[DXF]** [Seeed Studio XIAO ESP32S3 DXF 形式寸法図](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
 - **[LBR]** [Seeed Studio XIAO ESP32S3 Eagle フットプリント](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed-Studio-XIAO-ESP32S3-footprint-eagle.lbr)
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 工場出荷時ファームウェア](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip)
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 ピン配置シート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
@@ -387,16 +387,26 @@ Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26-merged.bin
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
 - **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>
