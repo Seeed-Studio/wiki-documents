@@ -1,6 +1,28 @@
 const docList = [
   [
     {
+      "path": "/rebot_arm_b601_rs_mit_control",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png",
+      "title": "Getting Started with MIT Position Control on the reBot Arm B601-RS",
+      "date": "2026-08-04",
+      "title_cn": "reBot Arm B601-RS MIT 位置控制入门指南",
+      "title_ja": "reBot Arm B601-RS における MIT 位置制御 入門",
+      "title_es": "Introducción al control de posición MIT en el reBot Arm B601-RS",
+      "title_pt": "Introdução ao Controle de Posição MIT no reBot Arm B601-RS"
+    },
+    {
+      "path": "/streaming_vision_agent_on_jetson",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-100020039-recomputer-mini-j501---carrier-board-for-jetson-agx-orin.jpg",
+      "title": "Streaming Vision Agent on Jetson",
+      "date": "2026-08-03",
+      "title_cn": "Jetson 上的 Streaming Vision Agent",
+      "title_ja": "Jetson 上の Streaming Vision Agent",
+      "title_es": "Agente de Visión en Streaming en Jetson",
+      "title_pt": "Streaming Vision Agent no Jetson"
+    }
+  ],
+  [
+    {
       "path": "/deploy_tensorrt_edge_llm_on_jetpack7.2",
       "image": "https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/7.png",
       "title": "Deploy TensorRT Edge-LLM on JetPack 7.2",
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "産業向けビジョン監視",
       "title_es": "Monitorización de Visión Industrial en Industrial",
       "title_pt": "Monitoramento de Visão Industrial em Ambiente Industrial"
-    }
-  ],
-  [
-    {
-      "path": "/x1_get_started_for_meshtastic",
-      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png",
-      "title": "Get Started with MeshTracker X1",
-      "date": "2026-07-13",
-      "title_cn": "开始使用 MeshTracker X1",
-      "title_ja": "MeshTracker X1 を使い始める",
-      "title_es": "Comienza con MeshTracker X1",
-      "title_pt": "Comece a usar o MeshTracker X1"
-    },
-    {
-      "path": "/respeaker_clip_basic_sdk_guide",
-      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png",
-      "title": "reSpeaker Clip Basic SDK Guide",
-      "date": "2026-07-13",
-      "title_cn": "reSpeaker Clip Basic SDK 指南",
-      "title_ja": "reSpeaker Clip Basic SDK ガイド",
-      "title_es": "Guía del reSpeaker Clip Basic SDK",
-      "title_pt": "Guia do reSpeaker Clip Basic SDK"
     }
   ]
 ];
