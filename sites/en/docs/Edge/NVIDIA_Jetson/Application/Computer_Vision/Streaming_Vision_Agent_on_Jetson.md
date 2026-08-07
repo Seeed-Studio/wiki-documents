@@ -8,7 +8,7 @@ tags:
   - reComputer
   - Jetson
   - Multimodal Memory
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/computer_vision.webp
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-100020039-recomputer-mini-j501---carrier-board-for-jetson-agx-orin.jpg
 sku: 100020039, 100094378
 slug: /streaming_vision_agent_on_jetson
 last_update:
