@@ -1,6 +1,6 @@
 ---
-description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino 菜谱 —— PCF8563 RTC 读写、深度睡眠低功耗策略、PDM 麦克风音频录制到 SD 卡（E1001 / E1002 / E1003），以及电容触摸绘图（仅限 E1003）。
-title: 'Arduino 菜谱：RTC、低功耗、音频与触摸（reTerminal E 系列）'
+description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino 菜谱——PCF8563 RTC 读写、深度睡眠低功耗策略、PDM 麦克风音频录制到 SD 卡（E1001 / E1002 / E1003），以及电容触摸绘图（仅限 E1003）。
+title: Arduino 菜谱：RTC、低功耗、音频与触摸（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals_2
 sidebar_position: 3
@@ -9,7 +9,7 @@ last_update:
   date: 05/27/2026
   author: Citric
 createdAt: '2026-05-27'
-updatedAt: '2026-05-27'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2/
 ---
 
@@ -20,21 +20,31 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" style={{width:600, height:'auto'}}/></div>
 
+:::tip 在不搭建开发环境的情况下体验示例
+如果你想在搭建开发环境之前，快速预览项目效果或体验基础示例固件，请打开 **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**。你可以选择受支持的 reTerminal E 系列设备，并直接通过浏览器烧录示例固件。
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 固件烧录工具 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
 :::tip 本系列中的其他菜谱
-- **[Arduino 菜谱：电子纸显示屏](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)** — 在电子纸屏幕上渲染文本、图形和图像。
-- **[Arduino 菜谱：板载外设](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)** — LED、蜂鸣器、按键、SHT4x 传感器、电池监测、microSD 卡以及 SD 卡图像处理流程。
+- **[Arduino 菜谱：电子纸显示屏](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)** —— 在电子纸屏幕上渲染文本、图形和图像。
+- **[Arduino 菜谱：板载外设](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)** —— LED、蜂鸣器、按键、SHT4x 传感器、电池监测、microSD 卡以及 SD 卡图像处理流程。
 :::
 
 ## 介绍
 
-这是 reTerminal E 系列的第二本外设菜谱。第一本[外设菜谱](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)涵盖了基础 I/O 外设（LED、蜂鸣器、按键、SHT4x、电池、SD 卡），而本页将深入介绍四个更高级的主题：
+这是 reTerminal E 系列的第二篇外设菜谱。第一篇[外设菜谱](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)涵盖了基础 I/O 外设（LED、蜂鸣器、按键、SHT4x、电池、SD 卡），而本页将深入介绍四个更高级的主题：
 
-- **实时时钟（RTC）** — 板载 **PCF8563** RTC 芯片由 CR1220 纽扣电池供电，即使主电池被移除也能持续计时。
-- **低功耗模式** — 深度睡眠、轻度睡眠以及 GPIO 唤醒策略，可将电池寿命从数天延长到数月。
-- **PDM 麦克风** — 通过板载 PDM 数字麦克风采集音频（仅 E1001 / E1002 / E1003；E1004 不带麦克风），并将 WAV 文件保存到 microSD 卡。
-- **触摸屏** — 在 E1003（10.3" 型号）上使用板载电容触摸面板在电子纸显示屏上绘制点。只有 E1003 配备触摸面板。
+- **实时时钟（RTC）** —— 板载 **PCF8563** RTC 芯片由 CR1220 纽扣电池供电，即使主电池被移除也能持续计时。
+- **低功耗模式** —— 深度睡眠、轻度睡眠以及 GPIO 唤醒策略，可将电池续航从数天延长到数月。
+- **PDM 麦克风** —— 通过板载 PDM 数字麦克风采集音频（仅限 E1001 / E1002 / E1003；E1004 不带麦克风），并将 WAV 文件保存到 microSD 卡。
+- **触摸屏** —— 在 E1003（10.3" 型号）上使用板载电容触摸面板在电子纸显示屏上绘制点。只有 E1003 配备触摸面板。
 
-本菜谱中的所有示例草图均来自 [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) 仓库。RTC、低功耗和麦克风示例无需**额外安装库**——全部使用 ESP32 内置 API。触摸示例需要 **Seeed_GFX** 库。
+本菜谱中的所有示例草图均来自 [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) 仓库。RTC、低功耗和麦克风示例草图**无需额外安装库**——全部使用 ESP32 内置 API。触摸示例草图需要 **Seeed_GFX** 库。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D" target="_blank">
@@ -85,20 +95,20 @@ import TabItem from '@theme/TabItem';
   </table>
 </div>
 
-### 前置准备
+### 前置条件
 
-在运行下面的任何示例之前，你应该已经完成以下准备：
+在运行下面任意示例之前，你应当已经完成以下准备：
 
 - 已安装 **Arduino IDE**，并安装好 **ESP32 开发板包**（PDM 麦克风需 ≥ 3.0 版本），且已选择 **XIAO_ESP32S3** 开发板。
 - 在 Tools 菜单中将 **PSRAM** 设置为 **OPI PSRAM**，将 **Flash** 设置为 **8 MB**。
 - 准备好一根可用的 **USB-C 数据线**，并选择正确的串口。
 - 已验证可以向设备烧录基础示例草图——如果尚未完成，请参考 [Arduino 菜谱：电子纸显示屏](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino#环境准备)中的环境搭建部分。
 
-本菜谱中的所有草图都会通过 `Serial1` 在 **GPIO44（RX）/ GPIO43（TX）** 引脚上以 **115200 波特率**输出调试信息——这是载体 USB-UART 转串口桥，**而不是** Arduino IDE 自动打开的 USB-CDC `Serial`。请打开 Arduino 串口监视器，并选择匹配的端口和波特率以便查看输出。
+本菜谱中的所有示例草图都会通过 `Serial1` 在 **GPIO44（RX）/ GPIO43（TX）** 引脚以 **115200 波特率**输出调试信息——这是通过 USB-UART 桥接的串口，**而不是** Arduino IDE 自动打开的 USB-CDC `Serial`。请打开 Arduino 串口监视器，并选择匹配的端口和波特率以便查看输出。
 
 ### 硬件兼容性概览
 
-本菜谱中的功能并非在四款型号上全部可用。下表总结了各型号可用的功能：
+本菜谱中的功能并非在四个型号上全部可用。下表总结了各型号可用的功能：
 
 <div class="table-center">
   <table align="center">
@@ -151,7 +161,7 @@ import TabItem from '@theme/TabItem';
 
 每一款 reTerminal E 系列型号都集成了一颗来自 NXP 的板载 **PCF8563** 实时时钟芯片，配有独立的 32.768 kHz 晶振和一个 **CR1220 纽扣电池**座，即使主电池被移除或完全耗尽，也能持续计时。
 
-:::warning 不含电池——需自行安装
+:::warning 不含电池——需要自行安装
 设备出厂时**不附带** CR1220 纽扣电池。你需要单独购买一颗 CR1220 电池并安装，RTC 才能在断电后保持时间。
 :::
 
@@ -168,7 +178,7 @@ CR1220 电池座位于 **PCB 背面**。不同型号的拆机步骤略有差异�
 
 **步骤 1 — 关闭设备电源**
 
-拔下 USB-C 线缆，并确保设备已完全关机。
+断开 USB-C 线缆，确保设备完全关机。
 
 **步骤 2 — 拆下后盖**
 
@@ -184,7 +194,7 @@ CR1220 电池座位于 **PCB 背面**。不同型号的拆机步骤略有差异�
 
 **步骤 5 — 重新组装**
 
-装回后盖并拧紧四颗螺丝。现在 RTC 已由电池供电，即使断开主电源也能持续计时。
+将后盖装回并拧紧四颗螺丝。RTC 现在由电池供电备份，即使主电源断开也能保持时间。
 
 </TabItem>
 <TabItem value="e1003" label="E1003">
@@ -195,23 +205,23 @@ CR1220 电池座位于 **PCB 背面**。不同型号的拆机步骤略有差异�
 
 **步骤 1 — 关闭设备电源**
 
-拔下 USB-C 线缆，并确保设备已完全关机。
+断开 USB-C 线缆，并确保设备已完全关机。
 
 **步骤 2 — 拆下后盖**
 
-卸下背板上的螺丝，取下后盖以露出 PCB。
+卸下背板上的螺丝，抬起后盖以露出 PCB。
 
 **步骤 3 — 找到电池座**
 
 在 PCB 上找到 CR1220 纽扣电池座（标记为 `BT2` 或 `CR1220`）。
 
-**步骤 4 — 插入电池**
+**步骤 4 — 安装电池**
 
-将 CR1220 电池放入电池座中，**正极 (+) 面朝上**。轻轻按压，直到听到卡入到位的声音。
+将 CR1220 电池放入电池座中，确保**正极（+）朝上**。轻轻按压，直到听到卡入到位的声音。
 
 **步骤 5 — 重新组装**
 
-装回后盖并拧紧螺丝。现在 RTC 已由电池供电，即使主电源断开也能保持时间。
+将后盖装回并拧紧螺丝。RTC 现在由电池供电备份，即使主电源断开也能保持时间。
 
 </TabItem>
 <TabItem value="e1004" label="E1004">
@@ -226,24 +236,24 @@ CR1220 电池座位于 **PCB 背面**。不同型号的拆机步骤略有差异�
 
 **步骤 2 — 拆下后盖**
 
-卸下后面板周围的螺丝，小心抬起后盖以露出 PCB。
+卸下背板周围的螺丝，小心抬起后盖以露出 PCB。
 
 **步骤 3 — 找到电池座**
 
 在 PCB 上找到 CR1220 纽扣电池座（标记为 `BT2` 或 `CR1220`）。
 
-**步骤 4 — 插入电池**
+**步骤 4 — 安装电池**
 
-将 CR1220 电池放入电池座中，**正极 (+) 面朝上**。轻轻按压，直到听到卡入到位的声音。
+将 CR1220 电池放入电池座中，确保**正极（+）朝上**。轻轻按压，直到听到卡入到位的声音。
 
 **步骤 5 — 重新组装**
 
-装回后盖并拧紧所有螺丝。现在 RTC 已由电池供电，即使主电源断开也能保持时间。
+将后盖装回并拧紧所有螺丝。RTC 现在由电池供电备份，即使主电源断开也能保持时间。
 
 </TabItem>
 </Tabs>
 
-### 硬件概述
+### 硬件概览
 
 <div class="table-center">
   <table align="center">
@@ -726,24 +736,24 @@ void loop()
 
 代码在 `setup()` 中遵循 5 步初始化流程：
 
-1. **初始化 I2C 总线**：在 GPIO19（SDA）/ GPIO20（SCL）上以 400 kHz 运行——这是与 SHT4x 传感器共享的 reTerminal 标准 I2C 引脚。
-2. **探测 PCF8563**：在地址 0x51 处探测，以确认芯片有响应。
-3. **初始化芯片**：清除 STOP 位（让振荡器运行）、清除报警标志，并禁用 CLKOUT 引脚以节省功耗。
-4. **决定是否设置时间**：PCF8563 具有一个 **VL（电压低）标志**，当后备电池电压过低时会自动置位。如果 VL 被置位（首次上电或更换电池），代码会写入初始时间；否则保留芯片中存储的时间。
-5. **同步 ESP32 系统时钟**：在读取 PCF8563 时间后，调用 `settimeofday()`，这样标准 C 时间函数（`time()`、`localtime()`、`strftime()`）在固件的其余部分都能返回正确时间。
+1. **初始化 I2C 总线**：在 GPIO19（SDA）/ GPIO20（SCL）上以 400 kHz 运行——这是与 SHT4x 传感器共享的标准 reTerminal I2C 引脚。
+2. **探测 PCF8563**：在地址 0x51 处探测，以验证芯片有响应。
+3. **初始化芯片**——清除 STOP 位（让振荡器运行）、清除报警标志，并禁用 CLKOUT 引脚以节省功耗。
+4. **决定是否设置时间**——PCF8563 具有一个 **VL（电压低）标志**，当后备电池电压过低时会自动置位。如果 VL 被置位（首次启动或更换电池），代码会写入初始时间；否则保留存储的时间。
+5. **同步 ESP32 系统时钟**——在读取 PCF8563 时间后，调用 `settimeofday()`，这样标准 C 时间函数（`time()`、`localtime()`、`strftime()`）在固件的其余部分都能返回正确时间。
 
 `loop()` 每秒通过 I2C 读取一次 RTC 并打印格式化时间。如果后备电池电压过低，会显示 `[VL]` 标签。
 
-### 设置时间的方式
+### 设置时间的选项
 
 | 选项 | 如何启用 | 行为 |
 |---|---|---|
-| **编译期**（推荐） | `#define USE_COMPILE_TIME` | C 预处理器会嵌入 `__DATE__` / `__TIME__`（你点击 Upload 的那一刻）。零成本——只需编译并烧录。 |
+| **编译期**（推荐） | `#define USE_COMPILE_TIME` | C 预处理器嵌入 `__DATE__` / `__TIME__`（你点击 Upload 的那一刻）。零成本——只需编译并烧录。 |
 | **手动** | 注释掉 `USE_COMPILE_TIME`，填写 `INITIAL_*` 常量 | 你手动输入精确的日期和时间。适用于离线环境。 |
-| **强制覆盖** | `#define FORCE_SET_TIME` | 在**每次**启动时覆盖 RTC。用于重新校准，完成后注释掉并重新烧录。 |
+| **强制覆盖** | `#define FORCE_SET_TIME` | 在**每次**启动时覆盖 RTC。用于重新校准，之后注释掉并重新烧录。 |
 
 :::tip
-VL 标志在断电后仍然保持。一旦时间设置完成且 CR1220 电池状态良好，PCF8563 会持续计时，后续重启**不会**覆盖它。
+VL 标志在断电后仍然保持。一旦时间设置完成且 CR1220 电池状态良好，PCF8563 会持续计时，后续重启时**不会**被覆盖。
 :::
 
 ### 预期输出
@@ -770,7 +780,7 @@ VL 标志在断电后仍然保持。一旦时间设置完成且 CR1220 电池状
 
 ## 低功耗模式
 
-ESP32-S3 支持多种电源状态。对于电池供电的电子纸应用，最有用的是 **深度睡眠（deep sleep）** 和 **轻度睡眠（light sleep）**：
+ESP32-S3 支持多种电源状态。对于电池供电的电子纸应用，最有用的两种是**深度睡眠**和**轻度睡眠**：
 
 <div class="table-center">
   <table align="center">
@@ -786,7 +796,7 @@ ESP32-S3 支持多种电源状态。对于电池供电的电子纸应用，最�
       <td><strong>Active</strong></td>
       <td>运行</td>
       <td>开启</td>
-      <td>全部保留</td>
+      <td>全部</td>
       <td>开启</td>
       <td>—</td>
     </tr>
@@ -895,28 +905,28 @@ void loop()
 
 ### 代码工作原理
 
-1. **`setup()` 开始执行**——递增 `RTC_DATA_ATTR` 启动计数器（该变量存放在 ESP32-S3 的 RTC 内存域中，因此在深度睡眠期间不会丢失）。
+1. **`setup()` 开始执行**——递增 `RTC_DATA_ATTR` 启动计数器（该变量保存在 ESP32-S3 的 RTC 内存域中，因此可以在深度睡眠期间保留）。
 2. **打印状态**——显示启动次数以及芯片唤醒的原因（GPIO 按钮 vs 上电复位）。
-3. **等待** `SLEEP_DELAY_SEC` 秒（默认 5 秒）——这样你有时间阅读串口输出。
-4. **配置唤醒源**——`esp_sleep_enable_ext1_wakeup()` 注册按钮引脚（KEY0）。唤醒电平为 `LOW`，因为这些按钮为低电平有效，并带有硬件上拉。
-5. **启用 RTC 上拉**——普通 GPIO 上拉在深度睡眠期间会被禁用。`rtc_gpio_pullup_en()` 使用 RTC 域的上拉，在睡眠时保持按键线路为高电平。
+3. **等待** `SLEEP_DELAY_SEC` 秒（默认 5 秒）——这给你时间阅读串口输出。
+4. **配置唤醒源**——`esp_sleep_enable_ext1_wakeup()` 注册按钮引脚（KEY0）。唤醒电平为 `LOW`，因为按钮为低电平有效，并带有硬件上拉。
+5. **启用 RTC 上拉**——普通 GPIO 上拉在深度睡眠期间会被禁用。`rtc_gpio_pullup_en()` 使用 RTC 域的上拉，在睡眠时保持按钮线为高电平。
 6. **进入深度睡眠**——`esp_deep_sleep_start()` 关闭除 RTC 域外的所有部分。电流降至 **约 14 µA**。
-7. **按下按钮时**——RTC 域检测到 GPIO 下降沿，芯片重新启动，`setup()` 从第 1 步重新运行。
+7. **按下按钮时**——RTC 域检测到 GPIO 下降沿，芯片重新启动，`setup()` 从第 1 步再次运行。
 
 :::tip 如何验证深度睡眠是否生效
-`loop()` 中包含一条打印语句，按理说**永远不应**执行。如果你在串口监视器中看到 `[ERROR] deep sleep did not start!`，说明深度睡眠启动失败。`[SLEEP]` 之后没有任何输出，才表示设备确实已经睡眠。
+`loop()` 中包含一条打印语句，按理说**永远不应**执行。如果你在串口监视器中看到 `[ERROR] deep sleep did not start!`，说明深度睡眠失败。`[SLEEP]` 之后的静默意味着设备确实已经睡眠。
 :::
 
 ### 按钮唤醒引脚选择
 
-由于 GPIO 引脚布局不同，各型号的唤醒按钮也不同：
+由于 GPIO 布局不同，各型号的唤醒按钮也不同：
 
 | 型号 | 唤醒引脚 | `PIN_WAKE_BTN` | 说明 |
 |---|---|---|---|
-| **E1001 / E1002 / E1003** | GPIO3 (KEY0) | `3` | 右侧按键（E1001/E1002 上的绿色按钮） |
-| **E1004** | GPIO4 (KEY0) | `4` | 右方向按键（前面板） |
+| **E1001 / E1002 / E1003** | GPIO3 (KEY0) | `3` | 右侧按钮（E1001/E1002 上的绿色按钮） |
+| **E1004** | GPIO4 (KEY0) | `4` | 右方向按钮（前面板） |
 
-在烧录前，请在 USER CONFIGURATION 部分取消注释与你设备相符的那一行。
+在烧录前，请在 USER CONFIGURATION 部分取消注释对应型号的那一行。
 
 ### 预期输出
 
@@ -953,9 +963,9 @@ void loop()
 1. 从深度睡眠中**唤醒**（定时器或按钮）。
 2. **读取 RTC** 以进行时间戳记录。
 3. **读取传感器**（SHT4x、电池等）。
-4. **连接 Wi-Fi 并获取数据**——如有需要。
-5. **更新电子纸显示屏**，显示新的信息。
-6. **重新进入深度睡眠**，直到下一次计划唤醒。
+4. **连接 Wi-Fi** 并获取数据——如有需要。
+5. **更新电子纸显示屏**，显示新信息。
+6. **返回深度睡眠**，直到下一次计划唤醒。
 
 要在按钮唤醒之外再添加一个**定时器唤醒**，只需添加：
 
@@ -963,7 +973,7 @@ void loop()
 esp_sleep_enable_timer_wakeup(30 * 60 * 1000000ULL);  // 30 minutes
 ```
 
-并放在调用 `esp_deep_sleep_start()` 之前。两个唤醒源可以同时启用——哪个先触发就以哪个为准。
+并放在调用 `esp_deep_sleep_start()` 之前。两个唤醒源可以同时启用——先触发的那个生效。
 
 ## 麦克风（E1001 / E1002 / E1003）
 
@@ -971,7 +981,7 @@ esp_sleep_enable_timer_wakeup(30 * 60 * 1000000ULL);  // 30 minutes
 reTerminal **E1004** 不包含板载麦克风。本节中的示例仅适用于 **E1001、E1002 和 E1003**。如果你使用的是 E1004，请跳过本节。
 :::
 
-reTerminal E1001 / E1002 / E1003 集成了板载 **PDM（脉冲密度调制）** 数字麦克风。PDM 麦克风输出 1 位的 Σ-Δ（sigma-delta）数据流，由 ESP32-S3 内置的 PDM 外设解码——无需外部编解码芯片。
+reTerminal E1001 / E1002 / E1003 集成了板载 **PDM（脉冲密度调制）** 数字麦克风。PDM 麦克风输出 1 位的 Σ-Δ（sigma-delta）流，由 ESP32-S3 内置的 PDM 外设解码——无需外部编解码芯片。
 
 ### 硬件概览
 
@@ -1000,7 +1010,7 @@ reTerminal E1001 / E1002 / E1003 集成了板载 **PDM（脉冲密度调制）**
   </table>
 </div>
 
-E1001、E1002 和 E1003 的引脚相同。麦克风电源使能引脚（`GPIO38`）控制一个负载开关（TPS22916CYFPR）——在录音前你**必须**将其驱动为高电平，录音结束后可以将其驱动为低电平以节省功耗。
+这些引脚在 E1001、E1002 和 E1003 上是相同的。麦克风电源使能引脚（`GPIO38`）控制一个负载开关（TPS22916CYFPR）— 在录音前你**必须**将其驱动为高电平，录音结束后可以将其驱动为低电平以节省电能。
 
 :::note 需要 Arduino ESP32 ≥ 3.0
 该示例程序使用 ESP-IDF 5.x 的 PDM-RX API（`driver/i2s_pdm.h`），该 API 仅在 Arduino ESP32 内核 3.0 及以上版本中可用。请确保你的开发板软件包是最新版本。
@@ -1008,7 +1018,7 @@ E1001、E1002 和 E1003 的引脚相同。麦克风电源使能引脚（`GPIO38`
 
 ### 完整示例：MicRecordToSD
 
-完整示例程序可在代码仓库中获取：[`examples/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/MicRecordToSD/MicRecordToSD.ino)。
+完整示例可在代码仓库中获取：[`examples/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/MicRecordToSD/MicRecordToSD.ino)。
 
 <details>
 <summary>点击展开完整的 MicRecordToSD.ino 代码</summary>
@@ -1412,23 +1422,23 @@ void loop()
 **初始化流程（`setup()`）：**
 
 1. **启动闪烁** — 板载 LED 闪烁 3 次以确认已上电。
-2. **挂载 SD 卡** — 通过 `PIN_SD_EN` 打开 SD 卡槽电源，初始化 HSPI 总线，并调用 `SD.begin()`。
+2. **挂载 SD 卡** — 通过 `PIN_SD_EN` 打开 SD 插槽电源，初始化 HSPI 总线，并调用 `SD.begin()`。
 3. **初始化 PDM 麦克风** — 这是一个 4 步流程：
    - 通过 `PIN_MIC_PWR_EN`（GPIO38）**给麦克风上电** — 将 TPS22916 负载开关驱动为 HIGH。
    - 使用 `i2s_new_channel()` **创建一个 I2S 通道**。
    - 使用 `i2s_channel_init_pdm_rx_mode()` **配置 PDM-RX 模式** — 设置采样率、位深（16 位）、单声道模式和 GPIO 引脚。
-   - **使能并预热** — `i2s_channel_enable()` 启动时钟，然后读取并丢弃 3 个 DMA 缓冲区，以便 sigma-delta 抽取滤波器稳定。
+   - **使能并预热** — `i2s_channel_enable()` 启动时钟，然后读取并丢弃 3 个 DMA 缓冲区，以便 sigma-delta 降采样滤波器稳定。
 
 **录音循环（`loop()`）：**
 
-1. **按键消抖** — 以 50 ms 消抖窗口读取 KEY0。在下降沿（按下）时：
+1. **按键消抖** — 在 50 ms 消抖窗口内读取 KEY0。在下降沿（按下）时：
    - 如果当前未录音 → **开始** 录音（创建 WAV 文件，写入占位头部）。
    - 如果当前正在录音 → **停止** 录音（用实际大小重写头部，关闭文件）。
 2. **音频采集** — `i2s_channel_read()` 每次读取一个 DMA 缓冲区（512 个采样 = 1024 字节），超时时间为 200 ms。数据被直接写入 SD 卡。
 3. **自动停止** — 如果达到 `MAX_RECORD_SECS`，录音会自动停止。
-4. **LED 闪烁** — 当录音处于激活状态时，LED 以 500 ms 间隔闪烁。
+4. **LED 闪烁** — 当录音处于激活状态时，LED 以 500 ms 的间隔闪烁。
 
-### 特定型号配置
+### 型号相关配置
 
 该示例需要你在 USER CONFIGURATION 部分取消注释 **一个** `#define`：
 
@@ -1445,13 +1455,13 @@ void loop()
 reTerminal E 系列支持容量最高为 **64 GB**、格式为 **FAT32** 的 microSD 卡。
 :::
 
-:::tip E1004 出厂已预装 SD 卡
-reTerminal **E1004** 出厂时已插入一张 microSD 卡。你无需单独购买或安装。对于其他型号（E1001 / E1002 / E1003），需要自行插入一张卡。
+:::tip E1004 随机附带预装 SD 卡
+reTerminal **E1004** 随机附带已插入的 microSD 卡。你无需单独购买或安装。对于其他型号（E1001 / E1002 / E1003），需要自行插入一张卡。
 :::
 
 快速准备步骤：
 
-1. 将 microSD 卡格式化为 **FAT32**（如果使用的是 E1004 预装的卡，可跳过此步骤）。
+1. 将 microSD 卡格式化为 **FAT32**（如果使用 E1004 随机预装的卡，可跳过此步骤）。
 2. 示例程序会在首次录音时自动创建 `/REC` 目录。
 3. 确保在上电前已插入 SD 卡。
 
@@ -1481,11 +1491,11 @@ reTerminal **E1004** 出厂时已插入一张 microSD 卡。你无需单独购�
 
 ## 触摸屏（仅限 E1003）
 
-:::caution E1003 独占特性
-电容式触摸面板仅在 **reTerminal E1003**（10.3" 型号）上可用。E1001、E1002 和 E1004 **不**带触摸面板。如果你使用的不是 E1003 型号，请跳过本节。
+:::caution E1003 独占功能
+电容触摸面板仅在 **reTerminal E1003**（10.3" 型号）上可用。E1001、E1002 和 E1004 **不**带触摸面板。如果你使用的是除 E1003 以外的任何型号，请跳过本节。
 :::
 
-reTerminal E1003 配备了通过 I2C 连接的 **GT911** 电容式触摸控制器。结合 16 级灰度的电子纸显示屏，你可以构建对屏幕点击做出响应的交互式应用。
+reTerminal E1003 配备了通过 I2C 连接的 **GT911** 电容触摸控制器。结合 16 级灰度的电子纸显示屏，你可以构建对屏幕点击做出响应的交互式应用。
 
 ### 硬件概览
 
@@ -1497,7 +1507,7 @@ reTerminal E1003 配备了通过 I2C 连接的 **GT911** 电容式触摸控制�
     </tr>
     <tr>
       <td>触摸控制器</td>
-      <td>GT911（Goodix）</td>
+      <td>GT911 (Goodix)</td>
     </tr>
     <tr>
       <td>总线</td>
@@ -1867,19 +1877,19 @@ void loop()
 **触摸轮询循环（`loop()`）：**
 
 1. **每 30 ms 轮询一次** —— 读取 GT911 状态寄存器以检查是否有新的触摸事件。
-2. **读取触摸坐标** —— 从 GT911 点数据寄存器中提取原始 X/Y，然后使用 `mapTouchToDisplay()` 将其映射到显示坐标（该函数会考虑触摸分辨率与显示分辨率之间的差异）。
-3. **消抖和距离检查** —— 只有在以下情况下才会绘制新的点：
+2. **读取触摸坐标** —— 从 GT911 的点数据寄存器中提取原始 X/Y，然后使用 `mapTouchToDisplay()` 将其映射到显示坐标（该函数会考虑触摸分辨率与显示分辨率之间的差异）。
+3. **消抖与距离检查** —— 只有在以下情况下才会绘制新的点：
    - 距离上次绘制至少已经过去 450 ms，**或者**
    - 触摸点相对于上一次绘制点至少移动了 12 个像素。
 4. **在 ePaper 上绘制** —— 使用 `fillCircle()` 绘制实心黑点，使用 `drawCircle()` 添加灰色光环，然后通过 `update()` 将帧缓冲推送到 ePaper 面板。
 
-:::note ePaper 刷新延迟
-每次调用 `update()` 都会触发一次完整的 ePaper 刷新，在 E1003 面板上大约需要 **1–2 秒**。这是正常现象 —— ePaper 并不是快速刷新的显示屏。消抖逻辑（`DRAW_MIN_MS = 450 ms`）的设计目的是避免向面板发出过多的刷新请求。
+:::note ePaper refresh latency
+每次调用 `update()` 都会触发一次完整的 ePaper 刷新，在 E1003 面板上大约需要 **1–2 秒**。这是正常现象 —— ePaper 并不是快速刷新的显示屏。消抖逻辑（`DRAW_MIN_MS = 450 ms`）的设计目的是避免向面板发出过于频繁的刷新请求。
 :::
 
 ### 前置条件
 
-在运行此示例程序之前：
+在运行此示例前：
 
 1. 通过 Arduino Library Manager 安装 **Seeed_GFX** 库。
 2. 在 Tools 菜单中将 **PSRAM** 设置为 **OPI PSRAM** —— 如果没有 PSRAM，将无法分配显示缓冲区，并且 `display_.width()` 会返回 0。
@@ -1911,7 +1921,7 @@ void loop()
 
 ## 故障排查
 
-### Q1：在深度睡眠中仍然能看到串口输出——这是否意味着低功耗示例没有生效？
+### Q1：在深度睡眠中仍能看到串口输出——这是否意味着低功耗示例没有生效？
 
 这是正常现象，并**不**意味着深度睡眠失败。
 
@@ -1919,19 +1929,19 @@ void loop()
 
 要确认深度睡眠是否真正生效，请检查串口日志：
 
-- 如果你看到 `[SLEEP] Entering deep sleep now.` 之后就没有任何输出，说明设备**确实**处于深度睡眠。
+- 如果你看到 `[SLEEP] Entering deep sleep now.` 后面就没有任何输出，说明设备**已经**进入深度睡眠。
 - 如果你看到 `[ERROR] deep sleep did not start!`，则说明出现了问题。
 
-### Q2：如何在不同场景下正确使用 RTC 示例程序？
+### Q2：如何在不同场景下正确使用 RTC 示例？
 
 <Tabs>
 <TabItem value="scenario1" label="首次启动" default>
 
 **场景：** 全新开发板或刚刚更换了 CR1220 电池。
 
-你无需更改任何内容 —— 直接按原样上传示例程序即可。
+你无需更改任何内容 —— 直接按原样上传示例即可。
 
-在全新的开发板上，由于电池从未为时钟供电，PCF8563 内部的 VL（电压低）标志始终为 `1`。示例程序在启动时读取到 VL=1 后，会自动将编译时间戳写入 RTC。
+在全新的开发板上，由于电池从未为时钟供电，PCF8563 内部的 VL（电压低）标志始终为 `1`。示例在启动时读取到 VL=1 后，会自动将编译时间戳写入 RTC。
 
 确认你的 USER CONFIGURATION 如下所示：
 
@@ -1949,7 +1959,7 @@ void loop()
 
 你无需做任何操作 —— 只需上电即可。
 
-CR1220 电池会在主电源关闭时保持 PCF8563 继续计时。启动时，示例程序读取到 VL=0（电池状态良好），并跳过写入操作，从而保留已存储的时间。串口输出会立即显示正确时间。
+在主电源关闭时，CR1220 电池会保持 PCF8563 持续计时。启动时，示例读取到 VL=0（电池状态良好），并跳过写入，从而保留已存储的时间。串口输出会立即显示正确时间。
 
 </TabItem>
 <TabItem value="scenario3" label="重新校准">

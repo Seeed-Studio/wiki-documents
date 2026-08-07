@@ -1,6 +1,6 @@
 ---
-description: SenseCraft AI is a no-code/low-code AIoT platform from Seeed Studio that lets you deploy pre-trained AI models to edge devices like the reSpeaker XVF3800. With the wakeword "Lumio," this setup enables voice-controlled AI applications—no complex coding required.
-title: SenseCraft AI with reSpeaker XVF3800
+description: SenseCraft AI is a no-code/low-code AIoT platform from Seeed Studio that lets you deploy pre-trained AI models to edge devices like the reSpeaker . With the wakeword "Lumio," this setup enables voice-controlled AI applications—no complex coding required.
+title: SenseCraft AI with reSpeaker
 keywords:
   - SenseCraft
   - reSpeaker XVF3800
@@ -8,26 +8,103 @@ keywords:
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_5.jpg
 slug: /respeaker_xvf3800_sensecraft
 sku: 114993702,114993700
-last_update: 
+last_update:
   date: 6/4/2026
   author: Kasun Thushara
 createdAt: '2026-06-04'
-updatedAt: '2026-06-04'
+updatedAt: '2026-06-18'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_sensecraft/
 ---
 
 
 ## Introduction
 
-SenseCraft AI is Seeed Studio's no-code/low-code AI platform that simplifies deploying pre-trained artificial intelligence models to edge devices such as the reSpeaker XVF3800. This guide focuses on configuring the reSpeaker XVF3800 for wakeword detection using the custom trigger "Lumio," enabling voice-activated control for your projects without writing complex code. With SenseCraft AI, you can quickly test, preview, and integrate wakeword events into your hardware workflows. The platform also allows you to create and upload your own custom models for detecting specific sound events and custom wakewords, giving you full flexibility to tailor voice interactions to your unique application needs.
+SenseCraft AI is Seeed Studio's no-code/low-code AI platform that simplifies deploying pre-trained artificial intelligence models to edge devices such as the reSpeaker . This guide focuses on configuring the reSpeaker  for wakeword detection using the custom trigger "Lumio," enabling voice-activated control for your projects without writing complex code. With SenseCraft AI, you can quickly test, preview, and integrate wakeword events into your hardware workflows. The platform also allows you to create and upload your own custom models for detecting specific sound events and custom wakewords, giving you full flexibility to tailor voice interactions to your unique application needs.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
+<table>
+  <tr>
+    <th>reSpeaker Lite</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/xiao-res.png"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      OR
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Get One Now 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
 </div>
+
 
 ## Deploy Existing Model
 
@@ -39,6 +116,13 @@ The required firmware file is:
 > `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.7_48k_test5.bin`
 
 Follow your device's standard DFU (Device Firmware Update) [procedure](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware) to flash this file to the reSpeaker XVF3800.
+
+If you are using a reSpeaker Lite, please ensure that it is running the correct firmware version.
+
+The required firmware file is:
+> `respeaker_lite_i2s_dfu_firmware_v1.0.9.bin`
+
+Follow your device's standard DFU (Device Firmware Update) [procedure](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#firmware-download) to flash this file to the reSpeaker Lite.
 
 
 ### Step 2: Navigate to SenseCraft AI Platform
@@ -90,7 +174,7 @@ The model you are deploying is called **Lumos**. It is a lightweight speech reco
 
 1. A dialog box will appear with model details
 2. Click **Confirm** to proceed with flashing the model to your device
-3. Wait for a moment while the model is being flashed to the reSpeaker XVF3800
+3. Wait for a moment while the model is being flashed to the reSpeaker 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_4.jpg" alt="pir" width={800} height="auto" /></p>
 

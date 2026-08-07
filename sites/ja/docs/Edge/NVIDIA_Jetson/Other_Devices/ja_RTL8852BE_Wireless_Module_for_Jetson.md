@@ -2,19 +2,21 @@
 description: このWikiでは、Wi-Fi 6およびBluetoothに対応したM.2無線モジュールであり、NVIDIA Jetsonデバイスと互換性のあるRTL8852BE無線モジュールの機能と仕様を紹介します。この記事では、その技術仕様、JetPack 5およびJetPack 6向けのドライバインストール方法、無線ネットワークおよびBluetoothの設定方法について詳しく説明します。
 title: Jetson向けRTL8852BE無線モジュール
 keywords:
-  - Edge
+  - エッジ
   - reComputer
   - Wifi
   - Wifi 6
   - Bluetooth
-  - Wireless
+  - 無線
   - RTL8852BE
 slug: /rtl8852be_wireless_module_for_jetson
 last_update:
   date: 4/14/2026
   author: Zibo
 createdAt: '2026-04-14'
-updatedAt: '2026-04-14'
+updatedAt: '2026-06-23'
+sku: 100042928
+url: https://wiki.seeedstudio.com/ja/rtl8852be_wireless_module_for_jetson/
 ---
 
 <div align="center">
@@ -23,7 +25,7 @@ updatedAt: '2026-04-14'
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/RTL8822CE-WIFI-Module-p-6313.html" target="_blank">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/RTL8852BE-WIFI-Module-M-2-Key-E-p-6835.html" target="_blank">
     <strong>
       <span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span>
     </strong>
@@ -32,7 +34,7 @@ updatedAt: '2026-04-14'
 
 
 
-RTL8852BEはRealtekチップセットをベースとしたWi-Fi 6（802.11ax）対応のM.2無線モジュールです。WLAN用のPCIeインターフェースとBluetooth用のUSBインターフェースを統合しており、従来世代のWi-Fi 5モジュールと比べて大幅に高いスループットと低遅延を実現します。高性能な無線接続を必要とする[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)のような組み込み機器に最適です。
+RTL8852BEはRealtekチップセットをベースとしたWi-Fi 6（802.11ax）対応のM.2無線モジュールです。WLAN用のPCIeインターフェースとBluetooth用のUSBインターフェースを統合しており、従来世代のWi-Fi 5モジュールと比べて大幅に高いスループットと低レイテンシを実現します。[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) のような、高性能な無線接続を必要とする組み込み機器に最適です。
 
 ## 特長
 
@@ -92,7 +94,7 @@ RTL8852BEはRealtekチップセットをベースとしたWi-Fi 6（802.11ax）�
 
 ## 対応デバイス
 
-すべてのreComputer Seri
+All reComputer Seri
 
 - すべてのreComputerシリーズ
 
@@ -163,7 +165,7 @@ sudo modprobe rtw89_8852be
 </div>
 ## 無線モジュールの確認
 :::info
-インターフェース名はJetPackのバージョンによって異なる場合があります：
+インターフェース名は、JetPackのバージョンによって異なる場合があります：
 
 - JetPack 5：通常は `wlan0`
 - JetPack 6：`wlP1p1s0` として表示される場合があります
@@ -209,7 +211,7 @@ iw dev wlan0 link
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/veryfiy_wifi6.PNG"/>
 </div>
 
-出力には次のような情報が表示されます：
+出力には、次のような情報が表示されます：
 
 - **freq**：動作周波数（例：5180 MHzは5 GHz帯に相当）
 - **HE-MCS**：Wi-Fi 6の変調および符号化方式（例：MCS 9は最高の符号化効率を表します）
@@ -227,7 +229,7 @@ bluetoothctl
 </div>
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

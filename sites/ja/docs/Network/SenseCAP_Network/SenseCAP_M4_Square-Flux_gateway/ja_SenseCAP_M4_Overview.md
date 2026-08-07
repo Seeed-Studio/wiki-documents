@@ -8,35 +8,35 @@ slug: /Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Over
 last_update:
   date: 02/14/2023
   author: Matthew
-createdAt: '2025-05-27'
-updatedAt: '2025-09-10'
+createdAt: '2023-02-24'
+updatedAt: '2026-06-25'
 url: https://wiki.seeedstudio.com/ja/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview/
 ---
 
-**SenseCAP M4 Square** は、複数のweb 3.0アプリケーションを実行し、分散ネットワークの構築を支援するために設計されたデバイスです。複数のアプリケーションの拡張をサポートする優れたハードウェア機能を備えており、SenseCAP Hotspot Appを使用して **CUMULUS FluxNode** やその他の **web 3.0 Apps** を簡単で使いやすい方法でデプロイできます。
+**SenseCAP M4 Square** は、複数の Web3（第三世代インターネット）アプリケーションを実行し、分散型ネットワークの構築を支援するために設計されたデバイスです。複数のアプリケーション拡張をサポートする優れたハードウェア機能を備え、SenseCAP Hotspot App を使用して **CUMULUS FluxNode** およびその他の **Web3 アプリ** を簡単かつユーザーフレンドリーな方法でデプロイできます。
 
-SenseCAP M4 Squareは、クアッドコア Intel® Celeron® J4125 と RP2040 コプロセッサで動作し、デュアル2.5GbEインターフェースと複数のワイヤレス接続機能を搭載し、4K出力をサポートし、十分なストレージ容量と機器拡張性を備えています。
+SenseCAP M4 Square は、クアッドコア Intel® Celeron® J4125 と RP2040 コプロセッサで動作し、デュアル 2.5GbE インターフェースと複数のワイヤレス接続を装備し、4K 出力をサポートし、十分なストレージ機能と拡張性を備えています。
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview.png" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M4-Sqaure-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 </font></span></strong>
     </a>
 </div>
 
-**特徴**
+**特長**
 ============
 
-- **プラグアンドプレイ**：ユーザーが4つのステップでCUMULUS FluxNodeのデプロイを完了できる、コマンド不要の体験を提供します。
+- **プラグ・アンド・プレイ**：コマンド不要の操作性を提供し、4 ステップで CUMULUS FluxNode のデプロイを完了できます。
 
-- **複数アプリのサポート**: dAppセンターからSenseCAPが提供する複数のweb 3.0アプリケーションをデプロイできます。クラウドサービス：ユーザーがデバイスの購入、デプロイ、管理、監視を行うためのワンストップクラウドサービスを提供します。
+- **複数アプリのサポート**：dApp センターから SenseCAP が提供する複数の Web3 アプリケーションをデプロイ可能。クラウドサービス：ユーザーがデバイスを購入、デプロイ、管理、監視するためのワンストップクラウドサービスを提供します。
 
-- **高セキュリティ**：内蔵TPM2.0暗号プロセッサとECC608暗号チップ、高セキュリティ認証、信頼性の高い接続性。
+- **高いセキュリティ**：TPM2.0 暗号プロセッサと ECC608 暗号チップを内蔵し、高セキュリティ認証と信頼性の高い接続性を実現します。
 
-- **優れた性能**：4コア4スレッドのIntel® Celeron® J4125（周波数：2.0 - 2.7GHz）を搭載。
+- **優れたパフォーマンス**：4 コア 4 スレッドの Intel® Celeron® J4125（周波数：2.0 - 2.7GHz）を搭載。
 
-- **低消費電力** : 10wの低消費電力、月間7.2 kWh、月額\$1.008のコスト（世界平均kWh価格\$0.144/kWhで計算）。
+- **低消費電力**：10W の低消費電力で、月間 7.2 kWh、月あたり \$1.008 のコスト（世界平均電力単価 \$0.144/kWh を想定）。
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview-1.png)
 
@@ -63,22 +63,22 @@ SenseCAP M4 Squareは、クアッドコア Intel® Celeron® J4125 と RP2040 �
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview-6.png)
 
-- デバイスサイズ(/個): 130×120×55 mm
+- デバイスサイズ（/pcs）：130×120×55 mm
 
-- デバイス重量(/個): 500g
+- デバイス重量（/pcs）：500g
 
-- パッケージサイズ(/個): 165×150×115 mm
+- パッケージサイズ（/pcs）：165×150×115 mm
 
-- パッケージ重量(/個): 900g
+- パッケージ重量（/pcs）：900g
 
-**インジケーター紹介**
+**インジケーターの説明**
 ==========================
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview-7.png)
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview-8.png)
 
-**ボタン紹介**
+**ボタンの説明**
 =======================
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview-9.png)

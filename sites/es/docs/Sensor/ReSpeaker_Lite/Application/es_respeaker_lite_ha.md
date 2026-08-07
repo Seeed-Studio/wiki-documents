@@ -1,6 +1,6 @@
 ---
 description: Sistema de asistente de voz para Home Assistant
-title: Sistema de asistente de voz para Home Assistant
+title: Sistema de asistente de voz para Home Assistant reSpeaker Lite
 keywords:
   - ESP32S3
   - XIAO
@@ -13,11 +13,11 @@ last_update:
   date: 2/11/2026
   author: Kasun Thushara
 createdAt: '2024-04-11'
-updatedAt: '2026-03-24'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/respeaker_lite_ha/
 ---
 
-En este tutorial, aprenderás cómo configurar tu ReSpeaker Lite para que funcione con Home Assistant. Aprenderás cómo grabar el firmware necesario y cómo compilar y cargar el archivo YAML. Después de eso, podrás controlar y automatizar los electrodomésticos de tu hogar usando tu voz. Solo di “Okay Nabu” y empieza a hablar con tu casa.
+En este tutorial, aprenderás cómo configurar tu ReSpeaker Lite para que funcione con Home Assistant. Aprenderás cómo flashear el firmware requerido y cómo compilar y subir el archivo YAML. Después de eso, podrás controlar y automatizar los electrodomésticos de tu hogar usando tu voz. Solo di “Okay Nabu” y empieza a hablar con tu casa.
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -69,7 +69,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 para más información, consulta este [enlace](https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/#actualizar-firmware)
 
 :::note
-Para poder usar el botón de usuario y el botón de silencio, debes soldar el botón de usuario a D2 y el botón de silencio a D3.
+Para poder usar el botón de usuario y el botón de silencio, necesitas soldar el botón de usuario a D2 y el botón de silencio a D3.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usr.png" alt="pir" width={800} height="auto" /></p>
@@ -82,7 +82,7 @@ Estamos usando Home Assistant versión 2026.1.3 y ESPHome versión 2026.1.3 en u
 
 ## Instalar ESPHome Builder 
 
-**Settings → Add-ons → Click on Add-on Store → Install ESPHome Device Builder** add-on.
+**Settings → Add-ons → Haz clic en Add-on Store → Instalar el complemento ESPHome Device Builder**.
 
 Ve a **Home Assistant > Settings > Add-ons**.
 
@@ -122,7 +122,7 @@ Selecciona `ESP32-S3`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
-Cuando se te solicite, haz clic en **SKIP**; crearemos la configuración manualmente.
+Cuando se te pida, haz clic en **SKIP**; crearemos la configuración manualmente.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
@@ -1513,7 +1513,7 @@ Elige **Download** manual
 
 Espera a que el firmware se compile.
 
-Descarga el archivo de firmware .bin generado a tu ordenador desde Factory Format.
+Descarga el archivo de firmware .bin generado en tu ordenador desde Factory Format.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
 
@@ -1537,7 +1537,7 @@ Selecciona el archivo .bin que acabas de descargar.
 
 Espera a que la instalación se complete (puede tardar unos minutos).
 
-Después de completarse correctamente, verás un mensaje de confirmación.
+Cuando finalice correctamente, verás un mensaje de confirmación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_congrats.PNG" alt="pir" width={500} height="auto" /></p>
 
@@ -1573,11 +1573,11 @@ Puedes iniciar sesión con Nabu Cloud y configurar el asistente de voz porque es
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_2.png" alt="pir" width={700} height="auto" /></p>
 
-## Preguntas frecuentes (FAQ)
+## Preguntas frecuentes
 
 ### ¿Cómo ver los registros de reSpeaker?
 
-Para ver archivos de registro y procedimientos de depuración —como verificar la detección de la palabra de activación y la funcionalidad STT— puedes usar la aplicación web de ESP mencionada anteriormente.
+Para ver archivos de registro y procedimientos de depuración —como verificar la detección de la palabra de activación y la funcionalidad STT— puedes usar la aplicación web ESP mencionada anteriormente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/log_view.gif" alt="pir" width={700} height="auto" /></p>
 

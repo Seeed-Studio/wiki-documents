@@ -14,7 +14,7 @@ last_update:
   author: Kian
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/es/r1225_quick_start/
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-25'
 ---
 # Inicio rápido
 
@@ -42,6 +42,8 @@ Cabe señalar que el módulo PoE proporcionado con el reComputer R1225 es compat
 :::
 
 ## Acceder al SenseCAP Gateway OS
+
+**SenseCAP Gateway OS** es un sistema operativo para gateways IoT multiprotocolo, diseñado para entornos industriales interiores. Basado en OpenWrt, ofrece una plataforma de software estandarizada que integra tres capacidades principales: funcionalidad de gateway LoRaWAN, adquisición de datos de buses industriales y generación de informes de cumplimiento normativo para edificios. También puede acceder al código fuente en nuestro repositorio de GitHub mediante el enlace [**AQUÍ**](https://github.com/Seeed-Studio/SenseCAP-Gateway-OS).
 
 ### Acceder a través del router
 

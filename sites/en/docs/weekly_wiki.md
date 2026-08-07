@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 06/01/2026
+  date: 08/03/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-06-01'
+updatedAt: '2026-08-03'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,92 +18,95 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is June 1st, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 3rd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Seeed Jetson DevelopTool Overview](https://wiki.seeedstudio.com/jetson_developtool_overview/)
+### [JetPack 7.2 Resource Hub](https://wiki.seeedstudio.com/jetpack_7_2_resource_hub/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/video-cover-recomputer-guide-en.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-**Seeed Jetson DevelopTool** is an all-in-one AI development workbench designed for Seeed Studio Jetson products. It consolidates the most common Jetson development workflows — from first-time firmware flashing to AI app deployment — into a single desktop GUI application.
-
-</div>
-
-### [ROS2 Voice Pipeline on reSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_ros2_voice_pipeline/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/other/jp72-front.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project turns your voice into TurtleSim control using a reSpeaker XVF3800 microphone array and ROS2. Say “Hey Jarvis” followed by a command, and Jarvis records audio, transcribes it with Groq Whisper, interprets intent with Groq LLaMA, and responds with Groq Orpheus TTS. It is designed for fast setup with Ubuntu and ROS2 Humble, making voice-driven robot experiments easy to run.
+This page organizes the JetPack 7.2 resources currently available for Seeed Studio NVIDIA Jetson products. Use it as the starting point for understanding the new software stack, selecting a supported image, migrating an existing JetPack 6.x project, restoring peripheral drivers, and deploying optimized AI workloads.
 
 </div>
 
-### [ROS2 Voice Pipeline on reSpeaker Flex](https://wiki.seeedstudio.com/respeaker_flex_ros2_voice_pipeline/)
+### [reCamera Pro and Home Assistant Integration: Sound-Triggered Photo Alert](https://wiki.seeedstudio.com/recamera_pro_ha_sound_alert/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_Voice_Capture/reCamera-PRO_Voice_Capture.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project turns your voice into TurtleSim control using a reSpeaker Flex microphone array and ROS2. Say “Hey Jarvis” followed by a command, and Jarvis records audio, transcribes it with Groq Whisper, interprets intent with Groq LLaMA, and responds with Groq Orpheus TTS. It is designed for fast setup with Ubuntu and ROS2 Humble, making voice-driven robot experiments easy to run.
+This wiki explains how to integrate reCamera Pro with Home Assistant (HA) to automatically send a custom message and a current camera snapshot to the Home Assistant dashboard when a specific sound is detected. Using the MQTT protocol for bidirectional communication, when reCamera Pro detects a specified sound (e.g., "help") with a confidence level exceeding a threshold, it automatically sends an alert message and a live image to HA.
 
 </div>
 
-### [Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Series)](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2/)
+### [Reachy Mini Home Assistant integration](https://wiki.seeedstudio.com/reachymini_development_cases_home_assistant/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-home.webp" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document explains how to use Arduino peripheral features on the reTerminal E Series, including RTC setup, low-power mode, PDM microphone recording, and E1003 touch screen examples, with hardware compatibility notes and sample code.
+Want Reachy Mini to control your smart home devices — Mi Home (Xiaomi), Aqara, Midea, Haier, and more (such as refrigerators and air conditioners)? This project explains in detail how to control them with Reachy Mini, no code required. You can even hand this document directly to an AI and let it install and set everything up for you.
 
 </div>
 
-### [Using Stream Deck to Control reCamera Gimbal](https://wiki.seeedstudio.com/using_stream_deck_to_control_recamera_gimbal/)
+### [reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 WebSocket Audio Streaming](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_websocket_audio_stream/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_stream-deck-demo_show.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki demonstrates how to control the reCamera Gimbal using a Stream Deck. By sending commands via the HTTP protocol from the Stream Deck, you can control the reCamera Gimbal to rotate to specific angles, turn the fill light on/off, play audio, and perform other operations.
+This guide describes how to capture audio from an XVF3800 microphone array using an ESP32-S3 (XIAO ESP32S3), record 5 seconds of 48 kHz stereo 32-bit PCM audio, and store the data in PSRAM to handle large audio buffers. The recorded audio is then transmitted over Wi-Fi to a Python-based WebSocket server, where it is received and saved as a standard WAV file. This approach is well suited for applications such as voice capture, remote audio logging, and speech processing pipelines including speech-to-text (STT) and machine-learning–based audio analysis.
 
 </div>
 
-### [How to Install Antenna for reComputer Super and Classic](https://wiki.seeedstudio.com/recomputer_antenna_installation/)
+### [Convert and deploy a custom YOLO detection model in the reCamera web interface](https://wiki.seeedstudio.com/recamera_model_export_online/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Antenna-Installation-Guide/image1.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/ai_model_deployment/model_export_cvimodel_online/image-5.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide walks you through installing antennas on the **reComputer Super** series and the **reComputer Classic** series. The procedures differ between the two product lines, so please follow the section that matches your device.
+This document introduces how to convert and deploy custom YOLO models on reCamera, including ONNX file upload, cloud conversion, model deployment, and real-time detection preview.
 
 </div>
 
-### [reSpeaker Flex with XIAO Feature Updates](https://wiki.seeedstudio.com/respeaker_flex_xiao_introduction/)
+### [Reachy Mini Voice Control for SO-ARM](https://wiki.seeedstudio.com/reachymini_development_cases_gripper_voice_control/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-We updated a series of documents for **reSpeaker Flex with XIAO**, covering audio testing, streaming, and device control features. The new guides include I2S record and playback, UDP/HTTP/MQTT streaming, DoA and VAD examples, and volume control, helping users quickly validate device capabilities and build connected audio applications.
+This case uses the Reachy Mini conversation app to open and close the SO-ARM follower arm gripper with voice commands — **without modifying the official source code**, using the app's built-in external tools mechanism.
 
 </div>
 
-- [reSpeaker Flex Record and Playback Audio Using I2S](https://wiki.seeedstudio.com/respeaker_flex_xiao_record_playback/)
-- [UDP streaming reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_udp_streaming/)
-- [HTTP Streaming reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_http_stream/)
-- [MQTT Streaming reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_mqtt_stream/)
-- [DoA and VAD reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_doa_vad/)
-- [Volume controlling reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_volume_control/)
+### [Build Your Own App for reSpeaker Clip adding memory Layer using Python SDK](https://wiki.seeedstudio.com/respeaker_clip_python_build_app_with_memory/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide shows how to turn the reSpeaker Clip into a voice-powered assistant that not only transcribes, diarizes, or summarizes recordings, but also remembers what was said before. By adding a memory layer on top of the Python SDK workflow, your app can compare new transcripts with past conversations and notify you when it detects a similar discussion. The result is a practical foundation for building smart meeting assistants, personal note takers, or voice-driven knowledge apps with the reSpeaker Clip.
+
+</div>
+
+### [Bring Voice AI to Your Business System with Face Verification](https://wiki.seeedstudio.com/solutions/mcp-face-auth-integration/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/mcp-face-architecture.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+What we supply is a small robot that stands on your customer's floor, holds a conversation, and knows who it is talking to. An operator walks up with their hands full, says "stock out forty units of the M16 bearings," and the transaction lands in your system attributed to the person the camera recognized — not to whatever name was spoken. Microphone array, wake word, speech, language model and face recognition arrive as one tuned product, with a fully on-premises build for customers whose audio cannot leave the site. What is left is the part only you can do: connecting it to your platform. That connection is an **MCP server in front of your own system** — you do not adopt our platform.
+
+</div>
 
 <!-- ## Existing Wiki Updated
 
-### [Meshtastic Firmware Source Code Practical Tutorial](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)
+### [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/)
 
-We have added a new project: [Project B – XIAO ESP32S3 Environmental Telemetry Node](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/#project-b-xiao-esp32s3-environmental-telemetry-node). -->
+We have updated the [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/) guide with the new XIAO_nRF52840_NFC library, expanded antenna tuning instructions, setup verification, and practical NFC tag examples. -->
 
 ## The Efforts of Contributor
 
@@ -238,5 +241,14 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.5.11th](/Seeed_Elderly/weekly_wiki/2026/wiki260511)
 - [weekly wiki on 2026.5.18th](/Seeed_Elderly/weekly_wiki/2026/wiki260518)
 - [weekly wiki on 2026.5.25th](/Seeed_Elderly/weekly_wiki/2026/wiki260525)
+- [weekly wiki on 2026.6.01st](/Seeed_Elderly/weekly_wiki/2026/wiki260601)
+- [weekly wiki on 2026.6.08th](/Seeed_Elderly/weekly_wiki/2026/wiki260608)
+- [weekly wiki on 2026.6.15th](/Seeed_Elderly/weekly_wiki/2026/wiki260615)
+- [weekly wiki on 2026.6.22nd](/Seeed_Elderly/weekly_wiki/2026/wiki260622)
+- [weekly wiki on 2026.6.29th](/Seeed_Elderly/weekly_wiki/2026/wiki260629)
+- [weekly wiki on 2026.7.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260706)
+- [weekly wiki on 2026.7.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260713)
+- [weekly wiki on 2026.7.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260720)
+- [weekly wiki on 2026.7.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260727)
 
 </details>

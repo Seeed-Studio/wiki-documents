@@ -14,7 +14,7 @@ last_update:
   author: Kian
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/ja/r1225_quick_start/
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-25'
 ---
 # クイックスタート
 
@@ -42,6 +42,8 @@ reComputer R1225 に付属する PoE モジュールは IEEE 802.3af 規格に�
 :::
 
 ## SenseCAP Gateway OS へのアクセス
+
+**SenseCAP Gateway OS** は、産業用屋内環境向けに設計された、複数のプロトコルに対応する IoT ゲートウェイ用オペレーティングシステムです。OpenWrt をベースに構築されており、LoRaWAN ゲートウェイ機能、産業用バスのデータ収集、建物のコンプライアンスレポートという3つの主要機能を備えた、標準化されたソフトウェア基盤を提供します。また、[**こちら**](https://github.com/Seeed-Studio/SenseCAP-Gateway-OS)のリンクから、GitHub 上のソースコードにアクセスすることもできます。
 
 ### ルーター経由でアクセス
 

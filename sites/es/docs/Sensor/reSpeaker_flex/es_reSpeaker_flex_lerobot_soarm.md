@@ -1,6 +1,6 @@
 ---
 description: Brazo robótico SO-ARM100 controlado por voz usando LeRobot, Groq Whisper STT, LLaMA 3 y openwakeword en Nvidia o Ubuntu.
-title: Añade interacción por voz a tu SO-ARM10x con reSpeaker Flex
+title: Añade interacción por voz a tu SO-ARM10x con reSpeaker
 keywords:
   - reSpeaker flex
   - xvf3800
@@ -11,7 +11,7 @@ last_update:
   date: 05/19/2026
   author: Kasun Thushara
 createdAt: '2026-05-19'
-updatedAt: '2026-05-19'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/es/respeaker_flex_soarm/
 ---
 
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_soarm/
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/lerobot_flex.png" alt="pir" width={800} height="auto" /></p>
 
 
-El controlador de voz LeRobot SO-ARM te permite controlar un brazo robótico SO-ARM100 usando comandos de voz naturales impulsados por IA. El sistema combina detección de palabra de activación, Groq Whisper de voz a texto, comprensión del lenguaje con LLaMA 3 y Orpheus de texto a voz para crear una experiencia robótica totalmente interactiva y manos libres. Construido sobre el [framework LeRobot](https://github.com/huggingface/lerobot?utm_source=chatgpt.com), se ejecuta en sistemas Ubuntu x86 y dispositivos NVIDIA Jetson usando una matriz de micrófonos USB ReSpeaker para la entrada de voz. Los usuarios pueden crear poses personalizadas del brazo, gestos y disparadores conversacionales para construir interacciones robóticas inteligentes para investigación, educación y desarrollo en robótica.
+El controlador de voz LeRobot SO-ARM te permite controlar un brazo robótico SO-ARM100 usando comandos de voz naturales impulsados por IA. El sistema combina detección de palabra de activación, Groq Whisper de voz a texto, comprensión del lenguaje con LLaMA 3 y síntesis de voz con Orpheus para crear una experiencia robótica totalmente interactiva y manos libres. Construido sobre el [framework LeRobot](https://github.com/huggingface/lerobot?utm_source=chatgpt.com), se ejecuta en sistemas Ubuntu x86 y dispositivos NVIDIA Jetson usando una matriz de micrófonos USB ReSpeaker para la entrada de voz. Los usuarios pueden crear poses personalizadas del brazo, gestos y disparadores conversacionales para construir interacciones robóticas inteligentes para investigación, educación y desarrollo en robótica.
 
 
 ## Hardware necesario
@@ -28,24 +28,17 @@ El controlador de voz LeRobot SO-ARM te permite controlar un brazo robótico SO-
 <table align="center">
   <tr>
     <th>SO-ARM101</th>
-    <th>reSpeaker Flex XVF3800 Circular</th>
     <th>reComputer Super J4012</th>
 
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-100046482-so-arm-101-assembled-kit-pro.jpg" style={{width:500, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg" style={{width:500, height:'auto'}}/></div></td>
 
   </tr>
   <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM-101-Assembled-Kit-Pro-p-6691.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
       </a>
     </div></td>
@@ -57,6 +50,91 @@ El controlador de voz LeRobot SO-ARM te permite controlar un brazo robótico SO-
   </tr>
 </table>
 
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      O
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 500, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                Consigue uno ahora 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+
 ## Cómo funciona
 
 ```
@@ -65,7 +143,7 @@ You speak → Wake word detected → Audio recorded → Whisper STT → LLaMA LL
 
 ## Servicios necesarios
 
-| Servicio | Propósito | Coste |
+| Servicio | Propósito | Costo |
 |---------|---------|------|
 | [Groq](https://groq.com/) | Whisper STT, LLaMA LLM, Orpheus TTS | El nivel gratuito es suficiente |
 
@@ -127,11 +205,11 @@ Conecta cada brazo y ejecuta esta utilidad para identificar qué puerto pertenec
 lerobot-find-port
 ```
 
-Ejecuta esto una vez por brazo (conecta uno cada vez). Anota las rutas de los puertos; normalmente son `/dev/ttyACM0` y `/dev/ttyACM1`.
+Ejecuta esto una vez por brazo (conecta uno a la vez). Anota las rutas de los puertos — normalmente `/dev/ttyACM0` y `/dev/ttyACM1`.
 
 ### Calibrar ambos brazos
 
-La calibración asigna valores brutos del motor a posiciones normalizadas. Sigue la guía tanto para el brazo líder como para el seguidor:
+La calibración asigna los valores brutos de los motores a posiciones normalizadas. Sigue la guía tanto para el brazo líder como para el seguidor:
 [Calibration Guide](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrar)
 
 El archivo de calibración se guardará automáticamente en:
@@ -168,7 +246,7 @@ python download_model.py
 
 ### Encontrar el índice de tu micrófono
 
-Conecta tu reSpeaker Flex y luego ejecuta:
+Conecta tu reSpeaker y luego ejecuta:
 
 ```bash
 python list_mics.py
@@ -184,7 +262,7 @@ Available audio INPUT devices:
   [2] USB PnP Sound Device    (rate=16000Hz)
 ```
 
-Anota el número de índice junto a tu reSpeaker; ese es tu `MIC_INDEX`.
+Anota el número de índice junto a tu ReSpeaker — ese es tu `MIC_INDEX`.
 
 ### Configurar el proyecto
 
@@ -215,7 +293,7 @@ Mueve físicamente el brazo a una pose que quieras guardar y luego ejecuta:
 python read_positions.py
 ```
 
-El script imprime valores normalizados en vivo de las articulaciones mientras mueves el brazo. Cuando estés satisfecho con la pose, pulsa **Ctrl+C** y la posición final se imprimirá para que la copies.
+El script imprime valores normalizados de las articulaciones en vivo mientras mueves el brazo. Cuando estés satisfecho con la pose, pulsa **Ctrl+C** y la posición final se imprimirá para que la copies.
 
 ### Paso 2 — Añadir la pose a `robot_arm.py`
 
@@ -233,7 +311,7 @@ Abre `robot_arm.py` y busca el diccionario `ACTION_MAP`. Añade tu pose:
 }),
 ```
 
-Para gestos animados (como un saludo), usa una lista de poses; cada paso se ejecuta con `ARM_GESTURE_DELAY` entre ellos:
+Para gestos animados (como un saludo), usa una lista de poses — cada paso se ejecuta con `ARM_GESTURE_DELAY` entre ellos:
 
 ```python
 "wave_hi": [
@@ -297,7 +375,7 @@ Ahora di **"Hey Jarvis"** y da una orden.
 
 ---
 
-## Resumen de archivos del proyecto
+## Descripción general de los archivos del proyecto
 
 ```
 examples/voice_arm/
@@ -319,21 +397,21 @@ examples/voice_arm/
 
 ## Referencia de configuración
 
-| Variable | Valor por defecto | Descripción |
+| Variable | Predeterminado | Descripción |
 |---|---|---|
 | `GROQ_API_KEY` | *(required)* | Tu clave de API de Groq |
 | `WAKEWORD_MODEL` | `hey jarvis` | Frase de palabra de activación |
 | `MIC_INDEX` | `1` | Índice de dispositivo PyAudio |
 | `WAKEWORD_THRESHOLD` | `0.5` | Sensibilidad de detección (0.0–1.0) |
 | `WAKEWORD_COOLDOWN` | `2` | Segundos entre reactivaciones |
-| `RECORDING_SECONDS` | `3` | Tiempo de grabación tras la palabra de activación |
-| `LLM_MODEL` | `llama-3.1-8b-instant` | Modelo Groq LLM |
-| `STT_MODEL` | `whisper-large-v3-turbo` | Modelo Groq Whisper |
+| `RECORDING_SECONDS` | `3` | Tiempo de grabación después de la palabra de activación |
+| `LLM_MODEL` | `llama-3.1-8b-instant` | Modelo LLM de Groq |
+| `STT_MODEL` | `whisper-large-v3-turbo` | Modelo Whisper de Groq |
 | `TTS_VOICE` | `autumn` | Voz para la salida de voz |
 | `ARM_PORT` | `/dev/ttyACM0` | Puerto USB del brazo seguidor |
 | `ARM_ID` | `my_awesome_follower_arm` | ID del brazo (coincide con el nombre del archivo de calibración) |
-| `ARM_MOVE_DELAY` | `1.5` | Segundos de espera después de mover a una pose |
-| `ARM_GESTURE_DELAY` | `0.4` | Segundos entre pasos de una secuencia de gestos |
+| `ARM_MOVE_DELAY` | `1.5` | Segundos de espera después de un movimiento de pose |
+| `ARM_GESTURE_DELAY` | `0.4` | Segundos entre pasos de la secuencia de gestos |
 
 ---
 
@@ -348,17 +426,17 @@ sudo apt-get install -y portaudio19-dev
 **La palabra de activación nunca se dispara**
 Ejecuta `list_mics.py` de nuevo y confirma que `MIC_INDEX` coincide con tu ReSpeaker. Intenta bajar `WAKEWORD_THRESHOLD` a `0.3`. Habla claramente a ~1 metro del micrófono.
 
-**El brazo no se mueve después de una orden**
-Comprueba que `ARM_PORT` es correcto (`lerobot-find-port`). Verifica que el archivo de calibración existe en `~/.cache/huggingface/lerobot/calibration/robots/so_follower/<ARM_ID>.json`.
+**El brazo no se mueve después de un comando**
+Comprueba que `ARM_PORT` sea correcto (`lerobot-find-port`). Verifica que el archivo de calibración exista en `~/.cache/huggingface/lerobot/calibration/robots/so_follower/<ARM_ID>.json`.
 
 **El brazo se mueve a una posición incorrecta**
 Los valores de pose predeterminados en `ACTION_MAP` son estimaciones iniciales. Ejecuta `read_positions.py`, mueve físicamente el brazo a la pose deseada y copia los valores impresos en `robot_arm.py`.
 
 **Errores de TTS / STT**
-Vuelve a comprobar `GROQ_API_KEY` en `config.env`. El nivel gratuito de Groq tiene límites de tasa: espera unos segundos entre órdenes si encuentras errores.
+Vuelve a comprobar `GROQ_API_KEY` en `config.env`. El nivel gratuito de Groq tiene límites de tasa: espera unos segundos entre comandos si encuentras errores.
 
 **El audio se reproduce pero suena distorsionado**
-En Raspberry Pi, establece la salida de audio en el dispositivo correcto mediante `raspi-config` → System Options → Audio.
+En Raspberry Pi, configura la salida de audio al dispositivo correcto mediante `raspi-config` → System Options → Audio.
 
 ---
 
@@ -366,7 +444,7 @@ En Raspberry Pi, establece la salida de audio en el dispositivo correcto mediant
 
 Creado con:
 - [LeRobot](https://github.com/huggingface/lerobot) — framework de robótica de código abierto de Hugging Face
-- [SO-ARM100](https://wiki.seeedstudio.com/es/lerobot_so100m_new/) — brazo robótico de código abierto y bajo coste de Seeed Studio
+- [SO-ARM100](https://wiki.seeedstudio.com/es/lerobot_so100m_new/) — brazo robótico de código abierto y bajo costo de Seeed Studio
 - [openwakeword](https://github.com/dscripka/openWakeWord) — detección local de palabra de activación
 - [Groq](https://groq.com/) — Whisper STT, LLaMA LLM y Orpheus TTS ultrarrápidos
 - [ReSpeaker Flex](https://wiki.seeedstudio.com/es/respeaker_flex/) — matriz de micrófonos USB

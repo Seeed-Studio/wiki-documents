@@ -15,7 +15,7 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-04-28'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/get_started_with_meshcore_remote_terminal/
 ---
 This wiki will introduce [Remote Terminal for MeshCore](https://github.com/jkingsman/Remote-Terminal-for-MeshCore) (RemoteTerm) to provide an interface for [MeshCore](https://meshcore.io/) devices to transmit messages. This tutorial provides a fundamental setup for running RemoteTerm on a Raspberry Pi using the [Seeed XIAO ESP32S3 & SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) as a companion radio and [Raspberry Pi Zero 2W](https://www.seeedstudio.com/Raspberry-Pi-Zero-2-W-p-5197.html) for a compact, all-in-one MeshCore solution for power users!
@@ -431,3 +431,26 @@ For additional configuration guidance, review [README_HA.md](https://github.com/
 ## Next Steps
 
 Keep up to date with RemoteTerm’s development or ask questions by joining the [official MeshCore Discord](https://discord.gg/mr3Pt5s5V9), then following [RemoteTerm’s development thread](https://discord.com/channels/1343693475589263471/1477723940951429330). The codebase updates often and you can catch the latest release in the [Changelog](https://github.com/jkingsman/Remote-Terminal-for-MeshCore/blob/main/CHANGELOG.md), and, of course, RemoteTerm is free, ad-free, and open source forever — give it a star on [GitHub](https://github.com/jkingsman/Remote-Terminal-for-MeshCore).
+
+## Tech Support & Product Discussion
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

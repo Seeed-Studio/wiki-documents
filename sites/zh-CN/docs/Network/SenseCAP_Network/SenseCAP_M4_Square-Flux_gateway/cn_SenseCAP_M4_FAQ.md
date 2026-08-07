@@ -9,7 +9,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2025-08-07'
-updatedAt: '2025-09-04'
+updatedAt: '2026-06-25'
 url: https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ/
 ---
 
@@ -36,10 +36,6 @@ SenseCAP M4 Square 开放了 Flux 所需的所有端口。SenseCAP Hotspot 应�
 ### **如何测试网络带宽是否满足要求？**
 
 https://www.speedtest.net
-
-### **flux 和 flux tokens 有什么区别？**
-
-Flux tokens 就是 Flux。Flux tokens 是在不同区块链上支付的平行资产，如 ETH Flux、BSC Flux 等。它们可以在 Zelcore 内的 Fusion 应用中领取。从右上角三个点选择"平行挖矿领取"。只有当您的 Flux-Token 数量高于领取所需费用时，您才会看到可领取金额。
 
 ### **如果我是专业用户，可以擦除原系统并安装其他系统吗？**
 

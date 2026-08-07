@@ -1,28 +1,28 @@
 ---
-description: Este wiki proporciona una introducción completa a las características de hardware y al uso de las interfaces de la carrier board Jetson Robotics J501-Mini. Cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar varias interfaces como M.2, Ethernet, USB, CAN, UART, DI/DO, I2S y expansión de cámara GMSL2, ayudando a los usuarios a comenzar rápidamente con el desarrollo de robótica en la plataforma J501-Mini.
-title: Flashear Jetpack y uso de interfaces
+description: Este wiki proporciona una introducción completa a las características de hardware y al uso de las interfaces de la placa carrier Jetson Mini J501. Diseñada para escenarios de IA en el borde y robótica, cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar interfaces como M.2, Ethernet, USB, CAN, UART, DI/DO, I2S y expansión de cámara GMSL2.
+title: Mini J501 Flashear JetPack y Uso de Interfaces
 tags:
-  - Carrier board J501-Robotics
-  - Flashear Jetpack
-  - Robótica
-  - Uso de interfaces
+  - Mini J501 carrier board
+  - Flash JetPack
+  - Robotics
+  - Interfaces Usage
   - Interfaces
   - Hardware
 image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg
 slug: /recomputer_j501_mini_getting_started
 sku: 100020039
 last_update:
-  date: 11/04/2025
+  date: 07/09/2026
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-03-30'
+updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/es/recomputer_j501_mini_getting_started/
 ---
-# Hardware y primeros pasos con la carrier board Robotics J501
+# Hardware de la placa carrier Mini J501 y Guía de Inicio
 
-La Robotics J501 Mini carrier es una carrier board de edge AI compacta y de alto rendimiento diseñada para robótica avanzada. Compatible con módulos NVIDIA Jetson AGX Orin (32GB/64GB) en modo MAXN, ofrece hasta 275 TOPS de rendimiento de IA. Equipada con amplias opciones de conectividad —incluidos puertos Ethernet Gigabit dobles, ranuras M.2 para módulos 5G y Wi‑Fi/BT, 2 puertos USB 3.2, CAN, GMSL2 (mediante expansión opcional), I2C y UART— funciona como un potente cerebro robótico capaz de procesar datos complejos de varios sensores. Con JetPack 6.2.1 y Linux BSP preinstalados, garantiza un despliegue sin problemas.​
+La Mini J501 es una placa carrier compacta y de alto rendimiento para IA en el borde, diseñada para módulos NVIDIA Jetson AGX Orin (32GB/64GB). Ofrece hasta 275 TOPS de rendimiento de IA en modo MAXN y proporciona amplias opciones de conectividad, incluyendo puertos Ethernet Gigabit dobles, ranuras M.2 para módulos 5G y Wi‑Fi/Bluetooth, 2 puertos USB 3.2, CAN, GMSL2 mediante expansión opcional, I2C y UART. Con JetPack 6.2.1 y Linux BSP preinstalados, admite un despliegue rápido para aplicaciones de IA en el borde.
 
-Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1, la Robotics J501 Mini conecta la toma de decisiones impulsada por modelos de lenguaje grandes con el control físico de la robótica, como la planificación de movimiento y la fusión de sensores. Ideal para el desarrollo rápido de robots autónomos, acelera el tiempo de salida al mercado con interfaces listas para usar y frameworks de IA optimizados.
+La Mini J501 también puede utilizarse en escenarios de robótica. Con compatibilidad para frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1, puede conectar la toma de decisiones basada en modelos con el control físico de la robótica, incluyendo planificación de movimiento, fusión de sensores y percepción multicámara.
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg"/>
@@ -34,7 +34,7 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
     </a>
 </div>
 
-## Descripción general de la reComputer Jetson Robotics J501-Mini Carrier Board
+## Descripción general de la placa carrier reComputer Jetson Mini J501
 
 | **Vista superior** |
 |:---------:|
@@ -46,7 +46,7 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
 
 ## 📝 Lista de componentes
 
-- Carrier Board Robotics J501-Mini x 1
+- Placa carrier Mini J501 x 1
 - Fuente de alimentación y placa de expansión JST x 1
 - Cable XT30 a DC x 1
 - Cable USB, Tipo A a Tipo C x 1
@@ -60,12 +60,12 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
 - Manual de usuario x 1
 
 :::note
-1. Diseñe una solución de disipación de calor robusta de acuerdo con la Guía de diseño térmico cuando utilice una fuente de alimentación de alto voltaje y a temperatura de funcionamiento elevada.
+1. Diseñe una solución de disipación de calor robusta de acuerdo con la Guía de Diseño Térmico cuando utilice una fuente de alimentación de alto voltaje y a temperatura de funcionamiento elevada.
 2. Coloque un disipador en el módulo para obtener un mejor rendimiento.
 3. Durante el funcionamiento con entrada de alto voltaje y alta carga, no toque el disipador para evitar quemaduras.
 4. Recomendación de adaptador de corriente para validación: utilice el adaptador de corriente recomendado en el sitio web oficial de Seeed.
 
-- Adaptador de corriente con conector Barrel Jack 5525 de 19V/4.74A
+- Adaptador de corriente con conector cilíndrico 5525 de 19V/4.74A
 - Asegúrese de que se cumplan los requisitos de consumo máximo de energía.
 2. Compatibilidad del cable de alimentación de CA
 - Compre cables de alimentación de CA tipo trébol específicos de la región según su ubicación.
@@ -76,7 +76,7 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
 
 ## 🔍 Especificación
 
-### Especificaciones de la carrier board
+### Especificaciones de la placa carrier
 
 <table border="1" cellPadding="8" cellSpacing="0">
   <thead>
@@ -99,36 +99,36 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
     </tr>
     <tr>
       <td>Ethernet</td>
-      <td>1x RJ45 10GbE y 1x RJ45 1GbE</td>
+      <td>1x RJ45 10GbE && 1x RJ45 1GbE</td>
     </tr>
     <tr>
       <th rowSpan="13">E/S</th>
       <td>USB</td>
-      <td>2x USB 3.2 Tipo A (10Gbps);<br />1x USB 2.0 Tipo C (Depuración);<br />1x USB 3.0 Tipo C (Recuperación/Depuración)</td>
+      <td>2x USB 3.2 Tipo‑A (10Gbps);<br />1x USB 2.0 Tipo C (Depuración);<br />1x USB 3.0 Tipo C (Recuperación/Depuración)</td>
     </tr>
     <tr>
       <td>Cámara</td>
-      <td>2x conector Mini-Fakra GMSL2 4 en 1 (Opcional);</td>
+      <td>2x Conector Mini‑Fakra GMSL2 4 en 1 (Opcional);</td>
     </tr>
     <tr>
       <td>CAN</td>
-      <td>2x conector CAN JST de 4 pines (GH 1.25);</td>
+      <td>2x Conector CAN JST de 4 pines (GH 1.25);</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td>1x conector DI JST de 6 pines (GH 1.25);<br />1x conector DO JST de 5 pines (GH 1.25);</td>
+      <td>1x Conector DI JST de 6 pines (GH 1.25);<br />1x Conector DO JST de 5 pines (GH 1.25);</td>
     </tr>
       <tr>
       <td>I2S</td>
-      <td>1x conector I2S JST de 6 pines (GH 1.25)</td>
+      <td>1x Conector I2S JST de 6 pines (GH 1.25)</td>
     </tr>
     <tr>
       <td>RS485</td>
-      <td>1x conector RS-485 JST de 4 pines (GH 1.25)</td>
+      <td>1x Conector RS-485 JST de 4 pines (GH 1.25)</td>
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x conector UART JST de 6 pines (multiplexado con DO)</td>
+      <td>1x Conector UART JST de 6 pines (multiplexado con DO)</td>
     </tr>
     <tr>
       <td>Pantalla</td>
@@ -136,11 +136,11 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
     </tr>
     <tr>
       <td>Ventilador</td>
-      <td>1x conector de ventilador de 4 pines (12V PWM)</td>
+      <td>1x Conector de ventilador de 4 pines (12V PWM)</td>
     </tr>
     <tr>
       <td>Puerto de expansión</td>
-      <td>2x cabecera de expansión de cámara (para placa GMSL2)</td>
+      <td>2x Cabecera de expansión de cámara (para placa GMSL2)</td>
     </tr>
     <tr>
       <td>RTC</td>
@@ -148,11 +148,11 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
     </tr>
     <tr>
       <td>LED</td>
-      <td>1x LED PWR, verde;<br />1x LED SSD, verde;<br />1x LED USR, RGB</td>
+      <td>1x LED PWR, Verde;<br />1x LED SSD, Verde;<br />1x LED USR, RGB</td>
     </tr>
     <tr>
       <td>Botón</td>
-      <td>1x botón de recuperación;<br />1x botón RESET</td>
+      <td>1x Botón de recuperación;<br />1x Botón RESET</td>
     </tr>
     <tr>
       <th rowSpan="1">Alimentación</th>
@@ -173,11 +173,11 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
     </tr>
     <tr>
       <td>Instalación</td>
-      <td>Escritorio, montaje en pared</td>
+      <td>Escritorio, Montaje en pared</td>
     </tr>
     <tr>
       <th rowSpan="1">Temperatura de funcionamiento</th>
-      <td colSpan="2">-20℃~60℃ (Modo 25W);<br />-20℃~55℃ (Modo MAXN);<br />(con disipador reComputer Robotics con ventilador)</td>
+      <td colSpan="2">-20℃~60℃ (Modo 25W);<br />-20℃~55℃ (Modo MAXN);<br />(con un disipador compatible con ventilador)</td>
     </tr>
     <tr>
       <th rowSpan="1">Garantía</th>
@@ -200,36 +200,47 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
 ### Requisitos previos
 
 - PC host con Ubuntu
-- Robotics J501 Mini Carrier Board
+- Placa carrier Mini J501
 - Módulo NVIDIA® Jetson AGX Orin
 - Ventilador activo para módulo Nano/NX
 - SSD interno NVMe M.2 2280
-- Cable de transmisión de datos USB Tipo C
+- Cable de transmisión de datos USB Tipo‑C
 
 :::info
 
 Recomendamos que utilice dispositivos host físicos con Ubuntu en lugar de máquinas virtuales.
-Consulte la tabla siguiente para preparar la máquina host.
+Consulte la siguiente tabla para preparar la máquina host.
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
         <td  rowspan="2"> Versión de JetPack </td>
-        <td class="dbon" colspan="3"> Versión de Ubuntu (ordenador host) </td>
+        <td class="dbon" colspan="4"> Versión de Ubuntu (Ordenador host) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Nota:</strong> Para JetPack 7.2, Ubuntu 24.04 solo es compatible para el flasheo y la instalación de componentes en el dispositivo de destino. Utilice Ubuntu 20.04 o 22.04 si necesita componentes de desarrollo en el host.</p>
 
 :::
 
@@ -244,13 +255,26 @@ Aquí necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu corre
       <th>Versión de Jetpack</th>
       <th>Módulo Jetson</th>
       <th> GMSL </th>
-      <th>Enlace de descarga 1</th>
+      <th>Enlace de descarga1</th>
       <th>SHA256</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowSpan={4}>6.2.1</td>
+      <td rowSpan={2}>7.2</td>
+      <td> AGX Orin 64GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBraqxVv-rUQKkcwG2EXybtAUKJgIvgi77ze4eig_Hj3Ns">Download</a></td>
+      <td>F95E91C3BFB00D50EB999383F85949B4</td>
+    </tr>
+    <tr>
+      <td>AGX Orin 32GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBj3DRU7fhETozDjV3BAOG2Ac69rCRZhqNqr_RXuCliXXM">Download</a></td>
+      <td>8FA6E750C2C21678168DAE377E95CE6C</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>6.2.1</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAUQ4ithrVMQLSE274ftNcLAdScXb2OFE8LXfabvKzaGS8">Download</a></td>
@@ -267,7 +291,7 @@ Aquí necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu corre
 </div>
 
 :::danger
-El archivo de imagen de Jetpack6 tiene un tamaño aproximado de **14.2GB** y debería tardar alrededor de 60 minutos en descargarse. Espere a que la descarga se complete.
+Los archivos de imagen de JetPack son grandes y pueden tardar alrededor de 60 minutos en descargarse. Espere a que la descarga se complete.
 :::
 
 :::info
@@ -276,34 +300,34 @@ Para verificar la integridad del firmware descargado, puede comparar el valor ha
 En una máquina host con Ubuntu, abra la terminal y ejecute el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, se confirma que el firmware que descargó está completo e intacto.
 :::
 
-⚙️ **Todos los archivos `.dts` y demás código fuente para las carrier boards Jetson de SEEED se pueden descargar desde** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
+⚙️ **Todos los archivos `.dts` y demás código fuente para las placas carrier Jetson de SEEED se pueden descargar desde** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
 
 
-### Entrar en modo Force Recovery
+### Entrar en modo de recuperación forzada
 
 :::info
-Antes de poder continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo force recovery.
+Antes de continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo de recuperación forzada.
 :::
 
 <details>
 
 <summary> Paso a paso </summary>
 
-**Paso 1.** Mantenga presionado el botón para entrar en modo RESET.
+**Paso 1.** Mantenga presionado el botón para entrar en el modo RESET.
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
 </div>
 
-**Paso 2.** Encienda la carrier board conectando el cable de alimentación y luego suelte el botón **REC**.
+**Paso 2.** Enciende la placa carrier conectando el cable de alimentación y luego suelta el botón **REC**.
 
-**Paso 3.** Conecte la placa al PC host con Ubuntu con un cable de transmisión de datos USB Tipo C.
+**Paso 3.** Conecta la placa al PC host con Ubuntu mediante un cable USB Type-C de transmisión de datos.
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/flash-port.png" />
 </div>
 
-**Paso 4.** En el PC host con Linux, abra una ventana de Terminal e introduzca el comando `lsusb`. Si el contenido devuelto incluye una de las siguientes salidas según el Jetson SoM que utilice, entonces la placa está en modo force recovery.
+**Paso 4.** En el PC host con Linux, abre una ventana de Terminal e introduce el comando `lsusb`. Si el contenido devuelto incluye una de las siguientes salidas según el Jetson SoM que utilices, entonces la placa está en modo de recuperación forzada.
 
 - Para AGX Orin 32GB: **0955:7223 NVidia Corp**
 - Para AGX Orin 64GB: **0955:7023 NVidia Corp**
@@ -323,14 +347,15 @@ La siguiente imagen es para AGX Orin 32GB:
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
+# For JetPack 7.2 example: sudo tar xpf mfi_recomputer-mini-agx-orin-j501x-32g-7.2.0-39.2.0-2026-06-25.tar.gz
+# For JetPack 6.2.1 example: sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
 ```
 
 **Paso 2:** Ejecuta el siguiente comando para flashear el sistema JetPack en el SSD NVMe:
 
 ```bash
 cd mfi_xxxx
-# For example: cd mfi_recomputer-orin-robotics-j501 
+# For example: cd mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
@@ -339,10 +364,10 @@ Verás la siguiente salida si el proceso de flasheo se realiza correctamente
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-El comando de flasheo puede ejecutarse durante 2-10 minutos.
+El comando de flasheo puede tardar entre 2 y 10 minutos.
 :::
 
-**Paso 3:** Conecta la Robotics J501-Mini a una pantalla usando el adaptador de PD a HDMI para conectarla a una pantalla que admita entrada HDMI, o conéctala directamente a una pantalla que admita entrada PD usando el cable PD, y completa la configuración inicial:
+**Paso 3:** Conecta la Mini J501 a una pantalla usando el adaptador PD a HDMI, o conéctala directamente a una pantalla que admita entrada PD usando el cable PD, y completa la configuración inicial:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
@@ -354,11 +379,11 @@ Completa la **Configuración del sistema** según tus necesidades.
 
 ## 🔌 Uso de interfaces
 
-A continuación se presentarán las diversas interfaces de la placa Robotics j501-Mini y cómo utilizarlas.
+Las siguientes secciones presentan las distintas interfaces de la placa Mini J501 y cómo utilizarlas.
 
 ## M.2 Key M
 
-M.2 Key M está diseñado para SSD NVMe de alta velocidad, proporcionando una transferencia de datos ultrarrápida para aplicaciones de robótica.
+M.2 Key M está diseñado para SSD NVMe de alta velocidad, proporcionando transferencia de datos ultrarrápida para aplicaciones de robótica.
 
 ### Los SSD compatibles son los siguientes
 
@@ -448,7 +473,7 @@ La funcionalidad Bluetooth está disponible a través de la ranura M.2 Key E.
 
 ## Ethernet
 
-La placa portadora Robotics j501-Mini incluye un puerto Ethernet RJ45 de 1Gbps y otro de 10Gbps para conectividad de red cableada de alta velocidad.
+La placa carrier Mini J501 incluye un puerto Ethernet RJ45 de 1Gbps y otro de 10Gbps para conectividad de red cableada de alta velocidad.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/ethernet-real.png"/>
@@ -471,7 +496,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 ## LED
 
-La J501 Mini tiene dos LED que se pueden controlar. A continuación se muestra cómo controlar los LED para que sean **verdes**, **rojos** o **azules**.
+La Mini J501 tiene dos LED que se pueden controlar. A continuación se muestra cómo controlar los LED para que sean **verdes**, **rojos** o **azules**.
 
 <!-- <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/led.jpg"/>
@@ -505,7 +530,7 @@ El efecto de control de los LED se muestra en la siguiente figura:
 
 ## USB
 
-La placa portadora Robotics j501-Mini está equipada con una variedad de puertos USB, incluidos 2 puertos USB 3.2 Type-A (10Gbps), un puerto USB 3.0 Type-C y un puerto USB 2.0 Type-C para modo dispositivo/depuración, ofreciendo opciones de conectividad versátiles.
+La placa carrier Mini J501 está equipada con una variedad de puertos USB, incluidos 2 puertos USB 3.2 Type-A (10Gbps), un puerto USB 3.0 Type-C y un puerto USB 2.0 Type-C para modo dispositivo/depuración, ofreciendo opciones de conectividad versátiles.
 
 ### Prueba de velocidad USB-A
 
@@ -566,13 +591,13 @@ A continuación podrás controlar la terminal del Jetson a través del puerto se
 
 ## Ventilador
 
-El reComputer Jetson Robotics j501-Mini está equipado con: 
+El reComputer Jetson Mini J501 está equipado con:
 
 - 1x conector de ventilador de 4 pines (12V PWM): Compatible con ventiladores PWM estándar de 12V, también admite control de velocidad preciso, lo que lo hace ideal para requisitos de refrigeración de alto rendimiento.
 
 ### Conexión de hardware
 
-La Robotics J501 Mini proporciona un encabezado estándar de 4 pines para el ventilador. 
+La Mini J501 proporciona un header estándar de 4 pines para el ventilador.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/fan0.png"/>
@@ -618,9 +643,9 @@ Además, podemos establecer manualmente la velocidad del ventilador usando la he
 
 ## CAN
 
-CAN (Controller Area Network) es un estándar robusto de bus para vehículos que permite que microcontroladores y dispositivos se comuniquen entre sí sin un ordenador host.  
+CAN (Controller Area Network) es un estándar robusto de bus para vehículos que permite que microcontroladores y dispositivos se comuniquen entre sí sin un ordenador host.
 
-La J501 Mini proporciona dos interfaces CAN integradas en el conector JST de 4 pines (GH1.25). Además, ambas interfaces CAN **admiten CAN-FD**, con CAN0 y CAN1 como se muestra a continuación:
+El Mini J501 proporciona dos interfaces CAN integradas en el conector JST de 4 pines (GH1.25). Además, ambas interfaces CAN **son compatibles con CAN-FD**, con CAN0 y CAN1 como se muestra a continuación:
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can-real.png"/>
@@ -645,7 +670,7 @@ Las definiciones de pines para **CAN0** y **CAN1** son similares, y el diagrama 
 </div>
 
 ### Comunicación CAN
-Esta sección conecta CAN0 y CAN1 en la Jetson para demostrar cómo enviar y recibir datos entre CAN0 y CAN1 en `Classic CAN mode` y `CAN-FD mode`.
+En esta sección se conectan CAN0 y CAN1 en la Jetson para demostrar cómo enviar y recibir datos entre CAN0 y CAN1 en `Classic CAN mode` y `CAN-FD mode`.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/CAN-connect.png"/>
@@ -750,7 +775,7 @@ En la [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reCompute
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_datasheet.png"/>
 </div> -->
 
-<!-- Here we will demonstrate to you how to conduct data communication using the CAN1 interface, by utilizing the [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html). -->
+<!-- Aquí te mostraremos cómo realizar la comunicación de datos utilizando la interfaz CAN1, mediante el uso del [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html). -->
 
 Crea `test_canfd.sh` para probar la transmisión y recepción de datos entre CAN0 y CAN1 en modo CAN-FD:
 
@@ -817,7 +842,7 @@ Se completará la transmisión y recepción de datos entre CAN0 y CAN1:
 
 ### GPI
 
-El Robotics J501 Mini proporciona un conector JST estándar de 6 pines para GPI. 
+El Mini J501 proporciona un conector JST estándar de 6 pines para GPI.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPI-real.png"/>
@@ -836,7 +861,7 @@ Las definiciones de pines para **J12** son las siguientes:
 </div>
 
 
-Habilita de **GPI 1** a **GPI 4** para leer el estado de entrada:
+Habilita **GPI 1** a **GPI 4** para leer el estado de entrada:
 ```bash
 sudo gpioset --mode=wait 0 131=0
 ```
@@ -854,7 +879,7 @@ Cuando se lee un nivel alto, devolverá 1; cuando se lee un nivel bajo, devolver
 
 ### GPO
 
-El Robotics J501 Mini proporciona un conector JST estándar de 6 pines para GPO. 
+El Mini J501 proporciona un conector JST estándar de 6 pines para GPO.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPO-real.png"/>
@@ -873,13 +898,13 @@ Las definiciones de pines para **J14** son las siguientes:
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPO-ds.png"/>
 </div>
 
-Habilita de **GPO 1** a **GPO 4** para el estado de salida:
+Habilita **GPO 1** a **GPO 4** para el estado de salida:
 ```bash
 sudo gpioset --mode=wait 0 79=1
 ```
 
 
-Para establecer la salida de **GPO 1** a **GPO 4**, consulta los siguientes comandos:
+Para configurar la salida de **GPO 1** a **GPO 4**, consulta los siguientes comandos:
 
 ```bash
 sudo gpioset --mode=wait 0 110=1  #set output of GPO 1 to high voltag
@@ -897,11 +922,11 @@ sudo gpioset --mode=wait 0 113=1  #set output of GPO 4 to low voltag
 
 ## UART
 
-El Robotics J501 Mini proporciona un conector JST estándar de 6 pines para la comunicación serie UART. 
-UART y GPO utilizan la misma interfaz JST. Esta interfaz tiene por defecto la funcionalidad de GPO. **Si necesitas cambiar a la funcionalidad UART, debes apuntar a un nuevo árbol de dispositivos y reiniciar el dispositivo para que el cambio surta efecto.**
+El Mini J501 proporciona un conector JST estándar de 6 pines para la comunicación serie UART.
+UART y GPO utilizan la misma interfaz JST. Esta interfaz tiene por defecto la funcionalidad de GPO. **Si necesitas cambiar a la funcionalidad UART, debes apuntar a un nuevo device tree y reiniciar el dispositivo para que el cambio surta efecto.**
 
 
-Para la comunicación **UART**, sigue el siguiente cableado. Aquí utilizamos como ejemplo la herramienta USB a TTL.
+Para la comunicación **UART**, sigue el siguiente cableado. Aquí utilizamos la herramienta USB a TTL como ejemplo.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/uart-real.png"/>
@@ -925,7 +950,7 @@ Las definiciones de pines para **J14** son las siguientes:
 UART y GPO comparten la misma interfaz física. De forma predeterminada, esta interfaz funciona como GPO. Si necesitas cambiar a UART, consulta el contenido de esta sección.
 :::
 
-Para diferentes módulos, necesitas descargar el archivo de árbol de dispositivos correspondiente.
+Para diferentes módulos, debes descargar el archivo de device tree correspondiente.
 
 Enlace de descarga `.dtb` para AGX Orin 32G:  
 [https://files.seeedstudio.com/wiki/recomputer-j501-mini/tegra234-j501x-0000%2Bp3701-0004-recomputer-mini.dtb](https://files.seeedstudio.com/wiki/recomputer-j501-mini/tegra234-j501x-0000%2Bp3701-0004-recomputer-mini.dtb)  
@@ -933,7 +958,7 @@ Enlace de descarga `.dtb` para AGX Orin 32G:
 Enlace de descarga `.dtb` para AGX Orin 64G:  
 [https://files.seeedstudio.com/wiki/recomputer-j501-mini/tegra234-j501x-0000%2Bp3701-0005-recomputer-mini.dtb](https://files.seeedstudio.com/wiki/recomputer-j501-mini/tegra234-j501x-0000%2Bp3701-0005-recomputer-mini.dtb)  
 
-Copia el árbol de dispositivos a la ruta especificada:
+Copia el device tree a la ruta especificada:
 ```bash
 # AGX Orin 32G
 sudo cp tegra234-j501x-0000%2Bp3701-0004-recomputer-mini.dtb /boot/
@@ -942,14 +967,14 @@ sudo cp tegra234-j501x-0000%2Bp3701-0004-recomputer-mini.dtb /boot/
 sudo cp tegra234-j501x-0000%2Bp3701-0005-recomputer-mini.dtb /boot/
 ```
 
-Realiza una copia de seguridad y modifica `/boot/extlinux/extlinux.conf`, añadiendo una línea para apuntar al nuevo archivo `.dtb`:
+Haz una copia de seguridad y modifica `/boot/extlinux/extlinux.conf`, añadiendo una línea que apunte al nuevo archivo `.dtb`:
 
 ```bash
 sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
 sudo vim /boot/extlinux/extlinux.conf
 ```
 
-Según el nombre del archivo de árbol de dispositivos que estés utilizando, añade una línea `FDT=/your_path` en `extlinux.conf`. Tomando AGX Orin 32G como ejemplo:
+Según el nombre del archivo del árbol de dispositivos que estés utilizando, añade una línea `FDT=/your_path` en `extlinux.conf`. Tomando AGX Orin 32G como ejemplo:
 
 ```python
 LABEL primary
@@ -963,7 +988,7 @@ LABEL primary
 </div>
 
 
-El conector JST de 6 pines **UART** está asignado a `/dev/ttyTHS1` en la Jetson. Puedes usar `minicom` para ver la transmisión y recepción de datos del puerto serie:
+El conector JST de 6 pines **UART** está mapeado a `/dev/ttyTHS1` en la Jetson. Puedes usar `minicom` para ver la transmisión y recepción de datos del puerto serie:
 
 ```bash
 sudo apt install minicom
@@ -977,7 +1002,7 @@ La interfaz RS485 proporciona un canal de comunicación diferencial robusto y re
 
 ### Conexión de hardware
 
-Robotics J501-Mini proporciona un conector JST de 4 pines (GH 1.25) para RS485.
+La Mini J501 proporciona un conector JST de 4 pines (GH 1.25) para RS485.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/485-real.png"/>
@@ -1007,7 +1032,7 @@ sudo gpioset --mode=wait 0 126=0 # Enable RS485
 ```
 
 
-La interfaz **RS485** está asignada a `/dev/ttyTHS4` en la Jetson. Puedes usar `cutecom` para probar la transmisión y recepción de datos serie con un PC:
+La interfaz **RS485** está mapeada a `/dev/ttyTHS4` en la Jetson. Puedes usar `cutecom` para probar la transmisión y recepción de datos serie con un PC:
 
 ```bash
 sudo apt install cutecom
@@ -1024,10 +1049,10 @@ El efecto de la transmisión y recepción de datos serie se muestra en la figura
 
 ## I2S
 
-La interfaz I2S proporciona un bus de comunicación de audio digital diseñado para transmitir datos de audio estéreo entre dispositivos. La Robotics J501-Mini es compatible con la señalización I2S estándar, lo que permite entrada y salida de audio de alta calidad y baja latencia para aplicaciones como interacción por voz, localización de sonido y procesamiento de audio en tiempo real.
+La interfaz I2S proporciona un bus de comunicación de audio digital diseñado para transmitir datos de audio estéreo entre dispositivos. La Mini J501 admite señalización I2S estándar, lo que permite entrada y salida de audio de alta calidad y baja latencia para aplicaciones como interacción por voz, localización de sonido y procesamiento de audio en tiempo real.
 
 ### Conexión de hardware
-Robotics J501-Mini proporciona 1 conector JST de 5 pines (GH 1.25) para **I2S**. 
+La Mini J501 proporciona 1 conector JST de 5 pines (GH 1.25) para **I2S**.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/I2S-real.png"/>
@@ -1156,7 +1181,7 @@ Después de habilitar **I2S**, esta sección muestra cómo usar I2S para control
 amixer -c APE cset name="I2S2 Mux" "ADMAIF1" # Speaker
 ```
 
-Si estás usando un micrófono:
+Si estás utilizando un micrófono:
 ```bash
 amixer -c APE cset name="ADMAIF2 Mux" "I2S2" # Microphone
 ```
@@ -1176,7 +1201,7 @@ Puedes ver la salida en la terminal cuando el altavoz se controla con normalidad
 ## RTC
 
 
-La Robotics J501-Mini proporciona un conector estándar de 2 pines para **RTC** (3V). 
+La Mini J501 proporciona un conector estándar de 2 pines para **RTC** (3V).
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/rtc0.png"/>
@@ -1205,11 +1230,11 @@ cat /sys/class/rtc/rtc0/power/runtime_status
 
 ## Puerto de expansión - GMSL
 
-La placa carrier Robotics j501-Mini incorpora un conector de expansión de cámara para la placa de expansión GMSL. Puede conectar y operar simultáneamente cuatro cámaras GMSL al mismo tiempo.
+La placa carrier Mini J501 incluye un conector de expansión de cámara para la placa de expansión GMSL. Puede conectar y operar simultáneamente cuatro cámaras GMSL al mismo tiempo.
 
 ### Conexión de hardware
 
-A continuación se muestra la ranura de conexión de la placa de expansión de cámara GMSL de la placa carrier Robotics j501-Mini (es necesario preparar una placa de expansión con antelación):
+A continuación se muestran las ranuras de conexión de la placa de expansión de cámara GMSL de la placa carrier Mini J501 (debes preparar una placa de expansión con antelación):
 
 <div align="center">
   <img width="450" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/gmsl-real1.png"/>
@@ -1226,7 +1251,7 @@ A continuación se muestran los modelos de cámaras GMSL que ya hemos soportado:
 ### Instrucciones de uso
 
 :::note
-Antes de habilitar la funcionalidad GMSL, asegúrate de haber instalado una versión de JetPack con el controlador para la placa de expansión GMSL.
+Antes de habilitar la funcionalidad GMSL, asegúrate de haber instalado una versión de JetPack con el controlador de la placa de expansión GMSL.
 :::
 
 ### Configurar el archivo Jetson IO
@@ -1244,7 +1269,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 </div>
 
 :::note
-Hay tres archivos de superposición en total, a saber, Seeed GMSL 1X4 3G, Seeed GMSL 1X4 6G, Seeed GMSL 1X4 y Orbbec Gemini 335Lg. Estos corresponden respectivamente a la cámara 3G de SG3S, la cámara 6G de SG2 y SG8S, y la cámara de Orbbec. Como se muestra en la Figura 3, configura el archivo io según el modelo de tu cámara.
+En total hay tres archivos de superposición, a saber, Seeed GMSL 1X4 3G, Seeed GMSL 1X4 6G, Seeed GMSL 1X4 y Orbbec Gemini 335Lg. Estos corresponden respectivamente a la cámara 3G de SG3S, la cámara 6G de SG2 y SG8S, y la cámara de Orbbec. Como se muestra en la Figura 3, configura el archivo io según el modelo de tu cámara.
 :::
 
 **paso 2.** Instala las herramientas de configuración de la interfaz de vídeo.
@@ -1270,14 +1295,14 @@ The first time you turn it on, you might need to update the firmware.
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/update.png"/>
 </div>
 
-Opening the data stream, you can view the video from the camera.
+Al abrir el flujo de datos, puedes ver el video de la cámara.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
 </div> -->
 
 ### Usar las cámaras de la Serie SGxxx
 
-**paso 1.** Establece el formato de canal para el serializador y el deserializador. El número de interfaz en la figura corresponde al número de serializador/deserializador.
+**paso 1.** Configura el formato de canal para el serializador y el deserializador. El número de interfaz en la figura corresponde al número de serializador/deserializador.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/gmsl-Interface.png"/>
@@ -1308,7 +1333,7 @@ Opening the data stream, you can view the video from the camera.
 Necesitamos configurar el formato de canal para el serializador y el deserializador cada vez que el dispositivo se reinicia.
 :::
 
-**step 2.** Configura la resolución de la cámara.
+**paso 2.** Configura la resolución de la cámara.
 
 :::info
 Aquí demostramos cómo configurar cámaras de diferentes modelos y resoluciones.
@@ -1322,7 +1347,7 @@ v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/vid
 ```
 
 :::note
-`--set-fmt-video` sigue la resolución que se selecciona en función de la cámara que se conecta. El sensor_mode también se elige en consecuencia. Actualmente, hay tres opciones de sensor_mode, cada una correspondiente a una resolución diferente.
+`--set-fmt-video` va seguido de la resolución que se selecciona según la cámara que esté conectada. El sensor_mode también se elige en consecuencia. Actualmente, hay tres opciones de sensor_mode, cada una correspondiente a una resolución diferente.
 
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080
@@ -1330,7 +1355,7 @@ v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/vid
 
 :::
 
-**step 3.** Inicia la cámara.
+**paso 3.** Inicia la cámara.
 
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video0 ! \
@@ -1356,13 +1381,13 @@ videoconvert ! autovideosink -ev
 
 ## Pantalla
 
-El Robotics J501 Mini está equipado con un HDMI para salida de pantalla de alta resolución.
+La Mini J501 está equipada con un HDMI para salida de pantalla de alta resolución.
 
 ## Recursos
 
-- [Esquemático de la Carrier Board reComputer Robotics J501-Mini](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
+- [Esquemático de la placa portadora reComputer Mini J501](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
 
-<!-- - [reComputer Robotics J501-Mini Carrier Board Datasheet]() -->
+<!-- - [reComputer Mini J501 Carrier Board Datasheet]() -->
 
 - [Código fuente de L4T de Seeed](https://github.com/Seeed-Studio/Linux_for_Tegra)
 

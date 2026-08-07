@@ -12,7 +12,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-05-13'
-updatedAt: '2026-05-14'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/
 ---
 
@@ -79,12 +79,12 @@ P1-Pro 版本内置电池和 GPS 模块。对于 P1 版本，如有需要，用�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps_install.png" alt="pir" width={800} height="auto" /></p>
 
-- 步骤 3：重新装回外壳。
+- 步骤 3：组装外壳。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-请确保外壳安装到位且螺丝拧紧，以保持设备的防水性能。
+请确保外壳安装到位且螺丝拧紧，以保证设备的防水性能。
 :::
 
 ### 启动设备
@@ -96,7 +96,7 @@ P1-Pro 版本内置电池和 GPS 模块。对于 P1 版本，如有需要，用�
 </div>
 
 :::tip
-如果按下按键后设备没有响应，请先为其充电。不要使用快充充电器。
+如果按下按键后设备没有反应，请先为其充电。不要使用快充充电器。
 :::
 
 ### 通过 App 连接
@@ -110,11 +110,11 @@ import TabItem from '@theme/TabItem';
 
 - 在蓝牙面板中选择目标设备。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/device_select123.jpeg" alt="pir" width={300} height="auto" /></p>
 
 - 输入配对码（默认配对码为 `123456`），然后点击 `OK` 连接设备。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/pairing_code123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -132,13 +132,13 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 
-### 通过网站连接
+### 通过网页连接
 
-如果你希望在 Web 客户端中发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0)。
+如果你希望在网页客户端中发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0)。
 
-  步骤 1：打开网站
+  步骤 1：打开网页
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) 进入该网站。
+[Click here](https://client.meshtastic.org/messages/broadcast/0) 进入网页。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   步骤 2：添加新设备 
@@ -159,18 +159,18 @@ import TabItem from '@theme/TabItem';
     选择串口方式。打开设备管理器查看设备连接到哪个端口，然后在弹出的窗口中选择该端口。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    你的设备会显示在列表中。点击进行连接。如果连接成功，你可以在网站上直接查看设备状态。
+    你的设备会显示在列表中。点击进行连接。如果连接成功，你可以在网页上直接看到设备状态。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 ### 配置 LoRa
 
-为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置会控制设备使用的频率范围，应根据你所在的地区进行设置。
+为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
 
 <Tabs>
 <TabItem value="ios" label="iOS App">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_LoRa123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -194,7 +194,7 @@ import TabItem from '@theme/TabItem';
 **EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到该限制时，你的设备将停止发射，直到再次被允许发射为止。
 :::
 
-现在你已经在设备上设置好了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
+现在你已经在设备上设置了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
 
 ### 配置 GPS
 
@@ -202,7 +202,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-对于 iOS，请打开 `Accurate Location`。否则，定位可能会不准确。
+对于 iOS，请打开 `Accurate Location`。否则，定位可能不准确。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -219,7 +219,7 @@ import TabItem from '@theme/TabItem';
 ## 安装
 
 :::danger note
-由于设备将长期在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝已牢固拧紧且外壳安装到位。为了进一步提升防水性能，你也可以考虑额外进行密封处理。
+由于设备将长期在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝已牢固拧紧且上盖安装到位。为了进一步提升防水性能，你也可以考虑额外进行密封处理。
 :::
 
 - **部件清单**
@@ -343,7 +343,7 @@ import TabItem from '@theme/TabItem';
 
 - 故障排查
 
-[点击此处](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware) 重新烧录固件。
+[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware) 重新烧录固件。
 
 ### 设备变砖
 
@@ -351,14 +351,14 @@ import TabItem from '@theme/TabItem';
 
 设备无响应，LED 不亮，且无法与你的应用配对。
 
-**1）设备仍然可以进入 DFU 模式，则尝试烧录 Bootloader。**
+**1）设备仍然可以进入 DFU 模式，则尝试烧录 bootloader。**
 
 #### 烧录 Bootloader
 
 - [Bootloader 下载](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-当你烧录 Bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
+在烧录 bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
 :::
 
 **步骤 1：安装 Adafruit-nrfutil**
@@ -405,7 +405,7 @@ python -m pip show adafruit-nrfutil
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-对于 Windows 用户，你可能需要手动添加路径。复制上一步中显示的安装位置，然后按如下方式添加：
+对于 Windows 用户，你可能需要手动添加该路径。复制上一步显示的安装位置，然后按如下方式添加：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -421,7 +421,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下命令使用 `python3`；然而，如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上的 Python 3.x 安装仍然使用 `python.exe` 这个名称。
+注意：以下命令使用 `python3`；但是，如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上的 Python 3.x 安装仍然使用 `python.exe` 这个名称。
 
 要在你的主目录的用户空间中安装：
 
@@ -470,9 +470,9 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 以 Mac 用户为例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**步骤 3：烧录 Bootloader**
+**步骤 3：烧录 bootloader**
 
-在终端或命令提示符中，导航到你下载 Bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
+在终端或命令提示符中，导航到你下载 bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备对应的端口：
 
 - **适用于 Windows**：
 
@@ -494,7 +494,31 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-当你完成上述步骤后，请按照此[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#固件烧录)烧录应用固件。
+完成上述步骤后，请按照此[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware)烧录应用固件。
+
+### 无法在主信道上通信
+
+如果设备无法与附近的节点通信或发送消息，首先检查 LoRa 区域和调制解调器预设是否与周围节点一致。你还应该检查默认的 **PSK** 是否被更改。在主信道上使用不同的 PSK 会导致设备无法与该信道上的其他节点通信。
+
+发现此问题的最简单方法是通过手机应用。打开应用，连接到目标设备，然后导航到 `Settings` -> `Channels`。选择主信道并检查 **PSK** 值。如果它与周围节点不同，请将其更新为相同的 PSK 并保存信道设置。
+
+<Tabs>
+<TabItem value="ios" label="IOS 应用">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problems_ios.png" alt="在 iOS 应用中检查主信道 PSK" width={500} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="android" label="Android 应用">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problem_and.png" alt="在 Android 应用中检查主信道 PSK" width={900} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+**解决方案**
+
+如果你不确定修改了哪些设置，请按照 [Factory Reset](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#factory-reset) 指南将设备恢复到默认设置。如果只更改了 PSK，请将其重新设置为 `AQ==`。
 
  ### 设备自动关机
 
@@ -503,7 +527,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
  - 设备开机后，过一段时间会自动关机或重启。
  - 串口日志运行一段时间后停止。
 
- 这可能是由于在设备处于以下状态之一时，手动强制重启或关机导致的：尚未完成消息传输过程或正在配置中。
+ 这可能是因为在以下状态之一时，手动强制重启或关闭设备导致的：未完成消息发送过程或正在配置中。
 
  #### 故障排查
 
@@ -523,44 +547,57 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 #### NodeDB 重置
 
-NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中存储了该节点的过期信息，你需要对其进行更新。
+NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中存储了该节点的过时信息，你需要对其进行更新。
+
+NodeDB 存储的详细信息包括：
+
+- **节点 ID**
+- **用户名**
+- **位置信息**
+- **信号信息（SNR）**
+- **最后一次看到的时间**
 
 打开应用并连接到目标设备。前往 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/sending_failed123.png" alt="应用中的设备设置和 Reset NodeDB 按钮" width={600} height="auto" /></p>
 
 #### 交换用户信息
 
-每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的另一个节点收发私信，可以在应用中手动提示它们交换信息。
+每个节点都会定期发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的某个节点收发私信，可以在应用中手动提示它们交换信息。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Settings 中的设备条目" width={300} height="auto" /></p>
 
 #### 重新生成私钥
 
-两个节点需要彼此知道对方的私钥，才能相互通信。如果某个节点在私信传输中持续失败，请尝试为其重新生成私钥。
+两个节点需要彼此知道对方的私钥，才能相互通信。如果某个节点在私信传输中一直失败，请尝试为其重新生成私钥。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Settings 中的设备条目" width={600} height="auto" /></p>
 
 重启故障设备以使配置生效。
 
 :::note
-在重新生成密钥后，其他设备需要重新连接该节点。因此，最好在其他设备的节点列表中删除该节点。
+在重新生成密钥后，其他设备需要重新与该节点连接。因此，最好在其他设备的节点列表中删除该节点。
+:::
+
+:::tip
+请注意以下选项之间的区别：
+
+- **Reset NodeDB**：仅清除节点数据库。
+- **Factory Reset**：将设备恢复到出厂设置并移除额外的配置信息。
 :::
 
 ### 功耗
 
 功耗主要取决于数据传输频率和 GPS 更新速率等因素。
-下列数据仅供参考；实际功耗可能会因真实使用环境而有所不同。
+下列数据仅供参考；实际功耗可能会因实际使用情况而有所不同。
 
-- **关机休眠模式功耗**
+- **关机睡眠模式功耗**
 
 |描述|功耗|
 |---|---|
 |GPS_LED 工作电流|1.02 mA|
 |上电但未激活|56.195 μA|
-|上电且已激活|611 μA|
+|上电并激活|611 μA|
 
 **示例：**
 
@@ -595,3 +632,26 @@ Xiao nRF-52840 Plus 的最大充电电流为 200 mA。CN3165 充电管理芯片�
 
 ## 资源
 - [Solar Node 电池寿命计算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

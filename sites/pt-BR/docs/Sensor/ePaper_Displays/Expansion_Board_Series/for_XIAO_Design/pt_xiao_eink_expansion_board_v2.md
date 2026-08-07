@@ -12,7 +12,7 @@ last_update:
   author: Allen
   date: 12/09/2024
 createdAt: '2025-01-10'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-27'
 url: https://wiki.seeedstudio.com/pt-br/xiao_eink_expansion_board_v2/
 ---
 
@@ -79,17 +79,17 @@ Esta placa de expansão não inclui um display de ePaper; o display deve ser adq
 
 ### eInk compatíveis
 
-1. [Display E-paper de 1,54 polegadas - Matriz de pontos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-2. [Display E-Paper de 2,13 polegadas - Monocromático flexível 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-3. [Display E-Paper de 2,13 polegadas - Quádruplo 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-4. [Display E-paper de 2,9 polegadas - Monocor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-5. [Display e-paper de 2,9 polegadas - Quádrupla cor 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-6. [Display E-Paper de 4,2 polegadas - Monocor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-7. [Display E-Paper de 4,26 polegadas - Monocor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-8. [Display E-paper de 5,65 polegadas - Sete cores 600x480](https://www.seeedstudio.com/5-65-Seven-Color-ePaper-Display-with-600x480-Pixels-p-5786.html)
-9. [Display E-paper de 5,83 polegadas - Monocor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-10. [Display E-paper de 7,5 polegadas - Monocor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-11. [Display E-paper de 7,5 polegadas - Três cores 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
+1. [Display E-paper de 1,54" - Matriz de pontos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+2. [Display E-paper de 2,13" - Monocromático flexível 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+3. [Display E-paper de 2,13" - Quádruplo 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+4. [Display E-paper de 2,9" - Monocor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+5. [Display E-paper de 2,9" - Quádrupla cor 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+6. [Display E-paper de 4,2" - Monocor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+7. [Display E-paper de 4,26" - Monocor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+8. [Display E-paper de 5,65" - Sete cores 600x480](https://www.seeedstudio.com/5-65-Seven-Color-ePaper-Display-with-600x480-Pixels-p-5786.html)
+9. [Display E-paper de 5,83" - Monocor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+10. [Display E-paper de 7,5" - Monocor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+11. [Display E-paper de 7,5" - Três cores 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 ## Primeiros passos
 
@@ -99,17 +99,17 @@ Esta placa de expansão não inclui um display de ePaper; o display deve ser adq
 
 |      E-paper / XIAO     | XIAO SAMD21 | XIAO RP2040|  XIAO nRF52840 | XIAO ESP32-C3 | XIAO ESP32-S3 |
 |       ---      |  ---  | --- | --- | --- | --- |
-|Display E-paper de 1,54 polegadas - Matriz de pontos 200x200           | ✅ | ✅ | ✅ | ✅ | ✅ |
-|Display E-Paper de 2,13 polegadas - Monocromático flexível 212x104 | ✅ | ✅ | ✅ | ✅ | ✅ |
-|Display E-Paper de 2,13 polegadas - Quádruplo 212x104          | ✅ | ✅ | ✅ | ✅ | ✅ |
-|Display E-paper de 2,9 polegadas - Monocor 128x296           | ✅ | ✅ | ✅ | ✅ | ✅ |
-|Display e-paper de 2,9 polegadas - Quádrupla cor 128x296     | ✅ | ✅ | ✅ | ✅ | ✅ |
-|Display E-Paper de 4,2 polegadas - Monocor 400x300           | ✅ | ✅ | ✅ | ✅ | ✅ |
-|Display E-Paper de 4,26 polegadas - Monocor 800x480          | RAM overflowed | ✅ | ✅ | ✅ | ✅ |
-|Display E-paper de 5,65 polegadas - Sete cores 600x480        | FLASH overflowd | ✅ | ✅ | ✅ | ✅ |
-|Display E-paper de 5,83 polegadas - Monocor 648x480          | ✅ | ✅ | ✅ | ✅ | ✅ |
-|Display E-paper de 7,5 polegadas - Monocor 800x480           | RAM overflowed | ✅ | ✅ | ✅ | ✅ |
-|Display E-paper de 7,5 polegadas - Três cores 800x480           | RAM overflowed | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 1,54" - Matriz de pontos 200x200           | ✅ | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 2,13" - Monocromático flexível 212x104 | ✅ | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 2,13" - Quádruplo 212x104          | ✅ | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 2,9" - Monocor 128x296           | ✅ | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 2,9" - Quádrupla cor 128x296     | ✅ | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 4,2" - Monocor 400x300           | ✅ | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 4,26" - Monocor 800x480          | RAM excedida | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 5,65" - Sete cores 600x480        | FLASH excedida | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 5,83" - Monocor 648x480          | ✅ | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 7,5" - Monocor 800x480           | RAM excedida | ✅ | ✅ | ✅ | ✅ |
+|Display E-paper de 7,5" - Três cores 800x480           | RAM excedida | ✅ | ✅ | ✅ | ✅ |
 
 </div>
 
@@ -172,7 +172,7 @@ Esta placa de expansão não inclui um display de ePaper; o display deve ser adq
 
  A ferramenta de programação recomendada é a Arduino IDE, e você precisa configurar o ambiente Arduino para o XIAO e adicionar o pacote da placa.
 :::tip
-Se esta é a sua primeira vez usando o Arduino, recomendamos fortemente que consulte [Primeiros passos com Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
+Se esta é a sua primeira vez usando o Arduino, recomendamos fortemente que consulte [Introdução ao Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
 :::
 
 **Passo 1.** Inicie o aplicativo Arduino.
@@ -189,9 +189,9 @@ Se esta é a sua primeira vez usando o Arduino, recomendamos fortemente que cons
 
 - Se você quiser usar **Seeed Studio XIAO SAMD21** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/#software)** para concluir a adição.
 
-- Se você quiser usar **Seeed Studio XIAO RP2040** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/XIAO-RP2040-with-Arduino/#software-setup)** para concluir a adição.
+- Se você quiser usar **Seeed Studio XIAO RP2040** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/XIAO-RP2040-with-Arduino/#configuração-de-software)** para concluir a adição.
 
-- Se você quiser usar **Seeed Studio XIAO nRF52840** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/XIAO_BLE/#software-setup)** para concluir a adição.
+- Se você quiser usar **Seeed Studio XIAO nRF52840** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/XIAO_BLE/#configuração-de-software)** para concluir a adição.
 
 - Se você quiser usar **Seeed Studio XIAO ESP32C3** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/XIAO_ESP32C3_Getting_Started#configuração-de-software)** para concluir a adição.
 
@@ -219,7 +219,7 @@ Role para baixo e abra este link.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-Selecione o tipo do seu dispositivo e algum código será gerado. Copie esse código e o usaremos mais tarde.
+Selecione o tipo do seu dispositivo e algum código será gerado. Copie esse código e o usaremos depois.
 
 :::tip
 Se você fizer a escolha errada, a tela não exibirá nada.
@@ -229,7 +229,7 @@ Portanto, certifique-se do tipo dos seus dispositivos ou componentes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/config.jpg" style={{width:600, height:'auto'}}/></div>
 
-Após baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
+Depois de baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
@@ -255,14 +255,14 @@ Depois disso, vá em **Tools** -> **Board** -> **XIAO ESP32C6** e **Tools** -> *
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/table.jpg" style={{width:1000, height:'auto'}}/></div>
 
-Agora você verá o resultado na sua tela de papel eletrônico! A seguir estão os resultados dos exemplos Helloworld.
+Agora você verá o retorno na sua tela de papel eletrônico! A seguir estão os resultados dos exemplos Helloworld.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/153.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-Se você estiver usando uma tela e-ink de 1,54 polegadas ou 2,9 polegadas, devido aos seus chips de driver, pode ocorrer cintilação ao usar efeitos dinâmicos como relógios. Fique tranquilo, isso não é um problema de programa. No entanto, não é recomendado executar exemplos de efeitos dinâmicos por longos períodos para evitar reduzir a vida útil da tela.
+Se você estiver usando uma tela e-ink de 1,54 polegadas ou 2,9 polegadas, devido aos seus chips controladores, pode ocorrer cintilação ao usar efeitos dinâmicos, como relógios. Fique tranquilo, isso não é um problema de programação. No entanto, não é recomendado executar exemplos de efeitos dinâmicos por longos períodos para evitar reduzir a vida útil da tela.
 
-Se você estiver usando telas de 5,83 e 7,5 polegadas, elas possuem chips diferentes, portanto não terão o fenômeno de cintilação.
+Se você estiver usando telas de 5,83 e 7,5 polegadas, elas possuem chips diferentes, portanto não apresentarão o fenômeno de cintilação.
 :::
 
 ## Software de extração de imagem
@@ -298,7 +298,7 @@ Primeiro escolha a imagem desejada, tente não exceder o tamanho de 800*480.
 - Brilho / Limite de Alfa
   - Brilho / Limite de Alfa: Defina o valor de brilho dos pixels, variando de 0 a 255. Valores mais altos deixam os pixels mais claros; pixels abaixo desse valor ficarão pretos.
 
-- Redimensionamento
+- Redimensionamento (Scaling)
   - Redimensionamento: Escolha o método de redimensionamento da imagem. As opções incluem:
 
 - Tamanho original: Manter o tamanho original
@@ -308,7 +308,7 @@ Primeiro escolha a imagem desejada, tente não exceder o tamanho de 800*480.
 
 **Passo 3**. Pré-visualização
 
-Quando as configurações estiverem concluídas, você poderá ver aqui uma pré-visualização de como sua imagem aparecerá
+Depois que as configurações estiverem concluídas, você poderá ver aqui uma pré-visualização de como sua imagem será exibida
 
 **Passo 4**. Saída
 
@@ -332,23 +332,23 @@ Use o software integrado **Paint** no Windows para criar uma imagem com a **mesm
 A resolução da sua imagem deve ser a mesma da tela que você está usando, por exemplo, o E-paper de 4,2 polegadas é 400 x 300 pixels, então você não pode usar o tamanho de 300 x 400, isso fará com que o iamge2lcd gere um arquivo `.h` com 200 bytes extras.
 :::
 
-As cores da imagem devem ser consistentes com as cores padrão da prancheta de desenho que vem com o Windows. A cor da prancheta é a seguinte:
+As cores da imagem devem ser consistentes com as cores padrão da paleta de desenho que vem com o Windows. A paleta de desenho é a seguinte:
 
 <div class="table-center">
 
 |      E-paper      | Cores |
 |       ---      |  ---   |
-|1.54-inch E-paper - Dotmatix 200x200           | preto e branco puros          |
-|2.13-inch E-Paper -Flexible Monochrome 212x104 | preto e branco puros          |
-|2.13-inch E-Paper - Quadruple 212x104          | preto, branco, vermelho e amarelo |
-|2.9 inch E-paper - Monocolor 128x296           | preto e branco puros          |
-|2.9-inch e-paper - Quadruple color 128x296     | preto, branco, vermelho e amarelo |
-|4.2-inch E-Paper - Monocolor 400x300           | preto e branco puros          |
-|4.26-inch E-Paper - Monocolor 800x480          | preto e branco puros          |
-|5.65-inch E-paper -  Sevencolor 600x480        | preto, branco, vermelho, amarelo, azul, verde, laranja|
-|5.83-inch E-paper - Monocolor 648x480          | preto e branco puros          |
-|7.5-inch E-paper - Monocolor 800x480           | preto e branco puros          |
-|7.5-inch E-paper - Tri-Color 800x480           | preto e branco puros          |
+|1,54 polegadas E-paper - Matriz de pontos 200x200           | preto e branco puros          |
+|2,13 polegadas E-Paper - Flexível monocromático 212x104 | preto e branco puros          |
+|2,13 polegadas E-Paper - Quádruplo 212x104          | preto, branco, vermelho e amarelo |
+|2,9 polegadas E-paper - Monocor 128x296           | preto e branco puros          |
+|2,9 polegadas E-paper - Quádrupla cor 128x296     | preto, branco, vermelho e amarelo |
+|4,2 polegadas E-Paper - Monocor 400x300           | preto e branco puros          |
+|4,26 polegadas E-Paper - Monocor 800x480          | preto e branco puros          |
+|5,65 polegadas E-paper - Sete cores 600x480        | preto, branco, vermelho, amarelo, azul, verde, laranja|
+|5,83 polegadas E-paper - Monocor 648x480          | preto e branco puros          |
+|7,5 polegadas E-paper - Monocor 800x480           | preto e branco puros          |
+|7,5 polegadas E-paper - Três cores 800x480           | preto, branco e vermelho          |
 
 </div>
 
@@ -357,7 +357,7 @@ As cores da imagem devem ser consistentes com as cores padrão da prancheta de d
 **Passo 1.** Abra [Image2lcd.7z](https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image2Lcd.7z), extraia-o e abra o aplicativo.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/1.png" style={{width:700, height:'auto'}}/></div>
 
-**Passo 2.** Abra a imagem, selecione o "Output file type" como "C array (*.c)", selecione o "Scan mode" como "Horizon Scan", as outras configurações de parâmetros são mostradas a seguir:
+**Passo 2.** Abra a imagem, selecione "Output file type" como "C array (*.c)", selecione "Scan mode" como "Horizon Scan", as outras configurações de parâmetros são mostradas a seguir:
 
 <div class="table-center">
   <table align="center">
@@ -365,18 +365,18 @@ As cores da imagem devem ser consistentes com as cores padrão da prancheta de d
         <th>Epaper</th>
         <th>BitPixl</th>
         <th>Largura e altura máximas</th>
-        <th>Reverter cor</th>
+        <th>Inverter cor</th>
         <th>Modo de exibição</th>
     </tr>
     <tr>
-        <th>1.54-inch E-paper - Dotmatix 200x200</th>
+        <th>1,54 polegadas E-paper - Matriz de pontos 200x200</th>
         <td align="center">Monocromático</td>
         <td align="center">200x200</td>
         <td align="center">✅</td>
         <td align="center">Espelhar esquerda-direita</td>
     </tr>
     <tr>
-        <th>2.13-inch E-Paper -Flexible Monochrome 212x104</th>
+        <th>2,13 polegadas E-Paper - Flexível monocromático 212x104</th>
         <td align="center">Monocromático</td>
         <td align="center">104x212</td>
         <td align="center">✅</td>
@@ -397,7 +397,7 @@ As cores da imagem devem ser consistentes com as cores padrão da prancheta de d
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>E-paper de 2,9 polegadas - Quádruplo de cor 128x296 </th>
+        <th>E-paper de 2,9 polegadas - Quádruplo colorido 128x296 </th>
         <td align="center">4 tons de cinza</td>
         <td align="center">128x296</td>
         <td align="center">/</td>
@@ -450,13 +450,13 @@ As cores da imagem devem ser consistentes com as cores padrão da prancheta de d
 
 :::tip
 
-- Depois de definir a Largura e Altura Máximas, é necessário clicar na seta para confirmar.
+- Depois de definir a largura e a altura máximas, é necessário clicar na seta para confirmar.
 - Não inclua dados de cabeçalho.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/2.png" style={{width:700, height:'auto'}}/></div>
 :::
 
-**Passo 3.** Clique em "Save" para salvar o array de saída do lcd como um arquivo `.h`.
+**Passo 3.** Clique em "Save" para salvar o array de saída do LCD como um arquivo `.h`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/7.png" style={{width:500, height:'auto'}}/></div>
 
@@ -464,9 +464,9 @@ As cores da imagem devem ser consistentes com as cores padrão da prancheta de d
 
 - **[PDF]**: [PDF do esquema da placa controladora de ePaper](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

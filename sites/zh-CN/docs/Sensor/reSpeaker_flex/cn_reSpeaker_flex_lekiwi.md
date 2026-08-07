@@ -1,6 +1,6 @@
 ---
-description: 使用 Raspberry Pi、XIAO ESP32、ReSpeaker Lite 和语音嵌入，实现智能免手动语音控制的 Kiwi 驱动机器人。
-title: 使用 reSpeaker Flex 为你的 LeKiwi 机器人添加语音交互
+description: 使用 Raspberry Pi、XIAO ESP32、ReSpeaker Lite 和语音嵌入，实现语音控制的 Kiwi 驱动机器人，带来智能免手动机器人控制体验。
+title: 使用 reSpeaker 为你的 LeKiwi 机器人添加语音交互
 keywords:
   - reSpeaker flex
   - LeKiwi
@@ -12,8 +12,8 @@ last_update:
   date: 04/28/2026
   author: Kasun Thushara
 createdAt: '2026-04-28'
-updatedAt: '2026-04-28'
-url: https://wiki.seeedstudio.com/cn/respeaker_flex_introduction/
+updatedAt: '2026-06-15'
+url: https://wiki.seeedstudio.com/cn/respeaker_flex_lekiwi/
 ---
 
 
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_flex_introduction/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png" alt="pir" width={800} height="auto" /></p>
 
-用你的声音控制一台三轮 Kiwi 驱动机器人！本项目将 Seeed Studio XIAO ESP32（电机控制器）与 Raspberry Pi（语音处理大脑）结合起来，并通过 reSpeaker Flex 提供高质量音频采集，再配合 Voice Embeddings，实现更智能、更个性化的语音交互。你可以使用自然语言指令来驱动、转向和控制机器人，实现完全免手动操作，并获得更高的准确性和响应速度。
+用你的声音控制一台三轮 Kiwi 驱动机器人！本项目将 Seeed Studio XIAO ESP32（电机控制器）与 Raspberry Pi（语音处理大脑）结合，并通过 reSpeaker 提供高质量音频采集，再配合语音嵌入，实现更智能、更个性化的语音交互。借助自然语言指令，你可以完全免手动地驱动、转向和控制机器人，同时获得更高的准确性和响应速度。
 
 ## 所需硬件
 
@@ -29,14 +29,12 @@ url: https://wiki.seeedstudio.com/cn/respeaker_flex_introduction/
   <tr>
     <th>LeKiwi 套件</th>
     <th>XIAO ESP32S3</th>
-    <th>reSpeaker Flex XVF3800 Circular</th>
     <th>Raspberry Pi 5</th>
 
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114090065-lekiwi-kit_1.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102010634-seeed-studio-xiao-esp32s3-_pre-soldered_-45font_1.jpg" style={{width:500, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
 
   </tr>
@@ -52,17 +50,96 @@ url: https://wiki.seeedstudio.com/cn/respeaker_flex_introduction/
       </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
     </div></td>
   </tr>
 </table>
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 300, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      或
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 300, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                立即获取 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                立即获取 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ## 服务
 
@@ -112,10 +189,10 @@ ESP32 运行 Arduino 草图，用 **Kiwi 驱动运动学** 实际驱动三个轮
 
 该草图（`lekiwi_motor_control.ino`）完成以下工作：
 
-- 将三个舵机全部初始化为**位置模式**，将其居中，然后切换到**轮子（连续旋转）模式**
+- 将三个舵机全部初始化为**位置模式**，将其居中，然后切换到**轮式（连续旋转）模式**
 - 在 USB 串口上监听单字符指令
 - 使用 **Kiwi 驱动运动学** 计算每个轮子的正确速度
-- 仅支持 **点动模式**（短暂脉冲，然后自动停止）
+- 仅支持**点动模式**（短暂脉冲，然后自动停止）
 **串口指令参考：**
 
 | 按键 | 动作 |
@@ -468,7 +545,7 @@ void loop() {
 ### 步骤 1 — 获取 Groq API 密钥
 
 1. 在 [console.groq.com](https://console.groq.com/) 注册
-2. 创建一个新的 API 密钥并复制它——你将在步骤 4 中用到
+2. 创建一个新的 API 密钥并复制它 —— 你将在步骤 4 中用到它
 
 ### 步骤 2 — 克隆此仓库
 
@@ -484,7 +561,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-> 每次打开一个新的终端并在使用此项目之前，都要运行 `source venv/bin/activate`。
+> 每次在使用此项目之前打开一个新的终端时，都运行 `source venv/bin/activate`。
 
 ### 步骤 4 — 安装依赖
 
@@ -498,11 +575,11 @@ pip install -r requirements.txt
 python3 download_model.py
 ```
 
-这会从 openwakeword 下载预训练的 **"Hey Jarvis"** 模型（以及其他模型）到 `~/.openwakeword/`。
+这会从 openwakeword 下载预训练的 **"Hey Jarvis"** 模型（以及其他模型）到 `~/.openwakeword/` 中。
 
 ### 步骤 5 — 查找你的麦克风索引
 
-通过 USB 插入你的 **ReSpeaker Flex**，然后运行：
+通过 USB 插入你的 **reSpeaker**，然后运行：
 
 ```bash
 python3 list_mics.py
@@ -518,7 +595,7 @@ Available audio INPUT devices:
   [2] USB PnP Sound Device  (rate=16000Hz)
 ```
 
-记下 ReSpeaker 旁边方括号中的数字——那就是你的 `MIC_INDEX`。
+记下你的 ReSpeaker 旁边方括号中的数字 —— 这就是你的 `MIC_INDEX`。
 
 ### 步骤 6 — 查找你的 ESP32 串口
 
@@ -561,13 +638,13 @@ MIC_INDEX=1
 SERIAL_PORT=/dev/ttyACM0
 ```
 
-其他所有内容保持默认即可开始使用。
+其他所有内容可以保持默认设置以便开始使用。
 
 ---
 
 ## 运行机器人
 
-确保你的虚拟环境已激活，然后运行：
+确保你的虚拟环境已激活，然后：
 
 ```bash
 python3 pipeline.py
@@ -587,7 +664,7 @@ python3 pipeline.py
 [WakeWord] Listening for 'hey jarvis' ...
 ```
 
-现在说出 **"Hey Jarvis"**，然后给出一个移动指令！
+现在说 **"Hey Jarvis"**，然后给出一个移动指令！
 
 ### 示例指令
 

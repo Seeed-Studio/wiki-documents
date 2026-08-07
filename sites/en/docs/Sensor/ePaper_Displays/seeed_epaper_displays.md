@@ -8,7 +8,7 @@ last_update:
   date: 05/18/2026
   author: dimo
 createdAt: '2026-04-28'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/seeed_epaper_displays/
 ---
 
@@ -24,7 +24,7 @@ Seeed Studio offers an end-to-end ePaper portfolio organized around three produc
 2. **Driver / Expansion Boards** — pair an MCU with universal or large-format ePaper screens to build your own product.
 3. **DIY Kits & Bare Panels** — designed for the maker community, optimized for specific platforms such as TRMNL or XIAO.
 
-All three lines share the **same software ecosystem**: SenseCraft HMI (no-code), Home Assistant / ESPHome, TRMNL, Arduino / ESP-IDF / PlatformIO, plus visual UI tools like SquareLine Vision, EEZ Studio, and Lopaka. Pick a hardware family, and the rest of the toolchain stays the same.
+All three lines share the **same software ecosystem**: SenseCraft HMI (no-code), Home Assistant / ESPHome, TRMNL, Arduino / ESP-IDF / PlatformIO, Zephyr, plus visual UI tools like SquareLine Vision, EEZ Studio, and Lopaka. Pick a hardware family, and the rest of the toolchain stays the same.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -255,6 +255,12 @@ Every Seeed ePaper product converges into the same software ecosystem. Pick the 
       <td>All ESP32-S3 products (E1001–E1004, EE02–EE05, TRMNL Kit, XIAO Panel)</td>
     </tr>
     <tr>
+      <td><a href="https://wiki.seeedstudio.com/epaper_work_with_zephyr" target="_blank" rel="noopener noreferrer"><strong>Zephyr RTOS</strong></a></td>
+      <td align="center">RTOS</td>
+      <td>Upstream Zephyr board workflow with west, device tree, kernel services, drivers, flashing, and debugging.</td>
+      <td>reTerminal E1001 / E1002 / E1003</td>
+    </tr>
+    <tr>
       <td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_squareline_vision" target="_blank" rel="noopener noreferrer"><strong>SquareLine Vision</strong></a></td>
       <td align="center">Visual UI design</td>
       <td>Drag-and-drop LVGL UI in the browser, then export ready-to-compile code.</td>
@@ -301,6 +307,7 @@ Each tutorial below walks through one platform end-to-end:
 
 - [Work with Arduino](https://wiki.seeedstudio.com/epaper_work_with_arduino) — main reference: IDE setup, `Seeed_GFX` library, `driver.h` generation. Per-product cookbooks: reTerminal E Series — [ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino) & [Onboard Peripherals](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals), [TRMNL DIY Kit](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino).
 - [Work with PlatformIO](https://wiki.seeedstudio.com/epaper_work_with_platformio) — main reference: VS Code setup, `platformio.ini` configuration, `Seeed_GFX` setup, and per-product PlatformIO environment selection. Per-product cookbook: [EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/ee04_with_platformio).
+- [Work with Zephyr](https://wiki.seeedstudio.com/epaper_work_with_zephyr) — entry page for Zephyr RTOS support on reTerminal E1001, E1002, and E1003, with official Zephyr board documentation links and board targets.
 
 ### Open-source ESL / OEPL
 

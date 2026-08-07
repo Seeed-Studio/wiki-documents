@@ -14,8 +14,7 @@ image: https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-
 slug: /reachymini_getting_started
 sku: null
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 last_update:
   date: 1/7/2026
   author: TienjuiWong

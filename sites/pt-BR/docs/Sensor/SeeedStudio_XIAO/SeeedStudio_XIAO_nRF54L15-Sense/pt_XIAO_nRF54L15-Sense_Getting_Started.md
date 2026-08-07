@@ -12,7 +12,7 @@ last_update:
   author: Jason
 sidebar_position: 0
 createdAt: '2025-07-28'
-updatedAt: '2026-03-24'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_getting_started/
 ---
 import Tabs from '@theme/Tabs';

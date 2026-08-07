@@ -1,16 +1,16 @@
 ---
 description: Gravar o JetPack no Kit NVIDIA® Jetson AGX Orin 32GB H01
-title: NVIDIA® Jetson AGX Orin 32GB H01 Kit
+title: Kit NVIDIA® Jetson AGX Orin 32GB H01 32GB
 tags:
   - NVIDIA Jetson H01
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_AGX_Orin_32GB_H01_Flash_Jetpack
 sku: 114110207
 last_update:
-  date: 10/14/2025
+  date: 07/02/2026
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-03-16'
+updatedAt: '2026-07-03'
 url: https://wiki.seeedstudio.com/pt-br/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/
 ---
 
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/pt-br/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/6.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong></a>
 </div>
 
 :::info
@@ -37,15 +37,15 @@ Este wiki irá guiá-lo sobre como instalar o JetPack no Jetson AGX Orin 32GB H0
 
 - [Ubuntu Host PC](https://developer.nvidia.com/sdk-manager) (nativo ou VM usando VMware Workstation Player).
 - Jetson AGX Orin H01 Kit.
-- Cabo USB Type-C para transmissão de dados
+- Cabo de transmissão de dados USB Type-C
 
 ## Entrar no modo Force Recovery
 
-- **Passo 1:** Há um botão de recuperação na placa, que está no meio dos três botões, como mostrado na imagem abaixo. Mantenha pressionado o botão de recuperação e, em seguida, conecte a placa à fonte de alimentação para entrar no modo force recovery.
+- **Passo 1:** Há um botão de recuperação na placa, que fica no meio dos três botões, como mostrado na imagem abaixo. Mantenha pressionado o botão de recuperação e, em seguida, conecte a placa à fonte de alimentação para entrar no modo force recovery.
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/4.jpg"/></div>
 
-- **Passo 2:** Conecte o Jetson AGX Orin 32GB H01 Kit ao PC host com Ubuntu com um cabo USB Type-C para transmissão de dados.
+- **Passo 2:** Conecte o Jetson AGX Orin 32GB H01 Kit ao PC host com Ubuntu com um cabo de transmissão de dados USB Type-C.
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/5.jpg"/></div>
 
@@ -107,6 +107,12 @@ Antes de tudo, você precisa instalar os drivers periféricos para esta placa. E
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ES6058EFNl1LkrJGAvTYR6IBFTldWYyxJ4ZxQP3EM00BbQ?e=rjshwu" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td><a href="https://developer.nvidia.com/embedded/jetson-linux-r3643" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
+    <tr>
+      <td>7.2</td>
+      <td>39.2.0</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOW5tcK2vPTagiGOFw9oMcAYITLgRqj_dXQJMchlUeGOk?e=8ar0lu" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetpack/downloads/archive-7.2#:~:text=Jetson%20Linux%2039.2%20%286%2F02%2F2026%29" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -114,9 +120,9 @@ Antes de tudo, você precisa instalar os drivers periféricos para esta placa. E
 ## Gravar no Jetson
 
 :::danger
-O Kit NVIDIA® Jetson AGX Orin 32GB H01 vem pré-instalado com o sistema operacional `JetPack 5.1.4`. O nome de usuário e senha padrão são usuário: nvidia / senha: nvidia. Ao receber o dispositivo, você pode entrar diretamente no sistema e começar a usá-lo sem a necessidade de regravar o sistema.
+O Kit NVIDIA® Jetson AGX Orin 32GB H01 vem pré-instalado com o sistema operacional `JetPack 5.1.4`. O nome de usuário e a senha padrão são usuário: nvidia / senha: nvidia. Ao receber o dispositivo, você pode fazer login diretamente no sistema e começar a usá-lo sem a necessidade de regravar o sistema.
 
-Se o seu sistema for corrompido, você pode consultar as etapas abaixo para regravar o sistema.
+Se o seu sistema ficar corrompido, você pode consultar as etapas abaixo para regravar o sistema.
 :::
 
 import Tabs from '@theme/Tabs';
@@ -146,7 +152,7 @@ cd ..
 sudo ./apply_binaries.sh
 ```
 
-- **Passo 4:** Extraia **AGX-Orin-32GB-H01-JP5.0.2.zip**. Aqui, instalamos adicionalmente o pacote **unzip**, que é necessário para descompactar o arquivo .zip
+- **Passo 4:** Extraia **AGX-Orin-32GB-H01-JP5.0.2.zip**. Aqui instalamos adicionalmente o pacote **unzip**, que é necessário para descompactar o arquivo .zip
 
 ```sh
 cd ..
@@ -171,11 +177,11 @@ Você verá a seguinte saída se o processo de gravação for bem-sucedido
 
 ### Erros encontrados
 
-- **ERROR: failed to read rcm_state** em **AGX Orin** e **NX Orin** para o *Jetpack 5.1.1*
+- **ERROR: failed to read rcm_state** em **AGX Orin** e **NX Orin** para *Jetpack 5.1.1*
   - Há alterações de PCN no Jetson AGX Orin feitas pela NVidia, mas não são alterações de PCN da Seeed.
   - Além dos materiais mencionados no Wiki, faça o download de [Overlay_PCN210361_PCN210100_r35.3.1.tbz2](https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/overlay_pcn210361_pcn210100_r35.3.1.tbz2) na parte inferior da página Jetson Linux 35.3.1.
-  - Após extrair *Jetson_Linux* e antes de aplicar os binários, extraia *Overlay_PCN210361_PCN210100_r35.3.1.tbz2*. Em seguida, copie todos os arquivos e pastas para *Linux_For_Tegra* (mesclando, sem ignorar).
-  - Depois, continue com as etapas restantes das instruções.
+  - Após extrair *Jetson_Linux* e antes de aplicar os binários, extraia *Overlay_PCN210361_PCN210100_r35.3.1.tbz2*. Em seguida, copie todos os arquivos e pastas para *Linux_For_Tegra* (mesclar, não ignorar).
+  - Depois continue com as etapas restantes das instruções.
 
 </TabItem>
 
@@ -216,7 +222,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 
 <div align="center"><img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/h01/flash_successful.png"/></div>
 
-Após a conclusão do processo de gravação, o dispositivo será reiniciado automaticamente.
+Após a conclusão da gravação, o dispositivo será reiniciado automaticamente.
 
 </TabItem>
 
@@ -225,19 +231,19 @@ Após a conclusão do processo de gravação, o dispositivo será reiniciado aut
 
 Aqui usaremos **NVIDIA L4T 36.3** para instalar o **Jetpack 6.0** no Kit Jetson AGX Orin 32GB H01.
 
-- **Etapa 1:** [Baixe](https://developer.nvidia.com/embedded/jetson-linux-r363) os drivers NVIDIA no PC host. Os drivers necessários são mostrados abaixo:
+- **Passo 1:** [Baixe](https://developer.nvidia.com/embedded/jetson-linux-r363) os drivers NVIDIA no PC host. Os drivers necessários são mostrados abaixo:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/>
 </div>
 
-- **Etapa 2:** Mova os drivers periféricos baixados anteriormente para a mesma pasta dos drivers NVIDIA. Agora você verá três arquivos compactados na mesma pasta.
+- **Passo 2:** Mova os drivers periféricos baixados anteriormente para a mesma pasta dos drivers NVIDIA. Agora você verá três arquivos compactados na mesma pasta.
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Orin-AGX-H01/files.png"/>
 </div>
 
-- **Etapa 3:** Extraia **Jetson_Linux_R36.3.0_aarch64.tbz2** e **Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2** navegando até a pasta que contém esses arquivos e aplique as alterações:
+- **Passo 3:** Extraia **Jetson_Linux_R36.3.0_aarch64.tbz2** e **Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2** navegando até a pasta que contém esses arquivos e aplique as alterações:
 
 ```bash
 cd < directory_where_the_files_are_located >
@@ -248,7 +254,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-- **Etapa 4:** Extraia **AGX-Orin-H01-JP6.0.zip**. Aqui instalamos adicionalmente o pacote **unzip**, que é necessário para descompactar o arquivo .zip.
+- **Passo 4:** Extraia **AGX-Orin-H01-JP6.0.zip**. Aqui instalamos adicionalmente o pacote **unzip**, que é necessário para descompactar o arquivo .zip.
 
 ```sh
 cd ..
@@ -262,7 +268,7 @@ Aqui será perguntado se deseja substituir os arquivos. Digite **A** e pressione
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Orin-AGX-H01/extract_drivers.png"/>
 </div>
 
-- **Etapa 5:** Grave o sistema na eMMC
+- **Passo 5:** Grave o sistema na eMMC
 
 ```sh
 cd Linux_for_Tegra
@@ -281,13 +287,13 @@ Você verá a seguinte saída se o processo de gravação for bem-sucedido:
 
 Aqui usaremos **NVIDIA L4T 36.4** para instalar o **Jetpack 6.1** no Kit Jetson AGX Orin 32GB H01.
 
-- **Etapa 1:** [Baixe](https://developer.nvidia.com/embedded/jetson-linux-r3640) os drivers NVIDIA no PC host com Ubuntu. Os drivers necessários são mostrados abaixo:
+- **Passo 1:** [Baixe](https://developer.nvidia.com/embedded/jetson-linux-r3640) os drivers NVIDIA no PC host com Ubuntu. Os drivers necessários são mostrados abaixo:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/>
 </div>
 
-- **Etapa 2:** Mova os drivers periféricos baixados anteriormente para a mesma pasta dos drivers NVIDIA. Agora você verá três arquivos compactados na mesma pasta.
+- **Passo 2:** Mova os drivers periféricos baixados anteriormente para a mesma pasta dos drivers NVIDIA. Agora você verá três arquivos compactados na mesma pasta.
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Orin-AGX-H01/a605_jp6.1.png"/>
@@ -301,7 +307,7 @@ Você pode usar o seguinte comando para verificar se o arquivo baixado está com
 </div>
 :::
 
-- **Etapa 3:** Extraia **Jetson_Linux_R36.4.0_aarch64.tbz2** e **Tegra_Linux_Sample-Root-Filesystem_R36.4.0_aarch64.tbz2** navegando até a pasta que contém esses arquivos e aplique as alterações:
+- **Passo 3:** Extraia **Jetson_Linux_R36.4.0_aarch64.tbz2** e **Tegra_Linux_Sample-Root-Filesystem_R36.4.0_aarch64.tbz2** navegando até a pasta que contém esses arquivos e aplique as alterações:
 
 ```bash
 cd <path_to_files>
@@ -312,7 +318,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-- **Etapa 4:** Extraia **A605_Jetpack_6.1.tar.gz**:
+- **Passo 4:** Extraia **A605_Jetpack_6.1.tar.gz**:
 
 ```bash
 cd ..
@@ -320,7 +326,7 @@ tar xf A605_Jetpack_6.1.tar.gz
 sudo cp -r 605_jetpack6.1/Linux_for_Tegra/* Linux_for_Tegra/
 ```
 
-- **Etapa 5:** Grave o sistema na eMMC:
+- **Passo 5:** Grave o sistema na eMMC:
 
 ```bash
 cd Linux_for_Tegra
@@ -348,13 +354,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 
 Aqui usaremos **NVIDIA L4T 36.4** para instalar o **Jetpack 6.2** no Kit Jetson AGX Orin 32GB H01.
 
-- **Etapa 1:** [Baixe](https://developer.nvidia.com/embedded/jetson-linux-r3643) os drivers NVIDIA no PC host com Ubuntu. Os drivers necessários são mostrados abaixo:
+- **Passo 1:** [Baixe](https://developer.nvidia.com/embedded/jetson-linux-r3643) os drivers NVIDIA no PC host com Ubuntu. Os drivers necessários são mostrados abaixo:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/>
 </div>
 
-- **Etapa 2:** Mova os drivers periféricos baixados anteriormente para a mesma pasta dos drivers NVIDIA. Agora você verá três arquivos compactados na mesma pasta.
+- **Passo 2:** Mova os drivers periféricos baixados anteriormente para a mesma pasta dos drivers NVIDIA. Agora você verá três arquivos compactados na mesma pasta.
 
 :::info
 Semelhante ao processo de gravação do Jetpack 6.1！
@@ -372,7 +378,7 @@ Você pode usar o seguinte comando para verificar se o arquivo baixado está com
 </div>
 :::
 
-- **Etapa 3:** Extraia **Jetson_Linux_R36.4.3_aarch64.tbz2** e **Tegra_Linux_Sample-Root-Filesystem_R36.4.3_aarch64.tbz2** navegando até a pasta que contém esses arquivos e aplique as alterações:
+- **Passo 3:** Extraia **Jetson_Linux_R36.4.3_aarch64.tbz2** e **Tegra_Linux_Sample-Root-Filesystem_R36.4.3_aarch64.tbz2** navegando até a pasta que contém esses arquivos e aplique as alterações:
 
 ```bash
 cd <path_to_files>
@@ -383,7 +389,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-- **Etapa 4:** Extraia **605_jp62.tar.gz**:
+- **Passo 4:** Extraia **605_jp62.tar.gz**:
 
 ```bash
 cd ..
@@ -391,7 +397,74 @@ tar xf 605_jp62.tar.gz
 sudo cp -r 605_jp62/Linux_for_Tegra/* Linux_for_Tegra/
 ```
 
-- **Etapa 5:** Grave o sistema na eMMC:
+- **Passo 5:** Grave o sistema na eMMC:
+
+```bash
+cd Linux_for_Tegra
+sudo ./flash.sh jetson-agx-orin-devkit internal
+```
+
+Você verá a seguinte saída se o processo de gravação for bem-sucedido:
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Orin-AGX-H01/flash_successful.png"/>
+</div>
+
+:::info
+Também podemos executar o seguinte comando para instalar o sistema no SSD:
+
+```bash
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t234_nvme.xml --showlogs --network usb0 jetson-agx-orin-devkit external
+```
+
+:::
+
+</TabItem>
+
+<TabItem value="JP7.2" label="JP7.2">
+
+Aqui usaremos **NVIDIA L4T 39.2.0** para instalar o **JetPack 7.2** no Kit Jetson AGX Orin 32GB H01.
+
+- **Passo 1:** [Baixe](https://developer.nvidia.com/embedded/jetpack/downloads/archive-7.2#:~:text=Jetson%20Linux%2039.2%20%286%2F02%2F2026%29) os pacotes NVIDIA BSP e RootFS no PC host com Ubuntu. Os arquivos necessários do Jetson Linux 39.2.0 são mostrados abaixo:
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/other/7.2-H01.png"/>
+</div>
+
+Você também pode baixar os arquivos com os seguintes comandos:
+
+```bash
+wget https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.0/release/Jetson_Linux_R39.2.0_aarch64.tbz2
+wget https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.0/release/Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2
+```
+
+- **Passo 2:** Baixe o pacote de drivers periféricos JetPack 7.2 do Kit Jetson AGX Orin 32GB H01 [605_jp72.tbz2](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOW5tcK2vPTagiGOFw9oMcAYITLgRqj_dXQJMchlUeGOk?e=8ar0lu) e coloque-o na mesma pasta que os pacotes NVIDIA BSP e RootFS. Agora você verá três arquivos compactados na mesma pasta.
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/other/Seeed_AGX_Orin_Dev_Kit_JP72_downloaded_files.png"/>
+</div>
+
+- **Passo 3:** Extraia **Jetson_Linux_R39.2.0_aarch64.tbz2** e **Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2**, depois aplique os binários NVIDIA:
+
+```bash
+cd <path_to_files>
+tar xf Jetson_Linux_R39.2.0_aarch64.tbz2
+sudo tar xfp Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
+cd Linux_for_Tegra
+sudo ./tools/l4t_flash_prerequisites.sh
+sudo ./apply_binaries.sh
+```
+
+- **Passo 4:** Extraia **605_jp72.tbz2**:
+
+```bash
+cd ..
+mkdir -p 605_jp72/Linux_for_Tegra
+tar xf 605_jp72.tbz2 -C 605_jp72/Linux_for_Tegra/
+sudo cp -r 605_jp72/Linux_for_Tegra/* Linux_for_Tegra/
+```
+
+- **Passo 5:** Grave o sistema na eMMC:
 
 ```bash
 cd Linux_for_Tegra
@@ -417,36 +490,36 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 
 </Tabs>
 
-## Ferramentas de Desenvolvimento
+## Ferramentas de desenvolvimento
 
 ### Jetpack pré-instalado para desenvolvimento rápido e integração de IA de borda
 
 [Jetson Software](https://developer.nvidia.com/embedded/develop/software) começa com o NVIDIA JetPack™ SDK, que fornece um ambiente de desenvolvimento completo e inclui bibliotecas aceleradas CUDA-X e outras tecnologias NVIDIA para impulsionar o seu desenvolvimento. O JetPack inclui o pacote de drivers Jetson Linux, que fornece o kernel Linux, bootloader, drivers NVIDIA, utilitários de gravação, sistema de arquivos de exemplo e toolchains para a plataforma Jetson. Ele também inclui recursos de segurança, capacidades de atualização over-the-air e muito mais.
 
-### Visão Computacional e aprendizado de máquina embarcado
+### Visão computacional e aprendizado de máquina embarcado
 
 - [Deepstream](https://developer.nvidia.com/deepstream-sdk) oferece um kit de ferramentas completo de análise de streaming para processamento multisensor baseado em IA e compreensão de vídeo e imagem no Jetson.
-- [TAO](https://developer.nvidia.com/tao-toolkit), construído sobre TensorFlow e PyTorch, é uma versão low-code do framework NVIDIA TAO que acelera o treinamento de modelos
-- [alwaysAI](https://alwaysai.co/blog/getting-started-with-the-jetson-nano-using-alwaysai): crie, treine e implemente aplicações de visão computacional diretamente na borda do reComputer. Obtenha acesso gratuito a mais de 100 modelos de Visão Computacional pré-treinados e treine modelos de IA personalizados na nuvem em poucos cliques por meio de assinatura empresarial. Consulte nosso guia na [wiki](https://wiki.seeedstudio.com/pt-br/alwaysAI-Jetson-Getting-Started/#detecção-de-objetos-em-arquivo-de-vídeo-pré-carregado) para começar com alwaysAI.
-- [edge impulse](https://www.edgeimpulse.com/) : o pipeline de aprendizado de máquina embarcado mais fácil para implementar aplicações de áudio, classificação e detecção de objetos na borda, sem dependências na nuvem.
-- [Roboflow](https://blog.roboflow.com/deploy-to-nvidia-jetson/) fornece ferramentas para converter imagens brutas em um modelo de visão computacional personalizado de detecção e classificação de objetos e implementar o modelo para uso em aplicações. Veja https://docs.roboflow.com/inference/nvidia-jetson para implantação em NVIDIA Jetson com Roboflow.
-- [ultralytics yolo](https://github.com/ultralytics/yolov5): use aprendizado por transferência para realizar detecção de objetos com poucas amostras com YOLOv5, que precisa de apenas algumas amostras de treinamento. Veja nossos tutoriais passo a passo na [wiki](https://wiki.seeedstudio.com/pt-br/YOLOv5-Object-Detection-Jetson/).
-- [Deep Learning](https://deci.ai/blog/jetson-machine-learning-inference/): otimize seus modelos em NVIDIA Jetson Nano. Confira [aqui](https://info.deci.ai/benchmark-optimize-runtime-performance-nvidia-jetson) na Deci como fazer benchmark automaticamente e otimizar o desempenho em tempo de execução em dispositivos NVIDIA Jetson Nano e Xavier NX
+- [TAO](https://developer.nvidia.com/tao-toolkit), desenvolvido sobre TensorFlow e PyTorch, é uma versão low-code do framework NVIDIA TAO que acelera o treinamento de modelos
+- [alwaysAI](https://alwaysai.co/blog/getting-started-with-the-jetson-nano-using-alwaysai): crie, treine e faça deploy de aplicações de visão computacional diretamente na borda do reComputer. Obtenha acesso gratuito a mais de 100 modelos de Visão Computacional pré-treinados e treine modelos de IA personalizados na nuvem em poucos cliques por meio de assinatura corporativa. Confira nosso guia na [wiki](https://wiki.seeedstudio.com/pt-br/alwaysAI-Jetson-Getting-Started/#detecção-de-objetos-em-arquivo-de-vídeo-pré-carregado) para começar com o alwaysAI.
+- [edge impulse](https://www.edgeimpulse.com/) : o pipeline de aprendizado de máquina embarcado mais fácil para fazer deploy de aplicações de áudio, classificação e detecção de objetos na borda, com zero dependências da nuvem.
+- [Roboflow](https://blog.roboflow.com/deploy-to-nvidia-jetson/) fornece ferramentas para converter imagens brutas em um modelo de visão computacional personalizado de detecção e classificação de objetos e fazer o deploy do modelo para uso em aplicações. Consulte https://docs.roboflow.com/inference/nvidia-jetson para fazer deploy no NVIDIA Jetson com o Roboflow.
+- [ultralytics yolo](https://github.com/ultralytics/yolov5): use aprendizado por transferência para realizar detecção de objetos com poucos exemplos com YOLOv5, que precisa de pouquíssimas amostras de treinamento. Veja nossos tutoriais passo a passo na [wiki](https://wiki.seeedstudio.com/pt-br/YOLOv5-Object-Detection-Jetson/).
+- [Deep Learning](https://deci.ai/blog/jetson-machine-learning-inference/): otimize seus modelos no NVIDIA Jetson Nano. Confira [aqui](https://info.deci.ai/benchmark-optimize-runtime-performance-nvidia-jetson) na Deci como fazer benchmark automático e otimizar o desempenho em tempo de execução em dispositivos NVIDIA Jetson Nano e Xavier NX
 
-### IA de Voz
+### IA de voz
 
-- [Riva](https://developer.nvidia.com/riva) é um SDK acelerado por GPU para criar aplicações de IA de Voz personalizadas para o seu caso de uso e que oferecem desempenho em tempo real.
+- [Riva](https://developer.nvidia.com/riva) é um SDK acelerado por GPU para criar aplicações de IA de voz personalizadas para o seu caso de uso e que oferecem desempenho em tempo real.
 
-### Gerenciamento Remoto de Frotas
+### Gerenciamento remoto de frotas
 
-Habilite OTA segura e gerenciamento remoto de dispositivos com [allxon](https://www.allxon.com/). Desbloqueie 90 dias de teste gratuito com o código H4U-NMW-CPK.
+Habilite OTA segura e gerenciamento remoto de dispositivos com a [allxon](https://www.allxon.com/). Desbloqueie 90 dias de avaliação gratuita com o código H4U-NMW-CPK.
 
-### Desenvolvimento de Robôs e ROS
+### Desenvolvimento de robôs e ROS
 
 - NVIDIA Isaac ROS GEMs são pacotes acelerados por hardware que facilitam para desenvolvedores ROS a criação de soluções de alto desempenho em hardware NVIDIA. Saiba mais sobre o [NVIDIA Isaac](https://developer.nvidia.com/embedded/develop/software).
-- [Cogniteam Nimbus](https://www.cogniteam.com/nimbus) é uma solução baseada em nuvem que permite aos desenvolvedores gerenciar robôs autônomos com mais eficácia. A plataforma Nimbus oferece suporte ao NVIDIA® Jetson™ e ao ISAAC SDK e GEMs prontos para uso. Confira nosso [webinar](https://www.seeedstudio.com/blog/2022/04/21/webinar-connect-your-ros-project-to-the-cloud-with-nimbus/) sobre como conectar seu projeto ROS à nuvem com o Nimbus.
+- [Cogniteam Nimbus](https://www.cogniteam.com/nimbus) é uma solução baseada em nuvem que permite aos desenvolvedores gerenciar robôs autônomos de forma mais eficaz. A plataforma Nimbus oferece suporte a NVIDIA® Jetson™ e ISAAC SDK e GEMs prontos para uso. Confira nosso [webinar](https://www.seeedstudio.com/blog/2022/04/21/webinar-connect-your-ros-project-to-the-cloud-with-nimbus/) sobre como conectar seu projeto ROS à nuvem com o Nimbus.
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão de produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

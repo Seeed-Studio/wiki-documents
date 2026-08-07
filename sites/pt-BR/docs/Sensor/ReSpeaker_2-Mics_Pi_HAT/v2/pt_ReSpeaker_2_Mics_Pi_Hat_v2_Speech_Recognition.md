@@ -1,6 +1,6 @@
 ---
-description: Este wiki demonstrará como você pode usar o TensorFlow Lite para detecção de palavras-chave com o ReSpeaker 2-Mics Pi HAT v2 e realizar reconhecimento de voz.
-title: Detecção de Palavras-Chave com TensorFlow Lite
+description: Este wiki demonstrará como você pode usar TensorFlow Lite para detecção de palavras‑chave com o ReSpeaker 2-Mics Pi HAT v2 e realizar reconhecimento de fala.
+title: Detecção de Palavras‑Chave com TensorFlow Lite no Raspberry Pi Mic HAT
 keywords:
   - ReSpeaker_2-Mics_Pi_HAT
   - Keyword_Spotting
@@ -11,13 +11,13 @@ last_update:
   date: 12/23/2024
   author: Joshua Lee
 createdAt: '2024-12-24'
-updatedAt: '2026-03-16'
+updatedAt: '2026-06-17'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_2_mics_pi_hat_v2_speech_recognition/
 ---
 
 ## Introdução
 
-Este projeto demonstra como usar o TensorFlow Lite para detecção de palavras-chave no ReSpeaker 2-Mics Pi HAT v2. A detecção de palavras-chave permite a identificação em tempo real de palavras pré-definidas a partir de entrada de áudio, possibilitando aplicações como dispositivos controlados por voz e sistemas interativos. Iremos guiá-lo pelas etapas para treinar um modelo TensorFlow Lite, implantá-lo no ReSpeaker HAT e executar o reconhecimento de voz localmente.
+Este projeto demonstra como usar TensorFlow Lite para detecção de palavras‑chave no ReSpeaker 2-Mics Pi HAT v2. A detecção de palavras‑chave permite a identificação em tempo real de palavras predefinidas a partir de entrada de áudio, possibilitando aplicações como dispositivos controlados por voz e sistemas interativos. Vamos guiá-lo pelas etapas para treinar um modelo TensorFlow Lite, implantá-lo no ReSpeaker HAT e executar o reconhecimento de fala localmente.
 
 ### Requisitos de Hardware e Software
 
@@ -26,29 +26,29 @@ Este projeto demonstra como usar o TensorFlow Lite para detecção de palavras-c
 
 ### Aplicações
 
-A detecção de palavras-chave pode ser aplicada em:
+A detecção de palavras‑chave pode ser aplicada em:
 
 - Dispositivos de casa inteligente
 - Robôs controlados por voz
 - Quiosques interativos
 
-### O que é o TensorFlow Lite?
+### O que é TensorFlow Lite?
 
-TensorFlow Lite é uma versão leve do TensorFlow projetada para dispositivos móveis e embarcados. Ele possibilita inferência de aprendizado de máquina com baixa latência e binários pequenos, tornando-o ideal para executar modelos em dispositivos de borda como o Raspberry Pi.
+TensorFlow Lite é uma versão leve do TensorFlow projetada para dispositivos móveis e embarcados. Ele permite inferência de aprendizado de máquina com baixa latência e binários pequenos, tornando-o ideal para executar modelos em dispositivos de borda como o Raspberry Pi.
 
 ## Treinar e Obter o Modelo TensorFlow Lite
 
 ### Conjunto de Dados
 
-Usaremos um subconjunto do conjunto de dados Speech Commands para o treinamento. O conjunto de dados contém arquivos de áudio WAV de pessoas dizendo diferentes palavras, coletados pelo Google e disponibilizados sob uma licença CC BY. O conjunto de dados pode ser baixado daqui. Para mais informações sobre conjuntos de dados, consulte este guia.
+Usaremos um subconjunto do conjunto de dados Speech Commands para o treinamento. O conjunto de dados contém arquivos de áudio WAV de pessoas dizendo diferentes palavras, coletados pelo Google e lançados sob uma licença CC BY. O conjunto de dados pode ser baixado daqui. Para mais informações sobre conjuntos de dados, consulte este guia.
 
 ### Por que Usar o Google Colab?
 
-Google Colab é uma plataforma em nuvem para executar notebooks Jupyter. Ele oferece acesso gratuito a recursos de GPU, tornando-o uma excelente escolha para treinar modelos de aprendizado de máquina sem exigir poder de computação local.
+Google Colab é uma plataforma em nuvem para executar notebooks Jupyter. Ela fornece acesso gratuito a recursos de GPU, tornando-se uma excelente opção para treinar modelos de aprendizado de máquina sem exigir poder de computação local.
 
 ### Etapas
 
-Agora usaremos um Notebook do Google Colab para realizar o treinamento de dados e gerar um modelo TensorFlow Lite no formato `.tflite`.
+Agora usaremos um Notebook do Google Colab para realizar o treinamento dos dados e gerar um modelo TensorFlow Lite no formato `.tflite`.
 
 - **Etapa 1.** Abra [este Notebook Python](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/audio/simple_audio.ipynb)
 
@@ -61,11 +61,11 @@ Agora usaremos um Notebook do Google Colab para realizar o treinamento de dados 
   ![Change runtime type - 1](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_2.png)
   ![Change runtime type - 2](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_3.png)
 
-- **Etapa 3.** Navegue até `Runtime > Run all` para executar todas as células de código. Este processo levará cerca de 10 minutos para ser concluído.
+- **Etapa 3.** Navegue até `Runtime > Run all` para executar todas as células de código. Esse processo levará cerca de 10 minutos para ser concluído.
 
   ![Run all](https://files.seeedstudio.com/wiki/XIAO-BLE/TFLite/pics/micro-speech-run-all.png)
 
-- **Etapa 4.** Depois que todas as células de código forem executadas, anexe uma nova célula e execute o seguinte código para gerar o arquivo de modelo `.tflite`.
+- **Etapa 4.** Quando todas as células de código forem executadas, acrescente uma nova célula e execute o seguinte código para gerar o arquivo de modelo `.tflite`.
 
   ```python
   converter = tf.lite.TFLiteConverter.from_keras_model(model)
@@ -77,7 +77,7 @@ Agora usaremos um Notebook do Google Colab para realizar o treinamento de dados 
 
   ![Append a new cell](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_4.png)
 
-- **Etapa 5.** Clique com o botão direito no arquivo `model.tflite` gerado e selecione **Download** para salvar o arquivo em seu computador.
+- **Etapa 5.** Clique com o botão direito no arquivo `model.tflite` gerado e selecione **Download** para salvar o arquivo no seu computador.
 
   ![Download](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/speech_5.png)
 
@@ -89,11 +89,11 @@ O script inference.py executa as seguintes etapas:
 
 1. Carrega o modelo TensorFlow Lite treinado.
 2. Processa o áudio de entrada em um espectrograma adequado para inferência.
-3. Executa a inferência e gera a palavra-chave detectada juntamente com as pontuações de confiança para cada rótulo.
+3. Executa a inferência e gera a palavra‑chave detectada juntamente com as pontuações de confiança para cada rótulo.
 
-### Etapas para Execução
+### Etapas para Executar
 
-1. Envie o arquivo de modelo `model.tflite` para o seu Pi; neste exemplo, nós o colocamos em `~/speech_recognition/model.tflite`.
+1. Envie o arquivo de modelo `model.tflite` para o seu Pi, neste exemplo, nós o colocamos em `~/speech_recognition/model.tflite`.
 2. Salve o seguinte script como `~/speech_recognition/inference.py`:
 
     ```python
@@ -183,7 +183,7 @@ O script inference.py executa as seguintes etapas:
         run_inference(audio_file_path)
     ```
 
-3. Grave um som usando o seguinte comando; as palavras-chave disponíveis são: `no`, `yes`, `down`, `go`, `left`, `up`, `right`, `stop`.
+3. Grave um som usando o seguinte comando, as palavras‑chave disponíveis são: `no`, `yes`, `down`, `go`, `left`, `up`, `right`, `stop`.
 
     ```
     $ arecord -D "plughw:2,0" -f S16_LE -r 16000 -d 1 -t wav ~/speech_recognition/test_audio.wav
@@ -207,9 +207,9 @@ O script inference.py executa as seguintes etapas:
 
 ### Interpretando os Resultados
 
-O script gera o comando detectado (por exemplo, YES) e as pontuações de confiança para todos os rótulos. Isso fornece insights sobre as previsões do modelo e permite avaliar seu desempenho.
+O script gera o comando detectado (por exemplo, YES) e as pontuações de confiança para todos os rótulos. Isso fornece insights sobre as previsões do modelo e permite que você avalie seu desempenho.
 
-## Suporte Técnico & Discussão de Produtos
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

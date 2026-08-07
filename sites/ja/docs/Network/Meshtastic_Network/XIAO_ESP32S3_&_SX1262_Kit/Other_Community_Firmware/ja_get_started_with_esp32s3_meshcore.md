@@ -1,5 +1,5 @@
 ---
-description: Web USB を使用して ESP32S3 上に MeshCore リピーターファームウェアを書き込む方法と、LoRa リージョンおよびパス設定のためのアプリ構成ガイド。
+description: Web USB を介して ESP32S3 上に MeshCore リピーターファームウェアを書き込み、LoRa リージョンとパス設定のためのアプリ構成を行うためのガイドです。
 title: ESP32 MeshCore を使い始める
 keywords:
   - Meshcore
@@ -12,13 +12,13 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-04-20'
+updatedAt: '2026-07-10'
 url: https://wiki.seeedstudio.com/ja/get_started_with_esp32s3_meshcore/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png" alt="pir" width={800} height="auto" /></p>
 
-[MeshCore](https://meshcore.io/) は、LoRa Mesh ハードウェアを利用して安全なテキストベース通信を実現するためのオープンソースシステムです。MeshCore リピーターと MeshCore コンパニオンノードを使用して、自分の MeshCore ネットワークを構築できます。[XIAO ESP32S3 & Wio-SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) は、MeshCore ノードを開発するための柔軟なソリューションです。
+[MeshCore](https://meshcore.io/) は、LoRa Mes ハードウェアを利用して安全なテキストベース通信を実現するためのオープンソースシステムです。MeshCore リピーターと MeshCore コンパニオンノードを使用して、自分の MeshCore ネットワークを構築できます。[XIAO ESP32S3 & Wio-SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) は、MeshCore ノードを開発するための柔軟なソリューションです。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
@@ -42,7 +42,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ScreenShot_2026-04-20_140721_194.png" alt="pir" width={800} height="auto" /></p>
 
-`Repeater` を選択します。ほかのファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
+`Repeater` を選択します。他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/RepeaterFirmware.png" alt="pir" width={800} height="auto" /></p>
 
@@ -51,7 +51,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/FirmwareVersion.png" alt="pir" width={600} height="auto" /></p>
 
-`Boot(B)` ボタンを押しながら、`Reset(R)` ボタンを押してフラッシュモードに入ります。
+`Boot(B)` ボタンを押しながら `Reset(R)` ボタンを押して、書き込みモードに入ります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/RB.png" alt="pir" width={300} height="auto" /></p>
 
@@ -59,7 +59,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Flash1.png" alt="pir" width={800} height="auto" /></p>
 
-プログレスバーが最後まで埋まったら、フラッシュが完了したことを示します。その後、デバイスは自動的に再起動します。
+プログレスバーが最後まで埋まったら、Flash が完了したことを示します。その後、デバイスは自動的に再起動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/FlashigComplete.png" alt="pir" width={800} height="auto" /></p>
 
@@ -77,14 +77,14 @@ SX-1262 は B2B インターフェースを介して Xiao ESP32-S3 に接続で�
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="B2B pin mapping between XIAO ESP32S3 and Wio-SX1262"/>
 </div>
 :::warning
-対応する SX-1262 はキットに含まれるもののみ購入可能です。
+対応する SX-1262 は、このキットの中でのみ購入できます。
 :::
 
 ### （オプション）バッテリーへの接続
 
 XIAO ESP32S3 には電源管理チップが内蔵されており、バッテリーを使用して XIAO ESP32S3 を単独で給電したり、XIAO ESP32S3 の USB ポートを介してバッテリーを充電したりできます。
 
-XIAO 用にバッテリーを接続したい場合は、`protection circuit` 付きの、適合した充電式 `3.7V lithium` バッテリーの購入をお勧めします。バッテリーをはんだ付けする際は、必ず正極と負極を区別してください。電源の負極端子は USB ポートに最も近い側であり、電源の正極端子は USB ポートから離れた側になります。
+XIAO 用にバッテリーを接続したい場合は、`3.7V lithium` の `protection circuit` 付きの、認定された充電式バッテリーを購入することをお勧めします。バッテリーをはんだ付けする際は、必ず正極と負極を区別してください。電源の負極端子は USB ポートに最も近い側であり、電源の正極端子は USB ポートから離れた側になります。
 
 <div class="table-center">
 <iframe width="730" height="420" src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/Xiao%20Esp32S3%20Battery%20Connection.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -92,7 +92,7 @@ XIAO 用にバッテリーを接続したい場合は、`protection circuit` 付
 
 ### （オプション）拡張ボードへの接続
 
-拡張ボードは、接続や、Grove センサーやモジュールを簡単に追加するなどの追加アプリケーションに便利なツールです。
+拡張ボードは、接続や Grove センサーおよびモジュールを簡単に追加するなどの追加アプリケーションに役立つ便利なツールです。
 
 <table align="center">
   <tbody>
@@ -159,9 +159,9 @@ XIAO 用にバッテリーを接続したい場合は、`protection circuit` 付
 
 ### 初期設定
 
-MeshCore リピーターファームウェアを MeshCore デバイスに初めて書き込むときは、その国や地域で合法な周波数を利用できるように、デバイスの周波数を設定する必要があります。
+MeshCore リピーターファームウェアを MeshCore デバイスに初めて書き込むときは、そのデバイスが自分の国や地域で合法な周波数を使用するように、デバイスの周波数を設定する必要があります。
 
-リピーターを設定するには [Click here](https://config.meshcore.io/) をクリックしてください。
+[Click here](https://config.meshcore.io/) をクリックしてリピーターを設定します。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -179,14 +179,14 @@ LoRa リージョンを変更して設定を保存します。その後、デバ
 |EU_868|欧州連合 868MHz|869.4 - 869.65|10|27|
 
 :::info
-**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、ローリング 1 時間ベースで毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
 これで、自分の Mesh ネットワークのテストを開始できます。
 
 ### Advert の送信
 
-"send advert" をクリックして、ほかの Meshcore デバイスがこのリピーターを認識できるようにします。その後、デバイス一覧にリピーターが表示されます。
+"send advert" をクリックして、他の Meshcore デバイスがこのリピーターを認識できるようにします。その後、デバイス一覧にリピーターが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/SendAdvert.png" alt="pir" width={800} height="auto" /></p>
 
@@ -196,7 +196,7 @@ LoRa リージョンを変更して設定を保存します。その後、デバ
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Admin.png" alt="pir" width={800} height="auto" /></p>
 
-ログイン後、設定ページが表示されます。ここから hone アプリ上でリピーターの設定を調整できます。
+ログイン後、設定ページが表示されます。ここから hone APP 上でリピーターの設定を調整できます。
 
 ### パスの設定
 
@@ -204,23 +204,23 @@ LoRa リージョンを変更して設定を保存します。その後、デバ
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/SendAdvert.png" alt="pir" width={800} height="auto" /></p>
 
-メッセージ送信パスを手動で設定できます。Bluetooth コンパニオンデバイスをスマートフォンアプリに接続し、プライベートメッセージウィンドウを開きます。その後、検出されたリピーターを選択してパスを構成できます。
+メッセージ送信パスを手動で設定できます。Bluetooth コンパニオンデバイスをスマートフォンの APP に接続します。プライベートメッセージウィンドウを開き、検出されたリピーターを選択してパスを構成します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
-パスを設定すると、送信方法は「n hop」に変更されます。たとえば、ルートにリピーターを 1 台追加すると、1 hop に変更されます。
+パスを設定すると、送信方法は「n hop」に変更されます。例えば、ルートにリピーターを 1 台追加すると、1 hop に変更されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
 ### （オプション）その他の設定
 
-リピーターの位置を MeshCore ノードマップ上に表示したい場合は、まずキットに GPS モジュールを取り付ける必要があります。
+MeshCore ノードマップ上にリピーターの位置を表示したい場合は、まずキットに GPS モジュールを取り付ける必要があります。
 
 <table align="center">
   <tbody>
     <tr>
       <th>XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic</th>
-      <th>XIAO ESP32S3 & Wio-SX1262 Kit（ケース付き）</th>
+      <th>XIAO ESP32S3 & Wio-SX1262 Kit with casing</th>
       <th>（オプション）L76K GNSS モジュール</th>
     </tr>
     <tr>
@@ -308,9 +308,65 @@ LoRa リージョンを変更して設定を保存します。その後、デバ
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
 
-また、アドバタイズのブロードキャスト間隔を調整することもできます。`auto zero hop advert` の間隔範囲は 60～240 分です。`auto flood advert` の間隔範囲は 3～168 時間です。 
+また、アドバタイズのブロードキャスト間隔を調整することもできます。`auto zero hop advert` の間隔範囲は 60〜240 分です。`auto flood advert` の間隔範囲は 3〜168 時間です。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
+
+## FAQ
+
+### 電源喪失後にデバイスの保存設定が失われる
+
+デバイス名、LoRa リージョン、その他の設定がアプリ上では正常に保存されたように見えるものの、デバイスの電源を切ると消えてしまう場合は、ESP32-S3 のフラッシュパーティションテーブルが異常でないか確認してください。
+
+[ESPConnect](https://thelastoutpostworkshop.github.io/ESPConnect/) を使用して、ESP32-S3 フラッシュメモリのパーティションテーブルを確認できます。ESPConnect は ESP デバイス専用であり、nRF52840 デバイスには使用できません。
+
+1. ESPConnect を開き、ボーレート `115200` を選択します。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-2.png" alt="ESPConnect baud rate selection" width={800} height="auto" /></p>
+
+2. **Connect** をクリックし、**USB JTAG/serial debug unit** を選択します。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-3.png" alt="Select USB JTAG serial debug unit in ESPConnect" width={600} height="auto" /></p>
+
+3. デバイスが接続されたら、**Partitions** ページを開きます。
+4. パーティション一覧に `spiffs` が存在するか確認します。
+
+パーティションテーブルが異常な場合、ESPConnect の **Partitions** ページには次の項目のみが表示されることがあります：
+
+- `nvs`
+- `phy_init`
+- `factory`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-4.png" alt="ESPConnect partition table without SPIFFS" width={800} height="auto" /></p>
+
+しかし、公式の MeshCore v1.15 の `merged.bin` ファームウェアには次のパーティションが含まれている必要があります：
+
+- `nvs`
+- `otadata`
+- `app0`
+- `app1`
+- `spiffs` 1.5 MB
+- `coredump`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-5.png" alt="ESPConnect partition table with SPIFFS" width={800} height="auto" /></p>
+
+MeshCore v1.15 は、デバイス名とリージョン設定を SPIFFS 内の `/new_prefs` に書き込みます。`spiffs` パーティションが存在しない場合、これらの設定は RAM 内にのみ保持されます。モバイルアプリ上では設定が正常に保存されたように表示されますが、電源を切ると失われてしまいます。
+
+これは通常、次のように通常版のファームウェアファイルを書き込んだ場合に発生します：
+
+```text
+Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26.bin
+```
+
+その代わりに、次のような完全なマージドファームウェアを書き込む必要があります：
+
+```text
+Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26-merged.bin
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-1.png" alt="MeshCore flasher download options for normal and merged firmware" width={800} height="auto" /></p>
+
+この問題を解決するには、デバイスを消去してから、マージドファームウェア版を書き込み直してください。
 
 ## リソース
 - **[PDF]**[Xiao ESP32-S3 互換 SX1262 の回路図](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
@@ -331,16 +387,26 @@ LoRa リージョンを変更して設定を保存します。その後、デバ
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
 - **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>

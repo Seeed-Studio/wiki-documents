@@ -9,7 +9,7 @@ last_update:
   date: 02/28/204
   author: Jessie
 createdAt: '2024-02-28'
-updatedAt: '2024-02-28'
+updatedAt: '2026-06-24'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP_probes_intro/
 ---
 
@@ -25,7 +25,7 @@ Para trazer mais conveniência para suas aplicações, também fornecemos sondas
   margin: 0 0 24px;
 }
 .probe-card {
-  height: 328px;
+  height: 340px;
   border: 1px solid var(--ifm-table-border-color);
   box-sizing: border-box;
   display: flex;
@@ -34,12 +34,14 @@ Para trazer mais conveniência para suas aplicações, também fornecemos sondas
   justify-content: space-between;
   padding: 12px 10px;
   text-align: center;
+  min-width: 0;
 }
 .probe-card-title {
-  height: 76px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
 }
@@ -70,38 +72,37 @@ Para trazer mais conveniência para suas aplicações, também fornecemos sondas
 }
 `}</style>
 
-
 ## Sensores de solo
 
 <div className="probe-card-grid">
 <div className="probe-card">
   <div className="probe-card-title">Umidade e temperatura do solo</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/2-101990668-rs485-soil-moisture-_-temperature-sensor-font.jpg" alt="Soil Moisture & Temperature" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/2-101990668-rs485-soil-moisture-_-temperature-sensor-font.jpg" alt="Soil Moisture &amp; Temperature" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-Sensor-S-Soil-MT-02-p-4634.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Umidade e temperatura do solo<br/>Conector à prova d'água</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/2-314990620-rs485-soil-moisture-_-temperature-sensor-font.jpg" alt="Soil Moisture & Temperature Waterproof Connector" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/2-314990620-rs485-soil-moisture-_-temperature-sensor-font.jpg" alt="Soil Moisture &amp; Temperature Waterproof Connector" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-Sensor-S-Soil-MT-02B-p-4859.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Umidade, temperatura e CE do solo<br/>Conector à prova d'água</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20Soil%20Moisture%20%26%20Temperature%20%26%20EC%20Sensor%20MODBUS-RTU%20RS485%20(S-Soil%20MTEC-02B)%2C%20with%20waterproof%20aviation%20connector.png" alt="Soil Moisture, Temperature & EC Waterproof Connector" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20Soil%20Moisture%20%26%20Temperature%20%26%20EC%20Sensor%20MODBUS-RTU%20RS485%20(S-Soil%20MTEC-02B)%2C%20with%20waterproof%20aviation%20connector.png" alt="Soil Moisture, Temperature &amp; EC Waterproof Connector" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-EC-Sensor-S-Soil-MTEC-02B-p-4860.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Umidade, temperatura e CE do solo</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_EC_Sensor/101990667_2.png" alt="Soil Moisture, Temperature & EC" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_EC_Sensor/101990667_2.png" alt="Soil Moisture, Temperature &amp; EC" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-EC-Sensor-S-Soil-MTEC-02-p-4633.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Umidade, CE e temperatura do substrato</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/RS485%20Moisture%20%26%20EC%20%26%20Temperature%20sensor%20for%20Soil%2C%20Substrate%2C%20Rockwool%2C%20Cocopeat.jpg" alt="Substrate Moisture, EC & Temperature" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/RS485%20Moisture%20%26%20EC%20%26%20Temperature%20sensor%20for%20Soil%2C%20Substrate%2C%20Rockwool%2C%20Cocopeat.jpg" alt="Substrate Moisture, EC &amp; Temperature" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-Soil-Substrate-Moisture-EC-Temperature-Sensor-p-6246.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Umidade do solo em múltiplas profundidades,<br/>temperatura e CE</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/RS485%20Multi-Depth%20Soil%20Moisture%2C%20Temperature%20and%20EC%20Sensor%20-%20Connector.jpg" alt="Multi-Depth Soil Moisture, Temperature & EC" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/RS485%20Multi-Depth%20Soil%20Moisture%2C%20Temperature%20and%20EC%20Sensor%20-%20Connector.jpg" alt="Multi-Depth Soil Moisture, Temperature &amp; EC" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-Multi-Depth-Soil-Moisture-Temperature-and-EC-Sensor-Connector-p-5387.html">Adquira agora!</a></div>
 </div>
 </div>
@@ -121,12 +122,12 @@ Para trazer mais conveniência para suas aplicações, também fornecemos sondas
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Sensor industrial de CE e TDS</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20EC%20%26%20TDS%20Sensor%20MODBUS-RTU%20RS485%20%26%200-2V%20Analog%20Voltage.png" alt="Industrial EC & TDS Sensor" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20EC%20%26%20TDS%20Sensor%20MODBUS-RTU%20RS485%20%26%200-2V%20Analog%20Voltage.png" alt="Industrial EC &amp; TDS Sensor" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/EC-RS485-p-4848.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Sensor de CE e TDS<br/>Conector à prova d'água</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20EC%20%26%20TDS%20Sensor%20MODBUS-RTU%20RS485%20%26%200-2V%20Analog%20Voltage%20with%20waterproof%20aviation%20connector.webp" alt="EC & TDS Sensor Waterproof Connector" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20EC%20%26%20TDS%20Sensor%20MODBUS-RTU%20RS485%20%26%200-2V%20Analog%20Voltage%20with%20waterproof%20aviation%20connector.webp" alt="EC &amp; TDS Sensor Waterproof Connector" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/EC-&-TDS-Sensor-RS485-b-p-4865.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
@@ -145,13 +146,13 @@ Para trazer mais conveniência para suas aplicações, também fornecemos sondas
 
 <div className="probe-card-grid">
 <div className="probe-card">
-  <div className="probe-card-title">CO2, temperatura e umidade<br/>RS485 e SDI-12</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20CO2%2C%20Temperature%20and%20Humidity%20Sensor%20with%20RS485%26SDI-12.jpg" alt="CO2, Temperature & Humidity RS485 & SDI-12" /></div>
+  <div className="probe-card-title">CO2, temperatura e umidade<br/>RS485 & SDI-12</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20CO2%2C%20Temperature%20and%20Humidity%20Sensor%20with%20RS485%26SDI-12.jpg" alt="CO2, Temperature &amp; Humidity RS485 &amp; SDI-12" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-CO2-Temperature-and-Humidity-Sensor-with-RS485-SDI-12-p-5720.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">CO2, temperatura e umidade<br/>Conector à prova d'água</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20CO2%2C%20Temperature%20and%20Humidity%20Sensor%20with%20RS485%26SDI-12%20%2C%20with%20Waterproof%20Aviation%20Connector.jpg" alt="CO2, Temperature & Humidity Waterproof Connector" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20CO2%2C%20Temperature%20and%20Humidity%20Sensor%20with%20RS485%26SDI-12%20%2C%20with%20Waterproof%20Aviation%20Connector.jpg" alt="CO2, Temperature &amp; Humidity Waterproof Connector" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-CO2-Temperature-and-Humidity-Sensor-with-RS485-SDI-12-Connector-p-5719.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
@@ -166,18 +167,73 @@ Para trazer mais conveniência para suas aplicações, também fornecemos sondas
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Temperatura e umidade do ar</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Air%20Temperature%20%26%20Humidity.jpg" alt="Air Temperature & Humidity" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Air%20Temperature%20%26%20Humidity.jpg" alt="Temperatura e Umidade do Ar" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-Temperature-and-Humidity-Sensor-p-5235.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Temperatura e Umidade do Ar<br/>Conector à Prova d'Água</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Air%20Temperature%20%26%20Humidity%20Waterproof%20Connector.jpg" alt="Air Temperature & Humidity Waterproof Connector" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Air%20Temperature%20%26%20Humidity%20Waterproof%20Connector.jpg" alt="Temperatura e Umidade do Ar com Conector à Prova d'Água" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-Temperature-and-Humidity-Sensor-Connector-p-5236.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Temperatura, Umidade e Pressão do Ar</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Air%20Temperature%2C%20Humidity%20%26%20Pressure.jpg" alt="Air Temperature, Humidity & Pressure" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Air%20Temperature%2C%20Humidity%20%26%20Pressure.jpg" alt="Temperatura, Umidade e Pressão do Ar" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-Air-Temperature-Humidity-and-Pressure-Sensor-p-5801.html">Adquira agora!</a></div>
+</div>
+</div>
+
+## Sensores Meteorológicos e Estações Meteorológicas Compactas
+
+<div className="probe-card-grid">
+<div className="probe-card">
+  <div className="probe-card-title">SenseCAP S200 Sensor de Velocidade do Vento<br/>e Direção</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20S200%20Wind%20Speed%20%26%20Direction%20Sensor.jpg" alt="SenseCAP S200 Sensor de Velocidade e Direção do Vento" /></div>
+  <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-S200-Wind-Speed-and-Direction-Sensor-p-5693.html">Adquira agora!</a></div>
+</div>
+<div className="probe-card">
+  <div className="probe-card-title">SenseCAP S500 5-em-1<br/>Estação Meteorológica Compacta</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20S500%205-in-1%20Compact%20Weather%20Station.jpg" alt="SenseCAP S500 Estação Meteorológica Compacta 5-em-1" /></div>
+  <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-S500-5-in-1-Compact-Weather-Station-p-5652.html">Adquira agora!</a></div>
+</div>
+<div className="probe-card">
+  <div className="probe-card-title">SenseCAP S600-A 6-em-1<br/>Estação Meteorológica Compacta</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20S600-A%206-in-1%20Compact%20Weather%20Station.jpg" alt="SenseCAP S600-A Estação Meteorológica Compacta 6-em-1" /></div>
+  <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-S600-A-6-in-1-Compact-Weather-Station-p-6585.html">Adquira agora!</a></div>
+</div>
+<div className="probe-card">
+  <div className="probe-card-title">SenseCAP S700 7-em-1<br/>Estação Meteorológica Compacta</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20S700%207-in-1%20Compact%20Weather%20Station.jpg" alt="SenseCAP S700 Estação Meteorológica Compacta 7-em-1" /></div>
+  <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-S700-7-in-1-Compact-Weather-Station-p-5651.html">Adquira agora!</a></div>
+</div>
+<div className="probe-card">
+  <div className="probe-card-title">SenseCAP S700-A 7-em-1<br/>Estação Meteorológica Compacta<br/>Chuva por Radar</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20S700-A%207-in-1%20Compact%20Weather%20Station%20-%20Radar%20Rain.jpg" alt="SenseCAP S700-A Estação Meteorológica Compacta 7-em-1 - Chuva por Radar" /></div>
+  <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-S700-7-in-1-Compact-Weather-Station-Radar-Rain-p-6463.html">Adquira agora!</a></div>
+</div>
+<div className="probe-card">
+  <div className="probe-card-title">SenseCAP S700-B 7-em-1<br/>Estação Meteorológica Compacta<br/>Radiação Solar</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20S700-B%207-in-1%20Compact%20Weather%20Station%20-%20Solar%20Radiation.jpg" alt="SenseCAP S700-B Estação Meteorológica Compacta 7-em-1 - Radiação Solar" /></div>
+  <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-S700-7-in-1-Compact-Weather-Station-Solar-Radiation-p-6305.html">Adquira agora!</a></div>
+</div>
+<div className="probe-card">
+  <div className="probe-card-title">SenseCAP S700-C 7-em-1<br/>Estação Meteorológica Compacta<br/>Radiação Solar e Chuva por Radar</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20S700-C%207-in-1%20Compact%20Weather%20Station%20-%20Solar%20Radiation%20%26%20Radar%20Rain.jpg" alt="SenseCAP S700-C Estação Meteorológica Compacta 7-em-1 - Radiação Solar e Chuva por Radar" /></div>
+  <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-S700-7-in-1-Compact-Weather-Station-Solar-Radiation-Radar-Rain-p-6587.html">Adquira agora!</a></div>
+</div>
+<div className="probe-card">
+  <div className="probe-card-title">SenseCAP S800 8-em-1<br/>Estação Meteorológica Compacta</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20S800%208-in-1%20Compact%20Weather%20Station.jpg" alt="SenseCAP S800 Estação Meteorológica Compacta 8-em-1" /></div>
+  <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-S800-8-in-1-Compact-Weather-Station-p-5653.html">Adquira agora!</a></div>
+</div>
+<div className="probe-card">
+  <div className="probe-card-title">SenseCAP S1000 10-em-1<br/>Estação Meteorológica Compacta</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20S1000%2010-in-1%20Compact%20Weather%20Station.jpg" alt="SenseCAP S1000 Estação Meteorológica Compacta 10-em-1" /></div>
+  <div className="probe-card-action"><a href="https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html">Adquira agora!</a></div>
+</div>
+<div className="probe-card">
+  <div className="probe-card-title">SenseCAP S2120 8-em-1<br/>Sensor Meteorológico LoRaWAN</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor.webp" alt="SenseCAP S2120 Sensor Meteorológico LoRaWAN 8-em-1" /></div>
+  <div className="probe-card-action"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html">Adquira agora!</a></div>
 </div>
 </div>
 
@@ -186,37 +242,37 @@ Para trazer mais conveniência para suas aplicações, também fornecemos sondas
 <div className="probe-card-grid">
 <div className="probe-card">
   <div className="probe-card-title">Sensor PAR Industrial<br/>MODBUS RS485</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20PAR%20Sensor%20MODBUS%20RS485.jpg" alt="Industrial PAR Sensor MODBUS RS485" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20PAR%20Sensor%20MODBUS%20RS485.jpg" alt="Sensor PAR Industrial MODBUS RS485" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-S-PAR-02A-p-4829.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
-  <div className="probe-card-title">Sensor PAR Industrial<br/>Saída 0-2.5V</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20PAR%20Sensor%200-2.5V%20Output.webp" alt="Industrial PAR Sensor 0-2.5V Output" /></div>
+  <div className="probe-card-title">Sensor PAR Industrial<br/>Saída 0-2,5V</div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20PAR%20Sensor%200-2.5V%20Output.webp" alt="Sensor PAR Industrial Saída 0-2,5V" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/PAR-2-5V-p-4831.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Sensor PAR Industrial<br/>Conector à Prova d'Água</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20PAR%20Sensor%20Waterproof%20Connector.webp" alt="Industrial PAR Sensor Waterproof Connector" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20PAR%20Sensor%20Waterproof%20Connector.webp" alt="Sensor PAR Industrial com Conector à Prova d'Água" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-S-PAR-02B-p-4830.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Sensor de Radiação Solar Total</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Total%20Solar%20Radiation%20Sensor.webp" alt="Total Solar Radiation Sensor" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Total%20Solar%20Radiation%20Sensor.webp" alt="Sensor de Radiação Solar Total" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-p-5691.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Sensor de Radiação UV</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20UV%20Radiation%20Sensor%20MODBUS-RTU%20RS485%2C%20Ultraviolet%20Radiation%20Meter.webp" alt="UV Radiation Sensor" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Industrial%20UV%20Radiation%20Sensor%20MODBUS-RTU%20RS485%2C%20Ultraviolet%20Radiation%20Meter.webp" alt="Sensor de Radiação UV" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/RS485-p-5692.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Sensor de Intensidade de Luz</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Light%20Intensity%20Sensor.webp" alt="Light Intensity Sensor" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Light%20Intensity%20Sensor.webp" alt="Sensor de Intensidade de Luz" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/light-intensity-sensor-p-a-4863.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Sensor de Intensidade de Luz<br/>Conector à Prova d'Água</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/%20%20%20%20Skip%20to%20the%20beginning%20of%20the%20images%20gallery%20Industrial%20Light%20Intensity%20Sensor%2C%20MODBUS-RTU%20RS485%20%260-2V%20(S-Light-02)%2C%20with%20Waterproof%20Aviation%20Connector.webp" alt="Light Intensity Sensor Waterproof Connector" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/%20%20%20%20Skip%20to%20the%20beginning%20of%20the%20images%20gallery%20Industrial%20Light%20Intensity%20Sensor%2C%20MODBUS-RTU%20RS485%20%260-2V%20(S-Light-02)%2C%20with%20Waterproof%20Aviation%20Connector.webp" alt="Sensor de Intensidade de Luz com Conector à Prova d'Água" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/light-intensity-sensor-p-b-4863.html">Adquira agora!</a></div>
 </div>
 </div>
@@ -225,7 +281,7 @@ Para trazer mais conveniência para suas aplicações, também fornecemos sondas
 
 <div className="probe-card-grid">
 <div className="probe-card">
-  <div className="probe-card-title">Nível de Líquido<br/>Saída 0.5-4.5V</div>
+  <div className="probe-card-title">Nível de Líquido<br/>Saída 0,5-4,5V</div>
   <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/Liquid_Level_Sensor/img/01_14_4.png" alt="Liquid Level 0.5-4.5V Output" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/Liquid-Level-Sensor-p-4619.html">Adquira agora!</a></div>
 </div>
@@ -266,12 +322,12 @@ Para trazer mais conveniência para suas aplicações, também fornecemos sondas
 <div className="probe-card-grid">
 <div className="probe-card">
   <div className="probe-card-title">Umidade da Folha e Temperatura</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Leaf%20Wetness%20%26%20Temperature.webp" alt="Leaf Wetness & Temperature" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Leaf%20Wetness%20%26%20Temperature.webp" alt="Leaf Wetness &amp; Temperature" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/leaf-wetness-sensor-p-a-4861.html">Adquira agora!</a></div>
 </div>
 <div className="probe-card">
   <div className="probe-card-title">Umidade da Folha e Temperatura<br/>Conector à Prova d'Água</div>
-  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Leaf%20Wetness%20%26%20Temperature%20Waterproof%20Connector.webp" alt="Leaf Wetness & Temperature Waterproof Connector" /></div>
+  <div className="probe-card-image"><img src="https://files.seeedstudio.com/wiki/probes_intro/Leaf%20Wetness%20%26%20Temperature%20Waterproof%20Connector.webp" alt="Leaf Wetness &amp; Temperature Waterproof Connector" /></div>
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/leaf-wetness-sensor-p-b-4861.html">Adquira agora!</a></div>
 </div>
 </div>
@@ -285,9 +341,10 @@ Para trazer mais conveniência para suas aplicações, também fornecemos sondas
   <div className="probe-card-action"><a href="https://www.seeedstudio.com/Solar-Radiation-Shield-for-Outdoor-Sensor-Protection-A10-p-4601.html">Adquira agora!</a></div>
 </div>
 </div>
+
 ## ✨ Projeto de Contribuidores
 
-- Temos uma lista de tarefas para atualizar esta página, que está categorizada em nosso [projeto de contribuidores](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), pois estamos dedicados a aprimorar a experiência do usuário e fornecer melhor suporte por meio do desenvolvimento da nossa plataforma wiki.
+- Temos uma lista de tarefas para atualizar esta página, que está categorizada em nosso [projeto de contribuidores](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), pois estamos dedicados a aprimorar a experiência do usuário e fornecer um suporte melhor por meio do desenvolvimento da nossa plataforma wiki.
 - [Sua contribuição para esta página](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33961929) é essencial para nós! Valorizamos muito a sua opinião e agradeceríamos imensamente a sua ajuda na geração de ideias.
 
 ## Suporte Técnico SenseCAP

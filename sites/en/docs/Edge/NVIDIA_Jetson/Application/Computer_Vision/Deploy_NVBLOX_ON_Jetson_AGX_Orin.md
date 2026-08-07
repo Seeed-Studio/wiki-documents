@@ -18,7 +18,7 @@ image: https://files.seeedstudio.com/wiki/other/page-nvblox.jpg
 slug: /deploy_nvblox_jetson_agx_orin
 sku: 101090144,100020039
 last_update:
-  date: 2026-01-20T00:00:00.000Z
+  date: 2026-01-20
   author: Dayu
 createdAt: '2026-01-22'
 updatedAt: '2026-03-17'

@@ -1,14 +1,14 @@
 ---
-description: この記事では、SquareLine 上で reTerminal E シリーズのペーパーディスプレイ用 UI インターフェースを作成する方法を説明します。
+description: この記事では、SquareLine 上で reTerminal E シリーズのペーパーディスプレイ用 UI インターフェースを作成する手順を説明します。
 title: SquareLine Vision を使う
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
 slug: /reterminal_e10xx_with_squareline_vision
-sidebar_position: 6
+sidebar_position: 7
 last_update:
   date: 10/29/2025
   author: Zovey
 createdAt: '2025-11-03'
-updatedAt: '2026-01-29'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_squareline_vision/
 ---
 
@@ -18,18 +18,18 @@ url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_squareline_vision/
 
 ## はじめに
 
-自分だけのインテリジェントターミナルを作りたいとき、そのデバイスに魅力的で洗練されたユーザーインターフェースを持たせたいと考えるはずです。これを実現できるのが [LVGL](https://lvgl.io/) です。LVGL は、あらゆる MCU、MPU、およびディスプレイタイプ向けに美しい UI を作成できる、最も人気のある無償・オープンソースの組み込みグラフィックスライブラリです。このライブラリを使うことで、多数の美しい組み込みユーザーインターフェースを作成できます。特に、当社の reTerminal E シリーズ ePaper 製品を使用する場合、魅力的なインターフェースは欠かせない要素です。しかし、LVGL ライブラリのコードを書くことは非常に複雑な作業でもあります。そこで本チュートリアルでは、コントロールをドラッグ＆ドロップするだけで UI を描画できるエディタを紹介することを主な目的とします。WYSIWYG（What You See Is What You Get）形式の作成方法により、最終的な表示効果をより正確に把握でき、UI を描き終えた後は LVGL の UI ファイルとしてエクスポートできるため、開発者の開発プロセスを大幅に簡素化できます。このツールの名前は SquareLine Vision で、LVGL 向けのビジュアルフロントエンドツールです。
+自分だけのインテリジェント端末を作りたいとき、そのデバイスに魅力的で洗練されたユーザーインターフェースを持たせたいと考えるはずです。これを実現できるのが [LVGL](https://lvgl.io/) です。LVGL は、あらゆる MCU、MPU、およびディスプレイタイプ向けに美しい UI を作成できる、最も人気のある無償・オープンソースの組み込みグラフィックスライブラリです。このライブラリを使うことで、多数の美しい組み込みユーザーインターフェースを作成できます。特に、当社の reTerminal E シリーズ ePaper 製品を使用する場合、魅力的なインターフェースは欠かせない要素です。しかし、LVGL ライブラリのコードを書くことは非常に複雑な作業でもあります。そこで本チュートリアルでは、コントロールをドラッグ＆ドロップするだけで UI を描画できるエディタを紹介することを主な目的としています。WYSIWYG（What You See Is What You Get）方式で作成することで、最終的な表示イメージをより正確に把握でき、UI を描き終えたら LVGL の UI ファイルとしてエクスポートできるため、開発者の開発プロセスを大幅に簡素化できます。このツールの名前は SquareLine Vision で、LVGL 向けのビジュアルフロントエンドツールです。
 
 [SquareLine Vision](https://vision.squareline.io/) は、ブラウザ（Web）または Web 互換環境上で動作する UI 開発環境であり、画面付きデバイスなどの組み込みシステム向けユーザーインターフェース（UI）を素早く設計することに特化しています。
 また、**デザイン + コードエクスポート** ツールでもあります。プラットフォーム上でインターフェースをデザインし、そのデザインを組み込みデバイス上で動作させるためのコードやリソースとしてエクスポートできます。 
 
 ## SquareLine Vision の特長
 
-- **ビジュアル UI デザイン** – ドラッグ＆ドロップエディタで美しくインタラクティブなインターフェースを視覚的にデザインでき、手作業で LVGL コードを作成する必要がありません。
+- **ビジュアル UI デザイン** – ドラッグ＆ドロップエディタで美しくインタラクティブなインターフェースをビジュアルに設計でき、LVGL コードを手書きする必要がありません。
 - **高速な組み込みプロトタイピング** – デスクトップまたはターゲットハードウェア上で UI を即座にプレビューして検証でき、デザインからデバイスまでの反復時間を大幅に短縮します。
-- **LVGL ベースのエクスポート** – デザインをシームレスにクリーンな LVGL ベースのソースコードとしてエクスポートでき、組み込みデバイス、マイコン、シミュレーション環境上ですぐにコンパイルして動作させられます。
+- **LVGL ベースのエクスポート** – デザインをシームレスに LVGL ベースのクリーンなソースコードとしてエクスポートでき、組み込みデバイス、マイコン、シミュレーション環境上でそのままコンパイルして利用できます。
 
-SquareLine Vision を使えば、コンセプト段階からインタラクティブな組み込み UI プロトタイプまで数分で到達できます。柔軟なデザイン、リアルタイムプレビュー、量産レベルの LVGL 出力を組み合わせることで、製品開発サイクル全体を加速させます。
+SquareLine Vision を使えば、コンセプト段階からインタラクティブな組み込み UI プロトタイプまでを数分で到達できます。柔軟なデザイン、リアルタイムプレビュー、そして本番利用可能な LVGL 出力を組み合わせることで、製品開発サイクル全体を加速させます。
 
 ### 必要なもの
 
@@ -61,11 +61,11 @@ SquareLine Vision を使えば、コンセプト段階からインタラクテ�
 </div>
 
 
-## [SquareLine Vision](https://vision.squareline.io/) を使い始める
+## [SquareLine Vision](https://vision.squareline.io/) の使い始め方
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_7.png" style={{width:600, height:'auto'}}/></div>
 
-### コンポーネントの概要
+### コンポーネント紹介
 
 SquareLine Vision プラットフォーム全体は、**Launcher** と **アプリケーションインターフェース** の 2 つの部分に分けられます。
 **Launcher** インターフェースでは、次の 3 つの主な機能が確認できます。
@@ -73,7 +73,7 @@ SquareLine Vision プラットフォーム全体は、**Launcher** と **アプ�
 - インポートの処理
 - アカウント設定の管理
 
-UI の作成を開始すると、次の 5 つのツールについて学ぶことになります。
+UI の作成を始めると、次の 5 つのツールについて学ぶことになります。
 - 階層システム
 - 画面管理
 - スタイル設定オプション
@@ -86,7 +86,7 @@ UI の作成を開始すると、次の 5 つのツールについて学ぶこ�
 
 ### 新しい LVGL プロジェクトを開始する
 
-SquareLine Vision Launcher インターフェース上部の `Create new` ボタンをクリックします。その後、`Seeed Studio` を選択して当社の製品を表示します。`reTerminal E1002` を選択してプロジェクトを作成します。
+SquareLine Vision Launcher 画面の上部にある `Create new` ボタンをクリックします。次に、`Seeed Studio` を選択して当社の製品を表示します。`reTerminal E1002` を選択してプロジェクトを作成します。
 このプロジェクトの固定設定は次のとおりです。
 - `Resolution`: 800x480
 - `Offset`: 0(x), 0(y)
@@ -99,11 +99,11 @@ SquareLine Vision Launcher インターフェース上部の `Create new` ボタ
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Launcher_2.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-SenseCAP Watcher と reTerminal E1001 および E1002 デバイスをすでにサポートしています。今後は Seeed Studio のさらなる製品にも対応していく予定です。
+SenseCAP Watcher と reTerminal E1001 および E1002 デバイスをすでにサポートしています。今後は Seeed Studio のさらに多くの製品にも対応していく予定です。
 :::
 
 ### 既存の .slvp プロジェクトをインポートする
-すでに .slvp ファイルをお持ちの場合は、それを直接プロジェクトとしてインポートできます。ここでは天気に関連する 2 つのダッシュボードを用意しました。以下から直接ダウンロードできます。
+すでに .slvp ファイルをお持ちの場合は、それをそのままプロジェクトとしてインポートできます。ここでは天気に関連する 2 つのダッシュボードを用意しました。以下から直接ダウンロードできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -122,42 +122,42 @@ SenseCAP Watcher と reTerminal E1001 および E1002 デバイスをすでに�
     <tr>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Seeed Weather 7 epaper.slvp" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックして入手</button></p>
         </a>
       </div></td>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Paper_Weather.slvp" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックして入手</button></p>
         </a>
       </div></td>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Seeed Weather 13 epaper.slvp" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックして入手</button></p>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-## プロジェクトパラメータ設定と UI インターフェース設計
+## プロジェクトパラメータ設定 & UI インターフェースデザイン
 
-エンジニアリングインターフェースに入ると、4 つの主要な領域が表示されます。
+エンジニアリング画面に入ると、4 つのメインエリアが表示されます。
 
-- 領域 1 は **Hierarchy** で、主に UI 要素の構造を管理するために使用されます。 
-- 領域 2 は **Simulator** で、UI が表示され、各 UI の表示効果を確認するために使用されます。 
-- 領域 3 は **Inspector** で、現在選択されている要素を詳細に制御するための機能を提供します。 
+- 領域 1 は **Hierarchy** で、主に UI 要素の構造を管理するために使用します。 
+- 領域 2 は **Simulator** で、UI が表示され、各 UI の表示効果を確認するために使用します。 
+- 領域 3 は **Inspector** で、現在選択されている要素を詳細に制御するためのエリアです。 
 - 領域 4 は **Toolbar** で、アプリケーションインターフェースの上部にあり、多くのツールや機能へ簡単にアクセスできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_2.png" style={{width:500, height:'auto'}}/></div>
 
-### UI インターフェース設計
+### UI インターフェースデザイン
 
 UI（ユーザーインターフェース）デザインは組み込み製品開発において極めて重要であり、ユーザー体験を直接左右します。見た目が美しく、直感的で、応答性の高いインターフェースは、製品の使いやすさを高めるだけでなく、全体的な魅力も向上させます。
 
 SquareLine Vision では、コンポーネントをドラッグ＆ドロップすることで、インターフェースを素早く組み立てることができます。Styles、Fonts、Bitmaps、Themes などのツールを活用して視覚効果を細かく制御し、プロフェッショナルで個性的なユーザー体験を作り上げましょう。
 
 :::tip
-本チュートリアルでは、このプロジェクトに登場するコントロールのみを扱います。しかし、SquareLine Vision にはアニメーション、イベント、さまざまなフォントなど、多くの機能があります。このツールをさらに深く学びたい場合は、[公式チュートリアル](https://docs.vision.squareline.io/docs/overview)を参照してください。
+本チュートリアルでは、このプロジェクト内に登場するコントロールのみを扱います。しかし、SquareLine Vision にはアニメーション、イベント、さまざまなフォントなど、他にも多くの機能があります。このツールをさらに深く学びたい場合は、[公式チュートリアル](https://docs.vision.squareline.io/docs/overview) を参照してください。
 :::
 
 #### Hierarchy の紹介
@@ -176,7 +176,7 @@ SquareLine Vision では、コンポーネントをドラッグ＆ドロップ�
 
 Toolbar には、プロジェクト設定、プロジェクトの保存、ヘルプへのアクセス、不具合報告、プロジェクトビューの変更、プロジェクトコードのダウンロード、そして SquareLine Vision 内で直接プレイモードでプロジェクトを開始するためのオプションが含まれています。
 
-- **Menu**: ここから、作業内容の保存、プロジェクトのエクスポート、プロジェクト設定の調整、ランチャー画面への戻りなどの機能にアクセスできます。
+- **Menu**: ここから、作業内容の保存、プロジェクトのエクスポート、プロジェクト設定の調整、ランチャー画面への復帰といった機能にアクセスできます。
 - **Project name**: 現在のプロジェクト名を表示します。
 - **Plan**: ユーザーの現在のサブスクリプションプランを表示します。
 - **Editor / Animation mode**: 2 つの異なる作業環境を切り替えます。
@@ -185,7 +185,7 @@ Toolbar には、プロジェクト設定、プロジェクトの保存、ヘル
 - **Play mode**: プレビューを開始し、UI シミュレーションをテストします。
 - **Send bug report**: エラー報告システムへ直接アクセスできます。
 - **User(s)**: 現在プロジェクト内で作業しているすべてのアクティブユーザーを表示し、共同設計をサポートします。
-- **View options**: ミニマップ表示の切り替えや、専用の入力フィールドで正確なズーム率を入力できます。
+- **View options**: ミニマップ表示の切り替えや、専用の入力フィールドで正確なズーム倍率を入力できます。
 - **Version**: プロジェクトが動作している現在の SquareLine Vision のバージョンを表示し、使用しているソフトウェア環境を把握できるようにします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_6.png" style={{width:500, height:'auto'}}/></div>
@@ -224,14 +224,14 @@ exported_project/
 
 #### 主要コンポーネント
 
-GUI サブシステムのメインインターフェースです。以下のような高レベル関数を提供します：
+GUI サブシステムのメインインターフェースです。次のような高レベル関数を提供します：
 
 - `GUI_load()`: HAL と LVGL を含む GUI の完全な初期化
 - `GUI_init()`: 基本的な GUI 初期化
-- `GUI_refresh()`: GUI 状態を更新します（LVGL ハンドラを呼び出します
+- `GUI_refresh()`: GUI 状態を更新（LVGL ハンドラを呼び出し）
 - `GUI_initContent()`: 画面とウィジェットを初期化
 - `GUI_initTheme()`: GUI テーマを設定
-- `GUI_loadFirstScreen()`: 最初の画面を読み込み
+- `GUI_loadFirstScreen()`: 最初の画面を読み込む
 
 ## プログラムの書き込み
 
@@ -252,13 +252,13 @@ E1002 のメイン制御モジュールは ESP32-S3 です。PlatformIO を使�
 - **Step 2**: VScode の拡張機能で `platformio` を検索します。最初に表示されるアイコンが必要なものです。`Install` をクリックするだけでダウンロードが開始されます。
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_5.png" style={{width:700, height:'auto'}}/></div>
 
-- **Step 3**: 順に PlatformIO プラグインを開きます。その後、`Open` ボタンをクリックし、`Open Project` をクリックしてローカルの PlatformIO プロジェクトを選択して開きます。
+- **Step 3**: PlatformIO プラグインを順に開きます。その後、`Open` ボタンをクリックし、`Open Project` をクリックしてローカルの PlatformIO プロジェクトを選択して開きます。
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_6.png" style={{width:700, height:'auto'}}/></div>
 
 
-### 参照用ルーチン
+### 参考ルーチン
 
-リアルタイムの天気ダッシュボードを表示できる、UI インターフェースがそれぞれ異なる 3 つの既存テンプレートを用意しています。これらは [OpenWeather](https://openweathermap.org/)（世界の気象データを提供するサービスプラットフォーム）と連携して、リアルタイムの気候変化を取得します。必要なのは、OpenWeather から API KEY を取得し、WIFI に接続するだけで、通常どおり利用できます。
+リアルタイムの天気ダッシュボードを表示できる、UI インターフェースがそれぞれ異なる 3 つの既存テンプレートを用意しています。これらは [OpenWeather](https://openweathermap.org/)（世界の気象データを提供するサービスプラットフォーム）と連携して、リアルタイムの気候変化を取得します。必要なのは、OpenWeather から API KEY を取得し、WIFI に接続するだけで、通常どおり使用できます。
 
 <div class="table-center">
   <table align="center">
@@ -320,7 +320,7 @@ E1002 のメイン制御モジュールは ESP32-S3 です。PlatformIO を使�
   </table>
 </div>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 

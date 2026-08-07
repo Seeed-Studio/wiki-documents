@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
 
 <table align="center">
 <tbody><tr>
-<th>用于 Meshtastic 和 LoRa 的 XIAO ESP32S3 & Wio-SX1262 套件</th>
+<th>XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic & LoRa</th>
 <th>（可选）L76K GNSS 模块</th>
 </tr>
 <tr>
@@ -53,9 +53,9 @@ import TabItem from '@theme/TabItem';
 
 ### 连接电池
 
-XIAO ESP32S3 内置电源管理芯片，可通过电池为 XIAO ESP32S3 独立供电，或通过 XIAO ESP32S3 的 USB 接口为电池充电。
+XIAO ESP32S3 内置电源管理芯片，可让 XIAO ESP32S3 通过电池独立供电，或通过 XIAO ESP32S3 的 USB 口为电池充电。
 
-如果你想为 XIAO 连接电池，我们建议你购买合格的可充电 `3.7V lithium` 电池，并带有 `protection circuit`。焊接电池时，请注意区分正负极。电源负极应为靠近 USB 接口的一侧，电源正极为远离 USB 接口的一侧。
+如果你想为 XIAO 连接电池，我们建议你购买合格的可充电 `3.7V lithium` 电池，并带有 `protection circuit`。焊接电池时，请注意区分正负极。电源负极应连接在靠近 USB 口的一侧，电源正极应连接在远离 USB 口的一侧。
 
 <div class="table-center">
 <iframe width="730" height="420" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -84,7 +84,7 @@ SX-1262 可以通过 B2B 接口连接到 Xiao ESP32-S3。SX-1262 使用 SPI 与 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/flashfirmware1.gif" style={{width:700, height:'auto'}}/></div>
 
-### 步骤 2 检查你的 Device ID
+### 步骤 2 查看你的 Device ID
 
 Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监视器进行查看。
 
@@ -92,7 +92,7 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/OpenSerialPortMonitor.png" style={{width:600, height:'auto'}}/></div>
 
-在串口日志中检查你的 Device ID。例如，下方日志表明 Device ID 为 24c0。
+在串口日志中查看你的 Device ID。例如，下方日志表明 Device ID 为 24c0。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/DEviceIDD.png" style={{width:600, height:'auto'}}/></div>
 
@@ -108,7 +108,7 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 <TabItem value="pypi" label="Android">
 
 **1. LoRa 配置**
-- 将 region 从 UNSET 更改为你所在的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
+- 将 region 从 UNSET 修改为你的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
 - 选择 `OK to MQTT`
 - 点击 Send
 - 设备会自动重启并重新连接。设备将自动重启并重新连接，这可能需要 30 秒到 2 分钟。
@@ -147,7 +147,7 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 
 **5. APP 连接**
 
-现在你的设备无法再通过蓝牙连接，但可以通过网络连接。
+现在你的设备无法再通过蓝牙连接，但你可以通过网络进行连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -156,7 +156,7 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 <TabItem value="sou" label="IOS">
 
 **1. LoRa 配置**
-- 将 region 从 UNSET 更改为你所在的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
+- 将 region 从 UNSET 修改为你的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
 - 选择 `OK to MQTT`
 - 点击 Send
 - 设备会自动重启并重新连接。设备将自动重启并重新连接，这可能需要 30 秒到 2 分钟。
@@ -195,7 +195,7 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 
 **5. APP 连接**
 
-现在你的设备无法再通过蓝牙连接，但可以通过网络连接。
+现在你的设备无法再通过蓝牙连接，但你可以通过网络进行连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTConnect.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -210,3 +210,25 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 
 如果你有另一台与 ESP32S3 MQTT 网关处于同一频段的 Meshtastic 设备，它也可以通过 ESP32S3 与互联网上的其他人进行消息传输。
 
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

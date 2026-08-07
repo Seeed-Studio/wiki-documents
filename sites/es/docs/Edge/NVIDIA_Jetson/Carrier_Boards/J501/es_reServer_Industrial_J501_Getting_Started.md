@@ -1,6 +1,6 @@
 ---
-description: Este wiki presenta las características de la placa portadora J501 y explica cómo grabar el sistema Jetpack en la placa portadora J501.
-title: Grabar Jetpack
+description: Este wiki presenta las características de la placa portadora J501 y explica cómo flashear el sistema Jetpack en la placa portadora J501.
+title: Flashear Jetpack
 keywords:
   - reServer
   - Jetson
@@ -11,7 +11,7 @@ last_update:
   date: 08/19/2024
   author: Youjiang
 createdAt: '2024-08-19'
-updatedAt: '2026-01-07'
+updatedAt: '2026-05-13'
 url: https://wiki.seeedstudio.com/es/reserver_j501_getting_started/
 ---
 
@@ -27,13 +27,13 @@ url: https://wiki.seeedstudio.com/es/reserver_j501_getting_started/
   </a>
 </div>
 
-La placa portadora J501 es una potente placa de expansión que admite módulos NVIDIA Jetson AGX Orin. Cuenta con abundantes puertos de datos e interfaces de expansión, liberando completamente todo el rendimiento del módulo AGX Orin. Además, admite la adición de una expansión GMSL para conectar hasta 8 cámaras GMSL.
+La placa portadora J501 es una potente placa de expansión que admite módulos NVIDIA Jetson AGX Orin. Cuenta con abundantes puertos de datos e interfaces de expansión, liberando completamente todo el rendimiento del módulo AGX Orin. Además, admite la adición de una extensión GMSL para conectar hasta 8 cámaras GMSL.
 
 ## Características
 
 - **Construye el ordenador de IA más potente para computación en el borde:** Diseñada para integrarse con el módulo Jetson AGX Orin, con hasta 275 TOPS de rendimiento de IA, 8 veces el rendimiento de IA en comparación con Jetson AGX Xavier. Potencia configurable entre 15W y 60W.
-- **Compatibilidad de interfaz de alta velocidad para múltiples sensores:** 22 carriles de PCIe Gen4, 1x 10GbE, un Display Port, 16 carriles de MIPI CSI-2, interfaces USB 3.2 y un conector de 40 pines.
-- **Compatibilidad de interfaz de baja velocidad para múltiples E/S:** 4x DI, 4x DO, 3x GND_DI, 2x GND_DO, 1x GND_ISO, 1x CAN, 1x RS232/RS422/RS485.
+- **Compatibilidad de interfaces de alta velocidad para múltiples sensores:** 22 carriles de PCIe Gen4, 1x 10GbE, un Display Port, 16 carriles de MIPI CSI-2, interfaces USB 3.2 y un conector de 40 pines.
+- **Compatibilidad de interfaces de baja velocidad para múltiples E/S:** 4x DI, 4x DO, 3x GND_DI, 2x GND_DO, 1x GND_ISO, 1x CAN, 1x RS232/RS422/RS485.
 <!-- - **BSP ready for development:** Jetpack 6 supported Board BSP ready for developing your custom system image. -->
 
 ## Especificaciones
@@ -42,13 +42,13 @@ La placa portadora J501 es una potente placa de expansión que admite módulos N
 <table>
   <tbody>
     <tr>
-      <td rowSpan={7}>I/O</td>
+      <td rowSpan={7}>E/S</td>
       <td>Ethernet</td>
       <td> 1x LAN0 RJ45 GbE (10/100/1000Mbps), <br /> 1x LAN RJ45 GbE (10/100/1000/10000Mbps) </td>
     </tr>
     <tr>
       <td>USB</td>
-      <td> 3x USB3.1, <br /> 1x USB3.1 Type C(Host mode), <br /> 1x USB2.0 Type C(Device mode) </td>
+      <td> 3x USB3.1, <br /> 1x USB3.1 Type C(modo host), <br /> 1x USB2.0 Type C(modo dispositivo) </td>
     </tr>
     <tr>
       <td>DI/DO</td>
@@ -69,7 +69,7 @@ La placa portadora J501 es una potente placa de expansión que admite módulos N
     </tr>
     <tr>
       <td>Botón</td>
-      <td> Botón de reinicio, Botón de recuperación </td>
+      <td> Botón de reinicio, botón de recuperación </td>
     </tr>
     <tr>
       <td rowSpan={9}>Expansión</td>
@@ -90,7 +90,7 @@ La placa portadora J501 es una potente placa de expansión que admite módulos N
     </tr>
     <tr>
       <td> Ventilador </td>
-      <td> 1x conector para ventilador (5V PWM) </td>
+      <td> 1x conector de ventilador (5V PWM) </td>
     </tr>
     <tr>
       <td> TPM </td>
@@ -115,7 +115,7 @@ La placa portadora J501 es una potente placa de expansión que admite módulos N
     </tr>
     <tr>
       <td rowSpan={3}> Mecánico </td>
-      <td> Dimensiones (W x D) </td>
+      <td> Dimensiones (An x Pr) </td>
       <td> 176 x 163mm (módulo no incluido)</td>
     </tr>
     <tr>
@@ -136,9 +136,9 @@ La placa portadora J501 es una potente placa de expansión que admite módulos N
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/hardware_overview.jpeg"/>
 </div>
 
-## Grabar el sistema operativo JetPack en la placa portadora J501
+## Flashear el sistema operativo JetPack en la placa portadora J501
 
-Aquí mostraremos cómo grabar [Jetpack](https://developer.nvidia.com/embedded/jetson-linux-archive) en un SSD NVMe conectado al reServer J501.
+Aquí, te mostraremos cómo flashear [Jetpack](https://developer.nvidia.com/embedded/jetson-linux-archive) en un SSD NVMe conectado al reServer J501.
 
 ### Módulo compatible
 
@@ -189,7 +189,7 @@ Consulta la siguiente tabla para preparar la máquina host.
 
 ### Preparar la imagen de Jetpack
 
-Aquí necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu correspondiente al módulo Jetson que estamos utilizando:
+Aquí, necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu correspondiente al módulo Jetson que estamos utilizando:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -296,19 +296,19 @@ Aquí necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu corre
 </div>
 
 :::danger
-El archivo de imagen de jetpack5 tiene un tamaño aproximado de **4.5GB** y debería tardar alrededor de 15 minutos en descargarse. El archivo de imagen de Jetpack6 tiene un tamaño aproximado de **16.7GB** y debería tardar alrededor de 60 minutos en descargarse. Por favor, espera pacientemente a que la descarga se complete.
+El archivo de imagen jetpack5 tiene un tamaño aproximado de **4.5GB** y debería tardar alrededor de 15 minutos en descargarse. El archivo de imagen Jetpack6 tiene un tamaño aproximado de **16.7GB** y debería tardar alrededor de 60 minutos en descargarse. Por favor, espera pacientemente a que la descarga se complete.
 :::
 
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, se confirma que el firmware que descargaste está completo e intacto.
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, se confirma que el firmware que descargaste está completo e intacto.
 :::
 
-### Entrar en modo Force Recovery
+### Entrar en modo de recuperación forzada
 
 :::info
-Antes de poder continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo force recovery.
+Antes de poder continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo de recuperación forzada.
 :::
 
 <div class="video-container">
@@ -319,19 +319,19 @@ Antes de poder continuar con los pasos de instalación, debemos asegurarnos de q
 
 <summary> Paso a paso </summary>
 
-**Paso 1.** Mantén presionado el botón de force recovery sin soltarlo.
+**Paso 1.** Mantén presionado el botón de recuperación forzada sin soltarlo.
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/button.jpg" />
 </div>
 
-**Paso 2.** Enciende la placa carrier conectando el cable de alimentación.
+**Paso 2.** Enciende la placa portadora conectando el cable de alimentación.
 
-**Paso 3.** Suelta el botón de force recovery.
+**Paso 3.** Suelta el botón de recuperación forzada.
 
 **Paso 4.** Conecta la placa al PC host con Ubuntu con un cable de transmisión de datos USB Type-C.
 
-**Paso 5.** En el PC host con Linux, abre una ventana de Terminal e introduce el comando `lsusb`. Si el contenido devuelto incluye una de las siguientes salidas según el Jetson SoM que utilices, entonces la placa está en modo force recovery.
+**Paso 5.** En el PC host con Linux, abre una ventana de Terminal e introduce el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el Jetson SoM que utilices, entonces la placa está en modo de recuperación forzada.
 
 - Para AGX Orin 32GB: **0955:7223 NVidia Corp**
 - Para AGX Orin 64GB: **0955:7023 NVidia Corp**
@@ -377,7 +377,7 @@ El comando de flasheo puede ejecutarse durante 2-10 minutos.
 </div>
 
 :::info
-Por favor, completa la **System Configuration** según tus necesidades.
+Por favor, completa la **Configuración del sistema** según tus necesidades.
 :::
 
 **Paso 4 (Opcional):** Instalar Nvidia Jetpack SDK
@@ -389,9 +389,15 @@ sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
+## Uso de interfaces de hardware
+
+:::info
+Si quieres obtener más información sobre las especificaciones detalladas y el uso de las interfaces de hardware, consulta [esta wiki](https://wiki.seeedstudio.com/es/j501_carrier_board_interfaces_usage/).
+:::
+
 ## Recursos
 
-- [Hoja de datos de la placa carrier reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_Industrial_J501_Carrier_Board_Datasheet.pdf)
+- [Hoja de datos de la placa portadora reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_Industrial_J501_Carrier_Board_Datasheet.pdf)
 - [Esquemático de reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/202003906_reServer_Industrial_J501_Carrier_Board_v1.0_SCH_PDF_20240529.pdf)
 - [Archivo 3D de reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/RESERVER_AGX_ORIN_CARRIER_BOARD.stp)
 - [Catálogo de series Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)

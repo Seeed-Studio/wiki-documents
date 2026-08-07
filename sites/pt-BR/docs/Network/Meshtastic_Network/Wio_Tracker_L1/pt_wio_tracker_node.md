@@ -10,7 +10,7 @@ last_update:
   date: 12/18/2025
   author: Michelle Huang
 createdAt: '2025-05-23'
-updatedAt: '2025-12-18'
+updatedAt: '2026-06-28'
 url: https://wiki.seeedstudio.com/pt-br/wio_tracker_l1_node/
 ---
 
@@ -52,7 +52,7 @@ A Série Wio Tracker L1 está disponível em 4 versões — escolha a que melhor
 ### Recursos
 
 - **Pré-gravado com firmware Meshtastic**
-Pronto para uso imediato com firmware Meshtastic pré-instalado para uma configuração simples.
+Pronto para uso imediatamente, com firmware Meshtastic pré-instalado para uma configuração simples.
 
 - **Três Opções de Alimentação**
 Suporta carregamento rápido Type-C, entrada solar e alimentação por bateria de íon de lítio para implantação flexível em vários ambientes — ideal para aplicações externas e móveis.
@@ -66,7 +66,7 @@ Totalmente compatível com o ecossistema Grove e inclui cabeçalhos PTH e uma in
 ### Especificação
 
 :::tip
-Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptador de bateria, convertendo a interface de 1mm para uma interface de 2mm. Isso oferece mais opções de baterias para você.
+Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptador de bateria, convertendo a interface de 1mm para uma interface de 2mm. Isso oferece mais opções de baterias.
 :::
 
 <table>
@@ -78,7 +78,7 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
   </tr>
   <tr>
     <td colspan="1">Memória interna</td>
-    <td colspan="1">1 MB de flash e 256 kB de RAM</td>
+    <td colspan="1">1 MB flash e 256 kB RAM</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">Sem fio</td>
@@ -109,10 +109,10 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
     <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Painel Solar (2,0mm 2p): 5V — 1A</td>
+    <td colspan="1">Painel Solar (2P-2.0mm): 5V — 1A (não exceder 5V)</td>
   </tr>
   <tr>
-    <td colspan="1">Bateria de Lítio (1mm 2p JST): 3,7V — 1A</td>
+    <td colspan="1">Bateria de Lítio (2P-1.25mm): 3,7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">[Tela OLED](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
@@ -140,7 +140,7 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
   </tr>
 </table>
 
-### Visão Geral do Hardware
+### Visão Geral de Hardware
 
 **Wio Tracker L1**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio_tracker-l1.png" alt="pir" width={800} height="auto" /></p>
@@ -154,3 +154,26 @@ Os lotes mais recentes de L1, L1 Lite e L1 E-Ink vêm todos com um cabo adaptado
 **Diagrama**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>
+
+## Suporte Técnico e Discussão sobre o Produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

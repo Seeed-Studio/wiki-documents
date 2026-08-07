@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-03-25T01:34:33.605Z",
+  "generatedAt": "2026-07-21T02:52:51.026Z",
   "owner": "Seeed-Studio",
   "repo": "wiki-documents",
   "category": "Q&A",
-  "duplicateTitles": 876,
-  "pathnameTermCount": 1877,
+  "duplicateTitles": 935,
+  "pathnameTermCount": 2003,
   "usePathnameTerm": [
     "/Bluetooth_Bee_Standalone/",
     "/Connecting-to-TTN/",
@@ -16,6 +16,7 @@
     "/H28K-install-system/",
     "/H68KV2_install_system/",
     "/K1100-Vision-AI-Module-Grove-LoRa-E5/",
+    "/ModelAssistant_Introduce_Installation/",
     "/ModelAssistant_Tutorials_Training_Overview/",
     "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_FAQ/",
     "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_Overview/",
@@ -32,6 +33,8 @@
     "/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview/",
     "/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start/",
     "/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+    "/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/",
+    "/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/",
     "/ODYSSEY-X86-Home-Assistant/",
     "/ReSpeaker_2_Mics_Pi_HAT/",
     "/Seeed_Elderly/Navigation/Edge_Computing_4.7/",
@@ -182,6 +185,22 @@
     "/Seeed_Elderly/weekly_wiki/2026/wiki260302/",
     "/Seeed_Elderly/weekly_wiki/2026/wiki260309/",
     "/Seeed_Elderly/weekly_wiki/2026/wiki260316/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260323/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260330/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260406/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260413/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260420/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260427/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260511/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260518/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260525/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260601/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260608/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260615/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260622/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260629/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260706/",
+    "/Seeed_Elderly/weekly_wiki/2026/wiki260713/",
     "/Seeeduino-XIAO-CircuitPython/",
     "/SenseCAP_Indicator_ESP32_Wi-Fi/",
     "/SenseCAP_T1000_tracker/Introduction/",
@@ -203,7 +222,7 @@
     "/XIAO-RP2040-with-CircuitPython/",
     "/XIAO-RP2040-with-MicroPython/",
     "/XIAO_ESP32C3_WiFi_Usage/",
-    "/ai_robotics_recomputer_j501_robotics_getting_started/",
+    "/applications_with_watcher_main_page/",
     "/bluetooth_beacon01_for_sensecap_tracker/",
     "/bluetooth_beacon03_for_tracker_introduction/",
     "/cloud/sensecraft-data/sensecraft-data-platform/overview/",
@@ -257,6 +276,7 @@
     "/cn/GPRS_Shield_V3.0/",
     "/cn/GPRS_Shield_v1.0/",
     "/cn/Get_Started_with_SenseCAP_T1000_tracker/",
+    "/cn/Get_Started_with_SenseCAP_T2000_tracker/",
     "/cn/Getting_Started_with_Arduino/",
     "/cn/Grove-16x2_LCD_Series/",
     "/cn/Grove-315MHz_RF_Kit/",
@@ -267,6 +287,7 @@
     "/cn/Grove-CO2_Temperature_Humidity_Sensor-SCD30/",
     "/cn/Grove-Creator-Kit-1/",
     "/cn/Grove-DMX512/",
+    "/cn/Grove-Doppler-Radar/",
     "/cn/Grove-GPS-Air530/",
     "/cn/Grove-GPS/",
     "/cn/Grove-I2C_Hub/",
@@ -309,7 +330,6 @@
     "/cn/Grove_Starter_Kit_v3/",
     "/cn/H68KV2_install_system/",
     "/cn/I2C_LCD/",
-    "/cn/J401_carrierboard_Hardware_Interfaces_Usage/",
     "/cn/Jetson-Mate/",
     "/cn/Jetson-Nano-MaskCam/",
     "/cn/Jetson_Xavier_AGX_H01_Driver_Installation/",
@@ -329,6 +349,7 @@
     "/cn/Mesh_Bee/",
     "/cn/Microsoft_MakeCode/",
     "/cn/Mini_GSM_GPRS_GPS_Breakout_SIM808/",
+    "/cn/ModelAssistant_Introduce_Installation/",
     "/cn/ModelAssistant_Introduce_Quick_Start/",
     "/cn/ModelAssistant_Tutorials_Training_Overview/",
     "/cn/Motor_Bridge_Cape_v1.0/",
@@ -354,6 +375,8 @@
     "/cn/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview/",
     "/cn/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start/",
     "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+    "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/",
+    "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/",
     "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/",
     "/cn/ODYSSEY-STM32MP157C/",
     "/cn/ODYSSEY-X86J4105-AzureIOT/",
@@ -369,7 +392,6 @@
     "/cn/RePhone_Strap_Kit_for_Pebble/",
     "/cn/RePhone_core_2G-Atmel32u4/",
     "/cn/ReSpeaker-USB-Mic-Array/",
-    "/cn/ReSpeaker_2_Mics_Pi_HAT/",
     "/cn/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/",
     "/cn/ReSpeaker_Core/",
     "/cn/ReSpeaker_Core_v2.0/",
@@ -420,6 +442,7 @@
     "/cn/SenseCAP_Indicator_RP2040_MicroSD/",
     "/cn/SenseCAP_S2107/",
     "/cn/SenseCAP_T1000_tracker/Introduction/",
+    "/cn/SenseCAP_T2000_tracker/Introduction/",
     "/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger/",
     "/cn/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network/",
     "/cn/Shield-MaTrix-V0.9b/",
@@ -499,6 +522,7 @@
     "/cn/cn/",
     "/cn/cn/knowledgebase/",
     "/cn/connect_wio_tracker_to_TTN/",
+    "/cn/connecting_r1225_to_ttn/",
     "/cn/contributors/",
     "/cn/contributors/form/",
     "/cn/development_tutorial_for_Wio-trakcer/",
@@ -508,6 +532,7 @@
     "/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor_bk/",
     "/cn/frigate_nvr_with_raspberrypi_5/",
     "/cn/get_start_l76k_gnss/",
+    "/cn/getting_started_with_rs485_vision_ai_cam/",
     "/cn/getting_started_with_seeedstudio_beaglebone_green_eco/",
     "/cn/getting_started_with_watcher/",
     "/cn/grove-nfc-st25dv64/",
@@ -521,22 +546,29 @@
     "/cn/j401_mini_carrierboard_hardware_interfaces_usage/",
     "/cn/ja/",
     "/cn/ja/knowledgebase/",
+    "/cn/jetson_developtool_app_market/",
+    "/cn/jetson_developtool_device_management/",
+    "/cn/jetson_developtool_faq/",
+    "/cn/jetson_developtool_flash_firmware/",
+    "/cn/jetson_developtool_skills/",
     "/cn/knowledgebase/",
     "/cn/knowledgebase/KnowledgebasePage/",
     "/cn/linkstar-install-system/",
     "/cn/local_chatbot_recomputer_bk/",
     "/cn/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk/",
+    "/cn/meshcore_node_map_solar_node/",
+    "/cn/meshcore_node_map_t1000e/",
+    "/cn/meshcore_source_code_pratical_tutorial_solar_node/",
+    "/cn/meshcore_source_code_pratical_tutorial_t1000_e/",
     "/cn/meshtastic_node_map_esp32s3/",
     "/cn/meshtastic_node_map_solar_node/",
     "/cn/meshtastic_node_map_t1000_e/",
+    "/cn/meshtastic_node_map_x1/",
     "/cn/meshtastic_source_code_practical_tutorial_solar_node/",
-    "/cn/meshtastic_source_code_practical_tutorial_t1000_e/",
     "/cn/mmwave_for_xiao/",
     "/cn/pt-br/",
     "/cn/pt-br/knowledgebase/",
     "/cn/reComputer_J1020_A206_Flash_JetPack/",
-    "/cn/reComputer_J4012_Flash_Jetpack/",
-    "/cn/reServer_J2032_Getting_Started/",
     "/cn/reTerminal-DM-Getting-Started-with-Node-Red/",
     "/cn/reTerminal-DM-Ignition-Edge-Panel-Builder/",
     "/cn/reTerminal-DM-Node-Red-canbus/",
@@ -544,38 +576,55 @@
     "/cn/reTerminal-Home-Assistant-Customize/",
     "/cn/reTerminal-new_FAQ/",
     "/cn/reTerminalBridge/",
+    "/cn/reachymini_api_utils/",
+    "/cn/reachymini_intro/",
+    "/cn/reachymini_platforms_reachy_mini_lite_media_advanced_controls/",
+    "/cn/reachymini_sdk_quickstart/",
+    "/cn/reachymini_sdk_readme/",
     "/cn/recamera_gimbal_getting_started/",
     "/cn/recamera_gimbal_hardware_and_specs/",
     "/cn/recamera_hardware_and_specs/",
     "/cn/recamera_hq_poe/",
     "/cn/recamera_hq_poe_getting_started/",
     "/cn/recamera_network_connection/",
+    "/cn/recamera_pro/",
+    "/cn/recamera_pro_api_faq/",
+    "/cn/recamera_pro_api_quick_start/",
+    "/cn/recamera_pro_applications/",
+    "/cn/recamera_pro_secondary_development_api/",
+    "/cn/recomputer_jetson_robotics_j401_getting_started/",
+    "/cn/recomputer_jetson_robotics_j601_interfaces_usage/",
     "/cn/recomputer_mini_j401_getting_started/",
     "/cn/respeaker_2_mics_pi_hat_raspberry_v2/",
     "/cn/respeaker_lite_beagley-ai_chatgpt/",
     "/cn/respeaker_lite_pi5/",
     "/cn/respeaker_mic_array_v3.0/",
-    "/cn/reterminal-dm-flash-OS/",
     "/cn/search/",
+    "/cn/seeedstudio_round_display_usage/",
     "/cn/semtech_lr2021_evk_class/",
     "/cn/sensecap_t2000_tracker/",
     "/cn/sensecap_t2000_tracker_helium/",
     "/cn/sensecap_t2000_tracker_ttn/",
+    "/cn/sensecraft-ai/overview/",
     "/cn/sensecraft-ai/sensecraft-ai-main/",
     "/cn/sensecraft-app/overview/",
     "/cn/sensecraft-data-platform/tutorials/dashboard/",
     "/cn/tags/",
     "/cn/tags/agents/",
+    "/cn/tags/agx-thor/",
     "/cn/tags/cloud/",
     "/cn/tags/deepseek/",
     "/cn/tags/device/",
     "/cn/tags/embedded-computer/",
+    "/cn/tags/flash-jetpack/",
     "/cn/tags/hardware-and-interfaces-usage/",
     "/cn/tags/interface/",
     "/cn/tags/j-501/",
     "/cn/tags/jet-pack/",
     "/cn/tags/llm/",
     "/cn/tags/mcp/",
+    "/cn/tags/re-bot-arm/",
+    "/cn/tags/re-computer-jetson/",
     "/cn/tags/re-computer-mini/",
     "/cn/tags/re-computer-robotics-j-501/",
     "/cn/tags/re-computer-super/",
@@ -588,17 +637,19 @@
     "/cn/tags/super/",
     "/cn/tags/windows/",
     "/cn/tags/wsl-2/",
-    "/cn/tags/yolo/",
-    "/cn/tinyml_course_Key_Word_Spotting/",
     "/cn/tinyml_topic/",
     "/cn/wheeltec_imu/",
+    "/cn/wifi_halow/",
     "/cn/wio_e5_class/",
+    "/cn/wio_lr2021_class/",
+    "/cn/wio_s3_class/",
     "/cn/wio_sx1262_class/",
     "/cn/wio_sx1262_xiao_esp32s3_LNS_TTN/",
     "/cn/wio_tracker_1110_dev_board_development_tutorial_class/",
     "/cn/wio_wm1110_dev_kit__development_tutorial_class/",
     "/cn/wio_wm1302_class/",
     "/cn/xiao_075inch_epaper_panel_arduino/",
+    "/cn/xiao_075inch_epaper_panel_esphome/",
     "/cn/xiao_ble_microblocks/",
     "/cn/xiao_esp32c5_buletooth_usage/",
     "/cn/xiao_esp32c5_wifi_usage/",
@@ -713,7 +764,7 @@
     "/es/Grove-Gesture_v1.0/",
     "/es/Grove-I2C-Hub-6Port/",
     "/es/Grove-I2C_ADC/",
-    "/es/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/",
+    "/es/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/",
     "/es/Grove-I2C_Hub/",
     "/es/Grove-IMU_10DOF/",
     "/es/Grove-IMU_10DOF_v2.0/",
@@ -727,6 +778,7 @@
     "/es/Grove-MOSFET/",
     "/es/Grove-MP3-v3/",
     "/es/Grove-MP3_v2.0/",
+    "/es/Grove-Mech_Keycap/",
     "/es/Grove-Mega_Shield/",
     "/es/Grove-Mini_Fan/",
     "/es/Grove-Mini_I2C_Motor_Driver_v1.0/",
@@ -770,10 +822,8 @@
     "/es/Grove_Wio_E5_TTN_Demo/",
     "/es/H68KV2_install_system/",
     "/es/I2C_LCD/",
-    "/es/J401_carrierboard_Hardware_Interfaces_Usage/",
     "/es/Jetson-Mate/",
     "/es/Jetson-Nano-MaskCam/",
-    "/es/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/",
     "/es/Jetson_Xavier_AGX_H01_Driver_Installation/",
     "/es/K1100_SenseCAP_to_PowerBI/",
     "/es/K1100_SenseCAP_to_datacake/",
@@ -800,6 +850,7 @@
     "/es/Mesh_Bee/",
     "/es/Microsoft_MakeCode/",
     "/es/Mini_GSM_GPRS_GPS_Breakout_SIM808/",
+    "/es/ModelAssistant_Introduce_Installation/",
     "/es/Motor_Bridge_Cape_v1.0/",
     "/es/Motor_Shield/",
     "/es/Motor_Shield_V1.0/",
@@ -813,7 +864,6 @@
     "/es/NPi-i.MX6ULL-Dev-Board-Linux-SBC/",
     "/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_FAQ/",
     "/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_Overview/",
-    "/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_Quick_Start/",
     "/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/SenseCAP_M1_FAQ/",
     "/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/SenseCAP_M1_Local_Console/",
     "/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/SenseCAP_M1_Overview/",
@@ -832,6 +882,9 @@
     "/es/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview/",
     "/es/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start/",
     "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+    "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/",
+    "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/",
+    "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/",
     "/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ/",
     "/es/ODYSSEY-STM32MP157C/",
     "/es/ODYSSEY-X86-Home-Assistant/",
@@ -959,7 +1012,6 @@
     "/es/Wio-Terminal-IMU-Tapping/",
     "/es/Wio-Terminal-IO-Digital/",
     "/es/Wio-Terminal-IO-I2C/",
-    "/es/Wio-Terminal-IO-Overview/",
     "/es/Wio-Terminal-IO-SPI/",
     "/es/Wio-Terminal-LCD-Overview/",
     "/es/Wio-Terminal-Network-Overview/",
@@ -1016,6 +1068,7 @@
     "/es/Xadow_RGB_OLED_96multiply64/",
     "/es/Xadow_Storage/",
     "/es/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/",
+    "/es/applications_with_watcher_main_page/",
     "/es/bluetooth_beacon03_for_tracker_introduction/",
     "/es/cloud/sensecraft-data/sensecraft-data-platform/overview/",
     "/es/cn/knowledgebase/",
@@ -1030,8 +1083,8 @@
     "/es/esp32c3_smart_thermostat/",
     "/es/faq_for_SenseCAP_T1000/",
     "/es/get_start_l76k_gnss/",
+    "/es/getting_started_with_rs485_vision_ai_cam/",
     "/es/getting_started_with_seeedstudio_beaglebone_green_eco/",
-    "/es/getting_started_with_watcher/",
     "/es/grove-nfc-st25dv64/",
     "/es/grove_mp3_v4/",
     "/es/hand_amazinghand/",
@@ -1043,36 +1096,42 @@
     "/es/j401_mini_carrierboard_hardware_interfaces_usage/",
     "/es/ja/",
     "/es/ja/knowledgebase/",
+    "/es/jetson_developtool_app_market/",
+    "/es/jetson_developtool_device_management/",
+    "/es/jetson_developtool_faq/",
+    "/es/jetson_developtool_skills/",
     "/es/knowledgebase/",
     "/es/knowledgebase/KnowledgebasePage/",
     "/es/linkstar-install-system/",
     "/es/local_chatbot_recomputer_bk/",
     "/es/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk/",
     "/es/mbed_Shield/",
+    "/es/meshcore_node_map_solar_node/",
+    "/es/meshcore_node_map_t1000e/",
+    "/es/meshcore_source_code_pratical_tutorial_solar_node/",
+    "/es/meshcore_source_code_pratical_tutorial_t1000_e/",
     "/es/meshtastic_node_map_esp32s3/",
     "/es/meshtastic_node_map_solar_node/",
     "/es/meshtastic_node_map_t1000_e/",
     "/es/meshtastic_source_code_practical_tutorial_t1000_e/",
+    "/es/mission_pack_intro_v3/",
+    "/es/ogdiy_kit_works_with_esphome/",
     "/es/pt-br/",
     "/es/pt-br/knowledgebase/",
     "/es/reComputer_A203E_Flash_System/",
     "/es/reComputer_A203_Flash_System/",
     "/es/reComputer_A205E_Flash_System/",
     "/es/reComputer_A205_Flash_System/",
-    "/es/reComputer_A603_Flash_System/",
     "/es/reComputer_A607_Flash_System/",
     "/es/reComputer_J1020_A206_Flash_JetPack/",
-    "/es/reComputer_J4012_Flash_Jetpack/",
     "/es/reServer_J2032_Flash_Jetpack/",
-    "/es/reServer_J2032_Getting_Started/",
     "/es/reTerminal-DM_Azure_IoT/",
     "/es/reTerminal-Home-Assistant-Customize/",
     "/es/reTerminal-new_FAQ/",
     "/es/reTerminalBridge/",
-    "/es/reachymini_examples_goto_interpolation_playground/",
-    "/es/reachymini_examples_joy_controller/",
     "/es/reachymini_intro/",
     "/es/reachymini_platforms_reachy_mini_lite_media_advanced_controls/",
+    "/es/reachymini_sdk_quickstart/",
     "/es/reachymini_sdk_readme/",
     "/es/recamera_gimbal/",
     "/es/recamera_gimbal_getting_started/",
@@ -1080,17 +1139,23 @@
     "/es/recamera_hardware_and_specs/",
     "/es/recamera_hq_poe/",
     "/es/recamera_hq_poe_getting_started/",
+    "/es/recamera_pro/",
+    "/es/recamera_pro_api_faq/",
+    "/es/recamera_pro_api_quick_start/",
+    "/es/recamera_pro_secondary_development_api/",
+    "/es/recamera_pro_terminal/",
     "/es/recomputer_ai_industrial_r2000_flash_os/",
     "/es/recomputer_industrial_r22xx_flash_os/",
+    "/es/recomputer_jetson_robotics_j401_getting_started/",
+    "/es/recomputer_jetson_robotics_j601_interfaces_usage/",
     "/es/recomputer_mini_j401_getting_started/",
     "/es/recomputer_r1000_flash_OS/",
-    "/es/recomputer_r1100_flash_os/",
     "/es/respeaker_2_mics_pi_hat_raspberry_v2/",
     "/es/respeaker_lite_beagley-ai_chatgpt/",
     "/es/respeaker_lite_pi5/",
     "/es/respeaker_mic_array_v3.0/",
-    "/es/reterminal-dm-flash-OS/",
     "/es/search/",
+    "/es/seeedstudio_round_display_usage/",
     "/es/semtech_lr2021_evk_class/",
     "/es/sensecap_t1000_tracker/",
     "/es/sensecap_t2000_tracker_helium/",
@@ -1101,14 +1166,21 @@
     "/es/sensecraft-blockchain/sensecraft-hotspot-app/app-settings/",
     "/es/sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app/",
     "/es/simulate_soarm101_by_leisaac/",
+    "/es/t1000_e_tracker_meshtastic/",
+    "/es/t1000e_for_lorawan_introduction/",
     "/es/tinyml_course_Key_Word_Spotting/",
     "/es/tinyml_topic/",
+    "/es/wifi_halow/",
     "/es/wio_e5_class/",
+    "/es/wio_lr2021_class/",
+    "/es/wio_s3_class/",
     "/es/wio_sx1262_class/",
     "/es/wio_sx1262_xiao_esp32s3_LNS_TTN/",
     "/es/wio_tracker_1110_dev_board_development_tutorial_class/",
     "/es/wio_wm1110_dev_kit__development_tutorial_class/",
     "/es/wio_wm1302_class/",
+    "/es/xiao_075inch_epaper_panel_arduino/",
+    "/es/xiao_075inch_epaper_panel_esphome/",
     "/es/xiao_ble_microblocks/",
     "/es/xiao_esp32c5_buletooth_usage/",
     "/es/xiao_esp32c5_esp-mesh_audio/",
@@ -1135,7 +1207,6 @@
     "/ja/",
     "/ja/315MHz_Simple_RF_Link_Kit/",
     "/ja/4WD_Driver_Platform_V1.0/",
-    "/ja/6_channel_wifi_relay/",
     "/ja/Arch_BLE/",
     "/ja/Arch_GPRS/",
     "/ja/Arch_GPRS_V2/",
@@ -1189,7 +1260,6 @@
     "/ja/DSO_Quad/",
     "/ja/DashCamNet-with-Jetson-Xavier-NX-Multicamera/",
     "/ja/Dfu-util/",
-    "/ja/EE04_with_esphome_advanced/",
     "/ja/EL_Shield/",
     "/ja/Eagleye_530s/",
     "/ja/Eclipse_IDE_for_RePhone_Kit/",
@@ -1265,7 +1335,6 @@
     "/ja/Grove-MOSFET/",
     "/ja/Grove-MP3-v3/",
     "/ja/Grove-MP3_v2.0/",
-    "/ja/Grove-Mech_Keycap/",
     "/ja/Grove-Mega_Shield/",
     "/ja/Grove-Mini_Camera/",
     "/ja/Grove-Mini_Fan/",
@@ -1336,7 +1405,6 @@
     "/ja/H68KV2_install_system/",
     "/ja/I2C_LCD/",
     "/ja/J1010_Boot_From_SD_Card/",
-    "/ja/J401_carrierboard_Hardware_Interfaces_Usage/",
     "/ja/Jetson-AI-developer-tools/",
     "/ja/Jetson-Mate/",
     "/ja/Jetson-Nano-MaskCam/",
@@ -1364,6 +1432,7 @@
     "/ja/Microsoft_MakeCode/",
     "/ja/Mini_AI_Computer_T906/",
     "/ja/Mini_GSM_GPRS_GPS_Breakout_SIM808/",
+    "/ja/ModelAssistant_Introduce_Installation/",
     "/ja/ModelAssistant_Introduce_Quick_Start/",
     "/ja/ModelAssistant_Tutorials_Training_Overview/",
     "/ja/Motor_Bridge_Cape_v1.0/",
@@ -1392,6 +1461,9 @@
     "/ja/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start/",
     "/ja/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ/",
     "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+    "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/",
+    "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/",
+    "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/",
     "/ja/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ/",
     "/ja/ODYSSEY-STM32MP157C/",
     "/ja/ODYSSEY-X86J4105-AzureIOT/",
@@ -1521,7 +1593,6 @@
     "/ja/Wio-Terminal-USBH-Xbox/",
     "/ja/Wio-Terminal-Web-Bluetooth/",
     "/ja/Wio-Terminal-Wi-Fi/",
-    "/ja/Wio-WM1110_Dev_Kit/Introduction/",
     "/ja/Wio-WM1110_Dev_Kit_Hardware_Overview/",
     "/ja/Wio_LTE_Cat.1/",
     "/ja/Wio_Link/",
@@ -1568,9 +1639,9 @@
     "/ja/Xadow_RGB_OLED_96multiply64/",
     "/ja/Xadow_Vibrator_Motor/",
     "/ja/Xadow_Wearable_Kit_For_Edison/",
-    "/ja/ai_robotics_recomputer_j501_robotics_getting_started/",
     "/ja/applications_with_watcher_main_page/",
     "/ja/bluetooth_beacon01_for_sensecap_tracker/",
+    "/ja/bluetooth_beacon03_for_tracker_introduction/",
     "/ja/cloud/sensecraft-data/sensecraft-data-platform/overview/",
     "/ja/cn/knowledgebase/",
     "/ja/connect_wio_tracker_to_TTN/",
@@ -1588,6 +1659,7 @@
     "/ja/faq_for_SenseCAP_T1000/",
     "/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor_bk/",
     "/ja/get_start_l76k_gnss/",
+    "/ja/getting_started_with_rs485_vision_ai_cam/",
     "/ja/getting_started_with_seeedstudio_beaglebone_green_eco/",
     "/ja/getting_started_with_watcher/",
     "/ja/grove-lightning-sensor-as3935/",
@@ -1599,33 +1671,43 @@
     "/ja/hand_amazinghand/",
     "/ja/home/lib/locale/",
     "/ja/home_assistant_topic/",
+    "/ja/io_expander_for_xiao/",
     "/ja/isaac_ros_apriltag/",
     "/ja/isaac_ros_visual_slam/",
     "/ja/j401_mini_carrierboard_hardware_interfaces_usage/",
     "/ja/ja/",
     "/ja/ja/knowledgebase/",
+    "/ja/jetson_developtool_app_market/",
+    "/ja/jetson_developtool_faq/",
+    "/ja/jetson_developtool_skills/",
     "/ja/knowledgebase/",
     "/ja/knowledgebase/KnowledgebasePage/",
     "/ja/led_driver_board/",
+    "/ja/lerobot_steering_gear_debugging_tool/",
     "/ja/linkstar-install-system/",
     "/ja/local_chatbot_recomputer_bk/",
     "/ja/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk/",
     "/ja/mbed_Shield/",
+    "/ja/meshcore_node_map_solar_node/",
+    "/ja/meshcore_node_map_t1000e/",
+    "/ja/meshcore_source_code_pratical_tutorial_solar_node/",
+    "/ja/meshcore_source_code_pratical_tutorial_t1000_e/",
     "/ja/meshtastic_node_map_esp32s3/",
     "/ja/meshtastic_node_map_l1/",
     "/ja/meshtastic_node_map_solar_node/",
     "/ja/meshtastic_node_map_t1000_e/",
+    "/ja/meshtastic_node_map_x1/",
     "/ja/meshtastic_source_code_practical_tutorial_solar_node/",
     "/ja/meshtastic_source_code_practical_tutorial_t1000_e/",
     "/ja/microbit_wiki_page/",
     "/ja/mid360/",
     "/ja/mission_pack_intro_v3/",
     "/ja/mmwave_for_xiao/",
+    "/ja/ogdiy_kit_works_with_esphome/",
     "/ja/orb_slam3_orbbec_gemini2/",
     "/ja/orbbec_depth_camera_on_ros/",
     "/ja/pt-br/",
     "/ja/pt-br/knowledgebase/",
-    "/ja/quick_start_with_M2_MP/",
     "/ja/raspberry_pi_4g_lte_hat_rndis/",
     "/ja/reComputer_A203E_Flash_System/",
     "/ja/reComputer_A203_Flash_System/",
@@ -1638,7 +1720,6 @@
     "/ja/reComputer_r1000_balena/",
     "/ja/reComputer_r1000_fin_logic_builder/",
     "/ja/reServer_J2032_Flash_Jetpack/",
-    "/ja/reServer_J2032_Getting_Started/",
     "/ja/reTerminal-DM-Getting-Started-with-Ignition-Edge/",
     "/ja/reTerminal-DM-Getting-Started-with-Node-Red/",
     "/ja/reTerminal-DM-Ignition-Edge-Panel-Builder/",
@@ -1647,8 +1728,9 @@
     "/ja/reTerminal-DM_AWS_first/",
     "/ja/reTerminal-DM_Azure_IoT/",
     "/ja/reTerminal-new_FAQ/",
-    "/ja/reTerminal/",
     "/ja/reTerminalBridge/",
+    "/ja/reachymini_api_daemon/",
+    "/ja/reachymini_api_motion/",
     "/ja/reachymini_examples_mini_head_position_gui/",
     "/ja/reachymini_intro/",
     "/ja/reachymini_sdk_quickstart/",
@@ -1659,25 +1741,35 @@
     "/ja/recamera_hq_poe/",
     "/ja/recamera_hq_poe_getting_started/",
     "/ja/recamera_network_connection/",
+    "/ja/recamera_pro/",
+    "/ja/recamera_pro_api_faq/",
+    "/ja/recamera_pro_api_introduction/",
+    "/ja/recamera_pro_api_network/",
+    "/ja/recamera_pro_api_quick_start/",
+    "/ja/recamera_pro_applications/",
+    "/ja/recamera_pro_secondary_development_api/",
     "/ja/recomputer_ai_industrial_r2000_flash_os/",
     "/ja/recomputer_industrial_r22xx_flash_os/",
+    "/ja/recomputer_jetson_robotics_j401_getting_started/",
+    "/ja/recomputer_jetson_robotics_j601_interfaces_usage/",
+    "/ja/recomputer_mini_j401_getting_started/",
     "/ja/recomputer_r1000_flash_OS/",
     "/ja/recomputer_r1000_flow_fuse/",
     "/ja/recomputer_r1000_grafana/",
     "/ja/recomputer_r1000_n3uron/",
     "/ja/recomputer_r1000_nodered_mqtt/",
-    "/ja/recomputer_r1100_flash_os/",
     "/ja/respeaker_lite_beagley-ai_chatgpt/",
     "/ja/respeaker_lite_pi5/",
     "/ja/respeaker_mic_array_v3.0/",
     "/ja/respeaker_xvf3800_xiao_doa_vad/",
     "/ja/respeaker_xvf3800_xiao_mqtt_audio_stream/",
     "/ja/respeaker_xvf3800_xiao_udp_audio_stream/",
-    "/ja/reterminal-dm-flash-OS/",
     "/ja/reterminal_dm_200_node_red_influxdb/",
     "/ja/reterminal_dm_node_red_modbus_tcp/",
+    "/ja/reterminal_e10xx_main_page/",
     "/ja/robosense_lidar/",
     "/ja/search/",
+    "/ja/seeedstudio_round_display_usage/",
     "/ja/semtech_lr2021_evk_class/",
     "/ja/sensecap_app_introduction/",
     "/ja/sensecap_indicator_meshtastic_main_page/",
@@ -1695,11 +1787,11 @@
     "/ja/sensecraft-data-platform/applications/ai-advisor/",
     "/ja/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api/",
     "/ja/sensecraft-data-platform/tutorials/dashboard/",
-    "/ja/sensecraft-fee/sensecraft-cloud-fee/",
+    "/ja/sensecraft-data-platform/tutorials/device-management/",
     "/ja/simulate_soarm101_by_leisaac/",
     "/ja/stackforce_giant_bipedal_wheeled_robot/",
     "/ja/stackforce_mini_wheeled_legged_robot/",
-    "/ja/tinyml_course_Key_Word_Spotting/",
+    "/ja/t1000e_for_lorawan_introduction/",
     "/ja/tinyml_topic/",
     "/ja/watcher_node_red_to_discord/",
     "/ja/watcher_node_red_to_ifttt/",
@@ -1711,9 +1803,13 @@
     "/ja/watcher_node_red_to_twilio/",
     "/ja/watcher_node_red_to_whatsapp/",
     "/ja/watcher_to_node_red/",
+    "/ja/wifi_halow/",
     "/ja/wio_e5_class/",
+    "/ja/wio_lr2021_class/",
+    "/ja/wio_s3_class/",
     "/ja/wio_sx1262_class/",
     "/ja/wio_sx1262_xiao_esp32s3_LNS_TTN/",
+    "/ja/wio_tracker_1110_dev_board_class/",
     "/ja/wio_tracker_1110_dev_board_development_tutorial_class/",
     "/ja/wio_wm1110_dev_kit__development_tutorial_class/",
     "/ja/wio_wm1302_class/",
@@ -1721,6 +1817,7 @@
     "/ja/xiao-esp32s3-freertos/",
     "/ja/xiao-rp2040-with-nuttx/",
     "/ja/xiao_075inch_epaper_panel_arduino/",
+    "/ja/xiao_075inch_epaper_panel_esphome/",
     "/ja/xiao_ble_microblocks/",
     "/ja/xiao_debug_mate_power/",
     "/ja/xiao_esp32c3_nuttx/",
@@ -1750,18 +1847,26 @@
     "/ja/xiao_wifi_usage_esp32c6/",
     "/ja/xiaoesp32c3-chatgpt/",
     "/ja/xiaoesp32c3-flash-storage/",
+    "/jetson_developtool_faq/",
+    "/jetson_developtool_flash_firmware/",
     "/knowledgebase/",
     "/knowledgebase/KnowledgebasePage/",
     "/knowledgebase/_components/ShowcaseFilterToggle/",
     "/knowledgebase/_components/ShowcaseTagSelect/",
     "/local_chatbot_recomputer_bk/",
     "/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk/",
+    "/meshcore_node_map_solar_node/",
+    "/meshcore_node_map_t1000e/",
+    "/meshcore_source_code_pratical_tutorial_solar_node/",
+    "/meshcore_source_code_pratical_tutorial_t1000_e/",
     "/meshtastic_node_map_esp32s3/",
     "/meshtastic_node_map_solar_node/",
     "/meshtastic_node_map_t1000_e/",
+    "/meshtastic_node_map_x1/",
     "/meshtastic_source_code_practical_tutorial_solar_node/",
     "/meshtastic_source_code_practical_tutorial_t1000_e/",
     "/mission_pack_intro_v3/",
+    "/ogdiy_kit_works_with_esphome/",
     "/pt-br/Bluetooth_Bee_Standalone/",
     "/pt-br/Edgebox-Rpi-200_N3uron_AWS/",
     "/pt-br/Get_Started_with_SenseCAP_T1000_tracker/",
@@ -1769,6 +1874,7 @@
     "/pt-br/Getting_Started_with_Arduino/",
     "/pt-br/J401_carrierboard_Hardware_Interfaces_Usage/",
     "/pt-br/K1100-Vision-AI-Module-Grove-LoRa-E5/",
+    "/pt-br/ModelAssistant_Introduce_Installation/",
     "/pt-br/ModelAssistant_Introduce_Quick_Start/",
     "/pt-br/ModelAssistant_Tutorials_Training_Overview/",
     "/pt-br/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_FAQ/",
@@ -1779,6 +1885,9 @@
     "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_FAQ/",
     "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview/",
     "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+    "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/",
+    "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/",
+    "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/",
     "/pt-br/ReSpeaker_2_Mics_Pi_HAT/",
     "/pt-br/Seeed_Elderly/Navigation/Edge_Computing_4.7/",
     "/pt-br/Seeeduino-XIAO-CircuitPython/",
@@ -1790,7 +1899,6 @@
     "/pt-br/Wio-Terminal-FS-Overview/",
     "/pt-br/Wio-Terminal-IO-Overview/",
     "/pt-br/Wio-Terminal-LCD-Overview/",
-    "/pt-br/Wio-Terminal-Network-Overview/",
     "/pt-br/Wio-Terminal-USBCLIENT-Keyboard/",
     "/pt-br/Wio-Terminal-USBCLIENT-Mouse/",
     "/pt-br/Wio-Terminal-USBCLIENT-Overview/",
@@ -1799,7 +1907,7 @@
     "/pt-br/XIAO-RP2040-with-CircuitPython/",
     "/pt-br/XIAO-RP2040-with-MicroPython/",
     "/pt-br/XIAO_ESP32C3_Bluetooth_Usage/",
-    "/pt-br/ai_robotics_recomputer_j501_robotics_getting_started/",
+    "/pt-br/applications_with_watcher_main_page/",
     "/pt-br/bluetooth_beacon03_for_tracker_introduction/",
     "/pt-br/cloud/sensecraft-data/sensecraft-data-platform/overview/",
     "/pt-br/cn/knowledgebase/",
@@ -1810,23 +1918,29 @@
     "/pt-br/es/",
     "/pt-br/es/knowledgebase/",
     "/pt-br/faq_for_SenseCAP_T1000/",
+    "/pt-br/get_started_with_meshtastic_solar_node/",
+    "/pt-br/get_started_with_meshtastic_wio_tracker_l1/",
     "/pt-br/getting_started_with_watcher/",
     "/pt-br/grove_vision_ai_v2a/",
     "/pt-br/home/lib/locale/",
     "/pt-br/j401_mini_carrierboard_hardware_interfaces_usage/",
     "/pt-br/ja/",
     "/pt-br/ja/knowledgebase/",
+    "/pt-br/jetson_developtool_faq/",
     "/pt-br/knowledgebase/",
     "/pt-br/knowledgebase/KnowledgebasePage/",
     "/pt-br/linkstar-install-system/",
     "/pt-br/local_chatbot_recomputer_bk/",
+    "/pt-br/meshcore_node_map_solar_node/",
+    "/pt-br/meshcore_node_map_t1000e/",
     "/pt-br/meshtastic_node_map_esp32s3/",
     "/pt-br/meshtastic_node_map_solar_node/",
+    "/pt-br/meshtastic_node_map_t1000_e/",
     "/pt-br/meshtastic_source_code_practical_tutorial_solar_node/",
-    "/pt-br/meshtastic_source_code_practical_tutorial_t1000_e/",
+    "/pt-br/mission_pack_intro_v3/",
+    "/pt-br/ogdiy_kit_works_with_esphome/",
     "/pt-br/pt-br/",
     "/pt-br/pt-br/knowledgebase/",
-    "/pt-br/quick_start_with_M2_MP/",
     "/pt-br/reComputer_J4012_Flash_Jetpack/",
     "/pt-br/reTerminal-Home-Assistant-Customize/",
     "/pt-br/reachymini_platforms_reachy_mini_lite_media_advanced_controls/",
@@ -1835,18 +1949,23 @@
     "/pt-br/recamera_gimbal_hardware_and_specs/",
     "/pt-br/recamera_hardware_and_specs/",
     "/pt-br/recamera_hq_poe_getting_started/",
+    "/pt-br/recamera_pro_api_faq/",
+    "/pt-br/recamera_pro_api_quick_start/",
     "/pt-br/recomputer_jetson_robotics_j401_getting_started/",
+    "/pt-br/recomputer_jetson_robotics_j601_interfaces_usage/",
     "/pt-br/recomputer_mini_j401_getting_started/",
     "/pt-br/respeaker_2_mics_pi_hat_raspberry_v2/",
-    "/pt-br/sensecap_t1000_e/",
+    "/pt-br/seeedstudio_round_display_usage/",
     "/pt-br/sensecap_t2000_tracker_helium/",
     "/pt-br/sensecraft-ai/overview/",
     "/pt-br/sensecraft-ai/sensecraft-ai-main/",
     "/pt-br/sensecraft-app/overview/",
+    "/pt-br/t1000e_for_lorawan_introduction/",
     "/pt-br/t2000_payload_format/",
     "/pt-br/wio_sx1262_xiao_esp32s3_LNS_TTN/",
     "/pt-br/wio_tracker_1110_dev_board_development_tutorial_class/",
     "/pt-br/wio_wm1110_dev_kit__development_tutorial_class/",
+    "/pt-br/xiao_075inch_epaper_panel_arduino/",
     "/pt-br/xiao_esp32c5_wifi_usage/",
     "/pt-br/xiao_esp32c6_espnow/",
     "/pt-br/xiao_esp32s3_espnow/",
@@ -1855,7 +1974,6 @@
     "/pt-br/xiao_samd21_microblocks/",
     "/pt-br/xiao_wifi_usage_esp32c6/",
     "/quick_start_with_M2_MP/",
-    "/r1225_quick_start/",
     "/reTerminal-Home-Assistant-Customize/",
     "/reTerminal-new_FAQ/",
     "/reachymini_platforms_reachy_mini_lite_media_advanced_controls/",
@@ -1864,7 +1982,11 @@
     "/recamera_gimbal_hardware_and_specs/",
     "/recamera_hq_poe_getting_started/",
     "/recamera_hq_poe_hardware/",
+    "/recamera_pro_api_faq/",
+    "/recamera_pro_api_quick_start/",
+    "/recamera_pro_hardware_usage/",
     "/recomputer_jetson_robotics_j401_getting_started/",
+    "/recomputer_jetson_robotics_j601_interfaces_usage/",
     "/recomputer_mini_j401_getting_started/",
     "/reserver_j501_getting_started/",
     "/respeaker_2_mics_pi_hat_raspberry_v2/",
@@ -1873,9 +1995,13 @@
     "/sensecraft-ai/overview/",
     "/sensecraft-ai/sensecraft-ai-main/",
     "/sensecraft-app/overview/",
+    "/sensecraft-data-platform/tutorials/device-management/",
+    "/t1000e_for_lorawan_introduction/",
     "/t2000_payload_format/",
     "/wio_tracker_1110_dev_board_development_tutorial_class/",
     "/wio_wm1110_dev_kit__development_tutorial_class/",
+    "/xiao_075inch_epaper_panel_arduino/",
+    "/xiao_075inch_epaper_panel_esphome/",
     "/xiao_ble_microblocks/",
     "/xiao_esp32c5_wifi_usage/",
     "/xiao_esp32c6_bluetooth/",
@@ -2025,6 +2151,19 @@
       ]
     },
     {
+      "title": "One doc tagged with \"AGX Thor\" | Seeed Studio Wiki",
+      "keepPathname": "/tags/agx-thor/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/tags/agx-thor/",
+        "/tags/agx-thor/"
+      ],
+      "others": [
+        "/cn/tags/agx-thor/"
+      ]
+    },
+    {
       "title": "One doc tagged with \"Cloud\" | Seeed Studio Wiki",
       "keepPathname": "/tags/cloud/",
       "keepDiscussionUrl": null,
@@ -2074,6 +2213,19 @@
       ],
       "others": [
         "/cn/tags/embedded-computer/"
+      ]
+    },
+    {
+      "title": "One doc tagged with \"Flash Jetpack\" | Seeed Studio Wiki",
+      "keepPathname": "/tags/flash-jetpack/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/tags/flash-jetpack/",
+        "/tags/flash-jetpack/"
+      ],
+      "others": [
+        "/cn/tags/flash-jetpack/"
       ]
     },
     {
@@ -2152,6 +2304,32 @@
       ],
       "others": [
         "/cn/tags/mcp/"
+      ]
+    },
+    {
+      "title": "One doc tagged with \"reBot Arm\" | Seeed Studio Wiki",
+      "keepPathname": "/tags/re-bot-arm/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/tags/re-bot-arm/",
+        "/tags/re-bot-arm/"
+      ],
+      "others": [
+        "/cn/tags/re-bot-arm/"
+      ]
+    },
+    {
+      "title": "One doc tagged with \"reComputer Jetson\" | Seeed Studio Wiki",
+      "keepPathname": "/tags/re-computer-jetson/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/tags/re-computer-jetson/",
+        "/tags/re-computer-jetson/"
+      ],
+      "others": [
+        "/cn/tags/re-computer-jetson/"
       ]
     },
     {
@@ -2311,16 +2489,16 @@
       ]
     },
     {
-      "title": "One doc tagged with \"yolo\" | Seeed Studio Wiki",
-      "keepPathname": "/tags/yolo/",
+      "title": "应用 | Seeed Studio Wiki",
+      "keepPathname": "/cn/application/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/cn/tags/yolo/",
-        "/tags/yolo/"
+        "/cn/application/",
+        "/cn/recamera_pro_applications/"
       ],
       "others": [
-        "/cn/tags/yolo/"
+        "/cn/recamera_pro_applications/"
       ]
     },
     {
@@ -2716,20 +2894,22 @@
     },
     {
       "title": "介绍 | Seeed Studio Wiki",
-      "keepPathname": "/cn/t1000e_for_lorawan_introduction/",
+      "keepPathname": "/cn/recamera_pro_api_introduction/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/cn/bluetooth_beacon03_for_tracker_introduction/",
         "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+        "/cn/recamera_pro_api_introduction/",
         "/cn/SenseCAP_T1000_tracker/Introduction/",
-        "/cn/t1000e_for_lorawan_introduction/",
+        "/cn/SenseCAP_T2000_tracker/Introduction/",
         "/cn/Wio-WM1110_Dev_Kit/Introduction/"
       ],
       "others": [
         "/cn/bluetooth_beacon03_for_tracker_introduction/",
         "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
         "/cn/SenseCAP_T1000_tracker/Introduction/",
+        "/cn/SenseCAP_T2000_tracker/Introduction/",
         "/cn/Wio-WM1110_Dev_Kit/Introduction/"
       ]
     },
@@ -2848,14 +3028,13 @@
     },
     {
       "title": "概述 | Seeed Studio Wiki",
-      "keepPathname": "/cn/watcher/",
-      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/3795",
-      "keepDiscussionNumber": 3795,
+      "keepPathname": "/cn/ReSpeaker_2_Mics_Pi_HAT/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
       "pages": [
         "/cn/cloud/sensecraft-data/sensecraft-data-platform/overview/",
         "/cn/ModelAssistant_Tutorials_Training_Overview/",
         "/cn/ReSpeaker_2_Mics_Pi_HAT/",
-        "/cn/watcher/",
         "/cn/Wio-Terminal-FS-Overview/",
         "/cn/Wio-Terminal-IO-Overview/",
         "/cn/Wio-Terminal-LCD-Overview/",
@@ -2866,7 +3045,6 @@
       "others": [
         "/cn/cloud/sensecraft-data/sensecraft-data-platform/overview/",
         "/cn/ModelAssistant_Tutorials_Training_Overview/",
-        "/cn/ReSpeaker_2_Mics_Pi_HAT/",
         "/cn/Wio-Terminal-FS-Overview/",
         "/cn/Wio-Terminal-IO-Overview/",
         "/cn/Wio-Terminal-LCD-Overview/",
@@ -2882,14 +3060,42 @@
       "keepDiscussionNumber": null,
       "pages": [
         "/cn/connect_wio_tracker_to_TTN/",
+        "/cn/connecting_r1225_to_ttn/",
         "/cn/Connecting-to-TTN/",
         "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/",
         "/cn/wio_sx1262_xiao_esp32s3_LNS_TTN/"
       ],
       "others": [
         "/cn/connect_wio_tracker_to_TTN/",
+        "/cn/connecting_r1225_to_ttn/",
         "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/",
         "/cn/wio_sx1262_xiao_esp32s3_LNS_TTN/"
+      ]
+    },
+    {
+      "title": "连接到 AWS IoT | Seeed Studio Wiki",
+      "keepPathname": "/cn/connecting_r1225_to_aws_iot/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/connecting_r1225_to_aws_iot/",
+        "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/"
+      ],
+      "others": [
+        "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/"
+      ]
+    },
+    {
+      "title": "连接到 ChirpStack | Seeed Studio Wiki",
+      "keepPathname": "/cn/connecting_r1225_to_chirpstack/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/connecting_r1225_to_chirpstack/",
+        "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/"
+      ],
+      "others": [
+        "/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/"
       ]
     },
     {
@@ -3153,12 +3359,16 @@
       "keepDiscussionNumber": null,
       "pages": [
         "/cn/faq_for_SenseCAP_T1000/",
+        "/cn/jetson_developtool_faq/",
         "/cn/recamera_network_connection/",
+        "/cn/recamera_pro_api_faq/",
         "/cn/t2000_faq/"
       ],
       "others": [
         "/cn/faq_for_SenseCAP_T1000/",
-        "/cn/recamera_network_connection/"
+        "/cn/jetson_developtool_faq/",
+        "/cn/recamera_network_connection/",
+        "/cn/recamera_pro_api_faq/"
       ]
     },
     {
@@ -3172,6 +3382,19 @@
       ],
       "others": [
         "/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor_bk/"
+      ]
+    },
+    {
+      "title": "刷写固件 | Seeed Studio Wiki",
+      "keepPathname": "/cn/flash_meshtastic_kit/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/flash_meshtastic_kit/",
+        "/cn/jetson_developtool_flash_firmware/"
+      ],
+      "others": [
+        "/cn/jetson_developtool_flash_firmware/"
       ]
     },
     {
@@ -3263,11 +3486,26 @@
       "pages": [
         "/cn/Get_Started_with_SenseCAP_T1000_tracker/",
         "/cn/ModelAssistant_Introduce_Quick_Start/",
-        "/cn/quick_start_with_M2_MP/"
+        "/cn/quick_start_with_M2_MP/",
+        "/cn/recamera_pro_api_quick_start/"
       ],
       "others": [
         "/cn/Get_Started_with_SenseCAP_T1000_tracker/",
-        "/cn/ModelAssistant_Introduce_Quick_Start/"
+        "/cn/ModelAssistant_Introduce_Quick_Start/",
+        "/cn/recamera_pro_api_quick_start/"
+      ]
+    },
+    {
+      "title": "快速开始 | Seeed Studio Wiki",
+      "keepPathname": "/cn/recamera_pro_getting_start/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/Get_Started_with_SenseCAP_T2000_tracker/",
+        "/cn/recamera_pro_getting_start/"
+      ],
+      "others": [
+        "/cn/Get_Started_with_SenseCAP_T2000_tracker/"
       ]
     },
     {
@@ -3281,6 +3519,23 @@
       ],
       "others": [
         "/cn/Getting_Started_with_Arduino/"
+      ]
+    },
+    {
+      "title": "RS485 Vision AI Camera | Seeed Studio Wiki",
+      "keepPathname": "/getting_started_with_rs485_vision_ai_cam/",
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/2520",
+      "keepDiscussionNumber": 2520,
+      "pages": [
+        "/cn/getting_started_with_rs485_vision_ai_cam/",
+        "/es/getting_started_with_rs485_vision_ai_cam/",
+        "/ja/getting_started_with_rs485_vision_ai_cam/",
+        "/getting_started_with_rs485_vision_ai_cam/"
+      ],
+      "others": [
+        "/cn/getting_started_with_rs485_vision_ai_cam/",
+        "/es/getting_started_with_rs485_vision_ai_cam/",
+        "/ja/getting_started_with_rs485_vision_ai_cam/"
       ]
     },
     {
@@ -3307,12 +3562,14 @@
       "keepDiscussionNumber": 3642,
       "pages": [
         "/cn/getting_started_with_watcher/",
+        "/cn/reachymini_sdk_quickstart/",
         "/cn/recamera_getting_started/",
         "/cn/recamera_gimbal_getting_started/",
         "/cn/recamera_hq_poe_getting_started/"
       ],
       "others": [
         "/cn/getting_started_with_watcher/",
+        "/cn/reachymini_sdk_quickstart/",
         "/cn/recamera_gimbal_getting_started/",
         "/cn/recamera_hq_poe_getting_started/"
       ]
@@ -3474,8 +3731,8 @@
     {
       "title": "Grove - MP3 v4.0 | Seeed Studio Wiki",
       "keepPathname": "/grove_mp3_v4/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/4422",
+      "keepDiscussionNumber": 4422,
       "pages": [
         "/cn/grove_mp3_v4/",
         "/es/grove_mp3_v4/",
@@ -3764,6 +4021,23 @@
         "/cn/Grove-DMX512/",
         "/es/Grove-DMX512/",
         "/ja/Grove-DMX512/"
+      ]
+    },
+    {
+      "title": "Grove-Doppler-Radar | Seeed Studio Wiki",
+      "keepPathname": "/Grove-Doppler-Radar/",
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/59",
+      "keepDiscussionNumber": 59,
+      "pages": [
+        "/cn/Grove-Doppler-Radar/",
+        "/es/Grove-Doppler-Radar/",
+        "/ja/Grove-Doppler-Radar/",
+        "/Grove-Doppler-Radar/"
+      ],
+      "others": [
+        "/cn/Grove-Doppler-Radar/",
+        "/es/Grove-Doppler-Radar/",
+        "/ja/Grove-Doppler-Radar/"
       ]
     },
     {
@@ -4346,29 +4620,80 @@
       ]
     },
     {
-      "title": "接口使用说明 | Seeed Studio Wiki",
-      "keepPathname": "/cn/j501_carrier_board_interfaces_usage/",
+      "title": "接口使用 | Seeed Studio Wiki",
+      "keepPathname": "/cn/J401_carrierboard_Hardware_Interfaces_Usage/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/cn/J401_carrierboard_Hardware_Interfaces_Usage/",
-        "/cn/j501_carrier_board_interfaces_usage/"
+        "/cn/j401_mini_carrierboard_hardware_interfaces_usage/",
+        "/cn/recomputer_jetson_robotics_j401_getting_started/",
+        "/cn/recomputer_jetson_robotics_j601_interfaces_usage/"
       ],
       "others": [
-        "/cn/J401_carrierboard_Hardware_Interfaces_Usage/"
+        "/cn/j401_mini_carrierboard_hardware_interfaces_usage/",
+        "/cn/recomputer_jetson_robotics_j401_getting_started/",
+        "/cn/recomputer_jetson_robotics_j601_interfaces_usage/"
       ]
     },
     {
-      "title": "接口使用 | Seeed Studio Wiki",
-      "keepPathname": "/cn/recomputer_jetson_robotics_j401_getting_started/",
+      "title": "App Market | Seeed Studio Wiki",
+      "keepPathname": "/jetson_developtool_app_market/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/cn/j401_mini_carrierboard_hardware_interfaces_usage/",
-        "/cn/recomputer_jetson_robotics_j401_getting_started/"
+        "/cn/jetson_developtool_app_market/",
+        "/es/jetson_developtool_app_market/",
+        "/ja/jetson_developtool_app_market/",
+        "/jetson_developtool_app_market/"
       ],
       "others": [
-        "/cn/j401_mini_carrierboard_hardware_interfaces_usage/"
+        "/cn/jetson_developtool_app_market/",
+        "/es/jetson_developtool_app_market/",
+        "/ja/jetson_developtool_app_market/"
+      ]
+    },
+    {
+      "title": "设备管理 | Seeed Studio Wiki",
+      "keepPathname": "/cn/sensecraft-data-platform/tutorials/device-management/",
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/4786",
+      "keepDiscussionNumber": 4786,
+      "pages": [
+        "/cn/jetson_developtool_device_management/",
+        "/cn/sensecraft-data-platform/tutorials/device-management/"
+      ],
+      "others": [
+        "/cn/jetson_developtool_device_management/"
+      ]
+    },
+    {
+      "title": "安装 | Seeed Studio Wiki",
+      "keepPathname": "/cn/jetson_developtool_installation/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/jetson_developtool_installation/",
+        "/cn/ModelAssistant_Introduce_Installation/"
+      ],
+      "others": [
+        "/cn/ModelAssistant_Introduce_Installation/"
+      ]
+    },
+    {
+      "title": "Skills | Seeed Studio Wiki",
+      "keepPathname": "/jetson_developtool_skills/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/jetson_developtool_skills/",
+        "/es/jetson_developtool_skills/",
+        "/ja/jetson_developtool_skills/",
+        "/jetson_developtool_skills/"
+      ],
+      "others": [
+        "/cn/jetson_developtool_skills/",
+        "/es/jetson_developtool_skills/",
+        "/ja/jetson_developtool_skills/"
       ]
     },
     {
@@ -4670,6 +4995,36 @@
       ]
     },
     {
+      "title": "MeshCore 节点地图 | Seeed Studio Wiki",
+      "keepPathname": "/cn/meshcore_node_map_l1/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/meshcore_node_map_l1/",
+        "/cn/meshcore_node_map_solar_node/",
+        "/cn/meshcore_node_map_t1000e/"
+      ],
+      "others": [
+        "/cn/meshcore_node_map_solar_node/",
+        "/cn/meshcore_node_map_t1000e/"
+      ]
+    },
+    {
+      "title": "MeshCore 源代码开发教程 | Seeed Studio Wiki",
+      "keepPathname": "/cn/meshcore_source_code_pratical_tutorial_l1/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/meshcore_source_code_pratical_tutorial_l1/",
+        "/cn/meshcore_source_code_pratical_tutorial_solar_node/",
+        "/cn/meshcore_source_code_pratical_tutorial_t1000_e/"
+      ],
+      "others": [
+        "/cn/meshcore_source_code_pratical_tutorial_solar_node/",
+        "/cn/meshcore_source_code_pratical_tutorial_t1000_e/"
+      ]
+    },
+    {
       "title": "Meshtastic 节点地图 | Seeed Studio Wiki",
       "keepPathname": "/cn/meshtastic_node_map_l1/",
       "keepDiscussionUrl": null,
@@ -4678,27 +5033,27 @@
         "/cn/meshtastic_node_map_esp32s3/",
         "/cn/meshtastic_node_map_l1/",
         "/cn/meshtastic_node_map_solar_node/",
-        "/cn/meshtastic_node_map_t1000_e/"
+        "/cn/meshtastic_node_map_t1000_e/",
+        "/cn/meshtastic_node_map_x1/"
       ],
       "others": [
         "/cn/meshtastic_node_map_esp32s3/",
         "/cn/meshtastic_node_map_solar_node/",
-        "/cn/meshtastic_node_map_t1000_e/"
+        "/cn/meshtastic_node_map_t1000_e/",
+        "/cn/meshtastic_node_map_x1/"
       ]
     },
     {
-      "title": "Meshtastic 源代码开发教程 | Seeed Studio Wiki",
+      "title": "Meshtastic 源代码开发实用教程 | Seeed Studio Wiki",
       "keepPathname": "/cn/meshtastic_source_code_practical_tutorial/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/cn/meshtastic_source_code_practical_tutorial_solar_node/",
-        "/cn/meshtastic_source_code_practical_tutorial_t1000_e/",
         "/cn/meshtastic_source_code_practical_tutorial/"
       ],
       "others": [
-        "/cn/meshtastic_source_code_practical_tutorial_solar_node/",
-        "/cn/meshtastic_source_code_practical_tutorial_t1000_e/"
+        "/cn/meshtastic_source_code_practical_tutorial_solar_node/"
       ]
     },
     {
@@ -5180,7 +5535,7 @@
       ]
     },
     {
-      "title": "与 Arduino 配合使用 | Seeed Studio Wiki",
+      "title": "Arduino 使用手册 | Seeed Studio Wiki",
       "keepPathname": "/cn/ogdiy_kit_works_with_arduino/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
@@ -5190,6 +5545,19 @@
       ],
       "others": [
         "/cn/xiao_075inch_epaper_panel_arduino/"
+      ]
+    },
+    {
+      "title": "ESPHome 实战手册 | Seeed Studio Wiki",
+      "keepPathname": "/cn/ogdiy_kit_works_with_esphome/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/ogdiy_kit_works_with_esphome/",
+        "/cn/xiao_075inch_epaper_panel_esphome/"
+      ],
+      "others": [
+        "/cn/xiao_075inch_epaper_panel_esphome/"
       ]
     },
     {
@@ -5244,6 +5612,66 @@
       ]
     },
     {
+      "title": "工具API参考 | Seeed Studio Wiki",
+      "keepPathname": "/cn/reachymini_api_tools/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/reachymini_api_tools/",
+        "/cn/reachymini_api_utils/"
+      ],
+      "others": [
+        "/cn/reachymini_api_utils/"
+      ]
+    },
+    {
+      "title": "Reachy Mini | Seeed Studio Wiki",
+      "keepPathname": "/reachymini_intro/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/reachymini_intro/",
+        "/es/reachymini_intro/",
+        "/ja/reachymini_intro/",
+        "/reachymini_intro/"
+      ],
+      "others": [
+        "/cn/reachymini_intro/",
+        "/es/reachymini_intro/",
+        "/ja/reachymini_intro/"
+      ]
+    },
+    {
+      "title": "高级媒体控制 | Seeed Studio Wiki",
+      "keepPathname": "/cn/reachymini_platforms_reachy_mini_media_advanced_controls/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/reachymini_platforms_reachy_mini_lite_media_advanced_controls/",
+        "/cn/reachymini_platforms_reachy_mini_media_advanced_controls/"
+      ],
+      "others": [
+        "/cn/reachymini_platforms_reachy_mini_lite_media_advanced_controls/"
+      ]
+    },
+    {
+      "title": "Reachy Mini SDK | Seeed Studio Wiki",
+      "keepPathname": "/reachymini_sdk_readme/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/reachymini_sdk_readme/",
+        "/es/reachymini_sdk_readme/",
+        "/ja/reachymini_sdk_readme/",
+        "/reachymini_sdk_readme/"
+      ],
+      "others": [
+        "/cn/reachymini_sdk_readme/",
+        "/es/reachymini_sdk_readme/",
+        "/ja/reachymini_sdk_readme/"
+      ]
+    },
+    {
       "title": "硬件和规格 | Seeed Studio Wiki",
       "keepPathname": "/cn/recamera_hq_poe_hardware/",
       "keepDiscussionUrl": null,
@@ -5276,6 +5704,53 @@
       ]
     },
     {
+      "title": "硬件使用 | Seeed Studio Wiki",
+      "keepPathname": "/cn/recamera_pro_hardware_usage/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/recamera_pro_hardware_usage/",
+        "/cn/seeedstudio_round_display_usage/"
+      ],
+      "others": [
+        "/cn/seeedstudio_round_display_usage/"
+      ]
+    },
+    {
+      "title": "API | Seeed Studio Wiki",
+      "keepPathname": "/recamera_pro_secondary_development_api/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/recamera_pro_secondary_development_api/",
+        "/es/recamera_pro_secondary_development_api/",
+        "/ja/recamera_pro_secondary_development_api/",
+        "/recamera_pro_secondary_development_api/"
+      ],
+      "others": [
+        "/cn/recamera_pro_secondary_development_api/",
+        "/es/recamera_pro_secondary_development_api/",
+        "/ja/recamera_pro_secondary_development_api/"
+      ]
+    },
+    {
+      "title": "reCamera Pro | Seeed Studio Wiki",
+      "keepPathname": "/recamera_pro/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/recamera_pro/",
+        "/es/recamera_pro/",
+        "/ja/recamera_pro/",
+        "/recamera_pro/"
+      ],
+      "others": [
+        "/cn/recamera_pro/",
+        "/es/recamera_pro/",
+        "/ja/recamera_pro/"
+      ]
+    },
+    {
       "title": "reComputer J1020v1 | A206 | Seeed Studio Wiki",
       "keepPathname": "/reComputer_J1020_A206_Flash_JetPack/",
       "keepDiscussionUrl": null,
@@ -5293,17 +5768,15 @@
       ]
     },
     {
-      "title": "刷写 Jetpack | Seeed Studio Wiki",
+      "title": "烧录 Jetpack | Seeed Studio Wiki",
       "keepPathname": "/cn/reserver_j501_getting_started/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/cn/reComputer_J4012_Flash_Jetpack/",
         "/cn/recomputer_mini_j401_getting_started/",
         "/cn/reserver_j501_getting_started/"
       ],
       "others": [
-        "/cn/reComputer_J4012_Flash_Jetpack/",
         "/cn/recomputer_mini_j401_getting_started/"
       ]
     },
@@ -5384,23 +5857,6 @@
       ],
       "others": [
         "/cn/RePhone_Strap_Kit_for_Pebble/"
-      ]
-    },
-    {
-      "title": "reServer Jetson | Seeed Studio Wiki",
-      "keepPathname": "/reServer_J2032_Getting_Started/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/cn/reServer_J2032_Getting_Started/",
-        "/es/reServer_J2032_Getting_Started/",
-        "/ja/reServer_J2032_Getting_Started/",
-        "/reServer_J2032_Getting_Started/"
-      ],
-      "others": [
-        "/cn/reServer_J2032_Getting_Started/",
-        "/es/reServer_J2032_Getting_Started/",
-        "/ja/reServer_J2032_Getting_Started/"
       ]
     },
     {
@@ -5517,8 +5973,8 @@
     {
       "title": "reSpeaker USB 4-Mic Array XVF3000 v3.0 | Seeed Studio Wiki",
       "keepPathname": "/respeaker_mic_array_v3.0/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/5085",
+      "keepDiscussionNumber": 5085,
       "pages": [
         "/cn/respeaker_mic_array_v3.0/",
         "/es/respeaker_mic_array_v3.0/",
@@ -5529,19 +5985,6 @@
         "/cn/respeaker_mic_array_v3.0/",
         "/es/respeaker_mic_array_v3.0/",
         "/ja/respeaker_mic_array_v3.0/"
-      ]
-    },
-    {
-      "title": "关键词识别 | Seeed Studio Wiki",
-      "keepPathname": "/cn/respeaker_streams_i2s_tflite/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/cn/respeaker_streams_i2s_tflite/",
-        "/cn/tinyml_course_Key_Word_Spotting/"
-      ],
-      "others": [
-        "/cn/tinyml_course_Key_Word_Spotting/"
       ]
     },
     {
@@ -5576,23 +6019,6 @@
         "/cn/reTerminal-DM_Azure_IoT/",
         "/es/reTerminal-DM_Azure_IoT/",
         "/ja/reTerminal-DM_Azure_IoT/"
-      ]
-    },
-    {
-      "title": "reTerminal DM Flash OS | Seeed Studio Wiki",
-      "keepPathname": "/reterminal-dm-flash-OS/",
-      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/555",
-      "keepDiscussionNumber": 555,
-      "pages": [
-        "/cn/reterminal-dm-flash-OS/",
-        "/es/reterminal-dm-flash-OS/",
-        "/ja/reterminal-dm-flash-OS/",
-        "/reterminal-dm-flash-OS/"
-      ],
-      "others": [
-        "/cn/reterminal-dm-flash-OS/",
-        "/es/reterminal-dm-flash-OS/",
-        "/ja/reterminal-dm-flash-OS/"
       ]
     },
     {
@@ -6498,15 +6924,17 @@
     },
     {
       "title": "概览 | Seeed Studio Wiki",
-      "keepPathname": "/cn/sensecraft-ai/overview/",
+      "keepPathname": "/cn/watcher/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/cn/sensecraft-ai/overview/",
         "/cn/sensecraft-ai/sensecraft-ai-main/",
-        "/cn/sensecraft-app/overview/"
+        "/cn/sensecraft-app/overview/",
+        "/cn/watcher/"
       ],
       "others": [
+        "/cn/sensecraft-ai/overview/",
         "/cn/sensecraft-ai/sensecraft-ai-main/",
         "/cn/sensecraft-app/overview/"
       ]
@@ -6845,6 +7273,23 @@
       ]
     },
     {
+      "title": "Wifi Halow | Seeed Studio Wiki",
+      "keepPathname": "/wifi_halow/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/wifi_halow/",
+        "/es/wifi_halow/",
+        "/ja/wifi_halow/",
+        "/wifi_halow/"
+      ],
+      "others": [
+        "/cn/wifi_halow/",
+        "/es/wifi_halow/",
+        "/ja/wifi_halow/"
+      ]
+    },
+    {
       "title": "Wifi Shield (Fi250) V1.1 | Seeed Studio Wiki",
       "keepPathname": "/Wifi_Shield_Fi250_V1.1/",
       "keepDiscussionUrl": null,
@@ -6994,6 +7439,23 @@
       ]
     },
     {
+      "title": "Wio-LR2021 | Seeed Studio Wiki",
+      "keepPathname": "/wio_lr2021_class/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/wio_lr2021_class/",
+        "/es/wio_lr2021_class/",
+        "/ja/wio_lr2021_class/",
+        "/wio_lr2021_class/"
+      ],
+      "others": [
+        "/cn/wio_lr2021_class/",
+        "/es/wio_lr2021_class/",
+        "/ja/wio_lr2021_class/"
+      ]
+    },
+    {
       "title": "Wio LTE Cat.1 | Seeed Studio Wiki",
       "keepPathname": "/Wio_LTE_Cat.1/",
       "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/204",
@@ -7025,6 +7487,23 @@
         "/cn/Wio_Node/",
         "/es/Wio_Node/",
         "/ja/Wio_Node/"
+      ]
+    },
+    {
+      "title": "Wio-S3 | Seeed Studio Wiki",
+      "keepPathname": "/wio_s3_class/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/cn/wio_s3_class/",
+        "/es/wio_s3_class/",
+        "/ja/wio_s3_class/",
+        "/wio_s3_class/"
+      ],
+      "others": [
+        "/cn/wio_s3_class/",
+        "/es/wio_s3_class/",
+        "/ja/wio_s3_class/"
       ]
     },
     {
@@ -7836,6 +8315,19 @@
       ]
     },
     {
+      "title": "Aplicaciones | Seeed Studio Wiki",
+      "keepPathname": "/es/recamera_pro_applications/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/applications_with_watcher_main_page/",
+        "/es/recamera_pro_applications/"
+      ],
+      "others": [
+        "/es/applications_with_watcher_main_page/"
+      ]
+    },
+    {
       "title": "Atmel AVRISP STK500 USB ISP Programmer | Seeed Studio Wiki",
       "keepPathname": "/Atmel_AVRISP_STK500_USB_ISP_Programmer/",
       "keepDiscussionUrl": null,
@@ -7955,12 +8447,13 @@
     },
     {
       "title": "Introducción | Seeed Studio Wiki",
-      "keepPathname": "/es/t1000e_for_lorawan_introduction/",
+      "keepPathname": "/es/recamera_pro_api_introduction/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/es/bluetooth_beacon03_for_tracker_introduction/",
         "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+        "/es/recamera_pro_api_introduction/",
         "/es/SenseCAP_T1000_tracker/Introduction/",
         "/es/SenseCAP_T2000_tracker/Introduction/",
         "/es/t1000e_for_lorawan_introduction/",
@@ -7971,6 +8464,7 @@
         "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
         "/es/SenseCAP_T1000_tracker/Introduction/",
         "/es/SenseCAP_T2000_tracker/Introduction/",
+        "/es/t1000e_for_lorawan_introduction/",
         "/es/Wio-WM1110_Dev_Kit/Introduction/"
       ]
     },
@@ -8041,20 +8535,34 @@
       ]
     },
     {
-      "title": "Descripción General | Seeed Studio Wiki",
+      "title": "Descripción general | Seeed Studio Wiki",
       "keepPathname": "/es/watcher/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/es/cloud/sensecraft-data/sensecraft-data-platform/overview/",
+        "/es/mission_pack_intro_v3/",
+        "/es/ReSpeaker_2_Mics_Pi_HAT/",
+        "/es/sensecraft-ai/overview/",
+        "/es/sensecraft-ai/sensecraft-ai-main/",
+        "/es/sensecraft-app/overview/",
         "/es/watcher/",
-        "/es/Wio-Terminal-IO-Overview/",
-        "/es/Wio-Terminal-LCD-Overview/"
+        "/es/Wio-Terminal-FS-Overview/",
+        "/es/Wio-Terminal-Network-Overview/",
+        "/es/Wio-Terminal-USBCLIENT-Overview/",
+        "/es/Wio-Terminal-USBH-Overview/"
       ],
       "others": [
         "/es/cloud/sensecraft-data/sensecraft-data-platform/overview/",
-        "/es/Wio-Terminal-IO-Overview/",
-        "/es/Wio-Terminal-LCD-Overview/"
+        "/es/mission_pack_intro_v3/",
+        "/es/ReSpeaker_2_Mics_Pi_HAT/",
+        "/es/sensecraft-ai/overview/",
+        "/es/sensecraft-ai/sensecraft-ai-main/",
+        "/es/sensecraft-app/overview/",
+        "/es/Wio-Terminal-FS-Overview/",
+        "/es/Wio-Terminal-Network-Overview/",
+        "/es/Wio-Terminal-USBCLIENT-Overview/",
+        "/es/Wio-Terminal-USBH-Overview/"
       ]
     },
     {
@@ -8070,6 +8578,45 @@
       "others": [
         "/es/connect_wio_tracker_to_TTN/",
         "/es/wio_sx1262_xiao_esp32s3_LNS_TTN/"
+      ]
+    },
+    {
+      "title": "Conexión a AWS IoT | Seeed Studio Wiki",
+      "keepPathname": "/es/connecting_r1225_to_aws_iot/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/connecting_r1225_to_aws_iot/",
+        "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/"
+      ],
+      "others": [
+        "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/"
+      ]
+    },
+    {
+      "title": "Conexión a ChirpStack | Seeed Studio Wiki",
+      "keepPathname": "/es/connecting_r1225_to_chirpstack/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/connecting_r1225_to_chirpstack/",
+        "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/"
+      ],
+      "others": [
+        "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/"
+      ]
+    },
+    {
+      "title": "Conexión a TTN | Seeed Studio Wiki",
+      "keepPathname": "/es/connecting_r1225_to_ttn/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/connecting_r1225_to_ttn/",
+        "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/"
+      ],
+      "others": [
+        "/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/"
       ]
     },
     {
@@ -8264,6 +8811,21 @@
       ]
     },
     {
+      "title": "Recetario de ESPHome | Seeed Studio Wiki",
+      "keepPathname": "/es/EE04_with_esphome_advanced/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/EE04_with_esphome_advanced/",
+        "/es/ogdiy_kit_works_with_esphome/",
+        "/es/xiao_075inch_epaper_panel_esphome/"
+      ],
+      "others": [
+        "/es/ogdiy_kit_works_with_esphome/",
+        "/es/xiao_075inch_epaper_panel_esphome/"
+      ]
+    },
+    {
       "title": "Energy Monitor Shield V0.9b | Seeed Studio Wiki",
       "keepPathname": "/Energy_Monitor_Shield_V0.9b/",
       "keepDiscussionUrl": null,
@@ -8343,10 +8905,12 @@
       "keepDiscussionNumber": null,
       "pages": [
         "/es/faq_for_SenseCAP_T1000/",
+        "/es/jetson_developtool_faq/",
         "/es/t2000_faq/"
       ],
       "others": [
-        "/es/faq_for_SenseCAP_T1000/"
+        "/es/faq_for_SenseCAP_T1000/",
+        "/es/jetson_developtool_faq/"
       ]
     },
     {
@@ -8356,10 +8920,12 @@
       "keepDiscussionNumber": null,
       "pages": [
         "/es/Get_Started_with_SenseCAP_T1000_tracker/",
-        "/es/quick_start_with_M2_MP/"
+        "/es/quick_start_with_M2_MP/",
+        "/es/recamera_pro_api_quick_start/"
       ],
       "others": [
-        "/es/Get_Started_with_SenseCAP_T1000_tracker/"
+        "/es/Get_Started_with_SenseCAP_T1000_tracker/",
+        "/es/recamera_pro_api_quick_start/"
       ]
     },
     {
@@ -8390,17 +8956,15 @@
     },
     {
       "title": "Guía de Inicio Rápido | Seeed Studio Wiki",
-      "keepPathname": "/es/recamera_getting_started/",
+      "keepPathname": "/es/getting_started_with_watcher/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/es/getting_started_with_watcher/",
-        "/es/recamera_getting_started/",
         "/es/recamera_gimbal_getting_started/",
         "/es/recamera_hq_poe_getting_started/"
       ],
       "others": [
-        "/es/getting_started_with_watcher/",
         "/es/recamera_gimbal_getting_started/",
         "/es/recamera_hq_poe_getting_started/"
       ]
@@ -8516,21 +9080,6 @@
       ]
     },
     {
-      "title": "Grove-Doppler-Radar | Seeed Studio Wiki",
-      "keepPathname": "/Grove-Doppler-Radar/",
-      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/59",
-      "keepDiscussionNumber": 59,
-      "pages": [
-        "/es/Grove-Doppler-Radar/",
-        "/ja/Grove-Doppler-Radar/",
-        "/Grove-Doppler-Radar/"
-      ],
-      "others": [
-        "/es/Grove-Doppler-Radar/",
-        "/ja/Grove-Doppler-Radar/"
-      ]
-    },
-    {
       "title": "Grove Dual Button | Seeed Studio Wiki",
       "keepPathname": "/Grove-Dual-Button/",
       "keepDiscussionUrl": null,
@@ -8592,15 +9141,15 @@
     },
     {
       "title": "Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) | Seeed Studio Wiki",
-      "keepPathname": "/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/",
+      "keepPathname": "/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/es/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/",
-        "/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/"
+        "/es/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/",
+        "/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/"
       ],
       "others": [
-        "/es/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/"
+        "/es/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/"
       ]
     },
     {
@@ -8668,6 +9217,19 @@
       ],
       "others": [
         "/es/Grove-Line_Finder/"
+      ]
+    },
+    {
+      "title": "Grove-Mech keycap | Seeed Studio Wiki",
+      "keepPathname": "/Grove-Mech_Keycap/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/Grove-Mech_Keycap/",
+        "/Grove-Mech_Keycap/"
+      ],
+      "others": [
+        "/es/Grove-Mech_Keycap/"
       ]
     },
     {
@@ -8791,8 +9353,8 @@
     {
       "title": "Grove - RGB LED Stick (10 - WS2813 Mini) | Seeed Studio Wiki",
       "keepPathname": "/Grove-RGB_LED_Stick-10-WS2813_Mini/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/4439",
+      "keepDiscussionNumber": 4439,
       "pages": [
         "/es/Grove-RGB_LED_Stick-10-WS2813_Mini/",
         "/Grove-RGB_LED_Stick-10-WS2813_Mini/"
@@ -8963,33 +9525,59 @@
       ]
     },
     {
+      "title": "Uso de interfaces | Seeed Studio Wiki",
+      "keepPathname": "/es/J401_carrierboard_Hardware_Interfaces_Usage/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/J401_carrierboard_Hardware_Interfaces_Usage/",
+        "/es/recomputer_jetson_robotics_j401_getting_started/",
+        "/es/recomputer_jetson_robotics_j601_interfaces_usage/"
+      ],
+      "others": [
+        "/es/recomputer_jetson_robotics_j401_getting_started/",
+        "/es/recomputer_jetson_robotics_j601_interfaces_usage/"
+      ]
+    },
+    {
       "title": "Uso de Interfaces | Seeed Studio Wiki",
       "keepPathname": "/es/j501_carrier_board_interfaces_usage/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/es/J401_carrierboard_Hardware_Interfaces_Usage/",
         "/es/j401_mini_carrierboard_hardware_interfaces_usage/",
         "/es/j501_carrier_board_interfaces_usage/"
       ],
       "others": [
-        "/es/J401_carrierboard_Hardware_Interfaces_Usage/",
         "/es/j401_mini_carrierboard_hardware_interfaces_usage/"
       ]
     },
     {
-      "title": "NVIDIA® Jetson AGX Orin 32GB H01 Kit | Seeed Studio Wiki",
-      "keepPathname": "/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/",
-      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/474",
-      "keepDiscussionNumber": 474,
+      "title": "Device Management | Seeed Studio Wiki",
+      "keepPathname": "/jetson_developtool_device_management/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
       "pages": [
-        "/es/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/",
-        "/ja/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/",
-        "/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/"
+        "/es/jetson_developtool_device_management/",
+        "/jetson_developtool_device_management/",
+        "/sensecraft-data-platform/tutorials/device-management/"
       ],
       "others": [
-        "/es/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/",
-        "/ja/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/"
+        "/es/jetson_developtool_device_management/",
+        "/sensecraft-data-platform/tutorials/device-management/"
+      ]
+    },
+    {
+      "title": "Instalación | Seeed Studio Wiki",
+      "keepPathname": "/es/jetson_developtool_installation/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/jetson_developtool_installation/",
+        "/es/ModelAssistant_Introduce_Installation/"
+      ],
+      "others": [
+        "/es/ModelAssistant_Introduce_Installation/"
       ]
     },
     {
@@ -9127,15 +9715,45 @@
       ]
     },
     {
+      "title": "Mapa de Nodos MeshCore | Seeed Studio Wiki",
+      "keepPathname": "/es/meshcore_node_map_l1/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/meshcore_node_map_l1/",
+        "/es/meshcore_node_map_solar_node/",
+        "/es/meshcore_node_map_t1000e/"
+      ],
+      "others": [
+        "/es/meshcore_node_map_solar_node/",
+        "/es/meshcore_node_map_t1000e/"
+      ]
+    },
+    {
+      "title": "Tutorial de desarrollo del código fuente de MeshCore | Seeed Studio Wiki",
+      "keepPathname": "/es/meshcore_source_code_pratical_tutorial_l1/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/meshcore_source_code_pratical_tutorial_l1/",
+        "/es/meshcore_source_code_pratical_tutorial_solar_node/",
+        "/es/meshcore_source_code_pratical_tutorial_t1000_e/"
+      ],
+      "others": [
+        "/es/meshcore_source_code_pratical_tutorial_solar_node/",
+        "/es/meshcore_source_code_pratical_tutorial_t1000_e/"
+      ]
+    },
+    {
       "title": "Mapa de Nodos Meshtastic | Seeed Studio Wiki",
-      "keepPathname": "/es/meshtastic_node_map_l1/",
+      "keepPathname": "/es/meshtastic_node_map_x1/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/es/meshtastic_node_map_esp32s3/",
-        "/es/meshtastic_node_map_l1/",
         "/es/meshtastic_node_map_solar_node/",
-        "/es/meshtastic_node_map_t1000_e/"
+        "/es/meshtastic_node_map_t1000_e/",
+        "/es/meshtastic_node_map_x1/"
       ],
       "others": [
         "/es/meshtastic_node_map_esp32s3/",
@@ -9154,33 +9772,6 @@
       ],
       "others": [
         "/es/meshtastic_source_code_practical_tutorial_t1000_e/"
-      ]
-    },
-    {
-      "title": "Descripción general | Seeed Studio Wiki",
-      "keepPathname": "/es/mission_pack_intro_v3/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/es/mission_pack_intro_v3/",
-        "/es/ReSpeaker_2_Mics_Pi_HAT/",
-        "/es/sensecraft-ai/overview/",
-        "/es/sensecraft-ai/sensecraft-ai-main/",
-        "/es/sensecraft-app/overview/",
-        "/es/Wio-Terminal-FS-Overview/",
-        "/es/Wio-Terminal-Network-Overview/",
-        "/es/Wio-Terminal-USBCLIENT-Overview/",
-        "/es/Wio-Terminal-USBH-Overview/"
-      ],
-      "others": [
-        "/es/ReSpeaker_2_Mics_Pi_HAT/",
-        "/es/sensecraft-ai/overview/",
-        "/es/sensecraft-ai/sensecraft-ai-main/",
-        "/es/sensecraft-app/overview/",
-        "/es/Wio-Terminal-FS-Overview/",
-        "/es/Wio-Terminal-Network-Overview/",
-        "/es/Wio-Terminal-USBCLIENT-Overview/",
-        "/es/Wio-Terminal-USBH-Overview/"
       ]
     },
     {
@@ -9486,19 +10077,6 @@
       ]
     },
     {
-      "title": "SenseCAP M4 Inicio Rápido | Seeed Studio Wiki",
-      "keepPathname": "/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start/",
-        "/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_Quick_Start/"
-      ],
-      "others": [
-        "/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_Quick_Start/"
-      ]
-    },
-    {
       "title": "NPi i.MX6ULL Dev Board - Linux SBC | Seeed Studio Wiki",
       "keepPathname": "/NPi-i.MX6ULL-Dev-Board-Linux-SBC/",
       "keepDiscussionUrl": null,
@@ -9535,6 +10113,19 @@
       ],
       "others": [
         "/es/ODYSSEY-X86-Home-Assistant/"
+      ]
+    },
+    {
+      "title": "Recetario de Arduino | Seeed Studio Wiki",
+      "keepPathname": "/es/ogdiy_kit_works_with_arduino/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/ogdiy_kit_works_with_arduino/",
+        "/es/xiao_075inch_epaper_panel_arduino/"
+      ],
+      "others": [
+        "/es/xiao_075inch_epaper_panel_arduino/"
       ]
     },
     {
@@ -9637,47 +10228,6 @@
       ]
     },
     {
-      "title": "Goto Interpolation Playground | Seeed Studio Wiki",
-      "keepPathname": "/reachymini_examples_goto_interpolation_playground/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/es/reachymini_examples_goto_interpolation_playground/",
-        "/reachymini_examples_goto_interpolation_playground/"
-      ],
-      "others": [
-        "/es/reachymini_examples_goto_interpolation_playground/"
-      ]
-    },
-    {
-      "title": "Joystick Controller | Seeed Studio Wiki",
-      "keepPathname": "/reachymini_examples_joy_controller/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/es/reachymini_examples_joy_controller/",
-        "/reachymini_examples_joy_controller/"
-      ],
-      "others": [
-        "/es/reachymini_examples_joy_controller/"
-      ]
-    },
-    {
-      "title": "Reachy Mini | Seeed Studio Wiki",
-      "keepPathname": "/reachymini_intro/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/es/reachymini_intro/",
-        "/ja/reachymini_intro/",
-        "/reachymini_intro/"
-      ],
-      "others": [
-        "/es/reachymini_intro/",
-        "/ja/reachymini_intro/"
-      ]
-    },
-    {
       "title": "Controles avanzados de medios | Seeed Studio Wiki",
       "keepPathname": "/es/reachymini_platforms_reachy_mini_media_advanced_controls/",
       "keepDiscussionUrl": null,
@@ -9691,18 +10241,16 @@
       ]
     },
     {
-      "title": "Reachy Mini SDK | Seeed Studio Wiki",
-      "keepPathname": "/reachymini_sdk_readme/",
+      "title": "Guía de inicio rápido | Seeed Studio Wiki",
+      "keepPathname": "/es/recamera_getting_started/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/es/reachymini_sdk_readme/",
-        "/ja/reachymini_sdk_readme/",
-        "/reachymini_sdk_readme/"
+        "/es/reachymini_sdk_quickstart/",
+        "/es/recamera_getting_started/"
       ],
       "others": [
-        "/es/reachymini_sdk_readme/",
-        "/ja/reachymini_sdk_readme/"
+        "/es/reachymini_sdk_quickstart/"
       ]
     },
     {
@@ -9731,6 +10279,57 @@
       ],
       "others": [
         "/es/recamera_gimbal/"
+      ]
+    },
+    {
+      "title": "FAQ | Seeed Studio Wiki",
+      "keepPathname": "/t2000_faq/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/recamera_pro_api_faq/",
+        "/ja/faq_for_SenseCAP_T1000/",
+        "/ja/jetson_developtool_faq/",
+        "/ja/recamera_pro_api_faq/",
+        "/faq_for_SenseCAP_T1000/",
+        "/jetson_developtool_faq/",
+        "/recamera_pro_api_faq/",
+        "/t2000_faq/"
+      ],
+      "others": [
+        "/es/recamera_pro_api_faq/",
+        "/ja/faq_for_SenseCAP_T1000/",
+        "/ja/jetson_developtool_faq/",
+        "/ja/recamera_pro_api_faq/",
+        "/faq_for_SenseCAP_T1000/",
+        "/jetson_developtool_faq/",
+        "/recamera_pro_api_faq/"
+      ]
+    },
+    {
+      "title": "Uso de hardware | Seeed Studio Wiki",
+      "keepPathname": "/es/recamera_pro_hardware_usage/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/recamera_pro_hardware_usage/",
+        "/es/seeedstudio_round_display_usage/"
+      ],
+      "others": [
+        "/es/seeedstudio_round_display_usage/"
+      ]
+    },
+    {
+      "title": "Terminal | Seeed Studio Wiki",
+      "keepPathname": "/recamera_pro_terminal/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/recamera_pro_terminal/",
+        "/recamera_pro_terminal/"
+      ],
+      "others": [
+        "/es/recamera_pro_terminal/"
       ]
     },
     {
@@ -9794,19 +10393,6 @@
       ]
     },
     {
-      "title": "A603 Carrier Board | Seeed Studio Wiki",
-      "keepPathname": "/reComputer_A603_Flash_System/",
-      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/1575",
-      "keepDiscussionNumber": 1575,
-      "pages": [
-        "/es/reComputer_A603_Flash_System/",
-        "/reComputer_A603_Flash_System/"
-      ],
-      "others": [
-        "/es/reComputer_A603_Flash_System/"
-      ]
-    },
-    {
       "title": "A607 Carrier Board | Seeed Studio Wiki",
       "keepPathname": "/reComputer_A607_Flash_System/",
       "keepDiscussionUrl": null,
@@ -9853,16 +10439,14 @@
     },
     {
       "title": "Flashear Jetpack | Seeed Studio Wiki",
-      "keepPathname": "/es/reserver_j501_getting_started/",
+      "keepPathname": "/es/reComputer_J4012_Flash_Jetpack/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/es/reComputer_J4012_Flash_Jetpack/",
-        "/es/recomputer_mini_j401_getting_started/",
-        "/es/reserver_j501_getting_started/"
+        "/es/recomputer_mini_j401_getting_started/"
       ],
       "others": [
-        "/es/reComputer_J4012_Flash_Jetpack/",
         "/es/recomputer_mini_j401_getting_started/"
       ]
     },
@@ -9879,21 +10463,6 @@
       "others": [
         "/es/recomputer_r1000_flash_OS/",
         "/ja/recomputer_r1000_flash_OS/"
-      ]
-    },
-    {
-      "title": "reComputer R1100 Flash OS | Seeed Studio Wiki",
-      "keepPathname": "/recomputer_r1100_flash_os/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/es/recomputer_r1100_flash_os/",
-        "/ja/recomputer_r1100_flash_os/",
-        "/recomputer_r1100_flash_os/"
-      ],
-      "others": [
-        "/es/recomputer_r1100_flash_os/",
-        "/ja/recomputer_r1100_flash_os/"
       ]
     },
     {
@@ -10300,6 +10869,19 @@
       ]
     },
     {
+      "title": "T1000-E Tracker | Seeed Studio Wiki",
+      "keepPathname": "/t1000_e_tracker_meshtastic/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/t1000_e_tracker_meshtastic/",
+        "/t1000_e_tracker_meshtastic/"
+      ],
+      "others": [
+        "/es/t1000_e_tracker_meshtastic/"
+      ]
+    },
+    {
       "title": "Key Word Spotting | Seeed Studio Wiki",
       "keepPathname": "/tinyml_course_Key_Word_Spotting/",
       "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/1423",
@@ -10435,6 +11017,19 @@
       ],
       "others": [
         "/es/Wio-Terminal-IO-Digital/"
+      ]
+    },
+    {
+      "title": "Descripción General | Seeed Studio Wiki",
+      "keepPathname": "/es/Wio-Terminal-IO-Overview/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/es/Wio-Terminal-IO-Overview/",
+        "/es/Wio-Terminal-LCD-Overview/"
+      ],
+      "others": [
+        "/es/Wio-Terminal-LCD-Overview/"
       ]
     },
     {
@@ -10817,42 +11412,18 @@
       ]
     },
     {
-      "title": "6-Channel Wi-Fi Relay Module In Home Assistant | Seeed Studio Wiki",
-      "keepPathname": "/6_channel_wifi_relay/",
-      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/3926",
-      "keepDiscussionNumber": 3926,
-      "pages": [
-        "/ja/6_channel_wifi_relay/",
-        "/6_channel_wifi_relay/"
-      ],
-      "others": [
-        "/ja/6_channel_wifi_relay/"
-      ]
-    },
-    {
-      "title": "Jetpack のフラッシュ && インターフェースの使用 | Seeed Studio Wiki",
-      "keepPathname": "/ja/recomputer_j501_mini_getting_started/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/ja/ai_robotics_recomputer_j501_robotics_getting_started/",
-        "/ja/recomputer_j501_mini_getting_started/"
-      ],
-      "others": [
-        "/ja/ai_robotics_recomputer_j501_robotics_getting_started/"
-      ]
-    },
-    {
       "title": "アプリケーション | Seeed Studio Wiki",
       "keepPathname": "/ja/application/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/ja/application/",
-        "/ja/applications_with_watcher_main_page/"
+        "/ja/applications_with_watcher_main_page/",
+        "/ja/recamera_pro_applications/"
       ],
       "others": [
-        "/ja/applications_with_watcher_main_page/"
+        "/ja/applications_with_watcher_main_page/",
+        "/ja/recamera_pro_applications/"
       ]
     },
     {
@@ -10870,15 +11441,21 @@
     },
     {
       "title": "はじめに | Seeed Studio Wiki",
-      "keepPathname": "/ja/bluetooth_beacon03_for_tracker_introduction/",
+      "keepPathname": "/ja/recamera_pro_getting_start/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/ja/bluetooth_beacon03_for_tracker_introduction/",
-        "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/"
+        "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+        "/ja/recamera_pro_api_introduction/",
+        "/ja/recamera_pro_getting_start/",
+        "/ja/SenseCAP_T2000_tracker/Introduction/"
       ],
       "others": [
-        "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/"
+        "/ja/bluetooth_beacon03_for_tracker_introduction/",
+        "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+        "/ja/recamera_pro_api_introduction/",
+        "/ja/SenseCAP_T2000_tracker/Introduction/"
       ]
     },
     {
@@ -10904,11 +11481,10 @@
         "/ja/mission_pack_intro_v3/",
         "/ja/ModelAssistant_Tutorials_Training_Overview/",
         "/ja/ReSpeaker_2_Mics_Pi_HAT/",
-        "/ja/SenseCAP_T1000_tracker/Introduction/",
-        "/ja/SenseCAP_T2000_tracker/Introduction/",
         "/ja/sensecraft-ai/overview/",
         "/ja/sensecraft-ai/sensecraft-ai-main/",
         "/ja/sensecraft-app/overview/",
+        "/ja/t1000e_for_lorawan_introduction/",
         "/ja/watcher/",
         "/ja/Wio-Terminal-FS-Overview/",
         "/ja/Wio-Terminal-IO-Overview/",
@@ -10922,11 +11498,10 @@
         "/ja/mission_pack_intro_v3/",
         "/ja/ModelAssistant_Tutorials_Training_Overview/",
         "/ja/ReSpeaker_2_Mics_Pi_HAT/",
-        "/ja/SenseCAP_T1000_tracker/Introduction/",
-        "/ja/SenseCAP_T2000_tracker/Introduction/",
         "/ja/sensecraft-ai/overview/",
         "/ja/sensecraft-ai/sensecraft-ai-main/",
         "/ja/sensecraft-app/overview/",
+        "/ja/t1000e_for_lorawan_introduction/",
         "/ja/Wio-Terminal-FS-Overview/",
         "/ja/Wio-Terminal-IO-Overview/",
         "/ja/Wio-Terminal-LCD-Overview/",
@@ -10948,6 +11523,45 @@
       "others": [
         "/ja/connect_wio_tracker_to_TTN/",
         "/ja/wio_sx1262_xiao_esp32s3_LNS_TTN/"
+      ]
+    },
+    {
+      "title": "AWS IoT への接続 | Seeed Studio Wiki",
+      "keepPathname": "/ja/connecting_r1225_to_aws_iot/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/connecting_r1225_to_aws_iot/",
+        "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/"
+      ],
+      "others": [
+        "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/"
+      ]
+    },
+    {
+      "title": "ChirpStack への接続 | Seeed Studio Wiki",
+      "keepPathname": "/ja/connecting_r1225_to_chirpstack/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/connecting_r1225_to_chirpstack/",
+        "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/"
+      ],
+      "others": [
+        "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/"
+      ]
+    },
+    {
+      "title": "TTN への接続 | Seeed Studio Wiki",
+      "keepPathname": "/ja/connecting_r1225_to_ttn/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/connecting_r1225_to_ttn/",
+        "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/"
+      ],
+      "others": [
+        "/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/"
       ]
     },
     {
@@ -11176,16 +11790,18 @@
       ]
     },
     {
-      "title": "XIAO ePaper Display Board(ESP32-S3) with ESPHome | Seeed Studio Wiki",
-      "keepPathname": "/EE04_with_esphome_advanced/",
-      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/3586",
-      "keepDiscussionNumber": 3586,
+      "title": "ESPHome クックブック | Seeed Studio Wiki",
+      "keepPathname": "/ja/EE04_with_esphome_advanced/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
       "pages": [
         "/ja/EE04_with_esphome_advanced/",
-        "/EE04_with_esphome_advanced/"
+        "/ja/ogdiy_kit_works_with_esphome/",
+        "/ja/xiao_075inch_epaper_panel_esphome/"
       ],
       "others": [
-        "/ja/EE04_with_esphome_advanced/"
+        "/ja/ogdiy_kit_works_with_esphome/",
+        "/ja/xiao_075inch_epaper_panel_esphome/"
       ]
     },
     {
@@ -11199,21 +11815,6 @@
       ],
       "others": [
         "/ja/Essentials/"
-      ]
-    },
-    {
-      "title": "FAQ | Seeed Studio Wiki",
-      "keepPathname": "/t2000_faq/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/ja/faq_for_SenseCAP_T1000/",
-        "/faq_for_SenseCAP_T1000/",
-        "/t2000_faq/"
-      ],
-      "others": [
-        "/ja/faq_for_SenseCAP_T1000/",
-        "/faq_for_SenseCAP_T1000/"
       ]
     },
     {
@@ -11231,7 +11832,7 @@
     },
     {
       "title": "クイックスタート | Seeed Studio Wiki",
-      "keepPathname": "/ja/r1225_quick_start/",
+      "keepPathname": "/ja/quick_start_with_M2_MP/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
@@ -11239,13 +11840,13 @@
         "/ja/Get_Started_with_SenseCAP_T2000_tracker/",
         "/ja/ModelAssistant_Introduce_Quick_Start/",
         "/ja/quick_start_with_M2_MP/",
-        "/ja/r1225_quick_start/"
+        "/ja/recamera_pro_api_quick_start/"
       ],
       "others": [
         "/ja/Get_Started_with_SenseCAP_T1000_tracker/",
         "/ja/Get_Started_with_SenseCAP_T2000_tracker/",
         "/ja/ModelAssistant_Introduce_Quick_Start/",
-        "/ja/quick_start_with_M2_MP/"
+        "/ja/recamera_pro_api_quick_start/"
       ]
     },
     {
@@ -11714,19 +12315,6 @@
       ]
     },
     {
-      "title": "Grove-Mech keycap | Seeed Studio Wiki",
-      "keepPathname": "/Grove-Mech_Keycap/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/ja/Grove-Mech_Keycap/",
-        "/Grove-Mech_Keycap/"
-      ],
-      "others": [
-        "/ja/Grove-Mech_Keycap/"
-      ]
-    },
-    {
       "title": "Grove - Mini Camera | Seeed Studio Wiki",
       "keepPathname": "/Grove-Mini_Camera/",
       "keepDiscussionUrl": null,
@@ -12002,6 +12590,19 @@
       ]
     },
     {
+      "title": "IO Expander for XIAO | Seeed Studio Wiki",
+      "keepPathname": "/io_expander_for_xiao/",
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/654",
+      "keepDiscussionNumber": 654,
+      "pages": [
+        "/ja/io_expander_for_xiao/",
+        "/io_expander_for_xiao/"
+      ],
+      "others": [
+        "/ja/io_expander_for_xiao/"
+      ]
+    },
+    {
       "title": "J1010 Boot From SD Card | Seeed Studio Wiki",
       "keepPathname": "/J1010_Boot_From_SD_Card/",
       "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/249",
@@ -12015,18 +12616,70 @@
       ]
     },
     {
+      "title": "インターフェースの使用方法 | Seeed Studio Wiki",
+      "keepPathname": "/ja/J401_carrierboard_Hardware_Interfaces_Usage/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/J401_carrierboard_Hardware_Interfaces_Usage/",
+        "/ja/recomputer_jetson_robotics_j401_getting_started/",
+        "/ja/recomputer_jetson_robotics_j601_interfaces_usage/"
+      ],
+      "others": [
+        "/ja/recomputer_jetson_robotics_j401_getting_started/",
+        "/ja/recomputer_jetson_robotics_j601_interfaces_usage/"
+      ]
+    },
+    {
       "title": "インターフェース使用方法 | Seeed Studio Wiki",
       "keepPathname": "/ja/j501_carrier_board_interfaces_usage/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/ja/J401_carrierboard_Hardware_Interfaces_Usage/",
         "/ja/j401_mini_carrierboard_hardware_interfaces_usage/",
         "/ja/j501_carrier_board_interfaces_usage/"
       ],
       "others": [
-        "/ja/J401_carrierboard_Hardware_Interfaces_Usage/",
         "/ja/j401_mini_carrierboard_hardware_interfaces_usage/"
+      ]
+    },
+    {
+      "title": "NVIDIA® Jetson AGX Orin 32GB H01 Kit | Seeed Studio Wiki",
+      "keepPathname": "/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/",
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/474",
+      "keepDiscussionNumber": 474,
+      "pages": [
+        "/ja/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/",
+        "/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/"
+      ],
+      "others": [
+        "/ja/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/"
+      ]
+    },
+    {
+      "title": "デバイス管理 | Seeed Studio Wiki",
+      "keepPathname": "/ja/jetson_developtool_device_management/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/jetson_developtool_device_management/",
+        "/ja/sensecraft-data-platform/tutorials/device-management/"
+      ],
+      "others": [
+        "/ja/sensecraft-data-platform/tutorials/device-management/"
+      ]
+    },
+    {
+      "title": "インストール | Seeed Studio Wiki",
+      "keepPathname": "/ja/jetson_developtool_installation/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/jetson_developtool_installation/",
+        "/ja/ModelAssistant_Introduce_Installation/"
+      ],
+      "others": [
+        "/ja/ModelAssistant_Introduce_Installation/"
       ]
     },
     {
@@ -12069,6 +12722,19 @@
       ]
     },
     {
+      "title": "Steering Gear Debugging Tool for SO-ARM in Lerobot | Seeed Studio Wiki",
+      "keepPathname": "/lerobot_steering_gear_debugging_tool/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/lerobot_steering_gear_debugging_tool/",
+        "/lerobot_steering_gear_debugging_tool/"
+      ],
+      "others": [
+        "/ja/lerobot_steering_gear_debugging_tool/"
+      ]
+    },
+    {
       "title": "Jetson上のチャットボット | Seeed Studio Wiki",
       "keepPathname": "/ja/local_chatbot_recomputer/",
       "keepDiscussionUrl": null,
@@ -12095,6 +12761,40 @@
       ]
     },
     {
+      "title": "MeshCore Node Map | Seeed Studio Wiki",
+      "keepPathname": "/meshcore_node_map_l1/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/meshcore_node_map_solar_node/",
+        "/ja/meshcore_node_map_t1000e/",
+        "/meshcore_node_map_l1/",
+        "/meshcore_node_map_solar_node/",
+        "/meshcore_node_map_t1000e/"
+      ],
+      "others": [
+        "/ja/meshcore_node_map_solar_node/",
+        "/ja/meshcore_node_map_t1000e/",
+        "/meshcore_node_map_solar_node/",
+        "/meshcore_node_map_t1000e/"
+      ]
+    },
+    {
+      "title": "MeshCore ソースコード開発チュートリアル | Seeed Studio Wiki",
+      "keepPathname": "/ja/meshcore_source_code_pratical_tutorial_l1/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/meshcore_source_code_pratical_tutorial_l1/",
+        "/ja/meshcore_source_code_pratical_tutorial_solar_node/",
+        "/ja/meshcore_source_code_pratical_tutorial_t1000_e/"
+      ],
+      "others": [
+        "/ja/meshcore_source_code_pratical_tutorial_solar_node/",
+        "/ja/meshcore_source_code_pratical_tutorial_t1000_e/"
+      ]
+    },
+    {
       "title": "Meshtastic Node Map | Seeed Studio Wiki",
       "keepPathname": "/meshtastic_node_map_l1/",
       "keepDiscussionUrl": null,
@@ -12104,19 +12804,23 @@
         "/ja/meshtastic_node_map_l1/",
         "/ja/meshtastic_node_map_solar_node/",
         "/ja/meshtastic_node_map_t1000_e/",
+        "/ja/meshtastic_node_map_x1/",
         "/meshtastic_node_map_esp32s3/",
         "/meshtastic_node_map_l1/",
         "/meshtastic_node_map_solar_node/",
-        "/meshtastic_node_map_t1000_e/"
+        "/meshtastic_node_map_t1000_e/",
+        "/meshtastic_node_map_x1/"
       ],
       "others": [
         "/ja/meshtastic_node_map_esp32s3/",
         "/ja/meshtastic_node_map_l1/",
         "/ja/meshtastic_node_map_solar_node/",
         "/ja/meshtastic_node_map_t1000_e/",
+        "/ja/meshtastic_node_map_x1/",
         "/meshtastic_node_map_esp32s3/",
         "/meshtastic_node_map_solar_node/",
-        "/meshtastic_node_map_t1000_e/"
+        "/meshtastic_node_map_t1000_e/",
+        "/meshtastic_node_map_x1/"
       ]
     },
     {
@@ -12321,7 +13025,7 @@
       ]
     },
     {
-      "title": "Arduinoとの連携 | Seeed Studio Wiki",
+      "title": "Arduino クックブック | Seeed Studio Wiki",
       "keepPathname": "/ja/ogdiy_kit_works_with_arduino/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
@@ -12399,6 +13103,32 @@
       ]
     },
     {
+      "title": "Daemon API | Seeed Studio Wiki",
+      "keepPathname": "/reachymini_api_daemon/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/reachymini_api_daemon/",
+        "/reachymini_api_daemon/"
+      ],
+      "others": [
+        "/ja/reachymini_api_daemon/"
+      ]
+    },
+    {
+      "title": "Motion API | Seeed Studio Wiki",
+      "keepPathname": "/reachymini_api_motion/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/reachymini_api_motion/",
+        "/reachymini_api_motion/"
+      ],
+      "others": [
+        "/ja/reachymini_api_motion/"
+      ]
+    },
+    {
       "title": "Head Position GUI | Seeed Studio Wiki",
       "keepPathname": "/reachymini_examples_mini_head_position_gui/",
       "keepDiscussionUrl": null,
@@ -12440,6 +13170,32 @@
       ]
     },
     {
+      "title": "Network | Seeed Studio Wiki",
+      "keepPathname": "/recamera_pro_api_network/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/recamera_pro_api_network/",
+        "/recamera_pro_api_network/"
+      ],
+      "others": [
+        "/ja/recamera_pro_api_network/"
+      ]
+    },
+    {
+      "title": "ハードウェアの使用方法 | Seeed Studio Wiki",
+      "keepPathname": "/ja/recamera_pro_hardware_usage/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/recamera_pro_hardware_usage/",
+        "/ja/seeedstudio_round_display_usage/"
+      ],
+      "others": [
+        "/ja/seeedstudio_round_display_usage/"
+      ]
+    },
+    {
       "title": "reComputer for Jetson Series Introduction | Seeed Studio Wiki",
       "keepPathname": "/reComputer_Jetson_Series_Introduction/",
       "keepDiscussionUrl": null,
@@ -12463,6 +13219,19 @@
       ],
       "others": [
         "/ja/reComputer_Jetson_Series_Resource/"
+      ]
+    },
+    {
+      "title": "Jetpack をフラッシュする | Seeed Studio Wiki",
+      "keepPathname": "/ja/reserver_j501_getting_started/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/recomputer_mini_j401_getting_started/",
+        "/ja/reserver_j501_getting_started/"
+      ],
+      "others": [
+        "/ja/recomputer_mini_j401_getting_started/"
       ]
     },
     {
@@ -12557,19 +13326,6 @@
       ]
     },
     {
-      "title": "キーワードスポッティング | Seeed Studio Wiki",
-      "keepPathname": "/ja/respeaker_streams_i2s_tflite/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/ja/respeaker_streams_i2s_tflite/",
-        "/ja/tinyml_course_Key_Word_Spotting/"
-      ],
-      "others": [
-        "/ja/tinyml_course_Key_Word_Spotting/"
-      ]
-    },
-    {
       "title": "reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 DoA and VAD | Seeed Studio Wiki",
       "keepPathname": "/respeaker_xvf3800_xiao_doa_vad/",
       "keepDiscussionUrl": null,
@@ -12635,6 +13391,19 @@
       ]
     },
     {
+      "title": "reTerminal E Series | Seeed Studio Wiki",
+      "keepPathname": "/reterminal_e10xx_main_page/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/reterminal_e10xx_main_page/",
+        "/reterminal_e10xx_main_page/"
+      ],
+      "others": [
+        "/ja/reterminal_e10xx_main_page/"
+      ]
+    },
+    {
       "title": "AWS IoT Core Intergate With reTerminal DM | Seeed Studio Wiki",
       "keepPathname": "/reTerminal-DM_AWS_first/",
       "keepDiscussionUrl": null,
@@ -12684,19 +13453,6 @@
       ],
       "others": [
         "/ja/reTerminal-new_FAQ/"
-      ]
-    },
-    {
-      "title": "Getting Started with reTerminal | Seeed Studio Wiki",
-      "keepPathname": "/reTerminal/",
-      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/216",
-      "keepDiscussionNumber": 216,
-      "pages": [
-        "/ja/reTerminal/",
-        "/reTerminal/"
-      ],
-      "others": [
-        "/ja/reTerminal/"
       ]
     },
     {
@@ -12804,6 +13560,19 @@
       ]
     },
     {
+      "title": "紹介 | Seeed Studio Wiki",
+      "keepPathname": "/ja/Wio-WM1110_Dev_Kit/Introduction/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/SenseCAP_T1000_tracker/Introduction/",
+        "/ja/Wio-WM1110_Dev_Kit/Introduction/"
+      ],
+      "others": [
+        "/ja/SenseCAP_T1000_tracker/Introduction/"
+      ]
+    },
+    {
       "title": "Training - Classification | Seeed Studio Wiki",
       "keepPathname": "/sensecraft-ai/tutorials/sensecraft-ai-training-classification/",
       "keepDiscussionUrl": null,
@@ -12882,19 +13651,6 @@
       ]
     },
     {
-      "title": "SenseCraft Cloud Fee | Seeed Studio Wiki",
-      "keepPathname": "/sensecraft-fee/sensecraft-cloud-fee/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/ja/sensecraft-fee/sensecraft-cloud-fee/",
-        "/sensecraft-fee/sensecraft-cloud-fee/"
-      ],
-      "others": [
-        "/ja/sensecraft-fee/sensecraft-cloud-fee/"
-      ]
-    },
-    {
       "title": "Sidekick Advanced Kit | Seeed Studio Wiki",
       "keepPathname": "/Sidekick_Advanced_Kit/",
       "keepDiscussionUrl": null,
@@ -12970,19 +13726,6 @@
       ],
       "others": [
         "/ja/stackforce_mini_wheeled_legged_robot/"
-      ]
-    },
-    {
-      "title": "紹介 | Seeed Studio Wiki",
-      "keepPathname": "/ja/t1000e_for_lorawan_introduction/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/ja/t1000e_for_lorawan_introduction/",
-        "/ja/Wio-WM1110_Dev_Kit/Introduction/"
-      ],
-      "others": [
-        "/ja/Wio-WM1110_Dev_Kit/Introduction/"
       ]
     },
     {
@@ -13168,6 +13911,19 @@
       ]
     },
     {
+      "title": "Wio Tracker 1110 Dev Board | Seeed Studio Wiki",
+      "keepPathname": "/wio_tracker_1110_dev_board_class/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/ja/wio_tracker_1110_dev_board_class/",
+        "/wio_tracker_1110_dev_board_class/"
+      ],
+      "others": [
+        "/ja/wio_tracker_1110_dev_board_class/"
+      ]
+    },
+    {
       "title": "Wio RP2040 mini Dev Board with Arduino | Seeed Studio Wiki",
       "keepPathname": "/Wio-RP2040-with-Arduino-WIFI/",
       "keepDiscussionUrl": null,
@@ -13235,8 +13991,8 @@
     {
       "title": "Power Meter | Seeed Studio Wiki",
       "keepPathname": "/xiao_debug_mate_power/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/4733",
+      "keepDiscussionNumber": 4733,
       "pages": [
         "/ja/xiao_debug_mate_power/",
         "/xiao_debug_mate_power/"
@@ -13645,26 +14401,27 @@
       ]
     },
     {
-      "title": "Gravar Jetpack && Uso das Interfaces | Wiki da Seeed Studio",
-      "keepPathname": "/pt-br/recomputer_j501_mini_getting_started/",
+      "title": "Aplicações | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/recamera_pro_applications/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/pt-br/ai_robotics_recomputer_j501_robotics_getting_started/",
-        "/pt-br/recomputer_j501_mini_getting_started/"
+        "/pt-br/applications_with_watcher_main_page/",
+        "/pt-br/recamera_pro_applications/"
       ],
       "others": [
-        "/pt-br/ai_robotics_recomputer_j501_robotics_getting_started/"
+        "/pt-br/applications_with_watcher_main_page/"
       ]
     },
     {
       "title": "Introdução | Wiki da Seeed Studio",
-      "keepPathname": "/pt-br/t1000e_for_lorawan_introduction/",
+      "keepPathname": "/pt-br/recamera_pro_api_introduction/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/pt-br/bluetooth_beacon03_for_tracker_introduction/",
         "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+        "/pt-br/recamera_pro_api_introduction/",
         "/pt-br/SenseCAP_T1000_tracker/Introduction/",
         "/pt-br/SenseCAP_T2000_tracker/Introduction/",
         "/pt-br/t1000e_for_lorawan_introduction/",
@@ -13675,6 +14432,7 @@
         "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
         "/pt-br/SenseCAP_T1000_tracker/Introduction/",
         "/pt-br/SenseCAP_T2000_tracker/Introduction/",
+        "/pt-br/t1000e_for_lorawan_introduction/",
         "/pt-br/Wio-WM1110_Dev_Kit/Introduction/"
       ]
     },
@@ -13692,20 +14450,36 @@
       ]
     },
     {
-      "title": "Visão Geral | Wiki da Seeed Studio",
+      "title": "Visão geral | Wiki da Seeed Studio",
       "keepPathname": "/pt-br/watcher/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/pt-br/cloud/sensecraft-data/sensecraft-data-platform/overview/",
-        "/pt-br/ModelAssistant_Tutorials_Training_Overview/",
+        "/pt-br/mission_pack_intro_v3/",
+        "/pt-br/ReSpeaker_2_Mics_Pi_HAT/",
+        "/pt-br/sensecraft-ai/overview/",
+        "/pt-br/sensecraft-ai/sensecraft-ai-main/",
+        "/pt-br/sensecraft-app/overview/",
         "/pt-br/watcher/",
-        "/pt-br/Wio-Terminal-Network-Overview/"
+        "/pt-br/Wio-Terminal-FS-Overview/",
+        "/pt-br/Wio-Terminal-IO-Overview/",
+        "/pt-br/Wio-Terminal-LCD-Overview/",
+        "/pt-br/Wio-Terminal-USBCLIENT-Overview/",
+        "/pt-br/Wio-Terminal-USBH-Overview/"
       ],
       "others": [
         "/pt-br/cloud/sensecraft-data/sensecraft-data-platform/overview/",
-        "/pt-br/ModelAssistant_Tutorials_Training_Overview/",
-        "/pt-br/Wio-Terminal-Network-Overview/"
+        "/pt-br/mission_pack_intro_v3/",
+        "/pt-br/ReSpeaker_2_Mics_Pi_HAT/",
+        "/pt-br/sensecraft-ai/overview/",
+        "/pt-br/sensecraft-ai/sensecraft-ai-main/",
+        "/pt-br/sensecraft-app/overview/",
+        "/pt-br/Wio-Terminal-FS-Overview/",
+        "/pt-br/Wio-Terminal-IO-Overview/",
+        "/pt-br/Wio-Terminal-LCD-Overview/",
+        "/pt-br/Wio-Terminal-USBCLIENT-Overview/",
+        "/pt-br/Wio-Terminal-USBH-Overview/"
       ]
     },
     {
@@ -13721,6 +14495,45 @@
       "others": [
         "/pt-br/connect_wio_tracker_to_TTN/",
         "/pt-br/wio_sx1262_xiao_esp32s3_LNS_TTN/"
+      ]
+    },
+    {
+      "title": "Conectando ao AWS IoT | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/connecting_r1225_to_aws_iot/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/pt-br/connecting_r1225_to_aws_iot/",
+        "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/"
+      ],
+      "others": [
+        "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/"
+      ]
+    },
+    {
+      "title": "Conectando ao ChirpStack | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/connecting_r1225_to_chirpstack/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/pt-br/connecting_r1225_to_chirpstack/",
+        "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/"
+      ],
+      "others": [
+        "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/"
+      ]
+    },
+    {
+      "title": "Conectando ao TTN | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/connecting_r1225_to_ttn/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/pt-br/connecting_r1225_to_ttn/",
+        "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/"
+      ],
+      "others": [
+        "/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/"
       ]
     },
     {
@@ -13782,21 +14595,64 @@
       ]
     },
     {
+      "title": "Livro de Receitas ESPHome | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/EE04_with_esphome_advanced/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/pt-br/EE04_with_esphome_advanced/",
+        "/pt-br/ogdiy_kit_works_with_esphome/"
+      ],
+      "others": [
+        "/pt-br/ogdiy_kit_works_with_esphome/"
+      ]
+    },
+    {
       "title": "FAQ | Wiki da Seeed Studio",
       "keepPathname": "/pt-br/t2000_faq/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/pt-br/faq_for_SenseCAP_T1000/",
+        "/pt-br/jetson_developtool_faq/",
+        "/pt-br/recamera_pro_api_faq/",
         "/pt-br/t2000_faq/"
       ],
       "others": [
-        "/pt-br/faq_for_SenseCAP_T1000/"
+        "/pt-br/faq_for_SenseCAP_T1000/",
+        "/pt-br/jetson_developtool_faq/",
+        "/pt-br/recamera_pro_api_faq/"
+      ]
+    },
+    {
+      "title": "Introdução ao SenseCAP Solar Node | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/meshtastic_solar_node/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/pt-br/get_started_with_meshtastic_solar_node/",
+        "/pt-br/meshtastic_solar_node/"
+      ],
+      "others": [
+        "/pt-br/get_started_with_meshtastic_solar_node/"
+      ]
+    },
+    {
+      "title": "Introdução ao Wio Tracker L1 | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/wio_tracker_l1_node/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/pt-br/get_started_with_meshtastic_wio_tracker_l1/",
+        "/pt-br/wio_tracker_l1_node/"
+      ],
+      "others": [
+        "/pt-br/get_started_with_meshtastic_wio_tracker_l1/"
       ]
     },
     {
       "title": "Início Rápido | Wiki da Seeed Studio",
-      "keepPathname": "/pt-br/r1225_quick_start/",
+      "keepPathname": "/pt-br/quick_start_with_M2_MP/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
@@ -13804,13 +14660,13 @@
         "/pt-br/Get_Started_with_SenseCAP_T2000_tracker/",
         "/pt-br/ModelAssistant_Introduce_Quick_Start/",
         "/pt-br/quick_start_with_M2_MP/",
-        "/pt-br/r1225_quick_start/"
+        "/pt-br/recamera_pro_api_quick_start/"
       ],
       "others": [
         "/pt-br/Get_Started_with_SenseCAP_T1000_tracker/",
         "/pt-br/Get_Started_with_SenseCAP_T2000_tracker/",
         "/pt-br/ModelAssistant_Introduce_Quick_Start/",
-        "/pt-br/quick_start_with_M2_MP/"
+        "/pt-br/recamera_pro_api_quick_start/"
       ]
     },
     {
@@ -13893,12 +14749,27 @@
         "/pt-br/J401_carrierboard_Hardware_Interfaces_Usage/",
         "/pt-br/j401_mini_carrierboard_hardware_interfaces_usage/",
         "/pt-br/j501_carrier_board_interfaces_usage/",
-        "/pt-br/recomputer_jetson_robotics_j401_getting_started/"
+        "/pt-br/recomputer_jetson_robotics_j401_getting_started/",
+        "/pt-br/recomputer_jetson_robotics_j601_interfaces_usage/"
       ],
       "others": [
         "/pt-br/J401_carrierboard_Hardware_Interfaces_Usage/",
         "/pt-br/j401_mini_carrierboard_hardware_interfaces_usage/",
-        "/pt-br/recomputer_jetson_robotics_j401_getting_started/"
+        "/pt-br/recomputer_jetson_robotics_j401_getting_started/",
+        "/pt-br/recomputer_jetson_robotics_j601_interfaces_usage/"
+      ]
+    },
+    {
+      "title": "Instalação | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/jetson_developtool_installation/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/pt-br/jetson_developtool_installation/",
+        "/pt-br/ModelAssistant_Introduce_Installation/"
+      ],
+      "others": [
+        "/pt-br/ModelAssistant_Introduce_Installation/"
       ]
     },
     {
@@ -13912,6 +14783,21 @@
       ],
       "others": [
         "/pt-br/local_chatbot_recomputer_bk/"
+      ]
+    },
+    {
+      "title": "Mapa de Nós MeshCore | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/meshcore_node_map_l1/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/pt-br/meshcore_node_map_l1/",
+        "/pt-br/meshcore_node_map_solar_node/",
+        "/pt-br/meshcore_node_map_t1000e/"
+      ],
+      "others": [
+        "/pt-br/meshcore_node_map_solar_node/",
+        "/pt-br/meshcore_node_map_t1000e/"
       ]
     },
     {
@@ -13929,59 +14815,43 @@
     },
     {
       "title": "Mapa de Nós Meshtastic | Wiki da Seeed Studio",
-      "keepPathname": "/pt-br/meshtastic_node_map_t1000_e/",
+      "keepPathname": "/pt-br/meshtastic_node_map_x1/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/pt-br/meshtastic_node_map_solar_node/",
-        "/pt-br/meshtastic_node_map_t1000_e/"
+        "/pt-br/meshtastic_node_map_t1000_e/",
+        "/pt-br/meshtastic_node_map_x1/"
       ],
       "others": [
-        "/pt-br/meshtastic_node_map_solar_node/"
+        "/pt-br/meshtastic_node_map_solar_node/",
+        "/pt-br/meshtastic_node_map_t1000_e/"
       ]
     },
     {
       "title": "Tutorial de Desenvolvimento com Código-Fonte do Meshtastic | Wiki da Seeed Studio",
-      "keepPathname": "/pt-br/meshtastic_source_code_practical_tutorial/",
+      "keepPathname": "/pt-br/meshtastic_source_code_practical_tutorial_t1000_e/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/pt-br/meshtastic_source_code_practical_tutorial_solar_node/",
-        "/pt-br/meshtastic_source_code_practical_tutorial_t1000_e/",
-        "/pt-br/meshtastic_source_code_practical_tutorial/"
+        "/pt-br/meshtastic_source_code_practical_tutorial_t1000_e/"
       ],
       "others": [
-        "/pt-br/meshtastic_source_code_practical_tutorial_solar_node/",
-        "/pt-br/meshtastic_source_code_practical_tutorial_t1000_e/"
+        "/pt-br/meshtastic_source_code_practical_tutorial_solar_node/"
       ]
     },
     {
-      "title": "Visão geral | Wiki da Seeed Studio",
-      "keepPathname": "/pt-br/mission_pack_intro_v3/",
+      "title": "Visão Geral | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/Wio-Terminal-Network-Overview/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/pt-br/mission_pack_intro_v3/",
-        "/pt-br/ReSpeaker_2_Mics_Pi_HAT/",
-        "/pt-br/sensecraft-ai/overview/",
-        "/pt-br/sensecraft-ai/sensecraft-ai-main/",
-        "/pt-br/sensecraft-app/overview/",
-        "/pt-br/Wio-Terminal-FS-Overview/",
-        "/pt-br/Wio-Terminal-IO-Overview/",
-        "/pt-br/Wio-Terminal-LCD-Overview/",
-        "/pt-br/Wio-Terminal-USBCLIENT-Overview/",
-        "/pt-br/Wio-Terminal-USBH-Overview/"
+        "/pt-br/ModelAssistant_Tutorials_Training_Overview/",
+        "/pt-br/Wio-Terminal-Network-Overview/"
       ],
       "others": [
-        "/pt-br/ReSpeaker_2_Mics_Pi_HAT/",
-        "/pt-br/sensecraft-ai/overview/",
-        "/pt-br/sensecraft-ai/sensecraft-ai-main/",
-        "/pt-br/sensecraft-app/overview/",
-        "/pt-br/Wio-Terminal-FS-Overview/",
-        "/pt-br/Wio-Terminal-IO-Overview/",
-        "/pt-br/Wio-Terminal-LCD-Overview/",
-        "/pt-br/Wio-Terminal-USBCLIENT-Overview/",
-        "/pt-br/Wio-Terminal-USBH-Overview/"
+        "/pt-br/ModelAssistant_Tutorials_Training_Overview/"
       ]
     },
     {
@@ -14089,6 +14959,19 @@
       ]
     },
     {
+      "title": "Livro de Receitas Arduino | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/ogdiy_kit_works_with_arduino/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/pt-br/ogdiy_kit_works_with_arduino/",
+        "/pt-br/xiao_075inch_epaper_panel_arduino/"
+      ],
+      "others": [
+        "/pt-br/xiao_075inch_epaper_panel_arduino/"
+      ]
+    },
+    {
       "title": "Controles Avançados de Mídia | Wiki da Seeed Studio",
       "keepPathname": "/pt-br/reachymini_platforms_reachy_mini_media_advanced_controls/",
       "keepDiscussionUrl": null,
@@ -14114,6 +14997,19 @@
       "others": [
         "/pt-br/recamera_gimbal_hardware_and_specs/",
         "/pt-br/recamera_hardware_and_specs/"
+      ]
+    },
+    {
+      "title": "Uso de Hardware | Wiki da Seeed Studio",
+      "keepPathname": "/pt-br/recamera_pro_hardware_usage/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/pt-br/recamera_pro_hardware_usage/",
+        "/pt-br/seeedstudio_round_display_usage/"
+      ],
+      "others": [
+        "/pt-br/seeedstudio_round_display_usage/"
       ]
     },
     {
@@ -14170,19 +15066,6 @@
       ],
       "others": [
         "/pt-br/SenseCAP_Indicator_ESP32_Wi-Fi/"
-      ]
-    },
-    {
-      "title": "Introdução ao Tracker T1000-E | Wiki da Seeed Studio",
-      "keepPathname": "/pt-br/t1000_e_intro/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/pt-br/sensecap_t1000_e/",
-        "/pt-br/t1000_e_intro/"
-      ],
-      "others": [
-        "/pt-br/sensecap_t1000_e/"
       ]
     },
     {
@@ -14311,16 +15194,16 @@
       ]
     },
     {
-      "title": "Flash Jetpack && Interfaces Usage | Seeed Studio Wiki",
-      "keepPathname": "/recomputer_j501_mini_getting_started/",
+      "title": "Applications | Seeed Studio Wiki",
+      "keepPathname": "/recamera_pro_applications/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
-        "/ai_robotics_recomputer_j501_robotics_getting_started/",
-        "/recomputer_j501_mini_getting_started/"
+        "/applications_with_watcher_main_page/",
+        "/recamera_pro_applications/"
       ],
       "others": [
-        "/ai_robotics_recomputer_j501_robotics_getting_started/"
+        "/applications_with_watcher_main_page/"
       ]
     },
     {
@@ -14338,12 +15221,13 @@
     },
     {
       "title": "Introduction | Seeed Studio Wiki",
-      "keepPathname": "/t1000e_for_lorawan_introduction/",
+      "keepPathname": "/recamera_pro_api_introduction/",
       "keepDiscussionUrl": null,
       "keepDiscussionNumber": null,
       "pages": [
         "/bluetooth_beacon03_for_tracker_introduction/",
         "/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
+        "/recamera_pro_api_introduction/",
         "/SenseCAP_T1000_tracker/Introduction/",
         "/SenseCAP_T2000_tracker/Introduction/",
         "/t1000e_for_lorawan_introduction/",
@@ -14354,6 +15238,7 @@
         "/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/",
         "/SenseCAP_T1000_tracker/Introduction/",
         "/SenseCAP_T2000_tracker/Introduction/",
+        "/t1000e_for_lorawan_introduction/",
         "/Wio-WM1110_Dev_Kit/Introduction/"
       ]
     },
@@ -14407,6 +15292,32 @@
       "others": [
         "/connect_wio_tracker_to_TTN/",
         "/Connecting-to-TTN/"
+      ]
+    },
+    {
+      "title": "Connecting to ChirpStack | Seeed Studio Wiki",
+      "keepPathname": "/connecting_r1225_to_chirpstack/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/connecting_r1225_to_chirpstack/",
+        "/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/"
+      ],
+      "others": [
+        "/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/"
+      ]
+    },
+    {
+      "title": "Connecting to TTN | Seeed Studio Wiki",
+      "keepPathname": "/connecting_r1225_to_ttn/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/connecting_r1225_to_ttn/",
+        "/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/"
+      ],
+      "others": [
+        "/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/"
       ]
     },
     {
@@ -14481,6 +15392,21 @@
       ]
     },
     {
+      "title": "ESPHome Cookbook | Seeed Studio Wiki",
+      "keepPathname": "/EE04_with_esphome_advanced/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/EE04_with_esphome_advanced/",
+        "/ogdiy_kit_works_with_esphome/",
+        "/xiao_075inch_epaper_panel_esphome/"
+      ],
+      "others": [
+        "/ogdiy_kit_works_with_esphome/",
+        "/xiao_075inch_epaper_panel_esphome/"
+      ]
+    },
+    {
       "title": "Fine-tune Isaac GR00T N1.5 for LeRobot SO-101 Arm and Deploy on Jetson Thor | Seeed Studio Wiki",
       "keepPathname": "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/",
       "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/3081",
@@ -14494,6 +15420,19 @@
       ]
     },
     {
+      "title": "Flash Firmware | Seeed Studio Wiki",
+      "keepPathname": "/flash_meshtastic_kit/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/flash_meshtastic_kit/",
+        "/jetson_developtool_flash_firmware/"
+      ],
+      "others": [
+        "/jetson_developtool_flash_firmware/"
+      ]
+    },
+    {
       "title": "Quick Start | Seeed Studio Wiki",
       "keepPathname": "/ModelAssistant_Introduce_Quick_Start/",
       "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/3148",
@@ -14502,12 +15441,12 @@
         "/Get_Started_with_SenseCAP_T2000_tracker/",
         "/ModelAssistant_Introduce_Quick_Start/",
         "/quick_start_with_M2_MP/",
-        "/r1225_quick_start/"
+        "/recamera_pro_api_quick_start/"
       ],
       "others": [
         "/Get_Started_with_SenseCAP_T2000_tracker/",
         "/quick_start_with_M2_MP/",
-        "/r1225_quick_start/"
+        "/recamera_pro_api_quick_start/"
       ]
     },
     {
@@ -14564,12 +15503,27 @@
         "/J401_carrierboard_Hardware_Interfaces_Usage/",
         "/j401_mini_carrierboard_hardware_interfaces_usage/",
         "/j501_carrier_board_interfaces_usage/",
-        "/recomputer_jetson_robotics_j401_getting_started/"
+        "/recomputer_jetson_robotics_j401_getting_started/",
+        "/recomputer_jetson_robotics_j601_interfaces_usage/"
       ],
       "others": [
         "/j401_mini_carrierboard_hardware_interfaces_usage/",
         "/j501_carrier_board_interfaces_usage/",
-        "/recomputer_jetson_robotics_j401_getting_started/"
+        "/recomputer_jetson_robotics_j401_getting_started/",
+        "/recomputer_jetson_robotics_j601_interfaces_usage/"
+      ]
+    },
+    {
+      "title": "Installation | Seeed Studio Wiki",
+      "keepPathname": "/jetson_developtool_installation/",
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/4904",
+      "keepDiscussionNumber": 4904,
+      "pages": [
+        "/jetson_developtool_installation/",
+        "/ModelAssistant_Introduce_Installation/"
+      ],
+      "others": [
+        "/ModelAssistant_Introduce_Installation/"
       ]
     },
     {
@@ -14596,6 +15550,21 @@
       ],
       "others": [
         "/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk/"
+      ]
+    },
+    {
+      "title": "MeshCore Source Code Development Tutorial | Seeed Studio Wiki",
+      "keepPathname": "/meshcore_source_code_pratical_tutorial_l1/",
+      "keepDiscussionUrl": null,
+      "keepDiscussionNumber": null,
+      "pages": [
+        "/meshcore_source_code_pratical_tutorial_l1/",
+        "/meshcore_source_code_pratical_tutorial_solar_node/",
+        "/meshcore_source_code_pratical_tutorial_t1000_e/"
+      ],
+      "others": [
+        "/meshcore_source_code_pratical_tutorial_solar_node/",
+        "/meshcore_source_code_pratical_tutorial_t1000_e/"
       ]
     },
     {
@@ -14744,6 +15713,19 @@
       ]
     },
     {
+      "title": "Arduino Cookbook | Seeed Studio Wiki",
+      "keepPathname": "/ogdiy_kit_works_with_arduino/",
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/4931",
+      "keepDiscussionNumber": 4931,
+      "pages": [
+        "/ogdiy_kit_works_with_arduino/",
+        "/xiao_075inch_epaper_panel_arduino/"
+      ],
+      "others": [
+        "/xiao_075inch_epaper_panel_arduino/"
+      ]
+    },
+    {
       "title": "Advanced Media Controls | Seeed Studio Wiki",
       "keepPathname": "/reachymini_platforms_reachy_mini_media_advanced_controls/",
       "keepDiscussionUrl": null,
@@ -14769,6 +15751,19 @@
       "others": [
         "/recamera_gimbal_hardware_and_specs/",
         "/recamera_hq_poe_hardware/"
+      ]
+    },
+    {
+      "title": "Hardware Usage | Seeed Studio Wiki",
+      "keepPathname": "/seeedstudio_round_display_usage/",
+      "keepDiscussionUrl": "https://github.com/Seeed-Studio/wiki-documents/discussions/4277",
+      "keepDiscussionNumber": 4277,
+      "pages": [
+        "/recamera_pro_hardware_usage/",
+        "/seeedstudio_round_display_usage/"
+      ],
+      "others": [
+        "/recamera_pro_hardware_usage/"
       ]
     },
     {
@@ -14982,6 +15977,22 @@
         "/Seeed_Elderly/weekly_wiki/2026/wiki260302/",
         "/Seeed_Elderly/weekly_wiki/2026/wiki260309/",
         "/Seeed_Elderly/weekly_wiki/2026/wiki260316/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260323/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260330/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260406/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260413/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260420/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260427/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260511/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260518/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260525/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260601/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260608/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260615/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260622/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260629/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260706/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260713/",
         "/weekly_wiki/"
       ],
       "others": [
@@ -15113,7 +16124,23 @@
         "/Seeed_Elderly/weekly_wiki/2026/wiki260209/",
         "/Seeed_Elderly/weekly_wiki/2026/wiki260302/",
         "/Seeed_Elderly/weekly_wiki/2026/wiki260309/",
-        "/Seeed_Elderly/weekly_wiki/2026/wiki260316/"
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260316/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260323/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260330/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260406/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260413/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260420/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260427/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260511/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260518/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260525/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260601/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260608/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260615/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260622/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260629/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260706/",
+        "/Seeed_Elderly/weekly_wiki/2026/wiki260713/"
       ]
     },
     {

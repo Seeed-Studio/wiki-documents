@@ -9,7 +9,7 @@ last_update:
   date: 09/30/2024
   author: Evelyn Chen
 createdAt: '2024-10-08'
-updatedAt: '2026-01-07'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/wio_sx1262_with_xiao_esp32s3_kit/
 ---
 
@@ -143,6 +143,12 @@ Original FPC Antenna: Only for **testing**. For reliable requirments, please pur
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/10.png" style={{width:700, height:'auto'}}/></div></td>
  </tr>
  <tr>
+     <th>Wio-SX1262 extension board comparation</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/extension_comparation.jpg" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
      <th>XIAO ESP32S3 front indication diagram</th>
  </tr>
  <tr>
@@ -161,6 +167,10 @@ Original FPC Antenna: Only for **testing**. For reliable requirments, please pur
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/13.png" style={{width:700, height:'auto'}}/></div></td>
  </tr>
 </table>
+
+:::note
+Please note that the `Wio-SX1262 for XIAO ESP32S3` uses a B2B connection, while `Wio-SX1262 for XIAO nRF52840` uses a through-hole pin header connection; both expansion boards must be used with the corresponding XIAO development board.
+:::
 
 ## Video Instruction
 

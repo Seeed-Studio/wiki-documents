@@ -1,6 +1,6 @@
 ---
 description: Referência para os Blocos de Ferramentas disponíveis ao criar um aplicativo SenseCraft AI.
-title: Blocos de Ferramentas
+title: Tool Blocks
 keywords:
   - tool blocks
   - sensecraft ai
@@ -11,16 +11,16 @@ last_update:
   date: 03/30/2026
   author: Rida
 createdAt: '2026-03-30'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/application/tool-blocks/
 ---
-# Usando Blocos de Ferramentas
+# Usando Tool Blocks
 
 No fluxo de implantação, você pode inserir recursos integrados do SenseCraft AI com um clique. Eles simplificam tanto a sua experiência de criação quanto a implantação para o usuário final.
 
-## Visão com IA
+## AI Vision
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M12 4c2.787 0 5.263 1.257 7.026 2.813c.885.781 1.614 1.658 2.128 2.531c.505.857.846 1.786.846 2.656s-.34 1.799-.846 2.656c-.514.873-1.243 1.75-2.128 2.531C17.263 18.743 14.786 20 12 20c-2.787 0-5.263-1.257-7.026-2.813c-.885-.781-1.614-1.658-2.128-2.531C2.34 13.799 2 12.87 2 12s.34-1.799.846-2.656c.514-.873 1.243-1.75 2.128-2.531C6.737 5.257 9.214 4 12 4m0 2c-2.184 0-4.208.993-5.702 2.312c-.744.656-1.332 1.373-1.729 2.047C4.163 11.049 4 11.62 4 12s.163.951.569 1.641c.397.674.985 1.39 1.729 2.047C7.792 17.007 9.816 18 12 18s4.208-.993 5.702-2.312c.744-.657 1.332-1.373 1.729-2.047c.406-.69.569-1.261.569-1.641s-.163-.951-.569-1.641c-.397-.674-.985-1.39-1.729-2.047C16.208 6.993 14.184 6 12 6m0 3q.132 0 .261.011a2 2 0 0 0 2.728 2.728A3 3 0 1 1 12 9"/></svg>Implemente modelos de visão com IA para reconhecimento, detecção, classificação de objetos e tarefas relacionadas em hardware compatível. Os resultados de inferência podem ser transmitidos em tempo real via MQTT, GPIO ou serial (Serial), dependendo da configuração.
+<svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M12 4c2.787 0 5.263 1.257 7.026 2.813c.885.781 1.614 1.658 2.128 2.531c.505.857.846 1.786.846 2.656s-.34 1.799-.846 2.656c-.514.873-1.243 1.75-2.128 2.531C17.263 18.743 14.786 20 12 20c-2.787 0-5.263-1.257-7.026-2.813c-.885-.781-1.614-1.658-2.128-2.531C2.34 13.799 2 12.87 2 12s.34-1.799.846-2.656c.514-.873 1.243-1.75 2.128-2.531C6.737 5.257 9.214 4 12 4m0 2c-2.184 0-4.208.993-5.702 2.312c-.744.656-1.332 1.373-1.729 2.047C4.163 11.049 4 11.62 4 12s.163.951.569 1.641c.397.674.985 1.39 1.729 2.047C7.792 17.007 9.816 18 12 18s4.208-.993 5.702-2.312c.744-.657 1.332-1.373 1.729-2.047c.406-.69.569-1.261.569-1.641s-.163-.951-.569-1.641c-.397-.674-.985-1.39-1.729-2.047C16.208 6.993 14.184 6 12 6m0 3q.132 0 .261.011a2 2 0 0 0 2.728 2.728A3 3 0 1 1 12 9"/></svg>Implemente modelos de visão de IA para reconhecimento, detecção, classificação de objetos e tarefas relacionadas em hardwares compatíveis. Os resultados de inferência podem ser transmitidos em tempo real via MQTT, GPIO ou serial (Serial), dependendo da configuração.
 
 O bloco de ferramenta atualmente oferece suporte a **Detecção** e **Classificação**. Segmentação e estimativa de pose estão planejadas para uma versão futura.
 
@@ -36,7 +36,7 @@ O bloco de ferramenta atualmente oferece suporte a **Detecção** e **Classifica
 
 - **SenseCraft AI model:** Selecione modelos de alta qualidade compartilhados publicamente pela comunidade na biblioteca de modelos.
 - **My model:** Escolha um modelo da sua lista privada salva.
-- **Upload model:** Envie arquivos de modelo treinados em plataformas de terceiros. Você deve informar o nome do modelo, tipo de tarefa (Task), categorias do modelo (Class ID e Class Name), anexar o arquivo do modelo e selecionar os dispositivos compatíveis. Após o envio, o modelo aparece em **My model**.
+- **Upload model:** Envie arquivos de modelo treinados em plataformas de terceiros. Você deve informar o nome do modelo, tipo de tarefa (Task), categorias do modelo (Class ID e Class Name), anexar o arquivo do modelo e selecionar os dispositivos compatíveis. Após o envio, o modelo aparecerá em **My model**.
 - **Train model:** Para treinar um novo modelo ou retreinar a partir de um existente, abra a entrada de treinamento e siga o assistente. Ao finalizar, abra **Historical models**, escolha **Send to SenseCraft**, conclua o fluxo de upload e salve o resultado em **My model**.
 
 :::caution
@@ -52,14 +52,14 @@ No menu suspenso, escolha o hardware que você realmente usa na lista compatíve
 Ajuste as configurações de inferência e do dispositivo para o seu cenário. Esses valores são gravados no dispositivo como padrões no momento da implantação.
 
 - **Confidence threshold:** Critério para o modelo emitir uma predição final. Aumentar o limite tende a reduzir falsos positivos; diminuí-lo tende a reduzir falsos negativos.
-- **IOU threshold:** Em tarefas de detecção, IoU compara caixas previstas com o valor de referência. Um limite mais alto ajuda a separar objetos sobrepostos, mas pode produzir caixas duplicadas em um único objeto se estiver muito alto. Um limite mais baixo mescla duplicatas, mas pode unir dois objetos próximos se estiver muito baixo.
+- **IOU threshold:** Em tarefas de detecção, o IoU compara caixas previstas com o valor real. Um limite mais alto ajuda a separar objetos sobrepostos, mas pode produzir caixas duplicadas em um único objeto se estiver muito alto. Um limite mais baixo mescla duplicatas, mas pode unir dois objetos próximos se estiver muito baixo.
 
 #### Modo de saída
 
 - **None:** Após ligar, a inferência não inicia até que outro gatilho seja acionado. Adequado para configurações de baixo consumo em que a inferência roda apenas quando necessário.
 - **MQTT:** Inicia a inferência imediatamente após ligar e envia resultados por Wi‑Fi via MQTT.
   - **SenseCraft official service (recommended):** Selecione ou crie um Dev Kit para o seu aplicativo e o MQTT será configurado automaticamente. Abra a [plataforma de dados SenseCraft](https://sensecap.seeed.cc) para visualizar e processar os dados recebidos.
-  - **Third-party service:** Use seu próprio broker MQTT ou um de terceiros e configure os parâmetros manualmente.
+  - **Third-party service:** Use seu próprio broker MQTT ou de terceiros e configure os parâmetros manualmente.
 - **GPIO:** Acione pinos GPIO com sinais de nível.
   - **Trigger conditions:** Defina regras com objeto, condição e limite de confiança.
   - **Trigger actions:** Quando as condições forem atendidas, o dispositivo pode colocar um pino em nível alto/baixo, salvar capturas no cartão SD, acender um LED e assim por diante.
@@ -95,9 +95,9 @@ Protocol:
 - RESET(clear buffer): 0x10，0x06
 ```
 
-## Áudio com IA
+## AI Audio
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M12 3a1 1 0 0 1 .993.883L13 4v16a1 1 0 0 1-1.993.117L11 20V4a1 1 0 0 1 1-1M8 6a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1m8 0a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1M4 9a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1m16 0a1 1 0 0 1 .993.883L21 10v4a1 1 0 0 1-1.993.117L19 14v-4a1 1 0 0 1 1-1"/></svg>Implemente modelos de áudio com IA para reconhecimento de fala em hardware compatível. Os resultados podem ser transmitidos via MQTT, GPIO ou serial, dependendo da configuração.
+<svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M12 3a1 1 0 0 1 .993.883L13 4v16a1 1 0 0 1-1.993.117L11 20V4a1 1 0 0 1 1-1M8 6a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1m8 0a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1M4 9a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1m16 0a1 1 0 0 1 .993.883L21 10v4a1 1 0 0 1-1.993.117L19 14v-4a1 1 0 0 1 1-1"/></svg>Implemente modelos de áudio com IA para reconhecimento de fala em hardwares compatíveis. Os resultados podem ser transmitidos via MQTT, GPIO ou serial, dependendo da configuração.
 
 ### Dispositivos compatíveis
 
@@ -106,8 +106,8 @@ Protocol:
 ### Selecionar um modelo
 
 - **SenseCraft AI model:** Selecione modelos compartilhados pela comunidade na biblioteca.
-- **My model:** Escolha na sua lista privada.
-- **Upload model:** Envie arquivos de modelo treinados em plataformas de terceiros. Informe o nome do modelo e as categorias (Class ID e Class Name). Após o envio, o modelo aparece em **My model**.
+- **My model:** Escolha a partir da sua lista privada.
+- **Upload model:** Envie arquivos de modelo treinados em plataformas de terceiros. Informe o nome do modelo e as categorias (Class ID e Class Name). Após o envio, o modelo aparecerá em **My model**.
 - **Train model:** Treine um modelo novo ou atualizado e, em seguida, envie-o para o SenseCraft a partir de **Historical models**, como nos modelos de visão.
 
 :::caution
@@ -116,7 +116,7 @@ Quando você publica para a comunidade um aplicativo que inclui um modelo privad
 
 ### Selecionar dispositivo
 
-Modelos de áudio atualmente oferecem suporte apenas ao XIAO ESP32S3 Sense.
+Atualmente, modelos de áudio são compatíveis apenas com XIAO ESP32S3 Sense.
 
 ### Parâmetros recomendados
 
@@ -125,7 +125,7 @@ Ajuste finamente os valores para o seu cenário.
 - **Confidence threshold:** Mesmo papel que em visão; ajuste o equilíbrio entre saídas perdidas e espúrias.
 - **Output mode:** Caminho de saída padrão para o modelo de áudio.
 
-## Vibração com IA
+## AI Vibration
 
 <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M7.71 5.012a1 1 0 0 1 .76.582l1.147 2.582l2.524-2.84a1 1 0 0 1 1.662.258l1.147 2.582l2.525-2.84a1 1 0 0 1 1.661.258l1.778 4a1 1 0 0 1-1.828.812L17.94 7.824l-2.525 2.84a1 1 0 0 1-1.661-.258l-1.148-2.582l-2.524 2.84a1 1 0 0 1-1.661-.258L7.272 7.824l-2.525 2.84a1 1 0 0 1-1.494-1.328l3.555-4a1 1 0 0 1 .901-.324m0 8a1 1 0 0 1 .76.582l1.147 2.582l2.524-2.84a1 1 0 0 1 1.662.258l1.147 2.582l2.525-2.84a1 1 0 0 1 1.661.258l1.778 4a1 1 0 0 1-1.828.812l-1.147-2.582l-2.525 2.84a1 1 0 0 1-1.661-.258l-1.148-2.582l-2.524 2.84a1 1 0 0 1-1.661-.258l-1.148-2.582l-2.525 2.84a1 1 0 0 1-1.494-1.328l3.555-4a1 1 0 0 1 .901-.324"/></svg>Implemente detecção de anomalias de vibração aprendendo a vibração “normal” e sinalizando desvios.
 
@@ -135,14 +135,14 @@ Ajuste finamente os valores para o seu cenário.
 
 ### Parâmetros recomendados
 
-Ajuste amostragem, comportamento ao ligar, GPIO e saída para a sua configuração.
+Ajuste amostragem, comportamento na energização, GPIO e saída para a sua configuração.
 
-- **Sampling window:** Amostras por unidade de tempo. Muito grande deixa a inferência lenta; muito pequena pode subajustar a vibração normal.
+- **Sampling window:** Amostras por unidade de tempo. Muito grande deixa a inferência mais lenta; muito pequena pode subajustar a vibração normal.
 - **Enable default power-on inference:** Quando desligado, a inferência não inicia automaticamente ao ligar; use um gatilho externo para baixo consumo.
 - **GPIO:** Acione pinos em caso de vibração anormal — por exemplo, definir um nível ou alternar um LED.
 - **Output mode:** Caminho de saída padrão para o modelo de vibração.
 
-## Implantar Aplicativo em Contêiner
+## Implantar Container App
 
 <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M12.01 2.378a2.5 2.5 0 0 1 2.985 2.29l.005.161v.551c1.503-.3 2.9.792 2.995 2.288l.005.161v.55c1.503-.3 2.9.793 2.995 2.289l.005.162v6.53a3 3 0 0 1-2.239 2.902l-.173.04l-6.598 1.32a2.5 2.5 0 0 1-2.985-2.29L9 19.17v-.55l-.01.002a2.5 2.5 0 0 1-2.985-2.29L6 16.17v-.55l-.01.002a2.5 2.5 0 0 1-2.985-2.29L3 13.17V6.64a3 3 0 0 1 2.238-2.902l.174-.04zm6.392 7.961l-6.598 1.32a1 1 0 0 0-.804.98v6.531a.5.5 0 0 0 .598.49l6.598-1.32a1 1 0 0 0 .804-.98v-6.53a.5.5 0 0 0-.598-.49m-3-3L8.804 8.66A1 1 0 0 0 8 9.64v6.531a.5.5 0 0 0 .598.49L9 16.58v-3.94a3 3 0 0 1 2.412-2.942L16 8.78v-.95a.5.5 0 0 0-.598-.49m-3-3L5.804 5.66A1 1 0 0 0 5 6.64v6.531a.5.5 0 0 0 .598.49L6 13.58V9.64a3 3 0 0 1 2.412-2.942L13 5.78v-.95a.5.5 0 0 0-.598-.49"/></svg>Implante aplicativos em contêiner em dispositivos de borda em poucos cliques.
 
@@ -153,40 +153,40 @@ A biblioteca integrada inclui (e continua crescendo):
 - **Home Assistant** — hub de automação residencial de código aberto
 - **Ollama** — execute modelos de linguagem grandes de código aberto localmente na borda
 - **OpenClaw** — plataforma de código aberto para implantar e gerenciar aplicativos de borda conteinerizados
-- **reComputer AI Suite** — Computer Vision (CV), Vision-Language Models (VLM) e Large Language Models (LLM) otimizados para hardware reComputer
+- **reComputer AI Suite** — Computer Vision (CV), Vision-Language Models (VLM) e Large Language Models (LLM) otimizados para hardwares reComputer
 
 Compatível com **M1 Gate**, **Raspberry Pi 4 / 5**, **NVIDIA Jetson** e **Seeed reComputer**.
 
 ### Como funciona com o SenseCraft Fleet
 
-Os aplicativos em contêiner são gerenciados no [**SenseCraft Fleet**](https://seeed-fleet.com) e implantados por meio do [**SenseCraft AI**](https://sensecraft.seeed.cc/ai) (em **`Applications`**):
+Os aplicativos em contêiner são gerenciados no [**SenseCraft Fleet**](https://seeed-fleet.com?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_home) e implantados por meio do [**SenseCraft AI**](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) (em **`Applications`**):
 
-- **SenseCraft Fleet** é onde as imagens de contêiner ficam armazenadas — você envia as imagens, define o esquema de configuração e vincula seus dispositivos.
+- **SenseCraft Fleet** é onde as imagens de contêiner ficam armazenadas — você faz upload das imagens, define o esquema de configuração e vincula seus dispositivos.
 - **SenseCraft AI** é onde você escolhe um app da sua biblioteca, seleciona um dispositivo de destino, o configura e aciona a implantação.
 
-Sua conta SenseCraft AI é vinculada automaticamente ao SenseCraft Fleet; dispositivos vinculados e apps permanecem sincronizados em ambas as plataformas.
+Sua conta do SenseCraft AI é vinculada automaticamente ao SenseCraft Fleet; dispositivos vinculados e apps permanecem sincronizados em ambas as plataformas.
 
 ### Plataformas compatíveis
 
-Os apps são específicos de plataforma — a imagem e o dispositivo de destino devem corresponder:
+Os apps são específicos da plataforma — a imagem e o dispositivo de destino devem corresponder:
 
 - **Linux / ARM64** — por exemplo, Seeed reComputer, Raspberry Pi 4 / 5, NVIDIA Jetson, M1 Gate
 - *Linux / AMD64 — em breve*
 
 ### Fluxo de configuração
 
-**Selecione um app:** Escolha na biblioteca de apps no SenseCraft Fleet — o catálogo integrado. Se preferir enviar seu app em contêiner personalizado, será necessário adicioná‑lo por meio do [**SenseCraft Fleet**](https://seeed-fleet.com).
+**Selecione um app:** Escolha na biblioteca de apps no SenseCraft Fleet — o catálogo integrado. Se preferir fazer upload do seu app em contêiner personalizado, será necessário adicioná‑lo por meio do [**SenseCraft Fleet**](https://seeed-fleet.com?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_home).
 
-**Configure o app:** Cada app expõe os itens de configuração que seu autor definiu no SenseCraft Fleet. Normalmente você não precisa configurar nada, a menos que tenha requisitos específicos.
+**Configure o app:** Cada app expõe os itens de configuração que seu autor definiu no SenseCraft Fleet. Normalmente você não precisará configurar nada, a menos que tenha requisitos específicos.
 
 ### Fluxo de implantação
 
-**Etapa 1 — Selecione um app:** Clique em **Deploy Container App**. O SenseCraft AI carrega toda a sua biblioteca de apps a partir do SenseCraft Fleet (catálogo integrado mais quaisquer apps personalizados que você enviou), cada um exibido com nome, ícone e descrição.
+**Etapa 1 — Selecione um app:** Clique em **Deploy Container App**. O SenseCraft AI carrega toda a sua biblioteca de apps a partir do SenseCraft Fleet (catálogo integrado mais quaisquer apps personalizados que você tenha enviado), cada um exibido com nome, ícone e descrição.
 
 **Etapa 2 – Vincule um dispositivo:** Se você já tiver um dispositivo vinculado, pule para a Etapa 3. Caso contrário, ligue o dispositivo, conecte‑o à rede e então faça a vinculação de acordo com o seu hardware:
 
 - **Dispositivo Seeed executando a imagem de fábrica da Seeed:** Insira os últimos 6 dígitos do **ID da CPU** ou do **endereço MAC** do dispositivo para vinculá‑lo instantaneamente.
-- **Dispositivo Seeed sem a imagem de fábrica ou dispositivo de terceiros:** Obtenha o endereço IP do dispositivo, abra um terminal e faça SSH nele, depois execute o comando de vinculação exibido no fluxo de vinculação.
+- **Dispositivo Seeed sem a imagem de fábrica ou dispositivo de terceiros:** Obtenha o endereço IP do dispositivo, abra um terminal e faça SSH nele, depois execute o comando de vinculação mostrado no fluxo de vinculação.
 
 Quando a vinculação for concluída, o dispositivo aparecerá na sua lista de dispositivos vinculados.
 
@@ -227,15 +227,15 @@ Apps Docker de imagem única são compatíveis hoje. Docker Compose (apps com v�
 
 ### Pré-requisitos:
 
-**Um único arquivo `.bin` mesclado.** Se você tiver binários separados de bootloader, partição e app, mescle‑os antes de enviar.
+**Um único arquivo `.bin` mesclado.** Se você tiver binários separados de bootloader, partição e app, mescle‑os antes de fazer o upload.
 
 - **Arduino IDE 2.x:** Um binário mesclado **só** é produzido quando você executa **Sketch → Export Compiled Binary**. A saída `*.ino.merged.bin` é gravada em uma pasta `build/` ao lado do seu arquivo `.ino`.
-- **Arduino IDE antigo / mesclagem manual:** **Export Compiled Binary** grava arquivos `.bin` separados de bootloader, partição e app — mescle‑os com `esptool.py merge_bin` antes de enviar. Veja o guia no fórum da Seeed Studio: [How to export a single merged `.bin` file from Arduino IDE](https://forum.seeedstudio.com/t/how-to-export-compiled-binary-create-a-single-bin-file-for-production-and-test/274990).
+- **Arduino IDE antigo / mesclagem manual:** **Export Compiled Binary** grava arquivos `.bin` separados de bootloader, partição e app — mescle‑os com `esptool.py merge_bin` antes de fazer o upload. Consulte o guia no fórum da Seeed Studio: [How to export a single merged `.bin` file from Arduino IDE](https://forum.seeedstudio.com/t/how-to-export-compiled-binary-create-a-single-bin-file-for-production-and-test/274990).
 
 ### Fluxo de configuração
 
 1. Clique em **Upload firmware** e envie seu arquivo `.bin`.
-2. **Selecione o tipo de dispositivo** na lista suspensa.
+2. **Selecione o tipo de dispositivo** no menu suspenso.
 
 ### Fluxo de implantação
 
@@ -262,8 +262,8 @@ Se alguma etapa falhar, um pop‑up de erro explica a causa para que você possa
 
 Depois de adicionar o bloco Node-RED, configure o fluxo de uma destas maneiras:
 
-1. **Criar novo fluxo de trabalho:** Conecte‑se à reCamera (com fio ou sem fio), abra o Dashboard dela e edite on‑line.
-2. **Enviar arquivo local:** Envie um fluxo JSON que você já criou. O sistema valida o tipo de arquivo para que ele possa ser analisado de forma confiável.
+1. **Criar novo fluxo de trabalho:** Conecte‑se à reCamera (com fio ou sem fio), abra o Dashboard dela e edite online.
+2. **Fazer upload de arquivo local:** Envie um fluxo JSON que você já tenha criado. O sistema valida o tipo de arquivo para que ele possa ser analisado de forma confiável.
 
 ### Selecione o modelo de visão de IA
 
@@ -279,13 +279,13 @@ Se você usar um modelo privado em **Meu modelo** e publicar o app para a comuni
 
 ## Aily Blockly
 
-<img src="https://github.com/ailyProject.png" alt="" style={{width:'1.25em',height:'1.25em',verticalAlign:'-0.3em',marginRight:'0.35em',borderRadius:'4px'}}/>[Aily Blockly](https://aily.pro) é um ambiente de programação visual. Com este bloco você pode gravar, em uma única etapa, programas que criou no Aily Blockly em dispositivos de borda.
+<img src="https://github.com/ailyProject.png" alt="" style={{width:'1.25em',height:'1.25em',verticalAlign:'-0.3em',marginRight:'0.35em',borderRadius:'4px'}}/>[Aily Blockly](https://aily.pro) é um ambiente de programação visual. Com este bloco, você pode gravar em um passo programas criados no Aily Blockly em dispositivos de borda.
 
 ### Recursos oficiais
 
 - [GitHub](https://github.com/ailyProject/aily-blockly)
-- [Documentation - Global site](https://aily.pro/doc)
-- [Documentation - Mainland China site](https://yiyu.pro/doc)
+- [Documentação - site global](https://aily.pro/doc)
+- [Documentação - site da China continental](https://yiyu.pro/doc)
 
 ### Dispositivos compatíveis
 
@@ -310,13 +310,13 @@ Se você usar um modelo privado em **Meu modelo** e publicar o app para a comuni
 
 ### Vincular ID do projeto
 
-Insira o código do projeto que aponta para o seu template público do Aily Blockly.
+Insira o código do projeto que aponta para o seu modelo público do Aily Blockly.
 
 #### Como obter um ID de projeto
 
-1. Construa seu projeto no Aily Blockly e clique em **`Build (F5)`** para compilar.
+1. Crie seu projeto no Aily Blockly e clique em **`Build (F5)`** para compilar.
 2. Após uma compilação bem-sucedida, abra o painel **Cloud Space** e clique em **`Sync this project to cloud`**.
 3. Seu ID de projeto aparece na área indicada (**`ID: …`**); use apenas os números.
-4. Repita estas etapas sempre que você alterar o projeto para que a cópia na nuvem permaneça atualizada.
+4. Repita essas etapas sempre que você alterar o projeto para que a cópia na nuvem permaneça atualizada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/tool_blocks/aily-get-project-id.png" alt="Como obter um ID de projeto do Aily Blockly" style={{width:1000, height:'auto'}}/></div>

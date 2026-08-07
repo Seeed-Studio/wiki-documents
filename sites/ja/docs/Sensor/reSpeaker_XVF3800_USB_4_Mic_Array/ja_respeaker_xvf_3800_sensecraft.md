@@ -1,6 +1,6 @@
 ---
-description: SenseCraft AI は Seeed Studio が提供するノーコード／ローコードの AIoT プラットフォームで、reSpeaker XVF3800 のようなエッジデバイスに事前学習済み AI モデルをデプロイできます。ウェイクワード「Lumio」によって、このセットアップで音声制御の AI アプリケーションを実現でき、複雑なコーディングは不要です。
-title: reSpeaker XVF3800 で SenseCraft AI を使う
+description: SenseCraft AI は Seeed Studio が提供するノーコード／ローコードの AIoT プラットフォームで、reSpeaker のようなエッジデバイスに学習済み AI モデルをデプロイできます。ウェイクワード「Lumio」を使うことで、複雑なコーディングなしに音声制御 AI アプリケーションを実現できます。
+title: reSpeaker と SenseCraft AI
 keywords:
   - SenseCraft
   - reSpeaker XVF3800
@@ -8,26 +8,103 @@ keywords:
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_5.jpg
 slug: /respeaker_xvf3800_sensecraft
 sku: 114993702,114993700
-last_update: 
+last_update:
   date: 6/4/2026
   author: Kasun Thushara
 createdAt: '2026-06-04'
-updatedAt: '2026-06-04'
+updatedAt: '2026-06-18'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_sensecraft/
 ---
 
 
 ## はじめに
 
-SenseCraft AI は、Seeed Studio のノーコード／ローコード AI プラットフォームで、reSpeaker XVF3800 などのエッジデバイスへの事前学習済み人工知能モデルのデプロイを簡素化します。本ガイドでは、カスタムトリガー「Lumio」を使用したウェイクワード検出用に reSpeaker XVF3800 を構成し、複雑なコードを書くことなく、プロジェクトで音声起動による制御を可能にすることに焦点を当てます。SenseCraft AI を使えば、ウェイクワードイベントをすばやくテスト、プレビューし、ハードウェアワークフローに統合できます。また、このプラットフォームでは、特定の音イベントやカスタムウェイクワードを検出するための独自のカスタムモデルを作成してアップロードすることもでき、用途に合わせて音声インタラクションを柔軟にカスタマイズできます。
+SenseCraft AI は、reSpeaker などのエッジデバイスへの学習済み人工知能モデルのデプロイを簡素化する、Seeed Studio のノーコード／ローコード AI プラットフォームです。本ガイドでは、カスタムトリガー「Lumio」を使用したウェイクワード検出用に reSpeaker を設定し、複雑なコードを書くことなくプロジェクトで音声起動による制御を可能にする方法に焦点を当てます。SenseCraft AI を使用すると、ウェイクワードイベントをハードウェアワークフローにすばやくテスト、プレビュー、統合できます。また、このプラットフォームでは、特定の音イベントやカスタムウェイクワードを検出するための独自モデルを作成してアップロードすることもでき、用途に合わせて音声インタラクションを柔軟にカスタマイズできます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-    </a>
+<table>
+  <tr>
+    <th>reSpeaker Lite</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/xiao-res.png"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      または
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 400, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                今すぐ入手 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                今すぐ入手 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
 </div>
+
 
 ## 既存モデルのデプロイ
 
@@ -35,20 +112,27 @@ SenseCraft AI は、Seeed Studio のノーコード／ローコード AI プラ�
 
 ウェイクワードモデルをデプロイする前に、reSpeaker XVF3800 が正しいファームウェアバージョンで動作していることを確認してください。
 
-必要なファームウェアファイルは次のとおりです:
+必要なファームウェアファイルは次のとおりです：
 > `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.7_48k_test5.bin`
 
-このファイルを reSpeaker XVF3800 に書き込むには、デバイス標準の DFU（Device Firmware Update）[手順](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェアを更新する)に従ってください。
+標準の DFU（Device Firmware Update）[手順](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#update-firmware)に従って、このファイルを reSpeaker XVF3800 に書き込んでください。
+
+reSpeaker Lite を使用している場合は、正しいファームウェアバージョンで動作していることを確認してください。
+
+必要なファームウェアファイルは次のとおりです：
+> `respeaker_lite_i2s_dfu_firmware_v1.0.9.bin`
+
+標準の DFU（Device Firmware Update）[手順](https://wiki.seeedstudio.com/ja/reSpeaker_usb_v3/#firmware-download)に従って、このファイルを reSpeaker Lite に書き込んでください。
 
 
-### ステップ 2: SenseCraft AI プラットフォームに移動する
+### ステップ 2: SenseCraft AI プラットフォームへ移動する
 
-Web ブラウザを開き、次のページにアクセスします:
+Web ブラウザを開き、次のページにアクセスします：
 > **https://sensecraft.seeed.cc/**
 
 ### ステップ 3: トレーニングセクションにアクセスする
 
-メインナビゲーションメニューから:
+メインナビゲーションメニューから：
 1. **Products** をクリック
 2. **SenseCraft AI** を選択
 3. **Training AI Models** を選択
@@ -61,7 +145,7 @@ Web ブラウザを開き、次のページにアクセスします:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_0.jpg" alt="pir" width={800} height="auto" /></p>
 
-2. ワークスペースで、アクティブなデバイスタイプとして **reSpeaker** が設定されていることを確認します
+2. アクティブなデバイスタイプとして **reSpeaker** がワークスペースに設定されていることを確認します
 3. デバイスリストから **reSpeaker** を選択します
 4. **Connect** ボタンをクリックしてデバイスとの接続を確立します
 
@@ -69,7 +153,7 @@ Web ブラウザを開き、次のページにアクセスします:
 
 ### ステップ 5: 実行中のモデルを置き換える
 
-接続が確立されたら、デバイス上の既存モデルを置き換えます:
+接続が完了したら、デバイス上の既存モデルを置き換えます：
 
 1. 「Replace the device running model」の下にある **Model** セクションを探します
 2. **Select Model** をクリックします
@@ -82,35 +166,35 @@ Web ブラウザを開き、次のページにアクセスします:
 
 :::note
 
-デプロイするモデルは **Lumos** と呼ばれます。これは、エッジデバイス向けに効率的で低レイテンシな音声インタラクション機能を提供するよう設計された軽量音声認識モデルです。音声のスペクトル特徴を解析することで、このモデルは複雑な環境雑音の中でも特定のウェイクワード **「Lumos」** を高精度に検出できます。
+デプロイしているモデルは **Lumos** と呼ばれます。これは、エッジデバイス向けに効率的で低レイテンシな音声インタラクション機能を提供するよう設計された軽量音声認識モデルです。音声のスペクトル特徴を解析することで、複雑な環境雑音の中でも特定のウェイクワード **「Lumos」** を高精度に検出できます。
 :::
 
 
 ### ステップ 6: モデルのデプロイを確認する
 
 1. モデルの詳細を示すダイアログボックスが表示されます
-2. **Confirm** をクリックして、モデルをデバイスにフラッシュする処理を続行します
-3. モデルが reSpeaker XVF3800 にフラッシュされるまでしばらく待ちます
+2. **Confirm** をクリックして、モデルをデバイスに書き込む処理を続行します
+3. モデルが reSpeaker に書き込まれるまでしばらく待ちます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_4.jpg" alt="pir" width={800} height="auto" /></p>
 
 ### ステップ 8: ウェイクワード検出をテストする
 
-デプロイが正常に完了すると、次のものが表示されます:
+デプロイが正常に完了すると、次のものが表示されます：
 
 - **オーディオスペクトラムの可視化** – リアルタイムの音声入力を表示
-- **2 つの検出クラス**:
+- **2 つの検出クラス**：
   - *Background Noise*
   - *Lumos*
 
-ウェイクワードをテストするには:
-1. **「Lumos」** という単語を reSpeaker のマイクに向かってはっきりと話します
+ウェイクワードをテストするには：
+1. **「Lumos」** とはっきり発音して reSpeaker のマイクに話しかけます
 2. Lumos クラスの信頼度レベルが上昇する様子を確認します
 3. 必要に応じて **threshold parameter** を調整し、検出感度を微調整します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_5.jpg" alt="pir" width={800} height="auto" /></p>
 
-## 独自のオーディオ分類器を学習・デプロイする
+## 独自のオーディオ分類器を学習してデプロイする
 
 ### ステップ 1: Training タブを開く
 
@@ -123,7 +207,7 @@ Web ブラウザを開き、次のページにアクセスします:
 
 ### ステップ 2: reSpeaker デバイスを接続する
 
-**Audio Classification / Detection** の下で:
+**Audio Classification / Detection** の下で：
 
 1. 入力デバイスとして **reSpeaker Microphone** が選択されていることを確認します
 2. **Connect** ボタンをクリックして接続を確立します
@@ -172,53 +256,53 @@ Web ブラウザを開き、次のページにアクセスします:
 
 **4.3 サンプルを確認して適用する**
 
-1. 収集後、**2 つのサンプル** のプレビューが表示されます
+1. 収集後、**2 サンプル** のプレビューが表示されます
 2. サンプルを再生または確認します
 3. 品質に満足したら **Apply** を押します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_9.jpg" alt="pir" width={800} height="auto" /></p>
 
-**4.4 さらにサンプルを収集するために繰り返す**
+**4.4 さらにサンプルを収集する**
 
-信頼性の高い検出を実現するには、Grassbreaking クラスについて少なくとも **8 サンプル** を収集できるまで、データ収集プロセスを繰り返してください。
+信頼性の高い検出を実現するため、Grassbreaking クラスについて少なくとも **8 サンプル** を収集できるまで、データ収集プロセスを繰り返してください。
 
-**良いサンプルのためのヒント:**
-- 草が折れる音の強さを変えてみる
-- 少し異なる位置や角度からサンプルを収集する
-- 音がバックグラウンドノイズよりもはっきり聞こえるようにする
+**良いサンプルを得るためのヒント：**
+- 草が折れる音の強さを変えて収集する
+- 位置や角度を少し変えてサンプルを収集する
+- バックグラウンドノイズよりもはっきりと音が聞こえるようにする
 
 
 ### ステップ 5: モデルを学習させる
 
 十分なデータを収集したら、モデルを学習させます。
 
-#### 5.1 Training ステップに移動する
+#### 5.1 トレーニングステップに移動する
 
-インターフェースで **Step 2: Training** に移動します。
+インターフェースの **Step 2: Training** に移動します。
 
 #### 5.2 デバイス選択を確認する
 
-学習対象デバイスとして **reSpeaker** が選択されていることを確認します。
+トレーニング対象デバイスとして **reSpeaker** が選択されていることを確認します。
 
-#### 5.3 学習を開始する
+#### 5.3 トレーニングを開始する
 
 1. **Train** ボタンを押します
-2. 学習プロセスが完了するまで数分待ちます
-3. 学習中はブラウザを閉じたり、デバイスの接続を切断したりしないでください
+2. トレーニングプロセスが完了するまで数分待ちます
+3. トレーニング中はブラウザを閉じたり、デバイスの接続を切断したりしないでください
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_12.jpg" alt="pir" width={800} height="auto" /></p>
 
-#### 5.4 学習結果を確認する
+#### 5.4 トレーニング結果を確認する
 
-学習が完了すると、学習済みクラスが次の情報とともに表示されます:
-- 信頼度レベルを示す **アニメーション付き確率バー**
+トレーニングが完了すると、学習済みクラスが次の内容とともに表示されます：
+- 信頼度レベルを示す**アニメーション付き確率バー**
 - ライブ音声入力に基づくリアルタイム予測
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_13.jpg" alt="pir" width={800} height="auto" /></p>
 
 ### ステップ 6: モデルを reSpeaker にデプロイする
 
-**6.1 デプロイメントステップに進む**
+**6.1 デプロイ手順へ移動**
 
 インターフェースで **Step 3: Deploy** に移動します。
 
@@ -230,22 +314,22 @@ Web ブラウザを開き、次のページにアクセスします:
 
 
 2. 確認ダイアログが表示されます
-3. **Confirm** して、TFLM（TensorFlow Lite Micro）モデルを reSpeaker の XIAO ESP32-S3 にプッシュします
+3. デプロイを**確認**して、TFLM (TensorFlow Lite Micro) モデルを reSpeaker の XIAO ESP32-S3 にプッシュします
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_15.jpg" alt="pir" width={600} height="auto" /></p>
 
 **6.3 完了を待つ**
 
-デプロイプロセスには少し時間がかかる場合があります。デプロイ成功を示す確認メッセージが表示されるまで待ちます。
+デプロイ処理には少し時間がかかる場合があります。デプロイが成功したことを示す確認メッセージが表示されるまでお待ちください。
 
 
 ### ステップ 7: リアルタイム検出をモニタリングする
 
-デプロイが正常に完了したら:
+デプロイが正常に完了したら：
 
-1. インターフェースに、検出された各クラスの **アニメーション付き信頼度バー** が表示されます
-2. 草が折れる音を出して検出をテストします
+1. インターフェースに、検出された各クラスの**アニメーション付き信頼度バー**が表示されます
+2. 検出をテストするために、話しかけるか草が折れる音を出します
 3. **Grassbreaking** クラスの信頼度レベルが上昇する様子を確認します
 4. カスタムサウンドが検出されたときに **Background Noise** の信頼度が低下する様子を確認します
 
@@ -253,9 +337,9 @@ Web ブラウザを開き、次のページにアクセスします:
 
 
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -3,31 +3,38 @@ description: Getting Started with Seeed Studio XIAO SAMD21
 title: Getting Started with Seeed Studio XIAO SAMD21
 keywords:
   - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/get_sarted.webp
 slug: /Seeeduino-XIAO
 sku: 110010004, 102010388, 102010328
 last_update:
-  date: 1/11/2023
+  date: 6/30/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-05-27'
+updatedAt: '2026-07-11'
 url: https://wiki.seeedstudio.com/Seeeduino-XIAO/
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Getting Started with Seeed Studio XIAO SAMD21
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
-
-The Seeed Studio XIAO SAMD21, which used to be named Seeeduino XIAO, is the first debut of the [Seeed Studio XIAO family, a series of powerful thumb-size dev boards compatible with Arduino](https://www.seeedstudio.com/xiao-series-page). It carries the powerful ATSAMD21G18A-MU which is a low-power microcontroller. On the other hand, this little board has good performance in processing but needs less power. It is designed in a tiny size and can be used for wearable devices and small projects.
-
-Seeed Studio XIAO SAMD21 has 14 PINs, which can be used for 11 digital interfaces, 11 mock interfaces, 10 PWM interfaces (d1-d10), 1 DAC output pin D0, 1 SWD pad interface, 1 I2C interface, 1 SPI interface, 1 UART interface, Serial communication indicator (T/R), Blink light (L) through pin multiplexing. The colors of LEDs(Power, L,RX,TX) are green, yellow, blue, and blue. Moreover, Seeed Studio XIAO SAMD21 has a Type-C interface that can supply power and download code. There are two reset buttons, you can short-connect them to reset the board.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/get_1.jpg" alt="pir" width={400} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
+
+## Overview
+
+The Seeed Studio XIAO SAMD21, which used to be named Seeeduino XIAO, is the first debut of the [Seeed Studio XIAO family, a series of powerful thumb-size dev boards compatible with Arduino](https://www.seeedstudio.com/xiao-series-page). It carries the powerful ATSAMD21G18A-MU which is a low-power microcontroller. On the other hand, this little board has good performance in processing but needs less power. It is designed in a tiny size and can be used for wearable devices and small projects.
+
+Seeed Studio XIAO SAMD21 has 14 PINs, which can be used for 11 digital interfaces, 11 analog interfaces, 10 PWM interfaces (d1-d10), 1 DAC output pin D0, 1 SWD pad interface, 1 I2C interface, 1 SPI interface, 1 UART interface, Serial communication indicator (T/R), Blink light (L) through pin multiplexing. The colors of LEDs(Power, L,RX,TX) are green, yellow, blue, and blue. Moreover, Seeed Studio XIAO SAMD21 has a Type-C interface that can supply power and download code. There are two reset buttons, you can short-connect them to reset the board.
+
+Powered by Microchip's SAMD21G18A ARM Cortex-M0+ 32-bit processor, XIAO SAMD21 Plus brings enhanced flexibility and expandability to the tiny and versatile XIAO SAMD21. While maintaining all the powerful features including Arduino, MicroPython, and PlatformIO compatibility, the Plus variant features redesigned castellations and backside pad layout, offering 16 additional GPIOs, integrated Li-ion battery management, dedicated Reset and Boot buttons, and an onboard programmable WS2812 RGB LED. It is ideal for advanced IoT projects, battery-powered wearables, embedded applications, and production-ready SoM designs.
 
 ## Documentations
 
@@ -40,21 +47,21 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 |Seeed Studio XIAO SAMD21 GPIO Usage|Seeed Studio XIAO SAMD21 with GPS(UART)|
 |Seeed Studio XIAO SAMD21 Resources|Single Cycle IOBUS|
 
-### CircuitPython on Seeed Studio XIAO SAMD21
+<!-- ### CircuitPython on Seeed Studio XIAO SAMD21
 
-- Get started with [**CircuitPython on Seeed Studio XIAO SAMD21 **](https://wiki.seeedstudio.com/Seeeduino-XIAO-CircuitPython).
+- Get started with [**CircuitPython on Seeed Studio XIAO SAMD21 **](https://wiki.seeedstudio.com/Seeeduino-XIAO-CircuitPython). -->
 
 ## Features
 
-- Powerful CPU: ARM® Cortex®-M0+ 32bit 48MHz microcontroller(SAMD21G18) with 256KB Flash,32KB SRAM.
-- Flexible compatibility: Compatible with Arduino IDE.
-- Easy project operation: Breadboard-friendly.
-- Small size: As small as a thumb(21x17.8mm) for wearable devices and small projects.
-- Multiple development interfaces: 11 digital/analog pins, 10 PWM Pins, 1 DAC output, 1 SWD Bonding pad interface, 1 I2C interface, 1 UART interface, 1 SPI interface.
+- Powerful MCU: Microchip ATSAMD21G18A Arm® Cortex®-M0+ processor at 48 MHz, with 256 KB Flash, 32 KB SRAM, and native USB support.
+- Expanded I/O: XIAO SAMD21 Plus retains the standard 14-pin XIAO layout and adds 16 GPIOs through 1.27 mm backside SMD castellations, with PWM, DAC, I2C, UART, SPI, I2S, and SWD support.
+- Integrated Power Management: Supports direct Li-ion battery connection, onboard charging, backflow protection, and charge-status indication.
+- Flexible Development: Compatible with Arduino IDE, PlatformIO, CircuitPython, and TinyGo.
+- Compact and Ecosystem-Ready: Maintains the 21 × 17.8 mm breadboard-friendly XIAO form factor while adopting the standardized XIAO Plus backside layout for expansion boards and custom carrier designs.
 
 ## Specification
 
-| Product Name | Seeed Studio XIAO SAMD21 |
+<!-- | Product Name | Seeed Studio XIAO SAMD21 |
 |-------------|-------------------------|
 | **Chipset** | [Microchip SAMD21G18](https://www.microchip.com/en-us/product/atsamd21g18 ) |
 | **Processor** | ARM Cortex-M0+ processor running at up to 48 MHz |
@@ -68,17 +75,135 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 | **Software Compatibility** | Arduino, PlatformIO, MicroPython, CircuitPython, Zephyr<br/>[Exhibition for XIAO Series - Seeed Studio Wiki](https://wiki.seeedstudio.com/xiao_topic_page/ ) |
 | **Working Temperature** | -40 to 85°C |
 | **Dimensions** | 21×17.8mm |
-| **Variants** | [Seeed Studio XIAO SAMD21 (Pre-Soldered) - Seeed Studio](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html  )<br/>[Seeed Studio XIAO SAMD21 - Arduino Microcontroller - SAMD21 Cortex M0+ (3 PCs） - Seeed Studio](https://www.seeedstudio.com/Seeeduino-XIAO-3Pcs-p-4546.html  ) |
+| **Variants** | [Seeed Studio XIAO SAMD21 (Pre-Soldered) - Seeed Studio](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html  )<br/>[Seeed Studio XIAO SAMD21 - Arduino Microcontroller - SAMD21 Cortex M0+ (3 PCs） - Seeed Studio](https://www.seeedstudio.com/Seeeduino-XIAO-3Pcs-p-4546.html  ) | -->
+
+<table>
+  <tbody>
+    <tr>
+      <th>Product Name</th>
+      <td>Seeed Studio XIAO SAMD21</td>
+      <td>Seeed Studio XIAO SAMD21 Plus</td>
+    </tr>
+    <tr>
+      <th>Chipset</th>
+      <td colspan="2">
+        <a href="https://www.microchip.com/en-us/product/atsamd21g18">
+          Microchip SAMD21G18
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <th>Processor</th>
+      <td colspan="2">Arm® Cortex®-M0+ processor running at up to 48 MHz</td>
+    </tr>
+    <tr>
+      <th>RAM</th>
+      <td colspan="2">32 KB SRAM</td>
+    </tr>
+    <tr>
+      <th>Flash</th>
+      <td colspan="2">256 KB Flash</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>
+        GPIO Pin ×14<br />
+        Digital Pin ×11<br />
+        Analog Pin ×11<br />
+        DAC ×1<br />
+        I2C ×1<br />
+        UART ×1<br />
+        SPI ×1
+      </td>
+      <td>
+        GPIO Pin ×30<br />
+        Digital Pin ×27<br />
+        Analog Pin ×11<br />
+        DAC ×1<br />
+        I2C ×2<br />
+        UART ×1<br />
+        SPI ×1<br />
+        I2S ×1
+      </td>
+    </tr>
+    <tr>
+      <th>Onboard</th>
+      <td>
+        User LED ×1<br />
+        Power LED ×1<br />
+        TX/RX Status LED ×2
+      </td>
+      <td>
+        User LED ×1<br />
+        Reset Button ×1<br />
+        Boot Button ×1
+      </td>
+    </tr>
+    <tr>
+      <th>Battery Management</th>
+      <td>None</td>
+      <td>Onboard PMIC</td>
+    </tr>
+    <tr>
+      <th>Power</th>
+      <td>
+        Input Voltage (Type-C): 5 V<br />
+        BAT Input: Not supported
+      </td>
+      <td>
+        Input Voltage (Type-C): 5 V<br />
+        BAT Input: 3.7 V single-cell Li-ion/LiPo battery
+      </td>
+    </tr>
+    <tr>
+      <th>BAT-to-3V3 Backflow Protection</th>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Working Temperature</th>
+      <td colspan="2">-40°C to 85°C</td>
+    </tr>
+    <tr>
+      <th>Dimensions</th>
+      <td colspan="2">21 × 17.8 mm</td>
+    </tr>
+    <tr>
+      <th>Software Compatibility</th>
+      <td colspan="2">
+        Arduino, PlatformIO, MicroPython, CircuitPython, Zephyr, and more
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## **Hardware Overview**
 
-### Front
+<Tabs>
+<TabItem value="XIAO SAMD21" label="XIAO SAMD21" default>
+
+### XIAO SAMD21 Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_SAMD21_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### Back
+### XIAO SAMD21 Back
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_SAMD21_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+
+<TabItem value="XIAO SAMD21 Plus" label="XIAO SAMD21 Plus">
+
+### XIAO SAMD21 Plus Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-SAMD21-Plus-Front.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO SAMD21 Plus Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-SAMD21-Plus-Back.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
 
 :::caution
 For general I/O pins:
@@ -87,14 +212,14 @@ Working voltage of MCU is 3.3V. Voltage input connected to general I/O pins may 
 For power supply pins:
 The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows to power the device with a 5V supply via VIN-PIN and 5V-PIN.
 
-It is critical to understand that the VIN and GND pads on the back of the XIAO SAMD21 are not designed for directly connecting a battery, especially not a rechargeable lithium battery (LiPo/Li-Ion). The board lacks the essential battery management circuitry required for safe operation. These pads are simply an alternative power input point that bypasses the board's built-in protection diode. If you wish to power your project with a battery, you must use a dedicated external battery management module that provides charging and protection, and then connect that module's regulated output to the XIAO's 5V or 3V3 pin.
+It is critical to understand that the VIN and GND pads on the back of the XIAO SAMD21 are not designed for directly connecting a battery, especially not a rechargeable lithium battery (LiPo/Li-Ion). The board lacks the essential battery management circuitry required for safe operation. These pads are simply an alternative power input point that bypasses the board's built-in protection diode. If you wish to power your project with a battery, you must use a dedicated external battery management module that provides charging and protection, and then connect that module's regulated output to the XIAO's 5V pin.
 
 Please pay attention to use, do not lift the shield cover.
 :::
 
 ## Pin Map
 
-| XIAO Pin        | Function      | Chip Pin  |   Description      |
+<!-- | XIAO Pin        | Function      | Chip Pin  |   Description      |
 | :-------:      | :-----:        | :----------:         |       :---:     |
 |5V              |VBUS             |                                      | Power Input/Output     |
 | GND           |                 |                                      |                          |
@@ -114,9 +239,59 @@ Please pay attention to use, do not lift the shield cover.
 |TX_LED         |                 |   PA19	                              |	TX_LED                 |
 |RX_LED         |                 | PA18	                                |	RX_LED                 |
 |Power_LED     |          |        VBUS	                                |       	CHG-LED_Red      |
-|USER_LED       |                 |   PA17	                              |	User Light_Yellow      |
+|USER_LED       |                 |   PA17	                              |	User Light_Yellow      | -->
 
-### Enter Bootloader Mode
+| XIAO Pin    | Function           | XIAO SAMD21   | XIAO SAMD21 Plus | Description                                                |
+| :---------- | :----------------- | :------------ | :---------------- | :--------------------------------------------------------- |
+| 5V          | VBUS               | VBUS          | VBUS              | USB 5 V power input/output                                 |
+| GND         | GND                | GND           | GND               | Ground                                                     |
+| 3V3         | 3V3_OUT            | 3V3_OUT       | 3V3_OUT           | 3.3 V power output                                         |
+| D0          | A0 / DAC           | PA02          | PA02              | GPIO, ADC AIN0, DAC output; no hardware PWM                |
+| D1          | A1                 | PA04          | PA04              | GPIO, ADC AIN4                                             |
+| D2          | A2                 | PA10          | PA10              | GPIO, ADC AIN18                                            |
+| D3          | A3                 | PA11          | PA11              | GPIO, ADC AIN19                                            |
+| D4          | SDA0               | PA08          | PA08              | GPIO, ADC AIN16, I2C data                                  |
+| D5          | SCL0               | PA09          | PA09              | GPIO, ADC AIN17, I2C clock                                 |
+| D6          | TX                 | PB08          | PB08              | GPIO, ADC AIN2, UART transmit                              |
+| D7          | RX                 | PB09          | PB09              | GPIO, ADC AIN3, UART receive                               |
+| D8          | SCK                | PA07          | PA07              | GPIO, ADC AIN7, SPI clock                                  |
+| D9          | MISO               | PA05          | PA05              | GPIO, ADC AIN5, SPI data input                             |
+| D10         | MOSI               | PA06          | PA06              | GPIO, ADC AIN6, SPI data output                            |
+| D11         | TX_LED             | PA19          | -                 | Internal TX LED on XIAO SAMD21; not defined on Plus        |
+| D12         | GPIO               | PA18 (RX_LED) | PA28              | Plus expansion GPIO                                        |
+| D13         | SCL1               | PA17 (USER_LED) | PA17            | Plus expansion GPIO and I2C1 clock                         |
+| D14         | SDA1               | -             | PA16              | Plus expansion GPIO and I2C1 data                          |
+| D15         | GPIO               | -             | PA15              | Plus expansion GPIO                                        |
+| D16         | GPIO               | -             | PA14              | Plus expansion GPIO                                        |
+| D17         | GPIO               | -             | PA13              | Plus expansion GPIO                                        |
+| D18         | GPIO               | -             | PA12              | Plus expansion GPIO                                        |
+| D19         | I2S_SD             | -             | PA19              | Plus expansion GPIO and I2S data                           |
+| D20         | I2S_SCK            | -             | PA20              | Plus expansion GPIO and I2S clock                          |
+| D21         | I2S_WS             | -             | PA21              | Plus expansion GPIO and I2S word select                    |
+| D22         | GPIO               | -             | PB10              | Plus expansion GPIO                                        |
+| D23         | GPIO               | -             | PB11              | Plus expansion GPIO                                        |
+| D24         | GPIO               | -             | PB23              | Plus expansion GPIO                                        |
+| D25         | GPIO               | -             | PA23              | Plus expansion GPIO                                        |
+| D26         | GPIO               | -             | PB2               | Plus expansion GPIO                                        |
+| D27         | GPIO               | -             | PA18              | Plus expansion GPIO                                        |
+| VBAT_EN     | Battery Enable     | -             | PB2               | Battery power control on Plus                              |
+| AIN11_VBAT  | Voltage Read       | -             | PB3               | Read the battery voltage on Plus                           |
+| Reset       | RESETN             | RESETN        | RESETN            | Active-low reset input, package pin 40                     |
+| TX_LED      | LED                | PA19          | -                 | Original-board TX indicator, active low                    |
+| RX_LED      | LED                | PA18          | -                 | Original-board RX indicator, active low                    |
+| USER_LED    | LED                | PA17          | -                 | Original-board user LED, active low                        |
+| POWER_LED   | Power indicator    | 3V3           | -                 | Original-board green power LED; not an MCU GPIO            |
+| RGB_LED     | WS2812B data       | -             | PA27              | Plus addressable RGB LED data                              |
+| USER_BUTTON | Button             | -             | PB22              | Plus user button, active low                               |
+| VBAT_EN     | Battery ADC enable | -             | PB02              | Enables battery-voltage measurement                        |
+| AIN11_VBAT  | Battery ADC        | -             | PB03 / AIN11      | Battery voltage through a 1/2 divider                      |
+| CHARGE_LED  | Charging indicator | -             | -                 | Plus hardware-controlled charging LED; not an MCU GPIO     |
+| SWDIO       | SWD debug          | PA31          | PA31              | Serial Wire Debug data                                     |
+| SWCLK       | SWD debug          | PA30          | PA30              | Serial Wire Debug clock                                    |
+
+## Enter Bootloader Mode
+
+### For XIAO SAMD21
 
 Sometimes the Seeed Studio XIAO SAMD21 port may disappear when user programming process fails. we can solve this problem by the following operation:
 
@@ -127,6 +302,10 @@ Sometimes the Seeed Studio XIAO SAMD21 port may disappear when user programming 
 At this point, the chip enters Bootloader mode and the burn port appears again. Because the samd21 chip has two partitions, one is the Bootloader and the other is the user program. The product will burn a bootloader code in the system memory when it leaves the factory. We can switch modes by performing the above steps.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" alt="pir" width={600} height="auto" /></p>
+
+### For XIAO SAMD21 Plus
+
+Connect the XIAO SAMD21 Plus to your computer. Press the Reset button twice consecutively to enter Bootloader Mode.
 
 ### Reset
 
@@ -142,219 +321,6 @@ Please note: The behavior of the built-in LED is reversed to the one on an Ardui
 
 All pins on Seeed Studio XIAO SAMD21 support interrupts, but two pins cannot be used at the same time: 5 pin and 7 pin. For more detail about Interrupt please check [here](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp).
 
-### Pin Multiplexing
-
-We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
-
-#### Digital Input and Output
-
-- Use pin 6 as the digital pin:
-
-```c
-const int buttonPin = 6;     // the number of the pushbutton pin
-const int ledPin =  13;      // the number of the LED pin
-
-int buttonState = 0;         // variable for reading the pushbutton status
-
-void setup() {
-  // initialize the LED pin as an output:
-  pinMode(ledPin, OUTPUT);
-  // initialize the pushbutton pin as an input:
-  pinMode(buttonPin, INPUT);
-}
-
-void loop() {
-  // read the state of the pushbutton value:
-  buttonState = digitalRead(buttonPin);
-
-  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
-  if (buttonState == HIGH) {
-    // turn LED on:
-    digitalWrite(ledPin, HIGH);
-  } else {
-    // turn LED off:
-    digitalWrite(ledPin, LOW);
-  }
-}
-```
-
-#### AnalogRead
-
-- Use pin 6 as the analog pin:
-
-```c
-
-
-void setup() {
-  // declare the ledPin as an OUTPUT:
-  pinMode(ledPin, OUTPUT);
-}
-
-void loop() {
-  // read the value from the sensor:
-  sensorValue = analogRead(sensorPin);
-  // turn the ledPin on
-  digitalWrite(ledPin, HIGH);
-  // stop the program for <sensorValue> milliseconds:
-  delay(sensorValue);
-  // turn the ledPin off:
-  digitalWrite(ledPin, LOW);
-  // stop the program for for <sensorValue> milliseconds:
-  delay(sensorValue);
-}
-```
-
-#### Serial
-
-- Use pin 6 as the TX pin of UART(RX pin of UART is pin 7):
-
-```c
-
-void setup() {
-    Serial1.begin(115200);
-    while (!Serial);
-}
-
-void loop() {
-    Serial1.println("Hello,World");
-    delay(1000);
-}
-```
-
-#### I2C
-
-- Use pin 5 as the SCL pin of IIC(SDA pin of IIC is pin 4):
-
-```c
-// Wire Master Writer
-// by Nicholas Zambetti <http://www.zambetti.com>
-
-// Demonstrates use of the Wire library
-// Writes data to an I2C/TWI slave device
-// Refer to the "Wire Slave Receiver" example for use with this
-
-// Created 29 March 2006
-
-// This example code is in the public domain.
-
-
-#include <Wire.h>
-
-void setup()
-{
-  Wire.begin(); // join i2c bus (address optional for master)
-}
-
-byte x = 0;
-
-void loop()
-{
-  Wire.beginTransmission(4); // transmit to device #4
-  Wire.write("x is ");        // sends five bytes
-  Wire.write(x);              // sends one byte  
-  Wire.endTransmission();    // stop transmitting
-  x++;
-  delay(500);
-}
-```
-
-#### SPI
-
-- Use pin 8 as the SCK pin of SPI(MISO pin of SPI is pin 9,MOSI pin of SPI is pin 10):
-
-```c
-#include <SPI.h>
-const int CS = 7;
-void setup (void) {
-   digitalWrite(CS, HIGH); // disable Slave Select
-   SPI.begin ();
-   SPI.setClockDivider(SPI_CLOCK_DIV8);//divide the clock by 8
-}
-
-void loop (void) {
-   char c;
-   digitalWrite(CS, LOW); // enable Slave Select
-   // send test string
-   for (const char * p = "Hello, world!\r" ; c = *p; p++) {
-      SPI.transfer (c);
-   }
-   digitalWrite(CS, HIGH); // disable Slave Select
-   delay(2000);
-}
-```
-
-#### QTouch
-
-For how to use QTouch, we provide an example project: [How to Make a Fruit Piano on Seeed Studio XIAO SAMD21 ’s Q-Touch Function](https://www.seeedstudio.com/blog/2020/07/20/how-to-make-a-fruit-piano-on-seeeduino-xiaos-q-touch-function-m/).
-
-#### Analog Input and Output
-
-While it still has PWM-based "analog outputs", the SAMD21 also features true analog output in the form of a digital-to-analog converter (DAC). This module can produce an analog voltage between 0 and 3.3V. It can be used to produce audio with more natural sound, or as a kind of "digital potentiometer" to control analog devices.
-
-The DAC is only available on the Arduino pin A0, and is controlled using analogWrite(A0, `<value>`). The DAC can be set up to 10-bit resolution (make sure to call [**analogWriteResolution(10)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/) in your setup), which means values between 0 and 1023 will set the voltage to somewhere between 0 and 3.3V.
-
-In addition to the DAC, the SAMD21's ADC channels also stand apart from the ATmega328: they're equipped with up to 12-bit resolution. That means the analog input values can range from 0-4095, representing a voltage between 0 and 3.3V. To use the ADC's in 12-bit mode, make sure you call [**analogReadResolution(12)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/) in your setup.
-
-**Serial Plotting the DAC**
-
-Here's an example that demonstrates both the DAC and the ADC. To set the experiment up, connect A0 to A1 -- we'll drive A0 with an analog voltage, then read it with A1. It's the simplest circuit we've ever put in a tutorial:
-
-<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/AO_A1.jpg" /></div>
-
-:::note
-The Seeed Studio XIAO SAMD21 using the [**Seeed Studio XIAO SAMD21 expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
-:::
-
-This sketch produces a sine wave output on A0, with values ranging from 0 to 3.3V. Then it uses A1 to read that output into its ADC, and convert it into a voltage between 0 and 3.3V.
-
-You can, of course, open the serial monitor to view the voltage values stream by. But if the the sine wave is hard to visualize through text, check out Arduino's new Serial Plotter, by going to Tools > Serial Plotter.
-
-<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Serial%20poltting.png" /></div>
-
-<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_DAC_wave.gif" /></div>
-
-#### DAC
-
-Thank you to [Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) for submitting the code, all related functionalities were developed and contributed by him.
-
-```cpp
-#define DAC_PIN A0 // Make code a bit more legible
-float x = 0; // Value to take the sin of
-float increment = 0.02;  // Value to increment x by each time
-int frequency = 440; // Frequency of sine wave
-
-void setup() 
-{
-  analogWriteResolution(10); // Set analog out resolution to max, 10-bits
-  analogReadResolution(12); // Set analog input resolution to max, 12-bits
-
-  Serial.begin(9600);
-}
-
-void loop() 
-{
-  // Generate a voltage value between 0 and 1023. 
-  // Let's scale a sin wave between those values:
-  // Offset by 511.5, then multiply sin by 511.5.
-  int dacVoltage = (int)(511.5 + 511.5 * sin(x));
-  x += increment; // Increase value of x
-
-  // Generate a voltage between 0 and 3.3V.
-  // 0= 0V, 1023=3.3V, 512=1.65V, etc.
-  analogWrite(DAC_PIN, dacVoltage);
-
-  // Now read A1 (connected to A0), and convert that
-  // 12-bit ADC value to a voltage between 0 and 3.3.
-  float voltage = analogRead(A1) * 3.3 / 4096.0;
-  Serial.println(voltage); // Print the voltage.
-  delay(1); // Delay 1ms
-}
-```
-
-**Result**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/THonny_DAC.jpg" alt="pir" width={600} height="auto" /></p>
-
 ## Getting Started
 
 ### Hardware
@@ -363,7 +329,7 @@ void loop()
 
 - Seeed Studio XIAO SAMD21 x1
 - Computer x1
-- USB typc cable x1
+- USB Type-C cable x1
 
 :::tip
 
@@ -406,18 +372,22 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below:
 
-*https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
+```url
+https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
+```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png" alt="pir" width={600} height="auto" /></p>
 
-Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeed Studio XIAO SAMD21**" in the searching blank. Here comes the "Seeed SAMD Boards". Install it.
+Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeed Studio XIAO SAMD21**" in the searching blank. Here comes the **Seeed SAMD Boards**. Install it.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-board.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-board.png" alt="pir" width={600} height="auto" /></p>
 
+#### XIAO SAMD21 Blink
+
 - **Step 4. Select your board and port**
 
-After installing the board, click **Tools-> Board**, find "**Seeed Studio XIAO**" and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE.
+After installing the board, click **Tools-> Board**, find **Seeed Studio XIAO** and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -427,15 +397,420 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 
 - **Step 5.Upload the program**  
 
-Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
+Now, simply click the **Upload** button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png" alt="pir" width={800} height="auto" /></p>
 
  A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
 
 :::note
-the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet in resourses
+The maximum flash size is 8 KB. For more information, refer to the ATSAMD21G18A-MU datasheet in the resources section.
 :::
+
+#### XIAO SAMD21 Plus Blink
+
+On the XIAO SAMD21 Plus, the L (LED) pin has been removed. It is replaced by the RGB_LED, which is controlled via pin PA27.
+
+‑ Change the target board to XIAO M0 Plus.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/gst_1.png" alt="pir" width={800} height="auto" /></p>
+
+- Install the Adafruit_NeoPixel library and update it to the latest version.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/gst_2.png" alt="pir" width={800} height="auto" /></p>
+
+‑ Replace the code with the snippet below. The pin for RGB_LED is PA27, which has been redefined as PIN_LED_RGB.
+
+:::caution
+
+The RGB LEDs may cause eye strain or injury if operated at excessive brightness; proper eye protection is recommended.
+
+:::
+
+```cpp
+#include <Adafruit_NeoPixel.h>
+
+#define NUMPIXELS 1
+
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+  pixels.begin();
+
+  pinMode(NEOPIXEL_POWER, OUTPUT);
+  digitalWrite(NEOPIXEL_POWER, HIGH);
+
+// Set overall brightness (0~255)
+// Recommended eye-friendly range: 10~50
+  pixels.setBrightness(50);
+}
+
+
+void loop() {
+
+  pixels.clear();
+  pixels.setPixelColor(0, pixels.Color(15, 25, 205));
+  pixels.show();
+  delay(400);
+
+
+  pixels.clear();
+  pixels.setPixelColor(0, pixels.Color(103, 25, 205));
+  pixels.show();
+  delay(400);
+
+
+  pixels.clear();
+  pixels.setPixelColor(0, pixels.Color(233, 242, 205));
+  pixels.show();
+  delay(400);
+
+
+  pixels.clear();
+  pixels.setPixelColor(0, pixels.Color(233, 23, 23));
+  pixels.show();
+  delay(400);
+
+
+  pixels.clear();
+  pixels.setPixelColor(0, pixels.Color(12, 66, 101));
+  pixels.show();
+  delay(400);
+
+
+  pixels.clear();
+  pixels.show();
+  delay(500);
+}
+```
+
+‑ Click Upload to flash the program. Once completed, the RGB‑LED will light up.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/gst_3.gif" alt="pir" width={600} height="auto" /></p>
+
+:::note
+The maximum flash size is 8 KB. For more information, refer to the ATSAMD21G18A-MU datasheet in the resources section.
+:::
+
+## Pin Multiplexing
+
+We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
+
+### Digital Input and Output
+
+- Use pin 6 as the digital pin:
+
+```c
+const int buttonPin = 6;     // the number of the pushbutton pin
+const int ledPin =  13;      // the number of the LED pin
+
+int buttonState = 0;         // variable for reading the pushbutton status
+
+void setup() {
+  // initialize the LED pin as an output:
+  pinMode(ledPin, OUTPUT);
+  // initialize the pushbutton pin as an input:
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+  // read the state of the pushbutton value:
+  buttonState = digitalRead(buttonPin);
+
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
+  if (buttonState == HIGH) {
+    // turn LED on:
+    digitalWrite(ledPin, HIGH);
+  } else {
+    // turn LED off:
+    digitalWrite(ledPin, LOW);
+  }
+}
+```
+
+### AnalogRead
+
+- Use pin 6 as the analog pin:
+
+```c
+
+
+void setup() {
+  // declare the ledPin as an OUTPUT:
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // read the value from the sensor:
+  sensorValue = analogRead(sensorPin);
+  // turn the ledPin on
+  digitalWrite(ledPin, HIGH);
+  // stop the program for <sensorValue> milliseconds:
+  delay(sensorValue);
+  // turn the ledPin off:
+  digitalWrite(ledPin, LOW);
+  // stop the program for for <sensorValue> milliseconds:
+  delay(sensorValue);
+}
+```
+
+### Serial
+
+- Use pin 6 as the TX pin of UART(RX pin of UART is pin 7):
+
+```c
+
+void setup() {
+    Serial1.begin(115200);
+    while (!Serial);
+}
+
+void loop() {
+    Serial1.println("Hello,World");
+    delay(1000);
+}
+```
+
+### I2C
+
+- Use pin 5 as the SCL pin of IIC(SDA pin of IIC is pin 4):
+
+```c
+// Wire Master Writer
+// by Nicholas Zambetti <http://www.zambetti.com>
+
+// Demonstrates use of the Wire library
+// Writes data to an I2C/TWI slave device
+// Refer to the "Wire Slave Receiver" example for use with this
+
+// Created 29 March 2006
+
+// This example code is in the public domain.
+
+
+#include <Wire.h>
+
+void setup()
+{
+  Wire.begin(); // join i2c bus (address optional for master)
+}
+
+byte x = 0;
+
+void loop()
+{
+  Wire.beginTransmission(4); // transmit to device #4
+  Wire.write("x is ");        // sends five bytes
+  Wire.write(x);              // sends one byte  
+  Wire.endTransmission();    // stop transmitting
+  x++;
+  delay(500);
+}
+```
+
+### SPI
+
+- Use pin 8 as the SCK pin of SPI(MISO pin of SPI is pin 9,MOSI pin of SPI is pin 10):
+
+```c
+#include <SPI.h>
+const int CS = 7;
+void setup (void) {
+   digitalWrite(CS, HIGH); // disable Slave Select
+   SPI.begin ();
+   SPI.setClockDivider(SPI_CLOCK_DIV8);//divide the clock by 8
+}
+
+void loop (void) {
+   char c;
+   digitalWrite(CS, LOW); // enable Slave Select
+   // send test string
+   for (const char * p = "Hello, world!\r" ; c = *p; p++) {
+      SPI.transfer (c);
+   }
+   digitalWrite(CS, HIGH); // disable Slave Select
+   delay(2000);
+}
+```
+
+### QTouch
+
+For how to use QTouch, we provide an example project: [How to Make a Fruit Piano on Seeed Studio XIAO SAMD21 ’s Q-Touch Function](https://www.seeedstudio.com/blog/2020/07/20/how-to-make-a-fruit-piano-on-seeeduino-xiaos-q-touch-function-m/).
+
+### Analog Input and Output
+
+While it still has PWM-based "analog outputs", the SAMD21 also features true analog output in the form of a digital-to-analog converter (DAC). This module can produce an analog voltage between 0 and 3.3V. It can be used to produce audio with more natural sound, or as a kind of "digital potentiometer" to control analog devices.
+
+The DAC is only available on the Arduino pin A0, and is controlled using analogWrite(A0, `<value>`). The DAC can be set up to 10-bit resolution (make sure to call [**analogWriteResolution(10)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/) in your setup), which means values between 0 and 1023 will set the voltage to somewhere between 0 and 3.3V.
+
+In addition to the DAC, the SAMD21's ADC channels also stand apart from the ATmega328: they're equipped with up to 12-bit resolution. That means the analog input values can range from 0-4095, representing a voltage between 0 and 3.3V. To use the ADC's in 12-bit mode, make sure you call [**analogReadResolution(12)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/) in your setup.
+
+**Serial Plotting the DAC**
+
+Here's an example that demonstrates both the DAC and the ADC. To set the experiment up, connect A0 to A1 -- we'll drive A0 with an analog voltage, then read it with A1. It's the simplest circuit we've ever put in a tutorial:
+
+<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/AO_A1.jpg" /></div>
+
+:::note
+The Seeed Studio XIAO SAMD21 using the [**Seeed Studio XIAO SAMD21 expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+:::
+
+This sketch produces a sine wave output on A0, with values ranging from 0 to 3.3V. Then it uses A1 to read that output into its ADC, and convert it into a voltage between 0 and 3.3V.
+
+You can, of course, open the serial monitor to view the voltage values stream by. But if the the sine wave is hard to visualize through text, check out Arduino's new Serial Plotter, by going to Tools > Serial Plotter.  
+
+<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Serial%20poltting.png" /></div>
+
+<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_DAC_wave.gif" /></div>
+  
+Thank you to [Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) for submitting the code, all related functionalities were developed and contributed by him.
+
+```cpp
+#define DAC_PIN A0 // Make code a bit more legible
+float x = 0; // Value to take the sin of
+float increment = 0.02;  // Value to increment x by each time
+// Frequency of sine wave is about 1.37 Hz
+
+void setup() 
+{
+  analogWriteResolution(10); // Set analog out resolution to max, 10-bits
+  analogReadResolution(12); // Set analog input resolution to max, 12-bits
+
+  Serial.begin(9600);
+}
+
+void loop() 
+{
+  // Generate a voltage value between 0 and 1023. 
+  // Let's scale a sin wave between those values:
+  // Offset by 511.5, then multiply sin by 511.5.
+  int dacVoltage = (int)(511.5 + 511.5 * sin(x));
+  x += increment; // Increase value of x
+
+  // Generate a voltage between 0 and 3.3V.
+  // 0= 0V, 1023=3.3V, 512=1.65V, etc.
+  analogWrite(DAC_PIN, dacVoltage);
+
+  // Now read A1 (connected to A0), and convert that
+  // 12-bit ADC value to a voltage between 0 and 3.3.
+  float voltage = analogRead(A1) * 3.3 / 4096.0;
+  Serial.println(voltage); // Print the voltage.
+  delay(1); // Delay 1ms
+}
+```
+
+**Result**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/THonny_DAC.jpg" alt="pir" width={600} height="auto" /></p>
+
+## Battery Usage
+
+:::note
+
+Only the XIAO SAMD21 Plus features a BAT battery connector on its back side, please take note.
+
+:::
+
+The XIAO SAMD21 Plus is capable of using a 3.7V lithium battery as the power supply input. You can refer to the following diagram for the wiring method.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/battery.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+:::caution
+
+Please be careful not to short-circuit the positive and negative terminals and burn the battery and equipment when soldering. If the battery has power, never solder it onto the board, as this may burn out the circuit board. Short-circuiting while the circuit is powered on poses a significant risk; it is recommended to use an adapter.
+
+:::
+
+### Battery Voltage Reading Example
+
+According to the schematic, the **SGM40567-4.2XG/TR** provides single-cell lithium battery charging with a charging current of approximately **200 mA**. The **Charge_LED** blinks during charging.<br/>
+
+Battery voltage measurement is controlled by the **TPS22916CNYFPR** load switch through **PB2/VBAT_EN**, reducing standby power consumption. The battery voltage is divided by two and measured through the **PB3/AIN11_VBAT** ADC pin.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/battery_read.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+The battery voltage is measured using a resistor-divider circuit. The voltage read by the ADC is half of the actual battery voltage, so the software must multiply the ADC measurement by 2 to obtain the actual battery voltage.
+
+In the Arduino core, PB02 and PB03 are mapped to pin numbers 31 and 32, respectively. Define them as follows:
+
+```cpp
+// VBAT_EN on PB02
+#define PIN_VBAT_EN  (31u)
+
+// AIN11_VBAT on PB03
+#define PIN_VBAT_ADC (32u)
+```
+
+<details>
+
+<summary>Battery read example</summary>
+
+```c
+constexpr float ADC_VREF = 3.3f;
+constexpr float ADC_MAX = 4095.0f;
+constexpr float DIVIDER_RATIO = 2.0f;  // R5 = R6 = 10 kΩ
+
+float readBatteryVoltage() {
+  digitalWrite(PIN_VBAT_EN, HIGH);
+  delay(10);
+
+  analogRead(PIN_VBAT_ADC);  // Discard a stale reading
+
+  uint32_t sum = 0;
+  constexpr int samples = 16;
+
+  for (int i = 0; i < samples; i++) {
+    sum += analogRead(PIN_VBAT_ADC);
+    delay(2);
+  }
+
+  digitalWrite(PIN_VBAT_EN, LOW);
+
+  float adcRaw = sum / static_cast<float>(samples);
+  float adcVoltage = adcRaw * ADC_VREF / ADC_MAX;
+
+  return adcVoltage * DIVIDER_RATIO;
+}
+
+void setup() {
+  Serial.begin(115200);
+
+  pinMode(PIN_VBAT_EN, OUTPUT);
+  digitalWrite(PIN_VBAT_EN, LOW);
+
+  analogReadResolution(12);  // SAMD21 ADC: 0–4095
+}
+
+void loop() {
+  float batteryVoltage = readBatteryVoltage();
+
+  Serial.print("Battery: ");
+  Serial.print(batteryVoltage, 3);
+  Serial.println(" V");
+
+  delay(1000);
+}
+```
+
+</details>
+<br/>
+:::note
+
+For low-power applications, disable **BAT_EN** after the battery voltage measurement is complete to reduce the quiescent power consumption caused by the voltage-divider resistors.
+
+:::
+
+- The **Charge_LED** blinks while the battery is charging.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_detection.gif" style={{width:400, height:'auto'}}/></div>
+<br/>
+
+- Battery voltage measurement result: The measured voltage of a lithium-ion battery may differ from the nominal value printed on the battery. Always refer to the actual measured value.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/battery_read_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
 
 ## The sample application
 
@@ -446,6 +821,8 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 - [How to unbrick a dead xiao using raspberry pi](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990). Thanks John_Doe for sharing.
 
 ## Resources
+
+### XIAO SAMD21
 
 **Hardware Design**
 - **📄[Datasheet]** [Atmel SAMD21G18 Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
@@ -464,6 +841,23 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 
 **Software & Tools**
 - **📄[Factory Firmware]** [XIAO SAMD21 Factory Firmware](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip )
+
+### XIAO SAMD21 Plus
+
+**Hardware Design**
+- **📄[Datasheet]** [Atmel SAMD21G18 Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
+- **📄[Schematic]** [XIAO SAMD21 Plus Schematic](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/202004620_XIAO-SAMD21Plus_260422.pdf)
+- **🗃️[PCB Design Files]** 
+  - [XIAO SAMD21 Plus KiCad Project](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/202004620_XIAO-SAMD21-Plus_V1.0_SCH&PCB_20260422.zip)  
+  - [XIAO SAMD21 Plus Eagle Project](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0.zip)
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO Series SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Pinout Sheet]** [XIAO SAMD21 Plus Pinout Sheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-PLUS-pinout_sheet.xlsx )
+
+**Mechanical Design**
+- **📄[2D Dimensions]** [XIAO Dimension in DXF](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_Dimension.rar )
+- **📄[3D Model]** [XIAO SAMD21 Plus 3D Model](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip )
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"

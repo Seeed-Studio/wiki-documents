@@ -1,5 +1,5 @@
 ---
-description: XIAO ESP32 Sense 異なるスリープモードの消費電力の使用
+description: XIAO ESP32 Sense で異なるスリープモード時の消費電力を使用する
 title: XIAO ESP32S3 Sense スリープモード
 keywords:
   - Sleep_Modes
@@ -8,8 +8,8 @@ slug: /XIAO_ESP32S3_Consumption
 last_update:
   date: 08/27/2024
   author: Jason
-createdAt: '2025-05-27'
-updatedAt: '2025-09-24'
+createdAt: '2024-08-28'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/ja/XIAO_ESP32S3_Consumption/
 ---
 
@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/background02.png" style={{width:800, height:'auto'}}/></div>
 
-ここでは、これらの低消費電力スリープモードの使用を実演するためのいくつかの簡単な例を紹介します。すべてのESP32ボードは多機能であり、この文脈で使用している開発ボードはXIAO ESP32S3 Senseです。
+ここでは、これらの低消費電力スリープモードの使い方を示すために、いくつかの簡単な例を紹介します。すべての ESP32 ボードは汎用性がありますが、ここで使用している開発ボードは XIAO ESP32S3 Sense です。
 
 ## ハードウェア概要
 
@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -45,26 +45,30 @@ import TabItem from '@theme/TabItem';
 
 ### 概要
 
-Deep-Sleepモードでは、ESP32はCPU、RAMの大部分、およびAPB_CLKでクロックされるすべてのデジタル周辺機器の電源を切ります。電源が供給されたままの部品は以下のみです：
+Deep-Sleep モードでは、ESP32 は CPU、RAM の大部分、および APB_CLK からクロック供給されるすべてのデジタルペリフェラルの電源をオフにします。電源が維持されるコンポーネントは次のとおりです：
 
-- RTCコントローラー
-- ULPコプロセッサー
-- RTC FASTメモリ
-- RTC SLOWメモリ
+- RTC コントローラ
+- ULP コプロセッサ
+- RTC FAST メモリ
+- RTC SLOW メモリ
+
+:::warning
+**Deep Sleep 中の USB ペリフェラル無効化：** 内蔵 USB ペリフェラル（USB-Serial-JTAG）を含むすべてのデジタルペリフェラルは Deep Sleep 中に電源がオフになります。**デバイスが Deep Sleep 中は USB 経由のシリアル出力は利用できません。** デバッグが必要な場合は、ハードウェア UART ピンに接続した外部 USB-UART チップを使用してください。
+:::
 
 ### ウェイクアップ方法
 
-- **タイマーウェイクアップ：**ESP32はタイマーを設定することで、指定された時間後に自動的にウェイクアップできます。
+- **タイマーウェイクアップ：** ESP32 は、タイマーを設定することで、指定した時間が経過すると自動的にウェイクアップできます。
 
-- **タッチパッド割り込みウェイクアップ：**タッチパッドの動作によってデバイスをウェイクアップでき、ユーザーインタラクションが必要なアプリケーションに適しています。
+- **タッチパッド割り込みウェイクアップ：** デバイスはタッチパッド上の動作によって起動でき、ユーザー操作が必要なアプリケーションに適しています。
 
-- **外部ウェイクアップ：**ESP32は外部信号（ボタン押下など）によってウェイクアップでき、低消費電力アプリケーションに最適です。
+- **外部ウェイクアップ：** ESP32 は外部信号（例：ボタン押下）によってウェイクアップでき、低消費電力アプリケーションに最適です。
 
-- **ULPコプロセッサーアクティビティウェイクアップ：**ULPコプロセッサーは独立して動作し、特定の条件を監視してメインCPUをウェイクアップして電力を節約できます。
+- **ULP コプロセッサ動作によるウェイクアップ：** ULP コプロセッサは独立して動作し、特定の条件を監視してメイン CPU をウェイクアップできるため、電力を節約できます。
 
-- **GPIOウェイクアップ：**GPIOピンの状態変化（HighまたはLow）によってデバイスをウェイクアップでき、様々なセンサーや周辺機器に柔軟性を提供します。
+- **GPIO ウェイクアップ：** デバイスは GPIO ピン状態（High または Low）の変化によってウェイクアップでき、さまざまなセンサやペリフェラルに柔軟に対応できます。
 
-以下に、XIAO ESP32 S3 SenseでDeepSleepモードを使用する3つの簡単な例を示します。
+以下に、DeepSleep モードを使用する XIAO ESP32 S3 Sense の簡単な例を 3 つ示します。
 
 ### コード実装
 
@@ -119,43 +123,43 @@ void loop() {
 }
 ```
 
-### 詳細な注記
+### 詳細な説明
 
 ```cpp
 #define uS_TO_S_FACTOR 1000000ULL 
 ```
 
-- マイクロ秒を秒に変換するマクロを定義します。1000000ULLはマイクロ秒を秒に変換するために使用される係数です。
+- マクロを定義してマイクロ秒を秒に変換します。1000000ULL はマイクロ秒を秒に変換するために使用される係数です。
 
 ```cpp
 #define TIME_TO_SLEEP  5     
 ```
 
-- ESP32がスリープする時間を設定するマクロを定義します。この場合は5秒です。
+- ESP32 がスリープする時間を設定するマクロを定義します。この例では 5 秒です。
 
 ```cpp
 RTC_DATA_ATTR int bootCount = 0;
 ```
 
-- 整数変数 `bootCount` を `RTC_DATA_ATTR` 属性で宣言します。これにより、ディープスリープ中でもその値を保持できます。
+- `RTC_DATA_ATTR` 属性を持つ整数変数 `bootCount` を宣言します。これにより、Deep Sleep 中も値が保持されます。
 
 ```cpp
 void print_wakeup_reason() {
 ```
 
-- ESP32が起動した理由を出力する`print_wakeup_reason()`という名前の関数を定義します。
+- ESP32 がウェイクアップした理由を出力する `print_wakeup_reason()` という名前の関数を定義します。
 
 ```cpp
 esp_sleep_wakeup_cause_t wakeup_reason;
 ```
 
-- ウェイクアップイベントの原因を格納するために、`esp_sleep_wakeup_cause_t` 型の変数 `wakeup_reason` を宣言します。
+- ウェイクアップイベントの原因を保存するために、`esp_sleep_wakeup_cause_t` 型の変数 `wakeup_reason` を宣言します。
 
 ```cpp
 wakeup_reason = esp_sleep_get_wakeup_cause();
 ```
 
-- 関数 `esp_sleep_get_wakeup_cause()` を呼び出してウェイクアップの理由を取得し、`wakeup_reason` 変数に代入します。
+- 関数 `esp_sleep_get_wakeup_cause()` を呼び出してウェイクアップ理由を取得し、その結果を `wakeup_reason` 変数に代入します。
 
 ```cpp
   switch (wakeup_reason) {
@@ -168,23 +172,23 @@ wakeup_reason = esp_sleep_get_wakeup_cause();
 }
 ```
 
-- `ESP_SLEEP_WAKEUP_EXT0` : このウェイクアップ理由は、RTC（リアルタイムクロック）I/O用に設定されたGPIOピンで検出された外部信号により、ESP32がウェイクアップしたことを示します。これは通常、ボタンやセンサーがトリガーされたときのスリープからのウェイクアップに使用されます。
-- `ESP_SLEEP_WAKEUP_EXT1` : これは、RTCコントローラーによって管理されるGPIOピンの外部信号によってウェイクアップが引き起こされたことを示します。EXT0とは異なり、EXT1は複数のピンを処理でき、指定されたピンのいずれかが状態を変更したとき（例：ローまたはハイになる）にウェイクアップできます。
-- `ESP_SLEEP_WAKEUP_TIMER` : このウェイクアップ理由は、ESP32が事前定義されたタイマー期間後にウェイクアップしたことを意味します。これは、ユーザーの操作を必要とせずに定期的なタスクを実行する必要があるアプリケーションに有用です。
-- `ESP_SLEEP_WAKEUP_TOUCHPAD` : これは、タッチパッドイベントによりESP32がウェイクアップしたことを示します。ウェイクアップ用に設定されたタッチパッドがタッチを検出すると、デバイスをスリープモードから復帰させることができます。
-- `ESP_SLEEP_WAKEUP_ULP` : このウェイクアップ理由は、ULP（超低消費電力）プログラムによってウェイクアップがトリガーされたことを意味します。ULPはメインCPUがディープスリープ中でも動作でき、特定の条件が満たされたときにESP32をウェイクアップできるため、最小限のバッテリー消費で低消費電力動作が可能になります。
+- `ESP_SLEEP_WAKEUP_EXT0` : このウェイクアップ理由は、RTC（リアルタイムクロック）I/O 用に設定された GPIO ピンで検出された外部信号によって ESP32 がウェイクアップしたことを示します。これは通常、ボタンやセンサがトリガされたときにスリープから復帰する用途に使用されます。
+- `ESP_SLEEP_WAKEUP_EXT1` : これは、RTC コントローラによって管理される GPIO ピン上の外部信号によってウェイクアップが発生したことを示します。EXT0 と異なり、EXT1 は複数のピンを扱うことができ、指定されたピンのいずれかの状態が変化したとき（例：Low または High になる）にウェイクアップできます。
+- `ESP_SLEEP_WAKEUP_TIMER` : このウェイクアップ理由は、あらかじめ設定されたタイマー時間が経過した後に ESP32 がウェイクアップしたことを示します。ユーザー操作を必要とせずに定期的なタスクを実行する必要があるアプリケーションに有用です。
+- `ESP_SLEEP_WAKEUP_TOUCHPAD` : これは、タッチパッドイベントによって ESP32 がウェイクアップしたことを示します。ウェイクアップ用に設定されたタッチパッドがタッチを検出すると、デバイスをスリープモードから復帰させることができます。
+- `ESP_SLEEP_WAKEUP_ULP` :  このウェイクアップ理由は、ULP（Ultra-Low Power）プログラムによってウェイクアップがトリガされたことを意味します。ULP はメイン CPU が Deep Sleep 中でも動作でき、特定の条件が満たされたときに ESP32 をウェイクアップできるため、バッテリー消費を最小限に抑えた低消費電力動作が可能になります。
 
 ```cpp
 ++bootCount;
 ```
 
-- デバイスが再起動するたびに起動回数をインクリメントして出力します。
+- ブート回数をインクリメントし、デバイスが再起動するたびにその値を出力します。
 
 ```cpp
 print_wakeup_reason();
 ```
 
-- ESP32のウェイクアップ理由を出力します。
+- ESP32 のウェイクアップ理由を出力します。
 
 ```cpp
 esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
@@ -196,9 +200,9 @@ esp_deep_sleep_start();
 Serial.println("This will never be printed");
 ```
 
-- `esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);`指定した時間後にESP32をウェイクアップするタイマーを有効にします。
-- `Serial.flush();`スリープに入る前にすべてのシリアルデータが送信されることを確認します。
-- `esp_deep_sleep_start();`ESP32をディープスリープモードに移行させます。
+- `esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);`ESP32 が指定時間後にタイマーでウェイクアップするように有効化します。
+- `Serial.flush();`スリープに入る前に、すべてのシリアルデータが送信されるようにします。
+- `esp_deep_sleep_start();`ESP32 を Deep Sleep モードに移行させます。
 
 </TabItem>
 
@@ -260,13 +264,13 @@ void loop() {
 }
 ```
 
-### 詳細な注記
+### 詳細な説明
 
 ```cpp
 #include "driver/rtc_io.h"
 ```
 
-- RTC GPIO にアクセスするための RTC I/O ドライバーをインクルードします。
+- RTC GPIO にアクセスするために RTC I/O ドライバをインクルードします。
 
 ```cpp
 #define BUTTON_PIN_BITMASK(GPIO) (1ULL << GPIO)  
@@ -275,9 +279,9 @@ void loop() {
 RTC_DATA_ATTR int bootCount = 0;
 ```
 
-- 16進数での2 ^ GPIO_NUMBER
-- 1 = EXT0ウェイクアップ、0 = EXT1ウェイクアップ
-- RTC IOのみ許可 - ESP32ピンの例
+- 16 進数での 2 ^ GPIO_NUMBER
+- 1 = EXT0 ウェイクアップ、0 = EXT1 ウェイクアップ
+- 使用できるのは RTC IO のみ - ESP32 ピンの例
 
 ```cpp
   switch (wakeup_reason) {
@@ -290,11 +294,11 @@ RTC_DATA_ATTR int bootCount = 0;
 }
 ```
 
-- `ESP_SLEEP_WAKEUP_EXT0` : このウェイクアップ理由は、RTC（リアルタイムクロック）I/O用に設定されたGPIOピンで検出された外部信号により、ESP32がウェイクアップしたことを示します。これは通常、ボタンやセンサーがトリガーされたときのスリープからのウェイクアップに使用されます。
-- `ESP_SLEEP_WAKEUP_EXT1` : これは、RTCコントローラーによって管理されるGPIOピンの外部信号によってウェイクアップが引き起こされたことを示します。EXT0とは異なり、EXT1は複数のピンを処理でき、指定されたピンのいずれかが状態を変更したとき（例：ローまたはハイになる）にウェイクアップできます。
-- `ESP_SLEEP_WAKEUP_TIMER` : このウェイクアップ理由は、ESP32が事前定義されたタイマー期間後にウェイクアップしたことを意味します。これは、ユーザーの操作を必要とせずに定期的なタスクを実行する必要があるアプリケーションに有用です。
-- `ESP_SLEEP_WAKEUP_TOUCHPAD` : これは、タッチパッドイベントによりESP32がウェイクアップしたことを示します。ウェイクアップ用に設定されたタッチパッドがタッチを検出すると、デバイスをスリープモードから復帰させることができます。
-- `ESP_SLEEP_WAKEUP_ULP` : このウェイクアップ理由は、ULP（超低消費電力）プログラムによってウェイクアップがトリガーされたことを意味します。ULPはメインCPUがディープスリープ中でも動作でき、特定の条件が満たされたときにESP32をウェイクアップできるため、最小限のバッテリー消費で低消費電力動作が可能になります。
+- `ESP_SLEEP_WAKEUP_EXT0` : このウェイクアップ理由は、RTC（リアルタイムクロック）I/O 用に設定された GPIO ピンで検出された外部信号により ESP32 が起床したことを示します。これは通常、ボタンやセンサーがトリガーされたときにスリープから復帰するために使用されます。
+- `ESP_SLEEP_WAKEUP_EXT1` : このウェイクアップ理由は、RTC コントローラによって管理される GPIO ピン上の外部信号によって起床したことを示します。`EXT0` と異なり、`EXT1` は複数のピンを扱うことができ、指定したいずれかのピンの状態が変化したとき（例：Low または High になる）に起床させることができます。
+- `ESP_SLEEP_WAKEUP_TIMER` : このウェイクアップ理由は、あらかじめ設定されたタイマー時間の経過後に ESP32 が起床したことを示します。これは、ユーザー操作を必要とせずに定期的なタスクを実行する必要があるアプリケーションに有用です。
+- `ESP_SLEEP_WAKEUP_TOUCHPAD` : このウェイクアップ理由は、タッチパッドイベントによって ESP32 が起床したことを示します。ウェイクアップ用に設定されたタッチパッドがタッチを検出すると、デバイスをスリープモードから復帰させることができます。
+- `ESP_SLEEP_WAKEUP_ULP` :  このウェイクアップ理由は、ULP（Ultra-Low Power）プログラムによってウェイクアップがトリガーされたことを意味します。ULP はメイン CPU がディープスリープ中でも動作でき、特定の条件が満たされたときに ESP32 を起床させることができるため、バッテリー消費を最小限に抑えた低消費電力動作が可能になります。
 
 ```cpp
   Serial.begin(115200);
@@ -304,8 +308,8 @@ RTC_DATA_ATTR int bootCount = 0;
   print_wakeup_reason();
 ```
 
-- `++bootCount;` 起動回数をインクリメントし、再起動のたびに出力する
-- `print_wakeup_reason();` ESP32のウェイクアップ理由を出力する
+- `++bootCount;`起動回数をインクリメントし、再起動のたびに表示します
+- `print_wakeup_reason();` ESP32 のウェイクアップ理由を表示します
 
 ```cpp
 #if USE_EXT0_WAKEUP
@@ -315,9 +319,9 @@ RTC_DATA_ATTR int bootCount = 0;
   rtc_gpio_pulldown_en(WAKEUP_GPIO);
 ```
 
-- `esp_sleep_enable_ext0_wakeup(WAKEUP_GPIO, 1);`指定したGPIOピンがハイになったときにEXT0ウェイクアップを有効にします。
-- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` ウェイクアップGPIOピンのプルアップ抵抗を無効にします。
-- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` ウェイクアップGPIOピンのプルダウン抵抗を有効にします。
+- `esp_sleep_enable_ext0_wakeup(WAKEUP_GPIO, 1);`指定した GPIO ピンが High になったときに EXT0 ウェイクアップを有効にします。
+- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` ウェイクアップ用 GPIO ピンのプルアップ抵抗を無効にします。
+- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` ウェイクアップ用 GPIO ピンのプルダウン抵抗を有効にします。
 
 ```cpp
 #else  
@@ -327,13 +331,13 @@ RTC_DATA_ATTR int bootCount = 0;
   rtc_gpio_pullup_dis(WAKEUP_GPIO);   
 ```
 
-- `esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_HIGH);`EXT1 WAKEUP
-- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` GPIO33はHIGHでウェイクアップするためにGNDに接続されています
-- `rtc_gpio_pullup_dis(WAKEUP_GPIO);`  HIGHでのウェイクアップを可能にするためにPULL_UPを無効にします
+- `esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_HIGH);`EXT1 ウェイクアップ
+- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` GPIO33 を GND に接続し、High になったときにウェイクアップできるようにします
+- `rtc_gpio_pullup_dis(WAKEUP_GPIO);`  High でウェイクアップできるようにするために PULL_UP を無効にします
 
-- `esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_HIGH);`  ext1を使用する場合は、このように使用します
-- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` GPIO33はHIGHでウェイクアップするためにGNDに接続されています
-- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` HIGHでのウェイクアップを可能にするためにPULL_UPを無効にします
+- `esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_HIGH);`  `ext1` を使用する場合は、このように使用します
+- `rtc_gpio_pulldown_en(WAKEUP_GPIO);` GPIO33 を GND に接続し、High になったときにウェイクアップできるようにします
+- `rtc_gpio_pullup_dis(WAKEUP_GPIO);` High でウェイクアップできるようにするために PULL_UP を無効にします
 
 ```cpp
   Serial.println("Going to sleep now");
@@ -341,11 +345,11 @@ RTC_DATA_ATTR int bootCount = 0;
   Serial.println("This will never be printed");
 ```
 
-- `esp_deep_sleep_start();`ESP32をディープスリープモードに移行させます。
+- `esp_deep_sleep_start();`ESP32 をディープスリープモードに移行させます。
 
 </TabItem>
 
-<TabItem value="DeepSleepExample3" label="TouchWakeUp" default>
+<TabItem value="DeepSleepExample3" label="タッチウェイクアップ" default>
 
 ```cpp
 #if CONFIG_IDF_TARGET_ESP32
@@ -430,7 +434,7 @@ void loop() {
 }
 ```
 
-### Detailed Notes
+### 詳細なメモ
 
 ```cpp
 #if CONFIG_IDF_TARGET_ESP32
@@ -442,12 +446,12 @@ void loop() {
 #endif
 ```
 
-- ターゲットがESP32かどうかをチェック
-- ESP32のタッチ感度の閾値を定義
-- ターゲットがESP32S2またはESP32S3かどうかをチェック
-- ESP32S2/S3のより高いタッチ感度閾値を定義
-- ターゲットが上記のいずれでもない場合
-- 他のターゲット用のデフォルト閾値を定義
+- 対象が ESP32 かどうかを確認します
+- ESP32 用のタッチ感度のしきい値を定義します
+- 対象が ESP32S2 または ESP32S3 かどうかを確認します
+- ESP32S2/S3 用に、より高いタッチ感度のしきい値を定義します
+- 対象が上記のいずれでもない場合
+- その他のターゲット向けのデフォルトのしきい値を定義します
 
 ```cpp
 RTC_DATA_ATTR int bootCount = 0; // Declare a variable to count boots, stored in RTC memory.
@@ -459,10 +463,10 @@ void print_wakeup_reason() { // Function to print the reason for waking up.
   wakeup_reason = esp_sleep_get_wakeup_cause(); // Get the cause of the wakeup.
 ```
 
-- `RTC_DATA_ATTR int bootCount = 0;`ブート回数をカウントする変数を宣言し、RTCメモリに保存します。
-- `touch_pad_t touchPin;`タッチパッドピンの状態を保持する変数を宣言します。
-- `void print_wakeup_reason()` ウェイクアップの理由を出力する関数。
-- `esp_sleep_wakeup_cause_t wakeup_reason;`ウェイクアップの理由を保持する変数。
+- `RTC_DATA_ATTR int bootCount = 0;`RTC メモリに保存される、起動回数をカウントする変数を宣言します。
+- `touch_pad_t touchPin;`タッチパッドのピン状態を保持する変数を宣言します。
+- `void print_wakeup_reason()` ウェイクアップ理由を表示する関数です。
+- `esp_sleep_wakeup_cause_t wakeup_reason;`ウェイクアップ理由を保持する変数です。
 - `wakeup_reason = esp_sleep_get_wakeup_cause();` ウェイクアップの原因を取得します。
 
 ```cpp
@@ -476,11 +480,11 @@ void print_wakeup_reason() { // Function to print the reason for waking up.
 }
 ```
 
-- `ESP_SLEEP_WAKEUP_EXT0` : このウェイクアップ理由は、RTC（リアルタイムクロック）I/O用に設定されたGPIOピンで検出された外部信号により、ESP32がウェイクアップしたことを示します。これは通常、ボタンやセンサーがトリガーされたときのスリープからのウェイクアップに使用されます。
-- `ESP_SLEEP_WAKEUP_EXT1` : これは、RTCコントローラーによって管理されるGPIOピンの外部信号によってウェイクアップが引き起こされたことを示します。EXT0とは異なり、EXT1は複数のピンを処理でき、指定されたピンのいずれかが状態を変更したとき（例：ローまたはハイになる）にウェイクアップできます。
-- `ESP_SLEEP_WAKEUP_TIMER` : このウェイクアップ理由は、ESP32が事前定義されたタイマー期間後にウェイクアップしたことを意味します。これは、ユーザーの操作を必要とせずに定期的なタスクを実行する必要があるアプリケーションに有用です。
-- `ESP_SLEEP_WAKEUP_TOUCHPAD` : これは、タッチパッドイベントによりESP32がウェイクアップしたことを示します。ウェイクアップ用に設定されたタッチパッドがタッチを検出すると、デバイスをスリープモードから復帰させることができます。
-- `ESP_SLEEP_WAKEUP_ULP` : このウェイクアップ理由は、ULP（超低消費電力）プログラムによってウェイクアップがトリガーされたことを意味します。ULPはメインCPUがディープスリープ中でも動作でき、特定の条件が満たされたときにESP32をウェイクアップできるため、最小限のバッテリー消費で低消費電力動作が可能になります。
+- `ESP_SLEEP_WAKEUP_EXT0` : このウェイクアップ理由は、RTC（リアルタイムクロック）I/O 用に設定された GPIO ピンで検出された外部信号により ESP32 が起床したことを示します。これは通常、ボタンやセンサーがトリガーされたときにスリープから復帰するために使用されます。
+- `ESP_SLEEP_WAKEUP_EXT1` : このウェイクアップ理由は、RTC コントローラによって管理される GPIO ピン上の外部信号によって起床したことを示します。`EXT0` と異なり、`EXT1` は複数のピンを扱うことができ、指定したいずれかのピンの状態が変化したとき（例：Low または High になる）に起床させることができます。
+- `ESP_SLEEP_WAKEUP_TIMER` : このウェイクアップ理由は、あらかじめ設定されたタイマー時間の経過後に ESP32 が起床したことを示します。これは、ユーザー操作を必要とせずに定期的なタスクを実行する必要があるアプリケーションに有用です。
+- `ESP_SLEEP_WAKEUP_TOUCHPAD` : このウェイクアップ理由は、タッチパッドイベントによって ESP32 が起床したことを示します。ウェイクアップ用に設定されたタッチパッドがタッチを検出すると、デバイスをスリープモードから復帰させることができます。
+- `ESP_SLEEP_WAKEUP_ULP` :  このウェイクアップ理由は、ULP（Ultra-Low Power）プログラムによってウェイクアップがトリガーされたことを意味します。ULP はメイン CPU がディープスリープ中でも動作でき、特定の条件が満たされたときに ESP32 を起床させることができるため、バッテリー消費を最小限に抑えた低消費電力動作が可能になります。
 
 ```cpp
 void print_wakeup_touchpad() {
@@ -510,17 +514,17 @@ void print_wakeup_touchpad() {
 }
 ```
 
-- `case 0:`GPIO 4でタッチが検出されました。
-- `case 1:`GPIO 0でタッチが検出されました。
-- `case 2:`GPIO 2でタッチが検出されました。
-- `case 3:`GPIO 15でタッチが検出されました。
-- `case 4:`GPIO 13でタッチが検出されました。
-- `case 5:`GPIO 12でタッチが検出されました。
-- `case 6:`GPIO 14でタッチが検出されました。
-- `case 7:`GPIO 27でタッチが検出されました。
-- `case 8:`GPIO 33でタッチが検出されました。
-- `case 9:`GPIO 32でタッチが検出されました。
-- `default:`タッチが検出されない場合のデフォルトケース。
+- `case 0:`GPIO 4 でタッチが検出されました。
+- `case 1:`GPIO 0 でタッチが検出されました。
+- `case 2:`GPIO 2 でタッチが検出されました。
+- `case 3:`GPIO 15 でタッチが検出されました。
+- `case 4:`GPIO 13 でタッチが検出されました。
+- `case 5:`GPIO 12 でタッチが検出されました。
+- `case 6:`GPIO 14 でタッチを検出しました。
+- `case 7:`GPIO 27 でタッチを検出しました。
+- `case 8:`GPIO 33 でタッチを検出しました。
+- `case 9:`GPIO 32 でタッチを検出しました。
+- `default:`タッチが検出されなかった場合のデフォルトケース。
 
 ```cpp
 void setup() {
@@ -549,17 +553,17 @@ void setup() {
 }
 ```
 
-- `++bootCount;` ブートカウントをインクリメントします。
+- `++bootCount;` 起動回数をインクリメントします。
 
-- `print_wakeup_reason();` ウェイクアップの理由を出力します。
+- `print_wakeup_reason();` ウェイクアップ理由を出力します。
 - `print_wakeup_touchpad();` タッチパッドのウェイクアップ状態を出力します。
 
-- `#if CONFIG_IDF_TARGET_ESP32` ターゲットがESP32かどうかをチェックします
-- `touchSleepWakeUpEnable(T3, THRESHOLD);` 定義された閾値でT3のタッチウェイクアップを有効にします。
-- `touchSleepWakeUpEnable(T7, THRESHOLD);` 定義された閾値でT7のタッチウェイクアップを有効にします。
-- `touchSleepWakeUpEnable(T3, THRESHOLD);` 定義された閾値でT3のタッチウェイクアップを有効にします。
+- `#if CONFIG_IDF_TARGET_ESP32` ターゲットが ESP32 かどうかを確認します
+- `touchSleepWakeUpEnable(T3, THRESHOLD);` 定義されたしきい値で T3 のタッチウェイクアップを有効にします。
+- `touchSleepWakeUpEnable(T7, THRESHOLD);` 定義されたしきい値で T7 のタッチウェイクアップを有効にします。
+- `touchSleepWakeUpEnable(T3, THRESHOLD);` 定義されたしきい値で T3 のタッチウェイクアップを有効にします。
 
-- `esp_deep_sleep_start();` ESP32をディープスリープモードに移行させます。
+- `esp_deep_sleep_start();` ESP32 をディープスリープモードにします。
 
 </TabItem>
 
@@ -618,7 +622,7 @@ void ulp_setup() { // ULP setup function
     I_ST(R1, R0, RTC_dir), // Store the value of R1 in dir
 
     M_LABEL(INIFINITE_LOOP), // Define the infinite loop label
-    
+
     I_MOVI(R3, 0), // Move 0 to R3
     I_LD(R3, R3, RTC_fadeDelay), // Load the value from fadeDelay into R3
     M_LABEL(RUN_PWM), // Define the run PWM label
@@ -671,7 +675,7 @@ void ulp_setup() { // ULP setup function
     M_BX(INIFINITE_LOOP), // Go back to the infinite loop label
 
     M_LABEL(POSITIVE_DIR), // Define POSITIVE_DIR label
-  
+
     I_MOVR(R0, R1), // Move R1 to R0
     M_BL(INC_DUTY, 100), // Branch to INC_DUTY label with parameter 100
     I_MOVI(R2, 0), // Move 0 to R2
@@ -681,7 +685,7 @@ void ulp_setup() { // ULP setup function
     I_ADDI(R0, R0, 2), // Increment R0 by 2
     I_MOVI(R2, 0), // Move 0 to R2
     I_ST(R0, R2, RTC_dutyMeter), // Store the value of R0 in dutyMeter
-  
+
     M_BX(INIFINITE_LOOP), // Go back to the infinite loop label
   };
   // Run the ULP program
@@ -717,7 +721,7 @@ void loop() { // Arduino loop function
 </Tabs>
 
 :::tip
-ディープスリープモードに入った後にプログラムを再書き込みするには、ブートボタンを押し続けながらリセットボタンを押してESP32を再起動してください。
+ディープスリープモードに入った後にプログラムを書き込み直すには、boot ボタンを押し続けたまま reset ボタンを押して ESP32 を再起動してください。
 :::
 
 ### 結果表示
@@ -728,16 +732,20 @@ void loop() { // Arduino loop function
 
 ### 概要
 
-ライトスリープモードは、ESP32のもう一つの低消費電力モードで、デバイスが素早い応答時間を維持しながらエネルギーを節約することを可能にします。このモードでは、CPUコアは停止しますが、RAMと一部の周辺機器は電源が供給されたままで、特定のイベントに応答してデバイスが素早く起動できます。
+ライトスリープモードは、ESP32 におけるもう一つの低消費電力モードであり、素早い応答時間を維持しながらデバイスの電力を節約することができます。このモードでは CPU コアは停止しますが、RAM と一部のペリフェラルは電源が入ったままのため、特定のイベントに応じてデバイスをすばやくウェイクアップさせることができます。
 
-ライトスリープは、低消費電力が必要でありながらWiFiやBluetoothへの接続を維持する必要があるアプリケーションに最適です。無線通信モジュールをアクティブな状態に保つことができるためです。
+ライトスリープは、低消費電力が求められる一方で WiFi や Bluetooth への接続を維持する必要があるアプリケーションに最適であり、無線通信モジュールをアクティブな状態に保つことができます。
+
+:::warning
+**ライトスリープ中の USB ペリフェラル無効化：** 省電力のため、内部 USB ペリフェラル（USB-Serial-JTAG）はライトスリープ中に無効化されます。これは、デバイスがライトスリープ中は **USB 経由のシリアル出力が利用できない** ことを意味します。USB ポートを使用してシリアルログを表示している場合、スリープ期間中は何も出力されません。デバッグするには、ハードウェア UART ピンに接続した外部 USB-UART チップを使用するか、GPIO ウェイクアップを利用して、デバイスのウェイクアップ後に出力を監視することを検討してください。
+:::
 
 ### ウェイクアップ方法
 
-- **タイマーウェイクアップ：** デバイスは指定された時間後に起動でき、定期的なタスクの実行が可能になります。
-- **外部割り込みウェイクアップ：** ESP32は、ボタンの押下やその他のハードウェア割り込みなどの外部信号によって起動できます。
-- **ネットワークアクティビティウェイクアップ：** デバイスは受信ネットワークパケットに応答して起動でき、常にアクティブ状態でなくても効率的な通信が可能になります。
-- **GPIOウェイクアップ：** 特定のGPIOピンを設定して、状態変化や信号などのイベントが発生したときにライトスリープからデバイスを起動させることができます。
+- **タイマーウェイクアップ：** デバイスは指定した時間経過後にウェイクアップでき、定期的なタスクを実行できます。
+- **外部割り込みウェイクアップ：** ESP32 は、ボタン押下やその他のハードウェア割り込みなどの外部信号によってウェイクアップさせることができます。
+- **ネットワークアクティビティによるウェイクアップ：** デバイスは、受信したネットワークパケットに応答してウェイクアップでき、常にアクティブ状態にしておくことなく効率的な通信を実現します。
+- **GPIO ウェイクアップ：** 特定の GPIO ピンを設定して、状態変化や信号などのイベントが発生したときにライトスリープからデバイスをウェイクアップさせることができます。
 
 ### コード実装
 
@@ -754,7 +762,7 @@ void ledTask(void *pvParameters) {
   vTaskDelay(pdMS_TO_TICKS(1000));
   digitalWrite(ledPin, LOW);
   Serial.println("LED is OFF");
-  
+
   vTaskDelete(NULL); 
 }
 
@@ -770,33 +778,33 @@ void loop() {
   esp_light_sleep_start();
 
   xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);
-  
+
   delay(1000);
 }
 ```
 
-### 詳細な注記
+### 詳細な説明
 
 ```cpp
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 ```
 
-- FreeRTOSライブラリをインクルード
+- FreeRTOS ライブラリをインクルードします
 
 ```cpp
 const int sleepTime = 10000; 
 const int ledPin = LED_BUILTIN; 
 ```
 
-- スリープ時間を10秒に設定
-- 内蔵LEDピンを使用
+- スリープ時間を 10 秒に設定します
+- 内蔵 LED ピンを使用します
 
 ```cpp
 void ledTask(void *pvParameters): 
 ```
 
-- LEDの状態を制御するFreeRTOSタスクを定義します。
+- LED の状態を制御する FreeRTOS タスクを定義します。
 
 ```cpp
 digitalWrite(ledPin, HIGH); 
@@ -807,8 +815,8 @@ Serial.println("LED is OFF");
 vTaskDelete(NULL); 
 ```
 
-- `vTaskDelay(pdMS_TO_TICKS(1000));`LEDを1秒間オンに保つ
-- `vTaskDelete(NULL);`現在のタスクを削除する
+- `vTaskDelay(pdMS_TO_TICKS(1000));`LED を 1 秒間点灯させます
+- `vTaskDelete(NULL);`現在のタスクを削除します
 
 ```cpp
 esp_sleep_enable_timer_wakeup(sleepTime * 1000);
@@ -818,33 +826,33 @@ xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);
 delay(1000); 
 ```
 
-- `esp_sleep_enable_timer_wakeup(sleepTime * 1000);`ウェイクアップ用のタイマーを設定
-- `esp_light_sleep_start();` ライトスリープモードに入る
-- `xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);`LED制御タスクを作成
+- `esp_sleep_enable_timer_wakeup(sleepTime * 1000);`ウェイクアップ用のタイマーを設定します
+- `esp_light_sleep_start();` ライトスリープモードに入ります
+- `xTaskCreate(ledTask, "LED Task", 2048, NULL, 1, NULL);`LED 制御タスクを作成します
 
-### Results Show
+### 実行結果
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/light_led.gif" style={{width:300, height:'auto'}}/></div>
 
 ## Modem-Sleep
 
-### Introduction
+### 概要
 
-Modem Sleepモードは、ESP32のもう一つの重要な低消費電力モードで、Deep Sleepモードとは異なります。Modem Sleepモードは主にESP32のワイヤレス通信モジュールに最適化されています。
+Modem Sleep モードは ESP32 におけるもう 1 つの重要な低消費電力モードであり、Deep Sleep モードとは異なります。Modem Sleep モードは主に ESP32 の無線通信モジュール向けに最適化されています。
 
-このモードでは、ESP32のWiFi/Bluetoothモジュールがスリープ状態に入り、CPUコアはアクティブなままです。これにより、ESP32は一定レベルのワイヤレス接続を維持しながら、消費電力を大幅に削減できます。
+このモードでは、ESP32 の WiFi/Bluetooth モジュールがスリープ状態に入り、CPU コアは動作したままになります。これにより、消費電力を大幅に削減しつつ、ESP32 は一定レベルの無線接続性を維持できます。
 
-### Wake-up Methods
+### ウェイクアップ方法
 
-- Timer Wake-up
+- タイマーによるウェイクアップ
 
-- External Interrupt Wake-up
+- 外部割り込みによるウェイクアップ
 
-- Task Wake-up
+- タスクによるウェイクアップ
 
-- Network Activity Wake-up
+- ネットワークアクティビティによるウェイクアップ
 
-### Code Realization
+### コード実装
 
 ```cpp
 #include "WiFi.h"
@@ -860,7 +868,7 @@ void setup() {
         Serial.println("Connecting...");
     }
     Serial.println("Connected to WiFi!");
- 
+
     WiFi.setSleep(true); 
     Serial.println("Modem-Sleep enabled.");
 }
@@ -886,25 +894,25 @@ void loop() {
 }
 ```
 
-### 詳細な注記
+### 詳細な説明
 
 ```cpp
 #include "WiFi.h"
 ```
 
-- WiFi機能を有効にするためにWiFiライブラリをインクルードします。
+- WiFi 機能を有効にするために WiFi ライブラリをインクルードします。
 
 ```cpp
 Serial.println("Connecting to WiFi...");
 ```
 
-- WiFiへの接続が開始されることを示すメッセージを出力します。
+- WiFi への接続を開始することを示すメッセージを出力します。
 
 ```cpp
 WiFi.begin("****", "****");
 ```
 
-- 指定されたWiFiネットワークへの接続を開始します。
+- 指定した WiFi ネットワークへの接続を開始します。
 
 ```cpp
     while (WiFi.status() != WL_CONNECTED) {
@@ -914,51 +922,51 @@ WiFi.begin("****", "****");
     Serial.println("Connected to WiFi!");
 ```
 
-- WiFiへの接続が成功するまでループする。
+- WiFi に正常に接続されるまでループします。
 
 ```cpp
 WiFi.setSleep(true);
 ```
 
-- モデムスリープモードを有効にして電力を節約します。
+- 省電力のために Modem Sleep モードを有効にします。
 
 ```cpp
 WiFi.setSleep(false);
 ```
 
-- モデムスリープモードを無効にしてWiFiをアクティブにします。
+- WiFi を有効化するために Modem Sleep モードを無効にします。
 
 ```cpp
 if (WiFi.status() == WL_CONNECTED) {
 ```
 
-- WiFiの状態を確認します。
+- WiFi の状態を確認します。
 
 ```cpp
 WiFi.setSleep(true);
 ```
 
-- モデムスリープモードを再度有効にします。
+- 再度 Modem Sleep モードを有効にします。
 
-### 結果表示
+### 実行結果
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/light.png" style={{width:700, height:'auto'}}/></div>
 
-## スリープ機能アプリケーション
+## スリープ機能の応用
 
-上記のシンプルな例を踏まえて、さらに一歩進んで、これらのスリープ機能をESP32 S3 Senseセンサーで使用してみましょう。
+上記の簡単な例を踏まえて、次は一歩進めて、これらのスリープ機能を ESP32 S3 Sense センサー上で活用してみましょう。
 
-### ソフトウェア準備
+### ソフトウェアの準備
 
-この記事を始める前に、XIAO ESP32S3 Senseのすべてのハードウェア機能をまだ活用していない場合は、いくつかのソフトウェアインストール準備を完了していることを確認してください。
+この記事を始める前に、まだ XIAO ESP32S3 Sense 上のすべてのハードウェア機能を使用したことがない場合は、いくつかのソフトウェアインストールの準備が完了していることを確認してください。
 
-ここでは3つの機能の紹介があり、以下のリンクを通じてより詳しい情報を見つけることができます：
+ここでは 3 つの機能について紹介します。詳細は次のリンクから確認できます。
 
-- [マイクロフォンの使用](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_mic/)：XIAO ESP32S3 Senseのマイクロフォンを使用して周囲の音レベルを捉え、音声を録音する方法を学びます。
+- [Micrphone Use](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_mic/): XIAO ESP32S3 Sense 上のマイクを使用して周囲の音量を取得し、音声を録音する方法を学びます。
 
-- [MicroSD](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_filesystem/)：データストレージにMicroSDカードを使用する方法を理解し、プロジェクトでファイルを保存および取得できることを確認します。
+- [MicroSD](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_filesystem/): プロジェクトでファイルを保存および取得できるように、データ保存用に MicroSD カードを使用する方法を理解します。
 
-- [カメラの使用](https://wiki.seeedstudio.com/ja/xiao_esp32s3_camera_usage/)：XIAO ESP32S3 Senseのカメラモジュールを使用して写真を撮影し、動画を録画する方法をマスターします。
+- [Camera Use](https://wiki.seeedstudio.com/ja/xiao_esp32s3_camera_usage/): XIAO ESP32S3 Sense 上のカメラモジュールを使用して写真を撮影し、動画を録画する方法を習得します。
 
 ### コード実装
 
@@ -988,7 +996,7 @@ void photo_save(const char * fileName) {
     return;
   }
   writeFile(SD, fileName, fb->buf, fb->len);
-  
+
   esp_camera_fb_return(fb);
 
   Serial.println("Photo saved to file");
@@ -1053,9 +1061,9 @@ void setup() {
     Serial.println("Card Mount Failed");
     return;
   }
-  
+
   uint8_t cardType = SD.cardType();
-  
+
   if (cardType == CARD_NONE) {
     Serial.println("No SD card attached");
     return;
@@ -1080,17 +1088,17 @@ void setup() {
 void loop() {
   if (camera_sign && sd_sign) {
     unsigned long now = millis();
-  
+
     if ((now - lastCaptureTime) >= 60000) {
       char filename[32];
       sprintf(filename, "/image%d.jpg", imageCount);
       photo_save(filename);
       Serial.printf("Saved picture: %s\r\n", filename);
       Serial.println("Entering deep sleep for 10 seconds...");
-      
+
       esp_sleep_enable_timer_wakeup(10000000); 
       esp_deep_sleep_start(); 
-      
+
     }
   }
 }
@@ -1098,7 +1106,7 @@ void loop() {
 
 ### 詳細な説明
 
-このコードは、ESP32カメラモジュールに基づく画像キャプチャシステムを実装しており、60秒ごとに自動的に写真を撮影してSDカードに保存することができます。`void setup()`関数では、カメラとSDカードを初期化してデバイスの状態を確認し、`void loop()`関数では、カメラが写真を撮影できるかどうかをチェックし、条件が満たされた場合は`photo_save()`関数を呼び出して画像を保存し、保存後は省電力のために10秒間のディープスリープ状態に入ります。
+このコードは ESP32 カメラモジュールをベースにした画像キャプチャシステムを実装しており、60 秒ごとに自動で写真を撮影し、SD カードに保存します。`void setup()` 関数ではカメラと SD カードを初期化し、デバイスの状態を確認します。`void loop()` 関数ではカメラが撮影可能かどうかを確認し、条件を満たす場合は `photo_save()` 関数を呼び出して画像を保存し、保存後に 10 秒間のディープスリープ状態に入って省電力化を行います。
 
 </TabItem>
 
@@ -1143,7 +1151,7 @@ void setup() {
 void loop() {
   esp_sleep_enable_timer_wakeup(sleepTime * 1000);
   xTaskCreate(i2sTask, "I2S Task", 2048, NULL, 1, NULL);
-  
+
   Serial.println("Going to sleep now...");
   esp_light_sleep_start();
 
@@ -1153,7 +1161,7 @@ void loop() {
 
 ### 詳細な説明
 
-このコードは、I2Sインターフェースを使用してオーディオデータをキャプチャする機能を実装しています。`void setup()`関数では、シリアルポートとI2Sインターフェースが初期化されます。`void loop()`関数では、ウェイクアップタイマーが有効化され、`void i2sTask(void *pvParameters)`タスクが作成されます。このタスクは、オーディオサンプルの読み取りと、毎秒有効なデータの出力を担当します。タスクが10回実行された後、3秒間遅延してから自身を削除します。
+このコードは I2S インターフェースを使用して音声データを取得する機能を実装しています。`void setup()` 関数ではシリアルポートと I2S インターフェースを初期化し、`void loop()` 関数ではウェイクアップタイマーを有効にしてタスク `void i2sTask(void *pvParameters)` を作成します。このタスクは音声サンプルを読み取り、毎秒有効なデータを出力する役割を担います。タスクが 10 回実行された後、3 秒間の遅延を行い、自身を削除します。
 
 </TabItem>
 
@@ -1297,37 +1305,37 @@ void cameraOperation() {
 }
 ```
 
-### 詳細な注記
+### 詳細な説明
 
-このコードは、画像キャプチャとWi-Fi経由での接続にESP32カメラモジュールを使用することを実装しています。`void setup()`関数では、シリアルポート、カメラ、Wi-Fi接続が初期化されます。初期化が成功すると、プログラムはユーザーが接続するためのWi-Fiアドレスを出力します。`void loop()`関数では、コードは10秒ごとにWi-Fiステータスをチェックし、カメラ操作がない場合、Wi-Fiは電力を節約するためにスリープモードに設定されます。`cameraOperation()`関数を呼び出すたびに、最後の操作時間が更新され、イベント中にWi-Fi接続が維持されることを保証します。
+このコードは、ESP32 カメラモジュールを使用した画像キャプチャと Wi-Fi 経由での接続を実装しています。`void setup()` 関数では、シリアルポート、カメラ、および Wi-Fi 接続が初期化されます。初期化が成功すると、ユーザーが接続できるように Wi-Fi アドレスが出力されます。`void loop()` 関数では、10 秒ごとに Wi-Fi の状態をチェックし、カメラの操作がない場合は省電力のために Wi-Fi をスリープモードに設定します。`cameraOperation()` 関数が呼び出されるたびに、最後の操作時刻が更新され、イベントの間は Wi-Fi 接続が維持されるようになっています。
 
 </TabItem>
 
 </Tabs>
 
 :::tip
-これらのコードは直接使用することはできません。カメラに関するヘッダーファイルを追加する必要があります。上記のXIAO ESP32 S3に関する例を確認してください。
+これらのコードはそのままでは使用できません。カメラに関するヘッダーファイルを追加する必要があります。XIAO ESP32 S3 に関する上記のサンプルを確認してください。
 :::
 
 ## まとめ
 
-### なぜDeep Sleepモードを使用するのか
+### Deep Sleep モードを使用する理由
 
-機能を損なうことなく電力節約を最大化し、デバイスのバッテリー寿命を延ばすためです。
-適用シナリオ：リモートセンサーノード、ウェアラブルデバイス、その他の低電力IoTデバイスなど、バッテリー寿命が重要なアプリケーション。ウェイクアップ時間は比較的遅いですが、このトレードオフは価値があります。
+デバイスのバッテリー寿命を延ばすために、機能性を損なうことなく電力節約を最大化します。
+適したシナリオ：リモートセンサーノード、ウェアラブルデバイス、その他の低消費電力 IoT デバイスなど、バッテリー寿命が重要となるアプリケーション。ウェイクアップ時間は比較的遅いものの、このトレードオフには十分な価値があります。
 
-### なぜModem Sleepモードを使用するのか
+### Modem Sleep モードを使用する理由
 
-ネットワーク接続を維持しながら、無線通信モジュールの電力消費を最適化するためです。
-適用シナリオ：ネットワーク接続を維持する必要があるが、低電力も必要とするアプリケーション、例えば間欠的に動作するIoTデバイス。Modem Sleepは、高速なウェイクアップ応答を提供しながら、無線モジュールの電力消費を大幅に削減できます。
+ネットワーク接続を維持しながら、無線通信モジュールの消費電力を最適化します。
+適したシナリオ：ネットワーク接続を維持する必要がありつつ、低消費電力も求められるアプリケーション。例えば、間欠的に動作する IoT デバイスなどです。Modem Sleep は、無線モジュールの消費電力を大幅に削減しつつ、高速なウェイクアップ応答を提供できます。
 
 ### 総括
 
-これら3つのスリープモードは、開発者に異なる電力/性能のトレードオフオプションを提供し、アプリケーションの具体的な要件に基づいて柔軟に選択できます。バッテリー寿命要件があるデバイスには、Deep Sleepモードが良い選択です。ネットワーク接続を維持する必要があるIoTデバイスには、Modem Sleepモードが最適な選択です。
+これら 3 つのスリープモードは、開発者に対して電力と性能の異なるトレードオフの選択肢を提供し、アプリケーションの具体的な要件に応じて柔軟に選択できます。バッテリー寿命が重視されるデバイスには Deep Sleep モードが適しており、ネットワーク接続を維持する必要がある IoT デバイスには Modem Sleep モードが最適な選択肢となります。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

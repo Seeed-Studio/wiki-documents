@@ -1,6 +1,6 @@
 ---
 title: ePaper 驱动板快速上手
-description: 适用于 XIAO 的 eInk 扩展板是 Seeed Studio 推出的智能模块，可在电子纸屏幕上显示内容。
+description: XIAO 的 eInk 扩展板是 Seeed Studio 推出的智能模块，用于在电子纸屏幕上显示内容。
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/titleimg.webp
 slug: /xiao_eink_expansion_board_v2
 sku: 104990861,114993558
@@ -12,7 +12,7 @@ last_update:
   author: Allen
   date: 12/09/2024
 createdAt: '2025-01-10'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-27'
 url: https://wiki.seeedstudio.com/cn/xiao_eink_expansion_board_v2/
 ---
 
@@ -38,7 +38,7 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 
 - **内置充电 IC**：确保电池充电高效且安全。
 - **带开关的 BAT 接口**：便于电池连接，并集成开关，可将电池与开关组合使用，实现更高效的节能。
-- **24 针 PFC 连接器**：为各种外设提供多样化的连接选项。
+- **24 针 PFC 连接器**：为多种外设提供灵活的连接选项。
 - **扩展 IO 端口**：可连接额外的传感器，如温湿度传感器，以增强功能。
 - **兼容 Seeed Studio XIAO 生态系统**：可与 XIAO 系列（预焊接版本）无缝集成，用于多种项目开发。
 
@@ -46,9 +46,9 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 
 - **智能家居仪表盘**：显示天气更新、日历事件以及来自各类智能家居设备的通知等实时信息。
 - **能耗监测**：显示来自智能电表的能耗数据，帮助用户更高效地跟踪和管理能源使用。
-- **安防警报**：显示安防事件的警报和通知，例如运动检测或门/窗传感器触发。
+- **安防警报**：显示关于安防事件的警报和通知，例如运动检测或门/窗传感器触发。
 - **智能恒温器显示屏**：显示温度和湿度水平，以及智能恒温器的控制设置。
-- **数字相框**：创建支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
+- **数字相框**：打造支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
 
 ## 硬件概览
 
@@ -91,7 +91,7 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 10. [7.5-inch E-paper - Monocolor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 11. [7.5-inch E-paper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
-## 入门指南
+## 快速上手
 
  要使用 **XIAO eInk 扩展板**，我们需要对 XIAO 系列进行编程。XIAO 支持的不同尺寸 E-paper 如下表所示：
 
@@ -172,7 +172,7 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 
  推荐的编程工具是 Arduino IDE，你需要为 XIAO 配置 Arduino 环境并添加板卡包。
 :::tip
-如果这是你第一次使用 Arduino，我们强烈建议你参考[Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是你第一次使用 Arduino，我们强烈建议你参考 [Getting Started with Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
 
 **步骤 1.** 启动 Arduino 应用程序。
@@ -187,15 +187,15 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 
 **步骤 2.** 选择你的开发板型号并将其添加到 Arduino IDE 中。
 
-- 如果你想在后续示例中使用 **Seeed Studio XIAO SAMD21**，请参考 **[本教程](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#software)** 完成添加。
+- 如果你想在后续示例中使用 **Seeed Studio XIAO SAMD21**，请参考 **[本教程](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#软件)** 完成添加。
 
-- 如果你想在后续示例中使用 **Seeed Studio XIAO RP2040**，请参考 **[本教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#software-setup)** 完成添加。
+- 如果你想在后续示例中使用 **Seeed Studio XIAO RP2040**，请参考 **[本教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#软件-设置)** 完成添加。
 
-- 如果你想在后续示例中使用 **Seeed Studio XIAO nRF52840**，请参考 **[本教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)** 完成添加。
+- 如果你想在后续示例中使用 **Seeed Studio XIAO nRF52840**，请参考 **[本教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#软件-设置)** 完成添加。
 
-- 如果你想在后续示例中使用 **Seeed Studio XIAO ESP32C3**，请参考 **[本教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started#software-setup)** 完成添加。
+- 如果你想在后续示例中使用 **Seeed Studio XIAO ESP32C3**，请参考 **[本教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started#软件-设置)** 完成添加。
 
-- 如果你想在后续示例中使用 **Seeed Studio XIAO ESP32S3**，请参考 **[本教程](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started#software-preparation)** 完成添加。
+- 如果你想在后续示例中使用 **Seeed Studio XIAO ESP32S3**，请参考 **[本教程](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started#软件-准备)** 完成添加。
 
 ## 安装 Seeed GFX 库
 
@@ -222,7 +222,7 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 选择你的设备类型，它会生成一些代码。复制这些代码，我们稍后会用到。
 
 :::tip
-如果你选择错误，屏幕将不会显示任何内容。
+如果你做出了错误的选择，屏幕将不会显示任何内容。
 
 所以请务必确认你的设备或元件类型。
 :::
@@ -244,7 +244,7 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 
 ### 上传代码
 
-创建一个**新的 "driver.h" 文件**，并将这些代码粘贴进去。代码应类似如下：
+创建一个**新的 "driver.h" 文件**并将这些代码粘贴进去。代码应类似如下：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 504 // 2.9 inch monochrome ePaper Screen （SSD1680）
@@ -269,16 +269,16 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 
 ### 网站用法（推荐）
 
-这里我使用的是 7.5 英寸电子墨水屏进行测试
+这里我使用 7.5 英寸电子墨水屏进行测试
 
 #### 如何制作图片
 
-这个 [URL](https://jlamch.net/MXChipWelcome/) 提供了非常方便的图像提取操作，可以轻松帮助我们在电子墨水屏上显示各种图像，让我们开始吧！
+这个 [URL](https://jlamch.net/MXChipWelcome/) 提供了非常方便的图像提取操作，可以轻松帮助我们实现在电子墨水屏上显示各种图像，让我们开始吧！
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/9191.jpg" style={{width:700, height:'auto'}}/></div>
 
 **步骤 1**. 选择图片
 
-首先选择你想要的图片，尽量不要超过 800×480 的尺寸。
+首先选择你想要的图片，尽量不要超过 800*480 的尺寸。
 
 **步骤 2**. 图像设置
 
@@ -326,7 +326,7 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 
 #### 如何制作图片
 
-在 Windows 中使用内置软件 **Paint** 创建一张与所用屏幕**分辨率相同**的图片，并将其保存为 `BMP` 或 `JPG` 文件；
+使用 Windows 自带的 **画图（Paint）** 软件创建一张与所用屏幕**分辨率相同**的图片，并将其保存为 `BMP` 或 `JPG` 文件；
 
 :::note
 你的图片分辨率必须与所使用的屏幕相同，例如，4.2 英寸电子纸的分辨率是 400 x 300 像素，那么你不能使用 300 x 400 的尺寸，否则会导致 iamge2lcd 输出的 `.h` 文件多出 200 字节。
@@ -348,7 +348,7 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 |5.65 英寸电子纸 - 七色 600x480        | 黑、白、红、黄、蓝、绿、橙|
 |5.83 英寸电子纸 - 单色 648x480          | 纯黑白          |
 |7.5 英寸电子纸 - 单色 800x480           | 纯黑白          |
-|7.5 英寸电子纸 - 三色 800x480           | 纯黑白          |
+|7.5 英寸电子纸 - 三色 800x480           | 黑、白和红          |
 
 </div>
 
@@ -363,7 +363,7 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
   <table align="center">
     <tr>
         <th>电子纸</th>
-        <th>位像素</th>
+        <th>BitPixl</th>
         <th>最大宽度和高度</th>
         <th>反转颜色</th>
         <th>显示模式</th>
@@ -456,13 +456,13 @@ ePaper 驱动板具有 24 针 FPC 连接器、内置充电 IC，可实现高效�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/2.png" style={{width:700, height:'auto'}}/></div>
 :::
 
-**Step 3.** 点击 "Save" 将 LCD 输出数组保存为一个 `.h` 文件。
+**步骤 3.** 点击 "Save" 将 LCD 输出数组保存为一个 `.h` 文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/7.png" style={{width:500, height:'auto'}}/></div>
 
 ## 资源
 
-- **[PDF]**: [ePaper 驱动板原理图 PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
+- **[PDF]**: [电子纸驱动板原理图 PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
 
 ## 技术支持与产品讨论
 

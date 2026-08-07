@@ -14,13 +14,13 @@ last_update:
   date: 08/16/2024
   author: Frank
 createdAt: '2024-08-21'
-updatedAt: '2025-09-02'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/tutorials/sensecraft-ai-jetson/
 ---
 
-SenseCraft AI-Jetson é um kit de desenvolvimento e plataforma projetado para dispositivos NVIDIA Jetson Edge AI. Basta executar o "Quickstart Script" e você verá uma interface de usuário interativa para visualizar um aplicativo de exemplo com um vídeo pré-carregado e um modelo de IA pré-carregado. Se você quiser adicionar sua própria câmera USB ou câmera IP, você pode fazer isso facilmente em poucos cliques!
+SenseCraft AI-Jetson é um kit de desenvolvimento e plataforma projetado para dispositivos NVIDIA Jetson Edge AI. Basta executar o "Quickstart Script" e você verá uma interface de usuário interativa para visualizar um aplicativo de exemplo com um vídeo pré-carregado e um modelo de IA pré-carregado. Se você quiser adicionar sua própria câmera USB ou câmera IP, você pode fazer isso em apenas alguns cliques!
 
-Além dos vários modelos de IA integrados que oferecemos prontos para uso, você pode acessar um grande número de modelos públicos na plataforma SenseCraft AI e poderá baixar e implantar modelos de IA para cenários específicos e criar soluções de IA personalizadas com base em suas necessidades. SenseCraft AI é seu parceiro inteligente de tomada de decisão para visão de IA, fornecendo a você recursos simples, flexíveis e eficientes de inferência e construção de soluções.
+Além dos vários modelos de IA integrados que oferecemos prontos para uso, você pode acessar um grande número de modelos públicos na plataforma SenseCraft AI e poderá baixar e implantar modelos de IA para cenários específicos e criar soluções de IA personalizadas com base em suas necessidades. SenseCraft AI é seu parceiro inteligente de tomada de decisão para visão de IA, oferecendo a você recursos simples, flexíveis e eficientes de inferência e construção de soluções.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/video.gif)
 
@@ -29,7 +29,7 @@ Além dos vários modelos de IA integrados que oferecemos prontos para uso, voc�
 **Requisitos de hardware**
 
 - Dispositivo NVIDIA Jetson
-- Conectividade com a Internet via Ethernet/WiFi
+- Conectividade com a Internet via Ethernet/ WiFi
 - Monitor
 
 **Requisitos de software**
@@ -56,7 +56,7 @@ fornece o script jetson_clocks para maximizar o desempenho do Jetson definindo a
 No caso de memória insuficiente (especialmente no Jetson Nano), é melhor ativar o swap para garantir o funcionamento normal do programa.
 
 - **[Opcional] Você deseja criar ou alterar o tamanho da memória Swap? (/swapfile)?**<br />
-Para obter melhor desempenho do Nano, ative o Swap.
+Para obter um desempenho melhor no Nano, ative o Swap.
 
 - **[Opcional] Usar armazenamento externo · para armazenar o diretório de dados do Docker? (para imagens e volumes do Docker)?**<br />
 
@@ -89,7 +89,7 @@ O programa de edge AI requer um mínimo de 32G de espaço de armazenamento para 
 5. O modelo de IA precisa aplicar um fluxo de vídeo, se não houver fluxo, adicione primeiro um fluxo válido. O model zoo enviará as informações do fluxo diretamente para o dispositivo.
 
 :::note
-para mais informações sobre fluxo, consulte Streams Management
+para mais informações sobre fluxos, consulte Streams Management
 :::
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/40.png)
@@ -100,7 +100,7 @@ para mais informações sobre fluxo, consulte Streams Management
 
 ### **Gerenciamento de fluxos**
 
-SenseCraft AI-Jetson suporta adicionar múltiplos fluxos de vídeo e suporta adicionar câmera USB e câmera IP conforme sua necessidade.
+SenseCraft AI-Jetson suporta adicionar vários fluxos de vídeo e suporta adicionar câmera USB e câmera IP conforme necessário.
 
 O número de fluxos de vídeo que podem ser adicionados depende dos recursos de CPU e memória do dispositivo. Preste atenção ao uso de recursos do dispositivo.
 
@@ -116,16 +116,16 @@ O número de fluxos de vídeo que podem ser adicionados depende dos recursos de 
 | **Campos** | **Conteúdo** |
 | --- | --- |
 | **Stream Name** | 1 Nome personalizado para este fluxo.<br />2 Não pode ficar vazio |
-| **Video Type** | 1 Ip camera: acessar uma câmera IP, é necessário inserir uma URL rtsp válida<br />2 Usb camera: conectar a câmera USB ao dispositivo, reconhecer automaticamente o USB e, em seguida, selecionar a câmera USB correta no caminho de vídeo. |
+| **Video Type** | 1 Ip camera：Acessar uma câmera IP, é necessário inserir uma URL rtsp válida<br />2 Usb camera：Conecte a câmera USB ao dispositivo, reconheça automaticamente o USB e, em seguida, selecione a câmera USB correta no caminho de vídeo. |
 | **Video Path** | Caminho de vídeo, o formato é decidido por "Video Type", se estiver errado, o vídeo padrão será usado. |
 | **Device AI Model** | 1 Selecione um modelo de IA que já foi baixado no dispositivo<br />2 Se não houver modelo de IA no seu dispositivo, vá para a página AI Models para baixar o modelo para o seu dispositivo. |
-| **Confidence Threshold** | 1 Limite de confiança do objeto para detecção.<br />2 Formato: float [0, 1] |
-| **IoU Threshold** | 1 IoU é usado para avaliar a precisão das caixas delimitadoras previstas em comparação com as caixas delimitadoras verdadeiras2 Formato: float [0, 1] |
+| **Confidence Threshold** | 1 Limite de confiança do objeto para detecção.<br />2 Formato:float [0, 1] |
+| **IoU Threshold** | 1 IoU é usado para avaliar a precisão das caixas delimitadoras previstas em comparação com as caixas delimitadoras verdadeiras2 Formato:float [0, 1] |
 | **FPS** | 1 Quadros por segundo do fluxo<br />2 Formato: INT [1,60] |
-| **Quality** | 1 Qualidade do fluxo de saída. Padrão: 50<br />2 Formato: int [0,100] |
-| **Maximum Detections** | 1 número máximo de detecções por imagem. Padrão: 3002 Formato: int [0,1000] |
-| **Display Frame Rate** | 1 Se deve exibir a taxa de quadros do fluxo<br />2 Formato: Bool [True,False]<br />● True: exibir FPS<br />● False: não exibir FPS |
-| **Display Clock** | 1 Se deve exibir a hora<br />2 Formato: Bool [True,False]<br />● True: exibir hora<br />● False: não exibir hora |
+| **Quality** | 1 Qualidade do fluxo de saída.  Padrão: 50<br />2 Formato: int [0,100] |
+| **Maximum Detections** | 1 número máximo de detecções por imagem.Padrão:3002 Formato: int [0,1000] |
+| **Display Frame Rate** | 1 Se deve exibir a taxa de quadros do fluxo<br />2 Formato:Bool [True,False]<br />● True: exibir FPS<br />● False: não exibir FPS |
+| **Display Clock** | 1 Se deve exibir a hora<br />2 Formato:Bool [True,False]<br />● True: exibir hora<br />● False: não exibir hora |
 
 3. Clique no botão "Save" e volte para a página inicial para verificar o novo fluxo e o resultado da detecção de IA.
 
@@ -169,9 +169,9 @@ As informações do dispositivo, para mais informações consulte a tabela a seg
 
 #### **Vincular à plataforma SenseCraft AI**
 
-SenseCraft AI para Jetson é projetado para edge AI. A inferência de IA e o processamento de fluxo de vídeo são feitos localmente no dispositivo. Somente se você precisar baixar mais modelos de IA será necessário vincular o dispositivo à [plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai) — você pode remover o dispositivo após o download.
+SenseCraft AI para Jetson é projetado para edge AI. A inferência de IA e o processamento de fluxo de vídeo são feitos localmente no dispositivo. Somente se você precisar baixar mais modelos de IA será necessário vincular o dispositivo à [plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) — você pode remover o dispositivo após o download.
 
-1. Visite [SenseCraft AI](https://sensecraft.seeed.cc/ai).<br />
+1. Visite o [SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home).<br />
 2. Registre-se com um endereço de e-mail válido. A conta SenseCraft AI é a mesma que a conta SenseCAP Cloud; se você já tiver uma, poderá fazer login diretamente.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/49.png)
@@ -183,7 +183,7 @@ SenseCraft AI para Jetson é projetado para edge AI. A inferência de IA e o pro
 
 5. Volte para o aplicativo SenseCraft AI do dispositivo. Clique em "Bind to SenseCraft AI platform", e então o aplicativo exibirá o código de vinculação e o nome temporário.
 
-- Bind Code: insira o código de vinculação correto e válido na [plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai) para concluir a vinculação do dispositivo.<br />
+- Bind Code: insira o código de vinculação correto e válido na [plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) para concluir a vinculação do dispositivo.<br />
 - Temporary Name: se o código de vinculação estiver duplicado, você precisará inserir o nome temporário correto.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/51.png)
@@ -201,10 +201,10 @@ SenseCraft AI para Jetson é projetado para edge AI. A inferência de IA e o pro
 
 Se você não precisar gerenciar remotamente seu dispositivo na plataforma de IA, poderá excluir o dispositivo da conta da sua plataforma de IA. Você pode desvincular a partir do dispositivo ou na plataforma<br />
 
-- Desvincular o dispositivo do AI mode zoo, clique em "Delete"<br />
+- Desvincule o dispositivo do AI mode zoo, clique em "Delete"<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/59.png)
 
-- Desvincular o dispositivo desativando "Bind to SenseCraft AI platform"<br />
+- Desvincule o dispositivo desativando "Bind to SenseCraft AI platform"<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/55.png)
 
 ### **Atualização do aplicativo**
@@ -215,13 +215,13 @@ As atualizações do aplicativo SenseCraft AI são categorizadas em atualizaçõ
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/56.png)
 
-**Atualização manual**: verifica manualmente se há atualizações e clique no botão Update para atualizar quando uma nova versão for detectada
+**Atualização manual**: verifique manualmente se há atualizações e clique no botão Update para atualizar quando uma nova versão for detectada
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/57.png)
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/58.png)
 
-## **Suporte Técnico**
+## **Suporte técnico**
 
 **Precisa de ajuda com o seu SenseCAP Indicator? Estamos aqui para ajudar você!**
 

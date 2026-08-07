@@ -9,7 +9,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2025-05-27'
-updatedAt: '2025-09-10'
+updatedAt: '2026-06-25'
 url: https://wiki.seeedstudio.com/ja/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_FAQ/
 ---
 
@@ -37,10 +37,6 @@ IP当たり最大8台のデバイスを実行でき、ルーターがUPnPまた�
 ### **要求を満たすネットワーク帯域幅をテストする方法は？**
 
 https://www.speedtest.net
-
-### **fluxとfluxトークンの違いは何ですか？**
-
-FluxトークンはFluxです。FluxトークンはETH Flux、BSC Fluxなど、異なるブロックチェーンで支払われるParallel Assetsです。これらはZelcore内のFusionアプリで請求可能です。右上の3つの点から「Parallel Mining Claim」を選択してください。Flux-Tokenの金額が請求に必要な手数料より高い場合のみ、請求可能な金額が表示されます。
 
 ### **プロフェッショナルユーザーの場合、元のシステムを消去して他のシステムをインストールできますか？**
 

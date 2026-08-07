@@ -11,7 +11,7 @@ last_update:
   date: 06/11/2024
   author: Bruno
 createdAt: '2025-02-24'
-updatedAt: '2025-09-03'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/es/train_and_deploy_a_custom_classification_model_with_yolov8/
 ---
 
@@ -331,7 +331,7 @@ Para la clasificación, vamos a usar uno de los [modelos pre-entrenados ya dispo
 Estos modelos han sido entrenados en ImageNet y están ajustados para clasificación.
 Vamos a usarlo y entrenarlo con nuestros datos.
 
-Esto es lo que se conoce como [aprendizaje por transferencia](https://neptune.ai/blog/transfer-learning-guide-examples-for-images-and-text-in-keras).
+Esto es lo que se conoce como [aprendizaje por transferencia](https://web.archive.org/web/20251006174754/https://neptune.ai/blog/transfer-learning-guide-examples-for-images-and-text-in-keras).
 
 Voy a usar el modelo [YOLOv8l-cls](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l-cls.pt). Probablemente otros también funcionen bien, pero como no necesitamos tiempo real, es un equilibrio entre velocidad y precisión.
 

@@ -10,7 +10,7 @@ last_update:
   date: 12/04/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2025-09-04'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai/
 ---
 
@@ -46,11 +46,11 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-outpu
 
 ## 步骤 1. 进入 Grove Vision AI V2 工作区并连接设备
 
-通过 **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`Grove Vision AI V2`** 进入 Grove Vision AI V2 工作区，或者使用[工作区的直接链接](https://sensecraft.seeed.cc/ai/device/local/36)。
+通过 **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`Grove Vision AI V2`** 进入 Grove Vision AI V2 工作区，或者使用[工作区的直接链接](https://sensecraft.seeed.cc/ai/device/local/36)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/grove_vision_ai_v2_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
-使用 USB-C 线缆，将 Grove Vision AI V2 设备连接到电脑。设备连接完成后，点击工作区页面左上角的 **Connect** 按钮。
+使用 USB-C 线缆将 Grove Vision AI V2 设备连接到电脑。设备连接完成后，点击工作区页面左上角的 **Connect** 按钮。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
 
@@ -79,7 +79,7 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-outpu
 
 - **Object**：指定模型需要检测到的对象，以触发动作。例如，如果你希望在检测到人时触发动作，可以填写“person”。
 
-- **Condition**：选择触发发生所需满足的条件。选项包括 “Greater than”、“Less than”、“Equal to” 等。例如，选择 “Greater than” 表示当检测到的对象置信度大于指定值时，将触发动作。
+- **Condition**：选择触发发生所需满足的条件。选项包括 “Greater than”、“Less than”、“Equal to” 等。例如，选择 “Greater than” 表示当检测到的目标置信度大于指定值时将触发动作。
 
 - **Confidence**：设置触发动作所需的最小目标检测置信度。该值范围为 1 到 100，100 表示最高置信度。
 
@@ -105,23 +105,23 @@ Grove Vision AI V2 支持两种类型的触发动作：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/53.png" style={{width:1000, height:'auto'}}/></div>
 
-现在，当满足指定条件时，Grove Vision AI V2 将执行已配置的触发动作，从而以可视化方式指示模型的输出。
+现在，当满足指定条件时，Grove Vision AI V2 将执行已配置的触发动作，从而对模型输出提供可视化指示。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/54.jpg" style={{width:400, height:'auto'}}/></div>
 
 :::caution
-请注意，输出功能依赖于 SenseCraft AI 平台与 Grove Vision AI V2 设备之间的基于 Web 的连接。如果连接丢失或中断，已配置的触发动作将停止工作。请在整个过程中确保连接稳定。
+请注意，输出功能依赖于 SenseCraft AI 平台与 Grove Vision AI V2 设备之间的基于网页的连接。如果连接丢失或中断，已配置的触发动作将停止工作。请在整个过程中确保连接稳定。
 :::
 
 ## 总结
 
-通过完成本分步指南，你已经学会了如何在 SenseCraft AI 平台上为 Grove Vision AI V2 设备配置模型输出设置和触发动作。现在，你可以根据训练模型的输出，让设备执行特定动作，例如点亮板载 LED 或保存捕获的图像。该功能使你能够使用 Grove Vision AI V2 和 SenseCraft AI 创建交互式应用和项目。请记得保持 Web 平台与设备之间的连接稳定，以确保流畅运行。
+通过完成本分步指南，你已经学会了如何在 SenseCraft AI 平台上为 Grove Vision AI V2 设备配置模型输出设置和触发动作。现在，你可以根据训练模型的输出，让设备执行特定动作，例如点亮板载 LED 或保存捕获的图像。该功能使你能够使用 Grove Vision AI V2 和 SenseCraft AI 创建交互式应用和项目。请记得保持网页平台与设备之间的连接稳定，以确保流畅运行。
 
-Grove Vision AI V2 本质上仍然是一个 AI 相机传感器，因此我们不能指望它完成太多超出传感器范畴的工作。如果你有额外的 MCU，可以通过 Grove 接口或 Pin to Pin 接口实现更有趣的项目，SenseCraft AI 只是一个用于传输模型的媒介。关于 Grove Vision AI V2 模块的更多 Arduino 示例，请参考 [Grove Vision AI V2 入门](https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_software_support/)。
+Grove Vision AI V2 本质上仍然是一个 AI 相机传感器，因此我们不能指望它完成太多超出传感器范畴的工作。如果你有额外的 MCU，可以通过 Grove 接口或 Pin to Pin 接口实现更有趣的项目。SenseCraft AI 只是一个用于下发模型的媒介，关于 Grove Vision AI V2 模块的更多 Arduino 示例，请参考 [Grove Vision AI V2 入门](https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_software_support/)。
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时体验顺畅。我们提供多种沟通渠道，以满足不同偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

@@ -12,7 +12,7 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-04-23'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/get_started_with_esp32s3_meshcore/
 ---
 
@@ -312,6 +312,62 @@ Also, you can adjust the advert broadcast interval. The interval range of `auto 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
+## FAQ
+
+### Device loses saved settings after power loss
+
+If the device name, LoRa Region, or other settings appear to be saved successfully in the app but disappear after the device is powered off, check whether the ESP32-S3 flash partition table is abnormal.
+
+You can use [ESPConnect](https://thelastoutpostworkshop.github.io/ESPConnect/) to inspect the ESP32-S3 flash memory partition table. ESPConnect is only applicable to ESP devices and cannot be used with nRF52840 devices.
+
+1. Open ESPConnect and select a baud rate of `115200`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-2.png" alt="ESPConnect baud rate selection" width={800} height="auto" /></p>
+
+2. Click **Connect**, then select **USB JTAG/serial debug unit**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-3.png" alt="Select USB JTAG serial debug unit in ESPConnect" width={600} height="auto" /></p>
+
+3. After the device is connected, open the **Partitions** page.
+4. Check whether `spiffs` exists in the partition list.
+
+If the partition table is abnormal, the ESPConnect **Partitions** page may show only:
+
+- `nvs`
+- `phy_init`
+- `factory`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-4.png" alt="ESPConnect partition table without SPIFFS" width={800} height="auto" /></p>
+
+However, the official MeshCore v1.15 `merged.bin` firmware should include:
+
+- `nvs`
+- `otadata`
+- `app0`
+- `app1`
+- `spiffs` 1.5 MB
+- `coredump`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-5.png" alt="ESPConnect partition table with SPIFFS" width={800} height="auto" /></p>
+
+MeshCore v1.15 writes the device name and Region settings to `/new_prefs` in SPIFFS. If the `spiffs` partition does not exist, these settings are only kept in RAM. The mobile app may show that the settings were saved successfully, but they will be lost after power is removed.
+
+This usually happens when the normal firmware file is flashed, for example:
+
+```text
+Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26.bin
+```
+
+Instead, the full merged firmware should be flashed, for example:
+
+```text
+Xiao_S3_WIO_companion_radio_ble-v1.15.0-dee3e26-merged.bin
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-1.png" alt="MeshCore flasher download options for normal and merged firmware" width={800} height="auto" /></p>
+
+To fix this issue, erase the device and flash the merged firmware version again.
+
 ## Resource
 - **[PDF]**[The Schematic Diagram of the SX1262 compatible with Xiao ESP32-S3](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
 - **[PDF]**[Wio-SX1262 Module Datasheet](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf)
@@ -331,16 +387,26 @@ Also, you can adjust the advert broadcast interval. The interval range of `auto 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
 - **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+
 ## Tech Support & Product Discussion
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>

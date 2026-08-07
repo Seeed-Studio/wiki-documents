@@ -5,20 +5,19 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /io_expander_for_xiao
 sku: 103030415
 last_update:
-  date: 04/29/2026
+  date: 07/09/2026
   author: Stephen Lo
 createdAt: '2023-09-19'
-updatedAt: '2026-04-29'
+updatedAt: '2026-07-09'
 url: https://wiki.seeedstudio.com/io_expander_for_xiao/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/1.jpg" alt="pir" width={500} height="auto" /></p>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/GPIO-Expander-for-XIAO-p-5795.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-</div><br />
+:::caution
+This product is no longer available for purchase.
+:::
+
 
 The IO Expander for XIAO is a state-of-the-art expansion board designed to enhance the capabilities of the Seeed Studio XIAO series. Powered by the MCP23017 chip, this board offers an additional 16 IO pins, allowing users to expand their projects without constraints. Whether you're a hobbyist looking to experiment with more components or a professional seeking a reliable IO expansion solution, this board is tailored to meet your needs. Its compatibility with the XIAO series ensures seamless integration, making your development process smoother and more efficient.
 

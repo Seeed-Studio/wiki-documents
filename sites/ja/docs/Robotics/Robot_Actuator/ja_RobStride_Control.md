@@ -12,16 +12,15 @@ last_update:
   date: 11/19/2025
   author: Tienjuiwong
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-11-19'
-updatedAt: '2026-02-27'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/ja/robstride_control/
 ---
 
 # RobStride 制御ライブラリ - 完全技術ドキュメント
 
-> Python、C++、Rust、Arduino 実装を備えた高性能 RobStride モーター制御ベースライン
+> 高性能な RobStride モーター制御ベースラインで、Python、C++、Rust、Arduino による実装を提供します
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20ESP32-lightgrey.svg)
@@ -55,11 +54,11 @@ RobStride 制御ライブラリは、RobStride シリーズモーター向けに
 - ✅ **リアルタイム性能**：50〜200Hz の制御周波数と低レイテンシ
 - ✅ **産業グレードの安定性**：長時間の連続運転をサポート
 - ✅ **クロスプラットフォーム互換性**：Linux システム、ESP32 およびその他の組み込みプラットフォーム
-- ✅ **標準化されたインターフェース**：言語切り替えが容易な統一 API 設計
+- ✅ **標準化インターフェース**：言語切り替えが容易な統一 API 設計
 
 ### 技術的優位性
 
-- **高性能**：ミドルウェアのオーバーヘッドがない直接 SocketCAN 通信
+- **高性能**：ミドルウェアのオーバーヘッドなしで SocketCAN による直接通信
 - **メモリ安全性**：Rust 実装によりメモリ安全性を保証
 - **リアルタイム制御**：C++ 実装で 200Hz の制御周波数を実現
 - **使いやすさ**：Python 実装はフレンドリーな対話型インターフェースを提供
@@ -71,13 +70,13 @@ RobStride 制御ライブラリは、RobStride シリーズモーター向けに
 
 | モデル | 最大トルク | 最大速度 | KP 範囲 | KD 範囲 |
 |--------|------------|-----------|----------|----------|
-| [**RS-00**](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  | 17 Nm | 50 rad/s | 500.0 | 5.0 |
-| [**RS-01**](https://www.seeedstudio.com/Robostride-01-Actuator-p-6773.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| [**RS-02**](https://www.seeedstudio.com/Robostride-02-Actuator-p-6665.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| [**RS-03**](https://www.seeedstudio.com/Robostride-03-Actuator-p-6774.html)  | 60 Nm | 50 rad/s | 5000.0| 100.0|
-| [**RS-04**](https://www.seeedstudio.com/Robostride-04-Actuator-p-6775.html)  | 120 Nm| 15 rad/s | 5000.0| 100.0|
-| [**RS-05**](https://www.seeedstudio.com/Robostride-05-Actuator-p-6666.html)  | 17 Nm | 33 rad/s | 500.0 | 5.0 |
-| [**RS-06**](https://www.seeedstudio.com/Robostride-06-Actuator-p-6668.html)  | 60 Nm | 20 rad/s | 5000.0| 100.0|
+| [**RS-00**](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  | 14 Nm | 315 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-01**](https://www.seeedstudio.com/Robostride-01-Actuator-p-6773.html)  | 17 Nm | 315 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-02**](https://www.seeedstudio.com/Robostride-02-Actuator-p-6665.html)  | 17 Nm | 410 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-03**](https://www.seeedstudio.com/Robostride-03-Actuator-p-6774.html)  | 60 Nm | 195 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
+| [**RS-04**](https://www.seeedstudio.com/Robostride-04-Actuator-p-6775.html)  | 120 Nm| 200 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
+| [**RS-05**](https://www.seeedstudio.com/Robostride-05-Actuator-p-6666.html)  | 5.5 Nm | 480 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-06**](https://www.seeedstudio.com/Robostride-06-Actuator-p-6668.html)  | 36 Nm | 480 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
 
 ---
 
@@ -113,17 +112,17 @@ graph TB
 
 #### 1. MIT モード（Mode 0）
 - **特徴**：高い応答速度を持つ直接トルク制御
-- **ユースケース**：高速応答が必要なアプリケーション
+- **用途**：高速応答が必要なアプリケーション
 - **制御パラメータ**：P、D、T、位置、速度
 
 #### 2. 位置モード（Mode 1）
 - **特徴**：高精度な位置決めが可能な位置閉ループ制御
-- **ユースケース**：精密位置決め、ロボット関節制御
+- **用途**：精密位置決め、ロボット関節制御
 - **制御パラメータ**：位置、速度、最大トルク
 
 #### 3. 速度モード（Mode 2）
 - **特徴**：安定した速度制御が可能な速度閉ループ制御
-- **ユースケース**：一定速度が求められるアプリケーション
+- **用途**：一定速度が求められるアプリケーション
 - **制御パラメータ**：速度、最大トルク
 
 ---
@@ -161,7 +160,7 @@ cd RobStride_Control
 |----------|-------------------|--------------|-----------|
 | Python | 50-100Hz | 約 50MB | ラピッドプロトタイピング、アルゴリズム検証 |
 | C++ | 200Hz | 約 10MB | 高性能アプリケーション、リアルタイム制御 |
-| Rust | 150Hz | 約 8MB | セーフティクリティカル、メモリ安全性要件 |
+| Rust | 150Hz | 約 8MB | セーフティクリティカル、メモリ安全性が必要な場合 |
 | Arduino | 100Hz | 約 2KB | 組み込み、リソース制約のある環境 |
 
 ---
@@ -529,10 +528,10 @@ void loop() {
 
 | フィールド | サイズ | 説明 |
 |-------|------|-------------|
-| ID | 29 bits | 拡張フレーム識別子 |
-| DLC | 4 bits | データ長（8 に固定） |
-| Data | 8 bytes | 制御データ |
-| CRC | 16 bits | 巡回冗長検査 |
+| ID | 29 ビット | 拡張フレーム識別子 |
+| DLC | 4 ビット | データ長（8 に固定） |
+| Data | 8 バイト | 制御データ |
+| CRC | 16 ビット | 巡回冗長検査 |
 
 ### ID 割り当てルール
 
@@ -687,7 +686,7 @@ struct MotorCommand {
 
 ### よくある問題
 
-#### 1. CAN 通信障害
+#### 1. CAN 通信エラー
 
 ```bash
 # Check CAN interface status
@@ -730,7 +729,7 @@ sudo chrt -f 99 $(pgrep robstride-control)
 | 0x01 | 通信タイムアウト | CAN 接続を確認してください |
 | 0x02 | パラメータが範囲外 | 制御パラメータの範囲を確認してください |
 | 0x03 | モーター過電流 | 負荷とトルク制限を確認してください |
-| 0x04 | 位置オーバーフロー | 制限値と目標位置を確認してください |
+| 0x04 | 位置オーバーフロー | リミットと目標位置を確認してください |
 | 0x05 | 温度が高すぎます | 冷却と負荷を確認してください |
 
 ### デバッグツール
@@ -887,7 +886,7 @@ CMD ["./cpp/build/robstride-mit-position", "1"]
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

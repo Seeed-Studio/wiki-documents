@@ -16,7 +16,7 @@ image: https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video_demo_
 slug: /deploy_visual_perception_engine_recomputer
 sku: 101090101, 114110310, 100071398, 100026552
 last_update:
-  date: 2025-10-13T00:00:00.000Z
+  date: 2025-10-13
   author: Zibo
 createdAt: '2025-10-16'
 updatedAt: '2026-01-07'

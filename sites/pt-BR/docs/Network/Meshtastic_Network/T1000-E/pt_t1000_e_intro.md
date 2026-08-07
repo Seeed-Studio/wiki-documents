@@ -1,6 +1,6 @@
 ---
 description: Introdução ao SenseCAP Card Tracker T1000-E para Meshtastic
-title: Introdução ao T1000-E Tracker
+title: Introdução ao Tracker T1000-E
 keywords:
   - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,13 +10,13 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-09-05'
-updatedAt: '2025-09-29'
+updatedAt: '2026-06-03'
 url: https://wiki.seeedstudio.com/pt-br/t1000_e_intro/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/intro-e.png" alt="pir" width={800} height="auto" /></p>
 
-É um tracker de alto desempenho projetado para [Meshtastic®](https://meshtastic.org/), tão pequeno quanto um cartão de crédito, cabendo facilmente no seu bolso ou podendo ser preso aos seus ativos. Ele incorpora o LR1110 da Semtech, o nRF52840 da Nordic e o módulo GPS AG3335 da Mediatek, fornecendo aos usuários do [Meshtastic®](https://meshtastic.org/) uma solução de posicionamento e comunicação de alta precisão e baixo consumo de energia.
+É um tracker de alto desempenho projetado para [Meshtastic®](https://meshtastic.org/), tão pequeno quanto um cartão de crédito, cabendo facilmente no seu bolso ou podendo ser preso aos seus bens. Ele incorpora o LR1110 da Semtech, o nRF52840 da Nordic e o módulo GPS AG3335 da Mediatek, fornecendo aos usuários do [Meshtastic®](https://meshtastic.org/) uma solução de posicionamento e comunicação de alta precisão e baixo consumo de energia.
 
 :::note
 Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
@@ -35,10 +35,10 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 
 ### Recursos
 
-- **Suporte a múltiplos protocolos**: Com nRF52840 e LR1110, oferece suporte a Bluetooth 5.0, Thread, Zigbee e LoRa, garantindo compatibilidade com uma ampla gama de dispositivos e redes.
+- **Suporte a múltiplos protocolos**: Com nRF52840 e LR1110, oferece suporte a Bluetooth 5.0, Thread, Zigbee e LoRa, garantindo compatibilidade com uma ampla variedade de dispositivos e redes.
 - **Poderosos recursos de posicionamento**: Integrado com o chip GPS AG3335 da Mediatek, fornece serviços de posicionamento de alta precisão.
 - **Interfaces expansíveis**: Projetado com quatro pinos pogo, oferece suporte à interface USB para DFU (Device Firmware Upgrade), registro serial e interface de API, simplificando o gerenciamento e a depuração do dispositivo.
-- **Suporte de código aberto**: Compatível com o protocolo de rede mesh de código aberto Meshtastic, adequado para necessidades de comunicação de longo alcance e baixo consumo de energia.
+- **Suporte open source**: Compatível com o protocolo de rede mesh open source Meshtastic, adequado para necessidades de comunicação de longo alcance e baixo consumo de energia.
 
 ### Especificações
 
@@ -46,14 +46,14 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 
 |**Protocolo de rede**|LoRa, Bluetooth v5.1|
 | :- | :- |
-|**Temperatura**|<p>Faixa: -20 a 60℃;</p><p>Precisão: ± 1℃ (mín ±0.5℃, máx ±1℃)</p><p>Resolução: 0.1℃</p>|
+|**Temperatura**|<p>Faixa: -20 a 60℃;</p><p>Precisão: ± 1℃ (mín ±0,5℃, máx ±1℃)</p><p>Resolução: 0,1℃</p>|
 |**Luz**|0 a 100% (0% é escuro, 100% é o mais claro)|
 |**LED e buzzer**|1\*LED e 1\* buzzer para indicar o status|
 |**Botão**|1\* botão para operar|
 |**Antena**|Interna (GNSS/LoRa/Wi-Fi/BLE)|
 |**Distância de comunicação**|2 a 5 km (dependendo da antena, instalação e ambiente)|
 |**Grau de proteção IP**|IP65|
-|**Dimensões**|85 \* 55 \* 6.5 mm|
+|**Dimensões**|85 \* 55 \* 6,5 mm|
 |**Peso do dispositivo**|32 g|
 |**Temperatura de operação**|-20℃ a +60℃|
 |**Umidade de operação**|5% - 95% (sem condensação)|
@@ -61,11 +61,11 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 
 **Bateria**
 
-|**Capacidade da bateria**|Bateria de íon de lítio recarregável, 700mAh|
+|**Capacidade da bateria**|Bateria de íons de lítio recarregável, 700 mAh|
 | :- | :- |
 |**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente em uplink|
 |<p>**Cabo de carregamento**</p><p>**(Adaptador não incluído)**</p>|Cabo de carregamento magnético USB, 1 metro|
-|**Tensão de entrada de alimentação**|4.7 a 5.5V DC|
+|**Tensão de entrada de alimentação**|4,7 a 5,5 V DC|
 |**Limite de temperatura de carregamento**|0 a +45℃|
 
 ### Visão geral do hardware
@@ -96,7 +96,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 |Pressionar uma vez|Ligar|Melodia ascendente|
 |Pressionar duas vezes|Atualizar informações do nó/localização|-|
 |Pressionar três vezes|Ligar/desligar o GPS|-|
-|Pressionar e segurar por 5s|Desligar|Melodia descendente|
+|Pressionar e segurar por 5 s|Desligar|Melodia descendente|
 
 ### LED
 
@@ -106,3 +106,26 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 |Modo DFU|Aceso continuamente|
 |Em funcionamento|Pisca aleatoriamente|
 |Carregando|Pisca a 0,5 Hz, alternando a cada segundo|
+
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

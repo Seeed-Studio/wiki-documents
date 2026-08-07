@@ -12,10 +12,10 @@ sidebar_position: 1
 slug: /getting_started_with_ee02
 sku: 100067144
 last_update:
-  date: 2025-12-20T00:00:00.000Z
+  date: 12/20/2025
   author: Allen
 createdAt: '2025-12-19'
-updatedAt: '2026-04-27'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/getting_started_with_ee02/
 ---
 
@@ -65,13 +65,13 @@ Similar to its sibling, the EE04 (designed for smaller screens), the EE02 offers
 
 | Item | Description |
 | :--- | :--- |
-| **Controller** | ESP32-S3 |
+| **Controller** | XIAO ESP32-S3 Plus |
 | **Supported Screen Size** | 13.3-inch E-ink Display |
 | **Connectivity** | Wi-Fi 802.11 b/g/n, Bluetooth 5.0 (LE) |
 | **Power Supply** | 5V via USB Type-C |
 | **Operating Voltage** | 3.3V |
 | **Interface** | USB Type-C, FPC connector for E-ink |
-| **Dimensions** | 80x40 mm |
+| **Dimensions** | 80x43 mm |
 | **Operating Temperature** | -20°C to 70°C |
 
 ### Application

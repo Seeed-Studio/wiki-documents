@@ -1,134 +1,134 @@
 const docList = [
   [
     {
-      "path": "/respeaker_flex_xiao_doa_vad",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4withXIAOESP32S3.jpg",
-      "title": "DoA and VAD reSpeaker Flex with Xiao ESP32S3",
-      "date": "2026-05-29",
-      "title_cn": "使用 Xiao ESP32S3 的 DoA 和 VAD reSpeaker Flex",
-      "title_ja": "DoA と VAD reSpeaker Flex と Xiao ESP32S3",
-      "title_es": "DoA y VAD reSpeaker Flex con Xiao ESP32S3",
-      "title_pt": "DoA e VAD reSpeaker Flex com Xiao ESP32S3"
+      "path": "/deploy_tensorrt_edge_llm_on_jetpack7.2",
+      "image": "https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/7.png",
+      "title": "Deploy TensorRT Edge-LLM on JetPack 7.2",
+      "date": "2026-07-31",
+      "title_cn": "在 JetPack 7.2 上部署 TensorRT Edge-LLM",
+      "title_ja": "JetPack 7.2 に TensorRT Edge-LLM をデプロイする",
+      "title_es": "Implementar TensorRT Edge-LLM en JetPack 7.2",
+      "title_pt": "Implantar TensorRT Edge-LLM no JetPack 7.2"
     },
     {
-      "path": "/reterminal_e10xx_with_arduino_peripherals_2",
-      "image": "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp",
-      "title": "Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Series)",
-      "date": "2026-05-27",
-      "title_cn": "Arduino 菜谱：RTC、低功耗、音频与触摸（reTerminal E 系列）",
-      "title_ja": "Arduino クックブック: RTC、低消費電力、オーディオ & タッチ (reTerminal E シリーズ)",
-      "title_es": "Recetario de Arduino: RTC, Bajo Consumo, Audio y Táctil (reTerminal E Serie)",
-      "title_pt": "Livro de Receitas Arduino: RTC, Baixo Consumo, Áudio e Toque (reTerminal E Série)"
+      "path": "/jetpack_7_2_resource_hub",
+      "image": "https://files.seeedstudio.com/wiki/other/jp72-front.png",
+      "title": "JetPack 7.2 Resource Hub",
+      "date": "2026-07-31",
+      "title_cn": "JetPack 7.2 资源中心",
+      "title_ja": "JetPack 7.2 リソースハブ",
+      "title_es": "Centro de Recursos de JetPack 7.2",
+      "title_pt": "Hub de Recursos do JetPack 7.2"
     }
   ],
   [
     {
-      "path": "/respeaker_flex_ros2_voice_pipeline",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png",
-      "title": "ROS2 Voice Pipeline on reSpeaker Flex",
-      "date": "2026-05-27",
-      "title_cn": "在 reSpeaker Flex 上构建 ROS2 语音流水线",
-      "title_ja": "reSpeaker Flex 上の ROS2 音声パイプライン",
-      "title_es": "Canal de voz ROS2 en reSpeaker Flex",
-      "title_pt": "Pipeline de Voz ROS2 no reSpeaker Flex"
+      "path": "/respeaker_clip_python_build_app_with_memory",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg",
+      "title": "Build Your Own App for reSpeaker Clip adding memory Layer using Python SDK",
+      "date": "2026-07-31",
+      "title_cn": "使用 Python SDK 为 reSpeaker Clip 构建带记忆层的自定义应用",
+      "title_ja": "Python SDK を使用してメモリレイヤーを追加した reSpeaker Clip 向け独自アプリを構築する",
+      "title_es": "Crea tu propia app para reSpeaker Clip añadiendo una capa de memoria usando el SDK de Python",
+      "title_pt": "Crie seu próprio app para reSpeaker Clip adicionando camada de memória usando Python SDK"
     },
     {
-      "path": "/jetson_developtool_overview",
-      "image": "https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/video-cover-recomputer-guide-en.png",
-      "title": "Seeed Jetson DevelopTool Overview",
-      "date": "2026-05-26",
-      "title_cn": "Seeed Jetson DevelopTool 概览",
-      "title_ja": "Seeed Jetson DevelopTool 概要",
-      "title_es": "Descripción general de Seeed Jetson DevelopTool",
-      "title_pt": "Visão geral do Seeed Jetson DevelopTool"
+      "path": "/solutions/mcp-face-auth-integration",
+      "image": "https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp",
+      "title": "Bring Voice AI to Your Business System with Face Verification",
+      "date": "2026-07-31",
+      "title_cn": "通过人脸验证将语音 AI 引入您的业务系统",
+      "title_ja": "顔認証付きの音声 AI を業務システムに導入する",
+      "title_es": "Lleva la IA de voz a tu sistema empresarial con verificación facial",
+      "title_pt": "Leve Voice AI para o seu sistema de negócios com verificação facial"
     }
   ],
   [
     {
-      "path": "/recomputer_antenna_installation",
-      "image": "https://files.seeedstudio.com/wiki/Antenna-Installation-Guide/image1.jpg",
-      "title": "How to Install Antenna for reComputer Super and Classic",
-      "date": "2026-05-26",
-      "title_cn": "如何为 reComputer Super 和 Classic 安装天线",
-      "title_ja": "reComputer Super および Classic へのアンテナの取り付け方法",
-      "title_es": "Cómo instalar la antena para reComputer Super y Classic",
-      "title_pt": "Como instalar antenas para reComputer Super e Classic"
+      "path": "/respeaker_xvf3800_xiao_websocket_audio_stream",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp",
+      "title": "reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 WebSocket Audio Streaming",
+      "date": "2026-07-29",
+      "title_cn": "reSpeaker XVF3800 USB Mic Array 搭配 XIAO ESP32S3 的 WebSocket 音频流传输",
+      "title_ja": "reSpeaker XVF3800 USB Mic Array と XIAO ESP32S3 による WebSocket オーディオストリーミング",
+      "title_es": "Transmisión de audio por WebSocket con reSpeaker XVF3800 USB Mic Array y XIAO ESP32S3",
+      "title_pt": "reSpeaker XVF3800 USB Mic Array com streaming de áudio via WebSocket usando XIAO ESP32S3"
     },
     {
-      "path": "/rebot_b601_rs_getting_started",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png",
-      "title": "Getting Started with reBot Arm B601-RS",
-      "date": "2026-05-26",
-      "title_cn": "reBot Arm B601-RS 快速入门",
-      "title_ja": "reBot Arm B601-RS 入門ガイド",
-      "title_es": "Primeros pasos con reBot Arm B601-RS",
-      "title_pt": "Introdução ao reBot Arm B601-RS"
+      "path": "/recamera_pro_ha_sound_alert",
+      "image": "https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_Voice_Capture/reCamera-PRO_Voice_Capture.gif",
+      "title": "reCamera Pro and Home Assistant Integration: Sound-Triggered Photo Alert",
+      "date": "2026-07-27",
+      "title_cn": "reCamera Pro 与 Home Assistant 集成：声音触发拍照告警",
+      "title_ja": "reCamera Pro と Home Assistant 連携：サウンドトリガー付き写真アラート",
+      "title_es": "Integración de reCamera Pro y Home Assistant: alerta de foto activada por sonido",
+      "title_pt": "Integração entre reCamera Pro e Home Assistant: alerta de foto acionado por som"
     }
   ],
   [
     {
-      "path": "/atom_s",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-s/product_photo.webp",
-      "title": "Getting started with Atom-S",
-      "date": "2026-05-25",
-      "title_cn": "Atom-S 入门指南",
-      "title_ja": "Atom-S 入門ガイド",
-      "title_es": "Primeros pasos con Atom-S",
-      "title_pt": "Introdução ao Atom-S"
+      "path": "/build_and_flash_yocto_for_recomputer_super",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png",
+      "title": "Build and Flash a Yocto Image for reComputer Super",
+      "date": "2026-07-24",
+      "title_cn": "为 reComputer Super 构建并烧录 Yocto 镜像",
+      "title_ja": "reComputer Super 向け Yocto イメージのビルドとフラッシュ",
+      "title_es": "Crear y flashear una imagen Yocto para reComputer Super",
+      "title_pt": "Compilar e Gravar uma Imagem Yocto para o reComputer Super"
     },
     {
-      "path": "/atom_x",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-x/atom_x_overview.webp",
-      "title": "Getting started with Atom-X",
-      "date": "2026-05-25",
-      "title_cn": "Atom-X 入门指南",
-      "title_ja": "Atom-X 入門ガイド",
-      "title_es": "Primeros pasos con Atom-X",
-      "title_pt": "Introdução ao uso do Atom-X"
+      "path": "/recamera_model_export_online",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png",
+      "title": "Convert and deploy a custom YOLO detection model in the reCamera web interface",
+      "date": "2026-07-19",
+      "title_cn": "在 reCamera 网页界面中转换并部署自定义 YOLO 检测模型",
+      "title_ja": "reCamera の Web インターフェースでカスタム YOLO 検出モデルを変換してデプロイする",
+      "title_es": "Convertir y desplegar un modelo de detección YOLO personalizado en la interfaz web de reCamera",
+      "title_pt": "Converter e implantar um modelo de detecção YOLO personalizado na interface web da reCamera"
     }
   ],
   [
     {
-      "path": "/respeaker_xvf3800_ros2_voice_pipeline",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png",
-      "title": "ROS2 Voice Pipeline on reSpeaker XVF3800",
-      "date": "2026-05-25",
-      "title_cn": "在 reSpeaker XVF3800 上构建 ROS2 语音流水线",
-      "title_ja": "reSpeaker XVF3800 上の ROS2 音声パイプライン",
-      "title_es": "Canalización de voz ROS2 en reSpeaker XVF3800",
-      "title_pt": "Pipeline de Voz ROS2 no reSpeaker XVF3800"
+      "path": "/train_classification_model_online",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-6.png",
+      "title": "Train Image Classification Models Online Quickly with SenseCraft AI",
+      "date": "2026-07-19",
+      "title_cn": "使用 SenseCraft AI 在线快速训练图像分类模型",
+      "title_ja": "SenseCraft AI で画像分類モデルをオンラインで素早く学習する",
+      "title_es": "Entrena rápidamente modelos de clasificación de imágenes en línea con SenseCraft AI",
+      "title_pt": "Treine modelos de classificação de imagens online rapidamente com SenseCraft AI"
     },
     {
-      "path": "/using_stream_deck_to_control_recamera_gimbal",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
-      "title": "Using Stream Deck to Control reCamera Gimbal",
-      "date": "2026-05-22",
-      "title_cn": "使用Stream Deck控制reCamera Gimbal",
-      "title_ja": "Stream Deck を使用して reCamera Gimbal を制御する",
-      "title_es": "Uso de Stream Deck para controlar el gimbal de reCamera",
-      "title_pt": "Usando o Stream Deck para controlar o reCamera Gimbal"
+      "path": "/industrial_vision_monitoring_on_industrial",
+      "image": "https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_no_helmet.png",
+      "title": "Industrial Vision Monitoring on Industrial",
+      "date": "2026-07-13",
+      "title_cn": "工业场景下的工业视觉监控",
+      "title_ja": "産業向けビジョン監視",
+      "title_es": "Monitorización de Visión Industrial en Industrial",
+      "title_pt": "Monitoramento de Visão Industrial em Ambiente Industrial"
     }
   ],
   [
     {
-      "path": "/control_rebot_arm_using_voice_with_respeaker_flex",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg",
-      "title": "Control reBot Arm using voice with reSpeaker Flex",
-      "date": "2026-05-22",
-      "title_cn": "使用 reSpeaker Flex 通过语音控制 reBot Arm",
-      "title_ja": "reSpeaker Flex を使って音声で reBot Arm を制御する",
-      "title_es": "Controlar reBot Arm usando la voz con reSpeaker Flex",
-      "title_pt": "Controle o reBot Arm usando voz com o reSpeaker Flex"
+      "path": "/x1_get_started_for_meshtastic",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png",
+      "title": "Get Started with MeshTracker X1",
+      "date": "2026-07-13",
+      "title_cn": "开始使用 MeshTracker X1",
+      "title_ja": "MeshTracker X1 を使い始める",
+      "title_es": "Comienza con MeshTracker X1",
+      "title_pt": "Comece a usar o MeshTracker X1"
     },
     {
-      "path": "/respeaker_flex_soarm",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/lerobot_flex.png",
-      "title": "Add Voice Interaction to Your SO-ARM10x with reSpeaker Flex",
-      "date": "2026-05-19",
-      "title_cn": "使用 reSpeaker Flex 为你的 SO-ARM10x 添加语音交互",
-      "title_ja": "reSpeaker Flex で SO-ARM10x に音声インタラクションを追加する",
-      "title_es": "Añade interacción por voz a tu SO-ARM10x con reSpeaker Flex",
-      "title_pt": "Adicione Interação por Voz ao Seu SO-ARM10x com reSpeaker Flex"
+      "path": "/respeaker_clip_basic_sdk_guide",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png",
+      "title": "reSpeaker Clip Basic SDK Guide",
+      "date": "2026-07-13",
+      "title_cn": "reSpeaker Clip Basic SDK 指南",
+      "title_ja": "reSpeaker Clip Basic SDK ガイド",
+      "title_es": "Guía del reSpeaker Clip Basic SDK",
+      "title_pt": "Guia do reSpeaker Clip Basic SDK"
     }
   ]
 ];

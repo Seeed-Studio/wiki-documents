@@ -11,7 +11,7 @@ last_update:
   date: 08/19/2024
   author: Youjiang
 createdAt: '2024-08-19'
-updatedAt: '2026-01-07'
+updatedAt: '2026-05-13'
 url: https://wiki.seeedstudio.com/pt-br/reserver_j501_getting_started/
 ---
 
@@ -57,7 +57,7 @@ A placa carrier J501 é uma poderosa placa de expansão que suporta módulos NVI
     </tr>
     <tr>
       <td>Display</td>
-      <td> 1x HDMI 2.1 Tipo A 7680x4320 </td>
+      <td> 1x HDMI 2.1 Type A 7680x4320 </td>
     </tr>
     <tr>
       <td>SATA</td>
@@ -72,13 +72,13 @@ A placa carrier J501 é uma poderosa placa de expansão que suporta módulos NVI
       <td> Botão de Reset, Botão de Recovery </td>
     </tr>
     <tr>
-      <td rowSpan={9}>Expansão</td>
+      <td rowSpan={9}>Expansion</td>
       <td> Mini PCIE </td>
       <td> 1x Mini PCIe para LoRaWAN®/4G/Série Wireless (Módulo não incluído) </td>
     </tr>
     <tr>
       <td> M.2 Key B </td>
-      <td> 1x M.2 Key B (3042/3052) com suporte a 4G/5G (Módulo não incluído) </td>
+      <td> 1x M.2 Key B (3042/3052) suporta 4G/5G (Módulo não incluído) </td>
     </tr>
     <tr>
       <td> M.2 Key E </td>
@@ -110,16 +110,16 @@ A placa carrier J501 é uma poderosa placa de expansão que suporta módulos NVI
     </tr>
     <tr>
       <td> Power </td>
-      <td> Fonte de alimentação </td>
-      <td> Bloco terminal DC 12V-36V de 2 pinos (inclui adaptador de energia 24V/5A)</td>
+      <td> Power Supply </td>
+      <td> Bloco terminal DC 12V-36V de 2 pinos (inclui Adaptador de Energia 24V/5A)</td>
     </tr>
     <tr>
-      <td rowSpan={3}> Mecânica </td>
+      <td rowSpan={3}> Mechanical </td>
       <td> Dimensões (L x P) </td>
       <td> 176 x 163mm (Módulo não incluído)</td>
     </tr>
     <tr>
-      <td> Temperatura de operação </td>
+      <td> Temperatura de Operação </td>
       <td> -20~60℃ </td>
     </tr>
     <tr>
@@ -140,7 +140,7 @@ A placa carrier J501 é uma poderosa placa de expansão que suporta módulos NVI
 
 Aqui, mostraremos como gravar o [Jetpack](https://developer.nvidia.com/embedded/jetson-linux-archive) em um SSD NVMe conectado ao reServer J501.
 
-### Módulo compatível
+### Módulo suportado
 
 - [NVIDIA® Jetson AGX Orin™ Module 32GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-32GB-p-5956.html)
 - [NVIDIA® Jetson AGX Orin™ Module 64GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-64GB-p-5957.html)
@@ -148,10 +148,10 @@ Aqui, mostraremos como gravar o [Jetpack](https://developer.nvidia.com/embedded/
 ### Pré-requisitos
 
 - PC host com Ubuntu
-- Placa carrier reServer J501
-- Módulo NVIDIA® Jetson AGX Orin™ 32GB/64GB
+- Placa Carrier reServer J501
+- NVIDIA® Jetson AGX Orin™ Module 32GB/64GB
 - Ventoinha ativa AGX Orin
-- SSD interno NVMe M.2 2280
+- SSD Interno NVMe M.2 2280
 - Cabo de transmissão de dados USB Type-C
 
 :::info
@@ -162,8 +162,8 @@ Consulte a tabela abaixo para preparar a máquina host.
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> Versão do JetPack </td>
-        <td class="dbon" colspan="3"> Versão do Ubuntu (Computador Host) </td>
+        <td  rowspan="2"> JetPack Version </td>
+        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -198,8 +198,8 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
       <th>Versão do Jetpack</th>
       <th>Módulo Jetson</th>
       <th> GMSL </th>
-      <th>Link de download 1</th>
-      <th>Link de download 2</th>
+      <th>Link de Download1</th>
+      <th>Link de Download2</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -308,7 +308,7 @@ Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <Fil
 ### Entrar no modo Force Recovery
 
 :::info
-Antes de prosseguirmos para as etapas de instalação, precisamos garantir que a placa esteja em modo force recovery.
+Antes de podermos prosseguir para as etapas de instalação, precisamos garantir que a placa esteja em modo force recovery.
 :::
 
 <div class="video-container">
@@ -317,7 +317,7 @@ Antes de prosseguirmos para as etapas de instalação, precisamos garantir que a
 
 <details>
 
-<summary> Passo a passo </summary>
+<summary> Step-by-Step </summary>
 
 **Passo 1.** Pressione e segure o botão de force recovery sem soltá-lo.
 
@@ -389,14 +389,20 @@ sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
+## Uso das interfaces de hardware
+
+:::info
+Se você quiser saber mais sobre as especificações detalhadas e o uso das interfaces de hardware, consulte [este wiki](https://wiki.seeedstudio.com/pt-br/j501_carrier_board_interfaces_usage/).
+:::
+
 ## Recursos
 
 - [Folha de dados da placa carrier reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_Industrial_J501_Carrier_Board_Datasheet.pdf)
 - [Esquemático do reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/202003906_reServer_Industrial_J501_Carrier_Board_v1.0_SCH_PDF_20240529.pdf)
 - [Arquivo 3D do reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/RESERVER_AGX_ORIN_CARRIER_BOARD.stp)
-- [Catálogo das séries Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Catálogo da linha Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
 - [Casos de sucesso de Edge AI da Seeed Studio](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Comparação das séries Seeed Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Comparação da linha Seeed Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Página única dos dispositivos Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## Suporte técnico e discussão sobre o produto

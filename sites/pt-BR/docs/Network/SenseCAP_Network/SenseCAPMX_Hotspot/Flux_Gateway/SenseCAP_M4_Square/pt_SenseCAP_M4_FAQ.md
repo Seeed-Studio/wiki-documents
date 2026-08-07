@@ -9,7 +9,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2023-02-24'
-updatedAt: '2026-03-16'
+updatedAt: '2026-06-25'
 url: https://wiki.seeedstudio.com/pt-br/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_FAQ/
 ---
 
@@ -37,10 +37,6 @@ No máximo 8 dispositivos por IP, e certifique-se de que o seu roteador oferece 
 ### **Como testar a largura de banda da rede para atender aos requisitos?**
 
 https://www.speedtest.net
-
-### **Qual é a diferença entre Flux e tokens Flux**
-
-Tokens Flux são Flux. Tokens Flux são Parallel Assets que são pagos em diferentes blockchains, como ETH Flux, BSC Flux, etc. Eles podem ser solicitados no aplicativo Fusion dentro do Zelcore. Selecione "Parallel Mining Claim" nos três pontos no canto superior direito. Você só verá um valor resgatável se a sua quantidade de Flux-Token for maior que as taxas necessárias para reivindicar.
 
 ### **Se eu for um usuário profissional, posso apagar o sistema original e instalar outro?**
 

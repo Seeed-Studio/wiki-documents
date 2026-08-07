@@ -1,0 +1,10 @@
+position: 6 # float position is supported
+label: 'Visão geral da implantação de modelos de IA'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_ai_model_deployment
+link:
+  type: generated-index
+  slug: recamera_ai_model_deployment
+  title: Visão geral da implantação de modelos de IA
+  description: Esta seção oferece uma visão geral concisa dos processos de treinamento, ajuste fino e implantação de modelos de IA para reCamera. Ela começa com a seleção de modelos, discutindo opções como YOLO v5/v8/11 e os critérios para escolher o modelo apropriado com base em diferentes cenários, com modelos típicos atuais e frameworks disponíveis. Em seguida, aborda a configuração de parâmetros, seguida pelos procedimentos complexos de conversão de formato de modelo, que envolvem adaptação de modelo e tradução de middleware. Subsequentemente, cobre a quantização e compressão de modelos. Por fim, trata das fases de implantação e teste, incluindo considerações sobre pós-processamento.

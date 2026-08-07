@@ -1,5 +1,5 @@
 ---
-description: このガイドでは、reBot Arm B601-RS の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む入門手順を説明します。
+description: このガイドでは、reBot Arm B601-RS の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む入門方法を説明します。
 title: reBot Arm B601-RS クイックスタート
 keywords:
   - reBot
@@ -13,15 +13,19 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_b601_rs_getting_started
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 last_update:
-  date: 2026-05-26T00:00:00.000Z
+  date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-06-01'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/ja/rebot_b601_rs_getting_started/
 ---
+
+import '/src/css/rebot-wiki-style.css';
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # reBot Arm B601-RS をはじめよう
 
@@ -40,99 +44,172 @@ url: https://wiki.seeedstudio.com/ja/rebot_b601_rs_getting_started/
 </p>
 
 <p align="center">
-  <strong>6 自由度ロボットアーム · マルチモーター対応 · 運動学ソルバ · 軌道計画 · 完全オープンソース</strong>
+  <strong>6 自由度ロボットアーム · 複数モータ対応 · 運動学ソルバ · 軌道計画 · 完全オープンソース</strong>
 </p>
 
 reBot Arm プロジェクトは [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) 上でオープンソース公開されています。本ガイドでは、B601-RS の組み立てから操作までのクイックスタート手順を説明します。
+本ガイドの内容は光の速さであなたのもとへ向かっています — 続報をお待ちください。
 
-このガイドの内容は光の速さであなたのもとへ向かっています — 続報をお待ちください！
+## 安全に関する免責事項およびリスクに関する注意
 
-:::
+<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+</div>
 
-## 購入オプション
+## 電源について
 
+1. ロボットアームには電源は同梱されておらず、標準では電源は含まれていません。ご自身でバッテリーを接続するか、当社のオープンソース [48V 12.5A MeanWell 電源](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html) または [Amazon](https://www.amazon.com/LRS-600-48-Switching-Upgrade-Version-SE-600-48/dp/B0BV5XFYNS/ref=sr_1_1?crid=2MK5Y1UI66CW9&dib=eyJ2IjoiMSJ9.FAt8rrpVeLIbeU2px5Bpe3WU2xsHpE3Kw1Fc6ZdPBFrIpRsaASOwU1dL9jPUNnpXO5u67hvlSXTsKCXH7jehZ8VWfiSFbcHmsVhJY_ua86iPUltJFeWlT9LIXphFER27jHWGnaJb2NdRIpPBMVdae8qgIllUI1J-Q8pZranpyjkkiJP2RmiEdhUBXTvvH3-vhk8z2uhf7BJrGW7hjRbjyCO7WHwwBQ3tMcnEKwto2doy9qus35djHRzODSFPbMuiA66PdgPuib4VL1aQghehDEiceMIpTUiCHHeRHfpB71M._yrosm8mVfpUq-5PjNTLSaYPgv8Dot6YbQTaGULjlLQ&dib_tag=se&keywords=LRS-600-48&qid=1781762081&s=electronics&sprefix=lrs-600-48%2Celectronics%2C351&sr=1-1) をご購入ください。無名メーカーや安全でないルートから電源を購入しないでください。そこから生じるいかなるリスクや結果も、個人の自己責任となります。
+
+ご家庭の電圧が 220V の場合は、電源側面の電圧切替スイッチを 230V に設定してください。ご家庭の電圧が 110V の場合は、115V に切り替えてください。
+
+| **220V** | **110V** |
+|:---:|:---:|
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" width="300" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" width="300" /> |
+
+
+   <div align="center">
+     <img width={800}
+     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100054289-gallery-6.jpg" />
+   </div>
+
+2. あるいは、当社のオープンソース 24V 14.6A MeanWell 電源エンクロージャを選択し、自分で組み立てることもできます。テキストによる説明と BOM は [GitHub リポジトリ](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_RS) でオープンソース公開されています（関連する電源組み立て経験を持つ開発者にのみ推奨されます）。
+
+   組み立て参考動画：
+
+   <div class="video-container">
+     <iframe width="900" height="600" src="https://www.youtube.com/embed/5GitUWT9gx0?si=I_dnd2bSNHbB95BW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
 
 ## ステップ 1: 組み立てガイド
 
-組み立て前に：
+- 組み立て前に、以下の説明をよくお読みください。スムーズな組み立て作業と充実したハンズオン体験のために、落ち着いて集中し、常に次の重要なポイントに従ってください。
+  1. このキットには多数のネジや構造部品が含まれており、中には見た目が似ているものもあります。ネジの規格や部品の型番をよく確認し、締め付ける前に取り付け方向を必ず確認してください。
+  2. 動画は 4 月上旬に撮影されたものです。その後、部品に若干の調整が入っている場合がありますが、動画に従って組み立てる際の品質には影響しません。最終的な部品は出荷されたものを基準としてください。
+  3. ネジの取り付けや取り外しを容易にするため、オープンソースの BOM では標準ネジを指定しています。しかし、キットに同梱されているネジにはねじロック剤が塗布されています。お好みの工具や電動ドライバーを使用しても構いません（1 本用意しておくことを強く推奨します）。電動工具を使用する場合は、トルクを必ず低〜中程度（3〜6 kgf·cm）に設定し、過大なトルクによってネジがなめてしまい、部品が取り外せなくなるような取り返しのつかない損傷を避けてください。なめかけている兆候があれば、すぐにネジを交換するか、位置を調整して再度お試しください。ねじロック剤付きでなめてしまったネジは、ネジ抜き工具でも外せず、その部品全体が廃棄となります。そのため、十分に注意して作業してください。
+  4. 組み立て作業中は安全を最優先し、指を挟んだり押しつぶしたりするケガを避けてください。子どもが本プロジェクトを行う場合は、必ず保護者が同伴してください。
 
-- スムーズに組み立てを行うため、以下の注意事項をよくお読みください。
-  1. 本キットには、外観がよく似たさまざまなネジや部品が含まれています。締め付ける前に、仕様と向きを必ず確認してください。
-  2. 動画は 4 月上旬に撮影されたものです。細かな更新がある場合がありますが、組み立て手順は同じです。最終的には、同梱されている部品を基準としてください。
-  3. 同梱のネジにはねじロック剤が塗布されています。適切な工具、または電動ドライバー（推奨）を使用してください。トルクは (3–6 kgf·cm) に設定し、なめないようにしてください。もしネジがなめてしまった場合は、すぐに作業を中止し、ネジを交換するか位置を調整してください。ねじロック剤付きでなめたネジは外しにくく、部品を破損するおそれがあります。
-  4. 組み立て作業中の安全を確保してください。指を挟むなどのけがに注意してください。子どもが作業する場合は必ず保護者が付き添ってください。
 
-## ステップ 2: モーター ID のリセット
 
-### モーターをリセットする前に：
 
-モーターのパラメータ設定を行う前に、以下の準備と安全ルールを確認してください：
+## ステップ 2: ロボットアームのキャリブレーションと起動
 
-- 工作用クランプを 2 個（3 インチ以上）と、48V XT30 出力のスイッチング電源を用意してください（一般的なブランド品を使用し、粗悪品は使用しないでください）。
-- デバッグ／動作中は 1m 以上の距離を保ってください。
-- モーターのホットプラグは禁止です。XT30 2+2 インターフェースの抜き差しは、必ず電源を切ってから行ってください。
-- 過負荷／過速度での動作は避けてください。起動前に配線やネジの緩みを確認し、湿度が高い／高温／粉じんの多い環境は避けてください。
-- 暴走を防ぐため、プログラムパラメータと非常停止を適切に設定してください。
-- **これらのルールを厳守してください。違反操作や個人的なミスに起因するリスクや責任について、販売者は一切の責任を負いません。**
+1. **MotorBridge** プラットフォームを活用しましょう。このプラットフォームは、モータ種類の継続的な拡張に対応したワンストップの包括的ソリューションであり、[Damiao モータ](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride モータ](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[Hightorque モータ](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[Myactuator モータ](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow などをカバーしています。また、reBot のような継続的にアップデートされるロボットアーム製品とも互換性があります。プラットフォームは初心者にも使いやすく、開発者向けには同等の機能を備えた Python SDK も提供しています。
 
-### 準備リスト
+2. reBot ロボットアーム向けに特別に最適化された MotorBridge の新機能と詳細を体験してください。ワンクリックのゼロ点キャリブレーション、パラメータ書き込み、UI を介したドラッグ＆ドロップによるモータ制御、組み込みのモデル可視化インターフェースなどが含まれます。
 
-#### ハードウェア
+3. このツールは **Windows、Ubuntu、macOS** オペレーティングシステムに完全対応しています。
 
-#### コンピュータ要件
+:::tip
+1. 仮想マシンの性能ではデモを実行するのに不十分であり、設定上の問題も確認されています。ロボットアームの制御には Ubuntu の物理マシンを使用することを推奨します。
 
-- デュアルブート構成のパーソナルコンピュータ（Windows + Ubuntu / macOS）
+2.（ベータ版）エージェントにロボットアームの初期化を手伝ってもらいましょう。以下の内容をコピーしてエージェントに送信してください。
 
-#### ソフトウェア
+```text
+Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-Agent-Guide/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
+```
 
-## ステップ 3: reBot Arm のキャリブレーションと入門
+  注意：組み立て済みキットを購入した場合は、モータ ID 書き込みのステップでエージェントに次のように伝えてください。「組み立て済みキットを購入しました。モータ 1〜7 がすべてオンラインであることを確認するためにスキャンしてください。モータ ID は書き換えないでください。」
 
-ここまでの動画に従って、ロボットアームの組み立て、ゼロ点初期化、モーター ID 設定などのセットアップ手順を完了していることを前提とします。これで、私たちが公開している一連のチュートリアルやツールを本格的に活用する準備が整いました。
+3. エージェントは CLI コマンドを使用してモータ ID の書き込みを行い、wiki では Web UI による操作方法を採用しています。どちらの方法でも問題なく動作します。
 
-1. まずは **MotorBridge** プラットフォームをお試しください。これは、[Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow など、対応モーターが拡大し続けているオールインワンソリューションです。reBot をはじめとする、継続的にアップデートされるロボットアームにも対応しています。初心者向けに設計されているだけでなく、同等の機能を実装した Python SDK も提供しており、開発者も利用できます。
+:::
 
-2. reBot ロボットアーム向け MotorBridge の新機能や詳細を体験してください。ワンクリックでのゼロ点キャリブレーション、パラメータ書き込み、UI のドラッグ＆ドロップによるモーター制御、モデル可視化インターフェースの内蔵などが含まれます。
+動画に従って、ロボットアーム組み立ての事前準備は完了しているはずです。次に、モータ ID の書き込みとロボットアームのキャリブレーション手順を紹介します。
 
-3. このツールは **Windows、Ubuntu、macOS** の各オペレーティングシステムに完全対応しています。
 
-### ステップ 1: miniforge をインストールする（Windows\Ubuntu\macOS\Jetson\Pi）
+ロボットアームを制御する前に、動画およびテキストチュートリアルを参照し、ゼロ点をもう一度リセットする必要があります。
 
-このチュートリアルでは、例として Ubuntu を使用します。
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+
+### 1. Miniforge をインストールする（推奨）（Windows\Ubuntu\macOS\Jetson\Raspberry Pi をサポート）
+
+1. Miniforge をインストールし、仮想環境を作成して、他の環境パッケージとの競合によるデモ失敗を避けます。
+
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\Jetson\Raspberry Pi">
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
+</TabItem>
+<TabItem value="macOS" label="macOS">
 
-### ステップ 2: 環境構築
+```bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+bash Miniforge3-MacOSX-$(uname -m).sh
+```
 
-Python 3.12 で仮想環境を作成します：
+</TabItem>
+<TabItem value="windows" label="windows">
+
+ブラウザで Miniforge の Release ページを開き、最新版の `Miniforge3-Windows-x86_64.exe` を探してクリックし、ダウンロードします。
+
+```text
+https://github.com/conda-forge/miniforge/releases
+```
+
+</TabItem>
+</Tabs>
+
+2. Python 3.12 の仮想環境を作成します。
+
+:::tip
+  **Git Bash ユーザー**：`conda` コマンドが見つからない場合は、Git Bash が conda 環境を読み込んでいないことを意味します。まず初期化する必要があります。
+
+  ```bash
+  # Temporary (current terminal only), replace <install_path> with the actual path
+  source <install_path>/etc/profile.d/conda.sh
+
+  # Permanent (write to bashrc, run once)
+  echo 'source <install_path>/etc/profile.d/conda.sh' >> ~/.bashrc
+  source ~/.bashrc
+  ```
+
+  PowerShell で conda 環境を自動的にアクティブ化するには：
+
+  ```bash
+  conda init powershell
+  ```
+
+:::
 
 ```bash
 conda create -y -n rebot python=3.12
 ```
 
-次に仮想環境を有効化します。**reBot 関連の機能を使用するには、ターミナルを開くたびにこの有効化コマンドを実行する必要があります。**
+3. 仮想環境を有効化します。**reBot 関連の機能を使うためには、ターミナルを開くたびにこの有効化コマンドを再実行する必要があります**:
 
 ```bash
 conda activate rebot
 ```
 
-### ステップ 3: Motorbridge をインストール
+### 2. Motorbridge をインストールする
+
+reBot 仮想環境を有効化した後、次のコマンドを実行して motorbridge をインストールします：
 
 :::tip macOS ユーザーへの注意
-macOS でテレオペレーション中にフレームレートが低い場合、古い WCH CH34x ドライバーが原因の可能性があります。**macOS 10.14 以降** では、システムに `AppleUSBCHC0M` ドライバーが標準で含まれています。古いドライバーをアンインストールし、macOS 標準ドライバーに切り替えることで、フレームレートが効果的に改善されるはずです。
+macOS でテレオペレーション中にフレームレートが低い場合、古い WCH CH34x ドライババージョンが原因の可能性があります。**macOS 10.14 以降**では、システムに `AppleUSBCHC0M` ドライバが内蔵されています。古いドライバをアンインストールして macOS の内蔵ドライバに切り替えることで、フレームレートが効果的に改善されます。
 :::
 
-reBot 用の仮想環境を有効化したら、次のコマンドを実行して motorbridge をインストールします：
 
 ```bash
 pip install motorbridge
 ```
 
-### ステップ 4: ロボットアームを接続
+### 3. PCAN-USB
 
-ロボットアームとの通信のため、CAN バス上で 1Mbps で動作する PCAN-USB デバイスを準備します。
+ロボットアームとの通信のため、CAN バス上で 1Mbps で動作するように PCAN-USB デバイスを設定します。
+
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\Raspberry Pi">
 
 ```bash
 # The kit includes PCAN-USB, which should normally show up as can0 or can1
@@ -141,18 +218,394 @@ ip -br link
 
 # If can0 appears, set the bitrate
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-### ステップ 5: MotorBridge-gateway を起動
+</TabItem>
 
-任意（Web 上でロボットアームを接続し、通信をテストできます）
+<TabItem value="Jetson" label="Jetson">
 
-ブラウザで `https://rebot-devarm.w0x7ce.eu/` を開き、ヘルプオプションをクリックして、使用しているオペレーティングシステムとドライバボードに対応するコマンドをコピーします。IP アドレスとポート番号を確認し、その後ターミナルで Enter キーを押して実行します。
+ファイルをダウンロードします: [peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
 
+- brltty を削除する
+Jetson では、brltty がリーダーが使用する USB シリアルポートを占有している場合があります。まずこれを削除します：
 ```bash
-motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can0
+sudo apt remove -y brltty
 ```
 
-使用方法については動画を参照してください。
+- 依存関係をインストールする
+```bash
+sudo apt update
+sudo apt install -y \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    libpopt-dev \
+    can-utils \
+    ethtool \
+    nvidia-l4t-kernel-headers
+```
+現在のカーネルヘッダディレクトリが存在することを確認します：
+```bash
+ls -l /lib/modules/$(uname -r)/build
+```
+
+- PEAK SocketCAN ドライバをコンパイルする
+PEAK Linux Driver 9.2.0 をダウンロードして展開し、ソースディレクトリに入ります：
+```bash
+tar -xvf peak-linux-driver-9.2.0.tar.gz
+cd ~/peak-linux-driver-9.2.0
+```
+以前のビルド成果物をクリーンアップします：
+```bash
+make clean
+```
+netdev モードでコンパイルします：
+```bash
+make netdev
+```
+netdev モードでは、PCAN-USB が Linux SocketCAN ネットワークインターフェースとして登録されます。
+プレーンな `make` は使用しないでください。プレーンな `make` は chardev モードをビルドしますが、LeRobot と motorbridge-cli は SocketCAN インターフェースに依存しています。
+
+- ドライバをインストールしてロードする
+ドライバをインストールします：
+```bash
+sudo make install
+sudo depmod -a
+```
+pcan カーネルモジュールをロードします：
+```bash
+sudo modprobe pcan
+```
+起動時に自動ロードされるように有効化します：
+```bash
+echo pcan | sudo tee /etc/modules-load.d/pcan.conf
+```
+ドライバがロードされていることを確認します：
+```bash
+ip -br link | grep can
+```
+期待される出力：
+```
+can0             DOWN           <NOARP,ECHO>
+can1             DOWN           <NOARP,ECHO>
+.....
+```
+
+- ロボットアームに対応する PCAN インターフェースを特定する
+```bash
+for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
+```
+ここに表示されるインターフェースは PEAK PCAN-USB デバイスです。例：
+```
+can2
+```
+
+- `pcan_refresh` コマンドを永続化する
+Linux の環境変数は再起動後には保持されず、PCAN インターフェースの番号も変わる可能性があります。より信頼性の高い方法は、リフレッシュ関数を永続的に定義し、ターミナルを開いた後にそれを実行することです。
+
+関数を `~/.bashrc` に追記します：
+```bash
+grep -q '^pcan_refresh()' ~/.bashrc || cat >> ~/.bashrc <<'EOF'
+
+pcan_refresh() {
+    local iface
+    iface=$(sudo setup-pcan-if) || return 1
+    export PCAN_IF="$iface"
+    echo "PCAN_IF=$PCAN_IF"
+}
+EOF
+```
+```bash
+source ~/.bashrc
+```
+PCAN-USB を再起動または再接続した後に、これを実行します：
+```bash
+pcan_refresh
+```
+成功すると、次のように出力されます：
+```
+PCAN_IF=can1
+```
+以降のすべてのコマンドでは、`can1` や `can2` をハードコードする代わりに `$PCAN_IF` を使用してください。
+
+```bash
+sudo modprobe peak_usb
+ip -br link
+
+# If $PCAN_IF appears, set the bitrate
+sudo ip link set $PCAN_IF down 2>/dev/null
+sudo ip link set $PCAN_IF type can bitrate 1000000 restart-ms 100
+sudo ip link set $PCAN_IF up
+```
+
+</TabItem>
+<TabItem value="macos" label="macos">
+
+libPCBUSB.dylib をロードできない場合は、まず PCBUSB をインストールしてください：
+```zsh
+curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
+  https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
+tar -xzf macOS_Library_for_PCANUSB_v0.13.tar.gz
+cd PCBUSB
+sudo ./install.sh
+```
+
+`DYLD_LIBRARY_PATH` を設定して、motorbridge-gateway が実行時に PCBUSB ライブラリを見つけられるようにします。conda 環境内に有効化スクリプトを作成し、`conda activate rebot` を実行するたびに自動的に反映されるようにします：
+
+```bash
+mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
+cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
+export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+EOF
+
+echo $DYLD_LIBRARY_PATH
+```
+
+準備ができているか確認します：
+```zsh
+# Check Python package and CLI are ready
+python3 -c "import motorbridge; print('motorbridge OK')"
+motorbridge-cli --help
+
+# Optional: Check if PCBUSB runtime is loadable
+python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
+```
+
+</TabItem>
+<TabItem value="windows" label="windows">
+
+PCAN-USB ドライバをインストールするには、[pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) を参照してください。
+
+</TabItem>
+
+
+
+</Tabs>
+
+:::tip 注意
+ドライバをインストールしても **PCAN-USB** がデバイスマネージャーで検出されない場合は、以下のセクションを展開し、PCAN ファームウェアをダウンロードして、リカバリ手順に従ってください。
+:::
+
+
+
+<details>
+
+<summary>PCAN ファームウェアのダウンロードとドライバ復旧手順</summary>
+
+ドライバをインストールしても PCAN-USB がまだ動作せず、デバイスマネージャーに下図のような **PCAN-USB** デバイスが表示されない場合は、PCAN ファームウェアパッケージをダウンロードし、次の手順に従って DFU ドライバをインストールし、ファームウェアを書き換えてください。
+
+![デバイスマネージャーで検出された PCAN-USB](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/01-pcan-usb-device.png)
+
+> 📦 [USB2CAN.zip をダウンロード](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+### DFU ドライバをインストールする
+
+1. ダウンロードしたパッケージを展開します。`Dfu tool` フォルダと `pcan` フォルダが含まれています。
+
+![パッケージから展開された Dfu tool と pcan フォルダ](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/02-extracted-folders.png)
+
+2. `Dfu tool` フォルダを開き、`.exe` インストーラーを実行します。インストール後、ドライバのインストールパスを記録しておきます。例：
+
+```text
+C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
+```
+
+![DfuSe インストーラーとドライバのインストールパス](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/03-dfuse-install-location.png)
+
+3. USB2CAN モジュールの DIP スイッチを **BOOT** に設定し、モジュールをコンピュータに接続します。
+
+![USB2CAN の DIP スイッチを BOOT に設定](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/04-usb2can-boot-switch.jpg)
+
+4. **デバイスマネージャー** を開き、**その他のデバイス → STM32 BOOTLOADER** を見つけて右クリックし、**ドライバーの更新** を選択してから、**コンピューターを参照してドライバーを検索** を選択します。
+
+![デバイスマネージャー内の STM32 BOOTLOADER](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/05-stm32-bootloader.png)
+
+![「コンピューターを参照してドライバーを検索」を選択](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/06-update-driver.png)
+
+5. 先ほど記録した DfuSeDemo ドライバパスを場所フィールドに貼り付け、**サブフォルダーも検索する** を選択して **次へ** をクリックします。
+
+![DfuSeDemo ドライバパスを入力し「サブフォルダーも検索する」を選択](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/07-driver-path.png)
+
+6. USB2CAN モジュールをいったん取り外してから再接続します。**STM Device in DFU Mode** として認識されれば、ドライバの更新は成功です。
+
+7. **DfuSeDemo** を開き、USB2CAN モジュールが正しく検出されていることを確認します。
+
+![DfuSeDemo が USB2CAN モジュールを正しく検出していることを確認](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/08-dfuse-detects-usb2can.png)
+
+### PCAN ファームウェアを書き込む
+
+1. DfuSeDemo で **Upgrade or Verify Action → Choose...** をクリックし、展開した `pcan` フォルダ内のファームウェアを選択します。
+2. **Upgrade** をクリックし、確認ダイアログで **Yes** をクリックして、ファームウェアの書き込み処理が完了するまで待ちます。その後、DfuSeDemo を閉じることができます。
+
+![PCAN ファームウェアを選択し DfuSeDemo で Upgrade をクリック](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/09-select-pcan-firmware.png)
+
+![ファームウェアのアップグレード完了](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/10-firmware-upgrade-complete.png)
+
+### デバイスを復元して確認する
+
+USB2CAN モジュールを取り外し、DIP スイッチを **120R** に設定してから、再度コンピュータに接続します。デバイスマネージャーを開きます。デバイスが **PCAN-USB** として認識されていれば、問題は解決しており、このガイドを続行できます。
+
+![デバイスマネージャーで正常に検出された PCAN-USB](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/11-pcan-usb-recognized.png)
+
+</details>
+
+<details>
+<summary>PCAN ファームウェアのダウンロードとドライバ修復手順 - Ubuntu</summary>
+
+Ubuntu ユーザーはこのガイドを参照してください
+
+1.> 📦 [USB2CAN.zip をダウンロードするにはここをクリック](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2. USB2CAN を BOOT に切り替えます
+
+3. 手順 1 で取得した USB2CAN.zip を展開し、flash_pcan_ubuntu.sh と pcan_canable_hw.bin（USB2CAN.zip 内に含まれています）を同じディレクトリに配置してください
+
+[flash_pcan_ubuntu.sh をダウンロードするにはここをクリック](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
+
+別のコンピュータから転送する場合（例: scp）：
+
+```text
+scp flash_pcan_ubuntu.sh pcan_canable_hw.bin seeed@your_Ubuntu_IP:~/Downloads/
+```
+または、USB フラッシュドライブにコピーして Ubuntu マシンに挿すだけでも構いません。ファイルが ~/Downloads、カレントディレクトリ、または /tmp のいずれかにあれば、スクリプトが自動的に見つけてくれます。
+
+4. 実行します：
+
+```text
+bash flash_pcan_ubuntu.sh
+```
+
+パスワードを入力し、完了するまで待ちます
+
+完了したら、「120R」に戻します
+
+USB を挿し直します。
+
+</details>
+
+<details>
+<summary>PCAN ファームウェアのダウンロード & ドライバ修復手順 - MAC</summary>
+
+MAC ユーザーはこのガイドを参照してください
+
+1.> 📦 [USB2CAN.zip をダウンロードするにはクリック](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2. USB2CAN を BOOT に切り替えます
+
+3. 手順 1 でダウンロードした USB2CAN.zip を解凍し、その中にある flash_pcan_mac.sh と pcan_canable_hw.bin を同じディレクトリに配置してください
+
+[flash_pcan_mac.sh をダウンロードするにはクリック](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
+
+別のコンピュータから転送する場合（例：scp）：
+
+```text
+scp flash_pcan_mac.sh pcan_canable_hw.bin seeed@your_MAC_IP:~/Downloads/
+```
+
+または、USB フラッシュドライブにコピーして MAC に挿すだけでも構いません。ファイルが ~/Downloads、カレントディレクトリ、または /tmp のいずれかにあれば、スクリプトが自動的に見つけてくれます。
+
+4. 実行します：
+
+```text
+bash /Users/"your_username"/Downloads/flash_pcan_mac.sh "/Users/"your_username"/Downloads/pcan_canable_hw.bin"
+```
+
+上記のコマンドは、ファイルが Mac の Downloads パスに配置されていることを前提としています。実際のパスに応じて調整してください
+
+パスワードを入力し、完了するまで待ちます
+
+完了したら、「120R」に戻します
+
+USB を挿し直します。
+
+</details>
+
+<!-- ### 3. モーター ID の書き込み
+
+:::tip 組立済みキットのユーザーは、この手順をスキップしてください
+:::
+
+ドライバーを使ってすべてのモーターケーブルを外し、1 つのモーターだけを USB-to-CAN モジュールに接続します。
+
+次のコマンドを実行して、モーターが検出されているかをスキャンします。工場出荷時の ID は 127 の場合があります。
+
+```bash
+motorbridge-cli scan --vendor robstride --channel can0 --start-id 126 --end-id 127 --timeout-ms 300
+```
+
+モーターの現在の ID を確認したら、変更コマンドを実行します（注意：複数のモーターを同時に接続しないでください。すべてが上書きされてしまいます）：
+
+```bash
+# Example: Change ID 127 to 5
+motorbridge-cli id-set --vendor robstride --channel can0 --motor-id 127 --new-motor-id 5
+```
+
+上記の手順を、すべてのモーター ID が正常に書き込まれるまで繰り返します。その後、すべてのモーターケーブルを接続し、最終確認のために次のコマンドを実行します。7 台のモーターが検出されれば完了です。
+
+```bash
+motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 --timeout-ms 300
+``` -->
+
+
+### 4. MotorBridge-gateway を起動してゼロ点書き込みとデバッグを行う
+
+#### モーターリセット前
+
+モーターのパラメータ設定を行う前に、次の準備と安全ルールに注意してください：
+
+- 2 個の治具クランプ（サイズ 3 インチ以上）と 48V XT30 出力のスイッチング電源を用意します（信頼できるブランドを選択し、粗悪な電源は使用しないでください）。
+- デバッグおよび動作中は、少なくとも 1 メートル以上の安全距離を保ってください。
+- モーターをホットプラグしないでください。XT30 2+2 コネクタの抜き差しは、必ず電源を切ってから行ってください。
+- モーターを過負荷・過速度で使用しないでください。起動前に配線と固定具を確認し、湿気の多い、高温、多粉塵環境では使用しないでください。
+- 機器の暴走を防ぐため、適切なプログラムパラメータと非常停止機能を設定してください。
+- **上記のルールを厳守してください。規定に反する操作や人的ミスによって生じたあらゆるリスクや損失について、販売者は一切の責任を負いません。**
+
+
+#### Web UI によるゼロ点書き込みとデバッグ
+
+ブラウザで [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) のアドレスを開き、Help オプションをクリックし、使用しているオペレーティングシステムとドライバボードに応じたコマンドをコピーし、IP アドレスとポート番号を確認してから、ターミナルで Enter キーを押して実行します。
+
+
+```bash
+motorbridge-gateway --bind 127.0.0.1:9002  
+```
+
+macOS：
+
+```bash
+motorbridge-gateway --bind 127.0.0.1:9002 
+```
+
+または
+
+```bash
+DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
+```
+
+#### RS モーター制御パラメータの初期化
+
+:::warning 初回使用前にパラメータ初期化を完了してください
+
+ほとんどの reBot Arm B601-RS のサンプルは MIT モードで動作します。ネイティブ Position（`pos_vel`）モードは、位置ループゲイン `loc_kp` と最大速度 `vel_max` を直接使用します。その動作は、速度ループゲイン `spd_kp` と加速度パラメータ `acc_rad` の影響も受けます。推奨される B601-RS パラメータが初期化されていない場合、または各関節に保存されているパラメータが不一致な場合、Position モードでは応答、速度、加減速動作に異常が生じる可能性があります。
+
+まず [MotorBridge Studio](https://motorbridge.github.io/motorbridge-studio/) の **Robot Model** で `rebot-arm-robstride` を選択し、Joint 1〜7 がすべてオンラインであることをスキャンして確認し、前述のロボットアームのゼロ点キャリブレーションを完了します。その後、次の手順を実行します：
+
+1. **Read Parameters** をクリックして、現在オンラインのすべての関節に保存されているパラメータを読み出します。この操作はデータを読み取るだけで、モーターを変更しません。ページに制御パラメータの読み取り成功が表示されるまで待ち、現在の値を記録として保持します。
+2. **Apply Default Template** をクリックし、ページに reBot Arm RobStride のデフォルトパラメータテンプレートが Joint 1〜7 に適用されたと表示されることを確認します。この操作は推奨値をページに読み込むだけで、まだモーターには書き込みません。
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/en_b601_rs_motorbridge_read_params.png" alt="B601-RS モーターのパラメータを読み取り、デフォルトテンプレートを適用する" />
+</div>
+
+3. **Write Parameters** をクリックします。ロボットアームが安全に支持されており、周囲に人や障害物がないことを確認してから、ダイアログで書き込み操作を確定します。パラメータ書き込み中は、電源を切ったり、モーターケーブルを抜き差ししたりしないでください。
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/en_b601_rs_motorbridge_write_params.png" alt="B601-RS モーターのパラメータ書き込みを確認する" />
+</div>
+
+4. 書き込み完了後、MotorBridge Studio は自動的にパラメータを再読み取りします。ページに、書き込み後の再読み取り検証が一致したと表示されれば、初期化は成功です。
+
+:::

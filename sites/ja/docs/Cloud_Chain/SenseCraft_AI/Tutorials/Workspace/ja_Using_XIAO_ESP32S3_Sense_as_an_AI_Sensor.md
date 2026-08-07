@@ -10,21 +10,21 @@ last_update:
   date: 12/04/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2025-09-05'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-output-libraries-xiao/
 ---
 
 # SenseCraft AI を使って XIAO ESP32S3 Sense を AI センサーとして使用する
 
-この Wiki では、SenseCraft AI 上でモデルの出力を設定し、XIAO ESP32S3 Sense を AI センサーとして使用するための手順を順を追って説明します。ここでの手順に従うことで、XIAO ESP32S3 Sense をコンピュータに接続し、適切な出力方法を選択し、UART、I2C、SPI などのさまざまな通信プロトコルを使用してモデルデータを取得する方法を学ぶことができます。
+この Wiki では、SenseCraft AI 上のモデル出力を設定し、XIAO ESP32S3 Sense を AI センサーとして使用するための手順を順を追って説明します。ここでの手順に従うことで、XIAO ESP32S3 Sense を PC に接続し、適切な出力方法を選択し、UART、I2C、SPI などのさまざまな通信プロトコルを使用してモデルデータを取得する方法を学ぶことができます。
 
 ## 事前準備
 
-作業を進める前に、以下のものを用意してください。
+先に進む前に、以下のものを用意してください。
 
 - XIAO ESP32S3 Sense
 - モデルデータを受信するための追加の XIAO ボード（例：XIAO ESP32C3）
-- XIAO ESP32S3 Sense をコンピュータに接続するための USB-C データケーブル
+- XIAO ESP32S3 Sense を PC に接続するための USB-C データケーブル
 - Arduino IDE と、インストール済みの [Seeed_Arduino_SSCMA](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA/tree/main) ライブラリ
 
 <div class="table-center">
@@ -47,11 +47,11 @@ url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-outpu
 
 ## ステップ 1. XIAO ESP32S3 Sense ワークスペースへアクセスし、デバイスを接続する
 
-**[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`** の順に進んで XIAO ESP32S3 Sense のワークスペースにアクセスするか、[ワークスペースへの直接リンク](https://sensecraft.seeed.cc/ai/device/local/32)を使用します。
+**[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`** の順に進んで XIAO ESP32S3 Sense のワークスペースにアクセスするか、[ワークスペースへの直接リンク](https://sensecraft.seeed.cc/ai/device/local/32)を使用します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
-USB-C ケーブルを使用して、XIAO ESP32S3 Sense ボードをコンピュータに接続します。接続が完了したら、ワークスペースページ左上にある **Connect** ボタンをクリックします。
+USB-C ケーブルを使用して、XIAO ESP32S3 Sense ボードを PC に接続します。接続が完了したら、ワークスペースページ左上にある **Connect** ボタンをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
 
@@ -68,7 +68,7 @@ USB-C ケーブルを使用して、XIAO ESP32S3 Sense ボードをコンピュ�
 
 ## ステップ 3. 使用したい方式とプログラムを準備する
 
-XIAO は UART、IIC、SPI を介してモデル結果を出力することをサポートしており、実際の状況に応じて結果の出力方法を選択できます。
+XIAO は UART、IIC、SPI を介してモデル結果を出力することができます。実際の状況に応じて、結果をどのように出力するかを選択してください。
 
 ### オプション 1. UART 通信
 
@@ -87,7 +87,7 @@ GitHub から [Seeed_Arduino_SSCMA](https://github.com/Seeed-Studio/Seeed_Arduin
     </a>
 </div><br />
 
-次のサンプルのコードを使用します。
+次のサンプルコードを使用します。
 
 :::note
 ボーレートを 921600、データビット 8、パリティなし、ストップビット 1（8N1）に設定してください。
@@ -228,10 +228,10 @@ GitHub から [Seeed_Arduino_SSCMA](https://github.com/Seeed-Studio/Seeed_Arduin
 :::note
 I2C 通信には次のプロトコルを使用します：
 
-- READ: バイト 0x10, 0x01, LEN &lt;&lt; 8, LEN &amp; 0xff を送信
-- WRITE: バイト 0x10, 0x02, LEN &lt;&lt; 8, LEN &amp; 0xff を送信
-- AVAIL（データの有無を確認）: バイト 0x10, 0x03 を送信
-- RESET（バッファをクリア）: バイト 0x10, 0x06 を送信
+- READ：バイト 0x10, 0x01, LEN &lt;&lt; 8, LEN &amp; 0xff を送信
+- WRITE：バイト 0x10, 0x02, LEN &lt;&lt; 8, LEN &amp; 0xff を送信
+- AVAIL（データの有無を確認）：バイト 0x10, 0x03 を送信
+- RESET（バッファをクリア）：バイト 0x10, 0x06 を送信
 
 :::
 
@@ -353,15 +353,15 @@ void loop()
     </a>
 </div><br />
 
-3. 提供されているサンプルコードを SPI 通信を使用するように変更します。
+3. 提供されているサンプルのコードを修正して、SPI 通信を使用するようにします。
 
 :::note
 SPI 通信には次のプロトコルを使用します：
 
-- READ: バイト 0x10, 0x01, LEN &lt;&lt; 8, LEN & 0xff を送信
-- WRITE: バイト 0x10, 0x02, LEN &lt;&lt; 8, LEN & 0xff を送信
-- AVAIL（データの有無を確認）: バイト 0x10, 0x03 を送信
-- RESET（バッファをクリア）: バイト 0x10, 0x06 を送信
+- READ：バイト 0x10, 0x01, LEN &lt;&lt; 8, LEN & 0xff を送信
+- WRITE：バイト 0x10, 0x02, LEN &lt;&lt; 8, LEN & 0xff を送信
+- AVAIL（データの有無を確認）：バイト 0x10, 0x03 を送信
+- RESET（バッファをクリア）：バイト 0x10, 0x06 を送信
 
 :::
 
@@ -464,7 +464,7 @@ void loop()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/72.png" style={{width:1000, height:'auto'}}/></div>
 
-## ステップ 4: コードをアップロードして実行する
+## ステップ 4：コードをアップロードして実行
 
 選択した通信プロトコルに基づいて、Arduino IDE で適切なサンプルコードを開きます。コードを検証して受信側の XIAO ボードに書き込みます。Arduino IDE のシリアルモニタを開き、受信したモデルデータを確認します。
 
@@ -472,17 +472,17 @@ void loop()
 
 ## まとめ
 
-このステップバイステップガイドに従うことで、SenseCraft AI 上のモデル出力を正しく設定し、XIAO ESP32S3 Sense を AI センサーとして使用できるようになりました。これで、プロジェクトの要件に応じて UART、I2C、SPI などのさまざまな通信プロトコルを使用してモデルデータを取得できます。
+このステップバイステップガイドに従うことで、SenseCraft AI 上のモデル出力を正常に設定し、XIAO ESP32S3 Sense を AI センサーとして使用できるようになりました。これで、プロジェクトの要件に応じて UART、I2C、SPI などのさまざまな通信プロトコルを使用してモデルデータを取得できます。
 
-提供されているサンプルコードを参照し、ご自身の具体的な構成や選択した通信プロトコルに応じて必要な変更を加えるようにしてください。
+提供されているサンプルコードを参照し、ご自身の具体的な構成や選択した通信プロトコルに基づいて必要な修正を行うようにしてください。
 
-問題が発生した場合や、さらに質問がある場合は、Seeed Studio のドキュメントを参照するか、コミュニティフォーラムでサポートを受けてください。
+問題が発生した場合や、さらに質問がある場合は、Seeed Studio のドキュメントを参照するか、コミュニティフォーラムでサポートを求めてください。
 
 XIAO ESP32S3 Sense と SenseCraft AI で、楽しいセンシングをお楽しみください！
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

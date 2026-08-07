@@ -6,17 +6,27 @@ slug: /reterminal_e10xx_main_page
 sku: 100017057,100073581
 sidebar_position: 1
 last_update:
-  date: 04/28/2026
+  date: 08/05/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-05-30'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_main_page/
 ---
 # reTerminal E Series ePaper Display Overview
 
+:::tip Generate ESPHome YAML or flash demos in the browser
+Open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** to get started fast. Choose the **ESPHome** card, pick your device (E1001 / E1002 / E1003 / E1004), check the onboard features you need, and generate matching ESPHome YAML — or flash demo firmware directly from the browser (desktop Chrome or Edge).
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Hub 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
 ## Introduction
 
-The reTerminal E Series is Seeed Studio's family of ESP32-S3-powered ePaper display terminals, purpose-built for **always-on, low-power information display**. The lineup spans four models — **E1001, E1002, E1003, E1004** — covering monochrome and full-color panels from 7.3" to 13.3", with options for touch interaction and multi-month battery life. They all share the same software stack (SenseCraft HMI, Home Assistant, Arduino, and more), so you only have to learn it once and then pick the form-factor that fits your scenario.
+The reTerminal E Series is Seeed Studio's family of ESP32-S3-powered ePaper display terminals, purpose-built for **always-on, low-power information display**. The lineup spans four models — **E1001, E1002, E1003, E1004** — covering monochrome and full-color panels from 7.3" to 13.3", with options for touch interaction and multi-month battery life. They all share the same software stack (SenseCraft HMI, Home Assistant / ESPHome, Arduino, and more), so you only have to learn it once and then pick the form-factor that fits your scenario.
 
 Unlike traditional displays that consume power continuously, the reTerminal E Series only draws current when redrawing content, making it ideal for digital photo frames, smart-home dashboards, retail signage, meeting-room boards, classroom displays, and other always-on use cases.
 
@@ -220,13 +230,13 @@ Use the quick guide below to narrow down to one model. If multiple rows apply, t
 		</tr>
 		<tr>
 			<td>Need Home Assistant / ESPHome integration today</td>
-			<td align="center"><strong>E1001 / E1002 / E1004</strong></td>
-			<td>Direct Home Assistant support is available on E1001, E1002 and E1004. ESPHome on E1003 is planned.</td>
+			<td align="center"><strong>E1001 / E1002 / E1003 / E1004</strong></td>
+			<td>All four models support Home Assistant through ESPHome. E1003 and E1004 require ESPHome 2026.7.0 or later.</td>
 		</tr>
 		<tr>
 			<td>Want a TRMNL E-Ink dashboard</td>
-			<td align="center"><strong>E1001 / E1002</strong></td>
-			<td>Both are officially supported. E1002 currently runs in monochrome mode under TRMNL.</td>
+			<td align="center"><strong>E1001 / E1002 / E1003 / E1004</strong></td>
+			<td>All four models are supported. E1002 and E1004 have color panels but currently run in monochrome mode under TRMNL.</td>
 		</tr>
 		<tr>
 			<td>Battery life is the single most important factor</td>
@@ -293,16 +303,16 @@ The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with 
   </a>
 </div><br />
 
-reTerminal E1003 is a 10.3-inch open-source monochrome ePaper display featuring 16 levels of grayscale and a high resolution of 1404×1872 pixels, with up to 6-month battery life. Touch interaction is currently supported on SenseCraft HMI firmware v1.1.2. Powered by ESP32-S3, it natively supports SenseCraft HMI no-code UI design, while Arduino and PlatformIO are available for further development.
+reTerminal E1003 is a 10.3-inch open-source monochrome ePaper display featuring 16 levels of grayscale and a high resolution of 1404×1872 pixels, with up to 6-month battery life. Touch interaction is currently supported on SenseCraft HMI firmware v1.1.2. Powered by ESP32-S3, it natively supports SenseCraft HMI no-code UI design, while Arduino, PlatformIO, and ESPHome (Home Assistant) are available for further development.
 
-The touch-related library is planned for future open-source release, providing greater flexibility to customize panels. More updates will be shared soon. ESPHome driver support for E1003 is also planned for a future release.
+The touch-related Arduino library is planned for future open-source release, providing greater flexibility to customize panels. More updates will be shared soon. ESPHome already supports the E1003 display driver and GT911 capacitive touch — see the [ESPHome cookbooks](/reterminal_e10xx_with_esphome).
 
 ### Key Features
 
 - 10.3-inch monochrome ePaper display with touch interaction support on HMI firmware v1.1.2
 - 16-level grayscale with 1404×1872 high resolution
 - Up to 6-month battery life with ultra-low power operation
-- Native SenseCraft HMI support plus Arduino and PlatformIO compatibility, with ESPHome driver support planned
+- Native SenseCraft HMI support plus Arduino, PlatformIO, and ESPHome (Home Assistant) compatibility
 
 ## reTerminal E1004
 
@@ -317,14 +327,14 @@ The touch-related library is planned for future open-source release, providing g
   </a>
 </div><br />
 
-The reTerminal E1004 features a 13.3-inch full-color ePaper display and up to 6-month battery life. Powered by ESP32-S3, it supports SenseCraft HMI for no-code dashboard creation and image uploading, while also supporting Home Assistant, Arduino, and ESP-IDF for advanced development workflows.
+The reTerminal E1004 features a 13.3-inch full-color ePaper display and up to 6-month battery life. Powered by ESP32-S3, it supports SenseCraft HMI for no-code dashboard creation and image uploading, while also supporting Home Assistant via ESPHome, Arduino, and ESP-IDF for advanced development workflows. ESPHome **2026.7.0 or later** is required for the E1004 display driver — see the [ESPHome cookbooks](/reterminal_e10xx_with_esphome).
 
 ### Key Features
 
 - 13.3-inch full-color ePaper display
 - Up to 6-month battery life for always-on scenarios
 - ESP32-S3 platform with SenseCraft HMI no-code support
-- Compatible with Home Assistant, Arduino, and ESP-IDF
+- Compatible with Home Assistant / ESPHome, Arduino, and ESP-IDF
 
 ## SenseCraft HMI — The Default No-Code Platform
 
@@ -345,7 +355,7 @@ Every reTerminal E Series device ships with **SenseCraft HMI** firmware out of t
 - **RSS / Web Content** — pull live news, weather, calendar, or any web feed onto the screen.
 - **Touch interaction** — fully supported on E1003 starting from HMI firmware v1.1.2.
 
-If you need more control than the no-code workflow gives you, every device also exposes the underlying ESP32-S3, so you can drop down to the application tutorials below at any time.
+If you need more control than the no-code workflow gives you, every device also exposes the underlying ESP32-S3, so you can drop down to ESPHome / Home Assistant, Arduino, and the application tutorials below at any time. For a ready-made ESPHome YAML, use the [Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/) ESPHome card and check the features you need.
 
 ## Applications & Tutorials
 
@@ -364,28 +374,36 @@ Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-
 			<th>E1004</th>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome">ESPHome — Basic Usage</a></td>
-			<td>Plug the device into Home Assistant and draw simple graphics with YAML.</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome">ESPHome — Display</a></td>
+			<td>Plug the device into Home Assistant and draw simple ePaper graphics with YAML. Generate a starter YAML from the <a href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/">Firmware Hub</a> by selecting your device and features.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
-			<td align="center">Planned</td>
-			<td align="center">via Home Assistant</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced">ESPHome — Advanced Usage</a></td>
-			<td>Buttons, buzzer, battery monitoring, deep sleep, multi-page dashboards.</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced">ESPHome — I/O, Battery, Touch &amp; Power</a></td>
+			<td>Buttons, buzzer, onboard LED, battery monitoring, deep sleep, multi-page dashboards, and capacitive touch (E1003).</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
-			<td align="center">Planned</td>
-			<td align="center">via Home Assistant</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+		</tr>
+		<tr>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone">ESPHome — RTC, SD &amp; Microphone</a></td>
+			<td>PCF8563 RTC time sync, microSD card detect, and onboard PDM microphone setup.</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">✅ <em>(no mic)</em></td>
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_trmnl">Works with TRMNL</a></td>
 			<td>Deploy E-Ink dashboards through the TRMNL platform.</td>
 			<td align="center">✅</td>
 			<td align="center">✅ <em>(mono mode)</em></td>
-			<td align="center">—</td>
-			<td align="center">—</td>
+			<td align="center">✅</td>
+			<td align="center">✅ <em>(mono mode)</em></td>
 		</tr>
 	</table>
 </div>

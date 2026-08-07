@@ -13,7 +13,7 @@ keywords:
 sidebar_position: 2
 last_update:
   author: Spencer
-  date: 2024-11-27T03:21:36.491Z
+  date: 2024-11-27
 createdAt: '2024-11-27'
 updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/2_channel_wifi_ac_relay/

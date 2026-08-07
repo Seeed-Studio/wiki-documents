@@ -10,13 +10,13 @@ last_update:
   date: 12/04/2024
   author: Citric
 createdAt: '2024-12-05'
-updatedAt: '2025-09-02'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-output-gpio-xiao/
 ---
 
 # 在 SenseCraft AI 上为 XIAO ESP32S3 Sense 配置模型输出和 GPIO
 
-本 Wiki 文章提供了一个分步指南，介绍如何使用 SenseCraft AI 平台为 XIAO ESP32S3 Sense 开发板配置模型输出和 GPIO 设置。通过遵循这些说明，你将学会如何根据已训练模型检测到的特定事件条件来触发 GPIO 电平变化。
+本 Wiki 文章提供了一个分步指南，介绍如何在 SenseCraft AI 平台上为 XIAO ESP32S3 Sense 开发板配置模型输出和 GPIO 设置。通过遵循这些说明，你将学会如何根据训练模型检测到的特定事件条件来触发 GPIO 电平变化。
 
 ## 前置准备
 
@@ -61,7 +61,7 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-outpu
 
 ## 步骤 1. 进入 XIAO ESP32S3 Sense 工作区并连接设备
 
-通过 **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`** 进入 XIAO ESP32S3 Sense 工作区，或者使用[工作区的直接链接](https://sensecraft.seeed.cc/ai/device/local/32)。
+通过 **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`** 进入 XIAO ESP32S3 Sense 工作区，或者使用[工作区的直接链接](https://sensecraft.seeed.cc/ai/device/local/32)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -71,7 +71,7 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-outpu
 
 ## 步骤 2. 确保 XIAO ESP32S3 Sense 上已加载模型
 
-在继续之前，请确保你的 XIAO ESP32S3 Sense 开发板上已经加载了一个训练好的模型。如果你还没有加载模型，请参考 SenseCraft AI 文档，了解如何训练模型并将其部署到你的设备。
+在继续之前，请确保你的 XIAO ESP32S3 Sense 开发板上已经加载了一个训练好的模型。如果你还没有加载模型，请参考 SenseCraft AI 文档，了解如何训练模型并将其部署到设备上。
 
 - [在 XIAO ESP32S3 Sense 上使用模型](https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_for_xiao/)
 
@@ -92,17 +92,17 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-outpu
 
 此时会弹出一个对话框，提示你输入各种参数，这些参数将作为改变 GPIO 电平的触发条件。这些参数包括：
 
-- **Object**：指定你的模型需要检测到的对象，以触发 GPIO 电平变化。例如，如果你希望在检测到人脸时改变 GPIO 电平，可以填写 "face"。
+- **Object**：指定模型需要检测到的对象，以触发 GPIO 电平变化。例如，如果你希望在检测到人脸时改变 GPIO 电平，可以填写 “face”。
 
-- **Condition**：选择触发发生所需满足的条件。选项包括 "Greater than"、"Less than"、"Equal to" 等。例如，选择 "Greater than" 表示当检测到的目标置信度大于指定值时，GPIO 将发生变化。
+- **Condition**：选择触发发生所需满足的条件。选项包括 “Greater than”、“Less than”、“Equal to” 等。例如，选择 “Greater than” 表示当检测到的对象置信度大于指定值时，GPIO 将发生变化。
 
-- **Confidence**：设置触发 GPIO 变化所需的最小目标检测置信度。该值范围为 1 到 100，100 表示最高置信度。
+- **Confidence**：设置触发 GPIO 变化所需的最小目标检测置信度。该数值范围为 1 到 100，100 表示最高置信度。
 
-- **GPIO**：选择你想要控制的 XIAO ESP32S3 Sense 上的具体 GPIO 引脚。可用选项包括 GPIO1(DO)、GPIO2(D1) 等。
+- **GPIO**：选择你希望控制的 XIAO ESP32S3 Sense 上的具体 GPIO 引脚。可用选项包括 GPIO1(DO)、GPIO2(D1) 等。
 
-- **Default Status**：选择所选 GPIO 引脚的默认状态。选项包括 "Low Level" 和 "High Level"。
+- **Default Status**：选择所选 GPIO 引脚的默认状态。选项包括 “Low Level” 和 “High Level”。
 
-- **Active Status**：指定当触发条件满足时，GPIO 引脚应切换到的状态。选项包括 "Low Level" 和 "High Level"。
+- **Active Status**：指定当触发条件满足时，GPIO 引脚应切换到的状态。选项包括 “Low Level” 和 “High Level”。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/47.png" style={{width:600, height:'auto'}}/></div>
 
@@ -122,7 +122,7 @@ XIAO 开发板现在会执行该命令，你可以通过带 Grove OLED 的 XIAO 
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品时体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

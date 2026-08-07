@@ -14,13 +14,13 @@ last_update:
   date: 08/16/2024
   author: Frank
 createdAt: '2024-08-21'
-updatedAt: '2025-09-02'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-jetson/
 ---
 
-SenseCraft AI-Jetson 是一款为 NVIDIA Jetson 边缘 AI 设备设计的开发工具包和平台。只需运行 "Quickstart Script"，即可看到一个交互式用户界面，用预加载的视频和预加载的 AI 模型展示示例应用。如果你想添加自己的 USB 摄像头或 IP 摄像头，只需点击几下就能完成！
+SenseCraft AI-Jetson 是一款为 NVIDIA Jetson 边缘 AI 设备设计的开发工具包和平台。只需运行 “Quickstart Script”，即可看到一个交互式用户界面，用预加载的视频和预加载的 AI 模型展示示例应用。如果你想添加自己的 USB 摄像头或 IP 摄像头，只需点击几下就能完成！
 
-除了我们开箱即用的各种内置 AI 模型外，你还可以在 SenseCraft AI 平台上访问大量公共模型，并能够根据特定场景下载和部署 AI 模型，基于你的需求创建个性化 AI 解决方案。SenseCraft AI 是你在视觉 AI 方面的智能决策伙伴，为你提供简单、灵活且高效的推理和方案构建能力。
+除了我们开箱即用的各种内置 AI 模型外，你还可以在 SenseCraft AI 平台上访问大量公共模型，并能够根据特定场景下载和部署 AI 模型，基于你的需求创建个性化 AI 解决方案。SenseCraft AI 是你在视觉 AI 领域的智能决策伙伴，为你提供简单、灵活且高效的推理和方案构建能力。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/video.gif)
 
@@ -40,7 +40,7 @@ SenseCraft AI-Jetson 是一款为 NVIDIA Jetson 边缘 AI 设备设计的开发�
 
 **快速开始**<br />
 
-1. 将 Jetson 连接到显示器并开机<br />
+1. 将 Jetson 连接到显示器并上电启动<br />
 2. 将鼠标和键盘插入设备，在终端中输入以下命令来运行应用程序
 
 ```
@@ -52,17 +52,17 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 - **[可选] 启用 jetson_clocks 脚本，通过将 CPU、GPU 和 EMC 时钟设置为最大频率来最大化 Jetson 性能？[y/n] (default: y): y**<br />
 提供 jetson_clocks 脚本，通过将 CPU、GPU 和 EMC 时钟设置为静态最大频率来最大化 Jetson 性能。
 
-- **[可选] 通过卸载一些不必要的软件包（如 libreoffice），更改 Swap Memory（/swapfile）的大小以节省空间？[y/n] (default: n): n**<br />
-在内存不足的情况下（尤其是 jetson nano），最好启用 swap 以确保程序正常运行。
+- **[可选] 通过卸载 libreoffice 等一些不必要的软件包来节省空间，是否更改 Swap 内存大小？(/swapfile) [y/n] (default: n): n**<br />
+在内存不足的情况下（尤其是 jetson nano），最好启用 Swap 以确保程序正常运行。
 
-- **[可选] 你是否想创建或更改 Swap Memory（/swapfile）的大小？**<br />
+- **[可选] 是否要创建或更改 Swap 内存的大小？(/swapfile)?**<br />
 为了让 nano 获得更好的性能，请打开 Swap。
 
 - **[可选] 使用外部 · 来存储 Docker 数据目录？（用于 docker 镜像和卷）？**<br />
 
-- **（如果你的根分区小于 32 GB，推荐启用）。[y/n] (default: n): n**<br />
+- **（如果你的根分区小于 32 GB，建议启用）。[y/n] (default: n): n**<br />
 
-边缘 AI 程序运行至少需要 32G 的存储空间，如果没有，你可以选择将 docker 数据卷挂载到外部磁盘。
+边缘 AI 程序运行至少需要 32G 存储空间，如果没有，你可以选择将 docker 数据卷挂载到外部磁盘。
 
 4. 现在你可以体验 SenseCraft AI-Jetson 了
 
@@ -70,7 +70,7 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 
 ### **部署新模型**
 
-1. 访问 “AI Models“ 页面并选择你需要的 AI 模型<br />
+1. 访问 “AI Models” 页面并选择你需要的 AI 模型<br />
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/36.png)
 
@@ -86,7 +86,7 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/39.png)
 
-5. AI 模型需要应用到一个视频流，如果没有视频流，请先添加一个有效的视频流。Model zoo 会将视频流信息直接发送到设备。
+5. AI 模型需要应用到一个视频流，如果当前没有视频流，请先添加一个有效的视频流。模型库会将视频流信息直接发送到设备。
 
 :::note
 更多视频流信息说明请查看 Streams Management
@@ -110,7 +110,7 @@ SenseCraft AI-Jetson 支持按需添加多个视频流，并支持添加 USB 摄
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/42.png)
 
-2. 设置新视频流的有效信息，详细内容请查看下表<br />
+2. 配置新视频流的有效信息，详细内容请查看下表<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/43.png)
 
 | **字段** | **内容** |
@@ -127,7 +127,7 @@ SenseCraft AI-Jetson 支持按需添加多个视频流，并支持添加 USB 摄
 | **Display Frame Rate** | 1 是否显示视频流的帧率<br />2 格式：Bool [True,False]<br />● True: 显示 FPS<br />● False: 不显示 FPS |
 | **Display Clock** | 1 是否显示时间<br />2 格式：Bool [True,False]<br />● True: 显示时间<br />● False: 不显示时间 |
 
-3. 点击 "Save" 按钮并返回主页查看新视频流和 AI 检测结果。
+3. 点击 "Save" 按钮并返回首页，查看新视频流和 AI 检测结果。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/44.png)
 
@@ -135,7 +135,7 @@ SenseCraft AI-Jetson 支持按需添加多个视频流，并支持添加 USB 摄
 
 #### **删除视频流**
 
-进入视频流详情并点击 "Delete" 图标以删除该视频流<br />
+进入视频流详情页面并点击 "Delete" 图标以删除该视频流<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/46.png)
 
 ### **AI 模型管理**
@@ -162,17 +162,17 @@ SenseCraft AI-Jetson 支持按需添加多个视频流，并支持添加 USB 摄
 | **MAC address** | 网络 MAC 地址 |
 | **CPU Usage** | 设备 CPU 使用率 |
 | **RAM** | 设备 RAM |
-| **Swap** | 设备 swap |
+| **Swap** | 设备 Swap |
 | **Disk usage** | 设备磁盘使用情况 |
 | **Cuda version** | 设备上安装的 Cuda 版本 |
 | **Jetpack version** | 设备上安装的 jetpack 版本 |
 
 #### **绑定到 SenseCraft AI 平台**
 
-SenseCraft AI for Jetson 专为边缘 AI 设计。AI 推理和视频流处理都在设备本地完成。只有当你需要下载更多 AI 模型时，才需要将设备绑定到 [SenseCraft AI platform](https://sensecraft.seeed.cc/ai) —— 下载完成后你可以移除该设备。
+SenseCraft AI for Jetson 专为边缘 AI 设计。AI 推理和视频流处理都在设备本地完成。只有当你需要下载更多 AI 模型时，才需要将设备绑定到 [SenseCraft AI platform](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) —— 下载完成后你可以移除该设备。
 
-1. 访问 [SenseCraft AI](https://sensecraft.seeed.cc/ai)。<br />
-2. 使用有效的邮箱地址注册。SenseCraft AI 账号与 SenseCAP Cloud 账号相同；如果你已经拥有账号，可以直接登录。
+1. 访问 [SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)。<br />
+2. 使用有效的邮箱地址注册。SenseCraft AI 账号与 SenseCAP Cloud 账号通用；如果你已经拥有账号，可以直接登录。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/49.png)
 
@@ -181,17 +181,17 @@ SenseCraft AI for Jetson 专为边缘 AI 设计。AI 推理和视频流处理都
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/50.png)
 
-5. 回到设备上的 SenseCraft AI 应用。点击 "Bind to SenseCraft AI platform"，然后应用会显示绑定码和临时名称。
+5. 回到设备端的 SenseCraft AI 应用。点击 "Bind to SenseCraft AI platform"，然后应用会显示绑定码和临时名称。
 
-- Bind Code: 在 [SenseCraft AI platform](https://sensecraft.seeed.cc/ai) 上输入正确有效的绑定码以完成设备绑定。<br />
+- Bind Code: 在 [SenseCraft AI platform](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) 上输入正确且有效的绑定码以完成设备绑定。<br />
 - Temporary Name: 如果绑定码重复，则需要输入正确的临时名称。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/51.png)
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/52.png)
 
-6. 输入正确有效的绑定码并点击 "Comfirm" 按钮<br />
-7. 绑定成功后，你现在可以从 model zoo 中添加新的 AI 模型
+6. 输入正确且有效的绑定码并点击 "Comfirm" 按钮<br />
+7. 绑定成功后，你就可以从模型库中添加新的 AI 模型
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/53.png)
 
@@ -201,7 +201,7 @@ SenseCraft AI for Jetson 专为边缘 AI 设计。AI 推理和视频流处理都
 
 如果你不再需要在 AI 平台上远程管理设备，可以从 AI 平台账号中删除该设备。你可以在设备端或平台端进行解绑<br />
 
-- 从 AI model zoo 中解绑设备，点击 "Delete"<br />
+- 从 AI 模型库中解绑设备，点击 "Delete"<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/59.png)
 
 - 通过关闭 "Bind to SenseCraft AI platform" 来解绑设备<br />
@@ -209,13 +209,13 @@ SenseCraft AI for Jetson 专为边缘 AI 设计。AI 推理和视频流处理都
 
 ### **应用更新**
 
-SenseCraft AI 应用更新分为自动更新和手动更新，你可以根据需要进行设置。
+SenseCraft AI 应用更新分为自动更新和手动更新两种，你可以根据需要进行设置。
 
-**自动更新**：每 5 分钟检查一次更新，当检测到新版本时，信息会自动更新，无需手动操作。
+**自动更新**：每 5 分钟检查一次更新，当检测到新版本时，会自动更新信息，无需手动操作。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/56.png)
 
-**手动更新**：手动检查更新，当检测到新版本时，点击 Update 按钮进行更新
+**手动更新**：手动检查更新，当检测到新版本时点击 Update 按钮进行更新
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/57.png)
 

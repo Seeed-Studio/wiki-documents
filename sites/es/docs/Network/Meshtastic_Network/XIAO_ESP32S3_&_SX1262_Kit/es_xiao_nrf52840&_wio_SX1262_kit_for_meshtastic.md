@@ -1,6 +1,6 @@
 ---
 description: Meshtastic basado en XIAO nRF52840 y kit Wio-SX1262
-title: Primeros pasos con XIAO nRF52840 y kit Wio-SX1262
+title: Comienza con el kit XIAO nRF52840 y Wio-SX1262
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-kit.webp
 slug: /xiao_nrf52840&_wio_SX1262_kit_for_meshtastic
 sidebar_position: 2
@@ -9,7 +9,7 @@ last_update:
   date: 12/11/2025
   author: Michelle Huang
 createdAt: '2025-03-13'
-updatedAt: '2026-01-07'
+updatedAt: '2026-06-09'
 url: https://wiki.seeedstudio.com/es/xiao_nrf52840&_wio_SX1262_kit_for_meshtastic/
 ---
 
@@ -31,8 +31,8 @@ Este kit combina el XIAO nRF52840 y el Wio-SX1262, es compatible con BLE5.0, Thr
 ### Características
 
 - **Microcontrolador versátil**: Incorpora el chip Nordic nRF52840 con FPU, que funciona hasta 64 MHz, monta múltiples puertos de desarrollo y es compatible con Arduino / CircuitPython / Micropython
-- **Potente rendimiento LoRa**: LoRa de largo alcance con Semtech SX1262, compatible con las bandas de 868/915 MHz.
-- **Comunicación de doble núcleo**: Es compatible con modos duales Bluetooth y LoRa, lo que permite la interconexión entre dominios.
+- **Potente rendimiento LoRa**: LoRa de largo alcance en Semtech SX1262, compatible con las bandas de 868/915 MHz.
+- **Comunicación de doble núcleo**: Es compatible con ambos modos duales Bluetooth y LoRa, lo que permite la interconexión entre dominios.
 - Con unas dimensiones de solo **8mm × 22mm × 23mm**, presenta un diseño de antena integrada.
 
 ### Especificación
@@ -55,7 +55,7 @@ Este kit combina el XIAO nRF52840 y el Wio-SX1262, es compatible con BLE5.0, Thr
 
 ## Primeros pasos
 
-El kit XIAO nRF52840 & Wio-SX1262 viene pregrabado con el firmware Meshtastic, lo que te permite comenzar rápidamente.
+El kit XIAO nRF52840 y Wio-SX1262 viene pregrabado con el firmware Meshtastic, lo que te permite comenzar rápidamente.
 
 ### Grabar firmware
 
@@ -77,7 +77,7 @@ Conecta el kit a tu PC, selecciona el dispositivo `Seeed` → `Seeed XIAO nRF528
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/filw-flash.png" alt="pir" width={800} height="auto" /></p>
 
-Haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `XIAO-xxx`, haz clic para conectarlo y debería mostrarse una unidad llamada `XIAO-xxx`.
+Haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `XIAO-xxx`, haz clic y conéctalo, y debería mostrarse una unidad llamada `XIAO-xxx`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -96,7 +96,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="App de iOS">
+<TabItem value="ios" label="App de IOS">
 
 - Selecciona el dispositivo de destino en el panel de Bluetooth.
 
@@ -123,10 +123,10 @@ import TabItem from '@theme/TabItem';
 
 ### Configurar los parámetros
 
-Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencia utiliza tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencias utiliza tu dispositivo y debe ajustarse de acuerdo con tu ubicación regional.
 
 <Tabs>
-<TabItem value="ios" label="App de iOS">
+<TabItem value="ios" label="App de IOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
@@ -142,7 +142,7 @@ Para empezar a comunicarte a través de la malla, debes establecer tu región. E
 
 |**Código de región**|**Descripción**|**Rango de frecuencia (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Sin configurar|N/A|N/A|N/A|
+|UNSET|Sin establecer|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
@@ -168,17 +168,16 @@ Conecta un [Módulo GNSS L76K](https://www.seeedstudio.com/L76K-GNSS-Module-for-
 ### Recursos de archivos
 
 - **[PDF]** [Diseño de referencia de Xiao](https://files.seeedstudio.com/wiki/XIAO/XIAO-Reference-Design.pdf)
-- **[PDF]** [Informe de prueba de distancia de comunicación BLE de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf)
-- **[ZIP]** [Seeed Studio XIAO nRF52840 CE |FCC|MIC](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-CE-FCC-MIC.zip)
+- **[PDF]** [Informe de prueba de distancia de comunicación BLE del Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf)
+- **[ZIP]** [Seeed Studio XlAO nRF52840 CE |FCC|MIC](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-CE-FCC-MIC.zip)
 - **[PDF]** [Hoja de datos nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf)
-- **[PDF]** [Esquemático de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
-- **[ZIP]** [Archivo KiCAD de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_SCH&PCB.zip)
-- **[ZIP]** [Archivo Eagle de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_KiCAD.zip)
-- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip)
-- **[LBR]** [Huella Eagle de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-footprint-eagle.lbr)
-- **[XLSX]** [Hoja de distribución de pines de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
-- 🔗 **[Kicad]** [Huella de Seeed Studio XIAO nRF52840](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- **[RAR]** [Archivo 3D de Wio SX-1262 para XIAO](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
+- **[PDF]** [Esquemático del Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
+- **[ZIP]** [Archivo KiCAD del Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_SCH&PCB.zip)
+- **[ZIP]** [Archivo Eagle del Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_KiCAD.zip)
+- **[DXF]** [Dimensiones en DXF del Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip)
+- **[LBR]** [Huella Eagle del Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-footprint-eagle.lbr)
+- **[XLSX]** [Hoja de distribución de pines del Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
+- 🔗 **[Kicad]** [Huella del Seeed Studio XIAO nRF52840](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 - **[PDF]** [Diagrama esquemático del SX1262 compatible con Xiao nRF52840](https://files.seeedstudio.com/products/113010003/Wio-SX1262%20for%20XIAO%20V1.0.pdf)
 - **[PDF]** [Hoja de datos del módulo Wio SX-1262](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf
 )
@@ -191,15 +190,23 @@ Conecta un [Módulo GNSS L76K](https://www.seeedstudio.com/L76K-GNSS-Module-for-
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div>
-

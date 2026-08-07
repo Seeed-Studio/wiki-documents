@@ -10,7 +10,7 @@ last_update:
   date: 12/04/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2025-09-04'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai/
 ---
 
@@ -46,7 +46,7 @@ Antes de comenzar, asegúrate de contar con lo siguiente:
 
 ## Paso 1. Accede al espacio de trabajo de Grove Vision AI V2 y conecta el dispositivo
 
-Accede al espacio de trabajo de Grove Vision AI V2 a través de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`Grove Vision AI V2`**, o utiliza el [enlace directo al espacio de trabajo](https://sensecraft.seeed.cc/ai/device/local/36).
+Accede al espacio de trabajo de Grove Vision AI V2 a través de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`Grove Vision AI V2`**, o utiliza el [enlace directo al espacio de trabajo](https://sensecraft.seeed.cc/ai/device/local/36).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/grove_vision_ai_v2_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -115,9 +115,9 @@ Ten en cuenta que la funcionalidad de salida depende de la conexión basada en l
 
 ## Conclusión
 
-Siguiendo esta guía paso a paso, has aprendido cómo configurar los ajustes de salida del modelo y las acciones de activación en la plataforma SenseCraft AI para el dispositivo Grove Vision AI V2. Ahora puedes configurar tu dispositivo para realizar acciones específicas, como encender el LED integrado o guardar imágenes capturadas, basadas en la salida de tu modelo entrenado. Esta funcionalidad te permite crear aplicaciones y proyectos interactivos utilizando el Grove Vision AI V2 y SenseCraft AI. Recuerda mantener una conexión estable entre la plataforma web y tu dispositivo para un funcionamiento sin interrupciones.
+Siguiendo esta guía paso a paso, has aprendido a configurar los ajustes de salida del modelo y las acciones de activación en la plataforma SenseCraft AI para el dispositivo Grove Vision AI V2. Ahora puedes configurar tu dispositivo para realizar acciones específicas, como encender el LED integrado o guardar imágenes capturadas, basadas en la salida de tu modelo entrenado. Esta funcionalidad te permite crear aplicaciones y proyectos interactivos utilizando el Grove Vision AI V2 y SenseCraft AI. Recuerda mantener una conexión estable entre la plataforma web y tu dispositivo para un funcionamiento sin interrupciones.
 
-El Grove Vision AI V2 sigue siendo esencialmente un sensor de cámara con IA, por lo que no podemos esperar hacer mucho más que cosas propias de sensores con él. Si tienes un MCU adicional, puedes realizar proyectos más interesantes con la interfaz Grove o la interfaz Pin a Pin; SenseCraft AI es solo un medio para entregar el modelo. Para más rutinas de Arduino en el modelo Grove Vision AI V2, consulta [Primeros pasos con Grove Vision AI V2](https://wiki.seeedstudio.com/es/grove_vision_ai_v2_software_support/).
+El Grove Vision AI V2 sigue siendo esencialmente un sensor de cámara con IA, por lo que no podemos esperar hacer mucho más que cosas propias de sensores con él. Si tienes un MCU adicional, puedes realizar proyectos más interesantes con la interfaz Grove o la interfaz Pin to Pin; SenseCraft AI es solo un medio para entregar el modelo. Para más rutinas de Arduino en el modelo Grove Vision AI V2, consulta [Primeros pasos con Grove Vision AI V2](https://wiki.seeedstudio.com/es/grove_vision_ai_v2_software_support/).
 
 ## Soporte técnico y debate sobre el producto
 

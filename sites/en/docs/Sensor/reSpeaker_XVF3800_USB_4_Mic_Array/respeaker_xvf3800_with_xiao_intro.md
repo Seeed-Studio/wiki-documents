@@ -12,7 +12,7 @@ last_update:
   date: 8/20/2025
   author: Kasun Thushara
 createdAt: '2025-07-16'
-updatedAt: '2026-04-20'
+updatedAt: '2026-07-23'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/
 ---
 
@@ -53,6 +53,13 @@ url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/
 By default, the reSpeaker XVF3800 USB 4 Microphone Array with XIAO ESP32S3 uses the **I2S firmware**. In the I2S mode it is **NOT** detected as an **USB device**.
 
 You can switch between I2S and USB mode by installing the related firmware. Use the safe mode to connect the device as USB device and to flash the firmare to update the firmware or to switch between modes.
+
+:::note
+
+To ensure optimal voice pickup performance and proper operation of the audio algorithms, please make sure the Microphone Port (Mic Inlet / Sound Hole) on the back side of the device is facing toward the sound source. The microphone port is located on the side with the Seeed Studio logo printed on it. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mic-outlet.png" alt="pir" width={800} height="auto"/></p>
+:::
 
 ### Flash the I2S firmware
 

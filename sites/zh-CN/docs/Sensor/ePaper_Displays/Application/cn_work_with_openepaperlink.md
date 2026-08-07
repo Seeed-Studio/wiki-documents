@@ -1,24 +1,27 @@
 ---
-description: 使用 OpenEPaperLink (OEPL) 和 OpenDisplay 开源生态系统，通过蓝牙低功耗驱动 Seeed ePaper 硬件——涵盖 XIAO ePaper Display Board EN04 和适用于 Seeed Studio XIAO 的 ePaper Breakout Board。
+description: 通过 OpenDisplay 和 OpenEPaperLink 生态系统使用低功耗蓝牙驱动 Seeed ePaper 硬件，包括 reTerminal E1001、E1002、E1003、XIAO ePaper Display Board EN04，以及 XIAO ePaper Breakout Board 路径。
 title: 搭配 OpenEPaperLink / OpenDisplay 使用
 keywords:
   - ePaper 显示屏
   - OpenEPaperLink
   - OEPL
   - OpenDisplay
+  - reTerminal E1001
+  - reTerminal E1002
+  - reTerminal E1003
   - EN04
   - ePaper Breakout Board
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 slug: /EN04_opendisplay
-sidebar_position: 9
+sidebar_position: 10
 last_update:
-  date: 04/28/2026
+  date: 06/30/2026
   author: dimo
 aliases:
   - /epaper_breakout_board_with_oepl
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/cn/EN04_opendisplay/
-updatedAt: '2026-04-28'
+updatedAt: '2026-07-09'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -26,183 +29,277 @@ import TabItem from '@theme/TabItem';
 
 # 搭配 OpenEPaperLink / OpenDisplay 使用
 
-[OpenEPaperLink (OEPL)](https://openepaperlink.de/) 生态系统以及相关的 [OpenDisplay](https://opendisplay.org/) 项目，是用于驱动电子纸显示屏的开源固件/协议栈。最新版本运行在 **Bluetooth Low Energy** 之上——你的手机、电脑或 Home Assistant 可以直接与设备通信，无需专用的 802.15.4 接入点。
+[OpenDisplay](https://opendisplay.org/) 和 [OpenEPaperLink (OEPL)](https://openepaperlink.de/) 是用于通过 **Bluetooth Low Energy (BLE)** 驱动 ePaper 显示屏的开源生态系统。手机、电脑或 Home Assistant 主机可以直接连接到显示屏，因此基础工作流程不需要 802.15.4 接入点。
 
-本指南涵盖进入该生态系统的两种 Seeed 硬件路径：
+本指南涵盖两条 Seeed 硬件路径：
 
-- **XIAO ePaper Display Board EN04** —— 运行 OpenDisplay 固件的 BLE 一体化套件。
-- **适用于 Seeed Studio XIAO 的 ePaper Breakout Board** —— 使用 OEPL Config Builder + OEPL Image Uploader 搭配 XIAO nRF52840 系列开发板的更模块化 DIY 路径。
+- **OpenDisplay Toolbox 路径** —— 推荐用于在 **reTerminal E1001**、**reTerminal E1002**、**reTerminal E1003** 和 **XIAO ePaper Display Board EN04** 上直接使用可用的 OpenDisplay 固件。
+- **OEPL_BLE 路径** —— 适用于使用 **ePaper Breakout Board for Seeed Studio XIAO** 和 **XIAO nRF52840 系列开发板** 搭建模块化 DIY 方案。
 
-这两种流程在理念上是一致的（BLE 配置、基于 Web 的工具、低功耗），但硬件以及固件/Web 工具有所不同。请在整篇文章中选择与你硬件相匹配的选项卡。
+两条路径的用户体验类似：安装固件，通过 BLE 配置设备，然后上传图像。工具和支持的预设不同，请根据你的硬件选择对应的选项卡。
 
 ## 兼容硬件
 
 <Tabs groupId="oepl-hardware">
-<TabItem value="en04" label="XIAO ePaper Display Board EN04" default>
+<TabItem value="reterminal" label="reTerminal E 系列" default>
+
+OpenDisplay Toolbox 包含 **reTerminal E1001**、**reTerminal E1002** 和 **reTerminal E1003** 的预设。
 
 <div class="table-center">
-<table align="center">
-    <tr>
-        <th>XIAO ePaper Display Board EN04</th>
-    </tr>
-    <tr>
-    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/diy_kit_pic.jpg"/></div>
-    <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-DIY-Kit-EN04.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-        </a>
-    </div></td>
-    </tr>
-</table>
+	<table align="center">
+		<tr>
+			<th>reTerminal E1001</th>
+			<th>reTerminal E1002</th>
+			<th>reTerminal E1003</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/132.jpg" style={{width:250, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/132.jpg" style={{width:250, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:250, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
+				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+				</a>
+			</div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
+				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+				</a>
+			</div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer">
+				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+				</a>
+			</div></td>
+		</tr>
+		<tr>
+			<td align="center">7.5" 黑白，800 × 480</td>
+			<td align="center">7.3" Spectra 6 彩色，800 × 480</td>
+			<td align="center">10.3" 黑白，1404 × 1872，触控</td>
+		</tr>
+		<tr>
+			<td align="center"><a href="https://opendisplay.org/firmware/toolbox/index.html?config=reterminal-e1001" target="_blank" rel="noopener noreferrer">在 Toolbox 中打开</a></td>
+			<td align="center"><a href="https://opendisplay.org/firmware/toolbox/index.html?config=reterminal-e1002" target="_blank" rel="noopener noreferrer">在 Toolbox 中打开</a></td>
+			<td align="center"><a href="https://opendisplay.org/firmware/toolbox/index.html?config=reterminal-e1003" target="_blank" rel="noopener noreferrer">在 Toolbox 中打开</a></td>
+		</tr>
+	</table>
 </div>
 
-由 **XIAO nRF52840 Plus** 提供动力，XIAO EN04 ePaper Display Board 是入门蓝牙电子纸显示屏的最简方式。可从手机、电脑或 Home Assistant 直接进行无线控制——无需专用 AP。
+当你希望在已完成的 reTerminal E 系列设备上直接运行 OpenDisplay 固件时，请使用此路径。
+
+:::caution
+安装 OpenDisplay 固件会替换当前在设备上运行的固件。请准备好恢复路径，例如使用官方 reTerminal E-Series Firmware Hub 或产品 Wiki 推荐的固件包。
+:::
+
+</TabItem>
+<TabItem value="en04" label="XIAO ePaper Display Board EN04">
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>XIAO ePaper Display Board EN04</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/diy_kit_pic.jpg" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank" rel="noopener noreferrer">
+				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+				</a>
+			</div></td>
+		</tr>
+		<tr>
+			<td align="center"><a href="https://opendisplay.org/firmware/toolbox/index.html?driver=en04" target="_blank" rel="noopener noreferrer">在 Toolbox 中打开 EN04</a></td>
+		</tr>
+	</table>
+</div>
+
+EN04 是一块基于 nRF52840 的 ePaper 驱动板。当你希望将受支持的 ePaper 面板与以 BLE 为重点的控制器配对时，它是实现 OpenDisplay 的最直接 DIY 路径。
 
 </TabItem>
 <TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
-<table align="center">
-  <tr>
-    <th>4.26" 单色 ePaper 显示屏</th>
-    <th>适用于 Seeed Studio XIAO 的 ePaper Breakout Board</th>
-    <th>Seeed Studio XIAO nRF52840 Sense Plus</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993631-4.26-monochrome-eink--epaper-display.jpg" style={{width:300, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/4/-/4-105990172-epaper-breakout-board-45back.jpg" style={{width:300, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102010694-seeedstudio-xiao-nrf52840-sense-plus-45font_1.jpg" style={{width:300, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/ePaper-Breakout-Board-p-5804.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Sense-Plus-p-6360.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-        </a>
-    </div></td>
-  </tr>
-</table>
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>4.26" 黑白 ePaper 显示屏</th>
+			<th>ePaper Breakout Board for Seeed Studio XIAO</th>
+			<th>Seeed Studio XIAO nRF52840 Sense Plus</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993631-4.26-monochrome-eink--epaper-display.jpg" style={{width:250, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/4/-/4-105990172-epaper-breakout-board-45back.jpg" style={{width:250, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102010694-seeedstudio-xiao-nrf52840-sense-plus-45font_1.jpg" style={{width:250, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html" target="_blank" rel="noopener noreferrer">
+				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+				</a>
+			</div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/ePaper-breakout-Board-for-XIAO-V2-p-6374.html" target="_blank" rel="noopener noreferrer">
+				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+				</a>
+			</div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Sense-Plus-p-6360.html" target="_blank" rel="noopener noreferrer">
+				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+				</a>
+			</div></td>
+		</tr>
+	</table>
+</div>
 
-:::tip
-整个 **XIAO nRF52840 系列** 都可以驱动这个 DIY 套件——不仅仅是上图所示的 Sense Plus。社区 OEPL 项目开箱即支持 4.26" 屏幕；未来会逐步加入更多屏幕尺寸。
-:::
+当你希望构建模块化 OEPL_BLE 方案时，请使用此路径。XIAO nRF52840 系列可以驱动这个 DIY 套件，而社区 OEPL 工作流则提供了用于配置和图像上传的独立工具。
 
 </TabItem>
 </Tabs>
 
-## 为什么使用 OpenEPaperLink / OpenDisplay？
+## 为什么使用 OpenDisplay / OpenEPaperLink？
 
-- **无需接入点** —— 使用 Bluetooth Low Energy 进行直接通信，无需 802.15.4 硬件。
-- **基于 Web 的工具** —— 直接在浏览器中安装固件、配置设备并上传图片。
-- **专为硬件打造的支持** —— XIAO nRF52840 系列、EN04、EE04 等。
-- **开源且免费** —— 在 GitHub 上持续开发。
-- **支持多种微控制器** —— nRF52840、ESP32-S3、ESP32-C6、ESP32-C3。
-- **流程简单** —— 拖放固件安装，通过网页配置，无需复杂编程。
-- **电池友好** —— 针对低功耗电子纸进行了优化。
-- **活跃的社区** —— [OpenDisplay Discord](https://discord.gg/WG7tbTzF9Z)。
+- **以 BLE 为先的工作流** —— 无需专用 802.15.4 接入点即可配置和上传图像。
+- **基于浏览器的工具** —— 在受支持的浏览器中安装固件、选择预设、配置设备并上传图像。
+- **Seeed 硬件预设** —— OpenDisplay Toolbox 包含 reTerminal E1001、E1002、E1003 和 EN04 的预设。
+- **Home Assistant 支持** —— OpenDisplay 设备可以通过 Home Assistant 官方的 OpenDisplay 集成添加。
+- **开源生态系统** —— 固件、工具和集成都在公共代码库中开发。
 
 ## 步骤 1：硬件连接
 
 <Tabs groupId="oepl-hardware">
-<TabItem value="en04" label="XIAO ePaper Display Board EN04" default>
+<TabItem value="reterminal" label="reTerminal E 系列" default>
 
-**步骤 1. 将显示屏连接到驱动板**  
-将 FPC 线缆与 XIAO EN04 板上的连接器对齐，然后扣上卡扣固定。
+**步骤 1。** 使用 USB-C 数据线将 reTerminal E 系列设备连接到电脑。
+
+**步骤 2。** 打开设备电源并将其保持在靠近电脑的位置。浏览器将使用 USB 进行固件安装，并使用 BLE 进行配置。
+
+**步骤 3。** 将你的硬件与正确的 OpenDisplay Toolbox 预设进行匹配：
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>设备</th>
+			<th>Toolbox 预设</th>
+			<th>显示屏</th>
+		</tr>
+		<tr>
+			<td>reTerminal E1001</td>
+			<td><code>reterminal-e1001</code></td>
+			<td>7.5" 黑白，800 × 480</td>
+		</tr>
+		<tr>
+			<td>reTerminal E1002</td>
+			<td><code>reterminal-e1002</code></td>
+			<td>7.3" Spectra 6 彩色，800 × 480</td>
+		</tr>
+		<tr>
+			<td>reTerminal E1003</td>
+			<td><code>reterminal-e1003</code></td>
+			<td>10.3" 黑白，1404 × 1872</td>
+		</tr>
+	</table>
+</div>
+
+</TabItem>
+<TabItem value="en04" label="XIAO ePaper Display Board EN04">
+
+**步骤 1。** 将 ePaper 面板的 FPC 线缆插入 EN04 连接器并锁紧卡扣。
 
 :::tip
-FPC 线缆的金属面应朝上，否则不会显示任何内容。大多数显示屏在 FPC 上印有 `1` 和 `50`，请将它们与板子上对应的数字对齐。
+对于 50 针连接器，请将 FPC 上印刷的 `1` 和 `50` 标记与板子上的对应标记对齐。在下图所示的 EN04 套件中，FPC 的金属接触面朝上。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/hardware.jpg" style={{width:600, height:'auto'}}/></div>
 
-**步骤 2. 连接电池**  
-将电池线缆插入驱动板上的 JST 接口。红线接 **+**，黑线接 **−**。
+**步骤 2。** 将电池连接到 JST 接口。红线接 **+**，黑线接 **-**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/battery.jpg" style={{width:600, height:'auto'}}/></div>
 
+**步骤 3。** 使用 USB-C 数据线将 EN04 板连接到电脑。
+
 :::caution
-请再次确认极性。不同电池的线序可能不同。若线序不对，可以用针从 JST 接头中取出导线并重新插入到正确位置。
+在为开发板供电前，请检查电池极性。极性接反的电池连接器可能会损坏硬件。
 :::
 
 </TabItem>
 <TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
-将 **XIAO nRF52840（Sense Plus）** 连接到 **ePaper Breakout Board**，然后将 **4.26" 单色 ePaper 屏幕** 接入 FPC 连接器。使用 USB-C 数据线将 XIAO 连接到电脑。
+**步骤 1.** 将 XIAO nRF52840 系列开发板安装到 ePaper Breakout Board 上。
+
+**步骤 2.** 将 ePaper 面板的 FPC 线缆插入 Breakout Board 上的连接器并锁紧卡扣。
+
+**步骤 3.** 使用 USB-C 数据线将 XIAO 连接到电脑。
 
 </TabItem>
 </Tabs>
 
-## 步骤 2：烧录固件
+## 步骤 2：安装固件
 
 <Tabs groupId="oepl-hardware">
-<TabItem value="en04" label="XIAO ePaper Display Board EN04" default>
+<TabItem value="reterminal" label="reTerminal E 系列" default>
 
-最简单的方式是使用 OpenDisplay Web 安装器。
+OpenDisplay 为 reTerminal E 系列提供了直接可用的 Toolbox 预设。
 
-**步骤 1.** 在浏览器中打开 [OpenDisplay Web Installer](https://opendisplay.org/firmware/install/index.html)。
+**步骤 1.** 在 Chrome 或 Edge 中打开与之匹配的 Toolbox 预设：
 
-**步骤 2.** 在设备列表中选择 **Seeed EN04 4.26** 或 **Seeed EN04 7.3**（或与你的显示屏匹配的预设）。
+- [reTerminal E1001 Toolbox 预设](https://opendisplay.org/firmware/toolbox/index.html?config=reterminal-e1001)
+- [reTerminal E1002 Toolbox 预设](https://opendisplay.org/firmware/toolbox/index.html?config=reterminal-e1002)
+- [reTerminal E1003 Toolbox 预设](https://opendisplay.org/firmware/toolbox/index.html?config=reterminal-e1003)
 
-**步骤 3.** 点击 **Download Firmware** 并将 `NRF52840.uf2` 保存到本地。
+**步骤 2.** 确认所选预设与您的设备型号一致。
 
-**步骤 4.** 通过 USB-C 连接 EN04 板。
+**步骤 3.** 点击 **Install firmware (USB)**。
 
-**步骤 5.** 连续按下复位按钮 **两次**。电脑上会出现一个 USB 驱动器（处于 DFU 模式的 EN04）。将 `NRF52840.uf2` 复制到该驱动器中。
+**步骤 4.** 在浏览器配对对话框中，选择连接 reTerminal 后出现的 USB 串口设备。
 
-:::tip
-如果安装器失败：
+**步骤 5.** 等待安装程序完成并让设备重启。
 
-- 尝试更换 USB 线（有些线仅支持供电——请使用数据线）。
-- 在 EN04 上按两次复位按钮以重新进入 DFU 模式。
-- 尝试更换 USB 接口。
-:::
+安装完成后，在下一步继续进行 BLE 配置。
 
-**步骤 6.** 打开 [OpenDisplay Configuration Page](https://opendisplay.org/firmware/config/?config=nrf52840-en04-s6) 并连接到你的开发板。
+</TabItem>
+<TabItem value="en04" label="XIAO ePaper Display Board EN04">
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step6.png" style={{width:600, height:'auto'}}/></div>
+当前的 OpenDisplay 流程使用 Toolbox 来完成 EN04 的设置。
 
-如果你选择了 **Seeed EN04 4.26** 或 **Seeed EN04 7.3**，你会看到 **Auto Install to Device** —— 配置套件的最简方式。
+**步骤 1.** 在 Chrome 或 Edge 中打开 [OpenDisplay Toolbox for EN04](https://opendisplay.org/firmware/toolbox/index.html?driver=en04)。
 
-**步骤 7.** 点击 **Connect** 按钮。在配对对话框中选择新设备并点击 **Pair**。
+**步骤 2.** 选择与您连接的 ePaper 显示屏相匹配的面板。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step7.png" style={{width:500, height:'auto'}}/></div>
+**步骤 3.** 点击 **Install firmware (USB)** 并按照浏览器提示操作。
 
-**步骤 8.** 点击 **Auto Install to Device** 将配置保存到开发板。
+**步骤 4.** 如果浏览器要求进入 bootloader 模式，请在 EN04 板上双击复位按钮，然后选择新检测到的 USB 设备。
 
-安装和配置完成后，显示屏会显示启动画面，并准备好通过 BLE 接收内容。
+**步骤 5.** 等待固件安装完成。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/boot_screen.jpg" style={{width:500, height:'auto'}}/></div>
+EN04 将重启进入 OpenDisplay 固件，此后即可通过 BLE 进行配置。
 
 </TabItem>
 <TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
-在 OEPL Config Builder 能与之通信之前，XIAO nRF52840 需要先烧录 **OEPL_BLE** 固件。
+XIAO nRF52840 + Breakout Board 路径在 OEPL Config Builder 能连接之前，需要先使用 **OEPL_BLE** 固件。
 
-**步骤 1.** 从官方 OEPL 发布页面下载最新的 `OEPL_BLE` 固件。
+**步骤 1.** 打开 [OEPL_BLE 发布页面](https://github.com/OpenEPaperLink/OEPL_BLE/releases)，并下载与您的 XIAO nRF52840 开发板匹配的固件包。
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/OpenEPaperLink/OEPL_BLE/releases/tag/test7" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 下载固件</font></span></strong>
-    </a>
+	<a class="github_item" href="https://github.com/OpenEPaperLink/OEPL_BLE/releases" target="_blank" rel="noopener noreferrer">
+	<strong><span><font color={'FFFFFF'} size={"4"}> Download OEPL_BLE Firmware</font></span></strong>
+	</a>
 </div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/hub_oepl.png" style={{width:700, height:'auto'}}/></div>
 
-**步骤 2.** 连接 XIAO nRF52840 + Breakout Board + 屏幕，通过 USB-C 将 XIAO 插入电脑，然后 **按下复位按钮两次**。XIAO 会在电脑上显示为一个 USB 驱动器。
+**步骤 2.** 双击 XIAO 上的复位按钮。它会以 USB 磁盘的形式出现。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/file_pic.png" style={{width:700, height:'auto'}}/></div>
 
-**步骤 3.** 将下载好的 `.uf2` 固件拖放到该 USB 驱动器中。XIAO 会重启，并在下一次上电时运行新固件。
+**步骤 3.** 将下载好的 `.uf2` 固件文件拖拽到该 USB 磁盘中。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/firmware.jpg" style={{width:700, height:'auto'}}/></div>
+
+XIAO 会重启，并在下一次上电时运行 OEPL_BLE 固件。
 
 </TabItem>
 </Tabs>
@@ -210,49 +307,59 @@ FPC 线缆的金属面应朝上，否则不会显示任何内容。大多数显�
 ## 步骤 3：通过 BLE 配置设备
 
 <Tabs groupId="oepl-hardware">
-<TabItem value="en04" label="XIAO ePaper Display Board EN04" default>
+<TabItem value="reterminal" label="reTerminal E 系列" default>
 
-前面烧录流程中的 OpenDisplay 配置步骤已经处理好了这些内容——你的 EN04 现在应该会启动到 OpenDisplay 启动画面，并且可以接收图像上传。
+**步骤 1.** 在同一 OpenDisplay Toolbox 页面中，点击 **Configure over Bluetooth**。
+
+**步骤 2.** 在 BLE 配对对话框中选择您的 reTerminal 设备。
+
+**步骤 3.** 等待 Toolbox 将所选预设写入设备。
+
+**步骤 4.** 确认显示屏刷新，或显示 OpenDisplay 的启动/测试图像。
+
+现在设备已经可以通过 OpenDisplay 工具或 Home Assistant 上传图像。
+
+</TabItem>
+<TabItem value="en04" label="XIAO ePaper Display Board EN04">
+
+**步骤 1.** 在 OpenDisplay Toolbox 中，保持 **EN04** 作为驱动板选项，并确认匹配的面板选项。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step6.png" style={{width:600, height:'auto'}}/></div>
+
+**步骤 2.** 点击 **Configure over Bluetooth**。
+
+**步骤 3.** 在 BLE 配对对话框中选择 EN04 设备。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step7.png" style={{width:500, height:'auto'}}/></div>
+
+**步骤 4.** 等待 Toolbox 写入配置并让显示屏刷新。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/boot_screen.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
-打开 [OEPL Config Builder](https://config.openepaperlink.org/)，然后通过 BLE 连接到你的 XIAO。（如果没有设备显示出来，请重新烧录固件后再试一次。）
+**步骤 1.** 打开 [OEPL Config Builder](https://config.openepaperlink.org/)。
+
+**步骤 2.** 点击 **Connect**，并在 BLE 配对对话框中选择您的 XIAO nRF52840 设备。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Connect_demo_2.png" style={{width:700, height:'auto'}}/></div>
 
-当你在终端中看到 "Connected" 时，你可以使用：
-
-- **Read Config** — 从 MCU 读取当前配置。
-- **Write Config** — 将新配置写入 MCU。
-- **Reboot** — 重启 MCU。
-
-### Builder 面板
-
-在面板中选择变量和参数来组合你的配置。
-
-- **system_config** — 主控 IC 和电源管理引脚。
-- **manufacturer_data** — 制造商标识和板卡信息。
-- **power_option** — 电源供给和休眠设置。
-- **display** — 显示屏 / 面板信息（可为多个显示屏重复添加）。
-- **led** — 可选的 LED 配置（可重复）。
-- **sensor_data** — 可选的传感器读数 / 定义（可重复）。
-- **data_bus** — 总线定义（I2C / SPI / …）。
-- **binary_inputs** — 按钮、开关。
+**步骤 3.** 使用配置面板来设置主控 IC、电源参数、显示屏、LED、传感器、总线以及二进制输入。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Builder_demo_1.png" style={{width:700, height:'auto'}}/></div>
 
-你可以将配置导出为 `.bin`、`Hex` 或 `JSON`，也可以导入已保存的 JSON。下面提供了一个适用于 4.26" 屏幕的现成配置。
+**步骤 4.** 对于 Seeed 4.26" 单色 ePaper 的设置，请导入下面的示例配置。
 
 <div align="center">
-<a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
+<a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank" rel="noopener noreferrer">
 <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>4.26" 示例配置（JSON）</button></p>
 </a>
 </div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Package_import_1.png" style={{width:700, height:'auto'}}/></div>
 
-在调整好配置后，点击 **Write Config** 将其保存到 MCU。
+**步骤 5.** 点击 **Write Config** 将配置保存到 MCU。
 
 </TabItem>
 </Tabs>
@@ -260,382 +367,240 @@ FPC 线缆的金属面应朝上，否则不会显示任何内容。大多数显�
 ## 步骤 4：上传图像
 
 <Tabs groupId="oepl-hardware">
-<TabItem value="en04" label="XIAO ePaper Display Board EN04" default>
+<TabItem value="reterminal" label="reTerminal E 系列" default>
 
-OpenDisplay 项目提供了一个专用的基于浏览器的上传工具。
+OpenDisplay 设备可以通过浏览器显示工具接收图像。
 
-**步骤 1.** 打开 [OpenDisplay BLE Tester](https://opendisplay.org/firmware/display/index.html)。
+**步骤 1.** 打开 [OpenDisplay display tool](https://opendisplay.org/firmware/display/index.html)。
 
-**步骤 2.** 点击 **Connect**，然后在 BLE 配对对话框中选择你的 OpenDisplay 设备。
+**步骤 2.** 点击 **Connect**，并在 BLE 配对对话框中选择您的 reTerminal 设备。
 
-**步骤 3.** 点击 **Select Image**，并从电脑中选择一个文件。
+**步骤 3.** 点击 **Select Image** 并选择本地图像文件。
+
+**步骤 4.** 点击 **Upload Image**。
+
+传输完成后，ePaper 显示屏会刷新并显示上传的图像。
+
+:::tip
+使用与面板分辨率匹配的图像尺寸可以获得最清晰的效果：
+
+- reTerminal E1001：800 × 480 像素
+- reTerminal E1002：800 × 480 像素
+- reTerminal E1003：1404 × 1872 像素
+:::
+
+</TabItem>
+<TabItem value="en04" label="XIAO ePaper Display Board EN04">
+
+**步骤 1.** 打开 [OpenDisplay display tool](https://opendisplay.org/firmware/display/index.html)。
+
+**步骤 2.** 点击 **Connect**，并在 BLE 配对对话框中选择 EN04 设备。
+
+**步骤 3.** 点击 **Select Image** 并选择本地图像文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/upload_image.png" style={{width:500, height:'auto'}}/></div>
 
+**步骤 4.** 点击 **Upload Image**。传输完成后，ePaper 显示屏会刷新。
+
 :::tip
-为了获得最佳效果：
-
-- 使用与显示屏分辨率匹配的图像（7.3" 面板为 800×480 像素）。
-- 黑白图像在单色显示屏上效果最佳。
-- 该工具会自动转换并抖动处理彩色图像。
+请使用与所连接面板分辨率匹配的图像尺寸。例如，7.3" Spectra 6 面板使用 800 × 480 像素。
 :::
-
-**步骤 4.** 点击 **Upload Image**。电子纸会刷新并显示你的图像。
-
-你也可以使用图像编辑器（GIMP、Photoshop）、Python + Pillow 脚本、基于 Web 的图像生成器，或 Home Assistant 集成（见下文）来创建自定义内容。
 
 </TabItem>
 <TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
-OEPL Image Uploader 同样是一个基于 BLE 的 Web 工具。其引脚分配与 Config Builder 固件不同，因此你需要先烧录一个略有不同的图像上传固件。
+OEPL Image Uploader 是针对 OEPL_BLE 路径的独立 BLE 网页工具。
 
-<div align="center">
-<a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处获取固件</button></p>
-</a>
-</div>
+**步骤 1.** 打开 [OEPL Image Uploader](https://atc1441.github.io/ATC_BLE_OEPL_Image_Upload.html)。
 
-在 **E-Paper prefix filter(s)** 字段中，将值改为 `OEPL`——否则上传工具无法找到设备。
+**步骤 2.** 在 **E-Paper prefix filter(s)** 中输入 `OEPL`。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_4.png" style={{width:350, height:'auto'}}/></div>
 
+**步骤 3.** 通过 BLE 连接到 XIAO 设备。
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_6.png" style={{width:500, height:'auto'}}/></div>
 
-点击 **Select File** 选择一个本地文件进行上传。
+**步骤 4.** 点击 **Select File** 并选择本地图像。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_2.png" style={{width:550, height:'auto'}}/></div>
 
-当文件传输完成后，点击 **Upload Image** 将其推送到电子纸上。
+**步骤 5.** 点击 **Upload Image**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_5.png" style={{width:350, height:'auto'}}/></div>
 
-当你看到 **Upload Complete** 时，电子纸已经刷新为新图像。
+当上传器显示 **Upload Complete** 时，ePaper 显示屏已经完成刷新。
 
 </TabItem>
 </Tabs>
 
-## Home Assistant 集成（仅限 EN04 / OpenDisplay）
+## Home Assistant 集成
 
-:::tip
-要与 Home Assistant 集成，你需要一个支持蓝牙的环境：
+Home Assistant 为 OpenDisplay 固件设备提供了官方的 **OpenDisplay** 集成。它通过 BLE 通信，并提供 `opendisplay.upload_image` 动作用于向显示屏发送图像。
 
-- **Home Assistant Green**（内置蓝牙）
-- 运行在支持蓝牙硬件上的 **Home Assistant OS / Supervised**
-- **ESPHome Bluetooth Proxy**（推荐用于获得更好的覆盖范围——见下文）
+### 前置条件
 
-**注意：** 作为蓝牙代理的 Shelly 设备**不**支持 OpenDisplay 所需的主动连接，因此不能使用。
-:::
+- Home Assistant 2026.4 或更高版本。
+- 一个可正常工作的 Bluetooth 设置，支持主动 BLE 连接。
+- 一台已上电且在 Bluetooth 覆盖范围内的 OpenDisplay 固件设备。
 
-**步骤 1. 安装集成**
+以下 Bluetooth 路径是可行的：
 
-有关详细安装说明，请参阅 [OpenDisplay Home Assistant Integration 仓库](https://github.com/OpenEPaperLink/Home_Assistant_Integration?tab=readme-ov-file#getting-help)。
-
-最简单的方式是通过 **HACS**（Home Assistant Community Store）：
-
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=OpenEpaperLink&repository=Home_Assistant_Integration)
+- Home Assistant Green 或其他带有受支持 Bluetooth 硬件的 Home Assistant 主机。
+- 运行 ESPHome 固件 2022.9.3 或更高版本的 ESPHome Bluetooth Proxy。
 
 :::info
-通过 HACS 安装自定义集成后，**重启 Home Assistant** 以使更改生效。
+Shelly 蓝牙代理对被动 BLE 传感器很有用，但 OpenDisplay 图像上传需要主动 BLE 连接。请在此工作流中使用 Home Assistant 蓝牙适配器或 ESPHome Bluetooth Proxy。
 :::
 
-**步骤 2. 添加已发现的设备**
+### 添加设备
 
-当 Home Assistant 重启完成后：
+**步骤 1.** 在 Home Assistant 中，进入 **Settings > Devices & services**。
 
-1. 进入 **Settings → Devices & services**。
-2. 在 **Discovered** 下找到你的 OpenDisplay 设备。
-3. 点击 **Add**。
-4. 设置 **Name** 和 **Area**，然后点击 **Finish**。
+**步骤 2.** 如果设备被自动发现，点击 OpenDisplay 卡片上的 **Add**。
 
-显示屏上会出现一张新图像，以确认 Home Assistant 已连接。
+**步骤 3.** 如果没有被自动发现，点击 **Add Integration**，搜索 **OpenDisplay**，并按照设置流程进行。
+
+**步骤 4.** 分配设备名称和区域。
+
+设备添加后，Home Assistant 可以通过蓝牙发现并连接到 OpenDisplay 设备。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/pair_ha.jpg" style={{width:500, height:'auto'}}/></div>
 
-### 自动化显示更新
+### 从 Home Assistant 上传图像
 
-主要的服务是 `open_epaper_link.drawcustom`，它允许你绘制文本、图标、图像和形状。完整的类型 / 参数参考请参阅 [drawcustom 文档](https://github.com/OpenDisplay-org/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md)。
+将图像存储在 Home Assistant 的本地媒体文件夹中，然后调用 `opendisplay.upload_image`。
 
-#### 示例 1 —— 显示传感器数据（可视化编辑器）
+```yaml
+action: opendisplay.upload_image
+data:
+  device_id: "your_device_id"
+  image:
+    media_content_id: "media-source://media_source/local/photo.png"
+    media_content_type: "image/png"
+```
 
-1. 进入 **Settings → Automations & Scenes** 并点击 **Create Automation**。
-2. 添加一个 **Time Pattern** 触发器（例如每 10 分钟）。
+对于定时更新，在自动化中使用相同的动作。
+
+```yaml
+triggers:
+  - trigger: time
+    at: "08:00:00"
+actions:
+  - action: opendisplay.upload_image
+    data:
+      device_id: "your_device_id"
+      image:
+        media_content_id: "media-source://media_source/local/daily.png"
+        media_content_type: "image/png"
+```
+
+:::tip
+在调用 `opendisplay.upload_image` 之前，使用 Home Assistant 自动化生成或复制新的 PNG。随后 OpenDisplay 集成会处理到显示屏的 BLE 传输。
+:::
+
+### 可选：自定义绘制负载
+
+OpenDisplay 社区还维护了一个带有 `drawcustom` 工作流的 HACS 集成，可直接通过 Home Assistant 负载绘制文本、图标、形状、二维码、图像、图表和进度条。
+
+当你特别需要绘图命令布局而不是上传预先准备好的图像时，请使用此路径。
+
+<div class="github_container" style={{textAlign: 'center'}}>
+	<a class="github_item" href="https://github.com/OpenDisplay-org/Home_Assistant_Integration" target="_blank" rel="noopener noreferrer">
+	<strong><span><font color={'FFFFFF'} size={"4"}> OpenDisplay HACS 集成</font></span></strong>
+	</a>
+</div>
+
+在 Home Assistant 可视化编辑器中，创建一个自动化，添加时间触发器，然后添加 OpenDisplay 绘制动作并选择目标设备。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/add_trigger.png" style={{width:800, height:'auto'}}/></div>
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/fill_trigger.png" style={{width:800, height:'auto'}}/></div>
 
-3. 添加一个 **Action** → **OpenDisplay: Draw Custom Image**。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/fill_trigger.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/add_action.png" style={{width:800, height:'auto'}}/></div>
 
-4. 选择目标设备。
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/pick_target.png" style={{width:800, height:'auto'}}/></div>
-
-5. 在 **Payload** 字段中输入布局配置：
-
-```yaml
-- type: "text"
-  value: "Living Room"
-  x: "50%"
-  y: 50
-  anchor: "mm"
-  size: 70
-  color: "red"
-- type: "icon"
-  value: "mdi:thermometer"
-  x: "35%"
-  y: 200
-  anchor: "mm"
-  size: 100
-  color: "black"
-- type: "text"
-  value: "{{ states('sensor.living_room_temperature') }}°C"
-  x: "65%"
-  y: 200
-  anchor: "mm"
-  size: 100
-  color: "black"
-- type: "icon"
-  value: "mdi:water-percent"
-  x: "35%"
-  y: 350
-  anchor: "mm"
-  size: 100
-  color: "black"
-- type: "text"
-  value: "{{ states('sensor.living_room_humidity') }}%"
-  x: "65%"
-  y: 350
-  anchor: "mm"
-  size: 100
-  color: "black"
-```
-
-:::caution 实体 ID
-上面的实体 ID（例如 `sensor.living_room_temperature`）只是占位符。请将它们替换为你在 Home Assistant 中实际使用的实体 ID。
-:::
-
-#### 示例 2 —— 倒计时定时器（YAML）
-
-对于高级用户，可以以 YAML 形式编辑自动化。下面的示例会对某个日期进行倒计时，并将结果渲染到显示屏上。
-
-```yaml
-alias: Update ePaper Display - Countdown
-description: Displays days until Christmas
-triggers:
-  - at: "00:00:00"
-    trigger: time
-actions:
-  - variables:
-      days_left: "{{ (as_datetime('2025-12-24').date() - now().date()).days }}"
-  - action: open_epaper_link.drawcustom
-    data:
-      background: white
-      payload:
-        - type: text
-          value: "{{ 'Christmas Countdown' if days_left > 0 else '' }}"
-          x: 50%
-          "y": 50
-          anchor: mm
-          size: 60
-          color: black
-        - type: text
-          value: "{{ days_left if days_left > 0 else '' }}"
-          x: 50%
-          "y": 240
-          anchor: mm
-          size: 250
-          color: red
-        - type: text
-          value: >-
-            {{ 'Day Left' if days_left == 1 else ('Days Left' if days_left > 0
-            else '') }}
-          x: 50%
-          "y": 430
-          anchor: mm
-          size: 60
-          color: black
-        - type: text
-          value: "{{ 'It''s Christmas!!!' if days_left == 0 else '' }}"
-          x: 50%
-          "y": 50%
-          anchor: mm
-          size: 100
-          color: red
-    target:
-      device_id: 2ad706d4aa7c657b6fe99a733cef2253
-```
-
-:::caution 设备 ID
-上面的 `device_id` 是一个占位符。请通过以下方式找到你的实际设备 ID：
-
-1. 在可视化编辑器中创建一个新的自动化。
-2. 在动作设置中选择你的 OpenDisplay 设备。
-3. 切换到 **YAML 模式**（动作卡片中的三点菜单）。
-4. 复制 `device_id` 并将其粘贴到你的自动化中。
-:::
-
-## 额外内容
-
-在寻找一种时尚的方式来安装显示屏吗？这个 3D 打印的嵌件适配宜家 RODÅLM 相框，可以让安装变得很简单：
-
-- **[MakerWorld]** [Seeed 7.3" Spectra Insert for IKEA RODALM Frame](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
-
-## 故障排查
-
-### 固件安装问题
-
-**问题**：连接开发板后，电脑没有检测到新的 USB 驱动器。
-
-- 尝试使用另一根 USB 线（数据线，而不是仅供电线）。
-- 连接开发板后，按两次复位按钮。
-
-### 配置问题
-
-**问题**：开发板无法被发现。
-
-- 检查开发板上的 LED 是否闪烁——以确认设备已通电。
-- 尝试重启开发板。
-- 重新烧录固件。
-
-**问题**：安装固件后，显示屏没有任何显示。
-
-- 检查 FPC 线缆方向（金属触点朝上）。
-- 确认线缆已完全插入并锁紧。
-- 通过配置工具重新检查配置。
-
-### 蓝牙连接问题
-
-**问题**：在蓝牙配对中找不到设备。
-
-- 确保设备已通电并已安装固件。
-- 靠近一些（在 2–3 米范围内）。
-- 确认电脑 / 手机已启用蓝牙。
-
-**问题**：在上传图像过程中连接中断。
-
-- 上传过程中保持靠近设备。
-- 确保电池电量充足，或通过 USB 供电。
-- 避免上传非常大的图像。
-- 在蓝牙环境不那么拥挤的地方重试。
-
-### 电池和电源问题
-
-**问题**：电池续航时间短。
-
-- 在配置工具中设置更长的休眠间隔。
-- 始终运行最新固件（每个版本都会改进功耗）。
-- 降低显示刷新频率。
-- 确认电池已完全充电（Li-Po 为 4.2 V）。
-
-**问题**：设备无法充电。
-
-- 检查极性（红色 = +，黑色 = −）。
-- 确认充电线缆可提供 ≥500 mA 电流。
-- 确保电源开关为 **ON**。
-- 尝试使用不同的 USB 电源。
-
-### Home Assistant / 集成问题
-
-**问题**：通过 Raspberry Pi + HA 添加设备时出现 "Insufficient connection slots"。
-
-这通常是因为 Raspberry Pi 内置的蓝牙适配器达到了并发连接数量上限。
-
-![Error: Insufficient connection slots](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/1.png)
-*"Insufficient connection slots" 提示示例。*
-
-**推荐解决方案**：使用 ESP32 设备（例如 XIAO ESP32S3）作为 **ESPHome Bluetooth Proxy**。这样可以将蓝牙连接从 Pi 上卸载，为你的电子纸显示屏提供更稳定的“连接槽位”。
 
 ## 使用 ESPHome Bluetooth Proxy
 
-如果你在使用带有 Home Assistant 的 Raspberry Pi 时遇到 "Insufficient connection slots"，ESPHome Bluetooth Proxy 是最有效的解决方案。
+ESPHome Bluetooth Proxy 可以扩展蓝牙覆盖范围，并在显示屏远离 Home Assistant 主机时提高可靠性。
 
 ### 前提条件
 
-- 一块 ESP32 设备（例如 XIAO ESP32S3）。
+- 一块 ESP32 设备，例如 XIAO ESP32S3。
 - 在 Home Assistant 中已安装 ESPHome。
-- 一根用于将 ESP32 连接到你的 Pi 的 USB 数据线（用于首次烧录）。
+- 用于首次烧录的 USB 数据线。
 
 ### 分步配置
 
-1. **连接设备**——将 XIAO ESP32S3 插入 Raspberry Pi 的 USB 接口。
+**步骤 1.** 将 ESP32 设备连接到用于烧录的电脑或 Home Assistant 主机。
 
-2. 使用下面的 YAML **创建一个新的 ESPHome 配置**：
+**步骤 2.** 创建一个新的 ESPHome 设备，并使用类似下面示例的 Bluetooth Proxy 配置。
 
-   ![ESPHome YAML Configuration](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/2.png)
+```yaml
+esphome:
+  name: esps3-proxy
+  friendly_name: ESP32S3 Bluetooth Proxy
 
-   ```yaml
-   esphome:
-     name: esps3-proxy
-     friendly_name: ESP32S3 Bluetooth Proxy
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
 
-   esp32:
-     board: esp32-s3-devkitc-1
-     framework:
-       type: esp-idf
+logger:
+  level: INFO
 
-   # 1. Enable detailed logging (useful for debugging)
-   logger:
-     level: VERY_VERBOSE
+esp32_ble_tracker:
+  scan_parameters:
+    active: true
 
-   # 2. Core: Enable Bluetooth Tracker
-   esp32_ble_tracker:
-     scan_parameters:
-       active: true
+bluetooth_proxy:
+  active: true
 
-   # 3. Core: Enable Bluetooth Proxy
-   bluetooth_proxy:
-     active: true
+api:
+  encryption:
+    key: "YOUR_ENCRYPTION_KEY"
 
-   api:
-     encryption:
-       key: "YOUR_ENCRYPTION_KEY"
+ota:
+  - platform: esphome
+    password: "YOUR_OTA_PASSWORD"
 
-   ota:
-     - platform: esphome
-       password: "YOUR_OTA_PASSWORD"
+wifi:
+  ssid: "YOUR_WIFI_SSID"
+  password: "YOUR_WIFI_PASSWORD"
 
-   wifi:
-     ssid: "YOUR_WIFI_SSID"
-     password: "YOUR_WIFI_PASSWORD"
+captive_portal:
+```
 
-   captive_portal:
-   ```
+**步骤 3.** 在 ESPHome 中点击 **Install**，并将固件烧录到 ESP32 设备。
 
-3. **安装 / 烧录**：
+**步骤 4.** 在 ESP32 连接到 Wi-Fi 后，在 Home Assistant 中添加已发现的 Bluetooth Proxy。
 
-   - 选择 **Install → Plug into this computer**（或运行 ESPHome 的设备）。
+**步骤 5.** 在图像上传期间，将代理设备保持在靠近 OpenDisplay 设备的位置。
 
-     ![ESPHome flashing process](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/4.png)
+当代理工作正常时，Home Assistant 会显示 Bluetooth Proxy 已连接，并且可以通过它发现这块电子墨水屏。
 
-   - 在首次烧录时，ESPHome 可能会下载 `esp-idf` 工具链。请确保你的环境可以稳定访问 GitHub。
-   - 编译完成后，日志会显示 "WiFi connected" 和蓝牙扫描活动。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/5.png" style={{width:700, height:'auto'}}/></div>
 
-4. **将代理添加到 Home Assistant**：
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/6.png" style={{width:700, height:'auto'}}/></div>
 
-   - Home Assistant 会自动发现新的 Bluetooth Proxy。
-   - 添加完成后，你的电子纸显示屏应当可以通过该代理被发现，而不会再出现 "insufficient slots" 错误。
+## 额外内容：3D 打印支架
 
-   ![Success: Bluetooth Proxy connected](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/5.png)
+对于使用 7.3" Spectra 面板的 EN04，此社区模型为宜家 RODALM 相框提供了一个嵌件：
 
-   ![Success: e-paper display added](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/6.png)
+- **[MakerWorld]** [Seeed 7.3" Spectra Insert for IKEA RODALM Frame](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
 
 ## 资源
 
-- **[GitHub]** [OpenDisplay 固件](https://github.com/OpenDisplay-org/Firmware)
-- **[GitHub]** [OEPL_BLE 固件](https://github.com/OpenEPaperLink/OEPL_BLE)
-- **[Web Tool]** [OpenDisplay 固件网页安装器](https://opendisplay.org/firmware/install/index.html)
-- **[Web Tool]** [OpenDisplay 配置构建器](https://opendisplay.org/firmware/config/index.html)
-- **[Web Tool]** [OpenDisplay 显示测试工具](https://opendisplay.org/firmware/display/index.html)
-- **[Web Tool]** [OEPL 配置构建器](https://config.openepaperlink.org/)
-- **[Web Tool]** [OEPL 图像上传工具](https://atc1441.github.io/ATC_BLE_OEPL_Image_Upload.html)
-- **[Discord]** [OpenDisplay 社区](https://discord.gg/WG7tbTzF9Z)
-- **[Website]** [OpenDisplay 官方网站](https://opendisplay.org)
-- **[Website]** [OpenEPaperLink 官方网站](https://openepaperlink.de/)
+- **[Web Tool]** [OpenDisplay Toolbox](https://opendisplay.org/firmware/toolbox/index.html)
+- **[Web Tool]** [OpenDisplay display tool](https://opendisplay.org/firmware/display/index.html)
+- **[Web Tool]** [OEPL Config Builder](https://config.openepaperlink.org/)
+- **[Web Tool]** [OEPL Image Uploader](https://atc1441.github.io/ATC_BLE_OEPL_Image_Upload.html)
+- **[Home Assistant]** [Official OpenDisplay Integration](https://www.home-assistant.io/integrations/opendisplay/)
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

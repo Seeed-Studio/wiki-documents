@@ -12,7 +12,7 @@ last_update:
   date: 04/19/2023
   author: Lakshantha
 createdAt: '2023-04-17'
-updatedAt: '2026-03-24'
+updatedAt: '2026-06-29'
 url: https://wiki.seeedstudio.com/reComputer_A603_Flash_System/
 ---
 
@@ -37,9 +37,10 @@ A603 Carrier Board is a powerful extension board that supports Jetson Orin™ NX
 
 ## Prerequisites
 
-- Ubuntu Host PC
-- A603 Carrier Board with Jetson Orin module
-- Micro-USB data transmission cable
+- Ubuntu 20.04/22.04/24.04 host PC
+- A603 Carrier Board with a Jetson Orin NX or Jetson Orin Nano module
+- Micro-USB or Type-C data transmission cable
+- Power adapter
 
 ## Enter Force Recovery Mode
 
@@ -141,6 +142,12 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td>6.2</td>
       <td>36.4.3</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQLFs4vd8N5Lp0nhbP_KU-gB6kYGlXu3_N3KLiL25ze52Q?e=CWhIaE">Download</a></td>
+    </tr>
+    <tr>
+      <td>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
+      <td>7.2</td>
+      <td>39.2.0</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFKQLWsQBBTrenUxxvj-qJAU4s62oPXWg6RxcdSg-uJnY?e=y3buDr" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
@@ -596,6 +603,86 @@ If you flashed the system onto the SSD, run the following commands:
      ```
 
    Once completed, the device can boot into the system.
+:::
+
+</TabItem>
+
+<TabItem value="JP7.2" label="JP7.2">
+
+Here we will install **JetPack 7.2** on the A603 Carrier Board with a Jetson Orin NX or Jetson Orin Nano module.
+
+### Hardware Requirements
+
+- Ubuntu 20.04/22.04/24.04 host PC
+- Type-C data cable
+- A603 Carrier Board with a Jetson Orin NX or Jetson Orin Nano module
+- Power adapter
+
+**Step 1:** Download the NVIDIA system image packages on the Ubuntu host PC.
+
+```bash
+wget https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.0/release/Jetson_Linux_R39.2.0_aarch64.tbz2
+wget https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.0/release/Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2
+```
+
+**Step 2:** Download the A603 JetPack 7.2 peripheral driver package [603_jp72.tbz2](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFKQLWsQBBTrenUxxvj-qJAU4s62oPXWg6RxcdSg-uJnY?e=y3buDr), put it in the same directory as the NVIDIA system image packages, and assemble the flashing package.
+
+```bash
+# Extract the official flashing package files.
+tar xf Jetson_Linux_R39.2.0_aarch64.tbz2
+sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
+
+# Create the A603 driver package directory and extract the package.
+mkdir 603_jp72/
+cp 603_jp72.tbz2 603_jp72/
+cd 603_jp72
+sudo tar xf 603_jp72.tbz2
+
+# Enter the Linux_for_Tegra directory and run the setup scripts.
+cd ../Linux_for_Tegra/
+sudo ./tools/l4t_flash_prerequisites.sh
+sudo ./apply_binaries.sh
+
+# Replace the driver package files and directories in Linux_for_Tegra.
+cp -r ../603_jp72/bootloader/ ./
+cp -r ../603_jp72/kernel/ ./
+cp ../603_jp72/p3768-0000-p3767-0000-a0.conf ./
+sudo cp -r ../603_jp72/rootfs/ ./
+```
+
+**Step 3:** Put the device in Recovery Mode. The device must be in Recovery Mode for flashing.
+
+1. Short-circuit the RECOVERY pin and GND pin on the carrier board.
+2. Connect the carrier board to the host PC with a Type-C data cable.
+3. Power on the device.
+4. On the host PC, run `lsusb`. If the product ID is `7323`, `7423`, `7523`, or `7623`, the device is in Recovery Mode.
+   - 7323: Orin NX 16GB
+   - 7423: Orin NX 8GB
+   - 7523: Orin Nano 8GB
+   - 7623: Orin Nano 4GB
+
+**Step 4:** Flash the system to the SSD.
+
+```bash
+sudo ./l4t_initrd_flash.sh --erase-all jetson-orin-nano-devkit-super internal
+```
+
+After flashing is complete, the device will boot automatically.
+
+:::info
+Tips: Backup and restore the system image
+
+- To backup the image, put the device in Recovery Mode and run:
+
+  ```bash
+  sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b jetson-orin-nano-devkit-super
+  ```
+
+- To flash using the backup image, put the device in Recovery Mode and run:
+
+  ```bash
+  sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit-super
+  ```
 :::
 
 </TabItem>

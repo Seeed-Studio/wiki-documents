@@ -9,7 +9,7 @@ last_update:
   date: 01/20/2023
   author: Matthew
 createdAt: '2023-01-12'
-updatedAt: '2025-09-02'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/Seeed_Elderly/Navigation/Sensor_Network_4.7/
 ---
 
@@ -248,7 +248,7 @@ You can discover this page with two large portions.
             <a href="/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HDC1000</font></span></a>
             <br/>
             <a href="/Grove-TempAndHumi_Sensor-SHT31" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>,
-            <a href="/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT35 </font></span></a>,
+            <a href="/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT35 </font></span></a>,
             <a href="/Grove-SHT4x" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x </font></span></a>
             <br/>
     </a>

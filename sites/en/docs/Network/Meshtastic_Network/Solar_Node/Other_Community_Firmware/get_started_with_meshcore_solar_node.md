@@ -13,7 +13,7 @@ last_update:
   author: Michelle Huang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/
-updatedAt: '2026-04-20'
+updatedAt: '2026-07-31'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -308,6 +308,34 @@ After setting the path, the transmission method will be changed to "n hop". For 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
+## Verify That the Device Works Properly
+
+Before verification, confirm whether you are using only one Solar Node device or whether you also have other MeshCore Companion devices in your setup.
+
+For Repeater mode, the following behavior is expected:
+
+- When the device is connected via USB, it can appear online and be configured.
+- After unplugging USB power, the device switches to battery mode and continues working as a repeater.
+- The blue LED blinking once during transmission is normal and indicates LoRa activity.
+- The Solar Node Repeater is not expected to behave like a standalone phone-connected device unless it is used together with a Companion device.
+
+To properly verify that the repeater is working, follow this standard test procedure:
+
+1. Connect the Solar Node via USB.
+2. Open the MeshCore configuration page: [https://config.meshcore.io/](https://config.meshcore.io/).
+3. Click **Send Advert**.
+4. Check from another MeshCore device, such as a Companion device.
+5. The Solar Node should appear in the device list.
+6. On the Companion device, open the Solar Node Repeater contact and use the **Ping** function to confirm communication.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-6.png" alt="Verify Solar Node repeater with Ping from another MeshCore device" width={700} height="auto" /></p>
+
+:::note
+The mobile app is mainly used with a Companion device, not directly with a Repeater. The repeater itself will not behave like a normal Bluetooth-connected phone accessory.
+:::
+
+If the LED behavior and USB connection state match the description above, this usually indicates normal repeater behavior.
+
 ## FAQ
 
 ### Boot Loop
@@ -484,3 +512,26 @@ The Xiao nRF-52840 Plus maximum charging current is 200 mA. The charging managem
 
 ## Resource
 - [Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/mesh_repeater_power_table_en1.xlsx)
+
+## Tech Support & Product Discussion
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>
