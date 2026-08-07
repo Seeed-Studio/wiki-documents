@@ -51,14 +51,14 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
 ## 特性
 
 - **强大的 RP2040 MCU：** 双核 Arm Cortex-M0+ 处理器，最高运行频率 133 MHz
-- **丰富的存储资源：** 264 KB SRAM 和 2 MB 板载 Flash 存储
+- **丰富的存储资源：** 264 KB SRAM 和 2 MB 片上 Flash 存储
 - **广泛的软件兼容性：** 支持 Arduino、PlatformIO、MicroPython、CircuitPython、TinyGo、Rust、Zephyr 等
-- **通用 XIAO 封装：** 两个版本均采用标准 14 针 XIAO 布局，包括 11 个 GPIO 引脚和 3 个电源引脚
+- **通用 XIAO 封装：** 两个版本都保留标准 14 针 XIAO 布局，包括 11 个 GPIO 引脚和 3 个电源引脚
 - **紧凑外形尺寸：** 拇指大小的 21 × 17.8 mm 设计，适用于可穿戴设备和空间受限的应用
 - **标准 XIAO RP2040 接口：** 11 个数字 I/O 引脚、4 个模拟输入引脚、11 个支持 PWM 的引脚，以及 I2C、UART、SPI 和 SWD 接口
-- **扩展的 XIAO RP2040 Plus I/O：** 额外增加 15 个 GPIO 焊盘，总计 26 个数字 I/O 引脚，并提供第二路 I2C 接口和独立的 USB D+/D− 焊盘
+- **扩展的 XIAO RP2040 Plus I/O：** 额外增加 15 个 GPIO 焊盘，总计 26 个数字 I/O 引脚，并提供第二路 I2C 接口和专用 USB D+/D− 焊盘
 - **集成电池管理：** XIAO RP2040 Plus 集成板载 PMIC、电池充电指示、专用电池连接以及 BAT 到 3V3 的回流保护
-- **灵活的组装方式：** 兼容面包板的通用引脚，结合半孔和适用于贴片的焊盘，便于自定义载板设计
+- **灵活的组装方式：** 兼容面包板的通用引脚结合半孔和适用于贴片的焊盘，便于定制载板
 
 ## 规格参数
 
@@ -427,7 +427,7 @@ void loop() {
 - **📄[Pinout Diagram]** [XIAO RP2040 引脚分布表](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx )
 
 **结构设计**
-- **📄[2D Dimensions]** [XIAO RP2040 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip )
+- **📄[2D Dimensions]** [DXF 格式的 XIAO RP2040 尺寸图](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip )
 - **📄[3D Model]** [ XIAO RP2040 3D 模型](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip )
 
 ### XIAO RP2040 Plus
@@ -441,7 +441,7 @@ void loop() {
 - **🗃️[PCB Design Libraries]** 
   - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO 系列 KiCad 原理图符号库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Pinout Diagram]** [XIAO RP2040 Plus 引脚分布表](https://files.seeedstudio.comwiki/XIAO-RP2040/res/XIAO-RP2040-Plus-pinout.xlsx)
+- **📄[Pinout Diagram]** [XIAO RP2040 Plus 引脚分布表](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-Plus-pinout.xlsx)
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
