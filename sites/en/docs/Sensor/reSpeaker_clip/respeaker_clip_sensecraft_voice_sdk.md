@@ -1,6 +1,6 @@
 ---
 description: Complete API reference for the SenseCraft Voice SDKs for reSpeaker Clip, covering Flutter, Android, and iOS BLE, AT/JSON transport, recording sessions, Wi-Fi transfer, and OTA firmware update.
-title: SenseCraft Voice SDK API Reference for reSpeaker Clip
+title: reSpeaker Clip Voice SDK & API Reference Build Your Own AI Voice App with Flutter SDK
 keywords:
   - SenseCraft Voice SDK
   - reSpeaker Clip
@@ -8,6 +8,7 @@ keywords:
   - Wi-Fi
   - OTA
   - API reference
+  - Flutter
 slug: /respeaker_clip_sensecraft_voice_sdk
 sku: 100020126
 last_update:
