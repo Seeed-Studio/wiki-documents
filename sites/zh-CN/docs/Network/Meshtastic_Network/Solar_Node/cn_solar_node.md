@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /meshtastic_solar_node
 sidebar_position: 1
 last_update:
-  date: 3/10/2026
-  author: Michelle Huang
+  date: 08/06/2026
+  author: zxw
 createdAt: '2025-04-08'
 updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/cn/meshtastic_solar_node/
@@ -168,6 +168,7 @@ Solar Node 提供两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio
 **配件**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/accessory.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Instruction-solar-node.png" alt="pir" width={800} height="auto" /></p>
 
 **结构示意图**
 
