@@ -153,8 +153,8 @@ Here, we will show you how to flash JetPack to an NVMe SSD connected to the reCo
 
 ### Supported Module
 
-- NVIDIA Jetson T4000 module
-- NVIDIA Jetson T5000 module
+- [NVIDIA Jetson T4000 module](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T4000-Module-p-6939.html)
+- [NVIDIA Jetson T5000 module](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T5000-Module-p-6938.html)
 
 ### Prerequisites
 
