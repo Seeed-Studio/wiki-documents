@@ -30,7 +30,7 @@ Não, o SenseCAP App faz login com a conta do SenseCAP Dashboard e adiciona a ca
 **Posso integrar um SenseCAP MX Hotspot à minha carteira Helium via SenseCAP Hotspot App？**
 =====================================================================================
 
-Isso pode ser feito com a versão mais recente do [**SenseCAP App**](https://www.sensecapmx.com/docs/sesnecap-hotspot-app/download-app/).
+Isso pode ser feito com a versão mais recente do [**SenseCAP Hotspot App**](https://www.sensecapmx.com/docs/sesnecap-hotspot-app/download-app/).
 
 **Posso gerenciar o hotspot de outro fabricante no SenseCAP Hotspot App?**
 ===============================================================

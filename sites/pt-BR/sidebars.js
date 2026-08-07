@@ -2165,6 +2165,29 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/pt_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/pt_respeaker_clip_basic_sdk_guide',
+            {
+              type: 'category',
+              label: 'SDK de firmware',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/pt_respeaker_clip_firmware_quick_start',
+                  label: 'Primeiros passos',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/pt_respeaker_clip_firmware_development_guide',
+                  label: 'Guia de desenvolvimento',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/pt_respeaker_clip_customization_at_command',
+                  label: 'Comando AT personalizado',
+                },
+              ],
+            },
           ],
         },
         {
@@ -4076,6 +4099,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_industrial_vision_monitoring_on_industrial',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Streaming_Vision_Agent_on_Jetson',
               ]
             },
             // Generative AI
@@ -4558,6 +4582,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_isaacsim',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_control_mit'
               ]
             }
           ]

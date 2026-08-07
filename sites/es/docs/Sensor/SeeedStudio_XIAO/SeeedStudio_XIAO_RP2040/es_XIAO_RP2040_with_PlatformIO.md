@@ -8,8 +8,8 @@ slug: /xiao_rp2040_with_platform_io
 last_update:
   date: 04/08/2025
   author: Hugo
-createdAt: '2025-09-03'
-updatedAt: '2025-09-03'
+createdAt: '2024-08-27'
+updatedAt: '2025-04-10'
 url: https://wiki.seeedstudio.com/es/xiao_rp2040_with_platform_io/
 ---
 
@@ -20,80 +20,90 @@ import TabItem from '@theme/TabItem';
 
 ## Introducción a PlatformIO
 
-PlatformIO es una plataforma de desarrollo que integra muchos tipos de placas de desarrollo y tiene buena escalabilidad. Si la plataforma no tiene el tipo que necesitas, puedes añadir manualmente el tipo de placa de desarrollo tú mismo. El código que escribes en Arduino puede usarlo, solo añade la biblioteca correspondiente.
+PlatformIO es una plataforma de desarrollo que integra muchos tipos de placas de desarrollo y tiene buena escalabilidad. Si la plataforma no tiene el tipo que necesitas, puedes añadir manualmente el tipo de placa de desarrollo tú mismo. El código que escribes en Arduino puede utilizarlo, solo tienes que añadir la biblioteca correspondiente.
 
-En esta wiki, introduciremos cómo instalar y ejecutar el código de ejemplo en PlatformIO.
+En este wiki, presentaremos cómo instalar y ejecutar el código de ejemplo en PlatformIO.
 
 ## Usar PlatformIO para XIAO RP2040
 
-### Configuración 1. Instalar [PlatformIO](https://platformio.org/platformio-ide) en el sitio web oficial
+### Configuración 1. Descargar VS Code
 
-Si no has instalado el software de PlatformIO, puedes hacer clic en el enlace de arriba.
+Descarga según el sistema que estés utilizando [VS Code](https://code.visualstudio.com/download)
 
-### Configuración 2. Crear cualquier proyecto en PlatformIO
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
-Debido a que la plataforma ya tiene nuestras opciones de placas de desarrollo XIAO ESP32S3 y XIAO ESP32C3, podemos elegir una de ellas para crear nuestros archivos. Por supuesto, otros archivos también están bien, no importa. El nombre del proyecto también se puede elegir arbitrariamente.
+### Configuración 2. Instalar la extensión PlatformIO
 
-<table align="center">
-  <tr>
-      <th>Operación uno</th>
-        <th>Operación dos</th>
-  </tr>
-  <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_platformio/4.png" style={{width:500, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_platformio/3.png" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-</table>
+Abre VSCode, haz clic en Extensions, luego busca PlatformIO y selecciona instalar. Después de que la instalación se complete, reinicia VSCode.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
+
+### Configuración 3. Instalar el paquete de plataforma platform-seeedboards
+
+Las placas de la serie Seeed Studio XIAO utilizan una plataforma personalizada de PlatformIO, por lo que necesitas instalar manualmente el paquete de plataforma correspondiente.
+
+- Ejecuta el siguiente comando para una instalación nueva:
+
+```bash
+pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+- Si has utilizado anteriormente placas de la serie Seeed Studio XIAO en PlatformIO, ejecuta el siguiente comando para actualizar:
+
+
+```bash
+pio pkg uninstall -g -p "SeeedStudio"
+pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
+```
 
 :::tip
-Antes de esto, ya había instalado el paquete de instalación de XIAO RP2040, por lo que puedes ver que la imagen en la operación dos tiene la opción para XIAO RP2040, pero tú no la tienes cuando realizas la operación.
-:::
 
-### Configuración 3. Modificar el archivo platformio.ini
+Como alternativa, puedes realizar reemplazos basados en proyectos existentes.
 
-Cuando crees exitosamente el archivo de PlatformIO, aparecerán muchos archivos en la columna izquierda. Podemos ver un archivo llamado platform.ini. A continuación, necesitamos reemplazar el contenido dentro de él.
-
-<table align="center">
-  <tr>
-      <th>Operación tres</th>
-  </tr>
-  <tr>
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/esp32c6_platformio/2.png" /></div>
-  </tr>
-</table>
-
-Necesitas copiar el siguiente código y reemplazar el contenido en el archivo platform.ini.
-
-```
+```ini
 [env:seeed_xiao_rp2040]
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
 board = seeed-xiao-rp2040
 framework = arduino
 ```
 
-:::tip
-Recuerda guardar el archivo presionando Ctrl + S; comenzará a cargar.
 :::
 
-### Configuración 4. Compilar y Grabar
+### Configuración 4. Crear cualquier proyecto en PlatformIO
 
-<table align="center">  
-  <tr>  
-      <th>Operación cuatro</th>  
-  </tr>  
-  <tr>  
-      <td>  
-          <div align="center">  
-              <img width="500" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/rp2040_platformio_complied.png" />  
-          </div>  
-      </td>  
-  </tr>  
-</table>  
-Al final, si ves el mismo resultado que en la imagen de arriba, significa que has añadido exitosamente la Placa de Desarrollo XIAO RP2040. Cuando crees un proyecto nuevamente, verás la opción XIAO RP2040 disponible.
+Abre la extensión PlatformIO y selecciona Create New Project.
 
-## Soporte Técnico y Discusión de Productos
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/pio_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
 
-¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+### Configuración 4. Compilar y grabar
+
+Copia el siguiente programa en `main.c` y súbelo a la placa.
+
+```cpp
+#include <Arduino.h>
+
+void setup() {
+    pinMode(PIN_LED, OUTPUT);
+}
+
+void loop() {
+    digitalWrite(PIN_LED, HIGH);
+    delay(1000);
+    digitalWrite(PIN_LED, LOW);
+    delay(1000);
+}
+```
+<br/>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/pio_2.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+## Soporte técnico y debate sobre el producto
+
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

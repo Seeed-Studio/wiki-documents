@@ -2166,6 +2166,29 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/ja_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/ja_respeaker_clip_basic_sdk_guide',
+            {
+              type: 'category',
+              label: 'ファームウェア SDK',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_firmware_quick_start',
+                  label: 'はじめに',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_firmware_development_guide',
+                  label: '開発ガイド',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_customization_at_command',
+                  label: 'カスタム AT コマンド',
+                },
+              ],
+            },
           ],
         },
         {
@@ -4077,6 +4100,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_industrial_vision_monitoring_on_industrial',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Streaming_Vision_Agent_on_Jetson',
               ]
             },
             // Generative AI
@@ -4559,6 +4583,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_isaacsim',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_control_mit'
               ]
             }
           ]

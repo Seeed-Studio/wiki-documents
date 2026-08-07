@@ -14,7 +14,7 @@ last_update:
   date: 08/16/2024
   author: Frank
 createdAt: '2024-08-21'
-updatedAt: '2026-05-07'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-jetson/
 ---
 
@@ -169,9 +169,9 @@ The device info, more info please check the follow table <br />
 
 #### **Bind to SenseCraft AI platform**
 
-SenseCraft AI for Jetson is designed for edge AI. AI inference and video stream processing is done locally on the device. Only if you need to download more AI models do you need to bind the device to the [SenseCraft AI platform](https://sensecraft.seeed.cc/ai) — you can remove the device once downloaded.
+SenseCraft AI for Jetson is designed for edge AI. AI inference and video stream processing is done locally on the device. Only if you need to download more AI models do you need to bind the device to the [SenseCraft AI platform](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) — you can remove the device once downloaded.
 
-1. Visit [SenseCraft AI](https://sensecraft.seeed.cc/ai).<br />
+1. Visit [SenseCraft AI](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home).<br />
 2. Register with a valid email address. The SenseCraft AI account is the same as the SenseCAP Cloud account; if you already have one, you can log in directly.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/49.png)
@@ -183,7 +183,7 @@ SenseCraft AI for Jetson is designed for edge AI. AI inference and video stream 
 
 5. Back to device‘s SenseCraft AI application. Click "Bind to SenseCraft AI platform",and then application will display bind code and temporary name.
 
-- Bind Code: enter the correct and valid bind code on the [SenseCraft AI platform](https://sensecraft.seeed.cc/ai) to finish binding the device.<br />
+- Bind Code: enter the correct and valid bind code on the [SenseCraft AI platform](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) to finish binding the device.<br />
 - Temporary Name: if the bind code is duplicated then you need to enter the correct temporay name.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/51.png)

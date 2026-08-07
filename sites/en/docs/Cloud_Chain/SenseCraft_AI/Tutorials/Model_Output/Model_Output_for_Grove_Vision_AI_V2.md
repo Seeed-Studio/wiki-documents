@@ -10,7 +10,7 @@ last_update:
   date: 12/04/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2026-05-07'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai/
 ---
 
@@ -46,7 +46,7 @@ Before you begin, ensure that you have the following:
 
 ## Step 1. Access the Grove Vision AI V2 Workspace and connect the device
 
-Access the Grove Vision AI V2 workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`Grove Vision AI V2`**, or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/36).
+Access the Grove Vision AI V2 workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`Grove Vision AI V2`**, or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/36).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/grove_vision_ai_v2_workspace.png" style={{width:1000, height:'auto'}}/></div>
 

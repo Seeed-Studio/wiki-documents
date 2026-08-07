@@ -6,27 +6,27 @@ slug: /reterminal_e10xx_main_page
 sku: 100017057,100073581
 sidebar_position: 1
 last_update:
-  date: 04/28/2026
+  date: 08/05/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-06-17'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_main_page/
 ---
 # Descripción general de la pantalla de tinta electrónica reTerminal E Serie
 
-:::tip Prueba demos sin configurar un entorno de desarrollo
-Si quieres previsualizar rápidamente los resultados de un proyecto o probar el firmware demo básico antes de configurar un entorno de desarrollo, abre el **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Puedes elegir un dispositivo reTerminal E Serie compatible y flashear el firmware de demostración directamente desde un navegador.
+:::tip Genera YAML de ESPHome o flashea demos en el navegador
+Abre el **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** para empezar rápidamente. Elige la tarjeta **ESPHome**, selecciona tu dispositivo (E1001 / E1002 / E1003 / E1004), marca las funciones integradas que necesitas y genera el YAML de ESPHome correspondiente, o flashea firmware de demostración directamente desde el navegador (Chrome o Edge de escritorio).
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Hub 🖱️</font></span></strong>
     </a>
 </div><br />
 :::
 
 ## Introducción
 
-La reTerminal E Serie es la familia de terminales de pantalla de tinta electrónica con ESP32-S3 de Seeed Studio, diseñada específicamente para **visualización de información siempre encendida y de bajo consumo**. La gama abarca cuatro modelos — **E1001, E1002, E1003, E1004** — que cubren paneles monocromos y a todo color de 7,3" a 13,3", con opciones de interacción táctil y batería de varios meses de duración. Todos comparten la misma pila de software (SenseCraft HMI, Home Assistant, Arduino y más), por lo que solo tienes que aprenderla una vez y luego elegir el factor de forma que se adapte a tu escenario.
+La reTerminal E Serie es la familia de terminales de pantalla de tinta electrónica con ESP32-S3 de Seeed Studio, diseñada específicamente para **pantallas de información siempre encendidas y de bajo consumo**. La gama abarca cuatro modelos — **E1001, E1002, E1003, E1004** — que cubren paneles monocromos y a todo color de 7,3" a 13,3", con opciones de interacción táctil y batería de varios meses de duración. Todos comparten la misma pila de software (SenseCraft HMI, Home Assistant / ESPHome, Arduino y más), así que solo tienes que aprenderla una vez y luego elegir el factor de forma que se adapte a tu escenario.
 
 A diferencia de las pantallas tradicionales que consumen energía de forma continua, la reTerminal E Serie solo consume corriente al volver a dibujar el contenido, lo que la hace ideal para marcos de fotos digitales, paneles de control de hogar inteligente, señalización para comercios, paneles de salas de reuniones, pantallas para aulas y otros casos de uso siempre encendidos.
 
@@ -34,7 +34,7 @@ A diferencia de las pantallas tradicionales que consumen energía de forma conti
 
 ## Matriz de productos de un vistazo
 
-Cuatro modelos, un ecosistema. Elige según **tamaño de pantalla**, **color frente a monocromo**, **táctil** y **duración de la batería**:
+Cuatro modelos, un ecosistema. Elige según **tamaño de pantalla**, **color frente a monocromo**, **táctil** y **autonomía de la batería**:
 
 <div class="table-center">
   <table align="center">
@@ -51,10 +51,10 @@ Cuatro modelos, un ecosistema. Elige según **tamaño de pantalla**, **color fre
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2-reterminal-e1004-epaper-display.jpg" style={{width:240, height:'auto'}}/></div></td>
     </tr>
     <tr>
-      <td align="center"><strong>7,5" monocromo</strong><br/>Escala de grises de 4 niveles<br/>Batería de ~3 meses</td>
-      <td align="center"><strong>7,3" a todo color</strong><br/>E Ink® Spectra™ 6<br/>Batería de ~3 meses</td>
-      <td align="center"><strong>10,3" monocromo</strong><br/>Escala de grises de 16 niveles + táctil<br/>Batería de ~6 meses</td>
-      <td align="center"><strong>13,3" a todo color</strong><br/>E Ink® Spectra™ 6<br/>Batería de ~6 meses</td>
+      <td align="center"><strong>7,5" monocromo</strong><br/>Escala de grises de 4 niveles<br/>~3 meses de batería</td>
+      <td align="center"><strong>7,3" a todo color</strong><br/>E Ink® Spectra™ 6<br/>~3 meses de batería</td>
+      <td align="center"><strong>10,3" monocromo</strong><br/>Escala de grises de 16 niveles + táctil<br/>~6 meses de batería</td>
+      <td align="center"><strong>13,3" a todo color</strong><br/>E Ink® Spectra™ 6<br/>~6 meses de batería</td>
     </tr>
     <tr>
       <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer"><strong>Comprar E1001</strong></a><br/><a href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
@@ -67,7 +67,7 @@ Cuatro modelos, un ecosistema. Elige según **tamaño de pantalla**, **color fre
 
 ## Comparación de especificaciones
 
-Los cuatro modelos comparten la misma plataforma ESP32-S3, conectividad inalámbrica Wi-Fi 4 / Bluetooth 5.0, sensor de temperatura/humedad y zumbador integrados, entrada USB-C 5 V / 1 A y rango de funcionamiento de 0–40 °C, todo en una carcasa metálica. Las diferencias se encuentran principalmente en el **panel de visualización**, **comportamiento de refresco**, **batería**, **expansión** y **certificaciones**:
+Los cuatro modelos comparten la misma plataforma ESP32-S3, conectividad inalámbrica Wi‑Fi 4 / Bluetooth 5.0, sensor de temperatura y humedad integrado y zumbador, entrada USB‑C 5 V / 1 A y rango de funcionamiento de 0–40 °C, todo en una carcasa metálica. Las diferencias se encuentran principalmente en el **panel de visualización**, el **comportamiento de refresco**, la **batería**, la **expansión** y las **certificaciones**:
 
 <div class="table-center">
 	<table align="center">
@@ -122,7 +122,7 @@ Los cuatro modelos comparten la misma plataforma ESP32-S3, conectividad inalámb
 		</tr>
 		<tr>
 			<td align="center"><strong>Procesador</strong></td>
-			<td align="center" colspan="4">ESP32-S3 con 8 MB PSRAM</td>
+			<td align="center" colspan="4">ESP32-S3 con 8 MB de PSRAM</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Almacenamiento</strong></td>
@@ -133,7 +133,7 @@ Los cuatro modelos comparten la misma plataforma ESP32-S3, conectividad inalámb
 		</tr>
 		<tr>
 			<td align="center"><strong>Conectividad inalámbrica</strong></td>
-			<td align="center" colspan="4">Wi-Fi 2,4 GHz 802.11 b/g/n + Bluetooth 5.0</td>
+			<td align="center" colspan="4">Wi‑Fi 2,4 GHz 802.11 b/g/n + Bluetooth 5.0</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Sensores integrados</strong></td>
@@ -152,11 +152,11 @@ Los cuatro modelos comparten la misma plataforma ESP32-S3, conectividad inalámb
 		</tr>
 		<tr>
 			<td align="center"><strong>Supervisión de batería</strong></td>
-			<td align="center" colspan="4">✅ supervisión del voltaje de la batería integrada</td>
+			<td align="center" colspan="4">✅ supervisión integrada del voltaje de la batería</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Entrada de alimentación</strong></td>
-			<td align="center" colspan="4">USB-C 5 V / 1 A</td>
+			<td align="center" colspan="4">USB‑C 5 V / 1 A</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Temp. de trabajo</strong></td>
@@ -164,7 +164,7 @@ Los cuatro modelos comparten la misma plataforma ESP32-S3, conectividad inalámb
 		</tr>
 		<tr>
 			<td align="center"><strong>Carcasa</strong></td>
-			<td align="center" colspan="4">Metal</td>
+			<td align="center" colspan="4">Metálica</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Dimensiones</strong></td>
@@ -199,7 +199,7 @@ Los cuatro modelos comparten la misma plataforma ESP32-S3, conectividad inalámb
 
 ## Cómo elegir
 
-Utiliza la siguiente guía rápida para reducir la elección a un modelo. Si se aplican varias filas, la **última fila que coincida** suele ser la elección correcta.
+Utiliza la siguiente guía rápida para reducir la elección a un solo modelo. Si se aplican varias filas, la **última fila que coincida** suele ser la elección correcta.
 
 <div class="table-center">
 	<table align="center">
@@ -219,24 +219,24 @@ Utiliza la siguiente guía rápida para reducir la elección a un modelo. Si se 
 			<td>Panel Spectra™ 6 a todo color de 7,3" — galerías, recetas, tablas de tareas para niños, señalización para comercios. Nota: el color completo sacrifica el refresco parcial a cambio de imágenes más ricas (~15–20 s por refresco completo).</td>
 		</tr>
 		<tr>
-			<td>Interacción táctil / paneles de control interactivos / gran lector monocromo</td>
+			<td>Interacción táctil / paneles interactivos / gran lector monocromo</td>
 			<td align="center"><strong>E1003</strong></td>
-			<td>Pantalla ePaper monocroma de 10,3" con 16 niveles de escala de grises, pantalla táctil capacitiva (HMI v1.1.2+) y batería de 6 meses.</td>
+			<td>Pantalla ePaper monocroma de 10,3" con 16 niveles de escala de grises, con pantalla táctil capacitiva (HMI v1.1.2+) y batería de 6 meses.</td>
 		</tr>
 		<tr>
-			<td>La pantalla en color más grande, nítida y de calidad marco de fotos</td>
+			<td>Pantalla a color de mayor tamaño, mayor nitidez y calidad de marco de fotos</td>
 			<td align="center"><strong>E1004</strong></td>
-			<td>Spectra™ 6 a todo color de 13,3", 1200×1600, batería de 5000 mAh, microSD de 16 GB preinstalada.</td>
+			<td>Spectra™ 6 a todo color de 13,3", 1200×1600, batería de 5000 mAh, tarjeta microSD de 16 GB preinstalada.</td>
 		</tr>
 		<tr>
 			<td>Necesitas integración con Home Assistant / ESPHome hoy mismo</td>
-			<td align="center"><strong>E1001 / E1002 / E1004</strong></td>
-			<td>El soporte directo para Home Assistant está disponible en E1001, E1002 y E1004. ESPHome en E1003 está previsto.</td>
+			<td align="center"><strong>E1001 / E1002 / E1003 / E1004</strong></td>
+			<td>Los cuatro modelos son compatibles con Home Assistant a través de ESPHome. E1003 y E1004 requieren ESPHome 2026.7.0 o posterior.</td>
 		</tr>
 		<tr>
-			<td>Quieres un panel de control TRMNL E-Ink</td>
-			<td align="center"><strong>E1001 / E1002 / E1003</strong></td>
-			<td>Los tres están oficialmente soportados. Actualmente, el E1002 funciona en modo monocromo bajo TRMNL.</td>
+			<td>Quieres un panel TRMNL E-Ink</td>
+			<td align="center"><strong>E1001 / E1002 / E1003 / E1004</strong></td>
+			<td>Los cuatro modelos son compatibles. E1002 y E1004 tienen paneles a color, pero actualmente funcionan en modo monocromo bajo TRMNL.</td>
 		</tr>
 		<tr>
 			<td>La duración de la batería es el factor más importante</td>
@@ -259,7 +259,7 @@ Utiliza la siguiente guía rápida para reducir la elección a un modelo. Si se 
   </a>
 </div><br />
 
-El reTerminal E1001 incorpora una pantalla ePaper monocroma de 7,5 pulgadas con capacidad de escala de grises de 4 niveles. Con su resolución de 800×480, ofrece texto nítido e imágenes claras consumiendo muy poca energía. La pantalla monocroma es perfecta para aplicaciones en las que la legibilidad del texto y la duración de la batería son prioridades.
+El reTerminal E1001 incorpora una pantalla ePaper monocroma de 7,5 pulgadas con capacidad de escala de grises de 4 niveles. Con su resolución de 800×480, ofrece texto nítido e imágenes claras con un consumo de energía mínimo. La pantalla monocroma es perfecta para aplicaciones en las que la legibilidad del texto y la duración de la batería son prioridades.
 
 ### Características clave
 
@@ -281,13 +281,13 @@ El reTerminal E1001 incorpora una pantalla ePaper monocroma de 7,5 pulgadas con 
   </a>
 </div><br />
 
-El reTerminal E1002 incorpora una vibrante pantalla ePaper a todo color de 7,3 pulgadas con tecnología ACeP (Advanced Color ePaper). Esta pantalla en color ofrece los mismos beneficios de eficiencia energética de la tecnología ePaper, al tiempo que permite contenido más atractivo visualmente con múltiples colores, lo que la hace ideal para aplicaciones en las que la diferenciación visual y el atractivo estético son importantes.
+El reTerminal E1002 incorpora una vibrante pantalla ePaper a todo color de 7,3 pulgadas con tecnología ACeP (Advanced Color ePaper). Esta pantalla a color ofrece los mismos beneficios de eficiencia energética de la tecnología ePaper, a la vez que permite contenido visualmente más atractivo con múltiples colores, lo que la hace ideal para aplicaciones en las que la diferenciación visual y el atractivo estético son importantes.
 
 ### Características clave
 
 - Pantalla ePaper a todo color de 7,3 pulgadas con tecnología ACeP
 - Resolución de 800×480
-- Representación de color rica manteniendo un bajo consumo de energía
+- Rica representación de color manteniendo un bajo consumo de energía
 - Perfecto para galerías, paneles de control coloridos y aplicaciones orientadas a lo visual
 
 ## reTerminal E1003
@@ -303,16 +303,16 @@ El reTerminal E1002 incorpora una vibrante pantalla ePaper a todo color de 7,3 p
   </a>
 </div><br />
 
-reTerminal E1003 es una pantalla ePaper monocroma de código abierto de 10,3 pulgadas que incorpora 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con hasta 6 meses de duración de la batería. La interacción táctil es actualmente compatible con el firmware SenseCraft HMI v1.1.2. Impulsado por ESP32-S3, admite de forma nativa el diseño de interfaces sin código con SenseCraft HMI, mientras que Arduino y PlatformIO están disponibles para un desarrollo adicional.
+reTerminal E1003 es una pantalla ePaper monocroma de 10,3 pulgadas y código abierto que incorpora 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con hasta 6 meses de duración de la batería. La interacción táctil es actualmente compatible con el firmware SenseCraft HMI v1.1.2. Impulsado por ESP32-S3, es compatible de forma nativa con el diseño de interfaz de usuario sin código de SenseCraft HMI, mientras que Arduino, PlatformIO y ESPHome (Home Assistant) están disponibles para un desarrollo adicional.
 
-Se planea la futura publicación como código abierto de la biblioteca relacionada con el tacto, lo que proporcionará mayor flexibilidad para personalizar los paneles. Próximamente se compartirán más actualizaciones. El soporte del controlador ESPHome para el E1003 también está previsto para una versión futura.
+Se planea la publicación futura como código abierto de la biblioteca de Arduino relacionada con el tacto, lo que proporcionará mayor flexibilidad para personalizar los paneles. Se compartirán más actualizaciones pronto. ESPHome ya es compatible con el controlador de pantalla E1003 y con el panel táctil capacitivo GT911; consulta los [ESPHome cookbooks](/es/reterminal_e10xx_with_esphome).
 
 ### Características clave
 
-- Pantalla ePaper monocroma de 10,3 pulgadas con soporte de interacción táctil en el firmware HMI v1.1.2
+- Pantalla ePaper monocroma de 10,3 pulgadas con compatibilidad de interacción táctil en el firmware HMI v1.1.2
 - Escala de grises de 16 niveles con alta resolución de 1404×1872
-- Hasta 6 meses de duración de la batería con funcionamiento de potencia ultrabaja
-- Soporte nativo para SenseCraft HMI más compatibilidad con Arduino y PlatformIO, con soporte de controlador ESPHome previsto
+- Hasta 6 meses de duración de la batería con funcionamiento de consumo ultrabajo
+- Compatibilidad nativa con SenseCraft HMI más compatibilidad con Arduino, PlatformIO y ESPHome (Home Assistant)
 
 ## reTerminal E1004
 
@@ -327,14 +327,14 @@ Se planea la futura publicación como código abierto de la biblioteca relaciona
   </a>
 </div><br />
 
-El reTerminal E1004 incorpora una pantalla ePaper a todo color de 13,3 pulgadas y hasta 6 meses de duración de la batería. Impulsado por ESP32-S3, es compatible con SenseCraft HMI para la creación de paneles de control sin código y la carga de imágenes, y también es compatible con Home Assistant, Arduino y ESP-IDF para flujos de trabajo de desarrollo avanzados.
+El reTerminal E1004 incorpora una pantalla ePaper a todo color de 13,3 pulgadas y hasta 6 meses de duración de la batería. Impulsado por ESP32-S3, es compatible con SenseCraft HMI para la creación de paneles sin código y la carga de imágenes, y también es compatible con Home Assistant mediante ESPHome, Arduino y ESP-IDF para flujos de trabajo de desarrollo avanzados. ESPHome **2026.7.0 o posterior** es obligatorio para el controlador de pantalla E1004; consulta los [ESPHome cookbooks](/es/reterminal_e10xx_with_esphome).
 
 ### Características clave
 
 - Pantalla ePaper a todo color de 13,3 pulgadas
 - Hasta 6 meses de duración de la batería para escenarios siempre encendidos
-- Plataforma ESP32-S3 con soporte sin código SenseCraft HMI
-- Compatible con Home Assistant, Arduino y ESP-IDF
+- Plataforma ESP32-S3 con compatibilidad sin código de SenseCraft HMI
+- Compatible con Home Assistant / ESPHome, Arduino y ESP-IDF
 
 ## SenseCraft HMI — La plataforma sin código predeterminada
 
@@ -347,21 +347,21 @@ El reTerminal E1004 incorpora una pantalla ePaper a todo color de 13,3 pulgadas 
   </a>
 </div><br />
 
-Cada dispositivo de la Serie reTerminal E se envía con el firmware **SenseCraft HMI** listo para usar, de modo que puedes empezar a trabajar sin escribir ni una sola línea de código. La aplicación web gestiona el inicio de sesión, el diseño del panel de control y la implementación inalámbrica en tu dispositivo:
+Cada dispositivo de la reTerminal E Serie se envía con el firmware **SenseCraft HMI** listo para usar, de modo que puedes empezar a trabajar sin escribir ni una sola línea de código. La aplicación web gestiona el inicio de sesión, el diseño del panel y la implementación inalámbrica en tu dispositivo:
 
-- **Generador de IA**: describe un panel de control en texto plano y deja que la IA lo diseñe por ti.
-- **Galería**: envía imágenes y presentaciones directamente al panel para casos de uso como marco digital.
-- **Lienzo**: arrastra y suelta widgets para crear paneles de control personalizados.
-- **RSS / Contenido web**: trae noticias en vivo, clima, calendario o cualquier fuente web a la pantalla.
-- **Interacción táctil**: totalmente compatible en el E1003 a partir del firmware HMI v1.1.2.
+- **AI Generator** — describe un panel en texto plano y deja que la IA lo diseñe por ti.
+- **Gallery** — envía imágenes y presentaciones directamente al panel para casos de uso de marco digital.
+- **Canvas** — arrastra y suelta widgets para crear paneles personalizados.
+- **RSS / Web Content** — extrae noticias en vivo, el tiempo, el calendario o cualquier fuente web a la pantalla.
+- **Interacción táctil** — totalmente compatible en E1003 a partir del firmware HMI v1.1.2.
 
-Si necesitas más control del que te ofrece el flujo de trabajo sin código, cada dispositivo también expone el ESP32-S3 subyacente, por lo que puedes pasar a los tutoriales de aplicaciones que aparecen a continuación en cualquier momento.
+Si necesitas más control del que te ofrece el flujo de trabajo sin código, cada dispositivo también expone el ESP32-S3 subyacente, por lo que puedes pasar a ESPHome / Home Assistant, Arduino y los tutoriales de aplicaciones que aparecen a continuación en cualquier momento. Para un YAML de ESPHome ya preparado, utiliza la tarjeta ESPHome del [Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/) y marca las funciones que necesites.
 
 ## Aplicaciones y tutoriales
 
-Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataformas estándar de la industria y herramientas de diseño de interfaces visuales. La siguiente matriz te indica, para cada tutorial, qué modelos cubre actualmente.
+Más allá de SenseCraft HMI, la reTerminal E Serie se integra con varias plataformas estándar del sector y herramientas de diseño de interfaces visuales. La siguiente matriz te indica, para cada tutorial, qué modelos cubre actualmente.
 
-### Marcos de hogar inteligente y paneles de control
+### Frameworks de hogar inteligente y paneles de control
 
 <div class="table-center">
 	<table align="center">
@@ -375,40 +375,40 @@ Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataf
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome">ESPHome — Display</a></td>
-			<td>Conecta el dispositivo a Home Assistant y dibuja gráficos ePaper sencillos con YAML.</td>
+			<td>Conecta el dispositivo a Home Assistant y dibuja gráficos sencillos en ePaper con YAML. Genera un YAML inicial desde el <a href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/">Firmware Hub</a> seleccionando tu dispositivo y sus funciones.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
-			<td align="center">Previsto</td>
-			<td align="center">a través de Home Assistant</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_advanced">ESPHome — I/O, Battery &amp; Power</a></td>
-			<td>Botones, zumbador, LED integrado, monitorización de batería, suspensión profunda, paneles de control multipágina.</td>
+			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_advanced">ESPHome — E/S, batería, táctil y alimentación</a></td>
+			<td>Botones, zumbador, LED integrado, monitorización de batería, deep sleep, paneles de control multipágina y pantalla táctil capacitiva (E1003).</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
-			<td align="center">Previsto</td>
-			<td align="center">a través de Home Assistant</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_rtc_sd_microphone">ESPHome — RTC, SD y micrófono</a></td>
-			<td>Sincronización de hora con PCF8563 RTC, detección de tarjeta microSD y configuración del micrófono PDM integrado.</td>
+			<td>Sincronización horaria RTC PCF8563, detección de tarjeta microSD y configuración del micrófono PDM integrado.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
-			<td align="center">Planificado</td>
-			<td align="center">Sin micrófono</td>
+			<td align="center">✅</td>
+			<td align="center">✅ <em>(sin micrófono)</em></td>
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_trmnl">Funciona con TRMNL</a></td>
 			<td>Despliega paneles E-Ink a través de la plataforma TRMNL.</td>
 			<td align="center">✅</td>
 			<td align="center">✅ <em>(modo mono)</em></td>
-			<td align="center">—</td>
-			<td align="center">—</td>
+			<td align="center">✅</td>
+			<td align="center">✅ <em>(modo mono)</em></td>
 		</tr>
 	</table>
 </div>
 
-### Herramientas de diseño de UI visual / sin código
+### Herramientas de diseño de interfaz visual / sin código
 
 <div class="table-center">
 	<table align="center">
@@ -422,7 +422,7 @@ Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataf
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_squareline_vision">Trabajar con SquareLine Vision</a></td>
-			<td>UI LVGL de arrastrar y soltar en el navegador, luego exporta código listo para compilar.</td>
+			<td>Interfaz LVGL de arrastrar y soltar en el navegador, luego exporta código listo para compilar.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">—</td>
@@ -438,7 +438,7 @@ Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataf
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_lopaka">Trabajar con Lopaka</a></td>
-			<td>Herramienta de dibujo basada en la web que exporta código para diseños de ePaper monocromo y en color.</td>
+			<td>Herramienta de dibujo basada en la web que exporta código para diseños ePaper monocromos y en color.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">—</td>
@@ -460,7 +460,7 @@ Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataf
 			<th>E1004</th>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino">Arduino — pantalla ePaper</a></td>
+			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino">Arduino — Pantalla ePaper</a></td>
 			<td>Renderiza texto, gráficos e imágenes en la pantalla ePaper con las bibliotecas Seeed_GFX o GxEPD2.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -468,7 +468,7 @@ Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataf
 			<td align="center">✅</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals">Arduino — periféricos integrados</a></td>
+			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals">Arduino — Periféricos Integrados</a></td>
 			<td>Controla el LED integrado, el zumbador, tres botones de usuario, el sensor SHT4x, el monitor de batería y la tarjeta microSD.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -477,7 +477,7 @@ Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataf
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals_2">Arduino — RTC, bajo consumo, audio y táctil</a></td>
-			<td>Gestión de tiempo con RTC, deep sleep / light sleep, grabación con micrófono I2S y dibujo táctil capacitivo (solo E1003 para micrófono y táctil).</td>
+			<td>Gestión de tiempo RTC, deep sleep / light sleep, grabación con micrófono I2S y dibujo táctil capacitivo (solo E1003 para micrófono y táctil).</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -487,7 +487,7 @@ Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataf
 </div>
 
 :::tip
-¿Buscas las instrucciones de inicio por dispositivo (unboxing, configuración de Wi‑Fi, actualización de firmware)? Ve al Wiki del producto enlazado en la matriz anterior:
+¿Buscas las instrucciones de inicio por dispositivo (unboxing, configuración de Wi-Fi, actualización de firmware)? Ve al Wiki del producto enlazado en la matriz anterior:
 [E1001](https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1001) ·
 [E1002](https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1002) ·
 [E1003](https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1003) ·
@@ -498,25 +498,25 @@ Más allá de SenseCraft HMI, la Serie reTerminal E se integra con varias plataf
 
 - [Documentación de SenseCraft HMI](https://wiki.seeedstudio.com/es/sensecraft_hmi_overview/)
 - [Hoja de datos del ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-- [Certificado de radio de reTerminal MIC](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_MIC_Radio_Certificate.pdf)
+- [Certificado de Radio de reTerminal MIC](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_MIC_Radio_Certificate.pdf)
 
 ## Aviso de la FCC
 
-Cualquier cambio o modificación que no haya sido aprobado expresamente por la parte responsable del cumplimiento podría anular la autoridad del usuario para operar el equipo. Este dispositivo cumple con la Parte 15 de las Normas de la FCC. El funcionamiento está sujeto a las siguientes dos condiciones:
+Cualquier cambio o modificación que no haya sido aprobado expresamente por la parte responsable del cumplimiento podría anular la autoridad del usuario para operar el equipo. Este dispositivo cumple con la Parte 15 de las normas de la FCC. El funcionamiento está sujeto a las siguientes dos condiciones:
 
 (1) este dispositivo no puede causar interferencias perjudiciales, y
 
-(2) este dispositivo debe aceptar cualquier interferencia recibida, incluida la interferencia que pueda causar un funcionamiento no deseado. Este transmisor no debe estar co‑ubicado ni operar en conjunto con ninguna otra antena o transmisor.
+(2) este dispositivo debe aceptar cualquier interferencia recibida, incluidas las interferencias que puedan causar un funcionamiento no deseado. Este transmisor no debe estar co‑ubicado ni operar junto con ninguna otra antena o transmisor.
 
-Nota: Este equipo ha sido probado y se ha encontrado que cumple con los límites para un dispositivo digital de Clase B, de acuerdo con la Parte 15 de las Normas de la FCC. Estos límites están diseñados para proporcionar una protección razonable contra interferencias perjudiciales en una instalación residencial. Este equipo genera, utiliza y puede irradiar energía de radiofrecuencia y, si no se instala y utiliza de acuerdo con las instrucciones, puede causar interferencias perjudiciales a las comunicaciones por radio. Sin embargo, no hay garantía de que no se produzcan interferencias en una instalación en particular. Si este equipo causa interferencias perjudiciales a la recepción de radio o televisión, lo que puede determinarse apagando y encendiendo el equipo, se recomienda al usuario intentar corregir la interferencia mediante una o más de las siguientes medidas:
+Nota: Este equipo ha sido probado y se ha determinado que cumple con los límites para un dispositivo digital de Clase B, de conformidad con la Parte 15 de las normas de la FCC. Estos límites están diseñados para proporcionar una protección razonable contra interferencias perjudiciales en una instalación residencial. Este equipo genera, utiliza y puede irradiar energía de radiofrecuencia y, si no se instala y utiliza de acuerdo con las instrucciones, puede causar interferencias perjudiciales a las comunicaciones por radio. Sin embargo, no hay garantía de que no se produzcan interferencias en una instalación en particular. Si este equipo causa interferencias perjudiciales a la recepción de radio o televisión, lo cual puede determinarse apagando y encendiendo el equipo, se recomienda al usuario intentar corregir la interferencia mediante una o más de las siguientes medidas:
 
 – Reorientar o reubicar la antena receptora.
 
 – Aumentar la separación entre el equipo y el receptor.
 
-– Conectar el equipo a una toma de corriente en un circuito diferente de aquel al que está conectado el receptor.
+– Conectar el equipo a una toma de corriente de un circuito distinto al que está conectado el receptor.
 
-– Consultar al distribuidor o a un técnico de radio/TV con experiencia para obtener ayuda. Este dispositivo cumple con los límites de exposición a la radiación de la FCC establecidos para un entorno no controlado. Este dispositivo debe instalarse y operarse con una distancia mínima de 20 cm entre el radiador y su cuerpo.
+– Consultar al distribuidor o a un técnico de radio/TV con experiencia para obtener ayuda. Este dispositivo cumple con los límites de exposición a radiación de la FCC establecidos para un entorno no controlado. Este dispositivo debe instalarse y operarse con una distancia mínima de 20 cm entre el radiador y tu cuerpo.
 
 ## Soporte técnico y debate sobre el producto
 
