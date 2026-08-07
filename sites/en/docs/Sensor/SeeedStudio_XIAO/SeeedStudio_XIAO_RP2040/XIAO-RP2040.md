@@ -441,7 +441,7 @@ For low-power applications, disable **BAT_EN** after the battery voltage measure
 - **🗃️[PCB Design Libraries]** 
   - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Pinout Diagram]** [XIAO RP2040 Plus Pinout Sheet](https://files.seeedstudio.comwiki/XIAO-RP2040/res/XIAO-RP2040-Plus-pinout.xlsx)
+- **📄[Pinout Diagram]** [XIAO RP2040 Plus Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-Plus-pinout.xlsx)
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
