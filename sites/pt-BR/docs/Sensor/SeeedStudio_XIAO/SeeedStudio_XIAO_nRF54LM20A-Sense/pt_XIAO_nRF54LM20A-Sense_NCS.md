@@ -460,7 +460,7 @@ west flash --build-dir build_1
 
 Se o download do SDK estiver muito lento ou travar, você pode usar o **aria2** para baixar os pacotes necessários com múltiplas conexões e, em seguida, instalar o SDK usando o **nrfutil**.
 
-### Etapa 1. Instalar o aria2
+**Etapa 1. Instalar o aria2**
 
 Para macOS:
 

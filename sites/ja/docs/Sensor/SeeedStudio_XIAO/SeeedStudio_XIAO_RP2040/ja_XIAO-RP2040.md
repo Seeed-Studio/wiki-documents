@@ -214,7 +214,7 @@ Seeed Studio XIAO RP2040 は Seeed Studio XIAO 拡張ボードと互換性があ
 MCU の動作電圧は 3.3V です。一般的な I/O ピンに接続される入力電圧が 3.3V を超えると、チップが損傷する可能性があります。
 
 電源ピンについて：
-内蔵の DC-DC コンバータ回路は 5V 電圧を 3.3V に変換でき、VIN-PIN および 5V-PIN を介して 5V 電源でデバイスに給電することができます。
+内蔵の DC-DC コンバータ回路により 5V を 3.3V に変換できるため、VIN-PIN および 5V-PIN を介して 5V 電源でデバイスに給電できます。
 
 XIAO RP2040 は現在、バッテリー電源のみをサポートしており、バッテリー接続中に Type-C を接続することはできません。安全上のリスクとなる可能性があります。
 
@@ -443,6 +443,19 @@ void loop() {
   - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[Pinout Diagram]** [XIAO RP2040 Plus ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-Plus-pinout.xlsx)
 
+### XIAO RP2040 Plus
+
+**ハードウェア設計**
+- **📄[データシート]** [Raspberry Pi RP2040 Datasheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf )
+- **📄[回路図]** [XIAO RP2040 Plus Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_SCH.pdf )
+- **🗃️[PCB 設計ファイル]** 
+  - [ XIAO RP2040 Plus KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_V1.0_SCH&PCB.zip)
+  - [XIAO RP2040 Plus Eagle プロジェクト](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_V1.0_SCH&PCB.zip)
+- **🗃️[PCB ライブラリ]** 
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[ピン配置図]** [XIAO RP2040 Plus ピン配置シート](https://files.seeedstudio.comwiki/XIAO-RP2040/res/XIAO-RP2040-Plus-pinout.xlsx)
+
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
@@ -454,7 +467,7 @@ void loop() {
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[電子書籍]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 ## 技術サポート & 製品ディスカッション
 

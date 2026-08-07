@@ -30,15 +30,15 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概述
 
-Seeed Studio XIAO RP2040 系列包括 **XIAO RP2040** 和 **XIAO RP2040 Plus**。这两块板都由同一颗 Raspberry Pi RP2040 微控制器驱动，其特性为双核 Arm Cortex-M0+ 处理器，最高运行频率 133 MHz，集成 264 KB SRAM。每块板还包含 2 MB 片上 Flash 存储。因此，它们具备相同的核心处理性能，并共享同一套 RP2040 软件生态系统。
+Seeed Studio XIAO RP2040 系列包括 **XIAO RP2040** 和 **XIAO RP2040 Plus**。两块开发板都由相同的 Raspberry Pi RP2040 微控制器驱动，该芯片配备双核 Arm Cortex-M0+ 处理器，最高运行频率 133 MHz，并集成 264 KB SRAM。每块板载还包含 2 MB Flash 存储。因此，它们具备相同的核心处理性能，并共享同一套 RP2040 软件生态。
 
-两块板之间的主要差异在于可用的 GPIO 数量、可用的外设连接以及板载电源管理特性。
+两块开发板的主要区别在于可用的 GPIO 数量、外设连接能力以及板载电源管理特性。
 
 标准版 XIAO RP2040 采用常见的 14 针 XIAO 封装，引出 11 个 GPIO 引脚和 3 个电源引脚。其 11 个数字 I/O 引脚均支持 PWM，其中有 4 个还支持模拟输入。该板在紧凑的 21 × 17.8 mm 尺寸中提供 I2C、UART、SPI 和 SWD 接口。
 
-XIAO RP2040 Plus 保留了相同的 14 针 XIAO 常规布局，并在板背面和侧面增加了 15 个 GPIO 焊盘。这样将可用数字 I/O 引脚总数从 11 个提升到 26 个。它还增加了第二路 I2C 接口、专用 USB D+/D− 焊盘，以及包括 BAT+、BAT− 和 BAT_EN 在内的电池相关连接。
+XIAO RP2040 Plus 保留了相同的 14 针 XIAO 引脚布局，并在板背面和侧边增加了 15 个 GPIO 焊盘，使可用数字 I/O 引脚总数从 11 个增加到 26 个。它还增加了第二路 I2C 接口、独立的 USB D+/D− 焊盘，以及包括 BAT+、BAT− 和 BAT_EN 在内的电池相关连接。
 
-对于电池供电应用，XIAO RP2040 Plus 集成了板载 PMIC、电池充电指示灯以及 BAT 到 3V3 的回流保护。这些附加特性使 Plus 版本更适合定制载板、贴片组装、电池供电设备以及需要更多 I/O 资源的项目。
+对于电池供电应用，XIAO RP2040 Plus 集成了板载 PMIC、电池充电指示灯以及 BAT 到 3V3 的回流保护。这些附加特性使 Plus 版本更适合用于自定义载板、贴片组装、电池供电设备以及需要更多 I/O 资源的项目。
 
 Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
 
@@ -89,7 +89,7 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
     </tr>
     <tr>
       <td><strong>Flash</strong></td>
-      <td colspan="2">2 MB 片上 Flash</td>
+      <td colspan="2">2 MB 板载 Flash</td>
     </tr>
     <tr>
       <td><strong>接口</strong></td>
@@ -167,7 +167,7 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
       <td colspan="2">21 x 17.8mm</td>
     </tr>
     <tr>
-      <td><strong>产品变体</strong></td>
+      <td><strong>产品版本</strong></td>
       <td>
         <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-3PCS-p-5942.html">
           Seeed Studio XIAO RP2040 3 片装套件
@@ -214,9 +214,9 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
 MCU 的工作电压为 3.3V。如果接入通用 I/O 引脚的电压高于 3.3V，可能会导致芯片损坏。
 
 对于电源引脚：
-内置的 DC-DC 转换电路可以将 5V 电压转换为 3.3V，允许通过 VIN-PIN 和 5V-PIN 使用 5V 电源为设备供电。
+内置的 DC-DC 转换电路可以将 5V 转换为 3.3V，允许通过 VIN-PIN 和 5V-PIN 使用 5V 电源为设备供电。
 
-XIAO RP2040 目前仅支持电池供电，在连接电池的情况下不能再连接 Type-C，否则可能存在安全风险。
+XIAO RP2040 目前仅支持电池供电，在连接电池时不能再连接 Type-C，否则可能存在安全风险。
 
 请注意使用安全，请勿撬起屏蔽罩。
 :::
@@ -261,13 +261,13 @@ XIAO RP2040 目前仅支持电池供电，在连接电池的情况下不能再�
 | USER_LED_R | 红色通道               | GPIO17       | —                 | 在 XIAO RP2040 上直接控制 RGB LED 红色通道                    |
 | USER_LED_G | 绿色通道               | GPIO16       | —                 | 在 XIAO RP2040 上直接控制 RGB LED 绿色通道                    |
 | USER_LED_G | 蓝色通道               | GPIO25       | —                 | 在 XIAO RP2040 上直接控制 RGB LED 蓝色通道                    |
-| RGB_LED    | WS2812B 数据           | —            | GPIO12/NEOPIX     | 单线 WS2812B 颜色数据控制                                     |
+| RGB_LED    | WS2812B 数据           | —            | GPIO12/NEOPIX     | 单线 WS2812B 彩色数据控制                                    |
 | RGB_EN     | WS2812B 使能           | —            | GPIO11            | 使能 WS2812B 供电；不是颜色数据引脚                           |
 | User LED   | 用户控制 LED           | —            | GPIO25            | XIAO RP2040 Plus 上的独立用户 LED                             |
 | BAT_EN     | 电池使能               | —            | GPIO24            | Plus 版本上的电池电源控制                                     |
 | CHARGE_LED | 充电指示灯             | —            | —                 | 硬件控制的充电状态 LED；不是用户 GPIO                         |
-| SWDIO      | SWD 调试               | SWDIO        | RP2040_SWDIO      | 串行线调试数据                                                 |
-| SWCLK      | SWD 调试               | SWCLK        | RP2040_SWCLK      | 串行线调试时钟                                                 |
+| SWDIO      | SWD 调试               | SWDIO        | RP2040_SWDIO      | 串行线调试数据                                                |
+| SWCLK      | SWD 调试               | SWCLK        | RP2040_SWCLK      | 串行线调试时钟                                                |
 | USB_D+     | USB                    | -            | USB_DP      | USB 1.1 全速正向数据线                                        |
 | USB_D-     | USB                    | -            | USB_DM      | USB 1.1 全速负向数据线                                        |
 
@@ -279,7 +279,7 @@ XIAO RP2040 目前仅支持电池供电，在连接电池的情况下不能再�
 - 将 Seeed Studio XIAO PR2040 连接到你的电脑。
 - 电脑上会出现一个磁盘驱动器。
 
-此时，芯片进入 Bootloader 模式，烧录端口会再次出现。由于 RP2040 芯片有两个分区，一个是 Bootloader，另一个是用户程序。产品在出厂时会在系统存储器中烧录一段 bootloader 代码。我们可以通过执行上述步骤在模式之间切换。
+此时，芯片进入 Bootloader 模式，烧录端口会再次出现。由于 RP2040 芯片有两个分区，一个是 Bootloader，另一个是用户程序。产品在出厂时会在系统存储器中烧录一段 Bootloader 代码。我们可以通过执行上述步骤在模式之间切换。
 
 ### 复位
 
@@ -288,7 +288,7 @@ XIAO RP2040 目前仅支持电池供电，在连接电池的情况下不能再�
 - 将 Seeed Studio XIAO RP2040 连接到你的电脑。
 - **按下** **R** 引脚 **一次**。
 
-请注意：内置可编程单色 LED（红色、蓝色和绿色）的行为与 Arduino 上的是相反的。在 Seeed Studio XIAO RP2040 上，需要将引脚拉低才能点亮。
+请注意：内置可编程单色 LED（红色、蓝色和绿色）的行为与 Arduino 上的是相反的。在 Seeed Studio XIAO RP2040 上，需要将引脚拉低才能使其点亮。
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.png" alt="pir" width={800} height="auto" /></p>
@@ -297,18 +297,18 @@ XIAO RP2040 目前仅支持电池供电，在连接电池的情况下不能再�
 
 :::note
 
-只有 XIAO RP2040 Plus 在背面配备了 BAT 电池连接器，请注意。
+只有 XIAO RP2040 Plus 在背面配备了 BAT 电池连接器，请注意区分。
 
 :::
 
-XIAO RP2040 Plus 支持使用 3.7V 锂电池作为电源输入。你可以参考下图的接线方式。
+XIAO RP2040 Plus 可以使用 3.7V 锂电池作为电源输入。你可以参考下图了解接线方式。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_battery.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 :::caution
 
-焊接时请务必注意不要让正负极短路，以免烧毁电池和设备。如果电池本身带电，切勿直接焊接到电路板上，否则可能烧毁电路板。在电路上电的情况下发生短路风险极大，建议使用转接头。
+焊接时请务必注意不要让正负极短路，以免烧毁电池和设备。如果电池本身带电，切勿直接将其焊接到电路板上，否则可能烧毁电路板。在电路上电的情况下发生短路风险极大，建议使用适配器。
 
 :::
 
@@ -318,11 +318,11 @@ XIAO RP2040 Plus 支持使用 3.7V 锂电池作为电源输入。你可以参考
 
 电池电压测量电路使用 **TPS22916CNYFPR** 负载开关来使能或关闭测量通路。当需要测量电池电压时，MCU 通过 **BAT_EN (GPIO24)** 使能测量通路，从而在设备处于待机模式时降低电池消耗。<br/>
 
-此外，使用 **SGM4875XXDM6G/TR** 模拟开关来切换 ADC 输入通道。通过 **GPIO24/BAT_EN** 控制，选择将电池测量信号或其他模拟输入信号连接到 **A3 (GPIO29) ADC** 引脚，从而实现 ADC 引脚的复用。
+此外，还使用了 **SGM4875XXDM6G/TR** 模拟开关来切换 ADC 输入通道。通过 **GPIO24/BAT_EN** 控制，选择将电池测量信号或其他模拟输入信号连接到 **A3 (GPIO29) ADC** 引脚，从而实现 ADC 引脚的复用。
 
 :::tip
 
-当 A3 引脚作为 ADC 输入用于测量电池电压时，不能同时作为通用 I/O 引脚使用。请在分配引脚时务必考虑这一点。
+当 A3 引脚用作 ADC 输入以测量电池电压时，不能同时作为通用 I/O 引脚使用。请在分配引脚时务必考虑这一点。
 
 :::
 
@@ -333,7 +333,7 @@ XIAO RP2040 Plus 支持使用 3.7V 锂电池作为电源输入。你可以参考
 
 <details>
 
-<summary>电池读取示例</summary>
+<summary>Battery read example</summary>
 
 ```c
 constexpr float ADC_VREF = 3.3f;
@@ -396,7 +396,7 @@ void loop() {
 
 :::
 
-- 当电池正在充电时，**Charge_LED** 会闪烁。
+- 电池充电时，**Charge_LED** 会闪烁。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_detection.gif" style={{width:400, height:'auto'}}/></div>
 <br/>
