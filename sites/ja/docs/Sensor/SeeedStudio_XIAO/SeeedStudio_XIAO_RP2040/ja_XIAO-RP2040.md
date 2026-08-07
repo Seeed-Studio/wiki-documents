@@ -86,7 +86,7 @@ Seeed Studio XIAO RP2040 は Seeed Studio XIAO 拡張ボードと互換性があ
     <tr>
       <td><strong>RAM</strong></td>
       <td colspan="2">264 KB SRAM</td>
-    </tr]
+    </tr>
     <tr>
       <td><strong>Flash</strong></td>
       <td colspan="2">2 MB オンボード Flash</td>
