@@ -84,7 +84,7 @@ After deployment, you can use the preview window in Model Assistant to check the
 
 This recommended workflow is the most stable path for generating a deployable YOLO26 model for Grove Vision AI V2. Advanced users may adapt the process for other training environments, but deployment results may vary depending on the environment, package versions, export settings, and quantization behavior.
 
-`Tip:` If model `invoce fails`, check whether the connection between Grove Vision AI V2 and the camera module is secure.
+`Tip:` If model `invoke fails`, check whether the connection between Grove Vision AI V2 and the camera module is secure.
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
