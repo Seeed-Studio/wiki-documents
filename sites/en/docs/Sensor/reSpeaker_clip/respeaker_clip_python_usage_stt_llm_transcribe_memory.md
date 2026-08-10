@@ -1,6 +1,6 @@
 ---
-description: Learn how to build a reSpeaker Clip application with a memory layer using the Python SDK. This tutorial covers BLE and Wi-Fi communication, audio recording, transcription, diarization, summarization, and local memory matching for repeated discussions.
-title: Build Your Own App for reSpeaker Clip adding memory Layer using Python SDK
+description: Learn how to build a reSpeaker Clip application with a Memory layer using the Python SDK. This tutorial covers BLE and Wi-Fi communication, audio recording, transcription, diarization, summarization, and local memory matching for repeated discussions.
+title: Build Your Own App for reSpeaker Clip Adding Memory Layer Using Python SDK
 keywords:
   - reSpeaker Clip
   - memory layer
@@ -15,7 +15,7 @@ slug: /respeaker_clip_python_build_app_with_memory
 sku: 100020126
 last_update:
   date: 07/31/2026
-  author: GitHub Copilot
+  author: Kasun Thushara
 createdAt: '2026-07-31'
 updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/respeaker_clip_python_build_app_with_memory/
