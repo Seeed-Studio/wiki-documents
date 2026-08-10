@@ -12,6 +12,7 @@ keywords:
   - MCP
   - Robot Arm
   - Robotics
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png
 slug: /rebot_arm_b601_dm_web_simulator_developer_guide
 sku: 100065783, 100095532
 last_update:
