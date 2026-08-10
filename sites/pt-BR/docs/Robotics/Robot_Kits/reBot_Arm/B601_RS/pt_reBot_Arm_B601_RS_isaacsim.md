@@ -8,7 +8,7 @@ keywords:
   - Operação por controle remoto
   - Cinemática
   - Robostride
-image: https://files.seeedstudio.com//wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.webp
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg
 slug: /rebot_arm_b601_rs_isaacsim
 last_update:
   date: 7/7/2026
@@ -26,12 +26,17 @@ reBot-Isaacsim é um projeto de simulação NVIDIA Isaac Sim projetado especific
   <img width ="1000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"/>
 </div>
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+</a></div>
+
 ## Requisitos de ambiente
 - Sistema operacional: Ubuntu 22.04 LTS / 24.04 LTS (recomendado) ou Windows 11 (requer WSL2)  
 - GPU: placa de vídeo NVIDIA série RTX (recomendado RTX 3070 ou superior), VRAM ≥ 8GB  
 - Driver: driver oficial NVIDIA ≥ 535.x, com suporte a CUDA 12.x  
 - Memória: ≥ 32GB de RAM (cenas do Isaac Sim e simulações físicas usam muita memória)  
-- Armazenamento: ≥ 100GB de espaço disponível em SSD (para instalação do Isaac Sim, cache e assets USD)
+- Armazenamento: ≥ 100GB de espaço livre em SSD (para instalação do Isaac Sim, cache e assets USD)
 
 :::info
 Os computadores usados neste wiki estão equipados com GPUs NVIDIA RTX 4080 e executam o sistema operacional Ubuntu 22.04 LTS.
@@ -46,7 +51,7 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/quick-install.html
 https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaac-sim-latest-release
 
 
-### 🔧 Método 1: Instalação de binário pré-compilado
+### 🔧 Método 1: Instalação por binário pré-compilado
 
 > 💡 Adequado para a maioria dos usuários, não é necessário compilar, pronto para uso imediato.
 
@@ -79,7 +84,7 @@ Em seguida, execute `source ~/.bashrc` para que tenha efeito.
 ${ISAACSIM_PATH}/isaac-sim.sh
 ```
 
-Na primeira inicialização, os shaders serão armazenados em cache, o que pode levar de 5 a 10 minutos, portanto, aguarde pacientemente enquanto a interface gráfica é exibida.
+Na primeira inicialização, os shaders serão armazenados em cache, o que pode levar de 5 a 10 minutos, portanto, aguarde pacientemente até que a interface gráfica apareça.
 
 ### ⚙️ Método 2: Compilar a partir do código-fonte (recomendado)
 
@@ -94,7 +99,7 @@ sudo apt install cmake build-essential git python3-pip
 
 Certifique-se de que CUDA e cuDNN estejam instalados corretamente e correspondam ao driver da sua GPU.
 
-#### Clonagem e compilação
+#### Clonar e compilar
 
 ```Bash
 git clone https://github.com/NVIDIA-Omniverse/IsaacSim.git
@@ -132,8 +137,8 @@ Este projeto fornece vários senders para atender a diferentes cenários de uso:
 | `gravity_joint_sender` | **Modo de manuseio com compensação de gravidade**: braço robótico modificado (garra removida, alça adicionada) permite movimento manual em modo de compensação de gravidade e sincroniza os ângulos das juntas com o Isaac Sim em tempo real |
 | `isaacsim_ik_sender` | **Modo de cinemática inversa (IK)**: insira a pose do efetuador final, use o solucionador de IK para obter os ângulos das juntas e envie-os para o Isaac Sim |
 | `isaacsim_traj_sender` | **Modo de planejamento de trajetória (Traj)**: adiciona planejamento de trajetória no espaço de juntas (perfil de tempo MIN_JERK) sobre o IK para obter controle de movimento suave |
-| `isaacsim_joint_test_sender` | **Modo de teste de juntas**: envia trajetórias de ângulos de juntas predefinidas sem um robô real para verificar se o receptor do Isaac Sim e a comunicação estão funcionando corretamente |
-| `joint_reader_sender` | **Modo de mapeamento Real-para-Sim**: leitura apenas dos ângulos das juntas e mapeamento para o Isaac Sim, ideal para uso com outros projetos de controle (por exemplo, sincronizar no Isaac Sim o robô real executando outras tarefas para visualização) |
+| `isaacsim_joint_test_sender` | **Modo de teste de juntas**: envia trajetórias de ângulos de juntas predefinidas sem um robô real para verificar se o receptor e a comunicação do Isaac Sim estão funcionando corretamente |
+| `joint_reader_sender` | **Modo de mapeamento Real-para-Sim**: apenas leitura dos ângulos das juntas e mapeamento para o Isaac Sim, ideal para uso com outros projetos de controle (por exemplo, sincronizar no Isaac Sim o robô real executando outras tarefas para visualização) |
 
 ### Estrutura de diretórios
 
@@ -300,10 +305,10 @@ UDP JSON na porta `127.0.0.1:5005`.
 
 | Campo | Tipo | Descrição |
 |------|------|------|
-| `sequence` | int | Número de sequência de frame incremental |
+| `sequence` | int | Número de sequência de quadro incremental |
 | `timestamp` | float | Timestamp Unix (segundos) |
-| `joint_positions` | float[6] | Primeiras seis posições de juntas (rad) |
-| `gripper_position` | float | Posição da garra (m), convertida pelo sender usando `GRIPPER_POSITION_SCALE=0.03` |
+| `joint_positions` | float[6] | Primeiras seis posições das juntas (rad) |
+| `gripper_position` | float | Posição do gripper (m), convertida pelo remetente usando `GRIPPER_POSITION_SCALE=0.03` |
 
 **Pipeline de controle do gripper:**
 
@@ -318,7 +323,7 @@ Remetente `gripper_q` → `gripper_position = -gripper_q × 0.03` → Receptor `
 | `ARM_JOINT_COUNT` | 6 | Número de juntas do braço |
 | `DEFAULT_PORT` | 5005 | Porta UDP |
 | `DEFAULT_SEND_HZ` | 60.0 | Frequência de transmissão (Hz) |
-| `GRIPPER_POSITION_SCALE` | 0.03 | Fator de conversão de ângulo do gripper para posição |
+| `GRIPPER_POSITION_SCALE` | 0.03 | Fator de conversão do ângulo do gripper para posição |
 | `position_alpha` | 0.2 | Coeficiente do filtro passa-baixa |
 
 ### Receptor (`isaacsim_joint_receiver.py`)
@@ -328,7 +333,7 @@ Remetente `gripper_q` → `gripper_position = -gripper_q × 0.03` → Receptor `
 | `ARM_JOINT_COUNT` | 6 | Número de juntas do braço |
 | `DEFAULT_PORT` | 5005 | Porta UDP |
 | `DEFAULT_RENDER_HZ` | 120.0 | Frequência de renderização da simulação (Hz) |
-| `GRIPPER_POSITION_SCALE` | 0.01 | Fator adicional de escala de posição do gripper |
+| `GRIPPER_POSITION_SCALE` | 0.01 | Fator adicional de escala da posição do gripper |
 | `ROBOT_PRIM_PATH` | `/World/reBotArm` | Caminho do Prim do robô no Isaac Sim |
 | `ASSET_RELATIVE_PATH` | `usd/RS-rebot-dev-arm/00-arm-rs_asm-v3.usda` | Caminho relativo para o asset USD |
 
@@ -365,7 +370,7 @@ can_restart can0
 ip -details link show can0 | grep bitrate
 ```
 
-### Ângulos das Juntas Não Estão Sincronizando
+### Ângulos das Juntas Não Sincronizam
 
 - Verifique se tanto o remetente quanto o receptor estão usando a porta `5005`.
 - Verifique se o log do remetente exibe continuamente `[send]`.
@@ -381,7 +386,7 @@ ip -details link show can0 | grep bitrate
 | Receptor | Python oficial do Isaac Sim (`python.sh`) | `run_isaacsim_receiver.sh` |
 
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
