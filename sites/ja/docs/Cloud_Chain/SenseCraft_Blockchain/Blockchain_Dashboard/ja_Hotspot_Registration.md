@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-description: Hotspot Registration
-title: Hotspot Registration
+description: ホットスポット登録
+title: ホットスポット登録
 keywords:
-  - Cloud and Chain
+  - クラウドとチェーン
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/blockchain-dashboard/hotspot-registration
 aliases:
@@ -11,62 +11,62 @@ aliases:
 last_update:
   date: 06/06/2025
   author: Matthew
-createdAt: '2025-09-04'
-updatedAt: '2026-03-04'
+createdAt: '2023-02-24'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/ja/sensecraft-blockchain/blockchain-dashboard/hotspot-registration/
 ---
 
-# Hotspot Registration
+# ホットスポット登録
 
-**Helium ウォレットでホットスポットを登録する方法**
+**Helium Wallet を使ってホットスポットを登録する方法**
 ===============================================
 
--  [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/) にアクセスして SenseCAP ダッシュボードにログインしてください
--  「Helium APP」が最新バージョンであることを確認し、Helium ウォレットにログインしてください。
+-  [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_dashboard) にアクセスして SenseCAP Dashboard にログインします
+-  "Helium APP" が最新バージョンであることを確認し、Helium ウォレットにログインします。
 
-最新バージョンは [**Android Store**](https://play.google.com/store/apps/details?id=com.helium.wallet&hl=en_US) または [**iOS Store**](https://apps.apple.com/app/id1450463605) からダウンロードできます。
+[**Android Store**](https://play.google.com/store/apps/details?id=com.helium.wallet&hl=en_US) または [**iOS Store**](https://apps.apple.com/app/id1450463605) にアクセスして最新バージョンをダウンロードできます。
 
-- SenseCAP ダッシュボードで、左メニューの「Hotspot」をクリックし、「+ Add New Hotspot」と書かれた青いボタンをクリックします。
+- SenseCAP Dashboard で、左側メニューの "Hotspot" をクリックし、その後、青い "+ Add New Hotspot" ボタンをクリックします。
 
-以下のように、Helium ウォレットからホットスポットをインポートするための QR コードが表示されます：
+すると、以下のように Helium Wallet からホットスポットをインポートするための QR コードが表示されます：
 
 ![SeneseCAP Hotspot Registration](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-qr.png)
 
-「Helium App」を使用してダッシュボードに表示された QR コードをスキャンします。
+Dashboard に表示されている QR コードをスキャンするために "Helium App" を使用します。
 
 ![SenseCAP Hotspot Registration 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-register.png)
 
-Helium ウォレットで QR コードをスキャンし、ウォレットをリンクするよう促されたら「**Helium App**」で許可を与えてください。
+Helium Wallet で QR コードをスキャンし、ウォレットをリンクするよう求められたら "**Helium App**" で許可を与えます。
 
-**注意**: これは誰かがあなたのウォレットのシードフレーズにアクセスできるようにするものではありません。これはダッシュボードが接続してあなたのホットスポットをダッシュボードに追加することを許可するだけです。
+**注意**: これはウォレットのシードフレーズへのアクセスを誰かに与えるものではなく、ダッシュボードが接続してあなたのホットスポットをダッシュボードに追加できるようにするだけです。
 
 ![SenseCAP Hotspot Registration 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2-register.png)
 
-SenseCAP ダッシュボードに追加したいホットスポットを選択し、ボタンをクリックします。
+SenseCAP Dashboard に追加したいホットスポットを選択して追加し、ボタンをクリックします。
 
 ![SenseCAP Hotspot Registration 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3-register.png)
 
-ウォレットが正常にリンクされた場合、以下のメッセージが表示されます。**設定完了です！**
+ウォレットのリンクが正常に完了すると、以下のメッセージが表示されます。**これで準備完了です！**
 
 ![SenseCAP Hotspot Registration 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4-register.png)
 
-**デバイス情報でホットスポットを登録する**
+**デバイス情報を使ってホットスポットを登録する**
 =============================================
 
-**注意**: Helium ウォレットまたはデバイス情報のいずれかを使用してダッシュボードにホットスポットを登録できます。デバイス情報でホットスポットを登録することを選択した場合、デバイス情報を取得するためにホットスポットのローカルコンソールにログインする必要があります。
+**注意**: ホットスポットは Helium Wallet かデバイス情報のどちらかを使ってダッシュボードに登録できます。デバイス情報でホットスポットを登録する場合は、ホットスポットのローカルコンソールにログインしてデバイス情報を取得する必要があります。
 
 ![SenseCAP Hotspot Registration 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-6-1.png)
 
-- ダッシュボードにログイン ⇒ [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
-- 登録時に作成した認証情報を入力してログイン
-- 左メニュー列の「Hotspot」に移動
-- 「Add new Hotspot」をクリック
+- ダッシュボードにログイン ⇒ [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_dashboard)
+- 登録時に作成した認証情報を入力してログインします
+- 左側メニューの「Hotspot」に移動します
+- "Add new Hotspot" をクリックします
 
 ![SenseCAP Hotspot Registration 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-7-1.png)
 
-- 「**SN**」、「**ETH MAC**」アドレス、「**CPU ID**」、「**bind key**」の入力を求められます。「**SN**」は SenseCAP M1 の底面ラベルに記載されており、その他はローカルコンソールページにあります。
-- 「**Confirm**」をクリックすると、ホットスポットがダッシュボードに追加されます。
+- "**SN", "ETH MAC**" アドレス、"**CPU ID**" および "**bind key**" の入力を求められます。"**SN**" は SenseCAP M1 の底面ラベルに記載されており、その他はローカルコンソールページに表示されています。
+- “**Confirm**” をクリックすると、ホットスポットがダッシュボードに追加されます。
 
-**注意**: CPU ID は通常、1 の後に 7 つの 0 が続きます。例：_**10000000**_
+**注意**: CPU ID は通常、1 に続いて 7 つの 0 から始まります。例：_**10000000**_
 
-**おめでとうございます**！ダッシュボードにホットスポットを正常に追加し、監視を開始できます。追加のホットスポットを監視するために、これらの手順を繰り返すことができます。
+**おめでとうございます**！ホットスポットをダッシュボードに正常に追加し、監視を開始できるようになりました。追加のホットスポットを監視したい場合は、同じ手順を繰り返してください。

@@ -14,7 +14,7 @@ last_update:
   date: 06/11/2026
   author: Dayu
 createdAt: '2026-06-11'
-updatedAt: '2026-06-12'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/jetpack72_deep_dive/
 ---
 
@@ -106,6 +106,8 @@ Seeed Jetson DevelopTool provides a guided workflow for Jetson firmware download
 </div>
 
 For a major-version migration such as JetPack 6.x to JetPack 7.x, a full flash is recommended unless Seeed explicitly provides a validated OTA path for your exact product and source image.
+
+For the complete JetPack 7.2 flashing and OTA decision flow, DevelopTool video, verification commands, and migration checklist, see [Flash and OTA Upgrade to JetPack 7.2](/flash_and_ota_jetpack_7.2/).
 
 General workflow:
 

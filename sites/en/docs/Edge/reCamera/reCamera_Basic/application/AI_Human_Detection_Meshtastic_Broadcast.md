@@ -7,7 +7,7 @@ keywords:
   - ESP-Mesh
   - Edge AI
   - GPIO Trigger
-slug: /ai_human_detection_meshtastic_broadcast_bak
+slug: /ai_human_detection_meshtastic_broadcast
 sku: 100029708,102010611,114993649
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 1
@@ -16,7 +16,7 @@ last_update:
   author: John Xiang
 createdAt: '2026-01-28'
 updatedAt: '2026-07-24'
-url: https://wiki.seeedstudio.com/ai_human_detection_meshtastic_broadcast_bak/
+url: https://wiki.seeedstudio.com/ai_human_detection_meshtastic_broadcast/
 ---
 
 ## Introduction

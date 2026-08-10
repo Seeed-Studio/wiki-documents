@@ -32,7 +32,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_getting_started/
 
 在开始配置之前，请确保您已准备好以下硬件：
 * **数据线**：一根具备数据传输功能的 USB Type-C 线缆（请勿使用仅支持充电的线缆）。
-* **电源**：一根 DC 电源线（规格要求：**12V, 1A**，出厂标配电源为：12V, 2A）。
+* **电源**：一根 DC 电源线（规格要求：**12V, 1A**，出厂标配电源为：12V, 3A）。
 
 ### 连接步骤
 
@@ -42,6 +42,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_getting_started/
 ![系统状态灯与线缆连接示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
 ### 状态指示灯说明
+
 绿色 LED 表示系统状态，红色 LED 为电源指示灯。下表描述了绿色 LED 各种状态对应的设备状态。
 
 1. ***呼吸灯***：此时表示设备正在开机过程中。
@@ -70,7 +71,7 @@ reCamera Pro 内置直观的 Web 管理系统，您可以通过浏览器直接�
 ![Web 登录与主界面示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip 常见故障排查
-如果在 Windows 系统下输入 `192.168.42.1` 后页面无法加载，请直接跳转到本文档底部的 [4. 常见问题与故障排查（FAQ）](#4-常见问题与故障排查faq) 章节进行网卡检查。
+如果在 Windows 系统下输入 `192.168.42.1` 后页面无法加载，请直接跳转到本文档底部的 [5. 常见问题与故障排查（FAQ）](#5-常见问题与故障排查faq) 章节进行网卡检查。
 :::
 
 ---
@@ -101,7 +102,15 @@ reCamera Pro 内置直观的 Web 管理系统，您可以通过浏览器直接�
 
 ---
 
-## 4. 常见问题与故障排查（FAQ）
+## 4. 重置设备
+
+有以下两种方法可以将设备恢复为出厂设置：
+
+1. 按住侧边按钮约 15 秒，直到听到提示音，表示设备已进入重置模式。此时，只需等待绿色状态指示灯保持常亮，即可重新登录设备。
+2. 通过 Web 管理界面，依次点击 **设备信息** -> **系统设置** -> **恢复出厂设置**，即可重置设备。
+![恢复出厂设置示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-Pro_reset_Device.jpg)
+
+## 5. 常见问题与故障排查（FAQ）
 
 ### Q1：在 Windows 系统下无法通过 192.168.42.1 进入登录界面怎么办？
 
@@ -115,14 +124,13 @@ reCamera Pro 内置直观的 Web 管理系统，您可以通过浏览器直接�
 6. 确认配置中已勾选 **自动获得 IP 地址** 和 **自动获得 DNS 服务器地址**。
 7. 点击确定保存设置，然后在浏览器中再次访问 `192.168.42.1`。
 
-<video 
-  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/reCamera-Pro-network_config.mp4" 
-  controls 
-  width="100%" 
+<video
+  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/reCamera-Pro-network_config.mp4"
+  controls
+  width="100%"
   preload="metadata">
   您的浏览器不支持播放此视频。
 </video>
-
 
 ### Q2：通过 USB 线缆将 reCamera 连接到电脑后，电脑无法上网
 

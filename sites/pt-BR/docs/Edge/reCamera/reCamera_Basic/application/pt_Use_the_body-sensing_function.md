@@ -6,7 +6,7 @@ keywords:
   - Controle sensorial
   - Jogo
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif
-slug: /use_the_motion-sensing_function_of_recamera_to_play_games_bak
+slug: /use_the_motion-sensing_function_of_recamera_to_play_games
 sku: 102991896, 108990119, 100029708
 sidebar_position: 9
 last_update:
@@ -14,7 +14,7 @@ last_update:
   author: Xinrui Wu
 createdAt: '2025-11-27'
 updatedAt: '2026-04-20'
-url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/use_the_motion-sensing_function_of_recamera_to_play_games_bak/
+url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/use_the_motion-sensing_function_of_recamera_to_play_games/
 ---
 
 # Jogue Subway Surfers com controle por sensor corporal

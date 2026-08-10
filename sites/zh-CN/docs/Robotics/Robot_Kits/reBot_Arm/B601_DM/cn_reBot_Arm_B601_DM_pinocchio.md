@@ -123,6 +123,16 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/
 
 ## 环境要求
 
+:::caution 前置要求 — 请先完成机械臂快速入门
+开始本教程前，请**务必**先完整跑通 **[reBot Arm B601-DM 快速入门](/rebot_b601_dm_getting_started)** 文档，至少包含以下前置步骤：
+
+- 机械臂开箱、接线与上电自检
+- 串口 / CAN 设备权限（`sudo chmod 666 /dev/ttyACM0` 或 `/dev/can0`）
+- 所有关节的零点初始化（`2_zero_and_read.py`）与 MIT / POS_VEL 模式的基础连通性验证
+
+本教程默认机械臂已在总线正常响应、关节零点已标定，且操作人员熟悉相关安全限制。跳过快速入门直接上手本教程，可能导致电机配置错误、关节堵转或机械臂坠落。
+:::
+
 | 项目 | 要求 |
 |------|------|
 | **Python** | 3.10+ |
@@ -142,7 +152,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### 步骤 2. 同步环境（安装所有依赖）
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
 cd reBotArm_control_py
 uv sync
 ```
@@ -151,6 +161,104 @@ uv sync
 `uv sync` 会自动创建虚拟环境（如不存在）并根据 `pyproject.toml` 和 `uv.lock` 安装所有依赖。
 :::
 
+
+## 调节 MIT / POS_VEL 控制器参数 {#tune-controller-params}
+
+本节说明**如何修改**机械臂各关节在 **MIT 模式** 与 **POS_VEL 模式**下的控制器参数，以及修改后如何让改动生效。
+
+:::tip 本节只讲「在哪里改 / 怎么改」，不讲「该改多少」
+合适的参数只能通过**实测整定**得到。本节只介绍：参数存放在哪里、每个字段控制什么、修改后如何让改动生效并验证。具体整定策略（如试凑法、Ziegler‑Nichols 等）请参考通用电机控制资料。
+:::
+
+### 配置文件位置
+
+| 硬件版本 | 电机配置文件 | 切换入口 |
+|---|---|---|
+| **reBot Arm B601-DM**（本文档） | `config/rebotarm_dm.yaml` | `config/rebotarm.yaml` 中设置 `hardware_yaml: "rebotarm_dm.yaml"` |
+| **reBot Arm B601-RS** | `config/rebotarm_rs.yaml` | `config/rebotarm.yaml` 中设置 `hardware_yaml: "rebotarm_rs.yaml"` |
+
+:::caution 不要直接编辑 `rebotarm.yaml`
+该文件只包含 `hardware_yaml: ...` 一行；电机参数全部在 `rebotarm_dm.yaml` / `rebotarm_rs.yaml` 里。
+:::
+
+### 配置文件结构
+
+每个关节都是一个独立条目，按**控制模式**分组：
+
+```yaml
+joints:
+  - name: joint1
+    motor_id: 0x01
+    feedback_id: 0x11
+    model: "4340P"
+    vendor: "damiao"
+    MIT:
+      kp: 120.0
+      kd: 8.0
+    POS_VEL:
+      vel_kp: 0.0125
+      vel_ki: 0.004
+      pos_kp: 150.0
+      pos_ki: 0.5
+      vlim: 5.0
+  # ... joint2 ~ joint6 同结构 ...
+```
+
+定位规则：
+
+- **按关节名定位**：要修改哪个关节，就找到 `- name: jointX` 那一段；
+- **按模式定位**：在该 joint 段下，`MIT:` 子表放 MIT 模式参数，`POS_VEL:` 子表放 POS_VEL 模式参数；
+- **当前模式决定下发哪组**：脚本里通过 `mode mit` / `mode posvel` 切换，电机实际收到的是对应子表下的参数。
+
+### MIT 模式字段含义
+
+| 字段 | 作用 |
+|---|---|
+| `kp` | 位置环比例增益：跟踪目标位置的「硬度」。 |
+| `kd` | 速度环阻尼增益：抑制位置误差带来的振荡。 |
+
+### POS_VEL 模式字段含义
+
+| 字段 | 作用 |
+|---|---|
+| `vel_kp` | 速度环比例增益。 |
+| `vel_ki` | 速度环积分增益。 |
+| `pos_kp` | 位置环比例增益。 |
+| `pos_ki` | 位置环积分增益（部分厂商配置中存在）。 |
+| `vlim` | 速度上限，限制最大运动速度。 |
+
+:::warning 字段定义因厂商而异
+Damiao（DM）与 Robostride（RS）电机的协议层单位不同，**同一字段名下的「大小」没有跨厂商可比性**。修改 RS 的 `vel_kp` 与修改 DM 的 `vel_kp` 含义不同，请按各自 yaml 内的字段顺序理解，不要跨配置文件做数值类比。
+:::
+
+### 修改流程
+
+1. **关闭所有运行中的脚本**。电机处于使能状态时改 YAML 不会立即生效，且容易出现不一致行为。
+2. **编辑对应的 yaml 文件**：
+   ```bash
+   # 以 DM 为例
+   vim config/rebotarm_dm.yaml
+   ```
+   - 只改你需要调整的关节（如 `joint1`），不要动其他无关关节；
+   - 同一关节内只改需要调整的模式（MIT 或 POS_VEL），不要无意义地改两个模式的字段。
+3. **保持 YAML 缩进**：每级缩进 2 空格，键值对用 `: ` 分隔。写错缩进会导致 `yaml.safe_load` 解析失败，所有参数回落到默认值。
+4. **保存后重启脚本**。YAML 在脚本启动时一次性读取，**运行时修改不会立即生效**。
+5. **单关节验证**：建议先用 `3_mit_control.py`（MIT）/ `4_pos_vel_control.py`（POS_VEL）之类的脚本对**单个关节**小幅运动验证改动效果，再做整臂测试。
+
+### 验证改动是否生效
+
+- **运行时观察**：在 `3_mit_control.py` / `4_pos_vel_control.py` 中使能电机 → `state` 查看状态；若参数没变化或电机表现与改前完全一样，说明 YAML 改错或被默认配置覆盖。
+- **YAML 自检**：用 Python 直接解析并打印某关节的字段，确认就是你刚改的值：
+  ```bash
+  uv run python -c "import yaml; print(yaml.safe_load(open('config/rebotarm_dm.yaml'))['joints'][0])"
+  ```
+- **快速回滚**：直接 `git checkout config/rebotarm_dm.yaml` 即可恢复仓库默认参数。
+
+:::caution 不要一次跨多关节大幅调整
+多关节同时大幅改动 `kp` / `kd` 后，若某关节方向或极性填错，整臂可能瞬间出现抖动、过流甚至撞限位。请**逐关节、逐模式、小步迭代**。
+:::
+
+---
 
 ## 调试工具介绍
 
@@ -165,7 +273,10 @@ sudo chmod 666 /dev/ttyACM0
 sudo chmod 666 /dev/can0
 ```
 :::
-### 单电机控制台 (`0x01damiao_test.py`)
+<details>
+<summary>调试用工具（仅异常情况使用）</summary>
+
+**单电机控制台 (`0x01damiao_test.py`)**
 
 直接使用 motorbridge SDK 进行单电机测试。
 
@@ -192,7 +303,7 @@ uv run python example/0x01damiao_test.py
 | `q` / `quit` | 退出 |
 ---
 
-### 零点校准与角度监控 (`2_zero_and_read.py`)
+**零点校准与角度监控 (`2_zero_and_read.py`)**
 
 自动设置所有关节零点，实时显示关节角度。
 
@@ -204,21 +315,38 @@ uv run python example/2_zero_and_read.py
 -0.12  +0.23  -6.42  +41.74  -0.45  -0.01  -0.01
 ```
 
-### MIT 控制模式 (`3_mit_control.py`)
+---
+</details>
+
+<details>
+<summary>MIT 控制模式（reBot DM 上的备选方案，按需查看 — 推荐使用 POS_VEL 模式）</summary>
+
+:::warning 适用性提示
+对于 **reBot Arm B601-DM** 而言，**POS_VEL（位置‑速度）模式是推荐的控制模式** — Damiao 电机协议原生支持位置‑速度混合控制并自带速度限制，开箱即可获得最平滑的效果。MIT 模式**是备选方案**，通常需要更细致地调参 `kp` / `kd` 才能有较好表现。因此 MIT 模式在 DM 硬件上**不是默认推荐**，但出于部分用户确有此需求，**保留该 demo 供按需参考与调参**。如果无特殊场景，建议优先使用下方的 POS_VEL 模式示例。
+:::
+
+**MIT 控制模式 (`3_mit_control.py`)**
 
 输入所有关节的目标角度，将MIT控制模式下完成各电机的控制，通常用于力控、阻抗控制或需要高动态响应的场景。
 
 **运行方式**：
 ```bash
 uv run python example/3_mit_control.py
-> 30 0 0 0 0 0 # 控制1号电机正转30度
+> 30 0 0 0 0 0 0 # 控制1号电机正转30度
 > state
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # 退出系统
 ```
 :::danger
-注意，在MIT控制模式下，机械臂的速度会很快，需要保证人或其他设备远离机械臂的工作半径。
+本示例**没有路径规划与速度规划**，输入的目标关节角度过大会让电机以很快的速度运动，甚至**直接触发电机过流保护**。建议：
+
+- 先输入**小角度**验证效果（例如单个关节只动 5~10 度），确认电机响应与方向无误后再逐步放大；
+- 本节**没有内置的平滑轨迹版本**，若需要在多次目标之间平稳过渡，请谨慎控制目标与到位节奏，或参考后续的 [平滑轨迹的逆运动学控制 (8_arm_traj_control.py)](#demo8-traj-control) 把最小 jerk / 加减速规划的思路移植进自己的脚本；
+- 运行时人或其他设备务必远离机械臂工作半径。
 :::
+
+---
+</details>
 
 ### 位置-速度控制模式 (`4_pos_vel_control.py`)
 
@@ -227,11 +355,18 @@ uv run python example/3_mit_control.py
 **运行方式**：
 ```bash
 uv run python example/4_pos_vel_control.py
-> 30 0 0 0 0 0 # 控制1号电机正转30度
+> 30 0 0 0 0 0 0 # 控制1号电机正转30度
 > state
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # 退出系统
 ```
+:::danger
+本示例**没有路径规划与速度规划**，输入的目标关节角度过大会让电机以很快的速度运动，甚至**直接触发电机过流保护**。建议：
+
+- 先输入**小角度**验证效果（例如单个关节只动 5~10 度），确认电机响应与方向无误后再逐步放大；
+- 本节**没有内置的平滑轨迹版本**，若需要在多次目标之间平稳过渡，请谨慎控制目标与到位节奏，或参考后续的 [平滑轨迹的逆运动学控制 (8_arm_traj_control.py)](#demo8-traj-control) 把最小 jerk / 加减速规划的思路移植进自己的脚本；
+- 运行时人或其他设备务必远离机械臂工作半径。
+:::
 
 ---
 
@@ -339,13 +474,17 @@ uv run python example/7_arm_ik_control.py
 #用法B
 > 0.3 0.0 0.4 0.0 0.0 0.5 #同时控制位置和姿态：走到指定位置，同时手腕偏航角旋转 0.5 弧度。
 
-> ctrl + c # 退出系统
+> ctrl + c # 回到零点并退出系统
 ```
 :::danger
-注意，在该实例代码下机械臂的速度会很快，需要保证人或其他设备远离机械臂的工作半径。
+本示例**没有路径规划与速度规划**，输入的目标角度过大会直接让电机以很快的速度运动，甚至**直接触发电机过流保护**。建议：
+
+- 先输入**小角度**验证效果（例如让末端在当前位置附近只动 5~10 cm），确认姿态与方向无误后再逐步放大；
+- 如需在两次目标之间平滑过渡，请直接跳到下一节的 [平滑轨迹的逆运动学控制 (8_arm_traj_control.py)](#demo8-traj-control) 使用带最小 jerk / 加减速规划的版本；
+- 运行时人或其他设备务必远离机械臂工作半径。
 :::
 
-### 平滑轨迹的逆运动学控制 (`8_arm_traj_control.py`)
+### 平滑轨迹的逆运动学控制 (`8_arm_traj_control.py`) {#demo8-traj-control}
 
 在 MIT 模式下使用逆运动学（IK），在目标时间内自动规划出一条匀速或带平滑加减速的运动轨迹，避免了关节剧烈抖动。
 
@@ -369,8 +508,13 @@ uv run python example/8_arm_traj_control.py
 #用法C
 > 0.3 0.0 0.4 0.0 0.0 0.0 5.0 #让机械臂走到特定位置，并指定用 5.0 秒 的时间慢慢挪过去。(注意：如果要输时间，前方的姿态参数 0 0 0 不能省略)
 
-> ctrl + c # 退出系统
+> ctrl + c # 回到零点并退出系统
 ```
+
+:::tip 位姿偏差怎么办？
+如果运行本示例时发现**读取到的末端位姿**与**下发的目标位姿**存在偏差，且**该位姿本身是可达的**（不在工作空间外、不是奇异位姿），那么问题很可能出在 MIT / POS_VEL 控制器的参数上。此时请参考前面的 [调节 MIT / POS_VEL 控制器参数](#tune-controller-params) 章节，按"单关节、逐模式、小步迭代"的方式手动整定 `kp` / `kd` 等参数；整定完成后再回到本示例验证。
+:::
+
 ---
 
 ## 重力补偿测试

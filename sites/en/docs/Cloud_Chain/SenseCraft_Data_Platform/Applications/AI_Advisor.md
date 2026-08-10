@@ -25,7 +25,7 @@ last_update:
   date: 06/06/2025
   author: Jancee
 createdAt: '2023-06-19'
-updatedAt: '2025-09-02'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft-data-platform/applications/ai-advisor/
 ---
 
@@ -35,7 +35,7 @@ url: https://wiki.seeedstudio.com/sensecraft-data-platform/applications/ai-advis
 
 **SenseCraft AI Advisor** is an AI-powered feature that helps you make the most of your sensor data and unlock actionable insights. By connecting your SenseCraft sensors to the SenseCraft platform, you can easily collect and analyze data on environmental factors such as temperature, humidity, light, and air quality. Our AI Advisor leverages this data to provide suggestions and recommendations that can help you optimize operations, reduce costs, and improve efficiency.
 
-Whether you're looking to monitor air quality, optimize crop growth, or improve farm management, SenseCraft AI Advisor is designed to assist your decision-making. The AI Advisor is available on the [SenseCraft Data Platform](https://sensecap.seeed.cc/portal/#/login) and the [SenseCAP Mate APP](http://sensecap-mate-download.seeed.cc/), enabling users to access insights anytime, anywhere.
+Whether you're looking to monitor air quality, optimize crop growth, or improve farm management, SenseCraft AI Advisor is designed to assist your decision-making. The AI Advisor is available on the [SenseCraft Data Platform](https://sensecap.seeed.cc/portal/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_portal#/login) and the [SenseCAP Mate APP](http://sensecap-mate-download.seeed.cc/), enabling users to access insights anytime, anywhere.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP_AI/1.png"/></div>
 
@@ -103,7 +103,7 @@ SenseCraft AI Advisor currently analyzes the following measurements and device t
 
 ## SenseCraft Data Platform
 
-1. Login to [SenseCraft Data Platform (Global)](https://sensecap.seeed.cc/portal/#/login) or [SenseCraft Data Platform (China)](http://sensecap.seeed.cn/portal/#/login)
+1. Login to [SenseCraft Data Platform (Global)](https://sensecap.seeed.cc/portal/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_portal#/login) or [SenseCraft Data Platform (China)](http://sensecap.seeed.cn/portal/#/login)
 2. Bind your SenseCraft sensor by entering the sensor's SN and code
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP_AI/5.png"/></div>

@@ -1,6 +1,94 @@
 const docList = [
   [
     {
+      "path": "/rebot_arm_b601_rs_mit_control",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png",
+      "title": "Getting Started with MIT Position Control on the reBot Arm B601-RS",
+      "date": "2026-08-04",
+      "title_cn": "reBot Arm B601-RS MIT 位置控制入门指南",
+      "title_ja": "reBot Arm B601-RS における MIT 位置制御 入門",
+      "title_es": "Introducción al control de posición MIT en el reBot Arm B601-RS",
+      "title_pt": "Introdução ao Controle de Posição MIT no reBot Arm B601-RS"
+    },
+    {
+      "path": "/streaming_vision_agent_on_jetson",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-100020039-recomputer-mini-j501---carrier-board-for-jetson-agx-orin.jpg",
+      "title": "Streaming Vision Agent on Jetson",
+      "date": "2026-08-03",
+      "title_cn": "Jetson 上的 Streaming Vision Agent",
+      "title_ja": "Jetson 上の Streaming Vision Agent",
+      "title_es": "Agente de Visión en Streaming en Jetson",
+      "title_pt": "Streaming Vision Agent no Jetson"
+    }
+  ],
+  [
+    {
+      "path": "/deploy_tensorrt_edge_llm_on_jetpack7.2",
+      "image": "https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/7.png",
+      "title": "Deploy TensorRT Edge-LLM on JetPack 7.2",
+      "date": "2026-07-31",
+      "title_cn": "在 JetPack 7.2 上部署 TensorRT Edge-LLM",
+      "title_ja": "JetPack 7.2 に TensorRT Edge-LLM をデプロイする",
+      "title_es": "Implementar TensorRT Edge-LLM en JetPack 7.2",
+      "title_pt": "Implantar TensorRT Edge-LLM no JetPack 7.2"
+    },
+    {
+      "path": "/jetpack_7_2_resource_hub",
+      "image": "https://files.seeedstudio.com/wiki/other/jp72-front.png",
+      "title": "JetPack 7.2 Resource Hub",
+      "date": "2026-07-31",
+      "title_cn": "JetPack 7.2 资源中心",
+      "title_ja": "JetPack 7.2 リソースハブ",
+      "title_es": "Centro de Recursos de JetPack 7.2",
+      "title_pt": "Hub de Recursos do JetPack 7.2"
+    }
+  ],
+  [
+    {
+      "path": "/respeaker_clip_python_build_app_with_memory",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg",
+      "title": "Build Your Own App for reSpeaker Clip adding memory Layer using Python SDK",
+      "date": "2026-07-31",
+      "title_cn": "使用 Python SDK 为 reSpeaker Clip 构建带记忆层的自定义应用",
+      "title_ja": "Python SDK を使用してメモリレイヤーを追加した reSpeaker Clip 向け独自アプリを構築する",
+      "title_es": "Crea tu propia app para reSpeaker Clip añadiendo una capa de memoria usando el SDK de Python",
+      "title_pt": "Crie seu próprio app para reSpeaker Clip adicionando camada de memória usando Python SDK"
+    },
+    {
+      "path": "/solutions/mcp-face-auth-integration",
+      "image": "https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp",
+      "title": "Bring Voice AI to Your Business System with Face Verification",
+      "date": "2026-07-31",
+      "title_cn": "通过人脸验证将语音 AI 引入您的业务系统",
+      "title_ja": "顔認証付きの音声 AI を業務システムに導入する",
+      "title_es": "Lleva la IA de voz a tu sistema empresarial con verificación facial",
+      "title_pt": "Leve Voice AI para o seu sistema de negócios com verificação facial"
+    }
+  ],
+  [
+    {
+      "path": "/respeaker_xvf3800_xiao_websocket_audio_stream",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp",
+      "title": "reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 WebSocket Audio Streaming",
+      "date": "2026-07-29",
+      "title_cn": "reSpeaker XVF3800 USB Mic Array 搭配 XIAO ESP32S3 的 WebSocket 音频流传输",
+      "title_ja": "reSpeaker XVF3800 USB Mic Array と XIAO ESP32S3 による WebSocket オーディオストリーミング",
+      "title_es": "Transmisión de audio por WebSocket con reSpeaker XVF3800 USB Mic Array y XIAO ESP32S3",
+      "title_pt": "reSpeaker XVF3800 USB Mic Array com streaming de áudio via WebSocket usando XIAO ESP32S3"
+    },
+    {
+      "path": "/recamera_pro_ha_sound_alert",
+      "image": "https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_Voice_Capture/reCamera-PRO_Voice_Capture.gif",
+      "title": "reCamera Pro and Home Assistant Integration: Sound-Triggered Photo Alert",
+      "date": "2026-07-27",
+      "title_cn": "reCamera Pro 与 Home Assistant 集成：声音触发拍照告警",
+      "title_ja": "reCamera Pro と Home Assistant 連携：サウンドトリガー付き写真アラート",
+      "title_es": "Integración de reCamera Pro y Home Assistant: alerta de foto activada por sonido",
+      "title_pt": "Integração entre reCamera Pro e Home Assistant: alerta de foto acionado por som"
+    }
+  ],
+  [
+    {
       "path": "/build_and_flash_yocto_for_recomputer_super",
       "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png",
       "title": "Build and Flash a Yocto Image for reComputer Super",
@@ -11,14 +99,14 @@ const docList = [
       "title_pt": "Compilar e Gravar uma Imagem Yocto para o reComputer Super"
     },
     {
-      "path": "/respeaker_clip_python_build_app",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg",
-      "title": "Build Your Own App for reSpeaker Clip with Transcription, Diarization, and Summary Using Python SDK",
-      "date": "2026-07-21",
-      "title_cn": "使用 Python SDK 为 reSpeaker Clip 构建具备转写、说话人分离和摘要功能的自定义应用",
-      "title_ja": "Python SDK を使用して reSpeaker Clip 向けに文字起こし・話者分離・要約対応の独自アプリを構築する",
-      "title_es": "Crea tu propia app para reSpeaker Clip con transcripción, diarización y resumen usando el SDK de Python",
-      "title_pt": "Crie seu próprio app para reSpeaker Clip com transcrição, diarização e resumo usando o SDK Python"
+      "path": "/recamera_model_export_online",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png",
+      "title": "Convert and deploy a custom YOLO detection model in the reCamera web interface",
+      "date": "2026-07-19",
+      "title_cn": "在 reCamera 网页界面中转换并部署自定义 YOLO 检测模型",
+      "title_ja": "reCamera の Web インターフェースでカスタム YOLO 検出モデルを変換してデプロイする",
+      "title_es": "Convertir y desplegar un modelo de detección YOLO personalizado en la interfaz web de reCamera",
+      "title_pt": "Converter e implantar um modelo de detecção YOLO personalizado na interface web da reCamera"
     }
   ],
   [
@@ -41,94 +129,6 @@ const docList = [
       "title_ja": "産業向けビジョン監視",
       "title_es": "Monitorización de Visión Industrial en Industrial",
       "title_pt": "Monitoramento de Visão Industrial em Ambiente Industrial"
-    }
-  ],
-  [
-    {
-      "path": "/x1_get_started_for_meshtastic",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png",
-      "title": "Get Started with MeshTracker X1",
-      "date": "2026-07-13",
-      "title_cn": "开始使用 MeshTracker X1",
-      "title_ja": "MeshTracker X1 を使い始める",
-      "title_es": "Comienza con MeshTracker X1",
-      "title_pt": "Comece a usar o MeshTracker X1"
-    },
-    {
-      "path": "/respeaker_clip_basic_sdk_guide",
-      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/c/h/chatgpt_image_2026_7_3_10_12_05.png",
-      "title": "reSpeaker Clip Basic SDK Guide",
-      "date": "2026-07-13",
-      "title_cn": "reSpeaker Clip Basic SDK 指南",
-      "title_ja": "reSpeaker Clip Basic SDK ガイド",
-      "title_es": "Guía del reSpeaker Clip Basic SDK",
-      "title_pt": "Guia do reSpeaker Clip Basic SDK"
-    }
-  ],
-  [
-    {
-      "path": "/soarm_amazinghand_teleop",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/soarm_amazinghand/soarm_amazinghand.webp",
-      "title": "Complete Training Guide for SO-ARM with AmazingHand",
-      "date": "2026-07-12",
-      "title_cn": "SO-ARM与AmazingHand完整训练指南",
-      "title_ja": "SO-ARM と AmazingHand のための完全トレーニングガイド",
-      "title_es": "Guía completa de entrenamiento para SO-ARM con AmazingHand",
-      "title_pt": "Guia Completo de Treinamento para SO-ARM com AmazingHand"
-    },
-    {
-      "path": "/rapid_prototyping_on_jetson_with_nvidia_skills",
-      "image": "https://files.seeedstudio.com/wiki/nv_skills/banner.png",
-      "title": "Rapid Prototyping on Jetson with NVIDIA Skills",
-      "date": "2026-07-09",
-      "title_cn": "使用 NVIDIA Skills 在 Jetson 上进行快速原型开发",
-      "title_ja": "NVIDIA Skills を用いた Jetson 上での高速プロトタイピング",
-      "title_es": "Prototipado rápido en Jetson con NVIDIA Skills",
-      "title_pt": "Prototipagem Rápida no Jetson com NVIDIA Skills"
-    }
-  ],
-  [
-    {
-      "path": "/deploy_joyai_vl_interaction_on_jetson_thor",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/joyai_vl_interaction/webui.png",
-      "title": "Deploy JoyAI-VL-Interaction on Jetson Thor",
-      "date": "2026-07-07",
-      "title_cn": "在 Jetson Thor 上部署 JoyAI-VL-Interaction",
-      "title_ja": "Jetson Thor で JoyAI-VL-Interaction をデプロイする",
-      "title_es": "Desplegar JoyAI-VL-Interaction en Jetson Thor",
-      "title_pt": "Implantar JoyAI-VL-Interaction no Jetson Thor"
-    },
-    {
-      "path": "/rebot_arm_b601_rs_isaacsim",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg",
-      "title": "Simulating reBotArm through Isaacsim",
-      "date": "2026-07-07",
-      "title_cn": "通过 Isaacsim 仿真 reBotArm",
-      "title_ja": "Isaacsim を使用した reBotArm のシミュレーション",
-      "title_es": "Simulación de reBotArm mediante Isaacsim",
-      "title_pt": "Simulando o reBotArm com o Isaacsim"
-    }
-  ],
-  [
-    {
-      "path": "/recamera_motion_detection_bak",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Motion_Detection/Pasted_image_20260703155236.png",
-      "title": "Motion detection for a selected area based on recamera2002",
-      "date": "2026-07-03",
-      "title_cn": "基于 recamera2002 的选定区域运动检测",
-      "title_ja": "recamera2002 をベースにした選択エリアの動体検知",
-      "title_es": "Detección de movimiento para un área seleccionada basada en recamera2002",
-      "title_pt": "Detecção de movimento para uma área selecionada baseada em recamera2002"
-    },
-    {
-      "path": "/flash_preempt_rt_kernel_on_recomputer_jetson_jetpack_6_2_1",
-      "image": "https://files.seeedstudio.com/wiki/RT_for_jetson/5.png",
-      "title": "Flash a PREEMPT_RT Linux Real-Time Kernel on Seeed reComputer Jetson with JetPack 6.2.1",
-      "date": "2026-07-02",
-      "title_cn": "在搭载 JetPack 6.2.1 的 Seeed reComputer Jetson 上烧录 PREEMPT_RT Linux 实时内核",
-      "title_ja": "JetPack 6.2.1 を搭載した Seeed reComputer Jetson に PREEMPT_RT Linux リアルタイムカーネルをフラッシュする",
-      "title_es": "Flashear un kernel Linux en tiempo real PREEMPT_RT en Seeed reComputer Jetson con JetPack 6.2.1",
-      "title_pt": "Gravar um kernel Linux em tempo real PREEMPT_RT em um Seeed reComputer Jetson com JetPack 6.2.1"
     }
   ]
 ];

@@ -9,20 +9,24 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 DOF
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_b601_dm_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-04-13
+  date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
 # Getting Started with reBot Arm B601-DM
 
-![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -65,6 +69,15 @@ The reBot Arm B601-DM is available in multiple configurations to meet different 
 | **Body Only (Structure)** | ✅ | ❌ | ❌ | ✅ | [Coming Soon](https://www.seeedstudio.com/) |
 | **Body Only (Motors)** | ✅ | ❌ | ✅ | ❌ | [Coming Soon](https://www.seeedstudio.com/) |
 
+
+## Safety Disclaimer and Risk Notice
+
+<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
+    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+</div>
 
 ## About Power Supply
 
@@ -110,6 +123,15 @@ Before Assembly:
 </div>
 
 ## Step 2: Reset Motors ID
+
+:::tip
+When assembling the robotic arm, do not forget to connect the cable harness between Motor 1 and Motor 2. The exact position is highlighted in the image below. Before switching the 3-pin cable connection, make sure the current motor is disabled and the power is disconnected to avoid hot-plugging or incorrect operation that may cause abnormal motor parameters.
+
+<div align="center">
+    <img width={200}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1to2_ID_set.jpg" />
+</div>
+:::
 
 ### AI AGENT
 

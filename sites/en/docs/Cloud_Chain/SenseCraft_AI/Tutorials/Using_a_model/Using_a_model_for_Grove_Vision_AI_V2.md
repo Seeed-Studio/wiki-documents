@@ -10,7 +10,7 @@ last_update:
   date: 12/02/2024
   author: Citric
 createdAt: '2024-12-02'
-updatedAt: '2025-09-02'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-grove-vision-ai-v2/
 ---
 
@@ -60,7 +60,7 @@ Before getting started, ensure that you have the following:
 Open your web browser and navigate to the SenseCraft AI model repository.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/model" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_model_library#/model" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>One-Click Direct 🖱️</font></span></strong>
     </a>
 </div><br />

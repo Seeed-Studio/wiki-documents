@@ -13,7 +13,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: '2026-03-19'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor/
 ---
 
@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introdução ao Meshtastic Network Monitor
 
-O [Meshtastic](https://meshtastic.org/docs/introduction/) Network Monitor é uma ferramenta que permite visualizar, gerenciar e monitorar nós em uma rede mesh Meshtastic. Ele fornece informações em tempo real sobre o status, roteamento e comunicação entre dispositivos. O monitor é o analisador Meshtastic que coleta dados por meio de um gateway conectado ou servidor MQTT, visualiza a topologia da rede e exibe informações dos nós, como status da bateria, intensidade do sinal e localização GPS. Ele também pode funcionar como um mapa de nós Meshtastic.
+[Meshtastic](https://meshtastic.org/docs/introduction/) Network Monitor é uma ferramenta que permite visualizar, gerenciar e monitorar nós em uma rede mesh Meshtastic. Ela fornece informações em tempo real sobre o status, roteamento e comunicação entre dispositivos. O monitor é o analisador Meshtastic que coleta dados por meio de um gateway conectado ou servidor MQTT, visualiza a topologia da rede e exibe informações dos nós, como status da bateria, intensidade do sinal e localização GPS. Ele também pode funcionar como um mapa de nós Meshtastic.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MeshsenseScreenshot.png" style={{width:900, height:'auto'}}/></div>
 
@@ -35,13 +35,13 @@ O [Meshtastic](https://meshtastic.org/docs/introduction/) Network Monitor é uma
 
 **Monitores Meshtastic comuns**
 
-* Meshsense: [clique aqui](https://affirmatech.com/meshsense) para saber mais
-* Meshmonitor: [clique aqui](https://meshmonitor.org/) para saber mais
+* Meshsense: [click here](https://affirmatech.com/meshsense) to learn more
+* Meshmonitor: [click here](https://meshmonitor.org/) to learn more
 
 **Como conectar a um monitor Meshtastic**
 
-1. Configure seus nós Meshtastic e certifique-se de que formem uma malha funcional.
-2. Configure pelo menos um nó como gateway (por exemplo, Gateway MQTT).
+1. Configure seus nós Meshtastic e certifique-se de que eles formem uma malha funcional.
+2. Configure pelo menos um nó como gateway (por exemplo, MQTT Gateway).
 3. Conecte o aplicativo de monitoramento ao gateway ou servidor MQTT.
 4. Verifique se os nós estão visíveis e relatando o status na interface do monitor.
 
@@ -61,8 +61,8 @@ Você precisará de um **Seeed Xiao ESP32S3 & SX1262 Meshtastic Kit** configurad
 
 <table align="center">
 <tbody><tr>
-<th>XIAO ESP32S3 & Wio-SX1262 Kit para Meshtastic & LoRa</th>
-<th>(Opcional) Módulo L76K GNSS</th>
+<th>Kit XIAO ESP32S3 & Wio-SX1262 para Meshtastic & LoRa</th>
+<th>Módulo L76K GNSS (opcional)</th>
 </tr>
 <tr>
 <td><div align="center"><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -113,12 +113,12 @@ Depois de conectado, seu nó Meshtastic deverá aparecer no Meshsense.
 
 #### Configuração de hardware
 
-Para exibir as posições dos nós, conecte um **módulo L76K GPS** ao kit Xiao ESP32S3. [Clique aqui](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) para adquirir um agora.
+Para exibir as posições dos nós, conecte um **módulo L76K GPS** ao kit Xiao ESP32S3. [Click here](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) to get one now.
 
 #### Configuração de software
 
 * No aplicativo Meshsense, certifique-se de que o envio de dados de GPS esteja ativado.
-* Depois de conectado, o aplicativo exibirá a localização em tempo real de cada nó no mapa. Você pode ver a posição do seu nó diretamente no app.
+* Depois de conectado, o aplicativo exibirá a localização em tempo real de cada nó no mapa. Você pode ver a posição do seu nó diretamente no aplicativo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/APPPPosition.png" style={{width:500, height:'auto'}}/></div>
 
@@ -128,3 +128,26 @@ Também no mapa do site do Meshsense, você pode ver sua posição em tempo real
 
 
 Com essa configuração, você pode gerenciar sua rede Meshtastic privada de forma eficiente e visualizar o comportamento dos nós diretamente no Meshsense.
+
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>
