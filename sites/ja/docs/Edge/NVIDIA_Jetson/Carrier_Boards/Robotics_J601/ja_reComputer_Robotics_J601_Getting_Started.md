@@ -146,8 +146,8 @@ reComputer J601 は、Jetson AGX Thor 向けのコンパクトかつ高性能な
 
 ### 対応モジュール
 
-- NVIDIA Jetson T4000 モジュール
-- NVIDIA Jetson T5000 モジュール
+- [NVIDIA Jetson T4000 モジュール](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T4000-Module-p-6939.html)
+- [NVIDIA Jetson T5000 モジュール](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T5000-Module-p-6938.html)
 
 ### 前提条件
 
