@@ -83,6 +83,10 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 
 ## 第一步：组装机械臂
 
+  <div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116854970386234&bvid=BV1xCTs6vEa6&cid=39614154823&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 - 开始组装前，请您务必仔细阅读以下内容。为确保您顺利完成组装并获得完整的动手体验，组装过程中请保持耐心与专注，并时刻遵循以下要点：
   1. 本套件包含大量螺丝与结构件，部分零件外观相近。组装时请耐心核对螺丝规格与零件型号，确认安装方向无误后再进行固定。
   2. 视频为四月初拍摄，后续或许会有零件微调和改动，但是不影响跟随本视频的安装效果，最终零件以出货为准。
@@ -457,6 +461,7 @@ C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
 <details>
 
 <summary>PCAN 固件下载与驱动修复步骤-Ubuntu</summary>
+
 Ubuntu 用户请参考本指南
 
 1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
@@ -489,6 +494,7 @@ bash flash_pcan_ubuntu.sh
 <details>
 
 <summary>PCAN 固件下载与驱动修复步骤-MAC</summary>
+
 MAC 用户请参考本指南
 
 1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)

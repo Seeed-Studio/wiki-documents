@@ -2165,6 +2165,7 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/es_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/es_respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/es_respeaker_clip_sensecraft_voice_sdk',
             {
               type: 'category',
               label: 'SDK de firmware',
@@ -5196,6 +5197,7 @@ const sidebars = {
                 'Topics/TinyML/ModelAssistant/deploy/es_ma_deploy_yolov5',
                 'Topics/TinyML/ModelAssistant/deploy/es_ma_deploy_yolov8',
                 'Topics/TinyML/ModelAssistant/deploy/es_ma_deploy_yolov8_pose',
+                'Topics/TinyML/ModelAssistant/deploy/es_ma_deploy_yolov26',
               ]
             },
           ],
