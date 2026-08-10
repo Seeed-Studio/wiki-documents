@@ -8,8 +8,8 @@ slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 3
 last_update:
-  date: 3/4/2026
-  author: Michelle Huang
+  date: 08/10/2026
+  author: zxw
 createdAt: '2026-02-28'
 updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/
@@ -204,6 +204,16 @@ You can go to APP `Position Settings` to enable GPS. Or you can go to device GPS
 Click the User button four times to control the buzzer turning on or off.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/User.png" alt="pir" width={500} height="auto" /></p>
+
+### Configure Sensor
+
+The Wio Tracker L1 ships with MeshCore firmware `1.12` pre-installed. Grove sensor support via the built-in Grove connector was added in firmware `1.13`; the latest release is `1.16`.
+
+:::note
+Grove sensors require firmware `1.13` or later. If your device still runs the factory `1.12`, follow [Method1 via Web Flasher](#method1-via-web-flasher) and select the latest version.
+:::
+
+From `1.13` onward, this opens up straightforward integration of environmental sensors — temperature, humidity, air quality, and more — through the L1's built-in Grove connector, without any soldering or additional hardware. Plug a compatible Grove sensor into the connector and it will be recognized automatically.
 
 ## Message Transmission
 
