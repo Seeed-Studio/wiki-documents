@@ -1,6 +1,6 @@
 ---
-description: Seeed Studio XIAO RP2040 与 PlatformIO
-title: XIAO RP2040 与 PlatformIO
+description: 使用 PlatformIO 的 Seeed Studio XIAO RP2040
+title: 使用 PlatformIO 的 XIAO RP2040
 keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/rp2040_with_platformio.webp
@@ -8,8 +8,8 @@ slug: /xiao_rp2040_with_platform_io
 last_update:
   date: 04/08/2025
   author: Hugo
-createdAt: '2025-05-30'
-updatedAt: '2025-09-15'
+createdAt: '2024-08-27'
+updatedAt: '2025-04-10'
 url: https://wiki.seeedstudio.com/cn/xiao_rp2040_with_platform_io/
 ---
 
@@ -20,80 +20,90 @@ import TabItem from '@theme/TabItem';
 
 ## PlatformIO 介绍
 
-PlatformIO 是一个集成了多种类型开发板的开发平台，具有良好的可扩展性。如果平台没有您需要的类型，您可以手动添加开发板类型。您在 Arduino 上编写的代码可以在其上使用，只需添加相应的库即可。
+PlatformIO 是一个集成了多种开发板并具有良好可扩展性的开发平台。如果平台中没有你需要的开发板类型，你可以手动添加开发板类型。你在 Arduino 上编写的代码也可以使用它，只需添加相应的库即可。
 
-在本教程中，我们将介绍如何在 PlatformIO 中安装并运行示例代码。
+在本篇 wiki 中，我们将介绍如何在 PlatformIO 中安装并运行示例代码。
 
 ## 在 XIAO RP2040 上使用 PlatformIO
 
-### 步骤 1. 从[官方网站](https://platformio.org/platformio-ide)安装 PlatformIO
+### 步骤 1 . 下载 VS Code
 
-如果您还没有安装 PlatformIO 软件，可以点击上面的链接。
+根据你所使用的系统下载 [VS Code](https://code.visualstudio.com/download)
 
-### 步骤 2. 在 PlatformIO 中创建任意项目
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
-由于平台已经有了我们的 XIAO ESP32S3 和 XIAO ESP32C3 开发板选项，我们可以选择其中一个来创建我们的文件。当然，其他文件也可以，没有关系。项目名称也可以任意选择。
+### 步骤 2 . 安装 PlatformIO 扩展
 
-<table align="center">
-  <tr>
-      <th>操作一</th>
-        <th>操作二</th>
-  </tr>
-  <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_platformio/4.png" style={{width:500, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_platformio/3.png" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-</table>
+打开 VSCode，点击 Extensions，然后搜索 PlatformIO 并选择安装。安装完成后，重启 VSCode。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
+
+### 步骤 3 . 安装 platform-seeedboards 平台包
+
+Seeed Studio XIAO 系列开发板使用自定义的 PlatformIO 平台，因此你需要手动安装对应的平台包。
+
+- 运行以下命令进行全新安装：
+
+```bash
+pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+- 如果你之前已经在 PlatformIO 中使用过 Seeed Studio XIAO 系列开发板，请运行下面的命令进行更新：
+
+
+```bash
+pio pkg uninstall -g -p "SeeedStudio"
+pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
+```
 
 :::tip
-在此之前，我已经安装了 XIAO RP2040 安装包，所以您可以看到操作二的图像中有 XIAO RP2040 的选项，但您在执行操作时没有这个选项。
-:::
 
-### 步骤 3. 修改 platformio.ini 文件
+或者，你也可以基于现有项目进行替换操作。
 
-当您成功创建 PlatformIO 文件后，左侧栏会出现许多文件。我们可以看到一个名为 platform.ini 的文件。接下来，我们需要替换其中的内容。
-
-<table align="center">
-  <tr>
-      <th>操作三</th>
-  </tr>
-  <tr>
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/esp32c6_platformio/2.png" /></div>
-  </tr>
-</table>
-
-您需要复制以下代码并替换 platform.ini 文件中的内容。
-
-```
+```ini
 [env:seeed_xiao_rp2040]
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
 board = seeed-xiao-rp2040
 framework = arduino
 ```
 
-:::tip
-记住按 Ctrl + S 保存文件；它将开始加载。
 :::
 
-### 步骤 4. 编译和烧录
+### 步骤 4 . 在 PlatformIO 中创建任意项目
 
-<table align="center">  
-  <tr>  
-      <th>操作四</th>  
-  </tr>  
-  <tr>  
-      <td>  
-          <div align="center">  
-              <img width="500" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/rp2040_platformio_complied.png" />  
-          </div>  
-      </td>  
-  </tr>  
-</table>  
-最后，如果您看到与上图相同的结果，说明您已经成功添加了 XIAO RP2040 开发板。当您再次创建项目时，您将看到 XIAO RP2040 选项可用。
+打开 PlatformIO 扩展并选择 Create New Project。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/pio_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+### 步骤 4 . 编译与烧录
+
+将以下程序复制到 `main.c` 中并上传到开发板。
+
+```cpp
+#include <Arduino.h>
+
+void setup() {
+    pinMode(PIN_LED, OUTPUT);
+}
+
+void loop() {
+    digitalWrite(PIN_LED, HIGH);
+    delay(1000);
+    digitalWrite(PIN_LED, LOW);
+    delay(1000);
+}
+```
+<br/>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/pio_2.png" style={{width:800, height:'auto'}}/></div>
+<br/>
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种交流渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

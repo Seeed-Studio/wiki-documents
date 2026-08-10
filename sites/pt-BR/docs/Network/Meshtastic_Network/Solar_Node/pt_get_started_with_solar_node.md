@@ -18,14 +18,14 @@ url: https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/
 
 :::danger note
 Quando o dispositivo estiver em qualquer um dos estados abaixo, não reinicie nem desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável (bricked).
-1. Não concluir o processo de transmissão de mensagem
-2. Estar em configuração
+1. Não tiver concluído o processo de transmissão de mensagem
+2. Estiver sendo configurado
 :::
 ## Introdução
 
 Antes da implantação formal, teste e configure o nó primeiro.
 
-### Gravar o firmware
+### Gravar firmware
 
 :::caution note
 Não use `NRF-OTA` para atualizar o firmware, pois isso pode fazer com que o dispositivo fique completamente sem resposta.
@@ -36,7 +36,7 @@ Visite o [Meshtastic Web Flasher](https://flasher.meshtastic.org/). Selecione `S
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
-#### Apagar a memória flash
+#### Apagar memória flash
 
 Clique no símbolo de `trash`.
 
@@ -52,14 +52,14 @@ Clique em `Enter DFU Mode`, selecione e conecte-se à porta serial chamada `XIAO
 
 Esse processo pode levar algum tempo. Aguarde até que a unidade "XIAO-XXX" desapareça.
 
-#### Gravar o firmware de aplicação
+#### Gravar firmware de aplicação
 
 Escolha a versão de firmware desejada. Clique em `flash`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
 Baixe o arquivo UF2 e entre no modo DFU. Arraste o arquivo UF2 para a unidade DFU. O firmware deverá ser gravado após a cópia do arquivo e a reinicialização do dispositivo.
 
-### Instalar bateria e módulo GPS (Opcional)
+### Instalar bateria e módulo GPS (opcional)
 
 :::tip
 Quando precisar instalar ou substituir a bateria, use uma bateria 18650 (3,6 V) com `button-top`.
@@ -84,7 +84,7 @@ A versão P1-Pro possui bateria e módulo GPS integrados. Para a versão P1, os 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-Certifique-se de que a carcaça esteja corretamente montada e os parafusos bem apertados para manter a integridade à prova d’água do dispositivo.
+Certifique-se de que a carcaça esteja corretamente montada e os parafusos bem apertados para manter a integridade de impermeabilidade do dispositivo.
 :::
 
 ### Ligar o dispositivo
@@ -96,7 +96,7 @@ O dispositivo precisa ser ativado conectando o cabo USB antes do primeiro uso. S
 </div>
 
 :::tip
-Se o dispositivo não responder quando você pressionar o botão, carregue-o primeiro. Não use um carregador rápido.
+Se o dispositivo não responder quando você pressionar o botão, carregue-o primeiro. Não use carregador rápido.
 :::
 
 ### Conectar via aplicativo
@@ -110,11 +110,11 @@ import TabItem from '@theme/TabItem';
 
 - Selecione o dispositivo de destino no painel Bluetooth.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/device_select123.jpeg" alt="pir" width={300} height="auto" /></p>
 
 - Insira o código (o código padrão é `123456`) e clique em `OK` para conectar o dispositivo.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/pairing_code123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -136,12 +136,12 @@ import TabItem from '@theme/TabItem';
 
 Se você quiser enviar mensagens de texto e se comunicar com outros nós no cliente web, pode conectar o dispositivo ao [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) agora.
 
-  Etapa 1: Abrir o site
+  Etapa 1: Abra o site
 
 [Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para ir ao site.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
-  Etapa 2: Adicionar o novo dispositivo 
+  Etapa 2: Adicione o novo dispositivo 
 
     Clique em "+ New Connection". 
 
@@ -170,7 +170,7 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 <Tabs>
 <TabItem value="ios" label="App iOS">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_LoRa123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
@@ -191,12 +191,12 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para uma lista mais abrangente.
 
 :::info
-**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto com base em uma janela móvel de 1 hora. Seu dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
+**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto em uma base contínua de 1 hora. Seu dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
 
-### Configurar o GPS
+### Configurar GPS
 
 Ative o GPS. Você pode ajustar o intervalo de atualização e o intervalo de transmissão para obter informações de localização mais atualizadas.
 
@@ -219,7 +219,7 @@ No iOS, ative `Accurate Location`. Caso contrário, o posicionamento pode ser im
 ## Instalação
 
 :::danger note
-Como o dispositivo será usado ao ar livre por longos períodos, evite instalar o painel na posição horizontal. Recomenda-se uma instalação inclinada ou diagonal para evitar o acúmulo de água. Além disso, certifique-se de que todos os parafusos estejam bem apertados e a tampa devidamente instalada. Para maior proteção contra água, você também pode considerar aplicar medidas extras de vedação.
+Como o dispositivo será usado ao ar livre por longos períodos, evite instalar o painel na posição horizontal. Recomenda-se uma instalação inclinada ou diagonal para evitar acúmulo de água. Além disso, certifique-se de que todos os parafusos estejam bem apertados e a tampa corretamente instalada. Para maior proteção contra água, você também pode considerar aplicar medidas extras de vedação.
 :::
 
 - **Lista de peças**
@@ -293,7 +293,7 @@ Como o dispositivo será usado ao ar livre por longos períodos, evite instalar 
 <table>
   <tr>
     <th colspan="2">Tipo de sensor</th>
-    <th colspan="1">Modelo do sensor</th>
+    <th colspan="1">Modelo de sensor</th>
   </tr>
   <tr>
     <td rowspan="4">Sensor ambiental</td>
@@ -349,7 +349,7 @@ Isso geralmente é causado por uma falha na gravação do firmware. Ao gravar o 
 
 #### Descrição
 
-O dispositivo não responde, o LED não acende e ele não consegue parear com o seu aplicativo.
+O dispositivo não responde, o LED não acende e ele não consegue parear com seu aplicativo.
 
 **1) O dispositivo ainda consegue entrar no modo DFU, então tente gravar o bootloader**.
 
@@ -358,7 +358,7 @@ O dispositivo não responde, o LED não acende e ele não consegue parear com o 
 - [Download do bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-Quando estiver gravando o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
+Ao gravar o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** a desconecte durante o processo de gravação.
 :::
 
 **Etapa 1: Instalação do Adafruit-nrfutil**
@@ -383,7 +383,7 @@ python --version
 python -m pip --version
 ```
 
-Então "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o Python novamente.
+Em seguida, "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o Python novamente.
 
 <Tabs>
 <TabItem value="pypi" label="Instalando a partir do PyPI">
@@ -421,7 +421,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Observação: Os comandos a seguir usam `python3`; no entanto, se você estiver no Windows, talvez seja necessário alterá-lo para `python`, já que instalações do Windows do Python 3.x ainda usam o nome `python.exe`.
+Observação: Os comandos a seguir usam `python3`; no entanto, se você estiver no Windows, talvez seja necessário alterá-lo para `python`, já que instalações do Python 3.x no Windows ainda usam o nome `python.exe`.
 
 Para instalar no espaço do usuário no seu diretório pessoal:
 
@@ -430,7 +430,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a opção `--user`:
+Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a flag `--user`:
 
 ```
 pip3 install -r --user requirements.txt
@@ -527,7 +527,7 @@ Se você não tiver certeza de quais configurações foram alteradas, restaure o
  - Após o dispositivo ligar, ele desliga ou reinicia automaticamente depois de um tempo.
  - O log da porta serial executa por um tempo e depois para.
 
- Isso pode ser causado por reiniciar ou desligar manualmente e à força o dispositivo enquanto ele está em um dos seguintes estados: sem concluir o processo de transmissão de mensagem ou enquanto está sendo configurado.
+ Isso pode ser causado por reiniciar ou desligar manualmente e à força o dispositivo enquanto ele está em um dos seguintes estados: sem concluir o processo de transmissão de mensagem ou estando em configuração.
 
  #### Solução de problemas
 
@@ -547,7 +547,7 @@ Se você quiser restaurar as configurações padrão, pode realizar um factory r
 
 #### Reset do NodeDB
 
-NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, isso pode ocorrer porque o seu nodedB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
+NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, isso pode ser porque o seu NodeDB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
 
 NodeDB armazena detalhes como:
 
@@ -559,24 +559,24 @@ NodeDB armazena detalhes como:
 
 Abra o app e conecte-se ao dispositivo de destino. Vá para **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDBmerge.png" alt="Configurações do dispositivo e botão Reset NodeDB no app" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/sending_failed123.png" alt="Configurações do dispositivo e botão Reset NodeDB no app" width={600} height="auto" /></p>
 
 #### Trocar informações de usuário
 
-Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e o "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, você pode solicitar manualmente que eles troquem informações no app.
+Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, você pode solicitá-los manualmente a trocar informações no app.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada do dispositivo em Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo em Settings" width={300} height="auto" /></p>
 
 #### Regenerar chave privada
 
-Dois nós precisam conhecer a chave privada um do outro para poder se comunicar entre si. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar a chave privada para ele.
+Dois nós precisam conhecer sua chave privada um do outro para poder se comunicar entre si. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar a chave privada para ele.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada do dispositivo em Settings" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada de dispositivo em Settings" width={600} height="auto" /></p>
 
 Reinicie o dispositivo com falha para que a configuração entre em vigor.
 
 :::note
-Após a regeneração da chave, o outro dispositivo precisa se reconectar ao nó. Portanto, é melhor excluir o nó da lista de nós do outro dispositivo.
+Após a regeneração da chave, outro dispositivo precisa se reconectar ao nó. Portanto, é melhor excluir o nó da lista de nós do outro dispositivo.
 :::
 
 :::tip
@@ -591,7 +591,7 @@ Observe a diferença entre as seguintes opções:
 O consumo de energia depende principalmente de fatores como a frequência de transmissão de dados e a taxa de atualização do GPS.
 Os valores abaixo são apenas para referência; o consumo real pode variar com base nas condições de uso no mundo real.
 
-- **Consumo de energia no modo de desligamento em espera**
+- **Consumo de energia no modo de desligamento com sono**
 
 |Descrição|Consumo|
 |---|---|
@@ -620,7 +620,7 @@ Os valores abaixo são apenas para referência; o consumo real pode variar com b
 
 - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR inferior a -10 dB indica desempenho ruim.
 
-- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo desempenho ruim.
+- **RSSI** é determinado em conjunto pelo dispositivo e seu ambiente ao redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo desempenho ruim.
 
       Para obter o melhor desempenho de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
@@ -630,5 +630,28 @@ Os valores abaixo são apenas para referência; o consumo real pode variar com b
 
 A corrente máxima de carregamento do Xiao nRF-52840 Plus é 200 mA. O chip de gerenciamento de carregamento CN3165 suporta 0,99 A. Portanto, a corrente máxima de carregamento é 1 A.
 
-## Recurso
+## Recursos
 - [Tabela de cálculo da vida útil da bateria do Solar Node](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

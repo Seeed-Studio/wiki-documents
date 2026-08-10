@@ -12,8 +12,8 @@ last_update:
   date: 06/29/2026
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/ja/codecraft/creation-and-platform/
-createdAt: '2026-06-30'
-updatedAt: '2026-06-30'
+createdAt: '2026-06-29'
+updatedAt: '2026-06-29'
 ---
 
 # CodeCraft クリエーション & プラットフォーム
@@ -22,34 +22,34 @@ updatedAt: '2026-06-30'
 
 ### 2.1.1 会話型ワークスペースを理解する
 
-CodeCraft は Web ベースの会話型プログラミングプラットフォームです。ソフトウェアをダウンロードしたり、複雑なドライバをインストールしたりする必要はありません。ウェブページ上でハードウェアを選択し、自然言語で要件を記述するだけで、ハードウェアプロジェクトを素早く構築できます。
+CodeCraft は Web ベースの会話型プログラミングプラットフォームです。ソフトウェアをダウンロードしたり、複雑なドライバをインストールしたりする必要はありません。Web ページ上でハードウェアを選択し、自然言語で要件を記述するだけで、ハードウェアプロジェクトを素早く構築できます。
 
-![Connection and Flashing Illustration](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Connect-and-Burn-EN.png)
+![接続と書き込みのイラスト](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Connect-and-Burn-EN.png)
 
 基本的なワークフローは次のとおりです：
 
-1. https://codecraft.seeed.cc にアクセスする
+1. [https://codecraft.seeed.cc](https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home) にアクセスする
 2. アカウントにログインする
 3. 開発ボードを選択する
 4. 実装したい機能を記述する
 5. CodeCraft がプログラムを生成するのを待つ
 6. コードを確認し、ハードウェアに書き込んでデバッグする
 
-![Flashing and Debugging Illustration](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Flashing-and-Debugging-EN.png)
+![書き込みとデバッグのイラスト](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Flashing-and-Debugging-EN.png)
 
 ---
 
 ### 2.1.2 ハードウェアの選択
 
-ワークスペース内でデバイスを選択します。推奨されるエントリーレベルのハードウェアは次のとおりです：
+ワークスペースでデバイスを選択します。推奨されるエントリーレベルのハードウェアは次のとおりです：
 
 - Wio Terminal  
 - XIAO ESP32S3 Sense  
 - Grove Beginner Kit  
 
-上記に加えて、CodeCraft は Seeed Studio ハードウェアエコシステム内の、より幅広いデバイスもサポートしています。プロジェクトのニーズに応じて、開発ボード、センサ、拡張モジュールを選択できます。ハードウェアを選択すると、CodeCraft はデバイスの機能に合わせて最適化されたコードとドキュメントを生成します。
+上記に加えて、CodeCraft は Seeed Studio のハードウェアエコシステム内の、より幅広いデバイスもサポートしています。プロジェクトのニーズに応じて、開発ボード、センサー、拡張モジュールを選択できます。ハードウェアを選択すると、CodeCraft はデバイスの性能に合わせて最適化されたコードとドキュメントを生成します。
 
-![Hardware Selection Page Illustration](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/HardwareEco-EN.png)
+![ハードウェア選択ページのイラスト](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/HardwareEco-EN.png)
 
 ---
 
@@ -65,7 +65,7 @@ CodeCraft は Web ベースの会話型プログラミングプラットフォ�
 
 この例では、Wio Terminal をベースにしたポモドーロタイマーの作成方法を説明します。プロジェクトでは、画面にリアルタイムのカウントダウンを表示し、ボタンを使って開始、一時停止、リセット、モード切り替えを制御します。
 
-![Wio Terminal Pomodoro Timer Illustration](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Pomodoro-Timer-Display-EN.png)
+![Wio Terminal ポモドーロタイマーのイラスト](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Pomodoro-Timer-Display-EN.png)
 
 ---
 
@@ -79,7 +79,7 @@ CodeCraft は Web ベースの会話型プログラミングプラットフォ�
 > 3. ボタン A でタイマーの開始／一時停止を行う。
 > 4. ボタン B でタイマーをリセットする。
 > 5. ボタン C で集中モードと休憩モードを切り替える。
-> 6. タイマー終了時にリマインダーメッセージを表示する。
+> 6. タイマーが終了したときにリマインダーメッセージを表示する。
 
 <!--![Pomodoro Prompt Input Interface](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/POMODORO-TIMER-PROMPT-EN.png)-->
 
@@ -92,7 +92,7 @@ CodeCraft は Web ベースの会話型プログラミングプラットフォ�
 3. CodeCraft で「Connect and Flash」ボタンをクリックします。  
 4. アップロードが完了するまで待ちます。
 
-![Wio Terminal Flashing Page Illustration](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Pomodoro-Timer-Burning-EN.png)
+![Wio Terminal 書き込みページのイラスト](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Pomodoro-Timer-Burning-EN.png)
 
 ---
 
@@ -123,8 +123,8 @@ CodeCraft はあなたのリクエストに基づいてコードを更新し、�
 > ESP32 用の LED 点滅プログラムを作成してください。要件：
 > 1. オンボード LED を使用する。
 > 2. LED を 0.2 秒ごとに切り替える。
-> 3. LED が ON のとき、シリアル経由で “LED ON” を送信する。
-> 4. LED が OFF のとき、シリアル経由で “LED OFF” を送信する。
+> 3. LED が ON のときは、シリアル経由で “LED ON” を送信する。
+> 4. LED が OFF のときは、シリアル経由で “LED OFF” を送信する。
 > 5. シリアルのボーレートを 115200 に設定する。
 > 6. 継続的に動作させる。
 
@@ -140,7 +140,7 @@ CodeCraft はあなたのリクエストに基づいてコードを更新し、�
 4. アップロードが完了するまで待ちます。  
 5. シリアルモニタを開き、“LED ON” と “LED OFF” が交互に表示されることを確認します。
 
-![ESP32 Flashing Page Illustration](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/ESP32-Light-Burning-EN.png)
+![ESP32 書き込みページのイラスト](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/ESP32-Light-Burning-EN.png)
 
 <!--![ESP32 Serial Monitor Output](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/ESP32-Light-Debugging-EN.png)-->
 
@@ -160,7 +160,7 @@ CodeCraft はコードを更新し、新しいバージョンを生成します�
 
 #### 2.2.3.1 プロジェクトの目的
 
-この例では、Grove Beginner Kit を使用してボタン制御の LED プロジェクトを作成する方法を説明します。オンボードボタンで LED を制御し、ボタンが押されているときは LED が点灯し、離したときは消灯します。また、プログラムはシリアル出力を通じてボタンの状態をリアルタイムに出力します。押されているときは “Pressed”、離されているときは “Released” を送信します。
+この例では、Grove Beginner Kit を使用してボタン制御の LED プロジェクトを作成する方法を説明します。オンボードボタンで LED を制御し、ボタンが押されているときは LED が点灯し、離したときは消灯します。また、プログラムはシリアル出力を通じてボタンの状態をリアルタイムに出力します。押されているときは “Pressed”、離したときは “Released” を送信します。
 
 <!--![Grove Beginner Kit Button Control Illustration](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/图片路径待替换.png)-->
 
@@ -172,8 +172,8 @@ CodeCraft はコードを更新し、新しいバージョンを生成します�
 
 > Grove Beginner Kit を使って「ボタン制御 LED スイッチ」を作成してください。要件：
 > 1. オンボードボタンでオンボード LED を制御する。
-> 2. ボタンが押されたときに LED を点灯させる。
-> 3. ボタンが離されたときに LED を消灯させる。
+> 2. ボタンが押されたときに LED を点灯する。
+> 3. ボタンが離されたときに LED を消灯する。
 > 4. シリアル経由でボタンの状態をリアルタイムに出力する。
 > 5. ボタンが押されたときに “Pressed” を送信する。
 > 6. ボタンが離されたときに “Released” を送信する。
@@ -189,9 +189,9 @@ CodeCraft はコードを更新し、新しいバージョンを生成します�
 - Windows では、まず Grove Beginner Kit のドライバをインストールする必要があります。そうしないと、デバイスやシリアルポートが認識されない場合があります。  
 - macOS では、通常追加のドライバは不要です。
 
-![Grove Beginner Kit Windows Driver Tip 1](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Beginner-Kit-driver-download-tips-EN.png)
+![Grove Beginner Kit Windows ドライバのヒント 1](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Beginner-Kit-driver-download-tips-EN.png)
 
-![Grove Beginner Kit Windows Driver Tip 2](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/beginner-kit-driver-EN.png)
+![Grove Beginner Kit Windows ドライバのヒント 2](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/beginner-kit-driver-EN.png)
 
 1. Grove Beginner Kit を USB でコンピュータに接続します。  
 2. CodeCraft で正しいデバイスとシリアルポートを選択します。  
@@ -199,9 +199,9 @@ CodeCraft はコードを更新し、新しいバージョンを生成します�
 4. アップロードが完了するまで待ちます。  
 5. オンボードボタンを押したり離したりして、LED の動作を観察します。  
 6. シリアルモニタを開き、“Pressed” と “Released” が表示されることを確認します。  
-   （注意：コード内のボーレートがデバッガツールと一致していることを確認してください。）
+   （注：コード内のボーレートがデバッガツールと一致していることを確認してください。）
 
-![Grove Beginner Kit Serial Monitor Output](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Beginner-Kit-Serial-Debugger-EN.png)
+![Grove Beginner Kit シリアルモニタ出力](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/2-creation-and-platform/Beginner-Kit-Serial-Debugger-EN.png)
 
 ---
 
@@ -221,7 +221,7 @@ CodeCraft はコードを更新し、新しいバージョンを生成します�
 A: 使用している USB ケーブルがデータ通信に対応しているか確認し、開発ボードが正しい書き込みモードになっていることを確認してください。
 
 **Q: コンパイルエラーが発生した場合はどうすればよいですか？**  
-A: ワークスペースのデバッグ情報を確認し、ボーレート、ハードウェアモデル、センサ設定が正しいことを確認してください。
+A: ワークスペースのデバッグ情報を確認し、ボーレート、ハードウェアモデル、センサー構成が正しいことを確認してください。
 
 **Q: さらに多くのプロジェクト例はどこで見つけられますか？**  
-A: SenseCraft AI Application Gallery（https://sensecraft.seeed.cc/ai/application）にアクセスしてください。
+A: SenseCraft AI Application Gallery をご覧ください: [https://sensecraft.seeed.cc/ai/application](https://sensecraft.seeed.cc/ai/application?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_app_square)

@@ -5,7 +5,7 @@ keywords:
   - reCamera
   - RTSP
   - WebRTC
-slug: /rtsp_to_webrtc_with_recamera_bak
+slug: /rtsp_to_webrtc_with_recamera
 sku: 102991897, 100029708, 108990120
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/test.gif
 sidebar_position: 15
@@ -14,7 +14,7 @@ last_update:
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
 updatedAt: '2026-06-15'
-url: https://wiki.seeedstudio.com/ja/reCamera/reCamera_Basic/application/rtsp_to_webrtc_with_recamera_bak/
+url: https://wiki.seeedstudio.com/ja/reCamera/reCamera_Basic/application/rtsp_to_webrtc_with_recamera/
 ---
 
 # reCamera を用いた RTSP から WebRTC へのリアルタイム動画配信

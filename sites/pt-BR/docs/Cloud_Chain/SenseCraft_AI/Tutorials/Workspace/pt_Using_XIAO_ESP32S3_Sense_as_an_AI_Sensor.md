@@ -14,7 +14,7 @@ updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/tutorials/sensecraft-ai-output-libraries-xiao/
 ---
 
-# Usando XIAO ESP32S3 Sense como um Sensor de IA com SenseCraft AI
+# Usando o XIAO ESP32S3 Sense como um Sensor de IA com SenseCraft AI
 
 Este wiki fornece um guia passo a passo sobre como configurar a saída de um modelo no SenseCraft AI e usar o XIAO ESP32S3 Sense como um sensor de IA. Seguindo estas instruções, você aprenderá como conectar o XIAO ESP32S3 Sense ao seu computador, selecionar o método de saída apropriado e obter os dados do modelo usando diferentes protocolos de comunicação, como UART, I2C e SPI.
 
@@ -45,9 +45,9 @@ Antes de continuar, certifique-se de que você tem o seguinte:
   </table>
 </div>
 
-## Etapa 1. Acessar o Workspace do XIAO ESP32S3 Sense e conectar o dispositivo
+## Etapa 1. Acesse o Workspace do XIAO ESP32S3 Sense e conecte o dispositivo
 
-Acesse o workspace do XIAO ESP32S3 Sense via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, ou use o [link direto para o workspace](https://sensecraft.seeed.cc/ai/device/local/32).
+Acesse o workspace do XIAO ESP32S3 Sense via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, ou use o [link direto para o workspace](https://sensecraft.seeed.cc/ai/device/local/32).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -55,20 +55,20 @@ Usando o cabo USB-C, conecte sua placa XIAO ESP32S3 Sense ao computador. Depois 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
 
-## Etapa 2. Certificar-se de que um Modelo está Carregado no XIAO ESP32S3 Sense
+## Etapa 2. Certifique-se de que um Modelo está Carregado no XIAO ESP32S3 Sense
 
-Antes de continuar, certifique-se de que sua placa XIAO ESP32S3 Sense tenha um modelo treinado carregado. Se você ainda não carregou um modelo, consulte a documentação do SenseCraft AI sobre como treinar e implantar modelos no seu dispositivo.
+Antes de continuar, verifique se a sua placa XIAO ESP32S3 Sense tem um modelo treinado carregado. Se você ainda não carregou um modelo, consulte a documentação do SenseCraft AI sobre como treinar e implantar modelos no seu dispositivo.
 
 - [Usando um modelo para XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/pt-br/sensecraft_ai_pretrained_models_for_xiao/)
 
-Se você quiser usar seu próprio modelo treinado, pode consultar os dois Wikis a seguir.
+Se você quiser usar o seu próprio modelo treinado, pode consultar os dois Wikis a seguir.
 
 - [Tipo de treinamento - Classificação](https://wiki.seeedstudio.com/pt-br/sensecraft_ai_training_classification/)
 - [Tipo de treinamento - Detecção de Objetos](https://wiki.seeedstudio.com/pt-br/sensecraft_ai_training_object_detection/)
 
-## Etapa 3. Preparar o meio e o programa que você deseja usar
+## Etapa 3. Prepare o método e o programa que você deseja usar
 
-O XIAO oferece suporte à saída dos resultados do modelo via UART, IIC ou SPI; você pode escolher como deseja enviar os resultados de acordo com a situação real.
+O XIAO suporta a saída dos resultados do modelo via UART, IIC ou SPI; você pode escolher como deseja enviar os resultados de acordo com a situação real.
 
 ### Opção 1. Comunicação UART
 
@@ -464,7 +464,7 @@ Se tudo correr bem, você verá a mensagem de saída do resultado do modelo como
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/72.png" style={{width:1000, height:'auto'}}/></div>
 
-## Etapa 4: Carregar o código e executar
+## Etapa 4: Envie o código e execute
 
 Abra o código de exemplo apropriado na IDE do Arduino com base no protocolo de comunicação escolhido. Verifique e envie o código para a placa XIAO receptora. Abra o monitor serial na IDE do Arduino para visualizar os dados do modelo recebidos.
 
@@ -476,13 +476,13 @@ Seguindo este guia passo a passo, você configurou com sucesso a saída de um mo
 
 Lembre-se de consultar o código de exemplo fornecido e fazer as modificações necessárias com base na sua configuração específica e na escolha do protocolo de comunicação.
 
-Se você encontrar algum problema ou tiver mais perguntas, consulte a documentação da Seeed Studio ou peça ajuda nos fóruns da comunidade.
+Se você encontrar algum problema ou tiver mais dúvidas, consulte a documentação da Seeed Studio ou peça ajuda nos fóruns da comunidade.
 
 Boas medições com o seu XIAO ESP32S3 Sense e SenseCraft AI!
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

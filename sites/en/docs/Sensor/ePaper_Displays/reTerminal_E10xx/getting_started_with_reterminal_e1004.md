@@ -16,7 +16,7 @@ last_update:
   date: 4/24/2026
   author: Citric
 createdAt: '2026-01-29'
-updatedAt: '2026-06-16'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/
 ---
 import Tabs from '@theme/Tabs';
@@ -44,7 +44,7 @@ If you want to quickly preview project results or try the basic demo firmware be
 
 ## Introduction
 
-reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visualization.
+reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant via [ESPHome](/reterminal_e10xx_with_esphome), Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visualization. ESPHome **2026.7.0 or later** is required for the E1004 display driver.
 
 ### Features
 

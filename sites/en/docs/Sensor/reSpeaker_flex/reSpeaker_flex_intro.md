@@ -11,7 +11,7 @@ last_update:
   date: 03/26/2026
   author: Kasun Thushara
 createdAt: '2026-03-26'
-updatedAt: '2026-07-23'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/respeaker_flex_introduction/
 ---
 # Getting Started with reSpeaker Flex
@@ -291,18 +291,16 @@ import TabItem from '@theme/TabItem';
 <TabItem value="USB" label="USB">
 
 The USB firmware is designed for use with host operating systems such as **Windows, Linux, and macOS** when communicating through the USB hardware interface.
-Two firmware variants are available: **respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin**, which provides 2-channel audio, and **respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin**, which provides 6-channel audio. Both firmware versions operate at a 16 kHz sampling rate with 32-bit depth.
-
 You can explore these firmware files in this link
 
 | Firmware                         | Channels | Notes                                                   |
 |----------------------------------|----------|---------------------------------------------------------|
 | respeaker_flex_ua-io16-6ch-cir.bin | 6 Channels | 16 kHz, 6 channels using circular mic array             |
 | respeaker_flex_ua-io16-6ch-lin.bin | 6 Channels | 16 kHz, 6 channels using linear mic array               |
-| respeaker_flex_ua-io16-cir.bin     | 2 Channels | 16 kHz, stereo output using circular mic array          |
-| respeaker_flex_ua-io16-lin.bin     | 2 Channels | 16 kHz, stereo output using linear mic array            |
-| respeaker_flex_ua-io48-cir.bin     | 2 Channels | 48 kHz, stereo output using circular mic array          |
-| respeaker_flex_ua-io48-lin.bin     | 2 Channels | 48 kHz, stereo output using linear mic array            |
+| respeaker_flex_ua-io16-cir.bin     | 2 Channels | 16 kHz, 2 channels output using circular mic array          |
+| respeaker_flex_ua-io16-lin.bin     | 2 Channels | 16 kHz, 2 channels output using linear mic array            |
+| respeaker_flex_ua-io48-cir.bin     | 2 Channels | 48 kHz, 2 channels output using circular mic array          |
+| respeaker_flex_ua-io48-lin.bin     | 2 Channels | 48 kHz, 2 channels output using linear mic array            |
 
 Connect the reSpeaker Flex to your PC via the USB cable. Note that you need to use the XMOS USB-C port(close to RST Button) to flash XMOS’s firmware.
 

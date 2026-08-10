@@ -12,13 +12,13 @@ last_update:
   date: 7/13/2026
   author: Michelle Huang
 createdAt: '2026-07-13'
-updatedAt: '2026-07-16'
+updatedAt: '2026-07-24'
 url: https://wiki.seeedstudio.com/pt-br/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
-Quando o dispositivo estiver nos estados abaixo, não reinicie nem desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
+Quando o dispositivo estiver nos estados abaixo, não reinicie manualmente nem o desligue. Caso contrário, o dispositivo pode ficar inutilizável.
 1. Não tiver concluído o processo de transmissão de mensagem
 2. Estiver sendo configurado
 :::
@@ -117,7 +117,7 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
     <th colspan="1">Status do Dispositivo</th>
   </tr>
   <tr>
-    <td rowspan="4">🟢verde</td>
+    <td rowspan="4">🟢green</td>
     <td>Constante</td>
     <td>Dispositivo ligando</td>
   </tr>
@@ -134,12 +134,12 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
     <td>Totalmente carregado</td>
   </tr>
   <tr>
-    <td>🔴vermelho</td>
+    <td>🔴Red</td>
     <td>Piscando</td>
     <td>Baixa energia</td>
   </tr>
     <tr>
-    <td>⚪️branco</td>
+    <td>⚪️white</td>
     <td>Constante</td>
     <td>Modo DFU/Modo Bootloader</td>
   </tr>
@@ -181,7 +181,7 @@ Por favor, `não use OTA` para atualizar o firmware, isso pode fazer com que o d
 :::
 #### Etapa 1: Entrar no modo DFU
 
-Entre em DFU via web flasher. Se isso falhar muitas vezes, entre em DFU manualmente.
+Entre em DFU via o web flasher. Se isso falhar muitas vezes, entre em DFU manualmente.
 
 <Tabs>
 <TabItem value="method1" label="Via Web Flasher">
@@ -192,7 +192,7 @@ Conecte o dispositivo ao seu PC, selecione o dispositivo como `SenseCAP Mesh Tra
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/SelectX1111.png" alt="pir" width={800} height="auto" /></p>
 
-Clique em `Enter DFU Mode`, haverá uma porta serial chamada `X1 xxx` exibida. Clique e conecte-a. 
+Clique em `Enter DFU Mode`, será exibida uma porta serial chamada `X1 xxx`. Clique e conecte-a. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/SerialSelectionX111.png" alt="pir" width={800} height="auto" /></p>
 
@@ -236,7 +236,7 @@ Copie o arquivo UF2 para a unidade DFU. O firmware deve ser gravado após o arqu
 
 ### Configurar GPS
 
-Certifique-se de que o GPS esteja ativado. Você pode ajustar o intervalo de atualização e o intervalo de transmissão para obter informações de localização mais atualizadas.
+Defina o GPS como habilitado. Você pode ajustar o intervalo de atualização e o intervalo de transmissão para obter informações de localização mais atualizadas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
@@ -251,7 +251,7 @@ Se você quiser enviar mensagens de texto e se comunicar com outros nós no webs
 
   Etapa 1: Abrir o Website
 
-    [Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para ir ao Website.
+    [Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para ir para o Website.
 
   Etapa 2: Adicionar o novo dispositivo 
 
@@ -259,7 +259,7 @@ Se você quiser enviar mensagens de texto e se comunicar com outros nós no webs
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    Há duas maneiras de conectar. Você pode escolher o método que preferir.
+    Há duas maneiras de conectar. Você pode escolher o método de sua preferência.
 
 <Tabs>
 
@@ -486,7 +486,7 @@ O dispositivo irá reiniciar repetidamente, e a porta serial irá conectar e des
 
 **Solução:**
 
-- Etapa 1: tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte o cabo de carregamento **rapidamente** duas vezes
+- Etapa 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte o cabo de carregamento **rapidamente** duas vezes
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -505,20 +505,20 @@ Para entrar no modo DFU com sucesso, você precisa realizar esta operação rapi
 
 <Tabs>
 
-<TabItem value="m2" label="Instalar a partir do Adafruit-nrfutil">
+<TabItem value="m2" label="Instalar a partir de Adafruit-nrfutil">
 
 
 - [Download do bootloader](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/mesh_tracker_x1_bootloader-0.10.0-13.zip)
 
 :::danger note
-Ao gravar o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
+Ao gravar o bootloader, certifique‑se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
 :::
 
 **Etapa 1: Instalação do Adafruit-nrfutil**
 
 Para usuários do Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela que aparecer e clique em "Enter". Isso abrirá a linha de comando. 
 
-Para usuários de Mac, pressione a tecla "Command" e a tecla "Space" para abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
+Para usuários de MAC, pressione a tecla "Command" e a tecla "Space" para abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
 
 **Pré‑requisitos**
 
@@ -535,7 +535,7 @@ python --version
 python -m pip --version
 ```
 
-Então “Python xxx” e “pip xxx” devem aparecer. Se não aparecerem, tente instalar o Python novamente.
+Então "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o Python novamente.
 
 Este é o método recomendado para instalar a versão mais recente:
 
@@ -561,7 +561,7 @@ Para usuários do Windows, talvez seja necessário adicionar o caminho manualmen
 
 Conecte seu dispositivo ao PC e verifique o número da porta.
 
-Para usuários do Windows, abra o gerenciador de dispositivos e vá até `port`; o número de porta que aparecer após a conexão do dispositivo é o número da porta do dispositivo.
+Para usuários do Windows, abra o gerenciador de dispositivos e vá até `port`; o número de porta que apareceu após a conexão do dispositivo é o número da porta do dispositivo.
 
 Para usuários de Mac, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
@@ -579,11 +579,11 @@ No terminal ou prompt de comando, navegue até o diretório onde você baixou o 
 adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-Altere COMXX para o seu número de COM. Por exemplo, se o seu dispositivo estiver em com6, altere o comando para:
+Altere COMXX para o número da sua porta COM. Por exemplo, se o seu dispositivo estiver na com6, altere o comando para:
 
 `adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- Alguns dispositivos irão alterar o número da porta depois que você inserir este comando. Portanto, se a instalação falhar, verifique o número da porta novamente.
+ Alguns dispositivos irão alterar o número da porta após você inserir este comando. Portanto, se a instalação falhar, verifique novamente o número da porta.
 
 - **Para outros**:
 
@@ -607,7 +607,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Observação: Os comandos a seguir usam `python3`; no entanto, se você estiver no Windows, talvez seja necessário alterá-lo para `python`, pois a instalação do Python 3.x no Windows ainda usa o nome python.exe
+Observação: Os comandos a seguir usam `python3`; no entanto, se você estiver no Windows, talvez seja necessário alterá-lo para `python`, já que a instalação do Python 3.x no Windows ainda usa o nome python.exe
 
 Para instalar no espaço do usuário no seu diretório pessoal:
 
@@ -630,7 +630,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-Para gerar um binário executável independente da ferramenta (Windows e MacOS), execute estes comandos:
+Para gerar um binário executável autônomo da ferramenta (Windows e MacOS), execute estes comandos:
 
 ```
 pip3 install pyinstaller
@@ -647,12 +647,12 @@ Copie ou mova-o para outro lugar para sua conveniência, como um diretório no s
 
 Conecte seu dispositivo ao PC e verifique o número da porta.
 
-Para usuários do Windows, abra o gerenciador de dispositivos e vá para "port", o número da porta que aparecer após a conexão do dispositivo é o número da porta do dispositivo.
+Para usuários de Windows, abra o gerenciador de dispositivos e vá para "port", o número de porta que aparecer após a conexão do dispositivo é o número da porta do dispositivo.
 
 Para usuários de Mac, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-Para usuários do Windows, por exemplo:
+Para usuários de Windows, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
 **Etapa 3: Grave o bootloader**
@@ -665,7 +665,7 @@ No terminal ou prompt de comando, navegue até o diretório onde você baixou o 
 adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-Altere COMXX para o seu número de COM. Por exemplo, se o seu dispositivo estiver em com6, altere o comando para:
+Altere COMXX para o seu número de COM. Por exemplo, se o seu dispositivo estiver na com6, altere o comando para:
 
 `adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
@@ -698,7 +698,7 @@ Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https
 
 - mantenha pressionado o botão do dispositivo e conecte o cabo de carregamento. Depois que um disco aparecer no seu PC, você poderá ver a porta serial.
 
-- Se ainda assim não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada, depois conecte o cabo de carregamento e tente pareá-lo novamente.
+- Se ainda não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada, depois conecte o cabo de carregamento e tente pareá-lo novamente.
 
 **4) Se nenhuma das etapas acima funcionar, entre em contato com o suporte técnico: support@sensecapmx.com**
 
@@ -725,7 +725,7 @@ Se você quiser restaurar as configurações padrão, pode fazer uma restauraç�
 
 ### Falha em Mensagem Direta
 
-#### Redefinir NodeDB
+#### Resetar NodeDB
 
 NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, isso pode ser porque o seu nodeDB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
 
@@ -735,7 +735,7 @@ Abra o aplicativo e conecte-se ao dispositivo de destino. Vá para **Settings**-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
 
-#### Trocar Informações do Usuário
+#### Trocar Informações de Usuário
 
 Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e o "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, poderá solicitá-los manualmente a trocar informações no aplicativo.
 
@@ -761,25 +761,26 @@ Após a regeneração da chave, outros dispositivos precisam se reconectar ao n�
 
       Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
-## Recursos
 
-<JetsonLeadQuote
-  buttonText="Request Quote of Customization"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="Request Quote for XIAO"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
+## Suporte Técnico & Discussão sobre o Produto
 
-## Suporte Técnico & Discussão de Produto
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
-
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>

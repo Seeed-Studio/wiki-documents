@@ -11,10 +11,10 @@ image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_V
 slug: /recamera_pro_ha_sound_alert
 sidebar_position: 2
 last_update:
-  date: 2026-07-27T00:00:00.000Z
+  date: 2026-07-27
   author: Sizhao zhou
-createdAt: "2026-07-27"
-updatedAt: "2026-07-27"
+createdAt: '2026-07-27'
+updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/recamera_pro_ha_sound_alert/
 ---
 

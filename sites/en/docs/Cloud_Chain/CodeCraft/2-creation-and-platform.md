@@ -13,7 +13,7 @@ last_update:
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/codecraft/creation-and-platform/
 createdAt: '2026-06-29'
-updatedAt: '2026-06-29'
+updatedAt: '2026-08-04'
 ---
 
 # CodeCraft Creation & Platform
@@ -28,7 +28,7 @@ CodeCraft is a web-based conversational programming platform. You do not need to
 
 The basic workflow is as follows:
 
-1. Visit https://codecraft.seeed.cc
+1. Visit [https://codecraft.seeed.cc](https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home)
 2. Log in to your account
 3. Select your development board
 4. Describe the functionality you want to implement
@@ -224,4 +224,4 @@ A: Please check whether the USB cable supports data transmission and ensure the 
 A: Check the workspace debugging information and ensure baud rate, hardware model, and sensor configuration are correct.
 
 **Q: Where can I find more project examples?**  
-A: Visit the SenseCraft AI Application Gallery: https://sensecraft.seeed.cc/ai/application
+A: Visit the SenseCraft AI Application Gallery: [https://sensecraft.seeed.cc/ai/application](https://sensecraft.seeed.cc/ai/application?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_app_square)

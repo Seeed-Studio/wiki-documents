@@ -8,7 +8,7 @@ keywords:
   - TPU 推理
   - INT8 量化
   - UDP 流式传输
-slug: /recamera_hand_gesture_bak
+slug: /recamera_hand_gesture
 sku: 102991897, 100029708, 108990120
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 18
@@ -17,7 +17,7 @@ last_update:
   author: Xuanjun Zhu
 createdAt: '2026-06-26'
 updatedAt: '2026-06-26'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_hand_gesture_bak/
+url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_hand_gesture/
 ---
 
 # 将 MediaPipe 手势识别模型移植到 reCamera

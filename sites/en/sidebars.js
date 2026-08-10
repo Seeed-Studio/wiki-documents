@@ -2171,6 +2171,30 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/respeaker_clip_sensecraft_voice_sdk',
+            {
+              type: 'category',
+              label: 'Firmware SDK',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_firmware_quick_start',
+                  label: 'Getting Started',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_firmware_development_guide',
+                  label: 'Development Guide',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_customization_at_command',
+                  label: 'Custom AT Command',
+                },
+              ],
+            },
           ],
         },
         {
@@ -2227,6 +2251,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe',
+                'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe_memory',
               ],
             },
           ],
@@ -4088,6 +4113,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/industrial_vision_monitoring_on_industrial',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/Streaming_Vision_Agent_on_Jetson',
               ]
             },
             // Generative AI
@@ -4201,6 +4227,70 @@ const sidebars = {
               ]
             },
           ]
+        },
+        // JetPack 7.2
+        {
+          type: 'category',
+          label: 'JetPack 7.2',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Edge/NVIDIA_Jetson/JetPack_7_2/JetPack_7_2_Overview',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Flash & OTA',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/JetPack72_Deep_Dive_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Flashing_OTA/Flash_and_OTA_JetPack_7_2',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Migration/JetPack_6_to_7_Migration_Playbook',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/JetPack_7_2_Unified_Platform_ISO_SBSA',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/JetPack_7_2_MAXN_SUPER_and_MIG',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Kernel & Multimedia',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Drivers/JetPack72_AX210_AX200_WiFi_Setup_Guide_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Drivers/JetPack_7_2_Camera_and_Multimedia_Compatibility',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Agentic AI & Skills',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Agentic_AI/Rapid_Prototyping_on_Jetson_with_NVIDIA_Skills_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Agentic_AI/Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor_bk',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Memory Optimization',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/JetPack_7_2_Memory_Optimization',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Yocto',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/Build_and_Flash_Yocto_for_reComputer_Super_bk',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'AI Deployment & Applications',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Deploy_TensorRT_Edge-LLM_on_Jetpack7.2',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/AI_Inference/industrial_vision_monitoring_on_industrial_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/AI_Inference/JetPack_7_2_DeepStream',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Application/Deploy_Full_Weight_GR00T_N1_7_TensorRT_on_AGX_Orin',
+              ],
+            },
+          ],
         },
         // Seeed Jetson DevelopTool
         {
@@ -4506,6 +4596,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_isaacsim',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_control_mit'
               ]
             }
           ]
@@ -4553,6 +4644,11 @@ const sidebars = {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/development_cases/home_assistant',
                   label: 'Home Assistant Integration',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/reachymini_voice_control_soarm',
+                  label: 'Reachy Mini Voice Control for SO-ARM',
                 },
               ],
             },
@@ -5114,6 +5210,7 @@ const sidebars = {
                 'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov5',
                 'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8',
                 'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8_pose',
+                'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov26',
               ]
             },
           ],

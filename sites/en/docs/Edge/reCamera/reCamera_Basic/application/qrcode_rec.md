@@ -7,7 +7,7 @@ keywords:
   - QR Code Recognition
   - Real-Time Recognition
 image: https://files.seeedstudio.com/wiki/reCamera/recamera-qrcode-udp-show.gif
-slug: /recamera_qrcode_udp_bak
+slug: /recamera_qrcode_udp
 sku: 102991897, 100029708, 108990120
 sidebar_position: 17
 last_update:
@@ -15,7 +15,7 @@ last_update:
   author: QiYao Lin
 createdAt: '2026-06-15'
 updatedAt: '2026-07-08'
-url: https://wiki.seeedstudio.com/recamera_qrcode_udp_bak/
+url: https://wiki.seeedstudio.com/recamera_qrcode_udp/
 ---
 
 # Real-Time QR Code Recognition on reCamera

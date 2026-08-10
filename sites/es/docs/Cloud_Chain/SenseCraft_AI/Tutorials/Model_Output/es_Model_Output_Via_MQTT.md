@@ -44,9 +44,9 @@ Antes de comenzar, asegúrate de contar con lo siguiente:
   </table>
 </div>
 
-## Paso 1. Acceder al espacio de trabajo de XIAO ESP32S3 Sense y conectar el dispositivo
+## Paso 1. Accede al espacio de trabajo de XIAO ESP32S3 Sense y conecta el dispositivo
 
-Accede al espacio de trabajo de XIAO ESP32S3 Sense a través de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, o utiliza el [enlace directo al espacio de trabajo](https://sensecraft.seeed.cc/ai/device/local/32).
+Accede al espacio de trabajo de XIAO ESP32S3 Sense a través de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, o utiliza el [enlace directo al espacio de trabajo](https://sensecraft.seeed.cc/ai/device/local/32).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -54,24 +54,24 @@ Usando el cable USB-C, conecta tu placa XIAO ESP32S3 Sense a tu ordenador. Una v
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
 
-## Paso 2. Asegurarse de que hay un modelo cargado en la XIAO ESP32S3 Sense
+## Paso 2. Asegúrate de que haya un modelo cargado en la XIAO ESP32S3 Sense
 
-Antes de continuar, asegúrate de que tu placa XIAO ESP32S3 Sense tenga cargado un modelo entrenado. Si aún no has cargado un modelo, consulta la documentación de SenseCraft AI sobre cómo entrenar y desplegar modelos en tu dispositivo.
+Antes de continuar, asegúrate de que tu placa XIAO ESP32S3 Sense tenga un modelo entrenado cargado. Si aún no has cargado un modelo, consulta la documentación de SenseCraft AI sobre cómo entrenar y desplegar modelos en tu dispositivo.
 
 - [Uso de un modelo para XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/es/sensecraft_ai_pretrained_models_for_xiao/)
 
-Si quieres usar tu propio modelo entrenado, puedes consultar los dos wikis siguientes.
+Si deseas usar tu propio modelo entrenado, puedes consultar los siguientes dos wikis.
 
 - [Tipo de entrenamiento - Clasificación](https://wiki.seeedstudio.com/es/sensecraft_ai_training_classification/)
 - [Tipo de entrenamiento - Detección de objetos](https://wiki.seeedstudio.com/es/sensecraft_ai_training_object_detection/)
 
-## Paso 3. Configurar la salida MQTT
+## Paso 3. Configura la salida MQTT
 
 En la barra lateral izquierda de la página del espacio de trabajo, haz clic en la opción **Output**. De las opciones de salida disponibles, selecciona **MQTT** para acceder a los ajustes de configuración de MQTT.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/56.png" style={{width:1000, height:'auto'}}/></div>
 
-## Paso 4. Configurar MQTT
+## Paso 4. Configura MQTT
 
 Haz clic en el botón **Configuration** en la parte inferior de la sección de salida MQTT. Aparecerá una ventana de configuración que te pedirá introducir la siguiente información:
 
@@ -101,7 +101,7 @@ Si todo está configurado correctamente, deberías poder ver la siguiente inform
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/60.png" style={{width:1000, height:'auto'}}/></div>
 
-## Paso 5. Configurar el cliente MQTT (MQTTX)
+## Paso 5. Configura el cliente MQTT (MQTTX)
 
 Inicia la [aplicación MQTTX](https://mqttx.app/) en tu ordenador.
 
@@ -115,7 +115,7 @@ Crea una nueva conexión con los siguientes ajustes:
 
 Haz clic en el botón **Connect** para establecer una conexión con el broker MQTT.
 
-## Paso 6. Suscribirse al tema MQTT
+## Paso 6. Suscríbete al tema MQTT
 
 En la aplicación MQTTX, haz clic en el botón **New Subscribe** para crear una nueva suscripción. Introduce el tema `sscma/v0/#` y haz clic en **Subscribe**.
 
@@ -123,7 +123,7 @@ En la aplicación MQTTX, haz clic en el botón **New Subscribe** para crear una 
 
 Este tema se utilizará para recibir la información de inferencia del modelo desde tu XIAO ESP32S3 Sense.
 
-## Paso 7. Enviar el comando para obtener los resultados de inferencia del modelo
+## Paso 7. Envía el comando para obtener los resultados de inferencia del modelo
 
 En la aplicación MQTTX, navega al canal de tema del dispositivo. Puedes obtenerlo haciendo clic en el botón **Query device's topic** en la página MQTT de SenseCraft AI.
 
@@ -132,7 +132,7 @@ En la aplicación MQTTX, navega al canal de tema del dispositivo. Puedes obtener
 Envía el comando `AT+INVOKE=-1,0` para activar la inferencia del modelo en tu XIAO ESP32S3 Sense.
 
 :::tip
-Por favor asegúrate de que estás enviando al tema correcto.
+Por favor asegúrate de que estás enviando el tema correcto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/62.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -169,7 +169,7 @@ Para decodificar la imagen codificada en base64:
 
 4. Haz clic en el botón **Decode Base64 to Image**.
 
-5. La imagen decodificada aparecerá debajo del botón, y podrás verla o descargarla.
+5. La imagen decodificada aparecerá debajo del botón y podrás verla o descargarla.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/64.png" style={{width:1000, height:'auto'}}/></div>
 

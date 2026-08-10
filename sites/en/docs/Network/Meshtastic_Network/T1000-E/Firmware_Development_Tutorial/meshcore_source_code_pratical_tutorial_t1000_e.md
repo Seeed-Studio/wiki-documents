@@ -14,7 +14,7 @@ last_update:
   author: Michelle Huang
 url: https://wiki.seeedstudio.com/meshcore_source_code_pratical_tutorial_t1000_e/
 createdAt: '2026-03-27'
-updatedAt: '2026-04-02'
+updatedAt: '2026-07-31'
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -145,3 +145,26 @@ PLease follow the existing C++ style (per the .clang-format)
 - #define constants in ALL_CAPS
 - Keep lines < ~100 characters when reasonable
 (But consistency with existing code is more important than strict rules)
+
+## Tech Support & Product Discussion
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

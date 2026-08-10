@@ -43,6 +43,8 @@ reComputer R1225 支持 12&#126;24V 的额定 AC 电压或 9&#126;36V 的 DC 电
 
 ## 访问 SenseCAP Gateway OS
 
+**SenseCAP Gateway OS** 是一款面向工业室内场景设计的多协议物联网网关操作系统。该系统基于 OpenWrt 构建，提供标准化的软件基础，涵盖三项核心能力：LoRaWAN 网关功能、工业总线数据采集以及楼宇合规报告。您还可以通过[**此处**](https://github.com/Seeed-Studio/SenseCAP-Gateway-OS)访问我们在 GitHub 上发布的源代码。
+
 ### 通过路由器访问
 
 - 步骤 1：将 R1225 接入以太网网线，并将电脑连接到同一台路由器

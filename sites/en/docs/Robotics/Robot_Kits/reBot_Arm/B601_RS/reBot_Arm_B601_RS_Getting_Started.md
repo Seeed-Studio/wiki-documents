@@ -18,9 +18,14 @@ last_update:
   date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-03'
 url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 ---
+
+import '/src/css/rebot-wiki-style.css';
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Getting Started with reBot Arm B601-RS
 
@@ -127,26 +132,32 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 
 1. Install Miniforge and create a virtual environment to avoid conflicts with other environment packages that could cause demo failures.
 
-Ubuntu\Jetson\Raspberry Pi:
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\Jetson\Raspberry Pi">
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
+</TabItem>
+<TabItem value="macOS" label="macOS">
 
-or macOS:
 ```bash
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
 bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
-or Windows:
+</TabItem>
+<TabItem value="windows" label="windows">
 
 Open the Miniforge Release page in your browser, find the latest version of `Miniforge3-Windows-x86_64.exe` and click to download:
 
 ```text
 https://github.com/conda-forge/miniforge/releases
 ```
+
+</TabItem>
+</Tabs>
 
 2. Create a Python 3.12 virtual environment:
 
@@ -197,7 +208,8 @@ pip install motorbridge
 
 Get the PCAN-USB device working on the CAN bus at 1Mbps for robotic arm communication.
 
-Ubuntu\Jetson\Raspberry Pi:
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\Raspberry Pi">
 
 ```bash
 # The kit includes PCAN-USB, which should normally show up as can0 or can1
@@ -206,11 +218,131 @@ ip -br link
 
 # If can0 appears, set the bitrate
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-or macOS:
+</TabItem>
+
+<TabItem value="Jetson" label="Jetson">
+
+Download the file: [peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
+
+- Remove brltty
+On Jetson, brltty may occupy the USB serial port used by the leader. Remove it first:
+```bash
+sudo apt remove -y brltty
+```
+
+- Install Dependencies
+```bash
+sudo apt update
+sudo apt install -y \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    libpopt-dev \
+    can-utils \
+    ethtool \
+    nvidia-l4t-kernel-headers
+```
+Verify that the current kernel headers directory exists:
+```bash
+ls -l /lib/modules/$(uname -r)/build
+```
+
+- Compile the PEAK SocketCAN Driver
+Download and extract PEAK Linux Driver 9.2.0, then enter the source directory:
+```bash
+tar -xvf peak-linux-driver-9.2.0.tar.gz
+cd ~/peak-linux-driver-9.2.0
+```
+Clean previous build artifacts:
+```bash
+make clean
+```
+Compile in netdev mode:
+```bash
+make netdev
+```
+Netdev mode registers PCAN-USB as a Linux SocketCAN network interface.
+Do **not** use plain `make`. Plain `make` builds chardev mode, while LeRobot and motorbridge-cli rely on SocketCAN interfaces.
+
+- Install and Load the Driver
+Install the driver:
+```bash
+sudo make install
+sudo depmod -a
+```
+Load the pcan kernel module:
+```bash
+sudo modprobe pcan
+```
+Enable automatic loading on boot:
+```bash
+echo pcan | sudo tee /etc/modules-load.d/pcan.conf
+```
+Confirm the driver is loaded:
+```bash
+ip -br link | grep can
+```
+Expected output:
+```
+can0             DOWN           <NOARP,ECHO>
+can1             DOWN           <NOARP,ECHO>
+.....
+```
+
+- Find which PCAN interface corresponds to your robotic arm
+```bash
+for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
+```
+Interfaces listed here are PEAK PCAN-USB devices, e.g.:
+```
+can2
+```
+
+- Persist the `pcan_refresh` command
+Linux environment variables do not survive reboot, and PCAN interface numbering may change. A more reliable approach is to permanently define a refresh function and run it after opening a terminal.
+
+Append the function to `~/.bashrc`:
+```bash
+grep -q '^pcan_refresh()' ~/.bashrc || cat >> ~/.bashrc <<'EOF'
+
+pcan_refresh() {
+    local iface
+    iface=$(sudo setup-pcan-if) || return 1
+    export PCAN_IF="$iface"
+    echo "PCAN_IF=$PCAN_IF"
+}
+EOF
+```
+```bash
+source ~/.bashrc
+```
+Run this after rebooting or re-plugging PCAN-USB:
+```bash
+pcan_refresh
+```
+On success, it outputs:
+```
+PCAN_IF=can1
+```
+Use `$PCAN_IF` in all subsequent commands instead of hardcoding `can1` or `can2`.
+
+```bash
+sudo modprobe peak_usb
+ip -br link
+
+# If $PCAN_IF appears, set the bitrate
+sudo ip link set $PCAN_IF down 2>/dev/null
+sudo ip link set $PCAN_IF type can bitrate 1000000 restart-ms 100
+sudo ip link set $PCAN_IF up
+```
+
+</TabItem>
+<TabItem value="macos" label="macos">
 
 If libPCBUSB.dylib cannot be loaded, install PCBUSB first:
 ```zsh
@@ -242,13 +374,22 @@ motorbridge-cli --help
 python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
 ```
 
-or Windows:
+</TabItem>
+<TabItem value="windows" label="windows">
 
 Please visit [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) to install the PCAN-USB driver.
+
+</TabItem>
+
+
+
+</Tabs>
 
 :::tip Attention
 If **PCAN-USB** is not detected in Device Manager after installing the driver, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
+
+
 
 <details>
 

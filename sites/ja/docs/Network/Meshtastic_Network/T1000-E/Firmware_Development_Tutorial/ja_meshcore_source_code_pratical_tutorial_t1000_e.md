@@ -1,9 +1,9 @@
 ---
-description: MeshCore ファームウェアのソースコード環境を構築し、T1000-E をコンパイルしてファームウェアを書き込むための実践チュートリアルです。
+description: MeshCore ファームウェアのソースコード環境をセットアップし、T1000-E をコンパイルしてファームウェアを書き込むための実践チュートリアルです。
 title: MeshCore ソースコード開発チュートリアル
 keywords:
   - MeshCore
-  - Source Code
+  - ソースコード
   - PlatformIO
   - T1000-E
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/MeshcoreDevelopment.png
@@ -35,7 +35,7 @@ VS Code の拡張機能マーケットプレイスで `PlatformIO` を検索し�
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image7.png)
 
-インストール後、通常は左側のツールバーにアリの形をしたアイコンが表示されます。
+インストール後、左側のツールバーにアリの形をしたアイコンが表示されます。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image8.png)
 
@@ -43,7 +43,7 @@ VS Code の拡張機能マーケットプレイスで `PlatformIO` を検索し�
 
 プロジェクトを配置したいフォルダを開きます。ターミナルでそのフォルダを開きます。[ここをクリック](https://github.com/meshcore-dev/MeshCore)してプロジェクトを git clone します。
 
-VSCode を開き、PlatformIO アイコンをクリックし、`select a folder` を選択します。クローンしたプロジェクトのフォルダを選択します。
+VSCode を開き、PlatformIO アイコンをクリックして `select a folder` を選択します。クローンしたプロジェクトのフォルダを選択します。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/pickfolder.png)
 
@@ -73,11 +73,11 @@ pio run -e t1000e_companion_radio_ble
 pio run -e t1000e_companion_radio_ble -t create_uf2
 ```
 
-デバイスのボタンを押し続けたまま、素早く 2 回充電ケーブルを接続すると、緑色の LED が点灯し続けます。ポップアップしたディスクに uf2 ファイルをドラッグします。uf2 ファイルは `.pio\build\t1000e_companion_radio_ble` にあります。
+デバイスボタンを押し続けたまま、充電ケーブルを素早く 2 回接続すると、緑色の LED が点灯し続けます。ポップアップしたディスクに uf2 ファイルをドラッグします。uf2 ファイルは `.pio\build\t1000e_companion_radio_ble` にあります。
 
 ### 例
 
-#### ユーザーライトの制御
+#### ユーザーライト制御
 
 この例では、ユーザーライトを常時点灯させる方法を示します。次のコードを `/examples/companion_radio/ui-new/ui-orig/UITask.cpp` にコピーします。
 
@@ -97,51 +97,74 @@ void UITask::userLedHandler() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000ELight.jpg" style={{width:900, height:'auto'}}/></div>
 
 
-コンパイルして、uf2 ファイルを T1000-E に書き込みます。
+これをコンパイルし、uf2 ファイルを T1000-E に書き込みます。
 
-## （上級）PR の送信
+## （上級）PR 提出
 
-MeshCore プロジェクトへの貢献をご検討いただきありがとうございます！どのように貢献できるでしょうか？
+MeshCore プロジェクトへの貢献をご検討いただきありがとうございます！どのように貢献できますか？
 **1. バグ報告**
 
-- Issues トラッカーを使用してください
-- わかりやすいタイトルを使用してください（例："Crash when calling begin() with invalid pin"）
-- 再現手順を正確に記述してください
-- 使用しているボード、IDE のバージョン、ライブラリのバージョン、および関連するコードスニペットを含めてください
-- 可能であれば、最小限かつ完全なサンプルスケッチを添付してください
+- Issues トラッカーを使用する
+- わかりやすいタイトルを付ける（例："Crash when calling begin() with invalid pin"）
+- 再現手順を正確に記述する
+- 使用しているボード、IDE バージョン、ライブラリバージョン、および関連するコードスニペットを含める
+- 可能であれば、最小限かつ完全なサンプルスケッチを添付する
 
-**2. 機能拡張／新機能の提案**
-- [Feature request] というプレフィックスを付けて issue を作成してください
-- ユースケースを説明してください → どのような問題が解決されますか？
-- 理想的な API ／挙動を記述してください（コード例があると非常に助かります）
-**3. コード変更の送信（Pull Request）**
+**2. 機能改善 / 新機能の提案**
+- [Feature request] というプレフィックスを付けて issue を作成する
+- ユースケースを説明する → どのような問題を解決しますか？
+- 理想的な API / 挙動を記述する（コード例があると非常に役立ちます）
+**3. コード変更の提出（Pull Request）**
 ### 小さな修正
-(誤字、コメント、サンプル、小さなバグ修正)
-→ 事前に issue を立てる必要はありません。Pull Request を直接作成してください。
+（誤字、コメント、サンプル、小さなバグ修正）
+→ 事前に issue を立てる必要はなく、そのまま pull request を作成してください
 
-### 大きな変更／新機能
-1. まず issue を作成してアイデアを議論します
-2. メンテナーから大まかな 👍 をもらいます
-3. 'dev' ブランチからリポジトリをフォークし、自分のブランチ（fix/xxx, feature/yyy, docs/whatever）を作成します
-4. 変更を加えます
-5. 必要に応じてサンプルを更新または追加します
-6. コード内のコメントを追加／更新します
-7. Pull Request を送信します
+### 大きな変更 / 新機能
+1. まず issue を作成してアイデアを議論する
+2. メンテナーから大まかな 👍 をもらう
+3. 'dev' ブランチからリポジトリを fork し、自分のブランチ（fix/xxx, feature/yyy, docs/whatever）を作成する
+4. 変更を加える
+5. 必要に応じてサンプルを更新または追加する
+6. コード内のコメントを追加 / 更新する
+7. Pull Request を送信する
 
-### Pull Request のガイドライン
-- 1 つの機能／修正につき 1 つの Pull Request（小さい PR の方がレビューしやすく、早くマージされます）
-- わかりやすいコミットメッセージを使用してください
-  Good: Fix I2C timeout handling on ESP32
-  Bad: update
-- 関連する issue があれば参照してください（Fixes #123, Closes #89 など）
-- 公開 API を変更した場合は、README.md と library.properties を更新してください
-- 新機能には examples/ ディレクトリ内のサンプルスケッチを含めてください
+### Pull Request ガイドライン
+- 1 つの機能 / 修正につき 1 つの pull request（小さい PR の方がレビューしやすく、早くなります）
+- 説明的なコミットメッセージを使用する
+  良い例: Fix I2C timeout handling on ESP32
+  悪い例: update
+- 関連する issue があれば参照する（Fixes #123, Closes #89 など）
+- 公開 API を変更した場合は、README.md と library.properties を更新する
+- 新機能には examples/ 内のサンプルスケッチを含めること
 ### コーディングスタイル
 .clang-format に従い、既存の C++ スタイルに従ってください
 
 - インデントはスペース 2 つ（タブは使用しない）
-- 関数および変数名は camelCase
-- クラス名は UpperCamelCase / PascalCase
-- #define 定数は ALL_CAPS
-- 可能な範囲で 1 行あたり ~100 文字未満に抑える
-(ただし、厳密な規則よりも既存コードとの一貫性を優先してください)
+- 関数および変数には camelCase を使用
+- クラス名には UpperCamelCase / PascalCase を使用
+- #define 定数は ALL_CAPS を使用
+- 可能であれば 1 行はおおよそ 100 文字未満に保つ
+（ただし、厳密なルールよりも既存コードとの一貫性を優先します）
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

@@ -1,23 +1,23 @@
 ---
-description: Primeros pasos con reComputer Rugged J40
-title: Primeros pasos con reComputer Rugged J40
+description: Introducción a reComputer Rugged J40
+title: Introducción a reComputer Rugged J40
 keywords:
   - reComputer Rugged
   - IP66
   - Jetson
-  - Getting Started
+  - Introducción
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
   date: 03/04/2026
-  author: Dayu
-createdAt: '2026-03-05'
-updatedAt: '2026-03-05'
+  author: Dayu,Dongxu Jin
+createdAt: '2026-03-04'
+updatedAt: '2026-08-07'
 url: https://wiki.seeedstudio.com/es/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
-# Primeros pasos con reComputer Rugged J40
+# Introducción a reComputer Rugged J40
 
 :::note
 Este producto se encuentra actualmente en desarrollo. Las especificaciones y la disponibilidad están sujetas a cambios.
@@ -27,7 +27,7 @@ Este producto se encuentra actualmente en desarrollo. Las especificaciones y la 
   <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
 </div>
 
-El reComputer Rugged J40 es un ordenador de IA perimetral sin ventilador con clasificación IP66, impulsado por módulos NVIDIA Jetson Orin NX/Nano. Diseñado para entornos exteriores hostiles, incluidos despliegues marinos, en vehículos e industriales, ofrece hasta 100 TOPS de rendimiento de IA en una carcasa compacta con refrigeración pasiva y conectores M12 totalmente impermeables.
+El reComputer Rugged J40 es un ordenador de borde de IA sin ventilador con clasificación IP66, impulsado por módulos NVIDIA Jetson Orin NX/Nano. Diseñado para entornos exteriores hostiles, incluidos despliegues marinos, montados en vehículos e industriales, ofrece hasta 100 TOPS de rendimiento de IA en un chasis compacto con refrigeración pasiva y conectores M12 totalmente impermeables.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/" target="_blank">
@@ -38,8 +38,8 @@ El reComputer Rugged J40 es un ordenador de IA perimetral sin ventilador con cla
 ## Características
 
 - **Impermeabilidad IP66**: Carcasa totalmente sellada con conectores M12 impermeables para todas las interfaces externas
-- **Refrigeración pasiva sin ventilador**: Funcionamiento silencioso entre -20°C y +60°C con flujo de aire de 0,7 m/s
-- **Robusto y resistente a vibraciones**: 3 Grms @ 5–500 Hz, 1 h/eje — adecuado para uso en vehículos y aplicaciones marinas
+- **Refrigeración pasiva sin ventilador**: Funcionamiento silencioso entre -20°C y +60°C con un flujo de aire de 0,7 m/s
+- **Robusto y resistente a vibraciones**: 3 Grms @ 5–500 Hz, 1 hr/eje — adecuado para uso en vehículos y aplicaciones marinas
 - **Amplio I/O industrial**: CAN-FD (aislado), RS-232/422/485, DI/DO, todo a través de conectores M12 con código A
 - **Redes flexibles**: 4× PoE GbE + 1× GbE (M12), M.2 Key E (Wi-Fi/BT), M.2 Key B (5G/GPS)
 - **Entrada de voltaje amplia**: 19–48 V CC mediante conector M12 con código B/A
@@ -149,7 +149,7 @@ El reComputer Rugged J40 es un ordenador de IA perimetral sin ventilador con cla
     </tr>
     <tr>
       <td rowSpan={6}>Entorno</td>
-      <td>Grado de protección</td>
+      <td>Protección de ingreso</td>
       <td colSpan={2}>IP66</td>
     </tr>
     <tr>
@@ -162,7 +162,7 @@ El reComputer Rugged J40 es un ordenador de IA perimetral sin ventilador con cla
     </tr>
     <tr>
       <td>Vibración</td>
-      <td colSpan={2}>3 Grms @ 5–500 Hz, aleatoria, 1 h/eje</td>
+      <td colSpan={2}>3 Grms @ 5–500 Hz, aleatoria, 1 hr/eje</td>
     </tr>
     <tr>
       <td>Dimensiones</td>
@@ -200,7 +200,7 @@ Se añadirán imágenes de la descripción general del hardware una vez que el p
 ## Flashear JetPack
 
 :::note
-Las instrucciones de flasheo se añadirán una vez que el BSP esté disponible. El proceso de flasheo sigue el mismo procedimiento que otros dispositivos de la serie reComputer J40.
+Se añadirán instrucciones de flasheo una vez que el BSP esté disponible. El proceso de flasheo sigue el mismo procedimiento que otros dispositivos de la serie reComputer J40.
 :::
 
 Consulta la página [Flash BSP with Jetpack to Selected Jetson](/es/flash/jetpack_to_selected_product) para obtener la guía de flasheo más reciente.
@@ -216,8 +216,12 @@ Consulta la página [Flash BSP with Jetpack to Selected Jetson](/es/flash/jetpac
 
 ### Entrar en modo Force Recovery
 
+<div align="center">
+  <img width="700" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg"/>
+</div>
+
 1. Conecta un cable USB Tipo C entre el puerto **DEVICE** y tu PC host con Ubuntu.
-2. Mantén pulsado el botón **REC** (Recovery) usando un pin.
+2. Mantén pulsado el botón **REC** (Recovery).
 3. Mientras mantienes pulsado REC, conecta la fuente de alimentación para encender la placa.
 4. Suelta el botón Recovery.
 
@@ -230,6 +234,22 @@ lsusb
 Salida esperada por módulo:
 - Orin NX 16GB: `0955:7323 NVidia Corp`
 - Orin Nano 8GB: `0955:7523 NVidia Corp`
+
+## Extraer y flashear
+
+**Paso 1:** Extrae el archivo de imagen descargado:
+
+```bash
+cd <path-to-image>
+sudo tar xpf mfi_xxxx.tar.gz
+```
+
+**Paso 2:** Entra en el directorio extraído y ejecuta el comando de flasheo:
+
+```bash
+cd mfi_xxxx
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
+```
 
 ## Recursos
 

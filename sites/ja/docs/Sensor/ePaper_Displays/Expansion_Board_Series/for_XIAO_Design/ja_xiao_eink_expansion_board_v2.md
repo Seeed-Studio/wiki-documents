@@ -1,6 +1,6 @@
 ---
 title: ePaper Driver Board 入門ガイド
-description: eInk expansion board For XIAO は、Seeed Studio による、epaper スクリーンに表示を行うために設計されたスマートモジュールです。
+description: eInk expansion board For XIAO は、Seeed Studio による、epaper スクリーンに表示を行うためのスマートモジュールです。
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/titleimg.webp
 slug: /xiao_eink_expansion_board_v2
 sku: 104990861,114993558
@@ -12,7 +12,7 @@ last_update:
   author: Allen
   date: 12/09/2024
 createdAt: '2025-01-10'
-updatedAt: '2026-04-28'
+updatedAt: '2026-04-27'
 url: https://wiki.seeedstudio.com/ja/xiao_eink_expansion_board_v2/
 ---
 
@@ -26,7 +26,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_eink_expansion_board_v2/
     </a>
 </div><br />
 
-ePaper driver board は、24 ピン FPC コネクタ、効率的かつ安全なバッテリー充電のための内蔵充電 IC、簡単にバッテリー接続ができる JST 2 ピン BAT コネクタを備えています。WiFi 対応のデジタルフォトフレームの作成に最適です。
+ePaper driver board は 24 ピン FPC コネクタ、効率的かつ安全なバッテリー充電のための内蔵充電 IC、簡単にバッテリー接続ができる JST 2 ピン BAT コネクタを備えています。WiFi 対応のデジタルフォトフレームの作成に最適です。
 
 :::note
 このブレイクアウトボードには ePaper ディスプレイは含まれていません。ディスプレイは別途購入する必要があります。
@@ -37,17 +37,17 @@ ePaper driver board は、24 ピン FPC コネクタ、効率的かつ安全な�
 ### 特長
 
 - **内蔵充電 IC**: 効率的で安全なバッテリー充電を実現します。
-- **スイッチ付き BAT コネクタ**: バッテリーを簡単に接続でき、バッテリーとスイッチを組み合わせて、より効率的な省エネを実現します。
+- **スイッチ付き BAT コネクタ**: バッテリーを簡単に接続でき、バッテリーとスイッチを組み合わせて、より効率的な省電力を実現します。
 - **24 ピン FPC コネクタ**: さまざまな周辺機器に対応する柔軟な接続オプションを提供します。
-- **拡張 IO ポート**: 温湿度センサーなどの追加センサーを接続でき、機能を拡張できます。
+- **拡張 IO ポート**: 温湿度センサなどの追加センサを接続でき、機能を拡張できます。
 - **Seeed Studio XIAO エコシステムとの互換性**: XIAO シリーズ（プリハンダ付け版）とシームレスに統合でき、多様なプロジェクト開発が可能です。
 
 ### 応用例
 
 - **スマートホームダッシュボード**: 天気情報、カレンダーイベント、各種スマートホームデバイスからの通知など、リアルタイム情報を表示します。
 - **エネルギーモニタリング**: スマートメーターからの電力消費データを表示し、家庭でのエネルギー使用状況をより効率的に把握・管理できるようにします。
-- **セキュリティアラート**: 人感検知やドア／窓センサーの作動など、セキュリティイベントに関するアラートや通知を表示します。
-- **スマートサーモスタットディスプレイ**: 温度や湿度レベル、スマートサーモスタットの制御設定を表示します。
+- **セキュリティアラート**: 人感検知やドア／窓センサの作動など、セキュリティイベントに関するアラートや通知を表示します。
+- **スマートサーモスタット表示**: 温度や湿度レベル、スマートサーモスタットの制御設定を表示します。
 - **デジタルフォトフレーム**: スマートホームネットワーク上の画像を表示できる、WiFi 対応デジタルフォトフレームを作成します。
 
 ## ハードウェア概要
@@ -57,7 +57,7 @@ ePaper driver board は、24 ピン FPC コネクタ、効率的かつ安全な�
 1. 24 ピン FPC コネクタ: ePaper インターフェース用。
 2. JST BAT コネクタ: バッテリー接続およびスイッチ用。
 3. XIAO ソケット: Seeed Studio XIAO 開発ボード接続用。
-4. IO ブレイクアウト: Grove センサーや Arduino UNO、Raspberry Pi などの他のコントローラを接続するためのもの。
+4. IO ブレイクアウト: Grove センサや Arduino UNO、Raspberry Pi など他のコントローラを接続するための端子。
 5. 電源スイッチ: バッテリー電源の制御用。
 
 ### ピン配置定義
@@ -236,7 +236,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 基本的なサンプルが 4 つあります。好みの基本サンプルを開きます：
 
 1. Bitmap: ビットマップ画像を表示します。
-2. Clock: 時計を表示します。
+2. Clock: アナログ時計を表示します。
 3. Clock_digital: デジタル時計を表示します。
 4. Shape: さまざまなサイズの文字と図形をランダムに表示します。
 
@@ -244,7 +244,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 ### コードを書き込む
 
-**新しい "driver.h" ファイル** を作成し、その中にこれらのコードを貼り付けます。コードは次のようになります：
+**新しい "driver.h" ファイル**を作成し、その中に先ほどのコードを貼り付けます。コードは次のようになります：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 504 // 2.9 inch monochrome ePaper Screen （SSD1680）
@@ -255,25 +255,25 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/table.jpg" style={{width:1000, height:'auto'}}/></div>
 
-これで e-paper スクリーンにフィードバックが表示されます！以下は Helloworld サンプルの結果です。
+これで e-paper スクリーンに反応が表示されます！以下は Helloworld サンプルの結果です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/153.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-1.54 インチまたは 2.9 インチの電子ペーパー画面を使用している場合、そのドライバチップの特性により、時計などの動的なエフェクトを使用するとフリッカーが発生することがあります。これはプログラムの問題ではないのでご安心ください。ただし、画面の寿命を縮めないよう、動的エフェクトのサンプルを長時間連続して実行することは推奨されません。
+1.54 インチまたは 2.9 インチの E-ink スクリーンを使用している場合、ドライバチップの仕様により、時計などの動的なエフェクトを使用するとフリッカーが発生することがあります。これはプログラムの問題ではないのでご安心ください。ただし、画面の寿命を縮めないよう、動的エフェクトのサンプルを長時間連続して実行することは推奨されません。
 
-5.83 インチおよび 7.5 インチの画面を使用している場合は、異なるチップを採用しているため、このようなフリッカー現象は発生しません。
+5.83 インチおよび 7.5 インチのスクリーンを使用している場合は、異なるチップを採用しているため、このようなフリッカー現象は発生しません。
 :::
 
-## 画像変換ソフトウェア
+## 画像抽出ソフトウェア
 
 ### Web サイトの使い方（推奨）
 
-ここではテスト用に 7.5 インチの電子ペーパー画面を使用しています。
+ここではテスト用に 7.5 インチの E-ink スクリーンを使用しています。
 
-#### 画像の作り方
+#### 画像の作成方法
 
-この [URL](https://jlamch.net/MXChipWelcome/) は非常に便利な画像変換操作を提供しており、電子ペーパー画面上にさまざまな画像を簡単に表示できるようにしてくれます。さっそく始めましょう！
+この [URL](https://jlamch.net/MXChipWelcome/) は非常に便利な画像抽出操作を提供しており、E-ink スクリーン上にさまざまな画像を簡単に表示できるようにしてくれます。さっそく始めましょう！
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/9191.jpg" style={{width:700, height:'auto'}}/></div>
 
 **ステップ 1**. 画像を選択
@@ -286,20 +286,20 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
   - Canvas Size: キャンバスのサイズを設定します。例えば 800 x 480 ピクセルは、キャンバスの幅が 800 ピクセル、高さが 480 ピクセルであることを意味します。
 
 - Background Color
-  - Background Color: キャンバスの背景色を選択します。オプションには次のものがあります：
+  - Background Color: キャンバスの背景色を選択します。オプションは次のとおりです：
 
   - White: 白い背景
   - Black: 黒い背景
 
 - Transparent: 透明な背景
   - Invert Image Color
-  - Invert Image Color: このオプションは画像の色を反転するために使用します。選択すると、画像の色が反転します。
+  - Invert Image Color: 画像の色を反転させるためのオプションです。選択すると、画像の色が反転します。
 
 - Brightness / Alpha Threshold
-  - Brightness / Alpha Threshold: ピクセルの明るさの値を 0 〜 255 の範囲で設定します。値が高いほどピクセルは明るくなり、この値より低いピクセルは黒になります。
+  - Brightness / Alpha Threshold: ピクセルの明るさの値を 0 から 255 の範囲で設定します。値が高いほどピクセルは明るくなり、この値より低いピクセルは黒になります。
 
 - Scaling
-  - Scaling: 画像の拡大縮小方法を選択します。オプションには次のものがあります：
+  - Scaling: 画像の拡大縮小方法を選択します。オプションは次のとおりです：
 
 - Original size: 元のサイズを維持
   - その他のスケーリングオプション（具体的なオプションについては別途説明が必要な場合があります）
@@ -324,31 +324,31 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 ### Image2lcd ソフトウェアの使い方
 
-#### 画像の作り方
+#### 画像の作成方法
 
-Windows に標準搭載されているソフトウェア **ペイント (Paint)** を使用して、使用している画面と**同じ解像度**の画像を作成し、`BMP` または `JPG` ファイルとして保存します。
+Windows に標準搭載されているソフトウェア **Paint** を使用して、使用しているスクリーンと**同じ解像度**の画像を作成し、`BMP` または `JPG` ファイルとして保存します。
 
 :::note
-画像の解像度は、使用している画面と同じでなければなりません。例えば、4.2 インチの電子ペーパーは 400 x 300 ピクセルなので、300 x 400 のサイズは使用できません。そうすると image2lcd が出力する `.h` ファイルに 200 バイト余分に追加されてしまいます。
+画像の解像度は、使用しているスクリーンと同じでなければなりません。例えば、4.2 インチ E-paper は 400 x 300 ピクセルなので、300 x 400 のサイズは使用できません。そうすると、image2lcd が出力する `.h` ファイルに 200 バイト余分に追加されてしまいます。
 :::
 
 画像の色は、Windows に付属する標準のペイントボードの色と一致している必要があります。ペイントボードの色は次のとおりです：
 
 <div class="table-center">
 
-|      電子ペーパー      | 色 |
+|      E-paper      | Colors |
 |       ---      |  ---   |
-|1.54-inch E-paper - Dotmatix 200x200           | 純粋な白黒          |
-|2.13-inch E-Paper -Flexible Monochrome 212x104 | 純粋な白黒          |
-|2.13-inch E-Paper - Quadruple 212x104          | 黒、白、赤、黄 |
-|2.9 inch E-paper - Monocolor 128x296           | 純粋な白黒          |
-|2.9-inch e-paper - Quadruple color 128x296     | 黒、白、赤、黄 |
-|4.2-inch E-Paper - Monocolor 400x300           | 純粋な白黒          |
-|4.26-inch E-Paper - Monocolor 800x480          | 純粋な白黒          |
+|1.54-inch E-paper - Dotmatix 200x200           | 純粋な白黒                      |
+|2.13-inch E-Paper -Flexible Monochrome 212x104 | 純粋な白黒                      |
+|2.13-inch E-Paper - Quadruple 212x104          | 黒、白、赤、黄                  |
+|2.9 inch E-paper - Monocolor 128x296           | 純粋な白黒                      |
+|2.9-inch e-paper - Quadruple color 128x296     | 黒、白、赤、黄                  |
+|4.2-inch E-Paper - Monocolor 400x300           | 純粋な白黒                      |
+|4.26-inch E-Paper - Monocolor 800x480          | 純粋な白黒                      |
 |5.65-inch E-paper -  Sevencolor 600x480        | 黒、白、赤、黄、青、緑、オレンジ|
-|5.83-inch E-paper - Monocolor 648x480          | 純粋な白黒          |
-|7.5-inch E-paper - Monocolor 800x480           | 純粋な白黒          |
-|7.5-inch E-paper - Tri-Color 800x480           | 純粋な白黒          |
+|5.83-inch E-paper - Monocolor 648x480          | 純粋な白黒                      |
+|7.5-inch E-paper - Monocolor 800x480           | 純粋な白黒                      |
+|7.5-inch E-paper - Tri-Color 800x480           | 黒、白、赤                      |
 
 </div>
 
@@ -370,17 +370,17 @@ Windows に標準搭載されているソフトウェア **ペイント (Paint)*
     </tr>
     <tr>
         <th>1.54-inch E-paper - Dotmatix 200x200</th>
-        <td align="center">Monochrome</td>
+        <td align="center">モノクロ</td>
         <td align="center">200x200</td>
         <td align="center">✅</td>
-        <td align="center">Mirror left-right</td>
+        <td align="center">左右反転</td>
     </tr>
     <tr>
         <th>2.13-inch E-Paper -Flexible Monochrome 212x104</th>
-        <td align="center">Monochrome</td>
+        <td align="center">モノクロ</td>
         <td align="center">104x212</td>
         <td align="center">✅</td>
-        <td align="center">Normal</td>
+        <td align="center">通常</td>
     </tr>
     <tr>
         <th>2.13インチ E-Paper - 4階調 212x104 </th>
@@ -418,7 +418,7 @@ Windows に標準搭載されているソフトウェア **ペイント (Paint)*
         <td align="center">左右反転</td>
     </tr>
     <tr>
-        <th>5.65インチ E-Paper - 7色 600x480</th>
+        <th>5.65インチ E-Paper -  7色 600x480</th>
         <td align="center">256色</td>
         <td align="center">600x448</td>
         <td align="center">/</td>
@@ -450,7 +450,7 @@ Windows に標準搭載されているソフトウェア **ペイント (Paint)*
 
 :::tip
 
-- Max Width と Height を設定した後、矢印をクリックして確定する必要があります。
+- Max Width と Height を設定した後、確定するために矢印をクリックする必要があります。
 - ヘッダーデータを含めないでください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/2.png" style={{width:700, height:'auto'}}/></div>
