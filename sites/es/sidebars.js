@@ -5197,6 +5197,7 @@ const sidebars = {
                 'Topics/TinyML/ModelAssistant/deploy/es_ma_deploy_yolov5',
                 'Topics/TinyML/ModelAssistant/deploy/es_ma_deploy_yolov8',
                 'Topics/TinyML/ModelAssistant/deploy/es_ma_deploy_yolov8_pose',
+                'Topics/TinyML/ModelAssistant/deploy/es_ma_deploy_yolov26',
               ]
             },
           ],
