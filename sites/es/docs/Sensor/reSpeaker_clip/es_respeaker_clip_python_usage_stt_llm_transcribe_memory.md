@@ -1,5 +1,5 @@
 ---
-description: Aprende cómo crear una aplicación para reSpeaker Clip con una capa de memoria usando el SDK de Python. Este tutorial cubre comunicación BLE y Wi‑Fi, grabación de audio, transcripción, diarización, resumen y coincidencia de memoria local para conversaciones repetidas.
+description: Aprende a crear una aplicación para reSpeaker Clip con una capa de memoria usando el SDK de Python. Este tutorial cubre comunicación BLE y Wi‑Fi, grabación de audio, transcripción, diarización, resumen y coincidencia de memoria local para conversaciones repetidas.
 title: Crea tu propia app para reSpeaker Clip añadiendo una capa de memoria usando el SDK de Python
 keywords:
   - reSpeaker Clip
@@ -15,7 +15,7 @@ slug: /respeaker_clip_python_build_app_with_memory
 sku: 100020126
 last_update:
   date: 07/31/2026
-  author: GitHub Copilot
+  author: Kasun Thushara
 createdAt: '2026-07-31'
 updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/es/respeaker_clip_python_build_app_with_memory/
@@ -23,11 +23,11 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_python_build_app_with_memory
 
 ## Introducción
 
-Esta guía muestra cómo convertir el reSpeaker Clip en un asistente activado por voz que no solo transcribe, diariza o resume grabaciones, sino que también recuerda lo que se dijo antes. Al añadir una capa de memoria sobre el flujo de trabajo del SDK de Python, tu aplicación puede comparar nuevas transcripciones con conversaciones pasadas y avisarte cuando detecte una discusión similar.
+Esta guía muestra cómo convertir el reSpeaker Clip en un asistente activado por voz que no solo transcribe, diariza o resume grabaciones, sino que también recuerda lo que se dijo antes. Al añadir una capa de memoria sobre el flujo de trabajo del SDK de Python, tu app puede comparar nuevas transcripciones con conversaciones pasadas y avisarte cuando detecte una discusión similar.
 
 El resultado es una base práctica para crear asistentes inteligentes para reuniones, tomadores de notas personales o aplicaciones de conocimiento controladas por voz con el reSpeaker Clip.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="Aplicación de memoria de reSpeaker Clip" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="Aplicación de memoria para reSpeaker Clip" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html" target="_blank">
@@ -37,9 +37,9 @@ El resultado es una base práctica para crear asistentes inteligentes para reuni
 
 ## Cómo funciona
 
-1. Conéctate al Clip mediante BLE (predeterminado) o Wi‑Fi.
-2. Inicia una grabación desde la aplicación. El audio se transmite desde el dispositivo en segundo plano mientras hablas.
-3. Detén la grabación. Una vez que se complete la sincronización, la aplicación:
+1. Conéctate al Clip por BLE (predeterminado) o Wi‑Fi.
+2. Inicia una grabación desde la app. El audio se transmite desde el dispositivo en segundo plano mientras hablas.
+3. Detén la grabación. Una vez que se complete la sincronización, la app:
    - codifica el audio combinado a `.ogg` (Opus),
    - lo convierte a un `.wav` mono de 16 kHz usando PyAV,
    - ejecuta el flujo de trabajo seleccionado para transcripción, diarización o resumen,
@@ -67,12 +67,12 @@ Capacidades clave:
 
 - No se almacena audio para la capa de memoria. Solo se conservan texto de transcripción, embeddings, marcas de tiempo y metadatos de coincidencia.
 - El almacén vectorial local predeterminado usa archivos JSON y NumPy en la carpeta `data/`, por lo que funciona sin servicios en la nube.
-- Si se encuentra una grabación similar, la aplicación puede mostrar una notificación emergente en la esquina como “ya hablaste de esto antes”.
+- Si se encuentra una grabación similar, la app puede mostrar una notificación emergente en la esquina como “ya hablaste de esto antes”.
 - La capa de memoria es aditiva. No bloquea la transcripción o el resumen en sí si no se encuentra ninguna coincidencia.
 
 ## Flujos de trabajo compatibles
 
-La aplicación admite cuatro patrones de flujo de trabajo:
+La app admite cuatro patrones de flujo de trabajo:
 
 - **Pestaña de transcripción**: transcripción de texto plano basada en Groq.
 - **Pestaña de diarización**: transcripción etiquetada por hablante basada en Speechmatics.
@@ -91,7 +91,7 @@ Las claves no están codificadas de forma fija. Pueden almacenarse temporalmente
 
 ## Requisitos
 
-- Python 3.10 o superior
+- Python 3.10+
 - Un dispositivo reSpeaker Clip emparejado para grabación y transmisión reales
 - No se necesita una instalación separada de ffmpeg porque PyAV incluye los códecs
 - La integración opcional con la nube está disponible para equipos que quieran explorar Firebase u otro almacenamiento de memoria respaldado por base de datos
@@ -153,7 +153,7 @@ respeaker-stt-memory/
 
 Puedes ajustar el comportamiento de la capa de memoria modificando el umbral de similitud y el límite de búsqueda:
 
-- **MEMORY_SIMILARITY_THRESHOLD**: súbelo si quieres menos coincidencias, bájalo si quieres más recuperación.
+- **MEMORY_SIMILARITY_THRESHOLD**: súbelo si quieres menos coincidencias, bájalo si quieres más recall.
 - **MEMORY_SEARCH_LIMIT**: controla cuántos vecinos más cercanos se consideran antes de aplicar el umbral.
 
 Estos valores deben ajustarse a partir del uso real en lugar de adivinarse.
@@ -166,13 +166,13 @@ Esto convierte al proyecto en un buen punto de partida tanto para prototipos com
 
 ## Descripción general de la interfaz
 
-Añade tu clave de API de Groq o tu clave de API de Speechmatics, empieza a grabar y detente cuando termines. La aplicación mostrará entonces una breve notificación emergente con el resultado de la sesión.
+Añade tu clave de API de Groq o tu clave de API de Speechmatics, empieza a grabar y detente cuando termines. La app mostrará entonces una breve notificación emergente con el resultado de la sesión.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip_memory_demo.png" alt="Interfaz de transcripción" width={800} height="auto" /></p>
 
 ## Descripción general de Firebase
 
-Si quieres explorar una experiencia de memoria respaldada en la nube, Firebase puede usarse como una extensión opcional para almacenar y compartir recuerdos entre dispositivos. En la práctica, solo necesitas preparar la parte en la nube y configurar el backend para usarla. El flujo de trabajo de memoria local de la aplicación sigue siendo el predeterminado, y cambiar a Firebase requiere un pequeño ajuste en el backend para dirigir la capa de memoria al almacén en la nube en lugar de a los archivos locales.
+Si quieres explorar una experiencia de memoria respaldada en la nube, Firebase puede utilizarse como una extensión opcional para almacenar y compartir recuerdos entre dispositivos. En la práctica, solo necesitas preparar la parte en la nube y configurar el backend para usarla. El flujo de trabajo de memoria local de la app sigue siendo el predeterminado, y cambiar a Firebase requiere un pequeño ajuste en el backend para apuntar la capa de memoria al almacén en la nube en lugar de a los archivos locales.
 
 Para más información, [consulta](https://github.com/KasunThushara/reSpeaker_Clip_Memory/tree/main/firebase)
 

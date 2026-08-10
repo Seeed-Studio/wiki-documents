@@ -2166,6 +2166,7 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/cn_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/cn_respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/cn_respeaker_clip_sensecraft_voice_sdk',
             {
               type: 'category',
               label: '固件 SDK',
