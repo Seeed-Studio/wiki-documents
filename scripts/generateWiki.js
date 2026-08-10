@@ -40,6 +40,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_customization_at_command.md'), //7.28
   path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_firmware_quick_start.md'), //7.28
   path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_firmware_development_guide.md'), //7.28
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_sensecraft_voice_sdk.md'), //8.7
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
