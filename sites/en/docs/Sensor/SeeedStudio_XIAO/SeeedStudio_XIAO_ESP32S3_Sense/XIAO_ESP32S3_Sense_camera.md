@@ -420,6 +420,20 @@ static esp_err_t stream_handler(httpd_req_t *req)
 void startCameraServer()
 ```
 
+:::note 降温与调参说明（中文，临时放置，待整理到合适位置）
+当前 Wiki 中的示例代码为了呈现最佳效果，参数基本是"拉满"状态——OV5640 最高分辨率（5MP / 2592×1944）、双缓冲连续抓帧、240MHz CPU——因此长时间运行会明显发烫。如果你觉得温度过高，或并不需要这么高的清晰度，可以通过以下方式降低功耗，且多数不会影响单张抓图的清晰度：
+
+| 杠杆 | 改什么 → 改成什么 | 降温效果 | 是否影响清晰度 |
+|---|---|---|---|
+| CPU 频率 | Arduino IDE：`工具(Tools) → CPU Frequency: 240MHz` → `160MHz`（或在 `setup()` 里加 `setCpuFrequencyMhz(160);`） | 中 | 否（传感器成像与 JPEG 编码在 OV5640 内部完成，与 CPU 无关） |
+| 对焦频率 | 将连续自动对焦（`autoFocusMode`）改为周期性单次触发对焦，或拉长对焦间隔 | 小 | 静物不变；移动场景需等更久才重新对焦 |
+| 抓帧模式 | `CAMERA_GRAB_LATEST` → `CAMERA_GRAB_WHEN_EMPTY`（只在取帧时才抓，不连续抓） | 大 | 否（抓图时仍取最新帧） |
+| 分辨率 | `FRAMESIZE_QSXGA`(2592×1944) → `FRAMESIZE_HD`(1280×720) 或 `SXGA` | 大 | 像素数降低，放大后细节减少（单像素清晰度不变） |
+| 双缓冲 | `fb_count` 由 2 改为 1（配合抓帧模式改动） | 中 | 否 |
+
+> 性价比最高的组合：把"一直在抓 5MP"改成"需要时才抓 HD"——即 `CAMERA_GRAB_WHEN_EMPTY` + 降一档分辨率，温度能明显下降，单张抓图清晰度几乎不受影响。
+:::
+
 ## Taking photos with the camera
 
 Next we start with the most basic usage of the camera, for example, we will first use the camera to complete the image acquisition. The first project we will use the microSD card, the main task of this program is to get the camera footage every minute and then save the footage to the microSD card.
