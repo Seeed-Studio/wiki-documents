@@ -457,6 +457,7 @@ C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
 <details>
 
 <summary>PCAN 固件下载与驱动修复步骤-Ubuntu</summary>
+
 Ubuntu 用户请参考本指南
 
 1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
@@ -489,6 +490,7 @@ bash flash_pcan_ubuntu.sh
 <details>
 
 <summary>PCAN 固件下载与驱动修复步骤-MAC</summary>
+
 MAC 用户请参考本指南
 
 1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
