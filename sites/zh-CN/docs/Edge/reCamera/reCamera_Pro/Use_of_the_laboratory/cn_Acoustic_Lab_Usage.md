@@ -91,7 +91,7 @@ Acoustic Lab 主界面包括以下核心区域：
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Voice_SenseCraft_Source.png" /></div>
 
 :::warning
-目前 SenseCraft 平台尚不支持设备音频输入，这可能会影响模型识别精度。详情请参考：[Decreased accuracy or false recognition after SenseCraft model deployment](#SenseCraft-声音-模型-accuracy)。
+目前 SenseCraft 平台尚不支持设备音频输入，这可能会影响模型识别精度。详情请参考：[问题：SenseCraft 声音分类模型部署到设备后精度下降或出现误识别](#sensecraft-sound-model-accuracy)。
 :::
 
 #### 2. 采集背景噪声

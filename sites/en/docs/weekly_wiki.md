@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/27/2026
+  date: 08/03/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-07-27'
+updatedAt: '2026-08-03'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,27 +18,87 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 27th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 3rd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Build Your Own App for reSpeaker Clip with Transcription, Diarization, and Summary Using Python SDK](https://wiki.seeedstudio.com/respeaker_clip_python_build_app/)
+### [JetPack 7.2 Resource Hub](https://wiki.seeedstudio.com/jetpack_7_2_resource_hub/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/other/jp72-front.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-**reSpeaker STT Web** transforms the reSpeaker Clip into an intelligent, AI-powered voice and meeting assistant, connecting embedded audio hardware with modern web and cloud AI technologies. Using BLE or Wi-Fi, it continuously synchronizes recordings from the device and processes them through powerful speech and language AI pipelines. With dedicated workflows for **speech transcription, speaker diarization, and AI-generated meeting summaries**, users can turn conversations into structured, actionable information. Built with Python and a modular architecture, the project provides a flexible foundation for developers and embedded engineers to build next-generation voice and AI applications with the reSpeaker Clip.
+This page organizes the JetPack 7.2 resources currently available for Seeed Studio NVIDIA Jetson products. Use it as the starting point for understanding the new software stack, selecting a supported image, migrating an existing JetPack 6.x project, restoring peripheral drivers, and deploying optimized AI workloads.
 
 </div>
 
-### [Build and Flash a Yocto Image for reComputer Super](https://wiki.seeedstudio.com/build_and_flash_yocto_for_recomputer_super/)
+### [reCamera Pro and Home Assistant Integration: Sound-Triggered Photo Alert](https://wiki.seeedstudio.com/recamera_pro_ha_sound_alert/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_Voice_Capture/reCamera-PRO_Voice_Capture.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide builds a Seeed Yocto image for **reComputer Super J401 with a Jetson Orin NX 16GB module** and flashes it to the Jetson NVMe drive. The example uses `seeed-image-jetson-development`. This image provides a target-side development environment with CUDA Toolkit and `nvcc`, CUDA/cuDNN/TensorRT/VPI/OpenCV development files, build and debug tools, NVIDIA samples, and test packages.
+This wiki explains how to integrate reCamera Pro with Home Assistant (HA) to automatically send a custom message and a current camera snapshot to the Home Assistant dashboard when a specific sound is detected. Using the MQTT protocol for bidirectional communication, when reCamera Pro detects a specified sound (e.g., "help") with a confidence level exceeding a threshold, it automatically sends an alert message and a live image to HA.
+
+</div>
+
+### [Reachy Mini Home Assistant integration](https://wiki.seeedstudio.com/reachymini_development_cases_home_assistant/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-home.webp" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+Want Reachy Mini to control your smart home devices — Mi Home (Xiaomi), Aqara, Midea, Haier, and more (such as refrigerators and air conditioners)? This project explains in detail how to control them with Reachy Mini, no code required. You can even hand this document directly to an AI and let it install and set everything up for you.
+
+</div>
+
+### [reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 WebSocket Audio Streaming](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_websocket_audio_stream/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide describes how to capture audio from an XVF3800 microphone array using an ESP32-S3 (XIAO ESP32S3), record 5 seconds of 48 kHz stereo 32-bit PCM audio, and store the data in PSRAM to handle large audio buffers. The recorded audio is then transmitted over Wi-Fi to a Python-based WebSocket server, where it is received and saved as a standard WAV file. This approach is well suited for applications such as voice capture, remote audio logging, and speech processing pipelines including speech-to-text (STT) and machine-learning–based audio analysis.
+
+</div>
+
+### [Convert and deploy a custom YOLO detection model in the reCamera web interface](https://wiki.seeedstudio.com/recamera_model_export_online/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/ai_model_deployment/model_export_cvimodel_online/image-5.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document introduces how to convert and deploy custom YOLO models on reCamera, including ONNX file upload, cloud conversion, model deployment, and real-time detection preview.
+
+</div>
+
+### [Reachy Mini Voice Control for SO-ARM](https://wiki.seeedstudio.com/reachymini_development_cases_gripper_voice_control/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This case uses the Reachy Mini conversation app to open and close the SO-ARM follower arm gripper with voice commands — **without modifying the official source code**, using the app's built-in external tools mechanism.
+
+</div>
+
+### [Build Your Own App for reSpeaker Clip adding memory Layer using Python SDK](https://wiki.seeedstudio.com/respeaker_clip_python_build_app_with_memory/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide shows how to turn the reSpeaker Clip into a voice-powered assistant that not only transcribes, diarizes, or summarizes recordings, but also remembers what was said before. By adding a memory layer on top of the Python SDK workflow, your app can compare new transcripts with past conversations and notify you when it detects a similar discussion. The result is a practical foundation for building smart meeting assistants, personal note takers, or voice-driven knowledge apps with the reSpeaker Clip.
+
+</div>
+
+### [Bring Voice AI to Your Business System with Face Verification](https://wiki.seeedstudio.com/solutions/mcp-face-auth-integration/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/mcp-face-architecture.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+What we supply is a small robot that stands on your customer's floor, holds a conversation, and knows who it is talking to. An operator walks up with their hands full, says "stock out forty units of the M16 bearings," and the transaction lands in your system attributed to the person the camera recognized — not to whatever name was spoken. Microphone array, wake word, speech, language model and face recognition arrive as one tuned product, with a fully on-premises build for customers whose audio cannot leave the site. What is left is the part only you can do: connecting it to your platform. That connection is an **MCP server in front of your own system** — you do not adopt our platform.
 
 </div>
 
@@ -189,5 +249,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.7.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260706)
 - [weekly wiki on 2026.7.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260713)
 - [weekly wiki on 2026.7.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260720)
+- [weekly wiki on 2026.7.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260727)
 
 </details>

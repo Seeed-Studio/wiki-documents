@@ -14,7 +14,7 @@ last_update:
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/codecraft/codecraft-overview/
 createdAt: '2026-06-29'
-updatedAt: '2026-07-08'
+updatedAt: '2026-08-04'
 ---
 
 # CodeCraft User Guide
@@ -24,7 +24,7 @@ Welcome to CodeCraft. This guide will help you quickly understand the platform, 
 ![CodeCraft Banner](https://files.seeedstudio.com/SenseCraft/sensecraft-wiki/codecraft/1-quick-start-and-support/codecraft-banner.webp)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://codecraft.seeed.cc" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://codecraft.seeed.cc/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_home" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Try CodeCraft Now 🚀</font></span></strong>
     </a>
 </div>

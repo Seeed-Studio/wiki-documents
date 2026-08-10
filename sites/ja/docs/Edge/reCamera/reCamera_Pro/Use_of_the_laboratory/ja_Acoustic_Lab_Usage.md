@@ -91,7 +91,7 @@ SenseCraft プラットフォームでは、複数の音声入力ソースが利
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Voice_SenseCraft_Source.png" /></div>
 
 :::warning
-現在、SenseCraft プラットフォームはまだデバイスオーディオ入力をサポートしておらず、モデルの認識精度に影響を与える可能性があります。詳細については、[SenseCraft モデルデプロイ後の精度低下または誤認識](#sensecraft-音声モデル-精度)を参照してください。
+現在、SenseCraft プラットフォームはまだデバイスオーディオ入力をサポートしておらず、モデルの認識精度に影響を与える可能性があります。詳細については、[SenseCraft モデルデプロイ後の精度低下または誤認識](#sensecraft-sound-model-accuracy)を参照してください。
 :::
 
 #### 2. バックグラウンドノイズの収集

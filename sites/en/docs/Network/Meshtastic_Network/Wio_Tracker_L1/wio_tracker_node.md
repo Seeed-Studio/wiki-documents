@@ -10,7 +10,7 @@ last_update:
   date: 12/18/2025
   author: Michelle Huang
 createdAt: '2025-05-23'
-updatedAt: '2026-06-28'
+updatedAt: '2026-08-03'
 url: https://wiki.seeedstudio.com/wio_tracker_l1_node/
 ---
 
@@ -109,7 +109,7 @@ The latest batches of L1, L1 Lite and L1 E-Ink all come with a battery adapter c
     <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Solar Panel (2P-2.0mm): 5V — 1A</td>
+    <td colspan="1">Solar Panel (2P-2.0mm): 5V — 1A(do not exceed 5V)</td>
   </tr>
   <tr>
     <td colspan="1">Lithium Battery (2P-1.25mm): 3.7V — 1A</td>

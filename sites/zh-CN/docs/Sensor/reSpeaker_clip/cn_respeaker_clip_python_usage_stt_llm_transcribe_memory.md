@@ -3,11 +3,11 @@ description: 了解如何使用 Python SDK 构建带有记忆层的 reSpeaker Cl
 title: 使用 Python SDK 为 reSpeaker Clip 构建带记忆层的自定义应用
 keywords:
   - reSpeaker Clip
-  - memory layer
+  - 记忆层
   - Python SDK
-  - transcription
-  - diarization
-  - summary
+  - 转录
+  - 说话人分离
+  - 摘要
   - Firebase
   - SQL
 image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg
@@ -15,7 +15,7 @@ slug: /respeaker_clip_python_build_app_with_memory
 sku: 100020126
 last_update:
   date: 07/31/2026
-  author: GitHub Copilot
+  author: Kasun Thushara
 createdAt: '2026-07-31'
 updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/cn/respeaker_clip_python_build_app_with_memory/
@@ -23,9 +23,9 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_python_build_app_with_memory
 
 ## 介绍
 
-本指南展示了如何将 reSpeaker Clip 打造成一个语音助手，它不仅可以对录音进行转录、说话人分离或摘要，还能记住之前说过的话。通过在 Python SDK 工作流之上添加记忆层，你的应用可以将新的转录内容与过去的对话进行比较，并在检测到类似讨论时通知你。
+本指南展示如何将 reSpeaker Clip 打造成一款语音驱动助手，它不仅可以对录音进行转录、说话人分离或摘要生成，还能记住之前说过的话。通过在 Python SDK 工作流之上添加记忆层，你的应用可以将新的转录内容与过去的对话进行比较，并在检测到类似讨论时通知你。
 
-最终，你可以基于 reSpeaker Clip 构建智能会议助手、个人笔记记录器或语音驱动的知识应用的实用基础。
+最终，你将获得一个实用基础，用于在 reSpeaker Clip 上构建智能会议助手、个人笔记记录器或语音驱动的知识类应用。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="reSpeaker Clip memory app" width={600} height="auto" /></p>
 
@@ -42,10 +42,10 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_python_build_app_with_memory
 3. 停止录音。同步完成后，应用会：
    - 将合并后的音频编码为 `.ogg`（Opus），
    - 使用 PyAV 将其转换为 16kHz 单声道 `.wav`，
-   - 运行所选的转录、说话人分离或摘要处理流水线，
-   - 在生成的转录文本上运行记忆层，
-   - 通过现有的 WebSocket 将结果和任何记忆通知发送到浏览器。
-4. 每段录音都会连同回放和处理控制一起保存，如果你重新处理录音，会再次运行记忆检查。
+   - 运行所选的转录、说话人分离或摘要生成流水线，
+   - 在得到的转录文本上运行记忆层，
+   - 通过现有 WebSocket 将结果和任何记忆通知发送到浏览器。
+4. 每段录音都会连同回放和处理控制一起存储，如果你重新处理录音，会再次运行记忆检查。
 
 ## 本版本的不同之处
 
@@ -75,19 +75,19 @@ reSpeaker Clip -> record -> STT / diarization / summary
 该应用支持四种工作流模式：
 
 - **Transcription 选项卡** — 基于 Groq 的纯文本转录。
-- **Diarization 选项卡** — 基于 Speechmatics 的带说话人标注的转录。
-- **Summary 选项卡** — Groq 转录加上 AI 生成的会议纪要。
-- **Memory layer** — 在每次录音上运行，与使用哪个选项卡无关。
+- **Diarization 选项卡** — 基于 Speechmatics 的带说话人标签转录。
+- **Summary 选项卡** — Groq 转录加 AI 生成的会议纪要。
+- **记忆层** — 在每次录音上运行，与使用哪个选项卡无关。
 
 ## API 密钥
 
 每个选项卡使用各自的服务提供商设置：
 
-- **Groq** — 用于转录和摘要。
+- **Groq** — 用于转录和摘要生成。
 - **Speechmatics** — 用于说话人分离和说话人标注。
 - **Firebase** — 可选，如果你想为记忆层切换到基于 Firestore 的存储选项。
 
-密钥不会被硬编码。它们可以在当前服务器会话中临时存储于内存中，或在本地持久化以供将来使用。
+密钥不会被硬编码。它们可以在当前服务器会话中临时存储于内存中，或在本地持久化以供后续使用。
 
 ## 环境要求
 
@@ -160,19 +160,19 @@ respeaker-stt-memory/
 
 ## 超越本地存储的扩展
 
-默认实现使用基于本地 JSON 和 NumPy 的存储，这使你可以在没有云依赖的情况下轻松尝试这一思路。如果你之后想要一个更集中或更易搜索的后端，该设计也兼容更广泛的方案，例如基于 Firebase 的存储或基于 SQL 的持久化，适用于希望拥有结构化长期记忆的团队。
+默认实现使用基于本地 JSON 和 NumPy 的存储，这使你可以在没有云依赖的情况下轻松尝试这一思路。如果你之后希望拥有更集中或更易搜索的后端，该设计也兼容更广泛的方案，例如基于 Firebase 的存储或基于 SQL 的持久化，适用于希望构建结构化长期记忆的团队。
 
 这使得该项目既适合作为原型的起点，也适合作为更偏向生产环境的语音应用基础。
 
 ## 界面概览
 
-添加你的 Groq API 密钥或 Speechmatics API 密钥，开始录音，完成后停止。应用随后会通过简短的弹窗通知显示本次会话的结果。
+添加你的 Groq API 密钥或 Speechmatics API 密钥，开始录音，在完成时停止。随后应用会显示一条简短的弹窗通知，展示本次会话的结果。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip_memory_demo.png" alt="Transcription interface" width={800} height="auto" /></p>
 
 ## Firebase 概览
 
-如果你想探索基于云的记忆体验，可以将 Firebase 作为可选扩展，用于在多设备之间存储和共享记忆。实际操作中，你只需要准备好云端部分，并配置后端去使用它。应用的本地记忆工作流仍然是默认选项，而切换到 Firebase 只需要在后端做一个小调整，让记忆层指向云端存储而不是本地文件。
+如果你想探索基于云的记忆体验，可以将 Firebase 作为可选扩展，用于在多设备之间存储和共享记忆。实际操作中，你只需准备好云端部分并配置后端使用它。应用的本地记忆工作流仍然是默认选项，而切换到 Firebase 只需要在后端做一个小调整，将记忆层指向云端存储而不是本地文件。
 
 更多信息请[查看](https://github.com/KasunThushara/reSpeaker_Clip_Memory/tree/main/firebase)
 

@@ -14,7 +14,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: '2026-03-19'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/meshtastic_node_map_x1/
 ---
 import Tabs from '@theme/Tabs';

@@ -20,7 +20,7 @@ En el flujo de despliegue puedes insertar funciones integradas de SenseCraft AI 
 
 ## Visión por IA
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M12 4c2.787 0 5.263 1.257 7.026 2.813c.885.781 1.614 1.658 2.128 2.531c.505.857.846 1.786.846 2.656s-.34 1.799-.846 2.656c-.514.873-1.243 1.75-2.128 2.531C17.263 18.743 14.786 20 12 20c-2.787 0-5.263-1.257-7.026-2.813c-.885-.781-1.614-1.658-2.128-2.531C2.34 13.799 2 12.87 2 12s.34-1.799.846-2.656c.514-.873 1.243-1.75 2.128-2.531C6.737 5.257 9.214 4 12 4m0 2c-2.184 0-4.208.993-5.702 2.312c-.744.656-1.332 1.373-1.729 2.047C4.163 11.049 4 11.62 4 12s.163.951.569 1.641c.397.674.985 1.39 1.729 2.047C7.792 17.007 9.816 18 12 18s4.208-.993 5.702-2.312c.744-.657 1.332-1.373 1.729-2.047c.406-.69.569-1.261.569-1.641s-.163-.951-.569-1.641c-.397-.674-.985-1.39-1.729-2.047C16.208 6.993 14.184 6 12 6m0 3q.132 0 .261.011a2 2 0 0 0 2.728 2.728A3 3 0 1 1 12 9"/></svg>Despliega modelos de visión por IA para reconocimiento, detección, clasificación de objetos y tareas relacionadas en hardware compatible. Los resultados de inferencia se pueden transmitir en tiempo real mediante MQTT, GPIO o serie (Serial), según la configuración.
+<svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M12 4c2.787 0 5.263 1.257 7.026 2.813c.885.781 1.614 1.658 2.128 2.531c.505.857.846 1.786.846 2.656s-.34 1.799-.846 2.656c-.514.873-1.243 1.75-2.128 2.531C17.263 18.743 14.786 20 12 20c-2.787 0-5.263-1.257-7.026-2.813c-.885-.781-1.614-1.658-2.128-2.531C2.34 13.799 2 12.87 2 12s.34-1.799.846-2.656c.514-.873 1.243-1.75 2.128-2.531C6.737 5.257 9.214 4 12 4m0 2c-2.184 0-4.208.993-5.702 2.312c-.744.656-1.332 1.373-1.729 2.047C4.163 11.049 4 11.62 4 12s.163.951.569 1.641c.397.674.985 1.39 1.729 2.047C7.792 17.007 9.816 18 12 18s4.208-.993 5.702-2.312c.744-.657 1.332-1.373 1.729-2.047c.406-.69.569-1.261.569-1.641s-.163-.951-.569-1.641c-.397-.674-.985-1.39-1.729-2.047C16.208 6.993 14.184 6 12 6m0 3q.132 0 .261.011a2 2 0 0 0 2.728 2.728A3 3 0 1 1 12 9"/></svg>Despliega modelos de visión por IA para reconocimiento, detección, clasificación de objetos y tareas relacionadas en hardware compatible. Los resultados de la inferencia se pueden transmitir en tiempo real mediante MQTT, GPIO o serie (Serial), según la configuración.
 
 El bloque de herramientas actualmente admite **Detección** y **Clasificación**. La segmentación y la estimación de pose están previstas para una versión posterior.
 
@@ -40,7 +40,7 @@ El bloque de herramientas actualmente admite **Detección** y **Clasificación**
 - **Entrenar modelo:** Para entrenar un modelo nuevo o reentrenar uno existente, abre la entrada de entrenamiento y sigue el asistente. Cuando termines, abre **Modelos históricos**, elige **Send to SenseCraft**, completa el flujo de subida y guarda el resultado en **Mi modelo**.
 
 :::caution
-Cuando publiques una aplicación que incluya un modelo privado en la comunidad, ese modelo se volverá público automáticamente.
+Cuando publiques en la comunidad una aplicación que incluya un modelo privado, ese modelo se volverá público automáticamente.
 :::
 
 ### Seleccionar dispositivo
@@ -111,7 +111,7 @@ Protocol:
 - **Entrenar modelo:** Entrena un modelo nuevo o actualizado y luego envíalo a SenseCraft desde **Modelos históricos**, igual que con los modelos de visión.
 
 :::caution
-Cuando publiques una aplicación que incluya un modelo privado en la comunidad, ese modelo se volverá público automáticamente.
+Cuando publiques en la comunidad una aplicación que incluya un modelo privado, ese modelo se volverá público automáticamente.
 :::
 
 ### Seleccionar dispositivo
@@ -137,14 +137,14 @@ Ajusta los valores para tu escenario.
 
 Ajusta el muestreo, el comportamiento al encender, GPIO y la salida para tu configuración.
 
-- **Ventana de muestreo:** Muestras por unidad de tiempo. Demasiado grande ralentiza la inferencia; demasiado pequeña puede infraajustar la vibración normal.
+- **Ventana de muestreo:** Muestras por unidad de tiempo. Un valor demasiado grande ralentiza la inferencia; uno demasiado pequeño puede infraajustar la vibración normal.
 - **Habilitar inferencia predeterminada al encender:** Cuando está desactivado, la inferencia no se inicia automáticamente al encender; usa un disparador externo para un uso de baja potencia.
 - **GPIO:** Controla pines ante vibración anómala; por ejemplo, establecer un nivel o conmutar un LED.
 - **Modo de salida:** Ruta de salida predeterminada para el modelo de vibración.
 
 ## Desplegar aplicación de contenedor
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M12.01 2.378a2.5 2.5 0 0 1 2.985 2.29l.005.161v.551c1.503-.3 2.9.792 2.995 2.288l.005.161v.55c1.503-.3 2.9.793 2.995 2.289l.005.162v6.53a3 3 0 0 1-2.239 2.902l-.173.04l-6.598 1.32a2.5 2.5 0 0 1-2.985-2.29L9 19.17v-.55l-.01.002a2.5 2.5 0 0 1-2.985-2.29L6 16.17v-.55l-.01.002a2.5 2.5 0 0 1-2.985-2.29L3 13.17V6.64a3 3 0 0 1 2.238-2.902l.174-.04zm6.392 7.961l-6.598 1.32a1 1 0 0 0-.804.98v6.531a.5.5 0 0 0 .598.49l6.598-1.32a1 1 0 0 0 .804-.98v-6.53a.5.5 0 0 0-.598-.49m-3-3L8.804 8.66A1 1 0 0 0 8 9.64v6.531a.5.5 0 0 0 .598.49L9 16.58v-3.94a3 3 0 0 1 2.412-2.942L16 8.78v-.95a.5.5 0 0 0-.598-.49m-3-3L5.804 5.66A1 1 0 0 0 5 6.64v6.531a.5.5 0 0 0 .598.49L6 13.58V9.64a3 3 0 0 1 2.412-2.942L13 5.78v-.95a.5.5 0 0 0-.598-.49"/></svg>Despliega aplicaciones de contenedor en dispositivos de borde en unos pocos clics.
+<svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M12.01 2.378a2.5 2.5 0 0 1 2.985 2.29l.005.161v.551c1.503-.3 2.9.792 2.995 2.288l.005.161v.55c1.503-.3 2.9.793 2.995 2.289l.005.162v6.53a3 3 0 0 1-2.239 2.902l-.173.04l-6.598 1.32a2.5 2.5 0 0 1-2.985-2.29L9 19.17v-.55l-.01.002a2.5 2.5 0 0 1-2.985-2.29L6 16.17v-.55l-.01.002a2.5 2.5 0 0 1-2.985-2.29L3 13.17V6.64a3 3 0 0 1 2.238-2.902l.174-.04zm6.392 7.961l-6.598 1.32a1 1 0 0 0-.804.98v6.531a.5.5 0 0 0 .598.49l6.598-1.32a1 1 0 0 0 .804-.98v-6.53a.5.5 0 0 0-.598-.49m-3-3L8.804 8.66A1 1 0 0 0 8 9.64v6.531a.5.5 0 0 0 .598.49L9 16.58v-3.94a3 3 0 0 1 2.412-2.942L16 8.78v-.95a.5.5 0 0 0-.598-.49m-3-3L5.804 5.66A1 1 0 0 0 5 6.64v6.531a.5.5 0 0 0 .598.49L6 13.58V9.64a3 3 0 0 1 2.412-2.942L13 5.78v-.95a.5.5 0 0 0-.598-.49"/></svg>Despliega aplicaciones en contenedor en dispositivos de borde en unos pocos clics.
 
 ### Aplicaciones destacadas
 
@@ -159,7 +159,7 @@ Compatible con **M1 Gate**, **Raspberry Pi 4 / 5**, **NVIDIA Jetson** y **Seeed 
 
 ### Cómo funciona con SenseCraft Fleet
 
-Las aplicaciones en contenedor se gestionan en [**SenseCraft Fleet**](https://seeed-fleet.com) y se despliegan a través de [**SenseCraft AI**](https://sensecraft.seeed.cc/ai) (en **`Applications`**):
+Las aplicaciones en contenedor se gestionan en [**SenseCraft Fleet**](https://seeed-fleet.com?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_home) y se despliegan a través de [**SenseCraft AI**](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) (en **`Applications`**):
 
 - **SenseCraft Fleet** es donde residen las imágenes de contenedor: subes imágenes, defines su esquema de configuración y vinculas tus dispositivos.
 - **SenseCraft AI** es donde eliges una app de tu biblioteca, seleccionas un dispositivo de destino, la configuras y lanzas el despliegue.
@@ -173,36 +173,36 @@ Las apps son específicas de la plataforma: la imagen y el dispositivo de destin
 - **Linux / ARM64** — p. ej., Seeed reComputer, Raspberry Pi 4 / 5, NVIDIA Jetson, M1 Gate
 - *Linux / AMD64 — próximamente*
 
-### Flujo de trabajo de configuración
+### Flujo de configuración
 
-**Seleccionar una app:** Elige desde la biblioteca de apps en SenseCraft Fleet, el catálogo integrado. Si prefieres subir tu aplicación en contenedor personalizada, tendrás que añadirla a través de [**SenseCraft Fleet**](https://seeed-fleet.com).
+**Seleccionar una app:** Elige desde la biblioteca de apps en SenseCraft Fleet, el catálogo integrado. Si prefieres subir tu aplicación en contenedor personalizada, tendrás que añadirla a través de [**SenseCraft Fleet**](https://seeed-fleet.com?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_home).
 
 **Configurar la app:** Cada app expone los elementos de configuración que su autor definió en SenseCraft Fleet. Normalmente no deberías necesitar configurar nada, a menos que tengas requisitos especiales.
 
-### Flujo de trabajo de despliegue
+### Flujo de despliegue
 
 **Paso 1 — Seleccionar una app:** Haz clic en **Deploy Container App**. SenseCraft AI carga toda tu biblioteca de apps desde SenseCraft Fleet (catálogo integrado más cualquier app personalizada que hayas subido), cada una mostrada con nombre, icono y descripción.
 
 **Paso 2 – Vincular un dispositivo:** Si ya tienes un dispositivo vinculado, salta al Paso 3. De lo contrario, enciende el dispositivo, conéctalo a la red y luego vincúlalo según tu hardware:
 
-- **Dispositivo Seeed que ejecuta la imagen de fábrica de Seeed:** Introduce los últimos 6 dígitos del **ID de CPU** o de la **dirección MAC** del dispositivo para vincularlo al instante.
+- **Dispositivo Seeed ejecutando la imagen de fábrica de Seeed:** Introduce los últimos 6 dígitos del **ID de CPU** o de la **dirección MAC** del dispositivo para vincularlo al instante.
 - **Dispositivo Seeed sin la imagen de fábrica, o dispositivo de terceros:** Obtén la dirección IP del dispositivo, abre una terminal y conéctate por SSH, luego ejecuta el comando de vinculación que se muestra en el flujo de vinculación.
 
 Una vez que la vinculación se complete, el dispositivo aparecerá en tu lista de dispositivos vinculados.
 
 **Paso 3 — Seleccionar un dispositivo de destino:** Elige de la lista de dispositivos vinculados compatibles con la plataforma de la app. Los dispositivos incompatibles se filtran automáticamente.
 
-**Paso 4 — Configurar la app:** Rellena los elementos de configuración expuestos por el autor de la app. Consulta la sección [Flujo de trabajo de configuración](#flujo-de-trabajo-de-configuración) anterior para ver los tipos de control y valores predeterminados.
+**Paso 4 — Configurar la app:** Rellena los elementos de configuración expuestos por el autor de la app. Consulta la sección [Flujo de configuración](#flujo-de-configuración) anterior para ver los tipos de control y valores predeterminados.
 
 **Paso 5 — Despliegue con un clic:** Haz clic en **Deploy**. SenseCraft AI muestra un indicador de progreso en tiempo real y transmite el estado en cada fase. Si algo falla, el error exacto aparece en una ventana emergente para que puedas corregirlo y reintentarlo. Vuelve a desplegar con nuevos valores para actualizar un despliegue existente: el anterior se reemplaza automáticamente.
 
 :::note
-Hoy se admiten aplicaciones Docker de una sola imagen. Docker Compose (apps de varios contenedores) está en la hoja de ruta.
+Hoy se admiten aplicaciones Docker de una sola imagen. Docker Compose (apps de múltiples contenedores) está en la hoja de ruta.
 :::
 
-## Grabar firmware
+## Flashear firmware
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M16.586 3A2 2 0 0 1 18 3.586L20.414 6A2 2 0 0 1 21 7.414V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7.414A2 2 0 0 1 3.586 6L6 3.586A2 2 0 0 1 7.414 3zM19 9H5v10h14zm-7 1a1 1 0 0 1 1 1v3.186l.414-.414a1 1 0 1 1 1.414 1.414l-2.12 2.121a1 1 0 0 1-1.415 0l-2.121-2.121a1 1 0 1 1 1.414-1.414l.414.414V11a1 1 0 0 1 1-1m4.586-5H7.414l-2 2h13.172z"/></svg>Graba un binario de firmware precompilado en un dispositivo ESP32 directamente desde el navegador, sin instalar una herramienta de grabación aparte. Usa esto cuando tu firmware ya esté compilado con todos los parámetros integrados.
+<svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24" style={{verticalAlign:'-0.3em',marginRight:'0.35em',color:'var(--ifm-color-primary)'}}><path fill="currentColor" d="M16.586 3A2 2 0 0 1 18 3.586L20.414 6A2 2 0 0 1 21 7.414V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7.414A2 2 0 0 1 3.586 6L6 3.586A2 2 0 0 1 7.414 3zM19 9H5v10h14zm-7 1a1 1 0 0 1 1 1v3.186l.414-.414a1 1 0 1 1 1.414 1.414l-2.12 2.121a1 1 0 0 1-1.415 0l-2.121-2.121a1 1 0 1 1 1.414-1.414l.414.414V11a1 1 0 0 1 1-1m4.586-5H7.414l-2 2h13.172z"/></svg>Flashea un binario de firmware precompilado en un dispositivo ESP32 directamente desde el navegador, sin instalar una herramienta de flasheo aparte. Úsalo cuando tu firmware ya esté compilado con todos los parámetros integrados.
 
 **Dispositivos compatibles:**
 
@@ -232,16 +232,16 @@ Hoy se admiten aplicaciones Docker de una sola imagen. Docker Compose (apps de v
 - **Arduino IDE 2.x:** Solo se genera un binario combinado cuando ejecutas **Sketch → Export Compiled Binary**. La salida `*.ino.merged.bin` se escribe en una carpeta `build/` junto a tu archivo `.ino`.
 - **Arduino IDE antiguo / combinación manual:** **Export Compiled Binary** escribe archivos `.bin` separados de bootloader, partición y app; combínalos con `esptool.py merge_bin` antes de subirlos. Consulta la guía del foro de Seeed Studio: [How to export a single merged `.bin` file from Arduino IDE](https://forum.seeedstudio.com/t/how-to-export-compiled-binary-create-a-single-bin-file-for-production-and-test/274990).
 
-### Flujo de trabajo de configuración
+### Flujo de configuración
 
 1. Haz clic en **Upload firmware** y sube tu archivo `.bin`.
 2. **Selecciona el tipo de dispositivo** en la lista desplegable.
 
-### Flujo de trabajo de despliegue
+### Flujo de despliegue
 
 1. Conecta el dispositivo a tu ordenador.
-2. Haz clic en **Flash firmware**. El botón muestra la fase actual, con una barra de progreso y un registro de depuración debajo: conectar serie → detectar dispositivo → grabar → reiniciar.
-3. Después de que la grabación se complete, verifica el comportamiento en la ventana de vista previa.
+2. Haz clic en **Flash firmware**. El botón muestra la fase actual, con una barra de progreso y un registro de depuración debajo: conectar serie → detectar dispositivo → flashear → reiniciar.
+3. Después de que termine el flasheo, verifica el comportamiento en la ventana de vista previa.
 
 Si algún paso falla, una ventana emergente de error explica la causa para que puedas corregirla y reintentarlo.
 
@@ -252,7 +252,7 @@ Si algún paso falla, una ventana emergente de error explica la causa para que p
 ### Recursos oficiales
 
 - [GitHub](https://github.com/node-red/node-red)
-- [Documentation](https://nodered.org/docs/)
+- [Documentación](https://nodered.org/docs/)
 
 ### Dispositivos compatibles
 
@@ -262,15 +262,15 @@ Si algún paso falla, una ventana emergente de error explica la causa para que p
 
 Después de añadir el bloque Node-RED, configura el flujo de cualquiera de estas maneras:
 
-1. **Crear nuevo flujo de trabajo:** Conéctate a reCamera (por cable o de forma inalámbrica), abre su Panel de control y edita en línea.
-2. **Subir archivo local:** Sube un flujo JSON que ya hayas creado. El sistema valida el tipo de archivo para que pueda analizarse de forma fiable.
+1. **Crear un flujo de trabajo nuevo:** Conéctate a reCamera (por cable o de forma inalámbrica), abre su Panel de control y edita en línea.
+2. **Subir archivo local:** Sube un flujo JSON que ya hayas creado. El sistema valida el tipo de archivo para poder analizarlo de forma fiable.
 
 ### Seleccionar modelo de visión por IA
 
-Los flujos JSON no incluyen binarios de modelo. Especifica qué modelo debe usar este flujo:
+Los flujos JSON no incluyen binarios de modelos. Especifica qué modelo debe usar este flujo:
 
-- **Integrado en el dispositivo:** Usa modelos preinstalados en reCamera, incluidas variantes YOLO11n para clasificación, detección, segmentación y pose.
-- **Modelos públicos:** Explora los modelos públicos de SenseCraft compartidos por otros para reCamera.
+- **Integrado en el dispositivo:** Usa modelos preinstalados en reCamera, incluidos variantes YOLO11n para clasificación, detección, segmentación y pose.
+- **Modelos públicos:** Explora modelos públicos de SenseCraft compartidos por otros para reCamera.
 - **Mi modelo:** Elige desde tu biblioteca privada.
 
 :::caution
@@ -279,7 +279,7 @@ Si utilizas un modelo privado en **Mi modelo** y publicas la app en la comunidad
 
 ## Aily Blockly
 
-<img src="https://github.com/ailyProject.png" alt="" style={{width:'1.25em',height:'1.25em',verticalAlign:'-0.3em',marginRight:'0.35em',borderRadius:'4px'}}/>[Aily Blockly](https://aily.pro) es un entorno de programación visual. Con este bloque puedes grabar en un solo paso en dispositivos de borde los programas que hayas creado en Aily Blockly.
+<img src="https://github.com/ailyProject.png" alt="" style={{width:'1.25em',height:'1.25em',verticalAlign:'-0.3em',marginRight:'0.35em',borderRadius:'4px'}}/>[Aily Blockly](https://aily.pro) es un entorno de programación visual. Con este bloque puedes flashear en un solo paso los programas que construiste en Aily Blockly a dispositivos de borde.
 
 ### Recursos oficiales
 
@@ -315,8 +315,8 @@ Introduce el código de proyecto que apunta a tu plantilla pública de Aily Bloc
 #### Cómo obtener un ID de proyecto
 
 1. Crea tu proyecto en Aily Blockly y luego haz clic en **`Build (F5)`** para compilar.
-2. Después de compilar correctamente, abre el panel **Cloud Space** y haz clic en **`Sync this project to cloud`**.
-3. Tu ID de proyecto aparece en el área etiquetada (**`ID: …`**); usa solo los números.
+2. Después de una compilación exitosa, abre el panel **Cloud Space** y haz clic en **`Sync this project to cloud`**.
+3. Tu ID de proyecto aparece en el área etiquetada (**`ID: …`**), usa solo los números.
 4. Repite estos pasos cada vez que cambies el proyecto para que la copia en la nube se mantenga actualizada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/tool_blocks/aily-get-project-id.png" alt="Cómo obtener un ID de proyecto de Aily Blockly" style={{width:1000, height:'auto'}}/></div>

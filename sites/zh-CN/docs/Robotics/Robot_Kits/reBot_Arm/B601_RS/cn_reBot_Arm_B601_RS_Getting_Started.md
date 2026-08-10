@@ -21,6 +21,10 @@ createdAt: '2026-05-26'
 updatedAt: '2026-07-28'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/
 ---
+import '/src/css/rebot-wiki-style.css';
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # reBot Arm B601-RS 快速入门
 
@@ -129,27 +133,31 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 ### 1.安装 Miniforge（建议）（支持 Windows\Ubuntu\macOS\Jetson\树莓派）
 
 1.安装miniforge，创建虚拟环境，避免其他环境包的干扰导致demo运行失败。
-
-Ubuntu\Jetson\树莓派:
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\Jetson\树莓派">
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
+</TabItem>
+<TabItem value="macOS" label="macOS">
 
-or macOS:
 ```bash
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
 bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
-or windows:
-
+</TabItem>
+<TabItem value="windows" label="windows">
 在浏览器中打开 Miniforge 的 Release 页面，找到最新版本的 `Miniforge3-Windows-x86_64.exe` 点击下载：
 
 ```text
 https://github.com/conda-forge/miniforge/releases
 ```
+
+</TabItem>
+</Tabs>
 
 2.创建 Python 3.12 版本虚拟环境：
 
@@ -200,7 +208,8 @@ pip install motorbridge
 
 让 PCAN-USB 设备以 1Mbps 速率工作在 CAN 总线上，供机械臂通信使用
 
-#### Ubuntu\Jetson\树莓派：
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\树莓派">
 
 ```bash
 #套件里是 PCAN-USB，通常应该直接出现 can0 或 can1
@@ -209,49 +218,14 @@ ip -br link
 
 #如果出现 can0，再设置 bitrate
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-#### 如果是 macOS:
+</TabItem>
 
-libPCBUSB.dylib 无法加载，请先安装 PCBUSB
+<TabItem value="Jetson" label="Jetson">
 
-```bash
-curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
-  https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
-tar -xzf macOS_Library_for_PCANUSB_v0.13.tar.gz
-cd PCBUSB
-sudo ./install.sh
-```
-
-配置 `DYLD_LIBRARY_PATH`，确保 motorbridge-gateway 运行时能找到 PCBUSB 库。在 conda 环境中创建激活脚本，每次 `conda activate rebot` 自动生效：
-
-```bash
-mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
-cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
-export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
-EOF
-
-echo $DYLD_LIBRARY_PATH
-```
-
-检查是否就绪
-```bash
-# 检查 Python 包和 CLI 是否就绪
-python3 -c "import motorbridge; print('motorbridge OK')"
-motorbridge-cli --help
-
-# 可选：检查 PCBUSB 运行时是否可加载
-python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
-```
-
-
-#### 如果是 Windows：
-
-请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
-
-如果是 Jetson（Jetpack 6.x）:
 下载文件：[peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/quick/PCAN-Linux-Driver?_gl=1*1shem7p*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwj7HTBhBiEiwA8s35OkNgKcwSr95URUncy5ADLlO-AjdZSFxtqTgof7UY2-LgkXWyoHMX3RoC0i4QAvD_BwE&gbraid=0AAAAAD_YjBa3gnuD4t8dG6dxnFEdZOcTz)
 
 - 移除 brltty
@@ -357,9 +331,69 @@ PCAN_IF=can1
 ```
 后续所有命令请使用 `$PCAN_IF`，不要硬编码 `can1`、`can2` 这类固定编号。
 
+```bash
+sudo modprobe peak_usb
+ip -br link
+
+#如果出现 $PCAN_IF ，再设置 bitrate
+sudo ip link set $PCAN_IF down 2>/dev/null
+sudo ip link set $PCAN_IF type can bitrate 1000000 restart-ms 100
+sudo ip link set $PCAN_IF up
+```
+
+</TabItem>
+<TabItem value="macos" label="macos">
+libPCBUSB.dylib 无法加载，请先安装 PCBUSB
+
+```bash
+curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
+  https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
+tar -xzf macOS_Library_for_PCANUSB_v0.13.tar.gz
+cd PCBUSB
+sudo ./install.sh
+```
+
+配置 `DYLD_LIBRARY_PATH`，确保 motorbridge-gateway 运行时能找到 PCBUSB 库。在 conda 环境中创建激活脚本，每次 `conda activate rebot` 自动生效：
+
+```bash
+mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
+cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
+export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+EOF
+
+echo $DYLD_LIBRARY_PATH
+```
+
+检查是否就绪
+```bash
+# 检查 Python 包和 CLI 是否就绪
+python3 -c "import motorbridge; print('motorbridge OK')"
+motorbridge-cli --help
+
+# 可选：检查 PCBUSB 运行时是否可加载
+python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
+```
+
+</TabItem>
+<TabItem value="windows" label="windows">
+
+请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
+
+</TabItem>
+
+
+
+</Tabs>
+
+
+
+
+
+
+
 
 :::tip 注意！！！
-安装驱动后，如果设备管理器中没有识别到 **PCAN-USB** 设备，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
+电脑安装驱动后，发现pcan设备固件错误，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
 :::
 
 <details>
@@ -427,6 +461,7 @@ C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
 <details>
 
 <summary>PCAN 固件下载与驱动修复步骤-Ubuntu</summary>
+
 Ubuntu 用户请参考本指南
 
 1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
@@ -459,6 +494,7 @@ bash flash_pcan_ubuntu.sh
 <details>
 
 <summary>PCAN 固件下载与驱动修复步骤-MAC</summary>
+
 MAC 用户请参考本指南
 
 1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)

@@ -236,7 +236,7 @@ B601-RS只需要在组装完成后校准一次，以下是校准指令，参考�
 
 # follower
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 
 lerobot-calibrate \
@@ -337,7 +337,7 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 sudo chmod 666 /dev/ttyUSB*  
 # follower
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up  
 ```
 

@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-El primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda. Diseñado para una comunicación fiable fuera de la red, MeshTracker X1 es un rastreador GPS [Meshtastic®](https://meshtastic.org/) con clasificación IP66 que admite frecuencias de 863–928 MHz. Impulsado por el último chip LoRa Semtech LR2021, cuenta con conectividad USB-C, hasta 5 días de duración de la batería y un diseño compacto, listo para exteriores.
+El primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda. Diseñado para una comunicación fiable fuera de la red, MeshTracker X1 es un rastreador GPS [Meshtastic®](https://meshtastic.org/) con clasificación IP66 que admite frecuencias de 863–928 MHz. Impulsado por el último chip LoRa Semtech LR2021, cuenta con conectividad USB-C, hasta 5 días de duración de batería y un diseño compacto, listo para exteriores.
 
 ### Características
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -44,7 +44,7 @@ Impulsado por GNSS de doble banda L1+L5 y un barómetro integrado, MeshTracker X
 
 - **Conectividad LoRa de próxima generación (LR2021)** 
 
-Impulsado por Semtech LR2021, MeshTracker X1 ofrece un rendimiento RF más sólido con una sensibilidad de hasta -141 dBm y tasas de datos FLRC de 2,6 Mbps para una comunicación mallada más rápida y fiable, creando una base para futuras funciones como transmisión de voz e imagen.
+Impulsado por Semtech LR2021, MeshTracker X1 ofrece un rendimiento RF más potente con una sensibilidad de hasta -141 dBm y tasas de datos FLRC de 2.6 Mbps para una comunicación mallada más rápida y fiable, creando una base para futuras funciones como transmisión de voz e imagen.
 
 - **Comunicación fiable de largo alcance** 
 
@@ -64,20 +64,20 @@ MeshTracker X1 ofrece opciones de notificación flexibles con vibración integra
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **Protección robusta para exteriores IP66** 
+- **Protección robusta IP66 para exteriores** 
 
-Construido con protección IP66 contra el polvo y el agua, lo que garantiza un rendimiento fiable en entornos exteriores adversos como lluvia, barro y senderos polvorientos.
+Construido con protección IP66 contra el polvo y el agua, garantiza un rendimiento fiable en entornos exteriores adversos como lluvia, barro y senderos polvorientos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **Conectividad USB-C** 
-Interfaz USB-C estándar para carga, actualizaciones de firmware y depuración, diseñada para uso robusto en exteriores y comodidad diaria.
+Interfaz USB-C estándar para carga, actualizaciones de firmware y depuración, diseñada para un uso robusto en exteriores y comodidad en el día a día.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **Mayor duración de la batería** 
+- **Larga duración de batería** 
 
-Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado en torno a una batería de alta capacidad de 1100 mAh, que ofrece hasta 5 días de funcionamiento y sigue siendo compacto y portátil para llevar al aire libre y para comunicación fuera de la red.
+Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado en torno a una batería de alta capacidad de 1100mAh, que ofrece hasta 5 días de funcionamiento y sigue siendo compacto y portátil para llevar al aire libre y para comunicación fuera de la red.
 
 
 ### Especificación
@@ -105,17 +105,17 @@ Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado e
 
 **Batería**
 
-|Elemento|Parámetro|s
+|Elemento|Parámetro|
 | :- | :- |
-|**Capacidad de la batería**|Batería LCD recargable, 1100mAh|
-|**Monitoreo del nivel de la batería**|Transmisión periódica del nivel de la batería|
+|**Capacidad de la batería**|Batería recargable de alto voltaje, 1100mAh|
+|**Supervisión de la vida de la batería**|Nivel de batería en enlace ascendente periódico|
 |**Protocolo de carga**|USB Type-C|
 |**Entrada de alimentación del dispositivo**|5V, 0.55A|
 |**Entrada de alimentación de la batería**|4.4V, 0.22A|
-|**Voltaje de corte con carga completa**|4.37V|
+|**Voltaje de corte completamente cargado**|4.37V|
 |**Límite de temperatura de carga**|5 a +45℃|
 
-Es posible que X1 se desarrolle en una serie de productos, en la que los nuevos productos que se lancen en el futuro estarán equipados con sensores adicionales (sensores de 3 ejes, magnetómetros de seis ejes, etc.).
+Es posible que X1 se desarrolle como una serie de productos, en la que los nuevos modelos de productos que se lanzarán en el futuro estarán equipados con sensores adicionales (sensores de 3 ejes, magnetómetros de seis ejes, etc.).
 
 ### Lista de pines
 
@@ -355,7 +355,7 @@ Es posible que X1 se desarrolle en una serie de productos, en la que los nuevos 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram729.png" alt="pir" width={900} height="auto" /></p>
 
-### Recursos
+### Recurso
 
 [Informe de prueba de batería](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
 

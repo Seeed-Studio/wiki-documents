@@ -2166,6 +2166,30 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/ja_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/ja_respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_sensecraft_voice_sdk',
+            {
+              type: 'category',
+              label: 'ファームウェア SDK',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_firmware_quick_start',
+                  label: 'はじめに',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_firmware_development_guide',
+                  label: '開発ガイド',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_customization_at_command',
+                  label: 'カスタム AT コマンド',
+                },
+              ],
+            },
           ],
         },
         {
@@ -4077,6 +4101,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_industrial_vision_monitoring_on_industrial',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Streaming_Vision_Agent_on_Jetson',
               ]
             },
             // Generative AI
@@ -4190,6 +4215,70 @@ const sidebars = {
               ]
             },
           ]
+        },
+        // JetPack 7.2
+        {
+          type: 'category',
+          label: 'JetPack 7.2',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Edge/NVIDIA_Jetson/JetPack_7_2/ja_JetPack_7_2_Overview',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'フラッシュと OTA',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/ja_JetPack72_Deep_Dive_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Flashing_OTA/ja_Flash_and_OTA_JetPack_7_2',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Migration/ja_JetPack_6_to_7_Migration_Playbook',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/ja_JetPack_7_2_Unified_Platform_ISO_SBSA',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/ja_JetPack_7_2_MAXN_SUPER_and_MIG',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'カーネルとマルチメディア',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Drivers/ja_JetPack72_AX210_AX200_WiFi_Setup_Guide_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Drivers/ja_JetPack_7_2_Camera_and_Multimedia_Compatibility',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'エージェント型 AI とスキル',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Agentic_AI/ja_Rapid_Prototyping_on_Jetson_with_NVIDIA_Skills_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Agentic_AI/ja_Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor_bk',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'メモリ最適化',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/ja_JetPack_7_2_Memory_Optimization',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Yocto',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/ja_Build_and_Flash_Yocto_for_reComputer_Super_bk',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'AI のデプロイとアプリケーション',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/ja_Deploy_TensorRT_Edge-LLM_on_Jetpack7.2',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/AI_Inference/ja_industrial_vision_monitoring_on_industrial_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/AI_Inference/ja_JetPack_7_2_DeepStream',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Application/ja_Deploy_Full_Weight_GR00T_N1_7_TensorRT_on_AGX_Orin',
+              ],
+            },
+          ],
         },
         // Seeed Jetson DevelopTool
         {
@@ -4495,6 +4584,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_isaacsim',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_control_mit'
               ]
             }
           ]
@@ -5108,6 +5198,7 @@ const sidebars = {
                 'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov5',
                 'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov8',
                 'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov8_pose',
+                'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov26',
               ]
             },
           ],

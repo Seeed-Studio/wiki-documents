@@ -2171,6 +2171,30 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/respeaker_clip_sensecraft_voice_sdk',
+            {
+              type: 'category',
+              label: 'Firmware SDK',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_firmware_quick_start',
+                  label: 'Getting Started',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_firmware_development_guide',
+                  label: 'Development Guide',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_customization_at_command',
+                  label: 'Custom AT Command',
+                },
+              ],
+            },
           ],
         },
         {
@@ -4089,6 +4113,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/industrial_vision_monitoring_on_industrial',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/Streaming_Vision_Agent_on_Jetson',
               ]
             },
             // Generative AI
@@ -4571,6 +4596,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_isaacsim',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_control_mit'
               ]
             }
           ]
@@ -5184,6 +5210,7 @@ const sidebars = {
                 'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov5',
                 'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8',
                 'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8_pose',
+                'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov26',
               ]
             },
           ],

@@ -8,7 +8,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2025-12-22'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft_hmi_overview/
 ---
 
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/sensecraft_hmi_overview/
 
 ## Introduction
 
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) is Seeed Studio's powerful cloud-based interface design platform that enables you to create professional visual interfaces for screen-based devices without coding. With an intuitive drag-and-drop editor, pre-built templates, and AI-powered design capabilities, SenseCraft HMI makes it easy to transform your hardware into beautiful information displays, dashboards, digital signage, and control panels.
+[SenseCraft HMI](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home) is Seeed Studio's powerful cloud-based interface design platform that enables you to create professional visual interfaces for screen-based devices without coding. With an intuitive drag-and-drop editor, pre-built templates, and AI-powered design capabilities, SenseCraft HMI makes it easy to transform your hardware into beautiful information displays, dashboards, digital signage, and control panels.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/23.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -40,7 +40,7 @@ url: https://wiki.seeedstudio.com/sensecraft_hmi_overview/
 
 To begin using SenseCraft HMI:
 
-1. **Access the Platform**: Visit [SenseCraft HMI](https://sensecraft.seeed.cc/hmi)
+1. **Access the Platform**: Visit [SenseCraft HMI](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
 
 2. **Create an Account**: Sign up for a free SenseCraft account if you don't already have one
 
@@ -118,7 +118,7 @@ Latest updates and version history of the SenseCraft HMI platform.
 
 ## Resources
 
-- [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi)
+- [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
 - [Compatible Devices - reTerminal E Series](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## Tech Support & Product Discussion
