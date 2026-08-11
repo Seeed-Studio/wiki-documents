@@ -1,5 +1,5 @@
 ---
-description: reSpeaker Clip 向け SenseCraft Voice SDK の完全な API リファレンス。Flutter、Android、iOS BLE、AT/JSON トランスポート、録音セッション、Wi‑Fi 転送、OTA ファームウェア更新を網羅します。
+description: reSpeaker Clip 向け SenseCraft Voice SDK の完全な API リファレンス。Flutter、Android、iOS の BLE、AT/JSON トランスポート、録音セッション、Wi‑Fi 転送、および OTA ファームウェア更新を網羅します。
 title: reSpeaker Clip Voice SDK & API リファレンス Flutter SDK で独自の AI 音声アプリを構築
 keywords:
   - SenseCraft Voice SDK
@@ -34,7 +34,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_clip_sensecraft_voice_sdk/
 - [8. 概要とアーキテクチャ](#8-概要とアーキテクチャ)
 - [9. 横断的なプロトコル定数](#9-横断的なプロトコル定数)
 - [10. Flutter SDK](#10-flutter-sdk)
-  - [10.1 BLE レイヤ](#101-ble-レイヤ)
+  - [10.1 BLE レイヤー](#101-ble-レイヤー)
   - [10.2 AT トランスポート](#102-at-トランスポート)
   - [10.3 セッション / 録音](#103-セッション--録音)
   - [10.4 Wi‑Fi ホットスポットと転送](#104-wi-fi-ホットスポットと転送)
@@ -47,14 +47,14 @@ url: https://wiki.seeedstudio.com/ja/respeaker_clip_sensecraft_voice_sdk/
 
 ### 1. 概要
 
-**SenseCraft Voice Flutter SDK**（`sensecraft_voice`）は、**BLE**（AT/JSON コマンド + ファイルダウンロード）および **Wi‑Fi AP**（UDP バイナリファイル転送）を介して reSpeaker Clip デバイスと直接通信します。API キーやバックエンドは不要で、SDK がデバイスと直接やり取りします。
+**SenseCraft Voice Flutter SDK**（`sensecraft_voice`）は、**BLE**（AT/JSON コマンド + ファイルダウンロード）およびデバイスの **Wi‑Fi AP**（UDP バイナリファイル転送）を介して reSpeaker Clip デバイスと直接通信します。API キーやバックエンドは不要で、SDK がデバイスと直接やり取りします。
 
 `sdk/flutter/example/` 内のサンプルアプリは、すべての機能をデモします：
 - **スキャン / 接続** – Clip を検出してペアリング
 - **録音 / 停止** – Opus でエンコードされた録音の開始/停止
-- **ステータスとバージョン** – デバイス情報、バッテリ、空き容量を読み取り
+- **ステータスとバージョン** – デバイス情報、バッテリー、空き容量の読み取り
 - **BLE ダウンロード** – BLE ファイル転送フレーム経由で録音を取得
-- **Wi‑Fi 同期** – デバイス AP を有効化し、スマホから参加して UDP で転送（はるかに高速）
+- **Wi‑Fi 同期** – デバイス AP を有効化し、スマホから接続して UDP で転送（はるかに高速）
 - **OTA 更新** – `.zip` または `.bin` パッケージから SMP/mcumgr を使ってファームウェアを書き込み
 
 ---
@@ -62,11 +62,11 @@ url: https://wiki.seeedstudio.com/ja/respeaker_clip_sensecraft_voice_sdk/
 ### 2. 前提条件
 
 - **Flutter 3.27+** – [Flutter をインストール](https://docs.flutter.dev/get-started/install)
-- **Android Studio**（Ladybug 2024.2+）と Android SDK（API 35+）および Build‑Tools
+- **Android Studio**（Ladybug 2024.2+）、Android SDK（API 35+）および Build‑Tools
 - **JDK 17** – Android ビルドに必須（新しいバージョンを使用している場合は [トラブルシューティング](#7-トラブルシューティング) を参照）
-- **実機デバイス** – Bluetooth と Wi‑Fi を備えた Android（API 24+）または iOS（13+）；BLE/Wi‑Fi では **エミュレータは使用できません**
+- **実機デバイス** – Bluetooth と Wi‑Fi を備えた Android（API 24+）または iOS（13+）；**エミュレータでは BLE/Wi‑Fi は動作しません**
 
-> **クイックチェック：** `flutter doctor -v` で Android / iOS ツールチェーンがすべて緑のチェックになっていることを確認します。
+> **クイックチェック：** `flutter doctor -v` で Android / iOS ツールチェーンがすべて緑のチェックになっていることを確認してください。
 
 ---
 
@@ -126,20 +126,20 @@ flutter pub get
 flutter run
 ```
 
-#### iOS 固有の手順（`flutter run` の前）
+#### iOS 固有の手順（`flutter run` の前に）
 
 1. Xcode で `ios/Runner.xcworkspace` を開きます。
-2. **Runner** ターゲット → **Signing & Capabilities** を選択します。
+2. **Runner** ターゲットを選択し、**Signing & Capabilities** を開きます。
 3. 自分の **Apple Developer Team** を選択します（Seeed のチームはコミットされていません）。
 4. **Hotspot Configuration** 機能を有効にします。
 5. ターミナルから `flutter run` で実行します。
 
 ---
 
-#### Windows – ドライブ間の回避策
+#### Windows – ドライブ間ワークアラウンド
 
 プロジェクトが **C:\ 以外のドライブ** にある場合、Android Gradle が `'other' has different root` というエラーで失敗することがあります。  
-**解決策：** `example/` フォルダを `C:\` ドライブにコピーし、`pubspec.yaml` を調整して SDK への絶対パスを使用します。  
+**解決策：** `example/` フォルダを `C:\` ドライブにコピーし、`pubspec.yaml` を修正して SDK への絶対パスを使用します。  
 詳細は [トラブルシューティング → ビルド失敗](#ビルド失敗) を参照してください。
 
 ---
@@ -148,12 +148,12 @@ flutter run
 
 #### 6.1 初回接続
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/image_2.jpg" alt="Transcription interface" width={400} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/image_2.jpg" alt="文字起こしインターフェース" width={400} height="auto" /></p>
 
-1. Clip デバイスの電源を入れ、別のスマホに接続されていないことを確認します。
+1. Clip デバイスの電源を入れ、別のスマートフォンに接続されていないことを確認します。
 2. アプリを起動すると、空のデバイスリストとログパネルが表示されます。
-3. Bluetooth（および Android 12L 以前では位置情報）の権限を付与します。
-4. **Scan** をタップすると、名前に `"Clip"` を含む BLE デバイスをアプリが検出します。
+3. Bluetooth（および Android 12L 以前では位置情報）への権限を付与します。
+4. **Scan** をタップすると、名前に `"Clip"` を含む BLE デバイスが検出されます。
 5. 検出されたデバイスをタップして接続します。表示された場合はペアリングプロンプトを承認します。
 6. ログに `Connected. MTU=185` と表示されるまで待ちます – AT チャネルの準備が完了しています。
 
@@ -162,18 +162,18 @@ flutter run
 | ボタン | AT コマンド | 動作 |
 |--------|------------|--------|
 | **Version** | `AT+VERSION` | ファームウェアバージョンを表示 |
-| **Status** | `AT+GSTAT` | バッテリ、空き容量、録音状態を表示 |
+| **Status** | `AT+GSTAT` | バッテリー、空き容量、録音状態を表示 |
 | **Record** | `AT+START` | 新しい録音を開始（通常モード） |
 | **Stop** | `AT+STOP` | 録音を停止；セッション ID とファイル数を表示 |
 | **List** | `AT+LIST` | 現在のセッションで録音されたファイルを一覧表示 |
 | **BLE DL** | `AT+DOWNLOAD` | BLE 経由で直近のセッションをダウンロード（低速） |
-| **WiFi sync** | `AT+WIFI=ON` + UDP | AP を有効化し、スマホを参加させ、UDP で転送（高速） |
+| **WiFi sync** | `AT+WIFI=ON` + UDP | AP を有効化し、スマホを接続して UDP で転送（高速） |
 | **OTA** | SMP/mcumgr | ファームウェアファイルを選択して書き込み |
 | **Disconnect** | – | BLE を切断し、UI をリセット |
 
 > **ワークフロー：** Record → Stop → **WiFi sync**（最速）または **BLE DL**（Wi‑Fi 設定不要）。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/image_1.jpg" alt="Transcription interface" width={400} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/image_1.jpg" alt="文字起こしインターフェース" width={400} height="auto" /></p>
 
 ---
 
@@ -184,7 +184,7 @@ flutter run
 | 症状 | 原因 | 対処 |
 |---------|-------|-----|
 | `java.lang.IllegalArgumentException: 25.0.2` | Java 25 がインストールされている（新しすぎる） | JDK 17 をインストールし、`flutter config --jdk-dir="<path-to-jdk17>"` を実行 |
-| `'other' has different root` | プロジェクトが C: 以外のドライブ上（Windows） | `example/` を `C:\Users\<you>\clip_demo` にコピーし、`pubspec.yaml` を SDK への絶対パスで更新 |
+| `'other' has different root` | プロジェクトが C: 以外のドライブ上にある（Windows） | `example/` を `C:\Users\<you>\clip_demo` にコピーし、SDK への絶対パスで `pubspec.yaml` を更新 |
 | `Building with plugins requires symlink support` | 開発者モードがオフ（Windows） | Settings → Privacy & Security → For Developers → **Developer Mode** を ON に切り替え |
 | `Could not find com.android.tools.build:gradle:8.x` | Android SDK が不足 | `flutter doctor --android-licenses` を実行し、すべてに同意 |
 
@@ -192,18 +192,18 @@ flutter run
 
 | 症状 | 原因 | 対処 |
 |---------|-------|-----|
-| スキャンに Clip が表示されない | Clip の電源オフ / 範囲外 / すでに接続済み | Clip の電源を入れ直し、2 m 以内に保ち、他のデバイスとの接続を解除 |
-| スキャンが固まる | Bluetooth 権限が拒否されている | 再インストールしてすべての権限を付与；Android 12L 以前では位置情報が ON であることを確認 |
-| 工場出荷状態へのリセット後にペアリングが失敗する | 古い Bluetooth ボンド | システムの Bluetooth 設定でボンドを削除し、再試行 |
-| 接続後にボタンが反応しない | AT チャネルの準備が未完了 | 通知が安定するまで 2–3 秒待ち、まず **Version** を試す |
+| スキャンに Clip が表示されない | Clip の電源オフ / 範囲外 / すでに接続済み | Clip の電源を入れ直し、2 m 以内に保ち、他のデバイスとの接続を解除 |
+| スキャンが固まる | Bluetooth 権限が拒否されている | 再インストールしてすべての権限を付与；Android 12L 以前では位置情報を ON にする |
+| 工場出荷状態へのリセット後にペアリングが失敗する | 古い Bluetooth ボンド | システムの Bluetooth Settings でボンドを削除し、再試行 |
+| 接続後にボタンが反応しない | AT チャネルの準備が未完了 | 通知が安定するまで 2～3 秒待ち、まず **Version** を試す |
 
 #### Wi‑Fi 同期の問題
 
 | 症状 | 原因 | 対処 |
 |---------|-------|-----|
-| 同期がすぐに失敗する | 録音がまだ進行中 | 先に録音を停止 |
-| スマホが AP に参加できない | 権限不足または認証情報の誤り | Android：Nearby Wi‑Fi Devices（13+）または Fine Location（12L 以前）を付与；iOS：ホットスポット参加プロンプトを承認 |
-| 同期が停滞する | スマホが別のネットワークへローミング | Clip の近くに留まり、既知ネットワークへの自動接続を一時的に無効化 |
+| 同期がすぐに失敗する | 録音がまだ進行中 | 先に録音を停止する |
+| スマホが AP に接続できない | 権限不足または認証情報の誤り | Android：Nearby Wi‑Fi Devices（13+）または Fine Location（12L 以前）を許可；iOS：ホットスポット接続プロンプトを承認 |
+| 同期が途中で止まる | スマホが別のネットワークへローミング | Clip の近くに留まり、既知ネットワークへの自動接続を一時的に無効化 |
 
 #### ログ出力
 
@@ -221,11 +221,13 @@ SdkLog.bind((level, message, error, stack) {
 
 ### 8. 概要とアーキテクチャ
 
-SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウンロード）および **Wi‑Fi AP**（UDP バイナリファイル転送）を介して reSpeaker Clip デバイスと通信します。API キーやバックエンドは不要で、SDK がデバイスと直接やり取りします。
+SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウンロード）およびデバイスの **Wi‑Fi AP**（UDP バイナリファイル転送）を介して reSpeaker Clip デバイスと通信します。API キーやバックエンドは不要で、SDK がデバイスと直接やり取りします。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/LayeredView_2.png" alt="文字起こしインターフェース" width={900} height="auto" /></p>
 
 #### SDK の機能差異
 
-3 つすべての SDK（Flutter、Android、iOS）は同じ機能を公開します：
+3 つの SDK（Flutter、Android、iOS）はすべて同じ機能を提供します：
 
 | 機能 | Flutter | Android | iOS |
 |------------|---------|---------|-----|
@@ -241,9 +243,9 @@ SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウ�
 | OTA ファームウェア更新 | `OtaSession` | `OtaSession` | `OtaSession` |
 | 権限ファサード | `SenseCraftVoiceBlePermissions` | `SenseCraftVoicePermissions` | `SenseCraftVoiceBlePermissions` |
 
-#### SDK レイヤとプロダクトレイヤ
+#### SDK レイヤーとプロダクトレイヤー
 
-| レイヤ | 範囲 | SDK に含まれるか |
+| レイヤー | 範囲 | SDK に含まれるか |
 |-------|-------|--------|
 | デバイスプロトコル | BLE GATT、AT(JSON)、UDP 高速同期、OTA | **はい** |
 | 高レベルセッション | `RecordingSession` の開始/停止/一覧/ダウンロード | **はい** |
@@ -253,7 +255,7 @@ SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウ�
 
 | プラットフォーム | 制約 |
 |----------|-------------|
-| Flutter | Dart >=3.6.0、Flutter >=3.27.0、依存関係：`flutter_blue_plus` ^1.36.1 |
+| Flutter | Dart >=3.6.0、Flutter >=3.27.0、依存関係: `flutter_blue_plus` ^1.36.1 |
 | Android | API 24+、JDK 17、Android SDK 36、Kotlin 2.1.0 |
 | iOS | iOS 13+、macOS 10.15+、Swift 5.9、CoreBluetooth + Network + 任意の `iOSMcuManagerLibrary` |
 
@@ -266,9 +268,9 @@ SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウ�
 | 名前 | UUID | 用途 |
 |------|------|---------|
 | `clipAtService` | `6E400001-B5A3-F393-E0A9-E50E24DCCA9E` | プライマリサービス |
-| `commandRxCharacteristic` | `6E400002-B5A3-F393-E0A9-E50E24DCCA9E` | 書き込み：AT コマンド |
-| `responseTxCharacteristic` | `6E400003-B5A3-F393-E0A9-E50E24DCCA9E` | 通知：JSON 応答 |
-| `fileDataCharacteristic` | `6E400004-B5A3-F393-E0A9-E50E24DCCA9E` | 通知：ファイルデータフレーム |
+| `commandRxCharacteristic` | `6E400002-B5A3-F393-E0A9-E50E24DCCA9E` | 書き込み: AT コマンド |
+| `responseTxCharacteristic` | `6E400003-B5A3-F393-E0A9-E50E24DCCA9E` | 通知: JSON 応答 |
+| `fileDataCharacteristic` | `6E400004-B5A3-F393-E0A9-E50E24DCCA9E` | 通知: ファイルデータフレーム |
 | `batteryService` | `0000180F-0000-1000-8000-00805F9B34FB` | 標準バッテリーサービス |
 | `batteryLevelCharacteristic` | `00002A19-0000-1000-8000-00805F9B34FB` | バッテリー残量 % |
 | `deviceInfoService` | `0000180A-0000-1000-8000-00805F9B34FB` | 標準デバイス情報 |
@@ -279,11 +281,11 @@ SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウ�
 
 | 定数 | 値 | 意味 |
 |----------|-------|---------|
-| `kClipFrameData` | `0x01` | DATA フレーム：type(1) + seq(2 LE) + len(2 LE) + payload |
-| `kClipFrameFileStart` | `0x10` | FILE_START：type(1) + nameLen(1) + name + size(4 LE) |
-| `kClipFrameFileEnd` | `0x11` | FILE_END：type(1) + crc32(4 LE) |
-| `kClipFrameTransferDone` | `0x12` | TRANSFER_DONE：type(1) + sessionIdLen(1) + id + fileCount(4 LE) |
-| `kClipDataHeaderSize` | `5` | DATA ヘッダー：type + seq + len |
+| `kClipFrameData` | `0x01` | DATA フレーム: type(1) + seq(2 LE) + len(2 LE) + payload |
+| `kClipFrameFileStart` | `0x10` | FILE_START: type(1) + nameLen(1) + name + size(4 LE) |
+| `kClipFrameFileEnd` | `0x11` | FILE_END: type(1) + crc32(4 LE) |
+| `kClipFrameTransferDone` | `0x12` | TRANSFER_DONE: type(1) + sessionIdLen(1) + id + fileCount(4 LE) |
+| `kClipDataHeaderSize` | `5` | DATA ヘッダー: type + seq + len |
 
 #### UDP フレーム種別
 
@@ -292,7 +294,7 @@ SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウ�
 | `FRAME_DATA` | `0x01` | CRC 付きファイルデータチャンク（Dart/Kotlin）/ `frameData`（Swift） |
 | `FRAME_FILE_ACK` | `0x03` | ACK(0x00) または NACK(0x01) |
 | `FRAME_FILE_START` | `0x10` | ファイル転送の開始 |
-| `FRAME_FILE_END` | `0x11` | デバイス側 CRC32 を含むファイルの終了 |
+| `FRAME_FILE_END` | `0x11` | デバイス側 CRC32 付きファイルの終了 |
 | `FRAME_TRANSFER_DONE` | `0x12` | セッション転送完了 |
 | `FRAME_AT_RESP` | `0x20` | AT コマンド応答（長さプレフィックス付き JSON） |
 | `FRAME_HEARTBEAT` | `0x30` | 4 バイト LE タイムスタンプ付きキープアライブ |
@@ -324,7 +326,7 @@ SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウ�
 | `AT+CANCEL` | `{"ok":true}` | 録音または転送をキャンセル |
 | `AT+DELETE=<sessionId>` | `{"ok":true}` | リモートセッションを削除 |
 | `AT+PURGE` | `{"ok":true}` | すべてのリモートファイルを削除 |
-| `AT+FACTORY=confirm` | `{"ok":true}` | 工場出荷時設定にリセット |
+| `AT+FACTORY=confirm` | `{"ok":true}` | 工場出荷状態にリセット |
 | `AT+WIFI?` | `{"ok":true,"data":{"ap_running":true,"ssid":"ClipAP_XXXX",...}}` | ホットスポットを問い合わせ |
 | `AT+WIFI=ON` | `{"ok":true,"data":{"ssid":"ClipAP_XXXX","password":"...",...}}` | ホットスポットを有効化 |
 | `AT+WIFI=OFF` | `{"ok":true}` | ホットスポットを無効化 |
@@ -334,8 +336,8 @@ SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウ�
 
 ### 10. Flutter SDK
 
-**パッケージ：** `sensecraft_voice` v0.1.0  
-**エントリポイント：** `lib/sensecraft_voice.dart`
+**パッケージ:** `sensecraft_voice` v0.1.0  
+**エントリポイント:** `lib/sensecraft_voice.dart`
 
 #### 依存関係
 
@@ -346,7 +348,7 @@ SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウ�
 | `mcumgr_flutter` | ^0.8.1 | OTA ファームウェア更新 |
 | `flutter_archive` | ^6.0.3 | ZIP 展開（OTA） |
 | `path_provider` | ^2.1.5 | OTA 用の一時ディレクトリ |
-| `uuid` | ^4.5.1 | OTA 用一時ディレクトリ名 |
+| `uuid` | ^4.5.1 | OTA 用一時ディレクトリ名生成 |
 | `crypto` | ^3.0.6 | SHA‑256/MD5（OTA） |
 | `wifi_iot` | ^0.3.19+1 | Wi‑Fi ホットスポット接続 |
 | `path` | ^1.9.0 | パス操作 |
@@ -356,6 +358,8 @@ SenseCraft Voice SDK は、**BLE**（AT/JSON コマンド + ファイルダウ�
 `BluetoothAdapterState`, `BluetoothBondState`, `BluetoothCharacteristic`, `BluetoothConnectionState`, `BluetoothDevice`, `Guid`, `ScanResult`
 
 ---
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/sequence.png" alt="Transcription interface" width={800} height="auto" /></p>
 
 #### 10.1 BLE レイヤー
 
@@ -498,7 +502,7 @@ ClipFileDataParsed parseClipFileDataNotify(List<int> data);
 
 ##### BleTransferFrameHandler
 
-BLE ファイルダウンロードの進行状況を追跡するステートマシン。
+BLE ファイルダウンロードの進行状況を追跡するためのステートマシン。
 
 ```dart
 class BleTransferFrameState {
@@ -906,7 +910,7 @@ class RecordingException implements Exception {
 
 ---
 
-#### 10.4 Wi‑Fi ホットスポット & 転送
+#### 10.4 Wi‑Fi ホットスポットと転送
 
 ##### WifiHotspotConnector
 
@@ -1083,7 +1087,7 @@ class OtaFirmwareProcessor {
 }
 ```
 
-> **Note:** `Image` は `mcumgr_flutter` パッケージの `mcumgr.Image` です。
+> **Note:** `Image` is `mcumgr.Image` from the `mcumgr_flutter` package.
 
 ##### OtaSession
 
@@ -1125,7 +1129,7 @@ class OtaSession {
 
 ---
 
-#### 10.6 モデル & ユーティリティ
+#### 10.6 モデルとユーティリティ
 
 ##### モデル
 
@@ -1174,7 +1178,7 @@ class DeviceTimeInfo {
 }
 ```
 
-##### デバイスステータス & イベント
+##### デバイスステータスとイベント
 
 ```dart
 class DeviceStatus {
@@ -1218,7 +1222,7 @@ String? formatDeviceAtTime(Object? raw);
 DateTime? parseDeviceAtTime(Object? raw);
 ```
 
-##### セッション再開/マージ用ヘルパー
+##### セッション再開／マージヘルパー
 
 ```dart
 int? partNumberFromSessionOpusFilename(String name);
@@ -1284,7 +1288,7 @@ const int kSessionOpusMergeProgressEveryBytes = 4 * 1024 * 1024;
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
