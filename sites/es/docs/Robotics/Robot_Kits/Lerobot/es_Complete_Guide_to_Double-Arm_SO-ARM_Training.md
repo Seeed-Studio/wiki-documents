@@ -42,6 +42,11 @@ El tipo de brazo seguidor es `so101_follower`, y el tipo de brazo líder es `so1
 
 ---
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Compra SO-ARM101 ahora 🖱️</font></span></strong>
+</a></div>
+
 ## 0. Requisitos previos
 
 ### 0.1 Instalar dependencias

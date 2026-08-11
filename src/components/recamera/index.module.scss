@@ -1,0 +1,863 @@
+// ============================================
+// reCamera Wiki 落地页 — Docusaurus 主题 CSS Modules
+// 使用 Docusaurus CSS 变量，自动跟随 Wiki 日间/夜间模式
+// ============================================
+
+// ---- 滚动揭示动画 ----
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.revealVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// ---- 页面容器 ----
+.recameraPage {
+  width: 100%;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-content);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+// ============================================
+// HERO 区域 — 白色背景，左右布局（左文右图），大号标题
+// ============================================
+.hero {
+  width: 100%;
+  padding: 64px 24px 48px;
+  background: var(--ifm-background-color);
+}
+.heroInner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+.heroText {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
+.heroTitle {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--ifm-heading-color);
+  margin: 0 0 8px;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+.heroSubtitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  margin: 0 0 20px;
+}
+.heroDesc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ifm-color-content-secondary);
+  margin: 0 0 32px;
+  max-width: 520px;
+}
+.heroCtas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.heroVisual {
+  flex: 1 1 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heroImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+// ---- 按钮 ----
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+  &:hover {
+    background: var(--ifm-color-primary-darker);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.btnPrimarySmall {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+  &:hover {
+    background: var(--ifm-color-primary-darker);
+    transform: translateY(-1px);
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: transparent;
+  color: var(--ifm-color-content);
+  border: 1.5px solid var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+  &:hover {
+    border-color: var(--ifm-color-primary);
+    color: var(--ifm-color-primary);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+}
+.btnIcon {
+  width: 16px;
+  height: 16px;
+}
+
+// ============================================
+// 区域通用
+// ============================================
+.sectionInner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.sectionHeader {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+.accent {
+  color: var(--ifm-color-primary);
+}
+.sectionDesc {
+  font-size: 17px;
+  color: var(--ifm-color-content-secondary);
+  margin: 0 auto;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+// ---- Quick Start 区域 — emphasis-100 背景 ----
+.sectionLight {
+  width: 100%;
+  padding: 64px 0;
+  background: var(--ifm-color-emphasis-100);
+}
+
+// ---- Product Family 区域 — card-background 背景，用于突出产品 ----
+.sectionDark {
+  width: 100%;
+  padding: 64px 0;
+  background: var(--ifm-card-background-color);
+}
+
+// ---- Resources 区域 — emphasis-200 背景 ----
+.sectionDarker {
+  width: 100%;
+  padding: 64px 0;
+  background: var(--ifm-color-emphasis-200);
+}
+
+// ============================================
+// QUICK START — 促销卡片 + 特性网格
+// ============================================
+.quickStartGrid {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+// ---- 促销卡片 ----
+.promoCard {
+  flex: 1 1 360px;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 300px;
+}
+.promoCardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  margin: 0 0 8px;
+}
+.promoCardDesc {
+  font-size: 14px;
+  color: var(--ifm-color-content-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+.promoFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--ifm-color-content-secondary);
+  }
+}
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--ifm-color-primary);
+  flex-shrink: 0;
+}
+
+// ---- 特性网格 ----
+.featureGrid {
+  flex: 1 1 440px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  min-width: 280px;
+}
+.featureCard {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 14px;
+  padding: 24px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ifm-heading-color);
+    margin: 14px 0 6px;
+  }
+  p {
+    font-size: 13px;
+    color: var(--ifm-color-content-secondary);
+    margin: 0;
+    line-height: 1.5;
+  }
+  &:hover {
+    border-color: var(--ifm-color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+}
+.featureIconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(38, 140, 67, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 20px;
+    height: 20px;
+    color: var(--ifm-color-primary);
+  }
+}
+
+// ============================================
+// PRODUCT EXPLORER — Tab 切换 + 产品网格
+// ============================================
+
+// ---- Tab 按钮：绿色背景(active) / 透明边框(inactive)，圆角，hover效果 ----
+.categoryTabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.categoryTab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: 1.5px solid var(--ifm-color-emphasis-300);
+  background: transparent;
+  color: var(--ifm-color-content-secondary);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  &:hover {
+    border-color: var(--ifm-color-primary);
+    color: var(--ifm-color-primary);
+  }
+}
+.categoryTabActive {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-color: var(--ifm-color-primary);
+  &:hover {
+    background: var(--ifm-color-primary-darker);
+    color: #fff;
+  }
+}
+
+// ---- 产品网格 ----
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+@media (max-width: 640px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ---- 产品卡片：白色背景，圆角16px，hover上浮+阴影+边框变绿 ----
+.productCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  position: relative;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  &:hover {
+    border-color: var(--ifm-color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+  }
+}
+
+// ---- NEW 标签：Pro 产品卡片红色标签 ----
+.newBadge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 12px;
+  background: #e11d48;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 2;
+  letter-spacing: 0.3px;
+}
+
+.productImageWrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--ifm-color-emphasis-100);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.productCard:hover .productImage {
+  transform: scale(1.04);
+}
+.productInfo {
+  padding: 22px 26px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.productName {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+  margin: 0 0 8px;
+}
+.productDesc {
+  font-size: 14px;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.6;
+  margin: 0 0 14px;
+  flex: 1;
+}
+.productTags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.productTag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(38, 140, 67, 0.08);
+  color: var(--ifm-color-primary);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.productLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--ifm-color-primary);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: auto;
+  svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.2s ease;
+  }
+}
+.productCard:hover .productLink svg {
+  transform: translateX(3px);
+}
+
+// ============================================
+// AI DEPLOY FLOW — 5步流程：圆形数字 + 箭头连接
+// ============================================
+.flowSteps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.flowStep {
+  flex: 0 1 170px;
+  text-align: center;
+  padding: 0 10px;
+}
+.flowStepNumber {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+.flowStepTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+  margin: 0 0 6px;
+}
+.flowStepDesc {
+  font-size: 13px;
+  color: var(--ifm-color-content-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+.flowArrow {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  color: var(--ifm-color-primary);
+  opacity: 0.5;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .flowStep {
+    flex: 0 1 130px;
+    padding: 8px;
+  }
+  .flowArrow {
+    display: none;
+  }
+}
+
+// ============================================
+// RESOURCES — 资源分类卡片 + 链接列表
+// ============================================
+.resourceCategoryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+@media (max-width: 900px) {
+  .resourceCategoryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .resourceCategoryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ---- 资源分类卡片：白色背景，顶部hover绿色条显现 ----
+.resourceCategoryCard {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 20px;
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  // 顶部绿色条，默认隐藏
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--ifm-color-primary);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  &:hover {
+    border-color: var(--ifm-color-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+.resourceCategoryHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.resourceCategoryIcon {
+  width: 28px;
+  height: 28px;
+  color: var(--ifm-color-primary);
+  flex-shrink: 0;
+}
+.resourceCategoryTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  margin: 0;
+}
+.resourceCategoryDesc {
+  font-size: 16px;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
+
+// ---- 链接列表：绿色圆点 + hover右移效果 ----
+.resourceCategoryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  li {
+    position: relative;
+    padding-left: 22px;
+    // 绿色圆点
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--ifm-color-primary);
+      opacity: 0.35;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    &:hover::before {
+      opacity: 0.8;
+      transform: scale(1.2);
+    }
+  }
+}
+.resourceCategoryLink {
+  font-size: 17px;
+  color: var(--ifm-color-content-secondary);
+  text-decoration: none;
+  line-height: 1.6;
+  transition: color 0.15s ease, padding-left 0.2s ease;
+  display: block;
+  &:hover {
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+    padding-left: 4px;
+  }
+}
+
+// ============================================
+// FOOTER
+// ============================================
+.footer {
+  width: 100%;
+  padding: 48px 24px 0;
+  background: var(--ifm-card-background-color);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+.footerInner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.footerRow {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.footerBrand {
+  flex: 1 1 280px;
+  min-width: 240px;
+  p {
+    font-size: 14px;
+    color: var(--ifm-color-content-secondary);
+    line-height: 1.65;
+    margin: 14px 0 0;
+  }
+}
+.footerLogo {
+  height: 30px;
+  width: auto;
+}
+.footerLinks {
+  flex: 2 1 500px;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.footerCol {
+  flex: 1 1 140px;
+  min-width: 120px;
+  h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ifm-heading-color);
+    margin: 0 0 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  a {
+    display: block;
+    font-size: 14px;
+    color: var(--ifm-color-content-secondary);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.15s ease;
+    &:hover {
+      color: var(--ifm-color-primary);
+      text-decoration: none;
+    }
+  }
+}
+.footerBottom {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding: 20px 0;
+  p {
+    font-size: 13px;
+    color: var(--ifm-color-content-secondary);
+    margin: 0;
+  }
+}
+
+// ============================================
+// 响应式 — 768px以下：单列布局，Tab按钮缩小
+// ============================================
+@media (max-width: 768px) {
+  // Hero 区域
+  .hero {
+    padding: 40px 16px 32px;
+  }
+  .heroInner {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .heroTitle {
+    font-size: 38px;
+  }
+  .heroVisual {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  // 各区域间距缩小
+  .sectionLight,
+  .sectionDark,
+  .sectionDarker {
+    padding: 44px 0;
+  }
+
+  // 标题缩小
+  .sectionTitle {
+    font-size: 26px;
+  }
+
+  // Quick Start 单列
+  .quickStartGrid {
+    flex-direction: column;
+  }
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+  .promoCard {
+    min-width: unset;
+  }
+
+  // Tab 按钮缩小
+  .categoryTabs {
+    gap: 8px;
+  }
+  .categoryTab {
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  // AI Deploy Flow 调整
+  .flowStep {
+    flex: 0 1 130px;
+    padding: 8px;
+  }
+  .flowArrow {
+    display: none;
+  }
+
+  // Resources 分类卡片单列
+  .resourceCategoryGrid {
+    grid-template-columns: 1fr;
+  }
+  .resourceCategoryCard {
+    padding: 32px 28px;
+  }
+  .resourceCategoryTitle {
+    font-size: 20px;
+  }
+  .resourceCategoryLink {
+    font-size: 15px;
+  }
+
+  // Footer 调整
+  .footerRow {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .footerLinks {
+    flex: 1 1 auto;
+  }
+}
+
+.trainingLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// ============================================
+// Getting Started 绿色按钮（产品卡片底部）
+// ============================================
+.gettingStartedBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: auto;
+  transition: background 0.2s ease, transform 0.2s ease;
+  svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.2s ease;
+  }
+}
+.productCard:hover .gettingStartedBtn {
+  background: #1e7a36;
+  transform: translateY(-1px);
+  svg {
+    transform: translateX(3px);
+  }
+}
+
+// ============================================
+// SenseCraft Logo（Training区域标题上方）
+// ============================================
+.sensecraftLogo {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
