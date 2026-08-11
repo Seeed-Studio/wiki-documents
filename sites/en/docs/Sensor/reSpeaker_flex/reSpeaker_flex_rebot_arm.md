@@ -624,7 +624,7 @@ uv is a very fast Python package management tool that can be used to install pac
 
 ```bash
 # Cloning robotic arm control library
-git clone https://github.com/vectorBH6/reBotArm_control_py.git
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
 
 # Enter the robotic arm control library directory
 cd reBotArm_control_py
@@ -1854,7 +1854,7 @@ This ensures that the robot arm does not exceed physical limits, avoiding damage
 | Resource | Link | Description |
 |-----|-----|-----|
 | Main Warehouse of the Project | https://github.com/xr686/reBot-Arm-reSpeaker-Flex | Sound Control Master Program |
-| Robot Arm Control Library | https://github.com/vectorBH6/reBotArm_control_py | Robot Arm Python Control Library |
+| Robot Arm Control Library | https://github.com/Seeed-Projects/reBotArm_control_py | Robot Arm Python Control Library |
 | reBot Arm Official | https://www.rebotix.com/ | Robot Arm Official Website |
 | Seeed Studio | https://www.seeedstudio.com/ | reSpeaker Flex Purchase and Technical Support |
 

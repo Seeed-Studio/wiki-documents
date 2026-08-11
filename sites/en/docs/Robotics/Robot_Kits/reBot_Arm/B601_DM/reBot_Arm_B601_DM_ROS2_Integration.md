@@ -210,13 +210,6 @@ git clone https://github.com/Seeed-Projects/reBotArmController_ROS2.git rebotarm
 cd rebotarm_ros2
 ```
 
-You can also use the current development repository:
-
-```bash
-git clone https://github.com/EclipseaHime017/reBotArmController_ROS2.git rebotarm_ros2
-cd rebotarm_ros2
-```
-
 ### Step 4. Install motorbridge
 
 Install `motorbridge` from the official PyPI source:
@@ -229,7 +222,7 @@ python3 -m pip install --user --break-system-packages --index-url https://pypi.o
 
 ```bash
 mkdir -p third_party
-git clone https://github.com/vectorBH6/reBotArm_control_py.git third_party/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git third_party/reBotArm_control_py
 ```
 
 ### Step 6. Build the Workspace
@@ -817,8 +810,8 @@ After sourcing Jazzy, you should see a path similar to
 
 ## Contact
 
-- Technical Support: [Submit an Issue](https://github.com/EclipseaHime017/reBotArmController_ROS2/issues)
-- Project Repository: [Github](https://github.com/EclipseaHime017/reBotArmController_ROS2)
+- Technical Support: [Submit an Issue](https://github.com/Seeed-Projects/reBotArmController_ROS2/issues)
+- Project Repository: [Github](https://github.com/Seeed-Projects/reBotArmController_ROS2)
 - Forum: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## References
@@ -829,4 +822,4 @@ After sourcing Jazzy, you should see a path similar to
 - [reBot Arm B601-DM LeRobot Tutorial](https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/)
 - [ROS2 Humble Documentation](https://docs.ros.org/en/humble/)
 - [ROS2 Jazzy Documentation](https://docs.ros.org/en/jazzy/)
-- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)
+- [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py)
