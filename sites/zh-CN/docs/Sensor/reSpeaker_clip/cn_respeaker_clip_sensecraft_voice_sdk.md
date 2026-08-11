@@ -1,5 +1,5 @@
 ---
-description: reSpeaker Clip 的 SenseCraft Voice SDK 完整 API 参考，涵盖 Flutter、Android 和 iOS BLE、AT/JSON 传输、录音会话、Wi‑Fi 传输以及 OTA 固件更新。
+description: 完整的 SenseCraft Voice SDK（适用于 reSpeaker Clip）的 API 参考，涵盖 Flutter、Android 和 iOS BLE、AT/JSON 传输、录音会话、Wi‑Fi 传输以及 OTA 固件更新。
 title: reSpeaker Clip Voice SDK 与 API 参考 使用 Flutter SDK 构建你的 AI 语音应用
 keywords:
   - SenseCraft Voice SDK
@@ -32,13 +32,13 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_sensecraft_voice_sdk/
 
 **API 参考（Flutter SDK）**
 - [8. 概览与架构](#8-概览-架构)
-- [9. 跨层协议常量](#9-跨层协议常量)
+- [9. 跨层协议常量](#9-跨层-协议-常量)
 - [10. Flutter SDK](#10-flutter-sdk)
   - [10.1 BLE 层](#101-ble-层)
   - [10.2 AT 传输](#102-at-传输)
   - [10.3 会话 / 录音](#103-会话-录音)
   - [10.4 Wi‑Fi 热点与传输](#104-wi-fi-热点-传输)
-  - [10.5 OTA 固件更新](#105-ota-固件更新)
+  - [10.5 OTA 固件更新](#105-ota-固件-更新)
   - [10.6 模型与工具](#106-模型-工具)
 
 ---
@@ -64,9 +64,9 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_sensecraft_voice_sdk/
 - **Flutter 3.27+** – [安装 Flutter](https://docs.flutter.dev/get-started/install)
 - **Android Studio**（Ladybug 2024.2+），包含 Android SDK（API 35+）和 Build‑Tools
 - **JDK 17** – Android 构建所需（如果你安装了更高版本，请参见[故障排查](#7-故障排查)）
-- **真实设备** – 支持 Bluetooth 和 Wi‑Fi 的 Android（API 24+）或 iOS（13+）；**模拟器无法用于 BLE/Wi‑Fi**
+- **真实设备** – Android（API 24+）或 iOS（13+），支持蓝牙和 Wi‑Fi；**模拟器无法用于 BLE/Wi‑Fi**
 
-> **快速检查：**`flutter doctor -v` 应该对 Android / iOS 工具链全部显示绿色勾选。
+> **快速检查：**`flutter doctor -v` 应该在 Android / iOS 工具链上全部显示绿色勾选。
 
 ---
 
@@ -152,7 +152,7 @@ flutter run
 
 1. 打开 Clip 设备，并确保它未连接到其他手机。
 2. 启动应用 —— 你会看到空的设备列表和日志面板。
-3. 授予 Bluetooth（以及 Android 12L‑ 上的 Location）权限。
+3. 授予蓝牙权限（以及 Android 12L‑ 及以下版本上的位置信息权限）。
 4. 点击 **Scan** —— 应用会发现名称中包含 `"Clip"` 的 BLE 设备。
 5. 点击发现的设备进行连接。如出现配对提示，请接受。
 6. 等待日志显示 `Connected. MTU=185` —— AT 通道已就绪。
@@ -169,7 +169,7 @@ flutter run
 | **BLE DL** | `AT+DOWNLOAD` | 通过 BLE 下载最近一次会话（较慢） |
 | **WiFi sync** | `AT+WIFI=ON` + UDP | 启用 AP，手机加入，通过 UDP 传输（快速） |
 | **OTA** | SMP/mcumgr | 选择固件文件并刷写 |
-| **Disconnect** | – | 关闭 BLE 并重置 UI |
+| **Disconnect** | – | 关闭 BLE 并重置界面 |
 
 > **工作流：**录音 → 停止 → **WiFi sync**（最快）或 **BLE DL**（无需 Wi‑Fi 配置）。
 
@@ -193,8 +193,8 @@ flutter run
 | 症状 | 原因 | 解决方法 |
 |---------|-------|-----|
 | 扫描中没有出现 Clip | Clip 关闭 / 超出范围 / 已连接到其他设备 | 重新上电 Clip；保持在 2 m 范围内；断开其他设备连接 |
-| 扫描卡住 | 拒绝了 Bluetooth 权限 | 重新安装并授予所有权限；在 Android 12L‑ 上确保 Location 已开启 |
-| 恢复出厂设置后配对失败 | 旧的 Bluetooth 绑定残留 | 在系统 Bluetooth 设置中删除绑定 → 重试 |
+| 扫描卡住 | 拒绝了蓝牙权限 | 重新安装并授予所有权限；在 Android 12L‑ 上确保位置服务已开启 |
+| 恢复出厂设置后配对失败 | 过期的蓝牙绑定 | 在系统蓝牙设置中删除绑定 → 重试 |
 | 连接后按钮无反应 | AT 通道尚未就绪 | 等待 2–3 秒以便通知稳定；先尝试 **Version** 按钮 |
 
 #### Wi‑Fi 同步问题
@@ -202,12 +202,12 @@ flutter run
 | 症状 | 原因 | 解决方法 |
 |---------|-------|-----|
 | 同步立即失败 | 录音仍在进行中 | 先停止录音 |
-| 手机无法加入 AP | 缺少权限或凭据错误 | Android：授予 Nearby Wi‑Fi Devices（13+）或 Fine Location（12L‑）；iOS：接受加入热点的提示 |
+| 手机无法加入 AP | 缺少权限或凭据错误 | Android：授予 Nearby Wi‑Fi Devices（13+）或 Fine Location（12L‑）；iOS：接受加入热点的弹窗 |
 | 同步卡住 | 手机漫游到其他网络 | 靠近 Clip；临时关闭对已知网络的自动连接 |
 
 #### 日志记录
 
-SDK 通过 `SdkLog` 输出日志。在演示应用中，日志会打印到终端并显示在屏幕上的日志面板。你可以通过以下方式绑定自定义日志记录器：
+SDK 通过 `SdkLog` 输出日志。在演示应用中，日志会打印到终端并显示在屏幕上的日志面板。你可以绑定自定义日志记录器：
 
 ```dart
 SdkLog.bind((level, message, error, stack) {
@@ -221,7 +221,9 @@ SdkLog.bind((level, message, error, stack) {
 
 ### 8. 概览与架构
 
-SenseCraft Voice SDK 通过 **BLE**（AT/JSON 命令 + 文件下载）以及设备的 **Wi‑Fi AP**（UDP 二进制文件传输）与 reSpeaker Clip 设备通信。无需 API 密钥或后端 —— SDK 会直接与设备对话。
+SenseCraft Voice SDK 通过 **BLE**（AT/JSON 命令 + 文件下载）以及设备的 **Wi‑Fi AP**（UDP 二进制文件传输）与 reSpeaker Clip 设备通信。无需 API 密钥或后端 —— SDK 直接与设备对话。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/LayeredView_2.png" alt="转写界面" width={900} height="auto" /></p>
 
 #### SDK 对齐情况
 
@@ -234,7 +236,7 @@ SenseCraft Voice SDK 通过 **BLE**（AT/JSON 命令 + 文件下载）以及设�
 | AT(JSON) 传输 | `AtTransport` | `AtTransport` | `AtTransport` |
 | 录音控制 | `RecordingSession` | `RecordingSession` | `RecordingSession` |
 | 设备事件/状态 | `DeviceEvent`/`DeviceStatus` | `DeviceEvent`/`DeviceStatus` | `DeviceEvent`/`DeviceStatus` |
-| BLE 下载 + 合并 | `RecordingSession.download*` | `RecordingSession.download*` | `RecordingSession.download*` |
+| BLE 下载与合并 | `RecordingSession.download*` | `RecordingSession.download*` | `RecordingSession.download*` |
 | Wi‑Fi 热点控制 | `WifiHotspotConnector` | `WifiHotspotConnector` | `WifiHotspotConnector` |
 | Wi‑Fi UDP 传输 | `WifiTransferClient` | `WifiTransferClient` | `WifiTransferClient` |
 | Wi‑Fi 快速同步 | `WifiFastSyncSession` | `WifiFastSyncSession` | `WifiFastSyncSession` |
@@ -277,17 +279,17 @@ SenseCraft Voice SDK 通过 **BLE**（AT/JSON 命令 + 文件下载）以及设�
 
 #### BLE 文件数据帧类型
 
-| 常量 | 数值 | 含义 |
+| 常量 | 值 | 含义 |
 |----------|-------|---------|
-| `kClipFrameData` | `0x01` | DATA 帧：type(1) + seq(2 LE) + len(2 LE) + payload |
+| `kClipFrameData` | `0x01` | 数据帧：type(1) + seq(2 LE) + len(2 LE) + payload |
 | `kClipFrameFileStart` | `0x10` | FILE_START：type(1) + nameLen(1) + name + size(4 LE) |
 | `kClipFrameFileEnd` | `0x11` | FILE_END：type(1) + crc32(4 LE) |
 | `kClipFrameTransferDone` | `0x12` | TRANSFER_DONE：type(1) + sessionIdLen(1) + id + fileCount(4 LE) |
-| `kClipDataHeaderSize` | `5` | DATA 头：type + seq + len |
+| `kClipDataHeaderSize` | `5` | 数据头：type + seq + len |
 
 #### UDP 帧类型
 
-| 常量 | 数值 | 含义 |
+| 常量 | 值 | 含义 |
 |----------|-------|---------|
 | `FRAME_DATA` | `0x01` | 带 CRC 的文件数据块（Dart/Kotlin）/ `frameData`（Swift） |
 | `FRAME_FILE_ACK` | `0x03` | ACK(0x00) 或 NACK(0x01) |
@@ -356,6 +358,8 @@ SenseCraft Voice SDK 通过 **BLE**（AT/JSON 命令 + 文件下载）以及设�
 `BluetoothAdapterState`, `BluetoothBondState`, `BluetoothCharacteristic`, `BluetoothConnectionState`, `BluetoothDevice`, `Guid`, `ScanResult`
 
 ---
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/sequence.png" alt="转写界面" width={800} height="auto" /></p>
 
 #### 10.1 BLE 层
 
@@ -1125,7 +1129,7 @@ class OtaSession {
 
 ---
 
-#### 10.6 模型与工具
+#### 10.6 模型与实用工具
 
 ##### 模型
 
