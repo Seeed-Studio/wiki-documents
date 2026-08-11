@@ -100,7 +100,9 @@ import '/src/css/robotics-page-style.css';
       <a className="step-card" href="/ja/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio による運動学可視化</b><small>アームモデル、関節、フレーム、運動学を探索します。</small></div><em>高度な制御</em></a>
       <a className="step-card" href="/ja/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>ビジュアルグラスピングデモ</b><small>ビジョンと把持姿勢生成を用いて実物体をピックします。</small></div><em>アプリケーションデモ</em></a>
       <a className="step-card" href="/ja/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 連携</b><small>アームを ROS2 に接続し、認識、プランニング、シミュレーションを行います。</small></div><em>システム統合</em></a>
-      <a className="step-card" href="/ja/rebot_arm_b601_rs_isaacsim/"><span className="step-index">6</span><div><b>ROS2 連携</b><small>Isaac Sim 上でアームをシミュレーションし、実機ロボットと同期します。</small></div><em>シミュレーション</em></a>
+      <a className="step-card" href="/ja/rebot_arm_b601_rs_isaacsim/"><span className="step-index">6</span><div><b>Isaac Sim 連携</b><small>Isaac Sim 上でアームをシミュレーションし、実機ロボットと同期します。</small></div><em>シミュレーション</em></a>
+
+      <a className="step-card" href="/ja/rebot_arm_b601_rs_mit_control/"><span className="step-index">7</span><div><b>MIT 位置制御</b><small>reBot Arm B601-RS の MIT 位置制御入門、基礎制御アルゴリズムを習得します。</small></div><em>制御進階</em></a>
     </div>
   </div>
 </details>
@@ -132,6 +134,8 @@ import '/src/css/robotics-page-style.css';
   <a className="step-card" href="/ja/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">4</span><div><b>ビジュアルグラスピングデモ</b><small>アームとビジョンを組み合わせて実環境で把持します。</small></div><em>アプリケーションデモ</em></a>
 
   <a className="step-card" href="/ja/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 連携</b><small>ROS2 を MoveIt、認識、システムアプリと共に使用します。</small></div><em>システム統合</em></a>
+
+  <a className="step-card" href="/ja/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web シミュレーター開発</b><small>Web シミュレーターと ROS2/MuJoCo の連携開発を学び、仮想と現実の同期制御を実現します。</small></div><em>シミュレーション開発</em></a>
 </div>
 </div>
 </details>

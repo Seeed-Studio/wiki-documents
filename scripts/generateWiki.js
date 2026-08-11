@@ -36,6 +36,11 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Use_of_the_laboratory', 'Acoustic_Lab_Usage.md'), //7.13
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super.md'), //7.22
   path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_python_usage_stt_llm_transcribe.md'), //7.21
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'FAQs.md'), //8.5
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_customization_at_command.md'), //7.28
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_firmware_quick_start.md'), //7.28
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_firmware_development_guide.md'), //7.28
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_sensecraft_voice_sdk.md'), //8.7
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

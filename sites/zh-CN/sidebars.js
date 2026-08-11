@@ -2166,6 +2166,7 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/cn_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/cn_respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/cn_respeaker_clip_sensecraft_voice_sdk',
             {
               type: 'category',
               label: '固件 SDK',
@@ -4567,15 +4568,16 @@ const sidebars = {
               label: 'B601-DM',
               items: [
                   'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Getting_Started',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
                   'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_pinocchio',
                   'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Lerobot',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Grasping_Demo',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_ROS2_Integration',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'B601-RS',
+                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Grasping_Demo',
+                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_ROS2_Integration',
+             ]
+           },
+           {
+             type: 'category',
+             label: 'B601-RS',
               items: [
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Getting_Started',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Lerobot',
@@ -5183,6 +5185,7 @@ const sidebars = {
                 'Topics/TinyML/ModelAssistant/deploy/cn_ma_deploy_yolov5',
                 'Topics/TinyML/ModelAssistant/deploy/cn_ma_deploy_yolov8',
                 'Topics/TinyML/ModelAssistant/deploy/cn_ma_deploy_yolov8_pose',
+                'Topics/TinyML/ModelAssistant/deploy/cn_ma_deploy_yolov26',
               ]
             },
           ],

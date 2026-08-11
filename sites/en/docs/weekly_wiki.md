@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/03/2026
+  date: 08/10/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-08-03'
+updatedAt: '2026-08-10'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,87 +18,57 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 3rd, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 10th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [JetPack 7.2 Resource Hub](https://wiki.seeedstudio.com/jetpack_7_2_resource_hub/)
+### [Streaming Vision Agent on Jetson](https://wiki.seeedstudio.com/streaming_vision_agent_on_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/other/jp72-front.png" alt="pir" width={800} height="auto" /></p>
+<div class="video-container">
+<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_03.mp4" controls width="800"></video>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-This page organizes the JetPack 7.2 resources currently available for Seeed Studio NVIDIA Jetson products. Use it as the starting point for understanding the new software stack, selecting a supported image, migrating an existing JetPack 6.x project, restoring peripheral drivers, and deploying optimized AI workloads.
+This wiki deploys a real-time demo on Seeed Jetson devices (verified on **reComputer Mini J5012 · JetPack 7.2**). A USB camera feeds a browser UI; two independent **Qwen3-VL-2B** instances handle recognition and Ask so answering does not block background memory writes.
 
 </div>
 
-### [reCamera Pro and Home Assistant Integration: Sound-Triggered Photo Alert](https://wiki.seeedstudio.com/recamera_pro_ha_sound_alert/)
+### [Getting Started with MIT Position Control on the reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_arm_b601_rs_mit_control/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_Voice_Capture/reCamera-PRO_Voice_Capture.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to integrate reCamera Pro with Home Assistant (HA) to automatically send a custom message and a current camera snapshot to the Home Assistant dashboard when a specific sound is detected. Using the MQTT protocol for bidirectional communication, when reCamera Pro detects a specified sound (e.g., "help") with a confidence level exceeding a threshold, it automatically sends an alert message and a live image to HA.
+[MotorBridge](https://github.com/motorbridge/motorbridge) is a Python CAN control SDK for motors such as RobStride and Damiao. Built on top of it, [rebot_control](https://github.com/LAN-GER/rebot_control) wraps an MIT position control interface tailored for the **reBot Arm B601-RS**: YAML configuration, per-joint speed limiting, three-level MOS temperature protection, and smooth return-to-zero triggered by Esc / Ctrl+C / `stop()`. This tutorial walks you through: environment setup → CAN configuration → running the examples → using it as a library for secondary development.
 
 </div>
 
-### [Reachy Mini Home Assistant integration](https://wiki.seeedstudio.com/reachymini_development_cases_home_assistant/)
+### [reBot Arm B601-DM Web Simulator and ROS2/MuJoCo Developer Guide](https://wiki.seeedstudio.com/rebot_arm_b601_dm_web_simulator_developer_guide/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-home.webp" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Want Reachy Mini to control your smart home devices — Mi Home (Xiaomi), Aqara, Midea, Haier, and more (such as refrigerators and air conditioners)? This project explains in detail how to control them with Reachy Mini, no code required. You can even hand this document directly to an AI and let it install and set everything up for you.
+This guide is for developers. It explains how to run and extend the `reBotArm_simulator-DM` web simulator. The simulator is a lightweight Node.js + Three.js web console that reads the URDF and STL meshes from the ROS2 workspace in the same repository, renders the 6-DOF body and gripper of the reBot Arm B601-DM in the browser, and talks to ROS2 over a rosbridge WebSocket. It supports the full development workflow: joint mirroring, control lock, gravity compensation, visual grasping, and LLM text control.
 
 </div>
 
-### [reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 WebSocket Audio Streaming](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_websocket_audio_stream/)
+### [Getting Started with the reSpeaker Clip Firmware SDK](https://wiki.seeedstudio.com/respeaker_clip_firmware_quick_start/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide describes how to capture audio from an XVF3800 microphone array using an ESP32-S3 (XIAO ESP32S3), record 5 seconds of 48 kHz stereo 32-bit PCM audio, and store the data in PSRAM to handle large audio buffers. The recorded audio is then transmitted over Wi-Fi to a Python-based WebSocket server, where it is received and saved as a standard WAV file. This approach is well suited for applications such as voice capture, remote audio logging, and speech processing pipelines including speech-to-text (STT) and machine-learning–based audio analysis.
+The **Firmware SDK** is the device-side Zephyr RTOS firmware on the Nordic nRF5340 (dual-core: application core + network core). It is for developers who need to **modify device-side behavior** — the audio pipeline, the AT command surface or BLE GATT service, the button / OLED / haptic interaction model, the power or productization strategy, or custom hardware bring-up.
 
 </div>
 
-### [Convert and deploy a custom YOLO detection model in the reCamera web interface](https://wiki.seeedstudio.com/recamera_model_export_online/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/ai_model_deployment/model_export_cvimodel_online/image-5.png" alt="pir" width={800} height="auto" /></p>
+### [reSpeaker Clip Voice SDK & API Reference Build Your Own AI Voice App with Flutter SDK](https://wiki.seeedstudio.com/respeaker_clip_sensecraft_voice_sdk/)
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces how to convert and deploy custom YOLO models on reCamera, including ONNX file upload, cloud conversion, model deployment, and real-time detection preview.
-
-</div>
-
-### [Reachy Mini Voice Control for SO-ARM](https://wiki.seeedstudio.com/reachymini_development_cases_gripper_voice_control/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This case uses the Reachy Mini conversation app to open and close the SO-ARM follower arm gripper with voice commands — **without modifying the official source code**, using the app's built-in external tools mechanism.
-
-</div>
-
-### [Build Your Own App for reSpeaker Clip adding memory Layer using Python SDK](https://wiki.seeedstudio.com/respeaker_clip_python_build_app_with_memory/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide shows how to turn the reSpeaker Clip into a voice-powered assistant that not only transcribes, diarizes, or summarizes recordings, but also remembers what was said before. By adding a memory layer on top of the Python SDK workflow, your app can compare new transcripts with past conversations and notify you when it detects a similar discussion. The result is a practical foundation for building smart meeting assistants, personal note takers, or voice-driven knowledge apps with the reSpeaker Clip.
-
-</div>
-
-### [Bring Voice AI to Your Business System with Face Verification](https://wiki.seeedstudio.com/solutions/mcp-face-auth-integration/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/mcp-face-auth/mcp-face-architecture.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-What we supply is a small robot that stands on your customer's floor, holds a conversation, and knows who it is talking to. An operator walks up with their hands full, says "stock out forty units of the M16 bearings," and the transaction lands in your system attributed to the person the camera recognized — not to whatever name was spoken. Microphone array, wake word, speech, language model and face recognition arrive as one tuned product, with a fully on-premises build for customers whose audio cannot leave the site. What is left is the part only you can do: connecting it to your platform. That connection is an **MCP server in front of your own system** — you do not adopt our platform.
+This document introduces how to develop with reSpeaker Clip using the SenseCraft Voice SDK, covering device connectivity, BLE/Wi-Fi communication, recording and file transfer, OTA updates, and API usage.
 
 </div>
 
@@ -250,5 +220,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.7.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260713)
 - [weekly wiki on 2026.7.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260720)
 - [weekly wiki on 2026.7.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260727)
+- [weekly wiki on 2026.8.03rd](/Seeed_Elderly/weekly_wiki/2026/wiki260803)
 
 </details>

@@ -362,6 +362,15 @@ SO-ARM10x 可以与 reComputer Jetson AI 智能机器人套件组合使用，将
   - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
+**第四步：打印柔性夹爪（可选）**
+
+如果你希望让机械臂具备抓取柔软、易碎或形状不规则物体的能力，可以选择打印柔性夹爪来替换默认的刚性夹爪。打印文件可在 [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) 仓库中获取。
+
+打印材料说明：
+
+- 两个夹爪：使用 **TPU** 材料打印
+- 其他零件：使用 **PLA** 材料打印
+
 </details>
 </section>
 

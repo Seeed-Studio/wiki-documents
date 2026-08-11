@@ -1,5 +1,5 @@
 ---
-description: El ReSpeaker XVF3800 USB 4-Mic Array es un arreglo de micrófonos circular profesional con AEC, beamforming, supresión de ruido y captura de voz de 360°. Emparejado con el XIAO ESP32S3, permite control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre la integración perfecta y flexibilidad de modo dual.
+description: El ReSpeaker XVF3800 USB 4-Mic Array es una matriz de micrófonos circular profesional con AEC, formación de haz, supresión de ruido y captura de voz de 360°. Combinado con el XIAO ESP32S3, permite un control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre una integración perfecta y flexibilidad de doble modo.
 title: reSpeaker XVF3800 USB Mic Array con XIAO ESP32S3 DoA y VAD
 keywords:
   - reSpeaker
@@ -18,23 +18,23 @@ url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_xiao_doa_vad/
 
 ## Introducción 
 
-El ReSpeaker XVF3800 es una solución de procesamiento de voz multi-micrófono basada en el XMOS XVF3800, diseñada para aplicaciones embebidas que requieren inteligencia de audio en tiempo real. El XVF3800 calcula internamente la Detección de Actividad de Voz (VAD) y la Dirección de Llegada (DoA) para indicar cuándo está presente el habla y la dirección de la cual se origina. Estos resultados de inferencia pueden ser accedidos directamente por un MCU host a través de I2C usando comandos basados en recursos, habilitando características como despertar por voz, localización de fuente de sonido y retroalimentación consciente de dirección sin procesar audio crudo en el host.
+El ReSpeaker XVF3800 es una solución de procesamiento de voz con múltiples micrófonos basada en el XMOS XVF3800, diseñada para aplicaciones embebidas que requieren inteligencia de audio en tiempo real. El XVF3800 calcula internamente la Detección de Actividad de Voz (VAD) y la Dirección de Llegada (DoA) para indicar cuándo hay voz presente y desde qué dirección se origina. Estos resultados de inferencia pueden ser accedidos directamente por un MCU host a través de I2C usando comandos basados en recursos, lo que habilita funciones como activación por voz, localización de fuentes de sonido y retroalimentación consciente de la dirección sin procesar audio en bruto en el host.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>
 
 
 :::note
-El Firmware que soporta este código es `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin`. Así que por favor asegúrate de flashear primero
+El firmware que admite este código es `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` y `respeaker_xvf3800_i2s_dfu_firmware_v1.0.7.bin`. Así que asegúrate de flashearlo primero
 :::
 
-## Código Arduino 
+## Código de Arduino 
 
 ```cpp
 #include <Wire.h>
@@ -152,13 +152,13 @@ void write_led_effect(uint8_t effect) {
 
 ```
 
-**Salida Esperada**
+**Salida esperada**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/doa_vad_i2c.png" alt="pir" width={800} height="auto" /></p>
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

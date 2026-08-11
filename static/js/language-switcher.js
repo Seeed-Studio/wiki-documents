@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-05 17:14:55 (北京时间)
-// 多语言页面: 2429 个
+// 生成时间: 2026-08-10 11:30:35 (北京时间)
+// 多语言页面: 2433 个
 
 (function() {
   'use strict';
@@ -3894,6 +3894,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_faqs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_hardware_specifications": [
     "cn",
     "en",
@@ -6427,6 +6434,13 @@
     "pt"
   ],
   "/rebot_arm_b601_dm_ros2_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_web_simulator_developer_guide": [
     "cn",
     "en",
     "es",
@@ -11639,6 +11653,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_clip_sensecraft_voice_sdk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_doa_vad": [
     "cn",
     "en",
@@ -15643,6 +15664,13 @@
     "pt"
   ],
   "/open_source_topic": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ma_deploy_yolov26": [
     "cn",
     "en",
     "es",

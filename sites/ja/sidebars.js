@@ -2166,6 +2166,7 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/ja_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/ja_respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_sensecraft_voice_sdk',
             {
               type: 'category',
               label: 'ファームウェア SDK',
@@ -4567,6 +4568,7 @@ const sidebars = {
               label: 'B601-DM',
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Getting_Started',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Grasping_Demo',
@@ -5197,6 +5199,7 @@ const sidebars = {
                 'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov5',
                 'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov8',
                 'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov8_pose',
+                'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov26',
               ]
             },
           ],
