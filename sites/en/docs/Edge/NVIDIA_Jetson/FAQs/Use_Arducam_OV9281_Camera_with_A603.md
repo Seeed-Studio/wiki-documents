@@ -8,7 +8,7 @@ keywords:
   - Jetvariety
   - A603
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Use_Arducam_OV9281_Camera_with_A603_Jetson_Carrier_Board
+slug: /use_arducam_ov9281_camera_with_a603_jetson_carrier_board
 last_update:
   date: 07/08/2026
   author: Jonathan van der Maas
