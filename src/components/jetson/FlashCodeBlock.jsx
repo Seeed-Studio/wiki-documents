@@ -1158,20 +1158,23 @@ export const PrepareRequirementsClassic = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
   const texts = useLocalizedTexts(lang);
 
-  const allowed = ['j4012classic', 'j4011classic', 'j3011classic', 'j3010classic'];
+  const classicJ501Products = ['j5012classic', 'j5011classic'];
+  const allowed = ['j4012classic', 'j4011classic', 'j3011classic', 'j3010classic', ...classicJ501Products];
   if (!allowed.includes(product)) {
     return null;
   }
+
+  const isClassicJ501 = classicJ501Products.includes(product);
 
   return (
     <div>
       <ul>
         <li>{texts.ubuntuHost}</li>
-        <li>reComputer J4012 / J4011 / J3010 {texts.or} J3011</li>
+        <li>{isClassicJ501 ? 'reComputer Classic J5011 / J5012' : `reComputer J4012 / J4011 / J3010 ${texts.or} J3011`}</li>
         <li>{texts.usbTypeC}</li>
       </ul>
 
-      <HostEnvironmentNote lang={lang} />
+      {isClassicJ501 ? <HostEnvironmentNote1 lang={lang} /> : <HostEnvironmentNote lang={lang} />}
     </div>
   );
 };
@@ -1180,9 +1183,70 @@ export const RecoveryClassic = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
   const texts = useLocalizedTexts(lang);
 
-  const allowed = ['j4012classic', 'j4011classic', 'j3011classic', 'j3010classic'];
+  const classicJ501Products = ['j5012classic', 'j5011classic'];
+  const allowed = ['j4012classic', 'j4011classic', 'j3011classic', 'j3010classic', ...classicJ501Products];
   if (!allowed.includes(product)) {
     return null;
+  }
+
+  if (classicJ501Products.includes(product)) {
+    return (
+      <div>
+        <div className="alert alert--info" role="alert" style={{ marginBottom: '1em' }}>
+          {texts.recoveryModeNoteNext}
+          <br />
+          {texts.recoveryModeClickStep}
+        </div>
+
+        <details style={{ marginBottom: '1em' }}>
+          <summary
+            style={{
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              backgroundColor: 'var(--ifm-background-surface-color)',
+              padding: '0.6em 1em',
+              border: '1px solid #c3dafe',
+              borderRadius: '6px',
+              fontSize: '1.05em'
+            }}
+          >
+            {texts.stepByStep}
+          </summary>
+
+          <div style={{ textAlign: 'center', margin: '1em 0' }}>
+            <img
+              width={800}
+              src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Classic_J501/hardware_recovery_button.png"
+              alt="reComputer Classic J501 recovery button and USB port"
+            />
+          </div>
+
+          <ul>
+            <li><strong>{texts.step1}</strong> Connect the dedicated recovery USB Type-C port to the Ubuntu host PC.</li>
+            <li><strong>{texts.step2}</strong> Press and hold the recovery button.</li>
+            <li><strong>{texts.step3}</strong> Connect the power supply.</li>
+            <li><strong>{texts.step4}</strong> Release the recovery button.</li>
+            <li><strong>{texts.step5}</strong> {texts.runLsusb}</li>
+          </ul>
+        </details>
+
+        <p>{texts.afterRecoveryMode}</p>
+        <CodeBlock language="bash">lsusb</CodeBlock>
+
+        <ul>
+          <li>{texts.agxOrin32gb} <code>0955:7223</code> NVidia Corp</li>
+          <li>{texts.agxOrin64gb} <code>0955:7023</code> NVidia Corp</li>
+        </ul>
+
+        <div style={{ textAlign: 'center', margin: '1em 0' }}>
+          <img
+            width={800}
+            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Classic_J501/flash_lsusb_recovery.png"
+            alt={texts.lsusbResult}
+          />
+        </div>
+      </div>
+    );
   }
 
   return (
