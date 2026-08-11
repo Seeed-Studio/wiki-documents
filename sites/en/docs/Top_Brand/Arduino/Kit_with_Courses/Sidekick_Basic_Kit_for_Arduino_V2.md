@@ -45,7 +45,7 @@ All of these coming with its own handy box are easy transport and minimal clutte
 | Resistor                | 330R x 10 + 1k x 10 + 10k x 10 |
 | Tilt switch             | 1                              |
 | Thermistor              | 1                              |
-| Photo resistor          | 1                              |
+| Ambient Light Sensor    | 1                              |
 | Diode                   | 1                              |
 | Buzzer                  | 1                              |
 | Button                  | 1                              |
@@ -118,11 +118,10 @@ Thermistors are special resistors whose resistance will be changed with the temp
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Thermistor.JPG)
 
-**Light Dependent Resistors (LDR)**
+**Light Sensor**
 
-LDR will change the resistance when the intensity of light falling on them changes. They are also called photocell. It offers maximum resistance when there is no light falling on it and gives minimum resistance when exposed to bright light. It is made up of photo sensitive material like Cadmium Sulphide and can be connected to the circuit. It can be used as a light sensing element.
-
-![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_LDR.JPG)
+The light sensor detects ambient light intensity and outputs a signal that changes according to the amount of light received. It can be used for light detection and brightness-related projects.
+Unlike traditional photoresistors, this sensor is a polarized semiconductor device. Please make sure the sensor is connected with the correct polarity when building circuits.
 
 **Light Emitting Diodes**
 
