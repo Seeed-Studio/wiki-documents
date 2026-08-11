@@ -353,6 +353,15 @@ All the parts for the leader or follower are for easy 3D printing already contai
   - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
+**Step 4: Print the Soft Gripper (Optional)**
+
+If you want the robotic arm to be able to grasp soft, fragile, or irregularly shaped objects, you can print a soft gripper to replace the default rigid gripper. The print files are available in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
+
+Printing material instructions:
+
+- Two gripper fingers: print with **TPU** material
+- Other parts: print with **PLA** material
+
 </details>
 
 </section>

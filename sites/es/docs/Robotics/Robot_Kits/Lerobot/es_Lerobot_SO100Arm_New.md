@@ -353,6 +353,15 @@ Todas las piezas para el líder o el seguidor están ya contenidas en un solo ar
   - [Seguidor](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Líder](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
+**Paso 4: Imprimir la pinza flexible (Opcional)**
+
+Si deseas que el brazo robótico pueda agarrar objetos blandos, frágiles o de forma irregular, puedes imprimir una pinza flexible para reemplazar la pinza rígida predeterminada. Los archivos de impresión están disponibles en el repositorio [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git).
+
+Instrucciones de material de impresión:
+
+- Los dos dedos de la pinza: imprimir con material **TPU**
+- Las demás piezas: imprimir con material **PLA**
+
 </details>
 
 </section>
