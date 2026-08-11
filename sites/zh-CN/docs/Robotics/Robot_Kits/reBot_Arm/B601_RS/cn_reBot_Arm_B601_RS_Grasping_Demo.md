@@ -153,13 +153,6 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-也可以使用当前开发仓库：
-
-```bash
-git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
-cd rebot_grasp
-```
-
 ### 步骤 2. 创建并配置 conda 环境
 
 ```bash
@@ -172,7 +165,7 @@ conda activate rebotarm
 ### 步骤 3. 安装机械臂 SDK
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 cd sdk/reBotArm_control_py
 pip install -e .
 cd ../..
@@ -641,8 +634,8 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## 联系方式
 
-- 技术支持：[提交 Issue](https://github.com/EclipseaHime017/reBot-DevArm-Grasp/issues)
-- 项目地址：[Github](https://github.com/EclipseaHime017/reBot-DevArm-Grasp)
+- 技术支持：[提交 Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
+- 项目地址：[Github](https://github.com/Seeed-Projects/reBot-DevArm-Grasp)
 - 论坛：[Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## 参考文档

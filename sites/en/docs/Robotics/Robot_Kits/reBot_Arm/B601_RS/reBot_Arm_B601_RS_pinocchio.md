@@ -39,6 +39,11 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/
 
 ![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png)
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
 [Pinocchio](https://github.com/stack-of-tasks/pinocchio) is an open-source library for robot dynamics analysis and optimization. It provides efficient forward/inverse kinematics, dynamics computation, and trajectory planning. [MeshCat](https://github.com/rdeits/meshcat) is a web-based 3D visualization tool that can display robot states and motion trajectories in real time.
 
 This project combines Pinocchio's powerful computation capabilities with MeshCat's intuitive visualization, providing a complete set of kinematics analysis and debugging tools for reBot Arm B601-RS.
@@ -734,8 +739,8 @@ viz.draw_path(points, "path_name", color)  # Draw path
 
 ## Contact
 
-- **Technical Support**: [Submit Issue](https://github.com/vectorBH6/reBotArm_control_py/issues)
-- **Project Repository**: [GitHub](https://github.com/vectorBH6/reBotArm_control_py)
+- **Technical Support**: [Submit Issue](https://github.com/Seeed-Projects/reBotArm_control_py/issues)
+- **Project Repository**: [GitHub](https://github.com/Seeed-Projects/reBotArm_control_py)
 - **Forum**: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ---

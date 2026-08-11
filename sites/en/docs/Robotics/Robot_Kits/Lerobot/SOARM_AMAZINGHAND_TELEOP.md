@@ -29,6 +29,16 @@ This document explains how to combine the SO-ARM101 follower arm with the Amazin
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/soarm_amazinghand/soarm_amazinghand.webp" />
 </div>
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/Amazing-Hand-Right-Hand-The-Open-Source-Robotic-Hand-Developer-Kit.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> AmazingHand Get One Now 🖱️</font></span></strong>
+</a></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> SO-ARM101 Get One Now 🖱️</font></span></strong>
+</a></div>
+
 ## 1. Hardware Connection
 
 1. The STL file for the SOARM-to-AmazingHand adapter is available here:

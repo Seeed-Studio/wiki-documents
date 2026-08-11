@@ -100,7 +100,9 @@ import '/src/css/robotics-page-style.css';
       <a className="step-card" href="/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio Kinematics Visualization</b><small>Explore the arm model, joints, frames, and kinematics.</small></div><em>Advanced control</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Use vision and grasp-pose generation to pick real objects.</small></div><em>Application demo</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Connect the arm to ROS2 for perception, planning, and simulation.</small></div><em>System integration</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">6</span><div><b>ROS2 Integration</b><small>Simulate the arm in Isaac Sim and sync with the real robot.</small></div><em>Simulation</em></a>
+      <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">6</span><div><b>Isaac Sim Integration</b><small>Simulate the arm in Isaac Sim and sync with the real robot.</small></div><em>Simulation</em></a>
+
+      <a className="step-card" href="/rebot_arm_b601_rs_mit_control/"><span className="step-index">7</span><div><b>MIT Position Control</b><small>Get started with MIT position control for the reBot Arm B601-RS.</small></div><em>Control advanced</em></a>
     </div>
   </div>
 </details>
@@ -132,6 +134,8 @@ import '/src/css/robotics-page-style.css';
   <a className="step-card" href="/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine the arm and vision for real-world grasping.</small></div><em>Application demo</em></a>
 
   <a className="step-card" href="/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Use ROS2 with MoveIt, perception, and system apps.</small></div><em>System integration</em></a>
+
+  <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator Development</b><small>Learn Web Simulator integration with ROS2/MuJoCo for virtual-real synchronized control.</small></div><em>Simulation dev</em></a>
 </div>
 </div>
 </details>

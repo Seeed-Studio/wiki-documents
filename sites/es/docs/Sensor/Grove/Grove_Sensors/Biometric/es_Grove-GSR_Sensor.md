@@ -16,48 +16,48 @@ url: https://wiki.seeedstudio.com/es/Grove-GSR_Sensor/
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/GSR.jpg" /></div>
 
-GSR significa respuesta galvánica de la piel, es un método para medir la conductancia eléctrica de la piel. Las emociones fuertes pueden causar estímulos en tu sistema nervioso simpático, resultando en que las glándulas sudoríparas secreten más sudor. Grove - GSR te permite detectar tales emociones fuertes simplemente conectando dos electrodos a dos dedos de una mano. Es interesante para crear proyectos relacionados con emociones como un monitor de calidad del sueño.
+GSR significa respuesta galvánica de la piel, es un método para medir la conductancia eléctrica de la piel. Una emoción fuerte puede estimular tu sistema nervioso simpático, lo que provoca que las glándulas sudoríparas secreten más sudor. Grove - GSR te permite detectar esas emociones fuertes simplemente fijando dos electrodos a dos dedos de una mano. Es interesante para crear proyectos relacionados con las emociones, como un monitor de calidad del sueño.
 
 :::caution
-¡El Sensor Grove-GSR mide la resistencia de las personas, NO la Conductividad!
+El sensor Grove-GSR mide la resistencia de las personas, ¡NO la conductividad!
 :::
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" /></a></p>
 
 ## Versión
 
-| Versión del Producto                  |  Cambios | Fecha de Lanzamiento                                |
+| Versión del producto                  |  Cambios | Fecha de lanzamiento                                |
 |------------------------|----------------|--------------------------------------------|
-| Grove - GSR_Sensor V1.0      | Inicial     |  19 de junio, 2013     |
-| Grove - GSR_Sensor V1.2  |Agregar C3 100nf entre M324PW-TSSOP14 y GND  | 31 de julio, 2014 |
+| Grove - GSR_Sensor V1.0      | Inicial     |  19 de junio de 2013     |
+| Grove - GSR_Sensor V1.2  |Añadir C3 100nf entre M324PW-TSSOP14 y GND  | 31 de julio de 2014 |
 
 ## Especificación
 
 | Parámetro               | Valor/Rango                    |
 |-------------------------|--------------------------------|
-| Voltaje de operación    | 3.3V/5V                        |
-| Sensibilidad            | Ajustable mediante potenciómetro |
-| Señal de entrada        | Resistencia, NO Conductividad   |
-| Señal de salida         | Voltaje, lectura analógica      |
-| Material de contacto del dedo | Níquel                    |
+| Voltaje de funcionamiento       | 3.3V/5V                        |
+| Sensibilidad             | Ajustable mediante un potenciómetro |
+| Señal de entrada            | Resistencia, NO conductividad   |
+| Señal de salida           | Voltaje, lectura analógica        |
+| Material de contacto con el dedo | Níquel                         |
 
 :::tip
-Más detalles sobre los módulos Grove consulte [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
+Para más detalles sobre los módulos Grove, consulta [Grove System](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
 
-## Plataformas Soportadas
+## Plataformas compatibles
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
 :::caution
-Las plataformas mencionadas anteriormente como compatibles son una indicación de la compatibilidad de software o teórica del módulo. Solo proporcionamos biblioteca de software o ejemplos de código para la plataforma Arduino en la mayoría de los casos. No es posible proporcionar biblioteca de software / código de demostración para todas las plataformas MCU posibles. Por lo tanto, los usuarios tienen que escribir su propia biblioteca de software.
+Las plataformas mencionadas arriba como compatibles son una indicación de la compatibilidad teórica o del software del módulo. En la mayoría de los casos solo proporcionamos librerías de software o ejemplos de código para la plataforma Arduino. No es posible proporcionar librerías de software o código de demostración para todas las posibles plataformas MCU. Por lo tanto, los usuarios tienen que escribir sus propias librerías de software.
 :::
 
-## Primeros Pasos
+## Primeros pasos
 
-### Jugar Con Arduino
+### Jugar con Arduino
 
 #### Hardware
 
@@ -66,16 +66,16 @@ Las plataformas mencionadas anteriormente como compatibles son una indicación d
 | Seeeduino V4.2 | Base Shield |  Grove - GSR|
 |--------------|----------------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_s.jpg" /></div>|
-|[Obtener UNO Ahora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
 
-- Paso 2. Conecta el Grove-GSR al **A0** en el Base Shield.
-- Paso 3. Conecta el Base Shield al Seeeduino-V4.2.
-- Paso 4. Conecta el Seeeduino-V4.2 a la PC usando un cable USB.
+- Paso 2. Conecta el Grove-GSR a **A0** en el Base Shield.
+- Paso 3. Inserta el Base Shield en el Seeeduino-V4.2.
+- Paso 4. Conecta el Seeeduino-V4.2 al PC usando un cable USB.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Hardware_connection.jpg" /></div>
 
 :::note
-Si no tenemos un Base Shield, no te preocupes, el sensor se puede conectar directamente a tu Arduino. Por favor sigue las tablas de abajo para conectar con Arduino.
+Si no tenemos un Base Shield, no te preocupes, el sensor se puede conectar directamente a tu Arduino. Sigue las tablas de abajo para conectarlo al Arduino.
 :::
 
 | Seeeduino |Grove-GSR Sensor |
@@ -87,7 +87,7 @@ Si no tenemos un Base Shield, no te preocupes, el sensor se puede conectar direc
 
 #### Software
 
-- Paso 1. Copia el código en el IDE de Arduino y súbelo.
+- Paso 1. Copia el código en el Arduino IDE y súbelo.
 
 ```
 const int GSR=A0;
@@ -112,44 +112,47 @@ void loop(){
 
 ```
 
-- Paso 2. No uses el sensor GSR.
-- Paso 3. Haz clic en Herramientas-> Monitor Serie desde Arduino IDE
+- Paso 2. No te pongas el sensor GSR.
+- Paso 3. Haz clic en Tools-> Serial Plotter en el Arduino IDE.
 - Paso 4. Usa el destornillador para ajustar la resistencia hasta que la salida serie se minimice. Los datos del puerto serie en este punto se anotan como Serial_calibration.
-- Paso 5. Usa el sensor GSR.
-- Paso 6. Veremos el gráfico de abajo. Por favor respira profundo y observa las tendencias.
+- Paso 5. Ponte el sensor GSR.
+- Paso 6. Veremos el siguiente gráfico. Por favor respira profundamente y observa las tendencias.  
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_Result.png" /></div><br />
 
-**Resistencia Humana** = ((1024 + 2 x Lectura_Puerto_Serie) x 10000)/(Serial_calibration - Lectura_Puerto_Serie)
 
-- La unidad es ohmio;
-- Lectura_Puerto_Serie es el valor mostrado en el Puerto Serie (entre 0~1023);
-- Serial_calibration es del Paso 4 (Usa el destornillador para ajustar la resistencia hasta que la salida serie se minimice. Los datos del puerto serie en este punto se anotan como Serial_calibration).
 
-### Jugar Con Raspberry Pi (Con Grove Base Hat para Raspberry Pi)
+**Resistencia humana** = ((1024 + 2 x Serial_Port_Reading) x 10000)/(Serial_calibration - Serial_Port_Reading)
+
+- La unidad es ohmios; 
+- Serial_Port_Reading es el valor mostrado en el puerto serie (entre 0~1023); 
+- Serial_calibration proviene del Paso 4 (usa el destornillador para ajustar la resistencia hasta que la salida serie se minimice. Los datos del puerto serie en este punto se anotan como Serial_calibration).
+
+
+### Jugar con Raspberry Pi (con Grove Base Hat para Raspberry Pi)
 
 #### Hardware
 
-- **Paso 1**. Cosas usadas en este proyecto:
+- **Paso 1**. Elementos utilizados en este proyecto:
 
-| Raspberry pi | Grove Base Hat para RasPi| Grove - Sensor GSR|
+| Raspberry pi | Grove Base Hat for RasPi| Grove - GSR Sensor|
 |--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_s.jpg" /></div>|
-|[Consigue UNO Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
 
-- **Paso 2**. Conecta el Grove Base Hat al Raspberry Pi.
+- **Paso 2**. Inserta el Grove Base Hat en la Raspberry Pi.
 - **Paso 3**. Conecta el Grove - GSR Sensor al puerto A0 del Base Hat.
-- **Paso 4**. Conecta el Raspberry Pi a la PC a través del cable USB.
+- **Paso 4**. Conecta la Raspberry Pi al PC mediante un cable USB.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/With_Hat.jpg" /></div>
 
 :::note
-Para el paso 3 puedes conectar el sensor Grove - GSR a **cualquier Puerto Analógico** pero asegúrate de cambiar el comando con el número de puerto correspondiente.
+En el paso 3 puedes conectar el Grove - GSR sensor a **cualquier puerto analógico**, pero asegúrate de cambiar el comando con el número de puerto correspondiente.
 :::
 
 #### Software
 
-- **Paso 1**. Sigue [Setting Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
+- **Paso 1**. Sigue [Setting Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#configuración-del-software) para configurar el entorno de desarrollo.
 - **Paso 2**. Descarga el archivo fuente clonando la librería grove.py.
 
 ```
@@ -158,7 +161,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
-- **Paso 3**. Ejecuta los siguientes comandos para ejecutar el código.
+- **Paso 3**. Ejecuta los siguientes comandos para correr el código.
 
 ```
 cd grove.py/grove
@@ -166,7 +169,7 @@ nano grove_gsr_sensor.py
 
 ```
 
-Luego debes copiar el siguiente código en este archivo y presionar ++ctrl+x++ para salir y guardar.
+Luego debes copiar el siguiente código en este archivo y pulsar ++ctrl+x++ para salir y guardar.
 
 ```python
 
@@ -208,7 +211,7 @@ if __name__ == '__main__':
 
 ```
 
-- **Paso 4**. Ejecuta el siguiente comando para ejecutar el código
+- **Paso 4**. Ejecuta el siguiente comando para correr el código
 
 ```
 
@@ -244,17 +247,17 @@ GSR value: 371
 KeyboardInterrupt
 ```
 
-Puedes salir de este programa simplemente presionando `ctrl`+`c`.
+Puedes salir de este programa simplemente pulsando `ctrl`+`c`.
 
 :::note
-Es posible que hayas notado que para el puerto analógico, el número de pin en la serigrafía es algo como **A1, A0**, sin embargo en el comando usamos el parámetro **0** y **1**, igual que el puerto digital. Así que por favor asegúrate de conectar el módulo en el puerto correcto, de lo contrario puede haber conflictos de pines.
+Es posible que hayas notado que, para el puerto analógico, el número de pin en la serigrafía es algo como **A1, A0**, sin embargo en el comando usamos los parámetros **0** y **1**, igual que para el puerto digital. Así que asegúrate de conectar el módulo en el puerto correcto, de lo contrario puede haber conflictos de pines.
 :::
 
-## FAQ
+## Preguntas frecuentes
 
-**P1: ¿Cuál es la unidad de salida?**
+**P1: ¿Cuál es la unidad de la salida?**
 
-R1: Medimos la señal por voltaje e imprimimos al puerto COM como (0~1023).
+R1: Medimos la señal por voltaje y la imprimimos en el puerto COM como (0~1023).
 
 # Grove - GSR v1.0
 
@@ -268,27 +271,27 @@ R1: Medimos la señal por voltaje e imprimimos al puerto COM como (0~1023).
 
 ## Recursos
 
-- **[PDF]** [Descargar Wiki PDF](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Sensor_WiKi.pdf)
-- **[Eagle]** [Grove - GSR v1.0 Archivo Eagle](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Eagle_File_V1.0.zip)
-- **[Eagle]** [Grove - GSR v1.2 Archivo Eagle](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Eagle_File_V1.2.zip)
-- **[Hoja de datos]** [Hoja de datos LM324](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Lm324.pdf)
+- **[PDF]** [Descargar PDF del Wiki](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Sensor_WiKi.pdf)
+- **[Eagle]** [Archivo Eagle Grove - GSR v1.0](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Eagle_File_V1.0.zip)
+- **[Eagle]** [Archivo Eagle Grove - GSR v1.2](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Eagle_File_V1.2.zip)
+- **[Datasheet]** [Hoja de datos LM324](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Lm324.pdf)
 
 ## Proyectos
 
-**eMotion - Hacia un Mejor Futuro**: Creemos que podemos usar sensores biométricos, la seguridad de la plataforma Helium y la fortaleza de Google Cloud para detectar posibles estados de ansiedad.
+**eMotion - Towards a Better Future**: Creemos que podemos usar sensores biométricos, la seguridad de la plataforma Helium y la potencia de Google Cloud para sacar a la luz posibles estados de ansiedad.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/factoryeight/emotion-towards-a-better-future-a01489/embed' width='350'></iframe>
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

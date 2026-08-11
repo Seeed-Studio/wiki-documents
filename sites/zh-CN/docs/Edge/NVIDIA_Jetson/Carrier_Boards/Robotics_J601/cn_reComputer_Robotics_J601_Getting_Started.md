@@ -146,8 +146,8 @@ reComputer J601 是一款紧凑而强大的边缘 AI 载板，适用于Jetson AG
 
 ### 支持的模组
 
-- NVIDIA Jetson T4000 模组
-- NVIDIA Jetson T5000 模组
+- [NVIDIA Jetson T4000 模组](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T4000-Module-p-6939.html)
+- [NVIDIA Jetson T5000 模组](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T5000-Module-p-6938.html)
 
 ### 前置条件
 

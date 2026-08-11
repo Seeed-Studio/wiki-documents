@@ -1,49 +1,48 @@
 ---
-description: Grove - GSR センサー
-title: Grove - GSR センサー
+description: Grove - GSR センサ
+title: Grove - GSR センサ
 keywords:
   - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-GSR_Sensor
 sku: 101020052
 last_update:
-  date: 05/15/2025
+  date: 1/6/2023
   author: Seraphina
-createdAt: '2025-05-27'
+createdAt: '2023-01-06'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/Grove-GSR_Sensor/
 ---
 
-
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/GSR.jpg" /></div>
 
-GSR（Galvanic Skin Response、皮膚電気反応）は、皮膚の電気伝導率を測定する方法です。強い感情は交感神経系に刺激を与え、汗腺からの発汗が増加します。Grove - GSR を使用すると、2つの電極を片手の2本の指に取り付けるだけで、このような強い感情を検出することができます。睡眠の質をモニタリングするなど、感情に関連したプロジェクトを作成するのに適しています。
+GSR は galvanic skin response（皮膚電気反応）の略で、皮膚の電気伝導度を測定する方法です。強い感情は交感神経系を刺激し、その結果として汗腺から分泌される汗の量が増加します。Grove - GSR を使えば、片手の 2 本の指に 2 つの電極を取り付けるだけで、そのような強い感情を検出できます。睡眠の質モニタのような、感情に関連したプロジェクトを作るのに適したおもしろいモジュールです。
 
 :::caution
-Grove-GSR センサーは人の抵抗を測定します。**伝導率ではありません！**
+Grove-GSR センサは人の抵抗値を測定するものであり、導電率を測定するものではありません！
 :::
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" /></a></p>
 
 ## バージョン
 
-| 製品バージョン                  | 変更点 | リリース日                                |
+| 製品バージョン                  |  変更点 | リリース日                                |
 |------------------------|----------------|--------------------------------------------|
-| Grove - GSR_Sensor V1.0      | 初版     | 2013年6月19日     |
-| Grove - GSR_Sensor V1.2  | M324PW-TSSOP14 と GND の間に C3 100nf を追加  | 2014年7月31日 |
+| Grove - GSR_Sensor V1.0      | 初期リリース     |  2013 年 6 月 19 日     |
+| Grove - GSR_Sensor V1.2  |M324PW-TSSOP14 と GND 間に C3 100nF を追加  | 2014 年 7 月 31 日 |
 
 ## 仕様
 
-| パラメータ               | 値/範囲                    |
+| パラメータ               | 値 / 範囲                    |
 |-------------------------|--------------------------------|
 | 動作電圧       | 3.3V/5V                        |
 | 感度             | ポテンショメータで調整可能 |
-| 入力信号            | 抵抗、**伝導率ではありません**   |
-| 出力信号           | 電圧、アナログ読み取り        |
-| 指接触素材 | ニッケル                         |
+| 入力信号            | 抵抗値（導電率ではない）   |
+| 出力信号           | 電圧（アナログ読み取り）        |
+| 指接触部の材質 | ニッケル                         |
 
 :::tip
-Grove モジュールの詳細については、[Grove System](https://wiki.seeedstudio.com/ja/Grove_System/) を参照してください。
+Grove モジュールの詳細については [Grove System](https://wiki.seeedstudio.com/ja/Grove_System/) を参照してください
 :::
 
 ## 対応プラットフォーム
@@ -53,42 +52,42 @@ Grove モジュールの詳細については、[Grove System](https://wiki.seee
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
 :::caution
-上記で対応プラットフォームとして記載されているものは、モジュールのソフトウェアまたは理論的な互換性を示しています。ほとんどの場合、Arduino プラットフォーム向けのソフトウェアライブラリやコード例のみを提供しています。すべての可能な MCU プラットフォーム向けにソフトウェアライブラリやデモコードを提供することはできません。そのため、ユーザー自身でソフトウェアライブラリを作成する必要があります。
+上記の対応プラットフォームは、このモジュールのソフトウェアまたは理論上の互換性を示すものです。ほとんどの場合、ソフトウェアライブラリやコード例は Arduino プラットフォーム向けのみ提供しています。考えられるすべての MCU プラットフォーム向けにソフトウェアライブラリやデモコードを提供することはできません。そのため、ユーザー自身でソフトウェアライブラリを作成する必要があります。
 :::
 
 ## はじめに
 
-### Arduinoで遊ぶ
+### Arduino で遊ぶ
 
 #### ハードウェア
 
-- ステップ1. 以下のものを準備します：
+- Step 1. 以下のものを準備します：
 
-| Seeeduino V4.2 | Base Shield | Grove - GSR |
-|----------------|-------------|-------------|
+| Seeeduino V4.2 | Base Shield |  Grove - GSR|
+|--------------|----------------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_s.jpg" /></div>|
-|[今すぐ購入](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[今すぐ購入](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[今すぐ購入](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
 
-- ステップ2. Grove-GSRをBase Shieldの**A0**に接続します。
-- ステップ3. Base ShieldをSeeeduino-V4.2に差し込みます。
-- ステップ4. USBケーブルを使用してSeeeduino-V4.2をPCに接続します。
+- Step 2. Grove-GSR を Base Shield の **A0** に接続します。
+- Step 3. Base Shield を Seeeduino-V4.2 に挿し込みます。
+- Step 4. USB ケーブルを使って Seeeduino-V4.2 を PC に接続します。
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Hardware_connection.jpg" /></div>
 
 :::note
-Base Shieldがない場合でも心配しないでください。センサーはArduinoに直接接続することができます。以下の表に従ってArduinoに接続してください。
+Base Shield がなくても心配はいりません。センサは Arduino に直接接続できます。以下の表に従って Arduino と接続してください。
 :::
 
-| Seeeduino | Grove-GSR Sensor |
-|-----------|------------------|
-| GND       | 黒              |
-| 5V        | 赤              |
-| NC        | 白              |
-| A0        | 黄色            |
+| Seeeduino |Grove-GSR センサ |
+|------------------|---------|
+| GND              | 黒  |
+| 5V               |  赤   |
+| NC               | 白  |
+| A0               | 黄 |
 
 #### ソフトウェア
 
-- ステップ1. 以下のコードをArduino IDEにコピーしてアップロードします。
+- Step 1. 以下のコードを Arduino IDE にコピーしてアップロードします。
 
 ```
 const int GSR=A0;
@@ -101,7 +100,7 @@ void setup(){
 
 void loop(){
   long sum=0;
-  for(int i=0;i<10;i++)           // 10回の測定を平均化してグリッチを除去
+  for(int i=0;i<10;i++)           //Average the 10 measurements to remove the glitch
       {
       sensorValue=analogRead(GSR);
       sum += sensorValue;
@@ -110,63 +109,70 @@ void loop(){
    gsr_average = sum/10;
    Serial.println(gsr_average);
 }
+
 ```
 
-- ステップ2. GSRセンサーを装着しないでください。
-- ステップ3. Arduino IDEの「ツール」->「シリアルプロッタ」をクリックします。
-- ステップ4. ドライバーを使用して抵抗を調整し、シリアル出力が最小化されるまで調整します。この時点でのシリアルポートデータを「Serial_calibration」として記録します。
-- ステップ5. GSRセンサーを装着します。
-- ステップ6. 以下のグラフが表示されます。深呼吸をしてトレンドを確認してください。
+- Step 2. GSR センサを装着しないでください。
+- Step 3. Arduino IDE の Tools -> Serial Plotter をクリックします。
+- Step 4. ドライバーを使って抵抗を調整し、シリアル出力が最小になるようにします。このときのシリアルポートのデータを Serial_calibration として記録します。
+- Step 5. GSR センサを装着します。
+- Step 6. 下図のようなグラフが表示されます。深呼吸をして、トレンドを確認してください。  
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_Result.png" /></div><br />
 
-**人間の抵抗値** = ((1024 + 2 x Serial_Port_Reading) x 10000)/(Serial_calibration - Serial_Port_Reading)
 
-- 単位はオームです。
-- Serial_Port_Readingはシリアルポートに表示される値（0〜1023の間）。
-- Serial_calibrationはステップ4で記録した値（抵抗を調整してシリアル出力を最小化した時点のシリアルポートデータ）。
 
-### Raspberry Piで遊ぶ (Grove Base Hat for Raspberry Piを使用)
+**Human Resistance（人体の抵抗値）** = ((1024 + 2 x Serial_Port_Reading) x 10000)/(Serial_calibration - Serial_Port_Reading)
+
+- 単位はオームです。 
+- Serial_Port_Reading はシリアルポートに表示される値（0～1023 の範囲）です。 
+- Serial_calibration は Step 4 で得られた値です（ドライバーを使って抵抗を調整し、シリアル出力が最小になったときのシリアルポートのデータを Serial_calibration とします）。
+
+
+### Raspberry Pi で遊ぶ（Grove Base Hat for Raspberry Pi 使用）
 
 #### ハードウェア
 
-- **ステップ1**. このプロジェクトで使用するもの：
+- **Step 1**. このプロジェクトで使用するもの：
 
-| Raspberry Pi | Grove Base Hat for RasPi | Grove - GSR Sensor |
-|--------------|---------------------------|---------------------|
+| Raspberry pi | Grove Base Hat for RasPi| Grove - GSR センサ|
+|--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_s.jpg" /></div>|
-|[今すぐ購入](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[今すぐ購入](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[今すぐ購入](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html)|
 
-- **ステップ2**. Grove Base HatをRaspberry Piに差し込みます。
-- **ステップ3**. Grove - GSR SensorをBase HatのA0ポートに接続します。
-- **ステップ4**. USBケーブルを使用してRaspberry PiをPCに接続します。
+- **Step 2**. Grove Base Hat を Raspberry Pi に挿し込みます。
+- **Step 3**. Grove - GSR センサを Base Hat の A0 ポートに接続します。
+- **Step 4**. USB ケーブルで Raspberry Pi を PC に接続します。
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/With_Hat.jpg" /></div>
 
 :::note
-ステップ3では、Grove - GSRセンサーを**任意のアナログポート**に接続できますが、対応するポート番号に合わせてコマンドを変更する必要があります。
+Step 3 では、Grove - GSR センサを **任意のアナログポート** に接続できますが、その場合は対応するポート番号に合わせてコマンドを変更してください。
 :::
 
 #### ソフトウェア
 
-- **ステップ1**. [ソフトウェア設定](https://wiki.seeedstudio.com/ja/Grove_Base_Hat_for_Raspberry_Pi/#installation)に従って開発環境を構築します。
-- **ステップ2**. grove.pyライブラリをクローンしてソースファイルをダウンロードします。
+- **Step 1**. 開発環境を構成するために、[Setting Software](https://wiki.seeedstudio.com/ja/Grove_Base_Hat_for_Raspberry_Pi/#installation) に従って設定します。
+- **Step 2**. grove.py ライブラリをクローンしてソースファイルをダウンロードします。
 
 ```
 cd ~
 git clone https://github.com/Seeed-Studio/grove.py
+
 ```
 
-- **ステップ3**. 以下のコマンドを実行してコードを実行します。
+- **Step 3**. 以下のコマンドを実行してコードを動かします。
 
 ```
 cd grove.py/grove
 nano grove_gsr_sensor.py
+
 ```
 
-次に、以下のコードをこのファイルにコピーし、++ctrl+x++を押して終了し保存します。
+その後、次のコードをこのファイルにコピーし、++ctrl+x++ を押して終了・保存します。
 
 ```python
+
 import math
 import sys
 import time
@@ -201,19 +207,24 @@ def main():
 
 if __name__ == '__main__':
     main()
-```
 
-- **ステップ4**. 以下のコマンドを実行してコードを実行します。
 
 ```
+
+- **Step 4**. 以下のコマンドを実行してコードを動かします
+
+```
+
 python grove_gsr_sensor.py 0
+
 ```
 
 :::tip
-すべてが正常に動作すれば、以下の結果が表示されます。
+すべてが正しく動作していれば、次のような結果が表示されます
 :::
 
 ```python
+
 pi@raspberrypi:~/grove.py/grove $ python grove_gsr_sensor.py 0
 Detecting...
 GSR value: 503
@@ -236,17 +247,17 @@ GSR value: 371
 KeyboardInterrupt
 ```
 
-このプログラムを終了するには、`ctrl`+`c`を押してください。
+`ctrl`+`c` を押すだけで、このプログラムを終了できます。
 
 :::note
-アナログポートの場合、シルクスクリーンのピン番号は**A1, A0**のようになっていますが、コマンドでは**0**や**1**というパラメータを使用します。デジタルポートと同じです。そのため、モジュールを正しいポートに接続してください。そうしないとピンの競合が発生する可能性があります。
+アナログポートでは、シルク印刷のピン番号が **A1, A0** のようになっていることにお気付きかもしれませんが、コマンドではデジタルポートと同様にパラメータ **0** と **1** を使用します。そのため、必ずモジュールを正しいポートに接続してください。そうしないと、ピンの競合が発生する可能性があります。
 :::
 
 ## FAQ
 
 **Q1: 出力の単位は何ですか？**
 
-A1: 信号は電圧で測定され、COMポートに(0~1023)として出力されます。
+A1: 信号は電圧で測定し、COM ポートへ (0~1023) の値として出力します。
 
 # Grove - GSR v1.0
 
@@ -260,20 +271,20 @@ A1: 信号は電圧で測定され、COMポートに(0~1023)として出力さ�
 
 ## リソース
 
-- **[PDF]** [Wiki PDFをダウンロード](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Sensor_WiKi.pdf)
-- **[Eagle]** [Grove - GSR v1.0 Eagleファイル](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Eagle_File_V1.0.zip)
-- **[Eagle]** [Grove - GSR v1.2 Eagleファイル](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Eagle_File_V1.2.zip)
-- **[Datasheet]** [LM324データシート](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Lm324.pdf)
+- **[PDF]** [Wiki PDF をダウンロード](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Sensor_WiKi.pdf)
+- **[Eagle]** [Grove - GSR v1.0 Eagle ファイル](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Eagle_File_V1.0.zip)
+- **[Eagle]** [Grove - GSR v1.2 Eagle ファイル](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Grove-GSR_Eagle_File_V1.2.zip)
+- **[Datasheet]** [LM324 データシート](https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/res/Lm324.pdf)
 
 ## プロジェクト
 
-**eMotion - より良い未来へ**: バイオメトリックセンサー、Heliumプラットフォームのセキュリティ、そしてGoogle Cloudの力を活用して、潜在的な不安状態を明らかにすることができると信じています。
+**eMotion - Towards a Better Future**：私たちは、生体センサー、Helium プラットフォームのセキュリティ、そして Google Cloud の強力な機能を活用することで、起こりうる不安状態を可視化できると考えています。
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/factoryeight/emotion-towards-a-better-future-a01489/embed' width='350'></iframe>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

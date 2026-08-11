@@ -704,7 +704,7 @@ pip install -r requirements-graspnet-jetson.txt
 ```bash
 mkdir -p sdk
 
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 pip install -e sdk/reBotArm_control_py
 
 git clone https://github.com/graspnet/graspnet-baseline.git sdk/graspnet-baseline
@@ -903,7 +903,7 @@ Open the `Open WebUI` page (`http://<jetson_ip>:4000`). If you have enabled the 
 - https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/index.html
 - https://github.com/Seeed-Projects/reBot-DevArm
 - https://github.com/graspnet/graspnet-baseline.git
-- https://github.com/vectorBH6/reBotArm_control_py
+- https://github.com/Seeed-Projects/reBotArm_control_py
 - https://github.com/orbbec/pyorbbecsdk.git
 - https://wiki.seeedstudio.com/install_torch_on_recomputer/
 
