@@ -1,5 +1,5 @@
 ---
-description: O ReSpeaker XVF3800 USB 4-Mic Array é um array de microfones circular profissional com AEC, formação de feixe, supressão de ruído e captação de voz em 360°. Emparelhado com o XIAO ESP32S3, ele possibilita controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade de modo duplo.
+description: O ReSpeaker XVF3800 USB 4-Mic Array é uma matriz de microfones circular profissional com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Emparelhado com o XIAO ESP32S3, ele possibilita controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade em modo duplo.
 title: reSpeaker XVF3800 USB Mic Array com XIAO ESP32S3 DoA e VAD
 keywords:
   - reSpeaker
@@ -12,13 +12,13 @@ last_update:
   date: 1/23/2025
   author: Kasun Thushara
 createdAt: '2026-01-23'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-23'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_xiao_doa_vad/
 ---
 
 ## Introdução 
 
-O ReSpeaker XVF3800 é uma solução de processamento de voz com múltiplos microfones baseada no XMOS XVF3800, projetada para aplicações embarcadas que exigem inteligência de áudio em tempo real. O XVF3800 calcula internamente Detecção de Atividade de Voz (VAD) e Direção de Chegada (DoA) para indicar quando a fala está presente e de que direção ela se origina. Esses resultados de inferência podem ser acessados diretamente por um MCU host via I2C usando comandos baseados em recursos, permitindo recursos como ativação por voz, localização da fonte sonora e feedback sensível à direção sem processar áudio bruto no host.
+O ReSpeaker XVF3800 é uma solução de processamento de voz com múltiplos microfones baseada no XMOS XVF3800, projetada para aplicações embarcadas que exigem inteligência de áudio em tempo real. O XVF3800 calcula internamente a Detecção de Atividade de Voz (VAD) e a Direção de Chegada (DoA) para indicar quando a fala está presente e de que direção ela se origina. Esses resultados de inferência podem ser acessados diretamente por um MCU host via I2C usando comandos baseados em recursos, possibilitando recursos como ativação por voz, localização de fonte sonora e feedback sensível à direção sem processar áudio bruto no host.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
@@ -31,7 +31,7 @@ O ReSpeaker XVF3800 é uma solução de processamento de voz com múltiplos micr
 
 
 :::note
-O Firmware que oferece suporte para este código é `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin`. Portanto, certifique-se de fazer o flash primeiro
+O firmware que oferece suporte para este código é `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` e `respeaker_xvf3800_i2s_dfu_firmware_v1.0.7.bin`. Portanto, certifique-se de gravá-lo primeiro
 :::
 
 ## Código Arduino 
@@ -152,13 +152,13 @@ void write_led_effect(uint8_t effect) {
 
 ```
 
-**Saída Esperada**
+**Saída esperada**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/doa_vad_i2c.png" alt="pir" width={800} height="auto" /></p>
 
-## Suporte Técnico & Discussão de Produtos
+## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer a você diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
