@@ -731,8 +731,8 @@ viz.draw_path(points, "path_name", color)  # 绘制路径
 
 ## 联系方式
 
-- **技术支持**: [提交 Issue](https://github.com/vectorBH6/reBotArm_control_py/issues)
-- **项目仓库**: [GitHub](https://github.com/vectorBH6/reBotArm_control_py)
+- **技术支持**: [提交 Issue](https://github.com/Seeed-Projects/reBotArm_control_py/issues)
+- **项目仓库**: [GitHub](https://github.com/Seeed-Projects/reBotArm_control_py)
 - **论坛**: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ---

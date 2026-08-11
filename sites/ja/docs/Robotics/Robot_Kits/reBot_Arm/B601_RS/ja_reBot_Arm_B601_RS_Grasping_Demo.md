@@ -158,14 +158,6 @@ sudo chmod 666 /dev/ttyUSB0
 git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
-
-現在の開発用リポジトリを使用することもできます：
-
-```bash
-git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
-cd rebot_grasp
-```
-
 ### ステップ 2. conda 環境を作成して設定する
 
 ```bash
@@ -178,7 +170,7 @@ conda activate rebotarm
 ### ステップ 3. ロボットアーム SDK をインストールする
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 cd sdk/reBotArm_control_py
 pip install -e .
 cd ../..
@@ -652,8 +644,8 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## 連絡先
 
-- 技術サポート: [Submit an Issue](https://github.com/EclipseaHime017/reBot-DevArm-Grasp/issues)
-- プロジェクトページ: [GitHub](https://github.com/EclipseaHime017/reBot-DevArm-Grasp)
+- 技術サポート: [Submit an Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
+- プロジェクトページ: [GitHub](https://github.com/Seeed-Projects/reBot-DevArm-Grasp)
 - フォーラム: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## 参考文献

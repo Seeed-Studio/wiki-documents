@@ -739,8 +739,8 @@ viz.draw_path(points, "path_name", color)  # Draw path
 
 ## Contato
 
-- **Suporte Técnico**: [Submit Issue](https://github.com/vectorBH6/reBotArm_control_py/issues)
-- **Repositório do Projeto**: [GitHub](https://github.com/vectorBH6/reBotArm_control_py)
+- **Suporte Técnico**: [Submit Issue](https://github.com/Seeed-Projects/reBotArm_control_py/issues)
+- **Repositório do Projeto**: [GitHub](https://github.com/Seeed-Projects/reBotArm_control_py)
 - **Fórum**: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ---
