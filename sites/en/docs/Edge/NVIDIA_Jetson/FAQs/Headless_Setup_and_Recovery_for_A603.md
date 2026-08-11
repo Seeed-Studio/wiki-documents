@@ -8,7 +8,7 @@ keywords:
   - USB gadget
   - recovery
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Headless_Setup_and_Recovery_for_A603
+slug: /headless_setup_and_recovery_for_a603
 last_update:
   date: 08/07/2026
   author: Jonathan van der Maas
