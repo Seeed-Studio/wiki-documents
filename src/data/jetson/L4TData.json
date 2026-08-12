@@ -1094,5 +1094,23 @@
         "filename": "mfi_recomputer-robo-agx-orin-32g-j501-6.2.1-36.4.4-2025-11-01.tar.gz",
         "foldername": "mfi_recomputer-robo-agx-orin-j501x",
         "sha256": "58fa8b76754449b0a49ad7d5f273eddf3e1d1f458cdb34994f6d8643da7a1249"
+    },
+    {
+        "product": "j5012classic",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBO6K-vbZtNQrhyL3ZfEJH2AUCoIRVNqDCcmA9QsbABiJA",
+        "mirrorlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBO6K-vbZtNQrhyL3ZfEJH2AUCoIRVNqDCcmA9QsbABiJA",
+        "filename": "mfi_seeed-agx-orin-64g-7.2.0-39.2.0-2026-08-04.tar.gz",
+        "foldername": "mfi_seeed-agx-orin-64g-7.2.0-39.2.0-2026-08-04",
+        "sha256": "07bb83b8b0fced67a71126ada26076a076bdefee394d0647429ef9c15bab0f6b"
+    },
+    {
+        "product": "j5011classic",
+        "l4t": "39.2.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCQ4t5XnL9sS7StIWTe2d08AQy2N6Su32eg5pZ3IrvfFBs",
+        "mirrorlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCQ4t5XnL9sS7StIWTe2d08AQy2N6Su32eg5pZ3IrvfFBs",
+        "filename": "mfi_seeed-agx-orin-32g-7.2.0-39.2.0-2026-08-04.tar.gz",
+        "foldername": "mfi_seeed-agx-orin-32g-7.2.0-39.2.0-2026-08-04",
+        "sha256": "55e2acfbec97313dbacb04c80c6684422e169c1e5299228d424f8807bd7be4bd"
     }
 ]
