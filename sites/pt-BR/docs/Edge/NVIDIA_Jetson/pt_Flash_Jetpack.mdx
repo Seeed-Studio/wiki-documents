@@ -7,12 +7,12 @@ keywords:
   - jetapck
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /flash/jetpack_to_selected_product
-sku: E2025032601,114110314,110110191,100020039,114110311,114110327,102111001,114993489,110110146,114110247,E24081601
+sku: E2025032601,114110314,110110191,100020039,114110311,114110327,102111001,114993489,110110146,114110247,E24081601,100003716,100006184
 last_update:
-  date: 07/16/2026
+  date: 08/11/2026
   author: robotics group
 createdAt: '2025-06-27'
-updatedAt: '2026-07-17'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/pt-br/flash/jetpack_to_selected_product/
 ---
 
@@ -33,8 +33,8 @@ import { RecoveryRobotics, RecoveryMini, RecoverySuper, RecoveryClassic, Recover
 </style> 
 
 {/*
-  The Jetson drop down selection
-  To select the product and Jetson Linux (JetPack SDK) Version
+  A seleção suspensa do Jetson
+  Para selecionar o produto e a versão do Jetson Linux (JetPack SDK)
 */}
 
 
@@ -150,6 +150,20 @@ export const productOptions = [
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
     interfaceUsage: 'https://wiki.seeedstudio.com/pt-br/J401_carrierboard_Hardware_Interfaces_Usage/'
+  },
+  {
+    value: 'j5012classic',
+    label: 'reComputer Classic J5012',
+    l4t: ["39.2.0"],
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/Classic_J501/100006184-gallery_img_1.jpg',
+    interfaceUsage: 'https://wiki.seeedstudio.com/pt-br/ai_robotics_seeed_agx_orin_dev_kit_getting_started/'
+  },
+  {
+    value: 'j5011classic',
+    label: 'reComputer Classic J5011',
+    l4t: ["39.2.0"],
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/Classic_J501/100006184-gallery_img_1.jpg',
+    interfaceUsage: 'https://wiki.seeedstudio.com/pt-br/ai_robotics_seeed_agx_orin_dev_kit_getting_started/'
   },
   { 
     value: 'j4012industrial', 
@@ -306,12 +320,12 @@ export const productOptions = [
       <span style={{fontSize: '1.5rem', marginRight: '0.5rem'}}>🚀</span>
       JetPack 6.2 com modo MAXN Super
     </div>
-    <p>Configurações de desempenho aprimoradas agora disponíveis para os módulos Orin Nano e Orin NX. <a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">Saiba mais</a></p>
+    <p>Configurações de desempenho aprimoradas agora disponíveis para módulos Orin Nano e Orin NX. <a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">Saiba mais</a></p>
     <div className="margin-top--md" style={{display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap'}}>
       <a href="https://seeedstudio88-my.sharepoint.com/:w:/r/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B152BF560-D35A-4895-86B9-26D71EF7F578%7D&file=Jetson%20BSP%20release%20note.docx&action=default&mobileredirect=true&DefaultItemOpen=1" target="_blank" rel="noopener noreferrer"
         style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.55rem', height: '44px', padding: '0 18px', borderRadius: '999px', background: 'linear-gradient(135deg, #6fbf3a 0%, #5aaa28 100%)', color: '#fff', fontSize: '0.95rem', fontWeight: 700, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.18)', boxShadow: '0 10px 24px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06) inset', whiteSpace: 'nowrap', lineHeight: 1}}>
         <span aria-hidden="true" style={{fontSize: '1.05rem', lineHeight: 1, display: 'inline-flex'}}>📋</span>
-        <span style={{lineHeight: 1, display: 'inline-block'}}>Notas de lançamento do BSP</span>
+        <span style={{lineHeight: 1, display: 'inline-block'}}>Nota de lançamento do BSP</span>
         <span aria-hidden="true" style={{opacity: 0.85, lineHeight: 1, display: 'inline-flex'}}>↗</span>
       </a>
       <a href="https://seeedstudio88-my.sharepoint.com/:x:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EX8k1puq5J1IgMZKYYdmuqgB_EtGjxSB7_-hRjUGjTa0dQ?e=1QSozj" target="_blank" rel="noopener noreferrer"
@@ -511,7 +525,7 @@ export const productOptions = [
 
 ## 🤝 Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
