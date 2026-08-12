@@ -146,8 +146,8 @@ Aqui, mostraremos como gravar o JetPack em um SSD NVMe conectado ao reComputer R
 
 ### Módulo compatível
 
-- Módulo NVIDIA Jetson T4000
-- Módulo NVIDIA Jetson T5000
+- [Módulo NVIDIA Jetson T4000](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T4000-Module-p-6939.html)
+- [Módulo NVIDIA Jetson T5000](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T5000-Module-p-6938.html)
 
 ### Pré-requisitos
 

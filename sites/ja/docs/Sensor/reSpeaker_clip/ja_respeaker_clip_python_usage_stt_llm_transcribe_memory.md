@@ -1,13 +1,13 @@
 ---
-description: Python SDK を使用してメモリレイヤー付きの reSpeaker Clip アプリケーションを構築する方法を学びます。このチュートリアルでは、BLE と Wi-Fi 通信、音声録音、文字起こし、話者分離、要約、そして繰り返しのディスカッション向けのローカルメモリマッチングを扱います。
-title: Python SDK を使用してメモリレイヤーを追加した reSpeaker Clip 向け独自アプリを構築する
+description: Python SDK を使用して、メモリレイヤーを備えた reSpeaker Clip アプリケーションを構築する方法を学びます。このチュートリアルでは、BLE と Wi-Fi 通信、音声録音、文字起こし、話者分離、要約、そして繰り返しの議論に対するローカルメモリマッチングを扱います。
+title: Python SDK を使用してメモリレイヤーを追加した reSpeaker Clip 用独自アプリを構築する
 keywords:
   - reSpeaker Clip
-  - memory layer
+  - メモリレイヤー
   - Python SDK
-  - transcription
-  - diarization
-  - summary
+  - 文字起こし
+  - 話者分離
+  - 要約
   - Firebase
   - SQL
 image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg
@@ -15,7 +15,7 @@ slug: /respeaker_clip_python_build_app_with_memory
 sku: 100020126
 last_update:
   date: 07/31/2026
-  author: GitHub Copilot
+  author: Kasun Thushara
 createdAt: '2026-07-31'
 updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/ja/respeaker_clip_python_build_app_with_memory/
@@ -23,9 +23,9 @@ url: https://wiki.seeedstudio.com/ja/respeaker_clip_python_build_app_with_memory
 
 ## はじめに
 
-このガイドでは、reSpeaker Clip を、録音の文字起こし・話者分離・要約を行うだけでなく、以前に話した内容も記憶できる音声アシスタントへと変身させる方法を説明します。Python SDK のワークフローの上にメモリレイヤーを追加することで、アプリは新しい文字起こしと過去の会話を比較し、類似したディスカッションを検出したときに通知できるようになります。
+このガイドでは、reSpeaker Clip を、録音の文字起こしや話者分離、要約を行うだけでなく、以前に話された内容も記憶できる音声アシスタントへと変身させる方法を説明します。Python SDK のワークフローの上にメモリレイヤーを追加することで、アプリは新しい文字起こしを過去の会話と比較し、類似した議論を検出したときに通知できるようになります。
 
-その結果として、reSpeaker Clip を使ったスマートな会議アシスタント、パーソナルメモ取り、音声駆動のナレッジアプリを構築するための実用的な基盤が得られます。
+その結果として、reSpeaker Clip を使ったスマートな会議アシスタント、パーソナルなメモ取りツール、あるいは音声駆動のナレッジアプリを構築するための実用的な基盤が得られます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-intro.jpg" alt="reSpeaker Clip memory app" width={600} height="auto" /></p>
 
@@ -37,14 +37,14 @@ url: https://wiki.seeedstudio.com/ja/respeaker_clip_python_build_app_with_memory
 
 ## 仕組み
 
-1. BLE（デフォルト）または Wi-Fi 経由で Clip に接続します。
+1. BLE（デフォルト）または Wi-Fi を介して Clip に接続します。
 2. アプリから録音を開始します。話している間、音声はバックグラウンドでデバイスからストリーミングされます。
 3. 録音を停止します。同期が完了すると、アプリは次の処理を行います：
    - 結合された音声を `.ogg`（Opus）にエンコード
    - PyAV を使用して 16kHz モノラルの `.wav` に変換
-   - 文字起こし、話者分離、または要約用に選択されたパイプラインを実行
+   - 文字起こし、話者分離、または要約のために選択されたパイプラインを実行
    - 得られた文字起こしテキストに対してメモリレイヤーを実行
-   - 結果とメモリ通知（ある場合）を、既存の WebSocket を介してブラウザへ送信
+   - 結果とメモリ通知（ある場合）を、既存の WebSocket を介してブラウザに送信
 4. 各録音は再生および処理用のコントロールとともに保存され、録音を再処理する場合はメモリチェックも再度実行されます。
 
 ## このバージョンの特徴
@@ -70,7 +70,7 @@ reSpeaker Clip -> record -> STT / diarization / summary
 - 類似した録音が見つかった場合、アプリは「以前にもこの内容を話しました」などのコーナートーストを表示できます。
 - メモリレイヤーは付加的な機能です。マッチが見つからなくても、文字起こしや要約自体をブロックすることはありません。
 
-## サポートされるワークフロー
+## 対応ワークフロー
 
 アプリは次の 4 つのワークフローパターンをサポートします：
 
@@ -87,14 +87,14 @@ reSpeaker Clip -> record -> STT / diarization / summary
 - **Speechmatics** — 話者分離と話者ラベリングに使用。
 - **Firebase** — メモリレイヤー用に Firestore バックエンドのストレージオプションへ切り替えたい場合のオプション。
 
-キーはハードコードされていません。現在のサーバーセッション中のみメモリに一時保存することも、将来の利用のためにローカルへ永続化することもできます。
+キーはハードコードされていません。現在のサーバーセッションの間だけメモリに一時保存することも、将来の利用のためにローカルへ永続化することもできます。
 
 ## 必要条件
 
 - Python 3.10 以上
 - 実際の録音とストリーミング用にペアリング済みの reSpeaker Clip デバイス
 - PyAV にコーデックが同梱されているため、別途 ffmpeg をインストールする必要はありません
-- Firebase やその他のデータベースバックエンドのメモリストレージを試したいチーム向けに、オプションのクラウド連携が利用可能です
+- Firebase やその他のデータベース連携型メモリストレージを試したいチーム向けに、オプションのクラウド連携が利用可能です
 
 ## セットアップ
 
@@ -153,7 +153,7 @@ respeaker-stt-memory/
 
 メモリレイヤーの動作は、類似度のしきい値と検索上限を調整することで変更できます：
 
-- **MEMORY_SIMILARITY_THRESHOLD** — マッチ数を減らしたい場合は値を上げ、より多くのリコールが欲しい場合は値を下げます。
+- **MEMORY_SIMILARITY_THRESHOLD** — マッチを減らしたい場合は値を上げ、より多くのリコールが欲しい場合は値を下げます。
 - **MEMORY_SEARCH_LIMIT** — しきい値を適用する前に、いくつの最近傍を対象とするかを制御します。
 
 これらの値は推測ではなく、実際の利用状況からチューニングするべきです。
@@ -162,7 +162,7 @@ respeaker-stt-memory/
 
 デフォルトの実装ではローカルの JSON と NumPy ベースのストアを使用しており、クラウドへの依存なしにこのアイデアを簡単に試すことができます。後から、より集中管理された、あるいは検索しやすいバックエンドが必要になった場合でも、この設計は、構造化された長期メモリを求めるチーム向けの Firebase バックエンドストレージや SQL ベースの永続化といった、より広いアイデアとも互換性があります。
 
-そのため、このプロジェクトはプロトタイプと、より本番志向の音声アプリケーションの両方にとって良い出発点となります。
+これにより、このプロジェクトはプロトタイプだけでなく、より本番志向の音声アプリケーションにとっても良い出発点となります。
 
 ## インターフェース概要
 

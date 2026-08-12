@@ -17,7 +17,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-07-09'
+updatedAt: '2026-08-02'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/
 ---
 
@@ -40,6 +40,11 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/
 <p align="center">
   <strong>Depth Perception · Object Detection · Hand-Eye Calibration · Autonomous Grasping · Fully Open Source</strong>
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
 
 YOLO is a widely used family of real-time object detection models that can localize and classify targets in a single forward pass. This tutorial uses YOLO, an RGB-D depth camera, and the reBot Arm B601-RS to build a working desktop visual grasping demo, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
 
@@ -154,13 +159,6 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-You can also use the current development repository:
-
-```bash
-git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
-cd rebot_grasp
-```
-
 ### Step 2. Create and configure the conda environment
 
 ```bash
@@ -173,7 +171,7 @@ If you want to use a different environment name, replace `rebotarm` in the comma
 ### Step 3. Install the robotic arm SDK
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 cd sdk/reBotArm_control_py
 pip install -e .
 cd ../..
@@ -647,8 +645,8 @@ If the output is `False`, fix the CUDA / PyTorch installation first. If it is `T
 
 ## Contact
 
-- Technical support: [Submit an Issue](https://github.com/EclipseaHime017/reBot-DevArm-Grasp/issues)
-- Project page: [GitHub](https://github.com/EclipseaHime017/reBot-DevArm-Grasp)
+- Technical support: [Submit an Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
+- Project page: [GitHub](https://github.com/Seeed-Projects/reBot-DevArm-Grasp)
 - Forum: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## References

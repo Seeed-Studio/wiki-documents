@@ -17,7 +17,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-07-07'
+updatedAt: '2026-08-02'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -61,7 +61,7 @@ YOLO is a widely used family of real-time object detection models that can local
 
 ## Project Introduction
 
-**reBot Arm B601 Visual Grasping Demo** is a visual grasping algorithm demonstration project based on the [reBot Arm B601](https://github.com/vectorBH6/reBotArm_control_py) robotic arm control library and RGB-D depth camera. The system supports both DM and RS configurations for the B601 arm. It uses the YOLO model for real-time desktop object detection, estimates grasp poses via OBB minimum-area rectangles, performs hand-eye calibration to transform grasp points from the camera frame to the robot base frame, and drives the robotic arm to complete autonomous grasping.
+**reBot Arm B601 Visual Grasping Demo** is a visual grasping algorithm demonstration project based on the [reBot Arm B601](https://github.com/Seeed-Projects/reBotArm_control_py) robotic arm control library and RGB-D depth camera. The system supports both DM and RS configurations for the B601 arm. It uses the YOLO model for real-time desktop object detection, estimates grasp poses via OBB minimum-area rectangles, performs hand-eye calibration to transform grasp points from the camera frame to the robot base frame, and drives the robotic arm to complete autonomous grasping.
 
 ### Core Features
 
@@ -107,13 +107,6 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-You can also use the current development repository:
-
-```bash
-git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
-cd rebot_grasp
-```
-
 ### Step 2. Create and Configure the conda Environment
 
 ```bash
@@ -129,7 +122,7 @@ If you want to use a different environment name, replace `rebotarm` in the comma
 ### Step 3. Install the Robotic Arm Control Library
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 cd sdk/reBotArm_control_py
 pip install -e .
 cd ../..
@@ -603,7 +596,7 @@ If the output is `False`, you need to fix the CUDA / PyTorch installation first;
 
 ## 📄 References
 
-- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py) — Robotic arm control library
+- [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) — Robotic arm control library
 - [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm) — reBot robotic arm open source project
 - [Orbbec Gemini 2 Product Page](https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)

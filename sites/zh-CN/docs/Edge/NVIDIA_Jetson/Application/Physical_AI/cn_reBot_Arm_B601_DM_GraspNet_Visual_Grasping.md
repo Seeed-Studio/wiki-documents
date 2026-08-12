@@ -206,7 +206,7 @@ pip install -r requirements-graspnet-jetson.txt
 ```bash
 mkdir -p sdk
 
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 pip install -e sdk/reBotArm_control_py
 
 git clone https://github.com/graspnet/graspnet-baseline.git sdk/graspnet-baseline
@@ -613,8 +613,8 @@ GraspNet 内存不足：请减小 `--num-point`，减小 `--cloud-crop-nsample`�
 
 ## 资源
 
-- reBot Arm GraspNet 演示参考：https://github.com/EclipseaHime017/reBot-DevArm-Grasp
-- reBot Arm SDK：https://github.com/vectorBH6/reBotArm_control_py
+- reBot Arm GraspNet 演示参考：https://github.com/Seeed-Projects/reBot-DevArm-Grasp
+- reBot Arm SDK：https://github.com/Seeed-Projects/reBotArm_control_py
 - GraspNet baseline：https://github.com/graspnet/graspnet-baseline
 - GraspNet API：https://github.com/graspnet/graspnetAPI
 - Orbbec pyorbbecsdk：https://github.com/orbbec/pyorbbecsdk

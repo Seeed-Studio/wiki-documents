@@ -1,18 +1,18 @@
 ---
-description: 使用 Jetpack 将 BSP 刷写到选定产品。本页面目前仅包含部分产品。
-title: 使用 Jetpack 将 BSP 刷写到选定 Jetson
+description: 使用 Jetpack 将 BSP 刷写到所选产品。本页面目前仅包含部分产品。
+title: 使用 Jetpack 将 BSP 刷写到指定 Jetson
 keywords:
   - jetson
   - flash
   - jetapck
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /flash/jetpack_to_selected_product
-sku: E2025032601,114110314,110110191,100020039,114110311,114110327,102111001,114993489,110110146,114110247,E24081601
+sku: E2025032601,114110314,110110191,100020039,114110311,114110327,102111001,114993489,110110146,114110247,E24081601,100003716,100006184
 last_update:
-  date: 07/16/2026
+  date: 08/11/2026
   author: robotics group
 createdAt: '2025-06-27'
-updatedAt: '2026-07-17'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/cn/flash/jetpack_to_selected_product/
 ---
 
@@ -33,8 +33,8 @@ import { RecoveryRobotics, RecoveryMini, RecoverySuper, RecoveryClassic, Recover
 </style> 
 
 {/*
-  Jetson 下拉选择
-  用于选择产品和 Jetson Linux（JetPack SDK）版本
+  The Jetson drop down selection
+  To select the product and Jetson Linux (JetPack SDK) Version
 */}
 
 
@@ -150,6 +150,20 @@ export const productOptions = [
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/'
+  },
+  {
+    value: 'j5012classic',
+    label: 'reComputer Classic J5012',
+    l4t: ["39.2.0"],
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/Classic_J501/100006184-gallery_img_1.jpg',
+    interfaceUsage: 'https://wiki.seeedstudio.com/cn/ai_robotics_seeed_agx_orin_dev_kit_getting_started/'
+  },
+  {
+    value: 'j5011classic',
+    label: 'reComputer Classic J5011',
+    l4t: ["39.2.0"],
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/Classic_J501/100006184-gallery_img_1.jpg',
+    interfaceUsage: 'https://wiki.seeedstudio.com/cn/ai_robotics_seeed_agx_orin_dev_kit_getting_started/'
   },
   { 
     value: 'j4012industrial', 
@@ -272,7 +286,7 @@ export const productOptions = [
       <span style={{fontSize: '2.2rem', fontWeight: 800}}>烧录 Jetson Linux</span>
     </h1>
     <p style={{margin: '0.75rem auto 0', maxWidth: '60ch', fontSize: '1.05rem', color: 'var(--ifm-font-color-base)', opacity: 0.92}}>
-      为所有 Seeed Studio Jetson 设备提供精简的烧录流程。请选择你的产品，并按照下方的引导步骤操作。
+      为所有 Seeed Studio Jetson 设备提供精简的烧录流程。请选择你的产品，并按照下方的引导步骤进行操作。
     </p>
   </div>
 </div>
@@ -304,9 +318,9 @@ export const productOptions = [
   }}>
     <div className="alert__heading" style={{display: 'flex', alignItems: 'center'}}>
       <span style={{fontSize: '1.5rem', marginRight: '0.5rem'}}>🚀</span>
-      JetPack 6.2 与 MAXN 超级模式
+      JetPack 6.2，带 MAXN 超级模式
     </div>
-    <p>现已为 Orin Nano 和 Orin NX 模组提供增强性能配置。<a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">了解更多</a></p>
+    <p>现已为 Orin Nano 和 Orin NX 模组提供增强的性能配置。<a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">了解更多</a></p>
     <div className="margin-top--md" style={{display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap'}}>
       <a href="https://seeedstudio88-my.sharepoint.com/:w:/r/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B152BF560-D35A-4895-86B9-26D71EF7F578%7D&file=Jetson%20BSP%20release%20note.docx&action=default&mobileredirect=true&DefaultItemOpen=1" target="_blank" rel="noopener noreferrer"
         style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.55rem', height: '44px', padding: '0 18px', borderRadius: '999px', background: 'linear-gradient(135deg, #6fbf3a 0%, #5aaa28 100%)', color: '#fff', fontSize: '0.95rem', fontWeight: 700, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.18)', boxShadow: '0 10px 24px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06) inset', whiteSpace: 'nowrap', lineHeight: 1}}>
@@ -340,7 +354,7 @@ export const productOptions = [
   </div>
 </div>
 
-## 🛠️ 准备环境需求
+## 🛠️ 准备环境要求
 
 <div className="card margin-bottom--lg" style={{borderLeft: '4px solid #10b981'}}>
   <div className="card__body">
@@ -456,7 +470,7 @@ export const productOptions = [
         <h3>🚀 入门指南</h3>
       </div>
       <div className="card__body">
-        <p>面向初学者的 Jetson 开发完整指南，包含实用示例和教程。</p>
+        <p>面向初学者的完整 Jetson 开发指南，包含实用示例和教程。</p>
       </div>
       <div className="card__footer">
         <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" target="_blank" rel="noopener noreferrer"
@@ -494,7 +508,7 @@ export const productOptions = [
         <h3>🔧 源代码</h3>
       </div>
       <div className="card__body">
-        <p>访问 Seeed 为 Tegra (L4T) 定制的 Linux 源代码及其修改内容。</p>
+        <p>访问 Seeed 定制的 Linux for Tegra (L4T) 源代码及其修改内容。</p>
       </div>
       <div className="card__footer">
         <a href="https://github.com/Seeed-Studio/Linux_for_Tegra" target="_blank" rel="noopener noreferrer"

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-05 17:14:55 (北京时间)
-// 多语言页面: 2429 个
+// 生成时间: 2026-08-11 14:43:57 (北京时间)
+// 多语言页面: 2436 个
 
 (function() {
   'use strict';
@@ -1409,6 +1409,13 @@
     "ja",
     "pt"
   ],
+  "/headless_setup_and_recovery_for_a603": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/how_to_build_and_flash_bsp_source_for_jetson_thor": [
     "cn",
     "en",
@@ -1536,6 +1543,13 @@
     "pt"
   ],
   "/usb_timeout_during_flash": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/use_arducam_ov9281_camera_with_a603_jetson_carrier_board": [
     "cn",
     "en",
     "es",
@@ -3551,6 +3565,13 @@
     "ja",
     "pt"
   ],
+  "/recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_model_conversion": [
     "cn",
     "en",
@@ -3888,6 +3909,13 @@
     "pt"
   ],
   "/recamera_pro_imu_tilt_shake_detection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_faqs": [
     "cn",
     "en",
     "es",
@@ -6427,6 +6455,13 @@
     "pt"
   ],
   "/rebot_arm_b601_dm_ros2_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_web_simulator_developer_guide": [
     "cn",
     "en",
     "es",
@@ -11639,6 +11674,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_clip_sensecraft_voice_sdk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_doa_vad": [
     "cn",
     "en",
@@ -15643,6 +15685,13 @@
     "pt"
   ],
   "/open_source_topic": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ma_deploy_yolov26": [
     "cn",
     "en",
     "es",

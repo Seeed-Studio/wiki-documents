@@ -39,6 +39,17 @@ import Link from '@docusaurus/Link';
 
 ---
 
+双臂协作演示视频：
+
+<div class="video-container">
+<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=116962059355405&bvid=BV17dgr6GEEh&cid=40185169679&p=1&autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> SO-ARM101 立即获取 🖱️</font></span></strong>
+</a></div>
+
 ## 0. 前置准备
 
 ### 0.1 安装依赖

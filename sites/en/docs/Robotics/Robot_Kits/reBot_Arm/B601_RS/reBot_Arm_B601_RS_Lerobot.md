@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-17'
-updatedAt: '2026-07-20'
+updatedAt: '2026-08-02'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/
 ---
 
@@ -41,6 +41,11 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/
 <p align="center">
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
 
 
 [reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/) is an open-source robotic arm project launched by Seeed, dedicated to lowering the threshold for learning embodied intelligence. We open-source all structural designs and code without reservation, making robotics technology accessible to everyone.

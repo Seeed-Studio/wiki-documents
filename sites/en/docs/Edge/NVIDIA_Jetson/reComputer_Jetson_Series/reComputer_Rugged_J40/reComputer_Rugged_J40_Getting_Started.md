@@ -11,9 +11,9 @@ slug: /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
   date: 03/04/2026
-  author: Dayu
+  author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-03-04'
+updatedAt: '2026-08-07'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
@@ -216,8 +216,12 @@ Please refer to the [Flash BSP with Jetpack to Selected Jetson](/flash/jetpack_t
 
 ### Enter Force Recovery Mode
 
+<div align="center">
+  <img width="700" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg"/>
+</div>
+
 1. Connect a USB Type-C cable between the **DEVICE** port and your Ubuntu host PC.
-2. Press and hold the **REC** (Recovery) button using a pin.
+2. Press and hold the **REC** (Recovery) button.
 3. While holding REC, connect the power supply to power on the board.
 4. Release the Recovery button.
 
@@ -230,6 +234,22 @@ lsusb
 Expected output by module:
 - Orin NX 16GB: `0955:7323 NVidia Corp`
 - Orin Nano 8GB: `0955:7523 NVidia Corp`
+
+## Extract and Flash
+
+**Step 1:** Extract the downloaded image file:
+
+```bash
+cd <path-to-image>
+sudo tar xpf mfi_xxxx.tar.gz
+```
+
+**Step 2:** Enter the extracted directory and execute the flash command:
+
+```bash
+cd mfi_xxxx
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
+```
 
 ## Resources
 

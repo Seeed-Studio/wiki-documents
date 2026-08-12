@@ -61,7 +61,7 @@ YOLO は、単一のフォワードパスでターゲットの位置特定と分
 
 ## プロジェクト概要
 
-**reBot Arm B601 ビジュアル把持デモ** は、[reBot Arm B601](https://github.com/vectorBH6/reBotArm_control_py) ロボットアーム制御ライブラリと RGB-D 深度カメラに基づくビジュアル把持アルゴリズムのデモプロジェクトです。本システムは B601 アームの DM / RS 構成の両方をサポートします。YOLO モデルを用いてデスクトップ上の物体をリアルタイム検出し、OBB 最小外接矩形から把持姿勢を推定し、ハンドアイキャリブレーションによって把持点をカメラ座標系からロボットベース座標系へ変換し、ロボットアームを駆動して自律把持を完了させます。
+**reBot Arm B601 ビジュアル把持デモ** は、[reBot Arm B601](https://github.com/Seeed-Projects/reBotArm_control_py) ロボットアーム制御ライブラリと RGB-D 深度カメラに基づくビジュアル把持アルゴリズムのデモプロジェクトです。本システムは B601 アームの DM / RS 構成の両方をサポートします。YOLO モデルを用いてデスクトップ上の物体をリアルタイム検出し、OBB 最小外接矩形から把持姿勢を推定し、ハンドアイキャリブレーションによって把持点をカメラ座標系からロボットベース座標系へ変換し、ロボットアームを駆動して自律把持を完了させます。
 
 ### コア機能
 
@@ -106,14 +106,6 @@ sudo chmod 666 /dev/ttyUSB0        # USB2CAN (adjust port number as needed)
 git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
-
-現在の開発用リポジトリを使用することもできます：
-
-```bash
-git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
-cd rebot_grasp
-```
-
 ### ステップ 2. conda 環境を作成・設定する
 
 ```bash
@@ -129,7 +121,7 @@ conda activate rebotarm
 ### ステップ 3. ロボットアーム制御ライブラリをインストールする
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 cd sdk/reBotArm_control_py
 pip install -e .
 cd ../..
@@ -603,7 +595,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## 📄 参考文献
 
-- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py) — ロボットアーム制御ライブラリ
+- [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) — ロボットアーム制御ライブラリ
 - [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm) — reBot ロボットアームオープンソースプロジェクト
 - [Orbbec Gemini 2 Product Page](https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)

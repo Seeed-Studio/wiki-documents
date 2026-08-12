@@ -11,23 +11,23 @@ slug: /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
   date: 03/04/2026
-  author: Dayu
-createdAt: '2026-03-05'
-updatedAt: '2026-03-05'
+  author: Dayu,Dongxu Jin
+createdAt: '2026-03-04'
+updatedAt: '2026-08-07'
 url: https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
 # reComputer Rugged J40 入門ガイド
 
 :::note
-この製品は現在開発中です。仕様および提供状況は予告なく変更される場合があります。
+本製品は現在開発中です。仕様および提供状況は予告なく変更される場合があります。
 :::
 
 <div align="center">
   <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
 </div>
 
-reComputer Rugged J40 は、NVIDIA Jetson Orin NX/Nano モジュールを搭載した IP66 対応のファンレスエッジ AI コンピュータです。船舶、車載、産業用途などの過酷な屋外環境向けに設計されており、完全防水の M12 コネクタを備えたコンパクトなパッシブ冷却筐体で、最大 100 TOPS の AI 性能を発揮します。
+reComputer Rugged J40 は、NVIDIA Jetson Orin NX/Nano モジュールを搭載した IP66 等級のファンレスエッジ AI コンピュータです。船舶、車載、産業用途などの過酷な屋外環境向けに設計されており、完全防水の M12 コネクタを備えたコンパクトなパッシブ冷却筐体で、最大 100 TOPS の AI 性能を発揮します。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/" target="_blank">
@@ -39,10 +39,10 @@ reComputer Rugged J40 は、NVIDIA Jetson Orin NX/Nano モジュールを搭載�
 
 - **IP66 防水**：すべての外部インターフェースに M12 防水コネクタを採用した完全密閉筐体
 - **ファンレスパッシブ冷却**：0.7 m/s の気流条件で -20°C ～ +60°C の範囲で静音動作
-- **堅牢・耐振動**：3 Grms @ 5–500 Hz、1 時間/軸 — 車載および船舶用途に適合
-- **豊富な産業用 I/O**：CAN-FD（アイソレート）、RS-232/422/485、DI/DO、すべて M12 A コードコネクタ経由
-- **柔軟なネットワーキング**：4× PoE GbE + 1× GbE（M12）、M.2 Key E（Wi-Fi/BT）、M.2 Key B（5G/GPS）
-- **広範囲電源入力**：M12 B/A コードコネクタ経由で 19–48 V DC 入力
+- **高耐久・耐振動**：3 Grms @ 5–500 Hz、1 時間/軸 — 車載および船舶用途に適合
+- **豊富な産業用 I/O**：CAN-FD（絶縁）、RS-232/422/485、DI/DO をすべて M12 A コードコネクタ経由で提供
+- **柔軟なネットワーク**：4× PoE GbE + 1× GbE（M12）、M.2 Key E（Wi-Fi/BT）、M.2 Key B（5G/GPS）
+- **広範囲電源入力**：M12 B/A コードコネクタ経由で 19～48 V DC 入力
 - **各種認証**：CE、FCC、RoHS、REACH
 
 ## 仕様
@@ -99,11 +99,11 @@ reComputer Rugged J40 は、NVIDIA Jetson Orin NX/Nano モジュールを搭載�
     <tr>
       <td rowSpan={8}>I/O</td>
       <td>Ethernet</td>
-      <td colSpan={2}>4× GbE RJ45 PoE PSE (802.3af, M12 防水) + 1× GbE RJ45 (M12 防水)</td>
+      <td colSpan={2}>4× GbE RJ45 PoE PSE（802.3af、M12 防水）+ 1× GbE RJ45（M12 防水）</td>
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={2}>4× USB 3.2 Type-A (M12 防水) + 1× USB 2.0/3.0 Type-C (フラッシュ用、防水キャップ付き) + 1× USB Type-C (デバッグ)</td>
+      <td colSpan={2}>4× USB 3.2 Type-A（M12 防水）+ 1× USB 2.0/3.0 Type-C（書き込み用、防水キャップ付き）+ 1× USB Type-C（デバッグ用）</td>
     </tr>
     <tr>
       <td>ディスプレイ</td>
@@ -111,15 +111,15 @@ reComputer Rugged J40 は、NVIDIA Jetson Orin NX/Nano モジュールを搭載�
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan={2}>2× CAN-FD（アイソレート、120 Ω）M12 A コード 8 ピン経由</td>
+      <td colSpan={2}>2× CAN-FD（絶縁、120 Ω）、M12 A コード 8 ピン経由</td>
     </tr>
     <tr>
       <td>シリアル</td>
-      <td colSpan={2}>1× RS-232/422/485 M12 A コード 8 ピン経由</td>
+      <td colSpan={2}>1× RS-232/422/485、M12 A コード 8 ピン経由</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td colSpan={2}>2× DI + 2× DO M12 12 ピン / 8 ピン経由</td>
+      <td colSpan={2}>2× DI + 2× DO、M12 12 ピン / 8 ピン経由</td>
     </tr>
     <tr>
       <td>SIM</td>
@@ -141,7 +141,7 @@ reComputer Rugged J40 は、NVIDIA Jetson Orin NX/Nano モジュールを搭載�
     <tr>
       <td rowSpan={2}>電源</td>
       <td>入力</td>
-      <td colSpan={2}>M12 B/A コードコネクタ経由で 19–48 V DC</td>
+      <td colSpan={2}>M12 B/A コードコネクタ経由で 19～48 V DC</td>
     </tr>
     <tr>
       <td>消費電力</td>
@@ -154,7 +154,7 @@ reComputer Rugged J40 は、NVIDIA Jetson Orin NX/Nano モジュールを搭載�
     </tr>
     <tr>
       <td>動作温度</td>
-      <td colSpan={2}>-20°C ～ +60°C（0.7 m/s の気流時）</td>
+      <td colSpan={2}>-20°C ～ +60°C（0.7 m/s の気流条件）</td>
     </tr>
     <tr>
       <td>湿度</td>
@@ -197,31 +197,35 @@ reComputer Rugged J40 は、NVIDIA Jetson Orin NX/Nano モジュールを搭載�
 | PWR | 緑 | Off | デバイスに電源が供給されていません |
 | ACT | 緑 | Flashing | SSD アクセス動作中 |
 
-## JetPack をフラッシュする
+## JetPack の書き込み
 
 :::note
-BSP が利用可能になり次第、フラッシュ手順を追加します。フラッシュ手順は他の reComputer J40 シリーズデバイスと同じ手順に従います。
+BSP が利用可能になり次第、書き込み手順を追加します。書き込みプロセスは、他の reComputer J40 シリーズデバイスと同じ手順に従います。
 :::
 
-最新のフラッシュガイドについては、[Flash BSP with Jetpack to Selected Jetson](/ja/flash/jetpack_to_selected_product) ページを参照してください。
+最新の書き込みガイドについては、[Flash BSP with Jetpack to Selected Jetson](/ja/flash/jetpack_to_selected_product) ページを参照してください。
 
 ### 前提条件
 
 - reComputer Rugged J40
 - 電源（19～48 V DC）
 - Ubuntu ホスト PC（20.04 または 22.04）
-- USB Type-C データケーブル（フラッシュ用）
+- USB Type-C データケーブル（書き込み用）
 - 外部モニタ + HDMI ケーブル
 - キーボードとマウス
 
 ### Force Recovery モードに入る
 
+<div align="center">
+  <img width="700" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg"/>
+</div>
+
 1. **DEVICE** ポートと Ubuntu ホスト PC の間を USB Type-C ケーブルで接続します。
-2. ピンを使用して **REC**（Recovery）ボタンを押し続けます。
+2. **REC**（Recovery）ボタンを押し続けます。
 3. REC を押したまま、電源を接続してボードの電源を入れます。
 4. Recovery ボタンを離します。
 
-Ubuntu ホスト PC 上で、次のコマンドでリカバリモードを確認します：
+Ubuntu ホスト PC 上で、次のコマンドでリカバリモードに入っていることを確認します：
 
 ```bash
 lsusb
@@ -231,13 +235,29 @@ lsusb
 - Orin NX 16GB: `0955:7323 NVidia Corp`
 - Orin Nano 8GB: `0955:7523 NVidia Corp`
 
+## 展開と書き込み
+
+**ステップ 1：** ダウンロードしたイメージファイルを展開します：
+
+```bash
+cd <path-to-image>
+sudo tar xpf mfi_xxxx.tar.gz
+```
+
+**ステップ 2：** 展開したディレクトリに移動し、書き込みコマンドを実行します：
+
+```bash
+cd mfi_xxxx
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
+```
+
 ## リソース
 
-- [reComputer Rugged J40 データシート](#) *(近日公開)*
+- [reComputer Rugged J40 データシート](#) *(近日公開予定)*
 - [Linux_for_Tegra ソースコード](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [NVIDIA Jetson デバイス比較](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。
 

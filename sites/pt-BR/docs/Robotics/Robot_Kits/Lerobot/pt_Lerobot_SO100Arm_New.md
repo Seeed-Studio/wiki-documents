@@ -353,6 +353,15 @@ Todas as peças para o líder ou seguidor já estão contidas em um único arqui
   - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
+**Passo 4: Imprimir a garra flexível (Opcional)**
+
+Se você quiser que o braço robótico seja capaz de agarrar objetos macios, frágeis ou de formato irregular, pode imprimir uma garra flexível para substituir a garra rígida padrão. Os arquivos de impressão estão disponíveis no repositório [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git).
+
+Instruções de material de impressão:
+
+- Os dois dedos da garra: imprimir com material **TPU**
+- As demais peças: imprimir com material **PLA**
+
 </details>
 
 </section>
