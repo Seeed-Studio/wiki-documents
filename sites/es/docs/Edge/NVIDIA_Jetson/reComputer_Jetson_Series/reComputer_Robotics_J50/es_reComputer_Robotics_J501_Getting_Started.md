@@ -124,7 +124,7 @@ Con JetPack 6.2.1 y Linux BSP preinstalados, garantiza un despliegue sin problem
     <tr>
       <th>GMSL</th>
       <td colSpan={2}>2x conector Mini-Fakra (para 8x cámaras GMSL2) (opcional)</td>
-    </tr]
+    </tr>
     <tr>
       <th>Serie</th>
       <td colSpan={2}>2x DB9 (RS232/422/485)</td>
