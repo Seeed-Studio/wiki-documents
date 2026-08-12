@@ -62,10 +62,6 @@ NFS here is only a **host ↔ Jetson transfer mechanism** during flashing. It is
   <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/Jetson_Initrd_Flash_ZFS_nfs_error_01.png" alt="Terminal showing mount.nfs access denied during l4t_initrd_flash on a ZFS host"/>
 </div>
 
-:::note Image placeholder
-Upload screenshot of the error to FTP path: `/wiki/reComputer-Jetson/FAQ/Jetson_Initrd_Flash_ZFS_nfs_error_01.png`
-:::
-
 ## Why ZFS hosts fail
 
 NVIDIA’s script (`tools/kernel_flash/l4t_network_flash.func`) uses **`exportfs -o`** to create **temporary, in-memory** NFS exports.
