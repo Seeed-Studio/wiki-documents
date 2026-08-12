@@ -78,7 +78,7 @@
     "@rspack/core": "^1.7.4",
     "@tsconfig/docusaurus": "^1.0.5",
     "baseline-browser-mapping": "^2.9.14",
-    "concurrently": "^9.2.1",
+    "concurrently": "^9.2.4",
     "cross-env": "^10.1.0",
     "fast-glob": "^3.3.3",
     "gh-pages": "^6.3.0",
@@ -102,8 +102,5 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
-  "resolutions": {
-    "shell-quote": "1.8.4"
-  }
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
