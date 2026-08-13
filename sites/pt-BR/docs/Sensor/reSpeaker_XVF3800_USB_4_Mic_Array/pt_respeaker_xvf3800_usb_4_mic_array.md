@@ -168,8 +168,6 @@ Aqui você pode ver como conectar alto-falantes usando o conector de fone de ouv
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/speaker.jpg" alt="pir" width={600} height="auto"/></p>
 
-
-
 #### Modo de segurança
 
 O Modo de Segurança é um modo especial de recuperação no ReSpeaker XVF3800 que permite gravar firmware via USB DFU ou I2C — para dispositivos como o Raspberry Pi e o ESP32. Se você já tiver gravado o firmware I2S anteriormente e quiser voltar para o firmware USB, pode entrar no Modo de Segurança e regravar o firmware USB usando USB DFU.
@@ -220,7 +218,7 @@ Duas variantes de firmware estão disponíveis: **respeaker_xvf3800_usb_dfu_firm
 Você pode explorar esses arquivos de firmware [neste link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
 
 | Firmware | Canais | Observações |
-|---------|----------|-------|
+| --------- | ---------- | ------- |
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Saída processada de 2 canais <br /> Canal 0: Conference <br /> Canal 1: ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Canal 0: Áudio processado (Conference) <br /> Canal 1: Áudio processado (ASR) <br /> Canal 2: Dados brutos do Mic 0 <br /> Canal 3: Dados brutos do Mic 1 <br /> Canal 4: Dados brutos do Mic 2 <br /> Canal 5: Dados brutos do Mic 3 |
 
@@ -529,26 +527,24 @@ O ajuste permite que os usuários configurem parâmetros dos algoritmos de áudi
 
 É fornecida uma interface de controle em Python dedicada para configuração de parâmetros e interação com o dispositivo.
 
-
 [**Python Control Directory**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)
 
 Usando os scripts Python fornecidos, você pode:
 
-* Configurar parâmetros dos algoritmos de áudio integrados
-* Obter dados de DoA (Direction of Arrival)
-* Obter dados de VAD (Voice Activity Detection)
-* Controlar os LEDs onboard
-* Controlar o pipeline de processamento de voz
-* Comunicar-se diretamente com o dispositivo XMOS
+- Configurar parâmetros dos algoritmos de áudio integrados
+- Obter dados de DoA (Direction of Arrival)
+- Obter dados de VAD (Voice Activity Detection)
+- Controlar os LEDs onboard
+- Controlar o pipeline de processamento de voz
+- Comunicar-se diretamente com o dispositivo XMOS
 
 **Requisitos do sistema**
 
 As seguintes dependências são necessárias para usar a interface de controle em Python:
 
-* Python 3.6 ou superior
-* Biblioteca Python `pyusb`
-* Biblioteca de sistema `libusb`
-
+- Python 3.6 ou superior
+- Biblioteca Python `pyusb`
+- Biblioteca de sistema `libusb`
 
 ### Instalação e dependências
 
@@ -560,8 +556,6 @@ pip install pyusb
 
 Dependendo do seu sistema operacional, você também pode precisar instalar o pacote `libusb` separadamente.
 
-
-
 ### Uso
 
 **Sintaxe básica**
@@ -569,8 +563,6 @@ Dependendo do seu sistema operacional, você também pode precisar instalar o pa
 ```bash
 python xvf_host.py [options] command [value(s)...]
 ```
-
-
 
 **Opções de comando**
 
@@ -581,8 +573,6 @@ python xvf_host.py [options] command [value(s)...]
 | `--pid`        | Set USB Product ID (default: `0x001A`)                |
 | `--values`     | Provide values for write commands (optional)          |
 
-
-
 ### Exemplos de uso
 
 **Listar comandos disponíveis**
@@ -592,6 +582,7 @@ Exibir todos os comandos de firmware suportados.
 ```bash
 python xvf_host.py --list
 ```
+
 **Ler versão do firmware**
 
 Obter a versão do firmware que está sendo executada atualmente no dispositivo.
@@ -635,6 +626,7 @@ Ajustar a porcentagem de brilho do LED.
 ```bash
 python xvf_host.py LED_BRIGHTNESS --values 50
 ```
+
 **Ler geometria do array de microfones**
 
 Obter as coordenadas dos microfones usadas pelos algoritmos de processamento acústico.
@@ -659,11 +651,11 @@ Preparamos um aplicativo desktop para controlar e configurar seu dispositivo reS
 
 Com este aplicativo, você pode:
 
-* Conectar-se ao seu dispositivo reSpeaker
-* Configurar configurações de áudio (supressão de ruído, ganho, AEC e configuração de canais)
-* Monitorar Direction of Arrival (DoA) e Voice Activity Detection (VAD)
-* Controlar efeitos de LED
-* Ajustar parâmetros do dispositivo
+- Conectar-se ao seu dispositivo reSpeaker
+- Configurar configurações de áudio (supressão de ruído, ganho, AEC e configuração de canais)
+- Monitorar Direction of Arrival (DoA) e Voice Activity Detection (VAD)
+- Controlar efeitos de LED
+- Ajustar parâmetros do dispositivo
 
 ### Instalando o aplicativo
 
@@ -766,12 +758,12 @@ A aba **Audio** permite configurar e aprimorar o pipeline de processamento de á
 
 Aqui você pode configurar:
 
-* Supressão de ruído não estacionário
-* Supressão de ruído estacionário
-* Controle automático de ganho (AGC)
-* Cancelamento de eco acústico (AEC)
-* Configuração do canal de saída
-* Mapeamento dos canais esquerdo e direito
+- Supressão de ruído não estacionário
+- Supressão de ruído estacionário
+- Controle automático de ganho (AGC)
+- Cancelamento de eco acústico (AEC)
+- Configuração do canal de saída
+- Mapeamento dos canais esquerdo e direito
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/audio.jpg" alt="Audio Tab" width={800} height="auto"/></p>
 
@@ -781,9 +773,9 @@ A aba **Monitor** fornece visualização em tempo real do processamento do micro
 
 Você pode monitorar:
 
-* Direction of Arrival (DoA)
-* Voice Activity Detection (VAD)
-* Níveis de energia do feixe
+- Direction of Arrival (DoA)
+- Voice Activity Detection (VAD)
+- Níveis de energia do feixe
 
 Esses indicadores ajudam você a verificar se o dispositivo está detectando a fala corretamente.
 
@@ -795,12 +787,12 @@ A aba **LEDs** permite personalizar o anel de LEDs.
 
 Os recursos disponíveis incluem:
 
-* Efeito de respiração
-* Efeito arco-íris
-* Efeito de anel
-* Ajuste de brilho
-* Controle de velocidade da animação
-* Seleção de cor RGB
+- Efeito de respiração
+- Efeito arco-íris
+- Efeito de anel
+- Ajuste de brilho
+- Controle de velocidade da animação
+- Seleção de cor RGB
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/led.jpg" alt="LEDs Tab" width={800} height="auto"/></p>
 
@@ -810,11 +802,11 @@ A aba **Parameters** fornece acesso a todos os parâmetros configuráveis do dis
 
 As configurações são organizadas em categorias como:
 
-* Áudio
-* Cancelamento de eco acústico (AEC)
-* Pós-processamento
-* LEDs / GPIO
-* Sistema
+- Áudio
+- Cancelamento de eco acústico (AEC)
+- Pós-processamento
+- LEDs / GPIO
+- Sistema
 
 A partir desta interface, você pode atualizar os valores dos parâmetros diretamente.
 
@@ -894,6 +886,33 @@ Se você quiser usar o dispositivo como um **dispositivo de áudio USB**, será 
 
 2. **Grave o firmware USB:**
    [Instruções de atualização de firmware](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#atualizar-firmware)
+
+### Por que alguns canais ficam sem áudio com o firmware de 6 canais do XVF3800?
+
+Após instalar o firmware de 6 canais, pode ser necessário habilitar os canais de microfone brutos por meio dos controles do mixer de áudio do sistema.
+
+No Linux, primeiro verifique o ID da placa de áudio:
+
+```bash
+arecord -l
+```
+
+Por exemplo, se o XVF3800 aparecer como **card 1**, habilite os canais de captura e ajuste o volume:
+
+```bash
+amixer -c 1 cset numid=8 on,on,on,on,on,on
+amixer -c 1 cset numid=10 60,60,60,60,60,60
+```
+
+Ajuste os valores de volume conforme necessário e, em seguida, salve as configurações:
+
+```bash
+sudo alsactl store 1
+```
+
+Após aplicar essas configurações, todos os seis canais deverão capturar sinais de áudio diferentes de zero.
+
+**Windows:** Se alguns canais continuarem sem áudio, tente desinstalar o driver do dispositivo XVF3800 no **Gerenciador de Dispositivos** e, em seguida, desconecte e reconecte o dispositivo. Isso permite que o Windows reconfigure o dispositivo e o driver.
 
 ## Recursos
 
