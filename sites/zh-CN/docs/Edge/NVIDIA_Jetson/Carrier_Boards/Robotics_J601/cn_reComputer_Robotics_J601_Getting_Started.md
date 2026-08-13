@@ -12,10 +12,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
 last_update:
-  date: 07/23/2026
-  author: HaoChen
+  date: 08/13/2026
+  author: haochen
 createdAt: '2026-04-24'
-updatedAt: '2026-07-23'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
@@ -307,7 +307,8 @@ JetPack 镜像文件体积较大，下载可能需要大约 60 分钟。请在�
 
 **步骤 5.** 在主机 PC 上运行 `lsusb`。出现以下条目表示开发板已进入强制恢复模式：
 
-- Jetson AGX Thor：**0955:7026 NVIDIA Corp.**
+- 对于 AGX Thor T5000：**0955:7026 NVIDIA Corp.**
+- 对于 AGX Thor T4000：**0955:7226 NVIDIA Corp.**
 
 <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg"/></div>
 
