@@ -9,7 +9,7 @@ keywords:
   - LeRobot
   - Teleoperation
   - Robotics
-image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
+image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /soarm101_xiao_microros_wireless_teleoperation
 last_update:
   date: 07/24/2026
@@ -21,13 +21,13 @@ url: https://wiki.seeedstudio.com/soarm101_xiao_microros_wireless_teleoperation/
 
 # Wireless SO-ARM101 Teleoperation with XIAO ESP32-C3 and micro-ROS
 
+:::note Community Contribution
+This tutorial is a community contribution by [@linao681](https://github.com/linao681). Thanks for sharing this project with the Seeed Studio community!
+:::
+
 ## Introduction
 
-This tutorial shows how to control an SO-ARM101 follower wirelessly from an
-SO-ARM101 leader. The leader is connected to an Ubuntu computer through a
-standard USB bus-servo driver board. The follower uses the Seeed Studio XIAO
-ESP32-C3 Bus Servo Adapter and communicates with ROS 2 through micro-ROS over
-Wi-Fi UDP.
+This tutorial shows how to control an SO-ARM101 follower wirelessly from an SO-ARM101 leader. The leader is connected to an Ubuntu computer through a standard USB bus-servo driver board. The follower uses the Seeed Studio XIAO ESP32-C3 Bus Servo Adapter and communicates with ROS 2 through micro-ROS over Wi-Fi UDP.
 
 The implementation provides:
 
@@ -38,15 +38,11 @@ The implementation provides:
 - calibration, joint-limit, command-step, and bus-health checks;
 - automatic preflight checks and one-command teleoperation startup.
 
-The complete source code is available in the
-[soarm101-drone-teleop repository](https://github.com/linao681/soarm101-drone-teleop).
+The complete source code is available in the [soarm101-drone-teleop repository](https://github.com/linao681/soarm101-drone-teleop).
 
 :::note
 
-This project was developed as a ground-tested prototype for a future
-drone-mounted SO-ARM101 demonstration. This guide covers only the robotic arm
-communication and teleoperation link. It does not provide a flight-certified
-control or safety system.
+This project was developed as a ground-tested prototype for a future drone-mounted SO-ARM101 demonstration. This guide covers only the robotic arm communication and teleoperation link. It does not provide a flight-certified control or safety system.
 
 :::
 
@@ -74,8 +70,7 @@ XIAO ESP32-C3 Bus Servo Adapter
 SO-ARM101 follower, 6 × STS3215
 ```
 
-The PC and XIAO must be connected to the same local network. A phone hotspot or
-a dedicated 2.4 GHz access point can be used for a demonstration.
+The PC and XIAO must be connected to the same local network. A phone hotspot or a dedicated 2.4 GHz access point can be used for a demonstration.
 
 ## Hardware
 
@@ -88,17 +83,14 @@ a dedicated 2.4 GHz access point can be used for a demonstration.
 - 1 × 2.4 GHz Wi-Fi network
 - USB cables for calibration and firmware flashing
 
-This reference firmware was tested with the standard 5 V SO-ARM101 follower
-using six STS3215 servos with model number `777`.
+This reference firmware was tested with the standard 5 V SO-ARM101 follower using six STS3215 servos with model number `777`.
 
 :::danger
 
 - Disconnect servo power before changing any servo cable.
-- Use the voltage specified for your exact SO-ARM101 version. Do not connect a
-  12 V supply to a 5 V arm.
+- Use the voltage specified for your exact SO-ARM101 version. Do not connect a 12 V supply to a 5 V arm.
 - USB does not supply enough power for the servos.
-- Perform the first test on a stable workbench with a clear emergency power
-  disconnect.
+- Perform the first test on a stable workbench with a clear emergency power disconnect.
 - If testing near a drone, remove the propellers.
 
 :::
@@ -121,9 +113,7 @@ sudo snap install micro-ros-agent
 python3 -m pip install --user platformio
 ```
 
-Follow the
-[SO-ARM100/101 LeRobot guide](https://wiki.seeedstudio.com/lerobot_so100m_new/)
-to install LeRobot and configure the servo IDs before continuing.
+Follow the [SO-ARM100/101 LeRobot guide](https://wiki.seeedstudio.com/lerobot_so100m_new/) to install LeRobot and configure the servo IDs before continuing.
 
 ## Step 1: Clone the Project
 
@@ -141,13 +131,11 @@ start_soarm_demo.sh           network, Agent, arm, and topic preflight checks
 cali/                         leader and follower calibration files
 ```
 
-The repository includes a prebuilt `libmicroros.a` for the ESP32-C3 RISC-V
-architecture, so a normal user does not need to cross-compile micro-ROS.
+The repository includes a prebuilt `libmicroros.a` for the ESP32-C3 RISC-V architecture, so a normal user does not need to cross-compile micro-ROS.
 
 ## Step 2: Calibrate Both Arms
 
-Calibrate the follower first with a standard USB bus-servo driver. Replace
-`/dev/ttyACM0` with the correct port:
+Calibrate the follower first with a standard USB bus-servo driver. Replace `/dev/ttyACM0` with the correct port:
 
 ```bash
 python -m lerobot.scripts.lerobot_calibrate \
@@ -176,8 +164,7 @@ cali/leader_recal.json
 
 :::warning
 
-Calibration values are specific to one physical arm. Do not control another
-follower with the calibration values included as an example in the repository.
+Calibration values are specific to one physical arm. Do not control another follower with the calibration values included as an example in the repository.
 
 :::
 
@@ -189,8 +176,7 @@ The XIAO validates the servo EEPROM before enabling torque. Open:
 firmware/xiao_soarm/src/servo_bus.cpp
 ```
 
-Replace these three arrays with the values from your
-`cali/follower_recal.json`:
+Replace these three arrays with the values from your `cali/follower_recal.json`:
 
 ```cpp
 constexpr int16_t kHomingOffsets[kJointCount] = {
@@ -231,8 +217,7 @@ PY
 
 ## Step 3: Configure Wi-Fi
 
-Connect the Ubuntu computer to the Wi-Fi network that will be used by the XIAO.
-Find the computer's IPv4 address:
+Connect the Ubuntu computer to the Wi-Fi network that will be used by the XIAO. Find the computer's IPv4 address:
 
 ```bash
 ip -4 address
@@ -255,13 +240,11 @@ const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
 const char* AGENT_IP = "YOUR_UBUNTU_PC_IP";
 ```
 
-`wifi_config.h` is ignored by Git and must never be committed to a public
-repository.
+`wifi_config.h` is ignored by Git and must never be committed to a public repository.
 
 :::tip
 
-The ESP32-C3 uses 2.4 GHz Wi-Fi. If a phone hotspot supports both bands, select
-the compatibility or 2.4 GHz mode.
+The ESP32-C3 uses 2.4 GHz Wi-Fi. If a phone hotspot supports both bands, select the compatibility or 2.4 GHz mode.
 
 :::
 
@@ -275,8 +258,7 @@ python3 -m platformio run --target upload
 python3 -m platformio device monitor --baud 115200
 ```
 
-Power the follower arm with its external supply. A successful startup contains
-messages similar to:
+Power the follower arm with its external supply. A successful startup contains messages similar to:
 
 ```text
 Servo Ping mask: 0x3f (expected 0x3f)
@@ -285,12 +267,9 @@ IP: 192.168.x.x  RSSI: -xx
 Waiting for micro-ROS Agent...
 ```
 
-`0x3f` means all six servo IDs responded. If the calibration does not match,
-the firmware still reports state but rejects motion commands.
+`0x3f` means all six servo IDs responded. If the calibration does not match, the firmware still reports state but rejects motion commands.
 
-After flashing, the USB cable is required only for serial monitoring when the
-XIAO is powered correctly by the adapter. Keep the follower's external servo
-power connected.
+After flashing, the USB cable is required only for serial monitoring when the XIAO is powered correctly by the adapter. Keep the follower's external servo power connected.
 
 ## Step 5: Start the micro-ROS Agent
 
@@ -322,13 +301,11 @@ ros2 topic echo /joint_states --once
 ros2 topic hz /joint_states
 ```
 
-Do not send arbitrary joint values before completing the current-pose startup
-handshake.
+Do not send arbitrary joint values before completing the current-pose startup handshake.
 
 ## Step 6: Run Wireless Leader-Follower Teleoperation
 
-Connect the leader to the computer through its normal USB bus-servo driver and
-power it with the correct external supply.
+Connect the leader to the computer through its normal USB bus-servo driver and power it with the correct external supply.
 
 Find its stable serial path:
 
@@ -366,36 +343,25 @@ If all checks pass, start teleoperation:
 ./start_soarm_demo.sh
 ```
 
-The bridge reads the initial follower pose and repeatedly publishes the same
-pose before enabling torque. It then uses relative mapping, so the follower
-starts where it is and follows changes made to the leader. Press `Ctrl+C` to
-stop.
+The bridge reads the initial follower pose and repeatedly publishes the same pose before enabling torque. It then uses relative mapping, so the follower starts where it is and follows changes made to the leader. Press `Ctrl+C` to stop.
 
 :::warning
 
-Stopping the bridge or losing commands does not release torque. The follower
-holds its last commanded position. Disconnect servo power for an emergency
-stop.
+Stopping the bridge or losing commands does not release torque. The follower holds its last commanded position. Disconnect servo power for an emergency stop.
 
 :::
 
 ## Safety Mechanisms
 
-The reference implementation includes several checks intended to make a
-demonstration more predictable:
+The reference implementation includes several checks intended to make a demonstration more predictable:
 
 1. **Servo identity check:** all six IDs and model numbers must match.
-2. **EEPROM calibration check:** homing offsets and limits must match the
-   follower calibration compiled into the firmware.
-3. **Current-pose handshake:** the first command must be within `0.05 rad` of
-   the measured pose.
+2. **EEPROM calibration check:** homing offsets and limits must match the follower calibration compiled into the firmware.
+3. **Current-pose handshake:** the first command must be within `0.05 rad` of the measured pose.
 4. **Joint soft limits:** every command must stay inside the calibrated range.
-5. **Per-command step limit:** after arming, a target cannot change by more
-   than `0.25 rad` in one command.
-6. **Feedback watchdog:** the PC bridge stops publishing if follower feedback
-   is older than `0.5 s`.
-7. **Wi-Fi recovery:** the XIAO restarts cleanly if Wi-Fi cannot recover within
-   10 seconds.
+5. **Per-command step limit:** after arming, a target cannot change by more than `0.25 rad` in one command.
+6. **Feedback watchdog:** the PC bridge stops publishing if follower feedback is older than `0.5 s`.
+7. **Wi-Fi recovery:** the XIAO restarts cleanly if Wi-Fi cannot recover within 10 seconds.
 
 These software checks supplement but do not replace a physical emergency stop.
 
@@ -420,9 +386,7 @@ One or more servos did not answer:
 
 ### The firmware reports `calib:0`
 
-The servo EEPROM does not match the values compiled into `servo_bus.cpp`.
-Reconnect the follower through the USB driver board, recalibrate it, update the
-three firmware arrays, and flash the XIAO again.
+The servo EEPROM does not match the values compiled into `servo_bus.cpp`. Reconnect the follower through the USB driver board, recalibrate it, update the three firmware arrays, and flash the XIAO again.
 
 ### Wi-Fi disconnects during motion
 
@@ -430,14 +394,11 @@ three firmware arrays, and flash the XIAO again.
 - place the external antenna away from the servo power wires and metal parts;
 - use a dedicated 2.4 GHz network for the demonstration;
 - watch the RSSI value in the serial diagnostic output;
-- compare the result with the servos powered off to identify possible power or
-  electromagnetic interference.
+- compare the result with the servos powered off to identify possible power or electromagnetic interference.
 
 ### A joint direction or range is incorrect
 
-Recalibrate both arms and confirm the joint order in both JSON files. Also
-verify that the follower arrays in `servo_bus.cpp` came from the same physical
-follower currently connected to the XIAO.
+Recalibrate both arms and confirm the joint order in both JSON files. Also verify that the follower arrays in `servo_bus.cpp` came from the same physical follower currently connected to the XIAO.
 
 ## Tested Result
 
@@ -447,8 +408,7 @@ In the reference setup:
 - `/joint_states` was published at approximately 20 Hz;
 - the leader bridge published commands at 30 Hz;
 - all six joints followed together over a phone hotspot;
-- the XIAO continued operating without its USB data cable after flashing and
-  external arm power was connected.
+- the XIAO continued operating without its USB data cable after flashing and external arm power was connected.
 
 ## References
 
@@ -459,6 +419,4 @@ In the reference setup:
 - [ROS 2 Humble](https://docs.ros.org/en/humble/)
 - [LeRobot](https://github.com/huggingface/lerobot)
 
-This contribution documents an independently developed integration. LeRobot,
-ROS 2, micro-ROS, PlatformIO, and the servo library remain subject to their
-respective licenses.
+This contribution documents an independently developed integration. LeRobot, ROS 2, micro-ROS, PlatformIO, and the servo library remain subject to their respective licenses.
