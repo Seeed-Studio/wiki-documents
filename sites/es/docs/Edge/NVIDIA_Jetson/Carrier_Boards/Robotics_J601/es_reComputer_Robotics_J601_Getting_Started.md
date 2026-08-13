@@ -12,10 +12,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
 last_update:
-  date: 08/13/2026
-  author: haochen
+  date: 07/23/2026
+  author: HaoChen
 createdAt: '2026-04-24'
-updatedAt: '2026-08-13'
+updatedAt: '2026-07-23'
 url: https://wiki.seeedstudio.com/es/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
@@ -307,8 +307,7 @@ Antes de flashear, asegúrate de que la placa esté en modo Force Recovery.
 
 **Paso 5.** En el PC host, ejecuta `lsusb`. La siguiente entrada confirma que la placa está en modo Force Recovery:
 
-- Para AGX Thor T5000: **0955:7026 NVIDIA Corp.**
-- Para AGX Thor T4000: **0955:7226 NVIDIA Corp.**
+- Jetson AGX Thor: **0955:7026 NVIDIA Corp.**
 
 <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg"/></div>
 
