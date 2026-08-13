@@ -310,7 +310,7 @@ Before flashing, make sure the board is in Force Recovery Mode.
 
 ```bash
 cd <path-to-image>
-sudo tar xpf mfi_recomputer-thor-carrier-j6015-6.2.1-38.4.0-YYYY-MM-DD.tar.gz
+sudo tar xpf mfi_recomputer-thor-carrier-j6015-7.1-38.4.0-YYYY-MM-DD.tar.gz
 ```
 
 **Step 2.** Flash JetPack to the NVMe SSD:
@@ -400,7 +400,7 @@ Before flashing, make sure the board is in Force Recovery Mode.
 
 ```bash
 cd <path-to-image>
-sudo tar xpf mfi_recomputer-thor-carrier-j6014-6.2.1-38.4.0-YYYY-MM-DD.tar.gz
+sudo tar xpf mfi_recomputer-thor-carrier-j6014-7.1-38.4.0-YYYY-MM-DD.tar.gz
 ```
 
 **Step 2.** Flash JetPack to the NVMe SSD:
