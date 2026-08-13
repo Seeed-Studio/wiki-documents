@@ -4566,6 +4566,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/Lerobot_Starai_Arm',
             'Robotics/Robot_Kits/Lerobot/Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm_New',
+            'Robotics/Robot_Kits/Lerobot/SOARM101_XIAO_MicroROS_Wireless_Teleoperation',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO_ARM101_DAMO',
             'Robotics/Robot_Kits/Lerobot/SOARM_AMAZINGHAND_TELEOP',
             'Robotics/Robot_Kits/Lerobot/Lerobot_Dataset_Tool',

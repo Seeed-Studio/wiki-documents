@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-11 14:43:57 (北京时间)
-// 多语言页面: 2436 个
+// 生成时间: 2026-08-13 11:01:33 (北京时间)
+// 多语言页面: 2437 个
 
 (function() {
   'use strict';
@@ -1850,14 +1850,14 @@
     "ja",
     "pt"
   ],
-  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
+  "/NVIDIA_Jetson": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/NVIDIA_Jetson": [
+  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
     "cn",
     "en",
     "es",
@@ -5986,6 +5986,13 @@
     "pt"
   ],
   "/lerobot_starai_arm": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/soarm101_xiao_microros_wireless_teleoperation": [
     "cn",
     "en",
     "es",
