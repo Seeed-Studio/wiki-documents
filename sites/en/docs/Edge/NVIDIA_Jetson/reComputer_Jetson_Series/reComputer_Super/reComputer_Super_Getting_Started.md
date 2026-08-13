@@ -454,6 +454,10 @@ The flash command may run for 2-10 minutes.
 Please complete the **System Configuration** according to your needs.
 :::
 
+:::tip Desktop recommendation
+The Seeed image ships with **GNOME**. Prefer GNOME for demos and production UIs. If you switch to **Weston**, cold boot may intermittently fail with `EGL_NOT_INITIALIZED` (DRM driver load-order race). Details: [Weston Cold Boot Fails with EGL_NOT_INITIALIZED](/weston_egl_not_initialized_jetson_cold_boot).
+:::
+
 ## Hardware Interfaces Usage
 
 :::info
