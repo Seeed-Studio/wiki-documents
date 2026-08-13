@@ -8,7 +8,7 @@ last_update:
   date: 8/13/2026
   author: Nemo
 createdAt: '2025-12-19'
-updatedAt: '2026-04-28'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/xiao_epaper_display_board_overview/
 ---
 
@@ -137,7 +137,7 @@ Powered by **XIAO nRF52840** Plus, the display board EN04 supports both **24-pin
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/epaper_EN05/" target="_blank" rel="noopener noreferrer">
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/epaper_en05/" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"3"}>EN05 Driver Board Wiki</font></span></strong>
   </a>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN05-p-6756.html" target="_blank" rel="noopener noreferrer">
