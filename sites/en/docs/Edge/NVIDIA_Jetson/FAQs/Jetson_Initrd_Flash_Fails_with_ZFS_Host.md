@@ -15,10 +15,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/Jetson_Initrd_Flash_ZFS_nfs_error_01.png
 slug: /jetson_initrd_flash_zfs_host_limitation
 last_update:
-  date: 08/12/2026
-  author: Seeed Support
+  date: 08/13/2026
+  author: haochen
 createdAt: '2026-08-12'
-updatedAt: '2026-08-12'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/jetson_initrd_flash_zfs_host_limitation/
 ---
 
@@ -58,10 +58,6 @@ During initrd flashing:
 
 NFS here is only a **host ↔ Jetson transfer mechanism** during flashing. It is unrelated to NFS features on the carrier board.
 
-<div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/Jetson_Initrd_Flash_ZFS_nfs_error_01.png" alt="Terminal showing mount.nfs access denied during l4t_initrd_flash on a ZFS host"/>
-</div>
-
 ## Why ZFS hosts fail
 
 NVIDIA’s script (`tools/kernel_flash/l4t_network_flash.func`) uses **`exportfs -o`** to create **temporary, in-memory** NFS exports.
@@ -71,12 +67,6 @@ On **ext4** (default Ubuntu install), this usually works.
 On **ZFS**, the Linux NFS server cannot auto-assign a stable **`fsid`** for the dataset. The export may appear to succeed on the host, but the Jetson receives **access denied** when mounting.
 
 Ubuntu has offered ZFS as a root option since 19.10, so this can affect any user who chose ZFS during installation.
-
-References:
-
-- [Seeed wiki-documents #4148](https://github.com/Seeed-Studio/wiki-documents/issues/4148)
-- [NVIDIA Forums: rootfs does not support NFS export](https://forums.developer.nvidia.com/t/rootfs-does-not-support-nfs-export/248850)
-- [NVIDIA Forums: requires fsid= for NFS export](https://forums.developer.nvidia.com/t/requires-fsid-for-nfs-export/338708)
 
 ## Recommended workaround (simplest)
 
@@ -127,11 +117,14 @@ findmnt -no FSTYPE /
 
 If the output shows `zfs`, use the ext4 workaround above before flashing.
 
-## Related guides
+## Resources
 
+- [Seeed wiki-documents #4148](https://github.com/Seeed-Studio/wiki-documents/issues/4148)
+- [NVIDIA Forums: rootfs does not support NFS export](https://forums.developer.nvidia.com/t/rootfs-does-not-support-nfs-export/248850)
+- [NVIDIA Forums: requires fsid= for NFS export](https://forums.developer.nvidia.com/t/requires-fsid-for-nfs-export/338708)
 - [Flash BSP with Jetpack to Selected Jetson](https://wiki.seeedstudio.com/flash/jetpack_to_selected_product/)
 - [reServer J501 Getting Started](https://wiki.seeedstudio.com/reserver_j501_getting_started/)
-- [Flash JetPack with WSL2](https://wiki.seeedstudio.com/ai_robotics_flash_jetpack_with_wsl2/) (different host limitation)
+- [Flash JetPack with WSL2](https://wiki.seeedstudio.com/ai_robotics_flash_jetpack_with_wsl2/)
 
 ## Tech Support & Product Discussion
 
