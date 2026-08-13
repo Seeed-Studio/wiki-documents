@@ -243,7 +243,26 @@ Usando el gamepad virtual web, puedes enseñar rápidamente al robot una secuenc
 Si has completado la experiencia rápida y deseas exportar aún más el JSON de movimiento, modificar la lógica del controlador principal o conectar otros controladores, continúa leyendo las siguientes secciones.
 :::
 
-## 9. Flujo de trabajo principal para el desarrollo de movimientos personalizados
+## 9. Apertura de software y desarrollo de movimientos personalizados
+
+Enlace de Motion Editor:
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/uartbasic/robotstudiopro/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Abrir Motion Editor 🖱️</font></span></strong>
+</a></div>
+
+Enlace de Remote Controller:
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/ps2v2/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Abrir Remote Controller 🖱️</font></span></strong>
+</a></div>
+
+Esta sección utiliza dos aplicaciones basadas en navegador; no requieren instalación. Haz clic en los botones de arriba para abrirlas:
+
+- **Motion Editor (Editor de movimiento)**: Conéctate a la placa de interfaz RUC-01 desde un navegador de PC para depurar los servos en tiempo real, grabar movimientos de enseñanza y exportar grupos de movimiento como archivos `.json`.
+- **Remote Controller (Control remoto web)**: Empareja con el robot mediante Web Bluetooth para controlarlo de forma remota y reproducir o ajustar los movimientos de enseñanza.
 
 ### Diseño de posturas y exportación de datos (Editor de movimiento web)
 

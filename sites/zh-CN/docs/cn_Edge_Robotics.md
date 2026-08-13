@@ -63,6 +63,7 @@ import '/src/css/robotics-page-style.css';
       <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>移动底盘与应用 Demo</small></a>
       <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>轮足机器人路线</small></a>
       <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>桌面交互机器人路线</small></a>
+      <a href="#atom"><span>🤖</span><strong>Atom</strong><small>小型人形机器人路线</small></a>
     </div>
   </section>
 
@@ -345,6 +346,30 @@ import '/src/css/robotics-page-style.css';
           </div>
         </div>
       </details>
+
+<details id="atom" className="product-card atom">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🤖</span>
+    <div>
+      <h3>Atom 小型人形机器人</h3>
+      <span>适合人形机器人入门、舵机调试、动作示教和网页遥控</span>
+    </div>
+  </div>
+  <span className="summary-action">展开学习计划</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>推荐人群</strong><span>第一次接触桌面级双足人形机器人，想快速体验动作示教和遥控的用户</span></div>
+    <div><strong>学习目标</strong><span>完成开箱上手、网页动作编辑器示教，并将自定义动作导出到主控固件</span></div>
+    <div><strong>建议顺序</strong><span>Atom-S 入门 → 网页遥控 → 动作编辑器 → 自定义动作开发</span></div>
+  </div>
+  <div className="learning-steps">
+    <a className="step-card" href="/cn/atom_s/"><span className="step-index">1</span><div><b>Atom-S 入门指南</b><small>完成开箱供电、网页遥控器连接和第一个连续动作示教序列。</small></div><em>新手必做</em></a>
+    <a className="step-card" href="/cn/atom_x/"><span className="step-index">2</span><div><b>Atom-X 入门指南</b><small>Atom-X 的操作与 Atom-S 完全相同，参考同一套流程快速上手。</small></div><em>同系列</em></a>
+  </div>
+</div>
+</details>
 
     </div>
   </section>
