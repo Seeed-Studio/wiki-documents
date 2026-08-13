@@ -47,7 +47,7 @@ Antes de continuar, asegúrate de tener lo siguiente:
 
 ## Paso 1. Accede al espacio de trabajo de XIAO ESP32S3 Sense y conecta el dispositivo
 
-Accede al espacio de trabajo de XIAO ESP32S3 Sense a través de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, o utiliza el [enlace directo al espacio de trabajo](https://sensecraft.seeed.cc/ai/device/local/32).
+Accede al espacio de trabajo de XIAO ESP32S3 Sense a través de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, o utiliza el [enlace directo al espacio de trabajo](https://sensecraft.seeed.cc/ai/device/local/32).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -57,7 +57,7 @@ Usando el cable USB-C, conecta tu placa XIAO ESP32S3 Sense a tu ordenador. Una v
 
 ## Paso 2. Asegúrate de que haya un modelo cargado en el XIAO ESP32S3 Sense
 
-Antes de continuar, asegúrate de que tu placa XIAO ESP32S3 Sense tenga cargado un modelo entrenado. Si aún no has cargado un modelo, consulta la documentación de SenseCraft AI sobre cómo entrenar y desplegar modelos en tu dispositivo.
+Antes de continuar, asegúrate de que tu placa XIAO ESP32S3 Sense tenga un modelo entrenado cargado. Si aún no has cargado un modelo, consulta la documentación de SenseCraft AI sobre cómo entrenar y desplegar modelos en tu dispositivo.
 
 - [Uso de un modelo para XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/es/sensecraft_ai_pretrained_models_for_xiao/)
 
@@ -66,13 +66,13 @@ Si quieres utilizar tu propio modelo entrenado, puedes consultar los dos wikis s
 - [Tipo de entrenamiento - Clasificación](https://wiki.seeedstudio.com/es/sensecraft_ai_training_classification/)
 - [Tipo de entrenamiento - Detección de objetos](https://wiki.seeedstudio.com/es/sensecraft_ai_training_object_detection/)
 
-## Paso 3. Prepara el método y el programa que quieres utilizar
+## Paso 3. Prepara la forma y el programa que quieres utilizar
 
 XIAO admite la salida de resultados del modelo mediante UART, IIC o SPI; puedes elegir cómo quieres sacar los resultados según la situación real.
 
 ### Opción 1. Comunicación UART
 
-Conecta los pines TX y RX de las dos placas XIAO entre sí. Para el XIAO ESP32S3 Sense como sensor de IA (ya modelado), los pines de salida se definen como:
+Conecta los pines TX y RX de las dos placas XIAO entre sí. Para el sensor de IA (ya modelado) XIAO ESP32S3 Sense, los pines de salida se definen como:
 
 - **TX: GPIO43**
 - **RX: GPIO44**
@@ -83,7 +83,7 @@ Descarga la biblioteca [Seeed_Arduino_SSCMA](https://github.com/Seeed-Studio/See
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA/tree/main" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -207,10 +207,10 @@ Si todo va bien, verás el mensaje de salida del resultado del modelo como se mu
 
 ### Opción 2. Comunicación I2C
 
-Conecta los pines SDA y SCL de las dos placas XIAO entre sí. Para el XIAO ESP32S3 Sense como sensor de IA (ya modelado), los pines de salida se definen como:
+Conecta los pines SDA y SCL de las dos placas XIAO entre sí. Para el sensor de IA (ya modelado) XIAO ESP32S3 Sense, los pines de salida se definen como:
 
-- **SDA: GPIO5** (con resistencia de pull-up)
-- **SCL: GPIO6** (con resistencia de pull-up)
+- **SDA: GPIO5** (con resistencia pull-up)
+- **SCL: GPIO6** (con resistencia pull-up)
 - Dirección esclava I2C a `0x62`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/iic_connection.png" style={{width:1000, height:'auto'}}/></div>
@@ -231,7 +231,7 @@ Utiliza el siguiente protocolo para la comunicación I2C:
 - READ: Envía los bytes 0x10, 0x01, LEN &lt;&lt; 8, LEN &amp; 0xff
 - WRITE: Envía los bytes 0x10, 0x02, LEN &lt;&lt; 8, LEN &amp; 0xff
 - AVAIL (para comprobar la disponibilidad de datos): Envía los bytes 0x10, 0x03
-- RESET (para limpiar el búfer): Envía los bytes 0x10, 0x06
+- RESET (para vaciar el búfer): Envía los bytes 0x10, 0x06
 
 :::
 
@@ -361,7 +361,7 @@ Utiliza el siguiente protocolo para la comunicación SPI:
 - READ: Envía los bytes 0x10, 0x01, LEN &lt;&lt; 8, LEN & 0xff
 - WRITE: Envía los bytes 0x10, 0x02, LEN &lt;&lt; 8, LEN & 0xff
 - AVAIL (para comprobar la disponibilidad de datos): Envía los bytes 0x10, 0x03
-- RESET (para limpiar el búfer): Envía los bytes 0x10, 0x06
+- RESET (para vaciar el búfer): Envía los bytes 0x10, 0x06
 
 :::
 

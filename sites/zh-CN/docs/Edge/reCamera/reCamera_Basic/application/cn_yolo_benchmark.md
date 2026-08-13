@@ -6,7 +6,7 @@ keywords:
   - 边缘 AI
   - YOLO11
   - 基准测试
-slug: /recamera_benchmarking_bak
+slug: /recamera_benchmarking
 sku: 100029708
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/yolo-benchmark-seg.gif
 sidebar_position: 1
@@ -15,7 +15,7 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-06-02'
 updatedAt: '2026-06-16'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_benchmarking_bak/
+url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_benchmarking/
 ---
 
 # reCamera 上的 YOLO11n 边缘基准测试

@@ -1,5 +1,5 @@
 ---
-description: 一篇用于搭建 Meshtastic 固件源代码环境、编译 t1000_e 并烧录固件的实用教程。
+description: 搭建 Meshtastic 固件源代码环境、编译 t1000_e 并烧录固件的实用教程。
 title: Meshtastic 源代码开发教程
 keywords:
   - Meshtastic
@@ -21,17 +21,17 @@ import TabItem from '@theme/TabItem';
 
 # Meshtastic 固件源代码实用教程
 
-本教程面向刚开始接触 Meshtastic 固件源代码的用户，涵盖了 Windows 和 macOS 的常见工作流程。目标很简单：克隆官方仓库，完成一次成功的构建，做一个简单的 UI 修改，并将修改后的固件烧录到设备上进行验证。
+本教程面向刚开始接触 Meshtastic 固件源代码的用户，涵盖 Windows 和 macOS 的常见工作流程。目标很简单：克隆官方仓库，完成一次成功的构建，做一个简单的 UI 修改，并将修改后的固件烧录到设备上进行验证。
 
 如果你已经熟悉 Git、Python 或 PlatformIO，可以跳过对应章节，直接进入上手实战部分。
 
 :::tip
-本指南同时给出了 Windows 和 macOS 下常用的命令。大部分截图仍然来自 Windows 环境，但在 macOS 上的整体流程非常相似。
+本指南包含 Windows 和 macOS 的常用命令。大部分截图仍然来自 Windows 环境，但在 macOS 上的整体流程非常相似。
 :::
 
 ## 前置准备
 
-在开始之前，请先准备好以下工具：
+开始之前，请准备以下工具：
 
 1. Git
 2. Python 3
@@ -47,13 +47,13 @@ import TabItem from '@theme/TabItem';
 
 [Git for Windows](https://git-scm.com/install/windows)
 
-通常在你打开页面后，安装程序会自动开始下载。下载完成后，双击安装程序并按照安装向导进行操作。
+通常在你打开页面时安装程序会自动开始下载。下载完成后，双击安装程序并按照安装向导进行操作。
 
-在安装过程中，最重要的一步是**调整 PATH 环境变量**。请选择：
+安装过程中，最重要的一步是**调整 PATH 环境变量**。请选择：
 
 **Git from the command line and also from 3rd-party software**
 
-对于其他选项，一般保持默认即可。只需不断点击 `Next`。
+对于其他选项，一般保持默认值即可。只需持续点击 `Next`。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image1.png)
 
@@ -67,7 +67,7 @@ import TabItem from '@theme/TabItem';
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image2.png)
 
-如果显示了 Git 的版本号，说明 Git 已成功安装。
+如果显示了 Git 版本号，说明 Git 已成功安装。
 
 **如果 `git` 命令仍然不可用**
 
@@ -102,7 +102,7 @@ C:\Program Files\Git\bin
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image4.png)
 
-保存之后，你仍然需要：
+保存后，你仍然需要：
 
 - 关闭**所有** PowerShell 窗口
 - 重新打开 PowerShell
@@ -115,7 +115,7 @@ git --version
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image5.png)
 
-如果出现了版本号，说明安装已经完成。
+如果出现版本号，说明安装已经完成。
 
 </TabItem>
 
@@ -123,13 +123,13 @@ git --version
 
 在 macOS 上，安装 Git 的方式不止一种，但使用 Homebrew 通常是最简单的选择：
 
-1. 首先安装 Command Line Tools：
+1. 先安装 Command Line Tools：
 
 ```bash
 xcode-select --install
 ```
 
-2. 如果还没有安装 Homebrew，先安装它：
+2. 如果尚未安装 Homebrew，请先安装它：
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -147,14 +147,14 @@ brew install git
 git --version
 ```
 
-如果终端已经返回了有效的 Git 版本信息，就不需要再次安装。
+如果终端已经返回了有效的 Git 版本，则无需再次安装。
 
 </TabItem>
 </Tabs>
 
 **配置你的 Git 身份信息**
 
-接下来，配置你的 Git 用户信息。将示例值替换为你自己的姓名和邮箱地址：
+接下来配置 Git 用户信息。将示例值替换为你自己的姓名和邮箱地址：
 
 ```plain
 git config --global user.name "your name"
@@ -183,7 +183,7 @@ winget search --id Python.Python.3.13 --source winget
 winget install -e --id Python.Python.3.13 --source winget
 ```
 
-如果第一条命令能够找到 Python，第二条命令通常就可以直接安装它。
+如果第一条命令可以找到 Python，第二条通常就能直接安装它。
 
 安装完成后，关闭终端并重新打开，然后运行：
 
@@ -220,16 +220,16 @@ python3 --version
 pip3 --version
 ```
 
-如果你更习惯使用 `python` 和 `pip`，可以自行设置 shell 别名。不过在 macOS 上，使用 `python3` 和 `pip3` 通常更可靠。
+如果你更习惯使用 `python` 和 `pip`，可以自行设置 shell 别名。但在 macOS 上，使用 `python3` 和 `pip3` 通常更可靠。
 
 </TabItem>
 </Tabs>
 
 ### 3. 安装 PlatformIO
 
-这一步对新手来说可能不太友好，因为 PlatformIO 会自动下载很多依赖，安装过程可能需要一些时间。如果安装过程中出现错误，通常最好耐心等待，并逐个排查问题。借助 AI 工具来分析错误信息也能节省时间。
+这一步对新手来说可能不太友好，因为 PlatformIO 会自动下载很多依赖，安装过程可能需要一些时间。如果安装过程中出现错误，通常最好耐心等待，并逐个排查问题。借助 AI 工具帮助分析报错信息也能节省时间。
 
-在 VS Code 的扩展市场中搜索 `PlatformIO` 并安装。
+在 VS Code 扩展市场中搜索 `PlatformIO` 并安装。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image7.png)
 
@@ -258,7 +258,7 @@ git submodule update --init
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image10.png)
 
-如果输出内容与上面的截图类似，说明仓库已经成功克隆。
+如果输出内容与上方截图类似，说明仓库已经成功克隆。
 
 </TabItem>
 
@@ -273,13 +273,13 @@ cd firmware
 git submodule update --init
 ```
 
-如果 `~/workplace` 目录尚不存在，请先创建它：
+如果 `~/workplace` 还不存在，请先创建它：
 
 ```bash
 mkdir -p ~/workplace
 ```
 
-如果命令都正常执行完成，说明仓库已经成功克隆。
+如果命令正常执行完毕，说明仓库已经成功克隆。
 
 </TabItem>
 </Tabs>
@@ -294,7 +294,7 @@ mkdir -p ~/workplace
 2. 查看 `platformio.ini`
 3. 找到目标开发板对应的构建环境
 
-有一个重要细节：不要只关注根目录下的 `platformio.ini`。它实际上还包含了额外的配置文件，例如：
+一个重要细节：不要只关注根目录下的 `platformio.ini`。它实际上还包含了额外的配置文件，例如：
 
 ```plain
 extra_configs =
@@ -303,14 +303,14 @@ extra_configs =
     variants/*/diy/*/platformio.ini
 ```
 
-这意味着，真正的板级环境定义通常位于 `variants/.../platformio.ini` 下。
+这意味着真正的板级环境定义通常位于 `variants/.../platformio.ini` 下。
 
-在确认目标开发板时，特别留意这两个目录：
+在确认目标开发板时，特别留意以下两个目录：
 
 - `variants/`
 - `boards/`
 
-这里我们以 **Wio Tracker L1 Pro** 作为示例目标板。
+这里我们以 **Wio Tracker L1 Pro** 作为示例目标。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image11.png)
 
@@ -318,7 +318,7 @@ extra_configs =
 
 **最小修改实践总结**
 
-如果你只想完成一次最小化的端到端实践，可以重点关注以下关键步骤：
+如果你只想完成一次最小化的端到端实践，请关注以下关键步骤：
 
 1. 安装 Git、Python 3、VS Code 和 PlatformIO。
 2. 克隆 `meshtastic/firmware` 仓库并初始化子模块。
@@ -356,7 +356,7 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image13.png)
 
-如果界面看起来与上面的截图类似，说明构建流程已经正确启动。第一次构建通常会花费较长时间，请耐心等待。
+如果界面与上方截图类似，说明构建流程已经正确启动。第一次构建通常会花费较长时间，请耐心等待。
 
 **如果构建失败**
 
@@ -438,7 +438,7 @@ pio run -e seeed_wio_tracker_L1
 
 **步骤 2：修改代码**
 
-**练习 1：修改 UI 显示**
+**实践 1：修改 UI 显示**
 
 首先从板级配置开始追踪显示实现。你可以先查看：
 
@@ -473,7 +473,7 @@ int batteryTextEndX = batteryX - 1;
 
 `src/graphics/SharedUIDisplay.cpp:157`
 
-这里增加了 `batteryTextEndX`，用于记录电池百分比文本的结束位置。这样后续在电池信息后追加自定义文本会更方便。
+这里新增了 `batteryTextEndX`，用于记录电池百分比文本的结束位置。这样后续在电池信息后追加自定义文本会更方便。
 
 **修改 2：在绘制电池百分比时计算右边界**
 
@@ -511,7 +511,7 @@ if (chargePercent != 101) {
 
 `src/graphics/SharedUIDisplay.cpp:204`
 
-这段代码位于电池百分比绘制逻辑内部。它在正常显示电池电量的同时，还计算文本区域的右边界，以便在电池信息后放置自定义标签。
+这段代码位于电池百分比绘制逻辑内部。它在正常显示电量的同时，还计算了文本区域的右边界，以便在电池信息后放置自定义标签。
 
 **修改 3：为右侧图标区域预留边界**
 
@@ -526,7 +526,7 @@ int headerLabelRight = timeX - 4;
 
 `src/graphics/SharedUIDisplay.cpp:263`
 
-这部分处理右侧时间、邮件、静音等图标所占用的区域。我添加了 `headerLabelRight` 来限制中间文本的最大右边界，防止与右侧内容重叠。
+这部分处理的是右侧时间、邮件、静音等图标所占用的区域。我添加了 `headerLabelRight` 来限制中间文本的最大右边界，防止与右侧内容重叠。
 
 **修改 4：在标题为空时绘制自定义标签**
 
@@ -549,7 +549,7 @@ if (titleStr && titleStr[0] == '\0') {
 
 `src/graphics/SharedUIDisplay.cpp:350`
 
-这是本次修改的核心逻辑。它只适用于 `SEEED_WIO_TRACKER_L1`，并明确排除了电子墨水变体。它会在电池信息和时间显示之间的空白区域居中显示 `made by AE` 文本。
+这是本次修改的核心逻辑。它只适用于 `SEEED_WIO_TRACKER_L1`，并明确排除了电子墨水版本。它会在电池信息和时间显示之间的空白区域居中显示 `made by AE` 文本。
 
 **修改 5：处理不显示时间的分支**
 
@@ -561,7 +561,7 @@ int headerLabelRight = screenW - xOffset - 2;
 
 `src/graphics/SharedUIDisplay.cpp:377`
 
-这是在没有时间值显示时使用的分支。这里同样需要添加边界控制。
+这是在没有时间值显示时使用的分支。这里同样需要添加相同的边界控制。
 
 ```cpp
 #if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
@@ -653,7 +653,7 @@ firmware-seeed_wio_tracker_L1-*.uf2
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image18.png)
 
-然后选择你刚刚构建的固件文件，并将其烧录到设备上。
+然后选择你刚刚构建的固件文件，并将其烧录到设备中。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image19.png)
 
@@ -672,7 +672,7 @@ firmware-seeed_wio_tracker_L1-*.uf2
 
 **`git` 命令不可用**
 
-- 在 Windows 上，先检查 Git 是否已添加到 `PATH`。
+- 在 Windows 上，先检查是否已将 Git 添加到 `PATH`。
 - 在 macOS 上，先运行 `git --version`。如果系统提示你安装 Command Line Tools，请按提示操作。
 
 **`python3` 或 `pip3` 不可用**
@@ -683,7 +683,7 @@ firmware-seeed_wio_tracker_L1-*.uf2
 **`pio` 命令不可用**
 
 - 先运行 `pio --version`。
-- 如果命令仍不可用，重启 VS Code 和终端后再试一次。
+- 如果命令仍然不可用，重启 VS Code 和终端后再试一次。
 - 如有必要，重新安装 PlatformIO 扩展，并确认 PlatformIO Core 已正确初始化。
 
 **执行 `git submodule update --init` 后代码仍然不完整**
@@ -695,13 +695,36 @@ firmware-seeed_wio_tracker_L1-*.uf2
 git submodule update --init --recursive
 ```
 
-**第一次构建耗时太长**
+**第一次构建耗时过长**
 
 - 第一次构建需要下载许多依赖项，这是正常现象。
-- 如果长时间看起来都没有进展，先尝试分别安装这些软件包：
+- 如果长时间看起来都没有进展，尝试先单独安装这些软件包：
 
 ```bash
 pio pkg install -e seeed_wio_tracker_L1
 ```
 
-然后再次运行构建。
+然后再次运行构建命令。
+
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

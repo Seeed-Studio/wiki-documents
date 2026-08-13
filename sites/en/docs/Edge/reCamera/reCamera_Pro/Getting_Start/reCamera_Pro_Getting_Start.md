@@ -14,7 +14,7 @@ last_update:
   date: 06/01/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-10'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/recamera_pro_getting_started/
 ---
 
@@ -32,7 +32,7 @@ Welcome to **reCamera Pro**. This guide will assist you in completing the hardwa
 
 Before starting the configuration, please ensure that you have prepared the following hardware:
 * **Data Cable**: A USB Type-C cable with data transmission capabilities (do not use a cable that only supports charging).
-* **Power Supply**: A DC power cable (specification requirements: **12V, 1A**, the standard factory power supply is: 12V, 2A).
+* **Power Supply**: A DC power cable (specification requirements: **12V, 1A**, the standard factory power supply is: 12V, 3A).
 
 ### Connection Steps
 
@@ -42,6 +42,7 @@ Before starting the configuration, please ensure that you have prepared the foll
 ![System status light and cable connection diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
 ### Status indicator explanation
+
 The green LED indicates the system status, while the red LED serves as the power indicator. The following table describes the device status corresponding to each state of the green LED.
 
 1. ***breathing*** : At this moment, the representative device is in the process of powering on.
@@ -70,7 +71,7 @@ Before attempting to log in to the Web interface, please ensure the USB Type-C c
 ![Web login and main interface diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip Common Troubleshooting
-If the page fails to load after entering `192.168.42.1` under the Windows system, please jump directly to the [4. Frequently Asked Questions and Troubleshooting (FAQ)](#4-frequently-asked-questions-and-troubleshootingfaq) section at the bottom of this document to perform a network adapter check.
+If the page fails to load after entering `192.168.42.1` under the Windows system, please jump directly to the [5. Frequently Asked Questions and Troubleshooting (FAQ)](#5-frequently-asked-questions-and-troubleshootingfaq) section at the bottom of this document to perform a network adapter check.
 :::
 
 ---
@@ -101,7 +102,15 @@ At this point, you can safely **unplug the USB Type-C cable** to achieve full wi
 
 ---
 
-## 4. Frequently Asked Questions and Troubleshooting (FAQ)
+## 4. Resetting the Device
+
+There are two methods to restore the device to its factory settings:
+
+1. Press and hold the side button for about 15 seconds until a prompt sound is heard, indicating that the device has entered the reset mode. At this point, simply wait for the green status light to remain on continuously to re-login to the device.
+2. Through the Web management interface, click on **Device Info** -> **System Settings** -> **Factory Reset** to reset the device.
+![Factory reset diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-Pro_reset_Device.jpg)
+
+## 5. Frequently Asked Questions and Troubleshooting (FAQ)
 
 ### Q1: What should I do if I cannot enter the login interface via 192.168.42.1 under the Windows system?
 
@@ -115,14 +124,13 @@ If you cannot open the Web interface after connecting the Type-C cable, it is us
 6. Ensure the configuration has checked **Obtain an IP address automatically** and **Obtain DNS server address automatically**.
 7. Click OK to save the settings, and access `192.168.42.1` again in the browser.
 
-<video 
-  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/reCamera-Pro-network_config.mp4" 
-  controls 
-  width="100%" 
+<video
+  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/reCamera-Pro-network_config.mp4"
+  controls
+  width="100%"
   preload="metadata">
   Your browser does not support playing this video.
 </video>
-
 
 ### Q2: After connecting the reCamera to the computer via the USB cable, the computer was unable to access the internet
 

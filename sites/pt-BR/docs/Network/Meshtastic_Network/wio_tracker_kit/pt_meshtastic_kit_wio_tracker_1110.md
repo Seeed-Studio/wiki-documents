@@ -1,6 +1,6 @@
 ---
-description: Primeiros passos com o Wio Tracker Dev Kit para Meshtastic®
-title: Primeiros passos com o Kit Meshtastic®
+description: Introdução ao Wio Tracker Dev Kit para Meshtastic®
+title: Introdução ao Kit Meshtastic®
 keywords:
   - Meshtastic
   - Tracker
@@ -11,7 +11,7 @@ last_update:
   date: 6/17/2024
   author: Jessie
 createdAt: '2024-06-21'
-updatedAt: '2026-03-19'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/meshtastic_kit_wio_tracker_1110/
 ---
 
@@ -21,19 +21,19 @@ url: https://wiki.seeedstudio.com/pt-br/meshtastic_kit_wio_tracker_1110/
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Kit-for-Meshtastic.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
-Apresentando uma Wio Tracker 1110 Dev Board (baseada em Nordic nRF52840 para BLE, Semtech LR1110 para LoRa), [Grove Air530 GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html), [Grove0.96" OLED Display](https://www.seeedstudio.com/Grove-OLED-Display-0-96.html) e compatibilidade nativa com o firmware [Meshtastic®](https://meshtastic.org/), é um kit de desenvolvimento plug and play para você construir seu dispositivo rastreador Meshtatstic de baixo consumo de energia.
+Apresentando uma Wio Tracker 1110 Dev Board (baseada em Nordic nRF52840 para BLE, Semtech LR1110 para LoRa), [Grove Air530 GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html), [Grove0.96" OLED Display](https://www.seeedstudio.com/Grove-OLED-Display-0-96.html) e compatibilidade nativa com o firmware [Meshtastic®](https://meshtastic.org/), é um kit de desenvolvimento plug and play para você construir seu dispositivo rastreador Meshtastic de baixo consumo de energia.
 
 ### Recursos
 
-- **Configuração fácil**: Basta gravar o firmware para experimentar os poderosos recursos da rede Meshtastic.
-- **Posicionamento em tempo real**: Equipado com um módulo GPS (Air530), oferecendo suporte a posicionamento GPS de alta precisão.
-- **Exibição de informações**: Inclui uma tela Grove - OLED Display 0.96" para visualização clara de dados em tempo real.
+- **Configuração fácil**: Basta gravar o firmware para experimentar os recursos poderosos da rede Meshtastic.
+- **Posicionamento em tempo real**: Equipado com um módulo GPS (Air530), com suporte a posicionamento GPS de alta precisão.
+- **Exibição de informações**: Possui uma tela Grove - OLED Display 0.96" para visualização clara de dados em tempo real.
 - **Interfaces de expansão extensas**: Compatível com o ecossistema Grove, permitindo expansão fácil com mais sensores e módulos.
-- **Hardware e software de código aberto**: Suporta desenvolvimento secundário e personalização, fornecendo ricos recursos de desenvolvimento e suporte da comunidade Meshtastic.
+- **Hardware e software de código aberto**: Suporta desenvolvimento secundário e personalização, oferecendo ricos recursos de desenvolvimento e suporte da comunidade Meshtastic.
 
 ### Especificação
 
@@ -53,7 +53,7 @@ Apresentando uma Wio Tracker 1110 Dev Board (baseada em Nordic nRF52840 para BLE
 <tr><td colspan="1"><b>Sensibilidade</b></td><td colspan="2"><p>-125dBm @125K/SF7</p><p>-141dBm @125K/SF12</p></td></tr>
 <tr><td colspan="1"><b>Potência de saída</b></td><td colspan="2">20dBm máx @LoRa®</td></tr>
 <tr><td colspan="1"><b>Tecnologia de posicionamento</b></td><td colspan="2">GNSS(GPS/BeiDou), WiFi Sniffer</td></tr>
-<tr><td colspan="1"><b>Alcance</b></td><td colspan="2">2&#126;10km (depende da antena e do ambiente)</td></tr>
+<tr><td colspan="1"><b>Alcance</b></td><td colspan="2">2&#126;10km (Depende da antena e do ambiente)</td></tr>
 <tr><td colspan="3"><b>Bluetooth (Nordic nRF52840)</b></td></tr>
 <tr><td colspan="1"><b>Bluetooth</b></td><td colspan="2">Bluetooth 5.3</td></tr>
 <tr><td colspan="1"><b>Flash</b></td><td colspan="2">1MB</td></tr>
@@ -74,8 +74,8 @@ Apresentando uma Wio Tracker 1110 Dev Board (baseada em Nordic nRF52840 para BLE
 
 |**Tensão de alimentação (VCC)**|3.3 / 5 V|
 | :- | :- |
-|**CI controlador**|SSD1308Z|
-|**Cor da tela**|Branco|
+|**CI driver**|SSD1308Z|
+|**Cor de exibição**|Branco|
 |**Matriz de pontos**|128×64|
 |**Tamanho do painel**|26.7(L)×19.26(A) mm|
 |**Área ativa**|21.74(L)×11.175 (A) mm|
@@ -91,13 +91,13 @@ Conecte o `Grove-GPS module` à porta `UART`, e o `Grove-OLED Display` à porta 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-grove.png" alt="pir" width={800} height="auto" /></p>
 
-Ligue a placa.
+[LINE_93>Ligue a placa.
 
 ### Configuração
 
 #### Conexão do dispositivo
 
-Diferentes tipos de conexão; descubra qual cliente é melhor para o seu tipo de conexão.
+Diferentes tipos de conexão, descubra qual cliente é melhor para o seu tipo de conexão.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -116,7 +116,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pin-code.png" alt="pir" width={400} height="auto" /></p>
 
-- Digite o código e depois clique em `Pair` para conectar o dispositivo.
+- Digite o código e clique em `Pair` para conectar o dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -134,7 +134,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pin-code.png" alt="pir" width={400} height="auto" /></p>
 
-- Digite o código e depois clique em `OK` para conectar o dispositivo.
+- Digite o código e clique em `OK` para conectar o dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -142,7 +142,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="web" label="Cliente Web">
 
-Abra o [Cliente Web](https://client.meshtastic.org/), clique em `New Connection`.
+Abra o [Web Client](https://client.meshtastic.org/), clique em `New Connection`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-new.png" alt="pir" width={600} height="auto" /></p>
 
@@ -152,7 +152,7 @@ Abra o [Cliente Web](https://client.meshtastic.org/), clique em `New Connection`
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/ble-new.png" alt="pir" width={600} height="auto" /></p>
 
- Selecione o dispositivo e insira o código PIN exibido na tela para conectar o dispositivo.
+ Selecione o dispositivo e digite o código PIN exibido na tela para conectar o dispositivo.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-ble-pair.png" alt="pir" width={600} height="auto" /></p>
 
@@ -176,14 +176,14 @@ Abra o [Cliente Web](https://client.meshtastic.org/), clique em `New Connection`
 
 <TabItem value="cli" label="CLI">
 
-Esta biblioteca fornece uma interface de linha de comando (CLI) para gerenciar as configurações de usuário dos nós Meshtastic e oferece uma API simples para enviar e receber mensagens por rádios mesh.
+Esta biblioteca fornece uma interface de linha de comando (CLI) para gerenciar as configurações de usuário dos nós Meshtastic e fornece uma API simples para enviar e receber mensagens por rádios mesh.
 
 </TabItem>
 </Tabs>
 
 #### Configuração de parâmetros
 
-Para começar a se comunicar pela malha, você deve definir sua região. Essa configuração controla qual faixa de frequência o seu dispositivo usa e deve ser definida de acordo com a sua localização regional.
+Para começar a se comunicar pela malha, você deve definir sua região. Essa configuração controla qual faixa de frequência seu dispositivo usa e deve ser definida de acordo com sua localização regional.
 
 <Tabs>
 <TabItem value="ios" label="App iOS">
@@ -204,7 +204,7 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 
 <TabItem value="cli" label="CLI">
 
-Execute o seguinte comando, substituindo `REGION-CODE` pelo código de região listado acima de acordo com a sua localização regional.
+Execute o seguinte comando, substituindo `REGION-CODE` pelo código de região listado acima de acordo com sua localização regional.
 
 ```
 meshtastic --set lora.region <REGION-CODE>
@@ -228,7 +228,7 @@ Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 |EU_868|União Europeia 868MHz|869.4 - 869.65|10|27|
 |CN|China|470.0 - 510.0|100|19|
 |JP|Japão|920.8 - 927.8|100|16|
-|ANZ|Austrália & Nova Zelândia|915.0 - 928.0|100|30|
+|ANZ|Austrália e Nova Zelândia|915.0 - 928.0|100|30|
 |KR|Coreia|920.0 - 923.0|100||
 |TW|Taiwan|920.0 - 925.0|100|27|
 |RU|Rússia|868.7 - 869.2|100|20|
@@ -240,36 +240,45 @@ Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 |MY_433|Malásia 433MHz|433.0 - 435.0|100|20|
 |MY_919|Malásia 919MHz|919.0 - 924.0|100|27|
 |SG_923|Singapura 923MHz|917.0 - 925.0|100|20|
-|LORA_24|Faixa de 2.4 GHz em todo o mundo|2400.0 - 2483.5|100|10|
+|LORA_24|Faixa de 2.4 GHz mundial|2400.0 - 2483.5|100|10|
 
 :::info
-**EU_433** e **EU_868** devem obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto em uma janela contínua de 1 hora. Seu dispositivo irá parar de transmitir se você atingir esse limite, até que seja permitido novamente.
+**EU_433** e **EU_868** devem obedecer a uma limitação de ciclo de trabalho por hora de 10%, calculada a cada minuto com base em uma janela móvel de 1 hora. Seu dispositivo vai parar de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
-Agora que você definiu a região LoRa no seu dispositivo, você pode continuar configurando quaisquer [configurações adicionais](https://meshtastic.org/docs/configuration/) para atender às suas necessidades.
+Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [configurações adicionais](https://meshtastic.org/docs/configuration/) para atender às suas necessidades.
 
-## Recursos
+## Recurso
 
 [Wio Tracker 1110 Dev Board v1.0_SCH](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%201110%20v1.0_SCH_PDF_20230822.pdf)
 
-[Documentação Meshtastic](https://meshtastic.org/docs/introduction/)
+[Meshtastic Doc](https://meshtastic.org/docs/introduction/)
 
-[Github-Firmware Meshtastic](https://github.com/meshtastic/firmware/blob/master/boards/wio-tracker-wm1110.json)
+[Github-Meshtastic Firmware](https://github.com/meshtastic/firmware/blob/master/boards/wio-tracker-wm1110.json)
 
-[Arquivo do Case (Impressão 3D)](https://files.seeedstudio.com/products/E24070201/wio%20tracker%20723.stp)
+[Arquivo do gabinete (impressão 3D)](https://files.seeedstudio.com/products/E24070201/wio%20tracker%20723.stp)
 
-[Arquivo do Case (Acrílico)](https://files.seeedstudio.com/products/114993370/%E4%BA%9A%E5%85%8B%E5%8A%9B%E5%A4%96%E5%A3%B3%E5%9B%BE%E7%BA%B8.zip)
+[Arquivo do gabinete (acrílico)](https://files.seeedstudio.com/products/114993370/%E4%BA%9A%E5%85%8B%E5%8A%9B%E5%A4%96%E5%A3%B3%E5%9B%BE%E7%BA%B8.zip)
 
-## Suporte Técnico & Discussão de Produto
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>

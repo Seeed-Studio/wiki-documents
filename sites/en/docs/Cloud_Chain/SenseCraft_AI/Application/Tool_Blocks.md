@@ -11,7 +11,7 @@ last_update:
   date: 03/30/2026
   author: Rida
 createdAt: '2026-03-30'
-updatedAt: '2026-05-07'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft-ai/application/tool-blocks/
 ---
 # Using Tool Blocks
@@ -159,7 +159,7 @@ Compatible with **M1 Gate**, **Raspberry Pi 4 / 5**, **NVIDIA Jetson**, and **Se
 
 ### How it works with SenseCraft Fleet
 
-Container apps are managed on [**SenseCraft Fleet**](https://seeed-fleet.com) and deployed through [**SenseCraft AI**](https://sensecraft.seeed.cc/ai) (under **`Applications`**):
+Container apps are managed on [**SenseCraft Fleet**](https://seeed-fleet.com?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_home) and deployed through [**SenseCraft AI**](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home) (under **`Applications`**):
 
 - **SenseCraft Fleet** is where container images live—you upload images, define their configuration schema, and bind your devices.
 - **SenseCraft AI** is where you pick an app from your library, choose a target device, configure it, and trigger deployment.
@@ -175,7 +175,7 @@ Apps are platform-specific—the image and target device must match:
 
 ### Configuration workflow
 
-**Select an app:** Choose from the app library on SenseCraft Fleet—the built-in catalog. If you prefer to upload your customized container app, you will need to add it through [**SenseCraft Fleet**](https://seeed-fleet.com).
+**Select an app:** Choose from the app library on SenseCraft Fleet—the built-in catalog. If you prefer to upload your customized container app, you will need to add it through [**SenseCraft Fleet**](https://seeed-fleet.com?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_home).
 
 **Configure the app:** Each app exposes the configuration items its author defined on SenseCraft Fleet. Typically you shouldn't need to configure anything, unless you have unique requirements.
 

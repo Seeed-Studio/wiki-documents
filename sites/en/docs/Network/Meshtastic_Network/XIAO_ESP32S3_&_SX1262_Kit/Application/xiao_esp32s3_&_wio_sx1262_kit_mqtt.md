@@ -9,7 +9,7 @@ last_update:
   date: 3/4/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-03-19'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_&_wio_sx1262_kit_mqtt/
 ---
 
@@ -210,3 +210,25 @@ Now you can communicate with other people from internet.
 
 If you have another Meshtastic device that is in the same frenquency band with the ESP32S3 MQTT Gateway, it can transmit message via the ESP32S3 with other people in internet too.
 
+## Tech Support & Product Discussion
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

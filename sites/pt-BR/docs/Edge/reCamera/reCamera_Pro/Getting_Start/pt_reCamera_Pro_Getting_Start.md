@@ -32,7 +32,7 @@ Bem-vindo ao **reCamera Pro**. Este guia ajudará você a concluir a conexão de
 
 Antes de iniciar a configuração, certifique-se de que você preparou o seguinte hardware:
 * **Cabo de dados**: Um cabo USB Type-C com capacidade de transmissão de dados (não use um cabo que ofereça apenas carregamento).
-* **Fonte de alimentação**: Um cabo de alimentação DC (requisitos de especificação: **12V, 1A**, a fonte de alimentação padrão de fábrica é: 12V, 2A).
+* **Fonte de alimentação**: Um cabo de alimentação DC (requisitos de especificação: **12V, 1A**, a fonte de alimentação padrão de fábrica é: 12V, 3A).
 
 ### Etapas de Conexão
 
@@ -42,6 +42,7 @@ Antes de iniciar a configuração, certifique-se de que você preparou o seguint
 ![Diagrama da luz de status do sistema e conexão dos cabos](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
 ### Explicação do indicador de status
+
 O LED verde indica o status do sistema, enquanto o LED vermelho funciona como indicador de alimentação. A tabela a seguir descreve o status do dispositivo correspondente a cada estado do LED verde.
 
 1. ***breathing*** : Neste momento, o dispositivo está no processo de inicialização.
@@ -70,7 +71,7 @@ Antes de tentar fazer login na interface Web, certifique-se de que o cabo USB Ty
 ![Diagrama de login Web e interface principal](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip Solução de Problemas Comuns
-Se a página não carregar após digitar `192.168.42.1` no sistema Windows, vá diretamente para a seção [4. Perguntas Frequentes e Solução de Problemas (FAQ)](#4-perguntas-frequentes-e-solução-de-problemasfaq) no final deste documento para realizar uma verificação do adaptador de rede.
+Se a página não carregar após digitar `192.168.42.1` no sistema Windows, vá diretamente para a seção [5. Perguntas Frequentes e Solução de Problemas (FAQ)](#5-perguntas-frequentes-e-solução-de-problemasfaq) no final deste documento para realizar uma verificação do adaptador de rede.
 :::
 
 ---
@@ -101,7 +102,15 @@ Neste ponto, você pode **desconectar com segurança o cabo USB Type-C** para ob
 
 ---
 
-## 4. Perguntas Frequentes e Solução de Problemas (FAQ)
+## 4. Redefinição do dispositivo
+
+Há dois métodos para restaurar o dispositivo às configurações de fábrica:
+
+1. Pressione e mantenha pressionado o botão lateral por aproximadamente 15 segundos, até ouvir um aviso sonoro indicando que o dispositivo entrou no modo de redefinição. Em seguida, aguarde até que a luz verde de status permaneça acesa continuamente para fazer login novamente no dispositivo.
+2. Na interface de gerenciamento Web, clique em **Informações do dispositivo** -> **Configurações do sistema** -> **Redefinição de fábrica** para redefinir o dispositivo.
+![Diagrama de redefinição de fábrica](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-Pro_reset_Device.jpg)
+
+## 5. Perguntas Frequentes e Solução de Problemas (FAQ)
 
 ### P1: O que devo fazer se eu não conseguir entrar na interface de login via 192.168.42.1 no sistema Windows?
 
@@ -115,14 +124,13 @@ Se você não conseguir abrir a interface Web após conectar o cabo Type-C, gera
 6. Certifique-se de que a configuração esteja marcada como **Obter um endereço IP automaticamente** e **Obter o endereço dos servidores DNS automaticamente**.
 7. Clique em OK para salvar as configurações e acesse `192.168.42.1` novamente no navegador.
 
-<video 
-  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/reCamera-Pro-network_config.mp4" 
-  controls 
-  width="100%" 
+<video
+  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/reCamera-Pro-network_config.mp4"
+  controls
+  width="100%"
   preload="metadata">
   Seu navegador não oferece suporte à reprodução deste vídeo.
 </video>
-
 
 ### P2: Após conectar o reCamera ao computador via cabo USB, o computador não conseguiu acessar a internet
 

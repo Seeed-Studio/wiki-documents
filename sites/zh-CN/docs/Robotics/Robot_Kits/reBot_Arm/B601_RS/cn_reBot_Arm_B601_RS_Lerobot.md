@@ -145,8 +145,8 @@ lerobot 仓库已有 pyproject.toml，创建 conda 环境并安装所有依赖�
 ```bash
 cd ~/rebot_lerobot
 
-# 创建 conda 环境（Python 3.12）
-conda create -y -n lerobot python=3.12
+# 创建 conda 环境（Python 3.10）
+conda create -y -n lerobot python=3.10
 
 # 激活环境
 conda activate lerobot
@@ -236,7 +236,7 @@ B601-RS只需要在组装完成后校准一次，以下是校准指令，参考�
 
 # follower
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 
 lerobot-calibrate \
@@ -250,6 +250,23 @@ lerobot-calibrate \
       <img width={800} 
       src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_0pos.jpg" />
   </div>
+
+如果你使用 Jetson（Jetpack 6.x），请执行以下命令查找 Jetson 对应的 CAN 端口号：
+```bash
+for i in /sys/class/net/can*; do
+    [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"
+done
+```
+
+输出示例：
+```
+can2  # 也可能是 can0、can1、其他 can 编号
+```
+
+后续所有 follower 命令使用的端口号必须和此处输出保持一致。
+
+若你的 Jetson 未安装 PCAN 驱动，通信将会持续异常。请参考【RS快速上手】章节中的 Jetson PCAN 驱动安装教程：
+[快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/#3pcan-usb)
 
 
 ### 校准leader臂
@@ -320,7 +337,7 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 sudo chmod 666 /dev/ttyUSB*  
 # follower
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up  
 ```
 

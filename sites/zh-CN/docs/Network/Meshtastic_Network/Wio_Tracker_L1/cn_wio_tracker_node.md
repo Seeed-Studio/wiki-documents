@@ -10,7 +10,7 @@ last_update:
   date: 12/18/2025
   author: Michelle Huang
 createdAt: '2025-05-23'
-updatedAt: '2026-06-29'
+updatedAt: '2026-06-28'
 url: https://wiki.seeedstudio.com/cn/wio_tracker_l1_node/
 ---
 
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/cn/wio_tracker_l1_node/
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 </font></span></strong>
     </a>
 </div>
-Wio Tracker L1 系列是一款低功耗、高可扩展性的 [Meshtastic®](https://meshtastic.org/) 节点，具备 LoRa（862–930 MHz）、用于高效处理的 nRF52840，以及用于精准定位追踪的 L76K GPS 模块。它以灵活性为设计理念，支持 OLED 和电子墨水屏，同时兼容太阳能板和电池供电，非常适合广泛的物联网和离网应用场景。
+Wio Tracker L1 系列是一款低功耗、高可扩展性的 [Meshtastic®](https://meshtastic.org/) 节点，具备 LoRa（862–930 MHz）、用于高效处理的 nRF52840，以及用于精准定位追踪的 L76K GPS 模块。它以灵活性为设计理念，支持 OLED 和 E-Ink 显示屏，以及太阳能板和电池供电，非常适合广泛的物联网和离网应用场景。
 
 ## L1 系列型号
 
@@ -43,7 +43,7 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
 |购买链接|<p style={{textAlign: 'center'}}>[立即获取!](https://www.seeedstudio.com/Wio-Tracker-L1-Lite-p-6455.html)</p>|<p style={{textAlign: 'center'}}>[立即获取!](https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html)</p>|<p style={{textAlign: 'center'}}>[立即获取!](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html)</p>|<p style={{textAlign: 'center'}}>[立即获取!](https://www.seeedstudio.com/Wio-Tracker-L1-E-ink-p-6456.html)</p>|
 |LoRa|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |GPS|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-|屏幕|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>1.3 英寸 OLED</p><br/><p style={{textAlign: 'center'}}>分辨率：128 × 64 像素</p>|<p style={{textAlign: 'center'}}>1.3 英寸 OLED</p><br/><p style={{textAlign: 'center'}}>分辨率：128 × 64 像素</p>|<p style={{textAlign: 'center'}}>2.13 英寸电子墨水屏</p><br/><p style={{textAlign: 'center'}}>分辨率：122 × 250 像素</p>|
+|屏幕|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>1.3 英寸 OLED</p><br/><p style={{textAlign: 'center'}}>分辨率：128 × 64 像素</p>|<p style={{textAlign: 'center'}}>1.3 英寸 OLED</p><br/><p style={{textAlign: 'center'}}>分辨率：128 × 64 像素</p>|<p style={{textAlign: 'center'}}>2.13 英寸 E-ink</p><br/><p style={{textAlign: 'center'}}>分辨率：122 × 250 像素</p>|
 |太阳能+电池连接器|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>内置 2000mAh 电池</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |外壳|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>-</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>-</p>|
 
@@ -58,10 +58,10 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
 支持 Type-C 快速充电、太阳能输入和锂电池供电，可在多种环境中灵活部署——非常适合户外和移动应用。
 
 - **灵活的显示支持**
-可选 1.3 英寸 OLED 和 2.13 英寸电子墨水屏，为不同功耗和视觉反馈需求提供多样化显示方案。
+可选 1.3 英寸 OLED 和 2.13 英寸 E-Ink 屏幕，为不同功耗和视觉反馈需求提供多样化显示方案。
 
-- **高可扩展性**
-与 Grove 生态系统完全兼容，并提供 PTH 过孔和 SWD 调试接口，方便自定义硬件扩展和高级开发。
+- **高扩展性**
+与 Grove 生态系统完全兼容，并提供 PTH 过孔排针和 SWD 调试接口，方便自定义硬件扩展和高级开发。
 
 ### 规格
 
@@ -99,7 +99,7 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
     <td colspan="1">Grove *1：UART/IIC/GPIO</td>
   </tr>
   <tr>
-    <td colspan="1">过孔焊盘（PTH）：UART/IIC/GPIO/模拟量</td>
+    <td colspan="1">过孔焊盘（PTH）：UART/IIC/GPIO/模拟</td>
   </tr>
   <tr>
     <td colspan="1">预留 SWD 焊盘</td>
@@ -109,7 +109,7 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
     <td colspan="1">USB Type-C：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">太阳能板（2P-2.0mm）：5V — 1A</td>
+    <td colspan="1">太阳能板（2P-2.0mm）：5V — 1A（不要超过 5V）</td>
   </tr>
   <tr>
     <td colspan="1">锂电池（2P-1.25mm）：3.7V — 1A</td>
@@ -125,7 +125,7 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
     <td colspan="1">有效显示区域（mm）：34.5 × 23.0</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">[电子墨水屏](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
+    <td colspan="1" rowspan="3">[E-Ink 屏幕](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
     <td colspan="1">尺寸：2.13 英寸</td>
   </tr>
   <tr>
@@ -154,3 +154,26 @@ Wio Tracker L1 系列提供 4 个版本——请选择最符合你需求的型�
 **示意图**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>
+
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

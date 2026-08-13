@@ -6,7 +6,7 @@ keywords:
   - Home Assistant
   - reComputer
 image: https://files.seeedstudio.com/wiki/reCamera/HA.png
-slug: /getting_started_for_home_assistant_with_recamera_bak
+slug: /getting_started_for_home_assistant_with_recamera
 sku: 102991896, 108990119, 100029708, 114993560
 sidebar_position: 6
 last_update:
@@ -14,7 +14,7 @@ last_update:
   author: Xinrui Wu
 createdAt: '2025-11-11'
 updatedAt: '2026-04-20'
-url: https://wiki.seeedstudio.com/es/reCamera/reCamera_Basic/application/getting_started_for_home_assistant_with_recamera_bak/
+url: https://wiki.seeedstudio.com/es/reCamera/reCamera_Basic/application/getting_started_for_home_assistant_with_recamera/
 ---
 
 # Introducción a Home Assistant con reCamera

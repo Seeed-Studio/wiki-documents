@@ -1,5 +1,5 @@
 ---
-description: 面向 Meshtastic 的 SenseCAP MeshTracker X1 介绍。本 Wiki 将介绍其特性、规格、硬件概览、按键、LED 和引脚列表。
+description: SenseCAP MeshTracker X1 适用于 Meshtastic 的介绍。本 Wiki 将介绍其特性、规格、硬件概览、按键、LED 和引脚列表。
 title: SenseCAP MeshTracker X1 介绍
 keywords:
   - Tracker
@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-全球首款卡片尺寸、搭载双频 GPS 的 Meshtastic 设备。MeshTracker X1 专为可靠的离网通信而打造，是一款支持 863–928 MHz 频段、具备 IP66 防护等级的 [Meshtastic®](https://meshtastic.org/) GPS 追踪器。其采用最新的 Semtech LR2021 LoRa 芯片，具备 USB-C 连接、最长 5 天电池续航，以及紧凑且适合户外使用的设计。
+全球首款卡片尺寸、支持双频 GPS 的 Meshtastic 设备。MeshTracker X1 专为可靠的离网通信而打造，是一款支持 863–928 MHz 频段、具备 IP66 防护等级的 [Meshtastic®](https://meshtastic.org/) GPS 追踪器。其采用最新的 Semtech LR2021 LoRa 芯片，具备 USB-C 连接、最长 5 天电池续航，以及紧凑且适合户外使用的设计。
 
 ### 特性
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -32,13 +32,13 @@ updatedAt: '2026-07-16'
 
 - **一款你真的会随身携带的 Meshtastic 设备** 
 
-SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖之外实现可靠通信和位置共享的人群而设计——无论是在户外、在大型活动现场，还是在紧急情况下。凭借真正便携的外形和坚固的 IP66 防护，它将 Meshtastic 连接带入日常随身携带和真实野外应用场景。
+SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖范围之外实现可靠通信和位置共享的人群设计——无论是在户外、在大型活动现场，还是在紧急情况下。凭借真正便携的外形和坚固的 IP66 防护，它将 Meshtastic 连接带入日常随身携带和真实野外应用场景。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **超高精度双频 GPS 追踪** 
 
-得益于双频 L1+L5 GNSS 和内置气压计，MeshTracker X1 相比单频 GPS 提供更可靠的定位和高度感知能力。它也是全球首款卡片尺寸的双频 GPS Meshtastic 设备。
+得益于双频 L1+L5 GNSS 和内置气压计，MeshTracker X1 相比单频 GPS 提供更可靠的定位和高度感知能力。它也是全球首款采用双频 GPS 的卡片尺寸 Meshtastic 设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -52,15 +52,15 @@ SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖之外实现可靠通�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Dazzaristance.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **卡片尺寸设计，便于携带** 
+- **卡片尺寸设计，轻松携带** 
 
-MeshTracker X1 机身纤薄轻巧，专为户外活动中的日常随身携带而设计。你可以将其挂在挂绳上、固定在背包上、绑在车包上，或直接放入口袋中，轻松实现离网连接。
+MeshTracker X1 机身纤薄轻巧，专为户外探险时的日常随身携带而设计。你可以将其挂在挂绳上、固定在背包上、绑在车包上，或直接放入口袋中，轻松实现离网连接。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **灵活的振动与声音提醒** 
 
-MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知选项。无论你身处嘈杂的活动现场、户外骑行途中，还是在希望尽量减少干扰的静谧小径上，都能及时感知收到的新消息。
+MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知方式。无论你身处嘈杂的活动现场、户外骑行途中，还是在希望尽量减少干扰的安静小径上，都能及时感知到新消息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -71,8 +71,7 @@ MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知选项�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **USB-C 连接** 
-https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
-标准 USB-C 接口用于充电、固件更新和调试，同时兼顾户外耐用性与日常使用的便利性。
+采用标准 USB-C 接口，用于充电、固件更新和调试，同时兼顾户外耐用性与日常使用的便利性。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -85,15 +84,17 @@ https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
 
 **通用参数**
 
-|**网络协议**|LoRa (863-928 MHz), Bluetooth (v5.0)|
+|项目|参数|
 | :- | :- |
+|**主控制器**|Nordic nRF52840|
+|**无线**|Bluetooth (v5.0)|
+|**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>最大发射功率：22dBm|
 |**LED**|1\* RGB|
 |**蜂鸣器**|1\* 蜂鸣器用于状态指示|
 |**按键**|1\* 按键用于操作|
 |**电机**|1\* DRV2605L|
-| **气压传感器**<br/>温度可通过气压传感器读取| 气压范围：300–1100 hPa<br/>气压精度：±0.03 hPa<br/>气压分辨率：0.06 Pa<br/>温度范围：-40-85°C<br/>温度精度：± 1°C<br/>温度分辨率：0.0006 °C |
-| **6 轴传感器** |未来版本|
-| **3 轴磁力计** | 未来版本 |
+| **气压**|范围：300–1100 hPa<br/>精度：±0.03 hPa<br/>分辨率：0.06 Pa|
+| **温度**<br/>(温度从气压计中读取)| 范围：-40-85°C<br/>精度：± 1°C<br/>分辨率：0.0006 °C |
 |**天线**|内置（GNSS/LoRa/Bluetooth）|
 |**通信距离**|最长 8 km|
 |**防护等级**|IP66|
@@ -106,12 +107,15 @@ https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
 
 |项目|参数|
 | :- | :- |
-|**电池容量**|可充电锂电池，1100mAh|
-|**电池寿命监测**|周期性上报电池电量|
-|<p>**充电线缆**</p><p>**（不含适配器）**</p>|USB Type-C 充电线缆，20 cm|
-|**设备电源输入**|5V, 0.55A|
-|**电池电源输入**|4.4V, 0.22A|
+|**电池容量**|可充电高压电池，1100mAh|
+|**电池寿命监测**|周期性上行电池电量|
+|**充电协议**|USB Type-C|
+|**设备电源输入**|5V，0.55A|
+|**电池电源输入**|4.4V，0.22A|
+|**充满截止电压**|4.37V|
 |**充电温度范围**|5 至 +45℃|
+
+X1 未来可能发展为一个产品系列，后续推出的新产品型号将配备更多传感器（3 轴传感器、六轴磁力计等）。
 
 ### 引脚列表
 
@@ -349,8 +353,31 @@ https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagramBu.png" alt="pir" width={900} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/HardwareDiagram729.png" alt="pir" width={900} height="auto" /></p>
 
 ### 资源
 
 [电池测试报告](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

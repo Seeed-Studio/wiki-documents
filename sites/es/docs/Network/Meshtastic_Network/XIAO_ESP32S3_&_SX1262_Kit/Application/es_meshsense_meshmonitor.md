@@ -13,7 +13,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: '2026-03-19'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/es/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor/
 ---
 
@@ -29,29 +29,29 @@ import TabItem from '@theme/TabItem';
 
 **Casos de uso**
 
-* Mapa de nodos Meshtastic. Seguimiento y visualización de nodos exteriores en zonas remotas.
+* Mapa de nodos Meshtastic. Seguimiento y visualización de nodos exteriores en áreas remotas.
 * Analizador Meshtastic. Monitorización del rendimiento de la comunicación y del enrutamiento en redes malladas.
-* Monitor Meshtatsic. Depuración y prueba de la conectividad de red para dispositivos Meshtastic.
+* Monitor Meshtastic. Depuración y prueba de la conectividad de red para dispositivos Meshtastic.
 
 **Monitores Meshtastic comunes**
 
-* Meshsense: [click here](https://affirmatech.com/meshsense) para saber más
-* Meshmonitor: [click here](https://meshmonitor.org/) para saber más
+* Meshsense: [click here](https://affirmatech.com/meshsense) to learn more
+* Meshmonitor: [click here](https://meshmonitor.org/) to learn more
 
 **Cómo conectarse a un monitor Meshtastic**
 
 1. Configura tus nodos Meshtastic y asegúrate de que formen una malla funcional.
 2. Configura al menos un nodo como gateway (por ejemplo, MQTT Gateway).
-3. Conecta la app del monitor al gateway o al servidor MQTT.
+3. Conecta la aplicación de monitorización al gateway o al servidor MQTT.
 4. Verifica que los nodos sean visibles y estén informando su estado en la interfaz del monitor.
 
 ## Comienza con Meshsense
 
 ### Configuración
 
-#### Preparación de la app
+#### Preparación de la aplicación
 
-Descarga e instala la app **Meshsense** para tu plataforma: [Meshsense App Download](https://affirmatech.com/meshsense)
+Descarga e instala la aplicación **Meshsense** para tu plataforma: [Meshsense App Download](https://affirmatech.com/meshsense)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/APPDownload.png" style={{width:900, height:'auto'}}/></div>
 
@@ -95,7 +95,7 @@ Para mostrar la ubicación GPS en tiempo real, asegúrate de que el GPS esté ha
 
 #### Conexión de red
 
-Conecta tu ordenador a la misma red Wi-Fi que el kit Xiao ESP32S3. Asegúrate de que sea una red wifi de 2,4G.
+Conecta tu ordenador a la misma red Wi‑Fi que el kit Xiao ESP32S3. Asegúrate de que sea una red Wi‑Fi de 2,4 GHz.
 
 Abre un terminal serie (por ejemplo, Arduino Serial Monitor o PuTTY) para encontrar la dirección IP de tu dispositivo Xiao. Puedes usar el [Meshtastic web serial monitor](https://flasher.meshtastic.org/).
 
@@ -117,8 +117,8 @@ Para mostrar las posiciones de los nodos, conecta un **módulo L76K GPS** al kit
 
 #### Configuración de software
 
-* En la app Meshsense, asegúrate de que el reporte de GPS esté habilitado.
-* Una vez conectado, la app mostrará la ubicación en tiempo real de cada nodo en el mapa. Puedes ver la posición de tu nodo directamente en la APP.
+* En la aplicación Meshsense, asegúrate de que el reporte de GPS esté habilitado.
+* Una vez conectado, la aplicación mostrará la ubicación en tiempo real de cada nodo en el mapa. Puedes ver la posición de tu nodo directamente en la APP.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/APPPPosition.png" style={{width:500, height:'auto'}}/></div>
 
@@ -128,3 +128,26 @@ También en el mapa del sitio web de Meshsense, puedes ver tu posición en tiemp
 
 
 Con esta configuración, puedes gestionar tu red privada Meshtastic de forma eficiente y visualizar el comportamiento de los nodos directamente en Meshsense.
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

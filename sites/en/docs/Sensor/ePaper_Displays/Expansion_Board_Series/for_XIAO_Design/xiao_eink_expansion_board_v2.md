@@ -12,7 +12,7 @@ last_update:
   author: Allen
   date: 12/09/2024
 createdAt: '2025-01-10'
-updatedAt: '2026-04-27'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/xiao_eink_expansion_board_v2/
 ---
 
@@ -348,7 +348,7 @@ The colors of the picture should be consistent with the standard colors of the d
 |5.65-inch E-paper -  Sevencolor 600x480        | black, white, red, yellow, blue, green, orange|
 |5.83-inch E-paper - Monocolor 648x480          | pure black and white          |
 |7.5-inch E-paper - Monocolor 800x480           | pure black and white          |
-|7.5-inch E-paper - Tri-Color 800x480           | pure black and white          |
+|7.5-inch E-paper - Tri-Color 800x480           | black, white and red          |
 
 </div>
 

@@ -1,6 +1,6 @@
 ---
 description: Introducción al SenseCAP Card Tracker T1000-E para Meshtastic
-title: Introducción al T1000-E Tracker
+title: Introducción al Tracker T1000-E
 keywords:
   - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,7 +10,7 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-09-05'
-updatedAt: '2026-06-12'
+updatedAt: '2026-06-03'
 url: https://wiki.seeedstudio.com/es/t1000_e_intro/
 ---
 
@@ -37,17 +37,17 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 - **Compatibilidad con múltiples protocolos**: Con nRF52840 y LR1110, es compatible con Bluetooth 5.0, Thread, Zigbee y LoRa, lo que garantiza la compatibilidad con una amplia gama de dispositivos y redes.
 - **Potentes capacidades de posicionamiento**: Integrado con el chip GPS AG3335 de Mediatek, proporciona servicios de posicionamiento de alta precisión.
-- **Interfaces ampliables**: Diseñado con cuatro pines pogo, es compatible con interfaz USB para DFU (Device Firmware Upgrade), registro serie e interfaz API, lo que simplifica la gestión y depuración del dispositivo.
+- **Interfaces ampliables**: Diseñado con cuatro pines pogo, es compatible con interfaz USB para DFU (Actualización de Firmware del Dispositivo), registro serie e interfaz API, lo que simplifica la gestión y depuración del dispositivo.
 - **Compatibilidad con código abierto**: Compatible con el protocolo de red mallada de código abierto Meshtastic, adecuado para necesidades de comunicación de largo alcance y bajo consumo.
 
-### Especificaciones
+### Especificación
 
 **General**
 
 |**Protocolo de red**|LoRa, Bluetooth v5.1|
 | :- | :- |
 |**Temperatura**|<p>Rango: -20 a 60℃;</p><p>Precisión: ± 1℃ (mín ±0.5℃, máx ±1℃)</p><p>Resolución: 0.1℃</p>|
-|**Luz**|0 a 100% (0% es oscuro, 100% es el más brillante)|
+|**Luz**|0 a 100% (0% es oscuro, 100% es el máximo brillo)|
 |**LED y zumbador**|1\*LED y 1\* zumbador para indicar el estado|
 |**Botón**|1\* botón para operar|
 |**Antena**|Interna (GNSS/LoRa/Wi-Fi/BLE)|
@@ -63,7 +63,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 |**Capacidad de la batería**|Batería de litio recargable, 700 mAh|
 | :- | :- |
-|**Supervisión de la vida útil de la batería**|Nivel de batería en enlace ascendente periódico|
+|**Supervisión de la vida de la batería**|Nivel de batería en enlace ascendente periódico|
 |<p>**Cable de carga**</p><p>**(Adaptador no incluido)**</p>|Cable de carga magnético USB, 1 metro|
 |**Tensión de entrada de alimentación**|4.7 a 5.5 V CC|
 |**Límite de temperatura de carga**|0 a +45℃|
@@ -79,7 +79,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 |Alimentación al sensor|P0.4|GPIO|
 |Temperatura|P0.31|NTC (analógico)|
 |Luz|P0.29|LUX(analógico)|
-|Acelerómetro de 3 ejes<br/>(Actualmente no se usa en el firmware de Meshtastic)|SDA: P0.26<br/>SCL: P0.27|Vía IIC|
+|Acelerómetro de 3 ejes<br/>(Actualmente no se utiliza en el firmware de Meshtastic)|SDA: P0.26<br/>SCL: P0.27|Vía IIC|
 |Alimentación al acelerómetro|P1.7|GPIO|
 |LED|P0.24  |GPIO|
 |Zumbador|P0.25|GPIO|
@@ -102,7 +102,30 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 |Acción del dispositivo|Descripción|
 |- |- |
-|Encender|Se enciende y luego parpadea rápidamente|
+|Encendido|Se enciende y luego parpadea rápidamente|
 |Modo DFU|Encendido fijo|
 |Funcionando|Parpadeo aleatorio|
-|Cargando|Parpadea a 0,5 Hz, alternando cada segundo|
+|Cargando|Parpadea a 0.5 Hz, alternando cada segundo|
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

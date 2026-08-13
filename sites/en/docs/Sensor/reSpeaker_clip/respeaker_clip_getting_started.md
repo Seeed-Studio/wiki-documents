@@ -15,7 +15,7 @@ last_update:
   date: 6/30/2026
   author: Ray
 createdAt: '2026-06-30'
-updatedAt: '2026-07-22'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/respeaker_clip/
 ---
 
@@ -458,7 +458,11 @@ From a development perspective, the firmware is mainly divided into the followin
 
 A typical development workflow is: set up the Zephyr / nRF Connect SDK environment, obtain the reSpeaker Clip firmware project, confirm the board target and configuration files, build and flash the firmware, check serial logs, and finally verify recording, file sync, and firmware update through the SenseCraft Voice App or BLE / Wi-Fi protocols.
 
-For more firmware architecture, environment setup, build, flashing, and secondary development details, refer to the reSpeaker Clip Firmware Development Guide (coming soon).
+Go to the Firmware SDK documentation for the next steps:
+
+- [Getting Started with the reSpeaker Clip Firmware SDK](/respeaker_clip_firmware_quick_start/) covers environment setup, build, flash, and smoke testing.
+- [reSpeaker Clip Firmware Development Guide](/respeaker_clip_firmware_development_guide/) explains the firmware architecture, communication protocol, update and recovery paths, validation, and production release.
+- [Customization: Add a Custom AT Command](/respeaker_clip_customization_at_command/) shows how to add and validate a new AT command, including an AI prompt that uses the repository firmware Skill.
 
 ### Application SDK
 
@@ -559,7 +563,8 @@ If OTA or firmware update fails, try the following:
 | Product Page | [reSpeaker Clip Wearable AI Recorder](https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html) |
 | SenseCraft Voice App Download | [Download Page](https://sensecraft-voice-download.seeed.cc/) |
 | Firmware Download | Coming soon |
-| SDK Repository | Coming soon |
+| Firmware SDK Documentation | [Getting Started with the Firmware SDK](/respeaker_clip_firmware_quick_start) |
+| SDK Repository | [reSpeaker Clip GitHub](https://github.com/Seeed-Studio/reSpeaker_Clip) |
 | User Manual | <a href="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_user_manual.pdf" target="_blank" rel="noopener noreferrer">reSpeaker Clip User Manual</a> |
 | Datasheet | Coming soon |
 | Mechanical Drawing | Coming soon |

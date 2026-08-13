@@ -8,7 +8,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-06-16'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/
 ---
 import Tabs from '@theme/Tabs';
@@ -573,7 +573,7 @@ If you find that the device is not charging, please try replacing the charging h
 - [reTerminal E1002 Schematic (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004321_reTerminal_E1002_V1_2_SCH_251120.pdf)
 - [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [SenseCraft HMI Platform Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
-- [Exterior overall 3D model STP file](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
+- [Exterior overall 3D model STP file](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_E1001_E1002_3D.stp)
 <!-- - [GitHub Repository](/getting_started_with_reterminal_e1002) -->
 
 ## Tech Support & Product Discussion

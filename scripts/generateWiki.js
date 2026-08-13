@@ -20,29 +20,27 @@ const excludedPaths = [
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Secondary_Development', 'API'), // 暂时排除 reCamera Pro 的 API 目录
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Agentic_AI'), // 7.31,暂时排除 JetPack 7.2 的 Agentic_AI 目录
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'AI_Inference'), // 暂时排除 JetPack 7.2 的 AI_Inference 目录
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Application'), // 暂时排除 JetPack 7.2 的 Application 目录
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Drivers'), // 暂时排除 JetPack 7.2 的 Drivers 目录
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Flashing_OTA'), // 暂时排除 JetPack 7.2 的 Flashing_OTA 目录
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Migration'), // 暂时排除 JetPack 7.2 的 Migration 目录
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Optimization'), // 暂时排除 JetPack 7.2 的 Optimization 目录
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Platform'), // 暂时排除 JetPack 7.2 的 Platform 目录
 
   // 排除指定文档
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_use_Camera_IMX219.md'), //6.3
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', '3d_enclosure.md'), //6.2
-  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_platformio.md'), //6.1
-  path.join(docsDirectory, 'Network', 'LoRa_Wio_Series', 'Wio-S3', 'Wio-S3_Wireless_Module_Command_List.md'), //6.9
-  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_zephyr.md'), //6.30
-  path.join(docsDirectory, 'Cloud_Chain', 'CodeCraft', '0-codecraft-overview.md'), //6.29
-  path.join(docsDirectory, 'Cloud_Chain', 'CodeCraft', '2-creation-and-platform.md'), //6.29
-  path.join(docsDirectory, 'Cloud_Chain', 'CodeCraft', '3-community-and-publishing.md'), //6.29
-  path.join(docsDirectory, 'Cloud_Chain', 'CodeCraft', '4-codecraft-for-education.md'), //6.29
-  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_lvgl.md'), //6.30
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'AI_Inference.md'), //7.9
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Device_Info.md'), //7.9
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Live_Preview.md'), //7.9
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Live_View.md'), //7.9
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Record_Settings.md'), //7.9
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'The_Use_of_WebUI', 'Terminal.md'), //7.9
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'JetPack72_AX210_AX200_WiFi_Setup_Guide.md'), //7.15
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Acoustic_Lab_Usage.md'), //7.13
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'MeshTracker_X1', 'x1_intro.md'), //7.13
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Use_of_the_laboratory', 'Acoustic_Lab_Usage.md'), //7.13
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super.md'), //7.22
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_python_usage_stt_llm_transcribe.md'), //7.21
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'FAQs.md'), //8.5
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_customization_at_command.md'), //7.28
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_firmware_quick_start.md'), //7.28
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_firmware_development_guide.md'), //7.28
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_sensecraft_voice_sdk.md'), //8.7
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

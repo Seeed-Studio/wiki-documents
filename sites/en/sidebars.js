@@ -1970,6 +1970,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_udp_streaming',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_http',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_mqtt_stream',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_websockets',
                   ],
                 },
                 {
@@ -2170,6 +2171,30 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/respeaker_clip_sensecraft_voice_sdk',
+            {
+              type: 'category',
+              label: 'Firmware SDK',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_firmware_quick_start',
+                  label: 'Getting Started',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_firmware_development_guide',
+                  label: 'Development Guide',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/respeaker_clip_customization_at_command',
+                  label: 'Custom AT Command',
+                },
+              ],
+            },
           ],
         },
         {
@@ -2226,6 +2251,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe',
+                'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe_memory',
               ],
             },
           ],
@@ -3848,7 +3874,11 @@ const sidebars = {
                   type: 'category',
                   label: 'J601-Robotics Carrier Board',
                   items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/reComputer_Robotics_J601_Getting_Started',
+                    {
+                      type: 'doc',
+                      id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/reComputer_Robotics_J601_Getting_Started',
+                      label: 'Flash Jetpack',
+                    },
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
@@ -3967,6 +3997,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'reComputer Classic J50',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Classic_J50/Seeed_AGX_Orin_Dev_Kit_Getting_Started',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'reComputer J401B',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/recomputer_j401b_getting_start',
@@ -4034,7 +4071,6 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson_Xavier_AGX_H01_Driver_Installation',
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson-Mate',
                 'Edge/NVIDIA_Jetson/Other_Devices/Mini_AI_Computer_T906',
-                'Edge/NVIDIA_Jetson/Other_Devices/Seeed_AGX_Orin_Dev_Kit_Getting_Started',
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_A203E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_A205E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_Jetson_Series_GPIO_Grove'
@@ -4083,6 +4119,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/industrial_vision_monitoring_on_industrial',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/Streaming_Vision_Agent_on_Jetson',
               ]
             },
             // Generative AI
@@ -4197,6 +4234,70 @@ const sidebars = {
             },
           ]
         },
+        // JetPack 7.2
+        {
+          type: 'category',
+          label: 'JetPack 7.2',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Edge/NVIDIA_Jetson/JetPack_7_2/JetPack_7_2_Overview',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Flash & OTA',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/JetPack72_Deep_Dive_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Flashing_OTA/Flash_and_OTA_JetPack_7_2',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Migration/JetPack_6_to_7_Migration_Playbook',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/JetPack_7_2_Unified_Platform_ISO_SBSA',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/JetPack_7_2_MAXN_SUPER_and_MIG',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Kernel & Multimedia',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Drivers/JetPack72_AX210_AX200_WiFi_Setup_Guide_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Drivers/JetPack_7_2_Camera_and_Multimedia_Compatibility',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Agentic AI & Skills',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Agentic_AI/Rapid_Prototyping_on_Jetson_with_NVIDIA_Skills_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Agentic_AI/Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor_bk',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Memory Optimization',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/JetPack_7_2_Memory_Optimization',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Yocto',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Platform/Build_and_Flash_Yocto_for_reComputer_Super_bk',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'AI Deployment & Applications',
+              items: [
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Deploy_TensorRT_Edge-LLM_on_Jetpack7.2',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/AI_Inference/industrial_vision_monitoring_on_industrial_bk',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/AI_Inference/JetPack_7_2_DeepStream',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Application/Deploy_Full_Weight_GR00T_N1_7_TensorRT_on_AGX_Orin',
+              ],
+            },
+          ],
+        },
         // Seeed Jetson DevelopTool
         {
           type: 'category',
@@ -4232,10 +4333,12 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Create_Backup_and_Restore_on_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/Migrate_Home_Data_from_Jetson_Orin_Nano_Developer_Kit_to_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/Deploy_OTA_ON_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/Headless_Setup_and_Recovery_for_A603',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
             'Edge/NVIDIA_Jetson/FAQs/How_to_use_Camera_IMX219',
             'Edge/NVIDIA_Jetson/FAQs/Use_IMX477_Camera_with_A603',
+            'Edge/NVIDIA_Jetson/FAQs/Use_Arducam_OV9281_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
@@ -4412,6 +4515,10 @@ const sidebars = {
       label: 'reCamera',
       collapsed: true,
       collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/reCamera/ReCameraPage',
+      },
       items: [
         {
           type: 'autogenerated',
@@ -4486,6 +4593,7 @@ const sidebars = {
               label: 'B601-DM',
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Getting_Started',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Grasping_Demo',
@@ -4502,6 +4610,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_isaacsim',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_control_mit'
               ]
             }
           ]
@@ -4538,6 +4647,24 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/vibe-code-with-your-agent',
               label: 'Vibe Code with Your Agent',
+            },
+            {
+              type: 'category',
+              label: 'Development Cases',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/home_assistant',
+                  label: 'Home Assistant Integration',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/reachymini_voice_control_soarm',
+                  label: 'Reachy Mini Voice Control for SO-ARM',
+                },
+              ],
             },
             {
               type: 'category',
@@ -5097,6 +5224,7 @@ const sidebars = {
                 'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov5',
                 'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8',
                 'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8_pose',
+                'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov26',
               ]
             },
           ],

@@ -32,7 +32,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_getting_started/
 
 設定を開始する前に、以下のハードウェアを準備していることを確認してください：
 * **データケーブル**：データ通信が可能な USB Type-C ケーブル（充電専用ケーブルは使用しないでください）。
-* **電源**：DC 電源ケーブル（仕様要件：**12V, 1A**、標準付属の電源は 12V, 2A です）。
+* **電源**：DC 電源ケーブル（仕様要件：**12V, 1A**、標準付属の電源は 12V, 3A です）。
 
 ### 接続手順
 
@@ -42,6 +42,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_getting_started/
 ![システムステータスランプとケーブル接続図](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
 ### ステータスインジケータの説明
+
 緑色の LED はシステムステータスを示し、赤色の LED は電源インジケータとして機能します。次の表は、緑色 LED の各状態に対応するデバイスステータスを説明します。
 
 1. ***breathing*** ：この状態は、デバイスが起動中であることを表します。
@@ -70,7 +71,7 @@ Web インターフェースへのログインを試みる前に、USB Type-C �
 ![Web ログインおよびメインインターフェース図](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip よくあるトラブルシューティング
-Windows システムで `192.168.42.1` を入力してもページが読み込まれない場合は、このドキュメントの末尾にある [4. よくある質問とトラブルシューティング (FAQ)](#4-よくある質問とトラブルシューティングfaq) セクションに直接移動し、ネットワークアダプタの確認を行ってください。
+Windows システムで `192.168.42.1` を入力してもページが読み込まれない場合は、このドキュメントの末尾にある [5. よくある質問とトラブルシューティング (FAQ)](#5-よくある質問とトラブルシューティングfaq) セクションに直接移動し、ネットワークアダプタの確認を行ってください。
 :::
 
 ---
@@ -101,7 +102,15 @@ Wi-Fi によって割り当てられたローカルエリアネットワーク I
 
 ---
 
-## 4. よくある質問とトラブルシューティング (FAQ)
+## 4. デバイスのリセット
+
+デバイスを工場出荷時の設定に戻すには、次の2つの方法があります。
+
+1. 通知音が鳴るまで、側面のボタンを約15秒間長押しします。通知音が鳴ると、デバイスがリセットモードに入ったことを示します。その後、緑色のステータスランプが点灯したままになるまで待つと、デバイスに再ログインできます。
+2. Web管理画面で、**デバイス情報** -> **システム設定** -> **工場出荷時設定にリセット** の順にクリックして、デバイスをリセットします。
+![工場出荷時設定へのリセット手順](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-Pro_reset_Device.jpg)
+
+## 5. よくある質問とトラブルシューティング (FAQ)
 
 ### Q1: Windows システムで 192.168.42.1 からログイン画面に入れない場合はどうすればよいですか？
 
@@ -115,14 +124,13 @@ Type-C ケーブルを接続しても Web インターフェースを開けな�
 6. 設定で **IP アドレスを自動的に取得する** および **DNS サーバーのアドレスを自動的に取得する** にチェックが入っていることを確認します。
 7. OK をクリックして設定を保存し、ブラウザで再度 `192.168.42.1` にアクセスします。
 
-<video 
-  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/reCamera-Pro-network_config.mp4" 
-  controls 
-  width="100%" 
+<video
+  src="https://raw.githubusercontent.com/6zsz6/seeed_wiki_video/main/reCamera-Pro-network_config.mp4"
+  controls
+  width="100%"
   preload="metadata">
   お使いのブラウザはこの動画の再生をサポートしていません。
 </video>
-
 
 ### Q2: reCamera を USB ケーブルでコンピュータに接続した後、コンピュータがインターネットに接続できなくなりました
 

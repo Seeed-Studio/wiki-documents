@@ -2,7 +2,7 @@
 description: Guia de referência para controlar qualquer produto Seeed ePaper compatível com ESPHome e Home Assistant - fluxo de trabalho em YAML, esqueleto genérico e onde encontrar o cookbook de cada produto.
 title: Trabalhar com ESPHome
 keywords:
-  - ePaper display
+  - display ePaper
   - ESPHome
   - Home Assistant
   - YAML
@@ -22,12 +22,12 @@ updatedAt: '2026-06-16'
 
 # Trabalhar com ESPHome
 
-:::tip Experimente demos sem configurar um ambiente de desenvolvimento
-Se você quiser visualizar rapidamente os resultados do projeto ou testar o firmware demo básico antes de configurar um ambiente de desenvolvimento, abra o **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Você pode escolher um dispositivo reTerminal E Series compatível e gravar o firmware de demonstração diretamente a partir de um navegador.
+:::tip Gerar YAML do ESPHome ou gravar demos no navegador
+A maneira mais rápida de começar é o **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Escolha o cartão **ESPHome**, selecione seu dispositivo, marque os recursos onboard que você deseja (display, botões, bateria, sensores, RTC, cartão SD, microfone, toque, deep sleep e mais), depois copie ou baixe o YAML gerado para o seu painel do ESPHome. O mesmo Hub também pode gravar firmware de demonstração a partir do navegador (Chrome ou Edge para desktop).
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Hub 🖱️</font></span></strong>
     </a>
 </div><br />
 :::
@@ -35,7 +35,7 @@ Se você quiser visualizar rapidamente os resultados do projeto ou testar o firm
 Esta página é o **manual de referência** para controlar qualquer produto Seeed ePaper compatível por meio do [ESPHome](https://esphome.io/) e integrá-lo ao [Home Assistant](https://www.home-assistant.io/). Ela cobre as partes que são idênticas em todo o hardware:
 
 1. Por que você escolheria o ESPHome para controlar um display ePaper.
-2. Como usar os exemplos de YAML do cookbook, adaptá-los às suas necessidades e gravar a partir do seu painel ESPHome.
+2. Como usar os exemplos de YAML do cookbook, adaptá-los às suas necessidades e gravar a partir do seu painel do ESPHome.
 3. O esqueleto YAML genérico — `wifi`, `api`, `ota`, `display` — que cada produto especializa com seu próprio mapa de pinos.
 4. Onde fica o cookbook de cada produto (periféricos, lambdas específicos de hardware, receitas de painel).
 
@@ -57,7 +57,7 @@ Todo produto Seeed ePaper na [página principal do hub](/pt-br/seeed_epaper_disp
       <td>XIAO ESP32-S3</td>
       <td>
         <a href="https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome/">Noções básicas de display, integração com HA e desenho</a><br/>
-        <a href="https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome_advanced/">Botões, buzzer, LED, bateria, SHT4x e deep sleep</a><br/>
+        <a href="https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome_advanced/">Botões, buzzer, LED, bateria, toque (E1003), SHT4x e deep sleep</a><br/>
         <a href="https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone/">RTC, cartão SD e microfone</a>
       </td>
     </tr>
@@ -85,7 +85,7 @@ Todo produto Seeed ePaper na [página principal do hub](/pt-br/seeed_epaper_disp
 - **Eficiência energética** — o ePaper só consome energia quando a tela está sendo atualizada, então a combinação (ESP32 + deep-sleep do ESPHome + ePaper) pode funcionar por semanas/meses com uma bateria.
 - **Legível à luz do dia** — diferente do LCD, o display é legível sob luz solar; ótimo para painéis de Home Assistant montados na parede.
 - **Cidadão nativo do HA** — depois que o dispositivo aparece no Home Assistant, cada entidade (clima, calendário, sensor, pessoa, clima) está a um template Jinja de distância de estar na parede.
-- **Local em primeiro lugar** — sem nuvem, sem aprisionamento a fornecedor. Tudo roda na sua LAN.
+- **Local-first** — sem nuvem, sem aprisionamento a fornecedor. Tudo roda na sua LAN.
 
 ## Etapa 1: Gerar o YAML do ESPHome e gravar seu firmware
 
@@ -98,27 +98,27 @@ Fluxo de trabalho recomendado:
 1. Abra o [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/) no Chrome ou Edge para desktop.
 2. Selecione **ESPHome** como plataforma.
 3. Selecione seu dispositivo.
-4. Na etapa de configuração, escolha os recursos que você quer habilitar, como display, botões, bateria, sensores, RTC, cartão SD, microfone ou deep sleep, se estiverem disponíveis para o seu dispositivo.
-5. Deixe a página gerar o YAML do ESPHome correspondente.
+4. Na etapa de configuração, escolha os recursos que você deseja habilitar, como display, botões, bateria, sensores, RTC, cartão SD, microfone ou deep sleep, se estiverem disponíveis para o seu dispositivo.
+5. Deixe a página gerar o YAML correspondente do ESPHome.
 6. Use **Copy to clipboard** ou **Download file** para exportar o YAML gerado.
-7. Cole ou importe o YAML no seu painel ESPHome.
+7. Cole ou importe o YAML no seu painel do ESPHome.
 8. Concentre sua edição manual na parte que mais importa para o seu projeto: conteúdo do display ePaper, entidades do Home Assistant, layout, fontes e comportamento de atualização.
 
 :::tip
-O Firmware Hub é o ponto de partida recomendado para novos usuários porque ele lida com grande parte da estrutura YAML específica do dispositivo. Use os cookbooks quando quiser entender a configuração gerada, combinar recursos avançados ou criar um layout personalizado a partir de exemplos menores.
+O Firmware Hub é o ponto de partida recomendado para novos usuários porque ele cuida de grande parte da estrutura YAML específica do dispositivo. Use os cookbooks quando quiser entender a configuração gerada, combinar recursos avançados ou criar um layout personalizado a partir de exemplos menores.
 :::
 
-Execute o painel ESPHome como:
+Execute o painel do ESPHome como:
 
 - um Add-on do Home Assistant (recomendado se você já executa HA OS / HA Supervised), ou
 - uma CLI Python independente (`pip install esphome` e depois `esphome dashboard config/`).
 
-Fluxo de trabalho manual com cookbook:
+Fluxo de trabalho manual com o cookbook:
 
 1. Abra o cookbook para o seu hardware (veja a tabela acima) e copie o exemplo de YAML de que você precisa.
-2. No painel ESPHome, clique em + New device, insira um nome e escolha a variante de ESP listada no seu cookbook (ESP32-S3, ESP32-C3, etc.).
+2. No painel do ESPHome, clique em + New device, insira um nome e escolha a variante de ESP listada no seu cookbook (ESP32-S3, ESP32-C3, etc.).
 3. Substitua o arquivo inicial gerado pela sua configuração. Combine seções do cookbook apenas se você precisar de vários recursos em um único dispositivo.
-4. Clique em Install → Plug into this computer para o primeiro flash via USB. Depois que `wifi`, `api` e `ota` estiverem configurados, as atualizações posteriores podem ser feitas via Wi-Fi.
+4. Clique em Install → Plug into this computer para a primeira gravação via USB. Depois que `wifi`, `api` e `ota` estiverem configurados, as atualizações posteriores podem ser feitas via Wi-Fi.
 5. Quando o dispositivo estiver online, ele aparecerá no Home Assistant por meio da integração ESPHome.
 
 ## Etapa 2: Entender a estrutura do YAML gerado
@@ -236,37 +236,37 @@ Mantenha estes valores do Firmware Hub ou do cookbook:
 - Pinos de `spi`, `i2c` e `i2s_audio`.
 - Blocos `output` de habilitação de energia para display, medição de bateria, cartão SD, microfone ou outros circuitos onboard.
 - Definições de botões, bateria, RTC, SHT4x, cartão SD, microfone, buzzer e LED.
-- A `display.platform`, `model`, mapa de pinos, comportamento de reset, comportamento do pino busy e intervalo de atualização.
+- O `display.platform`, `model`, mapa de pinos, comportamento de reset, comportamento do pino busy e intervalo de atualização.
 
 As partes que você normalmente personaliza são:
 
 - `substitutions`, nome do dispositivo e nome amigável.
 - Segredos de `wifi`, `api` e `ota`.
 - Escolhas e tamanhos de `font`.
-- Entidades do Home Assistant `sensor`, `binary_sensor`, `text_sensor` ou `time` que fornecem os dados que você quer desenhar.
+- Entidades do Home Assistant `sensor`, `binary_sensor`, `text_sensor` ou `time` que fornecem os dados que você deseja desenhar.
 - O bloco `display.lambda`, onde você projeta o layout real da tela de ePaper.
 - Comportamento de atualização, como `update_interval`, atualizações acionadas por botão ou temporização de deep sleep.
 
 ## Etapa 3: Conectar ao Home Assistant
 
-Quando o firmware inicializa e se conecta ao seu Wi-Fi, o Home Assistant descobre o dispositivo automaticamente:
+Quando o firmware inicializa e entra na sua rede Wi-Fi, o Home Assistant descobre o dispositivo automaticamente:
 
 1. **Settings → Devices & services**
-2. A integração ESPHome mostra um cartão "Discovered" para o seu dispositivo.
+2. A integração ESPHome exibirá um cartão "Discovered" para o seu dispositivo.
 3. Clique em **Configure**, cole a chave de criptografia da API (de `secrets.yaml`) e envie.
-4. O dispositivo e todas as suas entidades (sensors, binary_sensors, o display) agora estão disponíveis no HA.
+4. O dispositivo + todas as suas entidades (sensors, binary_sensors, o display) agora estão disponíveis no HA.
 
-Agora você pode arrastar as entidades para um dashboard Lovelace ou — muito mais interessante em ePaper — usar o bloco `display.lambda` para renderizar qualquer entidade do HA diretamente na tela por meio do componente [`homeassistant`](https://esphome.io/components/homeassistant.html).
+Agora você pode arrastar as entidades para um painel Lovelace ou — muito mais interessante em ePaper — usar o bloco `display.lambda` para renderizar qualquer entidade do HA diretamente na tela por meio do componente [`homeassistant`](https://esphome.io/components/homeassistant.html).
 
-## Próximos passos — Livros de receitas
+## Para onde ir em seguida — Livros de receitas
 
 Esta página termina propositalmente no modelo básico. O YAML específico de cada produto, exemplos de periféricos e receitas ponta a ponta ficam no livro de receitas de cada produto:
 
-- **[reTerminal E Series — ESPHome Display](/pt-br/reterminal_e10xx_with_esphome)** — primeiro dashboard, configuração de Wi-Fi e exemplos de desenho em ePaper para E1001/E1002/E1003/E1004.
-- **[reTerminal E Series — ESPHome I/O, Battery & Power](/pt-br/reterminal_e10xx_with_esphome_advanced)** — botões, buzzer, LED onboard, monitoramento de bateria, sensor SHT4x, deep sleep e dashboards com várias páginas.
+- **[reTerminal E Series — ESPHome Display](/pt-br/reterminal_e10xx_with_esphome)** — primeiro painel, configuração de Wi-Fi e exemplos de desenho em ePaper para E1001/E1002/E1003/E1004.
+- **[reTerminal E Series — ESPHome I/O, Battery, Touch & Power](/pt-br/reterminal_e10xx_with_esphome_advanced)** — botões, buzzer, LED onboard, monitoramento de bateria, sensor SHT4x, toque capacitivo (E1003), deep sleep e painéis com várias páginas.
 - **[reTerminal E1001 / E1002 — ESPHome RTC, SD & Microphone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone)** — sincronização de horário com RTC PCF8563, pinos de alimentação/detecção do cartão microSD e configuração do microfone PDM onboard.
 - **[EE04 driver board — ESPHome](/pt-br/EE04_with_esphome_advanced)** — integração completa com o Home Assistant no XIAO ESP32-S3 + EE04 + a tela de ePaper de sua escolha.
-- **[XIAO 7.5" ePaper Panel — ESPHome](/pt-br/xiao_075inch_epaper_panel_esphome)** — dashboard mínimo em ESP32-C3.
+- **[XIAO 7.5" ePaper Panel — ESPHome](/pt-br/xiao_075inch_epaper_panel_esphome)** — painel minimalista com ESP32-C3.
 - **[TRMNL 7.5" DIY Kit — ESPHome](/pt-br/ogdiy_kit_works_with_esphome)** — usando o hardware do kit com ESPHome em vez da plataforma em nuvem TRMNL.
 
 Quando novos produtos de ePaper forem lançados, o livro de receitas correspondente será adicionado na pasta de cada produto; esta página principal será atualizada para apontar para ele.

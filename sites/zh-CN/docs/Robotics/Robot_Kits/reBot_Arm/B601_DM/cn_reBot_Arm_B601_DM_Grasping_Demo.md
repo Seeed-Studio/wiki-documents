@@ -55,7 +55,7 @@ YOLO 是一类广泛使用的实时目标检测模型，能够在单次前向推
 
 ##  项目介绍
 
-**reBot Arm B601 视觉夹取 Demo** 是基于 [reBot Arm B601](https://github.com/vectorBH6/reBotArm_control_py) 机械臂控制库与 RGB-D 深度相机的视觉抓取算法演示项目。系统支持 B601 的 DM 与 RS 两种机械臂配置，通过 YOLO 模型实时识别桌面物体，利用 OBB 最小外接矩形估计夹取姿态，经手眼标定将相机坐标系下的抓取点变换到机械臂基坐标系，最终驱动机械臂完成自主抓取。
+**reBot Arm B601 视觉夹取 Demo** 是基于 [reBot Arm B601](https://github.com/Seeed-Projects/reBotArm_control_py) 机械臂控制库与 RGB-D 深度相机的视觉抓取算法演示项目。系统支持 B601 的 DM 与 RS 两种机械臂配置，通过 YOLO 模型实时识别桌面物体，利用 OBB 最小外接矩形估计夹取姿态，经手眼标定将相机坐标系下的抓取点变换到机械臂基坐标系，最终驱动机械臂完成自主抓取。
 
 ###  核心功能
 
@@ -109,13 +109,6 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-也可以使用当前开发仓库：
-
-```bash
-git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
-cd rebot_grasp
-```
-
 ### Step 2. 创建并配置 conda 环境
 
 ```bash
@@ -131,7 +124,7 @@ conda activate rebotarm
 ### Step 3. 安装机械臂控制库
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 cd sdk/reBotArm_control_py
 pip install -e .
 cd ../..
@@ -374,7 +367,7 @@ hardware_yaml: rebotarm_rs.yaml
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ip -details link show can0
 ```
@@ -630,7 +623,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## 📄 参考资料
 
-- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py) — 机械臂控制库
+- [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) — 机械臂控制库
 - [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm) — reBot 机械臂开源项目
 - [Orbbec Gemini 2 产品页](https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)

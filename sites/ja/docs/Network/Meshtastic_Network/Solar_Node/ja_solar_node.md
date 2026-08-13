@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /meshtastic_solar_node
 sidebar_position: 1
 last_update:
-  date: 3/10/2026
-  author: Michelle Huang
+  date: 08/06/2026
+  author: zxw
 createdAt: '2025-04-08'
 updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/ja/meshtastic_solar_node/
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/ja/meshtastic_solar_node/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-これは [Meshtastic®](https://meshtastic.org/) をベースにした経済的なソーラー駆動の通信ノード／リピーターで、XIAO nRF52840 Plus メインコントローラと Wio-SX1262 LoRa モジュールを統合しています。ネットワークカバレッジのない地域向けに特別に設計されており、長距離通信、高精度な位置測位、低消費電力動作をサポートします。屋外エリアでのネットワークカバレッジ拡張に適しています。
+これは [Meshtastic®](https://meshtastic.org/) をベースにした、経済的なソーラー駆動の通信ノード／リピーターで、XIAO nRF52840 Plus メインコントローラと Wio-SX1262 LoRa モジュールを統合しています。ネットワークカバレッジのないエリア向けに特別に設計されており、長距離通信、高精度測位、低消費電力動作をサポートします。屋外エリアでのネットワークカバレッジ拡張に適しています。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank">
@@ -38,8 +38,8 @@ Solar Node には、[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCA
 ### 特長
 
 - 5W ソーラーパネルを内蔵し、外部バッテリー（ユーザー自身で用意する必要があります）にも対応します。
-- デバイスには工場出荷時に Meshtastic ファームウェアがプリインストールされており、Meshtastic エコシステムにシームレスに統合できます。
-- Grove エコシステムと互換性があり、温湿度センサ、照度センサなどのセンサをプラグアンドプレイで接続できます。
+- 工場出荷時に Meshtastic ファームウェアがプリインストールされており、Meshtastic エコシステムにシームレスに統合できます。
+- Grove エコシステムと互換性があり、温湿度センサー、照度センサーなどのセンサーをプラグアンドプレイで接続できます。
 - 長期の屋外使用に適しています。
 - 開けた場所で 8～9km の通信距離をサポートします。屋外ノードまたはリピーターとして使用でき、Mesh ネットワークを容易に拡張し、ネットワークカバレッジを強化します。
 
@@ -116,10 +116,10 @@ Solar Node には、[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCA
   </tr>
   <tr>
     <td rowSpan="4"><b>LED</b></td>
-    <td>充電状態インジケータランプ *2</td>
+    <td>充電状態インジケーターランプ *2</td>
   </tr>
   <tr>
-    <td>ソーラーパネル状態インジケータランプ *1</td>
+    <td>ソーラーパネル状態インジケーターランプ *1</td>
   </tr>
   <tr>
     <td>Mesh ハートビートランプ *1</td>
@@ -168,7 +168,31 @@ Solar Node には、[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCA
 **付属品**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/accessory.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Instruction-solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-**ブロック図**
+**構成図**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
+
+## 技術サポートと製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

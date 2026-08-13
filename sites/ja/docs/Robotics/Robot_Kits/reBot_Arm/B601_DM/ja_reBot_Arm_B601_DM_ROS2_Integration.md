@@ -209,14 +209,6 @@ source `/opt/ros/humble/setup.bash`.
 git clone https://github.com/Seeed-Projects/reBotArmController_ROS2.git rebotarm_ros2
 cd rebotarm_ros2
 ```
-
-現在の開発用リポジトリを使用することもできます：
-
-```bash
-git clone https://github.com/EclipseaHime017/reBotArmController_ROS2.git rebotarm_ros2
-cd rebotarm_ros2
-```
-
 ### ステップ 4. motorbridge をインストールする
 
 公式 PyPI ソースから `motorbridge` をインストールします：
@@ -229,7 +221,7 @@ python3 -m pip install --user --break-system-packages --index-url https://pypi.o
 
 ```bash
 mkdir -p third_party
-git clone https://github.com/vectorBH6/reBotArm_control_py.git third_party/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git third_party/reBotArm_control_py
 ```
 
 ### ステップ 6. ワークスペースをビルドする
@@ -817,8 +809,8 @@ Jazzy を source した後は、
 
 ## 連絡先
 
-- 技術サポート：[Submit an Issue](https://github.com/EclipseaHime017/reBotArmController_ROS2/issues)
-- プロジェクトリポジトリ：[Github](https://github.com/EclipseaHime017/reBotArmController_ROS2)
+- 技術サポート：[Submit an Issue](https://github.com/Seeed-Projects/reBotArmController_ROS2/issues)
+- プロジェクトリポジトリ：[Github](https://github.com/Seeed-Projects/reBotArmController_ROS2)
 - フォーラム：[Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## 参考資料
@@ -829,4 +821,4 @@ Jazzy を source した後は、
 - [reBot Arm B601-DM LeRobot チュートリアル](https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_lerobot/)
 - [ROS2 Humble ドキュメント](https://docs.ros.org/en/humble/)
 - [ROS2 Jazzy ドキュメント](https://docs.ros.org/en/jazzy/)
-- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)
+- [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py)

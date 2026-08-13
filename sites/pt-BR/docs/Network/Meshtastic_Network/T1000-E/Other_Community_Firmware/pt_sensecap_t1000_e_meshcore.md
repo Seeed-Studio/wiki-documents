@@ -11,7 +11,7 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-04-20'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/
 ---
 
@@ -31,7 +31,7 @@ Escolha `Seeed Studio SenseCAP T1000-E` no grupo `Community Firmware`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-Escolha `Companion Bluetooth`. Dispositivos gravados com o firmware Companion Bluetooth podem ser conectados ao APP. Se você quiser gravar outro firmware, por favor [clique aqui](https://docs.meshcore.io/) para ver o tutorial.
+Escolha `Companion Bluetooth`. Dispositivos gravados com o firmware Companion Bluetooth podem ser conectados ao APP. Se você quiser gravar outro firmware, por favor [click here](https://docs.meshcore.io/) para ver o tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -55,7 +55,7 @@ Clique em `Enter DFU Mode`, escolha a porta serial chamada "nRF xxx" ou "TinyUSB
 
 Se você clicou em `Flash` mas não houve resposta, clique em `Enter DFU` novamente e depois clique em `Flash` para garantir que você entrou no modo DFU com sucesso.
 
-Quando a barra de progresso estiver completamente preenchida, isso indica que o Flash foi concluído. Em seguida, o dispositivo será reiniciado automaticamente.
+Quando a barra de progresso estiver completamente preenchida, isso indica que a gravação foi concluída. Em seguida, o dispositivo será reiniciado automaticamente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
@@ -73,7 +73,7 @@ Escolha `Seeed Studio Wio Tracker T1000-E` no grupo `Community Firmware`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-Escolha `Companion Bluetooth`. Dispositivos gravados com o firmware Companion Bluetooth podem ser conectados ao APP. Se você quiser gravar outro firmware, por favor [clique aqui](https://docs.meshcore.io/) para ver o tutorial.
+Escolha `Companion Bluetooth`. Dispositivos gravados com o firmware Companion Bluetooth podem ser conectados ao APP. Se você quiser gravar outro firmware, por favor [click here](https://docs.meshcore.io/) para ver o tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -127,7 +127,7 @@ Arraste o arquivo UF2 baixado para o disco que apareceu.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento já há firmware no dispositivo, portanto o dispositivo será reiniciado automaticamente.
+O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento já há firmware no dispositivo, portanto ele será reiniciado automaticamente.
 
 ## Configuração
 
@@ -137,15 +137,15 @@ Pressione o botão para ligá-lo. O LED acenderá e haverá uma melodia descende
 
 ### Desligar o dispositivo
 
-Pressione o botão por 3 s para desligá-lo. O LED apagará e haverá uma melodia descendente.
+Pressione o botão por 3 s para desligá-lo. O LED apagará e haverá uma melodia de desligamento.
 
 :::tip
-Se o dispositivo não responder quando você pressionar o botão, carregue-o primeiro. Não use carregador de carga rápida.
+Se o dispositivo não responder quando você pressionar o botão, por favor carregue-o primeiro. Não use carregador de carga rápida.
 :::
 
 ### Obter o APP
 
-Baixe pela Google Store ou Apple Store. Ou [clique aqui](https://meshcore.io/#download) para obter o Meshcore APP.
+Baixe pela Google Store ou Apple Store. Ou [click here](https://meshcore.io/#download) para obter o Meshcore APP.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 
@@ -185,7 +185,7 @@ Se a conexão falhar, abra a lista de Bluetooth do seu telefone e `forget` ou `U
 
 ### Configurar o LoRa
 
-Para começar a se comunicar pela malha, você deve definir sua região. Essa configuração controla qual faixa de frequência seu dispositivo usa e deve ser ajustada de acordo com sua localização regional.
+Para começar a se comunicar pela malha, você deve definir sua região. Esta configuração controla qual faixa de frequência seu dispositivo usa e deve ser ajustada de acordo com sua localização regional.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
@@ -196,17 +196,17 @@ Em seguida, reinicie o dispositivo, caso contrário a configuração não terá 
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Unset|N/A|N/A|N/A|
-|US|United States|902.0 - 928.0|100|30|
-|EU_868|European Union 868 MHz|869.4 - 869.65|10|27|
+|UNSET|Não definido|N/A|N/A|N/A|
+|US|Estados Unidos|902.0 - 928.0|100|30|
+|EU_868|União Europeia 868 MHz|869.4 - 869.65|10|27|
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando qualquer [parâmetro LoRa](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general) para atender às suas necessidades.
 
 ### Configurar GPS
 
-Se você quiser usar o GPS, ative-o.
+Se você quiser usar GPS, por favor ative-o. 
 
-Você pode ir em `Position Settings` no APP para ativar o GPS. 
+Você pode ir ao APP `Position Settings` para ativar o GPS. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/GPSConfig.png" alt="pir" width={300} height="auto" /></p>
 
@@ -221,7 +221,7 @@ Você pode ir em `Position Settings` no APP para ativar o GPS.
 
 ## Transmissão de mensagens
 
-Se você tiver dois dispositivos compatíveis e não houver muitos usuários do MeshCore perto de você, grave o firmware BLE Companion em ambos para que você possa usar seus dispositivos para se comunicar com amigos e familiares próximos.
+Se você tiver dois dispositivos compatíveis e não houver muitos usuários MeshCore perto de você, grave o firmware BLE Companion em ambos para que você possa usar seus dispositivos para se comunicar com amigos e familiares próximos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/MeshcoreFramework.png" alt="pir" width={900} height="auto" /></p>
 
@@ -232,13 +232,13 @@ MeshCore permite que você transmita manualmente seu nome, posição e chave pú
 - **Zero hop** significa que seu anúncio é transmitido para qualquer pessoa que possa ouvi-lo, e é só isso.
 - **Flooded** significa que ele é transmitido e depois repetido por todos os repetidores que o ouvirem.
 
-Você pode enviar anúncios no APP. Você também pode enviar anúncios diretamente na página de anúncio do dispositivo.
+Você pode enviar anúncio pelo APP. Você também pode enviar anúncio diretamente na página de anúncio do dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Advert.png" alt="pir" width={300} height="auto" /></p>
 
 ### Mensagem pública
 
-Depois de configurar o LoRa, você pode enviar mensagens no canal primário. Todas as pessoas próximas na mesma faixa de frequência irão ouvi-las.
+Depois de configurar o LoRa, você pode enviar mensagens no canal primário. Todas as pessoas próximas na mesma faixa de frequência irão ouvi-la.
 
 
 ### Mensagem privada
@@ -272,17 +272,17 @@ O dispositivo irá reiniciar repetidamente, e a porta serial conecta e desconect
 
 **Solução:**
 
-- Etapa 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte **rapidamente** o cabo de carregamento duas vezes, o LED verde ficará aceso continuamente.
+- Passo 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e **rapidamente** conecte o cabo de carregamento duas vezes, o LED verde ficará aceso continuamente.
 
 :::note
-Para entrar no modo DFU com sucesso, você precisa realizar esta operação rapidamente. Talvez seja necessário tentar várias vezes.
+Para entrar com sucesso no modo DFU, você precisa realizar esta operação rapidamente. Talvez seja necessário tentar várias vezes.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
-- Etapa 2: Apagar a Flash
+- Passo 2: Apagar a Flash
 
-- Etapa 3: Gravar o firmware
+- Passo 3: Gravar o firmware
 
 ### Dispositivo brickado
 
@@ -301,14 +301,14 @@ O dispositivo não responde, nenhum LED, não é possível parear com o seu App.
 </div>
 
 :::danger note
-Quando você estiver gravando o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
+Quando estiver gravando o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
 :::
 
-**Etapa 1: Instalação do Adafruit-nrfutil**
+**Passo 1: Instalação do Adafruit-nrfutil**
 
-Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e clique em "Enter". Isso pode abrir a linha de comando. 
+Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e clique em "Enter". Isso abrirá a linha de comando. 
 
-Para usuários MAC, pressione a tecla "Command" e a tecla "Space", assim você pode abrir o Spotlight. Depois digite "termial" e clique em "Return". Isso pode abrir a linha de comando. 
+Para usuários Mac, pressione a tecla "Command" e a tecla "Space", assim você pode abrir o Spotlight. Depois digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
 
 **Pré-requisitos**
 
@@ -371,7 +371,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a opção `--user`:
+Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a flag `--user`:
 
 ```
 pip3 install -r --user requirements.txt
@@ -401,7 +401,7 @@ Copie ou mova-o para outro lugar para sua conveniência, como um diretório no s
 </TabItem>
 </Tabs>
 
-**Etapa 2: Verifique o número da sua porta**
+**Passo 2: Verifique o número da sua porta**
 
 Conecte seu dispositivo ao PC e verifique o número da porta.
 
@@ -411,7 +411,7 @@ Para usuários Windows, por exemplo:
 Para usuários Mac, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Etapa 3: Gravar o bootloader**
+**Passo 3: Grave o bootloader**
 
 No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo a porta correta do seu dispositivo:
 
@@ -443,13 +443,13 @@ Quando você tiver concluído as etapas acima, então [clique aqui](https://wiki
 - Defina a taxa de transmissão para `1200`.
 
 - Conecte o dispositivo.
-   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU, então grave o [bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [Apagar flash](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase) -> [gravar o firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-firmware)
+   A luz piscará brevemente quando você o conectar. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU, então grave o [bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [Apagar flash](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase) -> [gravar o firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-firmware)
 
 **3) O dispositivo não consegue entrar no modo DFU e nenhuma porta serial é exibida**
 
 - pressione e segure o botão do dispositivo e, em seguida, conecte o cabo de carregamento. Depois que um disco aparecer no seu PC, você poderá ver a porta serial.
 
-- Se ainda não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada, depois conecte o cabo de carregamento e tente pareá-lo novamente.
+- Se ainda não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada, depois conecte o cabo de carregamento e tente parear novamente.
 
 **4) Se nenhuma das etapas acima funcionar, entre em contato com o suporte técnico: support@sensecapmx.com**
 
@@ -471,10 +471,10 @@ Quando você tiver concluído as etapas acima, então [clique aqui](https://wiki
 
  #### Descrição
 
- - Após o dispositivo ser ligado, ele será desligado ou reiniciado automaticamente após um tempo. 
+ - Após ligar o dispositivo, ele será desligado ou reiniciado automaticamente após um tempo. 
  - O log da porta serial executa por um tempo e depois para.
 
- Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando o dispositivo está nos seguintes estados: sem concluir o processo de transmissão de mensagens, em configuração......
+ Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando ele estiver nos seguintes estados: sem concluir o processo de transmissão de mensagens, em configuração......
 
  #### Solução de problemas
 
@@ -490,13 +490,13 @@ Se você quiser restaurar as configurações padrão, pode fazer a restauração
 
 ### Qualidade do sinal
 
-  - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR abaixo de -10 dB indica desempenho ruim.
+  - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR inferior a -10 dB indica desempenho ruim.
 
-  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI abaixo de -115 dBm é considerado como tendo desempenho ruim. 
+  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo desempenho ruim. 
 
       Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
-### Definição do Pogo Pin
+### Definição do pino pogo
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/PogoPin4.png" alt="pir" width={900} height="auto" /></p>
 
@@ -506,16 +506,25 @@ Se você quiser restaurar as configurações padrão, pode fazer a restauração
 - [T1000-E for Meshtastic Consumption Test and Battery Life Calculation](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000-E%20for%20Meshtastic%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
-## Suporte técnico e discussão de produtos
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
 </div>

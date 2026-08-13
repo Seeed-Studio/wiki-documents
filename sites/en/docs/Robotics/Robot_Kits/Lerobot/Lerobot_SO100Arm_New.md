@@ -1,6 +1,6 @@
 ---
-description: This wiki provides the assembly and debugging tutorial for the SO ARM100 and realizes data collection and training within the latest version of Lerobot framework.
-title: SoArm in Lerobot
+description: This wiki provides a complete LeRobot workflow for SO-ARM100 / SO-ARM101, including assembly, calibration, teleoperation, cameras, dataset recording, training, evaluation, and deployment tips.
+title: Getting Started with SO-ARM10x in LeRobot
 keywords:
   - Lerobot
   - Huggingface
@@ -13,72 +13,204 @@ last_update:
   date: 3/11/2026
   author: ZhangJiaQuan
 createdAt: '2025-06-05'
-updatedAt: '2026-07-15'
+updatedAt: '2026-07-25'
 translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/lerobot_so100m_new/
 ---
 
-import Link from '@docusaurus/Link';
+import '/src/css/rebot-wiki-style.css';
+import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot
+# Getting Started with SO-ARM100 and SO-ARM101 Robotic Arms in LeRobot
 
-:::tip
-This tutorial maintenance has been updated to the latest version of [lerobot](https://huggingface.co/docs/lerobot/index), if you want to refer to the tutorial of the previous version, please click [here](https://wiki.seeedstudio.com/lerobot_so100m/).
-:::
+<div className="rebot-page">
 
-## Introduction
+<section className="doc-hero">
+  <div>
+    <span className="eyebrow">SO-ARM10x × LeRobot</span>
+    <h2>From assembly and calibration to dataset collection, training, and real-robot deployment</h2>
+    <p>
+      This wiki walks you through the complete SO-ARM100 / SO-ARM101 workflow in LeRobot:
+      hardware setup, servo configuration, arm calibration, teleoperation, camera integration,
+      dataset recording, visualization, replay, policy training, evaluation, and deployment tips.
+    </p>
+    <div className="hero-actions">
+      <a href="#quick-path">View learning path</a>
+      <a href="#install-lerobot">Install LeRobot</a>
+      <a href="#record-dataset">Record a dataset</a>
+    </div>
+  </div>
+  <div className="hero-card">
+    <strong>Recommended reading path</strong>
+    <span>New users: start with specifications, power rules, and servo setup.</span>
+    <span>Pre-assembled arm users: jump to full-arm calibration and teleoperation.</span>
+    <span>Existing LeRobot users: jump directly to cameras, dataset recording, training, or FAQ.</span>
+  </div>
+</section>
 
-The [SO-10xARM](https://github.com/TheRobotStudio/SO-ARM100) is a fully open-source robotic arm project launched by [TheRobotStudio](https://www.therobotstudio.com/). It includes the follower arm and the leader robotic arm, and also provides detailed 3D printing files and operation guides. [LeRobot](https://github.com/huggingface/lerobot/tree/main) is committed to providing models, datasets and tools for real-world robotics in PyTorch. Its aim is to reduce the entry barrier of robotics, enabling everyone to contribute and benefit from sharing datasets and pretrained models. LeRobot integrates cutting-edge methodologies validated for real-world application, centering on imitation learning. It has furnished a suite of pre-trained models, datasets featuring human-gathered demonstrations, and simulation environments, enabling users to commence without the necessity of robot assembly. In the forthcoming weeks, the intention is to augment support for real-world robotics on the most cost-effective and competent robots presently accessible.
-
-<div class="video-container" style={{marginBottom: '24px'}}>
-<iframe width="900" height="600" src="https://www.youtube.com/embed/sD34HnAkGNc?si=hqKd_sH5Oc9sdcwd&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="safety-alert">
+  <div className="safety-alert-icon">⚠️</div>
+  <div className="safety-alert-content">
+    <strong>Safety warning: clear the robotic arm workspace before running motion programs</strong>
+    <p>
+      Before running any program that can move the robotic arm, clear valuable items, fragile objects,
+      tools, cables, and unrelated objects within 1 meter of the workspace. During debugging and operation,
+      keep people away from the arm’s motion range.
+    </p>
+    <ul>
+      <li>Do not touch joints, motors, links, the gripper, or end tools after the arm is powered on.</li>
+      <li>Before servo setup, calibration, teleoperation, dataset recording, replay, or policy evaluation, make sure the arm is firmly fixed.</li>
+      <li>Keep at least 1 meter of safety distance and make sure nearby people understand that the arm may move suddenly.</li>
+      <li>If abnormal motion, noise, shaking, loose cables, poor power contact, or communication loss occurs, stop the program immediately and power off before inspection.</li>
+      <li>Power off before plugging or unplugging servo cables, USB cables, power connectors, or motor control board cables.</li>
+    </ul>
+  </div>
 </div>
 
-## Projects Introduction
+{/* Markdown headings are intentionally kept outside visual cards so Docusaurus can generate the right-side table of contents. */}
 
-The SO-ARM10x and reComputer Jetson AI intelligent robot kit seamlessly combine high-precision robotic arm control with a powerful AI computing platform, providing a comprehensive robot development solution. This kit is based on the Jetson Orin or AGX Orin platform, combined with the SO-ARM10x robotic arm and the LeRobot AI framework, offering users an intelligent robot system applicable to multiple scenarios such as education, research, and industrial automation.
-This wiki provides the assembly and debugging tutorial for the SO ARM10x and realizes data collection and training within the Lerobot framework.
+<nav className="doc-nav" aria-label="SO-ARM10x LeRobot quick navigation">
+  <a href="#quick-path">Learning Path</a>
+  <a href="#overview">Overview</a>
+  <a href="#specifications">Specs</a>
+  <a href="#install-lerobot">Install</a>
+  <a href="#setup-motors-assembly">Motors</a>
+  <a href="#calibration">Calibration</a>
+  <a href="#teleoperation">Teleop</a>
+  <a href="#camera">Cameras</a>
+  <a href="#record-dataset">Dataset</a>
+  <a href="#training">Training</a>
+  <a href="#faq">FAQ</a>
+</nav>
 
-  <div align="center">
-      <img width={800}
-      src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" />
+## Recommended Learning Path
+
+<section id="quick-path" className="section-card course-path-section">
+  <div className="section-title">
+    <span>Step Overview</span>
+    <h2>Follow the real debugging workflow step by step</h2>
+    <p>For a first-time SO-ARM10x setup, complete hardware preparation, environment setup, and calibration before moving to teleoperation, cameras, datasets, training, and evaluation.</p>
   </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+  <div className="course-path-grid">
+    <div className="course-path-item"><span className="course-index">1</span><div className="course-path-copy"><strong>Understand the kit</strong><p>Confirm your SO-ARM100 / SO-ARM101 version, motor type, voltage, and BOM.</p></div><span className="course-tag">Prepare</span></div>
+    <div className="course-path-item"><span className="course-index">2</span><div className="course-path-copy"><strong>Install LeRobot</strong><p>Set up Miniforge, the verified Seeed LeRobot repository, ffmpeg, PyTorch, and camera dependencies.</p></div><span className="course-tag">Environment</span></div>
+    <div className="course-path-item"><span className="course-index">3</span><div className="course-path-copy"><strong>Configure motors and assemble</strong><p>Set servo IDs and baud rates, then assemble the leader and follower arms.</p></div><span className="course-tag">Hardware</span></div>
+    <div className="course-path-item"><span className="course-index">4</span><div className="course-path-copy"><strong>Calibrate and teleoperate</strong><p>Calibrate both arms and verify that the leader-to-follower control chain is stable.</p></div><span className="course-tag">Control</span></div>
+    <div className="course-path-item"><span className="course-index">5</span><div className="course-path-copy"><strong>Add cameras and record data</strong><p>Connect OpenCV, RealSense, or Orbbec cameras and record clean, repeatable episodes.</p></div><span className="course-tag">Data</span></div>
+    <div className="course-path-item"><span className="course-index">6</span><div className="course-path-copy"><strong>Train and evaluate policies</strong><p>Start with ACT, then explore SmolVLA, Pi0, Pi0.5, GR00T, PEFT, and asynchronous inference.</p></div><span className="course-tag">AI</span></div>
+  </div>
+</section>
+
+## Overview
+
+<section id="overview" className="section-card">
+  <div className="section-title">
+    <span>Overview</span>
+    <h2>Project Introduction</h2>
+    <p>SO-ARM10x combines an open-source low-cost robotic arm with the LeRobot ecosystem for data collection, imitation learning, and real-robot deployment.</p>
+  </div>
+
+:::tip
+This tutorial has been updated for the latest [LeRobot](https://huggingface.co/docs/lerobot/index). To view the previous version, click [here](https://wiki.seeedstudio.com/lerobot_so100m/).
+:::
+
+[SO-10xARM](https://github.com/TheRobotStudio/SO-ARM100) is a fully open-source robotic arm project launched by [TheRobotStudio](https://www.therobotstudio.com/). It includes both a follower arm and a leader arm, with detailed 3D printing files and operation guides. [LeRobot](https://github.com/huggingface/lerobot/tree/main) provides PyTorch models, datasets, and tools for real-world robotics, lowering the entry barrier for imitation learning and policy deployment.
+
+<div className="video-container">
+  <iframe
+    loading="lazy"
+    width="900"
+    height="600"
+    src="https://www.youtube.com/embed/sD34HnAkGNc?si=hqKd_sH5Oc9sdcwd&autoplay=0&mute=1"
+    title="SO-ARM10x LeRobot overview video"
+    frameBorder="0"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  ></iframe>
+</div>
+
+SO-ARM10x and the reComputer Jetson AI robotics kit combine high-precision robotic arm control with an AI computing platform. Together with Jetson Orin or AGX Orin and the LeRobot framework, this setup can be used for education, research, and industrial automation experiments.
+
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="SO-ARM10x kit" />
+</div>
+
+<div className="get-one-now-panel">
+  <a className="get-one-now-button" href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">
+    Get One Now 🖱️
+  </a>
+</div>
+
+:::caution
+Seeed Studio is responsible for the hardware quality of the kit. The software tutorial follows the official LeRobot documentation as closely as possible. If you encounter unresolved software or dependency issues, check the FAQ at the end of this page and report issues to the [LeRobot GitHub repository](https://github.com/huggingface/lerobot) or the [LeRobot Discord channel](https://discord.gg/8TnwDdjFGU).
+:::
+
+<div className="video-container">
+  <iframe
+    loading="lazy"
+    width="900"
+    height="600"
+    src="https://www.youtube.com/embed/JrF_ymUvrqc?si=vslu5NNI-ZIzVXLc&autoplay=0&mute=1"
+    title="SO-ARM10x project video"
+    frameBorder="0"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  ></iframe>
+</div>
+
+</section>
 
 ## Main Features
 
-1. **Open-source and low-cost**:  It is an open-source, low-cost robotic arm solution from [TheRobotStudio](https://github.com/TheRobotStudio/SO-ARM100)
-2. **Integration with LeRobot**: Designed for integration with [LeRobot platform](https://github.com/huggingface/lerobot)
-3. **Abundant learning resources**: Provides comprehensive open-source learning resources like assembly and calibration guides, and tutorials for testing, data collection, training and deployment to assist users in quickly getting started and developing robotic applications.
-4. **Compatible with Nvidia**: Deploy this arm kit with reComputer Mini J4012 Orin NX 16 GB.
-5. **Multi-Scene Application**: It is applicable to fields such as education, scientific research, automated production, and robotics, helping users achieve efficient and precise robot operations in various complex tasks.
+<section id="features" className="section-card">
+  <div className="section-title">
+    <span>Features</span>
+    <h2>Main Features</h2>
+    <p>SO-ARM10x focuses on open-source learning, low-cost robotics, LeRobot integration, and NVIDIA deployment.</p>
+  </div>
 
-## What's news：
+  <div className="feature-grid">
+    <div><strong>Open-source and low-cost</strong><span>An open-source robotic arm solution based on TheRobotStudio’s SO-ARM project.</span></div>
+    <div><strong>LeRobot integration</strong><span>Designed for teleoperation, dataset recording, training, and real-robot evaluation in LeRobot.</span></div>
+    <div><strong>Rich learning resources</strong><span>Includes assembly, calibration, testing, dataset, training, and deployment guidance.</span></div>
+    <div><strong>NVIDIA compatible</strong><span>Can be deployed with platforms such as reComputer Mini J4012 Orin NX 16GB.</span></div>
+    <div><strong>Multi-scenario applications</strong><span>Suitable for education, research, automation demos, and robotics learning.</span></div>
+  </div>
+</section>
 
-- Wiring optimization: Compared to SO-ARM100, SO-ARM101 features improved wiring that prevents disconnection issues previously seen at joint 3. The new wiring design also no longer limits the range of motion of the joints.
-- Different gear ratios for the leader arm: The leader arm now uses motors with optimized gear ratios, improving performance and eliminating the need for external gearboxes.
-- New functionality support: The leader arm can now follow the follower arm in real-time, which is crucial for the upcoming learning policy, where a human can intervene and correct the robot’s actions.
+## What's New
 
-:::caution
+<section id="updates" className="section-card">
+  <div className="section-title">
+    <span>Updates</span>
+    <h2>What's New in SO-ARM101</h2>
+    <p>SO-ARM101 improves wiring, leader-arm gear ratios, and real-time following behavior.</p>
+  </div>
 
-Seeed Studio is only responsible for the quality of the hardware itself. The tutorials are strictly updated in accordance with the official documentation. If you encounter software issues or environment dependency problems that cannot be resolved, in addition to checking the FAQ section at the end of this tutorial, please promptly report the issue to the [LeRobot platform](https://github.com/huggingface/lerobot) or the [LeRobot Discord channel](https://discord.gg/8TnwDdjFGU).
+  <div className="notice-grid">
+    <div className="notice-card"><strong>Wiring optimization</strong><span>Compared with SO-ARM100, SO-ARM101 improves wiring and avoids the joint-3 disconnection issue. The new routing no longer limits joint motion range.</span></div>
+    <div className="notice-card"><strong>Leader gear-ratio update</strong><span>The leader arm uses optimized gear-ratio motors, improving performance and removing the need for external gearboxes.</span></div>
+    <div className="notice-card"><strong>Real-time following</strong><span>The leader arm can follow the follower arm in real time, which helps future policy workflows where a human can intervene and correct robot actions.</span></div>
+  </div>
+</section>
 
-:::
-
-<div class="video-container" style={{marginBottom: '24px'}}>
-<iframe width="900" height="600" src="https://www.youtube.com/embed/JrF_ymUvrqc?si=vslu5NNI-ZIzVXLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ## Specification
 
-<details>
+<section id="specifications" className="section-card">
+  <div className="section-title">
+    <span>Specifications</span>
+    <h2>Specification</h2>
+    <p>View motor, power, communication, and control specifications for SO-ARM100 and SO-ARM101.</p>
+  </div>
+
+<details className="content-details">
 <summary>View SO-ARM10x specifications</summary>
 
 <table>
@@ -90,10 +222,10 @@ Seeed Studio is only responsible for the quality of the hardware itself. The tut
     </tr>
     <tr>
       <th></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Arm Kit Pro</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Arm Kit Pro</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">Arm Kit</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank" rel="noopener noreferrer">Arm Kit Pro</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">Arm Kit</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank" rel="noopener noreferrer">Arm Kit Pro</a></th>
     </tr>
   </thead>
   <tbody>
@@ -148,9 +280,18 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
 
 </details>
 
-## Bill of Materials(BOM)
+</section>
 
-<details>
+## Bill of Materials (BOM)
+
+<section id="bom" className="section-card">
+  <div className="section-title">
+    <span>BOM</span>
+    <h2>Bill of Materials (BOM)</h2>
+    <p>Check the servos, motor control boards, cables, power supplies, clamps, and optional 3D-printed parts included in the kit.</p>
+  </div>
+
+<details className="content-details">
 <summary>View bill of materials</summary>
 
 | Part | Amount | Included|
@@ -164,9 +305,18 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
 
 </details>
 
+</section>
+
 ## 3D Printing Guide
 
-<details>
+<section id="3d-printing" className="section-card">
+  <div className="section-title">
+    <span>3D Printing</span>
+    <h2>3D Printing Guide</h2>
+    <p>Choose the right STL files and print settings before assembling a kit version of the arm.</p>
+  </div>
+
+<details className="content-details">
 <summary>View 3D printing parameters</summary>
 
 :::caution
@@ -203,9 +353,27 @@ All the parts for the leader or follower are for easy 3D printing already contai
   - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
+**Step 4: Print the Soft Gripper (Optional)**
+
+If you want the robotic arm to be able to grasp soft, fragile, or irregularly shaped objects, you can print a soft gripper to replace the default rigid gripper. The print files are available in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
+
+Printing material instructions:
+
+- Two gripper fingers: print with **TPU** material
+- Other parts: print with **PLA** material
+
 </details>
 
+</section>
+
 ## Initial System Environment
+
+<section id="environment" className="section-card">
+  <div className="section-title">
+    <span>Environment</span>
+    <h2>Initial System Environment</h2>
+    <p>Confirm Ubuntu, Jetson, CUDA, Python, PyTorch, and Torchvision requirements before installation.</p>
+  </div>
 
 **For Ubuntu x86:**
 
@@ -220,7 +388,16 @@ All the parts for the leader or follower are for easy 3D printing already contai
 - Python 3.10  
 - Torch 2.3+
 
+</section>
+
 ## Install LeRobot
+
+<section id="install-lerobot" className="section-card">
+  <div className="section-title">
+    <span>Step 1</span>
+    <h2>Install LeRobot</h2>
+    <p>Install Miniforge, the verified Seeed LeRobot repository, ffmpeg, PyTorch, and hardware-specific dependencies.</p>
+  </div>
 
 Environments such as pytorch and torchvision need to be installed based on your CUDA.
 
@@ -230,79 +407,79 @@ Environments such as pytorch and torchvision need to be installed based on your 
 
 1. Install Miniforge:
 
-```bash
-wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
+<CodeBlock language="bash">
+{`wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
 chmod +x Miniforge3-Linux-aarch64.sh
 ./Miniforge3-Linux-aarch64.sh
 # Follow the prompts by entering 'yes' or pressing Enter. Once the installation is complete:
-source ~/.bashrc
-```
+source ~/.bashrc`}
+</CodeBlock>
 
 2. Create and activate a fresh conda environment for lerobot
 
-```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
-```
+<CodeBlock language="bash">
+{`conda create -y -n lerobot python=3.10 && conda activate lerobot`}
+</CodeBlock>
 
 3. Clone Lerobot:
 
-```bash
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
-```
+<CodeBlock language="bash">
+{`git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot`}
+</CodeBlock>
 
 4. When using miniforge, install ffmpeg in your environment:
 
-```bash
-conda install ffmpeg -c conda-forge
-```
+<CodeBlock language="bash">
+{`conda install ffmpeg -c conda-forge`}
+</CodeBlock>
 
 :::tip
 This usually installs ffmpeg 7.X for your platform compiled with the libsvtav1 encoder. If libsvtav1 is not supported (check supported encoders with `ffmpeg -encoders`), you can:
 
 - [On any platform] Explicitly install ffmpeg 7.X using:
 
-```bash
-conda install ffmpeg=7.1.1 -c conda-forge
-```
+<CodeBlock language="bash">
+{`conda install ffmpeg=7.1.1 -c conda-forge`}
+</CodeBlock>
 
 - [On Linux only] Install ffmpeg build dependencies and compile ffmpeg from source with libsvtav1, and make sure you use the corresponding ffmpeg binary to your install with `which ffmpeg`.
 
 If you encounter an error like this, you can use this command too.
 
-<div align="center">
+<div className="image-frame">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="" />
 </div>
 
 :::
 
 5. Install LeRobot with dependencies for the feetech motors:
 
-```bash
-cd ~/lerobot && pip install -e ".[feetech]"
-```
+<CodeBlock language="bash">
+{`cd ~/lerobot && pip install -e ".[feetech]"`}
+</CodeBlock>
 
 6. For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) from step 5 before executing this step):
 
-```bash
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
+<CodeBlock language="bash">
+{`conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
 conda remove opencv   # Uninstall OpenCV 
 pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
 conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
-pip3 install numpy==1.26.0  # This should match torchvision
-```
+pip3 install numpy==1.26.0  # This should match torchvision`}
+</CodeBlock>
 
 7. Check Pytorch and Torchvision
 
 Since installing the lerobot environment via pip will uninstall the original Pytorch and Torchvision and install the CPU versions of Pytorch and Torchvision, you need to perform a check in Python.
 
-```python
-python   # Command to start Python in the terminal
+<CodeBlock language="python">
+{`python   # Command to start Python in the terminal
 import torch
 print(torch.cuda.is_available())
-exit()   # Exit Python
-```
+exit()   # Exit Python`}
+</CodeBlock>
 
 If the printed result is `False`, the current environment is using the CPU version of PyTorch. If you need GPU-enabled PyTorch and Torchvision on Jetson, install them according to [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson). For environments that need GPU training or inference, the final check result should be `True`.
 
@@ -312,50 +489,50 @@ If the printed result is `False`, the current environment is using the CPU versi
 
 1. Install Miniforge:
 
-```bash
-wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+<CodeBlock language="bash">
+{`wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 chmod +x Miniforge3-Linux-x86_64.sh
 ./Miniforge3-Linux-x86_64.sh
 # Once the installation is complete:
 source ~/.bashrc
 # Initialize all shells
-conda init --all
-```
+conda init --all`}
+</CodeBlock>
 
 2. Create and activate a fresh conda environment for lerobot
 
-```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
-```
+<CodeBlock language="bash">
+{`conda create -y -n lerobot python=3.10 && conda activate lerobot`}
+</CodeBlock>
 
 3. Clone Lerobot:
 
-```bash
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
-```
+<CodeBlock language="bash">
+{`git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot`}
+</CodeBlock>
 
 4. When using miniforge, install ffmpeg in your environment:
 
-```bash
-conda install ffmpeg -c conda-forge
-```
+<CodeBlock language="bash">
+{`conda install ffmpeg -c conda-forge`}
+</CodeBlock>
 
 :::tip
 This usually installs ffmpeg 7.X for your platform compiled with the libsvtav1 encoder. If libsvtav1 is not supported (check supported encoders with `ffmpeg -encoders`), you can:
 
 - [On any platform] Explicitly install ffmpeg 7.X using:
 
-```bash
-conda install ffmpeg=7.1.1 -c conda-forge
-```
+<CodeBlock language="bash">
+{`conda install ffmpeg=7.1.1 -c conda-forge`}
+</CodeBlock>
 
 - [On Linux only] Install ffmpeg build dependencies and compile ffmpeg from source with libsvtav1, and make sure you use the corresponding ffmpeg binary to your install with `which ffmpeg`.
 
 If you encounter an error like this, you can use this command too.
 
-<div align="center">
+<div className="image-frame">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="" />
 </div>
 
 :::
@@ -367,28 +544,28 @@ On a newly configured Ubuntu 22.04 VM, especially a minimal installation, `gcc` 
 
 Install the basic build tools first:
 
-```bash
-sudo apt update
-sudo apt install build-essential
-```
+<CodeBlock language="bash">
+{`sudo apt update
+sudo apt install build-essential`}
+</CodeBlock>
 
 After installation, rerun the LeRobot installation command.
 :::
 
-```bash
-cd ~/lerobot && pip install -e ".[feetech]"
-```
+<CodeBlock language="bash">
+{`cd ~/lerobot && pip install -e ".[feetech]"`}
+</CodeBlock>
 
 6. Check Pytorch and Torchvision
 
 Since installing the lerobot environment via pip will uninstall the original Pytorch and Torchvision and install the CPU versions of Pytorch and Torchvision, you need to perform a check in Python.
 
-```python
-python   # Command to start Python in the terminal
+<CodeBlock language="python">
+{`python   # Command to start Python in the terminal
 import torch
 print(torch.cuda.is_available())
-exit()   # Exit Python
-```
+exit()   # Exit Python`}
+</CodeBlock>
 
 If the printed result is `False`, the current environment is using the CPU version of PyTorch. If you need GPU training or inference, install the Pytorch and Torchvision versions that match your CUDA version according to the [official PyTorch guide](https://pytorch.org/index.html). For environments with an NVIDIA GPU that need GPU acceleration, the final check result should be `True`.
 
@@ -398,9 +575,9 @@ Note: NVIDIA RTX 50-series GPUs require the preview version of CUDA 12.8 or high
 
 The download command is as follows:
 
-```bash
-pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
-```
+<CodeBlock language="bash">
+{`pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128`}
+</CodeBlock>
 
 :::
 
@@ -408,12 +585,32 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 
 </Tabs>
 
-## Configure the motors
+</section>
+
+## Configure Motors and Assemble the Arm
+
+<section id="setup-motors-assembly" className="section-card">
+  <div className="section-title">
+    <span>Step 2</span>
+    <h2>Configure Motors and Assemble the Arm</h2>
+    <p>Set servo IDs and baud rates, verify wiring and power, then assemble the leader and follower arms.</p>
+  </div>
+
+  <div className="safety-alert compact">
+    <div className="safety-alert-icon">⚠️</div>
+    <div className="safety-alert-content">
+      <strong>Safety check before running</strong>
+      <p>
+        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
+        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
+      </p>
+    </div>
+  </div>
 
 :::tip
 If you purchased a pre-assembled robotic arm, please skip to the Calibrate section.
 :::
-<details>
+<details className="content-details">
 
 <summary> For kit version, please follow the steps below </summary>
 
@@ -433,9 +630,9 @@ To configure the motors designate one bus servo adapter and 6 motors for your le
 You now should plug the 5V or 12V power supply to the motor bus. 5V for the STS3215 7.4V motors and 12V for the STS3215 12V motors. Note that the leader arm always uses the 7.4V motors, so watch out that you plug in the right power supply if you have 12V and 7.4V motors, otherwise you might burn your motors! Now, connect the motor bus to your computer via USB. Note that the USB doesn't provide any power, and both the power supply and USB have to be plugged in.
 :::
 
-<div align="center">
+<div className="image-frame">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" alt="" />
 </div>
 
 ***The following are the code calibration steps, please calibrate with the reference wiring servo in the picture above***
@@ -443,22 +640,22 @@ You now should plug the 5V or 12V power supply to the motor bus. 5V for the STS3
 Find USB ports associated to your arms
 To find the correct ports for each arm, run the utility script twice:
 
-```bash
-lerobot-find-port
-```
+<CodeBlock language="bash">
+{`lerobot-find-port`}
+</CodeBlock>
 
 Example output:
 
-```bash
-Finding all available ports for the MotorBus.
+<CodeBlock language="bash">
+{`Finding all available ports for the MotorBus.
 ['/dev/ttyACM0', '/dev/ttyACM1']
 Remove the usb cable from your MotorsBus and press Enter when done.
 
 [...Disconnect corresponding leader or follower arm and press Enter...]
 
 The port of this MotorsBus is /dev/ttyACM1
-Reconnect the USB cable.
-```
+Reconnect the USB cable.`}
+</CodeBlock>
 
 :::tip
 Remember to remove the usb, otherwise the interface will not be detected.
@@ -470,10 +667,10 @@ Example output when identifying the leader arm's port (e.g., `/dev/tty.usbmodem5
 
 You might need to give access to the USB ports by running:
 
-```bash
-sudo chmod 666 /dev/ttyACM0
-sudo chmod 666 /dev/ttyACM1
-```
+<CodeBlock language="bash">
+{`sudo chmod 666 /dev/ttyACM0
+sudo chmod 666 /dev/ttyACM1`}
+</CodeBlock>
 
 :::tip
 
@@ -503,31 +700,31 @@ Again, please make sure that the servo joint IDs and gear ratios strictly corres
 
 Connect the usb cable from your computer and the power supply to the follower arm’s controller board. Then, run the following command.
 
-```bash
-lerobot-setup-motors \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0  # <- paste here the port found at previous step
-```
+<CodeBlock language="bash">
+{`lerobot-setup-motors \\
+    --robot.type=so101_follower \\
+    --robot.port=/dev/ttyACM0  # <- paste here the port found at previous step`}
+</CodeBlock>
 
 You should see the following instruction.
 
-```bash
-Connect the controller board to the 'gripper' motor only and press enter.
-```
+<CodeBlock language="bash">
+{`Connect the controller board to the 'gripper' motor only and press enter.`}
+</CodeBlock>
 
 As instructed, plug the gripper’s motor. Make sure it’s the only motor connected to the board, and that the motor itself is not yet daisy-chained to any other motor. As you press [Enter], the script will automatically set the id and baudrate for that motor.
 
 You should then see the following message:
 
-```bash
-'gripper' motor id set to 6
-```
+<CodeBlock language="bash">
+{`'gripper' motor id set to 6`}
+</CodeBlock>
 
 Followed by the next instruction:
 
-```bash
-Connect the controller board to the 'wrist_roll' motor only and press enter.
-```
+<CodeBlock language="bash">
+{`Connect the controller board to the 'wrist_roll' motor only and press enter.`}
+</CodeBlock>
 
 You can disconnect the 3-pin cable from the controller board, but you can leave it connected to the gripper motor on the other end, as it will already be in the right place. Now, plug in another 3-pin cable to the wrist roll motor and connect it to the controller board. As with the previous motor, make sure it is the only motor connected to the board and that the motor itself isn’t connected to any other one.
 
@@ -545,16 +742,17 @@ When you are done, the script will simply finish, at which point the motors are 
 
 Do the same steps for the leader arm.
 
-```bash
-lerobot-setup-motors \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0  # <- paste here the port found at previous step
-```
+<CodeBlock language="bash">
+{`lerobot-setup-motors \\
+    --teleop.type=so101_leader \\
+    --teleop.port=/dev/ttyACM0  # <- paste here the port found at previous step`}
+</CodeBlock>
 
 **Assembly**
 
-<div class="video-container" style={{marginBottom: '24px'}}>
-<iframe width="900" height="600" src="https://www.youtube.com/embed/hbW6eFYkHTg?si=jKdpTyI8wRC-iHxO" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/hbW6eFYkHTg?si=jKdpTyI8wRC-iHxO" title="youtube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </div>
 
 :::tip
@@ -594,7 +792,27 @@ lerobot-setup-motors \
 
 </details>
 
-## Calibrate
+</section>
+
+## Calibrate the Robotic Arm
+
+<section id="calibration" className="section-card">
+  <div className="section-title">
+    <span>Step 3</span>
+    <h2>Calibrate the Robotic Arm</h2>
+    <p>Calibrate the follower and leader arms so their physical positions match their software state.</p>
+  </div>
+
+  <div className="safety-alert compact">
+    <div className="safety-alert-icon">⚠️</div>
+    <div className="safety-alert-content">
+      <strong>Safety check before running</strong>
+      <p>
+        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
+        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
+      </p>
+    </div>
+  </div>
 
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
@@ -608,8 +826,8 @@ Next, you need to connect the power supply and data cable to your SO-10x robot f
 
 ### Recalibrate the robotic arm
 
-<details>
-<summary><span style={{fontSize: '1.15rem', fontWeight: 700}}>View recalibration options</span></summary>
+<details className="content-details">
+<summary>View recalibration options</summary>
 
 If you need to re-calibrate the robotic arms, there are two options available:
 
@@ -621,9 +839,9 @@ Completely delete the files under `~/.cache/huggingface/lerobot/calibration/robo
 
 Run the calibration command directly in the terminal. If the arm has been calibrated before, the following prompt will appear:
 
-```bash
-Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration:
-```
+<CodeBlock language="bash">
+{`Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration:`}
+</CodeBlock>
 
 Type `c` and press **Enter** to start recalibration. Press **Enter** directly to keep and use the existing calibration data.
 
@@ -641,18 +859,18 @@ Please connect the interfaces of the 6 robot servos via a 3-pin cable and connec
 
 ***Interface permissions are given first***
 
-```bash
-sudo chmod 666 /dev/ttyACM*
-```
+<CodeBlock language="bash">
+{`sudo chmod 666 /dev/ttyACM*`}
+</CodeBlock>
 
 ***Then calibrate the follower arm***
 
-```python
-lerobot-calibrate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \# <- The port of your robot
-    --robot.id=my_awesome_follower_arm  # <- Give the robot a unique name
-```
+<CodeBlock language="bash">
+{`lerobot-calibrate \\
+    --robot.type=so101_follower \\
+    --robot.port=/dev/ttyACM0 # <- The port of your robot
+    --robot.id=my_awesome_follower_arm  # <- Give the robot a unique name`}
+</CodeBlock>
 
 The video below shows how to perform the calibration. First you need to move the robot to the position where all joints are in the middle of their ranges. Then after pressing enter you have to move each joint through its full range of motion.
 
@@ -664,20 +882,21 @@ Due to the update of the lerobot repository, it is normal that the terminal does
 
 Do the same steps to calibrate the leader arm, run the following command or API example:
 
-```python
-lerobot-calibrate \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \# <- The port of your robot
-    --teleop.id=my_awesome_leader_arm  # <- Give the robot a unique name
-```
+<CodeBlock language="bash">
+{`lerobot-calibrate \\
+    --teleop.type=so101_leader \\
+    --teleop.port=/dev/ttyACM1 # <- The port of your robot
+    --teleop.id=my_awesome_leader_arm  # <- Give the robot a unique name`}
+</CodeBlock>
 
 :::tip
 
 If you encounter the error “Could not connect on port '/dev/ttyACM0'. Make sure you are using the correct port., Try running lerobot-find-port” while calibrating the Leader or Follower arms, you need to grant the necessary permissions by running:`sudo chmod 666 /dev/ttyACM*`
 :::
 
-<div class="video-container" style={{marginBottom: '24px'}}>
-<iframe width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </div>
 
 ### (Optional) Middle-position calibration with the Seeed Studio SoARM quick tool
@@ -690,11 +909,11 @@ This usually means the current position / zero-offset of a servo is abnormal, ca
 
 #### 1) Clone the tool from GitHub and install dependencies
 
-```bash
-git clone https://github.com/Seeed-Projects/Seeed_RoboController.git
+<CodeBlock language="bash">
+{`git clone https://github.com/Seeed-Projects/Seeed_RoboController.git
 cd Seeed_RoboController
-pip install -r requirements.txt
-```
+pip install -r requirements.txt`}
+</CodeBlock>
 
 #### 2) Middle-position calibration and verification
 
@@ -708,83 +927,111 @@ Run in order (the commands will interactively ask you to select a port):
 
 1. (Optional) Disable torque to adjust joints manually:
 
-```bash
-python -m src.tools.servo_disable
-```
+<CodeBlock language="bash">
+{`python -m src.tools.servo_disable`}
+</CodeBlock>
 
 2. Do middle-position calibration (set current position to 2048):
 
-```bash
-python -m src.tools.servo_middle_calibration
-```
+<CodeBlock language="bash">
+{`python -m src.tools.servo_middle_calibration`}
+</CodeBlock>
 
 3. Verify: move the servo to 2048 and check if it returns to the expected middle position:
 
-```bash
-python -m src.tools.servo_center_test
-```
+<CodeBlock language="bash">
+{`python -m src.tools.servo_center_test`}
+</CodeBlock>
 
 After the middle-position calibration, return to the `lerobot-calibrate` steps above and redo the full-arm calibration.
 
 If you encounter the above errors, you can use the Steering Gear Debugging Tool for debugging. It supports Windows, Ubuntu, and Mac.
 
-<div style={{textAlign: 'center'}}>
-    <Link to="/lerobot_steering_gear_debugging_tool" style={{display: 'inline-block', width: 'auto', height: '40px', lineHeight: '40px', padding: '0 24px', whiteSpace: 'nowrap', backgroundColor: '#1eff00', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
-        ▶ Open Steering Gear Debugging Tool Tutorial
-    </Link>
+<div className="hero-actions">
+    <a href="/lerobot_steering_gear_debugging_tool">▶ Open Steering Gear Debugging Tool Tutorial</a>
 </div>
 
-## Teleoperate
+</section>
+
+## Teleoperation
+
+<section id="teleoperation" className="section-card">
+  <div className="section-title">
+    <span>Step 4</span>
+    <h2>Teleoperation</h2>
+    <p>Run a leader-to-follower teleoperation test before adding cameras or collecting data.</p>
+  </div>
+
+  <div className="safety-alert compact">
+    <div className="safety-alert-icon">⚠️</div>
+    <div className="safety-alert-content">
+      <strong>Safety check before running</strong>
+      <p>
+        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
+        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
+      </p>
+    </div>
+  </div>
 
 **Simple teleop**
 Then you are ready to teleoperate your robot! Run this simple script (it won't connect and display the cameras):
 
 Note that the id associated with a robot is used to store the calibration file. It’s important to use the same id when teleoperating, recording, and evaluating when using the same setup.
 
-```bash
-sudo chmod 666 /dev/ttyACM*
-```
+<CodeBlock language="bash">
+{`sudo chmod 666 /dev/ttyACM*`}
+</CodeBlock>
 
-```bash
-lerobot-teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm
-```
+<CodeBlock language="bash">
+{`lerobot-teleoperate \\
+    --robot.type=so101_follower \\
+    --robot.port=/dev/ttyACM0 \\
+    --robot.id=my_awesome_follower_arm \\
+    --teleop.type=so101_leader \\
+    --teleop.port=/dev/ttyACM1 \\
+    --teleop.id=my_awesome_leader_arm`}
+</CodeBlock>
 
 The teleoperate command will automatically:
 
 1. Identify any missing calibrations and initiate the calibration procedure.
 2. Connect the robot and teleop device and start teleoperation.
 
-<div class="video-container" style={{marginBottom: '24px'}}>
-<iframe width="900" height="600" src="https://www.youtube.com/embed/hnRwfcyX1ZI?si=RuzYjP_FUTK16lfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/hnRwfcyX1ZI?si=RuzYjP_FUTK16lfs" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </div>
 
-## Add cameras
+</section>
 
-<details>
+## Add Cameras
+
+<section id="camera" className="section-card">
+  <div className="section-title">
+    <span>Step 5</span>
+    <h2>Add Cameras</h2>
+    <p>Add OpenCV, RealSense, or Orbbec cameras and verify image streams before recording datasets.</p>
+  </div>
+
+<details className="content-details">
 <summary> If using RealSense D435i/D405 </summary>
 
 RealSense depth cameras can provide RGB-D perception for LeRobot and are suitable for tasks such as object recognition, point cloud reconstruction, and tabletop manipulation. The recommended models here are **RealSense D405** and **RealSense D435i**.
 
 **RealSense D405**
 
-<div align="center">
+<div className="image-frame">
     <img width={420}
-    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" />
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" alt="" />
 </div>
 
 The RealSense D405 is a short-range stereo depth camera designed for high-precision close-range tasks such as tabletop robotic manipulation, with a typical working range of **7 cm to 50 cm**.
 
 **RealSense D435i**
 
-<div align="center">
+<div className="image-frame">
     <img width={420}
-    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" />
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" alt="" />
 </div>
 
 The RealSense D435i combines depth sensing, RGB imaging, and an IMU, making it suitable for mid- to close-range applications such as 3D reconstruction, SLAM, and robotic environment perception.
@@ -793,42 +1040,42 @@ The RealSense D435i combines depth sensing, RGB imaging, and an IMU, making it s
 
 Current camera support is available on the `DepthCameraSupport` branch:
 
-```bash
-git checkout DepthCameraSupport
-git pull origin DepthCameraSupport
-```
+<CodeBlock language="bash">
+{`git checkout DepthCameraSupport
+git pull origin DepthCameraSupport`}
+</CodeBlock>
 
 Confirm the current branch:
 
-```bash
-git branch --show-current
-```
+<CodeBlock language="bash">
+{`git branch --show-current`}
+</CodeBlock>
 
 Expected output:
 
-```bash
-DepthCameraSupport
-```
+<CodeBlock language="bash">
+{`DepthCameraSupport`}
+</CodeBlock>
 
 **2. Install RealSense in Editable Mode**
 
 If you only use RealSense:
 
-```bash
-pip install -e ".[realsense]"
-```
+<CodeBlock language="bash">
+{`pip install -e ".[realsense]"`}
+</CodeBlock>
 
 **3. Grant Camera Permissions**
 
-```bash
-chmod a+rw /dev/bus/usb/*/* 
-```
+<CodeBlock language="bash">
+{`chmod a+rw /dev/bus/usb/*/*`}
+</CodeBlock>
 
 **4. Detect Cameras**
 
-```bash
-lerobot-find-cameras realsense
-```
+<CodeBlock language="bash">
+{`lerobot-find-cameras realsense`}
+</CodeBlock>
 
 This step will output:
 
@@ -843,11 +1090,11 @@ Enter the retrieved `Serial number` into the `serial_number_or_name` parameter o
 
 Dual RealSense test:
 
-```bash
-lerobot-teleoperate \
-  --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.id=my_awesome_follower_arm \
+<CodeBlock language="bash">
+{`lerobot-teleoperate \\
+  --robot.type=so101_follower \\
+  --robot.port=/dev/ttyACM0 \\
+  --robot.id=my_awesome_follower_arm \\
   --robot.cameras='{
     d435i_color: {
       type: realsense_d435i_color,
@@ -892,12 +1139,12 @@ lerobot-teleoperate \
       rotation: 0,
       warmup_s: 5
     }
-  }' \
-  --teleop.type=so101_leader \
-  --teleop.port=/dev/ttyACM1 \
-  --teleop.id=my_awesome_leader_arm \
-  --display_data=true
-```
+  }' \\
+  --teleop.type=so101_leader \\
+  --teleop.port=/dev/ttyACM1 \\
+  --teleop.id=my_awesome_leader_arm \\
+  --display_data=true`}
+</CodeBlock>
 
 **6. Parameter Notes**
 
@@ -907,24 +1154,25 @@ lerobot-teleoperate \
 
 </details>
 
-<details>
+<details className="content-details">
 <summary> If using Orbbec Gemini2/Gemini336 cameras </summary>
 
 
-<div align="center">
+<div className="image-frame">
     <img width={800}
-    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" alt="" />
 </div>
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer" >
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<div className="get-one-now-panel">
+  <a className="get-one-now-button" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer">
+    Get One Now 🖱️
+  </a>
+</div>
 
 Orbbec Gemini 2 is a high-performance RGB-D camera for robotics applications, providing synchronized RGB and depth streams with precise depth-to-color alignment. Combined with stereo depth sensing and a built-in 6-axis IMU, it is well suited for robotic tasks such as object detection, 3D perception, mapping, and navigation. Its compact design and full Orbbec SDK support make it suitable for both research and real-world deployment.
 
-<div align="center">
+<div className="image-frame">
     <img width={400}
-    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp" />
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp" alt="" />
 </div>
 
 Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
@@ -933,50 +1181,50 @@ Gemini 336 is a new member of the Gemini 330 series. It inherits the strong dept
 
 Current camera support is available on the `DepthCameraSupport` branch:
 
-```bash
-git checkout DepthCameraSupport
-git pull origin DepthCameraSupport
-```
+<CodeBlock language="bash">
+{`git checkout DepthCameraSupport
+git pull origin DepthCameraSupport`}
+</CodeBlock>
 
 Confirm the current branch:
 
-```bash
-git branch --show-current
-```
+<CodeBlock language="bash">
+{`git branch --show-current`}
+</CodeBlock>
 
 Expected output:
 
-```bash
-DepthCameraSupport
-```
+<CodeBlock language="bash">
+{`DepthCameraSupport`}
+</CodeBlock>
 
 **2. Install LeRobot in Editable Mode**
 
 If you only use Orbbec:
 
-```bash
-pip install -e ".[orbbec]"
-```
+<CodeBlock language="bash">
+{`pip install -e ".[orbbec]"`}
+</CodeBlock>
 
 **3. Grant Camera Permissions**
 
-```bash
-chmod a+rw /dev/bus/usb/*/* 
-```
+<CodeBlock language="bash">
+{`chmod a+rw /dev/bus/usb/*/*`}
+</CodeBlock>
 
 **4. USBFS Cache Size Configuration**
 
 By default, the USBFS cache size is 16 MB. This value is insufficient for high-resolution images, multiple data streams, and multi-device scenarios. Users can increase the cache size up to 128 MB.
 
 Check the USBFS Cache Size
-```bash
-cat /sys/module/usbcore/parameters/usbfs_memory_mb
-```
+<CodeBlock language="bash">
+{`cat /sys/module/usbcore/parameters/usbfs_memory_mb`}
+</CodeBlock>
 
 Temporarily Increase USBFS Cache Size
-```bash
-sudo sh -c 'echo 128> /sys/module/usbcore/parameters/usbfs_memory_mb'
-```
+<CodeBlock language="bash">
+{`sudo sh -c 'echo 128> /sys/module/usbcore/parameters/usbfs_memory_mb'`}
+</CodeBlock>
 
 :::tip
 
@@ -986,9 +1234,9 @@ If you still encounter the `timeout error TimeoutError: Timed out waiting for fr
 
 **5. Detect Cameras**
 
-```bash
-lerobot-find-cameras orbbec
-```
+<CodeBlock language="bash">
+{`lerobot-find-cameras orbbec`}
+</CodeBlock>
 
 This step will output:
 
@@ -1003,11 +1251,11 @@ Enter the retrieved `Serial Number` into the `serial_number_or_name` parameter o
 
 Single Orbbec test:
 
-```bash
-lerobot-teleoperate \
-  --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.id=my_awesome_follower_arm \
+<CodeBlock language="bash">
+{`lerobot-teleoperate \\
+  --robot.type=so101_follower \\
+  --robot.port=/dev/ttyACM0 \\
+  --robot.id=my_awesome_follower_arm \\
   --robot.cameras='{
     orbbec_color: {
       type: orbbec_color,
@@ -1029,20 +1277,20 @@ lerobot-teleoperate \
       rotation: 0,
       warmup_s: 5
     }
-  }' \
-  --teleop.type=so101_leader \
-  --teleop.port=/dev/ttyACM1 \
-  --teleop.id=my_awesome_leader_arm \
-  --display_data=true
-```
+  }' \\
+  --teleop.type=so101_leader \\
+  --teleop.port=/dev/ttyACM1 \\
+  --teleop.id=my_awesome_leader_arm \\
+  --display_data=true`}
+</CodeBlock>
 
 Single Orbbec Camera Test + Standard Camera Test:
 
-```bash
-  lerobot-teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
+<CodeBlock language="bash">
+{`  lerobot-teleoperate \\
+    --robot.type=so101_follower \\
+    --robot.port=/dev/ttyACM0 \\
+    --robot.id=my_awesome_follower_arm \\
     --robot.cameras='{
       orbbec_color: {
         type: orbbec_color,
@@ -1071,12 +1319,12 @@ Single Orbbec Camera Test + Standard Camera Test:
       height: 480,
       fps: 30,
       fourcc: "MJPG"} 
-    }' \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true
-```
+    }' \\
+    --teleop.type=so101_leader \\
+    --teleop.port=/dev/ttyACM1 \\
+    --teleop.id=my_awesome_leader_arm \\
+    --display_data=true`}
+</CodeBlock>
 
 :::tip
 When using a single Orbbec camera together with a standard camera, it is recommended to plug in the Orbbec camera first, followed by the standard camera.
@@ -1090,25 +1338,11 @@ When running the lerobot-find-cameras opencv command to detect camera IDs, you w
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` for better stability.
 - It is recommended to keep the resolution at `640x480` for more stable display and data transfer.
 
-**8. Common Issues**
-
-If you see the following error:
-
-```bash
-No Orbbec camera found for 'XXXX'
-```
-
-it usually means the serial number in the configuration does not match the currently connected device. Run:
-
-```bash
-lerobot-find-cameras orbbec
-```
-
-Then confirm the actual `serial` and update `serial_number_or_name` in your command.
+For camera-related errors, see the FAQ section at the end of this page.
 
 </details>
 
-<details>
+<details className="content-details">
 
 <summary> If using a regular camera </summary>
 
@@ -1122,14 +1356,14 @@ To instantiate a camera, you need a camera identifier. This identifier might cha
 
 To find the camera indices of the cameras plugged into your system, run the following script:
 
-```python
-lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
-```
+<CodeBlock language="python">
+{`lerobot-find-cameras opencv # or realsense for Intel Realsense cameras`}
+</CodeBlock>
 
 The terminal will print out the following information.
 
-```markdown
---- Detected Cameras ---
+<CodeBlock language="text">
+{`--- Detected Cameras ---
 Camera #0:
   Name: OpenCV Camera @ 0
   Type: OpenCV
@@ -1141,8 +1375,8 @@ Camera #0:
     Height: 1080
     Fps: 15.0
 --------------------
-(more cameras ...)
-```
+(more cameras ...)`}
+</CodeBlock>
 
 You can find the pictures taken by each camera in the `outputs/captured_images` directory.
 
@@ -1152,17 +1386,17 @@ When using Intel RealSense cameras in , you could get this error: , this can be 
 
 Then you will be able to display the cameras on your computer while you are teleoperating by running the following code. This is useful to prepare your setup before recording your first dataset.
 
-```bash
-lerobot-teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true
-```
+<CodeBlock language="bash">
+{`lerobot-teleoperate \\
+    --robot.type=so101_follower \\
+    --robot.port=/dev/ttyACM0 \\
+    --robot.id=my_awesome_follower_arm \\
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\
+    --teleop.type=so101_leader \\
+    --teleop.port=/dev/ttyACM1 \\
+    --teleop.id=my_awesome_leader_arm \\
+    --display_data=true`}
+</CodeBlock>
 
 If you have more cameras, you can change `--robot.cameras` to add cameras. You should note the format of the index_or_path, which is determined by the last digit of the camera ID output by `python -m lerobot.find_cameras opencv`.
 
@@ -1172,17 +1406,17 @@ Images in the `fourcc: "MJPG"` format are compressed. You can try higher resolut
 
 For example, you want to add a side camera:
 
-```bash
-lerobot-teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true
-```
+<CodeBlock language="bash">
+{`lerobot-teleoperate \\
+    --robot.type=so101_follower \\
+    --robot.port=/dev/ttyACM0 \\
+    --robot.id=my_awesome_follower_arm \\
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\
+    --teleop.type=so101_leader \\
+    --teleop.port=/dev/ttyACM1 \\
+    --teleop.id=my_awesome_leader_arm \\
+    --display_data=true`}
+</CodeBlock>
 
 :::tip
 Images in the `fourcc: "MJPG"` format are compressed. You can try higher resolutions, and you may also attempt the `YUYV` format. However, the latter will reduce the image resolution and FPS, leading to lag in the robotic arm's operation. Currently, under the `MJPG` format, it can support 3 cameras at a resolution of `1920*1080` while maintaining `30FPS`. That said, connecting 2 cameras to a computer via the same USB HUB is still not recommended.
@@ -1191,87 +1425,108 @@ Images in the `fourcc: "MJPG"` format are compressed. You can try higher resolut
 :::tip
 If you find bug like this.
 
-<div align="center">
+<div className="image-frame">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" alt="" />
 </div>
 
 You can downgrade the rerun version to resolve the issue.
 
-```bash
-pip3 install rerun-sdk==0.23
-```
+<CodeBlock language="bash">
+{`pip3 install rerun-sdk==0.23`}
+</CodeBlock>
 
 :::
 
-<div class="video-container" style={{marginBottom: '24px'}}>
-<iframe width="900" height="600" src="https://www.youtube.com/embed/EUcXlLlOjGE?si=6ncQ7o5ZFLR4PGTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/EUcXlLlOjGE?si=6ncQ7o5ZFLR4PGTU" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </div>
 
 </details>
 
-## Record the dataset
+</section>
+
+## Record Dataset
+
+<section id="record-dataset" className="section-card">
+  <div className="section-title">
+    <span>Step 6</span>
+    <h2>Record Dataset</h2>
+    <p>Record local datasets or upload them to Hugging Face Hub, then keep the dataset clean and consistent.</p>
+  </div>
+
+  <div className="safety-alert compact">
+    <div className="safety-alert-icon">⚠️</div>
+    <div className="safety-alert-content">
+      <strong>Safety check before running</strong>
+      <p>
+        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
+        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
+      </p>
+    </div>
+  </div>
 
 - If you want to save the dataset locally, you can run it directly:
 
-```bash
-lerobot-record \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true \
-    --dataset.repo_id=seeedstudio123/test \
-    --dataset.num_episodes=5 \
-    --dataset.single_task="Grab the black cube" \
-    --dataset.push_to_hub=false \
-    --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
-```
+<CodeBlock language="bash">
+{`lerobot-record \\
+    --robot.type=so101_follower \\
+    --robot.port=/dev/ttyACM0 \\
+    --robot.id=my_awesome_follower_arm \\
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\
+    --teleop.type=so101_leader \\
+    --teleop.port=/dev/ttyACM1 \\
+    --teleop.id=my_awesome_leader_arm \\
+    --display_data=true \\
+    --dataset.repo_id=seeedstudio123/test \\
+    --dataset.num_episodes=5 \\
+    --dataset.single_task="Grab the black cube" \\
+    --dataset.push_to_hub=false \\
+    --dataset.episode_time_s=30 \\
+    --dataset.reset_time_s=30`}
+</CodeBlock>
 
 Among them, `repo_id` can be modified customarily, and `push_to_hub=false`. Finally, the dataset will be saved in the `~/.cache/huggingface/lerobot` directory in the home folder, where the aforementioned `seeedstudio123/test` folder will be created.
 
 - If you want to use the Hugging Face hub features for uploading your dataset and you haven't previously done it, make sure you've logged in using a write-access token, which can be generated from the [Hugging Face settings](https://huggingface.co/settings/tokens):
 
-```bash
-huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
-```
+<CodeBlock language="bash">
+{`huggingface-cli login --token \${HUGGINGFACE_TOKEN} --add-to-git-credential`}
+</CodeBlock>
 
 Store your Hugging Face repository name in a variable to run these commands:
 
-```bash
-HF_USER=$(huggingface-cli whoami | head -n 1)
-echo $HF_USER
-```
+<CodeBlock language="bash">
+{`HF_USER=$(huggingface-cli whoami | head -n 1)
+echo $HF_USER`}
+</CodeBlock>
 
 Record 5 episodes and upload your dataset to the hub:
 
-```bash
-lerobot-record \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true \
-    --dataset.repo_id=${HF_USER}/record-test \
-    --dataset.num_episodes=5 \
-    --dataset.single_task="Grab the black cube" \
-    --dataset.push_to_hub=true \
-    --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
-```
+<CodeBlock language="bash">
+{`lerobot-record \\
+    --robot.type=so101_follower \\
+    --robot.port=/dev/ttyACM0 \\
+    --robot.id=my_awesome_follower_arm \\
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\
+    --teleop.type=so101_leader \\
+    --teleop.port=/dev/ttyACM1 \\
+    --teleop.id=my_awesome_leader_arm \\
+    --display_data=true \\
+    --dataset.repo_id=\${HF_USER}/record-test \\
+    --dataset.num_episodes=5 \\
+    --dataset.single_task="Grab the black cube" \\
+    --dataset.push_to_hub=true \\
+    --dataset.episode_time_s=30 \\
+    --dataset.reset_time_s=30`}
+</CodeBlock>
 
 You will see a lot of lines appearing like this one:
 
-```bash
-INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
-```
+<CodeBlock language="bash">
+{`INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)`}
+</CodeBlock>
 
 **Record function**
 
@@ -1316,9 +1571,9 @@ Control the data recording flow using keyboard shortcuts:
 
 If keyboard not work, you may need install other version of pynput.
 
-```bash
-pip install pynput==1.6.8
-```
+<CodeBlock language="bash">
+{`pip install pynput==1.6.8`}
+</CodeBlock>
 
 :::
 
@@ -1338,18 +1593,22 @@ pip install pynput==1.6.8
 
 If you want to dive deeper into this important topic, you can check out the [blog post](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) we wrote on what makes a good dataset.
 
-**Troubleshooting**
-
-Linux-specific Issue:  
-If Right Arrow/Left Arrow/ESC keys are unresponsive during recording:  
-
-- Verify the `$DISPLAY` environment variable is set (see [pynput limitations](https://pynput.readthedocs.io/en/latest/limitations.html)).  
-
-<div class="video-container" style={{marginBottom: '24px'}}>
-<iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=-eDB73KgUksyJXa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+For keyboard shortcut issues during recording, see the FAQ section at the end of this page.
+<div className="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=-eDB73KgUksyJXa-" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </div>
 
-## Visualize the dataset
+</section>
+
+## Visualize Dataset
+
+<section id="visualize-dataset" className="section-card">
+  <div className="section-title">
+    <span>Dataset</span>
+    <h2>Visualize Dataset</h2>
+    <p>Inspect recorded images, actions, and episodes before training.</p>
+  </div>
 
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
@@ -1357,32 +1616,52 @@ The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO
 
 If you uploaded your dataset to the hub with `--control.push_to_hub=true`, you can [visualize your dataset online](https://huggingface.co/spaces/lerobot/visualize_dataset) by copy pasting your repo id given by:
 
-```bash
-echo ${HF_USER}/so101_test  
-```
+<CodeBlock language="bash">
+{`echo \${HF_USER}/so101_test`}
+</CodeBlock>
 
 If you didn't upload with `--dataset.push_to_hub=false`, you can also visualize it locally with:
 
-```bash
-lerobot-dataset-viz \
-  --repo-id ${HF_USER}/so101_test \
-```
+<CodeBlock language="bash">
+{`lerobot-dataset-viz \\
+  --repo-id \${HF_USER}/so101_test \\`}
+</CodeBlock>
 
 If you upload with `--dataset.push_to_hub=false`, you can also visualize it locally with:
 
-```bash
-lerobot-dataset-viz \
-  --repo-id seeed_123/so101_test \
-```
+<CodeBlock language="bash">
+{`lerobot-dataset-viz \\
+  --repo-id seeed_123/so101_test \\`}
+</CodeBlock>
 
 **Here, `seeed_123` is the custom `repo_id` name defined when collecting data.**
 
-<div align="center">
+<div className="image-frame">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/visualize_datasets.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/visualize_datasets.png" alt="" />
 </div>
 
-## Replay an episode
+</section>
+
+## Replay Dataset
+
+<section id="replay-dataset" className="section-card">
+  <div className="section-title">
+    <span>Dataset</span>
+    <h2>Replay Dataset</h2>
+    <p>Replay a recorded episode on the real arm to check action consistency.</p>
+  </div>
+
+  <div className="safety-alert compact">
+    <div className="safety-alert-icon">⚠️</div>
+    <div className="safety-alert-content">
+      <strong>Safety check before running</strong>
+      <p>
+        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
+        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
+      </p>
+    </div>
+  </div>
 
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
@@ -1392,23 +1671,43 @@ A useful feature is the `replay` function, which allows you to replay any episod
 
 You can replay the first episode on your robot with either the command below or with the API example:
 
-```bash
-lerobot-replay \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
-    --dataset.repo_id=seeedstudio123 \
-    --dataset.root=~/.cache/huggingface/lerobot/seeedstudio123 \
-    --dataset.episode=0 \
-```
+<CodeBlock language="bash">
+{`lerobot-replay \\
+    --robot.type=so101_follower \\
+    --robot.port=/dev/ttyACM0 \\
+    --robot.id=my_awesome_follower_arm \\
+    --dataset.repo_id=seeedstudio123 \\
+    --dataset.root=~/.cache/huggingface/lerobot/seeedstudio123 \\
+    --dataset.episode=0 \\`}
+</CodeBlock>
 
 Your robot should replicate movements similar to those you recorded.
 
 In this command, `dataset.root` specifies the physical path to the dataset, and dataset.`repo_id` is the custom name defined during data collection.
 
-## Train And Evaluate
+</section>
 
-<details>
+## Train and Evaluate
+
+<section id="training" className="section-card">
+  <div className="section-title">
+    <span>Step 7</span>
+    <h2>Train and Evaluate</h2>
+    <p>Train and evaluate policies such as ACT, SmolVLA, Pi0, Pi0.5, GR00T, PEFT, and asynchronous inference.</p>
+  </div>
+
+  <div className="safety-alert compact">
+    <div className="safety-alert-icon">⚠️</div>
+    <div className="safety-alert-content">
+      <strong>Safety check before running</strong>
+      <p>
+        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
+        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
+      </p>
+    </div>
+  </div>
+
+<details className="content-details">
 
 <summary>[ACT](https://huggingface.co/docs/lerobot/act) </summary>
 
@@ -1418,52 +1717,52 @@ To train a policy to control your robot, use the [lerobot-train](https://github.
 
 **Train**
 
-```bash
-lerobot-train \
-  --dataset.repo_id=${HF_USER}/so101_test \
-  --policy.type=act \
-  --output_dir=outputs/train/act_so101_test \
-  --job_name=act_so101_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --steps=300000 
-```
+<CodeBlock language="bash">
+{`lerobot-train \\
+  --dataset.repo_id=\${HF_USER}/so101_test \\
+  --policy.type=act \\
+  --output_dir=outputs/train/act_so101_test \\
+  --job_name=act_so101_test \\
+  --policy.device=cuda \\
+  --wandb.enable=false \\
+  --steps=300000`}
+</CodeBlock>
 
 **If you want to train on a local dataset, make sure the `repo_id` matches the one used during data collection and add `--policy.push_to_hub=False`.**
 
-```bash
-lerobot-train \
-  --dataset.repo_id=seeedstudio123/test \
-  --policy.type=act \
-  --output_dir=outputs/train/act_so101_test \
-  --job_name=act_so101_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --policy.push_to_hub=false\
-  --steps=300000 
-```
+<CodeBlock language="bash">
+{`lerobot-train \\
+  --dataset.repo_id=seeedstudio123/test \\
+  --policy.type=act \\
+  --output_dir=outputs/train/act_so101_test \\
+  --job_name=act_so101_test \\
+  --policy.device=cuda \\
+  --wandb.enable=false \\
+  --policy.push_to_hub=false\\
+  --steps=300000`}
+</CodeBlock>
 
 :::tip
 
 If you are using an RTX 50-series GPU, you must append --dataset.video_backend=pyav to the training command. This bypasses missing APIs in the preview version of torchvision. The full training command should look like this:
 
-```bash
-lerobot-train \
-  --dataset.repo_id=seeedstudio123/test \
-  --dataset.video_backend=pyav \
-  --policy.type=act \
-  --output_dir=outputs/train/act_so101_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --policy.push_to_hub=false \
-  --steps=300000 \
-```
+<CodeBlock language="bash">
+{`lerobot-train \\
+  --dataset.repo_id=seeedstudio123/test \\
+  --dataset.video_backend=pyav \\
+  --policy.type=act \\
+  --output_dir=outputs/train/act_so101_test \\
+  --policy.device=cuda \\
+  --wandb.enable=false \\
+  --policy.push_to_hub=false \\
+  --steps=300000 \\`}
+</CodeBlock>
 
 :::
 
 Let's explain it:
 
-- **Dataset specification**: We provide the dataset via the parameter `--dataset.repo_id=${HF_USER}/so101_test`.
+- **Dataset specification**: We provide the dataset via the parameter `--dataset.repo_id=\${HF_USER}/so101_test`.
 - **Training steps**: We modify the number of training steps using `--steps=300000`. The algorithm defaults to 800000 steps, and you can adjust it based on the difficulty of your task and by observing the loss during training.
 - **Policy type**: We provide the policy with `policy.type=act`. Similarly, you can switch between policies such as [`act`, `diffusion`, `pi0`, `pi0fast`, `pi0fast`, `sac`, `smolvla`]., which will load the configuration from `configuration_act.py`. Importantly, this policy will automatically adapt to your robot's (e.g., `laptop` and `phone`) motor states, motor actions, and the number of cameras, as this information is already stored in your dataset.
 - **Device selection**: We provide `policy.device=cuda` because we are training on an Nvidia GPU, but you can use `policy.device=mps` for training on Apple Silicon.
@@ -1477,33 +1776,33 @@ The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO
 
 You can use the `record` function from [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) but with a policy checkpoint as input. For instance, run this command to record 10 evaluation episodes:
 
-```bash
-lerobot-record \
-  --robot.type=so100_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-  --robot.id=my_awesome_follower_arm \
-  --display_data=false \
-  --dataset.repo_id=${HF_USER}/eval_so100 \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --policy.path=${HF_USER}/my_policy
-```
+<CodeBlock language="bash">
+{`lerobot-record \\
+  --robot.type=so100_follower \\
+  --robot.port=/dev/ttyACM0 \\
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\
+  --robot.id=my_awesome_follower_arm \\
+  --display_data=false \\
+  --dataset.repo_id=\${HF_USER}/eval_so100 \\
+  --dataset.single_task="Put lego brick into the transparent box" \\
+  --policy.path=\${HF_USER}/my_policy`}
+</CodeBlock>
 
 such as:
 
-```bash
-lerobot-record \
-  --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-  --robot.id=my_awesome_follower_arm \
-  --display_data=false \
-  --dataset.repo_id=seeed/eval_test123 \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
-```
+<CodeBlock language="bash">
+{`lerobot-record \\
+  --robot.type=so101_follower \\
+  --robot.port=/dev/ttyACM0 \\
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\
+  --robot.id=my_awesome_follower_arm \\
+  --display_data=false \\
+  --dataset.repo_id=seeed/eval_test123 \\
+  --dataset.single_task="Put lego brick into the transparent box" \\
+  --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model`}
+</CodeBlock>
 
-1. The `--policy.path` parameter indicates the path to the weight file of your policy training results (e.g., `outputs/train/act_so101_test/checkpoints/last/pretrained_model`). If you upload the model training result weight file to Hub, you can also use the model repository (e.g., `${HF_USER}/act_so100_test`).
+1. The `--policy.path` parameter indicates the path to the weight file of your policy training results (e.g., `outputs/train/act_so101_test/checkpoints/last/pretrained_model`). If you upload the model training result weight file to Hub, you can also use the model repository (e.g., `\${HF_USER}/act_so100_test`).
 
 2. The dataset name `dataset.repo_id` starts with `eval_`. This operation will separately record videos and data during evaluation, which will be saved in the folder starting with `eval_`, such as `seeed/eval_test123`.
 
@@ -1511,13 +1810,14 @@ lerobot-record \
 
 4. When encountering `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, please note that keywords like front and side in the `--robot.cameras` parameter must be strictly consistent with those used when collecting the dataset.
 
-<div class="video-container" style={{marginBottom: '24px'}}>
-<iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </div>
 
 </details>
 
-<details>
+<details className="content-details">
 <summary> SmolVLA </summary>
 
 [SmolVLA](https://huggingface.co/docs/lerobot/smolvla) is Hugging Face’s lightweight foundation model for robotics. Designed for easy fine-tuning on LeRobot datasets, it helps accelerate your development!
@@ -1526,9 +1826,9 @@ lerobot-record \
 
 Install SmolVLA dependencies by running:
 
-```bash
-pip install -e ".[smolvla]"
-```
+<CodeBlock language="bash">
+{`pip install -e ".[smolvla]"`}
+</CodeBlock>
 
 **Finetune SmolVLA on your data**
 
@@ -1538,17 +1838,17 @@ If you don’t have a gpu device, you can train using our notebook on [Google Co
 
 Pass your dataset to the training script using `--dataset.repo_id`. If you want to test your installation, run the following command where we use one of the datasets we collected for the [SmolVLA Paper](https://huggingface.co/papers/2506.01844).
 
-```bash
-lerobot-train \
-  --policy.path=lerobot/smolvla_base \
-  --dataset.repo_id=${HF_USER}/mydataset \
-  --batch_size=64 \
-  --steps=20000 \
-  --output_dir=outputs/train/my_smolvla \
-  --job_name=my_smolvla_training \
-  --policy.device=cuda \
-  --wandb.enable=true
-```
+<CodeBlock language="bash">
+{`lerobot-train \\
+  --policy.path=lerobot/smolvla_base \\
+  --dataset.repo_id=\${HF_USER}/mydataset \\
+  --batch_size=64 \\
+  --steps=20000 \\
+  --output_dir=outputs/train/my_smolvla \\
+  --job_name=my_smolvla_training \\
+  --policy.device=cuda \\
+  --wandb.enable=true`}
+</CodeBlock>
 
 :::tip
 You can start with a small batch size and increase it incrementally, if the GPU allows it, as long as loading times remain short.
@@ -1556,36 +1856,36 @@ You can start with a small batch size and increase it incrementally, if the GPU 
 
 Fine-tuning is an art. For a complete overview of the options for finetuning, run
 
-```bash
-lerobot-train --help
-```
+<CodeBlock language="bash">
+{`lerobot-train --help`}
+</CodeBlock>
 
 **Evaluate the finetuned model and run it in real-time**
 
 Similarly for when recording an episode, it is recommended that you are logged in to the HuggingFace Hub. You can follow the corresponding steps: [Record a dataset](https://huggingface.co/docs/lerobot/il_robots). Once you are logged in, you can run inference in your setup by doing:
 
-```bash
-lerobot-record \
-  --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM0 \ # <- Use your port
-  --robot.id=my_blue_follower_arm \ # <- Use your robot id
-  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \ # <- Use your cameras
-  --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
-  --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \  # <- This will be the dataset name on HF Hub
-  --dataset.episode_time_s=50 \
-  --dataset.num_episodes=10 \
-  # <- Teleop optional if you want to teleoperate in between episodes \
-  # --teleop.type=so100_leader \
-  # --teleop.port=/dev/ttyACM0 \
-  # --teleop.id=my_red_leader_arm \
-  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
-```
+<CodeBlock language="bash">
+{`lerobot-record \\
+  --robot.type=so101_follower \\
+  --robot.port=/dev/ttyACM0 \\ # <- Use your port
+  --robot.id=my_blue_follower_arm \\ # <- Use your robot id
+  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\ # <- Use your cameras
+  --dataset.single_task="Grasp a lego block and put it in the bin." \\ # <- Use the same task description you used in your dataset recording
+  --dataset.repo_id=\${HF_USER}/eval_DATASET_NAME_test \\  # <- This will be the dataset name on HF Hub
+  --dataset.episode_time_s=50 \\
+  --dataset.num_episodes=10 \\
+  # <- Teleop optional if you want to teleoperate in between episodes \\
+  # --teleop.type=so100_leader \\
+  # --teleop.port=/dev/ttyACM0 \\
+  # --teleop.id=my_red_leader_arm \\
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model`}
+</CodeBlock>
 
 Depending on your evaluation setup, you can configure the duration and the number of episodes to record for your evaluation suite.
 
 </details>
 
-<details>
+<details className="content-details">
 <summary> LIBERO </summary>
 
 [LIBERO](https://huggingface.co/docs/lerobot/libero) is a benchmark designed to study lifelong robot learning. The idea is that robots won’t just be pretrained once in a factory, they’ll need to keep learning and adapting with their human users over time. This ongoing adaptation is called lifelong learning in decision making (LLDM), and it’s a key step toward building robots that become truly personalized helpers.
@@ -1605,14 +1905,14 @@ To Install LIBERO, after following LeRobot official instructions, just do: `pip 
 
 Evaluate a policy on one LIBERO suite:
 
-```bash
-lerobot-eval \
-  --policy.path="your-policy-id" \
-  --env.type=libero \
-  --env.task=libero_object \
-  --eval.batch_size=2 \
-  --eval.n_episodes=3
-```
+<CodeBlock language="bash">
+{`lerobot-eval \\
+  --policy.path="your-policy-id" \\
+  --env.type=libero \\
+  --env.task=libero_object \\
+  --eval.batch_size=2 \\
+  --eval.n_episodes=3`}
+</CodeBlock>
 
 - `--env.task` picks the suite (`libero_object`, `libero_spatial`, etc.).
 - `--eval.batch_size` controls how many environments run in parallel.
@@ -1622,33 +1922,33 @@ lerobot-eval \
 
 Benchmark a policy across multiple suites at once:
 
-```bash
-lerobot-eval \
-  --policy.path="your-policy-id" \
-  --env.type=libero \
-  --env.task=libero_object,libero_spatial \
-  --eval.batch_size=1 \
-  --eval.n_episodes=2
-```
+<CodeBlock language="bash">
+{`lerobot-eval \\
+  --policy.path="your-policy-id" \\
+  --env.type=libero \\
+  --env.task=libero_object,libero_spatial \\
+  --eval.batch_size=1 \\
+  --eval.n_episodes=2`}
+</CodeBlock>
 
 - Pass a comma-separated list to `--env.task` for multi-suite evaluation.
 
 **Example training command**
 
-```bash
-lerobot-train \
-  --policy.type=smolvla \
-  --policy.repo_id=${HF_USER}/libero-test \
-  --dataset.repo_id=HuggingFaceVLA/libero \
-  --env.type=libero \
-  --env.task=libero_10 \
-  --output_dir=./outputs/ \
-  --steps=100000 \
-  --batch_size=4 \
-  --eval.batch_size=1 \
-  --eval.n_episodes=1 \
-  --eval_freq=1000 \
-```
+<CodeBlock language="bash">
+{`lerobot-train \\
+  --policy.type=smolvla \\
+  --policy.repo_id=\${HF_USER}/libero-test \\
+  --dataset.repo_id=HuggingFaceVLA/libero \\
+  --env.type=libero \\
+  --env.task=libero_10 \\
+  --output_dir=./outputs/ \\
+  --steps=100000 \\
+  --batch_size=4 \\
+  --eval.batch_size=1 \\
+  --eval.n_episodes=1 \\
+  --eval_freq=1000 \\`}
+</CodeBlock>
 
 -----
 
@@ -1660,93 +1960,93 @@ LeRobot uses MuJoCo for simulation. You need to set the rendering backend before
 
 </details>
 
-<details>
+<details className="content-details">
 <summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
 
 Refer to [Pi0](https://huggingface.co/docs/lerobot/pi0)
 
-```bash
-pip install -e ".[pi]"
-```
+<CodeBlock language="bash">
+{`pip install -e ".[pi]"`}
+</CodeBlock>
 
 **Train**
 
-```bash
-lerobot-train \
-  --policy.type=pi0 \
-  --dataset.repo_id=seeed/eval_test123 \
-  --job_name=pi0_training \
-  --output_dir=outputs/pi0_training \
-  --policy.pretrained_path=lerobot/pi0_base \
-  --policy.compile_model=true \
-  --policy.gradient_checkpointing=true \
-  --policy.dtype=bfloat16 \
-  --steps=20000 \
-  --policy.device=cuda \
-  --batch_size=32 \
-  --wandb.enable=false 
-```
+<CodeBlock language="bash">
+{`lerobot-train \\
+  --policy.type=pi0 \\
+  --dataset.repo_id=seeed/eval_test123 \\
+  --job_name=pi0_training \\
+  --output_dir=outputs/pi0_training \\
+  --policy.pretrained_path=lerobot/pi0_base \\
+  --policy.compile_model=true \\
+  --policy.gradient_checkpointing=true \\
+  --policy.dtype=bfloat16 \\
+  --steps=20000 \\
+  --policy.device=cuda \\
+  --batch_size=32 \\
+  --wandb.enable=false`}
+</CodeBlock>
 
 **Evaluate**
 
-```bash
-lerobot-record \
-  --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
-  --robot.id=my_awesome_follower_arm \
-  --display_data=false \
-  --dataset.repo_id=seeed/eval_test123 \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model
-```
+<CodeBlock language="bash">
+{`lerobot-record \\
+  --robot.type=so101_follower \\
+  --robot.port=/dev/ttyACM0 \\
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \\
+  --robot.id=my_awesome_follower_arm \\
+  --display_data=false \\
+  --dataset.repo_id=seeed/eval_test123 \\
+  --dataset.single_task="Put lego brick into the transparent box" \\
+  --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model`}
+</CodeBlock>
 
 </details>
 
-<details>
+<details className="content-details">
 <summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
 
 Refer to [Pi0.5](https://huggingface.co/docs/lerobot/pi05)
 
-```bash
-pip install -e ".[pi]"
-```
+<CodeBlock language="bash">
+{`pip install -e ".[pi]"`}
+</CodeBlock>
 
 **Train**
 
-```bash
-lerobot-train \
-    --dataset.repo_id=seeed/eval_test123 \
-    --policy.type=pi05 \
-    --output_dir=outputs/pi05_training \
-    --job_name=pi05_training \
-    --policy.pretrained_path=lerobot/pi05_base \
-    --policy.compile_model=true \
-    --policy.gradient_checkpointing=true \
-    --wandb.enable=false \
-    --policy.dtype=bfloat16 \
-    --steps=3000 \
-    --policy.device=cuda \
-    --batch_size=32
-```
+<CodeBlock language="bash">
+{`lerobot-train \\
+    --dataset.repo_id=seeed/eval_test123 \\
+    --policy.type=pi05 \\
+    --output_dir=outputs/pi05_training \\
+    --job_name=pi05_training \\
+    --policy.pretrained_path=lerobot/pi05_base \\
+    --policy.compile_model=true \\
+    --policy.gradient_checkpointing=true \\
+    --wandb.enable=false \\
+    --policy.dtype=bfloat16 \\
+    --steps=3000 \\
+    --policy.device=cuda \\
+    --batch_size=32`}
+</CodeBlock>
 
 **Evaluate**
 
-```bash
-lerobot-record \
-  --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
-  --robot.id=my_awesome_follower_arm \
-  --display_data=false \
-  --dataset.repo_id=seeed/eval_test123 \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model
-```
+<CodeBlock language="bash">
+{`lerobot-record \\
+  --robot.type=so101_follower \\
+  --robot.port=/dev/ttyACM0 \\
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \\
+  --robot.id=my_awesome_follower_arm \\
+  --display_data=false \\
+  --dataset.repo_id=seeed/eval_test123 \\
+  --dataset.single_task="Put lego brick into the transparent box" \\
+  --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model`}
+</CodeBlock>
 
 </details>
 
-<details>
+<details className="content-details">
 <summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
 
 Refer to the official documentation: [GR00T N1.5](https://huggingface.co/docs/lerobot/groot).
@@ -1764,43 +2064,43 @@ Recommended order:
 1. Prepare your base environment first (Python, CUDA, drivers, etc.). Do **not** install `lerobot` yet.
 2. Install PyTorch for your CUDA version (different CUDA versions may require a different `--index-url`; follow the PyTorch install page).
 
-```bash
-pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"
-```
+<CodeBlock language="bash">
+{`pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"`}
+</CodeBlock>
 
 :::tip
 
 If you are using an RTX 50 Series GPU, the following requirements must be met: Python=3.10, CUDA=12.8, Torch=2.7.1
 
 The download command is as follows:
-```bash
-pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
-```
+<CodeBlock language="bash">
+{`pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128`}
+</CodeBlock>
 :::
 
 3. Install the build dependencies for `flash-attn`, then install `flash-attn` itself.
 
-```bash
-pip install ninja "packaging>=24.2,<26.0"
+<CodeBlock language="bash">
+{`pip install ninja "packaging>=24.2,<26.0"
 pip install "flash-attn>=2.5.9,<3.0.0" --no-build-isolation
-python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} imported successfully')"
-```
+python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} imported successfully')"`}
+</CodeBlock>
 
 :::tip
 
 If you are using an RTX 50 Series GPU, the following requirement must be met: flash_attn=2.8.0
 
 The download command is as follows:
-```bash
-pip install flash_attn==2.8.0.post2 torch==2.7.1 --no-build-isolation
-```
+<CodeBlock language="bash">
+{`pip install flash_attn==2.8.0.post2 torch==2.7.1 --no-build-isolation`}
+</CodeBlock>
 :::
 
 4. Install LeRobot with the `groot` optional dependencies (`lerobot[groot]`).
 
-```bash
-pip install "lerobot[groot]"
-```
+<CodeBlock language="bash">
+{`pip install "lerobot[groot]"`}
+</CodeBlock>
 
 :::tip
 If `flash-attn` installation fails, it is usually due to (1) a PyTorch/CUDA mismatch, (2) missing build dependencies, or (3) an environment that is too new/too old. Cross-check the official GR00T docs and the PyTorch install instructions first.
@@ -1810,52 +2110,52 @@ If `flash-attn` installation fails, it is usually due to (1) a PyTorch/CUDA mism
 
 The official docs provide a multi-GPU example with `accelerate launch --multi_gpu ...`. If you only have a single GPU, you can still start by getting a single-process run working first (exact support/arguments depend on the official docs).
 
-```bash
-accelerate launch \
-  --multi_gpu \
-  --num_processes=$NUM_GPUS \
-  $(which lerobot-train) \
-  --output_dir=$OUTPUT_DIR \
-  --save_checkpoint=true \
-  --batch_size=$BATCH_SIZE \
-  --steps=$NUM_STEPS \
-  --save_freq=$SAVE_FREQ \
-  --log_freq=$LOG_FREQ \
-  --policy.push_to_hub=true \
-  --policy.type=groot \
-  --policy.repo_id=$REPO_ID \
-  --policy.tune_diffusion_model=false \
-  --dataset.repo_id=$DATASET_ID \
-  --wandb.enable=true \
-  --wandb.disable_artifact=true \
-  --job_name=$JOB_NAME
-```
+<CodeBlock language="bash">
+{`accelerate launch \\
+  --multi_gpu \\
+  --num_processes=$NUM_GPUS \\
+  $(which lerobot-train) \\
+  --output_dir=$OUTPUT_DIR \\
+  --save_checkpoint=true \\
+  --batch_size=$BATCH_SIZE \\
+  --steps=$NUM_STEPS \\
+  --save_freq=$SAVE_FREQ \\
+  --log_freq=$LOG_FREQ \\
+  --policy.push_to_hub=true \\
+  --policy.type=groot \\
+  --policy.repo_id=$REPO_ID \\
+  --policy.tune_diffusion_model=false \\
+  --dataset.repo_id=$DATASET_ID \\
+  --wandb.enable=true \\
+  --wandb.disable_artifact=true \\
+  --job_name=$JOB_NAME`}
+</CodeBlock>
 
 **On-robot validation (evaluation)**
 
 After training, you can evaluate and record replays with `lerobot-record` like other policies. The official docs include a bimanual example; SO101 single-arm users do not need `left_arm_port/right_arm_port`-style arguments.
 
-```bash
-lerobot-record \
-  --robot.type=bi_so_follower \
-  --robot.left_arm_port=/dev/ttyACM1 \
-  --robot.right_arm_port=/dev/ttyACM0 \
-  --robot.id=bimanual_follower \
-  --robot.cameras='{ right: {"type": "opencv", "index_or_path": 0, "width": 640, "height": 480, "fps": 30}, left: {"type": "opencv", "index_or_path": 2, "width": 640, "height": 480, "fps": 30}, top: {"type": "opencv", "index_or_path": 4, "width": 640, "height": 480, "fps": 30} }' \
-  --display_data=true \
-  --dataset.repo_id=${HF_USER}/eval_groot_bimanual \
-  --dataset.num_episodes=10 \
-  --dataset.single_task="Grab and handover the red cube to the other arm" \
-  --policy.path=${HF_USER}/groot-bimanual \
-  --dataset.episode_time_s=30 \
-  --dataset.reset_time_s=10
-```
+<CodeBlock language="bash">
+{`lerobot-record \\
+  --robot.type=bi_so_follower \\
+  --robot.left_arm_port=/dev/ttyACM1 \\
+  --robot.right_arm_port=/dev/ttyACM0 \\
+  --robot.id=bimanual_follower \\
+  --robot.cameras='{ right: {"type": "opencv", "index_or_path": 0, "width": 640, "height": 480, "fps": 30}, left: {"type": "opencv", "index_or_path": 2, "width": 640, "height": 480, "fps": 30}, top: {"type": "opencv", "index_or_path": 4, "width": 640, "height": 480, "fps": 30} }' \\
+  --display_data=true \\
+  --dataset.repo_id=\${HF_USER}/eval_groot_bimanual \\
+  --dataset.num_episodes=10 \\
+  --dataset.single_task="Grab and handover the red cube to the other arm" \\
+  --policy.path=\${HF_USER}/groot-bimanual \\
+  --dataset.episode_time_s=30 \\
+  --dataset.reset_time_s=10`}
+</CodeBlock>
 
 License: Apache 2.0 (same as the original GR00T repository).
 
 </details>
 
-<details>
+<details className="content-details">
 <summary>(Optional) Parameter-Efficient Fine-Tuning (PEFT)</summary>
 
 PEFT (Parameter-Efficient Fine-Tuning) is a family of methods and tools that help a large pretrained model adapt to new tasks **without updating all parameters**. For pretrained LeRobot policies (e.g., SmolVLA, Pi0), you can often train only a small set of “adapter” parameters (e.g., LoRA) to reduce VRAM usage and training cost, while still achieving performance close to full fine-tuning.
@@ -1864,13 +2164,13 @@ PEFT (Parameter-Efficient Fine-Tuning) is a family of methods and tools that hel
 
 After installing LeRobot with the optional `peft` dependencies, you can use PEFT-related arguments in training.
 
-```bash
-pip install -e ".[peft]"
-```
+<CodeBlock language="bash">
+{`pip install -e ".[peft]"`}
+</CodeBlock>
 
-```bash
-pip install "lerobot[peft]"
-```
+<CodeBlock language="bash">
+{`pip install "lerobot[peft]"`}
+</CodeBlock>
 
 More concepts and methods: [🤗 PEFT documentation](https://huggingface.co/docs/peft/index).
 
@@ -1878,22 +2178,22 @@ More concepts and methods: [🤗 PEFT documentation](https://huggingface.co/docs
 
 This example fine-tunes `lerobot/smolvla_base` with LoRA on the `HuggingFaceVLA/libero` dataset. Argument names depend on the LeRobot version; it’s recommended to also check `lerobot-train --help`.
 
-```bash
-lerobot-train \
-  --policy.path=lerobot/smolvla_base \
-  --policy.repo_id=${HF_USER}/my_libero_smolvla_peft \
-  --dataset.repo_id=HuggingFaceVLA/libero \
-  --env.type=libero \
-  --env.task=libero_spatial \
-  --output_dir=outputs/train/my_libero_smolvla_peft \
-  --job_name=my_libero_smolvla_peft \
-  --policy.device=cuda \
-  --steps=10000 \
-  --batch_size=32 \
-  --optimizer.lr=1e-3 \
-  --peft.method_type=LORA \
-  --peft.r=64
-```
+<CodeBlock language="bash">
+{`lerobot-train \\
+  --policy.path=lerobot/smolvla_base \\
+  --policy.repo_id=\${HF_USER}/my_libero_smolvla_peft \\
+  --dataset.repo_id=HuggingFaceVLA/libero \\
+  --env.type=libero \\
+  --env.task=libero_spatial \\
+  --output_dir=outputs/train/my_libero_smolvla_peft \\
+  --job_name=my_libero_smolvla_peft \\
+  --policy.device=cuda \\
+  --steps=10000 \\
+  --batch_size=32 \\
+  --optimizer.lr=1e-3 \\
+  --peft.method_type=LORA \\
+  --peft.r=64`}
+</CodeBlock>
 
 **Key PEFT arguments**
 
@@ -1908,23 +2208,23 @@ Common patterns:
 
 1) Provide a list of module-name suffixes (example):
 
-```bash
---peft.target_modules="['q_proj', 'v_proj']"
-```
+<CodeBlock language="bash">
+{`--peft.target_modules="['q_proj', 'v_proj']"`}
+</CodeBlock>
 
 2) Provide a regex (example; adjust to the actual module names in the model):
 
-```bash
---peft.target_modules='(model\\.vlm_with_expert\\.lm_expert\\..*\\.(down|gate|up)_proj|.*\\.(state_proj|action_in_proj|action_out_proj|action_time_mlp_in|action_time_mlp_out))'
-```
+<CodeBlock language="bash">
+{`--peft.target_modules='(model\\\\.vlm_with_expert\\\\.lm_expert\\\\..*\\\\.(down|gate|up)_proj|.*\\\\.(state_proj|action_in_proj|action_out_proj|action_time_mlp_in|action_time_mlp_out))'`}
+</CodeBlock>
 
 **Fully train some modules (optional)**
 
 If you want some modules to be fully trained (instead of only injecting LoRA), use `--peft.full_training_modules`. For example, only fully train `state_proj`:
 
-```bash
---peft.full_training_modules="['state_proj']"
-```
+<CodeBlock language="bash">
+{`--peft.full_training_modules="['state_proj']"`}
+</CodeBlock>
 
 **Learning rate suggestion (rule of thumb)**
 
@@ -1932,7 +2232,7 @@ LoRA learning rates are often ~10× higher than full fine-tuning. For example, i
 
 </details>
 
-<details>
+<details className="content-details">
 <summary>(Optional) Multi-GPU training with Accelerate</summary>
 
 **Training steps**
@@ -1941,37 +2241,33 @@ Method 1: Use CLI flags.
 
 1. Install `accelerate` in your `lerobot` environment.
 
-```bash
-
-pip install accelerate
-
-```
+<CodeBlock language="bash">
+{`pip install accelerate`}
+</CodeBlock>
 
 2. Launch multi-GPU training with `accelerate launch` and the `--multi_gpu` and `--num_processes` flags.
 
-```bash
+<CodeBlock language="bash">
+{`accelerate launch \\
 
-accelerate launch \
+--multi_gpu \\
 
---multi_gpu \
+--num_processes=2 \\
 
---num_processes=2 \
+$(which lerobot-train) \\
 
-$(which lerobot-train) \
+--dataset.repo_id=\${HF_USER}/my_dataset \\
 
---dataset.repo_id=${HF_USER}/my_dataset \
+--policy.type=act \\
 
---policy.type=act \
+--policy.repo_id=\${HF_USER}/my_trained_policy \\
 
---policy.repo_id=${HF_USER}/my_trained_policy \
+--output_dir=outputs/train/act_multi_gpu \\
 
---output_dir=outputs/train/act_multi_gpu \
+--job_name=act_multi_gpu \\
 
---job_name=act_multi_gpu \
-
---wandb.enable=true
-
-```
+--wandb.enable=true`}
+</CodeBlock>
 
 Key `accelerate` flags:
 
@@ -2004,29 +2300,25 @@ In the interactive configuration, for the common “single machine + multiple GP
 - GPU ids to use: press Enter (use all GPUs)
 - Mixed precision: prefer fp16; choose bf16 only if you know your GPU supports it
 
-```bash
+<CodeBlock language="bash">
+{`accelerate config`}
+</CodeBlock>
 
-accelerate config
+<CodeBlock language="bash">
+{`accelerate launch $(which lerobot-train) \\
 
-```
+--dataset.repo_id=\${HF_USER}/my_dataset \\
 
-```bash
+--policy.type=act \\
 
-accelerate launch $(which lerobot-train) \
+--policy.repo_id=\${HF_USER}/my_trained_policy \\
 
---dataset.repo_id=${HF_USER}/my_dataset \
+--output_dir=outputs/train/act_multi_gpu \\
 
---policy.type=act \
+--job_name=act_multi_gpu \\
 
---policy.repo_id=${HF_USER}/my_trained_policy \
-
---output_dir=outputs/train/act_multi_gpu \
-
---job_name=act_multi_gpu \
-
---wandb.enable=true
-
-```
+--wandb.enable=true`}
+</CodeBlock>
 
 **How multi-GPU affects hyperparameters (and how to adjust)**
 
@@ -2036,34 +2328,30 @@ If you want to adjust hyperparameters for multi-GPU, a common approach is:
 
 - **Steps**: effective batch size increases (batch_size × num_gpus), so you can reduce steps roughly proportional to `1 / num_gpus` to keep a similar total number of samples seen.
 
-```bash
+<CodeBlock language="bash">
+{`accelerate launch --num_processes=2 $(which lerobot-train) \\
 
-accelerate launch --num_processes=2 $(which lerobot-train) \
+--batch_size=8 \\
 
---batch_size=8 \
+--steps=50000 \\
 
---steps=50000 \
+--dataset.repo_id=lerobot/pusht \\
 
---dataset.repo_id=lerobot/pusht \
-
---policy=act
-
-```
+--policy=act`}
+</CodeBlock>
 
 - **Learning rate**: since each step uses more samples, you can often scale the learning rate linearly with the number of GPUs:
   new_lr = single_gpu_lr × num_gpus
 
-```bash
+<CodeBlock language="bash">
+{`accelerate launch --num_processes=2 $(which lerobot-train) \\
 
-accelerate launch --num_processes=2 $(which lerobot-train) \
+--optimizer.lr=2e-4 \\
 
---optimizer.lr=2e-4 \
+--dataset.repo_id=lerobot/pusht \\
 
---dataset.repo_id=lerobot/pusht \
-
---policy=act
-
-```
+--policy=act`}
+</CodeBlock>
 
 These are not strict rules; they are common heuristics. If you’re unsure, you can also keep the learning rate and steps unchanged as long as training remains stable.
 
@@ -2071,7 +2359,7 @@ For advanced configuration and troubleshooting, see the Accelerate documentation
 
 </details>
 
-<details>
+<details className="content-details">
 
 <summary>(Optional) Asynchronous Inference</summary>
 
@@ -2123,9 +2411,9 @@ Security note: the LeRobot async inference pipeline has a risk related to unauth
 
 First, use pip to install the additional dependencies required for asynchronous inference. Both the client and the server need to have lerobot installed along with the extra dependencies:
 
-```bash
-pip install -e ".[async]"
-```
+<CodeBlock language="bash">
+{`pip install -e ".[async]"`}
+</CodeBlock>
 
 **Step 2: Network configuration and checks**
 
@@ -2133,9 +2421,9 @@ pip install -e ".[async]"
 
 If your current terminal is configured to use a proxy and the connection behaves abnormally, you can temporarily unset the proxy environment variables:
 
-```bash
-unset http_proxy https_proxy ftp_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY
-```
+<CodeBlock language="bash">
+{`unset http_proxy https_proxy ftp_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY`}
+</CodeBlock>
 
 Note: the command above only affects the current terminal session. If you open another terminal window, you need to run it again.
 
@@ -2147,9 +2435,9 @@ LAN deployment: you need to open the listening port on the server side.
 
 Example for opening the listening port on a LAN setup (run on the server side):
 
-```bash
-sudo ufw allow 8080/tcp
-```
+<CodeBlock language="bash">
+{`sudo ufw allow 8080/tcp`}
+</CodeBlock>
 
 Cloud deployment: you need to open this port in the cloud server security group, and it is recommended to restrict the source IPs as much as possible.
 
@@ -2167,33 +2455,33 @@ You need to confirm and remember the LAN IP address of the server side. When the
 
 Linux / Jetson / Raspberry Pi:
 
-```bash
-hostname -I
-```
+<CodeBlock language="bash">
+{`hostname -I`}
+</CodeBlock>
 
 If multiple addresses are shown, generally choose the one corresponding to the current LAN network interface, for example 192.168.x.x.
 
 You can also use:
 
-```bash
-ip addr
-```
+<CodeBlock language="bash">
+{`ip addr`}
+</CodeBlock>
 
 to view the inet field under the currently connected network interface.
 
 Windows:
 
-```shell
-ipconfig
-```
+<CodeBlock language="shell">
+{`ipconfig`}
+</CodeBlock>
 
 Find a field like IPv4 Address . . . . . . . . . . . : 192.168.14.140; that is the LAN IP address of that machine.
 
 macOS:
 
-```bash
-ifconfig
-```
+<CodeBlock language="bash">
+{`ifconfig`}
+</CodeBlock>
 
 Find the inet field corresponding to the currently connected network interface; that is the LAN IP address.
 
@@ -2213,7 +2501,7 @@ EIP
 
 Public IP
 
-We need to remember the public IP address. We will use` <server public IP> `to refer to it.
+We need to remember the public IP address. We will use `<server public IP>` to refer to it.
 
 4. **Connection test**
 
@@ -2223,15 +2511,15 @@ LAN / cloud deployment: it is recommended to test from the client side whether t
 
 LAN example: run on the client side
 
-```bash
-nc -vz <LAN IP address> 8080
-```
+<CodeBlock language="bash">
+{`nc -vz <LAN IP address> 8080`}
+</CodeBlock>
 
 Cloud example: run on the client side
 
-```bash
-nc -vz <server public IP> 8080
-```
+<CodeBlock language="bash">
+{`nc -vz <server public IP> 8080`}
+</CodeBlock>
 
 **Step 3: Start the service**
 
@@ -2239,11 +2527,11 @@ nc -vz <server public IP> 8080
 
 Start the local service in one terminal:
 
-```bash
-python -m lerobot.async_inference.policy_server \
---host=127.0.0.1 \
---port=8080
-```
+<CodeBlock language="bash">
+{`python -m lerobot.async_inference.policy_server \\
+--host=127.0.0.1 \\
+--port=8080`}
+</CodeBlock>
 
 After it starts successfully, you need to keep this terminal open. You will need to open a new terminal to run other commands.
 
@@ -2251,52 +2539,52 @@ After it starts successfully, you need to keep this terminal open. You will need
 
 Run on the server side:
 
-```bash
-python -m lerobot.async_inference.policy_server \
---host=0.0.0.0 \
---port=8080
-```
+<CodeBlock language="bash">
+{`python -m lerobot.async_inference.policy_server \\
+--host=0.0.0.0 \\
+--port=8080`}
+</CodeBlock>
 
-In this case, when the client connects, the --server_address should be the server-side LAN IP address, that is,`<LAN IP address>:8080`.
+In this case, when the client connects, the `--server_address` should be the server-side LAN IP address, such as `<LAN IP address>:8080`.
 
 **Scenario C: Cloud server deployment**
 
 Run on the server side:
 
-```bash
-python -m lerobot.async_inference.policy_server \
---host=0.0.0.0 \
---port=8080
-```
+<CodeBlock language="bash">
+{`python -m lerobot.async_inference.policy_server \\
+--host=0.0.0.0 \\
+--port=8080`}
+</CodeBlock>
 
-In this case, when the client connects, the --server_address should be the server’s public IP address, that is, `<server public IP>:8080`.
+In this case, when the client connects, the `--server_address` should be the server public IP address, such as `<server public IP>:8080`.
 
 **Step 4: Choose inference parameters**
 
 Run on the client side:
 
-```bash
-python -m lerobot.async_inference.robot_client \
---server_address=<ip address>:8080 \
---robot.type=so100_follower \
---robot.port=/dev/tty.usbmodem585A0076841 \
---robot.id=follower_so100 \
---robot.cameras="{ laptop: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}, phone: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}}" \
---task="dummy" \
---policy_type=your_policy_type \
---pretrained_name_or_path=user/model \
---policy_device=cuda \
---actions_per_chunk=50 \
---chunk_size_threshold=0.5 \
---aggregate_fn_name=weighted_average \
---debug_visualize_queue_size=True
-```
+<CodeBlock language="bash">
+{`python -m lerobot.async_inference.robot_client \\
+--server_address=<ip address>:8080 \\
+--robot.type=so100_follower \\
+--robot.port=/dev/tty.usbmodem585A0076841 \\
+--robot.id=follower_so100 \\
+--robot.cameras="{ laptop: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}, phone: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}}" \\
+--task="dummy" \\
+--policy_type=your_policy_type \\
+--pretrained_name_or_path=user/model \\
+--policy_device=cuda \\
+--actions_per_chunk=50 \\
+--chunk_size_threshold=0.5 \\
+--aggregate_fn_name=weighted_average \\
+--debug_visualize_queue_size=True`}
+</CodeBlock>
 
 Parameter explanations:
 
 - `--server_address`
 
-Specifies the address and port of the policy server. `<ip address>` should be replaced with 127.0.0.1 (local machine), `<LAN IP address>`(LAN), or`<server public IP>` (cloud server).
+Specifies the address and port of the policy server. `<ip address>` should be replaced with 127.0.0.1 (local machine), `<LAN IP address>` (LAN), or `<server public IP>` (cloud server).
 
 - `--robot.type, --robot.port, --robot.id, --robot.cameras`
 
@@ -2403,129 +2691,294 @@ the empirical range for chunk_size_threshold is 0.5–0.7; when tuning, it is re
 
 If you encounter the following error:
 
-```bash
-TypeError: stack(): argument 'tensors' (position 1) must be tuple of Tensors, not Column
-```
+<CodeBlock language="bash">
+{`TypeError: stack(): argument 'tensors' (position 1) must be tuple of Tensors, not Column`}
+</CodeBlock>
 
 Try running the following command to resolve it:
 
-```bash
-pip install datasets==2.19
-```
+<CodeBlock language="bash">
+{`pip install datasets==2.19`}
+</CodeBlock>
 
 Training should take several hours. You will find checkpoints in `outputs/train/act_so100_test/checkpoints`.
 
 To resume training from a checkpoint, below is an example command to resume from `last` checkpoint of the `act_so101_test` policy:
 
-```bash
-lerobot-train \
-  --config_path=outputs/train/act_so101_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true
-```
+<CodeBlock language="bash">
+{`lerobot-train \\
+  --config_path=outputs/train/act_so101_test/checkpoints/last/pretrained_model/train_config.json \\
+  --resume=true`}
+</CodeBlock>
 
 **Upload policy checkpoints**
 
 Once training is done, upload the latest checkpoint with:
 
-```bash
-huggingface-cli upload ${HF_USER}/act_so101_test \
-  outputs/train/act_so101_test/checkpoints/last/pretrained_model
-```
+<CodeBlock language="bash">
+{`huggingface-cli upload \${HF_USER}/act_so101_test \\
+  outputs/train/act_so101_test/checkpoints/last/pretrained_model`}
+</CodeBlock>
 
 You can also upload intermediate checkpoints with:
 
-```bash
-CKPT=010000
-huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
-  outputs/train/act_so101_test/checkpoints/${CKPT}/pretrained_model
-```
+<CodeBlock language="bash">
+{`CKPT=010000
+huggingface-cli upload \${HF_USER}/act_so101_test\${CKPT} \\
+  outputs/train/act_so101_test/checkpoints/\${CKPT}/pretrained_model`}
+</CodeBlock>
+
+</section>
 
 ## FAQ
 
-- If you are following this documentation/tutorial, please git clone the recommended GitHub repository `https://github.com/Seeed-Projects/lerobot.git`. The repository recommended in this documentation is a verified stable version; the official Lerobot repository is continuously updated to the latest version, which may cause unforeseen issues such as different dataset versions, different commands, etc.
+<section id="faq" className="section-card">
+  <div className="section-title">
+    <span>FAQ</span>
+    <h2>FAQ</h2>
+    <p>Centralized troubleshooting for ports, servo IDs, ffmpeg, cameras, datasets, evaluation, and training.</p>
+  </div>
 
-- If you encounter the following error when calibrating servo IDs:
+<details className="content-details">
+<summary>Which LeRobot repository should I use?</summary>
 
-  ```bash
-  `Motor ‘gripper’ was not found, Make sure it is connected`
-  ```
+Use the repository recommended in this wiki:
 
-  Please carefully check whether the communication cable is properly connected to the servo and whether the power supply is providing the correct voltage.
+<CodeBlock language="bash">
+{`git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot`}
+</CodeBlock>
 
-- If you encounter:
+This version has been verified with SO-ARM10x. The upstream LeRobot repository changes quickly, so command arguments, dataset formats, and dependencies may differ from this tutorial.
 
-  ```bash
-  Could not connect on port "/dev/ttyACM0"
-  ```
+</details>
 
-  And you can see ACM0 exists when running `ls /dev/ttyACM*`, it means you forgot to grant serial port permissions. Enter `sudo chmod 666 /dev/ttyACM*` in the terminal to fix it.
+<details className="content-details">
+<summary>`Motor 'gripper' was not found` during servo ID setup</summary>
 
-- If you encounter:
+If you see the following error:
 
-  ```bash
-  No valid stream found in input file. Is -1 of the desired media type?
-  ```
+<CodeBlock language="text">
+{`Motor 'gripper' was not found, Make sure it is connected`}
+</CodeBlock>
 
-  Please install ffmpeg 7.1.1 using `conda install ffmpeg=7.1.1 -c conda-forge`.
+check whether the communication cable is connected correctly and whether the servo bus is powered with the correct voltage.
 
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
+</details>
+
+<details className="content-details">
+<summary>`Could not connect on port "/dev/ttyACM0"`</summary>
+
+If `/dev/ttyACM0` exists but LeRobot cannot connect to it, the serial port permissions are usually missing. Run:
+
+<CodeBlock language="bash">
+{`sudo chmod 666 /dev/ttyACM*`}
+</CodeBlock>
+
+Also double-check whether the leader and follower arms are mapped to the expected ports.
+
+</details>
+
+<details className="content-details">
+<summary>`No valid stream found in input file`</summary>
+
+If you see:
+
+<CodeBlock language="text">
+{`No valid stream found in input file. Is -1 of the desired media type?`}
+</CodeBlock>
+
+install ffmpeg 7.1.1:
+
+<CodeBlock language="bash">
+{`conda install ffmpeg=7.1.1 -c conda-forge`}
+</CodeBlock>
+
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="No valid stream error" />
 </div>
 
-- If you encounter:
+</details>
 
-  ```bash
-  ConnectionError: Failed to sync read 'Present_Position' on ids=[1,2,3,4,5,6] after 1 tries. [TxRxResult] There is no status packet!
-  ```
+<details className="content-details">
+<summary>`Present_Position` sync read failed</summary>
 
-  You need to check whether the robotic arm on the corresponding port is powered on, and whether the data cables of the bus servos are loose or disconnected. If a servo's light is not on, it means the cable of the previous servo is loose.
+If you see:
 
-- If you encounter the following error when calibrating the robotic arm:
+<CodeBlock language="text">
+{`ConnectionError: Failed to sync read 'Present_Position' on ids=[1,2,3,4,5,6] after 1 tries. [TxRxResult] There is no status packet!`}
+</CodeBlock>
 
-  ```bash
-  Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)
-  ```
+check whether the corresponding arm is powered on and whether the bus-servo data cables are loose or disconnected. If a servo LED is off, the cable before that servo may be loose.
 
-  Power off and restart the robotic arm, then try calibrating again. This method can also be used if the MAX angle reaches a value of tens of thousands during calibration. If this doesn't work, you need to recalibrate the corresponding servos, including median calibration and ID writing.
+</details>
 
-- If you encounter during the evaluation phase:
+<details className="content-details">
+<summary>`Magnitude 30841 exceeds 2047` during calibration</summary>
 
-  ```bash
-  File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'
-  ```
+If you see:
 
-  Please delete the folder starting with `eval_` first and then run the program again.
+<CodeBlock language="text">
+{`Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)`}
+</CodeBlock>
 
-- If you encounter during the evaluation phase:
+power off and restart the arm, then calibrate again. If the issue persists, use the Seeed Studio SoARM quick calibration tool to perform middle-position calibration and servo ID verification, then redo full-arm calibration.
 
-  ```bash
-  `mean` is infinity. You should either initialize with `stats` as an argument or use a pretrained model
-  ```
+</details>
 
-  Please note that keywords like "front" and "side" in the `--robot.cameras` parameter must be strictly consistent with those used when collecting the dataset.
+<details className="content-details">
+<summary>How do I recalibrate after repair or part replacement?</summary>
 
-- If you have repaired or replaced parts of the robotic arm, please completely delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, error messages may appear, as calibration information is stored in JSON files in these directories.
+Delete the old calibration files and recalibrate:
 
-- Training ACT on 50 sets of data takes approximately 6 hours on a laptop with an RTX 3060 (8GB), and about 2-3 hours on computers with RTX 4090 or A100 GPUs.
+<CodeBlock language="bash">
+{`rm -rf ~/.cache/huggingface/lerobot/calibration/robots
+rm -rf ~/.cache/huggingface/lerobot/calibration/teleoperators`}
+</CodeBlock>
 
-- During data collection, ensure the camera position, angle, and ambient lighting are stable. Reduce the amount of unstable background and pedestrians captured by the camera, as excessive changes in the deployment environment may cause the robotic arm to fail to grasp properly.
+Calibration information is stored as JSON files in these directories. If the hardware changes but the old calibration files remain, LeRobot may reuse outdated offsets.
 
-- For the data collection command, ensure the `num-episodes` parameter is set to collect sufficient data. Do not manually pause midway, as the mean and variance of the data are calculated only after data collection is complete, which are necessary for training.
+</details>
 
-- If the program indicates it cannot read image data from the USB camera, ensure the USB camera is not connected through a hub. The USB camera must be directly connected to the device to ensure fast image transmission speed.
+<details className="content-details">
+<summary>Keyboard shortcuts do not work during recording</summary>
 
-- If you find bug like `AttributeError: module 'rerun' has no attribute 'scalar'. Did you mean: 'scalars'?`, You can downgrade the rerun version to resolve the issue.
+If the right arrow, left arrow, or ESC key does not respond during dataset recording, first check that the `$DISPLAY` environment variable is set. You can also try downgrading `pynput`:
 
-```bash
-pip3 install rerun-sdk==0.23
-```
+<CodeBlock language="bash">
+{`pip install pynput==1.6.8`}
+</CodeBlock>
+
+</details>
+
+<details className="content-details">
+<summary>How should I handle failed episodes during recording?</summary>
+
+If the object falls, the gripper misses, or the episode quality is poor, move the arm back to a safe rest pose and press the left arrow key to discard and re-record the episode. If the task finishes early and the robot has returned to rest, press the right arrow key to move to the next episode without waiting for the full remaining time.
+
+</details>
+
+<details className="content-details">
+<summary>What should I pay attention to during dataset collection?</summary>
+
+Keep camera position, camera angle, and ambient lighting stable. Avoid unstable backgrounds or pedestrians in the camera view, because large differences between the recording and deployment environment may cause the policy to fail.
+
+Set `--dataset.num_episodes` high enough before starting. Do not manually stop the recording midway unless necessary, because dataset statistics such as mean and variance are calculated after collection finishes and are required for training.
+
+</details>
+
+<details className="content-details">
+<summary>How do I delete or modify recorded datasets?</summary>
+
+For deleting or editing recorded datasets, refer to the dataset tool tutorial:
+
+[Dataset Tool](/lerobot_dataset_tool)
+
+</details>
+
+<details className="content-details">
+<summary>USB camera image data cannot be read</summary>
+
+Avoid connecting the USB camera through a USB hub. Connect it directly to the device, preferably through a USB 3.0 port, to ensure sufficient image transmission bandwidth.
+
+</details>
+
+<details className="content-details">
+<summary>Orbbec camera timeout or serial-number mismatch</summary>
+
+If you see a timeout while waiting for frames, unplug and reconnect the camera. If you see:
+
+<CodeBlock language="text">
+{`No Orbbec camera found for 'XXXX'`}
+</CodeBlock>
+
+run the camera detection command and update `serial_number_or_name` with the actual serial number:
+
+<CodeBlock language="bash">
+{`lerobot-find-cameras orbbec`}
+</CodeBlock>
+
+</details>
+
+<details className="content-details">
+<summary>`File exists` during evaluation</summary>
+
+If evaluation reports that an `eval_` directory already exists, delete the existing evaluation folder first and run the program again.
+
+<CodeBlock language="text">
+{`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'`}
+</CodeBlock>
+
+</details>
+
+<details className="content-details">
+<summary>`mean is infinity` during evaluation</summary>
+
+If you see:
+
+<CodeBlock language="text">
+{`mean is infinity. You should either initialize with stats as an argument or use a pretrained model`}
+</CodeBlock>
+
+make sure the camera keys in `--robot.cameras`, such as `front` and `side`, exactly match the keys used during dataset recording.
+
+</details>
+
+<details className="content-details">
+<summary>`TypeError: stack(): argument 'tensors' must be tuple of Tensors`</summary>
+
+If you see:
+
+<CodeBlock language="text">
+{`TypeError: stack(): argument 'tensors' (position 1) must be tuple of Tensors, not Column`}
+</CodeBlock>
+
+try installing the compatible datasets version:
+
+<CodeBlock language="bash">
+{`pip install datasets==2.19`}
+</CodeBlock>
+
+</details>
+
+<details className="content-details">
+<summary>`rerun` has no attribute `scalar`</summary>
+
+If you see:
+
+<CodeBlock language="text">
+{`AttributeError: module 'rerun' has no attribute 'scalar'. Did you mean: 'scalars'?`}
+</CodeBlock>
+
+downgrade the rerun SDK:
+
+<CodeBlock language="bash">
+{`pip3 install rerun-sdk==0.23`}
+</CodeBlock>
+
+</details>
+
+<details className="content-details">
+<summary>How long does ACT training usually take?</summary>
+
+As a rough reference, training ACT on 50 episodes takes about 6 hours on a laptop RTX 3060 8GB, and about 2–3 hours on an RTX 4090 or A100. Actual time depends on dataset size, image resolution, batch size, and hardware.
+
+</details>
 
 :::tip
-If you encounter software issues or environment dependency problems that cannot be resolved, in addition to checking the FAQ section at the end of this tutorial, please promptly report the issue to the [LeRobot platform](https://github.com/huggingface/lerobot) or the [LeRobot Discord channel](https://discord.gg/8TnwDdjFGU).
+If you encounter unresolved software or dependency issues after checking this FAQ, report them to the [LeRobot GitHub repository](https://github.com/huggingface/lerobot) or the [LeRobot Discord channel](https://discord.gg/8TnwDdjFGU).
 :::
 
+</section>
+
+
 ## Citation
+
+<section id="references" className="section-card">
+  <div className="section-title">
+    <span>References</span>
+    <h2>Citation</h2>
+    <p>Related documentation, projects, papers, and external resources.</p>
+  </div>
 
 [Chinese Document](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/)
 
@@ -2545,16 +2998,28 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 
 [VQ-BeT](https://sjlee.cc/vq-bet/)
 
+</section>
+
 ## Tech Support & Product Discussion
+
+<section id="support" className="section-card">
+  <div className="section-title">
+    <span>Support</span>
+    <h2>Tech Support & Product Discussion</h2>
+    <p>Contact Seeed Studio and join community discussions for product questions.</p>
+  </div>
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+
+<div className="path-grid">
+  <a className="path-card" href="https://forum.seeedstudio.com/" target="_blank" rel="noopener noreferrer"><strong>Forum</strong><span>Ask product and technical questions in the Seeed forum.</span></a>
+  <a className="path-card" href="https://www.seeedstudio.com/contacts" target="_blank" rel="noopener noreferrer"><strong>Email Support</strong><span>Contact Seeed Studio support directly.</span></a>
+  <a className="path-card" href="https://discord.gg/eWkprNDMU7" target="_blank" rel="noopener noreferrer"><strong>Discord</strong><span>Join the Seeed community on Discord.</span></a>
+  <a className="path-card" href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" target="_blank" rel="noopener noreferrer"><strong>GitHub Discussion</strong><span>Discuss wiki content and documentation issues.</span></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+
+</section>
+
 </div>

@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/20/2026
+  date: 08/10/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-07-20'
+updatedAt: '2026-08-10'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,87 +18,65 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 20th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 10th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Get Started with MeshTracker X1](https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/)
+### [Streaming Vision Agent on Jetson](https://wiki.seeedstudio.com/streaming_vision_agent_on_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1First.png" alt="pir" width={600} height="auto" /></p>
+<div class="video-container">
+<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_03.mp4" controls width="800"></video>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide walks you through getting started with the SenseCAP MeshTracker X1 for Meshtastic, covering Bluetooth pairing, LoRa configuration, firmware flashing, GPS and notification settings, as well as troubleshooting common device issues.
+This wiki deploys a real-time demo on Seeed Jetson devices (verified on **reComputer Mini J5012 · JetPack 7.2**). A USB camera feeds a browser UI; two independent **Qwen3-VL-2B** instances handle recognition and Ask so answering does not block background memory writes.
 
 </div>
 
-### [Seeed Studio XIAO nRF54LM20A Sense with Arduino](https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_arduino/)
+### [Getting Started with MIT Position Control on the reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_arm_b601_rs_mit_control/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-Studio-XIAO-nRF54LM20A-Sense.webp" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This section walks you through the required hardware and software preparation for Arduino development. By following the steps below, you will set up your development environment, configure the Arduino IDE, and prepare your XIAO board for programming. Once the setup is complete, you can quickly build, upload, and test the provided example sketches.
+[MotorBridge](https://github.com/motorbridge/motorbridge) is a Python CAN control SDK for motors such as RobStride and Damiao. Built on top of it, [rebot_control](https://github.com/LAN-GER/rebot_control) wraps an MIT position control interface tailored for the **reBot Arm B601-RS**: YAML configuration, per-joint speed limiting, three-level MOS temperature protection, and smooth return-to-zero triggered by Esc / Ctrl+C / `stop()`. This tutorial walks you through: environment setup → CAN configuration → running the examples → using it as a library for secondary development.
 
 </div>
 
-### [Using reCamera Pro's Onboard IMU for Tilt and Shake Detection](https://wiki.seeedstudio.com/recamera_pro_imu_tilt_shake_detection/)
+### [reBot Arm B601-DM Web Simulator and ROS2/MuJoCo Developer Guide](https://wiki.seeedstudio.com/rebot_arm_b601_dm_web_simulator_developer_guide/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO-IMU-Detect.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This article explains how to use the reCamera Pro's onboard six-axis inertial measurement unit (IMU) — the ICM-42670-P gyroscope — to implement device tilt and shake detection. When the device is tilted or shaken, the system will play corresponding voice warnings through the onboard speaker. Through this tutorial, you will learn how to read raw gyroscope data via the Linux IIO driver, play warning sounds using the ALSA audio driver, and ultimately integrate a complete detection and alert program.
+This guide is for developers. It explains how to run and extend the `reBotArm_simulator-DM` web simulator. The simulator is a lightweight Node.js + Three.js web console that reads the URDF and STL meshes from the ROS2 workspace in the same repository, renders the 6-DOF body and gripper of the reBot Arm B601-DM in the browser, and talks to ROS2 over a rosbridge WebSocket. It supports the full development workflow: joint mirroring, control lock, gravity compensation, visual grasping, and LLM text control.
 
 </div>
 
-### [Train Image Classification Models Online Quickly with SenseCraft AI](https://wiki.seeedstudio.com/train_classification_model_online/)
+### [Getting Started with the reSpeaker Clip Firmware SDK](https://wiki.seeedstudio.com/respeaker_clip_firmware_quick_start/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Software_Documents/SenseCraft_AI_Online_Image_Classification_Training/image-5.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-SenseCraft AI offers a set of browser-based tools for training image classification models. There's no need to set up a local deep learning environment or write training code. Simply prepare images for different categories, and you can complete data collection, model training, performance preview, and device deployment online.
-
-Online Training Entrance: [SenseCraft AI Online Training](https://sensecraft.seeed.cc/ai/training?trainTab=2)
+The **Firmware SDK** is the device-side Zephyr RTOS firmware on the Nordic nRF5340 (dual-core: application core + network core). It is for developers who need to **modify device-side behavior** — the audio pipeline, the AT command surface or BLE GATT service, the button / OLED / haptic interaction model, the power or productization strategy, or custom hardware bring-up.
 
 </div>
 
-### [reCamera Pro Acoustic Lab Usage](https://wiki.seeedstudio.com/recamera_pro_acoustic_lab_usage/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png" alt="pir" width={500} height="auto" /></p>
+### [reSpeaker Clip Voice SDK & API Reference Build Your Own AI Voice App with Flutter SDK](https://wiki.seeedstudio.com/respeaker_clip_sensecraft_voice_sdk/)
 
 <div style={{ textAlign: "justify" }}>
 
-The reCamera Pro features a dedicated local sound training platform called the Acoustic Lab. Through this platform, users can collect environmental sound samples, train custom sound models, and deploy them as sound-triggered events without needing an internet connection. This article provides a detailed walkthrough of each functional module in the Acoustic Lab, covering the complete workflow from audio collection and model training to deployment and usage.
+This document introduces how to develop with reSpeaker Clip using the SenseCraft Voice SDK, covering device connectivity, BLE/Wi-Fi communication, recording and file transfer, OTA updates, and API usage.
 
 </div>
 
-### [JetPack 7.2 Wireless Module Setup Guide](https://wiki.seeedstudio.com/jetpack72_ax210_ax200_wifi_setup_guide/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/AX210Wi-Fi/jp72-ax210.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide explains how to restore Wi-Fi connectivity on Seeed Jetson devices running JetPack 7.2 by installing the required drivers and firmware for Intel AX210/AX200 and Realtek RTL8852BE wireless modules.
-
-</div>
-
-### [Industrial Vision Monitoring on Industrial](https://wiki.seeedstudio.com/industrial_vision_monitoring_on_industrial/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_no_helmet.png" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-Industrial vision AI enables real-time worksite safety monitoring by detecting worker presence, PPE compliance, and unsafe behaviors directly at the edge. This wiki demonstrates a reference solution on Seeed Industrial Jetson devices, using a USB camera for live browser streaming, YOLO for person and PPE detection, and a VLM for behavior hazard analysis. Both model types are replaceable, making the repository a flexible starting point for custom deployments.
-
-</div>
-
-## Existing Wiki Updated
+<!-- ## Existing Wiki Updated
 
 ### [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/)
 
-We have updated the [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/) guide with the new XIAO_nRF52840_NFC library, expanded antenna tuning instructions, setup verification, and practical NFC tag examples.
+We have updated the [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/) guide with the new XIAO_nRF52840_NFC library, expanded antenna tuning instructions, setup verification, and practical NFC tag examples. -->
 
 ## The Efforts of Contributor
 
@@ -239,6 +217,9 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.6.22nd](/Seeed_Elderly/weekly_wiki/2026/wiki260622)
 - [weekly wiki on 2026.6.29th](/Seeed_Elderly/weekly_wiki/2026/wiki260629)
 - [weekly wiki on 2026.7.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260706)
-- [weekly wiki on 2026.7.13rd](/Seeed_Elderly/weekly_wiki/2026/wiki260713)
+- [weekly wiki on 2026.7.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260713)
+- [weekly wiki on 2026.7.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260720)
+- [weekly wiki on 2026.7.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260727)
+- [weekly wiki on 2026.8.03rd](/Seeed_Elderly/weekly_wiki/2026/wiki260803)
 
 </details>

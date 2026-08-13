@@ -5,7 +5,7 @@ keywords:
   - reCamera
   - n8n
 image: https://files.seeedstudio.com/wiki/reCamera/n8n_11.png
-slug: /getting_started_for_n8n_with_recamera_bak
+slug: /getting_started_for_n8n_with_recamera
 sku: 102991896, 108990119, 100029708
 sidebar_position: 9
 last_update:
@@ -13,7 +13,7 @@ last_update:
   author: Xinrui Wu
 createdAt: '2025-11-20'
 updatedAt: '2026-04-20'
-url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/getting_started_for_n8n_with_recamera_bak/
+url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/getting_started_for_n8n_with_recamera/
 ---
 # Introdução ao n8n com reCamera
 

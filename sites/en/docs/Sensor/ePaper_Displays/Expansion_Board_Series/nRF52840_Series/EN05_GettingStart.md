@@ -10,7 +10,7 @@ last_update:
   author: dimo
 createdAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/epaper_en05/
-updatedAt: '2026-04-28'
+updatedAt: '2026-07-31'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -129,7 +129,7 @@ Create a new "driver.h" file and paste those code into it. The code should be li
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN05
 ```
 
-After that, go to **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** and **Tools** -> **Port** -> **Select the port your board is connected to**.
+After that, go to **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Plus** and **Tools** -> **Port** -> **Select the port your board is connected to**.
 
 Then click **Upload** to upload the code.
 Now you will see the feedback on your ePaper screen!

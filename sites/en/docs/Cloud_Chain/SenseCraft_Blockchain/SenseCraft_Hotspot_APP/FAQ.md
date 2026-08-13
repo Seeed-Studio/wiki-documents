@@ -11,7 +11,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2023-02-24'
-updatedAt: '2025-06-12'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft-blockchain/sensecraft-hotspot-app/faq/
 ---
 
@@ -30,7 +30,7 @@ No, SenseCAP App log in with SenseCAP Dashboard account and add Helium wallet by
 **Can I onboard a SenseCAP MX Hotspot to my Helium wallet via SenseCAP Hotspot App？**
 =====================================================================================
 
-This can be done with the latest version of the [**SenseCAP App**](https://www.sensecapmx.com/docs/sesnecap-hotspot-app/download-app/).
+This can be done with the latest version of the [**SenseCAP Hotspot App**](https://sensecraft.seeed.cc/en/download).
 
 **Can I manage another maker hotspot on SenseCAP Hotspot App?**
 ===============================================================

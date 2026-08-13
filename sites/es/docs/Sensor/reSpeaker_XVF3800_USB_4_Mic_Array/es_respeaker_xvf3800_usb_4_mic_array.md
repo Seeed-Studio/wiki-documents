@@ -1,5 +1,5 @@
 ---
-description: Comienza con la ReSpeaker XVF3800 USB 4-Mic Array - un módulo de interfaz de voz de alto rendimiento que incorpora captura de voz y compatibilidad multiplataforma mediante USB o I2C.
+description: Comienza con el ReSpeaker XVF3800 USB 4-Mic Array - un módulo de interfaz de voz de alto rendimiento que incorpora captura de voz y compatibilidad multiplataforma mediante USB o I2C.
 title: Introducción a reSpeaker XVF3800 USB Mic Array
 keywords:
   - reSpeaker
@@ -10,7 +10,7 @@ last_update:
   date: 11/10/2025
   author: Kasun Thushara
 createdAt: '2025-08-20'
-updatedAt: '2026-07-13'
+updatedAt: '2026-07-24'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/
 ---
 
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/
 
 ## Descripción general
 
-La ReSpeaker XVF3800 USB 4-Mic Array es una matriz circular profesional de 4 micrófonos con XMOS XVF3800, que incorpora AEC, AGC, DoA, conformación de haz, VAD, supresión de ruido, desreverberación, captura de voz de 360° (hasta 5 m) y modos de funcionamiento duales para aplicaciones de voz avanzadas.
+El ReSpeaker XVF3800 USB 4-Mic Array es una matriz circular profesional de 4 micrófonos con XMOS XVF3800, que incorpora AEC, AGC, DoA, conformación de haz, VAD, supresión de ruido, desreverberación, captura de voz de 360° (hasta 5 m) y modos de funcionamiento duales para aplicaciones de voz avanzadas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -54,35 +54,35 @@ La ReSpeaker XVF3800 USB 4-Mic Array es una matriz circular profesional de 4 mic
 
 | **Componente / Característica** | **Descripción**                                                                                      |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **Procesador de audio principal** | **XMOS XVF3800**, gestiona el procesamiento de audio incluyendo AEC, conformación de haz, supresión de ruido, etc. |
-| **Matriz de micrófonos**      | **Micrófonos MEMS PDM cuádruples** en patrón circular, que admiten **captura de voz de campo lejano de 360° (5 m)**. |
-| **Códec de audio**            | **TLV320AIC3104**, gestiona la conversión y salida de audio.                                         |
-| **LED RGB**                   | **12x WS2812** LED RGB direccionables individualmente para retroalimentación visual (por ejemplo, estado, actividad de voz). |
-| **Botón de silencio**         | Presione para **activar/desactivar el silencio** de la entrada del micrófono.                        |
-| **LED indicador de silencio** | Se enciende (normalmente rojo) para mostrar que el audio está silenciado.                            |
-| **Botón de reinicio**         | Reinicio por hardware para la placa/sistema.                                                         |
-| **Puerto USB tipo C**         | Se utiliza tanto para **alimentación y datos** (compatible con USB Audio Class 2.0).                 |
-| **Conector de auriculares AUX de 3,5 mm** | Salida de audio para auriculares o altavoces activos.                                                |
-| **Conector de altavoz**       | **Interfaz de altavoz JST**, admite **altavoces amplificados de 5 W**.                               |
-| **Pads de depuración**        | Acceso de depuración para **XTAG4** u otros programadores.                                           |
-| **Cabeceras I2C e I2S**       | Cabeceras expuestas para **comunicación I2C e I2S** con dispositivos externos.                        |
-| **Pads de IO sin usar (XIAO)** | Pads de E/S adicionales soldados conectados al módulo XIAO.                                          |
-| **Comunicación I2S e I2C**    | Admite conexión a hosts externos como Raspberry Pi, PC, etc. utilizando estos protocolos.            |
-| **Modos USB e INT-Device**    | Funcionamiento de modo dual: USB plug-and-play o modo de dispositivo interno INT mediante I2S.       |
-| **Número de serie único**     | **SN del dispositivo** integrado para identificación y gestión de múltiples dispositivos.            |
-| **Compatibilidad con código abierto** | Funciona con **Arduino, Raspberry Pi, PC/Mac** y es compatible con **XIAO Serie**.                   |
-| **Funciones avanzadas de audio** | AEC, conformación de haz, desreverberación, **detección de DoA**, supresión de ruido basada en DNN, AGC de 60 dB. |
-| **Retroalimentación visual**  | Estado del dispositivo y actividad de audio mostrados mediante **patrones de LED RGB** e **indicadores de estado**. |
-| **Calidad de audio**          | Igual o mejor que los **diseños anteriores basados en XVF3000**.                                     |
+| **Procesador de audio principal**      | **XMOS XVF3800**, gestiona el procesamiento de audio incluyendo AEC, conformación de haz, supresión de ruido, etc.       |
+| **Matriz de micrófonos**          | **Cuatro micrófonos PDM MEMS** en un patrón circular, que admiten **captura de voz de campo lejano de 360° (5 m)**. |
+| **Códec de audio**               | **TLV320AIC3104**, gestiona la conversión y salida de audio.                                              |
+| **LED RGB**                  | **12x WS2812** LED RGB direccionables individualmente para retroalimentación visual (por ejemplo, estado, actividad de voz). |
+| **Botón de silencio**               | Presiona para **activar/desactivar el silencio** de la entrada del micrófono.                                                       |
+| **LED indicador de silencio**        | Se enciende (normalmente en rojo) para indicar que el audio está silenciado.                                               |
+| **Botón de reinicio**              | Reinicio por hardware para la placa/sistema.                                                                 |
+| **Puerto USB tipo C**           | Se utiliza tanto para **alimentación como para datos** (compatible con USB Audio Class 2.0).                                    |
+| **Conector de auriculares AUX de 3,5 mm**  | Salida de audio para auriculares o altavoces activos.                                                      |
+| **Conector de altavoz**         | **Interfaz de altavoz JST**, admite **altavoces amplificados de 5 W**.                                       |
+| **Pads de depuración**                | Acceso de depuración para **XTAG4** u otros programadores.                                                     |
+| **Cabeceras I2C e I2S**         | Cabeceras expuestas para **comunicación I2C e I2S** con dispositivos externos.                             |
+| **Pads de E/S sin usar (XIAO)**     | Pads de E/S adicionales soldados conectados al módulo XIAO.                                                 |
+| **Comunicación I2S e I2C**   | Admite conexión a hosts externos como Raspberry Pi, PC, etc. utilizando estos protocolos.             |
+| **Modos USB e INT-Device**    | Funcionamiento de modo dual: USB plug-and-play o modo de dispositivo interno INT mediante I2S.                          |
+| **Número de serie único**      | **SN del dispositivo** integrado para identificación y gestión de múltiples dispositivos.                               |
+| **Compatibilidad con código abierto** | Funciona con **Arduino, Raspberry Pi, PC/Mac**, y es compatible con **XIAO Serie**.                   |
+| **Funciones avanzadas de audio**   | AEC, conformación de haz, desreverberación, **detección de DoA**, supresión de ruido basada en DNN, AGC de 60 dB.         |
+| **Retroalimentación visual**           | Estado del dispositivo y actividad de audio mostrados mediante **patrones de LED RGB** e **indicadores de estado**.            |
+| **Calidad de audio**             | Igual o mejor que los **diseños anteriores basados en XVF3000**.                                         |
 
 :::note
-La ReSpeaker XVF3800 se ofrece en dos variantes: una sin XIAO y otra con el XIAO ESP32S3 integrado. La versión sin XIAO funciona con el firmware USB predeterminado. Para utilizar la versión integrada con XIAO, debes grabar firmware creado para el **modo INT-Device (I2S)**. Para obtener instrucciones de configuración detalladas, consulta la [guía oficial del wiki](/es/respeaker_xvf3800_xiao_getting_started).
+El ReSpeaker XVF3800 se ofrece en dos variantes: una sin XIAO y otra con el XIAO ESP32S3 integrado. La versión sin XIAO funciona con el firmware USB predeterminado. Para utilizar la versión con XIAO integrado, debes flashear firmware compilado para el **modo INT-Device (I2S)**. Para obtener instrucciones de configuración detalladas, consulta la [guía oficial del wiki](/es/respeaker_xvf3800_xiao_getting_started).
 :::
 
 ### Compatibilidad con XIAO ESP32S3
 
 - Entrada/salida I2S estéreo con múltiples opciones de salida; interfaz I2C para configurar y gestionar los parámetros del XVF3800.
-- Reinicio de XIAO mediante pin de IO
+- Reinicio de XIAO mediante pin de E/S
 - Interfaz y pads de soldadura
 
 ### Distribución de pines
@@ -93,18 +93,18 @@ La ReSpeaker XVF3800 se ofrece en dos variantes: una sin XIAO y otra con el XIAO
 
 ### Descripción general de los GPIO
 
-La reSpeaker XVF3800 expone 3 pines de entrada (GPI) y 5 pines de salida (GPO) para control externo. Puedes utilizarlos para leer estados de botones o controlar hardware como el LED de silencio, el amplificador o los LED.
+El reSpeaker XVF3800 expone 3 pines de entrada (GPI) y 5 pines de salida (GPO) para control externo. Puedes utilizarlos para leer estados de botones o controlar hardware como el LED de silencio, el amplificador o los LED.
 
-| **Nombre del pin** | **Dirección** | **Función**                                       |
+| **Nombre del pin** | **Dirección** | **Función**                                         |
 |--------------|---------------|------------------------------------------------------|
-| X1D09        | Entrada (RO)   | Estado del botón de silencio (alto cuando está liberado) |
-| X1D13        | Entrada (RO)   | Flotante                                            |
-| X1D34        | Entrada (RO)   | Flotante                                            |
-| X0D11        | Salida (RW)    | Flotante                                            |
-| X0D30        | Salida (RW)    | Control del LED de silencio + silencio del micrófono (alto = silencio) |
-| X0D31        | Salida (RW)    | Habilitación del amplificador (bajo = habilitado)   |
-| X0D33        | Salida (RW)    | Control de alimentación del LED WS2812 (alto = encendido) |
-| X0D39        | Salida (RW)    | Flotante                                            |
+| X1D09        | Entrada (RO)    | Estado del botón de silencio (alto cuando está liberado)              |
+| X1D13        | Entrada (RO)    | Flotante                                             |
+| X1D34        | Entrada (RO)    | Flotante                                             |
+| X0D11        | Salida (RW)   | Flotante                                             |
+| X0D30        | Salida (RW)   | Control del LED de silencio y del silencio del micrófono (alto = silencio)            |
+| X0D31        | Salida (RW)   | Habilitación del amplificador (bajo = habilitado)                     |
+| X0D33        | Salida (RW)   | Control de alimentación del LED WS2812 (alto = encendido)                 |
+| X0D39        | Salida (RW)   | Flotante                                             |
 
 ## Primeros pasos
 
@@ -119,7 +119,7 @@ La reSpeaker XVF3800 expone 3 pines de entrada (GPI) y 5 pines de salida (GPO) p
 
 :::note
 
-Para garantizar un rendimiento óptimo de captación de voz y el funcionamiento adecuado de los algoritmos de audio, asegúrate de que el Puerto del Micrófono (Entrada de Micrófono / Orificio de Sonido) en la parte posterior del dispositivo esté orientado hacia la fuente de sonido. El puerto del micrófono se encuentra en el lado donde está impreso el logotipo de Seeed Studio. 
+Para garantizar un rendimiento óptimo de captación de voz y el funcionamiento correcto de los algoritmos de audio, asegúrate de que el puerto del micrófono (entrada de micrófono / orificio de sonido) en la parte posterior del dispositivo esté orientado hacia la fuente de sonido. El puerto del micrófono se encuentra en el lado donde está impreso el logotipo de Seeed Studio. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mic-outlet.png" alt="pir" width={800} height="auto"/></p>
 :::
@@ -146,8 +146,8 @@ Puedes experimentar cómo la matriz de LED sigue la dirección de la voz entrant
 El **botón de silencio** de tu ReSpeaker se utiliza para **desactivar temporalmente la captura de voz** de la matriz de micrófonos.
 ¿Qué ocurre cuando presionas el botón de silencio?
 
-- Los **micrófonos se silencian**: las voces externas ya no se capturarán ni procesarán.
-- Se **enciende un LED rojo** para indicar que el **modo de silencio está activo**.
+- Los **micrófonos se silencian**: las voces externas dejarán de capturarse o procesarse.
+- Se **enciende un LED rojo** para indicar que **el modo de silencio está activo**.
 - Esto significa que el ReSpeaker **no enviará ninguna entrada de audio** a tu ordenador o dispositivo host.
 
 **Pruébalo tú mismo con Audacity**
@@ -172,7 +172,7 @@ Aquí puedes ver cómo conectar altavoces utilizando ya sea el conector de auric
 
 #### Modo seguro
 
-El Modo Seguro es un modo especial de recuperación en la ReSpeaker XVF3800 que te permite grabar firmware mediante USB DFU o I2C, para dispositivos como Raspberry Pi y ESP32. Si has grabado previamente el firmware I2S y quieres volver al firmware USB, puedes entrar en Modo Seguro y volver a grabar el firmware USB utilizando USB DFU.
+El modo seguro es un modo especial de recuperación en el ReSpeaker XVF3800 que te permite flashear firmware mediante USB DFU o I2C, para dispositivos como Raspberry Pi y ESP32. Si has flasheado previamente el firmware I2S y quieres volver al firmware USB, puedes entrar en modo seguro y volver a flashear el firmware USB utilizando USB DFU.
 
 :::note
 Cada tipo de firmware en el ReSpeaker XVF3800 admite diferentes métodos de actualización:
@@ -188,20 +188,20 @@ Cada tipo de firmware en el ReSpeaker XVF3800 admite diferentes métodos de actu
 **Cuándo usar el Modo Seguro**
 
 - Tu firmware no funciona correctamente (por ejemplo, USB no detectado, el LED no se enciende como se espera).
-- Necesitas volver a grabar un nuevo firmware pero el actual no responde.
-- Grabaste algo incorrecto por accidente y quieres recuperarlo.
+- Necesitas volver a flashear un nuevo firmware pero el actual no responde.
+- Flasheaste algo incorrecto por accidente y quieres recuperarlo.
 
 **Cómo entrar en el Modo Seguro**
 
-- Apaga el dispositivo por completo.
+- Apaga completamente el dispositivo.
 - Mantén presionado el botón de Mute.
 - Mientras mantienes presionado el botón de mute, vuelve a conectar la alimentación.
-- El LED rojo comenzará a parpadear: esto confirma que el dispositivo está ahora en Modo Seguro.
+- El LED rojo comenzará a parpadear; esto confirma que el dispositivo está ahora en Modo Seguro.
 - Ahora el dispositivo ejecuta el firmware de Modo Seguro almacenado en la partición Factory.
 
-### Actualizar firmware
+### Actualizar el firmware
 
-Hay tres versiones de firmware disponibles en el repositorio oficial de GitHub. Puedes elegir y grabar el firmware adecuado según los requisitos de tu aplicación. Para más detalles y descargas, consulta el [Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
+Hay tres versiones de firmware disponibles en el repositorio oficial de GitHub. Puedes elegir y flashear el firmware adecuado según los requisitos de tu aplicación. Para más detalles y descargas, consulta el [Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
 :::note
 **NO** uses "save as" para descargar los archivos de firmware desde GitHub, ya que se corromperán. Clona el repositorio o usa "Download as ZIP" para descargar todo el repositorio (y todos los archivos incluidos) como un archivo ZIP.
@@ -240,7 +240,7 @@ El archivo de firmware **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** está d
 
 <TabItem value="HA" label="HA">
 
-El firmware para Home Assistant es otro firmware basado en I2S diseñado específicamente para la integración con Home Assistant. Este firmware optimizado utiliza audio de 2 canales con una frecuencia de muestreo de 48 kHz, proporcionando mejor compatibilidad y rendimiento dentro del entorno de Home Assistant.
+El firmware de Home Assistant es otro firmware basado en I2S diseñado específicamente para la integración con Home Assistant. Este firmware optimizado usa audio de 2 canales con una frecuencia de muestreo de 48 kHz, proporcionando mejor compatibilidad y rendimiento dentro del entorno de Home Assistant.
 Puedes ver el firmware desde [aquí](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)
 
 | Firmware | Canales | Notas |
@@ -250,17 +250,17 @@ Puedes ver el firmware desde [aquí](https://github.com/respeaker/reSpeaker_XVF3
 </TabItem>
 </Tabs>
 
-Conecta el reSpeaker XVF3800 a tu PC mediante el cable USB. Ten en cuenta que debes usar el puerto XMOS USB-C (cerca del puerto jack de 3,5 mm) para grabar el firmware de XMOS.
+Conecta el reSpeaker XVF3800 a tu PC mediante el cable USB. Ten en cuenta que debes usar el puerto XMOS USB-C (cerca del puerto jack de 3,5 mm) para flashear el firmware de XMOS.
 
 #### Instalar DFU Util
 
-[`dfu-util`](http://dfu-util.sourceforge.net/) es una herramienta de línea de comandos para la actualización de firmware de dispositivos vía USB.
+[`dfu-util`](http://dfu-util.sourceforge.net/) es una herramienta de línea de comandos para la actualización de firmware de dispositivos (Device Firmware Upgrade) vía USB.
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
 - Descarga `dfu-util-0.11-binaries.tar.xz` y extráelo, por ejemplo, en `D:\dfu-util-0.11-binaries\win64\`  
-  [Download Link](http://dfu-util.sourceforge.net/)
+  [Enlace de descarga](http://dfu-util.sourceforge.net/)
 
 - Añade la ruta a `dfu-util.exe` a la variable de sistema `Path`:  
   `My Computer > Properties > Advanced > Environment Variables > Path`
@@ -290,7 +290,7 @@ dfu-util -l
   - Selecciona `reSpeaker 3800` o `reSpeaker XVF3800 4-Mic Array`  
   - Instala el controlador **WinUSB**  
   - Apaga y enciende de nuevo el dispositivo  
-  - Ejecuta `dfu-util -l` de nuevo para confirmar la detección.
+  - Ejecuta `dfu-util -l` otra vez para confirmar la detección.
 
 </TabItem>
 
@@ -359,11 +359,11 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
   </TabItem>
 </Tabs>
 
-#### Grabar firmware
+#### Flashear el firmware
 
 Descarga el repositorio completo de firmware desde GitHub aquí [`XMOS XVF 3800`](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
-- Ejecuta el siguiente comando para grabar el firmware
+- Ejecuta el siguiente comando para flashear el firmware
 
 ```bash
 
@@ -376,11 +376,11 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```
 
-- La opción `-R` reiniciará automáticamente la placa después de la grabación.
+- La opción `-R` reiniciará automáticamente la placa después de flashear.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/image3.png" alt="pir" width={600} height="auto"/></p>
 
-- Vuelve a comprobar la versión del firmware con el comando `dfu-util -l`, para asegurarte de que el nuevo firmware se ha grabado
+- Vuelve a comprobar la versión del firmware con el comando `dfu-util -l`, para asegurarte de que el nuevo firmware se ha flasheado
 
 ## Grabación y reproducción
 
@@ -396,15 +396,15 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 3. Configura:
    - **Host**: `Windows WASAPI`
-   - **Recording Device**: `reSpeaker 3800`
-   - **Channels**: `2 (Stereo)`
-   - **Sample Rate**: `16000 Hz` (tanto para **Project** como para **Default Sample Rate**)
-   - **Sample Format**: `24-bit`
+   - **Dispositivo de grabación**: `reSpeaker 3800`
+   - **Canales**: `2 (Stereo)`
+   - **Frecuencia de muestreo**: `16000 Hz` (tanto para **Project** como para **Default Sample Rate**)
+   - **Formato de muestra**: `24-bit`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/windw2.png" alt="pir" width={600} height="auto"/></p>
 
 1. Haz clic en **OK**
-2. Ya estás listo: ¡empieza a grabar!
+2. Ya está todo listo: ¡empieza a grabar!
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/windw3.png" alt="pir" width={600} height="auto"/></p>
 
@@ -424,10 +424,10 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac3.png" alt="pir" width={600} height="auto"/></p>
 
-- **Recording Device**: `reSpeaker 3800`
-- **Channels**: `2 (Stereo)`
-- **Sample Rate**: `16000 Hz` (tanto para **Project** como para **Default Sample Rate**)
-- **Sample Format**: `24-bit`
+- **Dispositivo de grabación**: `reSpeaker 3800`
+- **Canales**: `2 (Stereo)`
+- **Frecuencia de muestreo**: `16000 Hz` (tanto para **Project** como para **Default Sample Rate**)
+- **Formato de muestra**: `24-bit`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac4.png" alt="pir" width={600} height="auto"/></p>
 
@@ -497,7 +497,7 @@ Abre una terminal en tu Raspberry Pi. Ejecuta el siguiente comando para instalar
 wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
 ```
 
-Espera a que la instalación se complete. Aparecerá un nuevo icono de Pi-Apps en tu menú.
+Espera a que finalice la instalación. Aparecerá un nuevo icono de Pi-Apps en tu menú.
 
 2. **Instalar Audacity mediante Pi-Apps**
 
@@ -547,7 +547,7 @@ Se requieren las siguientes dependencias para usar la interfaz de control en Pyt
 
 * Python 3.6 o posterior
 * Biblioteca de Python `pyusb`
-* Biblioteca del sistema `libusb`
+* Biblioteca de sistema `libusb`
 
 
 ### Instalación y dependencias
@@ -558,7 +558,7 @@ Instala la dependencia de Python requerida usando:
 pip install pyusb
 ```
 
-Según tu sistema operativo, es posible que también necesites instalar el paquete `libusb` por separado.
+Según tu sistema operativo, puede que también necesites instalar el paquete `libusb` por separado.
 
 
 
@@ -606,7 +606,7 @@ python xvf_host.py VERSION
 VERSION: [2, 0, 7]
 ```
 
-**Leer dirección de llegada (DOA)**
+**Leer Direction of Arrival (DOA)**
 
 Obtiene la dirección de la fuente de sonido detectada.
 
@@ -694,7 +694,7 @@ Antes de usar la aplicación por primera vez, instala el controlador **WinUSB** 
 
 **Paso 6:** Desconecta y vuelve a conectar el dispositivo.
 
-**Paso 7:** Ejecuta el siguiente comando para verificar que el dispositivo sea detectado:
+**Paso 7:** Ejecuta el siguiente comando para verificar que el dispositivo se detecta:
 
 ```bash
 dfu-util -l
@@ -770,7 +770,7 @@ Aquí puedes configurar:
 * Supresión de ruido estacionario
 * Control automático de ganancia (AGC)
 * Cancelación de eco acústico (AEC)
-* Configuración del canal de salida
+* Configuración de canales de salida
 * Asignación de canales izquierdo y derecho
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/audio.jpg" alt="Audio Tab" width={800} height="auto"/></p>
@@ -811,12 +811,12 @@ La pestaña **Parameters** proporciona acceso a todos los parámetros configurab
 Los ajustes están organizados en categorías como:
 
 * Audio
-* Cancelación de eco acústico (AEC)
-* Postprocesamiento
+* Acoustic Echo Cancellation (AEC)
+* Post Processing
 * LEDs / GPIO
-* Sistema
+* System
 
-Desde esta interfaz, puedes actualizar directamente los valores de los parámetros.
+Desde esta interfaz, puedes actualizar los valores de los parámetros directamente.
 
 Cada parámetro incluye una descripción para ayudarte a entender su propósito y el rango de valores recomendado.
 
@@ -824,7 +824,7 @@ Cada parámetro incluye una descripción para ayudarte a entender su propósito 
 
 ## Solución de problemas
 
-### ¿El sonido de reproducción desde la salida del altavoz no es suficiente?
+### ¿La reproducción desde la salida del altavoz no es suficiente?
 
 Si el volumen de salida del altavoz del **ReSpeaker XVF3800** es demasiado bajo en Linux, es posible que necesites ajustar los **niveles del mezclador ALSA** para la tarjeta de sonido XVF3800. Sigue los pasos a continuación para aumentar el volumen de salida.
 
@@ -840,13 +840,13 @@ Si el volumen de salida del altavoz del **ReSpeaker XVF3800** es demasiado bajo 
 **Paso 2: Seleccionar la tarjeta de sonido XVF3800**
 
 1. Presiona **F6** para abrir el menú de selección de tarjeta de sonido.
-2. Usa las **flechas arriba/abajo** para resaltar la tarjeta de sonido **XVF3800**.
+2. Usa las **teclas de flecha arriba/abajo** para resaltar la tarjeta de sonido **XVF3800**.
 3. Presiona **Enter** para confirmar la selección.
 
 **Paso 3: Ajustar el volumen de PCM-1**
 
-1. Usa las **flechas izquierda/derecha** para navegar hasta **PCM-1**.
-2. Usa la **flecha arriba** para aumentar el nivel de volumen hasta **100%**.
+1. Usa las **teclas de flecha izquierda/derecha** para navegar hasta **PCM-1**.
+2. Usa la **tecla de flecha arriba** para aumentar el nivel de volumen hasta **100%**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
 
@@ -859,7 +859,7 @@ Si el volumen de salida del altavoz del **ReSpeaker XVF3800** es demasiado bajo 
    sudo alsactl store
    ```
 
-**Paso 5: Opción adicional (usar PulseAudio)**
+**Paso 5: Opción adicional (Usar PulseAudio)**
 
 Si aún no puedes escuchar el sonido con claridad después de ajustar los niveles de ALSA, intenta instalar **PulseAudio Volume Control** para realizar ajustes de volumen más detallados:
 
@@ -875,19 +875,36 @@ Desinstala todos los controladores asociados con el ReSpeaker en el Administrado
 
 ### ¿No se puede usar como dispositivo de sonido en Windows después de flashear el firmware?
 
-Abre el menú de inicio y escribe Device manager. Busca los dispositivos relacionados con reSpeaker XVF 3800, haz clic derecho sobre ellos y selecciona Uninstall devices. Después de eso, reinicia el dispositivo (desconecta y vuelve a conectar el USB) y Windows volverá a instalar el controlador de tarjeta de sonido correcto.
+Abre el menú de inicio y escribe Device manager. Busca los dispositivos reSpeaker XVF 3800 relacionados, haz clic derecho sobre ellos y selecciona Uninstall devices. Después de eso, reinicia el dispositivo (desconecta y vuelve a conectar el USB) y Windows volverá a instalar el controlador de tarjeta de sonido correcto para él.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
+### ¿Cómo puedo abrir la carcasa sin dañarla?
+
+Puedes usar tus uñas para levantar suavemente los bordes de la carcasa. Hay tres clips de bloqueo que aseguran la tapa. Una vez que sueltes uno de los clips, la carcasa se puede abrir con relativa facilidad. Manipula la carcasa con cuidado para evitar dañar los clips o el contenedor.
+
+### ¿Por qué mi reSpeaker XVF3800 no se detecta como dispositivo de sonido?
+
+La versión ESP32 del reSpeaker XVF3800 se envía con firmware I2S por defecto, por lo que no aparecerá como un dispositivo de audio USB cuando se conecte a un PC. Esta información se menciona en nuestra página de producto de Bazaar y en la documentación oficial.
+
+Si quieres usar el dispositivo como un **dispositivo de audio USB**, necesitas volver a flashearlo con el firmware USB. Sigue estos pasos:
+
+1. **Primero entra en Modo Seguro:**
+   [Instrucciones de Modo Seguro](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#Modo-Seguro)
+
+2. **Flashea el firmware USB:**
+   [Instrucciones de actualización de firmware](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#actualizar-firmware)
+
 ## Recursos
 
+- [Archivo 2D de ReSpeaker XVF3800](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf3800_2d_mechanical_drawing.pdf)
 - [Archivo 3D de ReSpeaker XVF3800](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
 - [Archivo ReSpeaker XVF3800 3D-Enclosure-Up](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
 - [Archivo ReSpeaker XVF3800 3D-Enclosure-Down](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

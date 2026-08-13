@@ -10,7 +10,7 @@ last_update:
   date: 11/10/2025
   author: Kasun Thushara
 createdAt: '2025-08-20'
-updatedAt: '2026-07-23'
+updatedAt: '2026-07-24'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/
 ---
 
@@ -879,8 +879,25 @@ Open the start menu and type Device manager. Find  related reSpeaker XVF 3800 de
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
+### How can I open the casing without damaging it?
+
+You can use your fingernails to gently lift the edges of the casing. There are three locking clips securing the cover. Once you release one of the clips, the casing can be opened relatively easily. Please handle the casing carefully to avoid damaging the clips or enclosure.
+
+### Why is my reSpeaker XVF3800 not detected as a sound device?
+
+The reSpeaker XVF3800 ESP32 version is shipped with I2S firmware by default, so it will not appear as a USB audio device when connected to a PC. This information is mentioned on our Bazaar product page and official documentation.
+
+If you want to use the device as a **USB audio device**, you need to reflash it with the USB firmware. Please follow these steps:
+
+1. **Enter Safe Mode first:**
+   [Safe Mode instructions](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#safe-mode)
+
+2. **Flash the USB firmware:**
+   [Firmware update instructions](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
+
 ## Resources
 
+- [ReSpeaker XVF3800 2D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf3800_2d_mechanical_drawing.pdf)
 - [ReSpeaker XVF3800 3D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
 - [ReSpeaker XVF3800 3D-Enclosure-Up File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
 - [ReSpeaker XVF3800 3D-Enclosure-Down File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
