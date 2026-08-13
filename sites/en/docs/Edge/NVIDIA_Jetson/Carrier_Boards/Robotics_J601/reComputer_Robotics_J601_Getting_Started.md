@@ -12,10 +12,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
 last_update:
-  date: 07/23/2026
-  author: HaoChen
+  date: 08/13/2026
+  author: haochen
 createdAt: '2026-04-24'
-updatedAt: '2026-07-27'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
@@ -307,7 +307,8 @@ Before flashing, make sure the board is in Force Recovery Mode.
 
 **Step 5.** On the host PC, run `lsusb`. The following entry confirms that the board is in Force Recovery Mode:
 
-- Jetson AGX Thor: **0955:7026 NVIDIA Corp.**
+- For AGX Thor T5000 (J6015): **0955:7026 NVIDIA Corp.**
+- For AGX Thor T4000 (J6014): **0955:7226 NVIDIA Corp.**
 
 <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg"/></div>
 
@@ -319,15 +320,24 @@ Before flashing, make sure the board is in Force Recovery Mode.
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
 # Example:
-# sudo tar xpf mfi_recomputer-robo-agx-thor-j601x-7.1.0-38.4.0-YYYY-MM-DD.tar.gz
+# sudo tar xpf mfi_recomputer-thor-carrier-j6015-6.2.1-38.4.0-YYYY-MM-DD.tar.gz
+# sudo tar xpf mfi_recomputer-thor-carrier-j6014-6.2.1-38.4.0-YYYY-MM-DD.tar.gz
 ```
 
-**Step 2.** Flash JetPack to the NVMe SSD:
+**Step 2.** Flash JetPack to the NVMe SSD. Use the command that matches your product:
+
+For **reComputer Robotics J6015** (AGX Thor T5000):
 
 ```bash
-cd mfi_xxxx
-# Example: cd mfi_recomputer-robo-agx-thor-j601x
-sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
+cd mfi_recomputer-thor-carrier-j6015
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --showlogs --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t264_nvme.xml -S 80GiB --network usb0 recomputer-thor-carrier-j6015 external
+```
+
+For **reComputer Robotics J6014** (AGX Thor T4000):
+
+```bash
+cd mfi_recomputer-thor-carrier-j6014
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --showlogs --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t264_nvme.xml -S 80GiB --network usb0 recomputer-thor-carrier-j6014 external
 ```
 
 The flash command usually takes 2–10 minutes. The following output indicates a successful flash:
