@@ -236,18 +236,22 @@ Flashing erases the data on the target NVMe SSD. Back up important data before y
 
 <TabItem value="command-line" label="Command-Line Flashing">
 
-#### Prepare the JetPack Image
+Download and flash the JetPack image that matches the Jetson module on your board. Both products use the same J601 carrier board; select the tab for your module:
 
-Download the system image that matches your Jetson module. Both products use the same J601 carrier board; choose the image by the module installed on your board:
+<Tabs groupId="j601-thor-module">
+
+<TabItem value="t5000" label="AGX Thor T5000 (J6015)" default>
+
+#### Prepare the JetPack Image
 
 <div class="table-center">
 <table style={{textAlign: 'center', tableLayout: 'fixed', width: '100%'}}>
   <colgroup>
-    <col style={{width: '14%'}} />
-    <col style={{width: '20%'}} />
     <col style={{width: '18%'}} />
+    <col style={{width: '22%'}} />
+    <col style={{width: '20%'}} />
     <col style={{width: '14%'}} />
-    <col style={{width: '34%'}} />
+    <col style={{width: '26%'}} />
   </colgroup>
   <thead>
     <tr>
@@ -268,26 +272,15 @@ Download the system image that matches your Jetson module. Both products use the
       </td>
       <td style={{overflowWrap: 'anywhere'}}>3f75780b43f6559bc950b6a97aa38fd6f61d4d001cce870bdfb498f64e6d18e5</td>
     </tr>
-    <tr>
-      <td>7.1 (L4T 38.4.0)</td>
-      <td>AGX Thor T4000</td>
-      <td>reComputer Robotics J6014</td>
-      <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBofCO4bWF9SLdbLQE1V8DgAS1tW6-UmQGEH3ULOZ7W16o?e=zdnK3s" target="_blank" rel="noopener noreferrer">Download</a>
-      </td>
-      <td style={{overflowWrap: 'anywhere'}}>c63eddfe7005a088ab439c64fb5d3bf9a52b85d62d377c6a4bf829295f7222ef</td>
-    </tr>
   </tbody>
 </table>
 </div>
 
 :::danger
-The JetPack image files are large and may take around 60 minutes to download. Wait for the download to finish before extracting the archive.
+The JetPack image file is large and may take around 60 minutes to download. Wait for the download to finish before extracting the archive.
 :::
 
 To verify the downloaded firmware, run `sha256sum <file>` on the Ubuntu host and compare the result with the SHA256 value in the table.
-
-⚙️ **All `.dts` files and other source code for Seeed's Jetson carrier boards can be downloaded from** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra).
 
 #### Enter Force Recovery Mode
 
@@ -307,8 +300,7 @@ Before flashing, make sure the board is in Force Recovery Mode.
 
 **Step 5.** On the host PC, run `lsusb`. The following entry confirms that the board is in Force Recovery Mode:
 
-- For AGX Thor T5000 (J6015): **0955:7026 NVIDIA Corp.**
-- For AGX Thor T4000 (J6014): **0955:7226 NVIDIA Corp.**
+- **0955:7026 NVIDIA Corp.**
 
 <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg"/></div>
 
@@ -318,22 +310,100 @@ Before flashing, make sure the board is in Force Recovery Mode.
 
 ```bash
 cd <path-to-image>
-sudo tar xpf mfi_xxxx.tar.gz
-# Example:
-# sudo tar xpf mfi_recomputer-thor-carrier-j6015-6.2.1-38.4.0-YYYY-MM-DD.tar.gz
-# sudo tar xpf mfi_recomputer-thor-carrier-j6014-6.2.1-38.4.0-YYYY-MM-DD.tar.gz
+sudo tar xpf mfi_recomputer-thor-carrier-j6015-6.2.1-38.4.0-YYYY-MM-DD.tar.gz
 ```
 
-**Step 2.** Flash JetPack to the NVMe SSD. Use the command that matches your product:
-
-For **reComputer Robotics J6015** (AGX Thor T5000):
+**Step 2.** Flash JetPack to the NVMe SSD:
 
 ```bash
 cd mfi_recomputer-thor-carrier-j6015
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --showlogs --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t264_nvme.xml -S 80GiB --network usb0 recomputer-thor-carrier-j6015 external
 ```
 
-For **reComputer Robotics J6014** (AGX Thor T4000):
+The flash command usually takes 2–10 minutes. The following output indicates a successful flash:
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+**Step 3.** Connect the reComputer Robotics J6015 to an HDMI display and complete the initial system configuration.
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+</TabItem>
+
+<TabItem value="t4000" label="AGX Thor T4000 (J6014)">
+
+#### Prepare the JetPack Image
+
+<div class="table-center">
+<table style={{textAlign: 'center', tableLayout: 'fixed', width: '100%'}}>
+  <colgroup>
+    <col style={{width: '18%'}} />
+    <col style={{width: '22%'}} />
+    <col style={{width: '20%'}} />
+    <col style={{width: '14%'}} />
+    <col style={{width: '26%'}} />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>JetPack Version</th>
+      <th>Jetson Module</th>
+      <th>Product</th>
+      <th>Download Link</th>
+      <th>SHA256</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7.1 (L4T 38.4.0)</td>
+      <td>AGX Thor T4000</td>
+      <td>reComputer Robotics J6014</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBofCO4bWF9SLdbLQE1V8DgAS1tW6-UmQGEH3ULOZ7W16o?e=zdnK3s" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td style={{overflowWrap: 'anywhere'}}>c63eddfe7005a088ab439c64fb5d3bf9a52b85d62d377c6a4bf829295f7222ef</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+:::danger
+The JetPack image file is large and may take around 60 minutes to download. Wait for the download to finish before extracting the archive.
+:::
+
+To verify the downloaded firmware, run `sha256sum <file>` on the Ubuntu host and compare the result with the SHA256 value in the table.
+
+#### Enter Force Recovery Mode
+
+:::info
+Before flashing, make sure the board is in Force Recovery Mode.
+:::
+
+**Step 1.** Connect the Ubuntu host PC to the **USB 3.0 Type-C flashing port** using a USB Type-C data cable.
+
+<div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_03.jpg"/></div>
+
+**Step 2.** Press and hold the **RECOVERY** button.
+
+**Step 3.** Connect the power supply (19V to 48V DC through XT30).
+
+**Step 4.** Release the **RECOVERY** button after two seconds.
+
+**Step 5.** On the host PC, run `lsusb`. The following entry confirms that the board is in Force Recovery Mode:
+
+- **0955:7226 NVIDIA Corp.**
+
+<div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg"/></div>
+
+#### Flash to Jetson
+
+**Step 1.** Extract the downloaded image:
+
+```bash
+cd <path-to-image>
+sudo tar xpf mfi_recomputer-thor-carrier-j6014-6.2.1-38.4.0-YYYY-MM-DD.tar.gz
+```
+
+**Step 2.** Flash JetPack to the NVMe SSD:
 
 ```bash
 cd mfi_recomputer-thor-carrier-j6014
@@ -344,9 +414,15 @@ The flash command usually takes 2–10 minutes. The following output indicates a
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
-**Step 3.** Connect the reComputer Robotics J601 to an HDMI display and complete the initial system configuration.
+**Step 3.** Connect the reComputer Robotics J6014 to an HDMI display and complete the initial system configuration.
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+</TabItem>
+
+</Tabs>
+
+⚙️ **All `.dts` files and other source code for Seeed's Jetson carrier boards can be downloaded from** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra).
 
 </TabItem>
 
