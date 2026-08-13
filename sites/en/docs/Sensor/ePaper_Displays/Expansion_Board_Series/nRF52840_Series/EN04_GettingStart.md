@@ -254,7 +254,7 @@ Create a **new "driver.h" file** and paste those code into it. The code should b
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
-After that, go to **Tools** -> **Board** -> **XIAO ESP32S3** and **Tools** -> **Port** -> **Select the port your board is connected to**. Then click **Upload** to upload the code.
+After that, go to **Tools** -> **Board** -> **Seeed XIAO nRF52840 Plus** and **Tools** -> **Port** -> **Select the port your board is connected to**. Then click **Upload** to upload the code.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
