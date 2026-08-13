@@ -895,6 +895,34 @@ If you want to use the device as a **USB audio device**, you need to reflash it 
 2. **Flash the USB firmware:**
    [Firmware update instructions](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
+### Why are some channels silent with the XVF3800 6-channel firmware?
+
+The raw microphone channels may need to be enabled through the system’s audio mixer controls after flashing the 6-channel firmware.
+
+On Linux, first check the audio card ID:
+
+```bash
+arecord -l
+```
+
+For example, if the XVF3800 appears as **card 1**, enable the capture channels and set their volume:
+
+```bash
+amixer -c 1 cset numid=8 on,on,on,on,on,on
+amixer -c 1 cset numid=10 60,60,60,60,60,60
+```
+
+Adjust the volume values as needed, then save the settings:
+
+```bash
+sudo alsactl store 1
+```
+
+After applying these settings, all six channels should capture non-zero audio.
+
+**Windows:** If some channels remain silent, try uninstalling the XVF3800 device driver from **Device Manager**, then unplug and reconnect the device. This allows Windows to reconfigure the device and driver.
+
+
 ## Resources
 
 - [ReSpeaker XVF3800 2D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf3800_2d_mechanical_drawing.pdf)
