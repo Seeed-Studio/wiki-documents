@@ -3966,6 +3966,7 @@ const sidebars = {
                   label: 'reComputer Rugged J40',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Rugged_J40/ja_reComputer_Rugged_J40_Getting_Started',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Rugged_J40/ja_reComputer_Rugged_J401_hardware_and_interface_usage',
                   ],
                 },
                 {
