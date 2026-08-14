@@ -1,5 +1,5 @@
 ---
-description: reComputer Robotics J601 载板搭配 NVIDIA Jetson AGX Thor 模组的快速上手指南。
+description: reComputer Robotics J601 载板板卡（适用于 NVIDIA Jetson AGX Thor 模组）的快速上手指南。
 title: reComputer Robotics J601 入门指南
 sidebar_label: 刷写 JetPack
 keywords:
@@ -12,10 +12,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
 last_update:
-  date: 07/23/2026
-  author: HaoChen
+  date: 08/13/2026
+  author: haochen
 createdAt: '2026-04-24'
-updatedAt: '2026-07-23'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg"/>
 </div>
 
-reComputer J601 是一款紧凑而强大的边缘 AI 载板，适用于Jetson AGX Thor，最高可提供 2070 TFLOPS 的算力。它既适用于开发也适用于量产，配备 M.2 Key E/M/B、4 路 10Gb RJ45、4 路 USB 3.2、HDMI 2.1、8 路 GMSL 以及多种 IO，确保无缝集成。它可以作为人形机器人的“大脑”。支持 NVIDIA Isaac、Hugging Face、PyTorch 和 ROS2/1 等 LLM 与物理智能框架，实现 AI 与机器人之间的桥接。通过优化的实时处理能力，它可以运行视觉 AI、Transformer 和多模态模型，为边缘设备解锁先进 AI 能力。
+reComputer J601 是一款紧凑但强大的 Jetson AGX Thor 边缘 AI 载板，提供高达 2070 TFLOPS 的算力。它面向开发与量产，集成 M.2 Key E/M/B、4 路 10Gb RJ45、4 路 USB 3.2、HDMI 2.1、8 路 GMSL 以及多种 IO，便于无缝集成，可作为人形机器人的“大脑”。它支持 NVIDIA Isaac、Hugging Face、PyTorch 和 ROS2/1 等 LLM 与物理 AI 框架，连接 AI 与机器人领域。凭借优化的实时处理能力，它可以运行视觉 AI、Transformer 和多模态模型，为边缘设备解锁先进 AI 能力。
 
 ## 特性
 
@@ -40,7 +40,7 @@ reComputer J601 是一款紧凑而强大的边缘 AI 载板，适用于Jetson AG
 - **M.2 Key M**，用于 PCIe Gen 4 NVMe 2280 SSD
 - **M.2 Key E**，用于 M.2 2230 Wi-Fi 模组
 - **M.2 Key B**，用于 4G/5G 模组
-- 通过两个 Mini-Fakra 接口和 GMSL 扩展板，最多支持 **8 路 GMSL2 摄像头**
+- 通过两个 Mini-Fakra 接口和 GMSL 扩展板，支持最多 **8 路 GMSL2 摄像头**
 - 机器人 I/O，包括隔离 CAN、RS-232/422/485、I2C、I2S、GPI 和 GPO
 - 通过 XT30 提供宽范围 **19V 至 48V DC** 输入
 - 软件平台：**JetPack 7.1**
@@ -60,59 +60,59 @@ reComputer J601 是一款紧凑而强大的边缘 AI 载板，适用于Jetson AG
     </tr>
     <tr>
       <td>显示</td>
-      <td>1 路 HDMI 2.1</td>
+      <td>1x HDMI 2.1</td>
     </tr>
     <tr>
       <td>USB</td>
-      <td>4 路 USB 3.2 Type-A（10Gbps，Host），1 路 USB 2.0 Type-C（调试），1 路 USB 3.0 Type-C（恢复）</td>
+      <td>4x USB 3.2 Type-A（10Gbps，Host），1x USB 2.0 Type-C（调试），1x USB 3.0 Type-C（恢复）</td>
     </tr>
     <tr>
       <td>以太网</td>
-      <td>T5000：4 路 RJ45 10GbE；T4000：3 路 RJ45 10GbE</td>
+      <td>T5000：4x RJ45 10GbE；T4000：3x RJ45 10GbE</td>
     </tr>
     <tr>
       <td>M.2 Key M</td>
-      <td>1 路 M.2 Key M，用于 PCIe Gen 4 NVMe 2280 SSD</td>
+      <td>1x M.2 Key M，用于 PCIe Gen 4 NVMe 2280 SSD</td>
     </tr>
     <tr>
       <td>M.2 Key E</td>
-      <td>1 路 M.2 Key E，用于 M.2 2230 Wi-Fi 模组</td>
+      <td>1x M.2 Key E，用于 M.2 2230 Wi-Fi 模组</td>
     </tr>
     <tr>
       <td>M.2 Key B</td>
-      <td>1 路 M.2 Key B，用于 4G/5G 模组</td>
+      <td>1x M.2 Key B，用于 4G/5G 模组</td>
     </tr>
     <tr>
       <td>串口</td>
-      <td>1 路 RS-232/422/485（DB9 接口）</td>
+      <td>1x RS-232/422/485（DB9 接口）</td>
     </tr>
     <tr>
       <td>JST 接口</td>
-      <td>T5000：4 路 CAN；或 T4000：2 路 CAN，另有 1 路 RS-485、1 路 I2S、1 路 I2C、4 路 GPI 和 4 路 GPO</td>
+      <td>T5000：4x CAN；或 T4000：2x CAN，另有 1x RS-485、1x I2S、1x I2C、4x GPI 和 4x GPO</td>
     </tr>
     <tr>
       <td>音频</td>
-      <td>1 路麦克风输入和 1 路音频输出</td>
+      <td>1x 麦克风输入和 1x 音频输出</td>
     </tr>
     <tr>
       <td>风扇</td>
-      <td>1 路 4 针风扇接口（12V PWM）</td>
+      <td>1x 4 针风扇接口（12V PWM）</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1 路 RTC 2 针排针</td>
+      <td>1x RTC 2 针排针</td>
     </tr>
     <tr>
       <td>LED 指示灯</td>
-      <td>1 个绿色 PWR LED、1 个绿色 SSD LED 和 1 个 RGB USR LED</td>
+      <td>1x 绿色 PWR LED、1x 绿色 SSD LED 和 1x RGB USR LED</td>
     </tr>
     <tr>
       <td>按键</td>
-      <td>1 个 Recovery 按键和 1 个 Reset 按键</td>
+      <td>1x Recovery 按键和 1x Reset 按键</td>
     </tr>
     <tr>
       <td>GMSL</td>
-      <td>2 个 Mini-Fakra 接口，可连接最多 8 路 GMSL2 摄像头</td>
+      <td>2x Mini-Fakra 接口，可连接最多 8x GMSL2 摄像头</td>
     </tr>
     <tr>
       <td>工作温度</td>
@@ -130,7 +130,7 @@ reComputer J601 是一款紧凑而强大的边缘 AI 载板，适用于Jetson AG
 </table>
 </div>
 
-## 硬件总览
+## 硬件概览
 
 | **侧视图 1** |
 |:---------:|
@@ -146,8 +146,8 @@ reComputer J601 是一款紧凑而强大的边缘 AI 载板，适用于Jetson AG
 
 ### 支持的模组
 
-- [NVIDIA Jetson T4000 模组](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T4000-Module-p-6939.html)
-- [NVIDIA Jetson T5000 模组](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T5000-Module-p-6938.html)
+- [NVIDIA Jetson T4000 module](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T4000-Module-p-6939.html)
+- [NVIDIA Jetson T5000 module](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T5000-Module-p-6938.html)
 
 ### 前置条件
 
@@ -155,10 +155,10 @@ reComputer J601 是一款紧凑而强大的边缘 AI 载板，适用于Jetson AG
 - reComputer Robotics J6014 或 J6015
 - NVMe M.2 2280 内置 SSD
 - USB Type-C 数据传输线
-- 主机电脑至少 220 GB 可用存储空间
+- 主机电脑上至少 220 GB 可用存储空间
 
 :::info
-我们建议使用物理 Ubuntu 主机，而不是虚拟机。Seeed Jetson DevelopTool 也通过 WSL2 支持 Windows，但原生 Ubuntu 主机能提供最稳定可靠的刷写体验。
+我们建议使用物理 Ubuntu 主机，而不是虚拟机。Seeed Jetson DevelopTool 也通过 WSL2 支持 Windows，但原生 Ubuntu 主机能提供最稳定可靠的刷机体验。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
@@ -184,7 +184,7 @@ reComputer J601 是一款紧凑而强大的边缘 AI 载板，适用于Jetson AG
 
 ### 选择刷写方式
 
-在下面两种方式中选择一种：图形化的 Seeed Jetson DevelopTool 工作流，或命令行工作流。
+在下面两种方式中选择其一：图形化的 Seeed Jetson DevelopTool 工作流，或命令行工作流。
 
 <Tabs groupId="j601-flashing-method">
 
@@ -208,7 +208,7 @@ Seeed Jetson DevelopTool 提供引导式图形工作流，可在无需 BSP 命�
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_07.jpg"/></div>
 
-**步骤 2.** 使用 **USB 3.0 Type-C 刷写接口** 将主机电脑连接到设备。按住 **RECOVERY** 按键，通过 XT30 接入 19V 至 48V DC 电源，约两秒后松开按键。
+**步骤 2.** 使用 USB Type-C 数据线将主机电脑连接到 **USB 3.0 Type-C 刷机接口**。按住 **RECOVERY** 按键，通过 XT30 接入 19V 至 48V DC 电源，约两秒后松开按键。
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_08.jpg"/></div>
 
@@ -216,11 +216,11 @@ Seeed Jetson DevelopTool 提供引导式图形工作流，可在无需 BSP 命�
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_09.jpg"/></div>
 
-**步骤 4.** 点击 **Download / Prepare BSP**。工具会自动下载固件、校验其 SHA256 校验和并解压 BSP。
+**步骤 4.** 点击 **Download / Prepare BSP**。工具会自动下载固件、校验其 SHA256 校验和，并解压 BSP。
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_10.jpg"/></div>
 
-**步骤 5.** 点击 **Start Flash**，并等待界面提示刷写完成。在此过程中请勿断开电源或 USB 连接线。
+**步骤 5.** 点击 **Start Flash**，并等待界面提示刷写完成。在此过程中不要断开电源或 USB 连接。
 
 :::caution
 刷写会清除目标 NVMe SSD 上的数据。开始前请备份重要数据。
@@ -236,18 +236,22 @@ Seeed Jetson DevelopTool 提供引导式图形工作流，可在无需 BSP 命�
 
 <TabItem value="command-line" label="命令行刷写">
 
-#### 准备 JetPack 镜像
+下载并刷写与你板载 Jetson 模组匹配的 JetPack 镜像。两款产品都使用相同的 J601 载板；请根据你的模组选择对应的选项卡：
 
-下载与你的 Jetson 模组匹配的系统镜像。两款产品都使用相同的 J601 载板；请根据你板卡上安装的模组选择对应镜像：
+<Tabs groupId="j601-thor-module">
+
+<TabItem value="t5000" label="AGX Thor T5000 (J6015)" default>
+
+#### 准备 JetPack 镜像
 
 <div class="table-center">
 <table style={{textAlign: 'center', tableLayout: 'fixed', width: '100%'}}>
   <colgroup>
-    <col style={{width: '14%'}} />
-    <col style={{width: '20%'}} />
     <col style={{width: '18%'}} />
+    <col style={{width: '22%'}} />
+    <col style={{width: '20%'}} />
     <col style={{width: '14%'}} />
-    <col style={{width: '34%'}} />
+    <col style={{width: '26%'}} />
   </colgroup>
   <thead>
     <tr>
@@ -268,6 +272,87 @@ Seeed Jetson DevelopTool 提供引导式图形工作流，可在无需 BSP 命�
       </td>
       <td style={{overflowWrap: 'anywhere'}}>3f75780b43f6559bc950b6a97aa38fd6f61d4d001cce870bdfb498f64e6d18e5</td>
     </tr>
+  </tbody>
+</table>
+</div>
+
+:::danger
+JetPack 镜像文件体积较大，下载可能需要大约 60 分钟。请在下载完成后再解压压缩包。
+:::
+
+要验证下载的固件，请在 Ubuntu 主机上运行 `sha256sum <file>`，并将结果与表格中的 SHA256 值进行比对。
+
+#### 进入强制恢复模式
+
+:::info
+在刷写之前，请确保开发板已进入强制恢复模式（Force Recovery Mode）。
+:::
+
+**步骤 1.** 使用 USB Type-C 数据线，将 Ubuntu 主机电脑连接到 **USB 3.0 Type-C 刷机接口**。
+
+<div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_03.jpg"/></div>
+
+**步骤 2.** 按住 **RECOVERY** 按钮。
+
+**步骤 3.** 连接电源（通过 XT30 提供 19V 至 48V 直流电）。
+
+**步骤 4.** 两秒后松开 **RECOVERY** 按钮。
+
+**步骤 5.** 在主机 PC 上运行 `lsusb`。出现以下条目表示开发板已进入强制恢复模式（Force Recovery Mode）：
+
+- **0955:7026 NVIDIA Corp.**
+
+<div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg"/></div>
+
+#### 刷写到 Jetson
+
+**步骤 1.** 解压下载的镜像：
+
+```bash
+cd <path-to-image>
+sudo tar xpf mfi_recomputer-thor-carrier-j6015-7.1-38.4.0-YYYY-MM-DD.tar.gz
+```
+
+**步骤 2.** 将 JetPack 刷写到 NVMe SSD：
+
+```bash
+cd mfi_recomputer-thor-carrier-j6015
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --showlogs --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t264_nvme.xml -S 80GiB --network usb0 recomputer-thor-carrier-j6015 external
+```
+
+刷写命令通常需要 2–10 分钟。出现以下输出表示刷写成功：
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+**步骤 3.** 将 reComputer Robotics J6015 连接到 HDMI 显示器，并完成初始系统配置。
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+</TabItem>
+
+<TabItem value="t4000" label="AGX Thor T4000 (J6014)">
+
+#### 准备 JetPack 镜像
+
+<div class="table-center">
+<table style={{textAlign: 'center', tableLayout: 'fixed', width: '100%'}}>
+  <colgroup>
+    <col style={{width: '18%'}} />
+    <col style={{width: '22%'}} />
+    <col style={{width: '20%'}} />
+    <col style={{width: '14%'}} />
+    <col style={{width: '26%'}} />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>JetPack 版本</th>
+      <th>Jetson 模组</th>
+      <th>产品</th>
+      <th>下载链接</th>
+      <th>SHA256</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>7.1 (L4T 38.4.0)</td>
       <td>AGX Thor T4000</td>
@@ -282,20 +367,18 @@ Seeed Jetson DevelopTool 提供引导式图形工作流，可在无需 BSP 命�
 </div>
 
 :::danger
-JetPack 镜像文件体积较大，下载可能需要大约 60 分钟。请在下载完成后再解压压缩包。
+JetPack 镜像文件较大，下载可能需要大约 60 分钟。请等待下载完成后再解压压缩包。
 :::
 
-要验证下载的固件，在 Ubuntu 主机上运行 `sha256sum <file>`，并将结果与表格中的 SHA256 值进行比较。
-
-⚙️ **Seeed 的 Jetson 载板的所有 `.dts` 文件和其他源代码可以从此处下载：** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)。
+要验证下载的固件，请在 Ubuntu 主机上运行 `sha256sum <file>`，并将结果与表格中的 SHA256 值进行比较。
 
 #### 进入强制恢复模式
 
 :::info
-在烧录之前，请确保开发板处于强制恢复模式。
+在刷写之前，请确保开发板处于强制恢复模式（Force Recovery Mode）。
 :::
 
-**步骤 1.** 使用 USB Type-C 数据线将 Ubuntu 主机 PC 连接到**USB 3.0 Type-C 烧录接口**。
+**步骤 1.** 使用 USB Type-C 数据线，将 Ubuntu 主机 PC 连接到 **USB 3.0 Type-C 刷写接口**。
 
 <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_03.jpg"/></div>
 
@@ -305,36 +388,33 @@ JetPack 镜像文件体积较大，下载可能需要大约 60 分钟。请在�
 
 **步骤 4.** 两秒后松开 **RECOVERY** 按钮。
 
-**步骤 5.** 在主机 PC 上运行 `lsusb`。出现以下条目表示开发板已进入强制恢复模式：
+**步骤 5.** 在主机 PC 上运行 `lsusb`。出现以下条目表示开发板已进入强制恢复模式（Force Recovery Mode）：
 
-- Jetson AGX Thor：**0955:7026 NVIDIA Corp.**
+- **0955:7226 NVIDIA Corp.**
 
 <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg"/></div>
 
-#### 烧录到 Jetson
+#### 刷写到 Jetson
 
 **步骤 1.** 解压下载的镜像：
 
 ```bash
 cd <path-to-image>
-sudo tar xpf mfi_xxxx.tar.gz
-# Example:
-# sudo tar xpf mfi_recomputer-robo-agx-thor-j601x-7.1.0-38.4.0-YYYY-MM-DD.tar.gz
+sudo tar xpf mfi_recomputer-thor-carrier-j6014-7.1-38.4.0-YYYY-MM-DD.tar.gz
 ```
 
-**步骤 2.** 将 JetPack 烧录到 NVMe SSD：
+**步骤 2.** 将 JetPack 刷写到 NVMe SSD：
 
 ```bash
-cd mfi_xxxx
-# Example: cd mfi_recomputer-robo-agx-thor-j601x
-sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
+cd mfi_recomputer-thor-carrier-j6014
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --showlogs --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t264_nvme.xml -S 80GiB --network usb0 recomputer-thor-carrier-j6014 external
 ```
 
-烧录命令通常需要 2–10 分钟。出现以下输出表示烧录成功：
+刷写命令通常需要 2–10 分钟。出现以下输出表示刷写成功：
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
-**步骤 3.** 将 reComputer Robotics J601 连接到 HDMI 显示器，并完成初始系统配置。
+**步骤 3.** 将 reComputer Robotics J6014 连接到 HDMI 显示器，并完成初始系统配置。
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
@@ -342,8 +422,14 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 </Tabs>
 
+⚙️ **Seeed 的 Jetson 载板的所有 `.dts` 文件和其他源代码可以从** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra) **下载。**
+
+</TabItem>
+
+</Tabs>
+
 :::info
-首次启动后，请根据需要完成**系统配置**。
+首次启动后，请根据需要完成 **系统配置（System Configuration）**。
 :::
 
 ## 资源
@@ -359,7 +445,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技术支持
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
