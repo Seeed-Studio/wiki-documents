@@ -1,6 +1,6 @@
 ---
 description: Introdução à XIAO ePaper Display Board(nRF52840) - EN04
-title: Introdução à EN04
+title: Introdução ao EN04
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
@@ -11,7 +11,7 @@ last_update:
   date: 11/25/2025
   author: Allen
 createdAt: '2025-09-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-04-27'
 url: https://wiki.seeedstudio.com/pt-br/epaper_EN04/
 ---
 import Tabs from '@theme/Tabs';
@@ -38,13 +38,13 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 suporta displays ePaper de **24 pinos** e **50 pinos**. Ela possui um conector de bateria JST 2,0 mm com interruptor de energia, CI de carregamento integrado, função NFC e vem com um botão de reset e três botões de usuário. É ideal para projetos de ePaper de baixo consumo, como sinalização digital, etiquetas eletrônicas e quadros de informação portáteis.
+Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 é compatível com displays ePaper de **24 pinos** e **50 pinos**. Ela possui um conector de bateria JST 2,0 mm com interruptor de energia, CI de carregamento integrado, função NFC e vem com um botão de reset e três botões de usuário. É ideal para projetos de ePaper de baixo consumo, como sinalização digital, etiquetas eletrônicas e quadros de informação portáteis.
 
 ### Características
 
 - **Alimentada por XIAO nRF52840 Plus:** Funciona imediatamente quando conectada a um display ePaper compatível.
-- **Suporte versátil a displays:** Compatível com uma ampla gama de telas ePaper, suportando interfaces de 24 pinos e 50 pinos, com troca fácil por meio de jumpers.
-- **Conector de bateria com interruptor:** Fornece conexão simples de bateria e integra um interruptor, permitindo gerenciamento eficiente de energia e economia de consumo.
+- **Suporte versátil a displays:** Compatível com uma ampla gama de telas ePaper, suportando interfaces de 24 pinos e 50 pinos, com comutação fácil por meio de jumpers.
+- **Conector BAT com interruptor:** Fornece conexão simples de bateria e integra um interruptor, permitindo gerenciamento eficiente de energia e economia de consumo.
 - **Botões fáceis de usar:** Inclui 1 botão de reset e 3 botões programáveis pelo usuário, oferecendo flexibilidade para acelerar projetos e funções personalizáveis.
 
 ### Especificações
@@ -63,19 +63,19 @@ Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 suporta displays
     </tr>
     <tr>
       <th>Conector ePaper</th>
-      <td>FPC 24 pinos 0,5mm<br />FPC 50 pinos 0,5mm</td>
+      <td>FPC 24 pinos 0,5 mm<br />FPC 50 pinos 0,5 mm</td>
     </tr>
     <tr>
       <th>Conector de bateria</th>
-      <td>JST 2,0mm</td>
+      <td>JST 2,0 mm</td>
     </tr>
     <tr>
       <th>Interruptor</th>
-      <td>Ligar/Desligar alimentação da bateria</td>
+      <td>Alimentação da bateria ON/OFF</td>
     </tr>
     <tr>
       <th>Fonte de alimentação</th>
-      <td>- Bateria Li 3,7V<br />- USB Type-C</td>
+      <td>- Bateria Li 3,7 V<br />- USB Type-C</td>
     </tr>
     <tr>
       <th>Botão</th>
@@ -110,30 +110,30 @@ Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 suporta displays
         </tr>
         <tr>
             <th>Conector ePaper</th>
-            <td>FPC 24 pinos, 0,5mm<br />FPC 50 pinos, 0,5mm</td>
-            <td>FPC 24 pinos 0,5mm</td>
-            <td>FPC 24 pinos 0,5mm</td>
+            <td>FPC 24 pinos, 0,5 mm<br />FPC 50 pinos, 0,5 mm</td>
+            <td>FPC 24 pinos 0,5 mm</td>
+            <td>FPC 24 pinos 0,5 mm</td>
         </tr>
         <tr>
             <th>Conector de bateria</th>
-            <td>JST 2,0mm</td>
+            <td>JST 2,0 mm</td>
             <td>/</td>
-            <td>JST 2,0mm</td>
+            <td>JST 2,0 mm</td>
         </tr>
         <tr>
             <th>Interruptor</th>
-            <td>Ligar/Desligar alimentação da bateria</td>
+            <td>Alimentação da bateria ON/OFF</td>
             <td>/</td>
-            <td>Ligar/Desligar alimentação da bateria</td>
+            <td>Alimentação da bateria ON/OFF</td>
+        </tr>
+        <tr>
+            <th>Botão</th>
+            <td>1x botão de reset<br />3x botões de usuário</td>
+            <td>/</td>
+            <td>/</td>
         </tr>
         <tr>
             <th>Porta de extensão de IO</th>
-            <td>/</td>
-            <td>conexão de outros controladores</td>
-            <td>conexão de sensores adicionais</td>
-        </tr>
-        <tr>
-            <th>Porta de IO de extensão</th>
             <td>/</td>
             <td>conexão de outros controladores</td>
             <td>conexão de sensores adicionais</td>
@@ -143,11 +143,11 @@ Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 suporta displays
 
 ### Aplicações
 
-- **Dashboard de casa inteligente**: Exibe informações em tempo real, como atualizações de clima, eventos de calendário e notificações de vários dispositivos de casa inteligente.
-- **Monitoramento de energia**: Mostra dados de consumo de energia de medidores inteligentes, ajudando moradores a acompanhar e gerenciar o uso de energia com mais eficiência.
-- **Alertas de segurança**: Exibe alertas e notificações sobre eventos de segurança, como detecção de movimento ou ativação de sensores de porta/janela.
-- **Display de termostato inteligente**: Mostra níveis de temperatura e umidade, bem como configurações de controle para o seu termostato inteligente.
-- **Porta-retratos digital**: Crie um porta-retratos digital com WiFi que pode exibir imagens da sua rede de casa inteligente.
+- **Painel de casa inteligente**: Exiba informações em tempo real, como atualizações de clima, eventos de calendário e notificações de vários dispositivos de casa inteligente.
+- **Monitoramento de energia**: Mostre dados de consumo de energia de medidores inteligentes, ajudando moradores a acompanhar e gerenciar o uso de energia com mais eficiência.
+- **Alertas de segurança**: Exiba alertas e notificações sobre eventos de segurança, como detecção de movimento ou ativação de sensores de porta/janela.
+- **Display de termostato inteligente**: Mostre níveis de temperatura e umidade, bem como configurações de controle para o seu termostato inteligente.
+- **Porta-retratos digital**: Crie um porta-retratos digital com WiFi que possa exibir imagens da sua rede de casa inteligente.
 
 ## Visão geral de hardware
 
@@ -159,7 +159,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 ::: -->
 
-### ePaper suportados
+### ePaper compatíveis
 
 #### Conector de 24 pinos
 
@@ -203,7 +203,7 @@ Ao usar a XIAO ePaper Display Board, certifique-se de configurar o jumper de aco
 ### Instalar a biblioteca Seeed GFX
 
 :::tip
-Esta biblioteca tem a mesma função que a biblioteca TFT e não é compatível com ela. Se você tiver instalado a biblioteca TFT ou outras bibliotecas de display semelhantes, desinstale-as primeiro.
+Esta biblioteca tem a mesma função que a biblioteca TFT e não é compatível com ela. Se você instalou a biblioteca TFT ou outras bibliotecas de display semelhantes, desinstale-as primeiro.
 :::
 
 Baixe e instale a biblioteca Seeed GFX a partir do GitHub.
@@ -220,7 +220,7 @@ Role para baixo e abra este link.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-Selecione o tipo do seu dispositivo e ele irá gerar algum código. Copie esse código e o usaremos mais tarde.
+Selecione o tipo do seu dispositivo e algum código será gerado. Copie esse código, pois o usaremos depois.
 
 :::tip
 Se você fizer a escolha errada, a tela não exibirá nada.
@@ -247,14 +247,14 @@ Existem 4 exemplos básicos, abra um exemplo básico de que você goste:
 
 Aqui, usamos um display de 7,5 polegadas como exemplo. As etapas são as mesmas para todas as telas de 24 pinos; a única diferença é selecionar o tamanho de tela apropriado no driver.
 
-Crie um **novo arquivo "driver.h"** e cole esse código nele. O código deve ser assim:
+Crie um **novo arquivo "driver.h"** e cole esse código nele. O código deve ser semelhante a:
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
-Depois disso, vá para **Tools** -> **Board** -> **XIAO ESP32S3** e **Tools** -> **Port** -> **Select the port your board is connected to**. Em seguida, clique em **Upload** para enviar o código.
+Depois disso, vá para **Tools** -> **Board** -> **Seeed XIAO nRF52840 Plus** e **Tools** -> **Port** -> **Select the port your board is connected to**. Em seguida, clique em **Upload** para enviar o código.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -274,7 +274,7 @@ A imagem abaixo mostra a conexão correta:
 
 A EN04 possui três botões programáveis pelo usuário que podem ser usados para vários propósitos de controle. Esta seção demonstra como ler os estados dos botões e responder aos pressionamentos usando Arduino.
 
-Na EN04, os três botões estão conectados ao XIAO nRF52840 Plus:
+Na EN04, os três botões estão conectados à XIAO nRF52840 Plus:
 
 <table>
   <thead>
@@ -296,7 +296,7 @@ Na EN04, os três botões estão conectados ao XIAO nRF52840 Plus:
 
 Todos os botões são ativos em nível baixo, o que significa que leem LOW quando pressionados e HIGH quando soltos.
 
-Exemplo básico de leitura de botões
+Exemplo básico de leitura de botão
 
 Este exemplo demonstra como detectar pressionamentos de botões e imprimir mensagens no monitor serial.
 
@@ -347,7 +347,7 @@ void loop() {
 }
 ```
 
-### Bateria de usuário na XIAO ePaper Display Board(nRF52840) - EN04
+### Bateria do usuário na XIAO ePaper Display Board(nRF52840) - EN04
 
 Ao operar com alimentação por bateria:
 

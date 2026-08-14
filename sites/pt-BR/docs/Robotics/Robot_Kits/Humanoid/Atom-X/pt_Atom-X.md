@@ -167,11 +167,25 @@ Forneceremos gradualmente vídeos de montagem mais completos e instruções ilus
 Consulte o manual do usuário do Atom-S para o uso do Atom-X. Todas as operações são idênticas às do Atom-S.
 :::
 
-<div style={{textAlign: 'center'}}>
+<div style={{textAlign: 'center', marginBottom: '24px'}}>
     <Link to="/atom_s#8-iniciando-seu-primeiro-demo" style={{display: 'inline-block', width: '200px', height: '40px', lineHeight: '40px', backgroundColor: '#007bff', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
         ▶ Iniciar uma demonstração
     </Link>
 </div>
+
+Link do Motion Editor:
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/uartbasic/robotstudiopro/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Abrir Motion Editor 🖱️</font></span></strong>
+</a></div>
+
+Link do Remote Controller:
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/ps2v2/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Abrir Remote Controller 🖱️</font></span></strong>
+</a></div>
 
 ## FAQ
 

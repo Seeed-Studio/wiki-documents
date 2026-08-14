@@ -137,12 +137,14 @@ sudo usermod -a -G dialout $USER
 
 ### 步骤 0. 完成机械臂基础准备
 
-开始网页仿真器开发前，请先完成 [reBot Arm B601-DM 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/) 中的内容，包括机械臂组装、电机 ID 配置、零点初始化和基础连通性确认。同时建议完成 [reBot Arm B601-DM ROS2 集成](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/) 中的 ROS2 工作空间搭建，因为网页仿真器依赖同仓库的 URDF 与 STL 网格。
+开始网页仿真器开发前，请先完成 [reBot Arm B601-DM 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/) 中的内容，包括机械臂组装、电机 ID 配置、零点初始化和基础连通性确认。
+
+本项目仓库已经包含网页仿真器所需的 ROS2 工作空间、URDF 与 STL 网格，无需另外按照 [reBot Arm B601-DM ROS2 集成](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/) 教程搭建工作空间。
 
 :::tip
 `reBotArm_control_py` 是核心外部依赖，提供真机驱动、逆运动学、动力学计算和重力补偿。网页仿真器本身不直接 import 该 SDK，但 ROS2 后端的 `rebotarmcontroller` 真机节点、MuJoCo 力矩闭环与重力补偿功能都依赖它。如果只跑 Fake Driver + 网页的纯仿真模式，SDK 非必需；一旦要控制真机或使用重力补偿，必须安装。
 
-`setup.sh` 会自动将 SDK 克隆到 `reBotArmController_ROS2-main/third_party/reBotArm_control_py/`（锁定到验证过的 commit）。如果已有 `~/reBotArm_control_py/`，也会被自动识别，不会重复克隆。
+`setup.sh` 会自动从 [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) 获取 SDK，并安装到 `~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main/third_party/reBotArm_control_py/`（锁定到验证过的 commit）。如果已有 `~/reBotArm_control_py/`，也会被自动识别，不会重复克隆。
 
 安装后目录结构：
 
@@ -164,6 +166,13 @@ SDK 的 `pyproject.toml` 声明 `requires-python >=3.10,<3.12`，但本项目通
 
 ### 步骤 1. 一键安装
 
+reBot Arm 官方开源项目地址为 [Seeed-Projects/reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm)。本教程所用的 Web 仿真器、ROS2 工作空间和 MuJoCo 仿真代码位于 [Yang-Ci/Borot-Arm_Mujoco](https://github.com/Yang-Ci/Borot-Arm_Mujoco)，请将该软件仓库克隆到 `~/reBot_Arm_Mujoco-DM/`：
+
+```bash
+git clone https://github.com/Yang-Ci/Borot-Arm_Mujoco.git ~/reBot_Arm_Mujoco-DM
+cd ~/reBot_Arm_Mujoco-DM
+```
+
 仓库根目录的 `setup.sh` 可重复执行，自动完成全部环境搭建：
 
 - 安装缺失的 apt 系统包（ROS 2、Node.js、ros-dev-tools 等）
@@ -174,7 +183,6 @@ SDK 的 `pyproject.toml` 声明 `requires-python >=3.10,<3.12`，但本项目通
 - 执行 `rosdep` 依赖解析与 `colcon build --symlink-install`
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM
 ./setup.sh
 ```
 
