@@ -52,28 +52,28 @@ El ReSpeaker XVF3800 USB 4-Mic Array es una matriz circular profesional de 4 mic
 
 ### Componentes principales
 
-| **Componente / Característica** | **Descripción**                                                                                      |
+| **Componente / Característica** | **Descripción** |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **Procesador de audio principal**      | **XMOS XVF3800**, gestiona el procesamiento de audio incluyendo AEC, conformación de haz, supresión de ruido, etc.       |
-| **Matriz de micrófonos**          | **Cuatro micrófonos PDM MEMS** en un patrón circular, que admiten **captura de voz de campo lejano de 360° (5 m)**. |
-| **Códec de audio**               | **TLV320AIC3104**, gestiona la conversión y salida de audio.                                              |
-| **LED RGB**                  | **12x WS2812** LED RGB direccionables individualmente para retroalimentación visual (por ejemplo, estado, actividad de voz). |
-| **Botón de silencio**               | Presiona para **activar/desactivar el silencio** de la entrada del micrófono.                                                       |
-| **LED indicador de silencio**        | Se enciende (normalmente en rojo) para indicar que el audio está silenciado.                                               |
-| **Botón de reinicio**              | Reinicio por hardware para la placa/sistema.                                                                 |
-| **Puerto USB tipo C**           | Se utiliza tanto para **alimentación como para datos** (compatible con USB Audio Class 2.0).                                    |
-| **Conector de auriculares AUX de 3,5 mm**  | Salida de audio para auriculares o altavoces activos.                                                      |
-| **Conector de altavoz**         | **Interfaz de altavoz JST**, admite **altavoces amplificados de 5 W**.                                       |
-| **Pads de depuración**                | Acceso de depuración para **XTAG4** u otros programadores.                                                     |
-| **Cabeceras I2C e I2S**         | Cabeceras expuestas para **comunicación I2C e I2S** con dispositivos externos.                             |
-| **Pads de E/S sin usar (XIAO)**     | Pads de E/S adicionales soldados conectados al módulo XIAO.                                                 |
-| **Comunicación I2S e I2C**   | Admite conexión a hosts externos como Raspberry Pi, PC, etc. utilizando estos protocolos.             |
-| **Modos USB e INT-Device**    | Funcionamiento de modo dual: USB plug-and-play o modo de dispositivo interno INT mediante I2S.                          |
-| **Número de serie único**      | **SN del dispositivo** integrado para identificación y gestión de múltiples dispositivos.                               |
-| **Compatibilidad con código abierto** | Funciona con **Arduino, Raspberry Pi, PC/Mac**, y es compatible con **XIAO Serie**.                   |
-| **Funciones avanzadas de audio**   | AEC, conformación de haz, desreverberación, **detección de DoA**, supresión de ruido basada en DNN, AGC de 60 dB.         |
-| **Retroalimentación visual**           | Estado del dispositivo y actividad de audio mostrados mediante **patrones de LED RGB** e **indicadores de estado**.            |
-| **Calidad de audio**             | Igual o mejor que los **diseños anteriores basados en XVF3000**.                                         |
+| **Procesador de audio principal** | **XMOS XVF3800**, gestiona el procesamiento de audio incluyendo AEC, conformación de haz, supresión de ruido, etc. |
+| **Matriz de micrófonos** | **Cuatro micrófonos PDM MEMS** en un patrón circular, que admiten **captura de voz de campo lejano de 360° (5 m)**. |
+| **Códec de audio** | **TLV320AIC3104**, gestiona la conversión y salida de audio. |
+| **LED RGB** | **12x WS2812** LED RGB direccionables individualmente para retroalimentación visual (por ejemplo, estado, actividad de voz). |
+| **Botón de silencio** | Presiona para **activar/desactivar el silencio** de la entrada del micrófono. |
+| **LED indicador de silencio** | Se enciende (normalmente en rojo) para indicar que el audio está silenciado. |
+| **Botón de reinicio** | Reinicio por hardware para la placa/sistema. |
+| **Puerto USB tipo C** | Se utiliza tanto para **alimentación como para datos** (compatible con USB Audio Class 2.0). |
+| **Conector de auriculares AUX de 3,5 mm** | Salida de audio para auriculares o altavoces activos. |
+| **Conector de altavoz** | **Interfaz de altavoz JST**, admite **altavoces amplificados de 5 W**. |
+| **Pads de depuración** | Acceso de depuración para **XTAG4** u otros programadores. |
+| **Cabeceras I2C e I2S** | Cabeceras expuestas para **comunicación I2C e I2S** con dispositivos externos. |
+| **Pads de E/S sin usar (XIAO)** | Pads de E/S adicionales soldados conectados al módulo XIAO. |
+| **Comunicación I2S e I2C** | Admite conexión a hosts externos como Raspberry Pi, PC, etc. utilizando estos protocolos. |
+| **Modos USB e INT-Device** | Funcionamiento de modo dual: USB plug-and-play o modo de dispositivo interno INT mediante I2S. |
+| **Número de serie único** | **SN del dispositivo** integrado para identificación y gestión de múltiples dispositivos. |
+| **Compatibilidad con código abierto** | Funciona con **Arduino, Raspberry Pi, PC/Mac**, y es compatible con **XIAO Serie**. |
+| **Funciones avanzadas de audio** | AEC, conformación de haz, desreverberación, **detección de DoA**, supresión de ruido basada en DNN, AGC de 60 dB. |
+| **Retroalimentación visual** | Estado del dispositivo y actividad de audio mostrados mediante **patrones de LED RGB** e **indicadores de estado**. |
+| **Calidad de audio** | Igual o mejor que los **diseños anteriores basados en XVF3000**. |
 
 :::note
 El ReSpeaker XVF3800 se ofrece en dos variantes: una sin XIAO y otra con el XIAO ESP32S3 integrado. La versión sin XIAO funciona con el firmware USB predeterminado. Para utilizar la versión con XIAO integrado, debes flashear firmware compilado para el **modo INT-Device (I2S)**. Para obtener instrucciones de configuración detalladas, consulta la [guía oficial del wiki](/es/respeaker_xvf3800_xiao_getting_started).
@@ -119,7 +119,7 @@ El reSpeaker XVF3800 expone 3 pines de entrada (GPI) y 5 pines de salida (GPO) p
 
 :::note
 
-Para garantizar un rendimiento óptimo de captación de voz y el funcionamiento correcto de los algoritmos de audio, asegúrate de que el puerto del micrófono (entrada de micrófono / orificio de sonido) en la parte posterior del dispositivo esté orientado hacia la fuente de sonido. El puerto del micrófono se encuentra en el lado donde está impreso el logotipo de Seeed Studio. 
+Para garantizar un rendimiento óptimo de captación de voz y el funcionamiento correcto de los algoritmos de audio, asegúrate de que el puerto del micrófono (entrada de micrófono / orificio de sonido) en la parte posterior del dispositivo esté orientado hacia la fuente de sonido. El puerto del micrófono se encuentra en el lado donde está impreso el logotipo de Seeed Studio.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mic-outlet.png" alt="pir" width={800} height="auto"/></p>
 :::
@@ -167,8 +167,6 @@ Aquí puedes ver cómo conectar altavoces utilizando ya sea el conector de auric
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/audio.gif" alt="pir" width={600} height="auto"/></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/speaker.jpg" alt="pir" width={600} height="auto"/></p>
-
-
 
 #### Modo seguro
 
@@ -220,7 +218,7 @@ Hay dos variantes de firmware disponibles: **respeaker_xvf3800_usb_dfu_firmware_
 Puedes explorar estos archivos de firmware en [este enlace](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
 
 | Firmware | Canales | Notas |
-|---------|----------|-------|
+| --------- | ---------- | ------- |
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Salida procesada de 2 canales <br /> Canal 0: Conferencia <br /> Canal 1: ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Canal 0: Audio procesado (Conferencia) <br /> Canal 1: Audio procesado (ASR) <br /> Canal 2: Datos en bruto del Mic 0 <br /> Canal 3: Datos en bruto del Mic 1 <br /> Canal 4: Datos en bruto del Mic 2 <br /> Canal 5: Datos en bruto del Mic 3 |
 
@@ -529,26 +527,24 @@ El ajuste permite a los usuarios configurar parámetros de los algoritmos de aud
 
 Se proporciona una interfaz de control dedicada en Python para la configuración de parámetros y la interacción con el dispositivo.
 
-
 [**Python Control Directory**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)
 
 Usando los scripts de Python proporcionados, puedes:
 
-* Configurar parámetros de los algoritmos de audio integrados
-* Obtener datos de DoA (Direction of Arrival)
-* Obtener datos de VAD (Voice Activity Detection)
-* Controlar los LED integrados
-* Controlar la canalización de procesamiento de voz
-* Comunicarte directamente con el dispositivo XMOS
+- Configurar parámetros de los algoritmos de audio integrados
+- Obtener datos de DoA (Direction of Arrival)
+- Obtener datos de VAD (Voice Activity Detection)
+- Controlar los LED integrados
+- Controlar la canalización de procesamiento de voz
+- Comunicarte directamente con el dispositivo XMOS
 
 **Requisitos del sistema**
 
 Se requieren las siguientes dependencias para usar la interfaz de control en Python:
 
-* Python 3.6 o posterior
-* Biblioteca de Python `pyusb`
-* Biblioteca de sistema `libusb`
-
+- Python 3.6 o posterior
+- Biblioteca de Python `pyusb`
+- Biblioteca de sistema `libusb`
 
 ### Instalación y dependencias
 
@@ -560,8 +556,6 @@ pip install pyusb
 
 Según tu sistema operativo, puede que también necesites instalar el paquete `libusb` por separado.
 
-
-
 ### Uso
 
 **Sintaxis básica**
@@ -569,8 +563,6 @@ Según tu sistema operativo, puede que también necesites instalar el paquete `l
 ```bash
 python xvf_host.py [options] command [value(s)...]
 ```
-
-
 
 **Opciones de comando**
 
@@ -581,8 +573,6 @@ python xvf_host.py [options] command [value(s)...]
 | `--pid`        | Establece el ID de producto USB (por defecto: `0x001A`) |
 | `--values`     | Proporciona valores para comandos de escritura (opcional) |
 
-
-
 ### Ejemplos de uso
 
 **Listar comandos disponibles**
@@ -592,6 +582,7 @@ Muestra todos los comandos de firmware compatibles.
 ```bash
 python xvf_host.py --list
 ```
+
 **Leer versión de firmware**
 
 Obtiene la versión de firmware que se está ejecutando actualmente en el dispositivo.
@@ -635,6 +626,7 @@ Ajusta el porcentaje de brillo del LED.
 ```bash
 python xvf_host.py LED_BRIGHTNESS --values 50
 ```
+
 **Leer geometría de la matriz de micrófonos**
 
 Obtiene las coordenadas de los micrófonos utilizadas por los algoritmos de procesamiento acústico.
@@ -659,11 +651,11 @@ Hemos preparado una aplicación de escritorio para controlar y configurar tu dis
 
 Con esta aplicación, puedes:
 
-* Conectarte a tu dispositivo reSpeaker
-* Configurar ajustes de audio (supresión de ruido, ganancia, AEC y configuración de canales)
-* Monitorizar Direction of Arrival (DoA) y Voice Activity Detection (VAD)
-* Controlar los efectos de los LED
-* Ajustar parámetros del dispositivo
+- Conectarte a tu dispositivo reSpeaker
+- Configurar ajustes de audio (supresión de ruido, ganancia, AEC y configuración de canales)
+- Monitorizar Direction of Arrival (DoA) y Voice Activity Detection (VAD)
+- Controlar los efectos de los LED
+- Ajustar parámetros del dispositivo
 
 ### Instalación de la aplicación
 
@@ -671,12 +663,12 @@ Descarga la última versión desde:
 
 https://github.com/respeaker/respeaker-console/releases
 
-| Plataforma | Arquitectura  | Tipo de paquete      |
+| Plataforma | Arquitectura | Tipo de paquete |
 | --------- | ------------- | -------------------- |
-| Windows   | x64           | `.msi` / `.exe`      |
-| macOS     | Apple Silicon | `.dmg` (aarch64)     |
-| macOS     | Intel         | `.dmg` (x86_64)      |
-| Linux     | x64           | `.deb` / `.AppImage` |
+| Windows | x64 | `.msi` / `.exe` |
+| macOS | Apple Silicon | `.dmg` (aarch64) |
+| macOS | Intel | `.dmg` (x86_64) |
+| Linux | x64 | `.deb` / `.AppImage` |
 
 ### Windows: configuración del controlador USB
 
@@ -766,12 +758,12 @@ La pestaña **Audio** te permite configurar y mejorar la canalización de proces
 
 Aquí puedes configurar:
 
-* Supresión de ruido no estacionario
-* Supresión de ruido estacionario
-* Control automático de ganancia (AGC)
-* Cancelación de eco acústico (AEC)
-* Configuración de canales de salida
-* Asignación de canales izquierdo y derecho
+- Supresión de ruido no estacionario
+- Supresión de ruido estacionario
+- Control automático de ganancia (AGC)
+- Cancelación de eco acústico (AEC)
+- Configuración de canales de salida
+- Asignación de canales izquierdo y derecho
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/audio.jpg" alt="Audio Tab" width={800} height="auto"/></p>
 
@@ -781,9 +773,9 @@ La pestaña **Monitor** proporciona una visualización en tiempo real del proces
 
 Puedes monitorizar:
 
-* Direction of Arrival (DoA)
-* Voice Activity Detection (VAD)
-* Niveles de energía del haz
+- Direction of Arrival (DoA)
+- Voice Activity Detection (VAD)
+- Niveles de energía del haz
 
 Estos indicadores te ayudan a verificar que el dispositivo está detectando correctamente el habla.
 
@@ -795,12 +787,12 @@ La pestaña **LEDs** te permite personalizar el anillo de LED.
 
 Las funciones disponibles incluyen:
 
-* Efecto de respiración
-* Efecto arcoíris
-* Efecto de anillo
-* Ajuste de brillo
-* Control de velocidad de animación
-* Selección de color RGB
+- Efecto de respiración
+- Efecto arcoíris
+- Efecto de anillo
+- Ajuste de brillo
+- Control de velocidad de animación
+- Selección de color RGB
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/led.jpg" alt="LEDs Tab" width={800} height="auto"/></p>
 
@@ -810,11 +802,11 @@ La pestaña **Parameters** proporciona acceso a todos los parámetros configurab
 
 Los ajustes están organizados en categorías como:
 
-* Audio
-* Acoustic Echo Cancellation (AEC)
-* Post Processing
-* LEDs / GPIO
-* System
+- Audio
+- Acoustic Echo Cancellation (AEC)
+- Post Processing
+- LEDs / GPIO
+- System
 
 Desde esta interfaz, puedes actualizar los valores de los parámetros directamente.
 
@@ -894,6 +886,33 @@ Si quieres usar el dispositivo como un **dispositivo de audio USB**, necesitas v
 
 2. **Flashea el firmware USB:**
    [Instrucciones de actualización de firmware](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#actualizar-firmware)
+
+### ¿Por qué algunos canales no tienen audio con el firmware de 6 canales del XVF3800?
+
+Después de instalar el firmware de 6 canales, puede ser necesario habilitar los canales de micrófono sin procesar mediante los controles del mezclador de audio del sistema.
+
+En Linux, primero comprueba el ID de la tarjeta de audio:
+
+```bash
+arecord -l
+```
+
+Por ejemplo, si el XVF3800 aparece como **card 1**, habilita los canales de captura y configura su volumen:
+
+```bash
+amixer -c 1 cset numid=8 on,on,on,on,on,on
+amixer -c 1 cset numid=10 60,60,60,60,60,60
+```
+
+Ajusta los valores de volumen según sea necesario y, a continuación, guarda la configuración:
+
+```bash
+sudo alsactl store 1
+```
+
+Después de aplicar estos ajustes, los seis canales deberían capturar señales de audio distintas de cero.
+
+**Windows:** Si algunos canales siguen sin tener audio, prueba a desinstalar el controlador del dispositivo XVF3800 desde **Administrador de dispositivos** y, a continuación, desconecta y vuelve a conectar el dispositivo. Esto permite que Windows vuelva a configurar el dispositivo y el controlador.
 
 ## Recursos
 

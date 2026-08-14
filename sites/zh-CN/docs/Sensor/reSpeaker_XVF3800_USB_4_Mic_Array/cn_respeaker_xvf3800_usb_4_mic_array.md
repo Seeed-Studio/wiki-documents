@@ -119,7 +119,7 @@ reSpeaker XVF3800 暴露了 3 个输入引脚（GPI）和 5 个输出引脚（GP
 
 :::note
 
-为确保最佳的语音拾取性能以及音频算法的正常运行，请确保设备背面上的麦克风端口（Mic Inlet / Sound Hole）朝向声源。麦克风端口位于印有 Seeed Studio 标志的一侧。 
+为确保最佳的语音拾取性能以及音频算法的正常运行，请确保设备背面上的麦克风端口（Mic Inlet / Sound Hole）朝向声源。麦克风端口位于印有 Seeed Studio 标志的一侧。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mic-outlet.png" alt="pir" width={800} height="auto"/></p>
 :::
@@ -167,8 +167,6 @@ ReSpeaker 上的 **静音按钮** 用于临时 **禁用麦克风阵列的语音�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/audio.gif" alt="pir" width={600} height="auto"/></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/speaker.jpg" alt="pir" width={600} height="auto"/></p>
-
-
 
 #### 安全模式
 
@@ -220,7 +218,7 @@ USB 固件适用于通过 USB 硬件接口与主机操作系统（如 **Windows�
 你可以在[此链接](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)中查看这些固件文件
 
 | 固件 | 通道数 | 说明 |
-|---------|----------|-------|
+| --------- | ---------- | ------- |
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | 处理后的 2 通道输出 <br /> 通道 0：Conference <br /> 通道 1：ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | 通道 0：处理后音频（Conference）<br /> 通道 1：处理后音频（ASR）<br /> 通道 2：Mic 0 原始数据 <br /> 通道 3：Mic 1 原始数据 <br /> 通道 4：Mic 2 原始数据 <br /> 通道 5：Mic 3 原始数据 |
 
@@ -529,26 +527,24 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 我们提供了专用的 Python 控制接口，用于参数配置和设备交互。
 
-
 [**Python Control Directory**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)
 
 使用提供的 Python 脚本，你可以：
 
-* 配置内置音频算法参数
-* 获取 DoA（声源到达方向）数据
-* 获取 VAD（语音活动检测）数据
-* 控制板载 LED
-* 控制语音处理流水线
-* 直接与 XMOS 设备通信
+- 配置内置音频算法参数
+- 获取 DoA（声源到达方向）数据
+- 获取 VAD（语音活动检测）数据
+- 控制板载 LED
+- 控制语音处理流水线
+- 直接与 XMOS 设备通信
 
 **系统要求**
 
 使用 Python 控制接口需要以下依赖：
 
-* Python 3.6 或更高版本
-* `pyusb` Python 库
-* `libusb` 系统库
-
+- Python 3.6 或更高版本
+- `pyusb` Python 库
+- `libusb` 系统库
 
 ### 安装与依赖
 
@@ -560,8 +556,6 @@ pip install pyusb
 
 根据你的操作系统，你可能还需要单独安装 `libusb` 软件包。
 
-
-
 ### 用法
 
 **基本语法**
@@ -569,8 +563,6 @@ pip install pyusb
 ```bash
 python xvf_host.py [options] command [value(s)...]
 ```
-
-
 
 **命令选项**
 
@@ -581,8 +573,6 @@ python xvf_host.py [options] command [value(s)...]
 | `--pid`        | 设置 USB Product ID（默认：`0x001A`）                 |
 | `--values`     | 为写入命令提供数值（可选）                            |
 
-
-
 ### 使用示例
 
 **列出可用命令**
@@ -592,6 +582,7 @@ python xvf_host.py [options] command [value(s)...]
 ```bash
 python xvf_host.py --list
 ```
+
 **读取固件版本**
 
 获取当前在设备上运行的固件版本。
@@ -635,6 +626,7 @@ python xvf_host.py LED_COLOR --values 0xFF0000
 ```bash
 python xvf_host.py LED_BRIGHTNESS --values 50
 ```
+
 **读取麦克风阵列几何结构**
 
 获取声学处理算法使用的麦克风坐标。
@@ -659,11 +651,11 @@ AEC_MIC_ARRAY_GEO:
 
 通过此应用程序，你可以：
 
-* 连接到你的 reSpeaker 设备
-* 配置音频设置（噪声抑制、增益、AEC 和通道配置）
-* 监控声源到达方向（DoA）和语音活动检测（VAD）
-* 控制 LED 效果
-* 调整设备参数
+- 连接到你的 reSpeaker 设备
+- 配置音频设置（噪声抑制、增益、AEC 和通道配置）
+- 监控声源到达方向（DoA）和语音活动检测（VAD）
+- 控制 LED 效果
+- 调整设备参数
 
 ### 安装应用程序
 
@@ -766,12 +758,12 @@ brew install dfu-util
 
 在这里你可以配置：
 
-* 非平稳噪声抑制
-* 平稳噪声抑制
-* 自动增益控制（AGC）
-* 声学回声消除（AEC）
-* 输出通道配置
-* 左右声道映射
+- 非平稳噪声抑制
+- 平稳噪声抑制
+- 自动增益控制（AGC）
+- 声学回声消除（AEC）
+- 输出通道配置
+- 左右声道映射
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/audio.jpg" alt="Audio Tab" width={800} height="auto"/></p>
 
@@ -781,9 +773,9 @@ brew install dfu-util
 
 你可以监控：
 
-* 声源到达方向（DoA）
-* 语音活动检测（VAD）
-* 波束能量水平
+- 声源到达方向（DoA）
+- 语音活动检测（VAD）
+- 波束能量水平
 
 这些指示器有助于你验证设备是否正确检测到语音。
 
@@ -795,12 +787,12 @@ brew install dfu-util
 
 可用功能包括：
 
-* 呼吸效果
-* 彩虹效果
-* 环形效果
-* 亮度调节
-* 动画速度控制
-* RGB 颜色选择
+- 呼吸效果
+- 彩虹效果
+- 环形效果
+- 亮度调节
+- 动画速度控制
+- RGB 颜色选择
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/led.jpg" alt="LEDs Tab" width={800} height="auto"/></p>
 
@@ -810,11 +802,11 @@ brew install dfu-util
 
 这些设置按以下类别进行组织：
 
-* Audio
-* Acoustic Echo Cancellation (AEC)
-* Post Processing
-* LEDs / GPIO
-* System
+- Audio
+- Acoustic Echo Cancellation (AEC)
+- Post Processing
+- LEDs / GPIO
+- System
 
 通过此界面，你可以直接更新参数值。
 
@@ -894,6 +886,33 @@ reSpeaker XVF3800 ESP32 版本默认出厂时烧录的是 I2S 固件，因此连
 
 2. **刷写 USB 固件：**
    [固件更新说明](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#更新固件)
+
+### 为什么使用 XVF3800 6 通道固件时，某些通道没有声音？
+
+刷入 6 通道固件后，可能需要通过系统的音频混音器控制手动启用原始麦克风通道。
+
+在 Linux 上，首先检查声卡 ID：
+
+```bash
+arecord -l
+```
+
+例如，如果 XVF3800 显示为 **card 1**，请启用录音通道并设置其音量：
+
+```bash
+amixer -c 1 cset numid=8 on,on,on,on,on,on
+amixer -c 1 cset numid=10 60,60,60,60,60,60
+```
+
+根据需要调整音量值，然后保存设置：
+
+```bash
+sudo alsactl store 1
+```
+
+应用这些设置后，所有六个通道都应该能够采集到非零音频信号。
+
+**Windows：** 如果某些通道仍然没有声音，请尝试在 **设备管理器** 中卸载 XVF3800 设备驱动程序，然后拔下设备并重新连接。这样可以让 Windows 重新配置设备和驱动程序。
 
 ## 资源
 
