@@ -1,10 +1,10 @@
 ---
-description: Primeros pasos con la placa controladora de tinta electrónica EE02 de 13,3 pulgadas
+description: Primeros pasos con la placa controladora EE02 de tinta electrónica de 13,3 pulgadas
 title: Primeros pasos con EE02
 keywords:
-  - Tinta electrónica
+  - E-ink
   - Placa controladora
-  - 13.3 pulgadas
+  - 13.3 inch
   - ESP32
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
@@ -15,11 +15,11 @@ last_update:
   date: 12/20/2025
   author: Allen
 createdAt: '2025-12-19'
-updatedAt: '2026-04-27'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/es/getting_started_with_ee02/
 ---
 
-# Primeros pasos con XIAO ePaper Display Board - EE02
+# Primeros pasos con la XIAO ePaper Display Board - EE02
 
 <div class="table-center">
 <table align="center">
@@ -48,36 +48,36 @@ url: https://wiki.seeedstudio.com/es/getting_started_with_ee02/
 
 La **EE02** es una placa controladora de pantalla de tinta electrónica de alto rendimiento diseñada específicamente para pantallas de papel electrónico de **13,3 pulgadas**. Impulsada por el chip ESP32-S3, admite conectividad Wi-Fi y Bluetooth, lo que la convierte en una solución ideal para aplicaciones de visualización inalámbrica.
 
-Similar a su hermana, la EE04 (diseñada para pantallas más pequeñas), la EE02 ofrece una experiencia fluida para los desarrolladores que buscan integrar pantallas de tinta electrónica de gran formato en sus proyectos de IoT. Simplifica el proceso de control y es compatible con la plataforma SenseCraft HMI para una fácil gestión de contenido.
+Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la EE02 ofrece una experiencia fluida para los desarrolladores que buscan integrar pantallas E-ink de gran formato en sus proyectos de IoT. Simplifica el proceso de control y es compatible con la plataforma SenseCraft HMI para una fácil gestión de contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### Características
 
 - **Controlador potente**: Basado en el ESP32-S3, que ofrece una sólida capacidad de procesamiento y funciones inalámbricas.
-- **Dedicado a pantallas grandes**: Específicamente optimizado para controlar pantallas de tinta electrónica de 13,3 pulgadas con alta estabilidad y claridad.
+- **Dedicada a pantallas grandes**: Específicamente optimizada para controlar pantallas E-ink de 13,3 pulgadas con alta estabilidad y claridad.
 - **Conectividad inalámbrica**: Admite Wi-Fi y Bluetooth 5.0 (LE), lo que permite actualizaciones remotas de datos e integración con la nube.
-- **Bajo consumo de energía**: Diseñado para la eficiencia energética, adecuado para aplicaciones alimentadas por batería.
+- **Bajo consumo de energía**: Diseñada para la eficiencia energética, adecuada para aplicaciones alimentadas por batería.
 - **Fácil integración**: Compatible con SenseCraft HMI para diseño de interfaces mediante arrastrar y soltar y gestión remota.
-- **Interfaces versátiles**: Incluye Type-C para alimentación/programación y conectores estándar para pantallas de tinta electrónica.
+- **Interfaces versátiles**: Incluye Type-C para alimentación/programación y conectores estándar para pantallas E-ink.
 
-### Especificación
+### Especificaciones
 
 | Elemento | Descripción |
 | :--- | :--- |
 | **Controlador** | XIAO ESP32-S3 Plus |
-| **Tamaño de pantalla compatible** | Pantalla de tinta electrónica de 13,3 pulgadas |
+| **Tamaño de pantalla compatible** | Pantalla E-ink de 13,3 pulgadas |
 | **Conectividad** | Wi-Fi 802.11 b/g/n, Bluetooth 5.0 (LE) |
 | **Alimentación** | 5V mediante USB Type-C |
 | **Voltaje de funcionamiento** | 3,3V |
-| **Interfaz** | USB Type-C, conector FPC para tinta electrónica |
+| **Interfaz** | USB Type-C, conector FPC para E-ink |
 | **Dimensiones** | 80x43 mm |
 | **Temperatura de funcionamiento** | -20°C a 70°C |
 
 ### Aplicaciones
 
-- **Señalización digital**: Ideal para menús de restaurantes, carteles de salas de conferencias y etiquetas de precios en comercios.
-- **Hogar inteligente**: Paneles de información para clima, calendario y estado de la automatización del hogar.
+- **Cartelería digital**: Ideal para menús de restaurantes, rótulos de salas de reuniones y etiquetas de precios en comercios.
+- **Hogar inteligente**: Paneles de información para el clima, calendario y estado de la automatización del hogar.
 - **HMI industrial**: Pantallas de estado de bajo consumo para maquinaria y gestión de almacenes.
 - **Educación**: Lectores de libros electrónicos o paneles de información en aulas.
 - **Oficina**: Placas de escritorio con nombres o tablones de anuncios.
@@ -87,11 +87,11 @@ Similar a su hermana, la EE04 (diseñada para pantallas más pequeñas), la EE02
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/overview.png" style={{width:800, height:'auto'}}/></div>
 
 - **USB Type-C**: Para alimentación y flasheo de firmware.
-- **Conector FPC**: Para conectar la pantalla de tinta electrónica de 13,3 pulgadas.
+- **Conector FPC**: Para conectar la pantalla E-ink de 13,3 pulgadas.
 - **Botón de reinicio**: Para reiniciar la placa.
 - **Botones**: Son "refresh the page","switch previous page" y "switch next page"
-- **Interruptor**: Controla el encendido/apagado de la batería.
-- **Botón de arranque (Boot)**: Se utiliza para entrar en modo bootloader.
+- **Interruptor**: Controla el encendido/apagado de la alimentación de la batería.
+- **Botón de arranque (Boot)**: Se utiliza para entrar en el modo bootloader.
 - **Indicadores LED**: Parpadeando significa que no hay conexión de batería. Luz verde encendida significa que la batería se está cargando.
 - **Conector JST**: Conector JST de 2 pines y 2,0 mm para conectar la batería.
 
@@ -102,21 +102,21 @@ Esta sección te guiará para conectar tu EE02 a la plataforma SenseCraft HMI, l
 ### Instalación del equipo
 
 **Paso 1. Conectar la pantalla y la placa**
-Conecta con cuidado el cable FPC de la pantalla de tinta electrónica de 13,3 pulgadas al conector de la placa controladora EE02. Asegúrate de que el mecanismo de bloqueo esté bien asegurado.
+Conecta con cuidado el cable FPC de la pantalla E-ink de 13,3 pulgadas al conector de la placa controladora EE02. Asegúrate de que el mecanismo de bloqueo esté bien asegurado.
 
 **Paso 2. Encender**
 Conecta la placa EE02 a una fuente de alimentación (ordenador o adaptador USB) utilizando un cable USB Type-C. Al encenderla, la pantalla se actualizará y mostrará una imagen de bienvenida.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/4.JPG" style={{width:300,height:'auto'}}/></div>
 
-**Paso 3. Entrar en modo de configuración de red**
+**Paso 3. Entrar en el modo de configuración de red**
 Después de la imagen de bienvenida, la pantalla se actualizará automáticamente para mostrar la interfaz de configuración de red. Esto indica que el dispositivo está listo para conectarse a Wi-Fi.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/5.JPG" style={{width:300,height:'auto'}}/></div>
 
 ### Configuración de red
 
-**Paso 4. Configurar Wi-Fi mediante el teléfono móvil**
+**Paso 4. Configurar el Wi-Fi mediante el teléfono móvil**
 Utiliza tu teléfono móvil para escanear el código QR que se muestra en la pantalla (o conéctate al punto de acceso indicado). Sigue las indicaciones en tu teléfono para introducir el SSID y la contraseña de tu red Wi-Fi local y conectar la EE02 a Internet.
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/6.JPG" style={{width:300,height:'auto'}}/></div> -->
@@ -126,10 +126,10 @@ Una vez que la configuración de red sea correcta, la pantalla se actualizará d
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/7.jpg" style={{width:300,height:'auto'}}/></div>
 
-### Vinculación a la plataforma y actualización
+### Vinculación con la plataforma y actualización
 
 **Paso 6. Vincular el dispositivo en SenseCraft HMI**
-Ve a la [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "Add Device". Introduce el código de emparejamiento que se muestra en tu pantalla de tinta electrónica para vincular el dispositivo a tu cuenta.
+Ve a la [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "Add Device". Introduce el código de emparejamiento que se muestra en tu pantalla E-ink para vincular el dispositivo a tu cuenta.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -139,7 +139,7 @@ En la plataforma SenseCraft HMI, utiliza el editor para crear una nueva interfaz
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.jpg" style={{width:800, height:'auto'}}/></div>
 
 **Paso 8. Aplicar tus imágenes**
-Una vez terminado, haz clic en el botón "Apply" en la esquina superior derecha y luego selecciona el dispositivo que quieres que reciba la imagen. La EE02 recibirá los datos y actualizará la pantalla de 13,3 pulgadas con tu nuevo contenido.
+Una vez terminado, haz clic en el botón "Apply" en la esquina superior derecha y, a continuación, selecciona el dispositivo que quieres que reciba la imagen. La EE02 recibirá los datos y actualizará la pantalla de 13,3 pulgadas con tu nuevo contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -151,13 +151,13 @@ Finalmente, la EE02 recibirá los datos y actualizará la pantalla de 13,3 pulga
 
 ## Primeros pasos con Arduino
 
-### Instalar la biblioteca Seeed GFX
+### Instalar la librería Seeed GFX
 
 :::tip
-Esta biblioteca tiene la misma función que la biblioteca TFT y no es compatible con ella. Si has instalado la biblioteca TFT u otras bibliotecas de pantalla similares, desinstálalas primero.
+Esta librería tiene la misma función que la librería TFT y no es compatible con ella. Si has instalado la librería TFT u otras librerías de pantalla similares, desinstálalas primero.
 :::
 
-Descarga e instala la biblioteca Seeed GFX desde GitHub.
+Descarga e instala la librería Seeed GFX desde GitHub.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -171,7 +171,7 @@ Desplázate hacia abajo y abre este enlace.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-Selecciona el tipo de tu dispositivo y se generará algo de código. Copia ese código y lo usaremos más tarde.
+Selecciona el tipo de tu dispositivo y generará algo de código. Copia ese código y lo usaremos más tarde.
 
 :::tip
 Si haces una elección incorrecta, la pantalla no mostrará nada.
@@ -182,7 +182,7 @@ Así que asegúrate del tipo de tus dispositivos o componentes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_1.png" style={{width:800, height:'auto'}}/></div>
 
-Después de descargar la biblioteca, ve a **Sketch** -> **Include Library** -> **Add .ZIP Library** y selecciona la biblioteca descargada.
+Después de descargar la librería, ve a **Sketch** -> **Include Library** -> **Add .ZIP Library** y selecciona la librería descargada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
@@ -203,7 +203,7 @@ Después de eso, ve a **Tools** -> **Board** -> **XIAO ESP32S3 Plus** y **Tools*
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_3.png" style={{width:1000, height:'auto'}}/></div>
 
-Ten en cuenta que PSAM debe estar habilitado.
+Ten en cuenta que PSRAM debe estar habilitada.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_4.png" style={{width:1000, height:'auto'}}/></div>
 
 Luego haz clic en **Upload** para cargar el código.
@@ -226,9 +226,9 @@ Luego haz clic en **Upload** para cargar el código.
 *   Esto puede ocurrir si la pantalla no se ha actualizado durante mucho tiempo o si la fuente de alimentación es inestable. Intenta actualizar la pantalla de nuevo a través de la plataforma HMI.
 
 ## Recursos
-- **[PDF]** [Hoja de datos del módulo de pantalla de tinta electrónica E6 de 13.3](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
-- **[PDF]** [Esquemático de Seeed Studio XIAO ePaper Display EE02](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
-- **[ZIP]** [PCBA y SCH de Seeed Studio XIAO ePaper Display EE02](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
+- **[PDF]** [13.3 E6 eInk Display module Datasheet](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
 
 ## Soporte técnico y debate sobre el producto
 

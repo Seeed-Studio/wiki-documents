@@ -1,10 +1,10 @@
 ---
-description: EE02 13.3インチE-inkドライバーボード入門ガイド
-title: EE02 入門ガイド
+description: EE02 13.3インチE-inkドライバーボード入門
+title: EE02 入門
 keywords:
   - E-ink
   - ドライバーボード
-  - 13.3インチ
+  - 13.3 inch
   - ESP32
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
@@ -15,11 +15,11 @@ last_update:
   date: 12/20/2025
   author: Allen
 createdAt: '2025-12-19'
-updatedAt: '2026-04-27'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/ja/getting_started_with_ee02/
 ---
 
-# XIAO ePaper Display Board - EE02 入門ガイド
+# XIAO ePaper Display Board - EE02 入門
 
 <div class="table-center">
 <table align="center">
@@ -48,7 +48,7 @@ url: https://wiki.seeedstudio.com/ja/getting_started_with_ee02/
 
 **EE02** は、**13.3インチ**電子ペーパーディスプレイ専用に設計された高性能なE-inkスクリーンドライバーボードです。ESP32-S3チップを搭載し、Wi-FiおよびBluetooth接続をサポートしているため、ワイヤレス表示アプリケーションに最適なソリューションです。
 
-小型スクリーン向けに設計された兄弟製品 EE04 と同様に、EE02 は大画面E-inkディスプレイをIoTプロジェクトに統合したい開発者にシームレスな体験を提供します。駆動プロセスを簡素化し、SenseCraft HMI プラットフォームをサポートしているため、コンテンツ管理も容易です。
+小型スクリーン向けに設計された兄弟製品 EE04 と同様に、EE02 は大判E-inkディスプレイをIoTプロジェクトに統合したい開発者にシームレスな体験を提供します。駆動プロセスを簡素化し、SenseCraft HMI プラットフォームをサポートしているため、コンテンツ管理も容易です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -74,11 +74,11 @@ url: https://wiki.seeedstudio.com/ja/getting_started_with_ee02/
 | **寸法** | 80×43 mm |
 | **動作温度** | -20°C ～ 70°C |
 
-### 用途例
+### 用途
 
 - **デジタルサイネージ**：レストランのメニュー、会議室のサイン、リテールのプライスタグに最適です。
 - **スマートホーム**：天気、カレンダー、ホームオートメーションの状態を表示する情報ダッシュボード。
-- **産業用HMI**：機械や倉庫管理向けの低消費電力ステータスディスプレイ。
+- **産業用HMI**：機械設備や倉庫管理向けの低消費電力ステータスディスプレイ。
 - **教育**：電子書籍リーダーや教室用インフォメーションボード。
 - **オフィス**：デスクネームプレートや掲示板。
 
@@ -89,13 +89,13 @@ url: https://wiki.seeedstudio.com/ja/getting_started_with_ee02/
 - **USB Type-C**：電源供給およびファームウェア書き込み用。
 - **FPC コネクタ**：13.3インチE-inkディスプレイを接続します。
 - **リセットボタン**：ボードをリセットします。
-- **ボタン**：それぞれ「ページをリフレッシュ」「前のページに切り替え」「次のページに切り替え」の機能を持ちます。
+- **ボタン**：それぞれ「ページをリフレッシュ」「前のページに切り替え」「次のページに切り替え」です。
 - **スイッチ**：バッテリー電源のオン／オフを制御します。
 - **Boot ボタン**：ブートローダーモードに入るために使用します。
 - **LED インジケータ**：点滅している場合はバッテリー未接続を示します。緑色の点灯はバッテリー充電中を示します。
 - **JST コネクタ**：バッテリー接続用の2ピン JST 2.0mm コネクタ。
 
-## SenseCraft HMI の使い方
+## SenseCraft HMI を使い始める
 
 このセクションでは、EE02 を SenseCraft HMI プラットフォームに接続し、画面コンテンツをワイヤレスで簡単に更新する手順を説明します。
 
@@ -117,7 +117,7 @@ USB Type-C ケーブルを使用して、EE02 ボードを電源（PC または 
 ### ネットワーク設定
 
 **ステップ4. スマートフォンで Wi-Fi を設定する**
-スマートフォンを使って、画面に表示されているQRコードをスキャンする（または表示されているホットスポットに接続する）ことで、案内に従い自宅のWi-Fi SSIDとパスワードを入力し、EE02 をインターネットに接続します。
+スマートフォンを使って、画面に表示されているQRコードをスキャンする（または表示されているホットスポットに接続する）ことで、案内に従って自宅のWi-Fi SSIDとパスワードを入力し、EE02 をインターネットに接続します。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/6.JPG" style={{width:300,height:'auto'}}/></div> -->
 
@@ -128,13 +128,13 @@ USB Type-C ケーブルを使用して、EE02 ボードを電源（PC または 
 
 ### プラットフォームへのバインドと更新
 
-**ステップ6. SenseCraft HMI 上でデバイスをバインドする**
+**ステップ6. SenseCraft HMI でデバイスをバインドする**
 [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device) にアクセスし、アカウントにログインします。デバイス管理セクションに移動して「Add Device」を選択し、E-inkスクリーンに表示されている Pairing Code を入力して、デバイスをアカウントにバインドします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.jpg" style={{width:800, height:'auto'}}/></div>
 
 **ステップ7. 新しいインターフェースを作成してプッシュする**
-SenseCraft HMI プラットフォーム上のエディタを使用して、新しいインターフェースを作成します（例：画像をアップロードする、ダッシュボードをデザインするなど）。
+SenseCraft HMI プラットフォーム上でエディタを使用し、新しいインターフェース（例：画像をアップロードする、ダッシュボードをデザインする）を作成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -143,18 +143,18 @@ SenseCraft HMI プラットフォーム上のエディタを使用して、新�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.jpg" style={{width:800, height:'auto'}}/></div>
 
-**ステップ9. 画面に表示される**
+**ステップ9. スクリーンに表示する**
 
 最後に、EE02 がデータを受信し、13.3インチスクリーンをリフレッシュして新しいコンテンツを表示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/11.jpg" style={{width:300, height:'auto'}}/></div>
 
-## Arduino での使い方
+## Arduino を使い始める
 
-### Seeed GFX ライブラリのインストール
+### Seeed GFX ライブラリをインストールする
 
 :::tip
-このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリや類似のディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
+このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリやその他の類似ディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
 :::
 
 GitHub から Seeed GFX ライブラリをダウンロードしてインストールします。
@@ -163,7 +163,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div align="center">
 <a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックしてダウンロード</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
 </a>
 </div>
 
@@ -188,11 +188,11 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 ### プログラムの設定と書き込み
 
-図に示されているサンプルを選択します。
+図に示すサンプルを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_2.png" style={{width:800, height:'auto'}}/></div>
 
-新しい "driver.h" ファイルを作成し、先ほどのコードを貼り付けます。コードは次のようになります：
+新しい "driver.h" ファイルを作成し、そのコードを貼り付けます。コードは次のようになります：
 ```cpp
 #define BOARD_SCREEN_COMBO 510 // 13.3 inch six-color ePaper Screen（T133A01）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE02
@@ -203,11 +203,11 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_3.png" style={{width:1000, height:'auto'}}/></div>
 
-PSAM が有効になっていることに注意してください。
+PSRAM が有効になっていることに注意してください。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_4.png" style={{width:1000, height:'auto'}}/></div>
 
 その後、**Upload** をクリックしてコードを書き込みます。
-これで、epaper スクリーンにフィードバックが表示されます！以下は Bitmap サンプルの結果です。
+これで epaper スクリーンにフィードバックが表示されます！以下は Bitmap サンプルの結果です。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_5.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## トラブルシューティング
@@ -217,10 +217,10 @@ PSAM が有効になっていることに注意してください。
 *   USB Type-C ケーブルが十分な電力を供給していることを確認してください。
 *   Reset ボタンを押してボードを再起動してください。
 
-**Q2: Wi-Fi の設定に失敗します。**
+**Q2: Wi-Fi 設定に失敗します。**
 *   Wi-Fi ネットワークが 2.4GHz であることを確認してください（5GHz はサポートされていません）。
 *   Wi-Fi パスワードが正しく入力されているか確認してください。
-*   ルーターに近づいて、十分な信号強度を確保してください。
+*   ルーターに近づいて、十分な電波強度を確保してください。
 
 **Q3: 画面表示がぼやけている、または残像があります。**
 *   これは、長時間画面をリフレッシュしていない場合や、電源が不安定な場合に発生することがあります。HMI プラットフォーム経由で画面を再度リフレッシュしてみてください。
@@ -232,7 +232,7 @@ PSAM が有効になっていることに注意してください。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="table-center">
   <div class="button_tech_support_container">
