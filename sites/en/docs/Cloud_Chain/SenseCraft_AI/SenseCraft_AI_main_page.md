@@ -1,6 +1,6 @@
 ---
-description: Catalog of SenseCraft AI Documentation
-title: Overview
+description: Find SenseCraft AI guides for pretrained models, custom training, model deployment, device workspaces, model output, and applications.
+title: SenseCraft AI Documentation Center
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png
 sidebar_class_name: hidden
 slug: /sensecraft-ai/sensecraft-ai-main
@@ -11,19 +11,21 @@ last_update:
   date: 11/27/2024
   author: Citrc
 createdAt: '2024-11-27'
-updatedAt: '2026-05-07'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/sensecraft-ai/sensecraft-ai-main/
 ---
 
-# SenseCraft AI Wiki Center
+# SenseCraft AI Documentation Center
+
+Use this task-based documentation hub to find guides for pretrained models, custom training, model deployment, device workspaces, model output, and applications. To learn about SenseCraft AI capabilities and workflow, see the [platform overview](/sensecraft-ai/overview/).
 
 ## Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_ai_overview/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Overview 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="/sensecraft-ai/overview/" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft AI platform overview 🖱️</font></span></strong>
     </a>
 </div><br />
 
