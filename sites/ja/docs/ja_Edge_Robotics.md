@@ -63,6 +63,7 @@ import '/src/css/robotics-page-style.css';
       <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>モバイルシャーシとアプリケーションデモ</small></a>
       <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>車輪脚ロボット学習パス</small></a>
       <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>デスクトップ対話型ロボット学習パス</small></a>
+      <a href="#atom"><span>🤖</span><strong>Atom</strong><small>小型ヒューマノイドロボット学習パス</small></a>
     </div>
   </section>
 
@@ -345,6 +346,30 @@ import '/src/css/robotics-page-style.css';
           </div>
         </div>
       </details>
+
+<details id="atom" className="product-card atom">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🤖</span>
+    <div>
+      <h3>Atom 小型ヒューマノイドロボット</h3>
+      <span>ヒューマノイド入門、サーボデバッグ、モーションティーチング、Web リモコン向け</span>
+    </div>
+  </div>
+  <span className="summary-action">学習プランを展開</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>おすすめ対象</strong><span>デスクトップ二足歩行ヒューマノイドを初めて使い、モーションティーチングやリモコンを手早く体験したいユーザー</span></div>
+    <div><strong>学習目標</strong><span>開封後すぐに使い始め、Web モーションエディタでティーチングし、カスタムモーションをコントローラファームウェアに書き出す</span></div>
+    <div><strong>推奨順序</strong><span>Atom-S 入門 → Web リモコン → モーションエディタ → カスタムモーション開発</span></div>
+  </div>
+  <div className="learning-steps">
+    <a className="step-card" href="/ja/atom_s/"><span className="step-index">1</span><div><b>Atom-S 入門ガイド</b><small>電源投入、Web リモコンの接続、最初の連続ティーチングモーションシーケンスの記録を行います。</small></div><em>初心者必須</em></a>
+    <a className="step-card" href="/ja/atom_x/"><span className="step-index">2</span><div><b>Atom-X 入門ガイド</b><small>Atom-X の操作は Atom-S とまったく同じです。同じ手順で素早く使い始められます。</small></div><em>同シリーズ</em></a>
+  </div>
+</div>
+</details>
 
     </div>
   </section>

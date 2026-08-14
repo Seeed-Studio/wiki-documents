@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { useLocation } from '@docusaurus/router';
 import styles from './index.module.scss';
 import {
   productFamily,
   resourceTabs,
 } from './productData';
+import { createReCameraTranslator, localizeReCameraHref } from './i18n';
 import {
   CameraIcon,
   CpuIcon,
@@ -53,6 +56,19 @@ const resourceIconMap: Record<string, React.FC<{ className?: string }>> = {
   discord: DiscordIcon,
 };
 
+// ===================== i18n =====================
+function useReCameraTranslator() {
+  const { i18n } = useDocusaurusContext();
+  const { pathname } = useLocation();
+  return createReCameraTranslator(i18n.currentLocale, pathname);
+}
+
+function useReCameraHrefLocalizer() {
+  const { i18n } = useDocusaurusContext();
+  const { pathname } = useLocation();
+  return (href: string) => localizeReCameraHref(href, i18n.currentLocale, pathname);
+}
+
 // ===================== Scroll Reveal =====================
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -77,23 +93,21 @@ function useScrollReveal() {
 
 // ===================== 1. HERO =====================
 function HeroSection() {
+  const t = useReCameraTranslator();
   return (
     <section className={styles.hero}>
       <div className={styles.heroInner}>
         <div className={styles.heroText}>
-          <h1 className={styles.heroTitle}>reCamera Family</h1>
-          <p className={styles.heroSubtitle}>Open Source AI Camera Platform</p>
+          <h1 className={styles.heroTitle}>{t('reCamera Family')}</h1>
+          <p className={styles.heroSubtitle}>{t('Open Source AI Camera Platform')}</p>
           <p className={styles.heroDesc}>
-            From entry-level edge AI to high-performance industrial vision —
-            the reCamera family offers flexible solutions for every scenario.
-            Powered by open-source software, dual-architecture support,
-            and a growing ecosystem of modules and accessories.
+            {t('From entry-level edge AI to high-performance industrial vision — the reCamera family offers flexible solutions for every scenario. Powered by open-source software, dual-architecture support, and a growing ecosystem of modules and accessories.')}
           </p>
         </div>
         <div className={styles.heroVisual}>
           <img
             src="https://github.com/Seeed-Studio/OSHW-reCamera-Series/raw/main/statics/reCamera_landingpage.jpeg"
-            alt="reCamera Product Family"
+            alt={t('reCamera Product Family')}
             className={styles.heroImage}
             loading="eager"
           />
@@ -105,6 +119,8 @@ function HeroSection() {
 
 // ===================== 2. PRODUCT FAMILY (Tab Switcher) =====================
 function ProductFamilySection() {
+  const t = useReCameraTranslator();
+  const localizeHref = useReCameraHrefLocalizer();
   const [activeTab, setActiveTab] = useState(productFamily[0].id);
   const ref = useScrollReveal();
   const activeTabData = productFamily.find((t) => t.id === activeTab);
@@ -114,10 +130,10 @@ function ProductFamilySection() {
       <div className={styles.sectionInner}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitleWhite}>
-            Choose Your <span className={styles.accent}>reCamera</span>
+            {t('Choose Your')} <span className={styles.accent}>reCamera</span>
           </h2>
           <p className={styles.sectionDescDim}>
-            Select from the reCamera family — devices, modules, and accessories to build your edge AI vision solution
+            {t('Select from the reCamera family — devices, modules, and accessories to build your edge AI vision solution')}
           </p>
         </div>
 
@@ -134,7 +150,7 @@ function ProductFamilySection() {
                 onClick={() => setActiveTab(tab.id)}
               >
                 <IconComp />
-                <span>{tab.title}</span>
+                <span>{t(tab.title)}</span>
               </button>
             );
           })}
@@ -143,28 +159,28 @@ function ProductFamilySection() {
         {/* Product Cards Grid */}
         <div className={styles.productGrid}>
           {activeTabData?.items.map((item) => (
-            <a key={item.name} href={item.href} className={styles.productCard}>
-              {item.isNew && <span className={styles.newBadge}>New</span>}
+            <a key={item.name} href={localizeHref(item.href)} className={styles.productCard}>
+              {item.isNew && <span className={styles.newBadge}>{t('New')}</span>}
               <div className={styles.productImageWrap}>
                 <img
                   src={item.image}
-                  alt={item.name}
+                  alt={t(item.name)}
                   className={styles.productImage}
                   loading="lazy"
                 />
               </div>
               <div className={styles.productInfo}>
-                <h3 className={styles.productName}>{item.name}</h3>
-                <p className={styles.productDesc}>{item.description}</p>
+                <h3 className={styles.productName}>{t(item.name)}</h3>
+                <p className={styles.productDesc}>{t(item.description)}</p>
                 {item.tags && (
                   <div className={styles.productTags}>
                     {item.tags.map((tag) => (
-                      <span key={tag} className={styles.productTag}>{tag}</span>
+                      <span key={tag} className={styles.productTag}>{t(tag)}</span>
                     ))}
                   </div>
                 )}
                 <span className={styles.gettingStartedBtn}>
-                  Getting Started
+                  {t('Getting Started')}
                   <ArrowRightIcon />
                 </span>
               </div>
@@ -178,6 +194,7 @@ function ProductFamilySection() {
 
 // ===================== 3. AI TRAINING =====================
 function AIDeploySection() {
+  const t = useReCameraTranslator();
   const ref = useScrollReveal();
   return (
     <section className={styles.sectionLight} ref={ref}>
@@ -198,27 +215,27 @@ function AIDeploySection() {
           </div>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>
-              Train your custom model in <span className={styles.accent}>1 minute</span>
+              {t('Train your custom model in')} <span className={styles.accent}>{t('1 minute')}</span>
             </h2>
           </div>
           <div className={styles.flowSteps}>
             <div className={styles.flowStep}>
               <div className={styles.flowStepNumber}>1</div>
-              <h4 className={styles.flowStepTitle}>Collect data</h4>
+              <h4 className={styles.flowStepTitle}>{t('Collect data')}</h4>
             </div>
             <div className={styles.flowArrow}>
               <ArrowRightIcon />
             </div>
             <div className={styles.flowStep}>
               <div className={styles.flowStepNumber}>2</div>
-              <h4 className={styles.flowStepTitle}>One-click training</h4>
+              <h4 className={styles.flowStepTitle}>{t('One-click training')}</h4>
             </div>
             <div className={styles.flowArrow}>
               <ArrowRightIcon />
             </div>
             <div className={styles.flowStep}>
               <div className={styles.flowStepNumber}>3</div>
-              <h4 className={styles.flowStepTitle}>Deploy to reCamera</h4>
+              <h4 className={styles.flowStepTitle}>{t('Deploy to reCamera')}</h4>
             </div>
           </div>
         </a>
@@ -229,6 +246,8 @@ function AIDeploySection() {
 
 // ===================== 4. RESOURCES =====================
 function ResourcesSection() {
+  const t = useReCameraTranslator();
+  const localizeHref = useReCameraHrefLocalizer();
   const [activeTab, setActiveTab] = useState(resourceTabs[0].id);
   const ref = useScrollReveal();
   const activeTabData = resourceTabs.find((t) => t.id === activeTab);
@@ -238,10 +257,10 @@ function ResourcesSection() {
       <div className={styles.sectionInner}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitleWhite}>
-            Build with <span className={styles.accent}>reCamera</span>
+            {t('Build with')} <span className={styles.accent}>reCamera</span>
           </h2>
           <p className={styles.sectionDescDim}>
-            Applications, open-source tools, and community to accelerate your development
+            {t('Applications, open-source tools, and community to accelerate your development')}
           </p>
         </div>
 
@@ -258,7 +277,7 @@ function ResourcesSection() {
                 onClick={() => setActiveTab(tab.id)}
               >
                 <IconComp />
-                <span>{tab.title}</span>
+                <span>{t(tab.title)}</span>
               </button>
             );
           })}
@@ -272,19 +291,19 @@ function ResourcesSection() {
               <div key={cat.title} className={styles.resourceCategoryCard}>
                 <div className={styles.resourceCategoryHeader}>
                   {CatIcon && <CatIcon className={styles.resourceCategoryIcon} />}
-                  <h3 className={styles.resourceCategoryTitle}>{cat.title}</h3>
+                  <h3 className={styles.resourceCategoryTitle}>{t(cat.title)}</h3>
                 </div>
-                <p className={styles.resourceCategoryDesc}>{cat.description}</p>
+                <p className={styles.resourceCategoryDesc}>{t(cat.description)}</p>
               <ul className={styles.resourceCategoryList}>
                 {cat.items.map((sub) => (
                   <li key={sub.label}>
                     <a
-                      href={sub.href}
+                      href={localizeHref(sub.href)}
                       className={styles.resourceCategoryLink}
                       target={sub.href.startsWith('http') ? '_blank' : undefined}
                       rel={sub.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     >
-                      {sub.label}
+                      {t(sub.label)}
                     </a>
                   </li>
                 ))}
@@ -300,6 +319,8 @@ function ResourcesSection() {
 
 // ===================== 5. FOOTER =====================
 function FooterSection() {
+  const t = useReCameraTranslator();
+  const localizeHref = useReCameraHrefLocalizer();
   return (
     <footer className={styles.footer}>
       <div className={styles.footerInner}>
@@ -312,49 +333,49 @@ function FooterSection() {
               className={styles.footerLogo}
             />
             <p>
-              Seeed Studio empowers innovators with open-source hardware and AI-powered edge computing solutions. reCamera is built for developers, by developers.
+              {t('Seeed Studio empowers innovators with open-source hardware and AI-powered edge computing solutions. reCamera is built for developers, by developers.')}
             </p>
           </div>
 
           {/* Links */}
           <div className={styles.footerLinks}>
             <div className={styles.footerCol}>
-              <h4>Product</h4>
-              <a href="https://wiki.seeedstudio.com/recamera_2002_series_introduction/">
+              <h4>{t('Product')}</h4>
+              <a href={localizeHref('https://wiki.seeedstudio.com/recamera_2002_series_introduction/')}>
                 reCamera 2002
               </a>
-              <a href="https://wiki.seeedstudio.com/recamera_pro_3002_series_introduction/">
+              <a href={localizeHref('https://wiki.seeedstudio.com/recamera_pro_3002_series_introduction/')}>
                 reCamera Pro
               </a>
-              <a href="https://wiki.seeedstudio.com/recamera_accessories_lens/">
-                Accessories
+              <a href={localizeHref('https://wiki.seeedstudio.com/recamera_accessories_lens/')}>
+                {t('Accessories')}
               </a>
               <a href="https://www.seeedstudio.com/recamera.html" target="_blank" rel="noopener noreferrer">
-                Buy reCamera <ExternalLinkIcon className={styles.btnIcon} />
+                {t('Buy reCamera')} <ExternalLinkIcon className={styles.btnIcon} />
               </a>
             </div>
             <div className={styles.footerCol}>
-              <h4>Resources</h4>
-              <a href="https://wiki.seeedstudio.com/recamera_getting_started/">
-                Getting Started
+              <h4>{t('Resources')}</h4>
+              <a href={localizeHref('https://wiki.seeedstudio.com/recamera_getting_started/')}>
+                {t('Getting Started')}
               </a>
-              <a href="https://wiki.seeedstudio.com/recamera_nodered_flows/">
-                Node-RED Guide
+              <a href={localizeHref('https://wiki.seeedstudio.com/recamera_nodered_flows/')}>
+                {t('Node-RED Guide')}
               </a>
               <a href="https://github.com/Seeed-Studio/ModelAssistant" target="_blank" rel="noopener noreferrer">
-                Model Zoo <ExternalLinkIcon className={styles.btnIcon} />
+                {t('Model Zoo')} <ExternalLinkIcon className={styles.btnIcon} />
               </a>
               <a href="https://github.com/Seeed-Studio/OSHW-reCamera-Series" target="_blank" rel="noopener noreferrer">
-                GitHub Repo <ExternalLinkIcon className={styles.btnIcon} />
+                {t('GitHub Repo')} <ExternalLinkIcon className={styles.btnIcon} />
               </a>
             </div>
             <div className={styles.footerCol}>
-              <h4>Community</h4>
+              <h4>{t('Community')}</h4>
               <a href="https://discord.gg/sensecraft" target="_blank" rel="noopener noreferrer">
                 Discord <ExternalLinkIcon className={styles.btnIcon} />
               </a>
               <a href="https://forum.seeedstudio.com/" target="_blank" rel="noopener noreferrer">
-                Forum <ExternalLinkIcon className={styles.btnIcon} />
+                {t('Forum')} <ExternalLinkIcon className={styles.btnIcon} />
               </a>
               <a href="https://hackaday.io/project/202736-recamera" target="_blank" rel="noopener noreferrer">
                 Hackaday <ExternalLinkIcon className={styles.btnIcon} />
@@ -364,7 +385,7 @@ function FooterSection() {
         </div>
 
         <div className={styles.footerBottom}>
-          <p>© {new Date().getFullYear()} Seeed Studio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Seeed Studio. {t('All rights reserved.')}</p>
         </div>
       </div>
     </footer>

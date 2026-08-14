@@ -1,10 +1,10 @@
 ---
-description: EE03 10.3インチ E-ink ドライバーボード入門ガイド
+description: EE03 10.3インチE-inkドライバーボード入門ガイド
 title: EE03 入門ガイド
 keywords:
   - E-ink
   - ドライバーボード
-  - 10.3 インチ
+  - 10.3 inch
   - ESP32
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.jpg
@@ -15,7 +15,7 @@ last_update:
   date: 2026-03-1
   author: Jackson.Li
 createdAt: '2026-03-02'
-updatedAt: '2026-04-28'
+updatedAt: '2026-04-27'
 url: https://wiki.seeedstudio.com/ja/getting_started_with_ee03/
 ---
 
@@ -50,17 +50,17 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## はじめに
 
-**XIAO ESP32-S3 Plus** を搭載した ePaper ドライバーボード EE03 は、**10.3 モノクロ ePaper ディスプレイ** をサポートします。JST 2.0 mm バッテリーコネクタ（電源スイッチ付き）、内蔵充電 IC を備え、1 つのリセットボタンと 3 つのユーザーボタンが付属しています。デジタルフォトフレームやインフォメーションボードなど、低消費電力の ePaper プロジェクトに最適です。
+**XIAO ESP32-S3 Plus** を搭載した ePaper ドライバーボード EE03 は、**10.3 モノクロ ePaper ディスプレイ** をサポートします。JST 2.0 mm バッテリーコネクタと電源スイッチ、内蔵充電 IC を備え、1つのリセットボタンと3つのユーザーボタンが付属しています。デジタルフォトフレームやインフォメーションボードなど、低消費電力の ePaper プロジェクトに最適です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### 特長
 
 - **XIAO ESP32-S3 Plus 内蔵:** 対応する ePaper ディスプレイに接続するだけで、すぐに動作します。
-- **10.3" モノクロ ePaper ディスプレイ専用サポート:** 10.3" 高速リフレッシュ ePaper ディスプレイ向けに特別に設計されており、素早いセットアップと安定した動作を実現します。
-- **高速リフレッシュ対応:** 統合された T-CON タイミング制御により、高速駆動を高精度に行い、オンボードの SHT40 がリアルタイムの温度検知を提供して波形補償を行います。
+- **10.3インチ モノクロ ePaper ディスプレイ専用サポート:** 10.3インチ高速リフレッシュ ePaper ディスプレイ向けに特別設計されており、迅速なセットアップと安定した動作を実現します。
+- **高速リフレッシュ対応:** 統合された T-CON タイミング制御により、高速駆動を正確に行い、オンボードの SHT40 がリアルタイムの温度検知を提供して波形補償を行います。
 - **スイッチ付き BAT コネクタ:** シンプルなバッテリー接続を提供し、スイッチを統合することで効率的な電源管理と省エネを実現します。
-- **ユーザーフレンドリーなボタン:** 1 つのリセットボタンと 3 つのユーザープログラマブルボタンを備え、プロジェクトの開発を加速し、柔軟なカスタマイズ機能を提供します。
+- **ユーザーフレンドリーなボタン:** 1つのリセットボタンと3つのユーザープログラマブルボタンを備え、プロジェクトの開発を加速し、柔軟なカスタマイズ機能を提供します。
 - **SenseCraft HMI ファームウェア書き込み済み:** SenseCraft HMI（AI 搭載ノーコード UI デザインプラットフォーム）により、接続するだけですぐに使い始められます。豊富なテンプレートから選択するか、ドラッグ＆ドロップ（必要に応じて AI 支援）で UI を構築し、数クリックで ePaper ディスプレイにデプロイできます。
 
 ### 仕様
@@ -74,10 +74,10 @@ import Steppers from '@site/src/components/utils/Stepper';
 | **電源** | - 3.7V リチウムバッテリー<br/>- USB Type-C |
 | **ボタン** | - 1x リセットボタン<br/>- 3x ユーザーボタン |
 
-### 応用例
+### 用途
 
-- **デジタル電子書籍リーダー:** 16 階調グレースケールと高速リフレッシュにより、紙のようなモノクロ読書体験を提供し、ページめくりをスムーズにし、より素早い更新を実現します。
-- **リアルタイムダッシュボード:** 天気情報、カレンダー予定、重要な通知、エネルギー使用量、センサー状態、KPI などのデータウィジェットといったライブ情報を表示します。
+- **デジタル電子書籍リーダー:** 16階調グレースケールと高速リフレッシュにより、紙のようなモノクロ読書体験を提供し、ページめくりをスムーズにし、より素早い更新を実現します。
+- **リアルタイムダッシュボード:** 天気情報、カレンダーの予定、重要な通知、エネルギー使用量、センサー状態、KPI などのデータウィジェットといったライブ情報を表示します。
 - **セキュリティアラート:** 動体検知やドア／窓センサーの作動など、セキュリティイベントに関するアラートや通知を表示します。
 - **公共交通到着ボード:** 日々の通勤向けに、バス／電車のリアルタイム到着時刻、運行状況、サービスアラートを一目で確認できるよう表示します。
 
@@ -100,10 +100,10 @@ import Steppers from '@site/src/components/utils/Stepper';
 ### 機器のセットアップ
 
 **ステップ 1. 画面とボードを接続する**
-ePaper 画面の FPC ケーブルを、EE03 ドライバーボード上のコネクタに慎重に接続します。ロック機構が確実に固定されていることを確認してください。
+ePaper 画面の FPC ケーブルを EE03 ドライバーボード上のコネクタに慎重に接続します。ロック機構が確実に固定されていることを確認してください。
 
 **ステップ 2. 電源を入れる**
-USB Type-C ケーブルを使用して、EE03 ボードを電源（コンピュータまたは USB アダプタ）に接続します。電源投入後、画面がリフレッシュされ、ウェルカム画像が表示されます。
+USB Type-C ケーブルを使用して、EE03 ボードを電源（PC または USB アダプタ）に接続します。電源投入後、画面がリフレッシュされ、ウェルカム画像が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_1.jpg" style={{width:300,height:'auto'}}/></div>
 
@@ -123,21 +123,21 @@ USB Type-C ケーブルを使用して、EE03 ボードを電源（コンピュ�
 
 ### プラットフォームへのバインドと更新
 
-**ステップ 6. SenseCraft HMI 上でデバイスをバインドする**
-[SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device) にアクセスします。アカウントにログインし、デバイス管理セクションに移動して "Add Device" を選択します。E-ink 画面に表示されているペアリングコードを入力します。
+**ステップ 6. SenseCraft HMI でデバイスをバインドする**
+[SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device) にアクセスし、アカウントにログインします。デバイス管理セクションに移動し、「Add Device」を選択します。E-ink 画面に表示されているペアリングコードを入力します。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_4.jpg" style={{width:800, height:'auto'}}/></div>
 **ステップ 7. 新しいインターフェースを作成してプッシュする**     
-SenseCraft HMI プラットフォーム上で、10.3 インチ画面に適したテンプレートを選択して新しいインターフェースを作成するか、画像をアップロードします。
+SenseCraft HMI プラットフォーム上で、10.3インチ画面に適したテンプレートを選択して新しいインターフェースを作成するか、画像をアップロードします。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_8.jpg" style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_5.jpg" style={{width:800, height:'auto'}}/></div>
 
 **ステップ 8. 画像を適用する**
-作業が完了したら、"Apply" ボタンをクリックし、自分の EE03 デバイスを選択します。
+作業が完了したら、「Apply」ボタンをクリックし、EE03 デバイスを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 **ステップ 9. 画面に表示する**
-最後に、EE03 がデータを受信し、10.3 インチ画面を新しいコンテンツでリフレッシュします。
+最後に、EE03 がデータを受信し、10.3インチ画面をリフレッシュして新しいコンテンツを表示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_7.jpg" style={{width:300, height:'auto'}}/></div>
 
@@ -147,7 +147,7 @@ SenseCraft HMI プラットフォーム上で、10.3 インチ画面に適した
 ### Seeed GFX ライブラリのインストール
 
 :::tip
-このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリやその他の類似ディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
+このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリやその他の類似のディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
 :::
 
 GitHub から Seeed GFX ライブラリをダウンロードしてインストールします。
@@ -163,12 +163,12 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-自分のデバイスタイプを選択すると、いくつかのコードが生成されます。そのコードをコピーしておき、後で使用します。
+デバイスタイプを選択すると、いくつかのコードが生成されます。そのコードをコピーしておき、後で使用します。
 
 :::tip
 誤った選択をすると、画面には何も表示されません。
 
-そのため、必ず正しいデバイスまたはコンポーネントタイプを選択してください。
+必ず正しいデバイスまたはコンポーネントタイプを選択してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/3.png" style={{width:800, height:'auto'}}/></div>
@@ -194,7 +194,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/5.jpg" style={{width:1000, height:'auto'}}/></div>
 
-PSAM を有効にする必要があることに注意してください。
+PSRAM が有効になっていることに注意してください。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.jpg" style={{width:1000, height:'auto'}}/></div>
 
 次に **Upload** をクリックしてコードを書き込みます。
@@ -205,16 +205,16 @@ PSAM を有効にする必要があることに注意してください。
 ## トラブルシューティング
 
 **Q1: 電源を入れても画面がリフレッシュされません。**
-*   FPC ケーブルが正しく挿入されロックされているか確認してください。
+*   FPC ケーブルが正しく挿入され、ロックされているか確認してください。
 *   USB Type-C ケーブルが十分な電力を供給していることを確認してください。
 *   Reset ボタンを押してボードを再起動してください。
 
-**Q2: Wi-Fi の設定に失敗します。**
+**Q2: Wi-Fi 設定に失敗します。**
 *   使用している Wi-Fi ネットワークが 2.4GHz であることを確認してください。
 *   Wi-Fi パスワードが正しく入力されているか確認してください。
 
 **Q3: 画面表示がぼやけている、または残像があります。**
-*   これは、長時間画面をリフレッシュしていない場合や、電源が不安定な場合に発生することがあります。HMI プラットフォーム経由で画面を再度リフレッシュしてみてください。
+*   これは、長時間画面をリフレッシュしていない場合や、電源が不安定な場合に発生することがあります。HMI プラットフォームから画面を再度リフレッシュしてみてください。
 
 ## リソース
 - **[PDF]** [Seeed Studio XIAO ePaper Display EE03 回路図](https://files.seeedstudio.com/wiki/Epaper/EE03/XIAO_ePaper_Display_Board_EE03_V1.0_SCH_251217.pdf)
@@ -222,7 +222,7 @@ PSAM を有効にする必要があることに注意してください。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。
 
 <div class="table-center">
   <div class="button_tech_support_container">

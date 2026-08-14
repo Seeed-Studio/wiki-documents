@@ -243,7 +243,26 @@ Using the web virtual gamepad, you can quickly teach the robot a continuous moti
 If you have completed the quick experience and wish to further export motion JSON, modify the main controller logic, or connect other controllers, please continue reading the following sections.
 :::
 
-## 9. Core Workflow for Custom Motion Development
+## 9. Open Software & Custom Motion Development
+
+Motion Editor link:
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/uartbasic/robotstudiopro/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Open Motion Editor 🖱️</font></span></strong>
+</a></div>
+
+Remote Controller link:
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/ps2v2/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Open Remote Controller 🖱️</font></span></strong>
+</a></div>
+
+This section involves two browser-based applications — no installation required. Click the buttons above to open them:
+
+- **Motion Editor**: Connect to the RUC-01 interface board from a PC browser to debug servos in real time, record teaching motions, and export motion groups as `.json` files.
+- **Remote Controller (Web Remote)**: Pair with the robot over Web Bluetooth to remotely control it and replay or adjust teaching motions.
 
 ### Pose Design & Data Export (Web Motion Editor)
 

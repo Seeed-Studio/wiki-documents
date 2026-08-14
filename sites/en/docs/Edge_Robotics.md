@@ -63,6 +63,7 @@ import '/src/css/robotics-page-style.css';
       <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>Mobile chassis and application demos</small></a>
       <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>Wheeled-legged robot path</small></a>
       <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>Desktop interactive robot path</small></a>
+      <a href="#atom"><span>🤖</span><strong>Atom</strong><small>Compact humanoid robot path</small></a>
     </div>
   </section>
 
@@ -345,6 +346,30 @@ import '/src/css/robotics-page-style.css';
           </div>
         </div>
       </details>
+
+<details id="atom" className="product-card atom">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🤖</span>
+    <div>
+      <h3>Atom Compact Humanoid Robot</h3>
+      <span>For humanoid robot beginners, servo debugging, motion teaching, and web remote control</span>
+    </div>
+  </div>
+  <span className="summary-action">Expand learning plan</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>Recommended for</strong><span>First-time desktop bipedal humanoid users who want to quickly experience motion teaching and remote control</span></div>
+    <div><strong>Learning goal</strong><span>Get started out of the box, teach motions with the web motion editor, and export custom motions to the controller firmware</span></div>
+    <div><strong>Recommended order</strong><span>Atom-S Getting Started → Web Remote → Motion Editor → Custom Motion Development</span></div>
+  </div>
+  <div className="learning-steps">
+    <a className="step-card" href="/atom_s/"><span className="step-index">1</span><div><b>Atom-S Getting Started Guide</b><small>Power on, connect the web remote controller, and record your first continuous teaching motion sequence.</small></div><em>Required for beginners</em></a>
+    <a className="step-card" href="/atom_x/"><span className="step-index">2</span><div><b>Atom-X Getting Started Guide</b><small>Atom-X operates exactly like Atom-S — follow the same workflow to get started quickly.</small></div><em>Same series</em></a>
+  </div>
+</div>
+</details>
 
     </div>
   </section>

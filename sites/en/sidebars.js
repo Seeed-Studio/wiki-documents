@@ -3997,6 +3997,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'reComputer Classic J50',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Classic_J50/Seeed_AGX_Orin_Dev_Kit_Getting_Started',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'reComputer J401B',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/recomputer_j401b_getting_start',
@@ -4064,7 +4071,6 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson_Xavier_AGX_H01_Driver_Installation',
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson-Mate',
                 'Edge/NVIDIA_Jetson/Other_Devices/Mini_AI_Computer_T906',
-                'Edge/NVIDIA_Jetson/Other_Devices/Seeed_AGX_Orin_Dev_Kit_Getting_Started',
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_A203E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_A205E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_Jetson_Series_GPIO_Grove'
@@ -4327,10 +4333,12 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Create_Backup_and_Restore_on_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/Migrate_Home_Data_from_Jetson_Orin_Nano_Developer_Kit_to_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/Deploy_OTA_ON_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/Headless_Setup_and_Recovery_for_A603',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
             'Edge/NVIDIA_Jetson/FAQs/How_to_use_Camera_IMX219',
             'Edge/NVIDIA_Jetson/FAQs/Use_IMX477_Camera_with_A603',
+            'Edge/NVIDIA_Jetson/FAQs/Use_Arducam_OV9281_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
@@ -4338,6 +4346,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/Flash_JetPack_with_WSL2',
+            'Edge/NVIDIA_Jetson/FAQs/Jetson_Initrd_Flash_Fails_with_ZFS_Host',
           ]
         }
       ],
@@ -4558,6 +4567,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/Lerobot_Starai_Arm',
             'Robotics/Robot_Kits/Lerobot/Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm_New',
+            'Robotics/Robot_Kits/Lerobot/SOARM101_XIAO_MicroROS_Wireless_Teleoperation',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO_ARM101_DAMO',
             'Robotics/Robot_Kits/Lerobot/SOARM_AMAZINGHAND_TELEOP',
             'Robotics/Robot_Kits/Lerobot/Lerobot_Dataset_Tool',

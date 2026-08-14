@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-10 11:30:35 (北京时间)
-// 多语言页面: 2433 个
+// 生成时间: 2026-08-13 11:01:33 (北京时间)
+// 多语言页面: 2437 个
 
 (function() {
   'use strict';
@@ -1409,6 +1409,13 @@
     "ja",
     "pt"
   ],
+  "/headless_setup_and_recovery_for_a603": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/how_to_build_and_flash_bsp_source_for_jetson_thor": [
     "cn",
     "en",
@@ -1536,6 +1543,13 @@
     "pt"
   ],
   "/usb_timeout_during_flash": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/use_arducam_ov9281_camera_with_a603_jetson_carrier_board": [
     "cn",
     "en",
     "es",
@@ -1836,14 +1850,14 @@
     "ja",
     "pt"
   ],
-  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
+  "/NVIDIA_Jetson": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/NVIDIA_Jetson": [
+  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
     "cn",
     "en",
     "es",
@@ -3545,6 +3559,13 @@
     "pt"
   ],
   "/wifi_halow_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera": [
     "cn",
     "en",
     "es",
@@ -5965,6 +5986,13 @@
     "pt"
   ],
   "/lerobot_starai_arm": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/soarm101_xiao_microros_wireless_teleoperation": [
     "cn",
     "en",
     "es",
