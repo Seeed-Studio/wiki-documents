@@ -4333,6 +4333,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/es_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super',
             'Edge/NVIDIA_Jetson/FAQs/es_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/es_Flash_JetPack_with_WSL2',
+            'Edge/NVIDIA_Jetson/FAQs/es_Jetson_Initrd_Flash_Fails_with_ZFS_Host',
           ]
         }
       ],

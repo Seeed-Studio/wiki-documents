@@ -63,6 +63,7 @@ import '/src/css/robotics-page-style.css';
       <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>Chasis móvil y demostraciones de aplicaciones</small></a>
       <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>Ruta de robot con ruedas y patas</small></a>
       <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>Ruta de robot interactivo de escritorio</small></a>
+      <a href="#atom"><span>🤖</span><strong>Atom</strong><small>Ruta de robot humanoide compacto</small></a>
     </div>
   </section>
 
@@ -345,6 +346,30 @@ import '/src/css/robotics-page-style.css';
           </div>
         </div>
       </details>
+
+<details id="atom" className="product-card atom">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🤖</span>
+    <div>
+      <h3>Robot humanoide compacto Atom</h3>
+      <span>Para iniciarse en robots humanoides, depuración de servos, enseñanza de movimientos y control remoto web</span>
+    </div>
+  </div>
+  <span className="summary-action">Ampliar plan de aprendizaje</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>Recomendado para</strong><span>Usuarios que se inician en humanoides bípedos de escritorio y quieren experimentar rápidamente la enseñanza de movimientos y el control remoto</span></div>
+    <div><strong>Objetivo de aprendizaje</strong><span>Poner en marcha el robot, enseñar movimientos con el editor web y exportar movimientos personalizados al firmware del controlador</span></div>
+    <div><strong>Orden recomendado</strong><span>Guía de Atom-S → Control remoto web → Editor de movimiento → Desarrollo de movimientos personalizados</span></div>
+  </div>
+  <div className="learning-steps">
+    <a className="step-card" href="/es/atom_s/"><span className="step-index">1</span><div><b>Guía de inicio de Atom-S</b><small>Conecta la alimentación, vincula el control remoto web y graba tu primera secuencia de movimientos de enseñanza.</small></div><em>Obligatorio para principiantes</em></a>
+    <a className="step-card" href="/es/atom_x/"><span className="step-index">2</span><div><b>Guía de inicio de Atom-X</b><small>Atom-X se opera exactamente igual que Atom-S: sigue el mismo flujo para empezar rápidamente.</small></div><em>Misma serie</em></a>
+  </div>
+</div>
+</details>
 
     </div>
   </section>
