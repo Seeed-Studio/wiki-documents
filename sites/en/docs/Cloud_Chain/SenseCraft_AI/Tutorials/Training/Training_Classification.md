@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
-description: How to use Training(Classification)
-title: Training - Classification
+description: Train, label, test, and deploy a custom image classification model in SenseCraft AI using a browser camera or a supported edge AI device.
+title: Image Classification Training with SenseCraft AI
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/34.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-training-classification
 aliases:
@@ -10,11 +10,11 @@ last_update:
   date: 12/03/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2026-08-04'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-training-classification/
 ---
 
-# Type of training - Classification
+# Train an Image Classification Model with SenseCraft AI
 
 Classification is a powerful tool in machine learning that allows you to train a model to recognize and categorize different types of data. In the SenseCraft AI platform, classification enables you to create models that can identify and distinguish between various objects, gestures, or scenes based on the images you provide during training.
 
@@ -132,6 +132,12 @@ Feel free to experiment with training models for different objects, gestures, or
 Remember, while the platform allows you to train models using any camera, for the best results and optimal performance, we recommend using the target device (currently limited to Seeed Studio devices) to train and deploy your model.
 
 With this comprehensive guide, you should now have a solid understanding of how to train a classification model using the SenseCraft AI platform. Happy training, and enjoy creating powerful, custom AI models for your projects!
+
+## Related guides
+
+- Learn about the platform's capabilities in the [SenseCraft AI overview](/sensecraft-ai/overview/).
+- Follow the [object detection model training guide](/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/) for a different computer vision task.
+- Browse more tutorials and resources in the [SenseCraft AI documentation center](/sensecraft-ai/sensecraft-ai-main/).
 
 ## Tech Support & Product Discussion
 
