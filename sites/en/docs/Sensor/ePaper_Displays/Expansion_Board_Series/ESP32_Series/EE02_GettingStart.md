@@ -203,7 +203,7 @@ After that, go to **Tools** -> **Board** -> **XIAO ESP32S3 Plus** and **Tools** 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_3.png" style={{width:1000, height:'auto'}}/></div>
 
-Note that PSAM must be enabled.
+Note that PSRAM must be enabled.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_4.png" style={{width:1000, height:'auto'}}/></div>
 
 Then click **Upload** to upload the code.

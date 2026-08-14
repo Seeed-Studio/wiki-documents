@@ -119,7 +119,7 @@ reSpeaker XVF3800 には、外部制御用に 3 本の入力ピン（GPI）と 5
 
 :::note
 
-最適な音声収音性能とオーディオアルゴリズムの正しい動作を確保するために、デバイス背面のマイクポート（Mic Inlet / Sound Hole）が音源の方向を向くようにしてください。マイクポートは、Seeed Studio のロゴが印刷されている側にあります。 
+最適な音声収音性能とオーディオアルゴリズムの正しい動作を確保するために、デバイス背面のマイクポート（Mic Inlet / Sound Hole）が音源の方向を向くようにしてください。マイクポートは、Seeed Studio のロゴが印刷されている側にあります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mic-outlet.png" alt="pir" width={800} height="auto"/></p>
 :::
@@ -167,8 +167,6 @@ ReSpeaker 上の **ミュートボタン** は、マイクアレイからの **�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/audio.gif" alt="pir" width={600} height="auto"/></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/speaker.jpg" alt="pir" width={600} height="auto"/></p>
-
-
 
 #### セーフモード
 
@@ -220,7 +218,7 @@ USB ファームウェアは、USB ハードウェアインターフェース経
 これらのファームウェアファイルは [this link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb) から確認できます。
 
 | ファームウェア | チャンネル数 | 備考 |
-|---------|----------|-------|
+| --------- | ---------- | ------- |
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | 処理済み 2 チャンネル出力 <br /> Channel 0: Conference <br /> Channel 1: ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Channel 0: 処理済みオーディオ (Conference) <br /> Channel 1: 処理済みオーディオ (ASR) <br /> Channel 2: Mic 0 生データ <br /> Channel 3: Mic 1 生データ <br /> Channel 4: Mic 2 生データ <br /> Channel 5: Mic 3 生データ |
 
@@ -529,26 +527,24 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 パラメータ設定とデバイスとのやり取りのために、専用の Python 制御インターフェースが用意されています。
 
-
 [**Python Control Directory**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)
 
 提供されている Python スクリプトを使用すると、次のことができます：
 
-* 内蔵オーディオアルゴリズムのパラメータを設定
-* DoA（到来方向）データを取得
-* VAD（音声活動検出）データを取得
-* オンボード LED を制御
-* 音声処理パイプラインを制御
-* XMOS デバイスと直接通信
+- 内蔵オーディオアルゴリズムのパラメータを設定
+- DoA（到来方向）データを取得
+- VAD（音声活動検出）データを取得
+- オンボード LED を制御
+- 音声処理パイプラインを制御
+- XMOS デバイスと直接通信
 
 **システム要件**
 
 Python 制御インターフェースを使用するには、次の依存関係が必要です：
 
-* Python 3.6 以降
-* `pyusb` Python ライブラリ
-* `libusb` システムライブラリ
-
+- Python 3.6 以降
+- `pyusb` Python ライブラリ
+- `libusb` システムライブラリ
 
 ### インストールと依存関係
 
@@ -560,8 +556,6 @@ pip install pyusb
 
 オペレーティングシステムによっては、`libusb` パッケージを別途インストールする必要がある場合があります。
 
-
-
 ### 使い方
 
 **基本構文**
@@ -569,8 +563,6 @@ pip install pyusb
 ```bash
 python xvf_host.py [options] command [value(s)...]
 ```
-
-
 
 **コマンドオプション**
 
@@ -581,8 +573,6 @@ python xvf_host.py [options] command [value(s)...]
 | `--pid`        | USB プロダクト ID を設定します（デフォルト：`0x001A`）    |
 | `--values`     | 書き込みコマンドに値を指定します（オプション）           |
 
-
-
 ### 使用例
 
 **利用可能なコマンドを一覧表示**
@@ -592,6 +582,7 @@ python xvf_host.py [options] command [value(s)...]
 ```bash
 python xvf_host.py --list
 ```
+
 **ファームウェアバージョンを読み取る**
 
 デバイス上で現在動作しているファームウェアバージョンを取得します。
@@ -635,6 +626,7 @@ LED の明るさ（パーセンテージ）を調整します。
 ```bash
 python xvf_host.py LED_BRIGHTNESS --values 50
 ```
+
 **マイクアレイのジオメトリを読み取る**
 
 音響処理アルゴリズムで使用されるマイクの座標を取得します。
@@ -659,11 +651,11 @@ reSpeaker デバイスを制御および設定するためのデスクトップ�
 
 このアプリケーションを使用すると、次のことができます：
 
-* reSpeaker デバイスに接続
-* オーディオ設定の構成（ノイズ抑制、ゲイン、AEC、およびチャンネル構成）
-* 到来方向（DoA）と音声活動検出（VAD）のモニタリング
-* LED エフェクトの制御
-* デバイスパラメータの調整
+- reSpeaker デバイスに接続
+- オーディオ設定の構成（ノイズ抑制、ゲイン、AEC、およびチャンネル構成）
+- 到来方向（DoA）と音声活動検出（VAD）のモニタリング
+- LED エフェクトの制御
+- デバイスパラメータの調整
 
 ### アプリケーションのインストール
 
@@ -766,12 +758,12 @@ brew install dfu-util
 
 ここでは次の項目を設定できます：
 
-* 非定常ノイズ抑制
-* 定常ノイズ抑制
-* 自動ゲイン制御（AGC）
-* アコースティックエコーキャンセレーション（AEC）
-* 出力チャンネル構成
-* 左右チャンネルマッピング
+- 非定常ノイズ抑制
+- 定常ノイズ抑制
+- 自動ゲイン制御（AGC）
+- アコースティックエコーキャンセレーション（AEC）
+- 出力チャンネル構成
+- 左右チャンネルマッピング
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/audio.jpg" alt="Audio Tab" width={800} height="auto"/></p>
 
@@ -781,9 +773,9 @@ brew install dfu-util
 
 次の項目をモニタリングできます：
 
-* 到来方向（DoA）
-* 音声活動検出（VAD）
-* ビームエネルギーレベル
+- 到来方向（DoA）
+- 音声活動検出（VAD）
+- ビームエネルギーレベル
 
 これらの指標により、デバイスが音声を正しく検出しているかを確認できます。
 
@@ -795,12 +787,12 @@ brew install dfu-util
 
 利用可能な機能には次のものがあります：
 
-* ブリージングエフェクト
-* レインボーエフェクト
-* リングエフェクト
-* 明るさの調整
-* アニメーション速度の制御
-* RGB カラーの選択
+- ブリージングエフェクト
+- レインボーエフェクト
+- リングエフェクト
+- 明るさの調整
+- アニメーション速度の制御
+- RGB カラーの選択
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/led.jpg" alt="LEDs Tab" width={800} height="auto"/></p>
 
@@ -810,11 +802,11 @@ brew install dfu-util
 
 設定は次のようなカテゴリに整理されています：
 
-* Audio
-* アコースティックエコーキャンセレーション（AEC）
-* ポストプロセッシング
-* LEDs / GPIO
-* System
+- Audio
+- アコースティックエコーキャンセレーション（AEC）
+- ポストプロセッシング
+- LEDs / GPIO
+- System
 
 このインターフェースから、パラメータ値を直接更新できます。
 
@@ -894,6 +886,33 @@ reSpeaker XVF3800 ESP32 バージョンは、デフォルトで I2S ファーム
 
 2. **USB ファームウェアを書き込みます：**
    [ファームウェア更新手順](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェア更新)
+
+### XVF3800 の 6 チャンネルファームウェアで一部のチャンネルが無音になるのはなぜですか？
+
+6 チャンネルファームウェアを書き込んだ後、システムのオーディオミキサー設定で生のマイクチャンネルを有効にする必要がある場合があります。
+
+Linux では、まずオーディオカードの ID を確認します：
+
+```bash
+arecord -l
+```
+
+たとえば、XVF3800 が **card 1** として表示されている場合は、キャプチャチャンネルを有効にして音量を設定します：
+
+```bash
+amixer -c 1 cset numid=8 on,on,on,on,on,on
+amixer -c 1 cset numid=10 60,60,60,60,60,60
+```
+
+必要に応じて音量の値を調整し、設定を保存します：
+
+```bash
+sudo alsactl store 1
+```
+
+これらの設定を適用すると、6 つすべてのチャンネルでゼロ以外のオーディオ信号をキャプチャできるようになります。
+
+**Windows：** 一部のチャンネルが引き続き無音の場合は、**デバイス マネージャー** から XVF3800 のデバイスドライバーをアンインストールし、デバイスを一度取り外してから再接続してみてください。これにより、Windows がデバイスとドライバーを再構成できます。
 
 ## リソース
 
