@@ -136,12 +136,14 @@ sudo usermod -a -G dialout $USER
 
 ### Step 0. Complete the basic arm setup
 
-Before starting web simulator development, complete the steps in [reBot Arm B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/), including arm assembly, motor ID configuration, zero-point initialization, and basic connectivity checks. It is also recommended to complete the ROS2 workspace setup in [reBot Arm B601-DM ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/), because the web simulator depends on the URDF and STL meshes in the same repository.
+Before starting web simulator development, complete the steps in [reBot Arm B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/), including arm assembly, motor ID configuration, zero-point initialization, and basic connectivity checks.
+
+The project repository already contains the ROS2 workspace, URDF, and STL meshes required by the web simulator. You do not need to build another workspace by following the [reBot Arm B601-DM ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/) guide.
 
 :::tip
 `reBotArm_control_py` is the core external dependency, providing real-robot drivers, inverse kinematics, dynamics computation, and gravity compensation. The web simulator does not directly import this SDK, but the `rebotarmcontroller` real-robot node on the ROS2 backend, the MuJoCo torque loop, and the gravity compensation feature all depend on it. If you only run the pure simulation mode with Fake Driver + web, the SDK is not required; once you want to control the real robot or use gravity compensation, it must be installed.
 
-`setup.sh` automatically clones the SDK to `reBotArmController_ROS2-main/third_party/reBotArm_control_py/` (locked to a verified commit). If `~/reBotArm_control_py/` already exists, it is recognized automatically and not cloned again.
+`setup.sh` automatically obtains the SDK from [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) and installs it at `~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main/third_party/reBotArm_control_py/` (locked to a verified commit). If `~/reBotArm_control_py/` already exists, it is recognized automatically and not cloned again.
 
 Directory structure after installation:
 
@@ -163,6 +165,13 @@ The SDK's `pyproject.toml` declares `requires-python >=3.10,<3.12`, but this pro
 
 ### Step 1. One-click install
 
+The official reBot Arm open-source project is available at [Seeed-Projects/reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm). The web simulator, ROS2 workspace, and MuJoCo simulation code used in this guide are hosted in [Yang-Ci/Borot-Arm_Mujoco](https://github.com/Yang-Ci/Borot-Arm_Mujoco). Clone the software repository into `~/reBot_Arm_Mujoco-DM/`:
+
+```bash
+git clone https://github.com/Yang-Ci/Borot-Arm_Mujoco.git ~/reBot_Arm_Mujoco-DM
+cd ~/reBot_Arm_Mujoco-DM
+```
+
 The `setup.sh` in the repository root is idempotent and sets up the entire environment automatically:
 
 - Installs missing apt system packages (ROS 2, Node.js, ros-dev-tools, etc.)
@@ -173,7 +182,6 @@ The `setup.sh` in the repository root is idempotent and sets up the entire envir
 - Runs `rosdep` dependency resolution and `colcon build --symlink-install`
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM
 ./setup.sh
 ```
 
