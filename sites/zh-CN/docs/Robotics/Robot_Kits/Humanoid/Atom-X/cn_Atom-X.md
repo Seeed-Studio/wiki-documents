@@ -167,11 +167,25 @@ Sensor / Remote --(Signal)--> XIAO --(UART Command)--> RUC-01 --(Bus)--> Servos
 Atom-X 的使用请参考 Atom-S 用户手册，所有操作与 Atom-S 完全相同。
 :::
 
-<div style={{textAlign: 'center'}}>
+<div style={{textAlign: 'center', marginBottom: '24px'}}>
     <Link to="/atom_s#8-运行你的第一个示例" style={{display: 'inline-block', width: '200px', height: '40px', lineHeight: '40px', backgroundColor: '#007bff', color: '#ffffff', textDecoration: 'none', borderRadius: '28px', fontWeight: 'bold', fontSize: '18px', textAlign: 'center'}}>
         ▶ 启动示例
     </Link>
 </div>
+
+Motion Editor 链接地址：
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/uartbasic/robotstudiopro/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 打开 Motion Editor 🖱️</font></span></strong>
+</a></div>
+
+Remote Controller 链接地址：
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/ps2v2/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 打开 Remote Controller 🖱️</font></span></strong>
+</a></div>
 
 ## 常见问题
 
