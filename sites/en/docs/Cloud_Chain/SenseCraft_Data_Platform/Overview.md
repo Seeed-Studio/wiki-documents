@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: Overview
-description: Quick start guide for SenseCraft Data Platform — manage your SenseCAP devices and visualize sensor data with a secure and reliable cloud platform.
+title: SenseCraft Data Platform Quick Start
+description: Create an account, bind a SenseCAP device, and view sensor data in SenseCraft Data Platform with this step-by-step quick-start guide.
 keywords:
   - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -12,7 +12,7 @@ last_update:
   date: 06/06/2025
   author: Matthew
 createdAt: '2023-03-01'
-updatedAt: '2026-07-13'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/cloud/sensecraft-data/sensecraft-data-platform/overview/
 ---
 
@@ -22,6 +22,8 @@ url: https://wiki.seeedstudio.com/cloud/sensecraft-data/sensecraft-data-platform
 **Notice:**  
 Starting from 2025, **SenseCAP Portal** has been officially renamed to **SenseCraft Data Platform**. The functionality remains the same, with ongoing enhancements to better support AIoT and multi-sensor scenarios.
 :::
+
+This guide covers account setup, app access, device binding, and sensor-data verification.
 
 How to work with SenseCraft Data Platform? Let’s go!
 
@@ -81,3 +83,9 @@ Enter the device EUI and KEY to complete the binding.
 Log in to `SenseCraft Data Platform`, check the device status and basic information in the “Device/Sensor Node” section, and view the sensor data in the “Data/Table” section.
 
 <div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview4.png" /></div>
+
+## Related guides
+
+- [Manage gateways and sensor nodes](/sensecraft-data-platform/tutorials/device-management/)
+- [Monitor device status and sensor data in the Dashboard](/sensecraft-data-platform/tutorials/dashboard/)
+- [Make your first SenseCraft Data Platform HTTP API request](/sensecraft-data-platform/api/http-api/quick-start/)

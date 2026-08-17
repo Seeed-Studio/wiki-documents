@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-11 14:43:57 (北京时间)
-// 多语言页面: 2436 个
+// 生成时间: 2026-08-14 15:51:27 (北京时间)
+// 多语言页面: 2440 个
 
 (function() {
   'use strict';
@@ -1500,6 +1500,13 @@
     "ja",
     "pt"
   ],
+  "/jetson_initrd_flash_zfs_host_limitation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/make_diy_bsp_for_jetson": [
     "cn",
     "en",
@@ -1850,14 +1857,14 @@
     "ja",
     "pt"
   ],
-  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
+  "/NVIDIA_Jetson": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/NVIDIA_Jetson": [
+  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
     "cn",
     "en",
     "es",
@@ -2040,6 +2047,13 @@
     "pt"
   ],
   "/recomputer_robotics_j50_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage": [
     "cn",
     "en",
     "es",
@@ -5992,6 +6006,13 @@
     "ja",
     "pt"
   ],
+  "/soarm101_xiao_microros_wireless_teleoperation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/soarm_amazinghand_teleop": [
     "cn",
     "en",
@@ -6511,6 +6532,13 @@
     "pt"
   ],
   "/rebot_arm_b601_rs_ros2_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_web_simulator_developer_guide": [
     "cn",
     "en",
     "es",

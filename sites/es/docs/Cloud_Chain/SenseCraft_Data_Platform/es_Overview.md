@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: Descripción general
-description: Guía de inicio rápido para SenseCraft Data Platform - gestiona tus dispositivos SenseCAP y visualiza datos de sensores con una plataforma en la nube segura y fiable.
+title: Guía rápida de SenseCraft Data Platform
+description: Crea una cuenta, vincula un dispositivo SenseCAP y visualiza datos de sensores en SenseCraft Data Platform con esta guía rápida paso a paso.
 keywords:
   - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -12,22 +12,24 @@ last_update:
   date: 06/06/2025
   author: Matthew
 createdAt: '2023-03-01'
-updatedAt: '2026-07-13'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/es/cloud/sensecraft-data/sensecraft-data-platform/overview/
 ---
 
-# Inicio rápido de SenseCraft Data Platform
+# Guía rápida de SenseCraft Data Platform
 
 :::tip
 **Aviso:**  
 A partir de 2025, **SenseCAP Portal** ha pasado a llamarse oficialmente **SenseCraft Data Platform**. La funcionalidad sigue siendo la misma, con mejoras continuas para ofrecer un mejor soporte a escenarios de AIoT y multi-sensor.
 :::
 
+Esta guía cubre la creación de cuenta, acceso a la app, vinculación de dispositivos y verificación de datos de sensores.
+
 ¿Cómo trabajar con SenseCraft Data Platform? ¡Vamos allá!
 
 ## Introducción
 
-La función principal de SenseCraft Data Platform es gestionar los dispositivos SenseCAP y almacenar los datos. Está construida sobre Azure, un servicio en la nube seguro y fiable de Microsoft. Puedes solicitar una cuenta y vincular todos los dispositivos a esta cuenta. SenseCraft proporciona una plataforma web y una API. La plataforma web incluye Panel de control, Gestión de dispositivos, Gestión de datos y Gestión de claves de acceso, mientras que la API está abierta a los usuarios para un desarrollo posterior.
+La función principal de SenseCraft Data Platform es gestionar dispositivos SenseCAP y almacenar datos. Está construida sobre Azure, un servicio en la nube seguro y fiable de Microsoft. Puedes solicitar una cuenta y vincular todos los dispositivos a esta cuenta. SenseCraft proporciona una plataforma web y una API. La plataforma web incluye Panel, Gestión de dispositivos, Gestión de datos y Gestión de claves de acceso, mientras que la API está abierta a los usuarios para un desarrollo adicional.
 
 ## Sitio web
 
@@ -50,7 +52,7 @@ Si no encuentras el correo, es posible que se haya identificado automáticamente
 Si olvidas tu contraseña al iniciar sesión, puedes recuperarla a través de tu correo electrónico.
 :::
 
-## Descargar la App SenseCAP
+## Descargar la app SenseCAP
 
 Instala `SenseCraft App` e inicia sesión.
 
@@ -64,11 +66,11 @@ Cada dispositivo SenseCAP tiene una etiqueta en la carcasa como se muestra en la
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/label.jpg)
 
 
-En la página principal de la App SenseCAP, haz clic en el botón “Bind” y luego escanea el código QR para vincular el dispositivo.
+En la página principal de la app SenseCAP, haz clic en el botón “Bind” y luego escanea el código QR para vincular el dispositivo.
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview1.png" /></div>
 
-En SenseCAP Platform, ve a la página del Panel de control y haz clic en **Bind Device**.
+En SenseCAP Platform, ve a la página del Panel y haz clic en **Bind Device**.
 
 <div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview2.png" /></div>
 
@@ -81,3 +83,9 @@ Introduce el EUI y la KEY del dispositivo para completar la vinculación.
 Inicia sesión en `SenseCraft Data Platform`, comprueba el estado del dispositivo y la información básica en la sección “Device/Sensor Node” y visualiza los datos del sensor en la sección “Data/Table”.
 
 <div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview4.png" /></div>
+
+## Guías relacionadas
+
+- [Gestionar gateways y nodos de sensores](/es/sensecraft-data-platform/tutorials/device-management/)
+- [Supervisar el estado del dispositivo y los datos de sensores en el Panel](/es/sensecraft-data-platform/tutorials/dashboard/)
+- [Realiza tu primera solicitud HTTP API a SenseCraft Data Platform](/es/sensecraft-data-platform/api/http-api/quick-start/)
