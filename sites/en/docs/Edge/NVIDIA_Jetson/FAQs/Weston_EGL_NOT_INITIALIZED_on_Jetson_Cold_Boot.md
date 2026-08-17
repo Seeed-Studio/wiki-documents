@@ -1,5 +1,5 @@
 ---
-description: Explains intermittent Weston cold-boot EGL_NOT_INITIALIZED on Seeed Jetson (reComputer Super J401 / R36.4.4) caused by tegra_drm vs nvidia-drm DRI card ordering, and recommends GNOME when Weston is not required.
+description: Intermittent Weston cold-boot EGL_NOT_INITIALIZED on Seeed Jetson (confirmed on reComputer Super J401 with R36.4.4). Describes the dual-DRM card-order symptoms, a GNOME recommendation, and links for follow-up.
 title: Weston Cold Boot Fails with EGL_NOT_INITIALIZED
 tags:
   - JetPack
@@ -13,15 +13,16 @@ keywords:
   - tegra_drm
   - nvidia-drm
   - GNOME
-  - R36.4.4
+  - JetPack 6
+  - L4T R36
   - reComputer Super
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png
 slug: /weston_egl_not_initialized_jetson_cold_boot
 last_update:
-  date: 08/13/2026
+  date: 08/17/2026
   author: haochen
 createdAt: '2026-08-13'
-updatedAt: '2026-08-13'
+updatedAt: '2026-08-17'
 url: https://wiki.seeedstudio.com/weston_egl_not_initialized_jetson_cold_boot/
 ---
 
@@ -29,33 +30,37 @@ url: https://wiki.seeedstudio.com/weston_egl_not_initialized_jetson_cold_boot/
 
 ## Introduction
 
-On Seeed Jetson devices flashed with **Seeed R36.4.4** (JetPack 6.2 family), using **Weston** as the compositor/desktop manager may fail **intermittently after a cold boot** with:
+If you replace the default desktop with **Weston**, you may see an **intermittent** failure after a **cold boot**:
 
 ```text
 failed to initialize display
 EGL error state: EGL_NOT_INITIALIZED (0x3001)
 ```
 
-A **warm reboot** sometimes succeeds. This is **not** a Seeed carrier-board hardware defect. Official analysis attributes it to a **load-order race** between `tegra_drm` and `nvidia-drm` competing for `/dev/dri/card0` in NVIDIA’s Weston-on-Tegra display stack.
+A **warm reboot** sometimes succeeds.
 
-:::info Applicable products
-Observed on **reComputer Super J401** (Jetson Orin Nano Super) with Seeed R36.4.4. The same DRM race can appear on other Seeed Orin platforms that run the same L4T display stack **when Weston is used**. It does **not** apply to the default **GNOME** desktop shipped with the Seeed image.
+This page records a **confirmed case** and a working diagnosis so that others who hit the same logs can match symptoms and follow up. It is **not** a claim that every Seeed Jetson image or every JetPack 6 boot is affected.
+
+:::info Confirmed case
+**reComputer Super J401** (Jetson Orin Nano Super) flashed with Seeed **R36.4.4** (JetPack 6.2), using Weston as the compositor.
+
+Similar `card0` / `card1` ordering issues with Weston have also been discussed on the [NVIDIA Developer Forums](https://forums.developer.nvidia.com/) for other **Jetson Orin + JetPack 6** setups. If you see the same logs on another Seeed Orin product or L4T R36.x image, this FAQ still applies as a starting point — please add details on the GitHub issue linked below.
 :::
 
 ## Recommended desktop
 
-If you **do not** have a hard requirement for Weston:
+If you **do not** need Weston, stay on the **GNOME** desktop that ships with the Seeed Jetson image.
 
-**Use the GNOME desktop that ships with the Seeed Jetson BSP / demo image.**
-
-GNOME uses the same underlying GPU stack but avoids this Weston-specific cold-boot race. For shipping, demos, and most development, keep the default desktop as **GNOME** and keep documentation consistent with that choice.
+The reports so far are about **Weston** as compositor (often after disabling GDM or using a kiosk/service start). Default GNOME is the practical workaround used in the confirmed case.
 
 ## Symptoms
 
-- Cold power-on: Weston fails; logs show `EGL_NOT_INITIALIZED`.
-- Soft/warm reboot: Weston may start normally.
-- Failed boots often show Weston binding to `/dev/dri/card0` owned by `nvidia-drm` / `nv_platform` without usable CRTC/sizes.
-- Successful boots often show Weston using `/dev/dri/card1` while `tegra_drm` holds the lower minor that works for Weston’s EGL path.
+In the confirmed logs:
+
+- Cold power-on: Weston fails with `EGL_NOT_INITIALIZED`.
+- Soft/warm reboot: Weston may start.
+- Failed boots often show Weston using `/dev/dri/card0` bound to `nvidia-drm` / `nv_platform`, sometimes with `Cannot find any crtc or sizes`.
+- Successful boots often show Weston using `/dev/dri/card1`, with `tegra_drm` holding the other node.
 
 Example failure fragment:
 
@@ -66,43 +71,40 @@ failed to initialize display
 EGL error state: EGL_NOT_INITIALIZED (0x3001)
 ```
 
-## Root cause
+## What the logs suggest
 
-Both `tegra_drm` and `nvidia-drm` probe the display hardware at boot. There is **no fixed rule** for which driver receives **minor 0** (`/dev/dri/card0`).
+Seeed BSP review of [Linux_for_Tegra #50](https://github.com/Seeed-Studio/Linux_for_Tegra/issues/50) points to a **load-order interaction** between `tegra_drm` and `nvidia-drm` on Orin (both can register DRM minors). There is no documented guarantee which driver receives **minor 0** (`/dev/dri/card0`).
 
-| Winner of `card0` | Typical result with Weston |
+| Observed when Weston fails | Observed when Weston starts |
 | --- | --- |
-| `nvidia-drm` first | May report “Cannot find any crtc or sizes”; Weston EGL init fails |
-| `tegra_drm` first | `nvidia-drm` moves to `card1`; Weston on the tegra path can start |
+| Weston opens `/dev/dri/card0`; that node is often `nvidia-drm` / `nv_platform` | Weston opens `/dev/dri/card1`; `tegra_drm` / host1x often holds the other card |
 
-Cold vs warm boot changes probe timing, so the failure looks **random**. This is a known class of issue on **NVIDIA Weston-on-Tegra**, not a mis-flash of the Seeed mfi package.
+Cold vs warm boot can change probe timing, which matches the intermittent behavior. This belongs to NVIDIA’s **Weston-on-Tegra** stack rather than a carrier-board flash error. NVIDIA has not published a dedicated fix notice for this symptom.
 
 ## If you must use Weston
 
-1. Prefer switching back to **GNOME** unless Weston is mandatory for your product.
-2. Treat Weston display issues as **upstream / NVIDIA** scope — ask on the [NVIDIA Developer Forums](https://forums.developer.nvidia.com/) with full Weston logs and `dmesg | grep -i drm`.
-3. For diagnosis only, compare failed vs successful boots:
+1. Prefer **GNOME** unless the product truly requires Weston.
+2. Treat remaining Weston EGL/DRM issues as **NVIDIA / upstream** — post on the [NVIDIA Developer Forums](https://forums.developer.nvidia.com/) with Weston logs and `dmesg | grep -i drm`.
+3. To compare a failed boot vs a working boot:
 
 ```bash
 # Which driver owns card0?
 readlink -f /sys/class/drm/card0/device/driver
 sudo udevadm info /dev/dri/card0
+ls -l /dev/dri /dev/dri/by-path
 sudo dmesg | grep -i drm
 ```
 
-Seeed does **not** maintain Weston’s Tegra integration inside the BSP. There is no guaranteed Seeed-side fix for the driver probe race; workarounds that force module order are **unsupported** and may break other display paths. Escalate Weston requirements to NVIDIA and track [Linux_for_Tegra #50](https://github.com/Seeed-Studio/Linux_for_Tegra/issues/50) for context (issue closed with the GNOME recommendation).
+Seeed does not ship a supported BSP patch that forces DRM probe order. Community workarounds (renaming `/dev/dri` nodes, custom `modprobe` timing) are **out of scope** for this FAQ.
 
-## Shipping and demo images
-
-- Default interactive desktop for Seeed Jetson images: **GNOME**.
-- Wiki and out-of-box guidance should recommend **GNOME** unless a project explicitly documents Weston.
-- If a custom image enables Weston, document this cold-boot risk and point operators to this FAQ.
+If you reproduce this on another SKU or L4T version, comment on [Linux_for_Tegra #50](https://github.com/Seeed-Studio/Linux_for_Tegra/issues/50) with hardware, L4T/JetPack version, and the commands above.
 
 ## Resources
 
 - [Seeed Linux_for_Tegra #50 — Weston cold boot display / EGL_NOT_INITIALIZED](https://github.com/Seeed-Studio/Linux_for_Tegra/issues/50)
-- [NVIDIA Jetson Linux — Weston (Wayland)](https://docs.nvidia.com/jetson/archives/r35.6.5/DeveloperGuide/SD/WindowingSystems/WestonWayland.html)
-- [NVIDIA Developer Forums](https://forums.developer.nvidia.com/)
+- [Can't enable modeset on boot for Wayland (AGX Orin, JP 6.0)](https://forums.developer.nvidia.com/t/cant-enable-modeset-on-boot-for-wayland/303843)
+- [Weston kiosk / nvidia_drm load order (Orin Nano Super)](https://forums.developer.nvidia.com/t/some-issues-i-found-trying-to-start-weston-automatically-in-a-kiosk-mode-using-systemd/348933)
+- [NVIDIA Jetson Linux — Weston (Wayland) (R36.4)](https://docs.nvidia.com/jetson/archives/r36.4/DeveloperGuide/SD/WindowingSystems/WestonWayland.html)
 - [reComputer Super Getting Started](https://wiki.seeedstudio.com/recomputer_jetson_super_getting_started/)
 
 ## Tech Support & Product Discussion
