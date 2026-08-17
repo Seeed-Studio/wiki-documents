@@ -14,7 +14,7 @@ slug: /recamera_pro_development_cpp_skill
 sidebar_position: 3
 last_update:
   date: 2026-08-14
-  author: Seeed Studio
+  author: yylin
 createdAt: '2026-08-14'
 updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/recamera_pro_development_cpp_skill/
