@@ -17,7 +17,7 @@ translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/lerobot_double_arm_so_arm_training/
 createdAt: '2026-07-01'
-updatedAt: '2026-07-07'
+updatedAt: '2026-08-10'
 ---
 
 import Link from '@docusaurus/Link';
@@ -41,6 +41,11 @@ First, connect the wires as follows.
 The follower arm type is `so101_follower`, and the leader arm type is `so101_leader` (in LeRobot, `so100_leader` and `so101_leader` share the same implementation).
 
 ---
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> SO-ARM101 Get One Now 🖱️</font></span></strong>
+</a></div>
 
 ## 0. Prerequisites
 

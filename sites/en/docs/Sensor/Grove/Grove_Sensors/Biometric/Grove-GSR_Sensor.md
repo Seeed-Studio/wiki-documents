@@ -10,7 +10,7 @@ last_update:
   date: 1/6/2023
   author: Seraphina
 createdAt: '2023-01-06'
-updatedAt: '2026-01-07'
+updatedAt: '2026-08-07'
 url: https://wiki.seeedstudio.com/Grove-GSR_Sensor/
 ---
 
@@ -295,4 +295,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

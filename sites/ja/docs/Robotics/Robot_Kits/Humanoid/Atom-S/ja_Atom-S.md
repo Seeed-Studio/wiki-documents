@@ -243,7 +243,26 @@ Web 仮想ゲームパッドを使うことで、コードを書くことなく�
 クイック体験を完了し、さらにモーション JSON のエクスポート、メインコントローラロジックの変更、または他のコントローラとの接続を行いたい場合は、以下のセクションを続けてお読みください。
 :::
 
-## 9. カスタムモーション開発のコアワークフロー
+## 9. ソフトウェアを開くとカスタムモーション開発
+
+Motion Editor リンク：
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/uartbasic/robotstudiopro/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Motion Editor を開く 🖱️</font></span></strong>
+</a></div>
+
+Remote Controller リンク：
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/ps2v2/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Remote Controller を開く 🖱️</font></span></strong>
+</a></div>
+
+本章ではブラウザベースのソフトウェアを 2 つ使用します。インストールは不要で、上記のボタンをクリックするだけで開けます。
+
+- **Motion Editor（モーションエディタ）**：PC ブラウザから RUC-01 インターフェースボードに接続し、サーボをリアルタイムでデバッグ、ティーチングモーションを記録して、モーショングループを `.json` ファイルとしてエクスポートします。
+- **Remote Controller（Web リモコン）**：Web Bluetooth でロボットとペアリングし、リモート操作やティーチングモーションの再生・速度調整を行います。
 
 ### ポーズ設計とデータエクスポート（Web Motion Editor）
 

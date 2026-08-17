@@ -9,7 +9,7 @@ last_update:
   date: 04/08/2025
   author: Hugo
 createdAt: '2024-08-27'
-updatedAt: '2025-04-10'
+updatedAt: '2026-08-06'
 url: https://wiki.seeedstudio.com/xiao_rp2040_with_platform_io/
 ---
 
@@ -26,70 +26,80 @@ In this wiki, we wiil introduce how to install and run the sample code in Platfo
 
 ## Use PlatformIO For XIAO RP2040
 
-### Setup 1 . Install [PlatformIO](https://platformio.org/platformio-ide) in official website
+### Setup 1 . SteDownload VS Code
 
-if you have not install software of PlatformIO , you can click on the link above.
+Download according to the system you are using [VS Code](https://code.visualstudio.com/download)
 
-### Setup 2 . Create any project in PlatformIO
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
-Because the platform already has our XIAO ESP32S3 and XIAO ESP32C3 development board options, we can choose one of them to create our files. Of course, other files are also fine, it doesn't matter. The project name can also be chosen arbitrarily.
+### Setup 2 . Install the PlatformIO extension
 
-<table align="center">
-  <tr>
-      <th>Operation one</th>
-        <th>Operation two</th>
-  </tr>
-  <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_platformio/4.png" style={{width:500, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_platformio/3.png" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-</table>
+Open VSCode, click on Extensions, then search for PlatformIO and select to install. After the installation is complete, restart VSCode.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
+
+### Setup 3 . Install the platform-seeedboards platform package
+
+The Seeed Studio XIAO series boards use a custom PlatformIO platform, so you need to install the corresponding platform package manually.
+
+- Run the following command for a fresh installation:
+
+```bash
+pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+- If you have previously used Seeed Studio XIAO series boards in PlatformIO, run the command below to update:
+
+
+```bash
+pio pkg uninstall -g -p "SeeedStudio"
+pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
+```
 
 :::tip
-Before this, I had already installed the XIAO RP2040 installation package, so you can see that the image in operation two has the option for XIAO RP2040, but you don't have it when you perform the operation.
-:::
 
-### Setup 3 . Modify platformio.ini file
+Alternatively, you can perform replacements based on existing projects.
 
-When you successfully create the PlatformIO file, there will be many files appearing in the left column. We can see a file named platform.ini. Next, we need to replace the contents inside it.
-
-<table align="center">
-  <tr>
-      <th>Operation three</th>
-  </tr>
-  <tr>
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/esp32c6_platformio/2.png" /></div>
-  </tr>
-</table>
-
-You need to copy the following code and replace the content in platform.ini file.
-
-```
+```ini
 [env:seeed_xiao_rp2040]
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
 board = seeed-xiao-rp2040
 framework = arduino
 ```
 
-:::tip
-Remember to save the file by pressing Ctrl + S; it will start loading.
 :::
+
+### Setup 4 . Create any project in PlatformIO
+
+Open the PlatformIO extension and select Create New Project.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/pio_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
 
 ### Setup 4 . Compile and Burn
 
-<table align="center">  
-  <tr>  
-      <th>Operation four</th>  
-  </tr>  
-  <tr>  
-      <td>  
-          <div align="center">  
-              <img width="500" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/rp2040_platformio_complied.png" />  
-          </div>  
-      </td>  
-  </tr>  
-</table>  
-In the end, if you see the same result as in the picture above, it means you have successfully added the XIAO RP2040 Development Board. When you create a project again, you will see the XIAO RP2040 option available.
+Copy the following program into `main.c` and upload it to the board.
+
+```cpp
+#include <Arduino.h>
+
+void setup() {
+    pinMode(PIN_LED, OUTPUT);
+}
+
+void loop() {
+    digitalWrite(PIN_LED, HIGH);
+    delay(1000);
+    digitalWrite(PIN_LED, LOW);
+    delay(1000);
+}
+```
+<br/>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/pio_2.png" style={{width:800, height:'auto'}}/></div>
+<br/>
 
 ## Tech Support & Product Discussion
 

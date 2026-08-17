@@ -15,7 +15,7 @@ last_update:
   date: 12/09/2025
   author: Lorraine
 createdAt: '2026-01-12'
-updatedAt: '2026-06-27'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_j501_robotics_getting_started/
 ---
 
@@ -857,45 +857,35 @@ This section demonstrates connecting CAN0↔CAN1 and CAN2↔CAN3 on the Jetson a
 
 | Channel Name | Interface Type | Pin Name | GPIO Chip | GPIO Number | Termination Resistor Control |
 |--------------|----------------|----------|-----------|-------------|------------------------------|
-| CAN0         | Native         | PAA.04   | gpiochip1 | 4           | gpiochip1 line4 (PAA.04)    |
-| CAN1         | Native         | PAA.07   | gpiochip1 | 7           | gpiochip1 line7 (PAA.07)    |
-| CAN2         | SPI-to-CAN     | -        | gpiochip2 | 10          | gpiochip2 line10             |
-| CAN3         | SPI-to-CAN     | -        | gpiochip2 | 12          | gpiochip2 line12             |
+| CAN0         | Native         | CAN0_120R_EN | gpiochip2 | 9        | gpiochip2 line9              |
+| CAN1         | Native         | CAN1_120R_EN | gpiochip2 | 8        | gpiochip2 line8              |
+| CAN2         | SPI-to-CAN     | CAN2_120R_EN | gpiochip2 | 10       | gpiochip2 line10             |
+| CAN3         | SPI-to-CAN     | CAN3_120R_EN | gpiochip2 | 12       | gpiochip2 line12             |
 
-The termination resistors for CAN0 and CAN1 can be controlled via two pins: PAA.04, located at gpiochip1 line4, and PAA.07, located at gpiochip1 line7.  
+The 120 Ω termination resistors for the four CAN channels are controlled by the corresponding GPIO lines on `gpiochip2`. The control signals are active-low: setting a line to `0` connects the termination resistor, while setting it to `1` disconnects the termination resistor.
 
-Termination resistor control follows these rules:  
-
-```
-When `PAA.04 = 1`, the 120 Ω termination resistor of CAN0 is **disconnected**;  
-when `PAA.04 = 0`, the 120 Ω termination resistor of CAN0 is **connected**.
-
-When `PAA.07 = 1`, the 120 Ω termination resistor of CAN1 is **disconnected**;  
-when `PAA.07 = 0`, the 120 Ω termination resistor of CAN1 is **connected**.
-```
-
-Enter the following command to view the pins on gpiochip 1:
+Enter the following command to view the GPIO lines:
 
 ```bash
-gpioinfo gpiochip1
+gpioinfo gpiochip2
 ```
 
-<div align="center">
-  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/gpiochip1-can.png"/>
-</div>
-
-Refer to the following commands to set `PAA.04` and `PAA.07` to 0:
+Use the following commands to connect the termination resistors:
 
 ```bash
-sudo gpioset --mode=wait gpiochip1 4=0
-sudo gpioset --mode=wait gpiochip1 7=0
+sudo gpioset --mode=wait gpiochip2 9=0  # CAN0
+sudo gpioset --mode=wait gpiochip2 8=0  # CAN1
+sudo gpioset --mode=wait gpiochip2 10=0 # CAN2
+sudo gpioset --mode=wait gpiochip2 12=0 # CAN3
 ```
 
-Refer to the following commands to set `PAA.04` and `PAA.07` to 1:
+Use the following commands to disconnect the termination resistors:
 
 ```bash
-sudo gpioset --mode=wait gpiochip1 4=1
-sudo gpioset --mode=wait gpiochip1 7=1
+sudo gpioset --mode=wait gpiochip2 9=1  # CAN0
+sudo gpioset --mode=wait gpiochip2 8=1  # CAN1
+sudo gpioset --mode=wait gpiochip2 10=1 # CAN2
+sudo gpioset --mode=wait gpiochip2 12=1 # CAN3
 ```
 
 #### Classic CAN mode

@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-03-24'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
@@ -123,6 +123,16 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 
 ## Environment Requirements
 
+:::caution Prerequisite — Complete the Arm Quick Start First
+Before proceeding with this tutorial, you **must** finish the **[reBot Arm B601-DM Quick Start](/rebot_b601_dm_getting_started)** document end-to-end, including:
+
+- Hardware unboxing, wiring, and power-on checklist
+- Serial / CAN device permission (`sudo chmod 666 /dev/ttyACM0` or `/dev/can0`)
+- Zero calibration of all joints (`2_zero_and_read.py`) and verifying the arm can be commanded in MIT / POS_VEL mode
+
+This tutorial assumes the arm is already responsive on the bus, joints are zeroed, and the operator is familiar with the relevant safety limits. Skipping the Quick Start can lead to mis-configured motors, stalled joints, or arm drops.
+:::
+
 | Item | Requirement |
 |------|-------------|
 | **Python** | 3.10+ |
@@ -152,6 +162,104 @@ uv sync
 :::
 
 
+## Tuning MIT / POS_VEL Controller Parameters {#tune-controller-params}
+
+This section explains **how to modify** the controller parameters for each joint of the arm under **MIT mode** and **POS_VEL mode**, and how to make the changes take effect.
+
+:::tip This section only covers "where / how to change", not "what value to use"
+Suitable parameters can only be obtained through **on-hardware tuning**. This section only covers: where the parameters live, what each field controls, and how to make the changes effective and verify them. For specific tuning strategies (e.g., trial-and-error, Ziegler‑Nichols), please refer to general motor control references.
+:::
+
+### Configuration File Location
+
+| Hardware version | Motor config file | Switch entry |
+|---|---|---|
+| **reBot Arm B601-DM** (this document) | `config/rebotarm_dm.yaml` | Set `hardware_yaml: "rebotarm_dm.yaml"` in `config/rebotarm.yaml` |
+| **reBot Arm B601-RS** | `config/rebotarm_rs.yaml` | Set `hardware_yaml: "rebotarm_rs.yaml"` in `config/rebotarm.yaml` |
+
+:::caution Do not edit `rebotarm.yaml` directly
+That file only contains a single line `hardware_yaml: ...`; all motor parameters live in `rebotarm_dm.yaml` / `rebotarm_rs.yaml`.
+:::
+
+### Configuration File Structure
+
+Each joint has its own entry, grouped by **control mode**:
+
+```yaml
+joints:
+  - name: joint1
+    motor_id: 0x01
+    feedback_id: 0x11
+    model: "4340P"
+    vendor: "damiao"
+    MIT:
+      kp: 120.0
+      kd: 8.0
+    POS_VEL:
+      vel_kp: 0.0125
+      vel_ki: 0.004
+      pos_kp: 150.0
+      pos_ki: 0.5
+      vlim: 5.0
+  # ... joint2 ~ joint6 follow the same structure ...
+```
+
+How to locate:
+
+- **By joint name**: to modify a joint, find the `- name: jointX` block;
+- **By mode**: under that joint, `MIT:` holds MIT mode parameters, `POS_VEL:` holds POS_VEL mode parameters;
+- **Current mode determines which set is sent**: the script switches modes via `mode mit` / `mode posvel`; the motor actually receives the parameters under the corresponding sub-block.
+
+### MIT Mode Field Meanings
+
+| Field | Role |
+|---|---|
+| `kp` | Position-loop proportional gain: the "stiffness" of tracking the target position. |
+| `kd` | Velocity-loop damping gain: suppresses oscillations caused by position error. |
+
+### POS_VEL Mode Field Meanings
+
+| Field | Role |
+|---|---|
+| `vel_kp` | Velocity-loop proportional gain. |
+| `vel_ki` | Velocity-loop integral gain. |
+| `pos_kp` | Position-loop proportional gain. |
+| `pos_ki` | Position-loop integral gain (only present in some vendor configs). |
+| `vlim` | Speed limit, caps the maximum motion speed. |
+
+:::warning Field definitions differ across vendors
+Damiao (DM) and Robostride (RS) motors use different protocol-layer units, so **the same field name has no cross-vendor comparability**. Modifying RS's `vel_kp` and modifying DM's `vel_kp` mean different things. Please interpret each YAML according to its own field order, do not compare values across config files.
+:::
+
+### Editing Procedure
+
+1. **Stop any running script**. The motor is enabled when you edit YAML, changes do not take effect immediately, and inconsistent behavior is easy to trigger.
+2. **Edit the corresponding YAML file**:
+   ```bash
+   # Example for DM
+   vim config/rebotarm_dm.yaml
+   ```
+   - Only change the joint you need to tune (e.g., `joint1`); leave unrelated joints alone;
+   - Within one joint, only change the mode you need to tune (MIT or POS_VEL); do not modify the other mode's fields without reason.
+3. **Preserve YAML indentation**: 2 spaces per level, keys separated from values by `: `. Wrong indentation causes `yaml.safe_load` parsing to fail, and all parameters will fall back to defaults.
+4. **Restart the script after saving**. The YAML is read once at script startup; **runtime edits do not take effect immediately**.
+5. **Single-joint verification**: use a script like `3_mit_control.py` (MIT) / `4_pos_vel_control.py` (POS_VEL) to verify the change with a **small single-joint motion** before doing a full-arm test.
+
+### Verifying the Change Took Effect
+
+- **Runtime observation**: enable the motor in `3_mit_control.py` / `4_pos_vel_control.py` and check `state`; if parameters look unchanged or the motor behaves exactly as before, the YAML was edited incorrectly or got overridden by defaults.
+- **YAML self-check**: parse it directly with Python and print one joint's fields to confirm the values match what you just wrote:
+  ```bash
+  uv run python -c "import yaml; print(yaml.safe_load(open('config/rebotarm_dm.yaml'))['joints'][0])"
+  ```
+- **Quick rollback**: `git checkout config/rebotarm_dm.yaml` restores the repository defaults.
+
+:::caution Do not tune many joints at once
+Tweaking `kp` / `kd` drastically on multiple joints simultaneously — if one joint's direction or sign is wrong — can instantly cause oscillation, overcurrent, or hard stops. Please **iterate one joint and one mode at a time, in small steps**.
+:::
+
+---
+
 ## Debug Tools Introduction
 
 :::tip Permission Settings
@@ -165,7 +273,10 @@ sudo chmod 666 /dev/ttyACM0
 sudo chmod 666 /dev/can0
 ```
 :::
-### Single Motor Control Console (`0x01damiao_test.py`)
+<details>
+<summary>Debugging Tools (use only when an exception occurs)</summary>
+
+**Single Motor Control Console (`0x01damiao_test.py`)**
 
 Direct single motor testing using the motorbridge SDK.
 
@@ -192,7 +303,7 @@ uv run python example/0x01damiao_test.py
 | `q` / `quit` | Quit |
 ---
 
-### Zero Calibration and Angle Monitoring (`2_zero_and_read.py`)
+**Zero Calibration and Angle Monitoring (`2_zero_and_read.py`)**
 
 Automatically set all joint zeros and display joint angles in real-time.
 
@@ -204,7 +315,17 @@ uv run python example/2_zero_and_read.py
 -0.12  +0.23  -6.42  +41.74  -0.45  -0.01  -0.01
 ```
 
-### MIT Control Mode (`3_mit_control.py`)
+---
+</details>
+
+<details>
+<summary>MIT Control Mode (alternative on reBot DM, view on demand — POS_VEL is recommended)</summary>
+
+:::warning Suitability Note
+For **reBot Arm B601-DM**, **POS_VEL (Position‑Velocity) is the recommended control mode** — the Damiao motor protocol natively supports position‑velocity hybrid control with built‑in speed limiting, giving the smoothest results out of the box. MIT mode is **the alternative** and typically requires more careful `kp` / `kd` tuning to behave well. Therefore MIT mode is **not the default** for DM hardware, but since some users do need it, **this demo is kept for on-demand reference and tuning**. If you have no special need, please prefer the POS_VEL mode example below.
+:::
+
+**MIT Control Mode (`3_mit_control.py`)**
 
 Input target angles for all joints to complete motor control in MIT control mode, typically used for force control, impedance control, or scenarios requiring high dynamic response.
 
@@ -217,8 +338,15 @@ uv run python example/3_mit_control.py
 > q # Exit system
 ```
 :::danger
-Note that in MIT control mode, the robotic arm moves very fast. Ensure that people and other devices are away from the arm's working radius.
+This example has **no path planning or speed planning**. Large target joint angles will cause motors to move at very high speed, and may even **directly trigger motor overcurrent protection**. Recommendations:
+
+- First verify with **small angles** (e.g., move a single joint only 5~10 degrees), confirm motor response and direction are correct before scaling up;
+- This section has **no built-in smooth trajectory version**. If you need smooth transitions between multiple targets, control your targets and timing carefully, or refer to the subsequent [Inverse Kinematics Control with Smooth Trajectory (8_arm_traj_control.py)](#demo8-traj-control) and port the minimum jerk / acceleration-deceleration planning approach into your own script;
+- Keep people and other devices away from the arm's working radius during operation.
 :::
+
+---
+</details>
 
 ### Position-Velocity Control Mode (`4_pos_vel_control.py`)
 
@@ -232,6 +360,13 @@ uv run python example/4_pos_vel_control.py
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
 ```
+:::danger
+This example has **no path planning or speed planning**. Large target joint angles will cause motors to move at very high speed, and may even **directly trigger motor overcurrent protection**. Recommendations:
+
+- First verify with **small angles** (e.g., move a single joint only 5~10 degrees), confirm motor response and direction are correct before scaling up;
+- This section has **no built-in smooth trajectory version**. If you need smooth transitions between multiple targets, control your targets and timing carefully, or refer to the subsequent [Inverse Kinematics Control with Smooth Trajectory (8_arm_traj_control.py)](#demo8-traj-control) and port the minimum jerk / acceleration-deceleration planning approach into your own script;
+- Keep people and other devices away from the arm's working radius during operation.
+:::
 
 ---
 
@@ -342,10 +477,14 @@ uv run python example/7_arm_ik_control.py
 > ctrl + c # Return to zero position and exit system
 ```
 :::danger
-Note that in this example code, the robotic arm moves very fast. Ensure that people and other devices are away from the arm's working radius.
+This example has **no path planning or speed planning**. Large target angles will cause motors to move at very high speed, and may even **directly trigger motor overcurrent protection**. Recommendations:
+
+- First verify with **small angles** (e.g., move the end-effector only 5~10 cm from its current position), confirm pose and direction are correct before scaling up;
+- For smooth transitions between targets, jump directly to the next section [Inverse Kinematics Control with Smooth Trajectory (8_arm_traj_control.py)](#demo8-traj-control) which uses minimum jerk / acceleration-deceleration planning;
+- Keep people and other devices away from the arm's working radius during operation.
 :::
 
-### Inverse Kinematics Control with Smooth Trajectory (`8_arm_traj_control.py`)
+### Inverse Kinematics Control with Smooth Trajectory (`8_arm_traj_control.py`) {#demo8-traj-control}
 
 Use inverse kinematics (IK) in MIT mode to automatically plan a uniform or smooth acceleration/deceleration motion trajectory within the target time, avoiding severe joint vibration.
 
@@ -371,6 +510,11 @@ uv run python example/8_arm_traj_control.py
 
 > ctrl + c # Return to zero position and exit system
 ```
+
+:::tip What if I observe pose deviation?
+If you notice that the **read end-effector pose** differs from the **commanded target pose**, and the **pose itself is reachable** (not outside workspace, not at a singularity), the problem is likely in your MIT / POS_VEL controller parameters. In that case, please refer to the earlier [Tuning MIT / POS_VEL Controller Parameters](#tune-controller-params) section and manually tune `kp` / `kd` etc. using the "single joint, mode by mode, small steps" approach; once tuned, return to this example to verify.
+:::
+
 ---
 
 ## Gravity Compensation Testing
@@ -587,8 +731,8 @@ viz.draw_path(points, "path_name", color)  # Draw path
 
 ## Contact
 
-- **Technical Support**: [Submit Issue](https://github.com/vectorBH6/reBotArm_control_py/issues)
-- **Project Repository**: [GitHub](https://github.com/vectorBH6/reBotArm_control_py)
+- **Technical Support**: [Submit Issue](https://github.com/Seeed-Projects/reBotArm_control_py/issues)
+- **Project Repository**: [GitHub](https://github.com/Seeed-Projects/reBotArm_control_py)
 - **Forum**: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ---

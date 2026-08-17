@@ -10,55 +10,188 @@ last_update:
   date: 12/11/2025
   author: Michelle
 createdAt: '2024-06-17'
-updatedAt: '2025-12-11'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/cn/meshtastic_introduction/
 ---
 
+[Meshtastic®](https://meshtastic.org/) 是一个开源、离网、去中心化的网状网络，构建于经济实惠、低功耗的设备之上，它使你能够在没有现有或可靠通信基础设施的区域，使用廉价的 LoRa 电台作为远距离离网通信平台。
 
-[Meshtastic®](https://meshtastic.org/) 是一个开源、离网、去中心化的网状网络，构建于经济实惠、低功耗设备之上，它使你能够在没有现有或可靠通信基础设施的区域，使用廉价的 LoRa 无线电作为远距离离网通信平台。
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/T1000-E-_-05.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/FrameworkMeshtasticccc.png" alt="pir" width={900} height="auto" /></p>
 
 ## 特性
 
-- 超远距离（kboxlabs 创下 254km 记录）
-- 网状通信不需要手机
-- 去中心化通信——无需专用路由器
-- 加密通信
-- 出色的电池续航
-- 在网状网络成员之间发送和接收文本消息
-- 可选的基于 GPS 的定位功能
-- 以及更多！
+- **远距离通信**（[MartinR7 和 alleg 创下的 331km 记录](https://meshtastic.org/docs/overview/range-tests/#current-ground-record-331km)）
+- **去中心化通信** - 无需专用路由器
+- **加密通信** 
 
 ## 工作原理
 
-Meshtastic 利用 LoRa 这一远距离无线电协议，它在大多数地区都可以广泛使用，无需额外的许可证或认证，这一点不同于业余无线电（HAM）操作。
+Meshtastic 使用 LoRa（一种远距离无线电协议），在大多数地区都可以广泛使用，无需额外的许可证或认证，这一点不同于业余无线电（HAM）操作。
 
-这些无线电设备被设计为会转发它们接收到的消息，从而形成一个网状网络。此设置确保每一位组成员，包括距离最远的成员，都能接收到消息。根据所采用的设置，Meshtastic 网状网络最多可以同时支持 100 台设备。
+此外，Meshtastic 电台可以与一部手机配对，使朋友和家人能够将消息直接发送到你的特定电台。需要注意的是，每台设备在同一时间只能支持一个用户的连接。"
 
-此外，Meshtastic 无线电可以与一部手机配对，使朋友和家人能够直接向你的特定无线电发送消息。需要注意的是，每台设备在同一时间只能支持来自一个用户的连接。
-
-点击[这里](https://meshtastic.org/docs/)了解更多 Meshtastic 网络相关信息！
+点击[这里](https://meshtastic.org/docs/)了解更多 Meshtastic 网络信息！
 
 ## 支持的硬件
 
-- [SenseCAP Card Tracker T1000-E for Meshtastic](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)
+### 开发套件
 
-- [Wio Tracker L1](https://wiki.seeedstudio.com/cn/wio_tracker_node/)
+<table align="center">
+<tbody><tr>
+<th>Xiao ESP32 套件（无外壳）</th>
+<th>Xiao nRF52840 套件（无外壳）</th>
+<th>Xiao ESP32 套件（带外壳）</th>
+</tr>
+<tr>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102010611-wio-sx1262-with-xiao-esp32s3.jpg" style={{width:300, height:'auto'}}/></div></td>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-102010710-nrf52840_wio-sx1262-kit_1.jpg" style={{width:350, height:'auto'}}/></div></td>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113110064-xiao-esp32s3-for-meshtastic-_-lora-with-3d-printed-enclosure-45font.jpg" style={{width:350, height:'auto'}}/></div></td>
+</tr>
+<tr>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-for-Meshtastic-LoRa-with-3D-Printed-Enclosure-p-6314.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+</tr>
+</tbody></table>
 
-- [SenseCAP Solar Node](https://wiki.seeedstudio.com/cn/solar_node/)
 
-- [SenseCAP Indicator for Meshtastic](https://www.seeedstudio.com/SenseCAP-Indicator-D1Pro-p-5644.html)
+### 开发板
 
-- [XIAO ESP32S3 & Wio-SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html)
+<table align="center">
+<tbody><tr>
+<th>L1 Lite（无 OLED）</th>
+<th>L1（带 OLED）</th>
+<th>L1 E-Ink（带 E-Ink）</th>
+</tr>
+<tr>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-114993653-wio-tracker-l1-lite.jpg" style={{width:300, height:'auto'}}/></div></td>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-114993648-wio-tracker-l1.jpg" style={{width:350, height:'auto'}}/></div></td>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-114993654-wio-tracker-l1-e-ink.jpg" style={{width:350, height:'auto'}}/></div></td>
+</tr>
+<tr>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-Lite-p-6455.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-E-ink-p-6456.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+</tr>
+</tbody></table>
 
-- [XIAO nRF52840 & Wio-SX1262 Kit](https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html)
+### GNSS 追踪器
 
-- [Tracker Dev Kit for Meshtastic® – Wio Tracker 1110](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Kit-for-Meshtastic.html)
+<table align="center">
+<tbody><tr>
+<th>SenseCAP MeshTracker X1</th>
+<th>SenseCAP Card Tracker T1000-E</th>
+<th>SenseCAP Wio Tracker L1 Pro</th>
+</tr>
+<tr>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png" style={{width:300, height:'auto'}}/></div></td>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993369-sensecap-card-tracker-t1000-e-for-meshtastic.jpg" style={{width:350, height:'auto'}}/></div></td>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/0/20260408-135305.jpg" style={{width:350, height:'auto'}}/></div></td>
+</tr>
+<tr>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-meshtracker-x1-meshtastic-gps-tracker-p-6935.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-meshtracker-x1-meshtastic-gps-tracker-p-6935.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+</tr>
+</tbody></table>
 
-:::note
-Meshtastic® 是 Meshtastic LLC 的注册商标。Meshtastic 软件组件在多种许可证下发布，详情请参见 GitHub。软件不提供任何担保——使用风险自负。
-:::
+### 太阳能节点
+
+<table align="center">
+<tbody><tr>
+<th>SenseCAP 太阳能节点（无电池和 GNSS）</th>
+<th>SenseCAP 太阳能节点（带电池和 GNSS）</th>
+</tr>
+<tr>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993643-sensecap-solar-node-p1-for-meshtastic-1_1.jpg" style={{width:300, height:'auto'}}/></div></td>
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993643-sensecap-solar-node-p1-for-meshtastic-1_1.jpg" style={{width:350, height:'auto'}}/></div></td>
+</tr>
+<tr>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank" rel="noopener noreferrer">
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
+</a>
+</div></td>
+</tr>
+</tbody></table>
+
+## 应用
+
+### 外壳设计
+
+[点击这里](https://wiki.seeedstudio.com/cn/xiao_esp32s3_&_wio_sx1262_kit_mqtt/)阅读详细教程。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki%20images/3d%20Enclosure/6.23dimage1.png" alt="Magnetic Wireless Charger" width={800} height="auto" /></p>
+
+### Meshtastic 节点地图
+
+Meshtastic 节点地图是一个在线界面，用于在地图上可视化 Meshtastic 设备的位置。它帮助用户监控网状网络中设备的实时位置，从而了解网络覆盖范围和连接情况。
+
+[点击这里](https://wiki.seeedstudio.com/cn/meshtastic_node_map_t1000_e/)阅读详细教程。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" style={{width:600, height:'auto'}}/></div>
+
+### Meshtastic 节点监控器
+
+[Meshtastic](https://meshtastic.org/docs/introduction/) 网络监控器是一款工具，可让你在 Meshtastic 网状网络中对节点进行可视化、管理和监控。它提供关于设备状态、路由和通信的实时信息。该监控器是 Meshtastic 分析器，通过连接的网关或 MQTT 服务器收集数据，可视化网络拓扑，并显示电池状态、信号强度和 GPS 位置等节点信息。它也可以作为 Meshtastic 节点地图使用。
+
+[点击这里](https://wiki.seeedstudio.com/cn/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor/)阅读详细教程。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MeshsenseScreenshot.png" style={{width:600, height:'auto'}}/></div>
+
+### Meshtastic MQTT 网关
+
+将 MQTT 与 Meshtastic 集成，可以通过桥接远距离网络来扩展离网通信。这使得全球消息传递成为可能，在网状信号较弱时提供备份，并通过互联网确保更快速的消息传递，非常适合偏远地区和紧急情况。
+
+[点击此处](https://wiki.seeedstudio.com/cn/xiao_esp32s3_&_wio_sx1262_kit_mqtt/)阅读详细教程。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTFramework.png" style={{width:600, height:'auto'}}/></div>
+
+### 其他社区固件
+
+[点击](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/)此处，在我们的硬件上使用更多社区固件。
+
 
 ## 技术支持与产品讨论
 

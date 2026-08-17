@@ -15,7 +15,7 @@ last_update:
   date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-07-25'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/robotics_page/
 ---
 
@@ -63,6 +63,7 @@ import '/src/css/robotics-page-style.css';
       <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>Mobile chassis and application demos</small></a>
       <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>Wheeled-legged robot path</small></a>
       <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>Desktop interactive robot path</small></a>
+      <a href="#atom"><span>🤖</span><strong>Atom</strong><small>Compact humanoid robot path</small></a>
     </div>
   </section>
 
@@ -100,7 +101,9 @@ import '/src/css/robotics-page-style.css';
       <a className="step-card" href="/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio Kinematics Visualization</b><small>Explore the arm model, joints, frames, and kinematics.</small></div><em>Advanced control</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Use vision and grasp-pose generation to pick real objects.</small></div><em>Application demo</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Connect the arm to ROS2 for perception, planning, and simulation.</small></div><em>System integration</em></a>
-      <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">6</span><div><b>ROS2 Integration</b><small>Simulate the arm in Isaac Sim and sync with the real robot.</small></div><em>Simulation</em></a>
+      <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator Development</b><small>Learn Web Simulator integration with ROS2/MuJoCo for virtual-real synchronized control.</small></div><em>Simulation dev</em></a>
+      <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim Integration</b><small>Simulate the arm in Isaac Sim and sync with the real robot.</small></div><em>Simulation</em></a>
+      <a className="step-card" href="/rebot_arm_b601_rs_mit_control/"><span className="step-index">8</span><div><b>MIT Position Control</b><small>Get started with MIT position control for the reBot Arm B601-RS.</small></div><em>Control advanced</em></a>
     </div>
   </div>
 </details>
@@ -132,6 +135,8 @@ import '/src/css/robotics-page-style.css';
   <a className="step-card" href="/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine the arm and vision for real-world grasping.</small></div><em>Application demo</em></a>
 
   <a className="step-card" href="/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Use ROS2 with MoveIt, perception, and system apps.</small></div><em>System integration</em></a>
+
+  <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator Development</b><small>Learn Web Simulator integration with ROS2/MuJoCo for virtual-real synchronized control.</small></div><em>Simulation dev</em></a>
 </div>
 </div>
 </details>
@@ -341,6 +346,30 @@ import '/src/css/robotics-page-style.css';
           </div>
         </div>
       </details>
+
+<details id="atom" className="product-card atom">
+<summary>
+  <div className="product-head">
+    <span className="product-icon">🤖</span>
+    <div>
+      <h3>Atom Compact Humanoid Robot</h3>
+      <span>For humanoid robot beginners, servo debugging, motion teaching, and web remote control</span>
+    </div>
+  </div>
+  <span className="summary-action">Expand learning plan</span>
+</summary>
+<div className="product-body">
+  <div className="product-meta-grid">
+    <div><strong>Recommended for</strong><span>First-time desktop bipedal humanoid users who want to quickly experience motion teaching and remote control</span></div>
+    <div><strong>Learning goal</strong><span>Get started out of the box, teach motions with the web motion editor, and export custom motions to the controller firmware</span></div>
+    <div><strong>Recommended order</strong><span>Atom-S Getting Started → Web Remote → Motion Editor → Custom Motion Development</span></div>
+  </div>
+  <div className="learning-steps">
+    <a className="step-card" href="/atom_s/"><span className="step-index">1</span><div><b>Atom-S Getting Started Guide</b><small>Power on, connect the web remote controller, and record your first continuous teaching motion sequence.</small></div><em>Required for beginners</em></a>
+    <a className="step-card" href="/atom_x/"><span className="step-index">2</span><div><b>Atom-X Getting Started Guide</b><small>Atom-X operates exactly like Atom-S — follow the same workflow to get started quickly.</small></div><em>Same series</em></a>
+  </div>
+</div>
+</details>
 
     </div>
   </section>

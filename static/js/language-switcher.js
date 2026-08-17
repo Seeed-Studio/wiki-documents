@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-03 11:40:17 (北京时间)
-// 多语言页面: 2424 个
+// 生成时间: 2026-08-14 15:51:27 (北京时间)
+// 多语言页面: 2440 个
 
 (function() {
   'use strict';
@@ -745,6 +745,13 @@
     "ja",
     "pt"
   ],
+  "/streaming_vision_agent_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Traffic-Management-DeepStream-SDK": [
     "cn",
     "en",
@@ -1402,6 +1409,13 @@
     "ja",
     "pt"
   ],
+  "/headless_setup_and_recovery_for_a603": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/how_to_build_and_flash_bsp_source_for_jetson_thor": [
     "cn",
     "en",
@@ -1486,6 +1500,13 @@
     "ja",
     "pt"
   ],
+  "/jetson_initrd_flash_zfs_host_limitation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/make_diy_bsp_for_jetson": [
     "cn",
     "en",
@@ -1529,6 +1550,13 @@
     "pt"
   ],
   "/usb_timeout_during_flash": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/use_arducam_ov9281_camera_with_a603_jetson_carrier_board": [
     "cn",
     "en",
     "es",
@@ -1829,14 +1857,14 @@
     "ja",
     "pt"
   ],
-  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
+  "/NVIDIA_Jetson": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/NVIDIA_Jetson": [
+  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
     "cn",
     "en",
     "es",
@@ -2019,6 +2047,13 @@
     "pt"
   ],
   "/recomputer_robotics_j50_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage": [
     "cn",
     "en",
     "es",
@@ -3544,6 +3579,13 @@
     "ja",
     "pt"
   ],
+  "/recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_model_conversion": [
     "cn",
     "en",
@@ -3572,147 +3614,147 @@
     "ja",
     "pt"
   ],
-  "/ai_human_detection_meshtastic_broadcast_bak": [
+  "/ai_human_detection_meshtastic_broadcast": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/ai_remote_wireless_monitor_system_bak": [
+  "/ai_remote_wireless_monitor_system": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/ai_voice_assitant_with_recamera_bak": [
+  "/ai_voice_assitant_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/ai_parking_slot_monitoring_demo_with_recamera_bak": [
+  "/ai_parking_slot_monitoring_demo_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/getting_started_for_home_assistant_with_recamera_bak": [
+  "/getting_started_for_home_assistant_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/getting_started_for_n8n_with_recamera_bak": [
+  "/getting_started_for_n8n_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/getting_started_in_Telegram_work_with_recamera_bak": [
+  "/getting_started_in_Telegram_work_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/getting_started_in_Wechat_work_with_recamera_bak": [
+  "/getting_started_in_Wechat_work_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_hand_gesture_bak": [
+  "/recamera_hand_gesture": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/integration_of_real-time_heat_map_with_grafana_data_dashboard_bak": [
+  "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/use_cpenclaw_to_control_the_recamera_gimbal_bak": [
+  "/use_cpenclaw_to_control_the_recamera_gimbal": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_picoclaw_bak": [
+  "/recamera_picoclaw": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_qrcode_udp_bak": [
+  "/recamera_qrcode_udp": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_meshtastic_ha_security_system_bak": [
+  "/recamera_meshtastic_ha_security_system": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_motion_detection_bak": [
+  "/recamera_motion_detection": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/sound_source_localization_of_recamera_gimbal_bak": [
+  "/sound_source_localization_of_recamera_gimbal": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rtsp_to_webrtc_with_recamera_bak": [
+  "/rtsp_to_webrtc_with_recamera": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_udp_face_analysis_bak": [
+  "/recamera_udp_face_analysis": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/use_the_motion-sensing_function_of_recamera_to_play_games_bak": [
+  "/use_the_motion-sensing_function_of_recamera_to_play_games": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/using_stream_deck_to_control_recamera_gimbal_bak": [
+  "/using_stream_deck_to_control_recamera_gimbal": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_benchmarking_bak": [
+  "/recamera_benchmarking": [
     "cn",
     "en",
     "es",
@@ -3881,6 +3923,13 @@
     "pt"
   ],
   "/recamera_pro_imu_tilt_shake_detection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_faqs": [
     "cn",
     "en",
     "es",
@@ -5957,6 +6006,13 @@
     "ja",
     "pt"
   ],
+  "/soarm101_xiao_microros_wireless_teleoperation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/soarm_amazinghand_teleop": [
     "cn",
     "en",
@@ -6426,6 +6482,20 @@
     "ja",
     "pt"
   ],
+  "/rebot_arm_b601_dm_web_simulator_developer_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_mit_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/rebot_b601_rs_getting_started": [
     "cn",
     "en",
@@ -6462,6 +6532,13 @@
     "pt"
   ],
   "/rebot_arm_b601_rs_ros2_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_web_simulator_developer_guide": [
     "cn",
     "en",
     "es",
@@ -11583,6 +11660,27 @@
     "ja",
     "pt"
   ],
+  "/respeaker_clip_customization_at_command": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_firmware_development_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_firmware_quick_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_clip": [
     "cn",
     "en",
@@ -11598,6 +11696,13 @@
     "pt"
   ],
   "/respeaker_clip_python_build_app_with_memory": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_sensecraft_voice_sdk": [
     "cn",
     "en",
     "es",
@@ -15608,6 +15713,13 @@
     "pt"
   ],
   "/open_source_topic": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ma_deploy_yolov26": [
     "cn",
     "en",
     "es",

@@ -18,7 +18,7 @@ last_update:
   date: 06/15/2026
   author: Dayu
 createdAt: '2026-06-15'
-updatedAt: '2026-06-22'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_graspnet_visual_grasping/
 ---
 
@@ -206,7 +206,7 @@ pip install -r requirements-graspnet-jetson.txt
 ```bash
 mkdir -p sdk
 
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 pip install -e sdk/reBotArm_control_py
 
 git clone https://github.com/graspnet/graspnet-baseline.git sdk/graspnet-baseline
@@ -613,8 +613,8 @@ GraspNet runs out of memory: reduce `--num-point`, reduce `--cloud-crop-nsample`
 
 ## Resources
 
-- reBot Arm GraspNet demo reference: https://github.com/EclipseaHime017/reBot-DevArm-Grasp
-- reBot Arm SDK: https://github.com/vectorBH6/reBotArm_control_py
+- reBot Arm GraspNet demo reference: https://github.com/Seeed-Projects/reBot-DevArm-Grasp
+- reBot Arm SDK: https://github.com/Seeed-Projects/reBotArm_control_py
 - GraspNet baseline: https://github.com/graspnet/graspnet-baseline
 - GraspNet API: https://github.com/graspnet/graspnetAPI
 - Orbbec pyorbbecsdk: https://github.com/orbbec/pyorbbecsdk

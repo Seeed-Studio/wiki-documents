@@ -206,7 +206,7 @@ pip install -r requirements-graspnet-jetson.txt
 ```bash
 mkdir -p sdk
 
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 pip install -e sdk/reBotArm_control_py
 
 git clone https://github.com/graspnet/graspnet-baseline.git sdk/graspnet-baseline
@@ -613,8 +613,8 @@ GraspNet se queda sin memoria: reduce `--num-point`, reduce `--cloud-crop-nsampl
 
 ## Recursos
 
-- Referencia de la demostración GraspNet de reBot Arm: https://github.com/EclipseaHime017/reBot-DevArm-Grasp
-- SDK de reBot Arm: https://github.com/vectorBH6/reBotArm_control_py
+- Referencia de la demostración GraspNet de reBot Arm: https://github.com/Seeed-Projects/reBot-DevArm-Grasp
+- SDK de reBot Arm: https://github.com/Seeed-Projects/reBotArm_control_py
 - GraspNet baseline: https://github.com/graspnet/graspnet-baseline
 - GraspNet API: https://github.com/graspnet/graspnetAPI
 - Orbbec pyorbbecsdk: https://github.com/orbbec/pyorbbecsdk

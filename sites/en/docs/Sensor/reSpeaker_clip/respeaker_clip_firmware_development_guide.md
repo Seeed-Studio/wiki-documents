@@ -1,5 +1,5 @@
 ---
-description: "The comprehensive reference for the reSpeaker Clip device-side firmware: system architecture, the AT/GATT/UDP protocol, build profiles, firmware update and recovery, validation and debugging, and production release — each fact in one place."
+description: 'The comprehensive reference for the reSpeaker Clip device-side firmware: system architecture, the AT/GATT/UDP protocol, build profiles, firmware update and recovery, validation and debugging, and production release — each fact in one place.'
 title: reSpeaker Clip Firmware Development Guide
 keywords:
   - reSpeaker clip
@@ -16,13 +16,13 @@ last_update:
   date: 07/28/2026
   author: Ray
 createdAt: '2026-07-28'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/respeaker_clip_firmware_development_guide/
 ---
 
 # reSpeaker Clip Firmware Development Guide
 
-The comprehensive reference for the reSpeaker Clip device-side firmware: how it is put together, the AT/GATT/UDP protocol it speaks, how it is built, updated, recovered, validated, and shipped. For the build-to-smoke-test path from a clean machine, see [Getting Started with the reSpeaker Clip Firmware SDK](./respeaker_clip_firmware_quick_start.md); for full build/flash/power/pitfalls, see [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md).
+The comprehensive reference for the reSpeaker Clip device-side firmware: how it is put together, the AT/GATT/UDP protocol it speaks, how it is built, updated, recovered, validated, and shipped. For the build-to-smoke-test path from a clean machine, see [Getting Started with the reSpeaker Clip Firmware SDK](/respeaker_clip_firmware_quick_start); for full build/flash/power/pitfalls, see [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md).
 
 The checked-out firmware source is authoritative; this guide summarizes it. When they disagree, the source wins.
 
@@ -438,7 +438,7 @@ Give the modification plan first; do not edit code yet.
 
 ## Related Resources
 
-- [Getting Started with the reSpeaker Clip Firmware SDK](./respeaker_clip_firmware_quick_start.md) — build-to-smoke-test path
+- [Getting Started with the reSpeaker Clip Firmware SDK](/respeaker_clip_firmware_quick_start) — build-to-smoke-test path
 - [CLAUDE.md](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/CLAUDE.md) — full build/flash/power/pitfalls reference
 - [`skills/clip-dev/`](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/skills/clip-dev/) — firmware AI development skill
 - Source: [clip_event.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/clip_event.c) (state machine), [audio.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/audio.c) (DSP/Opus), [at_commands.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_commands.c) (AT registry), [at_server.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/at_server.c) (parse/route), [transfer.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/transfer.c) (transfer engine), [transport.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/transport.c) (transport abstraction), [storage.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/storage.c) (sessions/SD lifecycle), [main.c](https://github.com/Seeed-Studio/reSpeaker_Clip/blob/main/applications/clip/src/main.c) (init order)

@@ -1,6 +1,6 @@
 ---
-description: SenseCraft AI 文档目录
-title: 概览
+description: 查找有关预训练模型、自定义训练、模型部署、设备工作区、模型输出和应用的 SenseCraft AI 指南。
+title: SenseCraft AI 文档中心
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png
 sidebar_class_name: hidden
 slug: /sensecraft-ai/sensecraft-ai-main
@@ -11,23 +11,25 @@ last_update:
   date: 11/27/2024
   author: Citrc
 createdAt: '2024-11-27'
-updatedAt: '2026-05-07'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/cn/sensecraft-ai/sensecraft-ai-main/
 ---
 
-# SenseCraft AI Wiki 中心
+# SenseCraft AI 文档中心
+
+使用这个基于任务的文档中心，可以查找关于预训练模型、自定义训练、模型部署、设备工作区、模型输出和应用的指南。要了解 SenseCraft AI 的功能和工作流程，请参阅[平台概览](/cn/sensecraft-ai/overview/)。
 
 ## 概览
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_overview/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>概览 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="/cn/sensecraft-ai/overview/" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft AI 平台概览 🖱️</font></span></strong>
     </a>
 </div><br />
 
-概览部分提供了对 SenseCraft AI 的高层次介绍，说明其用途、主要特性和优势。它是用户了解该平台及其功能的起点。概览还包含指向入门指南和常见问题（FAQ）的链接，帮助用户快速开始使用 SenseCraft AI。
+概览部分从高层次介绍 SenseCraft AI，说明其用途、关键特性和优势。它是用户了解平台及其能力的起点。该概览还包含指向入门指南和常见问题（FAQ）的链接，帮助用户快速开始使用 SenseCraft AI。
 
 ## 模型库
 
@@ -39,9 +41,9 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/sensecraft-ai-main/
     </a>
 </div><br />
 
-模型库（可通过 SenseCraft AI 平台上的 **`Models`** > **`Model Library`** 访问）包含了可在 SenseCraft AI 支持的各类设备上部署的现成预训练模型的信息。这些模型针对特定硬件进行了优化，可用于不同应用场景，而无需自定义训练。本部分还根据支持的设备进一步划分为若干小节：
+模型库（可通过 SenseCraft AI 平台上的 **`Models`** > **`Model Library`** 访问）包含可在 SenseCraft AI 支持的各类设备上部署的现成预训练模型的信息。这些模型针对特定硬件进行了优化，可用于不同应用，而无需进行自定义训练。本节还根据支持的设备进一步划分为若干小节：
 
-- **适用于 XIAO ESP32S3 Sense**：本小节列出了与 XIAO ESP32S3 Sense 开发板兼容的预训练模型，以及它们的说明和使用场景。
+- **适用于 XIAO ESP32S3 Sense**：本小节列出了与 XIAO ESP32S3 Sense 开发板兼容的预训练模型，以及它们的描述和使用场景。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_for_xiao/" target="_blank" rel="noopener noreferrer">
@@ -57,7 +59,7 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/sensecraft-ai-main/
     </a>
 </div><br />
 
-- **适用于 SenseCAP Watcher**：本小节提供可用于 SenseCAP Watcher 设备的预训练模型信息，从而实现多种监测和检测功能。
+- **适用于 SenseCAP Watcher**：本小节提供可与 SenseCAP Watcher 设备配合使用的预训练模型信息，从而实现多种监测和检测功能。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_for_watcher/" target="_blank" rel="noopener noreferrer">
@@ -83,7 +85,7 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/sensecraft-ai-main/
     </a>
 </div><br />
 
-训练部分专门用于引导用户使用 SenseCraft AI 创建自定义模型的全过程。它分为两个主要小节：
+训练部分专门用于指导用户使用 SenseCraft AI 创建自定义模型的全过程。它分为两个主要小节：
 
 - 分类：本小节提供使用 SenseCraft AI 训练图像分类模型的分步教程和最佳实践。
 
@@ -109,7 +111,7 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/sensecraft-ai-main/
     </a>
 </div><br />
 
-模型输出部分重点介绍如何在 SenseCraft AI 支持的不同设备上配置和使用已训练模型的输出。其内容按以下小节进行组织：
+模型输出部分重点介绍如何在 SenseCraft AI 支持的不同设备上配置和使用已训练模型的输出。它按以下小节进行组织：
 
 - **Grove Vision AI V2 模型输出**：本小节说明如何配置和访问部署在 Grove Vision AI V2 设备上的模型输出。内容涵盖设置触发条件、与外部系统集成以及可视化模型预测结果等主题。
 
@@ -135,7 +137,7 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/sensecraft-ai-main/
             <strong><span><font color={'FFFFFF'} size={"4"}>通过 MQTT</font></span></strong>
     </a></div><br />
 
-  - **作为传感器使用**：本部分将说明如何将已上传模型的 XIAO 作为一个传感器来使用。这可能需要你额外使用一块 XIAO 或 Arduino 设备。
+  - **作为传感器使用**：本部分将说明如何将已上传模型的 XIAO 作为一个传感器来使用。这可能需要你使用额外的一块 XIAO 或 Arduino 设备。
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_libraries_xiao/" target="_blank" rel="noopener noreferrer">
@@ -149,7 +151,7 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/sensecraft-ai-main/
             <strong><span><font color={'FFFFFF'} size={"4"}>使用 SSCMACore</font></span></strong>
     </a></div><br />
 
-- reComputer Jetson 工作空间：本小节介绍如何设置和使用 reComputer Jetson 工作空间来处理模型输出。内容包括配置工作空间、可视化模型预测结果以及与其他软件集成等。
+- reComputer Jetson 工作区：本小节提供如何设置和使用 reComputer Jetson 工作区以处理模型输出的信息。内容涵盖配置工作区、可视化模型预测结果以及与其他软件集成等主题。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img/video.gif" style={{width:1000, height:'auto'}}/></div>
 
@@ -161,11 +163,11 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/sensecraft-ai-main/
     </a>
 </div><br />
 
-应用部分展示了真实世界中的示例和案例研究，演示 SenseCraft AI 如何在不同领域中用于解决各种问题。它包含详细的项目说明、代码示例和最佳实践，以激发和指导用户使用 SenseCraft AI 开发自己的 AI 应用。
+应用部分展示了真实世界的示例和案例研究，演示如何使用 SenseCraft AI 来解决不同领域中的各种问题。它包含详细的项目说明、代码示例和最佳实践，以激发和引导用户使用 SenseCraft AI 开发自己的 AI 应用。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

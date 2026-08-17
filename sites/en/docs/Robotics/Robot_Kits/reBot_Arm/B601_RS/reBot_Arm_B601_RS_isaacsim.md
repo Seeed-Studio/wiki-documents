@@ -14,7 +14,7 @@ last_update:
   date: 7/7/2026
   author: LiShanghang
 createdAt: '2026-07-07'
-updatedAt: '2026-07-09'
+updatedAt: '2026-08-10'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_isaacsim/
 ---
 
@@ -25,6 +25,11 @@ reBot-Isaacsim is an NVIDIA Isaac Sim simulation project designed specifically f
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"/>
 </div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
 
 ## Environmental requirements
 - Operating System: Ubuntu 22.04 LTS / 24.04 LTS (recommended) or Windows 11 (requires WSL2)  

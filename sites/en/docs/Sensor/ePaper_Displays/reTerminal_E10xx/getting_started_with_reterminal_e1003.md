@@ -9,7 +9,7 @@ last_update:
   date: 05/09/2026
   author: dimo
 createdAt: '2026-03-18'
-updatedAt: '2026-07-22'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/
 ---
 import Tabs from '@theme/Tabs';
@@ -43,7 +43,7 @@ reTerminal E1003 is a 10.3 inch touch-supported, open-source monochrome ePaper d
 Touch interaction for reTerminal E1003 is supported starting from [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) firmware v1.1.2. The current latest version is v1.1.4.3 — we recommend updating to it for the best experience.
 Touch-related library support is planned for future open-source release, providing greater flexibility to customize panels. More updates will be shared soon.
 
-ESPHome support for reTerminal E1003 is under development and will be available in a future release.
+reTerminal E1003 supports [ESPHome](/reterminal_e10xx_with_esphome) with Home Assistant. Start with the [display cookbook](/reterminal_e10xx_with_esphome), then continue to [I/O, battery, touch, and low power](/reterminal_e10xx_with_esphome_advanced) and [RTC, SD card, and microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone). ESPHome **2026.7.0 or later** is required for the E1003 display driver.
 :::
 
 ### Features

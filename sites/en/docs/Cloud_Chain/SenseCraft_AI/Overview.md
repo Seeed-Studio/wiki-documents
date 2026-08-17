@@ -1,23 +1,21 @@
 ---
-description: This article is a brief introduction to the main page of SenseCraft AI.
-title: Overview
+description: Explore pretrained models, custom training, deployment, live preview, and model output workflows in SenseCraft AI for supported edge AI devices.
+title: 'SenseCraft AI: Train and Deploy Edge AI Models'
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.webp
 slug: /sensecraft-ai/overview
 aliases:
   - /sensecraft_ai_overview
 sidebar_position: 1
 last_update:
-  date: 11/28/2024
+  date: 08/06/2026
   author: Citric
 createdAt: '2024-11-28'
-updatedAt: '2026-08-04'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/sensecraft-ai/overview/
 ---
 
 
-# SenseCraft AI Overview
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.png" style={{width:1000, height:'auto'}}/></div>
+# SenseCraft AI: Train and Deploy Edge AI Models
 
 SenseCraft AI is an all-in-one platform designed to empower developers and creators in building and deploying AI projects with ease. The website offers a wide range of tools and features to streamline the AI development process, making it accessible to users with varying levels of expertise. In this wiki, we will explore the main sections of the SenseCraft AI website, providing an overview of their key features and functionalities.
 
@@ -38,7 +36,13 @@ The home page of SenseCraft AI serves as the central hub, providing users with a
 
 The primary focus of the home page is the **Start your journey: Deploy a pretrained Model** section, which guides users through a step-by-step process to deploy a pre-trained model using Seeed Studio hardware. The process is divided into three main steps:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}>
+  <img
+    src="https://sensecraft-wiki-static.oss-us-east-1.aliyuncs.com/seeed-studio-wiki-statics/sensecraft-ai/overview/sensecraft-ai-home-gesture-detection-170dd1cd.webp"
+    alt="SenseCraft AI home page showing the Gesture Detection workflow from model discovery through deployment and sensor output before a device is connected"
+    style={{width:950, maxWidth:'100%', height:'auto'}}
+  />
+</div>
 
 1. Select a pre-trained model from the model repository.
 1. Deploy and preview the model's results in real-time using the "Deploy and Preview Vision" feature.
@@ -263,6 +267,13 @@ For instance, a user could utilize the MQTT output to send real-time object dete
 The Serial Port output provides a straightforward way to establish communication between the device and other systems, enabling users to transmit the model's results for further processing or visualization.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/12.png" style={{width:1000, height:'auto'}}/></div>
+
+## Related guides
+
+- [SenseCraft AI documentation center](/sensecraft-ai/sensecraft-ai-main/)
+- [Train an image classification model](/sensecraft-ai/tutorials/sensecraft-ai-training-classification/)
+- [Train an object detection model](/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/)
+- [Get started with SenseCraft Data Platform](/cloud/sensecraft-data/sensecraft-data-platform/overview/)
 
 ## Tech Support & Product Discussion
 

@@ -2280,3 +2280,7 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 		transition: none;
 	}
 }
+
+.hidden-sidebar-item {
+  display: none !important;
+}

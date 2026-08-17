@@ -12,7 +12,7 @@ last_update:
   date: 1/23/2025
   author: Kasun Thushara
 createdAt: '2026-01-23'
-updatedAt: '2026-01-23'
+updatedAt: '2026-08-07'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_doa_vad/
 ---
 
@@ -31,7 +31,7 @@ The ReSpeaker XVF3800 is a multi-microphone voice processing solution based on t
 
 
 :::note
-The Firmware that support for this code is `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin`. So please make sure to flash first
+The Firmware that support for this code is `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` and `respeaker_xvf3800_i2s_dfu_firmware_v1.0.7.bin`. So please make sure to flash first
 :::
 
 ## Arduino Code 

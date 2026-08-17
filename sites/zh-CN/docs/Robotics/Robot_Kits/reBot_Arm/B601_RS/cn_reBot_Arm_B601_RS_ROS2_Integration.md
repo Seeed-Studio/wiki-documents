@@ -164,12 +164,7 @@ git clone https://github.com/Seeed-Projects/reBotArmController_ROS2.git rebotarm
 cd rebotarm_ros2
 ```
 
-也可以使用当前开发仓库：
 
-```bash
-git clone https://github.com/EclipseaHime017/reBotArmController_ROS2.git rebotarm_ros2
-cd rebotarm_ros2
-```
 
 ### 步骤 4. 安装 motorbridge
 
@@ -189,7 +184,7 @@ python3 -m pip install --user --index-url https://pypi.org/simple motorbridge
 
 ```bash
 mkdir -p third_party
-git clone https://github.com/vectorBH6/reBotArm_control_py.git third_party/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git third_party/reBotArm_control_py
 ```
 
 ### 步骤 6. 构建工作空间
@@ -816,8 +811,8 @@ python3 -c "import sys; print('\n'.join(sys.path))"
 
 ## 联系方式
 
-- 技术支持：[提交 Issue](https://github.com/EclipseaHime017/reBotArmController_ROS2/issues)
-- 项目地址：[Github](https://github.com/EclipseaHime017/reBotArmController_ROS2)
+- 技术支持：[提交 Issue](https://github.com/Seeed-Projects/reBotArmController_ROS2/issues)
+- 项目地址：[Github](https://github.com/Seeed-Projects/reBotArmController_ROS2)
 - 论坛：[Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## 参考文档
@@ -825,5 +820,5 @@ python3 -c "import sys; print('\n'.join(sys.path))"
 - [reBot Arm B601-RS 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)
 - [ROS2 Humble 文档](https://docs.ros.org/en/humble/)
 - [ROS2 Jazzy 文档](https://docs.ros.org/en/jazzy/)
-- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)
+- [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py)
 - [MoveIt 2 文档](https://moveit.picknik.ai/main/index.html)

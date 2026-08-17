@@ -13,7 +13,7 @@ last_update:
   date: 3/11/2026
   author: ZhangJiaQuan
 createdAt: '2025-06-05'
-updatedAt: '2026-07-25'
+updatedAt: '2026-08-10'
 translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/lerobot_so100m_new/
@@ -352,6 +352,15 @@ All the parts for the leader or follower are for easy 3D printing already contai
 - For printer bed sizes of 205mm x 250mm (such as the Prusa/Up):
   - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
+
+**Step 4: Print the Soft Gripper (Optional)**
+
+If you want the robotic arm to be able to grasp soft, fragile, or irregularly shaped objects, you can print a soft gripper to replace the default rigid gripper. The print files are available in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
+
+Printing material instructions:
+
+- Two gripper fingers: print with **TPU** material
+- Other parts: print with **PLA** material
 
 </details>
 
