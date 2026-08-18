@@ -12,7 +12,7 @@ keywords:
   - MuJoCo
   - LLM
   - MCP
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web_rs/rebot_rs_web_simulator_en.png
 slug: /rebot_arm_b601_rs_web_simulator_developer_guide
 last_update:
   date: 2026-08-13
@@ -20,7 +20,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-13'
-updatedAt: '2026-08-13'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
 
