@@ -25,7 +25,7 @@ This guide shows how to add reSpeaker Clip as a managed audio source to an exist
 
 > **reSpeaker Clip is an input source.** `ClipClient` handles device communication, `ClipService` adapts it to your application, and your service retains ownership of processing and business logic.
 
-For transport setup, the full `ClipClient` API, AT commands, and the file-transfer protocol, see the [reSpeaker Clip Basic SDK Guide](./respeaker_clip_basic_sdk_guide.md). This page does not re-explain BLE/GATT, frame formats, CRC handling, or CLI tools.
+For transport setup, the full `ClipClient` API, AT commands, and the file-transfer protocol, see the [reSpeaker Clip Basic SDK Guide](/respeaker_clip_basic_sdk_guide). This page does not re-explain BLE/GATT, frame formats, CRC handling, or CLI tools.
 
 ## Integration Approach
 
@@ -47,7 +47,7 @@ This guide assumes you can already talk to a Clip on your own machine. Before co
 - list completed sessions;
 - download one recording successfully.
 
-If any of these fail, stop here and complete the [reSpeaker Clip Basic SDK Guide](./respeaker_clip_basic_sdk_guide.md) first. The Basic SDK Guide is the source of truth for transport configuration, device commands, and file-transfer details; this guide links to it rather than repeating it.
+If any of these fail, stop here and complete the [reSpeaker Clip Basic SDK Guide](/respeaker_clip_basic_sdk_guide) first. The Basic SDK Guide is the source of truth for transport configuration, device commands, and file-transfer details; this guide links to it rather than repeating it.
 
 ## Choose the Right reSpeaker Clip Guide
 
@@ -452,9 +452,9 @@ Do not collapse both state machines into one field. A session can be downloaded 
 
 After the adapter is working, keep device integration separate from any application-specific processing. Related pages:
 
-- [reSpeaker Clip Basic SDK Guide](./respeaker_clip_basic_sdk_guide.md) — device protocol, `ClipClient` API, BLE/UDP transport, file transfer
-- [Build Application Workflows with reSpeaker Clip Recordings](./respeaker_clip_service_workflows.md) — optional transcription, task, CRM, and AI agent patterns
-- [Getting Started with the reSpeaker Clip Firmware SDK](./respeaker_clip_firmware_quick_start.md) — when you need to modify device-side firmware instead of integrating the SDK
+- [reSpeaker Clip Basic SDK Guide](/respeaker_clip_basic_sdk_guide) — device protocol, `ClipClient` API, BLE/UDP transport, file transfer
+- [Build Application Workflows with reSpeaker Clip Recordings](/respeaker_clip_service_workflows) — optional transcription, task, CRM, and AI agent patterns
+- [Getting Started with the reSpeaker Clip Firmware SDK](/respeaker_clip_firmware_quick_start) — when you need to modify device-side firmware instead of integrating the SDK
 
 ## Tech Support & Product Discussion
 
