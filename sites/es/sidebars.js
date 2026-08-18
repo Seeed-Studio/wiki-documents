@@ -4587,6 +4587,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_ROS2_Integration',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_isaacsim',
               ]
             },
             {
