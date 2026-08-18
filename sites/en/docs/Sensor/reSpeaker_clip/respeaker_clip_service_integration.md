@@ -453,7 +453,6 @@ Do not collapse both state machines into one field. A session can be downloaded 
 After the adapter is working, keep device integration separate from any application-specific processing. Related pages:
 
 - [reSpeaker Clip Basic SDK Guide](/respeaker_clip_basic_sdk_guide) — device protocol, `ClipClient` API, BLE/UDP transport, file transfer
-- [Build Application Workflows with reSpeaker Clip Recordings](/respeaker_clip_service_workflows) — optional transcription, task, CRM, and AI agent patterns
 - [Getting Started with the reSpeaker Clip Firmware SDK](/respeaker_clip_firmware_quick_start) — when you need to modify device-side firmware instead of integrating the SDK
 
 ## Tech Support & Product Discussion
