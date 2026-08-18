@@ -10,6 +10,7 @@ keywords:
   - TPU-MLIR
 image: https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-indoor-office-result.png
 slug: /recamera_deploy_monocular_depth
+sidebar_position: 19
 last_update:
   date: 08/18/2026
   author: Zafar Khidoyatov
