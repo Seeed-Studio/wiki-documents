@@ -561,10 +561,6 @@ A documentação do reSpeaker Clip é organizada por camada de desenvolvimento. 
     style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
       >
       <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
-      alt=""
-    >
-      <img
         src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
         alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}

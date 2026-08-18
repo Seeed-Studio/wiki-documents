@@ -55,80 +55,84 @@ reSpeaker Clip のドキュメントは、開発レイヤーごとに整理さ�
 
 <div className="row">
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_58]      href="/ja/respeaker_clip/"
+    <a
+      href="/ja/respeaker_clip/"
       aria-label="Open the reSpeaker Clip Getting Started guide"
       className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-    <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
         alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
+      />
       <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>製品概要、ハードウェアセットアップ、初回利用時のワークフロー。</p>
-        </div>
-      </a>
-    </div>
+      </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-  <a [LINE_77]      href="/ja/respeaker_clip_basic_sdk_guide/"
-    aria-label="Open the reSpeaker Clip Basic SDK guide"
+    <a
+      href="/ja/respeaker_clip_basic_sdk_guide/"
+      aria-label="Open the reSpeaker Clip Basic SDK guide"
       className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-    src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
-      alt=""
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
+        alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>ファームウェアを変更せずに、デバイスを制御し、録音を管理し、オーディオをダウンロードします。</p>
-        </div>
-        </a>
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>ファームウェアを変更せずに、デバイスを制御し、録音を管理し、オーディオをダウンロードします。</p>
       </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_96]      href="/ja/respeaker_clip_service_integration/"
-  aria-label="Open the reSpeaker Clip Service Integration guide"
-    aria-current="page"
+    <a
+      href="/ja/respeaker_clip_service_integration/"
+      aria-label="Open the reSpeaker Clip Service Integration guide"
+      aria-current="page"
       className="card shadow--md respeaker-clip-nav-card respeaker-clip-nav-card--active"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
-    alt=""
-      style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
-        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>アダプタと API ルートを通じて、reSpeaker Clip を長時間稼働する Python サービスに追加します。</p>
-      </div>
-        </a>
-        </div>
-
-    <div className="col col--6 margin-bottom--lg">
-  <a [LINE_116]      href="/ja/respeaker_clip_firmware_quick_start/"
-      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
-  className="card shadow--md respeaker-clip-nav-card"
-    style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-      <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
-      alt=""
-    style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
       />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+      <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>アダプタと API ルートを通じて、reSpeaker Clip を長時間稼働する Python サービスに追加します。</p>
+      </div>
+    </a>
+  </div>
+
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/ja/respeaker_clip_firmware_quick_start/"
+      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
         <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Firmware SDK</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>デバイス側の動作をビルド、書き込み、デバッグし、カスタマイズします。</p>
       </div>
-      </a>
-        </div>
-        </div>
+    </a>
+  </div>
+</div>
 
-    ## 既存サービスに reSpeaker Clip をオーディオソースとして追加する
+## 既存サービスに reSpeaker Clip をオーディオソースとして追加する
 
 以下の手順に従って、デバイスアダプタを既存の FastAPI サービスに接続します。
 
@@ -136,51 +140,47 @@ reSpeaker Clip のドキュメントは、開発レイヤーごとに整理さ�
 
 サービスにはすでに、オーディオファイルを受け取る 1 つの関数があると仮定します：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```python
-
+async def process_audio(path: Path) -> dict:
     # your existing processing pipeline
-
+    ...
 ```
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+
+既存のアップロードルートでは、すでにこの関数が呼び出されています：
+
 ```python
 @app.post("/audio")
-
+async def upload_audio(file: UploadFile):
     path = await save_upload(file)
-
+    return await process_audio(path)
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+Clip インテグレーションでは、通常のローカル音声ファイルを生成し、同じ `process_audio()` 関数を呼び出すようにします。処理は、音声のキャプチャデバイスに依存しない形を維持します。
 
+この関数を、Clip の取り込みルートで使用されるサービスオブジェクトにラップします：
 
+```python
 # audio_service.py
 from pathlib import Path
 
 
-
+class AudioService:
     def __init__(self, recordings_dir: Path):
         self.recordings_dir = recordings_dir
         self.recordings_dir.mkdir(parents=True, exist_ok=True)
 
     async def process(self, path: Path) -> dict:
-
+        return await process_audio(path)
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+### ステップ 2：アダプターを構築する
 
+このインテグレーションに必要な操作（接続、切断、開始、停止、ダウンロード）のみをラップします。
+
+```python
 # clip_service.py
-
-
+from __future__ import annotations
+from pathlib import Path
 
 from clip import ClipClient, ClipError
 

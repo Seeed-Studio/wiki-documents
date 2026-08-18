@@ -59,80 +59,84 @@ reSpeaker Clip 文档按开发层次进行组织。首先使用 **入门指南�
 
 <div className="row">
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_62]      href="/cn/respeaker_clip/"
+    <a
+      href="/cn/respeaker_clip/"
       aria-label="Open the reSpeaker Clip Getting Started guide"
       className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-    <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
         alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
+      />
       <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>产品概览、硬件设置和首次使用流程。</p>
-        </div>
-      </a>
-    </div>
+      </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-  <a [LINE_81]      href="/cn/respeaker_clip_basic_sdk_guide/"
-    aria-label="Open the reSpeaker Clip Basic SDK guide"
+    <a
+      href="/cn/respeaker_clip_basic_sdk_guide/"
+      aria-label="Open the reSpeaker Clip Basic SDK guide"
       aria-current="page"
       className="card shadow--md respeaker-clip-nav-card respeaker-clip-nav-card--active"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-    src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
-      alt=""
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
+        alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>在不修改固件的情况下控制设备、管理录音并下载音频。</p>
-        </div>
-        </a>
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>在不修改固件的情况下控制设备、管理录音并下载音频。</p>
       </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_101]      href="/cn/respeaker_clip_service_integration/"
-  aria-label="Open the reSpeaker Clip Service Integration guide"
-    className="card shadow--md respeaker-clip-nav-card"
+    <a
+      href="/cn/respeaker_clip_service_integration/"
+      aria-label="Open the reSpeaker Clip Service Integration guide"
+      className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
-    alt=""
-      style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
-        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>通过适配器和 API 路由，将 reSpeaker Clip 集成到长时间运行的 Python 服务中。</p>
-      </div>
-        </a>
-        </div>
-
-    <div className="col col--6 margin-bottom--lg">
-  <a [LINE_120]      href="/cn/respeaker_clip_firmware_quick_start/"
-      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
-  className="card shadow--md respeaker-clip-nav-card"
-    style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-      <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
-      alt=""
-    style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
       />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+      <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>通过适配器和 API 路由，将 reSpeaker Clip 集成到长时间运行的 Python 服务中。</p>
+      </div>
+    </a>
+  </div>
+
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/cn/respeaker_clip_firmware_quick_start/"
+      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
         <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Firmware SDK</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>构建、烧录、调试并自定义设备端行为。</p>
       </div>
-      </a>
-        </div>
-        </div>
+    </a>
+  </div>
+</div>
 
-    ## 安装
+## 安装
 
 ### 环境要求
 
@@ -144,69 +148,69 @@ reSpeaker Clip 文档按开发层次进行组织。首先使用 **入门指南�
 
 你可以在 [这里](https://github.com/Seeed-Projects/respeaker_clip_python/tree/main) 找到 GitHub 仓库。
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-
 ```bash
-
+git clone <repository-url>
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+### 安装依赖
+
+激活虚拟环境后，安装所需的依赖项：
 
 ```bash
-
+pip install -r requirements.txt
 ```
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+
+## 项目结构
+
 ```
 applications/clip/tests/
-├── clip/                    SDK library (importable)
+├── clip/                    SDK 库（可导入）
 │   ├── __init__.py
-│   ├── client.py            BLE connection + AT command transport
-│   ├── commands.py          High-level AT command wrappers
-│   ├── transfer.py          BLE file transfer + SessionSync
-│   ├── codec.py             Opus/Ogg codec utilities
-│   ├── wifi.py              WiFi UDP transport + WiFiSync
-│   ├── progress.py          Progress bar helpers
-│   ├── utils.py             File merge, formatting utilities
-│   └── exceptions.py        Custom exception classes
-├── tools/                   CLI & utility scripts
-│   ├── clip-cli.py          Main CLI (BLE + WiFi + USB)
-│   ├── clip-web.py          Web interface
-│   ├── record.py            Recording control tool
-│   ├── sync.py              File sync helper
-│   ├── udp_sync.py          WiFi UDP sync
-│   ├── udp_terminal.py      WiFi UDP terminal
-│   ├── ble_terminal.py      BLE interactive terminal
-│   ├── serial_terminal.py   USB CDC serial terminal
-│   └── decode_opus.py       Opus decode utility
-├── tests/                   Test suite
-│   ├── conftest.py          Shared fixtures (device_session, mock_device)
-│   ├── test_basic.py        AT commands: VERSION, STATE, TIME, PAIR, errors
-│   ├── test_config.py       Configuration: MODE, AUTODEL, BRIGHTNESS
-│   ├── test_recording.py    Recording: START/STOP, bookmarks, state transitions
-│   ├── test_storage.py      Storage: LIST, DELETE, persistence, file count
-│   ├── test_transfer.py     Transfer: download, sync, progress, concurrent
-│   └── test_unit.py         Unit tests (no device required)
-├── workspace/               Example workspace scripts
+│   ├── client.py            BLE 连接 + AT 命令传输
+│   ├── commands.py          高级 AT 命令封装
+│   ├── transfer.py          BLE 文件传输 + SessionSync
+│   ├── codec.py             Opus/Ogg 编解码工具
+│   ├── wifi.py              WiFi UDP 传输 + WiFiSync
+│   ├── progress.py          进度条辅助工具
+│   ├── utils.py             文件合并、格式化工具
+│   └── exceptions.py        自定义异常类
+├── tools/                   CLI 和实用工具脚本
+│   ├── clip-cli.py          主 CLI（BLE + WiFi + USB）
+│   ├── clip-web.py          Web 界面
+│   ├── record.py            录音控制工具
+│   ├── sync.py              文件同步辅助工具
+│   ├── udp_sync.py          WiFi UDP 同步
+│   ├── udp_terminal.py      WiFi UDP 终端
+│   ├── ble_terminal.py      BLE 交互式终端
+│   ├── serial_terminal.py   USB CDC 串行终端
+│   └── decode_opus.py       Opus 解码工具
+├── tests/                   测试套件
+│   ├── conftest.py          共享 fixture（device_session、mock_device）
+│   ├── test_basic.py        AT 命令：VERSION、STATE、TIME、PAIR、错误处理
+│   ├── test_config.py       配置：MODE、AUTODEL、BRIGHTNESS
+│   ├── test_recording.py    录音：START/STOP、书签、状态转换
+│   ├── test_storage.py      存储：LIST、DELETE、持久化、文件数量
+│   ├── test_transfer.py     传输：下载、同步、进度、并发
+│   └── test_unit.py         单元测试（无需设备）
+├── workspace/               示例工作区脚本
 │   └── complete_example.py
-
-├── README.md           
-
+├── requirements.txt
+├── README.md
+└── pytest.ini
 ```
-| ------------- | ------------------------ |
-| client.py     | BLE 设备通信             |
-| commands.py   | 高层 AT 命令             |
-| transfer.py   | 文件同步                 |
-| codec.py      | 音频编码/解码            |
-| wifi.py       | WiFi 传输                |
-| progress.py   | 进度显示                 |
-| utils.py      | 辅助函数                 |
-| exceptions.py | 异常类                   |
+
+### SDK 模块
+
+| 模块          | 说明               |
+| ------------- | ------------------ |
+| client.py     | BLE 设备通信       |
+| commands.py   | 高级 AT 命令       |
+| transfer.py   | 文件同步           |
+| codec.py      | 音频编码/解码      |
+| wifi.py       | WiFi 传输          |
+| progress.py   | 进度显示           |
+| utils.py      | 辅助函数           |
+| exceptions.py | 异常类             |
 
 ---
 

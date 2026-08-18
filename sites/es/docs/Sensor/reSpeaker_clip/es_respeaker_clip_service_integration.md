@@ -55,80 +55,84 @@ La documentación de reSpeaker Clip está organizada por capa de desarrollo. Com
 
 <div className="row">
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_58]      href="/es/respeaker_clip/"
+    <a
+      href="/es/respeaker_clip/"
       aria-label="Open the reSpeaker Clip Getting Started guide"
       className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-    <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
         alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
+      />
       <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Descripción general del producto, configuración de hardware y flujos de primera utilización.</p>
-        </div>
-      </a>
-    </div>
+      </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-  <a [LINE_77]      href="/es/respeaker_clip_basic_sdk_guide/"
-    aria-label="Open the reSpeaker Clip Basic SDK guide"
+    <a
+      href="/es/respeaker_clip_basic_sdk_guide/"
+      aria-label="Open the reSpeaker Clip Basic SDK guide"
       className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-    src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
-      alt=""
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
+        alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Controla el dispositivo, gestiona las grabaciones y descarga audio sin cambiar el firmware.</p>
-        </div>
-        </a>
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Controla el dispositivo, gestiona las grabaciones y descarga audio sin cambiar el firmware.</p>
       </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_96]      href="/es/respeaker_clip_service_integration/"
-  aria-label="Open the reSpeaker Clip Service Integration guide"
-    aria-current="page"
+    <a
+      href="/es/respeaker_clip_service_integration/"
+      aria-label="Open the reSpeaker Clip Service Integration guide"
+      aria-current="page"
       className="card shadow--md respeaker-clip-nav-card respeaker-clip-nav-card--active"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
-    alt=""
-      style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
-        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Añade reSpeaker Clip a un servicio de Python de larga ejecución mediante un adaptador y rutas de API.</p>
-      </div>
-        </a>
-        </div>
-
-    <div className="col col--6 margin-bottom--lg">
-  <a [LINE_116]      href="/es/respeaker_clip_firmware_quick_start/"
-      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
-  className="card shadow--md respeaker-clip-nav-card"
-    style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-      <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
-      alt=""
-    style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
       />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+      <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Añade reSpeaker Clip a un servicio de Python de larga ejecución mediante un adaptador y rutas de API.</p>
+      </div>
+    </a>
+  </div>
+
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/es/respeaker_clip_firmware_quick_start/"
+      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
         <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Firmware SDK</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Compila, flashea, depura y personaliza el comportamiento del lado del dispositivo.</p>
       </div>
-      </a>
-        </div>
-        </div>
+    </a>
+  </div>
+</div>
 
-    ## Añade reSpeaker Clip como fuente de audio a tu servicio existente
+## Añade reSpeaker Clip como fuente de audio a tu servicio existente
 
 Sigue los pasos a continuación para conectar el adaptador de dispositivo a un servicio FastAPI existente.
 
@@ -136,51 +140,47 @@ Sigue los pasos a continuación para conectar el adaptador de dispositivo a un s
 
 Supón que tu servicio ya tiene una función que acepta un archivo de audio:
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```python
-
+async def process_audio(path: Path) -> dict:
     # your existing processing pipeline
-
+    ...
 ```
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+
+Una ruta de carga existente ya llama a esta función:
+
 ```python
 @app.post("/audio")
-
+async def upload_audio(file: UploadFile):
     path = await save_upload(file)
-
+    return await process_audio(path)
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+La integración de Clip debe generar un archivo de audio local estándar y llamar a la misma función `process_audio()`. El procesamiento debe seguir siendo independiente del dispositivo de captura.
 
+Encapsula esta función en el objeto de servicio utilizado por la ruta de ingesta de Clip:
 
+```python
 # audio_service.py
 from pathlib import Path
 
 
-
+class AudioService:
     def __init__(self, recordings_dir: Path):
         self.recordings_dir = recordings_dir
         self.recordings_dir.mkdir(parents=True, exist_ok=True)
 
     async def process(self, path: Path) -> dict:
-
+        return await process_audio(path)
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+### Paso 2: Crear el adaptador
 
+Encapsula únicamente las operaciones que necesita esta integración: conectar, desconectar, iniciar, detener y descargar.
+
+```python
 # clip_service.py
-
-
+from __future__ import annotations
+from pathlib import Path
 
 from clip import ClipClient, ClipError
 

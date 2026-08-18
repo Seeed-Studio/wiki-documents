@@ -59,80 +59,84 @@ La documentación de reSpeaker Clip está organizada por capa de desarrollo. Com
 
 <div className="row">
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_62]      href="/es/respeaker_clip/"
+    <a
+      href="/es/respeaker_clip/"
       aria-label="Open the reSpeaker Clip Getting Started guide"
       className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-    <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
         alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
+      />
       <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Descripción general del producto, configuración de hardware y flujos de trabajo de primer uso.</p>
-        </div>
-      </a>
-    </div>
+      </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-  <a [LINE_81]      href="/es/respeaker_clip_basic_sdk_guide/"
-    aria-label="Open the reSpeaker Clip Basic SDK guide"
+    <a
+      href="/es/respeaker_clip_basic_sdk_guide/"
+      aria-label="Open the reSpeaker Clip Basic SDK guide"
       aria-current="page"
       className="card shadow--md respeaker-clip-nav-card respeaker-clip-nav-card--active"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-    src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
-      alt=""
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
+        alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Controla el dispositivo, gestiona las grabaciones y descarga audio sin cambiar el firmware.</p>
-        </div>
-        </a>
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Controla el dispositivo, gestiona las grabaciones y descarga audio sin cambiar el firmware.</p>
       </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_101]      href="/es/respeaker_clip_service_integration/"
-  aria-label="Open the reSpeaker Clip Service Integration guide"
-    className="card shadow--md respeaker-clip-nav-card"
+    <a
+      href="/es/respeaker_clip_service_integration/"
+      aria-label="Open the reSpeaker Clip Service Integration guide"
+      className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
-    alt=""
-      style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
-        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Añade reSpeaker Clip a un servicio de Python de larga ejecución mediante un adaptador y rutas de API.</p>
-      </div>
-        </a>
-        </div>
-
-    <div className="col col--6 margin-bottom--lg">
-  <a [LINE_120]      href="/es/respeaker_clip_firmware_quick_start/"
-      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
-  className="card shadow--md respeaker-clip-nav-card"
-    style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-      <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
-      alt=""
-    style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
       />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+      <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Añade reSpeaker Clip a un servicio de Python de larga ejecución mediante un adaptador y rutas de API.</p>
+      </div>
+    </a>
+  </div>
+
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/es/respeaker_clip_firmware_quick_start/"
+      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
         <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Firmware SDK</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Compila, flashea, depura y personaliza el comportamiento del lado del dispositivo.</p>
       </div>
-      </a>
-        </div>
-        </div>
+    </a>
+  </div>
+</div>
 
-    ## Instalación
+## Instalación
 
 ### Requisitos
 
@@ -144,69 +148,69 @@ La documentación de reSpeaker Clip está organizada por capa de desarrollo. Com
 
 Puedes encontrar el repositorio de GitHub [aquí](https://github.com/Seeed-Projects/respeaker_clip_python/tree/main).
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-
 ```bash
-
+git clone <repository-url>
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+### Instalar dependencias
+
+Después de activar el entorno virtual, instala las dependencias necesarias:
 
 ```bash
-
+pip install -r requirements.txt
 ```
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+
+## Estructura del proyecto
+
 ```
 applications/clip/tests/
-├── clip/                    SDK library (importable)
+├── clip/                    Biblioteca SDK (importable)
 │   ├── __init__.py
-│   ├── client.py            BLE connection + AT command transport
-│   ├── commands.py          High-level AT command wrappers
-│   ├── transfer.py          BLE file transfer + SessionSync
-│   ├── codec.py             Opus/Ogg codec utilities
-│   ├── wifi.py              WiFi UDP transport + WiFiSync
-│   ├── progress.py          Progress bar helpers
-│   ├── utils.py             File merge, formatting utilities
-│   └── exceptions.py        Custom exception classes
-├── tools/                   CLI & utility scripts
-│   ├── clip-cli.py          Main CLI (BLE + WiFi + USB)
-│   ├── clip-web.py          Web interface
-│   ├── record.py            Recording control tool
-│   ├── sync.py              File sync helper
-│   ├── udp_sync.py          WiFi UDP sync
-│   ├── udp_terminal.py      WiFi UDP terminal
-│   ├── ble_terminal.py      BLE interactive terminal
-│   ├── serial_terminal.py   USB CDC serial terminal
-│   └── decode_opus.py       Opus decode utility
-├── tests/                   Test suite
-│   ├── conftest.py          Shared fixtures (device_session, mock_device)
-│   ├── test_basic.py        AT commands: VERSION, STATE, TIME, PAIR, errors
-│   ├── test_config.py       Configuration: MODE, AUTODEL, BRIGHTNESS
-│   ├── test_recording.py    Recording: START/STOP, bookmarks, state transitions
-│   ├── test_storage.py      Storage: LIST, DELETE, persistence, file count
-│   ├── test_transfer.py     Transfer: download, sync, progress, concurrent
-│   └── test_unit.py         Unit tests (no device required)
-├── workspace/               Example workspace scripts
+│   ├── client.py            Conexión BLE + transporte de comandos AT
+│   ├── commands.py          Envoltorios de comandos AT de alto nivel
+│   ├── transfer.py          Transferencia de archivos BLE + SessionSync
+│   ├── codec.py             Utilidades de códec Opus/Ogg
+│   ├── wifi.py              Transporte WiFi UDP + WiFiSync
+│   ├── progress.py          Utilidades para barras de progreso
+│   ├── utils.py             Utilidades de combinación de archivos y formato
+│   └── exceptions.py        Clases de excepciones personalizadas
+├── tools/                   Scripts CLI y utilidades
+│   ├── clip-cli.py          CLI principal (BLE + WiFi + USB)
+│   ├── clip-web.py          Interfaz web
+│   ├── record.py            Herramienta de control de grabación
+│   ├── sync.py              Utilidad de sincronización de archivos
+│   ├── udp_sync.py          Sincronización WiFi UDP
+│   ├── udp_terminal.py      Terminal WiFi UDP
+│   ├── ble_terminal.py      Terminal interactivo BLE
+│   ├── serial_terminal.py   Terminal serie USB CDC
+│   └── decode_opus.py       Utilidad de decodificación Opus
+├── tests/                   Suite de pruebas
+│   ├── conftest.py          Fixtures compartidas (device_session, mock_device)
+│   ├── test_basic.py        Comandos AT: VERSION, STATE, TIME, PAIR, errores
+│   ├── test_config.py       Configuración: MODE, AUTODEL, BRIGHTNESS
+│   ├── test_recording.py    Grabación: START/STOP, marcadores, transiciones de estado
+│   ├── test_storage.py      Almacenamiento: LIST, DELETE, persistencia, cantidad de archivos
+│   ├── test_transfer.py     Transferencia: descarga, sincronización, progreso, concurrencia
+│   └── test_unit.py         Pruebas unitarias (no requieren dispositivo)
+├── workspace/               Scripts de ejemplo del espacio de trabajo
 │   └── complete_example.py
-
-├── README.md           
-
+├── requirements.txt
+├── README.md
+└── pytest.ini
 ```
-| ------------- | ------------------------ |
-| client.py     | Comunicación con el dispositivo BLE |
-| commands.py   | Comandos AT de alto nivel |
-| transfer.py   | Sincronización de archivos |
+
+### Módulos del SDK
+
+| Módulo        | Descripción                     |
+| ------------- | ------------------------------- |
+| client.py     | Comunicación con dispositivos BLE |
+| commands.py   | Comandos AT de alto nivel       |
+| transfer.py   | Sincronización de archivos      |
 | codec.py      | Codificación/decodificación de audio |
-| wifi.py       | Transporte WiFi          |
-| progress.py   | Visualización de progreso |
-| utils.py      | Funciones auxiliares     |
-| exceptions.py | Clases de excepciones    |
+| wifi.py       | Transporte WiFi                 |
+| progress.py   | Visualización del progreso      |
+| utils.py      | Funciones auxiliares            |
+| exceptions.py | Clases de excepciones           |
 
 ---
 
