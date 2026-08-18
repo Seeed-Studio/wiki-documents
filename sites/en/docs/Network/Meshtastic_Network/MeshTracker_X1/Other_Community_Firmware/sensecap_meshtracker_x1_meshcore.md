@@ -1,0 +1,564 @@
+---
+description: Get Started with SenseCAP MeshTracker X1 for Meshcore. Guiding for device installation, firmware flashing and device connection.
+title: Get Started with MeshCore on SenseCAP MeshTracker X1
+keywords:
+  - Tracker
+  - Meshtastic
+  - Dual-Band GNSS
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png
+slug: /sensecap_meshtracker_x1_meshcore
+sku: 100087698
+sidebar_position: 3
+last_update:
+  date: 3/11/2026
+  author: Michelle Huang
+createdAt: '2026-02-28'
+updatedAt: '2026-07-31'
+url: https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/
+---
+  
+## Firmware Flashing
+
+
+<Tabs>
+<TabItem value="111" label="Via Web Flasher">
+
+Connect your device with a USB cable to the computer. 
+
+:::warning
+Please keep the USB cable connected while the data transmission, or else the device can be damaged.
+:::
+
+Go to the [Meshcore Web Flasher](https://meshcore.io/flasher). 
+
+Choose `Seeed Studio SenseCAP SenseCAP MeshTracker X1` in the `Community Firmware` group.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/ScreenShot_2026-08-17_144406_980.png" alt="pir" width={800} height="auto" /></p>
+
+Choose `Companion Bluetooth`. Devices flashed with Bluetooth companion firmware can be connected to the APP. If you want to flash other firmware, please [click here](https://docs.meshcore.io/) to see the tutorial.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Selection.png" alt="pir" width={800} height="auto" /></p>
+
+**Step1 Flash Erase**
+
+Click `Enter DFU Mode`, choose the serial port named "nRF xxx" or "TinyUSB" serial. Then click `Erase Flash` and choose the serial port.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Selection.png" alt="pir" width={800} height="auto" /></p>
+
+If you have clicked `Erase Flash` but there is no response, click `Enter DFU` again and then click `Erase Flash` to make sure you have successfully entered DFU.
+
+If you see "Flashing erase firmware:100%", the device has been successfully erased.
+
+<p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
+
+**Step2 Flash Firmware**
+
+Click `Enter DFU Mode`, choose the serial port named "nRF xxx" or "TinyUSB" serial. Then click `Flash` and choose the serial port.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Selection.png" alt="pir" width={800} height="auto" /></p>
+
+If you have clicked `Flash` but there is no response, click `Enter DFU` again and then click `Flash` to make sure you have successfully entered DFU.
+
+When the progress bar is completely filled, it indicates that Flash has completed. Then the device will automatically reboot.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="222" label="Drag and Drop">
+Connect your device with a USB cable to the computer.
+
+:::warning
+Please keep the USB cable connected while the data transmission, or else the device can be damaged.
+:::
+
+Go to the [Meshcore Web Flasher](https://meshcore.io/flasher). 
+
+Choose `Seeed Studio SenseCAP SenseCAP MeshTracker X1` in the `Community Firmware` group.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/ScreenShot_2026-08-17_144406_980.png" alt="pir" width={800} height="auto" /></p>
+
+Choose `Companion Bluetooth`. Devices flashed with Bluetooth companion firmware can be connected to the APP. If you want to flash other firmware, please [click here](https://docs.meshcore.io/) to see the tutorial.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
+
+**Step1 Flash Erase**
+
+Download the UF2 file.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/EraseFirmware.png" alt="pir" width={800} height="auto" /></p>
+
+Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the device with the computer via USB cable, keep holding the button until a white ⚪️ LED turned on.
+
+:::warning
+To successfully enter the DFU mode, you need to perform this operation quickly. You may need to try multiple times.
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
+
+You can see a disk named `X1` will pop out after 10~15 s. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Driver.png" alt="pir" width={800} height="auto" /></p>
+
+Drag the downloaded UF2 file to the pop-out disk.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/EraseDragDisk.png" alt="pir" width={800} height="auto" /></p>
+
+The disk will disappear after the firmware is successfully flashed. At this point there is no firmware in the device, so the device will `NOT` automatically reboot.
+
+**Step2 Flash Firmware**
+
+Choose the latest firmware version.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/VersionSelection.png" alt="pir" width={500} height="auto" /></p>
+
+Download the UF2 file.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Firmwareuf2.png" alt="pir" width={500} height="auto" /></p>
+
+Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the device with the computer via USB cable, keep holding the button until a white ⚪️ LED turned on.
+
+:::warning
+To successfully enter the DFU mode, you need to perform this operation quickly. You may need to try multiple times.
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
+
+You can see a disk named `X1` will pop out after 10~15 s. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Driver.png" alt="pir" width={800} height="auto" /></p>
+
+Drag the downloaded UF2 file to the pop-out disk.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/UF2FirmwareDrag.png" alt="pir" width={800} height="auto" /></p>
+
+The disk will disappear after the firmware is successfully flashed. At this point there is no firmware in the device, so the device will automatically reboot.
+
+</TabItem>
+
+</Tabs>
+
+## Configuration
+
+### Power on the device
+
+Press the button to turn it on. The LED will be on and there is an ascending melody melody.
+
+### Power off the device
+
+Press the button for 3s to turn it off. The LED will be off and there is a descending melody.
+
+:::tip
+If the device doesn't respond when you press the button, please charge it first. Do not use the fast-charging charger.
+:::
+
+### APP Connection
+
+Download from the Google Store or Apple Store. Or [click here](https://meshcore.io/#download) to get the Meshcore APP.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
+
+#
+Click `Connect` and choose the target device. The default device ID is `Meshcore-MAC Address`. The MAC address can be seen on the back of the device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DeviceConnectAn.png" alt="pir" width={600} height="auto" /></p>
+
+Enter the default pin code `123456` and then click `Pair` to connect the device.
+
+:::tip
+If the connection fails, open your phone's Bluetooth list and `forget` or `Unpair` the device. Then try to reconnect again.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Unpair.jpg" alt="pir" width={300} height="auto" /></p>
+:::
+
+### Configure the LoRa
+
+In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
+
+Then reboot the device, or else the configuration will not take effect.
+
+**Region List**
+
+|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+| :-: | :-: | :-: | :-: | :-: |
+|UNSET|Unset|N/A|N/A|N/A|
+|US|United States|902.0 - 928.0|100|30|
+|EU_868|European Union 868 MHz|869.4 - 869.65|10|27|
+
+Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa parameter](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general) to suit your needs.
+
+
+## Advanced Configuration
+
+### Connect via the web interface（BLE）
+
+1. Open the [MeshCore Web App](https://app.meshcore.nz/) and click the **Settings** icon.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue1.png" alt="pir" width={800} height="auto" /></p>
+
+2. Select the **BLE** tab, then click **Scan Now**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue2.png" alt="pir" width={800} height="auto" /></p>
+
+3. In the system Bluetooth popup, select your device (for example, Meshcore-xxxxxx) and click **Pair**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue3.png" alt="pir" width={800} height="auto" /></p>
+
+4. When prompted, enter the default Bluetooth passkey `123456`, then click **OK**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue4.png" alt="pir" width={800} height="auto" /></p>
+
+5. Wait until the status changes to connected and your node appears in the MeshCore interface.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue5.png" alt="pir" width={800} height="auto" /></p>
+
+### Configure GPS
+
+If you want to use GPS, please set it enabled. 
+
+You can go to APP `Position Settings` to enable GPS. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/GPSConfig.png" alt="pir" width={300} height="auto" /></p>
+
+
+## Message Transmission
+
+If you have two supported devices, and there are not many MeshCore users near you, flash both to BLE Companion firmware so you can use your devices to communicate with your nearby friends and family.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/MeshCoreFramework.png" alt="pir" width={800} height="auto" /></p>
+
+### Advert
+
+MeshCore allows you to manually broadcast your name, position and public encryption key, which is also signed to prevent spoofing. When you click the advert button, it broadcasts that data over LoRa. MeshCore calls that an Advert. There's two ways to advert, "zero hop" and "flood".
+
+- **Zero hop** means your advert is broadcast out to anyone that can hear it, and that's it.
+- **Flooded** means it's broadcast out and then repeated by all the repeaters that hear it.
+
+You can send advert on the APP. Also you can send advert directly on the device advert page.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Advert.png" alt="pir" width={300} height="auto" /></p>
+
+### Public Message
+
+After you configure the LoRa, you can send messages in the primary channel. All nearby people in the same frequency band will hear it.
+
+
+### Private Message
+
+The two devices only establish a connection when they have both received each other's advert.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## FAQ
+
+
+### How to check the device ID
+
+<Tabs>
+<TabItem value="23" label="Check the device back">
+The `last four digits` of the MAC address is the device ID
+
+For example, the device ID of the device below would be `A0D4`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/MACAd.png" alt="pir" width={800} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="22" label="Via Serial Tool">
+Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
+
+ Click `Open Serial Monitor`, connect the device to your PC, check the serial log, keyword `using nodenum`.
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/UsingNodeName.png" alt="pir" width={800} height="auto" /></p>
+
+
+</TabItem>
+</Tabs>
+
+### How to reboot the device
+
+ Press and hold the button, then connect the charging cable.
+
+## Troubleshooting
+
+### Device never turns on
+
+- Use a known working USB cable to `charge the device` continuously for 1–2 hours to ensure the battery has sufficient power to wake up the system.
+
+- If the device still does not respond after charging, `perform a hard reset` as follows: Unplug the USB cable. Press and hold the button, then plug in the USB cable while keeping the button pressed. Hold for approximately 3 seconds, then release it. This forces a system reset.
+
+ - If still no luck, Connect a USB cable to a computer. Hold the device button, then connect the device to the computer, see whether or not the a disk pop out in your PC. If so, re-install the bootloader
+
+### Device stuck in boot loop
+
+**Description:**
+
+The device will restart repeatedly, and the serial port connects and disconnects repeatedly.
+
+**Solution:**
+
+- Step 1: Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the charging cable twice
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
+
+The device is in DFU mode if the white LED is solid on.
+
+:::note
+To successfully enter the DFU mode, you need to perform this operation quickly. You may need to try multiple times.
+:::
+
+- Step 2: Erase Flash
+
+- Step 3: Flash Firmware
+
+### Bootloader Installation
+
+
+<Tabs>
+
+<TabItem value="m2" label="Install from Adafruit-nrfutil">
+
+
+- [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
+
+:::danger note
+When you are flashing the bootloader, please make sure the cable connection is stable and **DO NOT** disconnect it during the flash process.
+:::
+
+**Step 1: Adafruit-nrfutil Installation**
+
+For Windows users, press the "Win" key and the "r" key, then enter "cmd" in the pop-out window, and click "Enter". This can open the command line. 
+
+For MAC users, press the "Command" key and the "Space" key, so that you can open Spotlight. Then enter "termial", click "Return". This can open the command line. 
+
+**Prerequisites**
+
+- [Python3](https://www.python.org/downloads/)
+- [pip3](https://pip.pypa.io/en/stable/installation/)
+
+Check in your command line whether or not Python and pip are installed successfully.
+
+```
+python --version
+```
+
+```
+python -m pip --version
+```
+
+Then "Python xxx" and "pip xxx" should appear. If it does not, please try installing Python again.
+
+This is the recommended method to install the latest version:
+
+```
+pip3 install --user adafruit-nrfutil
+```
+
+Check the installation path:
+
+```
+python -m pip show adafruit-nrfutil
+```
+
+This is the installation location:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
+
+For Windows users, you may need to add the  path manually. Copy the installation location shown in the last step. Then add it as followed:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
+
+**Step 2: Check your port number**
+
+Connect your device to your PC, and check the port number.
+
+For Windows users, open your device manager, and go to `port`, the port number newly popped out after the device connection is the device port number.
+
+For Mac users, for example:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
+
+For Windows users, for example:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
+
+**Step 3: Flash the bootloader**
+
+In the terminal or command prompt, navigate to the directory where you downloaded the bootloader zip package and execute the following command, replacing the correct port for your device:
+
+- **For Windows**:
+
+```
+adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p COMxx -b 115200 --singlebank --touch 1200
+```
+
+Please change COMXX to your COM number. For example, if your device is on com6, change the command to be:
+
+`adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p **COM6** -b 115200 --singlebank --touch 1200`
+
+ Some of the devices will change their port number after you enter this command. So if the installation fails, check the port number again.
+
+- **For others**:
+
+```
+adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
+
+When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#flash-firmware) to flash the application firmware.
+
+</TabItem>
+
+<TabItem value="m3" label="Install from Source">
+
+
+Use this method if you have issues installing with PyPi or want to modify the tool. First clone this repo and go into its folder.
+
+```
+git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
+cd Adafruit_nRF52_nrfutil
+```
+
+Note: The following commands use `python3`; however, if you are on Windows, you may need to change it to `python` since the Windows installation of Python 3.x still uses the name python.exe
+
+To install in user space in your home directory:
+
+```
+pip3 install -r requirements.txt
+python3 setup.py install
+```
+
+If you get permission errors when running `pip3 install`, your `pip3` is older or is set to try to install in the system directories. In that case, use the `--user` flag:
+
+```
+pip3 install -r --user requirements.txt
+python3 setup.py install
+```
+
+If you want to install in system directories (generally not recommended):
+
+```
+sudo pip3 install -r requirements.txt
+sudo python3 setup.py install
+```
+
+To generate a self-contained executable binary of the utility (Windows and MacOS), run these commands:
+
+```
+pip3 install pyinstaller
+cd Adafruit_nRF52_nrfutil
+pip3 install -r requirements.txt
+cd Adafruit_nRF52_nrfutil\nordicsemi
+pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
+```
+
+You will find the .exe in `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` ( with `.exe` if you are on Windows).
+Copy or move it elsewhere for your convenience, such as a directory in your %PATH%.
+
+**Step 2: Check your port number**
+
+Connect your device to your PC, and check the port number.
+
+For Windows users, open your device manager, and go to "port", the port number newly popped out after the device connection is the device port number.
+
+For Mac users, for example:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
+
+For Windows users, for example:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
+
+**Step 3: Flash the bootloader**
+
+In the terminal or command prompt, navigate to the directory where you downloaded the bootloader zip package and execute the following command, replacing the correct port for your device:
+
+- **For Windows**:
+
+```
+adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p COMxx -b 115200 --singlebank --touch 1200
+```
+
+Please change COMXX to your COM number. For example, if your device is on com6, change the command to be:
+
+`adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p **COM6** -b 115200 --singlebank --touch 1200`
+
+ Some of the devices will change their port number after you enter this command. So if the installation fails, check the port number again.
+
+- **For others**:
+
+```
+adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
+
+When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#flash-firmware) to flash the application firmware.
+
+</TabItem>
+</Tabs>
+
+
+**2) Device can not enter DFU mode, but the serial port can be detected**.
+
+- Open a serial port tool
+
+- Set the baud rate to `1200`.
+
+- Connect the device.
+   The light will flash briefly when you connect it. Keep trying this until the light stays on, which means the device can go back to DFU mode, then [flash bootloader](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#bootloader-installation) -> [erase flash](https://wiki.seeedstudio.sensecap_meshtracker_x1_meshcore/#firmware-flashing) -> [flash the firmware](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#firmware-flashing).
+
+**3) Device can not enter DFU mode, and no serial port display**
+
+- press and hold the device button, then connect the charging cable. After a disk pops out on your PC, you may see the serial port.
+
+- If still no luck, please disconnect the charging cable and leave the device for a few days until the battery is completely drained, then connect the charging cable and try to pair it again.
+
+**4) If none of the above steps work, please contact tech support: support@sensecapmx.com**
+
+ ### Device automatically turns off
+
+- **Phenomena Description**
+
+ - After the device turns on, it will turn off or reboot automatically after a while. 
+ - The serial port log ran for a while and then stopped.
+
+ This is possibly caused by manually and forcibly rebooting or turning off the device when the device is in the following states: not finishing the message transmission process, being configured......
+
+- **Troubleshoot**
+
+ [Click here](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#firmware-flashing) to perform a flash-erase. 
+
+
+### Signal Quality
+
+  - **SNR** reflects the quality of the communication link. A normal device usually operates above -7 dB. A device with a SNR lower than -10 dB indicates poor performance.
+
+  - **RSSI** is determined jointly by the device and its surrounding environment. A normal device usually operates above -110 dBm. A device with an RSSI lower than -115 dBm is considered to have poor performance. 
+
+      To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
+
+
+## Tech Support & Product Discussion
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>
