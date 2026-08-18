@@ -313,7 +313,7 @@ Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマ
 
 <summary> 手順 </summary>
 
-**Step 1.** ボタンを押し続けて RESET モードにします。
+**Step 1.** REC ボタンを長押しします。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
