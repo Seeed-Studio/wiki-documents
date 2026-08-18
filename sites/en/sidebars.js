@@ -2171,6 +2171,7 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/respeaker_clip_service_integration',
             'Sensor/reSpeaker_clip/respeaker_clip_sensecraft_voice_sdk',
             {
               type: 'category',
@@ -2943,6 +2944,7 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview',
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start',
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/Install_Ubuntu_on_SenseCAP_M4'
           ],
         },
         {
