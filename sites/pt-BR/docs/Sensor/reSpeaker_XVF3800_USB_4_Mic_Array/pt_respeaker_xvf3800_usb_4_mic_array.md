@@ -657,10 +657,9 @@ O aplicativo Host Controller pode ser encontrado [aqui](https://github.com/respe
 
 ### Arquivos do aplicativo host
 
-O aplicativo host está localizado no diretório `host_control` do
-repositório.
+O aplicativo host está localizado no diretório `host_control` do repositório.
 
-Os diretórios de plataforma típicos incluem:
+Os diretórios típicos de cada plataforma incluem:
 
 ```text
 host_control/
@@ -670,8 +669,7 @@ host_control/
 └── ...
 ```
 
-Cada diretório de plataforma contém o aplicativo host e as bibliotecas
-necessárias para esse aplicativo.
+Cada diretório de plataforma contém o aplicativo host e as bibliotecas necessárias para sua execução.
 
 Por exemplo:
 
@@ -703,18 +701,16 @@ host_control/mac_arm64/
 └── xvf_host
 ```
 
-> **Importante:** mantenha o diretório completo da plataforma junto ao copiar
-> o aplicativo host para outro computador. O executável depende das
-> bibliotecas localizadas no mesmo diretório.
+> **Importante:** Ao copiar o aplicativo host para outro computador, mantenha todo o diretório da plataforma junto. O executável depende das bibliotecas localizadas no mesmo diretório.
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-**1. Conectar o XVF3800**
+**1. Conecte o XVF3800**
 
 Conecte o reSpeaker XVF3800 ao PC com Windows usando USB.
 
-**2. Abrir o Prompt de Comando ou PowerShell**
+**2. Abra o Prompt de Comando ou o PowerShell**
 
 Navegue até o diretório do aplicativo host para Windows:
 
@@ -722,7 +718,7 @@ Navegue até o diretório do aplicativo host para Windows:
 cd C:\path\to\reSpeaker_XVF3800_USB_4MIC_ARRAY\host_control\win32
 ```
 
-**3. Verificar o aplicativo host**
+**3. Verifique o aplicativo host**
 
 Execute:
 
@@ -730,8 +726,7 @@ Execute:
 xvf_host.exe --help
 ```
 
-Se o aplicativo estiver funcionando corretamente, as informações de ajuda serão
-exibidas.
+Se o aplicativo estiver funcionando corretamente, as informações de ajuda serão exibidas.
 
 Para exibir todos os comandos de controle disponíveis:
 
@@ -739,10 +734,9 @@ Para exibir todos os comandos de controle disponíveis:
 xvf_host.exe --list-commands
 ```
 
-A opção `--list-commands` mostra os comandos suportados pelo aplicativo
-host.
+A opção `--list-commands` mostra os comandos compatíveis com o aplicativo host.
 
-**4. Verificar a conexão com o XVF3800**
+**4. Verifique a conexão com o XVF3800**
 
 Execute:
 
@@ -750,7 +744,7 @@ Execute:
 xvf_host.exe VERSION
 ```
 
-Uma conexão bem-sucedida deve produzir uma saída semelhante a:
+Uma conexão bem-sucedida deverá produzir uma saída semelhante a:
 
 ```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
@@ -759,39 +753,37 @@ VERSION 2 0 10
 
 A versão do firmware dependerá do firmware instalado no XVF3800.
 
-O comando `VERSION` é uma maneira simples de verificar se o `xvf_host.exe` consegue
-se comunicar com o XVF3800.
+O comando `VERSION` é uma maneira simples de verificar se o `xvf_host.exe` consegue se comunicar com o XVF3800.
 
-**5. Ler valores de GPI**
+**5. Leia os valores GPI**
 
 ```powershell
 xvf_host.exe GPI_READ_VALUES
 ```
 
-**6. Ler valores de GPO**
+**6. Leia os valores GPO**
 
 ```powershell
 xvf_host.exe GPO_READ_VALUES
 ```
 
-**7. Ler Direction of Arrival (DoA)**
+**7. Leia a direção de chegada (DoA)**
 
 ```powershell
 xvf_host.exe AEC_AZIMUTH_VALUES
 ```
 
-O valor de azimute retornado pode ser usado para determinar a direção detectada
-da fonte sonora.
+O valor de azimute retornado pode ser usado para determinar a direção detectada da fonte sonora.
 
-**8. Listar comandos disponíveis**
+**8. Liste os comandos disponíveis**
 
-Para ver todos os comandos host disponíveis do XVF3800:
+Para visualizar todos os comandos host disponíveis do XVF3800:
 
 ```powershell
 xvf_host.exe --list-commands
 ```
 
-Você pode então usar qualquer comando suportado com:
+Em seguida, você pode usar qualquer comando compatível com:
 
 ```powershell
 xvf_host.exe <COMMAND>
@@ -807,11 +799,11 @@ xvf_host.exe VERSION
 
 <TabItem value="linux" label="Linux">
 
-**1. Conectar o XVF3800**
+**1. Conecte o XVF3800**
 
 Conecte o reSpeaker XVF3800 ao computador Linux usando USB.
 
-**2. Navegar até o diretório do aplicativo host para Linux**
+**2. Navegue até o diretório do aplicativo host para Linux**
 
 Para um sistema Linux x86-64:
 
@@ -819,7 +811,7 @@ Para um sistema Linux x86-64:
 cd ~/reSpeaker_XVF3800_USB_4MIC_ARRAY/host_control/linux_x86_64
 ```
 
-**3. Conceder permissão de execução ao aplicativo**
+**3. Conceda permissão de execução ao aplicativo**
 
 Execute:
 
@@ -827,7 +819,7 @@ Execute:
 chmod +x xvf_host
 ```
 
-**4. Verificar o aplicativo host**
+**4. Verifique o aplicativo host**
 
 Execute:
 
@@ -841,7 +833,7 @@ Para exibir todos os comandos de controle disponíveis:
 ./xvf_host --list-commands
 ```
 
-**5. Verificar a conexão com o XVF3800**
+**5. Verifique a conexão com o XVF3800**
 
 Execute:
 
@@ -849,7 +841,7 @@ Execute:
 ./xvf_host VERSION
 ```
 
-Uma conexão bem-sucedida deve produzir uma saída semelhante a:
+Uma conexão bem-sucedida deverá produzir uma saída semelhante a:
 
 ```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
@@ -858,46 +850,43 @@ VERSION 2 0 10
 
 A versão do firmware dependerá do firmware instalado no XVF3800.
 
-O comando `VERSION` é uma maneira simples de verificar se o `xvf_host` consegue
-se comunicar com o XVF3800.
+O comando `VERSION` é uma maneira simples de verificar se o `xvf_host` consegue se comunicar com o XVF3800.
 
-**6. Se a permissão USB for negada**
+**6. Se a permissão de acesso USB for negada**
 
-Se o aplicativo não conseguir acessar o dispositivo USB devido às permissões
-USB do Linux, você pode testar o aplicativo com:
+Se o aplicativo não conseguir acessar o dispositivo USB devido às permissões USB do Linux, você pode testar o aplicativo com:
 
 ```bash
 sudo ./xvf_host VERSION
 ```
 
-Se o comando funcionar com `sudo` mas não sem ele, o problema provavelmente está relacionado
-às permissões do dispositivo USB no Linux ou às regras do udev.
+Se o comando funcionar com `sudo`, mas não funcionar sem ele, o problema provavelmente está relacionado às permissões do dispositivo USB no Linux ou às regras do udev.
 
-**7. Ler valores de GPI**
+**7. Leia os valores GPI**
 
 ```bash
 ./xvf_host GPI_READ_VALUES
 ```
 
-**8. Ler valores de GPO**
+**8. Leia os valores GPO**
 
 ```bash
 ./xvf_host GPO_READ_VALUES
 ```
 
-**9. Ler Direction of Arrival (DoA)**
+**9. Leia a direção de chegada (DoA)**
 
 ```bash
 ./xvf_host AEC_AZIMUTH_VALUES
 ```
 
-**10. Listar comandos disponíveis**
+**10. Liste os comandos disponíveis**
 
 ```bash
 ./xvf_host --list-commands
 ```
 
-Você pode então executar um comando suportado usando:
+Em seguida, você pode executar um comando compatível usando:
 
 ```bash
 ./xvf_host <COMMAND>

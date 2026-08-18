@@ -657,10 +657,9 @@ La aplicación Host Controller se puede encontrar [aquí](https://github.com/res
 
 ### Archivos de la aplicación host
 
-La aplicación host se encuentra en el directorio `host_control` del
-repositorio.
+La aplicación host se encuentra en el directorio `host_control` del repositorio.
 
-Los directorios de plataformas típicas incluyen:
+Los directorios habituales para cada plataforma incluyen:
 
 ```text
 host_control/
@@ -670,8 +669,7 @@ host_control/
 └── ...
 ```
 
-Cada directorio de plataforma contiene la aplicación host y las bibliotecas
-requeridas por esa aplicación.
+Cada directorio de plataforma contiene la aplicación host y las bibliotecas necesarias para dicha aplicación.
 
 Por ejemplo:
 
@@ -703,20 +701,18 @@ host_control/mac_arm64/
 └── xvf_host
 ```
 
-> **Importante:** Mantén el directorio completo de la plataforma junto cuando copies
-> la aplicación host a otro ordenador. El ejecutable depende de las
-> bibliotecas ubicadas en el mismo directorio.
+> **Importante:** Al copiar la aplicación host a otro ordenador, mantenga junto todo el directorio correspondiente a la plataforma. El ejecutable depende de las bibliotecas ubicadas en el mismo directorio.
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
 **1. Conectar el XVF3800**
 
-Conecta el reSpeaker XVF3800 al PC con Windows usando USB.
+Conecte el reSpeaker XVF3800 al PC con Windows mediante USB.
 
-**2. Abrir Command Prompt o PowerShell**
+**2. Abrir el Símbolo del sistema o PowerShell**
 
-Navega al directorio de la aplicación host para Windows:
+Vaya al directorio de la aplicación host para Windows:
 
 ```powershell
 cd C:\path\to\reSpeaker_XVF3800_USB_4MIC_ARRAY\host_control\win32
@@ -724,7 +720,7 @@ cd C:\path\to\reSpeaker_XVF3800_USB_4MIC_ARRAY\host_control\win32
 
 **3. Comprobar la aplicación host**
 
-Ejecuta:
+Ejecute:
 
 ```powershell
 xvf_host.exe --help
@@ -734,73 +730,70 @@ Si la aplicación funciona correctamente, se mostrará la información de ayuda.
 
 Para mostrar todos los comandos de control disponibles:
 
-__CODE_LINE_PLH__
 ```powershell
 xvf_host.exe --list-commands
+```
 
-La opción `--list-commands` muestra los comandos compatibles con la aplicación
-host.
+La opción `--list-commands` muestra los comandos compatibles con la aplicación host.
 
-**4. Comprobar la conexión del XVF3800**
+**4. Comprobar la conexión con el XVF3800**
 
-Ejecuta:
+Ejecute:
 
-__CODE_LINE_PLH__
 ```powershell
 xvf_host.exe VERSION
+```
 
-Una conexión correcta debería producir una salida similar a:
+Si la conexión se establece correctamente, debería aparecer una salida similar a la siguiente:
 
-__CODE_LINE_PLH__
 ```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 VERSION 2 0 10
+```
 
 La versión del firmware dependerá del firmware instalado en el XVF3800.
 
-El comando `VERSION` es una forma sencilla de verificar que `xvf_host.exe` puede
-comunicarse con el XVF3800.
+El comando `VERSION` es una forma sencilla de comprobar que `xvf_host.exe` puede comunicarse con el XVF3800.
 
-**5. Leer valores GPI**
+**5. Leer los valores GPI**
 
-__CODE_LINE_PLH__
 ```powershell
 xvf_host.exe GPI_READ_VALUES
+```
 
-**6. Leer valores GPO**
+**6. Leer los valores GPO**
 
-__CODE_LINE_PLH__
 ```powershell
 xvf_host.exe GPO_READ_VALUES
+```
 
-**7. Leer Dirección de Llegada (DoA)**
+**7. Leer la dirección de llegada (DoA)**
 
-__CODE_LINE_PLH__
 ```powershell
 xvf_host.exe AEC_AZIMUTH_VALUES
+```
 
-El valor de acimut devuelto puede utilizarse para determinar la dirección
-detectada de la fuente de sonido.
+El valor de acimut devuelto puede utilizarse para determinar la dirección detectada de la fuente de sonido.
 
-**8. Listar comandos disponibles**
+**8. Mostrar los comandos disponibles**
 
 Para ver todos los comandos host disponibles del XVF3800:
 
-__CODE_LINE_PLH__
 ```powershell
 xvf_host.exe --list-commands
+```
 
-Luego puedes usar cualquier comando compatible con:
+A continuación, puede utilizar cualquier comando compatible mediante:
 
-__CODE_LINE_PLH__
 ```powershell
 xvf_host.exe <COMMAND>
+```
 
 Por ejemplo:
 
-__CODE_LINE_PLH__
 ```powershell
 xvf_host.exe VERSION
+```
 
 </TabItem>
 
@@ -808,103 +801,99 @@ xvf_host.exe VERSION
 
 **1. Conectar el XVF3800**
 
-Conecta el reSpeaker XVF3800 al ordenador con Linux usando USB.
+Conecte el reSpeaker XVF3800 al ordenador Linux mediante USB.
 
-**2. Navegar al directorio de la aplicación host de Linux**
+**2. Ir al directorio de la aplicación host para Linux**
 
 Para un sistema Linux x86-64:
 
-__CODE_LINE_PLH__
 ```bash
 cd ~/reSpeaker_XVF3800_USB_4MIC_ARRAY/host_control/linux_x86_64
+```
 
-**3. Dar permiso de ejecución a la aplicación**
+**3. Conceder permiso de ejecución a la aplicación**
 
-Ejecuta:
+Ejecute:
 
-__CODE_LINE_PLH__
 ```bash
 chmod +x xvf_host
+```
 
 **4. Comprobar la aplicación host**
 
-Ejecuta:
+Ejecute:
 
-__CODE_LINE_PLH__
 ```bash
 ./xvf_host --help
+```
 
 Para mostrar todos los comandos de control disponibles:
 
-__CODE_LINE_PLH__
 ```bash
 ./xvf_host --list-commands
+```
 
-**5. Comprobar la conexión del XVF3800**
+**5. Comprobar la conexión con el XVF3800**
 
-Ejecuta:
+Ejecute:
 
-__CODE_LINE_PLH__
 ```bash
 ./xvf_host VERSION
+```
 
-Una conexión correcta debería producir una salida similar a:
+Si la conexión se establece correctamente, debería aparecer una salida similar a la siguiente:
 
-__CODE_LINE_PLH__
 ```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 VERSION 2 0 10
+```
 
 La versión del firmware dependerá del firmware instalado en el XVF3800.
 
-El comando `VERSION` es una forma sencilla de verificar que `xvf_host` puede
-comunicarse con el XVF3800.
+El comando `VERSION` es una forma sencilla de comprobar que `xvf_host` puede comunicarse con el XVF3800.
 
-**6. Si se deniegan los permisos USB**
+**6. Si se deniega el permiso de acceso USB**
 
-Si la aplicación no puede acceder al dispositivo USB debido a los permisos USB
-de Linux, puedes probar la aplicación con:
+Si la aplicación no puede acceder al dispositivo USB debido a los permisos USB de Linux, puede probar la aplicación con:
 
-__CODE_LINE_PLH__
 ```bash
 sudo ./xvf_host VERSION
+```
 
-Si el comando funciona con `sudo` pero no sin él, el problema probablemente esté relacionado
-con los permisos del dispositivo USB de Linux o las reglas de udev.
+Si el comando funciona con `sudo` pero no sin él, es probable que el problema esté relacionado con los permisos del dispositivo USB de Linux o con las reglas de udev.
 
-**7. Leer valores GPI**
+**7. Leer los valores GPI**
 
-__CODE_LINE_PLH__
 ```bash
 ./xvf_host GPI_READ_VALUES
+```
 
-**8. Leer valores GPO**
+**8. Leer los valores GPO**
 
-__CODE_LINE_PLH__
 ```bash
 ./xvf_host GPO_READ_VALUES
+```
 
-**9. Leer Dirección de Llegada (DoA)**
+**9. Leer la dirección de llegada (DoA)**
 
-__CODE_LINE_PLH__
 ```bash
 ./xvf_host AEC_AZIMUTH_VALUES
+```
 
-**10. Listar comandos disponibles**
+**10. Mostrar los comandos disponibles**
 
-__CODE_LINE_PLH__
 ```bash
 ./xvf_host --list-commands
+```
 
-Luego puedes ejecutar un comando compatible usando:
+A continuación, puede ejecutar un comando compatible mediante:
 
-__CODE_LINE_PLH__
 ```bash
 ./xvf_host <COMMAND>
+```
 
 Por ejemplo:
 
-__CODE_LINE_PLH__
 ```bash
 ./xvf_host VERSION
 ```

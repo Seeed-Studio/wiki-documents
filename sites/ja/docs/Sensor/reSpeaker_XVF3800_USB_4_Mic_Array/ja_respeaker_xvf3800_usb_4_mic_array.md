@@ -655,256 +655,245 @@ USB 経由で reSpeaker XVF3800 と通信するためのユーティリティで
 
 ホストコントローラーアプリケーションは[こちら](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/host_control)にあります
 
-### ホストアプリケーションファイル
+### ホストアプリケーションのファイル
 
-ホストアプリケーションは、リポジトリの `host_control` ディレクトリ内にあります。
+ホストアプリケーションは、リポジトリの `host_control` ディレクトリにあります。
 
-一般的なプラットフォームディレクトリには次のものがあります：
+一般的なプラットフォーム用ディレクトリは次のとおりです。
 
-__CODE_LINE_PLH__
 ```text
 host_control/
 ├── linux_x86_64/
 ├── mac_arm64/
 ├── win32/
 └── ...
+```
 
-各プラットフォームディレクトリには、そのアプリケーションに必要なホストアプリケーションとライブラリが含まれています。
+各プラットフォーム用ディレクトリには、ホストアプリケーションと、そのアプリケーションの実行に必要なライブラリが含まれています。
 
-例えば：
+例：
 
 **Windows**
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```text
 host_control/win32/
 ├── command_map.dll
 ├── device_usb.dll
-
+└── xvf_host.exe
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+**Linux**
+
 ```text
 host_control/linux_x86_64/
 ├── libcommand_map.so
 ├── libdevice_usb.so
-
+└── xvf_host
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+**macOS**
+
 ```text
 host_control/mac_arm64/
 ├── libcommand_map.dylib
 ├── libdevice_usb.dylib
 ├── libusb-1.0.0.dylib
-
+└── xvf_host
 ```
-> 実行ファイルが同じディレクトリ内のライブラリに依存しているため、
-> プラットフォームディレクトリ全体をまとめて保持してください。
+
+> **重要:** ホストアプリケーションを別のコンピューターにコピーする場合は、プラットフォーム用ディレクトリ全体をまとめてコピーしてください。実行ファイルは、同じディレクトリにあるライブラリに依存しています。
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
 **1. XVF3800 を接続する**
 
-reSpeaker XVF3800 を USB で Windows PC に接続します。
+USB を使用して reSpeaker XVF3800 を Windows PC に接続します。
 
 **2. コマンドプロンプトまたは PowerShell を開く**
 
-Windows ホストアプリケーションのディレクトリに移動します：
+Windows 用ホストアプリケーションのディレクトリに移動します。
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```powershell
-
+cd C:\path\to\reSpeaker_XVF3800_USB_4MIC_ARRAY\host_control\win32
 ```
 
-次を実行します：
+**3. ホストアプリケーションを確認する**
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+次のコマンドを実行します。
+
 ```powershell
-
+xvf_host.exe --help
 ```
 
-利用可能なすべての制御コマンドを表示するには：
+アプリケーションが正常に動作している場合、ヘルプ情報が表示されます。
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+利用可能なすべての制御コマンドを表示するには、次のコマンドを実行します。
 
+```powershell
 xvf_host.exe --list-commands
+```
+
+`--list-commands` オプションを使用すると、ホストアプリケーションがサポートしているコマンドを確認できます。
 
 **4. XVF3800 との接続を確認する**
 
-次を実行します：
-
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+次のコマンドを実行します。
 
 ```powershell
-
+xvf_host.exe VERSION
 ```
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 
+接続に成功すると、次のような出力が表示されます。
+
+```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-
+VERSION 2 0 10
 ```
+
+ファームウェアのバージョンは、XVF3800 にインストールされているファームウェアによって異なります。
+
+`VERSION` コマンドは、`xvf_host.exe` が XVF3800 と通信できることを簡単に確認する方法です。
 
 **5. GPI 値を読み取る**
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+```powershell
+xvf_host.exe GPI_READ_VALUES
+```
 
 **6. GPO 値を読み取る**
 
-xvf_host.exe GPI_READ_VALUES
-```
-__CODE_LINE_PLH__
-
-**7. 到来方向（DoA）を読み取る**
-
+```powershell
 xvf_host.exe GPO_READ_VALUES
 ```
-__CODE_LINE_PLH__
 
-返される方位角の値を使用して、検出された音源の方向を判断できます。
+**7. 音源到来方向（DoA）を読み取る**
 
+```powershell
 xvf_host.exe AEC_AZIMUTH_VALUES
+```
 
-利用可能なすべての XVF3800 ホストコマンドを表示するには：
+返された方位角の値を使用して、検出された音源の方向を判断できます。
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+**8. 利用可能なコマンドを一覧表示する**
 
-その後、任意のサポートされているコマンドを次のように使用できます：
+利用可能なすべての XVF3800 ホストコマンドを確認するには、次のコマンドを実行します。
 
 ```powershell
 xvf_host.exe --list-commands
 ```
 
-例えば：
+その後、次の形式で任意のサポート対象コマンドを実行できます。
 
 ```powershell
 xvf_host.exe <COMMAND>
 ```
 
-</TabItem>
+例：
 
 ```powershell
-
+xvf_host.exe VERSION
 ```
 
-reSpeaker XVF3800 を USB で Linux コンピュータに接続します。
+</TabItem>
 
-**2. Linux ホストアプリケーションディレクトリに移動する**
+<TabItem value="linux" label="Linux">
+
+**1. XVF3800 を接続する**
+
+USB を使用して reSpeaker XVF3800 を Linux コンピューターに接続します。
+
+**2. Linux 用ホストアプリケーションのディレクトリに移動する**
 
 x86-64 Linux システムの場合：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+```bash
+cd ~/reSpeaker_XVF3800_USB_4MIC_ARRAY/host_control/linux_x86_64
+```
 
 **3. アプリケーションに実行権限を付与する**
 
-```bash
+次のコマンドを実行します。
 
+```bash
+chmod +x xvf_host
 ```
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 
 **4. ホストアプリケーションを確認する**
 
-```bash
-
-```
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-
-利用可能なすべての制御コマンドを表示するには：
+次のコマンドを実行します。
 
 ```bash
 ./xvf_host --help
 ```
 
-**5. XVF3800 との接続を確認する**
+利用可能なすべての制御コマンドを表示するには、次のコマンドを実行します。
 
 ```bash
-
+./xvf_host --list-commands
 ```
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 
-接続が成功すると、次のような出力が表示されます：
+**5. XVF3800 との接続を確認する**
+
+次のコマンドを実行します。
 
 ```bash
 ./xvf_host VERSION
 ```
-__CODE_LINE_PLH__
 
-ファームウェアバージョンは、XVF3800 にインストールされているファームウェアによって異なります。
+接続に成功すると、次のような出力が表示されます。
 
+```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-
+VERSION 2 0 10
 ```
 
-アプリケーションが Linux の USB 権限のために USB デバイスへアクセスできない場合は、次のコマンドでアプリケーションをテストできます：
+ファームウェアのバージョンは、XVF3800 にインストールされているファームウェアによって異なります。
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+`VERSION` コマンドは、`xvf_host` が XVF3800 と通信できることを簡単に確認する方法です。
 
-コマンドが `sudo` 付きでは動作するが、なしでは動作しない場合、問題は Linux の USB デバイス権限または udev ルールに関連している可能性が高いです。
+**6. USB アクセス権限が拒否された場合**
 
-**7. GPI 値を読み取る**
+Linux の USB 権限が原因でアプリケーションが USB デバイスにアクセスできない場合は、次のコマンドでアプリケーションをテストできます。
 
 ```bash
 sudo ./xvf_host VERSION
 ```
 
+`sudo` を使用した場合はコマンドが正常に動作し、使用しない場合は動作しない場合、Linux の USB デバイス権限または udev ルールに関連する問題である可能性があります。
+
+**7. GPI 値を読み取る**
+
+```bash
+./xvf_host GPI_READ_VALUES
+```
+
 **8. GPO 値を読み取る**
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-
-./xvf_host GPI_READ_VALUES
-
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-
+```bash
 ./xvf_host GPO_READ_VALUES
+```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+**9. 音源到来方向（DoA）を読み取る**
 
+```bash
 ./xvf_host AEC_AZIMUTH_VALUES
+```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+**10. 利用可能なコマンドを一覧表示する**
 
+```bash
 ./xvf_host --list-commands
+```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+その後、次の形式でサポートされているコマンドを実行できます。
 
+```bash
 ./xvf_host <COMMAND>
+```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+例：
+
 ```bash
 ./xvf_host VERSION
 ```

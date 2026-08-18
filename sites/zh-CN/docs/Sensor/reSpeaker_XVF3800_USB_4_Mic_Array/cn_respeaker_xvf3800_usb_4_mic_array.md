@@ -661,13 +661,13 @@ reSpeaker XVF3800 通信。它可用于读取或修改 XVF3800 控制
 
 典型的平台目录包括：
 
-__CODE_LINE_PLH__
 ```text
 host_control/
 ├── linux_x86_64/
 ├── mac_arm64/
 ├── win32/
 └── ...
+```
 
 每个平台目录都包含主机应用程序以及该应用程序
 所需的库文件。
@@ -676,31 +676,31 @@ host_control/
 
 **Windows**
 
-__CODE_LINE_PLH__
 ```text
 host_control/win32/
 ├── command_map.dll
 ├── device_usb.dll
 └── xvf_host.exe
+```
 
 **Linux**
 
-__CODE_LINE_PLH__
 ```text
 host_control/linux_x86_64/
 ├── libcommand_map.so
 ├── libdevice_usb.so
 └── xvf_host
+```
 
 **macOS**
 
-__CODE_LINE_PLH__
 ```text
 host_control/mac_arm64/
 ├── libcommand_map.dylib
 ├── libdevice_usb.dylib
 ├── libusb-1.0.0.dylib
 └── xvf_host
+```
 
 > **重要：** 将主机应用程序复制到另一台计算机时，请保持完整的
 > 平台目录结构不变。可执行文件依赖于位于同一目录中的
@@ -717,91 +717,88 @@ host_control/mac_arm64/
 
 导航到 Windows 主机应用程序目录：
 
-__CODE_LINE_PLH__
 ```powershell
 cd C:\path\to\reSpeaker_XVF3800_USB_4MIC_ARRAY\host_control\win32
+```
 
 **3. 检查主机应用程序**
 
 运行：
 
-__CODE_LINE_PLH__
 ```powershell
 xvf_host.exe --help
+```
 
 如果应用程序工作正常，将会显示帮助信息。
 
 要显示所有可用的控制命令：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```powershell
-
+xvf_host.exe --list-commands
 ```
-所支持的命令。
+
+`--list-commands` 选项用于显示主机应用程序所支持的命令。
 
 **4. 检查 XVF3800 连接**
 
 运行：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```powershell
-
+xvf_host.exe VERSION
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+成功建立连接后，应该会产生类似以下内容的输出：
+
 ```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-
+VERSION 2 0 10
 ```
 
-`VERSION` 命令是验证 `xvf_host.exe` 能否
-与 XVF3800 通信的一种简单方式。
+固件版本将取决于 XVF3800 上安装的固件。
+
+`VERSION` 命令是验证 `xvf_host.exe` 能否与 XVF3800 通信的一种简单方式。
 
 **5. 读取 GPI 值**
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```powershell
-
+xvf_host.exe GPI_READ_VALUES
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-```powershell
+**6. 读取 GPO 值**
 
+```powershell
+xvf_host.exe GPO_READ_VALUES
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-```powershell
+**7. 读取声源到达方向（DoA）**
 
+```powershell
+xvf_host.exe AEC_AZIMUTH_VALUES
 ```
-声源方向。
+
+返回的方位角值可用于确定检测到的声源方向。
 
 **8. 列出可用命令**
 
 要查看所有可用的 XVF3800 主机命令：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```powershell
-
+xvf_host.exe --list-commands
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-```powershell
+然后，可以使用以下格式执行任何受支持的命令：
 
+```powershell
+xvf_host.exe <COMMAND>
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-```powershell
+例如：
 
+```powershell
+xvf_host.exe VERSION
 ```
+
+</TabItem>
 
 <TabItem value="linux" label="Linux">
 
@@ -813,98 +810,93 @@ __CODE_LINE_PLH__
 
 对于 x86-64 Linux 系统：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```bash
-
+cd ~/reSpeaker_XVF3800_USB_4MIC_ARRAY/host_control/linux_x86_64
 ```
+
+**3. 为应用程序添加执行权限**
 
 运行：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```bash
-
+chmod +x xvf_host
 ```
+
+**4. 检查主机应用程序**
 
 运行：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```bash
-
+./xvf_host --help
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-```bash
+要显示所有可用的控制命令：
 
+```bash
+./xvf_host --list-commands
 ```
+
+**5. 检查 XVF3800 连接**
 
 运行：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```bash
-
+./xvf_host VERSION
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+成功建立连接后，应该会产生类似以下内容的输出：
+
 ```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-
+VERSION 2 0 10
 ```
 
-`VERSION` 命令是验证 `xvf_host` 能否
-与 XVF3800 通信的一种简单方式。
+固件版本将取决于 XVF3800 上安装的固件。
+
+`VERSION` 命令是一种简单的方法，可用于验证 `xvf_host` 是否能够与 XVF3800 正常通信。
 
 **6. 如果 USB 权限被拒绝**
 
-如果应用程序因为 Linux USB 权限
-而无法访问 USB 设备，你可以使用以下方式测试应用程序：
+如果应用程序由于 Linux USB 权限问题而无法访问 USB 设备，可以使用以下命令进行测试：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```bash
-
+sudo ./xvf_host VERSION
 ```
-Linux USB 设备权限或 udev 规则有关。
+
+如果使用 `sudo` 时命令可以正常运行，而不使用 `sudo` 时无法运行，则问题很可能与 Linux USB 设备权限或 udev 规则有关。
 
 **7. 读取 GPI 值**
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```bash
-
+./xvf_host GPI_READ_VALUES
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-```bash
+**8. 读取 GPO 值**
 
+```bash
+./xvf_host GPO_READ_VALUES
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-```bash
+**9. 读取声源到达方向（DoA）**
 
+```bash
+./xvf_host AEC_AZIMUTH_VALUES
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-```bash
+**10. 列出可用命令**
 
+```bash
+./xvf_host --list-commands
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-```bash
+然后，可以使用以下格式执行受支持的命令：
 
+```bash
+./xvf_host <COMMAND>
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+例如：
+
 ```bash
 ./xvf_host VERSION
 ```
