@@ -645,6 +645,369 @@ AEC_MIC_ARRAY_GEO:
 -0.033, -0.033, 0.000]
 ```
 
+## reSpeaker XVF_HOST Application
+
+The `xvf_host` application is a host-side utility used to communicate with the
+reSpeaker XVF3800 through USB. It can be used to read or modify XVF3800 control
+parameters, check the firmware version, read GPIO values, and access functions
+such as Direction of Arrival (DoA).
+
+
+Host Controller application can be find in [here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/host_control)
+
+### Host Application Files
+
+The host application is located under the `host_control` directory of the
+repository.
+
+Typical platform directories include:
+
+```text
+host_control/
+├── linux_x86_64/
+├── mac_arm64/
+├── win32/
+└── ...
+```
+
+Each platform directory contains the host application and the libraries
+required by that application.
+
+For example:
+
+**Windows**
+
+```text
+host_control/win32/
+├── command_map.dll
+├── device_usb.dll
+└── xvf_host.exe
+```
+
+**Linux**
+
+```text
+host_control/linux_x86_64/
+├── libcommand_map.so
+├── libdevice_usb.so
+└── xvf_host
+```
+
+**macOS**
+
+```text
+host_control/mac_arm64/
+├── libcommand_map.dylib
+├── libdevice_usb.dylib
+├── libusb-1.0.0.dylib
+└── xvf_host
+```
+
+> **Important:** Keep the complete platform directory together when copying
+> the host application to another computer. The executable depends on the
+> libraries located in the same directory.
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
+**1. Connect the XVF3800**
+
+Connect the reSpeaker XVF3800 to the Windows PC using USB.
+
+**2. Open Command Prompt or PowerShell**
+
+Navigate to the Windows host application directory:
+
+```powershell
+cd C:\path\to\reSpeaker_XVF3800_USB_4MIC_ARRAY\host_control\win32
+```
+
+**3. Check the Host Application**
+
+Run:
+
+```powershell
+xvf_host.exe --help
+```
+
+If the application is working correctly, the help information will be
+displayed.
+
+To display all available control commands:
+
+```powershell
+xvf_host.exe --list-commands
+```
+
+The `--list-commands` option shows the commands supported by the host
+application.
+
+**4. Check the XVF3800 Connection**
+
+Run:
+
+```powershell
+xvf_host.exe VERSION
+```
+
+A successful connection should produce output similar to:
+
+```text
+Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
+VERSION 2 0 10
+```
+
+The firmware version will depend on the firmware installed on the XVF3800.
+
+The `VERSION` command is a simple way to verify that `xvf_host.exe` can
+communicate with the XVF3800.
+
+**5. Read GPI Values**
+
+```powershell
+xvf_host.exe GPI_READ_VALUES
+```
+
+**6. Read GPO Values**
+
+```powershell
+xvf_host.exe GPO_READ_VALUES
+```
+
+**7. Read Direction of Arrival (DoA)**
+
+```powershell
+xvf_host.exe AEC_AZIMUTH_VALUES
+```
+
+The returned azimuth value can be used to determine the detected direction of
+the sound source.
+
+**8. List Available Commands**
+
+To see all available XVF3800 host commands:
+
+```powershell
+xvf_host.exe --list-commands
+```
+
+You can then use any supported command with:
+
+```powershell
+xvf_host.exe <COMMAND>
+```
+
+For example:
+
+```powershell
+xvf_host.exe VERSION
+```
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+**1. Connect the XVF3800**
+
+Connect the reSpeaker XVF3800 to the Linux computer using USB.
+
+**2. Navigate to the Linux Host Application Directory**
+
+For an x86-64 Linux system:
+
+```bash
+cd ~/reSpeaker_XVF3800_USB_4MIC_ARRAY/host_control/linux_x86_64
+```
+
+**3. Give the Application Execute Permission**
+
+Run:
+
+```bash
+chmod +x xvf_host
+```
+
+**4. Check the Host Application**
+
+Run:
+
+```bash
+./xvf_host --help
+```
+
+To display all available control commands:
+
+```bash
+./xvf_host --list-commands
+```
+
+**5. Check the XVF3800 Connection**
+
+Run:
+
+```bash
+./xvf_host VERSION
+```
+
+A successful connection should produce output similar to:
+
+```text
+Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
+VERSION 2 0 10
+```
+
+The firmware version will depend on the firmware installed on the XVF3800.
+
+The `VERSION` command is a simple way to verify that `xvf_host` can
+communicate with the XVF3800.
+
+**6. If USB Permission Is Denied**
+
+If the application cannot access the USB device because of Linux USB
+permissions, you can test the application with:
+
+```bash
+sudo ./xvf_host VERSION
+```
+
+If the command works with `sudo` but not without it, the issue is likely related
+to the Linux USB device permissions or udev rules.
+
+**7. Read GPI Values**
+
+```bash
+./xvf_host GPI_READ_VALUES
+```
+
+**8. Read GPO Values**
+
+```bash
+./xvf_host GPO_READ_VALUES
+```
+
+**9. Read Direction of Arrival (DoA)**
+
+```bash
+./xvf_host AEC_AZIMUTH_VALUES
+```
+
+**10. List Available Commands**
+
+```bash
+./xvf_host --list-commands
+```
+
+You can then execute a supported command using:
+
+```bash
+./xvf_host <COMMAND>
+```
+
+For example:
+
+```bash
+./xvf_host VERSION
+```
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+**1. Connect the XVF3800**
+
+Connect the reSpeaker XVF3800 to the Mac using USB.
+
+**2. Navigate to the macOS Host Application Directory**
+
+For an Apple Silicon Mac:
+
+```bash
+cd ~/reSpeaker_XVF3800_USB_4MIC_ARRAY/host_control/mac_arm64
+```
+
+**3. Give the Application Execute Permission**
+
+Run:
+
+```bash
+chmod +x xvf_host
+```
+
+**4. Check the Host Application**
+
+Run:
+
+```bash
+./xvf_host --help
+```
+
+To display all available control commands:
+
+```bash
+./xvf_host --list-commands
+```
+
+**5. Check the XVF3800 Connection**
+
+Run:
+
+```bash
+./xvf_host VERSION
+```
+
+A successful connection should produce output similar to:
+
+```text
+Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
+VERSION 2 0 10
+```
+
+The firmware version will depend on the firmware installed on the XVF3800.
+
+**6. Read GPI Values**
+
+```bash
+./xvf_host GPI_READ_VALUES
+```
+
+**7. Read GPO Values**
+
+```bash
+./xvf_host GPO_READ_VALUES
+```
+
+**8. Read Direction of Arrival (DoA)**
+
+```bash
+./xvf_host AEC_AZIMUTH_VALUES
+```
+
+**9. List Available Commands**
+
+```bash
+./xvf_host --list-commands
+```
+
+</TabItem>
+</Tabs>
+
+### Common Commands
+
+The following commands are useful for basic XVF3800 testing:
+
+| Command              | Description                        |
+| -------------------- | ---------------------------------- |
+| `--help`             | Display host application help      |
+| `--list-commands`    | Display available XVF3800 commands |
+| `VERSION`            | Read the XVF3800 firmware version  |
+| `GPI_READ_VALUES`    | Read GPI values                    |
+| `GPO_READ_VALUES`    | Read GPO values                    |
+| `AEC_AZIMUTH_VALUES` | Read the current DoA/azimuth value |
+
+
+More Commands can be find in [here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/host_control)
+
+
 ## reSpeaker Console Application
 
 We have prepared a desktop application to control and configure your reSpeaker device.
@@ -920,6 +1283,10 @@ After applying these settings, all six channels should capture non-zero audio.
 - [ReSpeaker XVF3800 3D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
 - [ReSpeaker XVF3800 3D-Enclosure-Up File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
 - [ReSpeaker XVF3800 3D-Enclosure-Down File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
+
+## Reference
+
+- [XMOS XVF3800 Chip Datasheet](https://www.xmos.com/documentation/XM-014888-PC/html/)
 
 ## Tech Support & Product Discussion
 
