@@ -3978,6 +3978,7 @@ const sidebars = {
                   label: 'reComputer Rugged J40',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Rugged_J40/reComputer_Rugged_J40_Getting_Started',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Rugged_J40/reComputer_Rugged_J401_hardware_and_interface_usage',
                   ],
                 },
                 {
@@ -4345,7 +4346,9 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_for_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
+            'Edge/NVIDIA_Jetson/FAQs/Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot',
             'Edge/NVIDIA_Jetson/FAQs/Flash_JetPack_with_WSL2',
+            'Edge/NVIDIA_Jetson/FAQs/Jetson_Initrd_Flash_Fails_with_ZFS_Host',
           ]
         }
       ],
@@ -4566,6 +4569,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/Lerobot_Starai_Arm',
             'Robotics/Robot_Kits/Lerobot/Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm_New',
+            'Robotics/Robot_Kits/Lerobot/SOARM101_XIAO_MicroROS_Wireless_Teleoperation',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO_ARM101_DAMO',
             'Robotics/Robot_Kits/Lerobot/SOARM_AMAZINGHAND_TELEOP',
             'Robotics/Robot_Kits/Lerobot/Lerobot_Dataset_Tool',
@@ -4604,6 +4608,7 @@ const sidebars = {
               label: 'B601-RS',
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Getting_Started',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Web_Simulator_Developer_Guide',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_ROS2_Integration',

@@ -1,6 +1,28 @@
 const docList = [
   [
     {
+      "path": "/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage",
+      "image": "https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png",
+      "title": "reComputer Rugged J401 Hardware and Interface Usage",
+      "date": "2026-08-14",
+      "title_cn": "reComputer Rugged J401 硬件与接口使用",
+      "title_ja": "reComputer Rugged J401 ハードウェアおよびインターフェースの使用方法",
+      "title_es": "Uso de hardware e interfaces de reComputer Rugged J401",
+      "title_pt": "Uso de Hardware e Interfaces do reComputer Rugged J401"
+    },
+    {
+      "path": "/rebot_arm_b601_rs_web_simulator_developer_guide",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web_rs/rebot_rs_web_simulator_en.png",
+      "title": "reBot Arm B601-RS Web Simulator and ROS 2/MuJoCo Developer Guide",
+      "date": "2026-08-13",
+      "title_cn": "reBot Arm B601-RS Web 仿真器与 ROS 2/MuJoCo 开发者教程",
+      "title_ja": "reBot Arm B601-RS Web シミュレータおよび ROS 2/MuJoCo 開発者ガイド",
+      "title_es": "Guía para Desarrolladores del Simulador Web y ROS 2/MuJoCo de reBot Arm B601-RS",
+      "title_pt": "Guia do Desenvolvedor do Simulador Web e ROS 2/MuJoCo do reBot Arm B601-RS"
+    }
+  ],
+  [
+    {
       "path": "/ma_deploy_yolov26",
       "image": "https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/23.webp",
       "title": "Train and deploy the YOLO26 object detection model",
@@ -13,11 +35,11 @@ const docList = [
     {
       "path": "/rebot_arm_b601_rs_mit_control",
       "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png",
-      "title": "Getting Started with MIT Position Control on the reBot Arm B601-RS",
+      "title": "Getting Started with MIT Position Control on reBot Arm B601-RS",
       "date": "2026-08-04",
       "title_cn": "reBot Arm B601-RS MIT 位置控制入门指南",
-      "title_ja": "reBot Arm B601-RS における MIT 位置制御 入門",
-      "title_es": "Introducción al control de posición MIT en el reBot Arm B601-RS",
+      "title_ja": "reBot Arm B601-RS で MIT 位置制御を始める",
+      "title_es": "Introducción al control de posición MIT en reBot Arm B601-RS",
       "title_pt": "Introdução ao Controle de Posição MIT no reBot Arm B601-RS"
     }
   ],
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "reCamera Pro と Home Assistant 連携：サウンドトリガー付き写真アラート",
       "title_es": "Integración de reCamera Pro y Home Assistant: alerta de foto activada por sonido",
       "title_pt": "Integração entre reCamera Pro e Home Assistant: alerta de foto acionado por som"
-    }
-  ],
-  [
-    {
-      "path": "/build_and_flash_yocto_for_recomputer_super",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png",
-      "title": "Build and Flash a Yocto Image for reComputer Super",
-      "date": "2026-07-24",
-      "title_cn": "为 reComputer Super 构建并烧录 Yocto 镜像",
-      "title_ja": "reComputer Super 向け Yocto イメージのビルドとフラッシュ",
-      "title_es": "Crear y flashear una imagen Yocto para reComputer Super",
-      "title_pt": "Compilar e Gravar uma Imagem Yocto para o reComputer Super"
-    },
-    {
-      "path": "/recamera_model_export_online",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png",
-      "title": "Convert and deploy a custom YOLO detection model in the reCamera web interface",
-      "date": "2026-07-19",
-      "title_cn": "在 reCamera 网页界面中转换并部署自定义 YOLO 检测模型",
-      "title_ja": "reCamera の Web インターフェースでカスタム YOLO 検出モデルを変換してデプロイする",
-      "title_es": "Convertir y desplegar un modelo de detección YOLO personalizado en la interfaz web de reCamera",
-      "title_pt": "Converter e implantar um modelo de detecção YOLO personalizado na interface web da reCamera"
     }
   ]
 ];

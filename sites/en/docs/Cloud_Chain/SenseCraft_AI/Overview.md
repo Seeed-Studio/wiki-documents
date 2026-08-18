@@ -1,6 +1,6 @@
 ---
-description: This article is a brief introduction to the main page of SenseCraft AI.
-title: Overview
+description: Explore pretrained models, custom training, deployment, live preview, and model output workflows in SenseCraft AI for supported edge AI devices.
+title: 'SenseCraft AI: Train and Deploy Edge AI Models'
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.webp
 slug: /sensecraft-ai/overview
 aliases:
@@ -10,12 +10,12 @@ last_update:
   date: 08/06/2026
   author: Citric
 createdAt: '2024-11-28'
-updatedAt: '2026-08-07'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/sensecraft-ai/overview/
 ---
 
 
-# SenseCraft AI Overview
+# SenseCraft AI: Train and Deploy Edge AI Models
 
 SenseCraft AI is an all-in-one platform designed to empower developers and creators in building and deploying AI projects with ease. The website offers a wide range of tools and features to streamline the AI development process, making it accessible to users with varying levels of expertise. In this wiki, we will explore the main sections of the SenseCraft AI website, providing an overview of their key features and functionalities.
 
@@ -267,6 +267,13 @@ For instance, a user could utilize the MQTT output to send real-time object dete
 The Serial Port output provides a straightforward way to establish communication between the device and other systems, enabling users to transmit the model's results for further processing or visualization.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/12.png" style={{width:1000, height:'auto'}}/></div>
+
+## Related guides
+
+- [SenseCraft AI documentation center](/sensecraft-ai/sensecraft-ai-main/)
+- [Train an image classification model](/sensecraft-ai/tutorials/sensecraft-ai-training-classification/)
+- [Train an object detection model](/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/)
+- [Get started with SenseCraft Data Platform](/cloud/sensecraft-data/sensecraft-data-platform/overview/)
 
 ## Tech Support & Product Discussion
 

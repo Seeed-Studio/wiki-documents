@@ -243,7 +243,26 @@ Atom S 出厂已完成基础控制程序烧录和初步装配。你只需准备�
 如果你已经完成快速体验，并希望进一步导出动作 JSON、修改主控逻辑或连接其他控制器，请继续阅读后续章节。
 :::
 
-## 9. 自定义动作开发核心流程
+## 9. 软件打开和自定义动作开发
+
+Motion Editor 链接地址：
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/uartbasic/robotstudiopro/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 打开 Motion Editor 🖱️</font></span></strong>
+</a></div>
+
+Remote Controller 链接地址：
+
+<div class="get_one_now_container" style={{textAlign: 'center', margin: '16px 0'}}>
+<a class="get_one_now_item" style={{width: 'auto', padding: '10px 24px'}} href="https://wiki.fashionrobo.com/ps2v2/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 打开 Remote Controller 🖱️</font></span></strong>
+</a></div>
+
+本章涉及两款基于浏览器的软件，无需安装，点击上方按钮即可打开使用：
+
+- **Motion Editor（动作编辑器）**：通过 PC 浏览器连接 RUC-01 接口板，实时调试舵机、示教录制动作，并将动作组导出为 `.json` 文件。
+- **Remote Controller（网页遥控器）**：通过 Web 蓝牙与机器人配对，实现网页遥控与示教动作的回放、调速等操作。
 
 ### 姿态设计与数据导出（Web 动作编辑器）
 
