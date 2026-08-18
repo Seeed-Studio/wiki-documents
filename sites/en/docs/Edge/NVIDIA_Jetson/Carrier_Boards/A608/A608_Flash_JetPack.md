@@ -349,6 +349,56 @@ After flashing, power on Jetson Device again and log into the system.
 
 </TabItem>
 
+<TabItem value="JP7.2" label="JP7.2">
+
+Here we will use NVIDIA L4T R39.2.0 to install Jetpack 7.2 on the A608 Carrier Board with Jetson Orin NX module.
+
+**Step 1.** [Download](https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.0/release/Jetson_Linux_R39.2.0_aarch64.tbz2) the NVIDIA drivers and the [root filesystem](https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.0/release/Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2) on the host PC:
+
+- `Jetson_Linux_R39.2.0_aarch64.tbz2`
+- `Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2`
+
+**Step 2.** [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBsOH7dA-WtQafi5M86XzZGATQW5JJObMxPNJvT_n_ESj0?e=AfZVk4) the A608 Jetpack 7.2 peripheral drivers and put all the drivers in the same folder.
+
+**Step 3.** Prepare system image.
+
+Open a terminal window on the host PC and run the following command：
+
+```bash
+cd <path to drivers>
+tar xf Jetson_Linux_R39.2.0_aarch64.tbz2
+sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R39.2.0_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
+unzip 608_jp72.zip
+sudo tar xpf 608_jp72.tbz2
+sudo cp -r 608_jp72/Linux_for_Tegra/* Linux_for_Tegra/
+cd Linux_for_Tegra/
+sudo ./tools/l4t_flash_prerequisites.sh
+sudo ./apply_binaries.sh
+```
+
+**Step 4.** Flash the system to the NVMe SSD of A608.
+
+```bash
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --erase-all jetson-orin-nano-devkit-super internal
+```
+
+After flashing, the device will boot up automatically.
+
+**Step 5.** System backup and restore (enter Force Recovery Mode first).
+
+- Backup the system image:
+
+  ```bash
+  sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b jetson-orin-nano-devkit-super
+  ```
+
+- Restore the system from the backup image:
+
+  ```bash
+  sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit-super
+  ```
+
+</TabItem>
 </Tabs>
 
 ## Resources
