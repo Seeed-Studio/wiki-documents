@@ -15,10 +15,10 @@ slug: /rebot_b601_rs_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-07-28
+  date: 2026-08-17
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-08-03'
+updatedAt: '2026-08-17'
 url: https://wiki.seeedstudio.com/ja/rebot_b601_rs_getting_started/
 ---
 
@@ -349,7 +349,7 @@ sudo ip link set $PCAN_IF up
 </TabItem>
 <TabItem value="macos" label="macos">
 
-libPCBUSB.dylib をロードできない場合は、まず PCBUSB をインストールしてください：
+`libPCBUSB.dylib` をロードできない場合は、まず PCBUSB をインストールしてください：
 ```zsh
 curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
   https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
@@ -358,25 +358,44 @@ cd PCBUSB
 sudo ./install.sh
 ```
 
-`DYLD_LIBRARY_PATH` を設定して、motorbridge-gateway が実行時に PCBUSB ライブラリを見つけられるようにします。`conda activate rebot` を実行するたびに自動的に有効になるよう、conda 環境内にアクティベーションスクリプトを作成します：
+`install.sh` が作成するのは `libPCBUSB.dylib` だけです。motorbridge のネイティブローダは裸の名前 `PCBUSB` を `dlopen` するため、次のシンボリックリンクを追加してください。これがないと、`libPCBUSB.dylib` の ctypes チェックは通っても、アーム接続時に `load PCBUSB failed` になります：
+
+```zsh
+sudo ln -sf /usr/local/lib/libPCBUSB.dylib /usr/local/lib/PCBUSB
+```
+
+`DYLD_FALLBACK_LIBRARY_PATH` を設定して、motorbridge-gateway が実行時に PCBUSB を見つけられるようにします。`DYLD_LIBRARY_PATH` ではなく FALLBACK を使ってください。前者はプロセス全体の dyld 既定検索順を上書きし、他のソフトウェアを壊すことがあります。`conda activate rebot` のたびに自動適用されるよう、conda 環境にアクティベーションスクリプトを作成します：
 
 ```bash
 mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
 cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
-export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+export DYLD_FALLBACK_LIBRARY_PATH="/usr/local/lib${DYLD_FALLBACK_LIBRARY_PATH:+:$DYLD_FALLBACK_LIBRARY_PATH}"
 EOF
 
-echo $DYLD_LIBRARY_PATH
+echo $DYLD_FALLBACK_LIBRARY_PATH
 ```
 
-準備ができているか確認します：
+任意、sudo なし（共有マシン向け）：`~/.local/lib` にインストールします。motorbridge のソースツリーがある場合：
+
+```bash
+./scripts/setup_pcbusb_macos.sh --user-local
+ln -sf "$HOME/.local/lib/libPCBUSB.dylib" "$HOME/.local/lib/PCBUSB"
+```
+
+conda のアクティベーションスクリプトのパスを `/usr/local/lib` ではなく `$HOME/.local/lib` にしてください。
+
+準備ができているか確認します。先に PCAN アダプタを接続してください。`ctypes.CDLL('libPCBUSB.dylib')` は実行時チェックになりません。motorbridge はその名前をロードしません。
+
 ```zsh
 # Check Python package and CLI are ready
 python3 -c "import motorbridge; print('motorbridge OK')"
 motorbridge-cli --help
 
-# Optional: Check if PCBUSB runtime is loadable
-python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
+# Native loader dlopens the bare name PCBUSB
+python3 -c "import ctypes; ctypes.CDLL('PCBUSB'); print('PCBUSB load OK')"
+
+# Real runtime check (can0 maps to PCAN_USBBUS1 on macOS)
+motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 --timeout-ms 300
 ```
 
 </TabItem>
@@ -587,7 +606,7 @@ motorbridge-gateway --bind 127.0.0.1:9002
 または
 
 ```bash
-DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
+DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
 
 #### RS モーター制御パラメータの初期化
