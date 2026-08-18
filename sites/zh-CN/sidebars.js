@@ -2938,6 +2938,7 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_SenseCAP_M4_Overview',
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_SenseCAP_M4_Quick_Start',
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_SenseCAP_M4_FAQ',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_Install_Ubuntu_on_SenseCAP_M4',
           ],
         },
         {
@@ -4333,6 +4334,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/cn_Make_DIY_BSP_for_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/cn_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super',
             'Edge/NVIDIA_Jetson/FAQs/cn_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
+            'Edge/NVIDIA_Jetson/FAQs/cn_Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot',
             'Edge/NVIDIA_Jetson/FAQs/cn_Flash_JetPack_with_WSL2',
             'Edge/NVIDIA_Jetson/FAQs/cn_Jetson_Initrd_Flash_Fails_with_ZFS_Host',
           ]
