@@ -10,8 +10,10 @@ keywords:
   - Damiao
 slug: /rebot_arm_b601_dm_isaacsim
 last_update:
-  date: 17/8/2026
+  date: 2026-08-17
   author: PanYiWei
+translation:
+  skip: [[zh-CN]]
 createdAt: '2026-08-17'
 updatedAt: '2026-08-17'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_isaacsim/
@@ -74,7 +76,7 @@ export ISAACSIM_PYTHON_EXE="${ISAACSIM_PATH}/python.sh"
 #### 启动验证
 
 ```Bash
-${ISAACSIM_PYTHON_EXE}  ${ISAACSIM_PATH}/isaac-sim.sh
+${ISAACSIM_PATH}/isaac-sim.sh
 ```
 
 
