@@ -1739,7 +1739,7 @@ echo $HF_USER`}
 <CodeBlock language="bash">
 {`lerobot-rollout \
   --strategy.type=base \
-  --policy.path=${HF_USER}/act_policy \
+  --policy.path=\${HF_USER}/act_policy \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.cameras=="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
