@@ -2195,7 +2195,7 @@ Este ejemplo realiza fine-tuning de `lerobot/smolvla_base` con LoRA en el conjun
   --optimizer.lr=1e-3 \\
   --peft.method_type=LORA \\
   --peft.r=64`}
-</CodeBlock]
+</CodeBlock>
 
 **Argumentos PEFT clave**
 

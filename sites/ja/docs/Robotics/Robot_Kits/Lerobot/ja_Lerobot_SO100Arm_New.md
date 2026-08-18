@@ -941,7 +941,7 @@ pip install -r requirements.txt`}
 
 <CodeBlock language="bash">
 {`python -m src.tools.servo_center_test`}
-</CodeBlock]
+</CodeBlock>
 
 中央位置キャリブレーションが完了したら、上記の `lerobot-calibrate` の手順に戻り、アーム全体のキャリブレーションをやり直してください。
 

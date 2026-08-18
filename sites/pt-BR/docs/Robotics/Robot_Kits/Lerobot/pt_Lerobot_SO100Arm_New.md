@@ -2711,7 +2711,7 @@ Para retomar o treinamento a partir de um checkpoint, abaixo está um comando de
 {`lerobot-train \\
   --config_path=outputs/train/act_so101_test/checkpoints/last/pretrained_model/train_config.json \\
   --resume=true`}
-</CodeBlock]
+</CodeBlock>
 
 **Fazer upload dos checkpoints da política**
 
@@ -2857,7 +2857,7 @@ Se a tecla de seta para a direita, seta para a esquerda ou ESC não responder du
 
 Se o objeto cair, o gripper errar ou a qualidade do episódio for ruim, mova o braço de volta para uma pose de descanso segura e pressione a tecla de seta para a esquerda para descartar e regravar o episódio. Se a tarefa terminar cedo e o robô já tiver retornado ao descanso, pressione a tecla de seta para a direita para ir para o próximo episódio sem esperar pelo tempo restante completo.
 
-</details]
+</details>
 
 <details className="content-details">
 <summary>Ao coletar conjuntos de dados, com o que devo me preocupar?</summary>
@@ -2866,7 +2866,7 @@ Mantenha a posição da câmera, o ângulo da câmera e a iluminação ambiente 
 
 Defina `--dataset.num_episodes` alto o suficiente antes de começar. Não pare manualmente a gravação no meio, a menos que seja necessário, porque estatísticas do conjunto de dados, como média e variância, são calculadas após o término da coleta e são necessárias para o treinamento.
 
-</details]
+</details>
 
 <details className="content-details">
 <summary>Como excluir ou modificar conjuntos de dados gravados?</summary>
@@ -2875,14 +2875,14 @@ Para excluir ou editar conjuntos de dados gravados, consulte o tutorial da ferra
 
 [Dataset Tool](/pt-br/lerobot_dataset_tool)
 
-</details]
+</details>
 
 <details className="content-details">
 <summary>Os dados de imagem da câmera USB não podem ser lidos</summary>
 
 Evite conectar a câmera USB por meio de um hub USB. Conecte-a diretamente ao dispositivo, de preferência por meio de uma porta USB 3.0, para garantir largura de banda suficiente para transmissão de imagem.
 
-</details]
+</details>
 
 <details className="content-details">
 <summary>Tempo limite ou incompatibilidade de número de série da câmera Orbbec</summary>
@@ -2899,7 +2899,7 @@ execute o comando de detecção da câmera e atualize `serial_number_or_name` co
 {`lerobot-find-cameras orbbec`}
 </CodeBlock>
 
-</details]
+</details>
 
 <details className="content-details">
 <summary>`File exists` durante a avaliação</summary>
@@ -2910,7 +2910,7 @@ Se a avaliação informar que um diretório `eval_` já existe, exclua primeiro 
 {`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'`}
 </CodeBlock>
 
-</details]
+</details>
 
 <details className="content-details">
 <summary>`mean is infinity` durante a avaliação</summary>
@@ -2923,7 +2923,7 @@ Se você vir:
 
 certifique-se de que as chaves de câmera em `--robot.cameras`, como `front` e `side`, correspondam exatamente às chaves usadas durante a gravação do conjunto de dados.
 
-</details]
+</details>
 
 <details className="content-details">
 <summary>`TypeError: stack(): argument 'tensors' must be tuple of Tensors`</summary>
@@ -2940,7 +2940,7 @@ tente instalar a versão compatível do datasets:
 {`pip install datasets==2.19`}
 </CodeBlock>
 
-</details]
+</details>
 
 <details className="content-details">
 <summary>`rerun` has no attribute `scalar`</summary>
@@ -2957,7 +2957,7 @@ faça downgrade do SDK rerun:
 {`pip3 install rerun-sdk==0.23`}
 </CodeBlock>
 
-</details]
+</details>
 
 <details className="content-details">
 <summary>Quanto tempo o treinamento ACT geralmente leva?</summary>
