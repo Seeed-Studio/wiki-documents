@@ -6,12 +6,13 @@ keywords:
   - SenseCAP M4
   - Ubuntu
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/Install_Ubuntu_on_SenseCAP_M4
+slug: /install_ubuntu_on_sensecap_m4
+sku: E23010412, 110991885, 110991865
 last_update:
-  date: 08/17/2026
+  date: 08/18/2026
   author: Zhai Chenyang
-createdAt: '2026-08-17'
-updatedAt: '2026-08-17'
+createdAt: '2026-08-18'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/Install_Ubuntu_on_SenseCAP_M4/
 ---
 
