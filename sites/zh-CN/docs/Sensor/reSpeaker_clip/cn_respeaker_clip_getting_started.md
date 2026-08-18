@@ -1,13 +1,13 @@
 ---
-description: reSpeaker Clip 是一款开放式可穿戴 AI 录音设备，具备 360 度拾音、OLED 状态显示、振动反馈、BLE 与 Wi-Fi 连接，并提供开放固件和 SDK 支持，可用于转写、AI 笔记、会议纪要以及企业语音 AI 应用。
+description: reSpeaker Clip 是一款开放式可穿戴 AI 录音设备，具备 360 度拾音、OLED 状态显示、振动反馈、BLE 与 Wi-Fi 连接，并提供开放固件和 SDK 支持，可用于转写、AI 笔记、会议摘要以及企业语音 AI 应用。
 title: reSpeaker Clip 入门指南
 keywords:
   - reSpeaker
-  - AI 录音设备
+  - AI 录音笔
   - SenseCraft Voice
-  - 可穿戴 AI 录音设备
+  - 可穿戴 AI 录音笔
   - 语音转文本
-  - LLM 总结
+  - LLM 摘要
 image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png
 slug: /respeaker_clip
 sku: 100020126
@@ -15,7 +15,7 @@ last_update:
   date: 6/30/2026
   author: Ray
 createdAt: '2026-06-30'
-updatedAt: '2026-07-22'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/cn/respeaker_clip/
 ---
 
@@ -23,14 +23,14 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png" alt="reSpeaker Clip" width={600} height="auto" /></p>
 
-reSpeaker Clip 是一款开放式可穿戴 AI 录音设备，适用于零售、会议、访谈、课堂、服务培训等需要高质量语音录制和后续内容整理的场景。它集成了双 PDM 麦克风，可实现 360 度全向、最远 3 米拾音，并支持独立录音、移动端文件管理、AI 转写和 AI 总结，帮助用户完成从现场录音到结构化内容的完整工作流程。
+reSpeaker Clip 是一款开放式可穿戴 AI 录音设备，适用于零售、会议、访谈、课堂、服务培训等需要高质量语音录制和后续内容整理的场景。它集成了双 PDM 麦克风，可实现 360 度全向、最远 3 米拾音，支持独立录音、手机端文件管理、AI 转写和 AI 总结，帮助用户完成从现场录音到结构化内容的完整工作流程。
 
 reSpeaker Clip 同时被设计为开放硬件且对开发者友好的产品。它提供开源固件、演示应用和 SDK 支持，允许开发者自定义设备行为和应用工作流。企业也可以将其与内部办公系统、私有部署的 LLM 或语音分析流水线集成，构建满足数据安全要求的语音 AI 应用。
 
-reSpeaker Clip 可搭配 SenseCraft Voice App 和云服务使用，也可以集成本地或云端 AI 模型。通过 App，用户可以完成设备配对、录音管理、文件导出、音频转写、生成 AI 总结、自定义模板以及问答检索等操作。
+reSpeaker Clip 可搭配 SenseCraft Voice App 与云服务使用，也可以集成本地或云端 AI 模型。通过 App，用户可以完成设备配对、录音管理、文件导出、音频转写、生成 AI 摘要、自定义模板以及问答检索等操作。
 
 :::note
-本文档是 reSpeaker Clip 的初始 Wiki 草稿。一些 SDK 链接、协议文档和资源包链接将在产品资料确认后补充。
+本文档是 reSpeaker Clip 的初始 Wiki 草稿。一些 SDK URL、协议文档和资源包链接将在产品资料确认后补充。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -69,7 +69,7 @@ reSpeaker Clip 被定位为一款开放式可穿戴 AI 录音设备。它不仅�
 | 音频输出 | 降噪音频 |
 | 连接方式 | Bluetooth (BLE 5.3),<br />Wi-Fi（用于高速音频导出） |
 | 内部存储 | 2GB（可存储约 250+ 小时<br />压缩音频） |
-| 电池续航 | 持续录音 14-18 小时 |
+| 续航时间 | 持续录音 14-18 小时 |
 | 交互方式 | Action Button、振动马达 |
 | 充电接口 | 4 针磁吸接口 |
 
@@ -80,7 +80,7 @@ reSpeaker Clip 被定位为一款开放式可穿戴 AI 录音设备。它不仅�
 | 麦克风 | 双 PDM 麦克风 |
 | 采样率 | 最高 16 kHz |
 | 拾音方向 | 360 度全向拾音 |
-| 拾音范围 | 最远 3 米 |
+| 拾音距离 | 最远 3 米 |
 | 音频输出 | 降噪单声道音频 |
 | 压缩音频格式 | Opus 单声道，32 kbps |
 | 音频存储 | 2GB 可存储约 250+ 小时压缩音频 |
@@ -96,15 +96,15 @@ reSpeaker Clip 被定位为一款开放式可穿戴 AI 录音设备。它不仅�
 | 充电方式 | 磁吸充电底座 |
 | 充电接口 | 4 针磁吸接口 |
 | 充电底座电源输入 | USB-C |
-| 佩戴方式 | 磁吸固定、衣领夹、挂绳佩戴 |
+| 佩戴方式 | 磁吸固定、领夹夹持、挂绳佩戴 |
 | 温度提示 | 避免在 -20°C 至 60°C 的极端温度环境中使用 |
 
 ### 目标场景
 
 - 零售服务录音与培训复盘
 - 会议、访谈、课堂等长时音频录制
-- 客户沟通、销售拜访、服务质量抽检等业务场景
-- 需要将语音内容转为结构化文本和总结的工作流
+- 客户沟通、销售拜访、服务质量巡检等业务场景
+- 需要将语音内容转为结构化文本和摘要的工作流
 
 ### 核心能力
 
@@ -117,7 +117,7 @@ reSpeaker Clip 被定位为一款开放式可穿戴 AI 录音设备。它不仅�
 - AI 音频转写
 - AI 总结与结构化提取
 - 多种佩戴方式
-- 移动端文件管理
+- 手机端文件管理
 - SenseCraft Voice App 与云服务支持
 - 开源固件、演示应用和 SDK 支持
 
@@ -145,7 +145,7 @@ reSpeaker Clip 采用便携式夹扣形态。顶部集成了 OLED 显示屏、�
         <td>便携录音设备</td>
       </tr>
       <tr>
-        <td>磁吸衣领夹</td>
+        <td>磁吸领夹</td>
         <td style={{textAlign: 'center'}}>1</td>
         <td>用于将设备固定在衣物上</td>
       </tr>
@@ -187,7 +187,7 @@ reSpeaker Clip 采用便携式夹扣形态。顶部集成了 OLED 显示屏、�
 
 ### 佩戴方式
 
-reSpeaker Clip 支持三种佩戴方式：磁吸固定、衣领夹和挂绳佩戴。可根据会议、访谈、服务培训或移动录音等场景选择最合适的方式。
+reSpeaker Clip 支持三种佩戴方式：磁吸固定、领夹夹持和挂绳佩戴。可根据会议、访谈、服务培训或移动录音等场景选择最合适的方式。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_wearing_methods.jpg" alt="reSpeaker Clip wearing methods" width={640} height="auto" /></p>
 
@@ -211,14 +211,14 @@ reSpeaker Clip 支持三种佩戴方式：磁吸固定、衣领夹和挂绳佩�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_scan_device.jpg" alt="Select and connect to the matching reSpeaker Clip device" width={320} height="auto" /></p>
 
-5. 当手机上出现蓝牙配对请求时，再次确认名称并点击 **Pair**（配对）。
+5. 当手机上出现蓝牙配对请求时，再次确认名称并点击 **Pair**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_pair_device.jpg" alt="确认蓝牙配对请求" width={320} height="auto" /></p>
 
 6. 配对完成后，按照应用内的指引完成剩余的设置。
 
 :::tip
-如果应用无法找到设备，请先确认设备已开机且电量充足。如果电量较低，请先为设备充电，然后再重新配对。同时确保设备处于蓝牙配对状态，将手机靠近设备后再次扫描。
+如果应用无法找到设备，请先确认设备已开机且电量充足。如果电量较低，请先为设备充电，然后再进行配对。同时确保设备处于蓝牙配对状态，将手机靠近设备后重新扫描。
 :::
 
 ### 录音操作
@@ -240,7 +240,7 @@ reSpeaker Clip 可以通过侧边按键快速控制录音。
 - 裁剪音频
 - 通过 Wi-Fi 或 BLE 传输文件
 - 导出音频或文本结果
-- 查看已标记的重要片段
+- 查看标记的重要片段
 
 ### AI 功能
 
@@ -266,15 +266,15 @@ reSpeaker Clip 可以配合 SenseCraft Voice App 和云端服务进行智能音�
 
 #### 音频转写
 
-上传或同步录音后，在文件列表中点击你想处理的录音进入录音详情页。如果该录音尚未生成转写文本，页面会显示 **Transcribe & Summarize** 按钮。点击该按钮进入转写与总结设置页面。
+上传或同步录音后，在文件列表中点击你想处理的录音进入录音详情页。如果该录音尚未生成转写文本，页面会显示 **Transcribe & Summarize** 按钮。点击该按钮进入转写和总结设置页面。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_transcribe_entry.png" alt="打开录音并点击 Transcribe & Summarize" width={320} height="auto" /></p>
 
 #### AI 总结
 
-在 **Transcribe & Summarize** 页面，你可以选择摘要模板，并确认音频语言、STT Model 和 LLM Model。模板控制摘要输出的结构，例如会议总结、课堂总结或日常对话总结。确认配置后，点击 **Generate Now** 开始转写和生成摘要。
+在 **Transcribe & Summarize** 页面，你可以选择一个总结模板，并确认音频语言、STT Model 和 LLM Model。模板控制摘要输出的结构，例如会议总结、课堂总结或日常对话总结。确认配置后，点击 **Generate Now** 开始转写和总结。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_transcribe_summary_options.png" alt="选择模板并开始转写和生成摘要" width={320} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_app_transcribe_summary_options.png" alt="选择模板并开始转写和总结" width={320} height="auto" /></p>
 
 #### AI 问答检索
 
@@ -305,11 +305,11 @@ reSpeaker Clip 支持两种无需调试探针的固件更新方式：
 
 | 文件类型 | 描述 | 用途 |
 | --- | --- | --- |
-| `clip-<version>-*-single.*` | 单一应用分区更新包，适用于仅更新 Clip SDK / 应用分区 | USB 串口 DFU |
+| `clip-<version>-*-single.*` | 单应用分区更新包，适用于仅更新 Clip SDK / app 分区 | USB 串口 DFU |
 | `clip-<version>-*-signed.bin` | 已签名的应用固件镜像 | USB 串口 DFU、BLE OTA |
-| `clip-<version>-*-ota.zip` | 多镜像更新包，通常包含应用和网络核 | USB 串口 DFU、BLE OTA |
-| `clip-<version>-*-merged.hex` | 包含 MCUboot、应用和网络核的完整镜像 | 需要 J-Link 等调试器 |
-| `clip-<version>-*-merged_CPUNET.hex` | 仅包含网络核镜像 | 需要 J-Link 等调试器 |
+| `clip-<version>-*-ota.zip` | 多镜像更新包，通常包含 app 和网络核 | USB 串口 DFU、BLE OTA |
+| `clip-<version>-*-merged.hex` | 包含 MCUboot、app 和网络核的完整镜像 | 需要 J-Link 等调试器 |
+| `clip-<version>-*-merged_CPUNET.hex` | 仅网络核镜像 | 需要 J-Link 等调试器 |
 
 对于常规的蓝牙 OTA 更新，优先使用 `-ota.zip`。对于通过恢复模式进行的开发者烧录，优先选择带有 `single` 后缀的固件包。典型的 Clip SDK 变更通常只影响应用分区，无需更新网络核。`-merged.hex` 和 `-merged_CPUNET.hex` 主要用于开发、生产或基于调试器的烧录。
 
@@ -349,12 +349,12 @@ OTA 过程中，请保持手机靠近设备，不要将 nRF Connect 置于后台
 
 1. 确认 USB 线缆支持数据传输。
 2. 将 USB 线缆插入充电底座。
-3. 将 reSpeaker Clip 放到充电底座上，轻轻旋转设备，使充电触点牢固接触。
+3. 将 reSpeaker Clip 放到充电底座上，并轻轻旋转设备，确保充电触点牢固接触。
 4. 当屏幕显示 USB / 充电图标后，长按 **Action Button**，直到屏幕显示 **Recovery Mode**。
-5. 当屏幕显示 **Recovery Mode** 时，设备已成功进入 USB 串口恢复模式，并会枚举为一个串口：
-   - Windows: `COMx`
-   - macOS: `/dev/cu.usbmodem*`
-   - Linux: `/dev/ttyACM0`
+5. 当屏幕显示 **Recovery Mode** 时，设备已成功进入 USB 串口恢复模式，并应枚举为一个串口：
+   - Windows：`COMx`
+   - macOS：`/dev/cu.usbmodem*`
+   - Linux：`/dev/ttyACM0`
 
 在 Windows 上，设备可能会枚举出多个虚拟串口，例如：
 
@@ -368,7 +368,7 @@ Traits          serialPorts, usb
 进行烧录时，优先尝试对应 `vcom: 1` 的串口，例如上例中的 `COM11`。如果连接或上传失败，再尝试另一个串口。
 
 :::note
-恢复模式需要 USB/VBUS 检测。在进入该模式前，请确保充电底座触点连接牢固。如果屏幕没有显示 USB / 充电图标，设备可能虽然物理上放在底座上，但实际上并未连接到 USB。
+恢复模式需要 USB/VBUS 检测。在进入该模式前，请确保充电底座触点连接牢固。如果屏幕没有显示 USB / 充电图标，设备可能只是物理上放在底座上，但实际上没有连接到 USB。
 :::
 
 ##### 使用 nrfutil mcu-manager 烧录
@@ -406,7 +406,7 @@ nrfutil mcu-manager serial image-upload \
     --serial-port COMx
 ```
 
-如需完整的应用 + 网络核更新，请上传 `-ota.zip`：
+对于完整的应用 + 网络核更新，请上传 `-ota.zip`：
 
 ```bash
 nrfutil mcu-manager serial image-upload \
@@ -420,7 +420,7 @@ nrfutil mcu-manager serial image-upload \
 nrfutil mcu-manager serial reset --serial-port COMx
 ```
 
-将 `COMx` 替换为 Windows 设备管理器或 `nrfutil device list` 中显示的实际串口号。如果设备显示多个 `vcom` 端口，优先尝试对应 `vcom: 1` 的端口。如果连接或上传失败，请切换到另一个端口再试。在 macOS / Linux 上，请使用 `/dev/cu.usbmodem*` 或 `/dev/ttyACM0`。
+将 `COMx` 替换为 Windows 设备管理器或 `nrfutil device list` 中显示的实际串口。如果设备显示多个 `vcom` 端口，优先尝试对应 `vcom: 1` 的端口。如果连接或上传失败，请切换到另一个端口重试。在 macOS / Linux 上，请使用 `/dev/cu.usbmodem*` 或 `/dev/ttyACM0`。
 
 :::tip
 如果烧录进度停留在 100% 且工具没有自动退出，请不要反复拔插设备。运行：
@@ -434,15 +434,15 @@ nrfutil mcu-manager serial reset --serial-port COMx
 
 #### 更多固件更新方式
 
-如需基于调试器的烧录方式或更多恢复模式排障方法，请参考 reSpeaker Clip 高级固件更新指南（即将推出）。
+对于基于调试器的烧录或更多 Recovery 模式故障排查方法，请参考 reSpeaker Clip 高级固件更新指南（即将推出）。
 
 ## 开发指南
 
-在开发者和企业集成场景中，可以通过固件 SDK、应用 SDK 和通信协议扩展 reSpeaker Clip 的能力。
+在开发者和企业集成场景中，可以通过固件 SDK、应用 SDK 和通信协议扩展 reSpeaker Clip。
 
 ### 固件 SDK
 
-reSpeaker Clip 固件基于 nRF Connect SDK / Zephyr RTOS 构建，运行在 nRF5340 + nRF7002 平台上。它不是单一的驱动示例，而是围绕音频采集、状态机、BLE / Wi-Fi 通信、文件管理、固件更新和低功耗管理组织的设备端框架。
+reSpeaker Clip 固件基于 nRF Connect SDK / Zephyr RTOS 构建，运行在 nRF5340 + nRF7002 平台上。它不是一个单一的驱动示例，而是一个围绕音频采集、状态机、BLE / Wi-Fi 通信、文件管理、固件更新和低功耗管理组织的设备端框架。
 
 固件系统架构：
 
@@ -458,11 +458,11 @@ reSpeaker Clip 固件基于 nRF Connect SDK / Zephyr RTOS 构建，运行在 nRF
 
 一个典型的开发流程是：搭建 Zephyr / nRF Connect SDK 环境，获取 reSpeaker Clip 固件工程，确认板级目标和配置文件，构建并烧录固件，查看串口日志，最后通过 SenseCraft Voice App 或 BLE / Wi-Fi 协议验证录音、文件同步和固件更新。
 
-前往固件 SDK 文档查看下一步操作：
+前往固件 SDK 文档继续下一步：
 
-- [reSpeaker Clip 固件 SDK 入门](/cn/respeaker_clip_firmware_quick_start/)：涵盖环境搭建、构建、烧录和冒烟测试。
-- [reSpeaker Clip 固件开发指南](/cn/respeaker_clip_firmware_development_guide/)：说明固件架构、通信协议、更新与恢复路径、验证和量产发布。
-- [定制化：添加自定义 AT 命令](/cn/respeaker_clip_customization_at_command/)：演示如何添加并验证新的 AT 命令，包括一个使用仓库固件 Skill 的 AI 提示词。
+- [reSpeaker Clip 固件 SDK 入门](/cn/respeaker_clip_firmware_quick_start/) 涵盖环境搭建、构建、烧录和冒烟测试。
+- [reSpeaker Clip 固件开发指南](/cn/respeaker_clip_firmware_development_guide/) 说明固件架构、通信协议、更新与恢复路径、验证以及量产发布。
+- [定制化：添加自定义 AT 命令](/cn/respeaker_clip_customization_at_command/) 展示如何添加并验证新的 AT 命令，包括一个使用仓库固件 Skill 的 AI 提示词。
 
 ### 应用 SDK
 
@@ -480,7 +480,7 @@ reSpeaker Clip 可用于 To B 业务场景，并与企业工具链集成，形�
 
 ### 零售服务培训
 
-零售销售和服务人员可以佩戴 reSpeaker Clip 记录与客户的对话。对话结束后，AI 可以从录音中生成客户需求总结和可执行待办事项，帮助团队提升服务质量、跟进效率和转化率。
+零售销售和服务人员可以佩戴 reSpeaker Clip 记录与客户的对话。会话结束后，AI 可以从录音中生成客户需求总结和可执行待办事项，帮助团队提升服务质量、跟进效率和转化率。
 
 ### 会议纪要
 
@@ -488,11 +488,94 @@ reSpeaker Clip 可用于 To B 业务场景，并与企业工具链集成，形�
 
 ### 访谈与调研
 
-在用户访谈、市场调研和客户走访中，reSpeaker Clip 帮助采集原始语音数据，并将录音整理为可检索、可回顾的文字资料。
+在用户访谈、市场调研和客户走访中，reSpeaker Clip 帮助采集原始语音数据，并将录音整理为可检索、可回顾的文本资料。
 
 ### 企业定制
 
-企业可以利用开放 SDK 将 reSpeaker Clip 与内部办公系统、CRM、知识库、项目管理工具或私有部署的 LLM 集成。有数据合规要求的组织也可以构建专属的 AI 语音助手和私有语音分析工作流。
+企业可以使用开放 SDK 将 reSpeaker Clip 与内部办公系统、CRM、知识库、项目管理工具或私有部署的 LLM 集成。有数据合规要求的组织也可以构建专属的 AI 语音助手和私有语音分析工作流。
+
+## 选择合适的 reSpeaker Clip 指南
+
+reSpeaker Clip 文档按开发层次组织。首先从 **Getting Started** 开始进行产品上手和常规工作流。主机应用需要控制设备或下载录音时使用 **Basic SDK**。当需要由一个长时间运行的服务来管理设备连接并对外暴露 API 时，继续查看 **Service Integration**。只有在需要修改设备端行为、协议或音频处理时，才使用 **Firmware SDK**。
+
+<div className="row">
+  <div className="col col--6 margin-bottom--lg">
+    <a [LINE_125]      href="/cn/respeaker_clip/"
+      aria-label="Open the reSpeaker Clip Getting Started guide"
+      aria-current="page"
+      className="card shadow--md respeaker-clip-nav-card respeaker-clip-nav-card--active"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+      >
+    <img
+      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>产品概览、硬件连接和首次使用工作流。</p>
+        </div>
+      </a>
+    </div>
+
+  <div className="col col--6 margin-bottom--lg">
+  <a [LINE_145]      href="/cn/respeaker_clip_basic_sdk_guide/"
+    aria-label="Open the reSpeaker Clip Basic SDK guide"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+      >
+      <img
+    src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
+      alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        />
+        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
+      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>在不修改固件的前提下控制设备、管理录音并下载音频。</p>
+        </div>
+        </a>
+      </div>
+
+  <div className="col col--6 margin-bottom--lg">
+    <a [LINE_164]      href="/cn/respeaker_clip_service_integration/"
+  aria-label="Open the reSpeaker Clip Service Integration guide"
+    className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+      >
+      <img
+      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
+    alt=""
+      style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        />
+        <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
+      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>通过适配器和 API 路由，将 reSpeaker Clip 接入长时间运行的 Python 服务。</p>
+      </div>
+        </a>
+        </div>
+
+    <div className="col col--6 margin-bottom--lg">
+  <a [LINE_183]      href="/cn/respeaker_clip_firmware_quick_start/"
+      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
+  className="card shadow--md respeaker-clip-nav-card"
+    style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+      >
+      <img
+      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+      alt=""
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>固件 SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>构建、烧录、调试并自定义设备端行为。</p>
+      </div>
+    </a>
+  </div>
+</div>
 
 ## 问答
 
@@ -500,7 +583,7 @@ reSpeaker Clip 可用于 To B 业务场景，并与企业工具链集成，形�
 
 如果设备无法开机或充电，请检查以下内容：
 
-- 确认设备正确放置在充电底座上，磁吸触点没有错位。
+- 确认设备已正确放置在充电底座上，且磁吸触点未错位。
 - 检查 USB-C 线缆和电源适配器是否工作正常。
 - 清洁设备底部和充电底座上的磁吸充电触点，避免灰尘或异物影响接触。
 - 充电 10 分钟后，再次长按电源键。
@@ -511,16 +594,16 @@ reSpeaker Clip 可用于 To B 业务场景，并与企业工具链集成，形�
 如果手机无法与 reSpeaker Clip 配对，请尝试以下操作：
 
 - 确认设备已开机，且未连接到其他手机。
-- 在手机上开启蓝牙权限，并允许 SenseCraft Voice App 使用蓝牙。
+- 在手机上启用蓝牙权限，并允许 SenseCraft Voice App 使用蓝牙。
 - 将手机靠近设备后重新扫描。
 - 在手机系统蓝牙列表中删除旧的 reSpeaker Clip 配对记录，然后重新配对。
 - 重启设备和应用后再试。
 
 ### 录音文件传输中断
 
-如果录音文件传输过程中断，请检查以下内容：
+如果录音文件传输过程中中断，请检查以下内容：
 
-- 保持手机和设备彼此靠近。
+- 保持手机与设备之间的距离足够近。
 - 确认设备电量充足。
 - 检查 Wi-Fi 或 BLE 连接是否稳定。
 - 保持应用在前台运行。
@@ -534,14 +617,14 @@ reSpeaker Clip 可用于 To B 业务场景，并与企业工具链集成，形�
 - 路由器是否未屏蔽新设备。
 - 手机和设备是否靠近路由器。
 - 当前网络是否可以正常访问互联网。
-- 如果你使用的是需要网页认证的企业网络或公共网络，请切换到普通家庭网络或手机热点进行测试。
+- 如果使用的是需要网页认证的企业网络或公共网络，请切换到普通家庭网络或手机热点进行测试。
 
-### App 无法发现设备
+### App 无法找到设备
 
-如果 SenseCraft Voice App 无法发现设备，请尝试以下操作：
+如果 SenseCraft Voice App 无法找到设备，请尝试以下操作：
 
 - 确认设备已开机并处于可连接状态。
-- 确认已为应用授予蓝牙、定位或附近设备权限。
+- 确认已为应用授予蓝牙、位置信息或附近设备等权限。
 - 将手机靠近设备后重新扫描。
 - 退出并重新打开应用。
 - 重启 reSpeaker Clip 并重新添加设备。
@@ -553,25 +636,25 @@ reSpeaker Clip 可用于 To B 业务场景，并与企业工具链集成，形�
 - 确保设备电量充足，并在更新过程中不要断电。
 - 保持手机、设备和网络连接稳定。
 - 更新过程中不要关闭应用或切换网络。
-- 如果失败后设备仍能正常启动，请打开应用重新发起更新。
-- 如果设备无法正常启动，请按照后文恢复模式或固件烧录文档操作，并联系技术支持。
+- 如果更新失败后设备仍能正常开机，请打开应用并重新开始更新。
+- 如果设备无法正常开机，请按照后文的恢复模式或固件烧录文档操作，并联系技术支持。
 
 ## 资源
 
 | 资源 | 链接 |
 | --- | --- |
-| 产品页面 | [reSpeaker Clip 可穿戴 AI 录音笔](https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html) |
+| 产品页面 | [reSpeaker Clip 可穿戴 AI 录音机](https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html) |
 | SenseCraft Voice App 下载 | [下载页面](https://sensecraft-voice-download.seeed.cc/) |
-| 固件下载 | 即将推出 |
-| 固件 SDK 文档 | [固件 SDK 入门](/cn/respeaker_clip_firmware_quick_start) |
+| 固件下载 | 敬请期待 |
+| 固件 SDK 文档 | [固件 SDK 入门指南](/cn/respeaker_clip_firmware_quick_start) |
 | SDK 仓库 | [reSpeaker Clip GitHub](https://github.com/Seeed-Studio/reSpeaker_Clip) |
 | 用户手册 | <a href="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_user_manual.pdf" target="_blank" rel="noopener noreferrer">reSpeaker Clip 用户手册</a> |
-| 数据手册 | 即将推出 |
-| 结构图纸 | 即将推出 |
+| 数据手册 | 敬请期待 |
+| 机械图纸 | 敬请期待 |
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

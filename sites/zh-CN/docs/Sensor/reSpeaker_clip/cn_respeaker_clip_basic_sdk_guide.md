@@ -1,5 +1,5 @@
 ---
-description: "reSpeaker Clip Basic SDK 的系统化指南——传输方式、通信协议、录音状态机、文件模型、端到端数据流，以及作为主要参考实现的 Python SDK（配套 CLI 和 Web 工具）。"
+description: reSpeaker Clip Basic SDK 的系统化指南——传输方式、通信协议、录音状态机、文件模型、端到端数据流，以及作为主要参考实现的 Python SDK（附带 CLI 和 Web 工具）。
 title: reSpeaker Clip Basic SDK 指南
 keywords:
   - reSpeaker clip
@@ -14,7 +14,7 @@ last_update:
   date: 07/13/2026
   author: Ray He / Kasun Thushara
 createdAt: '2026-07-13'
-updatedAt: '2026-07-24'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/cn/respeaker_clip_basic_sdk_guide/
 ---
 
@@ -22,12 +22,12 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_basic_sdk_guide/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg" alt="reSpeaker Clip" width={800} height="auto" /></p>
 
-> 版本：与 `clip` 包 `__version__ = 1.0.0` 匹配  
-> 产品：reSpeaker Clip 可穿戴录音器
+> 版本：与 `clip` 包 `__version__ = 1.0.0` 保持一致  
+> 产品：reSpeaker Clip 可穿戴录音设备
 
-## 概述
+## 概览
 
-reSpeaker Clip Basic SDK 指南解释了主机端应用如何通过 BLE、Wi-Fi、AT 命令、GATT 和文件传输流程与设备通信并控制设备。Python SDK 作为主要参考实现提供，同时配套 CLI 和基于 Web 的工具。
+reSpeaker Clip Basic SDK 指南解释了主机端应用如何通过 BLE、Wi-Fi、AT 命令、GATT 和文件传输流程与设备通信并控制设备。Python SDK 作为主要参考实现提供，同时附带 CLI 和基于 Web 的工具。
 
 本指南涵盖：
 
@@ -37,13 +37,13 @@ reSpeaker Clip Basic SDK 指南解释了主机端应用如何通过 BLE、Wi-Fi�
 - **端到端数据流** —— 从连接到下载音频输出的全过程。
 - **参考实现** —— Python SDK（`clip` 包）、CLI 工具和 Web 界面。
 
-Basic SDK 侧重于从主机端使用设备当前具备的能力。它本身不包含云端转写、AI 总结、账号管理或移动应用服务。这些工作流应构建在已下载的音频文件之上，或与其他服务集成实现。
+Basic SDK 侧重于从主机端使用设备当前具备的能力。它本身不包含云端转写、AI 总结、账号管理或移动应用服务。这些工作流应基于已下载的音频文件构建，或与其他服务集成。
 
-## 本指南的定位
+## 本指南在整体文档中的位置
 
 如果你是第一次接触 reSpeaker Clip，请先阅读 [reSpeaker Clip 入门指南](/cn/respeaker_clip)。
 
-入门指南介绍了产品、目标场景、硬件能力以及普通用户的使用流程。
+入门指南介绍产品、目标场景、硬件能力以及普通用户的使用流程。
 
 本指南聚焦于应用侧开发：
 
@@ -53,30 +53,86 @@ Basic SDK 侧重于从主机端使用设备当前具备的能力。它本身不�
 - 理解 AT 命令、GATT 和文件传输协议；
 - 通过 Python、CLI 或 Web 工具集成这些能力。
 
-## Basic SDK 与 Firmware SDK
+## 选择合适的 reSpeaker Clip 指南
 
-reSpeaker Clip SDK 被拆分为两层：
+reSpeaker Clip 文档按开发层次进行组织。首先使用 **入门指南（Getting Started）** 完成产品设置和常规工作流。当主机应用需要控制设备或下载录音时，使用 **Basic SDK**。当需要由一个长时间运行的服务来管理设备连接并对外提供 API 时，继续阅读 **服务集成（Service Integration）**。只有在你需要修改设备端行为、协议或音频处理时，才使用 **固件 SDK（Firmware SDK）**。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_basic_firmware.png" alt="Basic SDK vs Firmware SDK" width={900} height="auto" /></p>
+<div className="row">
+  <div className="col col--6 margin-bottom--lg">
+    <a [LINE_62]      href="/cn/respeaker_clip/"
+      aria-label="Open the reSpeaker Clip Getting Started guide"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+      >
+    <img
+      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>产品概览、硬件设置和首次使用流程。</p>
+        </div>
+      </a>
+    </div>
 
-本指南中介绍的概念（传输方式、协议、状态机、数据流）由设备端固件实现。下表将每个 Basic SDK 概念映射到其 Firmware SDK 对应部分：
+  <div className="col col--6 margin-bottom--lg">
+  <a [LINE_81]      href="/cn/respeaker_clip_basic_sdk_guide/"
+    aria-label="Open the reSpeaker Clip Basic SDK guide"
+      aria-current="page"
+      className="card shadow--md respeaker-clip-nav-card respeaker-clip-nav-card--active"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+      >
+      <img
+    src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
+      alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        />
+        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
+      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>在不修改固件的情况下控制设备、管理录音并下载音频。</p>
+        </div>
+        </a>
+      </div>
 
-| Basic SDK 概念 | Firmware SDK 对应部分 |
-| --- | --- |
-| BLE / Wi-Fi 传输 | 设备端 BLE 和 UDP 服务实现 |
-| AT 命令 | AT 服务器和命令注册 |
-| GATT | GATT 服务和特征值 |
-| 录音状态机 | 设备录音状态和事件处理 |
-| 文件传输 | 存储、分片、CRC 和同步实现 |
-| 音频数据流 | PDM -> DSP -> Opus -> 文件流水线 |
+  <div className="col col--6 margin-bottom--lg">
+    <a [LINE_101]      href="/cn/respeaker_clip_service_integration/"
+  aria-label="Open the reSpeaker Clip Service Integration guide"
+    className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+      >
+      <img
+      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
+    alt=""
+      style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        />
+        <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
+      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>通过适配器和 API 路由，将 reSpeaker Clip 集成到长时间运行的 Python 服务中。</p>
+      </div>
+        </a>
+        </div>
 
-如果你的目标是添加新的 AT 命令、更改 GATT 服务、修改录音状态机或调整音频处理链，请使用 Firmware SDK：
+    <div className="col col--6 margin-bottom--lg">
+  <a [LINE_120]      href="/cn/respeaker_clip_firmware_quick_start/"
+      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
+  className="card shadow--md respeaker-clip-nav-card"
+    style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+      >
+      <img
+      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+      alt=""
+    style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Firmware SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>构建、烧录、调试并自定义设备端行为。</p>
+      </div>
+      </a>
+        </div>
+        </div>
 
-- [reSpeaker Clip Firmware SDK 入门](/cn/respeaker_clip_firmware_quick_start/) 涵盖环境搭建、构建、烧录和冒烟测试。
-- [reSpeaker Clip 固件开发指南](/cn/respeaker_clip_firmware_development_guide/) 解释固件架构、协议内部细节、更新与恢复路径、验证、量产发布以及 AI 辅助开发。
-- [定制化：添加自定义 AT 命令](/cn/respeaker_clip_customization_at_command/) 演示如何添加并验证一个新的 AT 命令。
-
-## 安装
+    ## 安装
 
 ### 环境要求
 
@@ -88,20 +144,24 @@ reSpeaker Clip SDK 被拆分为两层：
 
 你可以在 [这里](https://github.com/Seeed-Projects/respeaker_clip_python/tree/main) 找到 GitHub 仓库。
 
-```bash
-git clone <repository-url>
-```
-
-### 安装依赖
-
-在激活虚拟环境之后，安装所需依赖：
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 
 ```bash
-pip install -r requirements.txt
+
 ```
 
-## 项目结构
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 
+```bash
+
+```
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 ```
 applications/clip/tests/
 ├── clip/                    SDK library (importable)
@@ -134,14 +194,10 @@ applications/clip/tests/
 │   └── test_unit.py         Unit tests (no device required)
 ├── workspace/               Example workspace scripts
 │   └── complete_example.py
-├── requirements.txt
+
 ├── README.md           
-└── pytest.ini
+
 ```
-
-### SDK 模块
-
-| 模块          | 描述                     |
 | ------------- | ------------------------ |
 | client.py     | BLE 设备通信             |
 | commands.py   | 高层 AT 命令             |
@@ -161,19 +217,23 @@ Python SDK 支持以下工作流：
 - **配置设备**：录音模式、比特率、复杂度、自动删除策略、OLED 亮度、BLE 设备名及相关设置。
 - **控制录音**：开始、停止、暂停、恢复以及添加书签。
 - **管理会话**：列出、查询、删除、清理以及格式化 SD 卡。
-- **下载文件**：通过 BLE 或 Wi-Fi/UDP 传输录音，支持断点续传。
+- **下载文件**：通过 BLE 或 Wi-Fi/UDP 传输录音，并支持断点续传。
 - **转换音频**：将设备原始 Opus 数据重新封装为 OGG/Opus，或通过 Opus 解码路径解码为 16 kHz 单声道 WAV。
 - **读取状态和事件**：电池电量、充电状态、设备状态、状态机变化以及实时音频可视化回调。
+- **Manage sessions**: list, query, delete, purge, and format the SD card.
+- **Download files**: transfer recordings over BLE or Wi-Fi/UDP, with resume support.
+- **Convert audio**: re-container device raw Opus data into OGG/Opus, or decode to 16 kHz mono WAV through an Opus decoding path.
+- **Read status and events**: battery level, charging state, device state, state-machine changes, and real-time audio-visualization callbacks.
 
 传输方式的选择很重要：
 
-- 通过 `ClipDevice` 使用 BLE 进行便携式配置、录音控制和小文件下载。
-- 通过 `WiFiDevice` 或 `WiFiSync` 使用 Wi-Fi/UDP 进行批量下载。对于大型录音会话，它更快也更稳定。
+- 通过 `ClipDevice` 使用 BLE，用于便携式配置、录音控制和小文件下载。
+- 通过 `WiFiDevice` 或 `WiFiSync` 使用 Wi-Fi/UDP 进行批量下载。对于大规模录音会话，它更快且更稳定。
 - 录音控制仅支持 BLE。文件下载在 BLE 和 Wi-Fi 上都可用。
 
 ## 核心概念
 
-本节描述 Basic SDK 使用的主机端视角。关于
+本节描述 Basic SDK 使用的主机端视图。有关
 设备端实现细节，请参阅对应的固件开发指南
 章节：
 
@@ -181,25 +241,25 @@ Python SDK 支持以下工作流：
 | --- | --- |
 | 传输方式 | [通信协议](/cn/respeaker_clip_firmware_development_guide/#communication-protocol) |
 | 录音模式 | [录音模式](/cn/respeaker_clip_firmware_development_guide/#recording-modes) |
-| 设备状态 | [事件与状态模型](/cn/respeaker_clip_firmware_development_guide/#event-and-state-model) |
-| 文件格式和会话 | [会话、分片与存储模型](/cn/respeaker_clip_firmware_development_guide/#session-chunking-and-storage-model) |
-| AT 命令协议 | [AT 命令语法](/cn/respeaker_clip_firmware_development_guide/#at-command-grammar)、[JSON 响应约定](/cn/respeaker_clip_firmware_development_guide/#json-response-contract) 以及 [已注册命令参考](/cn/respeaker_clip_firmware_development_guide/#registered-command-reference) |
-| GATT 特征值 | [BLE GATT 服务](/cn/respeaker_clip_firmware_development_guide/#ble-gatt-service) |
-| 文件传输与续传 | [UDP 帧类型](/cn/respeaker_clip_firmware_development_guide/#udp-frame-types) 和 [会话与文件寻址](/cn/respeaker_clip_firmware_development_guide/#session-and-file-addressing) |
-| 端到端数据流 | [系统架构](/cn/respeaker_clip_firmware_development_guide/#system-architecture) 和 [音频流水线](/cn/respeaker_clip_firmware_development_guide/#audio-pipeline) |
+| 设备状态 | [事件和状态模型](/cn/respeaker_clip_firmware_development_guide/#event-and-state-model) |
+| 文件格式和会话 | [会话、分块和存储模型](/cn/respeaker_clip_firmware_development_guide/#session-chunking-and-storage-model) |
+| AT 命令协议 | [AT 命令语法](/cn/respeaker_clip_firmware_development_guide/#at-command-grammar)、[JSON 响应约定](/cn/respeaker_clip_firmware_development_guide/#json-response-contract) 和 [已注册命令参考](/cn/respeaker_clip_firmware_development_guide/#registered-command-reference) |
+| GATT 特征 | [BLE GATT 服务](/cn/respeaker_clip_firmware_development_guide/#ble-gatt-service) |
+| 文件传输和续传 | [UDP 帧类型](/cn/respeaker_clip_firmware_development_guide/#udp-frame-types) 和 [会话与文件寻址](/cn/respeaker_clip_firmware_development_guide/#session-and-file-addressing) |
+| 端到端数据流 | [系统架构](/cn/respeaker_clip_firmware_development_guide/#system-architecture) 和 [音频处理流水线](/cn/respeaker_clip_firmware_development_guide/#audio-pipeline) |
 
 ### 传输方式
 
 | 传输方式 | 类 | 使用场景 | 说明 |
 | --- | --- | --- | --- |
-| BLE | `ClipDevice` | 配置、录音控制、会话下载 | 便携且录音控制必需。批量下载可能较慢，并且在高负载下可能丢失通知。 |
-| Wi-Fi/UDP | `WiFiDevice` / `WiFiSync` | 批量会话下载 | 对于大文件更快、更稳定。需要在设备上启用 Wi-Fi 并连接到 `ClipAP_XXXX`。 |
+| BLE | `ClipDevice` | 配置、录音控制、会话下载 | 便携，并且录音控制必须使用。批量下载可能较慢，并且在高负载下可能丢失通知。 |
+| Wi-Fi/UDP | `WiFiDevice` / `WiFiSync` | 批量会话下载 | 对于大文件更快、更稳定。需要在设备上启用 Wi-Fi 并加入 `ClipAP_XXXX`。 |
 
 ### 录音模式
 
 | 模式 | 描述 |
 | --- | --- |
-| `normal` | 标准录音路径，不启用 SpeexDSP 降噪/去混响。设备 AGC、高通和限幅器仍可能由固件启用。 |
+| `normal` | 标准录音路径，不启用 SpeexDSP 降噪 / 去混响。设备 AGC、高通和限幅器仍可能由固件启用。 |
 | `enhanced` | 启用 SpeexDSP 降噪和去混响的增强路径。 |
 
 `set_mode()` 只接受 `normal` 和 `enhanced`。`start_recording()` 还接受别名 `stereo` 和 `merge`；`stereo` 映射到 `normal`，`merge` 映射到 `enhanced`。
@@ -208,7 +268,7 @@ Python SDK 支持以下工作流：
 
 ### 设备状态
 
-一次录音被表示为一个会话。会话 ID 通常是类似 `YYYYMMDDHHMMSS` 的时间戳风格字符串。
+一次录音被表示为一个会话。会话 ID 通常是一个类似时间戳的字符串，例如 `YYYYMMDDHHMMSS`。
 
 ```text
 IDLE --start_recording--> RECORDING --stop_recording--> IDLE
@@ -224,7 +284,7 @@ IDLE --start_recording--> RECORDING --stop_recording--> IDLE
 
 ### 文件格式
 
-设备将录音数据存储为原始 Opus 帧，而不是 OGG 容器。原始格式是由长度前缀的 Opus 帧序列组成：
+设备将录音数据存储为原始 Opus 帧，而不是 OGG 容器。原始格式是一个长度前缀的 Opus 帧序列：
 
 ```text
 [2-byte little-endian length][opus frame][2-byte little-endian length][opus frame]...
@@ -236,7 +296,7 @@ IDLE --start_recording--> RECORDING --stop_recording--> IDLE
 
 - SDK 会向 CMD 特征写入 UTF-8 AT 字符串，例如 `AT+MODE=enhanced`。
 - 响应是 `RESP_SEND` 上的 JSON 通知，例如 `{"ok":true,"data":{...}}`。
-- 非请求事件（如状态变化）看起来像 `{"event":"state","state":"RECORDING",...}`，并通过 `event_callback` 分发。
+- 非请求事件（如状态变化）形如 `{"event":"state","state":"RECORDING",...}`，并通过 `event_callback` 分发。
 
 ### GATT 特征
 
@@ -261,9 +321,9 @@ IDLE --start_recording--> RECORDING --stop_recording--> IDLE
 
 每个文件都会通过 CRC32 校验。只有通过校验的文件才应视为成功保存。
 
-### 断点续传
+### 续传
 
-`SessionSync.sync()` 具备断点续传感知能力。它可以检测已有的本地 `.opus` 文件，查询设备的已同步文件计数器，计算 `start_file`，并继续之前的下载。使用 `force=True` 可从头开始。
+`SessionSync.sync()` 具备续传感知能力。它可以检测已有的本地 `.opus` 文件，查询设备的已同步文件计数，计算 `start_file`，并继续之前的下载。使用 `force=True` 可从头开始。
 
 ### 数据流
 
@@ -275,9 +335,9 @@ IDLE --start_recording--> RECORDING --stop_recording--> IDLE
 
 1. 通过 BLE 自动连接
 2. 检查电池电量
-3. 将录音模式设置为增强模式
+3. 将录音模式设置为 enhanced
 4. 开始一次 10 秒录音
-5. 在录音中途添加书签
+5. 在录音过程中添加书签
 6. 停止录音
 7. 将会话文件同步到 `recordings/<session_id>/`
 
@@ -436,7 +496,7 @@ session_id = await cmds.start_recording("normal")   # returns str (session ID)
 await cmds.stop_recording()                          # returns dict with session info
 ```
 
-> `"normal"` 为单声道，`"enhanced"` 启用 DSP 预处理（降噪、自动增益控制 AGC）。
+> `"normal"` 为单声道，`"enhanced"` 启用 DSP 预处理（降噪、AGC）。
 
 #### 暂停 / 恢复录音
 
@@ -472,7 +532,7 @@ for s in sessions:
     print(s.id, s.files, s.size)
 ```
 
-#### 同步一个会话（BLE）
+#### 同步会话（BLE）
 
 ```python
 from pathlib import Path
@@ -545,7 +605,7 @@ await cmds.set_config_dict({
 
 ### WiFi 通信
 
-当 Clip 的 AP 启用时，它可以通过 WiFi UDP 进行通信。
+当 Clip 的 AP 启用时，可以通过 WiFi UDP 通信。
 
 | 参数 | 值           |
 |-----------|-----------------|
@@ -567,7 +627,7 @@ async def main():
 asyncio.run(main())
 ```
 
-#### 通过 WiFi 同步一个会话（阻塞 API）
+#### 通过 WiFi 同步会话（阻塞 API）
 
 ```python
 from pathlib import Path
@@ -579,7 +639,7 @@ sync.download_session(session_id, Path("recordings"))
 sync.disconnect()
 ```
 
-> `WiFiSync` 是**同步的**（阻塞套接字）——不需要 `async`/`await`。
+> `WiFiSync` 是**同步**的（阻塞套接字）——不需要 `async`/`await`。
 
 ---
 
@@ -607,7 +667,7 @@ except CommandError as e:
 
 SDK 包含多个开箱即用的实用工具。
 
-### clip-cli -统一 CLI
+### clip-cli - 统一 CLI
 
 #### BLE（默认）
 
@@ -798,7 +858,7 @@ http://localhost:5000
 
 ### REST API
 
-| Method | Endpoint |
+| 方法 | 端点 |
 | --- | --- |
 | GET | `/api/status` |
 | GET | `/api/version` |
@@ -814,12 +874,12 @@ http://localhost:5000
 
 ## 核心模块
 
-| Module | 主要用途 |
+| 模块 | 主要用途 |
 | --- | --- |
 | `ClipDevice` | BLE 连接、配对、AT 命令传输、通知和传输进度 |
 | `ClipCommands` | 设备 AT 命令的高级封装 |
-| `FileTransfer` / `SessionSync` | BLE 会话下载和支持断点续传的同步 |
-| `WiFiDevice` / `WiFiSync` | 适用于大体积传输的 Wi-Fi/UDP 下载流程 |
+| `FileTransfer` / `SessionSync` | BLE 会话下载和可恢复同步 |
+| `WiFiDevice` / `WiFiSync` | 面向大体积传输的 Wi-Fi/UDP 下载流程 |
 | `codec` | 原始 Opus 帧解析和 OGG/Opus 写入 |
 | `utils` | 会话 ID 解析、格式化辅助函数、配置加载、进度报告和文件工具 |
 | `exceptions` | SDK 专用异常类 |
@@ -830,21 +890,21 @@ http://localhost:5000
 
 ***BLE 设备通信与连接管理。***
 
-| Signature | 返回值 | 说明 |
+| 签名 | 返回值 | 说明 |
 |-----------|---------|-------|
 | `ClipDevice(address=None, name_filter="Clip", debug=False)` | `ClipDevice` | 当 `address` 为 `None` 时自动发现 |
 | `await connect(timeout=10.0, sync_time=True, lazy_device_name=False)` | `None` | 重试 3 次；`sync_time` 自动设置设备时钟 |
 | `await disconnect()` | `None` | 停止所有 BLE 通知 |
 | `await send_command(command, timeout=10.0)` | `dict` | 发送 AT 命令，获取 JSON 响应 |
 | `is_connected` | `bool` | 属性——同时检查 `_connected` 和 `client.is_connected` |
-| `device_name` | `str | None` | 属性——如果已发现则为设备名称 |
+| `device_name` | `str | None` | 属性——若已发现则为设备名称 |
 | `await __aenter__()` / `await __aexit__()` | `ClipDevice` / `None` | 异步上下文管理器 |
 
 ### ClipCommands
 
 ***高级 AT 命令接口。***
 
-| Signature | 返回值 | 说明 |
+| 签名 | 返回值 | 说明 |
 |-----------|---------|-------|
 | `await get_version()` | `VersionInfo` | `.firmware`、`.hardware`、`.sdk`、`.build` |
 | `await get_state()` | `DeviceState` | `.state`、`.battery`、`.mode`、`.bitrate`、`.charging`、`.free_space` |
@@ -859,7 +919,7 @@ http://localhost:5000
 | `await resume_recording()` | `bool` | |
 | `await add_bookmark()` | `BookmarkInfo` | `.offset` 为自会话开始起的秒数 |
 | `await get_bookmarks(session_id, fetch_all=True)` | `List[BookmarkInfo]` | 分页，自动获取所有页 |
-| `await get_bookmarks_count(session_id)` | `int` | 快速计数，不含详情 |
+| `await get_bookmarks_count(session_id)` | `int` | 快速计数，无详细信息 |
 | **会话** | | |
 | `await list_sessions(page=1, per_page=10)` | `List[SessionInfo]` | `.id`、`.files`、`.size`、`.synced_files`、`.mode` |
 | `await list_all_sessions(per_page=15)` | `List[SessionInfo]` | 自动分页获取全部 |
@@ -872,11 +932,11 @@ http://localhost:5000
 | `await get_mode()` | `str` | |
 | `await set_mode(mode)` | `bool` | 仅支持 `"normal"` 或 `"enhanced"` |
 | `await get_auto_delete()` | `bool` | |
-| `await set_auto_delete(days)` | `bool` | `days`：0–30，传入 `-1` 以禁用 |
+| `await set_auto_delete(days)` | `bool` | `days`：0–30，传 `-1` 以禁用 |
 | `await get_brightness()` | `int` | 0–255 |
 | `await set_brightness(value)` | `bool` | 0–255 |
 | `await get_device_name()` | `str` | BLE 设备名称 |
-| `await set_device_name(name)` | `bool` | 最长 15 个字符 |
+| `await set_device_name(name)` | `bool` | 最多 15 个字符 |
 | `await get_config_dict()` | `Dict[str, Any]` | 所有设置；不支持的键返回 `None` |
 | `await set_config_dict(config, ignore_errors=True)` | `None` | 跳过值为 `None` 的项；静默丢弃不支持的键 |
 | `get/set_bitrate()` | — | **固件：不支持**——抛出 `CommandError` |
@@ -891,7 +951,7 @@ http://localhost:5000
 | `await resume_transfer()` | `bool` | |
 | `await cancel_transfer()` | `bool` | |
 | **WiFi / USB** | | |
-| `await wifi_on()` | `bool` | nRF7002 初始化超时 20 秒以上 |
+| `await wifi_on()` | `bool` | nRF7002 初始化超时 20+ 秒 |
 | `await wifi_off()` | `bool` | |
 | `await get_wifi_status()` | `Dict[str, Any]` | `.running`、`.ssid`、`.clients` |
 | `await usb_on()` | `bool` | CDC + MSC |
@@ -906,12 +966,12 @@ http://localhost:5000
 
 ### SessionSync
 
-***支持断点续传的基于 BLE 的文件同步。***
+***基于 BLE 的文件同步，支持断点续传。***
 
 | 签名 | 返回值 | 说明 |
 |-----------|---------|-------|
 | `SessionSync(device, commands=None)` | `SessionSync` | 扩展自 `FileTransfer` |
-| `await sync(session_id, output_dir, delete_after=False, continuous=False, force=False, progress_callback=None, session_info=None, start_file=None)` | `Dict[str, Any]` | 自动检测断点续传；返回 `file_count`、`total_size`、`files`、`merged_file` |
+| `await sync(session_id, output_dir, delete_after=False, continuous=False, force=False, progress_callback=None, session_info=None, start_file=None)` | `Dict[str, Any]` | 自动检测续传；返回 `file_count`、`total_size`、`files`、`merged_file` |
 | `await sync_all(output_dir, delete_after=False, progress_callback=None)` | `List[Dict]` | 同步所有会话 |
 | `await download_session(session_id, output_dir, progress_callback=None, stop_recording=False, continuous=False, timeout=300.0, start_file=None, session_info=None)` | `Dict[str, Any]` | 更底层；同时保存 `session.json` + `bookmarks.json` |
 | `await cancel()` | `None` | 线程安全的取消操作 |
@@ -965,22 +1025,22 @@ http://localhost:5000
 命令特征值需要加密的 BLE 链路。SDK 可以发起配对，但操作系统可能会弹出蓝牙配对或授权对话框。请手动确认。如果连接仍然卡住，请删除陈旧的绑定记录并重新连接。
 
 **Q2：下载报告 CRC 不匹配或文件数为零。**  
-在高负载下，BLE 协议栈有时会重复发送通知或丢帧。断开连接，重新连接并重试。使用 `SessionSync`，这样传输可以在可能的情况下从中断处恢复。
+在高负载下，BLE 协议栈有时会重复发送通知或丢帧。断开连接，重新连接并重试。使用 `SessionSync`，这样在可能的情况下可以从中断处继续传输。
 
 **Q3：下载速度很慢或中途掉线。**  
-使用 `SessionSync` 进行支持断点续传的 BLE 传输。对于大量录音数据，请通过 `WiFiSync` 使用 Wi-Fi 下载：在 Clip 上启用 Wi-Fi，连接到 `ClipAP_XXXX`，然后通过 Wi-Fi 下载。
+使用 `SessionSync` 进行支持续传的 BLE 传输。对于大量录音数据，请通过 `WiFiSync` 使用 Wi-Fi 下载：在 Clip 上启用 Wi-Fi，连接到 `ClipAP_XXXX`，然后通过 Wi-Fi 下载。
 
 **Q4：`delete_after=True` 删除了一个未完全下载的会话。**  
-使用更安全的模式：`sync(force=True, delete_after=False)`，确认本地 `merged_file` 存在且非空，然后手动调用 `cmds.delete_session(session_id)`。
+请使用更安全的模式：`sync(force=True, delete_after=False)`，确认本地 `merged_file` 已存在且非空，然后手动调用 `cmds.delete_session(session_id)`。
 
 **Q5：`AT+NOISE`、`AT+DEREVERB` 或 `AT+AGC` 返回 `Unknown command`。**  
 当前固件可能没有注册这些可选命令。SDK 保留了与兼容固件版本对应的封装。如果在恢复配置，`set_config_dict(..., ignore_errors=True)` 可以跳过不受支持的值。
 
 **Q6：`bleak` 抛出 `'BleakClient' object has no attribute 'get_services'` 或 `'get_mtu'` 等错误。**  
-`bleak` 的 API 在不同版本之间有所差异。请在安装包发布后使用 SDK 测试过的依赖集合。
+`bleak` 的 API 在不同版本之间有所差异。请在安装包发布后使用 SDK 测试过的依赖版本集合。
 
 **Q7：录音没有声音或音质较差。**  
-检查麦克风距离和朝向、电池电量以及录音模式。`enhanced` 模式可以更强力地抑制噪声，这可能会对非常干净的语音过度处理。
+检查麦克风距离和朝向、电池电量以及录音模式。`enhanced` 模式会更积极地抑制噪声，可能会对非常干净的语音过度处理。
 
 **Q8：会话 ID 的时间戳与本地时间不匹配。**  
 设备时钟或时区可能与主机不同。SDK 可以在连接时同步时间。你也可以调用 `await cmds.set_time(int(time.time()))`。
