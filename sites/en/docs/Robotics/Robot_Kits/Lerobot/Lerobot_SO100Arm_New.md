@@ -1866,14 +1866,14 @@ Fine-tuning is an art. For a complete overview of the options for finetuning, ru
 Similarly for when recording an episode, it is recommended that you are logged in to the HuggingFace Hub. You can follow the corresponding steps: [Record a dataset](https://huggingface.co/docs/lerobot/il_robots). Once you are logged in, you can run inference in your setup by doing:
 
 <CodeBlock language="bash">
-{`lerobot-rollout \
-  --strategy.type=base \
-  --policy.path=${HF_USER}/act_policy \
-  --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM0 \
-  --robot.cameras=="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-  --display_data=true \
-  --task="Your task description" \ # can be skipped for ACT
+{`lerobot-rollout \\
+  --strategy.type=base \\
+  --policy.path=\${HF_USER}/act_policy \\
+  --robot.type=so101_follower \\
+  --robot.port=/dev/ttyACM0 \\
+  --robot.cameras=="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\
+  --display_data=true \\
+  --task="Your task description" \\ # can be skipped for ACT
   --duration=60`}
 </CodeBlock>
 
@@ -1969,20 +1969,20 @@ Refer to [Pi0](https://huggingface.co/docs/lerobot/pi0)
 **Train**
 
 <CodeBlock language="bash">
-{`lerobot-train \
-    --dataset.repo_id=your_dataset \
-    --policy.type=pi0 \
-    --output_dir=./outputs/pi0_training \
-    --job_name=pi0_training \
-    --policy.pretrained_path=lerobot/pi0_base \
-    --policy.repo_id=your_repo_id \
-    --policy.compile_model=true \
-    --policy.gradient_checkpointing=true \
-    --policy.dtype=bfloat16 \
-    --policy.freeze_vision_encoder=false \
-    --policy.train_expert_only=false \
-    --steps=3000 \
-    --policy.device=cuda \
+{`lerobot-train \\
+    --dataset.repo_id=your_dataset \\
+    --policy.type=pi0 \\
+    --output_dir=./outputs/pi0_training \\
+    --job_name=pi0_training \\
+    --policy.pretrained_path=lerobot/pi0_base \\
+    --policy.repo_id=your_repo_id \\
+    --policy.compile_model=true \\
+    --policy.gradient_checkpointing=true \\
+    --policy.dtype=bfloat16 \\
+    --policy.freeze_vision_encoder=false \\
+    --policy.train_expert_only=false \\
+    --steps=3000 \\
+    --policy.device=cuda \\
     --batch_size=32`}
 </CodeBlock>
 
@@ -2014,21 +2014,21 @@ Refer to [Pi0.5](https://huggingface.co/docs/lerobot/pi05)
 **Train**
 
 <CodeBlock language="bash">
-{`lerobot-train \
-    --dataset.repo_id=seeed/eval_test123 \
-    --policy.type=pi05 \
-    --output_dir=./outputs/pi05_training \
-    --job_name=pi05_training \
-    --policy.repo_id=your_repo_id \
-    --policy.pretrained_path=lerobot/pi05_base \
-    --policy.compile_model=true \
-    --policy.gradient_checkpointing=true \
-    --wandb.enable=true \
-    --policy.dtype=bfloat16 \
-    --policy.freeze_vision_encoder=false \
-    --policy.train_expert_only=false \
-    --steps=3000 \
-    --policy.device=cuda \
+{`lerobot-train \\
+    --dataset.repo_id=seeed/eval_test123 \\
+    --policy.type=pi05 \\
+    --output_dir=./outputs/pi05_training \\
+    --job_name=pi05_training \\
+    --policy.repo_id=your_repo_id \\
+    --policy.pretrained_path=lerobot/pi05_base \\
+    --policy.compile_model=true \\
+    --policy.gradient_checkpointing=true \\
+    --wandb.enable=true \\
+    --policy.dtype=bfloat16 \\
+    --policy.freeze_vision_encoder=false \\
+    --policy.train_expert_only=false \\
+    --steps=3000 \\
+    --policy.device=cuda \\
     --batch_size=32`}
 </CodeBlock>
 
