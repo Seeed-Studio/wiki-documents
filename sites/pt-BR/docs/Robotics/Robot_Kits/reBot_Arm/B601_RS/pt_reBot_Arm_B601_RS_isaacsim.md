@@ -11,10 +11,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg
 slug: /rebot_arm_b601_rs_isaacsim
 last_update:
-  date: 7/7/2026
-  author: LiShanghang
+  date: 8/14/2026
+  author: LiuJunjie
 createdAt: '2026-07-07'
-updatedAt: '2026-07-09'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_isaacsim/
 ---
 
@@ -74,6 +74,7 @@ Adicione o seguinte a `~/.bashrc` ou `~/.zshrc`:
 ```Bash
 export ISAACSIM_PATH="${HOME}/isaacsim"
 export ISAACSIM_PYTHON_EXE="${ISAACSIM_PATH}/python.sh"
+export ISAACSIM_ROOT="${HOME}/isaacsim"
 ```
 
 Em seguida, execute `source ~/.bashrc` para que tenha efeito.
@@ -115,18 +116,43 @@ O processo de compilação pode levar de 30 a 60 minutos, dependendo do seu hard
 _build/linux-x86_64/release/isaac-sim.sh
 ```
 
-## Baixar o projeto
-
-```Bash
-git clone https://github.com/Seeed-Projects/reBot-Isaacsim.git
-```
-
-Configurar o ambiente uv do reBotArm_control_py
+Após uma compilação a partir do código-fonte, aponte `ISAACSIM_ROOT` para esse diretório de execução para que `run_isaacsim_receiver.sh` encontre o Isaac Sim:
 
 ```bash
-cd third_party/reBotArm_control_py
+export ISAACSIM_ROOT="$PWD/_build/linux-x86_64/release"
+```
+
+## Baixar o projeto
+
+Este repositório referencia a biblioteca de controle upstream `reBotArm_control_py` como git submodule. Clone com os submódulos:
+
+```bash
+git clone --recurse-submodules https://github.com/Seeed-Projects/reBot-Isaacsim.git
+```
+
+Se você já clonou o repositório e `third_party/reBotArm_control_py` estiver vazio:
+
+```bash
+git submodule update --init --recursive
+```
+
+Instale as dependências do sender na raiz do repositório (`run_sender.sh` e `uv run` usam o workspace uv da raiz):
+
+```bash
+cd reBot-Isaacsim
 uv sync
 ```
+
+### Alternar a configuração de hardware para RS
+
+O asset do Isaac Sim deste repositório é RS (`usd/RS-rebot-dev-arm`). O `rebotarm.yaml` upstream usa DM por padrão. Tanto `RebotArm()` quanto `load_robot_model()` leem este arquivo, então compensação de gravidade, mapeamento somente leitura, IK e Traj precisam de RS primeiro; se ficar em DM, o protocolo dos motores não coincidirá e o Pinocchio carregará o URDF de DM. Isso apenas suja o working tree do submodule — não faça commit:
+
+```bash
+cd reBotArm_Isaacsim
+python set_hw_rs.py
+```
+
+Em caso de sucesso, imprime `.../config/rebotarm.yaml -> rebotarm_rs.yaml`.
 
 ### Visão geral dos componentes funcionais
 
@@ -134,7 +160,7 @@ Este projeto fornece vários senders para atender a diferentes cenários de uso:
 
 | Componente | Descrição |
 |-----------|------------|
-| `gravity_joint_sender` | **Modo de manuseio com compensação de gravidade**: braço robótico modificado (garra removida, alça adicionada) permite movimento manual em modo de compensação de gravidade e sincroniza os ângulos das juntas com o Isaac Sim em tempo real |
+| `gravity_joint_sender` | **Modo de compensação de gravidade + alça**: para braços modificados (garra removida, alça acoplada); a compensação vem do `GravityCompensation` upstream e este repositório apenas espelha os ângulos das juntas no Isaac Sim |
 | `isaacsim_ik_sender` | **Modo de cinemática inversa (IK)**: insira a pose do efetuador final, use o solucionador de IK para obter os ângulos das juntas e envie-os para o Isaac Sim |
 | `isaacsim_traj_sender` | **Modo de planejamento de trajetória (Traj)**: adiciona planejamento de trajetória no espaço de juntas (perfil de tempo MIN_JERK) sobre o IK para obter controle de movimento suave |
 | `isaacsim_joint_test_sender` | **Modo de teste de juntas**: envia trajetórias de ângulos de juntas predefinidas sem um robô real para verificar se o receptor e a comunicação do Isaac Sim estão funcionando corretamente |
@@ -144,26 +170,27 @@ Este projeto fornece vários senders para atender a diferentes cenários de uso:
 
 ```
 reBot-Isaacsim/
-├── pyproject.toml                      # uv workspace configuration
+├── pyproject.toml                           # Configuração do workspace uv
 ├── README.md
 ├── README_EN.md
-├── reBotArm_Isaacsim/                  # Main example directory
-│   ├── gravity_joint_sender.py         # Gravity compensation handle mode (modified robotic arm, manual manipulation)
-│   ├── isaacsim_ik_sender.py           # Inverse kinematics mode (IK control)
-│   ├── isaacsim_traj_sender.py         # Trajectory planning mode (IK joint space trajectory)
-│   ├── isaacsim_joint_test_sender.py   # Joint test mode (preset trajectory, no hardware needed)
-│   ├── joint_reader_sender.py          # Real-to-Sim mapping mode (read-only joints, sync visualization)
-│   ├── isaacsim_joint_receiver.py      # Isaac Sim receiver (joint angle synchronization)
-│   ├── live_sync.py                    # Startup instruction script
-│   ├── run_sender.sh # Start sender
-│   └── run_isaacsim_receiver.sh        # Start Isaac Sim receiver
+├── README_ES.md
+├── reBotArm_Isaacsim/                       # Diretório principal de exemplos
+│   ├── gravity_joint_sender.py              # Modo alça (GravityCompensation upstream + UDP)
+│   ├── isaacsim_ik_sender.py                # Modo de cinemática inversa (controle IK)
+│   ├── isaacsim_traj_sender.py              # Modo de planejamento de trajetória (IK + trajetória no espaço de juntas)
+│   ├── isaacsim_joint_test_sender.py        # Modo de teste de juntas (trajetória predefinida, sem hardware)
+│   ├── joint_reader_sender.py                # Modo de mapeamento Real-to-Sim (somente leitura, visualização sincronizada)
+│   ├── isaacsim_joint_receiver.py           # Receptor do Isaac Sim (sincronização de ângulos das juntas)
+│   ├── live_sync.py                         # Script auxiliar com instruções de inicialização
+│   ├── set_hw_rs.py                         # Aponta o YAML de hardware do submodule para RS (local; não fazer commit)
+│   ├── run_sender.sh                        # Inicia o sender
+│   └── run_isaacsim_receiver.sh             # Inicia o receptor do Isaac Sim
+├── .gitmodules
 ├── third_party/
-│   └── reBotArm_control_py/            # Core control library (separate uv environment)
-│       ├── pyproject.toml
-│       └── ...
+│   └── reBotArm_control_py/                 # git submodule: biblioteca de controle upstream
 └── usd/
     └── RS-rebot-dev-arm/
-        └── 00-arm-rs_asm-v3.usda       # Isaac Sim robotic arm asset
+        └── RS-rebot-dev-arm.usda            # Asset do robô para Isaac Sim
 ```
 
 ## Inicialização (modo de dois terminais)
@@ -214,16 +241,15 @@ cd reBotArm_Isaacsim
 uv run python isaacsim_joint_test_sender.py
 ```
 
-O sender interpola continuamente entre várias configurações de juntas predefinidas e as transmite para o Isaac Sim. Nenhuma conexão CAN é necessária.
+O sender interpola continuamente entre várias configurações de juntas predefinidas e as transmite para o Isaac Sim. Não lê o YAML de hardware, então nem `set_hw_rs.py` nem CAN são necessários.
 
 #### ② Modo de cinemática inversa (`isaacsim_ik_sender`)
 
-Insira uma pose do efetuador final (posição/orientação). O solucionador de IK calcula a configuração das juntas e move o braço robótico no Isaac Sim.
-
-Execute o seguinte a partir do diretório `reBotArm_Isaacsim/`:
+Insira uma pose do efetuador final (posição/orientação). O solucionador de IK calcula a configuração das juntas e move o braço robótico no Isaac Sim. `load_robot_model()` lê o `rebotarm.yaml` do submodule, então mude para RS primeiro:
 
 ```bash
 cd reBotArm_Isaacsim
+python set_hw_rs.py
 uv run python isaacsim_ik_sender.py
 ```
 
@@ -238,12 +264,11 @@ gripper <0~1>               # Update gripper only
 
 #### ③ Modo de planejamento de trajetória (`isaacsim_traj_sender`)
 
-Adiciona planejamento de trajetória no espaço de juntas (MIN_JERK) sobre o IK para um movimento suave do robô.
-
-Execute o seguinte a partir do diretório `reBotArm_Isaacsim/`:
+Adiciona planejamento de trajetória no espaço de juntas (MIN_JERK) sobre o IK para um movimento suave do robô. Também usa `load_robot_model()` contra esse YAML, então mude para RS primeiro:
 
 ```bash
 cd reBotArm_Isaacsim
+python set_hw_rs.py
 uv run python isaacsim_traj_sender.py
 ```
 
@@ -264,26 +289,29 @@ Projetado para braços robóticos modificados (garra removida e alça instalada)
 
 ```bash
 cd reBotArm_Isaacsim
+python set_hw_rs.py
 ./run_sender.sh
 ```
 
 **Comportamento esperado:**
-- Conectar ao braço robótico físico e habilitar o controle MIT com compensação de gravidade feedforward
-- O braço robótico pode ser movido livremente à mão
-- Os ângulos das juntas são continuamente transmitidos via UDP a 60 Hz
+- `set_hw_rs.py` aponta o `rebotarm.yaml` do submodule para `rebotarm_rs.yaml` para que motores e o modelo de gravidade usem o mesmo YAML (alteração local; não fazer commit)
+- O braço físico conecta e inicia o `GravityCompensation` upstream (mesmo MIT + feed-forward `g(q)` que o `example/9`)
+- O braço pode ser movido livremente à mão
+- Este script apenas encaminha os ângulos das juntas para o Isaac Sim via UDP a 60 Hz
+- Não execute também o `example/9` upstream ao mesmo tempo; os dois processos disputariam o CAN
 
 #### ⑤ Modo de mapeamento Real-para-Sim (`joint_reader_sender`)
 
-Lê apenas os ângulos das juntas e espelha o estado do robô físico no Isaac Sim. Este modo é destinado à visualização enquanto o robô real é controlado por outra aplicação.
-
-Execute o seguinte a partir do diretório `reBotArm_Isaacsim/`:
+Lê apenas os ângulos das juntas e espelha o estado do robô físico no Isaac Sim. Este modo é destinado à visualização enquanto o robô real é controlado por outra aplicação. `RebotArm()` lê o `rebotarm.yaml` do submodule, então mude para RS primeiro:
 
 ```bash
 cd reBotArm_Isaacsim
+python set_hw_rs.py
 uv run python joint_reader_sender.py
 ```
 
 **Comportamento esperado:**
+- `set_hw_rs.py` altera a configuração dos motores para RS (alteração local; não fazer commit)
 - Ler apenas os ângulos das juntas (modo de feedback passivo), sem enviar nenhum comando de controle
 - Transmitir continuamente os ângulos das juntas via UDP a 60 Hz
 - Visualizar o robô físico no Isaac Sim enquanto ele é controlado por outro projeto
@@ -307,12 +335,19 @@ UDP JSON na porta `127.0.0.1:5005`.
 |------|------|------|
 | `sequence` | int | Número de sequência de quadro incremental |
 | `timestamp` | float | Timestamp Unix (segundos) |
-| `joint_positions` | float[6] | Primeiras seis posições das juntas (rad) |
-| `gripper_position` | float | Posição do gripper (m), convertida pelo remetente usando `GRIPPER_POSITION_SCALE=0.03` |
+| `joint_positions` | float[6] | Primeiras seis posições de juntas (rad) |
+| `gripper_position` | float | Alvo de posição dos dedos da garra (m); cada sender calcula com o próprio mapeamento (veja abaixo) |
 
 **Pipeline de controle do gripper:**
 
-Remetente `gripper_q` → `gripper_position = -gripper_q × 0.03` → Receptor `× 0.01` → Alvo de posição de junta dupla
+O receptor aplica o `gripper_position` recebido diretamente como alvo de posição das duas juntas prismáticas dos dedos, recortado por dedo para `[0, limite superior]` (limites superiores do USD: 0,05 m em ambos os dedos; os dedos são acionados 1:1 por um único motor através de um pinhão). Não há escala extra no lado do receptor. Os senders convertem a entrada para `gripper_position` da seguinte forma:
+
+| Sender | Conversão para `gripper_position` (m) |
+|------|------|
+| `gravity_joint_sender` | `gripper_q × 0.03` (`GRIPPER_POSITION_SCALE = 0.03`) |
+| `joint_reader_sender` | `gripper_q × 0.007` (`GRIPPER_POSITION_SCALE = 0.007`) |
+| `isaacsim_traj_sender` | `ratio × 0.045` (entrada `gripper <0~1>`, recortado para 0,045 m) |
+| `isaacsim_ik_sender` | `ratio ∈ [0, 1]` bruto enviado como metros, de modo que qualquer ratio ≥ o limite superior de um dedo abre esse dedo por completo |
 
 ## Parâmetros de Configuração
 
@@ -320,6 +355,7 @@ Remetente `gripper_q` → `gripper_position = -gripper_q × 0.03` → Receptor `
 
 | Parâmetro | Padrão | Descrição |
 |------|--------|------|
+| YAML de hardware | `set_hw_rs.py` → `rebotarm_rs.yaml` | `RebotArm()` lê `config/rebotarm.yaml` do submodule; motores e Pinocchio compartilham |
 | `ARM_JOINT_COUNT` | 6 | Número de juntas do braço |
 | `DEFAULT_PORT` | 5005 | Porta UDP |
 | `DEFAULT_SEND_HZ` | 60.0 | Frequência de transmissão (Hz) |
@@ -333,9 +369,8 @@ Remetente `gripper_q` → `gripper_position = -gripper_q × 0.03` → Receptor `
 | `ARM_JOINT_COUNT` | 6 | Número de juntas do braço |
 | `DEFAULT_PORT` | 5005 | Porta UDP |
 | `DEFAULT_RENDER_HZ` | 120.0 | Frequência de renderização da simulação (Hz) |
-| `GRIPPER_POSITION_SCALE` | 0.01 | Fator adicional de escala da posição do gripper |
 | `ROBOT_PRIM_PATH` | `/World/reBotArm` | Caminho do Prim do robô no Isaac Sim |
-| `ASSET_RELATIVE_PATH` | `usd/RS-rebot-dev-arm/00-arm-rs_asm-v3.usda` | Caminho relativo para o asset USD |
+| `ASSET_RELATIVE_PATH` | `usd/RS-rebot-dev-arm/RS-rebot-dev-arm.usda` | Caminho relativo para o asset USD |
 
 ## Solução de Problemas
 
@@ -356,7 +391,7 @@ kill <PID>
 Verifique se o asset USD existe e se `REPO_ROOT` está configurado corretamente:
 
 ```bash
-ls usd/RS-rebot-dev-arm/00-arm-rs_asm-v3.usda
+ls usd/RS-rebot-dev-arm/RS-rebot-dev-arm.usda
 ```
 
 ### Barramento CAN Não Pronto
