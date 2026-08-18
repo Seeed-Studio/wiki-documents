@@ -1737,15 +1737,15 @@ echo $HF_USER`}
 您可以使用 [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) 中的 `record` 功能，但需要将策略训练结果训练结果权重文件作为输入。例如，运行以下命令记录 10 个评估回合：
 
 <CodeBlock language="bash">
-{`lerobot-record \
+{`lerobot-rollout \
+  --strategy.type=base \
+  --policy.path=${HF_USER}/act_policy \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
-  --robot.id=my_awesome_follower_arm \
-  --display_data=false \
-  --dataset.repo_id=seeed/eval_test123 \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model`}
+  --robot.cameras=="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+  --display_data=true \
+  --task="Your task description" \ # can be skipped for ACT
+  --duration=60`}
 </CodeBlock>
 
 1. `--policy.path` 参数，指示您的策略训练结果权重文件的路径（例如 `outputs/train/act_so101_test/checkpoints/last/pretrained_model`）。如果您将模型训练结果权重文件上传到 Hub，也可以使用模型仓库（例如 `\${HF_USER}/act_so100_test`）。
@@ -1867,21 +1867,20 @@ SmolVLA 是“底座模型”，要在你的桌面、你的相机、你的夹爪
 
 <CodeBlock language="bash">
 {`lerobot-train \
-  --policy.type=pi0 \
-  --dataset.repo_id=\${HF_USER}/my_dataset \
-  --job_name=pi0_training \
-  --output_dir=outputs/pi0_training \
-  --policy.pretrained_path=lerobot/pi0_base \
-  --policy.repo_id=\${HF_USER}/my_pi0_policy \
-  --policy.compile_model=true \
-  --policy.gradient_checkpointing=true \
-  --policy.dtype=bfloat16 \
-  --policy.freeze_vision_encoder=false \
-  --policy.train_expert_only=false \
-  --steps=3000 \
-  --policy.device=cuda \
-  --batch_size=32 \
-  --wandb.enable=false`}
+    --dataset.repo_id=your_dataset \
+    --policy.type=pi0 \
+    --output_dir=./outputs/pi0_training \
+    --job_name=pi0_training \
+    --policy.pretrained_path=lerobot/pi0_base \
+    --policy.repo_id=your_repo_id \
+    --policy.compile_model=true \
+    --policy.gradient_checkpointing=true \
+    --policy.dtype=bfloat16 \
+    --policy.freeze_vision_encoder=false \
+    --policy.train_expert_only=false \
+    --steps=3000 \
+    --policy.device=cuda \
+    --batch_size=32`}
 </CodeBlock>
 
 常用参数（只挑 Pi0 特有/最常调的）：
@@ -1942,21 +1941,21 @@ SmolVLA 是“底座模型”，要在你的桌面、你的相机、你的夹爪
 
 <CodeBlock language="bash">
 {`lerobot-train \
-  --dataset.repo_id=\${HF_USER}/my_dataset \
-  --policy.type=pi05 \
-  --output_dir=outputs/pi05_training \
-  --job_name=pi05_training \
-  --policy.repo_id=\${HF_USER}/my_pi05_policy \
-  --policy.pretrained_path=lerobot/pi05_base \
-  --policy.compile_model=true \
-  --policy.gradient_checkpointing=true \
-  --policy.dtype=bfloat16 \
-  --policy.freeze_vision_encoder=false \
-  --policy.train_expert_only=false \
-  --steps=3000 \
-  --policy.device=cuda \
-  --batch_size=32 \
-  --wandb.enable=false`}
+    --dataset.repo_id=your_dataset \
+    --policy.type=pi05 \
+    --output_dir=./outputs/pi05_training \
+    --job_name=pi05_training \
+    --policy.repo_id=your_repo_id \
+    --policy.pretrained_path=lerobot/pi05_base \
+    --policy.compile_model=true \
+    --policy.gradient_checkpointing=true \
+    --wandb.enable=true \
+    --policy.dtype=bfloat16 \
+    --policy.freeze_vision_encoder=false \
+    --policy.train_expert_only=false \
+    --steps=3000 \
+    --policy.device=cuda \
+    --batch_size=32`}
 </CodeBlock>
 
 常用参数（Pi0.5 相关）：
