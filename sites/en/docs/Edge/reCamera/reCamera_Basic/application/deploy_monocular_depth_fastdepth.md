@@ -17,10 +17,7 @@ last_update:
 
 # Deploy Monocular Depth Estimation on reCamera (FastDepth, INT8)
 
-This guide walks through converting, quantizing, and deploying a monocular
-depth estimation model — [FastDepth](https://github.com/dwofk/fast-depth) —
-to the reCamera's CV181x TPU, and running it on-device. All commands were run
-and all numbers measured on real hardware.
+This guide walks through converting, quantizing, and deploying a monocular depth estimation model — [FastDepth](https://github.com/dwofk/fast-depth) — to the reCamera's CV181x TPU, and running it on-device. All commands were run and all numbers measured on real hardware.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-indoor-office-result.png" alt="Indoor office frame beside its FastDepth INT8 depth heatmap" />
@@ -38,21 +35,14 @@ Measured results you can expect at the end:
 | 30-min continuous soak | no crashes, no drift, stable memory |
 
 :::note Relative depth, not meters
-FastDepth predicts **relative** depth and was trained on the NYU Depth V2
-*indoor* dataset. Indoors it produces correct near/far structure; outdoor
-scenes come out with a strongly compressed range (see
-[Qualitative results](#qualitative-results-what-to-expect)). Do not interpret
-raw outputs as meters.
+FastDepth predicts **relative** depth and was trained on the NYU Depth V2 *indoor* dataset. Indoors it produces correct near/far structure; outdoor scenes come out with a strongly compressed range (see [Qualitative results](#qualitative-results-what-to-expect)). Do not interpret raw outputs as meters.
 :::
 
-The pipeline: ONNX → Top-MLIR (`model_transform`) → INT8 calibration table
-(`run_calibration`, 500 images) → compiled `.cvimodel` (`model_deploy`, two
-validation gates) → on-device inference (`cviruntime`).
+The pipeline: ONNX → Top-MLIR (`model_transform`) → INT8 calibration table (`run_calibration`, 500 images) → compiled `.cvimodel` (`model_deploy`, two validation gates) → on-device inference (`cviruntime`).
 
 ## Prerequisites
 
-- reCamera 2002 series (SG2002 SoC, CV181x TPU), connected over USB
-  (`192.168.42.1`), ssh access as user `recamera`
+- reCamera 2002 series (SG2002 SoC, CV181x TPU), connected over USB (`192.168.42.1`), ssh access as user `recamera`
 - Docker on your development machine
 - The TPU-MLIR toolchain container:
 
@@ -61,8 +51,7 @@ docker pull sophgo/tpuc_dev:v3.4
 docker run --rm -it -v $(pwd):/workspace sophgo/tpuc_dev:v3.4
 ```
 
-Inside the container, install TPU-MLIR into a virtual environment kept on the
-bind mount (so it survives container restarts):
+Inside the container, install TPU-MLIR into a virtual environment kept on the bind mount (so it survives container restarts):
 
 ```bash
 python3 -m venv /workspace/tpu_env
@@ -73,32 +62,21 @@ pip install torch --index-url https://download.pytorch.org/whl/cpu
 ```
 
 :::caution Two install traps
-1. Install the `[onnx]` extra, **not** `[all]` — `tpu_mlir[all]==1.28.1`
-   pins a paddlepaddle version that has been removed from PyPI and cannot be
-   installed anymore.
-2. `psutil` and `torch` are undeclared dependencies — without them the tools
-   crash at import time. Use the CPU-only torch wheel (the default PyPI
-   package pulls a multi-GB CUDA stack you don't need).
+
+1. Install the `[onnx]` extra, **not** `[all]` — `tpu_mlir[all]==1.28.1` pins a paddlepaddle version that has been removed from PyPI and cannot be installed anymore.
+2. `psutil` and `torch` are undeclared dependencies — without them the tools crash at import time. Use the CPU-only torch wheel (the default PyPI package pulls a multi-GB CUDA stack you don't need).
+
 :::
 
 Verify: `model_transform.py --help` should print the TPU-MLIR version banner.
 
 ## Step 1 — Get the ONNX model
 
-Export FastDepth (the `mobilenet-nnconv5dw-skipadd-pruned` variant) to ONNX
-with a fixed 1×3×224×224 input, opset ≥ 13, and run it through
-[onnxsim](https://github.com/daquexian/onnx-simplifier). After
-simplification the graph contains only `Conv / Clip / Relu / Resize / Add` —
-all supported by TPU-MLIR for CV181x. (Auditing the op list *before*
-conversion is a habit that pays off — see
-[Will your model run on this chip?](#will-your-model-run-on-this-chip) below.)
+Export FastDepth (the `mobilenet-nnconv5dw-skipadd-pruned` variant) to ONNX with a fixed 1×3×224×224 input, opset ≥ 13, and run it through [onnxsim](https://github.com/daquexian/onnx-simplifier). After simplification the graph contains only `Conv / Clip / Relu / Resize / Add` — all supported by TPU-MLIR for CV181x. (Auditing the op list *before* conversion is a habit that pays off — see [Will your model run on this chip?](#will-your-model-run-on-this-chip) below.)
 
 ## Step 2 — Translate to Top-MLIR
 
-FastDepth's expected preprocessing is plain **resize + RGB + /255** — no
-mean/std normalization. You declare the recipe once here; it gets baked into
-the `.mlir`, and every downstream tool (calibration, deployment) reuses it
-automatically:
+FastDepth's expected preprocessing is plain **resize + RGB + /255** — no mean/std normalization. You declare the recipe once here; it gets baked into the `.mlir`, and every downstream tool (calibration, deployment) reuses it automatically:
 
 ```bash
 mkdir -p /workspace/build/fastdepth && cd /workspace/build/fastdepth
@@ -113,38 +91,25 @@ model_transform.py --model_name fastdepth \
   --mlir fastdepth_224.mlir
 ```
 
-**You should see:** a layer-by-layer comparison against ONNX ending in all
-layers passed (`46/46`, cosine similarity ≈ 1.0).
+**You should see:** a layer-by-layer comparison against ONNX ending in all layers passed (`46/46`, cosine similarity ≈ 1.0).
 
-Keep `fastdepth_in_f32.npz` and `fastdepth_top_outputs.npz` — they are the
-frozen float32 references that validate the quantized model later.
+Keep `fastdepth_in_f32.npz` and `fastdepth_top_outputs.npz` — they are the frozen float32 references that validate the quantized model later.
 
 :::tip
-The `--test_input` extension check is case-sensitive: `.JPG` crashes with a
-confusing assertion. Use lowercase `.jpg` — for this file and every
-calibration image.
+The `--test_input` extension check is case-sensitive: `.JPG` crashes with a confusing assertion. Use lowercase `.jpg` — for this file and every calibration image.
 :::
 
 ## Step 3 — Build a calibration dataset
 
-Here is the part most tutorials skip, and it decides your INT8 quality.
-Quantization spreads 256 levels over the value range each layer *actually
-produces on your calibration images*. At inference, values outside that
-recorded range get clipped — information destroyed at the layer. So the set
-must cover what the camera will really see:
+Here is the part most tutorials skip, and it decides your INT8 quality. Quantization spreads 256 levels over the value range each layer *actually produces on your calibration images*. At inference, values outside that recorded range get clipped — information destroyed at the layer. So the set must cover what the camera will really see:
 
-- **~500 images**, mostly frames captured **with the target reCamera itself**
-  (day / indoor / night / backlit), topped up with a public dataset
-  (e.g. [DIODE](https://diode-dataset.org/) validation images)
+- **~500 images**, mostly frames captured **with the target reCamera itself** (day / indoor / night / backlit), topped up with a public dataset (e.g. [DIODE](https://diode-dataset.org/) validation images)
 - Spread picks evenly across recordings — never consecutive near-duplicates
-- **Identical preprocessing to deployment**: supply original images and let
-  the tools apply the recipe from the `.mlir` — do not resize them yourself
+- **Identical preprocessing to deployment**: supply original images and let the tools apply the recipe from the `.mlir` — do not resize them yourself
 - Lowercase `.jpg` filenames
 
 :::caution
-**MPEG-TS frame counts lie.** When extracting frames from `.ts` recordings,
-`CAP_PROP_FRAME_COUNT` can report 3× the real count — count frames by
-reading sequentially to the end.
+**MPEG-TS frame counts lie.** When extracting frames from `.ts` recordings, `CAP_PROP_FRAME_COUNT` can report 3× the real count — count frames by reading sequentially to the end.
 :::
 
 Generate the calibration table (~3 minutes for 500 images):
@@ -166,8 +131,7 @@ model_deploy.py --mlir fastdepth_224.mlir --quantize INT8 \
   --model fastdepth_224_int8.cvimodel
 ```
 
-The tool runs **two validation gates** — learn to read both, they answer
-different questions:
+The tool runs **two validation gates** — learn to read both, they answer different questions:
 
 | Gate | Compares | Question it answers | FastDepth result |
 |---|---|---|---|
@@ -175,24 +139,15 @@ different questions:
 | 2 | compiled `.cvimodel` (TPU simulator) vs its own quantized MLIR | *did compilation preserve the math?* | **EQUAL (1.0)** ✅ |
 
 :::caution Gate 2 is not a formality
-Code generation can print warnings (e.g. `cvkcv181x tiu ... wrong parameter`)
-and **still report `[Success]`** while producing a numerically broken model.
-Only Gate 2 catches this. If Gate 1 passes but Gate 2 collapses, your problem
-is model-vs-chip compatibility, not quantization — see
-[Will your model run on this chip?](#will-your-model-run-on-this-chip)
+Code generation can print warnings (e.g. `cvkcv181x tiu ... wrong parameter`) and **still report `[Success]`** while producing a numerically broken model.
+Only Gate 2 catches this. If Gate 1 passes but Gate 2 collapses, your problem is model-vs-chip compatibility, not quantization — see [Will your model run on this chip?](#will-your-model-run-on-this-chip)
 :::
 
-For an accuracy reference, build a BF16 variant the same way — drop
-`--calibration_table` and use `--quantize BF16` (no calibration needed:
-BF16 keeps real number ranges).
+For an accuracy reference, build a BF16 variant the same way — drop `--calibration_table` and use `--quantize BF16` (no calibration needed: BF16 keeps real number ranges).
 
 ## Step 5 — Run it on the reCamera
 
-The reCamera OS image doesn't ship a generic `.cvimodel` runner, so we use a
-small C program against the `cviruntime` API, cross-compiled with the
-[sscma-example-sg200x](https://github.com/Seeed-Studio/sscma-example-sg200x)
-toolchain and statically linked against the SDK's
-`libcviruntime-static.a` / `libcvikernel-static.a` / `libcvimath-static.a`.
+The reCamera OS image doesn't ship a generic `.cvimodel` runner, so we use a small C program against the `cviruntime` API, cross-compiled with the [sscma-example-sg200x](https://github.com/Seeed-Studio/sscma-example-sg200x) toolchain and statically linked against the SDK's `libcviruntime-static.a` / `libcvikernel-static.a` / `libcvimath-static.a`.
 The API is pleasantly small:
 
 ```c
@@ -252,8 +207,7 @@ cv2.imwrite("depth_map.png", cv2.applyColorMap(g, cv2.COLORMAP_INFERNO))
 
 ## Benchmark results
 
-All numbers: 224×224 input, preprocessing as above, 20-inference warm-up,
-300 measured runs, on-device (CV181x TPU):
+All numbers: 224×224 input, preprocessing as above, 20-inference warm-up, 300 measured runs, on-device (CV181x TPU):
 
 | Benchmark | mean | P50 | P95 | FPS |
 |---|---|---|---|---|
@@ -264,70 +218,43 @@ All numbers: 224×224 input, preprocessing as above, 20-inference warm-up,
 
 Three findings worth knowing:
 
-- **The TPU is deterministic** — P95 − P50 ≤ 0.1 ms across every variant.
-  No jitter to engineer around.
-- **Co-residency is free** — loading YOLO alongside costs the depth model
-  +0.01 ms. A 30-minute continuous combined run: no crashes, no latency
-  drift, memory stable.
-- **INT8's speed edge over BF16 is only ~6%** — at this model size the TPU
-  is bandwidth-bound, so INT8 mostly buys you *half the model size*. Both
-  precisions are viable; INT8 measured < 2% AbsRel difference vs BF16 on
-  DIODE (scale-and-shift aligned), far below a typical 5% budget.
+- **The TPU is deterministic** — P95 − P50 ≤ 0.1 ms across every variant. No jitter to engineer around.
+- **Co-residency is free** — loading YOLO alongside costs the depth model +0.01 ms. A 30-minute continuous combined run: no crashes, no latency drift, memory stable.
+- **INT8's speed edge over BF16 is only ~6%** — at this model size the TPU is bandwidth-bound, so INT8 mostly buys you *half the model size*. Both precisions are viable; INT8 measured < 2% AbsRel difference vs BF16 on DIODE (scale-and-shift aligned), far below a typical 5% budget.
 
 ## Qualitative results (what to expect)
 
-- **Indoors** (in-distribution): correct global structure — nearest objects
-  darkest, far walls bright, deepest corridors brightest.
+- **Indoors** (in-distribution): correct global structure — nearest objects darkest, far walls bright, deepest corridors brightest.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-indoor-office-result.png" alt="Indoor office frame beside its FastDepth INT8 depth heatmap" />
 </div>
 
-- **Outdoors**: out-of-distribution for NYU-trained FastDepth — the range
-  compresses sharply (a 40 m street maps into a ~3-unit span) and structure
-  goes coarse. Usable for rough near/far cues at best.
+- **Outdoors**: out-of-distribution for NYU-trained FastDepth — the range compresses sharply (a 40 m street maps into a ~3-unit span) and structure goes coarse. Usable for rough near/far cues at best.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-outdoor-street-result.png" alt="Outdoor street frame beside its FastDepth INT8 depth heatmap showing range compression" />
 </div>
 
-- **Night**: on a camera without IR illumination, lamp-lit scenes yield
-  coarse blobs with the most compressed ranges of all; fully unlit scenes are
-  near-black input and not meaningful.
+- **Night**: on a camera without IR illumination, lamp-lit scenes yield coarse blobs with the most compressed ranges of all; fully unlit scenes are near-black input and not meaningful.
 
 <div align="center">
   <img width="500" src="https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-batch-results-a.png" alt="Night scenes with FastDepth depth maps" />
   <img width="500" src="https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-batch-results-b.png" alt="Outdoor day scenes with FastDepth depth maps" />
 </div>
 
-If your product needs quality outdoor or night depth, plan for target-domain
-fine-tuning or distillation from a stronger teacher (e.g. Depth Anything V2)
-into a chip-friendly student architecture.
+If your product needs quality outdoor or night depth, plan for target-domain fine-tuning or distillation from a stronger teacher (e.g. Depth Anything V2) into a chip-friendly student architecture.
 
 ## Will your model run on this chip?
 
-Converting successfully is **not** the same as running correctly. A real
-case from this project: **ZipDepth** (an NPU-oriented depth model) quantizes
-properly: Gate 1 cosine ≥ 0.998 in both INT8 *and* BF16, but its
-strip-pooling attention uses average pools of shape `[48,1]`, `[1,48]`
-(stride 48) and `[24,24]`: larger than the CV181x TIU pooling unit can
-encode. Codegen printed `cvkcv181x tiu avg pool: wrong parameter` four times
-(once per pool), still reported success, and the compiled model produced
-noise — caught only by Gate 2 (negative SQNR). The failure is
-precision-independent, so no mixed INT8/BF16 quantization table can work
-around it.
+Converting successfully is **not** the same as running correctly. A real case from this project: **ZipDepth** (an NPU-oriented depth model) quantizes properly: Gate 1 cosine ≥ 0.998 in both INT8 *and* BF16, but its strip-pooling attention uses average pools of shape `[48,1]`, `[1,48]` (stride 48) and `[24,24]`: larger than the CV181x TIU pooling unit can encode. Codegen printed `cvkcv181x tiu avg pool: wrong parameter` four times (once per pool), still reported success, and the compiled model produced noise — caught only by Gate 2 (negative SQNR). The failure is precision-independent, so no mixed INT8/BF16 quantization table can work around it.
 
 Checklist before you commit to a depth model for reCamera:
 
-- ✅ Audit the ONNX op list first (Netron is your friend); prefer
-  architectures built from small convolutions
-- ⚠️ Avoid large or strip-shaped **average pools** — small `MaxPool`
-  (e.g. SPPF's 5×5) compiles fine
+- ✅ Audit the ONNX op list first (Netron is your friend); prefer architectures built from small convolutions
+- ⚠️ Avoid large or strip-shaped **average pools** — small `MaxPool` (e.g. SPPF's 5×5) compiles fine
 - ✅ Always pass `--test_input/--test_reference` so both gates run
--  If Gate 1 passes but Gate 2 fails with pooling warnings: the model needs
-  architectural surgery (e.g. decomposing a large pool into an exact chain of
-  small ones — a mean of means over equal groups is the overall mean) before
-  it can target this chip
+- If Gate 1 passes but Gate 2 fails with pooling warnings: the model needs architectural surgery (e.g. decomposing a large pool into an exact chain of small ones — a mean of means over equal groups is the overall mean) before it can target this chip
 
 ## Troubleshooting
 
