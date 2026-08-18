@@ -4334,6 +4334,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/ja_Make_DIY_BSP_for_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/ja_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super',
             'Edge/NVIDIA_Jetson/FAQs/ja_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
+            'Edge/NVIDIA_Jetson/FAQs/ja_Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot',
             'Edge/NVIDIA_Jetson/FAQs/ja_Flash_JetPack_with_WSL2',
             'Edge/NVIDIA_Jetson/FAQs/ja_Jetson_Initrd_Flash_Fails_with_ZFS_Host',
           ]
@@ -4588,6 +4589,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_ROS2_Integration',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_isaacsim',
               ]
             },
             {

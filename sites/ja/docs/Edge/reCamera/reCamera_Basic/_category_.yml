@@ -1,10 +1,10 @@
 position: 3 # float position is supported
-label: 'reCamera 基本ドキュメント'
+label: 'reCamera Basic'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
-className: reCamera_basic_documentation
+className: reCamera_basic
 link:
   type: generated-index
-  slug: recamera_basic_documentation
-  title: reCamera 基本ドキュメント
-  description: ここでは、reCamera Basic に関するすべての知識を確認できます。
+  slug: recamera_basic
+  title: reCamera Basic
+  description: ここでは、reCamera Basic に関するすべての知識を見つけることができます。
