@@ -8,6 +8,7 @@ keywords:
   - remote operation
   - kinematics
   - Damiao
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png
 slug: /rebot_arm_b601_dm_isaacsim
 last_update:
   date: 2026-08-17
