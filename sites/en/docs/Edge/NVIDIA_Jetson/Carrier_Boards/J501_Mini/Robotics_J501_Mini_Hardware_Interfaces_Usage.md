@@ -313,7 +313,7 @@ Before we can move on to the installation steps, we need to make sure that the b
 
 <summary> Step-by-Step </summary>
 
-**Step 1.** Keep pressing button to the RESET mode.
+**Step 1.** Press and hold the **REC** button.
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />

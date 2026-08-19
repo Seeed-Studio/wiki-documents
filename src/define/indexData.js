@@ -210,6 +210,33 @@ const BASE_STARTED_LIST = [
       },
     ],
   },
+  {
+    title: 'SenseCraft',
+    img: 'sensecraft',
+    link: '/Cloud/',
+    children: [
+      {
+        title: 'SenseCraft AI',
+        link: '/sensecraft-ai/sensecraft-ai-main/',
+      },
+      {
+        title: 'CodeCraft',
+        link: '/codecraft/codecraft-overview/',
+      },
+      {
+        title: 'SenseCraft Robotics',
+        link: '/Cloud/#sensecraft-robotics',
+      },
+      {
+        title: 'SenseCraft Data Platform',
+        link: '/cloud/sensecraft-data/sensecraft-data-platform/overview/',
+      },
+      {
+        title: 'SenseCraft App',
+        link: '/sensecraft-app/overview/',
+      },
+    ],
+  },
 ];
 // Explore & Learn dropdown data
 const BASE_EXPLORE_LIST = [
@@ -340,6 +367,10 @@ const BASE_EXPLORE_LIST = [
             link: '/sscma/',
           },
           {
+            title: 'CodeCraft',
+            link: '/codecraft/codecraft-overview/',
+          },
+          {
             title: 'Edge Impulse',
             link:
               '/edgeimpulse/',
@@ -409,6 +440,10 @@ const BASE_EXPLORE_LIST = [
         title: 'Wiki SeeedStudio (Español)',
         link: 'https://wiki.seeedstudio.com/es/Getting_Started/',
       },
+      {
+        title: 'Wiki SeeedStudio (Português - Brasil)',
+        link: 'https://wiki.seeedstudio.com/pt-br/Getting_Started/',
+      },
     ],
   },
 ];
@@ -461,6 +496,7 @@ const NAV_LABEL_I18N = {
     'SenseCAP Sensors Builder': 'SenseCAP 传感器构建器',
     'SenseCAP Tracker T1000': 'SenseCAP 追踪器 T1000',
     'SenseCraft AI Platform': 'SenseCraft AI 平台',
+    'SenseCraft Data Platform': 'SenseCraft 数据平台',
     'SenseCraft-HomeAssistant User Manual': 'SenseCraft-HomeAssistant 用户手册',
     'Single Board Computer': '单板计算机',
     'Software': '软件',
@@ -522,6 +558,8 @@ const NAV_LABEL_I18N = {
     'SenseCAP Sensors Builder': 'SenseCAP センサービルダー',
     'SenseCAP Tracker T1000': 'SenseCAP トラッカー T1000',
     'SenseCraft AI Platform': 'SenseCraft AI プラットフォーム',
+    'SenseCraft App': 'SenseCraft アプリ',
+    'SenseCraft Data Platform': 'SenseCraft データプラットフォーム',
     'SenseCraft-HomeAssistant User Manual': 'SenseCraft-HomeAssistant ユーザーマニュアル',
     'Single Board Computer': 'シングルボードコンピュータ',
     'Software': 'ソフトウェア',
