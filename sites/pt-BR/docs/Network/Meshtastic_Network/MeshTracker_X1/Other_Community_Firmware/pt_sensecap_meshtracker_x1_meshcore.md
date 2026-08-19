@@ -31,11 +31,11 @@ Mantenha o cabo USB conectado durante a transmissão de dados, caso contrário o
 
 Acesse o [Meshcore Web Flasher](https://meshcore.io/flasher). 
 
-Escolha `Seeed Studio SenseCAP SenseCAP MeshTracker X1` no grupo `Community Firmware`.
+Escolha `Seeed Studio SenseCAP MeshTracker X1` no grupo `Community Firmware`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/ScreenShot_2026-08-17_144406_980.png" alt="pir" width={800} height="auto" /></p>
 
-Escolha `Companion Bluetooth`. Dispositivos gravados com o firmware Companion Bluetooth podem ser conectados ao APP. Se você quiser gravar outro firmware, por favor [clique aqui](https://docs.meshcore.io/) para ver o tutorial.
+Escolha `Companion Bluetooth`. Dispositivos gravados com o firmware Companion Bluetooth podem ser conectados ao APP. Se você quiser gravar outro firmware, por favor [click here](https://docs.meshcore.io/) para ver o tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Selection.png" alt="pir" width={800} height="auto" /></p>
 
@@ -45,7 +45,7 @@ Clique em `Enter DFU Mode`, escolha a porta serial chamada "nRF xxx" ou "TinyUSB
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Selection.png" alt="pir" width={800} height="auto" /></p>
 
-Se você clicou em `Erase Flash` mas não houve resposta, clique em `Enter DFU` novamente e depois clique em `Erase Flash` para garantir que entrou no modo DFU com sucesso.
+Se você clicou em `Erase Flash` mas não houve resposta, clique em `Enter DFU` novamente e depois clique em `Erase Flash` para garantir que você entrou no modo DFU com sucesso.
 
 Se você vir "Flashing erase firmware:100%", o dispositivo foi apagado com sucesso.
 
@@ -57,7 +57,7 @@ Clique em `Enter DFU Mode`, escolha a porta serial chamada "nRF xxx" ou "TinyUSB
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Selection.png" alt="pir" width={800} height="auto" /></p>
 
-Se você clicou em `Flash` mas não houve resposta, clique em `Enter DFU` novamente e depois clique em `Flash` para garantir que entrou no modo DFU com sucesso.
+Se você clicou em `Flash` mas não houve resposta, clique em `Enter DFU` novamente e depois clique em `Flash` para garantir que você entrou no modo DFU com sucesso.
 
 Quando a barra de progresso estiver completamente preenchida, isso indica que a gravação foi concluída. Em seguida, o dispositivo será reiniciado automaticamente.
 
@@ -74,11 +74,11 @@ Mantenha o cabo USB conectado durante a transmissão de dados, caso contrário o
 
 Acesse o [Meshcore Web Flasher](https://meshcore.io/flasher). 
 
-Escolha `Seeed Studio SenseCAP SenseCAP MeshTracker X1` no grupo `Community Firmware`.
+Escolha `Seeed Studio SenseCAP MeshTracker X1` no grupo `Community Firmware`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/ScreenShot_2026-08-17_144406_980.png" alt="pir" width={800} height="auto" /></p>
 
-Escolha `Companion Bluetooth`. Dispositivos gravados com o firmware Companion Bluetooth podem ser conectados ao APP. Se você quiser gravar outro firmware, por favor [clique aqui](https://docs.meshcore.io/) para ver o tutorial.
+Escolha `Companion Bluetooth`. Dispositivos gravados com o firmware Companion Bluetooth podem ser conectados ao APP. Se você quiser gravar outro firmware, por favor [click here](https://docs.meshcore.io/) para ver o tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -88,7 +88,7 @@ Baixe o arquivo UF2.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/EraseFirmware.png" alt="pir" width={800} height="auto" /></p>
 
-Tente entrar no modo DFU manualmente: mantenha o botão do dispositivo pressionado e então conecte **rapidamente** o dispositivo ao computador via cabo USB, mantendo o botão pressionado até que um LED branco ⚪️ acenda.
+Tente entrar no modo DFU manualmente: mantenha pressionado o botão do dispositivo e então conecte **rapidamente** o dispositivo ao computador via cabo USB, mantendo o botão pressionado até que um LED branco ⚪️ acenda.
 
 :::warning
 Para entrar no modo DFU com sucesso, você precisa realizar esta operação rapidamente. Talvez seja necessário tentar várias vezes.
@@ -116,7 +116,7 @@ Baixe o arquivo UF2.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Firmwareuf2.png" alt="pir" width={500} height="auto" /></p>
 
-Tente entrar no modo DFU manualmente: mantenha o botão do dispositivo pressionado e então conecte **rapidamente** o dispositivo ao computador via cabo USB, mantendo o botão pressionado até que um LED branco ⚪️ acenda.
+Tente entrar no modo DFU manualmente: mantenha pressionado o botão do dispositivo e então conecte **rapidamente** o dispositivo ao computador via cabo USB, mantendo o botão pressionado até que um LED branco ⚪️ acenda.
 
 :::warning
 Para entrar no modo DFU com sucesso, você precisa realizar esta operação rapidamente. Talvez seja necessário tentar várias vezes.
@@ -132,7 +132,7 @@ Arraste o arquivo UF2 baixado para o disco que apareceu.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/UF2FirmwareDrag.png" alt="pir" width={800} height="auto" /></p>
 
-O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento já há firmware no dispositivo, portanto o dispositivo será reiniciado automaticamente.
+O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento há firmware no dispositivo, portanto o dispositivo será reiniciado automaticamente.
 
 </TabItem>
 
@@ -154,7 +154,7 @@ Se o dispositivo não responder quando você pressionar o botão, carregue-o pri
 
 ### Conexão com o APP
 
-Baixe pela Google Store ou Apple Store. Ou [clique aqui](https://meshcore.io/#download) para obter o Meshcore APP.
+Baixe pela Google Store ou Apple Store. Ou [click here](https://meshcore.io/#download) para obter o Meshcore APP.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 
@@ -205,7 +205,7 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue3.png" alt="pir" width={800} height="auto" /></p>
 
-4. Quando solicitado, digite a chave de acesso Bluetooth padrão `123456` e clique em **OK**.
+4. Quando solicitado, insira a chave de acesso Bluetooth padrão `123456` e clique em **OK**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue4.png" alt="pir" width={800} height="auto" /></p>
 
@@ -232,10 +232,10 @@ Se você tiver dois dispositivos compatíveis e não houver muitos usuários Mes
 
 O MeshCore permite que você transmita manualmente seu nome, posição e chave pública de criptografia, que também é assinada para evitar falsificação. Quando você clica no botão de anúncio, ele transmite esses dados via LoRa. O MeshCore chama isso de Advert. Há duas maneiras de anunciar, "zero hop" e "flood".
 
-- **Zero hop** significa que seu anúncio é transmitido para qualquer pessoa que possa ouvi-lo, e é só isso.
+- **Zero hop** significa que seu anúncio é transmitido para qualquer pessoa que possa ouvi-lo, e só isso.
 - **Flooded** significa que ele é transmitido e depois repetido por todos os repetidores que o ouvirem.
 
-Você pode enviar anúncios no APP. Você também pode enviar anúncios diretamente na página de anúncios do dispositivo.
+Você pode enviar anúncios no APP. Você também pode enviar anúncios diretamente na página de anúncio do dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Advert.png" alt="pir" width={300} height="auto" /></p>
 
@@ -256,32 +256,27 @@ import TabItem from '@theme/TabItem';
 
 ### Como verificar o ID do dispositivo
 
-<Tabs>
-<TabItem value="23" label="Verificar na parte de trás do dispositivo">
 Os `últimos quatro dígitos` do endereço MAC são o ID do dispositivo
 
 Por exemplo, o ID do dispositivo abaixo seria `A0D4`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/MACAd.png" alt="pir" width={800} height="auto" /></p>
 
-</TabItem>
-
-<TabItem value="22" label="Via ferramenta Serial">
-Visite [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
-
- Clique em `Open Serial Monitor`, conecte o dispositivo ao seu PC, verifique o log serial, palavra-chave `using nodenum`.
-
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
-
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/UsingNodeName.png" alt="pir" width={800} height="auto" /></p>
-
-
-</TabItem>
-</Tabs>
 
 ### Como reiniciar o dispositivo
 
- Pressione e segure o botão e, em seguida, conecte o cabo de carregamento.
+ Pressione e segure o botão, depois conecte o cabo de carregamento e solte o botão imediatamente.
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260818150011.gif" alt="pir" width={300} height="auto" /></p>
+
+ :::note
+  Pressione e segure o botão, depois conecte o cabo de carregamento e mantenha pressionado por mais de 3 s para forçar o dispositivo a entrar no modo DFU.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
+
+   Se você quiser sair do modo DFU, apenas pressione e segure o botão, depois conecte o cabo de carregamento e solte o botão imediatamente.
+
+ :::
 
 ## Solução de problemas
 
@@ -289,26 +284,26 @@ Visite [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
 - Use um cabo USB em bom estado para `carregar o dispositivo` continuamente por 1–2 horas para garantir que a bateria tenha energia suficiente para acordar o sistema.
 
-- Se o dispositivo ainda não responder após o carregamento, `execute uma redefinição forçada` da seguinte forma: desconecte o cabo USB. Pressione e segure o botão e, em seguida, conecte o cabo USB mantendo o botão pressionado. Segure por aproximadamente 3 segundos e depois solte. Isso força uma redefinição do sistema.
+- Se o dispositivo ainda não responder após o carregamento, `execute um hard reset` da seguinte forma: desconecte o cabo USB. Pressione e segure o botão e, em seguida, conecte o cabo USB mantendo o botão pressionado. Segure por aproximadamente 3 segundos e depois solte. Isso força uma reinicialização do sistema.
 
- - Se ainda não funcionar, conecte um cabo USB a um computador. Mantenha pressionado o botão do dispositivo e, em seguida, conecte o dispositivo ao computador, veja se um disco aparece no seu PC. Se aparecer, reinstale o bootloader.
+ - Se ainda não funcionar, conecte um cabo USB a um computador. Segure o botão do dispositivo e, em seguida, conecte o dispositivo ao computador, veja se um disco aparece ou não no seu PC. Se aparecer, reinstale o bootloader
 
 ### Dispositivo preso em loop de inicialização
 
 **Descrição:**
 
-O dispositivo irá reiniciar repetidamente, e a porta serial irá conectar e desconectar repetidamente.
+O dispositivo irá reiniciar repetidamente, e a porta serial conecta e desconecta repetidamente.
 
 **Solução:**
 
 - Etapa 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte **rapidamente** o cabo de carregamento duas vezes
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
 O dispositivo está em modo DFU se o LED branco estiver aceso continuamente.
 
 :::note
-Para entrar com sucesso no modo DFU, você precisa realizar esta operação rapidamente. Talvez seja necessário tentar várias vezes.
+Para entrar com sucesso no modo DFU, você precisa realizar essa operação rapidamente. Talvez seja necessário tentar várias vezes.
 :::
 
 - Etapa 2: Apagar a Flash
@@ -318,22 +313,17 @@ Para entrar com sucesso no modo DFU, você precisa realizar esta operação rapi
 ### Instalação do bootloader
 
 
-<Tabs>
-
-<TabItem value="m2" label="Instalar com Adafruit-nrfutil">
-
-
 - [Download do bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
 
 :::danger note
-Ao gravar o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
+Ao gravar o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** a desconecte durante o processo de gravação.
 :::
 
 **Etapa 1: Instalação do Adafruit-nrfutil**
 
-Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela que aparecer e clique em "Enter". Isso abrirá a linha de comando. 
+Para usuários do Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela que aparecer e clique em "Enter". Isso abrirá a linha de comando. 
 
-Para usuários MAC, pressione a tecla "Command" e a tecla "Space" para abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
+Para usuários de MAC, pressione a tecla "Command" e a tecla "Space" para abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
 
 **Pré-requisitos**
 
@@ -368,20 +358,20 @@ Este é o local de instalação:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Para usuários Windows, talvez seja necessário adicionar o caminho manualmente. Copie o local de instalação mostrado na última etapa. Em seguida, adicione-o como a seguir:
+Para usuários do Windows, talvez seja necessário adicionar o caminho manualmente. Copie o local de instalação mostrado na última etapa. Em seguida, adicione-o como a seguir:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
-**Etapa 2: Verifique o número da porta**
+**Etapa 2: Verifique o número da sua porta**
 
 Conecte seu dispositivo ao PC e verifique o número da porta.
 
-Para usuários Windows, abra o gerenciador de dispositivos e vá para `port`; o número de porta que aparecer após a conexão do dispositivo é o número da porta do dispositivo.
+Para usuários do Windows, abra o gerenciador de dispositivos e vá para `port`; o número da porta que aparecer após a conexão do dispositivo é o número da porta do dispositivo.
 
-Para usuários Mac, por exemplo:
+Para usuários de Mac, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-Para usuários Windows, por exemplo:
+Para usuários do Windows, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
 **Etapa 3: Gravar o bootloader**
@@ -394,11 +384,11 @@ No terminal ou prompt de comando, navegue até o diretório onde você baixou o 
 adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-Altere COMXX para o seu número de COM. Por exemplo, se o seu dispositivo estiver na com6, altere o comando para:
+Altere COMXX para o número da sua porta COM. Por exemplo, se o seu dispositivo estiver em com6, altere o comando para:
 
 `adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- Alguns dispositivos irão mudar o número da porta depois que você inserir este comando. Portanto, se a instalação falhar, verifique novamente o número da porta.
+ Alguns dispositivos irão mudar o número da porta depois que você inserir esse comando. Portanto, se a instalação falhar, verifique novamente o número da porta.
 
 - **Para outros**:
 
@@ -408,112 +398,23 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#flash-firmware) para gravar o firmware do aplicativo.
-
-</TabItem>
-
-<TabItem value="m3" label="Instalar a partir do código-fonte">
-
-
-Use este método se você tiver problemas para instalar com o PyPi ou quiser modificar a ferramenta. Primeiro, clone este repositório e entre na pasta dele.
-
-```
-git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
-cd Adafruit_nRF52_nrfutil
-```
-
-Observação: os comandos a seguir usam `python3`; no entanto, se você estiver no Windows, talvez seja necessário alterá-lo para `python`, já que a instalação do Python 3.x no Windows ainda usa o nome python.exe
-
-Para instalar no espaço do usuário no seu diretório pessoal:
-
-```
-pip3 install -r requirements.txt
-python3 setup.py install
-```
-
-Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a opção `--user`:
-
-```
-pip3 install -r --user requirements.txt
-python3 setup.py install
-```
-
-Se você quiser instalar nos diretórios do sistema (geralmente não recomendado):
-
-```
-sudo pip3 install -r requirements.txt
-sudo python3 setup.py install
-```
-
-Para gerar um binário executável independente da ferramenta (Windows e MacOS), execute estes comandos:
-
-```
-pip3 install pyinstaller
-cd Adafruit_nRF52_nrfutil
-pip3 install -r requirements.txt
-cd Adafruit_nRF52_nrfutil\nordicsemi
-pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
-```
-
-Você encontrará o .exe em `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` (com `.exe` se você estiver no Windows).
-Copie ou mova-o para outro lugar para sua conveniência, como um diretório no seu %PATH%.
-
-**Etapa 2: Verifique o número da porta**
-
-Conecte seu dispositivo ao PC e verifique o número da porta.
-
-Para usuários Windows, abra o gerenciador de dispositivos e vá para "port"; o número de porta que aparecer após a conexão do dispositivo é o número da porta do dispositivo.
-
-Para usuários Mac, por exemplo:
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
-
-Para usuários Windows, por exemplo:
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
-
-**Passo 3: Gravar o bootloader**
-
-No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo pela porta correta do seu dispositivo:
-
-- **Para Windows**:
-
-```
-adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p COMxx -b 115200 --singlebank --touch 1200
-```
-
-Altere COMXX para o número da sua porta COM. Por exemplo, se o seu dispositivo estiver na com6, altere o comando para:
-
-`adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p **COM6** -b 115200 --singlebank --touch 1200`
-
- Alguns dispositivos irão alterar o número da porta depois que você inserir este comando. Portanto, se a instalação falhar, verifique novamente o número da porta.
-
-- **Para outros**:
-
-```
-adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
-```
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
-
-Quando você tiver concluído as etapas acima, poderá seguir este [passo](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#flash-firmware) para gravar o firmware da aplicação.
-
-</TabItem>
-</Tabs>
+Quando você concluir as etapas acima, poderá seguir esta [etapa](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#flash-firmware) para gravar o firmware da aplicação.
 
 
 **2) O dispositivo não consegue entrar no modo DFU, mas a porta serial pode ser detectada**.
 
 - Abra uma ferramenta de porta serial
 
-- Defina a taxa de baud para `1200`.
+- Defina a taxa de transmissão para `1200`.
 
 - Conecte o dispositivo.
-   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU, então [grave o bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#bootloader-installation) -> [apague a flash](https://wiki.seeedstudio.sensecap_meshtracker_x1_meshcore/#apagamento-de-firmware) -> [grave o firmware](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#firmware-flashing).
+   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU; então [grave o bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#bootloader-installation) -> [apague a flash](https://wiki.seeedstudio.sensecap_meshtracker_x1_meshcore/#firmware-flashing) -> [grave o firmware](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#firmware-flashing).
 
 **3) O dispositivo não consegue entrar no modo DFU e nenhuma porta serial é exibida**
 
-- mantenha pressionado o botão do dispositivo e, em seguida, conecte o cabo de carregamento. Depois que um disco aparecer no seu PC, você poderá ver a porta serial.
+- Pressione e segure o botão do dispositivo, depois conecte o cabo de carregamento e solte o botão imediatamente. Depois que um disco aparecer no seu PC, você poderá ver a porta serial.
 
-- Se ainda assim não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada, depois conecte o cabo de carregamento e tente pareá-lo novamente.
+- Se ainda não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada; depois conecte o cabo de carregamento e tente pareá-lo novamente.
 
 **4) Se nenhuma das etapas acima funcionar, entre em contato com o suporte técnico: support@sensecapmx.com**
 
@@ -521,26 +422,26 @@ Quando você tiver concluído as etapas acima, poderá seguir este [passo](https
 
 - **Descrição do fenômeno**
 
- - Após o dispositivo ligar, ele desligará ou reiniciará automaticamente depois de um tempo. 
+ - Depois que o dispositivo liga, ele desliga ou reinicia automaticamente após um tempo. 
  - O log da porta serial roda por um tempo e depois para.
 
  Isso pode ser causado por reiniciar ou desligar manualmente e à força o dispositivo quando ele está nos seguintes estados: sem terminar o processo de transmissão de mensagens, sendo configurado......
 
 - **Solução de problemas**
 
- [Clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#firmware-flashing) para executar um apagamento da flash. 
+ [Clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#firmware-flashing) para executar um flash-erase. 
 
 
 ### Qualidade do sinal
 
-  - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR menor que -10 dB indica baixo desempenho.
+  - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR abaixo de -10 dB indica desempenho ruim.
 
-  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI menor que -115 dBm é considerado como tendo baixo desempenho. 
+  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI abaixo de -115 dBm é considerado como tendo desempenho ruim.
 
-      Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
+      Para obter o melhor efeito de sinal, utilize o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico e Discussão de Produto
 
 <p style={{textAlign: 'center'}}>
   <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
