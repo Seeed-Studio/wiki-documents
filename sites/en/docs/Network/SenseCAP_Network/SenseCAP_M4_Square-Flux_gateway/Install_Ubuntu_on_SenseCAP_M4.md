@@ -5,7 +5,7 @@ keywords:
   - SenseCAP Network
   - SenseCAP M4
   - Ubuntu
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview.png
 slug: /install_ubuntu_on_sensecap_m4
 sku: E23010412, 110991885, 110991865
 last_update:

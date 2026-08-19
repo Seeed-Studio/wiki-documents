@@ -92,6 +92,16 @@ This guide introduces how to use MeshCore on the SenseCAP MeshTracker X1, coveri
 
 </div>
 
+### [Build a Four-Camera Fisheye Surround View Demo on Jetson](https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This project shows a **four-camera fisheye surround-view system** on NVIDIA Jetson. Four fisheye cameras around the chassis are calibrated, undistorted, and stitched into a real-time **bird's-eye view (BEV)**.
+
+</div>
+
 ### [Deploy Monocular Depth Estimation on reCamera (FastDepth, INT8)](https://wiki.seeedstudio.com/recamera_deploy_monocular_depth/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-indoor-office-result.png" alt="pir" width={800} height="auto" /></p>
