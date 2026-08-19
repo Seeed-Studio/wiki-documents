@@ -14,7 +14,7 @@ last_update:
   date: 06/01/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-10'
+updatedAt: '2026-08-06'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_getting_started/
 ---
 
@@ -36,8 +36,8 @@ Antes de iniciar a configuração, certifique-se de que você preparou o seguint
 
 ### Etapas de Conexão
 
-1. Como mostrado na figura abaixo, conecte o cabo de alimentação DC de 12V na interface de alimentação do dispositivo, conecte uma extremidade do cabo USB Type-C ao reCamera Pro e conecte a outra extremidade ao seu computador host Windows (Host PC).
-2. Observe o indicador de status do dispositivo. Quando a **luz verde estiver acesa de forma contínua**, isso indica que o dispositivo foi inicializado com sucesso e entrou em estado de operação.
+1. Como mostrado na figura abaixo, conecte o cabo de alimentação DC de 12V na interface de alimentação do dispositivo, conecte uma extremidade do cabo USB Type-C ao reCamera Pro e conecte a outra extremidade ao seu computador host com Windows (Host PC).
+2. Observe o indicador de status do dispositivo. Quando a **luz verde estiver acesa continuamente**, isso indica que o dispositivo foi inicializado com sucesso e entrou em estado de operação.
 
 ![Diagrama da luz de status do sistema e conexão dos cabos](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
@@ -49,7 +49,7 @@ O LED verde indica o status do sistema, enquanto o LED vermelho funciona como in
 2. ***Solid on*** : O equipamento está operando normalmente.
 3. ***off*** : Estado anormal, o processo principal não está em execução.
 4. ***100 ms blink*** : Atualmente em processo de OTA.
-5. ***Short green blink*** : Foi detectado um cartão SD com sistema de arquivos corrompido.
+5. ***Short green blink*** : Foi detectado um cartão SD com sistema de arquivos corrompido/sujo.
 
 ---
 
@@ -102,12 +102,12 @@ Neste ponto, você pode **desconectar com segurança o cabo USB Type-C** para ob
 
 ---
 
-## 4. Redefinição do dispositivo
+## 4. Redefinindo o Dispositivo
 
-Há dois métodos para restaurar o dispositivo às configurações de fábrica:
+Existem dois métodos para restaurar o dispositivo às configurações de fábrica:
 
-1. Pressione e mantenha pressionado o botão lateral por aproximadamente 15 segundos, até ouvir um aviso sonoro indicando que o dispositivo entrou no modo de redefinição. Em seguida, aguarde até que a luz verde de status permaneça acesa continuamente para fazer login novamente no dispositivo.
-2. Na interface de gerenciamento Web, clique em **Informações do dispositivo** -> **Configurações do sistema** -> **Redefinição de fábrica** para redefinir o dispositivo.
+1. Pressione e segure o botão lateral por cerca de 15 segundos até ouvir um som de aviso, indicando que o dispositivo entrou no modo de redefinição. Neste momento, basta aguardar até que a luz de status verde permaneça acesa continuamente para fazer login novamente no dispositivo.
+2. Através da interface Web de gerenciamento, clique em **Device Info** -> **System Settings** -> **Factory Reset** para redefinir o dispositivo.
 ![Diagrama de redefinição de fábrica](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-Pro_reset_Device.jpg)
 
 ## 5. Perguntas Frequentes e Solução de Problemas (FAQ)
@@ -116,12 +116,12 @@ Há dois métodos para restaurar o dispositivo às configurações de fábrica:
 
 Se você não conseguir abrir a interface Web após conectar o cabo Type-C, geralmente é porque a placa de rede virtual do sistema Windows não obteve corretamente um endereço IP. Siga estas etapas para solucionar o problema:
 
-1. Abra o **Painel de Controle** no computador host Windows.
-2. Clique em **Rede e Internet** -> **Central de Rede e Compartilhamento** -> **Alterar as configurações do adaptador**, nesta ordem.
+1. Abra o **Control Panel** no computador host com Windows.
+2. Clique para entrar em **Network and Internet** -> **Network and Sharing Center** -> **Change adapter settings**, nesta ordem.
 3. Na lista de conexões de rede exibida, encontre a placa de rede virtual com um nome semelhante a `Remote NDIS based Internet Sharing Device` ou relacionada ao reCamera (você pode tentar desconectar e reconectar o dispositivo para ver qual porta de rede desaparece e reaparece; essa porta é a interface de placa de rede virtual do reCamera Pro).
-4. Clique com o botão direito neste adaptador de rede e selecione **Propriedades**.
-5. Clique duas vezes em **Protocolo IP Versão 4 (TCP/IPv4)** na lista.
-6. Certifique-se de que a configuração esteja marcada como **Obter um endereço IP automaticamente** e **Obter o endereço dos servidores DNS automaticamente**.
+4. Clique com o botão direito neste adaptador de rede e selecione **Properties**.
+5. Clique duas vezes em **Internet Protocol Version 4 (TCP/IPv4)** na lista.
+6. Certifique-se de que a configuração esteja marcada como **Obtain an IP address automatically** e **Obtain DNS server address automatically**.
 7. Clique em OK para salvar as configurações e acesse `192.168.42.1` novamente no navegador.
 
 <video
@@ -134,19 +134,13 @@ Se você não conseguir abrir a interface Web após conectar o cabo Type-C, gera
 
 ### P2: Após conectar o reCamera ao computador via cabo USB, o computador não conseguiu acessar a internet
 
-Se o seu computador MAC não conseguir acessar a internet após conectar o reCamera via cabo USB, isso ocorre porque a placa de rede virtual assumirá o controle do WIFI do seu MAC, impedindo que o seu MAC se conecte à internet. Siga as etapas abaixo para resolver o problema:
-
-1. Abra as ***Configurações do Sistema do seu MAC -> Rede***.
-2. No canto inferior direito (ou na parte inferior direita), localize um ícone que é um ***círculo com três pontos '...' dentro*** (ou uma seta para baixo, dependendo da versão do seu MAC).
-3. Clique em ***Set Service Order...(Set Service Order...)***.
-4. Na lista exibida, arraste o WIFI para o topo para garantir que ele fique antes da placa de rede virtual USB (como USB_Gadget).
-5. Clique em "OK" para salvar. Em seguida, ao usar o MAC para acessar a internet, ele usará preferencialmente a conexão WIFI. Somente ao acessar o reCamera ele usará a conexão USB.
+Se o seu computador não conseguir acessar a internet após ser conectado a um dispositivo via cabo USB, consulte o seguinte:[diagrama de erro de rede](https://wiki.seeedstudio.com/pt-br/recamera_network_connection/#computer-network-error)
 
 ---
 
 ## Suporte Técnico e Discussão sobre o Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer a você diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
