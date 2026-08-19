@@ -40,9 +40,9 @@ Install the `ultralytics` package, or by running `pip install -U ultralytics`. P
 
 ```bash
 # Install using pip
-pip install ultralytics
+pip install ultralytics==8.2.8
 # Chinese users can use mirror acceleration
-# pip install ultralytics -i https://pypi.tuna.tsinghua.edu.cn/simple
+# pip install ultralytics==8.2.8 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 </TabItem>
@@ -53,7 +53,7 @@ pip install ultralytics
 
 ```bash
 # Install using conda
-conda install -c conda-forge ultralytics
+conda install -c conda-forge ultralytics=8.2.8
 ```
 
 </TabItem>
@@ -64,7 +64,7 @@ Clone `ultralytics` If you are interested in participating in development, or wi
 
 ```bash
 # Clone the official repository
-git clone https://github.com/ultralytics/ultralytics
+git clone -b v8.2.8 https://github.com/ultralytics/ultralytics
 
 # Go into the cloned folder
 cd ultralytics
