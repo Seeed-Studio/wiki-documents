@@ -14,6 +14,7 @@ keywords:
   - reComputer
 image: https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif
 slug: /jetson_fisheye_surround_view_demo
+sku: 100066562
 last_update:
   date: 08/19/2026
   author: haochen
