@@ -11,7 +11,7 @@ last_update:
   date: 04/02/2024
   author: Jack Mu
 createdAt: '2024-04-07'
-updatedAt: '2026-03-13'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/pt-br/ma_deploy_yolov8/
 ---
 
@@ -26,7 +26,7 @@ Este wiki apresentará como treinar o modelo oficial de detecção de alvos YOLO
 
 ## Preparação do conjunto de dados
 
-Recomenda-se usar a plataforma [roboflow](https://universe.roboflow.com/) para conjuntos de dados. Esta plataforma pode realizar anotação de conjunto de dados e algumas estratégias de aumento de dados, além de suportar a exportação de vários formatos de conjuntos de dados.
+Recomenda-se usar a plataforma [roboflow](https://universe.roboflow.com/) para conjuntos de dados. Esta plataforma pode realizar anotação de conjuntos de dados e algumas estratégias de aumento de dados, além de suportar a exportação em vários formatos de conjuntos de dados.
 
 ## Instalar a ferramenta de linha de comando YOLOv8
 
@@ -40,31 +40,31 @@ Instale o pacote `ultralytics`, executando `pip install -U ultralytics`. Visite 
 
 ```bash
 # Install using pip
-pip install ultralytics
+pip install ultralytics==8.2.8
 # Chinese users can use mirror acceleration
-# pip install ultralytics -i https://pypi.tuna.tsinghua.edu.cn/simple
+# pip install ultralytics==8.2.8 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 </TabItem>
 
 <TabItem value="conda installation" label="conda">
 
-`Conda` é um gerenciador de pacotes alternativo ao `pip` e também pode ser usado para instalação. Visite o Anaconda para mais detalhes: [https://anaconda.org/conda-forge/ultralytics](https://anaconda.org/conda-forge/ultralytics). O repositório feedstock do `Ultralytics` para atualização de pacotes `conda` está localizado em [https://github.com/conda-forge/ultralytics-feedstock/](https://github.com/conda-forge/ultralytics-feedstock/).
+`Conda` é um gerenciador de pacotes alternativo ao `pip` e também pode ser usado para instalação. Visite o Anaconda para mais detalhes: [https://anaconda.org/conda-forge/ultralytics](https://anaconda.org/conda-forge/ultralytics). O repositório feedstock `Ultralytics` para atualização de pacotes `conda` está localizado em [https://github.com/conda-forge/ultralytics-feedstock/](https://github.com/conda-forge/ultralytics-feedstock/).
 
 ```bash
 # Install using conda
-conda install -c conda-forge ultralytics
+conda install -c conda-forge ultralytics=8.2.8
 ```
 
 </TabItem>
 
 <TabItem value="Git installation" label="Git">
 
-Clone `ultralytics` se você estiver interessado em participar do desenvolvimento ou desejar experimentar o código-fonte mais recente, visite o repositório. Após clonar, navegue até o diretório e instale o pacote em modo desenvolvedor usando o parâmetro `-e`.
+Clone `ultralytics` se você estiver interessado em participar do desenvolvimento ou desejar experimentar o código-fonte mais recente, visite o repositório. Após clonar, navegue até o diretório e instale o pacote em modo de desenvolvimento usando o parâmetro `-e`.
 
 ```bash
 # Clone the official repository
-git clone https://github.com/ultralytics/ultralytics
+git clone -b v8.2.8 https://github.com/ultralytics/ultralytics
 
 # Go into the cloned folder
 cd ultralytics
@@ -77,7 +77,7 @@ pip install -e .
 
 </Tabs>
 
-`Tips:` Se você não estiver familiarizado com o código do YOLOv8, recomenda-se que use pip ou conda para instalá-lo.
+`Tips:` Se você não estiver familiarizado com o código do YOLOv8, é recomendável usar pip ou conda para instalá-lo.
 
 - Você pode usar o comando de consulta de versão para testar se a ferramenta de linha de comando `yolo` foi instalada com sucesso.
 
@@ -109,14 +109,14 @@ yolo export model=${your model path}  format=tflite imgsz=192 int8
 
 ### Otimização do grafo do modelo
 
-- O Grove Vision AI (V2) suporta modelos otimizados com vela e também pode acelerar a inferência do modelo. Primeiro, execute o seguinte comando para instalar a ferramenta de linha de comando vela (o dispositivo `XIAO ESP32S3` ainda não é suportado)
+- Grove Vision AI (V2) suporta modelos otimizados com vela e também pode acelerar a inferência do modelo. Primeiro, execute o seguinte comando para instalar a ferramenta de linha de comando vela (o dispositivo `XIAO ESP32S3` ainda não é suportado)
 
 ```bash
 
 pip3 install ethos-u-vela
 ```
 
-- Depois disso, você precisa [baixar](https://files.seeedstudio.com/sscma/configs/vela_config.ini) o arquivo de configuração relacionado ao `vela`, ou copiar o seguinte conteúdo para um arquivo, que pode ser nomeado como `vela_config.ini`
+- Depois disso, você precisa [baixar](https://files.seeedstudio.com/sscma/configs/vela_config.ini) o arquivo de configuração relacionado ao `vela`, ou copiar o conteúdo a seguir para um arquivo, que pode ser nomeado `vela_config.ini`
 
 ```bash
 ; file: my_vela_cfg.ini ; ----------------------------------------------------------------------------- 
@@ -167,6 +167,6 @@ Após a execução, um modelo tflite com grafo otimizado será gerado no caminho
 
 - O arquivo de modelo que precisa ser implantado é o arquivo `tflite` exportado acima. Você pode gravar o arquivo de modelo no dispositivo de destino de acordo com o seguinte tutorial.
 
-- Recomendamos fortemente o uso de nossa ferramenta web para gravar o modelo tflite treinado no dispositivo. Operações detalhadas são fornecidas no [Tutorial de Implantação](https://wiki.seeedstudio.com/pt-br/ModelAssistant_Deploy_Overview/)
+- Recomendamos fortemente o uso da nossa ferramenta web para gravar o modelo tflite treinado no dispositivo. Operações detalhadas são fornecidas no [Tutorial de Implantação](https://wiki.seeedstudio.com/pt-br/ModelAssistant_Deploy_Overview/)
 
-`Note:` Como o dispositivo `ESP32S3` não suporta implantação de modelo após a otimização de grafo com `vela`, você não precisa realizar a otimização de grafo do modelo `tflite` se quiser implantar o modelo no dispositivo `XIAO ESP32S3`.
+`Note:` Como o dispositivo `ESP32S3` não suporta implantação de modelo após a otimização de grafo `vela`, você não precisa realizar a otimização de grafo do modelo `tflite` se quiser implantar o modelo no dispositivo `XIAO ESP32S3`.
