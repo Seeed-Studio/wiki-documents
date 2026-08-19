@@ -440,6 +440,10 @@ const BASE_EXPLORE_LIST = [
         title: 'Wiki SeeedStudio (Español)',
         link: 'https://wiki.seeedstudio.com/es/Getting_Started/',
       },
+      {
+        title: 'Wiki SeeedStudio (Português - Brasil)',
+        link: 'https://wiki.seeedstudio.com/pt-br/Getting_Started/',
+      },
     ],
   },
 ];
