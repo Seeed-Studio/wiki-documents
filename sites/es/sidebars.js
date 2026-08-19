@@ -2937,6 +2937,7 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/es_SenseCAP_M4_Overview',
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/es_SenseCAP_M4_Quick_Start',
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/es_SenseCAP_M4_FAQ',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/es_Install_Ubuntu_on_SenseCAP_M4',
           ],
         },
         {

@@ -647,18 +647,14 @@ AEC_MIC_ARRAY_GEO:
 
 ## reSpeaker XVF_HOST Application
 
-The `xvf_host` application is a host-side utility used to communicate with the
-reSpeaker XVF3800 through USB. It can be used to read or modify XVF3800 control
-parameters, check the firmware version, read GPIO values, and access functions
-such as Direction of Arrival (DoA).
+The `xvf_host` application is a host-side utility used to communicate with the reSpeaker XVF3800 through USB. It can be used to read or modify XVF3800 control parameters, check the firmware version, read GPIO values, and access functions such as Direction of Arrival (DoA).
 
 
 Host Controller application can be find in [here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/host_control)
 
 ### Host Application Files
 
-The host application is located under the `host_control` directory of the
-repository.
+The host application is located under the `host_control` directory of the repository.
 
 Typical platform directories include:
 
@@ -670,8 +666,7 @@ host_control/
 └── ...
 ```
 
-Each platform directory contains the host application and the libraries
-required by that application.
+Each platform directory contains the host application and the libraries required by that application.
 
 For example:
 
@@ -703,9 +698,7 @@ host_control/mac_arm64/
 └── xvf_host
 ```
 
-> **Important:** Keep the complete platform directory together when copying
-> the host application to another computer. The executable depends on the
-> libraries located in the same directory.
+> **Important:** Keep the complete platform directory together when copying the host application to another computer. The executable depends on the libraries located in the same directory.
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -730,8 +723,7 @@ Run:
 xvf_host.exe --help
 ```
 
-If the application is working correctly, the help information will be
-displayed.
+If the application is working correctly, the help information will be displayed.
 
 To display all available control commands:
 
@@ -739,8 +731,7 @@ To display all available control commands:
 xvf_host.exe --list-commands
 ```
 
-The `--list-commands` option shows the commands supported by the host
-application.
+The `--list-commands` option shows the commands supported by the host application.
 
 **4. Check the XVF3800 Connection**
 
@@ -759,8 +750,7 @@ VERSION 2 0 10
 
 The firmware version will depend on the firmware installed on the XVF3800.
 
-The `VERSION` command is a simple way to verify that `xvf_host.exe` can
-communicate with the XVF3800.
+The `VERSION` command is a simple way to verify that `xvf_host.exe` can communicate with the XVF3800.
 
 **5. Read GPI Values**
 
@@ -780,8 +770,7 @@ xvf_host.exe GPO_READ_VALUES
 xvf_host.exe AEC_AZIMUTH_VALUES
 ```
 
-The returned azimuth value can be used to determine the detected direction of
-the sound source.
+The returned azimuth value can be used to determine the detected direction of the sound source.
 
 **8. List Available Commands**
 
@@ -858,20 +847,17 @@ VERSION 2 0 10
 
 The firmware version will depend on the firmware installed on the XVF3800.
 
-The `VERSION` command is a simple way to verify that `xvf_host` can
-communicate with the XVF3800.
+The `VERSION` command is a simple way to verify that `xvf_host` can communicate with the XVF3800.
 
 **6. If USB Permission Is Denied**
 
-If the application cannot access the USB device because of Linux USB
-permissions, you can test the application with:
+If the application cannot access the USB device because of Linux USB permissions, you can test the application with:
 
 ```bash
 sudo ./xvf_host VERSION
 ```
 
-If the command works with `sudo` but not without it, the issue is likely related
-to the Linux USB device permissions or udev rules.
+If the command works with `sudo` but not without it, the issue is likely related to the Linux USB device permissions or udev rules.
 
 **7. Read GPI Values**
 
