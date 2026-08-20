@@ -14,6 +14,9 @@ sidebar_position: 19
 last_update:
   date: 08/18/2026
   author: Zafar Khidoyatov
+createdAt: '2026-08-18'
+url: https://wiki.seeedstudio.com/recamera_deploy_monocular_depth/
+updatedAt: '2026-08-18'
 ---
 
 # Deploy Monocular Depth Estimation on reCamera (FastDepth, INT8)
