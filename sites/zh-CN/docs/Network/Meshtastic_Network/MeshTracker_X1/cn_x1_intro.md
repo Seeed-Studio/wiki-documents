@@ -9,11 +9,11 @@ sku: 100087698
 slug: /meshtracker_x1_intro
 sidebar_position: 0
 last_update:
-  date: 5/29/2026
-  author: MichelleHuang
+  date: 8/20/2026
+  author: Advent Jiang
 url: https://wiki.seeedstudio.com/cn/meshtracker_x1_intro/
 createdAt: '2026-07-13'
-updatedAt: '2026-07-16'
+updatedAt: '2026-08-20'
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png" alt="pir" width={900} height="auto" /></p>
@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-全球首款卡片尺寸、支持双频 GPS 的 Meshtastic 设备。MeshTracker X1 专为可靠的离网通信而打造，是一款支持 863–928 MHz 频段、具备 IP66 防护等级的 [Meshtastic®](https://meshtastic.org/) GPS 追踪器。其采用最新的 Semtech LR2021 LoRa 芯片，具备 USB-C 连接、最长 5 天电池续航，以及紧凑且适合户外使用的设计。
+全球首款卡片尺寸、配备双频 GPS 的 Meshtastic 设备。MeshTracker X1 专为可靠的离网通信而打造，是一款支持 863–928 MHz 频段、具备 IP66 防护等级的 [Meshtastic®](https://meshtastic.org/) GPS 追踪器。其采用最新的 Semtech LR2021 LoRa 芯片，具备 USB-C 连接、最长 5 天电池续航，以及紧凑且适合户外使用的设计。
 
 ### 特性
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -32,13 +32,13 @@ updatedAt: '2026-07-16'
 
 - **一款你真的会随身携带的 Meshtastic 设备** 
 
-SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖范围之外实现可靠通信和位置共享的人群设计——无论是在户外、在大型活动现场，还是在紧急情况下。凭借真正便携的外形和坚固的 IP66 防护，它将 Meshtastic 连接带入日常随身携带和真实野外应用场景。
+SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖之外实现可靠通信和位置共享的人群设计——无论是在户外、在大型活动现场，还是在紧急情况下。凭借真正便携的外形和坚固的 IP66 防护，它将 Meshtastic 连接带入日常随身携带和真实野外应用场景。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **超高精度双频 GPS 追踪** 
 
-得益于双频 L1+L5 GNSS 和内置气压计，MeshTracker X1 相比单频 GPS 提供更可靠的定位和高度感知能力。它也是全球首款采用双频 GPS 的卡片尺寸 Meshtastic 设备。
+得益于双频 L1+L5 GNSS 和内置气压计，MeshTracker X1 相比单频 GPS 提供更可靠的定位和高度感知能力。它也是全球首款卡片尺寸的双频 GPS Meshtastic 设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -48,19 +48,19 @@ SenseCAP MeshTracker X1 专为需要在蜂窝网络覆盖范围之外实现可�
 
 - **可靠的远距离通信** 
 
-在 915 MHz 频段测试中，MeshTracker X1 在开阔视距条件下可实现最长 8 km 的可靠通信距离，让团队在户外探险、活动和紧急情况下始终保持联络。
+在 915 MHz 频段测试中，MeshTracker X1 在开阔视距条件下可实现最长 8 km 的可靠通信距离，让团队在户外探险、活动和紧急情况下保持互联。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Dazzaristance.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **卡片尺寸设计，轻松携带** 
+- **卡片尺寸设计，便于携带** 
 
 MeshTracker X1 机身纤薄轻巧，专为户外探险时的日常随身携带而设计。你可以将其挂在挂绳上、固定在背包上、绑在车包上，或直接放入口袋中，轻松实现离网连接。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **灵活的振动与声音提醒** 
+- **灵活的震动与声音提醒** 
 
-MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知方式。无论你身处嘈杂的活动现场、户外骑行途中，还是在希望尽量减少干扰的安静小径上，都能及时感知到新消息。
+MeshTracker X1 通过内置震动和蜂鸣器反馈提供灵活的通知选项。无论你身处嘈杂的活动现场、户外骑行途中，还是在希望尽量减少干扰的静谧步道上，都能及时感知收到的新消息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -108,7 +108,7 @@ MeshTracker X1 通过内置振动和蜂鸣器反馈提供灵活的通知方式�
 |项目|参数|
 | :- | :- |
 |**电池容量**|可充电高压电池，1100mAh|
-|**电池寿命监测**|周期性上行电池电量|
+|**电池寿命监测**|周期性上报电池电量|
 |**充电协议**|USB Type-C|
 |**设备电源输入**|5V，0.55A|
 |**电池电源输入**|4.4V，0.22A|
@@ -358,6 +358,8 @@ X1 未来可能发展为一个产品系列，后续推出的新产品型号将�
 ### 资源
 
 [电池测试报告](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+
+[X1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx)
 
 ## 技术支持与产品讨论
 
