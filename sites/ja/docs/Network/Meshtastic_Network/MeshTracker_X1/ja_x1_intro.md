@@ -2,18 +2,18 @@
 description: Meshtastic 向け SenseCAP MeshTracker X1 の紹介。この Wiki では、機能、仕様、ハードウェア概要、ボタン、LED、およびピン一覧を紹介します。
 title: SenseCAP MeshTracker X1 入門
 keywords:
-  - Tracker
+  - トラッカー
   - Meshtastic
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png
 sku: 100087698
 slug: /meshtracker_x1_intro
 sidebar_position: 0
 last_update:
-  date: 5/29/2026
-  author: MichelleHuang
+  date: 8/20/2026
+  author: Advent Jiang
 url: https://wiki.seeedstudio.com/ja/meshtracker_x1_intro/
 createdAt: '2026-07-13'
-updatedAt: '2026-07-16'
+updatedAt: '2026-08-20'
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png" alt="pir" width={900} height="auto" /></p>
@@ -24,29 +24,29 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-世界初のカードサイズ Meshtastic デバイスで、デュアルバンド GPS を搭載しています。オフグリッド環境での信頼性の高い通信のために設計された MeshTracker X1 は、IP66 等級の [Meshtastic®](https://meshtastic.org/) GPS トラッカーで、863–928 MHz の周波数帯をサポートします。最新の Semtech LR2021 LoRa チップを搭載し、USB-C 接続、最長 5 日間のバッテリー駆動、コンパクトで屋外使用に適したデザインを備えています。
+世界初のカードサイズ Meshtastic デバイスで、デュアルバンド GPS を搭載しています。オフグリッド環境での信頼性の高い通信のために設計された MeshTracker X1 は、IP66 等級の [Meshtastic®](https://meshtastic.org/) GPS トラッカーで、863–928 MHz の周波数帯をサポートします。最新の Semtech LR2021 LoRa チップを搭載し、USB-C 接続、最長 5 日間のバッテリー駆動、屋外使用に適したコンパクトなデザインを備えています。
 
 ### 特長
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
 
 
-- **本当に持ち歩ける Meshtastic デバイス** 
+- **実際に持ち歩ける Meshtastic デバイス** 
 
-SenseCAP MeshTracker X1 は、アウトドア、大規模イベント、緊急時など、携帯電話ネットワークの外でも信頼できる通信と位置情報共有を必要とする人のために設計されています。真にポータブルなフォームファクタと堅牢な IP66 保護により、Meshtastic 接続を日常の携行品や実際のフィールド利用へと拡張します。
+SenseCAP MeshTracker X1 は、アウトドア、大規模イベント、緊急時など、セルラー網の外でも信頼できる通信と位置共有を必要とする人のために設計されています。真に携帯しやすいフォームファクタと堅牢な IP66 保護により、Meshtastic 接続を日常の持ち歩きや実際のフィールド利用に持ち込みます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **超高精度デュアルバンド GPS トラッキング** 
 
-デュアルバンド L1+L5 GNSS と内蔵気圧センサにより、MeshTracker X1 はシングルバンド GPS よりも高い信頼性の位置測位と高度認識を実現します。また、デュアルバンド GPS を搭載した世界初のカードサイズ Meshtastic デバイスでもあります。
+デュアルバンド L1+L5 GNSS と内蔵気圧センサにより、MeshTracker X1 はシングルバンド GPS よりも高い信頼性の位置情報と高度認識を実現します。また、デュアルバンド GPS を搭載した世界初のカードサイズ Meshtastic デバイスでもあります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **次世代 LoRa 接続（LR2021）** 
 
-Semtech LR2021 によって駆動される MeshTracker X1 は、最大 -141 dBm の感度と 2.6 Mbps の FLRC データレートにより、より強力な RF 性能を発揮し、より高速で信頼性の高いメッシュ通信を実現します。これにより、音声や画像伝送など将来の機能の基盤を構築します。
+Semtech LR2021 によって駆動される MeshTracker X1 は、最大 -141 dBm の感度と 2.6 Mbps の FLRC データレートにより、より強力な RF 性能と高速で信頼性の高いメッシュ通信を実現し、音声や画像伝送など将来の機能の基盤を築きます。
 
-- **信頼性の高い長距離通信** 
+- **信頼できる長距離通信** 
 
 915 MHz でのテストにおいて、MeshTracker X1 は見通しの良い環境で最大 8 km の距離で信頼性の高い通信を可能にし、アウトドアアクティビティ、イベント、緊急時にチームの接続を維持します。
 
@@ -54,13 +54,13 @@ Semtech LR2021 によって駆動される MeshTracker X1 は、最大 -141 dBm 
 
 - **カードサイズのデザインで持ち運びやすい** 
 
-スリムで軽量な MeshTracker X1 は、アウトドアアクティビティ中の毎日の携行に適した設計です。ネックストラップで身に着けたり、バックパックに取り付けたり、自転車バッグに固定したり、ポケットにそのまま入れて、手軽にオフグリッド接続を利用できます。
+スリムで軽量な MeshTracker X1 は、アウトドアアクティビティ中の毎日の持ち歩きを想定して設計されています。ネックストラップで身に着けたり、バックパックに取り付けたり、自転車バッグに固定したり、ポケットにそのまま入れて、手軽にオフグリッド接続を利用できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EasyTakingBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **柔軟なバイブレーション & サウンドアラート** 
+- **柔軟な振動 & サウンドアラート** 
 
-MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟な通知オプションを提供します。騒がしいイベント会場、屋外でのライド中、あるいは静かなトレイルを歩いていてあまり邪魔されたくない場合でも、受信メッセージに気付きやすくなります。
+MeshTracker X1 は、内蔵バイブレーションとブザーによる柔軟な通知オプションを提供します。騒がしいイベント中、屋外走行中、あるいは静かなトレイルを散策していて気を散らしたくない場合でも、受信メッセージに気付きやすくなります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -77,7 +77,7 @@ IP66 等級の防塵・防水保護構造により、雨、泥、ほこりっぽ
 
 - **長時間バッテリー駆動** 
 
-高容量 1100mAh バッテリーを中心に最適化された高集積カードサイズフォームファクタにより、コンパクトで携帯性を保ちながら、屋外での携行やオフグリッド通信において最長 5 日間の連続動作を実現します。
+高容量 1100mAh バッテリーを中心に最適化された高集積のカードサイズフォームファクタにより、コンパクトで携帯性を保ちながら、アウトドアでの持ち歩きやオフグリッド通信において最長 5 日間の連続動作を実現します。
 
 
 ### 仕様
@@ -90,8 +90,8 @@ IP66 等級の防塵・防水保護構造により、雨、泥、ほこりっぽ
 |**無線**|Bluetooth (v5.0)|
 |**LoRa**|Semtech LR2021<br/>863–928 MHz<br/>最大送信電力: 22dBm|
 |**LED**|1\* RGB|
-|**ブザー**|ステータス表示用ブザー 1 個|
-|**ボタン**|操作用ボタン 1 個|
+|**ブザー**|ステータスを示す 1\* ブザー|
+|**ボタン**|操作用 1\* ボタン|
 |**モーター**|1\* DRV2605L|
 | **気圧**|範囲: 300–1100 hPa<br/>精度: ±0.03 hPa<br/>分解能: 0.06 Pa|
 | **温度**<br/>(温度は気圧センサから取得)| 範囲:-40-85°C<br/>精度: ± 1°C<br/>分解能: 0.0006 °C |
@@ -141,7 +141,7 @@ X1 は製品シリーズへと発展する可能性があり、将来発売さ�
     <td>P0.28</td>
   </tr>
   <tr>
-    <td>Sensor PWR EN</td>
+    <td>センサ PWR EN</td>
     <td>-</td>
     <td>P1.07</td>
     <td>GPIO</td>
@@ -358,6 +358,8 @@ X1 は製品シリーズへと発展する可能性があり、将来発売さ�
 ### リソース
 
 [バッテリーテストレポート](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+
+[X1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx)
 
 ## 技術サポート & 製品ディスカッション
 
