@@ -322,6 +322,16 @@ The Gateway intentionally allows only one VLM inference at a time. If multiple c
 - [llama.cpp Multimodal Documentation](https://github.com/ggml-org/llama.cpp/tree/master/tools/mtmd)
 - [llama.cpp Server Documentation](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md)
 
-## Tech Support & Product Discussion
+## Technical Support and Product Discussion  
 
-Thank you for choosing our products! If you have a technical issue or would like to share ideas about this project, join the [Seeed Studio Discord community](https://discord.com/invite/QqMgVwHT3X) or submit a topic through the [Seeed Studio forum](https://forum.seeedstudio.com/).
+Thank you for choosing our products! We provide different levels of support to ensure your experience with our products is as smooth as possible. We offer multiple communication channels to meet different preferences and needs.  
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>  
+
+<div class="button_tech_support_container">
+<a href="https://discord.com/invite/QqMgVwHT3X" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
