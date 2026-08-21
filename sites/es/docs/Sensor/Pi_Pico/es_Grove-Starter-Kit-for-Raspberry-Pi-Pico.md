@@ -10,7 +10,7 @@ last_update:
   date: 1/11/2023
   author: jianjing Huang
 createdAt: '2023-01-12'
-updatedAt: '2026-02-27'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/es/Grove-Starter-Kit-for-Raspberry-Pi-Pico/
 ---
 

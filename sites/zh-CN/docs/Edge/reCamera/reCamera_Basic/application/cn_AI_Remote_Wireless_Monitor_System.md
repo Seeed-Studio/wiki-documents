@@ -13,8 +13,8 @@ last_update:
   date: 2025-11-19
   author: John Xiang
 createdAt: '2025-11-21'
-updatedAt: '2026-01-29'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/ai_remote_wireless_monitor_system/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/cn/ai_remote_wireless_monitor_system/
 ---
 
 # 基于 reCamera 和 Wifi Halow 的 AI 远程无线监控系统

@@ -11,7 +11,7 @@ last_update:
   date: 08/10/2026
   author: zxw
 createdAt: '2026-02-28'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 12/4/2024
   author: Youjiang
 createdAt: '2024-01-19'
-updatedAt: '2026-03-24'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_A608_Flash_System/
 ---
 

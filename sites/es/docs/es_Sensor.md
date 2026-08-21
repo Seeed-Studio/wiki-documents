@@ -9,7 +9,7 @@ last_update:
   date: 05/23/2024
   author: Matthew
 createdAt: '2023-01-12'
-updatedAt: '2026-03-23'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/es/Sensor_Network/
 ---
 

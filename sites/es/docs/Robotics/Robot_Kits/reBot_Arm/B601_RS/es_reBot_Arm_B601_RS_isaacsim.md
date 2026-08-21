@@ -14,7 +14,7 @@ last_update:
   date: 8/14/2026
   author: LiuJunjie
 createdAt: '2026-07-07'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-17'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_isaacsim/
 ---
 

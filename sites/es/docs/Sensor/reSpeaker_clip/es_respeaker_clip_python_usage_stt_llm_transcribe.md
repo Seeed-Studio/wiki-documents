@@ -1,6 +1,5 @@
 ---
 description: Aprende a crear tus propias aplicaciones para reSpeaker Clip con el SDK de Python para flujos de trabajo de transcripción, diarización y resumen. Este tutorial cubre comunicación por BLE y Wi‑Fi, grabación de audio, sincronización de archivos, configuración del dispositivo y más.
-
 title: Crea tu propia app para reSpeaker Clip con transcripción, diarización y resumen usando el SDK de Python
 keywords:
   - reSpeaker clip
@@ -16,7 +15,7 @@ last_update:
   date: 07/21/2026
   author: Kasun Thushara
 createdAt: '2026-07-21'
-updatedAt: '2026-07-21'
+updatedAt: '2026-07-22'
 url: https://wiki.seeedstudio.com/es/respeaker_clip_python_build_app/
 ---
 

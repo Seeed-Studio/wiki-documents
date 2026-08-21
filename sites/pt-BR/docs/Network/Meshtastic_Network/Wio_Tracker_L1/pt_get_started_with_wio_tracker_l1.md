@@ -11,7 +11,7 @@ last_update:
   date: 07/31/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-07-09'
+updatedAt: '2026-08-03'
 url: https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/
 ---
 

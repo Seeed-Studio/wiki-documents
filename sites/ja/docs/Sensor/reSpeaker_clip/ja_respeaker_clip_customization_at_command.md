@@ -1,6 +1,6 @@
 ---
-description: "Clip に新しい AT コマンドを追加するための、具体的でエンドツーエンドな手順ガイド"
-title: "カスタマイズ：カスタム AT コマンドを追加する"
+description: Clip に新しい AT コマンドを追加するための、具体的でエンドツーエンドな手順ガイド
+title: カスタマイズ：カスタム AT コマンドを追加する
 keywords:
   - reSpeaker clip
   - firmware
@@ -16,7 +16,7 @@ last_update:
   date: 07/28/2026
   author: Ray
 createdAt: '2026-07-27'
-updatedAt: '2026-07-27'
+updatedAt: '2026-08-07'
 url: https://wiki.seeedstudio.com/ja/respeaker_clip_customization_at_command/
 ---
 

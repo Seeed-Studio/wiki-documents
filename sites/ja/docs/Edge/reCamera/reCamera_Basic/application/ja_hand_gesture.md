@@ -16,8 +16,8 @@ last_update:
   date: 06/26/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-26'
-updatedAt: '2026-06-26'
-url: https://wiki.seeedstudio.com/ja/reCamera/reCamera_Basic/application/recamera_hand_gesture/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/ja/recamera_hand_gesture/
 ---
 
 # MediaPipe ハンドジェスチャー認識モデルの reCamera への移植

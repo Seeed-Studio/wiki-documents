@@ -1,5 +1,5 @@
 ---
-description: "デバイスアダプタ、アプリケーションライフサイクル管理、API ルート、本番環境向けの安全な状態管理を用いて、既存の Python サービスに reSpeaker Clip を統合します。"
+description: デバイスアダプタ、アプリケーションライフサイクル管理、API ルート、本番環境向けの安全な状態管理を用いて、既存の Python サービスに reSpeaker Clip を統合します。
 title: reSpeaker Clip をサービスに統合する
 keywords:
   - reSpeaker Clip
@@ -15,7 +15,7 @@ last_update:
   date: 08/14/2026
   author: Ray
 createdAt: '2026-08-07'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/ja/respeaker_clip_service_integration/
 ---
 

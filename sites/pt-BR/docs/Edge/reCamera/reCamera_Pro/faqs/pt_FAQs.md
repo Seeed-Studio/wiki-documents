@@ -9,10 +9,10 @@ slug: /recamera_pro_faqs
 sku: 10003420
 sidebar_position: 1
 last_update:
-  date: 2026-08-05T00:00:00.000Z
+  date: 2026-08-05
   author: Sizhaozhou
-createdAt: "2026-08-05"
-updatedAt: "2026-08-05"
+createdAt: '2026-08-05'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_faqs/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-07-10'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/ja/get_started_with_esp32s3_meshcore/
 ---
 

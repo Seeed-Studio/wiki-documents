@@ -16,7 +16,7 @@ last_update:
   date: 2026-08-14
   author: yylin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/ja/recamera_pro_development_cpp_skill/
 ---
 

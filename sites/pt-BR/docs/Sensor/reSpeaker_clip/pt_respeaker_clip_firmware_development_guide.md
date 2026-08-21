@@ -1,5 +1,5 @@
 ---
-description: "A referência abrangente para o firmware do lado do dispositivo reSpeaker Clip: arquitetura do sistema, protocolo AT/GATT/UDP, perfis de build, atualização e recuperação de firmware, validação e depuração, e release de produção — cada fato em um só lugar."
+description: 'A referência abrangente para o firmware do lado do dispositivo reSpeaker Clip: arquitetura do sistema, protocolo AT/GATT/UDP, perfis de build, atualização e recuperação de firmware, validação e depuração, e release de produção — cada fato em um só lugar.'
 title: Guia de Desenvolvimento de Firmware do reSpeaker Clip
 keywords:
   - reSpeaker clip
@@ -16,7 +16,7 @@ last_update:
   date: 07/28/2026
   author: Ray
 createdAt: '2026-07-28'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_clip_firmware_development_guide/
 ---
 
