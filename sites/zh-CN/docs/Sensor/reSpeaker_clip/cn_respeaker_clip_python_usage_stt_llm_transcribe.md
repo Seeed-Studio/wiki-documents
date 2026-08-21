@@ -1,6 +1,5 @@
 ---
 description: 了解如何使用 Python SDK 构建你自己的 reSpeaker Clip 应用，实现转写、说话人分离和摘要工作流。本教程涵盖 BLE 和 Wi-Fi 通信、音频录制、文件同步、设备配置等内容。
-
 title: 使用 Python SDK 为 reSpeaker Clip 构建具备转写、说话人分离和摘要功能的自定义应用
 keywords:
   - reSpeaker clip
@@ -16,7 +15,7 @@ last_update:
   date: 07/21/2026
   author: Kasun Thushara
 createdAt: '2026-07-21'
-updatedAt: '2026-07-21'
+updatedAt: '2026-07-22'
 url: https://wiki.seeedstudio.com/cn/respeaker_clip_python_build_app/
 ---
 

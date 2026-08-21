@@ -1,5 +1,5 @@
 ---
-description: "通过设备适配器、应用生命周期管理、API 路由以及适用于生产环境的状态处理，将 reSpeaker Clip 集成到现有的 Python 服务中。"
+description: 通过设备适配器、应用生命周期管理、API 路由以及适用于生产环境的状态处理，将 reSpeaker Clip 集成到现有的 Python 服务中。
 title: 将 reSpeaker Clip 集成到你的服务中
 keywords:
   - reSpeaker Clip
@@ -15,7 +15,7 @@ last_update:
   date: 08/14/2026
   author: Ray
 createdAt: '2026-08-07'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/cn/respeaker_clip_service_integration/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 03/26/2026
   author: Kasun Thushara
 createdAt: '2026-03-26'
-updatedAt: '2026-07-27'
+updatedAt: '2026-08-07'
 url: https://wiki.seeedstudio.com/cn/respeaker_flex_introduction/
 ---
 # reSpeaker Flex 入门指南

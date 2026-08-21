@@ -10,7 +10,7 @@ last_update:
   date: 12/3/2025
   author: Michelle Huang
 createdAt: '2024-06-21'
-updatedAt: '2025-12-03'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/cn/flash_meshtastic_kit/
 ---
 :::danger note

@@ -15,8 +15,8 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-29'
-updatedAt: '2026-07-29'
-url: https://wiki.seeedstudio.com/reachymini_development_cases_gripper_voice_control/
+updatedAt: '2026-07-30'
+url: https://wiki.seeedstudio.com/cn/reachymini_development_cases_gripper_voice_control/
 ---
 # Reachy Mini 语音控制 SO-ARM
 

@@ -1,5 +1,5 @@
 ---
-description: "从一台干净环境的电脑到一块能够启动、录音并可通过主机 SDK 控制的 reSpeaker Clip 的端到端路径——在进行任何自定义或 AI 辅助固件工作之前的基线，以及如何判断固件开发是否是适合你任务的正确路径。"
+description: 从一台干净环境的电脑到一块能够启动、录音并可通过主机 SDK 控制的 reSpeaker Clip 的端到端路径——在进行任何自定义或 AI 辅助固件工作之前的基线，以及如何判断固件开发是否是适合你任务的正确路径。
 title: 使用 reSpeaker Clip Firmware SDK 入门
 keywords:
   - reSpeaker clip
@@ -16,7 +16,7 @@ last_update:
   date: 07/28/2026
   author: Ray
 createdAt: '2026-07-28'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/cn/respeaker_clip_firmware_quick_start/
 ---
 

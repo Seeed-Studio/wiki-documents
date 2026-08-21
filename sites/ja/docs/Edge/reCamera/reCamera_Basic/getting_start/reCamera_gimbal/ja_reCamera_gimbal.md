@@ -13,8 +13,8 @@ last_update:
   date: 04/09/2025
   author: Dawn Yao
 createdAt: '2025-02-27'
-updatedAt: '2026-01-07'
-url: https://wiki.seeedstudio.com/ja/reCamera/reCamera_Basic/getting_start/recamera_gimbal_getting_started
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/ja/recamera_gimbal_getting_started/
 ---
 
 # reCamera Gimbal 入門ガイド

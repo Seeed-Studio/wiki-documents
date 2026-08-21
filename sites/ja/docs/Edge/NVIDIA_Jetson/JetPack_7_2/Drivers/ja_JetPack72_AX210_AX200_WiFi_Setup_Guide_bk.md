@@ -16,7 +16,7 @@ last_update:
   date: 07/15/2026
   author: Dayu
 createdAt: '2026-07-14'
-updatedAt: '2026-07-15'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/ja/jetpack72_ax210_ax200_wifi_setup_guide_bk/
 ---
 

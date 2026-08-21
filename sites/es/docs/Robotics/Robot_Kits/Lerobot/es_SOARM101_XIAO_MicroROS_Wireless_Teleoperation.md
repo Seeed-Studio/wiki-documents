@@ -15,7 +15,7 @@ last_update:
   date: 07/24/2026
   author: linao681
 createdAt: '2026-07-24'
-updatedAt: '2026-07-24'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/es/soarm101_xiao_microros_wireless_teleoperation/
 ---
 

@@ -18,7 +18,7 @@ last_update:
   date: 08/13/2026
   author: haochen
 createdAt: '2026-08-12'
-updatedAt: '2026-08-13'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/pt-br/jetson_initrd_flash_zfs_host_limitation/
 ---
 
