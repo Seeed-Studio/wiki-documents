@@ -1,6 +1,6 @@
 ---
 title: WiFi 使用
-description: 使用 Seeed Studio XIAO ESP32-C5 的 WiFi 功能
+description: Seeed Studio XIAO ESP32-C5 的 WiFi 使用
 keywords:
   - xiao
   - esp32c5
@@ -16,7 +16,7 @@ updatedAt: '2026-01-20'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_wifi_usage/
 ---
 
-# 使用 Seeed Studio XIAO ESP32-C5 的 WiFi 功能
+# Seeed Studio XIAO ESP32-C5 的 WiFi 使用
 
 <div class="table-center">
  <table>
@@ -30,28 +30,28 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_wifi_usage/
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html
         " target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-Seeed Studio XIAO ESP32-C5 支持双频 2.4 GHz 和 5 GHz Wi-Fi，配备双频 Wi-Fi 6（802.11ax）射频，并向下兼容 802.11a/b/g/n/ac 标准。此外，该开发板支持 U.FL 天线连接，旨在增强 XIAO ESP32-C5 的无线连接性能。在本教程中，我们将介绍如何利用 XIAO ESP32-C5 的 Wi-Fi 功能连接到 Wi-Fi 网络并执行基本的网络任务。<br/>
-以下教程使用 Arduino IDE 进行编译和烧录。如果你还没有使用 Arduino IDE 的经验，请访问 [Getting Started with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/)。<br/>
+Seeed Studio XIAO ESP32-C5 支持双频 2.4 GHz 和 5 GHz Wi-Fi，具有双频 Wi-Fi 6 (802.11ax) 无线电，并向后兼容 802.11a/b/g/n/ac 标准。此外，这款开发板支持 U.FL 天线连接，旨在增强 XIAO ESP32-C5 的无线连接性能。在本教程中，我们将探索如何利用 XIAO ESP32-C5 的 Wi-Fi 功能连接到 Wi-Fi 网络并执行基本的网络任务。<br/>
+以下教程使用 Arduino IDE 进行编译和上传。如果您还没有使用 Arduino IDE 的经验，请访问 [Seeed Studio XIAO ESP32-C5 入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/)。<br/>
 
 ## 入门指南
 
 ### 天线安装
 
-在 Seeed Studio XIAO ESP32-C5 的包装内，配有一个专用的 **Wi-Fi/BT 天线连接器**。为了获得最佳的 WiFi/Bluetooth 信号强度，你需要取出包装中附带的天线并将其连接到该连接器上。<br/>
-<!-- :::tip
-If you want to achieve a stronger signal gain effect, you can purchase and install **2.4G/5G External Antenna with RP-SMA Male Connector** — it delivers much higher gain than the built-in FPC Antenna included in the package!
+在 Seeed Studio XIAO ESP32-C5 的包装内，有一个专用的 **Wi-Fi/BT 天线连接器**。为了获得最佳的 WiFi/蓝牙信号强度，您需要取出包装中包含的天线并将其连接到连接器上。<br/>
+:::tip
+如果您想获得更强的信号增益效果，可以购买并安装 **2.4G/5G 外置天线（带 RP-SMA 公头连接器）** — 它比包装中包含的内置 FPC 天线提供更高的增益！
 :::
 <div class="table-center">
  <table>
   <tr>
-   <th>2.4G/5G External Antenna with RP-SMA Male Connector</th>
+   <th>2.4G/5G 外置天线（带 RP-SMA 公头连接器）</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-2.4g5g-external-antenna-with-rp-sma-male-connector-45font_1.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -60,290 +60,290 @@ If you want to achieve a stronger signal gain effect, you can purchase and insta
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/2-4G-5G-External-Antenna-with-RP-SMA-Male-Connector-and-1-13-Coaxial-Cable-130mm-Set-p-6316.html
         " target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
-</div> -->
+</div>
 
 ## WiFi 库的常用接口
 
-- XIAO ESP32-C5 提供了丰富的 Wi-Fi 网络功能。通常，我们可以查看 ESP32 内置包中的 WiFi 库函数，并选择相应的函数来实现所需的功能。接下来，我们将列出一些常用接口并介绍它们的用法。
+- XIAO ESP32-C5 提供了广泛的 Wi-Fi 网络功能。通常，我们可以在 ESP32 的内置包中查看 WiFi 库的功能，并选择相应的功能来实现所需的功能。接下来，我们将列出一些常用的接口并介绍它们的用法。
 
 :::tip
-如果你想直接开始 Wi-Fi 使用教程，可以跳转到 [WiFi 使用示例](#WiFi-使用示例)。
+如果您想直接开始 Wi-Fi 使用教程，可以跳转到 [WiFi 使用示例](#wifi-usage-examples)。
 :::
 
-### 通用 WiFi 函数
+### 通用 WiFi 功能
 
-- `WiFiGenericClass::getHostname()` -- 是 ESP32 WiFi 库中的一个函数，用于以字符串形式返回设备的主机名。主机名是在网络中标识设备的唯一名称。该函数会获取之前通过 `WiFiGenericClass::setHostname()` 设置的主机名。如果尚未设置主机名，则会返回默认主机名。
+- `WiFiGenericClass::getHostname()` -- 是 ESP32 WiFi 库中的一个函数，以字符串形式返回设备的主机名。主机名是在网络上标识设备的唯一名称。此函数检索之前使用 `WiFiGenericClass::setHostname()` 设置的主机名。如果没有设置主机名，将返回默认主机名。
 
-- `WiFiGenericClass::persistent(bool persistent)` -- 是一个用于启用或禁用 ESP32 WiFi 库持久化模式的方法。当启用持久化模式时，Wi-Fi 配置信息会存储在非易失性存储器（NVM）中，即使断电或复位也会保留。当禁用持久化模式时，配置信息存储在 RAM 中，在断电或复位后会丢失。
-
- 	- **输入参数**
-  		- **persistent**: 如果参数为 true，则启用持久化模式；如果参数为 false，则禁用持久化模式。
-
-- `WiFiGenericClass::enableLongRange(bool enable)` -- 该函数用于启用或禁用 WiFi 模块的 Long Range（LR，长距离）特性。启用后，LR 功能允许模块连接到比平常更远距离的 WiFi 网络，但数据速率会降低。
+- `WiFiGenericClass::persistent(bool persistent)` -- 是一个用于启用或禁用 ESP32 WiFi 库持久模式的方法。当启用持久模式时，Wi-Fi 配置存储在非易失性存储器 (NVM) 中，即使在断电或重置后也会保留。当禁用持久模式时，配置存储在 RAM 中，在断电或重置后会丢失。
 
  	- **输入参数**
-  		- **enable**: 将该参数设置为 true 以启用该特性，设置为 false 以禁用。
+  		- **persistent**：如果参数为 true，则启用持久模式。如果参数为 false，则禁用持久模式。
+
+- `WiFiGenericClass::enableLongRange(bool enable)` -- 该函数用于启用或禁用 WiFi 模块的长距离 (LR) 功能。启用时，LR 功能允许模块连接到比平常更远的 WiFi 网络，但数据速率较低。
+
+ 	- **输入参数**
+  		- **enable**：该参数应设置为 true 以启用该功能，设置为 false 以禁用该功能。
 
 - `WiFiGenericClass::mode(wifi_mode_t m)` -- 该函数用于设置设备的 WiFi 模式。
 
  	- **输入参数**
-  		- **m**: 参数 m 指定要设置的模式，可以是 wifi_mode_t 枚举中定义的以下常量之一：
-   			- **WIFI_MODE_NULL**: 禁用 WiFi station 和接入点模式。
-   			- **WIFI_MODE_STA**: 启用 WiFi station 模式，用于连接到现有 WiFi 网络。
-   			- **WIFI_MODE_AP**: 启用接入点模式，用于创建新的 WiFi 网络。
-   			- **WIFI_MODE_APSTA**: 同时启用 WiFi station 和接入点模式。
+  		- **m**：m 参数指定要设置的模式，可以是 wifi_mode_t 枚举中定义的以下常量之一：
+   			- **WIFI_MODE_NULL**：禁用 WiFi 站点和接入点模式。
+   			- **WIFI_MODE_STA**：启用 WiFi 站点模式以连接到现有的 WiFi 网络。
+   			- **WIFI_MODE_AP**：启用接入点模式以创建新的 WiFi 网络。
+   			- **WIFI_MODE_APSTA**：同时启用 WiFi 站点和接入点模式。
 
-- `WiFiGenericClass::setSleep(wifi_ps_type_t sleepType)` -- 该函数用于为 WiFi 模块设置省电模式。
+- `WiFiGenericClass::setSleep(wifi_ps_type_t sleepType)` -- 该函数为 WiFi 模块设置省电模式。
 
  	- **输入参数**
-  		- **sleepType**: sleepType 参数是一个枚举类型，用于指定要使用的省电模式类型。有三种可能的睡眠类型：
-   			- **WIFI_PS_NONE**: 默认睡眠模式，WiFi 模块不会进入省电模式。
-   			- **WIFI_PS_MIN_MODEM**: 在此模式下，WiFi 模块会关闭其调制解调器，同时保持与接入点（AP）的连接。
-   			- **WIFI_PS_MAX_MODEM**: 启用最激进的 Wi-Fi 省电模式。它可以显著增加休眠时间，但可能会带来更高的延迟和更低的吞吐量，并且在某些网络中可能影响连接稳定性。
+  		- **sleepType**：sleepType 参数是一个枚举类型，指定要使用的省电模式类型。有三种可能的睡眠类型：
+   			- **WIFI_PS_NONE**：这是默认睡眠模式，WiFi 模块不进入省电模式。
+   			- **WIFI_PS_MIN_MODEM**：在此模式下，WiFi 模块关闭其调制解调器，同时保持与接入点 (AP) 的连接。
+   			- **WIFI_PS_MAX_MODEM**：启用最激进的 Wi-Fi 省电模式。它可以显著增加睡眠时间，但可能引入更高的延迟和降低的吞吐量，在某些网络中可能影响连接稳定性。
 
-### STA 函数
+### STA 功能
 
 - `WiFiSTAClass::status()` -- 返回连接状态。
 
- 	- **输出**: wl_status_t 中定义的值之一。
-  		- **WL_NO_SHIELD**: 表示 Wi-Fi 模块不存在。
-    - **WL_IDLE_STATUS**: 表示 Wi-Fi 模块当前未执行任何操作。
-    - **WL_NO_SSID_AVAIL**: 表示在扫描过程中未找到任何 Wi-Fi 网络。
-    - **WL_SCAN_COMPLETED**: 表示 Wi-Fi 扫描已成功完成。
-    - **WL_CONNECTED**: 表示 ESP32 已成功连接到某个 Wi-Fi 网络。
-    - **WL_CONNECT_FAILED**: 表示连接到 Wi-Fi 网络失败。
-    - **WL_CONNECTION_LOST**: 表示与 Wi-Fi 网络的连接已丢失。
-    - **WL_DISCONNECTED**: 表示 ESP32 之前连接过某个 Wi-Fi 网络，但当前未连接到任何网络。
+ 	- **输出**：wl_status_t 中定义的值之一。
+  		- **WL_NO_SHIELD**：此状态码表示 Wi-Fi 模块不存在。
+    - **WL_IDLE_STATUS**：此状态码表示 Wi-Fi 模块未执行任何操作。
+    - **WL_NO_SSID_AVAIL**：此状态码表示在扫描期间未找到 Wi-Fi 网络。
+    - **WL_SCAN_COMPLETED**：此状态码表示 Wi-Fi 扫描已成功完成。
+    - **WL_CONNECTED**：此状态码表示 ESP32 已成功连接到 Wi-Fi 网络。
+    - **WL_CONNECT_FAILED**：此状态码表示连接到 Wi-Fi 网络失败。
+    - **WL_CONNECTION_LOST**：此状态码表示与 Wi-Fi 网络的连接已丢失。
+    - **WL_DISCONNECTED**：此状态码表示 ESP32 之前连接到 Wi-Fi 网络，但当前未连接到任何网络。
 
-- `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- 使用 WPA2 Enterprise AP 启动 Wifi 连接。
+- `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- 开始与 WPA2 企业级 AP 的 Wifi 连接。
 
  	- **输入参数**（可选）
-  		- **ssid**: 指向 SSID 字符串的指针。
-  		- **method**: WPA2 的认证方法（WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS）
-  		- **wpa2_identity**: 指向实体的指针
-  		- **wpa2_username**: 指向用户名的指针
-  		- **wpa2_password**: 指向密码的指针。
-  		- **ca_pem**: 指向包含 CA 证书的 .pem 文件内容字符串的指针
-  		- **client_crt**: 指向包含客户端证书的 .crt 文件内容字符串的指针
-  		- **client_key**: 指向包含客户端密钥的 .key 文件内容字符串的指针
-  		- **channel**: 可选。AP 的信道
-  		- **bssid**: 可选。AP 的 BSSID / MAC
-  		- **connect**: 可选。是否调用连接
+  		- **ssid**：指向 SSID 字符串的指针。
+  		- **method**：WPA2 的认证方法（WPA2_AUTH_TLS、WPA2_AUTH_PEAP、WPA2_AUTH_TTLS）
+  		- **wpa2_identity**：指向实体的指针
+  		- **wpa2_username**：指向用户名的指针
+  		- **wpa2_password**：指向密码的指针。
+  		- **ca_pem**：指向包含 CA 证书的 .pem 文件内容字符串的指针
+  		- **client_crt**：指向包含客户端证书的 .crt 文件内容字符串的指针
+  		- **client_key**：指向包含客户端密钥的 .key 文件内容字符串的指针
+  		- **channel**：可选。AP 的信道
+  		- **bssid**：可选。AP 的 BSSID / MAC
+  		- **connect**：可选。调用连接
 
 - `WiFiSTAClass::reconnect()` -- 将强制断开连接，然后开始重新连接到 AP。
 
- 	- **输出**: True/False。
+ 	- **输出**：True/False。
 
-- `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- 从网络断开连接。
-
- 	- **输入参数**
-  		- **wifioff**: wifioff 为 `true` 时关闭 Wi-Fi 射频。
-  		- **eraseap**: eraseap 为 `true` 时从 NVS 存储器中擦除 AP 配置。
-
- 	- **输出**: True/False。
-
-- `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- 更改 IP 配置设置并禁用 DHCP 客户端。
+- `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- 断开与网络的连接。
 
  	- **输入参数**
-  		- **local_ip**: 静态 IP 配置。
-  		- **gateway**: 静态网关配置。
-  		- **subnet**: 静态子网掩码。
-  		- **dns1**: 静态 DNS 服务器 1。
-  		- **dns2**: 静态 DNS 服务器 2。
+  		- **wifioff**：wifioff `true` 关闭 Wi-Fi 无线电。
+  		- **eraseap**：eraseap `true` 从 NVS 存储器中擦除 AP 配置。
 
-- `WiFiSTAClass::setAutoConnect(bool autoConnect)` -- 已弃用。用于设置 ESP32 station 在上电时是否自动连接到已记录的 AP。默认启用自动连接。
+ 	- **输出**：True/False。
 
- 	- **输入参数**
-  		- **autoConnect**: autoConnect 布尔值。
-
- 	- **输出**: False。
-
-- `WiFiSTAClass::waitForConnectResult(unsigned long timeoutLength)` -- 等待 WiFi 连接得到结果。
+- `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- 更改 IP 配置设置，禁用 dhcp 客户端。
 
  	- **输入参数**
-  		- **timeoutLength**: 该参数指定等待建立连接的最长时间，单位为毫秒。
+  		- **local_ip**：静态 IP 配置。
+  		- **gateway**：静态网关配置。
+  		- **subnet**：静态子网掩码。
+  		- **dns1**：静态 DNS 服务器 1。
+  		- **dns2**：静态 DNS 服务器 2。
 
- 	- **输出**: wl_status_t 中定义的值之一。
-
-- `WiFiSTAClass::localIP()` -- 获取 station 接口的 IP 地址。
-
- 	- **输出**: IPAddress station IP。
-
-- `WiFiSTAClass::macAddress(uint8_t* mac)` -- 获取 station 接口的 MAC 地址。
+- `WiFiSTAClass::setAutoConnect(bool autoConnect)` -- 已弃用。设置 ESP32 站点在通电时是否自动连接到 AP（已记录）。默认启用自动连接。
 
  	- **输入参数**
-  		- **mac**（可选）: 指向长度为 WL_MAC_ADDR_LENGTH 的 uint8_t 数组的指针。
+  		- **autoConnect**：autoConnect 布尔值。
 
- 	- **输出**: 指向 uint8_t * 的指针。
+ 	- **输出**：False。
 
-- `WiFiSTAClass::SSID()` -- 返回当前与网络关联的 SSID。
-
- 	- **输出**: SSID。
-
-- `WiFiSTAClass::RSSI(void)` -- 返回当前网络的 RSSI。
-
- 	- **输出**: RSSI。
-
-### AP 函数
-
-- `WiFiAPClass::softAP(const char* ssid, const char* passphrase, int channel, int ssid_hidden, int max_connection, bool ftm_responder)` -- 这是 XIAO ESP32-C5 的 WiFi 库中的一个函数，用于建立 SoftAP（程序接入点），使其他设备可以连接到 XIAO ESP32-C5 并访问其资源。
+- `WiFiSTAClass::waitForConnectResult(unsigned long timeoutLength)` -- 等待 WiFi 连接达到结果。
 
  	- **输入参数**
-  		- **ssid**:              指向 SSID 的指针（最多 63 个字符）。
-    - **passphrase**:        （对于 WPA2，最少 8 个字符；若为开放网络则使用 NULL）。
-    - **channel**:           WiFi 信道号，1 - 13。
-    - **ssid_hidden**:       网络隐藏（0 = 广播 SSID，1 = 隐藏 SSID）。
-    - **max_connection**:    最大同时连接的客户端数量，1 - 4。
+  		- **timeoutLength**：该参数指定等待建立连接的最大时间，以毫秒为单位。
 
- 	- **输出**: True/False。
+ 	- **输出**：wl_status_t 中定义的值之一。
 
-- `WiFiAPClass::softAPgetStationNum()` -- 获取连接到 softAP 接口的 Station / 客户端数量。
+- `WiFiSTAClass::localIP()` -- 获取站点接口 IP 地址。
 
- 	- **输出**: Station 数量。
+ 	- **输出**：IPAddress 站点 IP。
+
+- `WiFiSTAClass::macAddress(uint8_t* mac)` -- 获取站点接口 MAC 地址。
+
+ 	- **输入参数**
+  		- **mac**（可选）：指向长度为 WL_MAC_ADDR_LENGTH 的 uint8_t 数组的指针。
+
+ 	- **输出**：指向 uint8_t * 的指针。
+
+- `WiFiSTAClass::SSID()` -- 返回与网络关联的当前 SSID。
+
+ 	- **输出**：SSID。
+
+- `WiFiSTAClass::RSSI(void)` -- 返回当前网络 RSSI。
+
+ 	- **输出**：RSSI。
+
+### AP 功能
+
+- `WiFiAPClass::softAP(const char* ssid, const char* passphrase, int channel, int ssid_hidden, int max_connection, bool ftm_responder)` -- 这是 XIAO ESP32-C5 WiFi 库中的一个函数。它用于设置 SoftAP（程序接入点），允许其他设备连接到 XIAO ESP32-C5 并访问其资源。
+
+ 	- **输入参数**
+  		- **ssid**：              指向 SSID 的指针（最多 63 个字符）。
+    - **passphrase**：        （WPA2 最少 8 个字符，开放网络使用 NULL）。
+    - **channel**：           WiFi 信道号，1 - 13。
+    - **ssid_hidden**：       网络隐藏（0 = 广播 SSID，1 = 隐藏 SSID）。
+    - **max_connection**：    最大同时连接客户端数，1 - 4。
+
+ 	- **输出**：True/False。
+
+- `WiFiAPClass::softAPgetStationNum()` -- 获取连接到 softAP 接口的站点/客户端数量。
+
+ 	- **输出**：站点数量。
 
 - `WiFiAPClass::softAPConfig(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dhcp_lease_start)` -- 用于配置 SoftAP 的函数。
 
  	- **输入参数**
-  		- **local_ip**:      接入点 IP。
-  		- **gateway**:       网关 IP。
-  		- **subnet**:        子网掩码。
+  		- **local_ip**：      接入点 IP。
+  		- **gateway**：       网关 IP。
+  		- **subnet**：        子网掩码。
 
- 	- **输出**: True/False。
+ 	- **输出**：True/False。
 
-- `WiFiAPClass::softAPIP()` -- 获取 softAP 接口的 IP 地址。
+- `WiFiAPClass::softAPIP()` -- 获取 softAP 接口 IP 地址。
 
- 	- **输出**: IPAddress softAP IP。
+ 	- **输出**：IPAddress softAP IP。
 
-- `WiFiAPClass::softAPmacAddress(uint8_t* mac)` -- 获取 softAP 接口的 MAC 地址。
+- `WiFiAPClass::softAPmacAddress(uint8_t* mac)` -- 获取 softAP 接口 MAC 地址。
 
  	- **输入参数**
-  		- **mac** (可选):   指向长度为 WL_MAC_ADDR_LENGTH 的 uint8_t 数组的指针。
+  		- **mac**（可选）：   指向长度为 WL_MAC_ADDR_LENGTH 的 uint8_t 数组的指针。
 
- 	- **输出**: 指向 uint8_t* 的指针或 String 类型的 mac。
+ 	- **输出**：指向 uint8_t* 的指针或字符串 mac。
 
-### WiFi 扫描函数
+### WiFi 扫描功能
 
 - `WiFiScanClass::scanNetworks(bool async, bool show_hidden, bool passive, uint32_t max_ms_per_chan, uint8_t channel, const char * ssid, const uint8_t * bssid)` -- 开始扫描可用的 WiFi 网络。
 
  	- **输入参数**
-  		- **async**: 该参数是一个布尔值，用于决定是否以异步方式执行扫描。若设为 true，函数会立即返回，之后可以通过调用 `getScanResults()` 函数获取扫描结果。若设为 false，函数会阻塞直到扫描完成。
-  		- **show_hidden**: 该参数是一个布尔值，用于决定函数是否在扫描结果中包含隐藏网络。
-  		- **passive**: 该参数是一个布尔值，用于决定函数是否执行被动扫描。若设为 true，函数在扫描期间不会发送任何数据包，扫描可能耗时更长，但在某些场景下会更有用。
-  		- **max_ms_per_chan**: 该参数是每个信道上用于扫描的最长时间（毫秒）。
-  		- **channel**: 该参数是要扫描的 Wi-Fi 信道。如果设为 0，函数将扫描所有可用信道。
-  		- **ssid**: 该参数是一个指向以空字符结尾的字符串的指针，包含要扫描的网络的 SSID。如果设为 nullptr，函数将扫描所有可用网络。
-  		- **bssid**: 该参数是一个指向 6 字节数组的指针，包含要扫描的接入点的 MAC 地址。如果设为 nullptr，函数将扫描所有接入点。
+  		- **async**：该参数是一个布尔值，决定是否异步执行扫描。如果设置为 true，函数立即返回，扫描结果可以稍后通过调用 getScanResults() 函数获取。如果设置为 false，函数将阻塞直到扫描完成。
+  		- **show_hidden**：该参数是一个布尔值，决定函数是否应在扫描结果中包含隐藏网络。
+  		- **passive**：该参数是一个布尔值，决定函数是否应执行被动扫描。如果设置为 true，函数在扫描期间不会传输任何数据包，这可能需要更长时间，但在某些情况下可能有用。
+  		- **max_ms_per_chan**：该参数是扫描每个信道的最大时间（毫秒）。
+  		- **channel**：该参数是要扫描的 Wi-Fi 信道。如果设置为 0，函数将扫描所有可用信道。
+  		- **ssid**：该参数是指向包含要扫描网络 SSID 的以空字符结尾的字符串的指针。如果设置为 nullptr，函数将扫描所有可用网络。
+  		- **bssid**：该参数是指向包含要扫描的接入点 MAC 地址的 6 字节数组的指针。如果设置为 nullptr，函数将扫描所有接入点。
 
- 	- **输出**: 此函数的返回值是一个整数，表示扫描到的网络数量。
+ 	- **输出**：此函数的返回值是一个整数，表示扫描到的网络数量。
 
-- `WiFiScanClass::getNetworkInfo(uint8_t i, String &ssid, uint8_t &encType, int32_t &rssi, uint8_t* &bssid, int32_t &channel)` -- 将某个已扫描 WiFi 的所有信息加载到指针参数中。
-
- 	- **输入参数**
-  		- **i**: 该函数用于获取指定索引 i 处的已扫描网络的信息。
-  		- **ssid**: 参数 ssid 是一个 String 变量的引用，函数会在其中存储网络的 SSID。
-  		- **encType**: 参数 encType 是一个 uint8_t 变量的引用，函数会在其中存储网络的加密类型（0 = open，1 = WEP，2 = WPA_PSK，3 = WPA2_PSK，4 = WPA_WPA2_PSK）。
-  		- **rssi**: 参数 rssi 是一个 int32_t 变量的引用，函数会在其中存储网络的接收信号强度指示（RSSI）。
-  		- **bssid**: 参数 bssid 是一个 uint8_t* 指针的引用，函数会在其中存储网络的 BSSID（MAC 地址）。
-  		- **channel**: 参数 channel 是一个 int32_t 变量的引用，函数会在其中存储网络的信道号。
-
- 	- **输出**: True/False。
-
-- `WiFiScanClass::SSID(uint8_t i)` -- 返回在网络扫描过程中发现的 SSID。
+- `WiFiScanClass::getNetworkInfo(uint8_t i, String &ssid, uint8_t &encType, int32_t &rssi, uint8_t* &bssid, int32_t &channel)` -- 将扫描到的 wifi 的所有信息加载到指针参数中。
 
  	- **输入参数**
-  		- **i**: 指定要从哪个网络条目获取信息。
+  		- **i**：该函数用于检索指定索引 i 处扫描网络的信息。
+  		- **ssid**：ssid 参数是对 String 变量的引用，函数在其中存储网络的 SSID。
+  		- **encType**：encType 参数是对 uint8_t 变量的引用，函数在其中存储网络的加密类型（0 = 开放，1 = WEP，2 = WPA_PSK，3 = WPA2_PSK，4 = WPA_WPA2_PSK）。
+  		- **rssi**：rssi 参数是对 int32_t 变量的引用，函数在其中存储网络的接收信号强度指示（RSSI）。
+  		- **bssid**：bssid 参数是对 uint8_t* 指针的引用，函数在其中存储网络的 BSSID（MAC 地址）。
+  		- **channel**：channel 参数是对 int32_t 变量的引用，函数在其中存储网络的信道号。
 
- 	- **输出**: 已扫描网络列表中指定条目的 SSID 字符串。
+ 	- **输出**：True/False。
 
-- `WiFiScanClass::RSSI(uint8_t i)` -- 返回在 `scanNetworks` 过程中发现的网络的 RSSI。
-
- 	- **输入参数**
-  		- **i**: 指定要从哪个网络条目获取信息。
-
- 	- **输出**: 已扫描网络列表中指定条目的 RSSI 有符号值。
-
-### WiFi 客户端函数
-
-- `WiFiClient::connect(IPAddress ip, uint16_t port, int32_t timeout)` -- 此函数用于 WiFiClient 库中，以指定的超时时间连接到远程 IP 地址和端口。
+- `WiFiScanClass::SSID(uint8_t i)` -- 返回网络扫描期间发现的 SSID。
 
  	- **输入参数**
-  		- **ip**:   要连接的服务器 IP 地址。
-  		- **port**: 要连接的服务器端口号。
-  		- **timeout** (可选): 建立连接所允许等待的最长时间（毫秒）。如果在该时间内未建立连接，函数将返回错误。如果 timeout 设为 0，函数将无限期等待连接建立。
+  		- **i**：指定要从哪个网络项目获取信息。
 
-- `WiFiClient::stop()` -- 该函数用于将客户端与服务器断开连接，并释放客户端使用的套接字/端口。一旦调用该函数，客户端将无法再发送或接收数据。
+ 	- **输出**：扫描网络列表中指定项目的 SSID 字符串。
 
-- `WiFiClient::setTimeout(uint32_t timeout_ms)` -- 该函数设置客户端在等待连接建立或接收数据时的最长等待毫秒数。如果连接或数据传输时间超过指定的超时时间，连接将被关闭。
+- `WiFiScanClass::RSSI(uint8_t i)` -- 返回在 scanNetworks 期间发现的网络的 RSSI。
 
  	- **输入参数**
-  		- **timeout_ms**:   超时时间的毫秒数。
+  		- **i**：指定要从哪个网络项目获取信息。
 
-- `WiFiClient::write(uint8_t data)` -- 通过 WiFiClient 实例向已连接的服务器写入单字节数据。或者使用 `WiFiClient::write(const uint8_t *buf, size_t size)`。
+ 	- **输出**：扫描网络列表中指定项目的 RSSI 有符号值。
+
+### WiFi 客户端功能
+
+- `WiFiClient::connect(IPAddress ip, uint16_t port, int32_t timeout)` -- 此函数在 WiFiClient 库中用于连接到具有指定超时值的远程 IP 地址和端口。
 
  	- **输入参数**
-  		- **data**:   需要通过已建立的网络连接发送的单字节数据。
+  		- **ip**：   要连接的服务器的 IP 地址。
+  		- **port**： 要连接的服务器的端口号。
+  		- **timeout**（可选）： 等待连接建立的最大时间（毫秒）。如果在此时间内未建立连接，函数将返回错误。如果 timeout 设置为 0，函数将无限期等待连接建立。
 
-- `WiFiClient::read()` -- 该函数从已连接的服务器读取一个字节的传入数据。它以整数形式返回读取到的字节。如果没有可用数据，则返回 -1。或者使用 `read(uint8_t *buf, size_t size)`。
+- `WiFiClient::stop()` -- 该函数用于断开客户端与服务器的连接并释放客户端使用的套接字/端口。一旦调用该函数，客户端就不能再发送或接收数据。
 
- 	- **输出**: 一个整数值，表示接收到的字节数。如果返回值为 0，表示服务器已关闭连接。
+- `WiFiClient::setTimeout(uint32_t timeout_ms)` -- 该函数设置客户端等待连接建立或接收数据的最大毫秒数。如果连接或数据传输时间超过指定的超时时间，连接将被关闭。
 
-- `WiFiClient::peek()` -- 该函数用于在不实际读取数据的情况下，检查服务器是否有可读数据。
+ 	- **输入参数**
+  		- **timeout_ms**：   超时的毫秒数。
 
- 	- **输出**: 返回下一个传入数据字节，但不会将其从接收缓冲区中移除。如果没有可用数据，则返回 -1。
+- `WiFiClient::write(uint8_t data)` -- 通过 WiFiClient 实例向连接的服务器写入单个字节的数据。或者 `WiFiClient::write(const uint8_t *buf, size_t size)`。
 
-- `WiFiClient::available()` -- 该函数用于检查服务器端有多少字节数据可供读取。
+ 	- **输入参数**
+  		- **data**：   是需要通过已建立的网络连接发送的单个字节数据。
 
- 	- **输出**: 返回一个整数值，表示可读取的字节数。
+- `WiFiClient::read()` -- 该函数从连接的服务器读取单个字节的传入数据。它将读取的字节作为整数值返回。如果没有可用数据，它返回 -1。或者 `read(uint8_t *buf, size_t size)`。
 
-### WiFi 服务器函数
+ 	- **输出**：表示接收字节数的整数值。如果返回值为 0，表示服务器已关闭连接。
 
-- `WiFiServer::stopAll()` -- 该函数是 Arduino WiFi 库中 WiFiServer 类的方法。此方法会停止所有使用 WiFiServer 类创建的服务器实例。当你希望一次性停止所有服务器，而不是对每个实例单独调用 `stop()` 方法时，这个函数非常有用。
+- `WiFiClient::peek()` -- 该函数用于检查是否有任何数据可从服务器读取，而不实际读取它。
+
+ 	- **输出**：它返回下一个传入数据字节，而不从接收缓冲区中删除它。如果没有可用数据，它返回 -1。
+
+- `WiFiClient::available()` -- 该函数用于检查有多少字节的数据可从服务器读取。
+
+ 	- **输出**：它返回一个整数值，表示可读取的字节数。
+
+### WiFi 服务器功能
+
+- `WiFiServer::stopAll()` -- 此函数是 Arduino WiFi 库中 WiFiServer 类的一个方法。此方法停止使用 WiFiServer 类创建的所有服务器实例。当您想要一次停止所有服务器而不是为每个实例单独调用 `stop()` 方法时，这很有用。
 
 - `WiFiServer::begin(uint16_t port, int enable)` -- 该函数用于在指定端口上启动服务器。服务器将监听传入的客户端连接。
 
  	- **输入参数**
-  		- **port**: 要监听的端口号。
-  		- **enable** (可选): 一个标志，用于指示服务器在启动后是否应立即启用。该标志默认设为 true。
+  		- **port**： 要监听的端口号。
+  		- **enable**（可选）： 一个标志，指示服务器启动后是否应立即启用。此标志默认设置为 true。
 
-- `WiFiServer::hasClient()` -- 该函数用于检查服务器上是否有任何传入的客户端连接可用。可以在循环中使用此函数以持续检查新连接。
+- `WiFiServer::hasClient()` -- 该函数用于检查服务器上是否有任何传入的客户端连接可用。此函数可以在循环中使用以持续检查新连接。
 
- 	- **输出**: 如果有客户端已连接，则返回一个 WiFiClient 对象；如果没有等待连接的客户端，则返回 NULL 指针。
+ 	- **输出**：如果客户端已连接，它返回一个 WiFiClient 对象，如果没有客户端等待连接，则返回 NULL 指针。
 
-- `WiFiServer::end()` -- 该函数用于停止服务器并释放相关资源。一旦调用，服务器将不再接受新的客户端连接。任何现有的客户端连接将保持打开状态，直到由客户端或服务器一方关闭。`WiFiServer::close()` 和 `WiFiServer::stop()` 具有相同的功能。
+- `WiFiServer::end()` -- 该函数用于停止服务器并释放相关资源。一旦调用，服务器就不能再接受新的客户端连接。任何现有的客户端连接将保持打开状态，直到它们被客户端或服务器关闭。`WiFiServer::close()` 和 `WiFiServer::stop()` 具有相同的功能。
 
-### WiFi 多路连接函数
+### WiFi 多重功能
 
-- `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- 该函数用于向 WiFiMulti 对象将尝试连接的可用接入点（AP）列表中添加一个新的接入点。
-
- 	- **输入参数**
-  		- **ssid**: 指向 SSID 的指针（最多 63 个字符）。
-  		- **passphrase**: （对于 WPA2，最少 8 个字符；若为开放网络则使用 NULL）。
-
- 	- **输出**: True/False
-
-- `WiFiMulti::run(uint32_t connectTimeout)` -- 该函数会按顺序尝试连接已保存的接入点之一，直到成功连接为止。
+- `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- 用于向 WiFiMulti 对象将尝试连接的可用 AP 列表中添加新的接入点（AP）。
 
  	- **输入参数**
-  		- **connectTimeout**: 该参数指定等待连接的最长时间（毫秒）。如果 connectTimeout 设为 0，函数将不会超时，并会一直尝试连接。
+  		- **ssid**： 指向 SSID 的指针（最多 63 个字符）。
+  		- **passphrase**： （WPA2 最少 8 个字符，开放网络使用 NULL）。
 
- 	- **输出**: 状态
+ 	- **输出**：True/False
+
+- `WiFiMulti::run(uint32_t connectTimeout)` -- 该函数尝试按顺序连接到保存的接入点之一，直到成功连接到其中一个。
+
+ 	- **输入参数**
+  		- **connectTimeout**： 该参数指定等待连接的最大时间（毫秒）。如果 connectTimeout 设置为 0，函数将不会超时，并将无限期尝试连接。
+
+ 	- **输出**：状态
 
 ## WiFi 使用示例
 
-接下来，我们将使用 XIAO ESP32-C5 演示如何使用一些基本的 Wi-Fi 功能。
+接下来，我们将使用 XIAO ESP32-C5 来演示如何使用一些基本的 Wi-Fi 功能。
 
 ### 扫描网络
 
-XIAO ESP32-C5 支持双频 2.4 GHz 和 5 GHz Wi-Fi，并且可以在扫描模式下扫描周围的 2.4 GHz 和 5 GHz Wi-Fi 网络及其信号强度。
+XIAO ESP32-C5 支持双频 2.4 GHz 和 5 GHz Wi-Fi，在扫描模式下可以扫描周围的 2.4 GHz 和 5 GHz Wi-Fi 网络以及它们的信号强度。
 
 #### 程序
 
-下面是一个示例程序，向你展示 XIAO ESP32-C5 如何扫描周围的 Wi-Fi 网络。
+下面是一个示例程序，展示 XIAO ESP32-C5 如何扫描周围的 Wi-Fi 网络。
 
 - 参考代码
 
@@ -441,20 +441,20 @@ void loop() {
 
 #### 效果展示
 
-- 上传程序后，打开 Arduino IDE 的串口监视器，即可输出扫描到的 Wi-Fi 信息。
+- 上传程序后，打开 Arduino IDE 的串口监视器，将输出扫描到的 Wi-Fi 信息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### 连接到 Wi-Fi 网络
 
-在 Wi-Fi 覆盖范围内，如果你知道目标 Wi-Fi 网络的 SSID 和 PASSWORD，就可以通过 XIAO ESP32-C5 支持的 STA 模式连接到指定的 Wi-Fi 网络。
+在 Wi-Fi 覆盖范围内，您可以通过 XIAO ESP32-C5 支持的 STA 模式连接到特定的 Wi-Fi 网络，前提是您知道目标 Wi-Fi 网络的 SSID 和密码。
 
 #### 程序
 
-接下来提供一个示例程序，向你展示 XIAO ESP32-C5 如何连接到指定的 Wi-Fi 网络。
+接下来，提供一个示例程序来展示 XIAO ESP32-C5 如何连接到指定的 Wi-Fi 网络。
 
 :::tip
-XIAO ESP32-C5 支持双频 Wi-Fi（2.4 GHz 和 5 GHz），允许你根据家庭网络情况选择连接方式。
+XIAO ESP32-C5 支持双频 Wi-Fi（2.4 GHz 和 5 GHz），您可以根据家庭网络选择连接。
 :::
 
 - 参考代码
@@ -513,20 +513,20 @@ void loop() {
 
 #### 效果展示
 
-- 上传程序后，打开 Arduino IDE 的串口监视器，即可输出已连接 Wi-Fi 网络的 IP 地址等信息。
-- 在我的环境中，我连接的是 5 GHz 网络。
+- 上传程序后，打开 Arduino IDE 的串口监视器，将输出连接的 Wi-Fi 网络的 IP 地址等信息。
+- 我在我的环境中连接到了 5 GHz 网络。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_2.png" style={{width:800, height:'auto'}}/></div>
 
 ### AP 模式
 
-XIAO ESP32-C5 可以作为热点供其他设备连接。换句话说，你可以使用支持 Wi-Fi 的设备连接到 XIAO ESP32-C5，而无需连接到你的路由器。
+XIAO ESP32-C5 可以作为热点供其他设备连接。换句话说，您可以使用支持 Wi-Fi 的设备连接到 XIAO ESP32-C5，而无需连接到您的路由器。
 
-简单来说，当你将 XIAO ESP32-C5 配置为接入点时，就创建了它自己的独立 Wi-Fi 网络，附近的 Wi-Fi 设备（站点）可以连接到该网络（例如你的智能手机或电脑）。
+简单来说，当您将 XIAO ESP32-C5 配置为接入点时，您创建了它自己的独立 Wi-Fi 网络，附近的 Wi-Fi 设备（站点）可以连接到该网络（例如您的智能手机或计算机）。
 
 #### 程序
 
-接下来提供一个示例程序，向你展示 XIAO ESP32-C5 如何创建热点并允许其他设备连接到它。
+接下来，提供一个示例程序来展示 XIAO ESP32-C5 如何创建热点并允许其他设备连接到它。
 
 - 参考代码
 
@@ -588,21 +588,21 @@ void loop() {
 
 #### 效果展示
 
-- 编译并上传程序后，你可以通过 WLAN 功能发现该 AP 热点。
+- 编译并上传程序后，您可以通过 WLAN 功能发现 AP 热点。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_3.png" style={{width:800, height:'auto'}}/></div>
 
-- 连接成功后，串口监视器会打印 IP 地址，同时板载 USER LED 会点亮。
+- 成功连接后，串口监视器将打印 IP 地址，同时板载用户 LED 将点亮。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_4.png" style={{width:800, height:'auto'}}/></div>
 
-### WiFi 与 MQTT 的使用
+### WiFi 和 MQTT 使用
 
-MQTT 协议在物联网设备中被广泛使用，而 XIAO ESP32-C5 支持该协议——这意味着你可以使用 XIAO ESP32-C5 开发许多有趣的物联网项目。
+MQTT 协议在物联网设备中广泛使用，XIAO ESP32-C5 支持此协议——这意味着您可以使用 XIAO ESP32-C5 开发许多有趣的物联网项目。
 
 #### 程序
 
-接下来将提供一个参考程序，向你展示如何在 XIAO ESP32-C5 上使用 MQTT 协议。
+接下来，将提供一个参考程序来展示如何在 XIAO ESP32-C5 上使用 MQTT 协议。
 
 - 安装 `PubSubClient` 库
 
@@ -690,13 +690,13 @@ void loop() {
 
 #### 效果展示
 
-- 下载任意支持 MQTTX broker 客户端的软件，这里使用 MQTTX  [MQTTx](https://mqttx.app/downloads)
+- 下载任何支持 MQTTX 代理客户端的软件；这里使用 MQTTX [MQTTx](https://mqttx.app/downloads)
 
-- 打开 MQTTX 并添加客户端信息。此处使用默认客户端地址，因此你只需添加客户端 ID `ESP32C5Client` 并设置测试客户端名称，其余配置保持默认即可。
+- 打开 MQTTX 并添加客户端信息。这里使用默认客户端地址，所以您只需要添加客户端 ID `ESP32C5Client` 并设置测试客户端名称；其余配置可以保持默认。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_5.png" style={{width:800, height:'auto'}}/></div><br/>
 
-- 上传代码并使用 MQTTX 进行连接。连接成功后，点击左侧的 `New Subscription` 来添加订阅。
+- 上传代码并使用 MQTTX 连接。连接成功后，点击左侧的 `New Subscription` 添加订阅。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_6.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -704,19 +704,19 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_7.png" style={{width:800, height:'auto'}}/></div><br/>
 
-- 配置成功后，你可以看到 XIAO ESP32-C5（作为客户端）每 2 秒发布的消息。你也可以在选择主题后向客户端发送消息，客户端在接收到消息后会将其发布。
+- 配置成功后，您可以看到 XIAO ESP32-C5（作为客户端）每 2 秒发布的消息。您也可以在选择主题后向客户端发送消息，客户端收到后会发布它们。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_8.png" style={{width:800, height:'auto'}}/></div><br/>
 
 :::tip
-broker.emqx.io 是一个所有用户共享的公共 broker。任何订阅相同主题的人都可以查看你的消息。它仅用于测试目的，不适合传输敏感数据。
+broker.emqx.io 是一个由所有用户共享的公共代理。任何订阅相同主题的人都可以查看您的消息。它仅用于测试目的，不适合传输敏感数据。
 :::
 
 ### WiFi & HTTP /HTTPS
 
-- 你可以参考我们为 XIAO ESP32C3 编写的访问 ChatGPT 的示例，其中详细介绍了如何使用 WiFiClient 和 HTTPClient：[Learn to use WiFiClient and HTTPClient on XIAO ESP32C3 - XIAO ESP32C3 & ChatGPT in action](https://wiki.seeedstudio.com/cn/xiaoesp32c3-chatgpt/)
+- 您可以参考我们为 XIAO ESP32C3 编写的访问 ChatGPT 的示例，其中详细介绍了如何使用 WiFiClient 和 HTTPClient：[学习在 XIAO ESP32C3 上使用 WiFiClient 和 HTTPClient - XIAO ESP32C3 & ChatGPT 实战](https://wiki.seeedstudio.com/cn/xiaoesp32c3-chatgpt/)
 
-- 如果你只想了解 HTTP 的简单用法，也可以按照下面的步骤进行测试和验证。
+- 如果您只想探索 HTTP 的简单用法，也可以按照以下步骤进行测试和验证。
 
 #### 程序
 
@@ -799,25 +799,25 @@ void loop() {
 #### 效果展示
 
 :::tip
-`https://jsonplaceholder.typicode.com` 是一个免费的模拟 REST API 测试服务，专为开发和测试目的而设计。它不支持对真实数据进行永久修改或持久化。
+`https://jsonplaceholder.typicode.com` 是一个免费的模拟 REST API 测试服务，专门为开发和测试目的而设计。它不支持真实数据的永久修改或持久化。
 :::
 
-- 上传代码，然后你可以打开 `https://jsonplaceholder.typicode.com/todos/1` 和 Arduino IDE 中的串口监视器工具，检查信息是否一致。
+- 上传代码，然后您可以打开 `https://jsonplaceholder.typicode.com/todos/1` 和 Arduino IDE 中的串口监视器工具来检查信息是否一致。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_9.png" style={{width:800, height:'auto'}}/></div>
 
 ### WiFi-Mesh
 
-以下是乐鑫官方对 **ESP-WIFI-MESH** 的介绍：
+以下是乐鑫系统对 **ESP-WIFI-MESH** 的官方介绍：
 
-ESP-WIFI-MESH 是一种无线通信网络，其节点在乐鑫 SoC 上利用 AP-STA 同时工作特性，以 Mesh 拓扑结构进行组织。它提供了自组网和自愈能力，易于部署。ESP-WIFI-MESH 的网络拓扑可以在大范围内扩展到多达 1000 个节点，而无需任何特定的 Wi-Fi 基础设施支持。ESP-WIFI-MESH 还可用于在家庭部署场景中覆盖 Wi-Fi 盲区，即 Wi-Fi 信号无法覆盖的区域。
+ESP-WIFI-MESH 是一个使用乐鑫 SoC 上的同时 AP-STA 功能，以网状拓扑组织节点的无线通信网络。它提供了一个自组织和自愈的网络，易于部署。ESP-WIFI-MESH 的网络拓扑可以在大面积内扩展到 1000 个节点，无需任何特定的 Wi-Fi 基础设施支持。ESP-WIFI-MESH 也可以用于覆盖家庭部署场景中的 Wi-Fi 盲点，即 Wi-Fi 信号无法到达的地方。
 
-如需了解更详细的信息，请参考乐鑫官方链接：
+更多详细信息，请参考乐鑫系统的官方链接：
 
 - [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
-- [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
+- [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
 
-接下来，我将向你展示一个 ESP-Mesh 的示例，对于该示例，你需要至少准备两块 ESP32 设备。
+接下来，我将向您展示一个 ESP-Mesh 的示例，对于这个示例，您需要准备至少两个 ESP32 设备。
 
 #### 程序
 
@@ -901,19 +901,19 @@ void loop() {
 
 #### 效果展示
 
-- 将代码上传到两块 XIAO ESP32-C5 设备上，并打开任意串口工具查看结果。
+- 将代码上传到两个 XIAO ESP32-C5 设备并打开任何串口工具来检查结果。
 
-XIAO ESP32-C5 设备 1 开始组网并发送消息。
+XIAO ESP32-C5 设备 1 开始网络组建并发送消息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_10.png" style={{width:800, height:'auto'}}/></div><br/>
 
-XIAO ESP32-C5 设备 2 加入网络并接收来自设备 1 发送的消息。
+XIAO ESP32-C5 设备 2 加入网络并接收来自设备 1 的消息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_11.png" style={{width:800, height:'auto'}}/></div>
 
-### 示例：IoT 智能家居中控
+### 示例：IoT 智能家居中枢
 
-通过以上 Wi-Fi 示例，你一定已经掌握了如何在 XIAO ESP32-C5 上使用 Wi-Fi。接下来将通过一个示例向你展示如何使用 Wi-Fi AP 模式和 HTTP 网络服务实现智能家居控制中枢——具体来说，就是如何使用 XIAO ESP32-C5 作为智能家居控制中枢来监控你家中的状态。
+从上面的 Wi-Fi 示例中，您一定已经掌握了如何在 XIAO ESP32-C5 上使用 Wi-Fi。接下来，将展示一个示例，向您展示如何使用 Wi-Fi AP 模式和 HTTP 网络服务实现智能家居控制中枢——具体来说，如何使用 XIAO ESP32-C5 作为智能家居控制中枢来监控您家的状态。
 
 - 安装 `ESPAsyncWebServer` 库
 
@@ -1293,23 +1293,23 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_12.png" style={{width:800, height:'auto'}}/></div><br/>
 
-- 输入 IP 地址以跳转到网页。
+- 输入 IP 地址跳转到网页。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_13.png" style={{width:800, height:'auto'}}/></div><br/>
 
 :::tip
-网页上显示的控件和传感器是可自定义的。您可以根据自己的具体需求添加新的控件，并修改生成的网页。参考：[ESPAsyncWebServer](https://github.com/lacamera/ESPAsyncWebServer)
+网页上显示的控件和传感器是可自定义的。您可以根据具体需求添加新的控件并修改生成的网页。参考：[ESPAsyncWebServer](https://github.com/lacamera/ESPAsyncWebServer)
 :::
 
 :::tip
-XIAO ESP32-C5 生成的 AP 热点默认无法连接互联网。如果需要连接互联网，可以采用以下两种方法之一：<br/>
-方法一：将 XIAO ESP32-C5 连接到 Home Assistant。参考：[Connecting XIAO ESP32-C5 to Home Assistant](https://wiki.seeedstudio.com/cn/xiao_esp32c5_homeassistant/)<br/>
-方法二：使用 MQTT 服务将数据上传到云服务器。请注意，此方法可能需要购买一定数量的服务点数。参考：[Goole Cloud](https://cloud.google.com/)<br/>
+XIAO ESP32-C5 生成的 AP 热点默认无法连接到互联网。如果需要互联网连接，您可以采用以下两种方法之一：<br/>
+方法 1：将 XIAO ESP32-C5 连接到 Home Assistant。参考：[将 XIAO ESP32-C5 连接到 Home Assistant](https://wiki.seeedstudio.com/cn/xiao_esp32c5_homeassistant/)<br/>
+方法 2：使用 MQTT 服务将数据上传到云服务器。注意，此方法可能需要购买一定的服务积分。参考：[Goole Cloud](https://cloud.google.com/)<br/>
 :::
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

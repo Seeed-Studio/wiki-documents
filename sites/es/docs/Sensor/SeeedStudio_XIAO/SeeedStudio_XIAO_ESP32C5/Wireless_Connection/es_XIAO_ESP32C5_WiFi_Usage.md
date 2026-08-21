@@ -30,28 +30,28 @@ url: https://wiki.seeedstudio.com/es/xiao_esp32c5_wifi_usage/
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html
         " target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-El Seeed Studio XIAO ESP32-C5 es compatible con Wi-Fi de doble banda de 2,4 GHz y 5 GHz, e incorpora una radio Wi-Fi 6 (802.11ax) de doble banda con compatibilidad retroactiva con los estándares 802.11a/b/g/n/ac. Además, esta placa de desarrollo admite conectividad de antena U.FL, diseñada para mejorar el rendimiento de la conexión inalámbrica del XIAO ESP32-C5. En este tutorial, exploraremos cómo aprovechar la funcionalidad Wi-Fi del XIAO ESP32-C5 para conectarse a una red Wi-Fi y realizar tareas básicas de red.<br/>
-El siguiente tutorial utiliza el Arduino IDE para la compilación y la carga. Si aún no tienes experiencia con el Arduino IDE, visita [Getting Started with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/es/xiao_esp32c5_getting_started/).<br/>
+El Seeed Studio XIAO ESP32-C5 soporta Wi-Fi de banda dual 2.4 GHz y 5 GHz, con una radio Wi-Fi 6 (802.11ax) de banda dual con compatibilidad hacia atrás para los estándares 802.11a/b/g/n/ac. Además, esta placa de desarrollo soporta conectividad de antena U.FL, que está diseñada para mejorar el rendimiento de conexión inalámbrica del XIAO ESP32-C5. En este tutorial, exploraremos cómo aprovechar la funcionalidad Wi-Fi del XIAO ESP32-C5 para conectarse a una red Wi-Fi y realizar tareas básicas de red.<br/>
+El siguiente tutorial utiliza el Arduino IDE para compilación y carga. Si aún no tienes experiencia con el Arduino IDE, por favor visita [Introducción a Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/es/xiao_esp32c5_getting_started/).<br/>
 
 ## Introducción
 
-### Instalación de la antena
+### Instalación de Antena
 
-Dentro del embalaje del Seeed Studio XIAO ESP32-C5, hay un **conector de antena Wi-Fi/BT** dedicado. Para obtener una intensidad óptima de la señal WiFi/Bluetooth, debes sacar la antena incluida en el paquete y conectarla al conector.<br/>
-<!-- :::tip
-If you want to achieve a stronger signal gain effect, you can purchase and install **2.4G/5G External Antenna with RP-SMA Male Connector** — it delivers much higher gain than the built-in FPC Antenna included in the package!
+Dentro del empaque del Seeed Studio XIAO ESP32-C5, hay un **conector de antena Wi-Fi/BT** dedicado. Para una intensidad óptima de señal WiFi/Bluetooth, necesitas sacar la antena incluida en el paquete y conectarla al conector.<br/>
+:::tip
+Si quieres lograr un efecto de ganancia de señal más fuerte, puedes comprar e instalar **Antena Externa 2.4G/5G con Conector RP-SMA Macho** — ¡ofrece mucha mayor ganancia que la Antena FPC incorporada incluida en el paquete!
 :::
 <div class="table-center">
  <table>
   <tr>
-   <th>2.4G/5G External Antenna with RP-SMA Male Connector</th>
+   <th>Antena Externa 2.4G/5G con Conector RP-SMA Macho</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-2.4g5g-external-antenna-with-rp-sma-male-connector-45font_1.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -60,292 +60,292 @@ If you want to achieve a stronger signal gain effect, you can purchase and insta
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/2-4G-5G-External-Antenna-with-RP-SMA-Male-Connector-and-1-13-Coaxial-Cable-130mm-Set-p-6316.html
         " target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
-</div> -->
+</div>
 
-## Interfaces comunes de la biblioteca WiFi
+## Las interfaces comunes de la biblioteca WiFi
 
-- XIAO ESP32-C5 proporciona una amplia gama de funciones de red Wi-Fi. En general, podemos consultar las funciones de la biblioteca WiFi en el paquete integrado del ESP32 y elegir la función correspondiente para lograr la funcionalidad deseada. A continuación, enumeraremos algunas interfaces de uso común e introduciremos su uso.
+- XIAO ESP32-C5 proporciona una amplia gama de funciones de red Wi-Fi. Generalmente, podemos ver las funciones de la biblioteca WiFi en el paquete incorporado del ESP32 y elegir la función correspondiente para lograr la funcionalidad deseada. A continuación, listaremos algunas interfaces comúnmente utilizadas e introduciremos su uso.
 
 :::tip
-Si deseas comenzar directamente con el tutorial de uso de Wi-Fi, puedes saltar a [WiFi Usage Examples](#WiFi-Usage-Examples).
+Si quieres comenzar directamente el tutorial de uso de Wi-Fi, puedes saltar a [Ejemplos de Uso de WiFi](#ejemplos-de-uso-de-wifi).
 :::
 
-### Función genérica de WiFi
+### Función WiFi genérica
 
-- `WiFiGenericClass::getHostname()` -- Es una función de la biblioteca WiFi para ESP32 que devuelve el nombre de host del dispositivo como una cadena. El nombre de host es un nombre único que identifica el dispositivo en la red. Esta función recupera el nombre de host que se estableció previamente usando `WiFiGenericClass::setHostname()`. Si no se ha establecido ningún nombre de host, se devolverá el nombre de host predeterminado.
+- `WiFiGenericClass::getHostname()` -- Es una función en la biblioteca WiFi para ESP32 que devuelve el nombre de host del dispositivo como una cadena. El nombre de host es un nombre único que identifica el dispositivo en la red. Esta función recupera el nombre de host que fue previamente establecido usando `WiFiGenericClass::setHostname()`. Si no se ha establecido ningún nombre de host, se devolverá el nombre de host predeterminado.
 
-- `WiFiGenericClass::persistent(bool persistent)` -- Es un método que se utiliza para habilitar o deshabilitar el modo persistente de la biblioteca WiFi del ESP32. Cuando el modo persistente está habilitado, la configuración de Wi-Fi se almacena en memoria no volátil (NVM) y se conserva incluso después de un ciclo de alimentación o un reinicio. Cuando el modo persistente está deshabilitado, la configuración se almacena en la RAM y se pierde después de un ciclo de alimentación o un reinicio.
+- `WiFiGenericClass::persistent(bool persistent)` -- Es un método que se utiliza para habilitar o deshabilitar el modo persistente de la biblioteca WiFi ESP32. Cuando el modo persistente está habilitado, la configuración Wi-Fi se almacena en memoria no volátil (NVM) y se retiene incluso después de un ciclo de energía o reinicio. Cuando el modo persistente está deshabilitado, la configuración se almacena en RAM y se pierde después de un ciclo de energía o reinicio.
 
- 	- **Parámetros de entrada**
-  		- **persistent**: Si el argumento es true, el modo persistente se habilita. Si el argumento es false, el modo persistente se deshabilita.
+ 	- **Parámetros de Entrada**
+  		- **persistent**: Si el argumento es true, el modo persistente está habilitado. Si el argumento es false, el modo persistente está deshabilitado.
 
-- `WiFiGenericClass::enableLongRange(bool enable)` -- La función se utiliza para habilitar o deshabilitar la función de largo alcance (Long Range, LR) del módulo WiFi. Cuando está habilitada, la función LR permite que el módulo se conecte a redes WiFi que están más alejadas de lo habitual, pero con menores velocidades de datos.
+- `WiFiGenericClass::enableLongRange(bool enable)` -- La función se utiliza para habilitar o deshabilitar la característica de Largo Alcance (LR) del módulo WiFi. Cuando está habilitada, la característica LR permite al módulo conectarse a redes WiFi que están más lejos de lo usual, pero con velocidades de datos más bajas.
 
- 	- **Parámetros de entrada**
-  		- **enable**: El parámetro debe establecerse en true para habilitar la función y en false para deshabilitarla.
+ 	- **Parámetros de Entrada**
+  		- **enable**: El parámetro debe establecerse en true para habilitar la característica y false para deshabilitarla.
 
 - `WiFiGenericClass::mode(wifi_mode_t m)` -- La función se utiliza para establecer el modo WiFi del dispositivo.
 
- 	- **Parámetros de entrada**
-  		- **m**: El parámetro m especifica el modo a configurar, que puede ser una de las siguientes constantes definidas en el enum wifi_mode_t:
-   			- **WIFI_MODE_NULL**: Desactiva tanto el modo estación WiFi como el modo punto de acceso.
+ 	- **Parámetros de Entrada**
+  		- **m**: El parámetro m especifica el modo a establecer, que puede ser una de las siguientes constantes definidas en el enum wifi_mode_t:
+   			- **WIFI_MODE_NULL**: Deshabilita tanto el modo estación WiFi como el modo punto de acceso.
    			- **WIFI_MODE_STA**: Habilita el modo estación WiFi para conectarse a una red WiFi existente.
    			- **WIFI_MODE_AP**: Habilita el modo punto de acceso para crear una nueva red WiFi.
    			- **WIFI_MODE_APSTA**: Habilita tanto el modo estación WiFi como el modo punto de acceso.
 
 - `WiFiGenericClass::setSleep(wifi_ps_type_t sleepType)` -- La función establece el modo de ahorro de energía para el módulo WiFi.
 
- 	- **Parámetros de entrada**
-  		- **sleepType**: El parámetro sleepType es un tipo enumerado que especifica el tipo de modo de ahorro de energía que se va a utilizar. Hay tres tipos de suspensión posibles:
-   			- **WIFI_PS_NONE**: Este es el modo de suspensión predeterminado, en el que el módulo WiFi no entra en modo de ahorro de energía.
-   			- **WIFI_PS_MIN_MODEM**: En este modo, el módulo WiFi apaga su módem mientras mantiene la conexión con el punto de acceso (AP).
-   			- **WIFI_PS_MAX_MODEM**: Habilita el modo de ahorro de energía Wi-Fi más agresivo. Puede aumentar significativamente el tiempo de suspensión, pero puede introducir mayor latencia y menor rendimiento, y en algunas redes puede afectar a la estabilidad de la conexión.
+ 	- **Parámetros de Entrada**
+  		- **sleepType**: El parámetro sleepType es un tipo enumerado que especifica el tipo de modo de ahorro de energía a usar. Hay tres tipos de suspensión posibles:
+   			- **WIFI_PS_NONE**: Este es el modo de suspensión predeterminado, en el cual el módulo WiFi no entra en modo de ahorro de energía.
+   			- **WIFI_PS_MIN_MODEM**: En este modo, el módulo WiFi apaga su módem mientras mantiene la conexión al punto de acceso (AP).
+   			- **WIFI_PS_MAX_MODEM**: Habilita el modo de ahorro de energía Wi-Fi más agresivo. Puede aumentar significativamente el tiempo de suspensión, pero puede introducir mayor latencia y rendimiento reducido, y en algunas redes puede afectar la estabilidad de la conexión.
 
 ### Funciones STA
 
-- `WiFiSTAClass::status()` -- Devuelve el estado de la conexión.
+- `WiFiSTAClass::status()` -- Devuelve el estado de conexión.
 
  	- **Salida**: uno de los valores definidos en wl_status_t.
   		- **WL_NO_SHIELD**: Este código de estado indica que el módulo Wi-Fi no está presente.
     - **WL_IDLE_STATUS**: Este código de estado indica que el módulo Wi-Fi no está realizando ninguna operación.
     - **WL_NO_SSID_AVAIL**: Este código de estado indica que no se encontraron redes Wi-Fi durante el escaneo.
-    - **WL_SCAN_COMPLETED**: Este código de estado indica que el escaneo Wi-Fi se ha completado correctamente.
-    - **WL_CONNECTED**: Este código de estado indica que el ESP32 está conectado correctamente a una red Wi-Fi.
+    - **WL_SCAN_COMPLETED**: Este código de estado indica que el escaneo Wi-Fi se ha completado exitosamente.
+    - **WL_CONNECTED**: Este código de estado indica que el ESP32 está conectado exitosamente a una red Wi-Fi.
     - **WL_CONNECT_FAILED**: Este código de estado indica que la conexión a la red Wi-Fi falló.
-    - **WL_CONNECTION_LOST**: Este código de estado indica que se perdió la conexión con la red Wi-Fi.
+    - **WL_CONNECTION_LOST**: Este código de estado indica que la conexión a la red Wi-Fi se perdió.
     - **WL_DISCONNECTED**: Este código de estado indica que el ESP32 estaba previamente conectado a una red Wi-Fi, pero actualmente no está conectado a ninguna red.
 
-- `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- Inicia la conexión WiFi con un punto de acceso WPA2 Enterprise.
+- `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- Iniciar conexión Wifi con un AP WPA2 Enterprise.
 
- 	- **Parámetros de entrada** (Opcionales)
+ 	- **Parámetros de Entrada** (Opcional)
   		- **ssid**: Puntero a la cadena SSID.
   		- **method**: El método de autenticación de WPA2 (WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS)
-  		- **wpa2_identity**: Puntero a la entidad.
-  		- **wpa2_username**: Puntero al nombre de usuario.
+  		- **wpa2_identity**: Puntero a la entidad
+  		- **wpa2_username**: Puntero al nombre de usuario
   		- **wpa2_password**: Puntero a la contraseña.
-  		- **ca_pem**: Puntero a una cadena con el contenido de un archivo .pem con el certificado de la CA.
-  		- **client_crt**: Puntero a una cadena con el contenido de un archivo .crt con el certificado de cliente.
-  		- **client_key**: Puntero a una cadena con el contenido de un archivo .key con la clave de cliente.
-  		- **channel**: Opcional. Canal del AP.
-  		- **bssid**: Opcional. BSSID / MAC del AP.
-  		- **connect**: Opcional. Llamar a connect.
+  		- **ca_pem**: Puntero a una cadena con el contenido de un archivo .pem con certificado CA
+  		- **client_crt**: Puntero a una cadena con el contenido de un archivo .crt con certificado de cliente
+  		- **client_key**: Puntero a una cadena con el contenido de un archivo .key con clave de cliente
+  		- **channel**: Opcional. Canal del AP
+  		- **bssid**: Opcional. BSSID / MAC del AP
+  		- **connect**: Opcional. llamar connect
 
 - `WiFiSTAClass::reconnect()` -- Forzará una desconexión y luego comenzará a reconectarse al AP.
 
  	- **Salida**: True/False.
 
-- `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- Desconectarse de la red.
+- `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- Desconectar de la red.
 
- 	- **Parámetros de entrada**
+ 	- **Parámetros de Entrada**
   		- **wifioff**: wifioff `true` para apagar la radio Wi-Fi.
   		- **eraseap**: eraseap `true` para borrar la configuración del AP de la memoria NVS.
 
  	- **Salida**: True/False.
 
-- `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- Cambia la configuración de IP deshabilitando el cliente DHCP.
+- `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- Cambiar configuraciones de IP deshabilitando el cliente dhcp.
 
- 	- **Parámetros de entrada**
-  		- **local_ip**: Configuración de IP estática.
+ 	- **Parámetros de Entrada**
+  		- **local_ip**: Configuración de ip estática.
   		- **gateway**: Configuración de puerta de enlace estática.
   		- **subnet**: Máscara de subred estática.
   		- **dns1**: Servidor DNS estático 1.
   		- **dns2**: Servidor DNS estático 2.
 
-- `WiFiSTAClass::setAutoConnect(bool autoConnect)` -- Obsoleto. Configura la estación ESP32 para conectarse automáticamente o no al AP (que está registrado) cuando se enciende. La auto-conexión está habilitada de forma predeterminada.
+- `WiFiSTAClass::setAutoConnect(bool autoConnect)` -- Obsoleto. Configurar la estación ESP32 para conectarse al AP (que está registrado) automáticamente o no cuando se enciende. Habilitar auto-conexión por defecto.
 
- 	- **Parámetros de entrada**
-  		- **autoConnect**: Booleano autoConnect.
+ 	- **Parámetros de Entrada**
+  		- **autoConnect**: autoConnect bool.
 
  	- **Salida**: False.
 
-- `WiFiSTAClass::waitForConnectResult(unsigned long timeoutLength)` -- Espera a que la conexión WiFi alcance un resultado.
+- `WiFiSTAClass::waitForConnectResult(unsigned long timeoutLength)` -- Esperar a que la conexión WiFi alcance un resultado.
 
- 	- **Parámetros de entrada**
-  		- **timeoutLength**: El parámetro especifica la cantidad máxima de tiempo de espera para que se establezca una conexión, en milisegundos.
+ 	- **Parámetros de Entrada**
+  		- **timeoutLength**: El parámetro especifica la cantidad máxima de tiempo a esperar para que se establezca una conexión, en milisegundos.
 
  	- **Salida**: uno de los valores definidos en wl_status_t.
 
-- `WiFiSTAClass::localIP()` -- Obtiene la dirección IP de la interfaz de estación.
+- `WiFiSTAClass::localIP()` -- Obtener la dirección IP de la interfaz de estación.
 
- 	- **Salida**: IPAddress de la IP de la estación.
+ 	- **Salida**: IPAddress IP de estación.
 
-- `WiFiSTAClass::macAddress(uint8_t* mac)` -- Obtiene la dirección MAC de la interfaz de estación.
+- `WiFiSTAClass::macAddress(uint8_t* mac)` -- Obtener la dirección MAC de la interfaz de estación.
 
- 	- **Parámetros de entrada**
-  		- **mac** (Opcional): Puntero a un array uint8_t con longitud WL_MAC_ADDR_LENGTH.
+ 	- **Parámetros de Entrada**
+  		- **mac** (Opcional): Puntero a array uint8_t con longitud WL_MAC_ADDR_LENGTH.
 
  	- **Salida**: Puntero a uint8_t *.
 
 - `WiFiSTAClass::SSID()` -- Devuelve el SSID actual asociado con la red.
 
- 	- **Output**: SSID.
+ 	- **Salida**: SSID.
 
 - `WiFiSTAClass::RSSI(void)` -- Devuelve el RSSI actual de la red.
 
- 	- **Output**: RSSI.
+ 	- **Salida**: RSSI.
 
-### Funciones de AP
+### Funciones AP
 
-- `WiFiAPClass::softAP(const char* ssid, const char* passphrase, int channel, int ssid_hidden, int max_connection, bool ftm_responder)` -- Esta es una función de la biblioteca WiFi de XIAO ESP32-C5. Se utiliza para configurar un SoftAP (punto de acceso programado), que permite que otros dispositivos se conecten al XIAO ESP32-C5 y accedan a sus recursos.
+- `WiFiAPClass::softAP(const char* ssid, const char* passphrase, int channel, int ssid_hidden, int max_connection, bool ftm_responder)` -- Esta es una función en la biblioteca WiFi del XIAO ESP32-C5. Se utiliza para configurar un SoftAP (Punto de acceso programático), que permite a otros dispositivos conectarse al XIAO ESP32-C5 y acceder a sus recursos.
 
- 	- **Input Parameters**
+ 	- **Parámetros de Entrada**
   		- **ssid**:              Puntero al SSID (máx. 63 caracteres).
     - **passphrase**:        (Para WPA2 mín. 8 caracteres, para abierto usar NULL).
     - **channel**:           Número de canal WiFi, 1 - 13.
-    - **ssid_hidden**:       Enmascaramiento de red (0 = difundir SSID, 1 = ocultar SSID).
+    - **ssid_hidden**:       Ocultación de red (0 = transmitir SSID, 1 = ocultar SSID).
     - **max_connection**:    Máximo de clientes conectados simultáneamente, 1 - 4.
 
- 	- **Output**: True/False.
+ 	- **Salida**: True/False.
 
-- `WiFiAPClass::softAPgetStationNum()` -- Obtiene el número de estaciones / clientes que están conectados a la interfaz softAP.
+- `WiFiAPClass::softAPgetStationNum()` -- Obtiene el recuento de las estaciones/clientes que están conectados a la interfaz softAP.
 
- 	- **Output**: Conteo de estaciones.
+ 	- **Salida**: Recuento de estaciones.
 
-- `WiFiAPClass::softAPConfig(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dhcp_lease_start)` -- Una función para configurar el SoftAP.
+- `WiFiAPClass::softAPConfig(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dhcp_lease_start)` -- Una función para configurar SoftAP.
 
- 	- **Input Parameters**
+ 	- **Parámetros de Entrada**
   		- **local_ip**:      IP del punto de acceso.
   		- **gateway**:       IP de la puerta de enlace.
   		- **subnet**:        Máscara de subred.
 
- 	- **Output**: True/False.
+ 	- **Salida**: True/False.
 
 - `WiFiAPClass::softAPIP()` -- Obtiene la dirección IP de la interfaz softAP.
 
- 	- **Output**: IPAddress IP del softAP.
+ 	- **Salida**: IPAddress IP del softAP.
 
 - `WiFiAPClass::softAPmacAddress(uint8_t* mac)` -- Obtiene la dirección MAC de la interfaz softAP.
 
- 	- **Input Parameters**
-  		- **mac** (Optional):   Puntero a un array de uint8_t con longitud WL_MAC_ADDR_LENGTH.
+ 	- **Parámetros de Entrada**
+  		- **mac** (Opcional):   Puntero a array uint8_t con longitud WL_MAC_ADDR_LENGTH.
 
- 	- **Output**: Puntero a uint8_t* o String mac.
+ 	- **Salida**: Puntero a uint8_t* o String mac.
 
-### Función de escaneo WiFi
+### Función de Escaneo WiFi
 
-- `WiFiScanClass::scanNetworks(bool async, bool show_hidden, bool passive, uint32_t max_ms_per_chan, uint8_t channel, const char * ssid, const uint8_t * bssid)` -- Inicia el escaneo de las redes WiFi disponibles.
+- `WiFiScanClass::scanNetworks(bool async, bool show_hidden, bool passive, uint32_t max_ms_per_chan, uint8_t channel, const char * ssid, const uint8_t * bssid)` -- Inicia el escaneo de redes WiFi disponibles.
 
- 	- **Input Parameters**
-  		- **async**: El parámetro es un valor booleano que determina si el escaneo debe realizarse de forma asíncrona. Si se establece en true, la función devuelve inmediatamente y los resultados del escaneo se pueden obtener más tarde llamando a la función getScanResults(). Si se establece en false, la función se bloqueará hasta que el escaneo se complete.
+ 	- **Parámetros de Entrada**
+  		- **async**: El parámetro es un valor booleano que determina si el escaneo debe realizarse de forma asíncrona. Si se establece en true, la función regresa inmediatamente y los resultados del escaneo se pueden obtener más tarde llamando a la función getScanResults(). Si se establece en false, la función se bloqueará hasta que el escaneo esté completo.
   		- **show_hidden**: El parámetro es un valor booleano que determina si la función debe incluir redes ocultas en los resultados del escaneo.
-  		- **passive**: El parámetro es un valor booleano que determina si la función debe realizar un escaneo pasivo. Si se establece en true, la función no transmitirá ningún paquete durante el escaneo, lo que puede tardar más pero puede ser útil en ciertas situaciones.
-  		- **max_ms_per_chan**: El parámetro es el tiempo máximo que se dedicará a escanear cada canal en milisegundos.
-  		- **channel**: El parámetro es el canal Wi-Fi que se va a escanear. Si se establece en 0, la función escaneará todos los canales disponibles.
+  		- **passive**: El parámetro es un valor booleano que determina si la función debe realizar un escaneo pasivo. Si se establece en true, la función no transmitirá ningún paquete durante el escaneo, lo que puede tomar más tiempo pero puede ser útil en ciertas situaciones.
+  		- **max_ms_per_chan**: El parámetro es el tiempo máximo para gastar escaneando cada canal en milisegundos.
+  		- **channel**: El parámetro es el canal Wi-Fi a escanear. Si se establece en 0, la función escaneará todos los canales disponibles.
   		- **ssid**: El parámetro es un puntero a una cadena terminada en null que contiene el SSID de la red a buscar. Si se establece en nullptr, la función escaneará todas las redes disponibles.
   		- **bssid**: El parámetro es un puntero a un array de 6 bytes que contiene la dirección MAC del punto de acceso a buscar. Si se establece en nullptr, la función escaneará todos los puntos de acceso.
 
- 	- **Output**: El valor de retorno de esta función es un entero que indica el número de redes escaneadas.
+ 	- **Salida**: El valor de retorno de esta función es un entero que indica el número de redes escaneadas.
 
-- `WiFiScanClass::getNetworkInfo(uint8_t i, String &ssid, uint8_t &encType, int32_t &rssi, uint8_t* &bssid, int32_t &channel)` -- Carga toda la información de una red WiFi escaneada en los parámetros puntero.
+- `WiFiScanClass::getNetworkInfo(uint8_t i, String &ssid, uint8_t &encType, int32_t &rssi, uint8_t* &bssid, int32_t &channel)` -- Carga toda la información de una red wifi escaneada en los parámetros ptr.
 
- 	- **Input Parameters**
-  		- **i**: La función se utiliza para obtener información sobre una red escaneada en el índice i especificado.
+ 	- **Parámetros de Entrada**
+  		- **i**: La función se utiliza para recuperar información sobre una red escaneada en un índice especificado i.
   		- **ssid**: El parámetro ssid es una referencia a una variable String donde la función almacena el SSID de la red.
-  		- **encType**: El parámetro encType es una referencia a una variable uint8_t donde la función almacena el tipo de cifrado de la red (0 = abierta, 1 = WEP, 2 = WPA_PSK, 3 = WPA2_PSK, 4 = WPA_WPA2_PSK).
-  		- **rssi**: El parámetro rssi es una referencia a una variable int32_t donde la función almacena la intensidad de la señal recibida (RSSI) de la red.
+  		- **encType**: El parámetro encType es una referencia a una variable uint8_t donde la función almacena el tipo de cifrado de la red (0 = abierto, 1 = WEP, 2 = WPA_PSK, 3 = WPA2_PSK, 4 = WPA_WPA2_PSK).
+  		- **rssi**: El parámetro rssi es una referencia a una variable int32_t donde la función almacena la indicación de intensidad de señal recibida (RSSI) de la red.
   		- **bssid**: El parámetro bssid es una referencia a un puntero uint8_t* donde la función almacena el BSSID (dirección MAC) de la red.
   		- **channel**: El parámetro channel es una referencia a una variable int32_t donde la función almacena el número de canal de la red.
 
- 	- **Output**: True/False.
+ 	- **Salida**: True/False.
 
-- `WiFiScanClass::SSID(uint8_t i)` -- Devuelve el SSID descubierto durante el escaneo de la red.
+- `WiFiScanClass::SSID(uint8_t i)` -- Devuelve el SSID descubierto durante el escaneo de red.
 
- 	- **Input Parameters**
-  		- **i**: Especifica de qué elemento de red se desea obtener la información.
+ 	- **Parámetros de Entrada**
+  		- **i**: Especifica de qué elemento de red se quiere obtener la información.
 
- 	- **Output**: Cadena SSID del elemento especificado en la lista de redes escaneadas.
+ 	- **Salida**: Cadena SSID del elemento especificado en la lista de redes escaneadas.
 
 - `WiFiScanClass::RSSI(uint8_t i)` -- Devuelve el RSSI de las redes descubiertas durante el scanNetworks.
 
- 	- **Input Parameters**
-  		- **i**: Especifica de qué elemento de red se desea obtener la información.
+ 	- **Parámetros de Entrada**
+  		- **i**: Especifica de qué elemento de red se quiere obtener la información.
 
- 	- **Output**: Valor con signo del RSSI del elemento especificado en la lista de redes escaneadas.
+ 	- **Salida**: Valor con signo del RSSI del elemento especificado en la lista de redes escaneadas.
 
-### Funciones de cliente WiFi
+### Funciones de Cliente WiFi
 
-- `WiFiClient::connect(IPAddress ip, uint16_t port, int32_t timeout)` -- Esta función se utiliza en la biblioteca WiFiClient para conectarse a una dirección IP y puerto remotos con un valor de tiempo de espera especificado.
+- `WiFiClient::connect(IPAddress ip, uint16_t port, int32_t timeout)` -- Esta función se utiliza en la biblioteca WiFiClient para conectarse a una dirección IP remota y puerto con un valor de tiempo de espera especificado.
 
- 	- **Input Parameters**
+ 	- **Parámetros de Entrada**
   		- **ip**:   La dirección IP del servidor al que conectarse.
   		- **port**: El número de puerto del servidor al que conectarse.
-  		- **timeout** (Optional): El tiempo máximo de espera para que se establezca la conexión, en milisegundos. Si la conexión no se establece dentro de este tiempo, la función devolverá un error. Si timeout se establece en 0, la función esperará indefinidamente a que se establezca la conexión.
+  		- **timeout** (Opcional): El tiempo máximo para esperar a que se establezca la conexión, en milisegundos. Si la conexión no se establece dentro de este tiempo, la función devolverá un error. Si timeout se establece en 0, la función esperará indefinidamente a que se establezca la conexión.
 
-- `WiFiClient::stop()` -- La función se utiliza para desconectar el cliente del servidor y liberar el socket/puerto utilizado por el cliente. Una vez que se llama a la función, el cliente ya no puede enviar ni recibir datos.
+- `WiFiClient::stop()` -- La función se utiliza para desconectar el cliente del servidor y liberar el socket/puerto utilizado por el cliente. Una vez que se llama a la función, el cliente ya no puede enviar o recibir datos.
 
-- `WiFiClient::setTimeout(uint32_t timeout_ms)` -- La función establece el número máximo de milisegundos que el cliente esperará a que se establezca una conexión o se reciban datos. Si la conexión o la transferencia de datos tarda más que el tiempo de espera especificado, la conexión se cerrará.
+- `WiFiClient::setTimeout(uint32_t timeout_ms)` -- La función establece el número máximo de milisegundos que el cliente esperará para que se establezca una conexión o se reciban datos. Si la conexión o transferencia de datos toma más tiempo que el tiempo de espera especificado, la conexión se cerrará.
 
- 	- **Input Parameters**
+ 	- **Parámetros de Entrada**
   		- **timeout_ms**:   El número de milisegundos para el tiempo de espera.
 
-- `WiFiClient::write(uint8_t data)` -- Escribe un solo byte de datos en el servidor conectado a través de la instancia WiFiClient. O `WiFiClient::write(const uint8_t *buf, size_t size)`.
+- `WiFiClient::write(uint8_t data)` -- Escribe un solo byte de datos al servidor conectado a través de la instancia WiFiClient. O `WiFiClient::write(const uint8_t *buf, size_t size)`.
 
- 	- **Input Parameters**
-  		- **data**:   Es un solo byte de datos que debe enviarse a través de la conexión de red establecida.
+ 	- **Parámetros de Entrada**
+  		- **data**:   Es un solo byte de datos que necesita ser enviado a través de la conexión de red establecida.
 
-- `WiFiClient::read()` -- La función lee un solo byte de datos entrantes desde el servidor conectado. Devuelve el byte leído como un valor entero. Si no hay datos disponibles, devuelve -1. O `read(uint8_t *buf, size_t size)`.
+- `WiFiClient::read()` -- La función lee un solo byte de datos entrantes del servidor conectado. Devuelve el byte leído como un valor entero. Si no hay datos disponibles, devuelve -1. O `read(uint8_t *buf, size_t size)`.
 
- 	- **Output**: Un valor entero que indica el número de bytes recibidos. Si el valor de retorno es 0, significa que el servidor ha cerrado la conexión.
+ 	- **Salida**: Un valor entero que indica el número de bytes recibidos. Si el valor de retorno es 0, significa que el servidor ha cerrado la conexión.
 
-- `WiFiClient::peek()` -- La función se utiliza para comprobar si hay datos disponibles para ser leídos desde el servidor sin leerlos realmente.
+- `WiFiClient::peek()` -- La función se utiliza para verificar si hay datos disponibles para ser leídos del servidor sin realmente leerlos.
 
- 	- **Output**: Devuelve el siguiente byte de datos entrantes sin eliminarlo del búfer de recepción. Si no hay datos disponibles, devuelve -1.
+ 	- **Salida**: Devuelve el siguiente byte de datos entrantes sin eliminarlo del búfer de recepción. Si no hay datos disponibles, devuelve -1.
 
-- `WiFiClient::available()` -- La función se utiliza para comprobar cuántos bytes de datos están disponibles para ser leídos desde el servidor.
+- `WiFiClient::available()` -- La función se utiliza para verificar cuántos bytes de datos están disponibles para ser leídos del servidor.
 
- 	- **Output**: Devuelve un valor entero que representa el número de bytes disponibles para leer.
+ 	- **Salida**: Devuelve un valor entero que representa el número de bytes disponibles para ser leídos.
 
-### Función de servidor WiFi
+### Función de Servidor WiFi
 
-- `WiFiServer::stopAll()` -- Esta función es un método de la clase WiFiServer en la biblioteca WiFi de Arduino. Este método detiene todas las instancias de servidor que se han creado usando la clase WiFiServer. Es útil cuando se desea detener todos los servidores a la vez en lugar de llamar al método `stop()` para cada instancia individualmente.
+- `WiFiServer::stopAll()` -- Esta función es un método de la clase WiFiServer en la biblioteca WiFi de Arduino. Este método detiene todas las instancias de servidor que se crean usando la clase WiFiServer. Es útil cuando quieres detener todos los servidores a la vez en lugar de llamar al método `stop()` para cada instancia individualmente.
 
-- `WiFiServer::begin(uint16_t port, int enable)` -- La función se utiliza para iniciar un servidor en el puerto especificado. El servidor escuchará conexiones de clientes entrantes.
+- `WiFiServer::begin(uint16_t port, int enable)` -- La función se utiliza para iniciar un servidor en el puerto especificado. El servidor escuchará las conexiones de clientes entrantes.
 
- 	- **Input Parameters**
+ 	- **Parámetros de Entrada**
   		- **port**: El número de puerto en el que escuchar.
-  		- **enable** (Optional): Una marca para indicar si el servidor debe habilitarse inmediatamente después de iniciarse. Esta marca se establece en true de forma predeterminada.
+  		- **enable** (Opcional): Una bandera para indicar si el servidor debe habilitarse inmediatamente después de iniciarse. Esta bandera se establece en true por defecto.
 
-- `WiFiServer::hasClient()` -- La función se utiliza para comprobar si hay conexiones de clientes entrantes disponibles en el servidor. Esta función se puede utilizar en un bucle para comprobar continuamente si hay nuevas conexiones.
+- `WiFiServer::hasClient()` -- La función se utiliza para verificar si hay conexiones de clientes entrantes disponibles en el servidor. Esta función se puede usar en un bucle para verificar continuamente nuevas conexiones.
 
- 	- **Output**: Devuelve un objeto WiFiClient si un cliente se ha conectado o un puntero NULL si no hay clientes esperando para conectarse.
+ 	- **Salida**: Devuelve un objeto WiFiClient si un cliente se ha conectado o un puntero NULL si no hay clientes esperando conectarse.
 
 - `WiFiServer::end()` -- La función se utiliza para detener el servidor y liberar los recursos asociados. Una vez llamada, el servidor ya no puede aceptar nuevas conexiones de clientes. Cualquier conexión de cliente existente permanecerá abierta hasta que sea cerrada por el cliente o el servidor. `WiFiServer::close()` y `WiFiServer::stop()` tienen la misma función.
 
-### Funciones WiFi múltiples
+### Funciones WiFi Múltiples
 
-- `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- Se utiliza para añadir un nuevo punto de acceso (AP) a la lista de AP disponibles a los que el objeto WiFiMulti intentará conectarse.
+- `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- Se utiliza para agregar un nuevo punto de acceso (AP) a la lista de APs disponibles a los que el objeto WiFiMulti intentará conectarse.
 
- 	- **Input Parameters**
+ 	- **Parámetros de Entrada**
   		- **ssid**: Puntero al SSID (máx. 63 caracteres).
   		- **passphrase**: (para WPA2 mín. 8 caracteres, para abierto usar NULL).
 
- 	- **Output**: True/False
+ 	- **Salida**: True/False
 
-- `WiFiMulti::run(uint32_t connectTimeout)` -- La función intenta conectarse a uno de los puntos de acceso guardados en orden secuencial hasta que se conecte correctamente a uno.
+- `WiFiMulti::run(uint32_t connectTimeout)` -- La función intenta conectarse a uno de los puntos de acceso guardados en orden secuencial hasta que se conecta exitosamente a uno.
 
- 	- **Input Parameters**
-  		- **connectTimeout**: El parámetro especifica la cantidad máxima de tiempo de espera para una conexión en milisegundos. Si connectTimeout se establece en 0, la función no expirará y tratará de conectarse indefinidamente.
+ 	- **Parámetros de Entrada**
+  		- **connectTimeout**: El parámetro especifica la cantidad máxima de tiempo para esperar una conexión en milisegundos. Si connectTimeout se establece en 0, la función no tendrá tiempo de espera e intentará conectarse indefinidamente.
 
- 	- **Output**: estado
+ 	- **Salida**: estado
 
-## Ejemplos de uso de WiFi
+## Ejemplos de Uso de WiFi
 
-A continuación, usaremos el XIAO ESP32-C5 para demostrar cómo utilizar algunas funciones básicas de Wi-Fi.
+A continuación, utilizaremos el XIAO ESP32-C5 para demostrar cómo usar algunas funciones básicas de Wi-Fi.
 
-### Escanear red
+### Escanear Red
 
-El XIAO ESP32-C5 es compatible con Wi-Fi de doble banda de 2.4 GHz y 5 GHz, y puede escanear las redes Wi-Fi de 2.4 GHz y 5 GHz circundantes, así como sus intensidades de señal en modo de escaneo.
+El XIAO ESP32-C5 soporta Wi-Fi de banda dual 2.4 GHz y 5 GHz, y puede escanear redes Wi-Fi circundantes de 2.4 GHz y 5 GHz así como sus intensidades de señal en modo de escaneo.
 
 #### Programa
 
-A continuación se muestra un programa de ejemplo para mostrarte cómo el XIAO ESP32-C5 escanea las redes Wi-Fi circundantes.
+A continuación se muestra un programa de ejemplo para mostrar cómo el XIAO ESP32-C5 escanea redes Wi-Fi circundantes.
 
-- Código de referencia
+- Código de Referencia
 
 <details>
 
@@ -439,25 +439,25 @@ void loop() {
 
 </details>
 
-#### Presentación del efecto
+#### Presentación del Efecto
 
-- Después de cargar el programa, abre el Monitor Serie del Arduino IDE y se mostrará la información de las redes Wi-Fi escaneadas.
+- Después de cargar el programa, abre el Monitor Serie del IDE de Arduino, y se mostrará la información de Wi-Fi escaneada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_1.png" style={{width:800, height:'auto'}}/></div>
 
-### Conexión a una red Wi-Fi
+### Conectarse a una Red Wi-Fi
 
-Dentro de la cobertura Wi-Fi, puedes conectarte a una red Wi-Fi específica mediante el modo STA compatible con el XIAO ESP32-C5, siempre que conozcas el SSID y la PASSWORD de la red Wi-Fi de destino.
+Dentro de la cobertura Wi-Fi, puedes conectarte a una red Wi-Fi específica a través del modo STA soportado por el XIAO ESP32-C5, siempre que conozcas el SSID y la CONTRASEÑA de la red Wi-Fi objetivo.
 
 #### Programa
 
-A continuación se proporciona un programa de ejemplo para mostrarte cómo el XIAO ESP32-C5 se conecta a una red Wi-Fi especificada.
+A continuación, se proporciona un programa de ejemplo para mostrar cómo el XIAO ESP32-C5 se conecta a una red Wi-Fi especificada.
 
 :::tip
-XIAO ESP32-C5 es compatible con Wi-Fi de doble banda (2.4 GHz y 5 GHz), lo que te permite elegir la conexión según tu red doméstica.
+XIAO ESP32-C5 soporta Wi-Fi de banda dual (2.4 GHz y 5 GHz), permitiéndote elegir la conexión basada en tu red doméstica.
 :::
 
-- Código de referencia
+- Código de Referencia
 
 ```cpp
 #include <WiFi.h>
@@ -511,24 +511,24 @@ void loop() {
 }
 ```
 
-#### Presentación del efecto
+#### Presentación del Efecto
 
-- Después de cargar el programa, abre el Monitor Serie del Arduino IDE y se mostrará información como la dirección IP de la red Wi-Fi conectada.
+- Después de cargar el programa, abre el Monitor Serie del IDE de Arduino, y se mostrará información como la dirección IP de la red Wi-Fi conectada.
 - Estoy conectado a la red de 5 GHz en mi entorno.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_2.png" style={{width:800, height:'auto'}}/></div>
 
 ### Modo AP
 
-El XIAO ESP32-C5 puede funcionar como un punto de acceso para que otros dispositivos se conecten. En otras palabras, puedes usar dispositivos con Wi-Fi para conectarte al XIAO ESP32-C5 sin conectarte a tu router.
+El XIAO ESP32-C5 puede funcionar como un punto de acceso para que otros dispositivos se conecten a él. En otras palabras, puedes usar dispositivos habilitados para Wi-Fi para conectarte al XIAO ESP32-C5 sin conectarte a tu router.
 
-En pocas palabras, cuando configuras el XIAO ESP32-C5 como un punto de acceso, creas su propia red Wi-Fi independiente, a la que los dispositivos Wi-Fi cercanos (estaciones) pueden conectarse (como tu smartphone o tu ordenador).
+En términos simples, cuando configuras el XIAO ESP32-C5 como un punto de acceso, creas su propia red Wi-Fi independiente, a la cual los dispositivos Wi-Fi cercanos (estaciones) pueden conectarse (como tu smartphone o computadora).
 
 #### Programa
 
-A continuación se presenta un programa de ejemplo para mostrarte cómo el XIAO ESP32-C5 crea un punto de acceso y permite que otros dispositivos se conecten a él.
+A continuación, se presenta un programa de ejemplo para mostrar cómo el XIAO ESP32-C5 crea un punto de acceso y permite que otros dispositivos se conecten a él.
 
-- Código de referencia
+- Código de Referencia
 
 ```cpp
 #include <WiFi.h>
@@ -586,29 +586,29 @@ void loop() {
 }
 ```
 
-#### Presentación del efecto
+#### Presentación del Efecto
 
-- Después de compilar y cargar el programa, puedes descubrir el punto de acceso AP mediante la función WLAN.
+- Después de compilar y cargar el programa, puedes descubrir el punto de acceso AP a través de la función WLAN.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_3.png" style={{width:800, height:'auto'}}/></div>
 
-- Tras una conexión correcta, el Monitor Serie imprimirá la dirección IP y el LED USER integrado se encenderá simultáneamente.
+- Al conectarse exitosamente, el Monitor Serie imprimirá la dirección IP, y el LED USER a bordo se encenderá simultáneamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_4.png" style={{width:800, height:'auto'}}/></div>
 
 ### Uso de WiFi y MQTT
 
-El protocolo MQTT se utiliza ampliamente en dispositivos IoT, y el XIAO ESP32-C5 es compatible con este protocolo, lo que significa que puedes usar el XIAO ESP32-C5 para desarrollar muchos proyectos IoT interesantes.
+El protocolo MQTT es ampliamente utilizado en dispositivos IoT, y el XIAO ESP32-C5 soporta este protocolo — lo que significa que puedes usar el XIAO ESP32-C5 para desarrollar muchos proyectos IoT interesantes.
 
 #### Programa
 
-A continuación se presentará un programa de referencia para mostrarte cómo usar el protocolo MQTT con el XIAO ESP32-C5.
+A continuación, se presentará un programa de referencia para mostrar cómo usar el protocolo MQTT con el XIAO ESP32-C5.
 
-- Instala la biblioteca `PubSubClient`
+- Instala la librería `PubSubClient`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_library_1.png" style={{width:600, height:'auto'}}/></div>
 
-- Código de referencia
+- Código de Referencia
 
 ```cpp
 #include <WiFi.h>
@@ -688,43 +688,43 @@ void loop() {
 }
 ```
 
-#### Presentación del efecto
+#### Presentación del Efecto
 
-- Descarga cualquier software que sea compatible con el cliente broker MQTTX; aquí se utiliza MQTTX  [MQTTx](https://mqttx.app/downloads)
+- Descarga cualquier software que soporte el cliente broker MQTTX; aquí se usa MQTTX [MQTTx](https://mqttx.app/downloads)
 
-- Abre MQTTX y añade la información del cliente. Aquí se utiliza la dirección de cliente predeterminada, por lo que solo necesitas añadir el ID de cliente `ESP32C5Client` y establecer el nombre del cliente de prueba; el resto de las configuraciones se pueden mantener por defecto.
+- Abre MQTTX y agrega la información del cliente. Aquí se usa la dirección de cliente predeterminada, por lo que solo necesitas agregar el ID del cliente `ESP32C5Client` y establecer el nombre del cliente de prueba; el resto de las configuraciones pueden mantenerse como predeterminadas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_5.png" style={{width:800, height:'auto'}}/></div><br/>
 
-- Sube el código y conéctate usando MQTTX. Después de una conexión exitosa, haz clic en `New Subscription` en el lado izquierdo para añadir una suscripción.
+- Sube el código y conéctate usando MQTTX. Después de una conexión exitosa, haz clic en `New Subscription` en el lado izquierdo para agregar una suscripción.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_6.png" style={{width:800, height:'auto'}}/></div><br/>
 
-- Configura la información de la suscripción: introduce `esp32c5/test/topic` y selecciona 0 o 1 para QoS.
+- Configura la información de suscripción: ingresa `esp32c5/test/topic` y selecciona 0 o 1 para QoS.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_7.png" style={{width:800, height:'auto'}}/></div><br/>
 
-- Después de una configuración exitosa, podrás ver los mensajes publicados por el XIAO ESP32-C5 (actuando como cliente) cada 2 segundos. También puedes enviar mensajes al cliente después de seleccionar un tema, y el cliente los publicará al recibirlos.
+- Después de la configuración exitosa, puedes ver los mensajes publicados por el XIAO ESP32-C5 (actuando como cliente) cada 2 segundos. También puedes enviar mensajes al cliente después de seleccionar un tema, y el cliente los publicará al recibirlos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_8.png" style={{width:800, height:'auto'}}/></div><br/>
 
 :::tip
-broker.emqx.io es un broker público compartido por todos los usuarios. Cualquiera que se suscriba al mismo tema puede ver tus mensajes. Está destinado solo a fines de prueba y no es adecuado para transmitir datos sensibles.
+broker.emqx.io es un broker público compartido por todos los usuarios. Cualquiera que se suscriba al mismo tema puede ver tus mensajes. Está destinado solo para propósitos de prueba y no es adecuado para transmitir datos sensibles.
 :::
 
-### WiFi y HTTP /HTTPS
+### WiFi & HTTP /HTTPS
 
-- Puedes consultar el ejemplo que escribimos para el XIAO ESP32C3 para acceder a ChatGPT, que detalla cómo usar WiFiClient y HTTPClient: [Aprende a usar WiFiClient y HTTPClient en XIAO ESP32C3 - XIAO ESP32C3 y ChatGPT en acción](https://wiki.seeedstudio.com/es/xiaoesp32c3-chatgpt/)
+- Puedes consultar el ejemplo que escribimos para el XIAO ESP32C3 para acceder a ChatGPT, que detalla cómo usar WiFiClient y HTTPClient: [Aprende a usar WiFiClient y HTTPClient en XIAO ESP32C3 - XIAO ESP32C3 & ChatGPT en acción](https://wiki.seeedstudio.com/es/xiaoesp32c3-chatgpt/)
 
-- Si solo quieres explorar el uso sencillo de HTTP, también puedes seguir los pasos siguientes para realizar pruebas y verificación.
+- Si solo quieres explorar el uso simple de HTTP, también puedes seguir los pasos a continuación para pruebas y verificación.
 
 #### Programa
 
-- Instala la biblioteca `HTTPClient`
+- Instala la librería `HTTPClient`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_library_2.png" style={{width:600, height:'auto'}}/></div><br/>
 
-- Código de referencia
+- Código de Referencia
 
 ```cpp
 #include <WiFi.h>
@@ -796,40 +796,40 @@ void loop() {
 }
 ```
 
-#### Presentación del efecto
+#### Presentación del Efecto
 
 :::tip
-`https://jsonplaceholder.typicode.com` es un servicio gratuito de prueba de API REST simulada, diseñado específicamente para fines de desarrollo y prueba. No admite la modificación permanente ni la persistencia de datos reales.
+`https://jsonplaceholder.typicode.com` es un servicio gratuito de prueba de API REST simulada diseñado específicamente para propósitos de desarrollo y prueba. No soporta la modificación permanente o persistencia de datos reales.
 :::
 
-- Sube el código, luego puedes abrir `https://jsonplaceholder.typicode.com/todos/1` y la herramienta Serial Monitor en el IDE de Arduino para comprobar si la información es consistente.
+- Sube el código, luego puedes abrir `https://jsonplaceholder.typicode.com/todos/1` y la herramienta Serial Monitor en el IDE de Arduino para verificar si la información es consistente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_9.png" style={{width:800, height:'auto'}}/></div>
 
 ### WiFi-Mesh
 
-A continuación se muestra la introducción oficial de **ESP-WIFI-MESH** por parte de Espressif Systems:
+La siguiente es la introducción oficial de **ESP-WIFI-MESH** por Espressif Systems:
 
-ESP-WIFI-MESH es una red de comunicación inalámbrica con nodos organizados en una topología de malla utilizando la función AP-STA simultánea en los SoC de Espressif. Proporciona una red de autoformación y autorreparación, con facilidad de despliegue. La topología de red de ESP-WIFI-MESH puede escalar hasta 1000 nodos en áreas grandes, sin requerir ningún soporte específico de infraestructura Wi-Fi. ESP-WIFI-MESH también se puede utilizar para cubrir puntos ciegos de Wi-Fi en escenarios de despliegue doméstico donde la señal Wi-Fi no puede llegar.
+ESP-WIFI-MESH es una red de comunicación inalámbrica con nodos organizados en una topología de malla usando la característica simultánea AP-STA en los SoCs de Espressif. Proporciona una red auto-formativa y auto-reparadora, con facilidad de despliegue. La topología de red de ESP-WIFI-MESH puede escalar hasta 1000 nodos en áreas grandes, sin requerir ningún soporte específico de infraestructura Wi-Fi. ESP-WIFI-MESH también puede usarse para cubrir puntos ciegos de Wi-Fi en escenarios de despliegue doméstico donde la señal Wi-Fi no puede alcanzar.
 
-Para obtener información más detallada, consulta el enlace oficial de Espressif Systems:
+Para información más detallada, consulta el enlace oficial de Espressif Systems:
 
 - [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
-- [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
+- [Guía de Programación ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
 
 A continuación, te mostraré un ejemplo de ESP-Mesh, y para este ejemplo, necesitas preparar al menos dos dispositivos ESP32.
 
 #### Programa
 
-- Instala la biblioteca `Alteriom PainlessMesh`
+- Instala la librería `Alteriom PainlessMesh`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_library_3.png" style={{width:600, height:'auto'}}/></div>
 
-- Instala la biblioteca `AsyncTCP`
+- Instala la librería `AsyncTCP`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_library_4.png" style={{width:600, height:'auto'}}/></div>
 
-- Código de referencia
+- Código de Referencia
 
 ```cpp
 #include "painlessMesh.h"
@@ -899,31 +899,31 @@ void loop() {
 }
 ```
 
-#### Presentación del efecto
+#### Presentación del Efecto
 
-- Sube el código a dos dispositivos XIAO ESP32-C5 y abre cualquier herramienta de puerto serie para comprobar los resultados.
+- Sube el código a dos dispositivos XIAO ESP32-C5 y abre cualquier herramienta de puerto serie para verificar los resultados.
 
-El dispositivo 1 de XIAO ESP32-C5 inicia la formación de la red y envía mensajes.
+El Dispositivo 1 XIAO ESP32-C5 inicia la formación de red y envía mensajes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_10.png" style={{width:800, height:'auto'}}/></div><br/>
 
-El dispositivo 2 de XIAO ESP32-C5 se une a la red y recibe los mensajes enviados desde el dispositivo 1.
+El Dispositivo 2 XIAO ESP32-C5 se une a la red y recibe mensajes enviados desde el Dispositivo 1.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_11.png" style={{width:800, height:'auto'}}/></div>
 
-### Ejemplo: Concentrador doméstico inteligente IoT
+### Ejemplo: Hub de Hogar Inteligente IoT
 
-A partir de los ejemplos de Wi-Fi anteriores, ya debes haber dominado cómo usar Wi-Fi en el XIAO ESP32-C5. A continuación, se presentará un ejemplo para mostrarte cómo implementar un concentrador de control de hogar inteligente utilizando el modo Wi-Fi AP y servicios de red HTTP — específicamente, cómo usar el XIAO ESP32-C5 como un concentrador de control de hogar inteligente para monitorizar el estado de tu hogar.
+A partir de los ejemplos de Wi-Fi anteriores, debes haber dominado cómo usar Wi-Fi en el XIAO ESP32-C5. A continuación, se presentará un ejemplo para mostrarte cómo implementar un hub de control de hogar inteligente usando el modo AP de Wi-Fi y servicios de red HTTP — específicamente, cómo usar el XIAO ESP32-C5 como un hub de control de hogar inteligente para monitorear el estado de tu hogar.
 
-- Instala la biblioteca `ESPAsyncWebServer`
+- Instala la librería `ESPAsyncWebServer`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_library_5.png" style={{width:600, height:'auto'}}/></div><br/>
 
-- Sube el código y conéctate al punto de acceso `XIAO ESP32-C5`.
+- Sube el código y conéctate al hotspot `XIAO ESP32-C5`.
 
 <details>
 
-<summary>Código de referencia</summary>
+<summary>Código de Referencia</summary>
 
 ```cpp
 #include <WiFi.h>
@@ -1293,23 +1293,23 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_12.png" style={{width:800, height:'auto'}}/></div><br/>
 
-- Introduce la dirección IP para ir a la página web.
+- Ingresa la dirección IP para saltar a la página web.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_13.png" style={{width:800, height:'auto'}}/></div><br/>
 
 :::tip
-Los controles y sensores que se muestran en la página web son personalizables. Puedes añadir otros nuevos y modificar la página web generada según tus necesidades específicas. Para referencia: [ESPAsyncWebServer](https://github.com/lacamera/ESPAsyncWebServer)
+Los controles y sensores mostrados en la página web son personalizables. Puedes agregar nuevos y modificar la página web generada según tus necesidades específicas. Para referencia: [ESPAsyncWebServer](https://github.com/lacamera/ESPAsyncWebServer)
 :::
 
 :::tip
-El punto de acceso (AP) generado por la XIAO ESP32-C5 no puede conectarse a Internet de forma predeterminada. Si se requiere conectividad a Internet, puedes adoptar cualquiera de los dos métodos siguientes:<br/>
-Método 1: Conecta la XIAO ESP32-C5 a Home Assistant. Para referencia: [Connecting XIAO ESP32-C5 to Home Assistant](https://wiki.seeedstudio.com/es/xiao_esp32c5_homeassistant/)<br/>
-Método 2: Utiliza un servicio MQTT para subir datos a un servidor en la nube. Ten en cuenta que este método puede requerir la compra de una cierta cantidad de créditos de servicio. Para referencia: [Goole Cloud](https://cloud.google.com/)<br/>
+El punto de acceso AP generado por el XIAO ESP32-C5 no puede conectarse a internet por defecto. Si se requiere conectividad a internet, puedes adoptar cualquiera de los siguientes dos métodos:<br/>
+Método 1: Conectar el XIAO ESP32-C5 a Home Assistant. Para referencia: [Conectando XIAO ESP32-C5 a Home Assistant](https://wiki.seeedstudio.com/es/xiao_esp32c5_homeassistant/)<br/>
+Método 2: Usar un servicio MQTT para subir datos a un servidor en la nube. Ten en cuenta que este método puede requerir comprar una cierta cantidad de créditos de servicio. Para referencia: [Google Cloud](https://cloud.google.com/)<br/>
 :::
 
-## Soporte técnico y debate sobre el producto
+## Soporte Técnico y Discusión de Productos
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
