@@ -1,22 +1,22 @@
 ---
-title: Buletooth Usage
-description: Buletooth usage with Seeed Studio XIAO ESP32-C5
+title: Bluetooth Usage
+description: Bluetooth usage with Seeed Studio XIAO ESP32-C5
 keywords:
   - xiao
   - esp32c5
-  - buletooth
+  - bluetooth
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
-slug: /xiao_esp32c5_buletooth_usage
+slug: /xiao_esp32c5_bluetooth_usage
 sidebar_class_name: hidden
 last_update:
   date: 01/06/2026
   author: Zeller
 createdAt: '2026-01-06'
 updatedAt: '2026-01-19'
-url: https://wiki.seeedstudio.com/xiao_esp32c5_buletooth_usage/
+url: https://wiki.seeedstudio.com/xiao_esp32c5_bluetooth_usage/
 ---
 
-# Buletooth usage with Seeed Studio XIAO ESP32-C5
+# Bluetooth usage with Seeed Studio XIAO ESP32-C5
 
 <div class="table-center">
  <table>
@@ -44,7 +44,7 @@ The Seeed Studio XIAO ESP32-C5 is a powerful development board that supports Blu
 ### Antenna Installation
 
 Inside the packaging of the Seeed Studio XIAO ESP32-C5, there is a dedicated **Wi-Fi/BT Antenna connector**. For optimal WiFi/Bluetooth signal strength, you need to take out the antenna included in the package and attach it to the connector.<br/>
-:::tip
+<!-- :::tip
 If you want to achieve a stronger signal gain effect, you can purchase and install **2.4G/5G External Antenna with RP-SMA Male Connector** — it delivers much higher gain than the built-in FPC Antenna included in the package!
 :::
 <div class="table-center">
@@ -64,7 +64,7 @@ If you want to achieve a stronger signal gain effect, you can purchase and insta
    </div></td>
   </tr>
  </table>
-</div>
+</div> -->
 
 ## Bluetooth Low Energy (BLE) Usage
 

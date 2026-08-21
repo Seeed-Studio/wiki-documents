@@ -45,7 +45,7 @@ The following tutorial uses the Arduino IDE for compilation and uploading. If yo
 ### Antenna Installation
 
 Inside the packaging of the Seeed Studio XIAO ESP32-C5, there is a dedicated **Wi-Fi/BT Antenna connector**. For optimal WiFi/Bluetooth signal strength, you need to take out the antenna included in the package and attach it to the connector.<br/>
-:::tip
+<!-- :::tip
 If you want to achieve a stronger signal gain effect, you can purchase and install **2.4G/5G External Antenna with RP-SMA Male Connector** — it delivers much higher gain than the built-in FPC Antenna included in the package!
 :::
 <div class="table-center">
@@ -65,7 +65,7 @@ If you want to achieve a stronger signal gain effect, you can purchase and insta
    </div></td>
   </tr>
  </table>
-</div>
+</div> -->
 
 ## The commonly interfaces of WiFi library
 
