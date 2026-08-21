@@ -1,6 +1,5 @@
 ---
 description: Python SDK を使用して、文字起こし、話者分離、要約ワークフロー向けの reSpeaker Clip 独自アプリケーションを構築する方法を学びます。本チュートリアルでは、BLE および Wi-Fi 通信、音声録音、ファイル同期、デバイス設定などを扱います。
-
 title: Python SDK を使用して reSpeaker Clip 向けに文字起こし・話者分離・要約対応の独自アプリを構築する
 keywords:
   - reSpeaker clip
@@ -16,7 +15,7 @@ last_update:
   date: 07/21/2026
   author: Kasun Thushara
 createdAt: '2026-07-21'
-updatedAt: '2026-07-21'
+updatedAt: '2026-07-22'
 url: https://wiki.seeedstudio.com/ja/respeaker_clip_python_build_app/
 ---
 

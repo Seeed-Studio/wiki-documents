@@ -14,6 +14,7 @@ last_update:
   author: Dayu
 createdAt: '2026-07-31'
 updatedAt: '2026-07-31'
+url: https://wiki.seeedstudio.com/cn/jetpack_7_2_deepstream/
 ---
 
 # JetPack 7.2 上的 DeepStream

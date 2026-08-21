@@ -16,6 +16,7 @@ last_update:
   author: Dayu
 createdAt: '2026-07-31'
 updatedAt: '2026-07-31'
+url: https://wiki.seeedstudio.com/pt-br/jetpack_7_2_memory_optimization/
 ---
 
 # Otimização de Memória no JetPack 7.2

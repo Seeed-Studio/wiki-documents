@@ -12,7 +12,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2023-02-24'
-updatedAt: '2025-07-04'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/cn/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api/
 ---
 

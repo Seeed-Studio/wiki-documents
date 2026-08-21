@@ -13,7 +13,7 @@ last_update:
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/ja/codecraft/community-and-publishing/
 createdAt: '2026-06-29'
-updatedAt: '2026-06-29'
+updatedAt: '2026-08-04'
 ---
 
 # CodeCraft コミュニティ & 公開

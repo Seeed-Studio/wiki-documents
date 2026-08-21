@@ -15,7 +15,7 @@ last_update:
   date: 07/09/2026
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-07-15'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/es/recomputer_j501_mini_getting_started/
 ---
 # Hardware de la placa carrier Mini J501 y Guía de Inicio

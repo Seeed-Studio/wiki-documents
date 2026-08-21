@@ -14,7 +14,7 @@ last_update:
   author: Michelle Huang
 url: https://wiki.seeedstudio.com/cn/meshtastic_source_code_practical_tutorial_meshtracker_x1/
 createdAt: '2026-03-19'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-18'
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

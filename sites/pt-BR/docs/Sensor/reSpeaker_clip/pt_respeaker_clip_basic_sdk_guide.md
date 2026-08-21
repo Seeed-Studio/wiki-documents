@@ -14,7 +14,7 @@ last_update:
   date: 07/13/2026
   author: Ray He / Kasun Thushara
 createdAt: '2026-07-13'
-updatedAt: '2026-08-05'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_clip_basic_sdk_guide/
 ---
 

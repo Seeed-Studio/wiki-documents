@@ -20,7 +20,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-04'
-updatedAt: '2026-08-10'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_mit_control/
 ---
 

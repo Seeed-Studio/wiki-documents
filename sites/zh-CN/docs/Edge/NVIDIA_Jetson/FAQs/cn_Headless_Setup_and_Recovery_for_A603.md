@@ -12,6 +12,9 @@ slug: /headless_setup_and_recovery_for_a603
 last_update:
   date: 08/07/2026
   author: Jonathan van der Maas
+createdAt: '2026-08-11'
+url: https://wiki.seeedstudio.com/cn/headless_setup_and_recovery_for_a603/
+updatedAt: '2026-08-11'
 ---
 
 A603 可以完全通过其 W6 Micro-USB 接口进行配置和操作：在刷机完成后，全程不需要显示器、键盘、以太网线或 WiFi 模块。本文档记录了在 JetPack 6.2（L4T R36.4.3）上的完整无头工作流：通过 USB gadget 网络进行 SSH 访问，通过主机为开发板提供互联网，以及在启动菜单不接受键盘输入的情况下，从错误的启动配置中恢复。

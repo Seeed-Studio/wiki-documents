@@ -9,7 +9,7 @@ last_update:
   date: 05/09/2026
   author: dimo
 createdAt: '2026-03-18'
-updatedAt: '2026-07-22'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1003/
 ---
 import Tabs from '@theme/Tabs';
