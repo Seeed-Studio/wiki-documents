@@ -15,11 +15,11 @@ const BASE_URL = "https://wiki.seeedstudio.com";
 const MANAGED_FIELDS = new Set(["createdAt", "updatedAt", "url", "slug"]);
 
 const LANG_RULES = [
-  // { dir: path.join("sites", "en", "docs"), prefix: "" },
-  { dir: path.join("sites", "zh-CN", "docs"), prefix: "/cn" },
-  { dir: path.join("sites", "ja", "docs"), prefix: "/ja" },
-  { dir: path.join("sites", "es", "docs"), prefix: "/es" },
-  { dir: path.join("sites", "pt-BR", "docs"), prefix: "/pt-br" },
+  { dir: path.join("sites", "en", "docs"), prefix: "" },
+  // { dir: path.join("sites", "zh-CN", "docs"), prefix: "/cn" },
+  // { dir: path.join("sites", "ja", "docs"), prefix: "/ja" },
+  // { dir: path.join("sites", "es", "docs"), prefix: "/es" },
+  // { dir: path.join("sites", "pt-BR", "docs"), prefix: "/pt-br" },
 ];
 
 const commitDateCache = new Map();
