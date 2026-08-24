@@ -1,5 +1,5 @@
 ---
-description: "reSpeaker Clip 设备端固件的完整参考：系统架构、AT/GATT/UDP 协议、构建配置、固件更新与恢复、验证与调试以及量产发布——所有事实集中在一处。"
+description: reSpeaker Clip 设备端固件的完整参考：系统架构、AT/GATT/UDP 协议、构建配置、固件更新与恢复、验证与调试以及量产发布——所有事实集中在一处。
 title: reSpeaker Clip 固件开发指南
 keywords:
   - reSpeaker clip
@@ -16,7 +16,7 @@ last_update:
   date: 07/28/2026
   author: Ray
 createdAt: '2026-07-28'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/cn/respeaker_clip_firmware_development_guide/
 ---
 

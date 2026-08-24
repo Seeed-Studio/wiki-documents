@@ -14,6 +14,9 @@ sidebar_position: 19
 last_update:
   date: 08/18/2026
   author: Zafar Khidoyatov
+createdAt: '2026-08-18'
+url: https://wiki.seeedstudio.com/cn/recamera_deploy_monocular_depth/
+updatedAt: '2026-08-18'
 ---
 
 # 在 reCamera 上部署单目深度估计（FastDepth，INT8）

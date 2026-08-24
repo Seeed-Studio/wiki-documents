@@ -12,7 +12,7 @@ last_update:
   author: Allen
   date: 12/09/2024
 createdAt: '2025-01-10'
-updatedAt: '2026-04-27'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/cn/xiao_eink_expansion_board_v2/
 ---
 

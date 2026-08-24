@@ -13,7 +13,7 @@ last_update:
   author: Zhai Chenyang
 createdAt: '2026-08-18'
 updatedAt: '2026-08-18'
-url: https://wiki.seeedstudio.com/ja/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/Install_Ubuntu_on_SenseCAP_M4/
+url: https://wiki.seeedstudio.com/ja/install_ubuntu_on_sensecap_m4/
 ---
 
 # USB 経由で SenseCAP M4 に Ubuntu をインストールする

@@ -11,7 +11,7 @@ last_update:
   date: 11/27/2024
   author: Citrc
 createdAt: '2024-11-27'
-updatedAt: '2026-08-13'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/sensecraft-ai-main/
 ---
 

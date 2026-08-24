@@ -13,8 +13,8 @@ last_update:
   date: 11/19/2025
   author: Xinrui Wu
 createdAt: '2025-11-20'
-updatedAt: '2026-04-20'
-url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/getting_started_in_Telegram_work_with_recamera/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/pt-br/getting_started_in_Telegram_work_with_recamera/
 ---
 
 

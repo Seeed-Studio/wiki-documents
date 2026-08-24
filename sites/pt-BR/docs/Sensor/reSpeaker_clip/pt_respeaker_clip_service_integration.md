@@ -1,5 +1,5 @@
 ---
-description: "Integre o reSpeaker Clip a um serviço Python existente com um adaptador de dispositivo, gerenciamento de ciclo de vida da aplicação, rotas de API e tratamento de estado seguro para produção."
+description: Integre o reSpeaker Clip a um serviço Python existente com um adaptador de dispositivo, gerenciamento de ciclo de vida da aplicação, rotas de API e tratamento de estado seguro para produção.
 title: Integre o reSpeaker Clip ao Seu Serviço
 keywords:
   - reSpeaker Clip
@@ -15,7 +15,7 @@ last_update:
   date: 08/14/2026
   author: Ray
 createdAt: '2026-08-07'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_clip_service_integration/
 ---
 

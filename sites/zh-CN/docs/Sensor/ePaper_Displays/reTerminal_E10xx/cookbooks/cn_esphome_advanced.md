@@ -1,6 +1,6 @@
 ---
 description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 ESPHome 使用示例——按钮、蜂鸣器、板载 LED、电池监测、SHT4x 传感器、电容触摸（E1003）、深度睡眠和多页面仪表盘。
-title: 'ESPHome 使用示例：按钮、蜂鸣器、LED、电池、触摸与低功耗（reTerminal E 系列）'
+title: ESPHome 使用示例：按钮、蜂鸣器、LED、电池、触摸与低功耗（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 4

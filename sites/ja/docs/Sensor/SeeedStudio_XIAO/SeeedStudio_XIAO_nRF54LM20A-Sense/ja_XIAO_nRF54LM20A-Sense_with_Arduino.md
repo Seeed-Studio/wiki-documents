@@ -12,7 +12,7 @@ last_update:
   date: 06/22/2026
   author: Brandy
 createdAt: '2025-07-15'
-updatedAt: '2026-07-16'
+updatedAt: '2026-07-21'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_arduino/
 ---
 

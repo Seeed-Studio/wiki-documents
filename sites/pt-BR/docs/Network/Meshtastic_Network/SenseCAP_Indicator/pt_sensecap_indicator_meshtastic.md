@@ -11,7 +11,7 @@ last_update:
   date: 07/31/2026
   author: Advent Jiang
 createdAt: '2024-10-29'
-updatedAt: '2026-01-07'
+updatedAt: '2026-08-03'
 url: https://wiki.seeedstudio.com/pt-br/sensecap_indicator_meshtastic/
 ---
 

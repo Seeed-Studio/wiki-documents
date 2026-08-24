@@ -10,7 +10,7 @@ last_update:
   date: 12/11/2025
   author: Michelle
 createdAt: '2024-06-17'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-07'
 url: https://wiki.seeedstudio.com/pt-br/meshtastic_introduction/
 ---
 

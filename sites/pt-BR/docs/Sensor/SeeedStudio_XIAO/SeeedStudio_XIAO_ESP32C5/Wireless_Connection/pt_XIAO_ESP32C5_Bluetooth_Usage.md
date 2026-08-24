@@ -1,22 +1,22 @@
 ---
-title: Bluetooth 使用方法
-description: Seeed Studio XIAO ESP32-C5 での Bluetooth 使用方法
+title: Uso de Bluetooth
+description: Uso de Bluetooth com o Seeed Studio XIAO ESP32-C5
 keywords:
   - xiao
   - esp32c5
-  - buletooth
+  - bluetooth
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
-slug: /xiao_esp32c5_buletooth_usage
+slug: /xiao_esp32c5_bluetooth_usage
 sidebar_class_name: hidden
 last_update:
   date: 01/06/2026
   author: Zeller
 createdAt: '2026-01-06'
 updatedAt: '2026-01-19'
-url: https://wiki.seeedstudio.com/ja/xiao_esp32c5_buletooth_usage/
+url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_bluetooth_usage/
 ---
 
-# Seeed Studio XIAO ESP32-C5 での Bluetooth 使用方法
+# Uso de Bluetooth com Seeed Studio XIAO ESP32-C5
 
 <div class="table-center">
  <table>
@@ -30,27 +30,27 @@ url: https://wiki.seeedstudio.com/ja/xiao_esp32c5_buletooth_usage/
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html
         " target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-Seeed Studio XIAO ESP32-C5 は、Bluetooth 5、BLE、およびメッシュネットワーキングをサポートする強力な開発ボードで、ワイヤレス接続を必要とする幅広い IoT アプリケーションに最適な選択肢です。優れた RF 性能により、XIAO ESP32-C5 は様々な距離で信頼性の高い高速ワイヤレス通信を提供でき、短距離および長距離ワイヤレスアプリケーションの両方に対応する汎用的なソリューションとなっています。このチュートリアルでは、近くの Bluetooth デバイスをスキャンする方法、Bluetooth 接続を確立する方法、Bluetooth 接続を介してデータを送受信する方法など、XIAO ESP32-C5 の Bluetooth 機能の基本的な機能に焦点を当てます。
+O Seeed Studio XIAO ESP32-C5 é uma poderosa placa de desenvolvimento que suporta Bluetooth 5, BLE e rede Mesh, tornando-o uma escolha ideal para uma ampla gama de aplicações de IoT que exigem conectividade sem fio. Com seu excelente desempenho de RF, o XIAO ESP32-C5 pode fornecer comunicação sem fio confiável e em alta velocidade em uma variedade de distâncias, tornando-o uma solução versátil tanto para aplicações sem fio de curto quanto de longo alcance. Neste tutorial, focaremos nos recursos básicos das capacidades de Bluetooth do XIAO ESP32-C5, como escanear dispositivos Bluetooth próximos, estabelecer uma conexão Bluetooth e transmitir e receber dados por meio de uma conexão Bluetooth.
 
-## 入門ガイド
+## Introdução
 
-### アンテナの取り付け
+### Instalação da antena
 
-Seeed Studio XIAO ESP32-C5 のパッケージ内には、専用の **Wi-Fi/BT アンテナコネクタ**があります。最適な WiFi/Bluetooth 信号強度を得るには、パッケージに含まれているアンテナを取り出してコネクタに接続する必要があります。<br/>
-:::tip
-より強い信号ゲイン効果を得たい場合は、**RP-SMA オスコネクタ付き 2.4G/5G 外部アンテナ**を購入して取り付けることができます — パッケージに含まれている内蔵 FPC アンテナよりもはるかに高いゲインを提供します！
+Dentro da embalagem do Seeed Studio XIAO ESP32-C5, há um **conector dedicado de antena Wi-Fi/BT**. Para obter a melhor intensidade de sinal WiFi/Bluetooth, você precisa retirar a antena incluída no pacote e conectá-la ao conector.<br/>
+<!-- :::tip
+If you want to achieve a stronger signal gain effect, you can purchase and install **2.4G/5G External Antenna with RP-SMA Male Connector** — it delivers much higher gain than the built-in FPC Antenna included in the package!
 :::
 <div class="table-center">
  <table>
   <tr>
-   <th>RP-SMA オスコネクタ付き 2.4G/5G 外部アンテナ</th>
+   <th>2.4G/5G External Antenna with RP-SMA Male Connector</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-2.4g5g-external-antenna-with-rp-sma-male-connector-45font_1.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -59,98 +59,98 @@ Seeed Studio XIAO ESP32-C5 のパッケージ内には、専用の **Wi-Fi/BT �
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/2-4G-5G-External-Antenna-with-RP-SMA-Male-Connector-and-1-13-Coaxial-Cable-130mm-Set-p-6316.html
         " target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
-</div>
+</div> -->
 
-## Bluetooth Low Energy (BLE) の使用方法
+## Uso de Bluetooth Low Energy (BLE)
 
-Bluetooth Low Energy（略して BLE）は、Bluetooth の省電力版です。BLE の主な用途は、少量のデータ（低帯域幅）の短距離伝送です。常時オンの Bluetooth とは異なり、BLE は接続が開始される場合を除いて、常にスリープモードを維持します。
+Bluetooth Low Energy, abreviado como BLE, é uma variante de Bluetooth que economiza energia. A principal aplicação do BLE é a transmissão a curta distância de pequenas quantidades de dados (baixa largura de banda). Diferente do Bluetooth, que está sempre ligado, o BLE permanece constantemente em modo de suspensão, exceto quando uma conexão é iniciada.
 
 :::tip
-ESP32-C5 は BLE のみをサポートし、Bluetooth Classic はサポートしていません
+ESP32-C5 suporta apenas BLE e não suporta Bluetooth Clássico
 :::
 
-その特性により、BLE はコイン電池で動作し、定期的に少量のデータを交換する必要があるアプリケーションに適しています。例えば、BLE はヘルスケア、フィットネス、トラッキング、ビーコン、セキュリティ、ホームオートメーション業界で大いに活用されています。
+Devido às suas propriedades, o BLE é adequado para aplicações que precisam trocar pequenas quantidades de dados periodicamente, funcionando com uma bateria tipo moeda. Por exemplo, o BLE é muito útil nas indústrias de saúde, fitness, rastreamento, beacons, segurança e automação residencial.
 
-これにより、非常に低い電力消費を実現します。BLE は Bluetooth と比較して約 100 分の 1 の電力を消費します（使用ケースによって異なります）。
+Isso faz com que ele consuma pouquíssima energia. O BLE consome aproximadamente 100 vezes menos energia do que o Bluetooth (dependendo do caso de uso).
 
-XIAO ESP32-C5 の BLE 部分について、以下の 3 つのセクションでその使用方法を紹介します。
+Sobre a parte de BLE do XIAO ESP32-C5, apresentaremos seu uso nas três seções a seguir.
 
-- [基本的な概念](#基本的な概念) -- BLE プログラムの実行プロセスと考え方を理解するために、BLE で頻繁に使用される可能性のある概念をまず理解します。
-- [BLE スキャナ](#BLE-スキャナ) -- このセクションでは、近くの Bluetooth デバイスを検索してシリアルモニターに出力する方法を説明します。
-- [BLE サーバー/クライアント](#BLE-サーバークライアント) -- このセクションでは、XIAO ESP32-C5 をサーバーおよびクライアントとして使用して、指定されたデータメッセージを送受信する方法を説明します。また、電話から XIAO へのメッセージの受信や送信にも使用します。
+- [Alguns conceitos fundamentais](#alguns-conceitos-fundamentais) -- Primeiro conheceremos alguns conceitos que podem ser usados com frequência em BLE, a fim de nos ajudar a entender o processo de execução e o raciocínio dos programas BLE.
+- [Scanner BLE](#BLE-Scanner) -- Esta seção explicará como procurar dispositivos Bluetooth próximos e imprimi-los no monitor serial.
+- [Servidor/cliente BLE](#servidorcliente-ble) -- Esta seção explicará como usar o XIAO ESP32-C5 como Server e Client para enviar e receber mensagens de dados específicas. Também será usado para receber ou enviar mensagens do telefone para o XIAO.
 
-### 基本的な概念
+### Alguns conceitos fundamentais
 
-#### サーバーとクライアント
+#### Servidor e Cliente
 
-Bluetooth Low Energy では、サーバーとクライアントの 2 種類のデバイスがあります。XIAO ESP32-C5 はクライアントまたはサーバーのいずれかとして動作できます。
+Com o Bluetooth Low Energy, existem dois tipos de dispositivos: o servidor e o cliente. O XIAO ESP32-C5 pode atuar tanto como cliente quanto como servidor.
 
-サーバーは自身の存在をアドバタイズして他のデバイスに発見されるようにし、クライアントが読み取ることができるデータを含んでいます。クライアントは近くのデバイスをスキャンし、探しているサーバーを見つけると接続を確立して受信データを待機します。これはポイントツーポイント通信と呼ばれます。
+O servidor anuncia sua existência, para que possa ser encontrado por outros dispositivos, e contém os dados que o cliente pode ler. O cliente escaneia os dispositivos próximos e, quando encontra o servidor que está procurando, estabelece uma conexão e escuta os dados recebidos. Isso é chamado de comunicação ponto a ponto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/49.png" style={{width:800, height:'auto'}}/></div>
 
-#### アトリビュート
+#### Atributo
 
-アトリビュートは実際にはデータの一部です。各 Bluetooth デバイスはサービスを提供するために使用され、サービスはデータの集合であり、この集合はデータベースと呼ぶことができます。データベース内の各エントリがアトリビュートです。そのため、ここではアトリビュートをデータエントリと翻訳します。Bluetooth デバイスをテーブルとして想像でき、テーブル内の各行がアトリビュートです。
+Atributo é, na verdade, um pedaço de dado. Cada dispositivo Bluetooth é usado para fornecer um serviço, e o serviço é uma coleção de dados; essa coleção pode ser chamada de banco de dados, e cada entrada no banco de dados é um Atributo, então aqui traduzo Attribute como entradas de dados. Você pode imaginar um dispositivo Bluetooth como uma tabela, e cada linha dentro da tabela é um Atributo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/52.png" style={{width:600, height:'auto'}}/></div>
 
 #### GATT
 
-2 つの Bluetooth デバイスが接続を確立する際、通信方法を決定するプロトコルが必要です。GATT（Generic Attribute Profile）は、Bluetooth デバイス間でデータを送信する方法を定義するプロトコルです。
+Quando dois dispositivos Bluetooth estabelecem uma conexão, eles precisam de um protocolo para determinar como se comunicar. GATT (Generic Attribute Profile) é esse protocolo que define como os dados são transmitidos entre dispositivos Bluetooth.
 
-GATT プロトコルでは、デバイスの機能と特性は、サービス、キャラクタリスティック、ディスクリプタと呼ばれる構造に整理されます。サービスは、デバイスが提供する関連する機能と特徴のセットを表します。各サービスには複数のキャラクタリスティックを含めることができ、これらはセンサーデータや制御コマンドなど、サービスの特定の特性や動作を定義します。各キャラクタリスティックには一意の識別子と値があり、通信のために読み取りまたは書き込みが可能です。ディスクリプタは、キャラクタリスティック値の形式やアクセス許可など、キャラクタリスティックのメタデータを記述するために使用されます。
+No protocolo GATT, as funções e propriedades de um dispositivo são organizadas em estruturas chamadas serviços, características e descritores. Um serviço representa um conjunto de funções e recursos relacionados fornecidos por um dispositivo. Cada serviço pode incluir várias características, que definem uma determinada propriedade ou comportamento do serviço, como dados de sensores ou comandos de controle. Cada característica tem um identificador exclusivo e um valor, que podem ser lidos ou escritos para se comunicar. Os descritores são usados para descrever metadados das características, como formato e permissão de acesso dos valores das características.
 
-GATT プロトコルを使用することで、Bluetooth デバイスは、センサーデータの送信やリモートデバイスの制御など、さまざまなアプリケーションシナリオで通信できます。
+Ao usar o protocolo GATT, os dispositivos Bluetooth podem se comunicar em diferentes cenários de aplicação, como transmitir dados de sensores ou controlar dispositivos remotos.
 
-#### BLE キャラクタリスティック
+#### Característica BLE
 
-ATT は Attribute Protocol の略です。これは BLE でのデータ交換の基盤となるメカニズムです。ATT は、リクエスト、レスポンス、通知、インディケーションなどの一連のコマンドに依存しています。Bluetooth プロトコルスタックでは、ATT はデータ転送を担当する層であり、Bluetooth データパケットを分析する際の主要な焦点となります。
+ATT significa Attribute Protocol. É o mecanismo subjacente para troca de dados em BLE. O ATT depende de um conjunto de comandos, como Requests, Responses, Notifications e Indications. Na pilha de protocolos Bluetooth, o ATT é a camada responsável por transportar dados, tornando-se o foco principal ao analisar pacotes de dados Bluetooth.
 
-ATT コマンドは、正式には ATT PDU（Protocol Data Unit）として知られています。これには、読み取り、書き込み、通知、インディケーションの 4 つのカテゴリが含まれます。これらのコマンドは 2 つのタイプに分けることができます：**Write Request** や **Indication** などの操作はピアからの確認応答を必要としますが、**Write Command** や **Notification** は必要としません。
+O comando ATT, formalmente conhecido como ATT PDU (Protocol Data Unit). Ele inclui 4 categorias: read, write, notify e indicate. Esses comandos podem ser divididos em dois tipos: Operações como **Write Request** e **Indication** exigem um reconhecimento do par, enquanto **Write Command** e **Notification** não exigem.
 
-サービスとキャラクタリスティックは GATT 層で定義されます。サービス側がサービスを提供し、サービスはデータであり、データはアトリビュートです。サービスとキャラクタリスティックはデータの論理的な表現、またはユーザーが見ることができるデータが最終的にサービスとキャラクタリスティックに変換されます。
+Service e Characteristic são definidos na camada GATT. O lado Service fornece o Service, o Service é o dado, e o dado é o atributo, e o Service e a Characteristic são a apresentação lógica dos dados, ou seja, os dados que o usuário pode ver são eventualmente transformados em Service e Characteristic.
 
-モバイルの観点からサービスとキャラクタリスティックがどのように見えるかを見てみましょう。nRF Connect は、各パケットがどのように見えるべきかを非常に視覚的に示すアプリケーションです。
+Vamos dar uma olhada em como o service e a characteristic se parecem a partir da perspectiva de um dispositivo móvel. nRF Connect é um aplicativo que nos mostra de forma muito visual como cada pacote deve ser.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_4.jpg" style={{width:400, height:'auto'}}/></div>
 
-ご覧のとおり、Bluetooth 仕様では、各特定の Bluetooth アプリケーションは複数のサービスで構成され、各サービスは複数のキャラクタリスティックで構成されます。キャラクタリスティックは UUID、プロパティ、および値で構成されます。
+Como você pode ver, na especificação Bluetooth, cada aplicação Bluetooth específica é composta por múltiplos Services, e cada Service é composto por múltiplas Characteristics. Uma Characteristic consiste em um UUID, Properties e um Value.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/50.png" style={{width:300, height:'auto'}}/></div>
 
-プロパティは、読み取り、書き込み、通知などをサポートするかどうかなど、キャラクタリスティックに対する操作のタイプと権限を記述するために使用されます。これは ATT PDU に含まれる 4 つのカテゴリに似ています。
+Properties são usadas para descrever os tipos e permissões de operações em uma characteristic, como se ela suporta read, write, notify e assim por diante. Isso é semelhante às quatro categorias incluídas em um ATT PDU.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/51.png" style={{width:800, height:'auto'}}/></div>
 
 #### UUID
 
-各サービス、キャラクタリスティック、ディスクリプタには UUID（Universally Unique Identifier）があります。UUID は一意の 128 ビット（16 バイト）番号です。例えば：
+Cada service, characteristic e descriptor tem um UUID (Universally Unique Identifier). Um UUID é um número exclusivo de 128 bits (16 bytes). Por exemplo:
 
 ```
 ea094cbd-3695-4205-b32d-70c1dea93c35
 ```
 
-[SIG（Bluetooth Special Interest Group）](https://www.bluetooth.com/specifications/gatt/services)で指定されているすべてのタイプ、サービス、プロファイルには短縮 UUID があります。ただし、アプリケーションが独自の UUID を必要とする場合は、この [UUID ジェネレーターウェブサイト](https://www.uuidgenerator.net/)を使用して生成できます。
+Existem UUIDs abreviados para todos os tipos, serviços e perfis especificados no [SIG (Bluetooth Special Interest Group)](https://www.bluetooth.com/specifications/gatt/services). Mas se sua aplicação precisar de seu próprio UUID, você pode gerá-lo usando este [site gerador de UUID](https://www.uuidgenerator.net/).
 
-### BLE 使用例
+### Exemplos de uso de BLE
 
-次に、いくつかの実用的な例を通じて、XIAO ESP32-C5 で **Bluetooth Low Energy (BLE)** を使用する方法を紹介します。<br/>
+Em seguida, apresentaremos como usar o **Bluetooth Low Energy (BLE)** no XIAO ESP32-C5 por meio de vários exemplos práticos.<br/>
 
-以下の例は **Arduino IDE** に基づいて実装されています。Arduino IDE を使用したことがない場合は、[Seeed Studio XIAO ESP32-C5 入門ガイド](https://wiki.seeedstudio.com/ja/xiao_esp32c5_getting_started/)をご覧ください。
+Os exemplos abaixo são implementados com base na **Arduino IDE**. Se você nunca usou a Arduino IDE antes, visite: [Introdução ao Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_getting_started/)
 
-#### BLE スキャナ
+#### Scanner BLE
 
-**BLE スキャナモード**では、XIAO ESP32-C5 は **セントラル**または **オブザーバー**として動作します。接続を確立する代わりに、周辺エリアの他のデバイスによってブロードキャストされるアドバタイジングパケットを**リッスン**します。
+No **modo Scanner BLE**, o XIAO ESP32-C5 atua como **Central** ou **Observer**. Em vez de estabelecer uma conexão, ele **escuta** os pacotes de Advertising transmitidos por outros dispositivos na área ao redor.
 
-##### プログラム
+##### Programa
 
-- 以下は、XIAO ESP32-C5 で BLE スキャナモードを使用する方法を示す参考コードスニペットです。
+- Abaixo está um trecho de código de referência demonstrando como usar o modo Scanner BLE no XIAO ESP32-C5.
 
 ```cpp
 #include <BLEDevice.h>
@@ -194,22 +194,22 @@ void loop() {
 }
 ```
 
-##### 効果の表示
+##### Apresentação do efeito
 
-- コードをアップロードしてシリアルモニターを開くと、XIAO ESP32-C5 が周囲の環境でBluetoothデバイスをスキャンし、関連情報を出力します。
+- Faça o upload do código e abra o Monitor Serial; o XIAO ESP32-C5 irá escanear dispositivos Bluetooth no ambiente ao redor e imprimir as informações relevantes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_1.png" style={{width:800, height:'auto'}}/></div>
 
-#### BLE サーバー/クライアント
+#### Servidor/Cliente BLE
 
-BLE サーバーモードでは、サービスとキャラクタリスティックを作成し、その存在をブロードキャストして、他のデバイスがデータの読み書きのために接続するのを待ちます。<br/>
-BLE クライアントモードでは、クライアントが特定のサービス UUID をスキャンし、サーバーを見つけた後に接続を開始し、サーバーのキャラクタリスティック値を読み書きします。
+No modo Servidor BLE, crie um Service e uma Characteristic, transmita sua presença e aguarde que outros dispositivos se conectem para leitura e gravação de dados.<br/>
+No modo Cliente BLE, o Client procura por um Service UUID específico, inicia uma conexão após encontrar o Server e lê ou grava os valores das characteristics do Server.
 
-##### BLE サーバープログラム
+##### Programa de Servidor BLE
 
-次に、コード例を使用して XIAO ESP32-C5 で BLE サーバーを設定する方法を説明します。
+Em seguida, um exemplo de código será usado para demonstrar como configurar um Servidor BLE no XIAO ESP32-C5.
 
-- 参考コード
+- Código de referência
 
 ```cpp
 #include <BLEDevice.h>
@@ -270,16 +270,16 @@ void loop() {
 }
 ```
 
-##### 効果の表示
+##### Apresentação do efeito
 
-- コードをアップロードした後、nRF Connect アプリをダウンロードし、BLE デバイス（上記で言及した **XIAO_ESP32C5_Server** という名前）をスキャンして発見し、それを選択して接続を確立します。
+- Faça o upload do código, depois baixe o app nRF Connect, escaneie e descubra o dispositivo BLE (nomeado **XIAO_ESP32C5_Server**, conforme mencionado acima) e selecione-o para estabelecer uma conexão.
 
-同時に、主要なモバイルアプリストアで **nRF Connect** アプリを検索してダウンロードできます。これにより、お使いの携帯電話でBluetoothデバイスを検索して接続できます。
+Ao mesmo tempo, você pode pesquisar e baixar o app **nRF Connect** nas principais lojas de aplicativos móveis, o que permite que seu telefone procure e se conecte a dispositivos Bluetooth.
 
 - Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
 - IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
-ソフトウェアをダウンロードした後、以下に示す手順に従って XIAO ESP32-C5 を検索して接続すると、アドバタイズされた **Hello World from XIAO** が表示されます。
+Após baixar o software, siga as etapas mostradas abaixo para procurar e conectar o XIAO ESP32-C5, e você verá o anúncio **Hello World from XIAO**.
 
 <table align="center">
  <tr>
@@ -290,12 +290,12 @@ void loop() {
  </tr>
 </table>
 
-##### BLE クライアントプログラム
+##### Programa de Cliente BLE
 
-次に、コード例を使用して XIAO ESP32-C5 で BLE クライアントを設定する方法を説明します。クライアント機能を使用するには、少なくとも2つの XIAO Bluetooth対応デバイスが必要です：1つはデータを送信するサーバーとして機能し、もう1つはデータを受信するクライアントとして機能します。
+Em seguida, um exemplo de código será usado para demonstrar como configurar um Cliente BLE no XIAO ESP32-C5. Para usar a funcionalidade de cliente, você precisa de pelo menos dois dispositivos XIAO com Bluetooth: um atuando como servidor para enviar dados e o outro como cliente para receber dados.
 
 <details>
-<summary>参考コード</summary>
+<summary>Código de referência</summary>
 
 ```cpp
 #include <BLEDevice.h>
@@ -436,39 +436,39 @@ void scanAndConnect() {
 
 </details>
 
-##### 効果の表示
+##### Apresentação do efeito
 
-- コードをアップロードした後、シリアルモニターを開いて観察すると、サーバーから送信されたBluetoothデータを受信できます。
+- Faça o upload do código e abra o Monitor Serial para observar — você receberá os dados Bluetooth enviados pelo servidor.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_2.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-クライアント機能を検証する際は、事前に別の XIAO デバイスにサーバープログラムを書き込む必要があります。そうしないと検証が失敗します。
+Ao verificar a funcionalidade do cliente, você precisa gravar o programa do servidor antecipadamente em outro dispositivo XIAO; caso contrário, a verificação falhará.
 :::
 
 #### NimBLE-Arduino
 
-ネイティブの Arduino BLEDevice ライブラリは Bluedroid プロトコルスタックに基づいており、完全な機能を提供しますが、Flash と RAM を大量に消費します。NimBLE は完全に書き直された BLE プロトコルスタック（Apache Mynewt から派生）で、以下の利点があります：
+A biblioteca nativa Arduino BLEDevice é baseada na pilha de protocolo Bluedroid; ela oferece funcionalidade completa, mas consome uma quantidade significativa de Flash e RAM. NimBLE é uma pilha de protocolo BLE completamente reescrita (derivada do Apache Mynewt), que apresenta as seguintes vantagens:
 
-1. 極めて小さなメモリフットプリント（RAM使用量を50%以上削減）。
+1. Pegada de memória extremamente baixa (uso de RAM reduzido em mais de 50%).
 
-2. より高速な接続速度。
+2. Velocidade de conexão mais rápida.
 
-3. API互換性：ネイティブの Arduino BLE ライブラリの構文とほぼ完全に互換性があるように設計されており、ヘッダーファイルの変更と軽微な型調整のみが必要です。
+3. Compatibilidade de API: foi projetada para ser quase totalmente compatível com a sintaxe da biblioteca BLE nativa do Arduino, exigindo apenas modificações nos arquivos de cabeçalho e pequenos ajustes de tipos.
 
-詳細については、作者の GitHub リポジトリ：[NimBLE-Arduino](https://github.com/h2zero/NimBLE-Arduino/tree/master) をご覧ください。<br/>
+Você pode visitar o repositório GitHub do autor: [NimBLE-Arduino](https://github.com/h2zero/NimBLE-Arduino/tree/master) para mais detalhes.<br/>
 
-次に、NimBLE-Arduinoライブラリを基にしたBluetooth スキャン機能を実装します。
+Em seguida, implementaremos uma função de varredura Bluetooth com base na biblioteca NimBLE-Arduino.
 
-##### プログラム
+##### Programa
 
-- NimBLE-Arduinoライブラリをインストールします。
+- Instale a biblioteca NimBLE-Arduino.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_libaray_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
 <details>
 
-<summary>参考コード</summary>
+<summary>Código de referência</summary>
 
 ```CPP
 #include <Arduino.h>
@@ -567,23 +567,23 @@ void loop() {
 
 </details>
 
-##### 効果の実演
+##### Apresentação do efeito
 
-- コードをアップロードしてシリアルモニターを開いて観察します。これもBluetooth スキャン機能を実装していますが、より高速なスキャン速度を持ちます。
+- Envie o código e abra o Serial Monitor para observar. Ele também implementa a função de varredura Bluetooth, mas com uma velocidade de varredura mais rápida.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_3.png" style={{width:800, height:'auto'}}/></div>
 
-#### 例：Home Assistantへの接続
+#### Exemplo: Conectando ao Home Assistant
 
-ここまでで、XIAO ESP32-C5のBLEモードについて基本的な理解を得られたはずです。
-次に、より実用的なプロジェクトに取り組みましょう：XIAO ESP32-C5に温湿度センサー（または簡単なボタンスイッチ）をシミュレートさせ、BLE経由でセンサーデータやステータスを定期的にブロードキャストします。Home AssistantはこのBLEデバイスを自動的に発見し、追加の複雑な統合設定を必要とせずに、現在の温湿度値（またはボタンステータス）をインターフェースに直接表示します。<br/>
-この簡単な例は、モノのインターネット（IoT）とスマートホーム分野におけるESP32-C5の大きな可能性を十分に実証しています：低消費電力、開発の容易さ、パッシブBLEデバイスの即座のサポートにより、誰でも迅速に独自のスマートセンサーネットワークを構築できます。<br/>
+Neste ponto, você já deve ter adquirido uma compreensão básica dos modos BLE do XIAO ESP32-C5.
+Em seguida, podemos colocar a mão na massa em um projeto mais prático: fazer o XIAO ESP32-C5 simular um sensor de temperatura e umidade (ou um simples interruptor de botão) e transmitir periodicamente dados do sensor ou status via BLE. O Home Assistant descobrirá automaticamente esse dispositivo BLE e exibirá diretamente na interface os valores atuais de temperatura e umidade (ou o status do botão), sem a necessidade de configurações adicionais de integração complexas.<br/>
+Este exemplo simples demonstra totalmente o grande potencial do ESP32-C5 nos campos da Internet das Coisas (IoT) e casas inteligentes: seu baixo consumo de energia, facilidade de desenvolvimento e suporte pronto para uso a dispositivos BLE passivos permitem que qualquer pessoa construa rapidamente sua própria rede de sensores inteligentes.<br/>
 
 :::tip
-Home Assistantを使用したことがない場合は、こちらをご覧ください：[XIAO ESP32-C5をHome Assistantに接続](https://wiki.seeedstudio.com/ja/xiao_esp32c5_homeassistant/)
+Se você nunca usou o Home Assistant, pode visitar: [Connecting XIAO ESP32-C5 to Home Assistant](https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_homeassistant/)
 :::
 
-- 参考コード
+- Código de referência
 
 ```cpp
 #include <NimBLEDevice.h>
@@ -652,13 +652,13 @@ void loop() {
 }
 ```
 
-- コードをアップロードしてHome Assistantプラットフォームを開きます。**Settings** -> **Devices & Services**でBTHomeデバイスを見つけて、ダッシュボードに追加できます。
+- Envie o código e abra a plataforma Home Assistant. Você pode encontrar o dispositivo BTHome em **Settings** -> **Devices & Services** e adicioná-lo ao painel.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_4.png" style={{width:800, height:'auto'}}/></div>
 
-## 技術サポート & 製品ディスカッション
+## Suporte técnico e discussão sobre o produto
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
