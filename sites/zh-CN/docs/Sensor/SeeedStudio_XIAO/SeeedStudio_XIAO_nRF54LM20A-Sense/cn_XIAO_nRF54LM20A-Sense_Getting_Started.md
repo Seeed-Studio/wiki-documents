@@ -69,7 +69,7 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM2
     <tr>
       <td><strong>Flash</strong></td>
       <td colspan="2">2 MB 非易失性存储器 (NVM)</td>
-    </tr]
+    </tr>
     <tr>
       <td><strong>外部 Flash</strong></td>
       <td colspan="2">8MB 板载外部 Flash</td>
