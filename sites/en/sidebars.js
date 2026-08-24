@@ -874,6 +874,14 @@ const sidebars = {
             id: 'Sensor/SenseCAP/SenseCAP_Intro/SenseCAP_Data_Logger_Intro',
           },
           items: [
+            {
+              type: 'category',
+              label: 'SenseCAP Combo 5-in-1 Sensor with 4G',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP_Combo/SenseCAP_Combo_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP_Combo/Get_Started_with_SenseCAP_Combo',
+              ],
+            },
             'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger',
             'Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger',
             {
