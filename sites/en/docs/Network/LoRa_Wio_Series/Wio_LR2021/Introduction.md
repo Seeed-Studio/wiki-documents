@@ -147,6 +147,8 @@ All DIO functions must be configured via SPI `SetDioFunction` command while in S
 
 - **[ZIP]** [Wio-LR2021 Module Allegro Library](https://files.seeedstudio.com/wiki/Wio-LR2021/res/allegro-library.zip)
 
+- **[LINK]** [Semtech's LoRa USP™ firmware platform](https://github.com/Lora-net/usp)
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
