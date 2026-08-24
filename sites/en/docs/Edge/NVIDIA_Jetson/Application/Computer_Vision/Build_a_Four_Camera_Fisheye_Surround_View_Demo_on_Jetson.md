@@ -16,10 +16,10 @@ image: https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo
 slug: /jetson_fisheye_surround_view_demo
 sku: 100066562
 last_update:
-  date: 08/19/2026
+  date: 08/24/2026
   author: haochen
 createdAt: '2026-08-18'
-updatedAt: '2026-08-19'
+updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/
 ---
 
@@ -47,6 +47,32 @@ In the demo, the four cameras face **front, back, left, and right**. After calib
 - Nearby obstacles and free directions are visible around the chassis
 - Targets such as bottles, cartons, or chairs can be localized in the vehicle frame for grasp assistance
 - The VLM can summarize the current view in short English for scene understanding
+
+This demo is verified on **reComputer Robotics J601**.
+
+<div class="table-center">
+<table style={{ textAlign: 'center' }}>
+    <tr>
+        <th> reComputer Robotics J601 </th>
+    </tr>
+    <tr>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg" style={{width:500, height:'auto'}}/>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thor-p-6937.html" target="_blank" rel="noopener noreferrer">
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                </a>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
 
 ## What Each Module Does
 
@@ -95,7 +121,7 @@ The pipeline is:
 
 ### Hardware
 
-- A Jetson device such as **Seeed reComputer Thor J601** or **Jetson AGX Orin**
+- A Jetson device such as **reComputer Robotics J601** or **Jetson AGX Orin**
 - **Four USB fisheye cameras**
 - A display or a remote desktop session
 - Network access if you open the calibration page from another computer
@@ -111,6 +137,24 @@ Optional:
 - CUDA-enabled OpenCV for real-time stitching
 - Python environment for the web calibration UI
 - YOLO-World and optional VLM model dependencies
+
+## Hardware Connection
+
+Connect four USB fisheye cameras to **reComputer Robotics J601** before calibration. J601 has four USB 3.2 Type-A ports, so each camera can plug in directly.
+
+1. Power the J601 board through the XT30 DC input.
+2. Plug the four USB fisheye cameras into the four **USB 3.2 Type-A** ports.
+3. Mount the cameras around the chassis so they face **front, back, left, and right**.
+4. Optionally connect an HDMI display if you want to watch the live BEV window on the board.
+
+<div align="center">
+  <img width={900}
+   src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_03.png" />
+</div>
+
+:::tip
+After the cameras are connected, confirm the `/dev/video*` nodes and the mapping in `config/camera_profile.json`. See [Step 1. Check Camera Mapping](#step-1-check-camera-mapping).
+:::
 
 ## Installation and Setup
 
