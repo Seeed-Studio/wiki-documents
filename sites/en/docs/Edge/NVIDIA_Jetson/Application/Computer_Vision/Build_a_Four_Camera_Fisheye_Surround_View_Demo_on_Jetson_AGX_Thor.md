@@ -42,6 +42,10 @@ This demo is intended to assist **robot-arm grasping** and provide **positioning
    src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif" />
 </div>
 
+<div align="center">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/o0NTeeLV4Vk" title="Four-Camera Fisheye Surround View Demo on Jetson AGX Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 In the demo, the four cameras face **front, back, left, and right**. After calibration and GPU stitching, the top-down BEV follows this layout:
 
 - **Top of the image** = vehicle front
@@ -137,7 +141,8 @@ The pipeline is:
 ### Hardware
 
 - **reComputer Robotics J601** (Jetson AGX Thor)
-- **Four USB fisheye cameras** (Seeed also sells the [Sensing SG3S-ISX031C-GMSL2F](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html) fisheye camera)
+- **Four [Sensing SG3S-ISX031C-GMSL2F](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html) GMSL2 fisheye cameras**
+- **One [Mini-Fakra 4-in-1 cable](https://www.seeedstudio.com/Mini-fakra-Coaxial-Cable-4-in-1-0-5m-Female-to-Female-p-6484.html)** so all four cameras share a single GMSL port
 - A display or a remote desktop session
 - Network access if you open the calibration page from another computer
 
@@ -148,19 +153,23 @@ Optional:
 
 ### Software
 
-- JetPack supported by your target Jetson board
+- JetPack with GMSL driver support for J601
 - CUDA-enabled OpenCV for real-time stitching
 - Python environment for the web calibration UI
 - YOLO-World and optional VLM model dependencies
 
 ## Hardware Connection
 
-Connect four USB fisheye cameras to **reComputer Robotics J601** before calibration. J601 has four USB 3.2 Type-A ports, so each camera can plug in directly.
+Connect four Sensing GMSL2 fisheye cameras to **one Mini-Fakra GMSL port** on **reComputer Robotics J601** before calibration. J601 has two Mini-Fakra connectors (up to eight GMSL2 cameras). This demo uses **one GMSL port** and a 4-in-1 Mini-Fakra cable.
 
 1. Power the J601 board through the XT30 DC input.
-2. Plug the four USB fisheye cameras into the four **USB 3.2 Type-A** ports.
-3. Mount the cameras around the chassis so they face **front, back, left, and right**.
-4. Optionally connect an HDMI display if you want to watch the live BEV window on the board.
+2. If you are using the GMSL expansion board, seat it on the camera expansion header first.
+3. Plug the Mini-Fakra 4-in-1 cable into **one Mini-Fakra GMSL port**.
+4. Connect the four Sensing fisheye cameras to the four Fakra ends of that cable.
+5. Mount the cameras around the chassis so they face **front, back, left, and right**.
+6. Optionally connect an HDMI display if you want to watch the live BEV window on the board.
+
+For GMSL bring-up on J601, see [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j601_interfaces_usage/).
 
 <div align="center">
   <img width={900}
@@ -346,7 +355,9 @@ The result is still a **ground-plane approximation**. It is not a 6-DoF grasp po
 
 ## Resources
 
+- [Demo video](https://www.youtube.com/watch?v=o0NTeeLV4Vk)
 - [Getting Started with reComputer Robotics J601](https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/)
+- [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j601_interfaces_usage/)
 - [GitHub](https://github.com/xbs0325/j601-surround-demo)
 
 ## Tech Support & Product Discussion
