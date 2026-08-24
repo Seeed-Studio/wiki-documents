@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_getting_started
 sku: 100018440
 last_update:
-  date: 07/28/2026
+  date: 08/24/2026
   author: Zeller
 createdAt: '2025-05-13'
 updatedAt: '2026-08-14'
@@ -326,8 +326,11 @@ pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
 - If you have previously used Seeed Studio XIAO series boards in PlatformIO, run the command below to update:
 
 
-```bash
-pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
+```SHELL
+# for Windows
+pio pkg update -g -p "GitHub - Seeed-Studio/platform-seeedboards: Seeed Boards: development platform for PlatformIO"
+# for macOS/Linux
+pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=GitHub - Seeed-Studio/platform-seeedboards: Seeed Boards: development platform for PlatformIO" --force
 ```
 
 
