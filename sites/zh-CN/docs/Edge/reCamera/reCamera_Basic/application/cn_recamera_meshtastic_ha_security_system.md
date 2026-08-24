@@ -15,8 +15,8 @@ last_update:
   date: 06/29/2026
   author: Sizhao Zhou
 createdAt: '2026-06-29'
-updatedAt: '2026-06-30'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_meshtastic_ha_security_system/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/cn/recamera_meshtastic_ha_security_system/
 ---
 
 # 使用 reCamera 和 Meshtastic 构建远距离安防系统  

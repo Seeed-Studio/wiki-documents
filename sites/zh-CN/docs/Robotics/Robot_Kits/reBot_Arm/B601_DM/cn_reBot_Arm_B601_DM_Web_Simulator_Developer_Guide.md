@@ -18,8 +18,7 @@ last_update:
   date: 2026-08-24
   author: YinHaizhou
 translation:
-  skip:
-    - [zh-CN]
+  skip: [[zh-CN]]
 createdAt: '2026-07-30'
 updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_web_simulator_developer_guide/

@@ -12,6 +12,9 @@ slug: /headless_setup_and_recovery_for_a603
 last_update:
   date: 08/07/2026
   author: Jonathan van der Maas
+createdAt: '2026-08-11'
+url: https://wiki.seeedstudio.com/ja/headless_setup_and_recovery_for_a603/
+updatedAt: '2026-08-11'
 ---
 
 A603 は W6 Micro-USB ポート経由だけでプロビジョニングおよび操作が可能で、フラッシュ後はモニタ、キーボード、Ethernet ケーブル、WiFi モジュールのいずれも不要です。このページでは、JetPack 6.2 (L4T R36.4.3) における完全ヘッドレスのワークフローを説明します。USB ガジェットネットワーク経由での SSH アクセス、ホストコンピュータ経由でボードにインターネットを提供する方法、そしてブートメニューがキーボード入力を一切受け付けないボードで、不正なブート設定から復旧する方法を扱います。

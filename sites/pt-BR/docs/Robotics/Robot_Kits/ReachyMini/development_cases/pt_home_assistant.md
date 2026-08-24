@@ -12,8 +12,8 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-29'
-updatedAt: '2026-07-29'
-url: https://wiki.seeedstudio.com/cn/reachymini_development_cases_home_assistant/
+updatedAt: '2026-07-30'
+url: https://wiki.seeedstudio.com/pt-br/reachymini_development_cases_home_assistant/
 ---
 # Integração do Reachy Mini com Home Assistant
 

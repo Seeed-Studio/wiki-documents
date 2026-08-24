@@ -13,8 +13,8 @@ last_update:
   date: 06/10/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
-updatedAt: '2026-06-12'
-url: https://wiki.seeedstudio.com/es/reCamera/reCamera_Basic/application/ai_voice_assitant_with_recamera/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/es/ai_voice_assitant_with_recamera/
 ---
 
 # Interacción de voz con IA con reCamera

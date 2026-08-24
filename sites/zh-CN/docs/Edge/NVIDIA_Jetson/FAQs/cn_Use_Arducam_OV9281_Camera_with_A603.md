@@ -12,6 +12,9 @@ slug: /use_arducam_ov9281_camera_with_a603_jetson_carrier_board
 last_update:
   date: 07/08/2026
   author: Jonathan van der Maas
+createdAt: '2026-08-11'
+url: https://wiki.seeedstudio.com/cn/use_arducam_ov9281_camera_with_a603_jetson_carrier_board/
+updatedAt: '2026-08-11'
 ---
 
 Arducam Jetvariety 相机官方只支持 NVIDIA 开发套件载板，而不是 A603，并且 Arducam 的安装器 overlay 无法在 A603 上工作。相机本身在你构建一个小型自定义设备树后可以很好地工作。本页记录了 Arducam OV9281（B0223）在 JetPack 6.2（L4T R36.4.3）上的可用配置、原厂 overlay 失败的原因，以及一个可能会禁用板上所有 USB 的陷阱。

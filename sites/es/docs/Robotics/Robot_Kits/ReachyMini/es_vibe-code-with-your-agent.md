@@ -15,7 +15,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-05-19'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/es/reachymini_vibe-code-with-your-agent/
 ---
 # Programa una app de Reachy Mini con tu agente favorito 🤖

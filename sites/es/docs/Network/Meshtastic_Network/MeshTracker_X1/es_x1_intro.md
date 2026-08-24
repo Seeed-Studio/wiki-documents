@@ -9,11 +9,11 @@ sku: 100087698
 slug: /meshtracker_x1_intro
 sidebar_position: 0
 last_update:
-  date: 5/29/2026
-  author: MichelleHuang
+  date: 8/20/2026
+  author: Advent Jiang
 url: https://wiki.seeedstudio.com/es/meshtracker_x1_intro/
 createdAt: '2026-07-13'
-updatedAt: '2026-07-16'
+updatedAt: '2026-08-20'
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png" alt="pir" width={900} height="auto" /></p>
@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-El primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda. Diseñado para una comunicación fiable fuera de la red, MeshTracker X1 es un rastreador GPS [Meshtastic®](https://meshtastic.org/) con clasificación IP66 que admite frecuencias de 863–928 MHz. Impulsado por el último chip LoRa Semtech LR2021, cuenta con conectividad USB-C, hasta 5 días de duración de batería y un diseño compacto, listo para exteriores.
+El primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de doble banda. Diseñado para una comunicación fiable fuera de la red, MeshTracker X1 es un rastreador GPS [Meshtastic®](https://meshtastic.org/) con clasificación IP66 que admite frecuencias de 863–928 MHz. Impulsado por el último chip LoRa Semtech LR2021, cuenta con conectividad USB-C, hasta 5 días de duración de la batería y un diseño compacto y preparado para exteriores.
 
 ### Características
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -32,7 +32,7 @@ El primer dispositivo Meshtastic del mundo del tamaño de una tarjeta con GPS de
 
 - **Un dispositivo Meshtastic que realmente llevarás contigo** 
 
-SenseCAP MeshTracker X1 está diseñado para personas que necesitan comunicación fiable y uso compartido de ubicación más allá de las redes celulares, ya sea al aire libre, en grandes eventos o durante situaciones de emergencia. Con un factor de forma verdaderamente portátil y protección robusta IP66, lleva la conectividad Meshtastic al uso diario y a aplicaciones reales de campo.
+SenseCAP MeshTracker X1 está diseñado para personas que necesitan comunicación fiable y uso compartido de ubicación más allá de las redes celulares, ya sea al aire libre, en grandes eventos o durante situaciones de emergencia. Con un factor de forma verdaderamente portátil y protección robusta IP66, lleva la conectividad Meshtastic al equipo de uso diario y a aplicaciones reales de campo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -44,7 +44,7 @@ Impulsado por GNSS de doble banda L1+L5 y un barómetro integrado, MeshTracker X
 
 - **Conectividad LoRa de próxima generación (LR2021)** 
 
-Impulsado por Semtech LR2021, MeshTracker X1 ofrece un rendimiento RF más potente con una sensibilidad de hasta -141 dBm y tasas de datos FLRC de 2.6 Mbps para una comunicación mallada más rápida y fiable, creando una base para futuras funciones como transmisión de voz e imagen.
+Impulsado por Semtech LR2021, MeshTracker X1 ofrece un rendimiento RF más potente con una sensibilidad de hasta -141 dBm y tasas de datos FLRC de 2,6 Mbps para una comunicación mallada más rápida y fiable, creando una base para futuras funciones como transmisión de voz e imagen.
 
 - **Comunicación fiable de largo alcance** 
 
@@ -64,20 +64,20 @@ MeshTracker X1 ofrece opciones de notificación flexibles con vibración integra
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/VibraBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **Protección robusta IP66 para exteriores** 
+- **Protección robusta para exteriores IP66** 
 
-Construido con protección IP66 contra el polvo y el agua, garantiza un rendimiento fiable en entornos exteriores adversos como lluvia, barro y senderos polvorientos.
+Construido con protección IP66 contra el polvo y el agua, lo que garantiza un rendimiento fiable en entornos exteriores adversos como lluvia, barro y senderos polvorientos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IP66Bazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **Conectividad USB-C** 
-Interfaz USB-C estándar para carga, actualizaciones de firmware y depuración, diseñada para un uso robusto en exteriores y comodidad en el día a día.
+Interfaz USB-C estándar para carga, actualizaciones de firmware y depuración, diseñada para uso robusto en exteriores y comodidad diaria.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Type-CBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
-- **Larga duración de batería** 
+- **Larga duración de la batería** 
 
-Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado en torno a una batería de alta capacidad de 1100mAh, que ofrece hasta 5 días de funcionamiento y sigue siendo compacto y portátil para llevar al aire libre y para comunicación fuera de la red.
+Un factor de forma altamente integrado, del tamaño de una tarjeta, optimizado en torno a una batería de alta capacidad de 1100 mAh, que ofrece hasta 5 días de funcionamiento y sigue siendo compacto y portátil para llevarlo al aire libre y para comunicación fuera de la red.
 
 
 ### Especificación
@@ -309,7 +309,7 @@ Es posible que X1 se desarrolle como una serie de productos, en la que los nuevo
 |- |- |- |
 |Pulsar una vez|Encender|Melodía ascendente|
 |Pulsar dos veces|Actualizar información de nodo/ubicación|-|
-|Pulsar tres veces|Encender/apagar el GPS|-|
+|Pulsar tres veces|Activar/desactivar el GPS|-|
 |Cuatro clics|Silenciar/reactivar temporalmente|-|
 |Pulsar y mantener durante 5s|Apagar|Melodía descendente|
 
@@ -345,7 +345,7 @@ Es posible que X1 se desarrolle como una serie de productos, en la que los nuevo
     <tr>
     <td>⚪️blanco</td>
     <td>Constante</td>
-    <td>Modo DFU/Modo bootloader</td>
+    <td>Modo DFU/Modo Bootloader</td>
   </tr>
 </table>
 
@@ -358,6 +358,8 @@ Es posible que X1 se desarrolle como una serie de productos, en la que los nuevo
 ### Recurso
 
 [Informe de prueba de batería](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+
+[X1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx)
 
 ## Soporte técnico y debate sobre el producto
 

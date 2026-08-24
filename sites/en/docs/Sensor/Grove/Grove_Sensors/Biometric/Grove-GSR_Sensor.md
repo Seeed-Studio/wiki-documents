@@ -10,7 +10,7 @@ last_update:
   date: 1/6/2023
   author: Seraphina
 createdAt: '2023-01-06'
-updatedAt: '2026-01-07'
+updatedAt: '2026-08-07'
 url: https://wiki.seeedstudio.com/Grove-GSR_Sensor/
 ---
 
