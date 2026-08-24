@@ -1,7 +1,8 @@
 ---
-description: Build a four-camera fisheye surround-view demo on Jetson. Stitch a real-time BEV for chassis positioning, use YOLO to assist robot-arm grasping, and use a VLM to help understand the scene.
-title: Build a Four-Camera Fisheye Surround View Demo on Jetson
+description: Build a four-camera fisheye surround-view demo on Jetson AGX Thor. Stitch a real-time BEV for chassis positioning, use YOLO to assist robot-arm grasping, and use a VLM to help understand the scene.
+title: Build a Four-Camera Fisheye Surround View Demo on Jetson AGX Thor
 keywords:
+  - Jetson AGX Thor
   - Jetson
   - Computer Vision
   - surround view
@@ -12,91 +13,94 @@ keywords:
   - VLM
   - robot arm
   - reComputer
+  - Sensing
 image: https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif
 slug: /jetson_fisheye_surround_view_demo
-sku: 100066562
+sku: 100066562, 101090101
 last_update:
-  date: 08/19/2026
+  date: 08/24/2026
   author: haochen
 createdAt: '2026-08-18'
-updatedAt: '2026-08-19'
+updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/
 ---
 
 ## Introduction
 
-This project shows a **four-camera fisheye surround-view system** on NVIDIA Jetson. Four fisheye cameras around the chassis are calibrated, undistorted, and stitched into a real-time **bird's-eye view (BEV)**.
+This demo runs a **four-camera fisheye surround-view** pipeline on **NVIDIA Jetson AGX Thor**. Four cameras around the chassis are calibrated and stitched into a real-time **bird's-eye view (BEV)**. Occupancy hints chassis motion, YOLO-World localizes grasp targets, and a VLM captions the scene.
 
-The BEV is then used as a shared perception layer:
-
-- **Occupancy analysis** gives nearby free-space and obstacle hints for **chassis movement**
-- **YOLO-World** detects and localizes targets to **assist robot-arm grasping**
-- **A VLM** generates a short English caption to **help you understand the scene**
-
-This demo is intended to assist **robot-arm grasping** and provide **positioning support for chassis movement**.
-
-<div align="center">
+{/* <div align="center">
   <img width={900}
    src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif" />
+</div> */}
+
+<div class="video-container">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/o0NTeeLV4Vk" title="Four-Camera Fisheye Surround View Demo on Jetson AGX Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-In the demo, the four cameras face **front, back, left, and right**. After calibration and GPU stitching, the top-down BEV follows this layout:
+BEV layout after stitching:
 
 - **Top of the image** = vehicle front
 - **Center of the image** = vehicle body
-- Nearby obstacles and free directions are visible around the chassis
-- Targets such as bottles, cartons, or chairs can be localized in the vehicle frame for grasp assistance
-- The VLM can summarize the current view in short English for scene understanding
-
-## What Each Module Does
-
-| Module | What it does | What it is for |
-| --- | --- | --- |
-| Surround stitching | Builds a real-time top-down BEV from four fisheye cameras | Shared surround view around the chassis |
-| Occupancy analysis | Estimates nearby free space and obstacles on the ground plane | Assist chassis movement and positioning |
-| YOLO-World | Detects open-vocabulary targets and reports 2D position in the vehicle frame | Assist robot-arm grasping |
-| VLM caption | Generates a short English description of the current BEV | Help an operator or agent understand the scene |
+- Cameras face **front, back, left, and right**
 
 :::note
-YOLO is for **where the target is**. The VLM is for **what the scene looks like**. Occupancy is a 2D ground hint, not a LiDAR map, and the VLM caption is not a coordinate source.
+YOLO answers **where the target is**. The VLM answers **what the scene looks like**. Occupancy is a 2D ground hint, not a LiDAR map.
 :::
+
+This demo is verified on **reComputer Robotics J601**.
+
+<div class="table-center">
+<table style={{ textAlign: 'center' }}>
+    <tr>
+        <th> reComputer Robotics J601 </th>
+        <th> Sensing SG3S-ISX031C-GMSL2F </th>
+    </tr>
+    <tr>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg" style={{width:400, height:'auto'}}/>
+            </div>
+        </td>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090101-3mp-gmsl2-camera-module-190-degree.jpg" style={{width:400, height:'auto'}}/>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thor-p-6937.html" target="_blank" rel="noopener noreferrer">
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                </a>
+            </div>
+        </td>
+        <td>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html" target="_blank" rel="noopener noreferrer">
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                </a>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
 
 ## Key Features
 
-- Real-time **four-camera fisheye surround stitching**
-- **GPU remap, warp, and blending** with CUDA OpenCV
-- **Web-based calibration** for intrinsics, extrinsics, and seams
-- **Occupancy grid** for chassis movement assistance
-- **YOLO-World open-vocabulary detection** for grasp assistance
-- **VLM scene captioning** for scene understanding
-- Support for **Jetson Thor** and **AGX Orin / generic Jetson** workflows
-
-## What Is This Demo
-
-This demo turns four fisheye streams into one BEV image, then runs perception on that shared view.
-
-Compared with a single-camera pipeline, the surround-view workflow gives you:
-
-- **360-degree ground awareness** around the chassis
-- **Top-down visualization** that is easier to use for navigation and grasp assistance
-- **One shared BEV** for occupancy, target localization, and scene captioning
-- **A calibration flow** that can be repeated on real hardware
-
-The pipeline is:
-
-1. Capture images from four fisheye cameras
-2. Run fisheye intrinsic calibration
-3. Estimate extrinsic alignment and homographies
-4. Undistort and warp each camera image onto a ground-plane BEV
-5. Blend the four views into one surround image
-6. Run occupancy, YOLO grasp assistance, and VLM scene understanding on the stitched BEV
+- GPU stitching with CUDA OpenCV
+- Web calibration for intrinsics, extrinsics, and seams
+- Occupancy, YOLO-World, and VLM on one shared BEV
+- Verified on **Jetson AGX Thor** / **reComputer Robotics J601**
 
 ## Prerequisites
 
 ### Hardware
 
-- A Jetson device such as **Seeed reComputer Thor J601** or **Jetson AGX Orin**
-- **Four USB fisheye cameras**
+- **reComputer Robotics J601** (Jetson AGX Thor)
+- **Four [Sensing SG3S-ISX031C-GMSL2F](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html) GMSL2 fisheye cameras**
+- **One [Mini-Fakra 4-in-1 cable](https://www.seeedstudio.com/Mini-fakra-Coaxial-Cable-4-in-1-0-5m-Female-to-Female-p-6484.html)** so all four cameras share a single GMSL port
 - A display or a remote desktop session
 - Network access if you open the calibration page from another computer
 
@@ -107,10 +111,32 @@ Optional:
 
 ### Software
 
-- JetPack supported by your target Jetson board
+- JetPack with GMSL driver support for J601
 - CUDA-enabled OpenCV for real-time stitching
 - Python environment for the web calibration UI
 - YOLO-World and optional VLM model dependencies
+
+## Hardware Connection
+
+Connect four Sensing GMSL2 fisheye cameras to **one Mini-Fakra GMSL port** on **reComputer Robotics J601** before calibration. J601 has two Mini-Fakra connectors (up to eight GMSL2 cameras). This demo uses **one GMSL port** and a 4-in-1 Mini-Fakra cable.
+
+1. Power the J601 board through the XT30 DC input.
+2. If you are using the GMSL expansion board, seat it on the camera expansion header first.
+3. Plug the Mini-Fakra 4-in-1 cable into **one Mini-Fakra GMSL port**.
+4. Connect the four Sensing fisheye cameras to the four Fakra ends of that cable.
+5. Mount the cameras around the chassis so they face **front, back, left, and right**.
+6. Optionally connect an HDMI display if you want to watch the live BEV window on the board.
+
+For GMSL bring-up on J601, see [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j601_interfaces_usage/).
+
+<div align="center">
+  <img width={900}
+   src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_03.png" />
+</div>
+
+:::tip
+After the cameras are connected, confirm the `/dev/video*` nodes and the mapping in `config/camera_profile.json`. See [Step 1. Check Camera Mapping](#step-1-check-camera-mapping).
+:::
 
 ## Installation and Setup
 
@@ -282,12 +308,14 @@ The result is still a **ground-plane approximation**. It is not a 6-DoF grasp po
 - **YOLO** localizes targets to assist grasping; it does not close the grasp loop by itself
 - **VLM** output is for **scene understanding**, not for coordinates
 - Occupancy is a **2D ground hint**, not a LiDAR SLAM map
-- Real-time stitching is intended for **CUDA-enabled Jetson systems**
+- Real-time stitching is intended for **CUDA-enabled Jetson AGX Thor**
 - CPU-only mode is useful for debugging, but not recommended for live deployment
 
 ## Resources
 
+- [Demo video](https://www.youtube.com/watch?v=o0NTeeLV4Vk)
 - [Getting Started with reComputer Robotics J601](https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/)
+- [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j601_interfaces_usage/)
 - [GitHub](https://github.com/xbs0325/j601-surround-demo)
 
 ## Tech Support & Product Discussion
