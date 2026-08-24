@@ -13,8 +13,8 @@ last_update:
   date: 11/11/2025
   author: Xinrui Wu
 createdAt: '2025-11-11'
-updatedAt: '2026-04-20'
-url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/getting_started_for_home_assistant_with_recamera/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/pt-br/getting_started_for_home_assistant_with_recamera/
 ---
 
 # Introdução ao Home Assistant com reCamera

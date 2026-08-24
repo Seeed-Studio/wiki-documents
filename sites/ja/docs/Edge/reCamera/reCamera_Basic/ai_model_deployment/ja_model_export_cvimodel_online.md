@@ -1,6 +1,6 @@
 ---
-description:  モデルをオンラインでエクスポートする
-title:  モデルをオンラインでエクスポートする
+description: モデルをオンラインでエクスポートする
+title: モデルをオンラインでエクスポートする
 keywords:
   - Edge
   - reCamera
@@ -14,8 +14,8 @@ last_update:
   date: 2/14/2025
   author: yylin
 createdAt: '2026-07-19'
-updatedAt: '2026-07-19'
-url: https://wiki.seeedstudio.com/ja/Edge/reCamera/reCamera_Basic/ai_model_deployment/recamera_model_export_online/
+updatedAt: '2026-07-30'
+url: https://wiki.seeedstudio.com/ja/recamera_model_export_online/
 ---
 
 # reCamera の Web インターフェースでカスタム YOLO 検出モデルを変換してデプロイする

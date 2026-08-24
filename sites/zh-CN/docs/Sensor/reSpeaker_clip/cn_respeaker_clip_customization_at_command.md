@@ -1,6 +1,6 @@
 ---
-description: "一个在 Clip 上添加新 AT 命令的具体端到端演练"
-title: "自定义：添加自定义 AT 命令"
+description: 一个在 Clip 上添加新 AT 命令的具体端到端演练
+title: 自定义：添加自定义 AT 命令
 keywords:
   - reSpeaker clip
   - 固件
@@ -16,7 +16,7 @@ last_update:
   date: 07/28/2026
   author: Ray
 createdAt: '2026-07-27'
-updatedAt: '2026-07-27'
+updatedAt: '2026-08-07'
 url: https://wiki.seeedstudio.com/cn/respeaker_clip_customization_at_command/
 ---
 

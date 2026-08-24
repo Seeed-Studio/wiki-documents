@@ -16,7 +16,7 @@ last_update:
   date: 07/10/2026
   author: zibo
 createdAt: '2026-07-09'
-updatedAt: '2026-07-10'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/cn/rapid_prototyping_on_jetson_with_nvidia_skills_bk/
 ---
 

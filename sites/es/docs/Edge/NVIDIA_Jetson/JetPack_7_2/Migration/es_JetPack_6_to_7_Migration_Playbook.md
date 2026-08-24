@@ -11,6 +11,7 @@ last_update:
   author: Dayu
 createdAt: '2026-07-31'
 updatedAt: '2026-07-31'
+url: https://wiki.seeedstudio.com/es/jetpack_6_to_7_2_migration_playbook/
 ---
 
 # Guía de migración de JetPack 6.x a JetPack 7.2

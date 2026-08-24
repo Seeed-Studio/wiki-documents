@@ -8,7 +8,7 @@ last_update:
   date: 8/13/2026
   author: Nemo
 createdAt: '2025-12-19'
-updatedAt: '2026-08-13'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/es/xiao_epaper_display_board_overview/
 ---
 

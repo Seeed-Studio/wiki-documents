@@ -1,5 +1,5 @@
 ---
-description: "クリーンなマシンから、起動し録音でき、ホスト SDK から制御可能な reSpeaker Clip までのエンドツーエンドの手順 — カスタムまたは AI 支援ファームウェア作業の前提となるベースラインと、そもそもファームウェア作業が適切かどうかを判断する方法。"
+description: クリーンなマシンから、起動し録音でき、ホスト SDK から制御可能な reSpeaker Clip までのエンドツーエンドの手順 — カスタムまたは AI 支援ファームウェア作業の前提となるベースラインと、そもそもファームウェア作業が適切かどうかを判断する方法。
 title: reSpeaker Clip Firmware SDK 入門
 keywords:
   - reSpeaker clip
@@ -16,7 +16,7 @@ last_update:
   date: 07/28/2026
   author: Ray
 createdAt: '2026-07-28'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/ja/respeaker_clip_firmware_quick_start/
 ---
 

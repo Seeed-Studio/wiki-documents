@@ -21,7 +21,7 @@ last_update:
   date: 07/22/2026
   author: Zuhao
 createdAt: '2026-07-22'
-updatedAt: '2026-07-22'
+updatedAt: '2026-07-23'
 url: https://wiki.seeedstudio.com/es/make_diy_bsp_from_orin_nano_devkit_to_recomputer_classic_and_super/
 ---
 

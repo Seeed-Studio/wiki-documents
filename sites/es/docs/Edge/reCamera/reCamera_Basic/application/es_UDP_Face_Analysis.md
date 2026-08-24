@@ -17,8 +17,8 @@ last_update:
   date: 04/30/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-06-12'
-url: https://wiki.seeedstudio.com/es/reCamera/reCamera_Basic/application/recamera_udp_face_analysis/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/es/recamera_udp_face_analysis/
 ---
 
 # Análisis de Rostros por UDP con reCamera

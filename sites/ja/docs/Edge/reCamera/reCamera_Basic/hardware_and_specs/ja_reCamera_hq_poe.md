@@ -12,8 +12,8 @@ last_update:
   date: 02/18/2025
   author: Parker Hu
 createdAt: '2024-12-20'
-updatedAt: '2025-12-05'
-url: https://wiki.seeedstudio.com/ja/reCamera/reCamera_Basic/hardware_and_specs/reCamera_hq_poe_hardware_and_specs
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/ja/reCamera_hq_poe_hardware_and_specs/
 ---
 
 # reCamera HQ POE 概要

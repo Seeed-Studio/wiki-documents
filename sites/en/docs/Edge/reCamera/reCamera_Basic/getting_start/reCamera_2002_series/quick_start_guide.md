@@ -5,15 +5,15 @@ keywords:
   - Edge
   - reCamera
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /recamera_2002_series_quick_start_guide
+slug: /recamera_getting_started
 sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899
 sidebar_position: 1
 last_update:
   date: 04/10/2026
   author: Evelyn Chen & Samuel
 createdAt: '2024-11-11'
-updatedAt: '2026-07-21'
-url: https://wiki.seeedstudio.com/recamera_2002_series_quick_start_guide/
+updatedAt: '2026-08-14'
+url: https://wiki.seeedstudio.com/recamera_getting_started/
 ---
 
 # reCamera 2002 Series Quick Start Guide
@@ -154,7 +154,6 @@ Default password is `12345678`.
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/laptop_wifi_list.png" /></div>
 
 Connect to this AP, and a website should automatically pop out for you. If not, you can always type **192.168.16.1** in your browser to visit the page. Then you can select which wifi you want the reCamera to connect to.
-If you have more than one reCamera, you can refer to the [Device Management](https://wiki.seeedstudio.com/recamera_getting_started/#multi-devices-management) to find out which one is which.
 
 ## Basic Webs Access
 

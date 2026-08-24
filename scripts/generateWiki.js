@@ -43,6 +43,10 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_sensecraft_voice_sdk.md'), //8.7
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Jetson_Initrd_Flash_Fails_with_ZFS_Host.md'), //8.13
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Headless_Setup_and_Recovery_for_A603.md'), //8.7
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot.md'), //8.17
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Use_Arducam_OV9281_Camera_with_A603.md'), //8.7
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'faqs', 'FAQs.md'), //8.19
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Data_Logger', 'SenseCAP_Combo', 'Get_Started_with_SenseCAP_Combo.md'), //8.23
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

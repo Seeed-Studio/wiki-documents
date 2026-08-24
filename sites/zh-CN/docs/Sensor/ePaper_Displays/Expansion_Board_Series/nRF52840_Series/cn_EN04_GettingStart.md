@@ -11,7 +11,7 @@ last_update:
   date: 11/25/2025
   author: Allen
 createdAt: '2025-09-25'
-updatedAt: '2026-04-27'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/cn/epaper_EN04/
 ---
 import Tabs from '@theme/Tabs';

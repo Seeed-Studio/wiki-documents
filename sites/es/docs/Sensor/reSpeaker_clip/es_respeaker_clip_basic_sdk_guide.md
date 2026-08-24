@@ -1,6 +1,6 @@
 ---
-description: "Guía sistemática del reSpeaker Clip Basic SDK: transportes, protocolos de comunicación, máquina de estados de grabación, modelo de archivos, flujo de datos de extremo a extremo y el SDK de Python como implementación de referencia principal con herramientas CLI y Web."
-title: Guía del reSpeaker Clip Basic SDK
+description: Guía sistemática del reSpeaker Clip Basic SDK - transportes, protocolos de comunicación, máquina de estados de grabación, modelo de archivos, flujo de datos de extremo a extremo y el SDK de Python como implementación de referencia principal con herramientas CLI y Web.
+title: Guía de reSpeaker Clip Basic SDK
 keywords:
   - reSpeaker clip
   - python
@@ -14,11 +14,11 @@ last_update:
   date: 07/13/2026
   author: Ray He / Kasun Thushara
 createdAt: '2026-07-13'
-updatedAt: '2026-07-24'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/es/respeaker_clip_basic_sdk_guide/
 ---
 
-# Guía del reSpeaker Clip Basic SDK
+# Guía de reSpeaker Clip Basic SDK
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg" alt="reSpeaker Clip" width={800} height="auto" /></p>
 
@@ -27,7 +27,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_basic_sdk_guide/
 
 ## Descripción general
 
-La Guía del reSpeaker Clip Basic SDK explica cómo las aplicaciones del host se comunican con el dispositivo y lo controlan mediante BLE, Wi‑Fi, comandos AT, GATT y flujos de trabajo de transferencia de archivos. El SDK de Python se proporciona como la implementación de referencia principal, junto con herramientas CLI y basadas en Web.
+La Guía de reSpeaker Clip Basic SDK explica cómo las aplicaciones del host se comunican con el dispositivo y lo controlan mediante BLE, Wi‑Fi, comandos AT, GATT y flujos de trabajo de transferencia de archivos. El SDK de Python se proporciona como la implementación de referencia principal, junto con herramientas de línea de comandos (CLI) y basadas en la Web.
 
 Esta guía cubre:
 
@@ -37,7 +37,7 @@ Esta guía cubre:
 - **Flujo de datos de extremo a extremo**: desde la conexión hasta la salida de audio descargada.
 - **Implementaciones de referencia**: SDK de Python (paquete `clip`), herramientas CLI e interfaz Web.
 
-El Basic SDK se centra en usar las capacidades actuales del dispositivo desde el lado del host. No incluye por sí mismo transcripción en la nube, resumen con IA, gestión de cuentas ni servicios de aplicaciones móviles. Estos flujos de trabajo deben construirse sobre los archivos de audio descargados o integrarse con otro servicio.
+El Basic SDK se centra en usar las capacidades actuales del dispositivo desde el lado del host. No incluye por sí mismo transcripción en la nube, resumen mediante IA, gestión de cuentas ni servicios de aplicaciones móviles. Esos flujos de trabajo deben construirse sobre los archivos de audio descargados o integrarse con otro servicio.
 
 ## Dónde encaja esta guía
 
@@ -47,34 +47,94 @@ La Guía de inicio rápido presenta el producto, los escenarios objetivo, las ca
 
 Esta guía se centra en el desarrollo del lado de la aplicación:
 
-- comunicación con el dispositivo mediante BLE o Wi‑Fi;
-- control de la grabación y configuración del dispositivo;
-- gestión y descarga de sesiones de grabación;
-- comprensión de los comandos AT, GATT y protocolos de transferencia de archivos;
-- integración de estas capacidades mediante herramientas de Python, CLI o Web.
+- comunicarse con el dispositivo mediante BLE o Wi‑Fi;
+- controlar la grabación y la configuración del dispositivo;
+- gestionar y descargar sesiones de grabación;
+- comprender los comandos AT, GATT y los protocolos de transferencia de archivos;
+- integrar estas capacidades mediante herramientas de Python, CLI o Web.
 
-## Basic SDK y Firmware SDK
+## Elige la guía adecuada de reSpeaker Clip
 
-El reSpeaker Clip SDK se divide en dos capas:
+La documentación de reSpeaker Clip está organizada por capa de desarrollo. Comienza con **Getting Started** para la configuración del producto y los flujos de trabajo normales. Usa el **Basic SDK** cuando una aplicación host necesite controlar el dispositivo o descargar grabaciones. Continúa con **Service Integration** cuando un servicio de larga ejecución necesite poseer la conexión con el dispositivo y exponer APIs. Usa el **Firmware SDK** solo cuando necesites cambiar el comportamiento del lado del dispositivo, los protocolos o el procesamiento de audio.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_basic_firmware.png" alt="Basic SDK vs Firmware SDK" width={900} height="auto" /></p>
+<div className="row">
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/es/respeaker_clip/"
+      aria-label="Open the reSpeaker Clip Getting Started guide"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Descripción general del producto, configuración de hardware y flujos de trabajo de primer uso.</p>
+      </div>
+    </a>
+  </div>
 
-Los conceptos introducidos en esta guía (transportes, protocolos, máquina de estados, flujo de datos) se implementan en el lado del dispositivo mediante el firmware. La siguiente tabla asigna cada concepto del Basic SDK a su contraparte en el Firmware SDK:
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/es/respeaker_clip_basic_sdk_guide/"
+      aria-label="Open the reSpeaker Clip Basic SDK guide"
+      aria-current="page"
+      className="card shadow--md respeaker-clip-nav-card respeaker-clip-nav-card--active"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Controla el dispositivo, gestiona las grabaciones y descarga audio sin cambiar el firmware.</p>
+      </div>
+    </a>
+  </div>
 
-| Concepto del Basic SDK | Contraparte en el Firmware SDK |
-| --- | --- |
-| Transporte BLE / Wi‑Fi | Implementación en el dispositivo del servicio BLE y UDP |
-| Comando AT | Servidor AT y registro de comandos |
-| GATT | Servicio y características GATT |
-| Máquina de estados de grabación | Estados de grabación del dispositivo y manejo de eventos |
-| Transferencia de archivos | Implementación de almacenamiento, fragmentación, CRC y sincronización |
-| Flujo de datos de audio | Canalización PDM -> DSP -> Opus -> archivo |
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/es/respeaker_clip_service_integration/"
+      aria-label="Open the reSpeaker Clip Service Integration guide"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Añade reSpeaker Clip a un servicio de Python de larga ejecución mediante un adaptador y rutas de API.</p>
+      </div>
+    </a>
+  </div>
 
-Si tu objetivo es añadir nuevos comandos AT, cambiar servicios GATT, modificar la máquina de estados de grabación o alterar la cadena de procesamiento de audio, utiliza el Firmware SDK:
-
-- [Primeros pasos con el reSpeaker Clip Firmware SDK](/es/respeaker_clip_firmware_quick_start/) cubre la configuración del entorno, compilación, flasheo y pruebas básicas.
-- La [Guía de desarrollo de firmware de reSpeaker Clip](/es/respeaker_clip_firmware_development_guide/) explica la arquitectura del firmware, los detalles internos de los protocolos, las rutas de actualización y recuperación, la validación, la versión de producción y el desarrollo asistido por IA.
-- [Personalización: añadir un comando AT personalizado](/es/respeaker_clip_customization_at_command/) guía el proceso de añadir y validar un nuevo comando AT.
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/es/respeaker_clip_firmware_quick_start/"
+      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Firmware SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Compila, flashea, depura y personaliza el comportamiento del lado del dispositivo.</p>
+      </div>
+    </a>
+  </div>
+</div>
 
 ## Instalación
 
@@ -94,7 +154,7 @@ git clone <repository-url>
 
 ### Instalar dependencias
 
-Después de activar el entorno virtual, instala las dependencias requeridas:
+Después de activar el entorno virtual, instala las dependencias necesarias:
 
 ```bash
 pip install -r requirements.txt
@@ -104,53 +164,53 @@ pip install -r requirements.txt
 
 ```
 applications/clip/tests/
-├── clip/                    SDK library (importable)
+├── clip/                    Biblioteca SDK (importable)
 │   ├── __init__.py
-│   ├── client.py            BLE connection + AT command transport
-│   ├── commands.py          High-level AT command wrappers
-│   ├── transfer.py          BLE file transfer + SessionSync
-│   ├── codec.py             Opus/Ogg codec utilities
-│   ├── wifi.py              WiFi UDP transport + WiFiSync
-│   ├── progress.py          Progress bar helpers
-│   ├── utils.py             File merge, formatting utilities
-│   └── exceptions.py        Custom exception classes
-├── tools/                   CLI & utility scripts
-│   ├── clip-cli.py          Main CLI (BLE + WiFi + USB)
-│   ├── clip-web.py          Web interface
-│   ├── record.py            Recording control tool
-│   ├── sync.py              File sync helper
-│   ├── udp_sync.py          WiFi UDP sync
-│   ├── udp_terminal.py      WiFi UDP terminal
-│   ├── ble_terminal.py      BLE interactive terminal
-│   ├── serial_terminal.py   USB CDC serial terminal
-│   └── decode_opus.py       Opus decode utility
-├── tests/                   Test suite
-│   ├── conftest.py          Shared fixtures (device_session, mock_device)
-│   ├── test_basic.py        AT commands: VERSION, STATE, TIME, PAIR, errors
-│   ├── test_config.py       Configuration: MODE, AUTODEL, BRIGHTNESS
-│   ├── test_recording.py    Recording: START/STOP, bookmarks, state transitions
-│   ├── test_storage.py      Storage: LIST, DELETE, persistence, file count
-│   ├── test_transfer.py     Transfer: download, sync, progress, concurrent
-│   └── test_unit.py         Unit tests (no device required)
-├── workspace/               Example workspace scripts
+│   ├── client.py            Conexión BLE + transporte de comandos AT
+│   ├── commands.py          Envoltorios de comandos AT de alto nivel
+│   ├── transfer.py          Transferencia de archivos BLE + SessionSync
+│   ├── codec.py             Utilidades de códec Opus/Ogg
+│   ├── wifi.py              Transporte WiFi UDP + WiFiSync
+│   ├── progress.py          Utilidades para barras de progreso
+│   ├── utils.py             Utilidades de combinación de archivos y formato
+│   └── exceptions.py        Clases de excepciones personalizadas
+├── tools/                   Scripts CLI y utilidades
+│   ├── clip-cli.py          CLI principal (BLE + WiFi + USB)
+│   ├── clip-web.py          Interfaz web
+│   ├── record.py            Herramienta de control de grabación
+│   ├── sync.py              Utilidad de sincronización de archivos
+│   ├── udp_sync.py          Sincronización WiFi UDP
+│   ├── udp_terminal.py      Terminal WiFi UDP
+│   ├── ble_terminal.py      Terminal interactivo BLE
+│   ├── serial_terminal.py   Terminal serie USB CDC
+│   └── decode_opus.py       Utilidad de decodificación Opus
+├── tests/                   Suite de pruebas
+│   ├── conftest.py          Fixtures compartidas (device_session, mock_device)
+│   ├── test_basic.py        Comandos AT: VERSION, STATE, TIME, PAIR, errores
+│   ├── test_config.py       Configuración: MODE, AUTODEL, BRIGHTNESS
+│   ├── test_recording.py    Grabación: START/STOP, marcadores, transiciones de estado
+│   ├── test_storage.py      Almacenamiento: LIST, DELETE, persistencia, cantidad de archivos
+│   ├── test_transfer.py     Transferencia: descarga, sincronización, progreso, concurrencia
+│   └── test_unit.py         Pruebas unitarias (no requieren dispositivo)
+├── workspace/               Scripts de ejemplo del espacio de trabajo
 │   └── complete_example.py
 ├── requirements.txt
-├── README.md           
+├── README.md
 └── pytest.ini
 ```
 
 ### Módulos del SDK
 
-| Módulo        | Descripción              |
-| ------------- | ------------------------ |
-| client.py     | Comunicación con el dispositivo BLE |
-| commands.py   | Comandos AT de alto nivel |
-| transfer.py   | Sincronización de archivos |
+| Módulo        | Descripción                     |
+| ------------- | ------------------------------- |
+| client.py     | Comunicación con dispositivos BLE |
+| commands.py   | Comandos AT de alto nivel       |
+| transfer.py   | Sincronización de archivos      |
 | codec.py      | Codificación/decodificación de audio |
-| wifi.py       | Transporte WiFi          |
-| progress.py   | Visualización de progreso |
-| utils.py      | Funciones auxiliares     |
-| exceptions.py | Clases de excepciones    |
+| wifi.py       | Transporte WiFi                 |
+| progress.py   | Visualización del progreso      |
+| utils.py      | Funciones auxiliares            |
+| exceptions.py | Clases de excepciones           |
 
 ---
 
@@ -164,47 +224,51 @@ El SDK de Python admite los siguientes flujos de trabajo:
 - **Descargar archivos**: transferir grabaciones mediante BLE o Wi‑Fi/UDP, con soporte de reanudación.
 - **Convertir audio**: volver a encapsular los datos Opus sin procesar del dispositivo en OGG/Opus, o decodificar a WAV mono de 16 kHz mediante una ruta de decodificación Opus.
 - **Leer estado y eventos**: nivel de batería, estado de carga, estado del dispositivo, cambios en la máquina de estados y callbacks de visualización de audio en tiempo real.
+- **Manage sessions**: list, query, delete, purge, and format the SD card.
+- **Download files**: transfer recordings over BLE or Wi-Fi/UDP, with resume support.
+- **Convert audio**: re-container device raw Opus data into OGG/Opus, or decode to 16 kHz mono WAV through an Opus decoding path.
+- **Read status and events**: battery level, charging state, device state, state-machine changes, and real-time audio-visualization callbacks.
 
 La elección del transporte es importante:
 
-- Usa BLE mediante `ClipDevice` para configuración portátil, control de grabación y descargas pequeñas.
-- Usa Wi‑Fi/UDP mediante `WiFiDevice` o `WiFiSync` para descargas masivas. Es más rápido y estable para sesiones de grabación grandes.
-- El control de grabación es solo por BLE. La descarga de archivos funciona tanto por BLE como por Wi‑Fi.
+- Usa BLE a través de `ClipDevice` para configuración portátil, control de grabación y descargas pequeñas.
+- Usa Wi-Fi/UDP a través de `WiFiDevice` o `WiFiSync` para descargas masivas. Es más rápido y más estable para sesiones de grabación largas.
+- El control de grabación es solo por BLE. La descarga de archivos funciona tanto en BLE como en Wi-Fi.
 
-## Conceptos clave
+## Conceptos básicos
 
-Esta sección describe la vista del lado del host utilizada por el Basic SDK. Para los
-detalles de implementación del lado del dispositivo, consulta las secciones correspondientes de la Guía de desarrollo de firmware:
+Esta sección describe la vista del lado host utilizada por el SDK Básico. Para los
+detalles de implementación del lado del dispositivo, consulta las secciones correspondientes de la Guía de Desarrollo de Firmware:
 sections:
 
-| Tema del Basic SDK | Explicación detallada del firmware |
+| Tema del SDK Básico | Explicación detallada del firmware |
 | --- | --- |
-| Transportes | [Communication Protocol](/es/respeaker_clip_firmware_development_guide/#communication-protocol) |
-| Modos de grabación | [Recording Modes](/es/respeaker_clip_firmware_development_guide/#recording-modes) |
-| Estado del dispositivo | [Event and State Model](/es/respeaker_clip_firmware_development_guide/#event-and-state-model) |
-| Formato de archivo y sesiones | [Session, Chunking, and Storage Model](/es/respeaker_clip_firmware_development_guide/#session-chunking-and-storage-model) |
-| Protocolo de comandos AT | [AT Command Grammar](/es/respeaker_clip_firmware_development_guide/#at-command-grammar), [JSON Response Contract](/es/respeaker_clip_firmware_development_guide/#json-response-contract), y [Registered Command Reference](/es/respeaker_clip_firmware_development_guide/#registered-command-reference) |
-| Características GATT | [BLE GATT Service](/es/respeaker_clip_firmware_development_guide/#ble-gatt-service) |
-| Transferencia de archivos y reanudación | [UDP Frame Types](/es/respeaker_clip_firmware_development_guide/#udp-frame-types) y [Session and File Addressing](/es/respeaker_clip_firmware_development_guide/#session-and-file-addressing) |
-| Flujo de datos de extremo a extremo | [System Architecture](/es/respeaker_clip_firmware_development_guide/#system-architecture) y [Audio Pipeline](/es/respeaker_clip_firmware_development_guide/#audio-pipeline) |
+| Transportes | [Protocolo de comunicación](/es/respeaker_clip_firmware_development_guide/#protocolo-de-comunicación) |
+| Modos de grabación | [Modos de grabación](/es/respeaker_clip_firmware_development_guide/#modos-de-grabación) |
+| Estado del dispositivo | [Modelo de eventos y estados](/es/respeaker_clip_firmware_development_guide/#modelo-de-eventos-y-estados) |
+| Formato de archivo y sesiones | [Modelo de sesión, fragmentación y almacenamiento](/es/respeaker_clip_firmware_development_guide/#modelo-de-sesión-fragmentación-y-almacenamiento) |
+| Protocolo de comandos AT | [Gramática de comandos AT](/es/respeaker_clip_firmware_development_guide/#gramática-de-comandos-at), [Contrato de respuesta JSON](/es/respeaker_clip_firmware_development_guide/#contrato-de-respuesta-json), y [Referencia de comandos registrados](/es/respeaker_clip_firmware_development_guide/#referencia-de-comandos-registrados) |
+| Características GATT | [Servicio BLE GATT](/es/respeaker_clip_firmware_development_guide/#servicio-ble-gatt) |
+| Transferencia y reanudación de archivos | [Tipos de tramas UDP](/es/respeaker_clip_firmware_development_guide/#tipos-de-tramas-udp) y [Direcciones de sesión y archivo](/es/respeaker_clip_firmware_development_guide/#direcciones-de-sesión-y-archivo) |
+| Flujo de datos de extremo a extremo | [Arquitectura del sistema](/es/respeaker_clip_firmware_development_guide/#arquitectura-del-sistema) y [Canalización de audio](/es/respeaker_clip_firmware_development_guide/#canalización-de-audio) |
 
 ### Transportes
 
 | Transporte | Clase | Caso de uso | Notas |
 | --- | --- | --- | --- |
 | BLE | `ClipDevice` | Configuración, control de grabación, descarga de sesiones | Portátil y requerido para el control de grabación. La descarga masiva puede ser más lenta y puede perder notificaciones bajo carga. |
-| Wi‑Fi/UDP | `WiFiDevice` / `WiFiSync` | Descarga masiva de sesiones | Más rápido y estable para archivos grandes. Requiere habilitar Wi‑Fi en el dispositivo y unirse a `ClipAP_XXXX`. |
+| Wi-Fi/UDP | `WiFiDevice` / `WiFiSync` | Descarga masiva de sesiones | Más rápido y más estable para archivos grandes. Requiere habilitar Wi-Fi en el dispositivo y unirse a `ClipAP_XXXX`. |
 
 ### Modos de grabación
 
 | Modo | Descripción |
 | --- | --- |
-| `normal` | Ruta de grabación estándar sin supresión de ruido / desreverberación SpeexDSP. El AGC del dispositivo, el filtro pasaaltos y el limitador pueden seguir habilitados por el firmware. |
+| `normal` | Ruta de grabación estándar sin supresión de ruido / desreverberación SpeexDSP. El AGC del dispositivo, el paso alto y el limitador aún pueden estar habilitados por el firmware. |
 | `enhanced` | Ruta mejorada con supresión de ruido y desreverberación SpeexDSP habilitadas. |
 
 `set_mode()` solo acepta `normal` y `enhanced`. `start_recording()` también acepta los alias `stereo` y `merge`; `stereo` se asigna a `normal`, y `merge` se asigna a `enhanced`.
 
-Ambos modos generan por defecto Opus mono a 16 kHz.
+Ambos modos generan Opus mono de 16 kHz de forma predeterminada.
 
 ### Estado del dispositivo
 
@@ -224,7 +288,7 @@ Al conectarse, el SDK puede sincronizar el reloj del dispositivo mediante `AT+TI
 
 ### Formato de archivo
 
-El dispositivo almacena los datos de grabación como tramas Opus sin procesar, no como un contenedor OGG. El formato sin procesar es una secuencia de tramas Opus con prefijo de longitud:
+El dispositivo almacena los datos de grabación como tramas Opus en bruto, no como un contenedor OGG. El formato en bruto es una secuencia de tramas Opus con prefijo de longitud:
 
 ```text
 [2-byte little-endian length][opus frame][2-byte little-endian length][opus frame]...
@@ -236,17 +300,17 @@ Usa `convert_to_ogg_opus()` para escribir un archivo `.ogg` válido antes de pas
 
 - El SDK escribe una cadena AT en UTF-8, por ejemplo `AT+MODE=enhanced`, en la característica CMD.
 - Las respuestas son notificaciones JSON en `RESP_SEND`, por ejemplo `{"ok":true,"data":{...}}`.
-- Los eventos no solicitados, como cambios de estado, tienen el formato `{"event":"state","state":"RECORDING",...}` y se envían a través de `event_callback`.
+- Los eventos no solicitados, como cambios de estado, tienen el aspecto `{"event":"state","state":"RECORDING",...}` y se envían a través de `event_callback`.
 
 ### Características GATT
 
 | Característica | UUID | Propiedades | Propósito |
 | --- | --- | --- | --- |
-| Servicio | `6E400001-B5A3-F393-E0A9-E50E24DCCA9E` | Servicio primario | Servicio de comunicación BLE personalizado |
-| CMD | `6E400002-B5A3-F393-E0A9-E50E24DCCA9E` | Escritura sin respuesta (cifrada) | Central → dispositivo: escribir cadenas de comandos AT |
-| RESP_SEND | `6E400003-B5A3-F393-E0A9-E50E24DCCA9E` | Notificación (CCC cifrado) | Dispositivo → central: respuestas JSON y notificaciones de eventos |
-| FILE_DATA | `6E400004-B5A3-F393-E0A9-E50E24DCCA9E` | Notificación (CCC cifrado) | Dispositivo → central: notificaciones de tramas de transferencia de archivos binarias |
-| AUDIO_VIS | `6E400005-B5A3-F393-E0A9-E50E24DCCA9E` | Notificación (CCC cifrado) | Dispositivo → central: notificaciones de visualización de audio en tiempo real |
+| Service | `6E400001-B5A3-F393-E0A9-E50E24DCCA9E` | Primary Service | Servicio de comunicación BLE personalizado |
+| CMD | `6E400002-B5A3-F393-E0A9-E50E24DCCA9E` | Write Without Response (Encrypted) | Central → dispositivo: escribir cadenas de comandos AT |
+| RESP_SEND | `6E400003-B5A3-F393-E0A9-E50E24DCCA9E` | Notify (CCC Encrypted) | Dispositivo → central: respuestas JSON y notificaciones de eventos |
+| FILE_DATA | `6E400004-B5A3-F393-E0A9-E50E24DCCA9E` | Notify (CCC Encrypted) | Dispositivo → central: notificaciones de tramas binarias de transferencia de archivos |
+| AUDIO_VIS | `6E400005-B5A3-F393-E0A9-E50E24DCCA9E` | Notify (CCC Encrypted) | Dispositivo → central: notificaciones de visualización de audio en tiempo real |
 
 ### Protocolo de transferencia de archivos
 
@@ -271,13 +335,13 @@ Cada archivo se verifica con CRC32. Solo los archivos verificados deben tratarse
 
 ## Ejemplo completo
 
-Este ejemplo muestra un flujo de trabajo típico:
+Este ejemplo demuestra un flujo de trabajo típico:
 
 1. Conexión automática vía BLE
 2. Comprobar el nivel de batería
-3. Establecer el modo de grabación en mejorado
+3. Establecer el modo de grabación en enhanced
 4. Iniciar una grabación de 10 segundos
-5. Añadir un marcador en mitad de la grabación
+5. Añadir un marcador a mitad de la grabación
 6. Detener la grabación
 7. Sincronizar los archivos de la sesión a `recordings/<session_id>/`
 
@@ -361,7 +425,7 @@ Downloaded 2 file(s) → recordings/20260710_144500/
 
 ### Conexión
 
-#### Conectar al dispositivo
+#### Conectarse al dispositivo
 
 ```python
 import asyncio
@@ -378,7 +442,7 @@ asyncio.run(main())
 
 El SDK descubre automáticamente los dispositivos cercanos cuyo nombre contiene `Clip`.
 
-#### Conectar a un dispositivo específico
+#### Conectarse a un dispositivo específico
 
 ```python
 import asyncio
@@ -397,7 +461,7 @@ asyncio.run(main())
 
 ### Información del dispositivo
 
-#### Leer versión de firmware
+#### Leer la versión del firmware
 
 ```python
 version = await cmds.get_version()
@@ -405,7 +469,7 @@ print(version.firmware)   # e.g. "v1.0.0"
 print(version.hardware)   # e.g. "Clip v0.0.5"
 ```
 
-#### Leer estado del dispositivo
+#### Leer el estado del dispositivo
 
 ```python
 state = await cmds.get_state()
@@ -415,7 +479,7 @@ print(state.mode)       # normal, enhanced
 print(state.bitrate)    # Opus bitrate in bps
 ```
 
-#### Leer / establecer hora del dispositivo
+#### Leer / establecer la hora del dispositivo
 
 ```python
 import time
@@ -428,7 +492,7 @@ await cmds.set_time(int(time.time()))      # returns True
 
 ### Grabación de audio
 
-#### Iniciar / detener grabación
+#### Iniciar / detener la grabación
 
 ```python
 session_id = await cmds.start_recording("normal")   # returns str (session ID)
@@ -438,7 +502,7 @@ await cmds.stop_recording()                          # returns dict with session
 
 > `"normal"` es mono, `"enhanced"` habilita el preprocesamiento DSP (supresión de ruido, AGC).
 
-#### Pausar / reanudar grabación
+#### Pausar / Reanudar grabación
 
 ```python
 await cmds.pause_recording()
@@ -452,7 +516,7 @@ bookmark = await cmds.add_bookmark()
 print(bookmark.offset)   # seconds from recording start
 ```
 
-#### Ejemplo completo de grabación
+#### Ejemplo de grabación completa
 
 ```python
 session_id = await cmds.start_recording("normal")
@@ -494,7 +558,7 @@ await sync.sync(
 )
 ```
 
-#### Mantener archivos en el dispositivo después de la sincronización
+#### Mantener archivos en el dispositivo después de sincronizar
 
 ```python
 await sync.sync(
@@ -550,7 +614,7 @@ El Clip puede comunicarse por WiFi UDP cuando su AP está habilitado.
 | Parámetro | Valor           |
 |-----------|-----------------|
 | SSID      | `ClipAP_XXXX`   |
-| Password  | `12345678` (predeterminado) |
+| Password  | `12345678` (default) |
 | IP        | `192.168.4.1`   |
 | Port      | `8089`          |
 
@@ -579,7 +643,7 @@ sync.download_session(session_id, Path("recordings"))
 sync.disconnect()
 ```
 
-> `WiFiSync` es **sincrónico** (sockets bloqueantes): no se necesita `async`/`await`.
+> `WiFiSync` es **sincrónico** (sockets bloqueantes), no es necesario `async`/`await`.
 
 ---
 
@@ -704,7 +768,7 @@ Salida esperada
 
 ### record.py
 
-Graba audio automáticamente y lo sincroniza.
+Graba audio y lo sincroniza automáticamente.
 
 ```bash
 python tools/record.py
@@ -746,7 +810,7 @@ Salida esperada
 
 ### ble_terminal.py
 
-Terminal interactivo de comandos AT.
+Terminal interactiva de comandos AT.
 
 ```bash
 python tools/ble_terminal.py
@@ -833,7 +897,7 @@ http://localhost:5000
 | Firma | Devuelve | Notas |
 |-----------|---------|-------|
 | `ClipDevice(address=None, name_filter="Clip", debug=False)` | `ClipDevice` | Descubre automáticamente si `address` es `None` |
-| `await connect(timeout=10.0, sync_time=True, lazy_device_name=False)` | `None` | 3 reintentos; sync_time ajusta automáticamente el reloj del dispositivo |
+| `await connect(timeout=10.0, sync_time=True, lazy_device_name=False)` | `None` | 3 reintentos; `sync_time` ajusta automáticamente el reloj del dispositivo |
 | `await disconnect()` | `None` | Detiene todas las notificaciones BLE |
 | `await send_command(command, timeout=10.0)` | `dict` | Envía comando AT, obtiene respuesta JSON |
 | `is_connected` | `bool` | Propiedad: comprueba tanto `_connected` como `client.is_connected` |
@@ -854,7 +918,7 @@ http://localhost:5000
 | `await reboot()` | `None` | Reinicio del dispositivo |
 | **Grabación** | | |
 | `await start_recording(mode="normal")` | `str` | `mode`: normal, enhanced, stereo, merge. Devuelve ID de sesión. |
-| `await stop_recording()` | `Dict[str, Any]` | Resumen de la sesión; gestiona con gracia el caso de dispositivo-no-grabando |
+| `await stop_recording()` | `Dict[str, Any]` | Resumen de la sesión; gestiona con gracia el caso de dispositivo no grabando |
 | `await pause_recording()` | `bool` | |
 | `await resume_recording()` | `bool` | |
 | `await add_bookmark()` | `BookmarkInfo` | `.offset` en segundos desde el inicio de la sesión |
@@ -862,7 +926,7 @@ http://localhost:5000
 | `await get_bookmarks_count(session_id)` | `int` | Conteo rápido sin detalles |
 | **Sesiones** | | |
 | `await list_sessions(page=1, per_page=10)` | `List[SessionInfo]` | `.id`, `.files`, `.size`, `.synced_files`, `.mode` |
-| `await list_all_sessions(per_page=15)` | `List[SessionInfo]` | Pagina automáticamente todo |
+| `await list_all_sessions(per_page=15)` | `List[SessionInfo]` | Pagina todo automáticamente |
 | `await get_session_info(session_id)` | `SessionInfo` | Incluye conteo de `synced_files` |
 | `await list_session_files(session_id)` | `List[str]` | Nombres de archivo para todos los archivos de la sesión |
 | `await delete_session(session_id)` | `bool` | |
@@ -879,12 +943,12 @@ http://localhost:5000
 | `await set_device_name(name)` | `bool` | Máx. 15 caracteres |
 | `await get_config_dict()` | `Dict[str, Any]` | Todos los ajustes; las claves no compatibles devuelven `None` |
 | `await set_config_dict(config, ignore_errors=True)` | `None` | Omite valores `None`; descarta silenciosamente claves no compatibles |
-| `get/set_bitrate()` | — | **Firmware: no compatible**: lanza `CommandError` |
-| `get/set_complexity()` | — | **Firmware: no compatible**: lanza `CommandError` |
-| `get/set_chunk_size()` | — | **Firmware: no compatible**: lanza `CommandError` |
-| `get/set_noise_suppression()` | — | **Firmware: no compatible**: lanza `CommandError` |
-| `get/set_agc()` | — | **Firmware: no compatible**: lanza `CommandError` |
-| `get/set_dereverb()` | — | **Firmware: no compatible**: lanza `CommandError` |
+| `get/set_bitrate()` | — | **Firmware: no compatible** — lanza `CommandError` |
+| `get/set_complexity()` | — | **Firmware: no compatible** — lanza `CommandError` |
+| `get/set_chunk_size()` | — | **Firmware: no compatible** — lanza `CommandError` |
+| `get/set_noise_suppression()` | — | **Firmware: no compatible** — lanza `CommandError` |
+| `get/set_agc()` | — | **Firmware: no compatible** — lanza `CommandError` |
+| `get/set_dereverb()` | — | **Firmware: no compatible** — lanza `CommandError` |
 | **Control de transferencia** | | |
 | `await get_progress()` | `Dict[str, Any]` | Progreso de descarga |
 | `await pause_transfer()` | `bool` | |
@@ -910,7 +974,7 @@ http://localhost:5000
 
 | Firma | Devuelve | Notas |
 |-----------|---------|-------|
-| `SessionSync(device, commands=None)` | `SessionSync` | Extiende `FileTransfer` |
+| `SessionSync(device, commands=None)` | `SessionSync` | Amplía `FileTransfer` |
 | `await sync(session_id, output_dir, delete_after=False, continuous=False, force=False, progress_callback=None, session_info=None, start_file=None)` | `Dict[str, Any]` | Reanudación detectada automáticamente; devuelve `file_count`, `total_size`, `files`, `merged_file` |
 | `await sync_all(output_dir, delete_after=False, progress_callback=None)` | `List[Dict]` | Sincroniza todas las sesiones |
 | `await download_session(session_id, output_dir, progress_callback=None, stop_recording=False, continuous=False, timeout=300.0, start_file=None, session_info=None)` | `Dict[str, Any]` | De nivel más bajo; también guarda `session.json` + `bookmarks.json` |
@@ -923,7 +987,7 @@ http://localhost:5000
 | Firma | Devuelve | Notas |
 |-----------|---------|-------|
 | `WiFiDevice(host="192.168.4.1", port=8089, timeout=10.0)` | `WiFiDevice` | |
-| `await connect(timeout=None)` | `None` | Inicia los hilos de trabajo de recepción y latido (heartbeat) |
+| `await connect(timeout=None)` | `None` | Inicia los hilos de trabajo de recepción y latido |
 | `await disconnect()` | `None` | |
 | `await send_command(command, timeout=None)` | `dict` | Respuesta AT analizada como JSON |
 | `is_connected` | `bool` | Propiedad |
@@ -938,7 +1002,7 @@ http://localhost:5000
 | `WiFiSync(host="192.168.4.1", port=8089, timeout=120.0)` | `WiFiSync` | |
 | `connect()` | `bool` | Bloqueante |
 | `disconnect()` | `None` | |
-| `download_session(session_id, output_dir, convert_ogg=True, start_file=None, delete_after=False, progress_callback=None, cancel_after=None)` | `bool` | Verificado por CRC; progreso con tqdm; presiona 'c' para cancelar |
+| `download_session(session_id, output_dir, convert_ogg=True, start_file=None, delete_after=False, progress_callback=None, cancel_after=None)` | `bool` | Verificado por CRC; progreso con tqdm; pulsa 'c' para cancelar |
 | `list_sessions()` | `List[dict]` | Paginado |
 | `delete_session(session_id)` | `bool` | |
 
@@ -968,13 +1032,13 @@ La característica de comandos requiere un enlace BLE cifrado. El SDK puede inic
 Las pilas BLE pueden ocasionalmente entregar notificaciones duplicadas o perder tramas bajo carga. Desconecta, vuelve a conectar e inténtalo de nuevo. Usa `SessionSync` para que la transferencia pueda reanudarse cuando sea posible.
 
 **P3: La descarga es lenta o se interrumpe a mitad de camino.**  
-Usa `SessionSync` para una transferencia BLE con reconocimiento de reanudación. Para grandes volúmenes de grabación, usa la descarga por Wi‑Fi mediante `WiFiSync`: habilita Wi‑Fi en el Clip, únete a `ClipAP_XXXX` y luego descarga por Wi‑Fi.
+Usa `SessionSync` para una transferencia BLE con reconocimiento de reanudación. Para grandes volúmenes de grabación, usa la descarga por Wi‑Fi mediante `WiFiSync`: habilita el Wi‑Fi en el Clip, únete a `ClipAP_XXXX` y luego descarga por Wi‑Fi.
 
 **P4: `delete_after=True` eliminó una sesión que no se descargó completamente.**  
 Usa el patrón más seguro: `sync(force=True, delete_after=False)`, verifica que el `merged_file` local exista y no esté vacío y luego llama manualmente a `cmds.delete_session(session_id)`.
 
 **P5: `AT+NOISE`, `AT+DEREVERB` o `AT+AGC` devuelve `Unknown command`.**  
-El firmware actual puede no registrar esos comandos opcionales. El SDK mantiene envoltorios para versiones de firmware compatibles. Si restauras una configuración, `set_config_dict(..., ignore_errors=True)` puede omitir valores no compatibles.
+Es posible que el firmware actual no registre esos comandos opcionales. El SDK mantiene envoltorios para versiones de firmware compatibles. Si restauras una configuración, `set_config_dict(..., ignore_errors=True)` puede omitir valores no compatibles.
 
 **P6: `bleak` lanza errores como `'BleakClient' object has no attribute 'get_services'` o `'get_mtu'`.**  
 Las API de `bleak` difieren entre versiones. Usa el conjunto de dependencias probado por el SDK después de que se publique el paquete de instalación.
@@ -989,7 +1053,7 @@ El reloj o la zona horaria del dispositivo pueden diferir del host. El SDK puede
 Usa `convert_to_ogg_opus()` para salida OGG/Opus. Para WAV, decodifica el flujo Opus sin procesar con un decodificador Opus como `opuslib`.
 
 **P10: Los registros se inundan con eventos de visualización de audio durante la grabación.**  
-Las notificaciones `AUDIO_VIS` se disparan con frecuencia. Solo registra la devolución de llamada de visualización de audio cuando la necesites y mantén la devolución de llamada ligera.
+Las notificaciones `AUDIO_VIS` se disparan con frecuencia. Solo registra la devolución de llamada de visualización de audio cuando la necesites y mantenla ligera.
 
 ## Soporte técnico y debate sobre el producto
 

@@ -13,7 +13,7 @@ last_update:
   date: 07/14/2026
   author: HaoChen
 createdAt: '2026-07-13'
-updatedAt: '2026-07-16'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/cn/industrial_vision_monitoring_on_industrial_bk/
 ---
 

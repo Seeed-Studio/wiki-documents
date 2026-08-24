@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。搭配 XIAO ESP32S3，可为智能设备、机器人和物联网应用实现高级语音控制。探索无缝集成与双模式灵活性。
+description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。搭配 XIAO ESP32S3，可为智能设备、机器人和物联网应用实现高级语音控制。探索无缝集成与双模式的灵活性。
 title: 使用 Python 控制 reSpeaker XVF3800
 keywords:
   - reSpeaker
@@ -12,18 +12,18 @@ last_update:
   date: 11/14/2025
   author: Kasun Thushara
 createdAt: '2025-11-14'
-updatedAt: '2026-03-24'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_python_sdk/
 ---
 
 ## 介绍 
 
-在本节中，我们将介绍如何使用 Python SDK 控制你的 ReSpeaker XVF-3800。它让希望构建自己应用的用户开发过程更加便捷。
+在本节中，我们将介绍如何使用 Python SDK 控制你的 ReSpeaker XVF-3800。它让希望构建自己应用的用户开发更加便捷。
 例如，你可以检测声音来源方向、执行语音活动检测（VAD）、控制 LED 等等。
 
 ## Python SDK
 
-我们提供了一份完整的 Python 指南，介绍如何使用 USB 固件与 XVF3800 通信。这个 Python 脚本可以在你喜欢的 IDE 中运行，而无需 XVF3800 的 **XVF_Host**。你可以从这个[链接](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)获取更多命令。
+我们提供了一份完整的 Python 指南，介绍如何使用 USB 固件与 XVF3800 通信。这个 Python 脚本可以在你喜欢的 IDE 中运行，而不需要 XVF3800 的 **XVF_Host**。你可以从这个[链接](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)中找到更多命令。
 
 你需要安装 `pyusb` 库。
 
@@ -34,6 +34,7 @@ import sys
 import struct
 import usb.core
 import usb.util
+import libusb_package
 import time
 
 # name, resid, cmdid, length, type
@@ -123,7 +124,10 @@ class ReSpeaker:
         usb.util.dispose_resources(self.dev)
 
 def find(vid=0x2886, pid=0x001A):
-    dev = usb.core.find(idVendor=vid, idProduct=pid)
+    if sys.platform.startswith('win'):
+        dev = libusb_package.find(idVendor=vid, idProduct=pid)
+    else:   
+        dev = usb.core.find(idVendor=vid, idProduct=pid)
     if not dev:
         return
     return ReSpeaker(dev)
@@ -155,12 +159,12 @@ if __name__ == '__main__':
 ## 使用 XVF_Host 
 
 请参考相关文档以了解 XVF_Host 是什么。
-在本节中，我们将使用 Python 脚本配合 [XVF_Host](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#如何控制-respeaker-xvf3800) 进行操作。
+在本节中，我们将使用 Python 脚本配合 [XVF_Host](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#how-to-control-respeaker-xvf3800) 进行操作。
 
 ### ReSpeaker XVF3800 的 Python 示例
 
 :::note
-如果你想进一步了解如何通过 python 脚本使用 xvf_host 进行控制，请阅读这篇[文章](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)。
+如果你想进一步了解如何通过 xvf_host 使用 Python 脚本进行控制，请阅读这篇[文章](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)。
 :::
 
 import Tabs from '@theme/Tabs';
@@ -180,9 +184,68 @@ python test.py
 
 请确保已安装 Python，并且 ReSpeaker XVF3800 已通过 USB 连接。
 
+可以按如下方式查看 `test.py` 文件。这是供你在 Windows 上参考的示例。
+
+```python
+import subprocess
+import platform
+import os
+from pathlib import Path
+import time
+
+# Detect platform and set binary path
+IS_WINDOWS = platform.system() == "Windows"
+
+# Set this to the directory where xvf_host(.exe) is stored
+XVF_TOOL_DIR = Path(__file__).parent
+
+xvf_host_binary = str(XVF_TOOL_DIR / ("xvf_host.exe" if IS_WINDOWS else "xvf_host"))
+
+# Optional: Ensure Unix binary is executable
+if not IS_WINDOWS:
+    subprocess.run(["chmod", "+x", xvf_host_binary])
+
+def run_xvf_command(command: str, *args):
+    """Runs a command using the xvf_host(.exe) binary"""
+    cmd = [xvf_host_binary] + command.split() + [str(arg) for arg in args]
+    print(f"> Running: {' '.join(cmd)}")
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        print(result.stdout)
+        return result.stdout
+    except subprocess.CalledProcessError as e:
+        print("❌ Error:", e.stderr)
+        return None
+
+# ----------- USAGE EXAMPLES -------------
+
+if __name__ == "__main__":
+    # Check version
+    run_xvf_command("VERSION")
+    time.sleep(0.005)
+    # LED breath mode: orange color
+    run_xvf_command("led_effect", 1)
+    time.sleep(0.005)
+    run_xvf_command("led_color", "0xff8800")
+    time.sleep(0.005)
+    run_xvf_command("led_speed", 1)
+    time.sleep(0.005)
+    run_xvf_command("led_brightness", 255)
+    time.sleep(0.005)
+
+    # Save config
+    #run_xvf_command("save_configuration", 1)
+    #time.sleep(0.005)
+
+    # Uncomment to clear config
+    run_xvf_command("clear_configuration", 1)
+    time.sleep(0.005)
+
+```
+
 </TabItem>
 
-<TabItem value="rpi" label="Raspberry Pi / Linux">
+<TabItem value="rpi" label="Raspberry Pi / Linux(arm64)">
 
 ### 适用于 Raspberry Pi
 
@@ -251,7 +314,7 @@ if __name__ == "__main__":
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将通过多种方式为你提供支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

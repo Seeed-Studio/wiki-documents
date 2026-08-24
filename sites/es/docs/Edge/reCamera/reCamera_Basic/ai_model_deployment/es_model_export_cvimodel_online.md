@@ -1,6 +1,6 @@
 ---
-description:  exportar modelo en línea
-title:  exportar modelo en línea
+description: exportar modelo en línea
+title: exportar modelo en línea
 keywords:
   - Edge
   - reCamera
@@ -14,8 +14,8 @@ last_update:
   date: 2/14/2025
   author: yylin
 createdAt: '2026-07-19'
-updatedAt: '2026-07-19'
-url: https://wiki.seeedstudio.com/es/Edge/reCamera/reCamera_Basic/ai_model_deployment/recamera_model_export_online/
+updatedAt: '2026-07-30'
+url: https://wiki.seeedstudio.com/es/recamera_model_export_online/
 ---
 
 # Convertir y desplegar un modelo de detección YOLO personalizado en la interfaz web de reCamera

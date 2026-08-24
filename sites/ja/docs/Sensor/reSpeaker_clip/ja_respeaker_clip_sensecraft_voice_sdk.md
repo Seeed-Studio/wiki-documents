@@ -15,7 +15,7 @@ last_update:
   date: 08/07/2026
   author: Kasun Thushara
 createdAt: '2026-08-07'
-updatedAt: '2026-08-07'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/ja/respeaker_clip_sensecraft_voice_sdk/
 ---
 

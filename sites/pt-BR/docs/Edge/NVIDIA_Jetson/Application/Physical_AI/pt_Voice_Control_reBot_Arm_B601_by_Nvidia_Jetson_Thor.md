@@ -9,7 +9,7 @@ last_update:
   author: youjiang
 createdAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/pt-br/voice_control_rebot_arm/
-updatedAt: '2026-06-16'
+updatedAt: '2026-08-11'
 ---
 
 # Controle de voz do reBot Arm B601 com Nvidia Jetson Thor

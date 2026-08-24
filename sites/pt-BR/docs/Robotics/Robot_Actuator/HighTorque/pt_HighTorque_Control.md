@@ -12,7 +12,7 @@ last_update:
   date: 11/19/2025
   author: Tienjuiwong
 createdAt: '2025-11-19'
-updatedAt: '2026-03-16'
+updatedAt: '2026-08-03'
 url: https://wiki.seeedstudio.com/pt-br/hightorque_control/
 ---
 
