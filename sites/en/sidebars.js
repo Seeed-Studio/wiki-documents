@@ -1962,6 +1962,7 @@ const sidebars = {
                 id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro',
               },
               items: [
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_i2c_list',
                 {
                   type: 'category',
                   label: 'Playback & Recording',

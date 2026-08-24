@@ -1263,6 +1263,10 @@ After applying these settings, all six channels should capture non-zero audio.
 
 **Windows:** If some channels remain silent, try uninstalling the XVF3800 device driver from **Device Manager**, then unplug and reconnect the device. This allows Windows to reconfigure the device and driver.
 
+## How to Use I2C Commands to Control reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3?
+
+We provide a detailed I2C command list and code examples. Please refer to the [Using I2C Commands to Control reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3](/respeaker_xvf_3800_i2c_list) section.
+
 ## Resources
 
 - [ReSpeaker XVF3800 2D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf3800_2d_mechanical_drawing.pdf)
