@@ -10,7 +10,7 @@ last_update:
   date: 6/9/2026
   author: Janet
 createdAt: '2025-01-03'
-updatedAt: '2026-06-09'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/es/sensecap_a1102/
 ---
 
@@ -24,21 +24,21 @@ url: https://wiki.seeedstudio.com/es/sensecap_a1102/
 
 ## Introducción
 
-Modelos TinyML de IA de forma local, transmitiendo solo los resultados de la inferencia vía LoRaWAN® (863-928MHz) para mejorar la privacidad y la eficiencia energética. Funcionando a una resolución de 480×480 con 10 FPS, viene con tres modelos preimplementados para detección de personas, conteo de personas y lectura de medidores, mientras ofrece acceso sin código a más de 300 modelos preentrenados o entrenamiento de modelos personalizados a través de la plataforma [SenseCraft AI](https://sensecraft.seeed.cc/ai/#/home). También admite la implementación de modelos desde los frameworks [TensorFlow Lite](https://www.tensorflow.org/) y [PyTorch](https://pytorch.org/). Los usuarios pueden configurar el dispositivo y las bandas de frecuencia mediante la [SenseCraft App](https://sensecap-mate-download.seeed.cn/), y desplegar el sensor con clasificación IP66 en entornos interiores o exteriores hostiles. Con una batería integrada, lo que lo hace ideal para diversas aplicaciones de IA que requieren comunicación de largo alcance.
+Modelos TinyML de IA de forma local, transmitiendo solo los resultados de la inferencia a través de LoRaWAN® (863-928MHz) para mejorar la privacidad y la eficiencia energética. Funcionando a una resolución de 480×480 con 10 FPS, viene con tres modelos preimplementados para detección de personas, conteo de personas y lectura de medidores, mientras ofrece acceso sin código a más de 300 modelos preentrenados o entrenamiento de modelos personalizados a través de la plataforma [SenseCraft AI](https://sensecraft.seeed.cc/ai/#/home). También admite la implementación de modelos desde los frameworks [TensorFlow Lite](https://www.tensorflow.org/) y [PyTorch](https://pytorch.org/). Los usuarios pueden configurar el dispositivo y las bandas de frecuencia mediante la [SenseCraft App](https://sensecap-mate-download.seeed.cn/), y desplegar el sensor con clasificación IP66 en entornos interiores o exteriores hostiles. Con una batería integrada, lo que lo hace ideal para diversas aplicaciones de IA que requieren comunicación de largo alcance.
 
 ## Características
 
 - Cámara avanzada de Edge AI: Equipada con un potente procesador de cámara de visión basado en MCU que realiza inferencia local a una resolución de 480×480 a 10 FPS. Al transmitir solo los resultados de la inferencia, garantiza la privacidad de los datos y minimiza el uso del ancho de banda de la red.
 
-- Implementación y entrenamiento de modelos de IA sin código: Viene precargada con tres modelos de IA en el dispositivo (detección de personas, conteo de personas y lectura de medidores) para aplicaciones de visión listas para usar. Se integra de forma nativa con SenseCraft AI, una plataforma web que ofrece más de 300 modelos preentrenados para implementación instantánea y un flujo de trabajo de entrenamiento sencillo en 3 pasos para modelos de clasificación y detección. Esto permite un entrenamiento e implementación rápidos de modelos sin necesidad de experiencia en programación. Además, los dispositivos también admiten modelos de IA personalizados convertidos desde los frameworks TensorFlow y PyTorch para implementación en el borde.
+- Implementación y entrenamiento de modelos de IA sin código: Viene precargada con tres modelos de IA en el dispositivo (detección de personas, conteo de personas y lectura de medidores) para aplicaciones de visión listas para usar. Se integra de forma nativa con SenseCraft AI, una plataforma web que ofrece más de 300 modelos preentrenados para implementación instantánea y un flujo de trabajo de entrenamiento sencillo en 3 pasos para modelos de clasificación y detección. Esto permite un entrenamiento y una implementación rápidos de modelos sin necesidad de experiencia en programación. Además, los dispositivos también admiten modelos de IA personalizados convertidos desde los frameworks TensorFlow y PyTorch para implementación en el borde.
 
 - Conectividad LoRaWAN®: Admite bandas de frecuencia globales (863-928 MHz) con un alcance de transmisión de hasta 10 km en condiciones óptimas, lo que permite una comunicación fiable a larga distancia.
 
-- 2 opciones de alimentación y vida útil de la batería: Equipado con una batería SOCl2 tipo D de 19Ah y también compatible con una fuente de alimentación DC externa mediante una caja de conexiones opcional.
+- 2 opciones de alimentación y vida útil de la batería: Equipado con una batería SOCl2 tipo D de 19Ah y también compatible con una fuente de alimentación de CC externa a través de una caja de conexiones opcional.
 
-- Durabilidad ambiental con clasificación IP66: Presenta protección con clasificación IP66 contra la entrada de polvo y chorros de agua fuertes. Funciona de forma fiable en temperaturas de 0°C a 70°C, adecuado para diversos despliegues en interiores y exteriores.
+- Durabilidad ambiental con clasificación IP66: Presenta protección con clasificación IP66 contra la entrada de polvo y chorros de agua fuertes. Funciona de forma fiable a temperaturas de 0°C a 70°C, adecuado para diversos despliegues en interiores y exteriores.
 
-- Integración con SenseCraft Cloud: Incluye la aplicación móvil SenseCraft Mate y un portal web para una fácil configuración del dispositivo, gestión del dispositivo y visualización rápida de datos. Cuenta con soporte de API abierta y acceso de prueba GRATUITO durante 3 meses, y es compatible con plataformas IoT de terceros.
+- Integración con SenseCraft Cloud: Incluye la aplicación móvil SenseCraft Mate y un portal web para una fácil configuración del dispositivo, gestión del dispositivo y visualización rápida de datos. Cuenta con compatibilidad con API abierta y acceso de prueba GRATUITO durante 3 meses, y es compatible con plataformas IoT de terceros.
 
 ## Especificación
 
@@ -83,7 +83,7 @@ Modelos TinyML de IA de forma local, transmitiendo solo los resultados de la inf
     <tr>
         <th>Fuente de alimentación</th>
         <td align="center">
-        Batería integrada o DC 12V/1A (con cableado de caja de conexiones externa)
+        Batería integrada o CC 12V/1A (con cableado de caja de conexiones externa)
         </td>
     </tr>
  <tr>
@@ -132,9 +132,9 @@ Modelos TinyML de IA de forma local, transmitiendo solo los resultados de la inf
 
 ## Opciones de alimentación
 
-- Opción 1: El SenseCAP A1102 funciona en modo cíclico utilizando una batería interna Li-SOCl2 tipo D de 19Ah. La batería está disponible comercialmente para un reemplazo sencillo y permite el despliegue autónomo en exteriores sin necesidad de alimentación externa.
+- Opción 1: El SenseCAP A1102 funciona en modo cíclico utilizando una batería interna Li-SOCl2 tipo D de 19Ah. La batería está disponible comercialmente para un fácil reemplazo y permite el despliegue autónomo en exteriores sin necesidad de alimentación externa.
 
-- Opción 2: El SenseCAP A1102 admite funcionamiento constante mediante una conexión a una fuente de alimentación DC de 12V. Se necesita una caja de conexiones adicional a juego para una instalación y montaje sencillos.
+- Opción 2: El SenseCAP A1102 admite funcionamiento constante mediante una conexión a una fuente de alimentación de CC de 12V. Se necesita una caja de conexiones adicional a juego para una instalación y montaje sencillos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/39.png" style={{width:900, height:'auto'}}/></div>
 
@@ -163,7 +163,7 @@ Dado que nuestro enfoque aquí es describir el proceso de entrenamiento del mode
 
 ## Registros Modbus
 
-| Registro | Dirección | Tipo de datos | Acceso | Descripción |
+| Registro | Dirección | Tipo de dato | Acceso | Descripción |
 | :--- | :--- | :--- | :--- | :--- |
 | **Dirección del dispositivo** | 0x0000 | uint16_t | R/W | Dirección del dispositivo Modbus. Predeterminado = 1, máximo = 247, configurable |
 | **Baud Rate** | 0x0001 | uint16_t | R/W | Baud rate de Modbus. Predeterminado = 96 (significa 9600). Configurable. De forma predeterminada solo admite 8N1 |
@@ -177,11 +177,6 @@ Dado que nuestro enfoque aquí es describir el proceso de entrenamiento del mode
 | **Resultado 6** | 0x100A | int32_t | R |  |
 | **Resultado 7** | 0x100C | int32_t | R |  |
 | **Resultado 8** | 0x100E | int32_t | R |  |
-
-## Recursos
-
-- [Repositorio de GitHub de SenseCAP A1102](https://github.com/Seeed-Studio/SenseCAP-A1102) - Código fuente y ejemplos para el SenseCAP A1102.
-
 
 ## Preguntas frecuentes
 
@@ -197,13 +192,13 @@ Dado que nuestro enfoque aquí es describir el proceso de entrenamiento del mode
 
 - El SenseCAP A1102 tiene un rendimiento más potente en comparación con el [SenseCAP A1101](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html), ofreciendo mejores capacidades de Vision AI, más modelos y frameworks compatibles, y la capacidad de transmitir imágenes de fotogramas clave vía Wi‑Fi (requiere que los usuarios desarrollen firmware basado en la XIAO).
 
-**¿Es posible reemplazar la cámara o disponer de una versión personalizada del sensor SenseCAP Vision AI?**
+**¿Es posible reemplazar la cámara o tener una versión personalizada del sensor SenseCAP Vision AI?**
 
 - Sí, si tienes un requisito de gran volumen, ponte en contacto con nosotros en sensecap@seeed.cc.
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
