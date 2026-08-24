@@ -2,7 +2,7 @@
 description: Kit Básico Sidekick para Arduino V2
 title: Kit Básico Sidekick para Arduino V2
 keywords:
-  - Kit com Cursos
+  - Kit com cursos
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sidekick_Basic_Kit_for_Arduino_V2
 sku: 110060025
@@ -10,7 +10,7 @@ last_update:
   date: 2/17/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-03-13'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/pt-br/Sidekick_Basic_Kit_for_Arduino_V2/
 ---
 
@@ -25,8 +25,8 @@ sku:  110060025
 --- -->
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/BasicKit.jpg)
 
-O Kit Básico Sidekick para Arduino foi projetado para ser usado com sua placa Arduino / Seeeduino / Seeeduino ADK / Maple Lilypad ou qualquer placa de MCU. Ele contém tudo o que é necessário para um usuário iniciante conectar seu computador a um Arduino. Inclui muitos dos acessórios mais populares para projetos de faça-você-mesmo (DIY): como protoboard, jumpers, LEDs coloridos, resistores, buzzer, etc.
-Todos esses componentes vêm em sua própria caixa prática, fáceis de transportar e com bagunça mínima.
+O Kit Básico Sidekick para Arduino foi projetado para ser usado com sua placa Arduino / Seeeduino / Seeeduino ADK / Maple Lilypad ou qualquer placa MCU. Ele contém tudo o que é necessário para que um usuário iniciante conecte seu computador a um Arduino. Inclui muitos dos acessórios mais populares para projetos DIY: como protoboard, jumpers, LEDs coloridos, resistores, buzzer, etc.
+Todos esses itens vêm em sua própria caixa prática, o que facilita o transporte e reduz a bagunça ao mínimo.
 
 <p style={{textAlign:'center'}}><a href="https://www.seeedstudio.com/Sidekick-Basic-Kit-for-Arduino-V2-p-1858.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border={0} /></a></p>
 
@@ -45,12 +45,12 @@ Todos esses componentes vêm em sua própria caixa prática, fáceis de transpor
 | Resistor                | 330R x 10 + 1k x 10 + 10k x 10 |
 | Chave de inclinação     | 1                              |
 | Termistor               | 1                              |
-| Fotoresistor            | 1                              |
+| Sensor de luz ambiente  | 1                              |
 | Diodo                   | 1                              |
 | Buzzer                  | 1                              |
 | Botão                   | 1                              |
 | Chave                   | 5                              |
-| Mini Servo              | 1                              |
+| Mini servo              | 1                              |
 | Potenciômetro com knob  | 1                              |
 | Fio jumper para protoboard | 5x longo, 20 x curto        |
 | Caixa                   | 4                              |
@@ -59,127 +59,126 @@ Todos esses componentes vêm em sua própria caixa prática, fáceis de transpor
 
 **Corrente e Tensão**
 
-Corrente é a taxa de fluxo de carga elétrica em um condutor. Tensão é a diferença de potencial (força elétrica motriz) aplicada entre dois pontos para conduzir corrente. Corrente é expressa em Amperes (A) e Tensão é expressa em Volts (V).
+Corrente é a taxa de fluxo de carga elétrica em um condutor. Tensão é a diferença de potencial (força eletromotriz) aplicada entre dois pontos para conduzir corrente. Corrente é expressa em Ampères (A) e Tensão em Volts (V).
 
 **Resistor**
 
 Resistores são obstáculos ao fluxo de corrente em um condutor. Eles são usados para limitar o fluxo de corrente para um dispositivo eletrônico, como uma lâmpada. A resistência ao fluxo de corrente é expressa em Ohms (Ω). Eles são divididos em **resistor fixo** e **resistor variável (POT)**.
 
-- **Conectando Resistores**
+- **Conectando resistores**
 
-    Resistores podem ser conectados de dois tipos diferentes: em paralelo ou em série entre si.
+    Os resistores podem ser conectados de dois tipos diferentes: em paralelo ou em série entre si.
 
-- **Resistores em Série**
+- **Resistores em série**
 
     Quando os resistores são conectados em série, a resistência equivalente total será igual à soma de todos os valores dos resistores em série.
 
-- **Resistores em Paralelo**
+- **Resistores em paralelo**
 
-    Em paralelo, o recíproco da resistência equivalente total é igual à soma dos recíprocos de cada resistor.
+    Em paralelo, o inverso da resistência equivalente total é igual à soma dos inversos de cada resistor.
 
 **Lei de Ohm**
 
-As relações entre Corrente, Tensão e Resistência são regidas pela Lei de Ohm - que afirma que "A corrente através de um condutor (I Amperes) entre dois pontos é diretamente proporcional à diferença de potencial ou tensão entre esses dois pontos (V Volts), e inversamente proporcional à resistência entre eles (R Ohms)"
-ou seja, I = V / R. Logo, V = IR ou R = V / I. O seguinte triângulo da Lei de Ohm pode ser usado para lembrar a relação entre V, I e R. A linha vertical indica operação de multiplicação e a linha horizontal indica operação de divisão.
+As relações entre Corrente, Tensão e Resistência são regidas pela Lei de Ohm - que afirma que "A corrente através de um condutor (I Ampères) entre dois pontos é diretamente proporcional à diferença de potencial ou tensão entre esses dois pontos (V Volts), e inversamente proporcional à resistência entre eles (R Ohms)"
+ou seja, I = V / R. Portanto, V = IR ou R = V / I. O triângulo da Lei de Ohm a seguir pode ser usado para lembrar a relação entre V, I e R. A linha vertical indica operação de multiplicação e a linha horizontal indica operação de divisão.
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Ohm-s_law_triange.jpg)
 
-ex.: Portanto, para saber a corrente I, dividimos V por R.
+ex: Portanto, para saber a corrente I, dividimos V por R.
 
 **Protoboard**
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Breadboard_.jpg)
 
-**Protoboard** é um dispositivo de prototipagem para circuitos eletrônicos. É muito útil para conectar componentes eletrônicos e fazer um circuito sem solda. A protoboard consiste em linhas e colunas de furos com contatos metálicos para inserir componentes. A protoboard fornecida com o Kit Básico Sidekick para Arduino é organizada em colunas de **2 X 30 furos** e linhas de **4 X vinte furos**. Esses furos são conectados internamente de uma maneira ilustrada abaixo.
+A **protoboard** é um dispositivo de prototipagem para circuitos eletrônicos. É muito útil para conectar componentes eletrônicos e fazer um circuito sem solda. A protoboard consiste em linhas e colunas de furos com contatos metálicos para inserir componentes. A protoboard fornecida com o Kit Básico Sidekick para Arduino é organizada em colunas de **2 X 30 furos** e linhas de **4 X vinte furos**. Esses furos são conectados internamente de uma maneira ilustrada abaixo.
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_Breadboard_Internal_Connections.jpg)
 
-**Resistores Fixos**
+**Resistores fixos**
 
-Os resistores fornecidos com o Kit Básico são feitos de carbono e são do tipo valor fixo. O valor da resistência é marcado por faixas coloridas. Você pode obter o valor a partir da tabela de código de cores de resistores.
+Os resistores fornecidos com o Kit Básico são feitos de carbono e são do tipo valor fixo. O valor da resistência é marcado pelas faixas coloridas. Você pode obter o valor a partir da tabela de código de cores de resistores.
 
 - A _primeira faixa_ indica o **primeiro dígito** do valor da resistência.
 
 - A _segunda faixa_ indica o **segundo dígito**.
 
-- A _terceira faixa_ indica o valor do **multiplicador** do resistor.
+- A _terceira faixa_ indica o **multiplicador** do resistor.
 
 - A _quarta faixa_ indica o **valor de tolerância**.
 
 **Potenciômetro (POT)**
 
-POT é um resistor variável cuja resistência pode ser alterada girando o knob. Ele tem três terminais - os terminais nos lados ambilaterais do resistor são conectados às extremidades de um condutor feito de material resistivo. O terminal do meio é conectado a um cursor que se move sobre o material resistivo. O valor da resistência muda proporcionalmente à posição do knob.
+POT é um resistor variável cuja resistência pode ser alterada girando o knob. Ele possui três terminais - os terminais nos lados ambilaterais do resistor são conectados às extremidades do condutor, que é feito de material resistivo. O terminal do meio é conectado a um cursor que se move sobre o material resistivo. O valor da resistência muda proporcionalmente à posição do knob.
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_POT.png)
 
 **Termistores**
 
-Termistores são resistores especiais cuja resistência será alterada com a temperatura ao seu redor. Eles fornecem um meio muito útil e conveniente de detectar a diferença de temperatura.
+Termistores são resistores especiais cuja resistência muda com a temperatura ao seu redor. Eles fornecem uma forma muito útil e conveniente de detectar a diferença de temperatura.
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Thermistor.JPG)
 
-**Resistores Dependentes de Luz (LDR)**
+**Sensor de luz**
 
-LDR mudará a resistência quando a intensidade da luz que incide sobre ele mudar. Eles também são chamados de fotocélula. Ele oferece resistência máxima quando não há luz incidindo sobre ele e fornece resistência mínima quando exposto à luz intensa. É feito de material fotossensível como sulfeto de cádmio e pode ser conectado ao circuito. Pode ser usado como elemento sensor de luz.
+O sensor de luz detecta a intensidade da luz ambiente e gera um sinal que muda de acordo com a quantidade de luz recebida. Ele pode ser usado para detecção de luz e projetos relacionados a brilho.
+Ao contrário dos fotoresistores tradicionais, este sensor é um dispositivo semicondutor polarizado. Certifique-se de que o sensor esteja conectado com a polaridade correta ao montar circuitos.
 
-![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_LDR.JPG)
+**Diodos emissores de luz**
 
-**Diodos Emissores de Luz**
-
-LEDs acendem quando estão polarizados diretamente. Eles são encapsulados em uma carcaça transparente e vêm em várias cores como vermelho, verde e azul. LEDs são feitos de arseneto fosfeto de gálio e, alterando-se as proporções de arsênio e fósforo, podem ser obtidas cores diferentes. LEDs monocromáticos têm dois terminais, Anodo (+ve) e Catodo (-ve). LEDs tricolores têm 4 terminais - um ânodo e 3 cátodos para cada cor. Os LEDs podem ser usados em painéis de exibição.
+LEDs acendem quando estão polarizados diretamente. Eles são encapsulados em uma carcaça transparente e vêm em várias cores como vermelho, verde e azul. LEDs são feitos de arseneto fosfeto de gálio e, alterando as proporções de arsênico e fósforo, podem ser obtidas cores diferentes. LEDs monocromáticos têm dois terminais, ânodo (+ve) e cátodo (-ve). LEDs tricolores têm 4 terminais - um ânodo e 3 cátodos, um para cada cor. Os LEDs podem ser usados em painéis de exibição.
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_RGB_LED_.JPG)
 
 **Chave**
 
-As chaves são usadas para fechar ou abrir o circuito. As chaves fornecidas com o Kit Básico têm dois tipos - chave tipo push button e chave deslizante.
+As chaves são usadas para fechar ou abrir o circuito. As chaves fornecidas com o Kit Básico têm dois tipos - chave de botão (push button) e chave deslizante (slide switch).
 
-- **Chave Push Button**
+- **Chave de botão (Push Button)**
 
-    O circuito ficará fechado enquanto você pressionar a chave push button.
+    O circuito ficará fechado enquanto você pressionar a chave de botão.
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Push_Button_Switch_.JPG)
 
-- **Chave Deslizante**
+- **Chave deslizante (Slide Switch)**
 
-    A chave deslizante é uma chave simples de duas posições. Ela pode ser usada para abrir ou fechar um circuito ao colocá-la na posição apropriada.
+    A chave deslizante é uma chave simples de duas posições. Ela pode ser usada para abrir ou fechar um circuito ajustando-a para a posição apropriada.
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Slide_Switch_.JPG)
 
-- **Chave de Inclinação**
+- **Chave de inclinação (Tilt Switch)**
 
     A chave de inclinação contém dois terminais que são conectados ao circuito, ela _fecha_o circuito quando é_inclinada horizontalmente_enquanto_abre_o circuito quando _inclinada verticalmente_.
 
 **Capacitores**
 
-Capacitores são usados para armazenar carga elétrica. Eles são classificados em dois tipos diferentes: Capacitor eletrolítico e Capacitor de disco cerâmico. Capacitores são expressos em microfarads (uF).
+Capacitores são usados para armazenar carga elétrica. Eles são classificados em dois tipos diferentes: capacitor eletrolítico e capacitor cerâmico de disco. Capacitores são expressos em microfarads (uF).
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Capacitor.JPG)
 
-- **Conectando o Capacitor**
+- **Conectando o capacitor**
 
-    Capacitores podem ser conectados em dois tipos de arranjo em um circuito, como mostrado abaixo.
+    Os capacitores podem ser conectados em dois tipos de arranjo em um circuito, como mostrado abaixo.
 
-- **Capacitores em Série**
+- **Capacitores em série**
 
-    A capacitância equivalente total, quando dois ou mais capacitores são conectados em série entre si, é igual à soma dos recíprocos dos valores de capacitância individuais.
+    A capacitância equivalente total, quando dois ou mais capacitores são conectados em série entre si, é igual à soma dos inversos dos valores individuais de capacitância.
 
-- **Capacitores em Paralelo**
+- **Capacitores em paralelo**
 
-    A capacitância equivalente total, quando dois ou mais capacitores estão conectados em paralelo, é igual à soma das capacitâncias individuais.
+    A capacitância equivalente total, quando dois ou mais capacitores são conectados em paralelo, é igual à soma das capacitâncias individuais.
 
-- **Capacitores Eletrolíticos**
+- **Capacitores eletrolíticos**
 
     Capacitores eletrolíticos normalmente têm pequeno volume físico e grande valor de capacitância. Eles são classificados em capacitores eletrolíticos polarizados e não polarizados.
     Metais como alumínio, tântalo, vanádio e bismuto são usados para formar as folhas de ânodo e cátodo.
 
-- **Capacitores de Disco Cerâmico**
+- **Capacitores cerâmicos de disco**
 
-    Os Capacitores Cerâmicos usam dielétrico cerâmico com finas películas metálicas como eletrodos ligados à cerâmica. No tipo disco, a prata do capacitor é fixada em ambos os lados da cerâmica para formar as placas condutoras. Os capacitores de disco são usados apenas para pequenos valores de capacitância.
+    Os capacitores cerâmicos usam dielétrico cerâmico com finos filmes metálicos como eletrodos ligados à cerâmica. No tipo disco, a prata do capacitor é fixada em ambos os lados da cerâmica para formar as placas condutoras. Os capacitores de disco são usados apenas para pequenos valores de capacitância.
 
 **Buzzer**
 
-Um buzzer é um dispositivo de sinalização sonora, que pode ser mecânico, eletromecânico ou piezoelétrico. Ele produz vários sinais sonoros com base na oscilação do material usado nele. Eles são comumente usados em alarmes e temporizadores.
+Um buzzer é um dispositivo de sinalização sonora, que pode ser mecânico, eletromecânico ou piezoelétrico. Ele produz vários sinais de áudio com base na oscilação do material usado nele. Eles são comumente usados em alarmes e temporizadores.
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Buzzer.png)
 
@@ -189,11 +188,11 @@ O buzzer pode ser conectado a saídas digitais e emitirá um tom quando a saída
 
 **Diodo**
 
-Um diodo é um material semicondutor que conduz corrente apenas em uma direção. Ele começa a conduzir somente depois que a tensão de alimentação é maior que o _potencial de barreira_. Age como uma chave fechada em condição de polarização direta e age como uma chave aberta quando está em polarização reversa. Os diodos são classificados com base no material semicondutor e podem ser usados para fabricar, tais como diodo de junção PN, diodo zener, diodo emissor de luz etc.
+Um diodo é um material semicondutor que conduz corrente apenas em uma direção. Ele começa a conduzir somente depois que a tensão de alimentação é maior que o _potencial de barreira_. Atua como uma chave fechada em condição de polarização direta e como uma chave aberta quando está em polarização reversa. Os diodos são classificados com base no material semicondutor e podem ser usados para fabricar, como diodo de junção PN, diodo zener, diodo emissor de luz etc.
 
 - **Polarização de um diodo**
 
-    Aplicar tensão a um diodo é chamado de polarização de um diodo. O diodo fica **polarizado diretamente (forward biased)** quando uma **tensão positiva de alimentação** é aplicada entre os terminais e começa a conduzir acima de _0,7v para um diodo de silício_ e _0,3v para um diodo de germânio_. Quando uma **tensão negativa** é aplicada entre os terminais de um diodo, diz-se que ele está**_polarizado reversamente_**. O diodo é danificado quando a tensão de polarização reversa excede a tensão de ruptura_._
+    Aplicar tensão a um diodo é chamado de polarizar um diodo. O diodo fica **polarizado diretamente** quando uma tensão de **alimentação positiva** é aplicada aos terminais e começa a conduzir acima de _0,7 V para um diodo de silício_ e _0,3 V para um diodo de germânio_. Quando uma **tensão negativa** é aplicada aos terminais de um diodo, diz‑se que ele está **_polarizado reversamente_**. O diodo é danificado quando a tensão de polarização reversa excede a _tensão de ruptura_.
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Sidekick_Diode.JPG)
 
@@ -232,7 +231,7 @@ void loop()
 }
 ```
 
-**2. Display de LED em Execução**
+**2. Display de LED Correndo**
 
 - **Hardware**
 
@@ -273,15 +272,15 @@ void loop()
 }
 ```
 
-**3. Fale com o Arduino : Conectando uma Chave Pushbutton**
+**3. Fale com o Arduino : Conectando um Pushbutton**
 
 - **Hardware**
 
   - Conecte um LED ao pino digital 8 como mostrado abaixo. O resistor de 330 Ohms limita a corrente que flui para o LED.
 
-  - Conecte uma das chaves pushbutton ao pino digital 12 e a outra ao GND através de um resistor de 10K.
+  - Conecte uma das chaves de botão de pressão ao pino digital 12 e a outra ao GND através de um resistor de 10K.
 
-  - Conecte a outra extremidade do pushbutton a +5V.
+  - Conecte a outra extremidade do botão de pressão a +5V.
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_Pushbutton_LED.jpg)
 
@@ -335,7 +334,7 @@ void loop()
     }
 ```
 
-- O LED agora acende com o circuito aberto e apaga com o circuito fechado.
+- Agora o LED acende com o circuito aberto e apaga com o circuito fechado.
 
 **4 Analógico: POT**
 
@@ -347,7 +346,7 @@ void loop()
 
   - Monte o potenciômetro na protoboard.
 
-  - Conecte o terminal direito do potenciômetro a +5v.
+  - Conecte o terminal direito do potenciômetro a +5V.
 
   - Conecte o terminal do meio do potenciômetro a qualquer um dos pinos de entrada analógica (0-5).
 
@@ -377,14 +376,14 @@ void loop()
 }
 ```
 
-**5. Arco-Íris na Mesa: LED Tricolor**
+**5. Arco‑íris na Mesa: LED Tricolor**
 
 - **Hardware**
 
-    O LED RGB fornecido com o kit básico é do tipo ânodo comum. O terminal mais longo é o ânodo. Os outros três terminais são cátodos para Vermelho, Verde e Azul respectivamente.
+    O LED RGB fornecido com o kit básico é do tipo ânodo comum. O terminal mais longo é o ânodo. Os outros três terminais são cátodos para Vermelho, Verde e Azul, respectivamente.
 
   - Conecte os cátodos do LED RGB aos pinos digitais 9, 10 e 11 através de um resistor de 330 Ohms cada.
-  - Conecte o ânodo a +5v
+  - Conecte o ânodo a +5V
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_RGB_LED_Display.jpg)
 
 **Software**
@@ -423,7 +422,7 @@ void loop()  {
 
   - Conecte o ânodo do buzzer ao pino digital 11.
 
-  - Conecte o negativo do buzzer ao GND
+  - Conecte o terminal negativo do buzzer ao GND
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2/img/Arduino_Sidekick_Music.jpg)
 
 - **Software**
@@ -493,12 +492,12 @@ void loop()
 
 - **Hardware**
 
-  - Conecte o fio vermelho do servo motor à alimentação de +5v.
+  - Conecte o fio vermelho do servo motor à alimentação de +5V.
   - Conecte o fio preto do servo ao terra.
 
   - Conecte o fio amarelo do servo a qualquer um dos pinos PWM no Arduino.
 
-  - Conecte o terminal direito do potenciômetro a +5v.
+  - Conecte o terminal direito do potenciômetro a +5V.
 
   - Conecte o terminal do meio do potenciômetro a qualquer um dos pinos de entrada analógica (0-5).
 
@@ -543,11 +542,11 @@ void loop()
 
 - Há muitos LEDs e resistores para o seu primeiro projeto, incluindo um LED RGB, que é um único encapsulamento de LED com três LEDs de cores primárias dentro. Ajustando a intensidade dos diferentes LEDs de cores primárias, as cores se misturam e produzem todas as cores do arco-íris.
 - Há até um cartão educativo de instruções para ler os valores dos resistores.
-- A chave de inclinação é um dispositivo muito simples com uma pequena esfera de metal dentro. Se o dispositivo for inclinado para um lado, a esfera de metal tocará os contatos elétricos. Este sensor é útil para uma variedade de projetos, como um alarme de ladrão DIY.
-- O termistor é útil para projetos quando você quer detectar a temperatura.
-- O fotoresistor pode detectar luz e funciona com lâmpadas e luz do sol. Fotoresistores são comumente usados para detectar quando está escuro e acender as luzes à noite.
+- O tilt switch é um dispositivo muito simples com uma pequena esfera de metal dentro. Se o dispositivo for inclinado para um lado, a esfera de metal tocará os contatos elétricos. Este sensor é útil para uma variedade de projetos, como um alarme de ladrão DIY.
+- O termistor é útil para projetos em que você deseja detectar a temperatura.
+- O fotoresistor pode detectar luz e funciona com lâmpadas e luz solar. Fotoresistores são comumente usados para detectar quando está escuro e acender as luzes à noite.
 - O buzzer do kit funciona especialmente bem para tocar o tema do Mario Brothers.
-- Há um mini motor de servo. Você pode usá-lo para abrir e fechar um cadeado de segurança, interruptor de luz ou válvula. Você pode até usá-lo para fazer uma mini catapulta.
+- Há um motor Mini Servo. Você pode usá-lo para abrir e fechar um trinco, interruptor de luz ou válvula. Você pode até usá-lo para fazer uma mini catapulta.
 - O potenciômetro é um ótimo dispositivo de entrada. Você pode usá-lo para controlar o ângulo do braço do Servo ou a intensidade dos LEDs.
 
 ## Recursos
@@ -556,13 +555,13 @@ void loop()
 
 ## Projetos
 
-**Georgia Tech Primeiros Passos com TI LaunchPad Workshop 2015**: Experimente alguns circuitos básicos em protoboard com um microcontrolador TI
+**Georgia Tech Introdução ao Workshop TI LaunchPad 2015**: Experimente alguns circuitos básicos de protoboard com um microcontrolador TI
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/launchpad/gtech2015-aa131c/embed' width='350'></iframe>
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

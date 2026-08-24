@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: 概要
-description: SenseCraft Data Platform のクイックスタートガイド — 安全で信頼性の高いクラウドプラットフォームで SenseCAP デバイスを管理し、センサーデータを可視化します。
+title: SenseCraft Data Platform クイックスタート
+description: このステップバイステップのクイックスタートガイドでは、アカウントを作成し、SenseCAP デバイスをバインドし、SenseCraft Data Platform でセンサーデータを表示する方法を説明します。
 keywords:
   - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -12,7 +12,7 @@ last_update:
   date: 06/06/2025
   author: Matthew
 createdAt: '2023-03-01'
-updatedAt: '2026-07-13'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/ja/cloud/sensecraft-data/sensecraft-data-platform/overview/
 ---
 
@@ -20,22 +20,24 @@ url: https://wiki.seeedstudio.com/ja/cloud/sensecraft-data/sensecraft-data-platf
 
 :::tip
 **お知らせ：**  
-2025 年より、**SenseCAP Portal** は正式に **SenseCraft Data Platform** に名称変更されました。機能はそのままに、AIoT およびマルチセンサーのシナリオをより良くサポートするための改善が継続的に行われています。
+2025 年より、**SenseCAP Portal** は正式に **SenseCraft Data Platform** に名称変更されました。機能はそのままに、AIoT およびマルチセンサーのシナリオをより良くサポートするための継続的な強化が行われています。
 :::
+
+このガイドでは、アカウントの設定、アプリへのアクセス、デバイスのバインド、およびセンサーデータの確認について説明します。
 
 SenseCraft Data Platform をどのように使うのでしょうか？さっそく始めましょう！
 
 ## はじめに
 
-SenseCraft Data Platform の主な機能は、SenseCAP デバイスの管理とデータの保存です。Microsoft の安全で信頼性の高いクラウドサービスである Azure 上に構築されています。アカウントを申請し、すべてのデバイスをこのアカウントに紐付けることができます。SenseCraft は Web プラットフォームと API を提供します。Web プラットフォームには、ダッシュボード、デバイス管理、データ管理、アクセスキー管理が含まれ、API はユーザーによるさらなる開発のために公開されています。
+SenseCraft Data Platform の主な機能は、SenseCAP デバイスを管理し、データを保存することです。これは Microsoft の安全で信頼性の高いクラウドサービスである Azure 上に構築されています。アカウントを申請し、すべてのデバイスをこのアカウントにバインドできます。SenseCraft は Web プラットフォームと API を提供します。Web プラットフォームには、ダッシュボード、デバイス管理、データ管理、アクセスキー管理が含まれ、API はユーザーによるさらなる開発のために公開されています。
 
 ## Web サイト
 
-- グローバルステーション: <a href="https://sensecap.seeed.cc/">https://sensecap.seeed.cc</a>
+- グローバルステーション：<a href="https://sensecap.seeed.cc/">https://sensecap.seeed.cc</a>
 
 ## 新しいアカウントを作成する
 
-① 「Register Account」を選択し、メールアドレス情報を入力して「Register」をクリックします。登録メールがあなたのメールボックスに送信されます。
+① 「Register Account」を選択し、メール情報を入力して「Register」をクリックします。登録メールがあなたのメールボックスに送信されます。
 
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-register-1.jpg)
 
@@ -46,7 +48,7 @@ SenseCraft Data Platform の主な機能は、SenseCAP デバイスの管理と�
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-register-3.jpg)
 
 :::note
-メールが見つからない場合は、自動的に「spam」と判定され、「trash can」に入れられている可能性があります。<br />
+メールが見つからない場合は、自動的に「スパム」と判定され、「ゴミ箱」に入れられている可能性があります。<br />
 ログイン時にパスワードを忘れた場合は、メールを通じて再設定できます。
 :::
 
@@ -54,12 +56,12 @@ SenseCraft Data Platform の主な機能は、SenseCAP デバイスの管理と�
 
 `SenseCraft App` をインストールしてログインします。
 
-- Android: <a href="http://sensecap-app-download.seeed.cn/">Download App</a> からダウンロードし、QR コードをスキャンします。
-- iOS: App Store で「SenseCraft」を検索します。
+- Android：<a href="http://sensecap-app-download.seeed.cn/">Download App</a> からダウンロードし、QR コードをスキャンします。
+- iOS：App Store で「SenseCraft」を検索します。
 
 ## デバイスをバインドする
 
-各 SenseCAP デバイスには、下図のようなラベルが筐体に貼付されています。EUI は SenseCAP デバイスの一意のコードです。Key は暗号化フィールドであり、無視してかまいません。
+各 SenseCAP デバイスには、下図のように筐体にラベルが貼付されています。EUI は SenseCAP デバイスの一意のコードです。Key は暗号化フィールドであり、無視してかまいません。
 
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/label.jpg)
 
@@ -68,7 +70,7 @@ SenseCAP アプリのメインページで「Bind」ボタンをクリックし�
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview1.png" /></div>
 
-SenseCAP Platform 上で、Dashboard ページに移動し、**Bind Device** をクリックします。
+SenseCAP Platform では、Dashboard ページに移動し、**Bind Device** をクリックします。
 
 <div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview2.png" /></div>
 
@@ -81,3 +83,9 @@ SenseCAP Platform 上で、Dashboard ページに移動し、**Bind Device** を
 `SenseCraft Data Platform` にログインし、「Device/Sensor Node」セクションでデバイスのステータスと基本情報を確認し、「Data/Table」セクションでセンサーデータを表示します。
 
 <div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview4.png" /></div>
+
+## 関連ガイド
+
+- [ゲートウェイとセンサーノードを管理する](/ja/sensecraft-data-platform/tutorials/device-management/)
+- [Dashboard でデバイスステータスとセンサーデータを監視する](/ja/sensecraft-data-platform/tutorials/dashboard/)
+- [最初の SenseCraft Data Platform HTTP API リクエストを送信する](/ja/sensecraft-data-platform/api/http-api/quick-start/)

@@ -19,7 +19,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-10'
-updatedAt: '2026-08-02'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_ros2_integration/
 ---
 
@@ -169,14 +169,6 @@ Se prefiere el repositorio oficial Seeed-Projects:
 git clone https://github.com/Seeed-Projects/reBotArmController_ROS2.git rebotarm_ros2
 cd rebotarm_ros2
 ```
-
-También puedes usar el repositorio de desarrollo actual:
-
-```bash
-git clone https://github.com/EclipseaHime017/reBotArmController_ROS2.git rebotarm_ros2
-cd rebotarm_ros2
-```
-
 ### Paso 4. Instalar motorbridge
 
 Instala `motorbridge` desde la fuente oficial de PyPI:
@@ -195,7 +187,7 @@ python3 -m pip install --user --index-url https://pypi.org/simple motorbridge
 
 ```bash
 mkdir -p third_party
-git clone https://github.com/vectorBH6/reBotArm_control_py.git third_party/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git third_party/reBotArm_control_py
 ```
 
 ### Paso 6. Compilar el espacio de trabajo
@@ -819,8 +811,8 @@ Después de cargar Jazzy, deberías ver una ruta similar a `/opt/ros/jazzy/lib/p
 
 ## Contacto
 
-- Soporte técnico: [Submit an Issue](https://github.com/EclipseaHime017/reBotArmController_ROS2/issues)
-- Repositorio del proyecto: [Github](https://github.com/EclipseaHime017/reBotArmController_ROS2)
+- Soporte técnico: [Submit an Issue](https://github.com/Seeed-Projects/reBotArmController_ROS2/issues)
+- Repositorio del proyecto: [Github](https://github.com/Seeed-Projects/reBotArmController_ROS2)
 - Foro: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## Referencias
@@ -828,5 +820,5 @@ Después de cargar Jazzy, deberías ver una ruta similar a `/opt/ros/jazzy/lib/p
 - [reBot Arm B601-RS Quick Start](https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/)
 - [Documentación de ROS2 Humble](https://docs.ros.org/en/humble/)
 - [Documentación de ROS2 Jazzy](https://docs.ros.org/en/jazzy/)
-- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)
+- [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py)
 - [Documentación de MoveIt 2](https://moveit.picknik.ai/main/index.html)

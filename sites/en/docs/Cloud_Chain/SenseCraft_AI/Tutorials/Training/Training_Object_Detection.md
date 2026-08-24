@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-description: How to use Training(Object Detection)
-title: Training - Object Detection
+description: Create, train, test, and deploy a custom object detection model in SenseCraft AI using quick training or image collection workflows.
+title: Object Detection Training with SenseCraft AI
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/1.9.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-training-object-detection
 aliases:
@@ -10,11 +10,11 @@ last_update:
   date: 11/27/2024
   author: qiuyu wei
 createdAt: '2024-11-27'
-updatedAt: '2025-09-04'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/
 ---
 
-# Type of training - Object Detection
+# Train an Object Detection Model with SenseCraft AI
 
 ## Features of object detection
 
@@ -34,6 +34,12 @@ Advantages: Leverages diverse image data to significantly improve the detection 
 With these two methods, the SenseCraft platform caters to diverse object detection model training needs, simplifying the complexities of AI development while ensuring both usability and precision.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/2.0.png" style={{width:750, height:'auto'}}/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_training#/training" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>Open SenseCraft AI Training 🖱️</font></span></strong>
+    </a>
+</div><br />
 
 ## Quick Training
 
@@ -116,6 +122,12 @@ And finally it's time for model deployment.
 Once the above steps are completed, the model will be successfully trained and deployed.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/3.7.gif" style={{width:1000, height:'auto'}}/></div>
+
+## Related guides
+
+- [Train a classification model with SenseCraft AI](/sensecraft-ai/tutorials/sensecraft-ai-training-classification/)
+- [Explore the SenseCraft AI platform](/sensecraft-ai/overview/)
+- [Browse the SenseCraft AI documentation center](/sensecraft-ai/sensecraft-ai-main/)
 
 ## Tech Support & Product Discussion
 

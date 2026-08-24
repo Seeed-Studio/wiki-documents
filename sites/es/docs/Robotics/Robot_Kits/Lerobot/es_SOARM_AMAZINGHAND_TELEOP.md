@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-12'
-updatedAt: '2026-07-13'
+updatedAt: '2026-08-10'
 url: https://wiki.seeedstudio.com/es/soarm_amazinghand_teleop/
 ---
 
@@ -28,6 +28,16 @@ Este documento explica cómo combinar el brazo seguidor SO-ARM101 con la mano h�
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/soarm_amazinghand/soarm_amazinghand.webp" />
 </div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/Amazing-Hand-Right-Hand-The-Open-Source-Robotic-Hand-Developer-Kit.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> AmazingHand Obtener Uno Ahora 🖱️</font></span></strong>
+</a></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> SO-ARM101 Obtener Uno Ahora 🖱️</font></span></strong>
+</a></div>
 
 ## 1. Conexión de hardware
 

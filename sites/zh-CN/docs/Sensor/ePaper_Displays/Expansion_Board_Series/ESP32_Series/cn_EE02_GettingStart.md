@@ -15,17 +15,17 @@ last_update:
   date: 12/20/2025
   author: Allen
 createdAt: '2025-12-19'
-updatedAt: '2026-04-27'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 ---
 
-# XIAO 电子纸显示板 EE02 快速上手
+# XIAO ePaper Display Board - EE02 快速上手
 
 <div class="table-center">
 <table align="center">
     <tr>
         <th>XIAO ePaper Display Board EE02</th>
-        <th>13.3" spectra™ 6 E-Ink Display</th>
+        <th>13.3" spectra™ 6 电子墨水显示屏</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-xiao-epaper-display-board-ee02.jpg"/></div>
@@ -46,7 +46,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 
 ## 介绍
 
-**EE02** 是一款专为 **13.3 英寸**电子纸显示屏设计的高性能电子墨水屏驱动板。其搭载 ESP32-S3 芯片，支持 Wi-Fi 和 Bluetooth 连接，非常适合用于无线显示应用。
+**EE02** 是一款高性能电子墨水屏驱动板，专为 **13.3 英寸**电子纸显示屏设计。其搭载 ESP32-S3 芯片，支持 Wi-Fi 和 Bluetooth 连接，非常适合无线显示类应用场景。
 
 与其兄弟产品 EE04（为小尺寸屏幕设计）类似，EE02 为希望在物联网项目中集成大尺寸电子墨水屏的开发者提供了流畅的使用体验。它简化了驱动流程，并支持 SenseCraft HMI 平台，方便进行内容管理。
 
@@ -55,18 +55,18 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 ### 特性
 
 - **强大的控制器**：基于 ESP32-S3 构建，提供强劲的处理能力和无线功能。
-- **专为大屏设计**：专门优化用于驱动 13.3 英寸电子墨水屏，具有高稳定性和高清晰度。
+- **专为大屏设计**：专门优化用于驱动 13.3 英寸电子墨水屏，具有高稳定性和高显示清晰度。
 - **无线连接**：支持 Wi-Fi 和 Bluetooth 5.0（LE），可实现远程数据更新和云端集成。
 - **低功耗**：针对能效进行设计，适用于电池供电应用。
 - **易于集成**：兼容 SenseCraft HMI，可进行拖拽式界面设计和远程管理。
-- **多样接口**：包括用于供电/烧录的 Type-C 接口以及用于电子墨水屏的标准连接器。
+- **多样化接口**：包括用于供电/烧录的 Type-C 接口以及用于电子墨水屏的标准连接器。
 
-### 规格
+### 规格参数
 
 | 项目 | 描述 |
 | :--- | :--- |
 | **控制器** | XIAO ESP32-S3 Plus |
-| **支持屏幕尺寸** | 13.3 英寸电子墨水屏 |
+| **支持屏幕尺寸** | 13.3 英寸电子墨水显示屏 |
 | **连接方式** | Wi-Fi 802.11 b/g/n，Bluetooth 5.0（LE） |
 | **电源供给** | 通过 USB Type-C 提供 5V 电源 |
 | **工作电压** | 3.3V |
@@ -74,30 +74,30 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 | **尺寸** | 80x43 mm |
 | **工作温度** | -20°C 至 70°C |
 
-### 应用
+### 应用场景
 
-- **数字标牌**：非常适合餐厅菜单、会议室门牌和零售价签。
+- **数字标牌**：适用于餐厅菜单、会议室门牌和零售价签。
 - **智能家居**：用于天气、日历和家庭自动化状态的信息看板。
 - **工业 HMI**：用于机械设备和仓储管理的低功耗状态显示。
 - **教育**：电子书阅读器或教室信息公告板。
-- **办公**：桌面名牌或公告板。
+- **办公**：桌牌或公告板。
 
 ## 硬件概览
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/overview.png" style={{width:800, height:'auto'}}/></div>
 
 - **USB Type-C**：用于供电和固件烧录。
-- **FPC 连接器**：用于连接 13.3 英寸电子墨水屏。
-- **复位按钮**：用于重置开发板。
+- **FPC 连接器**：用于连接 13.3 英寸电子墨水显示屏。
+- **复位按钮**：用于复位开发板。
 - **按键**：分别为“刷新页面”、“切换上一页”和“切换下一页”。
-- **开关**：控制电池电源的开/关。
+- **电源开关**：控制电池电源的开/关。
 - **Boot 按钮**：用于进入 bootloader 模式。
-- **LED 指示灯**：闪烁表示未连接电池，绿灯常亮表示电池正在充电。
-- **JST 连接器**：2 针 JST 2.0mm 接口，用于连接电池。
+- **LED 指示灯**：闪烁表示未连接电池。绿灯常亮表示电池正在充电。
+- **JST 连接器**：2 针 JST 2.0mm 接插件，用于连接电池。
 
 ## SenseCraft HMI 快速上手
 
-本节将指导你将 EE02 连接到 SenseCraft HMI 平台，从而可以轻松地通过无线方式更新屏幕内容。
+本节将引导你将 EE02 连接到 SenseCraft HMI 平台，从而可以轻松地通过无线方式更新屏幕内容。
 
 ### 设备安装
 
@@ -105,19 +105,19 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 小心地将 13.3 英寸电子墨水屏的 FPC 线缆连接到 EE02 驱动板上的连接器，确保锁扣机构已牢固锁紧。
 
 **步骤 2. 上电**
-使用 USB Type-C 线将 EE02 开发板连接到电源（电脑或 USB 适配器）。上电后，屏幕会刷新并显示欢迎图像。
+使用 USB Type-C 线将 EE02 开发板连接到电源（电脑或 USB 适配器）。上电后，屏幕会刷新并显示欢迎界面。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/4.JPG" style={{width:300,height:'auto'}}/></div>
 
 **步骤 3. 进入网络配置模式**
-在欢迎图像之后，屏幕会自动刷新并显示网络配置界面，这表示设备已准备好连接 Wi-Fi。
+在欢迎界面之后，屏幕会自动刷新并显示网络配置界面，这表示设备已准备好连接 Wi-Fi。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/5.JPG" style={{width:300,height:'auto'}}/></div>
 
 ### 网络配置
 
 **步骤 4. 通过手机配置 Wi-Fi**
-使用手机扫描屏幕上显示的二维码（或连接到屏幕上提示的热点）。根据手机上的提示输入本地 Wi-Fi 的 SSID 和密码，使 EE02 连接到互联网。
+使用手机扫描屏幕上显示的二维码（或连接到屏幕上提示的热点）。根据手机上的提示输入本地 Wi-Fi 的 SSID 和密码，将 EE02 连接到互联网。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/6.JPG" style={{width:300,height:'auto'}}/></div> -->
 
@@ -154,7 +154,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 ### 安装 Seeed GFX 库
 
 :::tip
-此库与 TFT 库具有相同功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
+该库与 TFT 库具有相同功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -163,7 +163,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 
 <div align="center">
 <a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处下载</button></p>
 </a>
 </div>
 
@@ -188,7 +188,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 
 ### 配置并烧录程序
 
-选择图中所示的示例
+选择如图所示的示例程序
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -199,11 +199,11 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 ```
 
 
-之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。 
+之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 和 **Tools** -> **Port** -> **Select the port your board is connected to**。 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_3.png" style={{width:1000, height:'auto'}}/></div>
 
-请注意必须启用 PSAM。
+请注意必须启用 PSRAM。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_4.png" style={{width:1000, height:'auto'}}/></div>
 
 然后点击 **Upload** 上传代码。
@@ -214,7 +214,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 
 **Q1：上电后屏幕没有刷新。**
 *   检查 FPC 线缆是否正确插入并锁紧。
-*   确保 USB Type-C 线缆提供足够的电力。
+*   确保 USB Type-C 线缆提供足够的电源。
 *   按下 Reset 按钮重新启动开发板。
 
 **Q2：Wi-Fi 配置失败。**
@@ -228,11 +228,11 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 ## 资源
 - **[PDF]** [13.3 E6 电子墨水显示模块数据手册](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
 - **[PDF]** [Seeed Studio XIAO 电子纸显示 EE02 原理图](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
-- **[ZIP]** [Seeed Studio XIAO 电子纸显示 EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
+- **[ZIP]** [Seeed Studio XIAO 电子纸显示 EE02 PCBA&原理图](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="table-center">
   <div class="button_tech_support_container">

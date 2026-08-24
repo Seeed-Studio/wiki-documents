@@ -14,7 +14,7 @@ last_update:
   date: 2026-07-12
   author: ZhuYuan
 createdAt: '2026-07-12'
-updatedAt: '2026-07-13'
+updatedAt: '2026-08-10'
 url: https://wiki.seeedstudio.com/cn/soarm_amazinghand_teleop/
 ---
 # SO-ARM与AmazingHand完整训练指南
@@ -25,6 +25,22 @@ url: https://wiki.seeedstudio.com/cn/soarm_amazinghand_teleop/
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/soarm_amazinghand/soarm_amazinghand.webp" />
 </div>
+
+SO-ARM + AmazingHand 演示视频：
+
+<div class="video-container">
+<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=116941423386102&bvid=BV1naKK6TEXT&cid=40077364140&p=1&autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/Amazing-Hand-Right-Hand-The-Open-Source-Robotic-Hand-Developer-Kit.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> AmazingHand 立即获取 🖱️</font></span></strong>
+</a></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> SO-ARM101 立即获取 🖱️</font></span></strong>
+</a></div>
 
 ## 1. 硬件连接
 

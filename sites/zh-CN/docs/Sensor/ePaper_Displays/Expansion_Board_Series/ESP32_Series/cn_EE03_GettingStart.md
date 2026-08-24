@@ -2,9 +2,9 @@
 description: EE03 10.3 英寸电子墨水驱动板快速上手
 title: EE03 快速上手
 keywords:
-  - E-ink
-  - Driver Board
-  - 10.3 inch
+  - 电子墨水
+  - 驱动板
+  - 10.3 英寸
   - ESP32
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.jpg
@@ -15,7 +15,7 @@ last_update:
   date: 2026-03-1
   author: Jackson.Li
 createdAt: '2026-03-02'
-updatedAt: '2026-04-28'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_ee03/
 ---
 
@@ -50,7 +50,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 介绍
 
-由 **XIAO ESP32-S3 Plus** 提供算力，电子纸驱动板 EE03 支持 **10.3 单色电子纸显示屏**。它配备带电源开关的 JST 2.0 mm 电池接口、板载充电 IC，并带有 1 个复位按键和 3 个用户按键。非常适合用于低功耗电子纸项目，例如数码相框和信息公告板。
+由 **XIAO ESP32-S3 Plus** 提供算力，电子纸驱动板 EE03 支持 **10.3 单色电子纸显示屏**。它配备带电源开关的 JST 2.0 mm 电池接口、板载充电 IC，并带有一个复位按键和三个用户按键。非常适合用于低功耗电子纸项目，例如数码相框和信息公告板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -61,7 +61,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 - **支持高速刷新：** 集成 T-CON 时序控制，确保精确的高速驱动，同时板载 SHT40 提供实时温度感知，用于波形补偿。
 - **带开关的电池接口：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
 - **用户友好按键：** 配备 1 个复位按键和 3 个用户可编程按键，为项目加速和自定义功能提供灵活性。
-- **预烧录 SenseCraft HMI 固件：** 即插即用，直接搭配 SenseCraft HMI——我们的 AI 加持零代码 UI 设计平台。可从丰富模板中选择，或通过拖拽式 UI 搭建（可选 AI 辅助），仅需几次点击即可将界面部署到电子纸显示屏。
+- **预烧录 SenseCraft HMI 固件：** 插上即可搭配 SenseCraft HMI 使用，这是我们的 AI 加持零代码 UI 设计平台。可从丰富模板中选择，或通过拖拽方式构建 UI（可选 AI 辅助），仅需几次点击即可部署到电子纸显示屏。
 
 ### 规格
 
@@ -76,10 +76,10 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ### 应用
 
-- **数字电子书阅读器：** 提供纸质般的单色阅读体验，支持 16 级灰度和快速刷新，实现更顺畅的翻页和更灵敏的内容更新。
+- **数字电子书阅读器：** 提供纸质般的单色阅读体验，支持 16 级灰度和快速刷新，实现更顺滑的翻页和更灵敏的内容更新。
 - **实时信息看板：** 显示天气更新、日程安排、关键通知以及能耗、传感器状态或 KPI 等数据组件。
-- **安全告警：** 显示关于安全事件的告警和通知，例如运动检测或门/窗传感器触发。
-- **公共交通到站信息牌：** 一目了然地显示公交/地铁的实时到站时间、线路状态和服务告警，方便日常通勤。
+- **安防告警：** 显示关于安防事件的告警和通知，例如运动检测或门/窗传感器触发。
+- **公共交通到站牌：** 一目了然地显示实时公交/地铁到站时间、线路状态和服务告警，方便日常通勤。
 
 ## 硬件概览
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/2.png" style={{width:800, height:'auto'}}/></div>
@@ -87,7 +87,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 - **USB Type-C**：用于供电和固件烧录。
 - **FPC 接口**：用于连接电子纸显示屏。
 - **复位按键**：用于复位开发板。
-- **用户按键**：可编程按键，用于用户交互。
+- **用户按键**：用于用户交互的可编程按键。
 - **电源开关**：控制电池电源的开/关。
 - **Boot 按键**：用于进入 bootloader 模式。
 - **LED 指示灯**：用于指示电源和充电状态。
@@ -95,12 +95,12 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 搭配 SenseCraft HMI 快速上手
 
-本节将引导你将 EE03 连接到 SenseCraft HMI 平台，从而可以轻松实现屏幕内容的无线更新。
+本节将引导你将 EE03 连接到 SenseCraft HMI 平台，从而可以轻松实现无线更新屏幕内容。
 
 ### 设备安装
 
 **步骤 1. 连接屏幕与开发板**
-小心地将电子纸屏幕的 FPC 线缆连接到 EE03 驱动板上的连接器，确保锁扣机构已牢固锁紧。
+小心地将电子纸屏幕的 FPC 线缆连接到 EE03 驱动板上的接口，确保锁扣机构已牢固锁紧。
 
 **步骤 2. 上电**
 使用 USB Type-C 线将 EE03 开发板连接到电源（电脑或 USB 适配器）。上电后，屏幕会刷新并显示欢迎界面。
@@ -124,7 +124,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 ### 平台绑定与更新
 
 **步骤 6. 在 SenseCraft HMI 上绑定设备**
-前往 [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi/device)。登录你的账号，进入设备管理页面并选择 “Add Device”。输入电子纸屏幕上显示的配对码（Pairing Code）。
+前往 [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi/device)。登录你的账号，进入设备管理页面并选择“Add Device”。输入电子纸屏幕上显示的配对码（Pairing Code）。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_4.jpg" style={{width:800, height:'auto'}}/></div>
 **步骤 7. 创建并推送新界面**     
 在 SenseCraft HMI 平台上，选择适用于 10.3 英寸屏幕的模板来创建新界面，或上传一张图片。
@@ -147,7 +147,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 ### 安装 Seeed GFX 库
 
 :::tip
-该库与 TFT 库功能相同，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
+该库与 TFT 库具有相同功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -168,7 +168,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 :::tip
 如果选择错误，屏幕将不会显示任何内容。
 
-所以请务必确认你选择了正确的设备或元件类型。
+所以请务必确认你选择了正确的设备或器件类型。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/3.png" style={{width:800, height:'auto'}}/></div>
@@ -190,11 +190,11 @@ import Steppers from '@site/src/components/utils/Stepper';
 ```
 
 
-之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 以及 **Tools** -> **Port** -> **Select the port your board is connected to**。 
+之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/5.jpg" style={{width:1000, height:'auto'}}/></div>
 
-请注意必须启用 PSAM。
+请注意必须启用 PSRAM。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.jpg" style={{width:1000, height:'auto'}}/></div>
 
 然后点击 **Upload** 上传代码。
@@ -206,7 +206,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 **Q1：上电后屏幕没有刷新。**
 *   检查 FPC 线缆是否正确插入并锁紧。
-*   确保 USB Type-C 线缆提供足够的电源。
+*   确保 USB Type-C 线缆提供足够的电力。
 *   按下 Reset 按钮重新启动开发板。
 
 **Q2：Wi-Fi 配置失败。**

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: 概述
-description: SenseCraft Data Platform 快速入门指南——使用安全可靠的云平台管理 SenseCAP 设备并可视化传感器数据。
+title: SenseCraft Data Platform 快速入门
+description: 通过本分步快速入门指南创建账户、绑定 SenseCAP 设备，并在 SenseCraft Data Platform 中查看传感器数据。
 keywords:
   - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -12,7 +12,7 @@ last_update:
   date: 06/06/2025
   author: Matthew
 createdAt: '2023-03-01'
-updatedAt: '2026-07-13'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/cn/cloud/sensecraft-data/sensecraft-data-platform/overview/
 ---
 
@@ -20,22 +20,24 @@ url: https://wiki.seeedstudio.com/cn/cloud/sensecraft-data/sensecraft-data-platf
 
 :::tip
 **注意：**  
-自 2025 年起，**SenseCAP Portal** 已正式更名为 **SenseCraft Data Platform**。功能保持不变，并将持续增强，以更好地支持 AIoT 和多传感器场景。
+自 2025 年起，**SenseCAP Portal** 已正式更名为 **SenseCraft Data Platform**。功能保持不变，并在持续增强，以更好地支持 AIoT 和多传感器场景。
 :::
+
+本指南涵盖账户设置、应用访问、设备绑定以及传感器数据验证。
 
 如何使用 SenseCraft Data Platform？让我们开始吧！
 
 ## 介绍
 
-SenseCraft Data Platform 的主要功能是管理 SenseCAP 设备并存储数据。它构建在微软安全可靠的云服务 Azure 之上。你可以申请一个账号，并将所有设备绑定到该账号。SenseCraft 提供 Web 平台和 API。Web 平台包括仪表盘、设备管理、数据管理和访问密钥管理，而 API 对用户开放以便进行进一步开发。
+SenseCraft Data Platform 的主要功能是管理 SenseCAP 设备并存储数据。它构建在微软安全可靠的云服务 Azure 之上。你可以申请一个账户，并将所有设备绑定到该账户。SenseCraft 提供 Web 平台和 API。Web 平台包括仪表盘、设备管理、数据管理和访问密钥管理，而 API 对用户开放以便进行进一步开发。
 
 ## 网站
 
 - 全球站点：<a href="https://sensecap.seeed.cc/">https://sensecap.seeed.cc</a>
 
-## 创建新账号
+## 创建新账户
 
-① 选择“Register Account”，输入邮箱信息并点击“Register”。一封注册邮件将发送到你的邮箱。
+① 选择 "Register Account"，输入邮箱信息并点击 “Register”。一封注册邮件将发送到你的邮箱。
 
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/EN-register-1.jpg)
 
@@ -59,12 +61,12 @@ SenseCraft Data Platform 的主要功能是管理 SenseCAP 设备并存储数据
 
 ## 绑定设备
 
-每个 SenseCAP 设备的外壳上都有一个标签，如下图所示。EUI 是 SenseCAP 设备的唯一编码。Key 是加密字段，可以忽略。
+每个 SenseCAP 设备的外壳上都有一个标签，如下图所示。EUI 是 SenseCAP 设备的唯一编码。Key 是一个加密字段，可以忽略。
 
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/label.jpg)
 
 
-在 SenseCAP App 主页面，点击“Bind”按钮，然后扫描二维码以绑定设备。
+在 SenseCAP App 主页面，点击 “Bind” 按钮，然后扫描二维码以绑定设备。
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview1.png" /></div>
 
@@ -78,6 +80,12 @@ SenseCraft Data Platform 的主要功能是管理 SenseCAP 设备并存储数据
 
 ## 查看数据
 
-登录 `SenseCraft Data Platform`，在 “Device/Sensor Node” 部分查看设备状态和基本信息，在 “Data/Table” 部分查看传感器数据。
+登录 `SenseCraft Data Platform`，在 “Device/Sensor Node” 部分查看设备状态和基本信息，并在 “Data/Table” 部分查看传感器数据。
 
 <div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview4.png" /></div>
+
+## 相关指南
+
+- [管理网关和传感器节点](/cn/sensecraft-data-platform/tutorials/device-management/)
+- [在 Dashboard 中监控设备状态和传感器数据](/cn/sensecraft-data-platform/tutorials/dashboard/)
+- [发出你的第一个 SenseCraft Data Platform HTTP API 请求](/cn/sensecraft-data-platform/api/http-api/quick-start/)

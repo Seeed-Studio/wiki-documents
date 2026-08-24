@@ -14,7 +14,7 @@ last_update:
   date: 5/22/2026
   author: wuxinrui
 createdAt: '2026-05-22'
-updatedAt: '2026-06-15'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/pt-br/control_rebot_arm_using_voice_with_respeaker_flex/
 ---
 
@@ -624,7 +624,7 @@ uv é uma ferramenta de gerenciamento de pacotes Python muito rápida que pode s
 
 ```bash
 # Cloning robotic arm control library
-git clone https://github.com/vectorBH6/reBotArm_control_py.git
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
 
 # Enter the robotic arm control library directory
 cd reBotArm_control_py
@@ -1854,7 +1854,7 @@ Isso garante que o braço robótico não exceda os limites físicos, evitando da
 | Recurso | Link | Descrição |
 |-----|-----|-----|
 | Repositório principal do projeto | https://github.com/xr686/reBot-Arm-reSpeaker-Flex | Programa principal de controle por som |
-| Biblioteca de controle do braço robótico | https://github.com/vectorBH6/reBotArm_control_py | Biblioteca de controle do braço robótico em Python |
+| Biblioteca de controle do braço robótico | https://github.com/Seeed-Projects/reBotArm_control_py | Biblioteca de controle do braço robótico em Python |
 | reBot Arm Oficial | https://www.rebotix.com/ | Site oficial do braço robótico |
 | Seeed Studio | https://www.seeedstudio.com/ | Compra do reSpeaker Flex e suporte técnico |
 

@@ -1,5 +1,5 @@
 ---
-description: Introdução à placa controladora EE03 para E-ink de 10,3 polegadas
+description: Introdução à placa controladora EE03 de 10,3 polegadas E-ink
 title: Introdução ao EE03
 keywords:
   - E-ink
@@ -15,7 +15,7 @@ last_update:
   date: 2026-03-1
   author: Jackson.Li
 createdAt: '2026-03-02'
-updatedAt: '2026-04-28'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_with_ee03/
 ---
 
@@ -50,7 +50,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-Alimentada pelo **XIAO ESP32-S3 Plus**, a placa controladora de ePaper EE03 é compatível com o **display ePaper monocromático de 10,3"**. Ela possui um conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado e vem com um botão de reset e três botões de usuário. É ideal para projetos de ePaper de baixo consumo, como porta-retratos digitais e quadros de informações.
+Alimentada pelo **XIAO ESP32-S3 Plus**, a placa controladora ePaper EE03 é compatível com o **display ePaper monocromático de 10,3"**. Ela possui um conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado e vem com um botão de reset e três botões de usuário. É ideal para projetos de ePaper de baixo consumo, como porta-retratos digitais e quadros de informações.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -61,7 +61,7 @@ Alimentada pelo **XIAO ESP32-S3 Plus**, a placa controladora de ePaper EE03 é c
 - **Atualização em alta velocidade habilitada:** O T-CON de controle de temporização integrado garante acionamento preciso em alta velocidade, enquanto o SHT40 onboard fornece medição de temperatura em tempo real para compensação de forma de onda.
 - **Conector BAT com chave:** Oferece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
 - **Botões fáceis de usar:** Possui 1 botão de reset e 3 botões programáveis pelo usuário, oferecendo flexibilidade para acelerar projetos e funções personalizáveis.
-- **Firmware SenseCraft HMI pré-gravado:** Basta conectar e começar a usar imediatamente com o SenseCraft HMI, nossa plataforma de design de UI sem código com IA. Escolha entre modelos prontos ou construa a interface arrastando e soltando componentes (com assistência opcional de IA) e faça o deploy no display ePaper em apenas alguns cliques.
+- **Firmware SenseCraft HMI pré-gravado:** Basta conectar e começar a usar imediatamente com o SenseCraft HMI, nossa plataforma de design de UI sem código com IA. Escolha entre modelos prontos ou construa a interface arrastando e soltando elementos (com assistência opcional de IA) e faça o deploy no display ePaper em apenas alguns cliques.
 
 ### Especificações
 
@@ -72,14 +72,14 @@ Alimentada pelo **XIAO ESP32-S3 Plus**, a placa controladora de ePaper EE03 é c
 | **Conector de bateria** | JST 2,0 mm |
 | **Chave** | Liga/Desliga da alimentação da bateria |
 | **Fonte de alimentação** | - Bateria Li 3,7 V<br/>- USB Type-C |
-| **Botão** | - 1x botão de reset<br/>- 3x botão de usuário |
+| **Botão** | - 1x botão de reset<br/>- 3x botões de usuário |
 
 ### Aplicações
 
-- **Leitores de e-book digitais:** Proporcionam uma experiência de leitura monocromática semelhante ao papel, com 16 níveis de escala de cinza e atualização rápida para viradas de página mais suaves e respostas mais ágeis.
-- **Dashboard em tempo real:** Exiba informações ao vivo, como previsões do tempo, agenda de calendário, notificações importantes e widgets de dados como consumo de energia, status de sensores ou KPIs.
+- **Leitores digitais de e-book:** Proporcionam uma experiência de leitura monocromática semelhante ao papel, com 16 níveis de escala de cinza e atualização rápida para viradas de página mais suaves e respostas mais ágeis.
+- **Dashboard em tempo real:** Exiba informações ao vivo, como atualizações de clima, agendas de calendário, notificações importantes e widgets de dados como consumo de energia, status de sensores ou KPIs.
 - **Alertas de segurança:** Mostre alertas e notificações sobre eventos de segurança, como detecção de movimento ou ativação de sensores de porta/janela.
-- **Painel de chegada de transporte público:** Mostre em tempo real horários de chegada de ônibus/trem, status de rotas e alertas de serviço para o dia a dia de deslocamento.
+- **Quadro de chegadas de transporte público:** Mostre em tempo real horários de chegada de ônibus/trem, status de rotas e alertas de serviço para o dia a dia de deslocamento.
 
 ## Visão geral de hardware
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/2.png" style={{width:800, height:'auto'}}/></div>
@@ -88,19 +88,19 @@ Alimentada pelo **XIAO ESP32-S3 Plus**, a placa controladora de ePaper EE03 é c
 - **Conector FPC**: Para conectar o display ePaper.
 - **Botão de reset**: Para reiniciar a placa.
 - **Botões de usuário**: Botões programáveis para interação do usuário.
-- **Chave liga/desliga**: Controla o ligar/desligar da bateria.
+- **Chave liga/desliga**: Controla o ligar/desligar da alimentação da bateria.
 - **Botão de boot**: Usado para entrar no modo bootloader.
 - **LEDs indicadores**: Indicadores de status para alimentação e carregamento.
 - **Conector JST**: Conector JST 2,0 mm de 2 pinos para conectar a bateria.
 
 ## Introdução ao SenseCraft HMI
 
-Esta seção irá guiá-lo na conexão do seu EE03 à plataforma SenseCraft HMI, permitindo atualizar facilmente o conteúdo da tela sem fio.
+Esta seção irá guiá-lo na conexão do seu EE03 à plataforma SenseCraft HMI, permitindo que você atualize facilmente o conteúdo da tela sem fio.
 
 ### Instalação do equipamento
 
 **Passo 1. Conecte a tela e a placa**
-Conecte cuidadosamente o cabo FPC da sua tela ePaper ao conector na placa controladora EE03. Certifique-se de que o mecanismo de travamento esteja firme.
+Conecte cuidadosamente o cabo FPC da sua tela ePaper ao conector na placa controladora EE03. Certifique-se de que o mecanismo de travamento esteja bem fixado.
 
 **Passo 2. Ligue o dispositivo**
 Conecte a placa EE03 a uma fonte de alimentação (computador ou adaptador USB) usando um cabo USB Type-C. Ao ligar, a tela será atualizada e exibirá uma imagem de boas-vindas.
@@ -159,7 +159,7 @@ Baixe e instale a biblioteca Seeed GFX a partir do GitHub.
 <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Clique aqui para baixar</button></p>
 </a>
 </div>
-Role a página para baixo e abra este link.
+Role para baixo e abra este link.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -178,12 +178,12 @@ Após baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZI
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
 
-### Configurar e gravar o programa
+### Configure e grave o programa
 Selecione o exemplo mostrado na figura
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/4.png" style={{width:800, height:'auto'}}/></div>
 
-Crie um novo arquivo "driver.h" e cole esse código nele. O código deve ser semelhante a:
+Crie um novo arquivo "driver.h" e cole esse código nele. O código deve ser assim:
 ```cpp
 #define BOARD_SCREEN_COMBO 511 // 10.3 inch monochrome ePaper Screen（ED103TC2）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE03
@@ -194,7 +194,7 @@ Depois disso, vá para **Tools** -> **Board** -> **XIAO ESP32S3 Plus** e **Tools
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/5.jpg" style={{width:1000, height:'auto'}}/></div>
 
-Observe que o PSAM deve estar habilitado.
+Observe que a PSRAM deve estar ativada.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.jpg" style={{width:1000, height:'auto'}}/></div>
 
 Em seguida, clique em **Upload** para enviar o código.
@@ -209,16 +209,16 @@ Agora você verá o retorno na sua tela de epaper! A seguir estão os resultados
 *   Certifique-se de que o cabo USB Type-C fornece energia suficiente.
 *   Pressione o botão Reset para reiniciar a placa.
 
-**P2: A configuração do Wi-Fi falha.**
+**P2: A configuração de Wi-Fi falha.**
 *   Certifique-se de que sua rede Wi-Fi é de 2,4 GHz.
 *   Verifique se a senha do Wi-Fi foi inserida corretamente.
 
 **P3: A exibição da tela está borrada ou com efeito fantasma.**
-*   Isso pode acontecer se a tela não for atualizada por um longo tempo ou se a fonte de alimentação estiver instável. Tente atualizar a tela novamente pela plataforma HMI.
+*   Isso pode acontecer se a tela não for atualizada por um longo tempo ou se a fonte de alimentação for instável. Tente atualizar a tela novamente pela plataforma HMI.
 
 ## Recursos
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE03 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE03/XIAO_ePaper_Display_Board_EE03_V1.0_SCH_251217.pdf)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EE03 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE03/XIAO_ePaper_Display_Board_EE03_V1.0_SCH_&_PCB_251217.zip)
+- **[PDF]** [Esquemático do Seeed Studio XIAO ePaper Display EE03](https://files.seeedstudio.com/wiki/Epaper/EE03/XIAO_ePaper_Display_Board_EE03_V1.0_SCH_251217.pdf)
+- **[ZIP]** [PCBA & SCH do Seeed Studio XIAO ePaper Display EE03](https://files.seeedstudio.com/wiki/Epaper/EE03/XIAO_ePaper_Display_Board_EE03_V1.0_SCH_&_PCB_251217.zip)
 
 ## Suporte técnico e discussão sobre o produto
 

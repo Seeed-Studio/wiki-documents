@@ -17,7 +17,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-08-02'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_grasping_demo/
 ---
 
@@ -158,14 +158,6 @@ Dê preferência ao repositório oficial Seeed-Projects:
 git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
-
-Você também pode usar o repositório de desenvolvimento atual:
-
-```bash
-git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
-cd rebot_grasp
-```
-
 ### Etapa 2. Criar e configurar o ambiente conda
 
 ```bash
@@ -178,7 +170,7 @@ Se você quiser usar um nome de ambiente diferente, substitua `rebotarm` no coma
 ### Etapa 3. Instalar o SDK do braço robótico
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 cd sdk/reBotArm_control_py
 pip install -e .
 cd ../..
@@ -652,8 +644,8 @@ Se a saída for `False`, corrija primeiro a instalação do CUDA / PyTorch. Se f
 
 ## Contato
 
-- Suporte técnico: [Submit an Issue](https://github.com/EclipseaHime017/reBot-DevArm-Grasp/issues)
-- Página do projeto: [GitHub](https://github.com/EclipseaHime017/reBot-DevArm-Grasp)
+- Suporte técnico: [Submit an Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
+- Página do projeto: [GitHub](https://github.com/Seeed-Projects/reBot-DevArm-Grasp)
 - Fórum: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## Referências

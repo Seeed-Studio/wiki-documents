@@ -17,7 +17,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-07-07'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -61,7 +61,7 @@ YOLO es una familia ampliamente utilizada de modelos de detección de objetos en
 
 ## Introducción al proyecto
 
-**Demo de agarre visual con reBot Arm B601** es un proyecto de demostración de algoritmos de agarre visual basado en la biblioteca de control del brazo robótico [reBot Arm B601](https://github.com/vectorBH6/reBotArm_control_py) y una cámara de profundidad RGB-D. El sistema admite configuraciones DM y RS para el brazo B601. Utiliza el modelo YOLO para la detección de objetos de escritorio en tiempo real, estima las poses de agarre mediante rectángulos de área mínima OBB, realiza la calibración mano-ojo para transformar los puntos de agarre del marco de la cámara al marco base del robot y acciona el brazo robótico para completar el agarre autónomo.
+**Demo de agarre visual con reBot Arm B601** es un proyecto de demostración de algoritmos de agarre visual basado en la biblioteca de control del brazo robótico [reBot Arm B601](https://github.com/Seeed-Projects/reBotArm_control_py) y una cámara de profundidad RGB-D. El sistema admite configuraciones DM y RS para el brazo B601. Utiliza el modelo YOLO para la detección de objetos de escritorio en tiempo real, estima las poses de agarre mediante rectángulos de área mínima OBB, realiza la calibración mano-ojo para transformar los puntos de agarre del marco de la cámara al marco base del robot y acciona el brazo robótico para completar el agarre autónomo.
 
 ### Funciones principales
 
@@ -106,14 +106,6 @@ Da preferencia al repositorio oficial de Seeed-Projects:
 git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
-
-También puedes usar el repositorio de desarrollo actual:
-
-```bash
-git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
-cd rebot_grasp
-```
-
 ### Paso 2. Crear y configurar el entorno conda
 
 ```bash
@@ -129,7 +121,7 @@ Si quieres usar un nombre de entorno diferente, reemplaza `rebotarm` en el coman
 ### Paso 3. Instalar la biblioteca de control del brazo robótico
 
 ```bash
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 cd sdk/reBotArm_control_py
 pip install -e .
 cd ../..
@@ -603,7 +595,7 @@ Si la salida es `False`, primero debes corregir la instalación de CUDA / PyTorc
 
 ## 📄 Referencias
 
-- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py) — Biblioteca de control de brazo robótico
+- [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) — Biblioteca de control de brazo robótico
 - [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm) — Proyecto de código abierto del brazo robótico reBot
 - [Página de producto Orbbec Gemini 2](https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)

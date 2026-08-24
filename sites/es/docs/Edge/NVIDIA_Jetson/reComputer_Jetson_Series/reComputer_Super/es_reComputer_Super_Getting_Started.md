@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-06-27'
+updatedAt: '2026-07-23'
 url: https://wiki.seeedstudio.com/es/recomputer_jetson_super_getting_started/
 ---
 

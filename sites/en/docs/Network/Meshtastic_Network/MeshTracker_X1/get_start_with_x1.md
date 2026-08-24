@@ -12,7 +12,7 @@ last_update:
   date: 7/13/2026
   author: Michelle Huang
 createdAt: '2026-07-13'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -200,9 +200,13 @@ Click `Enter DFU Mode`, there will be a serial port named `X1 xxx` displayed. Cl
 
 <TabItem value="method2" label="Manually Enter">
 
-Connect the USB cable to your PC, press and hold the device button, then **quickly** connect the charging cable twice.
+Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the device with the computer via USB cable, keep holding the button until a white ⚪️ LED turned on.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
+:::warning
+To successfully enter the DFU mode, you need to perform this operation quickly. You may need to try multiple times.
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
 </Tabs>
@@ -474,9 +478,9 @@ Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
 - Use a known working USB cable to `charge the device` continuously for 1–2 hours to ensure the battery has sufficient power to wake up the system.
 
-- If the device still does not respond after charging, `perform a hard reset` as follows: Unplug the USB cable. Press and hold the button, then plug in the USB cable while keeping the button pressed. Hold for approximately 3 seconds, then release it. This forces a system reset.
+- If the device still does not respond after charging, `perform a hard reset` as follows: Unplug the USB cable. Press and hold the button, then plug in the USB cable and then release the button immediately. 
 
- - If still no luck, Connect a USB cable to a computer. Hold the device button, then connect the device to the computer, see whether or not the a disk pop out in your PC. If so, re-install the bootloader
+ - If still no luck, Connect a USB cable to a computer. Hold the device button, then connect the device to the computer, then release the button, see whether or not the a disk pop out in your PC. If so, re-install the bootloader
 
 ### Device stuck in boot loop
 
@@ -486,29 +490,24 @@ The device will restart repeatedly, and the serial port connects and disconnects
 
 **Solution:**
 
-- Step 1: Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the charging cable twice
+- Step 1: Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the device with the computer via USB cable, keep holding the button until a white ⚪️ LED turned on.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
-
-The device is in DFU mode if the white LED is solid on.
-
-:::note
+:::warning
 To successfully enter the DFU mode, you need to perform this operation quickly. You may need to try multiple times.
 :::
 
-- Step 2: Erase Flash
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
-- Step 3: Flash Firmware
+The device is in DFU mode if the white LED is solid on.
+
+- Step 2: [Erase Flash](https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/#step-2-flash-erase)
+
+- Step 3: [Flash Firmware](https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/#step-3-flash-firmware)
 
 ### Bootloader Installation
 
 
-<Tabs>
-
-<TabItem value="m2" label="Install from Adafruit-nrfutil">
-
-
-- [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/mesh_tracker_x1_bootloader-0.10.0-13.zip)
+- [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
 
 :::danger note
 When you are flashing the bootloader, please make sure the cable connection is stable and **DO NOT** disconnect it during the flash process.
@@ -595,94 +594,6 @@ adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.
 
 When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/#flash-firmware) to flash the application firmware.
 
-</TabItem>
-
-<TabItem value="m3" label="Install from Source">
-
-
-Use this method if you have issues installing with PyPi or want to modify the tool. First clone this repo and go into its folder.
-
-```
-git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
-cd Adafruit_nRF52_nrfutil
-```
-
-Note: The following commands use `python3`; however, if you are on Windows, you may need to change it to `python` since the Windows installation of Python 3.x still uses the name python.exe
-
-To install in user space in your home directory:
-
-```
-pip3 install -r requirements.txt
-python3 setup.py install
-```
-
-If you get permission errors when running `pip3 install`, your `pip3` is older or is set to try to install in the system directories. In that case, use the `--user` flag:
-
-```
-pip3 install -r --user requirements.txt
-python3 setup.py install
-```
-
-If you want to install in system directories (generally not recommended):
-
-```
-sudo pip3 install -r requirements.txt
-sudo python3 setup.py install
-```
-
-To generate a self-contained executable binary of the utility (Windows and MacOS), run these commands:
-
-```
-pip3 install pyinstaller
-cd Adafruit_nRF52_nrfutil
-pip3 install -r requirements.txt
-cd Adafruit_nRF52_nrfutil\nordicsemi
-pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
-```
-
-You will find the .exe in `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` ( with `.exe` if you are on Windows).
-Copy or move it elsewhere for your convenience, such as a directory in your %PATH%.
-
-**Step 2: Check your port number**
-
-Connect your device to your PC, and check the port number.
-
-For Windows users, open your device manager, and go to "port", the port number newly popped out after the device connection is the device port number.
-
-For Mac users, for example:
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
-
-For Windows users, for example:
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
-
-**Step 3: Flash the bootloader**
-
-In the terminal or command prompt, navigate to the directory where you downloaded the bootloader zip package and execute the following command, replacing the correct port for your device:
-
-- **For Windows**:
-
-```
-adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p COMxx -b 115200 --singlebank --touch 1200
-```
-
-Please change COMXX to your COM number. For example, if your device is on com6, change the command to be:
-
-`adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p **COM6** -b 115200 --singlebank --touch 1200`
-
- Some of the devices will change their port number after you enter this command. So if the installation fails, check the port number again.
-
-- **For others**:
-
-```
-adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
-```
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
-
-When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/#flash-firmware) to flash the application firmware.
-
-</TabItem>
-</Tabs>
 
 
 **2) Device can not enter DFU mode, but the serial port can be detected**.
@@ -696,7 +607,7 @@ When you have completed the above steps, then you can follow this [step](https:/
 
 **3) Device can not enter DFU mode, and no serial port display**
 
-- press and hold the device button, then connect the charging cable. After a disk pops out on your PC, you may see the serial port.
+- press and hold the device button, then connect the charging cable, then release the button immediately. After a disk pops out on your PC, you may see the serial port.
 
 - If still no luck, please disconnect the charging cable and leave the device for a few days until the battery is completely drained, then connect the charging cable and try to pair it again.
 

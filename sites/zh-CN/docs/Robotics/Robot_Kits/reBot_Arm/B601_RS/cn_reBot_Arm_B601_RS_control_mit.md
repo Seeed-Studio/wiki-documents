@@ -15,12 +15,12 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_mit_control
 sku: 100019336
 last_update:
-  date: 2026-08-04
+  date: 2026-08-10
   author: LiJie
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-04'
-updatedAt: '2026-08-04'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_mit_control/
 ---
 
@@ -204,7 +204,7 @@ USB CAN 适配器重新插拔后，通常需要再次执行上述 `ip link` 配�
 | `control.control_hz` | MIT 指令发送频率（非运动速度） | 200 Hz |
 | `control.telemetry_hz` | 温度读取频率 | 2 Hz |
 | `temperatures.alarm_c` | 温度报警阈值 | 80°C |
-| `temperatures.return_zero_c` | 高温回零阈值 | 100°C |
+| `temperatures.return_zero_c` | 高温回零阈值 | 125°C |
 | `temperatures.disconnect_c` | 紧急失能阈值 | 140°C |
 | `return_zero.max_speed_deg_s` | 普通回零峰值速度 | 30°/s |
 | `return_zero.thermal_max_speed_deg_s` | 高温触发的回零峰值速度 | 30°/s |
@@ -259,12 +259,18 @@ rebot_control/
 若设完目标后立刻调用 `stop()`，可能几乎看不到向目标的运动。示例中使用 `wait_for_command_targets()`（见 `examples/_bootstrap.py`）等待发送角度接近目标后再回零。
 :::
 
+### 连接与使能顺序
+
+`connect()` 内部顺序为：**注册电机 → 切 MIT 模式 → 使能 → 读取当前机械位置**（作为目标初值，避免使能后突然跳动）。RobStride 的 `mechPos (0x7019)` 需在使能后才可稳定读取。
+
+被动读位置场景（教程 5）在 `connect()` 后调用 `disable_motors()` 失能，即可手动推动机械臂并持续读取角度。
+
 ### 三级温度保护
 
 | 阈值（默认） | 行为 |
 |-------------|------|
 | ≥ 80°C | 温度报警（每个电机每次超温边沿只报一次），继续运行 |
-| ≥ 100°C | 停止运动，按高温回零峰值速度缓慢回零后失能 |
+| ≥ 125°C | 停止运动，按高温回零峰值速度缓慢回零后失能 |
 | ≥ 140°C | 立即紧急失能，**不回零** |
 
 ### 安全回零
@@ -379,14 +385,35 @@ python3 examples/single_joint_adjust.py
 python3 examples/read_joint_angles.py
 ```
 
-**预期动作**：启动后打印实际角度；J1 向 +20° 运动约 5 s 后再读一次实际角度（应接近 20°）；然后回零。
+**预期动作**：
+
+1. `connect()`：切 MIT 模式并使能（建立通信），读取当前角度作为目标初值。
+2. `disable_motors()`：立即失能，便于手动推动机械臂。
+3. 终端以约 **30 Hz** 持续打印各关节实际角度；手动改变姿态时读数应随之变化。
+4. 按 **Ctrl+C** 结束；`stop(return_to_zero=False)` 关闭 CAN，**不回零**。
+
+本示例**不调用** `start()`，因此不会启动 MIT 控制线程，也不会下发运动目标。
+
+**代码流程**：
+
+```python
+arm.connect()           # MIT → 使能 → 读当前角度
+arm.disable_motors()    # 失能，手臂可手动推动
+
+while True:
+    actual = arm.read_joint_angles()  # 约 30 Hz
+    print(actual)
+
+# Ctrl+C 后
+arm.stop(return_to_zero=False, wait=True)
+```
 
 :::tip
-`read_joint_angles()` 会同步访问 CAN，不宜极高频调用。监控下发进度用 `get_command_angles()`。
+`read_joint_angles()` 会同步访问 CAN（依次读取 7 个电机的 `mechPos`），实际频率受总线往返时间限制。示例目标为 30 Hz；若单次读取耗时较长，实际频率可能低于 30 Hz。在 MIT 控制运行中监控**下发进度**时，用 `get_command_angles()` 即可，无需高频调用 `read_joint_angles()`。
 :::
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/read_joint_angles/read_joint_angles.mp4" title="视频演示 - 读取实际位置" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/read_joint/read_joint_angles.mp4" title="视频演示 - 读取实际位置" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -475,22 +502,47 @@ arm.set_joint_angles([25, 15, 15, -15, 0, 0, 0])
 arm.set_joint_angle(GRIPPER_JOINT_ID, 180.0)  # 夹爪 = J7
 ```
 
+### 被动读取实际位置
+
+```python
+from rebot import ReBotRSMITController
+
+arm = ReBotRSMITController()
+arm.connect()           # MIT → 使能 → 读当前角度
+arm.disable_motors()    # 失能，便于手动推动
+
+actual = arm.read_joint_angles()
+print(actual)
+
+arm.stop(return_to_zero=False, wait=True)  # 关闭 CAN，不回零
+```
+
 ### 控制器生命周期
+
+**MIT 运动控制**：
 
 ```
 创建 → start() → set_max_speeds() → set_joint_angles() / set_joint_angle() → … → stop()
+```
+
+**被动读位置**（不下发运动）：
+
+```
+创建 → connect() → disable_motors() → read_joint_angles() → … → stop(return_to_zero=False)
 ```
 
 ### 主要 API
 
 | 方法 / 属性 | 说明 |
 |------------|------|
+| `connect()` | 连接 CAN、切 MIT、使能后读当前角度；`start()` 内部会自动调用 |
+| `disable_motors()` | 失能所有电机，不关闭 CAN（便于手动推动后读位置） |
 | `start(enable_esc=True, install_signal_handlers=True)` | 启动控制与温度线程 |
 | `set_joint_angles(angles_deg)` | 设置 7 个目标角度（度） |
 | `set_joint_angle(joint_id, angle_deg)` | 设置单个关节 / 夹爪（1–7） |
 | `set_max_speeds(speeds_deg_s)` | 设置 7 个最大速度（度/秒） |
 | `get_target_angles()` / `get_command_angles()` | 目标 / 平滑发送角度 |
-| `read_joint_angles()` | 同步读实际机械位置 |
+| `read_joint_angles()` | 同步读实际机械位置（度）；会占用 CAN |
 | `last_temperatures` | 各电机 MOS 温度 |
 | `is_stopped` | 安全停止是否完成 |
 | `stop(return_to_zero=True, wait=True)` | 停止（默认回零） |
@@ -516,6 +568,9 @@ arm.set_joint_angle(GRIPPER_JOINT_ID, 180.0)  # 夹爪 = J7
 - **夹爪不动作**  
   夹爪为 **J7 / CAN ID 7**。`set_joint_angles` 必须传入 **7 个数**，最后一个为夹爪；或使用 `set_joint_angle(7, angle)`。
 
+- **读实际位置超时 / 读不到角度**  
+  `mechPos` 需在 MIT 模式并使能后才可稳定读取。教程 5 使用 `connect()` 完成使能后再 `disable_motors()` 失能，即可手动推动并持续读取。若 `ensure_mode` 或读参数超时，请检查 CAN 接线、终端电阻与电机供电。
+
 - **温度报警刷屏**  
   当前实现为边沿触发 + 滞回去抖：同一超温过程每个电机只报警一次；温度降到 `alarm_c - 2°C` 以下后才会再次报警。
 
@@ -533,7 +588,7 @@ arm.set_joint_angle(GRIPPER_JOINT_ID, 180.0)  # 夹爪 = J7
 ## 联系方式
 
 - **项目仓库**: [https://github.com/LAN-GER/rebot_control](https://github.com/LAN-GER/rebot_control)
-- **技术支持 / Issue**: [GitHub Issues](https://github.com/LAN-GER/rebot_control/issues)
+- **技术支持 / Issue**: [https://github.com/LAN-GER/rebot_control/issues](https://github.com/LAN-GER/rebot_control/issues)
 - **论坛**: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ---

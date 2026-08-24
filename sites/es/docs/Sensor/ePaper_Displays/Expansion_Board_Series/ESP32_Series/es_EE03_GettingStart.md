@@ -2,9 +2,9 @@
 description: Primeros pasos con la placa controladora EE03 de tinta electrónica de 10,3 pulgadas
 title: Primeros pasos con EE03
 keywords:
-  - E-ink
+  - Tinta electrónica
   - Placa controladora
-  - 10.3 inch
+  - 10,3 pulgadas
   - ESP32
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.jpg
@@ -15,11 +15,11 @@ last_update:
   date: 2026-03-1
   author: Jackson.Li
 createdAt: '2026-03-02'
-updatedAt: '2026-06-23'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/es/getting_started_with_ee03/
 ---
 
-# Primeros pasos con la XIAO ePaper Display Board - EE03
+# Primeros pasos con la placa XIAO ePaper Display - EE03
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -28,8 +28,8 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board EE03</th>
-        <th>Pantalla de tinta electrónica monocroma de 10,3"</th>
+        <th>Placa XIAO ePaper Display EE03</th>
+        <th>Pantalla ePaper monocroma de 10,3"</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg"/></div>
@@ -50,27 +50,27 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-Impulsada por **XIAO ESP32-S3 Plus**, la placa controladora de tinta electrónica EE03 es compatible con la **pantalla de tinta electrónica monocroma de 10,3"**. Incorpora un conector de batería JST de 2,0 mm con interruptor de encendido, CI de carga integrado y viene con un botón de reinicio y tres botones de usuario. Es ideal para proyectos de tinta electrónica de bajo consumo, como marcos de fotos digitales y paneles de información.
+Impulsada por **XIAO ESP32-S3 Plus**, la placa controladora de ePaper EE03 es compatible con la **pantalla ePaper monocroma de 10,3"**. Incorpora un conector de batería JST de 2,0 mm con interruptor de encendido, CI de carga integrado y viene con un botón de reinicio y tres botones de usuario. Es ideal para proyectos de ePaper de bajo consumo, como marcos de fotos digitales y paneles de información.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### Características
 
-- **XIAO ESP32-S3 Plus integrado:** Funciona inmediatamente al conectarse a una pantalla de tinta electrónica compatible.
-- **Compatibilidad dedicada con pantalla de tinta electrónica monocroma de 10,3":** Diseñada específicamente para una pantalla de tinta electrónica de 10,3" con refresco de alta velocidad, lo que garantiza una configuración rápida y un funcionamiento estable.
+- **XIAO ESP32-S3 Plus integrado:** Funciona inmediatamente al conectarse a una pantalla ePaper compatible.
+- **Compatibilidad dedicada con pantalla ePaper monocroma de 10,3":** Diseñada específicamente para pantallas ePaper de 10,3" con refresco de alta velocidad, lo que garantiza una configuración rápida y un funcionamiento estable.
 - **Refresco de alta velocidad habilitado:** El control de temporización T-CON integrado garantiza un accionamiento de alta velocidad preciso, mientras que el SHT40 integrado proporciona medición de temperatura en tiempo real para la compensación de la forma de onda.
-- **Conector BAT con interruptor:** Ofrece una conexión sencilla de la batería e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro de consumo.
+- **Conector BAT con interruptor:** Ofrece una conexión de batería sencilla e integra un interruptor, lo que permite una gestión de energía eficiente y ahorro energético.
 - **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, lo que proporciona flexibilidad para acelerar proyectos y funciones personalizables.
-- **Firmware SenseCraft HMI precargado:** Solo tienes que conectarla y empezar a usarla de inmediato con SenseCraft HMI, nuestra plataforma de diseño de interfaces sin código impulsada por IA. Elige entre plantillas variadas o crea interfaces mediante arrastrar y soltar (con asistencia opcional de IA) y despliega el contenido en la pantalla de tinta electrónica con solo unos clics.
+- **Firmware SenseCraft HMI pregrabado:** Simplemente conéctala y empieza a usarla de inmediato con SenseCraft HMI, nuestra plataforma de diseño de interfaces sin código impulsada por IA. Elige entre plantillas variadas o crea interfaces mediante arrastrar y soltar (con asistencia opcional de IA) y despliega en la pantalla ePaper con solo unos clics.
 
 ### Especificaciones
 
 | Parámetro | Descripción |
 | :--- | :--- |
 | **Procesador** | XIAO ESP32-S3 Plus |
-| **Conector de tinta electrónica** | FPC de 40 pines 0,5 mm |
+| **Conector ePaper** | FPC de 40 pines 0,5 mm |
 | **Conector de batería** | JST 2,0 mm |
-| **Interruptor** | Encendido/Apagado de alimentación por batería |
+| **Interruptor** | Encendido/apagado de alimentación por batería |
 | **Alimentación** | - Batería de litio de 3,7 V<br/>- USB Type-C |
 | **Botón** | - 1x botón de reinicio<br/>- 3x botones de usuario |
 
@@ -79,17 +79,17 @@ Impulsada por **XIAO ESP32-S3 Plus**, la placa controladora de tinta electrónic
 - **Lectores de libros electrónicos digitales:** Ofrecen una experiencia de lectura monocroma similar al papel con 16 niveles de escala de grises y un refresco rápido para cambios de página más fluidos y actualizaciones más receptivas.
 - **Panel de control en tiempo real:** Muestra información en vivo como actualizaciones meteorológicas, calendarios, notificaciones clave y widgets de datos como consumo de energía, estado de sensores o KPI.
 - **Alertas de seguridad:** Muestra alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
-- **Panel de llegadas de transporte público:** Muestra en tiempo real los horarios de llegada de autobuses/trenes, el estado de las rutas y avisos de servicio de un vistazo para el desplazamiento diario.
+- **Panel de llegadas de transporte público:** Muestra en un vistazo horarios de llegada en tiempo real de autobuses/trenes, estado de rutas y avisos de servicio para el desplazamiento diario.
 
 ## Descripción general del hardware
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/2.png" style={{width:800, height:'auto'}}/></div>
 
-- **USB Type-C**: Para alimentación y grabación de firmware.
-- **Conector FPC**: Para conectar la pantalla de tinta electrónica.
+- **USB Type-C**: Para alimentación y flasheo de firmware.
+- **Conector FPC**: Para conectar la pantalla ePaper.
 - **Botón de reinicio**: Para reiniciar la placa.
 - **Botones de usuario**: Botones programables para la interacción del usuario.
 - **Interruptor de encendido**: Controla el encendido/apagado de la batería.
-- **Botón de arranque (Boot)**: Se utiliza para entrar en el modo bootloader.
+- **Botón de arranque (Boot)**: Se utiliza para entrar en modo bootloader.
 - **LED indicadores**: Indicadores de estado para alimentación y carga.
 - **Conector JST**: Conector JST de 2 pines y 2,0 mm para conectar la batería.
 
@@ -100,22 +100,22 @@ Esta sección te guiará para conectar tu EE03 a la plataforma SenseCraft HMI, l
 ### Instalación del equipo
 
 **Paso 1. Conectar la pantalla y la placa**
-Conecta con cuidado el cable FPC de tu pantalla de tinta electrónica al conector de la placa controladora EE03. Asegúrate de que el mecanismo de bloqueo esté bien asegurado.
+Conecta con cuidado el cable FPC de tu pantalla ePaper al conector de la placa controladora EE03. Asegúrate de que el mecanismo de bloqueo esté bien asegurado.
 
 **Paso 2. Encender**
 Conecta la placa EE03 a una fuente de alimentación (ordenador o adaptador USB) utilizando un cable USB Type-C. Al encenderla, la pantalla se actualizará y mostrará una imagen de bienvenida.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_1.jpg" style={{width:300,height:'auto'}}/></div>
 
-**Paso 3. Entrar en el modo de configuración de red**
-Después de la imagen de bienvenida, la pantalla se actualizará automáticamente para mostrar la interfaz de configuración de red. Esto indica que el dispositivo está listo para conectarse a Wi‑Fi.
+**Paso 3. Entrar en modo de configuración de red**
+Después de la imagen de bienvenida, la pantalla se actualizará automáticamente para mostrar la interfaz de configuración de red. Esto indica que el dispositivo está listo para conectarse a Wi-Fi.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_3.jpg" style={{width:300,height:'auto'}}/></div>
 
 
 ### Configuración de red
 
-**Paso 4. Configurar el Wi‑Fi mediante el teléfono móvil**
-Utiliza tu teléfono móvil para escanear el código QR que aparece en la pantalla. Sigue las indicaciones en tu teléfono para introducir el SSID y la contraseña de tu red Wi‑Fi local y conectar la EE03 a Internet.
+**Paso 4. Configurar Wi-Fi mediante el teléfono móvil**
+Utiliza tu teléfono móvil para escanear el código QR que se muestra en la pantalla. Sigue las indicaciones en tu teléfono para introducir el SSID y la contraseña de tu red Wi-Fi local y conectar la EE03 a Internet.
 
 **Paso 5. Obtener el código de vinculación**
 Una vez que la configuración de red sea correcta, la pantalla se actualizará de nuevo y mostrará un **código de vinculación** único. Necesitarás este código para el siguiente paso.
@@ -124,7 +124,7 @@ Una vez que la configuración de red sea correcta, la pantalla se actualizará d
 ### Vinculación con la plataforma y actualización
 
 **Paso 6. Vincular el dispositivo en SenseCraft HMI**
-Ve a la [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "Add Device". Introduce el código de vinculación que aparece en tu pantalla de tinta electrónica.
+Ve a la [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "Add Device". Introduce el código de vinculación que se muestra en tu pantalla de tinta electrónica.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_4.jpg" style={{width:800, height:'auto'}}/></div>
 **Paso 7. Crear y enviar una nueva interfaz**     
 En la plataforma SenseCraft HMI, selecciona la plantilla adecuada para la pantalla de 10,3 pulgadas para crear una nueva interfaz o subir una imagen.
@@ -194,7 +194,7 @@ Después de eso, ve a **Tools** -> **Board** -> **XIAO ESP32S3 Plus** y **Tools*
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/5.jpg" style={{width:1000, height:'auto'}}/></div>
 
-Ten en cuenta que PSAM debe estar habilitado.
+Ten en cuenta que PSRAM debe estar habilitada.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.jpg" style={{width:1000, height:'auto'}}/></div>
 
 Luego haz clic en **Upload** para cargar el código.

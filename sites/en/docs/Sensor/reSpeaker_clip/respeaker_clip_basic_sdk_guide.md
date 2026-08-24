@@ -14,7 +14,7 @@ last_update:
   date: 07/13/2026
   author: Ray He / Kasun Thushara
 createdAt: '2026-07-13'
-updatedAt: '2026-08-05'
+updatedAt: '2026-08-17'
 url: https://wiki.seeedstudio.com/respeaker_clip_basic_sdk_guide/
 ---
 
@@ -53,28 +53,88 @@ This guide focuses on application-side development:
 - understanding AT commands, GATT, and file-transfer protocols;
 - integrating these capabilities through Python, CLI, or Web tools.
 
-## Basic SDK and Firmware SDK
+## Choose the Right reSpeaker Clip Guide
 
-The reSpeaker Clip SDK is split into two layers:
+The reSpeaker Clip documentation is organized by development layer. Start with **Getting Started** for product setup and normal workflows. Use the **Basic SDK** when a host application needs to control the device or download recordings. Continue to **Service Integration** when a long-running service needs to own the device connection and expose APIs. Use the **Firmware SDK** only when you need to change device-side behavior, protocols, or audio processing.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_basic_firmware.png" alt="Basic SDK vs Firmware SDK" width={900} height="auto" /></p>
+<div className="row">
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/respeaker_clip/"
+      aria-label="Open the reSpeaker Clip Getting Started guide"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Product overview, hardware setup, and first-use workflows.</p>
+      </div>
+    </a>
+  </div>
 
-The concepts introduced in this guide (transports, protocols, state machine, data flow) are implemented on the device side by the firmware. The table below maps each Basic SDK concept to its Firmware SDK counterpart:
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/respeaker_clip_basic_sdk_guide/"
+      aria-label="Open the reSpeaker Clip Basic SDK guide"
+      aria-current="page"
+      className="card shadow--md respeaker-clip-nav-card respeaker-clip-nav-card--active"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Control the device, manage recordings, and download audio without changing firmware.</p>
+      </div>
+    </a>
+  </div>
 
-| Basic SDK concept | Firmware SDK counterpart |
-| --- | --- |
-| BLE / Wi-Fi transport | BLE and UDP service device-side implementation |
-| AT Command | AT Server and command registration |
-| GATT | GATT service and characteristics |
-| Recording state machine | Device recording states and event handling |
-| File transfer | Storage, chunking, CRC, and sync implementation |
-| Audio data flow | PDM -> DSP -> Opus -> file pipeline |
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/respeaker_clip_service_integration/"
+      aria-label="Open the reSpeaker Clip Service Integration guide"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Add reSpeaker Clip to a long-running Python service through an adapter and API routes.</p>
+      </div>
+    </a>
+  </div>
 
-If your goal is to add new AT commands, change GATT services, modify the recording state machine, or alter the audio processing chain, use the Firmware SDK:
-
-- [Getting Started with the reSpeaker Clip Firmware SDK](/respeaker_clip_firmware_quick_start/) covers environment setup, build, flash, and smoke testing.
-- [reSpeaker Clip Firmware Development Guide](/respeaker_clip_firmware_development_guide/) explains the firmware architecture, protocol internals, update and recovery paths, validation, production release, and AI-assisted development.
-- [Customization: Add a Custom AT Command](/respeaker_clip_customization_at_command/) walks through adding and validating a new AT command.
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/respeaker_clip_firmware_quick_start/"
+      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Firmware SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Build, flash, debug, and customize device-side behavior.</p>
+      </div>
+    </a>
+  </div>
+</div>
 
 ## Installation
 

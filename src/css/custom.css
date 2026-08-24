@@ -2246,4 +2246,41 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 	font-family: 'Montserrat-bold';
 	src: url('https://files.seeedstudio.com/wiki/Montserrat-bold.otf');
 }
+.respeaker-clip-nav-card {
+	transform: translateY(0) scale(1);
+	transform-origin: center;
+	transition: transform 220ms ease, box-shadow 220ms ease;
+	will-change: transform;
+}
 
+.respeaker-clip-nav-card:hover,
+.respeaker-clip-nav-card:focus-visible {
+	transform: translateY(-4px) scale(1.035);
+	box-shadow: 0 16px 34px rgba(20, 32, 51, 0.2) !important;
+	z-index: 2;
+}
+
+.respeaker-clip-nav-card:focus-visible {
+	outline: 3px solid var(--ifm-color-primary);
+	outline-offset: 3px;
+}
+
+.respeaker-clip-nav-card--active {
+	border: 3px solid #3b82f6 !important;
+	box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.22), 0 10px 24px rgba(37, 99, 235, 0.16) !important;
+}
+
+.respeaker-clip-nav-card--active:hover,
+.respeaker-clip-nav-card--active:focus-visible {
+	box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.28), 0 18px 36px rgba(37, 99, 235, 0.25) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.respeaker-clip-nav-card {
+		transition: none;
+	}
+}
+
+.hidden-sidebar-item {
+  display: none !important;
+}

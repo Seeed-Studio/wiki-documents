@@ -15,7 +15,7 @@ last_update:
   date: 07/09/2026
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-07-15'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/es/recomputer_j501_mini_getting_started/
 ---
 # Hardware de la placa carrier Mini J501 y Guía de Inicio
@@ -313,7 +313,7 @@ Antes de continuar con los pasos de instalación, debemos asegurarnos de que la 
 
 <summary> Paso a paso </summary>
 
-**Paso 1.** Mantenga presionado el botón para entrar en el modo RESET.
+**Paso 1.** Mantenga presionado el botón REC.
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />

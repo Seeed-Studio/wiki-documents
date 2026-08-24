@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-03-24'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
@@ -731,8 +731,8 @@ viz.draw_path(points, "path_name", color)  # Draw path
 
 ## 連絡先
 
-- **技術サポート**： [Submit Issue](https://github.com/vectorBH6/reBotArm_control_py/issues)
-- **プロジェクトリポジトリ**： [GitHub](https://github.com/vectorBH6/reBotArm_control_py)
+- **技術サポート**： [Submit Issue](https://github.com/Seeed-Projects/reBotArm_control_py/issues)
+- **プロジェクトリポジトリ**： [GitHub](https://github.com/Seeed-Projects/reBotArm_control_py)
 - **フォーラム**： [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ---

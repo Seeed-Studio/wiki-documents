@@ -1,6 +1,6 @@
 ---
-description: Catálogo de la documentación de SenseCraft AI
-title: Descripción general
+description: Encuentra guías de SenseCraft AI para modelos preentrenados, entrenamiento personalizado, implementación de modelos, espacios de trabajo de dispositivos, salida de modelos y aplicaciones.
+title: Centro de Documentación de SenseCraft AI
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png
 sidebar_class_name: hidden
 slug: /sensecraft-ai/sensecraft-ai-main
@@ -11,23 +11,25 @@ last_update:
   date: 11/27/2024
   author: Citrc
 createdAt: '2024-11-27'
-updatedAt: '2026-05-07'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/sensecraft-ai-main/
 ---
 
-# Centro Wiki de SenseCraft AI
+# Centro de Documentación de SenseCraft AI
 
-## Descripción general
+Utiliza este centro de documentación basado en tareas para encontrar guías sobre modelos preentrenados, entrenamiento personalizado, implementación de modelos, espacios de trabajo de dispositivos, salida de modelos y aplicaciones. Para conocer las capacidades y el flujo de trabajo de SenseCraft AI, consulta la [visión general de la plataforma](/es/sensecraft-ai/overview/).
+
+## Visión general
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_overview/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Descripción general 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="/es/sensecraft-ai/overview/" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>Visión general de la plataforma SenseCraft AI 🖱️</font></span></strong>
     </a>
 </div><br />
 
-La sección de descripción general ofrece una introducción de alto nivel a SenseCraft AI, explicando su propósito, características clave y beneficios. Sirve como punto de partida para que los usuarios comprendan la plataforma y sus capacidades. La descripción general también incluye enlaces a las guías de inicio rápido y a las preguntas frecuentes (FAQ) para ayudar a los usuarios a comenzar a utilizar SenseCraft AI rápidamente.
+La sección de Visión general ofrece una introducción de alto nivel a SenseCraft AI, explicando su propósito, características clave y beneficios. Sirve como punto de partida para que los usuarios comprendan la plataforma y sus capacidades. La visión general también incluye enlaces a guías de primeros pasos y preguntas frecuentes (FAQ) para ayudar a los usuarios a comenzar rápidamente con SenseCraft AI.
 
 ## Biblioteca de modelos
 
@@ -39,7 +41,7 @@ La sección de descripción general ofrece una introducción de alto nivel a Sen
     </a>
 </div><br />
 
-La Biblioteca de modelos (a la que se accede mediante **`Models`** > **`Model Library`** en la plataforma SenseCraft AI) contiene información sobre los modelos preentrenados disponibles que se pueden desplegar en varios dispositivos compatibles con SenseCraft AI. Estos modelos están optimizados para hardware específico y pueden utilizarse para diferentes aplicaciones sin necesidad de entrenamiento personalizado. La sección se divide a su vez en subsecciones según los dispositivos compatibles:
+La Biblioteca de modelos (a la que se accede mediante **`Models`** > **`Model Library`** en la plataforma SenseCraft AI) contiene información sobre los modelos preentrenados disponibles que pueden implementarse en varios dispositivos compatibles con SenseCraft AI. Estos modelos están optimizados para hardware específico y pueden utilizarse para diferentes aplicaciones sin necesidad de entrenamiento personalizado. La sección se divide a su vez en subsecciones según los dispositivos compatibles:
 
 - **para XIAO ESP32S3 Sense**: Esta subsección enumera los modelos preentrenados compatibles con la placa XIAO ESP32S3 Sense, junto con sus descripciones y casos de uso.
 
@@ -111,7 +113,7 @@ La sección de Entrenamiento está dedicada a guiar a los usuarios a través del
 
 La sección Salida de modelos se centra en cómo configurar y utilizar la salida de los modelos entrenados en diferentes dispositivos compatibles con SenseCraft AI. Está organizada en las siguientes subsecciones:
 
-- **Salida de modelos Grove Vision AI V2**: Esta subsección explica cómo configurar y acceder a la salida de los modelos desplegados en el dispositivo Grove Vision AI V2. Cubre temas como la configuración de disparadores, la integración con sistemas externos y la visualización de las predicciones del modelo.
+- **Salida de modelos Grove Vision AI V2**: Esta subsección explica cómo configurar y acceder a la salida de los modelos implementados en el dispositivo Grove Vision AI V2. Cubre temas como la configuración de disparadores, la integración con sistemas externos y la visualización de las predicciones del modelo.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_grove_visionai/" target="_blank" rel="noopener noreferrer">
@@ -121,21 +123,21 @@ La sección Salida de modelos se centra en cómo configurar y utilizar la salida
 
 - Salida de modelos XIAO ESP32S3 Sense: Aquí puedes encontrar información sobre cómo trabajar con las salidas de los modelos en la placa XIAO ESP32S3 Sense. La subsección se divide a su vez en:
 
-  - **mediante GPIO**: Esta parte proporciona guías sobre cómo asignar las salidas de los modelos a los pines GPIO de la XIAO ESP32-S3 Sense, lo que permite controlar hardware externo en función de las predicciones del modelo.
+  - **a través de GPIO**: Esta parte proporciona guías sobre cómo asignar las salidas del modelo a los pines GPIO del XIAO ESP32-S3 Sense, lo que permite controlar hardware externo en función de las predicciones del modelo.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_gpio_xiao/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>mediante GPIO</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>a través de GPIO</font></span></strong>
     </a></div><br />
 
-  - **mediante MQTT**: Aquí puedes aprender cómo enviar las salidas de los modelos desde la XIAO ESP32S3 Sense a otros dispositivos o sistemas utilizando el protocolo MQTT, lo que facilita una integración y comunicación fluidas.
+  - **a través de MQTT**: Aquí puedes aprender cómo enviar las salidas del modelo desde el XIAO ESP32S3 Sense a otros dispositivos o sistemas utilizando el protocolo MQTT, facilitando una integración y comunicación fluidas.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_mqtt_xiao/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>mediante MQTT</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>a través de MQTT</font></span></strong>
     </a></div><br />
 
-  - **Como sensor**: Esta parte explicará cómo utilizar XIAO, que ya ha cargado un modelo, como sensor. Es posible que necesites utilizar un dispositivo XIAO o Arduino adicional.
+  - **Como sensor**: Esta parte explicará cómo utilizar XIAO, que ya ha cargado un modelo, como sensor. Puede requerir que utilices un dispositivo XIAO o Arduino adicional.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_libraries_xiao/" target="_blank" rel="noopener noreferrer">
@@ -149,7 +151,7 @@ La sección Salida de modelos se centra en cómo configurar y utilizar la salida
             <strong><span><font color={'FFFFFF'} size={"4"}>Usar SSCMACore</font></span></strong>
     </a></div><br />
 
-- Espacio de trabajo reComputer Jetson: Esta subsección proporciona información sobre cómo configurar y utilizar el espacio de trabajo reComputer Jetson para trabajar con las salidas de los modelos. Cubre temas como la configuración del espacio de trabajo, la visualización de las predicciones del modelo y la integración con otro software.
+- Espacio de trabajo reComputer Jetson: Esta subsección proporciona información sobre cómo configurar y utilizar el espacio de trabajo reComputer Jetson para trabajar con salidas de modelos. Cubre temas como la configuración del espacio de trabajo, la visualización de las predicciones del modelo y la integración con otro software.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img/video.gif" style={{width:1000, height:'auto'}}/></div>
 
@@ -161,9 +163,9 @@ La sección Salida de modelos se centra en cómo configurar y utilizar la salida
     </a>
 </div><br />
 
-La sección de Aplicación muestra ejemplos y casos de estudio del mundo real que demuestran cómo puede utilizarse SenseCraft AI para resolver diversos problemas en diferentes dominios. Incluye descripciones detalladas de proyectos, ejemplos de código y buenas prácticas para inspirar y guiar a los usuarios en el desarrollo de sus propias aplicaciones de IA utilizando SenseCraft AI.
+La sección de Aplicaciones muestra ejemplos y casos de estudio del mundo real que demuestran cómo SenseCraft AI puede utilizarse para resolver diversos problemas en diferentes dominios. Incluye descripciones detalladas de proyectos, ejemplos de código y mejores prácticas para inspirar y guiar a los usuarios en el desarrollo de sus propias aplicaciones de IA utilizando SenseCraft AI.
 
-## Soporte técnico y debate sobre el producto
+## Soporte técnico y debate sobre productos
 
 Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 

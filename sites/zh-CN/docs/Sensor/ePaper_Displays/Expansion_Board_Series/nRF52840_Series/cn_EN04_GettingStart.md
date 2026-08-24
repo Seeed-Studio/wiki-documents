@@ -11,7 +11,7 @@ last_update:
   date: 11/25/2025
   author: Allen
 createdAt: '2025-09-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/cn/epaper_EN04/
 ---
 import Tabs from '@theme/Tabs';
@@ -38,13 +38,13 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 介绍
 
-由 **XIAO nRF52840** Plus 提供动力，显示板 EN04 支持 **24-pin** 和 **50-pin** 两种 ePaper 显示屏。它配备带电源开关的 JST 2.0 mm 电池连接器、内置充电 IC、NFC 功能，并带有一个复位按键和三个用户按键。非常适合用于低功耗 ePaper 项目，例如数字标牌、电子标签和便携式信息板。
+由 **XIAO nRF52840** Plus 提供算力，显示板 EN04 同时支持 **24-pin** 和 **50-pin** ePaper 显示屏。它配备带电源开关的 JST 2.0 mm 电池接口、板载充电 IC、NFC 功能，并带有 1 个复位按键和 3 个用户按键。非常适合用于低功耗 ePaper 项目，例如数字标牌、电子标签和便携式信息看板。
 
 ### 特性
 
-- **由 XIAO nRF52840 Plus 供电：** 连接兼容的 ePaper 显示屏后即可立即工作。
+- **由 XIAO nRF52840 Plus 供电：** 连接兼容的 ePaper 显示屏即可立即工作。
 - **多样化显示支持：** 兼容多种 ePaper 屏幕，支持 24-Pin 和 50-Pin 接口，并可通过跳线帽轻松切换。
-- **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效的电源管理和节能。
+- **带开关的电池接口：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
 - **用户友好按键：** 包含 1 个复位按键和 3 个用户可编程按键，为项目加速和自定义功能提供灵活性。
 
 ### 规格
@@ -62,19 +62,19 @@ import Steppers from '@site/src/components/utils/Stepper';
       <td>XIAO nRF52840 Plus</td>
     </tr>
     <tr>
-      <th>ePaper 连接器</th>
+      <th>ePaper 接口</th>
       <td>FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm</td>
     </tr>
     <tr>
-      <th>电池连接器</th>
+      <th>电池接口</th>
       <td>JST 2.0mm</td>
     </tr>
     <tr>
       <th>开关</th>
-      <td>电池电源 ON/OFF</td>
+      <td>电池电源 开/关</td>
     </tr>
     <tr>
-      <th>电源</th>
+      <th>电源供给</th>
       <td>- 3.7V 锂电池<br />- USB Type-C</td>
     </tr>
     <tr>
@@ -109,22 +109,22 @@ import Steppers from '@site/src/components/utils/Stepper';
             <td>24 Pin ePaper</td>
         </tr>
         <tr>
-            <th>ePaper 连接器</th>
+            <th>ePaper 接口</th>
             <td>FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm</td>
             <td>FPC 24 Pin 0.5mm</td>
             <td>FPC 24 Pin 0.5mm</td>
         </tr>
         <tr>
-            <th>电池连接器</th>
+            <th>电池接口</th>
             <td>JST 2.0mm</td>
             <td>/</td>
             <td>JST 2.0mm</td>
         </tr>
         <tr>
             <th>开关</th>
-            <td>电池电源 ON/OFF</td>
+            <td>电池电源 开/关</td>
             <td>/</td>
-            <td>电池电源 ON/OFF</td>
+            <td>电池电源 开/关</td>
         </tr>
         <tr>
             <th>按键</th>
@@ -143,11 +143,11 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ### 应用
 
-- **智能家居仪表盘**：显示天气更新、日历事件以及来自各种智能家居设备的通知等实时信息。
+- **智能家居仪表盘**：显示天气更新、日历事件以及来自各类智能家居设备的通知等实时信息。
 - **能耗监测**：显示来自智能电表的能耗数据，帮助用户更高效地跟踪和管理能源使用。
-- **安全警报**：显示关于安全事件的警报和通知，例如运动检测或门/窗传感器触发。
+- **安防告警**：显示关于安防事件的告警和通知，例如运动检测或门/窗传感器触发。
 - **智能恒温器显示**：显示温度和湿度水平，以及智能恒温器的控制设置。
-- **数字相框**：创建一个支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
+- **数字相框**：打造一款支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
 
 ## 硬件概览
 
@@ -161,7 +161,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 ### 支持的 ePaper
 
-#### 24-Pin 连接器
+#### 24-Pin 接口
 
 - [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
 - [2.13-inch ePaper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
@@ -185,7 +185,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 :::
 
-#### 50-Pin 连接器
+#### 50-Pin 接口
 
 - [7.3-inch Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
@@ -212,7 +212,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 <div align="center">
 <a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处下载</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
 </a>
 </div>
 
@@ -225,12 +225,12 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 :::tip
 如果选择错误，屏幕将不会显示任何内容。
 
-因此请务必确认你的设备或元件类型。
+所以请务必确认你的设备或元件类型。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/6.jpg" style={{width:800, height:'auto'}}/></div>
 
-下载库之后，依次进入 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择下载好的库文件。
+下载库之后，依次点击 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择下载好的库文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
@@ -254,7 +254,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
-之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。然后点击 **Upload** 上传代码。
+之后，前往 **Tools** -> **Board** -> **Seeed XIAO nRF52840 Plus** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。然后点击 **Upload** 上传代码。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -272,7 +272,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 ### XIAO 电子纸显示板（nRF52840）- EN04 上的用户按键
 
-EN04 提供了三个用户可编程按键，可用于各种控制用途。本节演示如何使用 Arduino 读取按键状态并对按键按下做出响应。
+EN04 配备了三个用户可编程按键，可用于各种控制用途。本节演示如何使用 Arduino 读取按键状态并对按键按下做出响应。
 
 在 EN04 上，这三个按键连接到 XIAO nRF52840 Plus：
 
@@ -294,7 +294,7 @@ EN04 提供了三个用户可编程按键，可用于各种控制用途。本节
 </table>
 
 
-所有按键为低电平有效，这意味着按下时读取为 LOW，松开时读取为 HIGH。
+所有按键均为低电平有效，这意味着按下时读取为 LOW，松开时读取为 HIGH。
 
 基础按键读取示例
 
@@ -347,7 +347,7 @@ void loop() {
 }
 ```
 
-### XIAO 电子纸显示板（nRF52840）- EN04 上的电池
+### XIAO 电子纸显示板（nRF52840）- EN04 上的用户电池
 
 当使用电池供电时：
 
@@ -358,7 +358,7 @@ void loop() {
 - 当电池电量低于 20% 时，设备会在右上角显示低电量图标
 
 :::tip
-如果你想自己编写代码读取电池电压，在 `analogRead()` 函数前增加 10ms 延时会更加精确。
+如果你想自己编写代码来读取电池电压，在 `analogRead()` 函数前加入 10ms 延时会更加精确。
 :::
 
 
@@ -394,12 +394,12 @@ void loop() {
 
 
 ## 资源
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 原理图&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/202004502_XIAO_ePaper_Display_Board_EN04_V1_SCH_and_PCB.zip)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 原理图和 PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/202004502_XIAO_ePaper_Display_Board_EN04_V1_SCH_and_PCB.zip)
 
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将通过多种方式为你提供支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

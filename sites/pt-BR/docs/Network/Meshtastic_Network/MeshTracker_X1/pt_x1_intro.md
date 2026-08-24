@@ -1,5 +1,5 @@
 ---
-description: SenseCAP MeshTracker X1 para Meshtastic Introdução. Este wiki apresentará os recursos, especificações, visão geral de hardware, botão, LED e lista de pinos.
+description: Introdução ao SenseCAP MeshTracker X1 para Meshtastic. Este wiki apresentará os recursos, especificações, visão geral de hardware, botão, LED e lista de pinos.
 title: Introdução ao SenseCAP MeshTracker X1
 keywords:
   - Tracker
@@ -9,11 +9,11 @@ sku: 100087698
 slug: /meshtracker_x1_intro
 sidebar_position: 0
 last_update:
-  date: 5/29/2026
-  author: MichelleHuang
+  date: 8/20/2026
+  author: Advent Jiang
 url: https://wiki.seeedstudio.com/pt-br/meshtracker_x1_intro/
 createdAt: '2026-07-13'
-updatedAt: '2026-07-16'
+updatedAt: '2026-08-20'
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png" alt="pir" width={900} height="auto" /></p>
@@ -24,7 +24,7 @@ updatedAt: '2026-07-16'
     </a>
 </div>
 
-O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla. Desenvolvido para comunicação confiável fora da rede celular, o MeshTracker X1 é um rastreador GPS [Meshtastic®](https://meshtastic.org/) com classificação IP66 que suporta frequências de 863–928 MHz. Alimentado pelo mais recente chip LoRa Semtech LR2021, ele possui conectividade USB-C, até 5 dias de duração de bateria e um design compacto, pronto para uso ao ar livre.
+O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla. Desenvolvido para comunicação confiável fora da rede, o MeshTracker X1 é um rastreador GPS [Meshtastic®](https://meshtastic.org/) com classificação IP66 que suporta frequências de 863–928 MHz. Alimentado pelo mais recente chip LoRa Semtech LR2021, ele oferece conectividade USB-C, até 5 dias de duração de bateria e um design compacto, pronto para uso ao ar livre.
 
 ### Recursos
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/LoRaWio/20260723-194348.jpg" alt="pir" width={900} height="auto" /></p>
@@ -32,13 +32,13 @@ O primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de b
 
 - **Um dispositivo Meshtastic que você realmente vai carregar** 
 
-O SenseCAP MeshTracker X1 é projetado para pessoas que precisam de comunicação confiável e compartilhamento de localização além das redes celulares — seja em ambientes externos, em grandes eventos ou durante situações de emergência. Com um formato verdadeiramente portátil e proteção robusta IP66, ele leva a conectividade Meshtastic para o uso diário e para aplicações reais em campo.
+O SenseCAP MeshTracker X1 é projetado para pessoas que precisam de comunicação confiável e compartilhamento de localização além das redes celulares — seja em ambientes externos, em grandes eventos ou durante situações de emergência. Com um formato verdadeiramente portátil e proteção robusta IP66, ele leva a conectividade Meshtastic para o uso diário e para o campo de verdade.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/CompactTracker.jpg" alt="pir" width={900} height="auto" /></p>
 
 - **Rastreamento GPS de banda dupla ultrapréciso** 
 
-Alimentado por GNSS de banda dupla L1+L5 e um barômetro integrado, o MeshTracker X1 oferece posicionamento mais confiável e percepção de altitude superior em comparação com GPS de banda única. Ele também é o primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla.
+Alimentado por GNSS de banda dupla L1+L5 e um barômetro integrado, o MeshTracker X1 oferece posicionamento e percepção de altitude mais confiáveis do que o GPS de banda única. Ele também é o primeiro dispositivo Meshtastic do mundo do tamanho de um cartão com GPS de banda dupla.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/GNSSBazzar.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -308,7 +308,7 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos modelos a ser
 |Ação do botão|Descrição|Buzzer|
 |- |- |- |
 |Pressionar uma vez|Ligar|Melodia ascendente|
-|Pressionar duas vezes|Atualizar informações do nó/localização|-|
+|Pressionar duas vezes|Atualizar informações de nó/localização|-|
 |Pressionar três vezes|Ligar/desligar o GPS|-|
 |Quatro cliques|Silenciar/reativar temporariamente|-|
 |Pressionar e segurar por 5s|Desligar|Melodia descendente|
@@ -357,9 +357,11 @@ O X1 pode ser desenvolvido em uma linha de produtos, na qual novos modelos a ser
 
 ### Recurso
 
-[Relatório de teste da bateria](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+[Relatório de Teste da Bateria](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
 
-## Suporte técnico e discussão sobre o produto
+[X1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx)
+
+## Suporte Técnico e Discussão de Produto
 
 <p style={{textAlign: 'center'}}>
   <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">

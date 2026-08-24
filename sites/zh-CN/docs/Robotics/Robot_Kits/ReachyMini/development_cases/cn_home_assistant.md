@@ -12,7 +12,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-29'
-updatedAt: '2026-07-29'
+updatedAt: '2026-07-30'
 url: https://wiki.seeedstudio.com/cn/reachymini_development_cases_home_assistant/
 ---
 # Reachy Mini 的 Home Assistant 集成

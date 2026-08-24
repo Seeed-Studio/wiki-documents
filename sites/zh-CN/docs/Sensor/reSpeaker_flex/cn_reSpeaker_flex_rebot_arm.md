@@ -14,7 +14,7 @@ last_update:
   date: 5/22/2026
   author: wuxinrui
 createdAt: '2026-05-22'
-updatedAt: '2026-06-15'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/cn/control_rebot_arm_using_voice_with_respeaker_flex/
 ---
 
@@ -624,7 +624,7 @@ uv 是一个非常快速的 Python 包管理工具，可用于安装 pip 格式�
 
 ```bash
 # Cloning robotic arm control library
-git clone https://github.com/vectorBH6/reBotArm_control_py.git
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
 
 # Enter the robotic arm control library directory
 cd reBotArm_control_py
@@ -1854,7 +1854,7 @@ np.clip(target_angle, JOINT_LIMITS_MIN, JOINT_LIMITS_MAX)
 | 资源 | 链接 | 说明 |
 |-----|-----|-----|
 | 项目主仓库 | https://github.com/xr686/reBot-Arm-reSpeaker-Flex | 声控主程序 |
-| 机械臂控制库 | https://github.com/vectorBH6/reBotArm_control_py | 机械臂 Python 控制库 |
+| 机械臂控制库 | https://github.com/Seeed-Projects/reBotArm_control_py | 机械臂 Python 控制库 |
 | reBot Arm 官方 | https://www.rebotix.com/ | 机械臂官方网站 |
 | Seeed Studio | https://www.seeedstudio.com/ | reSpeaker Flex 购买与技术支持 |
 

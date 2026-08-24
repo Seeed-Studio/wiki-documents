@@ -1,70 +1,70 @@
 ---
-description: YOLOv8 desde entrenamiento hasta despliegue
+description: YOLOv8 desde el entrenamiento hasta el despliegue
 title: Entrenar y desplegar el modelo de detección de objetos YOLOv8
 keywords:
   - YOLOv8
   - we2
-  - object detection
+  - detección de objetos
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ma_deploy_yolov8
 last_update:
   date: 04/02/2024
   author: Jack Mu
-createdAt: '2025-09-03'
-updatedAt: '2025-09-03'
+createdAt: '2024-04-07'
+updatedAt: '2026-08-19'
 url: https://wiki.seeedstudio.com/es/ma_deploy_yolov8/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Desplegar modelo de detección de objetos YOLOv8
+# Desplegar el modelo de detección de objetos YOLOv8
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/sscma/static/detection_person_yolov8.png" style={{width:600, height:'auto'}}/></div>
 
-Este wiki introducirá cómo entrenar el modelo oficial de detección de objetivos YOLOv8 y desplegar el modelo entrenado en el dispositivo Grove Vision AI (V2) o dispositivos `XIAO ESP32S3`.
+Este wiki presentará cómo entrenar el modelo oficial de detección de objetos YOLOv8 y desplegar el modelo entrenado en el dispositivo Grove Vision AI (V2) o en dispositivos `XIAO ESP32S3`.
 
 ## Preparación del conjunto de datos
 
-Se recomienda usar la plataforma [roboflow](https://universe.roboflow.com/) para conjuntos de datos. Esta plataforma puede realizar anotación de conjuntos de datos y algunas estrategias de mejora de datos, y soporta la exportación de múltiples formatos de conjuntos de datos.
+Se recomienda utilizar la plataforma [roboflow](https://universe.roboflow.com/) para los conjuntos de datos. Esta plataforma puede realizar la anotación del conjunto de datos y algunas estrategias de aumento de datos, y admite la exportación de múltiples formatos de conjuntos de datos.
 
-## Instalar herramienta de línea de comandos YOLOv8
+## Instalar la herramienta de línea de comandos YOLOv8
 
-- Por defecto, ya tienes el entorno `python` y la herramienta de gestión de paquetes `pip`, y python>=3.8.
+- De forma predeterminada, ya tienes el entorno `python` y la herramienta de gestión de paquetes `pip`, y python>=3.8.
 
 <Tabs>
 
 <TabItem value="pip installation" label="pip">
 
-Instala el paquete `ultralytics`, o ejecutando `pip install -U ultralytics`. Por favor visita el Índice de Paquetes de Python (PyPI) para aprender más sobre el paquete `ultralytics` en [https://pypi.org/project/ultralytics/](https://pypi.org/project/ultralytics/).
+Instala el paquete `ultralytics`, ejecutando `pip install -U ultralytics`. Visita el Python Package Index (PyPI) para obtener más información sobre el paquete `ultralytics` en [https://pypi.org/project/ultralytics/](https://pypi.org/project/ultralytics/).
 
 ```bash
 # Install using pip
-pip install ultralytics
+pip install ultralytics==8.2.8
 # Chinese users can use mirror acceleration
-# pip install ultralytics -i https://pypi.tuna.tsinghua.edu.cn/simple
+# pip install ultralytics==8.2.8 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 </TabItem>
 
 <TabItem value="conda installation" label="conda">
 
-`Conda` es un gestor de paquetes alternativo a `pip` y también puede ser usado para la instalación. Visita Anaconda para más detalles: [https://anaconda.org/conda-forge/ultralytics](https://anaconda.org/conda-forge/ultralytics) . El repositorio feedstock de `Ultralytics` para actualizar paquetes de `conda` se encuentra en [https://github.com/conda-forge/ultralytics-feedstock/](https://github.com/conda-forge/ultralytics-feedstock/).
+`Conda` es un gestor de paquetes alternativo a `pip` y también puede utilizarse para la instalación. Visita Anaconda para más detalles: [https://anaconda.org/conda-forge/ultralytics](https://anaconda.org/conda-forge/ultralytics). El repositorio `Ultralytics` feedstock para actualizar los paquetes de `conda` se encuentra en [https://github.com/conda-forge/ultralytics-feedstock/](https://github.com/conda-forge/ultralytics-feedstock/).
 
 ```bash
 # Install using conda
-conda install -c conda-forge ultralytics
+conda install -c conda-forge ultralytics=8.2.8
 ```
 
 </TabItem>
 
 <TabItem value="Git installation" label="Git">
 
-Clona `ultralytics` si estás interesado en participar en el desarrollo, o deseas experimentar con el código fuente más reciente, por favor visita el repositorio. Después de clonar, navega al directorio e instala el paquete en modo desarrollador usando el parámetro `-e`.
+Clona `ultralytics` si estás interesado en participar en el desarrollo o deseas experimentar con el código fuente más reciente, visita el repositorio. Después de clonar, navega al directorio e instala el paquete en modo desarrollador utilizando el parámetro `-e`.
 
 ```bash
 # Clone the official repository
-git clone https://github.com/ultralytics/ultralytics
+git clone -b v8.2.8 https://github.com/ultralytics/ultralytics
 
 # Go into the cloned folder
 cd ultralytics
@@ -77,9 +77,9 @@ pip install -e .
 
 </Tabs>
 
-`Consejos:` Si no estás familiarizado con el código de YOLOv8, se recomienda que uses pip o conda para instalarlo.
+`Tips:` Si no estás familiarizado con el código de YOLOv8, se recomienda que lo instales con pip o conda.
 
-- Puedes usar el comando de consulta de versión para probar si la herramienta de línea de comandos `yolo` se instaló correctamente.
+- Puedes utilizar el comando de consulta de versión para probar si la herramienta de línea de comandos `yolo` se ha instalado correctamente.
 
 ```bash
 # version query
@@ -90,26 +90,26 @@ yolo -v
 
 - Primero, ve a la carpeta del conjunto de datos descargado
 
-- Ejecuta el siguiente comando para comenzar a entrenar el modelo
+- Ejecuta el siguiente comando para iniciar el entrenamiento del modelo
 
 ```bash
 yolo train detect model=yolov8n.pt data=./data.yaml imgsz=192
 ```
 
-## Exportar modelo a tflite
+## Exportar el modelo a tflite
 
 - Después del entrenamiento, el modelo estará en la carpeta `runs/train/exp*/weights/`. Asegúrate de que los indicadores de evaluación de tu modelo cumplan con tus necesidades.
-- Usa el siguiente comando para exportar el modelo `tflite`
+- Utiliza el siguiente comando para exportar el modelo `tflite`
 
 ```bash
 yolo export model=${your model path}  format=tflite imgsz=192 int8
 ```
 
-- Luego verás una carpeta `yolov8n_saved_model` bajo la carpeta actual, que contiene el archivo de modelo `yolov8n_full_integer_quant.tflite`. Este archivo de modelo puede ser desplegado en dispositivos `Grove Vision AI(V2)` o `XIAO ESP32S3`.
+- A continuación verás una carpeta `yolov8n_saved_model` en la carpeta actual, que contiene el archivo de modelo `yolov8n_full_integer_quant.tflite`. Este archivo de modelo se puede desplegar en dispositivos `Grove Vision AI(V2)` o `XIAO ESP32S3`.
 
 ### Optimización del grafo del modelo
 
-- Grove Vision AI (V2) soporta modelos optimizados con vela y también puede acelerar la inferencia del modelo. Primero, ejecuta el siguiente comando para instalar la herramienta de línea de comandos vela (el dispositivo `XIAO ESP32S3` aún no es compatible)
+- Grove Vision AI (V2) admite modelos optimizados con vela y también puede acelerar la inferencia del modelo. Primero, ejecuta el siguiente comando para instalar la herramienta de línea de comandos vela (el dispositivo `XIAO ESP32S3` aún no es compatible)
 
 ```bash
 
@@ -150,7 +150,7 @@ arena_mem_area=Axi0
 cache_mem_area=Axi0
 ```
 
-- Finalmente, usa el siguiente comando para optimizar el grafo
+- Finalmente, utiliza el siguiente comando para optimizar el grafo
 
 ```bash
 vela --accelerator-config ethos-u55-64 \ 
@@ -161,12 +161,12 @@ vela --accelerator-config ethos-u55-64 \
     ${The path of the tflite model that needs to be optimized}
 ```
 
-Después de la ejecución, se generará un modelo tflite optimizado para gráficos en la ruta especificada por `--output-dir`.
+Después de la ejecución, se generará un modelo tflite con grafo optimizado en la ruta especificada por `--output-dir`.
 
-## Despliegue
+## Desplegar
 
-- El archivo de modelo que necesita ser desplegado es el archivo `tflite` exportado anteriormente. Puedes grabar el archivo de modelo en el dispositivo objetivo siguiendo el siguiente tutorial.
+- El archivo de modelo que debe desplegarse es el archivo `tflite` exportado anteriormente. Puedes grabar el archivo de modelo en el dispositivo de destino según el siguiente tutorial.
 
-- Recomendamos encarecidamente usar nuestra herramienta web para grabar el modelo tflite entrenado en el dispositivo. Las operaciones detalladas se proporcionan en el [Tutorial de Despliegue](https://wiki.seeedstudio.com/es/ModelAssistant_Deploy_Overview/)
+- Recomendamos encarecidamente utilizar nuestra herramienta web para grabar el modelo tflite entrenado en el dispositivo. Las operaciones detalladas se proporcionan en el [Tutorial de Despliegue](https://wiki.seeedstudio.com/es/ModelAssistant_Deploy_Overview/)
 
-`Nota:` Dado que el dispositivo `ESP32S3` no admite el despliegue de modelos después de la optimización de gráficos `vela`, no necesitas realizar la optimización de gráficos del modelo `tflite` si deseas desplegar el modelo en el dispositivo `XIAO ESP32S3`.
+`Note:` Dado que el dispositivo `ESP32S3` no admite el despliegue de modelos después de la optimización del grafo con `vela`, no es necesario realizar la optimización del grafo del modelo `tflite` si deseas desplegar el modelo en el dispositivo `XIAO ESP32S3`.

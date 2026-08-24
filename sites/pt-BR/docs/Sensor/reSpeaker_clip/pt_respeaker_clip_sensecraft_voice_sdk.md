@@ -1,6 +1,6 @@
 ---
 description: Referência completa da API para os SenseCraft Voice SDKs para reSpeaker Clip, cobrindo Flutter, Android e iOS BLE, transporte AT/JSON, sessões de gravação, transferência via Wi‑Fi e atualização de firmware OTA.
-title: reSpeaker Clip Voice SDK & Referência de API Crie seu próprio app de voz com IA com o Flutter SDK
+title: reSpeaker Clip Voice SDK & Referência de API Crie seu próprio app de voz com IA usando o Flutter SDK
 keywords:
   - SenseCraft Voice SDK
   - reSpeaker Clip
@@ -15,7 +15,7 @@ last_update:
   date: 08/07/2026
   author: Kasun Thushara
 createdAt: '2026-08-07'
-updatedAt: '2026-08-07'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_clip_sensecraft_voice_sdk/
 ---
 
@@ -53,7 +53,7 @@ O app de exemplo em `sdk/flutter/example/` demonstra todos os recursos:
 - **Scan / Connect** – descobre e faz par com um Clip
 - **Record / Stop** – inicia/para gravações codificadas em Opus
 - **Status & Version** – lê informações do dispositivo, bateria, espaço livre
-- **BLE Download** – busca gravações via quadros de transferência de arquivos BLE
+- **BLE Download** – busca gravações via quadros de transferência de arquivos por BLE
 - **Wi‑Fi Sync** – ativa o AP do dispositivo, conecta a partir do telefone e transfere via UDP (muito mais rápido)
 - **OTA Update** – grava o firmware a partir de um pacote `.zip` ou `.bin` usando SMP/mcumgr
 
@@ -66,7 +66,7 @@ O app de exemplo em `sdk/flutter/example/` demonstra todos os recursos:
 - **JDK 17** – necessário para builds Android (veja [Solução de problemas](#7-solução-de-problemas) se você tiver uma versão mais recente)
 - **Dispositivo físico** – Android (API 24+) ou iOS (13+) com Bluetooth e Wi‑Fi; **emuladores não funcionam** para BLE/Wi‑Fi
 
-> **Verificação rápida:** `flutter doctor -v` deve mostrar todos os itens em verde para as toolchains Android / iOS.
+> **Verificação rápida:** `flutter doctor -v` deve mostrar todos os itens em verde para as toolchains de Android / iOS.
 
 ---
 
@@ -106,7 +106,7 @@ mobile/
 └── docs/                     ← Documentation
 ```
 
-O app de exemplo depende do SDK por meio de uma **dependência de caminho** em `sdk/flutter/example/pubspec.yaml`:
+O app de exemplo depende do SDK via uma **dependência de caminho** em `sdk/flutter/example/pubspec.yaml`:
 
 ```yaml
 dependencies:
@@ -126,7 +126,7 @@ flutter pub get
 flutter run
 ```
 
-#### Etapas específicas do iOS (antes de `flutter run`)
+#### Etapas específicas para iOS (antes de `flutter run`)
 
 1. Abra `ios/Runner.xcworkspace` no Xcode.
 2. Selecione o alvo **Runner** → **Signing & Capabilities**.
@@ -151,10 +151,10 @@ Veja [Solução de problemas → Falhas de build](#falhas-de-build) para detalhe
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/image_2.jpg" alt="Interface de transcrição" width={400} height="auto" /></p>
 
 1. Ligue o dispositivo Clip e certifique-se de que ele não está conectado a outro telefone.
-2. Inicie o app – você verá uma lista de dispositivos vazia e um painel de logs.
+2. Abra o app – você verá uma lista de dispositivos vazia e um painel de logs.
 3. Conceda permissões de Bluetooth (e Localização no Android 12L‑).
 4. Toque em **Scan** – o app encontra dispositivos BLE com `"Clip"` no nome.
-5. Toque em um dispositivo descoberto para conectar. Aceite o prompt de pareamento se for exibido.
+5. Toque em um dispositivo encontrado para conectar. Aceite o prompt de pareamento se aparecer.
 6. Aguarde até o log mostrar `Connected. MTU=185` – o canal AT está pronto.
 
 #### 6.2 Referência dos botões (após a conexão)
@@ -183,10 +183,10 @@ Veja [Solução de problemas → Falhas de build](#falhas-de-build) para detalhe
 
 | Sintoma | Causa | Correção |
 |---------|-------|-----|
-| `java.lang.IllegalArgumentException: 25.0.2` | Java 25 instalado (muito recente) | Instale o JDK 17 e execute `flutter config --jdk-dir="<path-to-jdk17>"` |
+| `java.lang.IllegalArgumentException: 25.0.2` | Java 25 instalado (novo demais) | Instale o JDK 17 e execute `flutter config --jdk-dir="<path-to-jdk17>"` |
 | `'other' has different root` | Projeto em unidade diferente de C: (Windows) | Copie `example/` para `C:\Users\<you>\clip_demo`; atualize o `pubspec.yaml` com o caminho absoluto para o SDK |
 | `Building with plugins requires symlink support` | Modo de desenvolvedor desativado (Windows) | Settings → Privacy & Security → For Developers → ative o **Developer Mode** |
-| `Could not find com.android.tools.build:gradle:8.x` | Android SDK ausente | Execute `flutter doctor --android-licenses` e aceite tudo |
+| `Could not find com.android.tools.build:gradle:8.x` | Android SDK ausente | Execute `flutter doctor --android-licenses` e aceite todas |
 
 #### Problemas de conexão
 
@@ -223,6 +223,8 @@ SdkLog.bind((level, message, error, stack) {
 
 Os SenseCraft Voice SDKs se comunicam com um dispositivo reSpeaker Clip via **BLE** (comandos AT/JSON + download de arquivos) e seu **AP Wi‑Fi** (transferência de arquivos binários via UDP). Nenhuma chave de API ou backend é necessária — os SDKs falam diretamente com o dispositivo.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/LayeredView_2.png" alt="Interface de transcrição" width={900} height="auto" /></p>
+
 #### Paridade entre SDKs
 
 Todos os três SDKs (Flutter, Android, iOS) expõem as mesmas capacidades:
@@ -245,11 +247,11 @@ Todos os três SDKs (Flutter, Android, iOS) expõem as mesmas capacidades:
 
 | Camada | Escopo | No SDK |
 |-------|-------|--------|
-| Protocolo do dispositivo | BLE GATT, AT(JSON), sincronização rápida UDP, OTA | **Sim** |
+| Protocolo do dispositivo | BLE GATT, AT(JSON), sincronização rápida via UDP, OTA | **Sim** |
 | Sessão de alto nível | `RecordingSession` start/stop/list/download | **Sim** |
 | Lógica de produto | Banco de dados de gravações, Portal JWT, fluxo de transcrição | **Não** |
 
-#### Requisitos de plataforma
+#### Requisitos da plataforma
 
 | Plataforma | Restrições |
 |----------|-------------|
@@ -259,23 +261,23 @@ Todos os três SDKs (Flutter, Android, iOS) expõem as mesmas capacidades:
 
 ---
 
-### 9. Constantes de Protocolo Transversais
+### 9. Constantes de protocolo transversais
 
 #### UUIDs BLE GATT
 
 | Nome | UUID | Finalidade |
 |------|------|---------|
 | `clipAtService` | `6E400001-B5A3-F393-E0A9-E50E24DCCA9E` | Serviço primário |
-| `commandRxCharacteristic` | `6E400002-B5A3-F393-E0A9-E50E24DCCA9E` | Write: comandos AT |
-| `responseTxCharacteristic` | `6E400003-B5A3-F393-E0A9-E50E24DCCA9E` | Notify: respostas JSON |
-| `fileDataCharacteristic` | `6E400004-B5A3-F393-E0A9-E50E24DCCA9E` | Notify: quadros de dados de arquivo |
+| `commandRxCharacteristic` | `6E400002-B5A3-F393-E0A9-E50E24DCCA9E` | Escrita: comandos AT |
+| `responseTxCharacteristic` | `6E400003-B5A3-F393-E0A9-E50E24DCCA9E` | Notificação: respostas JSON |
+| `fileDataCharacteristic` | `6E400004-B5A3-F393-E0A9-E50E24DCCA9E` | Notificação: quadros de dados de arquivo |
 | `batteryService` | `0000180F-0000-1000-8000-00805F9B34FB` | Serviço de bateria padrão |
 | `batteryLevelCharacteristic` | `00002A19-0000-1000-8000-00805F9B34FB` | Nível de bateria % |
 | `deviceInfoService` | `0000180A-0000-1000-8000-00805F9B34FB` | Informações de dispositivo padrão |
 | `smpService` | `00001530-1212-EFDE-1523-785FEABCD123` | Serviço OTA SMP/mcumgr |
 | `smpCharacteristic` | `DA2E7828-FBCE-4E01-AE9E-261174997C48` | Característica SMP |
 
-#### Tipos de Quadros de Dados de Arquivo BLE
+#### Tipos de quadros de dados de arquivo BLE
 
 | Constante | Valor | Significado |
 |----------|-------|---------|
@@ -285,7 +287,7 @@ Todos os três SDKs (Flutter, Android, iOS) expõem as mesmas capacidades:
 | `kClipFrameTransferDone` | `0x12` | TRANSFER_DONE: type(1) + sessionIdLen(1) + id + fileCount(4 LE) |
 | `kClipDataHeaderSize` | `5` | Cabeçalho DATA: type + seq + len |
 
-#### Tipos de Quadros UDP
+#### Tipos de quadros UDP
 
 | Constante | Valor | Significado |
 |----------|-------|---------|
@@ -295,10 +297,10 @@ Todos os três SDKs (Flutter, Android, iOS) expõem as mesmas capacidades:
 | `FRAME_FILE_END` | `0x11` | Fim de um arquivo com CRC32 do dispositivo |
 | `FRAME_TRANSFER_DONE` | `0x12` | Transferência de sessão concluída |
 | `FRAME_AT_RESP` | `0x20` | Resposta de comando AT (JSON com comprimento prefixado) |
-| `FRAME_HEARTBEAT` | `0x30` | Keepalive com timestamp LE de 4 bytes |
-| UDP port | `8089` | Porta padrão do AP do dispositivo |
+| `FRAME_HEARTBEAT` | `0x30` | Keepalive com carimbo de data/hora LE de 4 bytes |
+| Porta UDP | `8089` | Porta padrão do AP do dispositivo |
 
-#### Referência de Comandos AT
+#### Referência de comandos AT
 
 | Comando AT | Resposta | Finalidade |
 |------------|----------|---------|
@@ -332,7 +334,7 @@ Todos os três SDKs (Flutter, Android, iOS) expõem as mesmas capacidades:
 
 ---
 
-### 10. SDK Flutter
+### 10. Flutter SDK
 
 **Pacote:** `sensecraft_voice` v0.1.0  
 **Ponto de entrada:** `lib/sensecraft_voice.dart`
@@ -357,11 +359,13 @@ Todos os três SDKs (Flutter, Android, iOS) expõem as mesmas capacidades:
 
 ---
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/sequence.png" alt="Transcription interface" width={800} height="auto" /></p>
+
 #### 10.1 Camada BLE
 
 ##### SenseCraftVoiceClient
 
-Gerenciador BLE de alto nível: busca, conecta, desconecta.
+Gerenciador BLE de alto nível: busca, conexão, desconexão.
 
 ```dart
 class SenseCraftVoiceClient {
@@ -1083,7 +1087,7 @@ class OtaFirmwareProcessor {
 }
 ```
 
-> **Note:** `Image` é `mcumgr.Image` do pacote `mcumgr_flutter`.
+> **Nota:** `Image` é `mcumgr.Image` do pacote `mcumgr_flutter`.
 
 ##### OtaSession
 

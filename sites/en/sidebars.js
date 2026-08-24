@@ -1331,7 +1331,7 @@ const sidebars = {
               label: 'Wireless Connection',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/XIAO_ESP32C5_WiFi_Usage',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/XIAO_ESP32C5_Buletooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/XIAO_ESP32C5_Bluetooth_Usage',
               ],
             },
             {
@@ -2179,6 +2179,7 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/respeaker_clip_service_integration',
             'Sensor/reSpeaker_clip/respeaker_clip_sensecraft_voice_sdk',
             {
               type: 'category',
@@ -2951,6 +2952,7 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview',
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start',
             'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/Install_Ubuntu_on_SenseCAP_M4'
           ],
         },
         {
@@ -3986,6 +3988,7 @@ const sidebars = {
                   label: 'reComputer Rugged J40',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Rugged_J40/reComputer_Rugged_J40_Getting_Started',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Rugged_J40/reComputer_Rugged_J401_hardware_and_interface_usage',
                   ],
                 },
                 {
@@ -4001,6 +4004,13 @@ const sidebars = {
                   label: 'reComputer Robotics J50',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/reComputer_Robotics_J501_Getting_Started',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'reComputer Classic J50',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Classic_J50/Seeed_AGX_Orin_Dev_Kit_Getting_Started',
                   ],
                 },
                 {
@@ -4072,7 +4082,6 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson_Xavier_AGX_H01_Driver_Installation',
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson-Mate',
                 'Edge/NVIDIA_Jetson/Other_Devices/Mini_AI_Computer_T906',
-                'Edge/NVIDIA_Jetson/Other_Devices/Seeed_AGX_Orin_Dev_Kit_Getting_Started',
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_A203E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_A205E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_Jetson_Series_GPIO_Grove'
@@ -4120,6 +4129,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/Build_a_Four_Camera_Fisheye_Surround_View_Demo_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/industrial_vision_monitoring_on_industrial',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Streaming_Vision_Agent_on_Jetson',
               ]
@@ -4335,17 +4345,21 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Create_Backup_and_Restore_on_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/Migrate_Home_Data_from_Jetson_Orin_Nano_Developer_Kit_to_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/Deploy_OTA_ON_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/Headless_Setup_and_Recovery_for_A603',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
             'Edge/NVIDIA_Jetson/FAQs/How_to_use_Camera_IMX219',
             'Edge/NVIDIA_Jetson/FAQs/Use_IMX477_Camera_with_A603',
+            'Edge/NVIDIA_Jetson/FAQs/Use_Arducam_OV9281_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_for_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
+            'Edge/NVIDIA_Jetson/FAQs/Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot',
             'Edge/NVIDIA_Jetson/FAQs/Flash_JetPack_with_WSL2',
+            'Edge/NVIDIA_Jetson/FAQs/Jetson_Initrd_Flash_Fails_with_ZFS_Host',
           ]
         }
       ],
@@ -4515,6 +4529,10 @@ const sidebars = {
       label: 'reCamera',
       collapsed: true,
       collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/reCamera/ReCameraPage',
+      },
       items: [
         {
           type: 'autogenerated',
@@ -4562,6 +4580,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/Lerobot_Starai_Arm',
             'Robotics/Robot_Kits/Lerobot/Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm_New',
+            'Robotics/Robot_Kits/Lerobot/SOARM101_XIAO_MicroROS_Wireless_Teleoperation',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO_ARM101_DAMO',
             'Robotics/Robot_Kits/Lerobot/SOARM_AMAZINGHAND_TELEOP',
             'Robotics/Robot_Kits/Lerobot/Lerobot_Dataset_Tool',
@@ -4588,10 +4607,12 @@ const sidebars = {
               label: 'B601-DM',
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Getting_Started',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_ROS2_Integration',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_isaacsim',
               ]
             },
             {
@@ -4599,6 +4620,7 @@ const sidebars = {
               label: 'B601-RS',
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Getting_Started',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Web_Simulator_Developer_Guide',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_ROS2_Integration',

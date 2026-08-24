@@ -5,7 +5,7 @@ keywords:
   - Lerobot
   - Huggingface
   - Arm
-  - Robótica
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 sku: 114993666,114993667,114993668,101090144
@@ -13,7 +13,7 @@ last_update:
   date: 3/11/2026
   author: ZhangJiaQuan
 createdAt: '2025-06-05'
-updatedAt: '2026-07-15'
+updatedAt: '2026-08-18'
 translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/es/lerobot_so100m_new/
@@ -45,7 +45,7 @@ import TabItem from '@theme/TabItem';
   </div>
   <div className="hero-card">
     <strong>Ruta de lectura recomendada</strong>
-    <span>Usuarios nuevos: comienza con las especificaciones, reglas de alimentación y configuración de servos.</span>
+    <span>Nuevos usuarios: comienza con las especificaciones, las reglas de alimentación y la configuración de los servos.</span>
     <span>Usuarios con brazo preensamblado: salta a la calibración del brazo completo y la teleoperación.</span>
     <span>Usuarios existentes de LeRobot: ve directamente a cámaras, grabación de conjuntos de datos, entrenamiento o FAQ.</span>
   </div>
@@ -61,7 +61,7 @@ import TabItem from '@theme/TabItem';
       mantén a las personas alejadas del rango de movimiento del brazo.
     </p>
     <ul>
-      <li>No toques las articulaciones, motores, eslabones, la garra o las herramientas finales después de encender el brazo.</li>
+      <li>No toques las articulaciones, motores, eslabones, la garra ni las herramientas finales después de encender el brazo.</li>
       <li>Antes de la configuración de servos, calibración, teleoperación, grabación de conjuntos de datos, reproducción o evaluación de políticas, asegúrate de que el brazo esté firmemente fijado.</li>
       <li>Mantén al menos 1 metro de distancia de seguridad y asegúrate de que las personas cercanas entiendan que el brazo puede moverse repentinamente.</li>
       <li>Si se produce un movimiento anormal, ruido, vibración, cables sueltos, mal contacto de alimentación o pérdida de comunicación, detén el programa inmediatamente y apaga la alimentación antes de la inspección.</li>
@@ -101,7 +101,7 @@ import TabItem from '@theme/TabItem';
     <div className="course-path-item"><span className="course-index">3</span><div className="course-path-copy"><strong>Configurar motores y ensamblar</strong><p>Configura los ID de los servos y las tasas de baudios, luego ensambla los brazos líder y seguidor.</p></div><span className="course-tag">Hardware</span></div>
     <div className="course-path-item"><span className="course-index">4</span><div className="course-path-copy"><strong>Calibrar y teleoperar</strong><p>Calibra ambos brazos y verifica que la cadena de control de líder a seguidor sea estable.</p></div><span className="course-tag">Control</span></div>
     <div className="course-path-item"><span className="course-index">5</span><div className="course-path-copy"><strong>Añadir cámaras y grabar datos</strong><p>Conecta cámaras OpenCV, RealSense u Orbbec y graba episodios limpios y repetibles.</p></div><span className="course-tag">Datos</span></div>
-    <div className="course-path-item"><span className="course-index">6</span><div className="course-path-copy"><strong>Entrenar y evaluar políticas</strong><p>Comienza con ACT y luego explora SmolVLA, Pi0, Pi0.5, GR00T, PEFT e inferencia asíncrona.</p></div><span className="course-tag">IA</span></div>
+    <div className="course-path-item"><span className="course-index">6</span><div className="course-path-copy"><strong>Entrenar y evaluar políticas</strong><p>Comienza con ACT, luego explora SmolVLA, Pi0, Pi0.5, GR00T, PEFT e inferencia asíncrona.</p></div><span className="course-tag">IA</span></div>
   </div>
 </section>
 
@@ -126,7 +126,7 @@ Este tutorial se ha actualizado para la última versión de [LeRobot](https://hu
     width="900"
     height="600"
     src="https://www.youtube.com/embed/sD34HnAkGNc?si=hqKd_sH5Oc9sdcwd&autoplay=0&mute=1"
-    title="Video de descripción general de SO-ARM10x en LeRobot"
+    title="SO-ARM10x LeRobot overview video"
     frameBorder="0"
     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerPolicy="strict-origin-when-cross-origin"
@@ -156,7 +156,7 @@ Seeed Studio es responsable de la calidad del hardware del kit. El tutorial de s
     width="900"
     height="600"
     src="https://www.youtube.com/embed/JrF_ymUvrqc?si=vslu5NNI-ZIzVXLc&autoplay=0&mute=1"
-    title="Video del proyecto SO-ARM10x"
+    title="SO-ARM10x project video"
     frameBorder="0"
     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerPolicy="strict-origin-when-cross-origin"
@@ -172,14 +172,14 @@ Seeed Studio es responsable de la calidad del hardware del kit. El tutorial de s
   <div className="section-title">
     <span>Características</span>
     <h2>Características principales</h2>
-    <p>SO-ARM10x se centra en el aprendizaje de código abierto, robótica de bajo costo, integración con LeRobot y despliegue en NVIDIA.</p>
+    <p>SO-ARM10x se centra en el aprendizaje de código abierto, la robótica de bajo costo, la integración con LeRobot y el despliegue en NVIDIA.</p>
   </div>
 
   <div className="feature-grid">
     <div><strong>Código abierto y bajo costo</strong><span>Una solución de brazo robótico de código abierto basada en el proyecto SO-ARM de TheRobotStudio.</span></div>
     <div><strong>Integración con LeRobot</strong><span>Diseñado para teleoperación, grabación de conjuntos de datos, entrenamiento y evaluación en robots reales en LeRobot.</span></div>
     <div><strong>Ricos recursos de aprendizaje</strong><span>Incluye guías de montaje, calibración, pruebas, conjuntos de datos, entrenamiento y despliegue.</span></div>
-    <div><strong>Compatible con NVIDIA</strong><span>Puede desplegarse con plataformas como reComputer Mini J4012 Orin NX 16GB.</span></div>
+    <div><strong>Compatible con NVIDIA</strong><span>Se puede desplegar con plataformas como reComputer Mini J4012 Orin NX 16GB.</span></div>
     <div><strong>Aplicaciones en múltiples escenarios</strong><span>Adecuado para educación, investigación, demostraciones de automatización y aprendizaje de robótica.</span></div>
   </div>
 </section>
@@ -203,7 +203,7 @@ Seeed Studio es responsable de la calidad del hardware del kit. El tutorial de s
 
 ## Especificación
 
-<section id="specifications" classNameName="section-card">
+<section id="specifications" className="section-card">
   <div className="section-title">
     <span>Especificaciones</span>
     <h2>Especificación</h2>
@@ -245,12 +245,12 @@ Seeed Studio es responsable de la calidad del hardware del kit. El tutorial de s
     </tr>
     <tr>
       <td>Fuente de alimentación</td>
-      <td>5.5 mm × 2.1 mm CC 5 V 4 A</td>
-      <td>5.5 mm × 2.1 mm CC 12 V 2 A</td>
-      <td>5.5 mm × 2.1 mm CC 5 V 4 A</td>
+      <td>5.5 mm × 2.1 mm DC 5 V 4 A</td>
+      <td>5.5 mm × 2.1 mm DC 12 V 2 A</td>
+      <td>5.5 mm × 2.1 mm DC 5 V 4 A</td>
       <td>
-        5.5 mm × 2.1 mm CC 12 V 2 A (Brazo seguidor)<br />
-        5.5 mm × 2.1 mm CC 5 V 4 A (Brazo líder)
+        5.5 mm × 2.1 mm DC 12 V 2 A (Brazo seguidor)<br />
+        5.5 mm × 2.1 mm DC 5 V 4 A (Brazo líder)
       </td>
     </tr>
     <tr>
@@ -301,7 +301,7 @@ Si compras la versión Arm Kit, ambas fuentes de alimentación son de 5V. Si com
 | Cable USB-C 2 uds | 1 | ✅ |
 | Fuente de alimentación2 | 2 | ✅ |
 | Abrazadera de mesa| 4 | ✅ |
-| Piezas impresas en 3D del brazo | 1 | Opción |
+| Piezas impresas en 3D del brazo | 1 | Opcional |
 
 </details>
 
@@ -313,7 +313,7 @@ Si compras la versión Arm Kit, ambas fuentes de alimentación son de 5V. Si com
   <div className="section-title">
     <span>Impresión 3D</span>
     <h2>Guía de impresión 3D</h2>
-    <p>Elige los archivos STL correctos y los ajustes de impresión antes de ensamblar una versión en kit del brazo.</p>
+    <p>Elige los archivos STL correctos y la configuración de impresión antes de ensamblar una versión en kit del brazo.</p>
   </div>
 
 <details className="content-details">
@@ -335,9 +335,9 @@ Los archivos STL proporcionados están listos para imprimirse en muchas impresor
 
 - Asegúrate de que la impresora esté calibrada y que la cama esté correctamente nivelada siguiendo las instrucciones específicas de la impresora.
 - Limpia la cama de impresión, asegurándote de que esté libre de polvo o grasa. Si limpias la cama con agua u otro líquido, sécala.
-- Si tu impresora lo recomienda, utiliza un pegamento en barra estándar y aplica una capa fina y uniforme de pegamento en el área de impresión de la cama. Evita los grumos o la aplicación desigual.
+- Si tu impresora lo recomienda, utiliza un pegamento en barra estándar y aplica una capa fina y uniforme de pegamento en el área de impresión de la cama. Evita grumos o una aplicación desigual.
 - Carga el filamento de la impresora siguiendo las instrucciones específicas de la impresora.
-- Asegúrate de que los ajustes de la impresora coincidan con los sugeridos anteriormente (la mayoría de las impresoras tienen múltiples ajustes, así que elige los que más se acerquen).
+- Asegúrate de que la configuración de la impresora coincida con la sugerida anteriormente (la mayoría de las impresoras tienen múltiples configuraciones, así que elige las que más se acerquen).
 - Configura soportes en todas partes, pero ignora las pendientes mayores de 45 grados respecto a la horizontal.
 - No debe haber soportes en los orificios de los tornillos con ejes horizontales.
 
@@ -352,6 +352,15 @@ Todas las piezas para el líder o el seguidor están ya contenidas en un solo ar
 - Para tamaños de cama de impresora de 205mm x 250mm (como la Prusa/Up):
   - [Seguidor](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Líder](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
+
+**Paso 4: Imprime la pinza blanda (opcional)**
+
+Si quieres que el brazo robótico pueda agarrar objetos blandos, frágiles o de forma irregular, puedes imprimir una pinza blanda para sustituir la pinza rígida predeterminada. Los archivos de impresión están disponibles en el repositorio [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git).
+
+Instrucciones sobre el material de impresión:
+
+- Dos dedos de la pinza: imprimir con material **TPU**
+- Otras piezas: imprimir con material **PLA**
 
 </details>
 
@@ -450,20 +459,20 @@ Si encuentras un error como este, también puedes usar este comando.
 {`cd ~/lerobot && pip install -e ".[feetech]"`}
 </CodeBlock>
 
-6. Para dispositivos Jetson Jetpack 6.0+ (asegúrate de instalar [Pytorch-gpu y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) desde el paso 5 antes de ejecutar este paso):
+6. Para dispositivos Jetson Jetpack 6.0+ (asegúrate de instalar [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) desde el paso 5 antes de ejecutar este paso):
 
 <CodeBlock language="bash">
 {`conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
 conda remove opencv   # Uninstall OpenCV 
 pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
-conda install -y -c conda-forge ffmpeg`}
+conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
-pip3 install numpy==1.26.0  # Esto debe coincidir con torchvision`}
+pip3 install numpy==1.26.0  # This should match torchvision`}
 </CodeBlock>
 
-7. Verificar Pytorch y Torchvision
+7. Comprobar Pytorch y Torchvision
 
-Dado que instalar el entorno de lerobot mediante pip desinstalará las versiones originales de Pytorch y Torchvision e instalará las versiones de CPU de Pytorch y Torchvision, necesitas realizar una comprobación en Python.
+Dado que instalar el entorno lerobot mediante pip desinstalará las versiones originales de Pytorch y Torchvision e instalará las versiones de CPU de Pytorch y Torchvision, necesitas realizar una comprobación en Python.
 
 <CodeBlock language="python">
 {`python   # Command to start Python in the terminal
@@ -490,7 +499,7 @@ source ~/.bashrc
 conda init --all`}
 </CodeBlock>
 
-2. Crear y activar un nuevo entorno conda para lerobot
+2. Crear y activar un entorno conda nuevo para lerobot
 
 <CodeBlock language="bash">
 {`conda create -y -n lerobot python=3.10 && conda activate lerobot`}
@@ -531,9 +540,9 @@ Si encuentras un error como este, también puedes usar este comando.
 5. Instalar LeRobot con dependencias para los motores feetech:
 
 :::tip
-En una máquina virtual de Ubuntu 22.04 recién configurada, especialmente en una instalación mínima, es posible que `gcc` y otras herramientas de compilación de C no estén instaladas por defecto. En ese caso, la instalación de LeRobot con dependencias de feetech puede fallar porque no se puede compilar el paquete de Python `evdev`.
+En una máquina virtual Ubuntu 22.04 recién configurada, especialmente en una instalación mínima, es posible que `gcc` y otras herramientas de compilación en C no estén instaladas por defecto. En ese caso, la instalación de LeRobot con dependencias de feetech puede fallar porque no se puede compilar el paquete de Python `evdev`.
 
-Instala primero las herramientas básicas de compilación:
+Instala primero las herramientas de compilación básicas:
 
 <CodeBlock language="bash">
 {`sudo apt update
@@ -547,9 +556,9 @@ Después de la instalación, vuelve a ejecutar el comando de instalación de LeR
 {`cd ~/lerobot && pip install -e ".[feetech]"`}
 </CodeBlock>
 
-6. Verificar Pytorch y Torchvision
+6. Comprobar Pytorch y Torchvision
 
-Dado que instalar el entorno de lerobot mediante pip desinstalará las versiones originales de Pytorch y Torchvision e instalará las versiones de CPU de Pytorch y Torchvision, necesitas realizar una comprobación en Python.
+Dado que instalar el entorno lerobot mediante pip desinstalará las versiones originales de Pytorch y Torchvision e instalará las versiones de CPU de Pytorch y Torchvision, necesitas realizar una comprobación en Python.
 
 <CodeBlock language="python">
 {`python   # Command to start Python in the terminal
@@ -592,22 +601,22 @@ El comando de descarga es el siguiente:
     <div className="safety-alert-content">
       <strong>Comprobación de seguridad antes de ejecutar</strong>
       <p>
-        Retira objetos de valor y personas no relacionadas dentro de 1 metro del espacio de trabajo del brazo robótico.
+        Retira objetos de valor y personas no relacionadas en un radio de 1 metro del espacio de trabajo del brazo robótico.
         Asegúrate de que el brazo esté firmemente montado y de que la alimentación y los cables estén conectados correctamente antes de ejecutar esta sección.
       </p>
     </div>
   </div>
 
 :::tip
-Si compraste un brazo robótico preensamblado, omite esta parte y pasa a la sección de Calibración.
+Si compraste un brazo robótico preensamblado, omite esta parte y pasa a la sección de calibración.
 :::
 <details className="content-details">
 
 <summary> Para la versión en kit, sigue los pasos a continuación </summary>
 
-El proceso de calibración e inicialización de los servos para el SO-ARM101 es el mismo que para el SO-ARM100 tanto en el método como en el código. Sin embargo, ten en cuenta que las relaciones de engranajes de las tres primeras articulaciones del brazo líder SO-ARM101 difieren de las del SO-ARM100, por lo que es importante distinguirlas y calibrarlas cuidadosamente.
+El proceso de calibración e inicialización de los servos para el SO-ARM101 es el mismo que para el SO-ARM100 tanto en método como en código. Sin embargo, ten en cuenta que las relaciones de engranajes de las tres primeras articulaciones del brazo líder SO-ARM101 difieren de las del SO-ARM100, por lo que es importante distinguirlas y calibrarlas cuidadosamente.
 
-Para configurar los motores, asigna un adaptador de bus de servos y 6 motores para tu brazo líder, y de manera similar el otro adaptador de bus de servos y 6 motores para el brazo seguidor. Es conveniente etiquetarlos y escribir en cada motor si es para el seguidor F o para el líder L y su ID del 1 al 6. Usamos **F1–F6** para representar las articulaciones 1 a 6 del **Brazo Seguidor**, y **L1–L6** para representar las articulaciones 1 a 6 del **Brazo Líder**. El modelo de servo correspondiente, la asignación de articulaciones y los detalles de la relación de engranajes son los siguientes:
+Para configurar los motores, designa un adaptador de bus de servos y 6 motores para tu brazo líder, y de manera similar el otro adaptador de bus de servos y 6 motores para el brazo seguidor. Es conveniente etiquetarlos y escribir en cada motor si es para el seguidor F o para el líder L y su ID del 1 al 6. Usamos **F1–F6** para representar las articulaciones 1 a 6 del **Brazo Seguidor**, y **L1–L6** para representar las articulaciones 1 a 6 del **Brazo Líder**. El modelo de servo correspondiente, la asignación de articulaciones y los detalles de la relación de engranajes son los siguientes:
 
 | Modelo de servo                            | Relación de engranajes | Articulaciones correspondientes         |
 |----------------------------------------|------------|------------------------------|
@@ -677,14 +686,14 @@ Al conectar los brazos, el primer dispositivo conectado se asignará a ttyACM0 (
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
 
-**Imágenes de referencia para la calibración de los servos del brazo seguidor**
+**Imágenes de referencia para la calibración del servo del seguidor**
 
 | **Calibración de la articulación 6 del brazo seguidor** | **Calibración de la articulación 5 del brazo seguidor** | **Calibración de la articulación 4 del brazo seguidor** | **Calibración de la articulación 3 del brazo seguidor** | **Calibración de la articulación 2 del brazo seguidor** | **Calibración de la articulación 1 del brazo seguidor** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F1.jpg) |
 
 :::tip
-Nuevamente, asegúrate de que los IDs de las articulaciones de los servos y las relaciones de engranajes correspondan estrictamente a las del SO-ARM101.
+De nuevo, asegúrate de que los IDs de las articulaciones de los servos y las relaciones de engranajes correspondan estrictamente a las del SO-ARM101.
 :::
 
 **Calibrar los servos del brazo seguidor**
@@ -703,7 +712,7 @@ Deberías ver la siguiente instrucción.
 {`Connect the controller board to the 'gripper' motor only and press enter.`}
 </CodeBlock>
 
-Como se indica, conecta el motor de la pinza. Asegúrate de que sea el único motor conectado a la placa y de que el propio motor aún no esté conectado en cadena con ningún otro motor. Cuando pulses [Enter], el script configurará automáticamente el ID y la velocidad en baudios de ese motor.
+Según se indica, conecta el motor de la pinza. Asegúrate de que sea el único motor conectado a la placa y de que el propio motor aún no esté conectado en cadena con ningún otro motor. Cuando pulses [Enter], el script configurará automáticamente el id y la velocidad en baudios de ese motor.
 
 A continuación deberías ver el siguiente mensaje:
 
@@ -727,7 +736,7 @@ Repite la operación para cada motor según se indique.
 Comprueba el cableado en cada paso antes de pulsar Enter. Por ejemplo, el cable de la fuente de alimentación podría desconectarse mientras manipulas la placa.
 :::
 
-Cuando hayas terminado, el script simplemente finalizará, momento en el cual los motores estarán listos para usarse. Ahora puedes conectar el cable de 3 pines de cada motor al siguiente, y el cable del primer motor (el “giro de hombro” con id=1) a la placa controladora, que ahora puede fijarse a la base del brazo.
+Cuando hayas terminado, el script simplemente finalizará, momento en el cual los motores estarán listos para usarse. Ahora puedes conectar en cadena el cable de 3 pines de cada motor al siguiente, y el cable del primer motor (el “giro de hombro” con id=1) a la placa controladora, que ahora puede fijarse a la base del brazo.
 
 **Calibrar los servos del brazo líder**
 
@@ -748,8 +757,8 @@ Realiza los mismos pasos para el brazo líder.
 
 :::tip
 
-- El proceso de montaje de doble brazo del SO-ARM101 es el mismo que el del SO-ARM100. Las únicas diferencias son la adición de clips para cables en el SO-ARM101 y las diferentes relaciones de engranajes de los servos de las articulaciones en el brazo líder. Por lo tanto, tanto el SO100 como el SO101 se pueden instalar consultando el siguiente contenido.
-- Antes del montaje, vuelve a comprobar el modelo de tu motor, la relación de engranajes y el voltaje de la fuente de alimentación. Si compraste el SO101, consulta la tabla de modelo de servo y mapeo de articulaciones anterior para distinguir F1 a F6 y L1 a L6.
+- El proceso de montaje de doble brazo del SO-ARM101 es el mismo que el del SO-ARM100. Las únicas diferencias son la adición de clips para cables en el SO-ARM101 y las diferentes relaciones de engranajes de los servos de las articulaciones en el brazo líder. Por lo tanto, tanto el SO100 como el SO101 pueden instalarse haciendo referencia al siguiente contenido.
+- Antes del montaje, vuelve a comprobar el modelo de tu motor, la relación de engranajes y el voltaje de la fuente de alimentación. Si compraste el SO101, consulta la tabla anterior de modelos de servos y mapeo de articulaciones para distinguir F1 a F6 y L1 a L6.
 
 :::
 
@@ -806,7 +815,7 @@ Realiza los mismos pasos para el brazo líder.
   </div>
 
 :::tip
-Los códigos de SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y el código de SO101 para la operación.
+Los códigos de SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y el código de SO101 para su funcionamiento.
 :::
 
 :::danger
@@ -824,11 +833,11 @@ Si necesitas recalibrar los brazos robóticos, hay dos opciones disponibles:
 
 **Opción 1: Eliminar archivos de calibración locales**
 
-Elimina por completo los archivos en `~/.cache/huggingface/lerobot/calibration/robots` o `~/.cache/huggingface/lerobot/calibration/teleoperators` antes de recalibrar. De lo contrario, el sistema puede generar un mensaje de error porque los datos de calibración anteriores se almacenan en archivos JSON dentro de estos directorios.
+Elimina completamente los archivos en `~/.cache/huggingface/lerobot/calibration/robots` o `~/.cache/huggingface/lerobot/calibration/teleoperators` antes de recalibrar. De lo contrario, el sistema puede mostrar un mensaje de error porque los datos de calibración anteriores se almacenan en archivos JSON dentro de estos directorios.
 
-**Opción 2: Elegir la recalibración en el comando de calibración**
+**Opción 2: Elegir recalibración en el comando de calibración**
 
-Ejecuta directamente el comando de calibración en la terminal. Si el brazo ya se ha calibrado antes, aparecerá el siguiente mensaje:
+Ejecuta directamente el comando de calibración en la terminal. Si el brazo ya ha sido calibrado antes, aparecerá el siguiente mensaje:
 
 <CodeBlock language="bash">
 {`Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration:`}
@@ -838,7 +847,7 @@ Escribe `c` y pulsa **Enter** para iniciar la recalibración. Pulsa **Enter** di
 
 </details>
 
-Conecta los 6 servos del robot mediante las interfaces de 3 pines y conecta el servo del chasis a la placa controladora de servos. Luego, ejecuta el siguiente comando o ejemplo de API para calibrar el brazo:
+Conecta los 6 servos del robot a través de las interfaces de 3 pines y conecta el servo del chasis a la placa controladora de servos. Luego, ejecuta el siguiente comando o ejemplo de API para calibrar el brazo:
 
 :::tip
 En PC (Linux) y dispositivos Jetson, el primer dispositivo USB que conectas normalmente se asigna a `ttyACM0`, y el segundo a `ttyACM1`. Verifica dos veces qué puerto está asignado al líder y al seguidor antes de ejecutar los comandos.
@@ -863,10 +872,10 @@ Conecta las interfaces de los 6 servos del robot mediante un cable de 3 pines y 
     --robot.id=my_awesome_follower_arm  # <- Give the robot a unique name`}
 </CodeBlock>
 
-El siguiente video muestra cómo realizar la calibración. Primero debes mover el robot a la posición en la que todas las articulaciones estén en el centro de sus rangos. Luego, después de pulsar Enter, debes mover cada articulación a lo largo de todo su rango de movimiento.
+El siguiente video muestra cómo realizar la calibración. Primero debes mover el robot a la posición en la que todas las articulaciones estén en el centro de sus rangos. Luego, después de pulsar Enter, debes mover cada articulación a través de todo su rango de movimiento.
 
 :::tip
-Debido a la actualización del repositorio de lerobot, es normal que el terminal no reciba señal del servo 5 al realizar la calibración del brazo maestro-esclavo. Puedes continuar con la operación.
+Debido a la actualización del repositorio de lerobot, es normal que la terminal no reciba una señal del servo 5 al realizar la calibración del brazo maestro-esclavo. Puedes continuar con la operación.
 :::
 
 **Calibración manual del brazo líder**
@@ -890,13 +899,13 @@ Si encuentras el error “Could not connect on port '/dev/ttyACM0'. Make sure yo
   loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </div>
 
-### (Opcional) Calibración de posición central con la herramienta rápida Seeed Studio SoARM
+### (Opcional) Calibración de posición media con la herramienta rápida Seeed Studio SoARM
 
 Al calibrar o ejecutar el robot, si ves errores como:
 
 `Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)`
 
-Esto normalmente significa que la posición actual / desplazamiento cero de un servo es anormal, lo que hace que el ángulo leído exceda el rango esperado. En ese caso, puedes usar la herramienta SoARM de Seeed Studio para hacer una **calibración de posición central** (escribir la posición actual en el valor central **2048**), y luego repetir la calibración de todo el brazo.
+Esto generalmente significa que la posición actual / el desplazamiento de cero de un servo es anormal, lo que hace que el ángulo leído exceda el rango esperado. En ese caso, puedes usar la herramienta SoARM de Seeed Studio para hacer una **calibración de posición media** (escribir la posición actual en el valor medio **2048**), y luego repetir la calibración de todo el brazo.
 
 #### 1) Clonar la herramienta desde GitHub e instalar dependencias
 
@@ -906,40 +915,40 @@ cd Seeed_RoboController
 pip install -r requirements.txt`}
 </CodeBlock>
 
-#### 2) Calibración y verificación de la posición central
+#### 2) Calibración de posición media y verificación
 
 Ubicación de los scripts:
 
-- `src/tools/servo_middle_calibration.py`: calibración de posición central (escribe la posición actual como **2048**)
+- `src/tools/servo_middle_calibration.py`: calibración de posición media (escribe la posición actual como **2048**)
 - `src/tools/servo_disable.py`: desactivar el par del servo (más fácil girar las articulaciones a mano)
 - `src/tools/servo_center_test.py`: mover a **2048** para verificar el resultado de la calibración
 
 Ejecuta en orden (los comandos te pedirán interactivamente que selecciones un puerto):
 
-1. (Opcional) Desactiva el par para ajustar las articulaciones manualmente:
+1. (Opcional) Desactivar el par para ajustar las articulaciones manualmente:
 
 <CodeBlock language="bash">
 {`python -m src.tools.servo_disable`}
 </CodeBlock>
 
-2. Realiza la calibración de posición central (establece la posición actual en 2048):
+2. Realizar la calibración de posición media (establecer la posición actual en 2048):
 
 <CodeBlock language="bash">
 {`python -m src.tools.servo_middle_calibration`}
 </CodeBlock>
 
-3. Verifica: mueve el servo a 2048 y comprueba si vuelve a la posición central esperada:
+3. Verificar: mover el servo a 2048 y comprobar si vuelve a la posición media esperada:
 
 <CodeBlock language="bash">
 {`python -m src.tools.servo_center_test`}
 </CodeBlock>
 
-Después de la calibración de posición central, vuelve a los pasos de `lerobot-calibrate` anteriores y repite la calibración de todo el brazo.
+Después de la calibración de posición media, vuelve a los pasos de `lerobot-calibrate` anteriores y repite la calibración de todo el brazo.
 
-Si encuentras los errores anteriores, puedes usar la Herramienta de Depuración del Servomotor para depurar. Es compatible con Windows, Ubuntu y Mac.
+Si encuentras los errores anteriores, puedes usar la Herramienta de Depuración de Engranajes de Dirección para depurar. Es compatible con Windows, Ubuntu y Mac.
 
 <div className="hero-actions">
-    <a href="/es/lerobot_steering_gear_debugging_tool">▶ Abrir tutorial de la Herramienta de Depuración del Servomotor</a>
+    <a href="/es/lerobot_steering_gear_debugging_tool">▶ Abrir tutorial de la Herramienta de Depuración de Engranajes de Dirección</a>
 </div>
 
 </section>
@@ -958,7 +967,7 @@ Si encuentras los errores anteriores, puedes usar la Herramienta de Depuración 
     <div className="safety-alert-content">
       <strong>Comprobación de seguridad antes de ejecutar</strong>
       <p>
-        Retira objetos de valor y personas no relacionadas en un radio de 1 metro del espacio de trabajo del brazo robótico.
+        Retira objetos de valor y personas no relacionadas dentro de 1 metro del espacio de trabajo del brazo robótico.
         Asegúrate de que el brazo esté firmemente montado y de que la alimentación y los cables estén conectados correctamente antes de ejecutar esta sección.
       </p>
     </div>
@@ -967,7 +976,7 @@ Si encuentras los errores anteriores, puedes usar la Herramienta de Depuración 
 **Teleoperación simple**
 ¡Entonces ya estás listo para teleoperar tu robot! Ejecuta este script sencillo (no conectará ni mostrará las cámaras):
 
-Ten en cuenta que el id asociado a un robot se utiliza para almacenar el archivo de calibración. Es importante usar el mismo id al teleoperar, grabar y evaluar cuando uses la misma configuración.
+Ten en cuenta que el id asociado a un robot se utiliza para almacenar el archivo de calibración. Es importante usar el mismo id al teleoperar, grabar y evaluar cuando se utiliza la misma configuración.
 
 <CodeBlock language="bash">
 {`sudo chmod 666 /dev/ttyACM*`}
@@ -1025,11 +1034,11 @@ La RealSense D405 es una cámara estéreo de profundidad de corto alcance diseñ
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" alt="" />
 </div>
 
-La RealSense D435i combina percepción de profundidad, imagen RGB y una IMU, lo que la hace adecuada para aplicaciones de rango medio a corto como reconstrucción 3D, SLAM y percepción del entorno robótico.
+La RealSense D435i combina percepción de profundidad, imagen RGB y una IMU, lo que la hace adecuada para aplicaciones de rango medio a corto, como reconstrucción 3D, SLAM y percepción del entorno robótico.
 
 **1. Cambiar a la rama Camera**
 
-La compatibilidad actual con cámaras está disponible en la rama `DepthCameraSupport`:
+El soporte actual de cámaras está disponible en la rama `DepthCameraSupport`:
 
 <CodeBlock language="bash">
 {`git checkout DepthCameraSupport
@@ -1056,7 +1065,7 @@ Si solo utilizas RealSense:
 {`pip install -e ".[realsense]"`}
 </CodeBlock>
 
-**3. Otorgar permisos a la cámara**
+**3. Conceder permisos a la cámara**
 
 <CodeBlock language="bash">
 {`chmod a+rw /dev/bus/usb/*/*`}
@@ -1068,18 +1077,18 @@ Si solo utilizas RealSense:
 {`lerobot-find-cameras realsense`}
 </CodeBlock>
 
-Este paso mostrará:
+Este paso generará:
 
-- Modelo de la cámara
+- Modelo de cámara
 - Número de serie
 - Información USB
 - Configuración de flujo predeterminada
 
-Introduce el `Serial number` obtenido en el parámetro `serial_number_or_name` del siguiente comando de cámara.
+Introduce el `Serial number` obtenido en el parámetro `serial_number_or_name` del comando de cámara que aparece a continuación.
 
 **5. Ejemplo de RealSense**
 
-Prueba con dos cámaras RealSense:
+Prueba de RealSense dual:
 
 <CodeBlock language="bash">
 {`lerobot-teleoperate \\
@@ -1146,7 +1155,7 @@ Prueba con dos cámaras RealSense:
 </details>
 
 <details className="content-details">
-<summary> Si utilizas cámaras Orbbec Gemini2/Gemini336 </summary>
+<summary> If using Orbbec Gemini2/Gemini336 cameras </summary>
 
 
 <div className="image-frame">
@@ -1159,7 +1168,7 @@ Prueba con dos cámaras RealSense:
   </a>
 </div>
 
-Orbbec Gemini 2 es una cámara RGB-D de alto rendimiento para aplicaciones de robótica, que proporciona flujos sincronizados de RGB y profundidad con una alineación precisa de profundidad a color. Combinada con la detección de profundidad estéreo y una IMU integrada de 6 ejes, es muy adecuada para tareas robóticas como detección de objetos, percepción 3D, mapeo y navegación. Su diseño compacto y la compatibilidad completa con el SDK de Orbbec la hacen adecuada tanto para investigación como para despliegues en el mundo real.
+Orbbec Gemini 2 es una cámara RGB-D de alto rendimiento para aplicaciones de robótica, que proporciona flujos sincronizados de RGB y profundidad con una alineación precisa de profundidad a color. Combinada con detección de profundidad estéreo y una IMU integrada de 6 ejes, es muy adecuada para tareas robóticas como detección de objetos, percepción 3D, mapeo y navegación. Su diseño compacto y la compatibilidad completa con el SDK de Orbbec la hacen adecuada tanto para investigación como para despliegues en el mundo real.
 
 <div className="image-frame">
     <img width={400}
@@ -1229,10 +1238,10 @@ Si sigues encontrando el `timeout error TimeoutError: Timed out waiting for fram
 {`lerobot-find-cameras orbbec`}
 </CodeBlock>
 
-Este paso mostrará:
+Este paso generará:
 
-- Modelo de cámara (Nombre)
-- Número de serie (Serial number)
+- Modelo de cámara（Name）
+- Número de serie（Serial number）
 - Información USB
 - Configuración de flujo predeterminada
 
@@ -1240,7 +1249,7 @@ Introduce el `Serial Number` obtenido en el parámetro `serial_number_or_name` d
 
 **6. Ejemplo de Orbbec**
 
-Prueba con una sola Orbbec:
+Prueba de Orbbec única:
 
 <CodeBlock language="bash">
 {`lerobot-teleoperate \\
@@ -1275,7 +1284,7 @@ Prueba con una sola Orbbec:
   --display_data=true`}
 </CodeBlock>
 
-Prueba con una sola cámara Orbbec + prueba con cámara estándar:
+Prueba de cámara Orbbec única + prueba de cámara estándar:
 
 <CodeBlock language="bash">
 {`  lerobot-teleoperate \\
@@ -1318,7 +1327,7 @@ Prueba con una sola cámara Orbbec + prueba con cámara estándar:
 </CodeBlock>
 
 :::tip
-Cuando utilices una sola cámara Orbbec junto con una cámara estándar, se recomienda conectar primero la cámara Orbbec y luego la cámara estándar.
+Cuando utilices una sola cámara Orbbec junto con una cámara estándar, se recomienda conectar primero la cámara Orbbec y después la cámara estándar.
 
 Al ejecutar el comando lerobot-find-cameras opencv para detectar los ID de las cámaras, verás que la cámara Orbbec ocupa 3 números de cámara consecutivos. Por lo tanto, es aconsejable conectar la cámara estándar al final para que su número se asigne al final.
 :::
@@ -1335,15 +1344,15 @@ Para errores relacionados con la cámara, consulta la sección de Preguntas frec
 
 <details className="content-details">
 
-<summary> Si utilizas una cámara normal </summary>
+<summary> If using a regular camera </summary>
 
 
 
 :::tip
-Los códigos SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y el código de SO101 para la operación.
+Los códigos SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y el código de SO101 para su funcionamiento.
 :::
 
-Para instanciar una cámara, necesitas un identificador de cámara. Este identificador puede cambiar si reinicias tu ordenador o vuelves a conectar tu cámara, un comportamiento que depende principalmente de tu sistema operativo.
+Para instanciar una cámara, necesitas un identificador de cámara. Este identificador puede cambiar si reinicias tu ordenador o vuelves a conectar la cámara, un comportamiento que depende principalmente de tu sistema operativo.
 
 Para encontrar los índices de las cámaras conectadas a tu sistema, ejecuta el siguiente script:
 
@@ -1372,7 +1381,7 @@ Camera #0:
 Puedes encontrar las imágenes tomadas por cada cámara en el directorio `outputs/captured_images`.
 
 :::warning
-Al utilizar cámaras Intel RealSense en macOS, podrías obtener este error: OSError finding RealSense cameras: failed to set power state, esto se puede resolver ejecutando el mismo comando con permisos sudo. Ten en cuenta que usar cámaras RealSense en macOS es inestable.
+When using Intel RealSense cameras in , you could get this error: , this can be solved by running the same command with permissions. Note that using RealSense cameras in is unstable.macOSError finding RealSense cameras: failed to set power statesudomacOS.
 :::
 
 Después podrás mostrar las cámaras en tu ordenador mientras teleoperas ejecutando el siguiente código. Esto es útil para preparar tu configuración antes de grabar tu primer conjunto de datos.
@@ -1392,7 +1401,7 @@ Después podrás mostrar las cámaras en tu ordenador mientras teleoperas ejecut
 Si tienes más cámaras, puedes cambiar `--robot.cameras` para añadir cámaras. Debes tener en cuenta el formato de index_or_path, que está determinado por el último dígito del ID de la cámara que se muestra al ejecutar `python -m lerobot.find_cameras opencv`.
 
 :::tip
-Las imágenes en el formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de la imagen y los FPS, lo que provocará retrasos en el funcionamiento del brazo robótico. Actualmente, con el formato `MJPG`, se pueden soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, sigue sin recomendarse conectar 2 cámaras a un ordenador a través del mismo HUB USB.
+Las imágenes en el formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de la imagen y los FPS, lo que provocará retrasos en el funcionamiento del brazo robótico. Actualmente, con el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, seguir sin recomendar conectar 2 cámaras a un ordenador a través del mismo USB HUB.
 :::
 
 Por ejemplo, si quieres añadir una cámara lateral:
@@ -1410,11 +1419,11 @@ Por ejemplo, si quieres añadir una cámara lateral:
 </CodeBlock>
 
 :::tip
-Las imágenes en el formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de la imagen y los FPS, lo que provocará retrasos en el funcionamiento del brazo robótico. Actualmente, con el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, sigue sin recomendarse conectar 2 cámaras a un ordenador a través del mismo concentrador USB.
+Las imágenes en el formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de la imagen y los FPS, lo que provocará retrasos en el funcionamiento del brazo robótico. Actualmente, con el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, seguir sin recomendar conectar 2 cámaras a un ordenador a través del mismo USB HUB.
 :::
 
 :::tip
-Si encuentras un error como este.
+Si encuentras un bug como este.
 
 <div className="image-frame">
     <img width={800}
@@ -1452,7 +1461,7 @@ Puedes hacer un downgrade de la versión de rerun para resolver el problema.
     <div className="safety-alert-content">
       <strong>Comprobación de seguridad antes de ejecutar</strong>
       <p>
-        Retira los objetos de valor y a las personas no relacionadas en un radio de 1 metro del espacio de trabajo del brazo robótico.
+        Retira objetos de valor y personas no relacionadas en un radio de 1 metro del espacio de trabajo del brazo robótico.
         Asegúrate de que el brazo esté firmemente montado y de que la alimentación y los cables estén conectados correctamente antes de ejecutar esta sección.
       </p>
     </div>
@@ -1543,7 +1552,7 @@ La función **record** proporciona un conjunto de herramientas para capturar y g
 Configura el flujo de grabación de datos usando argumentos de línea de comandos:
 
 | Parámetro | Descripción | Predeterminado |  
-|-----------|-------------|----------------|  
+|-----------|-------------|---------|  
 | --dataset.episode_time_s | Duración por episodio de datos (segundos) | 60 |  
 | --dataset.reset_time_s | Tiempo de reinicio del entorno después de cada episodio (segundos) | 60 |  
 | --dataset.num_episodes | Número total de episodios a registrar | 50 |  
@@ -1560,7 +1569,7 @@ Controla el flujo de grabación de datos usando atajos de teclado:
 
 :::tip
 
-Si el teclado no funciona, puede que necesites instalar otra versión de pynput.
+Si el teclado no funciona, es posible que necesites instalar otra versión de pynput.
 
 <CodeBlock language="bash">
 {`pip install pynput==1.6.8`}
@@ -1575,7 +1584,7 @@ Si el teclado no funciona, puede que necesites instalar otra versión de pynput.
 - Coherencia:  
   - Mantén las cámaras fijas.  
   - Mantén un comportamiento de agarre idéntico.  
-  - Asegúrate de que los objetos manipulados sean visibles en las transmisiones de las cámaras.  
+  - Asegúrate de que los objetos manipulados sean visibles en las transmisiones de la cámara.  
 - Progresión:  
   - Comienza con agarres fiables antes de añadir variaciones (nuevas ubicaciones, técnicas, ajustes de cámara).  
   - Evita aumentos rápidos de complejidad para prevenir fallos.  
@@ -1602,10 +1611,10 @@ Para problemas con los atajos de teclado durante la grabación, consulta la secc
   </div>
 
 :::tip
-Los códigos de SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y el código de SO101 para la operación.
+Los códigos SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y el código de SO101 para la operación.
 :::
 
-Si subiste tu conjunto de datos al hub con `--control.push_to_hub=true`, puedes [visualizar tu conjunto de datos en línea](https://huggingface.co/spaces/lerobot/visualize_dataset) copiando y pegando tu id de repositorio proporcionado por:
+Si subiste tu conjunto de datos al hub con `--control.push_to_hub=true`, puedes [visualizar tu conjunto de datos en línea](https://huggingface.co/spaces/lerobot/visualize_dataset) copiando y pegando tu id de repositorio obtenido mediante:
 
 <CodeBlock language="bash">
 {`echo \${HF_USER}/so101_test`}
@@ -1634,13 +1643,13 @@ Si lo subes con `--dataset.push_to_hub=false`, también puedes visualizarlo loca
 
 </section>
 
-## Reproducir conjunto de datos
+## Reproducir dataset
 
 <section id="replay-dataset" className="section-card">
   <div className="section-title">
-    <span>Conjunto de datos</span>
-    <h2>Reproducir conjunto de datos</h2>
-    <p>Reproduce un episodio grabado en el brazo real para comprobar la coherencia de las acciones.</p>
+    <span>Dataset</span>
+    <h2>Reproducir dataset</h2>
+    <p>Reproduce un episodio grabado en el brazo real para comprobar la consistencia de las acciones.</p>
   </div>
 
   <div className="safety-alert compact">
@@ -1648,17 +1657,17 @@ Si lo subes con `--dataset.push_to_hub=false`, también puedes visualizarlo loca
     <div className="safety-alert-content">
       <strong>Comprobación de seguridad antes de ejecutar</strong>
       <p>
-        Retira los objetos de valor y a las personas no relacionadas en un radio de 1 metro del espacio de trabajo del brazo robótico.
+        Retira objetos de valor y personas no relacionadas en un radio de 1 metro del área de trabajo del brazo robótico.
         Asegúrate de que el brazo esté firmemente montado y de que la alimentación y los cables estén conectados correctamente antes de ejecutar esta sección.
       </p>
     </div>
   </div>
 
 :::tip
-Los códigos de SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y el código de SO101 para la operación.
+Los códigos SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y el código de SO101 para la operación.
 :::
 
-Una función útil es la función `replay`, que te permite reproducir cualquier episodio que hayas grabado o episodios de cualquier conjunto de datos disponible. Esta función te ayuda a probar la repetibilidad de las acciones de tu robot y evaluar la transferibilidad entre robots del mismo modelo.
+Una función útil es `replay`, que te permite reproducir cualquier episodio que hayas grabado o episodios de cualquier dataset disponible. Esta función te ayuda a probar la repetibilidad de las acciones de tu robot y evaluar la transferibilidad entre robots del mismo modelo.
 
 Puedes reproducir el primer episodio en tu robot con el siguiente comando o con el ejemplo de la API:
 
@@ -1674,16 +1683,16 @@ Puedes reproducir el primer episodio en tu robot con el siguiente comando o con 
 
 Tu robot debería replicar movimientos similares a los que grabaste.
 
-En este comando, `dataset.root` especifica la ruta física al conjunto de datos, y dataset.`repo_id` es el nombre personalizado definido durante la recopilación de datos.
+En este comando, `dataset.root` especifica la ruta física al dataset, y dataset.`repo_id` es el nombre personalizado definido durante la recopilación de datos.
 
 </section>
 
-## Entrenar y Evaluar
+## Entrenar y evaluar
 
 <section id="training" className="section-card">
   <div className="section-title">
     <span>Paso 7</span>
-    <h2>Entrenar y Evaluar</h2>
+    <h2>Entrenar y evaluar</h2>
     <p>Entrena y evalúa políticas como ACT, SmolVLA, Pi0, Pi0.5, GR00T, PEFT e inferencia asíncrona.</p>
   </div>
 
@@ -1692,7 +1701,7 @@ En este comando, `dataset.root` especifica la ruta física al conjunto de datos,
     <div className="safety-alert-content">
       <strong>Comprobación de seguridad antes de ejecutar</strong>
       <p>
-        Retira objetos de valor y personas no relacionadas dentro de 1 metro del espacio de trabajo del brazo robótico.
+        Retira objetos de valor y personas no relacionadas en un radio de 1 metro del área de trabajo del brazo robótico.
         Asegúrate de que el brazo esté firmemente montado y de que la alimentación y los cables estén conectados correctamente antes de ejecutar esta sección.
       </p>
     </div>
@@ -1719,7 +1728,8 @@ Para entrenar una política que controle tu robot, utiliza el script [lerobot-tr
   --steps=300000`}
 </CodeBlock>
 
-**Si quieres entrenar en un conjunto de datos local, asegúrate de que el `repo_id` coincida con el utilizado durante la recopilación de datos y añade `--policy.push_to_hub=False`.**
+
+**Si quieres entrenar en un dataset local, asegúrate de que `repo_id` coincida con el utilizado durante la recopilación de datos y añade `--policy.push_to_hub=False`.**
 
 <CodeBlock language="bash">
 {`lerobot-train \\
@@ -1735,7 +1745,7 @@ Para entrenar una política que controle tu robot, utiliza el script [lerobot-tr
 
 :::tip
 
-Si estás utilizando una GPU RTX serie 50, debes añadir --dataset.video_backend=pyav al comando de entrenamiento. Esto evita APIs faltantes en la versión preliminar de torchvision. El comando de entrenamiento completo debería verse así:
+Si estás utilizando una GPU de la serie RTX 50, debes añadir --dataset.video_backend=pyav al comando de entrenamiento. Esto evita APIs faltantes en la versión preliminar de torchvision. El comando de entrenamiento completo debería verse así:
 
 <CodeBlock language="bash">
 {`lerobot-train \\
@@ -1751,11 +1761,11 @@ Si estás utilizando una GPU RTX serie 50, debes añadir --dataset.video_backend
 
 :::
 
-Expliquémoslo:
+Vamos a explicarlo:
 
-- **Especificación del conjunto de datos**: Proporcionamos el conjunto de datos mediante el parámetro `--dataset.repo_id=\${HF_USER}/so101_test`.
-- **Pasos de entrenamiento**: Modificamos el número de pasos de entrenamiento usando `--steps=300000`. El algoritmo utiliza por defecto 800000 pasos, y puedes ajustarlo en función de la dificultad de tu tarea y observando la pérdida durante el entrenamiento.
-- **Tipo de política**: Proporcionamos la política con `policy.type=act`. Del mismo modo, puedes cambiar entre políticas como [`act`, `diffusion`, `pi0`, `pi0fast`, `pi0fast`, `sac`, `smolvla`], lo que cargará la configuración desde `configuration_act.py`. Es importante destacar que esta política se adaptará automáticamente a los estados de los motores, las acciones de los motores y el número de cámaras de tu robot (por ejemplo, `laptop` y `phone`), ya que esta información ya está almacenada en tu conjunto de datos.
+- **Especificación del dataset**: Proporcionamos el dataset mediante el parámetro `--dataset.repo_id=\${HF_USER}/so101_test`.
+- **Pasos de entrenamiento**: Modificamos el número de pasos de entrenamiento usando `--steps=300000`. El algoritmo usa por defecto 800000 pasos, y puedes ajustarlo según la dificultad de tu tarea y observando la pérdida durante el entrenamiento.
+- **Tipo de política**: Proporcionamos la política con `policy.type=act`. Del mismo modo, puedes cambiar entre políticas como [`act`, `diffusion`, `pi0`, `pi0fast`, `pi0fast`, `sac`, `smolvla`], lo que cargará la configuración desde `configuration_act.py`. Es importante destacar que esta política se adaptará automáticamente a los estados de los motores, las acciones de los motores y el número de cámaras de tu robot (por ejemplo, `laptop` y `phone`), ya que esta información ya está almacenada en tu dataset.
 - **Selección de dispositivo**: Proporcionamos `policy.device=cuda` porque estamos entrenando en una GPU Nvidia, pero puedes usar `policy.device=mps` para entrenar en Apple Silicon.
 - **Herramienta de visualización**: Proporcionamos `wandb.enable=true` para visualizar las gráficas de entrenamiento usando [Weights and Biases](https://docs.wandb.ai/quickstart). Esto es opcional, pero si lo utilizas, asegúrate de haber iniciado sesión ejecutando `wandb login`.
 
@@ -1795,11 +1805,11 @@ por ejemplo:
 
 1. El parámetro `--policy.path` indica la ruta al archivo de pesos de los resultados del entrenamiento de tu política (por ejemplo, `outputs/train/act_so101_test/checkpoints/last/pretrained_model`). Si subes el archivo de pesos del resultado del entrenamiento del modelo a Hub, también puedes usar el repositorio del modelo (por ejemplo, `\${HF_USER}/act_so100_test`).
 
-2. El nombre del conjunto de datos `dataset.repo_id` comienza con `eval_`. Esta operación grabará por separado vídeos y datos durante la evaluación, que se guardarán en la carpeta que comienza con `eval_`, como `seeed/eval_test123`.
+2. El nombre del dataset `dataset.repo_id` comienza con `eval_`. Esta operación grabará por separado vídeos y datos durante la evaluación, que se guardarán en la carpeta que comience con `eval_`, como `seeed/eval_test123`.
 
-3. Si encuentras `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'` durante la fase de evaluación, elimina primero la carpeta que comienza con `eval_` y luego ejecuta de nuevo el programa.
+3. Si encuentras `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'` durante la fase de evaluación, elimina primero la carpeta que comience con `eval_` y luego ejecuta de nuevo el programa.
 
-4. Cuando te encuentres con `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, ten en cuenta que palabras clave como front y side en el parámetro `--robot.cameras` deben ser estrictamente coherentes con las utilizadas al recopilar el conjunto de datos.
+4. Cuando te encuentres con `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, ten en cuenta que palabras clave como front y side en el parámetro `--robot.cameras` deben ser estrictamente coherentes con las utilizadas al recopilar el dataset.
 
 <div className="video-container">
 <iframe
@@ -1811,7 +1821,7 @@ por ejemplo:
 <details className="content-details">
 <summary> SmolVLA </summary>
 
-[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) es el modelo base ligero de Hugging Face para robótica. Diseñado para un ajuste fino sencillo en conjuntos de datos de LeRobot, ¡ayuda a acelerar tu desarrollo!
+[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) es el modelo base ligero de Hugging Face para robótica. Diseñado para un ajuste fino sencillo en datasets de LeRobot, ¡ayuda a acelerar tu desarrollo!
 
 **Configura tu entorno**
 
@@ -1827,7 +1837,7 @@ Utiliza [smolvla_base](https://hf.co/lerobot/smolvla_base), nuestro modelo preen
 
 Si no tienes un dispositivo GPU, puedes entrenar usando nuestro cuaderno en [Google Colab](https://colab.research.google.com/github/huggingface/notebooks/blob/main/lerobot/training-smolvla.ipynb).
 
-Pasa tu conjunto de datos al script de entrenamiento usando `--dataset.repo_id`. Si quieres probar tu instalación, ejecuta el siguiente comando donde usamos uno de los conjuntos de datos que recopilamos para el [artículo de SmolVLA](https://huggingface.co/papers/2506.01844).
+Pasa tu dataset al script de entrenamiento usando `--dataset.repo_id`. Si quieres probar tu instalación, ejecuta el siguiente comando donde usamos uno de los datasets que recopilamos para el [artículo de SmolVLA](https://huggingface.co/papers/2506.01844).
 
 <CodeBlock language="bash">
 {`lerobot-train \\
@@ -1842,7 +1852,7 @@ Pasa tu conjunto de datos al script de entrenamiento usando `--dataset.repo_id`.
 </CodeBlock>
 
 :::tip
-Puedes empezar con un tamaño de lote pequeño e incrementarlo gradualmente, si la GPU lo permite, siempre que los tiempos de carga se mantengan cortos.
+Puedes comenzar con un tamaño de lote pequeño e incrementarlo gradualmente, si la GPU lo permite, siempre que los tiempos de carga se mantengan cortos.
 :::
 
 El ajuste fino es un arte. Para una visión completa de las opciones para el ajuste fino, ejecuta
@@ -1851,35 +1861,31 @@ El ajuste fino es un arte. Para una visión completa de las opciones para el aju
 {`lerobot-train --help`}
 </CodeBlock>
 
-**Evalúa el modelo ajustado finamente y ejecútalo en tiempo real**
+**Evalúa el modelo ajustado y ejecútalo en tiempo real**
 
-De forma similar a cuando grabas un episodio, se recomienda que hayas iniciado sesión en HuggingFace Hub. Puedes seguir los pasos correspondientes: [Grabar un conjunto de datos](https://huggingface.co/docs/lerobot/il_robots). Una vez que hayas iniciado sesión, puedes ejecutar la inferencia en tu configuración haciendo:
+De forma similar a cuando grabas un episodio, se recomienda que hayas iniciado sesión en HuggingFace Hub. Puedes seguir los pasos correspondientes: [Record a dataset](https://huggingface.co/docs/lerobot/il_robots). Una vez que hayas iniciado sesión, puedes ejecutar la inferencia en tu configuración haciendo:
 
 <CodeBlock language="bash">
-{`lerobot-record \\
+{`lerobot-rollout \\
+  --strategy.type=base \\
+  --policy.path=\${HF_USER}/act_policy \\
   --robot.type=so101_follower \\
-  --robot.port=/dev/ttyACM0 \\ # <- Use your port
-  --robot.id=my_blue_follower_arm \\ # <- Use your robot id
-  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\ # <- Use your cameras
-  --dataset.single_task="Agarrar un bloque de lego y ponerlo en el contenedor." \\ # <- Usa la misma descripción de tarea que utilizaste en la grabación de tu conjunto de datos
-  --dataset.repo_id=\${HF_USER}/eval_DATASET_NAME_test \\  # <- Este será el nombre del conjunto de datos en HF Hub
-  --dataset.episode_time_s=50 \\
-  --dataset.num_episodes=10 \\
-  # <- Teleop opcional si quieres teleoperar entre episodios \\
-  # --teleop.type=so100_leader \\
-  # --teleop.port=/dev/ttyACM0 \\
-  # --teleop.id=my_red_leader_arm \\
-  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Usa tu modelo ajustado fino`}
+  --robot.port=/dev/ttyACM0 \\
+  --robot.cameras=="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\
+  --display_data=true \\
+  --task="Your task description" \\ # can be skipped for ACT
+  --duration=60`}
 </CodeBlock>
 
-Dependiendo de tu configuración de evaluación, puedes configurar la duración y el número de episodios a registrar para tu conjunto de evaluación.
+
+Dependiendo de tu configuración de evaluación, puedes configurar la duración y el número de episodios que se grabarán para tu conjunto de evaluación.
 
 </details>
 
 <details className="content-details">
 <summary> LIBERO </summary>
 
-[LIBERO](https://huggingface.co/docs/lerobot/libero) es un benchmark diseñado para estudiar el aprendizaje robótico de por vida. La idea es que los robots no solo se preentrenarán una vez en una fábrica, sino que necesitarán seguir aprendiendo y adaptándose con sus usuarios humanos a lo largo del tiempo. Esta adaptación continua se llama aprendizaje de por vida en la toma de decisiones (LLDM), y es un paso clave hacia la construcción de robots que se conviertan en ayudantes verdaderamente personalizados.
+[LIBERO](https://huggingface.co/docs/lerobot/libero) es un benchmark diseñado para estudiar el aprendizaje robótico de por vida. La idea es que los robots no solo se preentrenarán una vez en una fábrica, sino que necesitarán seguir aprendiendo y adaptándose con sus usuarios humanos a lo largo del tiempo. Esta adaptación continua se denomina aprendizaje de por vida en la toma de decisiones (LLDM), y es un paso clave hacia la construcción de robots que se conviertan en ayudantes verdaderamente personalizados.
 
 - 📄 [Artículo de LIBERO](https://arxiv.org/abs/2306.03310)
 - 💻 [Repositorio original de LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
@@ -1888,9 +1894,9 @@ Dependiendo de tu configuración de evaluación, puedes configurar la duración 
 
 En **LeRobot**, portamos LIBERO a nuestro framework y lo usamos principalmente para **evaluar** [SmolVLA](https://huggingface.co/docs/lerobot/en/smolvla), nuestro modelo ligero de Visión-Lenguaje-Acción.
 
-LIBERO es ahora parte de nuestra **simulación con evaluación múltiple soportada**, lo que significa que puedes evaluar tus políticas ya sea en un **único conjunto de tareas** o en **múltiples conjuntos a la vez** con solo una bandera.
+LIBERO es ahora parte de nuestra **simulación con evaluación múltiple**, lo que significa que puedes evaluar tus políticas en un **único conjunto de tareas** o en **múltiples conjuntos a la vez** con solo una bandera.
 
-Para instalar LIBERO, después de seguir las instrucciones oficiales de LeRobot, simplemente ejecuta: `pip install -e ".[libero]"`
+Para instalar LIBERO, después de seguir las instrucciones oficiales de LeRobot, simplemente haz: `pip install -e ".[libero]"`
 
 ***Evaluación de un solo conjunto***
 
@@ -1945,7 +1951,7 @@ Evalúa una política en múltiples conjuntos a la vez:
 
 **Nota sobre el renderizado**
 
-LeRobot usa MuJoCo para la simulación. Debes configurar el backend de renderizado antes del entrenamiento o la evaluación:
+LeRobot utiliza MuJoCo para la simulación. Debes establecer el backend de renderizado antes del entrenamiento o la evaluación:
 
 - `export MUJOCO_GL=egl` → para servidores sin pantalla (por ejemplo, HPC, nube)
 
@@ -1964,18 +1970,20 @@ Consulta [Pi0](https://huggingface.co/docs/lerobot/pi0)
 
 <CodeBlock language="bash">
 {`lerobot-train \\
-  --policy.type=pi0 \\
-  --dataset.repo_id=seeed/eval_test123 \\
-  --job_name=pi0_training \\
-  --output_dir=outputs/pi0_training \\
-  --policy.pretrained_path=lerobot/pi0_base \\
-  --policy.compile_model=true \\
-  --policy.gradient_checkpointing=true \\
-  --policy.dtype=bfloat16 \\
-  --steps=20000 \\
-  --policy.device=cuda \\
-  --batch_size=32 \\
-  --wandb.enable=false`}
+    --dataset.repo_id=your_dataset \\
+    --policy.type=pi0 \\
+    --output_dir=./outputs/pi0_training \\
+    --job_name=pi0_training \\
+    --policy.pretrained_path=lerobot/pi0_base \\
+    --policy.repo_id=your_repo_id \\
+    --policy.compile_model=true \\
+    --policy.gradient_checkpointing=true \\
+    --policy.dtype=bfloat16 \\
+    --policy.freeze_vision_encoder=false \\
+    --policy.train_expert_only=false \\
+    --steps=3000 \\
+    --policy.device=cuda \\
+    --batch_size=32`}
 </CodeBlock>
 
 **Evaluar**
@@ -1988,7 +1996,7 @@ Consulta [Pi0](https://huggingface.co/docs/lerobot/pi0)
   --robot.id=my_awesome_follower_arm \\
   --display_data=false \\
   --dataset.repo_id=seeed/eval_test123 \\
-  --dataset.single_task="Poner el ladrillo de lego en la caja transparente" \\
+  --dataset.single_task="Put lego brick into the transparent box" \\
   --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model`}
 </CodeBlock>
 
@@ -2009,13 +2017,16 @@ Consulta [Pi0.5](https://huggingface.co/docs/lerobot/pi05)
 {`lerobot-train \\
     --dataset.repo_id=seeed/eval_test123 \\
     --policy.type=pi05 \\
-    --output_dir=outputs/pi05_training \\
+    --output_dir=./outputs/pi05_training \\
     --job_name=pi05_training \\
+    --policy.repo_id=your_repo_id \\
     --policy.pretrained_path=lerobot/pi05_base \\
     --policy.compile_model=true \\
     --policy.gradient_checkpointing=true \\
-    --wandb.enable=false \\
+    --wandb.enable=true \\
     --policy.dtype=bfloat16 \\
+    --policy.freeze_vision_encoder=false \\
+    --policy.train_expert_only=false \\
     --steps=3000 \\
     --policy.device=cuda \\
     --batch_size=32`}
@@ -2031,7 +2042,7 @@ Consulta [Pi0.5](https://huggingface.co/docs/lerobot/pi05)
   --robot.id=my_awesome_follower_arm \\
   --display_data=false \\
   --dataset.repo_id=seeed/eval_test123 \\
-  --dataset.single_task="Poner el ladrillo de lego en la caja transparente" \\
+  --dataset.single_task="Put lego brick into the transparent box" \\
   --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model`}
 </CodeBlock>
 
@@ -2042,18 +2053,18 @@ Consulta [Pi0.5](https://huggingface.co/docs/lerobot/pi05)
 
 Consulta la documentación oficial: [GR00T N1.5](https://huggingface.co/docs/lerobot/groot).
 
-GR00T N1.5 es un modelo base abierto de NVIDIA para un razonamiento robótico y aprendizaje de habilidades más general. Es un modelo de **cruzamiento de morfologías**: puede tomar entradas multimodales como **lenguaje** e **imágenes**, y ejecutar tareas de manipulación en diferentes entornos.
+GR00T N1.5 es un modelo base abierto de NVIDIA para un razonamiento robótico y aprendizaje de habilidades más generales. Es un modelo de **cruzamiento de morfologías**: puede tomar entradas multimodales como **lenguaje** e **imágenes**, y ejecutar tareas de manipulación en diferentes entornos.
 
-En LeRobot, la clave es establecer el tipo de política a `--policy.type=groot`. Ten en cuenta que GR00T N1.5 tiene requisitos de entorno más altos (depende de FlashAttention y requiere una GPU CUDA). Se recomienda primero hacer que ACT / Pi0 funcionen de extremo a extremo y luego probar GR00T.
+En LeRobot, la clave es establecer el tipo de política a `--policy.type=groot`. Ten en cuenta que GR00T N1.5 tiene requisitos de entorno más altos (depende de FlashAttention y requiere una GPU CUDA). Se recomienda primero hacer que ACT / Pi0 se ejecuten de extremo a extremo y luego probar GR00T.
 
 **Instalación (importante)**
 
-Según la documentación oficial actual, GR00T N1.5 requiere `flash-attn` y solo puede usarse en hardware compatible con CUDA.
+Según la documentación oficial actual, GR00T N1.5 requiere `flash-attn` y solo puede utilizarse en hardware compatible con CUDA.
 
 Orden recomendado:
 
-1. Prepara primero tu entorno base (Python, CUDA, controladores, etc.). **No** instales `lerobot` todavía.
-2. Instala PyTorch para tu versión de CUDA (diferentes versiones de CUDA pueden requerir un `--index-url` diferente; sigue la página de instalación de PyTorch).
+1. Prepara primero tu entorno base (Python, CUDA, controladores, etc.). **No** instales aún `lerobot`.
+2. Instala PyTorch para tu versión de CUDA (las diferentes versiones de CUDA pueden requerir un `--index-url` diferente; sigue la página de instalación de PyTorch).
 
 <CodeBlock language="bash">
 {`pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"`}
@@ -2061,7 +2072,7 @@ Orden recomendado:
 
 :::tip
 
-Si estás usando una GPU RTX Serie 50, se deben cumplir los siguientes requisitos: Python=3.10, CUDA=12.8, Torch=2.7.1
+Si estás utilizando una GPU RTX Serie 50, se deben cumplir los siguientes requisitos: Python=3.10, CUDA=12.8, Torch=2.7.1
 
 El comando de descarga es el siguiente:
 <CodeBlock language="bash">
@@ -2079,7 +2090,7 @@ python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} i
 
 :::tip
 
-Si estás usando una GPU RTX Serie 50, se debe cumplir el siguiente requisito: flash_attn=2.8.0
+Si estás utilizando una GPU RTX Serie 50, se debe cumplir el siguiente requisito: flash_attn=2.8.0
 
 El comando de descarga es el siguiente:
 <CodeBlock language="bash">
@@ -2094,12 +2105,12 @@ El comando de descarga es el siguiente:
 </CodeBlock>
 
 :::tip
-Si la instalación de `flash-attn` falla, normalmente se debe a (1) una incompatibilidad entre PyTorch y CUDA, (2) dependencias de compilación faltantes o (3) un entorno demasiado nuevo/demasiado antiguo. Primero verifica la documentación oficial de GR00T y las instrucciones de instalación de PyTorch.
+Si la instalación de `flash-attn` falla, normalmente se debe a (1) una incompatibilidad entre PyTorch y CUDA, (2) dependencias de compilación faltantes o (3) un entorno demasiado nuevo/demasiado antiguo. Verifica primero la documentación oficial de GR00T y las instrucciones de instalación de PyTorch.
 :::
 
 **Entrenamiento (ajuste fino)**
 
-La documentación oficial proporciona un ejemplo multi-GPU con `accelerate launch --multi_gpu ...`. Si solo tienes una GPU, aún puedes empezar haciendo que primero funcione una ejecución de un solo proceso (la compatibilidad/argumentos exactos dependen de la documentación oficial).
+La documentación oficial proporciona un ejemplo multi-GPU con `accelerate launch --multi_gpu ...`. Si solo tienes una GPU, aún puedes comenzar haciendo que primero funcione una ejecución de un solo proceso (la compatibilidad/argumentos exactos dependen de la documentación oficial).
 
 <CodeBlock language="bash">
 {`accelerate launch \\
@@ -2122,9 +2133,9 @@ La documentación oficial proporciona un ejemplo multi-GPU con `accelerate launc
   --job_name=$JOB_NAME`}
 </CodeBlock>
 
-**Validación en el robot (evaluación)**
+**Validación (evaluación) en el robot**
 
-Después del entrenamiento, puedes evaluar y grabar repeticiones con `lerobot-record` como con otras políticas. La documentación oficial incluye un ejemplo bimanual; los usuarios de SO101 de un solo brazo no necesitan argumentos del tipo `left_arm_port/right_arm_port`.
+Después del entrenamiento, puedes evaluar y registrar reproducciones con `lerobot-record` como con otras políticas. La documentación oficial incluye un ejemplo bimanual; los usuarios de SO101 de un solo brazo no necesitan argumentos del estilo `left_arm_port/right_arm_port`.
 
 <CodeBlock language="bash">
 {`lerobot-record \\
@@ -2136,13 +2147,13 @@ Después del entrenamiento, puedes evaluar y grabar repeticiones con `lerobot-re
   --display_data=true \\
   --dataset.repo_id=\${HF_USER}/eval_groot_bimanual \\
   --dataset.num_episodes=10 \\
-  --dataset.single_task="Agarrar y entregar el cubo rojo al otro brazo" \\
+  --dataset.single_task="Grab and handover the red cube to the other arm" \\
   --policy.path=\${HF_USER}/groot-bimanual \\
   --dataset.episode_time_s=30 \\
   --dataset.reset_time_s=10`}
 </CodeBlock>
 
-Licencia: Apache 2.0 (igual que el repositorio GR00T original).
+Licencia: Apache 2.0 (igual que el repositorio original de GR00T).
 
 </details>
 
@@ -2163,11 +2174,11 @@ Después de instalar LeRobot con las dependencias opcionales de `peft`, puedes u
 {`pip install "lerobot[peft]"`}
 </CodeBlock>
 
-Más conceptos y métodos: [🤗 Documentación de PEFT](https://huggingface.co/docs/peft/index).
+Más conceptos y métodos: [🤗 documentación de PEFT](https://huggingface.co/docs/peft/index).
 
 **Ejemplo: Fine-tuning de SmolVLA con LoRA (subtarea LIBERO `libero_spatial`)**
 
-Este ejemplo hace fine-tuning de `lerobot/smolvla_base` con LoRA en el conjunto de datos `HuggingFaceVLA/libero`. Los nombres de los argumentos dependen de la versión de LeRobot; se recomienda también consultar `lerobot-train --help`.
+Este ejemplo realiza fine-tuning de `lerobot/smolvla_base` con LoRA en el conjunto de datos `HuggingFaceVLA/libero`. Los nombres de los argumentos dependen de la versión de LeRobot; se recomienda también consultar `lerobot-train --help`.
 
 <CodeBlock language="bash">
 {`lerobot-train \\
@@ -2186,14 +2197,14 @@ Este ejemplo hace fine-tuning de `lerobot/smolvla_base` con LoRA en el conjunto 
   --peft.r=64`}
 </CodeBlock>
 
-**Argumentos clave de PEFT**
+**Argumentos PEFT clave**
 
-- `--peft.method_type`: selecciona el método PEFT. LoRA (Low-Rank Adapter) es una de las opciones más comunes.
-- `--peft.r`: rango de LoRA. Un rango más alto suele aumentar la capacidad, pero también incrementa el número de parámetros y el uso de VRAM.
+- `--peft.method_type`: Selecciona el método PEFT. LoRA (Low-Rank Adapter) es una de las opciones más comunes.
+- `--peft.r`: Rango de LoRA. Un rango más alto suele aumentar la capacidad, pero también incrementa el número de parámetros y el uso de VRAM.
 
 **Elegir en qué capas/módulos inyectar LoRA (opcional)**
 
-De forma predeterminada, PEFT suele inyectar LoRA en las capas de proyección más importantes (por ejemplo, las de atención `q_proj`, `v_proj`), y también puede cubrir proyecciones de estado/acción. Si quieres personalizarlo, usa `--peft.target_modules`.
+De forma predeterminada, PEFT suele inyectar LoRA en las capas de proyección más importantes (por ejemplo, `q_proj`, `v_proj` de atención) y también puede cubrir proyecciones de estado/acción. Si quieres personalizarlo, usa `--peft.target_modules`.
 
 Patrones comunes:
 
@@ -2236,7 +2247,7 @@ Método 1: usar flags de la CLI.
 {`pip install accelerate`}
 </CodeBlock>
 
-2. Lanza el entrenamiento multi-GPU con `accelerate launch` y las flags `--multi_gpu` y `--num_processes`.
+2. Inicia el entrenamiento multi-GPU con `accelerate launch` y las flags `--multi_gpu` y `--num_processes`.
 
 <CodeBlock language="bash">
 {`accelerate launch \\
@@ -2273,13 +2284,13 @@ Ten en cuenta: **bf16 requiere soporte de hardware** y no está disponible en to
 | fp16 | Compatible con casi todas las GPUs NVIDIA |
 | bf16 | Solo compatible con algunas GPUs más recientes (Ampere y posteriores) |
 
-Si tu GPU no soporta bf16, elige fp16 en la configuración de Accelerate, o especifica fp16 explícitamente.
+Si tu GPU no soporta bf16, elige fp16 en la configuración de Accelerate o especifica fp16 explícitamente.
 
 Método 2: usar un archivo de configuración de `accelerate` (opcional).
 
 Si entrenas con múltiples GPUs con frecuencia, puedes guardar la configuración para evitar escribir repetidamente las mismas flags.
 
-`accelerate config` guarda la configuración de tu hardware (número de GPUs, precisión mixta, etc.) en un archivo de configuración, de modo que no tengas que volver a introducir esas opciones cuando ejecutes `accelerate launch` más tarde. No cambia la lógica de entrenamiento de LeRobot; solo reduce las entradas repetidas en la CLI.
+`accelerate config` guarda la configuración de tu hardware (número de GPUs, precisión mixta, etc.) en un archivo de configuración, de modo que no tengas que volver a introducir esas opciones al ejecutar `accelerate launch` más tarde. No cambia la lógica de entrenamiento de LeRobot; solo reduce las entradas repetidas en la CLI.
 
 Si solo usas multi-GPU ocasionalmente (o es tu primera vez), omitir esto está perfectamente bien.
 
@@ -2289,7 +2300,7 @@ En la configuración interactiva, para el escenario común de “una sola máqui
 - Número de máquinas: 1
 - Número de procesos: número de GPUs que quieres usar
 - IDs de GPU a usar: pulsa Enter (usar todas las GPUs)
-- Precisión mixta: prefiere fp16; elige bf16 solo si sabes que tu GPU lo soporta
+- Precisión mixta: se prefiere fp16; elige bf16 solo si sabes que tu GPU lo soporta
 
 <CodeBlock language="bash">
 {`accelerate config`}
@@ -2317,7 +2328,7 @@ LeRobot no ajusta automáticamente la tasa de aprendizaje ni los pasos de entren
 
 Si quieres ajustar los hiperparámetros para multi-GPU, un enfoque común es:
 
-- **Pasos**: el tamaño de batch efectivo aumenta (batch_size × num_gpus), por lo que puedes reducir los pasos aproximadamente de forma proporcional a `1 / num_gpus` para mantener un número similar de muestras vistas en total.
+- **Pasos**: el tamaño de lote efectivo aumenta (batch_size × num_gpus), por lo que puedes reducir los pasos aproximadamente de forma proporcional a `1 / num_gpus` para mantener un número similar de muestras vistas en total.
 
 <CodeBlock language="bash">
 {`accelerate launch --num_processes=2 $(which lerobot-train) \\
@@ -2370,11 +2381,11 @@ Primero presentemos algunos conceptos básicos:
 
 - **Cliente**: se conecta al brazo robótico y a las cámaras, recopila datos de observación (como imágenes y poses del robot), envía estas observaciones al servidor y recibe los bloques de acciones devueltos por el servidor y los ejecuta en orden.
 
-- **Servidor**: el dispositivo que proporciona recursos de cómputo. Recibe datos de cámara y del brazo robótico, realiza la inferencia (es decir, el cálculo) para producir bloques de acciones y los envía de vuelta al cliente. Puede ser el mismo dispositivo conectado al brazo robótico y a las cámaras, otro ordenador en la misma red local o un servidor en la nube alquilado en Internet.
+- **Servidor**: el dispositivo que proporciona recursos de cómputo. Recibe datos de la cámara y del brazo robótico, realiza la inferencia (es decir, el cálculo) para producir bloques de acciones y los envía de vuelta al cliente. Puede ser el mismo dispositivo conectado al brazo robótico y a las cámaras, otro ordenador en la misma red local o un servidor en la nube alquilado en Internet.
 
-- **Bloque de acciones**: una secuencia de comandos de acción del brazo robótico obtenida mediante la inferencia de la política en el lado del servidor.
+- **Fragmento de acciones**: una secuencia de comandos de acción del brazo robótico obtenidos mediante inferencia de la política en el lado del servidor.
 
-Tres escenarios de despliegue para la inferencia asíncrona
+Tres escenarios de despliegue para inferencia asíncrona
 
 1. Despliegue en una sola máquina
 
@@ -2386,21 +2397,21 @@ Este es el caso más sencillo: el servidor puede escuchar en 127.0.0.1, y el cli
 
 El robot y las cámaras están conectados a un dispositivo ligero, mientras que el servidor de políticas se ejecuta en otra máquina de alto cómputo en la misma red local.
 
-En este caso, el servidor debe escuchar en una dirección accesible por otras máquinas, y el cliente también debe conectarse a la IP de la LAN del servidor, en lugar de 127.0.0.1.
+En este caso, el servidor debe escuchar en una dirección a la que puedan acceder otras máquinas, y el cliente también debe conectarse a la IP de la LAN del servidor, en lugar de 127.0.0.1.
 
 3. Despliegue entre redes / en la nube
 
 El servidor de políticas se ejecuta en un host en la nube accesible públicamente, y el cliente se conecta a él a través de Internet pública.
 
-Este enfoque puede utilizar la GPU más potente del host en la nube. Cuando las condiciones de red son buenas, el tiempo de ida y vuelta de la red (latencia de red) a veces puede ser relativamente pequeño en comparación con el tiempo de inferencia, pero esto depende de tu entorno de red real.
+Este enfoque puede aprovechar la GPU más potente del host en la nube. Cuando las condiciones de red son buenas, el tiempo de ida y vuelta de la red (latencia de red) a veces puede ser relativamente pequeño en comparación con el tiempo de inferencia, pero esto depende de tu entorno de red real.
 
-Nota de seguridad: el pipeline de inferencia asíncrona de LeRobot tiene un riesgo relacionado con gRPC sin autenticación + deserialización con pickle. Si hay información o servicios importantes en el servidor, no se recomienda exponer el servicio directamente a Internet en un despliegue público. Un enfoque más seguro es usar VPN o túnel SSH, o al menos restringir en el grupo de seguridad las IP de origen permitidas a la IP pública de tu propio cliente.
+Nota de seguridad: el flujo de inferencia asíncrona de LeRobot tiene un riesgo relacionado con gRPC sin autenticación + deserialización con pickle. Si hay información o servicios importantes en el servidor, no se recomienda exponer el servicio directamente a Internet en un despliegue público. Un enfoque más seguro es usar VPN o túneles SSH, o al menos restringir en el grupo de seguridad las IP de origen permitidas a la IP pública de tu propio cliente.
 
 **Primeros pasos con el despliegue de inferencia asíncrona**
 
 **Paso 1: Configuración del entorno**
 
-Primero, usa pip para instalar las dependencias adicionales necesarias para la inferencia asíncrona. Tanto el cliente como el servidor necesitan tener lerobot instalado junto con las dependencias extra:
+Primero, usa pip para instalar las dependencias adicionales requeridas para la inferencia asíncrona. Tanto el cliente como el servidor necesitan tener lerobot instalado junto con las dependencias extra:
 
 <CodeBlock language="bash">
 {`pip install -e ".[async]"`}
@@ -2434,7 +2445,7 @@ Despliegue en la nube: necesitas abrir este puerto en el grupo de seguridad del 
 
 Si estás ejecutando en un servidor en la nube:
 
-Abre el puerto 8080 en el grupo de seguridad de la consola de gestión del servidor, o usa otro puerto que ya esté abierto. Las diferentes plataformas de servicios en la nube manejan esto de forma distinta; consulta la documentación de tu proveedor de nube.
+Abre el puerto 8080 en el grupo de seguridad de la consola de gestión del servidor, o usa otro puerto que ya esté abierto. Las distintas plataformas de servicios en la nube manejan esto de forma diferente; consulta la documentación de tu proveedor de nube.
 
 3. **Confirmar la dirección IP**
 
@@ -2442,7 +2453,7 @@ Este paso se puede omitir para el despliegue en una sola máquina (la dirección
 
 Si se trata de un despliegue en LAN:
 
-Necesitas confirmar y recordar la dirección IP de la LAN del lado del servidor. Cuando el cliente se conecta, lo que se debe rellenar es la IP de la LAN de la máquina que ejecuta policy_server, no la IP propia del cliente.
+Necesitas confirmar y recordar la dirección IP de la LAN del lado del servidor. Cuando el cliente se conecte, lo que debe rellenarse es la IP de la LAN de la máquina que ejecuta policy_server, no la IP propia del cliente.
 
 Linux / Jetson / Raspberry Pi:
 
@@ -2450,7 +2461,7 @@ Linux / Jetson / Raspberry Pi:
 {`hostname -I`}
 </CodeBlock>
 
-Si se muestran varias direcciones, generalmente elige la que corresponde a la interfaz de red LAN actual, por ejemplo 192.168.x.x.
+Si se muestran varias direcciones, generalmente elige la que corresponda a la interfaz de red de la LAN actual, por ejemplo 192.168.x.x.
 
 También puedes usar:
 
@@ -2498,7 +2509,7 @@ Necesitamos recordar la dirección IP pública. Usaremos `<server public IP>` pa
 
 Despliegue en una sola máquina: este paso se puede omitir
 
-Despliegue en LAN / nube: se recomienda probar desde el lado del cliente si el puerto del servidor es accesible. Los ejemplos de prueba son los siguientes:
+Despliegue en LAN / en la nube: se recomienda probar desde el lado del cliente si el puerto del servidor es accesible. Los ejemplos de prueba son los siguientes:
 
 Ejemplo en LAN: ejecutar en el lado del cliente
 
@@ -2536,7 +2547,7 @@ Ejecutar en el lado del servidor:
 --port=8080`}
 </CodeBlock>
 
-En este caso, cuando el cliente se conecta, el `--server_address` debe ser la dirección IP de la LAN del lado del servidor, como `<LAN IP address>:8080`.
+En este caso, cuando el cliente se conecte, el valor de `--server_address` debe ser la dirección IP de la LAN del lado del servidor, como `<LAN IP address>:8080`.
 
 **Escenario C: Despliegue en servidor en la nube**
 
@@ -2548,9 +2559,9 @@ Ejecutar en el lado del servidor:
 --port=8080`}
 </CodeBlock>
 
-En este caso, cuando el cliente se conecta, el `--server_address` debe ser la dirección IP pública del servidor, como `<server public IP>:8080`.
+En este caso, cuando el cliente se conecte, el valor de `--server_address` debe ser la dirección IP pública del servidor, como `<server public IP>:8080`.
 
-**Paso 4: Elegir parámetros de inferencia**
+**Paso 4: Elegir los parámetros de inferencia**
 
 Ejecutar en el lado del cliente:
 
@@ -2571,23 +2582,23 @@ Ejecutar en el lado del cliente:
 --debug_visualize_queue_size=True`}
 </CodeBlock>
 
-Explicación de parámetros:
+Explicación de los parámetros:
 
 - `--server_address`
 
-Especifica la dirección y el puerto del policy server. `<ip address>` debe sustituirse por 127.0.0.1 (máquina local), `<LAN IP address>` (LAN), o `<server public IP>` (servidor en la nube).
+Especifica la dirección y el puerto del servidor de políticas. `<ip address>` debe sustituirse por 127.0.0.1 (máquina local), `<LAN IP address>` (LAN), o `<server public IP>` (servidor en la nube).
 
 - `--robot.type, --robot.port, --robot.id, --robot.cameras`
 
-Parámetros de dispositivos de hardware. Deben mantenerse coherentes con los parámetros usados durante la recopilación del dataset.
+Parámetros de los dispositivos de hardware. Deben mantenerse coherentes con los parámetros usados durante la recopilación del conjunto de datos.
 
 - `--task`
 
-La descripción de la tarea. Las policies de visión-lenguaje como SmolVLA pueden determinar el objetivo de la acción basándose en el texto de la tarea.
+La descripción de la tarea. Las políticas de visión y lenguaje como SmolVLA pueden determinar el objetivo de la acción basándose en el texto de la tarea.
 
 - `--policy_type`
 
-Sustituye esto por el nombre específico de la policy, por ejemplo:
+Sustituye esto por el nombre específico de la política, por ejemplo:
 
 - smolvla
 
@@ -2614,17 +2625,17 @@ Desventaja: el horizonte de predicción es más largo, por lo que el error de co
 
 - `--chunk_size_threshold=0.5`
 
-Especifica cuándo solicitar el siguiente chunk de acciones al servidor.
+Especifica cuándo solicitar el siguiente fragmento de acciones al servidor.
 
 Este es un umbral, normalmente en el rango de 0 a 1.
 
-Se puede entender como: cuando la proporción restante de la cola de acciones actual cae por debajo de este umbral, el cliente enviará por adelantado una nueva observación y solicitará el siguiente chunk de acciones.
+Se puede entender como: cuando la proporción restante de la cola de acciones actual cae por debajo de este umbral, el cliente enviará por adelantado una nueva observación y solicitará el siguiente fragmento de acciones.
 
-Configurarla en 0.5 aquí significa:
+Ajustarlo a 0.5 aquí significa:
 
-cuando el chunk de acciones actual está aproximadamente a la mitad de ser consumido
+cuando el fragmento de acciones actual se ha consumido aproximadamente a la mitad
 
-el cliente comienza a solicitar el siguiente chunk de acciones
+el cliente empieza a solicitar el siguiente fragmento de acciones
 
 Cuanto mayor sea este valor, con más frecuencia se enviarán solicitudes y más receptivo se volverá el sistema, pero también aumentará la carga en el servidor.
 
@@ -2634,9 +2645,9 @@ Cuanto menor sea este valor, más se acercará el comportamiento a la inferencia
 
 Especifica el método de agregación para los intervalos de acciones superpuestos.
 
-En la inferencia asíncrona, cuando el chunk de acciones antiguo aún no se ha ejecutado por completo, es posible que el nuevo chunk de acciones ya haya llegado.
+En la inferencia asíncrona, cuando el fragmento de acciones antiguo aún no se ha ejecutado por completo, el nuevo fragmento de acciones puede haber llegado ya.
 
-En ese caso, los dos chunks se superponen en parte del intervalo de tiempo, y se necesita una función de agregación para combinarlos en la acción final ejecutada.
+En ese caso, los dos fragmentos se superponen durante parte del intervalo de tiempo, y se necesita una función de agregación para combinarlos en la acción final ejecutada.
 
 El significado de weighted_average es:
 
@@ -2650,33 +2661,33 @@ Indica si se visualiza el tamaño de la cola de acciones en tiempo de ejecución
 
 Cuando está activado, te permite ver de forma más directa si la cola llega con frecuencia al fondo, lo que te ayuda a ajustar actions_per_chunk y chunk_size_threshold.
 
-**Paso 5: Ajustar parámetros según el comportamiento del robot**
+**Paso 5: Ajustar los parámetros según el comportamiento del robot**
 
 En la inferencia asíncrona, hay dos parámetros adicionales que necesitan ajuste y que no existen en la inferencia síncrona:
 
 Parámetro Valor inicial sugerido Descripción
 
-actions_per_chunk 50 Cuántas acciones genera la policy de una vez. Valores típicos: 10–50.
+actions_per_chunk 50 Cuántas acciones produce la política de una vez. Valores típicos: 10–50.
 
-chunk_size_threshold 0.5 Cuando la proporción restante de la cola de acciones es ≤ chunk_size_threshold, el cliente envía una nueva solicitud de chunk de acciones. El rango de valores es [0, 1].
+chunk_size_threshold 0.5 Cuando la proporción restante de la cola de acciones es ≤ chunk_size_threshold, el cliente envía una nueva solicitud de fragmento de acciones. El rango de valores es [0, 1].
 
 Cuando --debug_visualize_queue_size=True, el cambio en el tamaño de la cola de acciones se representará gráficamente en tiempo de ejecución.
 
-Lo que la inferencia asíncrona necesita equilibrar es: la velocidad a la que el servidor genera chunks de acciones debe ser mayor o igual que la velocidad a la que el cliente consume chunks de acciones. De lo contrario, la cola de acciones se vaciará y el robot comenzará a tartamudear de nuevo (esto se puede ver como la curva tocando el fondo en la visualización de la cola).
+Lo que la inferencia asíncrona necesita equilibrar es: la velocidad a la que el servidor genera fragmentos de acciones debe ser mayor o igual que la velocidad a la que el cliente consume fragmentos de acciones. De lo contrario, la cola de acciones se vaciará y el robot comenzará a tartamudear de nuevo (esto se puede ver como la curva tocando el fondo en la visualización de la cola).
 
-La velocidad a la que el servidor genera chunks de acciones se ve afectada por factores como el tamaño del modelo, el tipo de dispositivo, la VRAM / memoria y la potencia de cómputo de la GPU.
+La velocidad a la que el servidor genera fragmentos de acciones se ve afectada por factores como el tamaño del modelo, el tipo de dispositivo, la VRAM / memoria y la potencia de cómputo de la GPU.
 
-La velocidad a la que el cliente consume chunks de acciones se ve afectada por los fps de ejecución configurados.
+La velocidad a la que el cliente consume fragmentos de acciones se ve afectada por los fps de ejecución configurados.
 
-Si la cola se vacía con frecuencia, necesitas aumentar actions_per_chunk, aumentar chunk_size_threshold o reducir los fps.
+Si la cola se vacía con frecuencia, debes aumentar actions_per_chunk, aumentar chunk_size_threshold o reducir los fps.
 
-Si la curva de la cola fluctúa con frecuencia pero las acciones restantes en la cola siempre son suficientes, puedes disminuir apropiadamente `chunk_size_threshold`.
+Si la curva de la cola fluctúa con frecuencia pero las acciones restantes en la cola siempre son suficientes, puedes disminuir adecuadamente chunk_size_threshold.
 
 En general:
 
-el rango empírico para `actions_per_chunk` es 10–50
+el rango empírico para actions_per_chunk es 10–50
 
-el rango empírico para `chunk_size_threshold` es 0.5–0.7; al ajustar, se recomienda comenzar desde 0.5 e incrementarlo gradualmente
+el rango empírico para chunk_size_threshold es 0.5–0.7; al ajustar, se recomienda comenzar desde 0.5 e incrementarlo gradualmente
 
 </details>
 
@@ -2721,13 +2732,13 @@ huggingface-cli upload \${HF_USER}/act_so101_test\${CKPT} \\
 
 </section>
 
-## Preguntas frecuentes
+## Preguntas frecuentes (FAQ)
 
 <section id="faq" className="section-card">
   <div className="section-title">
-    <span>Preguntas frecuentes</span>
-    <h2>Preguntas frecuentes</h2>
-    <p>Solución de problemas centralizada para puertos, IDs de servos, ffmpeg, cámaras, conjuntos de datos, evaluación y entrenamiento.</p>
+    <span>FAQ</span>
+    <h2>FAQ</h2>
+    <p>Solución de problemas centralizada para puertos, IDs de servos, ffmpeg, cámaras, datasets, evaluación y entrenamiento.</p>
   </div>
 
 <details className="content-details">
@@ -2739,7 +2750,7 @@ Usa el repositorio recomendado en este wiki:
 {`git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot`}
 </CodeBlock>
 
-Esta versión ha sido verificada con SO-ARM10x. El repositorio ascendente de LeRobot cambia rápidamente, por lo que los argumentos de los comandos, los formatos de los conjuntos de datos y las dependencias pueden diferir de este tutorial.
+Esta versión ha sido verificada con SO-ARM10x. El repositorio ascendente de LeRobot cambia rápidamente, por lo que los argumentos de los comandos, los formatos de los datasets y las dependencias pueden diferir de este tutorial.
 
 </details>
 
@@ -2785,7 +2796,7 @@ instala ffmpeg 7.1.1:
 </CodeBlock>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="Error de flujo no válido" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="No valid stream error" />
 </div>
 
 </details>
@@ -2812,7 +2823,7 @@ Si ves:
 {`Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)`}
 </CodeBlock>
 
-apaga y reinicia el brazo, luego calibra de nuevo. Si el problema persiste, utiliza la herramienta de calibración rápida Seeed Studio SoARM para realizar la calibración de la posición media y la verificación del ID del servo, y luego vuelve a realizar la calibración de todo el brazo.
+apaga y reinicia el brazo, luego calibra de nuevo. Si el problema persiste, usa la herramienta de calibración rápida Seeed Studio SoARM para realizar la calibración de la posición media y la verificación del ID de los servos, y luego vuelve a hacer la calibración de todo el brazo.
 
 </details>
 
@@ -2833,7 +2844,7 @@ La información de calibración se almacena como archivos JSON en estos director
 <details className="content-details">
 <summary>Los atajos de teclado no funcionan durante la grabación</summary>
 
-Si la flecha derecha, la flecha izquierda o la tecla ESC no responden durante la grabación del conjunto de datos, primero comprueba que la variable de entorno `$DISPLAY` esté configurada. También puedes intentar degradar `pynput`:
+Si la flecha derecha, la flecha izquierda o la tecla ESC no responden durante la grabación del dataset, primero comprueba que la variable de entorno `$DISPLAY` esté configurada. También puedes intentar hacer un downgrade de `pynput`:
 
 <CodeBlock language="bash">
 {`pip install pynput==1.6.8`}
@@ -2849,34 +2860,34 @@ Si el objeto se cae, la pinza falla o la calidad del episodio es mala, mueve el 
 </details>
 
 <details className="content-details">
-<summary>¿A qué debo prestar atención durante la recopilación del conjunto de datos?</summary>
+<summary>¿A qué debo prestar atención durante la recopilación del dataset?</summary>
 
 Mantén estables la posición de la cámara, el ángulo de la cámara y la iluminación ambiental. Evita fondos inestables o peatones en el campo de visión de la cámara, porque grandes diferencias entre el entorno de grabación y el de despliegue pueden hacer que la política falle.
 
-Configura `--dataset.num_episodes` lo suficientemente alto antes de comenzar. No detengas manualmente la grabación a mitad de camino a menos que sea necesario, porque las estadísticas del conjunto de datos, como la media y la varianza, se calculan después de que finaliza la recopilación y son necesarias para el entrenamiento.
+Configura `--dataset.num_episodes` lo suficientemente alto antes de empezar. No detengas manualmente la grabación a mitad de camino a menos que sea necesario, porque las estadísticas del dataset, como la media y la varianza, se calculan después de que finaliza la recopilación y son necesarias para el entrenamiento.
 
 </details>
 
 <details className="content-details">
-<summary>¿Cómo elimino o modifico conjuntos de datos grabados?</summary>
+<summary>¿Cómo elimino o modifico datasets grabados?</summary>
 
-Para eliminar o editar conjuntos de datos grabados, consulta el tutorial de la herramienta de conjuntos de datos:
+Para eliminar o editar datasets grabados, consulta el tutorial de la herramienta de datasets:
 
-[Herramienta de conjuntos de datos](/es/lerobot_dataset_tool)
+[Herramienta de Dataset](/es/lerobot_dataset_tool)
 
 </details>
 
 <details className="content-details">
 <summary>No se pueden leer los datos de imagen de la cámara USB</summary>
 
-Evita conectar la cámara USB a través de un hub USB. Conéctala directamente al dispositivo, preferiblemente a través de un puerto USB 3.0, para garantizar un ancho de banda de transmisión de imágenes suficiente.
+Evita conectar la cámara USB a través de un hub USB. Conéctala directamente al dispositivo, preferiblemente a través de un puerto USB 3.0, para garantizar un ancho de banda de transmisión de imagen suficiente.
 
 </details>
 
 <details className="content-details">
-<summary>Tiempo de espera o desajuste de número de serie de la cámara Orbbec</summary>
+<summary>Timeout de la cámara Orbbec o desajuste del número de serie</summary>
 
-Si ves un tiempo de espera mientras esperas fotogramas, desconecta y vuelve a conectar la cámara. Si ves:
+Si ves un timeout mientras esperas los fotogramas, desconecta y vuelve a conectar la cámara. Si ves:
 
 <CodeBlock language="text">
 {`No Orbbec camera found for 'XXXX'`}
@@ -2893,7 +2904,7 @@ ejecuta el comando de detección de la cámara y actualiza `serial_number_or_nam
 <details className="content-details">
 <summary>`File exists` durante la evaluación</summary>
 
-Si la evaluación informa que ya existe un directorio `eval_`, elimina primero la carpeta de evaluación existente y ejecuta el programa de nuevo.
+Si la evaluación informa de que ya existe un directorio `eval_`, elimina primero la carpeta de evaluación existente y ejecuta el programa de nuevo.
 
 <CodeBlock language="text">
 {`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'`}
@@ -2910,7 +2921,7 @@ Si ves:
 {`mean is infinity. You should either initialize with stats as an argument or use a pretrained model`}
 </CodeBlock>
 
-asegúrate de que las claves de cámara en `--robot.cameras`, como `front` y `side`, coincidan exactamente con las claves utilizadas durante la grabación del conjunto de datos.
+asegúrate de que las claves de cámara en `--robot.cameras`, como `front` y `side`, coincidan exactamente con las claves usadas durante la grabación del dataset.
 
 </details>
 
@@ -2923,7 +2934,7 @@ Si ves:
 {`TypeError: stack(): argument 'tensors' (position 1) must be tuple of Tensors, not Column`}
 </CodeBlock>
 
-intenta instalar la versión compatible de `datasets`:
+intenta instalar la versión compatible de datasets:
 
 <CodeBlock language="bash">
 {`pip install datasets==2.19`}
@@ -2932,7 +2943,7 @@ intenta instalar la versión compatible de `datasets`:
 </details>
 
 <details className="content-details">
-<summary>`rerun` has no attribute `scalar`</summary>
+<summary>`rerun` no tiene el atributo `scalar`</summary>
 
 Si ves:
 
@@ -2940,7 +2951,7 @@ Si ves:
 {`AttributeError: module 'rerun' has no attribute 'scalar'. Did you mean: 'scalars'?`}
 </CodeBlock>
 
-degrada el SDK de rerun:
+haz un downgrade del SDK de rerun:
 
 <CodeBlock language="bash">
 {`pip3 install rerun-sdk==0.23`}
@@ -2951,31 +2962,31 @@ degrada el SDK de rerun:
 <details className="content-details">
 <summary>¿Cuánto tiempo suele tardar el entrenamiento de ACT?</summary>
 
-Como referencia aproximada, entrenar ACT en 50 episodios tarda unas 6 horas en un portátil con RTX 3060 de 8 GB, y unas 2–3 horas en una RTX 4090 o A100. El tiempo real depende del tamaño del conjunto de datos, la resolución de la imagen, el tamaño del lote y el hardware.
+Como referencia aproximada, entrenar ACT en 50 episodios toma alrededor de 6 horas en una laptop con RTX 3060 de 8 GB, y alrededor de 2–3 horas en una RTX 4090 o A100. El tiempo real depende del tamaño del conjunto de datos, la resolución de la imagen, el tamaño del lote y el hardware.
 
 </details>
 
 :::tip
-Si encuentras problemas de software o dependencias sin resolver después de revisar estas preguntas frecuentes, repórtalos en el [repositorio de GitHub de LeRobot](https://github.com/huggingface/lerobot) o en el [canal de Discord de LeRobot](https://discord.gg/8TnwDdjFGU).
+Si encuentras problemas de software o dependencias sin resolver después de revisar este FAQ, repórtalos en el [repositorio de GitHub de LeRobot](https://github.com/huggingface/lerobot) o en el [canal de Discord de LeRobot](https://discord.gg/8TnwDdjFGU).
 :::
 
 </section>
 
 
-## Cita
+## Citación
 
 <section id="references" className="section-card">
   <div className="section-title">
     <span>Referencias</span>
-    <h2>Cita</h2>
+    <h2>Citación</h2>
     <p>Documentación relacionada, proyectos, artículos y recursos externos.</p>
   </div>
 
-[Documento en chino](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/)
+[Chinese Document](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/)
 
 Proyecto TheRobotStudio: [SO-ARM10x](https://github.com/TheRobotStudio/SO-ARM100)
 
-Proyecto de Huggingface: [Lerobot](https://github.com/huggingface/lerobot/tree/main)
+Proyecto Huggingface: [Lerobot](https://github.com/huggingface/lerobot/tree/main)
 
 Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/master/packages/robots/lerobot)
 
@@ -2991,23 +3002,23 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 
 </section>
 
-## Soporte técnico y debate sobre el producto
+## Soporte técnico y debate sobre productos
 
 <section id="support" className="section-card">
   <div className="section-title">
     <span>Soporte</span>
-    <h2>Soporte técnico y debate sobre el producto</h2>
-    <p>Contacta con Seeed Studio y únete a los debates de la comunidad para resolver dudas sobre los productos.</p>
+    <h2>Soporte técnico y debate sobre productos</h2>
+    <p>Contacta con Seeed Studio y únete a los debates de la comunidad para preguntas sobre productos.</p>
   </div>
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 
 <div className="path-grid">
-  <a className="path-card" href="https://forum.seeedstudio.com/" target="_blank" rel="noopener noreferrer"><strong>Foro</strong><span>Plantea preguntas sobre productos y cuestiones técnicas en el foro de Seeed.</span></a>
+  <a className="path-card" href="https://forum.seeedstudio.com/" target="_blank" rel="noopener noreferrer"><strong>Foro</strong><span>Haz preguntas sobre productos y cuestiones técnicas en el foro de Seeed.</span></a>
   <a className="path-card" href="https://www.seeedstudio.com/contacts" target="_blank" rel="noopener noreferrer"><strong>Soporte por correo electrónico</strong><span>Contacta directamente con el soporte de Seeed Studio.</span></a>
   <a className="path-card" href="https://discord.gg/eWkprNDMU7" target="_blank" rel="noopener noreferrer"><strong>Discord</strong><span>Únete a la comunidad de Seeed en Discord.</span></a>
-  <a className="path-card" href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" target="_blank" rel="noopener noreferrer"><strong>Debate en GitHub</strong><span>Debate sobre el contenido del wiki y problemas de documentación.</span></a>
+  <a className="path-card" href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" target="_blank" rel="noopener noreferrer"><strong>GitHub Discussion</strong><span>Debate sobre el contenido del wiki y problemas de documentación.</span></a>
 </div>
 
 

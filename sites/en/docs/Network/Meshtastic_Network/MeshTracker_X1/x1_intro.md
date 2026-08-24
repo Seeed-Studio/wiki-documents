@@ -9,11 +9,11 @@ sku: 100087698
 slug: /meshtracker_x1_intro
 sidebar_position: 0
 last_update:
-  date: 5/29/2026
-  author: MichelleHuang
+  date: 8/20/2026
+  author: Advent Jiang
 url: https://wiki.seeedstudio.com/meshtracker_x1_intro/
 createdAt: '2026-07-13'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-20'
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100093876._._.png" alt="pir" width={900} height="auto" /></p>
@@ -358,6 +358,8 @@ X1 might be developed into a product series, in which new product models to be l
 ### Resource
 
 [Battery Test Report](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Battry_Certification.zip)
+
+[X1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx)
 
 ## Tech Support & Product Discussion
 

@@ -1,6 +1,6 @@
 ---
-description: Introducción a XIAO ePaper Display Board(nRF52840) - EN04
-title: Introducción a EN04
+description: Primeros pasos con XIAO ePaper Display Board(nRF52840) - EN04
+title: Primeros pasos con EN04
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
@@ -11,14 +11,14 @@ last_update:
   date: 11/25/2025
   author: Allen
 createdAt: '2025-09-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/es/epaper_EN04/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Introducción a XIAO ePaper Display Board - EN04
+# Primeros pasos con XIAO ePaper Display Board - EN04
 
 <div class="table-center">
 <table align="center">
@@ -38,13 +38,13 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compatible con pantallas ePaper de **24 pines** y **50 pines**. Incorpora un conector de batería JST de 2,0 mm con interruptor de encendido, CI de carga integrado, función NFC y viene con un botón de reinicio y tres botones de usuario. Es ideal para proyectos ePaper de bajo consumo, como señalización digital, etiquetas electrónicas y paneles de información portátiles.
+Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compatible tanto con pantallas ePaper de **24 pines** como de **50 pines**. Incorpora un conector de batería JST de 2,0 mm con interruptor de alimentación, CI de carga integrado, función NFC y viene con un botón de reinicio y tres botones de usuario. Es ideal para proyectos de ePaper de bajo consumo, como señalización digital, etiquetas electrónicas y paneles de información portátiles.
 
 ### Características
 
 - **Impulsada por XIAO nRF52840 Plus:** Funciona inmediatamente al conectarse a una pantalla ePaper compatible.
-- **Compatibilidad versátil de pantallas:** Compatible con una amplia gama de pantallas ePaper, admite interfaces de 24 pines y 50 pines con cambio sencillo mediante jumpers.
-- **Conector de batería con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión de energía eficiente y ahorro energético.
+- **Compatibilidad versátil de pantalla:** Compatible con una amplia gama de pantallas ePaper, admitiendo interfaces de 24 pines y 50 pines con cambio sencillo mediante jumpers.
+- **Conector de batería con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro de consumo.
 - **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, ofreciendo flexibilidad para acelerar proyectos y funciones personalizables.
 
 ### Especificaciones
@@ -71,7 +71,7 @@ Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compati
     </tr>
     <tr>
       <th>Interruptor</th>
-      <td>Encendido/Apagado de alimentación por batería</td>
+      <td>Encendido/Apagado de alimentación de la batería</td>
     </tr>
     <tr>
       <th>Alimentación</th>
@@ -79,7 +79,7 @@ Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compati
     </tr>
     <tr>
       <th>Botón</th>
-      <td>- 1x botón de reinicio<br />- 3x botón de usuario</td>
+      <td>- 1x Botón de reinicio<br />- 3x Botón de usuario</td>
     </tr>
   </tbody>
 </table>
@@ -122,13 +122,13 @@ Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compati
         </tr>
         <tr>
             <th>Interruptor</th>
-            <td>Encendido/Apagado de alimentación por batería</td>
+            <td>Encendido/Apagado de alimentación de la batería</td>
             <td>/</td>
-            <td>Encendido/Apagado de alimentación por batería</td>
+            <td>Encendido/Apagado de alimentación de la batería</td>
         </tr>
         <tr>
             <th>Botón</th>
-            <td>1x botón de reinicio<br />3x botón de usuario</td>
+            <td>1x Botón de reinicio<br />3x Botón de usuario</td>
             <td>/</td>
             <td>/</td>
         </tr>
@@ -144,7 +144,7 @@ Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compati
 ### Aplicaciones
 
 - **Panel de control para hogar inteligente**: Muestra información en tiempo real como actualizaciones del clima, eventos del calendario y notificaciones de varios dispositivos del hogar inteligente.
-- **Monitorización de energía**: Muestra datos de consumo energético de los contadores inteligentes, ayudando a los propietarios a seguir y gestionar su uso de energía de forma más eficiente.
+- **Monitorización de energía**: Muestra datos de consumo energético de contadores inteligentes, ayudando a los propietarios a seguir y gestionar su uso de energía de forma más eficiente.
 - **Alertas de seguridad**: Muestra alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
 - **Pantalla de termostato inteligente**: Muestra los niveles de temperatura y humedad, así como los ajustes de control de tu termostato inteligente.
 - **Marco de fotos digital**: Crea un marco de fotos digital con WiFi que pueda mostrar imágenes desde tu red de hogar inteligente.
@@ -163,38 +163,38 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 #### Conector de 24 pines
 
-- [Pantalla ePaper de 1,54 pulgadas - Monocroma 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [Pantalla ePaper de 2,13 pulgadas - Flexible monocroma 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [Pantalla ePaper de 1,54 pulgadas - Monocromo 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [Pantalla ePaper de 2,13 pulgadas - Flexible monocromo 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
 - [Pantalla ePaper de 2,13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [Pantalla ePaper de 2,9 pulgadas - Monocroma 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [Pantalla ePaper de 2,9 pulgadas - Monocromo 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
 - [Pantalla ePaper de 2,9 pulgadas - Cuádruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [Pantalla ePaper de 4,2 pulgadas - Monocroma 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [Pantalla ePaper de 4,26 pulgadas - Monocroma 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [Pantalla ePaper de 5,83 pulgadas - Monocroma 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [Pantalla ePaper de 7,5 pulgadas - Monocroma 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [Pantalla ePaper de 4,2 pulgadas - Monocromo 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [Pantalla ePaper de 4,26 pulgadas - Monocromo 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [Pantalla ePaper de 5,83 pulgadas - Monocromo 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [Pantalla ePaper de 7,5 pulgadas - Monocromo 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 - [Pantalla ePaper de 7,5 pulgadas - Tricolor 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-Al usar la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
+Al utilizar la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
 
-- Para pantallas ePaper de 24 pines → ajusta el jumper a 24 pines
+- Para pantallas ePaper de 24 pines → ajusta el jumper a 24 Pin
 
-⚠️ Usar un ajuste de jumper incorrecto puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Comprueba siempre la posición del jumper antes de encender.
+⚠️ Usar una configuración de jumper incorrecta puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Comprueba siempre la posición del jumper antes de encender.
 
 :::
 
 #### Conector de 50 pines
 
-- [Pantalla ePaper Spectra6 de 7,3 pulgadas](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
+- [ePaper Spectra6 de 7,3 pulgadas](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.jpg" style={{width:600, height:'auto'}}/></div>
 :::tip
-Al usar la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
-- Para pantallas ePaper de 50 pines → ajusta el jumper a 50 pines
+Al utilizar la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
+- Para pantallas ePaper de 50 pines → ajusta el jumper a 50 Pin
 
-⚠️ Usar un ajuste de jumper incorrecto puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Comprueba siempre la posición del jumper antes de encender.
+⚠️ Usar una configuración de jumper incorrecta puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Comprueba siempre la posición del jumper antes de encender.
 
 :::
 
@@ -203,7 +203,7 @@ Al usar la XIAO ePaper Display Board, asegúrate de configurar el jumper según 
 ### Instalar la biblioteca Seeed GFX
 
 :::tip
-Esta biblioteca tiene la misma función que la biblioteca TFT y no es compatible con ella. Si has instalado la biblioteca TFT u otras bibliotecas de pantalla similares, desinstálalas primero.
+Esta biblioteca tiene la misma función que la biblioteca TFT y no es compatible con ella. Si has instalado la biblioteca TFT u otras bibliotecas de visualización similares, desinstálalas primero.
 :::
 
 Descarga e instala la biblioteca Seeed GFX desde GitHub.
@@ -220,7 +220,7 @@ Desplázate hacia abajo y abre este enlace.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-Selecciona el tipo de tu dispositivo y se generará algo de código. Copia ese código y lo usaremos más tarde.
+Selecciona tu tipo de dispositivo y se generará algo de código. Copia ese código y lo usaremos más tarde.
 
 :::tip
 Si haces una elección incorrecta, la pantalla no mostrará nada.
@@ -254,7 +254,7 @@ Crea un **nuevo archivo "driver.h"** y pega ese código en él. El código deber
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
-Después de eso, ve a **Tools** -> **Board** -> **XIAO ESP32S3** y **Tools** -> **Port** -> **Select the port your board is connected to**. Luego haz clic en **Upload** para cargar el código.
+Después de eso, ve a **Tools** -> **Board** -> **Seeed XIAO nRF52840 Plus** y **Tools** -> **Port** -> **Select the port your board is connected to**. Luego haz clic en **Upload** para cargar el código.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -399,7 +399,7 @@ void loop() {
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

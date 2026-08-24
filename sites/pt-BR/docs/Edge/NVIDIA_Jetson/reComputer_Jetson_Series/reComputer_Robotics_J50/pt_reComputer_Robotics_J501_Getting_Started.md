@@ -4,8 +4,8 @@ title: Gravar JetPack && Uso das Interfaces
 tags:
   - reComputer Robotics J501
   - Flash Jetpack
-  - Robotics
-  - Interfaces Usage
+  - Robótica
+  - Uso das Interfaces
   - Interfaces
   - Hardware
 image: https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg
@@ -15,15 +15,15 @@ last_update:
   date: 12/09/2025
   author: Lorraine
 createdAt: '2026-01-12'
-updatedAt: '2026-06-28'
+updatedAt: '2026-08-12'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_j501_robotics_getting_started/
 ---
 
 # Hardware do Robotics J501 e Introdução
 
-O reComputer Robotics J501 é uma placa carrier de IA de borda de alto desempenho projetada para aplicações avançadas de robótica e industriais. Compatível com módulos NVIDIA Jetson AGX Orin (32GB/64GB) no modo MAXN, oferece até 275 TOPS de desempenho de IA.
+O reComputer Robotics J501 é uma placa carrier de IA de borda de alto desempenho projetada para aplicações avançadas de robótica e industriais. Compatível com módulos NVIDIA Jetson AGX Orin (32GB/64GB) em modo MAXN, oferece até 275 TOPS de desempenho de IA.
 
-Equipado com amplas opções de conectividade — incluindo 1x 10GbE e 4x portas Ethernet 1GbE, slots duplos M.2 Key M para SSDs NVMe, slots M.2 para módulos 5G e Wi-Fi/BT, múltiplas portas USB 3.0, quatro interfaces CAN (2 nativas + 2 SPI-para-CAN), expansão de câmera GMSL2 e I/O abrangente incluindo DI/DO, I2S, UART e RS485 — ele atua como um poderoso cérebro robótico para fusão complexa de múltiplos sensores e processamento de IA em tempo real.
+Equipado com amplas opções de conectividade — incluindo 1x 10GbE e 4x 1GbE Ethernet, slots duplos M.2 Key M para SSDs NVMe, slots M.2 para módulos 5G e Wi-Fi/BT, múltiplas portas USB 3.0, quatro interfaces CAN (2 nativas + 2 SPI-para-CAN), expansão de câmera GMSL2 e E/S abrangente incluindo DI/DO, I2S, UART e RS485 — ele atua como um poderoso cérebro robótico para fusão de múltiplos sensores complexos e processamento de IA em tempo real.
 
 Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita. Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1, o J501 conecta a tomada de decisão orientada por modelos de linguagem de grande porte ao controle físico de robôs, acelerando o desenvolvimento de robôs autônomos com interfaces prontas para uso e frameworks de IA otimizados.
 
@@ -37,12 +37,12 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
     </a>
 </div>
 
-## Principais recursos  
+## Principais Recursos  
 
 - **IA de alto desempenho**: Até 275 TOPS com módulos Jetson AGX Orin 32/64GB, GPU Ampere e mecanismos DLA
 - **Conectividade rica**: Duplo M.2 Key M (NVMe); Key E (WiFi/BT) + Key B (5G); 1x 10GbE + 4x 1GbE; 3x USB 3.0; 2x USB-C
-- **Quad CAN-FD**: 2x interfaces nativas + 2x SPI-para-CAN com isolamento elétrico
-- **Visão GMSL2**: Única interface GMSL2 (1x) para conexão de câmera em alta velocidade
+- **Quad CAN-FD**: 2x nativo + 2x interfaces SPI-para-CAN com isolamento elétrico
+- **Visão GMSL2**: Interface GMSL2 única (1x) para conexão de câmera em alta velocidade
 - **Design industrial**: Entrada DC de 19-48V; operação de -10~60°C; interfaces isoladas; JetPack 6.2.1 pré-instalado
 - **Pronto para robótica**: Suporte a ROS 2/1, Isaac ROS; DI/DO, I2S, UART, RS485; otimizado para AMR e automação
 
@@ -52,7 +52,7 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-      <th colSpan={3} style={{ fontSize: '24px', fontWeight: 'bold' }}>Módulo Jetson AGX Orin System on Module</th>
+      <th colSpan={3} style={{ fontSize: '24px', fontWeight: 'bold' }}>Módulo de Sistema Jetson AGX Orin</th>
     </tr>
     <tr>
       <th style={{width: '25%'}}>Especificações</th>
@@ -72,25 +72,25 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
     <tr>
       <td>GPU</td>
       <td>1792 núcleos NVIDIA Ampere @ 930 MHz</td>
-      <td>2048 núcleos NVIDIA Ampere @ 1,3 GHz</td>
+      <td>2048 núcleos NVIDIA Ampere @ 1.3 GHz</td>
     </tr>
     <tr>
       <td>CPU</td>
-      <td>8 núcleos Arm Cortex-A78AE @ 2,0 GHz</td>
-      <td>12 núcleos Arm Cortex-A78AE @ 2,2 GHz</td>
+      <td>8 núcleos Arm Cortex-A78AE @ 2.0 GHz</td>
+      <td>12 núcleos Arm Cortex-A78AE @ 2.2 GHz</td>
     </tr>
     <tr>
       <td>Memória</td>
-      <td>32GB 256-bit LPDDR5 @ 204,8 GB/s</td>
-      <td>64GB 256-bit LPDDR5 @ 204,8 GB/s</td>
+      <td>32GB 256-bit LPDDR5 @ 204.8 GB/s</td>
+      <td>64GB 256-bit LPDDR5 @ 204.8 GB/s</td>
     </tr>
     <tr>
-      <td>Codificador de vídeo</td>
+      <td>Codificador de Vídeo</td>
       <td>1x 4K60 / 3x 4K30 / 6x 1080p60 / 12x 1080p30 (H.265)</td>
       <td>2x 4K60 / 6x 4K30 / 8x 1080p60 / 16x 1080p30 (H.265)</td>
     </tr>
     <tr>
-      <td>Decodificador de vídeo</td>
+      <td>Decodificador de Vídeo</td>
       <td>1x 8K30 / 2x 4K60 / 4x 4K30 / 9x 1080p60 / 18x 1080p30 (H.265)</td>
       <td>1x 8K30 / 3x 4K60 / 7x 4K30 / 11x 1080p60 / 22x 1080p30 (H.265)</td>
     </tr>
@@ -100,14 +100,14 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
     </tr>
     <tr>
       <td>Mecânico</td>
-      <td colSpan={2}>100mm x 87mm<br/>Conector Molex Mirror Mezz de 699 pinos<br/>Placa de transferência térmica integrada</td>
+      <td colSpan={2}>100mm x 87mm<br/>Conector Molex Mirror Mezz de 699 pinos<br/>Placa de Transferência Térmica Integrada</td>
     </tr>
     <tr>
       <th colSpan={3} style={{ fontSize: '24px', fontWeight: 'bold' }}>Placa Carrier</th>
     </tr>
     <tr>
       <th>Armazenamento</th>
-      <td colSpan={2}>2x M.2 Key-M (SSD NVMe 2280)<br/>1x M.2 Key-B (para módulos 4G/5G)</td>
+      <td colSpan={2}>2x M.2 Key-M (NVMe 2280 SSD)<br/>1x M.2 Key-B (para módulos 4G/5G)</td>
     </tr>
     <tr>
       <th>Rede</th>
@@ -119,11 +119,11 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
     </tr>
     <tr>
       <th>DI/DO/CAN</th>
-      <td colSpan={2}>1x bloco terminal 2x10P 3,81mm - 4x DI @12V + 4x DO @40V + 4x CAN (suporta CAN-FD, eletricamente isolado)</td>
+      <td colSpan={2}>1x bloco de terminais 2x10P 3,81mm - 4x DI @12V + 4x DO @40V + 4x CAN (suporta CAN-FD, eletricamente isolado)</td>
     </tr>
     <tr>
       <th>GMSL</th>
-      <td colSpan={2}>2x conectores Mini-Fakra (para 8x câmeras GMSL2) (opcional)</td>
+      <td colSpan={2}>2x Conector Mini-Fakra (Para 8x Câmeras GMSL2) (opcional)</td>
     </tr>
     <tr>
       <th>Serial</th>
@@ -143,19 +143,19 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
     </tr>
     <tr>
       <th>LED</th>
-      <td colSpan={2}>3x LED (PWR, SSD e LED de usuário)</td>
+      <td colSpan={2}>3x LED (PWR, SSD e LED de Usuário)</td>
     </tr>
     <tr>
       <th>RTC</th>
       <td colSpan={2}>1x suporte para bateria CR1220, 1x header RTC de 2 pinos</td>
     </tr>
     <tr>
-      <th>Entrada de energia</th>
-      <td colSpan={2}>19-48V DC via bloco terminal de 5,08mm (adaptador de energia não incluído)</td>
+      <th>Entrada de Energia</th>
+      <td colSpan={2}>19-48V DC via bloco de terminais 5,08mm (adaptador de energia não incluído)</td>
     </tr>
     <tr>
-      <th>Consumo de energia</th>
-      <td colSpan={2}>Módulo Jetson AGX Orin: até 60W (modo MAXN)<br/>Pico total do sistema: 75W (incluindo periféricos)</td>
+      <th>Consumo de Energia</th>
+      <td colSpan={2}>Módulo Jetson AGX Orin: Até 60W (modo MAXN)<br/>Pico total do sistema: 75W (incluindo periféricos)</td>
     </tr>
     <tr>
       <th>Software</th>
@@ -167,7 +167,7 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
         Dimensões: 210mm x 180mm x 87mm (com suportes)<br/>
         Peso: 200g<br/>
         Montagem: Mesa / Parede / Trilho DIN (suporte DIN incluído nos acessórios)<br/>
-        Temperatura de operação: -10℃~60℃ (25W) / -10℃~55℃ (MAXN)
+        Temperatura de Operação: -10℃~60℃ (25W) / -10℃~55℃ (MAXN)
       </td>
     </tr>
     <tr>
@@ -182,7 +182,7 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
 </table>
 </div>
 
-**Especificações da placa de extensão GMSL (opcional)**
+**Especificações da Placa de Extensão GMSL (Opcional)**
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -193,25 +193,25 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
     </tr>
     <tr>
       <th>Interface GMSL</th>
-      <td>2x conector Robotics-Fakra macho</td>
+      <td>2x Conector Robotics-Fakra macho</td>
     </tr>
     <tr>
       <th>Entrada GMSL</th>
-      <td>Até 8x câmeras GMSL2</td>
+      <td>Até 8x Câmeras GMSL2</td>
     </tr>
     <tr>
-      <th>Método de conexão</th>
+      <th>Método de Conexão</th>
       <td>Cabo GMSL2 Fakra 1-para-4 M-M</td>
     </tr>
     <tr>
-      <th>Recurso da interface POC</th>
+      <th>Recurso da Interface POC</th>
       <td>Suporta transmissão simultânea de energia e dados</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-## Visão geral de hardware
+## Visão Geral do Hardware
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hw_overview_1.png"/>
@@ -225,9 +225,9 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hw_overview_3.png"/>
 </div>
 
-## 📦 Gravar o sistema operacional JetPack
+## 📦 Gravar o Sistema Operacional JetPack
 
-### Módulo compatível
+### Módulo Suportado
 
 - [Módulo NVIDIA® Jetson AGX Orin™ 64GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-64GB-p-5957.html)
 - [Módulo NVIDIA® Jetson AGX Orin™ 32GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-32GB-p-5956.html)
@@ -236,18 +236,18 @@ Pré-instalado com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
 
 - PC host com Ubuntu
 - reComputer Robotics J501
-- Cabo USB Tipo-C para transmissão de dados
+- Cabo de transmissão de dados USB Tipo-C
 
 :::info
 
-Recomendamos que você use dispositivos host Ubuntu físicos em vez de máquinas virtuais.
+Recomendamos que você use dispositivos host físicos com Ubuntu em vez de máquinas virtuais.
 Consulte a tabela abaixo para preparar a máquina host.
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
         <td  rowspan="2"> Versão do JetPack </td>
-        <td class="dbon" colspan="4"> Versão do Ubuntu (computador host) </td>
+        <td class="dbon" colspan="4"> Versão do Ubuntu (Computador Host) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -272,11 +272,11 @@ Consulte a tabela abaixo para preparar a máquina host.
   </tbody>
 </table>
 
-<p><strong>Note:</strong> For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.</p>
+<p><strong>Nota:</strong> Para o JetPack 7.2, o Ubuntu 24.04 é suportado apenas para gravação e instalação de componentes no lado do alvo. Use Ubuntu 20.04 ou 22.04 se você precisar de componentes de desenvolvimento no host.</p>
 
 :::
 
-### Preparar a imagem do JetPack
+### Preparar a Imagem do JetPack
 
 Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspondente ao módulo Jetson que estamos usando:
 
@@ -287,7 +287,7 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
       <th>Versão do JetPack</th>
       <th>Módulo Jetson</th>
       <th> GMSL </th>
-      <th>Link para download1</th>
+      <th>Link de Download1</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -535,7 +535,7 @@ Este comando exibe uma lista de todos os dispositivos USB conectados ao sistema,
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/key_b_1.png"/>
 </div>
 
-**Passo 2.** Confirmar o carregamento do driver
+**Passo 2.** Confirmar carregamento do driver
 É essencial garantir que o driver option, que é necessário para o módulo 5G, esteja carregado. Podemos usar o comando lsmod para verificar.
 
 ```bash
@@ -591,7 +591,7 @@ Este comando ativa a conexão GSM e, se for bem-sucedido, uma mensagem de confir
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/key_b_4.png"/>
 </div>
 
-**Passo 7.** Re-verificar a identificação do módulo
+**Passo 7.** Verificar novamente a identificação do módulo
 Execute novamente o comando mmcli -L para garantir que o módulo continue sendo reconhecido após configurar o APN.
 
 ```bash
@@ -630,7 +630,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 ```
 
 :::info
-`<server_ip>` é o endereço IP do servidor iperf3. O cliente irá se conectar a esse servidor para realizar um teste de largura de banda.
+`<server_ip>` é o endereço IP do servidor iperf3. O cliente se conectará a esse servidor para realizar um teste de largura de banda.
 `<bind_ip>` vincula o endereço IP local especificado como a origem do tráfego de teste.
 :::
 
@@ -744,7 +744,7 @@ sudo chmod +x test_usb.sh
 </div>
 
 :::note
-Confirme primeiro o ponto de montagem real do seu dispositivo USB usando o comando `df -h` ou `lsblk`!
+Primeiro confirme o ponto de montagem real do seu dispositivo USB usando o comando `df -h` ou `lsblk`!
 :::
 
 ### Porta USB 2.0 Tipo C
@@ -857,50 +857,40 @@ Esta seção demonstra a conexão CAN0↔CAN1 e CAN2↔CAN3 no Jetson e mostra c
 
 | Nome do canal | Tipo de interface | Nome do pino | Chip GPIO | Número GPIO | Controle do resistor de terminação |
 |--------------|------------------|--------------|-----------|-------------|------------------------------------|
-| CAN0         | Nativo           | PAA.04       | gpiochip1 | 4           | gpiochip1 line4 (PAA.04)          |
-| CAN1         | Nativo           | PAA.07       | gpiochip1 | 7           | gpiochip1 line7 (PAA.07)          |
-| CAN2         | SPI-to-CAN       | -            | gpiochip2 | 10          | gpiochip2 line10                   |
-| CAN3         | SPI-to-CAN       | -            | gpiochip2 | 12          | gpiochip2 line12                   |
+| CAN0         | Nativo           | CAN0_120R_EN | gpiochip2 | 9           | gpiochip2 line9                    |
+| CAN1         | Nativo           | CAN1_120R_EN | gpiochip2 | 8           | gpiochip2 line8                    |
+| CAN2         | SPI-para-CAN     | CAN2_120R_EN | gpiochip2 | 10          | gpiochip2 line10                   |
+| CAN3         | SPI-para-CAN     | CAN3_120R_EN | gpiochip2 | 12          | gpiochip2 line12                   |
 
-Os resistores de terminação para CAN0 e CAN1 podem ser controlados por dois pinos: PAA.04, localizado em gpiochip1 line4, e PAA.07, localizado em gpiochip1 line7.  
+Os resistores de terminação de 120 Ω para os quatro canais CAN são controlados pelas linhas GPIO correspondentes em `gpiochip2`. Os sinais de controle são ativos em nível baixo: definir uma linha como `0` conecta o resistor de terminação, enquanto definir como `1` desconecta o resistor de terminação.
 
-O controle do resistor de terminação segue estas regras:  
-
-```
-When `PAA.04 = 1`, the 120 Ω termination resistor of CAN0 is **disconnected**;  
-when `PAA.04 = 0`, the 120 Ω termination resistor of CAN0 is **connected**.
-
-When `PAA.07 = 1`, the 120 Ω termination resistor of CAN1 is **disconnected**;  
-when `PAA.07 = 0`, the 120 Ω termination resistor of CAN1 is **connected**.
-```
-
-Digite o seguinte comando para visualizar os pinos no gpiochip 1:
+Digite o seguinte comando para visualizar as linhas GPIO:
 
 ```bash
-gpioinfo gpiochip1
+gpioinfo gpiochip2
 ```
 
-<div align="center">
-  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/gpiochip1-can.png"/>
-</div>
-
-Consulte os seguintes comandos para definir `PAA.04` e `PAA.07` como 0:
+Use os seguintes comandos para conectar os resistores de terminação:
 
 ```bash
-sudo gpioset --mode=wait gpiochip1 4=0
-sudo gpioset --mode=wait gpiochip1 7=0
+sudo gpioset --mode=wait gpiochip2 9=0  # CAN0
+sudo gpioset --mode=wait gpiochip2 8=0  # CAN1
+sudo gpioset --mode=wait gpiochip2 10=0 # CAN2
+sudo gpioset --mode=wait gpiochip2 12=0 # CAN3
 ```
 
-Consulte os seguintes comandos para definir `PAA.04` e `PAA.07` como 1:
+Use os seguintes comandos para desconectar os resistores de terminação:
 
 ```bash
-sudo gpioset --mode=wait gpiochip1 4=1
-sudo gpioset --mode=wait gpiochip1 7=1
+sudo gpioset --mode=wait gpiochip2 9=1  # CAN0
+sudo gpioset --mode=wait gpiochip2 8=1  # CAN1
+sudo gpioset --mode=wait gpiochip2 10=1 # CAN2
+sudo gpioset --mode=wait gpiochip2 12=1 # CAN3
 ```
 
 #### Modo Classic CAN
 
-O script a seguir implementa o teste de comunicação em loopback entre CAN0/CAN1 e CAN2/CAN3, incluindo habilitar o resistor terminal, configurar a taxa de bits e transmissão bidirecional de dados.
+O script a seguir implementa o teste de comunicação em loopback entre CAN0/CAN1 e CAN2/CAN3, incluindo habilitação do resistor de terminação, configuração da taxa de bits e transmissão bidirecional de dados.
 
 <div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/can_hw_2.png"/>
@@ -1152,29 +1142,29 @@ As interfaces DI/DO do reComputer Robotics J501 são integradas no conector J25 
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/di_do_test.png"/>
 </div>
 
-### Conexão de hardware
+### Conexão de Hardware
 
 #### Canais de Entrada Digital (DI)
 
 | Nome do Canal | Características de Tensão | Rótulo GPIO | Nome do Pino | Chip GPIO | Número GPIO |
 |--------------|---------------------------|-------------|-------------|-----------|-------------|
-| DI_12V_1     | Entrada adaptativa de 12V | DI_1_GPIO17 | PP.04       | gpiochip0 | 96          |
-| DI_12V_2     | Entrada adaptativa de 12V | DI_1_GPIO18 | PQ.04       | gpiochip0 | 104         |
-| DI_12V_3     | Entrada adaptativa de 12V | DI_1_GPIO19 | PN.02       | gpiochip0 | 86          |
-| DI_12V_4     | Entrada adaptativa de 12V | DI_1_GPIO33 | PM.07       | gpiochip0 | 83          |
+| DI_12V_1     | Entrada 12V adaptativa    | DI_1_GPIO17 | PP.04       | gpiochip0 | 96          |
+| DI_12V_2     | Entrada 12V adaptativa    | DI_1_GPIO18 | PQ.04       | gpiochip0 | 104         |
+| DI_12V_3     | Entrada 12V adaptativa    | DI_1_GPIO19 | PN.02       | gpiochip0 | 86          |
+| DI_12V_4     | Entrada 12V adaptativa    | DI_1_GPIO33 | PM.07       | gpiochip0 | 83          |
 
 #### Canais de Saída Digital (DO)
 
 | Nome do Canal | Características de Tensão | Rótulo GPIO | Nome do Pino | Chip GPIO | Número GPIO | Informação Adicional |
 |--------------|---------------------------|-------------|-------------|-----------|-------------|----------------------|
-| DO_40V_1     | Saída de dreno aberto; ~0V (baixo) quando não puxado para alto, 12V (alto) quando puxado para alto | DO_1_GPIO | PAA.04 | gpiochip1 | 4 | Número correspondente: 320 |
-| DO_40V_2     | Saída de dreno aberto; ~0V (baixo) quando não puxado para alto, 12V (alto) quando puxado para alto | DO_2_GPIO | PAA.07 | gpiochip1 | 7 | Número correspondente: 323 |
-| DO_40V_3     | Saída de dreno aberto; ~0V (baixo) quando não puxado para alto, 12V (alto) quando puxado para alto | DO_3_GPIO | PBB.01 | gpiochip1 | 9 | Número correspondente: 325 |
-| DO_40V_4     | Saída de dreno aberto; ~0V (baixo) quando não puxado para alto, 12V (alto) quando puxado para alto | DO_4_GPIO | PBB.00 | gpiochip1 | 8 | Número correspondente: 324 |
+| DO_40V_1     | Saída dreno aberto; ~0V (baixo) quando não puxado para alto, 12V (alto) quando puxado para alto | DO_1_GPIO | PAA.04 | gpiochip1 | 4 | Número correspondente: 320 |
+| DO_40V_2     | Saída dreno aberto; ~0V (baixo) quando não puxado para alto, 12V (alto) quando puxado para alto | DO_2_GPIO | PAA.07 | gpiochip1 | 7 | Número correspondente: 323 |
+| DO_40V_3     | Saída dreno aberto; ~0V (baixo) quando não puxado para alto, 12V (alto) quando puxado para alto | DO_3_GPIO | PBB.01 | gpiochip1 | 9 | Número correspondente: 325 |
+| DO_40V_4     | Saída dreno aberto; ~0V (baixo) quando não puxado para alto, 12V (alto) quando puxado para alto | DO_4_GPIO | PBB.00 | gpiochip1 | 8 | Número correspondente: 324 |
 
-As principais definições de pinos para interfaces DI/DO no conector J25 são as seguintes (a numeração dos pinos corresponde ao conector físico):
+As principais definições de pinos para as interfaces DI/DO no conector J25 são as seguintes (a numeração dos pinos corresponde ao conector físico):
 
-| Número do Pino | Rótulo da Função | Descrição |
+| Número do Pino | Rótulo de Função | Descrição |
 |----------------|------------------|-----------|
 | 1              | DI_12V_1         | Canal de Entrada Digital 12V 1 |
 | 3              | DI_12V_2         | Canal de Entrada Digital 12V 2 |
@@ -1191,13 +1181,13 @@ As principais definições de pinos para interfaces DI/DO no conector J25 são a
 Para o pinout completo (incluindo interfaces CAN), consulte a documentação de hardware do reComputer Robotics J501 para evitar conexões incorretas.
 :::
 
-### Instruções de uso
+### Instruções de Uso
 
 **Operação de Saída Digital (DO)**
 
 As interfaces DO adotam saída de dreno aberto. Você pode definir o nível de saída (alto/baixo) por meio de comandos para controlar periféricos como relés e LEDs.
 
-Execute o seguinte comando para habilitar o canal DO (saída de 12 V, alimentado pelo resistor de pull-up externo e pela fonte de alimentação de 12 V):
+Execute o seguinte comando para habilitar o canal DO (saída de 12 V, alimentado pelo resistor de pull-up externo e fonte de alimentação de 12 V):
 
 ```
 # Enable DO_40V_1 (gpiochip1 4)
@@ -1213,13 +1203,13 @@ sudo gpioset --mode=wait 1 9=1
 sudo gpioset --mode=wait 1 8=1
 ```
 
-DO antes de puxar para alto:
+DO antes de puxar para nível alto:
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/di_do_before.png"/>
 </div>
 
-DO após puxar para alto:
+DO depois de puxar para nível alto:
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/do_after.png"/>
@@ -1275,7 +1265,7 @@ gpioget gpiochip0 83
 
 ### Instruções de Uso
 
-Use fios Dupont para conectar os pinos principais do canal SPI de destino (tomando /dev/spidev2.0 como exemplo):
+Use fios Dupont para conectar os pinos centrais do canal SPI de destino (tomando /dev/spidev2.0 como exemplo):
 Conecte o pino MOSI do SPI2.0 ao seu pino MISO (realizando transmissão/recepção de dados em loopback).
 
 O diagrama de fiação é o seguinte:
@@ -1287,7 +1277,7 @@ O diagrama de fiação é o seguinte:
 Para usar SPI, remova a tampa lateral do dispositivo com uma chave de fenda, conforme mostrado acima.
 :::
 
-**Passo 1: Carregar o Módulo de Kernel SPI (Pré-requisito)**
+**Etapa 1: Carregar o Módulo de Kernel SPI (Pré-requisito)**
 Antes de operar a interface SPI, certifique-se de que o módulo de kernel `spidev` esteja carregado (o sistema padrão pode pré-carregá-lo, mas é recomendável verificar manualmente):
 
 ```bash
@@ -1298,7 +1288,7 @@ sudo modprobe spidev
 Se o comando for executado sem mensagens de erro, significa que o módulo foi carregado com sucesso; se o módulo já estiver carregado, o comando não retornará nenhuma informação, o que é um fenômeno normal.
 :::
 
-**Passo 2: Ver os Nós de Dispositivo SPI**
+**Etapa 2: Ver os Nós de Dispositivo SPI**
 Digite o seguinte comando no terminal para ver o nome do dispositivo mapeado pela interface SPI do reComputer Robotics J501:
 
 ```bash
@@ -1307,7 +1297,7 @@ ls /dev/spidev*
 
 Se nenhum nó de dispositivo for exibido, significa que o módulo `spidev` não foi carregado com sucesso. Execute novamente `sudo modprobe spidev` e verifique o log do sistema para solução de problemas.
 
-**Passo 3: Obter e Compilar o Código de Teste SPI**
+**Etapa 3: Obter e Compilar o Código de Teste SPI**
 Obtenha o código de teste `spidev-test` do GitHub e compile-o:
 
 ```bash
@@ -1316,15 +1306,15 @@ cd spidev-test
 gcc spidev_test.c -o spidev_test
 ```
 
-**Passo 4: Executar o Programa de Teste SPI**
+**Etapa 4: Executar o Programa de Teste SPI**
 Digite o seguinte comando no terminal para executar o programa de teste SPI (tomando `/dev/spidev2.0` como exemplo):
 
 ```bash
 sudo ./spidev_test -v -D /dev/spidev2.0 -s 100000
 ```
 
-**Passo 5: Verificar o Resultado do Teste**
-Após executar o comando de teste, você pode observar no terminal o status de transmissão e recepção de dados da interface SPI2.0. A saída principal é a seguinte:
+**Etapa 5: Verificar o Resultado do Teste**
+Após executar o comando de teste, você pode observar o status de transmissão e recepção de dados da interface SPI2.0 no terminal. A saída principal é a seguinte:
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/spi_out.png"/>
 </div>
@@ -1333,36 +1323,36 @@ Após executar o comando de teste, você pode observar no terminal o status de t
 
 ## UART
 
-O reComputer Robotics J501 está equipado com 2 interfaces UART independentes (UART1 e UART2) que suportam os modos de comunicação RS232, RS422 e RS485, apresentando transmissão de sinal estável e ampla compatibilidade com dispositivos periféricos.
+O reComputer Robotics J501 é equipado com 2 interfaces UART independentes (UART1 e UART2) que suportam os modos de comunicação RS232, RS422 e RS485, apresentando transmissão de sinal estável e ampla compatibilidade com dispositivos periféricos.
 
 ### Conexão de Hardware
 
 #### Canais de Interface UART
 
 | Nome do Canal | Nó de Dispositivo | Modos Suportados | Taxa de Baud Padrão | Comando de Habilitação GPIO | Método de Troca de Modo |
-|--------------|-------------------|------------------|---------------------|-----------------------------|--------------------------|
-| UART1 (DB9-1) | /dev/ttyTHS1      | RS232, RS422, RS485 | RS232: 115200 bps; RS422/RS485: 9600 bps | `gpioset --mode=wait gpiochip0 2=0` | Chave dip SW3 (DIP de 8 pinos) |
-| UART2 (DB9-2) | /dev/ttyTHS4      | RS232 (padrão)   | 115200 bps          | `gpioset --mode=wait gpiochip2 15=0` | RS232 fixa (sem chave) |
+|--------------|-------------|-----------------|-------------------|--------------------|-------------------|
+| UART1 (DB9-1) | /dev/ttyTHS1 | RS232, RS422, RS485 | RS232: 115200 bps; RS422/RS485: 9600 bps | `gpioset --mode=wait gpiochip0 2=0` | Chave DIP SW3 (DIP de 8 pinos) |
+| UART2 (DB9-2) | /dev/ttyTHS4 | RS232 (padrão) | 115200 bps | `gpioset --mode=wait gpiochip2 15=0` | RS232 fixa (sem chave) |
 
 **Definição de Pinagem (Conector DB9)**
 
 A função de cada pino DB9 varia conforme o modo de comunicação. Consulte a tabela abaixo para uma fiação precisa (a numeração dos pinos segue as especificações padrão do conector DB9 macho):
 
 | Número do Pino DB9 | Função no Modo RS232 | Função no Modo RS422 | Função no Modo RS485 |
-|--------------------|----------------------|----------------------|----------------------|
-| 1                  | -                    | TXD- (Transmit Data-) | Data- (Differential Data-) |
-| 2                  | RXD (Receive Data)   | TXD+ (Transmit Data+) | Data+ (Differential Data+) |
-| 3                  | TXD (Transmit Data)  | RXD+ (Receive Data+) | -                    |
-| 4                  | -                    | RXD- (Receive Data-) | -                    |
-| 5                  | GND (Ground)         | GND (Ground)         | GND (Ground)         |
-| 6                  | -                    | -                    | -                    |
-| 7                  | RTS (Request to Send) | -                    | -                    |
-| 8                  | CTS (Clear to Send)  | -                    | -                    |
-| 9                  | -                    | -                    | -                    |
+|----------------|---------------------|---------------------|---------------------|
+| 1              | -                   | TXD- (Transmit Data-) | Data- (Differential Data-) |
+| 2              | RXD (Receive Data)  | TXD+ (Transmit Data+) | Data+ (Differential Data+) |
+| 3              | TXD (Transmit Data) | RXD+ (Receive Data+) | -                   |
+| 4              | -                   | RXD- (Receive Data-) | -                   |
+| 5              | GND (Ground)        | GND (Ground)        | GND (Ground)        |
+| 6              | -                   | -                   | -                   |
+| 7              | RTS (Request to Send) | -                   | -                   |
+| 8              | CTS (Clear to Send) | -                   | -                   |
+| 9              | -                   | -                   | -                   |
 
-**Configuração de Modo (Chave Dip SW3)**
+**Configuração de Modo (Chave DIP SW3)**
 
-Apenas a UART1 (DB9-1) suporta troca de modo por meio da chave dip SW3 (UART2 é fixa em RS232). A chave é do tipo DIP de 8 pinos, com pinos de configuração principais rotulados como MODE_0, MODE_1 e MODE_2 no esquemático.
+Somente a UART1 (DB9-1) suporta troca de modo por meio da chave DIP SW3 (UART2 é fixa em RS232). A chave é do tipo DIP de 8 pinos, com pinos de configuração principais rotulados como MODE_0, MODE_1 e MODE_2 no esquemático.
 
 A interface é mostrada na figura abaixo:
 <div align="center">
@@ -1371,11 +1361,11 @@ A interface é mostrada na figura abaixo:
 
 **Regras de Configuração**
 
-| Modo de Trabalho | Combinação da Chave Dip (MODE_2, MODE_1, MODE_0) | Operação do Estado da Chave |
-|-----------------|----------------------------------------------------|------------------------------|
-| RS232           | 0 (OFF), 0 (OFF), 1 (ON)                           | MODE_0: alternar para ON; MODE_1/MODE_2: manter OFF |
-| RS422           | 0 (OFF), 0 (OFF), 0 (OFF) ou 1 (ON), 0 (OFF), 0 (OFF) | MODE_0/MODE_1: manter OFF; MODE_2: opcional (ON/OFF) |
-| RS485           | 0 (OFF), 1 (ON), 0 (OFF) ou 1 (ON), 1 (ON), 0 (OFF) | MODE_1: alternar para ON; MODE_0/MODE_2: opcionais (ON/OFF) |
+| Modo de Operação | Combinação da Chave DIP (MODE_2, MODE_1, MODE_0) | Operação do Estado da Chave |
+|--------------|------------------------------------------------|------------------------|
+| RS232        | 0 (OFF), 0 (OFF), 1 (ON)                       | MODE_0: alternar para ON; MODE_1/MODE_2: manter OFF |
+| RS422        | 0 (OFF), 0 (OFF), 0 (OFF) ou 1 (ON), 0 (OFF), 0 (OFF) | MODE_0/MODE_1: manter OFF; MODE_2: opcional (ON/OFF) |
+| RS485        | 0 (OFF), 1 (ON), 0 (OFF) ou 1 (ON), 1 (ON), 0 (OFF) | MODE_1: alternar para ON; MODE_0/MODE_2: opcionais (ON/OFF) |
 
 :::note
 Após concluir a conexão de hardware, use um software de terminal (por exemplo, CuteCom) para testar a função de comunicação UART. Se o CuteCom não estiver instalado, execute `sudo apt-get install cutecom` para instalá-lo. Certifique-se de que o canal UART foi habilitado por meio do comando GPIO.
@@ -1395,9 +1385,9 @@ sudo gpioset --mode=wait gpiochip0 2=0
 sudo gpioset --mode=wait gpiochip2 15=0
 ```
 
-#### Teste em Modo RS232
+#### Teste no Modo RS232
 
-Aqui você pode usar um adaptador USB para RS232 para testar a interface. Usamos o [Adaptador UGREEN USB para RS232](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) para nossos testes.
+Aqui você pode usar um adaptador USB para RS232 para testar a interface. Utilizamos o [Adaptador UGREEN USB para RS232](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) em nossos testes.
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rs232_1.png"/>
@@ -1409,20 +1399,20 @@ O diagrama de fiação é mostrado abaixo:
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/232-PC.png"/>
 </div>
 
-**Passo 1: Iniciar o CuteCom**
+**Etapa 1: Iniciar o CuteCom**
 Execute `sudo cutecom` para iniciar o software de terminal CuteCom.
 
-**Passo 2: Configurar os Parâmetros da Porta Serial**
+**Etapa 2: Configurar os Parâmetros da Porta Serial**
 Configure a porta serial com os seguintes parâmetros:
 
 - Dispositivo: `/dev/ttyTHS1` (UART1) ou `/dev/ttyTHS4` (UART2)
 - Taxa de Baud: 115200 bps
 - Bits de Dados: 8, Paridade: Nenhuma, Bits de Parada: 1, Controle de Fluxo: Nenhum
 
-**Passo 3: Abrir a Porta Serial**
+**Etapa 3: Abrir a Porta Serial**
 Clique em "Open Device" para abrir a porta serial.
 
-**Passo 4: Enviar Dados de Teste**
+**Etapa 4: Enviar Dados de Teste**
 Envie dados de teste (por exemplo, "232 test from jetson") e verifique a recepção de dados pelo dispositivo periférico.
 
 <div align="center">
@@ -1432,9 +1422,9 @@ Envie dados de teste (por exemplo, "232 test from jetson") e verifique a recepç
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rs232_3.png"/>
 </div>
 
-#### Teste em Modo RS485
+#### Teste no Modo RS485
 
-Aqui você pode usar um adaptador USB para RS485 para testar a interface. Usamos o [Adaptador DTech USB para RS485](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) para nossos testes.
+Aqui você pode usar um adaptador USB para RS485 para testar a interface. Utilizamos o [Adaptador DTech USB para RS485](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) em nossos testes.
 
 O diagrama de fiação é mostrado abaixo:
 
@@ -1442,29 +1432,29 @@ O diagrama de fiação é mostrado abaixo:
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/422-485.png"/>
 </div>
 
-**Passo 1: Iniciar o CuteCom**
+**Etapa 1: Iniciar o CuteCom**
 Execute `sudo cutecom` para iniciar o software de terminal CuteCom.
 
-**Passo 2: Configurar os Parâmetros da Porta Serial**
+**Etapa 2: Configurar os Parâmetros da Porta Serial**
 Configure a porta serial com os seguintes parâmetros:
 
 - Dispositivo: `/dev/ttyTHS1`
 - Taxa de Baud: 9600 bps
 - Bits de Dados: 8, Paridade: Nenhuma, Bits de Parada: 1, Controle de Fluxo: Nenhum
 
-**Passo 3: Abrir a Porta Serial**
+**Etapa 3: Abrir a Porta Serial**
 Clique em "Open Device" para abrir a porta serial.
 
-**Passo 4: Enviar Dados de Teste**
+**Etapa 4: Enviar Dados de Teste**
 Envie dados de teste (por exemplo, "485 test from jetson") e verifique a recepção de dados pelo dispositivo periférico.
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rs485_1.png"/>
 </div>
 
-#### Teste no modo RS422
+#### Teste no Modo RS422
 
-Aqui você pode usar um adaptador USB para RS422 para testar a interface. Nós usamos o [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) para nossos testes.
+Aqui você pode usar um adaptador USB para RS422 para testar a interface. Utilizamos o [Adaptador DTech USB para RS485](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) em nossos testes.
 
 O diagrama de fiação é mostrado abaixo:
 
@@ -1486,7 +1476,7 @@ Configure a porta serial com os seguintes parâmetros:
 Clique em "Open Device" para abrir a porta serial.
 
 **Passo 4: Enviar dados de teste**
-Envie dados de teste (por exemplo, "422 test from jetson") e verifique a recepção de dados pelo dispositivo periférico.
+Envie dados de teste (por exemplo, "422 test from jetson") e verifique o recebimento de dados pelo dispositivo periférico.
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rs422.png"/>
@@ -1519,7 +1509,7 @@ O conector RTC 2-Pin Header fornece uma maneira alternativa de conectar alimenta
 
 ### Instruções de uso
 
-**Passo 1.** Conecte uma bateria ao RTC conforme mencionado acima.
+**Passo 1.** Conecte uma bateria de RTC conforme mencionado acima.
 
 **Passo 2.** Ligue o reComputer Robotics J501.
 
@@ -1576,7 +1566,7 @@ A seguir estão os modelos de câmeras GMSL que já suportamos:
 ### Instruções de uso
 
 :::note
-Antes de habilitar a funcionalidade GMSL, certifique-se de ter instalado uma versão do JetPack com o driver da placa de expansão GMSL.
+Antes de habilitar a funcionalidade GMSL, certifique-se de que você instalou uma versão do JetPack com o driver da placa de expansão GMSL.
 :::
 
 ### Configurar o arquivo Jetson IO
@@ -1605,7 +1595,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 Existem três arquivos de overlay no total, a saber, Seeed GMSL 1X4 3G, Seeed GMSL 1X4 6G, Seeed GMSL 1X4 e Orbbec Gemini 335Lg. Estes correspondem, respectivamente, à câmera 3G do SG3S, à câmera 6G do SG2 e SG8S e à câmera da Orbbec. Como mostrado na Figura 3, configure o arquivo io de acordo com o modelo da sua câmera.
 :::
 
-**passo 2.** Instale as ferramentas de configuração da interface de vídeo.
+**Passo 2.** Instale as ferramentas de configuração da interface de vídeo.
 
 ```bash
 sudo apt update
@@ -1626,7 +1616,7 @@ Opening the data stream, you can view the video from the camera.
 
 ### Usar as câmeras da série SGxxx
 
-**passo 1.** Defina o modo de sincronização de quadros (não está habilitado por padrão!).
+**Passo 1.** Definir o modo de sincronização de quadros (não está habilitado por padrão!).
 
 :::info
 Aqui demonstramos como configurar câmeras de diferentes modelos e resoluções.
@@ -1652,7 +1642,7 @@ v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0 -d /dev/vide
 
 :::
 
-**passo 2.** Inicie a câmera.
+**Passo 2.** Iniciar a câmera.
 
 ```bash
 gst-launch-1.0 \

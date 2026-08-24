@@ -14,7 +14,7 @@ last_update:
   date: 2/14/2025
   author: Parker Hu & Dawn Yao
 createdAt: '2025-02-14'
-updatedAt: '2025-04-08'
+updatedAt: '2026-07-24'
 url: https://wiki.seeedstudio.com/ja/recamera_linux_fundamentals/
 ---
 # Linux 基礎

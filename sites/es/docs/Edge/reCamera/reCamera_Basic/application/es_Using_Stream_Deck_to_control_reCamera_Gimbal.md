@@ -12,8 +12,8 @@ last_update:
   date: 2026-05-22
   author: Sizhao zhou
 createdAt: '2026-05-22'
-updatedAt: '2026-06-01'
-url: https://wiki.seeedstudio.com/es/reCamera/reCamera_Basic/application/using_stream_deck_to_control_recamera_gimbal/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/es/using_stream_deck_to_control_recamera_gimbal/
 ---
 
 ## Introducción

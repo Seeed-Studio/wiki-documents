@@ -7,7 +7,7 @@ keywords:
   - BLE
   - Wi-Fi
   - OTA
-  - Referencia de API
+  - referencia de API
   - Flutter
 slug: /respeaker_clip_sensecraft_voice_sdk
 sku: 100020126
@@ -15,7 +15,7 @@ last_update:
   date: 08/07/2026
   author: Kasun Thushara
 createdAt: '2026-08-07'
-updatedAt: '2026-08-07'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/es/respeaker_clip_sensecraft_voice_sdk/
 ---
 
@@ -31,7 +31,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_sensecraft_voice_sdk/
 - [7. Solución de problemas](#7-solución-de-problemas)
 
 **Referencia de API (Flutter SDK)**
-- [8. Descripción general y arquitectura](#8-descripción-general-y-arquitectura)
+- [8. Descripción general y arquitectura](#8-descripción-general--arquitectura)
 - [9. Constantes de protocolo transversales](#9-constantes-de-protocolo-transversales)
 - [10. Flutter SDK](#10-flutter-sdk)
   - [10.1 Capa BLE](#101-capa-ble)
@@ -47,24 +47,24 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_sensecraft_voice_sdk/
 
 ### 1. Descripción general
 
-El **SenseCraft Voice Flutter SDK** (`sensecraft_voice`) se comunica directamente con un dispositivo reSpeaker Clip mediante **BLE** (comandos AT/JSON + descarga de archivos) y su **AP Wi‑Fi** (transferencia de archivos binarios por UDP). No se requiere ninguna clave de API ni backend: el SDK se comunica directamente con el dispositivo.
+El **SenseCraft Voice Flutter SDK** (`sensecraft_voice`) se comunica directamente con un dispositivo reSpeaker Clip mediante **BLE** (comandos AT/JSON + descarga de archivos) y su **AP Wi‑Fi** (transferencia de archivos binarios por UDP). No se requiere clave de API ni backend: el SDK habla directamente con el dispositivo.
 
 La app de ejemplo en `sdk/flutter/example/` demuestra todas las funciones:
-- **Escanear / Conectar**: descubre y empareja con un Clip
-- **Grabar / Detener**: inicia/detiene grabaciones codificadas en Opus
-- **Estado y versión**: lee la información del dispositivo, batería y espacio libre
-- **Descarga por BLE**: obtiene grabaciones mediante tramas de transferencia de archivos por BLE
-- **Sincronización por Wi‑Fi**: habilita el AP del dispositivo, conéctate desde el teléfono y transfiere por UDP (mucho más rápido)
-- **Actualización OTA**: flashea firmware desde un paquete `.zip` o `.bin` usando SMP/mcumgr
+- **Escanear / Conectar** – descubre y empareja con un Clip
+- **Grabar / Detener** – inicia/detiene grabaciones codificadas en Opus
+- **Estado y versión** – lee información del dispositivo, batería y espacio libre
+- **Descarga por BLE** – obtiene grabaciones mediante tramas de transferencia de archivos por BLE
+- **Sincronización por Wi‑Fi** – habilita el AP del dispositivo, el teléfono se une y transfiere por UDP (mucho más rápido)
+- **Actualización OTA** – flashea firmware desde un paquete `.zip` o `.bin` usando SMP/mcumgr
 
 ---
 
 ### 2. Requisitos previos
 
-- **Flutter 3.27+**: [Instalar Flutter](https://docs.flutter.dev/get-started/install)
+- **Flutter 3.27+** – [Instalar Flutter](https://docs.flutter.dev/get-started/install)
 - **Android Studio** (Ladybug 2024.2+) con Android SDK (API 35+) y Build‑Tools
-- **JDK 17**: requerido para compilaciones de Android (consulta [Solución de problemas](#7-solución-de-problemas) si tienes una versión más reciente)
-- **Dispositivo físico**: Android (API 24+) o iOS (13+) con Bluetooth y Wi‑Fi; **los emuladores no funcionan** para BLE/Wi‑Fi
+- **JDK 17** – requerido para compilaciones de Android (consulta [Solución de problemas](#7-solución-de-problemas) si tienes una versión más reciente)
+- **Dispositivo físico** – Android (API 24+) o iOS (13+) con Bluetooth y Wi‑Fi; **los emuladores no funcionan** para BLE/Wi‑Fi
 
 > **Comprobación rápida:** `flutter doctor -v` debería mostrar todas las marcas verdes para las toolchains de Android / iOS.
 
@@ -126,17 +126,17 @@ flutter pub get
 flutter run
 ```
 
-#### Pasos específicos para iOS (antes de `flutter run`)
+#### Pasos específicos de iOS (antes de `flutter run`)
 
 1. Abre `ios/Runner.xcworkspace` en Xcode.
-2. Selecciona el destino **Runner** → **Signing & Capabilities**.
-3. Elige tu propio **Apple Developer Team** (el equipo de Seeed no está incluido).
+2. Selecciona el target **Runner** → **Signing & Capabilities**.
+3. Elige tu propio **Apple Developer Team** (el equipo de Seeed no está comprometido).
 4. Habilita la capacidad **Hotspot Configuration**.
 5. Ejecuta desde la terminal con `flutter run`.
 
 ---
 
-#### Windows: solución alternativa para distintas unidades
+#### Windows – solución alternativa entre unidades
 
 Si tu proyecto está en una unidad **distinta de C:\**, Gradle de Android puede fallar con `'other' has different root`.  
 **Solución:** Copia la carpeta `example/` a tu unidad `C:\` y ajusta `pubspec.yaml` para usar una ruta absoluta al SDK.  
@@ -154,22 +154,22 @@ Consulta [Solución de problemas → Fallos de compilación](#fallos-de-compilac
 2. Inicia la app: verás una lista de dispositivos vacía y un panel de registro.
 3. Concede permisos de Bluetooth (y de Ubicación en Android 12L‑).
 4. Toca **Scan**: la app encuentra dispositivos BLE con `"Clip"` en su nombre.
-5. Toca un dispositivo detectado para conectarte. Acepta la solicitud de emparejamiento si aparece.
-6. Espera a que el registro muestre `Connected. MTU=185`: el canal AT está listo.
+5. Toca un dispositivo descubierto para conectarte. Acepta el aviso de emparejamiento si aparece.
+6. Espera a que el registro muestre `Connected. MTU=185` – el canal AT está listo.
 
 #### 6.2 Referencia de botones (después de la conexión)
 
 | Botón | Comando AT | Acción |
 |--------|------------|--------|
-| **Version** | `AT+VERSION` | Muestra la versión del firmware |
-| **Status** | `AT+GSTAT` | Muestra batería, espacio libre y estado de grabación |
-| **Record** | `AT+START` | Inicia una nueva grabación (modo normal) |
-| **Stop** | `AT+STOP` | Detiene la grabación; se muestran el ID de sesión y el número de archivos |
-| **List** | `AT+LIST` | Lista los archivos grabados para la sesión actual |
-| **BLE DL** | `AT+DOWNLOAD` | Descarga la última sesión por BLE (más lento) |
-| **WiFi sync** | `AT+WIFI=ON` + UDP | Habilita el AP, conecta el teléfono y transfiere por UDP (rápido) |
-| **OTA** | SMP/mcumgr | Elige un archivo de firmware y flashea |
-| **Disconnect** | – | Cierra BLE y restablece la interfaz de usuario |
+| **Version** | `AT+VERSION` | Mostrar versión de firmware |
+| **Status** | `AT+GSTAT` | Mostrar batería, espacio libre y estado de grabación |
+| **Record** | `AT+START` | Iniciar una nueva grabación (modo normal) |
+| **Stop** | `AT+STOP` | Detener la grabación; se muestran el ID de sesión y el número de archivos |
+| **List** | `AT+LIST` | Listar archivos grabados para la sesión actual |
+| **BLE DL** | `AT+DOWNLOAD` | Descargar la última sesión por BLE (más lento) |
+| **WiFi sync** | `AT+WIFI=ON` + UDP | Habilitar AP, unir el teléfono y transferir por UDP (rápido) |
+| **OTA** | SMP/mcumgr | Elegir un archivo de firmware y flashearlo |
+| **Disconnect** | – | Cerrar BLE y restablecer la interfaz |
 
 > **Flujo de trabajo:** Grabar → Detener → **WiFi sync** (más rápido) o **BLE DL** (sin configuración de Wi‑Fi).
 
@@ -183,7 +183,7 @@ Consulta [Solución de problemas → Fallos de compilación](#fallos-de-compilac
 
 | Síntoma | Causa | Solución |
 |---------|-------|-----|
-| `java.lang.IllegalArgumentException: 25.0.2` | Java 25 instalado (demasiado reciente) | Instala JDK 17 y ejecuta `flutter config --jdk-dir="<path-to-jdk17>"` |
+| `java.lang.IllegalArgumentException: 25.0.2` | Java 25 instalado (demasiado nuevo) | Instala JDK 17 y ejecuta `flutter config --jdk-dir="<path-to-jdk17>"` |
 | `'other' has different root` | Proyecto en una unidad distinta de C: (Windows) | Copia `example/` a `C:\Users\<you>\clip_demo`; actualiza `pubspec.yaml` con la ruta absoluta al SDK |
 | `Building with plugins requires symlink support` | Modo de desarrollador desactivado (Windows) | Settings → Privacy & Security → For Developers → activa **Developer Mode** |
 | `Could not find com.android.tools.build:gradle:8.x` | Falta el Android SDK | Ejecuta `flutter doctor --android-licenses` y acepta todo |
@@ -192,17 +192,17 @@ Consulta [Solución de problemas → Fallos de compilación](#fallos-de-compilac
 
 | Síntoma | Causa | Solución |
 |---------|-------|-----|
-| No aparece ningún Clip en el escaneo | Clip apagado / fuera de alcance / ya conectado | Apaga y enciende el Clip; mantente dentro de 2 m; desconecta otros dispositivos |
-| Escaneo bloqueado | Permisos de Bluetooth denegados | Reinstala y concede todos los permisos; en Android 12L‑, asegúrate de que la Ubicación esté activada |
-| El emparejamiento falla después del restablecimiento de fábrica | Enlace Bluetooth obsoleto | Elimina el enlace en la configuración de Bluetooth del sistema → vuelve a intentarlo |
-| Los botones no hacen nada después de conectar | Canal AT no listo | Espera 2–3 s a que se estabilicen las notificaciones; prueba primero con **Version** |
+| No aparece ningún Clip en el escaneo | Clip apagado / fuera de alcance / ya conectado | Apaga y enciende el Clip; mantenlo dentro de 2 m; desconecta otros dispositivos |
+| Escaneo atascado | Permisos de Bluetooth denegados | Reinstala y concede todos los permisos; en Android 12L‑, asegúrate de que la Ubicación esté activada |
+| El emparejamiento falla después del restablecimiento de fábrica | Enlace Bluetooth obsoleto | Elimina el enlace en los ajustes de Bluetooth del sistema → vuelve a intentarlo |
+| Los botones no hacen nada después de conectar | Canal AT no listo | Espera 2–3 s a que se estabilicen las notificaciones; prueba primero **Version** |
 
 #### Problemas de sincronización por Wi‑Fi
 
 | Síntoma | Causa | Solución |
 |---------|-------|-----|
 | La sincronización falla inmediatamente | Grabación aún activa | Detén primero la grabación |
-| El teléfono no consigue unirse al AP | Falta un permiso o credenciales incorrectas | Android: concede Nearby Wi‑Fi Devices (13+) o Fine Location (12L‑); iOS: acepta la solicitud para unirte al hotspot |
+| El teléfono no logra unirse al AP | Falta permiso o credenciales incorrectas | Android: concede Nearby Wi‑Fi Devices (13+) o Fine Location (12L‑); iOS: acepta el aviso para unirte al hotspot |
 | La sincronización se detiene | El teléfono cambia a otra red | Permanece cerca del Clip; desactiva temporalmente la conexión automática a redes conocidas |
 
 #### Registro (logging)
@@ -221,13 +221,15 @@ SdkLog.bind((level, message, error, stack) {
 
 ### 8. Descripción general y arquitectura
 
-Los SDK de SenseCraft Voice se comunican con un dispositivo reSpeaker Clip mediante **BLE** (comandos AT/JSON + descarga de archivos) y su **AP Wi‑Fi** (transferencia de archivos binarios por UDP). No se requiere ninguna clave de API ni backend: los SDK se comunican directamente con el dispositivo.
+Los SDK de SenseCraft Voice se comunican con un dispositivo reSpeaker Clip mediante **BLE** (comandos AT/JSON + descarga de archivos) y su **AP Wi‑Fi** (transferencia de archivos binarios por UDP). No se requiere clave de API ni backend: los SDK se comunican directamente con el dispositivo.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/LayeredView_2.png" alt="Interfaz de transcripción" width={900} height="auto" /></p>
 
 #### Paridad entre SDK
 
 Los tres SDK (Flutter, Android, iOS) exponen las mismas capacidades:
 
-| Funcionalidad | Flutter | Android | iOS |
+| Capacidad | Flutter | Android | iOS |
 |------------|---------|---------|-----|
 | Escanear/conectar/desconectar por BLE | `SenseCraftVoiceClient` | `SenseCraftVoiceClient` | `SenseCraftVoiceClient` |
 | Gestión de MTU | `MtuManager` | `MtuManager` | `MtuManager` |
@@ -235,7 +237,7 @@ Los tres SDK (Flutter, Android, iOS) exponen las mismas capacidades:
 | Control de grabación | `RecordingSession` | `RecordingSession` | `RecordingSession` |
 | Eventos/estado del dispositivo | `DeviceEvent`/`DeviceStatus` | `DeviceEvent`/`DeviceStatus` | `DeviceEvent`/`DeviceStatus` |
 | Descarga por BLE + combinación | `RecordingSession.download*` | `RecordingSession.download*` | `RecordingSession.download*` |
-| Control del punto de acceso Wi‑Fi | `WifiHotspotConnector` | `WifiHotspotConnector` | `WifiHotspotConnector` |
+| Control de hotspot Wi‑Fi | `WifiHotspotConnector` | `WifiHotspotConnector` | `WifiHotspotConnector` |
 | Transferencia UDP por Wi‑Fi | `WifiTransferClient` | `WifiTransferClient` | `WifiTransferClient` |
 | Sincronización rápida por Wi‑Fi | `WifiFastSyncSession` | `WifiFastSyncSession` | `WifiFastSyncSession` |
 | Actualización de firmware OTA | `OtaSession` | `OtaSession` | `OtaSession` |
@@ -320,7 +322,7 @@ Los tres SDK (Flutter, Android, iOS) exponen las mismas capacidades:
 | `AT+MARK[=<note>]` | `{"ok":true,"data":{"session":"...","count":3,"offset":45}}` | Añadir marcador |
 | `AT+LIST[=<sessionId>]` | `{"ok":true,"data":{"items":[...],"total":10}}` | Listar archivos |
 | `AT+MARKS=<sessionId>[?<page>&<perPage>]` | `{"ok":true,"data":{"bookmarks":[...],"total":5}}` | Listar marcadores |
-| `AT+DOWNLOAD=<sessionId>[:<startFile>]` | Starts file‑data notify frames | Iniciar transferencia de archivos |
+| `AT+DOWNLOAD=<sessionId>[:<startFile>]` | Inicia tramas de notificación de datos de archivo | Iniciar transferencia de archivos |
 | `AT+CANCEL` | `{"ok":true}` | Cancelar grabación o transferencia |
 | `AT+DELETE=<sessionId>` | `{"ok":true}` | Eliminar sesión remota |
 | `AT+PURGE` | `{"ok":true}` | Eliminar todos los archivos remotos |
@@ -357,11 +359,13 @@ Los tres SDK (Flutter, Android, iOS) exponen las mismas capacidades:
 
 ---
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/sequence.png" alt="Interfaz de transcripción" width={800} height="auto" /></p>
+
 #### 10.1 Capa BLE
 
 ##### SenseCraftVoiceClient
 
-Gestor BLE de nivel superior: escanear, conectar, desconectar.
+Administrador BLE de nivel superior: escanear, conectar, desconectar.
 
 ```dart
 class SenseCraftVoiceClient {
@@ -498,7 +502,7 @@ ClipFileDataParsed parseClipFileDataNotify(List<int> data);
 
 ##### BleTransferFrameHandler
 
-Máquina de estados para seguir el progreso de descarga de archivos por BLE.
+Máquina de estados para rastrear el progreso de descarga de archivos por BLE.
 
 ```dart
 class BleTransferFrameState {
@@ -1083,7 +1087,7 @@ class OtaFirmwareProcessor {
 }
 ```
 
-> **Nota:** `Image` es `mcumgr.Image` del paquete `mcumgr_flutter`.
+> **Note:** `Image` is `mcumgr.Image` from the `mcumgr_flutter` package.
 
 ##### OtaSession
 
@@ -1282,7 +1286,7 @@ const int kSessionOpusMergeProgressEveryBytes = 4 * 1024 * 1024;
 
 
 
-## Soporte técnico y debate sobre el producto
+## Soporte técnico y debate sobre productos
 
 Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 

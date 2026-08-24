@@ -14,7 +14,7 @@ last_update:
   author: Shihan Gao
 url: https://wiki.seeedstudio.com/ja/codecraft/codecraft-overview/
 createdAt: '2026-06-29'
-updatedAt: '2026-07-08'
+updatedAt: '2026-08-04'
 ---
 
 # CodeCraft ユーザーガイド

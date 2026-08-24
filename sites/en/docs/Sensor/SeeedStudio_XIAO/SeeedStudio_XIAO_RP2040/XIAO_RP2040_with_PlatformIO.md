@@ -9,7 +9,7 @@ last_update:
   date: 04/08/2025
   author: Hugo
 createdAt: '2024-08-27'
-updatedAt: '2025-04-10'
+updatedAt: '2026-08-06'
 url: https://wiki.seeedstudio.com/xiao_rp2040_with_platform_io/
 ---
 

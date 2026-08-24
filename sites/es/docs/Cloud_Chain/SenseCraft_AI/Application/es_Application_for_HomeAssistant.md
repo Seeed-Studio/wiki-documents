@@ -13,7 +13,7 @@ last_update:
   date: 01/10/2024
   author: Citric
 createdAt: '2024-01-11'
-updatedAt: '2026-05-07'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/application/application-for-homeassistant/
 ---
 # Conectar Grove Vision AI V2 a Home Assistant

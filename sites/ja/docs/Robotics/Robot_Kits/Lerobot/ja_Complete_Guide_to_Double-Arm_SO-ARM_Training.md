@@ -17,7 +17,7 @@ translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/ja/lerobot_double_arm_so_arm_training/
 createdAt: '2026-07-01'
-updatedAt: '2026-07-07'
+updatedAt: '2026-08-10'
 ---
 
 import Link from '@docusaurus/Link';
@@ -41,6 +41,11 @@ import Link from '@docusaurus/Link';
 フォロワーアームのタイプは `so101_follower`、リーダーアームのタイプは `so101_leader` です（LeRobot では、`so100_leader` と `so101_leader` は同じ実装を共有します）。
 
 ---
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> SO-ARM101 今すぐ購入 🖱️</font></span></strong>
+</a></div>
 
 ## 0. 前提条件
 

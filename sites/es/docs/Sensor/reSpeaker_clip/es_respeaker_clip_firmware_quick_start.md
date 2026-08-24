@@ -1,5 +1,5 @@
 ---
-description: "Ruta de extremo a extremo desde una máquina limpia hasta un reSpeaker Clip que arranca, graba y es controlable desde el SDK del host: la base antes de cualquier trabajo de firmware personalizado o asistido por IA, y cómo decidir si el trabajo de firmware es el camino correcto."
+description: 'Ruta de extremo a extremo desde una máquina limpia hasta un reSpeaker Clip que arranca, graba y es controlable desde el SDK del host: la base antes de cualquier trabajo de firmware personalizado o asistido por IA, y cómo decidir si el trabajo de firmware es el camino correcto.'
 title: Introducción al SDK de firmware de reSpeaker Clip
 keywords:
   - reSpeaker clip
@@ -16,7 +16,7 @@ last_update:
   date: 07/28/2026
   author: Ray
 createdAt: '2026-07-28'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/es/respeaker_clip_firmware_quick_start/
 ---
 

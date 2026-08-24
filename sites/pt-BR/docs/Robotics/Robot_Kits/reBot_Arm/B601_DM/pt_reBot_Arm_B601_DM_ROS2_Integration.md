@@ -18,7 +18,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-07-07'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_ros2_integration/
 ---
 
@@ -209,14 +209,6 @@ Use por padrão o repositório oficial Seeed-Projects:
 git clone https://github.com/Seeed-Projects/reBotArmController_ROS2.git rebotarm_ros2
 cd rebotarm_ros2
 ```
-
-Você também pode usar o repositório de desenvolvimento atual:
-
-```bash
-git clone https://github.com/EclipseaHime017/reBotArmController_ROS2.git rebotarm_ros2
-cd rebotarm_ros2
-```
-
 ### Etapa 4. Instalar o motorbridge
 
 Instale `motorbridge` a partir da fonte oficial do PyPI:
@@ -229,7 +221,7 @@ python3 -m pip install --user --break-system-packages --index-url https://pypi.o
 
 ```bash
 mkdir -p third_party
-git clone https://github.com/vectorBH6/reBotArm_control_py.git third_party/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git third_party/reBotArm_control_py
 ```
 
 ### Etapa 6. Compilar o Workspace
@@ -837,8 +829,8 @@ Após carregar o Jazzy, você deverá ver um caminho semelhante a
 
 ## Contato
 
-- Suporte técnico: [Submit an Issue](https://github.com/EclipseaHime017/reBotArmController_ROS2/issues)
-- Repositório do projeto: [Github](https://github.com/EclipseaHime017/reBotArmController_ROS2)
+- Suporte técnico: [Submit an Issue](https://github.com/Seeed-Projects/reBotArmController_ROS2/issues)
+- Repositório do projeto: [Github](https://github.com/Seeed-Projects/reBotArmController_ROS2)
 - Fórum: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## Referências
@@ -849,4 +841,4 @@ Após carregar o Jazzy, você deverá ver um caminho semelhante a
 - [reBot Arm B601-DM Tutorial LeRobot](https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_lerobot/)
 - [Documentação do ROS2 Humble](https://docs.ros.org/en/humble/)
 - [Documentação do ROS2 Jazzy](https://docs.ros.org/en/jazzy/)
-- [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)
+- [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py)

@@ -15,7 +15,7 @@ last_update:
   date: 08/07/2026
   author: Kasun Thushara
 createdAt: '2026-08-07'
-updatedAt: '2026-08-07'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/respeaker_clip_sensecraft_voice_sdk/
 ---
 
@@ -223,6 +223,8 @@ SdkLog.bind((level, message, error, stack) {
 
 The SenseCraft Voice SDKs communicate with a reSpeaker Clip device over **BLE** (AT/JSON commands + file download) and its **Wi‑Fi AP** (UDP binary file transfer). No API key or backend is required — the SDKs talk directly to the device.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/LayeredView_2.png" alt="Transcription interface" width={900} height="auto" /></p>
+
 #### SDK parity
 
 All three SDKs (Flutter, Android, iOS) expose the same capabilities:
@@ -356,6 +358,8 @@ All three SDKs (Flutter, Android, iOS) expose the same capabilities:
 `BluetoothAdapterState`, `BluetoothBondState`, `BluetoothCharacteristic`, `BluetoothConnectionState`, `BluetoothDevice`, `Guid`, `ScanResult`
 
 ---
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-flutter/sequence.png" alt="Transcription interface" width={800} height="auto" /></p>
 
 #### 10.1 BLE Layer
 

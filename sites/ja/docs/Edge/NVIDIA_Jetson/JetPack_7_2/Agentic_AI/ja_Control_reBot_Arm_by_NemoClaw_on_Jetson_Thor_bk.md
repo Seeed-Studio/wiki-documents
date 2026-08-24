@@ -9,7 +9,7 @@ last_update:
   author: youjiang
 createdAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/ja/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/
-updatedAt: '2026-05-20'
+updatedAt: '2026-07-31'
 ---
 
 # Nvidia Jetson Thor 上の NemoClaw で reBot Arm B601 を制御する

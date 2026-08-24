@@ -9,7 +9,7 @@ last_update:
   author: youjiang
 createdAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/ja/voice_control_rebot_arm/
-updatedAt: '2026-06-16'
+updatedAt: '2026-08-11'
 ---
 
 # Nvidia Jetson Thor による reBot Arm B601 の音声制御
@@ -704,7 +704,7 @@ pip install -r requirements-graspnet-jetson.txt
 ```bash
 mkdir -p sdk
 
-git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
+git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
 pip install -e sdk/reBotArm_control_py
 
 git clone https://github.com/graspnet/graspnet-baseline.git sdk/graspnet-baseline
@@ -903,7 +903,7 @@ http://<jetson_ip>:8000
 - https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/index.html
 - https://github.com/Seeed-Projects/reBot-DevArm
 - https://github.com/graspnet/graspnet-baseline.git
-- https://github.com/vectorBH6/reBotArm_control_py
+- https://github.com/Seeed-Projects/reBotArm_control_py
 - https://github.com/orbbec/pyorbbecsdk.git
 - https://wiki.seeedstudio.com/ja/install_torch_on_recomputer/
 

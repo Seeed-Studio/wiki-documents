@@ -1,5 +1,5 @@
 ---
-description: "reSpeaker Clip デバイス側ファームウェアの包括的なリファレンス：システムアーキテクチャ、AT/GATT/UDP プロトコル、ビルドプロファイル、ファームウェアの更新とリカバリ、検証とデバッグ、および量産リリース ― すべての事実を 1 か所に集約。"
+description: reSpeaker Clip デバイス側ファームウェアの包括的なリファレンス：システムアーキテクチャ、AT/GATT/UDP プロトコル、ビルドプロファイル、ファームウェアの更新とリカバリ、検証とデバッグ、および量産リリース ― すべての事実を 1 か所に集約。
 title: reSpeaker Clip ファームウェア開発ガイド
 keywords:
   - reSpeaker clip
@@ -16,7 +16,7 @@ last_update:
   date: 07/28/2026
   author: Ray
 createdAt: '2026-07-28'
-updatedAt: '2026-07-28'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/ja/respeaker_clip_firmware_development_guide/
 ---
 
