@@ -15,7 +15,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-05-18'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/cn/reachymini_vibe-code-with-your-agent/
 ---
 # 使用您最喜欢的代理对Reachy Mini应用进行Vibe编码 🤖

@@ -9,7 +9,7 @@ last_update:
   date: 12/11/2025
   author: Michelle Huang
 createdAt: '2025-03-13'
-updatedAt: '2026-06-09'
+updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf52840&_wio_SX1262_kit_for_meshtastic/
 ---
 

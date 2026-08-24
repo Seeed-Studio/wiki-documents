@@ -14,7 +14,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/es/atom_s/
 createdAt: '2026-05-25'
-updatedAt: '2026-05-25'
+updatedAt: '2026-08-13'
 ---
 
 # Primeros pasos con Atom-S

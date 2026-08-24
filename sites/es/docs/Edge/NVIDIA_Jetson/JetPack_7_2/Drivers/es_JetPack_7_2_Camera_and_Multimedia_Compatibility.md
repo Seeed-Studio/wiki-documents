@@ -12,6 +12,7 @@ last_update:
   author: Dayu
 createdAt: '2026-07-31'
 updatedAt: '2026-07-31'
+url: https://wiki.seeedstudio.com/es/jetpack_7_2_camera_multimedia_compatibility/
 ---
 
 # Compatibilidad de cámara y multimedia en JetPack 7.2

@@ -13,8 +13,8 @@ last_update:
   date: 04/17/2026
   author: Xinrui Wu
 createdAt: '2026-04-17'
-updatedAt: '2026-04-20'
-url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/sound_source_localization_of_recamera_gimbal/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/pt-br/sound_source_localization_of_recamera_gimbal/
 ---
 
 

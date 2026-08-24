@@ -10,7 +10,7 @@ last_update:
   date: 2/17/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-01-07'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/es/Sidekick_Basic_Kit_for_Arduino_V2/
 ---
 

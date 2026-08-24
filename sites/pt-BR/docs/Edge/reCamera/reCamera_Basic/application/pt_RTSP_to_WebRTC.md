@@ -13,8 +13,8 @@ last_update:
   date: 06/10/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
-updatedAt: '2026-06-15'
-url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/rtsp_to_webrtc_with_recamera/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/pt-br/rtsp_to_webrtc_with_recamera/
 ---
 
 # Transmissão de Vídeo em Tempo Real de RTSP para WebRTC com reCamera

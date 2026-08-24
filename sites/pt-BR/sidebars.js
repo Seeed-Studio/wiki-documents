@@ -868,6 +868,14 @@ const sidebars = {
             id: 'Sensor/SenseCAP/SenseCAP_Intro/pt_SenseCAP_Data_Logger_Intro',
           },
           items: [
+            {
+              type: 'category',
+              label: 'Sensor SenseCAP Combo 5 em 1 com 4G',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP_Combo/pt_SenseCAP_Combo_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP_Combo/pt_Get_Started_with_SenseCAP_Combo',
+              ],
+            },
             'Sensor/SenseCAP/SenseCAP_Data_Logger/pt_SenseCAP-Sensor-Hub-Data-Logger',
             'Sensor/SenseCAP/SenseCAP_Data_Logger/pt_Data_Logger',
             {
@@ -1317,7 +1325,7 @@ const sidebars = {
               label: 'Conexão sem fio',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/pt_XIAO_ESP32C5_WiFi_Usage',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/pt_XIAO_ESP32C5_Buletooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/pt_XIAO_ESP32C5_Bluetooth_Usage',
               ],
             },
             {
@@ -4107,6 +4115,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Build_a_Four_Camera_Fisheye_Surround_View_Demo_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_industrial_vision_monitoring_on_industrial',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Streaming_Vision_Agent_on_Jetson',
               ]

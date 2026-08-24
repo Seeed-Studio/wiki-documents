@@ -12,6 +12,9 @@ slug: /use_arducam_ov9281_camera_with_a603_jetson_carrier_board
 last_update:
   date: 07/08/2026
   author: Jonathan van der Maas
+createdAt: '2026-08-11'
+url: https://wiki.seeedstudio.com/pt-br/use_arducam_ov9281_camera_with_a603_jetson_carrier_board/
+updatedAt: '2026-08-11'
 ---
 
 As câmeras Arducam Jetvariety oferecem suporte oficial à placa carrier do kit de desenvolvimento NVIDIA, não à A603, e o overlay do instalador da Arducam não funciona na A603. A própria câmera funciona bem assim que você cria uma pequena device tree personalizada. Esta página documenta a configuração funcional para a Arducam OV9281 (B0223) no JetPack 6.2 (L4T R36.4.3), os motivos pelos quais o overlay padrão falha e uma armadilha que pode desativar todas as portas USB da placa.

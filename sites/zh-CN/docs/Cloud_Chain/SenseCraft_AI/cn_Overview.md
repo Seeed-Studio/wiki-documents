@@ -1,6 +1,6 @@
 ---
 description: 探索 SenseCraft AI 中适用于边缘 AI 设备的预训练模型、自定义训练、部署、实时预览和模型输出工作流。
-title: 'SenseCraft AI：训练与部署边缘 AI 模型'
+title: SenseCraft AI：训练与部署边缘 AI 模型
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.webp
 slug: /sensecraft-ai/overview
 aliases:
@@ -10,7 +10,7 @@ last_update:
   date: 08/06/2026
   author: Citric
 createdAt: '2024-11-28'
-updatedAt: '2026-08-13'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/cn/sensecraft-ai/overview/
 ---
 

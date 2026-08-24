@@ -22,7 +22,7 @@ last_update:
   date: 08/17/2026
   author: haochen
 createdAt: '2026-08-13'
-updatedAt: '2026-08-17'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/pt-br/weston_egl_not_initialized_jetson_cold_boot/
 ---
 

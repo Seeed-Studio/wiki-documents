@@ -13,7 +13,7 @@ last_update:
   date: 7/29/2026
   author: Kasun Thushara
 createdAt: '2026-07-29'
-updatedAt: '2026-07-29'
+updatedAt: '2026-07-30'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_websocket_audio_stream/
 ---
 

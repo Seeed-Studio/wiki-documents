@@ -14,8 +14,8 @@ last_update:
   date: 2026-06-02
   author: Sizhao zhou
 createdAt: '2026-06-02'
-updatedAt: '2026-06-16'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_benchmarking/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/cn/recamera_benchmarking/
 ---
 
 # reCamera 上的 YOLO11n 边缘基准测试

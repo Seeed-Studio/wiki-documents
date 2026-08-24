@@ -12,8 +12,8 @@ last_update:
   date: 2026-06-24
   author: Sizhao zhou
 createdAt: '2026-06-24'
-updatedAt: '2026-06-24'
-url: https://wiki.seeedstudio.com/pt-br/reCamera/reCamera_Basic/application/recamera_picoclaw/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/pt-br/recamera_picoclaw/
 ---
 
 

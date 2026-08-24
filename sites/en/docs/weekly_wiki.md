@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/10/2026
+  date: 08/24/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-08-10'
+updatedAt: '2026-08-24'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,57 +18,35 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 10th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 24th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Streaming Vision Agent on Jetson](https://wiki.seeedstudio.com/streaming_vision_agent_on_jetson/)
+### [Build a Four-Camera Fisheye Surround View Demo on Jetson](https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/)
 
-<div class="video-container">
-<video src="https://files.seeedstudio.com/wiki/Jetson_AGX_Orin/streaming_vision_agent_demo_03.mp4" controls width="800"></video>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki deploys a real-time demo on Seeed Jetson devices (verified on **reComputer Mini J5012 · JetPack 7.2**). A USB camera feeds a browser UI; two independent **Qwen3-VL-2B** instances handle recognition and Ask so answering does not block background memory writes.
+This project shows a **four-camera fisheye surround-view system** on NVIDIA Jetson. Four fisheye cameras around the chassis are calibrated, undistorted, and stitched into a real-time **bird's-eye view (BEV)**.
 
 </div>
 
-### [Getting Started with MIT Position Control on the reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_arm_b601_rs_mit_control/)
+### [Get Started with SenseCAP Combo](https://wiki.seeedstudio.com/get_started_with_sensecap_combo/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Combo/combo-intro.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[MotorBridge](https://github.com/motorbridge/motorbridge) is a Python CAN control SDK for motors such as RobStride and Damiao. Built on top of it, [rebot_control](https://github.com/LAN-GER/rebot_control) wraps an MIT position control interface tailored for the **reBot Arm B601-RS**: YAML configuration, per-joint speed limiting, three-level MOS temperature protection, and smooth return-to-zero triggered by Esc / Ctrl+C / `stop()`. This tutorial walks you through: environment setup → CAN configuration → running the examples → using it as a library for secondary development.
+This document introduces how to get started with the SenseCAP Combo 5-in-1 Sensor with 4G, including SIM card and sensor installation, device configuration, SenseCAP Cloud connection, and data monitoring.
 
 </div>
 
-### [reBot Arm B601-DM Web Simulator and ROS2/MuJoCo Developer Guide](https://wiki.seeedstudio.com/rebot_arm_b601_dm_web_simulator_developer_guide/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png" alt="pir" width={800} height="auto" /></p>
+### [Build a reCamera and NVIDIA Jetson VLM Event Gateway](https://wiki.seeedstudio.com/recamera_jetson_vlm_gateway/)
 
 <div style={{ textAlign: "justify" }}>
 
-This guide is for developers. It explains how to run and extend the `reBotArm_simulator-DM` web simulator. The simulator is a lightweight Node.js + Three.js web console that reads the URDF and STL meshes from the ROS2 workspace in the same repository, renders the 6-DOF body and gripper of the reBot Arm B601-DM in the browser, and talks to ROS2 over a rosbridge WebSocket. It supports the full development workflow: joint mirroring, control lock, gravity compensation, visual grasping, and LLM text control.
-
-</div>
-
-### [Getting Started with the reSpeaker Clip Firmware SDK](https://wiki.seeedstudio.com/respeaker_clip_firmware_quick_start/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-The **Firmware SDK** is the device-side Zephyr RTOS firmware on the Nordic nRF5340 (dual-core: application core + network core). It is for developers who need to **modify device-side behavior** — the audio pipeline, the AT command surface or BLE GATT service, the button / OLED / haptic interaction model, the power or productization strategy, or custom hardware bring-up.
-
-</div>
-
-### [reSpeaker Clip Voice SDK & API Reference Build Your Own AI Voice App with Flutter SDK](https://wiki.seeedstudio.com/respeaker_clip_sensecraft_voice_sdk/)
-
-<div style={{ textAlign: "justify" }}>
-
-This document introduces how to develop with reSpeaker Clip using the SenseCraft Voice SDK, covering device connectivity, BLE/Wi-Fi communication, recording and file transfer, OTA updates, and API usage.
+This document introduces how to build a VLM event gateway using reCamera Basic and NVIDIA Jetson, combining YOLOv8 and Qwen3-VL for scene analysis, event alerts, and real-time video streaming.
 
 </div>
 
@@ -221,5 +199,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.7.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260720)
 - [weekly wiki on 2026.7.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260727)
 - [weekly wiki on 2026.8.03rd](/Seeed_Elderly/weekly_wiki/2026/wiki260803)
+- [weekly wiki on 2026.8.10th](/Seeed_Elderly/weekly_wiki/2026/wiki260810)
+- [weekly wiki on 2026.8.17th](/Seeed_Elderly/weekly_wiki/2026/wiki260817)
 
 </details>

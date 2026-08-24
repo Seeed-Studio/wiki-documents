@@ -15,8 +15,8 @@ last_update:
   date: 2026-01-28
   author: John Xiang
 createdAt: '2026-01-28'
-updatedAt: '2026-02-11'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/ai_human_detection_meshtastic_broadcast/
+updatedAt: '2026-07-24'
+url: https://wiki.seeedstudio.com/cn/ai_human_detection_meshtastic_broadcast/
 ---
 
 ## 介绍

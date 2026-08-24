@@ -17,7 +17,7 @@ last_update:
 translation:
   skip: [[zh-CN]]
 createdAt: '2026-04-22'
-updatedAt: '2026-07-20'
+updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
 ---
 

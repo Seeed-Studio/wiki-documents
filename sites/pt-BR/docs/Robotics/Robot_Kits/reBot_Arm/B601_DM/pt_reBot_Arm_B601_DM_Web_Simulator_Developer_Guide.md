@@ -21,7 +21,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-30'
-updatedAt: '2026-08-07'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/
 ---
 
