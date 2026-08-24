@@ -178,6 +178,11 @@ Since our focus here is on describing the model training process, we won't go in
 | **Result 7** | 0x100C | int32_t | R |  |
 | **Result 8** | 0x100E | int32_t | R |  |
 
+## Resources
+
+- [SenseCAP A1102 GitHub Repository](https://github.com/Seeed-Studio/SenseCAP-A1102) - Source code and examples for the SenseCAP A1102.
+
+
 ## FAQ
 
 **What are the ideal camera settings for image capture?**
