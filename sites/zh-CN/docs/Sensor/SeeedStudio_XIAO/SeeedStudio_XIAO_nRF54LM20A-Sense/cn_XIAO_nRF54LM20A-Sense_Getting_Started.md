@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_getting_started
 sku: 100018440
 last_update:
-  date: 07/28/2026
+  date: 08/24/2026
   author: Zeller
 createdAt: '2025-05-13'
 updatedAt: '2026-08-14'
@@ -45,7 +45,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 介绍
 
-Seeed Studio XIAO nRF54LM20A Sense 是一款紧凑、超低功耗的无线开发板，基于 Nordic Semiconductor 的 nRF54LM20A SoC 构建。它集成了 128 MHz Arm Cortex-M33 处理器、512 KB RAM、2 MB 片上 NVM、多协议 2.4 GHz 无线连接、板载 IMU、数字麦克风、8MB 外部 Flash、IPEX 天线连接器以及 nPM1300 PMIC，可用于先进的电池供电物联网、可穿戴设备、智能感知和边缘 AI 应用。
+Seeed Studio XIAO nRF54LM20A Sense 是一款基于 Nordic Semiconductor nRF54LM20A SoC 的紧凑型、超低功耗无线开发板。它集成了 128 MHz Arm Cortex-M33 处理器、512 KB RAM、2 MB 片上 NVM、多协议 2.4 GHz 无线连接、板载 IMU、数字麦克风、8MB 外部 Flash、IPEX 天线连接器以及 nPM1300 PMIC，可用于先进的电池供电物联网、可穿戴设备、智能感知和边缘 AI 应用。
 
 ### 规格参数
 
@@ -68,8 +68,8 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款紧凑、超低功耗的无线开发
     </tr>
     <tr>
       <td><strong>Flash</strong></td>
-      <td colspan="2">2 MB 非易失性存储器（NVM）</td>
-    </tr>
+      <td colspan="2">2 MB 非易失性存储器 (NVM)</td>
+    </tr]
     <tr>
       <td><strong>外部 Flash</strong></td>
       <td colspan="2">8MB 板载外部 Flash</td>
@@ -130,7 +130,7 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款紧凑、超低功耗的无线开发
       </td>
     </tr>
     <tr>
-      <td><strong>低功耗模式（3.7V@2A）</strong></td>
+      <td><strong>低功耗模式 (3.7V@2A)</strong></td>
       <td>/</td>
       <td>
         轻睡眠：约 9.96µA<br/>
@@ -161,15 +161,15 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款紧凑、超低功耗的无线开发
 
 - **具备高级连接与安全性的强大 SoC**
 
-  Seeed Studio XIAO nRF54LM20A Sense 是一款紧凑、超低功耗的无线开发板，由 Nordic Semiconductor 的 nRF54LM20A SoC 提供动力。它配备 128 MHz Arm Cortex-M33 处理器、512 KB RAM、2 MB 片上 NVM、128 MHz RISC-V 协处理器、多协议 2.4 GHz 无线连接、板载 IMU、数字麦克风、8MB 外部 Flash、IPEX 天线连接器以及 Nordic nPM1300 PMIC，用于高效电源管理。凭借对 Bluetooth LE、Bluetooth Channel Sounding、Bluetooth Mesh、Thread、Zigbee、Matter 以及最高 4 Mbps 的专有 2.4 GHz 协议的支持，该开发板专为下一代互联产品而设计。板载的运动与音频传感器使其非常适合可穿戴设备、智能感知、TinyML、手势识别、语音触发设备以及电池供电的物联网应用。
+  Seeed Studio XIAO nRF54LM20A Sense 是一款由 Nordic Semiconductor nRF54LM20A SoC 驱动的紧凑型、超低功耗无线开发板。它配备 128 MHz Arm Cortex-M33 处理器、512 KB RAM、2 MB 片上 NVM、128 MHz RISC-V 协处理器、多协议 2.4 GHz 无线连接、板载 IMU、数字麦克风、8MB 外部 Flash、IPEX 天线连接器以及 Nordic nPM1300 PMIC，用于高效电源管理。凭借对 Bluetooth LE、Bluetooth Channel Sounding、Bluetooth Mesh、Thread、Zigbee、Matter 以及最高 4 Mbps 的专有 2.4 GHz 协议的支持，该开发板专为下一代互联产品而设计。板载的运动与音频传感器使其非常适合可穿戴设备、智能感知、TinyML、手势识别、语音触发设备以及电池供电的物联网应用。
 
 - **超低功耗效率**
 
-  基于 Nordic nRF54LM20A 和 nPM1300 PMIC，XIAO nRF54LM20A Sense 在电池供电（BAT）下实现了仅 4.76 µA 的实测深度睡眠电流。结合 nPM1300 PMIC 及其 0.33 µA 船运模式 BAT 电流，在有源无线工作状态下，以 3.7 V 模拟电池输入、发射功率设置为 +8 dBm 时，其平均电流仅为 3.87 mA，非常适合长寿命电池供电的传感应用、可穿戴设备以及始终在线的物联网设备。
+  基于 Nordic nRF54LM20A 和 nPM1300 PMIC，XIAO nRF54LM20A Sense 在电池供电（BAT）下实现了仅 4.76 µA 的实测深度睡眠电流。结合 nPM1300 PMIC 及其 0.33 µA 船运模式 BAT 电流，在无线工作状态下，以 3.7 V 模拟电池输入、发射功率设置为 +8 dBm 时，其平均电流仅为 3.87 mA，非常适合长寿命电池供电的传感应用、可穿戴设备以及始终在线的物联网设备。
 
 - **精简的开发体验**
 
-  对 Nordic nRF Connect SDK 和 PlatformIO（Zephyr）的完整支持，可实现高效的嵌入式开发流程。
+  对 Nordic nRF Connect SDK 和 PlatformIO（Zephyr）的全面支持，使嵌入式开发流程更加高效。
 
 ## 硬件概览
 
@@ -200,7 +200,7 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款紧凑、超低功耗的无线开发
 
 ## **引脚图**
 
-| XIAO 引脚      | 功能           | 芯片引脚                          | 描述                                                                         |
+| XIAO 引脚     | 功能           | 芯片引脚                          | 描述                                                                         |
 | :------------: | :------------: | :-------------------------------: | :-------------------------------------------------------------------------- |
 | **电源引脚**   |                |                                   |                                                                             |
 | VBUS           | VBUS           | -                                 | 5V 电源输入/输出                                                             |
@@ -219,7 +219,7 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款紧凑、超低功耗的无线开发
 | -              | RGB-B          | P1.23                             | 板载 RGB LED 蓝色通道                                                        |
 | -              | RGB-G          | P1.24                             | 板载 RGB LED 绿色通道                                                        |
 | -              | RGB-R          | P1.22                             | 板载 RGB LED 红色通道                                                        |
-| **模拟输入（ADC）引脚** |      |                                   |                                                                             |
+| **模拟输入 (ADC) 引脚** |      |                                   |                                                                             |
 | A0             | AIN0           | P1.00                             | 模拟输入 0 / GPIO                                                            |
 | A1             | AIN1           | P1.31                             | 模拟输入 1 / GPIO                                                            |
 | A2             | AIN2           | P1.30                             | 模拟输入 2 / GPIO                                                            |
@@ -247,10 +247,10 @@ Seeed Studio XIAO nRF54LM20A Sense 是一款紧凑、超低功耗的无线开发
 | -              | NFC            | P1.02 / P1.01                     | NFC 天线引脚                                                                 |
 | -              | GRTC           | P0.04 / P0.05                     | 通用 RTC 引脚                                                                |
 
-## 使用 PlatformIO 入门
+## 使用 PlatformIO 快速上手
 
-在本节中，我们将通过 RGB LED 的多色闪烁效果，带你快速上手 XIAO nRF54LM20A。
-请先完成以下软硬件准备，为后续在 XIAO 上的开发做好环境搭建。
+在本节中，我们将通过 RGB LED 的多彩闪烁效果，带你快速上手 XIAO nRF54LM20A。
+请先完成下面的软硬件准备，为后续在 XIAO 上的开发做好环境搭建。
 
 ### 硬件准备
 
@@ -326,8 +326,11 @@ pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
 - 如果你之前已经在 PlatformIO 中使用过 Seeed Studio XIAO 系列开发板，请运行下面的命令进行更新：
 
 
-```bash
-pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
+```SHELL
+# for Windows
+pio pkg update -g -p "GitHub - Seeed-Studio/platform-seeedboards: Seeed Boards: development platform for PlatformIO"
+# for macOS/Linux
+pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=GitHub - Seeed-Studio/platform-seeedboards: Seeed Boards: development platform for PlatformIO" --force
 ```
 
 
@@ -358,7 +361,7 @@ board = seeed-xiao-nrf54lm20a
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-3. 创建完成后，会弹出打开工作区的提示。点击 OK。
+3. 创建完成后，会弹出打开工作区的提示，点击 OK。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_4.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -553,7 +556,7 @@ int main(void)
 
 </details>
 
-3. 修改 `prj.conf` 并启用相应的配置。
+3. 修改 `prj.conf` 并启用相应配置。
 
 ```prj
 CONFIG_GPIO=y
@@ -601,13 +604,13 @@ XIAO nRF54LM20A 支持使用 3.7V 锂电池作为电源输入。你可以参考�
 <div style={{textAlign: 'center'}}>
   <img
     src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/6_battry.png"
-    alt="Battery wiring"
+    alt="电池接线"
     style={{width: 600, height: 'auto'}}
   />
 </div>
 
 :::caution
-焊接时请务必注意不要将正负极短路，以免烧毁电池和设备。
+焊接时请务必注意不要让正负极短路，以免烧毁电池和设备。
 如果电池本身带电，切勿直接焊接到电路板上，否则可能烧毁电路板。在电路上电的情况下发生短路风险极大，建议使用适配器。
 
 :::
@@ -618,7 +621,7 @@ XIAO nRF54LM20A 支持使用 3.7V 锂电池作为电源输入。你可以参考�
 2. 使用电池时，XIAO 可以通过数据线连接到你的计算机设备，请放心，XIAO 内置电路保护芯片，使用安全。
 
 ### 充电指示灯工作效果
-本示例通过读取 nPM1300 的 VBUS、VBAT 和 IBAT 状态来控制板载 LEDDRV1：在充电过程中 LED 点亮，当电池充满、电池未连接或 USB 线被拔出时 LED 熄灭。同时，程序会通过串口输出电池电压、充电电流和充电状态，方便监控充电过程。
+本示例通过读取 nPM1300 的 VBUS、VBAT 和 IBAT 状态来控制板载 LEDDRV1：充电时 LED 亮起，当电池充满、电池未连接或 USB 线被拔出时 LED 熄灭。同时，程序会通过串口输出电池电压、充电电流和充电状态，方便监控充电过程。
 
 
 <div className="github_container" style={{textAlign: 'center'}}>
@@ -631,7 +634,7 @@ XIAO nRF54LM20A 支持使用 3.7V 锂电池作为电源输入。你可以参考�
 
 ### 电池电压检测
 
-XIAO nRF54LM20A 集成了电池电压检测功能，核心是利用 nPM1300-CAA 负载开关高效管理电池电源测量。本指南将重点分析电池检测的软件实现**（尤其是 main.c 代码）**，并指导你如何在 PlatformIO 环境中轻松部署和使用该功能，从而避免直接使用 Zephyr NCS SDK 带来的复杂性。
+XIAO nRF54LM20A 集成了电池电压检测功能，核心是利用 nPM1300-CAA 负载开关高效管理电池电量测量。本指南将重点分析电池检测的软件实现 **（尤其是 main.c 代码）**，并指导你如何在 PlatformIO 环境中轻松部署和使用该功能，从而避免直接使用 Zephyr NCS SDK 带来的复杂性。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_10.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -640,7 +643,7 @@ XIAO nRF54LM20A 集成了电池电压检测功能，核心是利用 nPM1300-CAA 
 
 nPM1300-CAA 芯片的作用：
 
-nPM1300-CAA 是一款高度集成的电源管理 IC（PMIC），用于替代 TPS22916 的简单负载开关功能。它不仅负责低功耗监测场景下的电池电压切换控制，还集成了充电、稳压以及精确的电量计量（通过电压、电流、温度），以最大化 nRF54LM20A 的电池续航。
+nPM1300-CAA 是一款高度集成的电源管理 IC（PMIC），替代了 TPS22916 的简单负载开关功能。它不仅控制用于低功耗监测的电池电压切换，还集成了充电、稳压以及精确的电量计（通过电压、电流、温度）功能，以最大化 nRF54LM20A 的电池寿命。
 
 
 
@@ -651,17 +654,17 @@ nPM1300-CAA 是一款高度集成的电源管理 IC（PMIC），用于替代 TPS
 </div><br/>
 
 :::note
-以下示例同时适用于 PlatformIO 和 nRF Connect SDK。在 PlatformIO 中可以直接使用，而在 SDK 中则需要手动添加文件。请参考此[链接](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#battery-powered-board)
+以下示例同时适用于 PlatformIO 和 nRF Connect SDK。在 PlatformIO 中可以直接使用，而在 SDK 中则需要手动添加文件。请参考此[链接](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#电池供电板)
 :::
 
 ## 外设概览
 
-本板载的外设电路包括一个 IMU 和一个麦克风。你可以在下图中看到它们的位置：
+该板上的外设电路包括一个 IMU 和一个麦克风。你可以在下图中看到它们的位置：
 
 <div style={{textAlign: 'center'}}>
   <img
     src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png"
-    alt="IMU and microphone locations"
+    alt="IMU 和麦克风位置"
     style={{width: 400, height: 'auto'}}
   />
 </div>
@@ -691,9 +694,9 @@ pio run -t clean
 
 ---
 
-**Q2：安装完成后为什么会出现 `zsh: command not found: openocd`？（macOS）**
+**Q2：为什么安装后会出现 `zsh: command not found: openocd`？（macOS）**
 
-通常是因为 OpenOCD 可执行文件所在目录尚未添加到系统的 `PATH` 中。你可以使用以下命令将其永久添加到 `~/.zshrc` 文件中。
+此问题通常是因为 OpenOCD 可执行文件所在目录尚未添加到系统 `PATH` 中。你可以使用以下命令将其永久添加到 `~/.zshrc` 文件中。
 
 > **注意：** 此解决方案仅适用于 **macOS**。
 
@@ -728,13 +731,13 @@ rm -rf ~/.platformio/packages/platform-seeed-* ~/.platformio/packages/framework-
 ### Seeed Studio XIAO nRF54LM20A
 
 **硬件设计**
-- **📄[Datasheet]** [Nordic nRF54LM20A 数据手册](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/nRF54LM20A_nRF54LM20B_Datasheet_v1.0.pdf)
-- **📄[Schematic]** [XIAO nRF54LM20A 原理图](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
-- **🗃️[PCB Design Files]** [XIAO nRF54LM20A KiCad 工程](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_V1.0_SCH&PCB_260508.zip )
-- **🗃️[PCB Design Libraries]** 
+- **📄[数据手册]** [Nordic nRF54LM20A Datasheet](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/nRF54LM20A_nRF54LM20B_Datasheet_v1.0.pdf)
+- **📄[原理图]** [XIAO nRF54LM20A 原理图](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
+- **🗃️[PCB 设计文件]** [XIAO nRF54LM20A KiCad 工程](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_V1.0_SCH&PCB_260508.zip )
+- **🗃️[PCB 设计库]** 
   - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
-  - [XIAO 系列 KiCad 原理图符号库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Pinout Diagram]**[XIAO nRF54LM20A 引脚定义表](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Pin_definition.xlsx)
+  - [XIAO 系列 KiCad SCH 原理图库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[引脚图]**[XIAO nRF54LM20A 引脚定义表](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Pin_definition.xlsx)
 
 <!-- **Mechanical**
 - **🗃️[3D Dimensions]** [XIAO nRF54LM20A Dimension in DXF](1) -->
@@ -742,13 +745,13 @@ rm -rf ~/.platformio/packages/platform-seeed-* ~/.platformio/packages/framework-
 ### Seeed Studio XIAO nRF54LM20A Sense
 
 **硬件设计**
-- **📄[Datasheet]** [Nordic nRF54LM20A 数据手册](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/nRF54LM20A_nRF54LM20B_Datasheet_v1.0.pdf)
-- **📄[Schematic]** [XIAO nRF54LM20A Sense 原理图](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
-- **🗃️[PCB Design Files]** [XIAO nRF54LM20A KiCad 工程](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_V1.0_SCH&PCB_260508.zip )
-- **🗃️[PCB Design Libraries]**
+- **📄[数据手册]** [Nordic nRF54LM20A Datasheet](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/nRF54LM20A_nRF54LM20B_Datasheet_v1.0.pdf)
+- **📄[原理图]** [XIAO nRF54LM20A Sense 原理图](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
+- **🗃️[PCB 设计文件]** [XIAO nRF54LM20A KiCad 工程](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_V1.0_SCH&PCB_260508.zip )
+- **🗃️[PCB 设计库]**
   - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
-  - [XIAO 系列 KiCad 原理图符号库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Pinout Diagram]**[XIAO nRF54LM20A Sense 引脚定义表](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Pin_definition.xlsx)
+  - [XIAO 系列 KiCad SCH 原理图库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[引脚图]**[XIAO nRF54LM20A Sense 引脚定义表](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Pin_definition.xlsx)
 
 <!-- **Mechanical**
 - **🗃️[3D Dimensions]** [XIAO nRF54LM20A Sense Dimension in DXF](1) -->
@@ -756,7 +759,7 @@ rm -rf ~/.platformio/packages/platform-seeed-* ~/.platformio/packages/framework-
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种交流渠道，以满足不同的偏好和需求。
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
