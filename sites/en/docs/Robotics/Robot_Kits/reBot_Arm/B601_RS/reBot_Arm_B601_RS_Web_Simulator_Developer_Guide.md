@@ -15,12 +15,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_web_simulator_developer_guide
 last_update:
-  date: 2026-08-13
+  date: 2026-08-24
   author: Yang-Ci
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-13'
-updatedAt: '2026-08-13'
+updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
 
@@ -65,7 +65,7 @@ The reBot Arm B601-RS project integrates a Three.js web console, a ROS 2 real-ro
 
 1. **RS-specific arm model**
 
-   The web console and ROS 2 use `00-arm-rs_asm-v3.urdf` and its matching STL meshes. The web server reads the model from the ROS 2 workspace first and keeps an offline fallback copy.
+   The web console and ROS 2 use `ReBot_Arm_RS.urdf` and its matching STL meshes. The web server reads the model from the `rebotarm_ros2_RS` workspace first and keeps an offline fallback copy.
 
 2. **RobStride + SocketCAN real-robot link**
 
@@ -161,8 +161,8 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 ### Step 1: Get the project
 
 ```bash
-git clone https://github.com/Yang-Ci/ReBot_Arm_web_RS.git
-cd ReBot_Arm_web_RS
+git clone https://github.com/Yang-Ci/ReBot_Arm_web_RS.git ~/reBot_Arm_Mujoco-RS
+cd ~/reBot_Arm_Mujoco-RS
 ```
 
 The commands below use `~/reBot_Arm_Mujoco-RS` as the project directory. If your directory is different, replace the paths accordingly.
@@ -190,7 +190,7 @@ This command only checks the system and does not modify the environment. Checks 
 ./rebotarm doctor
 ```
 
-The installation script installs missing ROS 2, Node.js, SocketCAN, and build dependencies, creates `rebotarm_ros2/.venv`, installs the Python dependencies for the RS real robot, MuJoCo, and Agent, runs rosdep, and builds the ROS 2 workspace with:
+The installation script installs missing ROS 2, Node.js, SocketCAN, and build dependencies, creates `rebotarm_ros2_RS/.venv`, installs the Python dependencies for the RS real robot, MuJoCo, and Agent, runs rosdep, and builds the ROS 2 workspace with:
 
 ```bash
 colcon build --symlink-install
@@ -208,7 +208,7 @@ After modifying Python packages, this is usually enough:
 
 ```bash
 source scripts/rs_env.sh
-cd rebotarm_ros2
+cd rebotarm_ros2_RS
 colcon build --symlink-install
 ```
 
@@ -371,7 +371,7 @@ Simulation and real-robot processes running in the foreground should be ended no
 ## Project Architecture
 
 ```text
-ReBot_Arm_web_RS/
+reBot_Arm_Mujoco-RS/
 |-- setup.sh                              One-click check, install, and build
 |-- rebotarm                              Unified start, status, and stop entry
 |-- requirements-rs-hardware.txt          RS real-robot Python dependencies
@@ -383,7 +383,7 @@ ReBot_Arm_web_RS/
 |   |-- start_rs_hardware.sh              RS real-robot controller
 |   |-- start_rs_dual.sh                  Real-robot/Fake dual-namespace startup
 |   `-- start_rs_text_agent.sh            Text Agent HTTP service
-|-- rebotarm_ros2/
+|-- rebotarm_ros2_RS/
 |   |-- src/rebotarmcontroller/           Real-robot controller and Fake Driver
 |   |-- src/rebotarm_msgs/                Custom msg/srv/action
 |   |-- src/rebotarm_bringup/             Config, URDF, meshes, and launch
@@ -652,7 +652,7 @@ Before enabling motion tools in a real-robot environment, explicitly check the A
 The real-robot default configuration is located at:
 
 ```text
-rebotarm_ros2/src/rebotarm_bringup/config/rebotarm_hardware.yaml
+rebotarm_ros2_RS/src/rebotarm_bringup/config/rebotarm_hardware.yaml
 ```
 
 Current RS key parameters:
@@ -732,14 +732,14 @@ Add Topic, Service, or Action paths in the UI layer and call the client's `subsc
 ROS 2 primary models:
 
 ```text
-rebotarm_ros2/src/rebotarm_bringup/description/urdf/00-arm-rs_asm-v3.urdf
-rebotarm_ros2/src/rebotarm_bringup/description/meshes_rs/
+rebotarm_ros2_RS/src/rebotarm_bringup/description/urdf/ReBot_Arm_RS.urdf
+rebotarm_ros2_RS/src/rebotarm_bringup/description/meshes_rs/
 ```
 
 The web server reads the models above first. If the web directory is copied and run alone, it uses:
 
 ```text
-reBotArm_simulator-RS/description/urdf/00-arm-rs_asm-v3.urdf
+reBotArm_simulator-RS/description/urdf/ReBot_Arm_RS.urdf
 reBotArm_simulator-RS/description/meshes_rs/
 ```
 
@@ -749,7 +749,7 @@ Keep both copies in sync when modifying them and check Linux filename case.
 
 | File/directory | Role |
 |---|---|
-| `rebotarm_ros2/src/rebotarm_mujoco_rs/models/` | RS MJCF and STL |
+| `rebotarm_ros2_RS/src/rebotarm_mujoco_rs/models/` | RS MJCF and STL |
 | `rebotarm_mujoco_rs/mujoco_sync.py` | Sync frequency, dynamics, and PD |
 | `rebotarm_mujoco_rs/scene_camera.py` | Overhead camera |
 | `rebotarm_mujoco_rs/scene_detector.py` | Color detection |
@@ -761,7 +761,7 @@ Keep both copies in sync when modifying them and check Linux filename case.
 The MCP Server is located at:
 
 ```text
-rebotarm_ros2/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
+rebotarm_ros2_RS/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
 ```
 
 When adding a tool:
@@ -776,7 +776,7 @@ When adding a tool:
 
 ```bash
 source scripts/rs_env.sh
-python3 -m pytest rebotarm_ros2/src/rebotarmcontroller/test -q
+python3 -m pytest rebotarm_ros2_RS/src/rebotarmcontroller/test -q
 
 bash -n setup.sh rebotarm scripts/*.sh
 
@@ -908,7 +908,7 @@ The RS web console includes Service Worker/PWA support. First use `Ctrl+Shift+R`
 - Confirm that the Ubuntu, ROS 2, and Python versions match.
 - Confirm that rosdep is initialized and can update.
 - Run `./setup.sh --check` to see the missing items.
-- Confirm that `numpy`, `scipy`, `mujoco`, `pinocchio`, `motorbridge`, and `fastmcp` can be imported in `rebotarm_ros2/.venv`.
+- Confirm that `numpy`, `scipy`, `mujoco`, `pinocchio`, `motorbridge`, and `fastmcp` can be imported in `rebotarm_ros2_RS/.venv`.
 - Back up user files before deleting or resetting them, and do not solve build problems with destructive commands.
 
 ## Quick Command Table

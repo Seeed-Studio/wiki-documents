@@ -15,13 +15,13 @@ keywords:
 slug: /rebot_arm_b601_dm_web_simulator_developer_guide
 sku: 100065783, 100095532
 last_update:
-  date: 2026-08-07
+  date: 2026-08-24
   author: YinHaizhou
 translation:
   skip:
     - [zh-CN]
 createdAt: '2026-07-30'
-updatedAt: '2026-08-07'
+updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_web_simulator_developer_guide/
 ---
 
@@ -68,7 +68,7 @@ import TabItem from '@theme/TabItem';
    不依赖 Webpack/Vite 等打包工具，所有前端资源为原生 HTML/CSS/JS，由 Node.js 静态服务器直接托管，部署和调试成本极低。
 
 2. **URDF + STL 直接加载**  
-   通过 `URDFLoader` 从同仓库 ROS2 工作空间的 `src/rebotarm_bringup/description/` 读取 `reBot-DevArm_fixend.urdf` 与机械臂本体 STL 网格，本体模型无需在网页目录维护第二份副本。夹爪视觉网格因 URDF 末端止于 `end_link`，单独存放在网页目录的 `split_meshes/grouped_gripper/`。
+   通过 `URDFLoader` 从同仓库 `reBotArm_ros2_DM` 工作空间的 `src/rebotarm_bringup/description/` 读取 `ReBot_Arm_DM.urdf` 与 STL 网格，本体模型无需在网页目录维护第二份副本。该 URDF 包含完整夹爪定义；网页渲染时会隐藏 `end_link` 下的原始夹爪视觉件，并从 `split_meshes/grouped_gripper/` 加载 4 个优化夹爪 STL。
 
 3. **rosbridge 双向桥接**  
    通过 `ReBotRosClient` 封装 rosbridge JSON 协议，订阅关节状态、夹爪状态、机械臂状态、虚拟相机图像和视觉检测结果，发布单关节命令、夹爪命令和目标位姿。
@@ -144,7 +144,7 @@ sudo usermod -a -G dialout $USER
 :::tip
 `reBotArm_control_py` 是核心外部依赖，提供真机驱动、逆运动学、动力学计算和重力补偿。网页仿真器本身不直接 import 该 SDK，但 ROS2 后端的 `rebotarmcontroller` 真机节点、MuJoCo 力矩闭环与重力补偿功能都依赖它。如果只跑 Fake Driver + 网页的纯仿真模式，SDK 非必需；一旦要控制真机或使用重力补偿，必须安装。
 
-`setup.sh` 会自动从 [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) 获取 SDK，并安装到 `~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main/third_party/reBotArm_control_py/`（锁定到验证过的 commit）。如果已有 `~/reBotArm_control_py/`，也会被自动识别，不会重复克隆。
+`setup.sh` 会自动从 [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) 获取 SDK，并安装到 `~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM/third_party/reBotArm_control_py/`（锁定到验证过的 commit）。如果已有 `~/reBotArm_control_py/`，也会被自动识别，不会重复克隆。
 
 安装后目录结构：
 
@@ -161,7 +161,7 @@ reBotArm_control_py/
 └─ pyproject.toml
 ```
 
-SDK 的 `pyproject.toml` 声明 `requires-python >=3.10,<3.12`，但本项目通过 `sys.path` 引用而非 pip 安装，在 Python 3.12 下可正常工作。如果 `pip install -e .` 报版本冲突，跳过该步，确保目录在 `reBotArmController_ROS2-main/third_party/reBotArm_control_py/` 或 `~/reBotArm_control_py/` 即可（代码会自动搜索这些路径）。
+SDK 的 `pyproject.toml` 声明 `requires-python >=3.10,<3.12`，但本项目通过 `sys.path` 引用而非 pip 安装，在 Python 3.12 下可正常工作。如果 `pip install -e .` 报版本冲突，跳过该步，确保目录在 `reBotArm_ros2_DM/third_party/reBotArm_control_py/` 或 `~/reBotArm_control_py/` 即可（代码会自动搜索这些路径）。
 :::
 
 ### 步骤 1. 一键安装
@@ -177,7 +177,7 @@ cd ~/reBot_Arm_Mujoco-DM
 
 - 安装缺失的 apt 系统包（ROS 2、Node.js、ros-dev-tools 等）
 - 克隆 `reBotArm_control_py` SDK 到 `third_party/`（如已存在则跳过）
-- 创建 Python 虚拟环境（`reBotArmController_ROS2-main/.venv`，启用 `--system-site-packages`）
+- 创建 Python 虚拟环境（`reBotArm_ros2_DM/.venv`，启用 `--system-site-packages`）
 - 安装 `requirements.txt` 中的 Python 依赖
 - 从 `.env.example` 创建网页 `.env`
 - 执行 `rosdep` 依赖解析与 `colcon build --symlink-install`
@@ -311,7 +311,7 @@ node server.js
 终端 1 启动 Fake Driver：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 source scripts/source_rebotarm_env.sh
 ros2 launch rebotarm_bringup fake_bringup.launch.py
 ```
@@ -354,7 +354,7 @@ cd ~/reBot_Arm_Mujoco-DM
 
 </details>
 
-该脚本内部等同于 `reBotArmController_ROS2-main/scripts/start_rebot_mujoco_all.sh`，默认启动 Fake Driver、robot_state_publisher、MuJoCo physics grasp、task server、overhead RGB camera、color detector 和 rosbridge。随后在另一终端运行 `./rebotarm start web` 启动网页，浏览器连接 ROS 后可使用视觉抓取演示。
+该脚本内部等同于 `reBotArm_ros2_DM/scripts/start_rebot_mujoco_all.sh`，默认启动 Fake Driver、robot_state_publisher、MuJoCo physics grasp、task server、overhead RGB camera、color detector 和 rosbridge。随后在另一终端运行 `./rebotarm start web` 启动网页，浏览器连接 ROS 后可使用视觉抓取演示。
 
 
 ![MuJoCo 物理仿真](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_mujoco_physics.png)
@@ -397,7 +397,7 @@ reBot_Arm_Mujoco-DM/
 ├─ rebotarm                         统一启动、停止、状态和诊断入口
 ├─ requirements.txt                 Python 依赖兼容版本范围
 ├─ PROJECT_ARCHITECTURE_ZH.md       整体架构、仿真原理和防抖说明
-├─ reBotArmController_ROS2-main/    ROS 2 工作空间
+├─ reBotArm_ros2_DM/                ROS 2 工作空间
 │  ├─ scripts/                      一键启动脚本与环境加载
 │  ├─ third_party/                  新安装时的 reBotArm_control_py SDK
 │  ├─ .venv/                        项目 Python 虚拟环境（由 setup.sh 创建）
@@ -431,7 +431,7 @@ reBot_Arm_Mujoco-DM/
 `./rebotarm` 的所有命令内部会自动 `source scripts/source_rebotarm_env.sh`，无需手动加载环境。但如果直接运行裸 `ros2` 命令（如手动启动某个 launch 文件），仍需先 source：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 source scripts/source_rebotarm_env.sh
 ```
 
@@ -456,15 +456,15 @@ source scripts/source_rebotarm_env.sh
 
 ```javascript
 const BRINGUP_DIR = path.resolve(
-  path.join(ROOT, '..', 'reBotArmController_ROS2-main', 'src', 'rebotarm_bringup')
+  path.join(ROOT, '..', 'reBotArm_ros2_DM', 'src', 'rebotarm_bringup')
 );
-const URDF_FILE = path.join(BRINGUP_DIR, 'description', 'urdf', 'reBot-DevArm_fixend.urdf');
+const URDF_FILE = path.join(BRINGUP_DIR, 'description', 'urdf', 'ReBot_Arm_DM.urdf');
 const MESHES_DIR = path.join(BRINGUP_DIR, 'description', 'meshes');
 const GRIPPER_MESHES_DIR = path.join(ROOT, 'split_meshes', 'grouped_gripper');
 ```
 
 :::note
-`server.js` 通过相对路径 `../reBotArmController_ROS2-main/...` 定位 ROS2 工作空间。如果将网页目录单独迁移到其他位置，需要同步修改这些路径，或在网页目录维护一份与 ROS2 工作空间同版本的模型副本。
+`server.js` 通过相对路径 `../reBotArm_ros2_DM/...` 定位 ROS2 工作空间。如果将网页目录单独迁移到其他位置，需要同步修改这些路径，或在网页目录维护一份与 ROS2 工作空间同版本的模型副本。
 :::
 
 **rebot-sim.js — 3D 场景核心**
@@ -623,7 +623,7 @@ function threeToRos(v) {
 在 Ubuntu 虚拟机启动 MCP Server（默认锁定模式，只读）：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 source scripts/source_rebotarm_env.sh
 ros2 launch rebotarm_agent rebotarm_mcp.launch.py
 ```
@@ -637,7 +637,7 @@ ros2 launch rebotarm_agent rebotarm_mcp.launch.py motion_mode:=allow
 启动 text-agent HTTP 服务（供网页调用）：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 <details>
@@ -685,7 +685,7 @@ MCP Dashboard 是独立的调试入口，不需要网页仿真器。启动需要
 **终端 1 — 启动 MCP Server：**
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 source scripts/source_rebotarm_env.sh
 ros2 launch rebotarm_agent rebotarm_mcp.launch.py motion_mode:=allow
 ```
@@ -693,7 +693,7 @@ ros2 launch rebotarm_agent rebotarm_mcp.launch.py motion_mode:=allow
 **终端 2 — 启动 text-agent（内含 MCP Dashboard）：**
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 
@@ -817,7 +817,7 @@ rosbridge WebSocket 地址由用户在网页「ROS2 桥接」面板手动输入�
 网页提示「连接失败」时，确认 Ubuntu 虚拟机中已启动 text-agent HTTP 服务：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 
@@ -850,7 +850,7 @@ cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
 
 - ROS apt 源未配置：安装器会自动下载 `ros2-apt-source` 包并添加源，需 sudo 权限；
 - Python 版本不匹配：Jazzy 需要 3.12，Humble 需要 3.10，版本不符会列在 `Version/platform mismatches`；
-- SDK 克隆失败：检查网络与 GitHub 可达性，或手动克隆到 `reBotArmController_ROS2-main/third_party/reBotArm_control_py/` 后重跑；
+- SDK 克隆失败：检查网络与 GitHub 可达性，或手动克隆到 `reBotArm_ros2_DM/third_party/reBotArm_control_py/` 后重跑；
 - `colcon build` 失败：检查 `rosdep` 是否已初始化（`sudo rosdep init && rosdep update`），然后重跑 `./setup.sh`。
 
 ## 联系方式
