@@ -1,6 +1,28 @@
 const docList = [
   [
     {
+      "path": "/sensecap_combo_introduction",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Combo/SenseCAP_Combo_5in1_4G.webp",
+      "title": "SenseCAP Combo 5-in-1 Sensor with 4G Introduction",
+      "date": "2026-08-23",
+      "title_cn": "SenseCAP Combo 5 合 1 传感器（带 4G）简介",
+      "title_ja": "SenseCAP Combo 5-in-1 Sensor with 4G 概要",
+      "title_es": "Introducción al sensor SenseCAP Combo 5 en 1 con 4G",
+      "title_pt": "Introdução ao Sensor SenseCAP Combo 5-em-1 com 4G"
+    },
+    {
+      "path": "/recamera_jetson_vlm_gateway",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
+      "title": "Build a reCamera and NVIDIA Jetson VLM Event Gateway",
+      "date": "2026-08-20",
+      "title_cn": "构建 reCamera 与 NVIDIA Jetson VLM 事件网关",
+      "title_ja": "reCamera と NVIDIA Jetson で VLM イベントゲートウェイを構築する",
+      "title_es": "Crea una pasarela de eventos VLM con reCamera y NVIDIA Jetson",
+      "title_pt": "Criar um Gateway de Eventos VLM com reCamera e NVIDIA Jetson"
+    }
+  ],
+  [
+    {
       "path": "/jetson_fisheye_surround_view_demo",
       "image": "https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif",
       "title": "Build a Four-Camera Fisheye Surround View Demo on Jetson",
@@ -11,6 +33,18 @@ const docList = [
       "title_pt": "Crie uma Demonstração de Visão Surround com Olho de Peixe de Quatro Câmeras no Jetson"
     },
     {
+      "path": "/recamera_deploy_monocular_depth",
+      "image": "https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-indoor-office-result.png",
+      "title": "Deploy Monocular Depth Estimation on reCamera (FastDepth, INT8)",
+      "date": "2026-08-18",
+      "title_cn": "在 reCamera 上部署单目深度估计（FastDepth，INT8）",
+      "title_ja": "reCamera で単眼深度推定をデプロイする (FastDepth, INT8)",
+      "title_es": "Desplegar Estimación de Profundidad Monocular en reCamera (FastDepth, INT8)",
+      "title_pt": "Implantar Estimação de Profundidade Monocular na reCamera (FastDepth, INT8)"
+    }
+  ],
+  [
+    {
       "path": "/install_ubuntu_on_sensecap_m4",
       "image": "https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview.png",
       "title": "Install Ubuntu on SenseCAP M4 via USB",
@@ -19,18 +53,6 @@ const docList = [
       "title_ja": "USB 経由で SenseCAP M4 に Ubuntu をインストールする",
       "title_es": "Instalar Ubuntu en SenseCAP M4 vía USB",
       "title_pt": "Instalar o Ubuntu no SenseCAP M4 via USB"
-    }
-  ],
-  [
-    {
-      "path": "/recamera_deploy_monocular_depth",
-      "image": "https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-indoor-office-result.png",
-      "title": "Deploy Monocular Depth Estimation on reCamera (FastDepth, INT8)",
-      "date": "08/18/2026",
-      "title_cn": "在 reCamera 上部署单目深度估计（FastDepth，INT8）",
-      "title_ja": "reCamera で単眼深度推定をデプロイする (FastDepth, INT8)",
-      "title_es": "Desplegar Estimación de Profundidad Monocular en reCamera (FastDepth, INT8)",
-      "title_pt": "Implantar Estimação de Profundidade Monocular na reCamera (FastDepth, INT8)"
     },
     {
       "path": "/rebot_arm_b601_dm_isaacsim",
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "reBot Arm B601-RS で MIT 位置制御を始める",
       "title_es": "Introducción al control de posición MIT en reBot Arm B601-RS",
       "title_pt": "Introdução ao Controle de Posição MIT no reBot Arm B601-RS"
-    }
-  ],
-  [
-    {
-      "path": "/streaming_vision_agent_on_jetson",
-      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-100020039-recomputer-mini-j501---carrier-board-for-jetson-agx-orin.jpg",
-      "title": "Streaming Vision Agent on Jetson",
-      "date": "2026-08-03",
-      "title_cn": "Jetson 上的 Streaming Vision Agent",
-      "title_ja": "Jetson 上の Streaming Vision Agent",
-      "title_es": "Agente de Visión en Streaming en Jetson",
-      "title_pt": "Streaming Vision Agent no Jetson"
-    },
-    {
-      "path": "/deploy_tensorrt_edge_llm_on_jetpack7.2",
-      "image": "https://files.seeedstudio.com/wiki/tensorRT-edge-llm_imgs/7.png",
-      "title": "Deploy TensorRT Edge-LLM on JetPack 7.2",
-      "date": "2026-07-31",
-      "title_cn": "在 JetPack 7.2 上部署 TensorRT Edge-LLM",
-      "title_ja": "JetPack 7.2 に TensorRT Edge-LLM をデプロイする",
-      "title_es": "Implementar TensorRT Edge-LLM en JetPack 7.2",
-      "title_pt": "Implantar TensorRT Edge-LLM no JetPack 7.2"
     }
   ]
 ];
