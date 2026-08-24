@@ -37,12 +37,17 @@ The BEV is then used as a shared perception layer:
 
 This demo is intended to assist **robot-arm grasping** and provide **positioning support for chassis movement**.
 
-<div align="center">
+{/* <div align="center">
   <img width={900}
    src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif" />
-</div>
+</div> */}
 
 <div align="center">
+  <img width={900}
+   src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.png" />
+</div>
+
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/o0NTeeLV4Vk" title="Four-Camera Fisheye Surround View Demo on Jetson AGX Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
