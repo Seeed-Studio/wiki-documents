@@ -765,7 +765,7 @@ module.exports = (async () => {
         },
         contextualSearch: true,
         typesense: {
-          typesenseCollectionName: 'wiki_platform_test_1767765204',
+          typesenseCollectionName: 'wiki_platform_test_1786699337',
           typesenseServerConfig: {
             nodes: [
               {
@@ -773,7 +773,7 @@ module.exports = (async () => {
                 protocol: 'https',
               },
             ],
-            apiKey: 'z1DHV8drOZizrn9TSlf0U9QgNENgBxGR',
+            apiKey: 'jg8FxERlXCzK7oNzMnQXPJF9tR8fNanz',
           },
           typesenseSearchParameters: {
             query_by: 'hierarchy.lvl0,hierarchy.lvl2,content,sku_tag',
