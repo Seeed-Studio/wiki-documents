@@ -1,7 +1,8 @@
 ---
-description: Build a four-camera fisheye surround-view demo on Jetson. Stitch a real-time BEV for chassis positioning, use YOLO to assist robot-arm grasping, and use a VLM to help understand the scene.
-title: Build a Four-Camera Fisheye Surround View Demo on Jetson
+description: Build a four-camera fisheye surround-view demo on Jetson AGX Thor. Stitch a real-time BEV for chassis positioning, use YOLO to assist robot-arm grasping, and use a VLM to help understand the scene.
+title: Build a Four-Camera Fisheye Surround View Demo on Jetson AGX Thor
 keywords:
+  - Jetson AGX Thor
   - Jetson
   - Computer Vision
   - surround view
@@ -12,6 +13,7 @@ keywords:
   - VLM
   - robot arm
   - reComputer
+  - Sensing
 image: https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif
 slug: /jetson_fisheye_surround_view_demo
 sku: 100066562
@@ -25,7 +27,7 @@ url: https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/
 
 ## Introduction
 
-This project shows a **four-camera fisheye surround-view system** on NVIDIA Jetson. Four fisheye cameras around the chassis are calibrated, undistorted, and stitched into a real-time **bird's-eye view (BEV)**.
+This project shows a **four-camera fisheye surround-view system** on NVIDIA Jetson AGX Thor. Four fisheye cameras around the chassis are calibrated, undistorted, and stitched into a real-time **bird's-eye view (BEV)**.
 
 The BEV is then used as a shared perception layer:
 
@@ -48,17 +50,23 @@ In the demo, the four cameras face **front, back, left, and right**. After calib
 - Targets such as bottles, cartons, or chairs can be localized in the vehicle frame for grasp assistance
 - The VLM can summarize the current view in short English for scene understanding
 
-This demo is verified on **reComputer Robotics J601**.
+This demo is verified on **reComputer Robotics J601** with **Jetson AGX Thor**.
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
         <th> reComputer Robotics J601 </th>
+        <th> Sensing SG3S-ISX031C-GMSL2F </th>
     </tr>
     <tr>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg" style={{width:500, height:'auto'}}/>
+                <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg" style={{width:400, height:'auto'}}/>
+            </div>
+        </td>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090101-3mp-gmsl2-camera-module-190-degree.jpg" style={{width:400, height:'auto'}}/>
             </div>
         </td>
     </tr>
@@ -66,6 +74,13 @@ This demo is verified on **reComputer Robotics J601**.
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thor-p-6937.html" target="_blank" rel="noopener noreferrer">
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                </a>
+            </div>
+        </td>
+        <td>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html" target="_blank" rel="noopener noreferrer">
                     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
                 </a>
             </div>
@@ -95,7 +110,7 @@ YOLO is for **where the target is**. The VLM is for **what the scene looks like*
 - **Occupancy grid** for chassis movement assistance
 - **YOLO-World open-vocabulary detection** for grasp assistance
 - **VLM scene captioning** for scene understanding
-- Support for **Jetson Thor** and **AGX Orin / generic Jetson** workflows
+- Verified on **Jetson AGX Thor** / **reComputer Robotics J601**
 
 ## What Is This Demo
 
@@ -121,8 +136,8 @@ The pipeline is:
 
 ### Hardware
 
-- A Jetson device such as **reComputer Robotics J601** or **Jetson AGX Orin**
-- **Four USB fisheye cameras**
+- **reComputer Robotics J601** (Jetson AGX Thor)
+- **Four USB fisheye cameras** (Seeed also sells the [Sensing SG3S-ISX031C-GMSL2F](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html) fisheye camera)
 - A display or a remote desktop session
 - Network access if you open the calibration page from another computer
 
@@ -326,7 +341,7 @@ The result is still a **ground-plane approximation**. It is not a 6-DoF grasp po
 - **YOLO** localizes targets to assist grasping; it does not close the grasp loop by itself
 - **VLM** output is for **scene understanding**, not for coordinates
 - Occupancy is a **2D ground hint**, not a LiDAR SLAM map
-- Real-time stitching is intended for **CUDA-enabled Jetson systems**
+- Real-time stitching is intended for **CUDA-enabled Jetson AGX Thor**
 - CPU-only mode is useful for debugging, but not recommended for live deployment
 
 ## Resources
