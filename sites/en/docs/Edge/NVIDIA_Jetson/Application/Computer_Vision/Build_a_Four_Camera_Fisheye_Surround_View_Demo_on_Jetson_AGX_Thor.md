@@ -27,15 +27,7 @@ url: https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/
 
 ## Introduction
 
-This project shows a **four-camera fisheye surround-view system** on NVIDIA Jetson AGX Thor. Four fisheye cameras around the chassis are calibrated, undistorted, and stitched into a real-time **bird's-eye view (BEV)**.
-
-The BEV is then used as a shared perception layer:
-
-- **Occupancy analysis** gives nearby free-space and obstacle hints for **chassis movement**
-- **YOLO-World** detects and localizes targets to **assist robot-arm grasping**
-- **A VLM** generates a short English caption to **help you understand the scene**
-
-This demo is intended to assist **robot-arm grasping** and provide **positioning support for chassis movement**.
+This demo runs a **four-camera fisheye surround-view** pipeline on **NVIDIA Jetson AGX Thor**. Four cameras around the chassis are calibrated and stitched into a real-time **bird's-eye view (BEV)**. Occupancy hints chassis motion, YOLO-World localizes grasp targets, and a VLM captions the scene.
 
 {/* <div align="center">
   <img width={900}
@@ -46,15 +38,17 @@ This demo is intended to assist **robot-arm grasping** and provide **positioning
 <iframe width="800" height="450" src="https://www.youtube.com/embed/o0NTeeLV4Vk" title="Four-Camera Fisheye Surround View Demo on Jetson AGX Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-In the demo, the four cameras face **front, back, left, and right**. After calibration and GPU stitching, the top-down BEV follows this layout:
+BEV layout after stitching:
 
 - **Top of the image** = vehicle front
 - **Center of the image** = vehicle body
-- Nearby obstacles and free directions are visible around the chassis
-- Targets such as bottles, cartons, or chairs can be localized in the vehicle frame for grasp assistance
-- The VLM can summarize the current view in short English for scene understanding
+- Cameras face **front, back, left, and right**
 
-This demo is verified on **reComputer Robotics J601** with **Jetson AGX Thor**.
+:::note
+YOLO answers **where the target is**. The VLM answers **what the scene looks like**. Occupancy is a 2D ground hint, not a LiDAR map.
+:::
+
+This demo is verified on **reComputer Robotics J601**.
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
@@ -93,48 +87,12 @@ This demo is verified on **reComputer Robotics J601** with **Jetson AGX Thor**.
 </table>
 </div>
 
-## What Each Module Does
-
-| Module | What it does | What it is for |
-| --- | --- | --- |
-| Surround stitching | Builds a real-time top-down BEV from four fisheye cameras | Shared surround view around the chassis |
-| Occupancy analysis | Estimates nearby free space and obstacles on the ground plane | Assist chassis movement and positioning |
-| YOLO-World | Detects open-vocabulary targets and reports 2D position in the vehicle frame | Assist robot-arm grasping |
-| VLM caption | Generates a short English description of the current BEV | Help an operator or agent understand the scene |
-
-:::note
-YOLO is for **where the target is**. The VLM is for **what the scene looks like**. Occupancy is a 2D ground hint, not a LiDAR map, and the VLM caption is not a coordinate source.
-:::
-
 ## Key Features
 
-- Real-time **four-camera fisheye surround stitching**
-- **GPU remap, warp, and blending** with CUDA OpenCV
-- **Web-based calibration** for intrinsics, extrinsics, and seams
-- **Occupancy grid** for chassis movement assistance
-- **YOLO-World open-vocabulary detection** for grasp assistance
-- **VLM scene captioning** for scene understanding
+- GPU stitching with CUDA OpenCV
+- Web calibration for intrinsics, extrinsics, and seams
+- Occupancy, YOLO-World, and VLM on one shared BEV
 - Verified on **Jetson AGX Thor** / **reComputer Robotics J601**
-
-## What Is This Demo
-
-This demo turns four fisheye streams into one BEV image, then runs perception on that shared view.
-
-Compared with a single-camera pipeline, the surround-view workflow gives you:
-
-- **360-degree ground awareness** around the chassis
-- **Top-down visualization** that is easier to use for navigation and grasp assistance
-- **One shared BEV** for occupancy, target localization, and scene captioning
-- **A calibration flow** that can be repeated on real hardware
-
-The pipeline is:
-
-1. Capture images from four fisheye cameras
-2. Run fisheye intrinsic calibration
-3. Estimate extrinsic alignment and homographies
-4. Undistort and warp each camera image onto a ground-plane BEV
-5. Blend the four views into one surround image
-6. Run occupancy, YOLO grasp assistance, and VLM scene understanding on the stitched BEV
 
 ## Prerequisites
 
