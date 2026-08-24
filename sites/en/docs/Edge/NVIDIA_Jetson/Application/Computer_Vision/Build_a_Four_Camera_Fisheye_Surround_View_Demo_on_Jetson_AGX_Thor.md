@@ -16,7 +16,7 @@ keywords:
   - Sensing
 image: https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif
 slug: /jetson_fisheye_surround_view_demo
-sku: 100066562
+sku: 100066562, 101090101
 last_update:
   date: 08/24/2026
   author: haochen
