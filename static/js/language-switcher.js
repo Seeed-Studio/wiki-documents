@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-19 10:59:37 (北京时间)
-// 多语言页面: 2451 个
+// 生成时间: 2026-08-24 13:43:49 (北京时间)
+// 多语言页面: 2454 个
 
 (function() {
   'use strict';
@@ -3720,6 +3720,13 @@
     "pt"
   ],
   "/recamera_qrcode_udp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_jetson_vlm_gateway": [
     "cn",
     "en",
     "es",
@@ -12423,7 +12430,7 @@
     "ja",
     "pt"
   ],
-  "/xiao_esp32c5_buletooth_usage": [
+  "/xiao_esp32c5_bluetooth_usage": [
     "cn",
     "en",
     "es",
@@ -13964,6 +13971,20 @@
     "pt"
   ],
   "/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/get_started_with_sensecap_combo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_combo_introduction": [
     "cn",
     "en",
     "es",
