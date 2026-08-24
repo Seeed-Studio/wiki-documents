@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO ESP32-C5 での Platform IO
+title: Seeed Studio XIAO ESP32-C5 で Platform IO を使う
 description: ''
 keywords:
   - xiao
@@ -22,21 +22,21 @@ import TabItem from '@theme/TabItem';
 
 ## [PlatformIO](https://platformio.org/) の紹介
 
-PlatformIOは、組み込みシステム向けに設計された強力で高度に拡張可能な開発エコシステムです。膨大な数の開発ボードとマイクロコントローラーのサポートをシームレスに統合し、比類のない柔軟性を提供します。PlatformIOの特徴は、その優れたスケーラビリティです：特定のボードがネイティブにサポートされていない場合でも、そのアーキテクチャにより簡単にカスタムボード定義を作成できます。
+PlatformIO は、組み込みシステム向けに設計された強力で高い拡張性を持つ開発エコシステムです。非常に多くの開発ボードやマイコンをシームレスにサポートし、比類ない柔軟性を提供します。PlatformIO を特徴づけているのは、その優れたスケーラビリティです。たとえあなたのボードがネイティブにはサポートされていなくても、そのアーキテクチャにより、カスタムボード定義を簡単に追加できます。
 
-重要なことに、PlatformIOはArduinoに慣れ親しんだ開発者のギャップを埋め、関連するライブラリを含めるだけでArduinoスタイルのコードのコンパイルとデプロイを可能にします。
+特に、Arduino に慣れた開発者にとっては、関連ライブラリをインクルードするだけで Arduino スタイルのコードをコンパイルして書き込めるため、PlatformIO はそのギャップを埋める存在となっています。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://platformio.org/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 詳細を見る 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://platformio.org/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 詳しく見る 🖱️</font></span></strong></a>
 </div>
 
-## XIAO ESP32-C5 での PlatformIO の使用
+## XIAO ESP32-C5 で PlatformIO を使う
 
-次に、PlatformIOベースでXIAO ESP32-C5の開発を行い、PlatformIOの開発ワークフローを探索していきます。
+次に、PlatformIO をベースに XIAO ESP32-C5 の開発を行い、PlatformIO の開発ワークフローを一緒に体験していきます。
 
 ### ハードウェアの準備
 
-事前に **XIAO ESP32-C5** を準備する必要があります。
+事前に **XIAO ESP32-C5** を 1 つ用意してください。
 
 <div class="table-center">
  <table>
@@ -57,49 +57,74 @@ PlatformIOは、組み込みシステム向けに設計された強力で高度�
  </table>
 </div>
 
-### VS Code のダウンロード
+### VS Code をダウンロード
 
-使用しているシステムに応じて [VS Code](https://code.visualstudio.com/download) をダウンロードしてください
+使用している OS に応じて [VS Code](https://code.visualstudio.com/download) をダウンロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
-### PlatformIO のインストール
+### PlatformIO をインストール
 
-VSCodeを開き、Extensionsをクリックし、PlatformIOを検索してインストールを選択します。インストールが完了したら、VSCodeを再起動してください。
+VSCode を開き、Extensions をクリックして PlatformIO を検索し、インストールを選択します。インストールが完了したら、VSCode を再起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
 
-### 新しいプロジェクト
+### platform-seeedboards プラットフォームパッケージをインストール
 
-- PIO Homeインターフェースを開き、`New Project`を選択します
+Seeed Studio XIAO シリーズのボードはカスタム PlatformIO プラットフォームを使用しているため、対応するプラットフォームパッケージを手動でインストールする必要があります。
+
+- 新規インストールの場合は、次のコマンドを実行します：
+
+```bash
+pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+- すでに PlatformIO で Seeed Studio XIAO シリーズボードを使用したことがある場合は、以下のコマンドを実行して更新します：
+
+```bash
+# for Windows
+pio pkg update -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+
+# for macOS/Linux
+pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
+```
+
+:::tip
+
+既存の PlatformIO プロジェクトを使用したい場合は、**platformio.ini** の内容を次のように置き換えてください：
+
+```ini
+[env:seeed-xiao-esp32-c5]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+framework = arduino
+board = seeed-xiao-esp32-c5
+monitor_speed = 115200
+```
+
+:::
+
+### 新規プロジェクト
+
+- PIO Home 画面を開き、`New Project` を選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
 - Name: プロジェクト名を入力します
 - Board: **Seeed Studio XIAO ESP32-C5** を選択します
-- Framework: Arduinoを選択します
-- Location: エンジニアリングファイルのパスは、カスタムパスまたはデフォルトパスを選択できます。
-- **Finish** をクリックして作成が完了するまで待ちます。その後、ワークスペースでプロジェクトファイルを開きます。
+- Framework: Ardunio を選択します
+- Location: プロジェクトファイルのパスは、カスタムパスを設定するか、デフォルトパスを選択できます。
+- **Finish** をクリックし、作成が完了するまで待ちます。その後、ワークスペースでプロジェクトファイルを開きます。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_1.png" style={{width:600, height:'auto'}}/></div>
 
-別のPlatformIOプロジェクトをベースに変更したい場合は、以下の設定を直接参照することもできます。
+### LED 点滅サンプル
 
-- platfromio.ini
+この LED 点滅サンプルでは、PlatformIO を使ったコンパイルと書き込みの手順を説明します。
 
-```ini
-[env:seeed-xiao-esp32-c5]
-platform = Seeed Studio
-board = seeed-xiao-esp32-c5
-framework = arduino
-monitor_speed = 115200
-```
-
-### LED点滅の例
-
-このLED点滅の例では、PlatformIOを使用してファイルをコンパイルおよびアップロードする方法をガイドします。
-
-**ステップ 1.** サンプルコードをコピーします
+**Step 1.** サンプルコードをコピーする
 
 ```cpp
 #include <Arduino.h>
@@ -123,9 +148,9 @@ void loop()
 }
 ```
 
-**ステップ 2.** プロジェクトをビルドします
+**Step 2.** プロジェクトをビルドする
 
-  VS Codeの下部のステータスバーにある ***√*** アイコンをクリックしてビルドします。
+  VS Code 下部のステータスバーにある ***√*** アイコンをクリックしてビルドします。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -133,30 +158,30 @@ void loop()
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_3.png" style={{width:800, height:'auto'}}/></div><br/>
 
-**ステップ 3.** アップロード
+**Step 3.** アップロード
 
-  VS Codeの下部のステータスバーにある **→** アイコンをクリックしてアップロードします。
+  VS Code 下部のステータスバーにある **→** アイコンをクリックしてアップロードします。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_3_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
-**ステップ 4.** プログラムの効果を確認します
+**Step 4.** 動作を確認する
 
-下図のようにシリアルモニターを開きます。1秒間隔でLEDのオン/オフ状態が印刷されます。
+下図のようにシリアルモニタを開きます。1 秒間隔で LED のオン／オフ状態が出力されます。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_4.png" style={{width:800, height:'auto'}}/></div><br/>
 
-LEDは同じ1秒間隔で点滅します。
+LED も同じく 1 秒間隔で点滅します。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:400, height:'auto'}}/></div><br/>
 
-### 5 GHz Wi-Fi接続の例
+### 5 GHz Wi-Fi 接続サンプル
 
-XIAO ESP-C5は2.4 GHz & 5 GHzデュアルバンドWi-Fi 6をサポートしています。この例では、5 GHz Wi-Fiネットワークへの接続効果を実演します。<br/>
+XIAO ESP-C5 は 2.4 GHz & 5 GHz のデュアルバンド Wi-Fi 6 をサポートしています。このサンプルでは、5 GHz Wi-Fi ネットワークに接続した際の動作を確認します。<br/>
 
-以下のコードをPlatformIOプロジェクトにコピーしてください。
+以下のコードを PlatformIO プロジェクトにコピーします。
 <details>
 
-<summary> WiFi接続参考コード </summary>
+<summary> WiFi 接続リファレンスコード </summary>
 
 ```cpp
 #include <Arduino.h>
@@ -248,18 +273,18 @@ void loop() {
 
 コードをビルドしてアップロードします<br/>
 
-XIAO ESP32-C5がWiFiに接続されると、シリアルモニターは接続されたWiFiネットワークの信号強度などの情報を印刷します。<br/>
-XIAO ESP32-C5が5 GHz Wi-Fiネットワークに接続する強力な能力を持っていることも明確に確認できます。
+XIAO ESP32-C5 が WiFi に接続されると、シリアルモニタに接続中の WiFi ネットワークの信号強度などの情報が表示されます。<br/>
+また、XIAO ESP32-C5 が 5 GHz Wi-Fi ネットワークへの接続能力に優れていることも、はっきりと確認できます。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_5_1.png" style={{width:600, height:'auto'}}/></div><br/>
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_6.png" style={{width:600, height:'auto'}}/></div><br/>
 
-上記の2つの例に従って、PlatformIOの基本的な開発操作をマスターしたはずです。XIAO ESP32-C5でより興味深いプロジェクトを作成していただけることを楽しみにしています！
+上記の2つのサンプルに従うことで、PlatformIO の基本的な開発操作を習得できたはずです。XIAO ESP32-C5 を使って、さらに面白いプロジェクトを作成していただけることを楽しみにしています！
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
