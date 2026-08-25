@@ -17,7 +17,7 @@ last_update:
 createdAt: '2026-08-24'
 updatedAt: '2026-08-24'
 sidebar_position: 1
-url: https://wiki.seeedstudio.com/cn/recamera_pro_visual_wake_stt/
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_visual_wake_stt/
 ---
 
 # Crie um sistema de despertar visual e reconhecimento de fala offline com reCamera Pro
