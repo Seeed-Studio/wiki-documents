@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-24 13:43:49 (北京时间)
-// 多语言页面: 2454 个
+// 生成时间: 2026-08-24 16:58:59 (北京时间)
+// 多语言页面: 2455 个
 
 (function() {
   'use strict';
@@ -12041,7 +12041,6 @@
   "/respeaker_xvf3800_introduction": [
     "cn",
     "en",
-    "es",
     "ja",
     "pt"
   ],
@@ -12102,6 +12101,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_xiao_http_audio_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf_3800_i2c_list": [
     "cn",
     "en",
     "es",
