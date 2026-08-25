@@ -194,7 +194,7 @@ After downloading the library, go to **Sketch** -> **Include Library** -> **Add 
 ### Configure and burn the program
 
 As shown in the image, navigate to the example through this menu:
-File → Examples → Seeed_GFX2 → ePaper Displays → ESP32 Series → EE02 → 13.3-inch ePaper Displays → 13_3_inch_Spectra6_HelloWorld
+File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → EE02 → 13.3-inch ePaper Displays → 13_3_inch_Spectra6_HelloWorld
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/16.png" style={{width:800, height:'auto'}}/></div>
@@ -205,7 +205,7 @@ Note that PSRAM must be enabled.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
 Then click **Upload** to upload the code.
-Now you will see the feedback in your epaper screen! Following are the results of Bitmap examples.
+Now you will see the feedback in your epaper screen! Following is the result of the HelloWorld example..
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/18.png" style={{width:500, height:'auto'}}/></div>
 
 ## Troubleshooting
