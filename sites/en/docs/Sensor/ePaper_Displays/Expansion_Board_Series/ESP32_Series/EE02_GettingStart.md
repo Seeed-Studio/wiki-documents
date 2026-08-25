@@ -205,7 +205,7 @@ Note that PSRAM must be enabled.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
 Then click **Upload** to upload the code.
-Now you will see the feedback in your epaper screen! Following is the result of the HelloWorld example..
+Now you will see the feedback in your epaper screen! Following is the result of the HelloWorld example.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/18.png" style={{width:500, height:'auto'}}/></div>
 
 ## Troubleshooting
