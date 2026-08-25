@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/wifi_halow_getting_started/
 
 Before starting the configuration, please make sure you have the following hardware ready:
 * **Data Cable**: A USB Type-C cable with data transfer capabilities (do not use cables that only have charging functions).
-* **reCamera**: A reCamera device with the bottom board removed.
+* **reCamera**: A reCamera 2002 device with the bottom board removed.
 ---
 
 
