@@ -32,7 +32,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="ttps://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
    </div></td>
