@@ -468,6 +468,14 @@ Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
  Press and hold the button, then connect the charging cable.
 
+ ### Temperature Reading Accuracy
+
+The temperature data is read from barometer, rather than reading from an independent temperature sensor.Device will generate heat while operation. So the measured temperature will be higher than the actual temperature.
+
+### Power Consumption
+
+You can calculate the power consumption through the [Power Consumption Table](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK). This device is equipped with a high-voltage battery. When the battery power is low, it will accelerate the discharge process. This device is equipped with a high-voltage battery. When the battery power is low, it will accelerate the discharge process. So you will notice that the device consumes power very rapidly when it is on low battery.
+
 ## Troubleshooting
 
 ### Device never turns on
