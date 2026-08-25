@@ -17,7 +17,7 @@ last_update:
 createdAt: '2026-08-24'
 updatedAt: '2026-08-24'
 sidebar_position: 1
-url: https://wiki.seeedstudio.com/recamera_pro_visual_wake_stt/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_visual_wake_stt/
 ---
 
 # 使用 reCamera Pro 构建视觉唤醒与离线语音识别系统
