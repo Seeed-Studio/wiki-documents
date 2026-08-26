@@ -27,11 +27,12 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_gpio_guide/
 
 :::note
 在reCamera Pro 上，引出的普通GPIO就只有两个，而且输出的电压是12v~21v之间(与DC-IN输入相关)的，并不适用于绝大多数设备，但是我们可以将扩展接口上面的UART或者CAN引脚复用成普通的GPIO，这部分GPIO输出电压是标准的3.3V。
-::: 
+:::
 
 ## 查找 GPIO 引脚
 
 首先，请参考下图找到您需要使用的 GPIO 引脚位置：
+
 ![扩展接口图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Expansion_CON.jpg)
 ![CAN引脚图](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/recamera_pro_can_gpio.jpg)
 
@@ -144,7 +145,6 @@ time.sleep(1)
 #     value = f.read().strip()
 #     print(value)
 ```
-
 
 ## 资源
 
