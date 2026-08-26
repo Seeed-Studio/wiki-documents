@@ -466,7 +466,15 @@ Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
 ### Cómo reiniciar el dispositivo
 
- Mantén pulsado el botón y luego conecta el cable de carga.
+Mantén pulsado el botón y luego conecta el cable de carga.
+
+### Precisión de la lectura de temperatura
+
+Los datos de temperatura se obtienen del sensor barométrico, en lugar de un sensor de temperatura independiente. El dispositivo genera calor durante su funcionamiento, por lo que la temperatura medida puede ser superior a la temperatura ambiente real.
+
+### Consumo de energía
+
+Puede calcular el consumo de energía mediante la [Tabla de consumo de energía](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK). Este dispositivo está equipado con una batería de alto voltaje. Cuando el nivel de batería es bajo, el proceso de descarga se acelera. Por lo tanto, puede observar que el dispositivo consume energía muy rápidamente cuando la batería tiene poca carga.
 
 ## Solución de problemas
 
