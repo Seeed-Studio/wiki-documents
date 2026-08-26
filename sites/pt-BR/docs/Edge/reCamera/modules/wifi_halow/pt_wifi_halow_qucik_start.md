@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/pt-br/wifi_halow_getting_started/
 
 Antes de iniciar a configuração, certifique-se de que você tenha o seguinte hardware pronto:
 * **Cabo de dados**: Um cabo USB Type-C com capacidade de transferência de dados (não use cabos que tenham apenas função de carregamento).
-* **reCamera**: Um dispositivo reCamera com a placa inferior removida.
+* **reCamera**: Um dispositivo reCamera 2002 com a placa inferior removida.
 ---
 
 
@@ -81,13 +81,13 @@ Após conectar o cabo USB e fazer login na interface Web através do endereço I
 - ***Enable Halow***: Interruptor para habilitar o módulo Wifi Halow
 - ***Keep-Alive***: Interruptor para a função Keep-Alive para manter a conexão com o servidor (o intervalo de tempo do Keep-Alive pode ser ajustado nas configurações para um mínimo de 1s) para evitar desconexão
 - ***Networks Found***: Exibe a lista de redes sem fio atualmente escaneadas (se o wifi ao qual você deseja se conectar não for encontrado, você pode clicar no botão '+' à direita para adicionar uma rede manualmente)
-- ***IPEX Antenna***: Alternar antenas (há duas antenas no módulo Wifi Halow: uma antena SMA externa e uma antena IPEX interna). Ativar esta opção habilita a antena interna, veja a figura abaixo para mais detalhes:
+- ***IPEX Antenna***: Alternar antenas (existem duas antenas no módulo Wifi Halow: uma antena SMA externa e uma antena IPEX interna). Ao ativar esta opção, a antena interna é habilitada, veja a figura abaixo para detalhes:
 
   ![Antenna location](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/wifi_halow_antenna.jpg)
 
 ---
 
-## Conectando-se a uma Rede Wi‑Fi HaLow
+## Conectando a uma Rede Wi‑Fi HaLow
 
 1. Selecione a rede Wifi Halow à qual você deseja se juntar em ***Networks Found***
 2. Clique na rede à qual você deseja se conectar, mantenha a mesma configuração da sua rede, insira a senha e clique em ***Confirm*** para conectar
@@ -114,18 +114,18 @@ Após conectar à reCamera usando o comando ***ssh***, insira o seguinte comando
 curl -s [http://192.168.42.1/api/deviceMgr/queryBatteryInfo](http://192.168.42.1/api/deviceMgr/queryBatteryInfo) | python3 -c 'import sys,json; print(json.load(sys.stdin)["data"]["voltage"])'
 ```
 
-O resultado é mostrado na figura abaixo:
+O efeito é mostrado na figura abaixo:
 ![linux_battery_voltage](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/wifi_halow_linux_bat.png)
 
 :::note Note
 1. Quando nenhuma bateria estiver conectada, os valores exibidos pelos dois métodos acima irão oscilar de forma irregular.
-2. Quando a transmissão contínua de vídeo de longa distância é realizada, devido ao alto consumo de energia da antena nesse momento, toda a placa aquecerá mais intensamente.
+2. Quando a transmissão contínua de vídeo de longa distância é realizada, devido ao alto consumo de energia da antena nesse momento, toda a placa irá aquecer mais intensamente.
 :::
 
 ---
 
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência ao usar nossos produtos seja a mais tranquila possível. Oferecemos múltiplos canais de comunicação para atender a diferentes preferências e necessidades.
 
