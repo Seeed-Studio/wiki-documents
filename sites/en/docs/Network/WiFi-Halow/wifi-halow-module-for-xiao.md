@@ -42,13 +42,25 @@ The following table outlines the key specifications of the Wio-WM6108 Wi-Fi HaLo
 
 | Characteristic | Value | Unit |
 |:-------------:|:-----:|:----:|
-| Operating Voltage | 3.3 | V |
+| Operating Voltage | 3.3 (Digital) / 5.0 (RF front-end)| V |
 | Operating Current | TBD | mA |
 | Wi-Fi Protocol | IEEE 802.11ah | - |
 | Frequency Band | Sub-1 GHz | - |
 | Range | Up to 1 | km |
 | Interface | SPI | - |
 | Dimensions | TBD | mm |
+
+:::caution Both 3.3/5.0V power supply are required
+This board requires **two** separate supply inputs:
+- The **3.3V pad** powers the module's digital rails.
+- The **5.0V pad** powers the RF front-end (TX power amplifier) via a separate rail.
+
+When the module is plugged into a XIAO expansion board, both supply rails are provided automatically through the expansion connector.
+
+However, **when wiring the board to a host system via the pad interface (e.g., a Raspberry Pi over SPI), you must connect all 5V, 3.3V, and GND.**
+
+If only 3.3V is connected, the module will be able to load firmware, and receive normally, but **it cannot transmit at rated power.**
+:::
 
 ## What is Wi-Fi HaLow?
 
