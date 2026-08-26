@@ -1,6 +1,6 @@
 ---
-description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 ESPHome 菜谱——用于 PCF8563 RTC 时间同步、microSD 卡检测、板载 PDM 麦克风初始化以及组合硬件状态仪表盘的独立演示。
-title: ESPHome 菜谱：RTC、SD 卡与麦克风（reTerminal E 系列）
+description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 ESPHome cookbook——用于 PCF8563 RTC 时间同步、microSD 卡检测、板载 PDM 麦克风初始化以及组合硬件状态仪表盘的独立演示。
+title: ESPHome Cookbook：RTC、SD 卡与麦克风（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
 sidebar_position: 5
@@ -16,12 +16,12 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_rtc_sd_microp
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome 菜谱：RTC、SD 卡与麦克风（reTerminal E 系列）
+# ESPHome Cookbook：RTC、SD 卡与麦克风（reTerminal E 系列）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/251.jpeg" style={{width:1000, height:'auto'}}/></div><br />
 
 :::tip 前置条件
-本页假设你已经完成了 [reTerminal E 系列的 ESPHome 显示菜谱](/cn/reterminal_e10xx_with_esphome)，并且你的设备已经在 Home Assistant 中在线。关于按键、蜂鸣器、LED、电池监测、SHT4x、电容触摸（E1003）以及深度睡眠，请参阅 [ESPHome 菜谱：按键、蜂鸣器、LED、电池、触摸与低功耗](/cn/reterminal_e10xx_with_esphome_advanced)。
+本页假设你已经完成了 [reTerminal E 系列的 ESPHome 显示 cookbook](/cn/reterminal_e10xx_with_esphome)，并且你的设备已经在 Home Assistant 中在线。关于按键、蜂鸣器、LED、电池监测、SHT4x、电容触摸（E1003）以及深度睡眠，请参阅 [ESPHome Cookbook：按键、蜂鸣器、LED、电池、触摸与低功耗](/cn/reterminal_e10xx_with_esphome_advanced)。
 :::
 
 :::tip 在浏览器中生成 ESPHome YAML 或烧录演示固件
@@ -36,7 +36,7 @@ import TabItem from '@theme/TabItem';
 </div><br />
 :::
 
-本菜谱在 reTerminal E 系列 ESPHome 示例的基础上，继续介绍三个在显示与 I/O 菜谱中尚未覆盖的板载硬件模块：
+本 cookbook 在 reTerminal E 系列 ESPHome 示例的基础上，继续介绍三个在显示与 I/O cookbooks 中尚未覆盖的板载硬件模块：
 
 - **PCF8563 RTC** - 从板载 RTC 读取硬件时间，并从 Home Assistant 同步时间到 RTC。
 - **microSD 卡槽** - 使能 SD 供电电源轨，并上报是否插入了卡。
@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
 
 ## 硬件能力
 
-本菜谱中的演示会使用到以下引脚。
+本 cookbook 中的演示会使用到以下引脚。
 
 <div class="table-center">
   <table align="center">
@@ -926,7 +926,7 @@ display:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/253.jpeg" style={{width:700, height:'auto'}}/></div>
 
 :::note ESPHome 如何使用 microSD 卡
-在本 ESPHome 菜谱中，microSD 卡被用作设备状态信号。该演示会检查是否插入了卡，在屏幕上显示结果，并将相同状态暴露给 Home Assistant。
+在本 ESPHome cookbook 中，microSD 卡被用作设备状态信号。该演示会检查是否插入了卡，在屏幕上显示结果，并将相同状态暴露给 Home Assistant。
 
 这是因为 ESPHome 主要是为传感器、开关、显示屏和 Home Assistant 自动化而设计的。它通常不会被用作设备上的本地文件管理器。诸如打开文件、创建文件夹、写入日志或将 WAV 音频直接录制到 SD 卡等任务，更适合使用 Arduino，在那里你的固件可以直接控制 SD 卡文件系统。
 
@@ -935,7 +935,7 @@ display:
 - 在插入或移除卡时触发 Home Assistant 自动化；
 - 与 RTC、电池和麦克风状态一起显示硬件健康信息。
 
-如果你的目标是直接对 SD 卡进行文件读写，请参考 Arduino SD 卡菜谱。
+如果你的目标是直接对 SD 卡进行文件读写，请参考 Arduino SD 卡 cookbook。
 :::
 
 ## PDM 麦克风电源检查
@@ -1840,11 +1840,11 @@ logger:
 ## 资源
 
 - **[工具]** [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/) — 通过选择设备特性生成 ESPHome YAML，或直接在浏览器中烧录示例
-- **[Wiki]** [ESPHome 使用手册：显示基础](/cn/reterminal_e10xx_with_esphome)
-- **[Wiki]** [ESPHome 使用手册：按键、蜂鸣器、LED、电池、触摸与低功耗](/cn/reterminal_e10xx_with_esphome_advanced)
+- **[Wiki]** [ESPHome Cookbook：显示基础](/cn/reterminal_e10xx_with_esphome)
+- **[Wiki]** [ESPHome Cookbook：按键、蜂鸣器、LED、电池、触摸与低功耗](/cn/reterminal_e10xx_with_esphome_advanced)
 - **[Wiki]** [与 ESPHome 协同工作](/cn/epaper_work_with_esphome)
-- **[Wiki]** [Arduino 使用手册：板载外设](/cn/reterminal_e10xx_with_arduino_peripherals)
-- **[Wiki]** [Arduino 使用手册：RTC、低功耗、音频与触摸](/cn/reterminal_e10xx_with_arduino_peripherals_2)
+- **[Wiki]** [Arduino Cookbook：板载外设](/cn/reterminal_e10xx_with_arduino_peripherals)
+- **[Wiki]** [Arduino Cookbook：RTC、低功耗、音频与触摸](/cn/reterminal_e10xx_with_arduino_peripherals_2)
 - **[文档]** [ESPHome 时间组件](https://esphome.io/components/time/)
 - **[文档]** [ESPHome I2S 音频组件](https://esphome.io/components/i2s_audio.html)
 

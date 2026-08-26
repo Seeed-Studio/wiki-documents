@@ -1,6 +1,6 @@
 ---
-description: 适用于 XIAO ePaper 驱动板（EE0x）系列的 ESPHome 菜谱 - 在 XIAO ESP32-S3 + EE0x 驱动板上集成 Home Assistant，并搭配你选择的 ePaper 屏幕。本文以 EE04 为运行示例；EE02 / EE03 / EE05 共享相同的工作流程。
-title: ESPHome 菜谱
+description: 适用于 XIAO ePaper 驱动板（EE0x）系列的 ESPHome cookbook - 在 XIAO ESP32-S3 + EE0x 驱动板上集成 Home Assistant，并搭配你选择的 ePaper 屏幕。本文以 EE04 为运行示例；EE02 / EE03 / EE05 共享相同的工作流程。
+title: ESPHome Cookbook
 keywords:
   - ePaper 显示屏
   - ESPHome
@@ -26,10 +26,10 @@ url: https://wiki.seeedstudio.com/cn/EE04_with_esphome_advanced/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome 菜谱：XIAO ePaper 驱动板（EE0x）
+# ESPHome Cookbook：XIAO ePaper 驱动板（EE0x）
 
 :::tip 请先阅读主 ESPHome 指南
-本页是 **EE0x 驱动板 ESPHome 菜谱** —— 适用于 **EE02 / EE03 / EE04 / EE05**。由于这四块板都共享相同的 XIAO ESP32-S3 底板以及相同的 SPI 连接 ePaper 接口，工作流程完全一致；它们之间唯一的区别是你在 YAML `display:` 块中选择的屏幕型号。
+本页是 **EE0x 驱动板 ESPHome cookbook** —— 适用于 **EE02 / EE03 / EE04 / EE05**。由于这四块板都共享相同的 XIAO ESP32-S3 底板以及相同的 SPI 连接 ePaper 接口，工作流程完全一致；它们之间唯一的区别是你在 YAML `display:` 块中选择的屏幕型号。
 
 **示例讲解：EE04 搭配 7.5" 800×480 单色屏。** 只需在 `display.model` 行替换为你自己的板卡 + 屏幕组合，其余配置可直接复用。
 

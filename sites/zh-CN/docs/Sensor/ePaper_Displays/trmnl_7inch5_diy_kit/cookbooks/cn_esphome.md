@@ -1,6 +1,6 @@
 ---
-description: 面向 TRMNL 7.5" (OG) DIY Kit 的端到端 ESPHome / Home Assistant 实战手册——刷写 ESPHome 固件、用 YAML 构建仪表盘，并与 Home Assistant 集成。
-title: ESPHome 实战手册
+description: 面向 TRMNL 7.5" (OG) DIY Kit 的端到端 ESPHome / Home Assistant cookbook——刷写 ESPHome 固件、用 YAML 构建仪表盘，并与 Home Assistant 集成。
+title: ESPHome Cookbook
 keywords:
   - 电子纸显示屏
   - TRMNL
@@ -22,10 +22,10 @@ url: https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome 实战手册：TRMNL 7.5" (OG) DIY Kit
+# ESPHome Cookbook：TRMNL 7.5" (OG) DIY Kit
 
 :::tip 请先阅读主 ESPHome 指南
-本页是**针对 TRMNL DIY Kit 的 ESPHome 实战手册**。通用的基础内容——选择刷写路径、通用 YAML 模板、连接 Home Assistant——都在 **[Work with ESPHome](/cn/epaper_work_with_esphome)** 中。如果你是第一次在 Seeed 电子纸上使用 ESPHome，建议先快速浏览那一页。若你在寻找的是**TRMNL 云端仪表盘**工作流（无需 YAML、基于插件），请查看 [Work with TRMNL](/cn/reterminal_e10xx_trmnl)。
+本页是**针对 TRMNL DIY Kit 的 ESPHome cookbook**。通用的基础内容——选择刷写路径、通用 YAML 模板、连接 Home Assistant——都在 **[Work with ESPHome](/cn/epaper_work_with_esphome)** 中。如果你是第一次在 Seeed 电子纸上使用 ESPHome，建议先快速浏览那一页。若你在寻找的是**TRMNL 云端仪表盘**工作流（无需 YAML、基于插件），请查看 [Work with TRMNL](/cn/reterminal_e10xx_trmnl)。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/byod_main.png" style={{width:900, height:'auto'}}/></div>

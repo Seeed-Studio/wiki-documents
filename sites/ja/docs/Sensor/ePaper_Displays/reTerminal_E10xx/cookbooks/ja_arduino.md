@@ -1,6 +1,6 @@
 ---
-description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino クックブック — Seeed_GFX と GxEPD2 ライブラリを使って Arduino から ePaper ディスプレイを駆動し、Hello World のサンプルに加えて、E1001 での 4 階調グレースケールと E1003 での 16 階調グレースケールを含みます。
-title: 'Arduino クックブック: ePaper ディスプレイ (reTerminal E シリーズ)'
+description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino cookbook — Seeed_GFX と GxEPD2 ライブラリを使って Arduino から ePaper ディスプレイを駆動し、Hello World のサンプルに加えて、E1001 での 4 階調グレースケールと E1003 での 16 階調グレースケールを含みます。
+title: 'Arduino Cookbook: ePaper ディスプレイ (reTerminal E シリーズ)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
@@ -15,7 +15,7 @@ url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Arduino クックブック: ePaper ディスプレイ (reTerminal E シリーズ)
+# Arduino Cookbook: ePaper ディスプレイ (reTerminal E シリーズ)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/244.png" style={{width:650, height:'auto'}}/></div>
 
@@ -30,14 +30,14 @@ import TabItem from '@theme/TabItem';
 :::
 
 :::tip ハードウェア周辺機能を探していますか？
-このページでは Arduino からの**ePaper 画面の駆動**に焦点を当てています。オンボード LED、ブザー、ボタン、SHT4x センサ、バッテリーモニタ、microSD カードスロットを使いたい場合は、**[Arduino クックブック: オンボード周辺機能](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)** を参照してください。RTC、低消費電力モード、オンボードマイク、静電容量式タッチ描画については、**[Arduino クックブック: RTC、低消費電力、オーディオ & タッチ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2)** を参照してください。
+このページでは Arduino からの**ePaper 画面の駆動**に焦点を当てています。オンボード LED、ブザー、ボタン、SHT4x センサ、バッテリーモニタ、microSD カードスロットを使いたい場合は、**[Arduino Cookbook: オンボード周辺機能](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)** を参照してください。RTC、低消費電力モード、オンボードマイク、静電容量式タッチ描画については、**[Arduino Cookbook: RTC、低消費電力、オーディオ & タッチ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2)** を参照してください。
 
 共通のボイラープレート — Arduino IDE のセットアップ、ESP32 ボードパッケージ、`Seeed_GFX` のインストール、`driver.h` の生成 — は **[Work with Arduino](https://wiki.seeedstudio.com/ja/epaper_work_with_arduino)** にも記載されています。Seeed の ePaper で Arduino を使うのが初めての場合は、まずそちらに目を通してください。
 :::
 
 ## はじめに
 
-reTerminal E シリーズは、XIAO ESP32-S3 をベースに、ePaper ディスプレイを統合した Seeed Studio の産業用 HMI ラインです。このクックブックでは、画面にテキスト、グラフィックス、画像を描画するために必要な内容を一通り解説します：
+reTerminal E シリーズは、XIAO ESP32-S3 をベースに、ePaper ディスプレイを統合した Seeed Studio の産業用 HMI ラインです。この cookbook では、画面にテキスト、グラフィックス、画像を描画するために必要な内容を一通り解説します：
 
 - E1001 / E1002 / E1003 / E1004 のハードウェア概要と購入リンク。
 - 4 モデルすべてに共通の Arduino IDE 環境構築（XIAO_ESP32S3 ボード、OPI PSRAM）。

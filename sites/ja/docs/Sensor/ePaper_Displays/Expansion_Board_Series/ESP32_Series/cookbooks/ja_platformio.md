@@ -1,6 +1,6 @@
 ---
-description: XIAO ePaper Driver Board (EE0x) ファミリ向け PlatformIO クックブック - ハードウェア概要、プロジェクトのブートストラップ、ライブラリ設定、ESP32-S3 へのエンドツーエンドの書き込みまでを解説します。EE04 を動作例として使用しますが、EE02 / EE03 / EE05 も同じワークフローを共有します。
-title: PlatformIO クックブック
+description: XIAO ePaper Driver Board (EE0x) ファミリ向け PlatformIO cookbook - ハードウェア概要、プロジェクトのブートストラップ、ライブラリ設定、ESP32-S3 へのエンドツーエンドの書き込みまでを解説します。EE04 を動作例として使用しますが、EE02 / EE03 / EE05 も同じワークフローを共有します。
+title: PlatformIO Cookbook
 keywords:
   - 電子ペーパーディスプレイ
   - PlatformIO
@@ -22,16 +22,16 @@ updatedAt: '2026-05-20'
 url: https://wiki.seeedstudio.com/ja/ee04_with_platformio/
 ---
 
-# PlatformIO クックブック: XIAO ePaper Driver Boards (EE0x)
+# PlatformIO Cookbook: XIAO ePaper Driver Boards (EE0x)
 
-:::tip このクックブックは EE0x ファミリ全体をカバーします
+:::tip この cookbook は EE0x ファミリ全体をカバーします
 **EE02 / EE03 / EE04 / EE05** に適用できます。4 つのボードはいずれも同じ XIAO ESP32-S3 をベースにし、同じ `Seeed_GFX` ドライバパイプラインを共有しているため、プロジェクト設定、ライブラリ一覧、コードパターンはすべて同一です。ボード間で変わる唯一の点は、`driver.h` 用の [Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) で選択する `BOARD_SCREEN_COMBO` の値だけです。
 
 **動作例: EE04 + 7.5 インチ 800×480 モノクロ電子ペーパースクリーン。** `driver.h` 内のボード + スクリーンの組み合わせを自分のものに置き換えれば、残りのワークフロー（ボタン GPIO、バッテリー ADC、ダッシュボード UI、ボタン操作によるページ切り替え）はそのまま流用できます。
 :::
 
 :::note Arduino を使いたい場合はこちら
-このクックブックは **PlatformIO 専用** です。より一般的なパスである **Arduino IDE** を使いたい場合は、プラットフォームレベルのガイドとして **[Work with Arduino](/ja/epaper_work_with_arduino)**、表示レンダリングの例として [reTerminal E シリーズ — ePaper Display クックブック](/ja/reterminal_e10xx_with_arduino)、ハードウェアレベルの例（LED、ブザー、ボタン、SHT4x、バッテリー、microSD）として [reTerminal E シリーズ — Onboard Peripherals クックブック](/ja/reterminal_e10xx_with_arduino_peripherals) を参照してください。これらは EE0x ボードにも適用できます。
+この cookbook は **PlatformIO 専用** です。より一般的なパスである **Arduino IDE** を使いたい場合は、プラットフォームレベルのガイドとして **[Work with Arduino](/ja/epaper_work_with_arduino)**、表示レンダリングの例として [reTerminal E シリーズ — ePaper Display cookbook](/ja/reterminal_e10xx_with_arduino)、ハードウェアレベルの例（LED、ブザー、ボタン、SHT4x、バッテリー、microSD）として [reTerminal E シリーズ — Onboard Peripherals cookbook](/ja/reterminal_e10xx_with_arduino_peripherals) を参照してください。これらは EE0x ボードにも適用できます。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>

@@ -43,7 +43,7 @@ O reTerminal E1003 é um display ePaper monocromático open-source de 10,3 poleg
 A interação por toque para o reTerminal E1003 é suportada a partir do firmware [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) v1.1.2. A versão mais recente atualmente é a v1.1.4.3 — recomendamos atualizá-la para obter a melhor experiência.
 O suporte de biblioteca relacionado ao toque está planejado para uma futura liberação open-source, proporcionando maior flexibilidade para personalizar os painéis. Mais atualizações serão compartilhadas em breve.
 
-O reTerminal E1003 é compatível com [ESPHome](/pt-br/reterminal_e10xx_with_esphome) com Home Assistant. Comece pelo [livro de receitas de display](/pt-br/reterminal_e10xx_with_esphome) e depois continue para [E/S, bateria, toque e baixo consumo](/pt-br/reterminal_e10xx_with_esphome_advanced) e [RTC, cartão SD e microfone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone). É necessário o ESPHome **2026.7.0 ou posterior** para o driver de display do E1003.
+O reTerminal E1003 é compatível com [ESPHome](/pt-br/reterminal_e10xx_with_esphome) com Home Assistant. Comece pelo [cookbook de display](/pt-br/reterminal_e10xx_with_esphome) e depois continue para [E/S, bateria, toque e baixo consumo](/pt-br/reterminal_e10xx_with_esphome_advanced) e [RTC, cartão SD e microfone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone). É necessário o ESPHome **2026.7.0 ou posterior** para o driver de display do E1003.
 :::
 
 ### Recursos

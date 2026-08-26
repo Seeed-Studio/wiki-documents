@@ -1,6 +1,6 @@
 ---
-description: Recetario completo de ESPHome / Home Assistant para el TRMNL 7.5" (OG) DIY Kit - flashear firmware ESPHome, crear paneles en YAML e integrar con Home Assistant.
-title: Recetario de ESPHome
+description: cookbook completo de ESPHome / Home Assistant para el TRMNL 7.5" (OG) DIY Kit - flashear firmware ESPHome, crear paneles en YAML e integrar con Home Assistant.
+title: Cookbook de ESPHome
 keywords:
   - Pantalla de papel electrónico
   - TRMNL
@@ -22,10 +22,10 @@ url: https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Recetario de ESPHome: TRMNL 7.5" (OG) DIY Kit
+# Cookbook de ESPHome: TRMNL 7.5" (OG) DIY Kit
 
 :::tip Lee primero la guía principal de ESPHome
-Esta página es el **recetario de ESPHome específico para el TRMNL DIY Kit**. El contenido común — elegir un método de flasheo, el esqueleto YAML genérico, la conexión con Home Assistant — se encuentra en **[Work with ESPHome](/es/epaper_work_with_esphome)**. Échale un vistazo primero si eres nuevo en ESPHome en las pantallas de papel electrónico de Seeed. ¿Buscas en cambio el flujo de trabajo del **panel en la nube de TRMNL** (sin YAML, basado en complementos)? Consulta [Work with TRMNL](/es/reterminal_e10xx_trmnl).
+Esta página es el **cookbook de ESPHome específico para el TRMNL DIY Kit**. El contenido común — elegir un método de flasheo, el esqueleto YAML genérico, la conexión con Home Assistant — se encuentra en **[Work with ESPHome](/es/epaper_work_with_esphome)**. Échale un vistazo primero si eres nuevo en ESPHome en las pantallas de papel electrónico de Seeed. ¿Buscas en cambio el flujo de trabajo del **panel en la nube de TRMNL** (sin YAML, basado en complementos)? Consulta [Work with TRMNL](/es/reterminal_e10xx_trmnl).
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/byod_main.png" style={{width:900, height:'auto'}}/></div>

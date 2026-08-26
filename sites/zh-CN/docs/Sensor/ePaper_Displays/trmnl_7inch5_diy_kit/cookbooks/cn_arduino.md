@@ -1,6 +1,6 @@
 ---
-description: 面向 TRMNL 7.5" (OG) DIY 套件的端到端 Arduino 使用手册 - 利用 XIAO ESP32-S3 Plus 直接驱动 7.5" 电子墨水屏，可运行自定义 Arduino 草图（而非依赖 TRMNL 云平台）。
-title: Arduino 使用手册
+description: 面向 TRMNL 7.5" (OG) DIY 套件的端到端 Arduino cookbook - 利用 XIAO ESP32-S3 Plus 直接驱动 7.5" 电子墨水屏，可运行自定义 Arduino 草图（而非依赖 TRMNL 云平台）。
+title: Arduino Cookbook
 keywords:
   - 电子墨水屏
   - TRMNL
@@ -17,10 +17,10 @@ updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_arduino/
 ---
 
-# Arduino 使用手册：TRMNL 7.5" (OG) DIY 套件
+# Arduino Cookbook：TRMNL 7.5" (OG) DIY 套件
 
 :::tip 请先阅读主 Arduino 指南
-本页是**针对 TRMNL DIY 套件的专用使用手册**。通用的基础内容——Arduino IDE 设置、ESP32 开发板包、安装 `Seeed_GFX`、使用配置工具生成 `driver.h`——都在 **[Work with Arduino](/cn/epaper_work_with_arduino)** 中。如果你是第一次在 Seeed 电子墨水屏上使用 Arduino，请先快速浏览那一页；本页重点介绍 TRMNL DIY 套件硬件特有的部分。
+本页是**针对 TRMNL DIY 套件的专用 cookbook**。通用的基础内容——Arduino IDE 设置、ESP32 开发板包、安装 `Seeed_GFX`、使用配置工具生成 `driver.h`——都在 **[Work with Arduino](/cn/epaper_work_with_arduino)** 中。如果你是第一次在 Seeed 电子墨水屏上使用 Arduino，请先快速浏览那一页；本页重点介绍 TRMNL DIY 套件硬件特有的部分。
 
 如果你在寻找的是 **TRMNL 云端仪表盘** 的工作流程（无需自定义代码、通过插件驱动的仪表盘），请参阅 **[Work with TRMNL](/cn/reterminal_e10xx_trmnl)**。
 :::

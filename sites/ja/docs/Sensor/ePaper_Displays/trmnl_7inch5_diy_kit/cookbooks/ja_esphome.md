@@ -1,6 +1,6 @@
 ---
-description: TRMNL 7.5" (OG) DIY Kit 向けのエンドツーエンド ESPHome / Home Assistant クックブックです。ESPHome ファームウェアの書き込み、YAML でのダッシュボード構築、Home Assistant との連携までを解説します。
-title: ESPHome クックブック
+description: TRMNL 7.5" (OG) DIY Kit 向けのエンドツーエンド ESPHome / Home Assistant cookbook です。ESPHome ファームウェアの書き込み、YAML でのダッシュボード構築、Home Assistant との連携までを解説します。
+title: ESPHome Cookbook
 keywords:
   - 電子ペーパー・ディスプレイ
   - TRMNL
@@ -22,10 +22,10 @@ url: https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome クックブック: TRMNL 7.5" (OG) DIY Kit
+# ESPHome Cookbook: TRMNL 7.5" (OG) DIY Kit
 
 :::tip まずメインの ESPHome ガイドを読んでください
-このページは **TRMNL DIY Kit 専用の ESPHome クックブック**です。共通の手順 ― 書き込み方法の選択、汎用 YAML スケルトン、Home Assistant への接続 ― は **[Work with ESPHome](/ja/epaper_work_with_esphome)** にまとまっています。Seeed の ePaper で ESPHome を使うのが初めての場合は、先にそちらへ一通り目を通してください。**TRMNL クラウドダッシュボード**（YAML 不要のプラグイン方式）ワークフローを探している場合は、[Work with TRMNL](/ja/reterminal_e10xx_trmnl) を参照してください。
+このページは **TRMNL DIY Kit 専用の ESPHome cookbook**です。共通の手順 ― 書き込み方法の選択、汎用 YAML スケルトン、Home Assistant への接続 ― は **[Work with ESPHome](/ja/epaper_work_with_esphome)** にまとまっています。Seeed の ePaper で ESPHome を使うのが初めての場合は、先にそちらへ一通り目を通してください。**TRMNL クラウドダッシュボード**（YAML 不要のプラグイン方式）ワークフローを探している場合は、[Work with TRMNL](/ja/reterminal_e10xx_trmnl) を参照してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/byod_main.png" style={{width:900, height:'auto'}}/></div>
