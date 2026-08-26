@@ -12,10 +12,10 @@ sidebar_position: 1
 slug: /getting_started_with_ee02
 sku: 100067144
 last_update:
-  date: 12/20/2025
-  author: Allen
+  date: 8/18/2026
+  author: Nemo
 createdAt: '2025-12-19'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 ---
 
@@ -46,38 +46,45 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 
 ## 介绍
 
-**EE02** 是一款高性能电子墨水屏驱动板，专为 **13.3 英寸**电子纸显示屏设计。其搭载 ESP32-S3 芯片，支持 Wi-Fi 和 Bluetooth 连接，非常适合无线显示类应用场景。
+**XIAO ePaper Display Board EE02** 是一款高性能电子纸屏驱动板，专为 **13.3 英寸 Spectra™ 6 六色**电子纸显示屏设计。其核心采用 **XIAO ESP32-S3 Plus**，支持 Wi-Fi 和蓝牙连接，并且**预装了 SenseCraft HMI 固件**——让你无需编程即可通过 AI 加持的拖拽式 UI 设计工具完成界面设计。它是实时看板、数字标牌、智能家居控制面板等无线显示应用的理想解决方案。
 
-与其兄弟产品 EE04（为小尺寸屏幕设计）类似，EE02 为希望在物联网项目中集成大尺寸电子墨水屏的开发者提供了流畅的使用体验。它简化了驱动流程，并支持 SenseCraft HMI 平台，方便进行内容管理。
+与其面向小尺寸屏幕的兄弟产品 EE04 类似，EE02 为希望在物联网项目中集成大尺寸电子纸显示屏的开发者提供了流畅的使用体验。它简化了驱动流程，并支持 SenseCraft HMI 平台，方便进行内容管理。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### 特性
 
-- **强大的控制器**：基于 ESP32-S3 构建，提供强劲的处理能力和无线功能。
-- **专为大屏设计**：专门优化用于驱动 13.3 英寸电子墨水屏，具有高稳定性和高显示清晰度。
-- **无线连接**：支持 Wi-Fi 和 Bluetooth 5.0（LE），可实现远程数据更新和云端集成。
-- **低功耗**：针对能效进行设计，适用于电池供电应用。
-- **易于集成**：兼容 SenseCraft HMI，可进行拖拽式界面设计和远程管理。
-- **多样化接口**：包括用于供电/烧录的 Type-C 接口以及用于电子墨水屏的标准连接器。
+- **内置 XIAO ESP32-S3 Plus：** 连接兼容的电子纸显示屏后即可立即工作。
+- **专为 13.3" Spectra™ 6 电子墨水屏设计：** 针对 13.3" Spectra™ 6 显示屏优化设计，确保快速上手和稳定运行。
+- **带开关的 BAT 接口：** 提供简便的电池连接方式并集成电源开关，实现高效电源管理和节能。
+- **用户友好按键：** 配备 1 个复位按键和 3 个用户可编程按键，为项目加速和自定义功能提供灵活性。
+- **预烧录 SenseCraft HMI 固件：** 即插即用，直接搭配 SenseCraft HMI——我们的 AI 加持零代码 UI 设计平台。可从丰富模板中选择，或通过拖拽式 UI 搭建（可选 AI 辅助），仅需几次点击即可将界面部署到电子纸显示屏。
 
 ### 规格参数
 
-| 项目 | 描述 |
+| 参数 | 描述 |
 | :--- | :--- |
 | **控制器** | XIAO ESP32-S3 Plus |
+| **电子纸连接器** | FPC 60 针，0.5mm 间距 |
 | **支持屏幕尺寸** | 13.3 英寸电子墨水显示屏 |
-| **连接方式** | Wi-Fi 802.11 b/g/n，Bluetooth 5.0（LE） |
-| **电源供给** | 通过 USB Type-C 提供 5V 电源 |
+| **连接方式** | Wi-Fi 802.11 b/g/n，Bluetooth 5.0 (LE) |
+| **电源供给** | 通过 USB Type-C 提供 5V / 3.7V 锂电池（JST 2.0mm） |
+| **电池接口** | JST 2.0mm 2 针 |
 | **工作电压** | 3.3V |
-| **接口** | USB Type-C，电子墨水屏 FPC 连接器 |
-| **尺寸** | 80x43 mm |
+| **接口** | USB Type-C，电子纸 FPC 连接器 |
+| **尺寸** | 80mm x 43mm x 7mm |
 | **工作温度** | -20°C 至 70°C |
+| **开关** | 电池电源开/关 |
+| **按键** | 1x 复位按键 <br/> 3x 用户按键 |
 
 ### 应用场景
 
-- **数字标牌**：适用于餐厅菜单、会议室门牌和零售价签。
-- **智能家居**：用于天气、日历和家庭自动化状态的信息看板。
+- **实时数据看板**：用于显示天气、股票、交通或家庭自动化等实时信息。
+- **安全告警**：用于显示安防系统状态和告警信息的低功耗通知屏。
+- **电子相框**：具备柔和刷新效果和超低功耗的电子纸相框。
+- **公共交通到站信息牌**：用于车站和站点的公交/列车到站信息显示。
+- **数字标牌**：餐厅菜单、会议室门牌以及零售价签等。
+- **智能家居**：用于显示天气、日历和家庭自动化状态的信息面板。
 - **工业 HMI**：用于机械设备和仓储管理的低功耗状态显示。
 - **教育**：电子书阅读器或教室信息公告板。
 - **办公**：桌牌或公告板。
@@ -88,21 +95,30 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 
 - **USB Type-C**：用于供电和固件烧录。
 - **FPC 连接器**：用于连接 13.3 英寸电子墨水显示屏。
-- **复位按钮**：用于复位开发板。
+- **复位按键**：用于复位开发板。
 - **按键**：分别为“刷新页面”、“切换上一页”和“切换下一页”。
 - **电源开关**：控制电池电源的开/关。
-- **Boot 按钮**：用于进入 bootloader 模式。
-- **LED 指示灯**：闪烁表示未连接电池。绿灯常亮表示电池正在充电。
-- **JST 连接器**：2 针 JST 2.0mm 接插件，用于连接电池。
+- **Boot 按键**：用于进入 bootloader 模式。
+- **LED 指示灯**：闪烁表示未连接电池，绿灯常亮表示电池正在充电。
+- **JST 接口**：2 针 JST 2.0mm 接口，用于连接电池。
 
 ## SenseCraft HMI 快速上手
 
-本节将引导你将 EE02 连接到 SenseCraft HMI 平台，从而可以轻松地通过无线方式更新屏幕内容。
+本节将引导你将 EE02 连接到 SenseCraft HMI 平台，从而轻松实现无线更新屏幕内容。
+
+### 前置准备
+
+在开始之前，请确保你已经具备以下条件：
+
+- 一个用于 SenseCraft HMI 平台的 Seeed Studio 账号（如果还没有，请在[此处注册](https://sensecraft.seeed.cc/hmi)）
+- 一张 2.4GHz Wi-Fi 网络（不支持 5GHz）
 
 ### 设备安装
 
-**步骤 1. 连接屏幕和开发板**
+**步骤 1. 连接屏幕与开发板**
 小心地将 13.3 英寸电子墨水屏的 FPC 线缆连接到 EE02 驱动板上的连接器，确保锁扣机构已牢固锁紧。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.gif" style={{width:800, height:'auto'}}/></div>
 
 **步骤 2. 上电**
 使用 USB Type-C 线将 EE02 开发板连接到电源（电脑或 USB 适配器）。上电后，屏幕会刷新并显示欢迎界面。
@@ -117,118 +133,110 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 ### 网络配置
 
 **步骤 4. 通过手机配置 Wi-Fi**
-使用手机扫描屏幕上显示的二维码（或连接到屏幕上提示的热点）。根据手机上的提示输入本地 Wi-Fi 的 SSID 和密码，将 EE02 连接到互联网。
+使用手机扫描屏幕上显示的二维码（或连接到屏幕提示的热点）。按照手机上的提示输入本地 Wi-Fi 的 SSID 和密码，将 EE02 连接到互联网。
 
-<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/6.JPG" style={{width:300,height:'auto'}}/></div> -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
 
 **步骤 5. 获取配对码**
-网络配置成功后，屏幕会再次刷新并显示一个唯一的 **Pairing Code**（或设备 ID）。你将在下一步中用到此代码。
+网络配置成功后，屏幕会再次刷新并显示一个唯一的 **配对码（Pairing Code）**（或设备 ID）。你将在下一步中用到该配对码。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/7.jpg" style={{width:300,height:'auto'}}/></div>
 
 ### 平台绑定与更新
 
 **步骤 6. 在 SenseCraft HMI 上绑定设备**
-前往 [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device)。登录你的账号，进入设备管理页面并选择“Add Device”。输入电子墨水屏上显示的 Pairing Code，将设备绑定到你的账号。
+前往 [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi/device)。登录你的账号，进入设备管理页面并选择“Add Device”。输入电子墨水屏上显示的配对码，将设备绑定到你的账号。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
 
 **步骤 7. 创建并推送新界面**
-在 SenseCraft HMI 平台上，使用编辑器创建一个新界面（例如上传一张图片或设计一个仪表盘）。
+在 SenseCraft HMI 平台上，使用编辑器创建一个新界面（例如上传一张图片或设计一个数据看板）。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/11.png" style={{width:500, height:'auto'}}/></div>
 
 **步骤 8. 应用你的图片**
 完成后，点击右上角的 "Apply" 按钮，然后选择你希望接收图片的设备。EE02 将接收数据并刷新 13.3 英寸屏幕，显示你的新内容。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/12.png" style={{width:800, height:'auto'}}/></div>
 
 **步骤 9. 在屏幕上显示**
 
-最后，EE02 将接收数据并刷新 13.3 英寸屏幕，显示你的新内容。
+最后，EE02 会接收数据并刷新 13.3 英寸屏幕，显示你的新内容。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/11.jpg" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/13.png" style={{width:300, height:'auto'}}/></div>
 
 ## Arduino 快速上手
 
-### 安装 Seeed GFX 库
+### 安装 Seeed GFX2 库
 
 :::tip
-该库与 TFT 库具有相同功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
+该库与 TFT 库功能相同，但**不**兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
-从 GitHub 下载并安装 Seeed GFX 库。
+从 GitHub 下载并安装 Seeed GFX2 库。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/14.png" style={{width:800, height:'auto'}}/></div>
 
 <div align="center">
-<a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
+<a href="https://github.com/Seeed-Studio/Seeed_GFX2" target="_blank">
 <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处下载</button></p>
 </a>
 </div>
 
-向下滚动并打开此链接。
+下载库文件后，依次进入 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择下载好的库文件。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
-
-选择你的设备类型，它会生成一些代码。复制这些代码，我们稍后会用到。
-
-:::tip
-如果选择错误，屏幕将不会显示任何内容。
-
-所以请务必确认你的设备或元件类型。
-:::
-
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_1.png" style={{width:800, height:'auto'}}/></div>
-
-下载库之后，依次点击 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择下载好的库文件。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/15.png" style={{width:500, height:'auto'}}/></div>
 
 ### 配置并烧录程序
 
-选择如图所示的示例程序
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_2.png" style={{width:800, height:'auto'}}/></div>
-
-新建一个名为 "driver.h" 的文件，并将这些代码粘贴进去。代码应类似如下：
-```cpp
-#define BOARD_SCREEN_COMBO 510 // 13.3 inch six-color ePaper Screen（T133A01）
-#define USE_XIAO_EPAPER_DISPLAY_BOARD_EE02
-```
+如图所示，通过以下菜单路径找到示例：
+File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → EE02 → 13.3-inch ePaper Displays → 13_3_inch_Spectra6_HelloWorld
 
 
-之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 和 **Tools** -> **Port** -> **Select the port your board is connected to**。 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/16.png" style={{width:800, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_3.png" style={{width:1000, height:'auto'}}/></div>
+之后，依次进入 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。 
 
 请注意必须启用 PSRAM。
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_4.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
 然后点击 **Upload** 上传代码。
-现在你将在电子纸屏幕上看到反馈！下面是 Bitmap 示例的显示效果。
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_5.jpg" style={{width:500, height:'auto'}}/></div>
+现在你就可以在电子纸屏幕上看到反馈了！下面是 HelloWorld 示例的运行效果。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/18.png" style={{width:500, height:'auto'}}/></div>
 
 ## 故障排查
 
 **Q1：上电后屏幕没有刷新。**
 *   检查 FPC 线缆是否正确插入并锁紧。
-*   确保 USB Type-C 线缆提供足够的电源。
+*   确保 USB Type-C 线缆提供了足够的电源。
 *   按下 Reset 按钮重新启动开发板。
+*   确认在 Arduino IDE 的 Tools 菜单中已启用 PSRAM。
 
 **Q2：Wi-Fi 配置失败。**
 *   确保你的 Wi-Fi 网络为 2.4GHz（不支持 5GHz）。
 *   检查 Wi-Fi 密码是否输入正确。
-*   靠近路由器以确保信号强度。
+*   靠近路由器以确保信号强度足够。
 
 **Q3：屏幕显示模糊或有残影。**
 *   如果长时间未刷新屏幕或电源不稳定，可能会出现这种情况。请尝试通过 HMI 平台再次刷新屏幕。
 
+**Q4：运行过程中听到高频声音。**
+*   这是正常现象！电子纸电源电路在刷新时可能会产生间歇性的高频声音，这不会影响性能或产品寿命。
+
+**Q5：无法在 SenseCraft HMI 上绑定设备 / 配对失败。**
+*   仔细检查是否正确输入了配对码（区分大小写）。
+*   确保 EE02 已上电并连接到 Wi-Fi（查看屏幕状态）。
+*   在配对设置过程中，确保手机和 EE02 处于同一个 2.4GHz Wi-Fi 网络。
+*   如果设备显示为离线，按下 Reset 按钮后重新尝试配对。
+
 ## 资源
-- **[PDF]** [13.3 E6 电子墨水显示模块数据手册](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
-- **[PDF]** [Seeed Studio XIAO 电子纸显示 EE02 原理图](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
-- **[ZIP]** [Seeed Studio XIAO 电子纸显示 EE02 PCBA&原理图](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
+- **[PDF]** [13.3 E6 eInk Display module Datasheet](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
 
 ## 技术支持与产品讨论
 
