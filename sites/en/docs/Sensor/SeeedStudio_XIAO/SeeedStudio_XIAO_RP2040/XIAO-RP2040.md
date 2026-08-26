@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Getting Started with Seeed Studio XIAO RP2040
+title: Getting Started with Seeed Studio XIAO RP2040 Series
 keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao-rp2040-45font_1.webp
@@ -18,14 +18,31 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Getting Started with Seeed Studio XIAO RP2040
+# Getting Started with Seeed Studio XIAO RP2040 Series
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao-rp2040-45font_1.jpg" alt="pir" width={400} height="auto" /></p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<div class="table-center">
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO RP2040</th>
+   <th>Seeed Studio XIAO RP2040 Plus</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao-rp2040-pre.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao-rp2040-plus-pre.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-Plus-p-6932.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Overview

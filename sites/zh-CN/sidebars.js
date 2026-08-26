@@ -1003,7 +1003,7 @@ const sidebars = {
         'Sensor/SeeedStudio_XIAO/cn_SeeedStudio_XIAO_Series_Projects',
         {
           type: 'category',
-          label: 'XIAO SAMD21',
+          label: 'XIAO SAMD21 系列',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/cn_Seeeduino-XIAO',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/cn_XIAO-SAMD21-Zephyr-RTOS',
@@ -1060,7 +1060,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'XIAO RP2040',
+          label: 'XIAO RP2040 系列',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/cn_XIAO-RP2040',
             {

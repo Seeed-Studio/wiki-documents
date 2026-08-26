@@ -34,7 +34,7 @@ Esta página es la **referencia de configuración de PlatformIO** para los produ
 4. Elegir el entorno de PlatformIO correcto para cada producto ePaper de Seeed.
 5. Añadir `Seeed_GFX` y generar el `driver.h` correspondiente con la [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/).
 
-Si buscas APIs de dibujo para la pantalla, ejemplos de sketches o código de demostración específico de hardware, comienza por [Work with Arduino](/es/epaper_work_with_arduino) y los recetarios de producto enlazados al final de esta página. El código C/C++ usado en PlatformIO suele ser el mismo que el código de Arduino. La principal diferencia es cómo se configura el proyecto.
+Si buscas APIs de dibujo para la pantalla, ejemplos de sketches o código de demostración específico de hardware, comienza por [Work with Arduino](/es/epaper_work_with_arduino) y los cookbooks de producto enlazados al final de esta página. El código C/C++ usado en PlatformIO suele ser el mismo que el código de Arduino. La principal diferencia es cómo se configura el proyecto.
 
 ## Hardware compatible
 
@@ -65,12 +65,12 @@ PlatformIO puede utilizarse con el flujo de trabajo basado en código para produ
     <tr>
       <td><strong>Panel ePaper XIAO 7.5"</strong></td>
       <td>XIAO ESP32-C3</td>
-      <td>Usa el entorno PlatformIO XIAO ESP32-C3 y luego usa el recetario del producto para la configuración específica de pantalla de `driver.h`.</td>
+      <td>Usa el entorno PlatformIO XIAO ESP32-C3 y luego usa el cookbook del producto para la configuración específica de pantalla de `driver.h`.</td>
     </tr>
     <tr>
       <td><strong>EN04 / EN05 y placas ePaper basadas en nRF52840</strong></td>
       <td>Familia XIAO nRF52840</td>
-      <td>Usa el entorno PlatformIO nRF52840 para el desarrollo de firmware. Si aún no se ha publicado un recetario específico para ePaper, usa esta página como referencia de entorno y el esquema/recetario del producto para los pines.</td>
+      <td>Usa el entorno PlatformIO nRF52840 para el desarrollo de firmware. Si aún no se ha publicado un cookbook específico para ePaper, usa esta página como referencia de entorno y el esquema/cookbook del producto para los pines.</td>
     </tr>
   </table>
 </div>
@@ -88,7 +88,7 @@ PlatformIO es útil cuando tu proyecto ePaper crece más allá de un único sket
 - Descarga las librerías mediante `lib_deps`, lo que hace que el proyecto sea más fácil de reproducir en otro ordenador.
 - Proporciona tareas de compilación, carga, limpieza y monitor serie dentro de VS Code.
 
-Para el dibujo en pantalla y las APIs de hardware, sigue usando el mismo código C/C++ de estilo Arduino utilizado en el recetario de Arduino. PlatformIO principalmente cambia la disposición del proyecto y el método de configuración.
+Para el dibujo en pantalla y las APIs de hardware, sigue usando el mismo código C/C++ de estilo Arduino utilizado en el cookbook de Arduino. PlatformIO principalmente cambia la disposición del proyecto y el método de configuración.
 
 ## Paso 1: Instalar VS Code y PlatformIO
 
@@ -202,7 +202,7 @@ Los campos más importantes son:
     </tr>
     <tr>
       <td><code>build_flags</code></td>
-      <td>Definiciones extra para el compilador. Úsalo solo cuando el recetario de tu producto o la librería lo requieran.</td>
+      <td>Definiciones extra para el compilador. Úsalo solo cuando el cookbook de tu producto o la librería lo requieran.</td>
       <td><code>-DBOARD_HAS_PSRAM</code></td>
     </tr>
     <tr>
@@ -575,7 +575,7 @@ La causa más común es un `driver.h` incorrecto o ausente.
 - Regenera `driver.h` con la [herramienta de configuración Seeed GFX](https://seeed-studio.github.io/Seeed_GFX/).
 - Confirma que la placa y la pantalla seleccionadas coinciden con el hardware real.
 - Confirma que el `BOARD_SCREEN_COMBO` generado está disponible para el archivo fuente que incluye `Seeed_GFX`.
-- Para productos ESP32-S3 con búferes grandes, confirma si el recetario del producto requiere configuraciones de PSRAM.
+- Para productos ESP32-S3 con búferes grandes, confirma si el cookbook del producto requiere configuraciones de PSRAM.
 
 ### P3: ¿Por qué PlatformIO no puede cargar en la placa?
 

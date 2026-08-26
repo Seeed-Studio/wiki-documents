@@ -1,5 +1,5 @@
 ---
-description: Guía de referencia para controlar cualquier producto Seeed ePaper compatible desde el IDE de Arduino - configuración del IDE de Arduino, instalación de la biblioteca Seeed_GFX, generación de driver.h. Los análisis detallados específicos de hardware se encuentran en el recetario de cada producto.
+description: Guía de referencia para controlar cualquier producto Seeed ePaper compatible desde el IDE de Arduino - configuración del IDE de Arduino, instalación de la biblioteca Seeed_GFX, generación de driver.h. Los análisis detallados específicos de hardware se encuentran en el cookbook de cada producto.
 title: Trabajar con Arduino
 keywords:
   - Pantalla ePaper
@@ -41,14 +41,14 @@ Esta página es el **manual de referencia** para controlar cualquier producto Se
 3. Generar un `driver.h` para tu combinación de placa + pantalla usando la [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/).
 4. (Opcionalmente) usar la biblioteca de terceros **GxEPD2** como controlador alternativo.
 
-Para la **guía completa de “abrir la caja, flashear un hello world, encender sensores y botones”**, ve al **recetario** de tu hardware específico: esas páginas reutilizan esta referencia para el código base y luego añaden ejemplos específicos del producto (periféricos, ejemplos de código, resolución de problemas):
+Para la **guía completa de “abrir la caja, flashear un hello world, encender sensores y botones”**, ve al **cookbook** de tu hardware específico: esas páginas reutilizan esta referencia para el código base y luego añaden ejemplos específicos del producto (periféricos, ejemplos de código, resolución de problemas):
 
-- [reTerminal E Serie — recetario de pantalla ePaper](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino), cubre reTerminal E1001 / E1002 / E1003 / E1004 con ejemplos Hello World usando tanto `Seeed_GFX` como `GxEPD2`.
-- [reTerminal E Serie — recetario de periféricos integrados](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals), ejemplos completos de periféricos para los mismos modelos: LED, zumbador, tres botones de usuario, sensor SHT4x, monitor de batería, tarjeta microSD y renderizado de imágenes BMP desde SD.
-- [reTerminal E Serie — recetario de RTC, bajo consumo, audio y táctil](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals_2), gestión de tiempo del RTC, deep sleep / light sleep, grabación con micrófono I2S y dibujo con toque capacitivo (solo E1003).
-- Más recetarios (panel XIAO de 7,5", placas controladoras EE0x, …) llegarán a medida que se añadan los productos correspondientes a la plataforma.
+- [reTerminal E Serie — cookbook de pantalla ePaper](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino), cubre reTerminal E1001 / E1002 / E1003 / E1004 con ejemplos Hello World usando tanto `Seeed_GFX` como `GxEPD2`.
+- [reTerminal E Serie — cookbook de periféricos integrados](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals), ejemplos completos de periféricos para los mismos modelos: LED, zumbador, tres botones de usuario, sensor SHT4x, monitor de batería, tarjeta microSD y renderizado de imágenes BMP desde SD.
+- [reTerminal E Serie — cookbook de RTC, bajo consumo, audio y táctil](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals_2), gestión de tiempo del RTC, deep sleep / light sleep, grabación con micrófono I2S y dibujo con toque capacitivo (solo E1003).
+- Más cookbooks (panel XIAO de 7,5", placas controladoras EE0x, …) llegarán a medida que se añadan los productos correspondientes a la plataforma.
 
-Si solo necesitas el código base (un `Hello World` en un producto completamente nuevo que aún no está cubierto por un recetario), esta página por sí sola es suficiente.
+Si solo necesitas el código base (un `Hello World` en un producto completamente nuevo que aún no está cubierto por un cookbook), esta página por sí sola es suficiente.
 
 ## Hardware compatible
 
@@ -64,7 +64,7 @@ Cada producto Seeed ePaper en la [página principal](https://wiki.seeedstudio.co
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
       <td>XIAO ESP32-S3 (integrado)</td>
-      <td>Recetario disponible: consulta el enlace anterior</td>
+      <td>Cookbook disponible: consulta el enlace anterior</td>
     </tr>
     <tr>
       <td><strong>EE02 / EE03 / EE04 / EE05</strong></td>
@@ -126,7 +126,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 - **EE02 / EE03 / EE04 / EE05 estándar / EN04 (ruta Arduino)**: `XIAO_ESP32S3` (o `XIAO_nRF52840` para placas basadas en nRF52840)
 - **Panel ePaper XIAO de 7,5"**: `XIAO_ESP32C3`
 
-Si no estás seguro de cuál elegir, el recetario de tu producto te lo indicará.
+Si no estás seguro de cuál elegir, el cookbook de tu producto te lo indicará.
 
 **Paso 5.** Conecta tu hardware mediante USB-C y selecciona el puerto correcto en **Tools → Port**.
 
@@ -228,19 +228,19 @@ Para instalarla manualmente desde GitHub y obtener el soporte más reciente de d
     </a>
 </div><br />
 
-**Sketch → Include Library → Add .ZIP Library** y selecciona el ZIP descargado. Los libros de recetas del producto incluyen ejemplos concretos de `GxEPD2` cuando corresponde (por ejemplo, el [libro de recetas de reTerminal E Serie](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino) muestra renderizado a todo color en la E1002).
+**Sketch → Include Library → Add .ZIP Library** y selecciona el ZIP descargado. Los cookbooks del producto incluyen ejemplos concretos de `GxEPD2` cuando corresponde (por ejemplo, el [cookbook de reTerminal E Serie](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino) muestra renderizado a todo color en la E1002).
 
-## Próximos pasos — Libros de recetas
+## Próximos pasos — Cookbooks
 
-Esta página se detiene intencionalmente en el código base. Los ejemplos de código específicos de hardware y los recorridos de extremo a extremo se encuentran en el libro de recetas de cada producto:
+Esta página se detiene intencionalmente en el código base. Los ejemplos de código específicos de hardware y los recorridos de extremo a extremo se encuentran en el cookbook de cada producto:
 
-- **[reTerminal E Serie — libro de recetas de pantalla ePaper](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino)** — Hello World en E1001/E1002/E1003/E1004 con `Seeed_GFX` y `GxEPD2`.
-- **[reTerminal E Serie — libro de recetas de periféricos integrados](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals)** — el conjunto completo de periféricos para los mismos modelos: control de LED, zumbador (pitidos PWM pasivos + reproducción de melodías), entrada de 3 botones, temperatura/humedad SHT4x, gestión de batería, tarjeta microSD, renderizado de imágenes BMP desde SD.
-- **[reTerminal E Serie — libro de recetas de RTC, bajo consumo, audio y táctil](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals_2)** — gestión de tiempo del RTC, sueño profundo / sueño ligero, grabación con micrófono I2S y dibujo táctil capacitivo (solo E1003).
+- **[reTerminal E Serie — ePaper Display cookbook](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino)** — Hello World en E1001/E1002/E1003/E1004 con `Seeed_GFX` y `GxEPD2`.
+- **[reTerminal E Serie — Onboard Peripherals cookbook](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals)** — el conjunto completo de periféricos para los mismos modelos: control de LED, zumbador (pitidos PWM pasivos + reproducción de melodías), entrada de 3 botones, temperatura/humedad SHT4x, gestión de batería, tarjeta microSD, renderizado de imágenes BMP desde SD.
+- **[reTerminal E Serie — RTC, Low Power, Audio & Touch cookbook](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals_2)** — gestión de tiempo del RTC, sueño profundo / sueño ligero, grabación con micrófono I2S y dibujo táctil capacitivo (solo E1003).
 - **[XIAO 7.5" ePaper Panel + Arduino](https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_arduino)** — recorrido con XIAO ESP32-C3 usando `Seeed_GFX`.
 - **[TRMNL 7.5" DIY Kit + Arduino](https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_arduino)** — uso del hardware del kit en sketches personalizados de Arduino (en lugar de la plataforma en la nube TRMNL).
 
-Cuando se envían nuevos productos ePaper, el libro de recetas correspondiente se añade en la carpeta de cada producto; esta página principal se actualiza para enlazarlo.
+Cuando se envían nuevos productos ePaper, el cookbook correspondiente se añade en la carpeta de cada producto; esta página principal se actualiza para enlazarlo.
 
 ## Problemas comunes
 
@@ -257,7 +257,7 @@ Cuando se envían nuevos productos ePaper, el libro de recetas correspondiente s
 - Para placas ESP32-S3: mantén presionado el botón **BOOT** antes de conectar el cable USB para entrar en modo de descarga y luego suéltalo.
 - Confirma que **Tools → Port** apunte al dispositivo serie correcto después de volver a conectar.
 
-Para una resolución de problemas más profunda en un producto específico, consulta el libro de recetas para ese hardware.
+Para una resolución de problemas más profunda en un producto específico, consulta el cookbook para ese hardware.
 
 ## Soporte técnico y debate sobre productos
 

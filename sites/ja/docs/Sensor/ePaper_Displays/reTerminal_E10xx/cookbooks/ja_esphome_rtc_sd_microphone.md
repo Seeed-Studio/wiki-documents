@@ -1,6 +1,6 @@
 ---
-description: reTerminal E1001 / E1002 / E1003 / E1004 向け ESPHome クックブック - PCF8563 RTC の時刻同期、microSD カード検出、オンボード PDM マイクの初期化、およびハードウェアステータスダッシュボードを個別デモとして紹介します。
-title: 'ESPHome クックブック: RTC、SD カード & マイク (reTerminal E シリーズ)'
+description: reTerminal E1001 / E1002 / E1003 / E1004 向け ESPHome cookbook - PCF8563 RTC の時刻同期、microSD カード検出、オンボード PDM マイクの初期化、およびハードウェアステータスダッシュボードを個別デモとして紹介します。
+title: 'ESPHome Cookbook: RTC、SD カード & マイク (reTerminal E シリーズ)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
 sidebar_position: 5
@@ -16,12 +16,12 @@ url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_rtc_sd_microp
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome クックブック: RTC、SD カード & マイク (reTerminal E シリーズ)
+# ESPHome Cookbook: RTC、SD カード & マイク (reTerminal E シリーズ)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/251.jpeg" style={{width:1000, height:'auto'}}/></div><br />
 
 :::tip 前提条件
-このページでは、すでに [reTerminal E シリーズ向け ESPHome ディスプレイクックブック](/ja/reterminal_e10xx_with_esphome) を完了し、デバイスが Home Assistant 上でオンラインになっていることを前提とします。ボタン、ブザー、LED、バッテリー監視、SHT4x、静電容量式タッチ（E1003）、およびディープスリープについては、[ESPHome クックブック: ボタン、ブザー、LED、バッテリー、タッチ & 低消費電力](/ja/reterminal_e10xx_with_esphome_advanced) を参照してください。
+このページでは、すでに [reTerminal E シリーズ向け ESPHome ディスプレイ cookbook](/ja/reterminal_e10xx_with_esphome) を完了し、デバイスが Home Assistant 上でオンラインになっていることを前提とします。ボタン、ブザー、LED、バッテリー監視、SHT4x、静電容量式タッチ（E1003）、およびディープスリープについては、[ESPHome Cookbook: ボタン、ブザー、LED、バッテリー、タッチ & 低消費電力](/ja/reterminal_e10xx_with_esphome_advanced) を参照してください。
 :::
 
 :::tip ブラウザで ESPHome YAML を生成またはデモを書き込み
@@ -36,7 +36,7 @@ import TabItem from '@theme/TabItem';
 </div><br />
 :::
 
-このクックブックでは、reTerminal E シリーズ向け ESPHome の例をさらに発展させ、ディスプレイおよび I/O クックブックでは扱っていない 3 つのオンボードハードウェアブロックを取り上げます：
+この cookbook では、reTerminal E シリーズ向け ESPHome の例をさらに発展させ、ディスプレイおよび I/O cookbooks では扱っていない 3 つのオンボードハードウェアブロックを取り上げます：
 
 - **PCF8563 RTC** - オンボード RTC からハードウェア時刻を読み取り、Home Assistant から同期します。
 - **microSD カードスロット** - SD 電源レールを有効にし、カードが挿入されているかどうかを報告します。
@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
 
 ## ハードウェア機能
 
-このクックブックのデモで使用するピンは次のとおりです。
+この cookbook のデモで使用するピンは次のとおりです。
 
 <div class="table-center">
   <table align="center">
@@ -926,7 +926,7 @@ display:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/253.jpeg" style={{width:700, height:'auto'}}/></div>
 
 :::note ESPHome が microSD カードをどのように使用するか
-この ESPHome クックブックでは、microSD カードはデバイスステータス信号として使用されます。デモではカードが挿入されているかどうかをチェックし、その結果を画面に表示し、同じ状態を Home Assistant に公開します。
+この ESPHome cookbook では、microSD カードはデバイスステータス信号として使用されます。デモではカードが挿入されているかどうかをチェックし、その結果を画面に表示し、同じ状態を Home Assistant に公開します。
 
 これは、ESPHome が主にセンサー、スイッチ、ディスプレイ、および Home Assistant オートメーション向けに設計されているためです。通常、デバイス上のローカルファイルマネージャとしては使用されません。ファイルを開く、フォルダを作成する、ログを書き込む、WAV オーディオを SD カードに直接記録するといったタスクは、ファームウェアが SD カードのファイルシステムを直接制御できる Arduino で処理する方が適しています。
 
@@ -935,7 +935,7 @@ display:
 - カードの挿入または取り外し時に Home Assistant のオートメーションをトリガーする。
 - RTC、バッテリー、マイクのステータスと合わせてハードウェアヘルス情報を表示する。
 
-目的が SD カードファイルの直接読み書きである場合は、代わりに Arduino SD カードクックブックを参照してください。
+目的が SD カードファイルの直接読み書きである場合は、代わりに Arduino SD カード cookbook を参照してください。
 :::
 
 ## PDM マイク電源チェック
@@ -1840,11 +1840,11 @@ microSD カードが挿入されている場合は、まずカードを取り外
 ## リソース
 
 - **[Tool]** [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/) — デバイス機能を選択して ESPHome YAML を生成したり、ブラウザからデモを書き込んだりできます
-- **[Wiki]** [ESPHome クックブック：ディスプレイの基本](/ja/reterminal_e10xx_with_esphome)
-- **[Wiki]** [ESPHome クックブック：ボタン、ブザー、LED、バッテリー、タッチ & 低消費電力](/ja/reterminal_e10xx_with_esphome_advanced)
+- **[Wiki]** [ESPHome Cookbook：ディスプレイの基本](/ja/reterminal_e10xx_with_esphome)
+- **[Wiki]** [ESPHome Cookbook：ボタン、ブザー、LED、バッテリー、タッチ & 低消費電力](/ja/reterminal_e10xx_with_esphome_advanced)
 - **[Wiki]** [ESPHome と連携する](/ja/epaper_work_with_esphome)
-- **[Wiki]** [Arduino クックブック：オンボードペリフェラル](/ja/reterminal_e10xx_with_arduino_peripherals)
-- **[Wiki]** [Arduino クックブック：RTC、低消費電力、オーディオ & タッチ](/ja/reterminal_e10xx_with_arduino_peripherals_2)
+- **[Wiki]** [Arduino Cookbook：オンボードペリフェラル](/ja/reterminal_e10xx_with_arduino_peripherals)
+- **[Wiki]** [Arduino Cookbook：RTC、低消費電力、オーディオ & タッチ](/ja/reterminal_e10xx_with_arduino_peripherals_2)
 - **[Documentation]** [ESPHome Time コンポーネント](https://esphome.io/components/time/)
 - **[Documentation]** [ESPHome I2S Audio コンポーネント](https://esphome.io/components/i2s_audio.html)
 

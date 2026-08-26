@@ -1,6 +1,6 @@
 ---
-description: Getting Started with Seeed Studio XIAO SAMD21
-title: Getting Started with Seeed Studio XIAO SAMD21
+description: Getting Started with Seeed Studio XIAO SAMD21 
+title: Getting Started with Seeed Studio XIAO SAMD21 Series
 keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/get_sarted.webp
@@ -18,14 +18,31 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Getting Started with Seeed Studio XIAO SAMD21
+# Getting Started with Seeed Studio XIAO SAMD21 Series
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/get_1.jpg" alt="pir" width={400} height="auto" /></p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<div class="table-center">
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO SAMD21</th>
+   <th>Seeed Studio XIAO SAMD21 Plus</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/xiao-samd21-pre.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/xiao-samd21-plus-pre.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-SAMD21-Plus-p-6933.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Overview
@@ -324,6 +341,31 @@ All pins on Seeed Studio XIAO SAMD21 support interrupts, but two pins cannot be 
 ## Getting Started
 
 ### Hardware
+
+<div class="table-center">
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO SAMD21</th>
+   <th>Seeed Studio XIAO SAMD21 Plus</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/xiao-samd21-pre.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/xiao-samd21-plus-pre.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-SAMD21-Plus-p-6933.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
 
 **Materials required**
 

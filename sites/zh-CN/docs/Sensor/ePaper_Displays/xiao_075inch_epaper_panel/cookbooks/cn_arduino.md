@@ -1,6 +1,6 @@
 ---
-description: 面向 XIAO 7.5" ePaper Panel 的端到端 Arduino 使用手册——针对 XIAO ESP32-C3 的 Arduino IDE 设置、Seeed_GFX 配置以及 Hello World 演示讲解。
-title: Arduino 使用手册
+description: 面向 XIAO 7.5" ePaper Panel 的端到端 Arduino cookbook——针对 XIAO ESP32-C3 的 Arduino IDE 设置、Seeed_GFX 配置以及 Hello World 演示讲解。
+title: Arduino Cookbook
 keywords:
   - ePaper 显示屏
   - arduino
@@ -16,7 +16,7 @@ updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_arduino/
 ---
 
-# Arduino 使用手册：XIAO 7.5" ePaper Panel
+# Arduino Cookbook：XIAO 7.5" ePaper Panel
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/203.png" style={{width:900, height:'auto'}}/></div>
 
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_arduino/
 </div>
 
 :::tip 请先阅读主 Arduino 指南
-本页面是**针对 XIAO 7.5" Panel 的专用使用手册**。通用的基础内容——Arduino IDE 设置、ESP32 开发板包、安装 `Seeed_GFX`、使用配置工具生成 `driver.h`——都在 **[Work with Arduino](/cn/epaper_work_with_arduino)** 中。如果你是第一次在 Seeed ePaper 上使用 Arduino，建议先快速浏览那一页；本页主要讲解基于 XIAO ESP32-C3 的面板与通用部分不同之处。
+本页面是**针对 XIAO 7.5" Panel 的专用 cookbook**。通用的基础内容——Arduino IDE 设置、ESP32 开发板包、安装 `Seeed_GFX`、使用配置工具生成 `driver.h`——都在 **[Work with Arduino](/cn/epaper_work_with_arduino)** 中。如果你是第一次在 Seeed ePaper 上使用 Arduino，建议先快速浏览那一页；本页主要讲解基于 XIAO ESP32-C3 的面板与通用部分不同之处。
 :::
 
 ## 概述

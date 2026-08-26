@@ -1,6 +1,6 @@
 ---
-description: Recetario de ESPHome para la familia de placas controladoras XIAO ePaper (EE0x) - integración con Home Assistant en la XIAO ESP32-S3 + placa controladora EE0x con la pantalla ePaper que elijas. EE04 se usa como ejemplo práctico; EE02 / EE03 / EE05 comparten el mismo flujo de trabajo.
-title: Recetario de ESPHome
+description: cookbook de ESPHome para la familia de placas controladoras XIAO ePaper (EE0x) - integración con Home Assistant en la XIAO ESP32-S3 + placa controladora EE0x con la pantalla ePaper que elijas. EE04 se usa como ejemplo práctico; EE02 / EE03 / EE05 comparten el mismo flujo de trabajo.
+title: Cookbook de ESPHome
 keywords:
   - pantalla ePaper
   - ESPHome
@@ -26,10 +26,10 @@ url: https://wiki.seeedstudio.com/es/EE04_with_esphome_advanced/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Recetario de ESPHome: Placas controladoras XIAO ePaper (EE0x)
+# Cookbook de ESPHome: Placas controladoras XIAO ePaper (EE0x)
 
 :::tip Lee primero la guía principal de ESPHome
-Esta página es el **recetario de ESPHome para las placas controladoras EE0x**, aplicable a **EE02 / EE03 / EE04 / EE05**. Como las cuatro placas comparten la misma base XIAO ESP32-S3 y la misma interfaz ePaper conectada por SPI, el flujo de trabajo es idéntico; lo único que cambia entre ellas es el modelo de pantalla que seleccionas en el bloque YAML `display:`.
+Esta página es el **cookbook de ESPHome para las placas controladoras EE0x**, aplicable a **EE02 / EE03 / EE04 / EE05**. Como las cuatro placas comparten la misma base XIAO ESP32-S3 y la misma interfaz ePaper conectada por SPI, el flujo de trabajo es idéntico; lo único que cambia entre ellas es el modelo de pantalla que seleccionas en el bloque YAML `display:`.
 
 **Ejemplo práctico: EE04 con la pantalla monocroma de 7,5" y 800×480.** Sustituye tu propia combinación de placa + pantalla en la línea `display.model` y el resto de la configuración se aplica tal cual.
 
