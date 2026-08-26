@@ -466,7 +466,15 @@ MAC アドレスの `最後の 4 桁` がデバイス ID です。
 
 ### デバイスの再起動方法
 
- ボタンを押し続けたまま、充電ケーブルを接続します。
+ボタンを押し続けたまま、充電ケーブルを接続します。
+
+### 温度測定精度
+
+温度データは独立した温度センサーではなく、気圧センサーから取得されます。デバイスは動作中に発熱するため、測定温度は実際の周囲温度より高くなる場合があります。
+
+### 消費電力
+
+[消費電力表](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK)を使用して、消費電力を計算できます。本デバイスには高電圧バッテリーが搭載されています。バッテリー残量が少なくなると、放電が速くなります。そのため、バッテリー残量が少ない状態では、デバイスの電力消費が非常に速くなることがあります。
 
 ## トラブルシューティング
 

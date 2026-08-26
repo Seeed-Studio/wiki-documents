@@ -466,9 +466,9 @@ Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
 ### How to reboot the device
 
- Press and hold the button, then connect the charging cable.
+Press and hold the button, then connect the charging cable.
 
- ### Temperature Reading Accuracy
+### Temperature Reading Accuracy
 
 The temperature data is read from barometer, rather than reading from an independent temperature sensor.Device will generate heat while operation. So the measured temperature will be higher than the actual temperature.
 
