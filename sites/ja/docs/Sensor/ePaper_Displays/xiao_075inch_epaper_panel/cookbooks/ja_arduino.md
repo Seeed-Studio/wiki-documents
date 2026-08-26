@@ -1,6 +1,6 @@
 ---
-description: XIAO 7.5インチ ePaper パネル向けのエンドツーエンド Arduino クックブック - XIAO ESP32-C3 固有の Arduino IDE セットアップ、Seeed_GFX の設定、Hello World の手順解説。
-title: Arduino クックブック
+description: XIAO 7.5インチ ePaper パネル向けのエンドツーエンド Arduino cookbook - XIAO ESP32-C3 固有の Arduino IDE セットアップ、Seeed_GFX の設定、Hello World の手順解説。
+title: Arduino Cookbook
 keywords:
   - ePaper ディスプレイ
   - arduino
@@ -16,7 +16,7 @@ updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino/
 ---
 
-# Arduino クックブック: XIAO 7.5" ePaper パネル
+# Arduino Cookbook: XIAO 7.5" ePaper パネル
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/203.png" style={{width:900, height:'auto'}}/></div>
 
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino/
 </div>
 
 :::tip まずはメインの Arduino ガイドをお読みください
-このページは **XIAO 7.5" パネル専用のクックブック**です。共通の手順 ― Arduino IDE のセットアップ、ESP32 ボードパッケージ、`Seeed_GFX` のインストール、Configuration Tool からの `driver.h` 生成 ― は **[Work with Arduino](/ja/epaper_work_with_arduino)** にまとめられています。Seeed の ePaper で Arduino を使うのが初めての場合は、まずそちらに目を通してください。このページでは、XIAO ESP32-C3 ベースのパネルで異なる点に焦点を当てて説明します。
+このページは **XIAO 7.5" パネル専用の cookbook**です。共通の手順 ― Arduino IDE のセットアップ、ESP32 ボードパッケージ、`Seeed_GFX` のインストール、Configuration Tool からの `driver.h` 生成 ― は **[Work with Arduino](/ja/epaper_work_with_arduino)** にまとめられています。Seeed の ePaper で Arduino を使うのが初めての場合は、まずそちらに目を通してください。このページでは、XIAO ESP32-C3 ベースのパネルで異なる点に焦点を当てて説明します。
 :::
 
 ## 概要

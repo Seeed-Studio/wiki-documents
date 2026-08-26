@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 4. 各 Seeed ePaper 製品に対して正しい PlatformIO 環境を選択すること。
 5. `Seeed_GFX` を追加し、[Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) を使って対応する `driver.h` を生成すること。
 
-ディスプレイ描画 API、サンプルスケッチ、ハードウェア固有のデモコードを探している場合は、[Work with Arduino](/ja/epaper_work_with_arduino) と、このページの末尾にリンクされている各製品のクックブックから始めてください。PlatformIO で使用される C/C++ コードは、通常 Arduino コードと同じです。主な違いは、プロジェクトの設定方法です。
+ディスプレイ描画 API、サンプルスケッチ、ハードウェア固有のデモコードを探している場合は、[Work with Arduino](/ja/epaper_work_with_arduino) と、このページの末尾にリンクされている各製品の cookbooks から始めてください。PlatformIO で使用される C/C++ コードは、通常 Arduino コードと同じです。主な違いは、プロジェクトの設定方法です。
 
 ## 対応ハードウェア
 
@@ -65,12 +65,12 @@ PlatformIO は、Arduino 互換のファームウェアパスを公開してい�
     <tr>
       <td><strong>XIAO 7.5" ePaper パネル</strong></td>
       <td>XIAO ESP32-C3</td>
-      <td>XIAO ESP32-C3 の PlatformIO 環境を使用し、その後、スクリーン固有の `driver.h` 設定については製品クックブックを参照します。</td>
+      <td>XIAO ESP32-C3 の PlatformIO 環境を使用し、その後、スクリーン固有の `driver.h` 設定については製品 cookbook を参照します。</td>
     </tr>
     <tr>
       <td><strong>EN04 / EN05 および nRF52840 ベースの ePaper ボード</strong></td>
       <td>XIAO nRF52840 ファミリ</td>
-      <td>ファームウェア開発には nRF52840 の PlatformIO 環境を使用します。ePaper 固有のクックブックがまだ公開されていない場合は、このページを環境リファレンスとして使用し、ピンについては製品の回路図/クックブックを参照してください。</td>
+      <td>ファームウェア開発には nRF52840 の PlatformIO 環境を使用します。ePaper 固有の cookbook がまだ公開されていない場合は、このページを環境リファレンスとして使用し、ピンについては製品の回路図/cookbook を参照してください。</td>
     </tr>
   </table>
 </div>
@@ -88,7 +88,7 @@ PlatformIO は、ePaper プロジェクトが単一のスケッチを超えて�
 - `lib_deps` を通じてライブラリをダウンロードするため、別のコンピュータでプロジェクトを再現しやすくなります。
 - VS Code 内からビルド、書き込み、クリーン、シリアルモニタのタスクを提供します。
 
-ディスプレイ描画やハードウェア API については、Arduino クックブックで使用しているのと同じ Arduino スタイルの C/C++ コードを引き続き使用します。PlatformIO が主に変えるのは、プロジェクトのレイアウトと設定方法です。
+ディスプレイ描画やハードウェア API については、Arduino cookbook で使用しているのと同じ Arduino スタイルの C/C++ コードを引き続き使用します。PlatformIO が主に変えるのは、プロジェクトのレイアウトと設定方法です。
 
 ## ステップ 1: VS Code と PlatformIO をインストールする
 
@@ -202,7 +202,7 @@ VS Code で PlatformIO IDE を使用する場合、PlatformIO Core は拡張機�
     </tr>
     <tr>
       <td><code>build_flags</code></td>
-      <td>追加のコンパイラ定義。製品クックブックやライブラリで必要とされている場合にのみ使用します。</td>
+      <td>追加のコンパイラ定義。製品 cookbook やライブラリで必要とされている場合にのみ使用します。</td>
       <td><code>-DBOARD_HAS_PSRAM</code></td>
     </tr>
     <tr>
@@ -407,7 +407,7 @@ build_flags =
     -I src
 ```
 
-EN04 / EN05 のディスプレイドライバ、ピンマップ、およびライブラリ依存関係は、ベースとしている製品固有のファームウェアまたはクックブックに従う必要があります。
+EN04 / EN05 のディスプレイドライバ、ピンマップ、およびライブラリ依存関係は、ベースとしている製品固有のファームウェアまたは cookbook に従う必要があります。
 
 </TabItem>
 </Tabs>
@@ -575,7 +575,7 @@ board = seeed-xiao-esp32-s3-sense
 - [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) を使って `driver.h` を再生成します。
 - 選択したボードとディスプレイが実際のハードウェアと一致していることを確認します。
 - 生成された `BOARD_SCREEN_COMBO` が、`Seeed_GFX` をインクルードしているソースファイルから参照可能であることを確認します。
-- 大きなバッファを持つ ESP32-S3 製品の場合、製品クックブックで PSRAM 設定が必要かどうかを確認します。
+- 大きなバッファを持つ ESP32-S3 製品の場合、製品 cookbook で PSRAM 設定が必要かどうかを確認します。
 
 ### Q3: なぜ PlatformIO がボードへの書き込みに失敗するのですか？
 

@@ -1,6 +1,6 @@
 ---
-description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino 菜谱——PCF8563 RTC 读写、深度睡眠低功耗策略、PDM 麦克风音频录制到 SD 卡（E1001 / E1002 / E1003），以及电容触摸绘图（仅限 E1003）。
-title: Arduino 菜谱：RTC、低功耗、音频与触摸（reTerminal E 系列）
+description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino cookbook——PCF8563 RTC 读写、深度睡眠低功耗策略、PDM 麦克风音频录制到 SD 卡（E1001 / E1002 / E1003），以及电容触摸绘图（仅限 E1003）。
+title: Arduino Cookbook：RTC、低功耗、音频与触摸（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals_2
 sidebar_position: 3
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Arduino 菜谱：RTC、低功耗、音频与触摸（reTerminal E 系列）
+# Arduino Cookbook：RTC、低功耗、音频与触摸（reTerminal E 系列）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" style={{width:600, height:'auto'}}/></div>
 
@@ -30,21 +30,21 @@ import TabItem from '@theme/TabItem';
 </div><br />
 :::
 
-:::tip 本系列中的其他菜谱
-- **[Arduino 菜谱：电子纸显示屏](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)** —— 在电子纸屏幕上渲染文本、图形和图像。
-- **[Arduino 菜谱：板载外设](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)** —— LED、蜂鸣器、按键、SHT4x 传感器、电池监测、microSD 卡以及 SD 卡图像处理流程。
+:::tip 本系列中的其他 cookbooks
+- **[Arduino Cookbook：电子纸显示屏](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)** —— 在电子纸屏幕上渲染文本、图形和图像。
+- **[Arduino Cookbook：板载外设](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)** —— LED、蜂鸣器、按键、SHT4x 传感器、电池监测、microSD 卡以及 SD 卡图像处理流程。
 :::
 
 ## 介绍
 
-这是 reTerminal E 系列的第二篇外设菜谱。第一篇[外设菜谱](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)涵盖了基础 I/O 外设（LED、蜂鸣器、按键、SHT4x、电池、SD 卡），而本页将深入介绍四个更高级的主题：
+这是 reTerminal E 系列的第二篇外设 cookbook。第一篇[外设 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)涵盖了基础 I/O 外设（LED、蜂鸣器、按键、SHT4x、电池、SD 卡），而本页将深入介绍四个更高级的主题：
 
 - **实时时钟（RTC）** —— 板载 **PCF8563** RTC 芯片由 CR1220 纽扣电池供电，即使主电池被移除也能持续计时。
 - **低功耗模式** —— 深度睡眠、轻度睡眠以及 GPIO 唤醒策略，可将电池续航从数天延长到数月。
 - **PDM 麦克风** —— 通过板载 PDM 数字麦克风采集音频（仅限 E1001 / E1002 / E1003；E1004 不带麦克风），并将 WAV 文件保存到 microSD 卡。
 - **触摸屏** —— 在 E1003（10.3" 型号）上使用板载电容触摸面板在电子纸显示屏上绘制点。只有 E1003 配备触摸面板。
 
-本菜谱中的所有示例草图均来自 [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) 仓库。RTC、低功耗和麦克风示例草图**无需额外安装库**——全部使用 ESP32 内置 API。触摸示例草图需要 **Seeed_GFX** 库。
+本 cookbook 中的所有示例草图均来自 [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) 仓库。RTC、低功耗和麦克风示例草图**无需额外安装库**——全部使用 ESP32 内置 API。触摸示例草图需要 **Seeed_GFX** 库。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D" target="_blank">
@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 ### 所需材料
 
-本菜谱适用于 reTerminal E 系列。请选择你手头拥有的任意设备：
+本 cookbook 适用于 reTerminal E 系列。请选择你手头拥有的任意设备：
 
 <div class="table-center">
   <table align="center">
@@ -102,13 +102,13 @@ import TabItem from '@theme/TabItem';
 - 已安装 **Arduino IDE**，并安装好 **ESP32 开发板包**（PDM 麦克风需 ≥ 3.0 版本），且已选择 **XIAO_ESP32S3** 开发板。
 - 在 Tools 菜单中将 **PSRAM** 设置为 **OPI PSRAM**，将 **Flash** 设置为 **8 MB**。
 - 准备好一根可用的 **USB-C 数据线**，并选择正确的串口。
-- 已验证可以向设备烧录基础示例草图——如果尚未完成，请参考 [Arduino 菜谱：电子纸显示屏](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino#环境准备)中的环境搭建部分。
+- 已验证可以向设备烧录基础示例草图——如果尚未完成，请参考 [Arduino Cookbook：电子纸显示屏](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino#环境准备)中的环境搭建部分。
 
-本菜谱中的所有示例草图都会通过 `Serial1` 在 **GPIO44（RX）/ GPIO43（TX）** 引脚以 **115200 波特率**输出调试信息——这是通过 USB-UART 桥接的串口，**而不是** Arduino IDE 自动打开的 USB-CDC `Serial`。请打开 Arduino 串口监视器，并选择匹配的端口和波特率以便查看输出。
+本 cookbook 中的所有示例草图都会通过 `Serial1` 在 **GPIO44（RX）/ GPIO43（TX）** 引脚以 **115200 波特率**输出调试信息——这是通过 USB-UART 桥接的串口，**而不是** Arduino IDE 自动打开的 USB-CDC `Serial`。请打开 Arduino 串口监视器，并选择匹配的端口和波特率以便查看输出。
 
 ### 硬件兼容性概览
 
-本菜谱中的功能并非在四个型号上全部可用。下表总结了各型号可用的功能：
+本 cookbook 中的功能并非在四个型号上全部可用。下表总结了各型号可用的功能：
 
 <div class="table-center">
   <table align="center">
@@ -1449,7 +1449,7 @@ void loop()
 
 ### 准备 SD 卡
 
-关于插入和格式化 microSD 卡的说明，请参阅第一个外设菜谱中的 **[使用 MicroSD 卡](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals#使用-microsd-卡)** 章节。
+关于插入和格式化 microSD 卡的说明，请参阅第一个外设 cookbook 中的 **[使用 MicroSD 卡](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals#使用-microsd-卡)** 章节。
 
 :::note
 reTerminal E 系列支持容量最高为 **64 GB**、格式为 **FAT32** 的 microSD 卡。

@@ -1,6 +1,6 @@
 ---
-description: Recetario de pantalla ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - integración con Home Assistant, primer panel, configuración de Wi‑Fi, firmware precompilado en ZIP y ejemplos de dibujo en ePaper.
-title: Recetario ESPHome - Conceptos básicos de pantalla (reTerminal E Serie)
+description: cookbook de pantalla ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - integración con Home Assistant, primer panel, configuración de Wi‑Fi, firmware precompilado en ZIP y ejemplos de dibujo en ePaper.
+title: Cookbook ESPHome - Conceptos básicos de pantalla (reTerminal E Serie)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome
 aliases:
@@ -19,10 +19,10 @@ url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Recetario ESPHome - Conceptos básicos de pantalla: reTerminal E Serie
+# Cookbook ESPHome - Conceptos básicos de pantalla: reTerminal E Serie
 
 :::tip Lee primero la guía principal de ESPHome
-Esta página es el **recetario de pantalla ESPHome específico para reTerminal E Serie**. El contenido común — elegir una ruta de flasheo, el esqueleto YAML genérico, conectar con Home Assistant — se encuentra en **[Work with ESPHome](/es/epaper_work_with_esphome)**. Échale un vistazo primero si eres nuevo en ESPHome en los ePaper de Seeed. Para botones, zumbador, LED, batería, SHT4x y deep sleep, consulta el [recetario de E/S, batería, táctil y bajo consumo](/es/reterminal_e10xx_with_esphome_advanced). Para RTC, detección de tarjeta microSD y configuración del micrófono, consulta el [recetario de RTC, tarjeta SD y micrófono](/es/reterminal_e10xx_with_esphome_rtc_sd_microphone).
+Esta página es el **cookbook de pantalla ESPHome específico para reTerminal E Serie**. El contenido común — elegir una ruta de flasheo, el esqueleto YAML genérico, conectar con Home Assistant — se encuentra en **[Work with ESPHome](/es/epaper_work_with_esphome)**. Échale un vistazo primero si eres nuevo en ESPHome en los ePaper de Seeed. Para botones, zumbador, LED, batería, SHT4x y deep sleep, consulta el [cookbook de E/S, batería, táctil y bajo consumo](/es/reterminal_e10xx_with_esphome_advanced). Para RTC, detección de tarjeta microSD y configuración del micrófono, consulta el [cookbook de RTC, tarjeta SD y micrófono](/es/reterminal_e10xx_with_esphome_rtc_sd_microphone).
 :::
 
 :::tip Genera YAML de ESPHome o flashea demos en el navegador
@@ -92,7 +92,7 @@ Antes de comenzar con el contenido del tutorial de este artículo, es posible qu
 ### Materiales necesarios
 
 :::tip Modelos compatibles
-Este recetario cubre **reTerminal E1001, E1002, E1003 y E1004**. Elige la pestaña correspondiente en cada ejemplo para tu dispositivo. E1003 y E1004 requieren **ESPHome 2026.7.0 o posterior**.
+Este cookbook cubre **reTerminal E1001, E1002, E1003 y E1004**. Elige la pestaña correspondiente en cada ejemplo para tu dispositivo. E1003 y E1004 requieren **ESPHome 2026.7.0 o posterior**.
 :::
 
 <div class="table-center">
@@ -169,7 +169,7 @@ Recomendamos usar Home Assistant Green como host de Home Assistant para este tut
 
 ### Genera tu primer YAML de ESPHome (recomendado)
 
-Antes de copiar los fragmentos del recetario que aparecen a continuación, puedes crear una configuración completa y adaptada al dispositivo en un solo lugar:
+Antes de copiar los fragmentos del cookbook que aparecen a continuación, puedes crear una configuración completa y adaptada al dispositivo en un solo lugar:
 
 **Paso 1.** Abre el **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** en Chrome o Edge de escritorio.
 
@@ -188,7 +188,7 @@ Antes de copiar los fragmentos del recetario que aparecen a continuación, puede
 </div><br />
 
 :::tip
-El Firmware Hub completa por ti la placa, el bus y los pines de los periféricos. Usa este recetario cuando quieras aprender cada ejemplo de dibujo o visualización paso a paso, o cuando personalices el YAML generado. El flujo de trabajo completo compartido está documentado en **[Trabajar con ESPHome](/es/epaper_work_with_esphome)**.
+El Firmware Hub completa por ti la placa, el bus y los pines de los periféricos. Usa este cookbook cuando quieras aprender cada ejemplo de dibujo o visualización paso a paso, o cuando personalices el YAML generado. El flujo de trabajo completo compartido está documentado en **[Trabajar con ESPHome](/es/epaper_work_with_esphome)**.
 :::
 
 :::tip install Home Assistant
@@ -1500,7 +1500,7 @@ Al combinar imágenes con texto y otros elementos de visualización tratados en 
 
 ## Continuar leyendo
 
-Este artículo se centra en conectar la pantalla y dibujar contenido en la pantalla de ePaper. Continúa con estos recetarios de ESPHome cuando quieras usar el resto del hardware integrado:
+Este artículo se centra en conectar la pantalla y dibujar contenido en la pantalla de ePaper. Continúa con estos cookbooks de ESPHome cuando quieras usar el resto del hardware integrado:
 
 - **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** - genera un archivo YAML completo de ESPHome seleccionando tu dispositivo y marcando las funciones integradas, o flashea firmware de demostración desde el navegador.
 - **[ESPHome Cookbook: Buttons, Buzzer, LED, Battery, Touch & Low Power](/es/reterminal_e10xx_with_esphome_advanced)** - botones de usuario, retroalimentación del zumbador, LED integrado, monitorización de batería, sensor SHT4x, toque capacitivo (E1003), sueño profundo y paneles de varias páginas.

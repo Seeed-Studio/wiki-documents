@@ -1,5 +1,5 @@
 ---
-description: ESPHome と Home Assistant で互換性のあるすべての Seeed ePaper 製品を駆動するためのリファレンスガイド - YAML ワークフロー、汎用スケルトン、および各製品のクックブックの所在。
+description: ESPHome と Home Assistant で互換性のあるすべての Seeed ePaper 製品を駆動するためのリファレンスガイド - YAML ワークフロー、汎用スケルトン、および各製品の cookbook の所在。
 title: ESPHome で使う
 keywords:
   - ePaper ディスプレイ
@@ -35,11 +35,11 @@ updatedAt: '2026-08-05'
 このページは、[ESPHome](https://esphome.io/) を通じて互換性のある Seeed ePaper 製品を駆動し、[Home Assistant](https://www.home-assistant.io/) と統合するための**リファレンスマニュアル**です。ここでは、すべてのハードウェアで共通の部分を扱います：
 
 1. ePaper ディスプレイを駆動するために ESPHome を選ぶ理由。
-2. クックブックの YAML サンプルを使い、自分の用途に合わせて調整し、ESPHome ダッシュボードから書き込む方法。
+2. cookbook の YAML サンプルを使い、自分の用途に合わせて調整し、ESPHome ダッシュボードから書き込む方法。
 3. すべての製品が独自のピンマップで特化している汎用 YAML スケルトン — `wifi`、`api`、`ota`、`display`。
-4. 製品ごとのクックブックの場所（ペリフェラル、ハードウェア固有の lambda、ダッシュボードレシピ）。
+4. 製品ごとの cookbook の場所（ペリフェラル、ハードウェア固有の lambda、ダッシュボードレシピ）。
 
-**「書き込み → 接続 → 最初のダッシュボード」までのエンドツーエンドの手順**を見たい場合は、以下の自分のハードウェア用クックブックに直接進んでください。これらのページは、このリファレンスで共通部分を再利用しつつ、製品固有のサンプルを追加しています。
+**「書き込み → 接続 → 最初のダッシュボード」までのエンドツーエンドの手順**を見たい場合は、以下の自分のハードウェア用 cookbook に直接進んでください。これらのページは、このリファレンスで共通部分を再利用しつつ、製品固有のサンプルを追加しています。
 
 ## 対応ハードウェア
 
@@ -50,7 +50,7 @@ updatedAt: '2026-08-05'
     <tr>
       <th>製品</th>
       <th>MCU</th>
-      <th>クックブック</th>
+      <th>Cookbook</th>
     </tr>
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
@@ -64,17 +64,17 @@ updatedAt: '2026-08-05'
     <tr>
       <td><strong>EE04 driver board</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td><a href="https://wiki.seeedstudio.com/ja/EE04_with_esphome_advanced/">EE04 ESPHome クックブック</a></td>
+      <td><a href="https://wiki.seeedstudio.com/ja/EE04_with_esphome_advanced/">EE04 ESPHome cookbook</a></td>
     </tr>
     <tr>
       <td><strong>XIAO 7.5" ePaper Panel</strong></td>
       <td>XIAO ESP32-C3</td>
-      <td><a href="https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_esphome/">XIAO パネル ESPHome クックブック</a></td>
+      <td><a href="https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_esphome/">XIAO パネル ESPHome cookbook</a></td>
     </tr>
     <tr>
       <td><strong>TRMNL 7.5" (OG) DIY Kit</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td><a href="https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome/">TRMNL DIY キット ESPHome クックブック</a></td>
+      <td><a href="https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome/">TRMNL DIY キット ESPHome cookbook</a></td>
     </tr>
   </table>
 </div>
@@ -105,7 +105,7 @@ updatedAt: '2026-08-05'
 8. プロジェクトで最も重要な部分、つまり ePaper ディスプレイのコンテンツ、Home Assistant エンティティ、レイアウト、フォント、リフレッシュ動作に手動編集の焦点を当てます。
 
 :::tip
-Firmware Hub は、デバイス固有の YAML 構造の多くを処理してくれるため、新規ユーザーにとって推奨される出発点です。生成された設定を理解したいとき、高度な機能を組み合わせたいとき、あるいは小さなサンプルからカスタムレイアウトを構築したいときは、クックブックを利用してください。
+Firmware Hub は、デバイス固有の YAML 構造の多くを処理してくれるため、新規ユーザーにとって推奨される出発点です。生成された設定を理解したいとき、高度な機能を組み合わせたいとき、あるいは小さなサンプルからカスタムレイアウトを構築したいときは、cookbooks を利用してください。
 :::
 
 ESPHome ダッシュボードは次のいずれかの形で実行します：
@@ -113,17 +113,17 @@ ESPHome ダッシュボードは次のいずれかの形で実行します：
 - Home Assistant アドオン（すでに HA OS / HA Supervised を動かしている場合に推奨）、または
 - スタンドアロンの Python CLI（`pip install esphome` の後に `esphome dashboard config/`）。
 
-手動クックブックワークフロー：
+手動 cookbook ワークフロー：
 
-1. 自分のハードウェア用クックブック（上の表を参照）を開き、必要な YAML サンプルをコピーします。
-2. ESPHome ダッシュボードで + New device をクリックし、名前を入力して、クックブックに記載されている ESP バリアント（ESP32-S3、ESP32-C3 など）を選択します。
-3. 生成されたスターターファイルを自分の設定で置き換えます。1 台のデバイスで複数の機能が必要な場合にのみ、クックブックのセクションを組み合わせてください。
+1. 自分のハードウェア用 cookbook（上の表を参照）を開き、必要な YAML サンプルをコピーします。
+2. ESPHome ダッシュボードで + New device をクリックし、名前を入力して、cookbook に記載されている ESP バリアント（ESP32-S3、ESP32-C3 など）を選択します。
+3. 生成されたスターターファイルを自分の設定で置き換えます。1 台のデバイスで複数の機能が必要な場合にのみ、cookbook のセクションを組み合わせてください。
 4. 最初の USB 書き込みでは Install → Plug into this computer をクリックします。`wifi`、`api`、`ota` が設定されれば、その後の更新は Wi-Fi 経由で行えます。
 5. デバイスがオンラインになると、ESPHome 連携を通じて Home Assistant に表示されます。
 
 ## ステップ 2: 生成された YAML 構造を理解する
 
-すべての Seeed ePaper ESPHome 設定は同じ基本構造に従いますが、ハードウェアの値は共通ではありません。ボードタイプ、バスピン、電源イネーブルピン、ディスプレイプラットフォーム、ディスプレイモデル、オンボードペリフェラルについては、Firmware Hub または自分の製品用クックブックを信頼できる情報源として使用してください。
+すべての Seeed ePaper ESPHome 設定は同じ基本構造に従いますが、ハードウェアの値は共通ではありません。ボードタイプ、バスピン、電源イネーブルピン、ディスプレイプラットフォーム、ディスプレイモデル、オンボードペリフェラルについては、Firmware Hub または自分の製品用 cookbook を信頼できる情報源として使用してください。
 
 以下のブロックは、**構造ガイド**であり、そのまま書き込み可能な設定ではありません。製品固有の YAML ファイルを生成またはコピーした後に、各種設定が通常どこに現れるかを示しています：
 
@@ -230,7 +230,7 @@ display:
       it.print(0, 0, id(font_medium), "Hello, ePaper!");
 ```
 
-Firmware Hub またはクックブックから、次の値を保持してください：
+Firmware Hub または cookbook から、次の値を保持してください：
 
 - `esp32.board` と、`hardware_uart` などの logger 設定。
 - `spi`、`i2c`、`i2s_audio` のピン。
@@ -258,9 +258,9 @@ Firmware Hub またはクックブックから、次の値を保持してくだ�
 
 これでエンティティを Lovelace ダッシュボードにドラッグすることもできますし、あるいは — ePaper ではさらに面白い方法として — `display.lambda` ブロックを使い、[`homeassistant`](https://esphome.io/components/homeassistant.html) コンポーネント経由で任意の HA エンティティを直接画面に描画できます。
 
-## 次のステップ — クックブック
+## 次のステップ — Cookbooks
 
-このページは意図的にボイラープレートまでで止めています。製品固有の YAML、周辺機器の例、エンドツーエンドのレシピは、各製品のクックブックにまとめられています：
+このページは意図的にボイラープレートまでで止めています。製品固有の YAML、周辺機器の例、エンドツーエンドのレシピは、各製品の cookbook にまとめられています：
 
 - **[reTerminal E Series — ESPHome Display](/ja/reterminal_e10xx_with_esphome)** — E1001/E1002/E1003/E1004 向けの最初のダッシュボード、Wi-Fi 設定、ePaper 描画の例。
 - **[reTerminal E Series — ESPHome I/O, Battery, Touch & Power](/ja/reterminal_e10xx_with_esphome_advanced)** — ボタン、ブザー、オンボード LED、バッテリー監視、SHT4x センサ、静電容量式タッチ（E1003）、ディープスリープ、マルチページダッシュボード。
@@ -269,7 +269,7 @@ Firmware Hub またはクックブックから、次の値を保持してくだ�
 - **[XIAO 7.5" ePaper Panel — ESPHome](/ja/xiao_075inch_epaper_panel_esphome)** — 最小構成の ESP32-C3 ダッシュボード。
 - **[TRMNL 7.5" DIY Kit — ESPHome](/ja/ogdiy_kit_works_with_esphome)** — TRMNL クラウドプラットフォームの代わりに、ESPHome でキットのハードウェアを使用する方法。
 
-新しい ePaper 製品が出荷されると、対応するクックブックが各製品フォルダの下に追加され、このメインページからのリンクも更新されます。
+新しい ePaper 製品が出荷されると、対応する cookbook が各製品フォルダの下に追加され、このメインページからのリンクも更新されます。
 
 ## よくある問題
 

@@ -293,7 +293,7 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
 
 ### 智能家居与仪表盘框架
 
-- [搭配 ESPHome 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_esphome) — 主参考：烧录路径、通用 YAML 模板、Home Assistant 集成。按产品划分的实战手册：[reTerminal E（基础）](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)、[reTerminal E（进阶）](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/cn/EE04_with_esphome_advanced)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_esphome)。
+- [搭配 ESPHome 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_esphome) — 主参考：烧录路径、通用 YAML 模板、Home Assistant 集成。按产品划分的 cookbooks：[reTerminal E（基础）](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)、[reTerminal E（进阶）](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/cn/EE04_with_esphome_advanced)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_esphome)。
 - [搭配 TRMNL 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_trmnl) — 通过 TRMNL 云平台部署电子墨水仪表盘。一篇文章同时覆盖 reTerminal E1001/E1002、TRMNL DIY Kit 和 XIAO 7.5" ePaper Panel——在标签页中选择你的硬件即可。
 
 ### 零代码 / 可视化 UI 设计工具
@@ -305,8 +305,8 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
 
 ### 基于代码的开发
 
-- [搭配 Arduino 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_arduino) — 主参考：IDE 配置、`Seeed_GFX` 库、`driver.h` 生成。按产品划分的实战手册：reTerminal E 系列——[电子纸显示屏](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino) 与 [板载外设](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_arduino)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_arduino)。
-- [搭配 PlatformIO 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_platformio) — 主参考：VS Code 配置、`platformio.ini` 配置、`Seeed_GFX` 设置，以及按产品选择 PlatformIO 环境。按产品划分的实战手册：[EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/cn/ee04_with_platformio)。
+- [搭配 Arduino 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_arduino) — 主参考：IDE 配置、`Seeed_GFX` 库、`driver.h` 生成。按产品划分的 cookbooks：reTerminal E 系列——[电子纸显示屏](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino) 与 [板载外设](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_arduino)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_arduino)。
+- [搭配 PlatformIO 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_platformio) — 主参考：VS Code 配置、`platformio.ini` 配置、`Seeed_GFX` 设置，以及按产品选择 PlatformIO 环境。按产品划分的 cookbook：[EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/cn/ee04_with_platformio)。
 - [搭配 Zephyr 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_zephyr) — reTerminal E1001、E1002 和 E1003 上 Zephyr RTOS 支持的入口页面，包含官方 Zephyr 开发板文档链接和开发板目标。
 
 ### 开源 ESL / OEPL

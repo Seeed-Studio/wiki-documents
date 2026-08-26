@@ -1,6 +1,6 @@
 ---
-description: reTerminal E1001 / E1002 / E1003 / E1004 向け ESPHome クックブック - ボタン、ブザー、オンボード LED、バッテリー監視、SHT4x センサー、静電容量式タッチ（E1003）、ディープスリープ、およびマルチページダッシュボード。
-title: 'ESPHome クックブック: ボタン、ブザー、LED、バッテリー、タッチ & 省電力（reTerminal E シリーズ）'
+description: reTerminal E1001 / E1002 / E1003 / E1004 向け ESPHome cookbook - ボタン、ブザー、オンボード LED、バッテリー監視、SHT4x センサー、静電容量式タッチ（E1003）、ディープスリープ、およびマルチページダッシュボード。
+title: 'ESPHome Cookbook: ボタン、ブザー、LED、バッテリー、タッチ & 省電力（reTerminal E シリーズ）'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 4
@@ -16,10 +16,10 @@ url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome クックブック: ボタン、ブザー、LED、バッテリー、タッチ & 省電力（reTerminal E シリーズ）
+# ESPHome Cookbook: ボタン、ブザー、LED、バッテリー、タッチ & 省電力（reTerminal E シリーズ）
 
 :::tip 前提条件
-このページでは、すでに [reTerminal E シリーズ向け ESPHome ディスプレイクックブック](/ja/reterminal_e10xx_with_esphome)（デバイスが Wi-Fi に接続済み、Home Assistant との連携がオンライン、最初のダッシュボードが描画済み）を一通り終えていることを前提とします。プラットフォームレベルの YAML スケルトンと Home Assistant 連携手順については、[ESPHome を使う](/ja/epaper_work_with_esphome) を参照してください。RTC、microSD カード検出、マイクのセットアップについては、[ESPHome クックブック: RTC、SD カード & マイク](/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone) を参照してください。静電容量式タッチ（GT911）はこのページの後半で扱い、**reTerminal E1003** のみが対象です。
+このページでは、すでに [reTerminal E シリーズ向け ESPHome ディスプレイ cookbook](/ja/reterminal_e10xx_with_esphome)（デバイスが Wi-Fi に接続済み、Home Assistant との連携がオンライン、最初のダッシュボードが描画済み）を一通り終えていることを前提とします。プラットフォームレベルの YAML スケルトンと Home Assistant 連携手順については、[ESPHome を使う](/ja/epaper_work_with_esphome) を参照してください。RTC、microSD カード検出、マイクのセットアップについては、[ESPHome Cookbook: RTC、SD カード & マイク](/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone) を参照してください。静電容量式タッチ（GT911）はこのページの後半で扱い、**reTerminal E1003** のみが対象です。
 :::
 
 :::tip ブラウザで ESPHome YAML を生成したりデモを書き込んだりする
@@ -36,7 +36,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-この記事では、[ESPHome ディスプレイクックブック](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome) で扱った基礎的な概念を土台として、reTerminal E シリーズ ePaper Display デバイスのオンボード I/O と電源関連の ESPHome 設定について説明します。ESPHome や reTerminal E シリーズを初めて扱う場合は、ここで紹介するハードウェア例を使う前に、まずディスプレイガイドから始めることをおすすめします。
+この記事では、[ESPHome ディスプレイ cookbook](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome) で扱った基礎的な概念を土台として、reTerminal E シリーズ ePaper Display デバイスのオンボード I/O と電源関連の ESPHome 設定について説明します。ESPHome や reTerminal E シリーズを初めて扱う場合は、ここで紹介するハードウェア例を使う前に、まずディスプレイガイドから始めることをおすすめします。
 
 ## ハードウェア機能
 

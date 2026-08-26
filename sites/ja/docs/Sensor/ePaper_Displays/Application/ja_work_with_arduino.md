@@ -1,5 +1,5 @@
 ---
-description: Arduino IDE から互換性のあるすべての Seeed ePaper 製品を駆動するためのリファレンスガイド - Arduino IDE のセットアップ、Seeed_GFX ライブラリのインストール、driver.h の生成。ハードウェア固有の詳細は各製品のクックブックに記載されています。
+description: Arduino IDE から互換性のあるすべての Seeed ePaper 製品を駆動するためのリファレンスガイド - Arduino IDE のセットアップ、Seeed_GFX ライブラリのインストール、driver.h の生成。ハードウェア固有の詳細は各製品の cookbook に記載されています。
 title: Arduino で使う
 keywords:
   - ePaper ディスプレイ
@@ -41,14 +41,14 @@ import TabItem from '@theme/TabItem';
 3. [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) を使って、ボードとスクリーンの組み合わせに対応した `driver.h` を生成。
 4. （オプション）代替ドライバとしてサードパーティ製 **GxEPD2** ライブラリを使用。
 
-**箱を開けてから、Hello World の書き込み、センサーやボタンの点灯まで**を一通り行う手順については、各ハードウェア専用の**クックブック**に進んでください。これらのページでは、このリファレンスで説明する共通部分を再利用しつつ、製品固有のサンプル（周辺機能、コード例、トラブルシューティング）を追加しています：
+**箱を開けてから、Hello World の書き込み、センサーやボタンの点灯まで**を一通り行う手順については、各ハードウェア専用の**cookbook**に進んでください。これらのページでは、このリファレンスで説明する共通部分を再利用しつつ、製品固有のサンプル（周辺機能、コード例、トラブルシューティング）を追加しています：
 
-- [reTerminal E シリーズ — ePaper ディスプレイクックブック](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino) — `Seeed_GFX` と `GxEPD2` の両方を使った Hello World 例を含む reTerminal E1001 / E1002 / E1003 / E1004 をカバーします。
-- [reTerminal E シリーズ — オンボード周辺機能クックブック](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals) — 同じモデル向けの周辺機能フルサンプル：LED、ブザー、3 つのユーザーボタン、SHT4x センサー、バッテリーモニタ、microSD カード、および SD からの BMP 画像描画。
-- [reTerminal E シリーズ — RTC、低消費電力、オーディオ & タッチクックブック](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2) — RTC 時刻管理、ディープスリープ / ライトスリープ、I2S マイク録音、および静電容量式タッチ描画（E1003 のみ）。
-- そのほかのクックブック（XIAO 7.5" パネル、EE0x ドライバボードなど）は、対応製品がプラットフォームに追加され次第公開されます。
+- [reTerminal E シリーズ — ePaper ディスプレイ cookbook](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino) — `Seeed_GFX` と `GxEPD2` の両方を使った Hello World 例を含む reTerminal E1001 / E1002 / E1003 / E1004 をカバーします。
+- [reTerminal E シリーズ — オンボード周辺機能 cookbook](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals) — 同じモデル向けの周辺機能フルサンプル：LED、ブザー、3 つのユーザーボタン、SHT4x センサー、バッテリーモニタ、microSD カード、および SD からの BMP 画像描画。
+- [reTerminal E シリーズ — RTC、低消費電力、オーディオ & タッチ cookbook](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2) — RTC 時刻管理、ディープスリープ / ライトスリープ、I2S マイク録音、および静電容量式タッチ描画（E1003 のみ）。
+- そのほかの cookbooks（XIAO 7.5" パネル、EE0x ドライバボードなど）は、対応製品がプラットフォームに追加され次第公開されます。
 
-クックブックでまだ扱われていない新製品で `Hello World` を表示するためのボイラープレートだけが必要な場合は、このページだけで十分です。
+cookbook でまだ扱われていない新製品で `Hello World` を表示するためのボイラープレートだけが必要な場合は、このページだけで十分です。
 
 ## 対応ハードウェア
 
@@ -64,7 +64,7 @@ import TabItem from '@theme/TabItem';
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
       <td>XIAO ESP32-S3（内蔵）</td>
-      <td>クックブックあり — 上記リンクを参照</td>
+      <td>Cookbook あり — 上記リンクを参照</td>
     </tr>
     <tr>
       <td><strong>EE02 / EE03 / EE04 / EE05</strong></td>
@@ -126,7 +126,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 - **EE02 / EE03 / EE04 / EE05 standard / EN04（Arduino 経路）**: `XIAO_ESP32S3`（nRF52840 ベースのボードの場合は `XIAO_nRF52840`）
 - **XIAO 7.5" ePaper Panel**: `XIAO_ESP32C3`
 
-どれを選べばよいか分からない場合は、お使いの製品のクックブックに記載されています。
+どれを選べばよいか分からない場合は、お使いの製品の cookbook に記載されています。
 
 **ステップ 5.** ハードウェアを USB-C で接続し、**Tools → Port** から正しいポートを選択します。
 
@@ -228,11 +228,11 @@ Seeed_GFX は、Seeed 製ディスプレイを一級サポートするように�
     </a>
 </div><br />
 
-**Sketch → Include Library → Add .ZIP Library** を選択し、ダウンロードした ZIP を指定します。各製品のクックブックには、該当する場合は具体的な `GxEPD2` のサンプルが含まれています（例えば [reTerminal E Series cookbook](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino) では、E1002 上でのフルカラー描画を紹介しています）。
+**Sketch → Include Library → Add .ZIP Library** を選択し、ダウンロードした ZIP を指定します。各製品の cookbooks には、該当する場合は具体的な `GxEPD2` のサンプルが含まれています（例えば [reTerminal E Series cookbook](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino) では、E1002 上でのフルカラー描画を紹介しています）。
 
-## 次のステップ — クックブック
+## 次のステップ — Cookbooks
 
-このページは意図的にボイラープレートまでで止めています。ハードウェア固有のコードサンプルやエンドツーエンドの手順は、各製品のクックブックにまとめられています：
+このページは意図的にボイラープレートまでで止めています。ハードウェア固有のコードサンプルやエンドツーエンドの手順は、各製品の cookbook にまとめられています：
 
 - **[reTerminal E Series — ePaper Display cookbook](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino)** — `Seeed_GFX` と `GxEPD2` の両方を使った E1001/E1002/E1003/E1004 での Hello World。
 - **[reTerminal E Series — Onboard Peripherals cookbook](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)** — 同じモデル向けの周辺機能一式：LED 制御、ブザー（パッシブ PWM ビープ音 + メロディ再生）、3 ボタン入力、SHT4x 温度/湿度、バッテリーマネジメント、microSD カード、SD からの BMP 画像描画。
@@ -240,7 +240,7 @@ Seeed_GFX は、Seeed 製ディスプレイを一級サポートするように�
 - **[XIAO 7.5" ePaper Panel + Arduino](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino)** — `Seeed_GFX` を用いた XIAO ESP32-C3 のウォークスルー。
 - **[TRMNL 7.5" DIY Kit + Arduino](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_arduino)** — TRMNL クラウドプラットフォームではなく、キットのハードウェアをカスタム Arduino スケッチで使用する方法。
 
-新しい ePaper 製品が出荷されると、その製品フォルダの下に対応するクックブックが追加され、このメインページからのリンクも更新されます。
+新しい ePaper 製品が出荷されると、その製品フォルダの下に対応する cookbook が追加され、このメインページからのリンクも更新されます。
 
 ## よくある問題
 
@@ -257,7 +257,7 @@ Seeed_GFX は、Seeed 製ディスプレイを一級サポートするように�
 - ESP32-S3 ボードの場合：USB ケーブルを接続する前に **BOOT** ボタンを押し続けてダウンロードモードに入り、その後ボタンを離します。
 - 再接続後、**Tools → Port** が正しいシリアルデバイスを指していることを確認します。
 
-特定の製品についてより詳しくトラブルシューティングする場合は、そのハードウェア用のクックブックを参照してください。
+特定の製品についてより詳しくトラブルシューティングする場合は、そのハードウェア用の cookbook を参照してください。
 
 ## 技術サポート & 製品ディスカッション
 

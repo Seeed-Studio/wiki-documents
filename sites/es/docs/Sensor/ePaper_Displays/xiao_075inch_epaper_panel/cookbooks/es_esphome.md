@@ -1,6 +1,6 @@
 ---
-description: Recetario completo de ESPHome / Home Assistant para el Panel ePaper XIAO de 7,5" - flashear el firmware, integrarlo con Home Assistant y crear paneles en YAML.
-title: Recetario de ESPHome
+description: cookbook completo de ESPHome / Home Assistant para el Panel ePaper XIAO de 7,5" - flashear el firmware, integrarlo con Home Assistant y crear paneles en YAML.
+title: Cookbook de ESPHome
 keywords:
   - pantalla ePaper
   - ESPHome
@@ -20,10 +20,10 @@ url: https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Recetario de ESPHome: Panel ePaper XIAO de 7,5"
+# Cookbook de ESPHome: Panel ePaper XIAO de 7,5"
 
 :::tip Lee primero la guía principal de ESPHome
-Esta página es el **recetario de ESPHome específico para el Panel XIAO de 7,5"**. La plantilla compartida — elegir una ruta de flasheo, el esqueleto YAML genérico, conectarse a Home Assistant — se encuentra en **[Work with ESPHome](/es/epaper_work_with_esphome)**. Échale un vistazo primero si eres nuevo en ESPHome en los ePaper de Seeed; esta página se centra en lo específico del panel basado en XIAO ESP32-C3.
+Esta página es el **cookbook de ESPHome específico para el Panel XIAO de 7,5"**. La plantilla compartida — elegir una ruta de flasheo, el esqueleto YAML genérico, conectarse a Home Assistant — se encuentra en **[Work with ESPHome](/es/epaper_work_with_esphome)**. Échale un vistazo primero si eres nuevo en ESPHome en los ePaper de Seeed; esta página se centra en lo específico del panel basado en XIAO ESP32-C3.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/201.png" style={{width:900, height:'auto'}}/></div>

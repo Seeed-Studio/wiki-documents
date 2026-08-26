@@ -1,6 +1,6 @@
 ---
-description: XIAO 7.5" ePaper Panel 向けのエンドツーエンド ESPHome / Home Assistant クックブックです。ファームウェアの書き込み、Home Assistant との連携、そして YAML でのダッシュボード構築までを解説します。
-title: ESPHome クックブック
+description: XIAO 7.5" ePaper Panel 向けのエンドツーエンド ESPHome / Home Assistant cookbook です。ファームウェアの書き込み、Home Assistant との連携、そして YAML でのダッシュボード構築までを解説します。
+title: ESPHome Cookbook
 keywords:
   - ePaper ディスプレイ
   - ESPHome
@@ -20,10 +20,10 @@ url: https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome クックブック: XIAO 7.5" ePaper Panel
+# ESPHome Cookbook: XIAO 7.5" ePaper Panel
 
 :::tip まずはメインの ESPHome ガイドを読んでください
-このページは **XIAO 7.5" パネル専用の ESPHome クックブック**です。共通の手順 ― 書き込み方法の選択、汎用的な YAML スケルトン、Home Assistant への接続 ― は **[Work with ESPHome](/ja/epaper_work_with_esphome)** にまとめられています。Seeed の ePaper で ESPHome を使うのが初めての場合は、まずそちらに目を通してください。このページでは XIAO ESP32-C3 ベースのパネルに特有の内容に焦点を当てます。
+このページは **XIAO 7.5" パネル専用の ESPHome cookbook**です。共通の手順 ― 書き込み方法の選択、汎用的な YAML スケルトン、Home Assistant への接続 ― は **[Work with ESPHome](/ja/epaper_work_with_esphome)** にまとめられています。Seeed の ePaper で ESPHome を使うのが初めての場合は、まずそちらに目を通してください。このページでは XIAO ESP32-C3 ベースのパネルに特有の内容に焦点を当てます。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/201.png" style={{width:900, height:'auto'}}/></div>
