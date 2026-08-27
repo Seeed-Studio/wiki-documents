@@ -9,7 +9,7 @@ last_update:
   date: 02/12/2025
   author: Citric
 createdAt: '2025-02-13'
-updatedAt: '2026-01-07'
+updatedAt: '2026-08-26'
 url: https://wiki.seeedstudio.com/getting_started_with_wifi_halow_module_for_xiao/
 ---
 

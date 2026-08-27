@@ -1,6 +1,16 @@
 const docList = [
   [
     {
+      "path": "/recamera_pro_visual_wake_stt",
+      "image": "https://files.seeedstudio.com/wiki/reCamera-Pro/Application/recamera_pro_visual_wake_stt/gpt_images.png",
+      "title": "Build a Visual Wake and Offline Speech Recognition System with reCamera Pro",
+      "date": "2026-08-24",
+      "title_cn": "使用 reCamera Pro 构建视觉唤醒与离线语音识别系统",
+      "title_ja": "reCamera Pro でビジュアルウェイク & オフライン音声認識システムを構築する",
+      "title_es": "Crea un sistema de activación visual y reconocimiento de voz sin conexión con reCamera Pro",
+      "title_pt": "Crie um sistema de despertar visual e reconhecimento de fala offline com reCamera Pro"
+    },
+    {
       "path": "/sensecap_combo_introduction",
       "image": "https://files.seeedstudio.com/wiki/SenseCAP/Combo/SenseCAP_Combo_5in1_4G.webp",
       "title": "SenseCAP Combo 5-in-1 Sensor with 4G Introduction",
@@ -9,6 +19,18 @@ const docList = [
       "title_ja": "SenseCAP Combo 5-in-1 Sensor with 4G 概要",
       "title_es": "Introducción al sensor SenseCAP Combo 5 en 1 con 4G",
       "title_pt": "Introdução ao Sensor SenseCAP Combo 5-em-1 com 4G"
+    }
+  ],
+  [
+    {
+      "path": "/respeaker_xvf_3800_i2c_list",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp",
+      "title": "Using I2C Commands to Control reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3",
+      "date": "2026-08-21",
+      "title_cn": "使用 I2C 命令通过 XIAO ESP32S3 控制 reSpeaker XVF3800 USB Mic Array",
+      "title_ja": "I2C コマンドを使用して XIAO ESP32S3 で reSpeaker XVF3800 USB Mic Array を制御する",
+      "title_es": "Uso de comandos I2C para controlar la reSpeaker XVF3800 USB Mic Array con XIAO ESP32S3",
+      "title_pt": "Usando comandos I2C para controlar o reSpeaker XVF3800 USB Mic Array com XIAO ESP32S3"
     },
     {
       "path": "/recamera_jetson_vlm_gateway",
@@ -25,12 +47,12 @@ const docList = [
     {
       "path": "/jetson_fisheye_surround_view_demo",
       "image": "https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif",
-      "title": "Build a Four-Camera Fisheye Surround View Demo on Jetson",
+      "title": "Build a Four-Camera Fisheye Surround View Demo on Jetson AGX Thor",
       "date": "2026-08-18",
-      "title_cn": "在 Jetson 上构建四摄像头鱼眼环视演示",
-      "title_ja": "Jetson 上で 4 カメラ魚眼サラウンドビュー デモを構築する",
-      "title_es": "Crea una demo de vista envolvente con ojo de pez de cuatro cámaras en Jetson",
-      "title_pt": "Crie uma Demonstração de Visão Surround com Olho de Peixe de Quatro Câmeras no Jetson"
+      "title_cn": "在 Jetson AGX Thor 上构建四摄像头鱼眼环视演示",
+      "title_ja": "Jetson AGX Thor 上で 4 台の魚眼カメラによるサラウンドビュー デモを構築する",
+      "title_es": "Crea una demo de vista envolvente con ojo de pez y cuatro cámaras en Jetson AGX Thor",
+      "title_pt": "Crie uma Demonstração de Visão Surround com Quatro Câmeras Olho de Peixe no Jetson AGX Thor"
     },
     {
       "path": "/recamera_deploy_monocular_depth",
@@ -95,8 +117,8 @@ const docList = [
       "date": "2026-08-13",
       "title_cn": "reBot Arm B601-RS Web 仿真器与 ROS 2/MuJoCo 开发者教程",
       "title_ja": "reBot Arm B601-RS Web シミュレータおよび ROS 2/MuJoCo 開発者ガイド",
-      "title_es": "Guía para Desarrolladores del Simulador Web y ROS 2/MuJoCo de reBot Arm B601-RS",
-      "title_pt": "Guia do Desenvolvedor do Simulador Web e ROS 2/MuJoCo do reBot Arm B601-RS"
+      "title_es": "Guía para Desarrolladores del Simulador Web de reBot Arm B601-RS y ROS 2/MuJoCo",
+      "title_pt": "Guia de Desenvolvimento do Simulador Web e ROS 2/MuJoCo do reBot Arm B601-RS"
     },
     {
       "path": "/respeaker_clip_service_integration",
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "reSpeaker Clip をサービスに統合する",
       "title_es": "Integra reSpeaker Clip en tu servicio",
       "title_pt": "Integre o reSpeaker Clip ao Seu Serviço"
-    }
-  ],
-  [
-    {
-      "path": "/ma_deploy_yolov26",
-      "image": "https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/23.webp",
-      "title": "Train and deploy the YOLO26 object detection model",
-      "date": "2026-08-07",
-      "title_cn": "训练并部署 YOLO26 目标检测模型",
-      "title_ja": "YOLO26 物体検出モデルを学習してデプロイする",
-      "title_es": "Entrenar e implementar el modelo de detección de objetos YOLO26",
-      "title_pt": "Treinar e implantar o modelo de detecção de objetos YOLO26"
-    },
-    {
-      "path": "/rebot_arm_b601_rs_mit_control",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png",
-      "title": "Getting Started with MIT Position Control on reBot Arm B601-RS",
-      "date": "2026-08-04",
-      "title_cn": "reBot Arm B601-RS MIT 位置控制入门指南",
-      "title_ja": "reBot Arm B601-RS で MIT 位置制御を始める",
-      "title_es": "Introducción al control de posición MIT en reBot Arm B601-RS",
-      "title_pt": "Introdução ao Controle de Posição MIT no reBot Arm B601-RS"
     }
   ]
 ];

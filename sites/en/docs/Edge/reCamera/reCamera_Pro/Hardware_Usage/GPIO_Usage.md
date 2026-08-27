@@ -14,8 +14,8 @@ sidebar_position: 5
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
-createdAt: "2026-08-25"
-updatedAt: "2026-08-25"
+createdAt: '2026-08-25'
+updatedAt: '2026-08-26'
 url: https://wiki.seeedstudio.com/recamera_pro_gpio_guide/
 ---
 

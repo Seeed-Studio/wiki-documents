@@ -1,5 +1,5 @@
 ---
-description: Getting Started with Seeed Studio XIAO SAMD21 
+description: Getting Started with Seeed Studio XIAO SAMD21
 title: Getting Started with Seeed Studio XIAO SAMD21 Series
 keywords:
   - xiao
@@ -10,7 +10,7 @@ last_update:
   date: 6/30/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-08-06'
+updatedAt: '2026-08-25'
 url: https://wiki.seeedstudio.com/Seeeduino-XIAO/
 ---
 
