@@ -93,7 +93,7 @@ You can refer to the LED indicator for the Sensor for its working status. Please
 After the battery is installed for the first time, you must connect the Bluetooth and configure the frequency to join the LoRaWAN network and work normally. If the frequency is not set, the red LED is steadily on.
 :::
 
-## Connect to SenseCAP Mate App
+## Connect to SenseCraft App
 
 **Step 1:** Download the App
 
@@ -103,9 +103,9 @@ As a tool, SenseCAP Mate App is used to config LoRa parameters, set intervals, b
 
 **Step 2:** Create a New Account
 
-SenseCAP Mate supports device configuration and remote management. To use the SenseCAP Portal platform and other functions, please register an account.
+SenseCraft supports device configuration and remote management. To use the SenseCAP Portal platform and other functions, please register an account.
 
-SenseCAP Mate supports offline functionality, and you can opt out of an account if you only use the configuration sensor. Just click **Skip**.
+SenseCraft supports offline functionality, and you can opt out of an account if you only use the configuration sensor. Just click **Skip**.
 
 Please select **Global** of Server Location.
 
