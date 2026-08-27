@@ -22,7 +22,21 @@ updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_mit_control/
 ---
 
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+
 # Getting Started with MIT Position Control on reBot Arm B601-RS
+
+<RebotRsDocNav />
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="https://github.com/LAN-GER/rebot_control/blob/main/LICENSE">
@@ -36,8 +50,6 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_mit_control/
 <p align="center">
   <strong>6+1 DOF · RobStride · CAN @ 1 Mbps · MIT Position Control · Temperature Protection · Safe Return-to-Zero · Open-source Python API</strong>
 </p>
-
-![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png)
 
 [MotorBridge](https://github.com/motorbridge/motorbridge) is a Python CAN SDK for RobStride / Damiao motors. [rebot_control](https://github.com/LAN-GER/rebot_control) wraps it with a MIT position-control API for the **reBot Arm B601-RS**: YAML configuration, per-joint speed limits, three-level MOS temperature protection, and smooth return-to-zero via Esc / Ctrl+C / `stop()`.
 
