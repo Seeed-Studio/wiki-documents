@@ -97,7 +97,7 @@ After the battery is installed for the first time, you must connect the Bluetoot
 
 **Step 1:** Download the App
 
-As a tool, SenseCAP Mate App is used to config LoRa parameters, set intervals, bind devices to your account, and check device basic information.
+As a tool, SenseCraft App is used to config LoRa parameters, set intervals, bind devices to your account, and check device basic information.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Tutorials-Getting%20Started%20with%20SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor.files/Tutorials-Getting%20Started%20with%20SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor2808.png" /></div>
 
