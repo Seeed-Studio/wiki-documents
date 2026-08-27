@@ -119,7 +119,7 @@ python app/main.py --transport wifi --wifi-host 192.168.4.1 --wifi-port 8089
 
 ### Live STT (RTC streaming)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-python-app-5.jpg" alt="pir" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-python-app-6.jpg" alt="pir" width={800} height="auto"/></p>
 
 The device card at the top is shared across all tabs — scan for nearby Clips, pick yours from the dropdown, then press **Connect**. If Connect fails with a Windows BLE pairing error, use **Re-pair & Connect** to clear the stale bond.
 
