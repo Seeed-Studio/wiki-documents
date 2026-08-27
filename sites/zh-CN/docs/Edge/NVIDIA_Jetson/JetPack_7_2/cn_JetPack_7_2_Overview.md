@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/cn/jetpack_7_2_resource_hub/
 
 ![JetPack 7.2 Resource Hub cover](https://files.seeedstudio.com/wiki/other/jp72-front.png)
 
-本页面整理了当前适用于 Seeed Studio NVIDIA Jetson 产品的 JetPack 7.2 相关资源。你可以将其作为起点，用于理解新的软件栈、选择受支持的镜像、迁移现有 JetPack 6.x 项目、恢复外设驱动以及部署优化后的 AI 工作负载。
+本页面整理了当前可用于 Seeed Studio NVIDIA Jetson 产品的 JetPack 7.2 相关资源。你可以将其作为起点，用于理解新的软件栈、选择受支持的镜像、迁移现有 JetPack 6.x 项目、恢复外设驱动，以及部署优化后的 AI 工作负载。
 
 :::info
 JetPack 7.2 使用 **Jetson Linux 39.2**、**Ubuntu 24.04** 根文件系统以及 **Linux 内核 6.8**。NVIDIA Jetson Linux 39.2 同时支持 **Jetson Orin** 和 **Jetson Thor** 平台家族。
@@ -42,7 +42,7 @@ JetPack 7.2 不只是一次操作系统更新。它将 JetPack 7 软件架构扩
 
 - **JetPack 7 中的 Jetson Orin 支持**：JetPack 7.2 将 JetPack 7 软件栈带到 Jetson Orin 家族，同时保留对 Jetson Thor 的支持。
 - **统一 ISO 安装**：Jetson Linux 39.2 为受支持的 Jetson Orin 和 Jetson Thor 开发套件引入了统一的基于 ISO 的安装路径。
-- **SBSA 对齐**：Jetson Thor 遵循服务器基础系统架构（SBSA）软件模型，从而提升在 Arm 服务器级平台之间的可移植性。
+- **SBSA 对齐**：Jetson Thor 遵循 Server Base System Architecture（服务器基础系统架构）软件模型，从而提升在 Arm 服务器级平台间的可移植性。
 
 ### Yocto
 
@@ -52,7 +52,7 @@ JetPack 7.2 不只是一次操作系统更新。它将 JetPack 7 软件架构扩
 
 - **Jetson AGX Orin 32GB Super 模式**：JetPack 7.2 为受支持的 Jetson AGX Orin 32GB 配置新增 `MAXN_SUPER` 功耗模式。
 - **内存效率工作流**：Jetson 智能体技能可以审计并减少引导加载程序预留、内核保留以及不必要的用户空间内存占用。
-- **Jetson Thor 上的多实例 GPU**：在受支持的 Jetson Thor T5000 配置上，MIG 以技术预览形式提供，用于隔离的多工作负载执行。
+- **Jetson Thor 上的多实例 GPU**：MIG 作为技术预览在受支持的 Jetson Thor T5000 配置上提供，用于隔离的多工作负载执行。
 
 :::warning
 部分 JetPack 7.2 特性是平台特定的。MIG 和 SBSA 相关行为适用于 Jetson Thor，而 `MAXN_SUPER` 适用于受支持的 Jetson AGX Orin 32GB 配置。在启用新的功耗或加速模式前，请确认模组、载板、BSP、电源以及散热设计。
@@ -60,26 +60,26 @@ JetPack 7.2 不只是一次操作系统更新。它将 JetPack 7 软件架构扩
 
 ## JetPack 7.2 软件基线
 
-| 层 | JetPack 7.2 基线 | 迁移影响 |
+| 层级 | JetPack 7.2 基线 | 迁移影响 |
 | --- | --- | --- |
 | Jetson Linux | 39.2 | 重新构建树外内核模块和 BSP 定制内容。 |
 | 根文件系统 | Ubuntu 24.04 | 重新验证软件包名称、软件源、Python 环境和系统服务。 |
 | Linux 内核 | 6.8 | 针对新头文件重新构建相机、Wi-Fi、现场总线以及自定义外设驱动。 |
-| CUDA 代际 | CUDA 13 | 重新构建 CUDA 应用，不要在未验证的情况下复用 JetPack 6.x 二进制文件。 |
+| CUDA 代际 | CUDA 13 | 重新构建 CUDA 应用，不要在未经验证的情况下复用 JetPack 6.x 二进制文件。 |
 | TensorRT 引擎 | JetPack 7.2 TensorRT 软件栈 | 在目标软件栈上重新构建序列化的 TensorRT 引擎。 |
 | 支持的平台 | Jetson Orin 和 Jetson Thor | 为目标 GPU 架构使用正确的 BSP、工具链编译选项和精度支持。 |
 
 ## JetPack 7.2 生态地图
 
-本合集特意仅包含 JetPack 7.2 相关内容。现有文章被复制到 `JetPack_7_2` 目录中，并使用 `_bk` slug，以便该系列可以独立于原始 Wiki 页面进行审阅、更新、翻译和发布。
+本合集特意仅限于 JetPack 7.2 相关内容。现有文章被复制到 `JetPack_7_2` 目录中，并使用 `_bk` slug，以便该系列可以独立于原始 Wiki 页面进行审阅、更新、翻译和发布。
 
 | JetPack 7.2 能力 | 包含的资源 |
 | --- | --- |
 | 统一的 Orin 与 Thor 软件架构 | [统一平台、ISO 与 SBSA](/cn/jetpack_7_2_unified_platform_iso_sbsa/) **（规划中）** |
 | Ubuntu 24.04、Linux 6.8 与 CUDA 13 迁移 | [JetPack 7.2 深度解析](/cn/jetpack72_deep_dive_bk/) 和 [迁移作战手册](/cn/jetpack_6_to_7_2_migration_playbook/) **（规划中）** |
-| 智能体 AI 与可复用 Jetson 技能 | [使用 NVIDIA Skills 快速原型开发](/cn/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) 和 [在 Jetson Thor 上使用 NemoClaw 控制机械臂](/cn/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) |
+| 智能体 AI 与可复用 Jetson 技能 | [使用 NVIDIA Skills 快速在 Jetson 上做原型开发](/cn/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) 和 [在 Jetson Thor 上使用 NemoClaw 控制 reBot 机械臂](/cn/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) |
 | Yocto | [构建并刷写 Yocto 镜像](/cn/build_and_flash_yocto_for_recomputer_super_bk/) |
-| 使用 TensorRT Edge-LLM 的更高性能推理 | [在 JetPack 7.2 上部署 TensorRT Edge-LLM](/cn/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
+| 使用 TensorRT Edge-LLM 获得更高推理性能 | [在 JetPack 7.2 上部署 TensorRT Edge-LLM](/cn/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
 | 更低的系统与 LLM 内存占用 | [JetPack 7.2 内存优化](/cn/jetpack_7_2_memory_optimization/) |
 | DeepStream 9.1 与自然语言视频工作流 | [JetPack 7.2 上的 DeepStream](/cn/jetpack_7_2_deepstream/) |
 | AGX Orin `MAXN_SUPER` 与 Thor MIG | [MAXN_SUPER 与 MIG](/cn/jetpack_7_2_maxn_super_and_mig/) **（规划中）** |
@@ -90,8 +90,8 @@ JetPack 7.2 不只是一次操作系统更新。它将 JetPack 7 软件架构扩
 | 资源 | 覆盖范围 |
 | --- | --- |
 | [JetPack 7.2 深度解析](/cn/jetpack72_deep_dive_bk/) | 平台变更、与 JetPack 6.2 的对比、迁移影响以及 AGX Orin 推理结果。 |
-| [刷机与 OTA 升级到 JetPack 7.2](/cn/flash_and_ota_jetpack_7.2/) | 干净刷机、基于镜像的 OTA 要求、版本验证以及部署选择。 |
-| [JetPack 6.x 到 JetPack 7.2 迁移作战手册](/cn/jetpack_6_to_7_2_migration_playbook/) | **规划中：** 备份、依赖重建、验收测试、回滚以及集群迁移。 |
+| [刷机与 OTA 升级到 JetPack 7.2](/cn/flash_and_ota_jetpack_7.2/) | 干净刷机、基于镜像的 OTA 要求、版本验证与部署选择。 |
+| [JetPack 6.x 到 JetPack 7.2 迁移作战手册](/cn/jetpack_6_to_7_2_migration_playbook/) | **规划中：** 备份、依赖重建、验收测试、回滚与集群迁移。 |
 | [JetPack 7.2 统一平台、ISO 与 SBSA](/cn/jetpack_7_2_unified_platform_iso_sbsa/) | **规划中：** 统一安装、Orin/Thor 差异以及 Thor 的 SBSA 行为。 |
 | [JetPack 7.2 MAXN_SUPER 与 MIG](/cn/jetpack_7_2_maxn_super_and_mig/) | **规划中：** AGX Orin 性能模式与 Thor 工作负载隔离。 |
 
@@ -108,7 +108,7 @@ JetPack 6.x 内核模块、相机驱动、设备树二进制文件以及 TensorR
 
 ## 智能体 AI 与 Jetson 技能
 
-JetPack 7.2 通过将可复用的智能体技能和本地智能体应用作为生态系统的一等公民，将 Jetson 开发者工作流扩展到了手动配置之外。
+JetPack 7.2 通过将可复用的智能体技能和本地智能体应用作为生态系统的一等公民，将 Jetson 开发者工作流扩展到了手动设置之外。
 
 | 资源 | 在生态中的角色 |
 | --- | --- |
@@ -120,25 +120,26 @@ JetPack 7.2 通过将可复用的智能体技能和本地智能体应用作为�
 | 资源 | 覆盖范围 |
 | --- | --- |
 | [JetPack 7.2 内存优化](/cn/jetpack_7_2_memory_optimization/) | 基于技能的审计、无显示/无相机 BSP 回收、SWIOTLB 安全性、量化、KV-cache 控制以及更低内存的 LLM 推理。 |
+| [JetPack 7.2 内存优化深度解析](/cn/jetpack_7_2_memory_optimization_deep_dive/) | 与 JetPack 6.2 的平台基线对比、LLM 内存预算（权重、运行时、KV cache）、四层优化路径以及可复现的现场观测。 |
 
 ## Yocto
 
 | 资源 | 在生态中的角色 |
 | --- | --- |
-| [为 reComputer Super 构建并刷写 Yocto 镜像](/cn/build_and_flash_yocto_for_recomputer_super_bk/) | 面向量产 Jetson Linux 部署的可复现 OpenEmbedded/Yocto 镜像构建。 |
+| [为 reComputer Super 构建并刷写 Yocto 镜像](/cn/build_and_flash_yocto_for_recomputer_super_bk/) | 面向量产的 Jetson Linux 部署的可复现 OpenEmbedded/Yocto 镜像构建。 |
 
 ## AI 部署与应用
 
 | 资源 | 覆盖范围 |
 | --- | --- |
 | [在 JetPack 7.2 上部署 TensorRT Edge-LLM](/cn/deploy_tensorrt_edge_llm_on_jetpack7.2/) | JetPack 7.2 模型导出、Orin/Thor 构建目标、引擎生成以及 C++ 推理。 |
-| [JetPack 7.2 上的工业视觉监控](/cn/industrial_vision_monitoring_on_industrial_bk/) | 在搭载 L4T 39.2 的 reComputer Industrial 与 reServer Industrial 上验证的 YOLO 与 VLM 监控。 |
+| [在 JetPack 7.2 上进行工业视觉监控](/cn/industrial_vision_monitoring_on_industrial_bk/) | 在搭载 L4T 39.2 的 reComputer Industrial 与 reServer Industrial 上验证的 YOLO 与 VLM 监控。 |
 | [JetPack 7.2 上的 DeepStream](/cn/jetpack_7_2_deepstream/) | DeepStream 9.1 安装、智能体技能、自然语言管线编排、VLM 集成、迁移与内存规划。 |
-| [在 JetPack 7.2 与 AGX Orin 上部署全量 GR00T N1.7](/cn/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin/) | 针对 AGX Orin 验证的七引擎 TensorRT 部署、数值校验、离线推理以及可移植路径配置。 |
+| [在 JetPack 7.2 与 AGX Orin 上部署全尺寸 GR00T N1.7](/cn/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin/) | 在 AGX Orin 上经过验证的七引擎 TensorRT 部署、数值校验、离线推理以及可移植路径配置。 |
 
 序列化引擎和自定义 TensorRT 插件必须在目标 JetPack 7.2 软件栈上重新构建。
 
-## 仍在预留中的覆盖内容
+## 仍在预留的覆盖范围
 
 | JetPack 7.2 特性 | 预留页面 |
 | --- | --- |
@@ -149,13 +150,13 @@ JetPack 7.2 通过将可复用的智能体技能和本地智能体应用作为�
 
 ## 推荐迁移顺序
 
-1. 确认目标 Seeed 产品具备 JetPack 7.2 的 BSP 或镜像。
-2. 备份应用数据、标定文件、容器卷以及自定义设备树源文件。
+1. 确认目标 Seeed 产品具备 JetPack 7.2 BSP 或镜像。
+2. 备份应用数据、校准文件、容器卷以及自定义 device-tree 源码。
 3. 刷写 JetPack 7.2，并验证启动、存储、网络和恢复模式。
-4. 使用 JetPack 7.2 构建的版本恢复 Wi-Fi、相机、CAN、EtherCAT 或其他树外驱动。
+4. 使用 JetPack 7.2 构建的版本恢复 Wi-Fi、摄像头、CAN、EtherCAT 或其他 out-of-tree 驱动。
 5. 重新构建 CUDA 应用、TensorRT 插件和 TensorRT 引擎。
 6. 在启用 `MAXN_SUPER` 或其他性能模式之前，先在原始功耗模式下验证应用。
-7. 在将设备投入生产前，记录内存占用、温度、电源消耗、时延和吞吐量。
+7. 在将设备投入生产之前，记录内存使用、热表现、功耗、延迟和吞吐量。
 
 ## NVIDIA 官方参考资料
 
@@ -167,7 +168,7 @@ JetPack 7.2 通过将可复用的智能体技能和本地智能体应用作为�
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
