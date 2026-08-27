@@ -19,27 +19,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'Seeed_Elderly', 'weekly_wiki'), // weekly wiki 的历史目录
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Secondary_Development', 'API'), // 暂时排除 reCamera Pro 的 API 目录
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Agentic_AI'), // 7.31,暂时排除 JetPack 7.2 的 Agentic_AI 目录
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'AI_Inference'), // 暂时排除 JetPack 7.2 的 AI_Inference 目录
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Application'), // 暂时排除 JetPack 7.2 的 Application 目录
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Drivers'), // 暂时排除 JetPack 7.2 的 Drivers 目录
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Flashing_OTA'), // 暂时排除 JetPack 7.2 的 Flashing_OTA 目录
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Migration'), // 暂时排除 JetPack 7.2 的 Migration 目录
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Optimization'), // 暂时排除 JetPack 7.2 的 Optimization 目录
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'JetPack_7_2', 'Platform'), // 暂时排除 JetPack 7.2 的 Platform 目录
 
   // 排除指定文档
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'JetPack72_AX210_AX200_WiFi_Setup_Guide.md'), //7.15
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Acoustic_Lab_Usage.md'), //7.13
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'MeshTracker_X1', 'x1_intro.md'), //7.13
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Use_of_the_laboratory', 'Acoustic_Lab_Usage.md'), //7.13
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super.md'), //7.22
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_python_usage_stt_llm_transcribe.md'), //7.21
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'FAQs.md'), //8.5
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_customization_at_command.md'), //7.28
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_firmware_quick_start.md'), //7.28
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_firmware_development_guide.md'), //7.28
   path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_sensecraft_voice_sdk.md'), //8.7
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Jetson_Initrd_Flash_Fails_with_ZFS_Host.md'), //8.13
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Headless_Setup_and_Recovery_for_A603.md'), //8.7
@@ -47,6 +28,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Use_Arducam_OV9281_Camera_with_A603.md'), //8.7
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'faqs', 'FAQs.md'), //8.19
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Data_Logger', 'SenseCAP_Combo', 'Get_Started_with_SenseCAP_Combo.md'), //8.23
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Hardware_Usage', 'GPIO_Usage.md'), //8.25
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

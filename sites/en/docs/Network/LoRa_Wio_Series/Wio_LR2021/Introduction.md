@@ -20,7 +20,7 @@ last_update:
   date: 06/03/2026
   author: David Du
 createdAt: '2026-06-03'
-updatedAt: '2026-06-18'
+updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/wio_lr2021_introduction/
 ---
 
