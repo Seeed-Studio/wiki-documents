@@ -134,16 +134,13 @@
   line-height: 1.68;
 }
 
-/* 顶部快速导航：贴在站点顶栏下方，随文章滚动悬浮 */
+/* 顶部快速导航 */
 .doc-nav {
   --rb-border: rgba(148, 163, 184, 0.28);
   --rb-text: #0f172a;
   --rb-surface-soft: #f8fafc;
   --rb-primary: #2563eb;
   --rb-primary-soft: #eff6ff;
-  position: sticky;
-  top: calc(var(--ifm-navbar-height) + 0.5rem);
-  z-index: 5;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
   gap: 0.58rem;
@@ -153,7 +150,6 @@
   border: 1px solid var(--rb-border);
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
-  backdrop-filter: blur(12px);
 }
 
 .doc-nav.doc-nav--series {
@@ -215,7 +211,7 @@
 .rebot-page h2,
 .rebot-page h3,
 .rebot-page h4 {
-  scroll-margin-top: calc(var(--ifm-navbar-height) + 5.25rem);
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 0.75rem);
 }
 
 /* 卡片网格 */
@@ -516,13 +512,7 @@ html[data-theme='dark'] .course-path-item.active {
   }
 
   .doc-nav {
-    position: static;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .doc-nav.doc-nav--series {
-    position: sticky;
-    top: calc(var(--ifm-navbar-height) + 0.5rem);
   }
 }
 
