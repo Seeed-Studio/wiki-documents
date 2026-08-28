@@ -2180,6 +2180,7 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/respeaker_clip_rtc_streaming',
             'Sensor/reSpeaker_clip/respeaker_clip_service_integration',
             'Sensor/reSpeaker_clip/respeaker_clip_sensecraft_voice_sdk',
             {
@@ -4290,6 +4291,7 @@ const sidebars = {
               label: 'Memory Optimization',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/JetPack_7_2_Memory_Optimization',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/JetPack_7_2_Memory_Optimization_Deep_Dive',
               ],
             },
             {
