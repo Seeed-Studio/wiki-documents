@@ -468,7 +468,6 @@ The following English wiki pages are currently published for J601 hardware, or f
 | --- | --- |
 | [Seeed Jetson DevelopTool Overview](/jetson_developtool_overview) | GUI workbench for flashing, device management, apps, skills, and remote development. |
 | [Seeed Jetson DevelopTool Installation](/jetson_developtool_installation) | Install DevelopTool on Ubuntu or Windows. |
-| [App Market](/jetson_developtool_app_market) | One-click install of YOLOv8, Ollama, DeepSeek, Node-RED, Jupyter Lab, and VS Code Server. |
 | [How to Build and Flash BSP Source for Jetson Thor](/how_to_build_and_flash_bsp_source_for_jetson_thor) | Build and flash Thor BSP from source. Default board settings in that guide are already configured for Thor J601. |
 
 ### Vision & Perception
