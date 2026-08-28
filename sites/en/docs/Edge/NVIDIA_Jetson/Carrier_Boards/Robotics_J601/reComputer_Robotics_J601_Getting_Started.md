@@ -21,6 +21,7 @@ url: https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j601_carrier_b
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import J601DemoGrid from '@site/src/components/jetson/J601DemoGrid';
 
 # Getting Started with reComputer Robotics J601
 
@@ -432,67 +433,13 @@ The flash command usually takes 2–10 minutes. The following output indicates a
 Complete the **System Configuration** according to your needs after the first boot.
 :::
 
+For detailed interface usage, please refer to [Robotics J601 Hardware Interfaces Usage](/recomputer_jetson_robotics_j601_interfaces_usage).
+
 ## What Can You Do with J601?
 
-After you flash JetPack, reComputer Robotics J601 is the robotics brain for **NVIDIA Jetson AGX Thor**. Typical work on this board includes:
+After you flash JetPack, explore the demo wikis below to see what you can build on reComputer Robotics J601. These cards are generated automatically from published Jetson **Application** and **Other Devices** wikis that mention **J601** or **Jetson Thor**.
 
-- **Robot I/O bring-up** — CAN, RS-232/422/485, I2C, GPIO, 10GbE, USB, Wi-Fi/5G, and up to 8x GMSL2 cameras
-- **Multi-camera perception** — surround-view stitching, occupancy, and vision models on GMSL cameras
-- **Embodied AI / robot arms** — Isaac GR00T, NemoClaw, OpenClaw, and voice control with reBot Arm or SO-Arm
-- **Local LLM / VLM agents** — on-device language and video-language models for interaction and planning
-- **One-click AI apps** — YOLO, Ollama, Jupyter, and VS Code through Seeed Jetson DevelopTool
-
-:::tip
-J601 is Seeed's carrier board for Jetson AGX Thor T5000 and T4000. Application guides written for **Jetson Thor** also apply to J601 after you finish flashing on this page.
-:::
-
-A practical path after first boot:
-
-1. Confirm interfaces and cameras in [Hardware Interfaces Usage](/recomputer_jetson_robotics_j601_interfaces_usage).
-2. Install a first app from the [DevelopTool App Market](/jetson_developtool_app_market), or jump to a demo below.
-3. Pick one application track: **vision**, **robot arm**, or **LLM/VLM**.
-
-## Related Wiki
-
-The following English wiki pages are currently published for J601 hardware, or for Jetson Thor applications that run on J601.
-
-### Hardware & Interfaces
-
-| Wiki | What you can do |
-| --- | --- |
-| [Robotics J601 Hardware Interfaces Usage](/recomputer_jetson_robotics_j601_interfaces_usage) | Use USB, Ethernet, CAN, UART, I2C, I2S, GPIO, GMSL2, M.2 Key M/E/B, 5G, and related I/O on J601. |
-
-### Flashing Tools & BSP
-
-| Wiki | What you can do |
-| --- | --- |
-| [Seeed Jetson DevelopTool Overview](/jetson_developtool_overview) | GUI workbench for flashing, device management, apps, skills, and remote development. |
-| [Seeed Jetson DevelopTool Installation](/jetson_developtool_installation) | Install DevelopTool on Ubuntu or Windows. |
-| [How to Build and Flash BSP Source for Jetson Thor](/how_to_build_and_flash_bsp_source_for_jetson_thor) | Build and flash Thor BSP from source. Default board settings in that guide are already configured for Thor J601. |
-
-### Vision & Perception
-
-| Wiki | What you can do |
-| --- | --- |
-| [Four-Camera Fisheye Surround View Demo](/jetson_fisheye_surround_view_demo) | Calibrate four GMSL fisheye cameras, stitch a live BEV, and run occupancy / YOLO-World / VLM assistance. Verified on J601. |
-
-### Embodied AI & Robot Arms
-
-| Wiki | What you can do |
-| --- | --- |
-| [Fine-tune GR00T N1.7 for reBot Arm and Deploy on J601](/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601) | Fine-tune Isaac GR00T N1.7 for reBot Arm B601 DM and deploy TensorRT inference on J601. |
-| [Control reBot Arm with NemoClaw on Jetson Thor](/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor) | Run a local agent loop: language understanding, vision, and reBot Arm execution. |
-| [Voice Control reBot Arm B601 on Jetson Thor](/voice_control_rebot_arm) | Local voice control with Whisper, Ollama, GraspNet, and reBot Arm B601. |
-| [reBot Arm Jetson Bundle](/rebot_arm_jetson_bundle) | Arm + Jetson bundle overview, driver install, and links to LeRobot / grasping / ROS2 / Isaac Sim guides. |
-| [Control SO-Arm by OpenClaw on Jetson Thor](/ai_robotics_control_soarm_by_openclaw_on_jetson_thor) | Control SO-Arm with a local OpenClaw agent and LeRobot on Thor. |
-| [Fine-tune GR00T N1.5 for SO-Arm and Deploy on Jetson Thor](/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor) | Fine-tune Isaac GR00T N1.5 for LeRobot SO-101 and deploy on Thor. |
-
-### LLM, VLM & Agents
-
-| Wiki | What you can do |
-| --- | --- |
-| [Deploy JoyAI-VL-Interaction on Jetson Thor](/deploy_joyai_vl_interaction_on_jetson_thor) | Real-time video-language interaction (streaming VLM + WebUI) on Thor. |
-| [App Market](/jetson_developtool_app_market) | Install local LLM runtimes such as Ollama and DeepSeek without manual Docker setup. |
+<J601DemoGrid />
 
 ## Resources
 
