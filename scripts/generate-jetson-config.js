@@ -32,11 +32,29 @@ const CATEGORY_MAPPING = {
   'Managed_Services': 'managedServicesList'
 };
 
-// J601 / Jetson Thor demo auto-filter (English Application + Other_Devices)
-const J601_SCAN_DIRS = [
-  'sites/en/docs/Edge/NVIDIA_Jetson/Application',
-  'sites/en/docs/Edge/NVIDIA_Jetson/Other_Devices'
-];
+// J601 / Jetson Thor demo auto-filter
+const J601_LANG_DIRS = {
+  en: [
+    'sites/en/docs/Edge/NVIDIA_Jetson/Application',
+    'sites/en/docs/Edge/NVIDIA_Jetson/Other_Devices'
+  ],
+  zh: [
+    'sites/zh-CN/docs/Edge/NVIDIA_Jetson/Application',
+    'sites/zh-CN/docs/Edge/NVIDIA_Jetson/Other_Devices'
+  ],
+  ja: [
+    'sites/ja/docs/Edge/NVIDIA_Jetson/Application',
+    'sites/ja/docs/Edge/NVIDIA_Jetson/Other_Devices'
+  ],
+  es: [
+    'sites/es/docs/Edge/NVIDIA_Jetson/Application',
+    'sites/es/docs/Edge/NVIDIA_Jetson/Other_Devices'
+  ],
+  pt: [
+    'sites/pt-BR/docs/Edge/NVIDIA_Jetson/Application',
+    'sites/pt-BR/docs/Edge/NVIDIA_Jetson/Other_Devices'
+  ]
+};
 
 const J601_KEYWORDS = [
   'j601',
@@ -45,6 +63,17 @@ const J601_KEYWORDS = [
   'robotics j601',
   'recomputer robotics j601'
 ];
+
+const J601_FOLDER_CATEGORY = {
+  Computer_Vision: 'Computer Vision',
+  Generative_AI: 'Generative AI',
+  Robotics: 'Robotics',
+  Developer_Tools: 'Developer Tools',
+  Multimodal_AI: 'Multimodal AI',
+  Physical_AI: 'Physical AI',
+  Managed_Services: 'Managed Services',
+  Other_Devices: 'Other Devices'
+};
 
 const j601DemoData = [];
 
@@ -277,14 +306,24 @@ function walkMarkdownFiles(dir, callback) {
   });
 }
 
-function buildJ601SearchText(project, content, frontmatter) {
+function extractFrontmatterList(frontmatter, field) {
+  const blockMatch = frontmatter.match(new RegExp(`^${field}:\\s*\\n((?:\\s+-\\s+.+(?:\\n|$))*)`, 'm'));
+  if (blockMatch) {
+    return blockMatch[1];
+  }
+
+  const inlineMatch = frontmatter.match(new RegExp(`^${field}:\\s*\\[(.*?)\\]`, 's'));
+  return inlineMatch ? inlineMatch[1] : '';
+}
+
+function buildJ601SearchText(project, frontmatter, filePath) {
   return [
     project.name,
     project.description,
-    project.URL,
     project.mergeKey,
-    frontmatter,
-    content
+    extractFrontmatterList(frontmatter, 'keywords'),
+    extractFrontmatterList(frontmatter, 'tags'),
+    path.basename(filePath)
   ]
     .join(' ')
     .toLowerCase();
@@ -294,36 +333,81 @@ function matchesJ601Keywords(searchText) {
   return J601_KEYWORDS.some(keyword => searchText.includes(keyword));
 }
 
-function extractJ601DemoList() {
-  const projectMap = new Map();
+function getJ601FolderCategory(relativePath) {
+  if (relativePath.includes('/Application/')) {
+    const folder = relativePath.split('/Application/')[1].split('/')[0];
+    return J601_FOLDER_CATEGORY[folder] || folder.replace(/_/g, ' ');
+  }
 
-  J601_SCAN_DIRS.forEach(baseDir => {
+  return J601_FOLDER_CATEGORY.Other_Devices;
+}
+
+function collectJ601MatchedKeys() {
+  const matchedKeys = new Set();
+  const enDirs = J601_LANG_DIRS.en || [];
+
+  enDirs.forEach(baseDir => {
     walkMarkdownFiles(baseDir, (filePath, content) => {
       const project = extractProjectInfo(content, filePath, 'en');
       if (!project) return;
 
       const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
       const frontmatter = frontmatterMatch ? frontmatterMatch[1] : '';
-      const searchText = buildJ601SearchText(project, content, frontmatter);
+      const searchText = buildJ601SearchText(project, frontmatter, filePath);
 
-      if (!matchesJ601Keywords(searchText)) return;
-
-      const relativePath = filePath.replace(/\\/g, '/');
-      const category = relativePath.includes('/Application/')
-        ? relativePath.split('/Application/')[1].split('/')[0]
-        : 'Other_Devices';
-
-      if (!projectMap.has(project.mergeKey)) {
-        projectMap.set(project.mergeKey, {
-          name: project.name,
-          description: project.description || '',
-          img: project.img,
-          URL: project.URL.replace('https://wiki.seeedstudio.com', ''),
-          category,
-          lastUpdated: project.lastUpdated,
-          author: project.author
-        });
+      if (matchesJ601Keywords(searchText)) {
+        matchedKeys.add(project.mergeKey);
       }
+    });
+  });
+
+  return matchedKeys;
+}
+
+function extractJ601DemoList() {
+  const matchedKeys = collectJ601MatchedKeys();
+  const projectMap = new Map();
+
+  Object.entries(J601_LANG_DIRS).forEach(([lang, dirs]) => {
+    dirs.forEach(baseDir => {
+      walkMarkdownFiles(baseDir, (filePath, content) => {
+        const project = extractProjectInfo(content, filePath, lang);
+        if (!project || !matchedKeys.has(project.mergeKey)) return;
+
+        const relativePath = filePath.replace(/\\/g, '/');
+        const folderCategory = getJ601FolderCategory(relativePath);
+        const categoryValue = project.category.length ? project.category : [folderCategory];
+
+        if (!projectMap.has(project.mergeKey)) {
+          projectMap.set(project.mergeKey, {
+            name: {},
+            description: {},
+            img: project.img,
+            URL: {},
+            category: {},
+            lastUpdated: project.lastUpdated,
+            author: project.author
+          });
+        }
+
+        const existing = projectMap.get(project.mergeKey);
+        existing.name[lang] = project.name;
+        existing.description[lang] = project.description || '';
+        existing.URL[lang] = project.URL.replace('https://wiki.seeedstudio.com', '');
+        existing.category[lang] = categoryValue;
+
+        if (!existing.img && project.img) {
+          existing.img = project.img;
+        }
+
+        if (lang === 'en' || !existing.lastUpdated) {
+          existing.lastUpdated = project.lastUpdated;
+        }
+
+        if (lang === 'en' || !existing.author) {
+          existing.author = project.author;
+        }
+      });
     });
   });
 
@@ -335,7 +419,7 @@ function extractJ601DemoList() {
   );
 }
 
-// 生成配置文件
+// 生成配置文件// 生成配置文件
 function generateConfig() {
   let output = `// Auto-generated by generate-jetson-config.js
 // DO NOT EDIT MANUALLY - Run "node scripts/generate-jetson-config.js" to regenerate
