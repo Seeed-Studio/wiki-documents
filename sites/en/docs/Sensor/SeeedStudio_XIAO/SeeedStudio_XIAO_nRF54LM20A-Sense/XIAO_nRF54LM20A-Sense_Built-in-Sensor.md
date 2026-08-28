@@ -920,6 +920,8 @@ OUTPUT_DIR = "./recordings"
 SCAN_TIMEOUT = 10.0
 RECONNECT_DELAY = 2.0
 RIFF_MAGIC = b"RIFF"
+WAV_HEADER_SIZE = 44
+WAV_DATA_SIZE_OFFSET = 40
 
 
 class RecordingWriter:
@@ -929,13 +931,17 @@ class RecordingWriter:
         self.path = None
         self.file = None
         self.total = 0
+        self.expected_total = None
+        self.header = bytearray()
 
     def _open(self):
         os.makedirs(OUTPUT_DIR, exist_ok=True)
-        stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        stamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
         self.path = os.path.join(OUTPUT_DIR, f"recording_{stamp}.wav")
-        self.file = open(self.path, "ab")
+        self.file = open(self.path, "wb")
         self.total = 0
+        self.expected_total = None
+        self.header.clear()
         print(f"\nNew recording -> {self.path}")
 
     def on_notification(self, _sender, data):
@@ -946,8 +952,22 @@ class RecordingWriter:
             self._open()
         self.file.write(data)
         self.total += len(data)
+
+        if len(self.header) < WAV_HEADER_SIZE:
+            needed = WAV_HEADER_SIZE - len(self.header)
+            self.header.extend(data[:needed])
+            if len(self.header) == WAV_HEADER_SIZE and self.header[:4] == RIFF_MAGIC:
+                data_size = int.from_bytes(
+                    self.header[WAV_DATA_SIZE_OFFSET:WAV_HEADER_SIZE],
+                    byteorder="little",
+                )
+                self.expected_total = WAV_HEADER_SIZE + data_size
+
         sys.stdout.write(f"\rReceiving: {self.total} bytes")
         sys.stdout.flush()
+
+        if self.expected_total is not None and self.total >= self.expected_total:
+            self.close()
 
     def close(self):
         if self.file:
@@ -962,6 +982,8 @@ class RecordingWriter:
                 tag = "empty"
             print(f"\nSaved: {self.path} ({self.total} bytes) [{tag}]")
             self.total = 0
+            self.expected_total = None
+            self.header.clear()
 
 
 async def connect_and_receive(writer):
@@ -1020,6 +1042,7 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         print("\nStopped.")
+
 ```
 
 </details>
