@@ -93,19 +93,19 @@ url: https://wiki.seeedstudio.com/cn/Getting_Started_with_SenseCAP_S2120_8-in-1_
 首次安装电池后，您必须连接蓝牙并配置频率以加入 LoRaWAN 网络并正常工作。如果未设置频率，红色 LED 将持续亮起。
 :::
 
-## 连接到 SenseCAP Mate 应用
+## 连接到 SenseCraft 应用
 
 **步骤 1：** 下载应用
 
-作为一个工具，SenseCAP Mate 应用用于配置 LoRa 参数、设置间隔、将设备绑定到您的账户以及查看设备基本信息。
+作为一个工具，SenseCraft 应用用于配置 LoRa 参数、设置间隔、将设备绑定到您的账户以及查看设备基本信息。
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Tutorials-Getting%20Started%20with%20SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor.files/Tutorials-Getting%20Started%20with%20SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor2808.png" /></div>
 
 **步骤 2：** 创建新账户
 
-SenseCAP Mate 支持设备配置和远程管理。要使用 SenseCAP Portal 平台和其他功能，请注册一个账户。
+SenseCraft 支持设备配置和远程管理。要使用 SenseCAP Portal 平台和其他功能，请注册一个账户。
 
-SenseCAP Mate 支持离线功能，如果您只使用配置传感器功能，可以选择不创建账户。只需点击 **跳过**。
+SenseCraft 支持离线功能，如果您只使用配置传感器功能，可以选择不创建账户。只需点击 **跳过**。
 
 请选择 **全球** 作为服务器位置。
 

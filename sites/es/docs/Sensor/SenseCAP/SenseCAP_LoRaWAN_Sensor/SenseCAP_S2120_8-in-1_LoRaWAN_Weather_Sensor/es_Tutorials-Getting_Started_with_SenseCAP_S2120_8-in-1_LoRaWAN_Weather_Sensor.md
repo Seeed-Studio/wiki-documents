@@ -94,19 +94,19 @@ Puedes consultar el indicador LED del Sensor para conocer su estado de funcionam
 Después de instalar la batería por primera vez, debes conectar el Bluetooth y configurar la frecuencia para unirte a la red LoRaWAN y funcionar normalmente. Si la frecuencia no está configurada, el LED rojo permanece encendido de forma constante.
 :::
 
-## Conectar a la App SenseCAP Mate
+## Conectar a la App SenseCraft
 
 **Paso 1:** Descargar la App
 
-Como herramienta, la App SenseCAP Mate se utiliza para configurar parámetros LoRa, establecer intervalos, vincular dispositivos a tu cuenta y verificar información básica del dispositivo.
+Como herramienta, la App SenseCraft se utiliza para configurar parámetros LoRa, establecer intervalos, vincular dispositivos a tu cuenta y verificar información básica del dispositivo.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Tutorials-Getting%20Started%20with%20SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor.files/Tutorials-Getting%20Started%20with%20SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor2808.png" /></div>
 
 **Paso 2:** Crear una Nueva Cuenta
 
-SenseCAP Mate admite configuración de dispositivos y gestión remota. Para usar la plataforma SenseCAP Portal y otras funciones, por favor registra una cuenta.
+SenseCraft admite configuración de dispositivos y gestión remota. Para usar la plataforma SenseCAP Portal y otras funciones, por favor registra una cuenta.
 
-SenseCAP Mate admite funcionalidad sin conexión, y puedes optar por no tener una cuenta si solo usas el sensor de configuración. Simplemente haz clic en **Omitir**.
+SenseCraft admite funcionalidad sin conexión, y puedes optar por no tener una cuenta si solo usas el sensor de configuración. Simplemente haz clic en **Omitir**.
 
 Por favor selecciona **Global** en Ubicación del Servidor.
 
