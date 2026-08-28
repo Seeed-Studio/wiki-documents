@@ -14,7 +14,7 @@ last_update:
   author: Kian
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/cn/r1225_quick_start/
-updatedAt: '2026-05-25'
+updatedAt: '2026-08-04'
 ---
 # 快速上手
 

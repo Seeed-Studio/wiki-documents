@@ -11,7 +11,7 @@ last_update:
   date: 12/18/2025
   author: Zeller
 createdAt: '2025-12-15'
-updatedAt: '2026-03-12'
+updatedAt: '2025-12-26'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_with_platformio/
 ---
 
@@ -22,19 +22,19 @@ import TabItem from '@theme/TabItem';
 
 ## Introdução ao [PlatformIO](https://platformio.org/)
 
-PlatformIO é um poderoso e altamente extensível ecossistema de desenvolvimento projetado para sistemas embarcados. Ele integra de forma transparente o suporte a uma ampla variedade de placas de desenvolvimento e microcontroladores, oferecendo flexibilidade incomparável. O que diferencia o PlatformIO é sua notável escalabilidade: mesmo que sua placa específica não seja suportada nativamente, sua arquitetura permite definições de placa personalizadas de forma simples.
+PlatformIO é um ecossistema de desenvolvimento poderoso e altamente extensível, projetado para sistemas embarcados. Ele integra de forma transparente o suporte a uma vasta gama de placas de desenvolvimento e microcontroladores, oferecendo flexibilidade incomparável. O que diferencia o PlatformIO é sua notável escalabilidade: mesmo que sua placa específica não seja suportada nativamente, sua arquitetura permite definições de placas personalizadas de forma simples.
 
-De forma crucial, o PlatformIO faz a ponte para desenvolvedores familiarizados com Arduino, permitindo a compilação e o envio de código no estilo Arduino simplesmente incluindo as bibliotecas relevantes.
+De forma crucial, o PlatformIO faz a ponte para desenvolvedores familiarizados com Arduino, permitindo compilar e fazer deploy de código no estilo Arduino simplesmente incluindo as bibliotecas relevantes.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://platformio.org/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Saiba Mais 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://platformio.org/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Saiba mais 🖱️</font></span></strong></a>
 </div>
 
 ## Usar PlatformIO para XIAO ESP32-C5
 
-Em seguida, faremos o desenvolvimento para o XIAO ESP32-C5 com base no PlatformIO, ajudando você a explorar o fluxo de trabalho de desenvolvimento do PlatformIO.
+Em seguida, faremos o desenvolvimento para o XIAO ESP32-C5 com base no PlatformIO, ajudando você a explorar o fluxo de trabalho de desenvolvimento com PlatformIO.
 
-### Preparação de Hardware
+### Preparação de hardware
 
 Você precisa preparar um **XIAO ESP32-C5** com antecedência.
 
@@ -50,7 +50,7 @@ Você precisa preparar um **XIAO ESP32-C5** com antecedência.
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html
         " target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira o Seu Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -59,17 +59,54 @@ Você precisa preparar um **XIAO ESP32-C5** com antecedência.
 
 ### Baixar o VS Code
 
-Baixe de acordo com o sistema que você está usando o [VS Code](https://code.visualstudio.com/download)
+Baixe o [VS Code](https://code.visualstudio.com/download) de acordo com o sistema que você está usando
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### Instalar o PlatformIO
 
-Abra o VSCode, clique em Extensions, depois procure por PlatformIO e selecione para instalar. Após a conclusão da instalação, reinicie o VSCode.
+Abra o VSCode, clique em Extensões, depois pesquise por PlatformIO e selecione para instalar. Após a conclusão da instalação, reinicie o VSCode.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
 
-### Novo Projeto
+### Instalar o pacote de plataforma platform-seeedboards
+
+As placas da série Seeed Studio XIAO usam uma plataforma PlatformIO personalizada, portanto você precisa instalar manualmente o pacote de plataforma correspondente.
+
+- Execute o seguinte comando para uma instalação nova:
+
+```bash
+pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+- Se você já usou placas da série Seeed Studio XIAO no PlatformIO, execute o comando abaixo para atualizar:
+
+```bash
+# for Windows
+pio pkg update -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+
+# for macOS/Linux
+pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
+```
+
+:::tip
+
+Se você quiser usar um projeto PlatformIO existente, substitua o conteúdo de **platformio.ini** como segue:
+
+```ini
+[env:seeed-xiao-esp32-c5]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+framework = arduino
+board = seeed-xiao-esp32-c5
+monitor_speed = 115200
+```
+
+:::
+
+### Novo projeto
 
 - Abra a interface PIO Home e selecione `New Project`
 
@@ -79,27 +116,15 @@ Abra o VSCode, clique em Extensions, depois procure por PlatformIO e selecione p
 - Board: Selecione **Seeed Studio XIAO ESP32-C5**
 - Framework: Selecione Ardunio
 - Location: O caminho dos arquivos do projeto pode ser definido como um caminho personalizado ou você pode selecionar o caminho padrão.
-- Clique em **Finish** e aguarde até que a criação seja concluída. Em seguida, abra o arquivo do projeto no workspace.
+- Clique em **Finish** e aguarde a conclusão da criação. Em seguida, abra o arquivo do projeto no workspace.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_1.png" style={{width:600, height:'auto'}}/></div>
 
-Se você quiser modificá-lo com base em outro projeto PlatformIO, também pode consultar diretamente a configuração abaixo.
+### Exemplo de piscar LED
 
-- platfromio.ini
+Neste exemplo de piscar LED, vamos guiá-lo na compilação e upload de arquivos usando o PlatformIO.
 
-```ini
-[env:seeed-xiao-esp32-c5]
-platform = Seeed Studio
-board = seeed-xiao-esp32-c5
-framework = arduino
-monitor_speed = 115200
-```
-
-### Exemplo de Piscar LED
-
-Neste exemplo de Piscar LED, vamos guiá-lo na compilação e envio de arquivos usando o PlatformIO.
-
-**Etapa 1.** Copie o código de exemplo
+**Passo 1.** Copie o código de exemplo
 
 ```cpp
 #include <Arduino.h>
@@ -123,23 +148,23 @@ void loop()
 }
 ```
 
-**Etapa 2.** Compile o projeto
+**Passo 2.** Compile o projeto
 
-  Clique no ícone ***√*** na barra de status na parte inferior do VS Code para compilar.
+  Clique no ícone ***√*** na barra de status na parte inferior do VS Code para compilar (Build).
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
-  Se a compilação for bem-sucedida, será exibido conforme mostrado na figura.
+  Se a compilação for bem-sucedida, será exibido como mostrado na figura.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_3.png" style={{width:800, height:'auto'}}/></div><br/>
 
-**Etapa 3.** Upload
+**Passo 3.** Upload
 
   Clique no ícone **→** na barra de status na parte inferior do VS Code para fazer o upload.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_3_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
-**Etapa 4.** Verifique o Efeito do Programa
+**Passo 4.** Verificar o efeito do programa
 
 Abra o Serial Monitor como mostrado na figura abaixo. Ele imprimirá o status ligado/desligado do LED em intervalos de 1 segundo.
 
@@ -149,14 +174,14 @@ O LED piscará no mesmo intervalo de 1 segundo.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:400, height:'auto'}}/></div><br/>
 
-### Exemplo de Conexão Wi-Fi de 5 GHz
+### Exemplo de conexão Wi-Fi de 5 GHz
 
-XIAO ESP-C5 suporta Wi-Fi 6 de banda dupla 2,4 GHz e 5 GHz. Este exemplo demonstrará o efeito de se conectar a uma rede Wi-Fi de 5 GHz.<br/>
+O XIAO ESP-C5 suporta Wi-Fi 6 de banda dupla 2,4 GHz e 5 GHz. Este exemplo demonstrará o efeito de conectar a uma rede Wi-Fi de 5 GHz.<br/>
 
 Copie o código a seguir para o seu projeto PlatformIO.
 <details>
 
-<summary> Código de Referência para Conexão WiFi </summary>
+<summary> Código de referência para conexão WiFi </summary>
 
 ```cpp
 #include <Arduino.h>
@@ -246,7 +271,7 @@ void loop() {
 
 </details>
 
-Compile e envie o código<br/>
+Compile (Build) e faça o upload do código<br/>
 
 Quando o XIAO ESP32-C5 estiver conectado ao WiFi, o Serial Monitor imprimirá informações como a intensidade do sinal da rede WiFi conectada.<br/>
 Também é possível ver claramente que o XIAO ESP32-C5 tem uma forte capacidade de conexão a redes Wi-Fi de 5 GHz.
@@ -255,11 +280,11 @@ Também é possível ver claramente que o XIAO ESP32-C5 tem uma forte capacidade
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_6.png" style={{width:600, height:'auto'}}/></div><br/>
 
-Seguindo os dois exemplos acima, você já deve ter dominado as operações básicas de desenvolvimento com o PlatformIO. Estamos ansiosos para ver você criar projetos ainda mais interessantes com o XIAO ESP32-C5!
+Seguindo os dois exemplos acima, você já deve ter dominado as operações básicas de desenvolvimento do PlatformIO. Estamos ansiosos para ver você criar projetos ainda mais interessantes com o XIAO ESP32-C5!
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja o mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

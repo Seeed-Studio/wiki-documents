@@ -9,7 +9,7 @@ last_update:
   date: 05/15/2025
   author: Matthew
 createdAt: '2023-07-20'
-updatedAt: '2025-09-25'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/ja/Grove_Sensor_Intro/
 ---
 

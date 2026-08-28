@@ -12,7 +12,7 @@ last_update:
   date: 06/06/2025
   author: Matthew
 createdAt: '2023-02-24'
-updatedAt: '2025-09-04'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/ja/sensecraft-blockchain/blockchain-dashboard/hotspot-registration/
 ---
 

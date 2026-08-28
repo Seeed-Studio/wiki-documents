@@ -15,10 +15,10 @@ slug: /rebot_b601_rs_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-07-28
+  date: 2026-08-17
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-08-03'
+updatedAt: '2026-08-17'
 url: https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/
 ---
 
@@ -349,7 +349,7 @@ sudo ip link set $PCAN_IF up
 </TabItem>
 <TabItem value="macos" label="macos">
 
-Si no se puede cargar libPCBUSB.dylib, instala primero PCBUSB:
+Si no se puede cargar `libPCBUSB.dylib`, instala primero PCBUSB:
 ```zsh
 curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
   https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
@@ -358,25 +358,44 @@ cd PCBUSB
 sudo ./install.sh
 ```
 
-Configura `DYLD_LIBRARY_PATH` para asegurar que motorbridge-gateway pueda encontrar la biblioteca PCBUSB en tiempo de ejecución. Crea un script de activación en el entorno conda para que surta efecto automáticamente cada vez que ejecutes `conda activate rebot`:
+`install.sh` solo crea `libPCBUSB.dylib`. El cargador nativo de motorbridge hace `dlopen` del nombre desnudo `PCBUSB`, así que añade este enlace simbólico. Sin él, conectar el brazo falla con `load PCBUSB failed` aunque una comprobación ctypes de `libPCBUSB.dylib` habría pasado:
+
+```zsh
+sudo ln -sf /usr/local/lib/libPCBUSB.dylib /usr/local/lib/PCBUSB
+```
+
+Configura `DYLD_FALLBACK_LIBRARY_PATH` para que motorbridge-gateway encuentre PCBUSB en tiempo de ejecución. Prefiere FALLBACK frente a `DYLD_LIBRARY_PATH`: este último anula el orden de búsqueda predeterminado de dyld para todo el proceso y puede romper otro software. Crea un script de activación en el entorno conda para que surta efecto automáticamente cada vez que ejecutes `conda activate rebot`:
 
 ```bash
 mkdir -p "$CONDA_PREFIX/etc/conda/activate.d"
 cat > "$CONDA_PREFIX/etc/conda/activate.d/env_vars.sh" << 'EOF'
-export DYLD_LIBRARY_PATH="/usr/local/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+export DYLD_FALLBACK_LIBRARY_PATH="/usr/local/lib${DYLD_FALLBACK_LIBRARY_PATH:+:$DYLD_FALLBACK_LIBRARY_PATH}"
 EOF
 
-echo $DYLD_LIBRARY_PATH
+echo $DYLD_FALLBACK_LIBRARY_PATH
 ```
 
-Comprueba si está listo:
+Opcional, sin sudo (máquinas compartidas): instala en `~/.local/lib`. Si tienes el árbol de código de motorbridge:
+
+```bash
+./scripts/setup_pcbusb_macos.sh --user-local
+ln -sf "$HOME/.local/lib/libPCBUSB.dylib" "$HOME/.local/lib/PCBUSB"
+```
+
+Apunta el script de activación de conda a `$HOME/.local/lib` en lugar de `/usr/local/lib`.
+
+Comprueba si está listo. Conecta primero el adaptador PCAN. `ctypes.CDLL('libPCBUSB.dylib')` no es una comprobación de runtime válida: motorbridge nunca carga ese nombre.
+
 ```zsh
 # Check Python package and CLI are ready
 python3 -c "import motorbridge; print('motorbridge OK')"
 motorbridge-cli --help
 
-# Optional: Check if PCBUSB runtime is loadable
-python3 -c "import ctypes; ctypes.CDLL('libPCBUSB.dylib'); print('PCBUSB load OK')"
+# Native loader dlopens the bare name PCBUSB
+python3 -c "import ctypes; ctypes.CDLL('PCBUSB'); print('PCBUSB load OK')"
+
+# Real runtime check (can0 maps to PCAN_USBBUS1 on macOS)
+motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 --timeout-ms 300
 ```
 
 </TabItem>
@@ -587,7 +606,7 @@ motorbridge-gateway --bind 127.0.0.1:9002
 o
 
 ```bash
-DYLD_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
+DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
 ```
 
 #### Inicializar los parámetros de control del motor RS

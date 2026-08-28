@@ -1,6 +1,6 @@
 ---
 description: SenseCraft AI でサポートされているエッジ AI デバイス向けに、事前学習済みモデル、カスタムトレーニング、デプロイ、ライブプレビュー、およびモデル出力ワークフローを探索します。
-title: 'SenseCraft AI：エッジ AI モデルのトレーニングとデプロイ'
+title: SenseCraft AI：エッジ AI モデルのトレーニングとデプロイ
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.webp
 slug: /sensecraft-ai/overview
 aliases:
@@ -10,7 +10,7 @@ last_update:
   date: 08/06/2026
   author: Citric
 createdAt: '2024-11-28'
-updatedAt: '2026-08-13'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/ja/sensecraft-ai/overview/
 ---
 

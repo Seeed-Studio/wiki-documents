@@ -12,6 +12,9 @@ slug: /headless_setup_and_recovery_for_a603
 last_update:
   date: 08/07/2026
   author: Jonathan van der Maas
+createdAt: '2026-08-11'
+url: https://wiki.seeedstudio.com/pt-br/headless_setup_and_recovery_for_a603/
+updatedAt: '2026-08-11'
 ---
 
 A A603 pode ser provisionada e operada inteiramente através de sua porta W6 Micro-USB: nenhum monitor, teclado, cabo Ethernet ou módulo WiFi é necessário em nenhum momento após o flash. Esta página documenta o fluxo de trabalho completo sem cabeça no JetPack 6.2 (L4T R36.4.3): acesso SSH pela rede USB gadget, fornecendo internet para a placa através do computador host e recuperação de uma configuração de boot com falha em uma placa cujo menu de boot não aceita entrada de teclado.

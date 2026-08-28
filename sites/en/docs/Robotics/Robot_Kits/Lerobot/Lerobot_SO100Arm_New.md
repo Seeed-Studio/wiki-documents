@@ -13,7 +13,7 @@ last_update:
   date: 3/11/2026
   author: ZhangJiaQuan
 createdAt: '2025-06-05'
-updatedAt: '2026-07-25'
+updatedAt: '2026-08-18'
 translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/lerobot_so100m_new/
@@ -1728,6 +1728,7 @@ To train a policy to control your robot, use the [lerobot-train](https://github.
   --steps=300000`}
 </CodeBlock>
 
+
 **If you want to train on a local dataset, make sure the `repo_id` matches the one used during data collection and add `--policy.push_to_hub=False`.**
 
 <CodeBlock language="bash">
@@ -1865,21 +1866,17 @@ Fine-tuning is an art. For a complete overview of the options for finetuning, ru
 Similarly for when recording an episode, it is recommended that you are logged in to the HuggingFace Hub. You can follow the corresponding steps: [Record a dataset](https://huggingface.co/docs/lerobot/il_robots). Once you are logged in, you can run inference in your setup by doing:
 
 <CodeBlock language="bash">
-{`lerobot-record \\
+{`lerobot-rollout \\
+  --strategy.type=base \\
+  --policy.path=\${HF_USER}/act_policy \\
   --robot.type=so101_follower \\
-  --robot.port=/dev/ttyACM0 \\ # <- Use your port
-  --robot.id=my_blue_follower_arm \\ # <- Use your robot id
-  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\ # <- Use your cameras
-  --dataset.single_task="Grasp a lego block and put it in the bin." \\ # <- Use the same task description you used in your dataset recording
-  --dataset.repo_id=\${HF_USER}/eval_DATASET_NAME_test \\  # <- This will be the dataset name on HF Hub
-  --dataset.episode_time_s=50 \\
-  --dataset.num_episodes=10 \\
-  # <- Teleop optional if you want to teleoperate in between episodes \\
-  # --teleop.type=so100_leader \\
-  # --teleop.port=/dev/ttyACM0 \\
-  # --teleop.id=my_red_leader_arm \\
-  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model`}
+  --robot.port=/dev/ttyACM0 \\
+  --robot.cameras=="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\
+  --display_data=true \\
+  --task="Your task description" \\ # can be skipped for ACT
+  --duration=60`}
 </CodeBlock>
+
 
 Depending on your evaluation setup, you can configure the duration and the number of episodes to record for your evaluation suite.
 
@@ -1973,18 +1970,20 @@ Refer to [Pi0](https://huggingface.co/docs/lerobot/pi0)
 
 <CodeBlock language="bash">
 {`lerobot-train \\
-  --policy.type=pi0 \\
-  --dataset.repo_id=seeed/eval_test123 \\
-  --job_name=pi0_training \\
-  --output_dir=outputs/pi0_training \\
-  --policy.pretrained_path=lerobot/pi0_base \\
-  --policy.compile_model=true \\
-  --policy.gradient_checkpointing=true \\
-  --policy.dtype=bfloat16 \\
-  --steps=20000 \\
-  --policy.device=cuda \\
-  --batch_size=32 \\
-  --wandb.enable=false`}
+    --dataset.repo_id=your_dataset \\
+    --policy.type=pi0 \\
+    --output_dir=./outputs/pi0_training \\
+    --job_name=pi0_training \\
+    --policy.pretrained_path=lerobot/pi0_base \\
+    --policy.repo_id=your_repo_id \\
+    --policy.compile_model=true \\
+    --policy.gradient_checkpointing=true \\
+    --policy.dtype=bfloat16 \\
+    --policy.freeze_vision_encoder=false \\
+    --policy.train_expert_only=false \\
+    --steps=3000 \\
+    --policy.device=cuda \\
+    --batch_size=32`}
 </CodeBlock>
 
 **Evaluate**
@@ -2018,13 +2017,16 @@ Refer to [Pi0.5](https://huggingface.co/docs/lerobot/pi05)
 {`lerobot-train \\
     --dataset.repo_id=seeed/eval_test123 \\
     --policy.type=pi05 \\
-    --output_dir=outputs/pi05_training \\
+    --output_dir=./outputs/pi05_training \\
     --job_name=pi05_training \\
+    --policy.repo_id=your_repo_id \\
     --policy.pretrained_path=lerobot/pi05_base \\
     --policy.compile_model=true \\
     --policy.gradient_checkpointing=true \\
-    --wandb.enable=false \\
+    --wandb.enable=true \\
     --policy.dtype=bfloat16 \\
+    --policy.freeze_vision_encoder=false \\
+    --policy.train_expert_only=false \\
     --steps=3000 \\
     --policy.device=cuda \\
     --batch_size=32`}

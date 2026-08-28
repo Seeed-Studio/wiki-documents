@@ -69,6 +69,43 @@ Open VSCode, click on Extensions, then search for PlatformIO and select to insta
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
 
+### Install the platform-seeedboards platform package
+
+The Seeed Studio XIAO series boards use a custom PlatformIO platform, so you need to install the corresponding platform package manually.
+
+- Run the following command for a fresh installation:
+
+```bash
+pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_1.png" style={{width:800, height:'auto'}}/></div>
+<br/>
+
+- If you have previously used Seeed Studio XIAO series boards in PlatformIO, run the command below to update:
+
+```bash
+# for Windows
+pio pkg update -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
+
+# for macOS/Linux
+pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
+```
+
+:::tip
+
+If you want to use an existing PlatformIO project, replace the content of **platformio.ini** as follows:
+
+```ini
+[env:seeed-xiao-esp32-c5]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+framework = arduino
+board = seeed-xiao-esp32-c5
+monitor_speed = 115200
+```
+
+:::
+
 ### New Project
 
 - Open the PIO Home interface and select `New Project`
@@ -81,19 +118,7 @@ Open VSCode, click on Extensions, then search for PlatformIO and select to insta
 - Location: The path of the engineering files can be set as a custom path or the default path can be selected.
 - Click **Finish** and wait for the creation to be completed. Then, open the project file in the workspace.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_1.png" style={{width:800, height:'auto'}}/></div>
-
-If you want to modify it based on another PlatformIO project, you can also directly refer to the configuration below.
-
-- platfromio.ini
-
-```ini
-[env:seeed-xiao-esp32-c5]
-platform = Seeed Studio
-board = seeed-xiao-esp32-c5
-framework = arduino
-monitor_speed = 115200
-```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_1.png" style={{width:600, height:'auto'}}/></div>
 
 ### LED Blink Example
 

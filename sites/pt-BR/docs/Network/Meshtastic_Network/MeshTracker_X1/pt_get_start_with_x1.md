@@ -1,6 +1,6 @@
 ---
-description: Comece a usar o SenseCAP MeshTracker X1 para Meshtastic. Este tutorial apresentará o guia de configuração e o guia de FAQ para o dispositivo
-title: Comece a usar o MeshTracker X1
+description: Introdução ao SenseCAP MeshTracker X1 para Meshtastic. Este tutorial apresentará o guia de configuração e o guia de FAQ para o dispositivo
+title: Introdução ao MeshTracker X1
 keywords:
   - Rastreador
   - Meshtastic
@@ -12,13 +12,13 @@ last_update:
   date: 7/13/2026
   author: Michelle Huang
 createdAt: '2026-07-13'
-updatedAt: '2026-07-24'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/pt-br/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
-Quando o dispositivo estiver nos estados abaixo, não reinicie manualmente nem o desligue. Caso contrário, o dispositivo pode ficar inutilizável.
+Quando o dispositivo estiver nos estados abaixo, não reinicie nem desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
 1. Não tiver concluído o processo de transmissão de mensagem
 2. Estiver sendo configurado
 :::
@@ -104,7 +104,7 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para uma lista mais abrangente.
 
 :::info
-**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto com base em uma janela contínua de 1 hora. Seu dispositivo parará de transmitir se você atingir esse limite, até que seja permitido novamente.
+**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto em uma base móvel de 1 hora. Seu dispositivo parará de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
@@ -157,7 +157,7 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
     <td>Dispositivo ligando</td>
   </tr>
   <tr>
-   <td>Pressione e segure por 5 s</td>
+   <td>Pressione por 5 s</td>
     <td>Dispositivo desligando</td>
   </tr>
   <tr>
@@ -165,7 +165,7 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
     <td>Transmitir ID do nó e posição</td>
   </tr>
   <tr>
-    <td>Clique triplo</td>
+    <td>Três cliques</td>
     <td>Ligar/desligar o GPS</td>
   </tr>
   <tr>
@@ -177,16 +177,16 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
 ## Gravar Firmware
 
 :::caution note
-Por favor, `não use OTA` para atualizar o firmware, isso pode fazer com que o dispositivo fique completamente inutilizável. Para informações detalhadas, por favor [clique aqui](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ota/)
+Por favor, `não use OTA` para atualizar o firmware, isso pode fazer com que o dispositivo fique completamente inutilizável. Para informações detalhadas, [clique aqui](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ota/)
 :::
 #### Etapa 1: Entrar no modo DFU
 
-Entre em DFU via o web flasher. Se isso falhar muitas vezes, entre em DFU manualmente.
+Entre em DFU via web flasher. Se isso falhar muitas vezes, entre em DFU manualmente.
 
 <Tabs>
 <TabItem value="method1" label="Via Web Flasher">
 
-Visite o [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
+Acesse o [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
 Conecte o dispositivo ao seu PC, selecione o dispositivo como `SenseCAP Mesh Tracker X1` e escolha o firmware mais recente, depois clique em `Flash`.
 
@@ -200,9 +200,13 @@ Clique em `Enter DFU Mode`, será exibida uma porta serial chamada `X1 xxx`. Cli
 
 <TabItem value="method2" label="Entrar Manualmente">
 
-Conecte o cabo USB ao seu PC, pressione e segure o botão do dispositivo e então conecte o cabo de carregamento **rapidamente** duas vezes.
+Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte **rapidamente** o dispositivo ao computador via cabo USB, mantendo o botão pressionado até que o LED branco ⚪️ acenda.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
+:::warning
+Para entrar com sucesso no modo DFU, você precisa realizar essa operação rapidamente. Talvez seja necessário tentar várias vezes.
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
 </Tabs>
@@ -212,7 +216,7 @@ O LED branco ⚪️ ficará constante se o X1 estiver no modo DFU. E deve haver 
 
 #### Etapa 2: Apagar a Flash
 
-Antes de gravar o firmware, por favor apague-o primeiro!
+Antes de gravar o firmware, apague-o primeiro!
 
 Clique no símbolo de `lixeira`.
 
@@ -236,7 +240,7 @@ Copie o arquivo UF2 para a unidade DFU. O firmware deve ser gravado após o arqu
 
 ### Configurar GPS
 
-Defina o GPS como habilitado. Você pode ajustar o intervalo de atualização e o intervalo de transmissão para obter informações de localização mais atualizadas.
+Ative o GPS. Você pode ajustar o intervalo de atualização e o intervalo de transmissão para obter informações de localização mais atualizadas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
@@ -247,11 +251,11 @@ Para IOS, ative o `Accurate Location`. Caso contrário, o posicionamento pode fi
 
 ### Conectar via Website
 
-Se você quiser enviar mensagens de texto e se comunicar com outros nós no website, pode conectar o dispositivo ao [Website Meshtastic](https://client.meshtastic.org/messages/broadcast/0) agora. 
+Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo website, pode conectar o dispositivo ao [Website Meshtastic](https://client.meshtastic.org/messages/broadcast/0) agora. 
 
   Etapa 1: Abrir o Website
 
-    [Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para ir para o Website.
+    [Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para ir ao Website.
 
   Etapa 2: Adicionar o novo dispositivo 
 
@@ -259,7 +263,7 @@ Se você quiser enviar mensagens de texto e se comunicar com outros nós no webs
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    Há duas maneiras de conectar. Você pode escolher o método de sua preferência.
+    Há duas maneiras de conectar. Você pode escolher o método que preferir.
 
 <Tabs>
 
@@ -279,7 +283,7 @@ Se você quiser enviar mensagens de texto e se comunicar com outros nós no webs
 </TabItem>
 </Tabs>
 
-  Seu dispositivo será mostrado na lista. Clique para conectar. Se a conexão for bem-sucedida, você poderá ver o status do dispositivo diretamente no website.
+  Seu dispositivo será exibido na lista. Clique para conectar. Se a conexão for bem-sucedida, você poderá ver o status do dispositivo diretamente no website.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Websitestatus.png" alt="pir" width={300} height="auto" /></p>
 
@@ -300,7 +304,7 @@ Se você quiser enviar mensagens de texto e se comunicar com outros nós no webs
 |Vibra|-|05|
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="App IOS">
 
 Navegue até `Settings` -> `External Notification` -> Ative `GPIO` -> Defina `Output Pin GPIO`.
 
@@ -308,7 +312,7 @@ Navegue até `Settings` -> `External Notification` -> Ative `GPIO` -> Defina `Ou
 
 </TabItem>
 
-<TabItem value="android" label="Aplicativo Android">
+<TabItem value="android" label="App Android">
 
 Navegue até `Settings` -> `External Notification` -> Ative `GPIO` -> Defina `Output Pin GPIO`.
 
@@ -328,13 +332,13 @@ Depois de atualizar a configuração do dispositivo, ele será reiniciado, o que
 Navegue até `Settings` -> `Ringtone Config`, depois insira a string de toque RTTTL que você deseja usar para notificações externas.
 
 <Tabs>
-<TabItem value="ios" label="Aplicativo iOS">
+<TabItem value="ios" label="App IOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Aplicativo Android">
+<TabItem value="android" label="App Android">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/ringtonex1.png" alt="pir" width={900} height="auto" /></p>
 
 </TabItem>
@@ -397,7 +401,7 @@ O alerta de mensagem pode ser configurado em `External Notification`.
 
 <Tabs>
 
-<TabItem value="aaa" label="iOS">
+<TabItem value="aaa" label="IOS">
 
 Navegue até `Setting` -> `External Notification`
 
@@ -438,7 +442,7 @@ Desative `External notification enabled`, então você pode configurar para `buz
 ### Como verificar o ID do dispositivo
 
 <Tabs>
-<TabItem value="23" label="Verificar a parte de trás do dispositivo">
+<TabItem value="23" label="Verificar a parte traseira do dispositivo">
 Os `últimos quatro dígitos` do endereço MAC são o ID do dispositivo
 
 Por exemplo, o ID do dispositivo abaixo seria `A0D4`
@@ -474,9 +478,9 @@ Visite [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
 - Use um cabo USB em bom estado para `carregar o dispositivo` continuamente por 1–2 horas para garantir que a bateria tenha energia suficiente para acordar o sistema.
 
-- Se o dispositivo ainda não responder após o carregamento, `execute um hard reset` da seguinte forma: desconecte o cabo USB. Pressione e segure o botão e, em seguida, conecte o cabo USB mantendo o botão pressionado. Segure por aproximadamente 3 segundos e depois solte. Isso força uma reinicialização do sistema.
+- Se o dispositivo ainda não responder após o carregamento, `execute um hard reset` da seguinte forma: desconecte o cabo USB. Pressione e segure o botão, depois conecte o cabo USB e solte o botão imediatamente. 
 
- - Se ainda assim não funcionar, conecte um cabo USB a um computador. Mantenha o botão do dispositivo pressionado e, em seguida, conecte o dispositivo ao computador, veja se um disco aparece no seu PC. Se aparecer, reinstale o bootloader
+ - Se ainda assim não funcionar, conecte um cabo USB a um computador. Mantenha o botão do dispositivo pressionado, conecte o dispositivo ao computador e depois solte o botão; verifique se um disco aparece ou não no seu PC. Se aparecer, reinstale o bootloader
 
 ### Dispositivo preso em loop de inicialização
 
@@ -486,32 +490,27 @@ O dispositivo irá reiniciar repetidamente, e a porta serial irá conectar e des
 
 **Solução:**
 
-- Etapa 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte o cabo de carregamento **rapidamente** duas vezes
+- Etapa 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte **rapidamente** o dispositivo ao computador via cabo USB, mantendo o botão pressionado até que um LED branco ⚪️ acenda.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/DFUEnterManually.gif" alt="pir" width={600} height="auto" /></p>
-
-O dispositivo está em modo DFU se o LED branco estiver aceso continuamente.
-
-:::note
+:::warning
 Para entrar no modo DFU com sucesso, você precisa realizar esta operação rapidamente. Talvez seja necessário tentar várias vezes.
 :::
 
-- Etapa 2: Apagar a Flash
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
-- Etapa 3: Gravar o firmware
+O dispositivo está em modo DFU se o LED branco permanecer aceso continuamente.
+
+- Etapa 2: [Erase Flash](https://wiki.seeedstudio.com/pt-br/x1_get_started_for_meshtastic/#step-2-flash-erase)
+
+- Etapa 3: [Flash Firmware](https://wiki.seeedstudio.com/pt-br/x1_get_started_for_meshtastic/#step-3-flash-firmware)
 
 ### Instalação do bootloader
 
 
-<Tabs>
-
-<TabItem value="m2" label="Instalar a partir de Adafruit-nrfutil">
-
-
-- [Download do bootloader](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/mesh_tracker_x1_bootloader-0.10.0-13.zip)
+- [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
 
 :::danger note
-Ao gravar o bootloader, certifique‑se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
+Ao gravar o bootloader, certifique‑se de que a conexão do cabo esteja estável e **NÃO** a desconecte durante o processo de gravação.
 :::
 
 **Etapa 1: Instalação do Adafruit-nrfutil**
@@ -520,7 +519,7 @@ Para usuários do Windows, pressione a tecla "Win" e a tecla "r", depois digite 
 
 Para usuários de MAC, pressione a tecla "Command" e a tecla "Space" para abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
 
-**Pré‑requisitos**
+**Pré-requisitos**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
@@ -561,7 +560,7 @@ Para usuários do Windows, talvez seja necessário adicionar o caminho manualmen
 
 Conecte seu dispositivo ao PC e verifique o número da porta.
 
-Para usuários do Windows, abra o gerenciador de dispositivos e vá até `port`; o número de porta que apareceu após a conexão do dispositivo é o número da porta do dispositivo.
+Para usuários do Windows, abra o gerenciador de dispositivos e vá até `port`; o número da porta que aparecer após a conexão do dispositivo é o número da porta do dispositivo.
 
 Para usuários de Mac, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
@@ -569,7 +568,7 @@ Para usuários de Mac, por exemplo:
 Para usuários do Windows, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-**Etapa 3: Gravar o bootloader**
+**Etapa 3: Grave o bootloader**
 
 No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo a porta correta do seu dispositivo:
 
@@ -583,7 +582,7 @@ Altere COMXX para o número da sua porta COM. Por exemplo, se o seu dispositivo 
 
 `adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- Alguns dispositivos irão alterar o número da porta após você inserir este comando. Portanto, se a instalação falhar, verifique novamente o número da porta.
+ Alguns dos dispositivos irão alterar o número da porta após você inserir este comando. Portanto, se a instalação falhar, verifique novamente o número da porta.
 
 - **Para outros**:
 
@@ -593,96 +592,8 @@ adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https://wiki.seeedstudio.com/pt-br/x1_get_started_for_meshtastic/#flash-firmware) para gravar o firmware do aplicativo.
+Quando você tiver concluído as etapas acima, poderá seguir este [passo](https://wiki.seeedstudio.com/pt-br/x1_get_started_for_meshtastic/#flash-firmware) para gravar o firmware do aplicativo.
 
-</TabItem>
-
-<TabItem value="m3" label="Instalar a partir do código-fonte">
-
-
-Use este método se você tiver problemas para instalar com o PyPi ou quiser modificar a ferramenta. Primeiro faça o clone deste repositório e entre na pasta dele.
-
-```
-git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
-cd Adafruit_nRF52_nrfutil
-```
-
-Observação: Os comandos a seguir usam `python3`; no entanto, se você estiver no Windows, talvez seja necessário alterá-lo para `python`, já que a instalação do Python 3.x no Windows ainda usa o nome python.exe
-
-Para instalar no espaço do usuário no seu diretório pessoal:
-
-```
-pip3 install -r requirements.txt
-python3 setup.py install
-```
-
-Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a flag `--user`:
-
-```
-pip3 install -r --user requirements.txt
-python3 setup.py install
-```
-
-Se você quiser instalar nos diretórios do sistema (geralmente não recomendado):
-
-```
-sudo pip3 install -r requirements.txt
-sudo python3 setup.py install
-```
-
-Para gerar um binário executável autônomo da ferramenta (Windows e MacOS), execute estes comandos:
-
-```
-pip3 install pyinstaller
-cd Adafruit_nRF52_nrfutil
-pip3 install -r requirements.txt
-cd Adafruit_nRF52_nrfutil\nordicsemi
-pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
-```
-
-Você encontrará o .exe em `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` (com `.exe` se você estiver no Windows).
-Copie ou mova-o para outro lugar para sua conveniência, como um diretório no seu %PATH%.
-
-**Etapa 2: Verifique o número da sua porta**
-
-Conecte seu dispositivo ao PC e verifique o número da porta.
-
-Para usuários de Windows, abra o gerenciador de dispositivos e vá para "port", o número de porta que aparecer após a conexão do dispositivo é o número da porta do dispositivo.
-
-Para usuários de Mac, por exemplo:
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
-
-Para usuários de Windows, por exemplo:
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
-
-**Etapa 3: Grave o bootloader**
-
-No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo a porta correta do seu dispositivo:
-
-- **Para Windows**:
-
-```
-adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p COMxx -b 115200 --singlebank --touch 1200
-```
-
-Altere COMXX para o seu número de COM. Por exemplo, se o seu dispositivo estiver na com6, altere o comando para:
-
-`adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p **COM6** -b 115200 --singlebank --touch 1200`
-
- Alguns dispositivos mudarão o número da porta depois que você inserir este comando. Portanto, se a instalação falhar, verifique novamente o número da porta.
-
-- **Para outros**:
-
-```
-adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
-```
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
-
-Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https://wiki.seeedstudio.com/pt-br/x1_get_started_for_meshtastic/#flash-firmware) para gravar o firmware do aplicativo.
-
-</TabItem>
-</Tabs>
 
 
 **2) O dispositivo não consegue entrar no modo DFU, mas a porta serial pode ser detectada**.
@@ -696,7 +607,7 @@ Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https
 
 **3) O dispositivo não consegue entrar no modo DFU e nenhuma porta serial é exibida**
 
-- mantenha pressionado o botão do dispositivo e conecte o cabo de carregamento. Depois que um disco aparecer no seu PC, você poderá ver a porta serial.
+- mantenha pressionado o botão do dispositivo, conecte o cabo de carregamento e, em seguida, solte o botão imediatamente. Depois que um disco aparecer no seu PC, você poderá ver a porta serial.
 
 - Se ainda não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada, depois conecte o cabo de carregamento e tente pareá-lo novamente.
 
@@ -709,11 +620,11 @@ Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https
  - Após o dispositivo ligar, ele desligará ou reiniciará automaticamente depois de um tempo. 
  - O log da porta serial é executado por um tempo e depois para.
 
- Isso pode ser causado por reiniciar ou desligar manualmente e à força o dispositivo quando ele está nos seguintes estados: sem terminar o processo de transmissão de mensagens, sendo configurado......
+ Isso pode ser causado por reiniciar ou desligar manualmente e à força o dispositivo quando ele estiver nos seguintes estados: sem concluir o processo de transmissão de mensagens, sendo configurado......
 
 - **Solução de problemas**
 
- [Clique aqui](https://wiki.seeedstudio.com/pt-br/x1_get_started_for_meshtastic/#step-2-flash-erase) para executar um apagamento da flash. 
+ [Clique aqui](https://wiki.seeedstudio.com/pt-br/x1_get_started_for_meshtastic/#step-2-flash-erase) para executar um flash-erase. 
 
  ### Restauração de fábrica
 Se você quiser restaurar as configurações padrão, pode fazer uma restauração de fábrica. Há dois métodos para você fazer a restauração de fábrica.
@@ -725,7 +636,7 @@ Se você quiser restaurar as configurações padrão, pode fazer uma restauraç�
 
 ### Falha em Mensagem Direta
 
-#### Resetar NodeDB
+#### Reset do NodeDB
 
 NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, isso pode ser porque o seu nodeDB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
 
@@ -735,13 +646,13 @@ Abra o aplicativo e conecte-se ao dispositivo de destino. Vá para **Settings**-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
 
-#### Trocar Informações de Usuário
+#### Trocar informações do usuário
 
 Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e o "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, poderá solicitá-los manualmente a trocar informações no aplicativo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
-#### Regenerar Chave Privada
+#### Regenerar chave privada
 
 Dois nós precisam conhecer a chave privada um do outro para poder se comunicar entre si. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar a chave privada para ele.
 
@@ -753,16 +664,16 @@ Reinicie o dispositivo com falha para que a configuração tenha efeito.
 Após a regeneração da chave, outros dispositivos precisam se reconectar ao nó. Portanto, é melhor excluir o nó da lista de nós do outro dispositivo.
 :::
 
-### Qualidade do Sinal
+### Qualidade do sinal
 
-  - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR abaixo de -10 dB indica baixo desempenho.
+  - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR inferior a -10 dB indica baixo desempenho.
 
-  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI abaixo de -115 dBm é considerado como tendo baixo desempenho. 
+  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo baixo desempenho. 
 
       Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
 
-## Suporte Técnico & Discussão sobre o Produto
+## Suporte técnico e discussão sobre o produto
 
 <p style={{textAlign: 'center'}}>
   <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">

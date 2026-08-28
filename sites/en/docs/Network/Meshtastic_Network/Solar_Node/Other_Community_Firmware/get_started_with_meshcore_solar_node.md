@@ -9,11 +9,11 @@ slug: /get_started_with_meshcore_solar_node
 sku: 114993633,114993643
 sidebar_position: 1
 last_update:
-  date: 3/6/2026
-  author: Michelle Huang
+  date: 8/17/2026
+  author: Advent Jiang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-17'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -68,6 +68,35 @@ If you see "Flashing erase firmware:100%", the device has been successfully eras
 Select the firmware version.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FirmwareVersion.png" alt="pir" width={800} height="auto" /></p>
+
+Different versions of the MeshCore firmware differ in the LoRa TX indicator and Power button behavior. Before judging the device status, please confirm the firmware version you are currently using.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/version-different.png" alt="pir" width={800} height="auto" /></p>
+
+:::note
+**Firmware version differences (LoRa TX indicator)**
+
+The indicator LEDs are numbered in the picture below, so you can easily identify which LED the color descriptions refer to:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/interactive.png" alt="pir" width={800} height="auto" /></p>
+
+- **No.12 - Yellow LED**: solar input / light status indicator.
+- **No.13 - Blue LED**: LoRa TX indicator.
+- **No.14 - White LED**: LoRa TX indicator.
+
+Different MeshCore firmware versions light up different physical LEDs for LoRa TX:
+
+- v1.12.0 ~ v1.14.0: the blue LED (No.13) flashes during LoRa TX.
+- v1.14.1 ~ v1.15.x: the white LED (No.14) flashes during LoRa TX.
+- v1.16.0 and later: the blue LED (No.13) flashes again during LoRa TX.
+- Seeing a blue or white flash on different versions does not indicate a hardware fault.
+
+The red, green and yellow LEDs are mainly hardware power status indicators and are not related to the MeshCore TX indicator version differences:
+
+- Red: mainly indicates the device is charging.
+- Green: mainly indicates charging is complete.
+- Yellow (No.12): mainly indicates solar input / light status.
+:::
 
 Click `Enter DFU Mode`, choose the serial port named "P1 Pro" or "TinyUSB" serial. Then click `Flash` and choose the serial port.
 
@@ -222,7 +251,7 @@ P1-Pro version has built-in battery and GPS module, for P1 version, user needs t
 Ensure that the shell is properly mounted and the screws are firmly tightened to maintain the device’s waterproof integrity.
 :::
 
-#### (Optional) Upgrate atenna
+#### (Optional) Upgrade Antenna
 
 - You can replace the antenna with a fiberglass one by watching this video.
 
@@ -230,12 +259,22 @@ If you need an antenna with higher gain, we recommend the [860-930MHz 3dBi fiber
 
 ### Power on the device
 
-The device needs to be activated by connecting the USB cable. The blue Mesh LED will light on for about 3s, it means that the device has been successfully turned on. 
+The device needs to be activated by connecting the USB cable. On startup, the blue LED lights up for about 3s, which means that the device has been successfully turned on.
 
-The blue mesh LED light will not turn on until it send advert.
+The TX LED only blinks when the Solar Node itself transmits LoRa data (for example, when sending an advert). Receiving data does not turn on the TX LED. During LoRa TX, the LED color depends on the firmware version - see the firmware version differences above.
 
 :::tip
-It was not until the release of version 1.14.1 that the power button was enabled. Press the device for `3s` to turn on/off the devcice. You will see a white light shortly blink. This indicates the device is successfully turning on.
+**Power button (power on/off)**
+
+- MeshCore v1.14.0 and earlier: long-pressing the Power button to power on/off is `NOT` supported. If long-pressing Power has no response, this is the normal firmware version behavior, not a button fault.
+- MeshCore v1.14.1 and later: long-press the Power button for about `3s` to turn the device on/off. You will see a white light blink shortly, which indicates the device is successfully turning on/off.
+
+**Button reference**
+
+- **Power Button**: power on/off (supported from v1.14.1).
+- **Reset Button**: restart the device / enter DFU or Bootloader mode.
+
+Please do not confuse long-pressing Power with double-clicking Reset.
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/blinkingonetime.mp4" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
@@ -276,7 +315,13 @@ Click "send advert" to enable other Meshcore devices to see this repeater. Then 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertSending.png" alt="pir" width={600} height="auto" /></p>
 
-After the initialization setting, click 
+Clicking **Send Advert** makes the Solar Node actively perform one LoRa TX, so the TX LED of the corresponding firmware version should blink shortly:
+
+- v1.12.0 ~ v1.14.0: blue LED blinks
+- v1.14.1 ~ v1.15.x: white LED blinks
+- v1.16.0 and later: blue LED blinks
+
+The TX LED indicates that the Solar Node itself is transmitting LoRa data (TX). It is not a receive (RX) indicator.
 
 - **Step3(Optional) Admin Log in**
 
@@ -290,13 +335,20 @@ If you want to show the position of the repeater, you can enable the GPS.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
 
-Also, you can adjust the advert broadcast interval. The interval range of `auto zero hop advert` is 60-240 mins. The interval range of `auto flood advert` is 3-168 hours. 
+Also, you can adjust the advert broadcast interval:
+
+- **Advert interval**: the sending interval of the Local / zero-hop Advert. The interval range is 60-240 mins.
+- **Flood advert interval**: the sending interval of the Flood Advert. The interval range is 3-168 hours.
+
+The actual advert period depends on the current firmware version and the configuration saved on the device, so please always refer to the actual values of `Advert interval` and `Flood advert interval` on the configuration page. If an interval is set to `0`, the corresponding automatic advert is disabled.
+
+**Note:** Since MeshCore v1.16.0, the default Flood advert interval has been changed from 12 hours to 47 hours. Therefore we do not recommend verifying the device by waiting for the automatic advert. To verify TX and LED, click **Send Advert** to actively trigger one LoRa TX.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
 ### Set Path
 
-Before adding the repeater to your route, you may need to use the repeater to send advert first. Repeater will automatically send advert at regular intervals. This interval can be multiple hours (default 3 hours). So you need to manually send advert or else you need to wait.
+Before adding the repeater to your route, you may need to use the repeater to send advert first. The repeater automatically sends adverts at regular intervals according to the `Advert interval` and `Flood advert interval` saved on the device. The intervals depend on the firmware version and the current device configuration, and can be several hours long. We recommend clicking **Send Advert** to trigger it immediately instead of waiting for the automatic advert.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
@@ -308,6 +360,17 @@ After setting the path, the transmission method will be changed to "n hop". For 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
+:::note
+The MeshCore Repeater does not re-send every LoRa packet it receives.
+
+- **Case 1**: A Companion sends data → the Solar Node receives it (RX) → no reply or forwarding is needed → the Solar Node does not perform a TX → the TX LED does not blink. This is normal.
+- **Case 2**: The Solar Node receives data → a reply or forward is needed → the Solar Node performs a LoRa TX → the TX LED flashes in the color of the corresponding firmware version.
+
+The Solar Node successfully receiving LoRa data does not mean the TX LED will blink. The TX LED only indicates that the Solar Node itself is transmitting LoRa data.
+
+For example, when there is only one Companion and one Solar Node Repeater in the network, after the Companion sends data, the Solar Node may successfully receive the packet without needing to re-send it. In this case, not seeing the TX LED blink cannot be used to directly judge the Repeater as abnormal.
+:::
+
 ## Verify That the Device Works Properly
 
 Before verification, confirm whether you are using only one Solar Node device or whether you also have other MeshCore Companion devices in your setup.
@@ -316,19 +379,46 @@ For Repeater mode, the following behavior is expected:
 
 - When the device is connected via USB, it can appear online and be configured.
 - After unplugging USB power, the device switches to battery mode and continues working as a repeater.
-- The blue LED blinking once during transmission is normal and indicates LoRa activity.
+- When the Solar Node itself transmits LoRa data, the TX LED blinks shortly in the color of the corresponding firmware version. This is normal and indicates LoRa activity.
 - The Solar Node Repeater is not expected to behave like a standalone phone-connected device unless it is used together with a Companion device.
 
-To properly verify that the repeater is working, follow this standard test procedure:
+To properly verify that the repeater is working, follow the two active verification steps below. Do not rely on waiting for the automatic advert as the main verification method.
+
+### Step 1: Verify Solar Node TX
 
 1. Connect the Solar Node via USB.
 2. Open the MeshCore configuration page: [https://config.meshcore.io/](https://config.meshcore.io/).
 3. Click **Send Advert**.
-4. Check from another MeshCore device, such as a Companion device.
-5. The Solar Node should appear in the device list.
-6. On the Companion device, open the Solar Node Repeater contact and use the **Ping** function to confirm communication.
+4. Observe the TX LED on the Solar Node.
+
+When the Solar Node sends the advert, the TX LED should blink shortly in the color of the corresponding firmware version:
+
+- v1.12.0 ~ v1.14.0: blue LED
+- v1.14.1 ~ v1.15.x: white LED
+- v1.16.0 and later: blue LED
+
+The Companion should be able to receive the Solar Node's advert. This actively verifies the LoRa TX in the direction of Solar Node → Companion.
+
+### Step 2: Use Ping to Verify Two-Way Communication
+
+1. On the Companion device, open the Solar Node Repeater contact and use the **Ping** function.
+
+If the ping succeeds, both directions of the communication are verified at the same time:
+
+- Companion → Solar Node: RX
+- Solar Node → Companion: TX reply
+
+When the Solar Node sends the ping reply, the TX LED should blink shortly in the color of the corresponding firmware version.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-6.png" alt="Verify Solar Node repeater with Ping from another MeshCore device" width={700} height="auto" /></p>
+
+:::note
+The TX LED is not an RX indicator. If the Solar Node only receives a packet without the need to reply or forward, the LED may not blink at all.
+:::
+
+:::tip
+We do not recommend waiting for the automatic advert to verify whether the device works, because the advert interval can be very long. Use **Send Advert** to actively trigger a TX immediately.
+:::
 
 :::note
 The mobile app is mainly used with a Companion device, not directly with a Repeater. The repeater itself will not behave like a normal Bluetooth-connected phone accessory.
@@ -509,6 +599,29 @@ When you have completed the above steps, then you can [flash the application fir
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
 
 The Xiao nRF-52840 Plus maximum charging current is 200 mA. The charging management chip CN3165 is 0.99A. So the maximum charging current is 1A.
+
+### Why does my Solar Node blink white instead of blue when sending data?
+
+This is a MeshCore firmware version difference, not a hardware fault:
+
+- v1.12.0 ~ v1.14.0: blue LED TX
+- v1.14.1 ~ v1.15.x: white LED TX
+- v1.16.0 and later: blue LED TX
+
+A white flash on v1.14.1 ~ v1.15.x does not indicate a hardware fault.
+
+### Why can't I power off the device by holding the Power button?
+
+Long-pressing the Power button to power on/off is supported since MeshCore v1.14.1. On v1.14.0 and earlier, long-pressing the Power button has no response, and this is the normal firmware version behavior.
+
+### Why hasn't my Solar Node blinked for a long time?
+
+- The TX LED only blinks when the Solar Node itself performs a LoRa TX.
+- RX does not necessarily trigger the TX LED.
+- The Repeater does not forward every packet it receives.
+- The automatic advert interval can be very long.
+- Since v1.16.0, the default Flood advert interval is 47 hours.
+- If you need to verify immediately, use **Send Advert**.
 
 ## Resource
 - [Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/mesh_repeater_power_table_en1.xlsx)

@@ -8,7 +8,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2025-12-22'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/ja/sensecraft_hmi_overview/
 ---
 

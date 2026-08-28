@@ -1,6 +1,6 @@
 ---
 description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 ESPHome 菜谱——用于 PCF8563 RTC 时间同步、microSD 卡检测、板载 PDM 麦克风初始化以及组合硬件状态仪表盘的独立演示。
-title: 'ESPHome 菜谱：RTC、SD 卡与麦克风（reTerminal E 系列）'
+title: ESPHome 菜谱：RTC、SD 卡与麦克风（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
 sidebar_position: 5

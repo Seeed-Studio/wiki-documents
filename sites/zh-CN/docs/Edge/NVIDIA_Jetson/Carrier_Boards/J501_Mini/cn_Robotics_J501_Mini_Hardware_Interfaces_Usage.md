@@ -15,7 +15,7 @@ last_update:
   date: 07/09/2026
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-07-15'
+updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/cn/recomputer_j501_mini_getting_started/
 ---
 # Mini J501 载板硬件与快速上手
@@ -313,7 +313,7 @@ JetPack 镜像文件体积较大，下载可能需要大约 60 分钟。请耐�
 
 <summary> 分步操作 </summary>
 
-**步骤 1.** 按住按键进入 RESET 模式。
+**步骤 1.** 按住 REC 按钮。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />

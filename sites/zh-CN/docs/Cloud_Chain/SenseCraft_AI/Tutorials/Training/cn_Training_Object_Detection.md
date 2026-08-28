@@ -10,7 +10,7 @@ last_update:
   date: 11/27/2024
   author: qiuyu wei
 createdAt: '2024-11-27'
-updatedAt: '2026-08-13'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/
 ---
 

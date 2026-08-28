@@ -15,7 +15,7 @@ last_update:
   date: 12/20/2025
   author: Allen
 createdAt: '2025-12-19'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 ---
 

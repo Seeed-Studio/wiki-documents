@@ -14,7 +14,7 @@ last_update:
   author: Michelle Huang
 url: https://wiki.seeedstudio.com/es/meshcore_source_code_pratical_tutorial_l1/
 createdAt: '2026-03-27'
-updatedAt: '2026-04-02'
+updatedAt: '2026-07-31'
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

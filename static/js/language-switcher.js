@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-13 11:01:33 (北京时间)
-// 多语言页面: 2437 个
+// 生成时间: 2026-08-24 13:43:49 (北京时间)
+// 多语言页面: 2454 个
 
 (function() {
   'use strict';
@@ -655,6 +655,13 @@
     "pt"
   ],
   "/ai_nvr_with_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_fisheye_surround_view_demo": [
     "cn",
     "en",
     "es",
@@ -1500,6 +1507,13 @@
     "ja",
     "pt"
   ],
+  "/jetson_initrd_flash_zfs_host_limitation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/make_diy_bsp_for_jetson": [
     "cn",
     "en",
@@ -1557,6 +1571,13 @@
     "pt"
   ],
   "/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/weston_egl_not_initialized_jetson_cold_boot": [
     "cn",
     "en",
     "es",
@@ -2040,6 +2061,13 @@
     "pt"
   ],
   "/recomputer_robotics_j50_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage": [
     "cn",
     "en",
     "es",
@@ -3628,6 +3656,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_deploy_monocular_depth": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/getting_started_for_home_assistant_with_recamera": [
     "cn",
     "en",
@@ -3685,6 +3720,13 @@
     "pt"
   ],
   "/recamera_qrcode_udp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_jetson_vlm_gateway": [
     "cn",
     "en",
     "es",
@@ -3754,7 +3796,7 @@
     "ja",
     "pt"
   ],
-  "/recamera_2002_series_quick_start_guide": [
+  "/recamera_getting_started": [
     "cn",
     "en",
     "es",
@@ -4014,6 +4056,13 @@
     "pt"
   ],
   "/recamera_pro_api_quick_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_development_cpp_skill": [
     "cn",
     "en",
     "es",
@@ -4732,6 +4781,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_node_map_meshtracker_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshtastic_node_map_x1": [
     "cn",
     "en",
@@ -4739,7 +4795,28 @@
     "ja",
     "pt"
   ],
+  "/meshtastic_source_code_practical_tutorial_meshtracker_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_meshtracker_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/x1_get_started_for_meshtastic": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_meshtracker_x1_meshcore": [
     "cn",
     "en",
     "es",
@@ -5789,6 +5866,13 @@
     "ja",
     "pt"
   ],
+  "/install_ubuntu_on_sensecap_m4": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ": [
     "cn",
     "en",
@@ -6447,6 +6531,13 @@
     "ja",
     "pt"
   ],
+  "/rebot_arm_b601_dm_isaacsim": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/rebot_arm_b601_dm_lerobot": [
     "cn",
     "en",
@@ -6518,6 +6609,13 @@
     "pt"
   ],
   "/rebot_arm_b601_rs_ros2_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_web_simulator_developer_guide": [
     "cn",
     "en",
     "es",
@@ -11688,6 +11786,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_clip_service_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_doa_vad": [
     "cn",
     "en",
@@ -12325,7 +12430,7 @@
     "ja",
     "pt"
   ],
-  "/xiao_esp32c5_buletooth_usage": [
+  "/xiao_esp32c5_bluetooth_usage": [
     "cn",
     "en",
     "es",
@@ -13866,6 +13971,20 @@
     "pt"
   ],
   "/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/get_started_with_sensecap_combo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_combo_introduction": [
     "cn",
     "en",
     "es",

@@ -15,7 +15,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/cn/lerobot_double_arm_so_arm_training/
 createdAt: '2026-07-01'
-updatedAt: '2026-07-07'
+updatedAt: '2026-08-10'
 ---
 import Link from '@docusaurus/Link';
 

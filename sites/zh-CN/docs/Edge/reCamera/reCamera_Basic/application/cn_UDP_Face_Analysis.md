@@ -17,8 +17,8 @@ last_update:
   date: 04/30/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-06-12'
-url: https://wiki.seeedstudio.com/cn/reCamera/reCamera_Basic/application/recamera_udp_face_analysis/
+updatedAt: '2026-07-22'
+url: https://wiki.seeedstudio.com/cn/recamera_udp_face_analysis/
 ---
 
 # 使用 reCamera 进行 UDP 人脸分析

@@ -14,7 +14,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/ja/atom_x/
 createdAt: '2026-05-25'
-updatedAt: '2026-05-25'
+updatedAt: '2026-08-13'
 ---
 
 import Link from '@docusaurus/Link';

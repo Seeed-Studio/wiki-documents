@@ -1,6 +1,6 @@
 ---
-description: YOLOv8のトレーニングからデプロイまで
-title: YOLOv8物体検出モデルのトレーニングとデプロイ
+description: 学習からデプロイまでの YOLOv8
+title: YOLOv8 物体検出モデルの学習とデプロイ
 keywords:
   - YOLOv8
   - we2
@@ -8,70 +8,68 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ma_deploy_yolov8
 last_update:
-  date: 05/15/2025
+  date: 04/02/2024
   author: Jack Mu
-createdAt: '2025-05-27'
-updatedAt: '2025-09-17'
+createdAt: '2024-04-07'
+updatedAt: '2026-08-19'
 url: https://wiki.seeedstudio.com/ja/ma_deploy_yolov8/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
-
-# YOLOv8物体検出モデルのデプロイ
+# YOLOv8 物体検出モデルをデプロイする
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/sscma/static/detection_person_yolov8.png" style={{width:600, height:'auto'}}/></div>
 
-このWikiでは、公式のYOLOv8物体検出モデルをトレーニングし、トレーニング済みモデルをGrove Vision AI (V2)デバイスまたは`XIAO ESP32S3`デバイスにデプロイする方法を紹介します。
+この Wiki では、公式の YOLOv8 物体検出モデルの学習方法と、学習済みモデルを Grove Vision AI (V2) デバイスまたは `XIAO ESP32S3` デバイスにデプロイする方法を紹介します。
 
 ## データセットの準備
 
-データセットには[roboflow](https://universe.roboflow.com/)プラットフォームを使用することをお勧めします。このプラットフォームでは、データセットのアノテーションやデータ拡張戦略を実行でき、複数のデータセット形式のエクスポートをサポートしています。
+データセットには [roboflow](https://universe.roboflow.com/) プラットフォームの使用を推奨します。このプラットフォームではデータセットのアノテーションや各種データ拡張戦略を実行でき、複数のデータセット形式でのエクスポートをサポートしています。
 
-## YOLOv8コマンドラインツールのインストール
+## YOLOv8 コマンドラインツールのインストール
 
-- デフォルトでは、`python`環境と`pip`パッケージ管理ツールがすでにインストールされており、python>=3.8が必要です。
+- 既に `python` 環境と `pip` パッケージ管理ツールがあり、かつ python>=3.8 であることを前提とします。
 
 <Tabs>
 
 <TabItem value="pip installation" label="pip">
 
-`ultralytics`パッケージをインストールするには、`pip install -U ultralytics`を実行します。`ultralytics`パッケージの詳細については、Python Package Index (PyPI)をご覧ください: https://pypi.org/project/ultralytics/
+`ultralytics` パッケージをインストールします。`pip install -U ultralytics` を実行してもかまいません。`ultralytics` パッケージの詳細については Python Package Index (PyPI) の [https://pypi.org/project/ultralytics/](https://pypi.org/project/ultralytics/) を参照してください。
 
 ```bash
-# pipを使用してインストール
-pip install ultralytics
-# 中国のユーザーはミラーアクセラレーションを使用できます
-# pip install ultralytics -i https://pypi.tuna.tsinghua.edu.cn/simple
+# Install using pip
+pip install ultralytics==8.2.8
+# Chinese users can use mirror acceleration
+# pip install ultralytics==8.2.8 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 </TabItem>
 
 <TabItem value="conda installation" label="conda">
 
-`Conda`は`pip`の代替パッケージマネージャーであり、インストールにも使用できます。詳細はAnacondaをご覧ください: [https://anaconda.org/conda-forge/ultralytics](https://anaconda.org/conda-forge/ultralytics)。`Ultralytics`のフィードストックリポジトリは、`conda`パッケージの更新用に [https://github.com/conda-forge/ultralytics-feedstock/](https://github.com/conda-forge/ultralytics-feedstock) にあります。
+`Conda` は `pip` に代わるパッケージマネージャーであり、インストールにも使用できます。詳細は Anaconda の [https://anaconda.org/conda-forge/ultralytics](https://anaconda.org/conda-forge/ultralytics) を参照してください。`conda` パッケージを更新するための `Ultralytics` feedstock リポジトリは [https://github.com/conda-forge/ultralytics-feedstock/](https://github.com/conda-forge/ultralytics-feedstock/) にあります。
 
 ```bash
-# condaを使用してインストール
-conda install -c conda-forge ultralytics
+# Install using conda
+conda install -c conda-forge ultralytics=8.2.8
 ```
 
 </TabItem>
 
 <TabItem value="Git installation" label="Git">
 
-`ultralytics`をクローンします。開発に参加したい場合や、最新のソースコードを試したい場合は、リポジトリをご覧ください。クローン後、ディレクトリに移動し、`-e`パラメータを使用して開発者モードでパッケージをインストールします。
+開発への参加に興味がある場合や、最新のソースコードで実験したい場合は、`ultralytics` をクローンしてください。クローン後、そのディレクトリに移動し、`-e` パラメータを使用して開発者モードでパッケージをインストールします。
 
 ```bash
-# 公式リポジトリをクローン
-git clone https://github.com/ultralytics/ultralytics
+# Clone the official repository
+git clone -b v8.2.8 https://github.com/ultralytics/ultralytics
 
-# クローンしたフォルダに移動
+# Go into the cloned folder
 cd ultralytics
 
-# 開発者モードでインストール
+# Install in developer mode
 pip install -e .
 ```
 
@@ -79,47 +77,48 @@ pip install -e .
 
 </Tabs>
 
-`ヒント:` YOLOv8のコードに詳しくない場合は、pipまたはcondaを使用してインストールすることをお勧めします。
+`Tips:` YOLOv8 のコードに詳しくない場合は、pip または conda を使用してインストールすることを推奨します。
 
-- `yolo`コマンドラインツールが正常にインストールされたかどうかをテストするには、バージョン確認コマンドを使用できます。
+- `yolo` コマンドラインツールが正しくインストールされているかどうかは、バージョン確認コマンドでテストできます。
 
 ```bash
-# バージョン確認
+# version query
 yolo -v
 ```
 
-## トレーニング
+## 学習
 
-- まず、ダウンロードしたデータセットフォルダに移動します。
+- まず、ダウンロードしたデータセットのフォルダに移動します
 
-- 次のコマンドを実行してモデルのトレーニングを開始します。
+- 次のコマンドを実行してモデルの学習を開始します
 
 ```bash
 yolo train detect model=yolov8n.pt data=./data.yaml imgsz=192
 ```
 
-## tfliteモデルへのエクスポート
+## モデルを tflite にエクスポートする
 
-- トレーニング後、モデルは `runs/train/exp*/weights/` フォルダ内に保存されます。モデルの評価指標が要件を満たしていることを確認してください。
-- 以下のコマンドを使用して `tflite` モデルをエクスポートします。
+- 学習後、モデルは `runs/train/exp*/weights/` フォルダ内に保存されます。モデルの評価指標が要件を満たしていることを確認してください。
+- 次のコマンドを使用して `tflite` モデルをエクスポートします
 
 ```bash
 yolo export model=${your model path}  format=tflite imgsz=192 int8
 ```
 
-- 実行後、現在のフォルダ内に `yolov8n_saved_model` フォルダが生成され、その中に `yolov8n_full_integer_quant.tflite` モデルファイルが含まれています。このモデルファイルは `Grove Vision AI(V2)` または `XIAO ESP32S3` デバイスにデプロイすることができます。
+- その後、カレントフォルダの下に `yolov8n_saved_model` フォルダが生成され、その中に `yolov8n_full_integer_quant.tflite` モデルファイルが含まれます。このモデルファイルは `Grove Vision AI(V2)` または `XIAO ESP32S3` デバイスにデプロイできます。
 
 ### モデルグラフの最適化
 
-- Grove Vision AI (V2) は vela によって最適化されたモデルをサポートしており、モデル推論を高速化することができます。まず、以下のコマンドを実行して vela コマンドラインツールをインストールします（`XIAO ESP32S3` デバイスはまだサポートされていません）。
+- Grove Vision AI (V2) は vela で最適化されたモデルをサポートしており、モデル推論を高速化することもできます。まず、次のコマンドを実行して vela コマンドラインツールをインストールします（`XIAO ESP32S3` デバイスはまだ非対応です）
 
 ```bash
+
 pip3 install ethos-u-vela
 ```
 
-- 次に、[こちら](https://files.seeedstudio.com/sscma/configs/vela_config.ini)から `vela` 関連の設定ファイルをダウンロードするか、以下の内容をファイルにコピーしてください。このファイルは `vela_config.ini` という名前にすることができます。
+- 次に、[download](https://files.seeedstudio.com/sscma/configs/vela_config.ini) から `vela` 関連の設定ファイルをダウンロードするか、以下の内容をファイルにコピーして `vela_config.ini` という名前で保存します
 
-```ini
+```bash
 ; file: my_vela_cfg.ini ; ----------------------------------------------------------------------------- 
 ; Vela configuration file ; ----------------------------------------------------------------------------- 
 ; System Configuration 
@@ -151,7 +150,7 @@ arena_mem_area=Axi0
 cache_mem_area=Axi0
 ```
 
-- 最後に、以下のコマンドを使用してグラフを最適化します。
+- 最後に、次のコマンドを使用してグラフを最適化します
 
 ```bash
 vela --accelerator-config ethos-u55-64 \ 
@@ -162,12 +161,12 @@ vela --accelerator-config ethos-u55-64 \
     ${The path of the tflite model that needs to be optimized}
 ```
 
-実行後、`--output-dir` で指定したパスにグラフが最適化された tflite モデルが生成されます。
+実行後、`--output-dir` で指定したパスにグラフ最適化済みの tflite モデルが生成されます。
 
 ## デプロイ
 
-- デプロイする必要があるモデルファイルは、上記でエクスポートした `tflite` ファイルです。以下のチュートリアルに従って、モデルファイルをターゲットデバイスに書き込むことができます。
+- デプロイする必要があるモデルファイルは、上でエクスポートした `tflite` ファイルです。以下のチュートリアルに従って、モデルファイルをターゲットデバイスに書き込むことができます。
 
-- トレーニング済みの tflite モデルをデバイスに書き込むには、弊社のウェブツールを使用することを強く推奨します。詳細な操作は [デプロイメントチュートリアル](https://wiki.seeedstudio.com/ja/ModelAssistant_Deploy_Overview/) に記載されています。
+- 学習済み tflite モデルをデバイスに書き込むには、弊社の Web ツールを使用することを強く推奨します。詳細な操作手順は [Deployment Tutorial](https://wiki.seeedstudio.com/ja/ModelAssistant_Deploy_Overview/) に記載されています。
 
-`注意:` `ESP32S3` デバイスは `vela` グラフ最適化後のモデルデプロイをサポートしていないため、`XIAO ESP32S3` デバイスにモデルをデプロイする場合は、`tflite` モデルのグラフ最適化を行う必要はありません。 
+`Note:` `ESP32S3` デバイスは `vela` グラフ最適化後のモデルデプロイをサポートしていないため、モデルを `XIAO ESP32S3` デバイスにデプロイしたい場合は `tflite` モデルのグラフ最適化を行う必要はありません。
