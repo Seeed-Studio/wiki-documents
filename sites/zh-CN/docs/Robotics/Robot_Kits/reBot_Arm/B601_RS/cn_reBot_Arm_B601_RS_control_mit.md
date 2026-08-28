@@ -24,7 +24,21 @@ updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_mit_control/
 ---
 
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+
 # reBot Arm B601-RS MIT 位置控制入门指南
+
+<RebotRsDocNav />
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="https://github.com/LAN-GER/rebot_control/blob/main/LICENSE">
@@ -38,8 +52,6 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_mit_control/
 <p align="center">
   <strong>6+1 DOF · RobStride · CAN @ 1 Mbps · MIT 位置控制 · 温度保护 · 安全回零 · 开源 Python 接口</strong>
 </p>
-
-![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png)
 
 [MotorBridge](https://github.com/motorbridge/motorbridge) 是面向 RobStride / Damiao 等电机的 Python CAN 控制 SDK。[rebot_control](https://github.com/LAN-GER/rebot_control) 在此之上封装了面向 **reBot Arm B601-RS** 的 MIT 位置控制接口：YAML 配置、独立关节限速、MOS 温度三级保护，以及 Esc / Ctrl+C / `stop()` 触发的平滑回零。
 
