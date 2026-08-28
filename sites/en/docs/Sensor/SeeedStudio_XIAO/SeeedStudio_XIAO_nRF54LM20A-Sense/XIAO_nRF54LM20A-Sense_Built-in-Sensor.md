@@ -747,7 +747,7 @@ This section demonstrates the microphone function through a voice example. The s
 
 - Press the BOOT button, the RGB-G LED will stay on and start recording; press it again to stop recording (maximum 10 seconds).
 - After recording, the audio file will be sent to the host computer via Bluetooth. The RGB-G LED flashes during transmission.
-- Run the receiving script on Windows to save the audio file to the desktop.
+- Run the receiving script on Windows to save the audio file to the `./recordings` directory.
 - The RGB-G LED turns off after the transmission is completed.
 
 1. Copy the program from <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> into `main.c`.
@@ -796,7 +796,7 @@ This section demonstrates the microphone function through a voice example. The s
 };
 ```
 
-2. Modify the `prj.conf` file to enable configurations for Bluetooth and microphone, and set the Bluetooth device name to **XIAO MIC**.
+2. Modify the `prj.conf` file to enable configurations for Bluetooth and microphone, and set the Bluetooth device name to **XIAO-MIC**.
 
 ```prj
 # ===== Audio / DMIC =====
