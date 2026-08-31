@@ -211,17 +211,19 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="USB" label="USB">
 
-The USB firmware is designed for use with host operating systems such as **Windows, Linux, and macOS** when communicating through the USB hardware interface.
+### USB firmware
 
-Two firmware variants are available: **respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin**, which provides **2-channel** audio, and **respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin**, which provides **6-channel** audio. Both firmware versions operate at a **16 kHz** sampling rate with **32-bit** depth.
+The USB firmware is intended for host systems such as Windows, Linux, and macOS. The official USB firmware changelog marks v2.1.0 as the current release, and the current firmware directory contains these v2.1.0 images:
 
-You can explore these firmware files in [this link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
+| Firmware image | Repository-labeled USB profile |
+| --- | --- |
+| `respeaker_xvf3800_usb_dfu_firmware_v2.1.0.bin` | Standard v2.1.0 USB image. Its filename does not state a sample rate or channel count. |
+| `respeaker_xvf3800_usb_dfu_firmware_v2.1.0_16k6ch.bin` | 16 kHz, 6-channel USB image. |
+| `respeaker_xvf3800_usb_dfu_firmware_v2.1.0_48k2ch.bin` | 48 kHz, 2-channel USB image. |
 
-| Firmware | Channels | Notes |
-| --------- | ---------- | ------- |
-| respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Processed 2-channel output <br /> Channel 0: Conference <br /> Channel 1: ASR |
-| respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Channel 0: Processed audio (Conference) <br /> Channel 1: Processed audio (ASR) <br /> Channel 2: Mic 0 raw data <br /> Channel 3: Mic 1 raw data <br /> Channel 4: Mic 2 raw data <br /> Channel 5: Mic 3 raw data |
+Choose the image whose labeled profile matches your application. For 48 kHz, two-channel USB capture, use the exact `_48k2ch` image; do not infer 48 kHz support from the generic v2.1.0 filename.
 
+The firmware directory and changelog do not publish a USB Audio Class descriptor dump for these binaries. After flashing, verify the formats reported by the host before configuring the recording application. Do not state a USB sample width or any additional sample-rate/channel combinations without device-descriptor evidence.
 </TabItem>
 
  <TabItem value="I2S" label="I2S">
