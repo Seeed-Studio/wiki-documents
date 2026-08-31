@@ -1,0 +1,529 @@
+#!/usr/bin/env node
+/**
+ * ReSpeaker FAQ publication pipeline (PRD Phases 2-4).
+ *
+ * Renders the approved curated manifest into:
+ *   - product FAQ aggregation pages under sites/en/docs/FAQ/respeaker/
+ *   - the public search index at src/data/respeaker_faq_index.json
+ *
+ * Behavior:
+ *   - Deterministic/idempotent: identical manifest => byte-identical output.
+ *   - Dry-run by default: prints a reconcile report, writes nothing.
+ *   - `--apply` writes only "create-needed"/"update-needed" files and never
+ *     overwrites a file that was manually edited after the last publish
+ *     (conflict). Conflicts are reported and the affected item is left alone.
+ *   - Computes source hash (manifest) and wiki hash (per target file) for the
+ *     reconcile report.
+ *
+ * Usage:
+ *   node scripts/respeaker-faq/pipeline.mjs            # dry-run report
+ *   node scripts/respeaker-faq/pipeline.mjs --apply    # write non-conflicted files
+ *   node scripts/respeaker-faq/pipeline.mjs --validate # manifest-only validation
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+export const REPO_ROOT = path.resolve(__dirname, '..', '..');
+
+const MANIFEST_PATH = path.join(__dirname, 'manifests', 'approved_faq_manifest.json');
+const INDEX_TARGET = path.join(REPO_ROOT, 'src', 'data', 'respeaker_faq_index.json');
+const FAQ_DOC_DIR = path.join(REPO_ROOT, 'sites', 'en', 'docs', 'FAQ', 'respeaker');
+const STATE_PATH = path.join(__dirname, 'state', 'reconcile-state.json');
+
+export const DOMAINS = [
+  { key: 'documentation_usage', label: 'Documentation & Usage', anchor: 'documentation-and-usage' },
+  { key: 'connectivity', label: 'Connectivity & Detection', anchor: 'connectivity-and-detection' },
+  { key: 'firmware_software', label: 'Firmware & Software', anchor: 'firmware-and-software' },
+  { key: 'audio', label: 'Audio Issues', anchor: 'audio-issues' },
+  { key: 'algorithm_tuning', label: 'Algorithm Tuning', anchor: 'algorithm-tuning' },
+  { key: 'hardware', label: 'Hardware Issues', anchor: 'hardware-issues' },
+  { key: 'product_business', label: 'Product & Business', anchor: 'product-and-business' },
+];
+const DOMAIN_BY_KEY = Object.fromEntries(DOMAINS.map((d) => [d.key, d]));
+
+export const PRODUCT_ORDER = ['xvf3800_usb_4_mic', 'flex_xvf3800', 'respeaker_lite'];
+
+export const PRODUCTS = {
+  xvf3800_usb_4_mic: {
+    key: 'xvf3800_usb_4_mic',
+    label: 'XVF3800 USB 4-Mic Array',
+    file: 'xvf3800_usb_4_mic_faq.md',
+    title: 'ReSpeaker XVF3800 USB 4-Mic Array FAQ',
+    description:
+      'Frequently asked questions about setup, USB connectivity, firmware, audio and tuning for the ReSpeaker XVF3800 USB 4-Mic Array.',
+    keywords: ['ReSpeaker XVF3800 FAQ', 'XVF3800 troubleshooting', 'XVF3800 firmware'],
+  },
+  flex_xvf3800: {
+    key: 'flex_xvf3800',
+    label: 'Flex XVF3800',
+    file: 'flex_xvf3800_faq.md',
+    title: 'Flex XVF3800 FAQ',
+    description:
+      'Frequently asked questions about USB detection, host control and firmware for the ReSpeaker Flex XVF3800.',
+    keywords: ['ReSpeaker Flex FAQ', 'Flex XVF3800 troubleshooting', 'Flex XVF3800 USB'],
+  },
+  respeaker_lite: {
+    key: 'respeaker_lite',
+    label: 'ReSpeaker Lite',
+    file: 'respeaker_lite_faq.md',
+    title: 'ReSpeaker Lite FAQ',
+    description:
+      'Frequently asked questions about USB audio, ESPHome and operation for the ReSpeaker Lite.',
+    keywords: ['ReSpeaker Lite FAQ', 'ReSpeaker Lite troubleshooting', 'ReSpeaker Lite USB audio', 'ESPHome'],
+  },
+};
+
+export const DOMAIN_FILTER_ORDER = [
+  'connectivity',
+  'audio',
+  'algorithm_tuning',
+  'firmware_software',
+  'hardware',
+  'documentation_usage',
+  'product_business',
+];
+
+// Short display labels used by the FAQ Center product/domain filters.
+export const PRODUCT_LABELS = {
+  xvf3800_usb_4_mic: 'XVF3800',
+  flex_xvf3800: 'Flex',
+  respeaker_lite: 'Lite',
+};
+
+export const DOMAIN_LABELS = {
+  documentation_usage: 'Documentation',
+  connectivity: 'Connectivity',
+  firmware_software: 'Firmware',
+  audio: 'Audio',
+  algorithm_tuning: 'Tuning',
+  hardware: 'Hardware',
+  product_business: 'Business',
+};
+
+/* ------------------------------------------------------------------ */
+/* Manifest loading & validation                                        */
+/* ------------------------------------------------------------------ */
+
+export function loadManifest() {
+  return JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
+}
+
+export function validateManifest(manifest) {
+  const errors = [];
+  const seenIds = new Set();
+  const seenSlugAnchors = new Set();
+  const blocked = [];
+  for (const entry of manifest.entries) {
+    const id = entry.publicFaqId;
+    if (!id) errors.push('entry without publicFaqId');
+    if (seenIds.has(id)) errors.push(`duplicate publicFaqId: ${id}`);
+    seenIds.add(id);
+
+    if (entry.publicationDecision === 'BLOCK') {
+      blocked.push(id);
+      continue;
+    }
+    if (entry.publicationDecision !== 'PUBLISH') {
+      errors.push(`${id}: unexpected publicationDecision ${entry.publicationDecision}`);
+    }
+    for (const field of [
+      'productKey',
+      'primaryDomain',
+      'questionEn',
+      'directAnswerEn',
+      'appliesTo',
+      'lastVerifiedAt',
+      'wikiSlug',
+      'wikiAnchor',
+    ]) {
+      if (!entry[field]) errors.push(`${id}: missing ${field}`);
+    }
+    if (!PRODUCTS[entry.productKey]) errors.push(`${id}: unknown productKey ${entry.productKey}`);
+    if (!DOMAIN_BY_KEY[entry.primaryDomain]) errors.push(`${id}: unknown primaryDomain ${entry.primaryDomain}`);
+    for (const d of entry.secondaryDomains || []) {
+      if (!DOMAIN_BY_KEY[d]) errors.push(`${id}: unknown secondaryDomain ${d}`);
+    }
+    if (typeof entry.wikiSlug !== 'string' || !entry.wikiSlug.startsWith('/')) {
+      errors.push(`${id}: wikiSlug must start with "/"`);
+    }
+    if (typeof entry.wikiAnchor !== 'string' || !/^[a-z0-9][a-z0-9-]*$/.test(entry.wikiAnchor)) {
+      errors.push(`${id}: wikiAnchor must be a stable lowercase slug`);
+    }
+    const sa = `${entry.wikiSlug}#${entry.wikiAnchor}`;
+    if (seenSlugAnchors.has(sa)) errors.push(`duplicate slug+anchor: ${sa}`);
+    seenSlugAnchors.add(sa);
+
+    for (const ref of entry.officialReferences || []) {
+      if (!ref.title || !/^https:\/\//.test(ref.url || '')) {
+        errors.push(`${id}: officialReference must be an https URL with a title`);
+      }
+    }
+  }
+  if (blocked.length) errors.push(`BLOCK entries must never be published: ${blocked.join(', ')}`);
+  return { ok: errors.length === 0, errors, blocked };
+}
+
+/* ------------------------------------------------------------------ */
+/* Rendering                                                           */
+/* ------------------------------------------------------------------ */
+
+function bulletList(items) {
+  return items.map((s) => `- ${s}`).join('\n');
+}
+
+function numberedList(items) {
+  return items.map((s, i) => `${i + 1}. ${s}`).join('\n');
+}
+
+function renderFaqBlock(entry) {
+  const lines = [];
+  lines.push(`### ${entry.questionEn} {#${entry.wikiAnchor}}`);
+  lines.push('');
+  lines.push(`**Applies to:** ${entry.appliesTo}`);
+  lines.push('');
+  lines.push(`**Last verified:** ${entry.lastVerifiedAt}`);
+  lines.push('');
+  lines.push(entry.directAnswerEn);
+  lines.push('');
+  if (entry.prerequisites && entry.prerequisites.length) {
+    lines.push('**Prerequisites:**');
+    lines.push('');
+    lines.push(bulletList(entry.prerequisites));
+    lines.push('');
+  }
+  if (entry.steps && entry.steps.length) {
+    lines.push(numberedList(entry.steps));
+    lines.push('');
+  }
+  if (entry.successCriteria && entry.successCriteria.length) {
+    lines.push('**Success criteria:**');
+    lines.push('');
+    lines.push(bulletList(entry.successCriteria));
+    lines.push('');
+  }
+  if (entry.notes && entry.notes.length) {
+    lines.push('**Notes:**');
+    lines.push('');
+    lines.push(bulletList(entry.notes));
+    lines.push('');
+  }
+  if (entry.officialReferences && entry.officialReferences.length) {
+    lines.push('**References:**');
+    lines.push('');
+    for (const ref of entry.officialReferences) {
+      lines.push(`- [${ref.title}](${ref.url})`);
+    }
+    lines.push('');
+  }
+  return lines.join('\n');
+}
+
+export function renderProductPage(productKey, entries) {
+  const product = PRODUCTS[productKey];
+  const slug = entries[0].wikiSlug;
+  for (const e of entries) {
+    if (e.wikiSlug !== slug) {
+      throw new Error(`${e.publicFaqId}: multiple slugs for product ${productKey}`);
+    }
+  }
+  const byDomain = new Map();
+  for (const d of DOMAINS) byDomain.set(d.key, []);
+  for (const e of entries) byDomain.get(e.primaryDomain).push(e);
+
+  const lines = [];
+  lines.push('---');
+  lines.push(`title: ${product.title}`);
+  lines.push(`description: ${product.description}`);
+  lines.push(`slug: ${slug}`);
+  lines.push('keywords:');
+  for (const kw of product.keywords) lines.push(`  - ${kw}`);
+  lines.push('---');
+  lines.push('');
+  lines.push(`# ${product.title}`);
+  lines.push('');
+  lines.push(
+    `This page contains verified answers for the ${product.label}. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.`
+  );
+  lines.push('');
+  lines.push('## Before you begin');
+  lines.push('');
+  lines.push('- Confirm the exact product variant and the firmware mode (USB or I2S) the device is running.');
+  lines.push('- Check the current firmware version before applying version-specific steps.');
+  lines.push(`- Answers on this page were last verified on ${entries[0].lastVerifiedAt}; re-check the linked official sources if you are reading this later.`);
+  lines.push('');
+  for (const d of DOMAINS) {
+    const faqs = byDomain.get(d.key);
+    if (!faqs.length) continue;
+    lines.push(`## ${d.label} {#${d.anchor}}`);
+    lines.push('');
+    for (const e of faqs) {
+      lines.push(renderFaqBlock(e));
+    }
+  }
+  const content = lines.join('\n').replace(/\n+$/, '');
+  return `${content}\n`;
+}
+
+export function renderSearchIndex(manifest) {
+  const products = PRODUCT_ORDER.map((key) => ({ key, label: PRODUCT_LABELS[key] }));
+  const domains = DOMAIN_FILTER_ORDER.map((key) => ({ key, label: DOMAIN_LABELS[key] }));
+  const items = [];
+  for (const entry of manifest.entries) {
+    const product = PRODUCTS[entry.productKey];
+    const summary = truncate(entry.directAnswerEn, 240);
+    items.push({
+      id: entry.publicFaqId,
+      question: entry.questionEn,
+      summary,
+      product: entry.productKey,
+      productLabel: product.label,
+      primaryDomain: entry.primaryDomain,
+      domains: [entry.primaryDomain].concat(entry.secondaryDomains || []),
+      skus: entry.skus || [],
+      keywords: entry.keywords || [],
+      lastVerifiedAt: entry.lastVerifiedAt,
+      url: `${entry.wikiSlug}#${entry.wikiAnchor}`,
+    });
+  }
+  return { schemaVersion: '1.0', artifactType: 'respeaker_faq_search_index', products, domains, items };
+}
+
+function truncate(text, max) {
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).trimEnd()}…`;
+}
+
+/* ------------------------------------------------------------------ */
+/* Target planning & reconcile                                         */
+/* ------------------------------------------------------------------ */
+
+export function planTargets(manifest) {
+  const targets = [];
+  for (const p of PRODUCT_ORDER) {
+    const entries = manifest.entries.filter((e) => e.productKey === p);
+    const product = PRODUCTS[p];
+    if (!entries.length) continue;
+    targets.push({
+      rel: `sites/en/docs/FAQ/respeaker/${product.file}`,
+      abs: path.join(FAQ_DOC_DIR, product.file),
+      content: renderProductPage(p, entries),
+    });
+  }
+  targets.push({
+    rel: 'src/data/respeaker_faq_index.json',
+    abs: INDEX_TARGET,
+    content: `${JSON.stringify(renderSearchIndex(manifest), null, 2)}\n`,
+  });
+  return targets;
+}
+
+function sha256(buf) {
+  return crypto.createHash('sha256').update(buf).digest('hex');
+}
+
+function gitHeadContent(rel) {
+  try {
+    return execFileSync('git', ['show', `HEAD:${rel}`], { cwd: REPO_ROOT, encoding: 'utf8', stdio: ['ignore','pipe','ignore'] });
+  } catch {
+    return null;
+  }
+}
+
+
+/**
+ * Pure classification of one target file's reconcile state. Exported for tests.
+ *
+ * @param {object} args
+ * @param {string} args.rendered - freshly rendered content
+ * @param {string|null} args.onDisk - current file content (null if absent)
+ * @param {string|null} args.baselineHash - sha256 of the committed HEAD version
+ * @param {string|undefined} args.stateHash - sha256 of the last pipeline output
+ * @returns {{ status: 'up-to-date'|'create-needed'|'update-needed'|'conflict', reason: string }}
+ */
+export function classifyTarget({ rendered, onDisk, baselineHash, stateHash }) {
+  const onDiskHash = onDisk === null ? null : sha256(onDisk);
+  if (onDisk === rendered) return { status: 'up-to-date', reason: '' };
+  if (onDisk === null) return { status: 'create-needed', reason: '' };
+  if (baselineHash !== null && onDiskHash === baselineHash) {
+    return { status: 'update-needed', reason: 'source changed since last publish' };
+  }
+  if (stateHash !== undefined && onDiskHash === stateHash) {
+    return { status: 'update-needed', reason: 'renderer changed since last apply' };
+  }
+  return { status: 'conflict', reason: 'manual edit detected after last publish' };
+}
+
+export function computeReconcile(manifest) {
+  const sourceHash = sha256(fs.readFileSync(MANIFEST_PATH));
+  let state = null;
+  if (fs.existsSync(STATE_PATH)) {
+    try {
+      state = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8'));
+    } catch {
+      state = null;
+    }
+  }
+  const targets = planTargets(manifest);
+  const rows = [];
+  let conflicts = 0;
+  let drift = 0;
+  for (const t of targets) {
+    const onDisk = fs.existsSync(t.abs) ? fs.readFileSync(t.abs, 'utf8') : null;
+    const rendered = t.content;
+    const baseline = gitHeadContent(t.rel);
+    const onDiskHash = onDisk === null ? null : sha256(onDisk);
+    const renderedHash = sha256(rendered);
+    const baselineHash = baseline === null ? null : sha256(baseline);
+    const stateHash = state && state.files ? state.files[t.rel] : undefined;
+
+    const decision = classifyTarget({ rendered, onDisk, baselineHash, stateHash });
+    const status = decision.status;
+    const reason = decision.reason;
+    if (status === 'update-needed' || status === 'create-needed') {
+      drift += 1;
+    } else if (status === 'conflict') {
+      conflicts += 1;
+    }
+
+    rows.push({
+      rel: t.rel,
+      status,
+      reason,
+      onDiskHash,
+      renderedHash,
+      baselineHash,
+      stateHash: stateHash || null,
+    });
+  }
+
+  const stateSource = state && state.sourceHash ? state.sourceHash : null;
+  const sourceChanged = stateSource !== null && stateSource !== sourceHash;
+  return {
+    sourceHash,
+    stateSourceHash: stateSource,
+    sourceChanged,
+    rows,
+    conflicts,
+    drift,
+    upToDate: conflicts === 0 && drift === 0,
+  };
+}
+
+export function applyTargets(reconcile) {
+  const targets = planTargets(loadManifest());
+  const byRel = new Map(targets.map((t) => [t.rel, t]));
+  const written = [];
+  const skipped = [];
+  // Preserve every previously recorded hash so skipped/conflicted files keep
+  // their last-applied baseline and cannot be mistaken for manual edits.
+  let prevState = null;
+  if (fs.existsSync(STATE_PATH)) {
+    try {
+      prevState = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8'));
+    } catch {
+      prevState = null;
+    }
+  }
+  /** @type {Record<string,string>} */
+  const stateFiles = prevState && prevState.files ? { ...prevState.files } : {};
+  for (const row of reconcile.rows) {
+    const t = byRel.get(row.rel);
+    if (row.status === 'up-to-date') {
+      stateFiles[row.rel] = row.renderedHash;
+      continue;
+    }
+    if (row.status === 'conflict') {
+      skipped.push({ rel: row.rel, reason: row.reason });
+      continue;
+    }
+    fs.mkdirSync(path.dirname(t.abs), { recursive: true });
+    fs.writeFileSync(t.abs, t.content);
+    written.push(row.rel);
+    stateFiles[row.rel] = row.renderedHash;
+  }
+  if (written.length || skipped.length) {
+    fs.mkdirSync(path.dirname(STATE_PATH), { recursive: true });
+    const state = {
+      schemaVersion: '1.0',
+      sourceHash: reconcile.sourceHash,
+      publishedAt: new Date().toISOString(),
+      files: stateFiles,
+    };
+    fs.writeFileSync(STATE_PATH, `${JSON.stringify(state, null, 2)}\n`);
+  }
+  return { written, skipped };
+}
+
+/* ------------------------------------------------------------------ */
+/* Reporting & CLI                                                     */
+/* ------------------------------------------------------------------ */
+
+function renderReport(reconcile) {
+  const lines = [];
+  lines.push('# ReSpeaker FAQ pipeline reconcile report');
+  lines.push('');
+  lines.push(`source hash:   ${reconcile.sourceHash}`);
+  lines.push(`state source:  ${reconcile.stateSourceHash || '(none)'}`);
+  lines.push(`source changed since last apply: ${reconcile.sourceChanged ? 'yes' : 'no'}`);
+  lines.push('');
+  lines.push('| target | status | reason |');
+  lines.push('| --- | --- | --- |');
+  for (const r of reconcile.rows) {
+    lines.push(`| ${r.rel} | ${r.status} | ${r.reason || '—'} |`);
+  }
+  lines.push('');
+  lines.push(`conflicts: ${reconcile.conflicts}`);
+  lines.push(`drift (needs apply): ${reconcile.drift}`);
+  return lines.join('\n') + '\n';
+}
+
+export function run({ apply = false, validateOnly = false } = {}) {
+  const manifest = loadManifest();
+  const validation = validateManifest(manifest);
+  if (!validation.ok) {
+    console.error('Manifest validation FAILED:');
+    for (const e of validation.errors) console.error(`  - ${e}`);
+    process.exitCode = 2;
+    return { validation, reconcile: null, applied: null };
+  }
+  if (validateOnly) {
+    console.log(`Manifest validation PASS (${manifest.entries.length} entries, all PUBLISH, validated).`);
+    return { validation, reconcile: null, applied: null };
+  }
+  const reconcile = computeReconcile(manifest);
+  console.log(renderReport(reconcile));
+  if (apply) {
+    const { written, skipped } = applyTargets(reconcile);
+    console.log('');
+    if (written.length) {
+      console.log('Applied:');
+      for (const w of written) console.log(`  + ${w}`);
+    } else {
+      console.log('Applied: (nothing to write)');
+    }
+    if (skipped.length) {
+      console.log('Conflicts skipped (not overwritten):');
+      for (const s of skipped) console.log(`  ! ${s.rel}: ${s.reason}`);
+    }
+  } else {
+    console.log(reconcile.upToDate ? 'Dry-run: output is up to date.' : 'Dry-run: drift or conflict detected.');
+  }
+  return { validation, reconcile, applied: apply };
+}
+
+function main() {
+  const args = process.argv.slice(2);
+  const apply = args.includes('--apply');
+  const validateOnly = args.includes('--validate');
+  run({ apply, validateOnly });
+}
+
+const isMain =
+  process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href;
+if (isMain) {
+  main();
+}

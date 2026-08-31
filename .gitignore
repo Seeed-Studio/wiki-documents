@@ -9,6 +9,7 @@
 /tmp
 
 # Generated files
+/scripts/respeaker-faq/state
 .docusaurus
 .cache-loader
 /sites/en/src

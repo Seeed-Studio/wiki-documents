@@ -1,0 +1,209 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "respeaker_faq_search_index",
+  "products": [
+    {
+      "key": "xvf3800_usb_4_mic",
+      "label": "XVF3800"
+    },
+    {
+      "key": "flex_xvf3800",
+      "label": "Flex"
+    },
+    {
+      "key": "respeaker_lite",
+      "label": "Lite"
+    }
+  ],
+  "domains": [
+    {
+      "key": "connectivity",
+      "label": "Connectivity"
+    },
+    {
+      "key": "audio",
+      "label": "Audio"
+    },
+    {
+      "key": "algorithm_tuning",
+      "label": "Tuning"
+    },
+    {
+      "key": "firmware_software",
+      "label": "Firmware"
+    },
+    {
+      "key": "hardware",
+      "label": "Hardware"
+    },
+    {
+      "key": "documentation_usage",
+      "label": "Documentation"
+    },
+    {
+      "key": "product_business",
+      "label": "Business"
+    }
+  ],
+  "items": [
+    {
+      "id": "xvf3800_usb_not_detected_pi5_linux",
+      "question": "Why is my XVF3800 not detected over USB on Raspberry Pi 5 or Linux?",
+      "summary": "First verify the data cable, the XMOS USB-C port, and host enumeration. If the device is running I2S firmware or its normal firmware no longer responds, enter Safe Mode and flash an official USB firmware image through USB DFU.",
+      "product": "xvf3800_usb_4_mic",
+      "productLabel": "XVF3800 USB 4-Mic Array",
+      "primaryDomain": "connectivity",
+      "domains": [
+        "connectivity",
+        "firmware_software"
+      ],
+      "skus": [],
+      "keywords": [
+        "Raspberry Pi 5",
+        "Linux",
+        "USB not detected",
+        "lsusb",
+        "arecord",
+        "Safe Mode",
+        "DFU"
+      ],
+      "lastVerifiedAt": "2026-08-31",
+      "url": "/respeaker_xvf3800_faq#usb-not-detected-pi5-linux"
+    },
+    {
+      "id": "xvf3800_recover_wrong_firmware",
+      "question": "How do I recover an XVF3800 after flashing the wrong firmware?",
+      "summary": "Use the factory Safe Mode, then reflash the correct official image through the update method supported by that mode. For recovery back to USB audio, use USB DFU from Safe Mode.",
+      "product": "xvf3800_usb_4_mic",
+      "productLabel": "XVF3800 USB 4-Mic Array",
+      "primaryDomain": "firmware_software",
+      "domains": [
+        "firmware_software",
+        "connectivity"
+      ],
+      "skus": [],
+      "keywords": [
+        "wrong firmware",
+        "bricked",
+        "Safe Mode",
+        "USB DFU",
+        "dfu-util",
+        "recovery"
+      ],
+      "lastVerifiedAt": "2026-08-31",
+      "url": "/respeaker_xvf3800_faq#recover-wrong-firmware"
+    },
+    {
+      "id": "xvf3800_48khz_usb_support",
+      "question": "Does the XVF3800 USB 4-Mic Array support 48 kHz over USB?",
+      "summary": "Yes. Use the dedicated official `respeaker_xvf3800_usb_dfu_firmware_v2.1.0_48k2ch.bin` image. Its filename identifies the intended 48 kHz, two-channel USB profile; do not infer 48 kHz support from the generic v2.1.0 image.",
+      "product": "xvf3800_usb_4_mic",
+      "productLabel": "XVF3800 USB 4-Mic Array",
+      "primaryDomain": "product_business",
+      "domains": [
+        "product_business",
+        "firmware_software"
+      ],
+      "skus": [],
+      "keywords": [
+        "48 kHz",
+        "USB audio",
+        "two channel",
+        "sample rate",
+        "v2.1.0_48k2ch"
+      ],
+      "lastVerifiedAt": "2026-08-31",
+      "url": "/respeaker_xvf3800_faq#usb-48-khz-support"
+    },
+    {
+      "id": "xvf3800_led_effect_5_range",
+      "question": "Why does `LED_EFFECT 5` return an out-of-range error on XVF3800?",
+      "summary": "Ring mode (`LED_EFFECT = 5`) and `LED_RING_COLOR` require USB firmware v2.0.7 or later plus a current host-control command map. Older firmware or an older tool only recognizes effects 0 through 4.",
+      "product": "xvf3800_usb_4_mic",
+      "productLabel": "XVF3800 USB 4-Mic Array",
+      "primaryDomain": "firmware_software",
+      "domains": [
+        "firmware_software"
+      ],
+      "skus": [],
+      "keywords": [
+        "LED_EFFECT",
+        "LED_RING_COLOR",
+        "out of range",
+        "ring mode",
+        "v2.0.7"
+      ],
+      "lastVerifiedAt": "2026-08-31",
+      "url": "/respeaker_xvf3800_faq#led-effect-5-out-of-range"
+    },
+    {
+      "id": "lite_esphome_compile_failure",
+      "question": "How do I troubleshoot an ESPHome compile failure for ReSpeaker Lite with XIAO ESP32S3?",
+      "summary": "Start from the current configuration in the community-maintained repository linked by the Seeed Wiki and use an ESPHome version that satisfies its current `min_version`. The final `main.cpp.o Error 1` line only reports that a build target…",
+      "product": "respeaker_lite",
+      "productLabel": "ReSpeaker Lite",
+      "primaryDomain": "firmware_software",
+      "domains": [
+        "firmware_software"
+      ],
+      "skus": [],
+      "keywords": [
+        "ESPHome",
+        "compile failure",
+        "main.cpp.o",
+        "Error 1",
+        "min_version",
+        "XIAO ESP32S3"
+      ],
+      "lastVerifiedAt": "2026-08-31",
+      "url": "/respeaker_lite_faq#esphome-compile-failure"
+    },
+    {
+      "id": "lite_windows_usb_detection",
+      "question": "Why is ReSpeaker Lite not appearing as a USB audio device on Windows?",
+      "summary": "Connect Windows to the ReSpeaker Lite XMOS USB-C port and make sure the XMOS is running USB firmware. I2S firmware is for communication with XIAO ESP32S3 and is not expected to enumerate as the normal ReSpeaker Lite USB sound device.",
+      "product": "respeaker_lite",
+      "productLabel": "ReSpeaker Lite",
+      "primaryDomain": "connectivity",
+      "domains": [
+        "connectivity",
+        "firmware_software"
+      ],
+      "skus": [],
+      "keywords": [
+        "Windows",
+        "USB audio",
+        "yellow exclamation",
+        "Device Manager",
+        "USB firmware",
+        "I2S firmware"
+      ],
+      "lastVerifiedAt": "2026-08-31",
+      "url": "/respeaker_lite_faq#windows-usb-audio-detection"
+    },
+    {
+      "id": "flex_xvf_host_no_device_found",
+      "question": "Why does the ReSpeaker Flex control script report `No device found`?",
+      "summary": "The current official Flex Python script supports Flex USB control. `No device found` means its USB scan returned no device matching vendor ID `0x2886` and any optional PID filter; it does not mean that Flex is unsupported. Check the XMOS U…",
+      "product": "flex_xvf3800",
+      "productLabel": "Flex XVF3800",
+      "primaryDomain": "connectivity",
+      "domains": [
+        "connectivity",
+        "firmware_software"
+      ],
+      "skus": [],
+      "keywords": [
+        "ReSpeaker Flex",
+        "No device found",
+        "xvf_host",
+        "USB firmware",
+        "Linear-4",
+        "Circular-4",
+        "Safe Mode"
+      ],
+      "lastVerifiedAt": "2026-08-31",
+      "url": "/respeaker_flex_faq#xvf-host-no-device-found"
+    }
+  ]
+}
