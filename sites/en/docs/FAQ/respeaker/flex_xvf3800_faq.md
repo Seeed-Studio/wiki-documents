@@ -18,6 +18,77 @@ This page contains verified answers for the Flex XVF3800. Each answer states the
 - Check the current firmware version before applying version-specific steps.
 - Answers on this page were last verified on 2026-08-31; re-check the linked official sources if you are reading this later.
 
+## Documentation & Usage {#documentation-and-usage}
+
+### Where can I download ReSpeaker Flex 2D and 3D mechanical files? {#mechanical-cad-files}
+
+**Applies to:** Mechanical integration of a ReSpeaker Flex XVF3800 core board with a Linear-4 or Circular-4 microphone array
+
+**Last verified:** 2026-09-01
+
+Use the official Flex Resources section. It publishes DXF and STEP files for the Circular-4 array, Linear-4 array, and core board; select the geometry-specific files for the hardware being integrated.
+
+**Prerequisites:**
+
+- The exact microphone geometry used by the design
+- DXF- and STEP-compatible CAD software
+- Physical hardware for revision and fit checks
+
+1. Open the Resources section of the current Flex getting-started page.
+2. Download the matching Linear-4 or Circular-4 DXF and STEP files together with the core-board files.
+3. Import the files into the CAD tool and verify mounting holes, connector positions, and array geometry against the physical units.
+4. Keep the Circular-4 and Linear-4 models separate; they are different mechanical layouts.
+
+**Success criteria:**
+
+- The selected DXF and STEP files import successfully
+- The models match the array geometry and physical mounting and connector features used in the design
+
+**Notes:**
+
+- The public files do not by themselves validate enclosure acoustics, manufacturing tolerances, or a custom 45-degree microphone installation.
+
+**References:**
+
+- [Official ReSpeaker Flex mechanical resources](https://wiki.seeedstudio.com/respeaker_flex_introduction/#resources)
+
+### How do I verify full-duplex I2S between ReSpeaker Flex and XIAO ESP32S3? {#i2s-full-duplex-test}
+
+**Applies to:** ReSpeaker Flex XVF3800 Linear-4 or Circular-4 with XIAO ESP32S3 using the embedded I2S path
+
+**Last verified:** 2026-09-01
+
+Run the official Flex I2S test with the geometry-matched 16 kHz I2S firmware. The sketch opens the XIAO I2S peripheral in transmit-and-receive mode, writes a 440 Hz test signal, reads microphone samples, and prints `I2S RX PASS!` when the receive path passes its documented sample-count check.
+
+**Prerequisites:**
+
+- An official 16 kHz I2S image matching the Linear-4 or Circular-4 geometry
+- Arduino IDE configured for XIAO ESP32S3
+- The dependencies required by the current official Flex I2S test
+
+1. Confirm that the Flex XMOS is running the official 16 kHz I2S image for the attached microphone geometry.
+2. Open the current ReSpeaker Flex with XIAO ESP32S3 I2S Test page and upload its sketch through the XIAO USB port.
+3. Open Serial Monitor at 115200 baud and let the first and optional second receive checks finish.
+4. Confirm that the test reports more than 16,000 valid samples and prints `I2S RX PASS!`.
+5. For an audible record-store-playback check, run the separate official 16 kHz record-and-playback example after the link test passes.
+
+**Success criteria:**
+
+- The I2S peripheral initializes without an error
+- The official test prints `I2S RX PASS!`
+- The optional record-and-playback example captures and replays a short audio buffer
+
+**Notes:**
+
+- This test validates the documented digital transmit and receive paths; it does not prove a wake-word threshold, acoustic echo-cancellation performance, or speaker-to-enclosure compatibility.
+- Do not run the 16 kHz sketch unchanged against a 48 kHz firmware profile.
+
+**References:**
+
+- [Official ReSpeaker Flex full-duplex I2S test](https://wiki.seeedstudio.com/respeaker_flex_xiao_i2s/)
+- [ReSpeaker Flex record-and-playback example](https://wiki.seeedstudio.com/respeaker_flex_xiao_record_playback/)
+- [Official ReSpeaker Flex firmware repository](https://github.com/respeaker/reSpeaker_Flex/tree/main/xmos_firmwares)
+
 ## Connectivity & Detection {#connectivity-and-detection}
 
 ### Why does the ReSpeaker Flex control script report `No device found`? {#xvf-host-no-device-found}
@@ -57,3 +128,38 @@ The current official Flex Python script supports Flex USB control. `No device fo
 - [Getting Started with ReSpeaker Flex](https://wiki.seeedstudio.com/respeaker_flex_introduction/)
 - [Current official ReSpeaker Flex Python control script](https://github.com/respeaker/reSpeaker_Flex/blob/main/python_control/xvf_host.py)
 - [Current official ReSpeaker Flex USB firmware directory](https://github.com/respeaker/reSpeaker_Flex/tree/main/xmos_firmwares/usb)
+
+## Hardware Issues {#hardware-issues}
+
+### What FPC cable is documented for the ReSpeaker Flex microphone array? {#fpc-cable-spec}
+
+**Applies to:** The microphone-array connection between the ReSpeaker Flex core board and either the Linear-4 or Circular-4 array
+
+**Last verified:** 2026-09-01
+
+The official Flex guide documents a keyed 24-pin, 0.5 mm-pitch FPC interface and a 20 cm ribbon cable included with the product. Match the contact orientation and end construction as well as pin count and pitch; the public guide does not qualify a generic cable for repeated dynamic flexing.
+
+**Prerequisites:**
+
+- The supplied cable, or a replacement whose complete mechanical contact orientation is confirmed against both connectors
+- Power removed from the Flex core board
+
+1. Open the locking tab on each FPC connector.
+2. Identify the exposed-contact side and the stiffener side of the cable.
+3. Insert the cable so its exposed contacts face the metal contacts inside each connector, then close both locking tabs without forcing them.
+4. Power the board and use the official capture or I2S test to verify the microphone-array connection before installing it in an enclosure.
+
+**Success criteria:**
+
+- The cable seats fully and both locking tabs close without force
+- The connected array produces valid capture data in the selected official test
+
+**Notes:**
+
+- The current public page does not specify contact-end thickness, same-side versus opposite-side contacts as a standalone procurement code, or a repeated-flex cycle rating.
+- Do not claim that every 24-pin, 0.5 mm-pitch cable is interchangeable or suitable for continuous movement.
+
+**References:**
+
+- [ReSpeaker Flex FPC specification and installation](https://wiki.seeedstudio.com/respeaker_flex_introduction/#24-fpc-cable)
+- [ReSpeaker Flex I2S link test](https://wiki.seeedstudio.com/respeaker_flex_xiao_i2s/)

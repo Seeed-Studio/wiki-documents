@@ -153,8 +153,8 @@ test('sortResults is deterministic (tie broken by product label then question)',
   );
 });
 
-test('integration: real index has 7 items and every URL uses slug+anchor', () => {
-  assert.strictEqual(REAL_INDEX.items.length, 7);
+test('integration: real index has 29 items and every URL uses slug+anchor', () => {
+  assert.strictEqual(REAL_INDEX.items.length, 29);
   for (const item of REAL_INDEX.items) {
     assert.match(item.url, /^\/[a-z0-9_]+#[a-z0-9-]+$/, item.id);
     assert.ok(item.question);
@@ -170,9 +170,35 @@ test('integration: searching the real index for "48khz" style query finds the 48
   assert.ok(items.some((i) => i.id === 'xvf3800_48khz_usb_support'));
 });
 
-test('integration: product filter XVF3800 returns four items on real data', () => {
+test('integration: product filter XVF3800 returns twelve items on real data', () => {
   const { items } = searchFaqs(REAL_INDEX.items, { product: 'xvf3800_usb_4_mic' });
-  assert.strictEqual(items.length, 4);
+  assert.strictEqual(items.length, 12);
+});
+
+test('integration: product filters resolve for every rendered product page', () => {
+  for (const product of ['xvf3800_usb_4_mic', 'respeaker_lite', 'flex_xvf3800', 'respeaker_2_mics_pi_hat', 'respeaker_clip', 'xvf3000']) {
+    const { items } = searchFaqs(REAL_INDEX.items, { product });
+    assert.ok(items.length >= 1, `product ${product} has no searchable items`);
+    for (const item of items) {
+      assert.strictEqual(item.product, product);
+      assert.match(item.url, /^\/[a-z0-9_]+#[a-z0-9-]+$/, item.id);
+    }
+  }
+});
+
+test('integration: every manifest FAQ id appears exactly once in the real index', () => {
+  const manifest = JSON.parse(
+    require('fs').readFileSync(
+      require('path').join(__dirname, '..', 'manifests', 'approved_faq_manifest.json'),
+      'utf8',
+    ),
+  );
+  const indexIds = new Set(REAL_INDEX.items.map((i) => i.id));
+  assert.strictEqual(indexIds.size, REAL_INDEX.items.length, 'duplicate index ids');
+  for (const entry of manifest.entries) {
+    assert.ok(indexIds.has(entry.publicFaqId), `manifest entry ${entry.publicFaqId} missing from index`);
+  }
+  assert.strictEqual(REAL_INDEX.items.length, manifest.entries.length);
 });
 
 test('integration: no-result state for a bogus query', () => {

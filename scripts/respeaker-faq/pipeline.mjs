@@ -45,7 +45,14 @@ export const DOMAINS = [
 ];
 const DOMAIN_BY_KEY = Object.fromEntries(DOMAINS.map((d) => [d.key, d]));
 
-export const PRODUCT_ORDER = ['xvf3800_usb_4_mic', 'flex_xvf3800', 'respeaker_lite'];
+export const PRODUCT_ORDER = [
+  'xvf3800_usb_4_mic',
+  'flex_xvf3800',
+  'respeaker_lite',
+  'xvf3000',
+  'respeaker_2_mics_pi_hat',
+  'respeaker_clip',
+];
 
 export const PRODUCTS = {
   xvf3800_usb_4_mic: {
@@ -75,6 +82,33 @@ export const PRODUCTS = {
       'Frequently asked questions about USB audio, ESPHome and operation for the ReSpeaker Lite.',
     keywords: ['ReSpeaker Lite FAQ', 'ReSpeaker Lite troubleshooting', 'ReSpeaker Lite USB audio', 'ESPHome'],
   },
+  xvf3000: {
+    key: 'xvf3000',
+    label: 'XVF3000',
+    file: 'xvf3000_faq.md',
+    title: 'ReSpeaker XVF3000 FAQ',
+    description:
+      'Frequently asked questions about DSP tuning and parameter control for the ReSpeaker Mic Array v2.0 with XVF3000.',
+    keywords: ['ReSpeaker XVF3000 FAQ', 'XVF3000 DSP tuning', 'ReSpeaker Mic Array tuning', 'tuning.py'],
+  },
+  respeaker_2_mics_pi_hat: {
+    key: 'respeaker_2_mics_pi_hat',
+    label: 'ReSpeaker 2-Mics Pi HAT',
+    file: 'respeaker_2_mics_pi_hat_faq.md',
+    title: 'ReSpeaker 2-Mics Pi HAT V2.0 FAQ',
+    description:
+      'Frequently asked questions about the V2.0 codec I2C address and hardware use for the ReSpeaker 2-Mics Pi HAT.',
+    keywords: ['ReSpeaker 2-Mics Pi HAT FAQ', '2-Mics Pi HAT V2.0', 'TLV320AIC3104', 'codec I2C address'],
+  },
+  respeaker_clip: {
+    key: 'respeaker_clip',
+    label: 'ReSpeaker Clip',
+    file: 'respeaker_clip_faq.md',
+    title: 'ReSpeaker Clip FAQ',
+    description:
+      'Frequently asked questions about official documentation, live transcription prototyping and mechanical resources for the ReSpeaker Clip.',
+    keywords: ['ReSpeaker Clip FAQ', 'ReSpeaker Clip documentation', 'live transcription', 'mechanical drawing'],
+  },
 };
 
 export const DOMAIN_FILTER_ORDER = [
@@ -92,6 +126,9 @@ export const PRODUCT_LABELS = {
   xvf3800_usb_4_mic: 'XVF3800',
   flex_xvf3800: 'Flex',
   respeaker_lite: 'Lite',
+  xvf3000: 'XVF3000',
+  respeaker_2_mics_pi_hat: 'Pi HAT',
+  respeaker_clip: 'Clip',
 };
 
 export const DOMAIN_LABELS = {

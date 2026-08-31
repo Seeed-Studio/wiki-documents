@@ -77,7 +77,7 @@ fi
 ## Phase 2 — Curated manifest validation ###################################
 phase "Phase 2: Curated manifest validation"
 if node scripts/respeaker-faq/pipeline.mjs --validate >/dev/null 2>&1; then
-  pass "pipeline --validate (7 entries, all PUBLISH, no BLOCK)"
+  pass "pipeline --validate (29 entries, all PUBLISH, no BLOCK)"
   record 'manifest' PASS
 else
   fail "pipeline --validate"
@@ -164,7 +164,7 @@ fi
 phase "Unit tests (search + renderer, node:test)"
 if node --test scripts/respeaker-faq/tests/ >"$QA_LOG" 2>&1; then
   PASS_TESTS=$(grep -E '^# (pass|tests)' "$QA_LOG" | tail -2 | tr '\n' ' ')
-  pass "node --test (26 cases) ${PASS_TESTS}"
+  pass "node --test (29 cases) ${PASS_TESTS}"
 else
   fail "node --test"
   cat "$QA_LOG"
@@ -220,7 +220,7 @@ if [ "${SKIP_BROWSER:-0}" = "1" ]; then
 else
   if [ -d build/respeaker_faq ]; then
     FOUND=1
-    for slug in respeaker_faq respeaker_xvf3800_faq respeaker_flex_faq respeaker_lite_faq; do
+    for slug in respeaker_faq respeaker_xvf3800_faq respeaker_flex_faq respeaker_lite_faq respeaker_xvf3000_faq respeaker_2_mics_pi_hat_faq respeaker_clip_faq; do
       if [ ! -f "build/$slug/index.html" ]; then
         FOUND=0
         fail "build/$slug/index.html missing (SSR route)"
@@ -272,7 +272,7 @@ mkdir -p "$REPORT_DIR"
   echo "Published FAQ units: $PUBLISHED_UNITS"
   echo "Product pages: $PRODUCT_PAGES"
   echo "Duplicate clusters resolved: $DUP_CLUSTERS"
-  echo "Blocked by evidence conflict (excluded upstream): $BLOCKED_UPSTREAM (pi_hat_off_pi_wiring_i2c, clip_sdk_rtc_streaming_api, xvf3000_audio_format_16bit_16khz)"
+  echo "Blocked by evidence conflict (excluded upstream): $BLOCKED_UPSTREAM named items (pi_hat_off_pi_wiring_i2c, clip_sdk_rtc_streaming_api, xvf3000_audio_format_16bit_16khz) plus composite claims blocked in the three 2026-09-01 audits; none are integrated"
   echo ""
   echo "Slug validation: ${OUTCOMES['slug']:-NOT RUN}"
   echo "Anchor validation: ${OUTCOMES['anchor']:-NOT RUN}"
@@ -293,7 +293,7 @@ mkdir -p "$REPORT_DIR"
   echo "- scripts/respeaker-faq/pipeline.mjs (dry-run/idempotency/source+wiki hash/reconcile)"
   echo "- scripts/respeaker-faq/validate-public.mjs"
   echo "- scripts/respeaker-faq/tests/ (node:test)"
-  echo "- sites/en/docs/FAQ/respeaker/index.mdx + 3 product pages"
+  echo "- sites/en/docs/FAQ/respeaker/index.mdx + 6 product pages"
   echo "- src/data/respeaker_faq_index.json"
   echo "- src/components/FaqExplorer/ (index.tsx, search.js, styles.module.css)"
   echo "- sites/en/sidebars.js (reSpeaker -> FAQ category)"

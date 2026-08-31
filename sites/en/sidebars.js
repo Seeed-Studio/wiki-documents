@@ -2221,6 +2221,9 @@ const sidebars = {
             'FAQ/respeaker/xvf3800_usb_4_mic_faq',
             'FAQ/respeaker/flex_xvf3800_faq',
             'FAQ/respeaker/respeaker_lite_faq',
+            'FAQ/respeaker/xvf3000_faq',
+            'FAQ/respeaker/respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/respeaker_clip_faq',
           ],
         },
         {

@@ -21,9 +21,9 @@ const MANIFEST_PATH = path.join(path.dirname(new URL(import.meta.url).pathname),
 
 const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 
-test('manifest: exactly 7 approved entries, all PUBLISH, no BLOCK', () => {
+test('manifest: exactly 29 approved entries, all PUBLISH, no BLOCK', () => {
   const manifest = loadManifest();
-  assert.strictEqual(manifest.entries.length, 7);
+  assert.strictEqual(manifest.entries.length, 29);
   for (const entry of manifest.entries) {
     assert.strictEqual(entry.publicationDecision, 'PUBLISH');
   }
@@ -46,24 +46,54 @@ test('validation: BLOCK entries are rejected by the validator', () => {
   assert.ok(validation.errors.some((e) => e.includes('BLOCK')));
 });
 
-test('render: exactly three non-empty product pages with expected slugs', () => {
+test('render: exactly six non-empty product pages with expected slugs', () => {
   const manifest = loadManifest();
   const targets = planTargets(manifest);
   const docTargets = targets.filter((t) => t.rel.endsWith('.md'));
-  assert.strictEqual(docTargets.length, 3);
+  assert.strictEqual(docTargets.length, 6);
   const slugs = docTargets.map((t) => {
     const m = t.content.match(/^slug: (\/\S+)$/m);
     return m && m[1];
   });
-  assert.deepStrictEqual(slugs.sort(), ['/respeaker_flex_faq', '/respeaker_lite_faq', '/respeaker_xvf3800_faq'].sort());
+  assert.deepStrictEqual(
+    slugs.sort(),
+    [
+      '/respeaker_flex_faq',
+      '/respeaker_lite_faq',
+      '/respeaker_xvf3800_faq',
+      '/respeaker_xvf3000_faq',
+      '/respeaker_2_mics_pi_hat_faq',
+      '/respeaker_clip_faq',
+    ].sort(),
+  );
 });
 
-test('render: FAQ counts per product (XVF3800=4, Lite=2, Flex=1) and anchors unique', () => {
+test('render: only products with approved entries produce pages (no empty pages)', () => {
+  const manifest = loadManifest();
+  const targets = planTargets(manifest);
+  const docTargets = targets.filter((t) => t.rel.endsWith('.md'));
+  for (const t of docTargets) {
+    // Every rendered page must contain at least one published FAQ block.
+    assert.ok((t.content.match(/^### .*\{#[a-z0-9-]+\}$/gm) || []).length >= 1, `${t.rel} is empty`);
+  }
+  // Every manifest product that has entries must render; none may be skipped.
+  const productKeys = new Set(manifest.entries.map((e) => e.productKey));
+  const rendered = new Set(docTargets.map((t) => t.content.match(/^slug: (\/\S+)$/m)[1]));
+  for (const key of productKeys) {
+    const slug = manifest.entries.find((e) => e.productKey === key).wikiSlug;
+    assert.ok(rendered.has(slug), `product ${key} (${slug}) has entries but no page`);
+  }
+});
+
+test('render: FAQ counts per product (XVF3800=12, Lite=8, Flex=4, Pi HAT=1, Clip=3, XVF3000=1) and anchors unique', () => {
   const manifest = loadManifest();
   const byProduct = (p) => manifest.entries.filter((e) => e.productKey === p);
-  assert.strictEqual(byProduct('xvf3800_usb_4_mic').length, 4);
-  assert.strictEqual(byProduct('respeaker_lite').length, 2);
-  assert.strictEqual(byProduct('flex_xvf3800').length, 1);
+  assert.strictEqual(byProduct('xvf3800_usb_4_mic').length, 12);
+  assert.strictEqual(byProduct('respeaker_lite').length, 8);
+  assert.strictEqual(byProduct('flex_xvf3800').length, 4);
+  assert.strictEqual(byProduct('respeaker_2_mics_pi_hat').length, 1);
+  assert.strictEqual(byProduct('respeaker_clip').length, 3);
+  assert.strictEqual(byProduct('xvf3000').length, 1);
 
   const targets = planTargets(manifest);
   for (const t of targets.filter((x) => x.rel.endsWith('.md'))) {
@@ -94,10 +124,10 @@ test('render: no internal IDs or forbidden tokens leak into public artifacts', (
   }
 });
 
-test('render: search index has 7 items, products/domains contracts, slug+anchor URLs', () => {
+test('render: search index has 29 items, products/domains contracts, slug+anchor URLs', () => {
   const manifest = loadManifest();
   const index = renderSearchIndex(manifest);
-  assert.strictEqual(index.items.length, 7);
+  assert.strictEqual(index.items.length, 29);
   assert.deepStrictEqual(index.products.map((p) => p.key), PRODUCT_ORDER);
   assert.ok(index.domains.length >= 3);
   const byKey = new Map(manifest.entries.map((e) => [e.publicFaqId, e]));
