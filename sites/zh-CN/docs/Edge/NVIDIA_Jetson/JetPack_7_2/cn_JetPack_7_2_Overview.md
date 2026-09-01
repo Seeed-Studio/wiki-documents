@@ -78,7 +78,7 @@ JetPack 7.2 不只是一次操作系统更新。它将 JetPack 7 软件架构扩
 | 统一的 Orin 与 Thor 软件架构 | [统一平台、ISO 与 SBSA](/cn/jetpack_7_2_unified_platform_iso_sbsa/) **（规划中）** |
 | Ubuntu 24.04、Linux 6.8 与 CUDA 13 迁移 | [JetPack 7.2 深度解析](/cn/jetpack72_deep_dive_bk/) 和 [迁移作战手册](/cn/jetpack_6_to_7_2_migration_playbook/) **（规划中）** |
 | 智能体 AI 与可复用 Jetson 技能 | [使用 NVIDIA Skills 快速在 Jetson 上做原型开发](/cn/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) 和 [在 Jetson Thor 上使用 NemoClaw 控制 reBot 机械臂](/cn/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) |
-| Yocto | [构建并刷写 Yocto 镜像](/cn/build_and_flash_yocto_for_recomputer_super_bk/) |
+| Yocto | [构建并刷写 Yocto 镜像](/cn/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) |
 | 使用 TensorRT Edge-LLM 获得更高推理性能 | [在 JetPack 7.2 上部署 TensorRT Edge-LLM](/cn/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
 | 更低的系统与 LLM 内存占用 | [JetPack 7.2 内存优化](/cn/jetpack_7_2_memory_optimization/) |
 | DeepStream 9.1 与自然语言视频工作流 | [JetPack 7.2 上的 DeepStream](/cn/jetpack_7_2_deepstream/) |
@@ -126,7 +126,7 @@ JetPack 7.2 通过将可复用的智能体技能和本地智能体应用作为�
 
 | 资源 | 在生态中的角色 |
 | --- | --- |
-| [为 reComputer Super 构建并刷写 Yocto 镜像](/cn/build_and_flash_yocto_for_recomputer_super_bk/) | 面向量产的 Jetson Linux 部署的可复现 OpenEmbedded/Yocto 镜像构建。 |
+| [为 reComputer Super 构建并刷写 Yocto 镜像](/cn/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) | 面向量产的 Jetson Linux 部署的可复现 OpenEmbedded/Yocto 镜像构建。 |
 
 ## AI 部署与应用
 

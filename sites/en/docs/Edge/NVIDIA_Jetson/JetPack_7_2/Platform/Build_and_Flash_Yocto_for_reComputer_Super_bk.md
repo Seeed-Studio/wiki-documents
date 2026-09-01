@@ -10,13 +10,15 @@ keywords:
   - meta-tegra
   - Jetson Linux 39.2
 image: https://files.seeedstudio.com/wiki/jetpack-7.2/jetpack-7-2-yocto-workflow.png
-slug: /build_and_flash_yocto_for_recomputer_super_bk
+slug: /build_and_flash_yocto_for_seeed_jetson_carrier_boards
+aliases:
+  - /build_and_flash_yocto_for_recomputer_super_bk
 last_update:
   date: 2026-09-01
   author: Dayu
 createdAt: '2026-07-24'
 updatedAt: '2026-09-01'
-url: https://wiki.seeedstudio.com/build_and_flash_yocto_for_recomputer_super_bk/
+url: https://wiki.seeedstudio.com/build_and_flash_yocto_for_seeed_jetson_carrier_boards/
 ---
 
 # Build and Flash Yocto for Seeed Jetson Carrier Boards
@@ -67,7 +69,7 @@ The helper scripts use the following parameters throughout the workflow:
 `MACHINE` is the Yocto hardware target name, not only a product label. It selects a machine configuration from `layers/meta-seeed/conf/machine/`, which determines the SoC family, carrier DTB, module configuration, BPMP data, pinmux and pad-voltage files, overlays, and flash variables used by BitBake and tegraflash.
 
 :::tip Select the machine for your hardware
-The `recomputer-orin-super-j401` commands in this guide are only a concrete example. Before preparing the workspace, select the `MACHINE` and module SKU that match your carrier and Jetson module from the [carrier-board table](https://wiki.seeedstudio.com/build_and_flash_yocto_for_recomputer_super_bk/#choose-the-carrier-board-and-jetson-module).
+The `recomputer-orin-super-j401` commands in this guide are only a concrete example. Before preparing the workspace, select the `MACHINE` and module SKU that match your carrier and Jetson module from the [carrier-board table](https://wiki.seeedstudio.com/build_and_flash_yocto_for_seeed_jetson_carrier_boards/#choose-the-carrier-board-and-jetson-module).
 :::
 
 Choose an image based on the target's purpose:

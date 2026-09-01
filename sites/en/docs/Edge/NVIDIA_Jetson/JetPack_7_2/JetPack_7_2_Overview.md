@@ -78,7 +78,7 @@ This collection is intentionally limited to JetPack 7.2 material. Existing artic
 | Unified Orin and Thor software architecture | [Unified Platform, ISO, and SBSA](/jetpack_7_2_unified_platform_iso_sbsa/) **(planned)** |
 | Ubuntu 24.04, Linux 6.8, and CUDA 13 migration | [JetPack 7.2 Deep Dive](/jetpack72_deep_dive_bk/) and [Migration Playbook](/jetpack_6_to_7_2_migration_playbook/) **(planned)** |
 | Agentic AI and reusable Jetson skills | [Rapid Prototyping with NVIDIA Skills](/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) and [NemoClaw on Jetson Thor](/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) |
-| Yocto | [Build and Flash a Yocto Image](/build_and_flash_yocto_for_recomputer_super_bk/) |
+| Yocto | [Build and Flash a Yocto Image](/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) |
 | Higher-performance inference with TensorRT Edge-LLM | [Deploy TensorRT Edge-LLM on JetPack 7.2](/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
 | Lower system and LLM memory use | [JetPack 7.2 Memory Optimization](/jetpack_7_2_memory_optimization/) |
 | DeepStream 9.1 and natural-language video workflows | [DeepStream on JetPack 7.2](/jetpack_7_2_deepstream/) |
@@ -126,7 +126,7 @@ JetPack 7.2 expands the Jetson developer workflow beyond manual setup by making 
 
 | Resource | Ecosystem role |
 | --- | --- |
-| [Build and Flash a Yocto Image for reComputer Super](/build_and_flash_yocto_for_recomputer_super_bk/) | Reproducible OpenEmbedded/Yocto image construction for a production-oriented Jetson Linux deployment. |
+| [Build and Flash Yocto for Seeed Jetson Carrier Boards](/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) | Reproducible OpenEmbedded/Yocto image construction for supported Seeed Jetson carrier boards. |
 
 ## AI Deployment & Applications
 

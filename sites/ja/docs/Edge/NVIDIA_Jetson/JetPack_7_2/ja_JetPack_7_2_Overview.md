@@ -78,7 +78,7 @@ JetPack 7.2 は単なるオペレーティングシステムのアップデー�
 | Orin と Thor の統合ソフトウェアアーキテクチャ | [Unified Platform, ISO, and SBSA](/ja/jetpack_7_2_unified_platform_iso_sbsa/) **(予定)** |
 | Ubuntu 24.04、Linux 6.8、CUDA 13 への移行 | [JetPack 7.2 Deep Dive](/ja/jetpack72_deep_dive_bk/) および [Migration Playbook](/ja/jetpack_6_to_7_2_migration_playbook/) **(予定)** |
 | エージェント型 AI と再利用可能な Jetson スキル | [Rapid Prototyping with NVIDIA Skills](/ja/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) および [NemoClaw on Jetson Thor](/ja/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) |
-| Yocto | [Build and Flash a Yocto Image](/ja/build_and_flash_yocto_for_recomputer_super_bk/) |
+| Yocto | [Build and Flash a Yocto Image](/ja/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) |
 | TensorRT Edge-LLM による高性能推論 | [Deploy TensorRT Edge-LLM on JetPack 7.2](/ja/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
 | システムおよび LLM のメモリ使用量削減 | [JetPack 7.2 Memory Optimization](/ja/jetpack_7_2_memory_optimization/) |
 | DeepStream 9.1 と自然言語ビデオワークフロー | [DeepStream on JetPack 7.2](/ja/jetpack_7_2_deepstream/) |
@@ -126,7 +126,7 @@ JetPack 7.2 は、再利用可能なエージェントスキルとローカル�
 
 | リソース | エコシステム内の役割 |
 | --- | --- |
-| [Build and Flash a Yocto Image for reComputer Super](/ja/build_and_flash_yocto_for_recomputer_super_bk/) | 本番指向の Jetson Linux デプロイメント向けの、再現性のある OpenEmbedded/Yocto イメージ構築。 |
+| [Build and Flash a Yocto Image for reComputer Super](/ja/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) | 本番指向の Jetson Linux デプロイメント向けの、再現性のある OpenEmbedded/Yocto イメージ構築。 |
 
 ## AI デプロイ & アプリケーション
 

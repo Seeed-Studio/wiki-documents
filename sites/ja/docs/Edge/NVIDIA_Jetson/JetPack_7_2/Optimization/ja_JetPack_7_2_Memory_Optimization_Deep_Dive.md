@@ -68,7 +68,7 @@ DRAM 供給が逼迫しメモリコストが上昇している状況では、よ
 | --- | --- | --- |
 | 更新された CUDA および TensorRT スタック | サポートされる推論エンジンを再構築し、プロファイルするためのソフトウェアベースラインです。 | [Deploy TensorRT Edge-LLM on JetPack 7.2](/ja/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
 | メモリ最適化とベンチマークのスキル | 設定を変更する前に、プラットフォーム予約、サービス、ワークロード負荷を繰り返し測定する方法を提供します。 | [JetPack 7.2 Memory Optimization](/ja/jetpack_7_2_memory_optimization/) |
-| 公式 Yocto サポート | Ubuntu 開発イメージに不要なソフトウェアが含まれている場合でも、プロダクションチームは用途に合わせた再現性のあるイメージを作成できます。 | [Build and Flash a Yocto Image](/ja/build_and_flash_yocto_for_recomputer_super_bk/) |
+| 公式 Yocto サポート | Ubuntu 開発イメージに不要なソフトウェアが含まれている場合でも、プロダクションチームは用途に合わせた再現性のあるイメージを作成できます。 | [Build and Flash a Yocto Image](/ja/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) |
 
 JetPack 7.2 はモジュールに DRAM を追加したり、自動的にモデルを縮小したり、KV キャッシュの再利用といったランタイム機能をそれ自体で有効にしたりはしません。そうした選択を行い、計測するためのソフトウェアベースラインとツール群を提供します。
 
@@ -232,7 +232,7 @@ CUDA Graph は、互換性のある GPU シーケンスを一度記録し、後�
 | --- | --- | --- |
 | アイドル、エンジンロード、プリフィル、およびデコードメモリを測定し、サービスを削減する、または検証済み BSP 予約を変更する | [JetPack 7.2 Memory Optimization](/ja/jetpack_7_2_memory_optimization/) | 行動を起こす前に、どのメモリレイヤーが原因かを判断する。 |
 | チェックポイントをエクスポートし、エンジンをビルドし、サポートされる精度を選択する、または TensorRT Edge-LLM をベンチマークする | [Deploy TensorRT Edge-LLM on JetPack 7.2](/ja/deploy_tensorrt_edge_llm_on_jetpack7.2/) | 重み、ワークスペース、および KV キャッシュが全体の予算にどのように収まるかを理解する。 |
-| 本番志向でカスタマイズされた OS イメージをビルドする | [Build and Flash a Yocto Image](/ja/build_and_flash_yocto_for_recomputer_super_bk/) | より小さいシステムイメージが、追加の保守コストに見合うかどうかを判断する。 |
+| 本番志向でカスタマイズされた OS イメージをビルドする | [Build and Flash a Yocto Image](/ja/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) | より小さいシステムイメージが、追加の保守コストに見合うかどうかを判断する。 |
 | 公開されている 6.2 と 7.2 の AGX Orin 結果を比較する | [JetPack 7.2 Deep Dive](/ja/jetpack72_deep_dive_bk/) | 1 つの測定結果を普遍的なメモリ節約と見なすという誤りを避ける。 |
 
 正しい手順はシンプルです。まずシステムのベースラインを確立し、選択したランタイムとモデルを計測し、その後は、完全なワークロードが予算内に収まっている場合にのみコンテキストまたは同時実行数を増やします。リンク先のガイドには、各ステップに必要なコマンド、安全確認、ロールバック手順、受け入れテストが含まれています。

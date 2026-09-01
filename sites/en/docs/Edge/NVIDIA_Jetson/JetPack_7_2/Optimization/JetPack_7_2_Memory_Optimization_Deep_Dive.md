@@ -68,7 +68,7 @@ The hands-on companion to this article is the [JetPack 7.2 Memory Optimization](
 | --- | --- | --- |
 | Updated CUDA and TensorRT stack | It is the software baseline for rebuilding and profiling supported inference engines. | [Deploy TensorRT Edge-LLM on JetPack 7.2](/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
 | Memory-optimization and benchmarking skills | They provide a repeatable way to measure platform reservations, services, and workload pressure before changing configuration. | [JetPack 7.2 Memory Optimization](/jetpack_7_2_memory_optimization/) |
-| Official Yocto support | A production team can create a tailored, reproducible image when the Ubuntu development image includes unneeded software. | [Build and Flash a Yocto Image](/build_and_flash_yocto_for_recomputer_super_bk/) |
+| Official Yocto support | A production team can create a tailored, reproducible image when the Ubuntu development image includes unneeded software. | [Build and Flash a Yocto Image](/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) |
 
 JetPack 7.2 does not add DRAM to a module, automatically shrink a model, or enable runtime features such as KV-cache reuse by itself. It gives the software baseline and tooling from which those choices can be made and measured.
 
@@ -232,7 +232,7 @@ This page explains the budget: why a lower idle footprint, smaller weights, boun
 | --- | --- | --- |
 | Measure idle, engine-load, prefill, and decode memory; reduce services; or change a validated BSP reservation | [JetPack 7.2 Memory Optimization](/jetpack_7_2_memory_optimization/) | Deciding which memory layer is responsible before taking action. |
 | Export a checkpoint, build an engine, select a supported precision, or benchmark TensorRT Edge-LLM | [Deploy TensorRT Edge-LLM on JetPack 7.2](/deploy_tensorrt_edge_llm_on_jetpack7.2/) | Understanding how weights, workspace, and KV cache fit into the total budget. |
-| Build a production-oriented, tailored OS image | [Build and Flash a Yocto Image](/build_and_flash_yocto_for_recomputer_super_bk/) | Deciding whether a smaller system image is worth the additional ownership cost. |
+| Build a production-oriented, tailored OS image | [Build and Flash a Yocto Image](/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) | Deciding whether a smaller system image is worth the additional ownership cost. |
 | Compare the published 6.2 and 7.2 AGX Orin results | [JetPack 7.2 Deep Dive](/jetpack72_deep_dive_bk/) | Avoiding the mistake of treating one measured result as a universal memory saving. |
 
 The correct order is simple: establish the system baseline, measure the selected runtime and model, then increase context or concurrency only while the complete workload remains within budget. The linked guides contain the commands, safety checks, rollback procedures, and acceptance tests for each step.
