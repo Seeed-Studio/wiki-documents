@@ -78,7 +78,7 @@ Esta coleção é intencionalmente limitada ao material do JetPack 7.2. Artigos 
 | Arquitetura de software unificada Orin e Thor | [Plataforma Unificada, ISO e SBSA](/pt-br/jetpack_7_2_unified_platform_iso_sbsa/) **(planejado)** |
 | Migração para Ubuntu 24.04, Linux 6.8 e CUDA 13 | [Análise Detalhada do JetPack 7.2](/pt-br/jetpack72_deep_dive_bk/) e [Guia de Migração](/pt-br/jetpack_6_to_7_2_migration_playbook/) **(planejado)** |
 | IA agentic e habilidades Jetson reutilizáveis | [Prototipagem Rápida com NVIDIA Skills](/pt-br/rapid_prototyping_on_jetson_with_nvidia_skills_bk/) e [NemoClaw no Jetson Thor](/pt-br/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk/) |
-| Yocto | [Construir e Gravar uma Imagem Yocto](/pt-br/build_and_flash_yocto_for_recomputer_super_bk/) |
+| Yocto | [Construir e Gravar uma Imagem Yocto](/pt-br/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) |
 | Inferência de maior desempenho com TensorRT Edge-LLM | [Implantar TensorRT Edge-LLM no JetPack 7.2](/pt-br/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
 | Menor uso de memória do sistema e de LLM | [Otimização de Memória do JetPack 7.2](/pt-br/jetpack_7_2_memory_optimization/) |
 | DeepStream 9.1 e fluxos de trabalho de vídeo em linguagem natural | [DeepStream no JetPack 7.2](/pt-br/jetpack_7_2_deepstream/) |
@@ -126,7 +126,7 @@ O JetPack 7.2 expande o fluxo de trabalho do desenvolvedor Jetson além da confi
 
 | Recurso | Papel no ecossistema |
 | --- | --- |
-| [Construir e Gravar uma Imagem Yocto para reComputer Super](/pt-br/build_and_flash_yocto_for_recomputer_super_bk/) | Construção de imagem OpenEmbedded/Yocto reproduzível para uma implantação Jetson Linux orientada à produção. |
+| [Construir e Gravar uma Imagem Yocto para reComputer Super](/pt-br/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) | Construção de imagem OpenEmbedded/Yocto reproduzível para uma implantação Jetson Linux orientada à produção. |
 
 ## Implantação de IA & Aplicações
 

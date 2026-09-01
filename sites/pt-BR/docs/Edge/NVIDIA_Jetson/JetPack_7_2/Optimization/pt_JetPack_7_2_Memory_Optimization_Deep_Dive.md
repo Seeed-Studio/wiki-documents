@@ -68,7 +68,7 @@ O complemento prático deste artigo é o guia [JetPack 7.2 Memory Optimization](
 | --- | --- | --- |
 | Pilha atualizada de CUDA e TensorRT | É a base de software para reconstruir e fazer o profiling de mecanismos de inferência suportados. | [Implantar TensorRT Edge-LLM no JetPack 7.2](/pt-br/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
 | Habilidades de otimização de memória e benchmarking | Elas fornecem uma forma repetível de medir reservas da plataforma, serviços e pressão da carga de trabalho antes de alterar a configuração. | [JetPack 7.2 Memory Optimization](/pt-br/jetpack_7_2_memory_optimization/) |
-| Suporte oficial a Yocto | Uma equipe de produção pode criar uma imagem sob medida e reprodutível quando a imagem de desenvolvimento Ubuntu inclui software desnecessário. | [Build and Flash a Yocto Image](/pt-br/build_and_flash_yocto_for_recomputer_super_bk/) |
+| Suporte oficial a Yocto | Uma equipe de produção pode criar uma imagem sob medida e reprodutível quando a imagem de desenvolvimento Ubuntu inclui software desnecessário. | [Build and Flash a Yocto Image](/pt-br/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) |
 
 O JetPack 7.2 não adiciona DRAM a um módulo, não reduz automaticamente um modelo nem habilita por si só recursos de runtime como reutilização de KV cache. Ele fornece a base de software e as ferramentas a partir das quais essas escolhas podem ser feitas e medidas.
 
@@ -232,7 +232,7 @@ Esta página explica o orçamento: por que uma pegada ociosa menor, pesos menore
 | --- | --- | --- |
 | Medir memória ociosa, de carregamento de mecanismo, de pré-preenchimento e de decodificação; reduzir serviços; ou alterar uma reserva de BSP validada | [JetPack 7.2 Memory Optimization](/pt-br/jetpack_7_2_memory_optimization/) | Decidir qual camada de memória é responsável antes de agir. |
 | Exportar um checkpoint, compilar um mecanismo, selecionar uma precisão compatível ou fazer benchmark do TensorRT Edge-LLM | [Deploy TensorRT Edge-LLM on JetPack 7.2](/pt-br/deploy_tensorrt_edge_llm_on_jetpack7.2/) | Entender como pesos, workspace e cache KV se encaixam no orçamento total. |
-| Compilar uma imagem de SO personalizada orientada à produção | [Build and Flash a Yocto Image](/pt-br/build_and_flash_yocto_for_recomputer_super_bk/) | Decidir se uma imagem de sistema menor vale o custo adicional de manutenção. |
+| Compilar uma imagem de SO personalizada orientada à produção | [Build and Flash a Yocto Image](/pt-br/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) | Decidir se uma imagem de sistema menor vale o custo adicional de manutenção. |
 | Comparar os resultados publicados de 6.2 e 7.2 no AGX Orin | [JetPack 7.2 Deep Dive](/pt-br/jetpack72_deep_dive_bk/) | Evitar o erro de tratar um resultado medido como uma economia de memória universal. |
 
 A ordem correta é simples: estabeleça a linha de base do sistema, meça o runtime e o modelo selecionados e, em seguida, aumente o contexto ou a simultaneidade apenas enquanto a carga de trabalho completa permanecer dentro do orçamento. Os guias vinculados contêm os comandos, verificações de segurança, procedimentos de rollback e testes de aceitação para cada etapa.
