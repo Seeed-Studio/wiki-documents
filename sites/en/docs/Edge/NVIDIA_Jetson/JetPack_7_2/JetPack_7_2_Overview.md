@@ -12,7 +12,7 @@ image: https://files.seeedstudio.com/wiki/other/jp72-front.png
 slug: /jetpack_7_2_resource_hub
 last_update:
   date: 07/31/2026
-  author: Seeed Studio
+  author: Dayu
 createdAt: '2026-07-31'
 updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/jetpack_7_2_resource_hub/
