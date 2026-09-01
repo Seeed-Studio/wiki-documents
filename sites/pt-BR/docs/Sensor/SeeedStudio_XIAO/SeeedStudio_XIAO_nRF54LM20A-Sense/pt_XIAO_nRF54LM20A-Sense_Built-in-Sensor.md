@@ -388,8 +388,8 @@ Após gravar o firmware, você pode abrir o assistente de porta serial no seu PC
 
 :::tip
 
-1. Defina a taxa de transmissão para 115200 ao visualizar dados via monitor serial.
-2. Especifique a taxa de transmissão como 115200 no arquivo de configuração **platformio.ini** para o monitor serial da IDE PlatformIO.
+1. Defina a taxa de baud para 115200 ao visualizar dados via monitor serial.
+2. Especifique a taxa de baud como 115200 no arquivo de configuração **platformio.ini** para o monitor serial da IDE PlatformIO.
 
 ```ini
 [env:seeed-xiao-nrf54lm20a]
@@ -409,7 +409,7 @@ A IMU pode fundir dados de aceleração de três eixos para calcular os ângulos
 
 #### Oceano Eletrônico
 
-Este é um exemplo baseado na IMU integrada da XIAO nRF54LM20A Sense. Ele coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, alcançando efeitos visuais de ritmo oceânico.
+Este é um exemplo baseado na IMU integrada do XIAO nRF54LM20A Sense. Ele coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, alcançando efeitos visuais de ritmo oceânico.
 
 - **Controle de nível de água por inclinação** — Ajuste a altura do nível de água por meio da inclinação de roll para a esquerda e para a direita
 - **Animação de ondas** — Superfície de ondas com sobreposição de três camadas de frequência, propagação de ondas 2D e efeito de reflexão nas bordas
@@ -552,9 +552,9 @@ Nesta rotina, o canal verde dos LEDs RGB acende e apaga após a energização, e
 
 Baixe a rotina para implementar a função de despertar por IMU.
 
-1. Baixe o programa [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) e substitua com ele o conteúdo de main.c.
+1. Baixe o programa [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) e substitua o conteúdo de main.c por ele.
 
-2. Modifique o arquivo de árvore de dispositivo `app.overlay` e adicione as configurações de nós necessárias.
+2. Modifique o arquivo de árvore de dispositivo `app.overlay` e adicione as configurações de nó necessárias.
 
 ```dts
 /*
@@ -650,7 +650,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
 <br/>
-- Após gravar e ligar, o LED RGB-G piscará brevemente. Toque em qualquer lugar da placa para acender o LED RGB-G.
+- Após gravar e ligar, o LED RGB-G piscará brevemente. Toque em qualquer lugar na placa para acender o LED RGB-G.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_3_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -666,15 +666,15 @@ A posição de detecção é apenas para referência. O reconhecimento preciso d
 
 ## RTC
 
-O chip adotado pela XIAO nRF54LM20A Sense é equipado com recursos de hardware GRTC integrados, permitindo funções de RTC sem módulos RTC adicionais.
+O chip adotado pelo XIAO nRF54LM20A Sense é equipado com recursos de hardware GRTC integrados, permitindo funções de RTC sem módulos RTC adicionais.
 
 O RTC oferece suporte à contagem de carimbos de data e hora e pode registrar o tempo de operação mesmo após uma queda de energia, o que facilita o registro de logs e o rastreamento de tempo.
 
-Esta seção apresenta um programa de exemplo implementado no XIAO nRF54LM20A Sense. Após a energização, ele obtém carimbos de data e hora a partir do horário de compilação via RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será acordado pelo alarme do RTC para continuar a contagem.
+Esta seção apresenta um programa de exemplo implementado no XIAO nRF54LM20A Sense. Após ligar, ele obtém carimbos de data/hora a partir do horário de compilação via RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será acordado pelo alarme do RTC para continuar a contagem.
 
-1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções de RTC para imprimir o carimbo de data e hora.
+1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções do RTC para imprimir o carimbo de data/hora.
 
-2. Modifique a árvore de dispositivo `app.overlay` para habilitar o nó do RTC.
+2. Modifique a árvore de dispositivos `app.overlay` para habilitar o nó do RTC.
 
 ```dts
 / {
@@ -760,7 +760,7 @@ Esta seção demonstra a função do microfone por meio de um exemplo de voz. O 
 
 1. Copie o programa de <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> para `main.c`.
 
-2. Modifique o arquivo de árvore de dispositivo `app.overlay` para vincular o nó BLE.
+2. Modifique o arquivo de árvore de dispositivos `app.overlay` para vincular o nó BLE.
 
 ```dts
 /*

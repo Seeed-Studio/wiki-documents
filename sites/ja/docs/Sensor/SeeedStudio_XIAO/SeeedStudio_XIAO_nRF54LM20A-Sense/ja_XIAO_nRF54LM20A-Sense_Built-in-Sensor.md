@@ -57,7 +57,7 @@ XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーション�
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-   <th>6x10 RGB WS2812 Matrix for Seeed Studio XIAO</th>
+   <th>Seeed Studio XIAO 用 6x10 RGB WS2812 マトリクス</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -415,7 +415,7 @@ IMU は 3 軸加速度データをフュージョンして、姿勢認識のた�
 - **波のアニメーション** — 3 層の周波数を重ね合わせた波面、2D 波の伝播と端での反射効果
 - **流体慣性** — 慣性を持つ水面；急激に傾けるとオーバーシュートし、その後の揺り戻しが発生
 - **反転検出** — ボードを反転させると表示が自動的にミラー反転
-- **ダイナミックカラー** — 各列ごとにランダムなグラデーションの海の色調に切り替え
+- **ダイナミックカラー** — 各列ごとにランダムなグラデーションの海の色調を切り替え
 
 さらに、main.c 内のマクロ定義を通じて、ボードの RGB 配列構成を変更することもできます。
 
@@ -536,7 +536,7 @@ CONFIG_FAULT_DUMP=2
 CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
-- デバイスを振ると、海の波のビジュアルエフェクトがトリガーされます。
+- デバイスを振ると、海の波のビジュアルエフェクトがトリガされます。
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WHPSAryN-W4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -550,7 +550,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 このルーチンでは、電源投入後に RGB のグリーンチャネルが点灯して消灯し、その後システムは超低消費電力スリープモードに入ります。ボードがタップを検出すると、割り込みによって XIAO nRF54LM20A Sense がウェイクアップします。タップイベントは記録され、シリアルポートを通じて出力されます。
 
-IMU ウェイクアップ機能を実装するには、このルーチンをダウンロードしてください。
+このルーチンをダウンロードして、IMU ウェイクアップ機能を実装します。
 
 1. [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) プログラムをダウンロードし、その内容で main.c を置き換えます。
 
@@ -660,7 +660,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <br/>
 :::tip
 
-検知位置はあくまで参考です。正確なタップ位置の認識は、IMU フュージョン制御アルゴリズムに依存します。
+検知位置はあくまで参考値です。正確なタップ位置の認識は、IMU フュージョン制御アルゴリズムに依存します。
 
 :::
 
@@ -741,7 +741,7 @@ CONFIG_NEWLIB_LIBC=y
 
 ## MIC 
 
-XIAO nRF54LM20A Sense には、音声入力用に MSM261DGT006 デジタル MEMS マイクが搭載されています。PDM インターフェースを介して直接接続され、ADC を必要としません。ウェアラブルデバイス、スマートデバイス、音声認識、音声録音など、音響センシング機能を必要とするアプリケーションシナリオに適しています。
+XIAO nRF54LM20A Sense には、音声入力用に MSM261DGT006 デジタル MEMS マイクロフォンが搭載されています。PDM インターフェースを介して直接接続され、ADC を必要としません。ウェアラブルデバイス、スマートデバイス、音声認識、音声録音など、音響センシング機能を必要とするアプリケーションシナリオに適しています。
 
 :::tip
 
@@ -1083,9 +1083,9 @@ BLE UUID はすでに Python プログラム内で設定されているため、
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

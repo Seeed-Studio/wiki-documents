@@ -383,8 +383,8 @@ Si deseas verificar directamente el rendimiento del IMU, clona el repositorio Pl
 
 Después de flashear el firmware, puedes abrir el asistente de puerto serie en tu PC para ver los datos. La frecuencia de disparo es de 12,5 Hz con un intervalo de 80 milisegundos.
 
-- Acelerómetro digital de 3 ejes: mide la aceleración a lo largo de los ejes X, Y y Z.
-- Giroscopio digital de 3 ejes: mide la velocidad angular alrededor de los ejes X, Y y Z.
+- Acelerómetro digital de 3 ejes: Mide la aceleración a lo largo de los ejes X, Y y Z.
+- Giroscopio digital de 3 ejes: Mide la velocidad angular alrededor de los ejes X, Y y Z.
 
 :::tip
 
@@ -548,7 +548,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### Despertar por IMU
 
-En esta rutina, el canal verde del RGB se enciende y apaga después del encendido, luego el sistema entra en modo de suspensión de ultra bajo consumo. Cuando la placa detecta un toque, XIAO nRF54LM20A Sense se despertará mediante una interrupción. El evento de toque se registrará e imprimirá a través del puerto serie.
+En esta rutina, el canal verde del RGB se enciende y apaga después de encenderse, luego el sistema entra en modo de suspensión de ultra bajo consumo. Cuando la placa detecta un toque, XIAO nRF54LM20A Sense se despertará mediante una interrupción. El evento de toque se registrará e imprimirá a través del puerto serie.
 
 Descarga la rutina para implementar la función de despertar por IMU.
 
@@ -674,7 +674,7 @@ Esta sección presenta un programa de ejemplo implementado en XIAO nRF54LM20A Se
 
 1. Copia [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) en el archivo main.c. Utiliza las funciones del RTC para imprimir la marca de tiempo.
 
-2. Modifica el device tree `app.overlay` para habilitar el nodo RTC.
+2. Modifica el árbol de dispositivos `app.overlay` para habilitar el nodo RTC.
 
 ```dts
 / {
@@ -760,7 +760,7 @@ Esta sección demuestra la función del micrófono mediante un ejemplo de voz. E
 
 1. Copia el programa desde <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> en `main.c`.
 
-2. Modifica el archivo del device tree `app.overlay` para enlazar el nodo BLE.
+2. Modifica el archivo del árbol de dispositivos `app.overlay` para enlazar el nodo BLE.
 
 ```dts
 /*

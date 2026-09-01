@@ -1,5 +1,5 @@
 ---
-title: XIAO nRF54LM20A Sense 板载传感器使用方法
+title: XIAO nRF54LM20A Sense 板载传感器的使用
 description: ''
 keywords:
   - xiao
@@ -16,7 +16,7 @@ updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/
 ---
 
-# XIAO nRF54LM20A Sense 板载传感器使用方法
+# XIAO nRF54LM20A Sense 板载传感器的使用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png" style={{width:400, height:'auto'}}/></div>
 
@@ -57,7 +57,7 @@ XIAO nRF54LM20A Sense 配备了丰富的板载传感器，可支持多场景应�
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-   <th>6x10 RGB WS2812 Matrix for Seeed Studio XIAO</th>
+   <th>适用于 Seeed Studio XIAO 的 6x10 RGB WS2812 点阵</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -83,7 +83,7 @@ XIAO nRF54LM20A Sense 配备了丰富的板载传感器，可支持多场景应�
 LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的六轴传感器，属于意法半导体推出的 iNEMO 惯性测量单元（IMU）。在 XIAO nRF54LM20A Sense 上，该传感器支持中断触发数据输出，具有 ±2/±4/±8/±16 g 的加速度全量程范围和 ±125/±250/±500/±1000/±2000 dps 的角速度范围，并支持持续低功耗模式，适用于多种运动检测场景。板载芯片通过 I2C 协议与其通信以获取数据。
 :::tip
 
-- 关于 LSM6DS3TR-C 的更多信息，请访问：[Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) 和 [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
+- 关于 LSM6DS3TR-C 的更多信息，请访问：[LSM6DS3TR-C 产品概述](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) 和 [LSM6DS3TR-C 数据手册](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
 
 :::
 
@@ -512,7 +512,7 @@ IMU 可以融合三轴加速度数据来计算俯仰、偏航和横滚姿态角�
 };
 ```
 
-3. 启用与 IMU 使用相关的配置
+3. 使能与 IMU 使用相关的配置
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -624,7 +624,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 };
 ```
 
-3. 在 prj.conf 中启用相关 IMU 配置
+3. 在 prj.conf 中使能相关 IMU 配置
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -753,7 +753,7 @@ XIAO nRF54LM20A Sense 搭载 MSM261DGT006 数字 MEMS 麦克风用于语音输�
 
 本节通过语音示例演示麦克风功能，具体流程如下：
 
-- 按下 BOOT 按键，RGB-G LED 常亮并开始录音；再次按下停止录音（最长 10 秒）。
+- 按下 BOOT 按钮，RGB-G LED 常亮并开始录音；再次按下停止录音（最长 10 秒）。
 - 录音结束后，音频文件将通过蓝牙发送到上位机。传输过程中 RGB-G LED 闪烁。
 - 在 Windows 上运行接收脚本，将音频文件保存到 `./recordings` 目录。
 - 传输完成后 RGB-G LED 熄灭。
