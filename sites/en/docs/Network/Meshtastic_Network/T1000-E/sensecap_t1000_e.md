@@ -408,37 +408,23 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 
 ### Device never turns on
 
-If the device does not respond when you try to power it on, there may be several possible causes. Follow the steps below in order.
-
-**1) Check the device settings / indicators**
-
 - The device may appear to be powered off when the LED indicator and buzzer are not activated. Before performing the steps below, it is recommended to `check the following parameters`:
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={600} height="auto" /></p>
 
-**2) Charge the device normally**
-
 - Use a known working USB cable to `charge the device` continuously for 1–2 hours to ensure the battery has sufficient power to wake up the system.
 
-#### If the device has been unused for an extended period
-
-If the device has been left unused for an extended period, especially with a low battery level, the battery may become deeply discharged. Rechargeable lithium batteries gradually self-discharge even when the device is turned off, so after extended storage the battery voltage may become too low to provide sufficient and stable power during startup. As a result, the device may fail to power on normally or may repeatedly restart during the boot process. This is a common behavior of rechargeable lithium-battery-powered electronic devices, not a defect specific to the T1000-E.
-
-- **Extended charging (recovery attempt):** If the device has been stored unused for an extended period and cannot start normally, connect it using a compliant charging cable and allow it to charge continuously for **up to 24 hours** before trying to power it on again. A deeply discharged battery may require significantly longer than a normal charging cycle before it recovers enough voltage to start.
-
-- **Leave the device disconnected (recovery attempt):** If extended charging does not recover the device — especially if it still repeatedly restarts during startup — disconnect the charging cable and leave the device unused and disconnected for **approximately 7 days** to allow the remaining battery charge to discharge further. After this period, reconnect the charging cable, charge the device again, and try to power it on.
-
-- **Battery maintenance / prevention:** To avoid deep discharge, do not leave the device unused with an empty or very low battery for extended periods. Recharge the device when the battery level drops below 20%, and if the device will be stored for a long time, recharge it periodically during storage. Do not intentionally leave the battery fully discharged for long-term storage.
-
 :::note
-Extended charging for up to 24 hours is intended only as a recovery attempt for a deeply discharged battery after long-term storage. It is not recommended as a normal charging practice.
+Lithium batteries slowly self-discharge even when powered off. A device stored unused for a long time may therefore become deeply discharged and fail to turn on or keep restarting during boot. This is common for lithium-battery devices, not a T1000-E defect.
 :::
 
-**3) Perform a hard reset**
+- If the device has been stored unused for a long time and cannot start, charge it continuously for up to 24 hours, then try again. The 24-hour charge is only for recovering a deeply discharged battery, not for normal charging.
+
+- If it still keeps restarting during startup, disconnect the cable and leave the device unused for about 7 days, then charge it again and try to power it on.
+
+- To avoid deep discharge, do not store the device with an empty or very low battery for a long time; recharge it when it drops below 20% and periodically during long-term storage.
 
 - If the device still does not respond after charging, `perform a hard reset` as followed: Unplug the USB cable. Press and hold the button, then plug in the USB cable while keeping the button pressed. Hold for approximately 3 seconds, then release it. This forces a system reset.
-
-**4) Re-install the bootloader**
 
 - If still no luck, try `re-install the bootloader`. Connect a USB cable to a computer. Hold the device button, then connect the device to the computer, see whether or not the a disk pop out in your PC. If so, [re-install the bootloader](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-bootloader).
 
@@ -451,7 +437,7 @@ The device will restart repeatedly, and the serial port connects and disconnects
 **Solution:**
 
 :::note
-If the device has been unused for an extended period, a deeply discharged battery may also cause repeated restarts during startup. In this case, first try the long-term storage battery recovery steps in [Device never turns on](https://wiki.seeedstudio.com/sensecap_t1000_e/#device-never-turns-on) before proceeding with the firmware recovery steps below.
+If the device has been unused for a long time, a deeply discharged battery may also cause repeated restarts during startup. Try the battery recovery steps in [Device never turns on](https://wiki.seeedstudio.com/sensecap_t1000_e/#device-never-turns-on) before the firmware recovery below.
 :::
 
 - Step 1: Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the charging cable twice, the green LED will be solid on.
