@@ -60,7 +60,7 @@ Designed for **24/7 reliability**, it features **wide voltage input (9-36V)**, *
 | **Ethernet**              | 1x 10/100/1000 Mbps, RJ45                                                       |
 | **USB**                   | 2x USB 3.2 Ports (USB-A); 1x USB 2.0 Port (USB-C for debug/update OS)          |
 | **Display**               | 2x Standard HDMI Ports, HDMI 2.0                                               |
-| **M.2 Slot**              | 1x USB 3.0 to M.2 (M-key 2280); 1x PCIe 3.0 to M.2 (M-key 2242)                 |
+| **M.2 Slot**              | 1x USB 3.0 to M.2 (M-key 2280); 1x PCIe 3.0 to M.2 (M-key 2242) with Hailo-8 AI Accelerator |
 | **Mini-PCIe**             | 1x Mini-PCIe for 4G/LoRaWAN module                                              |
 | **SIM Card**              | 1x Standard SIM Card Slot                                                       |
 | **LED**                   | 3x LEDs: Power / ACT / 4G                                                       |
