@@ -12,7 +12,7 @@ last_update:
   date: 05/13/2026
   author: Zeller
 createdAt: '2025-05-15'
-updatedAt: '2026-07-06'
+updatedAt: '2026-07-08'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_onboard/
 ---
 
@@ -41,17 +41,17 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_onboard/
   </table>
 </div>
 
-O XIAO nRF54LM20A Sense vem equipado com abundantes sensores integrados para dar suporte a aplicações em múltiplos cenários. Ele inclui o sensor de seis eixos LSM6DS3TR-C para reconhecimento de postura e o microfone digital MEMS MSM261DGT006, que suporta saída digital PDM e captação de som omnidirecional, sendo adequado para cenários de voz inteligente. Este artigo apresenta os métodos de desenvolvimento e uso com base nos ricos periféricos integrados do XIAO nRF54LM20A.
+O XIAO nRF54LM20A Sense está equipado com abundantes sensores integrados para suportar aplicações em múltiplos cenários. Ele inclui o sensor de seis eixos LSM6DS3TR-C para reconhecimento de postura e o microfone digital MEMS MSM261DGT006, que suporta saída digital PDM e captação de som omnidirecional, sendo adequado para cenários de voz inteligente. Este artigo apresenta os métodos de desenvolvimento e uso com base nos ricos periféricos integrados do XIAO nRF54LM20A.
 
 :::tip
 
-- Este artigo foi desenvolvido com base no sistema de build PlatformIO e no Zephyr RTOS. Se você não tiver experiência prévia com eles, consulte [Getting Started With SeeedStudio XIAO nRF54LM20A](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_sense_getting_started/)
+- Este artigo é desenvolvido com base no sistema de build PlatformIO e no Zephyr RTOS. Se você não tiver experiência prévia com eles, consulte [Getting Started With SeeedStudio XIAO nRF54LM20A](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_sense_getting_started/)
 
 :::
 
 ## Preparação de hardware
 
-Este artigo foi desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa preparar o hardware relevante com antecedência.
+Este artigo é desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa preparar o hardware relevante com antecedência.
 
 <div className="table-center">
 <table align="center">
@@ -80,7 +80,7 @@ Este artigo foi desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa 
 
 ## IMU
 
-O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor suporta saída de dados acionada por interrupção. Ele possui uma faixa de aceleração de escala completa de ±2/±4/±8/±16 g e uma faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir os dados.
+O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor suporta saída de dados acionada por interrupção. Ele possui uma faixa de aceleração de escala completa de ±2/±4/±8/±16 g e uma faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, e suporta modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir dados.
 :::tip
 
 - Para mais informações sobre o LSM6DS3TR-C, visite: [Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) e [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
@@ -109,14 +109,7 @@ O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de
                 imu_vdd: LDO1 {
                         regulator-min-microvolt = <3300000>;
                         regulator-max-microvolt = <3300000>;
-                        /*
-                         * Do not enable LDO1 during regulator driver init: the
-                         * nPM1300 sits on gpio-i2c, which may not be ready yet.
-                         * main() enables this rail before deferred IMU init.
-                         * Use /delete-property/ so this also overrides board
-                         * revisions that define regulator-boot-on themselves.
-                         */
-                        /delete-property/ regulator-boot-on;
+                        regulator-boot-on;
                 };
         };
 };
@@ -124,7 +117,6 @@ O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de
 &lsm6ds3tr_c {
         zephyr,deferred-init;
 };
-
 
 
 ```
@@ -388,8 +380,8 @@ Após gravar o firmware, você pode abrir o assistente de porta serial no seu PC
 
 :::tip
 
-1. Defina a taxa de baud para 115200 ao visualizar dados via monitor serial.
-2. Especifique a taxa de baud como 115200 no arquivo de configuração **platformio.ini** para o monitor serial da IDE PlatformIO.
+1. Defina a taxa de transmissão para 115200 ao visualizar dados via monitor serial.
+2. Especifique a taxa de transmissão como 115200 no arquivo de configuração **platformio.ini** para o monitor serial da IDE PlatformIO.
 
 ```ini
 [env:seeed-xiao-nrf54lm20a]
@@ -405,16 +397,16 @@ monitor_speed = 115200
 
 ### Aplicação
 
-A IMU pode fundir dados de aceleração de três eixos para calcular os ângulos de atitude de pitch, yaw e roll para reconhecimento de postura. Ela também pode trabalhar com controladores correspondentes para realizar controle de movimento, ou ser aplicada em cenários de baixo consumo, como despertar acionado por atitude.
+A IMU pode fundir dados de aceleração de três eixos para calcular os ângulos de atitude de pitch, yaw e roll para reconhecimento de postura. Ela também pode trabalhar com controladores correspondentes para realizar controle de movimento, ou ser aplicada em cenários de baixo consumo de energia, como despertar acionado por atitude.
 
 #### Oceano Eletrônico
 
-Este é um exemplo baseado na IMU integrada do XIAO nRF54LM20A Sense. Ele coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, alcançando efeitos visuais de ritmo oceânico.
+Este é um exemplo baseado na IMU integrada da XIAO nRF54LM20A Sense. Ele coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, alcançando efeitos visuais de ritmo oceânico.
 
 - **Controle de nível de água por inclinação** — Ajuste a altura do nível de água por meio da inclinação de roll para a esquerda e para a direita
 - **Animação de ondas** — Superfície de ondas com sobreposição de três camadas de frequência, propagação de ondas 2D e efeito de reflexão nas bordas
 - **Inércia do fluido** — Superfície da água com momento; inclinação rápida causa overshoot e subsequente oscilação de retorno
-- **Detecção de giro** — A exibição é automaticamente espelhada quando a placa é virada
+- **Detecção de inversão** — A exibição é espelhada automaticamente quando a placa é virada
 - **Cor dinâmica** — Troca de tons oceânicos em gradiente aleatório para cada coluna
 
 Além disso, você pode modificar a configuração da matriz RGB da placa por meio de definições de macro em main.c.
@@ -512,7 +504,7 @@ Além disso, você pode modificar a configuração da matriz RGB da placa por me
 };
 ```
 
-3. Ative as configurações relacionadas ao uso da IMU
+3. Habilite as configurações relacionadas ao uso da IMU
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -548,13 +540,13 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### Despertar por IMU
 
-Nesta rotina, o canal verde dos LEDs RGB acende e apaga após a energização, então o sistema entra em modo de sono de ultrabaixo consumo. Quando um toque é detectado pela placa, a XIAO nRF54LM20A Sense será despertada via interrupção. O evento de toque será registrado e impresso pela porta serial.
+Nesta rotina, o canal verde do RGB acende e apaga após a energização, e então o sistema entra em modo de sono de ultrabaixo consumo. Quando um toque é detectado pela placa, o XIAO nRF54LM20A Sense será despertado via interrupção. O evento de toque será registrado e impresso pela porta serial.
 
 Baixe a rotina para implementar a função de despertar por IMU.
 
-1. Baixe o programa [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) e substitua o conteúdo de main.c por ele.
+1. Baixe o programa [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) e substitua com ele o conteúdo de main.c.
 
-2. Modifique o arquivo de árvore de dispositivo `app.overlay` e adicione as configurações de nó necessárias.
+2. Modifique o arquivo de árvore de dispositivo `app.overlay` e adicione as configurações de nós necessárias.
 
 ```dts
 /*
@@ -624,7 +616,7 @@ Baixe a rotina para implementar a função de despertar por IMU.
 };
 ```
 
-3. Ative as configurações relevantes da IMU em prj.conf
+3. Habilite as configurações relevantes da IMU em prj.conf
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -650,7 +642,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
 <br/>
-- Após gravar e ligar, o LED RGB-G piscará brevemente. Toque em qualquer lugar na placa para acender o LED RGB-G.
+- Após gravar e ligar, o LED RGB-G piscará brevemente. Toque em qualquer lugar da placa para acender o LED RGB-G.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_3_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -666,15 +658,15 @@ A posição de detecção é apenas para referência. O reconhecimento preciso d
 
 ## RTC
 
-O chip adotado pelo XIAO nRF54LM20A Sense é equipado com recursos de hardware GRTC integrados, permitindo funções de RTC sem módulos RTC adicionais.
+O chip adotado pela XIAO nRF54LM20A Sense é equipado com recursos de hardware GRTC integrados, permitindo funções de RTC sem módulos RTC adicionais.
 
-O RTC oferece suporte à contagem de carimbos de data e hora e pode registrar o tempo de operação mesmo após uma queda de energia, o que facilita o registro de logs e o rastreamento de tempo.
+O RTC oferece suporte à contagem de carimbos de data e hora e pode registrar o tempo de operação mesmo após uma falha de energia, o que facilita o registro de logs e o rastreamento de tempo.
 
-Esta seção apresenta um programa de exemplo implementado no XIAO nRF54LM20A Sense. Após ligar, ele obtém carimbos de data/hora a partir do horário de compilação via RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será acordado pelo alarme do RTC para continuar a contagem.
+Esta seção apresenta um programa de exemplo implementado no XIAO nRF54LM20A Sense. Após a energização, ele obtém carimbos de data e hora a partir do horário de compilação via RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será acordado pelo alarme do RTC para continuar a contagem.
 
-1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções do RTC para imprimir o carimbo de data/hora.
+1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções de RTC para imprimir o carimbo de data e hora.
 
-2. Modifique a árvore de dispositivos `app.overlay` para habilitar o nó do RTC.
+2. Modifique a árvore de dispositivo `app.overlay` para habilitar o nó do RTC.
 
 ```dts
 / {
@@ -734,120 +726,141 @@ CONFIG_NEWLIB_LIBC=y
 
 ### Resultado
 
-- O programa começa a contar a partir do horário de compilação e gravação. Abra a ferramenta de porta serial para observar o efeito de execução, e todas as funções esperadas são implementadas.
+- O programa começa a contar a partir do momento de compilação e gravação. Abra a ferramenta de porta serial para observar o efeito de execução, e todas as funções esperadas são implementadas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 ## MIC 
 
-O XIAO nRF54LM20A Sense é equipado com o microfone digital MEMS MSM261DGT006 para entrada de voz. Ele se conecta diretamente via interface PDM sem necessidade de um ADC. É adequado para dispositivos vestíveis, dispositivos inteligentes, reconhecimento de voz, gravação de áudio e outros cenários de aplicação que exigem funções de detecção acústica.
+O XIAO nRF54LM20A Sense está equipado com o microfone digital MEMS MSM261DGT006 para entrada de voz. Ele se conecta diretamente via interface PDM sem necessidade de um ADC. É adequado para dispositivos vestíveis, dispositivos inteligentes, reconhecimento de voz, gravação de áudio e outros cenários de aplicação que exigem funções de detecção acústica.
 
 :::tip
 
-Entre a série XIAO nRF54LM20A, apenas o XIAO nRF54M20A Sense é equipado com um microfone, que está localizado no canto inferior esquerdo da placa de desenvolvimento.
+Entre a série XIAO nRF54LM20A, apenas o XIAO nRF54M20A Sense está equipado com um microfone, que está localizado no canto inferior esquerdo da placa de desenvolvimento.
 
 :::
 
-### Gravação de Áudio e Upload via BLE
+### Gravação de áudio e upload via BLE
 
 Esta seção demonstra a função do microfone por meio de um exemplo de voz. O processo específico é o seguinte:
 
-- Pressione o botão BOOT, o LED RGB-G permanecerá aceso e iniciará a gravação; pressione novamente para parar a gravação (máximo de 10 segundos).
-- Após a gravação, o arquivo de áudio será enviado ao computador host via Bluetooth. O LED RGB-G pisca durante a transmissão.
-- Execute o script de recepção no Windows para salvar o arquivo de áudio no diretório `./recordings`.
+- Pressione o botão BOOT, o LED RGB-G permanecerá aceso e iniciará a gravação; pressione-o novamente para parar a gravação (máximo de 10 segundos).
+- Após a gravação, o arquivo de áudio será enviado para o computador host via Bluetooth. O LED RGB-G pisca durante a transmissão.
+- Execute o script de recepção no Windows para salvar o arquivo de áudio na área de trabalho.
 - O LED RGB-G apaga após a conclusão da transmissão.
 
-1. Copie o programa de <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> para `main.c`.
+1. Copie o programa de <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> para `main.c`.
 
-2. Modifique o arquivo de árvore de dispositivos `app.overlay` para vincular o nó BLE.
+2. Modifique o arquivo de árvore de dispositivo `app.overlay` para vincular o nó BLE.
 
 ```dts
-/*
- * XIAO nRF54LM20A BLE recorder devicetree overlay
- *
- * Logging uses RTT over SWD (CONFIG_LOG_BACKEND_RTT in prj.conf).
- * USB CDC is disabled because the board USB-C connector is attached to the
- * debugger and MCU VBUS is unavailable. Waiting for VBUS would block boot.
- */
 
-/* Disable USB controllers to avoid waiting for unavailable VBUS. */
-&usbhs {
-	status = "disabled";
-};
-
-&vregusb {
-	status = "disabled";
-};
-
-/* Enable the PDM microphone interface. */
-&pdm20 {
+dmic_dev: &pdm20 {
 	status = "okay";
 };
 
-/* Enable the external 8 MB SPI NOR flash used for PCM storage. */
-&py25q64 {
+/* Disable Nordic SoftDevice Controller (not available in mainline Zephyr) */
+&bt_hci_sdc {
+	status = "disabled";
+};
+
+/* Enable Zephyr native BLE controller (LL SW Split) */
+&bt_hci_controller {
 	status = "okay";
+};
+
+&pwm20 {
+	status = "disabled";
+};
+
+&pmic_i2c {
+	sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
+	scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
+	status = "okay";
+};
+
+&pmic {
+	regulators {
+		dmic_vdd: LDO1 {
+			regulator-min-microvolt = <3300000>;
+			regulator-max-microvolt = <3300000>;
+			regulator-boot-on;
+		};
+	};
+};
+
+&uart20 {
+	current-speed = <921600>;
 };
 
 / {
 	chosen {
 		zephyr,bt-hci = &bt_hci_controller;
 	};
+
+	leds {
+		compatible = "gpio-leds";
+		led2: led_2 {
+			gpios = <&gpio1 24 GPIO_ACTIVE_LOW>;
+		};
+	};
 };
 
-/* dmic_vdd is the board-defined nPM1300 LDO1 3.3 V supply. The application
- * enables it at runtime. power_en is defined by the board devicetree.
- */
-&dmic_vdd {
-	/delete-property/ regulator-boot-on;
+/* External 8MB SPI NOR Flash for audio storage */
+&py25q64 {
+	status = "okay";
 };
 ```
 
-2. Modifique o arquivo `prj.conf` para habilitar as configurações de Bluetooth e microfone, e defina o nome do dispositivo Bluetooth como **XIAO-MIC**.
+2. Modifique o arquivo `prj.conf` para habilitar as configurações de Bluetooth e microfone, e defina o nome do dispositivo Bluetooth como **XIAO MIC**.
 
 ```prj
-# ===== Audio / DMIC =====
+# Audio / DMIC
 CONFIG_AUDIO=y
 CONFIG_AUDIO_DMIC=y
 
-# ===== GPIO =====
+# GPIO
 CONFIG_GPIO=y
 
-# I2C and PMIC support for the nPM1300 microphone supply
+# I2C / PMIC
 CONFIG_I2C=y
 CONFIG_MFD=y
 CONFIG_REGULATOR=y
 
-# Logging over RTT via SWD
+# Logging
 CONFIG_LOG=y
-# Immediate logging is incompatible with the BLE software Link Layer.
-# Deferred logging flushes messages to RTT from the system workqueue.
-# USB CDC is disabled because MCU VBUS is unavailable on this board design.
-CONFIG_USE_SEGGER_RTT=y
-CONFIG_LOG_BACKEND_RTT=y
-CONFIG_LOG_BACKEND_RTT_MODE_DROP=y
 
-# Serial and console
+# UART for console logging
 CONFIG_SERIAL=y
-CONFIG_CONSOLE=y
-CONFIG_UART_CONSOLE=y
+CONFIG_UART_ASYNC_API=y
+CONFIG_UART_20_ASYNC=y
+CONFIG_UART_21_ASYNC=y
+CONFIG_UART_NRFX_UARTE_ENHANCED_RX=y
 
-# Disable the Arm MPU for compatibility with early LM20A silicon.
-CONFIG_ARM_MPU=n
-
-# ===== BLE =====
+# BLE
 CONFIG_BT=y
 CONFIG_BT_PERIPHERAL=y
 CONFIG_BT_DEVICE_NAME="XIAO-MIC"
 CONFIG_BT_DEVICE_APPEARANCE=833
 CONFIG_BT_MAX_CONN=1
 CONFIG_BT_MAX_PAIRED=1
+
+# BLE log level: ERR only.  Fixed 30 ms application pacing prevents
+# buffer exhaustion; this just silences WRN/INF noise from the stack.
 CONFIG_BT_LOG_LEVEL_ERR=y
+
+# Disable auto-procedures to avoid LL Procedure Collision (reason 35)
+# on nRF54L with Zephyr native BLE controller
 CONFIG_BT_AUTO_PHY_UPDATE=n
 CONFIG_BT_GAP_AUTO_UPDATE_CONN_PARAMS=n
 CONFIG_BT_CTLR_CONN_PARAM_REQ=n
+
+# Disable data length auto-update (can also cause LL races)
 CONFIG_BT_DATA_LEN_UPDATE=n
+
+# BLE buffer tuning for high-throughput NUS notifications
+# nRF54LM20A has 1.5MB RAM, generous buffer allocation
 CONFIG_BT_BUF_ACL_TX_SIZE=251
 CONFIG_BT_BUF_ACL_TX_COUNT=32
 CONFIG_BT_BUF_EVT_RX_COUNT=33
@@ -857,20 +870,27 @@ CONFIG_BT_L2CAP_TX_BUF_COUNT=24
 CONFIG_BT_L2CAP_TX_FRAG_COUNT=12
 CONFIG_BT_ATT_TX_COUNT=24
 CONFIG_BT_CONN_TX_MAX=32
+
+# Note: BT_CTLR_DATA_LENGTH is selected indirectly (e.g. by BT_DATA_LEN_UPDATE).
+# It cannot be set directly, so BT_CTLR_DATA_LENGTH_MAX is also omitted.
+
+# BLE NUS
 CONFIG_BT_ZEPHYR_NUS=y
 CONFIG_BT_ZEPHYR_NUS_DEFAULT_INSTANCE=y
 
 # Memory
 CONFIG_HEAP_MEM_POOL_SIZE=16384
+
+# System workqueue stack (increased for BLE work items)
 CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=4096
 
-# External SPI NOR flash (8 MB PY25Q64HA)
+# External SPI NOR Flash (8MB PY25Q64HA)
 CONFIG_SPI=y
 CONFIG_SPI_NOR=y
 CONFIG_FLASH=y
 CONFIG_FLASH_PAGE_LAYOUT=y
 
-# Assertions
+# Assert level
 CONFIG_ASSERT=y
 CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
 
@@ -897,160 +917,140 @@ Copie o arquivo de script em Python.
 <summary>ble_recorder_receiver.py</summary>
 
 ```py
-#!/usr/bin/env python3
 """
-BLE recorder receiver for the XIAO nRF54LM20A.
+BLE Audio Receiver for XIAO nRF54LM20A BLE Audio Recorder
 
-Continuously scans for "XIAO-MIC", connects, subscribes to NUS notifications,
-saves WAV data, and reconnects automatically. Each RIFF header starts a new file.
+Connects to "XIAO-MIC" via BLE, subscribes to Nordic UART Service (NUS)
+notifications, receives WAV audio data, and saves it to a file.
 
-Usage:       python ble_recorder_receiver.py
-Dependency:  pip install bleak
+Requirements: pip install bleak
 
-Firmware operation:
-  Press BOOT once to begin recording (green LED on).
-  Press BOOT again, or wait 10 seconds, to begin transfer (green LED blinking).
-  The green LED turns off when the transfer is complete.
+Usage: python ble_recorder_receiver.py
 """
 
 import asyncio
-import os
 import sys
+import os
 from datetime import datetime
 
-from bleak import BleakClient, BleakError, BleakScanner
+from bleak import BleakScanner, BleakClient, BleakError
 
-NUS_SERVICE_UUID = "6e400001-b5a3-f393-e0a9-e50e24dcca9e"
-NUS_TX_CHAR_UUID = "6e400003-b5a3-f393-e0a9-e50e24dcca9e"  # Device-to-host notifications
+# Nordic UART Service (NUS) UUIDs
+NUS_SERVICE_UUID = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
+NUS_TX_CHAR_UUID = "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"  # Notify (device -> host)
 
 DEVICE_NAME = "XIAO-MIC"
 OUTPUT_DIR = "./recordings"
-SCAN_TIMEOUT = 10.0
-RECONNECT_DELAY = 2.0
-RIFF_MAGIC = b"RIFF"
-WAV_HEADER_SIZE = 44
-WAV_DATA_SIZE_OFFSET = 40
 
 
-class RecordingWriter:
-    """Write NUS notification data to WAV files, splitting on RIFF headers."""
-
-    def __init__(self):
-        self.path = None
-        self.file = None
-        self.total = 0
-        self.expected_total = None
-        self.header = bytearray()
-
-    def _open(self):
-        os.makedirs(OUTPUT_DIR, exist_ok=True)
-        stamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-        self.path = os.path.join(OUTPUT_DIR, f"recording_{stamp}.wav")
-        self.file = open(self.path, "wb")
-        self.total = 0
-        self.expected_total = None
-        self.header.clear()
-        print(f"\nNew recording -> {self.path}")
-
-    def on_notification(self, _sender, data):
-        # Finalize the current file before starting a new RIFF stream.
-        if data[:4] == RIFF_MAGIC and self.total > 0:
-            self.close()
-        if self.file is None:
-            self._open()
-        self.file.write(data)
-        self.total += len(data)
-
-        if len(self.header) < WAV_HEADER_SIZE:
-            needed = WAV_HEADER_SIZE - len(self.header)
-            self.header.extend(data[:needed])
-            if len(self.header) == WAV_HEADER_SIZE and self.header[:4] == RIFF_MAGIC:
-                data_size = int.from_bytes(
-                    self.header[WAV_DATA_SIZE_OFFSET:WAV_HEADER_SIZE],
-                    byteorder="little",
-                )
-                self.expected_total = WAV_HEADER_SIZE + data_size
-
-        sys.stdout.write(f"\rReceiving: {self.total} bytes")
-        sys.stdout.flush()
-
-        if self.expected_total is not None and self.total >= self.expected_total:
-            self.close()
-
-    def close(self):
-        if self.file:
-            self.file.flush()
-            self.file.close()
-            self.file = None
-            if self.total > 44:
-                tag = "WAV, playable"
-            elif self.total > 0:
-                tag = "incomplete (header only)"
-            else:
-                tag = "empty"
-            print(f"\nSaved: {self.path} ({self.total} bytes) [{tag}]")
-            self.total = 0
-            self.expected_total = None
-            self.header.clear()
-
-
-async def connect_and_receive(writer):
-    while True:
-        print(f"\nScanning for '{DEVICE_NAME}'...")
-        device = await BleakScanner.find_device_by_name(DEVICE_NAME,
-                                                         timeout=SCAN_TIMEOUT)
-        if device is None:
-            print(f"Not found, retrying in {RECONNECT_DELAY:.0f}s"
-                  " (check: board powered on, Bluetooth enabled)")
-            await asyncio.sleep(RECONNECT_DELAY)
-            continue
-
-        print(f"Found: {device.name} ({device.address}), connecting...")
-        disconnect_event = asyncio.Event()
-
-        def on_disconnect(_c):
-            disconnect_event.set()
-
-        try:
-            async with BleakClient(
-                device.address,
-                disconnected_callback=on_disconnect,
-                timeout=30.0,
-                services=[NUS_SERVICE_UUID],
-            ) as client:
-                print("Connected")
-                await client.start_notify(NUS_TX_CHAR_UUID,
-                                          writer.on_notification)
-                print("Subscribed to NUS, waiting for audio data...")
-                print("(Press BOOT on the board to record; press again or wait 10s to transfer)")
-                await disconnect_event.wait()
-        except BleakError as e:
-            print(f"\nBLE error: {e}")
-        except asyncio.TimeoutError:
-            print("\nConnection timed out")
-
-        writer.close()
-        print(f"Disconnected, reconnecting in {RECONNECT_DELAY:.0f}s...")
+def make_output_path():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    return os.path.join(OUTPUT_DIR, f"recording_{timestamp}.wav")
 
 
 async def main():
-    print(f"=== BLE receiver '{DEVICE_NAME}', Ctrl+C to quit ===\n")
-    writer = RecordingWriter()
+    output_path = make_output_path()
+    total_bytes = 0
+    transfer_complete = asyncio.Event()
+    connected = False
+
+    def notification_handler(sender, data):
+        nonlocal total_bytes
+        with open(output_path, "ab") as f:
+            f.write(data)
+        total_bytes += len(data)
+        sys.stdout.write(f"\rReceived: {total_bytes} bytes")
+        sys.stdout.flush()
+
+    def disconnected_callback(client):
+        nonlocal connected
+        connected = False
+        print("\nDevice disconnected")
+        transfer_complete.set()
+
+    client = None
     try:
-        await connect_and_receive(writer)
-    except KeyboardInterrupt:
-        pass
+        # Step 1: scan with active scanning (find_device_by_name does active scan)
+        print(f"Scanning for '{DEVICE_NAME}'...")
+        device = await BleakScanner.find_device_by_name(
+            DEVICE_NAME, timeout=10.0,
+        )
+
+        if device is None:
+            print(f"Device '{DEVICE_NAME}' not found. Check:")
+            print("  1. XIAO is powered on")
+            print("  2. PC Bluetooth is enabled")
+            sys.exit(1)
+
+        print(f"Found: {device.name} ({device.address})")
+
+        # Step 2: connect with service UUID filtering
+        # By specifying the NUS service UUID, we help Windows discover only what we need
+        print("Connecting (this may take up to 30s on Windows)...")
+
+        client = BleakClient(
+            device.address,
+            disconnected_callback=disconnected_callback,
+            timeout=30.0,
+            services=[NUS_SERVICE_UUID],
+        )
+        await client.connect()
+        connected = True
+        print("Connected")
+
+        # Step 3: subscribe to notifications
+        await client.start_notify(NUS_TX_CHAR_UUID, notification_handler)
+        print("Subscribed to NUS TX notifications")
+        print(f"Saving to: {output_path}")
+        print()
+        print("Waiting for audio data... Press Ctrl+C to stop.")
+        print("On the XIAO: press BOOT button once to start recording,")
+        print("press again (or wait 10s) to stop and transfer.\n")
+
+        try:
+            await asyncio.wait_for(
+                transfer_complete.wait(),
+                timeout=600.0,
+            )
+        except asyncio.TimeoutError:
+            print("\nTimeout: no activity for 10 minutes")
+        except KeyboardInterrupt:
+            print("\nStopped by user")
+
+    except (BleakError, asyncio.TimeoutError) as e:
+        print(f"\nBLE error: {e}")
+        print()
+        print("Windows BLE workarounds:")
+        print("  1. Windows Settings > Bluetooth & devices > Devices")
+        print("     Remove 'XIAO-MIC' if listed")
+        print("  2. Toggle Bluetooth OFF then ON")
+        print("  3. Reset XIAO board (replug USB)")
+        print("  4. Reboot PC if all else fails")
+        sys.exit(1)
     finally:
-        writer.close()
-        print("Stopped.")
+        if client and connected:
+            try:
+                await client.stop_notify(NUS_TX_CHAR_UUID)
+                await client.disconnect()
+            except Exception:
+                pass
+
+    file_size = os.path.getsize(output_path) if os.path.exists(output_path) else 0
+    print(f"\n{'='*50}")
+    print(f"Saved: {output_path}")
+    print(f"File size: {file_size} bytes")
+    if file_size > 44:
+        print("Valid WAV file, ready to play")
+    elif file_size > 0:
+        print("File may be incomplete (header only)")
+    else:
+        print("No data received")
+    print(f"{'='*50}")
 
 
 if __name__ == "__main__":
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        print("\nStopped.")
-
+    asyncio.run(main())
 ```
 
 </details>
@@ -1073,7 +1073,7 @@ O UUID BLE já está configurado no programa Python, portanto a conexão será f
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- Abra a porta serial; o log será impresso. Defina a taxa de baud para 921600.
+- Abra a porta serial, ela irá imprimir o log. Defina a taxa de transmissão para 921600.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>

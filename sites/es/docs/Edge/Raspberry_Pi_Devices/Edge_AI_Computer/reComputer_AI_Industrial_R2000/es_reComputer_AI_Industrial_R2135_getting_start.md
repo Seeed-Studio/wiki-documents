@@ -1,9 +1,9 @@
 ---
-description: reComputer AI R2000 es un potente ordenador de IA perimetral basado en Raspberry Pi 5. Con un procesador Arm Cortex-A76 de cuatro núcleos, 8GB de RAM, compatibilidad con M.2 SSD y un módulo de aceleración de IA Hailo-8 que proporciona hasta 26 TOPS, permite inferencias de IA en tiempo real, de baja latencia y alta eficiencia. Es la elección perfecta para una amplia gama de aplicaciones de IA, incluyendo analítica de vídeo con IA, visión artificial y computación inteligente en el edge.
-title: Primeros pasos con reComputer AI Industrial R2135 Serie
+description: reComputer AI R2000 es un potente ordenador Edge AI basado en Raspberry Pi 5. Con un procesador Arm Cortex-A76 de cuatro núcleos, 8GB de RAM, soporte para M.2 SSD y un módulo de aceleración de IA Hailo-8 que proporciona hasta 26 TOPS, permite inferencias de IA en tiempo real, de baja latencia y alta eficiencia. Es la elección perfecta para una amplia gama de aplicaciones de IA, incluyendo analítica de vídeo con IA, visión artificial y computación inteligente en el edge.
+title: Introducción a reComputer AI Industrial R2135 Serie
 keywords:
   - Raspberry pi
-  - Ordenador de IA perimetral
+  - Ordenador Edge AI
   - reComputer R2000
 image: https://files.seeedstudio.com/wiki/AI-box-cm5/r2135.webp
 slug: /recomputer_ai_industrial_r2135_getting_start
@@ -24,17 +24,17 @@ url: https://wiki.seeedstudio.com/es/recomputer_ai_industrial_r2135_getting_star
     </a>
 </div>
 
-El **reComputer AI Industrial R2135** está impulsado por **Raspberry Pi CM5** y el **acelerador de IA Hailo**; este compacto **sistema de IA perimetral** ofrece **26 TOPS** para **procesamiento de visión multicanal en tiempo real**. Con una **CPU Cortex-A76 de cuatro núcleos**, hasta **16GB de RAM**, **64GB eMMC** y una **interfaz versátil**, garantiza una integración fluida en **aplicaciones de IA industriales**.
+El **reComputer AI Industrial R2135** está impulsado por **Raspberry Pi CM5** y el **acelerador de IA Hailo**, este compacto **sistema de edge AI** ofrece **26 TOPS** para **procesamiento de visión multicanal** en tiempo real. Con una **CPU Cortex-A76 de cuatro núcleos**, hasta **16GB de RAM**, **64GB eMMC** y una **interfaz versátil**, garantiza una integración fluida en **aplicaciones de IA industriales**.
 
-Diseñado para una **fiabilidad 24/7**, incorpora **entrada de voltaje amplio (9-36V)**, **watchdog de hardware** y **refrigeración robusta**, funcionando de forma estable en entornos de **-20°C a 65°C**. Ideal para **fábricas inteligentes**, **vigilancia** y **AIoT**, esta solución lleva una **potente computación de IA** al **borde**.
+Diseñado para una **fiabilidad 24/7**, incorpora **entrada de voltaje amplio (9-36V)**, **watchdog de hardware** y **refrigeración robusta**, funcionando de forma estable en entornos de **-20°C a 65°C**. Ideal para **fábricas inteligentes**, **vigilancia** y **AIoT**, esta solución lleva una **potente computación de IA** al **edge**.
 
 ## Características
 
-- **Fiabilidad de grado industrial**: Chasis de aluminio con soporte de temperatura amplia de -20°C a 65°C, RTC y watchdog de hardware para un funcionamiento estable 24/7.
+- **Fiabilidad de grado industrial**: Chasis de aluminio con soporte de temperatura amplia de -20°C a 65°C, RTC, watchdog de hardware, para un funcionamiento estable 24/7.
 
-- **Rendimiento potente**: Impulsado por Raspberry Pi CM5 con CPU Cortex-A76 de cuatro núcleos, hasta 16GB de RAM y 64GB eMMC.
+- **Rendimiento potente**: Impulsado por Raspberry Pi CM5 con CPU Cortex-A76 de cuatro núcleos, hasta 16GB de RAM, 64GB eMMC.
 
-- **Computación de IA de alta eficiencia**: Impulsado por el acelerador de IA Hailo-8 de hasta 26 TOPS para procesamiento de visión de múltiples canales con IA.
+- **Computación de IA de alta eficiencia**: Impulsado por el acelerador de IA Hailo-8 de hasta 26 TOPS para procesamiento de visión de IA en múltiples canales.
 
 - **Conectividad extensa**: 2x HDMI2.0, 1x Ethernet Gigabit, 2x USB 3.2, 1x USB-C, doble ranura M.2 y Mini-PCIe para expansión 4G/LoRa.
 
@@ -46,21 +46,21 @@ Diseñado para una **fiabilidad 24/7**, incorpora **entrada de voltaje amplio (9
 
 | **Categoría**              | **Parámetros**                                                                 |
 |--------------------------|---------------------------------------------------------------------------------|
-| **Especificaciones de hardware**         |                                                                                 |
+| **Especificación de hardware**         |                                                                                 |
 | **CPU**                   | Raspberry Pi Compute Module 5, Arm Cortex-A76 de 64 bits y cuatro núcleos a 2.4GHz          |
 | **GPU**                   | Raspberry Pi Compute Module 5, VideoCore VII                                   |
 | **Procesador de IA**          | Hailo-8 M.2 Acceleration Stick, 26 TOPS (Tera-Operations Per Second)           |
 | **RAM**                   | 8GB SDRAM                                                                      |
 | **eMMC**                  | 32GB                                                                            |
 | **Sistema operativo**      | Raspbian, Debian                                                               |
-| **Especificaciones del sistema**           |                                                                                 |
+| **Especificación del sistema**           |                                                                                 |
 | **Entrada de alimentación**           | DC 9V~36V, bloque de terminales de 2 pines                                                 |
 | **Decodificador de vídeo**         | Decodificador HEVC 4Kp60                                                              |
 | **Interfaz**             |                                                                                 |
 | **Ethernet**              | 1x 10/100/1000 Mbps, RJ45                                                       |
 | **USB**                   | 2x puertos USB 3.2 (USB-A); 1x puerto USB 2.0 (USB-C para depuración/actualización del SO)          |
 | **Pantalla**               | 2x puertos HDMI estándar, HDMI 2.0                                               |
-| **Ranura M.2**              | 1x USB 3.0 a M.2 (M-key 2280); 1x PCIe 3.0 a M.2 (M-key 2242) con acelerador de IA Hailo-8 |
+| **Ranura M.2**              | 1x USB 3.0 a M.2 (M-key 2280); 1x PCIe 3.0 a M.2 (M-key 2242)                 |
 | **Mini-PCIe**             | 1x Mini-PCIe para módulo 4G/LoRaWAN                                              |
 | **Tarjeta SIM**              | 1x ranura para tarjeta SIM estándar                                                       |
 | **LED**                   | 3x LED: Alimentación / ACT / 4G                                                       |
@@ -68,7 +68,7 @@ Diseñado para una **fiabilidad 24/7**, incorpora **entrada de voltaje amplio (9
 | **Comunicación inalámbrica**|                                                                                 |
 | **Wi-Fi 2.4/5.0 GHz**     | Wi-Fi 5 integrado                                                                 |
 | **BLE 5.0**               | BLE 5.0 integrado                                                                 |
-| **Red celular 4G**           | 4G LTE (opcional)                                                               |
+| **4G Celular**           | 4G LTE (opcional)                                                               |
 | **LoRa®**                 | USB LoRa® / SPI LoRa® (opcional)                                               |
 | **Condiciones ambientales**    |                                                                                 |
 | **Grado de protección**    | IP40                                                                            |
@@ -81,9 +81,9 @@ Diseñado para una **fiabilidad 24/7**, incorpora **entrada de voltaje amplio (9
 | **Seguridad**              | Chip de cifrado TPM2.0 / ATECC608A (opcional)                                   |
 | **Disipación de calor**      | Disipador con ventilador                                                               |
 | **Garantía**              | 2 años                                                                         |
-| **Vida útil del producto**   | Hasta diciembre de 2036                                                             |
+| **Vida útil de producción**   | Hasta diciembre de 2036                                                             |
 | **Mecánico**            |                                                                                 |
-| **Dimensiones (An x Al x Pr)**| 130mm × 93mm × 55.5mm                                                           |
+| **Dimensiones (W x H x D)**| 130mm × 93mm × 55.5mm                                                           |
 | **Carcasa**             | Caja de aleación de aluminio con paneles laterales de PC                                      |
 | **Montaje**              | Montaje en carril DIN / pared                                                           |
 | **Peso (neto)**          | 688g                                                                            |
@@ -95,7 +95,7 @@ Diseñado para una **fiabilidad 24/7**, incorpora **entrada de voltaje amplio (9
 
 ### Introducción de hardware
 
-[Hailo](https://hailo.ai/) ofrece procesadores de IA de vanguardia diseñados específicamente para aplicaciones de deep learning de alto rendimiento en dispositivos perimetrales. Las soluciones de la compañía se centran en habilitar la próxima era de IA generativa en el edge, junto con percepción y mejora de vídeo, impulsadas por avanzados aceleradores de IA y procesadores de visión. Y el reComputer_R2000, equipado con el acelerador NPU Hailo-8 que proporciona 26 TOPs de rendimiento de IA, es capaz de alcanzar más de 200 FPS con YOLOv8s.
+[Hailo](https://hailo.ai/) ofrece procesadores de IA de vanguardia diseñados específicamente para aplicaciones de deep learning de alto rendimiento en dispositivos edge. Las soluciones de la compañía se centran en habilitar la próxima era de IA generativa en el edge, junto con percepción y mejora de vídeo, impulsadas por avanzados aceleradores de IA y procesadores de visión. Y el reComputer_R2000, equipado con el acelerador NPU Hailo-8 que proporciona 26 TOPs de rendimiento de IA, es capaz de alcanzar más de 200 FPS con YOLOv8s.
 
 ### Introducción de software
 
@@ -112,7 +112,7 @@ El Hailo AI Software Suite proporciona potentes herramientas para ejecutar model
 
 ![image1](https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-recomputer.png)
 
-Para consultar las asignaciones y desplazamientos de los GPIO, utiliza el siguiente comando:
+Para consultar los mapeos y desplazamientos de GPIO, utiliza el siguiente comando:
 
 ```
 cat /sys/kernel/debug/gpio
@@ -254,13 +254,13 @@ gpiochip0: GPIOs 569-622, parent: platform/1f000d0000.gpio, pinctrl-rp1:
 
 ![image1](https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_power_diagram.png)
 
-El reComputer AI Industrial R2135 admite un amplio rango de voltaje de entrada de CC de 9V–36V y utiliza internamente convertidores DCDC de múltiples etapas para generar rieles de alimentación de 5V, 3.3V, 1.2V y 1.0V. Estos voltajes proporcionan energía estable al procesador principal, puertos USB, HDMI, expansiones M.2, audio, RTC y otros módulos periféricos, garantizando un funcionamiento fiable en diversos escenarios de aplicación.
+El reComputer AI Industrial R2135 admite un amplio rango de voltaje de entrada de CC de 9 V a 36 V y utiliza internamente convertidores DCDC de múltiples etapas para generar rieles de alimentación de 5 V, 3,3 V, 1,2 V y 1,0 V. Estos voltajes proporcionan energía estable al procesador principal, puertos USB, HDMI, expansiones M.2, audio, RTC y otros módulos periféricos, garantizando un funcionamiento fiable en diversos escenarios de aplicación.
 
 ##### Terminal de alimentación de 2 pines
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_Two_Pin_Terminal.jpg" style={{width:150, height:'auto'}}/></div>
 
-El reComputer AI Industrial R2135 se alimenta con un voltaje de CC de 9~36V a través de un terminal. La fuente de alimentación se conecta mediante el conector de bloque de terminales de alimentación de 2 pines. Para conectar a tierra el reComputer AI Industrial R2135, el cable de tierra se puede fijar al tornillo situado en la esquina superior izquierda del terminal de alimentación.
+El reComputer AI Industrial R2135 se alimenta con un voltaje de CC de 9~36 V a través de un terminal. La fuente de alimentación se conecta mediante el conector de bloque de terminal de alimentación de 2 pines. Para poner a tierra el reComputer AI Industrial R2135, el cable de tierra se puede fijar al tornillo situado en la esquina superior izquierda del terminal de alimentación.
 
 #### Consumo de energía
 
@@ -269,12 +269,12 @@ Consulta la siguiente tabla para conocer el consumo de energía probado del reCo
 | **Estado**        | **Voltaje** | **Corriente** | **Consumo de energía** |**Descripción** |
 |----------------------|----------------------|----------------------|----------------------|----------------------|
 |**Apagado**|12V   |   1.1mA|   0.013W|   Prueba de consumo de energía estático en estado de apagado y sin alimentación.|
-|**Inactivo**|12V|208mA|2.42W|Para probar la corriente de entrada al suministrar 24V de alimentación al dispositivo reComputer AI Industrial R2135 sin ejecutar ningún programa de prueba.|
-|**Carga completa**|12V|2.08A|24.2W| Configurar la CPU para que funcione a carga completa usando el comando "stress -c 4". El USB viene con una carga de 1A.|
+|**Inactivo**|12V|208mA|2.42W|Para probar la corriente de entrada al suministrar 24 V de alimentación al dispositivo reComputer AI Industrial R2135 sin ejecutar ningún programa de prueba.|
+|**Carga completa**|12V|2.08A|24.2W| Configurar la CPU para que funcione a carga completa usando el comando "stress -c 4". El USB viene con una carga de 1 A.|
 
 #### Encendido y apagado
 
-El reComputer AI Industrial R2135 no viene con un botón de encendido por defecto, y el sistema se iniciará automáticamente una vez que se conecte la alimentación. Al apagar, selecciona la opción de apagado en el sistema operativo y espera a que el sistema se apague por completo antes de cortar la alimentación. Para reiniciar el sistema, simplemente vuelve a conectar la alimentación.
+El reComputer AI Industrial R2135 no viene con un botón de encendido de forma predeterminada y el sistema se iniciará automáticamente una vez que se conecte la alimentación. Al apagar, selecciona la opción de apagado en el sistema operativo y espera a que el sistema se apague por completo antes de cortar la alimentación. Para reiniciar el sistema, simplemente vuelve a conectar la alimentación.
 
 ### Diagrama de bloques
 
@@ -289,7 +289,7 @@ El reComputer AI Industrial R2135 no viene con un botón de encendido por defect
 | **Ethernet**   | 1x 10/100/1000 Mbps (compatible con POE*)              |
 | **USB**        | 2x USB-A 3.2 Host; 1x USB-C 2.0 (para flashear el SO) |
 | **HDMI**       | 2x HDMI 2.0                                      |
-| **Audio**      | 1x salida/entrada de audio de 3.5mm                      |
+| **Audio**      | 1x salida/entrada de audio de 3,5 mm                      |
 | **Ranura para tarjeta SIM** | 1x ranura para tarjeta SIM, compatible con tarjeta SIM estándar    |
 | **Ranura M.2**   | 2x ranura M.2, compatible con SSD M.2 NVMe y aceleración de IA |
 | **Mini-PCIe**  | 1x ranura Mini PCIe                                |
@@ -303,12 +303,12 @@ El reComputer AI Industrial R2135 cuenta con 3 indicadores LED que sirven para s
 
 | Nombre  | Color            | Estado | Descripción                                                                                                                                              |
 |-------|-----------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **PWR**  | Verde           | Encendido     | El dispositivo se ha conectado a la alimentación.                                                                                                                |
-|        |                 | Apagado    | El dispositivo no está conectado a la alimentación.                                                                                                                    |
+| **PWR**  | Verde           | On     | El dispositivo se ha conectado a la alimentación.                                                                                                                |
+|        |                 | Off    | El dispositivo no está conectado a la alimentación.                                                                                                                    |
 | **ACT**  | Naranja          |        | En Linux este pin parpadeará para indicar el acceso a la eMMC. Si se produce algún error durante el arranque, este LED parpadeará con un patrón de error (consulta la documentación de Raspberry Pi). |
 | **USER** | Verde/Rojo/Azul  |        | Debe ser definido por el usuario.                                                                                                                            |
-| **LTE**  | Verde           | Encendido     | La marcación se ha realizado correctamente y la conexión es normal.                                                                                                |
-|        |                 | Apagado    | La señal LTE no está conectada o el dispositivo no está encendido.                                                                                             |
+| **LTE**  | Verde           | On     | La marcación se ha realizado correctamente y la conexión es normal.                                                                                                |
+|        |                 | Off    | La señal LTE no está conectada o el dispositivo no está encendido.                                                                                             |
 
 ### Tabla de estado de ACT
 
@@ -322,14 +322,14 @@ El reComputer AI Industrial R2135 cuenta con 3 indicadores LED que sirven para s
 | 0            | 10            | En estado HALT                        |
 | 2            | 1             | Partición no FAT                    |
 | 2            | 2             | Error al leer desde la partición        |
-| 2            | 3             | Partición extendida no FAT           |
+| 2            | 3             | La partición extendida no es FAT           |
 | 2            | 4             | Incompatibilidad de firma/hash de archivo - Pi 4  |
 | 4            | 4             | Tipo de placa no compatible               |
 | 4            | 5             | Error fatal de firmware                 |
 | 4            | 6             | Fallo de alimentación tipo A                 |
 | 4            | 7             | Fallo de alimentación tipo B                 |
 
-Si el LED ACT parpadea con un patrón regular de cuatro destellos, no puede encontrar el bootcode(start.elf).
+Si el LED ACT parpadea en un patrón regular de cuatro destellos, no puede encontrar el bootcode(start.elf).
 Si el LED ACT parpadea con un patrón irregular, entonces el arranque ha comenzado.
 Si el LED ACT no parpadea, es posible que el código EEPROM esté dañado; inténtalo de nuevo sin nada conectado para asegurarte. Para más detalles, consulta el foro de Raspberry Pi:
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums.
@@ -349,7 +349,7 @@ echo 1 | sudo tee /sys/class/leds/led-red/brightness
 echo 0 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-3. Puedes encender el LED rojo y el verde al mismo tiempo; introduce el siguiente comando en la Terminal:
+3. Puedes encender el LED rojo y verde al mismo tiempo; introduce el siguiente comando en la Terminal:
 
 ```
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
@@ -360,12 +360,12 @@ echo 1 | sudo tee /sys/class/leds/led-green/brightness
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" /></div>
 
-El interruptor de arranque del reComputer AI Industrial R2135 está conectado al pin nRPI_BOOT de la CM5. Este interruptor ofrece a los usuarios la opción de seleccionar la fuente de arranque entre eMMC y USB. En el modo normal, el interruptor debe colocarse alejado del lado con la etiqueta "BOOT", lo que permite que el sistema arranque desde la eMMC. Por el contrario, cuando los usuarios necesiten flashear la imagen del sistema, deberán colocar el interruptor hacia la etiqueta "BOOT", permitiendo que el sistema arranque desde la interfaz USB Type-C.
+El interruptor de arranque del reComputer AI Industrial R2135 está conectado al pin nRPI_BOOT del CM5. Este interruptor ofrece a los usuarios la opción de seleccionar la fuente de arranque entre eMMC y USB. En el modo normal, el interruptor debe colocarse alejado del lado con la etiqueta "BOOT", lo que permite que el sistema arranque desde la eMMC. Por el contrario, cuando los usuarios necesiten flashear la imagen del sistema, deberán colocar el interruptor hacia la etiqueta "BOOT", lo que permitirá que el sistema arranque desde la interfaz USB Type-C.
 
 | Posición del interruptor | Modo         | Descripción      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/>            | Modo normal  | Arranque desde eMMC   | Bajo       |
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>             | Modo de flasheo   | Arranque desde USB    | Alto      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/>            | Modo normal  | Arranque desde eMMC   | Low       |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>             | Modo de flasheo   | Arranque desde USB    | High      |
 
 ### USB
 
@@ -375,10 +375,10 @@ El reComputer R2000 está equipado con un puerto USB Type-C y dos puertos USB Ty
 
 | **Tipo**   | **Cantidad** | **Protocolo** | **Función** | **Descripción**                                              |
 | ---------- | ------------ | ------------ | ------------ | ------------------------------------------------------------ |
-| **Type-C** | *1           | USB2.0       | USB-Device   | Usado para depuración por puerto serie, grabación de imagen, etc.          |
+| **Type-C** | *1           | USB2.0       | USB-Device   | Se utiliza para depuración de puerto serie, grabación de imagen, etc.          |
 | **Type-A** | *2           | USB2.0       | USB-Host     | Conectar diferentes dispositivos USB como unidades flash,<br /> teclados o ratones USB. |
 
-Comprueba si el concentrador USB es detectado ejecutando el comando **lsusb**. Este comando lista todos los dispositivos USB conectados, incluidos los concentradores.
+Comprueba si el hub USB es detectado ejecutando el comando **lsusb**. Este comando lista todos los dispositivos USB conectados, incluidos los hubs.
 
 ```shell
 lsusb
@@ -387,9 +387,9 @@ lsusb -t
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/lsusb.png"/></div>
 
-Al ejecutar este comando, se debería mostrar información sobre los dispositivos USB conectados a tu sistema, incluidos los concentradores USB presentes.
+Al ejecutar este comando, se debería mostrar información sobre los dispositivos USB conectados a tu sistema, incluidos los hubs USB presentes.
 
-Si el concentrador USB funciona correctamente, deberías ver sus detalles listados en la salida del comando **lsusb**. Si no aparece en la lista, puede haber un problema con el concentrador o con su conexión al sistema. En tales casos, es posible que necesites solucionar problemas del concentrador USB o de sus conexiones.
+Si el hub USB funciona correctamente, deberías ver sus detalles en la salida del comando **lsusb**. Si no aparece en la lista, puede haber un problema con el hub o con su conexión al sistema. En tales casos, es posible que necesites solucionar problemas del hub USB o de sus conexiones.
 
 ### Ranura SIM (interna)
 
@@ -402,7 +402,7 @@ Las diferencias de tamaño entre las tarjetas SIM estándar, Micro SIM y Nano SI
 
 > **Nota**  
 > La versión estándar de **reComputer AI Industrial R2135** no incluye un módulo 4G.  
-> Si necesitas funcionalidad 4G, debes adquirir por separado un módulo 4G adicional.  
+> Si necesitas funcionalidad 4G, se debe adquirir por separado un módulo 4G adicional.  
 > Para más información, consulta la sección **"2.3.2 4G Module"**.
 
 ### Ranura M.2
@@ -413,19 +413,19 @@ Las diferencias de tamaño entre las tarjetas SIM estándar, Micro SIM y Nano SI
 
 El reComputer AI Industrial R2135 está equipado con dos ranuras M.2 Key-M (NVMe1 y NVMe2) para SSD NVMe M.2 2280 y aceleración de IA, lo que permite una expansión de almacenamiento de alta velocidad y permite a los usuarios mejorar el rendimiento y la capacidad de su sistema.
 
-● NVMe1 (ranura inferior): admite tamaño M.2 2280;
+● NVMe1 (ranura inferior): Admite tamaño M.2 2280;
 
-● NVMe2 (ranura superior): viene preinstalada con un acelerador de IA Hailo-8
+● NVMe2 (ranura superior): Viene preinstalada con un acelerador de IA Hailo-8
 
 ● Solo se admiten SSD NVMe basados en PCIe. No se admiten SSD SATA.
 
 > **Nota**  
 > Las tarjetas SSD tienen dos usos principales:  
 >
-> 1. **Almacenamiento de alta capacidad**: se utilizan únicamente para almacenar grandes cantidades de datos.  
-> 2. **Unidad de arranque con imagen**: se utilizan tanto para almacenamiento como para arrancar el sistema desde una imagen almacenada en el SSD.  
+> 1. **Almacenamiento de alta capacidad**: Se utilizan únicamente para almacenar grandes cantidades de datos.  
+> 2. **Unidad de arranque con imagen**: Se utilizan tanto para almacenamiento como para arrancar el sistema desde una imagen almacenada en el SSD.  
 >  
-> No todas las tarjetas SSD del mercado admiten la funcionalidad de arranque.  
+> No todas las tarjetas SSD del mercado admiten la función de arranque.  
 > Si planeas usar un SSD como unidad de arranque y no estás seguro de la compatibilidad, recomendamos el **SSD de 1TB (SKU 112990267)**. Este modelo ha sido probado y verificado para admitir el arranque, lo que ayuda a evitar problemas de compatibilidad y reduce los costos de prueba y error.
 
 ### Ranura Mini-PCIe
@@ -436,11 +436,11 @@ El reComputer AI Industrial R2135 está equipado con dos ranuras M.2 Key-M (NVMe
 
 El reComputer AI Industrial R2135 incluye una ranura Mini PCIe diseñada principalmente para módulos módem 4G LTE (por ejemplo, Quectel EC20/EC25).
 
-● Compatibilidad: módulos Mini PCIe estándar
+● Compatibilidad: Módulos Mini PCIe estándar
 
 ● Interfaces de señal: USB 2.0, UART, tarjeta SIM, RESET, etc.
 
-● La tarjeta SIM se enruta al zócalo de tarjeta SIM integrado en la placa
+● La tarjeta SIM está conectada a un zócalo de tarjeta SIM integrado en la placa
 
 ● Señales de control: se admiten W_DISABLE, PERST, WAKE
 
@@ -461,9 +461,9 @@ Hay un mini pulsador ubicado en el orificio de reinicio del reComputer AI Indust
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_ETH0.png" /></div>
 
-| Nombre | Tipo                         | Velocidades        | PoE           |
-|--------|------------------------------|--------------------|---------------|
-| ETH0   | Ethernet Gigabit nativo CM5 | 10/100/1000 Mbit/s | No compatible |
+| Nombre | Tipo                         | Velocidades        | PoE            |
+|--------|------------------------------|--------------------|----------------|
+| ETH0   | Ethernet Gigabit nativo CM5 | 10/100/1000 Mbit/s | No compatible  |
 
 El reComputer AI Industrial R2135 viene con un puerto Ethernet Gigabit RJ45 estándar (GbE), que utiliza un transformador integrado MagJack para una mejor calidad de señal y protección EMI.
 
@@ -471,17 +471,17 @@ El reComputer AI Industrial R2135 viene con un puerto Ethernet Gigabit RJ45 est�
 ● Utiliza un PHY Gigabit con 4 pares diferenciales (TX/RX);
 ● Admite autonegociación y comunicación full-dúplex;
 ● Incluye choques de modo común, protección ESD y condensadores de aislamiento;
-● Los LED verdes/amarillos integrados indican el estado de enlace y actividad.
+● Los LED verde/amarillo integrados indican el estado de enlace y actividad.
 
 ### HDMI
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_HDMI.jpeg" /></div>
 
-El reComputer AI Industrial R2135 viene con dos puertos HDMI Tipo A estándar, etiquetados como HDMI0 y HDMI1, que admiten salida de vídeo de alta resolución. El sistema es capaz de ofrecer resoluciones de pantalla de hasta 4K a 60Hz y admite salida HDMI dual simultánea, lo que lo hace adecuado para aplicaciones de pantallas múltiples.
+El reComputer AI Industrial R2135 viene con dos puertos HDMI Tipo-A estándar, etiquetados como HDMI0 y HDMI1, que admiten salida de vídeo de alta resolución. El sistema es capaz de ofrecer resoluciones de pantalla de hasta 4K a 60Hz y admite salida HDMI dual simultánea, lo que lo hace adecuado para aplicaciones de pantallas múltiples.
 
 ### RTC
 
-El reComputer AI Industrial R2135 incluye un RTC integrado (PCF8563T) para mantener la hora a través de los ciclos de alimentación, lo que le permite mantener la funcionalidad de cronometraje incluso en caso de pérdida de energía.
+El reComputer AI Industrial R2135 incluye un RTC integrado (PCF8563T) para mantener la hora entre ciclos de alimentación, lo que le permite conservar la función de cronometraje incluso en caso de pérdida de energía.
 
 Puedes probar la parte de RTC con el siguiente comando:
 
@@ -569,7 +569,7 @@ Como se muestra en la figura siguiente, la conexión SSH se perdió después de 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_industrial_accelerator.jpeg" style={{width:800, height:'auto'}}/></div>
 
-El reComputer AI Industrial R2135 incluye un módulo acelerador de IA Hailo-8, preinstalado en la ranura NVMe2 M.2, que ofrece 26 TOPS de potencia de cálculo para el procesamiento de visión de IA multicanal en tiempo real.
+El reComputer AI Industrial R2135 incluye un módulo acelerador de IA Hailo-8, preinstalado en la ranura M.2 NVMe2, que ofrece 26 TOPS de potencia de cálculo para el procesamiento de visión de IA multicanal en tiempo real.
 
 Puedes probar la parte de watchdog con el siguiente comando:
 
@@ -601,14 +601,14 @@ El resultado se muestra a continuación:
 ## Interfaces y módulos opcionales
 
 El reComputer AI Industrial R2135 admite una amplia selección de módulos de expansión y accesorios, lo que lo hace adecuado para una gran variedad de escenarios y requisitos. Si estás interesado en personalizar el reComputer AI Industrial R2135, ponte en contacto con odm@seeed.cc para obtener más información.
-A continuación se muestra la lista de accesorios y módulos opcionales:
+Aquí está la lista de accesorios y módulos opcionales:
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
       <tr>
-        <th>Observación</th>
-        <th>Ítem</th>
+        <th>Comentario</th>
+        <th>Elemento</th>
         <th>Nombre del producto</th>
         <th>SKU</th>
       </tr>
@@ -617,23 +617,23 @@ A continuación se muestra la lista de accesorios y módulos opcionales:
       <tr>
         <td rowspan="3">Estos tres módulos deben usarse juntos para la función LoRaWAN®</td>
         <td>Módulo LoRa®</td>
-        <td>Módulo Gateway LoRaWAN (USB) con región opcional - US915</td>
+        <td>Módulo Gateway LoRaWAN de región opcional (USB) - US915</td>
         <td>114992629</td>
       </tr>
       <tr>
         <td></td>
-        <td>Módulo Gateway LoRaWAN (USB) con región opcional - US915</td>
+        <td>Módulo Gateway LoRaWAN de región opcional (USB) - US915</td>
         <td>114992991</td>
       </tr>
       <tr>
         <td></td>
-        <td>Módulo Gateway LoRaWAN (USB) con región opcional - EU868</td>
+        [LINE[25]]        <td>Módulo Gateway LoRaWAN de región opcional (USB) - EU868</td>
         <td>114992628</td>
       </tr>
       <tr>
         <td>Este accesorio es necesario para la función WiFi</td>
         <td>Antena Wi-Fi/BLE</td>
-        <td>Kit de antena para Raspberry Pi Compute Module 4</td>
+        <td>Kit de antena Raspberry Pi Compute Module 4</td>
         <td>114992364</td>
       </tr>
       <tr>
@@ -687,27 +687,27 @@ A continuación se muestra la lista de accesorios y módulos opcionales:
       <tr>
         <td rowspan="5"></td>
         <td>Tarjeta SSD</td>
-        <td>SSD NVMe M.2 2280 de 2 TB</td>
+        <td>NVMe M.2 2280 SSD 2TB</td>
         <td>114993467</td>
       </tr>
       <tr>
         <td></td>
-        <td>SSD NVMe M.2 2280 de 1 TB</td>
+        <td>NVMe M.2 2280 SSD 1TB</td>
         <td>112990267</td>
       </tr>
       <tr>
         <td></td>
-        <td>SSD interno NVMe M.2 PCIe Gen3x4 2280 de 512 GB</td>
+        <td>SSD interno 512GB NVMe M.2 PCIe Gen3x4 2280</td>
         <td>112990247</td>
       </tr>
       <tr>
         <td></td>
-        <td>SSD interno NVMe M.2 PCIe Gen3x4 2280 de 256 GB</td>
+        <td>SSD interno 256GB NVMe M.2 PCIe Gen3x4 2280</td>
         <td>112990246</td>
       </tr>
       <tr>
         <td></td>
-        <td>SSD interno NVMe M.2 PCIe Gen3x4 2280 de 128 GB</td>
+        <td>SSD interno 128GB NVMe M.2 PCIe Gen3x4 2280</td>
         <td>112990226</td>
       </tr>
     </tbody>
@@ -716,9 +716,9 @@ A continuación se muestra la lista de accesorios y módulos opcionales:
 
 ### Wi-Fi/BlueTooth
 
-El reComputer AI Industrial R2135 está impulsado por el CM5 con una versión integrada de Wi-Fi/BLE, que proporciona los mismos parámetros de Wi-Fi/BLE que el CM5. Para obtener información detallada sobre los parámetros, consulta el sitio web oficial de Raspberry Pi.
+El reComputer AI Industrial R2135 está impulsado por el CM5 con una versión integrada de Wi-Fi/BLE, que proporciona los mismos parámetros de Wi-Fi/BLE que el CM5. Para información detallada de los parámetros, consulta el sitio web oficial de Raspberry Pi.
 
-Utiliza el siguiente comando para probar el módulo wifi:
+Utiliza el siguiente comando para probar el modelo de wifi:
 
 ```bash
 sudo iwlist wlan0 scan
@@ -727,7 +727,7 @@ sudo iwlist wlan0 scan
 El resultado se muestra en la figura siguiente.
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/wifi.png" /></div>
 
-Utiliza el siguiente comando para probar el módulo BlueTooth:
+Utiliza el siguiente comando para probar el modelo de BlueTooth:
 
 ```bash
 sudo bluetoothctl
@@ -738,11 +738,11 @@ El resultado se muestra en la figura siguiente.
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/bluetooth.png" /></div>
 
-### Módulo USB LoRa®
+### Módulo LoRa® USB
 
 Las ranuras Mini-PCIe también son compatibles con el módulo LoRa® que utiliza el protocolo USB. El módulo WM1302 de Seeed Studio ha sido completamente probado y es compatible con el reComputer AI Industrial R2135.
 
-Puedes probar el módulo USB LoRa® como se indica a continuación:
+Puedes probar el módulo LoRa® USB como se indica a continuación:
 
 ```bash
 git clone https://github.com/Lora-net/sx1302_hal
@@ -800,12 +800,12 @@ echo 1 > /sys/class/gpio/gpio580/value
 
 ### Módulo 4G
 
-La placa principal del reComputer AI Industrial R2135 cuenta con una ranura Mini-PCIe, y la ranura Mini-PCIe admite un módulo 4G que utiliza el protocolo USB. El módulo 4G EC25 de Quectel ha sido completamente probado y es compatible con el reComputer AI Industrial R2135.
+La placa base del reComputer AI Industrial R2135 cuenta con una ranura Mini-PCIe, con la ranura Mini-PCIe que admite un módulo 4G utilizando el protocolo USB. El módulo 4G EC25 de Quectel ha sido completamente probado y es compatible con el reComputer AI Industrial R2135.
 
 > Nota:
 > Asegúrate de haber instalado el módulo 4G en el reComputer AI Industrial R2135
 
-Utiliza el siguiente comando para probar el módulo 4G:
+Utiliza el siguiente comando para probar el modelo 4G:
 
 ```bash
 # Check the information of the 4g module
@@ -875,7 +875,7 @@ El reComputer AI Industrial R2135 es compatible con SSD NVMe 2280 mediante el us
 > 1. **Almacenamiento de alta capacidad:** Las tarjetas SSD se pueden utilizar para necesidades de almacenamiento de alta capacidad.  
 > 2. **Unidad de arranque con imagen:** Las tarjetas SSD pueden servir tanto como almacenamiento de alta capacidad como unidad de arranque al almacenar imágenes del sistema, lo que permite arrancar directamente desde la tarjeta.  
 >
-> Es importante tener en cuenta que no todas las tarjetas SSD del mercado admiten la función de arranque. Si planeas utilizar una SSD como unidad de arranque y no estás seguro de qué modelo elegir, recomendamos nuestra SSD probada de 1 TB (SKU 112990267). Este modelo ha sido verificado para la función de arranque, lo que reduce los riesgos de compatibilidad y minimiza los costos de prueba y error.  
+> Es importante tener en cuenta que no todas las tarjetas SSD del mercado admiten la función de arranque. Si planeas usar una SSD como unidad de arranque y no estás seguro de qué modelo elegir, recomendamos nuestra SSD probada de 1 TB (SKU 112990267). Este modelo ha sido verificado para la función de arranque, lo que reduce los riesgos de compatibilidad y minimiza los costos de prueba y error.  
 
 Puedes comprobar la SSD usando el siguiente comando:
 
@@ -889,7 +889,7 @@ sudo fdisk -l | grep sda
 
 ### Frigate
 
-Frigate es un NVR (Network Video Recorder) de código abierto diseñado para la detección de objetos en tiempo real mediante IA. Se integra con cámaras existentes y utiliza modelos de aprendizaje automático, como TensorFlow y Coral, para realizar detección de objetos en flujos de vídeo. Frigate está optimizado para un procesamiento de vídeo de alta velocidad y baja latencia, y ofrece funciones como detección de movimiento, transmisión de vídeo en vivo y alertas automatizadas.
+Frigate es un NVR (Network Video Recorder) de código abierto diseñado para la detección de objetos en tiempo real utilizando IA. Se integra con cámaras existentes y utiliza modelos de aprendizaje automático, como TensorFlow y Coral, para realizar detección de objetos en flujos de vídeo. Frigate está optimizado para el procesamiento de vídeo de baja latencia y alto rendimiento, ofreciendo funciones como detección de movimiento, transmisiones de vídeo en vivo y alertas automatizadas.
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/thmI3dz9Ugs" title="Cost-Effective AI Surveillance: Frigate on Raspberry Pi 5 with Hailo8 on PCIe3.0 to Dual M.2 hat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -922,7 +922,7 @@ CLIP (Contrastive Language-Image Pretraining) es un modelo de aprendizaje autom�
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
