@@ -9,13 +9,15 @@ keywords:
   - CUDA
   - Jetson Linux
 image: https://files.seeedstudio.com/wiki/yocto/yocto-bootup.jpg
-slug: /build_and_flash_yocto_for_recomputer_super_bk
+slug: /build_and_flash_yocto_for_seeed_jetson_carrier_boards
+aliases:
+  - /build_and_flash_yocto_for_recomputer_super_bk
 last_update:
   date: 2026-07-24
   author: Dayu
 createdAt: '2026-07-24'
 updatedAt: '2026-07-31'
-url: https://wiki.seeedstudio.com/cn/build_and_flash_yocto_for_recomputer_super_bk/
+url: https://wiki.seeedstudio.com/cn/build_and_flash_yocto_for_seeed_jetson_carrier_boards/
 ---
 
 # 为 reComputer Super 构建并烧录 Yocto 镜像
