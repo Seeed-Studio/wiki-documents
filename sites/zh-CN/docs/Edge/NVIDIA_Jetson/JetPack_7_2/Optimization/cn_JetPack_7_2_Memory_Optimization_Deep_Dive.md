@@ -68,7 +68,7 @@ Jetson 使用统一内存：CPU、GPU、系统服务、摄像头与显示子系�
 | --- | --- | --- |
 | 更新的 CUDA 与 TensorRT 软件栈 | 它是重建和分析受支持推理引擎的软件基线。 | [在 JetPack 7.2 上部署 TensorRT Edge-LLM](/cn/deploy_tensorrt_edge_llm_on_jetpack7.2/) |
 | 内存优化与基准测试技能 | 它们提供了一种可重复的方法，在修改配置前测量平台预留、服务和工作负载压力。 | [JetPack 7.2 Memory Optimization](/cn/jetpack_7_2_memory_optimization/) |
-| 官方 Yocto 支持 | 当 Ubuntu 开发镜像包含不需要的软件时，生产团队可以创建一个定制且可复现的镜像。 | [构建并烧录 Yocto 镜像](/cn/build_and_flash_yocto_for_recomputer_super_bk/) |
+| 官方 Yocto 支持 | 当 Ubuntu 开发镜像包含不需要的软件时，生产团队可以创建一个定制且可复现的镜像。 | [构建并烧录 Yocto 镜像](/cn/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) |
 
 JetPack 7.2 不会为模组增加 DRAM、不会自动缩小模型，也不会自行启用诸如 KV-cache 复用之类的运行时特性。它提供了做出这些选择并对其进行测量的软件基线和工具链。
 
@@ -232,7 +232,7 @@ CUDA Graph 会先记录一次兼容的 GPU 序列，然后在之后通过单次�
 | --- | --- | --- |
 | 测量空闲、引擎加载、预填充和解码内存；减少服务；或更改已验证的 BSP 预留 | [JetPack 7.2 Memory Optimization](/cn/jetpack_7_2_memory_optimization/) | 在采取行动前决定是哪一层内存负责。 |
 | 导出 checkpoint、构建引擎、选择受支持的精度或对 TensorRT Edge-LLM 进行基准测试 | [Deploy TensorRT Edge-LLM on JetPack 7.2](/cn/deploy_tensorrt_edge_llm_on_jetpack7.2/) | 理解权重、工作区和 KV 缓存如何融入总预算。 |
-| 构建面向生产、定制化的 OS 镜像 | [Build and Flash a Yocto Image](/cn/build_and_flash_yocto_for_recomputer_super_bk/) | 决定更小的系统镜像是否值得额外的运维成本。 |
+| 构建面向生产、定制化的 OS 镜像 | [Build and Flash a Yocto Image](/cn/build_and_flash_yocto_for_seeed_jetson_carrier_boards/) | 决定更小的系统镜像是否值得额外的运维成本。 |
 | 对比已发布的 6.2 和 7.2 AGX Orin 结果 | [JetPack 7.2 Deep Dive](/cn/jetpack72_deep_dive_bk/) | 避免把一次测得的结果当作通用的内存节省。 |
 
 正确的顺序很简单：先建立系统基线，测量选定的运行时和模型，然后只在完整工作负载仍在预算范围内时再增加上下文或并发度。链接的指南中包含每一步的命令、安全检查、回滚流程和验收测试。

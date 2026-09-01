@@ -1,61 +1,47 @@
 ---
-description: Build a complete CUDA development Yocto image from the Seeed repository and flash it to a reComputer Super.
-title: Build and Flash a Yocto Image for reComputer Super
+description: Select, build, package, and flash a JetPack 7.2 Yocto image for supported Seeed Studio Jetson carrier boards.
+title: Build and Flash Yocto for Seeed Jetson Carrier Boards
 keywords:
   - Yocto
   - OpenEmbedded
-  - reComputer Super
-  - Jetson Orin NX
-  - CUDA
-  - Jetson Linux
-image: https://files.seeedstudio.com/wiki/yocto/yocto-bootup.jpg
-slug: /build_and_flash_yocto_for_recomputer_super_bk
+  - Seeed Jetson carrier board
+  - Jetson Orin
+  - Jetson Thor
+  - meta-tegra
+  - Jetson Linux 39.2
+image: https://files.seeedstudio.com/wiki/jetpack-7.2/jetpack-7-2-yocto-workflow.png
+slug: /build_and_flash_yocto_for_seeed_jetson_carrier_boards
+aliases:
+  - /build_and_flash_yocto_for_recomputer_super_bk
 last_update:
-  date: 2026-07-24
+  date: 2026-09-01
   author: Dayu
 createdAt: '2026-07-24'
-updatedAt: '2026-07-31'
-url: https://wiki.seeedstudio.com/build_and_flash_yocto_for_recomputer_super_bk/
+updatedAt: '2026-09-01'
+url: https://wiki.seeedstudio.com/build_and_flash_yocto_for_seeed_jetson_carrier_boards/
 ---
 
-# Build and Flash a Yocto Image for reComputer Super
+# Build and Flash Yocto for Seeed Jetson Carrier Boards
 
-:::note JetPack 7.2 collection copy
-This copy is included because official OpenEmbedded/Yocto support is a major JetPack 7.2 production-Linux capability. Confirm that the selected Seeed Yocto branch, NVIDIA BSP layer, and generated flash package match the intended Jetson Linux 39.2 target before using it as a JetPack 7.2 image.
+This guide provides a common workflow for building and flashing an OpenEmbedded/Yocto image on the Seeed Studio Jetson carrier boards defined by the [`seeed-tegra-demo-distro`](https://github.com/jjjadand/seeed-tegra-demo-distro) repository.
+
+The repository uses the OE4T `wrynose` branches and the `meta-tegra` BSP for **Jetson Linux R39.2.0 / JetPack 7.2**. A Yocto image uses NVIDIA Jetson Linux BSP components, but it is not the Ubuntu root filesystem installed by NVIDIA SDK Manager. Package management, image composition, desktop environment, and update behavior are controlled by Yocto metadata.
+
+:::warning Repository scope
+The commands and parameter tables in this article follow the repository state reviewed on **August 31, 2026**. Before building, check the repository README and support matrix again because available machines, module SKUs, branches, and hardware-validation status can change.
 :::
 
-This guide builds a Seeed Yocto image for **reComputer Super J401 with a Jetson Orin NX 16GB module** and flashes it to the Jetson NVMe drive.
-
-The example uses `seeed-image-jetson-development`. This image provides a target-side development environment with CUDA Toolkit and `nvcc`, CUDA/cuDNN/TensorRT/VPI/OpenCV development files, build and debug tools, NVIDIA samples, and test packages.
+The following diagram summarizes the full workflow. Select the carrier board and Jetson module first, then keep the same machine, SKU, build directory, and image recipe through building and flashing.
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png" />
+  <img width={1200} src="https://files.seeedstudio.com/wiki/jetpack-7.2/jetpack-7-2-yocto-workflow.png" alt="JetPack 7.2 Yocto build and flash workflow for Seeed Jetson carrier boards" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-</div>
+## Before You Start
 
-:::note
-This is an OpenEmbedded/Yocto system, not an Ubuntu root filesystem installed by NVIDIA SDK Manager. Package management, filesystem contents, and the desktop environment differ from JetPack Ubuntu.
-:::
+Use a physical x86_64 Linux host with a fast local SSD, a stable network connection, and `sudo` access. Prepare a data-capable USB cable for the carrier board's recovery/device port. A full Yocto development build can consume several hundred gigabytes, so reserve approximately **400 GB** of free storage when possible. Use at least **16 GB RAM**, with **32 GB or more recommended**.
 
-## Prerequisites
-
-Prepare the following:
-
-- An x86_64 Linux host PC, preferably a physical Ubuntu or Debian machine
-- At least 16 GB RAM; 32 GB or more is recommended
-- A fast local SSD and a stable Internet connection
-- A reComputer Super with a supported Jetson Orin NX or Orin Nano module
-- A USB Type-C data cable connected directly to the host PC
-- `sudo` access for installing host packages and flashing
-
-:::warning
-Reserve **at least 400 GB of free disk space** on the host PC. Yocto downloads, shared-state cache, temporary build files, the root filesystem, and the extracted flash package can consume several hundred gigabytes. A host-local SSD is strongly recommended.
-:::
-
-Install the commonly required host packages:
+Install the commonly required build and flashing packages on an Ubuntu host:
 
 ```bash
 sudo apt update
@@ -67,24 +53,120 @@ sudo apt install -y \
   gdisk parted udev udisks2
 ```
 
-If BitBake reports that the host distribution is unsupported, use a Yocto-supported Linux host instead of ignoring the host validation warning.
+Package names can differ between host distributions. Follow the Yocto Project Quick Build and OE4T flashing requirements for the branch used by the repository. If BitBake reports an unsupported host distribution, use a supported host instead of bypassing the validation.
 
-## Module SKU Used in This Guide
+The helper scripts use the following parameters throughout the workflow:
 
-The reComputer Super J401 supports the following P3767 module SKUs:
-
-| `--module-sku` | Complete module number | Jetson module |
+| Parameter | Purpose | Important rule |
 | --- | --- | --- |
-| `0000` | `P3767-0000` | Jetson Orin NX 16GB |
-| `0001` | `P3767-0001` | Jetson Orin NX 8GB |
-| `0003` | `P3767-0003` | Jetson Orin Nano 8GB |
-| `0004` | `P3767-0004` | Jetson Orin Nano 4GB |
+| `--machine` | Selects the carrier-board Yocto `MACHINE` configuration. | It must match the physical carrier board. |
+| `--module-sku` | Selects the Jetson module installed on a configurable Orin carrier. It is the final four digits of the NVIDIA module number. | Required for configurable Orin machines; omit it for fixed-module Thor machines. |
+| `--build-dir` | Stores the selected configuration, BitBake work files, and deploy artifacts. | Use a separate directory for every carrier and module SKU combination. |
+| `--cache-dir` | Stores shared downloads and sstate cache data. | Reuse one host-local cache across builds. |
+| `--image` | Selects the BitBake image recipe. | Use the same image name for building and flash preparation. |
+| `--output-dir` | Selects where the verified tegraflash package is extracted. | Use a new or empty host-local directory. |
 
-This guide uses `0000`. Always use a separate build directory for each carrier and module SKU combination.
+`MACHINE` is the Yocto hardware target name, not only a product label. It selects a machine configuration from `layers/meta-seeed/conf/machine/`, which determines the SoC family, carrier DTB, module configuration, BPMP data, pinmux and pad-voltage files, overlays, and flash variables used by BitBake and tegraflash.
 
-## Clone the Seeed Yocto Repository
+:::tip Select the machine for your hardware
+The `recomputer-orin-super-j401` commands in this guide are only a concrete example. Before preparing the workspace, select the `MACHINE` and module SKU that match your carrier and Jetson module from the [carrier-board table](https://wiki.seeedstudio.com/build_and_flash_yocto_for_seeed_jetson_carrier_boards/#choose-the-carrier-board-and-jetson-module).
+:::
 
-Create a clean workspace and clone the `master` branch:
+Choose an image based on the target's purpose:
+
+| Image recipe | Use case |
+| --- | --- |
+| `demo-image-full` | OE4T reference/demo image with graphics, containers, OpenCV, and NVIDIA samples. This is the helper-script default. |
+| `seeed-image-jetson-runtime` | Seeed runtime profile aligned with the OE4T/NVIDIA runtime stack. |
+| `seeed-image-jetson-development` | Runtime image plus target-side CUDA development packages, headers, build/debug tools, samples, and tests. |
+
+The examples below use `seeed-image-jetson-development`.
+
+## Choose the Carrier Board and Jetson Module
+
+The repository reviewed for this guide defines 16 Seeed machine configurations. You can also print the current checkout's machine list with `./scripts/seeed/build.sh machines`.
+
+| Product or carrier configuration | `MACHINE` | Supported module selection |
+| --- | --- | --- |
+| reComputer Industrial J401 | `recomputer-industrial-orin-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Mini AGX Orin J501X | `recomputer-mini-agx-orin-j501x` | P3701 AGX Orin: `0004`, `0005` |
+| reComputer Orin J401 | `recomputer-orin-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Orin J40mini | `recomputer-orin-j40mini` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Robotics J401 | `recomputer-orin-robotics-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Robotics J401 GMSL | `recomputer-orin-robotics-j401-gmsl` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Super J401 | `recomputer-orin-super-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Robo AGX Orin J501X | `recomputer-robo-agx-orin-j501x` | P3701 AGX Orin: `0004`, `0005` |
+| reComputer Rugged Orin J401 | `recomputer-rugged-orin-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Thor Carrier J601 | `recomputer-thor-carrier-j601` | Fixed P3834-0008 T5000; omit `--module-sku` |
+| reComputer Thor Carrier J6014 | `recomputer-thor-carrier-j6014` | Fixed P3834-0000 T4000; omit `--module-sku` |
+| reComputer Thor Carrier J6015 | `recomputer-thor-carrier-j6015` | Fixed P3834-0008 T5000; omit `--module-sku` |
+| reServer AGX Orin J501X | `reserver-agx-orin-j501x` | P3701 AGX Orin: `0000`, `0001`, `0002`, `0004`, `0005` |
+| reServer AGX Orin J501X GMSL | `reserver-agx-orin-j501x-gmsl` | P3701 AGX Orin: `0000`, `0001`, `0002`, `0004`, `0005` |
+| reServer Industrial Orin J401 | `reserver-industrial-orin-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| Seeed AGX Orin Kit | `seeed-agx-orin-kit` | P3701 AGX Orin: `0000`, `0001`, `0002`, `0004`, `0005` |
+
+`--module-sku` is the last four digits printed in the NVIDIA module part number. Check the module label or EEPROM rather than selecting a value from memory.
+
+| Module family | `--module-sku` | Complete module number | Module model or repository mapping |
+| --- | --- | --- | --- |
+| P3767 | `0000` | `P3767-0000` | Jetson Orin NX 16GB |
+| P3767 | `0001` | `P3767-0001` | Jetson Orin NX 8GB |
+| P3767 | `0003` | `P3767-0003` | Jetson Orin Nano 8GB |
+| P3767 | `0004` | `P3767-0004` | Jetson Orin Nano 4GB |
+| P3701 | `0000` | `P3701-0000` | Jetson AGX Orin developer-kit module |
+| P3701 | `0001` | `P3701-0001` | Compatibility SKU using the repository's `0000` DTB/BPMP mapping |
+| P3701 | `0002` | `P3701-0002` | Compatibility SKU using the repository's `0000` DTB/BPMP mapping |
+| P3701 | `0004` | `P3701-0004` | Jetson AGX Orin 32GB |
+| P3701 | `0005` | `P3701-0005` | Jetson AGX Orin 64GB |
+| P3834 | not selectable | `P3834-0000` | Jetson T4000, selected by the Thor `MACHINE` |
+| P3834 | not selectable | `P3834-0008` | Jetson T5000 / AGX Thor developer-kit module, selected by the Thor `MACHINE` |
+
+:::caution Build support versus hardware validation
+The repository provides machine metadata and build validation for all listed configurations. This does not mean every carrier, module SKU, camera option, and peripheral has completed physical validation. In the reviewed support matrix, `recomputer-orin-super-j401` has completed flash, NVMe boot, HDMI, and basic USB validation. `reserver-agx-orin-j501x-gmsl` with SKU `0004` has completed flash and boot validation, while GMSL and wider peripheral validation remain pending. Treat the other machines as build-validated until their hardware status is updated.
+:::
+
+The command sequence in the next sections uses **reComputer Super J401 with an Orin NX 16GB module** as a concrete example. Replace its machine, SKU, and directory names with the values selected from the tables above. The same parameterized workflow also applies to other machines in the support table, such as reComputer Mini J5011.
+
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
+  <thead>
+    <tr>
+      <th>reComputer Super J401</th>
+      <th>reComputer Mini J5011</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img width={360} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png" alt="reComputer Super J401" />
+      </td>
+      <td>
+        <img width={360} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-100020407-recomputer-mini-j5011-with-gmsl.jpg" alt="reComputer Mini J5011" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://wiki.seeedstudio.com/" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Buy One 🖱️</font></span></strong></a>
+        </div>
+      </td>
+      <td>
+        <div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-J5011-with-GMSL-Extension-p-6876.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Buy One 🖱️</font></span></strong></a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+:::danger
+Using the wrong `MACHINE` or module SKU can select incompatible DTB, BPMP, pinmux, memory, or flash configuration files. Never reuse an existing build directory after changing either value.
+:::
+
+## Prepare and Verify the Workspace
+
+Clone the Seeed repository and record the commit used for the build:
 
 ```bash
 mkdir -p ~/work/jetson-yocto
@@ -97,276 +179,158 @@ git clone \
   tegra-demo-distro
 
 cd tegra-demo-distro
+git rev-parse HEAD
 ```
 
-The main repository contains the Seeed metadata and helper scripts. `prepare-workspace.sh` initializes the pinned OpenEmbedded and OE4T layers as Git submodules.
-
-## Build the Complete Development Image with `all`
-
-The recommended first build uses `build.sh all`. It validates metadata, builds the Seeed device trees, checks the boot files, and builds the complete image and tegraflash archive in order.
-
-### Prepare the Build Directory
+Prepare one workspace for the example carrier and module:
 
 ```bash
 ./scripts/seeed/prepare-workspace.sh \
   --machine recomputer-orin-super-j401 \
   --module-sku 0000 \
-  --build-dir build-seeed-super-j401-sku0000 \
+  --build-dir build-recomputer-orin-super-j401-sku0000 \
   --cache-dir "$HOME/.cache/yocto-seeed"
 ```
 
-The shared cache keeps downloads and sstate outside the build directory so they can be reused by later builds.
+For an AGX Orin carrier, replace the values with its machine and supported P3701 SKU. For a Thor carrier, omit `--module-sku` because the module is fixed by the selected machine file. The helper also accepts `--no-activate`, `--no-submodules`, and `--full-history` for advanced workspace management.
 
-Confirm the active build directory, carrier, and module SKU:
+Verify the selected build directory, machine, and module SKU before building:
 
 ```bash
 ./scripts/seeed/build.sh current \
-  --build-dir build-seeed-super-j401-sku0000 \
+  --build-dir build-recomputer-orin-super-j401-sku0000 \
   --machine recomputer-orin-super-j401
 ```
 
-The output must show:
-
-```text
-Machine:   recomputer-orin-super-j401
-Module SKU: 0000
-```
-
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/current.png" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/current.png" alt="Yocto helper showing the selected build directory, machine, and module SKU" />
 </div>
 
-:::warning
-Do not continue if the displayed `MACHINE` or module SKU does not match the hardware. Do not reuse this build directory for another carrier or module SKU.
-:::
+Do not continue if the displayed values do not match the physical hardware.
 
-### Run the Complete Build
+## Build the Image and Flash Package
 
-Build the target-side development image:
+The recommended first build uses the `all` command. It runs metadata validation, Seeed DTB/DTBO compilation, boot-file installation checks, and the complete image build in sequence:
 
 ```bash
 ./scripts/seeed/build.sh all \
-  --build-dir build-seeed-super-j401-sku0000 \
+  --build-dir build-recomputer-orin-super-j401-sku0000 \
   --machine recomputer-orin-super-j401 \
   --image seeed-image-jetson-development
 ```
 
-The first build downloads and compiles a large number of components and can take several hours. The command stops immediately if metadata validation, device-tree compilation, boot-file checks, or the image build fails.
-
-When all four stages complete successfully, the terminal output is similar to the following:
+The first build downloads and compiles many components and can take several hours. A successful run ends after all four stages complete:
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/build-full-complete.png" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/build-full-complete.png" alt="Completed Yocto metadata, device tree, boot files, and image build stages" />
 </div>
 
-After a successful build, the deploy directory is:
+Generated files are placed under `<build-dir>/tmp/deploy/images/<machine>/`. Important outputs follow this naming pattern:
 
 ```text
-build-seeed-super-j401-sku0000/tmp/deploy/images/recomputer-orin-super-j401/
-```
-
-The important generated files include:
-
-```text
-seeed-image-jetson-development-recomputer-orin-super-j401.rootfs.ext4
-seeed-image-jetson-development-recomputer-orin-super-j401.rootfs.manifest
-seeed-image-jetson-development-recomputer-orin-super-j401.rootfs.spdx.json
-seeed-image-jetson-development-recomputer-orin-super-j401.rootfs.testdata.json
-seeed-image-jetson-development-recomputer-orin-super-j401.rootfs.tegraflash-tar.zst
+<image>-<machine>.rootfs.ext4
+<image>-<machine>.rootfs.manifest
+<image>-<machine>.rootfs.spdx.json
+<image>-<machine>.rootfs.testdata.json
+<image>-<machine>.rootfs.tegraflash-tar.zst
 ```
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/filename.png" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/filename.png" alt="Yocto deploy directory containing the generated root filesystem and tegraflash archive" />
 </div>
 
-The `.tegraflash-tar.zst` file is the self-contained archive used for flashing.
+The `.tegraflash-tar.zst` archive contains the files used by the flash-preparation helper.
 
-## Prepare the Flash Directory
+For debugging or partial rebuilds, replace `all` with `metadata`, `dtb`, `bootfiles`, `image`, or `flash-package`. Keep the same `--build-dir`, `--machine`, and `--image` values. To build an optional x86_64 cross-development SDK, run:
 
-Extract and validate the development-image flash archive:
+```bash
+./scripts/seeed/build.sh sdk \
+  --build-dir build-recomputer-orin-super-j401-sku0000 \
+  --machine recomputer-orin-super-j401 \
+  --image seeed-image-jetson-development
+```
+
+The SDK installer is written under `<build-dir>/tmp/deploy/sdk/`. It is not required to build or flash the target image, and it is unnecessary when compiling directly on the Jetson.
+
+## Prepare and Flash the Target
+
+Extract and verify the flash archive with the same build directory, machine, and image values used for the build:
 
 ```bash
 ./scripts/seeed/prepare-flash.sh \
-  --build-dir build-seeed-super-j401-sku0000 \
+  --build-dir build-recomputer-orin-super-j401-sku0000 \
   --machine recomputer-orin-super-j401 \
   --image seeed-image-jetson-development \
   --output-dir "$HOME/seeed-flash-recomputer-orin-super-j401-sku0000"
 ```
 
-The helper verifies the module SKU and checks that the rootfs image, DTB, BPMP DTB, pinmux, pad-voltage configuration, and flash scripts are present. It then prints the prepared directory and the exact next command.
+The helper checks the rootfs, `initrd-flash`, flash variables, DTB/BPMP DTB, pinmux, pad-voltage, and other selected boot files. For configurable carriers, it also verifies that the module SKU in the flash archive matches the prepared workspace. The helper does not run `sudo` or flash the target by itself.
 
-:::tip
-Use a new or empty output directory on the host's local SSD. Do not extract the flash package onto the Jetson target drive.
-:::
-
-## Put reComputer Super into Force Recovery Mode
-
-1. Power off the reComputer Super.
-2. Set the reComputer Super recovery switch to the **RESET** position.
-3. Connect the power supply.
-4. Connect the USB Type-C device/debug port to the Linux host with a data-capable cable.
-5. On the host PC, verify recovery mode:
+Put the target into Force Recovery Mode using the recovery-button or recovery-switch sequence documented for that specific Seeed carrier board. Connect the carrier's USB device/debug port directly to the Linux host with a data-capable cable, then verify that an NVIDIA APX device is visible:
 
 ```bash
 lsusb -d 0955:
 ```
 
-For the Orin NX 16GB module used in this guide, the output should include a device similar to:
+The USB product ID varies by Jetson module. Do not start flashing until the NVIDIA recovery device appears.
 
-```text
-0955:7323 NVIDIA Corp. APX
-```
-
-Other supported Super modules use different USB product IDs:
-
-| Module | Recovery USB ID |
-| --- | --- |
-| Orin NX 16GB | `0955:7323` |
-| Orin NX 8GB | `0955:7423` |
-| Orin Nano 8GB | `0955:7523` |
-| Orin Nano 4GB | `0955:7623` |
-
-Do not start flashing until the NVIDIA APX device is visible.
-
-## Flash the Yocto Image
-
-Run the generated flasher from the prepared directory:
+Run the generated flasher from the prepared output directory:
 
 ```bash
 cd "$HOME/seeed-flash-recomputer-orin-super-j401-sku0000"
 sudo ./initrd-flash
 ```
 
-The script boots a temporary initrd flasher through USB, exposes the target NVMe drive to the host, writes the partitions, and retrieves the final device status. Do not disconnect USB or power while it is running.
+The script boots a temporary initrd through USB, exposes the target storage device to the host, writes the partition layout and root filesystem, and reports the final status. Do not disconnect power or USB while flashing.
 
-A successful flash ends with output similar to:
+:::warning
+The temporary host block-device name is assigned dynamically. Never assume it is always `/dev/sdb` or `/dev/sdc`, and do not manually redirect the workflow to a host drive.
+:::
 
-```text
-[OK: /dev/sdX]
-Final status: SUCCESS
-Successfully finished
-```
+## First Boot and Validation
 
-The temporary host block-device name is assigned dynamically. Do not assume it is always `/dev/sdb` or `/dev/sdc`.
+After flashing finishes successfully, disconnect the recovery USB cable, return the carrier's recovery controls to their normal state if required, power-cycle the target, and connect its display and peripherals.
 
-## First Boot
-
-After the flash command finishes successfully:
-
-1. Disconnect the USB data cable.
-2. Return the recovery switch from **RESET** to its normal position.
-3. Power off the device for several seconds.
-4. Connect an HDMI display and power the reComputer Super on again.
-
-The Yocto desktop should boot from the flashed NVMe drive:
+The Yocto desktop should boot from the selected target storage:
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/yocto-bootup.jpg" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/yocto-bootup.jpg" alt="Yocto desktop running on a Seeed Jetson device" />
 </div>
 
-The development image permits local login as `root` with an empty initial password. Set a password immediately:
+The default `tegrademo` configuration enables an empty initial root password and root login for development. Set a password immediately:
 
 ```bash
 passwd
 ```
 
-Verify the target-side development environment:
+For the development image, verify the required target-side tools and libraries, then test the carrier-specific interfaces used by your application:
 
 ```bash
 nvcc --version
 gcc --version
 cmake --version
-
-test -f /usr/local/cuda-13.2/include/cuda.h
-test -f /usr/include/cudnn.h
-test -f /usr/include/NvInfer.h
-test -f /opt/nvidia/vpi4/include/vpi/VPI.h
 pkg-config --modversion opencv4
 ```
 
-## Detailed Parameterized Build Commands
-
-The previous section used `all`, which is the recommended path for a first build. For debugging or rebuilding one stage, run the same workflow explicitly:
-
-```bash
-# 1. Validate metadata and print the selected BSP variables
-./scripts/seeed/build.sh metadata \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-
-# 2. Build the Seeed DTB and DTBO files
-./scripts/seeed/build.sh dtb \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-
-# 3. Install and verify the custom BCT, pinmux, and boot files
-./scripts/seeed/build.sh bootfiles \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-
-# 4. Build the complete root filesystem and tegraflash archive
-./scripts/seeed/build.sh image \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-```
-
-If the root filesystem is already built and only the tegraflash archive must be regenerated, use:
-
-```bash
-./scripts/seeed/build.sh flash-package \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-```
-
-## Optional: Build an x86_64 Cross-Development SDK
-
-The flashed development image already supports compilation directly on the Jetson. Build the host SDK only when an x86_64 PC must cross-compile applications for the target:
-
-```bash
-./scripts/seeed/build.sh sdk \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-```
-
-The generated SDK installer is placed under:
-
-```text
-build-seeed-super-j401-sku0000/tmp/deploy/sdk/
-```
-
-This optional installer is not required to build the Jetson image or flash the device.
+Successful image building or booting does not validate every camera, GMSL link, display mode, USB port, network interface, or expansion connector. Complete product-specific peripheral testing before deployment.
 
 ## Troubleshooting
 
-### The build directory reports the wrong machine or SKU
+**The build directory reports the wrong machine or SKU:** Create a new build directory with `prepare-workspace.sh`. Do not edit or reuse an existing workspace to switch carrier boards or module SKUs.
 
-Create a new build directory with `prepare-workspace.sh`. Do not edit an existing build directory to switch carrier boards or module SKUs.
+**The flash archive cannot be found:** Pass the same `--image` value to `build.sh` and `prepare-flash.sh`. Both helpers default to `demo-image-full`, so a build of `seeed-image-jetson-development` must explicitly use that name during flash preparation.
 
-### The flash archive cannot be found
+**Metadata parses but the hardware does not boot:** Check the repository support matrix. Metadata and DTB build validation do not prove physical flash, storage boot, display, camera, GMSL, or peripheral operation for every machine and module combination.
 
-Make sure the same image name is passed to both build and flash preparation:
-
-```text
-seeed-image-jetson-development
-```
-
-`prepare-flash.sh` defaults to `demo-image-full`, so omitting `--image seeed-image-jetson-development` would make it search for the wrong archive.
-
-### Flashing stops at `Waiting for USB storage device flashpkg`
-
-At this point, the host is waiting for the Jetson initrd to expose a temporary USB mass-storage device. Check the USB cable, use a motherboard USB port, remove unnecessary USB storage devices, and confirm that the Jetson remains visible with `lsusb`.
+**Flashing stops at `Waiting for USB storage device flashpkg`:** At this stage, the host is waiting for the Jetson initrd to enumerate a temporary USB mass-storage device; rootfs partition writing has not started. Check the data cable, direct host USB connection, recovery-mode state, and the compiled device tree's USB device-mode path. Do not treat repeated dots as normal slow storage writing.
 
 ## References
 
 - [Seeed tegra-demo-distro repository](https://github.com/jjjadand/seeed-tegra-demo-distro)
+- [Seeed carrier-board support matrix](https://github.com/jjjadand/seeed-tegra-demo-distro/blob/master/layers/meta-seeed/docs/board-support-status.md)
 - [Yocto Project Quick Build](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)
 - [OE4T meta-tegra documentation](https://oe4t.github.io/)
+- [OE4T flashing basics](https://oe4t.github.io/wrynose/Flashing.html)
 
 Thank you for choosing Seeed Studio products! For technical support and product discussion, please use the following channels:
 
