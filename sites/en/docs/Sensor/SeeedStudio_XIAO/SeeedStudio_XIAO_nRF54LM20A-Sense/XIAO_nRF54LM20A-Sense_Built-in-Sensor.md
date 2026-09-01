@@ -109,7 +109,14 @@ The LSM6DS3TR-C is a six-axis sensor integrating a 3-axis digital accelerometer 
                 imu_vdd: LDO1 {
                         regulator-min-microvolt = <3300000>;
                         regulator-max-microvolt = <3300000>;
-                        regulator-boot-on;
+                        /*
+                         * Do not enable LDO1 during regulator driver init: the
+                         * nPM1300 sits on gpio-i2c, which may not be ready yet.
+                         * main() enables this rail before deferred IMU init.
+                         * Use /delete-property/ so this also overrides board
+                         * revisions that define regulator-boot-on themselves.
+                         */
+                        /delete-property/ regulator-boot-on;
                 };
         };
 };
@@ -117,6 +124,7 @@ The LSM6DS3TR-C is a six-axis sensor integrating a 3-axis digital accelerometer 
 &lsm6ds3tr_c {
         zephyr,deferred-init;
 };
+
 
 
 ```
