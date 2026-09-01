@@ -9,15 +9,15 @@ keywords:
   - speech recognition
   - Zipformer
   - edge AI
-image: https://raw.githubusercontent.com/yyling0101-a11y/recamera_pro_face_stt/main/images/gpt_images.png
+image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/recamera_pro_visual_wake_stt/gpt_images.png
 slug: /recamera_pro_visual_wake_stt
 last_update:
   date: 2026-08-24
   author: yylin
 createdAt: '2026-08-24'
-updatedAt: '2026-08-24'
+updatedAt: '2026-08-27'
 sidebar_position: 1
-url: https://wiki.seeedstudio.com/cn/recamera_pro_visual_wake_stt/
+url: https://wiki.seeedstudio.com/recamera_pro_visual_wake_stt/
 ---
 
 # Build a Visual Wake and Offline Speech Recognition System with reCamera Pro

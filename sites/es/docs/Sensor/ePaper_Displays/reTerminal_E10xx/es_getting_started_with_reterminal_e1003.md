@@ -43,7 +43,7 @@ reTerminal E1003 es una pantalla de papel electrónico monocromática de 10,3 pu
 La interacción táctil para reTerminal E1003 es compatible a partir del firmware [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) v1.1.2. La versión más reciente actualmente es la v1.1.4.3 — recomendamos actualizar a ella para obtener la mejor experiencia.
 El soporte de bibliotecas relacionadas con el tacto está previsto para una futura publicación de código abierto, lo que proporcionará mayor flexibilidad para personalizar paneles. Compartiremos más actualizaciones pronto.
 
-reTerminal E1003 es compatible con [ESPHome](/es/reterminal_e10xx_with_esphome) junto con Home Assistant. Comienza con el [recetario de pantallas](/es/reterminal_e10xx_with_esphome), luego continúa con [E/S, batería, tacto y bajo consumo](/es/reterminal_e10xx_with_esphome_advanced) y [RTC, tarjeta SD y micrófono](/es/reterminal_e10xx_with_esphome_rtc_sd_microphone). Se requiere ESPHome **2026.7.0 o posterior** para el controlador de pantalla E1003.
+reTerminal E1003 es compatible con [ESPHome](/es/reterminal_e10xx_with_esphome) junto con Home Assistant. Comienza con el [cookbook de pantallas](/es/reterminal_e10xx_with_esphome), luego continúa con [E/S, batería, tacto y bajo consumo](/es/reterminal_e10xx_with_esphome_advanced) y [RTC, tarjeta SD y micrófono](/es/reterminal_e10xx_with_esphome_rtc_sd_microphone). Se requiere ESPHome **2026.7.0 o posterior** para el controlador de pantalla E1003.
 :::
 
 ### Características

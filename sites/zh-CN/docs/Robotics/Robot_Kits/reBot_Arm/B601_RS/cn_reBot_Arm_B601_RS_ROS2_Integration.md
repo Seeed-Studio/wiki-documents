@@ -23,12 +23,21 @@ updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/
 ---
 
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+
 # reBot Arm B601-RS ROS2 集成教程
+
+<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="./LICENSE">

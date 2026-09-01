@@ -9,7 +9,7 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 自由度
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /rebot_b601_dm_getting_started
 translation:
   skip: [zh-CN]
@@ -21,12 +21,21 @@ updatedAt: '2026-08-19'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 ---
 
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+
 # reBot Arm B601-DM 快速入门
+
+<RebotDmDocNav />
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" />
 </div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1042412233386&skuId=6065255360559" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="./LICENSE">

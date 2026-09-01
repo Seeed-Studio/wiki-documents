@@ -20,11 +20,21 @@ updatedAt: '2026-07-07'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 ---
 
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 # Getting Started with LeRobot-based reBot Arm B601-DM and reBot 102 Leader
 
+<RebotDmDocNav />
 
-![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
+<div align="center">
+    <img width={800}
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -38,12 +48,6 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 <p align="center">
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
-
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
 
 
 

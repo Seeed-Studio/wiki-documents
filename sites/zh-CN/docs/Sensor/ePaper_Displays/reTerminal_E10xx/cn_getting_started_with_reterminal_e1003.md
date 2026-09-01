@@ -43,7 +43,7 @@ reTerminal E1003 是一款 10.3 英寸支持触控的开源黑白电子纸显示
 reTerminal E1003 的触控交互从 [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) 固件 v1.1.2 开始支持。目前最新版本为 v1.1.4.3 —— 我们建议升级到该版本以获得最佳体验。
 与触控相关的库支持计划在未来开源发布，以提供更大的面板定制灵活性。更多更新将很快与大家分享。
 
-reTerminal E1003 在 Home Assistant 中支持 [ESPHome](/cn/reterminal_e10xx_with_esphome)。你可以先从[显示菜谱](/cn/reterminal_e10xx_with_esphome)开始，然后继续阅读 [I/O、电池、触控和低功耗](/cn/reterminal_e10xx_with_esphome_advanced) 以及 [RTC、SD 卡和麦克风](/cn/reterminal_e10xx_with_esphome_rtc_sd_microphone)。E1003 显示驱动需要 ESPHome **2026.7.0 或更高版本**。
+reTerminal E1003 在 Home Assistant 中支持 [ESPHome](/cn/reterminal_e10xx_with_esphome)。你可以先从[显示 cookbook](/cn/reterminal_e10xx_with_esphome)开始，然后继续阅读 [I/O、电池、触控和低功耗](/cn/reterminal_e10xx_with_esphome_advanced) 以及 [RTC、SD 卡和麦克风](/cn/reterminal_e10xx_with_esphome_rtc_sd_microphone)。E1003 显示驱动需要 ESPHome **2026.7.0 或更高版本**。
 :::
 
 ### 特性

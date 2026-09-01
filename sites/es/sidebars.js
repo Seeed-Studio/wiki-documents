@@ -1003,7 +1003,7 @@ const sidebars = {
         'Sensor/SeeedStudio_XIAO/es_SeeedStudio_XIAO_Series_Projects',
         {
           type: 'category',
-          label: 'XIAO SAMD21',
+          label: 'Serie XIAO SAMD21',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/es_Seeeduino-XIAO',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/es_XIAO-SAMD21-Zephyr-RTOS',
@@ -1060,7 +1060,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'XIAO RP2040',
+          label: 'Serie XIAO RP2040',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/es_XIAO-RP2040',
             {
@@ -2174,6 +2174,8 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/es_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/es_respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/es_respeaker_clip_rtc_streaming',
+            'Sensor/reSpeaker_clip/es_respeaker_clip_service_integration',
             'Sensor/reSpeaker_clip/es_respeaker_clip_sensecraft_voice_sdk',
             {
               type: 'category',
@@ -4276,6 +4278,7 @@ const sidebars = {
               label: 'Optimización de memoria',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/es_JetPack_7_2_Memory_Optimization',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/es_JetPack_7_2_Memory_Optimization_Deep_Dive',
               ],
             },
             {

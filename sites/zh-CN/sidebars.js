@@ -1003,7 +1003,7 @@ const sidebars = {
         'Sensor/SeeedStudio_XIAO/cn_SeeedStudio_XIAO_Series_Projects',
         {
           type: 'category',
-          label: 'XIAO SAMD21',
+          label: 'XIAO SAMD21 系列',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/cn_Seeeduino-XIAO',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/cn_XIAO-SAMD21-Zephyr-RTOS',
@@ -1060,7 +1060,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'XIAO RP2040',
+          label: 'XIAO RP2040 系列',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/cn_XIAO-RP2040',
             {
@@ -2175,6 +2175,8 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/cn_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/cn_respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/cn_respeaker_clip_rtc_streaming',
+            'Sensor/reSpeaker_clip/cn_respeaker_clip_service_integration',
             'Sensor/reSpeaker_clip/cn_respeaker_clip_sensecraft_voice_sdk',
             {
               type: 'category',
@@ -4276,6 +4278,7 @@ const sidebars = {
               label: '内存优化',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/cn_JetPack_7_2_Memory_Optimization',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/cn_JetPack_7_2_Memory_Optimization_Deep_Dive',
               ],
             },
             {

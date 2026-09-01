@@ -293,7 +293,7 @@ Cada tutorial abaixo percorre uma plataforma de ponta a ponta:
 
 ### Frameworks de casa inteligente e dashboards
 
-- [Work with ESPHome](https://wiki.seeedstudio.com/pt-br/epaper_work_with_esphome) — referência principal: caminhos de gravação, esqueleto YAML genérico, integração com Home Assistant. Guias por produto: [reTerminal E (Básico)](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome), [reTerminal E (Avançado)](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome_advanced), [EE04](https://wiki.seeedstudio.com/pt-br/EE04_with_esphome_advanced), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel_esphome), [TRMNL DIY Kit](https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_esphome).
+- [Work with ESPHome](https://wiki.seeedstudio.com/pt-br/epaper_work_with_esphome) — referência principal: caminhos de gravação, esqueleto YAML genérico, integração com Home Assistant. Cookbooks por produto: [reTerminal E (Básico)](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome), [reTerminal E (Avançado)](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome_advanced), [EE04](https://wiki.seeedstudio.com/pt-br/EE04_with_esphome_advanced), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel_esphome), [TRMNL DIY Kit](https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_esphome).
 - [Work with TRMNL](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_trmnl) — implante dashboards E-Ink por meio da plataforma em nuvem TRMNL. Um único artigo agora cobre reTerminal E1001/E1002, o TRMNL DIY Kit e o XIAO 7.5" ePaper Panel — escolha seu hardware nas abas.
 
 ### Ferramentas no-code / de design visual de UI
@@ -305,8 +305,8 @@ Cada tutorial abaixo percorre uma plataforma de ponta a ponta:
 
 ### Desenvolvimento baseado em código
 
-- [Work with Arduino](https://wiki.seeedstudio.com/pt-br/epaper_work_with_arduino) — referência principal: configuração da IDE, biblioteca `Seeed_GFX`, geração de `driver.h`. Guias por produto: reTerminal E Série — [ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino) & [Periféricos Embarcados](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals), [TRMNL DIY Kit](https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel_arduino).
-- [Work with PlatformIO](https://wiki.seeedstudio.com/pt-br/epaper_work_with_platformio) — referência principal: configuração do VS Code, configuração de `platformio.ini`, configuração de `Seeed_GFX` e seleção de ambiente PlatformIO por produto. Guia por produto: [EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/pt-br/ee04_with_platformio).
+- [Work with Arduino](https://wiki.seeedstudio.com/pt-br/epaper_work_with_arduino) — referência principal: configuração da IDE, biblioteca `Seeed_GFX`, geração de `driver.h`. Cookbooks por produto: reTerminal E Série — [ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino) & [Periféricos Embarcados](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals), [TRMNL DIY Kit](https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel_arduino).
+- [Work with PlatformIO](https://wiki.seeedstudio.com/pt-br/epaper_work_with_platformio) — referência principal: configuração do VS Code, configuração de `platformio.ini`, configuração de `Seeed_GFX` e seleção de ambiente PlatformIO por produto. Cookbook por produto: [EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/pt-br/ee04_with_platformio).
 - [Work with Zephyr](https://wiki.seeedstudio.com/pt-br/epaper_work_with_zephyr) — página de entrada para suporte Zephyr RTOS em reTerminal E1001, E1002 e E1003, com links para documentação oficial de placas Zephyr e alvos de placa.
 
 ### ESL / OEPL open-source

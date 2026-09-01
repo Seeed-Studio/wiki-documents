@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 4. 为每款 Seeed ePaper 产品选择正确的 PlatformIO 环境。
 5. 添加 `Seeed_GFX`，并使用 [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) 生成匹配的 `driver.h`。
 
-如果你在寻找显示绘图 API、示例草图或与硬件相关的演示代码，请从 [使用 Arduino 开发](/cn/epaper_work_with_arduino) 和本页末尾链接的产品菜谱开始。PlatformIO 中使用的 C/C++ 代码通常与 Arduino 代码相同，主要区别在于项目的配置方式。
+如果你在寻找显示绘图 API、示例草图或与硬件相关的演示代码，请从 [使用 Arduino 开发](/cn/epaper_work_with_arduino) 和本页末尾链接的产品 cookbooks 开始。PlatformIO 中使用的 C/C++ 代码通常与 Arduino 代码相同，主要区别在于项目的配置方式。
 
 ## 兼容硬件
 
@@ -65,12 +65,12 @@ import TabItem from '@theme/TabItem';
     <tr>
       <td><strong>XIAO 7.5" ePaper 面板</strong></td>
       <td>XIAO ESP32-C3</td>
-      <td>使用 XIAO ESP32-C3 的 PlatformIO 环境，然后参考产品菜谱进行与屏幕对应的 `driver.h` 配置。</td>
+      <td>使用 XIAO ESP32-C3 的 PlatformIO 环境，然后参考产品 cookbook 进行与屏幕对应的 `driver.h` 配置。</td>
     </tr>
     <tr>
       <td><strong>EN04 / EN05 以及基于 nRF52840 的 ePaper 板卡</strong></td>
       <td>XIAO nRF52840 系列</td>
-      <td>在固件开发中使用 nRF52840 的 PlatformIO 环境。如果尚未发布针对某款 ePaper 的专用菜谱，请将本页作为环境参考，并结合产品原理图/菜谱获取引脚信息。</td>
+      <td>在固件开发中使用 nRF52840 的 PlatformIO 环境。如果尚未发布针对某款 ePaper 的专用 cookbook，请将本页作为环境参考，并结合产品原理图/cookbook 获取引脚信息。</td>
     </tr>
   </table>
 </div>
@@ -88,7 +88,7 @@ PlatformIO 项目只是构建和上传环境。显示仍然依赖正确的 `driv
 - 它通过 `lib_deps` 下载库，使项目更容易在另一台电脑上复现。
 - 它在 VS Code 中提供构建、上传、清理和串口监视器任务。
 
-在显示绘图和硬件 API 方面，继续使用 Arduino 菜谱中相同的 Arduino 风格 C/C++ 代码即可。PlatformIO 主要改变的是项目布局和配置方式。
+在显示绘图和硬件 API 方面，继续使用 Arduino cookbook 中相同的 Arduino 风格 C/C++ 代码即可。PlatformIO 主要改变的是项目布局和配置方式。
 
 ## 步骤 1：安装 VS Code 和 PlatformIO
 
@@ -202,7 +202,7 @@ PlatformIO 项目只是构建和上传环境。显示仍然依赖正确的 `driv
     </tr>
     <tr>
       <td><code>build_flags</code></td>
-      <td>额外的编译器定义。仅在产品菜谱或库有要求时使用。</td>
+      <td>额外的编译器定义。仅在产品 cookbook 或库有要求时使用。</td>
       <td><code>-DBOARD_HAS_PSRAM</code></td>
     </tr>
     <tr>
@@ -575,7 +575,7 @@ board = seeed-xiao-esp32-s3-sense
 - 使用 [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) 重新生成 `driver.h`。
 - 确认所选的开发板和显示屏与实际硬件相匹配。
 - 确认生成的 `BOARD_SCREEN_COMBO` 对包含 `Seeed_GFX` 的源文件是可见的。
-- 对于具有大缓冲区的 ESP32-S3 产品，确认产品使用手册中是否要求设置 PSRAM。
+- 对于具有大缓冲区的 ESP32-S3 产品，确认产品 cookbook 中是否要求设置 PSRAM。
 
 ### Q3：为什么 PlatformIO 无法向开发板上传固件？
 

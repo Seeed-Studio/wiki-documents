@@ -1,6 +1,6 @@
 ---
-description: Recetario Arduino de extremo a extremo para el Panel ePaper XIAO de 7,5" - configuración del IDE de Arduino específica para el XIAO ESP32-C3, configuración de Seeed_GFX y recorrido de Hello World.
-title: Recetario de Arduino
+description: cookbook Arduino de extremo a extremo para el Panel ePaper XIAO de 7,5" - configuración del IDE de Arduino específica para el XIAO ESP32-C3, configuración de Seeed_GFX y recorrido de Hello World.
+title: Cookbook de Arduino
 keywords:
   - pantalla ePaper
   - arduino
@@ -16,7 +16,7 @@ updatedAt: '2026-04-29'
 url: https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_arduino/
 ---
 
-# Recetario de Arduino: Panel ePaper XIAO de 7,5"
+# Cookbook de Arduino: Panel ePaper XIAO de 7,5"
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/203.png" style={{width:900, height:'auto'}}/></div>
 
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_arduino/
 </div>
 
 :::tip Lee primero la guía principal de Arduino
-Esta página es el **recetario específico para el Panel XIAO de 7,5"**. La plantilla compartida — configuración del IDE de Arduino, paquete de placas ESP32, instalación de `Seeed_GFX`, generación de `driver.h` desde la Configuration Tool — se encuentra en **[Work with Arduino](/es/epaper_work_with_arduino)**. Échale un vistazo primero si eres nuevo en Arduino en ePaper de Seeed; esta página se centra en lo que es diferente para el panel basado en XIAO ESP32-C3.
+Esta página es el **cookbook específico para el Panel XIAO de 7,5"**. La plantilla compartida — configuración del IDE de Arduino, paquete de placas ESP32, instalación de `Seeed_GFX`, generación de `driver.h` desde la Configuration Tool — se encuentra en **[Work with Arduino](/es/epaper_work_with_arduino)**. Échale un vistazo primero si eres nuevo en Arduino en ePaper de Seeed; esta página se centra en lo que es diferente para el panel basado en XIAO ESP32-C3.
 :::
 
 ## Descripción general

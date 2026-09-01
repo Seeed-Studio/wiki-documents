@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-24 16:58:59 (北京时间)
-// 多语言页面: 2455 个
+// 生成时间: 2026-08-27 10:02:05 (北京时间)
+// 多语言页面: 2457 个
 
 (function() {
   'use strict';
@@ -3957,6 +3957,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_visual_wake_stt": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_faqs": [
     "cn",
     "en",
@@ -3972,6 +3979,13 @@
     "pt"
   ],
   "/recamera_pro_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_gpio_guide": [
     "cn",
     "en",
     "es",
@@ -12041,6 +12055,7 @@
   "/respeaker_xvf3800_introduction": [
     "cn",
     "en",
+    "es",
     "ja",
     "pt"
   ],

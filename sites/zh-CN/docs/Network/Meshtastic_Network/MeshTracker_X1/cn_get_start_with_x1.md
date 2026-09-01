@@ -466,7 +466,15 @@ MAC 地址的 `最后四位` 即为设备 ID
 
 ### 如何重启设备
 
- 长按按键，然后连接充电线。
+长按按键，然后连接充电线。
+
+### 温度读数精度
+
+温度数据来自气压传感器，而不是独立的温度传感器。设备在运行过程中会产生热量，因此测得的温度会高于实际环境温度。
+
+### 功耗
+
+您可以通过[功耗表](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK)计算设备的功耗。本设备配备高电压电池。当电池电量较低时，放电速度会加快。因此，您可能会发现设备在低电量状态下耗电非常快。
 
 ## 故障排查
 
