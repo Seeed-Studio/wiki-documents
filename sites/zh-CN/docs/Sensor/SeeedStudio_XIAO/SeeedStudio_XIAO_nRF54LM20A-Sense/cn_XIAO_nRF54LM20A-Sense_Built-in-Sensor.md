@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/
   </table>
 </div>
 
-XIAO nRF54LM20A Sense 配备了丰富的板载传感器，以支持多场景应用。它集成了用于姿态识别的 LSM6DS3TR-C 六轴传感器，以及支持 PDM 数字输出和全向拾音的 MSM261DGT006 数字 MEMS 麦克风，适用于智能语音场景。本文将介绍基于 XIAO nRF54LM20A 丰富板载外设的开发与使用方法。
+XIAO nRF54LM20A Sense 配备了丰富的板载传感器，可支持多场景应用。它集成了用于姿态识别的 LSM6DS3TR-C 六轴传感器，以及支持 PDM 数字输出和全向拾音的 MSM261DGT006 数字 MEMS 麦克风，适用于智能语音场景。本文将介绍基于 XIAO nRF54LM20A 丰富板载外设的开发与使用方法。
 
 :::tip
 
@@ -80,7 +80,7 @@ XIAO nRF54LM20A Sense 配备了丰富的板载传感器，以支持多场景应�
 
 ## IMU
 
-LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的六轴传感器，属于意法半导体推出的 iNEMO 惯性测量单元（IMU）。在 XIAO nRF54LM20A Sense 上，该传感器支持中断触发数据输出。它具有 ±2/±4/±8/±16 g 的加速度全量程范围和 ±125/±250/±500/±1000/±2000 dps 的角速度范围，并支持持续低功耗模式，适用于多种运动检测场景。板载芯片通过 I2C 协议与其通信以获取数据。
+LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的六轴传感器，属于意法半导体推出的 iNEMO 惯性测量单元（IMU）。在 XIAO nRF54LM20A Sense 上，该传感器支持中断触发数据输出，具有 ±2/±4/±8/±16 g 的加速度全量程范围和 ±125/±250/±500/±1000/±2000 dps 的角速度范围，并支持持续低功耗模式，适用于多种运动检测场景。板载芯片通过 I2C 协议与其通信以获取数据。
 :::tip
 
 - 关于 LSM6DS3TR-C 的更多信息，请访问：[LSM6DS3TR-C 产品概述](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) 和 [LSM6DS3TR-C 数据手册](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
@@ -109,7 +109,14 @@ LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的�
                 imu_vdd: LDO1 {
                         regulator-min-microvolt = <3300000>;
                         regulator-max-microvolt = <3300000>;
-                        regulator-boot-on;
+                        /*
+                         * Do not enable LDO1 during regulator driver init: the
+                         * nPM1300 sits on gpio-i2c, which may not be ready yet.
+                         * main() enables this rail before deferred IMU init.
+                         * Use /delete-property/ so this also overrides board
+                         * revisions that define regulator-boot-on themselves.
+                         */
+                        /delete-property/ regulator-boot-on;
                 };
         };
 };
@@ -117,6 +124,7 @@ LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的�
 &lsm6ds3tr_c {
         zephyr,deferred-init;
 };
+
 
 
 ```
@@ -361,7 +369,7 @@ int main(void)
 <br/>
 
 :::tip
-如果你想直接验证 IMU 的性能，可以克隆 Platform-seeedboards 仓库，在 examples 目录下找到 zephyr-imu 示例，然后编译并烧录程序即可开始测试。
+如果你想直接验证 IMU 的性能，请克隆 Platform-seeedboards 仓库，在 examples 目录下找到 zephyr-imu 示例，然后编译并烧录程序以开始测试。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -375,8 +383,8 @@ int main(void)
 
 烧录固件后，你可以在电脑上打开串口助手进行数据查看。触发频率为 12.5 Hz，间隔为 80 毫秒。
 
-- 三轴数字加速度计：测量 X、Y、Z 三个轴向的加速度。
-- 三轴数字陀螺仪：测量绕 X、Y、Z 三个轴的角速度。
+- 三轴数字加速度计：测量 X、Y 和 Z 轴方向的加速度。
+- 三轴数字陀螺仪：测量绕 X、Y 和 Z 轴的角速度。
 
 :::tip
 
@@ -397,15 +405,15 @@ monitor_speed = 115200
 
 ### 应用
 
-IMU 可以融合三轴加速度数据，计算俯仰角、偏航角和横滚姿态角，用于姿态识别。它还可以与相应的控制器配合，实现运动控制，或应用于姿态触发唤醒等低功耗场景。
+IMU 可以融合三轴加速度数据来计算俯仰、偏航和横滚姿态角，用于姿态识别。它还可以与相应的控制器配合，实现运动控制，或应用于姿态触发唤醒等低功耗场景。
 
 #### 电子海洋
 
 这是一个基于 XIAO nRF54LM20A Sense 板载 IMU 的示例。它采集姿态数据并融合加速度信息，将运动状态映射到 RGB 灯板上，实现可视化的海洋律动效果。
 
 - **倾斜水位控制** — 通过左右横滚倾斜调节水位高度
-- **波浪动画** — 三层频率叠加的波面，2D 波浪传播与边缘反射效果
-- **流体惯性** — 具有动量的水面；快速倾斜会产生过冲以及随后的晃动回弹
+- **波浪动画** — 三层频率叠加的波面，2D 波浪传播和边缘反射效果
+- **流体惯性** — 具有动量的水面；快速倾斜会产生超调和随后的晃动回弹
 - **翻转检测** — 板子翻转时显示自动镜像
 - **动态色彩** — 每一列随机渐变切换海洋色调
 
@@ -540,7 +548,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### IMU 唤醒
 
-在本例程中，RGB 的绿色通道在上电后会点亮然后熄灭，随后系统进入超低功耗睡眠模式。当板子检测到轻敲时，XIAO nRF54LM20A Sense 将通过中断被唤醒。轻敲事件会被记录并通过串口打印输出。
+在本例程中，RGB 的绿色通道在上电后点亮又熄灭，然后系统进入超低功耗睡眠模式。当板子检测到轻敲时，XIAO nRF54LM20A Sense 将通过中断被唤醒。轻敲事件会被记录并通过串口打印输出。
 
 下载该例程即可实现 IMU 唤醒功能。
 
@@ -652,7 +660,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <br/>
 :::tip
 
-感应位置仅供参考，准确的轻敲位置识别取决于 IMU 融合控制算法。
+感应位置仅供参考。准确的轻敲位置识别取决于 IMU 融合控制算法。
 
 :::
 
@@ -662,7 +670,7 @@ XIAO nRF54LM20A Sense 采用的芯片内置 GRTC 硬件资源，无需额外的 
 
 RTC 支持时间戳计数，即使在断电后也能记录运行时间，方便进行日志记录和时间追踪。
 
-本节介绍在 XIAO nRF54LM20A Sense 上实现的一个示例程序。上电后，通过 RTC 获取从编译时间开始的时间戳，并每秒打印一次数据。进入 System OFF 模式后，系统将由 RTC 闹钟唤醒以继续计数。
+本节介绍在 XIAO nRF54LM20A Sense 上实现的一个示例程序。上电后，通过 RTC 从编译时间开始获取时间戳，并每秒打印一次数据。进入 System OFF 模式后，系统将由 RTC 闹钟唤醒以继续计数。
 
 1. 将 [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) 拷贝到 main.c 文件中，使用 RTC 功能打印时间戳。
 
@@ -743,14 +751,14 @@ XIAO nRF54LM20A Sense 搭载 MSM261DGT006 数字 MEMS 麦克风用于语音输�
 
 ### 音频录制与 BLE 上传
 
-本节通过一个语音示例演示麦克风功能，具体流程如下：
+本节通过语音示例演示麦克风功能，具体流程如下：
 
 - 按下 BOOT 按钮，RGB-G LED 常亮并开始录音；再次按下停止录音（最长 10 秒）。
 - 录音结束后，音频文件将通过蓝牙发送到上位机。传输过程中 RGB-G LED 闪烁。
 - 在 Windows 上运行接收脚本，将音频文件保存到 `./recordings` 目录。
 - 传输完成后 RGB-G LED 熄灭。
 
-1. 将 <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> 程序拷贝到 `main.c` 中。
+1. 将 <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> 中的程序拷贝到 `main.c` 中。
 
 2. 修改设备树文件 `app.overlay` 以绑定 BLE 节点。
 
@@ -870,11 +878,11 @@ CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
 
 ### 结果
 
-编译并烧录程序，然后在 Windows 电脑上通过脚本接收蓝牙传输的录音音频。
+编译并烧录程序，然后在 Windows 电脑上借助脚本通过蓝牙接收录制的音频。
 
 1. 运行 Python 脚本
 
-执行前先安装所需依赖库：
+执行前安装所需依赖库：
 
 ```bash
 pip install bleak 
@@ -1065,7 +1073,7 @@ BLE UUID 已在 Python 程序中配置好，因此运行脚本后会自动连接
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- 打开串口，会打印日志。请将波特率设置为 921600。
+- 打开串口，它会打印日志。请将波特率设置为 921600。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -1077,7 +1085,7 @@ BLE UUID 已在 Python 程序中配置好，因此运行脚本后会自动连接
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

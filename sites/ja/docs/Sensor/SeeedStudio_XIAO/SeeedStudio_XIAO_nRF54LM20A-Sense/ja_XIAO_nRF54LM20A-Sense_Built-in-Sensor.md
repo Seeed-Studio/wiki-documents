@@ -51,7 +51,7 @@ XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーション�
 
 ## ハードウェアの準備
 
-本記事は XIAO nRF54LM20A Sense をベースに開発されており、事前に関連ハードウェアを準備する必要があります。
+本記事は XIAO nRF54LM20A Sense をベースに開発されており、あらかじめ関連するハードウェアを用意する必要があります。
 
 <div className="table-center">
 <table align="center">
@@ -80,7 +80,7 @@ XIAO nRF54LM20A Sense には、マルチシナリオのアプリケーション�
 
 ## IMU
 
-LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジャイロスコープを統合した 6 軸センサーで、STMicroelectronics が提供する iNEMO 慣性計測ユニット (IMU) に属します。XIAO nRF54LM20A Sense では、このセンサーは割り込みトリガによるデータ出力をサポートします。フルスケール加速度範囲は ±2/±4/±8/±16 g、角速度範囲は ±125/±250/±500/±1000/±2000 dps で、持続的な低消費電力モードをサポートしており、さまざまなモーション検出シナリオに適しています。オンボードチップは I2C プロトコルを介してこのセンサーと通信し、データを取得します。
+LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジャイロスコープを統合した 6 軸センサーで、STMicroelectronics が提供する iNEMO 慣性計測ユニット (IMU) に属します。XIAO nRF54LM20A Sense では、このセンサーは割り込みトリガによるデータ出力をサポートしています。フルスケール加速度範囲は ±2/±4/±8/±16 g、角速度範囲は ±125/±250/±500/±1000/±2000 dps で、持続的な低消費電力モードをサポートしており、さまざまな動作検知シナリオに適しています。オンボードチップは I2C プロトコルを介してこのセンサーと通信し、データを取得します。
 :::tip
 
 - LSM6DS3TR-C の詳細については、[Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) および [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf) を参照してください。
@@ -109,7 +109,14 @@ LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジ
                 imu_vdd: LDO1 {
                         regulator-min-microvolt = <3300000>;
                         regulator-max-microvolt = <3300000>;
-                        regulator-boot-on;
+                        /*
+                         * Do not enable LDO1 during regulator driver init: the
+                         * nPM1300 sits on gpio-i2c, which may not be ready yet.
+                         * main() enables this rail before deferred IMU init.
+                         * Use /delete-property/ so this also overrides board
+                         * revisions that define regulator-boot-on themselves.
+                         */
+                        /delete-property/ regulator-boot-on;
                 };
         };
 };
@@ -117,6 +124,7 @@ LSM6DS3TR-C は、3 軸デジタル加速度センサーと 3 軸デジタルジ
 &lsm6ds3tr_c {
         zephyr,deferred-init;
 };
+
 
 
 ```
@@ -144,7 +152,7 @@ CONFIG_CBPRINTF_COMPLETE=y
 
 ```
 
-3. 取得した 3 軸デジタル加速度データと 3 軸デジタルジャイロスコープデータを USB シリアルポート経由で出力するプログラムを作成します。
+3. 取得した 3 軸デジタル加速度センサーデータと 3 軸デジタルジャイロスコープデータを USB シリアルポート経由で出力するプログラムを書きます。
 
 <details>
 
@@ -361,7 +369,7 @@ int main(void)
 <br/>
 
 :::tip
-IMU の性能を直接検証したい場合は、Platform-seeedboards リポジトリをクローンし、examples ディレクトリ内の zephyr-imu サンプルを見つけてコンパイルおよび書き込みを行い、テストを開始してください。
+IMU の性能を直接検証したい場合は、Platform-seeedboards リポジトリをクローンし、`examples` ディレクトリ内の `zephyr-imu` サンプルを見つけてコンパイルし、プログラムを書き込んでテストを開始してください。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -376,12 +384,12 @@ IMU の性能を直接検証したい場合は、Platform-seeedboards リポジ�
 ファームウェアを書き込んだ後、PC 上でシリアルポートアシスタントを開いてデータを確認できます。トリガー周波数は 12.5 Hz、間隔は 80 ミリ秒です。
 
 - 3 軸デジタル加速度センサ：X、Y、Z 各軸方向の加速度を測定します。
-- 3 軸デジタルジャイロスコープ：X、Y、Z 各軸周りの角速度を測定します。
+- 3 軸デジタルジャイロスコープ：X、Y、Z 各軸回りの角速度を測定します。
 
 :::tip
 
 1. シリアルモニタでデータを確認する際は、ボーレートを 115200 に設定してください。
-2. PlatformIO IDE のシリアルモニタ用に、**platformio.ini** 設定ファイル内でもボーレートを 115200 に指定してください。
+2. PlatformIO IDE のシリアルモニタを使用する場合は、**platformio.ini** 設定ファイル内でボーレートを 115200 に指定してください。
 
 ```ini
 [env:seeed-xiao-nrf54lm20a]
@@ -401,15 +409,15 @@ IMU は 3 軸加速度データをフュージョンして、姿勢認識のた�
 
 #### Electronic Ocean
 
-これは XIAO nRF54LM20A Sense のオンボード IMU をベースにしたサンプルです。姿勢データを収集し、加速度情報をフュージョンして動作状態を RGB ライトパネル上にマッピングし、視覚的な海のリズム効果を実現します。
+これは XIAO nRF54LM20A Sense のオンボード IMU をベースにしたサンプルです。姿勢データを収集し、加速度情報をフュージョンして、動作状態を RGB ライトパネル上にマッピングし、視覚的な海のリズム効果を実現します。
 
 - **傾きによる水位制御** — 左右のロール傾きで水位の高さを調整
-- **波アニメーション** — 3 層の周波数を重ね合わせた波面、2D 波の伝播と端での反射効果
-- **流体慣性** — 慣性を持つ水面；急激な傾きでオーバーシュートが発生し、その後の揺り戻しが生じる
+- **波のアニメーション** — 3 層の周波数を重ね合わせた波面、2D 波の伝播と端での反射効果
+- **流体慣性** — 慣性を持つ水面；急激に傾けるとオーバーシュートし、その後の揺り戻しが発生
 - **反転検出** — ボードを反転させると表示が自動的にミラー反転
 - **ダイナミックカラー** — 各列ごとにランダムなグラデーションの海の色調を切り替え
 
-さらに、main.c 内のマクロ定義を通じて、ボードの RGB 配列設定を変更することもできます。
+さらに、main.c 内のマクロ定義を通じて、ボードの RGB 配列構成を変更することもできます。
 
 ```cpp
 #define COLS 10          // Number of matrix columns
@@ -534,13 +542,13 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WHPSAryN-W4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div><br/>
 
-- 同時に、シリアルポートからも対応する IMU データと現在の波の水位高さが出力されます。
+- 同時に、シリアルポートにも対応する IMU データと現在の波の水位高さが出力されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_2.png" style={{width:800, height:'auto'}}/></div>
 
 #### IMU ウェイクアップ
 
-このルーチンでは、電源投入後に RGB のグリーンチャネルが点灯して消灯し、その後システムは超低消費電力スリープモードに入ります。ボードがタップを検出すると、割り込みによって XIAO nRF54LM20A Sense がウェイクアップします。タップイベントは記録され、シリアルポート経由で出力されます。
+このルーチンでは、電源投入後に RGB のグリーンチャネルが点灯して消灯し、その後システムは超低消費電力スリープモードに入ります。ボードがタップを検出すると、割り込みによって XIAO nRF54LM20A Sense がウェイクアップします。タップイベントは記録され、シリアルポートを通じて出力されます。
 
 このルーチンをダウンロードして、IMU ウェイクアップ機能を実装します。
 
@@ -616,7 +624,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 };
 ```
 
-3. prj.conf で関連する IMU 設定を有効にします
+3. prj.conf で IMU に関連する設定を有効にします
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -642,7 +650,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 ```
 
 <br/>
-- 書き込みと電源投入後、RGB-G LED が短時間点滅します。ボード上の任意の場所をタップすると RGB-G LED が点灯します。
+- 書き込みと電源投入後、RGB-G LED が短時間点滅します。ボード上の任意の場所をタップすると、RGB-G LED が点灯します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_3_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -660,7 +668,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 XIAO nRF54LM20A Sense に採用されているチップには GRTC ハードウェアリソースが内蔵されており、追加の RTC モジュールなしで RTC 機能を実現できます。
 
-RTC はタイムスタンプカウントをサポートしており、電源断後も動作時間を記録できるため、ログ記録や時間追跡が容易になります。
+RTC はタイムスタンプカウントをサポートしており、電源断後も動作時間を記録できるため、ログ記録や時間追跡に役立ちます。
 
 このセクションでは、XIAO nRF54LM20A Sense 上で実装されたサンプルプログラムを紹介します。電源投入後、RTC を介してコンパイル時刻からのタイムスタンプを取得し、1 秒ごとにデータを出力します。System OFF モードに入った後は、RTC アラームによってシステムがウェイクアップし、カウントを継続します。
 
@@ -737,20 +745,20 @@ XIAO nRF54LM20A Sense には、音声入力用に MSM261DGT006 デジタル MEMS
 
 :::tip
 
-XIAO nRF54LM20A シリーズの中で、マイクロフォンを搭載しているのは XIAO nRF54M20A Sense のみであり、開発ボードの左下に配置されています。
+XIAO nRF54LM20A シリーズの中で、マイクを搭載しているのは XIAO nRF54M20A Sense のみであり、開発ボードの左下隅に配置されています。
 
 :::
 
 ### 音声録音と BLE アップロード
 
-このセクションでは、音声サンプルを通じてマイクロフォン機能をデモします。具体的な手順は次のとおりです。
+このセクションでは、音声サンプルを通してマイク機能をデモンストレーションします。具体的な手順は次のとおりです。
 
-- BOOT ボタンを押すと RGB-G LED が点灯し、録音を開始します。もう一度押すと録音を停止します（最大 10 秒）。
-- 録音後、音声ファイルは Bluetooth を介してホストコンピュータに送信されます。送信中は RGB-G LED が点滅します。
+- BOOT ボタンを押すと RGB-G LED が点灯し、録音を開始します。もう一度押すと録音が停止します（最大 10 秒）。
+- 録音後、音声ファイルは Bluetooth 経由でホストコンピュータに送信されます。送信中は RGB-G LED が点滅します。
 - Windows 上で受信スクリプトを実行し、音声ファイルを `./recordings` ディレクトリに保存します。
-- 送信が完了すると RGB-G LED は消灯します。
+- 送信完了後、RGB-G LED は消灯します。
 
-1. <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> からプログラムをコピーして `main.c` に貼り付けます。
+1. <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> のプログラムを `main.c` にコピーします。
 
 2. デバイスツリーファイル `app.overlay` を修正して、BLE ノードをバインドします。
 
@@ -796,7 +804,7 @@ XIAO nRF54LM20A シリーズの中で、マイクロフォンを搭載してい�
 };
 ```
 
-2. `prj.conf` ファイルを修正して、Bluetooth とマイクロフォン用の設定を有効にし、Bluetooth デバイス名を **XIAO-MIC** に設定します。
+2. `prj.conf` ファイルを修正して、Bluetooth とマイク用の設定を有効にし、Bluetooth デバイス名を **XIAO-MIC** に設定します。
 
 ```prj
 # ===== Audio / DMIC =====
@@ -870,7 +878,7 @@ CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
 
 ### 結果
 
-プログラムをコンパイルして書き込み、Windows コンピュータ上でスクリプトを使用して Bluetooth 経由で録音音声を受信します。
+プログラムをコンパイルして書き込み、その後 Windows コンピュータ上でスクリプトを使用して Bluetooth 経由で録音音声を受信します。
 
 1. Python スクリプトを実行します
 
@@ -1048,7 +1056,7 @@ if __name__ == "__main__":
 </details>
 <br/>
 
-スクリプト実行コマンド：
+スクリプトの実行コマンド：
 
 ```bash
 python ble_recorder_receiver.py
@@ -1060,7 +1068,7 @@ BLE UUID はすでに Python プログラム内で設定されているため、
 
 2. 結果を確認する
 
-- BOOT キーを押して録音を開始します。緑色の RGB LED が点灯している場合は、録音中であることを示します。マイクに向かって大きな声で話し、再度 BOOT キーを押して録音を停止します。緑色の RGB LED が点滅している場合は、オーディオファイルが送信中であることを意味します。
+- BOOT キーを押して録音を開始します。緑色の RGB LED が点灯している間は録音中です。マイクに向かって大きな声で話し、その後もう一度 BOOT キーを押して録音を停止します。緑色の RGB LED が点滅している場合は、オーディオファイルを送信中であることを示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>

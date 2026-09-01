@@ -41,17 +41,17 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_onboard/
   </table>
 </div>
 
-O XIAO nRF54LM20A Sense vem equipado com abundantes sensores integrados para suportar aplicações em múltiplos cenários. Ele inclui o sensor de seis eixos LSM6DS3TR-C para reconhecimento de postura e o microfone digital MEMS MSM261DGT006, que suporta saída digital PDM e captação de som omnidirecional, sendo adequado para cenários de voz inteligente. Este artigo apresenta os métodos de desenvolvimento e uso com base nos ricos periféricos integrados do XIAO nRF54LM20A.
+O XIAO nRF54LM20A Sense vem equipado com abundantes sensores integrados para dar suporte a aplicações em múltiplos cenários. Ele inclui o sensor de seis eixos LSM6DS3TR-C para reconhecimento de postura e o microfone digital MEMS MSM261DGT006, que suporta saída digital PDM e captação de som omnidirecional, sendo adequado para cenários de voz inteligente. Este artigo apresenta os métodos de desenvolvimento e uso com base nos ricos periféricos integrados do XIAO nRF54LM20A.
 
 :::tip
 
-- Este artigo é desenvolvido com base no sistema de build PlatformIO e no Zephyr RTOS. Se você não tiver experiência prévia com eles, consulte [Getting Started With SeeedStudio XIAO nRF54LM20A](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_sense_getting_started/)
+- Este artigo foi desenvolvido com base no sistema de build PlatformIO e no Zephyr RTOS. Se você não tiver experiência prévia com eles, consulte [Getting Started With SeeedStudio XIAO nRF54LM20A](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_sense_getting_started/)
 
 :::
 
 ## Preparação de hardware
 
-Este artigo é desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa preparar o hardware relevante com antecedência.
+Este artigo foi desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa preparar o hardware relevante com antecedência.
 
 <div className="table-center">
 <table align="center">
@@ -80,7 +80,7 @@ Este artigo é desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa p
 
 ## IMU
 
-O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor suporta saída de dados acionada por interrupção. Ele possui uma faixa de aceleração de escala completa de ±2/±4/±8/±16 g e uma faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir dados.
+O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor suporta saída de dados acionada por interrupção. Ele possui uma faixa de aceleração de escala completa de ±2/±4/±8/±16 g e uma faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir os dados.
 :::tip
 
 - Para mais informações sobre o LSM6DS3TR-C, visite: [Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) e [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
@@ -109,7 +109,14 @@ O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de
                 imu_vdd: LDO1 {
                         regulator-min-microvolt = <3300000>;
                         regulator-max-microvolt = <3300000>;
-                        regulator-boot-on;
+                        /*
+                         * Do not enable LDO1 during regulator driver init: the
+                         * nPM1300 sits on gpio-i2c, which may not be ready yet.
+                         * main() enables this rail before deferred IMU init.
+                         * Use /delete-property/ so this also overrides board
+                         * revisions that define regulator-boot-on themselves.
+                         */
+                        /delete-property/ regulator-boot-on;
                 };
         };
 };
@@ -117,6 +124,7 @@ O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de
 &lsm6ds3tr_c {
         zephyr,deferred-init;
 };
+
 
 
 ```
@@ -397,7 +405,7 @@ monitor_speed = 115200
 
 ### Aplicação
 
-A IMU pode fundir dados de aceleração de três eixos para calcular os ângulos de atitude de pitch, yaw e roll para reconhecimento de postura. Ela também pode trabalhar com controladores correspondentes para realizar controle de movimento, ou ser aplicada em cenários de baixo consumo de energia, como despertar acionado por atitude.
+A IMU pode fundir dados de aceleração de três eixos para calcular os ângulos de atitude de pitch, yaw e roll para reconhecimento de postura. Ela também pode trabalhar com controladores correspondentes para realizar controle de movimento, ou ser aplicada em cenários de baixo consumo, como despertar acionado por atitude.
 
 #### Oceano Eletrônico
 
@@ -406,7 +414,7 @@ Este é um exemplo baseado na IMU integrada do XIAO nRF54LM20A Sense. Ele coleta
 - **Controle de nível de água por inclinação** — Ajuste a altura do nível de água por meio da inclinação de roll para a esquerda e para a direita
 - **Animação de ondas** — Superfície de ondas com sobreposição de três camadas de frequência, propagação de ondas 2D e efeito de reflexão nas bordas
 - **Inércia do fluido** — Superfície da água com momento; inclinação rápida causa overshoot e subsequente oscilação de retorno
-- **Detecção de inversão** — A exibição é espelhada automaticamente quando a placa é virada
+- **Detecção de giro** — A exibição é automaticamente espelhada quando a placa é virada
 - **Cor dinâmica** — Troca de tons oceânicos em gradiente aleatório para cada coluna
 
 Além disso, você pode modificar a configuração da matriz RGB da placa por meio de definições de macro em main.c.
@@ -504,7 +512,7 @@ Além disso, você pode modificar a configuração da matriz RGB da placa por me
 };
 ```
 
-3. Habilite as configurações relacionadas ao uso da IMU
+3. Ative as configurações relacionadas ao uso da IMU
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -540,7 +548,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### Despertar por IMU
 
-Nesta rotina, o canal verde do RGB acende e apaga após a energização, então o sistema entra em modo de sono de ultrabaixo consumo. Quando um toque é detectado pela placa, o XIAO nRF54LM20A Sense será despertado via interrupção. O evento de toque será registrado e impresso pela porta serial.
+Nesta rotina, o canal verde dos LEDs RGB acende e apaga após a energização, então o sistema entra em modo de sono de ultrabaixo consumo. Quando um toque é detectado pela placa, a XIAO nRF54LM20A Sense será despertada via interrupção. O evento de toque será registrado e impresso pela porta serial.
 
 Baixe a rotina para implementar a função de despertar por IMU.
 
@@ -616,7 +624,7 @@ Baixe a rotina para implementar a função de despertar por IMU.
 };
 ```
 
-3. Habilite as configurações relevantes da IMU em prj.conf
+3. Ative as configurações relevantes da IMU em prj.conf
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -660,7 +668,7 @@ A posição de detecção é apenas para referência. O reconhecimento preciso d
 
 O chip adotado pelo XIAO nRF54LM20A Sense é equipado com recursos de hardware GRTC integrados, permitindo funções de RTC sem módulos RTC adicionais.
 
-O RTC suporta contagem de carimbo de data/hora e pode registrar o tempo de operação mesmo após falha de energia, o que facilita o registro de logs e o rastreamento de tempo.
+O RTC oferece suporte à contagem de carimbos de data e hora e pode registrar o tempo de operação mesmo após uma queda de energia, o que facilita o registro de logs e o rastreamento de tempo.
 
 Esta seção apresenta um programa de exemplo implementado no XIAO nRF54LM20A Sense. Após ligar, ele obtém carimbos de data/hora a partir do horário de compilação via RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será acordado pelo alarme do RTC para continuar a contagem.
 
@@ -733,15 +741,15 @@ CONFIG_NEWLIB_LIBC=y
 
 ## MIC 
 
-O XIAO nRF54LM20A Sense está equipado com o microfone digital MEMS MSM261DGT006 para entrada de voz. Ele se conecta diretamente via interface PDM sem necessidade de um ADC. É adequado para dispositivos vestíveis, dispositivos inteligentes, reconhecimento de voz, gravação de áudio e outros cenários de aplicação que exigem funções de detecção acústica.
+O XIAO nRF54LM20A Sense é equipado com o microfone digital MEMS MSM261DGT006 para entrada de voz. Ele se conecta diretamente via interface PDM sem necessidade de um ADC. É adequado para dispositivos vestíveis, dispositivos inteligentes, reconhecimento de voz, gravação de áudio e outros cenários de aplicação que exigem funções de detecção acústica.
 
 :::tip
 
-Entre a série XIAO nRF54LM20A, apenas o XIAO nRF54M20A Sense está equipado com um microfone, que está localizado no canto inferior esquerdo da placa de desenvolvimento.
+Entre a série XIAO nRF54LM20A, apenas o XIAO nRF54M20A Sense é equipado com um microfone, que está localizado no canto inferior esquerdo da placa de desenvolvimento.
 
 :::
 
-### Gravação de áudio e upload via BLE
+### Gravação de Áudio e Upload via BLE
 
 Esta seção demonstra a função do microfone por meio de um exemplo de voz. O processo específico é o seguinte:
 
