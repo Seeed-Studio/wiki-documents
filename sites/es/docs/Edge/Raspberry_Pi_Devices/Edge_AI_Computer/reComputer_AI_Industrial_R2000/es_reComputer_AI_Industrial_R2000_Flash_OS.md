@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/es/recomputer_ai_industrial_r2000_flash_os/
     </a>
 </div>
 
-La serie reComputer AI Industrial R2000 está impulsada por Raspberry Pi CM5 y el acelerador de IA Hailo-8; este sistema compacto de IA en el borde ofrece 26 TOPS para procesamiento de visión multicanal en tiempo real. Con una CPU Cortex-A76 de cuatro núcleos, hasta 16GB de RAM, 64GB de eMMC y una interfaz versátil, garantiza una integración fluida en aplicaciones industriales de IA.
+La serie reComputer AI Industrial R2000 está impulsada por Raspberry Pi CM5 y el acelerador de IA Hailo-8; este sistema compacto de IA en el borde ofrece 26 TOPS para procesamiento de visión multicanal en tiempo real. Con una CPU Cortex-A76 de cuatro núcleos, hasta 16GB de RAM, 64GB eMMC y una interfaz versátil, garantiza una integración fluida en aplicaciones de IA industriales.
 
 ## Requisitos de hardware
 
@@ -65,7 +65,7 @@ Necesitas preparar el siguiente hardware
 
 O puedes usar este enlace para descargar el archivo de imagen:
 
-[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntun para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Paso 5.** Haz clic en **CHOOSE STORAGE**
 
@@ -92,7 +92,7 @@ Por favor abre una terminal y escribe ```brew -V``` para comprobar si has config
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aquí puedes **establecer un hostname, habilitar SSH, establecer una contraseña, configurar wifi, establecer ajustes locales** y más
+Aquí puedes **establecer un hostname, habilitar SSH, establecer una contraseña, configurar wifi, establecer ajustes regionales** y más
 
 - **Paso 4.** Haz clic en **CHOOSE OS** y selecciona tu SO preferido
 
@@ -104,7 +104,7 @@ Aquí puedes **establecer un hostname, habilitar SSH, establecer una contraseña
 
 O puedes usar este enlace para descargar el archivo de imagen:
 
-[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntun para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Paso 5.** Haz clic en **CHOOSE STORAGE**
 
@@ -139,7 +139,7 @@ El resultado se muestra a continuación:
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aquí puedes **establecer un hostname, habilitar SSH, establecer una contraseña, configurar wifi, establecer ajustes locales** y más
+Aquí puedes **establecer un hostname, habilitar SSH, establecer una contraseña, configurar wifi, establecer ajustes regionales** y más
 
 - **Paso 5.** Haz clic en **CHOOSE OS** y selecciona tu SO preferido
 
@@ -151,7 +151,7 @@ Aquí puedes **establecer un hostname, habilitar SSH, establecer una contraseña
 
 O puedes usar este enlace para descargar el archivo de imagen:
 
-[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntun para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Paso 6.** Haz clic en **CHOOSE STORAGE** y selecciona la unidad eMMC conectada
 
@@ -163,13 +163,13 @@ Espera unos minutos hasta que el proceso de flasheo se complete.
 El resultado se muestra a continuación:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
-## Arrancar desde NVME
+## Arrancar desde SSD (NVMe vía USB)
 
 ### Actualizar EEPROM
 
-*Este método funciona si tienes un SSD y has arrancado el dispositivo correctamente con eMMC. Asegúrate de que tu sistema es la última versión del sistema Raspberry Pi (Bookworm o posterior) y de que el firmware de tu RPi 5 está actualizado a 2023-12-06 (6 de diciembre) o más reciente; de lo contrario, es posible que no reconozca las configuraciones relacionadas con NVME.*
+*Este método funciona si tienes un SSD y has arrancado el dispositivo correctamente con eMMC. Asegúrate de que tu sistema sea la última versión del sistema Raspberry Pi (Bookworm o posterior) y que el firmware de tu RPi 5 esté actualizado a 2023-12-06 (6 de diciembre) o más reciente; de lo contrario, es posible que no reconozca las configuraciones relacionadas con NVME.*
 
-**Paso 1**: Asegúrate de que tu sistema Raspberry Pi está actualizado (Bookworm o posterior); introduce el siguiente comando para actualizar el firmware de la RPi 5:
+**Paso 1**: Asegúrate de que tu sistema Raspberry Pi esté actualizado (Bookworm o posterior); introduce el siguiente comando para actualizar el firmware de la RPi 5:
 
 ```shell
   sudo apt update && sudo apt upgrade -y
@@ -204,9 +204,9 @@ Si se te pide reiniciar, selecciona `Yes`.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/copy.gif" alt="pir" width="700" height="auto" /></div>
 
-### Configurar la Raspberry Pi para arrancar desde el SSD NVMe
+### Configurar la Raspberry Pi para arrancar desde el SSD
 
-Si tienes fácil acceso a la ranura de tu tarjeta SD, puedes apagar tu Pi, extraer la tarjeta SD y (si todo funciona como se espera) debería arrancar automáticamente desde tu unidad NVMe la próxima vez que la enciendas. Sin embargo, si quieres dejar la tarjeta SD donde está y aun así arrancar desde NVMe, tendrás que cambiar el orden de arranque.
+Si tienes fácil acceso a la ranura de tu tarjeta SD, puedes apagar tu Pi, retirar la tarjeta SD y (si todo funciona como se espera) debería arrancar automáticamente desde el SSD la próxima vez que la enciendas. Si quieres dejar la tarjeta SD en su lugar y aun así arrancar desde el SSD, necesitas cambiar el orden de arranque.
 
 **Paso 1**: Introduce el siguiente comando:
 
@@ -237,13 +237,13 @@ Se te preguntará si quieres reiniciar ahora. Haz clic en `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="700" height="auto" /></div>
 
-## Flashear Ubuntu en la NVME
+## Grabar Ubuntu en el SSD (NVMe vía USB)
 
-### Primero: Actualizar la EEPROM con la tarjeta SD
+### Primero: Actualizar el EEPROM con la tarjeta SD
 
-Consulta este [enlace](https://wiki.seeedstudio.com/es/r2000_series_getting_start/#update-eeprom).
+Sigue [Update EEPROM](#update-eeprom) para actualizar el EEPROM.
 
-Para establecer el orden de arranque de la NVMe como la prioridad más alta, utiliza el siguiente comando:
+El SSD utilizado en este dispositivo es un SSD NVMe conectado a través de un puente USB 3.0. Durante el arranque, el firmware de la Raspberry Pi lo detecta como un dispositivo de almacenamiento USB, por lo que la prioridad de arranque correcta es un orden de arranque USB en lugar de un orden de arranque solo NVMe nativo. Para establecer el SSD como el dispositivo de arranque de mayor prioridad, utiliza el siguiente comando:
 
 ```
 sudo rpi-eeprom-config --edit
@@ -253,16 +253,16 @@ Y luego cambia rpi-eeprom-config como se muestra a continuación:
 
 ```
 BOOT_UART=1
-BOOT_ORDER=0xf461
+BOOT_ORDER=0xf14
 NET_INSTALL_AT_POWER_ON=1
 PCIE_PROBE=1
 ```
 
 Usa `Ctrl+X` e introduce `y` para guardar el resultado. Y el resultado es el siguiente:
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/chang_eeprom.png" alt="pir" width="700" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/boot_from_usb.jpg" alt="pir" width="700" height="auto" /></div>
 
-### Segundo: Grabar Ubuntu en la NVMe
+### Segundo: Grabar Ubuntu en el SSD
 
 Abre Raspberry Pi Imager:
 
@@ -271,21 +271,7 @@ Abre Raspberry Pi Imager:
 Elige el sistema operativo Ubuntu:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/flashos2.png" alt="pir" width="700" height="auto" /></div>
 
-Por último, haz clic en `Next` y espera a que se complete el proceso de flasheo.
-
-### Tercero: Sustituir el archivo del sistema operativo
-
-Instala `pcie-fix.dtbo` con este [enlace](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
-
-Copia pcie-fix.dtbo al archivo /overlays como se muestra a continuación:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="700" height="auto" /></div>
-
-Modifica el `config.txt`, añade `dtoverlay=pcie-fix` al final del archivo como se muestra a continuación:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file2.png" alt="pir" width="700" height="auto" /></div>
-
-Luego usa `Ctrl+X` e introduce `y` para guardar este archivo.
+Finalmente, haz clic en `Next` y espera a que se complete el proceso de grabación.
 
 ## Soporte técnico y debate sobre el producto
 

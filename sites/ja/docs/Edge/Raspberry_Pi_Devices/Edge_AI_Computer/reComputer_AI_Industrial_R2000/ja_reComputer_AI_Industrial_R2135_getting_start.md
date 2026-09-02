@@ -1,5 +1,5 @@
 ---
-description: reComputer AI R2000 は Raspberry Pi 5 をベースとした高性能なエッジ AI コンピュータです。クアッドコア Arm Cortex-A76 プロセッサ、8GB RAM、M.2 SSD 対応、最大 26 TOPS を提供する Hailo-8 AI アクセラレーションモジュールにより、リアルタイムで低レイテンシかつ高効率な AI 推論を実現します。AI 搭載ビデオ解析、マシンビジョン、インテリジェントエッジコンピューティングなど、幅広い AI アプリケーションに最適な選択肢です。
+description: reComputer AI R2000 は Raspberry Pi 5 をベースにした高性能なエッジ AI コンピュータです。クアッドコア Arm Cortex-A76 プロセッサ、8GB RAM、M.2 SSD 対応、最大 26 TOPS を提供する Hailo-8 AI アクセラレーションモジュールを備え、リアルタイムで低レイテンシかつ高効率な AI 推論を実現します。AI 搭載ビデオ解析、マシンビジョン、インテリジェントエッジコンピューティングなど、幅広い AI アプリケーションに最適な選択肢です。
 title: reComputer AI Industrial R2135 シリーズ入門ガイド
 keywords:
   - Raspberry pi
@@ -24,70 +24,70 @@ url: https://wiki.seeedstudio.com/ja/recomputer_ai_industrial_r2135_getting_star
     </a>
 </div>
 
-**reComputer AI Industrial R2135** は **Raspberry Pi CM5** と **Hailo AI アクセラレータ** を搭載したコンパクトな **エッジ AI システム** であり、リアルタイムの **マルチチャネルビジョン処理** 向けに **26 TOPS** の性能を提供します。**クアッドコア Cortex-A76 CPU**、最大 **16GB RAM**、**64GB eMMC**、および **多彩なインターフェース** により、**産業用 AI アプリケーション** へのシームレスな統合を実現します。
+**reComputer AI Industrial R2135** は **Raspberry Pi CM5** と **Hailo AI アクセラレータ** を搭載したコンパクトな **エッジ AI システム** であり、リアルタイムの **マルチチャネルビジョン処理** 向けに **26 TOPS** の性能を提供します。**クアッドコア Cortex-A76 CPU**、最大 **16GB RAM**、**64GB eMMC**、そして **多用途なインターフェース** を備え、**産業用 AI アプリケーション** へのシームレスな統合を実現します。
 
-**24 時間 365 日の信頼性** を念頭に設計されており、**広い電圧入力範囲 (9-36V)**、**ハードウェアウォッチドッグ**、**堅牢な冷却機構** を備え、**-20°C ～ 65°C** の環境で安定動作します。**スマートファクトリー**、**監視システム**、**AIoT** に最適で、**強力な AI コンピューティング** を **エッジ** にもたらします。
+**24 時間 365 日の信頼性** を念頭に設計されており、**広い電圧入力範囲 (9-36V)**、**ハードウェアウォッチドッグ**、**堅牢な冷却機構** を備え、**-20°C 〜 65°C** の環境で安定動作します。**スマートファクトリー**、**監視**、**AIoT** に最適で、**強力な AI コンピューティング** を **エッジ** にもたらします。
 
 ## 特長
 
-- **産業グレードの信頼性**: アルミニウム筐体と -20°C ～ 65°C の広い動作温度範囲、RTC、ハードウェアウォッチドッグにより、安定した 24 時間 365 日運用を実現します。
+- **産業グレードの信頼性**: アルミニウム筐体と -20°C 〜 65°C の広い動作温度範囲、RTC、ハードウェアウォッチドッグにより、安定した 24 時間 365 日の運用を実現します。
 
-- **高いパフォーマンス**: Raspberry Pi CM5（クアッドコア Cortex-A76 CPU、最大 16GB RAM、64GB eMMC）を搭載。
+- **強力なパフォーマンス**: Raspberry Pi CM5（クアッドコア Cortex-A76 CPU、最大 16GB RAM、64GB eMMC）を搭載。
 
-- **高効率な AI コンピューティング**: Hailo-8 AI アクセラレータにより最大 26 TOPS を実現し、マルチチャネルの AI ビジョン処理をサポートします。
+- **高効率な AI コンピューティング**: Hailo-8 AI アクセラレータを搭載し、最大 26 TOPS の性能でマルチチャネル AI ビジョン処理を実現。
 
 - **豊富な接続性**: 2x HDMI2.0、1x ギガビット Ethernet、2x USB 3.2、1x USB-C、デュアル M.2 スロット、および 4G/LoRa 拡張用 Mini-PCIe を搭載。
 
-- **多様なワイヤレスオプション**: 内蔵 Wi-Fi5、Bluetooth 5.0、およびオプションの 4G LTE/LoRaWAN<sup>@</sup> をサポート。
+- **多彩なワイヤレスオプション**: Wi-Fi5、Bluetooth 5.0 を内蔵し、オプションで 4G LTE/LoRaWAN<sup>@</sup> に対応。
 
-- **柔軟なストレージオプション**: PCIe3.0 デュアル M.2 スロットは、AI アクセラレータと SSD ストレージの両方に対応します。
+- **柔軟なストレージオプション**: PCIe3.0 デュアル M.2 スロットは、AI アクセラレータと SSD ストレージの両方をサポートします。
 
 ## 仕様
 
 | **カテゴリ**              | **パラメータ**                                                                 |
 |--------------------------|---------------------------------------------------------------------------------|
 | **ハードウェア仕様**         |                                                                                 |
-| **CPU**                   | Raspberry Pi Compute Module 5、2.4GHz クアッドコア 64-bit Arm Cortex-A76        |
+| **CPU**                   | Raspberry Pi Compute Module 5、2.4GHz クアッドコア 64 ビット Arm Cortex-A76          |
 | **GPU**                   | Raspberry Pi Compute Module 5、VideoCore VII                                   |
-| **AI プロセッサ**          | Hailo-8 M.2 アクセラレーションスティック、26 TOPS（Tera-Operations Per Second） |
+| **AI プロセッサ**          | Hailo-8 M.2 アクセラレーションスティック、26 TOPS（毎秒テラ演算）           |
 | **RAM**                   | 8GB SDRAM                                                                      |
 | **eMMC**                  | 32GB                                                                            |
-| **オペレーティングシステム**| Raspbian、Debian                                                               |
+| **オペレーティングシステム**      | Raspbian、Debian                                                               |
 | **システム仕様**           |                                                                                 |
-| **電源入力**               | DC 9V~36V、2 ピン端子台                                                         |
-| **ビデオデコーダ**         | 4Kp60 HEVC デコーダ                                                             |
-| **インターフェース**       |                                                                                 |
+| **電源入力**           | DC 9V~36V、2 ピン端子台                                                 |
+| **ビデオデコーダ**         | 4Kp60 HEVC デコーダ                                                              |
+| **インターフェース**             |                                                                                 |
 | **Ethernet**              | 1x 10/100/1000 Mbps、RJ45                                                       |
-| **USB**                   | 2x USB 3.2 ポート（USB-A）；1x USB 2.0 ポート（デバッグ/OS 更新用 USB-C）       |
-| **ディスプレイ**           | 2x 標準 HDMI ポート、HDMI 2.0                                                  |
-| **M.2 スロット**           | 1x USB 3.0 to M.2（M-key 2280）；1x PCIe 3.0 to M.2（M-key 2242）               |
-| **Mini-PCIe**             | 4G/LoRaWAN モジュール用 1x Mini-PCIe                                           |
-| **SIM カード**            | 1x 標準 SIM カードスロット                                                      |
-| **LED**                   | 3x LED：Power / ACT / 4G                                                        |
-| **ボタン / スイッチ**      | 1x リセットボタン；1x ブートスイッチ                                           |
-| **無線通信**               |                                                                                 |
-| **Wi-Fi 2.4/5.0 GHz**     | オンチップ Wi-Fi 5                                                              |
-| **BLE 5.0**               | オンチップ BLE 5.0                                                              |
-| **4G セルラー**           | 4G LTE（オプション）                                                            |
-| **LoRa®**                 | USB LoRa® / SPI LoRa®（オプション）                                            |
-| **周囲環境条件**           |                                                                                 |
-| **保護等級**               | IP40                                                                            |
-| **動作温度**               | -20°C ～ 65°C                                                                   |
-| **動作湿度**               | 10% ～ 95% RH                                                                   |
-| **アンテナ**               | アンテナ穴 3 個                                                                 |
-| **その他**                 |                                                                                 |
-| **ウォッチドッグ**         | ハードウェアウォッチドッグ                                                      |
-| **RTC**                   | 高精度 RTC                                                                      |
-| **セキュリティ**           | 暗号チップ TPM2.0 / ATECC608A（オプション）                                    |
-| **放熱**                   | ヒートシンク + ファン                                                           |
-| **保証**                   | 2 年                                                                            |
-| **製品ライフタイム**       | 2036 年 12 月まで                                                               |
-| **機構**                   |                                                                                 |
-| **寸法 (W x H x D)**      | 130mm × 93mm × 55.5mm                                                           |
-| **筐体**                   | アルミニウム合金ケース（PC サイドパネル付き）                                  |
-| **取り付け方法**           | DIN レール / 壁掛け                                                             |
-| **重量 (正味)**           | 688g                                                                            |
-| **注記**                   | 「オプション」と記載されている項目は別途購入が必要です（アクセサリ一覧を参照）。 |
+| **USB**                   | 2x USB 3.2 ポート（USB-A）；1x USB 2.0 ポート（デバッグ/OS 更新用 USB-C）          |
+| **ディスプレイ**               | 2x 標準 HDMI ポート、HDMI 2.0                                               |
+| **M.2 スロット**              | 1x USB 3.0 to M.2（M-key 2280）；1x PCIe 3.0 to M.2（M-key 2242、Hailo-8 AI アクセラレータ搭載） |
+| **Mini-PCIe**             | 4G/LoRaWAN モジュール用 Mini-PCIe ×1                                              |
+| **SIM カード**              | 標準 SIM カードスロット ×1                                                       |
+| **LED**                   | 3x LED：Power / ACT / 4G                                                       |
+| **ボタン / スイッチ**       | リセットボタン ×1；ブートスイッチ ×1                                                 |
+| **無線通信**|                                                                                 |
+| **Wi-Fi 2.4/5.0 GHz**     | オンチップ Wi-Fi 5                                                                 |
+| **BLE 5.0**               | オンチップ BLE 5.0                                                                 |
+| **4G セルラー**           | 4G LTE（オプション）                                                               |
+| **LoRa®**                 | USB LoRa® / SPI LoRa®（オプション）                                               |
+| **周囲条件**    |                                                                                 |
+| **保護等級**    | IP40                                                                            |
+| **動作温度** | -20°C 〜 65°C                                                                   |
+| **動作湿度**    | 10% 〜 95% RH                                                                   |
+| **アンテナ**               | アンテナホール ×3                                                                |
+| **その他**                |                                                                                 |
+| **ウォッチドッグ**              | ハードウェアウォッチドッグ                                                               |
+| **RTC**                   | 高精度 RTC                                                               |
+| **セキュリティ**              | 暗号化チップ TPM2.0 / ATECC608A（オプション）                                   |
+| **放熱**      | ヒートシンク＋ファン                                                               |
+| **保証**              | 2 年                                                                         |
+| **製品ライフタイム**   | 2036 年 12 月まで                                                             |
+| **機構**            |                                                                                 |
+| **寸法 (W x H x D)**| 130mm × 93mm × 55.5mm                                                           |
+| **筐体**             | アルミニウム合金ケース（PC サイドパネル付き）                                      |
+| **マウント方法**              | DIN レール / 壁掛け                                                           |
+| **重量 (正味)**          | 688g                                                                            |
+| **注意事項**             | 「オプション」と記載されている項目は別途購入が必要です（アクセサリ一覧を参照してください）。 |
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_industrial_dimension.jpeg" style={{width:800, height:'auto'}}/></div>
 
@@ -95,13 +95,13 @@ url: https://wiki.seeedstudio.com/ja/recomputer_ai_industrial_r2135_getting_star
 
 ### ハードウェアの紹介
 
-[Hailo](https://hailo.ai/) は、エッジデバイス上での高性能ディープラーニングアプリケーション向けに特化した最先端の AI プロセッサを提供しています。同社のソリューションは、高度な AI アクセラレータとビジョンプロセッサにより、エッジにおける次世代の生成 AI をはじめ、認識処理や映像強調を実現することに重点を置いています。そして Hailo-8 NPU アクセラレータを搭載し 26 TOPs の AI 性能を提供する reComputer_R2000 は、YOLOv8s で 200 FPS 以上を達成することが可能です。
+[Hailo](https://hailo.ai/) は、エッジデバイス上での高性能ディープラーニングアプリケーション向けに特化した最先端の AI プロセッサを提供しています。同社のソリューションは、高度な AI アクセラレータとビジョンプロセッサにより、エッジにおける次世代の生成 AI を、認識処理や映像強調とともに実現することに重点を置いています。そして Hailo-8 NPU アクセラレータを搭載し 26 TOPs の AI 性能を提供する reComputer_R2000 は、YOLOv8s で 200 FPS 超を達成することが可能です。
 
 ### ソフトウェアの紹介
 
 ![](https://seeed-projects.github.io/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero/assets/images/architecture-2bfc6ed440e1add56388738e87558050.png)
 
-Hailo AI Software Suite は、ハードウェアアクセラレータ上で AI モデルを効率的に実行するための強力なツール群を提供します。既存のディープラーニングフレームワークとシームレスに統合できるよう設計されており、開発者にスムーズなワークフローを提供します。このプロセスでは、まず Model Build Environment で ONNX ファイルから HEF（Hailo Executable Binary File）を生成します。作成された HEF ファイルは推論マシン（Runtime Environment）に転送され、そこで HailoRT API を用いて推論を実行するために使用されます。提供されているスクリプトは、Model Build Environment 内で ONNX ファイルを HEF ファイルへ変換する作業を支援します。
+Hailo AI Software Suite は、ハードウェアアクセラレータ上で AI モデルを効率的に実行するための強力なツール群を提供します。既存のディープラーニングフレームワークとシームレスに統合できるよう設計されており、開発者にスムーズなワークフローを提供します。このプロセスでは、まず Model Build Environment で ONNX ファイルから HEF（Hailo Executable Binary File）を生成します。生成された HEF ファイルは推論マシン（Runtime Environment）に転送され、そこで HailoRT API を用いて推論を実行するために使用されます。提供されているスクリプトにより、Model Build Environment 内で ONNX ファイルを HEF ファイルへ変換することができます。
 
 > **Note:**
 > **Hailo NPU の使用例についてさらに詳しく知りたい場合は、この [リンク](https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero) をクリックしてください。**
@@ -260,21 +260,21 @@ reComputer AI Industrial R2135 は DC 9V～36V の広い入力電圧範囲に対
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_Two_Pin_Terminal.jpg" style={{width:150, height:'auto'}}/></div>
 
-reComputer AI Industrial R2135 は 9～36V の端子 DC 電圧で給電されます。電源は 2 ピンの電源端子ブロックコネクタを介して接続します。reComputer AI Industrial R2135 をアース接続するには、電源端子左上のネジにアース線を固定します。
+reComputer AI Industrial R2135 は 9～36V の端子 DC 電圧で給電されます。電源は 2 ピンの電源端子ブロックコネクタを介して接続します。reComputer AI Industrial R2135 をアース接続するには、電源端子左上にあるネジにアース線を固定します。
 
 #### 消費電力
 
-reComputer AI Industrial R2135 の消費電力について、Seeed Studio のラボで測定した結果を以下の表に示します。なお、この値はあくまで参考値であり、テスト方法や環境によって結果が変動する可能性があります。
+Seeed Studio のラボで測定した reComputer AI Industrial R2135 の消費電力については、以下の表を参照してください。なお、この値はあくまで参考値であり、テスト方法や環境によって結果が変動する場合があります。
 
 | **状態**        | **電圧** | **電流** | **消費電力** |**説明** |
 |----------------------|----------------------|----------------------|----------------------|----------------------|
 |**シャットダウン**|12V   |   1.1mA|   0.013W|   シャットダウンおよび電源オフ状態での静的消費電力テスト。|
 |**アイドル**|12V|208mA|2.42W|reComputer AI Industrial R2135 デバイスに 24V 電源を供給し、テストプログラムを実行していない状態での入力電流を測定。|
-|**フルロード**|12V|2.08A|24.2W| `stress -c 4` コマンドを使用して CPU をフルロードで動作させてテスト。USB には 1A の負荷を接続。|
+|**フルロード**|12V|2.08A|24.2W| `stress -c 4` コマンドを使用して CPU をフルロードで動作させるように設定。USB には 1A の負荷を接続。|
 
-#### 電源オン／オフ
+#### 電源オンおよび電源オフ
 
-reComputer AI Industrial R2135 には標準では電源ボタンが搭載されておらず、電源を接続すると自動的に起動します。シャットダウンする際は、オペレーティングシステム上でシャットダウンオプションを選択し、システムが完全に停止するまで待ってから電源を切ってください。再起動する場合は、再度電源を接続するだけで起動します。
+reComputer AI Industrial R2135 にはデフォルトで電源ボタンは搭載されておらず、電源を接続するとシステムは自動的に起動します。シャットダウンする際は、オペレーティングシステム上でシャットダウンオプションを選択し、システムが完全に停止するまで待ってから電源を切ってください。システムを再起動するには、電源を再接続するだけでかまいません。
 
 ### ブロック図
 
@@ -289,7 +289,7 @@ reComputer AI Industrial R2135 には標準では電源ボタンが搭載され�
 | **Ethernet**   | 1x 10/100/1000 Mbps（POE* 対応）              |
 | **USB**        | 2x USB-A 3.2 ホスト、1x USB-C 2.0（OS 書き込み用） |
 | **HDMI**       | 2x HDMI 2.0                                      |
-| **オーディオ**      | 1x 3.5mm オーディオ出力／入力                      |
+| **オーディオ**      | 1x 3.5mm オーディオ出力/入力                      |
 | **SIM カードスロット** | 1x SIM カードスロット、標準 SIM カード対応    |
 | **M.2 スロット**   | 2x M.2 スロット、M.2 NVMe SSD および AI アクセラレーション対応 |
 | **Mini-PCIe**  | 1x Mini PCIe スロット                                |
@@ -306,8 +306,8 @@ reComputer AI Industrial R2135 には 3 つの LED インジケータが搭載�
 | **PWR**  | 緑           | On     | デバイスが電源に接続されています。                                                                                                                |
 |        |                 | Off    | デバイスが電源に接続されていません。                                                                                                                    |
 | **ACT**  | オレンジ          |        | Linux では、このピンは eMMC アクセスを示すために点滅します。ブート中にエラーが発生した場合、この LED はエラーパターンで点滅します（Raspberry Pi ドキュメントを参照）。 |
-| **USER** | 緑／赤／青  |        | ユーザーによって定義する必要があります。                                                                                                                            |
-| **LTE**  | 緑           | On     | ダイヤルアップに成功し、接続が正常です。                                                                                                |
+| **USER** | 緑/赤/青  |        | ユーザーによって定義する必要があります。                                                                                                                            |
+| **LTE**  | 緑           | On     | ダイヤルアップが成功し、接続が正常です。                                                                                                |
 |        |                 | Off    | LTE 信号が接続されていないか、デバイスの電源が入っていません。                                                                                             |
 
 ### ACT ステータステーブル
@@ -323,33 +323,33 @@ reComputer AI Industrial R2135 には 3 つの LED インジケータが搭載�
 | 2            | 1             | パーティションが FAT ではありません                    |
 | 2            | 2             | パーティションからの読み取りに失敗        |
 | 2            | 3             | 拡張パーティションが FAT ではありません           |
-| 2            | 4             | ファイル署名／ハッシュ不一致 - Pi 4  |
+| 2            | 4             | ファイル署名/ハッシュの不一致 - Pi 4  |
 | 4            | 4             | 非対応のボードタイプ               |
 | 4            | 5             | 致命的なファームウェアエラー                 |
 | 4            | 6             | 電源障害タイプ A                 |
 | 4            | 7             | 電源障害タイプ B                 |
 
-ACT LED が規則的な 4 回点滅パターンで点滅する場合、ブートコード（`start.elf`）が見つかっていません。
-ACT LED が不規則なパターンで点滅する場合は、ブート処理が開始されています。
+ACT LED が規則的な 4 回点滅パターンで点滅する場合、`bootcode(start.elf)` を見つけることができません。
+ACT LED が不規則なパターンで点滅する場合は、ブートが開始されています。
 ACT LED が点滅しない場合、EEPROM コードが破損している可能性があります。何も接続しない状態でもう一度試して確認してください。詳細については Raspberry Pi フォーラムを参照してください。
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums.
-詳細については [Raspberry Pi forum](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151) を参照してください。
+詳細については、[Raspberry Pi forum](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151) を参照してください。
 
 ユーザー LED を制御するには、Linux カーネルが提供する疑似ファイルシステムである sysfs の使用を推奨します。sysfs は、さまざまなカーネルサブシステム、ハードウェアデバイス、およびそれらに関連するドライバに関する情報を公開します。ReComputer R2000 では、ユーザー LED インターフェースを 3 つのデバイスファイル（`led-red`、`led-blue`、`led-green`）に抽象化しており、これらのファイルを操作するだけで LED を簡単に制御できます。以下に例を示します。
 
-1. 赤色 LED を点灯するには、ターミナルで次のコマンドを入力してください：
+1. 赤色 LED を点灯するには、ターミナルで次のコマンドを入力してください。
 
 ```
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-2. 赤色 LED を消灯するには、ターミナルで次のコマンドを入力してください：
+2. 赤色 LED を消灯するには、ターミナルで次のコマンドを入力してください。
 
 ```
 echo 0 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-3. 赤色 LED と緑色 LED を同時に点灯させるには、ターミナルで次のコマンドを入力してください：
+3. 赤色 LED と緑色 LED を同時に点灯させるには、ターミナルで次のコマンドを入力してください。
 
 ```
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
@@ -360,12 +360,12 @@ echo 1 | sudo tee /sys/class/leds/led-green/brightness
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" /></div>
 
-reComputer AI Industrial R2135 のブートスイッチは CM5 の `nRPI_BOOT` ピンに接続されています。このスイッチにより、ユーザーは eMMC と USB のどちらから起動するかを選択できます。通常モードでは、スイッチを「BOOT」ラベル側とは反対側に設定し、システムを eMMC から起動させます。逆に、システムイメージを書き込む必要がある場合は、スイッチを「BOOT」ラベル側に切り替え、Type-C USB インターフェースから起動できるようにします。
+reComputer AI Industrial R2135 のブートスイッチは CM5 の `nRPI_BOOT` ピンに接続されています。このスイッチにより、ユーザーは eMMC と USB のどちらをブートソースとして選択するかを切り替えることができます。通常モードでは、スイッチを「BOOT」ラベル側とは反対側に設定し、システムを eMMC から起動させます。逆に、システムイメージを書き込む必要がある場合は、スイッチを「BOOT」ラベル側に切り替え、Type-C USB インターフェースからシステムを起動できるようにします。
 
 | スイッチ位置 | モード         | 説明      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
 |      <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/>            | 通常モード  | eMMC から起動   | Low       |
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>             | フラッシュモード   | USB から起動    | High      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>             | 書き込みモード   | USB から起動    | High      |
 
 ### USB
 
@@ -411,11 +411,11 @@ reComputer AI Industrial R2135 シリーズ機器には内部に標準SIMカー�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_M22.jpeg" style={{width:800, height:'auto'}}/></div>
 
-reComputer AI Industrial R2135 には、NVMe M.2 2280 SSDおよびAIアクセラレーション用の2つのM.2 Key-Mスロット（NVMe1およびNVMe2）が搭載されており、高速なストレージ拡張を可能にし、ユーザーはシステムの性能と容量を向上させることができます。
+reComputer AI Industrial R2135 には、NVMe M.2 2280 SSDおよびAIアクセラレーション用の2つのM.2 Key-Mスロット（NVMe1およびNVMe2）が搭載されており、高速なストレージ拡張を可能にし、システムの性能と容量を向上させることができます。
 
-● NVMe1（下段スロット）：M.2 2280サイズをサポート；
+● NVMe1（下側スロット）：M.2 2280サイズをサポート；
 
-● NVMe2（上段スロット）：Hailo-8 AIアクセラレータをプリインストール
+● NVMe2（上側スロット）：Hailo-8 AIアクセラレータをプリインストール
 
 ● PCIeベースのNVMe SSDのみサポートします。SATA SSDはサポートされません。
 
@@ -423,7 +423,7 @@ reComputer AI Industrial R2135 には、NVMe M.2 2280 SSDおよびAIアクセラ
 > SSDカードには主に2つの用途があります。  
 >
 > 1. **大容量ストレージ** – 大量のデータを保存するためだけに使用します。  
-> 2. **イメージ入りブートドライブ** – ストレージとして使用するとともに、SSDに保存されたイメージからシステムをブートするために使用します。  
+> 2. **イメージ入りブートドライブ** – ストレージとして使用すると同時に、SSDに保存されたイメージからシステムをブートするために使用します。  
 >  
 > 市販されているすべてのSSDカードがブート機能をサポートしているわけではありません。  
 > SSDをブートドライブとして使用する予定で、互換性が不明な場合は、**1TB SSD（SKU 112990267）** を推奨します。このモデルはブート可能であることがテストおよび検証されており、互換性の問題を回避し、試行錯誤のコストを削減するのに役立ちます。
@@ -455,7 +455,7 @@ reComputer AI Industrial R2135 には、主に4G LTEモデムモジュール（�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_reset.jpeg" style={{width:800, height:'auto'}}/></div>
 
-reComputer AI Industrial R2135 のリセットホール内にはミニプッシュボタンスイッチがあります。このボタンを細い物で押すことで、CM4をリセットできます。このピンがHighのときはCM4が起動したことを示し、このピンをLowにするとモジュールがリセットされます。
+reComputer AI Industrial R2135 のリセットホール内にはミニプッシュボタンスイッチがあります。このボタンを細い物で押すことで、CM4をリセットできます。このピンがHighのときはCM4が起動していることを示し、このピンをLowにするとモジュールがリセットされます。
 
 ### Ethernet RJ45
 
@@ -463,25 +463,25 @@ reComputer AI Industrial R2135 のリセットホール内にはミニプッシ�
 
 | 名称 | 種類                         | 速度             | PoE           |
 |------|------------------------------|--------------------|---------------|
-| ETH0 | CM5 ネイティブ ギガビットイーサネット | 10/100/1000 Mbit/s | Not Supported  |
+| ETH0 | CM5 ネイティブ ギガビットEthernet | 10/100/1000 Mbit/s | 非対応  |
 
-reComputer AI Industrial R2135 には標準RJ45ギガビットイーサネットポート（GbE）が搭載されており、信号品質とEMI保護を向上させるためにMagJack一体型トランスを使用しています。
+reComputer AI Industrial R2135 には標準RJ45ギガビットEthernetポート（GbE）が搭載されており、信号品質とEMI保護を向上させるためにMagJack一体型トランスを使用しています。
 
 ● インターフェース規格：IEEE 802.3 10/100/1000Mbps；
 ● 4対の差動ペア（TX/RX）を備えたギガビットPHYを使用；
 ● オートネゴシエーションおよび全二重通信をサポート；
-● コモンモードチョーク、ESD保護、およびアイソレーションコンデンサを内蔵；
-● オンボードの緑/黄LEDによりリンクおよびアクティビティステータスを表示。
+● コモンモードチョーク、ESD保護、および絶縁コンデンサを内蔵；
+● オンボードの緑/黄LEDによりリンクおよびアクティビティ状態を表示。
 
 ### HDMI
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_HDMI.jpeg" /></div>
 
-reComputer AI Industrial R2135 には、HDMI0およびHDMI1とラベル付けされた2つの標準HDMI Type-Aポートが搭載されており、高解像度ビデオ出力をサポートします。本システムは最大4K 60Hzの表示解像度に対応し、2系統のHDMI同時出力をサポートするため、マルチディスプレイ用途に適しています。
+reComputer AI Industrial R2135 には標準HDMI Type-Aポートが2つ（HDMI0およびHDMI1）搭載されており、高解像度ビデオ出力をサポートします。システムは最大4K 60Hzの表示解像度に対応し、2系統のHDMI同時出力をサポートするため、マルチディスプレイ用途に適しています。
 
 ### RTC
 
-reComputer AI Industrial R2135 にはオンボードRTC（PCF8563T）が搭載されており、電源サイクルをまたいで時刻を保持し、停電時でも時刻保持機能を維持できるようになっています。
+reComputer AI Industrial R2135 にはオンボードRTC（PCF8563T）が搭載されており、電源のオン/オフをまたいで時刻を保持し、停電時でも時刻管理機能を維持できるようになっています。
 
 以下のコマンドでRTC部分をテストできます。
 
@@ -497,20 +497,20 @@ sudo hwclock --hctosys
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/RTC1.png" /></div>
 
-その後、R2000の電源を数分間切り、再度電源を入れてから、次のコマンドでクロックを再確認します。
+その後、R2000の電源を数分間オフにし、再度電源を入れてから、次のコマンドを使用してクロックを再確認します。
 
 ```bash
 # 4.Check the RTC time:
 sudo hwclock -r
 ```
 
-結果から、システムの電源が切れている間もRTCモジュールが動作し続けていることがわかります。
+結果から、システムの電源がオフになっている間もRTCモジュールが動作し続けていることがわかります。
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/RTC2.png" /></div>
 
 ### ウォッチドッグ
 
-reComputer AI Industrial R2135 には独立したハードウェアウォッチドッグ回路が搭載されており、システムが異常クラッシュした場合に自動的に再起動を行います。ウォッチドッグ回路はRTCを介して実装されており、1〜255秒の柔軟な給電時間（キック間隔）を設定できます。
+reComputer AI Industrial R2135 には独立したハードウェアウォッチドッグ回路が搭載されており、システムが異常クラッシュした場合に自動的に再起動を行います。ウォッチドッグ回路はRTCを介して実装されており、1〜255秒の柔軟な給電時間を設定できます。
 
 以下のコマンドでウォッチドッグ部分をテストできます。
 
@@ -561,7 +561,7 @@ echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
 
-以下の図に示すように、コマンドを入力した後にSSH接続が失われており、ウォッチドッグが有効になって reComputer AI Industrial R2135 を再起動したことを示しています。
+以下の図に示すように、コマンドを入力した後にSSH接続が失われており、ウォッチドッグが有効になってreComputer AI Industrial R2135を再起動したことを示しています。
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/watchdog.png" /></div>
 
@@ -569,7 +569,7 @@ echo "c" > /proc/sysrq-trigger
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_industrial_accelerator.jpeg" style={{width:800, height:'auto'}}/></div>
 
-reComputer AI Industrial R2135 には、NVMe2 M.2スロットにプリインストールされたHailo-8 AIアクセラレータモジュールが搭載されており、リアルタイムのマルチチャネルAIビジョン処理のために26 TOPSの演算能力を提供します。
+reComputer AI Industrial R2135 にはHailo-8 AIアクセラレータモジュールが搭載されており、NVMe2 M.2スロットにプリインストールされています。これにより、リアルタイムのマルチチャネルAIビジョン処理のために26 TOPSの演算能力を提供します。
 
 以下のコマンドでウォッチドッグ部分をテストできます。
 
@@ -600,7 +600,7 @@ python basic_pipelines/detection_simple.py
 
 ## オプションインターフェースおよびモジュール
 
-reComputer AI Industrial R2135 は、豊富な拡張モジュールとアクセサリをサポートしており、幅広いシナリオや要件に対応できます。reComputer AI Industrial R2135 のカスタマイズに興味がある場合は、詳細について odm@seeed.cc までお問い合わせください。
+reComputer AI Industrial R2135 は豊富な拡張モジュールとアクセサリをサポートしており、幅広いシナリオや要件に対応できます。reComputer AI Industrial R2135 のカスタマイズにご興味がある場合は、詳細について odm@seeed.cc までお問い合わせください。
 アクセサリおよびオプションモジュールの一覧は次のとおりです。
 
 <div class="table-center">
@@ -637,7 +637,7 @@ reComputer AI Industrial R2135 は、豊富な拡張モジュールとアクセ�
         <td>114992364</td>
       </tr>
       <tr>
-        <td rowspan="7">4G 機能には 4G モジュール用の 4G アンテナを、GPS 機能には 4G モジュール用の GPS アンテナを使用します</td>
+        <td rowspan="7">4G 機能には 4G モジュールと 4G アンテナが、GPS 機能には 4G モジュールと GPS アンテナが必要です</td>
         <td>4G モジュール</td>
         <td>LTE Cat 4 EC25-AFXGA-mini-PCIe モジュール - 北米向け</td>
         <td>113991134</td>
@@ -759,7 +759,7 @@ sudo nano ./libloragw/inc/loragw_i2c.h
 sudo make
 ```
 
-次に、設定コードを変更します：
+次に、設定コードを修正します：
 
 ```bash
 sudo nano ./tools/reset_lgw.sh
@@ -872,10 +872,10 @@ reComputer AI Industrial R2135 は、NVMe1 PCIe スロット（J8）を使用し
 >
 > SSD カードには主に 2 つの用途があります：
 >
-> 1. **大容量ストレージ：** SSD カードは大容量ストレージ用途に利用できます。  
-> 2. **イメージを格納したブートドライブ：** SSD カードは、大容量ストレージとしてだけでなく、システムイメージを保存してカードから直接ブートできるブートドライブとしても機能します。  
+> 1. **大容量ストレージ：** SSD カードは大容量ストレージのニーズに利用できます。  
+> 2. **イメージを用いたブートドライブ：** SSD カードは、大容量ストレージとしてだけでなく、システムイメージを保存してカードから直接ブートすることで、ブートドライブとしても機能できます。  
 >
-> 市販されているすべての SSD カードがブート機能をサポートしているわけではないことに注意が必要です。SSD をブートドライブとして使用する予定で、どのモデルを選べばよいか分からない場合は、当社でテスト済みの 1 TB SSD（SKU 112990267）をお勧めします。このモデルはブート機能が検証されており、互換性リスクを軽減し、試行錯誤にかかるコストを最小限に抑えます。  
+> 市場に出回っているすべての SSD カードがブート機能をサポートしているわけではないことに注意が必要です。SSD をブートドライブとして使用する予定で、どのモデルを選べばよいか分からない場合は、当社でテスト済みの 1 TB SSD（SKU 112990267）をお勧めします。このモデルはブート機能が検証されており、互換性リスクを軽減し、試行錯誤のコストを最小限に抑えます。  
 
 以下のコマンドを使用して SSD を確認できます：
 
@@ -889,7 +889,7 @@ sudo fdisk -l | grep sda
 
 ### Frigate
 
-Frigate は、AI を使用したリアルタイム物体検出用に設計されたオープンソースの NVR（Network Video Recorder）です。既存のカメラと統合され、TensorFlow や Coral などの機械学習モデルを使用してビデオフィード上で物体検出を行います。Frigate は低レイテンシかつ高性能なビデオ処理に最適化されており、モーション検知、ライブビデオストリーム、自動アラートなどの機能を提供します。
+Frigate は、AI を使用したリアルタイム物体検出用に設計されたオープンソースの NVR（Network Video Recorder）です。既存のカメラと統合され、TensorFlow や Coral などの機械学習モデルを使用して、ビデオフィード上で物体検出を行います。Frigate は低遅延かつ高性能なビデオ処理に最適化されており、モーション検知、ライブビデオストリーム、自動アラートなどの機能を提供します。
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/thmI3dz9Ugs" title="Cost-Effective AI Surveillance: Frigate on Raspberry Pi 5 with Hailo8 on PCIe3.0 to Dual M.2 hat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -900,7 +900,7 @@ Frigate は、AI を使用したリアルタイム物体検出用に設計され
 
 ### YOLO
 
-YOLO（You Only Look Once）モデルシリーズは、速度と精度を両立するリアルタイム物体検出モデルのファミリーです。領域提案と分類を別々に行う従来の物体検出手法とは異なり、YOLO はニューラルネットワークの 1 回のフォワードパスで両方のタスクを実行するため、はるかに高速です。YOLO モデルは画像をグリッドに分割し、各グリッドセルに対してバウンディングボックスとクラス確率を予測します。長年にわたり、YOLO は精度、速度、より小さな物体を検出する能力の向上など、さまざまなバージョンを通じて進化してきました。YOLOv4、YOLOv5、そして最近の YOLOv7 や YOLOv8 モデルは、監視、自動運転車、ロボティクスなどの用途で広く使用されています。
+YOLO（You Only Look Once）シリーズのモデルは、速度と精度を重視して設計されたリアルタイム物体検出モデルのファミリーです。領域提案と分類を別々に行う従来の物体検出手法とは異なり、YOLO はニューラルネットワークの 1 回のフォワードパスで両方のタスクを実行するため、はるかに高速です。YOLO モデルは画像をグリッドに分割し、各グリッドセルについてバウンディングボックスとクラス確率を予測します。長年にわたり、YOLO は精度、速度、より小さな物体を検出する能力の向上など、さまざまなバージョンを通じて進化してきました。YOLOv4、YOLOv5、そして最近の YOLOv7 や YOLOv8 モデルは、監視、自動運転車、ロボティクスなどの用途で広く使用されています。
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/olaSVKmt9YI" title="Raspberry Pi AI: YOLOv8 Object Detection - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -909,7 +909,7 @@ YOLO（You Only Look Once）モデルシリーズは、速度と精度を両立�
 > **注意：**
 > **このプロジェクトについてさらに知りたい場合は、この[リンク](https://wiki.seeedstudio.com/ja/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)を参照してください。**
 
-### Clip
+### CLIP
 
 CLIP（Contrastive Language-Image Pretraining）は、OpenAI によって開発された、画像と言語を同時に理解できる機械学習モデルです。画像とそれに対応するテキスト記述を関連付けるように学習されており、両方のモダリティを含むタスクを実行できます。CLIP はゼロショット学習が可能であり、特定のカテゴリについて個別に学習させなくても、画像内の物体や概念を認識できます。画像分類、物体検出、さらには画像のテキストによる説明生成など、さまざまなタスクで高い性能を示しています。
 
@@ -922,7 +922,7 @@ CLIP（Contrastive Language-Image Pretraining）は、OpenAI によって開発�
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

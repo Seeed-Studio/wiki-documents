@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_ai_industrial_r2000_flash_os/
     </a>
 </div>
 
-A série reComputer AI Industrial R2000 é alimentada por Raspberry Pi CM5 e acelerador de IA Hailo-8, este sistema compacto de IA de borda oferece 26 TOPS para processamento de visão multicanal em tempo real. Com uma CPU Cortex-A76 quad-core, até 16GB de RAM, 64GB de eMMC e uma interface versátil, garante integração perfeita em aplicações industriais de IA.
+A série reComputer AI Industrial R2000 é alimentada por Raspberry Pi CM5 e acelerador de IA Hailo-8; este sistema compacto de IA de borda oferece 26 TOPS para processamento de visão multicanal em tempo real. Com uma CPU Cortex-A76 quad-core, até 16GB de RAM, 64GB de eMMC e uma interface versátil, garante integração perfeita em aplicações industriais de IA.
 
 ## Requisitos de Hardware
 
@@ -41,7 +41,7 @@ Você precisa preparar o seguinte hardware
 - [usbboot tool](https://github.com/raspberrypi/usbboot)
 - [Raspberry Pi Imager APP](https://www.raspberrypi.com/software/)
 
-## Gravar o OS
+## Gravar OS
 
 ### Para computador host Windows
 
@@ -78,7 +78,7 @@ Aguarde alguns minutos até que o processo de gravação seja concluído.
 ### Para computador host MAC
 
 :::caution
-**Você precisa instalar o [homebrew](https://brew.sh/) antes de prosseguir com as etapas a seguir.**
+**Você precisa instalar o [homebrew](https://brew.sh/) antes de prosseguir com os passos a seguir.**
 Abra um terminal e digite ```brew -V``` para verificar se você configurou corretamente o ambiente do homebrew; você deverá ver a versão do ambiente homebrew que instalou.
 :::
 
@@ -92,7 +92,7 @@ Abra um terminal e digite ```brew -V``` para verificar se você configurou corre
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar o Wi-Fi, definir configurações locais** e muito mais
+Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar Wi-Fi, definir configurações locais** e muito mais
 
 - **Passo 4.** Clique em **CHOOSE OS** e selecione o seu OS preferido
 
@@ -139,7 +139,7 @@ O resultado é mostrado abaixo:
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar o Wi-Fi, definir configurações locais** e muito mais
+Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar Wi-Fi, definir configurações locais** e muito mais
 
 - **Passo 5.** Clique em **CHOOSE OS** e selecione o seu OS preferido
 
@@ -163,13 +163,13 @@ Aguarde alguns minutos até que o processo de gravação seja concluído.
 O resultado é mostrado abaixo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
-## Inicializar a partir do NVME
+## Inicializar a partir de SSD (NVMe via USB)
 
-### Atualizar o EEPROM
+### Atualizar EEPROM
 
-*Este método funciona se você tiver um SSD e tiver inicializado o dispositivo com sucesso com eMMC. Certifique-se de que seu sistema seja o sistema Raspberry Pi mais recente (Bookworm ou posterior) e que o firmware do seu RPi 5 esteja atualizado para 2023-12-06 (6 de dezembro) ou mais recente, caso contrário ele pode não reconhecer as configurações relacionadas ao NVME.*
+*Este método funciona se você tiver um SSD e tiver inicializado o dispositivo com sucesso com eMMC. Certifique-se de que seu sistema seja o Raspberry Pi mais recente (Bookworm ou posterior) e que o firmware do seu RPi 5 esteja atualizado para 2023-12-06 (6 de dezembro) ou mais recente, caso contrário ele pode não reconhecer as configurações relacionadas a NVME.*
 
-**Passo 1**: Certifique-se de que o seu sistema Raspberry Pi esteja atualizado (Bookworm ou posterior), insira o seguinte comando para atualizar o firmware do RPi 5:
+**Passo 1**: Certifique-se de que seu sistema Raspberry Pi esteja atualizado (Bookworm ou posterior); insira o seguinte comando para atualizar o firmware do RPi 5:
 
 ```shell
   sudo apt update && sudo apt upgrade -y
@@ -204,9 +204,9 @@ Se for solicitado para reiniciar, selecione `Yes`.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/copy.gif" alt="pir" width="700" height="auto" /></div>
 
-### Configurando o Raspberry Pi para inicializar a partir do SSD NVMe
+### Configurando o Raspberry Pi para inicializar a partir do SSD
 
-Se você tiver fácil acesso ao slot do cartão SD, poderá desligar o seu Pi, ejetar o cartão SD e (se tudo estiver funcionando como esperado) ele deverá inicializar automaticamente a partir da sua unidade NVMe na próxima vez que você ligá-lo. Se você quiser deixar o cartão SD onde está e ainda assim inicializar a partir do NVMe, será necessário alterar a ordem de boot.
+Se você tiver fácil acesso ao slot do cartão SD, pode desligar o seu Pi, remover o cartão SD e (se tudo estiver funcionando como esperado) ele deverá inicializar automaticamente a partir do SSD na próxima vez que você ligá-lo. Se quiser deixar o cartão SD no lugar e ainda assim inicializar a partir do SSD, você precisa alterar a ordem de boot.
 
 **Passo 1**: Insira o seguinte comando:
 
@@ -237,13 +237,13 @@ Será perguntado se você deseja reiniciar agora. Clique em `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="700" height="auto" /></div>
 
-## Gravar o Ubuntu no NVME
+## Gravar o Ubuntu no SSD (NVMe via USB)
 
 ### Primeiro: Atualizar o EEPROM com o cartão SD
 
-Consulte este [link](https://wiki.seeedstudio.com/pt-br/r2000_series_getting_start/#atualizar-eeprom).
+Siga [Update EEPROM](#Update-EEPROM) para atualizar o EEPROM.
 
-Para definir a ordem de boot do NVMe como a prioridade mais alta, use o seguinte comando:
+O SSD usado neste dispositivo é um SSD NVMe conectado por meio de uma ponte USB 3.0. Durante a inicialização, o firmware do Raspberry Pi o detecta como um dispositivo de armazenamento USB, portanto, a prioridade de inicialização correta é uma ordem de boot por USB em vez de uma ordem de boot apenas NVMe nativa. Para definir o SSD como o dispositivo de inicialização de maior prioridade, use o seguinte comando:
 
 ```
 sudo rpi-eeprom-config --edit
@@ -253,16 +253,16 @@ Em seguida, altere o rpi-eeprom-config como abaixo:
 
 ```
 BOOT_UART=1
-BOOT_ORDER=0xf461
+BOOT_ORDER=0xf14
 NET_INSTALL_AT_POWER_ON=1
 PCIE_PROBE=1
 ```
 
 Use `Ctrl+X` e digite `y` para salvar o resultado. E o resultado é o seguinte:
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/chang_eeprom.png" alt="pir" width="700" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/boot_from_usb.jpg" alt="pir" width="700" height="auto" /></div>
 
-### Segundo: Gravar o Ubuntu no NVMe
+### Segundo: Gravar o Ubuntu no SSD
 
 Abra o Raspberry Pi Imager:
 
@@ -273,23 +273,9 @@ Escolha o sistema Ubuntu:
 
 Por fim, clique em `Next` e aguarde a conclusão do processo de gravação.
 
-### Terceiro: Substituir o arquivo do sistema operacional
-
-Instale `pcie-fix.dtbo` com este [link](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
-
-Copie pcie-fix.dtbo para o diretório /overlays como abaixo:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="700" height="auto" /></div>
-
-Modifique o `config.txt`, adicione `dtoverlay=pcie-fix` ao final do arquivo como abaixo:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file2.png" alt="pir" width="700" height="auto" /></div>
-
-Em seguida, use `Ctrl+X` e digite `y` para salvar este arquivo.
-
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
