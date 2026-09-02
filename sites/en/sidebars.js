@@ -3837,6 +3837,7 @@ const sidebars = {
           type: 'category',
           label: 'Getting Started',
           items: [
+            'Edge/NVIDIA_Jetson/Jetson_Product_Selection_Guide',
             // Carrier Boards
             {
               type: 'category',
