@@ -29,6 +29,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'faqs', 'FAQs.md'), //8.19
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Data_Logger', 'SenseCAP_Combo', 'Get_Started_with_SenseCAP_Combo.md'), //8.23
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Hardware_Usage', 'GPIO_Usage.md'), //8.25
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Secondary_Development', 'reCamera_Pro_RKNN_Model_Conversion.md'), //8.28
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
