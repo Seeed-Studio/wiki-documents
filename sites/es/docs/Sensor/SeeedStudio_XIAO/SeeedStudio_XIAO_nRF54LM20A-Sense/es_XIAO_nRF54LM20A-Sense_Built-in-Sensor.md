@@ -152,7 +152,7 @@ CONFIG_CBPRINTF_COMPLETE=y
 
 ```
 
-3. Escribe un programa para enviar por el puerto serie USB los datos adquiridos del acelerómetro digital de 3 ejes y del giroscopio digital de 3 ejes.
+3. Escribe un programa para enviar los datos adquiridos del acelerómetro digital de 3 ejes y del giroscopio digital de 3 ejes a través del puerto serie USB.
 
 <details>
 
@@ -369,7 +369,7 @@ int main(void)
 <br/>
 
 :::tip
-Si deseas verificar directamente el rendimiento del IMU, clona el repositorio Platform-seeedboards, localiza el ejemplo zephyr-imu en el directorio examples, luego compila y flashea el programa para iniciar la prueba.
+Si deseas verificar directamente el rendimiento de la IMU, clona el repositorio Platform-seeedboards, localiza el ejemplo zephyr-imu en el directorio examples, luego compila y flashea el programa para iniciar la prueba.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -381,7 +381,7 @@ Si deseas verificar directamente el rendimiento del IMU, clona el repositorio Pl
 
 #### Resultado
 
-Después de flashear el firmware, puedes abrir el asistente de puerto serie en tu PC para ver los datos. La frecuencia de disparo es de 12,5 Hz con un intervalo de 80 milisegundos.
+Después de flashear el firmware, puedes abrir el asistente de puerto serie en tu PC para la visualización de datos. La frecuencia de disparo es de 12,5 Hz con un intervalo de 80 milisegundos.
 
 - Acelerómetro digital de 3 ejes: Mide la aceleración a lo largo de los ejes X, Y y Z.
 - Giroscopio digital de 3 ejes: Mide la velocidad angular alrededor de los ejes X, Y y Z.
@@ -405,13 +405,13 @@ monitor_speed = 115200
 
 ### Aplicación
 
-El IMU puede fusionar datos de aceleración de tres ejes para calcular los ángulos de actitud de cabeceo, guiñada y alabeo para el reconocimiento de postura. También puede trabajar con los controladores correspondientes para realizar control de movimiento, o aplicarse en escenarios de bajo consumo como el despertar activado por actitud.
+La IMU puede fusionar datos de aceleración de tres ejes para calcular los ángulos de actitud de cabeceo, guiñada y alabeo para el reconocimiento de postura. También puede trabajar con controladores correspondientes para realizar control de movimiento, o aplicarse en escenarios de bajo consumo como el despertar activado por actitud.
 
 #### Océano electrónico
 
-Este es un ejemplo basado en el IMU integrado de XIAO nRF54LM20A Sense. Recoge datos de actitud y fusiona información de aceleración para mapear los estados de movimiento en el panel de luz RGB, logrando efectos visuales de ritmo oceánico.
+Este es un ejemplo basado en la IMU integrada de XIAO nRF54LM20A Sense. Recoge datos de actitud y fusiona información de aceleración para mapear los estados de movimiento en el panel de luz RGB, logrando efectos visuales de ritmo oceánico.
 
-- **Control de nivel de agua por inclinación** — Ajusta la altura del nivel de agua mediante la inclinación de alabeo izquierda y derecha
+- **Control de nivel de agua por inclinación** — Ajusta la altura del nivel de agua mediante la inclinación de alabeo hacia la izquierda y derecha
 - **Animación de olas** — Superposición de ondas de tres capas de frecuencia, propagación de ondas 2D y efecto de reflexión en los bordes
 - **Inercia del fluido** — Superficie de agua con momento; una inclinación rápida provoca sobreimpulso y posterior vaivén de oscilación
 - **Detección de volteo** — La pantalla se invierte automáticamente cuando la placa se voltea
@@ -512,7 +512,7 @@ Además, puedes modificar la configuración de la matriz RGB de la placa mediant
 };
 ```
 
-3. Habilita las configuraciones relacionadas con el uso del IMU
+3. Habilita las configuraciones relacionadas con el uso de la IMU
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -542,13 +542,13 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WHPSAryN-W4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div><br/>
 
-- Mientras tanto, el puerto serie también emitirá los datos correspondientes del IMU y la altura actual del nivel de agua de las olas.
+- Al mismo tiempo, el puerto serie también emitirá los datos correspondientes de la IMU y la altura actual del nivel de agua de las olas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_2.png" style={{width:800, height:'auto'}}/></div>
 
 #### Despertar por IMU
 
-En esta rutina, el canal verde del RGB se enciende y apaga después de encenderse, luego el sistema entra en modo de suspensión de ultra bajo consumo. Cuando la placa detecta un toque, XIAO nRF54LM20A Sense se despertará mediante una interrupción. El evento de toque se registrará e imprimirá a través del puerto serie.
+En esta rutina, el canal verde de los LEDs RGB se enciende y apaga después del encendido, luego el sistema entra en modo de suspensión de ultra bajo consumo. Cuando la placa detecta un toque, XIAO nRF54LM20A Sense se despertará mediante una interrupción. El evento de toque se registrará e imprimirá a través del puerto serie.
 
 Descarga la rutina para implementar la función de despertar por IMU.
 
@@ -624,7 +624,7 @@ Descarga la rutina para implementar la función de despertar por IMU.
 };
 ```
 
-3. Habilita las configuraciones relevantes del IMU en prj.conf
+3. Habilita las configuraciones relevantes de la IMU en prj.conf
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -654,13 +654,13 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_3_1.gif" style={{width:800, height:'auto'}}/></div>
 
-- Mientras tanto, la información del evento de toque también se emitirá a través del puerto serie.
+- Al mismo tiempo, la información del evento de toque también se emitirá a través del puerto serie.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 :::tip
 
-La posición de detección es solo de referencia. El reconocimiento preciso de la posición del toque depende del algoritmo de control de fusión del IMU.
+La posición de detección es solo de referencia. El reconocimiento preciso de la posición del toque depende del algoritmo de control de fusión de la IMU.
 
 :::
 
@@ -668,9 +668,9 @@ La posición de detección es solo de referencia. El reconocimiento preciso de l
 
 El chip adoptado por XIAO nRF54LM20A Sense está equipado con recursos de hardware GRTC integrados, lo que permite funciones de RTC sin módulos RTC adicionales.
 
-El RTC admite el conteo de marcas de tiempo y puede registrar el tiempo de funcionamiento incluso después de un fallo de alimentación, lo que facilita el registro de logs y el seguimiento del tiempo.
+El RTC admite el conteo de marcas de tiempo y puede registrar el tiempo de funcionamiento incluso después de un fallo de alimentación, lo que facilita el registro de registros y el seguimiento del tiempo.
 
-Esta sección presenta un programa de ejemplo implementado en XIAO nRF54LM20A Sense. Después de encender, obtiene marcas de tiempo a partir del momento de compilación mediante el RTC e imprime los datos cada segundo. Tras entrar en el modo System OFF, el sistema será despertado por la alarma del RTC para continuar el conteo.
+Esta sección presenta un programa de ejemplo implementado en XIAO nRF54LM20A Sense. Después de encenderlo, obtiene marcas de tiempo a partir de la hora de compilación mediante el RTC y muestra los datos cada segundo. Tras entrar en el modo System OFF, el sistema será despertado por la alarma del RTC para continuar el conteo.
 
 1. Copia [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) en el archivo main.c. Utiliza las funciones del RTC para imprimir la marca de tiempo.
 
@@ -734,14 +734,14 @@ CONFIG_NEWLIB_LIBC=y
 
 ### Resultado
 
-- El programa comienza a contar desde el momento de la compilación y el flasheo. Abre la herramienta de puerto serie para observar el efecto de ejecución, y todas las funciones esperadas se implementan.
+- El programa comienza a contar desde el momento de la compilación y la grabación en la memoria. Abre la herramienta de puerto serie para observar el efecto de ejecución, y todas las funciones esperadas se implementan.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 ## MIC 
 
-El XIAO nRF54LM20A Sense está equipado con el micrófono digital MEMS MSM261DGT006 para entrada de voz. Se conecta directamente a través de la interfaz PDM sin requerir un ADC. Es adecuado para dispositivos portátiles, dispositivos inteligentes, reconocimiento de voz, grabación de audio y otros escenarios de aplicación que requieren funciones de detección acústica.
+El XIAO nRF54LM20A Sense está equipado con el micrófono digital MEMS MSM261DGT006 para entrada de voz. Se conecta directamente a través de la interfaz PDM sin necesidad de un ADC. Es adecuado para dispositivos portátiles, dispositivos inteligentes, reconocimiento de voz, grabación de audio y otros escenarios de aplicación que requieren funciones de detección acústica.
 
 :::tip
 
@@ -760,24 +760,19 @@ Esta sección demuestra la función del micrófono mediante un ejemplo de voz. E
 
 1. Copia el programa desde <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> en `main.c`.
 
-2. Modifica el archivo del árbol de dispositivos `app.overlay` para enlazar el nodo BLE.
+2. Modifica el archivo de árbol de dispositivos `app.overlay` para enlazar el nodo BLE.
 
 ```dts
 /*
  * XIAO nRF54LM20A BLE recorder devicetree overlay
  *
- * Logging uses RTT over SWD (CONFIG_LOG_BACKEND_RTT in prj.conf).
- * USB CDC is disabled because the board USB-C connector is attached to the
- * debugger and MCU VBUS is unavailable. Waiting for VBUS would block boot.
+ * Logging uses the board's UART20 debug bridge at 115200 baud.
  */
 
-/* Disable USB controllers to avoid waiting for unavailable VBUS. */
-&usbhs {
-	status = "disabled";
-};
-
-&vregusb {
-	status = "disabled";
+/* Keep the board debug UART configuration explicit and reproducible. */
+&uart20 {
+	current-speed = <115200>;
+	status = "okay";
 };
 
 /* Enable the PDM microphone interface. */
@@ -819,14 +814,9 @@ CONFIG_I2C=y
 CONFIG_MFD=y
 CONFIG_REGULATOR=y
 
-# Logging over RTT via SWD
+# Logging over the board UART debug bridge
 CONFIG_LOG=y
-# Immediate logging is incompatible with the BLE software Link Layer.
-# Deferred logging flushes messages to RTT from the system workqueue.
-# USB CDC is disabled because MCU VBUS is unavailable on this board design.
-CONFIG_USE_SEGGER_RTT=y
-CONFIG_LOG_BACKEND_RTT=y
-CONFIG_LOG_BACKEND_RTT_MODE_DROP=y
+CONFIG_LOG_BACKEND_UART=y
 
 # Serial and console
 CONFIG_SERIAL=y
@@ -878,7 +868,7 @@ CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
 
 ### Resultado
 
-Compila y flashea el programa, luego utiliza un ordenador con Windows para recibir el audio grabado mediante Bluetooth con la ayuda de scripts.
+Compila y graba el programa en la placa, luego utiliza un ordenador con Windows para recibir el audio grabado mediante Bluetooth con la ayuda de scripts.
 
 1. Ejecuta el script de Python
 
@@ -1068,7 +1058,7 @@ El UUID BLE ya está configurado en el programa de Python, por lo que se conecta
 
 2. Verificar el resultado
 
-- Pulsa la tecla BOOT para iniciar la grabación. El LED RGB verde fijo indica que la grabación está en curso. Puedes hablar en voz alta hacia el micrófono y luego pulsar de nuevo la tecla BOOT para detener la grabación. El parpadeo del LED RGB verde significa que el archivo de audio se está transmitiendo.
+- Pulsa la tecla BOOT para iniciar la grabación. El LED RGB verde fijo indica que la grabación está en curso. Puedes hablar en voz alta hacia el micrófono y luego pulsar de nuevo la tecla BOOT para detener la grabación. El LED RGB verde parpadeando significa que se está transmitiendo el archivo de audio.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -1085,7 +1075,7 @@ El UUID BLE ya está configurado en el programa de Python, por lo que se conecta
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

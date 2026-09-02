@@ -41,23 +41,23 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_onboard/
   </table>
 </div>
 
-O XIAO nRF54LM20A Sense vem equipado com abundantes sensores integrados para dar suporte a aplicações em múltiplos cenários. Ele inclui o sensor de seis eixos LSM6DS3TR-C para reconhecimento de postura e o microfone digital MEMS MSM261DGT006, que suporta saída digital PDM e captação de som omnidirecional, sendo adequado para cenários de voz inteligente. Este artigo apresenta os métodos de desenvolvimento e uso com base nos ricos periféricos integrados do XIAO nRF54LM20A.
+O XIAO nRF54LM20A Sense está equipado com abundantes sensores integrados para suportar aplicações em múltiplos cenários. Ele inclui o sensor de seis eixos LSM6DS3TR-C para reconhecimento de postura e o microfone digital MEMS MSM261DGT006, que suporta saída digital PDM e captação de som omnidirecional, sendo adequado para cenários de voz inteligente. Este artigo apresenta os métodos de desenvolvimento e uso com base nos ricos periféricos integrados do XIAO nRF54LM20A.
 
 :::tip
 
-- Este artigo foi desenvolvido com base no sistema de build PlatformIO e no Zephyr RTOS. Se você não tiver experiência prévia com eles, consulte [Getting Started With SeeedStudio XIAO nRF54LM20A](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_sense_getting_started/)
+- Este artigo é desenvolvido com base no sistema de build PlatformIO e no Zephyr RTOS. Se você não tiver experiência prévia com eles, consulte [Getting Started With SeeedStudio XIAO nRF54LM20A](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_sense_getting_started/)
 
 :::
 
 ## Preparação de hardware
 
-Este artigo foi desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa preparar o hardware relevante com antecedência.
+Este artigo é desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa preparar o hardware relevante com antecedência.
 
 <div className="table-center">
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-   <th>Matriz RGB 6x10 WS2812 para Seeed Studio XIAO</th>
+   <th>Matriz RGB WS2812 6x10 para Seeed Studio XIAO</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -80,7 +80,7 @@ Este artigo foi desenvolvido com base no XIAO nRF54LM20A Sense, e você precisa 
 
 ## IMU
 
-O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor suporta saída de dados acionada por interrupção. Ele possui uma faixa de aceleração de escala completa de ±2/±4/±8/±16 g e uma faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir os dados.
+O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de 3 eixos e um giroscópio digital de 3 eixos, pertencente à unidade de medição inercial (IMU) iNEMO lançada pela STMicroelectronics. No XIAO nRF54LM20A Sense, esse sensor suporta saída de dados acionada por interrupção. Ele possui uma faixa de aceleração de escala completa de ±2/±4/±8/±16 g e uma faixa de velocidade angular de ±125/±250/±500/±1000/±2000 dps, além de suportar modo de baixo consumo persistente, tornando-o adequado para vários cenários de detecção de movimento. O chip integrado se comunica com ele por meio do protocolo I2C para adquirir dados.
 :::tip
 
 - Para mais informações sobre o LSM6DS3TR-C, visite: [Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) e [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
@@ -93,7 +93,7 @@ O LSM6DS3TR-C é um sensor de seis eixos que integra um acelerômetro digital de
 
 :::tip
 
-- Para o pinout do XIAO nRF54LM20A, clique em [XIAO nRF54LM20A Sense Pin List](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_getting_started/#visão-geral-do-hardware) para ver os detalhes.
+- Para o pinout do XIAO nRF54LM20A, clique em [XIAO nRF54LM20A Sense Pin List](https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_getting_started/#hardware-overview) para ver os detalhes.
 
 :::
 
@@ -369,7 +369,7 @@ int main(void)
 <br/>
 
 :::tip
-Se você quiser verificar diretamente o desempenho da IMU, clone o repositório Platform-seeedboards, localize o exemplo zephyr-imu no diretório examples, depois compile e grave o programa para iniciar o teste.
+Se você quiser verificar diretamente o desempenho do IMU, clone o repositório Platform-seeedboards, localize o exemplo zephyr-imu no diretório examples, depois compile e grave o programa para iniciar o teste.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -383,13 +383,13 @@ Se você quiser verificar diretamente o desempenho da IMU, clone o repositório 
 
 Após gravar o firmware, você pode abrir o assistente de porta serial no seu PC para visualização dos dados. A frequência de disparo é de 12,5 Hz com um intervalo de 80 milissegundos.
 
-- Acelerômetro digital de 3 eixos: mede a aceleração ao longo dos eixos X, Y e Z.
-- Giroscópio digital de 3 eixos: mede a velocidade angular em torno dos eixos X, Y e Z.
+- Acelerômetro digital de 3 eixos: Mede a aceleração ao longo dos eixos X, Y e Z.
+- Giroscópio digital de 3 eixos: Mede a velocidade angular em torno dos eixos X, Y e Z.
 
 :::tip
 
-1. Defina a taxa de baud para 115200 ao visualizar dados via monitor serial.
-2. Especifique a taxa de baud como 115200 no arquivo de configuração **platformio.ini** para o monitor serial da IDE PlatformIO.
+1. Defina a taxa de transmissão para 115200 ao visualizar dados via monitor serial.
+2. Especifique a taxa de transmissão como 115200 no arquivo de configuração **platformio.ini** para o monitor serial da IDE PlatformIO.
 
 ```ini
 [env:seeed-xiao-nrf54lm20a]
@@ -405,16 +405,16 @@ monitor_speed = 115200
 
 ### Aplicação
 
-A IMU pode fundir dados de aceleração de três eixos para calcular os ângulos de atitude de pitch, yaw e roll para reconhecimento de postura. Ela também pode trabalhar com controladores correspondentes para realizar controle de movimento, ou ser aplicada em cenários de baixo consumo, como despertar acionado por atitude.
+O IMU pode fundir dados de aceleração de três eixos para calcular os ângulos de atitude de pitch, yaw e roll para reconhecimento de postura. Ele também pode trabalhar com controladores correspondentes para realizar controle de movimento, ou ser aplicado em cenários de baixo consumo de energia, como despertar acionado por atitude.
 
 #### Oceano Eletrônico
 
-Este é um exemplo baseado na IMU integrada do XIAO nRF54LM20A Sense. Ele coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, alcançando efeitos visuais de ritmo oceânico.
+Este é um exemplo baseado no IMU integrado do XIAO nRF54LM20A Sense. Ele coleta dados de atitude e funde informações de aceleração para mapear estados de movimento no painel de luz RGB, alcançando efeitos visuais de ritmo oceânico.
 
 - **Controle de nível de água por inclinação** — Ajuste a altura do nível de água por meio da inclinação de roll para a esquerda e para a direita
 - **Animação de ondas** — Superfície de ondas com sobreposição de três camadas de frequência, propagação de ondas 2D e efeito de reflexão nas bordas
-- **Inércia do fluido** — Superfície da água com momento; inclinação rápida causa overshoot e subsequente oscilação de retorno
-- **Detecção de giro** — A exibição é automaticamente espelhada quando a placa é virada
+- **Inércia do fluido** — Superfície de água com momento; inclinação rápida causa overshoot e subsequente oscilação de retorno
+- **Detecção de inversão** — A exibição é espelhada automaticamente quando a placa é virada
 - **Cor dinâmica** — Troca de tons oceânicos em gradiente aleatório para cada coluna
 
 Além disso, você pode modificar a configuração da matriz RGB da placa por meio de definições de macro em main.c.
@@ -512,7 +512,7 @@ Além disso, você pode modificar a configuração da matriz RGB da placa por me
 };
 ```
 
-3. Ative as configurações relacionadas ao uso da IMU
+3. Ative as configurações relacionadas ao uso do IMU
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -542,13 +542,13 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WHPSAryN-W4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div><br/>
 
-- Ao mesmo tempo, a porta serial também irá exibir os dados correspondentes da IMU e a altura atual do nível de água das ondas.
+- Ao mesmo tempo, a porta serial também irá exibir os dados correspondentes do IMU e a altura atual do nível de água das ondas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_imu_2.png" style={{width:800, height:'auto'}}/></div>
 
 #### Despertar por IMU
 
-Nesta rotina, o canal verde dos LEDs RGB acende e apaga após a energização, então o sistema entra em modo de sono de ultrabaixo consumo. Quando um toque é detectado pela placa, a XIAO nRF54LM20A Sense será despertada via interrupção. O evento de toque será registrado e impresso pela porta serial.
+Nesta rotina, o canal verde do RGB acende e apaga após a energização, e então o sistema entra em modo de sono de ultrabaixo consumo. Quando um toque é detectado pela placa, o XIAO nRF54LM20A Sense será despertado via interrupção. O evento de toque será registrado e impresso pela porta serial.
 
 Baixe a rotina para implementar a função de despertar por IMU.
 
@@ -624,7 +624,7 @@ Baixe a rotina para implementar a função de despertar por IMU.
 };
 ```
 
-3. Ative as configurações relevantes da IMU em prj.conf
+3. Ative as configurações relevantes do IMU em prj.conf
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -660,7 +660,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 <br/>
 :::tip
 
-A posição de detecção é apenas para referência. O reconhecimento preciso da posição do toque depende do algoritmo de controle de fusão da IMU.
+A posição de detecção é apenas para referência. O reconhecimento preciso da posição do toque depende do algoritmo de controle de fusão do IMU.
 
 :::
 
@@ -668,13 +668,13 @@ A posição de detecção é apenas para referência. O reconhecimento preciso d
 
 O chip adotado pelo XIAO nRF54LM20A Sense é equipado com recursos de hardware GRTC integrados, permitindo funções de RTC sem módulos RTC adicionais.
 
-O RTC oferece suporte à contagem de carimbos de data e hora e pode registrar o tempo de operação mesmo após uma queda de energia, o que facilita o registro de logs e o rastreamento de tempo.
+O RTC oferece suporte à contagem de carimbos de data e hora e pode registrar o tempo de operação mesmo após uma falha de energia, o que facilita o registro de logs e o rastreamento de tempo.
 
-Esta seção apresenta um programa de exemplo implementado no XIAO nRF54LM20A Sense. Após ligar, ele obtém carimbos de data/hora a partir do horário de compilação via RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será acordado pelo alarme do RTC para continuar a contagem.
+Esta seção apresenta um programa de exemplo implementado no XIAO nRF54LM20A Sense. Após a energização, ele obtém carimbos de data e hora a partir do horário de compilação por meio do RTC e imprime os dados a cada segundo. Após entrar no modo System OFF, o sistema será acordado pelo alarme do RTC para continuar a contagem.
 
-1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções do RTC para imprimir o carimbo de data/hora.
+1. Copie o arquivo [rtc-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/rtc-main.c) para o arquivo main.c. Use as funções do RTC para imprimir o carimbo de data e hora.
 
-2. Modifique a árvore de dispositivos `app.overlay` para habilitar o nó do RTC.
+2. Modifique a árvore de dispositivo `app.overlay` para habilitar o nó do RTC.
 
 ```dts
 / {
@@ -734,50 +734,45 @@ CONFIG_NEWLIB_LIBC=y
 
 ### Resultado
 
-- O programa começa a contar a partir do horário de compilação e gravação. Abra a ferramenta de porta serial para observar o efeito de execução, e todas as funções esperadas são implementadas.
+- O programa começa a contar a partir do momento de compilação e gravação. Abra a ferramenta de porta serial para observar o efeito de execução, e todas as funções esperadas são implementadas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 ## MIC 
 
-O XIAO nRF54LM20A Sense é equipado com o microfone digital MEMS MSM261DGT006 para entrada de voz. Ele se conecta diretamente via interface PDM sem necessidade de um ADC. É adequado para dispositivos vestíveis, dispositivos inteligentes, reconhecimento de voz, gravação de áudio e outros cenários de aplicação que exigem funções de detecção acústica.
+O XIAO nRF54LM20A Sense está equipado com o microfone digital MEMS MSM261DGT006 para entrada de voz. Ele se conecta diretamente via interface PDM sem necessidade de um ADC. É adequado para dispositivos vestíveis, dispositivos inteligentes, reconhecimento de voz, gravação de áudio e outros cenários de aplicação que exigem funções de detecção acústica.
 
 :::tip
 
-Entre a série XIAO nRF54LM20A, apenas o XIAO nRF54M20A Sense é equipado com um microfone, que está localizado no canto inferior esquerdo da placa de desenvolvimento.
+Entre a série XIAO nRF54LM20A, apenas o XIAO nRF54M20A Sense está equipado com um microfone, que está localizado no canto inferior esquerdo da placa de desenvolvimento.
 
 :::
 
-### Gravação de Áudio e Upload via BLE
+### Gravação de áudio e upload via BLE
 
 Esta seção demonstra a função do microfone por meio de um exemplo de voz. O processo específico é o seguinte:
 
-- Pressione o botão BOOT, o LED RGB-G permanecerá aceso e iniciará a gravação; pressione novamente para parar a gravação (máximo de 10 segundos).
+- Pressione o botão BOOT, o LED RGB-G permanecerá aceso e iniciará a gravação; pressione-o novamente para parar a gravação (máximo de 10 segundos).
 - Após a gravação, o arquivo de áudio será enviado ao computador host via Bluetooth. O LED RGB-G pisca durante a transmissão.
 - Execute o script de recepção no Windows para salvar o arquivo de áudio no diretório `./recordings`.
 - O LED RGB-G apaga após a conclusão da transmissão.
 
 1. Copie o programa de <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> para `main.c`.
 
-2. Modifique o arquivo de árvore de dispositivos `app.overlay` para vincular o nó BLE.
+2. Modifique o arquivo de árvore de dispositivo `app.overlay` para vincular o nó BLE.
 
 ```dts
 /*
  * XIAO nRF54LM20A BLE recorder devicetree overlay
  *
- * Logging uses RTT over SWD (CONFIG_LOG_BACKEND_RTT in prj.conf).
- * USB CDC is disabled because the board USB-C connector is attached to the
- * debugger and MCU VBUS is unavailable. Waiting for VBUS would block boot.
+ * Logging uses the board's UART20 debug bridge at 115200 baud.
  */
 
-/* Disable USB controllers to avoid waiting for unavailable VBUS. */
-&usbhs {
-	status = "disabled";
-};
-
-&vregusb {
-	status = "disabled";
+/* Keep the board debug UART configuration explicit and reproducible. */
+&uart20 {
+	current-speed = <115200>;
+	status = "okay";
 };
 
 /* Enable the PDM microphone interface. */
@@ -819,14 +814,9 @@ CONFIG_I2C=y
 CONFIG_MFD=y
 CONFIG_REGULATOR=y
 
-# Logging over RTT via SWD
+# Logging over the board UART debug bridge
 CONFIG_LOG=y
-# Immediate logging is incompatible with the BLE software Link Layer.
-# Deferred logging flushes messages to RTT from the system workqueue.
-# USB CDC is disabled because MCU VBUS is unavailable on this board design.
-CONFIG_USE_SEGGER_RTT=y
-CONFIG_LOG_BACKEND_RTT=y
-CONFIG_LOG_BACKEND_RTT_MODE_DROP=y
+CONFIG_LOG_BACKEND_UART=y
 
 # Serial and console
 CONFIG_SERIAL=y

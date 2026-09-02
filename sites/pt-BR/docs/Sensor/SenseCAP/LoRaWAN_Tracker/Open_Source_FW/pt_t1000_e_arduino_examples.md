@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_ex
 slug: /t1000_e_arduino_examples
 sidebar_position: 4
 last_update:
-  date: 2/4/2026
-  author: Janet
+  date: 9/1/2026
+  author: Advent Jiang
 createdAt: '2025-03-24'
 updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/t1000_e_arduino_examples/
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/pt-br/t1000_e_arduino_examples/
 
 
 :::caution note
-Antes de gravar o firmware, certifique-se de que seu dispositivo é a versão `T1000-E for LoRaWAN` e não grave outro firmware Meshtastic neste modelo de rastreador, pois isso pode fazer com que o dispositivo fique completamente inutilizado.
+Antes de gravar o firmware, certifique-se de que seu dispositivo é a versão `T1000-E for LoRaWAN` e não grave outro firmware Meshtastic ou MeshCore neste modelo de rastreador, pois isso pode fazer com que o dispositivo fique completamente inutilizado.
 :::
 
 Os seguintes exemplos de Arduino estão disponíveis:
