@@ -766,18 +766,13 @@ This section demonstrates the microphone function through a voice example. The s
 /*
  * XIAO nRF54LM20A BLE recorder devicetree overlay
  *
- * Logging uses RTT over SWD (CONFIG_LOG_BACKEND_RTT in prj.conf).
- * USB CDC is disabled because the board USB-C connector is attached to the
- * debugger and MCU VBUS is unavailable. Waiting for VBUS would block boot.
+ * Logging uses the board's UART20 debug bridge at 115200 baud.
  */
 
-/* Disable USB controllers to avoid waiting for unavailable VBUS. */
-&usbhs {
-	status = "disabled";
-};
-
-&vregusb {
-	status = "disabled";
+/* Keep the board debug UART configuration explicit and reproducible. */
+&uart20 {
+	current-speed = <115200>;
+	status = "okay";
 };
 
 /* Enable the PDM microphone interface. */
@@ -819,14 +814,9 @@ CONFIG_I2C=y
 CONFIG_MFD=y
 CONFIG_REGULATOR=y
 
-# Logging over RTT via SWD
+# Logging over the board UART debug bridge
 CONFIG_LOG=y
-# Immediate logging is incompatible with the BLE software Link Layer.
-# Deferred logging flushes messages to RTT from the system workqueue.
-# USB CDC is disabled because MCU VBUS is unavailable on this board design.
-CONFIG_USE_SEGGER_RTT=y
-CONFIG_LOG_BACKEND_RTT=y
-CONFIG_LOG_BACKEND_RTT_MODE_DROP=y
+CONFIG_LOG_BACKEND_UART=y
 
 # Serial and console
 CONFIG_SERIAL=y
