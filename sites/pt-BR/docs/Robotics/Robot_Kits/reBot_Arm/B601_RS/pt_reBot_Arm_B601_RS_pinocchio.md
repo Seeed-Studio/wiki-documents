@@ -4,10 +4,10 @@ title: Introdução ao Pinocchio e MeshCat para reBot Arm B601-RS
 keywords:
   - Pinocchio
   - MeshCat
-  - Braço Robótico
-  - Robô
+  - Robotic Arm
+  - Robot
   - LeRobot
-  - Cinemática
+  - Kinematics
   - Robostride
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_pinocchio_meshcat
@@ -22,7 +22,21 @@ updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+
 # Introdução ao Pinocchio e MeshCat para reBot Arm B601-RS
+
+<RebotRsDocNav />
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -34,15 +48,8 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_pinocchio_meshcat/
 </p>
 
 <p align="center">
-  <strong>Braço Robótico 6-DOF · Suporte a Múltiplos Motores · Solucionador de Cinemática · Planejamento de Trajetória · Totalmente Open Source</strong>
+  <strong>Braço robótico 6-DOF · Suporte a múltiplos motores · Solucionador de cinemática · Planejamento de trajetória · Totalmente open source</strong>
 </p>
-
-![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png)
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-</a></div>
 
 [Pinocchio](https://github.com/stack-of-tasks/pinocchio) é uma biblioteca open source para análise e otimização de dinâmica de robôs. Ela fornece cinemática direta/inversa eficiente, cálculo de dinâmica e planejamento de trajetória. [MeshCat](https://github.com/rdeits/meshcat) é uma ferramenta de visualização 3D baseada na web que pode exibir estados do robô e trajetórias de movimento em tempo real.
 
@@ -51,24 +58,24 @@ Este projeto combina as poderosas capacidades de computação do Pinocchio com a
 
 ---
 
-## Recursos do Projeto
+## Recursos do projeto
 
-1. **Análise de Cinemática Completa**
-   Suporta cálculos de cinemática direta (FK) e cinemática inversa (IK), permitindo resolver em tempo real a pose do efetuador final do braço robótico.
+1. **Análise completa de cinemática**
+   Suporta cálculos de cinemática direta (FK) e inversa (IK), permitindo resolver em tempo real a pose do efetuador final do braço robótico.
 
-2. **Visualização 3D em Tempo Real**
+2. **Visualização 3D em tempo real**
    Exibe o estado do braço robótico e as trajetórias de movimento no navegador por meio do MeshCat em tempo real, sem software adicional.
 
-3. **Planejamento e Rastreamento de Trajetória**
+3. **Planejamento e rastreamento de trajetória**
    Implementa planejamento de trajetória geodésica em SE(3), suportando controle de rastreamento CLIK (Cinemática Inversa em Malha Fechada).
 
-4. **Controle com Compensação de Gravidade**
+4. **Controle de compensação de gravidade**
    Calcula os torques de gravidade das juntas com base no modelo dinâmico do Pinocchio, alcançando um efeito de “flutuação” para o braço robótico. Suporta versões básica e com trava de velocidade do efetuador final.
 
-5. **Controle de Motor em Múltiplos Modos**
+5. **Controle de motor em múltiplos modos**
    Suporta modos de controle MIT, POS_VEL e VEL, compatível com os protocolos de motor Damiao e Robostride.
 
-6. **Open Source e Extensível**
+6. **Open source e extensível**
    Todo o código é open source, permitindo que os usuários personalizem algoritmos de controle e efeitos de visualização conforme suas necessidades.
 
 ## Especificações
@@ -77,23 +84,23 @@ O hardware para este tutorial é fornecido pela [Seeed Studio](https://www.seeed
 
 | Parâmetro | Especificação |
 |-----------|--------------|
-| Modelo do Braço Robótico | reBot Arm B601-RS Kit Montado com Garra |
-| Graus de Liberdade | 6+1 (com garra) |
+| Modelo do braço robótico | reBot Arm B601-RS Kit montado com garra |
+| Graus de liberdade | 6+1 (com garra) |
 | Alcance | 754,7 mm (com garra) / 587,5 mm (sem garra) |
-| Capacidade de Carga | Carga nominal 2,5 kg / Carga máxima 5 kg |
-| Faixa de Movimento das Juntas | J1: ±150° / J2: 220° ~ 0° / J3: 220° ~ 0° / J4: ±90° / J5: ±90° / J6: ±180° / Garra: 345° ~ 0° |
+| Capacidade de carga | Carga nominal 2,5 kg / Carga máxima 5 kg |
+| Faixa de movimento das juntas | J1: ±150° / J2: 220° ~ 0° / J3: 220° ~ 0° / J4: ±90° / J5: ±90° / J6: ±180° / Garra: 345° ~ 0° |
 | Repetibilidade | 0,1 mm |
-| Peso Próprio | 6,7 kg |
+| Peso próprio | 6,7 kg |
 | Servomotores | RobStride 06 × 3 / RobStride 00 × 4 |
 | Comunicação | Barramento CAN @ 1 Mbps |
-| Tensão de Operação | CC 48V |
-| Fonte de Alimentação | CC 48V 15A |
-| Temperatura de Operação | -20°C ~ 50°C |
-| Método de Controle | PC |
+| Tensão de operação | DC 48V |
+| Fonte de alimentação | DC 48V 15A |
+| Temperatura de operação | -20°C ~ 50°C |
+| Método de controle | PC |
 
-### Plataformas de Software Suportadas
+### Plataformas de software suportadas
 
-| Plataforma | Status de Suporte |
+| Plataforma | Status de suporte |
 |----------|---------------|
 | ROS1 | ✅ |
 | MoveIt1 | ✅ |
@@ -104,46 +111,46 @@ O hardware para este tutorial é fornecido pela [Seeed Studio](https://www.seeed
 | Isaac Sim | ✅ |
 | Pinocchio | ✅ |
 
-### Parâmetros dos Motores das Juntas
+### Parâmetros dos motores das juntas
 
 | Parâmetro | RobStride 00 | RobStride 06 |
 |-----------|--------------|--------------|
-| Tensão Nominal | 48V | 48V |
-| Corrente Nominal | 4,7 Apk ± 10% | 14,3 Apk ± 10% |
-| Corrente de Pico | 15,5 Apk ± 10% | 57 Apk ± 10% |
-| Torque Nominal | 5 N.m | 11 N.m |
-| Torque de Pico | 14 N.m | 36 N.m |
-| Velocidade Nominal | 100 rpm ± 10% | 100 rpm ± 10% |
-| Velocidade Máxima em Vazio | 315 rpm ± 10% | 480 rpm ± 10% |
-| Relação de Redução | 10 : 1 | 9 : 1 |
-| Pares de Polos | 28 | — |
-| Indutância do Motor | 750 ± 20 μH | 0,165 mH ± 10% |
-| Resistência de Linha | 1,5 ± 10% Ω | 0,23 ± 10% Ω |
-| Diâmetro Externo | 57 mm | 82 mm |
+| Tensão nominal | 48V | 48V |
+| Corrente nominal | 4,7 Apk ± 10% | 14,3 Apk ± 10% |
+| Corrente de pico | 15,5 Apk ± 10% | 57 Apk ± 10% |
+| Torque nominal | 5 N.m | 11 N.m |
+| Torque de pico | 14 N.m | 36 N.m |
+| Velocidade nominal | 100 rpm ± 10% | 100 rpm ± 10% |
+| Velocidade máxima em vazio | 315 rpm ± 10% | 480 rpm ± 10% |
+| Relação de redução | 10 : 1 | 9 : 1 |
+| Pares de polos | 28 | — |
+| Indutância do motor | 750 ± 20 μH | 0,165 mH ± 10% |
+| Resistência de linha | 1,5 ± 10% Ω | 0,23 ± 10% Ω |
+| Diâmetro externo | 57 mm | 82 mm |
 | Altura | 51 ± 1 mm | 49 ± 0,5 mm |
-| Peso do Motor | 310 g ± 3 g | 621 g |
-| Resolução do Encoder | 14 bit (absoluto de volta única) | |
-| Contagem do Encoder | 2 | |
-| Tipo de Encoder | Encoder magnético (volta única) | |
-| Interface de Controle | CAN @ 1 Mbps | |
-| Interface de Depuração | UART @ 921600 bps | |
-| Modos de Controle | Modo MIT / Modo de Velocidade / Modo de Posição / Modo de Torque | |
-| Proteção | Proteção contra superaquecimento: temperatura do termistor do motor excede 145°C<br />Proteção contra subtensão: tensão do motor abaixo da tensão de proteção 12V | |
+| Peso do motor | 310 g ± 3 g | 621 g |
+| Resolução do encoder | 14 bit (absoluto de volta única) | |
+| Contagem do encoder | 2 | |
+| Tipo de encoder | Encoder magnético (volta única) | |
+| Interface de controle | CAN @ 1 Mbps | |
+| Interface de depuração | UART @ 921600 bps | |
+| Modos de controle | Modo MIT / Modo de velocidade / Modo de posição / Modo de torque | |
+| Proteção | Proteção contra superaquecimento: temperatura do termistor do motor excede 145°C<br />Proteção contra subtensão: tensão do motor abaixo da tensão de proteção de 12V | |
 
-## Lista de Materiais (BOM)
+## Lista de materiais (BOM)
 
 | Componente | Quantidade | Incluído |
 |-----------|----------|----------|
-| Braço Robótico reBot Arm B601-RS | 1 | ✅ |
+| Braço robótico reBot Arm B601-RS | 1 | ✅ |
 | CANABLE | 1 | ✅ |
-| Adaptador de Energia (CC 48V 15A) | 1 | ✅ |
+| Adaptador de energia (DC 48V 15A) | 1 | ✅ |
 | Cabo USB-C | 1 | ✅ |
 | Garra | 1 | ✅ |
 
 
-## Requisitos de Ambiente
+## Requisitos de ambiente
 
-:::caution Pré-requisito — Conclua primeiro o Guia Rápido do Braço
+:::caution Pré-requisito — Conclua primeiro o Guia Rápido do braço
 Antes de prosseguir com este tutorial, você **deve** concluir o documento **[reBot Arm B601-RS Quick Start](/pt-br/rebot_b601_rs_getting_started)** de ponta a ponta, incluindo:
 
 - Desembalagem do hardware, fiação e checklist de energização
@@ -156,9 +163,9 @@ Este tutorial assume que o braço já responde no barramento CAN, que as juntas 
 | Item | Requisito |
 |------|-------------|
 | **Python** | 3.10+ |
-| **Sistema Operacional** | Ubuntu 22.04+ |
-| **Interface de Comunicação** | Interface CAN (can0) |
-| **Fonte de Alimentação** | CC 48V 15A |
+| **Sistema operacional** | Ubuntu 22.04+ |
+| **Interface de comunicação** | Interface CAN (can0) |
+| **Fonte de alimentação** | DC 48V 15A |
 
 :::caution
 Enquanto o braço robótico estiver executando exemplos, ele deve operar dentro de 70% da área de alcance de trabalho do braço. Permanecer fora da área de trabalho por um período prolongado fará com que o motor da segunda junta entre em proteção de travamento, resultando na queda do braço.
@@ -166,7 +173,7 @@ Enquanto o braço robótico estiver executando exemplos, ele deve operar dentro 
 
 ---
 
-## Etapas de Instalação
+## Etapas de instalação
 
 ### Etapa 1. Instalar o uv (se não estiver instalado)
 
@@ -174,7 +181,7 @@ Enquanto o braço robótico estiver executando exemplos, ele deve operar dentro 
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### Etapa 2. Sincronizar Ambiente (Instalar Todas as Dependências)
+### Etapa 2. Sincronizar ambiente (instalar todas as dependências)
 
 ```bash
 git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
@@ -186,9 +193,9 @@ uv sync
 `uv sync` criará automaticamente um ambiente virtual (se não existir) e instalará todas as dependências com base em `pyproject.toml` e `uv.lock`.
 :::
 
-### Etapa 3. Modificar o Arquivo de Configuração para a Versão RS
+### Etapa 3. Modificar o arquivo de configuração para a versão RS
 
-Este Wiki é para **reBot Arm B601-RS**. Antes de executar qualquer exemplo, altere a configuração de hardware em `config/rebotarm.yaml` da versão DM para a versão RS:
+Este Wiki é para o **reBot Arm B601-RS**. Antes de executar qualquer exemplo, altere a configuração de hardware em `config/rebotarm.yaml` da versão DM para a versão RS:
 
 ```yaml
 # Before modification
@@ -203,9 +210,9 @@ Se essa configuração não for modificada, o programa se comunicará usando o p
 :::
 
 
-### Ferramentas de Depuração
+### Ferramentas de depuração
 
-:::tip Configuração do Canal CAN
+:::tip Configuração do canal CAN
 Antes de executar exemplos de controle em máquina real e depurar motores, você precisa configurar o canal CAN (para PCAN-USB, é necessário configurar novamente após reconectar):
 
 ```bash
@@ -222,18 +229,18 @@ sudo ip link set can0 up    # Bring up can0
 :::
 
 <details>
-<summary>Ferramentas de Depuração (usar apenas quando ocorrer uma exceção)</summary>
+<summary>Ferramentas de depuração (use apenas quando ocorrer uma exceção)</summary>
 
-**Console de Motor Único — Robostride RS06 (`0x01rs06_test.py`)**
+**Console de motor único — Robostride RS06 (`0x01rs06_test.py`)**
 
-Use diretamente o SDK motorbridge para teste de motor único Robostride RS06. Os motores RS06 se comunicam via **barramento CAN**.
+Use diretamente o SDK do motorbridge para teste de motor único Robostride RS06. Os motores RS06 se comunicam via **barramento CAN**.
 
-**Comando de Execução**:
+**Comando de execução**:
 ```bash
 uv run python example/0x01rs06_test.py
 ```
 
-**Comandos Interativos**:
+**Comandos interativos**:
 | Comando | Descrição |
 |---------|-------------|
 | `enable` / `disable` | Habilitar/Desabilitar |
@@ -254,11 +261,11 @@ uv run python example/0x01rs06_test.py
 
 ---
 
-**Calibração de Zero e Monitoramento de Ângulo (`2_zero_and_read.py`)**
+**Calibração de zero e monitoramento de ângulo (`2_zero_and_read.py`)**
 
 Define automaticamente todas as posições zero das juntas e exibe os ângulos das juntas em tempo real.
 
-**Comando de Execução**:
+**Comando de execução**:
 ```bash
 uv run python example/2_zero_and_read.py
 
@@ -271,11 +278,11 @@ uv run python example/2_zero_and_read.py
 
 ---
 
-## Ajuste de Parâmetros do Controlador MIT / POS_VEL {#tune-controller-params}
+## Ajuste de parâmetros do controlador MIT / POS_VEL {#ajuste-de-parâmetros-do-controlador}
 
 Esta seção explica **como modificar** os parâmetros do controlador para cada junta do braço nos modos **MIT** e **POS_VEL**, e como fazer com que as alterações entrem em vigor.
 
-:::tip Esta seção aborda apenas “onde / como mudar”, não “qual valor usar”
+:::tip Esta seção aborda apenas “onde / como mudar”, não “que valor usar”
 Parâmetros adequados só podem ser obtidos por meio de **ajuste em hardware real**. Esta seção aborda apenas: onde os parâmetros estão, o que cada campo controla e como fazer com que as alterações sejam efetivas e verificá-las. Para estratégias específicas de ajuste (por exemplo, tentativa e erro, Ziegler‑Nichols), consulte referências gerais de controle de motores.
 :::
 
@@ -315,7 +322,7 @@ joints:
 Como localizar:
 
 - **Pelo nome da junta**: para modificar uma junta, encontre o bloco `- name: jointX`;
-- **Pelo modo**: dentro dessa junta, `MIT:` contém os parâmetros do modo MIT, `POS_VEL:` contém os parâmetros do modo POS_VEL;
+- **Pelo modo**: sob essa junta, `MIT:` contém os parâmetros do modo MIT, `POS_VEL:` contém os parâmetros do modo POS_VEL;
 - **O modo atual determina qual conjunto é enviado**: o script alterna modos via `mode mit` / `mode posvel`; o motor na verdade recebe os parâmetros sob o sub-bloco correspondente.
 
 ### Significado dos Campos no Modo MIT
@@ -335,12 +342,12 @@ Como localizar:
 | `vlim` | Limite de velocidade, restringe a velocidade máxima de movimento. |
 
 :::warning As definições de campos diferem entre fornecedores
-Os motores Damiao (DM) e Robostride (RS) usam unidades diferentes na camada de protocolo, portanto **o mesmo nome de campo não é comparável entre fornecedores**. Modificar o `vel_kp` de RS e modificar o `vel_kp` de DM significam coisas diferentes. Interprete cada YAML de acordo com sua própria ordem de campos, não compare valores entre arquivos de configuração.
+Os motores Damiao (DM) e Robostride (RS) usam unidades diferentes na camada de protocolo, portanto **o mesmo nome de campo não é comparável entre fornecedores**. Modificar o `vel_kp` do RS e modificar o `vel_kp` do DM significam coisas diferentes. Interprete cada YAML de acordo com sua própria ordem de campos, não compare valores entre arquivos de configuração.
 :::
 
 ### Procedimento de Edição
 
-1. **Pare qualquer script em execução**. O motor fica habilitado quando você edita o YAML, as alterações não entram em vigor imediatamente, e é fácil disparar comportamentos inconsistentes.
+1. **Pare qualquer script em execução**. O motor está habilitado quando você edita o YAML, as alterações não entram em vigor imediatamente, e é fácil disparar comportamentos inconsistentes.
 2. **Edite o arquivo YAML correspondente**:
    ```bash
    # Example for RS
@@ -348,7 +355,7 @@ Os motores Damiao (DM) e Robostride (RS) usam unidades diferentes na camada de p
    ```
    - Altere apenas a junta que você precisa ajustar (por exemplo, `joint1`); deixe as juntas não relacionadas como estão;
    - Dentro de uma junta, altere apenas o modo que você precisa ajustar (MIT ou POS_VEL); não modifique os campos do outro modo sem motivo.
-3. **Preserve a indentação do YAML**: 2 espaços por nível, chaves separadas dos valores por `: `. Indentação incorreta faz com que o `yaml.safe_load` falhe ao analisar, e todos os parâmetros voltarão para os padrões.
+3. **Preserve a indentação do YAML**: 2 espaços por nível, chaves separadas dos valores por `: `. Indentação incorreta faz com que o `yaml.safe_load` falhe na análise, e todos os parâmetros voltarão aos padrões.
 4. **Reinicie o script após salvar**. O YAML é lido uma vez na inicialização do script; **edições em tempo de execução não entram em vigor imediatamente**.
 5. **Verificação de junta única**: use um script como demo3 (MIT) / demo4 (POS_VEL) para verificar a alteração com um **pequeno movimento de junta única** antes de fazer um teste com o braço completo.
 
@@ -362,12 +369,12 @@ Os motores Damiao (DM) e Robostride (RS) usam unidades diferentes na camada de p
 - **Rollback rápido**: `git checkout config/rebotarm_rs.yaml` restaura os padrões do repositório.
 
 :::caution Não ajuste muitas juntas de uma vez
-Alterar `kp` / `kd` drasticamente em várias juntas simultaneamente — se a direção ou o sinal de uma junta estiver errado — pode causar instantaneamente oscilações, sobrecorrente ou travamentos bruscos. **Itere uma junta e um modo por vez, em pequenos passos**.
+Alterar drasticamente `kp` / `kd` em várias juntas simultaneamente — se a direção ou o sinal de uma junta estiver errado — pode causar instantaneamente oscilações, sobrecorrente ou paradas bruscas. **Itere uma junta e um modo por vez, em pequenos passos**.
 :::
 
 ---
 
-## Testes Básicos de Controle
+## Testes de Controle Básico
 
 ### Controle Completo de Juntas em Modo MIT (`3_mit_control.py`)
 
@@ -384,25 +391,25 @@ uv run python example/3_mit_control.py
 > q # Exit system
 ```
 :::danger
-Este exemplo **não possui planejamento de trajetória nem de velocidade**. Grandes ângulos alvo das juntas farão os motores se moverem em velocidade muito alta, e podem até **acionar diretamente a proteção de sobrecorrente do motor**. Recomendações:
+Este exemplo **não possui planejamento de trajetória nem de velocidade**. Grandes ângulos alvo das juntas farão os motores se moverem em velocidade muito alta, e podem até **disparar diretamente a proteção de sobrecorrente do motor**. Recomendações:
 
 - Primeiro verifique com **pequenos ângulos** (por exemplo, mova uma única junta apenas 5~10 graus), confirme que a resposta e a direção do motor estão corretas antes de aumentar;
-- Esta seção **não possui versão com trajetória suave integrada**. Se você precisar de transições suaves entre múltiplos alvos, controle cuidadosamente seus alvos e o tempo, ou consulte a seção seguinte [Controle IK com Trajetória Suave (8_arm_traj_control.py)](#demo8-controle-de-trajetória) e porte a abordagem de planejamento de mínimo tranco / aceleração-desaceleração para o seu próprio script;
+- Esta seção **não possui versão com trajetória suave embutida**. Se você precisar de transições suaves entre múltiplos alvos, controle cuidadosamente seus alvos e o tempo, ou consulte a seção seguinte [Controle IK com Trajetória Suave (8_arm_traj_control.py)](#demo8-controle-de-trajetória) e porte a abordagem de planejamento de mínimo tranco / aceleração-desaceleração para o seu próprio script;
 - Mantenha pessoas e outros dispositivos fora do raio de trabalho do braço durante a operação.
 :::
 
 ---
 
 <details>
-<summary>Controle Completo de Juntas em Modo POS_VEL (normalmente não recomendado no reBot RS, consulte sob demanda)</summary>
+<summary>Controle Completo de Juntas em Modo POS_VEL (normalmente não recomendado no reBot RS, veja sob demanda)</summary>
 
 :::warning Nota de Adequação
-Para o **reBot Arm B601-RS**, o modo POS_VEL (Position‑Velocity) requer **ajuste de parâmetros separado** para obter resultados aceitáveis (os parâmetros padrão geralmente têm desempenho pior que o modo MIT). Portanto, ele **não é recomendado** no fluxo de trabalho normal, mas como alguns usuários realmente precisam dele, **este demo é mantido para referência e ajuste sob demanda**. Se você não tiver necessidade especial, use o exemplo em modo MIT acima.
+Para o **reBot Arm B601-RS**, o modo POS_VEL (Posição‑Velocidade) requer **ajuste de parâmetros separado** para alcançar resultados aceitáveis (os parâmetros padrão geralmente têm desempenho pior que o modo MIT). Portanto, ele **não é recomendado** no fluxo de trabalho normal, mas como alguns usuários realmente precisam dele, **este demo é mantido para referência e ajuste sob demanda**. Se você não tiver necessidade especial, use o exemplo em modo MIT acima.
 :::
 
 **Controle Completo de Juntas em Modo POS_VEL (`4_pos_vel_control.py`)**
 
-Insira todos os ângulos alvo das juntas para completar o controle do motor no modo de controle híbrido POS_VEL (Position-Velocity), obtendo um movimento mais suave e controlável ao atingir os ângulos alvo, reduzindo a vibração.
+Insira todos os ângulos alvo das juntas para completar o controle do motor no modo de controle híbrido POS_VEL (Posição‑Velocidade), obtendo um movimento mais suave e controlável ao atingir os ângulos alvo, reduzindo a vibração.
 
 **Comando de Execução**:
 ```bash
@@ -429,7 +436,7 @@ Calcular a pose do efetuador final com base nos ângulos das juntas.
 **Saída**:
 - Posição do efetuador final (X, Y, Z) — unidade: metros
 - Matriz de rotação (3×3)
-- Ângulos de Euler (rolagem/tangagem/guiñada) — unidade: graus
+- Ângulos de Euler (rolagem/tangagem/giro) — unidade: graus
 
 **Exemplo**:
 ```bash
@@ -462,8 +469,8 @@ Use cinemática inversa (IK) em modo MIT para especificar as coordenadas 3D (X, 
 **Formato de Entrada**:
 - Apenas posição: `<x> <y> <z>` (metros)
 - Posição + Orientação: `<x> <y> <z> <roll> <pitch> <yaw>` (graus)
-- Digite `state`: Visualizar os valores atuais em radianos de cada junta.
-- Digite `end_state`: Visualizar as coordenadas atuais reais do efetuador final (m) e os ângulos de Euler (rad) no espaço.
+- Digite `state`: Ver os valores atuais em radianos de cada junta.
+- Digite `end_state`: Ver as coordenadas atuais reais (m) e ângulos de Euler (rad) do efetuador final no espaço.
 
 **Comando de Execução**:
 ```bash
@@ -478,7 +485,7 @@ uv run python example/7_arm_ik_control.py
 > ctrl + c # Exit system
 ```
 :::danger
-Este exemplo **não possui planejamento de trajetória nem de velocidade**. Grandes ângulos alvo farão os motores se moverem em velocidade muito alta, e podem até **acionar diretamente a proteção de sobrecorrente do motor**. Recomendações:
+Este exemplo **não possui planejamento de trajetória nem de velocidade**. Grandes ângulos alvo farão os motores se moverem em velocidade muito alta, e podem até **disparar diretamente a proteção de sobrecorrente do motor**. Recomendações:
 
 - Primeiro verifique com **pequenos ângulos** (por exemplo, mova o efetuador final apenas 5~10 cm a partir de sua posição atual), confirme que a pose e a direção estão corretas antes de aumentar;
 - Para transições suaves entre alvos, vá diretamente para a próxima seção [Controle de Cinemática Inversa com Trajetória Suave (8_arm_traj_control.py)](#demo8-controle-de-trajetória) que usa planejamento de mínimo tranco / aceleração-desaceleração;
@@ -493,8 +500,8 @@ Use cinemática inversa (IK) em modo MIT para planejar automaticamente uma traje
 - Apenas posição: `<x> <y> <z>` (metros)
 - Posição + Orientação: `<x> <y> <z> <roll> <pitch> <yaw>` (graus)
 - Posição + Orientação + Tempo (padrão 2.0): `<x> <y> <z> <roll> <pitch> <yaw> <time>` (graus)
-- Digite `state`: Visualizar os valores atuais em radianos de cada junta.
-- Digite `end_state`: Visualizar as coordenadas atuais reais do efetuador final (m) e os ângulos de Euler (rad) no espaço.
+- Digite `state`: Ver os valores atuais em radianos de cada junta.
+- Digite `end_state`: Ver as coordenadas atuais reais (m) e ângulos de Euler (rad) do efetuador final no espaço.
 
 **Comando de Execução**:
 ```bash
@@ -513,7 +520,7 @@ uv run python example/8_arm_traj_control.py
 ```
 
 :::tip E se eu observar desvio de pose?
-Se você notar que a **pose do efetuador final lida** difere da **pose alvo comandada**, e a **pose em si é alcançável** (não está fora da área de trabalho, nem em uma singularidade), o problema provavelmente está nos parâmetros do seu controlador MIT / POS_VEL. Nesse caso, consulte a seção anterior [Tuning MIT / POS_VEL Controller Parameters](#tune-controller-params) e faça o ajuste manual de `kp` / `kd` etc. usando a abordagem de "uma junta por vez, modo por modo, em pequenos passos"; depois de ajustar, volte a este exemplo para verificar.
+Se você notar que a **pose do efetuador final lida** difere da **pose alvo comandada**, e a **pose em si é alcançável** (não está fora da área de trabalho, nem em uma singularidade), o problema provavelmente está nos parâmetros do seu controlador MIT / POS_VEL. Nesse caso, consulte a seção anterior [Tuning MIT / POS_VEL Controller Parameters](#tune-controller-params) e faça o ajuste manual de `kp` / `kd` etc. usando a abordagem de "uma junta por vez, modo por modo, pequenos passos"; depois de ajustar, volte a este exemplo para verificar.
 :::
 
 ### Controle de Compensação de Gravidade — Versão Básica (`9_gravity_compensation.py`)
@@ -541,7 +548,7 @@ uv run python example/9_gravity_compensation.py
 - Exibir o torque desejado para cada junta em tempo real (N·m)
 - Pressione `Ctrl+C` para parar e desconectar
 
-:::caution Voltar para Home Antes de Sair da Compensação de Gravidade
+:::caution Retorne para Home Antes de Sair da Compensação de Gravidade
 Ao parar o script (`Ctrl+C`), o programa **desativará diretamente todos os motores**, e o braço robótico **não retornará automaticamente para zero**. Segure o braço robótico com a mão ou mova-o para uma pose segura/home antes de sair para evitar quedas repentinas das juntas que possam causar colisões ou danos.
 :::
 
@@ -553,7 +560,7 @@ tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually 
 # This compensation is generally only used for joints 2 and 3
 ```
 
-Por exemplo, `tau_g[2] *= 1.2` significa aumentar o torque de compensação de gravidade da junta 2 em 20%. Recomenda-se ajustar item por item com base no efeito de flutuação real para evitar fazer alterações excessivamente grandes de uma só vez.
+Por exemplo, `tau_g[2] *= 1.2` significa aumentar o torque de compensação de gravidade da junta 2 em 20%. Recomenda-se ajustar item por item com base no efeito real de flutuação para evitar fazer alterações excessivamente grandes de uma só vez.
 :::
 
 ---
@@ -570,10 +577,10 @@ kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
 ```
 
 **Lógica de Travamento**:
-- Quando a velocidade linear do efetuador final `||v_ee|| < 0.04 m/s` e a velocidade angular `||w_ee|| < 0.08 rad/s`:
+- Quando a velocidade linear de extremidade `||v_ee|| < 0.04 m/s` e a velocidade angular `||w_ee|| < 0.08 rad/s`:
   - O ângulo de junta alvo `q_target` permanece travado
   - O braço robótico trava na posição atual
-- Quando a velocidade do efetuador final excede o limite:
+- Quando a velocidade de extremidade excede o limite:
   - `q_target` é atualizado para o ângulo de junta atual
   - Permite empurrar manualmente para mudar a posição
 
@@ -588,11 +595,11 @@ uv run python example/10_gravity_compensation_lock.py
 
 **Saída**:
 - Exibir o status de travamento em tempo real (LOCKED / UPDATE)
-- Velocidade linear e angular do efetuador final
+- Velocidade linear de extremidade, velocidade angular
 - Torque de compensação de gravidade para cada junta (N·m)
 - Pressione `Ctrl+C` para parar e desconectar
 
-:::caution Voltar para Home Antes de Sair da Compensação de Gravidade
+:::caution Retorne para Home Antes de Sair da Compensação de Gravidade
 Ao parar o script (`Ctrl+C`), o programa **desativará diretamente todos os motores**, e o braço robótico **não retornará automaticamente para zero**. Segure o braço robótico com a mão ou mova-o para uma pose segura/home antes de sair para evitar quedas repentinas das juntas que possam causar colisões ou danos.
 :::
 
@@ -604,11 +611,11 @@ tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually 
 # This compensation is generally only used for joints 2 and 3
 ```
 
-Por exemplo, `tau_g[2] *= 1.2` significa aumentar o torque de compensação de gravidade da junta 2 em 20%. Recomenda-se ajustar item por item com base no efeito de flutuação real para evitar fazer alterações excessivamente grandes de uma só vez.
+Por exemplo, `tau_g[2] *= 1.2` significa aumentar o torque de compensação de gravidade da junta 2 em 20%. Recomenda-se ajustar item por item com base no efeito real de flutuação para evitar fazer alterações excessivamente grandes de uma só vez.
 :::
 
 **Configuração de Teste de Segurança**:
-Você pode modificar a lista `ENABLED_JOINTS` no topo do script para habilitar apenas juntas específicas para testes de segurança:
+Você pode modificar a lista `ENABLED_JOINTS` no início do script para habilitar apenas juntas específicas para testes de segurança:
 ```python
 ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 ```
@@ -640,8 +647,8 @@ uv run python example/sim/fk_sim.py
 
 **Recursos**:
 - Exibir posição e orientação do efetuador final em tempo real
-- Suportar entrada contínua para testar diferentes poses
-- Exibir informações de pose formatadas
+- Suporta entrada contínua para testar diferentes poses
+- Saída de informações de pose formatadas
 
 ---
 
@@ -689,7 +696,7 @@ uv run python example/sim/traj_sim.py
 - Planejar da posição atual até a pose alvo
 - Usar perfil de trajetória de mínimo tranco (minimum jerk)
 - Exibir estatísticas da trajetória em tempo real
-- Reproduzir animação da trajetória completa no MeshCat
+- Reproduzir animação de toda a trajetória no MeshCat
 - Exibir caminho de referência (cinza) e caminho real (verde)
 
 ---
@@ -700,7 +707,7 @@ Wrapper do visualizador MeshCat, fornecendo uma interface unificada de exibiçã
 
 **Funções Principais**:
 - Carregar modelo URDF e exibir o robô
-- Desenhar caminhos de polilinha 3D (referência/real)
+- Desenhar caminhos polilinha 3D (referência/real)
 - Exibir pose alvo de IK (eixos de três cores + esfera)
 - Suportar reprodução de animação de trajetória de juntas
 
@@ -727,7 +734,7 @@ viz.draw_path(points, "path_name", color)  # Draw path
   Isso pode ser causado por erros estruturais e precisão de usinagem. A compensação de gravidade neste projeto depende de URDF e Pinocchio. Você pode tentar corrigir o URDF para os parâmetros que você realmente mediu (você pode pedir ajuda à IA para esta etapa).
 
 - **Os motores Robostride não conseguem ler o status**
-  Problemas de configuração de protocolo interno no motorbridge podem impedir que os motores RS consultem o status como os motores DM. Por favor, julgue com base nos efeitos de movimento reais ou tente usar o comando `ping` para confirmar a comunicação normal com o motor.
+  Problemas de configuração de protocolo interno no motorbridge podem impedir que motores RS consultem status como motores DM. Por favor, julgue com base nos efeitos reais de movimento ou tente usar o comando `ping` para confirmar a comunicação normal com o motor.
 
 - **Como alternar entre as configurações de motor Damiao e Robostride**
   Modifique o arquivo de configuração `config/rebotarm_dm.yaml` (Damiao) ou `config/rebotarm_rs.yaml` (Robostride) e carregue a configuração correspondente no código.
