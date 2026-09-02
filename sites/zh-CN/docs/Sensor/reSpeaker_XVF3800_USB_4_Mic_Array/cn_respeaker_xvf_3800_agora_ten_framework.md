@@ -16,7 +16,7 @@ image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf380
 slug: /respeaker_xvf3800_agora_ten_framework_client
 sku: 114993702,114993700
 last_update:
-  date: 2/09/2026
+  date: 09/02/2026
   author: Jiayu Zhan(Jack)
 createdAt: '2026-02-10'
 updatedAt: '2026-02-27'
