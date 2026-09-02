@@ -279,8 +279,9 @@ export function renderProductPage(productKey, entries) {
   lines.push(`title: ${product.title}`);
   lines.push(`description: ${product.description}`);
   lines.push(`slug: ${slug}`);
-  lines.push('date: 9/2/2026');
-  lines.push('author: ray');
+  lines.push('last_update:');
+  lines.push('  date: 9/2/2026');
+  lines.push('  author: ray');
   lines.push('keywords:');
   for (const kw of product.keywords) lines.push(`  - ${kw}`);
   lines.push('---');

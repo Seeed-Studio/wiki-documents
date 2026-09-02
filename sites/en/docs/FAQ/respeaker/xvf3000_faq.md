@@ -2,8 +2,9 @@
 title: reSpeaker XVF3000 FAQ
 description: Frequently asked questions about DSP tuning and parameter control for the reSpeaker Mic Array v2.0 with XVF3000.
 slug: /respeaker_xvf3000_faq
-date: 9/2/2026
-author: ray
+last_update:
+  date: 9/2/2026
+  author: ray
 keywords:
   - reSpeaker XVF3000 FAQ
   - reSpeaker XVF3000 DSP tuning

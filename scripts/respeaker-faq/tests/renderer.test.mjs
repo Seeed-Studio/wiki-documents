@@ -262,8 +262,11 @@ test('published FAQ pages include author and publication date frontmatter', () =
   for (const file of files) {
     const content = fs.readFileSync(path.join(faqDir, file), 'utf8');
     const frontmatter = content.split('---', 3)[1];
-    assert.match(frontmatter, /\ndate: 9\/2\/2026\n/, `${file}: publication date missing`);
-    assert.match(frontmatter, /\nauthor: ray\n/, `${file}: author missing`);
+    assert.match(
+      frontmatter,
+      /\nlast_update:\n  date: 9\/2\/2026\n  author: ray\n/,
+      `${file}: last_update metadata missing or malformed`,
+    );
   }
 });
 

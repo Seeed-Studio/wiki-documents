@@ -98,9 +98,12 @@ check('frontmatter: FAQ pages have required fields', () => {
       continue;
     }
     const fm = m[1];
-    for (const field of ['title', 'description', 'slug', 'date', 'author', 'keywords']) {
+    for (const field of ['title', 'description', 'slug', 'keywords']) {
       const re = new RegExp(`^${field}:`, 'm');
       if (!re.test(fm)) problems.push(`${path.basename(file)}: missing ${field}`);
+    }
+    if (!/^last_update:\r?\n  date:\s*\S.*\r?\n  author:\s*\S.*$/m.test(fm)) {
+      problems.push(`${path.basename(file)}: missing or malformed last_update.date/author`);
     }
   }
   return problems;

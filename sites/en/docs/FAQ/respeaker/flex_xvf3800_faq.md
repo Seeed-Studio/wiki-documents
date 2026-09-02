@@ -2,8 +2,9 @@
 title: reSpeaker Flex FAQ
 description: Frequently asked questions about USB detection, host control and firmware for the reSpeaker Flex.
 slug: /respeaker_flex_faq
-date: 9/2/2026
-author: ray
+last_update:
+  date: 9/2/2026
+  author: ray
 keywords:
   - reSpeaker Flex FAQ
   - reSpeaker Flex troubleshooting
