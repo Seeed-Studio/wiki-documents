@@ -1,6 +1,16 @@
 const docList = [
   [
     {
+      "path": "/jetpack_7_2_memory_optimization_deep_dive",
+      "image": "https://files.seeedstudio.com/wiki/jetpack-7.2/unified_mem.png",
+      "title": "JetPack 7.2 Memory Optimization: Software Advances and an LLM Deployment Budget",
+      "date": "2026-08-27",
+      "title_cn": "JetPack 7.2 内存优化：软件进展与 LLM 部署预算",
+      "title_ja": "JetPack 7.2 メモリ最適化：ソフトウェアの進歩と LLM デプロイメント予算",
+      "title_es": "Optimización de memoria en JetPack 7.2: avances de software y un presupuesto de despliegue de LLM",
+      "title_pt": "Otimização de Memória no JetPack 7.2: Avanços de Software e um Orçamento de Implantação de LLM"
+    },
+    {
       "path": "/recamera_pro_visual_wake_stt",
       "image": "https://files.seeedstudio.com/wiki/reCamera-Pro/Application/recamera_pro_visual_wake_stt/gpt_images.png",
       "title": "Build a Visual Wake and Offline Speech Recognition System with reCamera Pro",
@@ -9,6 +19,18 @@ const docList = [
       "title_ja": "reCamera Pro でビジュアルウェイク & オフライン音声認識システムを構築する",
       "title_es": "Crea un sistema de activación visual y reconocimiento de voz sin conexión con reCamera Pro",
       "title_pt": "Crie um sistema de despertar visual e reconhecimento de fala offline com reCamera Pro"
+    }
+  ],
+  [
+    {
+      "path": "/respeaker_clip_rtc_streaming",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg",
+      "title": "Build Real-Time Audio Streaming with reSpeaker Clip RTC SDK",
+      "date": "2026-08-24",
+      "title_cn": "使用 reSpeaker Clip RTC SDK 构建实时音频流",
+      "title_ja": "reSpeaker Clip RTC SDK でリアルタイムオーディオストリーミングを構築する",
+      "title_es": "Crea transmisión de audio en tiempo real con reSpeaker Clip RTC SDK",
+      "title_pt": "Construa Streaming de Áudio em Tempo Real com o reSpeaker Clip RTC SDK"
     },
     {
       "path": "/sensecap_combo_introduction",
@@ -78,7 +100,7 @@ const docList = [
     },
     {
       "path": "/rebot_arm_b601_dm_isaacsim",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png",
+      "image": "https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png",
       "title": "Simulating reBot-B601-DM with Isaac Sim",
       "date": "2026-08-17T00:00:00.000Z",
       "title_cn": "通过 Isaacsim 仿真 reBot-B601-DM",
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "AI コーディングエージェントで reCamera Pro アプリケーションを開発する",
       "title_es": "Desarrolla aplicaciones reCamera Pro con agentes de programación con IA",
       "title_pt": "Desenvolva aplicações reCamera Pro com agentes de codificação em IA"
-    }
-  ],
-  [
-    {
-      "path": "/rebot_arm_b601_rs_web_simulator_developer_guide",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web_rs/rebot_rs_web_simulator_en.png",
-      "title": "reBot Arm B601-RS Web Simulator and ROS 2/MuJoCo Developer Guide",
-      "date": "2026-08-13",
-      "title_cn": "reBot Arm B601-RS Web 仿真器与 ROS 2/MuJoCo 开发者教程",
-      "title_ja": "reBot Arm B601-RS Web シミュレータおよび ROS 2/MuJoCo 開発者ガイド",
-      "title_es": "Guía para Desarrolladores del Simulador Web de reBot Arm B601-RS y ROS 2/MuJoCo",
-      "title_pt": "Guia de Desenvolvimento do Simulador Web e ROS 2/MuJoCo do reBot Arm B601-RS"
-    },
-    {
-      "path": "/respeaker_clip_service_integration",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg",
-      "title": "Integrate reSpeaker Clip into Your Service",
-      "date": "2026-08-07",
-      "title_cn": "将 reSpeaker Clip 集成到你的服务中",
-      "title_ja": "reSpeaker Clip をサービスに統合する",
-      "title_es": "Integra reSpeaker Clip en tu servicio",
-      "title_pt": "Integre o reSpeaker Clip ao Seu Serviço"
     }
   ]
 ];

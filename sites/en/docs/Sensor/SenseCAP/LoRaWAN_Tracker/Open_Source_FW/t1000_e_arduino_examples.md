@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_ex
 slug: /t1000_e_arduino_examples
 sidebar_position: 4
 last_update:
-  date: 2/4/2026
-  author: Janet
+  date: 9/1/2026
+  author: Advent Jiang
 createdAt: '2025-03-24'
 updatedAt: '2026-02-04'
 url: https://wiki.seeedstudio.com/t1000_e_arduino_examples/
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/t1000_e_arduino_examples/
 
 
 :::caution note
-Before flashing the firmware, please ensure you device is `T1000-E for LoRaWAN` version and please don't flash other Meshtastic firmware to this tracker model, it may cause the device to be completely dead.
+Before flashing the firmware, please ensure you device is `T1000-E for LoRaWAN` version and please don't flash other Meshtastic or MeshCore firmware to this tracker model, it may cause the device to be completely dead.
 :::
 
 The following Arduino examples are available:

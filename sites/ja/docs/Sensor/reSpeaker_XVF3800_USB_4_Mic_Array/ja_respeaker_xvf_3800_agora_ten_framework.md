@@ -16,10 +16,10 @@ image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf380
 slug: /respeaker_xvf3800_agora_ten_framework_client
 sku: 114993702,114993700
 last_update:
-  date: 2/09/2026
+  date: 09/02/2026
   author: Jiayu Zhan(Jack)
 createdAt: '2026-02-10'
-updatedAt: '2026-02-27'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_agora_ten_framework_client/
 ---
 
@@ -155,12 +155,21 @@ Workflow:
 3. API Keys ページに移動します
 4. 新しいシークレットキーを作成します
 
-#### 🔹 Cartesia（TTS）– 必須
+#### 🔹 Cartesia（TTS）– デフォルト
 
 1. https://cartesia.ai/sonic にアクセスします
 2. 無料アカウントにサインアップします（無料枠あり）
 3. API Key → New API Key に移動します
 4. API キーをコピーします
+
+#### 🔹 FlowSpeech（TTS）– 任意
+
+コンテキスト認識、感情、ポーズ制御が必要な場合は、デフォルトの TTS 拡張を [AI テキスト読み上げ](https://flowspeech.io) サービスに切り替えることができます：
+
+1. FlowSpeech アカウントを登録します
+2. Settings → API Keys に移動します
+3. API キーを作成してコピーします
+4. 下記の「任意：FlowSpeech TTS に切り替える」に従って拡張を設定します
 
 ### ソフトウェア要件
 
@@ -261,6 +270,9 @@ PC に **ReSpeaker XMOS XVF3800 with XIAO ESP32S3** を接続し、ファーム�
    # ==============================
    Cartesia_TTS_KEY=your_cartesia_api_key
 
+   # Optional: FlowSpeech TTS
+   FLOWSPEECH_API_KEY=your_flowspeech_api_key
+
    # ==============================
    # Server config (usually no changes needed)
    # ==============================
@@ -270,6 +282,30 @@ PC に **ReSpeaker XMOS XVF3800 with XIAO ESP32S3** を接続し、ファーム�
    SERVER_PORT=8080
    WORKERS_MAX=100
    ```
+
+#### 任意：FlowSpeech TTS に切り替える
+
+FlowSpeech 拡張は 24 kHz、モノラル、16 ビット PCM 音声を出力し、本サンプルの `tts` ノードに直接接続できます。`agents/examples/voice-assistant/tenapp/property.json` を開き、`tts` という名前のノードを次の内容に置き換えます：
+
+```json
+{
+  "type": "extension",
+  "name": "tts",
+  "addon": "flowspeech_tts_python",
+  "extension_group": "tts",
+  "property": {
+    "dump": false,
+    "dump_path": "./",
+    "params": {
+      "api_key": "${env:FLOWSPEECH_API_KEY}",
+      "base_url": "https://flowspeech.io",
+      "voice_name": "Kore"
+    }
+  }
+}
+```
+
+保存後、`task install` と `task run` を続行してください。API キーはローカルの `.env` ファイルにのみ保存し、Git リポジトリにはコミットしないでください。
 
 #### ステップ C: Docker サービスを起動する
 

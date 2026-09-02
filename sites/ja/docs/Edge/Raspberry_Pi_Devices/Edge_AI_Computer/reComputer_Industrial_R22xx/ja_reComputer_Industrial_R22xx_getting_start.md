@@ -895,6 +895,9 @@ reComputer Industrial R2200 は CM5 からのネイティブ HDMI インター�
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.16-1.png" style={{width:200, height:'auto'}}/></div>
 reComputer Industrial R2200 にはコンデンサで給電される RTC 回路が搭載されており、電源が失われた場合でも時刻保持機能を維持することができます。
 
+:::note
+RTC を使用している場合、デバイスが突然電源を失ったときは、RTC が完全に放電するまで待ってから電源を再接続して再起動してください。完全に放電していないと、デバイスが再起動条件を満たせず、正常に起動できない場合があります。
+:::
 
 ### ウォッチドッグ
 
