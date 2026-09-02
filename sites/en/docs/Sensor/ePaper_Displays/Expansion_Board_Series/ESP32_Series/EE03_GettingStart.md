@@ -12,10 +12,10 @@ slug: /getting_started_with_ee03
 sidebar_position: 2
 sku: 100080566
 last_update:
-  date: 2026-03-1
-  author: Jackson.Li
+  date: 9/2/2026
+  author: Nemo
 createdAt: '2026-03-02'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/getting_started_with_ee03/
 ---
 
@@ -32,7 +32,7 @@ import Steppers from '@site/src/components/utils/Stepper';
         <th>10.3" Monochrome ePaper Display</th>
     </tr>
     <tr>
-    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg"/></div>
+    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE03/01.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-ESP32-S3-EE03-p-6638.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -102,14 +102,16 @@ This section will guide you through connecting your EE03 to the SenseCraft HMI p
 **Step 1. Connect the Screen and Board**
 Carefully connect the FPC cable of your ePaper screen to the connector on the EE03 driver board. Ensure the locking mechanism is secure.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/01.gif" style={{width:800, height:'auto'}}/></div>
+
 **Step 2. Power On**
 Connect the EE03 board to a power source (computer or USB adapter) using a USB Type-C cable. Upon powering up, the screen will refresh and display a welcome image.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_1.jpg" style={{width:300,height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_7.jpg" style={{width:300,height:'auto'}}/></div>
 
 **Step 3. Enter Network Configuration Mode**
 After the welcome image, the screen will automatically refresh to show the Network Configuration interface. This indicates the device is ready to connect to Wi-Fi.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_3.jpg" style={{width:300,height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_3.png" style={{width:300,height:'auto'}}/></div>
 
 
 ### Network Configuration
@@ -117,89 +119,79 @@ After the welcome image, the screen will automatically refresh to show the Netwo
 **Step 4. Configure Wi-Fi via Mobile Phone**
 Use your mobile phone to scan the QR code displayed on the screen. Follow the prompts on your phone to enter your local Wi-Fi SSID and password to connect the EE03 to the internet.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
+
 **Step 5. Obtain Pairing Code**
-Once the network configuration is successful, the screen will refresh again and display a unique **Pairing Code**. You will need this code for the next step.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_2.jpg" style={{width:300,height:'auto'}}/></div>
+Once the network configuration is successful, the screen will refresh again and display a unique **Pair Code**. You will need this code for the next step.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_2.png" style={{width:300,height:'auto'}}/></div>
 
 ### Platform Binding & Update
 
 **Step 6. Bind Device on SenseCraft HMI**
-Go to the [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "Add Device". Enter the Pairing Code displayed on your E-ink screen.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_4.jpg" style={{width:800, height:'auto'}}/></div>
+Go to the [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "New Device". Enter the Pairing Code displayed on your E-ink screen.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
+
 **Step 7. Create and Push New Interface**     
 On the SenseCraft HMI platform, select the template suitable for the 10.3-inch screen to create a new interface or upload an image.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_8.jpg" style={{width:800, height:'auto'}}/></div>
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_5.jpg" style={{width:800, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/5.png" style={{width:500, height:'auto'}}/></div>
 
 **Step 8. Apply your images**
 Once finished, click the "Apply" button and select your EE03 device.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_6.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.png" style={{width:800, height:'auto'}}/></div>
 
 **Step 9. Display on the screen**
 Finally the EE03 will receive the data and refresh the 10.3-inch screen with your new content.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_7.jpg" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_7.png" style={{width:300, height:'auto'}}/></div>
 
 
 ## Getting Started with Arduino
 
-### Install Seeed GFX Library
+### Install Seeed GFX2 Library
 
 :::tip
-This library has same function as TFT library and no compatible with it. If you have installed TFT library or other similar display libraries, please uninstall it first.
+This library has the same function as the TFT library and is **not** compatible with it. If you have installed the TFT library or other similar display libraries, please uninstall them first.
 :::
 
-Download and install the Seeed GFX library from GitHub.
+Download and install the Seeed GFX2 library from GitHub.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/14.png" style={{width:800, height:'auto'}}/></div>
 
 <div align="center">
-<a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
+<a href="https://github.com/Seeed-Studio/Seeed_GFX2" target="_blank">
 <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
 </a>
 </div>
-Scroll down and open this link.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
-
-Select your device type and it will generate some code. Copy those code and we will use them later.
-
-:::tip
-If you make the wrong choice, the screen will display nothing.
-
-So please make sure you select the correct device or component type.
-:::
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/3.png" style={{width:800, height:'auto'}}/></div>
 
 After downloading the library, go to **Sketch** -> **Include Library** -> **Add .ZIP Library** and select the downloaded library.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/15.png" style={{width:500, height:'auto'}}/></div>
 
 
 ### Configure and burn the program
-Select the example shown in the figure
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/4.png" style={{width:800, height:'auto'}}/></div>
+As shown in the image, navigate to the example through this menu:
+File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → EE03 → 10.3 Monochrome ePaper Display → 10_3_inch_Monochrome_HelloWorld
 
-Create a new "driver.h" file and paste those code into it. The code should be like:
-```cpp
-#define BOARD_SCREEN_COMBO 511 // 10.3 inch monochrome ePaper Screen（ED103TC2）
-#define USE_XIAO_EPAPER_DISPLAY_BOARD_EE03
-```
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/8.png" style={{width:800, height:'auto'}}/></div>
 
 After that, go to **Tools** -> **Board** -> **XIAO ESP32S3 Plus** and **Tools** -> **Port** -> **Select the port your board is connected to**. 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/5.jpg" style={{width:1000, height:'auto'}}/></div>
-
 Note that PSRAM must be enabled.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.jpg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
 Then click **Upload** to upload the code.
-Now you will see the feedback in your epaper screen! Following are the results of Bitmap examples.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/7.jpg" style={{width:500, height:'auto'}}/></div>
+Now you will see the feedback in your epaper screen! Following is the result of the HelloWorld example.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/7.png" style={{width:500, height:'auto'}}/></div>
 
 
 ## Troubleshooting
@@ -208,6 +200,7 @@ Now you will see the feedback in your epaper screen! Following are the results o
 *   Check if the FPC cable is correctly inserted and locked.
 *   Ensure the USB Type-C cable provides sufficient power.
 *   Press the Reset button to restart the board.
+*   For Arduino users: make sure PSRAM is enabled in **Tools** → **PSRAM** → **OPI PSRAM**.
 
 **Q2: Wi-Fi configuration fails.**
 *   Ensure your Wi-Fi network is 2.4GHz.
@@ -215,6 +208,15 @@ Now you will see the feedback in your epaper screen! Following are the results o
 
 **Q3: The screen display is blurry or has ghosting.**
 *   This can happen if the screen hasn't been refreshed for a long time or if the power supply is unstable. Try refreshing the screen again via the HMI platform.
+
+**Q4: The screen makes a high-frequency buzzing sound during refresh.**
+*   This is normal for ePaper displays. The high-voltage driving circuit produces an audible sound during the refresh cycle, especially with larger screens. It does not indicate a hardware fault and will stop once refresh is complete.
+
+**Q5: SenseCraft HMI device binding fails.**
+*   Double-check that the Pairing Code is entered correctly (case-sensitive).
+*   Ensure the device is online — check the Wi-Fi icon on the screen.
+*   Make sure your phone and the device are on the same 2.4GHz Wi-Fi network during pairing.
+*   If the device shows as offline, press the Reset button and try pairing again.
 
 ## Resources
 - **[PDF]** [Seeed Studio XIAO ePaper Display EE03 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE03/XIAO_ePaper_Display_Board_EE03_V1.0_SCH_251217.pdf)
