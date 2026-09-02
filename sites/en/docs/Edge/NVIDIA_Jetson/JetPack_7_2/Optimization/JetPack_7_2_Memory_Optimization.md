@@ -37,6 +37,10 @@ This guide combines the JetPack 7.2 material already available in this collectio
 BSP-level memory reclamation changes boot firmware, device trees, and kernel command-line settings. Apply only validated `headless`, `no-camera`, or SWIOTLB recipes to a recoverable test device. Keep the original BSP and confirm that the device can be reflashed before making these changes.
 :::
 
+:::tip
+Looking for the "why" behind these steps? The companion [JetPack 7.2 Memory Optimization Deep Dive](/jetpack_7_2_memory_optimization_deep_dive/) explains where the headroom comes from: the platform baseline versus JetPack 6.2, the LLM memory budget, runtime mechanics, and field observations.
+:::
+
 ## Optimization Layers
 
 Use the least invasive layer that solves the problem.

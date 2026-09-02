@@ -136,9 +136,11 @@
 
 /* 顶部快速导航 */
 .doc-nav {
-  position: sticky;
-  top: 0.75rem;
-  z-index: 5;
+  --rb-border: rgba(148, 163, 184, 0.28);
+  --rb-text: #0f172a;
+  --rb-surface-soft: #f8fafc;
+  --rb-primary: #2563eb;
+  --rb-primary-soft: #eff6ff;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
   gap: 0.58rem;
@@ -148,11 +150,18 @@
   border: 1px solid var(--rb-border);
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
-  backdrop-filter: blur(12px);
+}
+
+.doc-nav.doc-nav--series {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .doc-nav a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
   padding: 0.68rem 0.55rem;
   border-radius: 14px;
   text-align: center;
@@ -164,11 +173,45 @@
   transition: all 0.18s ease;
 }
 
-.doc-nav a:hover {
+.doc-nav-hints {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.22rem;
+}
+
+.doc-nav-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  color: var(--rb-primary);
+  background: var(--rb-primary-soft);
+  font-size: 0.66rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.doc-nav a:hover,
+.doc-nav a.active {
   color: var(--rb-primary);
   transform: translateY(-2px);
   background: #ffffff;
   box-shadow: 0 10px 22px rgba(37, 99, 235, 0.12);
+}
+
+.doc-nav a.active {
+  background: var(--rb-primary-soft);
+  border: 1px solid rgba(37, 99, 235, 0.24);
+}
+
+.rebot-page h2,
+.rebot-page h3,
+.rebot-page h4 {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 0.75rem);
 }
 
 /* 卡片网格 */
@@ -440,7 +483,22 @@ html[data-theme='dark'] .doc-hero {
 
 html[data-theme='dark'] .hero-card,
 html[data-theme='dark'] .doc-nav {
+  --rb-text: #f8fafc;
+  --rb-surface-soft: #242833;
+  --rb-primary: #60a5fa;
+  --rb-primary-soft: rgba(96, 165, 250, 0.12);
+  --rb-border: rgba(148, 163, 184, 0.22);
   background: rgba(29, 32, 40, 0.86);
+}
+
+html[data-theme='dark'] .doc-nav a.active {
+  background: var(--rb-primary-soft);
+  border-color: rgba(96, 165, 250, 0.28);
+}
+
+html[data-theme='dark'] .doc-nav-hint {
+  color: #93c5fd;
+  background: rgba(96, 165, 250, 0.16);
 }
 
 html[data-theme='dark'] .course-path-item.active {
@@ -454,7 +512,6 @@ html[data-theme='dark'] .course-path-item.active {
   }
 
   .doc-nav {
-    position: static;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

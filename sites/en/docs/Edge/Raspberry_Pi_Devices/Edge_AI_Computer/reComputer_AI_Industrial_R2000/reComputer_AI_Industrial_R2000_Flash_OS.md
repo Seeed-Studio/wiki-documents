@@ -163,13 +163,13 @@ Please wait a few minutes until the flashing process is complete.
 The result is shown as below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
-## Boot from NVME
+## Boot from SSD (NVMe via USB)
 
 ### Update EEPROM
 
 *This method works if you have an SSD and have booted the device successfully with emmc. Please make sure your system is the latest Raspberry Pi system (Bookworm or later) and and your RPi 5 firmware is updated to 2023-12-06 (Dec 6th) or newer, otherwise it may not recognize the NVME-related configurations.*
 
-**Step 1**:Ensure that your Raspberry Pi system is up-to-date (Bookworm or later), enter the following command to update the RPi 5 firmware:
+**Step 1**: Ensure that your Raspberry Pi system is up-to-date (Bookworm or later), enter the following command to update the RPi 5 firmware:
 
 ```shell
   sudo apt update && sudo apt upgrade -y
@@ -204,11 +204,11 @@ If asked to reboot, select `Yes`.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/copy.gif" alt="pir" width="700" height="auto" /></div>
 
-### Setting the Raspberry Pi to boot from the NVMe SSD
+### Setting the Raspberry Pi to boot from the SSD
 
-If you have easy access to your SD card slot you could turn off your Pi, pop out the SD card and (if everything's working as expected) it should automagically boot from your NVMe drive the next time you start it up. If you want to leave the SD card where it is and still boot from NVMe though, you'll need to change the boot order.
+If you have easy access to your SD card slot, you could turn off your Pi, remove the SD card, and (if everything is working as expected) it should automatically boot from the SSD the next time you start it up. If you want to leave the SD card in place and still boot from the SSD, you need to change the boot order.
 
-**Step 1**:Enter the following command:
+**Step 1**: Enter the following command:
 
 ```shell
   sudo raspi-config
@@ -217,11 +217,11 @@ If you have easy access to your SD card slot you could turn off your Pi, pop out
 Scroll down to `Advanced Options` and press Enter:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_1.png" alt="pir" width="700" height="auto" /></div>
 
-**Step 2**:Scroll down to `Boot Order` and press Enter:
+**Step 2**: Scroll down to `Boot Order` and press Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_2.png" alt="pir" width="700" height="auto" /></div>
 
-**Step 3**:Choose `NVMe/USB Boot` and press Enter:
+**Step 3**: Choose `NVMe/USB Boot` and press Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_3.png" alt="pir" width="700" height="auto" /></div>
 
@@ -229,7 +229,7 @@ Configuration will be confirmed. Press Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="700" height="auto" /></div>
 
-**Step 4**:Return to the first screen by selecting `Back` or pressing the Esc key. Then navigate to Finish using the right cursor key.
+**Step 4**: Return to the first screen by selecting `Back` or pressing the Esc key. Then navigate to Finish using the right cursor key.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_5.png" alt="pir" width="700" height="auto" /></div>
 
@@ -237,13 +237,13 @@ You will be asked whether you want to reboot now. Click `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="700" height="auto" /></div>
 
-## Flash ubuntu to NVME
+## Flash Ubuntu to SSD (NVMe via USB)
 
 ### First: Update EEPROM with SD card
 
-Please refer this [link](https://wiki.seeedstudio.com/r2000_series_getting_start/#update-eeprom).
+Follow [Update EEPROM](#update-eeprom) to update the EEPROM.
 
-To set the NVMe boot order as the highest priority, use the following command:
+The SSD used on this device is an NVMe SSD connected through a USB 3.0 bridge. During boot, the Raspberry Pi firmware detects it as a USB storage device, so the correct boot priority is a USB boot order rather than a native NVMe-only boot order. To set the SSD as the highest-priority boot device, use the following command:
 
 ```
 sudo rpi-eeprom-config --edit
@@ -253,16 +253,16 @@ And then change rpi-eeprom-config like below:
 
 ```
 BOOT_UART=1
-BOOT_ORDER=0xf461
+BOOT_ORDER=0xf14
 NET_INSTALL_AT_POWER_ON=1
 PCIE_PROBE=1
 ```
 
 Use `Ctrl+X` and input `y` to store the result. And the result is as follows:
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/chang_eeprom.png" alt="pir" width="700" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/boot_from_usb.jpg" alt="pir" width="700" height="auto" /></div>
 
-### Second: Burn Ubuntu onto the NVMe
+### Second: Burn Ubuntu onto the SSD
 
 Open Raspberry Pi Imager:
 
@@ -272,20 +272,6 @@ Choose Ubuntu os:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/flashos2.png" alt="pir" width="700" height="auto" /></div>
 
 Finally, click `Next` and wait for the flashing process to complete.
-
-### Third: Replace the OS file
-
-Install `pcie-fix.dtbo` with this [link](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
-
-Copy pcie-fix.dtbo to /overlays file like below:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="700" height="auto" /></div>
-
-Modify the `config.txt`, add `dtoverlay=pcie-fix` at the end of the file like below:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file2.png" alt="pir" width="700" height="auto" /></div>
-
-And then Use `Ctrl+X` and input `y` to store this file.
 
 ## Tech Support & Product Discussion
 

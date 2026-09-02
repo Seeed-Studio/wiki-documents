@@ -11,7 +11,7 @@ last_update:
   date: 05/06/2025
   author: Jiahao Li
 createdAt: '2025-01-09'
-updatedAt: '2026-03-20'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_ai_industrial_r2000_flash_os/
 ---
 # reComputer AI Industrial R2000 Gravar OS
@@ -24,14 +24,14 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_ai_industrial_r2000_flash_os/
     </a>
 </div>
 
-A série reComputer AI Industrial R2000 é alimentada por Raspberry Pi CM5 e pelo acelerador de IA Hailo-8; este sistema de IA de borda compacto oferece 26 TOPS para processamento de visão multicanais em tempo real. Com uma CPU Cortex-A76 quad-core, até 16GB de RAM, 64GB de eMMC e uma interface versátil, garante integração perfeita em aplicações industriais de IA.
+A série reComputer AI Industrial R2000 é alimentada por Raspberry Pi CM5 e acelerador de IA Hailo-8; este sistema compacto de IA de borda oferece 26 TOPS para processamento de visão multicanal em tempo real. Com uma CPU Cortex-A76 quad-core, até 16GB de RAM, 64GB de eMMC e uma interface versátil, garante integração perfeita em aplicações industriais de IA.
 
 ## Requisitos de Hardware
 
 Você precisa preparar o seguinte hardware
 
 - reComputer AI Industrial R2000 x 1
-- Computador Host (Windows/Mac/Linux) x 1
+- Computador host (Windows/Mac/Linux) x 1
 - Cabo Ethernet x 1
 - Adaptador de energia (12V-24V) BYO
 - Cabo USB Tipo-C x 1
@@ -41,11 +41,11 @@ Você precisa preparar o seguinte hardware
 - [usbboot tool](https://github.com/raspberrypi/usbboot)
 - [Raspberry Pi Imager APP](https://www.raspberrypi.com/software/)
 
-## Gravar o OS
+## Gravar OS
 
 ### Para computador host Windows
 
-- **Passo 1.** Baixe o software **Raspberry Pi Imager** por **[este link](https://www.raspberrypi.org/software/)**
+- **Passo 1.** Baixe o software **Raspberry Pi Imager** a partir **[daqui](https://www.raspberrypi.org/software/)**
 
 - **Passo 2.** Abra o software Raspberry Pi Imager
 
@@ -59,7 +59,7 @@ Você precisa preparar o seguinte hardware
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA:** Você pode selecionar outros sistemas operacionais como **64-bit Ubuntu** navegando em **Other general purpose OS**
+**NOTA:** Você pode selecionar outro OS, como **64-bit Ubuntu**, navegando até **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -78,7 +78,7 @@ Aguarde alguns minutos até que o processo de gravação seja concluído.
 ### Para computador host MAC
 
 :::caution
-**Você precisa instalar o [homebrew](https://brew.sh/) antes de prosseguir com as etapas a seguir.**
+**Você precisa instalar o [homebrew](https://brew.sh/) antes de prosseguir com os passos a seguir.**
 Abra um terminal e digite ```brew -V``` para verificar se você configurou corretamente o ambiente do homebrew; você deverá ver a versão do ambiente homebrew que instalou.
 :::
 
@@ -92,13 +92,13 @@ Abra um terminal e digite ```brew -V``` para verificar se você configurou corre
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar o Wi-Fi, definir configurações locais** e muito mais
+Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar Wi-Fi, definir configurações locais** e muito mais
 
 - **Passo 4.** Clique em **CHOOSE OS** e selecione o seu OS preferido
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA:** Você pode selecionar outros sistemas operacionais como **64-bit Ubuntu** navegando em **Other general purpose OS**
+**NOTA:** Você pode selecionar outro OS, como **64-bit Ubuntu**, navegando até **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -114,19 +114,19 @@ Ou você pode usar este link para baixar o arquivo de imagem:
 
 ### Para computador host Linux
 
-- **Passo 1.** Baixar o snap
+- **Passo 1.** Baixe o snap
 
 ```sh
 sudo apt install snap
 ```
 
-- **Passo 2.** Baixar o **rpi-imager**
+- **Passo 2.** Baixe o **rpi-imager**
 
 ```sh
 snap install rpi-imager
 ```
 
-- **Passo 3.** Abrir o software Raspberry Pi Imager
+- **Passo 3.** Abra o software Raspberry Pi Imager
 
 ```sh
 rpi-imager
@@ -139,13 +139,13 @@ O resultado é mostrado abaixo:
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar o Wi-Fi, definir configurações locais** e muito mais
+Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar Wi-Fi, definir configurações locais** e muito mais
 
 - **Passo 5.** Clique em **CHOOSE OS** e selecione o seu OS preferido
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
 
-**NOTA:** Você pode selecionar outros sistemas operacionais como **64-bit Ubuntu** navegando em **Other general purpose OS**
+**NOTA:** Você pode selecionar outro OS, como **64-bit Ubuntu**, navegando até **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -163,13 +163,13 @@ Aguarde alguns minutos até que o processo de gravação seja concluído.
 O resultado é mostrado abaixo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
-## Inicializar a partir do NVME
+## Inicializar a partir de SSD (NVMe via USB)
 
-### Atualizar o EEPROM
+### Atualizar EEPROM
 
-*Este método funciona se você tiver um SSD e tiver inicializado o dispositivo com sucesso com o eMMC. Certifique-se de que seu sistema seja o sistema mais recente do Raspberry Pi (Bookworm ou posterior) e que o firmware do seu RPi 5 esteja atualizado para 2023-12-06 (6 de dezembro) ou mais recente, caso contrário, ele pode não reconhecer as configurações relacionadas ao NVME.*
+*Este método funciona se você tiver um SSD e tiver inicializado o dispositivo com sucesso com eMMC. Certifique-se de que seu sistema seja o Raspberry Pi mais recente (Bookworm ou posterior) e que o firmware do seu RPi 5 esteja atualizado para 2023-12-06 (6 de dezembro) ou mais recente, caso contrário ele pode não reconhecer as configurações relacionadas a NVME.*
 
-**Passo 1**: Certifique-se de que seu sistema Raspberry Pi está atualizado (Bookworm ou posterior); insira o seguinte comando para atualizar o firmware do RPi 5:
+**Passo 1**: Certifique-se de que seu sistema Raspberry Pi esteja atualizado (Bookworm ou posterior); insira o seguinte comando para atualizar o firmware do RPi 5:
 
 ```shell
   sudo apt update && sudo apt upgrade -y
@@ -196,17 +196,17 @@ E saia da ferramenta selecionando `Finish`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_5.png" alt="pir" width="700" height="auto" /></div>
 
-Se for solicitado que reinicie, selecione `Yes`.
+Se for solicitado para reiniciar, selecione `Yes`.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_6.png" alt="pir" width="700" height="auto" /></div>
 
-**Passo 2**: Clique em **Applications** =>**Accessories** =>**SD Card Copier** na tela principal, execute o programa **SD Card Copier** e copie o OS para o SSD NVME conforme mostrado na figura abaixo.
+**Passo 2**：Clique em **Applications** =>**Accessories** =>**SD Card Copier** na tela principal, execute o programa **SD Card Copier** e copie o OS para o SSD NVME como mostrado na figura abaixo.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/copy.gif" alt="pir" width="700" height="auto" /></div>
 
-### Configurando o Raspberry Pi para inicializar a partir do SSD NVMe
+### Configurando o Raspberry Pi para inicializar a partir do SSD
 
-Se você tiver fácil acesso ao slot do cartão SD, poderá desligar o seu Pi, ejetar o cartão SD e (se tudo estiver funcionando como esperado) ele deverá inicializar automaticamente a partir da sua unidade NVMe na próxima vez que ligá-lo. No entanto, se você quiser deixar o cartão SD onde está e ainda assim inicializar a partir do NVMe, será necessário alterar a ordem de boot.
+Se você tiver fácil acesso ao slot do cartão SD, pode desligar o seu Pi, remover o cartão SD e (se tudo estiver funcionando como esperado) ele deverá inicializar automaticamente a partir do SSD na próxima vez que você ligá-lo. Se quiser deixar o cartão SD no lugar e ainda assim inicializar a partir do SSD, você precisa alterar a ordem de boot.
 
 **Passo 1**: Insira o seguinte comando:
 
@@ -229,21 +229,21 @@ A configuração será confirmada. Pressione Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="700" height="auto" /></div>
 
-**Etapa 4**: Volte para a primeira tela selecionando `Back` ou pressionando a tecla Esc. Em seguida, navegue até Finish usando a tecla de seta para a direita.
+**Passo 4**: Volte para a primeira tela selecionando `Back` ou pressionando a tecla Esc. Em seguida, navegue até Finish usando a tecla de seta para a direita.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_5.png" alt="pir" width="700" height="auto" /></div>
 
-Você será perguntado se deseja reiniciar agora. Clique em `Yes`:
+Será perguntado se você deseja reiniciar agora. Clique em `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="700" height="auto" /></div>
 
-## Gravar o Ubuntu no NVMe
+## Gravar o Ubuntu no SSD (NVMe via USB)
 
 ### Primeiro: Atualizar o EEPROM com o cartão SD
 
-Consulte este [link](https://wiki.seeedstudio.com/pt-br/r2000_series_getting_start/#update-eeprom).
+Siga [Update EEPROM](#Update-EEPROM) para atualizar o EEPROM.
 
-Para definir a ordem de boot do NVMe como a prioridade mais alta, use o seguinte comando:
+O SSD usado neste dispositivo é um SSD NVMe conectado por meio de uma ponte USB 3.0. Durante a inicialização, o firmware do Raspberry Pi o detecta como um dispositivo de armazenamento USB, portanto, a prioridade de inicialização correta é uma ordem de boot por USB em vez de uma ordem de boot apenas NVMe nativa. Para definir o SSD como o dispositivo de inicialização de maior prioridade, use o seguinte comando:
 
 ```
 sudo rpi-eeprom-config --edit
@@ -253,16 +253,16 @@ Em seguida, altere o rpi-eeprom-config como abaixo:
 
 ```
 BOOT_UART=1
-BOOT_ORDER=0xf461
+BOOT_ORDER=0xf14
 NET_INSTALL_AT_POWER_ON=1
 PCIE_PROBE=1
 ```
 
 Use `Ctrl+X` e digite `y` para salvar o resultado. E o resultado é o seguinte:
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/chang_eeprom.png" alt="pir" width="700" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/boot_from_usb.jpg" alt="pir" width="700" height="auto" /></div>
 
-### Segundo: Gravar o Ubuntu no NVMe
+### Segundo: Gravar o Ubuntu no SSD
 
 Abra o Raspberry Pi Imager:
 
@@ -273,23 +273,9 @@ Escolha o sistema Ubuntu:
 
 Por fim, clique em `Next` e aguarde a conclusão do processo de gravação.
 
-### Terceiro: Substituir o arquivo do sistema operacional
+## Suporte Técnico e Discussão de Produtos
 
-Instale `pcie-fix.dtbo` com este [link](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
-
-Copie pcie-fix.dtbo para o arquivo /overlays como abaixo:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="700" height="auto" /></div>
-
-Modifique o `config.txt`, adicione `dtoverlay=pcie-fix` ao final do arquivo como abaixo:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file2.png" alt="pir" width="700" height="auto" /></div>
-
-Em seguida, use `Ctrl+X` e digite `y` para salvar este arquivo.
-
-## Suporte Técnico & Discussão de Produtos
-
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja o mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

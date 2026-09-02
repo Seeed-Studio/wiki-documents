@@ -23,12 +23,21 @@ updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/
 ---
 
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+
 # reBot Arm B601-RS ROS2 Integration Guide
+
+<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -43,12 +52,6 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/
 <p align="center">
   <strong>ROS2 Control · SocketCAN · RViz Visualization · MoveIt 2 Support · Gravity Compensation</strong>
 </p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
-
 
 This tutorial shows how to control the reBot Arm B601-RS through the ROS2 workspace `rebotarm_ros2`. The workspace wraps the `reBotArm_control_py` Python SDK, including Pinocchio-based inverse kinematics, trajectory planning, and gravity compensation, into ROS2 topics, services, and actions. This makes it easier to use upper-level planning, RViz visualization, gravity compensation, gripper control, and custom application development.
 

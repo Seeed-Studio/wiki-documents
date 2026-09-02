@@ -4292,6 +4292,7 @@ const sidebars = {
               label: 'Memory Optimization',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/JetPack_7_2_Memory_Optimization',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/JetPack_7_2_Memory_Optimization_Deep_Dive',
               ],
             },
             {

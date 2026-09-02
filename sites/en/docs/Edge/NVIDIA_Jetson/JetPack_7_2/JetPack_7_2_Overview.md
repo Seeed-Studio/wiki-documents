@@ -120,6 +120,7 @@ JetPack 7.2 expands the Jetson developer workflow beyond manual setup by making 
 | Resource | Coverage |
 | --- | --- |
 | [JetPack 7.2 Memory Optimization](/jetpack_7_2_memory_optimization/) | Skills-based auditing, headless/no-camera BSP reclamation, SWIOTLB safety, quantization, KV-cache control, and lower-memory LLM inference. |
+| [JetPack 7.2 Memory Optimization Deep Dive](/jetpack_7_2_memory_optimization_deep_dive/) | Platform baseline vs JetPack 6.2, the LLM memory budget (weights, runtime, KV cache), the four-layer optimization path, and reproducible field observations. |
 
 ## Yocto
 
