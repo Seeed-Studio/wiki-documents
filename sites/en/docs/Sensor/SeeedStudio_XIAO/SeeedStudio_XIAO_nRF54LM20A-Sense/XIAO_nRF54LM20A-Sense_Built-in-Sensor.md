@@ -109,7 +109,14 @@ The LSM6DS3TR-C is a six-axis sensor integrating a 3-axis digital accelerometer 
                 imu_vdd: LDO1 {
                         regulator-min-microvolt = <3300000>;
                         regulator-max-microvolt = <3300000>;
-                        regulator-boot-on;
+                        /*
+                         * Do not enable LDO1 during regulator driver init: the
+                         * nPM1300 sits on gpio-i2c, which may not be ready yet.
+                         * main() enables this rail before deferred IMU init.
+                         * Use /delete-property/ so this also overrides board
+                         * revisions that define regulator-boot-on themselves.
+                         */
+                        /delete-property/ regulator-boot-on;
                 };
         };
 };
@@ -117,6 +124,7 @@ The LSM6DS3TR-C is a six-axis sensor integrating a 3-axis digital accelerometer 
 &lsm6ds3tr_c {
         zephyr,deferred-init;
 };
+
 
 
 ```
@@ -747,120 +755,89 @@ This section demonstrates the microphone function through a voice example. The s
 
 - Press the BOOT button, the RGB-G LED will stay on and start recording; press it again to stop recording (maximum 10 seconds).
 - After recording, the audio file will be sent to the host computer via Bluetooth. The RGB-G LED flashes during transmission.
-- Run the receiving script on Windows to save the audio file to the desktop.
+- Run the receiving script on Windows to save the audio file to the `./recordings` directory.
 - The RGB-G LED turns off after the transmission is completed.
 
-1. Copy the program from <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/mic-main.c" download>mic-main.c</a> into `main.c`.
+1. Copy the program from <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> into `main.c`.
 
 2. Modify the device tree file `app.overlay` to bind the BLE node.
 
 ```dts
+/*
+ * XIAO nRF54LM20A BLE recorder devicetree overlay
+ *
+ * Logging uses the board's UART20 debug bridge at 115200 baud.
+ */
 
-dmic_dev: &pdm20 {
-	status = "okay";
-};
-
-/* Disable Nordic SoftDevice Controller (not available in mainline Zephyr) */
-&bt_hci_sdc {
-	status = "disabled";
-};
-
-/* Enable Zephyr native BLE controller (LL SW Split) */
-&bt_hci_controller {
-	status = "okay";
-};
-
-&pwm20 {
-	status = "disabled";
-};
-
-&pmic_i2c {
-	sda-gpios = <&gpio1 18 GPIO_ACTIVE_HIGH>;
-	scl-gpios = <&gpio1 17 GPIO_ACTIVE_HIGH>;
-	status = "okay";
-};
-
-&pmic {
-	regulators {
-		dmic_vdd: LDO1 {
-			regulator-min-microvolt = <3300000>;
-			regulator-max-microvolt = <3300000>;
-			regulator-boot-on;
-		};
-	};
-};
-
+/* Keep the board debug UART configuration explicit and reproducible. */
 &uart20 {
-	current-speed = <921600>;
+	current-speed = <115200>;
+	status = "okay";
+};
+
+/* Enable the PDM microphone interface. */
+&pdm20 {
+	status = "okay";
+};
+
+/* Enable the external 8 MB SPI NOR flash used for PCM storage. */
+&py25q64 {
+	status = "okay";
 };
 
 / {
 	chosen {
 		zephyr,bt-hci = &bt_hci_controller;
 	};
-
-	leds {
-		compatible = "gpio-leds";
-		led2: led_2 {
-			gpios = <&gpio1 24 GPIO_ACTIVE_LOW>;
-		};
-	};
 };
 
-/* External 8MB SPI NOR Flash for audio storage */
-&py25q64 {
-	status = "okay";
+/* dmic_vdd is the board-defined nPM1300 LDO1 3.3 V supply. The application
+ * enables it at runtime. power_en is defined by the board devicetree.
+ */
+&dmic_vdd {
+	/delete-property/ regulator-boot-on;
 };
 ```
 
-2. Modify the `prj.conf` file to enable configurations for Bluetooth and microphone, and set the Bluetooth device name to **XIAO MIC**.
+2. Modify the `prj.conf` file to enable configurations for Bluetooth and microphone, and set the Bluetooth device name to **XIAO-MIC**.
 
 ```prj
-# Audio / DMIC
+# ===== Audio / DMIC =====
 CONFIG_AUDIO=y
 CONFIG_AUDIO_DMIC=y
 
-# GPIO
+# ===== GPIO =====
 CONFIG_GPIO=y
 
-# I2C / PMIC
+# I2C and PMIC support for the nPM1300 microphone supply
 CONFIG_I2C=y
 CONFIG_MFD=y
 CONFIG_REGULATOR=y
 
-# Logging
+# Logging over the board UART debug bridge
 CONFIG_LOG=y
+CONFIG_LOG_BACKEND_UART=y
 
-# UART for console logging
+# Serial and console
 CONFIG_SERIAL=y
-CONFIG_UART_ASYNC_API=y
-CONFIG_UART_20_ASYNC=y
-CONFIG_UART_21_ASYNC=y
-CONFIG_UART_NRFX_UARTE_ENHANCED_RX=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=y
 
-# BLE
+# Disable the Arm MPU for compatibility with early LM20A silicon.
+CONFIG_ARM_MPU=n
+
+# ===== BLE =====
 CONFIG_BT=y
 CONFIG_BT_PERIPHERAL=y
 CONFIG_BT_DEVICE_NAME="XIAO-MIC"
 CONFIG_BT_DEVICE_APPEARANCE=833
 CONFIG_BT_MAX_CONN=1
 CONFIG_BT_MAX_PAIRED=1
-
-# BLE log level: ERR only.  Fixed 30 ms application pacing prevents
-# buffer exhaustion; this just silences WRN/INF noise from the stack.
 CONFIG_BT_LOG_LEVEL_ERR=y
-
-# Disable auto-procedures to avoid LL Procedure Collision (reason 35)
-# on nRF54L with Zephyr native BLE controller
 CONFIG_BT_AUTO_PHY_UPDATE=n
 CONFIG_BT_GAP_AUTO_UPDATE_CONN_PARAMS=n
 CONFIG_BT_CTLR_CONN_PARAM_REQ=n
-
-# Disable data length auto-update (can also cause LL races)
 CONFIG_BT_DATA_LEN_UPDATE=n
-
-# BLE buffer tuning for high-throughput NUS notifications
-# nRF54LM20A has 1.5MB RAM, generous buffer allocation
 CONFIG_BT_BUF_ACL_TX_SIZE=251
 CONFIG_BT_BUF_ACL_TX_COUNT=32
 CONFIG_BT_BUF_EVT_RX_COUNT=33
@@ -870,27 +847,20 @@ CONFIG_BT_L2CAP_TX_BUF_COUNT=24
 CONFIG_BT_L2CAP_TX_FRAG_COUNT=12
 CONFIG_BT_ATT_TX_COUNT=24
 CONFIG_BT_CONN_TX_MAX=32
-
-# Note: BT_CTLR_DATA_LENGTH is selected indirectly (e.g. by BT_DATA_LEN_UPDATE).
-# It cannot be set directly, so BT_CTLR_DATA_LENGTH_MAX is also omitted.
-
-# BLE NUS
 CONFIG_BT_ZEPHYR_NUS=y
 CONFIG_BT_ZEPHYR_NUS_DEFAULT_INSTANCE=y
 
 # Memory
 CONFIG_HEAP_MEM_POOL_SIZE=16384
-
-# System workqueue stack (increased for BLE work items)
 CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=4096
 
-# External SPI NOR Flash (8MB PY25Q64HA)
+# External SPI NOR flash (8 MB PY25Q64HA)
 CONFIG_SPI=y
 CONFIG_SPI_NOR=y
 CONFIG_FLASH=y
 CONFIG_FLASH_PAGE_LAYOUT=y
 
-# Assert level
+# Assertions
 CONFIG_ASSERT=y
 CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
 
@@ -917,140 +887,160 @@ Copy the Python script file.
 <summary>ble_recorder_receiver.py</summary>
 
 ```py
+#!/usr/bin/env python3
 """
-BLE Audio Receiver for XIAO nRF54LM20A BLE Audio Recorder
+BLE recorder receiver for the XIAO nRF54LM20A.
 
-Connects to "XIAO-MIC" via BLE, subscribes to Nordic UART Service (NUS)
-notifications, receives WAV audio data, and saves it to a file.
+Continuously scans for "XIAO-MIC", connects, subscribes to NUS notifications,
+saves WAV data, and reconnects automatically. Each RIFF header starts a new file.
 
-Requirements: pip install bleak
+Usage:       python ble_recorder_receiver.py
+Dependency:  pip install bleak
 
-Usage: python ble_recorder_receiver.py
+Firmware operation:
+  Press BOOT once to begin recording (green LED on).
+  Press BOOT again, or wait 10 seconds, to begin transfer (green LED blinking).
+  The green LED turns off when the transfer is complete.
 """
 
 import asyncio
-import sys
 import os
+import sys
 from datetime import datetime
 
-from bleak import BleakScanner, BleakClient, BleakError
+from bleak import BleakClient, BleakError, BleakScanner
 
-# Nordic UART Service (NUS) UUIDs
-NUS_SERVICE_UUID = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
-NUS_TX_CHAR_UUID = "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"  # Notify (device -> host)
+NUS_SERVICE_UUID = "6e400001-b5a3-f393-e0a9-e50e24dcca9e"
+NUS_TX_CHAR_UUID = "6e400003-b5a3-f393-e0a9-e50e24dcca9e"  # Device-to-host notifications
 
 DEVICE_NAME = "XIAO-MIC"
 OUTPUT_DIR = "./recordings"
+SCAN_TIMEOUT = 10.0
+RECONNECT_DELAY = 2.0
+RIFF_MAGIC = b"RIFF"
+WAV_HEADER_SIZE = 44
+WAV_DATA_SIZE_OFFSET = 40
 
 
-def make_output_path():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    return os.path.join(OUTPUT_DIR, f"recording_{timestamp}.wav")
+class RecordingWriter:
+    """Write NUS notification data to WAV files, splitting on RIFF headers."""
+
+    def __init__(self):
+        self.path = None
+        self.file = None
+        self.total = 0
+        self.expected_total = None
+        self.header = bytearray()
+
+    def _open(self):
+        os.makedirs(OUTPUT_DIR, exist_ok=True)
+        stamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+        self.path = os.path.join(OUTPUT_DIR, f"recording_{stamp}.wav")
+        self.file = open(self.path, "wb")
+        self.total = 0
+        self.expected_total = None
+        self.header.clear()
+        print(f"\nNew recording -> {self.path}")
+
+    def on_notification(self, _sender, data):
+        # Finalize the current file before starting a new RIFF stream.
+        if data[:4] == RIFF_MAGIC and self.total > 0:
+            self.close()
+        if self.file is None:
+            self._open()
+        self.file.write(data)
+        self.total += len(data)
+
+        if len(self.header) < WAV_HEADER_SIZE:
+            needed = WAV_HEADER_SIZE - len(self.header)
+            self.header.extend(data[:needed])
+            if len(self.header) == WAV_HEADER_SIZE and self.header[:4] == RIFF_MAGIC:
+                data_size = int.from_bytes(
+                    self.header[WAV_DATA_SIZE_OFFSET:WAV_HEADER_SIZE],
+                    byteorder="little",
+                )
+                self.expected_total = WAV_HEADER_SIZE + data_size
+
+        sys.stdout.write(f"\rReceiving: {self.total} bytes")
+        sys.stdout.flush()
+
+        if self.expected_total is not None and self.total >= self.expected_total:
+            self.close()
+
+    def close(self):
+        if self.file:
+            self.file.flush()
+            self.file.close()
+            self.file = None
+            if self.total > 44:
+                tag = "WAV, playable"
+            elif self.total > 0:
+                tag = "incomplete (header only)"
+            else:
+                tag = "empty"
+            print(f"\nSaved: {self.path} ({self.total} bytes) [{tag}]")
+            self.total = 0
+            self.expected_total = None
+            self.header.clear()
+
+
+async def connect_and_receive(writer):
+    while True:
+        print(f"\nScanning for '{DEVICE_NAME}'...")
+        device = await BleakScanner.find_device_by_name(DEVICE_NAME,
+                                                         timeout=SCAN_TIMEOUT)
+        if device is None:
+            print(f"Not found, retrying in {RECONNECT_DELAY:.0f}s"
+                  " (check: board powered on, Bluetooth enabled)")
+            await asyncio.sleep(RECONNECT_DELAY)
+            continue
+
+        print(f"Found: {device.name} ({device.address}), connecting...")
+        disconnect_event = asyncio.Event()
+
+        def on_disconnect(_c):
+            disconnect_event.set()
+
+        try:
+            async with BleakClient(
+                device.address,
+                disconnected_callback=on_disconnect,
+                timeout=30.0,
+                services=[NUS_SERVICE_UUID],
+            ) as client:
+                print("Connected")
+                await client.start_notify(NUS_TX_CHAR_UUID,
+                                          writer.on_notification)
+                print("Subscribed to NUS, waiting for audio data...")
+                print("(Press BOOT on the board to record; press again or wait 10s to transfer)")
+                await disconnect_event.wait()
+        except BleakError as e:
+            print(f"\nBLE error: {e}")
+        except asyncio.TimeoutError:
+            print("\nConnection timed out")
+
+        writer.close()
+        print(f"Disconnected, reconnecting in {RECONNECT_DELAY:.0f}s...")
 
 
 async def main():
-    output_path = make_output_path()
-    total_bytes = 0
-    transfer_complete = asyncio.Event()
-    connected = False
-
-    def notification_handler(sender, data):
-        nonlocal total_bytes
-        with open(output_path, "ab") as f:
-            f.write(data)
-        total_bytes += len(data)
-        sys.stdout.write(f"\rReceived: {total_bytes} bytes")
-        sys.stdout.flush()
-
-    def disconnected_callback(client):
-        nonlocal connected
-        connected = False
-        print("\nDevice disconnected")
-        transfer_complete.set()
-
-    client = None
+    print(f"=== BLE receiver '{DEVICE_NAME}', Ctrl+C to quit ===\n")
+    writer = RecordingWriter()
     try:
-        # Step 1: scan with active scanning (find_device_by_name does active scan)
-        print(f"Scanning for '{DEVICE_NAME}'...")
-        device = await BleakScanner.find_device_by_name(
-            DEVICE_NAME, timeout=10.0,
-        )
-
-        if device is None:
-            print(f"Device '{DEVICE_NAME}' not found. Check:")
-            print("  1. XIAO is powered on")
-            print("  2. PC Bluetooth is enabled")
-            sys.exit(1)
-
-        print(f"Found: {device.name} ({device.address})")
-
-        # Step 2: connect with service UUID filtering
-        # By specifying the NUS service UUID, we help Windows discover only what we need
-        print("Connecting (this may take up to 30s on Windows)...")
-
-        client = BleakClient(
-            device.address,
-            disconnected_callback=disconnected_callback,
-            timeout=30.0,
-            services=[NUS_SERVICE_UUID],
-        )
-        await client.connect()
-        connected = True
-        print("Connected")
-
-        # Step 3: subscribe to notifications
-        await client.start_notify(NUS_TX_CHAR_UUID, notification_handler)
-        print("Subscribed to NUS TX notifications")
-        print(f"Saving to: {output_path}")
-        print()
-        print("Waiting for audio data... Press Ctrl+C to stop.")
-        print("On the XIAO: press BOOT button once to start recording,")
-        print("press again (or wait 10s) to stop and transfer.\n")
-
-        try:
-            await asyncio.wait_for(
-                transfer_complete.wait(),
-                timeout=600.0,
-            )
-        except asyncio.TimeoutError:
-            print("\nTimeout: no activity for 10 minutes")
-        except KeyboardInterrupt:
-            print("\nStopped by user")
-
-    except (BleakError, asyncio.TimeoutError) as e:
-        print(f"\nBLE error: {e}")
-        print()
-        print("Windows BLE workarounds:")
-        print("  1. Windows Settings > Bluetooth & devices > Devices")
-        print("     Remove 'XIAO-MIC' if listed")
-        print("  2. Toggle Bluetooth OFF then ON")
-        print("  3. Reset XIAO board (replug USB)")
-        print("  4. Reboot PC if all else fails")
-        sys.exit(1)
+        await connect_and_receive(writer)
+    except KeyboardInterrupt:
+        pass
     finally:
-        if client and connected:
-            try:
-                await client.stop_notify(NUS_TX_CHAR_UUID)
-                await client.disconnect()
-            except Exception:
-                pass
-
-    file_size = os.path.getsize(output_path) if os.path.exists(output_path) else 0
-    print(f"\n{'='*50}")
-    print(f"Saved: {output_path}")
-    print(f"File size: {file_size} bytes")
-    if file_size > 44:
-        print("Valid WAV file, ready to play")
-    elif file_size > 0:
-        print("File may be incomplete (header only)")
-    else:
-        print("No data received")
-    print(f"{'='*50}")
+        writer.close()
+        print("Stopped.")
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print("\nStopped.")
+
 ```
 
 </details>
