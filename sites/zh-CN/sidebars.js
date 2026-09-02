@@ -2258,6 +2258,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/cn_respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/cn_respeaker_clip_python_usage_stt_llm_transcribe_memory',
+                'Sensor/reSpeaker_clip/cn_respeaker_clip_chat_architecture',
               ],
             },
           ],
