@@ -8,7 +8,7 @@ keywords:
   - remote operation
   - kinematics
   - Damiao
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png
+image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /rebot_arm_b601_dm_isaacsim
 last_update:
   date: 2026-08-17
@@ -20,12 +20,26 @@ updatedAt: '2026-08-19'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_isaacsim/
 ---
 
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+
+<RebotDmDocNav />
+
+<div align="center">
+    <img width={800}
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
 ## Introduction
 
 This is a simulation project for the reBot-B601-DM robot built with NVIDIA Isaac Sim. It uses Isaac Sim's high-fidelity physics engine to accurately reproduce the robot's kinematic behavior and gripper coordination in a virtual environment, providing a clean simulation-only platform for control algorithm development, trajectory planning validation, and communication protocol testing.
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png"/>
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png" alt="reBot Arm B601-DM Isaac Sim" />
 </div>
 
 ## System Requirements

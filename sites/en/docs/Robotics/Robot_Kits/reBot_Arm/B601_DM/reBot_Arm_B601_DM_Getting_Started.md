@@ -9,7 +9,7 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 DOF
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /rebot_b601_dm_getting_started
 translation:
   skip: [zh-CN]
@@ -21,12 +21,21 @@ updatedAt: '2026-08-19'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+
 # Getting Started with reBot Arm B601-DM
+
+<RebotDmDocNav />
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" />
 </div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -40,11 +49,6 @@ url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 <p align="center">
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
 
 The content of this guide is racing towards you at the speed of light — stay tuned!
 

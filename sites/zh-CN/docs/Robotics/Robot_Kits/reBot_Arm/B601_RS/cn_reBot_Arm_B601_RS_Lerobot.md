@@ -19,12 +19,21 @@ updatedAt: '2026-08-02'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_lerobot/
 ---
 
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+
 # reBot Arm B601-RS入门Lerobot
+
+<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
 </div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="./LICENSE">
