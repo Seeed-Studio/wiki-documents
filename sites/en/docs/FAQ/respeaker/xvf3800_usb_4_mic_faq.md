@@ -2,6 +2,8 @@
 title: reSpeaker XVF3800 USB 4-Mic Array FAQ
 description: Frequently asked questions about setup, USB connectivity, firmware, audio and tuning for the reSpeaker XVF3800 USB 4-Mic Array.
 slug: /respeaker_xvf3800_faq
+date: 9/2/2026
+author: ray
 keywords:
   - reSpeaker XVF3800 FAQ
   - reSpeaker XVF3800 troubleshooting

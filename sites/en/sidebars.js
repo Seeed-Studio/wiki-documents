@@ -2215,7 +2215,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'FAQ/respeaker/index',
+            id: 'FAQ/respeaker/respeaker_faq',
           },
           items: [
             'FAQ/respeaker/xvf3800_usb_4_mic_faq',

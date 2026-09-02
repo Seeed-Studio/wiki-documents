@@ -18,6 +18,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const DOCS_DIR = path.join(REPO_ROOT, 'sites', 'en', 'docs');
 const FAQ_DIR = path.join(DOCS_DIR, 'FAQ', 'respeaker');
+const FAQ_CENTER_FILE = 'respeaker_faq.mdx';
 const INDEX_JSON = path.join(REPO_ROOT, 'src', 'data', 'respeaker_faq_index.json');
 const MANIFEST_PATH = path.join(__dirname, 'manifests', 'approved_faq_manifest.json');
 
@@ -97,7 +98,7 @@ check('frontmatter: FAQ pages have required fields', () => {
       continue;
     }
     const fm = m[1];
-    for (const field of ['title', 'description', 'slug', 'keywords']) {
+    for (const field of ['title', 'description', 'slug', 'date', 'author', 'keywords']) {
       const re = new RegExp(`^${field}:`, 'm');
       if (!re.test(fm)) problems.push(`${path.basename(file)}: missing ${field}`);
     }
@@ -119,7 +120,7 @@ check('slugs: FAQ slugs globally unique and consistent with the manifest', () =>
   }
   // Every generated FAQ page slug must be one of the manifest slugs.
   for (const file of faqFiles) {
-    if (file.endsWith('index.mdx')) {
+    if (path.basename(file) === FAQ_CENTER_FILE) {
       const slug = docSlug(file);
       if (slug !== '/respeaker_faq') problems.push(`FAQ center slug should be /respeaker_faq, got ${slug}`);
       continue;

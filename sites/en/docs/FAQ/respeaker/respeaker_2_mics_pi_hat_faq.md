@@ -2,6 +2,8 @@
 title: reSpeaker 2-Mics Pi HAT V2.0 FAQ
 description: Frequently asked questions about the V2.0 codec I2C address and hardware use for the reSpeaker 2-Mics Pi HAT V2.0.
 slug: /respeaker_2_mics_pi_hat_faq
+date: 9/2/2026
+author: ray
 keywords:
   - reSpeaker 2-Mics Pi HAT FAQ
   - reSpeaker 2-Mics Pi HAT V2.0

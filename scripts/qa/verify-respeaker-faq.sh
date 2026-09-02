@@ -135,12 +135,12 @@ else:
         problems.append("cannot locate reSpeaker Clip / FAQ / Applications categories inside reSpeaker")
     elif not (pos_clip < pos_faq < pos_apps):
         problems.append("FAQ category must sit after reSpeaker Clip and before Applications")
-    if 'FAQ/respeaker/index' not in sidebar:
-        problems.append("FAQ category link id 'FAQ/respeaker/index' missing")
+    if 'FAQ/respeaker/respeaker_faq' not in sidebar:
+        problems.append("FAQ category link id 'FAQ/respeaker/respeaker_faq' missing")
     ids = sorted(set(re.findall(r"'FAQ/respeaker/([^']+)'", sidebar)))
     for i in ids:
-        # strip 'index' -> index.mdx
-        fname = 'index.mdx' if i == 'index' else i + '.md'
+        # The FAQ Center is an MDX page; product FAQ pages are Markdown.
+        fname = 'respeaker_faq.mdx' if i == 'respeaker_faq' else i + '.md'
         fp = os.path.join(root, 'sites/en/docs/FAQ/respeaker', fname)
         if not os.path.exists(fp):
             problems.append(f"sidebar id FAQ/respeaker/{i} has no file {fname}")
@@ -293,7 +293,7 @@ mkdir -p "$REPORT_DIR"
   echo "- scripts/respeaker-faq/pipeline.mjs (dry-run/idempotency/source+wiki hash/reconcile)"
   echo "- scripts/respeaker-faq/validate-public.mjs"
   echo "- scripts/respeaker-faq/tests/ (node:test)"
-  echo "- sites/en/docs/FAQ/respeaker/index.mdx + 6 product pages"
+  echo "- sites/en/docs/FAQ/respeaker/respeaker_faq.mdx + 6 product pages"
   echo "- src/data/respeaker_faq_index.json"
   echo "- src/components/FaqExplorer/ (index.tsx, search.js, styles.module.css)"
   echo "- sites/en/sidebars.js (reSpeaker -> FAQ category)"

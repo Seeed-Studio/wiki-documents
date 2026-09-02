@@ -241,7 +241,7 @@ test('labels: six canonical product display names with exact reSpeaker casing', 
 
 test('center page: exact lowercase-r "reSpeaker FAQ Center" title/H1, no legacy casing', () => {
   const center = fs.readFileSync(
-    path.join(REPO_ROOT, 'sites', 'en', 'docs', 'FAQ', 'respeaker', 'index.mdx'),
+    path.join(REPO_ROOT, 'sites', 'en', 'docs', 'FAQ', 'respeaker', 'respeaker_faq.mdx'),
     'utf8',
   );
   // Required canonical page-presentation strings (lowercase r, uppercase S).
@@ -251,6 +251,20 @@ test('center page: exact lowercase-r "reSpeaker FAQ Center" title/H1, no legacy 
   assert.ok(center.includes('[reSpeaker Introduction](/respeaker)'), 'help-link text must be "reSpeaker Introduction"');
   // No legacy uppercase-R "ReSpeaker FAQ Center" may remain on the center page.
   assert.ok(!center.includes('ReSpeaker FAQ Center'), 'legacy "ReSpeaker FAQ Center" must not remain');
+});
+
+test('published FAQ pages include author and publication date frontmatter', () => {
+  const faqDir = path.join(REPO_ROOT, 'sites', 'en', 'docs', 'FAQ', 'respeaker');
+  const files = [
+    'respeaker_faq.mdx',
+    ...PRODUCT_ORDER.map((key) => PRODUCTS[key].file),
+  ];
+  for (const file of files) {
+    const content = fs.readFileSync(path.join(faqDir, file), 'utf8');
+    const frontmatter = content.split('---', 3)[1];
+    assert.match(frontmatter, /\ndate: 9\/2\/2026\n/, `${file}: publication date missing`);
+    assert.match(frontmatter, /\nauthor: ray\n/, `${file}: author missing`);
+  }
 });
 
 

@@ -2,6 +2,8 @@
 title: reSpeaker Clip FAQ
 description: Frequently asked questions about official documentation, live transcription prototyping and mechanical resources for the reSpeaker Clip.
 slug: /respeaker_clip_faq
+date: 9/2/2026
+author: ray
 keywords:
   - reSpeaker Clip FAQ
   - reSpeaker Clip documentation

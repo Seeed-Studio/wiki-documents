@@ -2,6 +2,8 @@
 title: reSpeaker Lite FAQ
 description: Frequently asked questions about USB audio, ESPHome and operation for the reSpeaker Lite.
 slug: /respeaker_lite_faq
+date: 9/2/2026
+author: ray
 keywords:
   - reSpeaker Lite FAQ
   - reSpeaker Lite troubleshooting
