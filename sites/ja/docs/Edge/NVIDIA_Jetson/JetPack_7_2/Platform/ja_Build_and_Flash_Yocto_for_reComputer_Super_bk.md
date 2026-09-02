@@ -1,63 +1,47 @@
 ---
-description: Seeed リポジトリから完全な CUDA 開発用 Yocto イメージをビルドし、reComputer Super にフラッシュします。
-title: reComputer Super 向け Yocto イメージのビルドとフラッシュ
+description: 対応するSeeed Studio Jetsonキャリアボード向けに、JetPack 7.2 Yoctoイメージを選択・ビルド・パッケージ化し、フラッシュします。
+title: Seeed Jetsonキャリアボード向けYoctoのビルドとフラッシュ
 keywords:
   - Yocto
   - OpenEmbedded
-  - reComputer Super
-  - Jetson Orin NX
-  - CUDA
-  - Jetson Linux
-image: https://files.seeedstudio.com/wiki/yocto/yocto-bootup.jpg
+  - Seeed Jetson carrier board
+  - Jetson Orin
+  - Jetson Thor
+  - meta-tegra
+  - Jetson Linux 39.2
+image: https://files.seeedstudio.com/wiki/jetpack-7.2/jetpack-7-2-yocto-workflow.png
 slug: /build_and_flash_yocto_for_seeed_jetson_carrier_boards
 aliases:
   - /build_and_flash_yocto_for_recomputer_super_bk
 last_update:
-  date: 2026-07-24
+  date: 2026-09-01
   author: Dayu
 createdAt: '2026-07-24'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/ja/build_and_flash_yocto_for_seeed_jetson_carrier_boards/
 ---
 
-# reComputer Super 向け Yocto イメージのビルドとフラッシュ
+# Seeed Jetsonキャリアボード向けYoctoのビルドとフラッシュ
 
-:::note JetPack 7.2 collection copy
-このコピーは、公式の OpenEmbedded/Yocto サポートが JetPack 7.2 の主要なプロダクション Linux 機能であるため含まれています。JetPack 7.2 イメージとして使用する前に、選択した Seeed Yocto ブランチ、NVIDIA BSP レイヤー、および生成されたフラッシュパッケージが、意図する Jetson Linux 39.2 ターゲットと一致していることを確認してください。
+このガイドでは、[`seeed-tegra-demo-distro`](https://github.com/jjjadand/seeed-tegra-demo-distro) リポジトリで定義されているSeeed Studio Jetsonキャリアボード上で、OpenEmbedded/Yoctoイメージをビルドおよびフラッシュするための共通ワークフローを説明します。
+
+このリポジトリは、OE4T の `wrynose` ブランチと **Jetson Linux R39.2.0 / JetPack 7.2** 向けの `meta-tegra` BSP を使用します。YoctoイメージはNVIDIA Jetson Linux BSPコンポーネントを使用しますが、NVIDIA SDK Manager がインストールするUbuntuルートファイルシステムではありません。パッケージ管理、イメージ構成、デスクトップ環境、アップデート動作はYoctoメタデータによって制御されます。
+
+:::warning リポジトリの適用範囲
+この記事のコマンドとパラメータ表は、**2026年8月31日** 時点でレビューされたリポジトリ状態に基づいています。ビルドを行う前に、利用可能なマシン、モジュールSKU、ブランチ、ハードウェア検証状況が変更されている可能性があるため、必ずリポジトリのREADMEとサポートマトリクスを再確認してください。
 :::
 
-このガイドでは、**Jetson Orin NX 16GB モジュールを搭載した reComputer Super J401** 向けの Seeed Yocto イメージをビルドし、それを Jetson の NVMe ドライブにフラッシュします。
-
-この例では `seeed-image-jetson-development` を使用します。このイメージは、CUDA Toolkit と `nvcc`、CUDA/cuDNN/TensorRT/VPI/OpenCV の開発ファイル、ビルドおよびデバッグツール、NVIDIA サンプル、テストパッケージを備えたターゲット側開発環境を提供します。
+次の図は、全体のワークフローを要約したものです。最初にキャリアボードとJetsonモジュールを選択し、その後はビルドとフラッシュの全工程を通して、同じmachine、SKU、ビルドディレクトリ、イメージレシピを使い続けます。
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png" />
+  <img width={1200} src="https://files.seeedstudio.com/wiki/jetpack-7.2/jetpack-7-2-yocto-workflow.png" alt="Seeed Jetsonキャリアボード向けJetPack 7.2 Yoctoビルドおよびフラッシュワークフロー" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong></a>
-</div>
+## 始める前に
 
-:::note
-これは OpenEmbedded/Yocto システムであり、NVIDIA SDK Manager によってインストールされる Ubuntu ルートファイルシステムではありません。パッケージ管理、ファイルシステムの内容、およびデスクトップ環境は JetPack Ubuntu とは異なります。
-:::
+高速なローカルSSD、安定したネットワーク接続、`sudo` 権限を備えた物理x86_64 Linuxホストを使用してください。キャリアボードのリカバリ／デバイスポート用に、データ通信対応のUSBケーブルを用意します。フルのYocto開発ビルドでは数百GBを消費する可能性があるため、可能であれば約 **400 GB** の空きストレージを確保してください。RAMは少なくとも **16 GB**、**32 GB以上を推奨** します。
 
-## 前提条件
-
-次のものを準備します：
-
-- x86_64 Linux ホスト PC（できれば物理マシンの Ubuntu または Debian）
-- 少なくとも 16 GB の RAM（32 GB 以上を推奨）
-- 高速なローカル SSD と安定したインターネット接続
-- 対応する Jetson Orin NX または Orin Nano モジュールを搭載した reComputer Super
-- ホスト PC に直接接続された USB Type-C データケーブル
-- ホストパッケージのインストールとフラッシュ作業のための `sudo` 権限
-
-:::warning
-ホスト PC 上に **少なくとも 400 GB の空きディスク容量** を確保してください。Yocto のダウンロード、共有状態キャッシュ、一時ビルドファイル、ルートファイルシステム、および展開されたフラッシュパッケージは、数百ギガバイトを消費する可能性があります。ホストローカル SSD の使用を強く推奨します。
-:::
-
-一般的に必要となるホストパッケージをインストールします：
+Ubuntuホスト上に、一般的に必要となるビルドおよびフラッシュ用パッケージをインストールします：
 
 ```bash
 sudo apt update
@@ -69,24 +53,120 @@ sudo apt install -y \
   gdisk parted udev udisks2
 ```
 
-BitBake がホストディストリビューションが非対応であると報告した場合、ホストの検証警告を無視せず、Yocto がサポートする Linux ホストを使用してください。
+パッケージ名はホストディストリビューションによって異なる場合があります。リポジトリが使用しているブランチに対応するYocto Project Quick BuildおよびOE4Tのフラッシュ要件に従ってください。BitBakeがサポートされていないホストディストリビューションであると報告した場合は、検証を回避するのではなく、サポート対象のホストを使用してください。
 
-## このガイドで使用するモジュール SKU
+ヘルパースクリプトは、ワークフロー全体を通して次のパラメータを使用します：
 
-reComputer Super J401 は、次の P3767 モジュール SKU をサポートします：
-
-| `--module-sku` | 完全なモジュール番号 | Jetson モジュール |
+| パラメータ | 目的 | 重要なルール |
 | --- | --- | --- |
-| `0000` | `P3767-0000` | Jetson Orin NX 16GB |
-| `0001` | `P3767-0001` | Jetson Orin NX 8GB |
-| `0003` | `P3767-0003` | Jetson Orin Nano 8GB |
-| `0004` | `P3767-0004` | Jetson Orin Nano 4GB |
+| `--machine` | キャリアボード用のYocto `MACHINE` 設定を選択します。 | 物理的なキャリアボードと一致している必要があります。 |
+| `--module-sku` | 設定可能なOrinキャリアに搭載されたJetsonモジュールを選択します。これはNVIDIAモジュール番号の末尾4桁です。 | 設定可能なOrinマシンでは必須です。固定モジュールのThorマシンでは省略します。 |
+| `--build-dir` | 選択した設定、BitBakeの作業ファイル、デプロイ成果物を保存します。 | キャリアとモジュールSKUの組み合わせごとに別々のディレクトリを使用します。 |
+| `--cache-dir` | 共有ダウンロードおよびsstateキャッシュデータを保存します。 | ビルド間で1つのホストローカルキャッシュを再利用します。 |
+| `--image` | BitBakeイメージレシピを選択します。 | ビルドとフラッシュ準備の両方で同じイメージ名を使用します。 |
+| `--output-dir` | 検証済みtegraflashパッケージの展開先を選択します。 | 新規または空のホストローカルディレクトリを使用します。 |
 
-このガイドでは `0000` を使用します。キャリアボードとモジュール SKU の組み合わせごとに、必ず別々のビルドディレクトリを使用してください。
+`MACHINE` は単なる製品ラベルではなく、Yoctoのハードウェアターゲット名です。これは `layers/meta-seeed/conf/machine/` からマシン設定を選択し、SoCファミリ、キャリアDTB、モジュール構成、BPMPデータ、pinmuxおよびパッド電圧ファイル、オーバーレイ、BitBakeとtegraflashが使用するフラッシュ変数を決定します。
 
-## Seeed Yocto リポジトリをクローンする
+:::tip ハードウェアに合ったmachineを選択する
+このガイド内の `recomputer-orin-super-j401` コマンドは、あくまで具体例にすぎません。ワークスペースを準備する前に、[キャリアボード表](https://wiki.seeedstudio.com/ja/build_and_flash_yocto_for_seeed_jetson_carrier_boards/#キャリアボードと-jetson-モジュールを選択する) から、使用するキャリアとJetsonモジュールに一致する `MACHINE` とモジュールSKUを選択してください。
+:::
 
-クリーンなワークスペースを作成し、`master` ブランチをクローンします：
+ターゲットの用途に基づいてイメージを選択します：
+
+| イメージレシピ | 用途 |
+| --- | --- |
+| `demo-image-full` | グラフィックス、コンテナ、OpenCV、NVIDIAサンプルを含むOE4Tリファレンス／デモイメージ。これはヘルパースクリプトのデフォルトです。 |
+| `seeed-image-jetson-runtime` | OE4T/NVIDIAランタイムスタックに合わせたSeeedランタイムプロファイル。 |
+| `seeed-image-jetson-development` | ランタイムイメージに、ターゲット側CUDA開発パッケージ、ヘッダー、ビルド／デバッグツール、サンプル、テストを追加したもの。 |
+
+以下の例では `seeed-image-jetson-development` を使用します。
+
+## キャリアボードとJetsonモジュールを選択する
+
+このガイドでレビューしたリポジトリには、16個のSeeedマシン設定が定義されています。現在チェックアウトしているマシン一覧は、`./scripts/seeed/build.sh machines` で出力することもできます。
+
+| 製品またはキャリア構成 | `MACHINE` | サポートされるモジュール選択 |
+| --- | --- | --- |
+| reComputer Industrial J401 | `recomputer-industrial-orin-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Mini AGX Orin J501X | `recomputer-mini-agx-orin-j501x` | P3701 AGX Orin: `0004`, `0005` |
+| reComputer Orin J401 | `recomputer-orin-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Orin J40mini | `recomputer-orin-j40mini` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Robotics J401 | `recomputer-orin-robotics-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Robotics J401 GMSL | `recomputer-orin-robotics-j401-gmsl` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Super J401 | `recomputer-orin-super-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Robo AGX Orin J501X | `recomputer-robo-agx-orin-j501x` | P3701 AGX Orin: `0004`, `0005` |
+| reComputer Rugged Orin J401 | `recomputer-rugged-orin-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| reComputer Thor Carrier J601 | `recomputer-thor-carrier-j601` | 固定P3834-0008 T5000。`--module-sku` は省略します。 |
+| reComputer Thor Carrier J6014 | `recomputer-thor-carrier-j6014` | 固定P3834-0000 T4000。`--module-sku` は省略します。 |
+| reComputer Thor Carrier J6015 | `recomputer-thor-carrier-j6015` | 固定P3834-0008 T5000。`--module-sku` は省略します。 |
+| reServer AGX Orin J501X | `reserver-agx-orin-j501x` | P3701 AGX Orin: `0000`, `0001`, `0002`, `0004`, `0005` |
+| reServer AGX Orin J501X GMSL | `reserver-agx-orin-j501x-gmsl` | P3701 AGX Orin: `0000`, `0001`, `0002`, `0004`, `0005` |
+| reServer Industrial Orin J401 | `reserver-industrial-orin-j401` | P3767 Orin NX/Nano: `0000`, `0001`, `0003`, `0004` |
+| Seeed AGX Orin Kit | `seeed-agx-orin-kit` | P3701 AGX Orin: `0000`, `0001`, `0002`, `0004`, `0005` |
+
+`--module-sku` は、NVIDIAモジュール部品番号に印字されている末尾4桁です。記憶に頼って値を選ぶのではなく、必ずモジュールラベルまたはEEPROMを確認してください。
+
+| モジュールファミリ | `--module-sku` | 完全なモジュール番号 | モジュールモデルまたはリポジトリでの対応付け |
+| --- | --- | --- | --- |
+| P3767 | `0000` | `P3767-0000` | Jetson Orin NX 16GB |
+| P3767 | `0001` | `P3767-0001` | Jetson Orin NX 8GB |
+| P3767 | `0003` | `P3767-0003` | Jetson Orin Nano 8GB |
+| P3767 | `0004` | `P3767-0004` | Jetson Orin Nano 4GB |
+| P3701 | `0000` | `P3701-0000` | Jetson AGX Orin 開発キットモジュール |
+| P3701 | `0001` | `P3701-0001` | リポジトリの `0000` DTB/BPMP 対応付けを使用する互換SKU |
+| P3701 | `0002` | `P3701-0002` | リポジトリの `0000` DTB/BPMP 対応付けを使用する互換SKU |
+| P3701 | `0004` | `P3701-0004` | Jetson AGX Orin 32GB |
+| P3701 | `0005` | `P3701-0005` | Jetson AGX Orin 64GB |
+| P3834 | not selectable | `P3834-0000` | Jetson T4000。Thor の `MACHINE` によって選択されます。 |
+| P3834 | not selectable | `P3834-0008` | Jetson T5000 / AGX Thor 開発キットモジュール。Thor の `MACHINE` によって選択されます。 |
+
+:::caution ビルドサポートとハードウェア検証の違い
+このリポジトリは、記載されているすべての構成についてマシンメタデータとビルド検証を提供します。これは、すべてのキャリア、モジュールSKU、カメラオプション、周辺機器で物理検証が完了していることを意味するわけではありません。レビューされたサポートマトリクスでは、`recomputer-orin-super-j401` はフラッシュ、NVMeブート、HDMI、および基本的なUSB検証を完了しています。SKU `0004` の `reserver-agx-orin-j501x-gmsl` はフラッシュとブート検証を完了していますが、GMSLおよびより広範な周辺機器の検証は保留中です。他のマシンについては、ハードウェアステータスが更新されるまではビルド検証済みとして扱ってください。
+:::
+
+次のセクションのコマンドシーケンスでは、**Orin NX 16GBモジュールを搭載したreComputer Super J401** を具体例として使用します。上記の表から選択した値に合わせて、そのmachine、SKU、ディレクトリ名を置き換えてください。同じパラメータ化されたワークフローは、reComputer Mini J5011 などサポート表にある他のマシンにも適用できます。
+
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
+  <thead>
+    <tr>
+      <th>reComputer Super J401</th>
+      <th>reComputer Mini J5011</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img width={360} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png" alt="reComputer Super J401" />
+      </td>
+      <td>
+        <img width={360} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-100020407-recomputer-mini-j5011-with-gmsl.jpg" alt="reComputer Mini J5011" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Buy One 🖱️</font></span></strong></a>
+        </div>
+      </td>
+      <td>
+        <div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-J5011-with-GMSL-Extension-p-6876.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Buy One 🖱️</font></span></strong></a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+:::danger
+誤った `MACHINE` またはモジュール SKU を使用すると、互換性のない DTB、BPMP、pinmux、メモリ、またはフラッシュ設定ファイルが選択される可能性があります。いずれかの値を変更した後に、既存のビルドディレクトリを再利用しないでください。
+:::
+
+## ワークスペースの準備と検証
+
+Seeed リポジトリをクローンし、ビルドに使用するコミットを記録します：
 
 ```bash
 mkdir -p ~/work/jetson-yocto
@@ -99,276 +179,158 @@ git clone \
   tegra-demo-distro
 
 cd tegra-demo-distro
+git rev-parse HEAD
 ```
 
-メインリポジトリには、Seeed のメタデータとヘルパースクリプトが含まれています。`prepare-workspace.sh` は、固定された OpenEmbedded および OE4T レイヤーを Git サブモジュールとして初期化します。
-
-## `all` を使って完全な開発イメージをビルドする
-
-最初のビルドには `build.sh all` を使用することを推奨します。これはメタデータを検証し、Seeed のデバイスツリーをビルドし、ブートファイルをチェックし、完全なイメージと tegraflash アーカイブを順番にビルドします。
-
-### ビルドディレクトリを準備する
+サンプルキャリアおよびモジュール用に 1 つのワークスペースを準備します：
 
 ```bash
 ./scripts/seeed/prepare-workspace.sh \
   --machine recomputer-orin-super-j401 \
   --module-sku 0000 \
-  --build-dir build-seeed-super-j401-sku0000 \
+  --build-dir build-recomputer-orin-super-j401-sku0000 \
   --cache-dir "$HOME/.cache/yocto-seeed"
 ```
 
-共有キャッシュは、ダウンロードと sstate をビルドディレクトリの外側に保持し、後続のビルドで再利用できるようにします。
+AGX Orin キャリアの場合は、その machine とサポートされている P3701 SKU の値に置き換えてください。Thor キャリアの場合は、選択した machine ファイルによってモジュールが固定されるため、`--module-sku` を省略します。ヘルパーは高度なワークスペース管理のために `--no-activate`、`--no-submodules`、`--full-history` も受け付けます。
 
-アクティブなビルドディレクトリ、キャリアボード、およびモジュール SKU を確認します：
+ビルド前に、選択されたビルドディレクトリ、machine、およびモジュール SKU を確認します：
 
 ```bash
 ./scripts/seeed/build.sh current \
-  --build-dir build-seeed-super-j401-sku0000 \
+  --build-dir build-recomputer-orin-super-j401-sku0000 \
   --machine recomputer-orin-super-j401
 ```
 
-出力は次のようになっている必要があります：
-
-```text
-Machine:   recomputer-orin-super-j401
-Module SKU: 0000
-```
-
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/current.png" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/current.png" alt="選択されたビルドディレクトリ、machine、およびモジュール SKU を表示している Yocto ヘルパー" />
 </div>
 
-:::warning
-表示されている `MACHINE` またはモジュール SKU がハードウェアと一致しない場合は、先に進まないでください。このビルドディレクトリを別のキャリアボードやモジュール SKU に再利用しないでください。
-:::
+表示されている値が実際のハードウェアと一致しない場合は、先に進まないでください。
 
-### 完全ビルドを実行する
+## イメージとフラッシュパッケージのビルド
 
-ターゲット側開発イメージをビルドします：
+最初のビルドには `all` コマンドを使用することを推奨します。これはメタデータ検証、Seeed DTB/DTBO コンパイル、ブートファイルインストールチェック、完全なイメージビルドを順番に実行します：
 
 ```bash
 ./scripts/seeed/build.sh all \
-  --build-dir build-seeed-super-j401-sku0000 \
+  --build-dir build-recomputer-orin-super-j401-sku0000 \
   --machine recomputer-orin-super-j401 \
   --image seeed-image-jetson-development
 ```
 
-最初のビルドでは多数のコンポーネントをダウンロードしてコンパイルするため、数時間かかる場合があります。メタデータ検証、デバイスツリーコンパイル、ブートファイルチェック、またはイメージビルドが失敗すると、このコマンドは直ちに停止します。
-
-4 つのステージがすべて正常に完了すると、ターミナル出力は次のようになります：
+最初のビルドでは多くのコンポーネントをダウンロードしてコンパイルするため、数時間かかる場合があります。すべての 4 ステージが完了すると、正常終了となります：
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/build-full-complete.png" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/build-full-complete.png" alt="完了した Yocto メタデータ、デバイスツリー、ブートファイル、およびイメージビルドステージ" />
 </div>
 
-ビルドが成功した後、deploy ディレクトリは次の場所になります：
+生成されたファイルは `<build-dir>/tmp/deploy/images/<machine>/` 配下に配置されます。重要な出力は次の命名パターンに従います：
 
 ```text
-build-seeed-super-j401-sku0000/tmp/deploy/images/recomputer-orin-super-j401/
-```
-
-生成される重要なファイルには次のものが含まれます：
-
-```text
-seeed-image-jetson-development-recomputer-orin-super-j401.rootfs.ext4
-seeed-image-jetson-development-recomputer-orin-super-j401.rootfs.manifest
-seeed-image-jetson-development-recomputer-orin-super-j401.rootfs.spdx.json
-seeed-image-jetson-development-recomputer-orin-super-j401.rootfs.testdata.json
-seeed-image-jetson-development-recomputer-orin-super-j401.rootfs.tegraflash-tar.zst
+<image>-<machine>.rootfs.ext4
+<image>-<machine>.rootfs.manifest
+<image>-<machine>.rootfs.spdx.json
+<image>-<machine>.rootfs.testdata.json
+<image>-<machine>.rootfs.tegraflash-tar.zst
 ```
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/filename.png" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/filename.png" alt="生成されたルートファイルシステムと tegraflash アーカイブを含む Yocto deploy ディレクトリ" />
 </div>
 
-`.tegraflash-tar.zst` ファイルは、フラッシュに使用される自己完結型アーカイブです。
+`.tegraflash-tar.zst` アーカイブには、フラッシュ準備ヘルパーが使用するファイルが含まれています。
 
-## フラッシュディレクトリを準備する
+デバッグや部分的な再ビルドのためには、`all` を `metadata`、`dtb`、`bootfiles`、`image`、または `flash-package` に置き換えてください。同じ `--build-dir`、`--machine`、`--image` の値を維持します。オプションの x86_64 クロス開発 SDK をビルドするには、次を実行します：
 
-開発イメージのフラッシュアーカイブを展開して検証します：
+```bash
+./scripts/seeed/build.sh sdk \
+  --build-dir build-recomputer-orin-super-j401-sku0000 \
+  --machine recomputer-orin-super-j401 \
+  --image seeed-image-jetson-development
+```
+
+SDK インストーラは `<build-dir>/tmp/deploy/sdk/` 配下に書き込まれます。ターゲットイメージのビルドやフラッシュには必須ではなく、Jetson 上で直接コンパイルする場合は不要です。
+
+## ターゲットの準備とフラッシュ
+
+ビルドに使用したものと同じビルドディレクトリ、machine、image の値を使って、フラッシュアーカイブを展開し検証します：
 
 ```bash
 ./scripts/seeed/prepare-flash.sh \
-  --build-dir build-seeed-super-j401-sku0000 \
+  --build-dir build-recomputer-orin-super-j401-sku0000 \
   --machine recomputer-orin-super-j401 \
   --image seeed-image-jetson-development \
   --output-dir "$HOME/seeed-flash-recomputer-orin-super-j401-sku0000"
 ```
 
-ヘルパーはモジュール SKU を検証し、rootfs イメージ、DTB、BPMP DTB、pinmux、パッド電圧設定、およびフラッシュスクリプトが存在することを確認します。その後、準備されたディレクトリと、次に実行すべき正確なコマンドを表示します。
+ヘルパーは rootfs、`initrd-flash`、フラッシュ変数、DTB/BPMP DTB、pinmux、pad-voltage、およびその他の選択されたブートファイルをチェックします。設定可能なキャリアの場合、フラッシュアーカイブ内のモジュール SKU が準備したワークスペースと一致していることも検証します。ヘルパー自体は `sudo` を実行せず、ターゲットをフラッシュしません。
 
-:::tip
-ホストのローカル SSD 上の新規または空の出力ディレクトリを使用してください。フラッシュパッケージを Jetson ターゲットドライブ上に展開しないでください。
-:::
-
-## reComputer Super を強制リカバリモードにする
-
-1. reComputer Super の電源を切ります。
-2. reComputer Super のリカバリスイッチを **RESET** 位置に設定します。
-3. 電源を接続します。
-4. USB Type-C デバイス/デバッグポートを、データ通信対応ケーブルで Linux ホストに接続します。
-5. ホスト PC 上で、リカバリモードを確認します：
+対象の Seeed キャリアボード固有のドキュメントに記載されたリカバリボタンまたはリカバリスイッチの手順を使用して、ターゲットを Force Recovery Mode にします。キャリアの USB デバイス/デバッグポートをデータ通信対応ケーブルで Linux ホストに直接接続し、NVIDIA APX デバイスが表示されることを確認します：
 
 ```bash
 lsusb -d 0955:
 ```
 
-このガイドで使用する Orin NX 16GB モジュールの場合、出力には次のようなデバイスが含まれている必要があります：
+USB プロダクト ID は Jetson モジュールによって異なります。NVIDIA リカバリデバイスが表示されるまで、フラッシュを開始しないでください。
 
-```text
-0955:7323 NVIDIA Corp. APX
-```
-
-その他の対応 Super モジュールでは、異なる USB プロダクト ID が使用されます：
-
-| モジュール | リカバリ USB ID |
-| --- | --- |
-| Orin NX 16GB | `0955:7323` |
-| Orin NX 8GB | `0955:7423` |
-| Orin Nano 8GB | `0955:7523` |
-| Orin Nano 4GB | `0955:7623` |
-
-NVIDIA APX デバイスが表示されるまで、フラッシュを開始しないでください。
-
-## Yocto イメージをフラッシュする
-
-準備したディレクトリから生成済みフラッシャーを実行します：
+準備した出力ディレクトリから生成されたフラッシャーを実行します：
 
 ```bash
 cd "$HOME/seeed-flash-recomputer-orin-super-j401-sku0000"
 sudo ./initrd-flash
 ```
 
-このスクリプトは、一時的な initrd フラッシャーを USB 経由で起動し、ターゲットの NVMe ドライブをホストに公開し、パーティションを書き込み、最終的なデバイスステータスを取得します。実行中は USB や電源を切断しないでください。
+このスクリプトは一時的な initrd を USB 経由で起動し、ターゲットのストレージデバイスをホストに公開し、パーティションレイアウトとルートファイルシステムを書き込み、最終ステータスを報告します。フラッシュ中は電源や USB を切断しないでください。
 
-フラッシュが成功すると、次のような出力で終了します：
+:::warning
+一時的なホストのブロックデバイス名は動的に割り当てられます。常に `/dev/sdb` や `/dev/sdc` であると決めつけないでください。また、ワークフローをホストドライブに手動でリダイレクトしないでください。
+:::
 
-```text
-[OK: /dev/sdX]
-Final status: SUCCESS
-Successfully finished
-```
+## 初回起動と検証
 
-一時的なホスト側ブロックデバイス名は動的に割り当てられます。常に `/dev/sdb` や `/dev/sdc` になると想定しないでください。
+フラッシュが正常に完了したら、リカバリ用 USB ケーブルを取り外し、必要に応じてキャリアのリカバリ制御を通常の状態に戻し、ターゲットの電源を入れ直して、ディスプレイと周辺機器を接続します。
 
-## 初回起動
-
-フラッシュコマンドが正常に完了したら：
-
-1. USB データケーブルを取り外します。
-2. リカバリスイッチを **RESET** から通常の位置に戻します。
-3. 数秒間デバイスの電源を切ります。
-4. HDMI ディスプレイを接続し、reComputer Super の電源を再度入れます。
-
-Yocto デスクトップは、フラッシュされた NVMe ドライブから起動するはずです：
+選択したターゲットストレージから Yocto デスクトップが起動するはずです：
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/yocto-bootup.jpg" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/yocto-bootup.jpg" alt="Seeed Jetson デバイス上で動作する Yocto デスクトップ" />
 </div>
 
-開発イメージでは、初期状態では空のパスワードで `root` としてローカルログインできます。すぐにパスワードを設定してください：
+デフォルトの `tegrademo` 構成では、初期 root パスワードが空で、開発用に root ログインが有効になっています。すぐにパスワードを設定してください：
 
 ```bash
 passwd
 ```
 
-ターゲット側開発環境を確認します：
+開発用イメージでは、必要なターゲット側ツールとライブラリを確認し、そのうえでアプリケーションが使用するキャリア固有インターフェースをテストします：
 
 ```bash
 nvcc --version
 gcc --version
 cmake --version
-
-test -f /usr/local/cuda-13.2/include/cuda.h
-test -f /usr/include/cudnn.h
-test -f /usr/include/NvInfer.h
-test -f /opt/nvidia/vpi4/include/vpi/VPI.h
 pkg-config --modversion opencv4
 ```
 
-## 詳細なパラメータ付きビルドコマンド
-
-前のセクションでは、最初のビルドに推奨される `all` を使用しました。デバッグや特定ステージの再ビルドには、同じワークフローを明示的に実行します：
-
-```bash
-# 1. Validate metadata and print the selected BSP variables
-./scripts/seeed/build.sh metadata \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-
-# 2. Build the Seeed DTB and DTBO files
-./scripts/seeed/build.sh dtb \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-
-# 3. Install and verify the custom BCT, pinmux, and boot files
-./scripts/seeed/build.sh bootfiles \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-
-# 4. Build the complete root filesystem and tegraflash archive
-./scripts/seeed/build.sh image \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-```
-
-ルートファイルシステムがすでにビルド済みで、`tegraflash` アーカイブだけを再生成する必要がある場合は、次を使用します：
-
-```bash
-./scripts/seeed/build.sh flash-package \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-```
-
-## オプション：x86_64 クロス開発 SDK をビルドする
-
-フラッシュ済みの開発イメージは、すでに Jetson 上での直接コンパイルをサポートしています。x86_64 PC からターゲット向けにアプリケーションをクロスコンパイルする必要がある場合にのみ、ホスト SDK をビルドしてください：
-
-```bash
-./scripts/seeed/build.sh sdk \
-  --build-dir build-seeed-super-j401-sku0000 \
-  --machine recomputer-orin-super-j401 \
-  --image seeed-image-jetson-development
-```
-
-生成された SDK インストーラは次の場所に配置されます：
-
-```text
-build-seeed-super-j401-sku0000/tmp/deploy/sdk/
-```
-
-このオプションのインストーラは、Jetson イメージのビルドやデバイスのフラッシュには必須ではありません。
+イメージのビルドや起動が成功しても、すべてのカメラ、GMSL リンク、表示モード、USB ポート、ネットワークインターフェース、または拡張コネクタが検証されるわけではありません。展開前に、製品固有の周辺機器テストを完了してください。
 
 ## トラブルシューティング
 
-### ビルドディレクトリが誤ったマシンまたは SKU を示している
+**ビルドディレクトリが誤った machine または SKU を報告する：** `prepare-workspace.sh` を使用して新しいビルドディレクトリを作成してください。キャリアボードやモジュール SKU を切り替えるために、既存のワークスペースを編集したり再利用したりしないでください。
 
-`prepare-workspace.sh` を使って新しいビルドディレクトリを作成してください。キャリアボードやモジュール SKU を切り替えるために、既存のビルドディレクトリを編集しないでください。
+**フラッシュアーカイブが見つからない：** `build.sh` と `prepare-flash.sh` に同じ `--image` 値を渡してください。両方のヘルパーのデフォルトは `demo-image-full` であるため、`seeed-image-jetson-development` をビルドした場合は、フラッシュ準備時にその名前を明示的に使用する必要があります。
 
-### フラッシュアーカイブが見つからない
+**メタデータはパースできるがハードウェアが起動しない：** リポジトリのサポートマトリクスを確認してください。メタデータおよび DTB ビルド検証は、すべての machine とモジュールの組み合わせにおいて、実際のフラッシュ、ストレージブート、ディスプレイ、カメラ、GMSL、または周辺機器の動作を保証するものではありません。
 
-ビルドとフラッシュ準備の両方に、同じイメージ名が渡されていることを確認してください：
-
-```text
-seeed-image-jetson-development
-```
-
-`prepare-flash.sh` のデフォルトは `demo-image-full` であるため、`--image seeed-image-jetson-development` を省略すると、誤ったアーカイブを探すことになります。
-
-### フラッシュ処理が `Waiting for USB storage device flashpkg` で止まる
-
-この時点では、ホストは Jetson の initrd が一時的な USB マスストレージデバイスを公開するのを待っています。USB ケーブルを確認し、マザーボード上の USB ポートを使用し、不要な USB ストレージデバイスを取り外し、`lsusb` で Jetson が引き続き認識されていることを確認してください。
+**フラッシュが `Waiting for USB storage device flashpkg` で停止する：** この段階では、ホストは Jetson initrd が一時的な USB マスストレージデバイスとして認識されるのを待っており、rootfs パーティションの書き込みはまだ開始されていません。データケーブル、ホスト USB への直接接続、リカバリモードの状態、コンパイル済みデバイスツリーの USB デバイスモードパスを確認してください。連続するドットを、ストレージ書き込みが遅いだけの正常な状態とみなさないでください。
 
 ## 参考資料
 
 - [Seeed tegra-demo-distro リポジトリ](https://github.com/jjjadand/seeed-tegra-demo-distro)
+- [Seeed キャリアボードサポートマトリクス](https://github.com/jjjadand/seeed-tegra-demo-distro/blob/master/layers/meta-seeed/docs/board-support-status.md)
 - [Yocto Project クイックビルド](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)
 - [OE4T meta-tegra ドキュメント](https://oe4t.github.io/)
+- [OE4T フラッシュの基本](https://oe4t.github.io/wrynose/Flashing.html)
 
 Seeed Studio の製品をお選びいただきありがとうございます。技術サポートや製品に関するディスカッションには、以下のチャネルをご利用ください：
 

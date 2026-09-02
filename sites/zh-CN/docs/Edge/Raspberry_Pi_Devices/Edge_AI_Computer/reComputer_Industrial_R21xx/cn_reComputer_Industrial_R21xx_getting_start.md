@@ -933,6 +933,10 @@ reComputer Industrial R2000 具有来自 CM5 的 2 路原生 HDMI 接口，支�
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.16_rtc_1.png" style={{width:200, height:'auto'}}/></div>
 reComputer Industrial R2000 配备由电容供电的 RTC 电路，即使在断电情况下也能保持计时功能。
 
+:::note
+使用 RTC 时，如果设备突然断电，需要等待 RTC 完全放电后再重新接通电源并重启。若未完全放电，设备可能无法满足重启条件，从而无法正常启动。
+:::
+
 ### 看门狗
 
 reComputer Industrial R2000 内置独立硬件看门狗电路，可在系统异常崩溃时自动重启系统。看门狗电路通过 RTC 实现，喂狗时间可灵活设置在 1 到 255 秒之间。
