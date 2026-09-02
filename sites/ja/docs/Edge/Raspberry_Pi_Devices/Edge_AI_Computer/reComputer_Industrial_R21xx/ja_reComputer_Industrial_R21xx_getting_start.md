@@ -933,6 +933,10 @@ reComputer Industrial R2000 は CM5 からのネイティブ HDMI インター�
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.16_rtc_1.png" style={{width:200, height:'auto'}}/></div>
 reComputer Industrial R2000 にはコンデンサで駆動される RTC 回路が搭載されており、電源喪失時でも時刻保持機能を維持できます。
 
+:::note
+RTC を使用している場合、デバイスが突然電源を失ったときは、RTC が完全に放電するまで待ってから電源を再接続して再起動してください。完全に放電していないと、デバイスが再起動条件を満たせず、正常に起動できない場合があります。
+:::
+
 ### ウォッチドッグ
 
 reComputer Industrial R2000 には独立したハードウェアウォッチドッグ回路が搭載されており、システムが異常クラッシュした場合に自動的にシステムを再起動します。ウォッチドッグ回路は RTC によって実装されており、1～255 秒の柔軟な給電時間（ウォッチドッグの餌やり時間）を設定できます。

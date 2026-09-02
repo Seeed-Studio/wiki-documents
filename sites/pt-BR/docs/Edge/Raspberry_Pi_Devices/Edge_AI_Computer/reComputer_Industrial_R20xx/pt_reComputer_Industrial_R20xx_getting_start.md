@@ -906,6 +906,10 @@ O reComputer Industrial R2000 possui 2x interfaces HDMI nativas do CM5, suportan
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.16_rtc_1.png" style={{width:200, height:'auto'}}/></div>
 O reComputer Industrial R2000 possui um circuito RTC alimentado por capacitor, permitindo que ele mantenha a funcionalidade de contagem de tempo mesmo em caso de perda de energia.
 
+:::note
+Ao usar o RTC, se o dispositivo perder energia de forma súbita, é necessário esperar até que o RTC esteja completamente descarregado antes de reconectar a alimentação e reiniciar. Se não estiver completamente descarregado, o dispositivo pode não atender à condição de reinício e pode não iniciar corretamente.
+:::
+
 ### Watchdog
 
 O reComputer Industrial R2000 vem equipado com um circuito watchdog de hardware independente que garante a reinicialização automática do sistema em caso de travamentos anormais. O circuito watchdog é implementado por meio do RTC e permite tempos de alimentação flexíveis de 1 a 255 segundos.

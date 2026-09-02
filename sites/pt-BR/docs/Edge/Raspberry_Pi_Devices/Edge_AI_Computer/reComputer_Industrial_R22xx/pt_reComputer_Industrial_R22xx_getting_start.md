@@ -895,6 +895,9 @@ O reComputer Industrial R2200 possui 2 interfaces HDMI nativas do CM5, suportand
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.16-1.png" style={{width:200, height:'auto'}}/></div>
 O reComputer Industrial R2200 possui um circuito RTC alimentado por capacitor, permitindo manter a funcionalidade de contagem de tempo mesmo em caso de perda de energia.
 
+:::note
+Ao usar o RTC, se o dispositivo perder energia de forma súbita, é necessário esperar até que o RTC esteja completamente descarregado antes de reconectar a alimentação e reiniciar. Se não estiver completamente descarregado, o dispositivo pode não atender à condição de reinício e pode não iniciar corretamente.
+:::
 
 ### Watchdog
 
