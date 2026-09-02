@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-02 15:39:33 (北京时间)
-// 多语言页面: 2460 个
+// 生成时间: 2026-09-02 16:46:34 (北京时间)
+// 多语言页面: 2461 个
 
 (function() {
   'use strict';
@@ -11759,6 +11759,13 @@
     "pt"
   ],
   "/respeaker_clip_basic_sdk_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_ai_chat_system_architecture": [
     "cn",
     "en",
     "es",
