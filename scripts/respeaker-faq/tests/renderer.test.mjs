@@ -8,6 +8,7 @@ import {
   DOMAINS,
   PRODUCT_ORDER,
   PRODUCTS,
+  PRODUCT_LABELS,
   loadManifest,
   validateManifest,
   renderProductPage,
@@ -186,6 +187,126 @@ test('classifyTarget: up-to-date / create-needed / update-needed / conflict rule
     status: 'conflict',
     reason: 'manual edit detected after last publish',
   });
+});
+
+
+const CANONICAL_LABELS = {
+  xvf3800_usb_4_mic: 'reSpeaker XVF3800 USB 4-Mic Array',
+  flex_xvf3800: 'reSpeaker Flex',
+  respeaker_lite: 'reSpeaker Lite',
+  xvf3000: 'reSpeaker XVF3000',
+  respeaker_2_mics_pi_hat: 'reSpeaker 2-Mics Pi HAT V2.0',
+  respeaker_clip: 'reSpeaker Clip',
+};
+
+test('labels: six canonical product display names with exact reSpeaker casing', () => {
+  const manifest = loadManifest();
+  for (const key of PRODUCT_ORDER) {
+    const canonical = CANONICAL_LABELS[key];
+    assert.ok(canonical.startsWith('reSpeaker '), `${key}: must start with lowercase-r reSpeaker`);
+    assert.strictEqual(PRODUCT_LABELS[key], canonical, `${key} PRODUCT_LABELS (FAQ filter option)`);
+    assert.strictEqual(PRODUCTS[key].label, canonical, `${key} PRODUCTS.label (search tag / intro)`);
+    assert.strictEqual(PRODUCTS[key].title, `${canonical} FAQ`, `${key} PRODUCTS.title`);
+  }
+  const index = renderSearchIndex(manifest);
+  assert.deepStrictEqual(
+    index.products.map((p) => p.label),
+    PRODUCT_ORDER.map((k) => CANONICAL_LABELS[k]),
+    'search index product filter labels must be the canonical full names',
+  );
+  for (const item of index.items) {
+    assert.strictEqual(item.productLabel, CANONICAL_LABELS[item.product], `${item.id} productLabel`);
+    assert.match(item.productLabel, /^reSpeaker /, `${item.id} productLabel casing`);
+  }
+  // Rendered pages: frontmatter title, H1 and page-introduction label all canonical.
+  for (const t of planTargets(manifest).filter((x) => x.rel.endsWith('.md'))) {
+    const key = PRODUCT_ORDER.find((k) => t.rel.includes(PRODUCTS[k].file));
+    const canonical = CANONICAL_LABELS[key];
+    assert.ok(
+      t.content.includes(`title: ${canonical} FAQ`),
+      `${t.rel}: frontmatter title must be "${canonical} FAQ"`,
+    );
+    assert.ok(t.content.includes(`# ${canonical} FAQ`), `${t.rel}: H1 must be "${canonical} FAQ"`);
+    assert.ok(
+      t.content.includes(`This page contains verified answers for the ${canonical}.`),
+      `${t.rel}: page-introduction product label must be "${canonical}"`,
+    );
+    // No legacy product display names leak into the rendered page header block.
+    const header = t.content.slice(0, t.content.indexOf('## Before you begin'));
+    for (const legacy of ['Flex XVF3800', 'ReSpeaker XVF3800 USB 4-Mic Array', 'ReSpeaker 2-Mics Pi HAT', 'ReSpeaker Lite', 'ReSpeaker Clip', 'ReSpeaker XVF3000']) {
+      assert.ok(!header.includes(legacy), `${t.rel}: legacy name "${legacy}" in header`);
+    }
+  }
+});
+
+test('center page: exact lowercase-r "reSpeaker FAQ Center" title/H1, no legacy casing', () => {
+  const center = fs.readFileSync(
+    path.join(REPO_ROOT, 'sites', 'en', 'docs', 'FAQ', 'respeaker', 'index.mdx'),
+    'utf8',
+  );
+  // Required canonical page-presentation strings (lowercase r, uppercase S).
+  assert.ok(center.includes('title: reSpeaker FAQ Center'), 'frontmatter title must be "reSpeaker FAQ Center"');
+  assert.ok(center.includes('# reSpeaker FAQ Center'), 'H1 must be "reSpeaker FAQ Center"');
+  assert.ok(center.includes('the reSpeaker family'), 'intro must say "the reSpeaker family"');
+  assert.ok(center.includes('[reSpeaker Introduction](/respeaker)'), 'help-link text must be "reSpeaker Introduction"');
+  // No legacy uppercase-R "ReSpeaker FAQ Center" may remain on the center page.
+  assert.ok(!center.includes('ReSpeaker FAQ Center'), 'legacy "ReSpeaker FAQ Center" must not remain');
+});
+
+
+test('render: every generated product page carries the FAQ question-callout wrapper and unchanged question headings/anchors', () => {
+  const manifest = loadManifest();
+  const docTargets = planTargets(manifest).filter((t) => t.rel.endsWith('.md'));
+  assert.strictEqual(docTargets.length, 6);
+  const entriesByProduct = new Map();
+  for (const e of manifest.entries) {
+    if (!entriesByProduct.has(e.productKey)) entriesByProduct.set(e.productKey, []);
+    entriesByProduct.get(e.productKey).push(e);
+  }
+  for (const t of docTargets) {
+    const key = PRODUCT_ORDER.find((k) => t.rel.includes(PRODUCTS[k].file));
+    const entries = entriesByProduct.get(key);
+    assert.ok(entries.length >= 1, `${t.rel}: no manifest entries`);
+
+    // Stable FAQ-specific wrapper emitted by renderProductPage, opened before
+    // the first question heading and closed after the last one.
+    const open = t.content.indexOf('<div class="respeaker-faq-page">');
+    const close = t.content.indexOf('</div>');
+    const firstQuestion = t.content.indexOf('### ');
+    assert.ok(open !== -1, `${t.rel}: missing FAQ page wrapper open tag`);
+    assert.ok(close !== -1 && close > open, `${t.rel}: missing FAQ page wrapper close tag`);
+    assert.ok(open < firstQuestion, `${t.rel}: wrapper must open before the first question heading`);
+    assert.ok(close > firstQuestion, `${t.rel}: wrapper must close after the question headings`);
+    assert.ok(open < t.content.indexOf('## '), `${t.rel}: wrapper must open before the first h2 section`);
+    assert.match(t.content, /## Tech Support & Product Discussion/, `${t.rel}: missing support section`);
+    assert.match(t.content, /class="button_forum"/, `${t.rel}: missing forum support link`);
+    assert.match(t.content, /class="button_discussion"/, `${t.rel}: missing discussion support link`);
+
+    // The exact `### question {#anchor}` markdown lines stay byte-for-byte
+    // identical to the manifest (ids/anchors/ToC contract unchanged).
+    const headingLines = [...t.content.matchAll(/^### .*\{#[a-z0-9-]+\}$/gm)].map((m) => m[0]);
+    const expected = entries.map((e) => `### ${e.questionEn} {#${e.wikiAnchor}}`);
+    // Questions are rendered grouped by domain section (PRD order), so compare
+    // the exact heading lines order-insensitively: every manifest question
+    // heading + anchor must appear verbatim, and nothing else may.
+    assert.deepStrictEqual(
+      [...headingLines].sort(),
+      [...expected].sort(),
+      `${t.rel}: question heading/anchor lines must match the manifest exactly`,
+    );
+  }
+});
+
+test('css: FAQ question-callout contract stays scoped, lime and responsive', () => {
+  const css = fs.readFileSync(path.join(REPO_ROOT, 'src', 'css', 'custom.css'), 'utf8');
+  // Selectors must be scoped through the FAQ page class (never a global h3).
+  assert.match(css, /\.respeaker-faq-page\s+h3\s*\{/, 'scoped FAQ question selector required');
+  assert.doesNotMatch(css, /\.respeaker-faq-page\s+h3::before/, 'FAQ question icon must not be rendered');
+  // Bright lime rail/text color and responsive clamp() scale.
+  assert.match(css, /#b6f30d/, 'bright lime #b6f30d required');
+  assert.match(css, /clamp\(/, 'clamp() question-callout scale required');
+  // Narrow-viewport fallback down to 320px.
+  assert.match(css, /@media \(max-width: 480px\)/, 'narrow-viewport responsive block required');
 });
 
 test('manifest and generated sources stay in sync (no drift after apply)', () => {

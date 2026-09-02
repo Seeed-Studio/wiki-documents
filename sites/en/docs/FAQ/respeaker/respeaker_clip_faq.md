@@ -1,17 +1,19 @@
 ---
-title: ReSpeaker Clip FAQ
-description: Frequently asked questions about official documentation, live transcription prototyping and mechanical resources for the ReSpeaker Clip.
+title: reSpeaker Clip FAQ
+description: Frequently asked questions about official documentation, live transcription prototyping and mechanical resources for the reSpeaker Clip.
 slug: /respeaker_clip_faq
 keywords:
-  - ReSpeaker Clip FAQ
-  - ReSpeaker Clip documentation
+  - reSpeaker Clip FAQ
+  - reSpeaker Clip documentation
   - live transcription
   - mechanical drawing
 ---
 
-# ReSpeaker Clip FAQ
+<div class="respeaker-faq-page">
 
-This page contains verified answers for the ReSpeaker Clip. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
+# reSpeaker Clip FAQ
+
+This page contains verified answers for the reSpeaker Clip. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
 
 ## Before you begin
 
@@ -115,3 +117,20 @@ A revision-labeled mechanical drawing is not currently published. The official G
 **References:**
 
 - [ReSpeaker Clip specifications and resources](https://wiki.seeedstudio.com/respeaker_clip/)
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
+</div>

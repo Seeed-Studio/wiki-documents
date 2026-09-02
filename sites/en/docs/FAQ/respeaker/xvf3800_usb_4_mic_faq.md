@@ -1,16 +1,18 @@
 ---
-title: ReSpeaker XVF3800 USB 4-Mic Array FAQ
-description: Frequently asked questions about setup, USB connectivity, firmware, audio and tuning for the ReSpeaker XVF3800 USB 4-Mic Array.
+title: reSpeaker XVF3800 USB 4-Mic Array FAQ
+description: Frequently asked questions about setup, USB connectivity, firmware, audio and tuning for the reSpeaker XVF3800 USB 4-Mic Array.
 slug: /respeaker_xvf3800_faq
 keywords:
-  - ReSpeaker XVF3800 FAQ
-  - XVF3800 troubleshooting
-  - XVF3800 firmware
+  - reSpeaker XVF3800 FAQ
+  - reSpeaker XVF3800 troubleshooting
+  - reSpeaker XVF3800 firmware
 ---
 
-# ReSpeaker XVF3800 USB 4-Mic Array FAQ
+<div class="respeaker-faq-page">
 
-This page contains verified answers for the XVF3800 USB 4-Mic Array. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
+# reSpeaker XVF3800 USB 4-Mic Array FAQ
+
+This page contains verified answers for the reSpeaker XVF3800 USB 4-Mic Array. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
 
 ## Before you begin
 
@@ -439,3 +441,20 @@ Yes. The current official hardware overview describes a built-in unique device s
 
 - [XVF3800 hardware overview](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#hardware-overview)
 - [Official XVF3800 DFU guide](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/dfu_guide.md)
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
+</div>

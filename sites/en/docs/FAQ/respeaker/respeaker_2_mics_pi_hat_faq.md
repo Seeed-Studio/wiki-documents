@@ -1,17 +1,19 @@
 ---
-title: ReSpeaker 2-Mics Pi HAT V2.0 FAQ
-description: Frequently asked questions about the V2.0 codec I2C address and hardware use for the ReSpeaker 2-Mics Pi HAT.
+title: reSpeaker 2-Mics Pi HAT V2.0 FAQ
+description: Frequently asked questions about the V2.0 codec I2C address and hardware use for the reSpeaker 2-Mics Pi HAT V2.0.
 slug: /respeaker_2_mics_pi_hat_faq
 keywords:
-  - ReSpeaker 2-Mics Pi HAT FAQ
-  - 2-Mics Pi HAT V2.0
+  - reSpeaker 2-Mics Pi HAT FAQ
+  - reSpeaker 2-Mics Pi HAT V2.0
   - TLV320AIC3104
   - codec I2C address
 ---
 
-# ReSpeaker 2-Mics Pi HAT V2.0 FAQ
+<div class="respeaker-faq-page">
 
-This page contains verified answers for the ReSpeaker 2-Mics Pi HAT. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
+# reSpeaker 2-Mics Pi HAT V2.0 FAQ
+
+This page contains verified answers for the reSpeaker 2-Mics Pi HAT V2.0. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
 
 ## Before you begin
 
@@ -52,3 +54,20 @@ ReSpeaker 2-Mics Pi HAT V2.0 uses a TLV320AIC3104 codec at the 7-bit I2C address
 - [ReSpeaker 2-Mics Pi HAT V2.0 Raspberry Pi guide](https://wiki.seeedstudio.com/respeaker_2_mics_pi_hat_raspberry_v2/)
 - [Official V2.0 Raspberry Pi device-tree overlay](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/blob/master/overlays/rpi/respeaker-2mic-v2_0-overlay.dts)
 - [Official ReSpeaker 2-Mics Pi HAT V2.0 schematic](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/202004059_ReSpeaker-2-Mics-Pi-HAT-V2.0_SCH_PDF_241121.pdf)
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
+</div>

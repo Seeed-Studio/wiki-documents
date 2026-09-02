@@ -1,17 +1,19 @@
 ---
-title: ReSpeaker Lite FAQ
-description: Frequently asked questions about USB audio, ESPHome and operation for the ReSpeaker Lite.
+title: reSpeaker Lite FAQ
+description: Frequently asked questions about USB audio, ESPHome and operation for the reSpeaker Lite.
 slug: /respeaker_lite_faq
 keywords:
-  - ReSpeaker Lite FAQ
-  - ReSpeaker Lite troubleshooting
-  - ReSpeaker Lite USB audio
+  - reSpeaker Lite FAQ
+  - reSpeaker Lite troubleshooting
+  - reSpeaker Lite USB audio
   - ESPHome
 ---
 
-# ReSpeaker Lite FAQ
+<div class="respeaker-faq-page">
 
-This page contains verified answers for the ReSpeaker Lite. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
+# reSpeaker Lite FAQ
+
+This page contains verified answers for the reSpeaker Lite. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
 
 ## Before you begin
 
@@ -296,3 +298,20 @@ Do not treat direct single-cell battery input as supported. The published ReSpea
 **References:**
 
 - [ReSpeaker Lite power specification and hardware overview](https://wiki.seeedstudio.com/reSpeaker_usb_v3/)
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
+</div>

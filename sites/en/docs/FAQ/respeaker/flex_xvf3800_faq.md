@@ -1,16 +1,18 @@
 ---
-title: Flex XVF3800 FAQ
-description: Frequently asked questions about USB detection, host control and firmware for the ReSpeaker Flex XVF3800.
+title: reSpeaker Flex FAQ
+description: Frequently asked questions about USB detection, host control and firmware for the reSpeaker Flex.
 slug: /respeaker_flex_faq
 keywords:
-  - ReSpeaker Flex FAQ
-  - Flex XVF3800 troubleshooting
-  - Flex XVF3800 USB
+  - reSpeaker Flex FAQ
+  - reSpeaker Flex troubleshooting
+  - reSpeaker Flex USB
 ---
 
-# Flex XVF3800 FAQ
+<div class="respeaker-faq-page">
 
-This page contains verified answers for the Flex XVF3800. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
+# reSpeaker Flex FAQ
+
+This page contains verified answers for the reSpeaker Flex. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
 
 ## Before you begin
 
@@ -163,3 +165,20 @@ The official Flex guide documents a keyed 24-pin, 0.5 mm-pitch FPC interface and
 
 - [ReSpeaker Flex FPC specification and installation](https://wiki.seeedstudio.com/respeaker_flex_introduction/#24-fpc-cable)
 - [ReSpeaker Flex I2S link test](https://wiki.seeedstudio.com/respeaker_flex_xiao_i2s/)
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
+</div>

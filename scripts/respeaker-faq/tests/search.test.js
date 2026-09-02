@@ -15,7 +15,7 @@ const FIXTURES = [
     question: 'Why is my XVF3800 not detected over USB on Raspberry Pi 5 or Linux?',
     summary: 'Check the USB mode, cable, host detection and firmware recovery path.',
     product: 'xvf3800_usb_4_mic',
-    productLabel: 'XVF3800 USB 4-Mic Array',
+    productLabel: 'reSpeaker XVF3800 USB 4-Mic Array',
     primaryDomain: 'connectivity',
     domains: ['connectivity', 'firmware_software'],
     skus: ['114993702'],
@@ -28,7 +28,7 @@ const FIXTURES = [
     question: 'Does the XVF3800 USB 4-Mic Array support 48 kHz over USB?',
     summary: 'Use the dedicated v2.1.0 48 kHz two-channel image.',
     product: 'xvf3800_usb_4_mic',
-    productLabel: 'XVF3800 USB 4-Mic Array',
+    productLabel: 'reSpeaker XVF3800 USB 4-Mic Array',
     primaryDomain: 'product_business',
     domains: ['product_business', 'firmware_software'],
     skus: [],
@@ -41,7 +41,7 @@ const FIXTURES = [
     question: 'How do I troubleshoot an ESPHome compile failure for ReSpeaker Lite?',
     summary: 'Use the current community configuration and its min_version.',
     product: 'respeaker_lite',
-    productLabel: 'ReSpeaker Lite',
+    productLabel: 'reSpeaker Lite',
     primaryDomain: 'firmware_software',
     domains: ['firmware_software'],
     skus: [],
@@ -162,6 +162,34 @@ test('integration: real index has 29 items and every URL uses slug+anchor', () =
     assert.ok(item.productLabel);
     assert.ok(item.product);
     assert.ok(item.lastVerifiedAt);
+  }
+});
+
+const CANONICAL_LABELS = [
+  'reSpeaker XVF3800 USB 4-Mic Array',
+  'reSpeaker Flex',
+  'reSpeaker Lite',
+  'reSpeaker XVF3000',
+  'reSpeaker 2-Mics Pi HAT V2.0',
+  'reSpeaker Clip',
+];
+
+test('integration: index products and result tags use canonical full reSpeaker labels', () => {
+  assert.deepStrictEqual(
+    REAL_INDEX.products.map((p) => p.label),
+    CANONICAL_LABELS,
+    'product filter options must be the six canonical display names',
+  );
+  for (const item of REAL_INDEX.items) {
+    assert.ok(CANONICAL_LABELS.includes(item.productLabel), `${item.id}: non-canonical productLabel ${item.productLabel}`);
+    assert.match(item.productLabel, /^reSpeaker /, `${item.id}: tag must use lowercase-r reSpeaker`);
+  }
+  const filterLabels = REAL_INDEX.products.map((p) => p.label).join('|');
+  for (const legacy of ['XVF3800', 'Flex', 'Lite', 'XVF3000', 'Pi HAT', 'Clip', 'Flex XVF3800']) {
+    assert.ok(
+      !filterLabels.split('|').some((l) => l === legacy),
+      `legacy short selector label "${legacy}" must not be a product option`,
+    );
   }
 });
 

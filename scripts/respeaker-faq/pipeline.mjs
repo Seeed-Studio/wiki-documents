@@ -57,57 +57,57 @@ export const PRODUCT_ORDER = [
 export const PRODUCTS = {
   xvf3800_usb_4_mic: {
     key: 'xvf3800_usb_4_mic',
-    label: 'XVF3800 USB 4-Mic Array',
+    label: 'reSpeaker XVF3800 USB 4-Mic Array',
     file: 'xvf3800_usb_4_mic_faq.md',
-    title: 'ReSpeaker XVF3800 USB 4-Mic Array FAQ',
+    title: 'reSpeaker XVF3800 USB 4-Mic Array FAQ',
     description:
-      'Frequently asked questions about setup, USB connectivity, firmware, audio and tuning for the ReSpeaker XVF3800 USB 4-Mic Array.',
-    keywords: ['ReSpeaker XVF3800 FAQ', 'XVF3800 troubleshooting', 'XVF3800 firmware'],
+      'Frequently asked questions about setup, USB connectivity, firmware, audio and tuning for the reSpeaker XVF3800 USB 4-Mic Array.',
+    keywords: ['reSpeaker XVF3800 FAQ', 'reSpeaker XVF3800 troubleshooting', 'reSpeaker XVF3800 firmware'],
   },
   flex_xvf3800: {
     key: 'flex_xvf3800',
-    label: 'Flex XVF3800',
+    label: 'reSpeaker Flex',
     file: 'flex_xvf3800_faq.md',
-    title: 'Flex XVF3800 FAQ',
+    title: 'reSpeaker Flex FAQ',
     description:
-      'Frequently asked questions about USB detection, host control and firmware for the ReSpeaker Flex XVF3800.',
-    keywords: ['ReSpeaker Flex FAQ', 'Flex XVF3800 troubleshooting', 'Flex XVF3800 USB'],
+      'Frequently asked questions about USB detection, host control and firmware for the reSpeaker Flex.',
+    keywords: ['reSpeaker Flex FAQ', 'reSpeaker Flex troubleshooting', 'reSpeaker Flex USB'],
   },
   respeaker_lite: {
     key: 'respeaker_lite',
-    label: 'ReSpeaker Lite',
+    label: 'reSpeaker Lite',
     file: 'respeaker_lite_faq.md',
-    title: 'ReSpeaker Lite FAQ',
+    title: 'reSpeaker Lite FAQ',
     description:
-      'Frequently asked questions about USB audio, ESPHome and operation for the ReSpeaker Lite.',
-    keywords: ['ReSpeaker Lite FAQ', 'ReSpeaker Lite troubleshooting', 'ReSpeaker Lite USB audio', 'ESPHome'],
+      'Frequently asked questions about USB audio, ESPHome and operation for the reSpeaker Lite.',
+    keywords: ['reSpeaker Lite FAQ', 'reSpeaker Lite troubleshooting', 'reSpeaker Lite USB audio', 'ESPHome'],
   },
   xvf3000: {
     key: 'xvf3000',
-    label: 'XVF3000',
+    label: 'reSpeaker XVF3000',
     file: 'xvf3000_faq.md',
-    title: 'ReSpeaker XVF3000 FAQ',
+    title: 'reSpeaker XVF3000 FAQ',
     description:
-      'Frequently asked questions about DSP tuning and parameter control for the ReSpeaker Mic Array v2.0 with XVF3000.',
-    keywords: ['ReSpeaker XVF3000 FAQ', 'XVF3000 DSP tuning', 'ReSpeaker Mic Array tuning', 'tuning.py'],
+      'Frequently asked questions about DSP tuning and parameter control for the reSpeaker Mic Array v2.0 with XVF3000.',
+    keywords: ['reSpeaker XVF3000 FAQ', 'reSpeaker XVF3000 DSP tuning', 'reSpeaker Mic Array tuning', 'tuning.py'],
   },
   respeaker_2_mics_pi_hat: {
     key: 'respeaker_2_mics_pi_hat',
-    label: 'ReSpeaker 2-Mics Pi HAT',
+    label: 'reSpeaker 2-Mics Pi HAT V2.0',
     file: 'respeaker_2_mics_pi_hat_faq.md',
-    title: 'ReSpeaker 2-Mics Pi HAT V2.0 FAQ',
+    title: 'reSpeaker 2-Mics Pi HAT V2.0 FAQ',
     description:
-      'Frequently asked questions about the V2.0 codec I2C address and hardware use for the ReSpeaker 2-Mics Pi HAT.',
-    keywords: ['ReSpeaker 2-Mics Pi HAT FAQ', '2-Mics Pi HAT V2.0', 'TLV320AIC3104', 'codec I2C address'],
+      'Frequently asked questions about the V2.0 codec I2C address and hardware use for the reSpeaker 2-Mics Pi HAT V2.0.',
+    keywords: ['reSpeaker 2-Mics Pi HAT FAQ', 'reSpeaker 2-Mics Pi HAT V2.0', 'TLV320AIC3104', 'codec I2C address'],
   },
   respeaker_clip: {
     key: 'respeaker_clip',
-    label: 'ReSpeaker Clip',
+    label: 'reSpeaker Clip',
     file: 'respeaker_clip_faq.md',
-    title: 'ReSpeaker Clip FAQ',
+    title: 'reSpeaker Clip FAQ',
     description:
-      'Frequently asked questions about official documentation, live transcription prototyping and mechanical resources for the ReSpeaker Clip.',
-    keywords: ['ReSpeaker Clip FAQ', 'ReSpeaker Clip documentation', 'live transcription', 'mechanical drawing'],
+      'Frequently asked questions about official documentation, live transcription prototyping and mechanical resources for the reSpeaker Clip.',
+    keywords: ['reSpeaker Clip FAQ', 'reSpeaker Clip documentation', 'live transcription', 'mechanical drawing'],
   },
 };
 
@@ -121,14 +121,14 @@ export const DOMAIN_FILTER_ORDER = [
   'product_business',
 ];
 
-// Short display labels used by the FAQ Center product/domain filters.
+// Canonical display names used by the FAQ Center product filter (selector options).
 export const PRODUCT_LABELS = {
-  xvf3800_usb_4_mic: 'XVF3800',
-  flex_xvf3800: 'Flex',
-  respeaker_lite: 'Lite',
-  xvf3000: 'XVF3000',
-  respeaker_2_mics_pi_hat: 'Pi HAT',
-  respeaker_clip: 'Clip',
+  xvf3800_usb_4_mic: 'reSpeaker XVF3800 USB 4-Mic Array',
+  flex_xvf3800: 'reSpeaker Flex',
+  respeaker_lite: 'reSpeaker Lite',
+  xvf3000: 'reSpeaker XVF3000',
+  respeaker_2_mics_pi_hat: 'reSpeaker 2-Mics Pi HAT V2.0',
+  respeaker_clip: 'reSpeaker Clip',
 };
 
 export const DOMAIN_LABELS = {
@@ -140,6 +140,9 @@ export const DOMAIN_LABELS = {
   hardware: 'Hardware',
   product_business: 'Business',
 };
+
+export const FAQ_PAGE_CLASS = 'respeaker-faq-page';
+export const FAQ_PAGE_WRAPPER_OPEN = `<div class="${FAQ_PAGE_CLASS}">`;
 
 /* ------------------------------------------------------------------ */
 /* Manifest loading & validation                                        */
@@ -280,6 +283,8 @@ export function renderProductPage(productKey, entries) {
   for (const kw of product.keywords) lines.push(`  - ${kw}`);
   lines.push('---');
   lines.push('');
+  lines.push(FAQ_PAGE_WRAPPER_OPEN);
+  lines.push('');
   lines.push(`# ${product.title}`);
   lines.push('');
   lines.push(
@@ -301,6 +306,22 @@ export function renderProductPage(productKey, entries) {
       lines.push(renderFaqBlock(e));
     }
   }
+  lines.push('');
+  lines.push('## Tech Support & Product Discussion');
+  lines.push('');
+  lines.push('Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.');
+  lines.push('');
+  lines.push('<div class="button_tech_support_container">');
+  lines.push('<a href="https://forum.seeedstudio.com/" class="button_forum"></a>');
+  lines.push('<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>');
+  lines.push('</div>');
+  lines.push('');
+  lines.push('<div class="button_tech_support_container">');
+  lines.push('<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>');
+  lines.push('<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>');
+  lines.push('</div>');
+  lines.push('');
+  lines.push('</div>');
   const content = lines.join('\n').replace(/\n+$/, '');
   return `${content}\n`;
 }

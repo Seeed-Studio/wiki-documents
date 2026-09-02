@@ -1,17 +1,19 @@
 ---
-title: ReSpeaker XVF3000 FAQ
-description: Frequently asked questions about DSP tuning and parameter control for the ReSpeaker Mic Array v2.0 with XVF3000.
+title: reSpeaker XVF3000 FAQ
+description: Frequently asked questions about DSP tuning and parameter control for the reSpeaker Mic Array v2.0 with XVF3000.
 slug: /respeaker_xvf3000_faq
 keywords:
-  - ReSpeaker XVF3000 FAQ
-  - XVF3000 DSP tuning
-  - ReSpeaker Mic Array tuning
+  - reSpeaker XVF3000 FAQ
+  - reSpeaker XVF3000 DSP tuning
+  - reSpeaker Mic Array tuning
   - tuning.py
 ---
 
-# ReSpeaker XVF3000 FAQ
+<div class="respeaker-faq-page">
 
-This page contains verified answers for the XVF3000. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
+# reSpeaker XVF3000 FAQ
+
+This page contains verified answers for the reSpeaker XVF3000. Each answer states the product variant and firmware mode it applies to, together with the date it was last verified against current official sources.
 
 ## Before you begin
 
@@ -54,3 +56,20 @@ Use the official `usb_4_mic_array` repository's `tuning.py` tool. The current v2
 
 - [ReSpeaker Mic Array v2.0 tuning guide and parameter table](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/)
 - [Official XVF3000 USB 4-Mic Array tools repository](https://github.com/respeaker/usb_4_mic_array)
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
+</div>
