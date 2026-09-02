@@ -8,7 +8,7 @@ slug: /sensecap_t1000_e
 sku: 114993369
 sidebar_position: 2
 last_update:
-  date: 07/31/2026
+  date: 09/01/2026
   author: Advent Jiang
 createdAt: '2024-07-24'
 updatedAt: '2026-08-06'
@@ -404,23 +404,29 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 
  Press and hold the button, then connect the charging cable.
 
-### How to maintain batteries
-
- Please avoid leaving the battery at 0% for extended periods; it is recommended to recharge when the power drops below 20%, and each charging session should not exceed 12 hours.
-
 ## Troubleshooting
 
 ### Device never turns on
 
-- The device may appear to be powered off when the LED indicator and buzzer are not activated. Before performing the above steps, it is recommended to `check the following parameters`:
+- The device may appear to be powered off when the LED indicator and buzzer are not activated. Before performing the steps below, it is recommended to `check the following parameters`:
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={600} height="auto" /></p>
 
 - Use a known working USB cable to `charge the device` continuously for 1–2 hours to ensure the battery has sufficient power to wake up the system.
 
+:::note
+Lithium batteries slowly self-discharge even when powered off. A device stored unused for a long time may therefore become deeply discharged and fail to turn on or keep restarting during boot. This is common for lithium-battery devices, not a T1000-E defect.
+:::
+
+- If the device has been stored unused for a long time and cannot start, charge it continuously for up to 24 hours, then try again. The 24-hour charge is only for recovering a deeply discharged battery, not for normal charging.
+
+- If it still keeps restarting during startup, disconnect the cable and leave the device unused for about 7 days, then charge it again and try to power it on.
+
+- To avoid deep discharge, do not store the device with an empty or very low battery for a long time; recharge it when it drops below 20% and periodically during long-term storage.
+
 - If the device still does not respond after charging, `perform a hard reset` as followed: Unplug the USB cable. Press and hold the button, then plug in the USB cable while keeping the button pressed. Hold for approximately 3 seconds, then release it. This forces a system reset.
- 
- - If still no luck, try `re-install the bootloader`. Connect a USB cable to a computer. Hold the device button, then connect the device to the computer, see whether or not the a disk pop out in your PC. If so, [re-install the bootloader](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-bootloader).
+
+- If still no luck, try `re-install the bootloader`. Connect a USB cable to a computer. Hold the device button, then connect the device to the computer, see whether or not the a disk pop out in your PC. If so, [re-install the bootloader](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-bootloader).
 
 ### Device stuck in boot loop
 
@@ -429,6 +435,10 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 The device will restart repeatedly, and the serial port connects and disconnects repeatedly.
 
 **Solution:**
+
+:::note
+If the device has been unused for a long time, a deeply discharged battery may also cause repeated restarts during startup. Try the battery recovery steps in [Device never turns on](https://wiki.seeedstudio.com/sensecap_t1000_e/#device-never-turns-on) before the firmware recovery below.
+:::
 
 - Step 1: Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the charging cable twice, the green LED will be solid on.
 

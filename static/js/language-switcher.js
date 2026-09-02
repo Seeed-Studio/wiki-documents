@@ -1675,7 +1675,7 @@
     "ja",
     "pt"
   ],
-  "/build_and_flash_yocto_for_recomputer_super_bk": [
+  "/build_and_flash_yocto_for_seeed_jetson_carrier_boards": [
     "cn",
     "en",
     "es",
