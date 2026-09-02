@@ -161,7 +161,7 @@ Mini J501 也可用于机器人场景。其支持 NVIDIA Isaac ROS、Hugging Fac
     <tr>
       <th rowSpan="1">Jetpack 版本</th>
       <td colSpan="2">Jetpack 6.2.1</td>
-    </tr]
+    </tr>
     <tr>
       <th rowSpan="3">机械特性</th>
       <td>尺寸（宽 x 深 x 高）</td>

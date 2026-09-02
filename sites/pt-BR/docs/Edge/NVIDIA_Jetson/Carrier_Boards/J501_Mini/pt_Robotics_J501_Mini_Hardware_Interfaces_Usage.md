@@ -182,7 +182,7 @@ A Mini J501 também pode ser usada em cenários de robótica. Com suporte para f
     <tr>
       <th rowSpan="1">Garantia</th>
       <td colSpan="2">2 anos</td>
-    </tr]
+    </tr>
     <tr>
       <th rowSpan="1">Certificação</th>
       <td colSpan="2">RoHS, REACH, CE, FCC, UKCA, KC</td>
