@@ -1,5 +1,5 @@
 ---
-title: XIAO nRF54LM20A Sense 板载传感器的使用
+title: XIAO nRF54LM20A Sense 板载传感器使用方法
 description: ''
 keywords:
   - xiao
@@ -16,7 +16,7 @@ updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/
 ---
 
-# XIAO nRF54LM20A Sense 板载传感器的使用
+# XIAO nRF54LM20A Sense 板载传感器使用方法
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/getting_start/8.IMU_MIC.png" style={{width:400, height:'auto'}}/></div>
 
@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_onboard/
   </table>
 </div>
 
-XIAO nRF54LM20A Sense 配备了丰富的板载传感器，可支持多场景应用。它集成了用于姿态识别的 LSM6DS3TR-C 六轴传感器，以及支持 PDM 数字输出和全向拾音的 MSM261DGT006 数字 MEMS 麦克风，适用于智能语音场景。本文将介绍基于 XIAO nRF54LM20A 丰富板载外设的开发与使用方法。
+XIAO nRF54LM20A Sense 配备了丰富的板载传感器，可支持多场景应用。其集成了用于姿态识别的 LSM6DS3TR-C 六轴传感器，以及支持 PDM 数字输出和全向拾音的 MSM261DGT006 数字 MEMS 麦克风，适用于智能语音场景。本文将介绍基于 XIAO nRF54LM20A 丰富板载外设的开发与使用方法。
 
 :::tip
 
@@ -57,7 +57,7 @@ XIAO nRF54LM20A Sense 配备了丰富的板载传感器，可支持多场景应�
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO nRF54LM20A Sense</th>
-   <th>适用于 Seeed Studio XIAO 的 6x10 RGB WS2812 点阵</th>
+   <th>6x10 RGB WS2812 Matrix for Seeed Studio XIAO</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/1X1A9197.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -83,7 +83,7 @@ XIAO nRF54LM20A Sense 配备了丰富的板载传感器，可支持多场景应�
 LSM6DS3TR-C 是一款集成 3 轴数字加速度计和 3 轴数字陀螺仪的六轴传感器，属于意法半导体推出的 iNEMO 惯性测量单元（IMU）。在 XIAO nRF54LM20A Sense 上，该传感器支持中断触发数据输出，具有 ±2/±4/±8/±16 g 的加速度全量程范围和 ±125/±250/±500/±1000/±2000 dps 的角速度范围，并支持持续低功耗模式，适用于多种运动检测场景。板载芯片通过 I2C 协议与其通信以获取数据。
 :::tip
 
-- 关于 LSM6DS3TR-C 的更多信息，请访问：[LSM6DS3TR-C 产品概述](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) 和 [LSM6DS3TR-C 数据手册](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
+- 关于 LSM6DS3TR-C 的更多信息，请访问：[Product overview for LSM6DS3TR-C](https://www.st.com/en/mems-and-sensors/lsm6ds3tr-c.html) 和 [LSM6DS3TR-C Datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf)
 
 :::
 
@@ -405,7 +405,7 @@ monitor_speed = 115200
 
 ### 应用
 
-IMU 可以融合三轴加速度数据来计算俯仰、偏航和横滚姿态角，用于姿态识别。它还可以与相应的控制器配合，实现运动控制，或应用于姿态触发唤醒等低功耗场景。
+IMU 可以融合三轴加速度数据，计算俯仰、偏航和横滚姿态角，用于姿态识别。它还可以与相应的控制器配合实现运动控制，或应用于姿态触发唤醒等低功耗场景。
 
 #### 电子海洋
 
@@ -413,7 +413,7 @@ IMU 可以融合三轴加速度数据来计算俯仰、偏航和横滚姿态角�
 
 - **倾斜水位控制** — 通过左右横滚倾斜调节水位高度
 - **波浪动画** — 三层频率叠加的波面，2D 波浪传播和边缘反射效果
-- **流体惯性** — 具有动量的水面；快速倾斜会产生超调和随后的晃动回弹
+- **流体惯性** — 具有动量的水面；快速倾斜会产生过冲以及随后的晃动回弹
 - **翻转检测** — 板子翻转时显示自动镜像
 - **动态色彩** — 每一列随机渐变切换海洋色调
 
@@ -512,7 +512,7 @@ IMU 可以融合三轴加速度数据来计算俯仰、偏航和横滚姿态角�
 };
 ```
 
-3. 使能与 IMU 使用相关的配置
+3. 启用与 IMU 使用相关的配置
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -548,13 +548,13 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 
 #### IMU 唤醒
 
-在本例程中，RGB 的绿色通道在上电后点亮又熄灭，然后系统进入超低功耗睡眠模式。当板子检测到轻敲时，XIAO nRF54LM20A Sense 将通过中断被唤醒。轻敲事件会被记录并通过串口打印输出。
+在本例程中，RGB 的绿色通道在上电后会点亮然后熄灭，随后系统进入超低功耗睡眠模式。当板子检测到轻敲时，XIAO nRF54LM20A Sense 将通过中断被唤醒。轻敲事件会被记录并通过串口打印输出。
 
 下载该例程即可实现 IMU 唤醒功能。
 
 1. 下载 [imu-click-main.c](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/imu_click_main.c) 程序，并用其内容替换 main.c。
 
-2. 修改设备树文件 `app.overlay`，并添加所需的节点配置。
+2. 修改设备树文件 `app.overlay` 并添加所需的节点配置。
 
 ```dts
 /*
@@ -624,7 +624,7 @@ CONFIG_LOG_MODE_IMMEDIATE=y
 };
 ```
 
-3. 在 prj.conf 中使能相关 IMU 配置
+3. 在 prj.conf 中启用相关 IMU 配置
 
 ```prj
 CONFIG_STDOUT_CONSOLE=y
@@ -751,14 +751,14 @@ XIAO nRF54LM20A Sense 搭载 MSM261DGT006 数字 MEMS 麦克风用于语音输�
 
 ### 音频录制与 BLE 上传
 
-本节通过语音示例演示麦克风功能，具体流程如下：
+本节通过一个语音示例演示麦克风功能，具体流程如下：
 
 - 按下 BOOT 按钮，RGB-G LED 常亮并开始录音；再次按下停止录音（最长 10 秒）。
 - 录音结束后，音频文件将通过蓝牙发送到上位机。传输过程中 RGB-G LED 闪烁。
 - 在 Windows 上运行接收脚本，将音频文件保存到 `./recordings` 目录。
 - 传输完成后 RGB-G LED 熄灭。
 
-1. 将 <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> 中的程序拷贝到 `main.c` 中。
+1. 将 <a href="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/main.c" download>mic-main.c</a> 程序拷贝到 `main.c` 中。
 
 2. 修改设备树文件 `app.overlay` 以绑定 BLE 节点。
 
@@ -766,18 +766,13 @@ XIAO nRF54LM20A Sense 搭载 MSM261DGT006 数字 MEMS 麦克风用于语音输�
 /*
  * XIAO nRF54LM20A BLE recorder devicetree overlay
  *
- * Logging uses RTT over SWD (CONFIG_LOG_BACKEND_RTT in prj.conf).
- * USB CDC is disabled because the board USB-C connector is attached to the
- * debugger and MCU VBUS is unavailable. Waiting for VBUS would block boot.
+ * Logging uses the board's UART20 debug bridge at 115200 baud.
  */
 
-/* Disable USB controllers to avoid waiting for unavailable VBUS. */
-&usbhs {
-	status = "disabled";
-};
-
-&vregusb {
-	status = "disabled";
+/* Keep the board debug UART configuration explicit and reproducible. */
+&uart20 {
+	current-speed = <115200>;
+	status = "okay";
 };
 
 /* Enable the PDM microphone interface. */
@@ -819,14 +814,9 @@ CONFIG_I2C=y
 CONFIG_MFD=y
 CONFIG_REGULATOR=y
 
-# Logging over RTT via SWD
+# Logging over the board UART debug bridge
 CONFIG_LOG=y
-# Immediate logging is incompatible with the BLE software Link Layer.
-# Deferred logging flushes messages to RTT from the system workqueue.
-# USB CDC is disabled because MCU VBUS is unavailable on this board design.
-CONFIG_USE_SEGGER_RTT=y
-CONFIG_LOG_BACKEND_RTT=y
-CONFIG_LOG_BACKEND_RTT_MODE_DROP=y
+CONFIG_LOG_BACKEND_UART=y
 
 # Serial and console
 CONFIG_SERIAL=y
@@ -882,7 +872,7 @@ CONFIG_BT_CTLR_ASSERT_OPTIMIZE_FOR_SIZE=n
 
 1. 运行 Python 脚本
 
-执行前安装所需依赖库：
+在执行前安装所需依赖库：
 
 ```bash
 pip install bleak 
@@ -1073,7 +1063,7 @@ BLE UUID 已在 Python 程序中配置好，因此运行脚本后会自动连接
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_1.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- 打开串口，它会打印日志。请将波特率设置为 921600。
+- 打开串口，会打印日志。请将波特率设置为 921600。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/onboard_mic_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
