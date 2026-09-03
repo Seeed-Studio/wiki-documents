@@ -4,7 +4,7 @@ title: Introdução à EE02
 keywords:
   - E-ink
   - Placa controladora
-  - 13,3 polegadas
+  - 13.3 inch
   - ESP32
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
@@ -15,7 +15,7 @@ last_update:
   date: 8/18/2026
   author: Nemo
 createdAt: '2025-12-19'
-updatedAt: '2026-08-18'
+updatedAt: '2026-08-25'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_with_ee02/
 ---
 
@@ -46,7 +46,7 @@ url: https://wiki.seeedstudio.com/pt-br/getting_started_with_ee02/
 
 ## Introdução
 
-A **XIAO ePaper Display Board EE02** é uma placa controladora de tela ePaper de alto desempenho, projetada especificamente para displays de papel eletrônico **Spectra™ 6 de 13,3 polegadas e seis cores**. Alimentada pelo **XIAO ESP32-S3 Plus**, ela oferece conectividade Wi-Fi e Bluetooth e vem **pré-gravada com o firmware SenseCraft HMI** — permitindo um design de interface de usuário com IA, por meio de arrastar e soltar, sem necessidade de código. É uma solução ideal para aplicações de display sem fio, como painéis em tempo real, sinalização digital e painéis de controle para casas inteligentes.
+A **XIAO ePaper Display Board EE02** é uma placa controladora de tela ePaper de alto desempenho, projetada especificamente para displays de papel eletrônico **Spectra™ 6 de 13,3 polegadas e seis cores**. Alimentada pela **XIAO ESP32-S3 Plus**, ela oferece conectividade Wi-Fi e Bluetooth e vem **pré-gravada com o firmware SenseCraft HMI** — permitindo um design de interface de usuário com IA, por arrastar e soltar, sem necessidade de código. É uma solução ideal para aplicações de display sem fio, como painéis em tempo real, sinalização digital e painéis de controle para casas inteligentes.
 
 Semelhante ao seu “irmão”, o EE04 (projetado para telas menores), o EE02 oferece uma experiência perfeita para desenvolvedores que desejam integrar displays ePaper de grande formato em seus projetos de IoT. Ele simplifica o processo de acionamento e oferece suporte à plataforma SenseCraft HMI para gerenciamento fácil de conteúdo.
 
@@ -58,7 +58,7 @@ Semelhante ao seu “irmão”, o EE04 (projetado para telas menores), o EE02 of
 - **Suporte dedicado a E-Ink Spectra™ 6 de 13,3":** Projetado especificamente para displays Spectra™ 6 de 13,3", garantindo configuração rápida e operação estável.
 - **Conector BAT com chave:** Fornece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
 - **Botões fáceis de usar:** Possui 1 botão de reset e 3 botões programáveis pelo usuário, oferecendo flexibilidade para acelerar projetos e funções personalizáveis.
-- **Firmware SenseCraft HMI pré-instalado:** Basta conectar e começar a usar imediatamente o SenseCraft HMI, nossa plataforma de design de UI sem código com tecnologia de IA. Escolha entre modelos ricos ou construa a interface arrastando e soltando elementos (com assistência opcional de IA) e faça o deploy no display ePaper em apenas alguns cliques.
+- **Firmware SenseCraft HMI pré-instalado:** Basta conectar e começar imediatamente com o SenseCraft HMI, nossa plataforma de design de UI sem código, com tecnologia de IA. Escolha entre modelos ricos ou construa a interface por arrastar e soltar (com assistência opcional de IA) e faça o deploy no display ePaper em apenas alguns cliques.
 
 ### Especificações
 
@@ -79,13 +79,13 @@ Semelhante ao seu “irmão”, o EE04 (projetado para telas menores), o EE02 of
 
 ### Aplicações
 
-- **Painel em tempo real**: Exibição de informações ao vivo sobre clima, ações, trânsito ou dados de automação residencial.
-- **Alertas de segurança**: Displays de notificação de baixo consumo para status de sistemas de segurança e mensagens de alerta.
+- **Painel em tempo real**: Exibição de informações ao vivo de clima, ações, trânsito ou dados de automação residencial.
+- **Alertas de segurança**: Telas de notificação de baixo consumo para status de sistemas de segurança e mensagens de alerta.
 - **Porta-retratos digital**: Porta-retratos ePaper com atualização suave e consumo de energia ultrabaixo.
 - **Quadro de chegadas de transporte público**: Exibição de informações de chegada de ônibus/trem em estações e pontos.
 - **Sinalização digital**: Cardápios de restaurantes, placas de salas de reunião e etiquetas de preço no varejo.
 - **Casa inteligente**: Painéis de informação para clima, calendário e status de automação residencial.
-- **IHM industrial**: Displays de status de baixo consumo para máquinas e gestão de armazéns.
+- **IHM industrial**: Telas de status de baixo consumo para máquinas e gerenciamento de armazéns.
 - **Educação**: Leitores de e-book ou quadros de informação em salas de aula.
 - **Escritório**: Placas de mesa ou quadros de avisos.
 
@@ -96,7 +96,7 @@ Semelhante ao seu “irmão”, o EE04 (projetado para telas menores), o EE02 of
 - **USB Type-C**: Para alimentação e gravação de firmware.
 - **Conector FPC**: Para conectar o display E-ink de 13,3 polegadas.
 - **Botão de reset**: Para reiniciar a placa.
-- **Botões**: São “atualizar a página”, “mudar para a página anterior” e “mudar para a próxima página”.
+- **Botões**: São “atualizar a página”, “alternar para a página anterior” e “alternar para a próxima página”.
 - **Chave**: Controla o liga/desliga da alimentação por bateria.
 - **Botão Boot**: Usado para entrar no modo bootloader.
 - **LEDs indicadores**: Piscando significa que não há conexão de bateria. Luz verde acesa significa que a bateria está carregando.
@@ -120,7 +120,7 @@ Conecte cuidadosamente o cabo FPC da tela E-ink de 13,3 polegadas ao conector na
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.gif" style={{width:800, height:'auto'}}/></div>
 
-**Passo 2. Ligue o dispositivo**
+**Passo 2. Ligue a alimentação**
 Conecte a placa EE02 a uma fonte de alimentação (computador ou adaptador USB) usando um cabo USB Type-C. Ao ligar, a tela será atualizada e exibirá uma imagem de boas-vindas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/4.JPG" style={{width:300,height:'auto'}}/></div>
@@ -138,14 +138,14 @@ Use o seu celular para escanear o código QR exibido na tela (ou conectar ao hot
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
 
 **Passo 5. Obtenha o código de pareamento**
-Quando a configuração de rede for concluída com sucesso, a tela será atualizada novamente e exibirá um **código de pareamento** (ou ID do dispositivo) exclusivo. Você precisará desse código para o próximo passo.
+Quando a configuração de rede for concluída com sucesso, a tela será atualizada novamente e exibirá um **código de pareamento** (ou ID do dispositivo) exclusivo. Você precisará desse código para a próxima etapa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/7.jpg" style={{width:300,height:'auto'}}/></div>
 
 ### Vinculação à plataforma e atualização
 
 **Passo 6. Vincule o dispositivo no SenseCraft HMI**
-Acesse a [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/device). Faça login na sua conta. Vá até a seção de gerenciamento de dispositivos e selecione “Add Device”. Insira o código de pareamento exibido na sua tela E-ink para vincular o dispositivo à sua conta.
+Acesse a [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/device). Faça login na sua conta. Vá até a seção de gerenciamento de dispositivos e selecione "New Device". Insira o código de pareamento exibido na sua tela E-ink para vincular o dispositivo à sua conta.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
@@ -187,25 +187,25 @@ Baixe e instale a biblioteca Seeed GFX2 a partir do GitHub.
 </a>
 </div>
 
-Após baixar a biblioteca, vá para **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
+Após baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/15.png" style={{width:500, height:'auto'}}/></div>
 
 ### Configure e grave o programa
 
-Como mostrado na imagem, navegue até o exemplo através deste menu:
+Conforme mostrado na imagem, navegue até o exemplo através deste menu:
 File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → EE02 → 13.3-inch ePaper Displays → 13_3_inch_Spectra6_HelloWorld
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/16.png" style={{width:800, height:'auto'}}/></div>
 
-Depois disso, vá para **Tools** -> **Board** -> **XIAO ESP32S3 Plus** e **Tools** -> **Port** -> **Select the port your board is connected to**. 
+Depois disso, vá em **Tools** -> **Board** -> **XIAO ESP32S3 Plus** e **Tools** -> **Port** -> **Select the port your board is connected to**. 
 
 Observe que o PSRAM deve estar habilitado.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
 Em seguida, clique em **Upload** para enviar o código.
-Agora você verá o retorno na sua tela de epaper! A seguir está o resultado do exemplo HelloWorld.
+Agora você verá o resultado na sua tela de epaper! A seguir está o resultado do exemplo HelloWorld.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/18.png" style={{width:500, height:'auto'}}/></div>
 
 ## Solução de problemas
@@ -225,10 +225,10 @@ Agora você verá o retorno na sua tela de epaper! A seguir está o resultado do
 *   Isso pode acontecer se a tela não for atualizada por um longo tempo ou se a fonte de alimentação estiver instável. Tente atualizar a tela novamente pela plataforma HMI.
 
 **P4: Ouço um som de alta frequência durante a operação.**
-*   Isso é normal! O circuito de alimentação do ePaper pode produzir sons ocasionais de alta frequência durante a atualização. Isso não afeta o desempenho nem a vida útil do produto.
+*   Isso é normal! O circuito de alimentação do ePaper pode produzir sons de alta frequência ocasionais durante a atualização. Isso não afeta o desempenho nem a vida útil do produto.
 
 **P5: Não consigo vincular o dispositivo no SenseCraft HMI / a vinculação falha.**
-*   Verifique novamente se você digitou o código de pareamento corretamente (ele diferencia maiúsculas de minúsculas).
+*   Verifique cuidadosamente se você digitou o código de pareamento corretamente (ele diferencia maiúsculas de minúsculas).
 *   Certifique-se de que o EE02 está ligado e conectado ao Wi-Fi (verifique o status na tela).
 *   Certifique-se de que seu telefone e o EE02 estejam na mesma rede Wi-Fi de 2,4 GHz durante a configuração.
 *   Se o dispositivo aparecer como offline, pressione o botão Reset e tente parear novamente.
