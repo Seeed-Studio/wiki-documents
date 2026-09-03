@@ -1,5 +1,5 @@
 ---
-description: Guía para flashear el firmware MeshCore en el Wio Tracker L1 Pro mediante Web USB o arrastrar y soltar, junto con la configuración de la app para la región LoRa, el GPS y el envío de mensajes.
+description: Guía para flashear el firmware MeshCore en el Wio Tracker L1 Pro mediante Web USB o arrastrar y soltar, junto con la configuración de la app para la región LoRa, GPS y envío de mensajes.
 title: Primeros pasos con MeshCore en Wio Tracker L1 Pro
 keywords:
   - Meshcore
@@ -8,12 +8,15 @@ slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 3
 last_update:
-  date: 08/10/2026
-  author: zxw
+  date: 09/02/2026
+  author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-08-11'
+updatedAt: '2026-08-10'
 url: https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/1-100030144-wio-tracekr-l1-pro-meshcore.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -25,7 +28,7 @@ url: https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/
 
 <br></br>
 
-## Flasheo del firmware
+## Flasheo de firmware
 
 ### Método 1 mediante Web Flasher
 
@@ -57,7 +60,7 @@ Si ves "Flashing erase firmware:100%", el dispositivo se ha borrado correctament
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
-#### Flashear el firmware
+#### Flashear firmware
 
 Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "L1 Pro" o "TinyUSB" serial. Luego haz clic en `Flash` y elige el puerto serie.
 
@@ -65,11 +68,11 @@ Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "L1 Pro" o "TinyUSB"
 
 Si has hecho clic en `Flash` pero no hay respuesta, haz clic en `Enter DFU` de nuevo y luego haz clic en `Flash` para asegurarte de que has entrado correctamente en DFU.
 
-Cuando la barra de progreso se llene por completo, indicará que el flasheo ha finalizado. Entonces el dispositivo se reiniciará automáticamente.
+Cuando la barra de progreso esté completamente llena, indica que el flasheo ha finalizado. Entonces el dispositivo se reiniciará automáticamente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
-### Método 2 Arrastrar y soltar
+### Método 2 Arrastrar y Soltar
 
 Conecta tu dispositivo al ordenador con un cable USB. Asegúrate de que el cable admite transmisión de datos.
 
@@ -97,13 +100,13 @@ Haz doble clic en el botón RST para entrar manualmente en el modo DFU. Podrás 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco que aparece.
+Arrastra el archivo UF2 descargado al disco emergente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DragDrop.png" alt="pir" width={800} height="auto" /></p>
 
 El disco desaparecerá después de que el firmware se haya flasheado correctamente. En este punto no hay firmware en el dispositivo, por lo que el dispositivo `NO` se reiniciará automáticamente.
 
-#### Flashear el firmware
+#### Flashear firmware
 
 Elige la versión de firmware más reciente.
 
@@ -117,7 +120,7 @@ Haz doble clic en el botón RST para entrar manualmente en el modo DFU. Podrás 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco que aparece.
+Arrastra el archivo UF2 descargado al disco emergente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1FlashDragDrop.png" alt="pir" width={800} height="auto" /></p>
 
@@ -130,7 +133,7 @@ El disco desaparecerá después de que el firmware se haya flasheado correctamen
 Levanta el interruptor de encendido hacia arriba para encenderlo.
 
 :::tip
-Si el dispositivo no responde cuando pulsas el botón, cárgalo primero. No utilices un cargador de carga rápida.
+Si el dispositivo no responde cuando pulsas el botón, por favor cárgalo primero. No utilices un cargador de carga rápida.
 :::
 
 ### Obtener la APP
@@ -185,7 +188,7 @@ Luego reinicia el dispositivo, de lo contrario la configuración no surtirá efe
 
 |**Código de región**|**Descripción**|**Rango de frecuencia (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Sin establecer|N/A|N/A|N/A|
+|UNSET|Sin configurar|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_868|Unión Europea 868 MHz|869.4 - 869.65|10|27|
 
@@ -199,13 +202,13 @@ Puedes ir a `Position Settings` en la APP para activar el GPS. O puedes ir a la 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/GPSSetting.png" alt="pir" width={500} height="auto" /></p>
 
-### Configurar zumbador
+### Configurar el zumbador
 
-Haz clic en el botón User cuatro veces para controlar el encendido o apagado del zumbador.
+Haz clic en el botón de usuario cuatro veces para controlar el encendido o apagado del zumbador.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/User.png" alt="pir" width={500} height="auto" /></p>
 
-### Configurar sensor
+### Configurar el sensor
 
 El Wio Tracker L1 se envía con el firmware MeshCore `1.12` preinstalado. La compatibilidad con sensores Grove a través del conector Grove integrado se añadió en el firmware `1.13`; la versión más reciente es `1.16`.
 
@@ -213,7 +216,7 @@ El Wio Tracker L1 se envía con el firmware MeshCore `1.12` preinstalado. La com
 Los sensores Grove requieren el firmware `1.13` o posterior. Si tu dispositivo aún ejecuta la versión de fábrica `1.12`, sigue el [Método1 vía Web Flasher](#método1-vía-web-flasher) y selecciona la versión más reciente.
 :::
 
-Desde la versión `1.13` en adelante, esto permite una integración sencilla de sensores ambientales — temperatura, humedad, calidad del aire y más — a través del conector Grove integrado del L1, sin necesidad de soldadura ni hardware adicional. Conecta un sensor Grove compatible al conector y será reconocido automáticamente.
+Desde la versión `1.13` en adelante, esto permite una integración sencilla de sensores ambientales — temperatura, humedad, calidad del aire y más — a través del conector Grove integrado del L1, sin necesidad de soldar ni de hardware adicional. Conecta un sensor Grove compatible al conector y será reconocido automáticamente.
 
 ## Transmisión de mensajes
 
@@ -223,7 +226,7 @@ Si tienes dos dispositivos compatibles, y no hay muchos usuarios de MeshCore cer
 
 ### Anuncio
 
-MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, difunde esos datos por LoRa. MeshCore llama a eso un Anuncio. Hay dos formas de anunciar, "zero hop" y "flood".
+MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, se difunden esos datos por LoRa. MeshCore llama a esto un Anuncio. Hay dos formas de anunciar, "zero hop" y "flood".
 
 - **Zero hop** significa que tu anuncio se difunde a cualquiera que pueda oírlo, y eso es todo.
 - **Flooded** significa que se difunde y luego se repite por todos los repetidores que lo escuchan.
@@ -242,39 +245,229 @@ Los dos dispositivos solo establecen una conexión cuando ambos han recibido el 
 
 ## Preguntas frecuentes (FAQ)
 
-### Dispositivo bloqueado e instalación del Bootloader
+### Dispositivo bloqueado y recuperación del bootloader {#dispositivo-bloqueado-y-recuperación-del-bootloader}
 
 **Descripción:**
 
-El dispositivo no responde, no hay LED, no se puede emparejar con tu app. Si encuentras que el dispositivo está completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
+El dispositivo no responde, no hay LED, no se puede emparejar con tu aplicación. Si encuentras el dispositivo completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
+
+El bootloader se restaura a través del puerto serie USB (Serial DFU) con `adafruit-nrfutil`.
 
 :::danger note
-Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** lo desconectes durante el proceso de flasheo.
+Durante el flasheo, mantén la conexión del cable estable y **NO** lo desconectes, incluso si el número de puerto serie cambia.
 :::
 
-- Paso 1: [Haz clic aquí para descargar el Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+**Paso 1: Preparar**
 
-- Paso 2: Entra en modo DFU
+- Un dispositivo de la serie Wio Tracker L1 (L1 / L1 Pro)
+- Un cable de datos USB en buen estado (no solo de carga)
+- Un PC con Windows, macOS o Linux con Python 3 y pip
+- El paquete del bootloader: [Haz clic aquí para descargar el Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) — NO extraigas el ZIP; `adafruit-nrfutil` lo usa tal cual
 
-  Haz doble clic en el botón RST para entrar en modo DFU. Aparecerá el disco con el nombre "Tracker L1".
+**Paso 2: Instalar adafruit-nrfutil**
 
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
+<Tabs>
+<TabItem value="windows" label="Windows">
 
-- Paso 3: Pega el archivo del bootloader
+Comprueba que Python 3 y pip estén disponibles (si falta pip, ejecuta primero `python -m ensurepip --upgrade`):
 
-  Sustituye todos los archivos del disco con el archivo de bootloader descargado.
+```
+python --version
+python -m pip --version
+```
 
-- Paso 4: Flashea el firmware
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/00_python_pip_check.png" alt="Check Python and pip on Windows" width={600} height="auto" /></p>
 
-  Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#flash-firmware-1) para flashear el firmware de la aplicación. Es posible que necesites [entrar en modo DFU manualmente](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+Luego instala y verifica (la versión probada para esta guía es `0.5.3.post16`):
+
+```
+python -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/01_nrfutil_version.png" alt="adafruit-nrfutil version output on Windows" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+python3 --version
+python3 -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+Si falta pip, ejecuta primero `python3 -m ensurepip --upgrade`.
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+```
+python3 --version
+python3 -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+Si falta pip, ejecuta primero `python3 -m ensurepip --upgrade`.
+
+</TabItem>
+</Tabs>
+
+:::note
+Comprueba siempre la versión con `adafruit-nrfutil version`. NO uses `adafruit-nrfutil --version`.
+:::
+
+**Paso 3: Comprobar el puerto serie**
+
+Toma nota del puerto serie del dispositivo; los ejemplos siguientes varían según el PC:
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
+Abre **Device Manager → Ports (COM & LPT)**, por ejemplo:
+
+```
+USB Serial Device (COM43)
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/02_normal_com_port.png" alt="Wio Tracker L1 serial port in Windows Device Manager" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+ls /dev/cu.*
+```
+
+El dispositivo aparece como `/dev/cu.usbmodemXXXX`.
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+```
+ls /dev/ttyACM*
+```
+
+El dispositivo normalmente aparece como `/dev/ttyACM0`; si no se lista nada, prueba también con `ls /dev/ttyUSB*`.
+
+</TabItem>
+</Tabs>
+
+**Paso 4: Flashear el bootloader**
+
+Sustituye el puerto por el que encontraste en el Paso 3:
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p COM43 -b 115200 --singlebank --touch 1200
+```
+
+Si el ZIP no está en la carpeta actual de tu terminal, pasa su ruta completa a `--package`, por ejemplo `"C:\path\to\wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip"`.
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/cu.usbmodemXXXX -b 115200 --singlebank --touch 1200
+```
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/ttyACM0 -b 115200 --singlebank --touch 1200
+```
+
+</TabItem>
+</Tabs>
+
+**Paso 5: Gestionar el cambio de puerto serie**
+
+`--touch 1200` reinicia el dispositivo en modo DFU, por lo que el puerto serie normalmente cambia y el primer comando puede detenerse con un traceback como este:
+
+```
+Touched serial port COM43
+...
+FileNotFoundError: could not open port 'COM43'
+```
+
+Esto NO es un fallo: el dispositivo ya entró en modo DFU en un puerto NUEVO. En el PC con Windows probado, por ejemplo, cambió de `COM43` a `COM45`:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/03_dfu_com_port.png" alt="DFU serial port after re-enumeration in Windows Device Manager" width={600} height="auto" /></p>
+
+**Mantén el cable USB conectado.** Encuentra el nuevo puerto (actualiza **Device Manager → Ports (COM & LPT)**, o vuelve a ejecutar `ls /dev/cu.*` / `ls /dev/ttyACM*`), luego vuelve a flashear en el nuevo puerto SIN `--touch 1200`:
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p COM45 -b 115200 --singlebank
+```
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/cu.usbmodemXXXX -b 115200 --singlebank
+```
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/ttyACM0 -b 115200 --singlebank
+```
+
+</TabItem>
+</Tabs>
+
+**Paso 6: Confirmar el resultado**
+
+El flasheo se realizó correctamente cuando la salida termina con `Device programmed.`:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="adafruit-nrfutil output ending with Device programmed" width={600} height="auto" /></p>
+
+Después de eso, aparece una unidad UF2 en tu PC (captura de pantalla del PC con Windows probado). Su etiqueta de volumen varía según la compilación del bootloader — la unidad probada mostraba `XIAO-BOOT` — y NO es un criterio de aprobación o fallo; no juzgues el resultado por el nombre de la unidad ni por `INFO_UF2.TXT`:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/05_uf2_drive.png" alt="UF2 drive appears after bootloader flashing" width={600} height="auto" /></p>
+
+**Paso 7: Reinstalar el firmware de la aplicación**
+
+:::warning
+Restaurar el bootloader NO reinstala el firmware de la aplicación: el dispositivo aún no tiene un firmware funcional hasta que lo vuelvas a flashear.
+:::
+
+Cuando hayas completado los pasos anteriores, sigue [Firmware Flashing](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#firmware-flashing) para flashear el firmware de la aplicación.
+
+**Solución de problemas**
+
+- `adafruit-nrfutil` no se reconoce después de la instalación: el directorio de scripts de usuario de Python no está en tu PATH (`Scripts` en Windows, `bin` en tu directorio de inicio en macOS/Linux); añádelo al PATH o reinstala sin `--user`.
+- Puerto ocupado / acceso denegado: cierra monitores serie, pestañas de web flasher, Arduino IDE o cualquier otra cosa que esté usando el puerto.
+- `FileNotFoundError: could not open port ...` después de `Touched serial port ...`: el dispositivo entró en modo DFU en un puerto nuevo; sigue el Paso 5.
+- No se puede entrar en modo DFU: consulta [Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#unable-to-enter-dfu--entering-dfu-mode-manually).
+
+**Recuperación DFU manual**
+
+Si `--touch 1200` no puede poner el dispositivo en modo DFU (por ejemplo, el firmware no responde en absoluto), entra en él manualmente: conecta el dispositivo, pulsa dos veces `Reset` (el LED amarillo permanece fijo), encuentra el puerto serie DFU como en el Paso 3 y luego ejecuta el comando del Paso 5 en ese puerto SIN `--touch 1200`. El resultado satisfactorio se ve igual que en el Paso 6.
 
 ### No se puede entrar en DFU y entrar en modo DFU manualmente
 
-Conecta el dispositivo a tu PC, pulsa dos veces el botón `Reset`. El LED amarillo permanecerá encendido de forma fija y aparecerá en tu PC una nueva unidad USB llamada `Tracker L1`.
+Conecta el dispositivo a tu PC y pulsa dos veces el botón `Reset`; el LED amarillo permanece fijo y aparece un puerto serie DFU en tu PC.
+
+Para flashear el bootloader en este modo, sigue [Device Bricked & Bootloader Recovery](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#dispositivo-bloqueado--instalación-del-bootloader), pero omite `--touch 1200`; el dispositivo ya está en modo DFU.
 
 ### Salir del modo DFU
 
-Pulsa el botón `User` una vez para salir del modo DFU.
+Pulsa una vez el botón `Reset` para salir del modo DFU.
 
 ### El dispositivo se apaga automáticamente
 
@@ -287,13 +480,13 @@ Pulsa el botón `User` una vez para salir del modo DFU.
 
 #### Solución de problemas
 
-[Flash Erase](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#flash-erase-1) del firmware
+[Flash Erase](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#borrado-de-flash-1) del firmware
 
 ### Restablecimiento de fábrica
 
-Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para realizar un restablecimiento de fábrica.
+Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para que realices un restablecimiento de fábrica.
 
-- [Flash Erase](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#flash-erase-1) del firmware
+- [Flash Erase](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#borrado-de-flash-1) del firmware
 
 - Haz clic en el botón `Factory Reset` en la app. El dispositivo se reiniciará automáticamente con la configuración de fábrica.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FactoryReset.jpg" alt="pir" width={400} height="auto" /></p>
@@ -304,7 +497,7 @@ Si quieres restaurar la configuración predeterminada, puedes hacer el restablec
 
 - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Se considera que un dispositivo con un RSSI inferior a -115 dBm tiene un rendimiento deficiente.
 
-    Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstáculos, con una interferencia mínima.
+    Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con una interferencia mínima.
 
 ### Antena compatible
 
@@ -312,9 +505,9 @@ Si necesitas un reemplazo de antena para el L1 Pro, [haz clic aquí](https://www
 
 ## Recursos
 
-- [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
-- [Archivo de referencia para impresión 3D (V1)](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
-- [Archivo de referencia para impresión 3D (V2 Nuevo joystick de cuatro direcciones)](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
+- [Bootloader (paquete Serial DFU)](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip)
+- [Archivo de referencia de impresión 3D (V1)](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
+- [Archivo de referencia de impresión 3D (V2 nuevo joystick de cuatro direcciones)](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [Desafío de diseño de carcasa L1](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
 - [Archivo de contorno](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [Certificación TELEC](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
