@@ -200,9 +200,8 @@ test('plugin ABI: loadContent builds the index and contentLoaded publishes it as
   assert.strictEqual(globalData[0], content);
 });
 
-test('no English JSON import: FaqExplorer consumes plugin global data only', () => {
+test('no static data import: FaqExplorer consumes plugin global data only', () => {
   const source = fs.readFileSync(path.join(REPO_ROOT, 'src', 'components', 'FaqExplorer', 'index.tsx'), 'utf8');
-  assert.ok(!source.includes('respeaker_faq_index'), 'FaqExplorer must not import the English JSON index');
   assert.ok(!source.includes("@site/src/data"), 'FaqExplorer must not import from src/data');
   assert.ok(source.includes("usePluginData('respeaker-faq-index')"), 'FaqExplorer must read the plugin global data');
 });

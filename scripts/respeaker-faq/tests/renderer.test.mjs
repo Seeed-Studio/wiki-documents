@@ -15,7 +15,6 @@ import {
   validateManifest,
   renderManagedFaqRegion,
   renderProductPage,
-  renderSearchIndex,
   planTargets,
   extractManagedRegion,
   patchManagedRegion,
@@ -131,22 +130,6 @@ test('render: no internal IDs or forbidden tokens leak into public artifacts', (
   }
 });
 
-test('render: search index has 29 items, products/domains contracts, slug+anchor URLs', () => {
-  const manifest = loadManifest();
-  const index = renderSearchIndex(manifest);
-  assert.strictEqual(index.items.length, 29);
-  assert.deepStrictEqual(index.products.map((p) => p.key), PRODUCT_ORDER);
-  assert.ok(index.domains.length >= 3);
-  const byKey = new Map(manifest.entries.map((e) => [e.publicFaqId, e]));
-  for (const item of index.items) {
-    assert.match(item.url, /^\/[a-z0-9_]+#[a-z0-9-]+$/);
-    const entry = byKey.get(item.id);
-    assert.ok(entry, 'index item missing: ' + item.id);
-    assert.strictEqual(item.product, entry.productKey);
-    assert.strictEqual(item.productLabel, PRODUCTS[item.product].label);
-  }
-});
-
 test('idempotency: two renders produce byte-identical outputs', () => {
   const manifest = loadManifest();
   const a = planTargets(manifest);
@@ -156,9 +139,6 @@ test('idempotency: two renders produce byte-identical outputs', () => {
     assert.strictEqual(a[i].content, b[i].content, `${a[i].rel} not deterministic`);
     assert.strictEqual(a[i].content.length, b[i].content.length);
   }
-  const ia = JSON.stringify(renderSearchIndex(manifest));
-  const ib = JSON.stringify(renderSearchIndex(manifest));
-  assert.strictEqual(ia, ib);
 });
 
 test('classifyTarget: up-to-date / create-needed / update-needed / conflict rules', () => {
@@ -213,16 +193,6 @@ test('labels: six canonical product display names with exact reSpeaker casing', 
     assert.strictEqual(PRODUCT_LABELS[key], canonical, `${key} PRODUCT_LABELS (FAQ filter option)`);
     assert.strictEqual(PRODUCTS[key].label, canonical, `${key} PRODUCTS.label (search tag / intro)`);
     assert.strictEqual(PRODUCTS[key].title, `${canonical} FAQ`, `${key} PRODUCTS.title`);
-  }
-  const index = renderSearchIndex(manifest);
-  assert.deepStrictEqual(
-    index.products.map((p) => p.label),
-    PRODUCT_ORDER.map((k) => CANONICAL_LABELS[k]),
-    'search index product filter labels must be the canonical full names',
-  );
-  for (const item of index.items) {
-    assert.strictEqual(item.productLabel, CANONICAL_LABELS[item.product], `${item.id} productLabel`);
-    assert.match(item.productLabel, /^reSpeaker /, `${item.id} productLabel casing`);
   }
   // Rendered pages: frontmatter title, H1 and page-introduction label all canonical.
   for (const t of planTargets(manifest).filter((x) => x.rel.endsWith('.md'))) {

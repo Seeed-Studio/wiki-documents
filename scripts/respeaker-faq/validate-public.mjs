@@ -13,14 +13,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const DOCS_DIR = path.join(REPO_ROOT, 'sites', 'en', 'docs');
 const FAQ_DIR = path.join(DOCS_DIR, 'FAQ', 'respeaker');
 const FAQ_CENTER_FILE = 'respeaker_faq.mdx';
-const INDEX_JSON = path.join(REPO_ROOT, 'src', 'data', 'respeaker_faq_index.json');
 const MANIFEST_PATH = path.join(__dirname, 'manifests', 'approved_faq_manifest.json');
+const require = createRequire(import.meta.url);
+const { buildLocaleFaqIndex } = require('../../plugins/respeaker-faq-index/lib/faq-index.js');
 
 const FAILURES = [];
 const CHECKS = [];
@@ -263,9 +265,13 @@ check('internal links: only true slugs, no .md/.mdx/relative repository paths', 
   return problems;
 });
 
-check('search index: every item matches a rendered slug+anchor and vice versa', () => {
+check('localized search index: every English item matches a rendered slug+anchor and vice versa', () => {
   const problems = [];
-  const index = JSON.parse(fs.readFileSync(INDEX_JSON, 'utf8'));
+  const index = buildLocaleFaqIndex({
+    siteDir: path.join(REPO_ROOT, 'sites', 'en'),
+    locale: 'en',
+    baseUrl: '/',
+  });
   if (!Array.isArray(index.items) || index.items.length === 0) {
     return ['search index is empty or missing items'];
   }
@@ -314,7 +320,6 @@ check('secret scan: no internal identifiers or secrets in public artifacts', () 
   const problems = [];
   const files = [
     ...faqFiles,
-    INDEX_JSON,
     MANIFEST_PATH,
   ];
   for (const file of files) {

@@ -4,7 +4,6 @@
  *
  * Renders the approved curated manifest into:
  *   - product FAQ aggregation pages under sites/en/docs/FAQ/respeaker/
- *   - the public search index at src/data/respeaker_faq_index.json
  *
  * Behavior:
  *   - Deterministic/idempotent: identical manifest => byte-identical output.
@@ -37,7 +36,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const REPO_ROOT = path.resolve(__dirname, '..', '..');
 
 const MANIFEST_PATH = path.join(__dirname, 'manifests', 'approved_faq_manifest.json');
-const INDEX_TARGET = path.join(REPO_ROOT, 'src', 'data', 'respeaker_faq_index.json');
 const FAQ_DOC_DIR = path.join(REPO_ROOT, 'sites', 'en', 'docs', 'FAQ', 'respeaker');
 const STATE_PATH = path.join(__dirname, 'state', 'reconcile-state.json');
 
@@ -354,35 +352,6 @@ export function renderProductPage(productKey, entries) {
   return `${content}\n`;
 }
 
-export function renderSearchIndex(manifest) {
-  const products = PRODUCT_ORDER.map((key) => ({ key, label: PRODUCT_LABELS[key] }));
-  const domains = DOMAIN_FILTER_ORDER.map((key) => ({ key, label: DOMAIN_LABELS[key] }));
-  const items = [];
-  for (const entry of manifest.entries) {
-    const product = PRODUCTS[entry.productKey];
-    const summary = truncate(entry.directAnswerEn, 240);
-    items.push({
-      id: entry.publicFaqId,
-      question: entry.questionEn,
-      summary,
-      product: entry.productKey,
-      productLabel: product.label,
-      primaryDomain: entry.primaryDomain,
-      domains: [entry.primaryDomain].concat(entry.secondaryDomains || []),
-      skus: entry.skus || [],
-      keywords: entry.keywords || [],
-      lastVerifiedAt: entry.lastVerifiedAt,
-      url: `${entry.wikiSlug}#${entry.wikiAnchor}`,
-    });
-  }
-  return { schemaVersion: '1.0', artifactType: 'respeaker_faq_search_index', products, domains, items };
-}
-
-function truncate(text, max) {
-  if (text.length <= max) return text;
-  return `${text.slice(0, max - 1).trimEnd()}…`;
-}
-
 /* ------------------------------------------------------------------ */
 /* Target planning & reconcile                                         */
 /* ------------------------------------------------------------------ */
@@ -401,12 +370,6 @@ export function planTargets(manifest) {
       content: renderProductPage(p, entries),
     });
   }
-  targets.push({
-    rel: 'src/data/respeaker_faq_index.json',
-    abs: INDEX_TARGET,
-    kind: 'json',
-    content: `${JSON.stringify(renderSearchIndex(manifest), null, 2)}\n`,
-  });
   return targets;
 }
 

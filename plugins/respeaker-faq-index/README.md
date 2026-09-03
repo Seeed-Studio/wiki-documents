@@ -4,9 +4,9 @@ Build-time, per-locale ReSpeaker FAQ search index for the FAQ Center.
 
 ## Why
 
-`FaqExplorer` used to import the single English `src/data/respeaker_faq_index.json`,
-so every locale site searched English data. This plugin removes that runtime
-dependency: each site build reads the **current site's** translated FAQ docs
+Before this plugin, `FaqExplorer` used a single English search index, so every
+locale site searched English data. Each site build now reads the **current
+site's** translated FAQ docs
 (`docs/FAQ/respeaker/*.md`, filenames with `cn_` / `ja_` / `es_` / `pt_`
 prefixes) and exposes a localized index through Docusaurus plugin global data.
 

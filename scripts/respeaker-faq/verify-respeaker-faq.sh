@@ -2,7 +2,7 @@
 #
 # ReSpeaker FAQ publication QA — PRD §21 unified entry.
 #
-#   ./scripts/qa/verify-respeaker-faq.sh
+#   ./scripts/respeaker-faq/verify-respeaker-faq.sh
 #
 # Environment knobs:
 #   SKIP_TYPECHECK=1   skip `yarn typecheck`
@@ -164,7 +164,7 @@ fi
 phase "Unit tests (search + renderer, node:test)"
 if node --test scripts/respeaker-faq/tests/ >"$QA_LOG" 2>&1; then
   PASS_TESTS=$(grep -E '^# (pass|tests)' "$QA_LOG" | tail -2 | tr '\n' ' ')
-  pass "node --test (29 cases) ${PASS_TESTS}"
+  pass "node --test ${PASS_TESTS}"
 else
   fail "node --test"
   cat "$QA_LOG"
@@ -294,7 +294,7 @@ mkdir -p "$REPORT_DIR"
   echo "- scripts/respeaker-faq/validate-public.mjs"
   echo "- scripts/respeaker-faq/tests/ (node:test)"
   echo "- sites/en/docs/FAQ/respeaker/respeaker_faq.mdx + 6 product pages"
-  echo "- src/data/respeaker_faq_index.json"
+  echo "- plugins/respeaker-faq-index/ (per-locale build-time search index)"
   echo "- src/components/FaqExplorer/ (index.tsx, search.js, styles.module.css)"
   echo "- sites/en/sidebars.js (reSpeaker -> FAQ category)"
   echo ""

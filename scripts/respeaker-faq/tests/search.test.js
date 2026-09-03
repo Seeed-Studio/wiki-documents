@@ -6,6 +6,7 @@ const path = require('node:path');
 const fs = require('node:fs');
 
 const search = require(path.join(__dirname, '..', '..', '..', 'src', 'components', 'FaqExplorer', 'search.js'));
+const { buildLocaleFaqIndex } = require(path.join(__dirname, '..', '..', '..', 'plugins', 'respeaker-faq-index', 'lib', 'faq-index.js'));
 
 const { normalizeText, tokenizeQuery, scoreFaq, filterByProduct, filterByDomain, searchFaqs, sortResults } = search;
 
@@ -51,10 +52,12 @@ const FIXTURES = [
   },
 ];
 
-// Load the real public index for integration assertions.
-const REAL_INDEX = JSON.parse(
-  fs.readFileSync(path.join(__dirname, '..', '..', '..', 'src', 'data', 'respeaker_faq_index.json'), 'utf8')
-);
+// Build the real English runtime index through the same plugin used by Docusaurus.
+const REAL_INDEX = buildLocaleFaqIndex({
+  siteDir: path.join(__dirname, '..', '..', '..', 'sites', 'en'),
+  locale: 'en',
+  baseUrl: '/',
+});
 
 test('normalizeText: lowercase, hyphen/underscore to space, collapse, trim', () => {
   assert.strictEqual(normalizeText('Hello-World_Test'), 'hello world test');
