@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-02 16:46:34 (北京时间)
-// 多语言页面: 2461 个
+// 生成时间: 2026-09-03 16:42:24 (北京时间)
+// 多语言页面: 2462 个
 
 (function() {
   'use strict';
@@ -1781,6 +1781,13 @@
     "pt"
   ],
   "/jetson_developtool_supported_devices": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson-product-selection-guide": [
     "cn",
     "en",
     "es",
