@@ -214,8 +214,8 @@ Now you will see the feedback in your epaper screen! Following is the result of 
 
 **Q5: SenseCraft HMI device binding fails.**
 *   Double-check that the Pair Code is entered correctly (case-sensitive).
-*   Make sure your phone and the device are on the same 2.4GHz Wi-Fi network during pair binding.
-*   If the device shows as offline, press the Reset button and try pair binding again.
+*   Make sure your phone and the device are on the same 2.4GHz Wi-Fi network during device binding.
+*   If the device shows as offline, press the Reset button and try binding the device again.
 
 ## Resources
 - **[PDF]** [Seeed Studio XIAO ePaper Display EE03 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE03/XIAO_ePaper_Display_Board_EE03_V1.0_SCH_251217.pdf)
