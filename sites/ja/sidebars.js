@@ -3833,6 +3833,7 @@ const sidebars = {
           type: 'category',
           label: 'はじめに',
           items: [
+            'Edge/NVIDIA_Jetson/ja_Jetson_Product_Selection_Guide',
             // Carrier Boards
             {
               type: 'category',
